@@ -6,21 +6,32 @@ f1_keywords:
 - amp_graphics/Concurrency::graphics::direct3d::make_sampler
 - amp_graphics/Concurrency::graphics::direct3d::make_texture
 ms.assetid: 11ee1d42-333e-4ae9-95ac-4cf68c06d13d
-ms.openlocfilehash: 330c1aa94b1d122901fc23576686032400249d31
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 66db1d348c6c58a9226322b51662ef7a4ef75b3d
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81376384"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88841298"
 ---
 # <a name="concurrencygraphicsdirect3d-namespace-functions"></a>Concurrency::graphics::direct3d 名前空間関数
 
-||||
-|-|-|-|
-|[get_sampler](#get_sampler)|[get_texture](#get_texture)|[make_sampler](#make_sampler)|
-|[make_texture](#make_texture)|[ムサド4](#msad4)|
+:::row:::
+   :::column span="":::
+      [`get_sampler`](#get_sampler)\
+      [`get_texture`](#get_texture)
+   :::column-end:::
+   :::column span="":::
+      [`make_sampler`](#make_sampler)
+   :::column-end:::
+   :::column span="":::
+      [`make_texture`](#make_texture)
+   :::column-end:::
+   :::column span="":::
+      [`msad4`](#msad4)
+   :::column-end:::
+:::row-end:::
 
-## <a name="get_sampler"></a><a name="get_sampler"></a>get_sampler
+## <a name="get_sampler"></a><a name="get_sampler"></a> get_sampler
 
 指定されたサンプラー オブジェクトを表す特定のアクセラレータ ビューについて、D3D サンプラーの状態インターフェイスを取得します。
 
@@ -42,9 +53,9 @@ D3D サンプラーの状態が作成される D3D アクセラレータ ビュ�
 
 特定のサンプラーを表す D3D サンプラーの状態に対応する IUnknown インターフェイス ポインター。
 
-## <a name="get_texture"></a><a name="get_texture"></a>get_texture
+## <a name="get_texture"></a><a name="get_texture"></a> get_texture
 
-指定したテクスチャ オブジェクトの基になる Direct3D[テクスチャ](texture-class.md)インターフェイスを取得します。
+指定された [テクスチャ](texture-class.md) オブジェクトの基になる Direct3D テクスチャインターフェイスを取得します。
 
 ```cpp
 template<
@@ -71,7 +82,7 @@ _Ret_ IUnknown *get_texture(
 
 ### <a name="parameters"></a>パラメーター
 
-*Value_type*<br/>
+*value_type*<br/>
 テクスチャの要素型。
 
 *_Rank*<br/>
@@ -84,7 +95,7 @@ _Ret_ IUnknown *get_texture(
 
 テクスチャの基になる Direct3D テクスチャに対応する IUnknown インターフェイス ポインター。
 
-## <a name="make_sampler"></a><a name="make_sampler"></a>make_sampler
+## <a name="make_sampler"></a><a name="make_sampler"></a> make_sampler
 
 D3D サンプラーの状態インターフェイス ポインターからサンプラーを作成します。
 
@@ -101,9 +112,9 @@ sampler make_sampler(_In_ IUnknown* _D3D_sampler) restrict(amp);
 
 サンプラーは、指定された D3D サンプラーの状態を表します。
 
-## <a name="make_texture"></a><a name="make_texture"></a>make_texture
+## <a name="make_texture"></a><a name="make_texture"></a> make_texture
 
-指定したパラメータを使用して[テクスチャ](texture-class.md)オブジェクトを作成します。
+指定されたパラメーターを使用して、 [テクスチャ](texture-class.md) オブジェクトを作成します。
 
 ```cpp
 template<
@@ -118,7 +129,7 @@ texture<value_type, _Rank> make_texture(
 
 ### <a name="parameters"></a>パラメーター
 
-*Value_type*<br/>
+*value_type*<br/>
 テクスチャの要素の型。
 
 *_Rank*<br/>
@@ -131,13 +142,13 @@ texture<value_type, _Rank> make_texture(
 テクスチャを作成する基になる D3D テクスチャの IUnknown インターフェイス ポインター。
 
 *_View_format*<br/>
-このテクスチャから作成されるビューに使用する DXGI 形式。 DXGI_FORMAT_UNKNOWN渡す (既定値) _D3D_textureの基になる形式とこのテンプレートのvalue_typeから形式を派生します。 用意された形式は、_D3D_texture の基になる形式との互換性が必要です。
+このテクスチャから作成されるビューに使用する DXGI 形式。 DXGI_FORMAT_UNKNOWN (既定) を渡して、_D3D_texture の基になる形式とこのテンプレートの value_type から形式を派生させます。 用意された形式は、_D3D_texture の基になる形式との互換性が必要です。
 
 ### <a name="return-value"></a>戻り値
 
 用意された D3D テクスチャを使用するテクスチャ。
 
-## <a name="msad4"></a><a name="msad4"></a>ムサド4
+## <a name="msad4"></a><a name="msad4"></a> msad4
 
 4 バイトの参照値と 8 バイトのソース値を比較し、4 個の合計値のベクターを累積します。 各合計は、参照値とソース値の異なるバイト アラインメントの差の絶対値のマスク合計に対応します。
 
@@ -165,10 +176,10 @@ inline uint4 msad4(
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** amp_graphics.h
+**ヘッダー:** amp_graphics
 
-**名前空間:** 同時実行::グラフィックス::direct3d
+**名前空間:** Concurrency:: graphics::d irect3d
 
 ## <a name="see-also"></a>関連項目
 
-[同時実行::グラフィックス::direct3d名前空間](concurrency-graphics-direct3d-namespace.md)
+[Concurrency:: graphics::d irect3d 名前空間](concurrency-graphics-direct3d-namespace.md)

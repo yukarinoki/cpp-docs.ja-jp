@@ -1,17 +1,17 @@
 ---
-title: 省略可能C++ (COM 属性)
+title: 省略可能 (C++ COM 属性)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.optional
 helpviewer_keywords:
 - optional attribute
 ms.assetid: 86656a66-8e11-4589-8e30-9b0f34eeed03
-ms.openlocfilehash: 6a4fdcd0b8466d2dbf2c034fc4a3ee9ae2df8d0a
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 31e2dbac988cdbac8aca2d01a70177825d764a5b
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80214672"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88842170"
 ---
 # <a name="optional-c"></a>optional (C++)
 
@@ -25,11 +25,11 @@ ms.locfileid: "80214672"
 
 ## <a name="remarks"></a>解説
 
-**省略可能** C++な属性には、[省略可能](/windows/win32/Midl/optional)な MIDL 属性と同じ機能があります。
+**省略可能**な C++ 属性には、[省略可能](/windows/win32/Midl/optional)な MIDL 属性と同じ機能があります。
 
 ## <a name="example"></a>例
 
-次のコードは、**オプション**を使用する方法を示しています。
+次のコードは、 **オプション** を使用する方法を示しています。
 
 ```cpp
 // cpp_attr_ref_optional.cpp
@@ -46,18 +46,16 @@ __interface IFireTabCtrl : IDispatch
 
 ## <a name="requirements"></a>必要条件
 
-### <a name="attribute-context"></a>属性コンテキスト
-
-|||
+| 属性コンテキスト | 値 |
 |-|-|
-|**対象**|インターフェイス パラメーター|
-|**反復可能**|いいえ|
-|**必要な属性**|なし|
+|**適用対象**|インターフェイス パラメーター|
+|**Repeatable**|いいえ|
+|**必須属性**|なし|
 |**無効な属性**|なし|
 
 属性コンテキストの詳細については、「 [属性コンテキスト](cpp-attributes-com-net.md#contexts)」を参照してください。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [IDL 属性](idl-attributes.md)<br/>
 [パラメーター属性](parameter-attributes.md)

@@ -62,12 +62,12 @@ helpviewer_keywords:
 - CDataRecoveryHandler [MFC], SetShutdownByRestartManager
 - CDataRecoveryHandler [MFC], UpdateDocumentInfo
 ms.assetid: 7794802c-e583-4eba-90b9-2fed1a161f9c
-ms.openlocfilehash: c796f24ad37b3bae11314e2885bf25e25f85aba6
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: 4bb4d4ddf291cb1efc01b887c54a6573c52df8dc
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88561974"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88842924"
 ---
 # <a name="cdatarecoveryhandler-class"></a>CDataRecoveryHandler クラス
 
@@ -83,13 +83,13 @@ class CDataRecoveryHandler : public CObject
 
 ### <a name="constructors"></a>コンストラクター
 
-|||
+|名前|説明|
 |-|-|
 |[CDataRecoveryHandler::CDataRecoveryHandler](#cdatarecoveryhandler)|`CDataRecoveryHandler` オブジェクトを構築します。|
 
 ### <a name="methods"></a>メソッド
 
-|||
+|名前|説明|
 |-|-|
 |[CDataRecoveryHandler:: AutosaveAllDocumentInfo](#autosavealldocumentinfo)|クラスに登録されている各ファイルを自動保存 `CDataRecoveryHandler` します。|
 |[CDataRecoveryHandler:: AutosaveDocumentInfo](#autosavedocumentinfo)|指定されたドキュメントを自動保存します。|
@@ -121,7 +121,7 @@ class CDataRecoveryHandler : public CObject
 
 ### <a name="data-members"></a>データ メンバー
 
-|||
+|名前|説明|
 |-|-|
 |m_bRestoringPreviousOpenDocs|データ回復ハンドラーが以前に開いたドキュメントを再び開くかどうかを示します。|
 |m_bSaveDocumentInfoOnIdle|データ復旧ハンドラーが、次のアイドルループでドキュメントを自動保存するかどうかを示します。|

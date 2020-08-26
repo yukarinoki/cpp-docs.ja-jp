@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - in attribute
 ms.assetid: 7b450cc4-4d2e-4910-a195-7487c6b7c373
-ms.openlocfilehash: f25f15148621d7092858577825dbdd6caa1ae0be
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 2838a00ffe365f42fb7778b654306eb0c73b5996
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80166797"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88842235"
 ---
 # <a name="in-c"></a>in (C++)
 
@@ -25,7 +25,7 @@ ms.locfileid: "80166797"
 
 ## <a name="remarks"></a>解説
 
-**In** C++属性には[、MIDL 属性のと](/windows/win32/Midl/in)同じ機能があります。
+C++ **属性のは** 、の [in](/windows/win32/Midl/in) MIDL 属性と同じ機能を持ちます。
 
 ## <a name="example"></a>例
 
@@ -33,22 +33,20 @@ ms.locfileid: "80166797"
 
 ## <a name="requirements"></a>必要条件
 
-### <a name="attribute-context"></a>属性コンテキスト
-
-|||
+| 属性コンテキスト | 値 |
 |-|-|
-|**対象**|インターフェイスパラメーター、インターフェイスメソッド|
-|**反復可能**|いいえ|
-|**必要な属性**|なし|
+|**適用対象**|インターフェイスパラメーター、インターフェイスメソッド|
+|**Repeatable**|いいえ|
+|**必須属性**|なし|
 |**無効な属性**|**retval**|
 
 属性コンテキストの詳細については、「 [属性コンテキスト](cpp-attributes-com-net.md#contexts)」を参照してください。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [IDL 属性](idl-attributes.md)<br/>
 [パラメーター属性](parameter-attributes.md)<br/>
 [メソッド属性](method-attributes.md)<br/>
-[defaultvalue](defaultvalue.md)<br/>
+[既定](defaultvalue.md)<br/>
 [id](id.md)<br/>
 [out](out-cpp.md)

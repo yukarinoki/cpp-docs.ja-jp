@@ -30,12 +30,12 @@ helpviewer_keywords:
 - CKeyboardManager [MFC], TranslateCharToUpper
 - CKeyboardManager [MFC], UpdateAccelTable
 ms.assetid: 4809ece6-89df-4479-8b53-9bf476ee107b
-ms.openlocfilehash: a2d2ae8133310f3a93b6eefc30c67045a47cd94f
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: e67bbb18b6a87edfaa4bc4c410ec28eb613ed51d
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88561467"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88841494"
 ---
 # <a name="ckeyboardmanager-class"></a>Cのマネージャークラス
 
@@ -51,16 +51,14 @@ class CKeyboardManager : public CObject
 
 ### <a name="public-constructors"></a>パブリック コンストラクター
 
-|||
-|-|-|
 |名前|説明|
+|-|-|
 |[C# manager:: Cのマネージャー](#ckeyboardmanager)|`CKeyboardManager` オブジェクトを構築します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
-|||
-|-|-|
 |名前|説明|
+|-|-|
 |[C、Manager:: CleanUp](#cleanup)|ショートカットキーのテーブルを消去します。|
 |[C/Manager:: FindDefaultAccelerator](#finddefaultaccelerator)|指定したコマンドおよびウィンドウの既定のショートカットキーを取得します。|
 |[C、Manager:: IsKeyHandled](#iskeyhandled)|キーがアクセラレータテーブルによって処理されるかどうかを判断します。|

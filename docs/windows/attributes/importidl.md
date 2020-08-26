@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - importidl attribute
 ms.assetid: 4b0a4b55-6c57-4e6e-bc7b-a12cc8063941
-ms.openlocfilehash: 6e41a98bef079c92b6df6e7eff203301aa9ceae4
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 8f3c2c5c67ac216d096d1082814c561698f3f732
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80166823"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88842248"
 ---
 # <a name="importidl"></a>importidl
 
@@ -30,7 +30,7 @@ ms.locfileid: "80166823"
 
 ## <a name="remarks"></a>解説
 
-C++この**属性を使用すると**、ライブラリブロックの外側 ( *idl_file*) のセクションが、プログラムによって生成された .idl ファイルのライブラリセクションに、プログラムによって生成される .idl ファイルとライブラリセクション ( *idl_file*) に格納されます。
+インポート **tidl** C++ 属性は、ライブラリブロックの外側のセクション ( *idl_file*) をプログラムによって生成された .idl ファイルに、ライブラリセクション ( *idl_file*) をプログラムの生成された .idl ファイルのライブラリセクションに配置します。
 
 たとえば、生成された .idl ファイルでハンドコードされた .idl ファイルを使用する場合は **、使用する**ことができます。
 
@@ -45,22 +45,20 @@ C++この**属性を使用すると**、ライブラリブロックの外側 ( *
 
 ## <a name="requirements"></a>必要条件
 
-### <a name="attribute-context"></a>属性コンテキスト
-
-|||
+| 属性コンテキスト | 値 |
 |-|-|
-|**対象**|任意の場所|
-|**反復可能**|いいえ|
-|**必要な属性**|なし|
+|**適用対象**|任意の場所|
+|**Repeatable**|いいえ|
+|**必須属性**|なし|
 |**無効な属性**|なし|
 
 詳細については、「 [属性コンテキスト](cpp-attributes-com-net.md#contexts)」を参照してください。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [コンパイラ属性](compiler-attributes.md)<br/>
 [スタンドアロン属性](stand-alone-attributes.md)<br/>
 [import](import.md)<br/>
 [importlib](importlib.md)<br/>
-[include](include-cpp.md)<br/>
+[用意](include-cpp.md)<br/>
 [includelib](includelib-cpp.md)

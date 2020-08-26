@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - defaultvalue attribute
 ms.assetid: efa5d050-b2cc-4d9e-9b8e-79954f218d3a
-ms.openlocfilehash: aaa2290c871df3a2482294794461e53afe00568d
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 53b6a50bd7156eb9d6873e5ef08f6d75508fa3e1
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80214846"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88841689"
 ---
 # <a name="defaultvalue"></a>defaultvalue
 
@@ -26,15 +26,15 @@ ms.locfileid: "80214846"
 ### <a name="parameters"></a>パラメーター
 
 *value*<br/>
-パラメーターの既定値。
+パラメーターの既定値です。
 
 ## <a name="remarks"></a>解説
 
-**Defaultvalue** C++属性には、 [defaultvalue](/windows/win32/Midl/defaultvalue) MIDL 属性と同じ機能があります。
+**Defaultvalue** C++ 属性には、 [defaultvalue](/windows/win32/Midl/defaultvalue) MIDL 属性と同じ機能があります。
 
 ## <a name="example"></a>例
 
-次のコードは、 **defaultvalue**属性を使用したインターフェイスメソッドを示しています。
+次のコードは、 **defaultvalue** 属性を使用したインターフェイスメソッドを示しています。
 
 ```cpp
 // cpp_attr_ref_defaultvalue.cpp
@@ -56,18 +56,16 @@ __interface IFireTabCtrl : IDispatch {
 
 ## <a name="requirements"></a>必要条件
 
-### <a name="attribute-context"></a>属性コンテキスト
-
-|||
+| 属性コンテキスト | 値 |
 |-|-|
-|**対象**|インターフェイス パラメーター|
-|**反復可能**|いいえ|
-|**必要な属性**|なし|
+|**適用対象**|インターフェイス パラメーター|
+|**Repeatable**|いいえ|
+|**必須属性**|なし|
 |**無効な属性**|なし|
 
 詳細については、「 [属性コンテキスト](cpp-attributes-com-net.md#contexts)」を参照してください。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [IDL 属性](idl-attributes.md)<br/>
 [パラメーター属性](parameter-attributes.md)<br/>

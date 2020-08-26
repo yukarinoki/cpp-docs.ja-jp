@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - satype attribute
 ms.assetid: 1716590b-6bcb-4aba-b1bc-82f7335f02c3
-ms.openlocfilehash: 4619deec6d5e4e9083fbc7bcab53caee0101285c
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 16da256f491dbb0002d92cadaceda14a49eb2192
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80166277"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88842781"
 ---
 # <a name="satype"></a>satype
 
-`SAFEARRAY` 構造体のデータ型を指定します。
+構造体のデータ型を指定し `SAFEARRAY` ます。
 
 ## <a name="syntax"></a>構文
 
@@ -26,25 +26,23 @@ ms.locfileid: "80166277"
 ### <a name="parameters"></a>パラメーター
 
 *data_type*<br/>
-インターフェイスメソッドにパラメーターとして渡される `SAFEARRAY` データ構造体のデータ型。
+`SAFEARRAY`インターフェイスメソッドにパラメーターとして渡されるデータ構造体のデータ型。
 
 ## <a name="requirements"></a>必要条件
 
-### <a name="attribute-context"></a>属性コンテキスト
-
-|||
+| 属性コンテキスト | 値 |
 |-|-|
-|**対象**|インターフェイスパラメーター、インターフェイスメソッド|
-|**反復可能**|いいえ|
-|**必要な属性**|なし|
+|**適用対象**|インターフェイスパラメーター、インターフェイスメソッド|
+|**Repeatable**|いいえ|
+|**必須属性**|なし|
 |**無効な属性**|なし|
 
 ## <a name="remarks"></a>解説
 
-**Satype** C++属性は、`SAFEARRAY`のデータ型を指定します。
+**Satype** C++ 属性は、のデータ型を指定し `SAFEARRAY` ます。
 
 > [!NOTE]
-> 生成された .idl ファイル内の `SAFEARRAY` ポインターから、.cpp ファイルでの宣言方法から間接参照のレベルが削除されます。
+> `SAFEARRAY`生成された .idl ファイル内のポインターから、.cpp ファイルでの宣言方法から間接参照のレベルが削除されます。
 
 ## <a name="example"></a>例
 
@@ -59,7 +57,7 @@ __interface A {
 };
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [コンパイラ属性](compiler-attributes.md)<br/>
 [パラメーター属性](parameter-attributes.md)<br/>

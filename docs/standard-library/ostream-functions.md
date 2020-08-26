@@ -12,21 +12,21 @@ helpviewer_keywords:
 - std::endl [C++]
 - std::ends [C++]
 - std::flush [C++]
-ms.openlocfilehash: 8d93e46b0323058d93c6d0bd8c1ee566998aef61
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 4db966797202b16911aa67b6fda7c81785d98166
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79425299"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88842638"
 ---
 # <a name="ltostreamgt-functions"></a>&lt;ostream&gt; 関数
 
-これらは、&lt;ostream&gt;で定義されているグローバルテンプレート関数です。 メンバー関数については、 [Basic_ostream クラス](basic-ostream-class.md)のドキュメントを参照してください。
+これらは、ostream で定義されているグローバルテンプレート関数です &lt; &gt; 。 メンバー関数については、 [Basic_ostream クラス](basic-ostream-class.md) のドキュメントを参照してください。
 
-||||
-|-|-|-|
-|[endl](#endl)|[ends](#ends)|[flush](#flush)|
-|[swap](#swap)|
+[endl](#endl)\
+[端](#ends)\
+[揃える](#flush)\
+[スワップ](#swap)
 
 ## <a name="endl"></a>endl
 
@@ -53,7 +53,7 @@ basic_ostream<Elem, Tr>& endl(
 
 **Basic_ostream**型のオブジェクト。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 マニピュレーターは*Ostr*を呼び出します。[put](../standard-library/basic-ostream-class.md#put)(*ostr*.[widen](../standard-library/basic-ios-class.md#widen)(' \n ')) を拡大し、 *ostr*を呼び出します。[フラッシュ](../standard-library/basic-ostream-class.md#flush)。 *Ostr*が返されます。
 
@@ -100,9 +100,9 @@ basic_ostream<Elem, Tr>& ends(
 
 `basic_ostream` 型のオブジェクト。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-マニピュレーターは*Ostr*を呼び出します。[put](../standard-library/basic-ostream-class.md#put)(*Elem*(' \ 0 '))。 *Ostr*が返されます。
+マニピュレーターは *Ostr*を呼び出します。[put](../standard-library/basic-ostream-class.md#put)(*Elem*(' \ 0 '))。 *Ostr*が返されます。
 
 ### <a name="example"></a>例
 
@@ -149,9 +149,9 @@ basic_ostream<Elem, Tr>& flush(
 
 `basic_ostream` 型のオブジェクト。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-マニピュレーターは*Ostr*を呼び出します。[フラッシュ](../standard-library/basic-ostream-class.md#flush)。 *Ostr*が返されます。
+マニピュレーターは *Ostr*を呼び出します。[フラッシュ](../standard-library/basic-ostream-class.md#flush)。 *Ostr*が返されます。
 
 ### <a name="example"></a>例
 
@@ -190,13 +190,13 @@ void swap(
 *Tr*\
 文字の特徴 (traits)。
 
-*左*\
+*左側*\
 `basic_ostream` オブジェクトへの左辺値参照。
 
-*右*\
+*そうです*\
 `basic_ostream` オブジェクトへの左辺値参照。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 テンプレート関数 `swap` は、`left.swap(right)` を実行します。
 

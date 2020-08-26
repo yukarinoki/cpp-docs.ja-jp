@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - transmit_as attribute
 ms.assetid: 53d0b8ab-5b06-423e-83eb-3d01a10424b2
-ms.openlocfilehash: a34d57cc60dcc65e8b111c595fdd819dea407b78
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 9483bfd7ca95aa1121beb56aac8a286c25fa17cb
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87201129"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88840805"
 ---
 # <a name="transmit_as"></a>transmit_as
 
@@ -34,7 +34,7 @@ ms.locfileid: "87201129"
 
 ## <a name="example"></a>例
 
-次のコードは、 **transmit_as**属性の使用方法を示しています。
+次のコードは、 **transmit_as** 属性の使用方法を示しています。
 
 ```cpp
 // cpp_attr_ref_transmit_as.cpp
@@ -66,9 +66,7 @@ struct _TREE_NODE_TYPE * right;
 
 ## <a name="requirements"></a>必要条件
 
-### <a name="attribute-context"></a>属性コンテキスト
-
-|||
+| 属性コンテキスト | 値 |
 |-|-|
 |**適用対象**|**`typedef`**|
 |**Repeatable**|いいえ|

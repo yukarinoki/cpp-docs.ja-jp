@@ -8,12 +8,12 @@ helpviewer_keywords:
 - attributes [C#], default attribute
 - defaults, default attribute
 ms.assetid: 0cdca716-1ba8-46d7-9399-167e55492870
-ms.openlocfilehash: dc0244897f73a5185451159aa0f4ec66dd9dae56
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: b53420d721b43f9a51b19c4cc8e4a83fc8b94ed4
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87215271"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88842443"
 ---
 # <a name="default-c"></a>default (C++)
 
@@ -39,7 +39,7 @@ Optional既定のソースインターフェイス。 このインターフェ�
 
 ## <a name="remarks"></a>解説
 
-C++ 属性には、 **`default`** [default](/windows/win32/Midl/default) MIDL 属性と同じ機能があります。 属性は、 **`default`** [case](case-cpp.md)属性と共にも使用されます。
+C++ 属性には、 **`default`** [default](/windows/win32/Midl/default) MIDL 属性と同じ機能があります。 属性は、 **`default`** [case](case-cpp.md) 属性と共にも使用されます。
 
 ## <a name="example"></a>例
 
@@ -91,13 +91,11 @@ int main() {
 }
 ```
 
-また、 [source](source-cpp.md)属性には、の使用方法の例も含まれてい **`default`** ます。
+また、 [source](source-cpp.md) 属性には、の使用方法の例も含まれてい **`default`** ます。
 
 ## <a name="requirements"></a>必要条件
 
-### <a name="attribute-context"></a>属性コンテキスト
-
-|||
+| 属性コンテキスト | 値 |
 |-|-|
 |**適用対象**|**`class`**、 **`struct`** 、データメンバー|
 |**Repeatable**|いいえ|

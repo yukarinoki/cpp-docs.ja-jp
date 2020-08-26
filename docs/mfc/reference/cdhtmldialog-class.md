@@ -116,16 +116,16 @@ helpviewer_keywords:
 - CDHtmlDialog [MFC], m_strCurrentUrl
 - CDHtmlDialog [MFC], m_szHtmlResID
 ms.assetid: 3f941c85-87e1-4f0f-9cc5-ffee8498b312
-ms.openlocfilehash: e2e4306320c52b8276d915848dfa6e460982c92b
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: 9cc01c94357d7aac7fa6fa98127628a60746e1e8
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81753374"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88842885"
 ---
 # <a name="cdhtmldialog-class"></a>CDHtmlDialog クラス
 
-ユーザー インターフェイスを実装するためにダイアログ リソースではなく HTML を使用するダイアログ ボックスを作成するために使用されます。
+は、ダイアログリソースではなく HTML を使用してユーザーインターフェイスを実装するダイアログボックスを作成するために使用されます。
 
 ## <a name="syntax"></a>構文
 
@@ -139,78 +139,78 @@ class CDHtmlDialog : public CDialog, public CDHtmlEventSink
 
 |名前|説明|
 |----------|-----------------|
-|[ダイアログ](#cdhtmldialog)|オブジェクトを作成します。|
-|[ダイアログ](#_dtorcdhtmldialog)|オブジェクトを破棄します。|
+|[CDHtmlDialog:: CDHtmlDialog](#cdhtmldialog)|CDHtmlDialog オブジェクトを構築します。|
+|[CDHtmlDialog:: ~ CDHtmlDialog](#_dtorcdhtmldialog)|CDHtmlDialog オブジェクトを破棄します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
 |名前|説明|
 |----------|-----------------|
-|[ダイアログ::アクセス外部](#canaccessexternal)|読み込まれたページのスクリプト オブジェクトがコントロール サイトの外部ディスパッチにアクセスできるかどうかを確認するためにアクセス チェックとして呼び出されるオーバーライド可能。 ディスパッチがスクリプトに対して安全であるか、現在のゾーンでスクリプト作成が安全でないオブジェクトを許可しているかどうかを確認します。|
-|[コントロールサイトの作成](#createcontrolsite)|ダイアログで WebBrowser コントロールをホストするコントロール サイト インスタンスを作成するために使用されるオーバーライド可能です。|
-|[ダイアログ::DDX_DHtml_アクスコントロール](#ddx_dhtml_axcontrol)|メンバー変数と HTML ページ上の ActiveX コントロールのプロパティ値との間でデータを交換します。|
-|[チェック ボックスを:D](#ddx_dhtml_checkbox)|メンバー変数と HTML ページのチェック ボックスの間でデータを交換します。|
-|[:DDX_DHtml_要素テキスト](#ddx_dhtml_elementtext)|メンバー変数と HTML ページ上の HTML 要素プロパティとの間でデータを交換します。|
-|[ダイアログ:D](#ddx_dhtml_radio)|メンバー変数と HTML ページのラジオ ボタンの間でデータを交換します。|
-|[ダイアログ::DDX_DHtml_インデックスを選択します。](#ddx_dhtml_selectindex)|HTML ページ上のリスト ボックスのインデックスを取得または設定します。|
-|[:DDX_DHtml_選択文字列](#ddx_dhtml_selectstring)|HTML ページのリスト ボックス エントリの表示テキストを現在のインデックスに基づいて取得または設定します。|
-|[ダイアログ ボックス::DDX_DHtml_選択値](#ddx_dhtml_selectvalue)|HTML ページのリスト ボックス エントリの値を取得または設定します ( 現在のインデックスに基づく ) 。|
-|[ダイアログ::Dエストロイモードレス](#destroymodeless)|モードレス ダイアログ ボックスを破棄します。|
-|[ダイアログ::モードレスを有効にする](#enablemodeless)|モードレス ダイアログ ボックスを有効にします。|
-|[フィルターデータオブジェクト](#filterdataobject)|ダイアログボックスで、ホストされたブラウザによって作成されたクリップボード データ オブジェクトをフィルタ処理できます。|
-|[をクリックします。](#getcontroldispatch)|HTML ドキュメント`IDispatch`に埋め込まれた ActiveX コントロールのインターフェイスを取得します。|
-|[プロパティを取得します。](#getcontrolproperty)|指定した ActiveX コントロールの要求されたプロパティを取得します。|
-|[ダイアログ::取得カレントUrl](#getcurrenturl)|現在のドキュメントに関連付けられている統一リソース ロケーター (URL) を取得します。|
-|[ドキュメントを取得します。](#getdhtmldocument)|現在読み込まれている HTML ドキュメントの IHTMLDocument2 インターフェイスを取得します。|
-|[ダイアログ::ドロップターゲット](#getdroptarget)|含まれている WebBrowser コントロールがドロップ ターゲットとして使用されているときに呼び出され、ダイアログが代替[IDropTarget](/windows/win32/api/oleidl/nn-oleidl-idroptarget)を提供できるようにします。|
-|[ダイアログ::取得要素](#getelement)|HTML 要素のインターフェイスを取得します。|
-|[ダイアログ::ゲットエレメントHtml](#getelementhtml)|HTML 要素`innerHTML`のプロパティを取得します。|
-|[インターフェイスを取得します。](#getelementinterface)|HTML 要素から要求されたインターフェイス ポインターを取得します。|
-|[プロパティを取得します。](#getelementproperty)|HTML 要素のプロパティの値を取得します。|
-|[テキストを取得します。](#getelementtext)|HTML 要素`innerText`のプロパティを取得します。|
-|[ダイアログ::イベントを取得します。](#getevent)|現在の`IHTMLEventObj`イベント オブジェクトへのポインターを取得します。|
-|[ダイアログ::外部を取得します。](#getexternal)|ホストのインターフェイスを`IDispatch`取得します。|
-|[ダイアログ::ホスト情報を取得します。](#gethostinfo)|ホストの UI 機能を取得します。|
-|[ダイアログ::ゲットオプションキーパス](#getoptionkeypath)|ユーザー設定が格納されるレジストリ キーを取得します。|
-|[ダイアログ::ハイドイ](#hideui)|ホストの UI を非表示にします。|
-|[ダイアログ::Is外部ディスパッチセーフ](#isexternaldispatchsafe)|ホストの`IDispatch`インターフェイスがスクリプトに対して安全かどうかを示します。|
-|[リソースから読み込む](#loadfromresource)|指定したリソースを WebBrowser コントロールに読み込みます。|
-|[ダイアログ::ナビゲート](#navigate)|指定した URL に移動します。|
-|[ダイアログ::オン・フォア・ナビゲート](#onbeforenavigate)|ナビゲーション イベントが発生する前に、フレームワークによって呼び出されます。|
-|[ドキュメント完了](#ondocumentcomplete)|ドキュメントがREADYSTATE_COMPLETE状態になったときにアプリケーションに通知するために、フレームワークによって呼び出されます。|
-|[ダイアログ::オンドックウィンドウアクティブ](#ondocwindowactivate)|ドキュメント ウィンドウがアクティブまたは非アクティブになったときに、フレームワークによって呼び出されます。|
-|[ダイアログ::オンフレームウィンドウアクティブ](#onframewindowactivate)|フレーム ウィンドウがアクティブまたは非アクティブになったときに、フレームワークによって呼び出されます。|
-|[ダイアログ](#oninitdialog)|WM_INITDIALOG メッセージに応答して呼び出されます。|
-|[ダイアログ::オンナビゲートコンプリート](#onnavigatecomplete)|ナビゲーション イベントが完了した後に、フレームワークによって呼び出されます。|
-|[ウィンドウのサイズを変更します。](#resizeborder)|オブジェクトに対して、境界領域のサイズを変更する必要があることを警告します。|
-|[プロパティを設定します。](#setcontrolproperty)|ActiveX コントロールのプロパティを新しい値に設定します。|
-|[ダイアログ::セットエレメントHtml](#setelementhtml)|HTML`innerHTML`要素のプロパティを設定します。|
-|[プロパティを設定します。](#setelementproperty)|HTML 要素のプロパティを設定します。|
-|[ダイアログ::テキストを設定します。](#setelementtext)|HTML`innerText`要素のプロパティを設定します。|
-|[ダイアログ::外部ディスパッチを設定します。](#setexternaldispatch)|ホストのインターフェイスを`IDispatch`設定します。|
-|[ダイアログ::セットホストフラグ](#sethostflags)|ホストの UI フラグを設定します。|
-|[ダイアログ::コンテキストメニューを表示します。](#showcontextmenu)|コンテキスト メニューが表示されようとしているときに呼び出されます。|
-|[ダイアログ::ショーUI](#showui)|ホストの UI を表示します。|
-|[ダイアログ::変換アクセラレータ](#translateaccelerator)|メニュー アクセラレータ キー メッセージを処理するために呼び出されます。|
-|[ダイアログ::翻訳Url](#translateurl)|読み込む URL を変更するために呼び出されます。|
-|[ダイアログ::アップデートUI](#updateui)|コマンドの状態が変更されたことをホストに通知するために呼び出されます。|
+|[CDHtmlDialog:: CanAccessExternal](#canaccessexternal)|読み込まれたページ上のスクリプトオブジェクトが、コントロールサイトの外部ディスパッチにアクセスできるかどうかを確認するアクセスチェックとして呼び出されるオーバーライド可能な。 ディスパッチがスクリプトに対して安全であることを確認するか、現在のゾーンでスクリプトに対して安全ではないオブジェクトを許可します。|
+|[CDHtmlDialog:: CreateControlSite](#createcontrolsite)|ダイアログで WebBrowser コントロールをホストするコントロールサイトのインスタンスを作成するために使用されるオーバーライド可能な。|
+|[CDHtmlDialog::D DX_DHtml_AxControl](#ddx_dhtml_axcontrol)|HTML ページ上の ActiveX コントロールのメンバー変数とプロパティ値の間でデータを交換します。|
+|[CDHtmlDialog::D DX_DHtml_CheckBox](#ddx_dhtml_checkbox)|HTML ページのメンバー変数とチェックボックスの間でデータを交換します。|
+|[CDHtmlDialog::D DX_DHtml_ElementText](#ddx_dhtml_elementtext)|HTML ページのメンバー変数と HTML 要素のプロパティとの間でデータを交換します。|
+|[CDHtmlDialog::D DX_DHtml_Radio](#ddx_dhtml_radio)|メンバー変数と、HTML ページのラジオボタンの間でデータを交換します。|
+|[CDHtmlDialog::D DX_DHtml_SelectIndex](#ddx_dhtml_selectindex)|HTML ページ上のリストボックスのインデックスを取得または設定します。|
+|[CDHtmlDialog::D DX_DHtml_SelectString](#ddx_dhtml_selectstring)|HTML ページのリストボックスエントリ (現在のインデックスに基づく) の表示テキストを取得または設定します。|
+|[CDHtmlDialog::D DX_DHtml_SelectValue](#ddx_dhtml_selectvalue)|HTML ページのリストボックスエントリ (現在のインデックスに基づく) の値を取得または設定します。|
+|[CDHtmlDialog::D estroyModeless](#destroymodeless)|モードレスダイアログボックスを破棄します。|
+|[CDHtmlDialog:: EnableModeless](#enablemodeless)|モードレスダイアログボックスを有効にします。|
+|[CDHtmlDialog:: FilterDataObject](#filterdataobject)|ホストされたブラウザーによって作成されたクリップボードデータオブジェクトをダイアログがフィルター処理できるようにします。|
+|[CDHtmlDialog:: GetControlDispatch](#getcontroldispatch)|`IDispatch`HTML ドキュメントに埋め込まれている ActiveX コントロールのインターフェイスを取得します。|
+|[CDHtmlDialog:: GetControlProperty](#getcontrolproperty)|指定した ActiveX コントロールの要求されたプロパティを取得します。|
+|[CDHtmlDialog:: GetCurrentUrl](#getcurrenturl)|現在のドキュメントに関連付けられている Uniform Resource Locator (URL) を取得します。|
+|[CDHtmlDialog:: GetDHtmlDocument](#getdhtmldocument)|現在読み込まれている HTML ドキュメントの IHTMLDocument2 インターフェイスを取得します。|
+|[CDHtmlDialog:: GetDropTarget](#getdroptarget)|ドロップターゲットとして使用されている場合に、そのコントロールによって呼び出され、別の [IDropTarget](/windows/win32/api/oleidl/nn-oleidl-idroptarget)をダイアログで提供できるようにします。|
+|[CDHtmlDialog:: GetElement](#getelement)|HTML 要素のインターフェイスを取得します。|
+|[CDHtmlDialog:: GetElementHtml](#getelementhtml)|`innerHTML`HTML 要素のプロパティを取得します。|
+|[CDHtmlDialog:: GetElementInterface](#getelementinterface)|要求されたインターフェイスポインターを HTML 要素から取得します。|
+|[CDHtmlDialog:: GetElementProperty](#getelementproperty)|HTML 要素のプロパティの値を取得します。|
+|[CDHtmlDialog:: GetElementText](#getelementtext)|`innerText`HTML 要素のプロパティを取得します。|
+|[CDHtmlDialog:: GetEvent](#getevent)|現在の `IHTMLEventObj` イベントオブジェクトへのポインターを取得します。|
+|[CDHtmlDialog:: GetExternal](#getexternal)|ホストのインターフェイスを取得し `IDispatch` ます。|
+|[CDHtmlDialog:: GetHostInfo](#gethostinfo)|ホストの UI 機能を取得します。|
+|[CDHtmlDialog:: GetOptionKeyPath](#getoptionkeypath)|ユーザー設定が格納されているレジストリキーを取得します。|
+|[CDHtmlDialog:: HideUI](#hideui)|ホストの UI を非表示にします。|
+|[CDHtmlDialog:: IsExternalDispatchSafe](#isexternaldispatchsafe)|ホストの `IDispatch` インターフェイスがスクリプトに対して安全であるかどうかを示します。|
+|[CDHtmlDialog:: LoadFromResource](#loadfromresource)|指定されたリソースを WebBrowser コントロールに読み込みます。|
+|[CDHtmlDialog:: Navigate](#navigate)|指定された URL に移動します。|
+|[CDHtmlDialog:: OnBeforeNavigate](#onbeforenavigate)|ナビゲーションイベントが発生する前にフレームワークによって呼び出されます。|
+|[CDHtmlDialog:: OnDocumentComplete](#ondocumentcomplete)|ドキュメントが READYSTATE_COMPLETE 状態に達したときにアプリケーションに通知するために、フレームワークによって呼び出されます。|
+|[CDHtmlDialog:: OnDocWindowActivate](#ondocwindowactivate)|ドキュメントウィンドウがアクティブ化または非アクティブ化されたときにフレームワークによって呼び出されます。|
+|[CDHtmlDialog:: OnFrameWindowActivate](#onframewindowactivate)|フレームウィンドウがアクティブ化または非アクティブ化されたときにフレームワークによって呼び出されます。|
+|[CDHtmlDialog:: OnInitDialog](#oninitdialog)|WM_INITDIALOG メッセージへの応答として呼び出されます。|
+|[CDHtmlDialog:: OnNavigateComplete](#onnavigatecomplete)|ナビゲーションイベントの完了後にフレームワークによって呼び出されます。|
+|[CDHtmlDialog:: ResizeBorder](#resizeborder)|境界領域のサイズを変更する必要があることをオブジェクトに通知します。|
+|[CDHtmlDialog:: SetControlProperty](#setcontrolproperty)|ActiveX コントロールのプロパティを新しい値に設定します。|
+|[CDHtmlDialog:: SetElementHtml](#setelementhtml)|`innerHTML`HTML 要素のプロパティを設定します。|
+|[CDHtmlDialog:: SetElementProperty](#setelementproperty)|HTML 要素のプロパティを設定します。|
+|[CDHtmlDialog:: SetElementText](#setelementtext)|`innerText`HTML 要素のプロパティを設定します。|
+|[CDHtmlDialog:: SetExternalDispatch](#setexternaldispatch)|ホストのインターフェイスを設定し `IDispatch` ます。|
+|[CDHtmlDialog:: SetHostFlags](#sethostflags)|ホストの UI フラグを設定します。|
+|[CDHtmlDialog:: ShowContextMenu](#showcontextmenu)|コンテキストメニューが表示されようとしているときに呼び出されます。|
+|[CDHtmlDialog:: ShowUI](#showui)|ホストの UI を表示します。|
+|[CDHtmlDialog:: TranslateAccelerator](#translateaccelerator)|メニューアクセラレータキーメッセージを処理するために呼び出されます。|
+|[CDHtmlDialog:: TranslateUrl](#translateurl)|読み込まれる URL を変更するために呼び出されます。|
+|[CDHtmlDialog:: UpdateUI](#updateui)|コマンドの状態が変更されたことをホストに通知するために呼び出されます。|
 
 ### <a name="public-data-members"></a>パブリック データ メンバー
 
 |名前|説明|
 |----------|-----------------|
-|[ダイアログ::m_bUseHtmlTitle](#m_busehtmltitle)|HTML ドキュメントのタイトルをダイアログ キャプションとして使用するかどうかを示します。|
-|[ダイアログ::m_nHtmlResID](#m_nhtmlresid)|表示される HTML リソースのリソース ID。|
-|[ダイアログ::m_pBrowserApp](#m_pbrowserapp)|Web ブラウザー アプリケーションへのポインター。|
-|[ダイアログ::m_spHtmlDoc](#m_sphtmldoc)|HTML ドキュメントへのポインター。|
-|[ダイアログ::m_strCurrentUrl](#m_strcurrenturl)|現在の URL。|
-|[ダイアログ::m_szHtmlResID](#m_szhtmlresid)|HTML リソース ID の文字列バージョンです。|
+|[CDHtmlDialog:: m_bUseHtmlTitle](#m_busehtmltitle)|HTML ドキュメントのタイトルをダイアログキャプションとして使用するかどうかを示します。|
+|[CDHtmlDialog:: m_nHtmlResID](#m_nhtmlresid)|表示する HTML リソースのリソース ID。|
+|[CDHtmlDialog:: m_pBrowserApp](#m_pbrowserapp)|Web ブラウザーアプリケーションへのポインター。|
+|[CDHtmlDialog:: m_spHtmlDoc](#m_sphtmldoc)|HTML ドキュメントへのポインター。|
+|[CDHtmlDialog:: m_strCurrentUrl](#m_strcurrenturl)|現在の URL。|
+|[CDHtmlDialog:: m_szHtmlResID](#m_szhtmlresid)|HTML リソース ID の文字列バージョン。|
 
 ## <a name="remarks"></a>解説
 
-`CDHtmlDialog`は、HTML リソースまたは URL から表示される HTML を読み込むことができます。
+`CDHtmlDialog` HTML リソースまたは URL から表示される HTML を読み込むことができます。
 
-`CDHtmlDialog`また、HTML コントロールとデータ交換を行い、ボタンのクリックなどの HTML コントロールからのイベントを処理することもできます。
+`CDHtmlDialog` は、HTML コントロールを使用してデータ交換を行い、ボタンのクリックなどの HTML コントロールからのイベントを処理することもできます。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -234,28 +234,28 @@ class CDHtmlDialog : public CDialog, public CDHtmlEventSink
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** afxdhtml.h
+**ヘッダー:** afxdhtml
 
-## <a name="ddx_dhtml-helper-macros"></a><a name="ddx_dhtml_helper_macros"></a>DDX_DHtmlヘルパー マクロ
+## <a name="ddx_dhtml-helper-macros"></a><a name="ddx_dhtml_helper_macros"></a> DDX_DHtml ヘルパーマクロ
 
-DDX_DHtml ヘルパー マクロを使用すると、HTML ページ上のコントロールの一般的に使用されるプロパティに簡単にアクセスできます。
+DDX_DHtml ヘルパーマクロを使用すると、HTML ページ上のコントロールの一般的に使用されるプロパティに簡単にアクセスできます。
 
 ### <a name="data-exchange-macros"></a>データ交換マクロ
 
-|||
+|名前|説明|
 |-|-|
-|[DDX_DHtml_ElementValue](../../mfc/reference/ddx-dhtml-helper-macros.md#ddx_dhtml_elementvalue)|選択したコントロールから Value プロパティを設定または取得します。|
+|[DDX_DHtml_ElementValue](../../mfc/reference/ddx-dhtml-helper-macros.md#ddx_dhtml_elementvalue)|選択したコントロールの値プロパティを設定または取得します。|
 |[DDX_DHtml_ElementInnerText](../../mfc/reference/ddx-dhtml-helper-macros.md#ddx_dhtml_elementinnertext)|現在の要素の開始タグと終了タグの間のテキストを設定または取得します。|
-|[DDX_DHtml_ElementInnerHtml](../../mfc/reference/ddx-dhtml-helper-macros.md#ddx_dhtml_elementinnerhtml)|現在の要素の開始タグと終了タグの間の HTML を設定または取得します。|
-|[DDX_DHtml_Anchor_Href](../../mfc/reference/ddx-dhtml-helper-macros.md#ddx_dhtml_anchor_href)|リンク先 URL またはアンカー ポイントを設定または取得します。|
-|[DDX_DHtml_Anchor_Target](../../mfc/reference/ddx-dhtml-helper-macros.md#ddx_dhtml_anchor_target)|ターゲット ウィンドウまたはフレームを設定または取得します。|
-|[DDX_DHtml_Img_Src](../../mfc/reference/ddx-dhtml-helper-macros.md#ddx_dhtml_img_src)|ドキュメント内のイメージまたはビデオ クリップの名前を設定または取得します。|
+|[DDX_DHtml_ElementInnerHtml](../../mfc/reference/ddx-dhtml-helper-macros.md#ddx_dhtml_elementinnerhtml)|現在の要素の開始タグと終了タグの間にある HTML を設定または取得します。|
+|[DDX_DHtml_Anchor_Href](../../mfc/reference/ddx-dhtml-helper-macros.md#ddx_dhtml_anchor_href)|送信先 URL またはアンカーポイントを設定または取得します。|
+|[DDX_DHtml_Anchor_Target](../../mfc/reference/ddx-dhtml-helper-macros.md#ddx_dhtml_anchor_target)|対象のウィンドウまたはフレームを設定または取得します。|
+|[DDX_DHtml_Img_Src](../../mfc/reference/ddx-dhtml-helper-macros.md#ddx_dhtml_img_src)|ドキュメント内のイメージまたはビデオクリップの名前を設定または取得します。|
 |[DDX_DHtml_Frame_Src](../../mfc/reference/ddx-dhtml-helper-macros.md#ddx_dhtml_frame_src)|関連付けられたフレームの URL を設定または取得します。|
 |[DDX_DHtml_IFrame_Src](../../mfc/reference/ddx-dhtml-helper-macros.md#ddx_dhtml_iframe_src)|関連付けられたフレームの URL を設定または取得します。|
 
-## <a name="cdhtmldialogcanaccessexternal"></a><a name="canaccessexternal"></a>ダイアログ::アクセス外部
+## <a name="cdhtmldialogcanaccessexternal"></a><a name="canaccessexternal"></a> CDHtmlDialog:: CanAccessExternal
 
-読み込まれたページのスクリプト オブジェクトがコントロール サイトの外部ディスパッチにアクセスできるかどうかを確認するためにアクセス チェックとして呼び出されるオーバーライド可能。 ディスパッチがスクリプトに対して安全であるか、現在のゾーンでスクリプト作成が安全でないオブジェクトを許可しているかどうかを確認します。
+読み込まれたページ上のスクリプトオブジェクトが、コントロールサイトの外部ディスパッチにアクセスできるかどうかを確認するアクセスチェックとして呼び出されるオーバーライド可能な。 ディスパッチがスクリプトに対して安全であることを確認するか、現在のゾーンでスクリプトに対して安全ではないオブジェクトを許可します。
 
 ```
 virtual BOOL CanAccessExternal();
@@ -265,9 +265,9 @@ virtual BOOL CanAccessExternal();
 
 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。
 
-## <a name="cdhtmldialogcdhtmldialog"></a><a name="cdhtmldialog"></a>ダイアログ
+## <a name="cdhtmldialogcdhtmldialog"></a><a name="cdhtmldialog"></a> CDHtmlDialog:: CDHtmlDialog
 
-リソースベースのダイナミック HTML ダイアログ ボックスを構築します。
+リソースベースの動的 HTML ダイアログボックスを構築します。
 
 ```
 CDHtmlDialog();
@@ -285,28 +285,28 @@ CDHtmlDialog(
 
 ### <a name="parameters"></a>パラメーター
 
-*テンプレート名*<br/>
-ダイアログ ボックス テンプレート リソースの名前である null で終わる文字列。
+*lpszTemplateName*<br/>
+ダイアログボックステンプレートリソースの名前である null で終わる文字列。
 
-*を返します。*<br/>
-HTML リソースの名前である null で終わる文字列。
+*szHtmlResID*<br/>
+HTML リソースの名前を表す null で終わる文字列。
 
 *pParentWnd*<br/>
-ダイアログ オブジェクトが属する親ウィンドウ オブジェクトまたはオーナー ウィンドウ オブジェクト ( [CWnd](../../mfc/reference/cwnd-class.md)型 ) へのポインター。 NULL の場合、ダイアログ オブジェクトの親ウィンドウはメイン アプリケーション ウィンドウに設定されます。
+ダイアログオブジェクトが属する親またはオーナーウィンドウオブジェクト ( [CWnd](../../mfc/reference/cwnd-class.md)型) へのポインター。 NULL の場合は、ダイアログオブジェクトの親ウィンドウがメインアプリケーションウィンドウに設定されます。
 
-*テンプレート*<br/>
-ダイアログ ボックス テンプレート リソースの ID 番号を格納します。
+*nIDTemplate*<br/>
+ダイアログボックステンプレートリソースの ID 番号を格納します。
 
-*を返します。*<br/>
+*nHtmlResID*<br/>
 HTML リソースの ID 番号を格納します。
 
 ### <a name="remarks"></a>解説
 
-コンストラクタの 2 番目の形式では、テンプレート名を使用してダイアログ リソースにアクセスできます。 コンストラクタの 3 番目の形式では、リソース テンプレートの ID を使用してダイアログ リソースにアクセスできます。 通常、ID は**IDD_** プレフィックスで始まります。
+コンストラクターの2番目の形式は、テンプレート名を使用してダイアログリソースへのアクセスを提供します。 コンストラクターの3番目の形式は、リソーステンプレートの ID を通じてダイアログリソースへのアクセスを提供します。 通常、ID は **IDD_** プレフィックスで始まります。
 
-## <a name="cdhtmldialogcdhtmldialog"></a><a name="_dtorcdhtmldialog"></a>ダイアログ
+## <a name="cdhtmldialogcdhtmldialog"></a><a name="_dtorcdhtmldialog"></a> CDHtmlDialog:: ~ CDHtmlDialog
 
-オブジェクトを破棄します。
+CDHtmlDialog オブジェクトを破棄します。
 
 ```
 virtual ~CDHtmlDialog();
@@ -314,11 +314,11 @@ virtual ~CDHtmlDialog();
 
 ### <a name="remarks"></a>解説
 
-[CWnd::DestroyWindow](../../mfc/reference/cwnd-class.md#destroywindow)メンバー関数は[、CDialog::Create](../../mfc/reference/cdialog-class.md#create)によって作成されたモードレス ダイアログ ボックスを破棄するために使用する必要があります。
+[CWnd: [: Create](../../mfc/reference/cdialog-class.md#create)] で作成されたモードレスダイアログボックスを破棄するには、 [CWnd::D estroywindow](../../mfc/reference/cwnd-class.md#destroywindow)メンバー関数を使用する必要があります。
 
-## <a name="cdhtmldialogcreatecontrolsite"></a><a name="createcontrolsite"></a>コントロールサイトの作成
+## <a name="cdhtmldialogcreatecontrolsite"></a><a name="createcontrolsite"></a> CDHtmlDialog:: CreateControlSite
 
-ダイアログで WebBrowser コントロールをホストするコントロール サイト インスタンスを作成するために使用されるオーバーライド可能です。
+ダイアログで WebBrowser コントロールをホストするコントロールサイトのインスタンスを作成するために使用されるオーバーライド可能な。
 
 ```
 virtual BOOL CreateControlSite(
@@ -331,10 +331,10 @@ virtual BOOL CreateControlSite(
 ### <a name="parameters"></a>パラメーター
 
 *pContainer*<br/>
-[オブジェクトへの](../../mfc/reference/colecontrolcontainer-class.md)ポインター
+[COleControlContainer](../../mfc/reference/colecontrolcontainer-class.md)オブジェクトへのポインター
 
 *ppSite*<br/>
-へのポインターへのポインター[です](../../mfc/reference/colecontrolsite-class.md)。
+[COleControlSite](../../mfc/reference/colecontrolsite-class.md)へのポインターへのポインター。
 
 ### <a name="return-value"></a>戻り値
 
@@ -342,11 +342,11 @@ virtual BOOL CreateControlSite(
 
 ### <a name="remarks"></a>解説
 
-このメンバー関数をオーバーライドして、独自のコントロール サイト クラスのインスタンスを返すことができます。
+このメンバー関数をオーバーライドして、独自のコントロールサイトクラスのインスタンスを返すことができます。
 
-## <a name="cdhtmldialogddx_dhtml_axcontrol"></a><a name="ddx_dhtml_axcontrol"></a>ダイアログ::DDX_DHtml_アクスコントロール
+## <a name="cdhtmldialogddx_dhtml_axcontrol"></a><a name="ddx_dhtml_axcontrol"></a> CDHtmlDialog::D DX_DHtml_AxControl
 
-メンバー変数と HTML ページ上の ActiveX コントロールのプロパティ値との間でデータを交換します。
+HTML ページ上の ActiveX コントロールのメンバー変数とプロパティ値の間でデータを交換します。
 
 ```cpp
 void DDX_DHtml_AxControl(
@@ -364,28 +364,28 @@ void DDX_DHtml_AxControl(
 
 ### <a name="parameters"></a>パラメーター
 
-*Pdx*<br/>
-[オブジェクト](../../mfc/reference/cdataexchange-class.md)へのポインター。
+*pDX*<br/>
+[CDataExchange](../../mfc/reference/cdataexchange-class.md)オブジェクトへのポインター。
 
 *szId*<br/>
-ActiveX コントロールの HTML ソース内のオブジェクト タグの ID パラメータの値。
+ActiveX コントロールの HTML ソースのオブジェクトタグの ID パラメーターの値。
 
-*Dispid*<br/>
-データを交換するプロパティのディスパッチ ID。
+*dispId*<br/>
+データの交換に使用するプロパティのディスパッチ ID。
 
-*を使用します。*<br/>
+*szPropName*<br/>
 プロパティの名前。
 
 *var*<br/>
-ActiveX コントロール プロパティと交換される値を保持するバリアント型[、COleVariant](../../mfc/reference/colevariant-class.md)型、または[CComVariant](../../atl/reference/ccomvariant-class.md)型のデータ メンバー。
+ActiveX コントロールプロパティと交換された値を保持する、VARIANT、 [COleVariant](../../mfc/reference/colevariant-class.md)、または [CComVariant](../../atl/reference/ccomvariant-class.md)型のデータメンバー。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_MFCHtmlHttp#1](../../mfc/reference/codesnippet/cpp/cdhtmldialog-class_1.cpp)]
 
-## <a name="cdhtmldialogddx_dhtml_checkbox"></a><a name="ddx_dhtml_checkbox"></a>チェック ボックスを:D
+## <a name="cdhtmldialogddx_dhtml_checkbox"></a><a name="ddx_dhtml_checkbox"></a> CDHtmlDialog::D DX_DHtml_CheckBox
 
-メンバー変数と HTML ページのチェック ボックスの間でデータを交換します。
+HTML ページのメンバー変数とチェックボックスの間でデータを交換します。
 
 ```cpp
 void DDX_DHtml_CheckBox(
@@ -396,8 +396,8 @@ void DDX_DHtml_CheckBox(
 
 ### <a name="parameters"></a>パラメーター
 
-*Pdx*<br/>
-[オブジェクト](../../mfc/reference/cdataexchange-class.md)へのポインター。
+*pDX*<br/>
+[CDataExchange](../../mfc/reference/cdataexchange-class.md)オブジェクトへのポインター。
 
 *szId*<br/>
 HTML コントロールの ID パラメーターに指定した値。
@@ -409,9 +409,9 @@ HTML コントロールの ID パラメーターに指定した値。
 
 [!code-cpp[NVC_MFCHtmlHttp#2](../../mfc/reference/codesnippet/cpp/cdhtmldialog-class_2.cpp)]
 
-## <a name="cdhtmldialogddx_dhtml_elementtext"></a><a name="ddx_dhtml_elementtext"></a>:DDX_DHtml_要素テキスト
+## <a name="cdhtmldialogddx_dhtml_elementtext"></a><a name="ddx_dhtml_elementtext"></a> CDHtmlDialog::D DX_DHtml_ElementText
 
-メンバー変数と HTML ページ上の HTML 要素プロパティとの間でデータを交換します。
+HTML ページのメンバー変数と HTML 要素のプロパティとの間でデータを交換します。
 
 ```cpp
 void DDX_DHtml_ElementText(
@@ -459,21 +459,21 @@ void DDX_DHtml_ElementText(
 
 ### <a name="parameters"></a>パラメーター
 
-*Pdx*<br/>
-[オブジェクト](../../mfc/reference/cdataexchange-class.md)へのポインター。
+*pDX*<br/>
+[CDataExchange](../../mfc/reference/cdataexchange-class.md)オブジェクトへのポインター。
 
 *szId*<br/>
 HTML コントロールの ID パラメーターに指定した値。
 
-*Dispid*<br/>
-データを交換する HTML 要素のディスパッチ ID。
+*dispId*<br/>
+データの交換に使用する HTML 要素のディスパッチ ID。
 
 *value*<br/>
 交換される値。
 
-## <a name="cdhtmldialogddx_dhtml_radio"></a><a name="ddx_dhtml_radio"></a>ダイアログ:D
+## <a name="cdhtmldialogddx_dhtml_radio"></a><a name="ddx_dhtml_radio"></a> CDHtmlDialog::D DX_DHtml_Radio
 
-メンバー変数と HTML ページのラジオ ボタンの間でデータを交換します。
+メンバー変数と、HTML ページのラジオボタンの間でデータを交換します。
 
 ```cpp
 void DDX_DHtml_Radio(
@@ -484,8 +484,8 @@ void DDX_DHtml_Radio(
 
 ### <a name="parameters"></a>パラメーター
 
-*Pdx*<br/>
-[オブジェクト](../../mfc/reference/cdataexchange-class.md)へのポインター。
+*pDX*<br/>
+[CDataExchange](../../mfc/reference/cdataexchange-class.md)オブジェクトへのポインター。
 
 *szId*<br/>
 HTML コントロールの ID パラメーターに指定した値。
@@ -493,9 +493,9 @@ HTML コントロールの ID パラメーターに指定した値。
 *value*<br/>
 交換される値。
 
-## <a name="cdhtmldialogddx_dhtml_selectindex"></a><a name="ddx_dhtml_selectindex"></a>ダイアログ::DDX_DHtml_インデックスを選択します。
+## <a name="cdhtmldialogddx_dhtml_selectindex"></a><a name="ddx_dhtml_selectindex"></a> CDHtmlDialog::D DX_DHtml_SelectIndex
 
-HTML ページ上のリスト ボックスのインデックスを取得または設定します。
+HTML ページ上のリストボックスのインデックスを取得または設定します。
 
 ```cpp
 void DDX_DHtml_SelectIndex(
@@ -506,18 +506,18 @@ void DDX_DHtml_SelectIndex(
 
 ### <a name="parameters"></a>パラメーター
 
-*Pdx*<br/>
-[オブジェクト](../../mfc/reference/cdataexchange-class.md)へのポインター。
+*pDX*<br/>
+[CDataExchange](../../mfc/reference/cdataexchange-class.md)オブジェクトへのポインター。
 
 *szId*<br/>
-HTML コントロールの`id`パラメーターに指定した値。
+HTML コントロールのパラメーターに指定した値 `id` 。
 
 *value*<br/>
 交換される値。
 
-## <a name="cdhtmldialogddx_dhtml_selectstring"></a><a name="ddx_dhtml_selectstring"></a>:DDX_DHtml_選択文字列
+## <a name="cdhtmldialogddx_dhtml_selectstring"></a><a name="ddx_dhtml_selectstring"></a> CDHtmlDialog::D DX_DHtml_SelectString
 
-HTML ページのリスト ボックス エントリの表示テキストを現在のインデックスに基づいて取得または設定します。
+HTML ページのリストボックスエントリ (現在のインデックスに基づく) の表示テキストを取得または設定します。
 
 ```cpp
 void DDX_DHtml_SelectString(
@@ -528,8 +528,8 @@ void DDX_DHtml_SelectString(
 
 ### <a name="parameters"></a>パラメーター
 
-*Pdx*<br/>
-[オブジェクト](../../mfc/reference/cdataexchange-class.md)へのポインター。
+*pDX*<br/>
+[CDataExchange](../../mfc/reference/cdataexchange-class.md)オブジェクトへのポインター。
 
 *szId*<br/>
 HTML コントロールの ID パラメーターに指定した値。
@@ -537,9 +537,9 @@ HTML コントロールの ID パラメーターに指定した値。
 *value*<br/>
 交換される値。
 
-## <a name="cdhtmldialogddx_dhtml_selectvalue"></a><a name="ddx_dhtml_selectvalue"></a>ダイアログ ボックス::DDX_DHtml_選択値
+## <a name="cdhtmldialogddx_dhtml_selectvalue"></a><a name="ddx_dhtml_selectvalue"></a> CDHtmlDialog::D DX_DHtml_SelectValue
 
-HTML ページのリスト ボックス エントリの値を取得または設定します ( 現在のインデックスに基づく ) 。
+HTML ページのリストボックスエントリ (現在のインデックスに基づく) の値を取得または設定します。
 
 ```cpp
 void DDX_DHtml_SelectValue(
@@ -550,8 +550,8 @@ void DDX_DHtml_SelectValue(
 
 ### <a name="parameters"></a>パラメーター
 
-*Pdx*<br/>
-[オブジェクト](../../mfc/reference/cdataexchange-class.md)へのポインター。
+*pDX*<br/>
+[CDataExchange](../../mfc/reference/cdataexchange-class.md)オブジェクトへのポインター。
 
 *szId*<br/>
 HTML コントロールの ID パラメーターに指定した値。
@@ -563,17 +563,17 @@ HTML コントロールの ID パラメーターに指定した値。
 
 [!code-cpp[NVC_MFCHtmlHttp#3](../../mfc/reference/codesnippet/cpp/cdhtmldialog-class_3.cpp)]
 
-## <a name="cdhtmldialogdestroymodeless"></a><a name="destroymodeless"></a>ダイアログ::Dエストロイモードレス
+## <a name="cdhtmldialogdestroymodeless"></a><a name="destroymodeless"></a> CDHtmlDialog::D estroyModeless
 
-モードレス ダイアログ ボックスをオブジェクトから`CDHtmlDialog`切り離し、オブジェクトを破棄します。
+オブジェクトからモードレスダイアログボックスをデタッチ `CDHtmlDialog` し、オブジェクトを破棄します。
 
 ```cpp
 void DestroyModeless();
 ```
 
-## <a name="cdhtmldialogenablemodeless"></a><a name="enablemodeless"></a>ダイアログ::モードレスを有効にする
+## <a name="cdhtmldialogenablemodeless"></a><a name="enablemodeless"></a> CDHtmlDialog:: EnableModeless
 
-モードレス ダイアログ ボックスを有効にします。
+モードレスダイアログボックスを有効にします。
 
 ```
 STDMETHOD(EnableModeless)(BOOL fEnable);
@@ -581,8 +581,8 @@ STDMETHOD(EnableModeless)(BOOL fEnable);
 
 ### <a name="parameters"></a>パラメーター
 
-*f有効*<br/>
-Windows SDK の*fEnable*を参照[してください](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753253\(v=vs.85\))。
+*fEnable*<br/>
+Windows SDK の「 *Fenable* in [IDocHostUIHandler:: EnableModeless](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753253\(v=vs.85\)) 」を参照してください。
 
 ### <a name="return-value"></a>戻り値
 
@@ -590,11 +590,11 @@ E_NOTIMPL を返します。
 
 ### <a name="remarks"></a>解説
 
-このメンバー関数は、Windows SDK で説明されているように、CDHtmlDialog の[IDocHostUIHandler::EnableModeless](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753253\(v=vs.85\))の実装です。
+このメンバー関数は、Windows SDK で説明されているように、 [IDocHostUIHandler:: EnableModeless](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753253\(v=vs.85\))の CDHtmlDialog の実装です。
 
-## <a name="cdhtmldialogfilterdataobject"></a><a name="filterdataobject"></a>フィルターデータオブジェクト
+## <a name="cdhtmldialogfilterdataobject"></a><a name="filterdataobject"></a> CDHtmlDialog:: FilterDataObject
 
-ダイアログボックスで、ホストされたブラウザによって作成されたクリップボード データ オブジェクトをフィルタ処理できます。
+ホストされたブラウザーによって作成されたクリップボードデータオブジェクトをダイアログがフィルター処理できるようにします。
 
 ```
 STDMETHOD(FilterDataObject)(
@@ -604,23 +604,23 @@ STDMETHOD(FilterDataObject)(
 
 ### <a name="parameters"></a>パラメーター
 
-*Pdo*<br/>
-Windows SDK の*pDO*を参照してください。 [IDocHostUIHandler::FilterDataObject](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753254\(v=vs.85\))
+*pDO*<br/>
+Windows SDK の「 [IDocHostUIHandler:: FilterDataObject](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753254\(v=vs.85\))の*pDO* 」を参照してください。
 
-*ppDOReT*<br/>
-の *「」の「ppDORet」*`IDocHostUIHandler::FilterDataObject`を参照してください。
+*ppDORet*<br/>
+Windows SDK の「 *ppDORet* 」を参照してください `IDocHostUIHandler::FilterDataObject` 。
 
 ### <a name="return-value"></a>戻り値
 
-S_FALSEを返します。
+S_FALSE を返します。
 
 ### <a name="remarks"></a>解説
 
-このメンバー関数は、Windows SDK で説明[されているように](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753254\(v=vs.85\))、CDHtmlDialog の実装です。
+このメンバー関数は、Windows SDK で説明されているように、 [IDocHostUIHandler:: FilterDataObject](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753254\(v=vs.85\))の CDHtmlDialog の実装です。
 
-## <a name="cdhtmldialoggetcontroldispatch"></a><a name="getcontroldispatch"></a>をクリックします。
+## <a name="cdhtmldialoggetcontroldispatch"></a><a name="getcontroldispatch"></a> CDHtmlDialog:: GetControlDispatch
 
-によって返される`IDispatch`HTML ドキュメントに埋め込まれている ActiveX コントロールのインターフェイス[を取得します](#getdhtmldocument)。
+`IDispatch` [GetDHtmlDocument](#getdhtmldocument)によって返される HTML ドキュメントに埋め込まれている ActiveX コントロールのインターフェイスを取得します。
 
 ```
 HRESULT GetControlDispatch(
@@ -634,13 +634,13 @@ HRESULT GetControlDispatch(
 ActiveX コントロールの HTML ID。
 
 *ppdisp*<br/>
-Web`IDispatch`ページで見つかった場合のコントロールのインターフェイス。
+`IDispatch`コントロールのインターフェイス (Web ページに存在する場合)。
 
 ### <a name="return-value"></a>戻り値
 
 標準の HRESULT 値。
 
-## <a name="cdhtmldialoggetcontrolproperty"></a><a name="getcontrolproperty"></a>プロパティを取得します。
+## <a name="cdhtmldialoggetcontrolproperty"></a><a name="getcontrolproperty"></a> CDHtmlDialog:: GetControlProperty
 
 指定した ActiveX コントロールの要求されたプロパティを取得します。
 
@@ -663,26 +663,26 @@ VARIANT GetControlProperty(
 *szId*<br/>
 ActiveX コントロールの HTML ID。
 
-*を使用します。*<br/>
-現在のユーザーの既定のロケールにあるプロパティの名前。
+*szPropName*<br/>
+現在のユーザーの既定のロケールでのプロパティの名前。
 
-*コントロール*<br/>
-ActiveX コントロールの`IDispatch`ポインター。
+*pdispControl*<br/>
+`IDispatch`ActiveX コントロールのポインター。
 
-*Dispid*<br/>
+*dispId*<br/>
 プロパティのディスパッチ ID。
 
 ### <a name="return-value"></a>戻り値
 
-要求されたプロパティを含むバリアント、またはコントロールまたはプロパティが見つからない場合は空のバリアント。
+要求されたプロパティを格納している variant。コントロールまたはプロパティが見つからなかった場合は空のバリアント。
 
 ### <a name="remarks"></a>解説
 
-オーバーロードは、最も効率の低い順から最も効率的な一番下にリストされています。
+オーバーロードは、一番下にある最も効率的なものから順に表示されます。
 
-## <a name="cdhtmldialoggetcurrenturl"></a><a name="getcurrenturl"></a>ダイアログ::取得カレントUrl
+## <a name="cdhtmldialoggetcurrenturl"></a><a name="getcurrenturl"></a> CDHtmlDialog:: GetCurrentUrl
 
-現在のドキュメントに関連付けられている統一リソース ロケーター (URL) を取得します。
+現在のドキュメントに関連付けられている Uniform Resource Locator (URL) を取得します。
 
 ```cpp
 void GetCurrentUrl(CString& szUrl);
@@ -690,12 +690,12 @@ void GetCurrentUrl(CString& szUrl);
 
 ### <a name="parameters"></a>パラメーター
 
-*スズUrl*<br/>
-取得する URL を含む[CString](../../atl-mfc-shared/reference/cstringt-class.md)オブジェクト。
+*szUrl*<br/>
+取得する URL を格納している [CString](../../atl-mfc-shared/reference/cstringt-class.md) オブジェクト。
 
-## <a name="cdhtmldialoggetdhtmldocument"></a><a name="getdhtmldocument"></a>ドキュメントを取得します。
+## <a name="cdhtmldialoggetdhtmldocument"></a><a name="getdhtmldocument"></a> CDHtmlDialog:: GetDHtmlDocument
 
-現在読み込まれている HTML ドキュメントの[IHTMLDocument2](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa752574\(v=vs.85\))インターフェイスを取得します。
+現在読み込まれている HTML ドキュメントの [IHTMLDocument2](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa752574\(v=vs.85\)) インターフェイスを取得します。
 
 ```
 HRESULT GetDHtmlDocument(IHTMLDocument2 **pphtmlDoc);
@@ -703,15 +703,15 @@ HRESULT GetDHtmlDocument(IHTMLDocument2 **pphtmlDoc);
 
 ### <a name="parameters"></a>パラメーター
 
-*\*ド\*ク*HTML ドキュメントへのポインターへのポインター。
+* \* \* pphtmlDoc* HTML ドキュメントへのポインターへのポインター。
 
 ### <a name="return-value"></a>戻り値
 
-標準の HRESULT。 成功した場合S_OK返します。
+標準の HRESULT です。 成功した場合は S_OK を返します。
 
-## <a name="cdhtmldialoggetdroptarget"></a><a name="getdroptarget"></a>ダイアログ::ドロップターゲット
+## <a name="cdhtmldialoggetdroptarget"></a><a name="getdroptarget"></a> CDHtmlDialog:: GetDropTarget
 
-含まれている WebBrowser コントロールがドロップ ターゲットとして使用されているときに呼び出され、ダイアログが代替[IDropTarget](/windows/win32/api/oleidl/nn-oleidl-idroptarget)を提供できるようにします。
+ドロップターゲットとして使用されている場合に、そのコントロールによって呼び出され、別の [IDropTarget](/windows/win32/api/oleidl/nn-oleidl-idroptarget)をダイアログで提供できるようにします。
 
 ```
 STDMETHOD(GetDropTarget)(
@@ -721,11 +721,11 @@ STDMETHOD(GetDropTarget)(
 
 ### <a name="parameters"></a>パラメーター
 
-*ターゲット*<br/>
-Windows SDK の*p ドロップターゲット*を参照[してください](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753255\(v=vs.85\))。
+*pDropTarget*<br/>
+Windows SDK の「 [IDocHostUIHandler:: GetDropTarget](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753255\(v=vs.85\))の*pdroptarget* 」を参照してください。
 
-*ターゲット*<br/>
-Windows SDK`IDocHostUIHandler::GetDropTarget`*の「ppDropTarget」* を参照してください。
+*ppDropTarget*<br/>
+Windows SDK の「 *Ppdroptarget* 」を参照してください `IDocHostUIHandler::GetDropTarget` 。
 
 ### <a name="return-value"></a>戻り値
 
@@ -733,11 +733,11 @@ E_NOTIMPL を返します。
 
 ### <a name="remarks"></a>解説
 
-このメンバー関数は、Windows SDK で説明されているように、CDHtmlDialog の[IDocHostUIHandler::GetDropTarget](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753255\(v=vs.85\))の実装です。
+このメンバー関数は、Windows SDK で説明されているように、 [IDocHostUIHandler:: GetDropTarget](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753255\(v=vs.85\))の CDHtmlDialog の実装です。
 
-## <a name="cdhtmldialoggetelement"></a><a name="getelement"></a>ダイアログ::取得要素
+## <a name="cdhtmldialoggetelement"></a><a name="getelement"></a> CDHtmlDialog:: GetElement
 
-で指定された HTML 要素のインターフェイス*を*返します。
+*Szelementid*によって指定された HTML 要素のインターフェイスを返します。
 
 ```
 HRESULT GetElement(
@@ -752,17 +752,17 @@ HRESULT GetElement(
 
 ### <a name="parameters"></a>パラメーター
 
-*をクリックします。*<br/>
+*szElementId*<br/>
 HTML 要素の ID。
 
 *ppdisp*<br/>
-要求`IDispatch`された要素または要素のコレクションへのポインター。
+`IDispatch`要求された要素または要素のコレクションへのポインター。
 
-*pbコレクション*<br/>
-*ppdisp*で表されるオブジェクトが単一の要素であるか、要素のコレクションであるかを示す BOOL。
+*pbCollection*<br/>
+*Ppdisp*によって表されるオブジェクトが、1つの要素または要素のコレクションであるかどうかを示すブール値。
 
-*要素*<br/>
-要求`IHTMLElement`された要素へのポインター。
+*pphtmlElement*<br/>
+`IHTMLElement`要求された要素へのポインター。
 
 ### <a name="return-value"></a>戻り値
 
@@ -770,13 +770,13 @@ HTML 要素の ID。
 
 ### <a name="remarks"></a>解説
 
-指定した ID を持つ要素が複数ある可能性がある条件を処理する必要がある場合は、最初のオーバーロードを使用します。 最後のパラメーターを使用して、返されたインターフェイス ポインターがコレクションまたは単一の項目のどちらを指しているかを調べます。 インターフェイス ポインターがコレクション上にある場合は、 を`IHTMLElementCollection`クエリし、その`item`プロパティを使用して要素を序数の位置で参照できます。
+指定した ID を持つ要素が複数存在する可能性がある条件を処理する必要がある場合は、最初のオーバーロードを使用します。 最後のパラメーターを使用して、返されたインターフェイスポインターがコレクションまたは単一の項目のどちらになっているかを調べることができます。 インターフェイスポインターがコレクションにある場合は、を照会し、そのプロパティを使用して、 `IHTMLElementCollection` `item` 序数位置によって要素を参照することができます。
 
-ページ内に同じ ID を持つ要素が複数ある場合、2 番目のオーバーロードは失敗します。
+ページに同じ ID を持つ要素が複数ある場合、2番目のオーバーロードは失敗します。
 
-## <a name="cdhtmldialoggetelementhtml"></a><a name="getelementhtml"></a>ダイアログ::ゲットエレメントHtml
+## <a name="cdhtmldialoggetelementhtml"></a><a name="getelementhtml"></a> CDHtmlDialog:: GetElementHtml
 
-によって識別される`innerHTML`HTML 要素のプロパティ*を取得します*。
+`innerHTML` *Szelementid*によって識別される HTML 要素のプロパティを取得します。
 
 ```
 BSTR GetElementHtml(LPCTSTR szElementId);
@@ -784,16 +784,16 @@ BSTR GetElementHtml(LPCTSTR szElementId);
 
 ### <a name="parameters"></a>パラメーター
 
-*をクリックします。*<br/>
+*szElementId*<br/>
 HTML 要素の ID。
 
 ### <a name="return-value"></a>戻り値
 
-要素`innerHTML`が見つからない場合は *、szElementId*または NULL で識別される HTML 要素のプロパティ。
+`innerHTML` *Szelementid*によって識別される HTML 要素のプロパティ、または要素が見つからなかった場合は NULL。
 
-## <a name="cdhtmldialoggetelementinterface"></a><a name="getelementinterface"></a>インターフェイスを取得します。
+## <a name="cdhtmldialoggetelementinterface"></a><a name="getelementinterface"></a> CDHtmlDialog:: GetElementInterface
 
-要求されたインターフェイス ポインターを*取得*します。
+*Szelementid*によって識別される HTML 要素から、要求されたインターフェイスポインターを取得します。
 
 ```
 template <class Q> HRESULT GetElementInterface(
@@ -808,13 +808,13 @@ HRESULT GetElementInterface(
 
 ### <a name="parameters"></a>パラメーター
 
-*をクリックします。*<br/>
+*szElementId*<br/>
 HTML 要素の ID。
 
-*Ppvobj*<br/>
-要素が見つかり、クエリが成功した場合に、要求されたインターフェイス ポインターで埋められるポインターのアドレス。
+*ppvObj*<br/>
+要求されたインターフェイスポインターを格納するポインターのアドレス (要素が見つかった場合は、クエリが成功した場合)。
 
-*Refiid*<br/>
+*refiid*<br/>
 要求されたインターフェイスのインターフェイス ID (IID)。
 
 ### <a name="return-value"></a>戻り値
@@ -825,9 +825,9 @@ HTML 要素の ID。
 
 [!code-cpp[NVC_MFCHtmlHttp#4](../../mfc/reference/codesnippet/cpp/cdhtmldialog-class_4.cpp)]
 
-## <a name="cdhtmldialoggetelementproperty"></a><a name="getelementproperty"></a>プロパティを取得します。
+## <a name="cdhtmldialoggetelementproperty"></a><a name="getelementproperty"></a> CDHtmlDialog:: GetElementProperty
 
-によって識別される HTML 要素から*dispId*によって識別されるプロパティ*の値を*取得します。
+*Szelementid*によって識別される HTML 要素から*dispId*によって識別されるプロパティの値を取得します。
 
 ```
 VARIANT GetElementProperty(
@@ -837,19 +837,19 @@ VARIANT GetElementProperty(
 
 ### <a name="parameters"></a>パラメーター
 
-*をクリックします。*<br/>
+*szElementId*<br/>
 HTML 要素の ID。
 
-*Dispid*<br/>
+*dispId*<br/>
 プロパティのディスパッチ ID。
 
 ### <a name="return-value"></a>戻り値
 
-プロパティまたは要素が見つからない場合は、プロパティの値または空のバリアント。
+プロパティの値、またはプロパティまたは要素が見つからなかった場合は空のバリアント。
 
-## <a name="cdhtmldialoggetelementtext"></a><a name="getelementtext"></a>テキストを取得します。
+## <a name="cdhtmldialoggetelementtext"></a><a name="getelementtext"></a> CDHtmlDialog:: GetElementText
 
-によって識別される`innerText`HTML 要素のプロパティ*を取得します*。
+`innerText` *Szelementid*によって識別される HTML 要素のプロパティを取得します。
 
 ```
 BSTR GetElementText(LPCTSTR szElementId);
@@ -857,16 +857,16 @@ BSTR GetElementText(LPCTSTR szElementId);
 
 ### <a name="parameters"></a>パラメーター
 
-*をクリックします。*<br/>
+*szElementId*<br/>
 HTML 要素の ID。
 
 ### <a name="return-value"></a>戻り値
 
-`innerText`プロパティまたは要素が見つからない場合は *、szElementId*または NULL で識別される HTML 要素のプロパティ。
+`innerText` *Szelementid*によって識別される HTML 要素のプロパティ、またはプロパティまたは要素が見つからなかった場合は NULL。
 
-## <a name="cdhtmldialoggetevent"></a><a name="getevent"></a>ダイアログ::イベントを取得します。
+## <a name="cdhtmldialoggetevent"></a><a name="getevent"></a> CDHtmlDialog:: GetEvent
 
-現在の`IHTMLEventObj`イベント オブジェクトへのポインターを返します。
+現在の `IHTMLEventObj` イベントオブジェクトへのポインターを返します。
 
 ```
 HRESULT GetEvent(IHTMLEventObj** ppEventObj);
@@ -874,8 +874,8 @@ HRESULT GetEvent(IHTMLEventObj** ppEventObj);
 
 ### <a name="parameters"></a>パラメーター
 
-*を使用します。*<br/>
-インターフェイス ポインターで埋め込まれるポインターの`IHTMLEventObj`アドレス。
+*ppEventObj*<br/>
+インターフェイスポインターを格納するポインターのアドレス `IHTMLEventObj` 。
 
 ### <a name="return-value"></a>戻り値
 
@@ -883,11 +883,11 @@ HRESULT GetEvent(IHTMLEventObj** ppEventObj);
 
 ### <a name="remarks"></a>解説
 
-この関数は、DHTML イベント ハンドラ内からのみ呼び出してください。
+この関数は、DHTML イベントハンドラー内からのみ呼び出す必要があります。
 
-## <a name="cdhtmldialoggetexternal"></a><a name="getexternal"></a>ダイアログ::外部を取得します。
+## <a name="cdhtmldialoggetexternal"></a><a name="getexternal"></a> CDHtmlDialog:: GetExternal
 
-ホストのインターフェイスを`IDispatch`取得します。
+ホストのインターフェイスを取得し `IDispatch` ます。
 
 ```
 STDMETHOD(GetExternal)(IDispatch** ppDispatch);
@@ -895,18 +895,18 @@ STDMETHOD(GetExternal)(IDispatch** ppDispatch);
 
 ### <a name="parameters"></a>パラメーター
 
-*ディスパッチ*<br/>
-Windows SDK[の](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753256\(v=vs.85\))*ppDispatch*を参照してください。
+*ppDispatch*<br/>
+Windows SDK の「 [IDocHostUIHandler:: GetExternal](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753256\(v=vs.85\))での*ppdispatch* 」を参照してください。
 
 ### <a name="return-value"></a>戻り値
 
-成功のS_OKを返し、失敗した場合にE_NOTIMPLします。
+成功した場合は S_OK を返し、失敗した場合は E_NOTIMPL を返します。
 
 ### <a name="remarks"></a>解説
 
-このメンバー関数は、Windows SDK で説明されているように、CDHtmlDialog の[IDocHostUIHandler::GetExternal](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753256\(v=vs.85\))の実装です。
+このメンバー関数は、Windows SDK で説明されているように、 [IDocHostUIHandler:: GetExternal](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753256\(v=vs.85\))の CDHtmlDialog の実装です。
 
-## <a name="cdhtmldialoggethostinfo"></a><a name="gethostinfo"></a>ダイアログ::ホスト情報を取得します。
+## <a name="cdhtmldialoggethostinfo"></a><a name="gethostinfo"></a> CDHtmlDialog:: GetHostInfo
 
 ホストの UI 機能を取得します。
 
@@ -916,20 +916,20 @@ STDMETHOD(GetHostInfo)(DOCHOSTUIINFO* pInfo);
 
 ### <a name="parameters"></a>パラメーター
 
-*Pinfo*<br/>
-次の*トピック*を参照[してください](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753257\(v=vs.85\))。
+*pInfo*<br/>
+Windows SDK の「 *pInfo* in [IDocHostUIHandler:: GetHostInfo](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753257\(v=vs.85\)) 」を参照してください。
 
 ### <a name="return-value"></a>戻り値
 
-S_OKを返します。
+S_OK を返します。
 
 ### <a name="remarks"></a>解説
 
-このメンバー関数は、Windows SDK で説明[されているように](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753257\(v=vs.85\))、CDHtmlDialog の実装です。
+このメンバー関数は、Windows SDK で説明されているように、 [IDocHostUIHandler:: GetHostInfo](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753257\(v=vs.85\))の CDHtmlDialog の実装です。
 
-## <a name="cdhtmldialoggetoptionkeypath"></a><a name="getoptionkeypath"></a>ダイアログ::ゲットオプションキーパス
+## <a name="cdhtmldialoggetoptionkeypath"></a><a name="getoptionkeypath"></a> CDHtmlDialog:: GetOptionKeyPath
 
-ユーザー設定が格納されるレジストリ キーを取得します。
+ユーザー設定が格納されているレジストリキーを取得します。
 
 ```
 STDMETHOD(GetOptionKeyPath)(
@@ -939,11 +939,11 @@ STDMETHOD(GetOptionKeyPath)(
 
 ### <a name="parameters"></a>パラメーター
 
-*pchキー*<br/>
-次の*トピック*を参照[してください](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753258\(v=vs.85\))。
+*pchKey*<br/>
+Windows SDK の「 [IDocHostUIHandler:: GetOptionKeyPath](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753258\(v=vs.85\))の*pchkey* 」を参照してください。
 
 *dw*<br/>
-Windows SDK`IDocHostUIHandler::GetOptionKeyPath`の*dw*を参照してください。
+Windows SDK の「 *dw* in」を参照してください `IDocHostUIHandler::GetOptionKeyPath` 。
 
 ### <a name="return-value"></a>戻り値
 
@@ -951,9 +951,9 @@ E_NOTIMPL を返します。
 
 ### <a name="remarks"></a>解説
 
-このメンバー関数は、Windows SDK で説明[されているように](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753258\(v=vs.85\))、CDHtmlDialog の実装です。
+このメンバー関数は、Windows SDK で説明されているように、 [IDocHostUIHandler:: GetOptionKeyPath](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753258\(v=vs.85\))の CDHtmlDialog の実装です。
 
-## <a name="cdhtmldialoghideui"></a><a name="hideui"></a>ダイアログ::ハイドイ
+## <a name="cdhtmldialoghideui"></a><a name="hideui"></a> CDHtmlDialog:: HideUI
 
 ホストの UI を非表示にします。
 
@@ -967,11 +967,11 @@ E_NOTIMPL を返します。
 
 ### <a name="remarks"></a>解説
 
-このメンバー関数は、Windows SDK で説明されているように、CDHtmlDialog の[IDocHostUIHandler::HideUI](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753259\(v=vs.85\))の実装です。
+このメンバー関数は、Windows SDK で説明されているように、 [IDocHostUIHandler:: HideUI](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753259\(v=vs.85\))の CDHtmlDialog の実装です。
 
-## <a name="cdhtmldialogisexternaldispatchsafe"></a><a name="isexternaldispatchsafe"></a>ダイアログ::Is外部ディスパッチセーフ
+## <a name="cdhtmldialogisexternaldispatchsafe"></a><a name="isexternaldispatchsafe"></a> CDHtmlDialog:: IsExternalDispatchSafe
 
-ホストの`IDispatch`インターフェイスがスクリプトに対して安全かどうかを示します。
+ホストの `IDispatch` インターフェイスがスクリプトに対して安全であるかどうかを示します。
 
 ```
 virtual BOOL IsExternalDispatchSafe();
@@ -981,9 +981,9 @@ virtual BOOL IsExternalDispatchSafe();
 
 FALSE を返します。
 
-## <a name="cdhtmldialogloadfromresource"></a><a name="loadfromresource"></a>リソースから読み込む
+## <a name="cdhtmldialogloadfromresource"></a><a name="loadfromresource"></a> CDHtmlDialog:: LoadFromResource
 
-指定したリソースを DHTML ダイアログの WebBrowser コントロールに読み込みます。
+DHTML ダイアログで、指定されたリソースを WebBrowser コントロールに読み込みます。
 
 ```
 BOOL LoadFromResource(LPCTSTR lpszResource);
@@ -992,8 +992,8 @@ BOOL LoadFromResource(UINT nRes);
 
 ### <a name="parameters"></a>パラメーター
 
-*リソース*<br/>
-読み込むリソースの名前を含む文字列へのポインター。
+*lpszResource*<br/>
+読み込むリソースの名前を格納している文字列へのポインター。
 
 *nRes*<br/>
 読み込むリソースの ID です。
@@ -1002,9 +1002,9 @@ BOOL LoadFromResource(UINT nRes);
 
 成功した場合は TRUE、それ以外の場合は FALSE。
 
-## <a name="cdhtmldialogm_busehtmltitle"></a><a name="m_busehtmltitle"></a>ダイアログ::m_bUseHtmlTitle
+## <a name="cdhtmldialogm_busehtmltitle"></a><a name="m_busehtmltitle"></a> CDHtmlDialog:: m_bUseHtmlTitle
 
-HTML ドキュメントのタイトルをダイアログ キャプションとして使用するかどうかを示します。
+HTML ドキュメントのタイトルをダイアログキャプションとして使用するかどうかを示します。
 
 ```
 BOOL m_bUseHtmlTitle;
@@ -1012,11 +1012,11 @@ BOOL m_bUseHtmlTitle;
 
 ### <a name="remarks"></a>解説
 
-**m**_ **bUseHtmlTitle**が TRUE の場合、ダイアログ キャプションは HTML ドキュメントのタイトルと同じに設定されます。それ以外の場合は、ダイアログ リソースのキャプションが使用されます。
+**M**_ **busehtmltitle**が TRUE の場合、ダイアログキャプションは HTML ドキュメントのタイトルと同じに設定されます。それ以外の場合は、ダイアログリソースのキャプションが使用されます。
 
-## <a name="cdhtmldialogm_nhtmlresid"></a><a name="m_nhtmlresid"></a>ダイアログ::m_nHtmlResID
+## <a name="cdhtmldialogm_nhtmlresid"></a><a name="m_nhtmlresid"></a> CDHtmlDialog:: m_nHtmlResID
 
-表示される HTML リソースのリソース ID。
+表示する HTML リソースのリソース ID。
 
 ```
 UINT m_nHtmlResID;
@@ -1026,15 +1026,15 @@ UINT m_nHtmlResID;
 
 [!code-cpp[NVC_MFCHtmlHttp#5](../../mfc/reference/codesnippet/cpp/cdhtmldialog-class_5.cpp)]
 
-## <a name="cdhtmldialogm_pbrowserapp"></a><a name="m_pbrowserapp"></a>ダイアログ::m_pBrowserApp
+## <a name="cdhtmldialogm_pbrowserapp"></a><a name="m_pbrowserapp"></a> CDHtmlDialog:: m_pBrowserApp
 
-Web ブラウザー アプリケーションへのポインター。
+Web ブラウザーアプリケーションへのポインター。
 
 ```
 CComPtr <IWebBrowser2> m_pBrowserApp;
 ```
 
-## <a name="cdhtmldialogm_sphtmldoc"></a><a name="m_sphtmldoc"></a>ダイアログ::m_spHtmlDoc
+## <a name="cdhtmldialogm_sphtmldoc"></a><a name="m_sphtmldoc"></a> CDHtmlDialog:: m_spHtmlDoc
 
 HTML ドキュメントへのポインター。
 
@@ -1042,7 +1042,7 @@ HTML ドキュメントへのポインター。
 CComPtr<IHTMLDocument2> m_spHtmlDoc;
 ```
 
-## <a name="cdhtmldialogm_strcurrenturl"></a><a name="m_strcurrenturl"></a>ダイアログ::m_strCurrentUrl
+## <a name="cdhtmldialogm_strcurrenturl"></a><a name="m_strcurrenturl"></a> CDHtmlDialog:: m_strCurrentUrl
 
 現在の URL。
 
@@ -1050,9 +1050,9 @@ CComPtr<IHTMLDocument2> m_spHtmlDoc;
 CString m_strCurrentUrl;
 ```
 
-## <a name="cdhtmldialogm_szhtmlresid"></a><a name="m_szhtmlresid"></a>ダイアログ::m_szHtmlResID
+## <a name="cdhtmldialogm_szhtmlresid"></a><a name="m_szhtmlresid"></a> CDHtmlDialog:: m_szHtmlResID
 
-HTML リソース ID の文字列バージョンです。
+HTML リソース ID の文字列バージョン。
 
 ```
 LPTSTR m_szHtmlResID;
@@ -1062,9 +1062,9 @@ LPTSTR m_szHtmlResID;
 
 [!code-cpp[NVC_MFCHtmlHttp#6](../../mfc/reference/codesnippet/cpp/cdhtmldialog-class_6.cpp)]
 
-## <a name="cdhtmldialognavigate"></a><a name="navigate"></a>ダイアログ::ナビゲート
+## <a name="cdhtmldialognavigate"></a><a name="navigate"></a> CDHtmlDialog:: Navigate
 
-*lpszURL*で指定された URL で識別されるリソースに移動します。
+*Lpszurl*で指定された url で識別されるリソースに移動します。
 
 ```cpp
 void Navigate(
@@ -1078,25 +1078,25 @@ void Navigate(
 
 ### <a name="parameters"></a>パラメーター
 
-*を指定します。*<br/>
-対象とする URL を含む文字列へのポインター。
+*lpszURL*<br/>
+対象となる URL を格納している文字列へのポインター。
 
 *dwFlags*<br/>
-リソースを履歴リストに追加するかどうか、キャッシュに読み込むか、キャッシュから書き込むか、およびリソースを新しいウィンドウに表示するかどうかを指定する変数のフラグ。 変数は、[ブラウザーの定数](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa768360\(v=vs.85\))の列挙体によって定義された値の組み合わせであることができます。
+リソースを履歴リストに追加するかどうか、キャッシュに読み取るかキャッシュから書き込むか、新しいウィンドウにリソースを表示するかどうかを指定する変数のフラグ。 変数は、 [Browserナビゲーション定数](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa768360\(v=vs.85\)) 列挙体で定義された値の組み合わせにすることができます。
 
-*フレーム名*<br/>
-リソースを表示するフレームの名前を含む文字列へのポインター。
+*lpszTargetFrameName*<br/>
+リソースを表示するフレームの名前を格納している文字列へのポインター。
 
-*ヘッダー*<br/>
-サーバーに送信する HTTP ヘッダーを指定する値へのポインター。 これらのヘッダーは、既定の Internet Explorer ヘッダーに追加されます。 ヘッダーは、サーバーに必要なアクション、サーバーに渡されるデータの種類、状態コードなどの情報を指定できます。 URL が HTTP URL でない場合、このパラメーターは無視されます。
+*lpszHeaders*<br/>
+サーバーに送信する HTTP ヘッダーを指定する値へのポインター。 これらのヘッダーは、Internet Explorer の既定のヘッダーに追加されます。 ヘッダーでは、サーバーに必要な操作、サーバーに渡されるデータの種類、ステータスコードなどの情報を指定できます。 URL が HTTP URL でない場合、このパラメーターは無視されます。
 
-*データ*<br/>
-HTTP POST トランザクションで送信するデータへのポインター。 たとえば、POST トランザクションは、HTML フォームによって収集されたデータを送信するために使用されます。 このパラメーターでポスト・データが指定されていない場合`Navigate`は、HTTP GET トランザクションを発行します。 URL が HTTP URL でない場合、このパラメーターは無視されます。
+*lpvPostData*<br/>
+HTTP POST トランザクションと共に送信するデータへのポインター。 たとえば、POST トランザクションは、HTML フォームによって収集されたデータを送信するために使用されます。 このパラメーターでポストデータが指定されていない場合、は `Navigate` HTTP GET トランザクションを発行します。 URL が HTTP URL でない場合、このパラメーターは無視されます。
 
-*を使用します。*<br/>
-HTTP POST トランザクションで送信するデータ。 たとえば、POST トランザクションは、HTML フォームによって収集されたデータを送信するために使用されます。 このパラメーターでポスト・データが指定されていない場合`Navigate`は、HTTP GET トランザクションを発行します。 URL が HTTP URL でない場合、このパラメーターは無視されます。
+*dwPostDataLen*<br/>
+HTTP POST トランザクションと共に送信するデータ。 たとえば、POST トランザクションは、HTML フォームによって収集されたデータを送信するために使用されます。 このパラメーターでポストデータが指定されていない場合、は `Navigate` HTTP GET トランザクションを発行します。 URL が HTTP URL ではない場合、このパラメーターは無視されます。
 
-## <a name="cdhtmldialogonbeforenavigate"></a><a name="onbeforenavigate"></a>ダイアログ::オン・フォア・ナビゲート
+## <a name="cdhtmldialogonbeforenavigate"></a><a name="onbeforenavigate"></a> CDHtmlDialog:: OnBeforeNavigate
 
 ナビゲーションが発生する前にイベントを発生させるために、フレームワークによって呼び出されます。
 
@@ -1111,12 +1111,12 @@ virtual void OnBeforeNavigate(
 *pDisp*<br/>
 `IDispatch` オブジェクトへのポインター。
 
-*スズUrl*<br/>
-移動先の URL を含む文字列へのポインター。
+*szUrl*<br/>
+移動先の URL を格納している文字列へのポインター。
 
-## <a name="cdhtmldialogondocumentcomplete"></a><a name="ondocumentcomplete"></a>ドキュメント完了
+## <a name="cdhtmldialogondocumentcomplete"></a><a name="ondocumentcomplete"></a> CDHtmlDialog:: OnDocumentComplete
 
-ドキュメントがREADYSTATE_COMPLETE状態になったときにアプリケーションに通知するために、フレームワークによって呼び出されます。
+ドキュメントが READYSTATE_COMPLETE 状態を達成したことをアプリケーションに通知するために、フレームワークによって呼び出されます。
 
 ```
 virtual void OnDocumentComplete(
@@ -1129,12 +1129,12 @@ virtual void OnDocumentComplete(
 *pDisp*<br/>
 `IDispatch` オブジェクトへのポインター。
 
-*スズUrl*<br/>
-移動先の URL を含む文字列へのポインター。
+*szUrl*<br/>
+移動先の URL を格納している文字列へのポインター。
 
-## <a name="cdhtmldialogondocwindowactivate"></a><a name="ondocwindowactivate"></a>ダイアログ::オンドックウィンドウアクティブ
+## <a name="cdhtmldialogondocwindowactivate"></a><a name="ondocwindowactivate"></a> CDHtmlDialog:: OnDocWindowActivate
 
-ドキュメント ウィンドウがアクティブまたは非アクティブになったときに、フレームワークによって呼び出されます。
+ドキュメントウィンドウがアクティブ化または非アクティブ化されたときにフレームワークによって呼び出されます。
 
 ```
 STDMETHOD(OnDocWindowActivate)(BOOL fActivate);
@@ -1142,8 +1142,8 @@ STDMETHOD(OnDocWindowActivate)(BOOL fActivate);
 
 ### <a name="parameters"></a>パラメーター
 
-*fアクティブ化*<br/>
-次*を参照*してください[IDocHostUIHandler::OnDocWindowActivate](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753261\(v=vs.85\))。
+*fActivate*<br/>
+Windows SDK の「 *Factivate* in [IDocHostUIHandler:: OnDocWindowActivate](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753261\(v=vs.85\)) 」を参照してください。
 
 ### <a name="return-value"></a>戻り値
 
@@ -1151,11 +1151,11 @@ E_NOTIMPL を返します。
 
 ### <a name="remarks"></a>解説
 
-このメンバー関数は、Windows SDK で説明されているように、CDHtmlDialog[の実装](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753261\(v=vs.85\))です。
+このメンバー関数は、Windows SDK で説明されているように、 [IDocHostUIHandler:: OnDocWindowActivate](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753261\(v=vs.85\))の CDHtmlDialog の実装です。
 
-## <a name="cdhtmldialogonframewindowactivate"></a><a name="onframewindowactivate"></a>ダイアログ::オンフレームウィンドウアクティブ
+## <a name="cdhtmldialogonframewindowactivate"></a><a name="onframewindowactivate"></a> CDHtmlDialog:: OnFrameWindowActivate
 
-フレーム ウィンドウがアクティブまたは非アクティブになったときに、フレームワークによって呼び出されます。
+フレームウィンドウがアクティブ化または非アクティブ化されたときにフレームワークによって呼び出されます。
 
 ```
 STDMETHOD(OnFrameWindowActivate)(BOOL fActivate);
@@ -1163,8 +1163,8 @@ STDMETHOD(OnFrameWindowActivate)(BOOL fActivate);
 
 ### <a name="parameters"></a>パラメーター
 
-*fアクティブ化*<br/>
-次*を参照*してください[IDocHostUIHandler::OnFrameWindowActivate](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753262\(v=vs.85\))。
+*fActivate*<br/>
+Windows SDK の「 *Factivate* in [IDocHostUIHandler:: Onフレーム windowactivate](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753262\(v=vs.85\)) 」を参照してください。
 
 ### <a name="return-value"></a>戻り値
 
@@ -1172,11 +1172,11 @@ E_NOTIMPL を返します。
 
 ### <a name="remarks"></a>解説
 
-このメンバー関数は、Windows SDK で説明されているように、CDHtmlDialog[の実装](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753262\(v=vs.85\))です。
+このメンバー関数は、Windows SDK で説明されているように、 [IDocHostUIHandler:: OnCDHtmlDialog Windowactivate](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753262\(v=vs.85\))の実装です。
 
-## <a name="cdhtmldialogoninitdialog"></a><a name="oninitdialog"></a>ダイアログ
+## <a name="cdhtmldialogoninitdialog"></a><a name="oninitdialog"></a> CDHtmlDialog:: OnInitDialog
 
-WM_INITDIALOG メッセージに応答して呼び出されます。
+WM_INITDIALOG メッセージへの応答として呼び出されます。
 
 ```
 virtual BOOL OnInitDialog();
@@ -1184,19 +1184,19 @@ virtual BOOL OnInitDialog();
 
 ### <a name="return-value"></a>戻り値
 
-既定の実装では TRUE が返されます。
+既定の実装では、TRUE が返されます。
 
 ### <a name="remarks"></a>解説
 
-このメッセージは、 `Create`、または`CreateIndirect``DoModal`、 の呼び出し中に、ダイアログ ボックスが表示される直前に表示されます。
+このメッセージは、、、またはの呼び出し中にダイアログボックスに送信されます。このダイアログボックスは、 `Create` `CreateIndirect` `DoModal` ダイアログボックスが表示される直前に発生します。
 
-ダイアログ ボックスの初期化時に特別な処理を実行する必要がある場合は、このメンバー関数をオーバーライドします。 オーバーライドされたバージョンでは、まず基本クラス`OnInitDialog`を呼び出しますが、戻り値は無視します。 通常、オーバーライドされたメンバー関数から TRUE を返します。
+ダイアログボックスが初期化されるときに特別な処理を実行する必要がある場合は、このメンバー関数をオーバーライドします。 オーバーライドされたバージョンでは、最初に基本クラスを呼び出し `OnInitDialog` ますが、戻り値は無視します。 通常は、オーバーライドされたメンバー関数から TRUE を返します。
 
-Windows は`OnInitDialog`、メッセージ マップではなく、すべての Microsoft Foundation クラス ライブラリ ダイアログ ボックスに共通する標準のグローバル ダイアログ ボックス プロシージャを使用して関数を呼び出すため、このメンバー関数にメッセージ マップ エントリは必要ありません。
+Windows では、 `OnInitDialog` メッセージマップを使用するのではなく、すべての Microsoft Foundation Class ライブラリダイアログボックスに共通する標準のグローバルダイアログボックスのプロシージャを使用して関数を呼び出します。このため、このメンバー関数のメッセージマップエントリは必要ありません。
 
-## <a name="cdhtmldialogonnavigatecomplete"></a><a name="onnavigatecomplete"></a>ダイアログ::オンナビゲートコンプリート
+## <a name="cdhtmldialogonnavigatecomplete"></a><a name="onnavigatecomplete"></a> CDHtmlDialog:: OnNavigateComplete
 
-指定した URL へのナビゲーションが完了した後に、フレームワークによって呼び出されます。
+指定された URL への移動が完了した後に、フレームワークによって呼び出されます。
 
 ```
 virtual void OnNavigateComplete(
@@ -1209,12 +1209,12 @@ virtual void OnNavigateComplete(
 *pDisp*<br/>
 `IDispatch` オブジェクトへのポインター。
 
-*スズUrl*<br/>
-移動先の URL を含む文字列へのポインター。
+*szUrl*<br/>
+移動先の URL を格納している文字列へのポインター。
 
-## <a name="cdhtmldialogresizeborder"></a><a name="resizeborder"></a>ウィンドウのサイズを変更します。
+## <a name="cdhtmldialogresizeborder"></a><a name="resizeborder"></a> CDHtmlDialog:: ResizeBorder
 
-オブジェクトに対して、境界領域のサイズを変更する必要があることを警告します。
+境界領域のサイズを変更する必要があることをオブジェクトに通知します。
 
 ```
 STDMETHOD(ResizeBorder)(
@@ -1225,20 +1225,20 @@ STDMETHOD(ResizeBorder)(
 
 ### <a name="parameters"></a>パラメーター
 
-*プルクボーダー*<br/>
-Windows SDK の *「プルクボーダー* [」を](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753263\(v=vs.85\))参照してください。
+*prcBorder*<br/>
+Windows SDK の「 [IDocHostUIHandler:: ResizeBorder](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753263\(v=vs.85\))の*prcborder* 」を参照してください。
 
-*ウィンドウ*<br/>
-の「*ウィンドウ」*`IDocHostUIHandler::ResizeBorder`を参照してください。
+*pUIWindow*<br/>
+Windows SDK の「 *Puiwindow* 」を参照してください `IDocHostUIHandler::ResizeBorder` 。
 
-*ウィンドウ*<br/>
-Windows SDK の`IDocHostUIHandler::ResizeBorder`*「fFrameWindow」* を参照してください。
+*fFrameWindow*<br/>
+Windows SDK の「」の *Fframewindow* を参照してください `IDocHostUIHandler::ResizeBorder` 。
 
 ### <a name="return-value"></a>戻り値
 
 E_NOTIMPL を返します。
 
-## <a name="cdhtmldialogsetcontrolproperty"></a><a name="setcontrolproperty"></a>プロパティを設定します。
+## <a name="cdhtmldialogsetcontrolproperty"></a><a name="setcontrolproperty"></a> CDHtmlDialog:: SetControlProperty
 
 ActiveX コントロールのプロパティを新しい値に設定します。
 
@@ -1261,24 +1261,24 @@ void SetControlProperty(
 
 ### <a name="parameters"></a>パラメーター
 
-*をクリックします。*<br/>
+*szElementId*<br/>
 ActiveX コントロールの HTML ID。
 
-*Dispid*<br/>
+*dispId*<br/>
 設定するプロパティのディスパッチ ID。
 
 *pVar*<br/>
-新しいプロパティ値を含む VARIANT へのポインター。
+新しいプロパティ値を格納している VARIANT へのポインター。
 
-*コントロール*<br/>
-ActiveX コントロールの`IDispatch`インターフェイスへのポインター。
+*pdispControl*<br/>
+ActiveX コントロールのインターフェイスへのポインター `IDispatch` 。
 
-*を使用します。*<br/>
-設定するプロパティの名前を含む文字列。
+*szPropName*<br/>
+設定するプロパティの名前を格納している文字列。
 
-## <a name="cdhtmldialogsetelementhtml"></a><a name="setelementhtml"></a>ダイアログ::セットエレメントHtml
+## <a name="cdhtmldialogsetelementhtml"></a><a name="setelementhtml"></a> CDHtmlDialog:: SetElementHtml
 
-HTML`innerHTML`要素のプロパティを設定します。
+`innerHTML`HTML 要素のプロパティを設定します。
 
 ```cpp
 void SetElementHtml(
@@ -1292,16 +1292,16 @@ void SetElementHtml(
 
 ### <a name="parameters"></a>パラメーター
 
-*をクリックします。*<br/>
+*szElementId*<br/>
 HTML 要素の ID。
 
-*テキスト*<br/>
+*bstrText*<br/>
 `innerHTML` プロパティの新しい値。
 
-*パンクレム*<br/>
-HTML`IUnknown`要素のポインター。
+*punkElem*<br/>
+`IUnknown`HTML 要素のポインター。
 
-## <a name="cdhtmldialogsetelementproperty"></a><a name="setelementproperty"></a>プロパティを設定します。
+## <a name="cdhtmldialogsetelementproperty"></a><a name="setelementproperty"></a> CDHtmlDialog:: SetElementProperty
 
 HTML 要素のプロパティを設定します。
 
@@ -1314,18 +1314,18 @@ void SetElementProperty(
 
 ### <a name="parameters"></a>パラメーター
 
-*をクリックします。*<br/>
+*szElementId*<br/>
 HTML 要素の ID。
 
-*Dispid*<br/>
+*dispId*<br/>
 設定するプロパティのディスパッチ ID。
 
 *pVar*<br/>
-プロパティの新しい値です。
+プロパティの新しい値。
 
-## <a name="cdhtmldialogsetelementtext"></a><a name="setelementtext"></a>ダイアログ::テキストを設定します。
+## <a name="cdhtmldialogsetelementtext"></a><a name="setelementtext"></a> CDHtmlDialog:: SetElementText
 
-HTML`innerText`要素のプロパティを設定します。
+`innerText`HTML 要素のプロパティを設定します。
 
 ```cpp
 void SetElementText(
@@ -1339,18 +1339,18 @@ void SetElementText(
 
 ### <a name="parameters"></a>パラメーター
 
-*をクリックします。*<br/>
+*szElementId*<br/>
 HTML 要素の ID。
 
-*テキスト*<br/>
+*bstrText*<br/>
 `innerText` プロパティの新しい値。
 
-*パンクレム*<br/>
-HTML`IUnknown`要素のポインター。
+*punkElem*<br/>
+`IUnknown`HTML 要素のポインター。
 
-## <a name="cdhtmldialogsetexternaldispatch"></a><a name="setexternaldispatch"></a>ダイアログ::外部ディスパッチを設定します。
+## <a name="cdhtmldialogsetexternaldispatch"></a><a name="setexternaldispatch"></a> CDHtmlDialog:: SetExternalDispatch
 
-ホストのインターフェイスを`IDispatch`設定します。
+ホストのインターフェイスを設定し `IDispatch` ます。
 
 ```cpp
 void SetExternalDispatch(IDispatch* pdispExternal);
@@ -1358,12 +1358,12 @@ void SetExternalDispatch(IDispatch* pdispExternal);
 
 ### <a name="parameters"></a>パラメーター
 
-*外部*<br/>
-新しい`IDispatch`インターフェイス。
+*外部の pdisp*<br/>
+新しい `IDispatch` インターフェイス。
 
-## <a name="cdhtmldialogsethostflags"></a><a name="sethostflags"></a>ダイアログ::セットホストフラグ
+## <a name="cdhtmldialogsethostflags"></a><a name="sethostflags"></a> CDHtmlDialog:: SetHostFlags
 
-ホスト UI フラグを設定します。
+ホストの UI フラグを設定します。
 
 ```cpp
 void SetHostFlags(DWORD dwFlags);
@@ -1372,11 +1372,11 @@ void SetHostFlags(DWORD dwFlags);
 ### <a name="parameters"></a>パラメーター
 
 *dwFlags*<br/>
-可能な値については、Windows SDK の[「DOCHOSTUIFLAG」](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753277\(v=vs.85\))を参照してください。
+使用可能な値については、Windows SDK の「 [DOCHOSTUIFLAG](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753277\(v=vs.85\)) 」を参照してください。
 
-## <a name="cdhtmldialogshowcontextmenu"></a><a name="showcontextmenu"></a>ダイアログ::コンテキストメニューを表示します。
+## <a name="cdhtmldialogshowcontextmenu"></a><a name="showcontextmenu"></a> CDHtmlDialog:: ShowContextMenu
 
-コンテキスト メニューが表示されようとしているときに呼び出されます。
+コンテキストメニューが表示されようとしているときに呼び出されます。
 
 ```
 STDMETHOD(ShowContextMenu)(
@@ -1388,27 +1388,27 @@ STDMETHOD(ShowContextMenu)(
 
 ### <a name="parameters"></a>パラメーター
 
-*Dwid*<br/>
-次*を参照*してください。 [IDocHostUIHandler::ShowContextMenu](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753264\(v=vs.85\))
+*dwID*<br/>
+Windows SDK の「 *Dwid* in [IDocHostUIHandler:: showcontextmenu](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753264\(v=vs.85\)) 」を参照してください。
 
-*Ppt*<br/>
-Windows SDK`IDocHostUIHandler::ShowContextMenu`の*ppt*を参照してください。
+*ppt*<br/>
+Windows SDK の「 *ppt* 」を参照してください `IDocHostUIHandler::ShowContextMenu` 。
 
-*pcmdt予約済み*<br/>
-Windows SDK の`IDocHostUIHandler::ShowContextMenu`*pcmdt 予約*済みを参照してください。
+*pcmdtReserved*<br/>
+Windows SDK の「 *Pcmdtreserved 提供* 」を参照してください `IDocHostUIHandler::ShowContextMenu` 。
 
-*pdisp 予約済み*<br/>
-Windows SDK の`IDocHostUIHandler::ShowContextMenu`*「pdisp 予約済み*」を参照してください。
+*予約済みの pdisp*<br/>
+Windows SDK の「」に予約されている *Pdispreserved* 参照してください `IDocHostUIHandler::ShowContextMenu` 。
 
 ### <a name="return-value"></a>戻り値
 
-S_FALSEを返します。
+S_FALSE を返します。
 
 ### <a name="remarks"></a>解説
 
-このメンバー関数は、Windows SDK で説明[されているように](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753264\(v=vs.85\))、CDHtmlDialog の実装です。
+このメンバー関数は、Windows SDK で説明されているように、 [IDocHostUIHandler:: ShowContextMenu](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753264\(v=vs.85\))の CDHtmlDialog の実装です。
 
-## <a name="cdhtmldialogshowui"></a><a name="showui"></a>ダイアログ::ショーUI
+## <a name="cdhtmldialogshowui"></a><a name="showui"></a> CDHtmlDialog:: ShowUI
 
 ホストの UI を表示します。
 
@@ -1423,32 +1423,32 @@ STDMETHOD(ShowUI)(
 
 ### <a name="parameters"></a>パラメーター
 
-*Dwid*<br/>
-Windows SDK[の](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753265\(v=vs.85\))*DwID*を参照してください。
+*dwID*<br/>
+Windows SDK の「 *Dwid* in [IDocHostUIHandler:: ShowUI](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753265\(v=vs.85\)) 」を参照してください。
 
-*オブジェクトを使用します。*<br/>
-の「d *pActiveObject」*`IDocHostUIHandler::ShowUI`を参照してください。
+*pActiveObject*<br/>
+Windows SDK の「」の「 *d pActiveObject* 」を参照してください `IDocHostUIHandler::ShowUI` 。
 
-*をクリックします。*<br/>
-Windows SDK の`IDocHostUIHandler::ShowUI` *p コマンドターゲット*を参照してください。
+*pCommandTarget*<br/>
+Windows SDK の「 *Pcommandtarget* 」を参照してください `IDocHostUIHandler::ShowUI` 。
 
-*フレーム*<br/>
-Windows SDK`IDocHostUIHandler::ShowUI`の*pFrame*を参照してください。
+*pFrame*<br/>
+Windows SDK の「 *Pframe* 」を参照してください `IDocHostUIHandler::ShowUI` 。
 
 *pDoc*<br/>
-の *「」の「pDoc」*`IDocHostUIHandler::ShowUI`を参照してください。
+Windows SDK の「」の「 *Pdoc* 」を参照してください `IDocHostUIHandler::ShowUI` 。
 
 ### <a name="return-value"></a>戻り値
 
-S_FALSEを返します。
+S_FALSE を返します。
 
 ### <a name="remarks"></a>解説
 
-このメンバー関数は、Windows SDK で説明されているように、CDHtmlDialog の[IDocHostUIHandler::ShowUI](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753265\(v=vs.85\))の実装です。
+このメンバー関数は、Windows SDK で説明されているように、 [IDocHostUIHandler:: ShowUI](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753265\(v=vs.85\))の CDHtmlDialog の実装です。
 
-## <a name="cdhtmldialogtranslateaccelerator"></a><a name="translateaccelerator"></a>ダイアログ::変換アクセラレータ
+## <a name="cdhtmldialogtranslateaccelerator"></a><a name="translateaccelerator"></a> CDHtmlDialog:: TranslateAccelerator
 
-メニュー アクセラレータ キー メッセージを処理するために呼び出されます。
+メニューアクセラレータキーメッセージを処理するために呼び出されます。
 
 ```
 STDMETHOD(TranslateAccelerator)(
@@ -1459,26 +1459,26 @@ STDMETHOD(TranslateAccelerator)(
 
 ### <a name="parameters"></a>パラメーター
 
-*をクリックします。*<br/>
-Windows SDK[の](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753266\(v=vs.85\))*lpMsg*を参照してください。
+*lpMsg*<br/>
+Windows SDK の「 [IDocHostUIHandler:: TranslateAccelerator](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753266\(v=vs.85\))の*lpmsg* 」を参照してください。
 
-*グループ化*<br/>
-の *「」*`IDocHostUIHandler::TranslateAccelerator`を参照してください。
+*pguidCmdGroup*<br/>
+Windows SDK の「 *Pguidcmdgroup* 」を参照してください `IDocHostUIHandler::TranslateAccelerator` 。
 
-*をクリックします。*<br/>
-Windows SDK の`IDocHostUIHandler::TranslateAccelerator` *nCmdID*を参照してください。
+*nCmdID*<br/>
+Windows SDK の「 *Ncmdid* in」を参照してください `IDocHostUIHandler::TranslateAccelerator` 。
 
 ### <a name="return-value"></a>戻り値
 
-S_FALSEを返します。
+S_FALSE を返します。
 
 ### <a name="remarks"></a>解説
 
-このメンバー関数は、Windows SDK で説明されているように、CDHtmlDialog の[IDocHostUIHandler::翻訳アクセラレータ](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753266\(v=vs.85\))の実装です。
+このメンバー関数は、Windows SDK で説明されているように、 [IDocHostUIHandler:: TranslateAccelerator](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753266\(v=vs.85\))の CDHtmlDialog の実装です。
 
-## <a name="cdhtmldialogtranslateurl"></a><a name="translateurl"></a>ダイアログ::翻訳Url
+## <a name="cdhtmldialogtranslateurl"></a><a name="translateurl"></a> CDHtmlDialog:: TranslateUrl
 
-読み込む URL を変更するために呼び出されます。
+読み込まれる URL を変更するために呼び出されます。
 
 ```
 STDMETHOD(TranslateUrl)(
@@ -1489,24 +1489,24 @@ STDMETHOD(TranslateUrl)(
 
 ### <a name="parameters"></a>パラメーター
 
-*dw翻訳*<br/>
-Windows SDK の *「DwTranslate」*[を](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753267\(v=vs.85\))参照してください。
+*dwTranslate*<br/>
+Windows SDK の「 *Dwtranslate* in [IDocHostUIHandler:: TranslateUrl](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753267\(v=vs.85\)) 」を参照してください。
 
-*プチュリン*<br/>
-Windows SDK`IDocHostUIHandler::TranslateUrl`*の「pchURLIn」* を参照してください。
+*pchURLIn*<br/>
+Windows SDK の「 *pchURLIn* 」を参照してください `IDocHostUIHandler::TranslateUrl` 。
 
-*を実行する*<br/>
-の *「」*`IDocHostUIHandler::TranslateUrl`を参照してください。
+*ppchURLOut*<br/>
+Windows SDK の「 *Ppchurlout* 」を参照してください `IDocHostUIHandler::TranslateUrl` 。
 
 ### <a name="return-value"></a>戻り値
 
-S_FALSEを返します。
+S_FALSE を返します。
 
 ### <a name="remarks"></a>解説
 
-このメンバー関数は、Windows SDK で説明[されているように](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753267\(v=vs.85\))、CDHtmlDialog の実装です。
+このメンバー関数は、Windows SDK で説明されているように、 [IDocHostUIHandler:: TranslateUrl](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753267\(v=vs.85\))の CDHtmlDialog の実装です。
 
-## <a name="cdhtmldialogupdateui"></a><a name="updateui"></a>ダイアログ::アップデートUI
+## <a name="cdhtmldialogupdateui"></a><a name="updateui"></a> CDHtmlDialog:: UpdateUI
 
 コマンドの状態が変更されたことをホストに通知するために呼び出されます。
 
@@ -1520,10 +1520,10 @@ E_NOTIMPL を返します。
 
 ### <a name="remarks"></a>解説
 
-このメンバー関数は、Windows SDK で説明されているように、CDHtmlDialog の[IDocHostUIHandler::UpdateUI](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753268\(v=vs.85\))の実装です。
+このメンバー関数は、Windows SDK で説明されているように、 [IDocHostUIHandler:: UpdateUI](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753268\(v=vs.85\))の CDHtmlDialog の実装です。
 
 ## <a name="see-also"></a>関連項目
 
-[サンプルの検索](../../overview/visual-cpp-samples.md)<br/>
-[DDX_DHtml Helper マクロ](#ddx_dhtml_helper_macros)<br/>
-[階層グラフ](../../mfc/hierarchy-chart.md)
+[MFC サンプル DHtmlExplore](../../overview/visual-cpp-samples.md)<br/>
+[DDX_DHtml ヘルパーマクロ](#ddx_dhtml_helper_macros)<br/>
+[階層図](../../mfc/hierarchy-chart.md)

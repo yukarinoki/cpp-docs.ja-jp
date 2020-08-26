@@ -13,26 +13,33 @@ helpviewer_keywords:
 - std::is_trivially_copy_assignable
 - std::is_trivially_move_assignable
 - std::is_trivially_move_constructible
-ms.openlocfilehash: d330a1dcd819dd48713887db789371ed4a8fee35
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 11defadff0b1785f6e4c5aba6356f7b68a78b9fc
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87215531"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88841780"
 ---
 # <a name="lttype_traitsgt-functions"></a>&lt;type_traits&gt; 関数
 
-||||
-|-|-|-|
-|[is_assignable](#is_assignable)|[is_copy_assignable](#is_copy_assignable)|[is_copy_constructible](#is_copy_constructible)|
-|[is_default_constructible](#is_default_constructible)|[is_move_assignable](#is_move_assignable)|[is_move_constructible](#is_move_constructible)|
-|[is_nothrow_move_assignable](#is_nothrow_move_assignable)|[is_nothrow_swappable](#is_nothrow_swappable)|[is_nothrow_swappable_with](#is_nothrow_swappable_with)|
-|[is_swappable](#is_swappable)|[is_swappable_with](#is_swappable_with)|[is_trivially_copy_assignable](#is_trivially_copy_assignable)|
-|[is_trivially_move_assignable](#is_trivially_move_assignable)|[is_trivially_move_constructible](#is_trivially_move_constructible)|
+[is_assignable](#is_assignable)\
+[is_copy_assignable](#is_copy_assignable)\
+[is_copy_constructible](#is_copy_constructible)\
+[is_default_constructible](#is_default_constructible)\
+[is_move_assignable](#is_move_assignable)\
+[is_move_constructible](#is_move_constructible)\
+[is_nothrow_move_assignable](#is_nothrow_move_assignable)\
+[is_nothrow_swappable](#is_nothrow_swappable)\
+[is_nothrow_swappable_with](#is_nothrow_swappable_with)\
+[is_swappable](#is_swappable)\
+[is_swappable_with](#is_swappable_with)\
+[is_trivially_copy_assignable](#is_trivially_copy_assignable)\
+[is_trivially_move_assignable](#is_trivially_move_assignable)\
+[is_trivially_move_constructible](#is_trivially_move_constructible)
 
-## <a name="is_assignable"></a><a name="is_assignable"></a>is_assignable
+## <a name="is_assignable"></a><a name="is_assignable"></a> is_assignable
 
-型の値を型*から*型*に*割り当てることができるかどうかをテストします。
+型の値を型 *から* 型 *に* 割り当てることができるかどうかをテストします。
 
 ```cpp
 template <class To, class From>
@@ -51,7 +58,7 @@ struct is_assignable;
 
 評価されていない式 `declval<To>() = declval<From>()` は整形式である必要があります。 と*の*どちら*To*も、完全な型、 **`void`** 、または不明なバインドの配列である必要があります。
 
-## <a name="is_copy_assignable"></a><a name="is_copy_assignable"></a>is_copy_assignable
+## <a name="is_copy_assignable"></a><a name="is_copy_assignable"></a> is_copy_assignable
 
 割り当て時に型をコピーできるかどうかをテストします。
 
@@ -67,9 +74,9 @@ struct is_copy_assignable;
 
 ### <a name="remarks"></a>解説
 
-型*Ty*がコピー代入演算子を持つクラスである場合、型述語のインスタンスは true を保持します。それ以外の場合は、false を保持します。 Is_assignable と同じ \<Ty&, const Ty&> です。
+型 *Ty* がコピー代入演算子を持つクラスである場合、型述語のインスタンスは true を保持します。それ以外の場合は、false を保持します。 Is_assignable と同じ \<Ty&, const Ty&> です。
 
-## <a name="is_copy_constructible"></a><a name="is_copy_constructible"></a>is_copy_constructible
+## <a name="is_copy_constructible"></a><a name="is_copy_constructible"></a> is_copy_constructible
 
 型にコピー コンストラクターが存在するかどうかをテストします。
 
@@ -85,7 +92,7 @@ struct is_copy_constructible;
 
 ### <a name="remarks"></a>解説
 
-型*Ty*がコピーコンストラクターを持つクラスである場合、型述語のインスタンスは true を保持します。それ以外の場合は、false を保持します。
+型 *Ty* がコピーコンストラクターを持つクラスである場合、型述語のインスタンスは true を保持します。それ以外の場合は、false を保持します。
 
 ### <a name="example"></a>例
 
@@ -121,7 +128,7 @@ is_copy_constructible<Copyable> == true
 is_copy_constructible<NotCopyable > == false
 ```
 
-## <a name="is_default_constructible"></a><a name="is_default_constructible"></a>is_default_constructible
+## <a name="is_default_constructible"></a><a name="is_default_constructible"></a> is_default_constructible
 
 型が既定のコンストラクターを持つかどうかをテストします。
 
@@ -137,7 +144,7 @@ struct is_default_constructible;
 
 ### <a name="remarks"></a>解説
 
-型*T*が既定のコンストラクターを持つクラス型である場合、型述語のインスタンスは true を保持します。それ以外の場合は、false を保持します。 これは、述語 `is_constructible<T>`と同じです。 型*T*は完全な型、 **`void`** 、または不明なバインドの配列である必要があります。
+型 *T* が既定のコンストラクターを持つクラス型である場合、型述語のインスタンスは true を保持します。それ以外の場合は、false を保持します。 これは、述語 `is_constructible<T>`と同じです。 型 *T* は完全な型、 **`void`** 、または不明なバインドの配列である必要があります。
 
 ### <a name="example"></a>例
 
@@ -173,7 +180,7 @@ is_default_constructible<Simple> == true
 is_default_constructible<Simple2> == false
 ```
 
-## <a name="is_move_assignable"></a><a name="is_move_assignable"></a>is_move_assignable
+## <a name="is_move_assignable"></a><a name="is_move_assignable"></a> is_move_assignable
 
 型が移動代入可能であるかどうかをテストします。
 
@@ -191,7 +198,7 @@ struct is_move_assignable;
 
 型への右辺値参照を型の参照に割り当てる事ができる場合、その型は移動代入可能です。 型述語は `is_assignable<T&, T&&>` と同じです。 移動代入できる型には、コンパイラにより生成された移動代入演算子またはユーザー定義の移動代入演算子を含む参照可能なスカラー型やクラス型があります。
 
-## <a name="is_move_constructible"></a><a name="is_move_constructible"></a>is_move_constructible
+## <a name="is_move_constructible"></a><a name="is_move_constructible"></a> is_move_constructible
 
 型に移動コンストラクターが存在するかどうかをテストします。
 
@@ -207,9 +214,9 @@ struct is_move_constructible;
 
 ### <a name="remarks"></a>解説
 
-移動操作を使用して型*T*を構築できる場合は true に評価される型述語。 この述語は `is_constructible<T, T&&>` と同じです。
+移動操作を使用して型 *T* を構築できる場合は true に評価される型述語。 この述語は `is_constructible<T, T&&>` と同じです。
 
-## <a name="is_nothrow_move_assignable"></a><a name="is_nothrow_move_assignable"></a>is_nothrow_move_assignable
+## <a name="is_nothrow_move_assignable"></a><a name="is_nothrow_move_assignable"></a> is_nothrow_move_assignable
 
 型に移動代入演算子があるかどうかをテスト **`nothrow`** します。
 
@@ -225,33 +232,33 @@ struct is_nothrow_move_assignable;
 
 ### <a name="remarks"></a>解説
 
-型が nothrow の移動代入演算子*を持つ場合*、型の述語のインスタンスは true を保持します。それ以外の場合は、false を保持します。
+型が nothrow の移動代入演算子 *を持つ場合* 、型の述語のインスタンスは true を保持します。それ以外の場合は、false を保持します。
 
-## <a name="is_nothrow_swappable"></a><a name="is_nothrow_swappable"></a>is_nothrow_swappable
+## <a name="is_nothrow_swappable"></a><a name="is_nothrow_swappable"></a> is_nothrow_swappable
 
 ```cpp
 template <class T> struct is_nothrow_swappable;
 ```
 
-## <a name="is_nothrow_swappable_with"></a><a name="is_nothrow_swappable_with"></a>is_nothrow_swappable_with
+## <a name="is_nothrow_swappable_with"></a><a name="is_nothrow_swappable_with"></a> is_nothrow_swappable_with
 
 ```cpp
 template <class T, class U> struct is_nothrow_swappable_with;
 ```
 
-## <a name="is_swappable"></a><a name="is_swappable"></a>is_swappable
+## <a name="is_swappable"></a><a name="is_swappable"></a> is_swappable
 
 ```cpp
 template <class T> struct is_swappable;
 ```
 
-## <a name="is_swappable_with"></a><a name="is_swappable_with"></a>is_swappable_with
+## <a name="is_swappable_with"></a><a name="is_swappable_with"></a> is_swappable_with
 
 ```cpp
 template <class T, class U> struct is_swappable_with;
 ```
 
-## <a name="is_trivially_copy_assignable"></a><a name="is_trivially_copy_assignable"></a>is_trivially_copy_assignable
+## <a name="is_trivially_copy_assignable"></a><a name="is_trivially_copy_assignable"></a> is_trivially_copy_assignable
 
 型が自明なコピー代入演算子を持つかどうかをテストします。
 
@@ -267,11 +274,11 @@ struct is_trivially_copy_assignable;
 
 ### <a name="remarks"></a>解説
 
-型*T*が自明なコピー代入演算子を持つクラスである場合、型述語のインスタンスは true を保持します。それ以外の場合は、false を保持します。
+型 *T* が自明なコピー代入演算子を持つクラスである場合、型述語のインスタンスは true を保持します。それ以外の場合は、false を保持します。
 
-クラス*t*の割り当てコンストラクターは、暗黙的に指定されている場合、クラス*t に*仮想関数がない場合、*クラス t に*仮想基底クラスがない場合、クラス型のすべての非静的データメンバーのクラスに自明な代入演算子がある場合、クラスの型配列のすべての非静的データメンバーのクラスに自明な代入演算子があります。
+クラス *t* の割り当てコンストラクターは、暗黙的に指定されている場合、クラス *t に* 仮想関数がない場合、 *クラス t に* 仮想基底クラスがない場合、クラス型のすべての非静的データメンバーのクラスに自明な代入演算子がある場合、クラスの型配列のすべての非静的データメンバーのクラスに自明な代入演算子があります。
 
-## <a name="is_trivially_move_assignable"></a><a name="is_trivially_move_assignable"></a>is_trivially_move_assignable
+## <a name="is_trivially_move_assignable"></a><a name="is_trivially_move_assignable"></a> is_trivially_move_assignable
 
 型が自明なムーブ代入演算子を持つかどうかをテストします。
 
@@ -287,21 +294,21 @@ struct is_trivially_move_assignable;
 
 ### <a name="remarks"></a>解説
 
-型*Ty*が自明なムーブ代入演算子を持つクラスである場合、型述語のインスタンスは true を保持します。それ以外の場合は、false を保持します。
+型 *Ty* が自明なムーブ代入演算子を持つクラスである場合、型述語のインスタンスは true を保持します。それ以外の場合は、false を保持します。
 
-クラス*Ty*の移動代入演算子は、次のような場合に自明です。
+クラス *Ty* の移動代入演算子は、次のような場合に自明です。
 
 暗黙的に指定されている
 
-クラス*Ty*に仮想関数がありません。
+クラス *Ty* に仮想関数がありません。
 
-クラス*Ty*に仮想基底がありません
+クラス *Ty* に仮想基底がありません
 
 クラス型のすべての非静的データ メンバーのクラスに自明なムーブ代入演算子がある
 
 クラスの型配列のすべての非静的データ メンバーのクラスに自明なムーブ代入演算子がある
 
-## <a name="is_trivially_move_constructible"></a><a name="is_trivially_move_constructible"></a>is_trivially_move_constructible
+## <a name="is_trivially_move_constructible"></a><a name="is_trivially_move_constructible"></a> is_trivially_move_constructible
 
 型に自明な移動コンストラクターが存在するかどうかをテストします。
 
@@ -317,17 +324,17 @@ struct is_trivially_move_constructible;
 
 ### <a name="remarks"></a>解説
 
-型*Ty*が自明な移動コンストラクターを持つクラスである場合、型述語のインスタンスは true を保持します。それ以外の場合は、false を保持します。
+型 *Ty* が自明な移動コンストラクターを持つクラスである場合、型述語のインスタンスは true を保持します。それ以外の場合は、false を保持します。
 
-クラス*Ty*の移動コンストラクターは、次のような場合に自明です。
+クラス *Ty* の移動コンストラクターは、次のような場合に自明です。
 
 暗黙的に宣言されている
 
 そのパラメーターの型が暗黙的な宣言のものと同じである
 
-クラス*Ty*に仮想関数がありません。
+クラス *Ty* に仮想関数がありません。
 
-クラス*Ty*に仮想基底がありません
+クラス *Ty* に仮想基底がありません
 
 クラスに揮発性の非静的データ メンバーがない
 

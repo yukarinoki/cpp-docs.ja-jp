@@ -7,12 +7,12 @@ helpviewer_keywords:
 - typetrait header
 - type_traits
 ms.assetid: 2260b51f-8160-4c66-a82f-00b534cb60d4
-ms.openlocfilehash: 94178d2efd1942a7475fa7987526b021b1c6fb68
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 42c94daf331fd9a17e050067e4c4e495af180b0c
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87201961"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88841702"
 ---
 # <a name="lttype_traitsgt"></a>&lt;type_traits&gt;
 
@@ -28,13 +28,13 @@ ms.locfileid: "87201961"
 
 のクラスとテンプレート \<type_traits> は、コンパイル時に型の推定、分類、および変換をサポートするために使用されます。 また、型に関連するエラーを検出し、汎用コードを最適化するためにも使用されます。 単項型の特徴では、型のプロパティ、バイナリ型の特徴によって型の間のリレーションシップ、および変換の特徴によって型のプロパティが変更されます。
 
-ヘルパークラス `integral_constant` とそのテンプレートは特殊化され、 `true_type` `false_type` 型述語の基底クラスを形成します。 *型の述語*は、1 つ以上の型引数を受け取るテンプレートです。 型の述語が*true を保持*している場合は、 [true_type](../standard-library/type-traits-typedefs.md#true_type)からパブリックに直接または間接的に派生されます。 型の述語が*false を保持*している場合は、 [false_type](../standard-library/type-traits-typedefs.md#false_type)からパブリックに直接または間接的に派生されます。
+ヘルパークラス `integral_constant` とそのテンプレートは特殊化され、 `true_type` `false_type` 型述語の基底クラスを形成します。 *型の述語*は、1 つ以上の型引数を受け取るテンプレートです。 型の述語が *true を保持*している場合は、 [true_type](../standard-library/type-traits-typedefs.md#true_type)からパブリックに直接または間接的に派生されます。 型の述語が *false を保持*している場合は、 [false_type](../standard-library/type-traits-typedefs.md#false_type)からパブリックに直接または間接的に派生されます。
 
 *型修飾子*または*変換の特徴*は、1 つ以上のテンプレート引数を受け取り、変更された型のシノニムである 1 つのメンバー、`type` を持つテンプレートです。
 
 ### <a name="alias-templates"></a>エイリアス テンプレート
 
-型の特徴式を単純化するために、の[エイリアステンプレート](../cpp/aliases-and-typedefs-cpp.md) `typename some_trait<T>::type` が用意されています。 *some_trait*はクラステンプレート名です。 たとえば、[add_const](../standard-library/add-const-class.md) には、その型 `add_const_t` のエイリアス テンプレートがあり、次のように定義されています。
+型の特徴式を単純化するために、の [エイリアステンプレート](../cpp/aliases-and-typedefs-cpp.md) `typename some_trait<T>::type` が用意されています。 *some_trait* はクラステンプレート名です。 たとえば、[add_const](../standard-library/add-const-class.md) には、その型 `add_const_t` のエイリアス テンプレートがあり、次のように定義されています。
 
 ```cpp
 template <class T>
@@ -43,22 +43,44 @@ using add_const_t = typename add_const<T>::type;
 
 これらは、メンバーの指定されたエイリアスです `type` 。
 
-||||
-|-|-|-|
-| add_const_t | add_cv_t | add_lvalue_reference_t |
-| add_pointer_t | add_rvalue_reference_t | add_volatile_t |
-| aligned_storage_t | aligned_union_t | common_type_t |
-| conditional_t | decay_t | enable_if_t |
-| invoke_result_t | make_signed_t | make_unsigned_t |
-| remove_all_extents_t | remove_const_t | remove_cv_t |
-| remove_extent_t | remove_pointer_t | remove_reference_t |
-| remove_volatile_t | result_of_t | underlying_type_t |
+:::row:::
+   :::column:::
+      `add_const_t`\
+      `add_cv_t`\
+      `add_lvalue_reference_t`\
+      `add_pointer_t`\
+      `add_rvalue_reference_t`\
+      `add_volatile_t`\
+      `aligned_storage_t`\
+      `aligned_union_t`\
+   :::column-end:::
+   :::column:::
+      `common_type_t`\
+      `conditional_t`\
+      `decay_t`\
+      `enable_if_t`\
+      `invoke_result_t`\
+      `make_signed_t`\
+      `make_unsigned_t`\
+      `remove_all_extents_t`\
+   :::column-end:::
+   :::column:::
+      `remove_const_t`\
+      `remove_cv_t`\
+      `remove_extent_t`\
+      `remove_pointer_t`\
+      `remove_reference_t`\
+      `remove_volatile_t`\
+      `result_of_t`\
+      `underlying_type_t`\
+   :::column-end:::
+:::row-end:::
 
 ### <a name="classes"></a>クラス
 
 ヘルパー クラスと typedef
 
-|||
+|名前|説明|
 |-|-|
 |[integral_constant](../standard-library/integral-constant-class-bool-constant-class.md)|型および値から整数定数を作成します。|
 |[true_type](../standard-library/type-traits-typedefs.md#true_type)|true 値を持つ整数定数を保持します。|
@@ -66,7 +88,7 @@ using add_const_t = typename add_const<T>::type;
 
 主な型のカテゴリ
 
-|||
+|名前|説明|
 |-|-|
 |[is_void](../standard-library/is-void-class.md)|型がであるかどうかをテスト **`void`** します。|
 |[is_null_pointer](../standard-library/is-null-pointer-class.md)|型が `std::nullptr_t` であるかどうかをテストします。|
@@ -85,7 +107,7 @@ using add_const_t = typename add_const<T>::type;
 
 複合型のカテゴリ
 
-|||
+|名前|説明|
 |-|-|
 |[is_reference](../standard-library/is-reference-class.md)|型が参照であるかどうかをテストします。|
 |[is_arithmetic](../standard-library/is-arithmetic-class.md)|型が演算型であるかどうかをテストします。|
@@ -97,7 +119,7 @@ using add_const_t = typename add_const<T>::type;
 
 型のプロパティ
 
-|||
+|名前|説明|
 |-|-|
 |[is_const](../standard-library/is-const-class.md)|型がであるかどうかをテスト **`const`** します。|
 |[is_volatile](../standard-library/is-volatile-class.md)|型がであるかどうかをテスト **`volatile`** します。|
@@ -150,7 +172,7 @@ using add_const_t = typename add_const<T>::type;
 
 型プロパティのクエリ
 
-|||
+|名前|説明|
 |-|-|
 |[alignment_of](../standard-library/alignment-of-class.md)|型のアラインメントを取得します。|
 |[ランク](../standard-library/rank-class.md)|配列の次元数を取得します。|
@@ -158,7 +180,7 @@ using add_const_t = typename add_const<T>::type;
 
 型の関係
 
-|||
+|名前|説明|
 |-|-|
 |[is_same](../standard-library/is-same-class.md)|2 つの型が等しいかどうかをテストします。|
 |[is_base_of](../standard-library/is-base-of-class.md)|一方の型がもう一方の型に基づいているかどうかをテストします。|
@@ -166,7 +188,7 @@ using add_const_t = typename add_const<T>::type;
 
 const/volatile の変更
 
-|||
+|名前|説明|
 |-|-|
 |[add_const](../standard-library/add-const-class.md)|型 **`const`** から型を生成します。|
 |[add_volatile](../standard-library/add-volatile-class.md)|型 **`volatile`** から型を生成します。|
@@ -177,7 +199,7 @@ const/volatile の変更
 
 参照の変更
 
-|||
+|名前|説明|
 |-|-|
 |[add_lvalue_reference](../standard-library/add-lvalue-reference-class.md)|型から型への参照を生成します。|
 |[add_rvalue_reference](../standard-library/add-rvalue-reference-class.md)|型から型への rvalue 参照を生成します。|
@@ -185,28 +207,28 @@ const/volatile の変更
 
 符号の変更
 
-|||
+|名前|説明|
 |-|-|
 |[make_signed](../standard-library/make-signed-class.md)|符号付きの場合は型を生成し、サイズが型以上の型または最小の符号付きの型を生成します。|
 |[make_unsigned](../standard-library/make-unsigned-class.md)|符号なしの場合は型を生成し、サイズが型以上の型または最小の符号なしの型を生成します。|
 
 配列の変更
 
-|||
+|名前|説明|
 |-|-|
 |[remove_all_extents](../standard-library/remove-all-extents-class.md)|配列型から非配列型を生成します。|
 |[remove_extent](../standard-library/remove-extent-class.md)|配列型から要素型を生成します。|
 
 ポインターの変更
 
-|||
+|名前|説明|
 |-|-|
 |[add_pointer](../standard-library/add-pointer-class.md)|型から型へのポインターを生成します。|
 |[remove_pointer](../standard-library/remove-pointer-class.md)|型へのポインターから型を生成します。|
 
 その他の変換
 
-|||
+|名前|説明|
 |-|-|
 |[aligned_storage](../standard-library/aligned-storage-class.md)|整列された型の初期化されていないメモリを割り当てます。|
 |[aligned_union](../standard-library/aligned-union-class.md)|重要なコンストラクターまたはデストラクターを含む整列された共用体の初期化されていないメモリを割り当てます。|
@@ -220,7 +242,7 @@ const/volatile の変更
 
 論理演算子の特徴
 
-|||
+|名前|説明|
 |-|-|
 |[論理積](../standard-library/conjunction-class.md)||
 |[論理和](../standard-library/disjunction-class.md)||

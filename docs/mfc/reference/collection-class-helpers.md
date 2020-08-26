@@ -8,22 +8,22 @@ helpviewer_keywords:
 - collection classes [MFC], helper functions
 - helper functions collection class [MFC]
 ms.assetid: bc3a2368-9edd-4748-9e6a-13cba79517ca
-ms.openlocfilehash: 02bc5c5a7c1766c97d9a834c8b6b4dfb2a26ae82
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 04b142cde12a9795f217559f875eef7fcec3b0f2
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87231794"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88841429"
 ---
 # <a name="collection-class-helpers"></a>コレクション クラスのヘルパー
 
-コレクションクラス、 `CMap` `CList` 、およびは、 `CArray` 要素の比較、コピー、およびシリアル化などの目的で、テンプレート化されたグローバルヘルパー関数を使用します。 、、およびに基づくクラスの実装の一部として `CMap` `CList` `CArray` 、マップ、リスト、または配列に格納されているデータ型に合わせて調整されたバージョンで、必要に応じてこれらの関数をオーバーライドする必要があります。 などのヘルパー関数をオーバーライドする方法の詳細につい `SerializeElements` ては、「[コレクション: タイプセーフなコレクションを作成する方法](../../mfc/how-to-make-a-type-safe-collection.md)」を参照してください。 `ConstructElements`と `DestructElements` は非推奨とされていることに注意してください。
+コレクションクラス、 `CMap` `CList` 、およびは、 `CArray` 要素の比較、コピー、およびシリアル化などの目的で、テンプレート化されたグローバルヘルパー関数を使用します。 、、およびに基づくクラスの実装の一部として `CMap` `CList` `CArray` 、マップ、リスト、または配列に格納されているデータ型に合わせて調整されたバージョンで、必要に応じてこれらの関数をオーバーライドする必要があります。 などのヘルパー関数をオーバーライドする方法の詳細につい `SerializeElements` ては、「 [コレクション: タイプセーフなコレクションを作成する方法](../../mfc/how-to-make-a-type-safe-collection.md)」を参照してください。 `ConstructElements`と `DestructElements` は非推奨とされていることに注意してください。
 
 Microsoft Foundation Class ライブラリには、コレクションクラスをカスタマイズするのに役立つ、afxtempl.h の次のグローバル関数が用意されています。
 
 ### <a name="collection-class-helpers"></a>コレクション クラスのヘルパー
 
-|||
+|名前|説明|
 |-|-|
 |[CompareElements](#compareelements)|要素が同じであるかどうかを示します。|
 |[CopyElements](#copyelements)|ある配列から別の配列に要素をコピーします。|
@@ -31,7 +31,7 @@ Microsoft Foundation Class ライブラリには、コレクションクラス�
 |[HashKey](#hashkey)|ハッシュキーを計算します。|
 |[SerializeElements](#serializeelements)|アーカイブとの間で要素を格納または取得します。|
 
-## <a name="compareelements"></a><a name="compareelements"></a>CompareElements
+## <a name="compareelements"></a><a name="compareelements"></a> CompareElements
 
 [Cmap__lookup](cmap-class.md#lookup)と[cmap__operator &#91;&#93;](cmap-class.md#operator_at)によって間接的に、[clist:: Find] (clist-class not_found md # clist__find と間接的に呼び出されます。
 
@@ -63,7 +63,7 @@ CompareElements(
 
 ### <a name="remarks"></a>解説
 
-の呼び出しでは、 `CMap` `CMap` テンプレートパラメーター *KEY*と*ARG_KEY*が使用されます。
+の呼び出しでは、 `CMap` `CMap` テンプレートパラメーター *KEY* と *ARG_KEY*が使用されます。
 
 既定の実装では、 * \* pElement1*と* \* pElement2*の比較結果が返されます。 アプリケーションに適した方法で要素を比較するように、この関数をオーバーライドします。
 
@@ -73,9 +73,9 @@ C++ 言語では、 `==` 単純型 (、、など) の比較演算子 () が定�
 
    **ヘッダー:** afxtempl.h
 
-## <a name="copyelements"></a><a name="copyelements"></a>CopyElements
+## <a name="copyelements"></a><a name="copyelements"></a> CopyElements
 
-この関数は、 [CArray:: Append](carray-class.md#append)と[CArray:: Copy](carray-class.md#copy)によって直接呼び出されます。
+この関数は、 [CArray:: Append](carray-class.md#append) と [CArray:: Copy](carray-class.md#copy)によって直接呼び出されます。
 
 ```
 template<class TYPE>
@@ -103,13 +103,13 @@ void AFXAPI CopyElements(
 
 既定の実装では、単純な代入演算子 () を使用して **=** コピー操作を実行します。 コピーされる型にオーバーロードされた operator = がない場合、既定の実装はビットごとのコピーを実行します。
 
-この機能およびその他のヘルパー関数の実装の詳細については、「[コレクション: タイプセーフなコレクションを作成する方法](../how-to-make-a-type-safe-collection.md)」を参照してください。
+この機能およびその他のヘルパー関数の実装の詳細については、「 [コレクション: タイプセーフなコレクションを作成する方法](../how-to-make-a-type-safe-collection.md)」を参照してください。
 
 ### <a name="requirements"></a>必要条件
 
   **ヘッダー** afxtempl.h
 
-## <a name="dumpelements"></a><a name="dumpelements"></a>DumpElements
+## <a name="dumpelements"></a><a name="dumpelements"></a> DumpElements
 
 オーバーライドされた場合に、コレクションの要素のテキスト形式でストリーム指向の診断出力を提供します。
 
@@ -145,7 +145,7 @@ void  AFXAPI DumpElements(
 
   **ヘッダー** afxtempl.h
 
-## <a name="hashkey"></a><a name="hashkey"></a>HashKey
+## <a name="hashkey"></a><a name="hashkey"></a> HashKey
 
 指定されたキーのハッシュ値を計算します。
 
@@ -168,9 +168,9 @@ AFX_INLINE UINT AFXAPI HashKey(ARG_KEY  key);
 
 ### <a name="remarks"></a>解説
 
-この関数は、Cmap: [: RemoveKey](cmap-class.md#removekey)によって直接呼び出され、 [Cmap:: Lookup](cmap-class.md#lookup)および[cmap:: Operator &#91;&#93;](cmap-class.md#operator_at)によって間接的に呼び出されます。
+この関数は、Cmap: [: RemoveKey](cmap-class.md#removekey) によって直接呼び出され、 [Cmap:: Lookup](cmap-class.md#lookup) および [cmap:: Operator &#91;&#93;](cmap-class.md#operator_at)によって間接的に呼び出されます。
 
-既定の実装では、*キー*を4つの位置で右にシフトしてハッシュ値を作成します。 アプリケーションに適したハッシュ値を返すように、この関数をオーバーライドします。
+既定の実装では、 *キー* を4つの位置で右にシフトしてハッシュ値を作成します。 アプリケーションに適したハッシュ値を返すように、この関数をオーバーライドします。
 
 ### <a name="example"></a>例
 
@@ -187,9 +187,9 @@ template <> UINT AFXAPI HashKey(unsigned __int64 key)
 
   **ヘッダー** afxtempl.h
 
-## <a name="serializeelements"></a><a name="serializeelements"></a>SerializeElements
+## <a name="serializeelements"></a><a name="serializeelements"></a> SerializeElements
 
-[CArray](carray-class.md)、 [CList](clist-class.md)、および[CMap](cmap-class.md)は、この関数を呼び出して要素をシリアル化します。
+[CArray](carray-class.md)、 [CList](clist-class.md)、および [CMap](cmap-class.md) は、この関数を呼び出して要素をシリアル化します。
 
 ```
 template<class TYPE>
@@ -214,11 +214,11 @@ void AFXAPI SerializeElements(CArchive& ar, TYPE* pElements, INT_PTR nCount);
 
 既定の実装では、ビットごとの読み取りまたは書き込みが行われます。
 
-この機能およびその他のヘルパー関数の実装の詳細については、「[コレクション: タイプセーフなコレクションを作成する方法](../how-to-make-a-type-safe-collection.md)」を参照してください。
+この機能およびその他のヘルパー関数の実装の詳細については、「 [コレクション: タイプセーフなコレクションを作成する方法](../how-to-make-a-type-safe-collection.md)」を参照してください。
 
 ### <a name="example"></a>例
 
-「記事[コレクション: タイプセーフなコレクションを作成する方法](../how-to-make-a-type-safe-collection.md)」の例を参照してください。
+「記事 [コレクション: タイプセーフなコレクションを作成する方法](../how-to-make-a-type-safe-collection.md)」の例を参照してください。
 
 ### <a name="requirements"></a>必要条件
 

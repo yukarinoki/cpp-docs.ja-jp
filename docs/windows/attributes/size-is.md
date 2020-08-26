@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - size_is attribute
 ms.assetid: 70192d09-f6c5-4d52-b3fe-303f8cb10aa5
-ms.openlocfilehash: 36b960982d1f88cd30bab707dfe7aec73381dfab
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: dd0ec8622dfffdf9a0578c86d75d313042cc3c01
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87213841"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88841767"
 ---
 # <a name="size_is"></a>size_is
 
@@ -34,13 +34,11 @@ ms.locfileid: "87213841"
 
 ## <a name="example"></a>例
 
-配列のセクションを指定する方法の例については、 [first_is](first-is.md)の例を参照してください。
+配列のセクションを指定する方法の例については、 [first_is](first-is.md) の例を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
-### <a name="attribute-context"></a>属性コンテキスト
-
-|||
+| 属性コンテキスト | 値 |
 |-|-|
 |**適用対象**|**`struct`** またはのフィールド **`union`** 、インターフェイスパラメーター、インターフェイスメソッド|
 |**Repeatable**|いいえ|

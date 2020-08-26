@@ -21,12 +21,12 @@ helpviewer_keywords:
 - std::student_t_distribution [C++], max
 - std::student_t_distribution [C++], param_type
 ms.assetid: 87b48127-9311-4d07-95df-833ed46bf0b1
-ms.openlocfilehash: c23298b931e751a8020883bfb3cf687e35ba3276
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 23ded8704e1e29dabddadfdc0a1ced3644374ad9
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87202013"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88840961"
 ---
 # <a name="student_t_distribution-class"></a>student_t_distribution クラス
 
@@ -69,12 +69,10 @@ public:
 
 ## <a name="remarks"></a>解説
 
-クラステンプレートは、 **`double`** スチューデントの*t*分布に従って分布した、ユーザー指定の整数型の値または型の値 (指定がない場合) を生成する分布を表します。 次の表は、個々のメンバーに関する記事にリンクしています。
+クラステンプレートは、 **`double`** スチューデントの *t*分布に従って分布した、ユーザー指定の整数型の値または型の値 (指定がない場合) を生成する分布を表します。 次の表は、個々のメンバーに関する記事にリンクしています。
 
-||||
-|-|-|-|
-|[student_t_distribution](#student_t_distribution)|`student_t_distribution::n`|`student_t_distribution::param`|
-|`student_t_distribution::operator()`||[param_type](#param_type)|
+[student_t_distribution](#student_t_distribution)\
+[param_type](#param_type)
 
 プロパティ関数 `n()` は、格納されている分布パラメーター `n` の値を返します。
 
@@ -163,7 +161,7 @@ Distribution for 10 samples:
 
 **名前空間:** std
 
-## <a name="student_t_distributionstudent_t_distribution"></a><a name="student_t_distribution"></a>student_t_distribution:: student_t_distribution
+## <a name="student_t_distributionstudent_t_distribution"></a><a name="student_t_distribution"></a> student_t_distribution:: student_t_distribution
 
 分布を作成します。
 
@@ -188,7 +186,7 @@ explicit student_t_distribution(const param_type& parm);
 
 2 つ目のコンストラクターは、格納されているパラメーターが *parm* から初期化されるオブジェクトを作成します。 `param()` メンバー関数を呼び出すと、既存の分布の現在のパラメーターを取得および設定できます。
 
-## <a name="student_t_distributionparam_type"></a><a name="param_type"></a>student_t_distribution::p aram_type
+## <a name="student_t_distributionparam_type"></a><a name="param_type"></a> student_t_distribution::p aram_type
 
 分布のすべてのパラメーターを格納します。
 

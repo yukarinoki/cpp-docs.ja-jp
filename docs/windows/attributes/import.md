@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - import attribute
 ms.assetid: ebf07cae-39fb-4047-8b57-54af0a9a83de
-ms.openlocfilehash: f2a0aa9a68c081e83a7a5278aa37a7fddac85416
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 6b146bdad7d870b534c371a4396993202cc83a4b
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80166837"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88842313"
 ---
 # <a name="import"></a>import
 
@@ -32,13 +32,13 @@ ms.locfileid: "80166837"
 
 ## <a name="remarks"></a>解説
 
-**Import** C++属性を指定すると、生成された .idl ファイルの `import "docobj.idl"` ステートメントの下に `#import` ステートメントが配置されます。 **Import**属性には、 [import](/windows/win32/Midl/import) MIDL 属性と同じ機能があります。
+**Import** C++ 属性により、 `#import` ステートメントが生成された `import "docobj.idl"` .idl ファイル内のステートメントの下に配置されます。 **Import**属性には、 [import](/windows/win32/Midl/import) MIDL 属性と同じ機能があります。
 
-**Import**属性は、指定されたファイルを、プロジェクトによって生成される .idl ファイルにのみ配置します。**import**属性を使用しても、プロジェクト内のソースコードから指定されたファイル内の構造体を呼び出すことはできません。  プロジェクトのソースコードから指定されたファイルの構造体を呼び出すには、 [#import](../../preprocessor/hash-import-directive-cpp.md)と `embedded_idl` 属性を使用するか、.h ファイルが存在する場合は*idl_file*の .h ファイルを含めることができます。
+**Import**属性は、指定されたファイルを、プロジェクトによって生成される .idl ファイルにのみ配置します。**import**属性を使用しても、プロジェクト内のソースコードから指定されたファイル内の構造体を呼び出すことはできません。  プロジェクト内のソースコードから指定されたファイルの構造体を呼び出すには、 [#import](../../preprocessor/hash-import-directive-cpp.md) と属性を使用するか、 `embedded_idl` .h ファイルが存在する場合は *idl_file*の .h ファイルを含めることができます。
 
 ## <a name="example"></a>例
 
-次のコードは、次の処理を実行します。
+コード例を次に示します。
 
 ```cpp
 // cpp_attr_ref_import.cpp
@@ -62,22 +62,20 @@ library MyLib {
 
 ## <a name="requirements"></a>必要条件
 
-### <a name="attribute-context"></a>属性コンテキスト
-
-|||
+| 属性コンテキスト | 値 |
 |-|-|
-|**対象**|任意の場所|
-|**反復可能**|いいえ|
-|**必要な属性**|なし|
+|**適用対象**|任意の場所|
+|**Repeatable**|いいえ|
+|**必須属性**|なし|
 |**無効な属性**|なし|
 
 詳細については、「 [属性コンテキスト](cpp-attributes-com-net.md#contexts)」を参照してください。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [IDL 属性](idl-attributes.md)<br/>
 [スタンドアロン属性](stand-alone-attributes.md)<br/>
 [importidl](importidl.md)<br/>
 [importlib](importlib.md)<br/>
-[include](include-cpp.md)<br/>
+[用意](include-cpp.md)<br/>
 [includelib](includelib-cpp.md)

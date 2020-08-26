@@ -17,12 +17,12 @@ helpviewer_keywords:
 - signal constants
 - SIGILL constant
 ms.assetid: a3b39281-dae7-4e44-8d68-e6a610c669dd
-ms.openlocfilehash: e9953e967d1c94ae56dfc1063fb0deafa342631c
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: d26671b8c3d983e7f1c3fd559d8aa2029e3162fe
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57738733"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88841143"
 ---
 # <a name="signal-constants"></a>signal 定数
 
@@ -36,7 +36,7 @@ ms.locfileid: "57738733"
 
 `sig` 引数は、SIGNAL.H に定義されている以下のマニフェスト定数のいずれかにする必要があります。
 
-|||
+|定数|説明|
 |-|-|
 |SIGABRT|異常終了。 既定のアクションでは、終了コード 3 で呼び出し元のプログラムを終了します。  |
 |SIGABRT_COMPAT|SIGABRT と同じ。 その他のプラットフォームとの互換性を維持します。  |
@@ -50,5 +50,5 @@ ms.locfileid: "57738733"
 ## <a name="see-also"></a>関連項目
 
 [signal](../c-runtime-library/reference/signal.md)<br/>
-[raise](../c-runtime-library/reference/raise.md)<br/>
+[発生](../c-runtime-library/reference/raise.md)<br/>
 [グローバル定数](../c-runtime-library/global-constants.md)

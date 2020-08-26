@@ -1,4 +1,4 @@
-﻿---
+---
 title: コンストラクター (C++)
 ms.date: 12/27/2019
 helpviewer_keywords:
@@ -6,16 +6,16 @@ helpviewer_keywords:
 - objects [C++], creating
 - instance constructors
 ms.assetid: 3e9f7211-313a-4a92-9584-337452e061a9
-ms.openlocfilehash: 23567ff2c4ff431ba3dccdb600e5d7b3e848c852
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: f5340f2e56a367734293d661d9d89eb0db522fd2
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87229013"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88842053"
 ---
 # <a name="constructors-c"></a>コンストラクター (C++)
 
-クラスメンバーを初期化する方法をカスタマイズしたり、クラスのオブジェクトが作成されたときに関数を呼び出したりするには、*コンストラクター*を定義します。 コンストラクターにはクラスと同じ名前があり、戻り値はありません。 さまざまな方法で初期化をカスタマイズするために、必要に応じてオーバーロードされたコンストラクターをいくつでも定義できます。 通常、クラス定義または継承階層の外部にあるコードでクラスのオブジェクトを作成できるように、コンストラクターにはパブリックアクセシビリティがあります。 ただし、コンストラクターをまたはとして宣言することもでき **`protected`** **`private`** ます。
+クラスメンバーを初期化する方法をカスタマイズしたり、クラスのオブジェクトが作成されたときに関数を呼び出したりするには、 *コンストラクター*を定義します。 コンストラクターにはクラスと同じ名前があり、戻り値はありません。 さまざまな方法で初期化をカスタマイズするために、必要に応じてオーバーロードされたコンストラクターをいくつでも定義できます。 通常、クラス定義または継承階層の外部にあるコードでクラスのオブジェクトを作成できるように、コンストラクターにはパブリックアクセシビリティがあります。 ただし、コンストラクターをまたはとして宣言することもでき **`protected`** **`private`** ます。
 
 コンストラクターは、必要に応じてメンバーの init リストを受け取ることができます。 これは、コンストラクター本体で値を割り当てるよりも、クラスメンバーを初期化するより効率的な方法です。 次の例は、 `Box` 3 つのオーバーロードされたコンストラクターを持つクラスを示しています。 最後の2つの使用メンバーの初期化リスト:
 
@@ -62,15 +62,15 @@ int main()
 }
 ```
 
-- コンストラクターは **`inline`** 、[明示的](#explicit_constructors) **`friend`** または[constexpr](#constexpr_constructors)として宣言できます。
+- コンストラクターは **`inline`** 、 [明示的](#explicit_constructors) **`friend`** または [constexpr](#constexpr_constructors)として宣言できます。
 - コンストラクターは **`const`** 、、、またはとして宣言されたオブジェクトを初期化でき **`volatile`** **`const volatile`** ます。 コンストラクターが完了すると、オブジェクトがになり **`const`** ます。
 - 実装ファイルでコンストラクターを定義するには、他のメンバー関数と同じように修飾名を `Box::Box(){...}` 指定します。
 
-## <a name="member-initializer-lists"></a><a name="member_init_list"></a>メンバー初期化子リスト
+## <a name="member-initializer-lists"></a><a name="member_init_list"></a> メンバー初期化子リスト
 
 コンストラクターは、必要に応じてメンバー初期化子リストを持つことができます。これにより、コンストラクター本体の実行前にクラスメンバーが初期化されます。 (メンバー初期化子リストは、 [std:: initializer_list \<T> ](../standard-library/initializer-list-class.md)型の*初期化子リスト*と同じではないことに注意してください)。
 
-メンバーを直接初期化するので、コンストラクターの本体に値を割り当てるよりも、メンバー初期化子リストを使用することをお勧めします。 次の例では、メンバー初期化子リストは、コロンの後のすべての**識別子 (引数)** 式で構成されています。
+メンバーを直接初期化するので、コンストラクターの本体に値を割り当てるよりも、メンバー初期化子リストを使用することをお勧めします。 次の例では、メンバー初期化子リストは、コロンの後のすべての **識別子 (引数)** 式で構成されています。
 
 ```cpp
     Box(int width, int length, int height)
@@ -84,9 +84,9 @@ int main()
 
 パラメーター化された基本クラスコンストラクターの呼び出しは、派生コンストラクターを実行する前に基底クラスが完全に初期化されるように、初期化子リストで行う必要があります。
 
-## <a name="default-constructors"></a><a name="default_constructors"></a>既定のコンストラクター
+## <a name="default-constructors"></a><a name="default_constructors"></a> 既定のコンストラクター
 
-*既定のコンストラクター*には通常、パラメーターはありませんが、既定値を持つパラメーターを持つことができます。
+*既定のコンストラクター* には通常、パラメーターはありませんが、既定値を持つパラメーターを持つことができます。
 
 ```cpp
 class Box {
@@ -99,7 +99,7 @@ public:
 }
 ```
 
-既定のコンストラクターは、[特別なメンバー関数](special-member-functions.md)の1つです。 クラスでコンストラクターが宣言されていない場合、コンパイラは暗黙的な既定のコンストラクターを提供し **`inline`** ます。
+既定のコンストラクターは、 [特別なメンバー関数](special-member-functions.md)の1つです。 クラスでコンストラクターが宣言されていない場合、コンパイラは暗黙的な既定のコンストラクターを提供し **`inline`** ます。
 
 ```cpp
 #include <iostream>
@@ -140,7 +140,7 @@ myclass mc();     // warning C4930: prototyped function not called (was a variab
 }
 ```
 
-これは最も厄介な解析の例です。 例の式は、関数の宣言としても、既定のコンストラクターの呼び出しとしても解釈できるため、さらに、C++ パーサーが宣言を最優先に処理するため、この式は関数宣言として扱われます。 詳細については、「[最も厄介な解析](https://en.wikipedia.org/wiki/Most_vexing_parse)」を参照してください。
+これは最も厄介な解析の例です。 例の式は、関数の宣言としても、既定のコンストラクターの呼び出しとしても解釈できるため、さらに、C++ パーサーが宣言を最優先に処理するため、この式は関数宣言として扱われます。 詳細については、「 [最も厄介な解析](https://en.wikipedia.org/wiki/Most_vexing_parse)」を参照してください。
 
 既定以外のコンストラクターが宣言されている場合は、コンパイル時に既定のコンストラクターは生成されません。
 
@@ -176,9 +176,9 @@ Box boxes[3]; // C2512: no appropriate default constructor available
 Box boxes[3]{ { 1, 2, 3 }, { 4, 5, 6 }, { 7, 8, 9 } };
 ```
 
-詳細については、「[初期化子](initializers.md)」を参照してください。
+詳細については、「 [初期化子](initializers.md)」を参照してください。
 
-## <a name="copy-constructors"></a><a name="copy_and_move_constructors"></a>コピーコンストラクター
+## <a name="copy-constructors"></a><a name="copy_and_move_constructors"></a> コピーコンストラクター
 
 *コピーコンストラクター*は、同じ型のオブジェクトからメンバー値をコピーすることによって、オブジェクトを初期化します。 クラスメンバーがスカラー値などのすべての単純型である場合、コンパイラによって生成されるコピーコンストラクターは十分であり、独自に定義する必要はありません。 クラスでより複雑な初期化が必要な場合は、カスタムコピーコンストラクターを実装する必要があります。 たとえば、クラスメンバーがポインターである場合、コピーコンストラクターを定義して新しいメモリを割り当て、もう一方のオブジェクトから値をコピーする必要があります。 コンパイラによって生成されたコピーコンストラクターは、ポインターを単にコピーして、新しいポインターがもう一方のメモリ位置を参照するようにします。
 
@@ -194,7 +194,7 @@ Box boxes[3]{ { 1, 2, 3 }, { 4, 5, 6 }, { 7, 8, 9 } };
     Box(Box& other, int i = 42, string label = "Box");
 ```
 
-コピーコンストラクターを定義する場合は、コピー代入演算子 (=) も定義する必要があります。 詳細については、「[代入](assignment.md)および[コピーコンストラクター」および「コピー代入演算子](copy-constructors-and-copy-assignment-operators-cpp.md)」を参照してください。
+コピーコンストラクターを定義する場合は、コピー代入演算子 (=) も定義する必要があります。 詳細については、「 [代入](assignment.md) および [コピーコンストラクター」および「コピー代入演算子](copy-constructors-and-copy-assignment-operators-cpp.md)」を参照してください。
 
 コピーコンストラクターを削除済みとして定義することで、オブジェクトがコピーされないようにすることができます。
 
@@ -202,9 +202,9 @@ Box boxes[3]{ { 1, 2, 3 }, { 4, 5, 6 }, { 7, 8, 9 } };
     Box (const Box& other) = delete;
 ```
 
-オブジェクトをコピーしようとすると、エラー C2280 が発生します。*削除された関数を参照しようと*しています。
+オブジェクトをコピーしようとすると、エラー C2280 が発生します。 *削除された関数を参照しようと*しています。
 
-## <a name="move-constructors"></a><a name="move_constructors"></a>移動コンストラクター
+## <a name="move-constructors"></a><a name="move_constructors"></a> 移動コンストラクター
 
 *移動コンストラクター*は、既存のオブジェクトのデータの所有権を、元のデータをコピーせずに新しい変数に移動する特別なメンバー関数です。 最初のパラメーターとして右辺値参照を受け取り、追加のパラメーターには既定値が必要です。 移動コンストラクターを使用すると、大きなオブジェクトを渡すときにプログラムの効率を大幅に向上させることができます。
 
@@ -212,7 +212,7 @@ Box boxes[3]{ { 1, 2, 3 }, { 4, 5, 6 }, { 7, 8, 9 } };
 Box(Box&& other);
 ```
 
-コンパイラは、オブジェクトが破棄され、リソースを必要としなくなる同じ型の別のオブジェクトによって初期化されている特定の状況で、移動コンストラクターを選択します。 次の例は、オーバーロードの解決によって移動コンストラクターが選択された場合の1つのケースを示しています。 を呼び出すコンストラクターで `get_Box()` 、戻り値は*xvalue* (有効期限が切れる値) になります。 変数に割り当てられていないため、スコープ外に出ます。 この例の意図を示すために、ボックスに、その内容を表す文字列の大きなベクターを用意します。 移動コンストラクターは、ベクターとその文字列をコピーするのではなく、新しいオブジェクトに追加されるように、有効期限切れの値 "box" からそれを "盗み" ます。 `std::move`との両方のクラスに独自の `vector` 移動コンストラクターが実装されているため、への呼び出しはすべて必要です `string` 。
+コンパイラは、オブジェクトが破棄され、リソースを必要としなくなる同じ型の別のオブジェクトによって初期化されている特定の状況で、移動コンストラクターを選択します。 次の例は、オーバーロードの解決によって移動コンストラクターが選択された場合の1つのケースを示しています。 を呼び出すコンストラクターで `get_Box()` 、戻り値は *xvalue* (有効期限が切れる値) になります。 変数に割り当てられていないため、スコープ外に出ます。 この例の意図を示すために、ボックスに、その内容を表す文字列の大きなベクターを用意します。 移動コンストラクターは、ベクターとその文字列をコピーするのではなく、新しいオブジェクトに追加されるように、有効期限切れの値 "box" からそれを "盗み" ます。 `std::move`との両方のクラスに独自の `vector` 移動コンストラクターが実装されているため、への呼び出しはすべて必要です `string` 。
 
 ```cpp
 #include <iostream>
@@ -283,11 +283,11 @@ int main()
 
 暗黙的に宣言された移動コンストラクターは、クラス型のメンバーがデストラクターを持たないか、またはコンパイラが移動操作に使用するコンストラクターを判断できない場合、deleted として定義されます。
 
-重要でない移動コンストラクターを記述する方法の詳細については、「[移動コンストラクターと移動代入演算子 (C++)](../cpp/move-constructors-and-move-assignment-operators-cpp.md)」を参照してください。
+重要でない移動コンストラクターを記述する方法の詳細については、「 [移動コンストラクターと移動代入演算子 (C++)](../cpp/move-constructors-and-move-assignment-operators-cpp.md)」を参照してください。
 
-## <a name="explicitly-defaulted-and-deleted-constructors"></a><a name="explicitly_defaulted_and_deleted_constructors"></a>明示的に既定化および削除されたコンストラクター
+## <a name="explicitly-defaulted-and-deleted-constructors"></a><a name="explicitly_defaulted_and_deleted_constructors"></a> 明示的に既定化および削除されたコンストラクター
 
-コピーコンストラクター、既定のコンストラクター、移動コンストラクター、コピー代入演算子、移動代入演算子、およびデストラクターを明示的に*既定*で使用できます。 すべての特殊なメンバー関数を明示的に*削除*できます。
+コピーコンストラクター、既定のコンストラクター、移動コンストラクター、コピー代入演算子、移動代入演算子、およびデストラクターを明示的に *既定* で使用できます。 すべての特殊なメンバー関数を明示的に *削除* できます。
 
 ```cpp
 class Box
@@ -302,21 +302,21 @@ public:
 };
 ```
 
-詳細については、「[明示的に既定化および削除された関数](../cpp/explicitly-defaulted-and-deleted-functions.md)」を参照してください。
+詳細については、「 [明示的に既定化および削除された関数](../cpp/explicitly-defaulted-and-deleted-functions.md)」を参照してください。
 
-## <a name="constexpr-constructors"></a><a name="constexpr_constructors"></a>constexpr コンストラクター
+## <a name="constexpr-constructors"></a><a name="constexpr_constructors"></a> constexpr コンストラクター
 
-コンストラクターは、の場合、 [constexpr](constexpr-cpp.md)として宣言できます。
+コンストラクターは、の場合、 [constexpr](constexpr-cpp.md) として宣言できます。
 
-- これは、既定値として宣言されているか、 [constexpr 関数](constexpr-cpp.md#constexpr_functions)のすべての条件を満たしています。
+- これは、既定値として宣言されているか、 [constexpr 関数](constexpr-cpp.md#constexpr_functions) のすべての条件を満たしています。
 - クラスには仮想基底クラスがありません。
-- 各パラメーターは[リテラル型](trivial-standard-layout-and-pod-types.md#literal_types)です。
+- 各パラメーターは [リテラル型](trivial-standard-layout-and-pod-types.md#literal_types)です。
 - 本文が関数 try ブロックではありません。
 - すべての非静的データメンバーと基底クラスサブオブジェクトが初期化されます。
 - クラスが (a) バリアントメンバーを持つ共用体、または (b) が匿名共用体を持つ場合、1つの共用体メンバーだけが初期化されます。
 - クラス型のすべての非静的データメンバーと、すべての基底クラスサブオブジェクトに constexpr コンストラクターがある
 
-## <a name="initializer-list-constructors"></a><a name="init_list_constructors"></a>初期化子リストコンストラクター
+## <a name="initializer-list-constructors"></a><a name="init_list_constructors"></a> 初期化子リストコンストラクター
 
 コンストラクターが[std:: initializer_list \<T\> ](../standard-library/initializer-list-class.md)をパラメーターとして受け取り、その他のパラメーターに既定の引数がある場合、直接初期化によってクラスがインスタンス化されるときに、そのコンストラクターはオーバーロードの解決で選択されます。 Initializer_list を使用して、それを受け入れることができるすべてのメンバーを初期化できます。 たとえば、Box クラス (前に示した) にメンバーが含まれているとし `std::vector<string>` `m_contents` ます。 次のようなコンストラクターを指定できます。
 
@@ -333,7 +333,7 @@ public:
     Box b2(initializer_list<string> { "bread", "cheese", "wine" }, 2, 4, 6);
 ```
 
-## <a name="explicit-constructors"></a><a name="explicit_constructors"></a>明示的なコンストラクター
+## <a name="explicit-constructors"></a><a name="explicit_constructors"></a> 明示的なコンストラクター
 
 クラスが 1 つのパラメーターを持つコンストラクターを含む場合、または 1 つを除くすべてのパラメーターに既定値がある場合は、パラメーター型をクラス型へ暗黙的に変換できます。 `Box` クラスに次のようなコンストラクターがある場合を例に説明します。
 
@@ -369,9 +369,9 @@ private:
 explicit Box(int size): m_width(size), m_length(size), m_height(size){}
 ```
 
-コンストラクターが明示的な場合、次の行ではコンパイラ エラーが発生します: `ShippingOrder so(42, 10.8);`。  詳細については、「[ユーザー定義型の変換](../cpp/user-defined-type-conversions-cpp.md)」を参照してください。
+コンストラクターが明示的な場合、次の行ではコンパイラ エラーが発生します: `ShippingOrder so(42, 10.8);`。  詳細については、「 [ユーザー定義型の変換](../cpp/user-defined-type-conversions-cpp.md)」を参照してください。
 
-## <a name="order-of-construction"></a><a name="order_of_construction"></a>構築の順序
+## <a name="order-of-construction"></a><a name="order_of_construction"></a> 構築の順序
 
 コンストラクターによる処理は次の順序で実行されます。
 
@@ -478,9 +478,9 @@ int main(){
 
 1. コンストラクターがデリゲート コンストラクターでない場合は、完全に構築されたすべての基底クラスのオブジェクトとメンバーが破棄されます。 ただし、オブジェクト自体が完全に構築されていないため、デストラクターは実行されません。
 
-## <a name="derived-constructors-and-extended-aggregate-initialization"></a><a name="extended_aggregate"></a>派生コンストラクターと拡張集計初期化
+## <a name="derived-constructors-and-extended-aggregate-initialization"></a><a name="extended_aggregate"></a> 派生コンストラクターと拡張集計初期化
 
-基底クラスのコンストラクターがパブリックではなく、派生クラスからアクセスできる場合は、Visual Studio 2017 以降の **/std: c++ 17**モードでは、空の中かっこを使用して派生型のオブジェクトを初期化することはできません。
+基底クラスのコンストラクターがパブリックではなく、派生クラスからアクセスできる場合は、Visual Studio 2017 以降の **/std: c++ 17** モードでは、空の中かっこを使用して派生型のオブジェクトを初期化することはできません。
 
 次の例では、C++14 の準拠ビヘイビアーを示します。
 
@@ -502,7 +502,7 @@ Derived d2 {}; // OK in C++14: Calls Derived::Derived()
 
 C++17 で、`Derived` は集約型と見なされるようになりました。 つまり、既定のプライベート コンストラクターによる `Base` の初期化は、集約初期化ルールの一部として直接実行されます。 以前、`Base` プライベート コンストラクターは `Derived` コンストラクターを介して呼び出され、friend 宣言があるために成功していました。
 
-次の例では、Visual Studio 2017 以降の C++ 17 の動作を、 **/std: c++ 17**モードで示します。
+次の例では、Visual Studio 2017 以降の C++ 17 の動作を、 **/std: c++ 17** モードで示します。
 
 ```cpp
 struct Derived;
@@ -566,7 +566,7 @@ BaseClass3 ctor
 DerivedClass ctor
 ```
 
-## <a name="delegating-constructors"></a><a name="delegating_constructors"></a>コンストラクターのデリゲート
+## <a name="delegating-constructors"></a><a name="delegating_constructors"></a> コンストラクターのデリゲート
 
 *デリゲートコンストラクター*は、初期化の作業の一部を実行するために、同じクラス内の別のコンストラクターを呼び出します。 これは、すべてのコンストラクターが同様の処理を実行する必要がある場合に便利です。 メインロジックを1つのコンストラクターに記述し、他のコンストラクターから呼び出すことができます。 次の簡単な例では、Box (int) は、その作業を Box (int, int, int) にデリゲートします。
 
@@ -588,9 +588,9 @@ public:
 };
 ```
 
-コンストラクターによって作成されたオブジェクトは、コンストラクターが終了するとすぐに完全に初期化されます。 詳細については、「[コンストラクターの委任](../cpp/delegating-constructors.md)」を参照してください。
+コンストラクターによって作成されたオブジェクトは、コンストラクターが終了するとすぐに完全に初期化されます。 詳細については、「 [コンストラクターの委任](../cpp/delegating-constructors.md)」を参照してください。
 
-## <a name="inheriting-constructors-c11"></a><a name="inheriting_constructors"></a>コンストラクターの継承 (C++ 11)
+## <a name="inheriting-constructors-c11"></a><a name="inheriting_constructors"></a> コンストラクターの継承 (C++ 11)
 
 派生クラスは、 **`using`** 次の例に示すように、宣言を使用して直接基底クラスからコンストラクターを継承できます。
 
@@ -643,7 +643,7 @@ Derived d4 calls: Base()*/
 
 ::: moniker range=">=vs-2017"
 
-**Visual Studio 2017 以降**: **`using`** **/std: c++ 17**モードのステートメントは、派生クラスのコンストラクターに対して同じシグネチャを持つものを除き、基底クラスのすべてのコンストラクターのスコープを設定します。 一般に、派生クラスが新しいデータ メンバーまたはコンストラクターを宣言しない場合は、コンストラクターの継承を使用することをお勧めします。 「 [Visual Studio 2017 バージョン15.7 の機能強化](https://docs.microsoft.com/cpp/overview/cpp-conformance-improvements?view=vs-2017#improvements_157)」も参照してください。
+**Visual Studio 2017 以降**: **`using`** **/std: c++ 17** モードのステートメントは、派生クラスのコンストラクターに対して同じシグネチャを持つものを除き、基底クラスのすべてのコンストラクターのスコープを設定します。 一般に、派生クラスが新しいデータ メンバーまたはコンストラクターを宣言しない場合は、コンストラクターの継承を使用することをお勧めします。 「 [Visual Studio 2017 バージョン15.7 の機能強化](../overview/cpp-conformance-improvements.md?view=vs-2017#improvements_157)」も参照してください。
 
 ::: moniker-end
 
@@ -659,9 +659,9 @@ class Derived : T {
 
 派生クラスは、複数の基底クラスに同じシグネチャを持つコンストラクターがある場合、複数の基底クラスからは継承できません。
 
-## <a name="constructors-and-composite-classes"></a><a name="constructors_in_composite_classes"></a>コンストラクターと複合クラス
+## <a name="constructors-and-composite-classes"></a><a name="constructors_in_composite_classes"></a> コンストラクターと複合クラス
 
-クラス型のメンバーを含むクラスは、*複合クラス*と呼ばれます。 複合クラスのクラス型のメンバーが作成されると、そのコンストラクターはクラス自体のコンストラクターの前に呼び出されます。 含まれるクラスに既定のコンストラクターがないときは、複合クラスのコンストラクターで初期化リストを使用する必要があります。 前に示した `StorageBox` の例で、`m_label` メンバー変数の型を新しい `Label` クラスに変更した場合、両方の基底クラスのコンストラクターを呼び出し、`m_label` のコンストラクターで `StorageBox` 変数を初期化する必要があります。
+クラス型のメンバーを含むクラスは、 *複合クラス*と呼ばれます。 複合クラスのクラス型のメンバーが作成されると、そのコンストラクターはクラス自体のコンストラクターの前に呼び出されます。 含まれるクラスに既定のコンストラクターがないときは、複合クラスのコンストラクターで初期化リストを使用する必要があります。 前に示した `StorageBox` の例で、`m_label` メンバー変数の型を新しい `Label` クラスに変更した場合、両方の基底クラスのコンストラクターを呼び出し、`m_label` のコンストラクターで `StorageBox` 変数を初期化する必要があります。
 
 ```cpp
 class Label {

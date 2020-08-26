@@ -22,12 +22,12 @@ helpviewer_keywords:
 - CAutoHideDockSite [MFC], UnSetAutoHideMode
 - CAutoHideDockSite [MFC], m_nExtraSpace
 ms.assetid: 2a0f6bec-c369-4ab7-977d-564e7946ebad
-ms.openlocfilehash: 2779e643b15179b0017535fbfbb144f94e1aedbe
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: 14db8d93ea7706b3a4daad2ba751f8410974f6cb
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88562013"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88841637"
 ---
 # <a name="cautohidedocksite-class"></a>CAutoHideDockSite クラス
 
@@ -43,7 +43,7 @@ class CAutoHideDockSite : public CDockSite
 
 ### <a name="public-constructors"></a>パブリック コンストラクター
 
-|||
+| 名前 | 説明 |
 |-|-|
 |名前|説明|
 |`CAutoHideDockSite::CAutoHideDockSite`|`CAutoHideDockSite` オブジェクトを構築します。|
@@ -51,7 +51,7 @@ class CAutoHideDockSite : public CDockSite
 
 ### <a name="public-methods"></a>パブリック メソッド
 
-|||
+| 名前 | 説明 |
 |-|-|
 |名前|説明|
 |`CAutoHideDockSite::AllowShowOnPaneMenu`|がペインメニューに表示されるかどうかを示し `CAutoHideDockSite` ます。|
@@ -65,9 +65,9 @@ class CAutoHideDockSite : public CDockSite
 
 ### <a name="data-members"></a>データ メンバー
 
-|||
+| 名前 | 説明 |
 |-|-|
-|Name|説明|
+|名前|説明|
 |[CAutoHideDockSite:: m_nExtraSpace](#m_nextraspace)|ツールバーとドッキングバーの端との間のスペースのサイズを定義します。 この領域は、ドッキング領域の配置に応じて左端または上端から測定されます。|
 
 ## <a name="remarks"></a>解説

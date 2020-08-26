@@ -20,12 +20,12 @@ helpviewer_keywords:
 - std::condition_variable::wait
 - std::condition_variable::wait_for
 - std::condition_variable::wait_until
-ms.openlocfilehash: a737b122e8fd9b782b0ddbe599ac8959f1929aab
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: eef0e7ef013b4faeb6393cade67258a09eda5551
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87222551"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88842430"
 ---
 # <a name="condition_variable-class"></a>condition_variable クラス
 
@@ -41,13 +41,13 @@ class condition_variable;
 
 ### <a name="constructors"></a>コンストラクター
 
-|||
+|名前|説明|
 |-|-|
 |[condition_variable](#condition_variable)|`condition_variable` オブジェクトを構築します。|
 
-### <a name="functions"></a>関数
+### <a name="functions"></a>Functions
 
-|||
+|名前|説明|
 |-|-|
 |[native_handle](#native_handle)|condition_variable ハンドルを表す実装固有の型を返します。|
 |[notify_all](#notify_all)|`condition_variable` オブジェクトを待機しているすべてのスレッドのブロックを解除します。|
@@ -56,7 +56,7 @@ class condition_variable;
 |[wait_for](#wait_for)|スレッドをブロックし、スレッドがブロック解除されるまでの時間間隔を設定します。|
 |[wait_until](#wait_until)|スレッドをブロックし、スレッドがブロック解除される最大の時刻を設定します。|
 
-## <a name="condition_variable"></a><a name="condition_variable"></a>condition_variable
+## <a name="condition_variable"></a><a name="condition_variable"></a> condition_variable
 
 `condition_variable` オブジェクトを構築します。
 
@@ -68,7 +68,7 @@ condition_variable();
 
 十分なメモリが使用できない場合、コンストラクターは `not_enough_memory` エラー コードがある [system_error](../standard-library/system-error-class.md) オブジェクトをスローします。 他のリソースをいくつか使用できないためにオブジェクトが構築できない場合、コンストラクターは `system_error` エラー コードがある `resource_unavailable_try_again` オブジェクトをスローします。
 
-## <a name="native_handle"></a><a name="native_handle"></a>native_handle
+## <a name="native_handle"></a><a name="native_handle"></a> native_handle
 
 condition_variable ハンドルを表す実装固有の型を返します。
 
@@ -80,7 +80,7 @@ native_handle_type native_handle();
 
 `native_handle_type` は、コンカレンシー ランタイムの内部データ構造へのポインターとして定義されます。
 
-## <a name="notify_all"></a><a name="notify_all"></a>notify_all
+## <a name="notify_all"></a><a name="notify_all"></a> notify_all
 
 `condition_variable` オブジェクトを待機しているすべてのスレッドのブロックを解除します。
 
@@ -88,7 +88,7 @@ native_handle_type native_handle();
 void notify_all() noexcept;
 ```
 
-## <a name="notify_one"></a><a name="notify_one"></a>notify_one
+## <a name="notify_one"></a><a name="notify_one"></a> notify_one
 
 `condition_variable` オブジェクトを待機しているスレッドの 1 つのブロックを解除します。
 
@@ -96,7 +96,7 @@ void notify_all() noexcept;
 void notify_one() noexcept;
 ```
 
-## <a name="wait"></a><a name="wait"></a>待機
+## <a name="wait"></a><a name="wait"></a> 待機
 
 スレッドをブロックします。
 
@@ -126,7 +126,7 @@ while(!Pred())
     wait(Lck);
 ```
 
-## <a name="wait_for"></a><a name="wait_for"></a>wait_for
+## <a name="wait_for"></a><a name="wait_for"></a> wait_for
 
 スレッドをブロックし、スレッドがブロック解除されるまでの時間間隔を設定します。
 
@@ -156,13 +156,13 @@ bool wait_for(
 
 ### <a name="return-value"></a>戻り値
 
-最初のメソッドは、 `cv_status::timeout` *Rel_time*が経過したときに待機が終了した場合、を返します。 それ以外の場合、メソッドは `cv_status::no_timeout` を返します。
+最初のメソッドは、 `cv_status::timeout` *Rel_time* が経過したときに待機が終了した場合、を返します。 それ以外の場合、メソッドは `cv_status::no_timeout` を返します。
 
 2番目のメソッドは、 *Pred*の値を返します。
 
 ### <a name="remarks"></a>解説
 
-最初のメソッドは、 `condition_variable` [notify_one](#notify_one)または[notify_all](#notify_all)の呼び出しによってオブジェクトが通知されるまで、または*Rel_time*が経過するまで、オブジェクトがシグナル状態になるまでブロックします。 また、擬似的に開始することもできます。
+最初のメソッドは、 `condition_variable` [notify_one](#notify_one) または [notify_all](#notify_all) の呼び出しによってオブジェクトが通知されるまで、または *Rel_time* が経過するまで、オブジェクトがシグナル状態になるまでブロックします。 また、擬似的に開始することもできます。
 
 実際には、2 つ目のメソッドは次のコードを実行します。
 
@@ -174,7 +174,7 @@ while(!Pred())
 return true;
 ```
 
-## <a name="wait_until"></a><a name="wait_until"></a>wait_until
+## <a name="wait_until"></a><a name="wait_until"></a> wait_until
 
 スレッドをブロックし、スレッドがブロック解除される最大の時刻を設定します。
 

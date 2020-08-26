@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Spectre
 - CVE-2017-5753
 - Speculative Execution
-ms.openlocfilehash: d0b9faf0bd11892c05e25e981e8cd729cb623dd4
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 72dffd25eef847d1bdffe61c4a18a27d9cb33644
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87219327"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88842456"
 ---
 # <a name="c-developer-guidance-for-speculative-execution-side-channels"></a>予測実行側チャネルの C++ 開発者ガイド
 
@@ -21,11 +21,11 @@ ms.locfileid: "87219327"
 
 この記事で説明するガイダンスは、によって表される脆弱性のクラスに関連しています。
 
-1. CVE-2017-5753。 Spectre variant 1 とも呼ばれます。 このハードウェア脆弱性クラスは、条件分岐 misprediction の結果として発生する予測実行によって発生する可能性がある、サイドチャネルに関連しています。 Visual Studio 2017 の Microsoft C++ コンパイラ (バージョン15.5.5 以降) には、 `/Qspectre` CVE-2017-5753 に関連する可能性のある脆弱なコーディングパターンの限られたセットに対するコンパイル時の軽減策を提供するスイッチのサポートが含まれています。 この `/Qspectre` スイッチは、Visual Studio 2015 Update 3 ~ [KB 4338871](https://support.microsoft.com/help/4338871)でも使用できます。 [/Qspectre](https://docs.microsoft.com/cpp/build/reference/qspectre)フラグのドキュメントでは、その効果と使用方法について詳しく説明しています。
+1. CVE-2017-5753。 Spectre variant 1 とも呼ばれます。 このハードウェア脆弱性クラスは、条件分岐 misprediction の結果として発生する予測実行によって発生する可能性がある、サイドチャネルに関連しています。 Visual Studio 2017 の Microsoft C++ コンパイラ (バージョン15.5.5 以降) には、 `/Qspectre` CVE-2017-5753 に関連する可能性のある脆弱なコーディングパターンの限られたセットに対するコンパイル時の軽減策を提供するスイッチのサポートが含まれています。 この `/Qspectre` スイッチは、Visual Studio 2015 Update 3 ~ [KB 4338871](https://support.microsoft.com/help/4338871)でも使用できます。 フラグのドキュメントでは、 [`/Qspectre`](../build/reference/qspectre.md) その効果と使用方法について詳しく説明しています。
 
-2. CVE-2018-3639。予測[ストアバイパス (SSB)](https://aka.ms/sescsrdssb)とも呼ばれます。 このハードウェア脆弱性クラスは、メモリアクセス misprediction の結果として依存ストアの事前の負荷の予測実行によって発生する可能性がある、サイドチャネルに関連しています。
+2. CVE-2018-3639。予測 [ストアバイパス (SSB)](https://aka.ms/sescsrdssb)とも呼ばれます。 このハードウェア脆弱性クラスは、メモリアクセス misprediction の結果として依存ストアの事前の負荷の予測実行によって発生する可能性がある、サイドチャネルに関連しています。
 
-予測実行側チャネルの脆弱性に対するアクセス可能な概要については、これらの問題を検出した調査チームのいずれかによって[Spectre と Meltdown](https://www.youtube.com/watch?v=_4O0zMW-Zu4)が発生した場合のプレゼンテーションに記載されています。
+予測実行側チャネルの脆弱性に対するアクセス可能な概要については、これらの問題を検出した調査チームのいずれかによって [Spectre と Meltdown](https://www.youtube.com/watch?v=_4O0zMW-Zu4) が発生した場合のプレゼンテーションに記載されています。
 
 ## <a name="what-are-speculative-execution-side-channel-hardware-vulnerabilities"></a>予測実行側チャネルのハードウェアの脆弱性とは何ですか。
 
@@ -174,7 +174,7 @@ unsigned char WriteSlot(unsigned int untrusted_index, void *ptr) {
 }
 ```
 
-これらの両方の例には、スタック割り当て間接分岐ポインターの予測的な変更が含まれていることに注意してください。 また、グローバル変数、ヒープに割り当てられたメモリ、および一部の Cpu の読み取り専用メモリに対しても、予測的な変更が発生する可能性があります。 スタックに割り当てられたメモリの場合、Microsoft C++ コンパイラは、スタック割り当て間接分岐ターゲットを投機的に変更するための手順を既に実行しています。たとえば、 [/gs](https://docs.microsoft.com/cpp/build/reference/gs-buffer-security-check)コンパイラセキュリティ機能の一部として、バッファーがセキュリティ cookie に隣接して配置されるようにローカル変数を並べ替えることができます。
+これらの両方の例には、スタック割り当て間接分岐ポインターの予測的な変更が含まれていることに注意してください。 また、グローバル変数、ヒープに割り当てられたメモリ、および一部の Cpu の読み取り専用メモリに対しても、予測的な変更が発生する可能性があります。 スタックに割り当てられたメモリの場合、Microsoft C++ コンパイラは、スタックに割り当てられた間接分岐ターゲットを投機的に変更するための手順を既に実行しています。たとえば、コンパイラのセキュリティ機能の一部として、バッファーがセキュリティ cookie に隣接して配置されるようにローカル変数を並べ替えることが [`/GS`](../build/reference/gs-buffer-security-check.md) できます。
 
 ## <a name="speculative-type-confusion"></a>予測型の混乱
 
@@ -302,13 +302,13 @@ void DispatchMessage(unsigned int untrusted_message_id, unsigned char *buffer, u
 
 ## <a name="mitigation-options"></a>対応策オプション
 
-予測実行側チャネルの脆弱性は、ソースコードに変更を加えることで軽減できます。 これらの変更には、推定*バリア*の追加や、予測実行から機密情報にアクセスできなくなるようにアプリケーションの設計を変更することによって、脆弱性の特定のインスタンスを軽減することが含まれる場合があります。
+予測実行側チャネルの脆弱性は、ソースコードに変更を加えることで軽減できます。 これらの変更には、推定 *バリア*の追加や、予測実行から機密情報にアクセスできなくなるようにアプリケーションの設計を変更することによって、脆弱性の特定のインスタンスを軽減することが含まれる場合があります。
 
 ### <a name="speculation-barrier-via-manual-instrumentation"></a>手動インストルメンテーションを使用した投機バリア
 
-開発者は、推定*バリア*を手動で挿入して、非アーキテクチャパスに従って予測実行が行われないようにすることができます。 たとえば、開発者は、ブロックの先頭 (条件分岐の後) または問題のある最初の読み込みの前に、条件付きブロックの本体の危険なコーディングパターンの前に、投機バリアを挿入できます。 これにより、条件分岐 misprediction は、実行をシリアル化することで、非アーキテクチャパスで危険なコードを実行できなくなります。 次の表に示すように、投機バリアシーケンスはハードウェアアーキテクチャによって異なります。
+開発者は、推定 *バリア* を手動で挿入して、非アーキテクチャパスに従って予測実行が行われないようにすることができます。 たとえば、開発者は、ブロックの先頭 (条件分岐の後) または問題のある最初の読み込みの前に、条件付きブロックの本体の危険なコーディングパターンの前に、投機バリアを挿入できます。 これにより、条件分岐 misprediction は、実行をシリアル化することで、非アーキテクチャパスで危険なコードを実行できなくなります。 次の表に示すように、投機バリアシーケンスはハードウェアアーキテクチャによって異なります。
 
-|アーキテクチャ|CVE-2017-5753 に固有の投機バリア|CVE-2018-3639 に固有の投機バリア|
+|Architecture|CVE-2017-5753 に固有の投機バリア|CVE-2018-3639 に固有の投機バリア|
 |----------------|----------------|----------------|
 |x86/x64|_mm_lfence ()|_mm_lfence ()|
 |ARM|現在使用できません|__dsb (0)|
@@ -331,7 +331,7 @@ unsigned char ReadByte(unsigned char *buffer, unsigned int buffer_size, unsigned
 
 ### <a name="speculation-barrier-via-compiler-time-instrumentation"></a>コンパイラ時間インストルメンテーションを使用した投機バリア
 
-Visual Studio 2017 の Microsoft C++ コンパイラ (バージョン15.5.5 以降) にはスイッチがサポートされており、 `/Qspectre` これにより、CVE-2017-5753 に関連する潜在的に脆弱なコードパターンの限られたセットに対して、投機バリアが自動的に挿入されます。 [/Qspectre](https://docs.microsoft.com/cpp/build/reference/qspectre)フラグのドキュメントでは、その効果と使用方法について詳しく説明しています。 このフラグは、脆弱な可能性のあるコーディングパターンをすべて網羅しているわけではありません。そのため、このような開発者は、このクラスの脆弱性を包括的に軽減することはできません。
+Visual Studio 2017 の Microsoft C++ コンパイラ (バージョン15.5.5 以降) にはスイッチがサポートされており、 `/Qspectre` これにより、CVE-2017-5753 に関連する潜在的に脆弱なコードパターンの限られたセットに対して、投機バリアが自動的に挿入されます。 フラグのドキュメントでは、 [`/Qspectre`](../build/reference/qspectre.md) その効果と使用方法について詳しく説明しています。 このフラグは、脆弱な可能性のあるコーディングパターンをすべて網羅しているわけではありません。そのため、このような開発者は、このクラスの脆弱性を包括的に軽減することはできません。
 
 ### <a name="masking-array-indices"></a>配列インデックスのマスク
 
