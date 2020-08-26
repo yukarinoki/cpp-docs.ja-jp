@@ -23,12 +23,12 @@ helpviewer_keywords:
 - std::discrete_distribution [C++], param_type
 - std::discrete_distribution [C++], param_type
 ms.assetid: 8c8ba8f8-c06f-4f07-b354-f53950142fcf
-ms.openlocfilehash: 65d5c993efd1cb9c6dd35f11223ed39e026ed7c6
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 5dcac516da088a55d2ddc176275ec25941ad8949
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87217806"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88846278"
 ---
 # <a name="discrete_distribution-class"></a>discrete_distribution クラス
 
@@ -81,10 +81,8 @@ public:
 
 次の表は、個々のメンバーに関する記事にリンクしています。
 
-|||
-|-|-|
-|[discrete_distribution](#discrete_distribution)|`discrete_distribution::param`|
-|`discrete_distribution::operator()`|[param_type](#param_type)|
+[discrete_distribution](#discrete_distribution)\
+[param_type](#param_type)
 
 プロパティ関数 `vector<double> probabilities()` は、生成される整数ごとに個別の確率を返します。
 
@@ -175,7 +173,7 @@ Distribution for 100 samples:
 
 **名前空間:** std
 
-## <a name="discrete_distributiondiscrete_distribution"></a><a name="discrete_distribution"></a>discrete_distribution::d iscrete_distribution
+## <a name="discrete_distributiondiscrete_distribution"></a><a name="discrete_distribution"></a> discrete_distribution::d iscrete_distribution
 
 分布を作成します。
 
@@ -239,7 +237,7 @@ explicit discrete_distribution(const param_type& parm);
 
 `param_type` パラメーター *parm* を持つコンストラクターは、格納されたパラメーター構造体として *parm* を使う分布オブジェクトを作成します。
 
-## <a name="discrete_distributionparam_type"></a><a name="param_type"></a>discrete_distribution::p aram_type
+## <a name="discrete_distributionparam_type"></a><a name="param_type"></a> discrete_distribution::p aram_type
 
 分布のすべてのパラメーターを格納します。
 

@@ -5,18 +5,18 @@ f1_keywords:
 - <span>
 helpviewer_keywords:
 - span header
-ms.openlocfilehash: 27f27acfa84a3ccc42586593747e4657146cbe39
-ms.sourcegitcommit: 83ea5df40917885e261089b103d5de3660314104
+ms.openlocfilehash: 7d21023c90472e5c2e1b28d9fa85e517da4a21ae
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85813536"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88846187"
 ---
 # <a name="ltspangt"></a>&lt;スパン&gt;
 
 は、 `span` 連続した一連のオブジェクトに対するビューです。 高速および境界の安全なアクセスを提供します。 またはとは異なり `vector` `array` 、アクセスを提供する要素を "所有" することはできません。
 
-詳細については、 [span クラス](span-class.md)を参照してください。 スパンを使用する方法の例を次に示します。
+詳細については、 [span クラス](span-class.md) を参照してください。 スパンを使用する方法の例を次に示します。
 
 ```cpp
 #include <span>
@@ -56,27 +56,27 @@ int main()
 
 ### <a name="classes"></a>クラス
 
-|||
+|名前|説明|
 |-|:-|
 |[スパン](span-class.md)| 連続した一連のオブジェクトに対するビューを提供します。 |
 
 ### <a name="operators"></a>演算子
 
-|||
+|名前|説明|
 |-|:-|
 |[operator =](span-class.md#op_eq)| スパンの割り当て |
 |[operator\[\]](span-class.md#op_at)| 要素アクセス |
 
-### <a name="functions"></a>関数
+### <a name="functions"></a>Functions
 
-|||
+|名前|説明|
 |-|:-|
 | [as_bytes](span-functions.md#as_bytes)| スパンの基になる読み取り専用のバイトを取得します。 |
 | [as_writable_bytes](span-functions.md#as_writable_bytes) | スパンの基になるバイトを取得します。 |
 
 ### <a name="constants"></a>定数
 
-|||
+|名前|説明|
 |-|:-|
 | **dynamic_extent** | スパンサイズがコンパイル時ではなく実行時に決定されることを示します。 スパン内の要素の数がコンパイル時にわかっている場合は、テンプレートパラメーターとして指定され `Extent` ます。 ランタイムまでの数値がわからない場合は、代わりにを指定し `dynamic_extent` ます。 |
 

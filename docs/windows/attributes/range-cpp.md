@@ -1,17 +1,17 @@
 ---
-title: 範囲 (C++ COM 属性)
+title: range (C++ COM 属性)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.range
 helpviewer_keywords:
 - range attribute
 ms.assetid: f352f79e-ecb3-4cdd-9cdd-8406ef473594
-ms.openlocfilehash: 380f7c9e15a3682b486217c842f00c944251e631
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 8ed0ba2c53992dd19d1c4491f8085e955146224c
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80214618"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88839479"
 ---
 # <a name="range-c"></a>range (C++)
 
@@ -25,15 +25,15 @@ ms.locfileid: "80214618"
 
 ### <a name="parameters"></a>パラメーター
 
-*low*<br/>
+*低画質*<br/>
 範囲の下限値。
 
-*high*<br/>
+*高い*<br/>
 範囲の上限値。
 
 ## <a name="remarks"></a>解説
 
-**Range** C++属性には、 [range](/windows/win32/Midl/range) MIDL 属性と同じ機能があります。
+**Range** C++ 属性には、 [range](/windows/win32/Midl/range) MIDL 属性と同じ機能があります。
 
 ## <a name="example"></a>例
 
@@ -53,20 +53,18 @@ __interface ICustom {
 
 ## <a name="requirements"></a>必要条件
 
-### <a name="attribute-context"></a>属性コンテキスト
-
-|||
+| 属性コンテキスト | 値 |
 |-|-|
-|**対象**|インターフェイスメソッド、インターフェイスパラメーター|
-|**反復可能**|いいえ|
-|**必要な属性**|なし|
+|**適用対象**|インターフェイスメソッド、インターフェイスパラメーター|
+|**Repeatable**|いいえ|
+|**必須属性**|なし|
 |**無効な属性**|なし|
 
 属性コンテキストの詳細については、「 [属性コンテキスト](cpp-attributes-com-net.md#contexts)」を参照してください。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [IDL 属性](idl-attributes.md)<br/>
 [メソッド属性](method-attributes.md)<br/>
 [パラメーター属性](parameter-attributes.md)<br/>
-[データ メンバー属性](data-member-attributes.md)
+[データメンバー属性](data-member-attributes.md)

@@ -5,22 +5,35 @@ f1_keywords:
 - concrt/concurrency::operator!=
 - concrt/concurrency:[operator&amp;&amp
 ms.assetid: 8e373f23-fc8e-49f7-82e6-ba0c57b822f8
-ms.openlocfilehash: 6cef9304be17dd39e0f0b020133abd08f07fba7c
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 97553276a7c4ff687dd8bea4627f943d5666b2e9
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87194382"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88836012"
 ---
 # <a name="concurrency-namespace-operators"></a>コンカレンシー名前空間演算子
 
-||||
-|-|-|-|
-|[operator! =](#operator_neq)|[operator&amp;&amp;](#operator_amp_amp)|[operator&gt;](#operator_gt)|
-|[operator&gt;=](#operator_gt_eq)|[operator&lt;](#operator_lt)|[operator&lt;=](#operator_lt_eq)|
-|[operator = =](#operator_eq_eq)|[operator&#124;&#124;](#operator_lor)| |
+:::row:::
+   :::column span="":::
+      [`operator||`](#operator_lor)\
+      [`operator&&`](#operator_amp_amp)
+   :::column-end:::
+   :::column span="":::
+      [`operator==`](#operator_eq_eq)\
+      [`operator!=`](#operator_neq)
+   :::column-end:::
+   :::column span="":::
+      [`operator<`](#operator_lt)\
+      [`operator<=`](#operator_lt_eq)
+   :::column-end:::
+   :::column span="":::
+      [`operator>`](#operator_gt)\
+      [`operator>=`](#operator_gt_eq)
+   :::column-end:::
+:::row-end:::
 
-## <a name="operator124124-operator"></a><a name="operator_lor"></a>operator&#124;&#124; 演算子
+## <a name="operator124124-operator"></a><a name="operator_lor"></a> operator&#124;&#124; 演算子
 
 引数として指定されたいずれかのタスクが正常に完了したときに正常に完了するタスクを作成します。
 
@@ -113,7 +126,7 @@ inline task<void>  operator&&(
 
 いずれかのタスクが取り消された場合、または例外がスローされた場合、返されたタスクは早期に完了し、取り消された状態になり `get()` ます。また、そのタスクでまたはを呼び出すと、例外が発生した場合は例外がスローされ `wait()` ます。
 
-## <a name="operator-operator"></a><a name="operator_eq_eq"></a>operator = = 演算子
+## <a name="operator-operator"></a><a name="operator_eq_eq"></a> operator = = 演算子
 
 演算子の左側の `concurrent_vector` オブジェクトが右側の `concurrent_vector` オブジェクトと等しいかどうかを調べます。
 
@@ -136,10 +149,10 @@ inline bool operator== (
 2番目のオブジェクトのアロケーター型 `concurrent_vector` 。
 
 *_A*<br/>
-`concurrent_vector` 型オブジェクト。
+`concurrent_vector` 型のオブジェクト。
 
 *_B*<br/>
-`concurrent_vector` 型オブジェクト。
+`concurrent_vector` 型のオブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
@@ -151,7 +164,7 @@ inline bool operator== (
 
 このメソッドは、同時実行ベクターまたはのいずれかを変更する可能性のある他のメソッドに関して、同時実行セーフではありません `_A` `_B` 。
 
-## <a name="operator-operator"></a><a name="operator_neq"></a>operator! = 演算子
+## <a name="operator-operator"></a><a name="operator_neq"></a> operator! = 演算子
 
 演算子の左側の `concurrent_vector` オブジェクトが右側の `concurrent_vector` オブジェクトと等しくないかどうかを調べます。
 
@@ -174,14 +187,14 @@ inline bool operator!= (
 2番目のオブジェクトのアロケーター型 `concurrent_vector` 。
 
 *_A*<br/>
-`concurrent_vector` 型オブジェクト。
+`concurrent_vector` 型のオブジェクト。
 
 *_B*<br/>
-`concurrent_vector` 型オブジェクト。
+`concurrent_vector` 型のオブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
-**`true`** 同時実行ベクターが等しくない場合は。**`false`** 同時実行ベクターが等しい場合は。
+**`true`** 同時実行ベクターが等しくない場合は。 **`false`** 同時実行ベクターが等しい場合は。
 
 ### <a name="remarks"></a>解説
 
@@ -189,7 +202,7 @@ inline bool operator!= (
 
 このメソッドは、同時実行ベクターまたはのいずれかを変更する可能性のある他のメソッドに関して、同時実行セーフではありません `_A` `_B` 。
 
-## <a name="operatorlt-operator"></a><a name="operator_lt"></a>operator &lt; 演算子
+## <a name="operatorlt-operator"></a><a name="operator_lt"></a> operator &lt; 演算子
 
 演算子の左側の `concurrent_vector` オブジェクトが右側の `concurrent_vector` オブジェクトより小さいかどうかを調べます。
 
@@ -212,10 +225,10 @@ inline bool operator<(
 2番目のオブジェクトのアロケーター型 `concurrent_vector` 。
 
 *_A*<br/>
-`concurrent_vector` 型オブジェクト。
+`concurrent_vector` 型のオブジェクト。
 
 *_B*<br/>
-`concurrent_vector` 型オブジェクト。
+`concurrent_vector` 型のオブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
@@ -227,7 +240,7 @@ inline bool operator<(
 
 このメソッドは、同時実行ベクターまたはのいずれかを変更する可能性のある他のメソッドに関して、同時実行セーフではありません `_A` `_B` 。
 
-## <a name="operatorlt-operator"></a><a name="operator_lt_eq"></a>operator &lt; = 演算子
+## <a name="operatorlt-operator"></a><a name="operator_lt_eq"></a> operator &lt; = 演算子
 
 演算子の左側の `concurrent_vector` オブジェクトが右側の  `concurrent_vector` オブジェクト以下かどうかを調べます。
 
@@ -250,10 +263,10 @@ inline bool operator<= (
 2番目のオブジェクトのアロケーター型 `concurrent_vector` 。
 
 *_A*<br/>
-`concurrent_vector` 型オブジェクト。
+`concurrent_vector` 型のオブジェクト。
 
 *_B*<br/>
-`concurrent_vector` 型オブジェクト。
+`concurrent_vector` 型のオブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
@@ -265,7 +278,7 @@ inline bool operator<= (
 
 このメソッドは、同時実行ベクターまたはのいずれかを変更する可能性のある他のメソッドに関して、同時実行セーフではありません `_A` `_B` 。
 
-## <a name="operatorgt-operator"></a><a name="operator_gt"></a>operator &gt; 演算子
+## <a name="operatorgt-operator"></a><a name="operator_gt"></a> operator &gt; 演算子
 
 演算子の左側の `concurrent_vector` オブジェクトが右側の `concurrent_vector` オブジェクトより大きいかどうかを調べます。
 
@@ -288,10 +301,10 @@ inline bool operator>(
 2番目のオブジェクトのアロケーター型 `concurrent_vector` 。
 
 *_A*<br/>
-`concurrent_vector` 型オブジェクト。
+`concurrent_vector` 型のオブジェクト。
 
 *_B*<br/>
-`concurrent_vector` 型オブジェクト。
+`concurrent_vector` 型のオブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
@@ -303,7 +316,7 @@ inline bool operator>(
 
 このメソッドは、同時実行ベクターまたはのいずれかを変更する可能性のある他のメソッドに関して、同時実行セーフではありません `_A` `_B` 。
 
-## <a name="operatorgt-operator"></a><a name="operator_gt_eq"></a>operator &gt; = 演算子
+## <a name="operatorgt-operator"></a><a name="operator_gt_eq"></a> operator &gt; = 演算子
 
 演算子の左側の `concurrent_vector` オブジェクトが右側の `concurrent_vector` オブジェクト以上であるかどうかを調べます。
 
@@ -326,10 +339,10 @@ inline bool operator>= (
 2番目のオブジェクトのアロケーター型 `concurrent_vector` 。
 
 *_A*<br/>
-`concurrent_vector` 型オブジェクト。
+`concurrent_vector` 型のオブジェクト。
 
 *_B*<br/>
-`concurrent_vector` 型オブジェクト。
+`concurrent_vector` 型のオブジェクト。
 
 ### <a name="return-value"></a>戻り値
 

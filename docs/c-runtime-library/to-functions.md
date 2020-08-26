@@ -23,23 +23,22 @@ helpviewer_keywords:
 - case, converting
 - characters, converting
 ms.assetid: f636a4c6-8c9f-4be2-baac-064f9dbae300
-ms.openlocfilehash: df8f59088cd402503fe31f768557e3ed936b31ec
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: a54f20d6ae4dead5ba7c606fd28d456e96ff31d6
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75301692"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88836079"
 ---
 # <a name="to-functions"></a>to 系関数
 
 各 **to** 関数と、もしあれば関連付けられているマクロは、任意の 1 文字を別の文字に変換します。
 
-|||
-|-|-|
-|[__toascii](../c-runtime-library/reference/toascii-toascii.md)|[toupper、_toupper、towupper](../c-runtime-library/reference/toupper-toupper-towupper-toupper-l-towupper-l.md)|
-|[tolower、_tolower、towlower](../c-runtime-library/reference/tolower-tolower-towlower-tolower-l-towlower-l.md)||
+[__toascii](../c-runtime-library/reference/toascii-toascii.md)\
+[tolower、_tolower、towlower](../c-runtime-library/reference/tolower-tolower-towlower-tolower-l-towlower-l.md)\
+[toupper、_toupper、towupper](../c-runtime-library/reference/toupper-toupper-towupper-toupper-l-towupper-l.md)
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
 **to** 系関数とマクロの変換は以下のとおりです。
 
@@ -48,10 +47,10 @@ ms.locfileid: "75301692"
 |`__toascii`|`__toascii`|`c` を ASCII 文字に変換する|
 |`tolower`|`tolower`|該当する場合、`c` を小文字に変換する|
 |`_tolower`|`_tolower`|`c` を小文字に変換する|
-|`towlower`|[なし]|`c` を対応するワイド文字の小文字に変換する|
+|`towlower`|なし|`c` を対応するワイド文字の小文字に変換する|
 |`toupper`|`toupper`|該当する場合、`c` を大文字に変換する|
 |`_toupper`|`_toupper`|`c` を大文字に変換する|
-|`towupper`|[なし]|c を対応するワイド文字の大文字に変換する|
+|`towupper`|なし|c を対応するワイド文字の大文字に変換する|
 
 マクロとしても定義されている **to** ルーチンの関数バージョンを使用するには、`#undef` ディレクティブでマクロ定義を削除するか、CTYPE.H を含めないようにします。 /Za コンパイラ オプションを使用する場合、コンパイラは `toupper` または `tolower` の関数バージョンを使用します。 `toupper` および `tolower` 関数の宣言は STDLIB.H にあります。
 
@@ -67,7 +66,7 @@ ms.locfileid: "75301692"
 
 - ロケールに依存しない、高速バージョンの `tolower` および **toupper** です。
 
-- **isascii(** `c` **)** と、**isupper(** `c` **)** または **islower(** `c` **)** のいずれかがゼロ以外の場合にのみ使用できます。
+- **Isascii (** `c` **)** と**isupper (** `c` **)** または**islower (** `c` **)** のいずれかが0以外の場合にのみ使用できます。
 
 - `c` が変換可能な適切な大文字または小文字の ASCII 文字でない場合、結果は未定義です。
 
@@ -77,7 +76,7 @@ ms.locfileid: "75301692"
 
 - 対応する大文字または小文字のワイド文字がある (つまり、`iswlower` または **iswupper** が、それぞれゼロ以外の場合)。
 
-## <a name="example"></a>使用例
+## <a name="example"></a>例
 
 ```c
 // crt_toupper.c
@@ -119,4 +118,4 @@ sOME OF these LETTERS ARE cAPITALS.
 
 [データ変換](../c-runtime-library/data-conversion.md)<br/>
 [ロケール](../c-runtime-library/locale.md)<br/>
-[is、isw 系ルーチン](../c-runtime-library/is-isw-routines.md)
+[is、isw ルーチン](../c-runtime-library/is-isw-routines.md)

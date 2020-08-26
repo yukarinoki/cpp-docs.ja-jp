@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::gamma_distribution [C++], param_type
 - std::gamma_distribution [C++], param_type
 ms.assetid: 2a6798ac-6152-41d7-8ef6-d684d92f1572
-ms.openlocfilehash: 1ddef32c1ef2d3eb83c8a8a560914dc1f0ec3d1d
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 37b4661cf14fe4302d50557472ce03c120eb2741
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87220913"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88837925"
 ---
 # <a name="gamma_distribution-class"></a>gamma_distribution クラス
 
@@ -80,10 +80,8 @@ public:
 
 クラステンプレートは、ガンマ分布に従って分布した、ユーザー指定の浮動小数点型の値または型の値 (指定がない場合) を生成する分布を表し **`double`** ます。 次の表は、個々のメンバーに関する記事にリンクしています。
 
-||||
-|-|-|-|
-|[gamma_distribution](#gamma_distribution)|`gamma_distribution::alpha`|`gamma_distribution::param`|
-|`gamma_distribution::operator()`|`gamma_distribution::beta`|[param_type](#param_type)|
+[gamma_distribution](#gamma_distribution)\
+[param_type](#param_type)
 
 プロパティ関数 `alpha()` と `beta()` はそれぞれ、格納されている分布パラメーター *alpha* と *beta* の値を返します。
 
@@ -188,7 +186,7 @@ Distribution for 10 samples:
 
 **名前空間:** std
 
-## <a name="gamma_distributiongamma_distribution"></a><a name="gamma_distribution"></a>gamma_distribution:: gamma_distribution
+## <a name="gamma_distributiongamma_distribution"></a><a name="gamma_distribution"></a> gamma_distribution:: gamma_distribution
 
 分布を作成します。
 
@@ -216,7 +214,7 @@ explicit gamma_distribution(const param_type& parm);
 
 2 つ目のコンストラクターは、格納されているパラメーターが *parm* から初期化されるオブジェクトを作成します。 `param()` メンバー関数を呼び出すと、既存の分布の現在のパラメーターを取得および設定できます。
 
-## <a name="gamma_distributionparam_type"></a><a name="param_type"></a>gamma_distribution::p aram_type
+## <a name="gamma_distributionparam_type"></a><a name="param_type"></a> gamma_distribution::p aram_type
 
 分布のパラメーターを格納します。
 

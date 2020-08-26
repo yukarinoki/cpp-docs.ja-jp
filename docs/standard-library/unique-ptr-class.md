@@ -22,12 +22,12 @@ helpviewer_keywords:
 - std::unique_ptr [C++], reset
 - std::unique_ptr [C++], swap
 ms.assetid: acdf046b-831e-4a4a-83aa-6d4ee467db9a
-ms.openlocfilehash: 694ea94ac0e9dcd31d89a3a83bd3400bac3e8e4f
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 4e6c7d8dd9835545c4aaa677a39f5e3149743d14
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87222187"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88835676"
 ---
 # <a name="unique_ptr-class"></a>unique_ptr クラス
 
@@ -125,21 +125,21 @@ public:
 
 ### <a name="constructors"></a>コンストラクター
 
-|||
+|名前|説明|
 |-|-|
 |[unique_ptr](#unique_ptr)|`unique_ptr` には、7 種類のコンストラクターがあります。|
 
 ### <a name="typedefs"></a>Typedefs
 
-|||
+|名前|説明|
 |-|-|
 |[deleter_type](#deleter_type)|テンプレート パラメーター `Del` のシノニム。|
 |[element_type](#element_type)|テンプレート パラメーター `T` のシノニム。|
 |[pointer](#pointer)|定義されている場合は `Del::pointer` のシノニム、それ以外の場合は `T *` のシノニム。|
 
-### <a name="functions"></a>関数
+### <a name="functions"></a>Functions
 
-|||
+|名前|説明|
 |-|-|
 |[get](#get)|`stored_ptr` を返します。|
 |[get_deleter](#get_deleter)|`stored_deleter` への参照を返します。|
@@ -147,16 +147,16 @@ public:
 |[reset](#reset)|現在所有されているリソースを解放し、新しいリソースを受け取ります。|
 |[スワップ](#swap)|指定された `deleter` を使用して、リソースと `unique_ptr` を交換します。|
 
-### <a name="operators"></a>オペレーター
+### <a name="operators"></a>演算子
 
-|||
+|名前|説明|
 |-|-|
 |**bool 演算子**|演算子は、に変換可能な型の値を返し **`bool`** ます。 への変換の結果 **`bool`** は **`true`** 、の場合は `get() != pointer()` 、それ以外の場合は **`false`** です。|
 |`operator->`|このメンバー関数は、`stored_ptr` を返します。|
 |`operator*`|このメンバー関数は、`*stored_ptr` を返します。|
 |[operator =](#unique_ptr_operator_eq)|現在の `unique_ptr` に `unique_ptr` (または `pointer-type`) の値を割り当てます。|
 
-### <a name="deleter_type"></a><a name="deleter_type"></a>deleter_type
+### <a name="deleter_type"></a><a name="deleter_type"></a> deleter_type
 
 この型は、テンプレート パラメーター `Del` のシノニムです。
 
@@ -168,7 +168,7 @@ typedef Del deleter_type;
 
 この型は、テンプレート パラメーター `Del` のシノニムです。
 
-### <a name="element_type"></a><a name="element_type"></a>element_type
+### <a name="element_type"></a><a name="element_type"></a> element_type
 
 この型は、テンプレート パラメーター `Type` のシノニムです。
 
@@ -180,7 +180,7 @@ typedef Type element_type;
 
 この型は、テンプレート パラメーター `Ty` のシノニムです。
 
-### <a name="get"></a><a name="get"></a>取得
+### <a name="get"></a><a name="get"></a> 取得
 
 `stored_ptr` を返します。
 
@@ -192,7 +192,7 @@ pointer get() const;
 
 このメンバー関数は、`stored_ptr` を返します。
 
-### <a name="get_deleter"></a><a name="get_deleter"></a>get_deleter
+### <a name="get_deleter"></a><a name="get_deleter"></a> get_deleter
 
 `stored_deleter` への参照を返します。
 
@@ -206,7 +206,7 @@ const Del& get_deleter() const;
 
 このメンバー関数は、`stored_deleter` への参照を返します。
 
-### <a name="operator"></a><a name="unique_ptr_operator_eq"></a>operator =
+### <a name="operator"></a><a name="unique_ptr_operator_eq"></a> operator =
 
 指定された `unique_ptr` のアドレスを現在のアドレスに割り当てます。
 
@@ -237,7 +237,7 @@ typedef T1 pointer;
 
 この型は、定義されている場合は `Del::pointer` の同意語、それ以外の場合は `Type *` の同意語です。
 
-### <a name="release"></a><a name="release"></a>解除
+### <a name="release"></a><a name="release"></a> 解除
 
 返された格納されたポインターの所有権を呼び出し元に解放し、格納されているポインターの値をに設定し **`nullptr`** ます。
 
@@ -297,7 +297,7 @@ Deleting Sample(42)
 Deleting Sample(3)
 ```
 
-### <a name="reset"></a><a name="reset"></a>解除
+### <a name="reset"></a><a name="reset"></a> 解除
 
 ポインター パラメーターの所有権を取得してから、格納されている元のポインターを削除します。 新しいポインターが元の格納されているポインターと同じ場合、は `reset` ポインターを削除し、格納されているポインターをに設定し **`nullptr`** ます。
 
@@ -313,11 +313,11 @@ void reset(nullptr_t ptr);
 
 #### <a name="remarks"></a>解説
 
-に `reset` よって所有されているストアド[ポインター](#pointer)を `unique_ptr` *ptr*に変更し、元の格納されているポインターを削除するには、を使用します。 `unique_ptr` が空でなかった場合、`reset` は元の格納されているポインターについて [get_deleter](#get_deleter) が返すデリーター関数を呼び出します。
+に `reset` よって所有されているストアド [ポインター](#pointer) を `unique_ptr` *ptr* に変更し、元の格納されているポインターを削除するには、を使用します。 `unique_ptr` が空でなかった場合、`reset` は元の格納されているポインターについて [get_deleter](#get_deleter) が返すデリーター関数を呼び出します。
 
 `reset`は、最初に新しいポインター *ptr*を格納してから、元の格納されているポインターを削除するため、が `reset` 元の格納されているポインターと同じである場合、がすぐに*ptr*を削除する可能性があります。
 
-### <a name="swap"></a><a name="swap"></a>フォト
+### <a name="swap"></a><a name="swap"></a> フォト
 
 2 つの `unique_ptr` オブジェクト間でポインターを交換します。
 
@@ -334,7 +334,7 @@ void swap(unique_ptr& right);
 
 このメンバー関数は、`stored_ptr` を `right.stored_ptr` と交換し、`stored_deleter` を `right.stored_deleter` と交換します。
 
-### <a name="unique_ptr"></a><a name="unique_ptr"></a>unique_ptr
+### <a name="unique_ptr"></a><a name="unique_ptr"></a> unique_ptr
 
 `unique_ptr` には、7 種類のコンストラクターがあります。
 
@@ -370,11 +370,11 @@ template <class Ty2, Class Del2>
 
 #### <a name="remarks"></a>解説
 
-最初の 2 つのコンストラクターはリソースを管理しないオブジェクトを構築します。 3番目のコンストラクターは、に*ptr*を格納し `stored_ptr` ます。 4番目のコンストラクターは、およびのに*ptr*を格納し `stored_ptr` `deleter` `stored_deleter` ます。
+最初の 2 つのコンストラクターはリソースを管理しないオブジェクトを構築します。 3番目のコンストラクターは、に *ptr* を格納し `stored_ptr` ます。 4番目のコンストラクターは、およびのに *ptr* を格納し `stored_ptr` `deleter` `stored_deleter` ます。
 
-5番目のコンストラクターは、に*ptr*を格納 `stored_ptr` し、に移動し `deleter` `stored_deleter` ます。 6 番目と 7 番目のコンストラクターは `stored_ptr` に `right.release()` を格納し、`stored_deleter` に `right.get_deleter()` を移動します。
+5番目のコンストラクターは、に *ptr* を格納 `stored_ptr` し、に移動し `deleter` `stored_deleter` ます。 6 番目と 7 番目のコンストラクターは `stored_ptr` に `right.release()` を格納し、`stored_deleter` に `right.get_deleter()` を移動します。
 
-### <a name="unique_ptr"></a><a name="dtorunique_ptr"></a>~ unique_ptr
+### <a name="unique_ptr"></a><a name="dtorunique_ptr"></a> ~ unique_ptr
 
 `unique_ptr` のデストラクターで、`unique_ptr` オブジェクトを破棄します。
 

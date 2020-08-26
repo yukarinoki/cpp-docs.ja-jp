@@ -1,5 +1,5 @@
 ---
-title: インターフェイス
+title: IAxWinHostWindowLic インターフェイス
 ms.date: 11/04/2016
 f1_keywords:
 - IAxWinHostWindowLic
@@ -9,16 +9,16 @@ f1_keywords:
 helpviewer_keywords:
 - IAxWinHostWindowLic interface
 ms.assetid: 750f1520-6bce-428c-aca0-fccbe3f063c7
-ms.openlocfilehash: 561a65702f1d4f57b4db1afc75769ce4cc523c1c
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 55a96e27e58d844ec6fabec689dc2aedf536a9a7
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81329923"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88835455"
 ---
-# <a name="iaxwinhostwindowlic-interface"></a>インターフェイス
+# <a name="iaxwinhostwindowlic-interface"></a>IAxWinHostWindowLic インターフェイス
 
-このインターフェイスは、ライセンスを受けたコントロールとそのホスト オブジェクトを操作するためのメソッドを提供します。
+このインターフェイスは、ライセンスされたコントロールとそのホストオブジェクトを操作するためのメソッドを提供します。
 
 ## <a name="syntax"></a>構文
 
@@ -30,16 +30,16 @@ interface IAxWinHostWindowLic : IAxWinHostWindow
 
 ### <a name="methods"></a>メソッド
 
-|||
+|名前|説明|
 |-|-|
-|[コントロールコントロールの作成](#createcontrollic)|ライセンスされたコントロールを作成し、ホスト オブジェクトにアタッチします。|
-|[コントロールスライスを作成します。](#createcontrollicex)|ライセンスされたコントロールを作成し、ホスト オブジェクトに接続し、必要に応じてイベント ハンドラーを設定します。|
+|[CreateControlLic](#createcontrollic)|ライセンスされたコントロールを作成し、ホストオブジェクトにアタッチします。|
+|[CreateControlLicEx](#createcontrollicex)|ライセンスされたコントロールを作成し、ホストオブジェクトにアタッチし、必要に応じてイベントハンドラーを設定します。|
 
 ## <a name="remarks"></a>解説
 
-`IAxWinHostWindowLic`[から](../../atl/reference/iaxwinhostwindow-interface.md)継承し、ライセンスを持つコントロールの作成をサポートするメソッドを追加します。
+`IAxWinHostWindowLic`[IAxWinHostWindow](../../atl/reference/iaxwinhostwindow-interface.md)から継承し、ライセンスされたコントロールの作成をサポートするメソッドを追加します。
 
-このインターフェイス[のメンバーを使用するサンプルについては、「ATL AXHost を使用した ActiveX コントロールのホスト](../../atl/hosting-activex-controls-using-atl-axhost.md)」を参照してください。
+このインターフェイスのメンバーを使用するサンプルについては、「 [ATL AXHost を使用した ActiveX コントロールのホスト](../../atl/hosting-activex-controls-using-atl-axhost.md) 」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
@@ -47,12 +47,12 @@ interface IAxWinHostWindowLic : IAxWinHostWindow
 
 |[定義の種類]|ファイル|
 |---------------------|----------|
-|Idl|アトリフェイス.idl|
-|C++|ATLIFace.h (ATLBase.h にも含まれています)|
+|IDL|ATLIFace|
+|C++|ATLIFace (ATLBase. h にも含まれる)|
 
-## <a name="iaxwinhostwindowliccreatecontrollic"></a><a name="createcontrollic"></a>をクリックします。
+## <a name="iaxwinhostwindowliccreatecontrollic"></a><a name="createcontrollic"></a> IAxWinHostWindowLic::CreateControlLic
 
-ライセンスされたコントロールを作成し、初期化し、 で`hWnd`識別されるウィンドウでホストします。
+ライセンスされたコントロールを作成して初期化し、で識別されるウィンドウでホストし `hWnd` ます。
 
 ```
 STDMETHOD(CreateControlLic)(
@@ -65,21 +65,21 @@ STDMETHOD(CreateControlLic)(
 ### <a name="parameters"></a>パラメーター
 
 *bstrLic*<br/>
-[in]コントロールのライセンス キーを含む BSTR。
+からコントロールのライセンスキーを格納している BSTR。
 
 ### <a name="remarks"></a>解説
 
-残りのパラメーターと戻り値の説明については[、IAxWinHostWindow::CreateControl](../../atl/reference/iaxwinhostwindow-interface.md#createcontrol)を参照してください。
+残りのパラメーターと戻り値の説明については、「 [IAxWinHostWindow:: CreateControl](../../atl/reference/iaxwinhostwindow-interface.md#createcontrol) 」を参照してください。
 
-このメソッドを呼び出すことは、呼び出しと同等[です。](#createcontrollicex)
+このメソッドを呼び出すことは、 [IAxWinHostWindowLic:: CreateControlLicEx](#createcontrollicex)を呼び出すことと同じです。
 
 ### <a name="example"></a>例
 
-を使用するサンプルについては[、ATL AXHost を使用した ActiveX コントロールのホスティング](../../atl/hosting-activex-controls-using-atl-axhost.md)を参照`IAxWinHostWindowLic::CreateControlLic`してください。
+を使用するサンプルについては、「 [ATL AXHost を使用した ActiveX コントロールのホスト](../../atl/hosting-activex-controls-using-atl-axhost.md) 」を参照してください `IAxWinHostWindowLic::CreateControlLic` 。
 
-## <a name="iaxwinhostwindowliccreatecontrollicex"></a><a name="createcontrollicex"></a>をクリックします。
+## <a name="iaxwinhostwindowliccreatecontrollicex"></a><a name="createcontrollicex"></a> IAxWinHostWindowLic::CreateControlLicEx
 
-ライセンスを受けた ActiveX コントロールを作成し、初期化し、指定されたウィンドウで[ホストします。](../../atl/reference/iaxwinhostwindow-interface.md#createcontrol)
+ライセンスされた ActiveX コントロールを作成して初期化し、 [IAxWinHostWindow:: CreateControl](../../atl/reference/iaxwinhostwindow-interface.md#createcontrol)と同様に、指定したウィンドウでホストします。
 
 ```
 STDMETHOD(CreateControlLicEx)(
@@ -95,12 +95,12 @@ STDMETHOD(CreateControlLicEx)(
 ### <a name="parameters"></a>パラメーター
 
 *bstrLic*<br/>
-[in]コントロールのライセンス キーを含む BSTR。
+からコントロールのライセンスキーを格納している BSTR。
 
 ### <a name="remarks"></a>解説
 
-残りのパラメーターと戻り値の説明については[、IAxWinHostWindow::CreateControlEx](../../atl/reference/iaxwinhostwindow-interface.md#createcontrolex)を参照してください。
+残りのパラメーターと戻り値の説明については、「 [IAxWinHostWindow:: CreateControlEx](../../atl/reference/iaxwinhostwindow-interface.md#createcontrolex) 」を参照してください。
 
 ### <a name="example"></a>例
 
-を使用するサンプルについては[、ATL AXHost を使用した ActiveX コントロールのホスティング](../../atl/hosting-activex-controls-using-atl-axhost.md)を参照`IAxWinHostWindowLic::CreateControlLicEx`してください。
+を使用するサンプルについては、「 [ATL AXHost を使用した ActiveX コントロールのホスト](../../atl/hosting-activex-controls-using-atl-axhost.md) 」を参照してください `IAxWinHostWindowLic::CreateControlLicEx` 。

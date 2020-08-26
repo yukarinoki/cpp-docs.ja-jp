@@ -86,12 +86,12 @@ helpviewer_keywords:
 - std::set [C++], upper_bound
 - std::set [C++], value_comp
 ms.assetid: 8991f9aa-5509-4440-adc1-371512d32018
-ms.openlocfilehash: 80e7c2258fc1fbeabeb8174df18d5cb46aa682bb
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: e879e7ffd9f674769e32548195f5017e27e64576
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88560530"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88846239"
 ---
 # <a name="set-class"></a>set クラス
 
@@ -145,13 +145,13 @@ set クラスに用意されている反復子は双方向反復子ですが、�
 
 ### <a name="constructors"></a>コンストラクター
 
-|||
+|名前|説明|
 |-|-|
 |[set](#set)|空の set を構築するか、他の set の全体または一部のコピーである set を構築します。|
 
 ### <a name="typedefs"></a>Typedefs
 
-|||
+|名前|説明|
 |-|-|
 |[allocator_type](#allocator_type)|set オブジェクトの `allocator` クラスを表す型。|
 |[const_iterator](#const_iterator)|セット内の要素を読み取ることができる双方向反復子を提供する型 **`const`** 。|
@@ -169,9 +169,9 @@ set クラスに用意されている反復子は双方向反復子ですが、�
 |[value_compare](#value_compare)|2 つの要素を比較して、set 内の要素の相対順序を決定できる関数オブジェクトを提供する型。|
 |[value_type](#value_type)|この型は、値としてキャパシティ内で set の要素として格納されるオブジェクトを表します。|
 
-### <a name="functions"></a>関数
+### <a name="functions"></a>Functions
 
-|||
+|名前|説明|
 |-|-|
 |[初め](#begin)|set 内の最初の要素を指す定数反復子を返します。|
 |[cbegin](#cbegin)|set 内の最初の要素を指す定数反復子を返します。|
@@ -199,9 +199,9 @@ set クラスに用意されている反復子は双方向反復子ですが、�
 |[upper_bound](#upper_bound)|指定したキーよりも大きいキーを持つ、set 内の最初の要素を指す反復子を返します。|
 |[value_comp](#value_comp)|set 内の要素の値を並べ替えるために使用される比較オブジェクトのコピーを取得します。|
 
-### <a name="operators"></a>オペレーター
+### <a name="operators"></a>演算子
 
-|||
+|名前|説明|
 |-|-|
 |[operator =](#op_eq)|別の set のコピーで set の要素を置き換えます。|
 

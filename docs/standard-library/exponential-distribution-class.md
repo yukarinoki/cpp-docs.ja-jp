@@ -23,12 +23,12 @@ helpviewer_keywords:
 - std::exponential_distribution [C++], param_type
 - std::exponential_distribution [C++], param_type
 ms.assetid: d54f3126-a09b-45f9-a30b-0d94d03bcdc9
-ms.openlocfilehash: db176bef55455c0553e5865e268c4e4e8fed089d
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: dbb8425047d9076343922dfbcf5c6162b6054c3b
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87212359"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88835910"
 ---
 # <a name="exponential_distribution-class"></a>exponential_distribution クラス
 
@@ -77,10 +77,8 @@ public:
 
 クラステンプレートは、指数分布に従って分布した、ユーザー指定の整数型の値または型の値 (指定がない場合) を生成する分布を表し **`double`** ます。 次の表は、個々のメンバーに関する記事にリンクしています。
 
-||||
-|-|-|-|
-|[exponential_distribution](#exponential_distribution)|`exponential_distribution::lambda`|`exponential_distribution::param`|
-|`exponential_distribution::operator()`||[param_type](#param_type)|
+[exponential_distribution](#exponential_distribution)\
+[param_type](#param_type)
 
 プロパティ関数 `lambda()` は、格納されている分布パラメーター `lambda` の値を返します。
 
@@ -171,7 +169,7 @@ Distribution for 10 samples:
 
 **名前空間:** std
 
-## <a name="exponential_distributionexponential_distribution"></a><a name="exponential_distribution"></a>exponential_distribution:: exponential_distribution
+## <a name="exponential_distributionexponential_distribution"></a><a name="exponential_distribution"></a> exponential_distribution:: exponential_distribution
 
 分布を作成します。
 
@@ -196,7 +194,7 @@ explicit exponential_distribution(const param_type& parm);
 
 2 つ目のコンストラクターは、格納されているパラメーターが *parm* から初期化されるオブジェクトを作成します。 `param()` メンバー関数を呼び出すと、既存の分布の現在のパラメーターを取得および設定できます。
 
-## <a name="exponential_distributionparam_type"></a><a name="param_type"></a>exponential_distribution::p aram_type
+## <a name="exponential_distributionparam_type"></a><a name="param_type"></a> exponential_distribution::p aram_type
 
 分布のパラメーターを格納します。
 

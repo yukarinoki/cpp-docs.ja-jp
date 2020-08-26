@@ -16,12 +16,12 @@ helpviewer_keywords:
 - Internet content [MFC]
 - WinInet classes [MFC]
 ms.assetid: 6df2dfd0-6e3f-4587-9d01-2a32f00f8a6f
-ms.openlocfilehash: c9825cdcb5cb0963a4e0d3acdeb36dfee54b70fc
-ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
+ms.openlocfilehash: b41ce97a9b5efe6ad84c543f5c49dd091557b3a8
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86405027"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88846317"
 ---
 # <a name="mfc-internet-programming-basics"></a>MFC インターネット プログラミングの基礎
 
@@ -56,24 +56,24 @@ MFC には、インターネットプログラミングをサポートするク�
 
 - [Win32 インターネット拡張機能 (WinInet)](win32-internet-extensions-wininet.md)
 
-- [MFC インターネット プログラミングの作業](mfc-internet-programming-tasks.md)
+- [MFC インターネットプログラミングタスク](mfc-internet-programming-tasks.md)
 
-- [アプリケーションのデザイン上の検討事項](application-design-choices.md)
+- [アプリケーション設計の選択肢](application-design-choices.md)
 
 - [MFC アプリケーションの作成](writing-mfc-applications.md)
 
-- [インターネット アプリケーションのテスト](testing-internet-applications.md)
+- [インターネットアプリケーションのテスト](testing-internet-applications.md)
 
 - [インターネット セキュリティ](internet-security-cpp.md)
 
-- [DHTML コントロールに対する ATL のサポート](../atl/atl-support-for-dhtml-controls.md)
+- [DHTML コントロールの ATL サポート](../atl/atl-support-for-dhtml-controls.md)
 
-## <a name="websites-for-more-information"></a><a name="_core_web_sites_for_more_information"></a>Web サイトの詳細情報
+## <a name="websites-for-more-information"></a><a name="_core_web_sites_for_more_information"></a> Web サイトの詳細情報
 
-Microsoft インターネットテクノロジの詳細については、「 [Microsoft Docs](https://docs.microsoft.com/)」を参照してください。
+Microsoft インターネットテクノロジの詳細については、「 [ネットワークとインターネット](/windows/win32/networking)」を参照してください。
 
 [World Wide Web コンソーシアム (W3C)](https://go.microsoft.com/fwlink/p/?linkid=37125)は、HTML、HTTP、CGI、およびその他の World Wide Web テクノロジの仕様を発行します。
 
-## <a name="more-internet-help"></a><a name="_core_more_internet_help"></a>その他のインターネットヘルプ
+## <a name="more-internet-help"></a><a name="_core_more_internet_help"></a> その他のインターネットヘルプ
 
 Windows SDK の OLE セクションには、OLE プログラミングに関する追加情報が含まれています。 この情報では、MFC クラスを使用するのではなく、Win32 WinInet 関数を直接使用する方法について詳しく説明します。 また、インターネットテクノロジの概要についても説明します。

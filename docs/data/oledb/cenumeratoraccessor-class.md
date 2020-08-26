@@ -35,12 +35,12 @@ helpviewer_keywords:
 - m_szName
 - m_szParseName
 ms.assetid: 21e8e7ea-3511-4afe-b33f-d520f4ff82bb
-ms.openlocfilehash: f238c0b5b2a3988f08d910f605415bbe6403ea3d
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 0b4baa4671a013699e51a9ab28c002a680dfcd61
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80211831"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88838140"
 ---
 # <a name="cenumeratoraccessor-class"></a>CEnumeratorAccessor クラス
 
@@ -60,19 +60,19 @@ class CEnumeratorAccessor
 
 ### <a name="data-members"></a>データ メンバー
 
-|||
+| 名前 | 説明 |
 |-|-|
 |[m_bIsParent](#bisparent)|行が列挙子である場合に、列挙子が親列挙子であるかどうかを示す変数。|
 |[m_nType](#ntype)|行でデータソースまたは列挙子が記述されているかどうかを示す変数。|
 |[m_szDescription](#szdescription)|データソースまたは列挙子の説明。|
 |[m_szName](#szname)|データソースまたは列挙子の名前。|
-|[m_szParseName](#szparsename)|データソースまたは列挙子のモニカーを取得するために[Iparsedisplayname](/windows/win32/api/oleidl/nn-oleidl-iparsedisplayname)に渡す文字列。|
+|[m_szParseName](#szparsename)|データソースまたは列挙子のモニカーを取得するために [Iparsedisplayname](/windows/win32/api/oleidl/nn-oleidl-iparsedisplayname) に渡す文字列。|
 
 ## <a name="remarks"></a>解説
 
 この行セットは、現在の列挙子から参照できるデータソースと列挙子で構成されます。
 
-## <a name="cenumeratoraccessorm_bisparent"></a><a name="bisparent"></a>CEnumeratorAccessor:: m_bIsParent
+## <a name="cenumeratoraccessorm_bisparent"></a><a name="bisparent"></a> CEnumeratorAccessor:: m_bIsParent
 
 行が列挙子である場合に、列挙子が親列挙子であるかどうかを示す変数。
 
@@ -86,7 +86,7 @@ VARIANT_BOOL m_bIsParent;
 
 詳細については、 *OLE DB プログラマーリファレンス*の「 [Isourcesrowset を:: getsourcesrowset](/previous-versions/windows/desktop/ms711200(v=vs.85)) 」を参照してください。
 
-## <a name="cenumeratoraccessorm_ntype"></a><a name="ntype"></a>CEnumeratorAccessor:: m_nType
+## <a name="cenumeratoraccessorm_ntype"></a><a name="ntype"></a> CEnumeratorAccessor:: m_nType
 
 行でデータソースまたは列挙子が記述されているかどうかを示す変数。
 
@@ -100,7 +100,7 @@ USHORT m_nType;
 
 詳細については、 *OLE DB プログラマーリファレンス*の「 [Isourcesrowset を:: getsourcesrowset](/previous-versions/windows/desktop/ms711200(v=vs.85)) 」を参照してください。
 
-## <a name="cenumeratoraccessorm_szdescription"></a><a name="szdescription"></a>CEnumeratorAccessor:: m_szDescription
+## <a name="cenumeratoraccessorm_szdescription"></a><a name="szdescription"></a> CEnumeratorAccessor:: m_szDescription
 
 データソースまたは列挙子の説明。
 
@@ -114,7 +114,7 @@ WCHAR m_szDescription[129];
 
 詳細については、 *OLE DB プログラマーリファレンス*の「 [Isourcesrowset を:: getsourcesrowset](/previous-versions/windows/desktop/ms711200(v=vs.85)) 」を参照してください。
 
-## <a name="cenumeratoraccessorm_szname"></a><a name="szname"></a>CEnumeratorAccessor:: m_szName
+## <a name="cenumeratoraccessorm_szname"></a><a name="szname"></a> CEnumeratorAccessor:: m_szName
 
 データソースまたは列挙子の名前。
 
@@ -128,9 +128,9 @@ WCHAR m_szName[129];
 
 詳細については、 *OLE DB プログラマーリファレンス*の「 [Isourcesrowset を:: getsourcesrowset](/previous-versions/windows/desktop/ms711200(v=vs.85)) 」を参照してください。
 
-## <a name="cenumeratoraccessorm_szparsename"></a><a name="szparsename"></a>CEnumeratorAccessor:: m_szParseName
+## <a name="cenumeratoraccessorm_szparsename"></a><a name="szparsename"></a> CEnumeratorAccessor:: m_szParseName
 
-データソースまたは列挙子のモニカーを取得するために[Iparsedisplayname](/windows/win32/api/oleidl/nn-oleidl-iparsedisplayname)に渡す文字列。
+データソースまたは列挙子のモニカーを取得するために [Iparsedisplayname](/windows/win32/api/oleidl/nn-oleidl-iparsedisplayname) に渡す文字列。
 
 ### <a name="syntax"></a>構文
 
@@ -142,7 +142,7 @@ WCHAR m_szParseName[129];
 
 詳細については、 *OLE DB プログラマーリファレンス*の「 [Isourcesrowset を:: getsourcesrowset](/previous-versions/windows/desktop/ms711200(v=vs.85)) 」を参照してください。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[OLE DB コンシューマー テンプレートに関するページ](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
-[OLE DB コンシューマー テンプレート リファレンス](../../data/oledb/ole-db-consumer-templates-reference.md)
+[OLE DB コンシューマー テンプレート](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[OLE DB コンシューマーテンプレートリファレンス](../../data/oledb/ole-db-consumer-templates-reference.md)

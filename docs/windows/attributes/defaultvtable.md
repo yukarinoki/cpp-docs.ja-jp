@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - defaultvtable attribute
 ms.assetid: 5b3ed483-f69e-44dd-80fc-952028eb9d73
-ms.openlocfilehash: 2da0d8070f961f1ae0fc075585eb28881f712fb4
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 6b1d6960a065bf2df46852d3df1ca53d4239f1bc
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87215258"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88839492"
 ---
 # <a name="defaultvtable"></a>defaultvtable
 
@@ -34,7 +34,7 @@ COM オブジェクトの既定の vtable を持つ、指定されたインタ�
 
 ## <a name="example"></a>例
 
-次のコードは、 **defaultvtable**を使用して既定のインターフェイスを指定するクラスの属性を示しています。
+次のコードは、 **defaultvtable** を使用して既定のインターフェイスを指定するクラスの属性を示しています。
 
 ```cpp
 // cpp_attr_ref_defaultvtable.cpp
@@ -64,9 +64,7 @@ class CMyC3 : public IMyI3 {};
 
 ## <a name="requirements"></a>必要条件
 
-### <a name="attribute-context"></a>属性コンテキスト
-
-|||
+| 属性コンテキスト | 値 |
 |-|-|
 |**適用対象**|**`class`**, **`struct`**|
 |**Repeatable**|いいえ|

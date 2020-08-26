@@ -4,12 +4,12 @@ ms.date: 09/10/2018
 f1_keywords:
 - filesystem/std::experimental::filesystem::filesystem_error
 ms.assetid: c53aac27-c1fa-43e4-8967-48ea8ba1f172
-ms.openlocfilehash: 7bd6b2d3d716ba25999388d44e7bd5a8d0750eb5
-ms.sourcegitcommit: 76cc69b482ada8ebf0837e8cdfd4459661f996dd
+ms.openlocfilehash: 1d142057859f1ca173f8953b34c07bbb3803ecba
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71127202"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88835871"
 ---
 # <a name="filesystem_error-class"></a>filesystem_error クラス
 
@@ -21,35 +21,35 @@ ms.locfileid: "71127202"
 class filesystem_error    : public system_error;
 ```
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
-このクラスは、\<filesystem> 関数のエラーを報告するためにスローされる例外すべてに対する基底クラスとして機能します。 このメソッドは、型`string`のオブジェクトを格納します。これは、exposition の目的でここで呼び出され`mymesg`ます。 また、とと`path` `mypval2`呼ばれる`mypval1`型の2つのオブジェクトも格納します。
+クラスは、関数のエラーを報告するためにスローされるすべての例外の基底クラスとして機能し \<filesystem> ます。 このメソッドは、型のオブジェクトを格納します。これは、 `string` `mymesg` exposition の目的でここで呼び出されます。 また `path` 、とと呼ばれる型の2つのオブジェクトも格納し `mypval1` `mypval2` ます。
 
 ## <a name="members"></a>メンバー
 
 ### <a name="constructors"></a>コンストラクター
 
-|||
+|名前|説明|
 |-|-|
-|[filesystem_error](#filesystem_error)|メッセージを`filesystem_error`構築します。|
+|[filesystem_error](#filesystem_error)|メッセージを構築 `filesystem_error` します。|
 
-### <a name="functions"></a>関数
+### <a name="functions"></a>Functions
 
-|||
+|名前|説明|
 |-|-|
 |[path1](#path1)|`mypval1` を返します。|
 |[path2](#path2)|`mypval2` を返します。|
 |[結果](#what)|`NTBS` へのポインターを返します。|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-**ヘッダー:** \<ファイルシステム >
+**ヘッダー:**\<filesystem>
 
 **名前空間:** std::experimental::filesystem
 
-## <a name="filesystem_error"></a>filesystem_error
+## <a name="filesystem_error"></a><a name="filesystem_error"></a> filesystem_error
 
-最初のコンストラクターは、 *what_arg*と*ec*からメッセージを構築します。 2番目のコンストラクターは、 *pval1*からメッセージを構築します`mypval1`。このメッセージはに格納されます。 また、3番目のコンストラクターは、 *pval1*からメッセージを構築`mypval1`します`mypval2`。このメッセージは、に格納され、 *pval2*から格納されます。
+最初のコンストラクターは *what_arg* および *ec*からメッセージを構築します。 2番目のコンストラクターは、 *pval1*からメッセージを構築します。このメッセージはに格納さ `mypval1` れます。 また、3番目のコンストラクターは、 *pval1*からメッセージを構築します。このメッセージは、に格納さ `mypval1` れ、 *pval2*から格納さ `mypval2` れます。
 
 ```cpp
 filesystem_error(const string& what_arg,
@@ -79,7 +79,7 @@ filesystem_error(const string& what_arg,
 *mypval2*\
 さらに指定されたメッセージパラメーター。
 
-## <a name="path1"></a>path1
+## <a name="path1"></a><a name="path1"></a> path1
 
 このメンバー関数は、`mypval1` を返します。
 
@@ -87,7 +87,7 @@ filesystem_error(const string& what_arg,
 const path& path1() const noexcept;
 ```
 
-## <a name="path2"></a>path2
+## <a name="path2"></a><a name="path2"></a> path2
 
 このメンバー関数は、`mypval2` を返します。
 
@@ -95,9 +95,9 @@ const path& path1() const noexcept;
 const path& path2() const noexcept;
 ```
 
-## <a name="what"></a>結果
+## <a name="what"></a><a name="what"></a> 結果
 
-このメンバー関数は、( `NTBS` `system_error::what()` `mypval2.native_string()` `runtime_error::what()` `mymesg`可能であれば、、、、 、およびから構成される)へのポインターを返します。`mypval1.native_string()`
+このメンバー関数は、(可能であれば、、、、、およびから構成される) へのポインターを返し `NTBS` `runtime_error::what()` `system_error::what()` `mymesg` `mypval1.native_string()` `mypval2.native_string()` ます。
 
 ```cpp
 const char *what() const noexcept;

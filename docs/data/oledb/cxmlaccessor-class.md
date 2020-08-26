@@ -20,12 +20,12 @@ helpviewer_keywords:
 - GetXMLColumnData method
 - GetXMLRowData method
 ms.assetid: c88c082c-ec2f-4351-8947-a330b15e448a
-ms.openlocfilehash: f25fb3635f70ee9a0e38ddcdbcf373fe6b1b84c8
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 36419e85554982d1c3784d0d73663b48cc820b6d
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80211043"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88845628"
 ---
 # <a name="cxmlaccessor-class"></a>CXMLAccessor クラス
 
@@ -39,22 +39,22 @@ class CXMLAccessor : public CDynamicStringAccessorW
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー**: atldbcli.h
+**ヘッダー**: atldbcli. h
 
 ## <a name="members"></a>メンバー
 
 ### <a name="methods"></a>メソッド
 
-|||
+| 名前 | 説明 |
 |-|-|
 |[GetXMLColumnData](#getxmlcolumndata)|列情報を取得します。|
 |[GetXMLRowData](#getxmlrowdata)|行ごとにテーブルの内容全体を取得します。|
 
 ## <a name="remarks"></a>解説
 
-ただし、`CXMLAccessor` は、データストアからアクセスされるすべてのデータを XML 形式の (タグ付けされた) データとして変換するという点で `CDynamicStringAccessorW` とは異なります。 これは、XML 対応の Web ページに出力する場合に特に便利です。 XML タグ名は、データストアの列名とできるだけ一致します。
+ただし、は、 `CXMLAccessor` `CDynamicStringAccessorW` データストアからアクセスされるすべてのデータを XML 形式の (タグ付けされた) データとして変換する点が異なります。 これは、XML 対応の Web ページに出力する場合に特に便利です。 XML タグ名は、データストアの列名とできるだけ一致します。
 
-`CDynamicAccessor` メソッドを使用して、列情報を取得します。 この列情報は、実行時にアクセサーを動的に作成するために使用します。
+`CDynamicAccessor`列情報を取得するには、メソッドを使用します。 この列情報は、実行時にアクセサーを動的に作成するために使用します。
 
 列情報は、このクラスによって作成および管理されるバッファーに格納されます。 [Getxmlcolumndata](#getxmlcolumndata)を使用して列情報を取得するか、 [GetXMLRowData](#getxmlrowdata)を使用して列データを行ごとに取得します。
 
@@ -62,7 +62,7 @@ class CXMLAccessor : public CDynamicStringAccessorW
 
 [!code-cpp[NVC_OLEDB_Consumer#14](../../data/oledb/codesnippet/cpp/cxmlaccessor-class_1.cpp)]
 
-## <a name="cxmlaccessorgetxmlcolumndata"></a><a name="getxmlcolumndata"></a>CXMLAccessor:: GetXMLColumnData
+## <a name="cxmlaccessorgetxmlcolumndata"></a><a name="getxmlcolumndata"></a> CXMLAccessor:: GetXMLColumnData
 
 列によって、テーブルの列の型情報を XML 形式の文字列データとして取得します。
 
@@ -91,7 +91,7 @@ HRESULT GetXMLColumnData(CSimpleStringW& strOutput) throw();
 
 `</columninfo>`
 
-## <a name="cxmlaccessorgetxmlrowdata"></a><a name="getxmlrowdata"></a>CXMLAccessor:: GetXMLRowData
+## <a name="cxmlaccessorgetxmlrowdata"></a><a name="getxmlrowdata"></a> CXMLAccessor:: GetXMLRowData
 
 テーブルの内容全体を XML 形式の文字列データとして行単位で取得します。
 
@@ -116,7 +116,7 @@ HRESULT GetXMLRowData(CSimpleStringW& strOutput,
 
 ### <a name="remarks"></a>解説
 
-次に、行データが XML 形式でどのように書式設定されるかを示します。 次の `DATA` は、行データを表します。 目的の行に移動するには、move メソッドを使用します。
+次に、行データが XML 形式でどのように書式設定されるかを示します。 `DATA` 行データを次に示します。 目的の行に移動するには、move メソッドを使用します。
 
 `<row>`
 
@@ -124,10 +124,10 @@ HRESULT GetXMLRowData(CSimpleStringW& strOutput,
 
 `</row>`
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[OLE DB コンシューマー テンプレートに関するページ](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
-[OLE DB コンシューマー テンプレート リファレンス](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
+[OLE DB コンシューマー テンプレート](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[OLE DB コンシューマーテンプレートリファレンス](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
 [CAccessor クラス](../../data/oledb/caccessor-class.md)<br/>
 [CDynamicAccessor クラス](../../data/oledb/cdynamicaccessor-class.md)<br/>
 [CDynamicParameterAccessor クラス](../../data/oledb/cdynamicparameteraccessor-class.md)<br/>

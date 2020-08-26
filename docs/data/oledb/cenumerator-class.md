@@ -22,16 +22,16 @@ helpviewer_keywords:
 - GetMoniker method
 - Open method
 ms.assetid: 25805f1b-26e3-402f-af83-1b5fe5ddebf7
-ms.openlocfilehash: 2a48acb8a961d76c34d2ba85ede5c827c880f400
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: f3e3a61028768144cbef17912952622f19ad0242
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87214920"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88838153"
 ---
 # <a name="cenumerator-class"></a>CEnumerator クラス
 
-OLE DB 列挙子オブジェクトを使用します。このオブジェクトは、すべてのデータソースと列挙子を記述する行セットを返す[isourcesrowset を](/previous-versions/windows/desktop/ms715969(v=vs.85))インターフェイスを公開します。
+OLE DB 列挙子オブジェクトを使用します。このオブジェクトは、すべてのデータソースと列挙子を記述する行セットを返す [isourcesrowset を](/previous-versions/windows/desktop/ms715969(v=vs.85)) インターフェイスを公開します。
 
 ## <a name="syntax"></a>構文
 
@@ -48,7 +48,7 @@ class CEnumerator :
 
 ### <a name="methods"></a>メソッド
 
-|||
+| 名前 | 説明 |
 |-|-|
 |[Find](#find)|使用可能なプロバイダー (データソース) を検索し、指定した名前のプロバイダーを探します。|
 |[GetMoniker](#getmoniker)|`IMoniker`現在のレコードのインターフェイスを取得します。|
@@ -58,7 +58,7 @@ class CEnumerator :
 
 `ISourcesRowset`このクラスから間接的にデータを取得できます。
 
-## <a name="cenumeratorfind"></a><a name="find"></a>CEnumerator:: Find
+## <a name="cenumeratorfind"></a><a name="find"></a> CEnumerator:: Find
 
 使用可能なプロバイダー間で指定された名前を検索します。
 
@@ -79,9 +79,9 @@ bool Find(TCHAR* szSearchName) throw();
 
 ### <a name="remarks"></a>解説
 
-この名前は、 `SOURCES_NAME` [isourcesrowset を](/previous-versions/windows/desktop/ms715969(v=vs.85))インターフェイスのメンバーにマップされます。
+この名前は、 `SOURCES_NAME` [isourcesrowset を](/previous-versions/windows/desktop/ms715969(v=vs.85)) インターフェイスのメンバーにマップされます。
 
-## <a name="cenumeratorgetmoniker"></a><a name="getmoniker"></a>CEnumerator:: GetMoniker
+## <a name="cenumeratorgetmoniker"></a><a name="getmoniker"></a> CEnumerator:: GetMoniker
 
 モニカーに変換できる文字列のコンポーネントを抽出するために、表示名を解析します。
 
@@ -106,7 +106,7 @@ HRESULT GetMoniker(LPMONIKER* ppMoniker,
 
 標準の HRESULT です。
 
-## <a name="cenumeratoropen"></a><a name="open"></a>CEnumerator:: Open
+## <a name="cenumeratoropen"></a><a name="open"></a> CEnumerator:: Open
 
 列挙子のモニカーが指定されている場合は、そのモニカーをバインドしてから、 [isourcesrowset を:: GetSourcesRowset](/previous-versions/windows/desktop/ms711200(v=vs.85))を呼び出して列挙子の行セットを取得します。
 
@@ -126,7 +126,7 @@ HRESULT Open(const CEnumerator& enumerator) throw();
 から列挙子のモニカーを指すポインターです。
 
 *pClsid*<br/>
-から`CLSID`列挙子のへのポインターです。
+から `CLSID` 列挙子のへのポインターです。
 
 *子*<br/>
 から列挙子への参照です。

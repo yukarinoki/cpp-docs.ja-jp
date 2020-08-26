@@ -4,16 +4,16 @@ ms.date: 11/04/2016
 f1_keywords:
 - VC.Project.VCCLCompilerTool.EnableParallelCodeGeneration
 ms.assetid: 33ecf49d-c0d5-4f34-bce3-84ff03f38918
-ms.openlocfilehash: 18aaa1dc678ca2c73f9fad6c016aa40cfa95982b
-ms.sourcegitcommit: 31a443c9998cf5cfbaff00fcf815b133f55b2426
+ms.openlocfilehash: effe1ad7799022ea85184513de1dc48c72d6bfcb
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86373802"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88839440"
 ---
 # <a name="qpar-auto-parallelizer"></a>/Qpar (自動並行化)
 
-コンパイラの[自動並行化](../../parallel/auto-parallelization-and-auto-vectorization.md)機能を有効にして、コード内のループを自動的に並列化します。
+コンパイラの [自動並行化](../../parallel/auto-parallelization-and-auto-vectorization.md) 機能を有効にして、コード内のループを自動的に並列化します。
 
 ## <a name="syntax"></a>構文
 
@@ -33,9 +33,9 @@ ms.locfileid: "86373802"
 
 1. **ソリューション エクスプローラー**で、プロジェクトのショートカット メニューを開き、 **[プロパティ]** をクリックします。
 
-1. [**プロパティページ**] ダイアログボックスの [ **C/c + +**] で、[**コマンドライン**] を選択します。
+1. [ **プロパティページ** ] ダイアログボックスの [ **C/c + +**] で、[ **コマンドライン**] を選択します。
 
-1. [**追加オプション**] ボックスに、「」と入力し `/Qpar` ます。
+1. [ **追加オプション** ] ボックスに、「」と入力し `/Qpar` ます。
 
 ### <a name="to-set-the-qpar-compiler-option-programmatically"></a>/Qpar コンパイラオプションをプログラムで設定するには
 
@@ -48,4 +48,4 @@ ms.locfileid: "86373802"
 [MSVC コンパイラ オプション](compiler-options.md)<br/>
 [MSVC コンパイラのコマンドライン構文](compiler-command-line-syntax.md)<br/>
 [#pragma ループ ()](../../preprocessor/loop.md)<br/>
-[Visual Studio でのネイティブコードベクター化](https://docs.microsoft.com/archive/blogs/nativeconcurrency/auto-vectorizer-in-visual-studio-2012-overview)
+[Visual Studio でのネイティブコードベクター化](/archive/blogs/nativeconcurrency/auto-vectorizer-in-visual-studio-2012-overview)

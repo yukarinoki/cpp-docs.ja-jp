@@ -38,16 +38,16 @@ helpviewer_keywords:
 - GetErrorParameters method
 - GetErrorRecords method
 ms.assetid: 9a5c18a2-ee3e-40f5-ab4c-581288d7f737
-ms.openlocfilehash: 8c91beb2a305604f663d5e81b4a534a1699705cf
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 5c26a3f1e8b5589afebd72c7b722ab9ed9e4229d
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80212030"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88838309"
 ---
 # <a name="cdberrorinfo-class"></a>CDBErrorInfo クラス
 
-OLE DB [Ierrorrecords](/previous-versions/windows/desktop/ms718112(v=vs.85))インターフェイスを使用した OLE DB エラー処理のサポートを提供します。
+OLE DB [Ierrorrecords](/previous-versions/windows/desktop/ms718112(v=vs.85)) インターフェイスを使用した OLE DB エラー処理のサポートを提供します。
 
 ## <a name="syntax"></a>構文
 
@@ -63,20 +63,20 @@ class CDBErrorInfo
 
 ### <a name="methods"></a>メソッド
 
-|||
+| 名前 | 説明 |
 |-|-|
 |[GetAllErrorInfo](#getallerrorinfo)|エラーレコードに含まれるすべてのエラー情報を返します。|
 |[GetBasicErrorInfo](#getbasicerrorinfo)|[Ierrorrecords:: GetBasicErrorInfo](/previous-versions/windows/desktop/ms723907(v=vs.85))を呼び出して、指定されたエラーに関する基本情報を返します。|
 |[GetCustomErrorObject](#getcustomerrorobject)|[Ierrorrecords:: GetCustomErrorObject](/previous-versions/windows/desktop/ms725417(v=vs.85))を呼び出して、カスタムエラーオブジェクトのインターフェイスへのポインターを返します。|
-|[GetErrorInfo](#geterrorinfo)|[Ierrorrecords:: GetErrorInfo](/previous-versions/windows/desktop/ms711230(v=vs.85))を呼び出して、指定されたレコードに `IErrorInfo` インターフェイスポインターを返します。|
+|[GetErrorInfo](#geterrorinfo)|[Ierrorrecords:: GetErrorInfo](/previous-versions/windows/desktop/ms711230(v=vs.85))を呼び出し `IErrorInfo` て、指定されたレコードへのインターフェイスポインターを返します。|
 |[GetErrorParameters](#geterrorparameters)|[Ierrorrecords:: GetErrorParameters](/previous-versions/windows/desktop/ms715793(v=vs.85))を呼び出して、エラーパラメーターを返します。|
 |[GetErrorRecords](#geterrorrecords)|指定したオブジェクトのエラーレコードを取得します。|
 
 ## <a name="remarks"></a>解説
 
-このインターフェイスは、1つまたは複数のエラーレコードをユーザーに返します。 エラーレコードの数を取得するには、最初に[CDBErrorInfo:: GetErrorRecords](../../data/oledb/cdberrorinfo-geterrorrecords.md)を呼び出します。 次に、いずれかのアクセス関数 ( [CDBErrorInfo:: GetAllErrorInfo](../../data/oledb/cdberrorinfo-getallerrorinfo.md)など) を呼び出して、各レコードのエラー情報を取得します。
+このインターフェイスは、1つまたは複数のエラーレコードをユーザーに返します。 エラーレコードの数を取得するには、最初に [CDBErrorInfo:: GetErrorRecords](../../data/oledb/cdberrorinfo-geterrorrecords.md) を呼び出します。 次に、いずれかのアクセス関数 ( [CDBErrorInfo:: GetAllErrorInfo](../../data/oledb/cdberrorinfo-getallerrorinfo.md)など) を呼び出して、各レコードのエラー情報を取得します。
 
-## <a name="cdberrorinfogetallerrorinfo"></a><a name="getallerrorinfo"></a>CDBErrorInfo:: GetAllErrorInfo
+## <a name="cdberrorinfogetallerrorinfo"></a><a name="getallerrorinfo"></a> CDBErrorInfo:: GetAllErrorInfo
 
 エラーレコードに含まれるエラー情報のすべての型を返します。
 
@@ -120,13 +120,13 @@ HRESULT GetAllErrorInfo(ULONG ulRecordNum,
 
 ### <a name="remarks"></a>解説
 
-*Pbstrdescription*の出力値は `IErrorInfo::GetDescription`を呼び出すことによって内部的に取得されます。これにより、ロケールがサポートされていない場合、または次の両方の条件が当てはまる場合に値が NULL に設定されます。
+*Pbstrdescription*の出力値は、を呼び出すことによって内部的に取得されます `IErrorInfo::GetDescription` 。これは、ロケールがサポートされていない場合、または次の両方の条件に該当する場合に、値を NULL に設定します。
 
 1. *lcid*の値が米国英語および
 
 1. *lcid*の値が、GetUserDefaultLCID によって返された値と等しくありません。
 
-## <a name="cdberrorinfogetbasicerrorinfo"></a><a name="getbasicerrorinfo"></a>CDBErrorInfo:: GetBasicErrorInfo
+## <a name="cdberrorinfogetbasicerrorinfo"></a><a name="getbasicerrorinfo"></a> CDBErrorInfo:: GetBasicErrorInfo
 
 [Ierrorrecords:: GetBasicErrorInfo](/previous-versions/windows/desktop/ms723907(v=vs.85))を呼び出して、リターンコードやプロバイダー固有のエラー番号など、エラーに関する基本的な情報を返します。
 
@@ -145,7 +145,7 @@ HRESULT GetBasicErrorInfo(ULONG ulRecordNum,
 
 標準の HRESULT です。
 
-## <a name="cdberrorinfogetcustomerrorobject"></a><a name="getcustomerrorobject"></a>CDBErrorInfo:: GetCustomErrorObject
+## <a name="cdberrorinfogetcustomerrorobject"></a><a name="getcustomerrorobject"></a> CDBErrorInfo:: GetCustomErrorObject
 
 [Ierrorrecords:: GetCustomErrorObject](/previous-versions/windows/desktop/ms725417(v=vs.85))を呼び出して、カスタムエラーオブジェクトのインターフェイスへのポインターを返します。
 
@@ -164,7 +164,7 @@ HRESULT GetCustomErrorObject(ULONG ulRecordNum,
 
 標準の HRESULT です。
 
-## <a name="cdberrorinfogeterrorinfo"></a><a name="geterrorinfo"></a>CDBErrorInfo:: GetErrorInfo
+## <a name="cdberrorinfogeterrorinfo"></a><a name="geterrorinfo"></a> CDBErrorInfo:: GetErrorInfo
 
 指定されたレコードへの[IErrorInfo](/previous-versions/windows/desktop/ms718112(v=vs.85))インターフェイスポインターを返すために、 [Ierrorrecords:: GetErrorInfo](/previous-versions/windows/desktop/ms711230(v=vs.85))を呼び出します。
 
@@ -183,7 +183,7 @@ HRESULT GetErrorInfo(ULONG ulRecordNum,
 
 標準の HRESULT です。
 
-## <a name="cdberrorinfogeterrorparameters"></a><a name="geterrorparameters"></a>CDBErrorInfo:: GetErrorParameters
+## <a name="cdberrorinfogeterrorparameters"></a><a name="geterrorparameters"></a> CDBErrorInfo:: GetErrorParameters
 
 [Ierrorrecords:: GetErrorParameters](/previous-versions/windows/desktop/ms715793(v=vs.85))を呼び出して、エラーパラメーターを返します。
 
@@ -202,7 +202,7 @@ HRESULT GetErrorParameters(ULONG ulRecordNum,
 
 標準の HRESULT です。
 
-## <a name="cdberrorinfogeterrorrecords"></a><a name="geterrorrecords"></a>CDBErrorInfo:: GetErrorRecords
+## <a name="cdberrorinfogeterrorrecords"></a><a name="geterrorrecords"></a> CDBErrorInfo:: GetErrorRecords
 
 指定したオブジェクトのエラーレコードを取得します。
 
@@ -235,8 +235,8 @@ HRESULT GetErrorRecords(ULONG* pcRecords) throw();
 
 エラー情報を取得するインターフェイスを確認する場合は、関数の最初の形式を使用します。 それ以外の場合は、2番目の形式を使用します。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [DBViewer](../../overview/visual-cpp-samples.md)<br/>
-[OLE DB コンシューマー テンプレートに関するページ](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
-[OLE DB コンシューマー テンプレート リファレンス](../../data/oledb/ole-db-consumer-templates-reference.md)
+[OLE DB コンシューマー テンプレート](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[OLE DB コンシューマーテンプレートリファレンス](../../data/oledb/ole-db-consumer-templates-reference.md)

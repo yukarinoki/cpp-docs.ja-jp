@@ -25,12 +25,12 @@ helpviewer_keywords:
 - debugging [CRT], heap-related problems
 - _heapset function
 ms.assetid: 9667eeb0-55bc-4c19-af5f-d1fd0a142b3c
-ms.openlocfilehash: 2a0aea37237f04939579eb059a42dd33771339ad
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 5bf27ac8287e785b1c799565781842db54edee4d
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81351268"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88837828"
 ---
 # <a name="_heapset"></a>_heapset
 
@@ -49,14 +49,14 @@ int _heapset(
 
 #### <a name="parameters"></a>パラメーター
 
-*埋める*<br/>
+*入力*<br/>
 充填文字。
 
 ## <a name="return-value"></a>戻り値
 
 `_heapset` は、Malloc.h に定義されている次の整数のマニフェスト定数のいずれかを返します。
 
-|||
+|値|説明|
 |-|-|
 | `_HEAPBADBEGIN`  | 初期ヘッダー情報が無効または見つかりません。  |
 | `_HEAPBADNODE`  | ヒープが破損しているか、不適切なノードが見つかりました。  |
@@ -73,7 +73,7 @@ int _heapset(
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|オプション ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|オプション ヘッダー|
 |-------------|---------------------|---------------------|
 |`_heapset`|\<malloc.h>|\<errno.h>|
 
@@ -123,7 +123,7 @@ OK - heap is fine
 
 ## <a name="see-also"></a>関連項目
 
-[メモリ割り当て](../c-runtime-library/memory-allocation.md)<br/>
+[メモリの割り当て](../c-runtime-library/memory-allocation.md)<br/>
 [_heapadd](../c-runtime-library/heapadd.md)<br/>
 [_heapchk](../c-runtime-library/reference/heapchk.md)<br/>
 [_heapmin](../c-runtime-library/reference/heapmin.md)<br/>

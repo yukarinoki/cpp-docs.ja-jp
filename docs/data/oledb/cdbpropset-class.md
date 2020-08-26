@@ -32,12 +32,12 @@ helpviewer_keywords:
 - SetGUID method
 - AddProperty method
 ms.assetid: 54190149-c277-4679-b81a-ef484d4d1c00
-ms.openlocfilehash: 182db37a2a42ec91066b58903c873d3e9c8289f1
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 48aa2e3e26bed7c9306ca3005231e464d7b7555b
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87216493"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88838258"
 ---
 # <a name="cdbpropset-class"></a>CDBPropSet クラス
 
@@ -57,15 +57,15 @@ class CDBPropSet : public tagDBPROPSET
 
 ### <a name="methods"></a>メソッド
 
-|||
+| 名前 | 説明 |
 |-|-|
 |[AddProperty](#addproperty)|プロパティセットにプロパティを追加します。|
 |[CDBPropSet](#cdbpropset)|コンストラクターです。|
 |[SetGUID](#setguid)|`guidPropertySet`構造体のフィールドを設定 `DBPROPSET` します。|
 
-### <a name="operators"></a>オペレーター
+### <a name="operators"></a>演算子
 
-|||
+| 名前 | 説明 |
 |-|-|
 |[operator =](#op_equal)|1つのプロパティセットの内容を別のプロパティに割り当てます。|
 
@@ -73,7 +73,7 @@ class CDBPropSet : public tagDBPROPSET
 
 OLE DB プロバイダーとコンシューマーは、構造体を使用して `DBPROPSET` 構造体の配列を渡し `DBPROP` ます。 各 `DBPROP` 構造体は、設定できる1つのプロパティを表します。
 
-## <a name="cdbpropsetaddproperty"></a><a name="addproperty"></a>CDBPropSet:: AddProperty
+## <a name="cdbpropsetaddproperty"></a><a name="addproperty"></a> CDBPropSet:: AddProperty
 
 プロパティセットにプロパティを追加します。
 
@@ -100,31 +100,31 @@ bool AddProperty(DWORD dwPropertyID,
 から追加するプロパティの ID。 `dwPropertyID` `DBPROP` プロパティセットに追加された構造体のを初期化するために使用します。
 
 *var*<br/>
-から`DBPROP`プロパティセットに追加された構造体のプロパティ値を初期化するために使用されるバリアント。
+から `DBPROP` プロパティセットに追加された構造体のプロパティ値を初期化するために使用されるバリアント。
 
 *szValue*<br/>
-から`DBPROP`プロパティセットに追加された構造体のプロパティ値を初期化するために使用される文字列。
+から `DBPROP` プロパティセットに追加された構造体のプロパティ値を初期化するために使用される文字列。
 
 *bValue*<br/>
-から`BYTE` `DBPROP` プロパティセットに追加された構造体のプロパティ値を初期化するために使用されるまたはブール値。
+から `BYTE` `DBPROP` プロパティセットに追加された構造体のプロパティ値を初期化するために使用されるまたはブール値。
 
 *N 値*<br/>
-から`DBPROP`プロパティセットに追加された構造体のプロパティ値を初期化するために使用される整数値。
+から `DBPROP` プロパティセットに追加された構造体のプロパティ値を初期化するために使用される整数値。
 
 *fltValue*<br/>
-から`DBPROP`プロパティセットに追加された構造体のプロパティ値を初期化するために使用される浮動小数点値。
+から `DBPROP` プロパティセットに追加された構造体のプロパティ値を初期化するために使用される浮動小数点値。
 
 *dblValue*<br/>
-から`DBPROP`プロパティセットに追加された構造体のプロパティ値を初期化するために使用される倍精度浮動小数点値。
+から `DBPROP` プロパティセットに追加された構造体のプロパティ値を初期化するために使用される倍精度浮動小数点値。
 
 *cyValue*<br/>
-から`DBPROP`プロパティセットに追加された構造体のプロパティ値を初期化するために使用される CY の通貨値。
+から `DBPROP` プロパティセットに追加された構造体のプロパティ値を初期化するために使用される CY の通貨値。
 
 ### <a name="return-value"></a>戻り値
 
 **`true`** プロパティが正常に追加された場合は。 それ以外の場合は **`false`** 。
 
-## <a name="cdbpropsetcdbpropset"></a><a name="cdbpropset"></a>CDBPropSet:: CDBPropSet
+## <a name="cdbpropsetcdbpropset"></a><a name="cdbpropset"></a> CDBPropSet:: CDBPropSet
 
 コンストラクターです。 `rgProperties` `cProperties` `guidPropertySet` [DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85))構造体の、、およびの各フィールドを初期化します。
 
@@ -144,9 +144,9 @@ CDBPropSet();
 からフィールドを初期化するために使用される GUID `guidPropertySet` 。
 
 *propset*<br/>
-から`CDBPropSet`コピー構築用の別のオブジェクト。
+から `CDBPropSet` コピー構築用の別のオブジェクト。
 
-## <a name="cdbpropsetsetguid"></a><a name="setguid"></a>CDBPropSet:: SetGUID
+## <a name="cdbpropsetsetguid"></a><a name="setguid"></a> CDBPropSet:: SetGUID
 
 `guidPropertySet`構造体のフィールドを設定 `DBPROPSET` します。
 
@@ -159,13 +159,13 @@ void SetGUID(const GUID& guid) throw();
 #### <a name="parameters"></a>パラメーター
 
 *guid*<br/>
-から`guidPropertySet` [DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85))構造体のフィールドを設定するために使用される GUID。
+から `guidPropertySet` [DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85)) 構造体のフィールドを設定するために使用される GUID。
 
 ### <a name="remarks"></a>解説
 
-このフィールドは、[コンストラクター](../../data/oledb/cdbpropset-cdbpropset.md)でも設定できます。
+このフィールドは、 [コンストラクター](../../data/oledb/cdbpropset-cdbpropset.md) でも設定できます。
 
-## <a name="cdbpropsetoperator-"></a><a name="op_equal"></a>CDBPropSet:: operator =
+## <a name="cdbpropsetoperator-"></a><a name="op_equal"></a> CDBPropSet:: operator =
 
 1つのプロパティセットの内容を別のプロパティセットに割り当てます。
 

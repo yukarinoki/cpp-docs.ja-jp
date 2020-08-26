@@ -29,29 +29,29 @@ helpviewer_keywords:
 - std::bit_xor [C++]
 - std::cref [C++]
 ms.assetid: c34d0b45-50a7-447a-9368-2210d06339a4
-ms.openlocfilehash: 472200d6941867387d99ab52c08a70467f802f62
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 5e3aa35395c8fd5a42d7127d0b6072a3edf4ace5
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87219119"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88838088"
 ---
 # <a name="ltfunctionalgt-functions"></a>&lt;functional&gt; 関数
 
 これらの関数は C++ 11 で非推奨とされ、C++ 17 では削除されています。
 
-||||
-|-|-|-|
-|[bind1st](#bind1st) |[bind2nd](#bind2nd)|[mem_fun](#mem_fun)|
-|[mem_fun_ref](#mem_fun_ref)|[ptr_fun](#ptr_fun)||
+[bind1st](#bind1st)\
+[bind2nd](#bind2nd)\
+[mem_fun](#mem_fun)\
+[mem_fun_ref](#mem_fun_ref)\
+[ptr_fun](#ptr_fun)
 
 これらの関数は C++ 17 では非推奨とされます。
 
-|||
-|-|-|
-|[not1](#not1)|[not2](#not2)|
+[not1](#not1)\
+[not2](#not2)
 
-## <a name="bind"></a><a name="bind"></a>束縛
+## <a name="bind"></a><a name="bind"></a> 束縛
 
 呼び出し可能オブジェクトに引数をバインドします。
 
@@ -152,7 +152,7 @@ int main()
 3^2 == 9
 ```
 
-## <a name="bind1st"></a><a name="bind1st"></a>bind1st
+## <a name="bind1st"></a><a name="bind1st"></a> bind1st
 
 二項関数オブジェクトを単項関数オブジェクトに変換するアダプターを作成するヘルパーテンプレート関数。 このメソッドは、二項関数の最初の引数を指定された値にバインドします。 C++ 11 では非推奨となりました。 C++ 17 では削除されています。
 
@@ -171,7 +171,7 @@ template <class Operation, class Type>
 
 ### <a name="return-value"></a>戻り値
 
-二項関数オブジェクトの最初の引数を*左*の値にバインドした結果として生成される単項関数オブジェクト。
+二項関数オブジェクトの最初の引数を *左*の値にバインドした結果として生成される単項関数オブジェクト。
 
 ### <a name="remarks"></a>解説
 
@@ -246,7 +246,7 @@ The number of elements in v1 greater than 5 is: 4.
 The number of elements in v1 less than 10 is: 2.
 ```
 
-## <a name="bind2nd"></a><a name="bind2nd"></a>bind2nd
+## <a name="bind2nd"></a><a name="bind2nd"></a> bind2nd
 
 二項関数オブジェクトを単項関数オブジェクトに変換するアダプターを作成するヘルパーテンプレート関数。 二項関数の2番目の引数を指定された値にバインドします。 C++ 11 では非推奨となりました。 C++ 17 では削除されています。
 
@@ -265,7 +265,7 @@ template <class Operation, class Type>
 
 ### <a name="return-value"></a>戻り値
 
-二項関数オブジェクトの2番目の引数を*right*にバインドした単項関数オブジェクトの結果。
+二項関数オブジェクトの2番目の引数を *right*にバインドした単項関数オブジェクトの結果。
 
 ### <a name="remarks"></a>解説
 
@@ -340,7 +340,7 @@ The number of elements in v1 greater than 15 is: 2.
 The number of elements in v1 less than 10 is: 2.
 ```
 
-## <a name="bit_and"></a><a name="bit_and"></a>bit_and
+## <a name="bit_and"></a><a name="bit_and"></a> bit_and
 
 引数に対してビットごとの AND 演算 (二項) を実行する定義済みの関数オブジェクト `operator&` 。
 
@@ -368,10 +368,10 @@ struct bit_and<void>
 指定または推論された型のオペランドを受け取る `operator&` をサポートする任意の型。
 
 *左側*\
-ビットごとの AND 演算の左オペランド。 非特殊テンプレートは、type*型*の左辺値参照引数を受け取ります。 特殊化されたテンプレートは、推論された型*T*の左辺値および右辺値参照引数の完全転送を行います。
+ビットごとの AND 演算の左オペランド。 非特殊テンプレートは、type *型*の左辺値参照引数を受け取ります。 特殊化されたテンプレートは、推論された型 *T*の左辺値および右辺値参照引数の完全転送を行います。
 
 *そうです*\
-ビットごとの AND 演算の右オペランド。 非特殊テンプレートは、type*型*の左辺値参照引数を受け取ります。 特殊化されたテンプレートは、推論された型*U*の左辺値および右辺値参照引数の完全転送を行います。
+ビットごとの AND 演算の右オペランド。 非特殊テンプレートは、type *型*の左辺値参照引数を受け取ります。 特殊化されたテンプレートは、推論された型 *U*の左辺値および右辺値参照引数の完全転送を行います。
 
 ### <a name="return-value"></a>戻り値
 
@@ -381,7 +381,7 @@ struct bit_and<void>
 
 `bit_and` ファンクターは、基本データ型の整数型、または二項 `operator&` を実装しているユーザー定義型に制限されます。
 
-## <a name="bit_not"></a><a name="bit_not"></a>bit_not
+## <a name="bit_not"></a><a name="bit_not"></a> bit_not
 
 引数に対してビットごとの補数 (NOT) 演算 (単項) を実行する定義済みの関数オブジェクト `operator~` 。 C++ 14 で追加されました。
 
@@ -407,7 +407,7 @@ struct bit_not<void>
 単項 `operator~` をサポートする型。
 
 *そうです*\
-ビットごとの補数演算の右オペランド。 非特殊テンプレートは、type*型*の左辺値参照引数を受け取ります。 特殊化されたテンプレートは、推論された型の*型*の左辺値または右辺値参照引数の完全転送を行います。
+ビットごとの補数演算の右オペランド。 非特殊テンプレートは、type *型*の左辺値参照引数を受け取ります。 特殊化されたテンプレートは、推論された型の *型*の左辺値または右辺値参照引数の完全転送を行います。
 
 ### <a name="return-value"></a>戻り値
 
@@ -417,7 +417,7 @@ struct bit_not<void>
 
 `bit_not` ファンクターは、基本データ型の整数型、または二項 `operator~` を実装しているユーザー定義型に制限されます。
 
-## <a name="bit_or"></a><a name="bit_or"></a>bit_or
+## <a name="bit_or"></a><a name="bit_or"></a> bit_or
 
 引数に対してビットごとの OR 演算 () を実行する定義済みの関数オブジェクト `operator|` 。
 
@@ -445,10 +445,10 @@ struct bit_or<void>
 指定または推論された型のオペランドを受け取る `operator|` をサポートする任意の型。
 
 *左側*\
-ビットごとの OR 演算の左オペランド。 非特殊テンプレートは、type*型*の左辺値参照引数を受け取ります。 特殊化されたテンプレートは、推論された型*T*の左辺値および右辺値参照引数の完全転送を行います。
+ビットごとの OR 演算の左オペランド。 非特殊テンプレートは、type *型*の左辺値参照引数を受け取ります。 特殊化されたテンプレートは、推論された型 *T*の左辺値および右辺値参照引数の完全転送を行います。
 
 *そうです*\
-ビットごとの OR 演算の右オペランド。 非特殊テンプレートは、type*型*の左辺値参照引数を受け取ります。 特殊化されたテンプレートは、推論された型*U*の左辺値および右辺値参照引数の完全転送を行います。
+ビットごとの OR 演算の右オペランド。 非特殊テンプレートは、type *型*の左辺値参照引数を受け取ります。 特殊化されたテンプレートは、推論された型 *U*の左辺値および右辺値参照引数の完全転送を行います。
 
 ### <a name="return-value"></a>戻り値
 
@@ -458,7 +458,7 @@ struct bit_or<void>
 
 `bit_or` ファンクターは、基本データ型の整数型、または `operator|` を実装しているユーザー定義型に制限されます。
 
-## <a name="bit_xor"></a><a name="bit_xor"></a>bit_xor
+## <a name="bit_xor"></a><a name="bit_xor"></a> bit_xor
 
 引数に対してビットごとの XOR 演算 (二項) を実行する定義済みの関数オブジェクト `operator^` 。
 
@@ -486,10 +486,10 @@ struct bit_xor<void>
 指定または推論された型のオペランドを受け取る `operator^` をサポートする任意の型。
 
 *左側*\
-ビットごとの XOR 演算の左オペランド。 非特殊テンプレートは、type*型*の左辺値参照引数を受け取ります。 特殊化されたテンプレートは、推論された型*T*の左辺値および右辺値参照引数の完全転送を行います。
+ビットごとの XOR 演算の左オペランド。 非特殊テンプレートは、type *型*の左辺値参照引数を受け取ります。 特殊化されたテンプレートは、推論された型 *T*の左辺値および右辺値参照引数の完全転送を行います。
 
 *そうです*\
-ビットごとの XOR 演算の右オペランド。 非特殊テンプレートは、type*型*の左辺値参照引数を受け取ります。 特殊化されたテンプレートは、推論された型*U*の左辺値および右辺値参照引数の完全転送を行います。
+ビットごとの XOR 演算の右オペランド。 非特殊テンプレートは、type *型*の左辺値参照引数を受け取ります。 特殊化されたテンプレートは、推論された型 *U*の左辺値および右辺値参照引数の完全転送を行います。
 
 ### <a name="return-value"></a>戻り値
 
@@ -499,7 +499,7 @@ struct bit_xor<void>
 
 `bit_xor` ファンクターは、基本データ型の整数型、または二項 `operator^` を実装しているユーザー定義型に制限されます。
 
-## <a name="cref"></a><a name="cref"></a>cref
+## <a name="cref"></a><a name="cref"></a> cref
 
 引数から const の `reference_wrapper` を構築します。
 
@@ -555,7 +555,7 @@ cref(i) = 1
 cref(neg)(i) = -1
 ```
 
-## <a name="invoke"></a><a name="invoke"></a>スタンド
+## <a name="invoke"></a><a name="invoke"></a> スタンド
 
 指定された引数を使用して、呼び出し可能なオブジェクトを呼び出します。 C++ 17 で追加されました。
 
@@ -594,9 +594,9 @@ invoke_result_t<Callable, Args...>
 
 - `t1.*f`。N == 1 で、`f` がクラス `T` のメンバー データへのポインターであり、`t1` が型 `T` のオブジェクト、型 `T` のオブジェクトへの参照、`T` から派生した型のオブジェクトへの参照のいずれかである場合。  つまり、 `std::is_base_of<T, std::decay_t<decltype(t1)>>::value` が true の場合。
 
-- `t1.get().*f`N = = 1 で、 `f` がクラスのメンバーデータへのポインターで `T` あり、が特殊化されている場合 `std::decay_t<decltype(t1)>` `std::reference_wrapper` 。
+- `t1.get().*f` N = = 1 で、 `f` がクラスのメンバーデータへのポインターで `T` あり、が特殊化されている場合 `std::decay_t<decltype(t1)>` `std::reference_wrapper` 。
 
-- `(*t1).*f`N = = 1 で、 `f` がクラスのメンバーデータへのポインターで `T` `t1` あり、以前の型の1つではない場合。
+- `(*t1).*f` N = = 1 で、 `f` がクラスのメンバーデータへのポインターで `T` `t1` あり、以前の型の1つではない場合。
 
 - 他のすべての場合は `f(t1, t2, ..., tN)`。
 
@@ -676,7 +676,7 @@ pd->n_: 42
 42 is divisible by 7.
 ```
 
-## <a name="mem_fn"></a><a name="mem_fn"></a>mem_fn
+## <a name="mem_fn"></a><a name="mem_fn"></a> mem_fn
 
 単純な呼び出しラッパーを生成します。
 
@@ -739,9 +739,9 @@ int main()
 3*2 == 6
 ```
 
-## <a name="mem_fun"></a><a name="mem_fun"></a>mem_fun
+## <a name="mem_fun"></a><a name="mem_fun"></a> mem_fun
 
-ポインター引数による初期化を行うときに、メンバー関数の関数オブジェクト アダプターを作成するために使用されるヘルパー テンプレート関数。 C++ 11 で[mem_fn](#mem_fn)および[バインド](#bind)用に非推奨となり、c++ 17 で削除されました。
+ポインター引数による初期化を行うときに、メンバー関数の関数オブジェクト アダプターを作成するために使用されるヘルパー テンプレート関数。 C++ 11 で [mem_fn](#mem_fn) および [バインド](#bind)用に非推奨となり、c++ 17 で削除されました。
 
 ```cpp
 template <class Result, class Type>
@@ -764,7 +764,7 @@ const_mem_fun1_t<Result, Type, Arg> mem_fun(Result (Type::* pMem)(Arg) const);
 
 ### <a name="return-value"></a>戻り値
 
-また **`const`** は**non_const**型または型の関数オブジェクト `mem_fun_t` `mem_fun1_t` 。
+また **`const`** は **non_const** 型または型の関数オブジェクト `mem_fun_t` `mem_fun1_t` 。
 
 ### <a name="example"></a>例
 
@@ -826,7 +826,7 @@ int main( )
 }
 ```
 
-## <a name="mem_fun_ref"></a><a name="mem_fun_ref"></a>mem_fun_ref
+## <a name="mem_fun_ref"></a><a name="mem_fun_ref"></a> mem_fun_ref
 
 参照引数を使用して初期化を行うときに、メンバー関数の関数オブジェクト アダプターを作成するために使用されるヘルパー テンプレート関数。 C++ 11 では非推奨となりました。 C++ 17 では削除されています。
 
@@ -931,9 +931,9 @@ The original values stored in v2 are: 1 2 3 4 5 6 7 8 9 10 11 12 13
 With the even numbers removed, the remaining values are: 1 3 5 7 9 11 13
 ```
 
-## <a name="not1"></a><a name="not1"></a>not1
+## <a name="not1"></a><a name="not1"></a> not1
 
-単項述語の補数を返します。 C++ 17 の[not_fn](#not_fn)では非推奨とされます。
+単項述語の補数を返します。 C++ 17 の [not_fn](#not_fn) では非推奨とされます。
 
 ```cpp
 template <class UnaryPredicate>
@@ -1003,9 +1003,9 @@ The number of elements in v1 greater than 10 is: 5.
 The number of elements in v1 not greater than 10 is: 3.
 ```
 
-## <a name="not2"></a><a name="not2"></a>not2
+## <a name="not2"></a><a name="not2"></a> not2
 
-二項述語の補数を返します。 C++ 17 の[not_fn](#not_fn)では非推奨とされます。
+二項述語の補数を返します。 C++ 17 の [not_fn](#not_fn) では非推奨とされます。
 
 ```cpp
 template <class BinaryPredicate>
@@ -1079,9 +1079,9 @@ Sorted vector v1 = ( 41 6262 6262 6334 18467 19169 26500 )
 Resorted vector v1 = ( 26500 19169 18467 6334 6262 6262 41 )
 ```
 
-## <a name="not_fn"></a><a name="not_fn"></a>not_fn
+## <a name="not_fn"></a><a name="not_fn"></a> not_fn
 
-`not_fn`関数テンプレートは、呼び出し可能オブジェクトを受け取り、呼び出し可能オブジェクトを返します。 返された呼び出し可能オブジェクトは、後でいくつかの引数を使用して呼び出されると、元の呼び出し可能オブジェクトに渡され、結果は論理的に否定されます。 このメソッドは、ラップされた呼び出し可能オブジェクトの const 修飾子と値カテゴリの動作を保持します。 `not_fn`は c++ 17 で新しく追加されたもので、非推奨の、 `std::not1` `std::not2` 、 `std::unary_negate` 、およびを置き換え `std::binary_negate` ます。
+`not_fn`関数テンプレートは、呼び出し可能オブジェクトを受け取り、呼び出し可能オブジェクトを返します。 返された呼び出し可能オブジェクトは、後でいくつかの引数を使用して呼び出されると、元の呼び出し可能オブジェクトに渡され、結果は論理的に否定されます。 このメソッドは、ラップされた呼び出し可能オブジェクトの const 修飾子と値カテゴリの動作を保持します。 `not_fn` は c++ 17 で新しく追加されたもので、非推奨の、 `std::not1` `std::not2` 、 `std::unary_negate` 、およびを置き換え `std::binary_negate` ます。
 
 ```cpp
 template <class Callable>
@@ -1124,7 +1124,7 @@ private:
 };
 ```
 
-呼び出し可能オブジェクトの*func*の明示的なコンストラクターは、 `std::decay_t<Callable>` の要件を満たす型を必要 `MoveConstructible` とし、 `is_constructible_v<FD, Callable>` true である必要があります。 このメソッドは、ラップされた呼び出し可能オブジェクトを `fd` から初期化 `std::forward<Callable>(func)` し、の構築によってスローされた例外をスローし `fd` ます。
+呼び出し可能オブジェクトの *func* の明示的なコンストラクターは、 `std::decay_t<Callable>` の要件を満たす型を必要 `MoveConstructible` とし、 `is_constructible_v<FD, Callable>` true である必要があります。 このメソッドは、ラップされた呼び出し可能オブジェクトを `fd` から初期化 `std::forward<Callable>(func)` し、の構築によってスローされた例外をスローし `fd` ます。
 
 ラッパーは、次に示すように、左辺値または右辺値参照カテゴリおよび const 修飾子によって識別される呼び出し演算子を公開します。
 
@@ -1179,7 +1179,7 @@ Elements divisible by three: 2
 Elements not divisible by three: 5
 ```
 
-## <a name="ptr_fun"></a><a name="ptr_fun"></a>ptr_fun
+## <a name="ptr_fun"></a><a name="ptr_fun"></a> ptr_fun
 
 単項関数ポインターと二項関数ポインターをそれぞれ適応性のある単項関数および二項関数に変換するために使用されるヘルパー テンプレート関数。 C++ 11 では非推奨となりました。 C++ 17 では削除されています。
 
@@ -1200,7 +1200,7 @@ pointer_to_binary_function<Arg1, Arg2, Result, Result (*)(Arg1, Arg2)> ptr_fun(R
 
 1つ目のテンプレート関数は、単項関数[pointer_to_unary_function](../standard-library/pointer-to-unary-function-class.md)  < `Arg` 、 **Result**> () を返し \* `pfunc` ます。
 
-2番目のテンプレート関数は、バイナリ関数[pointer_to_binary_function](../standard-library/pointer-to-binary-function-class.md) \<**Arg1**, **Arg2**, **Result**> () を返し \* `pfunc` ます。
+2番目のテンプレート関数は、バイナリ関数 [pointer_to_binary_function](../standard-library/pointer-to-binary-function-class.md) \<**Arg1**, **Arg2**, **Result**> () を返し \* `pfunc` ます。
 
 ### <a name="remarks"></a>解説
 
@@ -1210,7 +1210,7 @@ pointer_to_binary_function<Arg1, Arg2, Result, Result (*)(Arg1, Arg2)> ptr_fun(R
 
 [!code-cpp[functional_ptr_fun#1](../standard-library/codesnippet/CPP/functional-functions_1.cpp)]
 
-## <a name="ref"></a><a name="ref"></a>リファレンス
+## <a name="ref"></a><a name="ref"></a> リファレンス
 
 引数から `reference_wrapper` を構築します。
 
@@ -1302,7 +1302,7 @@ tiger lion cougar
 tiger cougar
 ```
 
-## <a name="swap"></a><a name="swap"></a>フォト
+## <a name="swap"></a><a name="swap"></a> フォト
 
 2 つの `function` オブジェクトを交換します。
 

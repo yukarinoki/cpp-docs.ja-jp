@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - ostream header
 ms.assetid: 90c3b6fb-57cd-4ae7-99b8-8512f24a67d2
-ms.openlocfilehash: 37642cbcbe57fba54f071a8fc94af53c97684a36
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: ffcb6c7b2f95b0b62659f6080c9ed0d1f111237c
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87228142"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88846395"
 ---
 # <a name="ltostreamgt"></a>&lt;ostream&gt;
 
-Iostreams の挿入を仲介するクラステンプレート[basic_ostream](../standard-library/basic-ostream-class.md)を定義します。 ヘッダーは、関連する複数のマニピュレーターを定義します  (通常このヘッダーは、別の iostream ヘッダーに含まれています。 まれに、直接含めなければならないことがあります)。
+Iostreams の挿入を仲介するクラステンプレート [basic_ostream](../standard-library/basic-ostream-class.md)を定義します。 ヘッダーは、関連する複数のマニピュレーターを定義します  (通常このヘッダーは、別の iostream ヘッダーに含まれています。 まれに、直接含めなければならないことがあります)。
 
 ## <a name="syntax"></a>構文
 
@@ -34,22 +34,22 @@ Iostreams の挿入を仲介するクラステンプレート[basic_ostream](../
 
 ### <a name="manipulators"></a>マニピュレーター
 
-|||
+|名前|説明|
 |-|-|
 |[endl](../standard-library/ostream-functions.md#endl)|行を終了し、バッファーをフラッシュします。|
 |[端](../standard-library/ostream-functions.md#ends)|文字列を終了します。|
 |[揃える](../standard-library/ostream-functions.md#flush)|バッファーをフラッシュします。|
 |[スワップ](../standard-library/ostream-functions.md#swap)|左側の `basic_ostream` オブジェクト パラメーターの値と右側の `basic_ostream` オブジェクト パラメーターの値を交換します。|
 
-### <a name="operators"></a>オペレーター
+### <a name="operators"></a>演算子
 
-|演算子|Description|
+|演算子|説明|
 |-|-|
-|[<<演算子](../standard-library/ostream-operators.md#op_lt_lt)|さまざまな型をストリームに書き込みます。|
+|[<<演算子 ](../standard-library/ostream-operators.md#op_lt_lt)|さまざまな型をストリームに書き込みます。|
 
 ### <a name="classes"></a>クラス
 
-|クラス|[説明]|
+|クラス|説明|
 |-|-|
 |[basic_ostream](../standard-library/basic-ostream-class.md)|クラステンプレートは、要素とエンコードされたオブジェクトのストリームバッファーへの挿入を制御するオブジェクトを表します。|
 

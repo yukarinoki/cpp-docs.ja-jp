@@ -8,12 +8,12 @@ helpviewer_keywords:
 - data binding [C++], columns in recordsets
 - columns [C++], binding to recordsets
 ms.assetid: bff67254-d953-4ae4-9716-91c348cb840b
-ms.openlocfilehash: f00fb92726cc37fe2bb0e95dc36e5fc1b6df201d
-ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
+ms.openlocfilehash: 8bc9ba8a143234bec7927c9578a69a95a511bb9f
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86403869"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88837789"
 ---
 # <a name="recordset-dynamically-binding-data-columns-odbc"></a>レコードセット: データ列を動的に結びつける方法 (ODBC)
 
@@ -26,7 +26,7 @@ ms.locfileid: "86403869"
 - [実行時に列を動的にバインドする方法](#_core_how_to_bind_columns_dynamically)。
 
 > [!NOTE]
-> このトピックの内容は、バルク行フェッチが実装されていない `CRecordset` の派生オブジェクトを対象にしています。 バルク行フェッチを使っている場合、説明する手法は一般に推奨されません。 バルク行フェッチの詳細については、「レコード[セット: バルクデータフェッチ (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)」を参照してください。
+> このトピックの内容は、バルク行フェッチが実装されていない `CRecordset` の派生オブジェクトを対象にしています。 バルク行フェッチを使っている場合、説明する手法は一般に推奨されません。 バルク行フェッチの詳細については、「レコード [セット: バルクデータフェッチ (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)」を参照してください。
 
 ## <a name="when-you-might-bind-columns-dynamically"></a><a name="_core_when_you_might_bind_columns_dynamically"></a> どのようなときに列を動的にバインドするか
 
@@ -92,12 +92,12 @@ ms.locfileid: "86403869"
 
 処理する必要がある 4 つのリストを次の表に示します。
 
-|||
-|-|-|
-|**Current-Table-Columns**| (図のリスト 1) データ ソースのテーブルに現在存在する列のリスト。 このリストは、レコードセットで現在バインドされている列のリストと一致する場合があります。|
-|**Bound-Recordset-Columns**| (図のリスト 2) レコードセットでバインドされている列のリスト。 `DoFieldExchange` 関数にはこれらの列の RFX ステートメントが既にあります。|
-|**Columns-To-Bind-Dynamically**| (図のリスト 3) テーブルにはあるがレコードセットにはない列のリスト。 これらは動的にバインドする列です。|
-|**Dynamic-Column-Values**| (図のリスト 4) 動的にバインドする列から取得された値のための記憶域が含まれるリスト。 このリストの要素は、Columns-to-Bind-Dynamically の要素と一対一に対応します。|
+| List | 説明 |
+|--|--|
+| **Current-Table-Columns** | (図のリスト 1) データ ソースのテーブルに現在存在する列のリスト。 このリストは、レコードセットで現在バインドされている列のリストと一致する場合があります。 |
+| **Bound-Recordset-Columns** | (図のリスト 2) レコードセットでバインドされている列のリスト。 `DoFieldExchange` 関数にはこれらの列の RFX ステートメントが既にあります。 |
+| **Columns-To-Bind-Dynamically** | (図のリスト 3) テーブルにはあるがレコードセットにはない列のリスト。 これらは動的にバインドする列です。 |
+| **Dynamic-Column-Values** | (図のリスト 4) 動的にバインドする列から取得された値のための記憶域が含まれるリスト。 このリストの要素は、Columns-to-Bind-Dynamically の要素と一対一に対応します。 |
 
 ### <a name="building-your-lists"></a><a name="_core_building_your_lists"></a> リストの構築
 

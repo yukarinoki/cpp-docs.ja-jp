@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::fisher_f_distribution [C++], param_type
 - std::fisher_f_distribution [C++], param_type
 ms.assetid: 9513b6ce-3309-4be1-829b-f504bca35bbf
-ms.openlocfilehash: 0401d2e9b5849bdd9f00628107a142606f5f6933
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 6f8c60b5f4523caf19e432ff853d49ad57fd277a
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87219132"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88835806"
 ---
 # <a name="fisher_f_distribution-class"></a>fisher_f_distribution クラス
 
@@ -79,10 +79,8 @@ public:
 
 クラステンプレートは、 **`double`** フィッシャーの F 分布に従って分布した、ユーザー指定の浮動小数点型の値または型の値 (指定がない場合) を生成する分布を表します。 次の表は、個々のメンバーに関する記事にリンクしています。
 
-||||
-|-|-|-|
-|[fisher_f_distribution](#fisher_f_distribution)|`fisher_f_distribution::m`|`fisher_f_distribution::param`|
-|`fisher_f_distribution::operator()`|`fisher_f_distribution::n`|[param_type](#param_type)|
+[fisher_f_distribution](#fisher_f_distribution)\
+[param_type](#param_type)
 
 プロパティ関数 `m()` および `n()` は、格納されている分布パラメーター `m` および `n` に対してそれぞれの値を返します。
 
@@ -237,7 +235,7 @@ Distribution for 10 samples:
 
 **名前空間:** std
 
-## <a name="fisher_f_distributionfisher_f_distribution"></a><a name="fisher_f_distribution"></a>fisher_f_distribution:: fisher_f_distribution
+## <a name="fisher_f_distributionfisher_f_distribution"></a><a name="fisher_f_distribution"></a> fisher_f_distribution:: fisher_f_distribution
 
 分布を作成します。
 
@@ -265,7 +263,7 @@ explicit fisher_f_distribution(const param_type& parm);
 
 2 つ目のコンストラクターは、格納されているパラメーターが *parm* から初期化されるオブジェクトを作成します。 `param()` メンバー関数を呼び出すと、既存の分布の現在のパラメーターを取得および設定できます。
 
-## <a name="fisher_f_distributionparam_type"></a><a name="param_type"></a>fisher_f_distribution::p aram_type
+## <a name="fisher_f_distributionparam_type"></a><a name="param_type"></a> fisher_f_distribution::p aram_type
 
 分布のパラメーターを格納します。
 

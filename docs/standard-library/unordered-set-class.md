@@ -134,12 +134,12 @@ helpviewer_keywords:
 - std::unordered_set::size
 - std::unordered_set::swap
 ms.assetid: ac08084e-05a7-48c0-9ae4-d40c529922dd
-ms.openlocfilehash: 9a19567b5878853d1fdfa86948ff1eeb37794089
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 5eb8a6902324ee069ff275e77b97703ba6ba3356
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87215505"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88839518"
 ---
 # <a name="unordered_set-class"></a>unordered_set クラス
 
@@ -174,7 +174,7 @@ class unordered_set;
 
 ### <a name="typedefs"></a>Typedefs
 
-|||
+|名前|説明|
 |-|-|
 |[allocator_type](#allocator_type)|ストレージを管理するためのアロケーターの型です。|
 |[const_iterator](#const_iterator)|被制御シーケンスの定数反復子の型です。|
@@ -192,12 +192,12 @@ class unordered_set;
 |[size_type](#size_type)|2 つの要素間の距離を表す、符号なしの型です。|
 |[value_type](#value_type)|要素の型。|
 
-### <a name="functions"></a>関数
+### <a name="functions"></a>Functions
 
-|||
+|名前|説明|
 |-|-|
 |[初め](#begin)|被制御シーケンスの先頭を指定します。|
-|[bucket](#bucket)|キー値のバケット番号を取得します。|
+|[つぶし](#bucket)|キー値のバケット番号を取得します。|
 |[bucket_count](#bucket_count)|バケット数を取得します。|
 |[bucket_size](#bucket_size)|バケットのサイズを取得します。|
 |[cbegin](#cbegin)|被制御シーケンスの先頭を指定します。|
@@ -224,15 +224,15 @@ class unordered_set;
 |[スワップ](#swap)|2 つのコンテナーのコンテンツを交換します。|
 |[unordered_set](#unordered_set)|コンテナー オブジェクトを構築します。|
 
-### <a name="operators"></a>オペレーター
+### <a name="operators"></a>演算子
 
-|||
+|名前|説明|
 |-|-|
 |[unordered_set:: operator =](#op_eq)|ハッシュ テーブルをコピーします。|
 
 ## <a name="remarks"></a>解説
 
-オブジェクトは、格納されている2つのオブジェクト、型[unordered_set:: key_equal](#key_equal)の比較関数オブジェクト、および[unordered_set:: hasher](#hasher)型のハッシュ関数オブジェクトを呼び出すことによって、制御するシーケンスを並べ替えます。 最初に格納されたオブジェクトにアクセスするには、メンバー関数[unordered_set:: key_eq](#key_eq)を呼び出します。次に、 `()` メンバー関数[unordered_set:: hash_function](#hash)を呼び出して、2番目に格納されているオブジェクトにアクセスし `()` ます。 具体的には、`X` 型のすべての値 `Y` と `Key` について、`key_eq()(X, Y)` が呼び出され、2 つの引数値の大小関係が等しい場合は true が返されます。`hash_function()(keyval)` の呼び出しからは、`size_t` 型の値の分布が生成されます。 クラステンプレート[Unordered_multiset クラス](../standard-library/unordered-multiset-class.md)とは異なり、型のオブジェクトは、 `unordered_set` `key_eq()(X, Y)` 被制御シーケンスの任意の2つの要素に対して常に false になります。 キーの重複は許されません。
+オブジェクトは、格納されている2つのオブジェクト、型 [unordered_set:: key_equal](#key_equal) の比較関数オブジェクト、および [unordered_set:: hasher](#hasher)型のハッシュ関数オブジェクトを呼び出すことによって、制御するシーケンスを並べ替えます。 最初に格納されたオブジェクトにアクセスするには、メンバー関数[unordered_set:: key_eq](#key_eq)を呼び出します。次に、 `()` メンバー関数[unordered_set:: hash_function](#hash)を呼び出して、2番目に格納されているオブジェクトにアクセスし `()` ます。 具体的には、`X` 型のすべての値 `Y` と `Key` について、`key_eq()(X, Y)` が呼び出され、2 つの引数値の大小関係が等しい場合は true が返されます。`hash_function()(keyval)` の呼び出しからは、`size_t` 型の値の分布が生成されます。 クラステンプレート [Unordered_multiset クラス](../standard-library/unordered-multiset-class.md)とは異なり、型のオブジェクトは、 `unordered_set` `key_eq()(X, Y)` 被制御シーケンスの任意の2つの要素に対して常に false になります。 キーの重複は許されません。
 
 このオブジェクトには、さらに、適切とされるバケットあたりの最大平均要素数を指定する最大テーブル占有率が格納されます。 要素を挿入することによって[unordered_set:: load_factor](#load_factor)が `()` 最大占有率を超える場合、コンテナーはバケット数を増やし、必要に応じてハッシュテーブルを再構築します。
 
@@ -240,7 +240,7 @@ class unordered_set;
 
 オブジェクトは、 [unordered_set:: allocator_type](#allocator_type)型の格納されたアロケーターオブジェクトを介して制御するシーケンスのストレージを割り当てて解放します。 このようなアロケーターオブジェクトは、型のオブジェクトと同じ外部インターフェイスを持っている必要があり `allocator` ます。 コンテナー オブジェクトを代入しても、格納されているアロケーター オブジェクトはコピーされない点に注意してください。
 
-## <a name="unordered_setallocator_type"></a><a name="allocator_type"></a>unordered_set:: allocator_type
+## <a name="unordered_setallocator_type"></a><a name="allocator_type"></a> unordered_set:: allocator_type
 
 ストレージを管理するためのアロケーターの型です。
 
@@ -278,7 +278,7 @@ int main()
 al == std::allocator() is true
 ```
 
-## <a name="begin"></a><a name="begin"></a>初め
+## <a name="begin"></a><a name="begin"></a> 初め
 
 被制御シーケンスまたはバケットの先頭を指定します。
 
@@ -299,7 +299,7 @@ const_local_iterator begin(size_type nbucket) const;
 
 ### <a name="remarks"></a>解説
 
-最初の 2 つのメンバー関数は、シーケンスの最初の要素 (または空のシーケンスの末尾の次の位置) を示す前方反復子を返します。 最後の2つのメンバー関数は、バケット*nbucket*の最初の要素 (または空のバケットの末尾の次の位置) を示す前方反復子を返します。
+最初の 2 つのメンバー関数は、シーケンスの最初の要素 (または空のシーケンスの末尾の次の位置) を示す前方反復子を返します。 最後の2つのメンバー関数は、バケット *nbucket* の最初の要素 (または空のバケットの末尾の次の位置) を示す前方反復子を返します。
 
 ### <a name="example"></a>例
 
@@ -357,7 +357,7 @@ int main()
 [a]
 ```
 
-## <a name="bucket"></a><a name="bucket"></a>つぶし
+## <a name="bucket"></a><a name="bucket"></a> つぶし
 
 キー値のバケット番号を取得します。
 
@@ -372,7 +372,7 @@ size_type bucket(const Key& keyval) const;
 
 ### <a name="remarks"></a>解説
 
-このメンバー関数は、キー値*keyval*に現在対応しているバケット番号を返します。
+このメンバー関数は、キー値 *keyval*に現在対応しているバケット番号を返します。
 
 ### <a name="example"></a>例
 
@@ -412,7 +412,7 @@ bucket('a') == 7
 bucket_size(7) == 1
 ```
 
-## <a name="bucket_count"></a><a name="bucket_count"></a>bucket_count
+## <a name="bucket_count"></a><a name="bucket_count"></a> bucket_count
 
 バケット数を取得します。
 
@@ -497,7 +497,7 @@ max_bucket_count() == 128
 max_load_factor() == 0.1
 ```
 
-## <a name="bucket_size"></a><a name="bucket_size"></a>bucket_size
+## <a name="bucket_size"></a><a name="bucket_size"></a> bucket_size
 
 バケットのサイズを取得します。
 
@@ -512,7 +512,7 @@ size_type bucket_size(size_type nbucket) const;
 
 ### <a name="remarks"></a>解説
 
-このメンバー関数は、バケット数*nbucket*のサイズを返します。
+このメンバー関数は、バケット数 *nbucket*のサイズを返します。
 
 ### <a name="example"></a>例
 
@@ -552,7 +552,7 @@ bucket('a') == 7
 bucket_size(7) == 1
 ```
 
-## <a name="cbegin"></a><a name="cbegin"></a>cbegin
+## <a name="cbegin"></a><a name="cbegin"></a> cbegin
 
 **`const`** 範囲内の最初の要素を指す反復子を返します。
 
@@ -578,7 +578,7 @@ auto i2 = Container.cbegin();
 // i2 isContainer<T>::const_iterator
 ```
 
-## <a name="cend"></a><a name="cend"></a>cend
+## <a name="cend"></a><a name="cend"></a> cend
 
 **`const`** 範囲内の最後の要素の次の位置を指す反復子を返します。
 
@@ -606,7 +606,7 @@ auto i2 = Container.cend();
 
 `cend` によって返された値は逆参照しないでください。
 
-## <a name="clear"></a><a name="clear"></a>クリア
+## <a name="clear"></a><a name="clear"></a> クリア
 
 すべての要素を削除します。
 
@@ -670,7 +670,7 @@ size == 2
 empty() == false
 ```
 
-## <a name="const_iterator"></a><a name="const_iterator"></a>const_iterator
+## <a name="const_iterator"></a><a name="const_iterator"></a> const_iterator
 
 被制御シーケンスの定数反復子の型です。
 
@@ -712,7 +712,7 @@ int main()
 [c] [b] [a]
 ```
 
-## <a name="const_local_iterator"></a><a name="const_local_iterator"></a>const_local_iterator
+## <a name="const_local_iterator"></a><a name="const_local_iterator"></a> const_local_iterator
 
 被制御シーケンスの定数バケット反復子の型です。
 
@@ -759,7 +759,7 @@ int main()
 [a]
 ```
 
-## <a name="const_pointer"></a><a name="const_pointer"></a>const_pointer
+## <a name="const_pointer"></a><a name="const_pointer"></a> const_pointer
 
 要素への定数ポインターの型です。
 
@@ -804,7 +804,7 @@ int main()
 [c] [b] [a]
 ```
 
-## <a name="const_reference"></a><a name="const_reference"></a>const_reference
+## <a name="const_reference"></a><a name="const_reference"></a> const_reference
 
 要素への定数参照の型です。
 
@@ -849,7 +849,7 @@ int main()
 [c] [b] [a]
 ```
 
-## <a name="count"></a><a name="count"></a>数
+## <a name="count"></a><a name="count"></a> 数
 
 指定したキーに一致する要素の数を検索します。
 
@@ -903,7 +903,7 @@ count('b') == 1
 count('C') == 0
 ```
 
-## <a name="difference_type"></a><a name="difference_type"></a>difference_type
+## <a name="difference_type"></a><a name="difference_type"></a> difference_type
 
 2 つの要素間の距離を表す、符号付きの型です。
 
@@ -959,7 +959,7 @@ end()-begin() == 3
 begin()-end() == -3
 ```
 
-## <a name="emplace"></a><a name="emplace"></a>emplace
+## <a name="emplace"></a><a name="emplace"></a> emplace
 
 インプレースで構築された (コピーまたは移動操作が実行されない) 要素を挿入します。
 
@@ -989,7 +989,7 @@ Args&&... args);
 
 コード例については、「 [set:: emplace](../standard-library/set-class.md#emplace)」を参照してください。
 
-## <a name="emplace_hint"></a><a name="emplace_hint"></a>emplace_hint
+## <a name="emplace_hint"></a><a name="emplace_hint"></a> emplace_hint
 
 インプレースで構築された (コピーまたは移動操作が実行されない) 要素を、配置ヒントと一緒に挿入します。
 
@@ -1022,7 +1022,7 @@ Args&&... args);
 
 コード例については、「[set::emplace_hint](../standard-library/set-class.md#emplace_hint)」をご覧ください。
 
-## <a name="empty"></a><a name="empty"></a>指定
+## <a name="empty"></a><a name="empty"></a> 指定
 
 要素が存在しないかどうかをテストします。
 
@@ -1086,7 +1086,7 @@ size == 2
 empty() == false
 ```
 
-## <a name="end"></a><a name="end"></a>終わり
+## <a name="end"></a><a name="end"></a> 終わり
 
 被制御シーケンスの末尾を指定します。
 
@@ -1107,7 +1107,7 @@ const_local_iterator end(size_type nbucket) const;
 
 ### <a name="remarks"></a>解説
 
-最初の 2 つのメンバー関数は、シーケンスの末尾の次を示す前方反復子を返します。 最後の2つのメンバー関数は、バケット*nbucket*の末尾の次の位置を示す前方反復子を返します。
+最初の 2 つのメンバー関数は、シーケンスの末尾の次を示す前方反復子を返します。 最後の2つのメンバー関数は、バケット *nbucket*の末尾の次の位置を示す前方反復子を返します。
 
 ### <a name="example"></a>例
 
@@ -1154,7 +1154,7 @@ int main()
 [a]
 ```
 
-## <a name="equal_range"></a><a name="equal_range"></a>equal_range
+## <a name="equal_range"></a><a name="equal_range"></a> equal_range
 
 指定したキーに一致する範囲を検索します。
 
@@ -1222,7 +1222,7 @@ equal_range('x'):
 equal_range('b'): [b]
 ```
 
-## <a name="erase"></a><a name="erase"></a>消去
+## <a name="erase"></a><a name="erase"></a> 消去
 
 unordered_set 内の要素または要素範囲を指定した位置から削除するか、指定したキーと一致する要素を削除します。
 
@@ -1258,7 +1258,7 @@ size_type erase(const key_type& Key);
 
 コード例については、「[set::erase](../standard-library/set-class.md#erase)」をご覧ください。
 
-## <a name="find"></a><a name="find"></a>探す
+## <a name="find"></a><a name="find"></a> 探す
 
 指定したキーに一致する要素を検索します。
 
@@ -1317,7 +1317,7 @@ find('A') == false
 find('b') == true: [b]
 ```
 
-## <a name="get_allocator"></a><a name="get_allocator"></a>get_allocator
+## <a name="get_allocator"></a><a name="get_allocator"></a> get_allocator
 
 格納されているアロケーター オブジェクトを取得します。
 
@@ -1355,7 +1355,7 @@ int main()
 al == std::allocator() is true
 ```
 
-## <a name="hash_function"></a><a name="hash"></a>hash_function
+## <a name="hash_function"></a><a name="hash"></a> hash_function
 
 格納されているハッシュ関数オブジェクトを取得します。
 
@@ -1393,7 +1393,7 @@ hfn('a') == 1630279
 hfn('b') == 1647086
 ```
 
-## <a name="hasher"></a><a name="hasher"></a>hasher
+## <a name="hasher"></a><a name="hasher"></a> hasher
 
 ハッシュ関数の型です。
 
@@ -1431,7 +1431,7 @@ hfn('a') == 1630279
 hfn('b') == 1647086
 ```
 
-## <a name="insert"></a><a name="insert"></a>insert
+## <a name="insert"></a><a name="insert"></a> insert
 
 unordered_set に要素または要素範囲を挿入します。
 
@@ -1467,7 +1467,7 @@ void insert(initializer_list<value_type> IList);
 正しい挿入ポイントの検索を開始する場所 
 
 *ValTy*\
-Unordered_set が[value_type](../standard-library/map-class.md#value_type)の要素を構築するために使用できる引数の型を指定し、引数として*Val*を完全に転送するテンプレートパラメーター。
+Unordered_set が [value_type](../standard-library/map-class.md#value_type)の要素を構築するために使用できる引数の型を指定し、引数として *Val* を完全に転送するテンプレートパラメーター。
 
 *まずは*\
 コピーされる最初の要素の位置。
@@ -1479,11 +1479,11 @@ Unordered_set が[value_type](../standard-library/map-class.md#value_type)の要
 [入力反復子](../standard-library/input-iterator-tag-struct.md)の要件を満たすテンプレート関数の引数。この反復子は、[value_type](../standard-library/map-class.md#value_type) オブジェクトの構築に使用できる型の要素を指し示します。
 
 *IList*\
-要素のコピー元の[initializer_list](../standard-library/initializer-list.md) 。
+要素のコピー元の [initializer_list](../standard-library/initializer-list.md) 。
 
 ### <a name="return-value"></a>戻り値
 
-単一要素のメンバー関数 (1) と (2) は、ペアを返します。この[ペア](../standard-library/pair-structure.md)の **`bool`** コンポーネントは、挿入が行われた場合は true になり、順序の値が同じキーを持つ要素が unordered_set に既に含まれている場合は false になります。 戻り値のペアの反復子コンポーネントは、コンポーネントが true の場合は新しく挿入された要素を指し、 **`bool`** コンポーネントが false の場合は既存の要素を指し **`bool`** ます。
+単一要素のメンバー関数 (1) と (2) は、ペアを返します。この [ペア](../standard-library/pair-structure.md) の **`bool`** コンポーネントは、挿入が行われた場合は true になり、順序の値が同じキーを持つ要素が unordered_set に既に含まれている場合は false になります。 戻り値のペアの反復子コンポーネントは、コンポーネントが true の場合は新しく挿入された要素を指し、 **`bool`** コンポーネントが false の場合は既存の要素を指し **`bool`** ます。
 
 単一要素とヒントのメンバー関数 (3) と (4) は、unordered_set に挿入された新しい要素の位置を指す反復子を返します。ただし、同じキーを持つ要素が既に存在する場合、この反復子は既存の要素を指します。
 
@@ -1497,17 +1497,17 @@ Unordered_set が[value_type](../standard-library/map-class.md#value_type)の要
 
 コンテナーの [value_type](../standard-library/map-class.md#value_type) はそのコンテナーに属する typedef であり、set の場合、`unordered_set<V>::value_type` は `const V` 型です。
 
-範囲のメンバー関数 (5) は、範囲内の反復子によってアドレス指定された各要素に対応する unordered_set に要素値のシーケンスを挿入します。 `[First, Last)` したがって、 *Last*は挿入されません。 コンテナーのメンバー関数 `end()` は、コンテナー内にある最後の要素の直後の位置を参照します。たとえば、ステートメント `s.insert(v.begin(), v.end());` は、`v` のすべての要素を `s` に挿入しようとします。 範囲内で一意の値を持つ要素だけが挿入されますが、値が重複する要素は無視されます。 拒否される要素を確認するには、1 つの要素が指定された `insert` を使用します。
+範囲のメンバー関数 (5) は、範囲内の反復子によってアドレス指定された各要素に対応する unordered_set に要素値のシーケンスを挿入します。 `[First, Last)` したがって、 *Last* は挿入されません。 コンテナーのメンバー関数 `end()` は、コンテナー内にある最後の要素の直後の位置を参照します。たとえば、ステートメント `s.insert(v.begin(), v.end());` は、`v` のすべての要素を `s` に挿入しようとします。 範囲内で一意の値を持つ要素だけが挿入されますが、値が重複する要素は無視されます。 拒否される要素を確認するには、1 つの要素が指定された `insert` を使用します。
 
-初期化子リストのメンバー関数 (6) は、 [initializer_list](../standard-library/initializer-list.md)を使用して unordered_set に要素をコピーします。
+初期化子リストのメンバー関数 (6) は、 [initializer_list](../standard-library/initializer-list.md) を使用して unordered_set に要素をコピーします。
 
 インプレースで構築された (つまり、コピーまたは移動操作が実行されない) 要素の挿入については、「[set::emplace](../standard-library/set-class.md#emplace)」および「[set::emplace_hint](../standard-library/set-class.md#emplace_hint)」を参照してください。
 
 コード例については、「 [set:: insert](../standard-library/set-class.md#insert)」を参照してください。
 
-## <a name="iterator"></a><a name="iterator"></a>反
+## <a name="iterator"></a><a name="iterator"></a> 反
 
-Unordered_set 内の要素を読み取ることができる定数[前方反復子](../standard-library/forward-iterator-tag-struct.md)を提供する型。
+Unordered_set 内の要素を読み取ることができる定数 [前方反復子](../standard-library/forward-iterator-tag-struct.md) を提供する型。
 
 ```cpp
 typedef implementation-defined iterator;
@@ -1517,7 +1517,7 @@ typedef implementation-defined iterator;
 
 **反復子**の宣言方法や使用方法の例については、 [begin](../standard-library/set-class.md#begin)の例を参照してください。
 
-## <a name="key_eq"></a><a name="key_eq"></a>key_eq
+## <a name="key_eq"></a><a name="key_eq"></a> key_eq
 
 格納されている比較関数オブジェクトを取得します。
 
@@ -1557,7 +1557,7 @@ cmpfn('a', 'a') == true
 cmpfn('a', 'b') == false
 ```
 
-## <a name="key_equal"></a><a name="key_equal"></a>key_equal
+## <a name="key_equal"></a><a name="key_equal"></a> key_equal
 
 比較関数の型です。
 
@@ -1597,7 +1597,7 @@ cmpfn('a', 'a') == true
 cmpfn('a', 'b') == false
 ```
 
-## <a name="key_type"></a><a name="key_type"></a>key_type
+## <a name="key_type"></a><a name="key_type"></a> key_type
 
 順序付けキーの型です。
 
@@ -1649,7 +1649,7 @@ int main()
 [d] [c] [b] [a]
 ```
 
-## <a name="load_factor"></a><a name="load_factor"></a>load_factor
+## <a name="load_factor"></a><a name="load_factor"></a> load_factor
 
 バケットごとの平均要素数をカウントします。
 
@@ -1734,7 +1734,7 @@ max_bucket_count() == 128
 max_load_factor() == 0.1
 ```
 
-## <a name="local_iterator"></a><a name="local_iterator"></a>local_iterator
+## <a name="local_iterator"></a><a name="local_iterator"></a> local_iterator
 
 バケット反復子の型。
 
@@ -1781,7 +1781,7 @@ int main()
 [a]
 ```
 
-## <a name="max_bucket_count"></a><a name="max_bucket_count"></a>max_bucket_count
+## <a name="max_bucket_count"></a><a name="max_bucket_count"></a> max_bucket_count
 
 最大バケット数を取得します。
 
@@ -1866,7 +1866,7 @@ max_bucket_count() == 128
 max_load_factor() == 0.1
 ```
 
-## <a name="max_load_factor"></a><a name="max_load_factor"></a>max_load_factor
+## <a name="max_load_factor"></a><a name="max_load_factor"></a> max_load_factor
 
 バケットあたりの最大要素数を取得または設定します。
 
@@ -1883,7 +1883,7 @@ void max_load_factor(float factor);
 
 ### <a name="remarks"></a>解説
 
-1 つ目のメンバー関数は、格納されている最大テーブル占有率を返します。 2番目のメンバー関数は、格納されている最大占有率を*係数*に置き換えます。
+1 つ目のメンバー関数は、格納されている最大テーブル占有率を返します。 2番目のメンバー関数は、格納されている最大占有率を *係数*に置き換えます。
 
 ### <a name="example"></a>例
 
@@ -1958,7 +1958,7 @@ max_bucket_count() == 128
 max_load_factor() == 0.1
 ```
 
-## <a name="max_size"></a><a name="max_size"></a>max_size
+## <a name="max_size"></a><a name="max_size"></a> max_size
 
 被制御シーケンスの最大サイズを取得します。
 
@@ -1993,7 +1993,7 @@ int main()
 max_size() == 4294967295
 ```
 
-## <a name="operator"></a><a name="op_eq"></a>operator =
+## <a name="operator"></a><a name="op_eq"></a> operator =
 
 ハッシュ テーブルをコピーします。
 
@@ -2006,7 +2006,7 @@ unordered_set& operator=(unordered_set&& right);
 ### <a name="parameters"></a>パラメーター
 
 *そうです*\
-にコピーされる[unordered_set](../standard-library/unordered-set-class.md) `unordered_set` 。
+にコピーされる [unordered_set](../standard-library/unordered-set-class.md) `unordered_set` 。
 
 ### <a name="remarks"></a>解説
 
@@ -2095,7 +2095,7 @@ int main()
 [c] [b] [a]
 ```
 
-## <a name="reference"></a><a name="reference"></a>「
+## <a name="reference"></a><a name="reference"></a> 「
 
 要素への参照の型です。
 
@@ -2141,7 +2141,7 @@ int main()
 [c] [b] [a]
 ```
 
-## <a name="rehash"></a><a name="rehash"></a>rehash
+## <a name="rehash"></a><a name="rehash"></a> rehash
 
 ハッシュ テーブルをリビルドします。
 
@@ -2156,7 +2156,7 @@ void rehash(size_type nbuckets);
 
 ### <a name="remarks"></a>解説
 
-このメンバー関数は、バケットの数を少なくとも*nbuckets*に変更し、必要に応じてハッシュテーブルを再構築します。
+このメンバー関数は、バケットの数を少なくとも *nbuckets* に変更し、必要に応じてハッシュテーブルを再構築します。
 
 ### <a name="example"></a>例
 
@@ -2218,7 +2218,7 @@ load_factor() == 0.0234375
 max_load_factor() == 0.1
 ```
 
-## <a name="size"></a><a name="size"></a>幅
+## <a name="size"></a><a name="size"></a> 幅
 
 要素の数をカウントします。
 
@@ -2283,7 +2283,7 @@ size == 2
 empty() == false
 ```
 
-## <a name="size_type"></a><a name="size_type"></a>size_type
+## <a name="size_type"></a><a name="size_type"></a> size_type
 
 2 つの要素間の距離を表す、符号なしの型です。
 
@@ -2319,7 +2319,7 @@ int main()
 size == 0
 ```
 
-## <a name="swap"></a><a name="swap"></a>フォト
+## <a name="swap"></a><a name="swap"></a> フォト
 
 2 つのコンテナーのコンテンツを交換します。
 
@@ -2388,7 +2388,7 @@ int main()
 [c] [b] [a]
 ```
 
-## <a name="unordered_set"></a><a name="unordered_set"></a>unordered_set
+## <a name="unordered_set"></a><a name="unordered_set"></a> unordered_set
 
 コンテナー オブジェクトを構築します。
 
@@ -2460,19 +2460,19 @@ unordered_set(
 
 ### <a name="remarks"></a>解説
 
-1つ目のコンストラクターは、 *Right*によって制御されるシーケンスのコピーを指定します。 2 つ目のコンストラクターは、空の被制御シーケンスのコピーを指定します。 3番目のコンストラクターは、4番目のコンストラクターを*右*に移動することによってシーケンスのコピーを指定します。4番目のコンストラクターは、initializer_list を使用して、コピーする要素を指定します。 9 つ目のコンストラクターは、要素値 `[first, last)` のシーケンスを挿入します。
+1つ目のコンストラクターは、 *Right*によって制御されるシーケンスのコピーを指定します。 2 つ目のコンストラクターは、空の被制御シーケンスのコピーを指定します。 3番目のコンストラクターは、4番目のコンストラクターを *右* に移動することによってシーケンスのコピーを指定します。4番目のコンストラクターは、initializer_list を使用して、コピーする要素を指定します。 9 つ目のコンストラクターは、要素値 `[first, last)` のシーケンスを挿入します。
 
-さらに、格納された複数の値を初期化する処理が実行されます。この処理は、すべてのコンストラクターに共通です。 コピーコンストラクターの場合、値は*Right*から取得されます。 それ以外の場合:
+さらに、格納された複数の値を初期化する処理が実行されます。この処理は、すべてのコンストラクターに共通です。 コピーコンストラクターの場合、値は *Right*から取得されます。 それ以外の場合:
 
-バケットの最小数は、引数*bucket_count*(存在する場合) です。それ以外の場合は、実装定義の値としてここで説明されている既定値になり `N0` ます。
+バケットの最小数は、引数 *bucket_count*(存在する場合) です。それ以外の場合は、実装定義の値としてここで説明されている既定値になり `N0` ます。
 
-ハッシュ関数オブジェクトは、引数*ハッシュ*(存在する場合) です。それ以外の場合は `Hash()` です。
+ハッシュ関数オブジェクトは、引数 *ハッシュ*(存在する場合) です。それ以外の場合は `Hash()` です。
 
-比較関数オブジェクトは、引数*Comp*(存在する場合) です。それ以外の場合は `Comp()` です。
+比較関数オブジェクトは、引数 *Comp*(存在する場合) です。それ以外の場合は `Comp()` です。
 
-アロケーターオブジェクトは、引数*Al*(存在する場合) です。それ以外の場合は `Alloc()` です。
+アロケーターオブジェクトは、引数 *Al*(存在する場合) です。それ以外の場合は `Alloc()` です。
 
-## <a name="value_type"></a><a name="value_type"></a>value_type
+## <a name="value_type"></a><a name="value_type"></a> value_type
 
 要素の型。
 

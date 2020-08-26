@@ -13,12 +13,12 @@ helpviewer_keywords:
 - CTable class
 - Open method
 ms.assetid: f13fdaa3-e198-4557-977d-54b0bbc3454d
-ms.openlocfilehash: 47c9899889bbbf9b09300779691085786db0e088
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: a967ef8fa2832afd56442ae4f988ba080d0b2872
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80211147"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88845641"
 ---
 # <a name="ctable-class"></a>CTable クラス
 
@@ -49,7 +49,7 @@ class CTable :
 
 ### <a name="methods"></a>メソッド
 
-|||
+| 名前 | 説明 |
 |-|-|
 |[[ファイル]](#open)|テーブルを開きます。|
 
@@ -57,7 +57,7 @@ class CTable :
 
 行セットにアクセスするコマンドを実行する方法については、「 [CCommand](../../data/oledb/ccommand-class.md) 」を参照してください。
 
-## <a name="ctableopen"></a><a name="open"></a>CTable:: Open
+## <a name="ctableopen"></a><a name="open"></a> CTable:: Open
 
 テーブルを開きます。
 
@@ -92,10 +92,10 @@ HRESULT Open(const CSession& session,
 から開くテーブルの名前。 ANSI 文字列として渡されます。
 
 *dbid*<br/>
-から開くテーブルの `DBID`。
+から `DBID` 開くテーブルの。
 
 *pPropSet*<br/>
-から設定するプロパティと値を格納している[DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85))構造体の配列へのポインター。 Windows SDK の*OLE DB プログラマーリファレンス*の「[プロパティセットとプロパティグループ](/previous-versions/windows/desktop/ms713696(v=vs.85))」を参照してください。 既定値の NULL はプロパティを指定しません。
+から設定するプロパティと値を格納している [DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85)) 構造体の配列へのポインター。 Windows SDK の*OLE DB プログラマーリファレンス*の「[プロパティセットとプロパティグループ](/previous-versions/windows/desktop/ms713696(v=vs.85))」を参照してください。 既定値の NULL はプロパティを指定しません。
 
 *ulPropSets*<br/>
 から*PPropSet*引数で渡される[DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85))構造体の数。
@@ -108,7 +108,7 @@ HRESULT Open(const CSession& session,
 
 詳細については、 *OLE DB プログラマーリファレンス*の「 [IOpenRowset:: OpenRowset](/previous-versions/windows/desktop/ms716724(v=vs.85)) 」を参照してください。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[OLE DB コンシューマー テンプレートに関するページ](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
-[OLE DB コンシューマー テンプレート リファレンス](../../data/oledb/ole-db-consumer-templates-reference.md)
+[OLE DB コンシューマー テンプレート](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[OLE DB コンシューマーテンプレートリファレンス](../../data/oledb/ole-db-consumer-templates-reference.md)

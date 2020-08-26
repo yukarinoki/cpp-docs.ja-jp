@@ -31,12 +31,12 @@ helpviewer_keywords:
 - std::shared_ptr [C++], unique
 - std::shared_ptr [C++], use_count
 ms.assetid: 1469fc51-c658-43f1-886c-f4530dd84860
-ms.openlocfilehash: 5488b7d63565bfcca22be3de522615db5aa822e3
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: e41c76e7bd3e77b34ad38d3998ee1d38cdc2fee4
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87217468"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88846213"
 ---
 # <a name="shared_ptr-class"></a>shared_ptr クラス
 
@@ -81,7 +81,7 @@ shared_ptr<int> sp6(sp2);   // error, template parameter int and argument shared
 
 - そのリソースを所有する `shared_ptr` オブジェクトから構築されている。
 
-- そのリソースを指す[weak_ptr](weak-ptr-class.md)オブジェクトから構築された場合は。
+- そのリソースを指す [weak_ptr](weak-ptr-class.md) オブジェクトから構築された場合は。
 
 - そのリソースの所有権が、[shared_ptr::operator=](#op_eq) またはメンバー関数 [shared_ptr::reset](#reset) の呼び出しのいずれかによって割り当てられている。
 
@@ -127,7 +127,7 @@ null ポインターを使用して初期化される `shared_ptr` オブジェ�
 
 ## <a name="members"></a>メンバー
 
-|||
+|名前|説明|
 |-|-|
 | **コンストラクター** | |
 |[shared_ptr](#shared_ptr)|`shared_ptr` を構築します。|
@@ -148,7 +148,7 @@ null ポインターを使用して初期化される `shared_ptr` オブジェ�
 |[operator =](#op_eq)|所有されたリソースを置き換えます。|
 |[operator&gt;](#op_arrow)|指定された値へのポインターを取得します。|
 
-## <a name="element_type"></a><a name="element_type"></a>element_type
+## <a name="element_type"></a><a name="element_type"></a> element_type
 
 要素の型。
 
@@ -184,7 +184,7 @@ int main()
 *sp0 == 5
 ```
 
-## <a name="get"></a><a name="get"></a>取得
+## <a name="get"></a><a name="get"></a> 取得
 
 所有されているリソースのアドレスを取得します。
 
@@ -222,7 +222,7 @@ sp0.get() == 0 == true
 *sp1.get() == 5
 ```
 
-## <a name="operator-bool"></a><a name="op_bool"></a>bool 演算子
+## <a name="operator-bool"></a><a name="op_bool"></a> bool 演算子
 
 所有されたリソースが存在するかどうかをテストします。
 
@@ -261,7 +261,7 @@ int main()
 (bool)sp1 == true
 ```
 
-## <a name="operator"></a><a name="op_star"></a>operator
+## <a name="operator"></a><a name="op_star"></a> operator
 
 指定された値を取得します。
 
@@ -295,7 +295,7 @@ int main()
 *sp0 == 5
 ```
 
-## <a name="operator"></a><a name="op_eq"></a>operator =
+## <a name="operator"></a><a name="op_eq"></a> operator =
 
 所有されたリソースを置き換えます。
 
@@ -326,7 +326,7 @@ shared_ptr& operator=(unique_ptr<Other, Deleter>&& up);
 移動する自動ポインター。 `auto_ptr`オーバーロードは c++ 11 で非推奨とされ、c++ 17 では削除されています。
 
 *設定*\
-所有権を採用するオブジェクトへの一意のポインター。 *up*は、呼び出しの後にオブジェクトを所有しません。
+所有権を採用するオブジェクトへの一意のポインター。 *up* は、呼び出しの後にオブジェクトを所有しません。
 
 *他の*\
 *Sp*、 *ap*、または*up*が指すオブジェクトの型。
@@ -367,7 +367,7 @@ int main()
 *sp0 == 10
 ```
 
-## <a name="operator-"></a><a name="op_arrow"></a>演算子->
+## <a name="operator-"></a><a name="op_arrow"></a> 演算子->
 
 指定された値へのポインターを取得します。
 
@@ -404,7 +404,7 @@ sp0->first == 1
 sp0->second == 2
 ```
 
-## <a name="owner_before"></a><a name="owner_before"></a>owner_before
+## <a name="owner_before"></a><a name="owner_before"></a> owner_before
 
 この `shared_ptr` が、指定されたポインターの前に順序付けされている (またはそれよりも少ない) 場合は true を返します。
 
@@ -425,7 +425,7 @@ bool owner_before(const weak_ptr<Other>& ptr) const noexcept;
 
 テンプレートメンバー関数は、 **`*this`** がの前にある場合に true を返し `ptr` ます。
 
-## <a name="reset"></a><a name="reset"></a>解除
+## <a name="reset"></a><a name="reset"></a> 解除
 
 所有されたリソースを置き換えます。
 
@@ -517,7 +517,7 @@ int main()
 *sp == 15
 ```
 
-## <a name="shared_ptr"></a><a name="shared_ptr"></a>shared_ptr
+## <a name="shared_ptr"></a><a name="shared_ptr"></a> shared_ptr
 
 `shared_ptr` を構築します。
 
@@ -621,7 +621,7 @@ shared_ptr(
 
 ### <a name="remarks"></a>解説
 
-それぞれのコンストラクターは、オペランド シーケンスで指定されたリソースを所有するオブジェクトを構築します。 コンストラクターは `shared_ptr(const weak_ptr<Other>& wp)` [bad_weak_ptr](bad-weak-ptr-class.md)型の例外オブジェクトをスローし `wp.expired()` ます。
+それぞれのコンストラクターは、オペランド シーケンスで指定されたリソースを所有するオブジェクトを構築します。 コンストラクターは `shared_ptr(const weak_ptr<Other>& wp)` [bad_weak_ptr](bad-weak-ptr-class.md) 型の例外オブジェクトをスローし `wp.expired()` ます。
 
 ### <a name="example"></a>例
 
@@ -675,7 +675,7 @@ int main()
 *sp5 == 15
 ```
 
-## <a name="shared_ptr"></a><a name="dtorshared_ptr"></a>~ shared_ptr
+## <a name="shared_ptr"></a><a name="dtorshared_ptr"></a> ~ shared_ptr
 
 `shared_ptr` を破棄します。
 
@@ -722,7 +722,7 @@ use count == 2
 use count == 1
 ```
 
-## <a name="swap"></a><a name="swap"></a>フォト
+## <a name="swap"></a><a name="swap"></a> フォト
 
 2 つの `shared_ptr` オブジェクトを交換します。
 
@@ -737,7 +737,7 @@ void swap(shared_ptr& sp) noexcept;
 
 ### <a name="remarks"></a>解説
 
-このメンバー関数は、 **`*this`** その後、 *sp*によって所有されていたリソースと、その後、によって所有される、最初に*sp*によって所有されたリソースを残し **`*this`** ます。 この関数はこれら 2 つのリソースの参照数を変更せず、例外をスローしません。
+このメンバー関数は、 **`*this`** その後、 *sp*によって所有されていたリソースと、その後、によって所有される、最初に *sp* によって所有されたリソースを残し **`*this`** ます。 この関数はこれら 2 つのリソースの参照数を変更せず、例外をスローしません。
 
 ### <a name="example"></a>例
 
@@ -783,7 +783,7 @@ int main()
 *wp1 == 5
 ```
 
-## <a name="unique"></a><a name="unique"></a>固有
+## <a name="unique"></a><a name="unique"></a> 固有
 
 所有されたリソースが一意であるかどうかをテストします。 この関数は C++ 17 で非推奨とされ、C++ 20 で削除されました。
 
@@ -822,7 +822,7 @@ sp1.unique() == true
 sp1.unique() == false
 ```
 
-## <a name="use_count"></a><a name="use_count"></a>use_count
+## <a name="use_count"></a><a name="use_count"></a> use_count
 
 リソース所有者の数をカウントします。
 
@@ -861,7 +861,7 @@ sp1.use_count() == 1
 sp1.use_count() == 2
 ```
 
-## <a name="weak_type"></a><a name="weak_type"></a>weak_type
+## <a name="weak_type"></a><a name="weak_type"></a> weak_type
 
 要素への弱いポインターの型。
 

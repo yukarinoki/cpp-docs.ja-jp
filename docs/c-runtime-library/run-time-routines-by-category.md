@@ -7,12 +7,12 @@ helpviewer_keywords:
 - categories, run-time functions
 - functions [CRT]
 ms.assetid: de6f5ac4-2226-4dad-be9f-deeb31138c9d
-ms.openlocfilehash: 4da18db2278a38fd7c59010d2c64d5cb804ad4eb
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: be58ce7550c8f15c1c12eafa1dd4187f12fb71cd
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79444811"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88846343"
 ---
 # <a name="universal-c-runtime-routines-by-category"></a>カテゴリ別ユニバーサル C ランタイム ルーチン
 
@@ -22,21 +22,36 @@ ms.locfileid: "79444811"
 
 UCRT ライブラリ ルーチンの主なカテゴリは次のとおりです。
 
-|||
-|-|-|
-|[引数へのアクセス](../c-runtime-library/argument-access.md)|[バッファー操作](../c-runtime-library/buffer-manipulation.md)|
-|[バイト分類](../c-runtime-library/byte-classification.md)|[文字分類](../c-runtime-library/character-classification.md)|
-|[複雑な計算のサポート](../c-runtime-library/complex-math-support.md)||
-|[データの整列](../c-runtime-library/data-alignment.md)|[データ変換](../c-runtime-library/data-conversion.md)|
-|[デバッグ ルーチン](../c-runtime-library/debug-routines.md)|[ディレクトリ制御](../c-runtime-library/directory-control.md)|
-|[エラー処理](../c-runtime-library/error-handling-crt.md)|[例外処理ルーチン](../c-runtime-library/exception-handling-routines.md)|
-|[ファイル処理](../c-runtime-library/file-handling.md)|[浮動小数点サポート](../c-runtime-library/floating-point-support.md)|
-|[入出力](../c-runtime-library/input-and-output.md)|[国際化](../c-runtime-library/internationalization.md)|
-|[メモリ割り当て](../c-runtime-library/memory-allocation.md)|[プロセス制御と環境制御](../c-runtime-library/process-and-environment-control.md)|
-|[保全性](../c-runtime-library/robustness.md)|[ランタイム エラー チェック](../c-runtime-library/run-time-error-checking.md)|
-|[検索と並べ替え](../c-runtime-library/searching-and-sorting.md)|[文字列操作](../c-runtime-library/string-manipulation-crt.md)|
-|[システム コール](../c-runtime-library/system-calls.md)|[時間管理](../c-runtime-library/time-management.md)|
+:::row:::
+   :::column span="":::
+      [引数へのアクセス](../c-runtime-library/argument-access.md)\
+      [バッファー操作](../c-runtime-library/buffer-manipulation.md)\
+      [バイト分類](../c-runtime-library/byte-classification.md)\
+      [文字分類](../c-runtime-library/character-classification.md)\
+      [複雑な数値演算のサポート](../c-runtime-library/complex-math-support.md)\
+      [データの配置](../c-runtime-library/data-alignment.md)\
+      [データ変換](../c-runtime-library/data-conversion.md)\
+      [デバッグルーチン](../c-runtime-library/debug-routines.md)\
+      [ディレクトリコントロール](../c-runtime-library/directory-control.md)\
+      [エラー処理](../c-runtime-library/error-handling-crt.md)\
+      [例外処理ルーチン](../c-runtime-library/exception-handling-routines.md)\
+      [ファイルの処理](../c-runtime-library/file-handling.md)
+   :::column-end:::
+   :::column span="":::
+      [浮動小数点のサポート](../c-runtime-library/floating-point-support.md)\
+      [入力と出力](../c-runtime-library/input-and-output.md)\
+      [プロパティー](../c-runtime-library/internationalization.md)\
+      [メモリの割り当て](../c-runtime-library/memory-allocation.md)\
+      [プロセスと環境の制御](../c-runtime-library/process-and-environment-control.md)\
+      [堅牢性](../c-runtime-library/robustness.md)\
+      [実行時エラーチェック](../c-runtime-library/run-time-error-checking.md)\
+      [検索と並べ替え](../c-runtime-library/searching-and-sorting.md)\
+      [文字列操作](../c-runtime-library/string-manipulation-crt.md)\
+      [システムコール](../c-runtime-library/system-calls.md)\
+      [時間管理](../c-runtime-library/time-management.md)
+   :::column-end:::
+:::row-end:::
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[C ランタイム ライブラリ リファレンス](../c-runtime-library/c-run-time-library-reference.md)<br/>
+[C ランタイムライブラリリファレンス](../c-runtime-library/c-run-time-library-reference.md)<br/>

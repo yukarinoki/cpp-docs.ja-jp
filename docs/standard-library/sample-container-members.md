@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - container classes
 ms.assetid: dc5a1998-a31b-4adf-b888-8abe5b87a4e0
-ms.openlocfilehash: 21d3660661e3987d1b9477bb6298373033946c06
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: ea30810177d936248f836e7e4462739d8b5f393a
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87228116"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88846265"
 ---
 # <a name="sample-container-members"></a>サンプル コンテナーのメンバー
 
@@ -20,7 +20,7 @@ ms.locfileid: "87228116"
 
 ## <a name="typedefs"></a>Typedefs
 
-|||
+|名前|説明|
 |-|-|
 |[const_iterator](../standard-library/container-class-const-iterator.md)|被制御シーケンスの定数反復子として使用できるオブジェクトを表します。|
 |[const_reference](../standard-library/container-class-const-reference.md)|被制御シーケンスの要素への定数参照として使用できるオブジェクトを表します。|
@@ -34,7 +34,7 @@ ms.locfileid: "87228116"
 
 ## <a name="member-functions"></a>メンバー関数
 
-|||
+|名前|説明|
 |-|-|
 |[初め](../standard-library/container-class-begin.md)|シーケンスの最初の要素 (または空のシーケンスの末尾の次の位置) を指す反復子を返します。|
 |[オフ](../standard-library/container-class-clear.md)|[erase](../standard-library/container-class-erase.md)( [begin](../standard-library/container-class-begin.md), [end](../standard-library/container-class-end.md)) を呼び出します。|

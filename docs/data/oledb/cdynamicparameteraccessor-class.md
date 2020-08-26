@@ -90,12 +90,12 @@ helpviewer_keywords:
 - SetParamStatus method
 - SetParamString method
 ms.assetid: 5f22626e-e80d-491f-8b3b-cedc50331960
-ms.openlocfilehash: b7125390013e417123f09a5cc7f58be9ea87db56
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: de9aafe5b04b949112c44be09ac36bede7e7f660
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87216467"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88838179"
 ---
 # <a name="cdynamicparameteraccessor-class"></a>CDynamicParameterAccessor クラス
 
@@ -115,7 +115,7 @@ class CDynamicParameterAccessor : public CDynamicAccessor
 
 ### <a name="methods"></a>メソッド
 
-|||
+| 名前 | 説明 |
 |-|-|
 |[CDynamicParameterAccessor](#cdynamicparameteraccessor)|コンストラクターです。|
 |[GetParam](#getparam)|バッファーからパラメーター データを取得します。|
@@ -139,7 +139,7 @@ class CDynamicParameterAccessor : public CDynamicAccessor
 
 このクラスを使用して SQL Server のストアドプロシージャを実行し、出力パラメーターの値を取得する方法を示す例については、GitHub の[Microsoft VCSamples](https://github.com/Microsoft/VCSamples)リポジトリにある[dynamicconsumer](https://github.com/Microsoft/VCSamples/tree/master/VC2008Samples/ATL/OLEDB/Consumer/DynamicConsumer)サンプルコードを参照してください。
 
-## <a name="cdynamicparameteraccessorcdynamicparameteraccessor"></a><a name="cdynamicparameteraccessor"></a>CDynamicParameterAccessor:: CDynamicParameterAccessor
+## <a name="cdynamicparameteraccessorcdynamicparameteraccessor"></a><a name="cdynamicparameteraccessor"></a> CDynamicParameterAccessor:: CDynamicParameterAccessor
 
 コンストラクターです。
 
@@ -163,9 +163,9 @@ BLOB の最大サイズ (バイト単位)。この値に対する列データは
 
 ### <a name="remarks"></a>解説
 
-BLOB 処理の詳細については、 [CDynamicAccessor:: CDynamicAccessor](../../data/oledb/cdynamicaccessor-cdynamicaccessor.md)コンストラクターを参照してください。
+BLOB 処理の詳細については、 [CDynamicAccessor:: CDynamicAccessor](../../data/oledb/cdynamicaccessor-cdynamicaccessor.md) コンストラクターを参照してください。
 
-## <a name="cdynamicparameteraccessorgetparam"></a><a name="getparam"></a>CDynamicParameterAccessor:: GetParam
+## <a name="cdynamicparameteraccessorgetparam"></a><a name="getparam"></a> CDynamicParameterAccessor:: GetParam
 
 パラメーターバッファーから、指定したパラメーターの文字列以外のデータを取得します。
 
@@ -203,7 +203,7 @@ void* GetParam(TCHAR* pParamName) const throw();
 
 `GetParam`バッファーから文字列以外のパラメーターデータを取得するには、を使用します。 [Getparamstring](../../data/oledb/cdynamicparameteraccessor-getparamstring.md)を使用して、バッファーから文字列パラメーターデータを取得します。
 
-## <a name="cdynamicparameteraccessorgetparamcount"></a><a name="getparamcount"></a>CDynamicParameterAccessor:: GetParamCount
+## <a name="cdynamicparameteraccessorgetparamcount"></a><a name="getparamcount"></a> CDynamicParameterAccessor:: GetParamCount
 
 バッファーに格納されているパラメーターの数を取得します。
 
@@ -217,7 +217,7 @@ DB_UPARAMS GetParamCount() const throw();
 
 パラメーターの数。
 
-## <a name="cdynamicparameteraccessorgetparamio"></a><a name="getparamio"></a>CDynamicParameterAccessor:: GetParamIO
+## <a name="cdynamicparameteraccessorgetparamio"></a><a name="getparamio"></a> CDynamicParameterAccessor:: GetParamIO
 
 指定されたパラメーターが入力または出力パラメーターであるかどうかを判断します。
 
@@ -250,7 +250,7 @@ enum DBPARAMIOENUM {
 
 **`true`** 成功した場合、または失敗した場合はを返し **`false`** ます。
 
-## <a name="cdynamicparameteraccessorgetparamlength"></a><a name="getparamlength"></a>CDynamicParameterAccessor:: GetParamLength
+## <a name="cdynamicparameteraccessorgetparamlength"></a><a name="getparamlength"></a> CDynamicParameterAccessor:: GetParamLength
 
 バッファーに格納され、指定されたパラメーターの長さを取得します。
 
@@ -275,7 +275,7 @@ DBLENGTH* GetParamLength(DBORDINAL nParam) const throw();
 
 最初のオーバーライドは、成功した場合はを返し、失敗した場合はを返し **`true`** **`false`** ます。 2番目のオーバーライドは、パラメーターの長さを格納しているメモリを指します。
 
-## <a name="cdynamicparameteraccessorgetparamname"></a><a name="getparamname"></a>CDynamicParameterAccessor:: GetParamName
+## <a name="cdynamicparameteraccessorgetparamname"></a><a name="getparamname"></a> CDynamicParameterAccessor:: GetParamName
 
 指定したパラメーターの名前を取得します。
 
@@ -294,7 +294,7 @@ LPOLESTR GetParamName(DBORDINAL nParam) const throw();
 
 指定したパラメーターの名前。
 
-## <a name="cdynamicparameteraccessorgetparamstatus"></a><a name="getparamstatus"></a>CDynamicParameterAccessor:: GetParamStatus
+## <a name="cdynamicparameteraccessorgetparamstatus"></a><a name="getparamstatus"></a> CDynamicParameterAccessor:: GetParamStatus
 
 バッファーに格納され、指定されたパラメーターのステータスを取得します。
 
@@ -319,7 +319,7 @@ DBSTATUS* GetParamStatus(DBORDINAL nParam) const throw();
 
 最初のオーバーライドは、成功した場合はを返し、失敗した場合はを返し **`true`** **`false`** ます。 2番目のオーバーライドは、指定されたパラメーターの状態を格納しているメモリを指します。
 
-## <a name="cdynamicparameteraccessorgetparamstring"></a><a name="getparamstring"></a>CDynamicParameterAccessor:: GetParamString
+## <a name="cdynamicparameteraccessorgetparamstring"></a><a name="getparamstring"></a> CDynamicParameterAccessor:: GetParamString
 
 バッファーに格納され、指定されたパラメーターの文字列データを取得します。
 
@@ -355,7 +355,7 @@ bool GetParamString(DBORDINAL nParam,
 入出力指定されたパラメーターの ANSI (**CHAR**) または Unicode (**WCHAR**) 文字列データへのポインター。
 
 *pMaxLen*<br/>
-入出力*Pbuffer*によってポイントされるバッファーのサイズへのポインター (終端の NULL を含む文字数)。
+入出力 *Pbuffer* によってポイントされるバッファーのサイズへのポインター (終端の NULL を含む文字数)。
 
 ### <a name="remarks"></a>解説
 
@@ -363,11 +363,11 @@ bool GetParamString(DBORDINAL nParam,
 
 *Pbuffer*が NULL の場合、このメソッドは、 *pbuffer*が指すメモリ内の必要なバッファーサイズを設定し、 **`true`** データをコピーせずにを返します。
 
-バッファーの*Pbuffer*が文字列全体を格納するのに十分な大きさでない場合、このメソッドは失敗します。
+バッファーの *Pbuffer* が文字列全体を格納するのに十分な大きさでない場合、このメソッドは失敗します。
 
 `GetParamString`バッファーから文字列パラメーターデータを取得するには、を使用します。 [Getparam](../../data/oledb/cdynamicparameteraccessor-getparam.md)を使用して、バッファーから文字列以外のパラメーターデータを取得します。
 
-## <a name="cdynamicparameteraccessorgetparamtype"></a><a name="getparamtype"></a>CDynamicParameterAccessor:: GetParamType
+## <a name="cdynamicparameteraccessorgetparamtype"></a><a name="getparamtype"></a> CDynamicParameterAccessor:: GetParamType
 
 指定されたパラメーターのデータ型を取得します。
 
@@ -390,7 +390,7 @@ bool GetParamType(DBORDINAL nParam,
 
 **`true`** 成功した場合、または失敗した場合はを返し **`false`** ます。
 
-## <a name="cdynamicparameteraccessorsetparam"></a><a name="setparam"></a>CDynamicParameterAccessor:: SetParam
+## <a name="cdynamicparameteraccessorsetparam"></a><a name="setparam"></a> CDynamicParameterAccessor:: SetParam
 
 指定した (文字列ではない) データを使用して、パラメーターバッファーを設定します。
 
@@ -433,7 +433,7 @@ bool SetParam(TCHAR* pParamName,
 
 `SetParam`バッファーに文字列以外のパラメーターデータを設定するには、を使用します。 [Setparamstring](../../data/oledb/cdynamicparameteraccessor-setparamstring.md)を使用して、バッファー内の文字列パラメーターデータを設定します。
 
-## <a name="cdynamicparameteraccessorsetparamlength"></a><a name="setparamlength"></a>CDynamicParameterAccessor:: SetParamLength
+## <a name="cdynamicparameteraccessorsetparamlength"></a><a name="setparamlength"></a> CDynamicParameterAccessor:: SetParamLength
 
 バッファーに格納され、指定されたパラメーターの長さを設定します。
 
@@ -456,7 +456,7 @@ bool SetParamLength(DBORDINAL nParam,
 
 **`true`** 成功した場合、または失敗した場合はを返し **`false`** ます。
 
-## <a name="cdynamicparameteraccessorsetparamstatus"></a><a name="setparamstatus"></a>CDynamicParameterAccessor:: SetParamStatus
+## <a name="cdynamicparameteraccessorsetparamstatus"></a><a name="setparamstatus"></a> CDynamicParameterAccessor:: SetParamStatus
 
 バッファーに格納され、指定されたパラメーターのステータスを設定します。
 
@@ -479,7 +479,7 @@ bool SetParamStatus(DBORDINAL nParam,
 
 **`true`** 成功した場合、または失敗した場合はを返し **`false`** ます。
 
-## <a name="cdynamicparameteraccessorsetparamstring"></a><a name="setparamstring"></a>CDynamicParameterAccessor:: SetParamString
+## <a name="cdynamicparameteraccessorsetparamstring"></a><a name="setparamstring"></a> CDynamicParameterAccessor:: SetParamString
 
 バッファーに格納され、指定されたパラメーターの文字列データを設定します。
 
@@ -508,9 +508,9 @@ bool SetParamString(DBORDINAL nParam,
 
 **`true`** 成功した場合、または失敗した場合はを返し **`false`** ます。
 
-`SetParamString`は、 *pstring*に指定された最大サイズを超える文字列を設定しようとすると失敗します。
+`SetParamString` は、 *pstring*に指定された最大サイズを超える文字列を設定しようとすると失敗します。
 
-`SetParamString`バッファーに文字列パラメーターデータを設定するには、を使用します。 バッファーに文字列以外のパラメーターデータを設定するには、 [Setparam](../../data/oledb/cdynamicparameteraccessor-setparam.md)を使用します。
+`SetParamString`バッファーに文字列パラメーターデータを設定するには、を使用します。 バッファーに文字列以外のパラメーターデータを設定するには、 [Setparam](../../data/oledb/cdynamicparameteraccessor-setparam.md) を使用します。
 
 ## <a name="see-also"></a>関連項目
 

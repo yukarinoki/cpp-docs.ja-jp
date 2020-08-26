@@ -1,39 +1,39 @@
 ---
-title: '&lt;:::no-loc(filesystem):::&gt;'
-description: '標準 C++ ライブラリのヘッダーに含まれるクラス、関数、および型について説明し :::no-loc(filesystem)::: ます。'
+title: '&lt;filesystem&gt;'
+description: 標準 C++ ライブラリのヘッダーに含まれるクラス、関数、および型について説明し filesystem ます。
 ms.date: 01/22/2020
 f1_keywords:
-- <:::no-loc(filesystem):::>
+- <filesystem>
 ms.assetid: 5005753b-46fa-43e1-8d4e-1b38617d3cfd
 no-loc:
-- ':::no-loc(filesystem):::'
-- ':::no-loc(experimental):::'
-- ':::no-loc(char):::'
-- ':::no-loc(wchar_t):::'
-- ':::no-loc(char16_t):::'
-- ':::no-loc(char32_t):::'
-ms.openlocfilehash: 1b3f541619bde85131915a4d1586a44675c2906a
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+- filesystem
+- experimental
+- char
+- wchar_t
+- char16_t
+- char32_t
+ms.openlocfilehash: 0cf5e16eb21c02cfb96577c1dada873f087a71cf
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87219145"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88835832"
 ---
-# &lt;:::no-loc(filesystem):::&gt;
+# &lt;filesystem&gt;
 
-&lt; :::no-loc(filesystem)::: パス、ファイル、およびディレクトリに関する情報を操作および取得するクラスおよび関数にアクセスするには、ヘッダー> を含めます。
+&lt; filesystem パス、ファイル、およびディレクトリに関する情報を操作および取得するクラスおよび関数にアクセスするには、ヘッダー> を含めます。
 
 ## <a name="syntax"></a>構文
 
 ```cpp
-#include <:::no-loc(filesystem):::> // C++17 standard header file name
-#include <:::no-loc(experimental):::/:::no-loc(filesystem):::> // Header file for pre-standard implementation
-using namespace std:::::no-loc(experimental)::::::::no-loc(filesystem):::::v1;
+#include <filesystem> // C++17 standard header file name
+#include <experimental/filesystem> // Header file for pre-standard implementation
+using namespace std::experimental::filesystem::v1;
 ```
 
 > [!IMPORTANT]
-> Visual Studio 2017 のリリースでは、 \<:::no-loc(filesystem):::> ヘッダーはまだ C++ 標準ではありませんでした。 Visual Studio 2017 RTW の C++ では、 [ISO/IEC JTC 1/SC 22/WG 21 N4100](https://wg21.link/n4100)にある最終的なドラフト標準が実装されています。 Visual Studio 2017 バージョン15.7 以降では、新しい C++ 17 標準がサポートされてい \<:::no-loc(filesystem):::> ます。
-> これはまったく新しい実装であり、以前のバージョンと互換性がありません `std:::::no-loc(experimental):::` 。 これは、シンボリックリンクのサポート、バグの修正、標準の必須動作の変更によって必要になりました。 現在、を含むは、 \<:::no-loc(filesystem):::> 新しいと以前のを提供し `std:::::no-loc(filesystem):::` `std:::::no-loc(experimental)::::::::no-loc(filesystem):::` ます。 \<:::no-loc(experimental):::/:::no-loc(filesystem):::>を含めると、以前の実装のみが提供され :::no-loc(experimental)::: ます。 この :::no-loc(experimental)::: 実装は、ライブラリの次の ABI リリースで削除される予定です。
+> Visual Studio 2017 のリリースでは、 \<filesystem> ヘッダーはまだ C++ 標準ではありませんでした。 Visual Studio 2017 RTW の C++ では、 [ISO/IEC JTC 1/SC 22/WG 21 N4100](https://wg21.link/n4100)にある最終的なドラフト標準が実装されています。 Visual Studio 2017 バージョン15.7 以降では、新しい C++ 17 標準がサポートされてい \<filesystem> ます。
+> これはまったく新しい実装であり、以前のバージョンと互換性がありません `std::experimental` 。 これは、シンボリックリンクのサポート、バグの修正、標準の必須動作の変更によって必要になりました。 現在、を含むは、 \<filesystem> 新しいと以前のを提供し `std::filesystem` `std::experimental::filesystem` ます。 \<experimental/filesystem>を含めると、以前の実装のみが提供され experimental ます。 この experimental 実装は、ライブラリの次の ABI リリースで削除される予定です。
 
 このヘッダーは、2つの広範なホストオペレーティングシステム (Microsoft Windows と POSIX) のいずれかのファイルシステムをサポートしています。
 
@@ -45,21 +45,21 @@ using namespace std:::::no-loc(experimental)::::::::no-loc(filesystem):::::v1;
 
 もう 1 つの大きな違いは、パス名のネイティブな表現です。
 
-- Windows では **`:::no-loc(wchar_t):::`** 、utf-16 (各 acter に1つ以上の要素) としてエンコードされたの null 終端シーケンスを使用し :::no-loc(char)::: ます。
+- Windows では **`wchar_t`** 、utf-16 (各 acter に1つ以上の要素) としてエンコードされたの null 終端シーケンスを使用し char ます。
 
-- POSIX では **`:::no-loc(char):::`** 、utf-8 (各 acter に1つ以上の要素) としてエンコードされたの null 終端シーケンスを使用し :::no-loc(char)::: ます。
+- POSIX では **`char`** 、utf-8 (各 acter に1つ以上の要素) としてエンコードされたの null 終端シーケンスを使用し char ます。
 
 - クラスのオブジェクトは、 `path` パス名をネイティブ形式で格納しますが、この格納形式といくつかの外部形式の間の簡単な変換をサポートします。
 
-  - オペレーティングシステムで優先されるようにエンコードされた、null で終わるのシーケンス **`:::no-loc(char):::`** 。
+  - オペレーティングシステムで優先されるようにエンコードされた、null で終わるのシーケンス **`char`** 。
 
-  - **`:::no-loc(char):::`** Utf-8 としてエンコードされた、null で終わるのシーケンス。
+  - **`char`** Utf-8 としてエンコードされた、null で終わるのシーケンス。
 
-  - オペレーティングシステムで優先されるようにエンコードされた、null で終わるのシーケンス **`:::no-loc(wchar_t):::`** 。
+  - オペレーティングシステムで優先されるようにエンコードされた、null で終わるのシーケンス **`wchar_t`** 。
 
-  - UTF-16 としてエンコードされたの null で終わるシーケンス **`:::no-loc(char16_t):::`** 。
+  - UTF-16 としてエンコードされたの null で終わるシーケンス **`char16_t`** 。
 
-  - **`:::no-loc(char32_t):::`** 32 utf-8 としてエンコードされた、null で終わるのシーケンス。
+  - **`char32_t`** 32 utf-8 としてエンコードされた、null で終わるのシーケンス。
 
   必要に応じて、1 つまたは複数の `codecvt` ファセットを使用することによって、これらの表現の相互変換が実施されます。 特定のロケールオブジェクトが指定されていない場合、これらのファセットはグローバルロケールから取得されます。
 
@@ -91,44 +91,44 @@ using namespace std:::::no-loc(experimental)::::::::no-loc(filesystem):::::v1;
 
 最後に、オブジェクトには `path` 重要な機能があります。ヘッダーに定義されているクラスで filename 引数が必要な場合は、それらを使用でき [\<fstream>](fstream.md) ます。
 
-詳細とコード例については、「[ファイルシステムのナビゲーション (C++)](../standard-library/file-system-navigation.md)」を参照してください。
+詳細とコード例については、「 [ファイルシステムのナビゲーション (C++)](../standard-library/file-system-navigation.md)」を参照してください。
 
 ## <a name="members"></a>メンバー
 
 ### <a name="classes"></a>クラス
 
-|||
+|名前|説明|
 |-|-|
 |[directory_entry クラス](../standard-library/directory-entry-class.md)|またはによって返され、を含むオブジェクトを記述し `directory_iterator` `recursive_directory_iterator` `path` ます。|
 |[directory_iterator クラス](../standard-library/directory-iterator-class.md)|ファイル システム ディレクトリのファイル名をシーケンス処理する入力反復子を表します。|
-|[:::no-loc(filesystem):::_error クラス](../standard-library/:::no-loc(filesystem):::-error-class.md)|低レベル システム オーバーフローをレポートするためにスローされる例外のための基底クラス。|
+|[filesystem_error クラス](../standard-library/filesystem-error-class.md)|低レベル システム オーバーフローをレポートするためにスローされる例外のための基底クラス。|
 |[path クラス](../standard-library/path-class.md)|ファイル名として使用するのに適したテンプレート型 `String` のオブジェクトを格納するクラスを定義します。|
 |[recursive_directory_iterator クラス](../standard-library/recursive-directory-iterator-class.md)|ファイル システム ディレクトリのファイル名をシーケンス処理する入力反復子を表します。 反復子はサブディレクトリに下りることもできます。|
 |[file_status クラス](../standard-library/file-status-class.md)|`file_type`をラップします。|
 
 ### <a name="structs"></a>構造体
 
-|||
+|名前|説明|
 |-|-|
 |[space_info 構造体](../standard-library/space-info-structure.md)|ボリュームに関する情報を保持します。|
 
-## <a name="functions"></a>関数
+## <a name="functions"></a>Functions
 
-[\<:::no-loc(filesystem):::>関数](../standard-library/:::no-loc(filesystem):::-functions.md)
+[\<filesystem> 関数](../standard-library/filesystem-functions.md)
 
-## <a name="operators"></a>オペレーター
+## <a name="operators"></a>演算子
 
-[\<:::no-loc(filesystem):::>通信](../standard-library/:::no-loc(filesystem):::-operators.md)
+[\<filesystem> 通信](../standard-library/filesystem-operators.md)
 
-## <a name="enumerations"></a>列挙型
+## <a name="enumerations"></a>列挙
 
-|||
+|名前|説明|
 |-|-|
-|[copy_options](../standard-library/:::no-loc(filesystem):::-enumerations.md#copy_options)|[copy_file](../standard-library/:::no-loc(filesystem):::-functions.md#copy_file) と共に使用され、コピー先ファイルが既に存在する場合の動作を決定する列挙体です。|
-|[directory_options](../standard-library/:::no-loc(filesystem):::-enumerations.md#directory_options)|ディレクトリ反復子のオプションを指定する列挙体。|
-|[file_type](../standard-library/:::no-loc(filesystem):::-enumerations.md#file_type)|ファイルの種類の列挙型。|
-|[perm_options](../standard-library/:::no-loc(filesystem):::-enumerations.md#perm_options)| 関数のオプションを列挙 `permissions` します。 |
-|[perms](../standard-library/:::no-loc(filesystem):::-enumerations.md#perms)|アクセス許可とアクセス許可に対するオプションを伝達するために使用されるビットマスク型|
+|[copy_options](../standard-library/filesystem-enumerations.md#copy_options)|[copy_file](../standard-library/filesystem-functions.md#copy_file) と共に使用され、コピー先ファイルが既に存在する場合の動作を決定する列挙体です。|
+|[directory_options](../standard-library/filesystem-enumerations.md#directory_options)|ディレクトリ反復子のオプションを指定する列挙体。|
+|[file_type](../standard-library/filesystem-enumerations.md#file_type)|ファイルの種類の列挙型。|
+|[perm_options](../standard-library/filesystem-enumerations.md#perm_options)| 関数のオプションを列挙 `permissions` します。 |
+|[perms](../standard-library/filesystem-enumerations.md#perms)|アクセス許可とアクセス許可に対するオプションを伝達するために使用されるビットマスク型|
 
 ## <a name="see-also"></a>関連項目
 

@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::extreme_value_distribution [C++], param_type
 - std::extreme_value_distribution [C++], param_type
 ms.assetid: a0cd8370-0a54-4e26-9388-8b9678fb57da
-ms.openlocfilehash: 865fac1f1452e30b64a0ada9b115186916ff491c
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: b086638d02afb929d18daad76716a12704585108
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87212346"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88835897"
 ---
 # <a name="extreme_value_distribution-class"></a>extreme_value_distribution クラス
 
@@ -81,10 +81,8 @@ public:
 
 クラステンプレートは、極端な値分布に従って分布した、ユーザー指定の浮動小数点型の値または型の値 (指定がない場合) を生成する分布を表し **`double`** ます。 次の表は、個々のメンバーに関する記事にリンクしています。
 
-||||
-|-|-|-|
-|[extreme_value_distribution](#extreme_value_distribution)|`extreme_value_distribution::a`|`extreme_value_distribution::param`|
-|`extreme_value_distribution::operator()`|`extreme_value_distribution::b`|[param_type](#param_type)|
+[extreme_value_distribution](#extreme_value_distribution)\
+[param_type](#param_type)
 
 プロパティ関数 `a()` と `b()` はそれぞれ、格納されている分布パラメーター `a` と `b` の値を返します。
 
@@ -181,7 +179,7 @@ Distribution for 10 samples:
 
 **名前空間:** std
 
-## <a name="extreme_value_distributionextreme_value_distribution"></a><a name="extreme_value_distribution"></a>extreme_value_distribution:: extreme_value_distribution
+## <a name="extreme_value_distributionextreme_value_distribution"></a><a name="extreme_value_distribution"></a> extreme_value_distribution:: extreme_value_distribution
 
 分布を作成します。
 
@@ -209,7 +207,7 @@ explicit extreme_value_distribution(const param_type& parm);
 
 2 つ目のコンストラクターは、格納されているパラメーターが *parm* から初期化されるオブジェクトを作成します。 `param()` メンバー関数を呼び出すと、既存の分布の現在のパラメーターを取得および設定できます。
 
-## <a name="extreme_value_distributionparam_type"></a><a name="param_type"></a>extreme_value_distribution::p aram_type
+## <a name="extreme_value_distributionparam_type"></a><a name="param_type"></a> extreme_value_distribution::p aram_type
 
 分布のパラメーターを格納します。
 

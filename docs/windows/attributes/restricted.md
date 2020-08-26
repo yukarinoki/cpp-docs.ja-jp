@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - restricted attribute
 ms.assetid: 504a96be-b904-4269-8be1-920feba201b4
-ms.openlocfilehash: 0545c07936c59a59dd4712f4b0a2fd98a6701f2e
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: a1f543c4d8edac751195d37414c030dfe2df94fa
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87230027"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88846356"
 ---
 # <a name="restricted"></a>restricted
 
@@ -36,7 +36,7 @@ COM オブジェクトで任意に呼び出すことができない1つ以上の
 
 ## <a name="example"></a>例
 
-次のコードは、**制限**された属性の使用方法を示しています。
+次のコードは、 **制限** された属性の使用方法を示しています。
 
 ```cpp
 // cpp_attr_ref_restricted.cpp
@@ -63,11 +63,9 @@ class c : public a, public b
 
 ## <a name="requirements"></a>必要条件
 
-### <a name="attribute-context"></a>属性コンテキスト
-
-|||
+| 属性コンテキスト | 値 |
 |-|-|
-|**適用対象**|Interface メソッド、 **interface**、 **`class`** 、**`struct`**|
+|**適用対象**|Interface メソッド、 **interface**、 **`class`** 、 **`struct`**|
 |**Repeatable**|いいえ|
 |**必須属性**|**coclass** (またはに適用された場合 **`class`** **`struct`** )|
 |**無効な属性**|なし|

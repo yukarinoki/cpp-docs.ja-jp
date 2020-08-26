@@ -31,16 +31,16 @@ helpviewer_keywords:
 - operator=, property sets
 - SetGUID method
 ms.assetid: 52bb806c-9581-494d-9af7-50d8a4834805
-ms.openlocfilehash: a52d7443ab335e8546a4bcce03cf68c3b1d60e3d
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 24cc621e522ed1939fe3127d97e8d54b75fa1618
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80212027"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88838296"
 ---
 # <a name="cdbpropidset-class"></a>CDBPropIDSet クラス
 
-`DBPROPIDSET` 構造体から継承し、キーフィールドと[AddPropertyID](../../data/oledb/cdbpropidset-addpropertyid.md)アクセスメソッドを初期化するコンストラクターを追加します。
+は `DBPROPIDSET` 構造体から継承し、キーフィールドと [AddPropertyID](../../data/oledb/cdbpropidset-addpropertyid.md) アクセスメソッドを初期化するコンストラクターを追加します。
 
 ## <a name="syntax"></a>構文
 
@@ -56,23 +56,23 @@ class CDBPropIDSet : public tagDBPROPIDSET
 
 ### <a name="methods"></a>メソッド
 
-|||
+| 名前 | 説明 |
 |-|-|
 |[AddPropertyID](#addpropertyid)|プロパティ ID セットにプロパティを追加します。|
 |[CDBPropIDSet](#cdbpropidset)|コンストラクターです。|
 |[SetGUID](#setguid)|プロパティ ID セットの GUID を設定します。|
 
-### <a name="operators"></a>オペレーター
+### <a name="operators"></a>演算子
 
-|||
+| 名前 | 説明 |
 |-|-|
 |[operator =](#op_equal)|あるプロパティ ID の内容を別のプロパティ ID に設定します。|
 
 ## <a name="remarks"></a>解説
 
-OLE DB コンシューマーは、`DBPROPIDSET` 構造体を使用して、コンシューマーがプロパティ情報を取得するプロパティ Id の配列を渡します。 1つの[Dbpropidset](/previous-versions/windows/desktop/ms717981(v=vs.85))構造体で識別されるプロパティは、1つのプロパティセットに属します。
+OLE DB コンシューマー `DBPROPIDSET` は、構造体を使用して、コンシューマーがプロパティ情報を取得するプロパティ id の配列を渡します。 1つの [Dbpropidset](/previous-versions/windows/desktop/ms717981(v=vs.85)) 構造体で識別されるプロパティは、1つのプロパティセットに属します。
 
-## <a name="cdbpropidsetaddpropertyid"></a><a name="addpropertyid"></a>CDBPropIDSet:: AddPropertyID
+## <a name="cdbpropidsetaddpropertyid"></a><a name="addpropertyid"></a> CDBPropIDSet:: AddPropertyID
 
 プロパティ id セットにプロパティ ID を追加します。
 
@@ -87,9 +87,9 @@ bool AddPropertyID(DBPROPID propid) throw();
 *propid*<br/>
 からプロパティ ID セットに追加するプロパティ ID。
 
-## <a name="cdbpropidsetcdbpropidset"></a><a name="cdbpropidset"></a>CDBPropIDSet:: CDBPropIDSet
+## <a name="cdbpropidsetcdbpropidset"></a><a name="cdbpropidset"></a> CDBPropIDSet:: CDBPropIDSet
 
-コンストラクターです。 [Dbpropidset](/previous-versions/windows/desktop/ms717981(v=vs.85))構造体の `rgProperties`、`cProperties`、および (必要に応じて) `guidPropertySet` フィールドを初期化します。
+コンストラクターです。 `rgProperties` `cProperties` `guidPropertySet` [Dbpropidset](/previous-versions/windows/desktop/ms717981(v=vs.85))構造体の、、および (オプションで) フィールドを初期化します。
 
 ### <a name="syntax"></a>構文
 
@@ -104,14 +104,14 @@ CDBPropIDSet();
 #### <a name="parameters"></a>パラメーター
 
 *guid*<br/>
-から`guidPropertySet` フィールドを初期化するために使用される GUID。
+からフィールドを初期化するために使用される GUID `guidPropertySet` 。
 
 *propidset*<br/>
-からコピー構築用の別の `CDBPropIDSet` オブジェクト。
+から `CDBPropIDSet` コピー構築用の別のオブジェクト。
 
-## <a name="cdbpropidsetsetguid"></a><a name="setguid"></a>CDBPropIDSet:: SetGUID
+## <a name="cdbpropidsetsetguid"></a><a name="setguid"></a> CDBPropIDSet:: SetGUID
 
-`DBPROPIDSET` 構造体の GUID フィールドを設定します。
+構造体の GUID フィールドを設定し `DBPROPIDSET` ます。
 
 ### <a name="syntax"></a>構文
 
@@ -122,13 +122,13 @@ void SetGUID(const GUID& guid) throw();
 #### <a name="parameters"></a>パラメーター
 
 *guid*<br/>
-から[Dbpropidset](/previous-versions/windows/desktop/ms717981(v=vs.85))構造体の `guidPropertySet` フィールドを設定するために使用される GUID です。
+から `guidPropertySet` [Dbpropidset](/previous-versions/windows/desktop/ms717981(v=vs.85)) 構造体のフィールドを設定するために使用される GUID です。
 
 ### <a name="remarks"></a>解説
 
-このフィールドは、[コンストラクター](../../data/oledb/cdbpropidset-cdbpropidset.md)でも設定できます。 このクラスの既定のコンストラクターを使用する場合は、この関数を呼び出します。
+このフィールドは、 [コンストラクター](../../data/oledb/cdbpropidset-cdbpropidset.md) でも設定できます。 このクラスの既定のコンストラクターを使用する場合は、この関数を呼び出します。
 
-## <a name="cdbpropidsetoperator-"></a><a name="op_equal"></a>CDBPropIDSet:: operator =
+## <a name="cdbpropidsetoperator-"></a><a name="op_equal"></a> CDBPropIDSet:: operator =
 
 1つのプロパティ ID セットの内容を別の ID プロパティセットに割り当てます。
 
@@ -138,7 +138,7 @@ void SetGUID(const GUID& guid) throw();
 CDBPropIDSet& operator =(CDBPropIDSet& propset) throw();
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[OLE DB コンシューマー テンプレートに関するページ](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
-[OLE DB コンシューマー テンプレート リファレンス](../../data/oledb/ole-db-consumer-templates-reference.md)
+[OLE DB コンシューマー テンプレート](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[OLE DB コンシューマーテンプレートリファレンス](../../data/oledb/ole-db-consumer-templates-reference.md)
