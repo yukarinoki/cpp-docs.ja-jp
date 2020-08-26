@@ -25,12 +25,12 @@ helpviewer_keywords:
 - GetReferencedRowset method
 - GetSpecification method
 ms.assetid: 9c654155-7727-464e-bd31-143e68391a47
-ms.openlocfilehash: cf72aabce58237f470d536c02727f442404db030
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: dfa3873917d5215d0069e504e0556c31744f4334
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80210445"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88840389"
 ---
 # <a name="irowsetinfoimpl-class"></a>IRowsetInfoImpl クラス
 
@@ -48,10 +48,10 @@ class ATL_NO_VTABLE IRowsetInfoImpl :
 ### <a name="parameters"></a>パラメーター
 
 *T*<br/>
-`IRowsetInfoImpl`から派生したクラス。
+から派生したクラス `IRowsetInfoImpl` 。
 
 *PropClass*<br/>
-既定で*T*に設定されているユーザー定義可能なプロパティクラス。
+既定で *T*に設定されているユーザー定義可能なプロパティクラス。
 
 ## <a name="requirements"></a>必要条件
 
@@ -61,7 +61,7 @@ class ATL_NO_VTABLE IRowsetInfoImpl :
 
 ### <a name="interface-methods"></a>インターフェイス メソッド
 
-|||
+| 名前 | 説明 |
 |-|-|
 |[GetProperties](#getproperties)|行セットによってサポートされているすべてのプロパティの現在の設定を返します。|
 |[GetReferencedRowset](#getreferencedrowset)|ブックマークが適用される行セットへのインターフェイスポインターを返します。|
@@ -69,11 +69,11 @@ class ATL_NO_VTABLE IRowsetInfoImpl :
 
 ## <a name="remarks"></a>解説
 
-行セットの必須のインターフェイスです。 このクラスは、コマンドクラスで定義された[プロパティセットマップ](../../data/oledb/begin-propset-map.md)を使用して、行セットプロパティを実装します。 行セットクラスはコマンドクラスのプロパティセットを使用しているように見えますが、コマンドまたはセッションオブジェクトによって作成された場合、その行セットには実行時プロパティの独自のコピーが用意されています。
+行セットの必須のインターフェイスです。 このクラスは、コマンドクラスで定義された [プロパティセットマップ](../../data/oledb/begin-propset-map.md) を使用して、行セットプロパティを実装します。 行セットクラスはコマンドクラスのプロパティセットを使用しているように見えますが、コマンドまたはセッションオブジェクトによって作成された場合、その行セットには実行時プロパティの独自のコピーが用意されています。
 
-## <a name="irowsetinfoimplgetproperties"></a><a name="getproperties"></a>IRowsetInfoImpl:: GetProperties
+## <a name="irowsetinfoimplgetproperties"></a><a name="getproperties"></a> IRowsetInfoImpl:: GetProperties
 
-`DBPROPSET_ROWSET` グループ内のプロパティの現在の設定を返します。
+グループ内のプロパティの現在の設定を返し `DBPROPSET_ROWSET` ます。
 
 ### <a name="syntax"></a>構文
 
@@ -88,7 +88,7 @@ STDMETHOD (GetProperties )(const ULONG cPropertyIDSets,
 
 *OLE DB プログラマーリファレンス*の「 [IRowsetInfo:: GetProperties](/previous-versions/windows/desktop/ms719611(v=vs.85)) 」を参照してください。
 
-## <a name="irowsetinfoimplgetreferencedrowset"></a><a name="getreferencedrowset"></a>IRowsetInfoImpl:: GetReferencedRowset
+## <a name="irowsetinfoimplgetreferencedrowset"></a><a name="getreferencedrowset"></a> IRowsetInfoImpl:: GetReferencedRowset
 
 ブックマークが適用される行セットへのインターフェイスポインターを返します。
 
@@ -104,7 +104,7 @@ STDMETHOD (GetReferencedRowset )(DBORDINAL iOrdinal,
 
 *OLE DB プログラマーリファレンス*の「 [IRowsetInfo:: GetReferencedRowset](/previous-versions/windows/desktop/ms721145(v=vs.85)) 」を参照してください。 *Iordinal*パラメーターはブックマーク列である必要があります。
 
-## <a name="irowsetinfoimplgetspecification"></a><a name="getspecification"></a>IRowsetInfoImpl:: GetSpecification
+## <a name="irowsetinfoimplgetspecification"></a><a name="getspecification"></a> IRowsetInfoImpl:: GetSpecification
 
 この行セットを作成したオブジェクト (コマンドまたはセッション) へのインターフェイス ポインターを返します。
 
@@ -121,9 +121,9 @@ STDMETHOD (GetSpecification )(REFIID riid,
 
 ### <a name="remarks"></a>解説
 
-このメソッドを[Igetdatasourceimpl](../../data/oledb/igetdatasourceimpl-class.md)と共に使用して、データソースオブジェクトからプロパティを取得します。
+このメソッドを [Igetdatasourceimpl](../../data/oledb/igetdatasourceimpl-class.md) と共に使用して、データソースオブジェクトからプロパティを取得します。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [OLE DB プロバイダー テンプレートに関するページ](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
-[OLE DB プロバイダー テンプレートのアーキテクチャ](../../data/oledb/ole-db-provider-template-architecture.md)
+[OLE DB プロバイダーテンプレートのアーキテクチャ](../../data/oledb/ole-db-provider-template-architecture.md)

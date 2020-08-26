@@ -5,20 +5,20 @@ helpviewer_keywords:
 - symbols [C++], ATL predefined
 - ATL symbols
 ms.assetid: 60d8f4e6-6ed9-47f3-9051-e4bf34384456
-ms.openlocfilehash: 4ce2d8060c7218226340a591c6295a573f99dad8
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 8134f334b0143a360fd3e02c04bca7a65ce67ce0
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84619768"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88836388"
 ---
 # <a name="atl-predefined-symbols"></a>ATL の定義済みシンボル
 
 これらのシンボルは ATL ヘッダーファイルで定義されていますが、標準の Windows アプリケーション関数とアクションをサポートしています。 これらのシンボルは、主にダイアログボックスと共に使用されます。
 
-[ダイアログエディターでダイアログ](dialog-editor.md)とコントロールを操作しているときに、これらのシンボルは、コモンコントロールに関連付けられている[プロパティウィンドウ](/visualstudio/ide/reference/properties-window)に表示されます。 たとえば、ダイアログボックスに **[キャンセル**] ボタンがある場合、そのコマンドは [**プロパティ**] ウィンドウのシンボル IDCANCEL に関連付けられます。
+[ダイアログエディターでダイアログ](dialog-editor.md)とコントロールを操作しているときに、これらのシンボルは、コモンコントロールに関連付けられている[プロパティウィンドウ](/visualstudio/ide/reference/properties-window)に表示されます。 たとえば、ダイアログボックスに **[キャンセル** ] ボタンがある場合、そのコマンドは [ **プロパティ** ] ウィンドウのシンボル IDCANCEL に関連付けられます。
 
-|||
+|名前|説明|
 |-|-|
 |IDABORT|制御ダイアログボックス、[中止] ボタン|
 |IDC_STATIC|制御スタティックコントロール|

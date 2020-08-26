@@ -7,12 +7,12 @@ f1_keywords:
 - std::<memory>
 helpviewer_keywords:
 - memory header
-ms.openlocfilehash: 57b7db798b4f44650513097137299d53b4e25266
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 0e3ce4a4411bd6d4c352802a96c97e93c66491df
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87202962"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88836466"
 ---
 # <a name="ltmemorygt"></a>&lt;memory&gt;
 
@@ -26,9 +26,9 @@ ms.locfileid: "87202962"
 
 ## <a name="members"></a>メンバー
 
-### <a name="functions"></a>関数
+### <a name="functions"></a>Functions
 
-|||
+|名前|説明|
 |-|-|
 |[addressof](../standard-library/memory-functions.md#addressof)|オブジェクトの実際のアドレスを取得します。|
 |[align](../standard-library/memory-functions.md#align)|指定されたアラインメントと開始アドレスに基づいて特定のサイズの範囲へのポインターを返します。|
@@ -75,25 +75,25 @@ ms.locfileid: "87202962"
 |[uninitialized_value_construct_n](../standard-library/memory-functions.md#uninitialized_value_construct_n)|省略形 `uninitialized_value_construct` のメソッド。|
 |[uses_allocator_v](../standard-library/memory-functions.md#uses_allocator_v)||
 
-### <a name="operators"></a>オペレーター
+### <a name="operators"></a>演算子
 
-|||
+|名前|説明|
 |-|-|
 |[operator! =](../standard-library/memory-operators.md#op_neq)|指定したクラスのアロケーター オブジェクト間の非等値をテストします。|
 |[operator = =](../standard-library/memory-operators.md#op_eq_eq)|指定したクラスのアロケーター オブジェクト間の等値をテストします。|
 |[operator>=](../standard-library/memory-operators.md#op_gt_eq)|指定したクラスの 1 つ目のアロケーター オブジェクトが 2 つ目のアロケーター オブジェクト以上であるかどうかをテストします。|
-|[<演算子](../standard-library/memory-operators.md#op_lt)|指定したクラスの 1 つ目のオブジェクトが 2 つ目のオブジェクト未満であるかどうかをテストします。|
+|[<演算子 ](../standard-library/memory-operators.md#op_lt)|指定したクラスの 1 つ目のオブジェクトが 2 つ目のオブジェクト未満であるかどうかをテストします。|
 |[operator\<=](../standard-library/memory-operators.md#op_gt_eq)|指定したクラスの 1 つ目のオブジェクトが 2 つ目のオブジェクト以下であるかどうかをテストします。|
-|[>演算子](../standard-library/memory-operators.md#op_gt)|指定したクラスの 1 つ目のオブジェクトが 2 つ目のオブジェクトを超えるかどうかをテストします。|
-|[<<演算子](../standard-library/memory-operators.md#op_lt_lt)|`shared_ptr` の挿入演算子です。|
+|[>演算子 ](../standard-library/memory-operators.md#op_gt)|指定したクラスの 1 つ目のオブジェクトが 2 つ目のオブジェクトを超えるかどうかをテストします。|
+|[<<演算子 ](../standard-library/memory-operators.md#op_lt_lt)|`shared_ptr` の挿入演算子です。|
 
 ### <a name="classes"></a>クラス
 
-|||
+|名前|説明|
 |-|-|
 |[allocator](../standard-library/allocator-class.md)|クラステンプレートは **、型の**オブジェクトの配列に対して、ストレージの割り当てと解放を管理するオブジェクトを記述します。|
 |[allocator_traits](../standard-library/allocator-traits-class.md)|アロケーター対応のコンテナーが必要とするすべての情報を指定したオブジェクトを記述します。|
-|[auto_ptr](../standard-library/auto-ptr-class.md)|クラステンプレートは、型の割り当てら**れたオブジェクト**へのポインターを格納するオブジェクトを記述し <strong>\*</strong> ます。このオブジェクトは、それを囲む auto_ptr が破棄されるときに、そのオブジェクトが確実に削除されるようにします。|
+|[auto_ptr](../standard-library/auto-ptr-class.md)|クラステンプレートは、型の割り当てら **れたオブジェクト**へのポインターを格納するオブジェクトを記述し <strong>\*</strong> ます。このオブジェクトは、それを囲む auto_ptr が破棄されるときに、そのオブジェクトが確実に削除されるようにします。|
 |[bad_weak_ptr](../standard-library/bad-weak-ptr-class.md)|weak_ptr が無効であることを示す例外を報告します。|
 |[enabled_shared_from_this](../standard-library/enable-shared-from-this-class.md)|`shared_ptr` の生成を支援します。|
 |[pointer_traits](../standard-library/pointer-traits-struct.md)|`allocator_traits`ポインター型を持つアロケーターを記述するために、型のオブジェクトに必要な情報を提供 `Ptr` します。|
@@ -104,7 +104,7 @@ ms.locfileid: "87202962"
 
 ### <a name="structures"></a>構造体
 
-|||
+|名前|説明|
 |-|-|
 |[allocator_arg_t](../standard-library/allocator-class.md#allocator_arg_t)||
 |[default_delete](../standard-library/default-delete-struct.md)||
@@ -114,7 +114,7 @@ ms.locfileid: "87202962"
 
 ### <a name="specializations"></a>特殊化
 
-|||
+|名前|説明|
 |-|-|
 |[allocator\<void>](../standard-library/allocator-void-class.md)|**`void`** この特殊なコンテキストで意味を持つメンバー型のみを定義する、クラステンプレートアロケーターを型に特化したもの。|
 

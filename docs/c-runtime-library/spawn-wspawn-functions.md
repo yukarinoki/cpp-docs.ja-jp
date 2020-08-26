@@ -48,23 +48,31 @@ helpviewer_keywords:
 - tspawnlpe function
 - _tspawnle function
 ms.assetid: bb47c703-5216-4e09-8023-8cf25bbf2cf9
-ms.openlocfilehash: a22f5b0c401dd888bbda451504e644557294544d
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 2f6aa420d7e6bb736721c4a68ff6451121da26ab
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81322959"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88840415"
 ---
 # <a name="_spawn-_wspawn-functions"></a>_spawn 系関数と _wspawn 系関数
 
 各 `_spawn` 関数は、新しいプロセスを作成して実行します。
 
-|||
-|-|-|
-|[_spawnl、_wspawnl](../c-runtime-library/reference/spawnl-wspawnl.md)|[_spawnv、_wspawnv](../c-runtime-library/reference/spawnv-wspawnv.md)|
-|[_spawnle、_wspawnle](../c-runtime-library/reference/spawnle-wspawnle.md)|[_spawnve、_wspawnve](../c-runtime-library/reference/spawnve-wspawnve.md)|
-|[_spawnlp、_wspawnlp](../c-runtime-library/reference/spawnlp-wspawnlp.md)|[_spawnvp、_wspawnvp](../c-runtime-library/reference/spawnvp-wspawnvp.md)|
-|[_spawnlpe、_wspawnlpe](../c-runtime-library/reference/spawnlpe-wspawnlpe.md)|[_spawnvpe、_wspawnvpe](../c-runtime-library/reference/spawnvpe-wspawnvpe.md)|
+:::row:::
+   :::column span="":::
+      [_spawnl、_wspawnl](../c-runtime-library/reference/spawnl-wspawnl.md)\
+      [_spawnle、_wspawnle](../c-runtime-library/reference/spawnle-wspawnle.md)\
+      [_spawnlp、_wspawnlp](../c-runtime-library/reference/spawnlp-wspawnlp.md)\
+      [_spawnlpe、_wspawnlpe](../c-runtime-library/reference/spawnlpe-wspawnlpe.md)\
+   :::column-end:::
+   :::column span="":::
+      [_spawnv、_wspawnv](../c-runtime-library/reference/spawnv-wspawnv.md)\
+      [_spawnve、_wspawnve](../c-runtime-library/reference/spawnve-wspawnve.md)\
+      [_spawnvp、_wspawnvp](../c-runtime-library/reference/spawnvp-wspawnvp.md)\
+      [_spawnvpe、_wspawnvpe](../c-runtime-library/reference/spawnvpe-wspawnvpe.md)\
+   :::column-end:::
+:::row-end:::
 
 関数名の最後の文字は、関数の種類を示します。
 
@@ -94,7 +102,7 @@ ms.locfileid: "81322959"
 
 新しいプロセスを読み込んで実行するには、十分なメモリが必要です。 `mode` 引数は、`_spawn` の前とその実行中に、呼び出しプロセスによって実行されるアクションを決定します。 次の `mode` の値は、Process.h で定義されます。
 
-|||
+|値|説明|
 |-|-|
 | `_P_OVERLAY`  | 新しいプロセスで呼び出しプロセスをオーバーレイし、呼び出しプロセスを破棄します (`_exec` 呼び出しと同じ影響)。  |
 | `_P_WAIT`  | 新しいプロセスの実行が完了するまで、呼び出しスレッドが中断されます (同期 `_spawn`)。  |
@@ -130,7 +138,7 @@ ms.locfileid: "81322959"
 
 ## <a name="environment-of-the-spawned-process"></a>生成されたプロセスの環境
 
-`_spawn` 呼び出しを作成するときに開いたファイルは、新しいプロセスでも開いたままです。 `_spawnl`、`_spawnlp`、`_spawnv`、`_spawnvp` の各呼び出しでは、新しいプロセスが呼び出しプロセスの環境を継承します。 `envp` 引数を使用して環境設定のリストを渡すことで、`_spawnle`、`_spawnlpe`、`_spawnve`、`_spawnvpe` の各呼び出しを使用して、新しいプロセスの環境を変更できます。 引数 `envp` は文字ポインターの配列であり、最後の要素以外の各要素は、環境変数を定義する null で終わる文字列を指します。 通常、このような文字列の形式は `NAME`=`value` であり、`NAME` は環境変数名、`value` はその変数に設定する文字列の値です。 (二重`value`引用符で囲まれていないことに注意してください。配列の最後の`envp`要素は**NULL**である必要があります。 `envp` 自身が **NULL** である場合、生成されたプロセスは親プロセスの環境設定を継承します。
+`_spawn` 呼び出しを作成するときに開いたファイルは、新しいプロセスでも開いたままです。 `_spawnl`、`_spawnlp`、`_spawnv`、`_spawnvp` の各呼び出しでは、新しいプロセスが呼び出しプロセスの環境を継承します。 `envp` 引数を使用して環境設定のリストを渡すことで、`_spawnle`、`_spawnlpe`、`_spawnve`、`_spawnvpe` の各呼び出しを使用して、新しいプロセスの環境を変更できます。 引数 `envp` は文字ポインターの配列であり、最後の要素以外の各要素は、環境変数を定義する null で終わる文字列を指します。 通常、このような文字列の形式は `NAME`=`value` であり、`NAME` は環境変数名、`value` はその変数に設定する文字列の値です。 ( `value` は二重引用符で囲まれていないことに注意してください)。配列の最後の要素は `envp` **NULL**にする必要があります。 `envp` 自身が **NULL** である場合、生成されたプロセスは親プロセスの環境設定を継承します。
 
 `_spawn` 関数は、開いているファイルに関するすべての情報 (変換モードを含む) を新しいプロセスに渡すことができます。 この情報は環境内の `C_FILE_INFO` エントリを通してリアル モードで渡されます。 通常、スタートアップ コードはこのエントリを処理してから、環境から削除します。 ただし、`_spawn` 関数によって C 以外のプロセスが生成される場合、このエントリは環境内に残されます。 環境を印刷すると、環境情報がバイナリ形式でリアル モードで渡されているため、このエントリの定義文字列にグラフィック文字が示されます。 これ以外の影響が通常の操作に及ぶことはありません。 保護モードでは、環境情報はテキスト形式で渡されるため、グラフィック文字は含まれません。
 
@@ -232,9 +240,9 @@ from SPAWN!
 ## <a name="see-also"></a>関連項目
 
 [プロセスと環境の制御](../c-runtime-library/process-and-environment-control.md)<br/>
-[中止](../c-runtime-library/reference/abort.md)<br/>
+[取り消し](../c-runtime-library/reference/abort.md)<br/>
 [atexit](../c-runtime-library/reference/atexit.md)<br/>
-[_exec、_wexec 系関数](../c-runtime-library/exec-wexec-functions.md)<br/>
+[_exec, _wexec 関数](../c-runtime-library/exec-wexec-functions.md)<br/>
 [終了、_Exit、_exit](../c-runtime-library/reference/exit-exit-exit.md)<br/>
 [_flushall](../c-runtime-library/reference/flushall.md)<br/>
 [_getmbcp](../c-runtime-library/reference/getmbcp.md)<br/>

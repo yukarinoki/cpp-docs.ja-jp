@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - CMFCDisableMenuAnimation [MFC], Restore
 ms.assetid: c6eb07da-c382-43d6-8028-007f2320e50e
-ms.openlocfilehash: c6d81f253016d3a292dd50b16c19f76a05e75e56
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: 97a93e000b3e12d8ec4824100059581216b1b8d9
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81752420"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88840766"
 ---
 # <a name="cmfcdisablemenuanimation-class"></a>CMFCDisableMenuAnimation クラス
 
-ポップアップ メニューのアニメーションを無効にします。
+ポップアップメニューのアニメーションを無効にします。
 
 ## <a name="syntax"></a>構文
 
@@ -29,51 +29,48 @@ class CMFCDisableMenuAnimation
 
 ### <a name="public-constructors"></a>パブリック コンストラクター
 
-|||
-|-|-|
 |名前|説明|
+|-|-|
 |`CMFCDisableMenuAnimation::CMFCDisableMenuAnimation`|`CMFCDisableMenuAnimation` オブジェクトを構築します。|
 |`CMFCDisableMenuAnimation::~CMFCDisableMenuAnimation`|デストラクターです。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
-|||
-|-|-|
 |名前|説明|
-|[メニューアニメーション::復元](#restore)|フレームワークがポップアップ メニューの表示に使用した以前のアニメーションを復元します。|
+|-|-|
+|[CMFCDisableMenuAnimation:: Restore](#restore)|フレームワークがポップアップメニューを表示するために使用した前のアニメーションを復元します。|
 
 ### <a name="data-members"></a>データ メンバー
 
-|||
-|-|-|
 |名前|説明|
-|`CMFCDisableMenuAnimation::m_animType`|前のポップアップ メニューのアニメーションの種類を格納します。|
+|-|-|
+|`CMFCDisableMenuAnimation::m_animType`|前のポップアップメニューアニメーションの種類を格納します。|
 
 ### <a name="remarks"></a>解説
 
-このヘルパー クラスを使用して、(たとえば、マウスやキーボード コマンドを処理する場合)、ポップアップ メニューのアニメーションを一時的に無効にします。
+このヘルパークラスを使用して、ポップアップメニューのアニメーションを一時的に無効にします (マウスやキーボードのコマンドを処理する場合など)。
 
-オブジェクト`CMFCDisableMenuAnimation`は、その有効期間中にポップアップ メニューアニメーションを無効にします。 コンストラクタは、現在のポップアップ メニューのアニメーションタイプをフィールド`m_animType`に格納し、現在のアニメーションタイプ`CMFCPopupMenu::NO_ANIMATION`を に設定します。 デストラクターは、前のアニメーションの種類を復元します。
+オブジェクトは、 `CMFCDisableMenuAnimation` 有効期間中のポップアップメニューのアニメーションを無効にします。 コンストラクターは、現在のポップアップメニューのアニメーションの種類をフィールドに格納 `m_animType` し、現在のアニメーションの種類をに設定し `CMFCPopupMenu::NO_ANIMATION` ます。 デストラクターは、前のアニメーションの種類を復元します。
 
-スタック上にオブジェクト`CMFCDisableMenuAnimation`を作成して、1 つの機能を通じてポップアップ メニューアニメーションを無効にすることができます。 関数間のポップアップメニューアニメーションを無効にする場合は、ヒープ上`CMFCDisableMenuAnimation`にオブジェクトを作成し、ポップアップメニューアニメーションを復元したいときに削除します。
+`CMFCDisableMenuAnimation`スタック上にオブジェクトを作成し、1つの関数全体でポップアップメニューのアニメーションを無効にすることができます。 関数間でポップアップメニューのアニメーションを無効にする場合は、 `CMFCDisableMenuAnimation` ヒープ上にオブジェクトを作成し、ポップアップメニューのアニメーションを復元するときにそのオブジェクトを削除します。
 
 ## <a name="example"></a>例
 
-次の例は、スタックを使用してメニュー アニメーションを一時的に無効にする方法を示しています。
+次の例は、スタックを使用してメニューアニメーションを一時的に無効にする方法を示しています。
 
 [!code-cpp[NVC_MFC_Misc#1](../../mfc/reference/codesnippet/cpp/cmfcdisablemenuanimation-class_1.h)]
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
-[アニメーションを無効にする](../../mfc/reference/cmfcdisablemenuanimation-class.md)
+[CMFCDisableMenuAnimation](../../mfc/reference/cmfcdisablemenuanimation-class.md)
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** afxpopupmenu.h
+**ヘッダー:** afxpopupmenu
 
-## <a name="cmfcdisablemenuanimationrestore"></a><a name="restore"></a>メニューアニメーション::復元
+## <a name="cmfcdisablemenuanimationrestore"></a><a name="restore"></a> CMFCDisableMenuAnimation:: Restore
 
-フレームワークがポップアップ メニューの表示に使用した以前のアニメーションを復元します。
+フレームワークがポップアップメニューを表示するために使用した前のアニメーションを復元します。
 
 ```cpp
 void Restore ();
@@ -81,10 +78,10 @@ void Restore ();
 
 ### <a name="remarks"></a>解説
 
-このメソッドは、フレームワークが`CMFCDisableMenuAnimation`ポップアップ メニューを表示するために使用した以前のアニメーションを復元するためにデストラクターによって呼び出されます。
+このメソッドは、フレームワークが `CMFCDisableMenuAnimation` ポップアップメニューを表示するために使用した前のアニメーションを復元するために、デストラクターによって呼び出されます。
 
 ## <a name="see-also"></a>関連項目
 
-[階層グラフ](../../mfc/hierarchy-chart.md)<br/>
+[階層図](../../mfc/hierarchy-chart.md)<br/>
 [クラス](../../mfc/reference/mfc-classes.md)<br/>
 [CMFCPopupMenu クラス](../../mfc/reference/cmfcpopupmenu-class.md)

@@ -37,12 +37,12 @@ helpviewer_keywords:
 - _waccess function
 - taccess function
 ms.assetid: ba34f745-85c3-49e5-a7d4-3590bd249dd3
-ms.openlocfilehash: ae213768e30fa8120a80aaa30b3fe1b53e802d78
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: fdada7f02115f44aa6a7e3c5e9bdfdf5e65f8b2f
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82920265"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88846590"
 ---
 # <a name="_access-_waccess"></a>_access、_waccess
 
@@ -71,30 +71,30 @@ int _waccess(
 
 ## <a name="return-value"></a>戻り値
 
-ファイルに特定のモードが設定されている場合、各関数は 0 を返します。 指定されたファイルが存在しない場合、または指定されたモードがない場合、この関数は-1 を返します。この場合、 `errno`は次の表に示すように設定されます。
+ファイルに特定のモードが設定されている場合、各関数は 0 を返します。 指定されたファイルが存在しない場合、または指定されたモードがない場合、この関数は-1 を返します。この場合、 `errno` は次の表に示すように設定されます。
 
-|||
-|-|-|
-`EACCES`|アクセス拒否: ファイルのアクセス許可の設定では、指定したアクセスは許可されません。
-`ENOENT`|ファイル名またはパスが見つかりません。
-`EINVAL`|無効なパラメーター。
+| 値 | 説明 |
+|--|--|
+| `EACCES` | アクセス拒否: ファイルのアクセス許可の設定では、指定したアクセスは許可されません。 |
+| `ENOENT` | ファイル名またはパスが見つかりません。 |
+| `EINVAL` | 無効なパラメーター。 |
 
 リターン コードの詳細については、「[_doserrno、errno、_sys_errlist、および _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」を参照してください。
 
 ## <a name="remarks"></a>解説
 
-ファイルと共に使用する場合、 **_access**関数は、指定されたファイルまたはディレクトリが存在し、*モード*の値によって指定された属性を持っているかどうかを判断します。 ディレクトリと共に使用する場合、 **_access**は指定したディレクトリが存在するかどうかのみを判断します。Windows 2000 以降のオペレーティングシステムでは、すべてのディレクトリに読み取りと書き込みのアクセス権があります。
+ファイルと共に使用する場合、 **_access** 関数は、指定されたファイルまたはディレクトリが存在し、 *モード*の値によって指定された属性を持っているかどうかを判断します。 ディレクトリと共に使用する場合、 **_access** は指定したディレクトリが存在するかどうかのみを判断します。Windows 2000 以降のオペレーティングシステムでは、すべてのディレクトリに読み取りと書き込みのアクセス権があります。
 
-|*モード*値|ファイル チェックの目的|
+|*モード* 値|ファイル チェックの目的|
 |------------------|---------------------|
 |00|存在のみ|
 |02|書き込み専用|
 |04|読み取り専用|
-|06|読み取りおよび書き込み|
+|06|読み取りと書き込み|
 
 この関数は、ファイルとディレクトリが読み取り専用かどうかだけを確認し、ファイルシステムのセキュリティ設定は確認しません。 そのためには、アクセス トークンが必要です。 ファイルシステムのセキュリティの詳細については、「[アクセス トークン](/windows/win32/SecAuthZ/access-tokens)」を参照してください。 ATL クラスはこの機能を提供するために存在します。「[CAccessToken クラス](../../atl/reference/caccesstoken-class.md)」を参照してください。
 
-**_waccess**は **_access**のワイド文字バージョンです。**_waccess**の*パス*引数は、ワイド文字列です。 **_waccess**と **_access**は同じように動作します。
+**_waccess**は **_access**のワイド文字バージョンです。**_waccess**の*パス*引数は、ワイド文字列です。 **_waccess** と **_access** は同じように動作します。
 
 この関数は、パラメーターを検証します。 *Path*が NULL であるか、*モード*で有効なモードが指定されていない場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、この関数は `errno` を `EINVAL` に設定し、-1 を返します。
 
@@ -108,14 +108,14 @@ int _waccess(
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|省略可能なヘッダー|
+|ルーチンによって返される値|必須ヘッダー|省略可能なヘッダー|
 |-------------|---------------------|----------------------|
 |**_access**|\<io.h>|\<errno.h>|
 |**_waccess**|\<wchar.h> または \<io.h>|\<errno.h>|
 
 ## <a name="example"></a>例
 
-次の例では、 **_access**を使用して crt_ACCESS という名前のファイルをチェックします。C は、存在するかどうか、書き込みが許可されているかどうかを確認します。
+次の例では、 **_access** を使用して crt_ACCESS という名前のファイルをチェックします。C は、存在するかどうか、書き込みが許可されているかどうかを確認します。
 
 ```C
 // crt_access.c
@@ -149,7 +149,7 @@ File crt_ACCESS.C does not have write permission.
 
 ## <a name="see-also"></a>関連項目
 
-[ファイル処理](../../c-runtime-library/file-handling.md)<br/>
+[ファイルの処理](../../c-runtime-library/file-handling.md)<br/>
 [_chmod、_wchmod](chmod-wchmod.md)<br/>
 [_fstat、_fstat32、_fstat64、_fstati64、_fstat32i64、_fstat64i32](fstat-fstat32-fstat64-fstati64-fstat32i64-fstat64i32.md)<br/>
 [_open、_wopen](open-wopen.md)<br/>

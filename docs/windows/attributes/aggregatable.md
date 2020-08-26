@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - aggregatable attribute
 ms.assetid: 9253a46a-cd76-41f2-b3b6-86f709bb069c
-ms.openlocfilehash: 883094c85418c15455a020cfe73538a6576eddd0
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 6782b1ca28eb07b3f726bd85cd7fffa9b1f1bad2
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87224488"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88836375"
 ---
 # <a name="aggregatable"></a>aggregatable
 
@@ -28,15 +28,15 @@ ms.locfileid: "87224488"
 *value*<br/>
 OptionalCOM オブジェクトを集計できるかどうかを示すパラメーター。
 
-- `never`COM オブジェクトを集計できません。
+- `never` COM オブジェクトを集計できません。
 
-- `allowed`COM オブジェクトは、直接作成することも、集計することもできます。 これは既定値です。
+- `allowed` COM オブジェクトは、直接作成することも、集計することもできます。 既定値です。
 
-- `always`COM オブジェクトを直接作成することはできず、集計することはできません。 このオブジェクトに対してを呼び出す場合は、 `CoCreateInstance` 集約オブジェクトの `IUnknown` インターフェイス (制御) を指定する必要があり `IUnknown` ます。
+- `always` COM オブジェクトを直接作成することはできず、集計することはできません。 このオブジェクトに対してを呼び出す場合は、 `CoCreateInstance` 集約オブジェクトの `IUnknown` インターフェイス (制御) を指定する必要があり `IUnknown` ます。
 
 ## <a name="remarks"></a>解説
 
-**集計**可能な C++ 属性には、[集計](/windows/win32/Midl/aggregatable)可能な MIDL 属性と同じ機能があります。 これは、コンパイラが**集計**可能な属性をから生成された .idl ファイルに渡すことを意味します。
+**集計**可能な C++ 属性には、[集計](/windows/win32/Midl/aggregatable)可能な MIDL 属性と同じ機能があります。 これは、コンパイラが **集計** 可能な属性をから生成された .idl ファイルに渡すことを意味します。
 
 この属性を使用するには、 [coclass](coclass.md)、 [progid](progid.md)、または [vi_progid](vi-progid.md) 属性 (または、これらのいずれかを意味する別の属性) も同じ要素に適用する必要があります。 いずれか 1 つの属性を使用すると、他の 2 つも自動的に適用されます。 たとえば、が適用されている場合、 `progid` `vi_progid` と `coclass` も適用されます。
 
@@ -68,9 +68,7 @@ class CMyClass {};
 
 ## <a name="requirements"></a>必要条件
 
-### <a name="attribute-context"></a>属性コンテキスト
-
-|||
+| 属性コンテキスト | 値 |
 |-|-|
 |**適用対象**|**`class`**, **`struct`**|
 |**Repeatable**|いいえ|

@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::normal_distribution [C++], param_type
 - std::normal_distribution [C++], param_type
 ms.assetid: bf92cdbd-bc72-4d4a-b588-173d748f0d7d
-ms.openlocfilehash: 138011ec4ccf6c010f002d61cdb8ae8b0bac1796
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 0fed268b6c3f318b3e308f90e94862fdf969e3fa
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87212151"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88836401"
 ---
 # <a name="normal_distribution-class"></a>normal_distribution クラス
 
@@ -78,12 +78,10 @@ public:
 
 クラステンプレートは、正規分布に従って分布した、ユーザー指定の整数型の値または型の値 (指定がない場合) を生成する分布を表し **`double`** ます。 次の表は、個々のメンバーに関する記事にリンクしています。
 
-||||
-|-|-|-|
-|[normal_distribution](#normal_distribution)|`normal_distribution::mean`|`normal_distribution::param`|
-|`normal_distribution::operator()`|`normal_distribution::stddev`|[param_type](#param_type)|
+[normal_distribution](#normal_distribution)\
+[param_type](#param_type)
 
-プロパティ関数およびは、格納されている `mean()` `stddev()` 分布パラメーターの*平均*と*stddev*の値をそれぞれ返します。
+プロパティ関数およびは、格納されている `mean()` `stddev()` 分布パラメーターの *平均* と *stddev* の値をそれぞれ返します。
 
 プロパティ メンバー関数 `param()` は、格納されている分布パラメーター パッケージ `param_type` を設定または返します。
 
@@ -187,7 +185,7 @@ Distribution for 10 samples:
 
 **名前空間:** std
 
-## <a name="normal_distributionnormal_distribution"></a><a name="normal_distribution"></a>normal_distribution:: normal_distribution
+## <a name="normal_distributionnormal_distribution"></a><a name="normal_distribution"></a> normal_distribution:: normal_distribution
 
 分布を作成します。
 
@@ -215,7 +213,7 @@ explicit normal_distribution(const param_type& parm);
 
 2 つ目のコンストラクターは、格納されているパラメーターが *parm* から初期化されるオブジェクトを作成します。 `param()` メンバー関数を呼び出すと、既存の分布の現在のパラメーターを取得および設定できます。
 
-## <a name="normal_distributionparam_type"></a><a name="param_type"></a>normal_distribution::p aram_type
+## <a name="normal_distributionparam_type"></a><a name="param_type"></a> normal_distribution::p aram_type
 
 分布のパラメーターを格納します。
 

@@ -3,12 +3,12 @@ title: Windows ランタイム C++ テンプレート ライブラリ (WRL)
 ms.date: 11/04/2016
 ms.topic: overview
 ms.assetid: b915afce-553b-44a7-b8dc-0ab601758eb0
-ms.openlocfilehash: b03dc98212bbc822ddc44871632fda73d1be8740
-ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
+ms.openlocfilehash: 10e2303fa5498079fc1f9bb6f82aa909c9a6c3ee
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86404913"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88840538"
 ---
 # <a name="windows-runtime-c-template-library-wrl"></a>Windows ランタイム C++ テンプレート ライブラリ (WRL)
 
@@ -17,7 +17,7 @@ Windows ランタイム C++ テンプレート ライブラリ (WRL) は、Windo
 > [!NOTE]
 > WRL は、C++/WinRT で置き換えられました。これは Windows ランタイム Api 向けの標準 C++ 17 言語の射影です。 C++/WinRT は、Windows 10 SDK のバージョン 1803 以降で使用できます。 C++/WinRT は、完全にヘッダーファイルに実装され、最新の Windows API へのファーストクラスのアクセスを提供するように設計されています。
 >
-> C++/WinRT では、標準に準拠した C++ 17 コンパイラを使用して Windows ランタイム Api を使用し、作成することができます。 C++/WinRT は通常、より優れたパフォーマンスを発揮し、Windows ランタイムの他の言語オプションよりも小さなバイナリを生成します。 C++/CX と WRL は引き続きサポートされますが、新しいアプリケーションでは C++/WinRT を使用することを強くお勧めします。 詳細については、「 [C++/WinRT](https://docs.microsoft.com/windows/uwp/cpp-and-winrt-apis/index)」を参照してください。
+> C++/WinRT では、標準に準拠した C++ 17 コンパイラを使用して Windows ランタイム Api を使用し、作成することができます。 C++/WinRT は通常、より優れたパフォーマンスを発揮し、Windows ランタイムの他の言語オプションよりも小さなバイナリを生成します。 C++/CX と WRL は引き続きサポートされますが、新しいアプリケーションでは C++/WinRT を使用することを強くお勧めします。 詳細については、「[C++/WinRT](/windows/uwp/cpp-and-winrt-apis/index)」を参照してください。
 
 ## <a name="benefits"></a>メリット
 
@@ -32,7 +32,7 @@ Windows ランタイム C++ テンプレートライブラリと C++/CX では�
 - C++/CX は、COM HRESULT 値を例外として表します。 COM を使用するコードベース、または例外を使用しないコードベースを継承した場合は、例外を使用する必要がないため、Windows ランタイム C++ テンプレートライブラリが Windows ランタイムを操作するより自然な方法であることがわかります。
 
    > [!NOTE]
-   > Windows ランタイム C++ テンプレートライブラリでは HRESULT 値が使用され、例外はスローされません。 さらに、Windows ランタイム C++ テンプレートライブラリでは、スマートポインターと RAII パターンを使用して、アプリケーションコードが例外をスローしたときにオブジェクトが正しく破棄されることを保証します。 スマートポインターと RAII の詳細については、「[スマートポインター](../../cpp/smart-pointers-modern-cpp.md)と[オブジェクトのリソース (RAII)](../../cpp/objects-own-resources-raii.md)」を参照してください。
+   > Windows ランタイム C++ テンプレートライブラリでは HRESULT 値が使用され、例外はスローされません。 さらに、Windows ランタイム C++ テンプレートライブラリでは、スマートポインターと RAII パターンを使用して、アプリケーションコードが例外をスローしたときにオブジェクトが正しく破棄されることを保証します。 スマートポインターと RAII の詳細については、「 [スマートポインター](../../cpp/smart-pointers-modern-cpp.md) と [オブジェクトのリソース (RAII)](../../cpp/objects-own-resources-raii.md)」を参照してください。
 
 - Windows ランタイム C++ テンプレートライブラリの目的と設計は、COM オブジェクトのプログラミングを簡略化する、テンプレートベースの C++ クラスのセットである Active Template Library (ATL) によって作成されています。 Windows ランタイム C++ テンプレートライブラリは標準 C++ を使用して Windows ランタイムをラップするため、ATL で記述された多くの既存の COM コンポーネントを Windows ランタイムに簡単に移植して操作できます。 ATL が既にわかっている場合は、Windows ランタイム C++ テンプレートライブラリのプログラミングが簡単であることがわかります。
 
@@ -73,7 +73,7 @@ Windows ランタイム C++ テンプレートライブラリを使用して基�
 [C++ サンプルを使用した Windows ランタイム DLL コンポーネントの作成](https://github.com/Microsoft/VCSamples/tree/master/VC2012Samples/Windows%208%20samples/C%2B%2B/Windows%208%20app%20samples)<br/>
 Windows ランタイム C++ テンプレートライブラリを使用してインプロセス DLL コンポーネントを作成し、C++/CX、JavaScript、および C# から使用する方法について説明します。
 
-[DirectX マーブル メイズ ゲームのサンプル](https://docs.microsoft.com/samples/microsoft/windows-appsample-marble-maze/directx-marble-maze-game-sample/)<br/>
+[DirectX マーブル メイズ ゲームのサンプル](/samples/microsoft/windows-appsample-marble-maze/directx-marble-maze-game-sample/)<br/>
 Windows ランタイム C++ テンプレートライブラリを使用して、完全な3-d ゲームのコンテキストで DirectX やメディアファンデーションなどの COM コンポーネントの有効期間を管理する方法を示します。
 
 [デスクトップ アプリからのトースト通知](/windows/uwp/design/shell/tiles-and-notifications/toast-desktop-apps)<br/>
@@ -129,7 +129,7 @@ Windows ランタイム C++ テンプレートライブラリには、いくつ�
 
 ### <a name="asyncbase"></a>AsyncBase
 
-[Asyncbase](asyncbase-class.md)は、Windows ランタイムの非同期プログラミングモデルを表す仮想メソッドを提供します。 非同期操作の進行状況を開始、停止、または確認するカスタム クラスを作成するには、このクラス内のメンバーをオーバーライドします。
+[Asyncbase](asyncbase-class.md) は、Windows ランタイムの非同期プログラミングモデルを表す仮想メソッドを提供します。 非同期操作の進行状況を開始、停止、または確認するカスタム クラスを作成するには、このクラス内のメンバーをオーバーライドします。
 
 ### <a name="ftmbase"></a>FtmBase
 
@@ -143,9 +143,14 @@ Windows ランタイム C++ テンプレートライブラリには、いくつ�
 
 ## <a name="related-topics"></a>関連トピック
 
-|||
-|-|-|
-|[カテゴリ別の主要な API](key-wrl-apis-by-category.md)|プライマリ Windows ランタイム C++ テンプレートライブラリの型、関数、およびマクロについて取り上げます。|
-|[リファレンス](wrl-reference.md)|Windows ランタイム C++ テンプレートライブラリのリファレンス情報が含まれています。|
-|[クイックリファレンス (C++/CX)](../../cppcx/quick-reference-c-cx.md)|Windows ランタイムをサポートする C++/CX 機能について簡単に説明します。|
-|[Visual C++ での Windows ランタイム コンポーネントの使用](/windows/uwp/winrt-components/walkthrough-creating-a-basic-windows-runtime-component-in-cpp-and-calling-it-from-javascript-or-csharp)|C++/CX を使用して基本的な Windows ランタイムコンポーネントを作成する方法について説明します。|
+[カテゴリ別のキー Api](key-wrl-apis-by-category.md)\
+プライマリ Windows ランタイム C++ テンプレートライブラリの型、関数、およびマクロについて取り上げます。
+
+[「](wrl-reference.md)\
+Windows ランタイム C++ テンプレートライブラリのリファレンス情報が含まれています。
+
+[クイックリファレンス (C++/CX)](../../cppcx/quick-reference-c-cx.md)\
+Windows ランタイムをサポートする C++/CX 機能について簡単に説明します。
+
+[Visual C++ での Windows ランタイムコンポーネントの使用](/windows/uwp/winrt-components/walkthrough-creating-a-basic-windows-runtime-component-in-cpp-and-calling-it-from-javascript-or-csharp)\
+C++/CX を使用して基本的な Windows ランタイムコンポーネントを作成する方法について説明します。

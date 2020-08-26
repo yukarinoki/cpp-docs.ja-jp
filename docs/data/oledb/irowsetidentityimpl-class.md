@@ -13,16 +13,16 @@ helpviewer_keywords:
 - IRowsetIdentityImpl class
 - IsSameRow method
 ms.assetid: 56821edf-e045-40c8-96bd-231552cd5799
-ms.openlocfilehash: 20f558099c02d7de8a20b3cf631812b44a742a48
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 48ed687ff67208109b5a2acf400d98491b4c769a
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80210407"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88836144"
 ---
 # <a name="irowsetidentityimpl-class"></a>IRowsetIdentityImpl クラス
 
-行 id のテストを可能にする OLE DB [IRowsetIdentity](/previous-versions/windows/desktop/ms715913(v=vs.85))インターフェイスを実装します。
+行 id のテストを可能にする OLE DB [IRowsetIdentity](/previous-versions/windows/desktop/ms715913(v=vs.85)) インターフェイスを実装します。
 
 ## <a name="syntax"></a>構文
 
@@ -35,10 +35,10 @@ class ATL_NO_VTABLE IRowsetIdentityImpl
 ### <a name="parameters"></a>パラメーター
 
 *T*<br/>
-`IRowsetIdentityImpl`から派生したクラス。
+から派生したクラス `IRowsetIdentityImpl` 。
 
 *RowClass*<br/>
-`HROW`のストレージユニット。
+のストレージユニット `HROW` 。
 
 ## <a name="requirements"></a>必要条件
 
@@ -48,11 +48,11 @@ class ATL_NO_VTABLE IRowsetIdentityImpl
 
 ### <a name="methods"></a>メソッド
 
-|||
+| 名前 | 説明 |
 |-|-|
 |[IsSameRow](#issamerow)|2つの行ハンドルを比較して、同じ行を参照しているかどうかを確認します。|
 
-## <a name="irowsetidentityimplissamerow"></a><a name="issamerow"></a>IRowsetIdentityImpl:: IsSameRow
+## <a name="irowsetidentityimplissamerow"></a><a name="issamerow"></a> IRowsetIdentityImpl:: IsSameRow
 
 2つの行ハンドルを比較して、同じ行を参照しているかどうかを確認します。
 
@@ -69,9 +69,9 @@ STDMETHOD(IsSameRow )(HROW hThisRow,
 
 ### <a name="remarks"></a>解説
 
-行ハンドルを比較するために、このメソッドは `HROW` ハンドルを `RowClass` メンバーにキャストし、ポインターに対して `memcmp` を呼び出します。
+行ハンドルを比較するために、このメソッドは `HROW` ハンドルを `RowClass` ポインターに対するメンバーと呼び出しにキャストし `memcmp` ます。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [OLE DB プロバイダー テンプレートに関するページ](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
-[OLE DB プロバイダー テンプレートのアーキテクチャ](../../data/oledb/ole-db-provider-template-architecture.md)
+[OLE DB プロバイダーテンプレートのアーキテクチャ](../../data/oledb/ole-db-provider-template-architecture.md)

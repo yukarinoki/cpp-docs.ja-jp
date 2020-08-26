@@ -56,23 +56,33 @@ helpviewer_keywords:
 - _exec function
 - _texecvpe function
 ms.assetid: a261df93-206a-4fdc-b8ac-66aa7db83bc6
-ms.openlocfilehash: 52c9727db544d8b124b37cc5beae369ae06abe10
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: ecfcf88b09a4383fc050e9737a0ffe7203f9a050
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81351661"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88839726"
 ---
 # <a name="_exec-_wexec-functions"></a>_exec、_wexec 系関数
 
 この系列の各関数は、新しいプロセスを読み込んで実行します。
 
-|||
-|-|-|
-|[_execl、_wexecl](../c-runtime-library/reference/execl-wexecl.md)|[_execv、_wexecv](../c-runtime-library/reference/execv-wexecv.md)|
-|[_execle、_wexecle](../c-runtime-library/reference/execle-wexecle.md)|[_execve、_wexecve](../c-runtime-library/reference/execve-wexecve.md)|
-|[_execlp、_wexeclp](../c-runtime-library/reference/execlp-wexeclp.md)|[_execvp、_wexecvp](../c-runtime-library/reference/execvp-wexecvp.md)|
-|[_execlpe、_wexeclpe](../c-runtime-library/reference/execlpe-wexeclpe.md)|[_execvpe、_wexecvpe](../c-runtime-library/reference/execvpe-wexecvpe.md)|
+:::row:::
+   :::column span="":::
+      [_execl、_wexecl](../c-runtime-library/reference/execl-wexecl.md)\
+      [_execv、_wexecv](../c-runtime-library/reference/execv-wexecv.md)\
+      [_execle、_wexecle](../c-runtime-library/reference/execle-wexecle.md)
+   :::column-end:::
+   :::column span="":::
+      [_execve、_wexecve](../c-runtime-library/reference/execve-wexecve.md)\
+      [_execlp、_wexeclp](../c-runtime-library/reference/execlp-wexeclp.md)\
+      [_execvp、_wexecvp](../c-runtime-library/reference/execvp-wexecvp.md)
+   :::column-end:::
+   :::column span="":::
+      [_execlpe、_wexeclpe](../c-runtime-library/reference/execlpe-wexeclpe.md)\
+      [_execvpe、_wexecvpe](../c-runtime-library/reference/execvpe-wexecvpe.md)
+   :::column-end:::
+:::row-end:::
 
 関数名の最後の文字は、関数の種類を示します。
 
@@ -118,7 +128,7 @@ ms.locfileid: "81351661"
 
 `_execv`、`_execve`、`_execvp`、および `_execvpe` の各呼び出しは、新しいプロセスのパラメーターの数が変化する場合に便利です。 パラメーターへのポインターは、配列 `argv` として渡されます。 通常の場合、パラメーター `argv`[0] は `cmdname` へのポインターです。 パラメーター `argv`[1] ～ `argv`[`n`] は、新しいパラメーター リストを構成する文字列を指します。 パラメーター リストの終端を示すために、パラメーター `argv`[`n`+1] は **NULL** ポインターである必要があります。
 
-`_exec` 呼び出しを作成するときに開いたファイルは、新しいプロセスでも開いたままです。 `_execl`、`_execlp`、`_execv`、および `_execvp` の各呼び出しでは、新しいプロセスが呼び出しプロセスの環境を継承します。 `_execle`、`_execlpe`、`_execve`、および `_execvpe` の各呼び出しでは、`envp` パラメーターを使用して環境設定のリストを渡すことで、新しいプロセスの環境を変更できます。 `envp` は文字ポインターの配列であり、最後の要素以外の各要素は、環境変数を定義する null で終わる文字列を指します。 通常、このような文字列の形式は `NAME`=`value` であり、`NAME` は環境変数名、`value` はその変数に設定する文字列の値です。 (二重`value`引用符で囲まれていないことに注意してください。配列の最後の`envp`要素は**NULL**である必要があります。 `envp` 自身が **NULL** である場合、新しいプロセスは呼び出しプロセスの環境設定を継承します。
+`_exec` 呼び出しを作成するときに開いたファイルは、新しいプロセスでも開いたままです。 `_execl`、`_execlp`、`_execv`、および `_execvp` の各呼び出しでは、新しいプロセスが呼び出しプロセスの環境を継承します。 `_execle`、`_execlpe`、`_execve`、および `_execvpe` の各呼び出しでは、`envp` パラメーターを使用して環境設定のリストを渡すことで、新しいプロセスの環境を変更できます。 `envp` は文字ポインターの配列であり、最後の要素以外の各要素は、環境変数を定義する null で終わる文字列を指します。 通常、このような文字列の形式は `NAME`=`value` であり、`NAME` は環境変数名、`value` はその変数に設定する文字列の値です。 ( `value` は二重引用符で囲まれていないことに注意してください)。配列の最後の要素は `envp` **NULL**にする必要があります。 `envp` 自身が **NULL** である場合、新しいプロセスは呼び出しプロセスの環境設定を継承します。
 
 `_exec` 系関数で実行されるプログラムは、常に、プログラムの .exe ファイル ヘッダーの maximum allocation フィールドが既定値 0xFFFFH であるかのように、メモリに読み込まれます。
 
@@ -239,9 +249,9 @@ int main( int ac, char* av[] )
 ## <a name="see-also"></a>関連項目
 
 [プロセスと環境の制御](../c-runtime-library/process-and-environment-control.md)<br/>
-[中止](../c-runtime-library/reference/abort.md)<br/>
+[取り消し](../c-runtime-library/reference/abort.md)<br/>
 [atexit](../c-runtime-library/reference/atexit.md)<br/>
 [終了、_Exit、_exit](../c-runtime-library/reference/exit-exit-exit.md)<br/>
 [_onexit、_onexit_m](../c-runtime-library/reference/onexit-onexit-m.md)<br/>
-[_spawn 系関数と _wspawn 系関数](../c-runtime-library/spawn-wspawn-functions.md)<br/>
+[_spawn, _wspawn 関数](../c-runtime-library/spawn-wspawn-functions.md)<br/>
 [system、_wsystem](../c-runtime-library/reference/system-wsystem.md)

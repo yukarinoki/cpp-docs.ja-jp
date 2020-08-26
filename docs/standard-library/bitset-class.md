@@ -34,12 +34,12 @@ helpviewer_keywords:
 - std::bitset [C++], to_ulong
 - std::bitset [C++], reference
 ms.assetid: 28b86964-87b4-429c-8124-b6c251b6c50b
-ms.openlocfilehash: 9a822e635ea3a1fd035a6a4b1d2b38250c96158a
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 623593e723b26244cc82e9eeed3e32657cca0b94
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87217845"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88846486"
 ---
 # <a name="bitset-class"></a>bitset クラス
 
@@ -59,7 +59,7 @@ class bitset
 
 ## <a name="remarks"></a>解説
 
-類似の[vector \<bool> クラス](../standard-library/vector-bool-class.md)とは異なり、ビットセットクラスには反復子がなく、C++ 標準ライブラリコンテナーでもありません。 また、 \<bool> **ビット \<N\> セット**が宣言されている場合、テンプレートパラメーター *N*によって指定されたサイズに従ってコンパイル時に固定される特定のサイズによって、ベクターとは異なります。
+類似の [vector \<bool> クラス](../standard-library/vector-bool-class.md)とは異なり、ビットセットクラスには反復子がなく、C++ 標準ライブラリコンテナーでもありません。 また、 \<bool> **ビット \<N\> セット**が宣言されている場合、テンプレートパラメーター *N*によって指定されたサイズに従ってコンパイル時に固定される特定のサイズによって、ベクターとは異なります。
 
 ビットは、その値が 1 の場合は設定され、0 の場合にはリセットされます。 ビットの反転や切り替えとは、その値を 1 から 0 へ、あるいは 0 から 1 へ変更することです。 ビットセット内の *N* ビットには、0 ～ *N* - 1 の整数値でインデックスが付けられます。0 は最初のビット位置、*N* - 1 は最終的なビット位置へのインデックスを表します。
 
@@ -67,19 +67,19 @@ class bitset
 
 ### <a name="constructors"></a>コンストラクター
 
-|||
+|名前|説明|
 |-|-|
 |[bitset](#bitset)|クラス `bitset\<N>` のオブジェクトを構築し、ビットを 0 か、指定した値、または文字列の文字から取得した値に初期化します。|
 
 ### <a name="typedefs"></a>Typedefs
 
-|||
+|名前|説明|
 |-|-|
 |[element_type](#element_type)|データ型のシノニムであり、 **`bool`** 内の要素のビットを参照するために使用できる型 `bitset` 。|
 
-### <a name="functions"></a>関数
+### <a name="functions"></a>Functions
 
-|||
+|名前|説明|
 |-|-|
 |[すべての](#all)|こののすべてのビットをテストして、 `bitset` すべてがに設定されているかどうかを確認し **`true`** ます。|
 |[いつ](#any)|このメンバー関数は、シーケンス内のいずれかのビットが 1 に設定されているかどうかをテストします。|
@@ -89,27 +89,27 @@ class bitset
 |[reset](#reset)|`bitset` 内のすべてのビットを 0 にリセットするか、指定した位置の 1 つのビットを 0 にリセットします。|
 |[set](#set)|`bitset` 内のすべてのビットを 1 に設定するか、指定した位置の 1 つのビットを 1 に設定します。|
 |[size](#size)|`bitset` オブジェクト内のビット数を返します。|
-|[test](#test)|`bitset` 内の指定した位置のビットが 1 に設定されているかどうかをテストします。|
+|[テスト](#test)|`bitset` 内の指定した位置のビットが 1 に設定されているかどうかをテストします。|
 |[to_string](#to_string)|`bitset` オブジェクトを文字列形式に変換します。|
 |[to_ullong](#to_ullong)|内のビット値の合計を `bitset` として返し **`unsigned long long`** ます。|
 |[to_ulong](#to_ulong)|オブジェクトをに変換します。これにより `bitset` **`unsigned long`** 、を初期化するために使用する場合に含まれるビットのシーケンスが生成され `bitset` ます。|
 
 ### <a name="classes"></a>クラス
 
-|||
+|名前|説明|
 |-|-|
 |[reference](#reference)|`bitset` クラスの `operator[]` 用ヘルパー クラスとして、個々のビットへのアクセスと操作に使用される `bitset` に含まれるビットへの参照を提供するプロキシ クラス。|
 
-### <a name="operators"></a>オペレーター
+### <a name="operators"></a>演算子
 
-|||
+|名前|説明|
 |-|-|
 |[operator! =](#op_neq)|指定した `bitset` とターゲット `bitset` が等しくないことをテストします。|
 |[operator&=](#op_and_eq)|`AND` 論理演算を使用して、ビットセットのビットごとの組み合わせを実行します。|
-|[<<演算子](#op_lshift)|`bitset` 内のビットを、指定した位置数だけ左側にシフトさせ、その結果を新しい `bitset` に返します。|
+|[<<演算子 ](#op_lshift)|`bitset` 内のビットを、指定した位置数だけ左側にシフトさせ、その結果を新しい `bitset` に返します。|
 |[operator<<=](#op_lshift_eq)|`bitset` 内のビットを、指定した位置数だけ左側にシフトさせ、その結果を対象とする `bitset` に返します。|
 |[operator = =](#op_eq_eq)|指定した `bitset` とターゲット `bitset` が等しいことをテストします。|
-|[>>演算子](#op_rshift)|`bitset` 内のビットを、指定した位置数だけ右側にシフトさせ、その結果を新しい `bitset` に返します。|
+|[>>演算子 ](#op_rshift)|`bitset` 内のビットを、指定した位置数だけ右側にシフトさせ、その結果を新しい `bitset` に返します。|
 |[operator>>=](#op_rshift_eq)|`bitset` 内のビットを、指定した位置数だけ右側にシフトさせ、その結果を対象とする `bitset` に返します。|
 |[operator&#91;&#93;](#op_at)|`bitset` が変更可能な場合、`bitset` 内の指定した位置のビットへの参照を返します。それ以外の場合は、その位置のビットの値を返します。|
 |[演算子 ^ =](#op_xor_eq)|排他的 `OR` 演算を使用して、ビットセットのビットごとの組み合わせを実行します。|
@@ -118,11 +118,11 @@ class bitset
 
 ### <a name="structures"></a>構造体
 
-|||
+|名前|説明|
 |-|-|
 |[hash](#hash)||
 
-### <a name="all"></a><a name="all"></a>すべての
+### <a name="all"></a><a name="all"></a> すべての
 
 このビットセットのビットすべてが true に設定されているかどうかを判別するテストを行います。
 
@@ -134,7 +134,7 @@ bool all() const;
 
 このセット内のすべてのビットが true の場合、true を返します。 **`false`** 1 つ以上のビットが false の場合はを返します。
 
-### <a name="any"></a><a name="any"></a>いつ
+### <a name="any"></a><a name="any"></a> いつ
 
 シーケンス内のいずれかのビットが 1 に設定されているかどうかをテストします。
 
@@ -144,7 +144,7 @@ bool any() const;
 
 #### <a name="return-value"></a>戻り値
 
-**`true`** ビットセット内のいずれかのビットが1に設定されている場合は、**`false`** すべてのビットが0の場合。
+**`true`** ビットセット内のいずれかのビットが1に設定されている場合は、 **`false`** すべてのビットが0の場合。
 
 #### <a name="example"></a>例
 
@@ -197,7 +197,7 @@ The reset bitset is: ( 00000 )
 None of the bits in bitset b1 are set to 1.
 ```
 
-### <a name="bitset"></a><a name="bitset"></a>ビットセット
+### <a name="bitset"></a><a name="bitset"></a> ビットセット
 
 クラス `bitset\<N>` のオブジェクトを構築し、ビットを 0 か、指定した値、または文字列の文字から取得した値に初期化します。
 
@@ -263,9 +263,9 @@ explicit bitset(
 
 2 つのコンストラクター テンプレートも提供されています。
 
-- 最初のコンストラクター テンプレートはクラス `bitset\<N>` のオブジェクトを構築し、0 と 1 の文字列で与えられた文字のビットを初期化します。 文字列の文字に 0 か 1 以外の文字がある場合、このコンストラクターはクラス [invalid argument](../standard-library/invalid-argument-class.md) のオブジェクトをスローします。 指定された位置 (*_Pos*) が文字列の長さを超えている場合、コンストラクターは[out_of_range](../standard-library/out-of-range-class.md)クラスのオブジェクトをスローします。 このコンストラクターは、位置 `_Pos + j` で文字列の文字が 1 のビットのみをビットセットの位置 *j* に配置します。 既定では、 *_Pos*は0です。
+- 最初のコンストラクター テンプレートはクラス `bitset\<N>` のオブジェクトを構築し、0 と 1 の文字列で与えられた文字のビットを初期化します。 文字列の文字に 0 か 1 以外の文字がある場合、このコンストラクターはクラス [invalid argument](../standard-library/invalid-argument-class.md) のオブジェクトをスローします。 指定された位置 (*_Pos*) が文字列の長さを超えている場合、コンストラクターは [out_of_range](../standard-library/out-of-range-class.md)クラスのオブジェクトをスローします。 このコンストラクターは、位置 `_Pos + j` で文字列の文字が 1 のビットのみをビットセットの位置 *j* に配置します。 既定では、 *_Pos* は0です。
 
-- 2番目のコンストラクターテンプレートは最初のコンストラクターに似ていますが、初期化するビット数を指定するために使用される追加のパラメーター (*count*) が含まれています。 また、 *_Zero*と *_One*という2つの省略可能なパラメーターもあります。これは、それぞれ0ビットと1ビットを意味する*str*の文字を示します。
+- 2番目のコンストラクターテンプレートは最初のコンストラクターに似ていますが、初期化するビット数を指定するために使用される追加のパラメーター (*count*) が含まれています。 また、 *_Zero* と *_One*という2つの省略可能なパラメーターもあります。これは、それぞれ0ビットと1ビットを意味する *str* の文字を示します。
 
 #### <a name="example"></a>例
 
@@ -342,7 +342,7 @@ The set of bits in bitset<11> b6( bitval5, 3, 5 ) is ( 00000010011 ).
 The set of bits in bitset<9> b7( bitval, 2 ) is ( 110011011 ).
 ```
 
-### <a name="count"></a><a name="count"></a>数
+### <a name="count"></a><a name="count"></a> 数
 
 ビット シーケンスで設定されたビット数を返します。
 
@@ -396,7 +396,7 @@ The collection of flipped bits in the modified bitset is: ( 11011 )
 The number of bits in the bitset set to 1 is: 4.
 ```
 
-### <a name="element_type"></a><a name="element_type"></a>element_type
+### <a name="element_type"></a><a name="element_type"></a> element_type
 
 データ型のシノニムであり、 **`bool`** ビットセットの要素ビットを参照するために使用できる型。
 
@@ -452,7 +452,7 @@ Bitset b1 modified by b1[2] = 1 is: ( 110 )
 The bit at position 2 of bitset b1has a value of 1.
 ```
 
-### <a name="flip"></a><a name="flip"></a>短辺
+### <a name="flip"></a><a name="flip"></a> 短辺
 
 ビットセット内のすべてのビットの値を反転させるか、指定した位置の単一のビットを反転させます。
 
@@ -525,14 +525,14 @@ After flipping the fourth bit, the bitset becomes: ( 10001 )
 11111  The bit flipped is in position 4.
 ```
 
-### <a name="hash"></a><a name="hash"></a>ハッシュ
+### <a name="hash"></a><a name="hash"></a> ハッシュ
 
 ```cpp
 template <class T> struct hash;
 template <size_t N> struct hash<bitset<N>>;
 ```
 
-### <a name="none"></a><a name="none"></a>存在
+### <a name="none"></a><a name="none"></a> 存在
 
 ビットセット オブジェクト内のどのビットも 1 に設定されていないかどうかをテストします。
 
@@ -542,7 +542,7 @@ bool none() const;
 
 #### <a name="return-value"></a>戻り値
 
-**`true`** ビットセット内のビットが1に設定されていない場合は。**`false`** 少なくとも1つのビットが1に設定されている場合。
+**`true`** ビットセット内のビットが1に設定されていない場合は。 **`false`** 少なくとも1つのビットが1に設定されている場合。
 
 #### <a name="example"></a>例
 
@@ -589,7 +589,7 @@ At least one of the bits in bitset b1 is set to 1.
 None of the bits in bitset b1 are set to 1.
 ```
 
-### <a name="operator"></a><a name="op_neq"></a>operator! =
+### <a name="operator"></a><a name="op_neq"></a> operator! =
 
 指定したビットセットとターゲット ビットセットが等しくないことをテストします。
 
@@ -604,7 +604,7 @@ bool operator!=(const bitset\<N>& right) const;
 
 #### <a name="return-value"></a>戻り値
 
-**`true`** ビットセットが異なる場合は。**`false`** 同じである場合はです。
+**`true`** ビットセットが異なる場合は。 **`false`** 同じである場合はです。
 
 #### <a name="remarks"></a>解説
 
@@ -651,7 +651,7 @@ Bitset b1 is the same as bitset b2.
 Bitset b1 is different from bitset b3.
 ```
 
-### <a name="operatoramp"></a><a name="op_and_eq"></a>operator&amp;=
+### <a name="operatoramp"></a><a name="op_and_eq"></a> operator&amp;=
 
 `AND` 論理演算を使用して、ビットセットのビットごとの組み合わせを実行します。
 
@@ -718,7 +718,7 @@ the target bitset b1 becomes:   ( 00011 ).
 The parameter bitset b2 remains: ( 01011 ).
 ```
 
-### <a name="operator"></a><a name="op_lshift"></a>operator\<\<
+### <a name="operator"></a><a name="op_lshift"></a> operator\<\<
 
 ビットセット内のビットを、指定した位置数だけ左側にシフトさせ、その結果を新しいビットセットに返します。
 
@@ -770,7 +770,7 @@ int main( )
 }
 ```
 
-### <a name="operatorltlt"></a><a name="op_lshift_eq"></a>operator&lt;&lt;=
+### <a name="operatorltlt"></a><a name="op_lshift_eq"></a> operator&lt;&lt;=
 
 ビットセット内のビットを、指定した位置数だけ左側にシフトさせ、その結果を対象とするビットセットに返します。
 
@@ -817,7 +817,7 @@ After shifting the bits 2 positions to the left,
 the target bitset b1 becomes: ( 11100 ).
 ```
 
-### <a name="operator"></a><a name="op_eq_eq"></a>operator = =
+### <a name="operator"></a><a name="op_eq_eq"></a> operator = =
 
 指定したビットセットとターゲット ビットセットが等しいことをテストします。
 
@@ -832,7 +832,7 @@ bool operator==(const bitset\<N>& right) const;
 
 #### <a name="return-value"></a>戻り値
 
-**`true`** ビットセットが同じ場合は。**`false`** 異なる場合は、
+**`true`** ビットセットが同じ場合は。 **`false`** 異なる場合は、
 
 #### <a name="remarks"></a>解説
 
@@ -878,7 +878,7 @@ Bitset b1 is the same as bitset b2.
 Bitset b1 is different from bitset b3.
 ```
 
-### <a name="operatorgtgt"></a><a name="op_rshift"></a>operator&gt;&gt;
+### <a name="operatorgtgt"></a><a name="op_rshift"></a> operator&gt;&gt;
 
 ビットセット内のビットを、指定した位置数だけ右側にシフトさせ、その結果を新しいビットセットに返します。
 
@@ -931,7 +931,7 @@ After shifting the bits 1 position to the right,
 the bitset b3 is: ( 01110 ).
 ```
 
-### <a name="operatorgtgt"></a><a name="op_rshift_eq"></a>operator&gt;&gt;=
+### <a name="operatorgtgt"></a><a name="op_rshift_eq"></a> operator&gt;&gt;=
 
 ビットセット内のビットを、指定した位置数だけ右側にシフトさせ、その結果を対象とするビットセットに返します。
 
@@ -979,7 +979,7 @@ After shifting the bits 2 positions to the right,
 the target bitset b1 becomes: ( 00111 ).
 ```
 
-### <a name="operator"></a><a name="op_at"></a>演算子 []
+### <a name="operator"></a><a name="op_at"></a> 演算子 []
 
 ビットセットが変更可能な場合、ビットセット内の指定した位置のビットへの参照を返します。それ以外の場合は、その位置のビットの値を返します。
 
@@ -1023,7 +1023,7 @@ int main( )
 }
 ```
 
-### <a name="operator"></a><a name="op_xor_eq"></a>演算子 ^ =
+### <a name="operator"></a><a name="op_xor_eq"></a> 演算子 ^ =
 
 排他的 `OR` 演算を使用して、ビットセットのビットごとの組み合わせを実行します。
 
@@ -1042,7 +1042,7 @@ bitset\<N>& operator^=(const bitset\<N>& right);
 
 #### <a name="remarks"></a>解説
 
-排他的**OR**演算子によって結合された2つのビット **`true`** が、ビットの1つ以上の場合はを返します。それ以外の場合は **`true`** を返し **`false`** ます。
+排他的 **OR** 演算子によって結合された2つのビット **`true`** が、ビットの1つ以上の場合はを返します。それ以外の場合は **`true`** を返し **`false`** ます。
 
 メンバー演算子関数では、排他的 `OR` 演算子でビット単位で結合するとき、ビットセットのサイズを同じにする必要があります。
 
@@ -1089,7 +1089,7 @@ the target bitset b1 becomes:   ( 01100 ).
 The parameter bitset b2 remains: ( 01011 ).
 ```
 
-### <a name="operator124"></a><a name="op_or_eq"></a>operator&#124;=
+### <a name="operator124"></a><a name="op_or_eq"></a> operator&#124;=
 
 包括的 `OR` 演算を使用して、ビットセットのビットごとの組み合わせを実行します。
 
@@ -1156,7 +1156,7 @@ the target bitset b1 becomes:   ( 01111 ).
 The parameter bitset b2 remains: ( 01011 ).
 ```
 
-### <a name="operator"></a><a name="op_not"></a>演算子 ~
+### <a name="operator"></a><a name="op_not"></a> 演算子 ~
 
 ターゲット ビットセット内のすべてのビットを反転させ、その結果を返します。
 
@@ -1201,7 +1201,7 @@ Bitset b2 = ~b1 is: ( 11000 ).
 Bitset b3 = b1.flip( ) is: ( 11000 ).
 ```
 
-### <a name="reference"></a><a name="reference"></a>「
+### <a name="reference"></a><a name="reference"></a> 「
 
 ビットセット クラスのビットセット用ヘルパー クラスとして、個々のビットへのアクセスと操作に使用される `operator[]` に含まれるビットへの参照を提供するプロキシ クラス。
 
@@ -1323,7 +1323,7 @@ it becomes ( 00110 ).
 After a second flip, the value of the position 4 bit in b2 is now: 1.
 ```
 
-### <a name="reset"></a><a name="reset"></a>解除
+### <a name="reset"></a><a name="reset"></a> 解除
 
 ビットセット内のすべてのビットを 0 にリセットするか、指定した位置の 1 つのビットを 0 にリセットします。
 
@@ -1383,7 +1383,7 @@ The collecion of bits obtained from resetting all
 the elements of the bitset b1 is: ( 00000 )
 ```
 
-### <a name="set"></a><a name="set"></a>一連
+### <a name="set"></a><a name="set"></a> 一連
 
 ビットセット内のすべてのビットを 1 に設定するか、指定した位置の 1 つのビットを 1 に設定します。
 
@@ -1449,7 +1449,7 @@ The collecion of bits obtained from setting all the
 elements of the bitset b1 is: ( 11111 )
 ```
 
-### <a name="size"></a><a name="size"></a>幅
+### <a name="size"></a><a name="size"></a> 幅
 
 bitset オブジェクト内のビット数を返します。
 
@@ -1491,7 +1491,7 @@ The set of bits in bitset<5> b1( 6 ) is: ( 00110 )
 The number of bits in bitset b1 is: 5.
 ```
 
-### <a name="test"></a><a name="test"></a>test
+### <a name="test"></a><a name="test"></a> test
 
 ビットセット内の指定した位置のビットが 1 に設定されているかどうかをテストします。
 
@@ -1512,7 +1512,7 @@ bool test(size_t _Pos) const;
 
 このメンバー関数は [out_of_range](../standard-library/out-of-range-class.md) をスローします。
 
-### <a name="to_string"></a><a name="to_string"></a>to_string
+### <a name="to_string"></a><a name="to_string"></a> to_string
 
 ビットセットオブジェクトを文字列形式に変換します。
 
@@ -1560,7 +1560,7 @@ The string returned from the bitset b1
   by the member function to_string( ) is: 00111.
 ```
 
-### <a name="to_ullong"></a><a name="to_ullong"></a>to_ullong
+### <a name="to_ullong"></a><a name="to_ullong"></a> to_ullong
 
 **`unsigned long long`** ビットセットオブジェクトの内容と同じビットセットを含む値を返します。
 
@@ -1574,13 +1574,13 @@ unsigned long long to_ullong() const;
 
 #### <a name="exceptions"></a>例外
 
-ビットシーケンス内のいずれかのビットが型の値として表現できないビット値を持っている場合、 [overflow_error](overflow-error-class.md)オブジェクトをスロー **`unsigned long long`** します。
+ビットシーケンス内のいずれかのビットが型の値として表現できないビット値を持っている場合、 [overflow_error](overflow-error-class.md) オブジェクトをスロー **`unsigned long long`** します。
 
 #### <a name="remarks"></a>解説
 
 ビットシーケンス内のとしてのビット値の合計を返し **`unsigned long long`** ます。
 
-### <a name="to_ulong"></a><a name="to_ulong"></a>to_ulong
+### <a name="to_ulong"></a><a name="to_ulong"></a> to_ulong
 
 ビットセットオブジェクトを、ビットセットの初期化に使用される場合に含まれるビットのシーケンスを生成する整数に変換します。
 
@@ -1596,7 +1596,7 @@ unsigned long to_ulong( ) const;
 
 このメンバー関数を適用すると、ビットセットに含まれるビットのシーケンスと同じ1桁と0の数字を持つ整数が返されます。
 
-このメンバー関数は、ビットシーケンス内のいずれかのビットが型の値として表現できないビット値を持っている場合に、 [overflow_error](overflow-error-class.md)オブジェクトをスローし **`unsigned long`** ます。
+このメンバー関数は、ビットシーケンス内のいずれかのビットが型の値として表現できないビット値を持っている場合に、 [overflow_error](overflow-error-class.md) オブジェクトをスローし **`unsigned long`** ます。
 
 #### <a name="example"></a>例
 

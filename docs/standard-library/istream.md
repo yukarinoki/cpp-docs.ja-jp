@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - istream header
 ms.assetid: efcf24e4-05d1-4719-ab0b-9e7ebe845d89
-ms.openlocfilehash: 37399bb50f195c683b52eea4c8fadf8679d62852
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 15d955aca1406183cc348395068ba042b75d7417
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87233094"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88846460"
 ---
 # <a name="ltistreamgt"></a>&lt;istream&gt;
 
@@ -36,20 +36,20 @@ Iostreams の抽出を仲介するクラステンプレート basic_istream と�
 
 ### <a name="manipulators"></a>マニピュレーター
 
-|||
+|名前|説明|
 |-|-|
 |[jax-ws](../standard-library/istream-functions.md#ws)|ストリーム内の空白をスキップします。|
 |[スワップ](../standard-library/istream-functions.md#istream_swap)|2 つのストリーム オブジェクトを交換します。|
 
-### <a name="operators"></a>オペレーター
+### <a name="operators"></a>演算子
 
-|演算子|Description|
+|演算子|説明|
 |-|-|
-|[>>演算子](../standard-library/istream-operators.md#op_gt_gt)|ストリームから文字と文字列を抽出します。|
+|[>>演算子 ](../standard-library/istream-operators.md#op_gt_gt)|ストリームから文字と文字列を抽出します。|
 
 ### <a name="classes"></a>クラス
 
-|クラス|[説明]|
+|クラス|説明|
 |-|-|
 |[basic_iostream](../standard-library/basic-iostream-class.md)|入力と出力の両方を行うことができるストリーム クラス。|
 |[basic_istream](../standard-library/basic-istream-class.md)|クラステンプレートは、型の要素を含むストリームバッファーからの要素とエンコードされたオブジェクトの抽出を制御するオブジェクトを記述し `Elem` ます。 [char_type](../standard-library/basic-ios-class.md#char_type)とも呼ばれ、その文字特性は、 `Tr` [traits_type](../standard-library/basic-ios-class.md#traits_type)とも呼ばれるクラスによって決まります。|

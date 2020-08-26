@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::binomial_distribution [C++], param_type
 - std::binomial_distribution [C++], param_type
 ms.assetid: b7c8a26a-da8c-45a5-a3a8-208f7a3609ce
-ms.openlocfilehash: d0bba986889dfbd17fddcd0c6985c082f6f74c29
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 3054a29bd1bc82861461851d4403a7095ac1fcbd
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87230247"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88846512"
 ---
 # <a name="binomial_distribution-class"></a>binomial_distribution クラス
 
@@ -81,12 +81,10 @@ public:
 
 クラステンプレートは、 **`int`** 二項分布の離散確率関数に従って分布した、ユーザー指定の整数型の値または型の値 (指定がない場合) を生成する分布を表します。 次の表は、個々のメンバーに関する記事にリンクしています。
 
-||||
-|-|-|-|
-|[binomial_distribution](#binomial_distribution)|`binomial_distribution::t`|`binomial_distribution::param`|
-|`binomial_distribution::operator()`|`binomial_distribution::p`|[param_type](#param_type)|
+[binomial_distribution](#binomial_distribution)\
+[param_type](#param_type)
 
-プロパティメンバー `t()` とは `p()` それぞれ、現在格納されている分布パラメーター値*t*と*p*を返します。
+プロパティメンバー `t()` とは `p()` それぞれ、現在格納されている分布パラメーター値 *t* と *p* を返します。
 
 プロパティ メンバー関数 `param()` は、格納されている分布パラメーター パッケージ `param_type` を設定または返します。
 
@@ -231,7 +229,7 @@ Histogram for 100 samples:
 
 **名前空間:** std
 
-## <a name="binomial_distributionbinomial_distribution"></a><a name="binomial_distribution"></a>binomial_distribution:: binomial_distribution
+## <a name="binomial_distributionbinomial_distribution"></a><a name="binomial_distribution"></a> binomial_distribution:: binomial_distribution
 
 分布を作成します。
 
@@ -255,11 +253,11 @@ explicit binomial_distribution(const param_type& parm);
 
 **前提条件:** `0 ≤ t` および `0.0 ≤ p ≤ 1.0`
 
-1つ目のコンストラクターは、格納された*p*値が*p*の値を保持し、格納されている*t*値が値*t*を保持するオブジェクトを構築します。
+1つ目のコンストラクターは、格納された *p* 値が *p* の値を保持し、格納されている *t* 値が値 *t*を保持するオブジェクトを構築します。
 
 2 つ目のコンストラクターは、格納されているパラメーターが *parm* から初期化されるオブジェクトを作成します。 `param()` メンバー関数を呼び出すと、既存の分布の現在のパラメーターを取得および設定できます。
 
-## <a name="binomial_distributionparam_type"></a><a name="param_type"></a>binomial_distribution::p aram_type
+## <a name="binomial_distributionparam_type"></a><a name="param_type"></a> binomial_distribution::p aram_type
 
 分布のすべてのパラメーターを格納します。
 

@@ -36,12 +36,12 @@ helpviewer_keywords:
 - processes, executing new
 - process creation
 ms.assetid: 26d1713d-b551-4f21-a07b-e9891a2ae6cf
-ms.openlocfilehash: f57d959e9aaefe1f86c110d3c3e945abf6d268da
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: dc6a6195987c1d5b323a86671de09dc28df84665
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82916037"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88836118"
 ---
 # <a name="_spawnve-_wspawnve"></a>_spawnve、_wspawnve
 
@@ -76,19 +76,19 @@ intptr_t _wspawnve(
 実行されるファイルのパス。
 
 *argv*<br/>
-引数へのポインターの配列。 引数*argv*[0] は、通常、リアルモードのパスまたは保護モードのプログラム名へのポインターであり、 *argv*[1] ~ *argv*[**n**] は、新しい引数リストを形成する文字列へのポインターです。 引数*argv*[**n** + 1] は、引数リストの末尾を示す**NULL**ポインターでなければなりません。
+引数へのポインターの配列。 引数 *argv*[0] は、通常、リアルモードのパスまたは保護モードのプログラム名へのポインターであり、 *argv*[1] ~ *argv*[**n**] は、新しい引数リストを形成する文字列へのポインターです。 引数 *argv*[**n** + 1] は、引数リストの末尾を示す **NULL** ポインターでなければなりません。
 
 *envp*<br/>
 環境設定へのポインターの配列。
 
 ## <a name="return-value"></a>戻り値
 
-同期 **_spawnve**または **_wspawnve** (*モード*用に指定された **_P_WAIT** ) からの戻り値は、新しいプロセスの終了ステータスです。 非同期 **_spawnve**または **_wspawnve** (*モード*で指定された **_P_NOWAIT**または **_P_NOWAITO** ) からの戻り値がプロセスハンドルです。 プロセスが正常に終了した場合、終了ステータスは 0 です。 生成されたプロセスが明示的に0以外の引数で**終了**ルーチンを呼び出す場合は、終了ステータスを0以外の値に設定できます。 新しいプロセスが明示的に終了ステータスを正の値に設定しなかった場合、正の値の終了ステータスは中止または割り込みによる異常終了を示します。 戻り値-1 はエラーを示します (新しいプロセスは開始されません)。 この場合、 **errno**は次のいずれかの値に設定されます。
+同期 **_spawnve**または **_wspawnve** (*モード*用に指定された **_P_WAIT** ) からの戻り値は、新しいプロセスの終了ステータスです。 非同期 **_spawnve**または **_wspawnve** (*モード*で指定された **_P_NOWAIT**または **_P_NOWAITO** ) からの戻り値がプロセスハンドルです。 プロセスが正常に終了した場合、終了ステータスは 0 です。 生成されたプロセスが明示的に0以外の引数で **終了** ルーチンを呼び出す場合は、終了ステータスを0以外の値に設定できます。 新しいプロセスが明示的に終了ステータスを正の値に設定しなかった場合、正の値の終了ステータスは中止または割り込みによる異常終了を示します。 戻り値-1 はエラーを示します (新しいプロセスは開始されません)。 この場合、 **errno** は次のいずれかの値に設定されます。
 
-|||
+| 値 | 説明 |
 |-|-|
 | **E2BIG** | 引数リストが 1024 バイトを超えています。 |
-| **EINVAL** | *モード*引数が無効です。 |
+| **EINVAL** | *モード* 引数が無効です。 |
 | **ENOENT** | ファイルまたはパスが見つかりません。 |
 | **ENOEXEC** | 指定されたファイルが実行可能ファイルでないか、無効な実行可能ファイル形式です。 |
 | **ENOMEM** | 新しいプロセスを実行するのに十分なメモリがありません。 |
@@ -99,13 +99,13 @@ intptr_t _wspawnve(
 
 これらの関数は、新しいプロセスを作成して実行し、コマンド ライン引数へポインターの配列を、および環境の設定へポインターの配列を渡します。
 
-これらの関数では、パラメーターの検証が行われます。 *Cmdname*または*argv*が null ポインターの場合、または*argv*が null ポインターを指している場合、または*argv*[0] が空の文字列の場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、これらの関数は**errno**を**EINVAL**に設定し、-1 を返します。 新しいプロセスは起動されません。
+これらの関数では、パラメーターの検証が行われます。 *Cmdname*または*argv*が null ポインターの場合、または*argv*が null ポインターを指している場合、または*argv*[0] が空の文字列の場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、これらの関数は **errno** を **EINVAL**に設定し、-1 を返します。 新しいプロセスは起動されません。
 
 既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**_spawnve**|\<stdio.h> または \<process.h>|
 |**_wspawnve**|\<stdio.h> または \<wchar.h>|
@@ -119,10 +119,10 @@ intptr_t _wspawnve(
 ## <a name="see-also"></a>関連項目
 
 [プロセスと環境の制御](../../c-runtime-library/process-and-environment-control.md)<br/>
-[_spawn 系関数と _wspawn 系関数](../../c-runtime-library/spawn-wspawn-functions.md)<br/>
+[_spawn, _wspawn 関数](../../c-runtime-library/spawn-wspawn-functions.md)<br/>
 [取り消し](abort.md)<br/>
 [atexit](atexit.md)<br/>
-[_exec、_wexec 系関数](../../c-runtime-library/exec-wexec-functions.md)<br/>
+[_exec, _wexec 関数](../../c-runtime-library/exec-wexec-functions.md)<br/>
 [終了、_Exit、_exit](exit-exit-exit.md)<br/>
 [_flushall](flushall.md)<br/>
 [_getmbcp](getmbcp.md)<br/>

@@ -16,12 +16,12 @@ helpviewer_keywords:
 - std::error_category::message
 - std::error_category::name
 ms.assetid: e0a71e14-852d-4905-acd6-5f8ed426706d
-ms.openlocfilehash: ced6046b93a8d5140118e1e9de848df13a8c29c4
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 218596ff5b81e99f4787efe2582fdc2752533cec
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87224878"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88840168"
 ---
 # <a name="error_category-class"></a>error_category クラス
 
@@ -45,13 +45,13 @@ error_category(const error_category&) = delete
 
 ### <a name="typedefs"></a>Typedefs
 
-|||
+|名前|説明|
 |-|-|
 |[value_type](#value_type)|格納されたエラー コード値を表す型。|
 
-### <a name="functions"></a>関数
+### <a name="functions"></a>Functions
 
-|||
+|名前|説明|
 |-|-|
 |[default_error_condition](#default_error_condition)|エラー条件オブジェクトのエラー コード値を格納します。|
 |[表現](#equivalent)|エラー オブジェクトが同等であるかどうかを示す値を返します。|
@@ -60,16 +60,16 @@ error_category(const error_category&) = delete
 |[name](#name)|カテゴリの名前を返します。|
 |[system_category](#system)||
 
-### <a name="operators"></a>オペレーター
+### <a name="operators"></a>演算子
 
-|||
+|名前|説明|
 |-|-|
-|[operator =](#op_as)||
+|[operator =](#op_as)|代入演算子。|
 |[operator = =](#op_eq_eq)|`error_category` オブジェクト間の同等性をテストします。|
 |[operator! =](#op_neq)|`error_category` オブジェクト間の不等性をテストします。|
-|[<演算子](#op_lt)|[error_category](../standard-library/error-category-class.md) オブジェクトが比較のために渡される `error_category` オブジェクトより小さいかどうかをテストします。|
+|[<演算子 ](#op_lt)|[error_category](../standard-library/error-category-class.md) オブジェクトが比較のために渡される `error_category` オブジェクトより小さいかどうかをテストします。|
 
-## <a name="default_error_condition"></a><a name="default_error_condition"></a>default_error_condition
+## <a name="default_error_condition"></a><a name="default_error_condition"></a> default_error_condition
 
 エラー条件オブジェクトのエラー コード値を格納します。
 
@@ -121,13 +121,13 @@ virtual bool equivalent(const error_code& _Code,
 
 2 番目のメンバー関数は `*this == _Code.category() && _Code.value() == _Errval` を返します。
 
-### <a name="generic_category"></a><a name="generic"></a>generic_category
+### <a name="generic_category"></a><a name="generic"></a> generic_category
 
 ```cpp
 const error_category& generic_category();
 ```
 
-### <a name="message"></a><a name="message"></a>メッセージ
+### <a name="message"></a><a name="message"></a> メッセージ
 
 指定したエラー コードの名前を返します。
 
@@ -142,7 +142,7 @@ virtual string message(error_code::value_type val) const = 0;
 
 #### <a name="return-value"></a>戻り値
 
-カテゴリのエラーコード*val*のわかりやすい名前を返します。 エラーコードが認識されない場合、はを返し `"unknown error"` ます。
+カテゴリのエラーコード *val* のわかりやすい名前を返します。 エラーコードが認識されない場合、はを返し `"unknown error"` ます。
 
 #### <a name="remarks"></a>解説
 
@@ -158,13 +158,13 @@ virtual const char *name() const = 0;
 
 カテゴリの名前を、null 終端バイト文字列として返します。
 
-### <a name="operator"></a><a name="op_as"></a>operator =
+### <a name="operator"></a><a name="op_as"></a> operator =
 
 ```cpp
 error_category& operator=(const error_category&) = delete;
 ```
 
-### <a name="operator"></a><a name="op_eq_eq"></a>operator = =
+### <a name="operator"></a><a name="op_eq_eq"></a> operator = =
 
 `error_category` オブジェクト間の同等性をテストします。
 
@@ -179,13 +179,13 @@ bool operator==(const error_category& right) const;
 
 #### <a name="return-value"></a>戻り値
 
-**`true`** オブジェクトが等しい場合は。**`false`** オブジェクトが等しくない場合は。
+**`true`** オブジェクトが等しい場合は。 **`false`** オブジェクトが等しくない場合は。
 
 #### <a name="remarks"></a>解説
 
 このメンバー演算子は、`this == &right` を返します。
 
-### <a name="operator"></a><a name="op_neq"></a>operator! =
+### <a name="operator"></a><a name="op_neq"></a> operator! =
 
 `error_category` オブジェクト間の不等性をテストします。
 
@@ -206,7 +206,7 @@ bool operator!=(const error_category& right) const;
 
 このメンバー演算子は、 `(!*this == right)`を返します。
 
-### <a name="operatorlt"></a><a name="op_lt"></a>operator&lt;
+### <a name="operatorlt"></a><a name="op_lt"></a> operator&lt;
 
 [error_category](../standard-library/error-category-class.md) オブジェクトが比較のために渡される `error_category` オブジェクトより小さいかどうかをテストします。
 
@@ -227,13 +227,13 @@ bool operator<(const error_category& right) const;
 
 このメンバー演算子は、 `this < &right`を返します。
 
-### <a name="system_category"></a><a name="system"></a>system_category
+### <a name="system_category"></a><a name="system"></a> system_category
 
 ```cpp
 const error_category& system_category();
 ```
 
-### <a name="value_type"></a><a name="value_type"></a>value_type
+### <a name="value_type"></a><a name="value_type"></a> value_type
 
 格納されたエラー コード値を表す型。
 

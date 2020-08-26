@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::ValueType Class
 ms.assetid: 79aa8754-b140-4974-a5b1-be046938a10a
-ms.openlocfilehash: 889cf3a53468491517d37978ca09472756ad9b7e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f4ce34fa3f197424833d34bdb866712d412e69c3
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62182952"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88846551"
 ---
 # <a name="platformvaluetype-class"></a>Platform::ValueType クラス
 
@@ -26,25 +26,25 @@ public ref class ValueType : Object
 
 ## <a name="public-methods"></a>パブリック メソッド
 
-|||
-|-|-|
-|[ValueType::ToString](#tostring)|オブジェクトの文字列形式を返します。 継承された[platform::object](../cppcx/platform-object-class.md)します。|
+| 名前 | 説明 |
+|--|--|
+| [ValueType:: ToString](#tostring) | オブジェクトの文字列形式を返します。 [Platform:: Object](../cppcx/platform-object-class.md)から継承されます。 |
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 ValueType クラスは、値型を構築するために使用されます。 ValueType は Object (基本メンバーを持つ) から派生します。 ただし、コンパイラは、それらのメンバーを、ValueType クラスから派生する値型からデタッチします。 値型がボックス化されると、コンパイラは、その基本メンバーを再びアタッチします。
 
 ### <a name="requirements"></a>必要条件
 
-**最小値には、クライアントがサポートされています。** Windows 8
+**サポートされている最低限のクライアント:** Windows 8
 
-**最小値には、サーバーがサポートされています。** Windows Server 2012
+**サポートされる最小サーバー:** Windows Server 2012
 
-**名前空間:** プラットフォーム
+**名前空間:** Platform
 
-**メタデータ:** platform.winmd
+**メタデータ:** platform. winmd
 
-## <a name="tostring"></a> Valuetype::tostring メソッド
+## <a name="valuetypetostring-method"></a><a name="tostring"></a> ValueType:: ToString メソッド
 
 オブジェクトの文字列形式を返します。
 
@@ -56,7 +56,7 @@ Platform::String ToString();
 
 ### <a name="return-value"></a>戻り値
 
-値を表す platform::string を指定します。
+値を表す Platform:: String。
 
 ## <a name="see-also"></a>関連項目
 

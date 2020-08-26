@@ -124,16 +124,16 @@ f1_keywords:
 - _Scanf_s_format_string_
 - _Printf_format_string_
 ms.assetid: 82826a3d-0c81-421c-8ffe-4072555dca3a
-ms.openlocfilehash: 4d0325fbab2f27da2556e2c252e35711d9b42789
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: b1831a2a504bb12473f564cd914340bc429fab8d
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87231261"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88836675"
 ---
 # <a name="annotating-function-parameters-and-return-values"></a>関数のパラメーターと戻り値に注釈を付ける
 
-この記事では、単純な関数パラメーター (スカラー、構造体とクラスへのポインター)、およびほとんどの種類のバッファーに対する注釈の一般的な使用方法について説明します。 この記事では、注釈の一般的な使用パターンについても説明します。 関数に関連するその他の注釈については、「[関数の動作に注釈を付ける](../code-quality/annotating-function-behavior.md)」を参照してください。
+この記事では、単純な関数パラメーター (スカラー、構造体とクラスへのポインター)、およびほとんどの種類のバッファーに対する注釈の一般的な使用方法について説明します。 この記事では、注釈の一般的な使用パターンについても説明します。 関数に関連するその他の注釈については、「 [関数の動作に注釈を付ける](../code-quality/annotating-function-behavior.md)」を参照してください。
 
 ## <a name="pointer-parameters"></a>ポインターパラメーター
 
@@ -188,7 +188,7 @@ ms.locfileid: "87231261"
      void MyStringCopy(_Out_writes_(size) PWSTR p1, _In_ size_t size, _In_ PWSTR p2);
      ```
 
-     この例では、呼び出し元はの要素のバッファーを提供し `size` `p1` ます。 `MyStringCopy`これらの要素の一部を有効にします。 さらに重要なの `_Null_terminated_` は、の注釈は、 `PWSTR` `p1` が post 状態で null で終了することを意味します。 この方法では、有効な要素の数は引き続き明確に定義されますが、特定の要素数は必要ありません。
+     この例では、呼び出し元はの要素のバッファーを提供し `size` `p1` ます。 `MyStringCopy` これらの要素の一部を有効にします。 さらに重要なの `_Null_terminated_` は、の注釈は、 `PWSTR` `p1` が post 状態で null で終了することを意味します。 この方法では、有効な要素の数は引き続き明確に定義されますが、特定の要素数は必要ありません。
 
      バリアントは、 `_bytes_` 要素の代わりにサイズをバイト単位で示します。 このバリアントは、サイズを要素として表現できない場合にのみ使用してください。 たとえば、文字列では、を **`char`** `_bytes_` 使用する同様の関数がの場合にのみ、バリアントが使用さ **`wchar_t`** れます。
 
@@ -272,15 +272,37 @@ ms.locfileid: "87231261"
 ポインターパラメーター注釈にが含まれている場合は、 `_opt_` パラメーターが null である可能性があることを示します。 それ以外の場合、注釈は、を含まないバージョンと同じように動作し `_opt_` ます。 `_opt_`ポインターパラメーター注釈のバリアントの一覧を次に示します。
 
 :::row:::
-    :::column:::
-        `_In_opt_`<br /><br /> `_Out_opt_`<br /><br /> `_Inout_opt_`<br /><br /> `_In_opt_z_`<br /><br /> `_Inout_opt_z_`<br /><br /> `_In_reads_opt_`<br /><br /> `_In_reads_bytes_opt_`<br /><br /> `_In_reads_opt_z_`
-    :::column-end:::
-    :::column:::
-        `_Out_writes_opt_`<br /><br /> `_Out_writes_opt_z_`<br /><br /> `_Inout_updates_opt_`<br /><br /> `_Inout_updates_bytes_opt_`<br /><br /> `_Inout_updates_opt_z_`<br /><br /> `_Out_writes_to_opt_`<br /><br /> `_Out_writes_bytes_to_opt_`<br /><br /> `_Out_writes_all_opt_`<br /><br /> `_Out_writes_bytes_all_opt_`
-    :::column-end:::
-    :::column:::
-        `_Inout_updates_to_opt_`<br /><br /> `_Inout_updates_bytes_to_opt_`<br /><br /> `_Inout_updates_all_opt_`<br /><br /> `_Inout_updates_bytes_all_opt_`<br /><br /> `_In_reads_to_ptr_opt_`<br /><br /> `_In_reads_to_ptr_opt_z_`<br /><br /> `_Out_writes_to_ptr_opt_`<br /><br /> `_Out_writes_to_ptr_opt_z_`
-    :::column-end:::
+   :::column:::
+      `_In_opt_`\
+      `_Out_opt_`\
+      `_Inout_opt_`\
+      `_In_opt_z_`\
+      `_Inout_opt_z_`\
+      `_In_reads_opt_`\
+      `_In_reads_bytes_opt_`\
+      `_In_reads_opt_z_`
+   :::column-end:::
+   :::column:::
+      `_Out_writes_opt_`\
+      `_Out_writes_opt_z_`\
+      `_Inout_updates_opt_`\
+      `_Inout_updates_bytes_opt_`\
+      `_Inout_updates_opt_z_`\
+      `_Out_writes_to_opt_`\
+      `_Out_writes_bytes_to_opt_`\
+      `_Out_writes_all_opt_`\
+      `_Out_writes_bytes_all_opt_`
+   :::column-end:::
+   :::column:::
+      `_Inout_updates_to_opt_`\
+      `_Inout_updates_bytes_to_opt_`\
+      `_Inout_updates_all_opt_`\
+      `_Inout_updates_bytes_all_opt_`\
+      `_In_reads_to_ptr_opt_`\
+      `_In_reads_to_ptr_opt_z_`\
+      `_Out_writes_to_ptr_opt_`\
+      `_Out_writes_to_ptr_opt_z_`
+   :::column-end:::
 :::row-end:::
 
 ## <a name="output-pointer-parameters"></a>出力ポインターパラメーター
@@ -439,17 +461,30 @@ ms.locfileid: "87231261"
 関数の戻り値はパラメーターに似てい `_Out_` ますが、逆参照のレベルが異なるため、結果へのポインターの概念を考慮する必要はありません。 次の注釈について、戻り値は注釈付きオブジェクト (スカラー、構造体へのポインター、またはバッファーへのポインター) です。 これらの注釈は、対応する注釈と同じセマンティクスを持ち `_Out_` ます。
 
 :::row:::
-    :::column:::
-        `_Ret_z_`<br /><br /> `_Ret_writes_(s)`<br /><br /> `_Ret_writes_bytes_(s)`<br /><br /> `_Ret_writes_z_(s)`<br /><br /> `_Ret_writes_to_(s,c)`<br /><br /> `_Ret_writes_maybenull_(s)`<br /><br /> `_Ret_writes_to_maybenull_(s)`<br /><br /> `_Ret_writes_maybenull_z_(s)`
-    :::column-end:::
-    :::column:::
-        `_Ret_maybenull_`<br /><br /> `_Ret_maybenull_z_`<br /><br /> `_Ret_null_`<br /><br /> `_Ret_notnull_`<br /><br /> `_Ret_writes_bytes_to_`<br /><br /> `_Ret_writes_bytes_maybenull_`<br /><br /> `_Ret_writes_bytes_to_maybenull_`
-    :::column-end:::
+   :::column:::
+      `_Ret_z_`\
+      `_Ret_writes_(s)`\
+      `_Ret_writes_bytes_(s)`\
+      `_Ret_writes_z_(s)`\
+      `_Ret_writes_to_(s,c)`\
+      `_Ret_writes_maybenull_(s)`\
+      `_Ret_writes_to_maybenull_(s)`\
+      `_Ret_writes_maybenull_z_(s)`
+   :::column-end:::
+   :::column:::
+      `_Ret_maybenull_`\
+      `_Ret_maybenull_z_`\
+      `_Ret_null_`\
+      `_Ret_notnull_`\
+      `_Ret_writes_bytes_to_`\
+      `_Ret_writes_bytes_maybenull_`\
+      `_Ret_writes_bytes_to_maybenull_`
+   :::column-end:::
 :::row-end:::
 
 ## <a name="format-string-parameters"></a>書式指定文字列パラメーター
 
-- `_Printf_format_string_`パラメーターが式で使用する書式指定文字列であることを示し `printf` ます。
+- `_Printf_format_string_` パラメーターが式で使用する書式指定文字列であることを示し `printf` ます。
 
      **例**
 
@@ -464,7 +499,7 @@ ms.locfileid: "87231261"
     }
     ```
 
-- `_Scanf_format_string_`パラメーターが式で使用する書式指定文字列であることを示し `scanf` ます。
+- `_Scanf_format_string_` パラメーターが式で使用する書式指定文字列であることを示し `scanf` ます。
 
      **例**
 
@@ -479,7 +514,7 @@ ms.locfileid: "87231261"
     }
     ```
 
-- `_Scanf_s_format_string_`パラメーターが式で使用する書式指定文字列であることを示し `scanf_s` ます。
+- `_Scanf_s_format_string_` パラメーターが式で使用する書式指定文字列であることを示し `scanf_s` ます。
 
      **例**
 
@@ -515,7 +550,7 @@ ms.locfileid: "87231261"
      パラメーター、フィールド、または結果は、からまでの範囲内に `low` あります (を含む) `hi` 。 `_Satisfies_(_Curr_ >= low && _Curr_ <= hi)`注釈付きオブジェクトに適切な状態または状態の条件と共に適用されると同じです。
 
     > [!IMPORTANT]
-    > 名前には "in" と "out" が含まれていますが、とのセマンティクスは `_In_` `_Out_` これらの注釈には適用**されません**。
+    > 名前には "in" と "out" が含まれていますが、とのセマンティクスは `_In_` `_Out_` これらの注釈には適用 **されません** 。
 
 - `_Pre_equal_to_(expr)`
 

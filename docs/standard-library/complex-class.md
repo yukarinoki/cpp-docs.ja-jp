@@ -10,12 +10,12 @@ helpviewer_keywords:
 - std::complex [C++], imag
 - std::complex [C++], real
 ms.assetid: d6492e1c-5eba-4bc5-835b-2a88001a5868
-ms.openlocfilehash: db2f8b2f889d9454db737cf5b2a39b414f1d67f1
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: c7e2ca2c14ed0ac5f561fab446f6cd2dcc19649d
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87230092"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88836545"
 ---
 # <a name="complex-class"></a>complex クラス
 
@@ -46,26 +46,26 @@ class complex
 
 ### <a name="constructors"></a>コンストラクター
 
-|||
+|名前|説明|
 |-|-|
 |[作業](#complex)|指定された実数部または虚数部を使用して、または他の複素数のコピーとして複素数を構築します。|
 
 ### <a name="typedefs"></a>Typedefs
 
-|||
+|名前|説明|
 |-|-|
 |[value_type](#value_type)|複素数の実数部と虚数部を表すために使用するデータ型を表す型。|
 
-### <a name="functions"></a>関数
+### <a name="functions"></a>Functions
 
-|||
+|名前|説明|
 |-|-|
 |[imag](#imag)|複素数の虚数部を抽出します。|
 |[real](#real)|複素数の実数部を抽出します。|
 
-### <a name="operators"></a>オペレーター
+### <a name="operators"></a>演算子
 
-|||
+|名前|説明|
 |-|-|
 |[operator * =](#op_star_eq)|ターゲットの複素数を係数で乗算します。係数は複素数、または複素数の実数部および虚数部と同じ型である場合があります。|
 |[演算子 + =](#op_add_eq)|ターゲットの複素数に数値を加算します。加算される数値は複素数、またはターゲットの複素数の実数部および虚数部と同じ型である場合があります。|
@@ -73,7 +73,7 @@ class complex
 |[operator/=](#op_div_eq)|ターゲットの複素数を除数で除算します。除数は複素数、または複素数の実数部および虚数部と同じ型である場合があります。|
 |[operator =](#op_eq)|ターゲットの複素数に数値を割り当てます。割り当てられる数値は複素数、またはターゲットの複素数の実数部および虚数部と同じ型である場合があります。|
 
-## <a name="complex"></a><a name="complex"></a>作業
+## <a name="complex"></a><a name="complex"></a> 作業
 
 指定された実数部または虚数部を使用して、または他の複素数のコピーとして複素数を構築します。
 
@@ -157,7 +157,7 @@ int main( )
 }
 ```
 
-## <a name="imag"></a><a name="imag"></a>imag
+## <a name="imag"></a><a name="imag"></a> imag
 
 複素数の虚数部を抽出します。
 
@@ -178,7 +178,7 @@ T imag(const T& right);
 
 ### <a name="remarks"></a>解説
 
-複素数*a + bi*の場合、虚数部またはコンポーネントは*Im (a + bi) = b*です。
+複素数 *a + bi*の場合、虚数部またはコンポーネントは *Im (a + bi) = b*です。
 
 ### <a name="example"></a>例
 
@@ -211,7 +211,7 @@ The real part of c1 is c1.real() = 4.
 The imaginary part of c1 is c1.imag() = 3.
 ```
 
-## <a name="operator"></a><a name="op_star_eq"></a>operator * =
+## <a name="operator"></a><a name="op_star_eq"></a> operator * =
 
 ターゲットの複素数を係数で乗算します。係数は複素数、または複素数の実数部および虚数部と同じ型である場合があります。
 
@@ -296,7 +296,7 @@ int main()
 }
 ```
 
-## <a name="operator"></a><a name="op_add_eq"></a>演算子 + =
+## <a name="operator"></a><a name="op_add_eq"></a> 演算子 + =
 
 ターゲットの複素数に数値を加算します。加算される数値は複素数、またはターゲットの複素数の実数部および虚数部と同じ型である場合があります。
 
@@ -399,7 +399,7 @@ The modulus of cl2 is: 5
 The argument of cl2 is: 0.927295 radians, which is 53.1301 degrees.
 ```
 
-## <a name="operator-"></a><a name="operator-_eq"></a>operator-=
+## <a name="operator-"></a><a name="operator-_eq"></a> operator-=
 
 ターゲットの複素数から数値を減算します。減算される数値は複素数、またはターゲットの複素数の実数部および虚数部と同じ型である場合があります。
 
@@ -507,7 +507,7 @@ The modulus of cl2 is: 5
 The argument of cl2 is: 2.2143 radians, which is 126.87 degrees.
 ```
 
-## <a name="operator"></a><a name="op_div_eq"></a>operator/=
+## <a name="operator"></a><a name="op_div_eq"></a> operator/=
 
 ターゲットの複素数を除数で除算します。除数は複素数、または複素数の実数部および虚数部と同じ型である場合があります。
 
@@ -611,7 +611,7 @@ The modulus of cl2 is: 0.6
 The argument of cl2 is: 0.523599 radians, which is 30 degrees.
 ```
 
-## <a name="operator"></a><a name="op_eq"></a>operator =
+## <a name="operator"></a><a name="op_eq"></a> operator =
 
 ターゲットの複素数に数値を割り当てます。割り当てられる数値は複素数、またはターゲットの複素数の実数部および虚数部と同じ型である場合があります。
 
@@ -689,7 +689,7 @@ The complex number (3, 4) assigned to the complex number cl2 is:
 cl2 = (3,4)
 ```
 
-## <a name="real"></a><a name="real"></a>本当の
+## <a name="real"></a><a name="real"></a> 本当の
 
 複素数の実数部を取得または設定します。
 
@@ -710,7 +710,7 @@ T real(const T& right);
 
 ### <a name="remarks"></a>解説
 
-複素数*a + bi*の場合、実数部またはコンポーネントは*Re (a + bi) = a*です。
+複素数 *a + bi*の場合、実数部またはコンポーネントは *Re (a + bi) = a*です。
 
 ### <a name="example"></a>例
 
@@ -743,7 +743,7 @@ The real part of c1 is c1.real() = 4.
 The imaginary part of c1 is c1.imag() = 3.
 ```
 
-## <a name="value_type"></a><a name="value_type"></a>value_type
+## <a name="value_type"></a><a name="value_type"></a> value_type
 
 複素数の実数部と虚数部を表すために使用するデータ型を表す型。
 
@@ -753,7 +753,7 @@ typedef Type value_type;
 
 ### <a name="remarks"></a>解説
 
-`value_type`は、クラスの複合テンプレートパラメーターのシノニムです `Type` 。
+`value_type` は、クラスの複合テンプレートパラメーターのシノニムです `Type` 。
 
 ### <a name="example"></a>例
 

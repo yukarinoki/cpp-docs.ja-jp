@@ -88,12 +88,12 @@ helpviewer_keywords:
 - std::map [C++], upper_bound
 - std::map [C++], value_comp
 ms.assetid: 7876f4c9-ebb4-4878-af1e-09364c43af0a
-ms.openlocfilehash: 6166c5f1d90ab795cce39eaa1ce22f025f700d81
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: eba66debca3d866dadaba41a54549757ee05b861
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87224774"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88846447"
 ---
 # <a name="map-class"></a>map クラス
 
@@ -160,13 +160,13 @@ map では、[key_compare](#key_compare) 型の格納されている関数オブ
 
 ### <a name="constructors"></a>コンストラクター
 
-|||
+|名前|説明|
 |-|-|
-|[付け](#map)|特定のサイズのリスト、特定の値の要素を持つリスト、特定の `allocator` を持つリストを構築します。または他の map のコピーとしてリストを構築します。|
+|[map](#map)|特定のサイズのリスト、特定の値の要素を持つリスト、特定の `allocator` を持つリストを構築します。または他の map のコピーとしてリストを構築します。|
 
 ### <a name="typedefs"></a>Typedefs
 
-|||
+|名前|説明|
 |-|-|
 |[allocator_type](#allocator_type)|map オブジェクトの `allocator` クラスの typedef。|
 |[const_iterator](#const_iterator)|Map 内の要素を読み取ることができる双方向反復子の typedef **`const`** 。|
@@ -215,14 +215,14 @@ map では、[key_compare](#key_compare) 型の格納されている関数オブ
 |[upper_bound](#upper_bound)|指定したキーよりも大きいキー値を持つ、map 内の最初の要素を指す反復子を返します。|
 |[value_comp](#value_comp)|map 内の要素の値を並べ替えるために使用される比較オブジェクトのコピーを取得します。|
 
-### <a name="operators"></a>オペレーター
+### <a name="operators"></a>演算子
 
-|||
+|名前|説明|
 |-|-|
 |[operator&#91;&#93;](#op_at)|map に、指定したキー値を持つ要素を挿入します。|
 |[operator =](#op_eq)|別の map のコピーで map の要素を置き換えます。|
 
-## <a name="allocator_type"></a><a name="allocator_type"></a>allocator_type
+## <a name="allocator_type"></a><a name="allocator_type"></a> allocator_type
 
 map オブジェクトのアロケーター クラスを表す型。
 
@@ -234,7 +234,7 @@ typedef Allocator allocator_type;
 
 `allocator_type` の使用例については、[get_allocator](#get_allocator) の例をご覧ください。
 
-## <a name="at"></a><a name="at"></a>(
+## <a name="at"></a><a name="at"></a> (
 
 指定されたキー値を持つ要素を検索します。
 
@@ -283,7 +283,7 @@ int main()
     }
 ```
 
-## <a name="begin"></a><a name="begin"></a>初め
+## <a name="begin"></a><a name="begin"></a> 初め
 
 map 内の最初の要素を指す反復子を返します。
 
@@ -338,7 +338,7 @@ The first element of m1 is 0
 The first element of m1 is now 1
 ```
 
-## <a name="cbegin"></a><a name="cbegin"></a>cbegin
+## <a name="cbegin"></a><a name="cbegin"></a> cbegin
 
 **`const`** 範囲内の最後の要素の次の位置を指す反復子を返します。
 
@@ -364,7 +364,7 @@ auto i2 = Container.cbegin();
 // i2 is Container<T>::const_iterator
 ```
 
-## <a name="cend"></a><a name="cend"></a>cend
+## <a name="cend"></a><a name="cend"></a> cend
 
 **`const`** 範囲内の最後の要素の次の位置を指す反復子を返します。
 
@@ -392,7 +392,7 @@ auto i2 = Container.cend();
 
 `cend` によって返された値は逆参照しないでください。
 
-## <a name="clear"></a><a name="clear"></a>クリア
+## <a name="clear"></a><a name="clear"></a> クリア
 
 map のすべての要素を消去します。
 
@@ -436,7 +436,7 @@ The size of the map is initially 2.
 The size of the map after clearing is 0.
 ```
 
-## <a name="const_iterator"></a><a name="const_iterator"></a>const_iterator
+## <a name="const_iterator"></a><a name="const_iterator"></a> const_iterator
 
 Map 内の要素を読み取ることができる双方向反復子を提供する型 **`const`** 。
 
@@ -460,7 +460,7 @@ typedef implementation-defined const_iterator;
 
 `const_iterator` の使用例については、[begin](#begin) の例をご覧ください。
 
-## <a name="const_pointer"></a><a name="const_pointer"></a>const_pointer
+## <a name="const_pointer"></a><a name="const_pointer"></a> const_pointer
 
 Map 内の要素へのポインターを提供する型 **`const`** 。
 
@@ -474,7 +474,7 @@ typedef typename allocator_type::const_pointer const_pointer;
 
 ほとんどの場合、map オブジェクト内の要素にアクセスするには、[反復子](#iterator)を使用する必要があります。
 
-## <a name="const_reference"></a><a name="const_reference"></a>const_reference
+## <a name="const_reference"></a><a name="const_reference"></a> const_reference
 
 **`const`** 読み取りと操作の実行のために map に格納されている要素への参照を提供する型 **`const`** 。
 
@@ -524,7 +524,7 @@ The key of first element in the map is 1.
 The data value of first element in the map is 10.
 ```
 
-## <a name="const_reverse_iterator"></a><a name="const_reverse_iterator"></a>const_reverse_iterator
+## <a name="const_reverse_iterator"></a><a name="const_reverse_iterator"></a> const_reverse_iterator
 
 Map 内の任意の要素を読み取ることができる双方向反復子を提供する型 **`const`** 。
 
@@ -548,7 +548,7 @@ hash_map 内の要素を指す `const_reverse_iterator crIter` を逆参照す�
 
 `const_reverse_iterator` の宣言方法や使用方法の例については、[rend](#rend) の例をご覧ください。
 
-## <a name="count"></a><a name="count"></a>数
+## <a name="count"></a><a name="count"></a> 数
 
 パラメーター指定したキーに一致するキーを持つ、map 内の要素の数を返します。
 
@@ -569,7 +569,7 @@ map に、並べ替えキーがパラメーター キーと一致する要素が
 
 メンバー関数は、次の範囲内の要素 *x* の数を返します。
 
-\[lower_bound (*キー*)、upper_bound (*キー*))
+\[ lower_bound (*キー*)、upper_bound (*キー*))
 
 一意の連想コンテナーである map の場合、これは 0 または 1 です。
 
@@ -616,7 +616,7 @@ The number of elements in m1 with a sort key of 2 is: 1.
 The number of elements in m1 with a sort key of 3 is: 0.
 ```
 
-## <a name="crbegin"></a><a name="crbegin"></a>crbegin
+## <a name="crbegin"></a><a name="crbegin"></a> crbegin
 
 反転された map 内の最初の要素を指す定数反復子を返します。
 
@@ -666,7 +666,7 @@ int main( )
 The first element of the reversed map m1 is 3.
 ```
 
-## <a name="crend"></a><a name="crend"></a>crend
+## <a name="crend"></a><a name="crend"></a> crend
 
 反転された map 内の最後の要素の次の位置を指す定数反復子を返します。
 
@@ -719,7 +719,7 @@ int main( )
 The last element of the reversed map m1 is 1.
 ```
 
-## <a name="difference_type"></a><a name="difference_type"></a>difference_type
+## <a name="difference_type"></a><a name="difference_type"></a> difference_type
 
 反復子が指す要素の範囲内にある map の要素の数を表すのに使用できる符号付き整数型。
 
@@ -775,7 +775,7 @@ int main( )
 The number of elements in the map m1 is: 4.
 ```
 
-## <a name="emplace"></a><a name="emplace"></a>emplace
+## <a name="emplace"></a><a name="emplace"></a> emplace
 
 インプレースで構築された (コピーまたは移動操作が実行されない) 要素をマップに挿入します。
 
@@ -861,7 +861,7 @@ int main()
 }
 ```
 
-## <a name="emplace_hint"></a><a name="emplace_hint"></a>emplace_hint
+## <a name="emplace_hint"></a><a name="emplace_hint"></a> emplace_hint
 
 インプレースで構築された (コピーまたは移動操作が実行されない) 要素を、配置ヒントと一緒に挿入します。
 
@@ -878,7 +878,7 @@ iterator emplace_hint(
 挿入される要素をマップがまだ含んでいない場合、より一般的には、キーが同じ順序付けになる要素がマップにまだ含まれていない場合に、マップに挿入される要素を構築するために転送される引数。
 
 *どこ*\
-正しい挿入ポイントの検索を開始する場所  (その位置がの直前にある*場合、挿入*は、対数時間ではなく償却定数時間で実行できます)。
+正しい挿入ポイントの検索を開始する場所  (その位置がの直前にある *場合、挿入*は、対数時間ではなく償却定数時間で実行できます)。
 
 ### <a name="return-value"></a>戻り値
 
@@ -938,7 +938,7 @@ int main()
 }
 ```
 
-## <a name="empty"></a><a name="empty"></a>指定
+## <a name="empty"></a><a name="empty"></a> 指定
 
 map が空かどうかをテストします。
 
@@ -948,7 +948,7 @@ bool empty() const;
 
 ### <a name="return-value"></a>戻り値
 
-**`true`** マップが空の場合は。**`false`** マップが空でない場合はです。
+**`true`** マップが空の場合は。 **`false`** マップが空でない場合はです。
 
 ### <a name="example"></a>例
 
@@ -983,7 +983,7 @@ The map m1 is not empty.
 The map m2 is empty.
 ```
 
-## <a name="end"></a><a name="end"></a>終わり
+## <a name="end"></a><a name="end"></a> 終わり
 
 末尾超え反復子を返します。
 
@@ -999,13 +999,13 @@ iterator end();
 
 ### <a name="remarks"></a>解説
 
-`end`は、反復子が map の末尾を越えたかどうかをテストするために使用されます。
+`end` は、反復子が map の末尾を越えたかどうかをテストするために使用されます。
 
 `end` によって返された値は逆参照しないでください。
 
 コード例については、「[map::find](#find)」をご覧ください。
 
-## <a name="equal_range"></a><a name="equal_range"></a>equal_range
+## <a name="equal_range"></a><a name="equal_range"></a> equal_range
 
 キーの [lower_bound](#lower_bound) およびキーの [upper_bound](#upper_bound) を表す、反復子のペアを返します。
 
@@ -1084,7 +1084,7 @@ matching the 2nd element of the pair returned by equal_range( 2 ).
 The map m1 doesn't have an element with a key less than 40.
 ```
 
-## <a name="erase"></a><a name="erase"></a>消去
+## <a name="erase"></a><a name="erase"></a> 消去
 
 マップ内の要素または要素の範囲を指定した位置から削除するか、または指定したキーと一致する要素を削除します。
 
@@ -1200,7 +1200,7 @@ int main()
 }
 ```
 
-## <a name="find"></a><a name="find"></a>探す
+## <a name="find"></a><a name="find"></a> 探す
 
 指定したキーと等価のキーを持つ、map 内の要素の位置を参照する反復子を返します。
 
@@ -1287,7 +1287,7 @@ int main()
 }
 ```
 
-## <a name="get_allocator"></a><a name="get_allocator"></a>get_allocator
+## <a name="get_allocator"></a><a name="get_allocator"></a> get_allocator
 
 map の構築に使用されるアロケーター オブジェクトのコピーを返します。
 
@@ -1357,7 +1357,7 @@ int main( )
 }
 ```
 
-## <a name="insert"></a><a name="insert"></a>insert
+## <a name="insert"></a><a name="insert"></a> insert
 
 map に要素または要素範囲を挿入します。
 
@@ -1401,10 +1401,10 @@ IList);
 キーが同じ順序付けになる要素が map にまだ含まれていない場合に、map に挿入される要素の値。
 
 *どこ*\
-正しい挿入ポイントの検索を開始する場所  (その位置がの直前にある*場合、挿入*は、対数時間ではなく償却定数時間で実行できます)。
+正しい挿入ポイントの検索を開始する場所  (その位置がの直前にある *場合、挿入*は、対数時間ではなく償却定数時間で実行できます)。
 
 *ValTy*\
-Map が[value_type](#value_type)の要素を構築するために使用できる引数の型を指定し、引数として*Val*を完全に転送するテンプレートパラメーター。
+Map が [value_type](#value_type)の要素を構築するために使用できる引数の型を指定し、引数として *Val* を完全に転送するテンプレートパラメーター。
 
 *まずは*\
 コピーされる最初の要素の位置。
@@ -1416,11 +1416,11 @@ Map が[value_type](#value_type)の要素を構築するために使用できる
 [入力反復子](../standard-library/input-iterator-tag-struct.md)の要件を満たすテンプレート関数の引数。この反復子は、[value_type](#value_type) オブジェクトの構築に使用できる型の要素を指し示します。
 
 *IList*\
-要素のコピー元の[initializer_list](../standard-library/initializer-list.md) 。
+要素のコピー元の [initializer_list](../standard-library/initializer-list.md) 。
 
 ### <a name="return-value"></a>戻り値
 
-単一要素のメンバー関数 (1) と (2) は、ペアを返します。この[ペア](../standard-library/pair-structure.md)の **`bool`** コンポーネントは、挿入が行われた場合は true になり、順序の値が同じキーを持つ要素がマップに既に含まれている場合は false になります。 戻り値のペアの反復子コンポーネントは、コンポーネントが true の場合は新しく挿入された要素を指し、 **`bool`** コンポーネントが false の場合は既存の要素を指し **`bool`** ます。
+単一要素のメンバー関数 (1) と (2) は、ペアを返します。この [ペア](../standard-library/pair-structure.md) の **`bool`** コンポーネントは、挿入が行われた場合は true になり、順序の値が同じキーを持つ要素がマップに既に含まれている場合は false になります。 戻り値のペアの反復子コンポーネントは、コンポーネントが true の場合は新しく挿入された要素を指し、 **`bool`** コンポーネントが false の場合は既存の要素を指し **`bool`** ます。
 
 単一要素とヒントのメンバー関数 (3) と (4) は、map に挿入された新しい要素の位置を指す反復子を返します。ただし、同じキーを持つ要素が既に存在する場合、この反復子は既存の要素を指します。
 
@@ -1538,7 +1538,7 @@ int main()
 }
 ```
 
-## <a name="iterator"></a><a name="iterator"></a>反
+## <a name="iterator"></a><a name="iterator"></a> 反
 
 map 内の任意の要素の読み取りまたは変更ができる双方向反復子を提供する型。
 
@@ -1550,15 +1550,15 @@ typedef implementation-defined iterator;
 
 マップによって定義される反復子は、 [value_type](#value_type)のオブジェクトである要素を指し `pair<const Key, Type>` ます。これは、最初のメンバーが要素のキーであり、2番目のメンバーが要素に保持されているマップされた datum である要素を指します。
 
-Map 内の要素を指す反復子*Iter*を逆参照するには、演算子を使用し `->` ます。
+Map 内の要素を指す反復子 *Iter* を逆参照するには、演算子を使用し `->` ます。
 
 要素のキーの値にアクセスするに `Iter->first` は、を使用します。これは、と同じ `(*Iter).first` です。 要素のマップされた datum の値にアクセスするに `Iter->second` は、を使用します。これは、と同じ `(*Iter).second` です。
 
 ### <a name="example"></a>例
 
-の宣言方法や使用方法の例については、 [begin](#begin)の例を参照してください `iterator` 。
+の宣言方法や使用方法の例については、 [begin](#begin) の例を参照してください `iterator` 。
 
-## <a name="key_comp"></a><a name="key_comp"></a>key_comp
+## <a name="key_comp"></a><a name="key_comp"></a> key_comp
 
 map 内のキーの並べ替えに使用する比較オブジェクトのコピーを取得します。
 
@@ -1629,7 +1629,7 @@ kc1( 2,3 ) returns value of true, where kc1 is the function object of m1.
 kc2( 2,3 ) returns value of false, where kc2 is the function object of m2.
 ```
 
-## <a name="key_compare"></a><a name="key_compare"></a>key_compare
+## <a name="key_compare"></a><a name="key_compare"></a> key_compare
 
 2 つの並べ替えキーを比較して、map 内の 2 つの要素の相対順序を決定できる関数オブジェクトを提供する型。
 
@@ -1639,7 +1639,7 @@ typedef Traits key_compare;
 
 ### <a name="remarks"></a>解説
 
-`key_compare`は、テンプレートパラメーターの*特徴*のシノニムです。
+`key_compare` は、テンプレートパラメーターの *特徴*のシノニムです。
 
 *特徴*の詳細については、「[マップクラス](../standard-library/map-class.md)」を参照してください。
 
@@ -1647,7 +1647,7 @@ typedef Traits key_compare;
 
 `key_compare` の宣言方法や使用方法の例については、[key_comp](#key_comp) の例をご覧ください。
 
-## <a name="key_type"></a><a name="key_type"></a>key_type
+## <a name="key_type"></a><a name="key_type"></a> key_type
 
 map の各要素に格納されている並べ替えキーを表す型。
 
@@ -1657,7 +1657,7 @@ typedef Key key_type;
 
 ### <a name="remarks"></a>解説
 
-`key_type`は、テンプレートパラメーター*キー*のシノニムです。
+`key_type` は、テンプレートパラメーター *キー*のシノニムです。
 
 *キー*の詳細については、「 [map クラス](../standard-library/map-class.md)」トピックの「解説」を参照してください。
 
@@ -1665,7 +1665,7 @@ typedef Key key_type;
 
 `key_type` の宣言方法や使用方法の例については、[value_type](#value_type) の例をご覧ください。
 
-## <a name="lower_bound"></a><a name="lower_bound"></a>lower_bound
+## <a name="lower_bound"></a><a name="lower_bound"></a> lower_bound
 
 指定したキー以上のキー値を持つ、map 内の最初の要素を指す反復子を返します。
 
@@ -1736,7 +1736,7 @@ The map m1 doesn't have an element with a key of 4.
 The element of m1 with a key matching that of the last element is: 30.
 ```
 
-## <a name="map"></a><a name="map"></a>付け
+## <a name="map"></a><a name="map"></a> 付け
 
 空のマップを構築するか、他のマップの全体または一部のコピーであるマップを構築します。
 
@@ -1817,9 +1817,9 @@ map(
 
 最初の3つのコンストラクターは、空の初期マップを指定します。2番目のコンストラクターは、要素の順序を確立するために使用する比較関数の型 (*Comp*) を指定し、3番目のコンストラクターは使用するアロケーターの型 (*Al*) を明示的に指定します。 キーワードを入力すると、 **`explicit`** 特定の種類の自動型変換が抑制されます。
 
-4番目のコンストラクターは、マップ*権限*のコピーを指定します。
+4番目のコンストラクターは、マップ *権限*のコピーを指定します。
 
-5番目のコンストラクターは、*右*に移動してマップのコピーを指定します。
+5番目のコンストラクターは、 *右*に移動してマップのコピーを指定します。
 
 6 番目、7 番目、および 8 番目のコンストラクターは、メンバーのコピー元の initializer_list を使用します。
 
@@ -1941,7 +1941,7 @@ int main()
 }
 ```
 
-## <a name="mapped_type"></a><a name="mapped_type"></a>mapped_type
+## <a name="mapped_type"></a><a name="mapped_type"></a> mapped_type
 
 map に格納されているデータを表す型。
 
@@ -1951,7 +1951,7 @@ typedef Type mapped_type;
 
 ### <a name="remarks"></a>解説
 
-この型 `mapped_type` は、クラスの*型*テンプレートパラメーターのシノニムです。
+この型 `mapped_type` は、クラスの *型* テンプレートパラメーターのシノニムです。
 
 *型*の詳細については、「 [map クラス](../standard-library/map-class.md)」を参照してください。
 
@@ -1959,7 +1959,7 @@ typedef Type mapped_type;
 
 `mapped_type` の宣言方法や使用方法の例については、[value_type](#value_type) の例をご覧ください。
 
-## <a name="max_size"></a><a name="max_size"></a>max_size
+## <a name="max_size"></a><a name="max_size"></a> max_size
 
 map の最大長を返します。
 
@@ -1992,7 +1992,7 @@ int main( )
 }
 ```
 
-## <a name="operator"></a><a name="op_at"></a>演算子 []
+## <a name="operator"></a><a name="op_at"></a> 演算子 []
 
 map に、指定したキー値を持つ要素を挿入します。
 
@@ -2015,7 +2015,7 @@ Type& operator[](Key&& key);
 
 引数のキー値が見つからない場合は、データ型の既定値と一緒に挿入されます。
 
-`operator[]`はを使用して map に要素を挿入するために使用でき `m` `m[key] = DataValue;` ます。ここで、 `DataValue` はキー値が `mapped_type` *key*である要素のの値です。
+`operator[]` はを使用して map に要素を挿入するために使用でき `m` `m[key] = DataValue;` ます。ここで、 `DataValue` はキー値が `mapped_type` *key*である要素のの値です。
 
 `operator[]` を使用して要素を挿入した場合、返される参照では、挿入によって既存の要素が変更される、または新しい要素が作成されるかどうかは指示されません。 メンバー関数 [find](#find) および [insert](#insert) を使用して、挿入前に指定のキーを持つ要素が既に存在するかどうかを確認することができます。
 
@@ -2090,7 +2090,7 @@ c2[move(str)] == 0
 c2["abc"] == 1
 ```
 
-## <a name="operator"></a><a name="op_eq"></a>operator =
+## <a name="operator"></a><a name="op_eq"></a> operator =
 
 別の map のコピーで map の要素を置き換えます。
 
@@ -2159,7 +2159,7 @@ typedef typename allocator_type::pointer pointer;
 
 ほとんどの場合、map オブジェクト内の要素にアクセスするには、[反復子](#iterator)を使用する必要があります。
 
-## <a name="rbegin"></a><a name="rbegin"></a>rbegin
+## <a name="rbegin"></a><a name="rbegin"></a> rbegin
 
 反転された map 内の最初の要素を指す反復子を返します。
 
@@ -2239,7 +2239,7 @@ The reversed map is: 3 2 1 .
 After the erasure, the first element in the reversed map is 2.
 ```
 
-## <a name="reference"></a><a name="reference"></a>「
+## <a name="reference"></a><a name="reference"></a> 「
 
 map に格納されている要素への参照を提供する型。
 
@@ -2296,7 +2296,7 @@ The data value of first element in the map is 10.
 The modified data value of first element is 15.
 ```
 
-## <a name="rend"></a><a name="rend"></a>rend
+## <a name="rend"></a><a name="rend"></a> rend
 
 反転された map 内の最後の要素の次の位置を指す反復子を返します。
 
@@ -2380,7 +2380,7 @@ The reversed map is: 3 2 1 .
 After the erasure, the last element in the reversed map is 2.
 ```
 
-## <a name="reverse_iterator"></a><a name="reverse_iterator"></a>reverse_iterator
+## <a name="reverse_iterator"></a><a name="reverse_iterator"></a> reverse_iterator
 
 反転された map 内の 1 つの要素の読み取りまたは変更ができる双方向反復子を提供する型。
 
@@ -2402,7 +2402,7 @@ typedef std::reverse_iterator<iterator> reverse_iterator;
 
 `reverse_iterator` の宣言方法や使用方法の例については、[rbegin](#rbegin) の例をご覧ください。
 
-## <a name="size"></a><a name="size"></a>幅
+## <a name="size"></a><a name="size"></a> 幅
 
 map 内の要素の数を返します。
 
@@ -2446,7 +2446,7 @@ The map length is 1.
 The map length is now 2.
 ```
 
-## <a name="size_type"></a><a name="size_type"></a>size_type
+## <a name="size_type"></a><a name="size_type"></a> size_type
 
 map 内の要素の数を表すことができる符号なし整数型。
 
@@ -2458,7 +2458,7 @@ typedef typename allocator_type::size_type size_type;
 
 `size_type` の宣言方法や使用方法の例については、[size](#size) の例を参照してください。
 
-## <a name="swap"></a><a name="swap"></a>フォト
+## <a name="swap"></a><a name="swap"></a> フォト
 
 2 つの map の要素を交換します。
 
@@ -2528,7 +2528,7 @@ After swapping with m2, map m1 is: 100 200.
 After swapping with m3, map m1 is: 300.
 ```
 
-## <a name="upper_bound"></a><a name="upper_bound"></a>upper_bound
+## <a name="upper_bound"></a><a name="upper_bound"></a> upper_bound
 
 指定したキーよりも大きいキー値を持つ map 内の最初の要素を指す反復子を返します。
 
@@ -2600,7 +2600,7 @@ The 1st element of m1 with a key greater than
 that of the initial element of m1 is: 20.
 ```
 
-## <a name="value_comp"></a><a name="value_comp"></a>value_comp
+## <a name="value_comp"></a><a name="value_comp"></a> value_comp
 
 このメンバー関数は、キー値の比較によって map の要素の順序を決定する関数オブジェクトを返します。
 
@@ -2668,7 +2668,7 @@ The element ( 1,10 ) precedes the element ( 2,5 ).
 The element ( 2,5 ) does not precede the element ( 1,10 ).
 ```
 
-## <a name="value_type"></a><a name="value_type"></a>value_type
+## <a name="value_type"></a><a name="value_type"></a> value_type
 
 map 内に要素として格納されるオブジェクトの種類。
 

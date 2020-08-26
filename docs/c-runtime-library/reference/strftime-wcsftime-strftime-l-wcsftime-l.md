@@ -42,12 +42,12 @@ helpviewer_keywords:
 - _tcsftime function
 - time strings
 ms.assetid: 6330ff20-4729-4c4a-82af-932915d893ea
-ms.openlocfilehash: c59e8297013e02592e623859621bb1ff11474733
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 36a84c5de41f3358adbcba42010ed8e6f3c83939
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87215141"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88846577"
 ---
 # <a name="strftime-wcsftime-_strftime_l-_wcsftime_l"></a>strftime、wcsftime、_strftime_l、_wcsftime_l
 
@@ -96,24 +96,24 @@ size_t _wcsftime_l(
 書式指定文字列。
 
 *timeptr*<br/>
-**tm**データ構造体。
+**tm** データ構造体。
 
 *locale*<br/>
 使用するロケール。
 
 ## <a name="return-value"></a>戻り値
 
-**strftime**は、 *strdest*に配置された文字数を返し、 **wcsftime**は対応するワイド文字数を返します。
+**strftime** は、 *strdest* に配置された文字数を返し、 **wcsftime** は対応するワイド文字数を返します。
 
-終端の null を含む合計文字数が*maxsize*を超える場合、 **strftime**と**wcsftime**はどちらも0を返し、 *strdest*の内容は不確定になります。
+終端の null を含む合計文字数が *maxsize*を超える場合、 **strftime** と **wcsftime** はどちらも0を返し、 *strdest* の内容は不確定になります。
 
 *Strdest*の文字数は、書式設定されたリテラル文字の数*と、* 書式設定コードによって*書式*設定される可能性がある任意の文字と等しくなります。 文字列の終端の NULL は戻り値にはカウントされません。
 
 ## <a name="remarks"></a>解説
 
-**Strftime**関数と**wcsftime**関数は、指定された*書式*引数に従って*timeptr*の**tm**時刻値を書式設定し、その結果をバッファー *strdest*に格納します。 最大*maxsize*文字は文字列に配置されます。 *Timeptr*構造体のフィールドの説明については、「 [asctime](asctime-wasctime.md)」を参照してください。 **wcsftime**は、 **strftime**に相当するワイド文字です。その文字列ポインター引数は、ワイド文字列を指します。 それ以外では、これらの関数の動作は同じです。
+**Strftime**関数と**wcsftime**関数は、指定された*書式*引数に従って*timeptr*の**tm**時刻値を書式設定し、その結果をバッファー *strdest*に格納します。 最大 *maxsize* 文字は文字列に配置されます。 *Timeptr*構造体のフィールドの説明については、「 [asctime](asctime-wasctime.md)」を参照してください。 **wcsftime** は、 **strftime**に相当するワイド文字です。その文字列ポインター引数は、ワイド文字列を指します。 それ以外では、これらの関数の動作は同じです。
 
-この関数は、パラメーターを検証します。 *Strdest*、 *format*、または*timeptr*が null ポインターの場合、または*timeptr*によってアドレス指定された**tm**データ構造が無効な場合 (たとえば、時刻や日付の範囲外の値が含まれている場合)、または*書式指定*文字列に無効な書式設定コードが含まれている場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されて 実行の継続が許可された場合、この関数は0を返し、 **errno**を**EINVAL**に設定します。
+この関数は、パラメーターを検証します。 *Strdest*、 *format*、または*timeptr*が null ポインターの場合、または*timeptr*によってアドレス指定された**tm**データ構造が無効な場合 (たとえば、時刻や日付の範囲外の値が含まれている場合)、または*書式指定*文字列に無効な書式設定コードが含まれている場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されて 実行の継続が許可された場合、この関数は0を返し、 **errno** を **EINVAL**に設定します。
 
 既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
@@ -123,13 +123,12 @@ size_t _wcsftime_l(
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tcsftime**|**strftime**|**strftime**|**wcsftime**|
 
-*Format*引数は1つ以上のコードで構成されます。**printf**と同様に、書式設定コードの前にはパーセント記号 () が付き **%** ます。 で始まらない文字は、その **%** まま*strdest*にコピーされます。 現在のロケールの**LC_TIME**カテゴリは、 **strftime**の出力形式に影響します。 ( **LC_TIME**の詳細については、「 [setlocale](setlocale-wsetlocale.md)」を参照してください)。**Strftime**関数と**wcsftime**関数は、現在設定されているロケールを使用します。 これらの関数の **_strftime_l**および **_wcsftime_l**バージョンは、ロケールをパラメーターとして受け取り、現在設定されているロケールの代わりにそれを使用する点を除いて同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
+*Format*引数は1つ以上のコードで構成されます。**printf**と同様に、書式設定コードの前にはパーセント記号 () が付き **%** ます。 で始まらない文字は、その **%** まま *strdest*にコピーされます。 現在のロケールの **LC_TIME** カテゴリは、 **strftime**の出力形式に影響します。 ( **LC_TIME**の詳細については、「 [setlocale](setlocale-wsetlocale.md)」を参照してください)。 **Strftime** 関数と **wcsftime** 関数は、現在設定されているロケールを使用します。 これらの関数の **_strftime_l** および **_wcsftime_l** バージョンは、ロケールをパラメーターとして受け取り、現在設定されているロケールの代わりにそれを使用する点を除いて同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
 
 **Strftime**関数は、次の書式設定コードをサポートしています。
 
-|||
-|-|-|
 |コード|置換文字列|
+|-|-|
 |**% a**|ロケールの曜日の省略名|
 |**% A**|ロケールの完全な曜日名|
 |**% b**|ロケールの省略形の月名|
@@ -177,7 +176,7 @@ size_t _wcsftime_l(
 |**% #x**|ロケールに適した長い日付形式。 たとえば、"Tuesday, March 14, 1995" です。|
 |**% #d**、 **% #D**、% **#e**、 **% #F**、 **% #H**、 **% #I**、 **% #j**、 **% #m**、 **%**#M、 **% #r**、 **% #R、%**#S、 **% #T**、 **% #U、%** **#V、**% **#W、%** **#y、%** **#Y** **%#S**|先頭の0または空白を削除します (存在する場合)。|
 
-**% V**、 **% g**、および **% g**によって生成された ISO 8601 週と週ベースの年は、月曜日に開始する週を使用します。 week 1 は1月4日の週です。この週は、少なくとも4日を含む1週間です。 年の最初の月曜日が2、3、または4の場合、前の日は前の年の最後の週の一部になります。 その日、 **% V**は53に置き換えられ、 **% g**と **% g**の両方が前の年の数字に置き換えられます。
+**% V**、 **% g**、および **% g**によって生成された ISO 8601 週と週ベースの年は、月曜日に開始する週を使用します。 week 1 は1月4日の週です。この週は、少なくとも4日を含む1週間です。 年の最初の月曜日が2、3、または4の場合、前の日は前の年の最後の週の一部になります。 その日、 **% V** は53に置き換えられ、 **% g** と **% g** の両方が前の年の数字に置き換えられます。
 
 > [!NOTE]
 > から返されたポインターを持つ関数の1つを使用すると、 `strftime` `tm` `gmtime` および指定子を使用して出力された値は `%Z` `%z` 正確ではなくなります。 これは、 `tm` C 標準で指定されている構造体には、タイムゾーン名とオフセットの情報が含まれていないためです。 代わりに、グローバル変数[ `_timezone` とを `_dstbias` ](../../c-runtime-library/daylight-dstbias-timezone-and-tzname.md)使用してタイムゾーン情報が設定されます。

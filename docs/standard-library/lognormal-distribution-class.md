@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::lognormal_distribution [C++], param_type
 - std::lognormal_distribution [C++], param_type
 ms.assetid: f2d6a431-6c3a-4370-b12e-4adb4ddf6cc4
-ms.openlocfilehash: bf6cb4a620243f35886835e996eb34bc7b0e6960
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 28ecadfce3e52d9541358d8aa9f68b2e0857661b
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87224787"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88839609"
 ---
 # <a name="lognormal_distribution-class"></a>lognormal_distribution クラス
 
@@ -75,10 +75,8 @@ public:
 
 クラステンプレートは、ユーザー指定の整数型の値、または指定されていない場合は型の値を生成する分布を表します。この分布は、 **`double`** 対数正規分布に従って分散されます。 次の表は、個々のメンバーに関する記事にリンクしています。
 
-||||
-|-|-|-|
-|[lognormal_distribution](#lognormal_distribution)|`lognormal_distribution::m`|`lognormal_distribution::param`|
-|`lognormal_distribution::operator()`|`lognormal_distribution::s`|[param_type](#param_type)|
+[lognormal_distribution](#lognormal_distribution)\
+[param_type](#param_type)
 
 プロパティ関数 `m()` および `s()` は、格納されている分布パラメーター *m* および *s* に対してそれぞれの値を返します。
 
@@ -184,7 +182,7 @@ Distribution for 10 samples:
 
 **名前空間:** std
 
-## <a name="lognormal_distributionlognormal_distribution"></a><a name="lognormal_distribution"></a>lognormal_distribution:: lognormal_distribution
+## <a name="lognormal_distributionlognormal_distribution"></a><a name="lognormal_distribution"></a> lognormal_distribution:: lognormal_distribution
 
 分布を作成します。
 
@@ -212,7 +210,7 @@ explicit lognormal_distribution(const param_type& parm);
 
 2 つ目のコンストラクターは、格納されているパラメーターが *parm* から初期化されるオブジェクトを作成します。 `param()` メンバー関数を呼び出すと、既存の分布の現在のパラメーターを取得および設定できます。
 
-## <a name="lognormal_distributionparam_type"></a><a name="param_type"></a>lognormal_distribution::p aram_type
+## <a name="lognormal_distributionparam_type"></a><a name="param_type"></a> lognormal_distribution::p aram_type
 
 分布のパラメーターを格納します。
 

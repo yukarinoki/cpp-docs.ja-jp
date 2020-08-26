@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::negative_binomial_distribution [C++], param_type
 - std::negative_binomial_distribution [C++], param_type
 ms.assetid: 7f5f0967-7fdd-4578-99d4-88f292b4fe9c
-ms.openlocfilehash: 5168bd054d045f624a970b177113203179e1fb8a
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: fd5153a8eb0652aed7d963fb1dbdb1277e4f6718
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87212203"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88836453"
 ---
 # <a name="negative_binomial_distribution-class"></a>negative_binomial_distribution クラス
 
@@ -78,12 +78,10 @@ public:
 
 クラステンプレートは、 **`int`** 負の二項分布の離散確率関数に従って分布した、ユーザー指定の整数型の値または型の値 (指定がない場合) を生成する分布を表します。 次の表は、個々のメンバーに関する記事にリンクしています。
 
-||||
-|-|-|-|
-|[negative_binomial_distribution](#negative_binomial_distribution)|`negative_binomial_distribution::k`|`negative_binomial_distribution::param`|
-|`negative_binomial_distribution::operator()`|`negative_binomial_distribution::p`|[param_type](#param_type)|
+[negative_binomial_distribution](#negative_binomial_distribution)\
+[param_type](#param_type)
 
-プロパティメンバー `k()` とは `p()` それぞれ、現在格納されている分布パラメーターの値*k*と*p*を返します。
+プロパティメンバー `k()` とは `p()` それぞれ、現在格納されている分布パラメーターの値 *k* と *p* を返します。
 
 プロパティ メンバー関数 `param()` は、格納されている分布パラメーター パッケージ `param_type` を設定または返します。
 
@@ -95,7 +93,7 @@ public:
 
 配布クラスとそのメンバーの詳細については、「」を参照してください [\<random>](../standard-library/random.md) 。
 
-負の二項分布の離散確率関数の詳細については、「Wolfram MathWorld」の「[負の二項分布](https://go.microsoft.com/fwlink/p/?linkid=400516)」を参照してください。
+負の二項分布の離散確率関数の詳細については、「Wolfram MathWorld」の「 [負の二項分布](https://go.microsoft.com/fwlink/p/?linkid=400516)」を参照してください。
 
 ## <a name="example"></a>例
 
@@ -221,7 +219,7 @@ Histogram for 100 samples:
 
 **名前空間:** std
 
-## <a name="negative_binomial_distributionnegative_binomial_distribution"></a><a name="negative_binomial_distribution"></a>negative_binomial_distribution:: negative_binomial_distribution
+## <a name="negative_binomial_distributionnegative_binomial_distribution"></a><a name="negative_binomial_distribution"></a> negative_binomial_distribution:: negative_binomial_distribution
 
 分布を作成します。
 
@@ -249,7 +247,7 @@ explicit negative_binomial_distribution(const param_type& parm);
 
 2 つ目のコンストラクターは、格納されているパラメーターが *parm* から初期化されるオブジェクトを作成します。 `param()` メンバー関数を呼び出すと、既存の分布の現在のパラメーターを取得および設定できます。
 
-## <a name="negative_binomial_distributionparam_type"></a><a name="param_type"></a>negative_binomial_distribution::p aram_type
+## <a name="negative_binomial_distributionparam_type"></a><a name="param_type"></a> negative_binomial_distribution::p aram_type
 
 分布のパラメーターを格納します。
 

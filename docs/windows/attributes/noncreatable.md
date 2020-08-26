@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - noncreatable attribute
 ms.assetid: 4d17937b-0bff-41af-ba57-53e18b7ab5a9
-ms.openlocfilehash: c5d51d7c5628a875f036b4e48b03b317490b37ff
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: b645d6d6cbcaeff346437d6457360ecdef8d3190
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87224397"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88840558"
 ---
 # <a name="noncreatable"></a>noncreatable
 
@@ -27,7 +27,7 @@ ms.locfileid: "87224397"
 
 **Noncreatable** C++ 属性には、 [noncreatable](/windows/win32/Midl/noncreatable) MIDL 属性と同じ機能があり、生成されたに自動的に渡されます。コンパイラによって IDL ファイルが生成されます。
 
-ATL を使用するプロジェクト内でこの属性を使用すると、属性の動作が変更されます。 上記の動作に加えて、属性は[OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO](../../atl/reference/object-map-macros.md#object_entry_non_createable_ex_auto)マクロも挿入します。 このマクロは、オブジェクトが外部で作成できないことを ATL に示します。
+ATL を使用するプロジェクト内でこの属性を使用すると、属性の動作が変更されます。 上記の動作に加えて、属性は [OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO](../../atl/reference/object-map-macros.md#object_entry_non_createable_ex_auto) マクロも挿入します。 このマクロは、オブジェクトが外部で作成できないことを ATL に示します。
 
 ## <a name="example"></a>例
 
@@ -51,9 +51,7 @@ class CMyClass : public A
 
 ## <a name="requirements"></a>必要条件
 
-### <a name="attribute-context"></a>属性コンテキスト
-
-|||
+| 属性コンテキスト | 値 |
 |-|-|
 |**適用対象**|**`class`**, **`struct`**|
 |**Repeatable**|いいえ|

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - propputref attribute
 ms.assetid: 9b0aed74-fdc7-4e59-9117-949bea4f86dd
-ms.openlocfilehash: a9c4413e9bb8c7faa332bb842700dfcf84d6666a
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: dbb5d5966fc82f69be0ed7d2fa0a66ad558a7915
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80166433"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88839908"
 ---
 # <a name="propputref"></a>propputref
 
@@ -25,7 +25,7 @@ ms.locfileid: "80166433"
 
 ## <a name="remarks"></a>解説
 
-**Propputref** C++属性には、 [propputref](/windows/win32/Midl/propputref) MIDL 属性と同じ機能があります。
+**Propputref** C++ 属性には、 [propputref](/windows/win32/Midl/propputref) MIDL 属性と同じ機能があります。
 
 ## <a name="example"></a>例
 
@@ -33,18 +33,16 @@ ms.locfileid: "80166433"
 
 ## <a name="requirements"></a>必要条件
 
-### <a name="attribute-context"></a>属性コンテキスト
-
-|||
+| 属性コンテキスト | 値 |
 |-|-|
-|**対象**|方法|
-|**反復可能**|いいえ|
-|**必要な属性**|なし|
+|**適用対象**|Method|
+|**Repeatable**|いいえ|
+|**必須属性**|なし|
 |**無効な属性**|`propget`, `propput`|
 
 属性コンテキストの詳細については、「 [属性コンテキスト](cpp-attributes-com-net.md#contexts)」を参照してください。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [IDL 属性](idl-attributes.md)<br/>
 [メソッド属性](method-attributes.md)<br/>

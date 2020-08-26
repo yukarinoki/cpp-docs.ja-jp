@@ -11,12 +11,12 @@ helpviewer_keywords:
 - variant/std::variant::emplace
 - variant/std::variant::index
 - variant/std::variant::valueless_by_exception
-ms.openlocfilehash: e34704b0ad8cf8fbaf8ee9514583f9597be40122
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: aba121604636ebd253523acb9b630dd9ab762584
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87215401"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88840025"
 ---
 # <a name="variant-class"></a>variant クラス
 
@@ -33,26 +33,26 @@ template <class... Types>
 
 ### <a name="constructors"></a>コンストラクター
 
-|||
+|名前|説明|
 |-|-|
 |[variant](#variant)|`variant` 型のオブジェクトを構築します。|
 
-### <a name="functions"></a>関数
+### <a name="functions"></a>Functions
 
-|||
+|名前|説明|
 |-|-|
 |[emplace](#emplace)|格納されている新しい値を作成します。|
 |[インデックス](#index)|格納されている値のインデックスを返します。|
 |[スワップ](#swap)||
 |[valueless_by_exception](#emplace)|**`false`** バリアントが値を保持している場合はを返します。|
 
-### <a name="operators"></a>オペレーター
+### <a name="operators"></a>演算子
 
-|||
+|名前|説明|
 |-|-|
 |[operator =](#op_eq)|バリアントを別のバリアントのコピーで置き換えます。|
 
-## <a name="emplace"></a><a name="emplace"></a>emplace
+## <a name="emplace"></a><a name="emplace"></a> emplace
 
 格納されている新しい値を作成します。
 
@@ -67,7 +67,7 @@ template <size_t I, class U, class... Args>
     variant_alternative_t<I, variant<Types...>>& emplace(initializer_list<U>, Args&&...);
 ```
 
-## <a name="index"></a><a name="index"></a>化
+## <a name="index"></a><a name="index"></a> 化
 
 格納されている値のインデックスを返します。
 
@@ -75,7 +75,7 @@ template <size_t I, class U, class... Args>
 constexpr size_t index() const noexcept;
 ```
 
-## <a name="variant"></a><a name="variant"></a>型
+## <a name="variant"></a><a name="variant"></a> 型
 
 `variant` 型のオブジェクトを構築します。 には、デストラクターも含まれています。
 
@@ -119,7 +119,7 @@ template <class Alloc, size_t I, class U, class... Args>
 *ウムアルクラ*\
 このオブジェクトに対して使用するアロケーター クラス。
 
-## <a name="operator"></a><a name="op_eq"></a>operator =
+## <a name="operator"></a><a name="op_eq"></a> operator =
 
 バリアントを別のバリアントのコピーで置き換えます。
 
@@ -130,13 +130,13 @@ template <class T>
     variant& operator=(T&&) noexcept(see below);
 ```
 
-## <a name="swap"></a><a name="swap"></a>フォト
+## <a name="swap"></a><a name="swap"></a> フォト
 
 ```cpp
 void swap(variant&) noexcept(see below);
 ```
 
-## <a name="valueless_by_exception"></a><a name="valueless"></a>valueless_by_exception
+## <a name="valueless_by_exception"></a><a name="valueless"></a> valueless_by_exception
 
 **`false`** バリアントが値を保持している場合はを返します。
 
