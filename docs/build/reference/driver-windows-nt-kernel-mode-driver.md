@@ -10,46 +10,46 @@ helpviewer_keywords:
 - DRIVER linker option
 - /DRIVER linker option
 ms.assetid: aeee8e28-5d97-40f5-ba16-9f370fe8a1b8
-ms.openlocfilehash: ab7253d7e386bf385bcb3a586c5e0e1c1e860694
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5639344ede4007bd66a3d51043f4acb423426b94
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62293109"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88842976"
 ---
 # <a name="driver-windows-nt-kernel-mode-driver"></a>/DRIVER (Windows NT カーネル モード ドライバー)
 
->/DRIVER[:UPONLY |:WDM]
+>/DRIVER [: UPONLY |: WDM]
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-使用して、 **/DRIVER**リンカー オプションを Windows NT カーネル モード ドライバーをビルドします。
+Windows NT カーネルモードドライバーをビルドするには、 **/DRIVER** リンカーオプションを使用します。
 
-**/DRIVER:UPONLY**リンカーに追加、 **IMAGE_FILE_UP_SYSTEM_ONLY**ビット、ユニプロセッサ (UP) ドライバーを指定するための出力ヘッダーの特性をします。 オペレーティング システムは、マルチプロセッサ (MP) システムで、UP ドライバーの読み込みが拒否されます。
+**/DRIVER: UPONLY** は、プロセッサ (up) ドライバーであることを指定するために、出力ヘッダーの特性に **IMAGE_FILE_UP_SYSTEM_ONLY** ビットを追加します。 オペレーティングシステムは、マルチプロセッサ (MP) システムでのアップドライバの読み込みを拒否します。
 
-**/DRIVER:WDM**リンカーを設定する、 **IMAGE_DLLCHARACTERISTICS_WDM_DRIVER**省略可能なヘッダーの DllCharacteristics フィールド内のビットします。
+**/DRIVER: WDM** により、リンカーはオプションのヘッダーの dllcharacteristics フィールドに **IMAGE_DLLCHARACTERISTICS_WDM_DRIVER** ビットを設定します。
 
-場合 **/DRIVER**が指定されていない、リンカーによってこれらのビットが設定されていません。
+**/DRIVER**が指定されていない場合、これらのビットはリンカーによって設定されません。
 
-場合 **/DRIVER**を指定します。
+**/DRIVER**が指定されている場合:
 
-- **/FIXED:NO**が有効になっています。 詳細については、「[/FIXED (固定ベース アドレス)](fixed-fixed-base-address.md)」を参照してください。
+- **/Fixed: NO** が有効です。 詳細については、「[/FIXED (固定ベース アドレス)](fixed-fixed-base-address.md)」を参照してください。
 
-- 出力ファイルの拡張機能は、.sys に設定されます。 使用 **/out**既定のファイル名と拡張子を変更します。 詳細については、「[/OUT (出力ファイル名)](out-output-file-name.md)」を参照してください。
+- 出力ファイルの拡張子は、.sys に設定されます。 **/Out**を使用して、既定のファイル名と拡張子を変更します。 詳細については、「[/OUT (出力ファイル名)](out-output-file-name.md)」を参照してください。
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのリンカー オプションを設定するには
 
-1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。 [Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)します。
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、[Visual Studio での C++ コンパイラとビルド プロパティの設定](../working-with-project-properties.md)に関するページを参照してください。
 
-1. をクリックして、**リンカー**フォルダー。
+1. **[リンカー]** フォルダーをクリックします。
 
-1. をクリックして、**システム**プロパティ ページ。
+1. [ **システム** ] プロパティページをクリックします。
 
-1. 変更、**ドライバー**プロパティ。
+1. **ドライバー**のプロパティを変更します。
 
 ### <a name="to-set-this-linker-option-programmatically"></a>このリンカーをコードから設定するには
 
-- 参照してください[VCLinkerTool.driver プロパティ](https://docs.microsoft.com/dotnet/api/microsoft.visualstudio.vcprojectengine.vclinkertool.driver?view=visualstudiosdk-2017#Microsoft_VisualStudio_VCProjectEngine_VCLinkerTool_driver)します。
+- 「 [VCLinkerTool プロパティ](/dotnet/api/microsoft.visualstudio.vcprojectengine.vclinkertool.driver?view=visualstudiosdk-2017#Microsoft_VisualStudio_VCProjectEngine_VCLinkerTool_driver)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

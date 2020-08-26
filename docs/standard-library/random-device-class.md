@@ -14,12 +14,12 @@ helpviewer_keywords:
 - std::random_device [C++], entropy
 - std::random_device [C++], entropy
 ms.assetid: 4393d515-0cb6-4e0d-a2ba-c780f05dc1bf
-ms.openlocfilehash: 396f172d6a7f9fed72e19917a528f561d0110470
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: b2176ce7dcdefdcf4fc0846cd18b1b01d4de2916
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81320268"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88843548"
 ---
 # <a name="random_device-class"></a>random_device クラス
 
@@ -51,10 +51,9 @@ public:
 
 ## <a name="members"></a>メンバー
 
-|||
-|-|-|
-|[random_device](#random_device)|[エントロピー](#entropy)|
-|[random_device::演算子()](#op_call)||
+[random_device](#random_device)\
+[エントロピー](#entropy)\
+[random_device:: operator ()](#op_call)
 
 ## <a name="remarks"></a>解説
 
@@ -64,7 +63,7 @@ public:
 
 `random_device` が非ブロッキング呼び出しになることは保証されていません。
 
-一般に、`random_device` は、エンジンまたはエンジン アダプターで作成された他のジェネレーターにシードを設定するために使用されます。 詳細については、「[\<ランダム>](../standard-library/random.md)」を参照してください。
+一般に、`random_device` は、エンジンまたはエンジン アダプターで作成された他のジェネレーターにシードを設定するために使用されます。 詳細については、「[\<random>](../standard-library/random.md)」を参照してください。
 
 ## <a name="example"></a>例
 
@@ -100,15 +99,15 @@ a random value == 3633694716
 a random value == 213725214
 ```
 
-これは単純な例であり、このジェネレーターの一般的な使用例を表しているわけではありません。 より代表的なコード例については、「[\<ランダム>」](../standard-library/random.md)を参照してください。
+これは単純な例であり、このジェネレーターの一般的な使用例を表しているわけではありません。 より代表的なコード例については、「」を参照してください [\<random>](../standard-library/random.md) 。
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** \<random>
+**ヘッダー:**\<random>
 
 **名前空間:** std
 
-## <a name="random_devicerandom_device"></a><a name="random_device"></a>random_device::random_device
+## <a name="random_devicerandom_device"></a><a name="random_device"></a> random_device:: random_device
 
 ジェネレーターを構築します。
 
@@ -120,7 +119,7 @@ random_device(const std::string& = "");
 
 このコンストラクターは、文字列パラメーターを無視して必要に応じてジェネレーターを初期化します。 `random_device` を初期化できなかった場合は、[exception](../standard-library/exception-class.md) から派生された実装定義型の値をスローします。
 
-## <a name="random_deviceentropy"></a><a name="entropy"></a>random_device::エントロピー
+## <a name="random_deviceentropy"></a><a name="entropy"></a> random_device:: エントロピ
 
 乱数発生源の無作為性を推定します。
 
@@ -132,7 +131,7 @@ double entropy() const noexcept;
 
 このメンバー関数は、乱数発生源がどの程度の無作為性を持っているかの推定値を返します。評価の単位には、ビットが使用されます。
 
-## <a name="random_deviceoperator"></a><a name="op_call"></a>random_device::演算子()
+## <a name="random_deviceoperator"></a><a name="op_call"></a> random_device:: operator ()
 
 乱数値を返します。
 
@@ -146,4 +145,4 @@ result_type operator()();
 
 ## <a name="see-also"></a>関連項目
 
-[\<ランダム>](../standard-library/random.md)
+[\<random>](../standard-library/random.md)

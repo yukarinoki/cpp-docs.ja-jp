@@ -40,16 +40,16 @@ helpviewer_keywords:
 - std::allocator_traits [C++], destroy
 - std::allocator_traits [C++], max_size
 - std::allocator_traits [C++], select_on_container_copy_construction
-ms.openlocfilehash: c9c03eb688a71e0587ca4faa14d89d8487d4ec59
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 8ab46ebf85531af052bc19bc5f0088f0f564793b
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84617415"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88844809"
 ---
 # <a name="allocator_traits-class"></a>allocator_traits クラス
 
-クラステンプレートは、*アロケーター型*を補足するオブジェクトを表します。 アロケーターの型は、割り当てられた記憶域を管理するために使用されるアロケーター オブジェクトを記述する任意の型です。 具体的には、任意のアロケーターの型 `Alloc` に対し、`allocator_traits<Alloc>` を使用してアロケーター対応のコンテナーが必要とするすべての情報を決定することができます。 詳細については、既定の「[allocator クラス](allocator-class.md)」を参照してください。
+クラステンプレートは、 *アロケーター型*を補足するオブジェクトを表します。 アロケーターの型は、割り当てられた記憶域を管理するために使用されるアロケーター オブジェクトを記述する任意の型です。 具体的には、任意のアロケーターの型 `Alloc` に対し、`allocator_traits<Alloc>` を使用してアロケーター対応のコンテナーが必要とするすべての情報を決定することができます。 詳細については、既定の「[allocator クラス](allocator-class.md)」を参照してください。
 
 ## <a name="syntax"></a>構文
 
@@ -62,7 +62,7 @@ template <class Alloc>
 
 ### <a name="typedefs"></a>Typedefs
 
-|||
+|名前|説明|
 |-|-|
 |`allocator_type`|この型は、テンプレート パラメーター `Alloc` のシノニムです。|
 |`const_pointer`|この型は、整形式の場合は `Alloc::const_pointer`、それ以外の場合は `pointer_traits<pointer>::rebind<const value_type>` です。|
@@ -80,16 +80,16 @@ template <class Alloc>
 
 次の静的メソッドは、特定のアロケーター パラメーターで対応するメソッドを呼び出します。
 
-|||
+|名前|説明|
 |-|-|
-|[allocate](#allocate)|特定のアロケーター パラメーターを使用してメモリを割り当てる静的メソッド。|
+|[割当て](#allocate)|特定のアロケーター パラメーターを使用してメモリを割り当てる静的メソッド。|
 |[構築](#construct)|オブジェクトの構築に指定されたアロケーターを使用する静的メソッド。|
 |[配置](#deallocate)|指定したアロケーターを使用して、指定数のオブジェクトの割り当てを解除する静的メソッド。|
 |[倒す](#destroy)|指定したアロケーターを使用して、メモリの割り当てを解除せず、オブジェクトでデストラクターを呼び出す静的メソッド。|
 |[max_size](#max_size)|指定したアロケーターを使用して割り当てることができるオブジェクトの最大数を決定する静的メソッド。|
 |[select_on_container_copy_construction](#select_on_container_copy_construction)|指定したアロケーターで `select_on_container_copy_construction` を呼び出す静的メソッド。|
 
-### <a name="allocate"></a><a name="allocate"></a>割当て
+### <a name="allocate"></a><a name="allocate"></a> 割当て
 
 特定のアロケーター パラメーターを使用してメモリを割り当てる静的メソッド。
 
@@ -119,7 +119,7 @@ static pointer allocate(Alloc& al, size_type count,
 
 2 番目のメソッドは、その式が整形式の場合は `al.allocate(count, hint)` を返し、それ以外の場合は `al.allocate(count)` を返します。
 
-### <a name="construct"></a><a name="construct"></a>構築
+### <a name="construct"></a><a name="construct"></a> 構築
 
 オブジェクトの構築に指定されたアロケーターを使用する静的メソッド。
 
@@ -139,11 +139,11 @@ static void construct(Alloc& al, Uty* ptr, Types&&... args);
 *value*\
 オブジェクト コンストラクターに渡される引数のリスト。
 
-#### <a name="remarks"></a>Remarks
+#### <a name="remarks"></a>解説
 
 静的メンバー関数は、その式が整形式の場合は `al.construct(ptr, args...)` を呼び出し、それ以外の場合は `::new (static_cast<void *>(ptr)) Uty(std::forward<Types>(args)...)` を評価します。
 
-### <a name="deallocate"></a><a name="deallocate"></a>配置
+### <a name="deallocate"></a><a name="deallocate"></a> 配置
 
 指定したアロケーターを使用して、指定数のオブジェクトの割り当てを解除する静的メソッド。
 
@@ -164,13 +164,13 @@ static void deallocate(Alloc al,
 *数*\
 割り当てを解除するオブジェクトの数。
 
-#### <a name="remarks"></a>Remarks
+#### <a name="remarks"></a>解説
 
 このメソッドは `al.deallocate(ptr, count)` を呼び出します。
 
 このメソッドは何もスローしません。
 
-### <a name="destroy"></a><a name="destroy"></a>倒す
+### <a name="destroy"></a><a name="destroy"></a> 倒す
 
 指定したアロケーターを使用して、メモリの割り当てを解除せず、オブジェクトでデストラクターを呼び出す静的メソッド。
 
@@ -187,11 +187,11 @@ template <class Uty>
 *ポインター*\
 オブジェクトの場所へのポインター。
 
-#### <a name="remarks"></a>Remarks
+#### <a name="remarks"></a>解説
 
 このメソッドは、その式が整形式の場合は `al.destroy(ptr)` を呼び出し、それ以外の場合は `ptr->~Uty()` を評価します。
 
-### <a name="max_size"></a><a name="max_size"></a>max_size
+### <a name="max_size"></a><a name="max_size"></a> max_size
 
 指定したアロケーターを使用して割り当てることができるオブジェクトの最大数を決定する静的メソッド。
 
@@ -204,11 +204,11 @@ static size_type max_size(const Alloc& al);
 *ウムアルクラ*\
 アロケーター オブジェクト。
 
-#### <a name="remarks"></a>Remarks
+#### <a name="remarks"></a>解説
 
 このメソッドは、その式が整形式の場合は `al.max_size()` を返し、それ以外の場合は `numeric_limits<size_type>::max()` を返します。
 
-### <a name="select_on_container_copy_construction"></a><a name="select_on_container_copy_construction"></a>select_on_container_copy_construction
+### <a name="select_on_container_copy_construction"></a><a name="select_on_container_copy_construction"></a> select_on_container_copy_construction
 
 指定したアロケーターで `select_on_container_copy_construction` を呼び出す静的メソッド。
 
@@ -223,8 +223,8 @@ static Alloc select_on_container_copy_construction(const Alloc& al);
 
 #### <a name="return-value"></a>戻り値
 
-このメソッド `al.select_on_container_copy_construction()` は、その型が整形式である場合はを返します。それ以外の場合は*al*を返します。
+このメソッド `al.select_on_container_copy_construction()` は、その型が整形式である場合はを返します。それ以外の場合は *al*を返します。
 
-#### <a name="remarks"></a>Remarks
+#### <a name="remarks"></a>解説
 
 このメソッドは、関連するコンテナーがコピー構築された場合に、アロケーターを指定するために使用されます。

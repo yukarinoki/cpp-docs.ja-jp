@@ -20,12 +20,12 @@ helpviewer_keywords:
 - std::stack [C++], size
 - std::stack [C++], top
 ms.assetid: 02151c1e-eab0-41b8-be94-a839ead78ecf
-ms.openlocfilehash: 8c1da5d45acd68838174d02305a246ba2d2c169b
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: f1d44a4242542ac6856fd7208fe423c43ae79997
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87224631"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88844302"
 ---
 # <a name="stack-class"></a>stack クラス
 
@@ -64,21 +64,21 @@ Stack オブジェクトは、クラスの要素が等値比較可能であり�
 
 ### <a name="constructors"></a>コンストラクター
 
-|||
+|名前|説明|
 |-|-|
 |[stack](#stack)|空であるか、基本のコンテナー オブジェクトのコピーである `stack` を構築します。|
 
 ### <a name="typedefs"></a>Typedefs
 
-|||
+|名前|説明|
 |-|-|
 |[container_type](#container_type)|`stack` によって適合されるように、基本のコンテナーを提供する型。|
 |[size_type](#size_type)|`stack` 内の要素の数を表すことができる符号なし整数型。|
 |[value_type](#value_type)|`stack` 内に要素として格納されるオブジェクトの種類を表す型。|
 
-### <a name="functions"></a>関数
+### <a name="functions"></a>Functions
 
-|||
+|名前|説明|
 |-|-|
 |[empty](#empty)|`stack` が空かどうかをテストします。|
 |[ショート](#pop)|`stack` の先頭から要素を削除します。|
@@ -86,7 +86,7 @@ Stack オブジェクトは、クラスの要素が等値比較可能であり�
 |[size](#size)|`stack` 内の要素数を返します。|
 |[top](#top)|`stack` の先頭にある要素への参照を返します。|
 
-## <a name="container_type"></a><a name="container_type"></a>container_type
+## <a name="container_type"></a><a name="container_type"></a> container_type
 
 適合されるように、基本のコンテナーを提供する型。
 
@@ -104,7 +104,7 @@ typedef Container container_type;
 
 `container_type` の宣言方法や使用方法の例については、[stack::stack](#stack) の例を参照してください。
 
-## <a name="empty"></a><a name="empty"></a>指定
+## <a name="empty"></a><a name="empty"></a> 指定
 
 stack が空かどうかをテストします。
 
@@ -114,7 +114,7 @@ bool empty() const;
 
 ### <a name="return-value"></a>戻り値
 
-**`true`** スタックが空の場合は。**`false`** スタックが空でない場合は。
+**`true`** スタックが空の場合は。 **`false`** スタックが空でない場合は。
 
 ### <a name="example"></a>例
 
@@ -149,7 +149,7 @@ The stack s1 is not empty.
 The stack s2 is empty.
 ```
 
-## <a name="pop"></a><a name="pop"></a>ショート
+## <a name="pop"></a><a name="pop"></a> ショート
 
 stack の先頭から要素を削除します。
 
@@ -205,7 +205,7 @@ After a pop, the stack length is 2.
 After a pop, the element at the top of the stack is 20.
 ```
 
-## <a name="push"></a><a name="push"></a>押し付け
+## <a name="push"></a><a name="push"></a> 押し付け
 
 要素をスタックの一番上に追加します。
 
@@ -254,7 +254,7 @@ The stack length is 3.
 The element at the top of the stack is 30.
 ```
 
-## <a name="size"></a><a name="size"></a>幅
+## <a name="size"></a><a name="size"></a> 幅
 
 stack 内の要素数を返します。
 
@@ -295,7 +295,7 @@ The stack length is 1.
 The stack length is now 2.
 ```
 
-## <a name="size_type"></a><a name="size_type"></a>size_type
+## <a name="size_type"></a><a name="size_type"></a> size_type
 
 stack 内の要素の数を表すことができる符号なし整数型。
 
@@ -311,7 +311,7 @@ typedef typename Container::size_type size_type;
 
 `size_type` の宣言方法や使用方法の例については、[size](#size) の例を参照してください。
 
-## <a name="stack"></a><a name="stack"></a>スタック
+## <a name="stack"></a><a name="stack"></a> スタック
 
 空であるか、基本のコンテナー クラスのコピーである stack を構築します。
 
@@ -365,7 +365,7 @@ int main( )
 The element at the top of stack vsi2 is 1.
 ```
 
-## <a name="top"></a><a name="top"></a>ページのトップへ
+## <a name="top"></a><a name="top"></a> ページのトップへ
 
 stack の先頭にある要素への参照を返します。
 
@@ -416,7 +416,7 @@ The top integer of the stack s1 is 2.
 The next integer down is 1.
 ```
 
-## <a name="value_type"></a><a name="value_type"></a>value_type
+## <a name="value_type"></a><a name="value_type"></a> value_type
 
 stack 内に要素として格納されるオブジェクトの種類を表す型。
 

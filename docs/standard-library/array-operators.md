@@ -9,23 +9,25 @@ f1_keywords:
 - array/std::array::operator>=
 - array/std::array::operator==
 ms.assetid: c8f46282-f179-4909-9a01-639cb8e18c27
-ms.openlocfilehash: 531ad2936322f90a38631a9450e0ad8a210fdd87
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 3d799bd584f45e93668c1ac2a753c82f41220773
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81364907"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88844666"
 ---
 # <a name="ltarraygt-operators"></a>&lt;array&gt; 演算子
 
-配列\<>ヘッダーには、これらの**配列**非メンバー比較テンプレート関数が含まれます。
+ヘッダーには、 \<array> これらの **配列** の非メンバー比較テンプレート関数が含まれています。
 
-||||
-|-|-|-|
-|[演算子!=](#op_neq)|[演算子&gt;](#op_gt)|[演算子&gt;=](#op_gt_eq)|
-|[演算子&lt;](#op_lt)|[演算子&lt;=](#op_lt_eq)|[演算子==](#op_eq_eq)|
+[operator! =](#op_neq)\
+[operator&gt;](#op_gt)\
+[operator&gt;=](#op_gt_eq)\
+[operator&lt;](#op_lt)\
+[operator&lt;=](#op_lt_eq)\
+[operator = =](#op_eq_eq)
 
-## <a name="operator"></a><a name="op_neq"></a>演算子!=
+## <a name="operator"></a><a name="op_neq"></a> operator! =
 
 配列の比較 (等しくない)。
 
@@ -38,13 +40,13 @@ bool operator!=(
 
 ### <a name="parameters"></a>パラメーター
 
-*Ty*\
+*~*\
 要素の型。
 
-*N*\
+*非該当*\
 配列のサイズ。
 
-*左*\
+*左側*\
 比較する左のコンテナー。
 
 *そうです*\
@@ -98,7 +100,7 @@ false
 true
 ```
 
-## <a name="operatorlt"></a><a name="op_lt"></a>演算子&lt;
+## <a name="operatorlt"></a><a name="op_lt"></a> operator&lt;
 
 配列の比較 (より小さい)。
 
@@ -111,13 +113,13 @@ bool operator<(
 
 ### <a name="parameters"></a>パラメーター
 
-*Ty*\
+*~*\
 要素の型。
 
-*N*\
+*非該当*\
 配列のサイズ。
 
-*左*\
+*左側*\
 比較する左のコンテナー。
 
 *そうです*\
@@ -125,7 +127,7 @@ bool operator<(
 
 ### <a name="remarks"></a>解説
 
-テンプレート関数は、クラス`operator<`テンプレート[配列 Class](../standard-library/array-class-stl.md)の 2 つのオブジェクトを比較するためにオーバーロードします。 `lexicographical_compare(left.begin(), left.end(), right.begin())` が返されます。
+このテンプレート関数は、 `operator<` クラステンプレート [array クラス](../standard-library/array-class-stl.md)の2つのオブジェクトを比較するためにをオーバーロードします。 `lexicographical_compare(left.begin(), left.end(), right.begin())` が返されます。
 
 ### <a name="example"></a>例
 
@@ -171,7 +173,7 @@ false
 true
 ```
 
-## <a name="operatorlt"></a><a name="op_lt_eq"></a>演算子&lt;=
+## <a name="operatorlt"></a><a name="op_lt_eq"></a> operator&lt;=
 
 配列の比較 (以下)。
 
@@ -184,13 +186,13 @@ bool operator<=(
 
 ### <a name="parameters"></a>パラメーター
 
-*Ty*\
+*~*\
 要素の型。
 
-*N*\
+*非該当*\
 配列のサイズ。
 
-*左*\
+*左側*\
 比較する左のコンテナー。
 
 *そうです*\
@@ -244,7 +246,7 @@ true
 false
 ```
 
-## <a name="operator"></a><a name="op_eq_eq"></a>演算子==
+## <a name="operator"></a><a name="op_eq_eq"></a> operator = =
 
 配列の比較 (等しい)。
 
@@ -257,13 +259,13 @@ bool operator==(
 
 ### <a name="parameters"></a>パラメーター
 
-*Ty*\
+*~*\
 要素の型。
 
-*N*\
+*非該当*\
 配列のサイズ。
 
-*左*\
+*左側*\
 比較する左のコンテナー。
 
 *そうです*\
@@ -271,7 +273,7 @@ bool operator==(
 
 ### <a name="remarks"></a>解説
 
-テンプレート関数は、クラス`operator==`テンプレート[配列 Class](../standard-library/array-class-stl.md)の 2 つのオブジェクトを比較するためにオーバーロードします。 `equal(left.begin(), left.end(), right.begin())` が返されます。
+このテンプレート関数は、 `operator==` クラステンプレート [array クラス](../standard-library/array-class-stl.md)の2つのオブジェクトを比較するためにをオーバーロードします。 `equal(left.begin(), left.end(), right.begin())` が返されます。
 
 ### <a name="example"></a>例
 
@@ -317,7 +319,7 @@ true
 false
 ```
 
-## <a name="operatorgt"></a><a name="op_gt"></a>演算子&gt;
+## <a name="operatorgt"></a><a name="op_gt"></a> operator&gt;
 
 配列の比較 (より大きい)。
 
@@ -330,13 +332,13 @@ bool operator>(
 
 ### <a name="parameters"></a>パラメーター
 
-*Ty*\
+*~*\
 要素の型。
 
-*N*\
+*非該当*\
 配列のサイズ。
 
-*左*\
+*左側*\
 比較する左のコンテナー。
 
 *そうです*\
@@ -390,7 +392,7 @@ false
 true
 ```
 
-## <a name="operatorgt"></a><a name="op_gt_eq"></a>演算子&gt;=
+## <a name="operatorgt"></a><a name="op_gt_eq"></a> operator&gt;=
 
 配列の比較 (以上)。
 
@@ -403,13 +405,13 @@ bool operator>=(
 
 ### <a name="parameters"></a>パラメーター
 
-*Ty*\
+*~*\
 要素の型。
 
-*N*\
+*非該当*\
 配列のサイズ。
 
-*左*\
+*左側*\
 比較する左のコンテナー。
 
 *そうです*\
@@ -465,4 +467,4 @@ false
 
 ## <a name="see-also"></a>関連項目
 
-[\<配列>](../standard-library/array.md)
+[\<array>](../standard-library/array.md)

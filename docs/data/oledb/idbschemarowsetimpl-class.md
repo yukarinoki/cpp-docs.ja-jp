@@ -36,12 +36,12 @@ helpviewer_keywords:
 - GetRowset method
 - GetSchemas method
 ms.assetid: bd7bf0d7-a1c6-4afa-88e3-cfdbdf560703
-ms.openlocfilehash: f6af0f61ca425a2a1fba98b4041a92163e2f1d4e
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: eea0ebeaf83b9203cf57f7b35fe3dd1ec2d63d81
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80210627"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88844003"
 ---
 # <a name="idbschemarowsetimpl-class"></a>IDBSchemaRowsetImpl クラス
 
@@ -67,7 +67,7 @@ class ATL_NO_VTABLE IDBSchemaRowsetImpl : public IDBSchemaRowset
 
 ### <a name="methods"></a>メソッド
 
-|||
+| 名前 | 説明 |
 |-|-|
 |[CheckRestrictions](#checkrestrictions)|スキーマ行セットに対して制限の妥当性をチェックします。|
 |[CreateSchemaRowset](#createschemarowset)|テンプレート パラメーターで指定されたオブジェクトの COM オブジェクトの作成関数を実装します。|
@@ -75,7 +75,7 @@ class ATL_NO_VTABLE IDBSchemaRowsetImpl : public IDBSchemaRowset
 
 ### <a name="interface-methods"></a>インターフェイス メソッド
 
-|||
+| 名前 | 説明 |
 |-|-|
 |[GetRowset](#getrowset)|スキーマ行セットを返します。|
 |[GetSchemas](#getschemas)|[IDBSchemaRowsetImpl::GetRowset](../../data/oledb/idbschemarowsetimpl-getrowset.md)でアクセスできるスキーマ行セットの一覧を返します。|
@@ -84,7 +84,7 @@ class ATL_NO_VTABLE IDBSchemaRowsetImpl : public IDBSchemaRowset
 
 このクラスは、 [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686(v=vs.85)) インターフェイスと、テンプレート化された作成関数 [CreateSchemaRowset](../../data/oledb/idbschemarowsetimpl-createschemarowset.md)を実装します。
 
-OLE DB はスキーマ行セットを使用して、プロバイダーのデータに関するデータを返します。 このようなデータは、多くの場合、"メタデータ" と呼ばれます。 既定では、プロバイダーは常に `DBSCHEMA_TABLES`、`DBSCHEMA_COLUMNS`、および `DBSCHEMA_PROVIDER_TYPES`をサポートする必要があります。詳細については、「 [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686(v=vs.85)) OLE DB」を*参照*してください。 スキーマ行セットはスキーマ マップで指定します。 スキーマ マップ エントリの詳細については、「 [SCHEMA_ENTRY](../../data/oledb/schema-entry.md)」を参照してください。
+OLE DB はスキーマ行セットを使用して、プロバイダーのデータに関するデータを返します。 このようなデータは、多くの場合、"メタデータ" と呼ばれます。 既定では、プロバイダーは常に、、およびをサポートしている必要があり `DBSCHEMA_TABLES` `DBSCHEMA_COLUMNS` ます。詳細に `DBSCHEMA_PROVIDER_TYPES` ついては*OLE DB プログラマーリファレンス*の[IDBSchemaRowset](/previous-versions/windows/desktop/ms713686(v=vs.85))を参照してください。 スキーマ行セットはスキーマ マップで指定します。 スキーマ マップ エントリの詳細については、「 [SCHEMA_ENTRY](../../data/oledb/schema-entry.md)」を参照してください。
 
 ATL オブジェクト ウィザードの OLE DB プロバイダー ウィザードでは、プロジェクトのスキーマ行セットのコードが自動的に生成されます (既定では、ウィザードは、前述の必須のスキーマ行セットをサポートしています)。ATL オブジェクトウィザードを使用してコンシューマーを作成する場合、ウィザードはスキーマ行セットを使用して、適切なデータをプロバイダーにバインドします。 正しいメタデータを提供するようにスキーマ行セットを実装していないと、正しいデータがバインドされません。
 
@@ -92,7 +92,7 @@ ATL オブジェクト ウィザードの OLE DB プロバイダー ウィザー
 
 スキーマ行セットの詳細については、 [OLE DB プログラマーズ リファレンス](/previous-versions/windows/desktop/ms712921(v=vs.85)) の *スキーマ行セット*に関するセクションを参照してください。
 
-## <a name="idbschemarowsetimplcheckrestrictions"></a><a name="checkrestrictions"></a>IDBSchemaRowsetImpl:: CheckRestrictions 制限事項
+## <a name="idbschemarowsetimplcheckrestrictions"></a><a name="checkrestrictions"></a> IDBSchemaRowsetImpl:: CheckRestrictions 制限事項
 
 スキーマ行セットに対して制限の妥当性をチェックします。
 
@@ -116,13 +116,13 @@ HRESULT CheckRestrictions(REFGUID rguidSchema,
 
 ### <a name="remarks"></a>解説
 
-`CheckRestrictions` を使用して、スキーマ行セットに対して制限の妥当性をチェックします。 `DBSCHEMA_TABLES`、`DBSCHEMA_COLUMNS`、および `DBSCHEMA_PROVIDER_TYPES` スキーマ行セットの制限をチェックします。 コンシューマーの `IDBSchemaRowset::GetRowset` の呼び出しが正しいかどうかを判断するには、このメソッドを呼び出します。 上記以外のスキーマ行セットをサポートする場合は、このタスクを実行する独自の関数を作成する必要があります。
+`CheckRestrictions` を使用して、スキーマ行セットに対して制限の妥当性をチェックします。 `DBSCHEMA_TABLES`、、 `DBSCHEMA_COLUMNS` およびスキーマ行セットの制限をチェックし `DBSCHEMA_PROVIDER_TYPES` ます。 このメソッドを呼び出して、コンシューマーのへの呼び出しが正しいかどうかを判断し `IDBSchemaRowset::GetRowset` ます。 上記以外のスキーマ行セットをサポートする場合は、このタスクを実行する独自の関数を作成する必要があります。
 
-`CheckRestrictions` は、コンシューマーが、プロバイダーがサポートしている適切な制限と、適切な制限の種類 (文字列の VT_BSTR など) を持つ[Getrowset](../../data/oledb/idbschemarowsetimpl-getrowset.md)を呼び出しているかどうかを判断します。 また、正しい制限数がサポートされているかどうかも判断します。 `CheckRestrictions` は、既定で [SetRestrictions](../../data/oledb/idbschemarowsetimpl-setrestrictions.md) 呼び出しを通じて、任意の行セットについてプロバイダーがサポートしている制限の種類を確認します。 次に、コンシューマーが呼び出した制限とプロバイダーがサポートしている制限を比較することで、処理は成功または失敗します。
+`CheckRestrictions` コンシューマーが、プロバイダーがサポートしている適切な制限と適切な制限の種類 (文字列の VT_BSTR など) を使用して [Getrowset](../../data/oledb/idbschemarowsetimpl-getrowset.md) を呼び出しているかどうかを判断します。 また、正しい制限数がサポートされているかどうかも判断します。 `CheckRestrictions` は、既定で [SetRestrictions](../../data/oledb/idbschemarowsetimpl-setrestrictions.md) 呼び出しを通じて、任意の行セットについてプロバイダーがサポートしている制限の種類を確認します。 次に、コンシューマーが呼び出した制限とプロバイダーがサポートしている制限を比較することで、処理は成功または失敗します。
 
 スキーマ行セットの詳細については、Windows SDK の*OLE DB プログラマーリファレンス*の「 [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686(v=vs.85)) 」を参照してください。
 
-## <a name="idbschemarowsetimplcreateschemarowset"></a><a name="createschemarowset"></a>IDBSchemaRowsetImpl:: CreateSchemaRowset
+## <a name="idbschemarowsetimplcreateschemarowset"></a><a name="createschemarowset"></a> IDBSchemaRowsetImpl:: CreateSchemaRowset
 
 テンプレート パラメーターで指定されたオブジェクトの COM オブジェクトの作成関数を実装します。
 
@@ -143,7 +143,7 @@ HRESULT CreateSchemaRowset(IUnknown *pUnkOuter,
 #### <a name="parameters"></a>パラメーター
 
 *pUnkOuter*<br/>
-から集計時に外部[IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown) 。それ以外の場合は NULL。
+から集計時に外部 [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown) 。それ以外の場合は NULL。
 
 *cRestrictions*<br/>
 [入力] スキーマ行セットに適用する制限の数。
@@ -152,7 +152,7 @@ HRESULT CreateSchemaRowset(IUnknown *pUnkOuter,
 [入力] 行セットに適用する `cRestrictions`**VARIANT**の配列。
 
 *riid*<br/>
-から出力 `IUnknown`の[QueryInterface](../../atl/queryinterface.md)のインターフェイス。
+から出力の [QueryInterface](../../atl/queryinterface.md) のインターフェイス `IUnknown` 。
 
 *cPropertySets*<br/>
 [入力] 設定するプロパティ セットの数。
@@ -161,7 +161,7 @@ HRESULT CreateSchemaRowset(IUnknown *pUnkOuter,
 [入力] 設定するプロパティを指定する [DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85)) 構造体の配列。
 
 *ppRowset*<br/>
-入出力*Riid*によって要求された送信 `IUnknown`。 この `IUnknown` は、スキーマ行セットオブジェクトのインターフェイスです。
+入出力 `IUnknown` *Riid*によって要求された出力。 これ `IUnknown` は、スキーマ行セットオブジェクトのインターフェイスです。
 
 *pSchemaRowset*<br/>
 [出力] スキーマ行セット クラスのインスタンスへのポインター。 通常、このパラメーターは使用されません。使用できるのは、スキーマ行セットを COM オブジェクトに渡す前に、その行セットで多くの作業を実行する必要があるときです。 *PSchemaRowset*の有効期間は*ppRowset*によって制限されます。
@@ -174,7 +174,7 @@ HRESULT CreateSchemaRowset(IUnknown *pUnkOuter,
 
 この関数は、あらゆる種類のスキーマ行セットに対する汎用作成関数を実装します。 通常、この関数は、ユーザーからは呼び出されません。 これはスキーマ マップの実装によって呼び出されます。
 
-## <a name="idbschemarowsetimplsetrestrictions"></a><a name="setrestrictions"></a>IDBSchemaRowsetImpl:: SetRestrictions 制限
+## <a name="idbschemarowsetimplsetrestrictions"></a><a name="setrestrictions"></a> IDBSchemaRowsetImpl:: SetRestrictions 制限
 
 特定のスキーマ行セットでサポートする制限を指定します。
 
@@ -189,7 +189,7 @@ void SetRestrictions(ULONG cRestrictions,
 #### <a name="parameters"></a>パラメーター
 
 *cRestrictions*<br/>
-から*RgRestrictions*配列内の制限の数と、 *rguidschema*配列の guid の数。
+から *RgRestrictions* 配列内の制限の数と、 *rguidschema* 配列の guid の数。
 
 *rguidSchema*<br/>
 [入力] 制限をフェッチするスキーマ行セットの GUID の配列。 配列の各要素は、1 つのスキーマ行セットの GUID ( `DBSCHEMA_TABLES`など) を保持します。
@@ -199,9 +199,9 @@ void SetRestrictions(ULONG cRestrictions,
 
 ### <a name="remarks"></a>解説
 
-`IDBSchemaRowset` オブジェクトは、`SetRestrictions` を呼び出して、特定のスキーマ行セットでサポートする制限を判断します ( [getschemas](../../data/oledb/idbschemarowsetimpl-getschemas.md)によってアップキャストされたポインターによって呼び出されます)。 制限により、コンシューマーは一致する行だけをフェッチできます (たとえば、テーブル "MyTable" 内のすべての列を検索します)。 制限は省略可能であり、制限がサポートされていない場合 (既定)、常にすべてのデータが返されます。
+`IDBSchemaRowset`オブジェクトは、 `SetRestrictions` 特定のスキーマ行セットでサポートする制限を判断するためにを呼び出します ( [getschemas](../../data/oledb/idbschemarowsetimpl-getschemas.md)によってアップキャストされたポインターによって呼び出されます)。 制限により、コンシューマーは一致する行だけをフェッチできます (たとえば、テーブル "MyTable" 内のすべての列を検索します)。 制限は省略可能であり、制限がサポートされていない場合 (既定)、常にすべてのデータが返されます。
 
-このメソッドの既定の実装では、 *rgRestrictions*配列要素が0に設定されます。 既定以外の制限を設定する場合は、セッション クラスで既定値をオーバーライドします。
+このメソッドの既定の実装では、 *rgRestrictions* 配列要素が0に設定されます。 既定以外の制限を設定する場合は、セッション クラスで既定値をオーバーライドします。
 
 スキーマ行セットのサポートの実装については、「 [スキーマ行セットのサポート](../../data/oledb/supporting-schema-rowsets.md)」を参照してください。
 
@@ -209,7 +209,7 @@ void SetRestrictions(ULONG cRestrictions,
 
 スキーマ行セットの詳細については、Windows SDK の*OLE DB プログラマーリファレンス*の「 [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686(v=vs.85)) 」を参照してください。
 
-## <a name="idbschemarowsetimplgetrowset"></a><a name="getrowset"></a>IDBSchemaRowsetImpl:: GetRowset
+## <a name="idbschemarowsetimplgetrowset"></a><a name="getrowset"></a> IDBSchemaRowsetImpl:: GetRowset
 
 スキーマ行セットを返します。
 
@@ -229,7 +229,7 @@ STDMETHOD (GetRowset)(IUnknown *pUnkOuter,
 #### <a name="parameters"></a>パラメーター
 
 *pUnkOuter*<br/>
-から集計時の外側の `IUnknown`。それ以外の場合は NULL。
+から `IUnknown` 集計する場合は外側、それ以外の場合は NULL。
 
 *rguidSchema*<br/>
 [入力] 要求するスキーマ行セット GUID ( `DBSCHEMA_TABLES`など) への参照。
@@ -254,11 +254,11 @@ STDMETHOD (GetRowset)(IUnknown *pUnkOuter,
 
 ### <a name="remarks"></a>解説
 
-このメソッドを使用するには、ユーザーはセッション クラスにスキーマ マップを持っている必要があります。 スキーママップ情報を使用すると、 *Rguidschema*パラメーターがいずれかのマップエントリの guid と等しい場合、`GetRowset` によって指定された行セットオブジェクトが作成されます。 マップ エントリについては、「 [SCHEMA_ENTRY](../../data/oledb/schema-entry.md) 」を参照してください。
+このメソッドを使用するには、ユーザーはセッション クラスにスキーマ マップを持っている必要があります。 スキーママップ情報を使用して、 `GetRowset` *rguidschema* パラメーターがいずれかのマップエントリ guid と等しい場合は、指定された行セットオブジェクトを作成します。 マップ エントリについては、「 [SCHEMA_ENTRY](../../data/oledb/schema-entry.md) 」を参照してください。
 
 Windows SDK の「 [IDBSchemaRowset:: GetRowset](/previous-versions/windows/desktop/ms722634(v=vs.85)) 」を参照してください。
 
-## <a name="idbschemarowsetimplgetschemas"></a><a name="getschemas"></a>IDBSchemaRowsetImpl:: GetSchemas
+## <a name="idbschemarowsetimplgetschemas"></a><a name="getschemas"></a> IDBSchemaRowsetImpl:: GetSchemas
 
 [IDBSchemaRowsetImpl::GetRowset](../../data/oledb/idbschemarowsetimpl-getrowset.md)でアクセスできるスキーマ行セットの一覧を返します。
 
@@ -287,9 +287,9 @@ STDMETHOD (GetSchema s )(ULONG * pcSchemas,
 
 この関数の実装では、セッション クラスでスキーマ マップを持っている必要があります。 スキーマ マップ情報を使用して、マップ内のスキーマの GUID の配列で応答します。 これは、プロバイダーによってサポートされるスキーマを表します。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[スキーマ行セット クラスと Typedef クラス](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)<br/>
+[スキーマ行セットクラスと Typedef クラス](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)<br/>
 [スキーマ行セットのサポート](../../data/oledb/supporting-schema-rowsets.md)<br/>
 [SCHEMA_ENTRY](../../data/oledb/schema-entry.md)<br/>
 [UpdatePV](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Provider)

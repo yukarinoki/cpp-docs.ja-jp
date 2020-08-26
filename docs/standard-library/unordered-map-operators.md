@@ -5,20 +5,21 @@ f1_keywords:
 - unordered_map/std::operator!=
 - unordered_map/std::operator==
 ms.assetid: 9d5add0b-84bd-4a79-bd82-3f58b55145ed
-ms.openlocfilehash: 6a22ccfaf77c3be524bf7127eac3d76c7be827ca
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 0ecedcfa8444b5cbae8fbe64b528a593ed3498b4
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87201857"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88844250"
 ---
 # <a name="ltunordered_mapgt-operators"></a>&lt;unordered_map&gt; 演算子
 
-|||||
-|-|-|-|-|
-|[operator! =](#op_neq)|[operator = =](#op_eq_eq)|[operator! =](#op_neq_multimap)|[operator = =](#op_eq_eq_multimap)|
+[unordered_map:: operator! =](#op_neq)\
+[unordered_map:: operator = =](#op_eq_eq)\
+[unordered_multimap:: operator! =](#op_neq_multimap)\
+[unordered_multimap:: operator = =](#op_eq_eq_multimap)
 
-## <a name="operator"></a><a name="op_neq"></a>operator! =
+## <a name="operator"></a><a name="op_neq"></a> operator! =
 
 演算子の左側の [unordered_map](../standard-library/unordered-map-class.md) オブジェクトが右側の unordered_map オブジェクトと等しくないかどうかをテストします。
 
@@ -29,14 +30,14 @@ bool operator!=(const unordered_map <Key, Type, Hash, Pred, Allocator>& left, co
 ### <a name="parameters"></a>パラメーター
 
 *左側*\
-`unordered_map` 型オブジェクト。
+`unordered_map` 型のオブジェクト。
 
 *そうです*\
-`unordered_map` 型オブジェクト。
+`unordered_map` 型のオブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
-**`true`** unordered_maps が等しくない場合は。**`false`** 等しい場合は。
+**`true`** unordered_maps が等しくない場合は。 **`false`** 等しい場合は。
 
 ### <a name="remarks"></a>解説
 
@@ -72,17 +73,15 @@ int main( )
    cout << "um1 != um3: " << (um1 != um3) << endl;
    cout << "um2 != um3: " << (um2 != um3) << endl;
 }
+
+/* Output:
+um1 != um2: true
+um1 != um3: false
+um2 != um3: true
+*/
 ```
 
-**出力:**
-
-`um1 != um2: true`
-
-`um1 != um3: false`
-
-`um2 != um3: true`
-
-## <a name="operator"></a><a name="op_eq_eq"></a>operator = =
+## <a name="operator"></a><a name="op_eq_eq"></a> operator = =
 
 演算子の左側の [unordered_map](../standard-library/unordered-map-class.md) オブジェクトが右側の unordered_map オブジェクトと等しいかどうかをテストします。
 
@@ -93,14 +92,14 @@ bool operator==(const unordered_map <Key, Type, Hash, Pred, Allocator>& left, co
 ### <a name="parameters"></a>パラメーター
 
 *左側*\
-`unordered_map` 型オブジェクト。
+`unordered_map` 型のオブジェクト。
 
 *そうです*\
-`unordered_map` 型オブジェクト。
+`unordered_map` 型のオブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
-**`true`** unordered_maps が等しい場合は。**`false`** 等しくない場合。
+**`true`** unordered_maps が等しい場合は。 **`false`** 等しくない場合。
 
 ### <a name="remarks"></a>解説
 
@@ -136,17 +135,15 @@ int main( )
    cout << "um1 == um3: " << (um1 == um3) << endl;
    cout << "um2 == um3: " << (um2 == um3) << endl;
 }
+
+/* Output:
+um1 == um2: false
+um1 == um3: true
+um2 == um3: false
+*/
 ```
 
-**出力:**
-
-`um1 == um2: false`
-
-`um1 == um3: true`
-
-`um2 == um3: false`
-
-## <a name="operator"></a><a name="op_neq_multimap"></a>operator! =
+## <a name="operator"></a><a name="op_neq_multimap"></a> operator! =
 
 演算子の左側の [unordered_multimap](../standard-library/unordered-multimap-class.md) オブジェクトが右側の unordered_multimap オブジェクトと等しくないかどうかをテストします。
 
@@ -157,14 +154,14 @@ bool operator!=(const unordered_multimap <Key, Type, Hash, Pred, Allocator>& lef
 ### <a name="parameters"></a>パラメーター
 
 *左側*\
-`unordered_multimap` 型オブジェクト。
+`unordered_multimap` 型のオブジェクト。
 
 *そうです*\
-`unordered_multimap` 型オブジェクト。
+`unordered_multimap` 型のオブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
-**`true`** unordered_multimaps が等しくない場合は。**`false`** 等しい場合は。
+**`true`** unordered_multimaps が等しくない場合は。 **`false`** 等しい場合は。
 
 ### <a name="remarks"></a>解説
 
@@ -201,17 +198,15 @@ int main( )
    cout << "um1 != um3: " << (um1 != um3) << endl;
    cout << "um2 != um3: " << (um2 != um3) << endl;
 }
+
+/* Output:
+um1 != um2: true
+um1 != um3: false
+um2 != um3: true
+*/
 ```
 
-**出力:**
-
-`um1 != um2: true`
-
-`um1 != um3: false`
-
-`um2 != um3: true`
-
-## <a name="operator"></a><a name="op_eq_eq_multimap"></a>operator = =
+## <a name="operator"></a><a name="op_eq_eq_multimap"></a> operator = =
 
 演算子の左側の [unordered_multimap](../standard-library/unordered-multimap-class.md) オブジェクトが右側の unordered_multimap オブジェクトと等しいかどうかをテストします。
 
@@ -222,14 +217,14 @@ bool operator==(const unordered_multimap <Key, Type, Hash, Pred, Allocator>& lef
 ### <a name="parameters"></a>パラメーター
 
 *左側*\
-`unordered_multimap` 型オブジェクト。
+`unordered_multimap` 型のオブジェクト。
 
 *そうです*\
-`unordered_multimap` 型オブジェクト。
+`unordered_multimap` 型のオブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
-**`true`** unordered_multimaps が等しい場合は。**`false`** 等しくない場合。
+**`true`** unordered_multimaps が等しい場合は。 **`false`** 等しくない場合。
 
 ### <a name="remarks"></a>解説
 
@@ -266,15 +261,13 @@ int main( )
    cout << "um1 == um3: " << (um1 == um3) << endl;
    cout << "um2 == um3: " << (um2 == um3) << endl;
 }
+
+/* Output:
+um1 == um2: false
+um1 == um3: true
+um2 == um3: false
+*/
 ```
-
-**出力:**
-
-`um1 == um2: false`
-
-`um1 == um3: true`
-
-`um2 == um3: false`
 
 ## <a name="see-also"></a>関連項目
 

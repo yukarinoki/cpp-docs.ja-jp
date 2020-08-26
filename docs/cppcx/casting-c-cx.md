@@ -2,16 +2,16 @@
 title: キャスト (C++/CX)
 ms.date: 06/19/2018
 ms.assetid: 5247f6c7-6a0a-4021-97c9-21c868bd9455
-ms.openlocfilehash: a51e02b59b2f7229193987f993edbccfb56b779d
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 5e51f9e100be2096494e10aca38232dbd1576f40
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87233523"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88843483"
 ---
 # <a name="casting-ccx"></a>キャスト (C++/CX)
 
-4つの異なるキャスト演算子は Windows ランタイム型 ( [Static_cast operator](../cpp/static-cast-operator.md)、 [dynamic_cast Operator](../cpp/dynamic-cast-operator.md)、 **Safe_cast operator**、および[reinterpret_cast operator](../cpp/reinterpret-cast-operator.md)) に適用されます。 **safe_cast**変換を **`static_cast`** 実行できない場合は、safe_cast して例外をスローします。[Static_cast 演算子](../cpp/static-cast-operator.md)は、コンパイル時の型チェックも実行します。 **`dynamic_cast`****`nullptr`** 型の変換に失敗した場合はを返します。 は **`reinterpret_cast`** null 以外の値を返しますが、無効である可能性があります。 このため、 **`reinterpret_cast`** キャストが成功することがわかっている場合を除き、を使用しないことをお勧めします。 また、C++/CX コードはと同じであるため、C スタイルのキャストは使用しないことをお勧め **`reinterpret_cast`** します。
+4つの異なるキャスト演算子は Windows ランタイム型 ( [Static_cast operator](../cpp/static-cast-operator.md)、 [dynamic_cast Operator](../cpp/dynamic-cast-operator.md)、 **Safe_cast operator**、および [reinterpret_cast operator](../cpp/reinterpret-cast-operator.md)) に適用されます。 **safe_cast**変換を **`static_cast`** 実行できない場合は、safe_cast して例外をスローします。[Static_cast 演算子](../cpp/static-cast-operator.md)は、コンパイル時の型チェックも実行します。 **`dynamic_cast`****`nullptr`** 型の変換に失敗した場合はを返します。 は **`reinterpret_cast`** null 以外の値を返しますが、無効である可能性があります。 このため、 **`reinterpret_cast`** キャストが成功することがわかっている場合を除き、を使用しないことをお勧めします。 また、C++/CX コードはと同じであるため、C スタイルのキャストは使用しないことをお勧め **`reinterpret_cast`** します。
 
 コンパイラとランタイムは、暗黙的なキャストも実行します。たとえば、ボックス化操作で、パラメーターの型が `Object^`であるメソッドに値型または組み込み型が引数として渡される場合です。 理論的には、暗黙的なキャストは実行時に例外を引き起こしません。コンパイラが暗黙的な変換を実行できない場合は、コンパイル時にエラーが発生します。
 
@@ -36,7 +36,7 @@ Ref クラスのを使用すると、 **`static_cast`** 実行時チェックも
 
 ## <a name="safe_cast"></a>safe_cast
 
-**Safe_cast**演算子は Windows ランタイムの一部です。 変換が失敗すると、実行時の型チェックを実行して `Platform::InvalidCastException` をスローします。 実行時エラーが例外的な条件を示している場合は、 **safe_cast**を使用します。 **Safe_cast**の主な目的は、開発フェーズおよびテストフェーズで発生した時点でのプログラミングエラーを特定するのに役立ちます。 ハンドルされていない例外自体がエラーの位置を示しているため、例外を処理する必要はありません。
+**Safe_cast**演算子は Windows ランタイムの一部です。 変換が失敗すると、実行時の型チェックを実行して `Platform::InvalidCastException` をスローします。 実行時エラーが例外的な条件を示している場合は、 **safe_cast** を使用します。 **Safe_cast**の主な目的は、開発フェーズおよびテストフェーズで発生した時点でのプログラミングエラーを特定するのに役立ちます。 ハンドルされていない例外自体がエラーの位置を示しているため、例外を処理する必要はありません。
 
 コードが関係を宣言していないが、キャストが機能することを確信している場合は、safe_cast を使用します。
 
@@ -55,7 +55,7 @@ Ref クラスのを使用すると、 **`static_cast`** 実行時チェックも
 
 ## <a name="dynamic_cast"></a>dynamic_cast
 
-を使用すると **`dynamic_cast`** 、より多くの派生型にオブジェクト (具体的には hat) をキャストするときに、ターゲットオブジェクトがである場合や、キャストが失敗する可能性があり、 **^** **`nullptr`** その条件を例外ではなく通常のコードパスとして処理することが予想されます。 たとえば、[空の**アプリ (ユニバーサル Windows)** ] プロジェクトテンプレートでは、を使用して、 `OnLaunched` **`dynamic_cast`** アプリウィンドウにコンテンツがあるかどうかをテストします。 コンテンツが含まれていなくても、エラーではありません。これは予期された状態です。 `Windows::Current::Content` は `Windows::UI::XAML::UIElement` であり、継承階層内のより強い派生型である `Windows::UI.XAML::Controls::Frame`への変換が実行されます。
+を使用すると **`dynamic_cast`** 、より多くの派生型にオブジェクト (具体的には hat) をキャストするときに、ターゲットオブジェクトがである場合や、キャストが失敗する可能性があり、 **^** **`nullptr`** その条件を例外ではなく通常のコードパスとして処理することが予想されます。 たとえば、[空の **アプリ (ユニバーサル Windows)** ] プロジェクトテンプレートでは、を使用して、 `OnLaunched` **`dynamic_cast`** アプリウィンドウにコンテンツがあるかどうかをテストします。 コンテンツが含まれていなくても、エラーではありません。これは予期された状態です。 `Windows::Current::Content` は `Windows::UI::XAML::UIElement` であり、継承階層内のより強い派生型である `Windows::UI.XAML::Controls::Frame`への変換が実行されます。
 
 ```cpp
 void App::OnLaunched(Windows::ApplicationModel::Activation::LaunchActivatedEventArgs^ args)
@@ -78,7 +78,7 @@ void App::OnLaunched(Windows::ApplicationModel::Activation::LaunchActivatedEvent
 
 ## <a name="dynamic_cast-and-tracking-references-"></a>dynamic_cast と追跡参照 (%) 
 
-を追跡参照に適用することもでき **`dynamic_cast`** ますが、この場合、キャストは**safe_cast**のように動作します。 `Platform::InvalidCastException`追跡参照の値をにすることはできないため、エラーが発生した場合はをスロー **`nullptr`** します。
+を追跡参照に適用することもでき **`dynamic_cast`** ますが、この場合、キャストは **safe_cast**のように動作します。 `Platform::InvalidCastException`追跡参照の値をにすることはできないため、エラーが発生した場合はをスロー **`nullptr`** します。
 
 ## <a name="reinterpret_cast"></a>reinterpret_cast
 
@@ -108,16 +108,16 @@ ComPtr<IInspectable> inspectable = reinterpret_cast<IInspectable*>(winRtObject);
 
 次の表は、を使用しても安全なケースをまとめたもの **`reinterpret_cast`** です。 どの状況でも、キャストは両方向とも安全です。
 
-|||
-|-|-|
-|`HSTRING`|`String^`|
-|`HSTRING*`|`String^*`|
-|`IInspectable*`|`Object^`|
-|`IInspectable**`|`Object^*`|
-|`IInspectable-derived-type*`|`same-interface-from-winmd^`|
-|`IInspectable-derived-type**`|`same-interface-from-winmd^*`|
-|`IDefault-interface-of-RuntimeClass*`|`same-RefClass-from-winmd^`|
-|`IDefault-interface-of-RuntimeClass**`|`same-RefClass-from-winmd^*`|
+| キャスト元、キャスト先 | キャスト、キャスト、 |
+|--|--|
+| `HSTRING` | `String^` |
+| `HSTRING*` | `String^*` |
+| `IInspectable*` | `Object^` |
+| `IInspectable**` | `Object^*` |
+| `IInspectable-derived-type*` | `same-interface-from-winmd^` |
+| `IInspectable-derived-type**` | `same-interface-from-winmd^*` |
+| `IDefault-interface-of-RuntimeClass*` | `same-RefClass-from-winmd^` |
+| `IDefault-interface-of-RuntimeClass**` | `same-RefClass-from-winmd^*` |
 
 ## <a name="see-also"></a>関連項目
 

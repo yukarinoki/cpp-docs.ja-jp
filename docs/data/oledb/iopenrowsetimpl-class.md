@@ -13,16 +13,16 @@ helpviewer_keywords:
 - CreateRowset method
 - OpenRowset method
 ms.assetid: d259cedc-1db4-41cf-bc9f-5030907ab486
-ms.openlocfilehash: 8ecbcd46e534baa73574f0930e1cbac4dbc49dfb
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: a3c94c75db21218aae1205bf9c5c379ab772a7f8
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80210536"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88843717"
 ---
 # <a name="iopenrowsetimpl-class"></a>IOpenRowsetImpl クラス
 
-`IOpenRowset` インターフェイスの実装を提供します。
+インターフェイスの実装を提供 `IOpenRowset` します。
 
 ## <a name="syntax"></a>構文
 
@@ -34,7 +34,7 @@ class IOpenRowsetImpl : public IOpenRowset
 ### <a name="parameters"></a>パラメーター
 
 *SessionClass*<br/>
-`IOpenRowsetImpl`から派生したクラス。
+から派生したクラス `IOpenRowsetImpl` 。
 
 ## <a name="requirements"></a>必要条件
 
@@ -44,16 +44,16 @@ class IOpenRowsetImpl : public IOpenRowset
 
 ### <a name="methods"></a>メソッド
 
-|||
+| 名前 | 説明 |
 |-|-|
 |[CreateRowset](#createrowset)|行セットオブジェクトを作成します。 ユーザーによって直接呼び出されることはありません。|
 |[OpenRowset](#openrowset)|を開き、1つのベーステーブルまたはインデックスのすべての行を含む行セットを返します。 (ATLDB.H ではありません。始め|
 
 ## <a name="remarks"></a>解説
 
-セッションオブジェクトの場合、 [IOpenRowset](/previous-versions/windows/desktop/ms716946(v=vs.85))インターフェイスは必須です。 これにより、1つのベーステーブルまたはインデックスのすべての行を含む行セットが開かれて返されます。
+セッションオブジェクトの場合、 [IOpenRowset](/previous-versions/windows/desktop/ms716946(v=vs.85)) インターフェイスは必須です。 これにより、1つのベーステーブルまたはインデックスのすべての行を含む行セットが開かれて返されます。
 
-## <a name="iopenrowsetimplcreaterowset"></a><a name="createrowset"></a>IOpenRowsetImpl:: CreateRowset
+## <a name="iopenrowsetimplcreaterowset"></a><a name="createrowset"></a> IOpenRowsetImpl:: CreateRowset
 
 行セットオブジェクトを作成します。 ユーザーによって直接呼び出されることはありません。 *OLE DB プログラマーリファレンス*の「 [IOpenRowset:: OpenRowset](/previous-versions/windows/desktop/ms716724(v=vs.85)) 」を参照してください。
 
@@ -81,7 +81,7 @@ HRESULT CreateRowset(IUnknown* pUnkOuter,
 
 その他のパラメーターについては、 *OLE DB プログラマーリファレンス*の「 [IOpenRowset:: OpenRowset](/previous-versions/windows/desktop/ms716724(v=vs.85)) 」を参照してください。
 
-## <a name="iopenrowsetimplopenrowset"></a><a name="openrowset"></a>IOpenRowsetImpl:: OpenRowset
+## <a name="iopenrowsetimplopenrowset"></a><a name="openrowset"></a> IOpenRowsetImpl:: OpenRowset
 
 を開き、1つのベーステーブルまたはインデックスのすべての行を含む行セットを返します。
 
@@ -105,7 +105,7 @@ HRESULT OpenRowset(IUnknown* pUnkOuter,
 
 このメソッドは ATLDB.H で見つかりません。始め. これは、プロバイダーを作成するときに ATL オブジェクトウィザードによって作成されます。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [OLE DB プロバイダー テンプレートに関するページ](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
-[OLE DB プロバイダー テンプレートのアーキテクチャ](../../data/oledb/ole-db-provider-template-architecture.md)
+[OLE DB プロバイダーテンプレートのアーキテクチャ](../../data/oledb/ole-db-provider-template-architecture.md)

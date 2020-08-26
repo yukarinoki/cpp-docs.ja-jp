@@ -14,12 +14,12 @@ helpviewer_keywords:
 - IGetDataSourceImpl class
 - GetDataSource method
 ms.assetid: d63f3178-d663-4f01-8c09-8aab2dd6805a
-ms.openlocfilehash: 596dd2ea7f65040ae526662974d210c1f99a0cf2
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 4c8af66f41724c5a99dfe271a7dd8babc3a993a5
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80210614"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88843964"
 ---
 # <a name="igetdatasourceimpl-class"></a>IGetDataSourceImpl クラス
 
@@ -35,7 +35,7 @@ class ATL_NO_VTABLE IGetDataSourceImpl : public IGetDataSource
 ### <a name="parameters"></a>パラメーター
 
 *T*<br/>
-`IGetDataSourceImpl`から派生したクラス。
+から派生したクラス `IGetDataSourceImpl` 。
 
 ## <a name="requirements"></a>必要条件
 
@@ -45,7 +45,7 @@ class ATL_NO_VTABLE IGetDataSourceImpl : public IGetDataSource
 
 ### <a name="interface-methods"></a>インターフェイス メソッド
 
-|||
+| 名前 | 説明 |
 |-|-|
 |[GetDataSource](#getdatasource)|セッションを作成したデータソースオブジェクトのインターフェイスポインターを返します。|
 
@@ -53,7 +53,7 @@ class ATL_NO_VTABLE IGetDataSourceImpl : public IGetDataSource
 
 これは、データソースオブジェクトへのインターフェイスポインターを取得するための、セッションでの必須のインターフェイスです。
 
-## <a name="igetdatasourceimplgetdatasource"></a><a name="getdatasource"></a>IGetDataSourceImpl:: GetDataSource
+## <a name="igetdatasourceimplgetdatasource"></a><a name="getdatasource"></a> IGetDataSourceImpl:: GetDataSource
 
 セッションを作成したデータソースオブジェクトのインターフェイスポインターを返します。
 
@@ -72,7 +72,7 @@ STDMETHOD(GetDataSource)(REFIID riid,
 
 データソースオブジェクトのプロパティにアクセスする必要がある場合に便利です。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [OLE DB プロバイダー テンプレートに関するページ](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
-[OLE DB プロバイダー テンプレートのアーキテクチャ](../../data/oledb/ole-db-provider-template-architecture.md)
+[OLE DB プロバイダーテンプレートのアーキテクチャ](../../data/oledb/ole-db-provider-template-architecture.md)

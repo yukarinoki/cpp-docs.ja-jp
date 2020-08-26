@@ -8,20 +8,19 @@ f1_keywords:
 ms.assetid: cf2e4115-f205-4a0e-90be-a143ffcc1f44
 helpviewer_keywords:
 - std::swap (unordered_map/multimap)
-ms.openlocfilehash: 759957028b74f984385f47647275cf22d561f59c
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 9e572e4ba8cb4c6cb15329342a7947c35ece7270
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81373137"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88844263"
 ---
 # <a name="ltunordered_mapgt-functions"></a>&lt;unordered_map&gt; 関数
 
-|||
-|-|-|
-|[swap (unordered_map)](#swap)|[swap (unordered_multimap)](#swap_function_multimap)|
+[swap (unordered_map)](#swap) 
+[swap (unordered_multimap)](#swap_function_multimap)
 
-## <a name="swap-unordered_map"></a><a name="swap"></a>スワップ (unordered_map)
+## <a name="swap-unordered_map"></a><a name="swap"></a> swap (unordered_map)
 
 2 つのコンテナーのコンテンツを交換します。
 
@@ -34,10 +33,10 @@ void swap(
 
 ### <a name="parameters"></a>パラメーター
 
-*キー*\
+*レジストリ*\
 キーの型。
 
-*Ty*\
+*~*\
 マップされた型。
 
 *ハッシュ*\
@@ -46,10 +45,10 @@ void swap(
 *Pred*\
 等価比較関数のオブジェクト型。
 
-*Alloc*\
+*割り当て*\
 アロケーター クラス。
 
-*左*\
+*左側*\
 スワップする最初のコンテナー。
 
 *そうです*\
@@ -57,7 +56,7 @@ void swap(
 
 ### <a name="remarks"></a>解説
 
-テンプレート関数は`left.`[、unordered_map::swap](../standard-library/unordered-map-class.md#swap)`(right)`を実行します。
+このテンプレート関数は `left.` [unordered_map:: swap](../standard-library/unordered-map-class.md#swap) `(right)` を実行します。
 
 ### <a name="example"></a>例
 
@@ -114,7 +113,7 @@ int main()
 [c, 3] [b, 2] [a, 1]
 ```
 
-## <a name="swap-unordered_multimap"></a><a name="swap_function_multimap"></a>スワップ (unordered_multimap)
+## <a name="swap-unordered_multimap"></a><a name="swap_function_multimap"></a> swap (unordered_multimap)
 
 2 つのコンテナーのコンテンツを交換します。
 
@@ -127,10 +126,10 @@ void swap(
 
 ### <a name="parameters"></a>パラメーター
 
-*キー*\
+*レジストリ*\
 キーの型。
 
-*Ty*\
+*~*\
 マップされた型。
 
 *ハッシュ*\
@@ -139,10 +138,10 @@ void swap(
 *Pred*\
 等価比較関数のオブジェクト型。
 
-*Alloc*\
+*割り当て*\
 アロケーター クラス。
 
-*左*\
+*左側*\
 スワップする最初のコンテナー。
 
 *そうです*\
@@ -150,7 +149,7 @@ void swap(
 
 ### <a name="remarks"></a>解説
 
-テンプレート関数は`left.`[unordered_multimap::swap](../standard-library/unordered-multimap-class.md#swap)`(right)`を実行します。
+このテンプレート関数は `left.` [unordered_multimap:: swap](../standard-library/unordered-multimap-class.md#swap) `(right)` を実行します。
 
 ### <a name="example"></a>例
 

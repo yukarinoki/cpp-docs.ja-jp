@@ -45,12 +45,12 @@ helpviewer_keywords:
 - RFX (record field exchange), data exchange functions [MFC]
 - RFX (record field exchange)
 ms.assetid: 6e4c5c1c-acb7-4c18-bf51-bf7959a696cd
-ms.openlocfilehash: f4f1b12795252b91a2c14877822e221ca86ab39e
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 9bb1b7bcbce16bba8029fcfbbeea7552b1d4a0ba
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87214036"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88843600"
 ---
 # <a name="record-field-exchange-functions"></a>レコード フィールド エクスチェンジ (RFX) 関数
 
@@ -70,7 +70,7 @@ ODBC ベースのクラスにバルク行フェッチを実装していない場
 
 ### <a name="rfx-functions-odbc"></a>RFX 関数 (ODBC)
 
-|||
+|名前|説明|
 |-|-|
 |[RFX_Binary](#rfx_binary)|[CByteArray](cbytearray-class.md)型のバイト配列を転送します。|
 |[RFX_Bool](#rfx_bool)|ブール型のデータを転送します。|
@@ -85,7 +85,7 @@ ODBC ベースのクラスにバルク行フェッチを実装していない場
 
 ### <a name="bulk-rfx-functions-odbc"></a>バルク RFX 関数 (ODBC)
 
-|||
+|名前|説明|
 |-|-|
 |[RFX_Binary_Bulk](#rfx_binary_bulk)|バイト データの配列を転送します。|
 |[RFX_Bool_Bulk](#rfx_bool_bulk)|ブール型のデータの配列を転送します。|
@@ -99,7 +99,7 @@ ODBC ベースのクラスにバルク行フェッチを実装していない場
 
 ### <a name="dfx-functions-dao"></a>DFX 関数 (DAO)
 
-|||
+|名前|説明|
 |-|-|
 |[DFX_Binary](#dfx_binary)|[CByteArray](cbytearray-class.md)型のバイト配列を転送します。|
 |[DFX_Bool](#dfx_bool)|ブール型のデータを転送します。|
@@ -115,7 +115,7 @@ ODBC ベースのクラスにバルク行フェッチを実装していない場
 
 =============================================
 
-## <a name="rfx_binary"></a><a name="rfx_binary"></a>RFX_Binary
+## <a name="rfx_binary"></a><a name="rfx_binary"></a> RFX_Binary
 
 オブジェクトのフィールドデータメンバー `CRecordset` と、ODBC 型 SQL_BINARY、SQL_VARBINARY、または SQL_LONGVARBINARY のデータソースのレコードの列との間のバイト配列を転送します。
 
@@ -132,7 +132,7 @@ void RFX_Binary(
 ### <a name="parameters"></a>パラメーター
 
 *.Cer*<br/>
-[CFieldExchange](cfieldexchange-class.md)クラスのオブジェクトへのポインター。 このオブジェクトには、関数の各呼び出しのコンテキストを定義するための情報が含まれています。 オブジェクトが指定できる操作の詳細については `CFieldExchange` 、「[レコードフィールドエクスチェンジ: RFX の動作のしくみ](../../data/odbc/record-field-exchange-how-rfx-works.md)」を参照してください。
+[CFieldExchange](cfieldexchange-class.md)クラスのオブジェクトへのポインター。 このオブジェクトには、関数の各呼び出しのコンテキストを定義するための情報が含まれています。 オブジェクトが指定できる操作の詳細については `CFieldExchange` 、「 [レコードフィールドエクスチェンジ: RFX の動作のしくみ](../../data/odbc/record-field-exchange-how-rfx-works.md)」を参照してください。
 
 *szName*<br/>
 データ列の名前。
@@ -155,7 +155,7 @@ void RFX_Binary(
 
 **ヘッダー:** afxdb.h
 
-## <a name="rfx_bool"></a><a name="rfx_bool"></a>RFX_Bool
+## <a name="rfx_bool"></a><a name="rfx_bool"></a> RFX_Bool
 
 オブジェクトのフィールドデータメンバー `CRecordset` と、ODBC 型 SQL_BIT のデータソースのレコードの列との間でブールデータを転送します。
 
@@ -171,7 +171,7 @@ void RFX_Bool(
 ### <a name="parameters"></a>パラメーター
 
 *.Cer*<br/>
-[CFieldExchange](cfieldexchange-class.md)クラスのオブジェクトへのポインター。 このオブジェクトには、関数の各呼び出しのコンテキストを定義するための情報が含まれています。 オブジェクトが指定できる操作の詳細については `CFieldExchange` 、「[レコードフィールドエクスチェンジ: RFX の動作のしくみ](../../data/odbc/record-field-exchange-how-rfx-works.md)」を参照してください。
+[CFieldExchange](cfieldexchange-class.md)クラスのオブジェクトへのポインター。 このオブジェクトには、関数の各呼び出しのコンテキストを定義するための情報が含まれています。 オブジェクトが指定できる操作の詳細については `CFieldExchange` 、「 [レコードフィールドエクスチェンジ: RFX の動作のしくみ](../../data/odbc/record-field-exchange-how-rfx-works.md)」を参照してください。
 
 *szName*<br/>
 データ列の名前。
@@ -187,7 +187,7 @@ void RFX_Bool(
 
 **ヘッダー:** afxdb.h
 
-## <a name="rfx_byte"></a><a name="rfx_byte"></a>RFX_Byte
+## <a name="rfx_byte"></a><a name="rfx_byte"></a> RFX_Byte
 
 オブジェクトのフィールドデータメンバー `CRecordset` と、ODBC 型のデータソースのレコードの列との間で、1バイトを転送 SQL_TINYINT ます。
 
@@ -203,7 +203,7 @@ void RFX_Byte(
 ### <a name="parameters"></a>パラメーター
 
 *.Cer*<br/>
-[CFieldExchange](cfieldexchange-class.md)クラスのオブジェクトへのポインター。 このオブジェクトには、関数の各呼び出しのコンテキストを定義するための情報が含まれています。 オブジェクトが指定できる操作の詳細については `CFieldExchange` 、「[レコードフィールドエクスチェンジ: RFX の動作のしくみ](../../data/odbc/record-field-exchange-how-rfx-works.md)」を参照してください。
+[CFieldExchange](cfieldexchange-class.md)クラスのオブジェクトへのポインター。 このオブジェクトには、関数の各呼び出しのコンテキストを定義するための情報が含まれています。 オブジェクトが指定できる操作の詳細については `CFieldExchange` 、「 [レコードフィールドエクスチェンジ: RFX の動作のしくみ](../../data/odbc/record-field-exchange-how-rfx-works.md)」を参照してください。
 
 *szName*<br/>
 データ列の名前。
@@ -219,7 +219,7 @@ void RFX_Byte(
 
 **ヘッダー:** afxdb.h
 
-## <a name="rfx_date"></a><a name="rfx_date"></a>RFX_Date
+## <a name="rfx_date"></a><a name="rfx_date"></a> RFX_Date
 
 `CTime`オブジェクトのフィールドデータメンバー `CRecordset` と、ODBC 型 SQL_DATE、SQL_TIME、または SQL_TIMESTAMP のデータソースのレコードの列との間で、データを転送または TIMESTAMP_STRUCT します。
 
@@ -245,7 +245,7 @@ void RFX_Date(
 ### <a name="parameters"></a>パラメーター
 
 *.Cer*<br/>
-[CFieldExchange](cfieldexchange-class.md)クラスのオブジェクトへのポインター。 このオブジェクトには、関数の各呼び出しのコンテキストを定義するための情報が含まれています。 オブジェクトが指定できる操作の詳細については `CFieldExchange` 、「[レコードフィールドエクスチェンジ: RFX の動作のしくみ](../../data/odbc/record-field-exchange-how-rfx-works.md)」を参照してください。
+[CFieldExchange](cfieldexchange-class.md)クラスのオブジェクトへのポインター。 このオブジェクトには、関数の各呼び出しのコンテキストを定義するための情報が含まれています。 オブジェクトが指定できる操作の詳細については `CFieldExchange` 、「 [レコードフィールドエクスチェンジ: RFX の動作のしくみ](../../data/odbc/record-field-exchange-how-rfx-works.md)」を参照してください。
 
 *szName*<br/>
 データ列の名前。
@@ -253,9 +253,9 @@ void RFX_Date(
 *value*<br/>
 指定されたデータメンバーに格納されている値。転送される値。 関数のさまざまなバージョンは、値として異なるデータ型を受け取ります。
 
-関数の最初のバージョンは、 [CTime](../../atl-mfc-shared/reference/ctime-class.md)オブジェクトへの参照を受け取ります。 レコードセットからデータソースへの転送では、この値は指定されたデータメンバーから取得されます。 データソースからレコードセットへの転送では、値は指定されたデータメンバーに格納されます。
+関数の最初のバージョンは、 [CTime](../../atl-mfc-shared/reference/ctime-class.md) オブジェクトへの参照を受け取ります。 レコードセットからデータソースへの転送では、この値は指定されたデータメンバーから取得されます。 データソースからレコードセットへの転送では、値は指定されたデータメンバーに格納されます。
 
-関数の2番目のバージョンは、構造体への参照を受け取り `TIMESTAMP_STRUCT` ます。 この構造体は、呼び出しの前に自分で設定する必要があります。 このバージョンでは、ダイアログデータエクスチェンジ (DDX) のサポートもコードウィザードもサポートされていません。 関数の3番目のバージョンは、 [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md)オブジェクトへの参照を受け取る点を除いて、最初のバージョンと同じように動作します。
+関数の2番目のバージョンは、構造体への参照を受け取り `TIMESTAMP_STRUCT` ます。 この構造体は、呼び出しの前に自分で設定する必要があります。 このバージョンでは、ダイアログデータエクスチェンジ (DDX) のサポートもコードウィザードもサポートされていません。 関数の3番目のバージョンは、 [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) オブジェクトへの参照を受け取る点を除いて、最初のバージョンと同じように動作します。
 
 ### <a name="remarks"></a>解説
 
@@ -269,7 +269,7 @@ void RFX_Date(
 
 **ヘッダー:** afxdb.h
 
-## <a name="rfx_double"></a><a name="rfx_double"></a>RFX_Double
+## <a name="rfx_double"></a><a name="rfx_double"></a> RFX_Double
 
 オブジェクト**double float**のフィールドデータメンバー `CRecordset` と、ODBC 型 SQL_DOUBLE のデータソースのレコードの列との間で、double float データを転送します。
 
@@ -285,7 +285,7 @@ void RFX_Double(
 ### <a name="parameters"></a>パラメーター
 
 *.Cer*<br/>
-[CFieldExchange](cfieldexchange-class.md)クラスのオブジェクトへのポインター。 このオブジェクトには、関数の各呼び出しのコンテキストを定義するための情報が含まれています。 オブジェクトが指定できる操作の詳細については `CFieldExchange` 、「[レコードフィールドエクスチェンジ: RFX の動作のしくみ](../../data/odbc/record-field-exchange-how-rfx-works.md)」を参照してください。
+[CFieldExchange](cfieldexchange-class.md)クラスのオブジェクトへのポインター。 このオブジェクトには、関数の各呼び出しのコンテキストを定義するための情報が含まれています。 オブジェクトが指定できる操作の詳細については `CFieldExchange` 、「 [レコードフィールドエクスチェンジ: RFX の動作のしくみ](../../data/odbc/record-field-exchange-how-rfx-works.md)」を参照してください。
 
 *szName*<br/>
 データ列の名前。
@@ -301,7 +301,7 @@ void RFX_Double(
 
 **ヘッダー:** afxdb.h
 
-## <a name="rfx_int"></a><a name="rfx_int"></a>RFX_Int
+## <a name="rfx_int"></a><a name="rfx_int"></a> RFX_Int
 
 オブジェクトのフィールドデータメンバー `CRecordset` と、ODBC 型 SQL_SMALLINT のデータソースのレコードの列との間で、整数データを転送します。
 
@@ -317,7 +317,7 @@ void RFX_Int(
 ### <a name="parameters"></a>パラメーター
 
 *.Cer*<br/>
-[CFieldExchange](cfieldexchange-class.md)クラスのオブジェクトへのポインター。 このオブジェクトには、関数の各呼び出しのコンテキストを定義するための情報が含まれています。 オブジェクトが指定できる操作の詳細については `CFieldExchange` 、「[レコードフィールドエクスチェンジ: RFX の動作のしくみ](../../data/odbc/record-field-exchange-how-rfx-works.md)」を参照してください。
+[CFieldExchange](cfieldexchange-class.md)クラスのオブジェクトへのポインター。 このオブジェクトには、関数の各呼び出しのコンテキストを定義するための情報が含まれています。 オブジェクトが指定できる操作の詳細については `CFieldExchange` 、「 [レコードフィールドエクスチェンジ: RFX の動作のしくみ](../../data/odbc/record-field-exchange-how-rfx-works.md)」を参照してください。
 
 *szName*<br/>
 データ列の名前。
@@ -333,7 +333,7 @@ void RFX_Int(
 
 **ヘッダー:** afxdb.h
 
-## <a name="rfx_long"></a><a name="rfx_long"></a>RFX_Long
+## <a name="rfx_long"></a><a name="rfx_long"></a> RFX_Long
 
 オブジェクトのフィールドデータメンバー `CRecordset` と、ODBC 型 SQL_INTEGER のデータソースのレコードの列との間で長整数データを転送します。
 
@@ -350,7 +350,7 @@ value );
 ### <a name="parameters"></a>パラメーター
 
 *.Cer*<br/>
-[CFieldExchange](cfieldexchange-class.md)クラスのオブジェクトへのポインター。 このオブジェクトには、関数の各呼び出しのコンテキストを定義するための情報が含まれています。 オブジェクトが指定できる操作の詳細については `CFieldExchange` 、「[レコードフィールドエクスチェンジ: RFX の動作のしくみ](../../data/odbc/record-field-exchange-how-rfx-works.md)」を参照してください。
+[CFieldExchange](cfieldexchange-class.md)クラスのオブジェクトへのポインター。 このオブジェクトには、関数の各呼び出しのコンテキストを定義するための情報が含まれています。 オブジェクトが指定できる操作の詳細については `CFieldExchange` 、「 [レコードフィールドエクスチェンジ: RFX の動作のしくみ](../../data/odbc/record-field-exchange-how-rfx-works.md)」を参照してください。
 
 *szName*<br/>
 データ列の名前。
@@ -366,7 +366,7 @@ value );
 
 **ヘッダー:** afxdb.h
 
-## <a name="rfx_longbinary"></a><a name="rfx_longbinary"></a>RFX_LongBinary
+## <a name="rfx_longbinary"></a><a name="rfx_longbinary"></a> RFX_LongBinary
 
 [CLongBinary](clongbinary-class.md)クラスを使用してバイナリラージオブジェクト (BLOB) データを転送します。これは、オブジェクトのフィールドデータメンバー `CRecordset` と、ODBC 型 SQL_LONGVARBINARY または SQL_LONGVARCHAR のデータソースのレコードの列の間で使用されます。
 
@@ -382,7 +382,7 @@ void RFX_LongBinary(
 ### <a name="parameters"></a>パラメーター
 
 *.Cer*<br/>
-[CFieldExchange](cfieldexchange-class.md)クラスのオブジェクトへのポインター。 このオブジェクトには、関数の各呼び出しのコンテキストを定義するための情報が含まれています。 オブジェクトが指定できる操作の詳細については `CFieldExchange` 、「[レコードフィールドエクスチェンジ: RFX の動作のしくみ](../../data/odbc/record-field-exchange-how-rfx-works.md)」を参照してください。
+[CFieldExchange](cfieldexchange-class.md)クラスのオブジェクトへのポインター。 このオブジェクトには、関数の各呼び出しのコンテキストを定義するための情報が含まれています。 オブジェクトが指定できる操作の詳細については `CFieldExchange` 、「 [レコードフィールドエクスチェンジ: RFX の動作のしくみ](../../data/odbc/record-field-exchange-how-rfx-works.md)」を参照してください。
 
 *szName*<br/>
 データ列の名前。
@@ -398,7 +398,7 @@ void RFX_LongBinary(
 
 **ヘッダー:** afxdb.h
 
-## <a name="rfx_single"></a><a name="rfx_single"></a>RFX_Single
+## <a name="rfx_single"></a><a name="rfx_single"></a> RFX_Single
 
 オブジェクトのフィールドデータメンバー `CRecordset` と、ODBC 型のデータソースのレコードの列の間で、浮動小数点データを転送 SQL_REAL します。
 
@@ -414,7 +414,7 @@ void RFX_Single(
 ### <a name="parameters"></a>パラメーター
 
 *.Cer*<br/>
-[CFieldExchange](cfieldexchange-class.md)クラスのオブジェクトへのポインター。 このオブジェクトには、関数の各呼び出しのコンテキストを定義するための情報が含まれています。 オブジェクトが指定できる操作の詳細については `CFieldExchange` 、「[レコードフィールドエクスチェンジ: RFX の動作のしくみ](../../data/odbc/record-field-exchange-how-rfx-works.md)」を参照してください。
+[CFieldExchange](cfieldexchange-class.md)クラスのオブジェクトへのポインター。 このオブジェクトには、関数の各呼び出しのコンテキストを定義するための情報が含まれています。 オブジェクトが指定できる操作の詳細については `CFieldExchange` 、「 [レコードフィールドエクスチェンジ: RFX の動作のしくみ](../../data/odbc/record-field-exchange-how-rfx-works.md)」を参照してください。
 
 *szName*<br/>
 データ列の名前。
@@ -430,7 +430,7 @@ void RFX_Single(
 
 **ヘッダー:** afxdb.h
 
-## <a name="rfx_text"></a><a name="rfx_text"></a>RFX_Text
+## <a name="rfx_text"></a><a name="rfx_text"></a> RFX_Text
 
 `CString`オブジェクトのフィールドデータメンバー `CRecordset` と、ODBC の種類 SQL_LONGVARCHAR、SQL_CHAR、SQL_VARCHAR、SQL_DECIMAL、または SQL_NUMERIC のデータソースのレコードの列との間でデータを転送します。
 
@@ -449,7 +449,7 @@ void RFX_Text(
 ### <a name="parameters"></a>パラメーター
 
 *.Cer*<br/>
-クラスのオブジェクトへのポインター `CFieldExchange` 。 このオブジェクトには、関数の各呼び出しのコンテキストを定義するための情報が含まれています。 オブジェクトが指定できる操作の詳細については `CFieldExchange` 、「[レコードフィールドエクスチェンジ: RFX の動作のしくみ](../../data/odbc/record-field-exchange-how-rfx-works.md)」を参照してください。
+クラスのオブジェクトへのポインター `CFieldExchange` 。 このオブジェクトには、関数の各呼び出しのコンテキストを定義するための情報が含まれています。 オブジェクトが指定できる操作の詳細については `CFieldExchange` 、「 [レコードフィールドエクスチェンジ: RFX の動作のしくみ](../../data/odbc/record-field-exchange-how-rfx-works.md)」を参照してください。
 
 *szName*<br/>
 データ列の名前。
@@ -464,7 +464,7 @@ void RFX_Text(
 主にパラメーターに使用されます。 パラメーターのデータ型を示す整数。 この型は、 **SQL_XXX**形式の ODBC データ型です。
 
 *nScale*<br/>
-ODBC の種類 SQL_DECIMAL または SQL_NUMERIC の値の小数点以下桁数を指定します。 *Nscale*は、パラメーター値を設定する場合にのみ使用できます。 詳細については、 *ODBC SDK プログラマーズリファレンス*の付録 D のトピック「有効桁数、小数点以下桁数、長さ、および表示サイズ」を参照してください。
+ODBC の種類 SQL_DECIMAL または SQL_NUMERIC の値の小数点以下桁数を指定します。 *Nscale* は、パラメーター値を設定する場合にのみ使用できます。 詳細については、 *ODBC SDK プログラマーズリファレンス*の付録 D のトピック「有効桁数、小数点以下桁数、長さ、および表示サイズ」を参照してください。
 
 ### <a name="remarks"></a>解説
 
@@ -496,7 +496,7 @@ void CCustomer::DoFieldExchange(CFieldExchange* pFX)
 
 **ヘッダー:** afxdb.h
 
-## <a name="rfx_binary_bulk"></a><a name="rfx_binary_bulk"></a>RFX_Binary_Bulk
+## <a name="rfx_binary_bulk"></a><a name="rfx_binary_bulk"></a> RFX_Binary_Bulk
 
 ODBC データソースの列から派生したオブジェクト内の対応する配列に、バイトデータの複数の行を転送 `CRecordset` します。
 
@@ -514,7 +514,7 @@ void RFX_Binary_Bulk(
 ### <a name="parameters"></a>パラメーター
 
 *.Cer*<br/>
-[CFieldExchange](cfieldexchange-class.md)オブジェクトへのポインター。 このオブジェクトには、関数の各呼び出しのコンテキストを定義するための情報が含まれています。 詳細については、「[レコードフィールドエクスチェンジ: RFX の動作](../../data/odbc/record-field-exchange-how-rfx-works.md)のしくみ」を参照してください。
+[CFieldExchange](cfieldexchange-class.md)オブジェクトへのポインター。 このオブジェクトには、関数の各呼び出しのコンテキストを定義するための情報が含まれています。 詳細については、「 [レコードフィールドエクスチェンジ: RFX の動作](../../data/odbc/record-field-exchange-how-rfx-works.md)のしくみ」を参照してください。
 
 *szName*<br/>
 データ列の名前。
@@ -537,7 +537,7 @@ void RFX_Binary_Bulk(
 > [!NOTE]
 > バルクレコードフィールドエクスチェンジは、データソースからレコードセットオブジェクトにデータを転送するだけです。 レコードセットを更新できるようにするには、ODBC API 関数を使用する必要があり `SQLSetPos` ます。
 
-詳細については、「レコード[セット: 一括でレコードをフェッチする (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md) 」および「[レコードフィールドエクスチェンジ (RFX)](../../data/odbc/record-field-exchange-rfx.md)」を参照してください。
+詳細については、「レコード [セット: 一括でレコードをフェッチする (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md) 」および「 [レコードフィールドエクスチェンジ (RFX)](../../data/odbc/record-field-exchange-rfx.md)」を参照してください。
 
 ### <a name="example"></a>例
 
@@ -547,7 +547,7 @@ void RFX_Binary_Bulk(
 
 **ヘッダー:** afxdb.h
 
-## <a name="rfx_bool_bulk"></a><a name="rfx_bool_bulk"></a>RFX_Bool_Bulk
+## <a name="rfx_bool_bulk"></a><a name="rfx_bool_bulk"></a> RFX_Bool_Bulk
 
 ODBC データソースの列から派生したオブジェクトの対応する配列に、ブール型のデータの複数の行を転送 `CRecordset` します。
 
@@ -564,7 +564,7 @@ void RFX_Bool_Bulk(
 ### <a name="parameters"></a>パラメーター
 
 *.Cer*<br/>
-[CFieldExchange](cfieldexchange-class.md)オブジェクトへのポインター。 このオブジェクトには、関数の各呼び出しのコンテキストを定義するための情報が含まれています。 詳細については、「[レコードフィールドエクスチェンジ: RFX の動作](../../data/odbc/record-field-exchange-how-rfx-works.md)のしくみ」を参照してください。
+[CFieldExchange](cfieldexchange-class.md)オブジェクトへのポインター。 このオブジェクトには、関数の各呼び出しのコンテキストを定義するための情報が含まれています。 詳細については、「 [レコードフィールドエクスチェンジ: RFX の動作](../../data/odbc/record-field-exchange-how-rfx-works.md)のしくみ」を参照してください。
 
 *szName*<br/>
 データ列の名前。
@@ -584,7 +584,7 @@ void RFX_Bool_Bulk(
 > [!NOTE]
 > バルクレコードフィールドエクスチェンジは、データソースからレコードセットオブジェクトにデータを転送するだけです。 レコードセットを更新できるようにするには、ODBC API 関数を使用する必要があり `SQLSetPos` ます。
 
-詳細については、「レコード[セット: 一括でレコードをフェッチする (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md) 」および「[レコードフィールドエクスチェンジ (RFX)](../../data/odbc/record-field-exchange-rfx.md)」を参照してください。
+詳細については、「レコード [セット: 一括でレコードをフェッチする (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md) 」および「 [レコードフィールドエクスチェンジ (RFX)](../../data/odbc/record-field-exchange-rfx.md)」を参照してください。
 
 ### <a name="example"></a>例
 
@@ -594,7 +594,7 @@ void RFX_Bool_Bulk(
 
 **ヘッダー:** afxdb.h
 
-## <a name="rfx_byte_bulk"></a><a name="rfx_byte_bulk"></a>RFX_Byte_Bulk
+## <a name="rfx_byte_bulk"></a><a name="rfx_byte_bulk"></a> RFX_Byte_Bulk
 
 ODBC データソースの列から、から派生したオブジェクト内の対応する配列に、1バイトの複数行を転送 `CRecordset` します。
 
@@ -611,7 +611,7 @@ void RFX_Byte_Bulk(
 ### <a name="parameters"></a>パラメーター
 
 *.Cer*<br/>
-[CFieldExchange](cfieldexchange-class.md)オブジェクトへのポインター。 このオブジェクトには、関数の各呼び出しのコンテキストを定義するための情報が含まれています。 詳細については、「[レコードフィールドエクスチェンジ: RFX の動作](../../data/odbc/record-field-exchange-how-rfx-works.md)のしくみ」を参照してください。
+[CFieldExchange](cfieldexchange-class.md)オブジェクトへのポインター。 このオブジェクトには、関数の各呼び出しのコンテキストを定義するための情報が含まれています。 詳細については、「 [レコードフィールドエクスチェンジ: RFX の動作](../../data/odbc/record-field-exchange-how-rfx-works.md)のしくみ」を参照してください。
 
 *szName*<br/>
 データ列の名前。
@@ -631,7 +631,7 @@ void RFX_Byte_Bulk(
 > [!NOTE]
 > バルクレコードフィールドエクスチェンジは、データソースからレコードセットオブジェクトにデータを転送するだけです。 レコードセットを更新できるようにするには、ODBC API 関数を使用する必要があり `SQLSetPos` ます。
 
-詳細については、「レコード[セット: 一括でレコードをフェッチする (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md) 」および「[レコードフィールドエクスチェンジ (RFX)](../../data/odbc/record-field-exchange-rfx.md)」を参照してください。
+詳細については、「レコード [セット: 一括でレコードをフェッチする (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md) 」および「 [レコードフィールドエクスチェンジ (RFX)](../../data/odbc/record-field-exchange-rfx.md)」を参照してください。
 
 ### <a name="example"></a>例
 
@@ -641,7 +641,7 @@ void RFX_Byte_Bulk(
 
 **ヘッダー:** afxdb.h
 
-## <a name="rfx_date_bulk"></a><a name="rfx_date_bulk"></a>RFX_Date_Bulk
+## <a name="rfx_date_bulk"></a><a name="rfx_date_bulk"></a> RFX_Date_Bulk
 
 ODBC データソースの列から派生したオブジェクトの対応する配列に、TIMESTAMP_STRUCT の複数行のデータを転送 `CRecordset` します。
 
@@ -658,7 +658,7 @@ void RFX_Date_Bulk(
 ### <a name="parameters"></a>パラメーター
 
 *.Cer*<br/>
-[CFieldExchange](cfieldexchange-class.md)オブジェクトへのポインター。 このオブジェクトには、関数の各呼び出しのコンテキストを定義するための情報が含まれています。 詳細については、「[レコードフィールドエクスチェンジ: RFX の動作](../../data/odbc/record-field-exchange-how-rfx-works.md)のしくみ」を参照してください。
+[CFieldExchange](cfieldexchange-class.md)オブジェクトへのポインター。 このオブジェクトには、関数の各呼び出しのコンテキストを定義するための情報が含まれています。 詳細については、「 [レコードフィールドエクスチェンジ: RFX の動作](../../data/odbc/record-field-exchange-how-rfx-works.md)のしくみ」を参照してください。
 
 *szName*<br/>
 データ列の名前。
@@ -678,7 +678,7 @@ TIMESTAMP_STRUCT 値の配列へのポインター。 この配列には、デ�
 > [!NOTE]
 > バルクレコードフィールドエクスチェンジは、データソースからレコードセットオブジェクトにデータを転送するだけです。 レコードセットを更新できるようにするには、ODBC API 関数を使用する必要があり `SQLSetPos` ます。
 
-詳細については、「レコード[セット: 一括でレコードをフェッチする (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md) 」および「[レコードフィールドエクスチェンジ (RFX)](../../data/odbc/record-field-exchange-rfx.md)」を参照してください。
+詳細については、「レコード [セット: 一括でレコードをフェッチする (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md) 」および「 [レコードフィールドエクスチェンジ (RFX)](../../data/odbc/record-field-exchange-rfx.md)」を参照してください。
 
 ### <a name="example"></a>例
 
@@ -688,7 +688,7 @@ TIMESTAMP_STRUCT 値の配列へのポインター。 この配列には、デ�
 
 **ヘッダー:** afxdb.h
 
-## <a name="rfx_double_bulk"></a><a name="rfx_double_bulk"></a>RFX_Double_Bulk
+## <a name="rfx_double_bulk"></a><a name="rfx_double_bulk"></a> RFX_Double_Bulk
 
 ODBC データソースの列から、から派生したオブジェクトの対応する配列に、倍精度浮動小数点データの複数行を転送 `CRecordset` します。
 
@@ -705,7 +705,7 @@ void RFX_Double_Bulk(
 ### <a name="parameters"></a>パラメーター
 
 *.Cer*<br/>
-[CFieldExchange](cfieldexchange-class.md)オブジェクトへのポインター。 このオブジェクトには、関数の各呼び出しのコンテキストを定義するための情報が含まれています。 詳細については、「[レコードフィールドエクスチェンジ: RFX の動作](../../data/odbc/record-field-exchange-how-rfx-works.md)のしくみ」を参照してください。
+[CFieldExchange](cfieldexchange-class.md)オブジェクトへのポインター。 このオブジェクトには、関数の各呼び出しのコンテキストを定義するための情報が含まれています。 詳細については、「 [レコードフィールドエクスチェンジ: RFX の動作](../../data/odbc/record-field-exchange-how-rfx-works.md)のしくみ」を参照してください。
 
 *szName*<br/>
 データ列の名前。
@@ -725,7 +725,7 @@ void RFX_Double_Bulk(
 > [!NOTE]
 > バルクレコードフィールドエクスチェンジは、データソースからレコードセットオブジェクトにデータを転送するだけです。 レコードセットを更新できるようにするには、ODBC API 関数を使用する必要があり `SQLSetPos` ます。
 
-詳細については、「レコード[セット: 一括でレコードをフェッチする (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md) 」および「[レコードフィールドエクスチェンジ (RFX)](../../data/odbc/record-field-exchange-rfx.md)」を参照してください。
+詳細については、「レコード [セット: 一括でレコードをフェッチする (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md) 」および「 [レコードフィールドエクスチェンジ (RFX)](../../data/odbc/record-field-exchange-rfx.md)」を参照してください。
 
 ### <a name="example"></a>例
 
@@ -735,7 +735,7 @@ void RFX_Double_Bulk(
 
 **ヘッダー:** afxdb.h
 
-## <a name="rfx_int_bulk"></a><a name="rfx_int_bulk"></a>RFX_Int_Bulk
+## <a name="rfx_int_bulk"></a><a name="rfx_int_bulk"></a> RFX_Int_Bulk
 
 オブジェクトのフィールドデータメンバー `CRecordset` と、ODBC 型 SQL_SMALLINT のデータソースのレコードの列との間で、整数データを転送します。
 
@@ -751,7 +751,7 @@ void RFX_Int(
 ### <a name="parameters"></a>パラメーター
 
 *.Cer*<br/>
-[CFieldExchange](cfieldexchange-class.md)クラスのオブジェクトへのポインター。 このオブジェクトには、関数の各呼び出しのコンテキストを定義するための情報が含まれています。 オブジェクトが指定できる操作の詳細については `CFieldExchange` 、「[レコードフィールドエクスチェンジ: RFX の動作のしくみ](../../data/odbc/record-field-exchange-how-rfx-works.md)」を参照してください。
+[CFieldExchange](cfieldexchange-class.md)クラスのオブジェクトへのポインター。 このオブジェクトには、関数の各呼び出しのコンテキストを定義するための情報が含まれています。 オブジェクトが指定できる操作の詳細については `CFieldExchange` 、「 [レコードフィールドエクスチェンジ: RFX の動作のしくみ](../../data/odbc/record-field-exchange-how-rfx-works.md)」を参照してください。
 
 *szName*<br/>
 データ列の名前。
@@ -767,7 +767,7 @@ void RFX_Int(
 
 **ヘッダー:** afxdb.h
 
-## <a name="rfx_long_bulk"></a><a name="rfx_long_bulk"></a>RFX_Long_Bulk
+## <a name="rfx_long_bulk"></a><a name="rfx_long_bulk"></a> RFX_Long_Bulk
 
 ODBC データソースの列から派生したオブジェクト内の対応する配列に、長い整数型のデータを複数行転送 `CRecordset` します。
 
@@ -784,7 +784,7 @@ void RFX_Long_Bulk(
 ### <a name="parameters"></a>パラメーター
 
 *.Cer*<br/>
-[CFieldExchange](cfieldexchange-class.md)オブジェクトへのポインター。 このオブジェクトには、関数の各呼び出しのコンテキストを定義するための情報が含まれています。 詳細については、「[レコードフィールドエクスチェンジ: RFX の動作](../../data/odbc/record-field-exchange-how-rfx-works.md)のしくみ」を参照してください。
+[CFieldExchange](cfieldexchange-class.md)オブジェクトへのポインター。 このオブジェクトには、関数の各呼び出しのコンテキストを定義するための情報が含まれています。 詳細については、「 [レコードフィールドエクスチェンジ: RFX の動作](../../data/odbc/record-field-exchange-how-rfx-works.md)のしくみ」を参照してください。
 
 *szName*<br/>
 データ列の名前。
@@ -804,7 +804,7 @@ void RFX_Long_Bulk(
 > [!NOTE]
 > バルクレコードフィールドエクスチェンジは、データソースからレコードセットオブジェクトにデータを転送するだけです。 レコードセットを更新できるようにするには、ODBC API 関数を使用する必要があり `SQLSetPos` ます。
 
-詳細については、「レコード[セット: 一括でレコードをフェッチする (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md) 」および「[レコードフィールドエクスチェンジ (RFX)](../../data/odbc/record-field-exchange-rfx.md)」を参照してください。
+詳細については、「レコード [セット: 一括でレコードをフェッチする (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md) 」および「 [レコードフィールドエクスチェンジ (RFX)](../../data/odbc/record-field-exchange-rfx.md)」を参照してください。
 
 ### <a name="example"></a>例
 
@@ -814,7 +814,7 @@ void RFX_Long_Bulk(
 
 **ヘッダー:** afxdb.h
 
-## <a name="rfx_single_bulk"></a><a name="rfx_single_bulk"></a>RFX_Single_Bulk
+## <a name="rfx_single_bulk"></a><a name="rfx_single_bulk"></a> RFX_Single_Bulk
 
 ODBC データソースの列から、から派生したオブジェクトの対応する配列に、浮動小数点データの複数の行を転送 `CRecordset` します。
 
@@ -831,7 +831,7 @@ void RFX_Single_Bulk(
 ### <a name="parameters"></a>パラメーター
 
 *.Cer*<br/>
-[CFieldExchange](cfieldexchange-class.md)オブジェクトへのポインター。 このオブジェクトには、関数の各呼び出しのコンテキストを定義するための情報が含まれています。 詳細については、「[レコードフィールドエクスチェンジ: RFX の動作](../../data/odbc/record-field-exchange-how-rfx-works.md)のしくみ」を参照してください。
+[CFieldExchange](cfieldexchange-class.md)オブジェクトへのポインター。 このオブジェクトには、関数の各呼び出しのコンテキストを定義するための情報が含まれています。 詳細については、「 [レコードフィールドエクスチェンジ: RFX の動作](../../data/odbc/record-field-exchange-how-rfx-works.md)のしくみ」を参照してください。
 
 *szName*<br/>
 データ列の名前。
@@ -851,7 +851,7 @@ void RFX_Single_Bulk(
 > [!NOTE]
 > バルクレコードフィールドエクスチェンジは、データソースからレコードセットオブジェクトにデータを転送するだけです。 レコードセットを更新できるようにするには、ODBC API 関数を使用する必要があり `SQLSetPos` ます。
 
-詳細については、「レコード[セット: 一括でレコードをフェッチする (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md) 」および「[レコードフィールドエクスチェンジ (RFX)](../../data/odbc/record-field-exchange-rfx.md)」を参照してください。
+詳細については、「レコード [セット: 一括でレコードをフェッチする (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md) 」および「 [レコードフィールドエクスチェンジ (RFX)](../../data/odbc/record-field-exchange-rfx.md)」を参照してください。
 
 ### <a name="example"></a>例
 
@@ -861,7 +861,7 @@ void RFX_Single_Bulk(
 
 **ヘッダー:** afxdb.h
 
-## <a name="rfx_text_bulk"></a><a name="rfx_text_bulk"></a>RFX_Text_Bulk
+## <a name="rfx_text_bulk"></a><a name="rfx_text_bulk"></a> RFX_Text_Bulk
 
 ODBC データソースの列から、から派生したオブジェクトの対応する配列に、文字データの複数の行を転送 `CRecordset` します。
 
@@ -879,7 +879,7 @@ void RFX_Text_Bulk(
 ### <a name="parameters"></a>パラメーター
 
 *.Cer*<br/>
-[CFieldExchange](cfieldexchange-class.md)オブジェクトへのポインター。 このオブジェクトには、関数の各呼び出しのコンテキストを定義するための情報が含まれています。 詳細については、「[レコードフィールドエクスチェンジ: RFX の動作](../../data/odbc/record-field-exchange-how-rfx-works.md)のしくみ」を参照してください。
+[CFieldExchange](cfieldexchange-class.md)オブジェクトへのポインター。 このオブジェクトには、関数の各呼び出しのコンテキストを定義するための情報が含まれています。 詳細については、「 [レコードフィールドエクスチェンジ: RFX の動作](../../data/odbc/record-field-exchange-how-rfx-works.md)のしくみ」を参照してください。
 
 *szName*<br/>
 データ列の名前。
@@ -902,7 +902,7 @@ LPSTR 値の配列へのポインター。 この配列には、データソー�
 > [!NOTE]
 > バルクレコードフィールドエクスチェンジは、データソースからレコードセットオブジェクトにデータを転送するだけです。 レコードセットを更新できるようにするには、ODBC API 関数を使用する必要があり `SQLSetPos` ます。
 
-詳細については、「レコード[セット: 一括でレコードをフェッチする (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md) 」および「[レコードフィールドエクスチェンジ (RFX)](../../data/odbc/record-field-exchange-rfx.md)」を参照してください。
+詳細については、「レコード [セット: 一括でレコードをフェッチする (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md) 」および「 [レコードフィールドエクスチェンジ (RFX)](../../data/odbc/record-field-exchange-rfx.md)」を参照してください。
 
 ### <a name="example"></a>例
 
@@ -927,7 +927,7 @@ void CMultiCustomer::DoBulkFieldExchange(CFieldExchange* pFX)
 
 **ヘッダー:** afxdb.h
 
-## <a name="dfx_binary"></a><a name="dfx_binary"></a>DFX_Binary
+## <a name="dfx_binary"></a><a name="dfx_binary"></a> DFX_Binary
 
 [CDaoRecordset](cdaorecordset-class.md)オブジェクトのフィールドデータメンバーと、データソース上のレコードの列との間でバイト配列を転送します。
 
@@ -957,14 +957,14 @@ void AFXAPI DFX_Binary(
 フレームワークは、この量のメモリを事前します。 データが大きい場合は、必要に応じて、フレームワークにより多くの領域が割り当てられます。 パフォーマンスを向上させるには、このサイズを再割り当てを防ぐのに十分な大きさの値に設定します。 既定のサイズは、AFXDAO で定義されています。H ファイル (AFX_DAO_BINARY_DEFAULT_SIZE)。
 
 *dwBindOptions*<br/>
-変更されたレコードセットフィールドを検出するために、MFC のダブルバッファリング機構を利用できるようにするオプション。 既定の AFX_DAO_DISABLE_FIELD_CACHE は、ダブルバッファリングを使用しないため、 [SetFieldDirty](cdaorecordset-class.md#setfielddirty)と[SetFieldNull](cdaorecordset-class.md#setfieldnull)を自分で呼び出す必要があります。 もう1つの値である AFX_DAO_ENABLE_FIELD_CACHE は、ダブルバッファリングを使用します。また、フィールドのダーティまたは Null をマークするために余分な作業を行う必要はありません。 パフォーマンスとメモリの理由から、バイナリデータが比較的小さい場合を除き、この値は避けてください。
+変更されたレコードセットフィールドを検出するために、MFC のダブルバッファリング機構を利用できるようにするオプション。 既定の AFX_DAO_DISABLE_FIELD_CACHE は、ダブルバッファリングを使用しないため、 [SetFieldDirty](cdaorecordset-class.md#setfielddirty) と [SetFieldNull](cdaorecordset-class.md#setfieldnull) を自分で呼び出す必要があります。 もう1つの値である AFX_DAO_ENABLE_FIELD_CACHE は、ダブルバッファリングを使用します。また、フィールドのダーティまたは Null をマークするために余分な作業を行う必要はありません。 パフォーマンスとメモリの理由から、バイナリデータが比較的小さい場合を除き、この値は避けてください。
 
 > [!NOTE]
 > 既定では、 [CDaoRecordset:: m_bCheckCacheForDirtyFields](cdaorecordset-class.md#m_bcheckcachefordirtyfields)を設定することにより、すべてのフィールドに対してデータをダブルバッファリングするかどうかを制御できます。
 
 ### <a name="remarks"></a>解説
 
-データは、DAO の型 DAO_BYTES とレコードセットの[CByteArray](cbytearray-class.md)型の間でマップされます。
+データは、DAO の型 DAO_BYTES とレコードセットの [CByteArray](cbytearray-class.md) 型の間でマップされます。
 
 ### <a name="example"></a>例
 
@@ -974,7 +974,7 @@ void AFXAPI DFX_Binary(
 
 **ヘッダー:** afxdao
 
-## <a name="dfx_bool"></a><a name="dfx_bool"></a>DFX_Bool
+## <a name="dfx_bool"></a><a name="dfx_bool"></a> DFX_Bool
 
 [CDaoRecordset](cdaorecordset-class.md)オブジェクトのフィールドデータメンバーと、データソース上のレコードの列との間でブールデータを転送します。
 
@@ -1017,7 +1017,7 @@ void AFXAPI DFX_Bool(
 
 **ヘッダー:** afxdao
 
-## <a name="dfx_byte"></a><a name="dfx_byte"></a>DFX_Byte
+## <a name="dfx_byte"></a><a name="dfx_byte"></a> DFX_Byte
 
 [CDaoRecordset](cdaorecordset-class.md)オブジェクトのフィールドデータメンバーとデータソース上のレコードの列との間で、1バイトを転送します。
 
@@ -1060,7 +1060,7 @@ void AFXAPI DFX_Byte(
 
 **ヘッダー:** afxdao
 
-## <a name="dfx_currency"></a><a name="dfx_currency"></a>DFX_Currency
+## <a name="dfx_currency"></a><a name="dfx_currency"></a> DFX_Currency
 
 [CDaoRecordset](cdaorecordset-class.md)オブジェクトのフィールドデータメンバーとデータソース上のレコードの列との間で通貨データを転送します。
 
@@ -1083,7 +1083,7 @@ void AFXAPI DFX_Currency(
 データ列の名前。
 
 *value*<br/>
-指定されたデータメンバーに格納されている値 (転送される値)。 レコードセットからデータソースへの転送では、この値は[COleCurrency](colecurrency-class.md)型の指定されたデータメンバーから取得されます。 データソースからレコードセットへの転送では、値は指定されたデータメンバーに格納されます。
+指定されたデータメンバーに格納されている値 (転送される値)。 レコードセットからデータソースへの転送では、この値は [COleCurrency](colecurrency-class.md)型の指定されたデータメンバーから取得されます。 データソースからレコードセットへの転送では、値は指定されたデータメンバーに格納されます。
 
 *dwBindOptions*<br/>
 変更されたレコードセットフィールドを検出するために、MFC のダブルバッファリング機構を利用できるようにするオプション。 既定の AFX_DAO_ENABLE_FIELD_CACHE は、ダブルバッファリングを使用します。 その他の有効な値は AFX_DAO_DISABLE_FIELD_CACHE です。 この値を指定した場合、MFC ではこのフィールドに対するチェックは行われません。 `SetFieldDirty`とを自分で呼び出す必要があり `SetFieldNull` ます。
@@ -1093,7 +1093,7 @@ void AFXAPI DFX_Currency(
 
 ### <a name="remarks"></a>解説
 
-データは、DAO の型 DAO_CURRENCY とレコードセットの[COleCurrency](colecurrency-class.md)型の間でマップされます。
+データは、DAO の型 DAO_CURRENCY とレコードセットの [COleCurrency](colecurrency-class.md) 型の間でマップされます。
 
 ### <a name="example"></a>例
 
@@ -1103,7 +1103,7 @@ void AFXAPI DFX_Currency(
 
 **ヘッダー:** afxdao
 
-## <a name="dfx_datetime"></a><a name="dfx_datetime"></a>DFX_DateTime
+## <a name="dfx_datetime"></a><a name="dfx_datetime"></a> DFX_DateTime
 
 [CDaoRecordset](cdaorecordset-class.md)オブジェクトのフィールドデータメンバーとデータソース上のレコードの列との間で、時刻と日付のデータを転送します。
 
@@ -1126,7 +1126,7 @@ void AFXAPI DFX_DateTime(
 データ列の名前。
 
 *value*<br/>
-指定されたデータメンバーに格納されている値 (転送される値)。 関数は、 [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md)オブジェクトへの参照を受け取ります。 レコードセットからデータソースへの転送では、この値は指定されたデータメンバーから取得されます。 データソースからレコードセットへの転送では、値は指定されたデータメンバーに格納されます。
+指定されたデータメンバーに格納されている値 (転送される値)。 関数は、 [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) オブジェクトへの参照を受け取ります。 レコードセットからデータソースへの転送では、この値は指定されたデータメンバーから取得されます。 データソースからレコードセットへの転送では、値は指定されたデータメンバーに格納されます。
 
 *dwBindOptions*<br/>
 変更されたレコードセットフィールドを検出するために、MFC のダブルバッファリング機構を利用できるようにするオプション。 既定の AFX_DAO_ENABLE_FIELD_CACHE は、ダブルバッファリングを使用します。 その他の有効な値は AFX_DAO_DISABLE_FIELD_CACHE です。 この値を指定した場合、MFC ではこのフィールドに対するチェックは行われません。 `SetFieldDirty`とを自分で呼び出す必要があり `SetFieldNull` ます。
@@ -1136,10 +1136,10 @@ void AFXAPI DFX_DateTime(
 
 ### <a name="remarks"></a>解説
 
-データは、DAO の型 DAO_DATE とレコードセットの型[COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md)の間でマップされます。
+データは、DAO の型 DAO_DATE とレコードセットの型 [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) の間でマップされます。
 
 > [!NOTE]
-> `COleDateTime`DAO クラスでこの目的のために、 [CTime](../../atl-mfc-shared/reference/ctime-class.md)と TIMESTAMP_STRUCT を置き換えます。 `CTime`および TIMESTAMP_STRUCT は、ODBC ベースのデータアクセスクラスでも使用されます。
+> `COleDateTime` DAO クラスでこの目的のために、 [CTime](../../atl-mfc-shared/reference/ctime-class.md) と TIMESTAMP_STRUCT を置き換えます。 `CTime` および TIMESTAMP_STRUCT は、ODBC ベースのデータアクセスクラスでも使用されます。
 
 ### <a name="example"></a>例
 
@@ -1149,7 +1149,7 @@ void AFXAPI DFX_DateTime(
 
 **ヘッダー:** afxdao
 
-## <a name="dfx_double"></a><a name="dfx_double"></a>DFX_Double
+## <a name="dfx_double"></a><a name="dfx_double"></a> DFX_Double
 
 [CDaoRecordset](cdaorecordset-class.md)オブジェクトのフィールドデータメンバーとデータソース上のレコードの列との間で、 **double float 型**のデータを転送します。
 
@@ -1182,7 +1182,7 @@ void AFXAPI DFX_Double(
 
 ### <a name="remarks"></a>解説
 
-データは、DAO の型 DAO_R8 とレコードセットの**double float**型の間でマップされます。
+データは、DAO の型 DAO_R8 とレコードセットの **double float** 型の間でマップされます。
 
 ### <a name="example"></a>例
 
@@ -1192,7 +1192,7 @@ void AFXAPI DFX_Double(
 
 **ヘッダー:** afxdao
 
-## <a name="dfx_long"></a><a name="dfx_long"></a>DFX_Long
+## <a name="dfx_long"></a><a name="dfx_long"></a> DFX_Long
 
 [CDaoRecordset](cdaorecordset-class.md)オブジェクトのフィールドデータメンバーとデータソース上のレコードの列との間で長整数データを転送します。
 
@@ -1235,9 +1235,9 @@ void AFXAPI DFX_Long(
 
 **ヘッダー:** afxdao
 
-## <a name="dfx_longbinary"></a><a name="dfx_longbinary"></a>DFX_LongBinary
+## <a name="dfx_longbinary"></a><a name="dfx_longbinary"></a> DFX_LongBinary
 
-**重要**この関数の代わりに[DFX_Binary](#dfx_binary)を使用することをお勧めします。
+**重要** この関数の代わりに [DFX_Binary](#dfx_binary) を使用することをお勧めします。
 
 ### <a name="syntax"></a>構文
 
@@ -1272,7 +1272,7 @@ void AFXAPI DFX_LongBinary(
 
 ### <a name="remarks"></a>解説
 
-`DFX_LongBinary`は、MFC ODBC クラスとの互換性を維持するために用意されています。 関数は、 `DFX_LongBinary` クラスを使用して、 `CLongBinary` [CDaoRecordset](cdaorecordset-class.md)オブジェクトのフィールドデータメンバーとデータソース上のレコードの列の間で、バイナリラージオブジェクト (BLOB) データを転送します。 データは、DAO の型 DAO_BYTES とレコードセットの[CLongBinary](clongbinary-class.md)型の間でマップされます。
+`DFX_LongBinary` は、MFC ODBC クラスとの互換性を維持するために用意されています。 関数は、 `DFX_LongBinary` クラスを使用して、 `CLongBinary` [CDaoRecordset](cdaorecordset-class.md) オブジェクトのフィールドデータメンバーとデータソース上のレコードの列の間で、バイナリラージオブジェクト (BLOB) データを転送します。 データは、DAO の型 DAO_BYTES とレコードセットの [CLongBinary](clongbinary-class.md) 型の間でマップされます。
 
 ### <a name="example"></a>例
 
@@ -1282,7 +1282,7 @@ void AFXAPI DFX_LongBinary(
 
 **ヘッダー:** afxdao
 
-## <a name="dfx_short"></a><a name="dfx_short"></a>DFX_Short
+## <a name="dfx_short"></a><a name="dfx_short"></a> DFX_Short
 
 [CDaoRecordset](cdaorecordset-class.md)オブジェクトのフィールドデータメンバーとデータソース上のレコードの列との間で short 整数データを転送します。
 
@@ -1318,7 +1318,7 @@ void AFXAPI DFX_Short(
 データは、DAO の型 DAO_I2 とレコードセットの型の間でマップされ **`short`** ます。
 
 > [!NOTE]
-> `DFX_Short`は、ODBC ベースのクラスの[RFX_Int](#rfx_int)に相当します。
+> `DFX_Short` は、ODBC ベースのクラスの [RFX_Int](#rfx_int) に相当します。
 
 ### <a name="example"></a>例
 
@@ -1328,7 +1328,7 @@ void AFXAPI DFX_Short(
 
 **ヘッダー:** afxdao
 
-## <a name="dfx_single"></a><a name="dfx_single"></a>DFX_Single
+## <a name="dfx_single"></a><a name="dfx_single"></a> DFX_Single
 
 [CDaoRecordset](cdaorecordset-class.md)オブジェクトのフィールドデータメンバーとデータソース上のレコードの列との間で、浮動小数点データを転送します。
 
@@ -1371,9 +1371,9 @@ void AFXAPI DFX_Single(
 
 **ヘッダー:** afxdao
 
-## <a name="dfx_text"></a><a name="dfx_text"></a>DFX_Text
+## <a name="dfx_text"></a><a name="dfx_text"></a> DFX_Text
 
-は、 `CString` [CDaoRecordset](cdaorecordset-class.md)オブジェクトのフィールドデータメンバーと、データソース上のレコードの列の間でデータを転送します。
+は、 `CString` [CDaoRecordset](cdaorecordset-class.md) オブジェクトのフィールドデータメンバーと、データソース上のレコードの列の間でデータを転送します。
 
 ### <a name="syntax"></a>構文
 
@@ -1395,7 +1395,7 @@ void AFXAPI DFX_Text(
 データ列の名前。
 
 *value*<br/>
-指定されたデータメンバーに格納されている値 (転送される値)。 レコードセットからデータソースへの転送では、指定されたデータメンバーから[CString](../../atl-mfc-shared/reference/cstringt-class.md)型の値が取得されます。 データソースからレコードセットへの転送では、値は指定されたデータメンバーに格納されます。
+指定されたデータメンバーに格納されている値 (転送される値)。 レコードセットからデータソースへの転送では、指定されたデータメンバーから [CString](../../atl-mfc-shared/reference/cstringt-class.md)型の値が取得されます。 データソースからレコードセットへの転送では、値は指定されたデータメンバーに格納されます。
 
 *nPreAllocSize*<br/>
 フレームワークは、この量のメモリを事前します。 データが大きい場合は、必要に応じて、フレームワークにより多くの領域が割り当てられます。 パフォーマンスを向上させるには、このサイズを再割り当てを防ぐのに十分な大きさの値に設定します。
@@ -1408,11 +1408,11 @@ void AFXAPI DFX_Text(
 
 ### <a name="remarks"></a>解説
 
-データは、DAO 内の DAO_CHAR 型の間でマップされます (または、シンボル _UNICODE が定義されている場合は DAO_WCHAR)。また、レコードセットに[CString](../../atl-mfc-shared/reference/cstringt-class.md)を入力します。  n
+データは、DAO 内の DAO_CHAR 型の間でマップされます (または、シンボル _UNICODE が定義されている場合は DAO_WCHAR)。また、レコードセットに [CString](../../atl-mfc-shared/reference/cstringt-class.md) を入力します。  n
 
 ### <a name="example"></a>例
 
-この例では、の複数の呼び出しを示し `DFX_Text` ます。 [CDaoFieldExchange:: SetFieldType](cdaofieldexchange-class.md#setfieldtype)の2つの呼び出しにも注目してください。 への最初の呼び出しと、 `SetFieldType` その**DFX**呼び出しを記述する必要があります。 2番目の呼び出しとそれに関連付けられている**DFX**呼び出しは、通常、クラスを生成したコードウィザードによって書き込まれます。
+この例では、の複数の呼び出しを示し `DFX_Text` ます。 [CDaoFieldExchange:: SetFieldType](cdaofieldexchange-class.md#setfieldtype)の2つの呼び出しにも注目してください。 への最初の呼び出しと、 `SetFieldType` その **DFX** 呼び出しを記述する必要があります。 2番目の呼び出しとそれに関連付けられている **DFX** 呼び出しは、通常、クラスを生成したコードウィザードによって書き込まれます。
 
 ```cpp
 void CCustSet::DoFieldExchange(CDaoFieldExchange* pFX)

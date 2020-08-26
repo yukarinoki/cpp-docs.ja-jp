@@ -5,12 +5,12 @@ helpviewer_keywords:
 - registering OLE controls
 - OLE controls [MFC], registering
 ms.assetid: 73c45b7f-7dbc-43f5-bd17-dd77c6acec72
-ms.openlocfilehash: 0471bad0793779d0bc13a2bee41957381f56389f
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 5468f3d4b730cc0b81a6ab814d495b061d292f20
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87214023"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88843574"
 ---
 # <a name="registering-ole-controls"></a>OLE コントロールの登録
 
@@ -20,7 +20,7 @@ Ole コントロールは、他の ole サーバーオブジェクトと同様�
 
 ### <a name="registering-ole-controls"></a>OLE コントロールの登録
 
-|||
+|名前|説明|
 |-|-|
 |[AfxOleRegisterControlClass](#afxoleregistercontrolclass)|コントロールのクラスを登録データベースに追加します。|
 |[AfxOleRegisterPropertyPageClass](#afxoleregisterpropertypageclass)|登録データベースにコントロールプロパティページを追加します。|
@@ -28,9 +28,9 @@ Ole コントロールは、他の ole サーバーオブジェクトと同様�
 |[AfxOleUnregisterClass](#afxoleunregisterclass)|登録データベースからコントロールクラスまたはプロパティページクラスを削除します。|
 |[AfxOleUnregisterTypeLib](#afxoleunregistertypelib)|コントロールのタイプライブラリを登録データベースから削除します。|
 
-`AfxOleRegisterTypeLib`は、通常、のコントロール DLL の実装で呼び出され `DllRegisterServer` ます。 同様に、 `AfxOleUnregisterTypeLib` はによって呼び出され `DllUnregisterServer` ます。 `AfxOleRegisterControlClass`、 `AfxOleRegisterPropertyPageClass` 、および `AfxOleUnregisterClass` は、通常、 `UpdateRegistry` コントロールのクラスファクトリまたはプロパティページのメンバー関数によって呼び出されます。
+`AfxOleRegisterTypeLib` は、通常、のコントロール DLL の実装で呼び出され `DllRegisterServer` ます。 同様に、 `AfxOleUnregisterTypeLib` はによって呼び出され `DllUnregisterServer` ます。 `AfxOleRegisterControlClass`、 `AfxOleRegisterPropertyPageClass` 、および `AfxOleUnregisterClass` は、通常、 `UpdateRegistry` コントロールのクラスファクトリまたはプロパティページのメンバー関数によって呼び出されます。
 
-## <a name="afxoleregistercontrolclass"></a><a name="afxoleregistercontrolclass"></a>AfxOleRegisterControlClass
+## <a name="afxoleregistercontrolclass"></a><a name="afxoleregistercontrolclass"></a> AfxOleRegisterControlClass
 
 コントロールクラスを Windows 登録データベースに登録します。
 
@@ -68,16 +68,16 @@ BOOL AFXAPI AfxOleRegisterControlClass(
 *nRegFlags*<br/>
 には、次のフラグが1つ以上含まれています。
 
-- `afxRegInsertable`OLE オブジェクトの [オブジェクトの挿入] ダイアログボックスにコントロールを表示できるようにします。
+- `afxRegInsertable` OLE オブジェクトの [オブジェクトの挿入] ダイアログボックスにコントロールを表示できるようにします。
 
-- `afxRegApartmentThreading`レジストリのスレッドモデルを ThreadingModel = アパートメントに設定します。
+- `afxRegApartmentThreading` レジストリのスレッドモデルを ThreadingModel = アパートメントに設定します。
 
-- `afxRegFreeThreading`レジストリのスレッドモデルを ThreadingModel = Free に設定します。
+- `afxRegFreeThreading` レジストリのスレッドモデルを ThreadingModel = Free に設定します。
 
    2つのフラグを組み合わせ `afxRegApartmentThreading` て、 `afxRegFreeThreading` ThreadingModel = Both を設定することができます。 スレッドモデルの登録の詳細については、Windows SDK の「 [InprocServer32](/windows/win32/com/inprocserver32) 」を参照してください。
 
 > [!NOTE]
-> Mfc 4.2 より前の MFC バージョンでは、 **`int`** *nregflags*パラメーターは、[オブジェクトの挿入] ダイアログボックスからコントロールを挿入することを許可または許可しないブール型のパラメーター *binsertable*です。
+> Mfc 4.2 より前の MFC バージョンでは、 **`int`** *nregflags* パラメーターは、[オブジェクトの挿入] ダイアログボックスからコントロールを挿入することを許可または許可しないブール型のパラメーター *binsertable*です。
 
 *Dw誤 Cstatus*<br/>
 には、次の状態フラグが1つ以上含まれています (フラグの説明については、Windows SDK の「OLEMISC 列挙体」を参照してください)。
@@ -135,7 +135,7 @@ BOOL AFXAPI AfxOleRegisterControlClass(
 
 ### <a name="remarks"></a>解説
 
-これにより、OLE コントロール対応のコンテナーでコントロールを使用できるようになります。 `AfxOleRegisterControlClass`システム上のコントロールの名前と場所を使用してレジストリを更新します。また、コントロールがレジストリでサポートするスレッドモデルも設定します。 詳細については、「[テクニカルノート 64](../../mfc/tn064-apartment-model-threading-in-activex-controls.md)」、「OLE コントロールでのアパートメントモデルのスレッド処理」、および「Windows SDK の[プロセスとスレッドについ](/windows/win32/ProcThread/about-processes-and-threads)て」を参照してください。
+これにより、OLE コントロール対応のコンテナーでコントロールを使用できるようになります。 `AfxOleRegisterControlClass` システム上のコントロールの名前と場所を使用してレジストリを更新します。また、コントロールがレジストリでサポートするスレッドモデルも設定します。 詳細については、「 [テクニカルノート 64](../../mfc/tn064-apartment-model-threading-in-activex-controls.md)」、「OLE コントロールでのアパートメントモデルのスレッド処理」、および「Windows SDK の [プロセスとスレッドについ](/windows/win32/ProcThread/about-processes-and-threads) て」を参照してください。
 
 ### <a name="example"></a>例
 
@@ -151,7 +151,7 @@ BOOL AFXAPI AfxOleRegisterControlClass(
 
   **ヘッダー** afxctl.h
 
-## <a name="afxoleregisterpropertypageclass"></a><a name="afxoleregisterpropertypageclass"></a>AfxOleRegisterPropertyPageClass
+## <a name="afxoleregisterpropertypageclass"></a><a name="afxoleregisterpropertypageclass"></a> AfxOleRegisterPropertyPageClass
 
 プロパティページクラスを Windows 登録データベースに登録します。
 
@@ -177,10 +177,10 @@ BOOL AFXAPI AfxOleRegisterPropertyPageClass(
 *nRegFlags*<br/>
 フラグを含めることができます。
 
-- `afxRegApartmentThreading`レジストリのスレッドモデルを ThreadingModel = アパートメントに設定します。
+- `afxRegApartmentThreading` レジストリのスレッドモデルを ThreadingModel = アパートメントに設定します。
 
 > [!NOTE]
-> Mfc 4.2 より前の MFC バージョンでは、 **`int`** *nregflags*パラメーターは使用できませんでした。 このフラグは、 `afxRegInsertable` プロパティページの有効なオプションではなく、設定されている場合は MFC でアサートが発生することにも注意してください。
+> Mfc 4.2 より前の MFC バージョンでは、 **`int`** *nregflags* パラメーターは使用できませんでした。 このフラグは、 `afxRegInsertable` プロパティページの有効なオプションではなく、設定されている場合は MFC でアサートが発生することにも注意してください。
 
 ### <a name="return-value"></a>戻り値
 
@@ -188,13 +188,13 @@ BOOL AFXAPI AfxOleRegisterPropertyPageClass(
 
 ### <a name="remarks"></a>解説
 
-これにより、OLE コントロール対応のコンテナーでプロパティページを使用できるようになります。 `AfxOleRegisterPropertyPageClass`プロパティページ名とシステム上の場所を使用してレジストリを更新します。また、コントロールがレジストリでサポートするスレッドモデルも設定します。 詳細については、「[テクニカルノート 64](../../mfc/tn064-apartment-model-threading-in-activex-controls.md)」、「OLE コントロールでのアパートメントモデルのスレッド処理」、および「Windows SDK の[プロセスとスレッドについ](/windows/win32/ProcThread/about-processes-and-threads)て」を参照してください。
+これにより、OLE コントロール対応のコンテナーでプロパティページを使用できるようになります。 `AfxOleRegisterPropertyPageClass` プロパティページ名とシステム上の場所を使用してレジストリを更新します。また、コントロールがレジストリでサポートするスレッドモデルも設定します。 詳細については、「 [テクニカルノート 64](../../mfc/tn064-apartment-model-threading-in-activex-controls.md)」、「OLE コントロールでのアパートメントモデルのスレッド処理」、および「Windows SDK の [プロセスとスレッドについ](/windows/win32/ProcThread/about-processes-and-threads) て」を参照してください。
 
 ### <a name="requirements"></a>必要条件
 
   **ヘッダー** afxctl.h
 
-## <a name="afxoleregistertypelib"></a><a name="afxoleregistertypelib"></a>AfxOleRegisterTypeLib
+## <a name="afxoleregistertypelib"></a><a name="afxoleregistertypelib"></a> AfxOleRegisterTypeLib
 
 タイプライブラリを Windows 登録データベースに登録し、そのタイプライブラリを OLE コントロール対応の他のコンテナーが使用できるようにします。
 
@@ -238,7 +238,7 @@ BOOL AfxOleRegisterTypeLib(
 
   **ヘッダー** afxdisp.h
 
-## <a name="afxoleunregisterclass"></a><a name="afxoleunregisterclass"></a>AfxOleUnregisterClass
+## <a name="afxoleunregisterclass"></a><a name="afxoleunregisterclass"></a> AfxOleUnregisterClass
 
 Windows 登録データベースからコントロールまたはプロパティページクラスのエントリを削除します。
 
@@ -262,7 +262,7 @@ BOOL AFXAPI AfxOleUnregisterClass(REFCLSID clsID, LPCSTR pszProgID);
 
   **ヘッダー** afxctl.h
 
-## <a name="afxoleunregistertypelib"></a><a name="afxoleunregistertypelib"></a>AfxOleUnregisterTypeLib
+## <a name="afxoleunregistertypelib"></a><a name="afxoleunregistertypelib"></a> AfxOleUnregisterTypeLib
 
 Windows 登録データベースからタイプライブラリエントリを削除するには、この関数を呼び出します。
 

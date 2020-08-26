@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - idl_quote attribute
 ms.assetid: a370e1b7-948b-4e67-9a25-58facf24e4c9
-ms.openlocfilehash: 4b05da6d237d71e0cc645ad0f626f75ecd85c827
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 1d0aa80f64593ed347720b84e4059a0c32dce4be
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80168030"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88844237"
 ---
 # <a name="idl_quote"></a>idl_quote
 
-現在のバージョンのビジュアルC++でサポートされていない idl 構造体を使用して、生成された .idl ファイルに渡すことができます。
+では、現在のバージョンの Visual C++ でサポートされていない IDL 構造体を使用して、生成された .idl ファイルに渡すことができます。
 
 ## <a name="syntax"></a>構文
 
@@ -26,15 +26,15 @@ ms.locfileid: "80168030"
 ### <a name="parameters"></a>パラメーター
 
 *text*<br/>
-コンパイラエラーを返さずに、生成C++された .idl ファイルに渡す Microsoft コンパイラの属性名。
+コンパイラエラーを返さずに、生成された .idl ファイルに渡す Microsoft C++ コンパイラの属性名。
 
 ## <a name="remarks"></a>解説
 
-**Idl_quote** C++属性がスタンドアロン属性として使用されている場合 (右角かっこの後にセミコロンがあります)、*テキスト*はそのままの状態でマージされた .idl ファイルに配置されます。 シンボルに対して**idl_quote**が使用されている場合、*テキスト*はそのシンボルの属性ブロック内に配置されます。
+**Idl_quote** C++ 属性がスタンドアロン属性として使用されている場合 (右角かっこの後にセミコロンが付いている場合)、*テキスト*はそのままマージされた .idl ファイルに配置されます。 シンボルに対して **idl_quote** が使用されている場合、 *テキスト* はそのシンボルの属性ブロック内に配置されます。
 
 ## <a name="example"></a>例
 
-次のコードは、サポートされていない属性を指定する方法を示しています (**で**はを使用します)。また、undefined コンストラクトを定義して使用する方法を示します。
+次のコードは、サポートされていない属性を指定する方法を示しています ( **で**はを使用します)。また、undefined コンストラクトを定義して使用する方法を示します。
 
 ```cpp
 // cpp_attr_ref_idl_quote.cpp
@@ -69,22 +69,20 @@ __interface IStatic{
 };
 ```
 
-このコードにより、`MYFLOT` と `MYDUB` と、生成された .idl ファイルに*テキスト*エントリが配置されます。 *Name*パラメーターは、生成された .idl ファイル内の*名前*を参照するすべてのものより前に*テキスト*を強制的に配置します。 *Dependencies*パラメーターを指定すると、生成された .idl ファイル内の*テキスト*の前に依存関係リストの定義が強制的に配置されます。
+このコードにより `MYFLOT` 、および `MYDUB` という *テキスト* エントリが生成された .idl ファイルに配置されます。 *Name*パラメーターは、生成された .idl ファイル内の*名前*を参照するすべてのものより前に*テキスト*を強制的に配置します。 *Dependencies*パラメーターを指定すると、生成された .idl ファイル内の*テキスト*の前に依存関係リストの定義が強制的に配置されます。
 
 ## <a name="requirements"></a>必要条件
 
-### <a name="attribute-context"></a>属性コンテキスト
-
-|||
+| 属性コンテキスト | 値 |
 |-|-|
-|**対象**|任意の場所|
-|**反復可能**|いいえ|
-|**必要な属性**|なし|
+|**適用対象**|任意の場所|
+|**Repeatable**|いいえ|
+|**必須属性**|なし|
 |**無効な属性**|なし|
 
 詳細については、「 [属性コンテキスト](cpp-attributes-com-net.md#contexts)」を参照してください。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [IDL 属性](idl-attributes.md)<br/>
 [スタンドアロン属性](stand-alone-attributes.md)

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - uidefault attribute
 ms.assetid: 200de0e0-2e34-40a2-bae4-8d485a62264d
-ms.openlocfilehash: 55e88ab4dfaaa4157a99c4dc523f205370f78c46
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 70f54c9d3e6aaa46aef08d109e8682989e382120
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80214462"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88843067"
 ---
 # <a name="uidefault"></a>uidefault
 
@@ -25,7 +25,7 @@ ms.locfileid: "80214462"
 
 ## <a name="remarks"></a>解説
 
-**Uidefault** C++属性には、 [uidefault](/windows/win32/Midl/uidefault) MIDL 属性と同じ機能があります。
+**Uidefault** C++ 属性には、 [uidefault](/windows/win32/Midl/uidefault) MIDL 属性と同じ機能があります。
 
 ## <a name="example"></a>例
 
@@ -50,18 +50,16 @@ __interface ICustom{
 
 ## <a name="requirements"></a>必要条件
 
-### <a name="attribute-context"></a>属性コンテキスト
-
-|||
+| 属性コンテキスト | 値 |
 |-|-|
-|**対象**|インターフェイス メソッド|
-|**反復可能**|いいえ|
-|**必要な属性**|なし|
+|**適用対象**|インターフェイス メソッド|
+|**Repeatable**|いいえ|
+|**必須属性**|なし|
 |**無効な属性**|なし|
 
 属性コンテキストの詳細については、「 [属性コンテキスト](cpp-attributes-com-net.md#contexts)」を参照してください。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [IDL 属性](idl-attributes.md)<br/>
 [メソッド属性](method-attributes.md)

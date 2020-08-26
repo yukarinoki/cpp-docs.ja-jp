@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CMFCColorPopupMenu [MFC], GetMenuBar
 - CMFCColorPopupMenu [MFC], SetPropList
 ms.assetid: 0bf9efe8-aed5-4ab7-b23b-eb284b4668be
-ms.openlocfilehash: d668a7bd2b5226de906ca146c7b7e882b97f4640
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: 2964f250b25ad6c77c70e8f10cd92cca0c7d11da
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88560986"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88844562"
 ---
 # <a name="cmfccolorpopupmenu-class"></a>CMFCColorPopupMenu クラス
 
@@ -35,17 +35,15 @@ class CMFCColorPopupMenu : public CMFCPopupMenu
 
 ### <a name="public-constructors"></a>パブリック コンストラクター
 
-|||
-|-|-|
 |名前|説明|
+|-|-|
 |[CMFCColorPopupMenu::CMFCColorPopupMenu](#cmfccolorpopupmenu)|`CMFCColorPopupMenu` オブジェクトを構築します。|
 |`CMFCColorPopupMenu::~CMFCColorPopupMenu`|デストラクターです。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
-|||
-|-|-|
 |名前|説明|
+|-|-|
 |[CMFCColorPopupMenu::CreateTearOffBar](#createtearoffbar)|ドッキング可能なティアオフカラーバーを作成します。 ( [CMFCPopupMenu:: CreateTearOffBar](../../mfc/reference/cmfcpopupmenu-class.md#createtearoffbar)をオーバーライドします。)|
 |[CMFCColorPopupMenu:: GetMenuBar](#getmenubar)|ポップアップメニュー内に埋め込まれている [Cmfcpopupmenubar](../../mfc/reference/cmfcpopupmenubar-class.md) を返します。 ( [CMFCPopupMenu:: GetMenuBar](../../mfc/reference/cmfcpopupmenu-class.md#getmenubar)をオーバーライドします)。|
 |`CMFCColorPopupMenu::GetThisClass`|このクラス型に関連付けられている [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) オブジェクトへのポインターを取得するために、フレームワークによって使用されます。|
@@ -53,9 +51,8 @@ class CMFCColorPopupMenu : public CMFCPopupMenu
 
 ### <a name="data-members"></a>データ メンバー
 
-|||
+|名前|説明|
 |-|-|
-|Name|説明|
 |`m_bEnabledInCustomizeMode`|カラーバーを表示するかどうかを決定するブール値。|
 |`m_wndColorBar`|`CMFCColorBar`色の選択を提供するオブジェクト。|
 

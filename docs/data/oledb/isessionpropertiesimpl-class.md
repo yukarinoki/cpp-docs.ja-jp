@@ -12,12 +12,12 @@ helpviewer_keywords:
 - GetProperties method
 - SetProperties method
 ms.assetid: ca0ba254-c7dc-4c52-abec-cf895a0c6a63
-ms.openlocfilehash: 0b36e4f85b855f162e11d96f8fef296c6c07597f
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 57a94ccd8ee3871742e9c8360c56381f85053380
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80210302"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88844835"
 ---
 # <a name="isessionpropertiesimpl-class"></a>ISessionPropertiesImpl クラス
 
@@ -35,10 +35,10 @@ class ATL_NO_VTABLE ISessionPropertiesImpl :
 ### <a name="parameters"></a>パラメーター
 
 *T*<br/>
-`ISessionPropertiesImpl`から派生したクラス。
+から派生したクラス `ISessionPropertiesImpl` 。
 
 *PropClass*<br/>
-既定で*T*に設定されているユーザー定義可能なプロパティクラス。
+既定で *T*に設定されているユーザー定義可能なプロパティクラス。
 
 ## <a name="requirements"></a>必要条件
 
@@ -48,18 +48,18 @@ class ATL_NO_VTABLE ISessionPropertiesImpl :
 
 ### <a name="interface-methods"></a>インターフェイス メソッド
 
-|||
+| 名前 | 説明 |
 |-|-|
 |[GetProperties](#getproperties)|セッションで現在設定されているセッションプロパティグループのプロパティの一覧を返します。|
 |[SetProperties](#setproperties)|セッションプロパティグループのプロパティを設定します。|
 
 ## <a name="remarks"></a>解説
 
-セッションの必須のインターフェイスです。 このクラスは、[プロパティセットマップ](../../data/oledb/begin-propset-map.md)によって定義された静的関数を呼び出すことによって、セッションプロパティを実装します。 プロパティセットマップは、セッションクラスで指定する必要があります。
+セッションの必須のインターフェイスです。 このクラスは、 [プロパティセットマップ](../../data/oledb/begin-propset-map.md)によって定義された静的関数を呼び出すことによって、セッションプロパティを実装します。 プロパティセットマップは、セッションクラスで指定する必要があります。
 
-## <a name="isessionpropertiesimplgetproperties"></a><a name="getproperties"></a>ISessionPropertiesImpl:: GetProperties
+## <a name="isessionpropertiesimplgetproperties"></a><a name="getproperties"></a> ISessionPropertiesImpl:: GetProperties
 
-セッションで現在設定されている `DBPROPSET_SESSION` プロパティグループ内のプロパティの一覧を返します。
+`DBPROPSET_SESSION`セッションで現在設定されているプロパティグループのプロパティの一覧を返します。
 
 ### <a name="syntax"></a>構文
 
@@ -74,9 +74,9 @@ STDMETHOD(GetProperties)(ULONG cPropertyIDSets,
 
 *OLE DB プログラマーリファレンス*の[Isessionproperties:: GetProperties](/previous-versions/windows/desktop/ms723643(v=vs.85))を参照してください。
 
-## <a name="isessionpropertiesimplsetproperties"></a><a name="setproperties"></a>ISessionPropertiesImpl:: SetProperties
+## <a name="isessionpropertiesimplsetproperties"></a><a name="setproperties"></a> ISessionPropertiesImpl:: SetProperties
 
-`DBPROPSET_SESSION` プロパティグループのプロパティを設定します。
+プロパティグループのプロパティを設定 `DBPROPSET_SESSION` します。
 
 ### <a name="syntax"></a>構文
 
@@ -89,7 +89,7 @@ STDMETHOD(SetProperties)(ULONG cPropertySets,
 
 *OLE DB プログラマーリファレンス*の[Isessionproperties:: SetProperties](/previous-versions/windows/desktop/ms714405(v=vs.85))を参照してください。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [OLE DB プロバイダー テンプレートに関するページ](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
-[OLE DB プロバイダー テンプレートのアーキテクチャ](../../data/oledb/ole-db-provider-template-architecture.md)
+[OLE DB プロバイダーテンプレートのアーキテクチャ](../../data/oledb/ole-db-provider-template-architecture.md)

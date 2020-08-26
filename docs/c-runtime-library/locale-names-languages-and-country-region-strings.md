@@ -8,12 +8,12 @@ helpviewer_keywords:
 - setlocale function
 - language strings
 ms.assetid: a0e5a0c5-5602-4da0-b65f-de3d6c8530a2
-ms.openlocfilehash: 95557c824aafb1092cc7711f19708cd7782683a9
-ms.sourcegitcommit: b51703a96ee35ee2376d5f0775b70f03ccbe6d9a
+ms.openlocfilehash: 704da410ee6386027a7528c0c73a89ef31557a77
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88087008"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88842951"
 ---
 # <a name="ucrt-locale-names-languages-and-countryregion-strings"></a>UCRT ロケール名、言語、および国/地域識別文字列
 
@@ -21,12 +21,12 @@ ms.locfileid: "88087008"
 
 > *locale* :: "*locale-name*"<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;\|"*言語* \[ **\_** _の国-地域_ \[ __。__*コードページ*]] "<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;\|"__.__*コードページ*"<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;\| "__.__*コードページ*"<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;\| "C"<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;\| ""<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;\| NULL
 
-*locale-name* の形式は、IETF 標準化された短い文字列 (例: 英語 (米国) の `en-US`、ボスニア語 (キリル、ボスニア ヘルツェゴビナ) の `bs-Cyrl-BA` など) になります。 これらの形式は優先されます。 Windows オペレーティングシステムのバージョン別のサポートされているロケール名の一覧については、「[付録 a:](https://docs.microsoft.com/openspecs/windows_protocols/ms-lcid/a9eac961-e77d-41a6-90a5-ce1a8b0cdb9c) Windows 言語コード識別子 (Lcid) リファレンス」の表の「**言語タグ**」列を参照してください \[ 。 このリソースは、ロケール名のサポートされている言語、スクリプト、および地域の部分を示しています。 既定以外の並べ替え順序を持つ、サポートされているロケール名については、「 **並べ替え順序の識別子** 」の [Locale name](/windows/win32/Intl/sort-order-identifiers)の列を参照してください。 Windows 10 以降では、有効な[BCP-47](https://tools.ietf.org/html/bcp47)言語タグに対応するロケール名が許可されます。 たとえば、`jp-US` は有効な BCP-47 タグですが、ロケール機能としては `US` にのみ有効です。
+*locale-name* の形式は、IETF 標準化された短い文字列 (例: 英語 (米国) の `en-US`、ボスニア語 (キリル、ボスニア ヘルツェゴビナ) の `bs-Cyrl-BA` など) になります。 これらの形式は優先されます。 Windows オペレーティングシステムのバージョン別のサポートされているロケール名の一覧については、「[付録 a:](/openspecs/windows_protocols/ms-lcid/a9eac961-e77d-41a6-90a5-ce1a8b0cdb9c) Windows 言語コード識別子 (Lcid) リファレンス」の表の「**言語タグ**」列を参照してください \[ 。 このリソースは、ロケール名のサポートされている言語、スクリプト、および地域の部分を示しています。 既定以外の並べ替え順序を持つ、サポートされているロケール名については、「 **並べ替え順序の識別子** 」の [Locale name](/windows/win32/Intl/sort-order-identifiers)の列を参照してください。 Windows 10 以降では、有効な [BCP-47](https://tools.ietf.org/html/bcp47) 言語タグに対応するロケール名が許可されます。 たとえば、`jp-US` は有効な BCP-47 タグですが、ロケール機能としては `US` にのみ有効です。
 
 *言語*の \[ **\_** _国/地域_ \[ __。__*コードページ*]]ロケールを作成するために言語文字列、言語文字列、国または地域の文字列を使用する場合、フォームはカテゴリのロケール設定に格納されます。 サポートされる言語識別文字列のセットは「[Language Strings](../c-runtime-library/language-strings.md)」、サポートされるすべての国および地域識別文字列のリストは「[国/地域別文字列](../c-runtime-library/country-region-strings.md)」に記述されています。 指定した言語が指定した国または地域に関連付けられてない場合、その指定した国または地域に対する既定の言語がロケール設定に格納されます。 この形式は、コードに埋め込まれた、またはストレージに対してシリアル化されたロケール文字列にはお勧めしません。これらの文字列は、ロケール名形式よりも、オペレーティング システムの更新によって変更される可能性が高いからです。
 

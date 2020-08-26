@@ -27,12 +27,12 @@ helpviewer_keywords:
 - FreeRecordMemory method
 - GetColumnInfo method
 ms.assetid: bd4f58ed-cebf-4d43-8985-1e5fcbf06953
-ms.openlocfilehash: 42b7d385877d68db22ccaf6665e8043dbfe2ee44
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 9ad4292b69d0219aa1732638ae250758e4456f4b
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87233484"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88843288"
 ---
 # <a name="caccessorrowset-class"></a>CAccessorRowset クラス
 
@@ -62,19 +62,19 @@ class CAccessorRowset : public TAccessor, public TRowset<TAccessor>
 
 ### <a name="methods"></a>メソッド
 
-|||
-|-|-|
-|[束縛](#bind)|( `bBind` が **`false`** [CCommand:: Open](../../data/oledb/ccommand-open.md)のとして指定されている場合に使用される) バインドを作成します。|
-|[CAccessorRowset](#caccessorrowset)|コンストラクターです。|
-|[[閉じる]](#close)|行セットと任意のアクセサーを閉じます。|
-|[FreeRecordMemory](#freerecordmemory)|解放する必要がある現在のレコード内のすべての列を解放します。|
-|[GetColumnInfo](#getcolumninfo)|[IColumnsInfo:: GetColumnInfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\))を実装します。|
+| 名前 | 説明 |
+|--|--|
+| [束縛](#bind) | ( `bBind` が **`false`** [CCommand:: Open](../../data/oledb/ccommand-open.md)のとして指定されている場合に使用される) バインドを作成します。 |
+| [CAccessorRowset](#caccessorrowset) | コンストラクターです。 |
+| [閉じる](#close) | 行セットと任意のアクセサーを閉じます。 |
+| [FreeRecordMemory](#freerecordmemory) | 解放する必要がある現在のレコード内のすべての列を解放します。 |
+| [GetColumnInfo](#getcolumninfo) | [IColumnsInfo:: GetColumnInfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\))を実装します。 |
 
 ## <a name="remarks"></a>解説
 
-クラス `TAccessor` は、アクセサーを管理します。 クラス*trowset*は、行セットを管理します。
+クラス `TAccessor` は、アクセサーを管理します。 クラス *trowset* は、行セットを管理します。
 
-## <a name="caccessorrowsetbind"></a><a name="bind"></a>CAccessorRowset:: Bind
+## <a name="caccessorrowsetbind"></a><a name="bind"></a> CAccessorRowset:: Bind
 
 `bBind` **`false`** [CCommand:: Open](../../data/oledb/ccommand-open.md)でとしてを指定した場合、バインドを作成します。
 
@@ -88,7 +88,7 @@ HRESULT Bind();
 
 標準の HRESULT です。
 
-## <a name="caccessorrowsetcaccessorrowset"></a><a name="caccessorrowset"></a>CAccessorRowset:: CAccessorRowset
+## <a name="caccessorrowsetcaccessorrowset"></a><a name="caccessorrowset"></a> CAccessorRowset:: CAccessorRowset
 
 `CAccessorRowset` オブジェクトを初期化します。
 
@@ -98,7 +98,7 @@ HRESULT Bind();
 CAccessorRowset();
 ```
 
-## <a name="caccessorrowsetclose"></a><a name="close"></a>CAccessorRowset:: Close
+## <a name="caccessorrowsetclose"></a><a name="close"></a> CAccessorRowset:: Close
 
 アクティブなアクセサーと行セットを解放します。
 
@@ -112,7 +112,7 @@ void Close();
 
 関連付けられているメモリを解放します。
 
-## <a name="caccessorrowsetfreerecordmemory"></a><a name="freerecordmemory"></a>CAccessorRowset:: FreeRecordMemory
+## <a name="caccessorrowsetfreerecordmemory"></a><a name="freerecordmemory"></a> CAccessorRowset:: FreeRecordMemory
 
 解放する必要がある現在のレコード内のすべての列を解放します。
 
@@ -122,7 +122,7 @@ void Close();
 void FreeRecordMemory();
 ```
 
-## <a name="caccessorrowsetgetcolumninfo"></a><a name="getcolumninfo"></a>CAccessorRowset:: GetColumnInfo
+## <a name="caccessorrowsetgetcolumninfo"></a><a name="getcolumninfo"></a> CAccessorRowset:: GetColumnInfo
 
 開かれた行セットから列情報を取得します。
 

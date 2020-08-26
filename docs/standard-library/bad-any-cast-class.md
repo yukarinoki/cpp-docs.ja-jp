@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - any/std::bad_any_cast
 - any/std::bad_any_cast::what
-ms.openlocfilehash: 5172281d1918a8b4ac33bcf412bf4be82b04ef56
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: b47ca4f615c6f317f17ce64e8388ae5d698185ea
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68268684"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88844588"
 ---
-# <a name="badanycast-class"></a>bad_any_cast クラス
+# <a name="bad_any_cast-class"></a>bad_any_cast クラス
 
-オブジェクトが、失敗したによってスローされた`any_cast`します。
+によってスローされたオブジェクトが失敗しました `any_cast` 。
 
 ## <a name="syntax"></a>構文
 
@@ -26,11 +26,11 @@ class bad_any_cast
 
 ### <a name="member-functions"></a>メンバー関数
 
-|||
+|名前|説明|
 |-|-|
-|[どのような](#what)|型を返します。|
+|[結果](#what)|型を返します。|
 
-## <a name="what"></a> どのような
+## <a name="what"></a><a name="what"></a> 結果
 
 型を返します。
 

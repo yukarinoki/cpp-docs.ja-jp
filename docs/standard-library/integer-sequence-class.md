@@ -14,16 +14,16 @@ helpviewer_keywords:
 - std::make_integer_sequence
 - std::index_sequence_for
 ms.assetid: 2cfdddee-819d-478e-bb78-c8a9c2696803
-ms.openlocfilehash: 3de64f7855b5158f1565580d305e2a6eeaf3e76f
-ms.sourcegitcommit: 89d9e1cb08fa872483d1cde98bc2a7c870e505e9
+ms.openlocfilehash: 4d927be4fdd41ab75ca78a0e0e7ab0282e4fbf6a
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "82031473"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88843873"
 ---
 # <a name="integer_sequence-class"></a>integer_sequence クラス
 
-整数のシーケンスを表します。 このクラスを使用して、関数に引数として渡される std::tuple\<T...> などの可変個引数型のパラメーター パックを推測および拡大できます。
+整数のシーケンスを表します。 を使用すると \<T...> 、関数に引数として渡される std:: tuple などの可変個引数型のパラメーターパックを推測および展開できます。
 
 ## <a name="syntax"></a>構文
 
@@ -34,15 +34,15 @@ struct integer_sequence
 
 ### <a name="parameters"></a>パラメーター
 
-*T*\
+*\T*\
 値の型。整数型である必要があります (bool、char、char16_t、char32_t、wchar_t、符号付きまたは符号なしの整数型)。
 
-*ヴァルス*\
+*Vals*\
 整数型 T の値のシーケンスを表す非型パラメーター パック。
 
 ## <a name="members"></a>メンバー
 
-|||
+|名前|説明|
 |-|-|
 |`static size_t size() noexcept`|シーケンス内の要素の数。|
 |`typedef T value_type`|シーケンス内の各要素の型。 整数型である必要があります。|
@@ -57,7 +57,7 @@ struct integer_sequence
 
 `a2t` 関数の `index_sequence` は、`size_t` 整数型に基づく `integer_sequence` のエイリアスです。 `make_index_sequence` は、0 から始まり、呼び出し元によって渡される配列と同じ数の要素を持つ `index_sequence` をコンパイル時に作成するエイリアスです。 `a2t` は値によって `index_sequence` を `a2t_` に渡します。ここで、式 `a[I]...` により `I` がアンパックされ、要素が `make_tuple` に渡されます。ここで、要素が個々の引数として使用されます。 たとえば、シーケンスに 3 つの要素が含まれる場合、`make_tuple` は make_tuple(a[0], a[1], a[2]) として呼び出されます。 もちろん、配列の要素は任意の型を持つことができます。
 
-apply 関数は[std::tuple](../standard-library/tuple-class.md)を受け取`integer_sequence`り、ヘルパー`tuple_size`クラスを使用して を生成します。 [std::decay_t](../standard-library/decay-class.md)は[、tuple_size](../standard-library/tuple-size-class-tuple.md)参照型では動作しないため、必要です。 `apply_` 関数がタプルのメンバーをアンパックし、別個の引数として関数呼び出しに転送します。 この例の関数は、値を印刷する単純なラムダ式です。
+Apply 関数は、 [std:: tuple](../standard-library/tuple-class.md)を受け取り、 `integer_sequence` ヘルパークラスを使用してを生成し `tuple_size` ます。 [Tuple_size](../standard-library/tuple-size-class-tuple.md)で参照型を使用できないため、 [std::d ecay_t](../standard-library/decay-class.md)が必要です。 `apply_` 関数がタプルのメンバーをアンパックし、別個の引数として関数呼び出しに転送します。 この例の関数は、値を印刷する単純なラムダ式です。
 
 ```cpp
 #include <stddef.h>
@@ -115,7 +115,7 @@ int main()
 }
 ```
 
-`index_sequence` をパラメーター パック用に設定するために `index_sequence_for`\<T...> を使用していますが、これは `make_index_sequence`\<sizeof...(T)> のエイリアスです。
+パラメーターパックのを作成するに `index_sequence` は、を使用し `index_sequence_for` \<T...> ます。`make_index_sequence`\<sizeof...(T)>
 
 ## <a name="requirements"></a>必要条件
 
@@ -125,4 +125,4 @@ int main()
 
 ## <a name="see-also"></a>関連項目
 
-[省略記号と可変テンプレート](../cpp/ellipses-and-variadic-templates.md)
+[省略記号と可変個引数のテンプレート](../cpp/ellipses-and-variadic-templates.md)

@@ -25,12 +25,12 @@ helpviewer_keywords:
 - Microsoft::WRL::FtmBase::ReleaseMarshalData method
 - Microsoft::WRL::FtmBase::UnmarshalInterface method
 ms.assetid: 275f3b71-2975-4f92-89e7-d351e96496df
-ms.openlocfilehash: f28a850c365bc9a75d8e5b100e5e5cc0a1c5dc10
-ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
+ms.openlocfilehash: b28b7ee0038e4f828f43fcc3f0d49a2d9e092315
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86404565"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88844042"
 ---
 # <a name="ftmbase-class"></a>FtmBase クラス
 
@@ -86,7 +86,7 @@ class FtmBase :
 
 **名前空間:** Microsoft::WRL
 
-## <a name="ftmbasecreateglobalinterfacetable"></a><a name="createglobalinterfacetable"></a>FtmBase:: CreateGlobalInterfaceTable
+## <a name="ftmbasecreateglobalinterfacetable"></a><a name="createglobalinterfacetable"></a> FtmBase:: CreateGlobalInterfaceTable
 
 グローバルインターフェイステーブル (GIT) を作成します。
 
@@ -107,9 +107,9 @@ static HRESULT CreateGlobalInterfaceTable(
 
 ### <a name="remarks"></a>解説
 
-詳細については、「[`IGlobalInterfaceTable`](https://docs.microsoft.com/windows/win32/api/objidl/nn-objidl-iglobalinterfacetable)」を参照してください。
+詳細については、「[`IGlobalInterfaceTable`](/windows/win32/api/objidl/nn-objidl-iglobalinterfacetable)」を参照してください。
 
-## <a name="ftmbasedisconnectobject"></a><a name="disconnectobject"></a>FtmBase::D Isの Tobject
+## <a name="ftmbasedisconnectobject"></a><a name="disconnectobject"></a> FtmBase::D Isの Tobject
 
 オブジェクトへのすべての外部接続を強制的に解放します。 オブジェクトのサーバーは、シャットダウンする前に、このメソッドのオブジェクトの実装を呼び出します。
 
@@ -128,7 +128,7 @@ STDMETHODIMP DisconnectObject(
 
 成功した場合は S_OK、そうでない場合はエラーを示す HRESULT。
 
-## <a name="ftmbaseftmbase"></a><a name="ftmbase"></a>FtmBase:: FtmBase
+## <a name="ftmbaseftmbase"></a><a name="ftmbase"></a> FtmBase:: FtmBase
 
 `FtmBase` クラスの新しいインスタンスを初期化します。
 
@@ -136,7 +136,7 @@ STDMETHODIMP DisconnectObject(
 FtmBase();
 ```
 
-## <a name="ftmbasegetmarshalsizemax"></a><a name="getmarshalsizemax"></a>FtmBase:: GetMarshalSizeMax
+## <a name="ftmbasegetmarshalsizemax"></a><a name="getmarshalsizemax"></a> FtmBase:: GetMarshalSizeMax
 
 指定したオブジェクトで、指定したインターフェイスポインターをマーシャリングするために必要なバイト数の上限を取得します。
 
@@ -179,7 +179,7 @@ STDMETHODIMP GetMarshalSizeMax(
 
 成功した場合は S_OK。それ以外の場合は、E_FAIL または E_NOINTERFACE ます。
 
-## <a name="ftmbasegetunmarshalclass"></a><a name="getunmarshalclass"></a>FtmBase:: GetUnmarshalClass
+## <a name="ftmbasegetunmarshalclass"></a><a name="getunmarshalclass"></a> FtmBase:: GetUnmarshalClass
 
 COM が、対応するプロキシのコードを含む DLL を検索するために使用する CLSID を取得します。 COM は、この DLL を読み込み、初期化されていないプロキシインスタンスを作成します。
 
@@ -221,7 +221,7 @@ STDMETHODIMP GetUnmarshalClass(
 
 成功した場合は S_OK。それ以外の場合は、S_FALSE ます。
 
-## <a name="ftmbasemarshalinterface"></a><a name="marshalinterface"></a>FtmBase:: MarshalInterface
+## <a name="ftmbasemarshalinterface"></a><a name="marshalinterface"></a> FtmBase:: MarshalInterface
 
 一部のクライアントプロセスでプロキシオブジェクトを初期化するために必要なデータをストリームに書き込みます。
 
@@ -270,7 +270,7 @@ STDMETHODIMP MarshalInterface(
 
 操作が失敗した E_FAIL。
 
-## <a name="ftmbasemarshaller_"></a><a name="marshaller"></a>FtmBase:: marshaller_
+## <a name="ftmbasemarshaller_"></a><a name="marshaller"></a> FtmBase:: marshaller_
 
 フリースレッドマーシャラーへの参照を保持します。
 
@@ -278,7 +278,7 @@ STDMETHODIMP MarshalInterface(
 Microsoft::WRL::ComPtr<IMarshal> marshaller_; ;
 ```
 
-## <a name="ftmbasereleasemarshaldata"></a><a name="releasemarshaldata"></a>FtmBase:: ReleaseMarshalData
+## <a name="ftmbasereleasemarshaldata"></a><a name="releasemarshaldata"></a> FtmBase:: ReleaseMarshalData
 
 マーシャリング済みのデータパケットを破棄します。
 
@@ -297,7 +297,7 @@ STDMETHODIMP ReleaseMarshalData(
 
 成功した場合は S_OK、そうでない場合はエラーを示す HRESULT。
 
-## <a name="ftmbaseunmarshalinterface"></a><a name="unmarshalinterface"></a>FtmBase:: UnmarshalInterface
+## <a name="ftmbaseunmarshalinterface"></a><a name="unmarshalinterface"></a> FtmBase:: UnmarshalInterface
 
 新しく作成されたプロキシを初期化し、そのプロキシへのインターフェイスポインターを返します。
 
@@ -318,7 +318,7 @@ STDMETHODIMP UnmarshalInterface(
 マーシャリング解除するインターフェイスの識別子への参照。
 
 *ppv*<br/>
-この操作が完了すると、 *riid*で要求されたインターフェイスポインターを受け取るポインター変数のアドレス。 この操作が成功した場合、**ppv*は、マーシャリングを解除するインターフェイスの要求されたインターフェイスポインターを格納します。
+この操作が完了すると、 *riid*で要求されたインターフェイスポインターを受け取るポインター変数のアドレス。 この操作が成功した場合、**ppv* は、マーシャリングを解除するインターフェイスの要求されたインターフェイスポインターを格納します。
 
 ### <a name="return-value"></a>戻り値
 

@@ -7,56 +7,56 @@ helpviewer_keywords:
 - attributes [C++/CLI], frequently asked questions
 - FAQs (frequently asked questions), attributed programming [C++]
 ms.assetid: a1b8349f-7f51-43c4-95ea-4edb6e5f243f
-ms.openlocfilehash: 6c1762994d2cb109e86397bb0a5db1258cf33be2
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 70fbcc47884214fb998eb63ebfe50e445dbe95b8
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81376061"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88843145"
 ---
 # <a name="attribute-programming-faq"></a>属性プログラミングの FAQ
 
 このトピックでは、次のよく寄せられる質問に回答します。
 
-- [HRESULTとは何ですか?](#vcconattributeprogrammmingfaqanchor1)
+- [HRESULT とは何ですか。](#vcconattributeprogrammmingfaqanchor1)
 
-- [属性のパラメータ名を指定する必要がある場合](#vcconattributeprogrammmingfaqanchor2)
+- [属性のパラメーター名を指定する必要があるのはどのような場合ですか。](#vcconattributeprogrammmingfaqanchor2)
 
-- [属性ブロックでコメントを使用できますか?](#vcconattributeprogrammmingfaqanchor3)
+- [属性ブロックでコメントを使用することはできますか。](#vcconattributeprogrammmingfaqanchor3)
 
-- [属性は継承とどのように相互作用しますか?](#vcconattributeprogrammmingfaqanchor4)
+- [属性と継承を連携させるにはどうすればよいですか。](#vcconattributeprogrammmingfaqanchor4)
 
-- [属性なし ATL プロジェクトで属性を使用する方法はありますか。](#vcconattributeprogrammmingfaqanchor5)
+- [属性なし ATL プロジェクトで属性を使用するにはどうすればよいですか。](#vcconattributeprogrammmingfaqanchor5)
 
-- [属性付きプロジェクトで .idl ファイルを使用する方法はありますか。](#vcconattributeprogrammmingfaqanchor6)
+- [属性付きのプロジェクトで .idl ファイルを使用するにはどうすればよいですか。](#vcconattributeprogrammmingfaqanchor6)
 
-- [属性によって挿入されたコードを変更できますか?](#vcconattributeprogrammmingfaqanchor7)
+- [属性によって挿入されたコードを変更できますか。](#vcconattributeprogrammmingfaqanchor7)
 
-- [属性付きインターフェイスを前方宣言するにはどうすればよいですか?](#vcconattributeprogrammmingfaqhowcaniforwarddeclareanattributedinterface)
+- [属性付きインターフェイスを事前に宣言するにはどうすればよいですか。](#vcconattributeprogrammmingfaqhowcaniforwarddeclareanattributedinterface)
 
 - [属性も使用するクラスから派生したクラスで属性を使用できますか。](#vcconcaniuseattributesonclassderivedfromclassthatalsousesattributesanchor)
 
-## <a name="what-is-an-hresult"></a><a name="vcconattributeprogrammmingfaqanchor1"></a>HRESULTとは何ですか?
+## <a name="what-is-an-hresult"></a><a name="vcconattributeprogrammmingfaqanchor1"></a> HRESULT とは何ですか。
 
-HRESULT は、属性および ATL 全般によって戻り値として使用される単純なデータ型です。 次の表に、さまざまな値を示します。 ヘッダー ファイル winerror.h に含まれる値が増えます。
+HRESULT は、属性と ATL によって一般的に戻り値として使用されることが多い単純なデータ型です。 次の表では、さまざまな値について説明します。 ヘッダーファイル winerror.h には、より多くの値が含まれています。
 
 |名前|説明|値|
 |----------|-----------------|-----------|
 |S_OK|操作に成功しました|0x00000000|
 |E_UNEXPECTED|予期しないエラー|0x8000FFFF|
-|E_NOTIMPL|実装されていません|0x80004001|
-|E_OUTOFMEMORY|必要なメモリの割り当てに失敗しました|0x8007000E|
-|E_INVALIDARG|1 つ以上の引数が無効です|0x80070057|
+|E_NOTIMPL|未実装|0x80004001|
+|E_OUTOFMEMORY|必要なメモリを割り当てられませんでした|0x8007000E|
+|E_INVALIDARG|1つ以上の引数が無効です|0x80070057|
 |E_NOINTERFACE|そのようなインターフェイスはサポートされていません。|0x80004002|
-|E_POINTER|無効なポインタ|0x80004003|
+|E_POINTER|無効なポインター|0x80004003|
 |E_HANDLE|無効なハンドル|0x80070006|
 |E_ABORT|操作が中止されました|0x80004004|
-|E_FAIL|指定されていないエラー|0x80004005|
-|E_ACCESSDENIED|一般的なアクセス拒否エラー|0x80070005|
+|E_FAIL|不特定のエラー|0x80004005|
+|E_ACCESSDENIED|一般アクセス拒否エラー|0x80070005|
 
-## <a name="when-do-i-have-to-specify-the-parameter-name-for-an-attribute"></a><a name="vcconattributeprogrammmingfaqanchor2"></a>属性のパラメータ名を指定する必要がある場合
+## <a name="when-do-i-have-to-specify-the-parameter-name-for-an-attribute"></a><a name="vcconattributeprogrammmingfaqanchor2"></a> 属性のパラメーター名を指定する必要があるのはどのような場合ですか。
 
-ほとんどの場合、属性に 1 つのパラメーターがある場合、そのパラメーターには名前が付けられます。 この名前は、コードに属性を挿入する場合は必要ありません。 たとえば、[次のように集計可能な](aggregatable.md)属性を使用します。
+ほとんどの場合、属性に1つのパラメーターがある場合、そのパラメーターにはという名前が付けられます。 この名前は、コードに属性を挿入するときには必要ありません。 次に、 [集計](aggregatable.md) 可能な属性の使用例を示します。
 
 ```cpp
 [coclass, aggregatable(value=allowed)]
@@ -78,25 +78,55 @@ class CMyClass
 
 ただし、次の属性には、名前のない単一のパラメーターがあります。
 
-||||
-|-|-|-|
-|[call_as](call-as.md)|[場合](case-cpp.md)|[cpp_quote](cpp-quote.md)|
-|[default](default-cpp.md)|[Defaultvalue](defaultvalue.md)|[defaultvtable](defaultvtable.md)|
-|[emitidl](emitidl.md)|[エントリ](entry.md)|[first_is](first-is.md)|
-|[helpcontext](helpcontext.md)|[Helpfile](helpfile.md)|[helpstring](helpstring.md)|
-|[helpstringcontext](helpstringcontext.md)|[typelib](helpstringdll.md)|[id](id.md)|
-|[iid_is](iid-is.md)|[インポート](import.md)|[importlib](importlib.md)|
-|[含める](include-cpp.md)|[インクルードリブ](includelib-cpp.md)|[last_is](last-is.md)|
-|[length_is](length-is.md)|[max_is](max-is.md)|[no_injected_text](no-injected-text.md)|
-|[pointer_default](pointer-default.md)|[pragma](pragma.md)|[制限](restricted.md)|
-|[size_is](size-is.md)|[ソース](source-cpp.md)|[switch_is](switch-is.md)|
-|[switch_type](switch-type.md)|[transmit_as](transmit-as.md)|[wire_marshal](wire-marshal.md)|
+:::row:::
+   :::column span="":::
+      [`call_as`](call-as.md)\
+      [`case`](case-cpp.md)\
+      [`cpp_quote`](cpp-quote.md)\
+      [`default`](default-cpp.md)\
+      [`defaultvalue`](defaultvalue.md)\
+      [`defaultvtable`](defaultvtable.md)\
+      [`emitidl`](emitidl.md)\
+      [`entry`](entry.md)\
+      [`first_is`](first-is.md)
+   :::column-end:::
+   :::column span="":::
+      [`helpcontext`](helpcontext.md)\
+      [`helpfile`](helpfile.md)\
+      [`helpstring`](helpstring.md)\
+      [`helpstringcontext`](helpstringcontext.md)\
+      [`helpstringdll`](helpstringdll.md)\
+      [`id`](id.md)\
+      [`iid_is`](iid-is.md)\
+      [`import`](import.md)
+   :::column-end:::
+   :::column span="":::
+      [`importlib`](importlib.md)\
+      [`include`](include-cpp.md)\
+      [`includelib`](includelib-cpp.md)\
+      [`last_is`](last-is.md)\
+      [`length_is`](length-is.md)\
+      [`max_is`](max-is.md)\
+      [`no_injected_text`](no-injected-text.md)\
+      [`pointer_default`](pointer-default.md)
+   :::column-end:::
+   :::column span="":::
+      [`pragma`](pragma.md)\
+      [`restricted`](restricted.md)\
+      [`size_is`](size-is.md)\
+      [`source`](source-cpp.md)\
+      [`switch_is`](switch-is.md)\
+      [`switch_type`](switch-type.md)\
+      [`transmit_as`](transmit-as.md)\
+      [`wire_marshal`](wire-marshal.md)
+   :::column-end:::
+:::row-end:::
 
-## <a name="can-i-use-comments-in-an-attribute-block"></a><a name="vcconattributeprogrammmingfaqanchor3"></a>属性ブロックでコメントを使用できますか?
+## <a name="can-i-use-comments-in-an-attribute-block"></a><a name="vcconattributeprogrammmingfaqanchor3"></a> 属性ブロックでコメントを使用することはできますか。
 
-属性ブロック内では、単一行コメントと複数行コメントの両方を使用できます。 ただし、属性に対するパラメーターを保持するかっこ内でどちらのスタイルのコメントも使用できません。
+1行のコメントと複数行のコメントは、属性ブロック内で使用できます。 ただし、属性のパラメーターを保持しているかっこ内では、どちらのスタイルのコメントも使用できません。
 
-次のことが許可されます。
+次のものを使用できます。
 
 ```cpp
 [ coclass, progid("MyClass.CMyClass.1"), /* Multiple-line
@@ -105,30 +135,30 @@ class CMyClass
 ]
 ```
 
-次の項目は許可されません。
+次は許可されていません。
 
 ```cpp
 [ coclass, progid("MyClass.CMyClass.1" /* Multiple-line comment */ ), threading("both" // Single-line comment)
 ]
 ```
 
-## <a name="how-do-attributes-interact-with-inheritance"></a><a name="vcconattributeprogrammmingfaqanchor4"></a>属性は継承とどのように相互作用しますか?
+## <a name="how-do-attributes-interact-with-inheritance"></a><a name="vcconattributeprogrammmingfaqanchor4"></a> 属性と継承を連携させるにはどうすればよいですか。
 
-属性付きクラスと属性なしクラスの両方を他のクラスから継承できます。 属性クラスから派生した結果は、属性プロバイダーがコードを変換した後のクラスから派生する場合と同じです。 属性は、C++ 継承を通じて派生クラスに送信されません。 属性プロバイダーは、属性の近くにあるコードのみを変換します。
+属性付きクラスと unattributed クラスの両方を他のクラスから継承できますが、それ自体は属性を持つことができます。 属性付きクラスからの派生の結果は、属性プロバイダーがそのコードを変換した後に、そのクラスから派生したものと同じです。 属性は、C++ 継承によって派生クラスに転送されることはありません。 属性プロバイダーは、属性の近くのコードのみを変換します。
 
-## <a name="how-can-i-use-attributes-in-a-nonattributed-atl-project"></a><a name="vcconattributeprogrammmingfaqanchor5"></a>属性なし ATL プロジェクトで属性を使用する方法はありますか。
+## <a name="how-can-i-use-attributes-in-a-nonattributed-atl-project"></a><a name="vcconattributeprogrammmingfaqanchor5"></a> 属性なし ATL プロジェクトで属性を使用するにはどうすればよいですか。
 
-属性なしの ATL プロジェクトがあり、.idl ファイルが含まれる場合は、属性付きオブジェクトの追加を開始できます。 この場合は、クラスの**追加ウィザード**を使用してコードを提供します。
+.Idl ファイルがある、属性なしの ATL プロジェクトがある場合、属性付きオブジェクトの追加を開始することができます。 この場合は、クラスの **追加ウィザード** を使用してコードを指定します。
 
-## <a name="how-can-i-use-an-idl-file-in-an-attributed-project"></a><a name="vcconattributeprogrammmingfaqanchor6"></a>属性付きプロジェクトで .idl ファイルを使用する方法はありますか。
+## <a name="how-can-i-use-an-idl-file-in-an-attributed-project"></a><a name="vcconattributeprogrammmingfaqanchor6"></a> 属性付きのプロジェクトで .idl ファイルを使用するにはどうすればよいですか。
 
-ATL 属性付きプロジェクトで使用する .idl ファイルがある場合があります。 この場合は[、importidl](importidl.md)属性を使用して .idl ファイルを .h ファイルにコンパイルし (プロジェクトの [プロパティ**ページ**] ダイアログ ボックスの[[MIDL プロパティ ページ](../../build/reference/midl-property-pages.md)] を参照)、プロジェクトに .h ファイルを含めます。
+ATL 属性プロジェクトで使用する .idl ファイルがある可能性があります。 この場合は、次のように、使用することによって、取り込む[tidl](importidl.md)属性を使用して .idl ファイルをコンパイルします (プロジェクトの [**プロパティページ**] ダイアログボックスの [ [MIDL] プロパティページ](../../build/reference/midl-property-pages.md)を参照してください)。次に、プロジェクトに .h ファイルを含めます。
 
-## <a name="can-i-modify-code-that-is-injected-by-an-attribute"></a><a name="vcconattributeprogrammmingfaqanchor7"></a>属性によって挿入されたコードを変更できますか?
+## <a name="can-i-modify-code-that-is-injected-by-an-attribute"></a><a name="vcconattributeprogrammmingfaqanchor7"></a> 属性によって挿入されたコードを変更できますか。
 
-一部の属性は、プロジェクトにコードを挿入します。 [/Fx](../../build/reference/fx-merge-injected-code.md)コンパイラ オプションを使用すると、挿入されたコードを確認できます。 挿入されたファイルからコードをコピーしてソース コードに貼り付けることもできます。 これにより、属性の動作を変更できます。 ただし、コードの他の部分も変更する必要があります。
+一部の属性では、プロジェクトにコードを挿入します。 [/Fx](../../build/reference/fx-merge-injected-code.md)コンパイラオプションを使用して、挿入されたコードを確認できます。 挿入されたファイルからコードをコピーして、ソースコードに貼り付けることもできます。 これにより、属性の動作を変更できます。 ただし、コードの他の部分も変更する必要がある場合があります。
 
-次のサンプルは、挿入されたコードをソース コード ファイルにコピーした結果です。
+次の例は、挿入されたコードをソースコードファイルにコピーした結果を示しています。
 
 ```cpp
 // attr_injected.cpp
@@ -234,13 +264,13 @@ public:
 int main() {}
 ```
 
-## <a name="how-can-i-forward-declare-an-attributed-interface"></a><a name="vcconattributeprogrammmingfaqhowcaniforwarddeclareanattributedinterface"></a>属性付きインターフェイスを前方宣言するにはどうすればよいですか?
+## <a name="how-can-i-forward-declare-an-attributed-interface"></a><a name="vcconattributeprogrammmingfaqhowcaniforwarddeclareanattributedinterface"></a> 属性付きインターフェイスを事前に宣言するにはどうすればよいですか。
 
-属性付きインターフェイスの前方宣言を行う場合は、実際のインターフェイス宣言に適用する前方宣言に同じ属性を適用する必要があります。 また、[エクスポート](export.md)属性を前方宣言に適用する必要もあります。
+属性付きインターフェイスの事前宣言を行う場合は、実際のインターフェイス宣言に適用する事前宣言に同じ属性を適用する必要があります。 [Export](export.md)属性も事前宣言に適用する必要があります。
 
-## <a name="can-i-use-attributes-on-a-class-derived-from-a-class-that-also-uses-attributes"></a><a name="vcconcaniuseattributesonclassderivedfromclassthatalsousesattributesanchor"></a>属性も使用するクラスから派生したクラスで属性を使用できますか。
+## <a name="can-i-use-attributes-on-a-class-derived-from-a-class-that-also-uses-attributes"></a><a name="vcconcaniuseattributesonclassderivedfromclassthatalsousesattributesanchor"></a> 属性も使用するクラスから派生したクラスで属性を使用できますか。
 
-いいえ、属性も使用するクラスから派生したクラスで属性を使用することはサポートされていません。
+いいえ。属性を使用するクラスから派生したクラスで属性を使用することはサポートされていません。
 
 ## <a name="see-also"></a>関連項目
 

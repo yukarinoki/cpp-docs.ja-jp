@@ -25,16 +25,16 @@ helpviewer_keywords:
 - IsAutoAccessor method
 - ReleaseAccessors method
 ms.assetid: 389b65be-11ca-4ae0-9290-60c621c4982b
-ms.openlocfilehash: e29883b2a42010daee19f915c49c31686b232cf6
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: eff7eff855bcccefee7e051c67d583d28e488293
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87233458"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88843301"
 ---
 # <a name="caccessorbase-class"></a>CAccessorBase クラス
 
-OLE DB テンプレート内のすべてのアクセサーは、このクラスから派生します。 `CAccessorBase`1つの行セットで複数のアクセサーを管理できます。 また、パラメーターと出力列の両方のバインドも提供します。
+OLE DB テンプレート内のすべてのアクセサーは、このクラスから派生します。 `CAccessorBase` 1つの行セットで複数のアクセサーを管理できます。 また、パラメーターと出力列の両方のバインドも提供します。
 
 ## <a name="syntax"></a>構文
 
@@ -46,19 +46,19 @@ OLE DB テンプレート内のすべてのアクセサーは、このクラス�
 
 ### <a name="methods"></a>メソッド
 
-|||
-|-|-|
-|[[閉じる]](#close)|アクセサーを閉じます。|
-|[GetHAccessor](#geth)|アクセサーハンドルを取得します。|
-|[GetNumAccessors](#getnum)|クラスによって作成されたアクセサーの数を取得します。|
-|[IsAutoAccessor](#isauto)|指定されたアクセサーが autoaccessor であるかどうかをテストします。|
-|[ReleaseAccessors](#release)|アクセサーを解放します。|
+| 名前 | 説明 |
+|--|--|
+| [閉じる](#close) | アクセサーを閉じます。 |
+| [GetHAccessor](#geth) | アクセサーハンドルを取得します。 |
+| [GetNumAccessors](#getnum) | クラスによって作成されたアクセサーの数を取得します。 |
+| [IsAutoAccessor](#isauto) | 指定されたアクセサーが autoaccessor であるかどうかをテストします。 |
+| [ReleaseAccessors](#release) | アクセサーを解放します。 |
 
 ## <a name="requirements"></a>必要条件
 
 **ヘッダー:** atldbcli.h
 
-## <a name="caccessorbaseclose"></a><a name="close"></a>CAccessorBase:: Close
+## <a name="caccessorbaseclose"></a><a name="close"></a> CAccessorBase:: Close
 
 アクセサーを閉じます。
 
@@ -70,9 +70,9 @@ void Close();
 
 ### <a name="remarks"></a>解説
 
-最初に[Releaseaccessors](../../data/oledb/caccessorbase-releaseaccessors.md)を呼び出す必要があります。
+最初に [Releaseaccessors](../../data/oledb/caccessorbase-releaseaccessors.md) を呼び出す必要があります。
 
-## <a name="caccessorbasegethaccessor"></a><a name="geth"></a>CAccessorBase:: GetHAccessor
+## <a name="caccessorbasegethaccessor"></a><a name="geth"></a> CAccessorBase:: GetHAccessor
 
 指定したアクセサーのアクセサーハンドルを取得します。
 
@@ -91,7 +91,7 @@ HACCESSOR GetHAccessor(ULONG nAccessor) const;
 
 アクセサーハンドル。
 
-## <a name="caccessorbasegetnumaccessors"></a><a name="getnum"></a>CAccessorBase:: GetNumAccessors
+## <a name="caccessorbasegetnumaccessors"></a><a name="getnum"></a> CAccessorBase:: GetNumAccessors
 
 クラスによって作成されたアクセサーの数を取得します。
 
@@ -105,7 +105,7 @@ ULONG GetNumAccessors() const;
 
 クラスによって作成されたアクセサーの数。
 
-## <a name="caccessorbaseisautoaccessor"></a><a name="isauto"></a>CAccessorBase:: IsAutoAccessor
+## <a name="caccessorbaseisautoaccessor"></a><a name="isauto"></a> CAccessorBase:: IsAutoAccessor
 
 移動操作中にアクセサーに対してデータが自動的に取得される場合は true を返します。
 
@@ -124,7 +124,7 @@ bool IsAutoAccessor(ULONG nAccessor) const;
 
 **`true`** アクセサーが autoaccessor の場合はを返します。 それ以外の場合はを返し **`false`** ます。
 
-## <a name="caccessorbasereleaseaccessors"></a><a name="release"></a>CAccessorBase:: ReleaseAccessors
+## <a name="caccessorbasereleaseaccessors"></a><a name="release"></a> CAccessorBase:: ReleaseAccessors
 
 クラスによって作成されたアクセサーを解放します。
 
@@ -137,7 +137,7 @@ HRESULT ReleaseAccessors(IUnknown* pUnk);
 #### <a name="parameters"></a>パラメーター
 
 *パンク*<br/>
-から`IUnknown`アクセサーが作成された COM オブジェクトのインターフェイスへのポインター。
+から `IUnknown` アクセサーが作成された COM オブジェクトのインターフェイスへのポインター。
 
 ### <a name="return-value"></a>戻り値
 

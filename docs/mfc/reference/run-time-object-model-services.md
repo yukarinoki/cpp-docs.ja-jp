@@ -4,12 +4,12 @@ ms.date: 03/27/2019
 helpviewer_keywords:
 - run-time object model services macros
 ms.assetid: 4a3e79df-2ee3-43a4-8193-20298828de85
-ms.openlocfilehash: 6c2c5d0d9b5b4193cc68421a6bd44755ca9bfc1a
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 63a82e3b05100f273be04a8718f2ecbb1510f06f
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87214010"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88844510"
 ---
 # <a name="run-time-object-model-services"></a>ランタイム オブジェクト モデル サービス
 
@@ -27,7 +27,7 @@ ms.locfileid: "87214010"
 
 ### <a name="run-time-object-model-services-macros"></a>ランタイムオブジェクトモデルサービスマクロ
 
-|||
+|名前|説明|
 |-|-|
 |[DECLARE_DYNAMIC](#declare_dynamic)|ランタイムクラス情報へのアクセスを有効にします (クラス宣言で使用する必要があります)。|
 |[DECLARE_DYNCREATE](#declare_dyncreate)|ランタイムクラス情報への動的な作成およびアクセスを可能にします (クラス宣言で使用する必要があります)。|
@@ -43,7 +43,7 @@ Microsoft Foundation Class ライブラリには、OLE に固有の2つのマク
 
 ### <a name="dynamic-creation-of-ole-objects"></a>OLE オブジェクトの動的作成
 
-|||
+|名前|説明|
 |-|-|
 |[AFX_COMCTL32_IF_EXISTS](#afx_comctl32_if_exists)|コモンコントロールライブラリが、指定された API を実装しているかどうかを判断します。|
 |[AFX_COMCTL32_IF_EXISTS2](#afx_comctl32_if_exists2)|コモンコントロールライブラリが、指定された API を実装しているかどうかを判断します。|
@@ -52,9 +52,9 @@ Microsoft Foundation Class ライブラリには、OLE に固有の2つのマク
 |[DECLARE_PROPPAGEIDS](#declare_proppageids)|OLE コントロールにプロパティを表示するプロパティページの一覧が用意されていることを宣言します。|
 |[IMPLEMENT_OLECREATE](#implement_olecreate)|OLE システムによってオブジェクトが作成されるようにします。|
 |[IMPLEMENT_OLECTLTYPE](#implement_olectltype)|`GetUserTypeNameID` `GetMiscStatus` コントロールクラスのおよびメンバー関数を実装します。|
-|[IMPLEMENT_OLECREATE_FLAGS](#implement_olecreate_flags)|このマクロまたは[IMPLEMENT_OLECREATE](#implement_olecreate)は、を使用するクラスの実装ファイルに記述されている必要があり `DECLARE_OLECREATE` ます。 |
+|[IMPLEMENT_OLECREATE_FLAGS](#implement_olecreate_flags)|このマクロまたは [IMPLEMENT_OLECREATE](#implement_olecreate) は、を使用するクラスの実装ファイルに記述されている必要があり `DECLARE_OLECREATE` ます。 |
 
-## <a name="afx_comctl32_if_exists"></a><a name="afx_comctl32_if_exists"></a>AFX_COMCTL32_IF_EXISTS
+## <a name="afx_comctl32_if_exists"></a><a name="afx_comctl32_if_exists"></a> AFX_COMCTL32_IF_EXISTS
 
 コモンコントロールライブラリが、指定された API を実装しているかどうかを判断します。
 
@@ -66,7 +66,7 @@ AFX_COMCTL32_IF_EXISTS(  proc );
 
 ### <a name="parameters"></a>パラメーター
 
-*proc*<br/>
+*/proc*<br/>
 関数名を格納している null で終わる文字列へのポインター、または関数の序数値を指定します。 このパラメーターが序数値の場合は、下位ワードである必要があります。上位ワードはゼロである必要があります。 このパラメーターは Unicode で指定する必要があります。
 
 ### <a name="remarks"></a>解説
@@ -77,9 +77,9 @@ AFX_COMCTL32_IF_EXISTS(  proc );
 
 afxcomctl32.h, afxcomctl32.h. inl
 
-## <a name="afx_comctl32_if_exists2"></a><a name="afx_comctl32_if_exists2"></a>AFX_COMCTL32_IF_EXISTS2
+## <a name="afx_comctl32_if_exists2"></a><a name="afx_comctl32_if_exists2"></a> AFX_COMCTL32_IF_EXISTS2
 
-コモンコントロールライブラリが、指定された API を実装するかどうかを決定します (これは[AFX_COMCTL32_IF_EXISTS](#afx_comctl32_if_exists)の Unicode バージョンです)。
+コモンコントロールライブラリが、指定された API を実装するかどうかを決定します (これは [AFX_COMCTL32_IF_EXISTS](#afx_comctl32_if_exists)の Unicode バージョンです)。
 
 ### <a name="syntax"></a>構文
 
@@ -89,7 +89,7 @@ AFX_COMCTL32_IF_EXISTS2( proc );
 
 ### <a name="parameters"></a>パラメーター
 
-*proc*<br/>
+*/proc*<br/>
 関数名を格納している null で終わる文字列へのポインター、または関数の序数値を指定します。 このパラメーターが序数値の場合は、下位ワードである必要があります。上位ワードはゼロである必要があります。 このパラメーターは Unicode で指定する必要があります。
 
 ### <a name="remarks"></a>解説
@@ -100,7 +100,7 @@ AFX_COMCTL32_IF_EXISTS2( proc );
 
 afxcomctl32.h, afxcomctl32.h. inl
 
-## <a name="declare_dynamic"></a><a name="declare_dynamic"></a>DECLARE_DYNAMIC
+## <a name="declare_dynamic"></a><a name="declare_dynamic"></a> DECLARE_DYNAMIC
 
 からクラスを派生させるときに、オブジェクトのクラスに関するランタイム情報にアクセスできるようにし `CObject` ます。
 
@@ -131,7 +131,7 @@ DECLARE_DYNAMIC マクロの詳細については、「 [CObject クラスのト
 
 **ヘッダー:** afx
 
-## <a name="declare_dyncreate"></a><a name="declare_dyncreate"></a>DECLARE_DYNCREATE
+## <a name="declare_dyncreate"></a><a name="declare_dyncreate"></a> DECLARE_DYNCREATE
 
 `CObject`派生クラスのオブジェクトを実行時に動的に作成できるようにします。
 
@@ -165,7 +165,7 @@ DECLARE_DYNCREATE マクロの詳細については、「 [CObject クラスの�
 
 **ヘッダー:** afx
 
-## <a name="declare_olectltype"></a><a name="declare_olectltype"></a>DECLARE_OLECTLTYPE
+## <a name="declare_olectltype"></a><a name="declare_olectltype"></a> DECLARE_OLECTLTYPE
 
 `GetUserTypeNameID` `GetMiscStatus` コントロールクラスのおよびメンバー関数を宣言します。
 
@@ -182,13 +182,13 @@ DECLARE_OLECTLTYPE( class_name )
 
 ### <a name="remarks"></a>解説
 
-`GetUserTypeNameID`と `GetMiscStatus` は純粋仮想関数であり、で宣言されて `COleControl` います。 これらの関数は純粋仮想であるため、コントロールクラスでオーバーライドする必要があります。 DECLARE_OLECTLTYPE に加えて、コントロールクラスの宣言に IMPLEMENT_OLECTLTYPE マクロを追加する必要があります。
+`GetUserTypeNameID` と `GetMiscStatus` は純粋仮想関数であり、で宣言されて `COleControl` います。 これらの関数は純粋仮想であるため、コントロールクラスでオーバーライドする必要があります。 DECLARE_OLECTLTYPE に加えて、コントロールクラスの宣言に IMPLEMENT_OLECTLTYPE マクロを追加する必要があります。
 
 ### <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxctl.h
 
-## <a name="declare_proppageids"></a><a name="declare_proppageids"></a>DECLARE_PROPPAGEIDS
+## <a name="declare_proppageids"></a><a name="declare_proppageids"></a> DECLARE_PROPPAGEIDS
 
 OLE コントロールにプロパティを表示するプロパティページの一覧が用意されていることを宣言します。
 
@@ -213,7 +213,7 @@ DECLARE_PROPPAGEIDS( class_name )
 
 **ヘッダー:** afxctl.h
 
-## <a name="declare_serial"></a><a name="declare_serial"></a>DECLARE_SERIAL
+## <a name="declare_serial"></a><a name="declare_serial"></a> DECLARE_SERIAL
 
 シリアル化できるの派生クラスに必要な C++ ヘッダーコードを生成し `CObject` ます。
 
@@ -250,7 +250,7 @@ DECLARE_SERIAL マクロの詳細については、「 [CObject クラスのト�
 
 **ヘッダー:** afx
 
-## <a name="implement_dynamic"></a><a name="implement_dynamic"></a>IMPLEMENT_DYNAMIC
+## <a name="implement_dynamic"></a><a name="implement_dynamic"></a> IMPLEMENT_DYNAMIC
 
 `CObject`階層内のクラス名と位置への実行時アクセスを使用して、動的に派生したクラスに必要な C++ コードを生成します。
 
@@ -282,7 +282,7 @@ IMPLEMENT_DYNAMIC(class_name, base_class_name)
 
 **ヘッダー:** afx
 
-## <a name="implement_dyncreate"></a><a name="implement_dyncreate"></a>IMPLEMENT_DYNCREATE
+## <a name="implement_dyncreate"></a><a name="implement_dyncreate"></a> IMPLEMENT_DYNCREATE
 
 `CObject`DECLARE_DYNCREATE マクロと共に使用する場合に、派生クラスのオブジェクトを実行時に動的に作成できるようにします。
 
@@ -318,9 +318,9 @@ DECLARE_DYNCREATE マクロと IMPLEMENT_DYNCREATE マクロを使用する場�
 
 **ヘッダー:** afx
 
-## <a name="implement_olecreate_flags"></a><a name="implement_olecreate_flags"></a>IMPLEMENT_OLECREATE_FLAGS
+## <a name="implement_olecreate_flags"></a><a name="implement_olecreate_flags"></a> IMPLEMENT_OLECREATE_FLAGS
 
-このマクロまたは[IMPLEMENT_OLECREATE](#implement_olecreate)は、DECLARE_OLECREATE を使用するクラスの実装ファイルに記述されている必要があります。
+このマクロまたは [IMPLEMENT_OLECREATE](#implement_olecreate) は、DECLARE_OLECREATE を使用するクラスの実装ファイルに記述されている必要があります。
 
 ### <a name="syntax"></a>構文
 
@@ -340,18 +340,18 @@ IMPLEMENT_OLECREATE_FLAGS( class_name, external_name, nFlags,
 *nFlags*<br/>
 には、次のフラグが1つ以上含まれています。
 
-- `afxRegInsertable`OLE オブジェクトの [オブジェクトの挿入] ダイアログボックスにコントロールを表示できるようにします。
-- `afxRegApartmentThreading`レジストリのスレッドモデルを ThreadingModel = アパートメントに設定します。
-- `afxRegFreeThreading`レジストリのスレッドモデルを ThreadingModel = Free に設定します。
+- `afxRegInsertable` OLE オブジェクトの [オブジェクトの挿入] ダイアログボックスにコントロールを表示できるようにします。
+- `afxRegApartmentThreading` レジストリのスレッドモデルを ThreadingModel = アパートメントに設定します。
+- `afxRegFreeThreading` レジストリのスレッドモデルを ThreadingModel = Free に設定します。
 
 2つのフラグを組み合わせ `afxRegApartmentThreading` て、 `afxRegFreeThreading` ThreadingModel = Both を設定することができます。 スレッドモデルの登録の詳細については、Windows SDK の「 [InprocServer32](/windows/win32/com/inprocserver32) 」を参照してください。
 
-*l*、 *w1*、 *w2*、 *b1*、 *b2*、 *b3*、 *b4*、 *b5*、 *b6*、 *b7*、 *b8*クラスの CLSID のコンポーネント。
+*l*、 *w1*、 *w2*、 *b1*、 *b2*、 *b3*、 *b4*、 *b5*、 *b6*、 *b7*、 *b8* クラスの CLSID のコンポーネント。
 
 ### <a name="remarks"></a>解説
 
 > [!NOTE]
-> IMPLEMENT_OLECREATE_FLAGS を使用する場合は、 *nFlags*パラメーターを使用して、オブジェクトがサポートするスレッドモデルを指定できます。 Treading モデルのみをサポートする場合は、IMPLEMENT_OLECREATE を使用します。
+> IMPLEMENT_OLECREATE_FLAGS を使用する場合は、 *nFlags* パラメーターを使用して、オブジェクトがサポートするスレッドモデルを指定できます。 Treading モデルのみをサポートする場合は、IMPLEMENT_OLECREATE を使用します。
 
 外部名は、他のアプリケーションに公開される識別子です。 クライアントアプリケーションは、外部名を使用して、オートメーションサーバーからこのクラスのオブジェクトを要求します。
 
@@ -361,7 +361,7 @@ OLE クラス ID は、オブジェクトの一意の128ビット識別子です
 
 **ヘッダー :** afxdisp.h
 
-## <a name="implement_olectltype"></a><a name="implement_olectltype"></a>IMPLEMENT_OLECTLTYPE
+## <a name="implement_olectltype"></a><a name="implement_olectltype"></a> IMPLEMENT_OLECTLTYPE
 
 `GetUserTypeNameID` `GetMiscStatus` コントロールクラスのおよびメンバー関数を実装します。
 
@@ -386,7 +386,7 @@ DECLARE_OLECTLTYPE( class_name, idsUserTypeName, dwOleMisc )
 
 IMPLEMENT_OLECTLTYPE に加えて、コントロールクラスの宣言に DECLARE_OLECTLTYPE マクロを追加する必要があります。
 
-この `GetUserTypeNameID` メンバー関数は、コントロールクラスを識別するリソース文字列を返します。 `GetMiscStatus`コントロールの OLEMISC ビットを返します。 この列挙体は、コントロールのさまざまな特性を記述する設定のコレクションを指定します。 OLEMISC 設定の詳細については、Windows SDK の「 [OLEMISC](/windows/win32/api/oleidl/ne-oleidl-olemisc) 」を参照してください。
+この `GetUserTypeNameID` メンバー関数は、コントロールクラスを識別するリソース文字列を返します。 `GetMiscStatus` コントロールの OLEMISC ビットを返します。 この列挙体は、コントロールのさまざまな特性を記述する設定のコレクションを指定します。 OLEMISC 設定の詳細については、Windows SDK の「 [OLEMISC](/windows/win32/api/oleidl/ne-oleidl-olemisc) 」を参照してください。
 
 > [!NOTE]
 > ActiveX コントロールウィザードで使用される既定の設定は、OLEMISC_ACTIVATEWHENVISIBLE、OLEMISC_SETCLIENTSITEFIRST、OLEMISC_INSIDEOUT、OLEMISC_CANTLINKINSIDE、および OLEMISC_RECOMPOSEONRESIZE です。
@@ -395,7 +395,7 @@ IMPLEMENT_OLECTLTYPE に加えて、コントロールクラスの宣言に DECL
 
 **ヘッダー:** afxctl.h
 
-## <a name="implement_serial"></a><a name="implement_serial"></a>IMPLEMENT_SERIAL
+## <a name="implement_serial"></a><a name="implement_serial"></a> IMPLEMENT_SERIAL
 
 `CObject`階層内のクラス名と位置への実行時アクセスを使用して、動的に派生したクラスに必要な C++ コードを生成します。
 
@@ -432,7 +432,7 @@ AFX_API マクロを使用する `CArchive` と、DECLARE_SERIAL と IMPLEMENT_S
 
 **ヘッダー:** afx
 
-## <a name="runtime_class"></a><a name="runtime_class"></a>RUNTIME_CLASS
+## <a name="runtime_class"></a><a name="runtime_class"></a> RUNTIME_CLASS
 
 C++ クラスの名前からランタイムクラス構造体を取得します。
 
@@ -459,7 +459,7 @@ RUNTIME_CLASS は、 *class_name*によって指定されたクラスの[CRuntim
 
 **ヘッダー:** afx
 
-## <a name="declare_olecreate"></a><a name="declare_olecreate"></a>DECLARE_OLECREATE
+## <a name="declare_olecreate"></a><a name="declare_olecreate"></a> DECLARE_OLECREATE
 
 は `CCmdTarget` 、OLE オートメーションを使用して、派生クラスのオブジェクトを作成できるようにします。
 
@@ -484,9 +484,9 @@ DECLARE_OLECREATE(class_name)
 
 **ヘッダー**: afxdisp.h
 
-## <a name="implement_olecreate"></a><a name="implement_olecreate"></a>IMPLEMENT_OLECREATE
+## <a name="implement_olecreate"></a><a name="implement_olecreate"></a> IMPLEMENT_OLECREATE
 
-このマクロまたは[IMPLEMENT_OLECREATE_FLAGS](#implement_olecreate_flags)は、を使用するクラスの実装ファイルに記述されている必要があり `DECLARE_OLECREATE` ます。
+このマクロまたは [IMPLEMENT_OLECREATE_FLAGS](#implement_olecreate_flags) は、を使用するクラスの実装ファイルに記述されている必要があり `DECLARE_OLECREATE` ます。
 
 ```
 IMPLEMENT_OLECREATE(class_name, external_name, l, w1, w2, b1, b2, b3, b4, b5, b6, b7, b8)
@@ -500,12 +500,12 @@ IMPLEMENT_OLECREATE(class_name, external_name, l, w1, w2, b1, b2, b3, b4, b5, b6
 *external_name*<br/>
 他のアプリケーションに公開されているオブジェクト名 (引用符で囲まれています)。
 
-*l*、 *w1*、 *w2*、 *b1*、 *b2*、 *b3*、 *b4*、 *b5*、 *b6*、 *b7*、 *b8*クラスの CLSID のコンポーネント。
+*l*、 *w1*、 *w2*、 *b1*、 *b2*、 *b3*、 *b4*、 *b5*、 *b6*、 *b7*、 *b8* クラスの CLSID のコンポーネント。
 
 ### <a name="remarks"></a>解説
 
 > [!NOTE]
-> IMPLEMENT_OLECREATE を使用する場合、既定では、単一のスレッドモデルのみがサポートされます。 IMPLEMENT_OLECREATE_FLAGS を使用する場合は、 *nFlags*パラメーターを使用して、オブジェクトがサポートするスレッドモデルを指定できます。
+> IMPLEMENT_OLECREATE を使用する場合、既定では、単一のスレッドモデルのみがサポートされます。 IMPLEMENT_OLECREATE_FLAGS を使用する場合は、 *nFlags* パラメーターを使用して、オブジェクトがサポートするスレッドモデルを指定できます。
 
 外部名は、他のアプリケーションに公開される識別子です。 クライアントアプリケーションは、外部名を使用して、オートメーションサーバーからこのクラスのオブジェクトを要求します。
 

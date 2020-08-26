@@ -15,12 +15,12 @@ helpviewer_keywords:
 - any/std::any::reset
 - any/std::any::swap
 - any/std::any::type
-ms.openlocfilehash: 66e74a7fa7f35aae9ac9e1f3ba7520e8d3f9b3f2
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: defec0f6ab8f59219afddcefc67ea93435347978
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87203963"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88844744"
 ---
 # <a name="any-class"></a>任意のクラス
 
@@ -38,13 +38,13 @@ class any
 
 ### <a name="constructors"></a>コンストラクター
 
-|||
+|名前|説明|
 |-|-|
 |[いつ](#any)|`any` 型のオブジェクトを構築します。|
 
-### <a name="functions"></a>関数
+### <a name="functions"></a>Functions
 
-|||
+|名前|説明|
 |-|-|
 |[emplace](#emplace)|任意の値を設定します。|
 |[has_value](#has_value)|**`true`** に値がある場合はを返します。|
@@ -52,13 +52,13 @@ class any
 |[スワップ](#swap)|2つのオブジェクトを交換します。|
 |[type](#type)|任意の型を返します。|
 
-### <a name="operators"></a>オペレーター
+### <a name="operators"></a>演算子
 
-|||
+|名前|説明|
 |-|-|
 |[operator =](#op_eq)|Any を別ののコピーで置き換えます。|
 
-## <a name="any"></a><a name="any"></a>いつ
+## <a name="any"></a><a name="any"></a> いつ
 
 `any` 型のオブジェクトを構築します。 には、デストラクターも含まれています。
 
@@ -76,7 +76,7 @@ template <class T, class U, class... Args>
 ~any();
 ```
 
-## <a name="emplace"></a><a name="emplace"></a>emplace
+## <a name="emplace"></a><a name="emplace"></a> emplace
 
 任意の値を設定します。
 
@@ -87,7 +87,7 @@ template <class T, class U, class... Args>
     decay_t<T>& emplace(initializer_list<U>, Args&&...);
 ```
 
-## <a name="has_value"></a><a name="has_value"></a>has_value
+## <a name="has_value"></a><a name="has_value"></a> has_value
 
 **`true`** に値がある場合はを返します。
 
@@ -95,7 +95,7 @@ template <class T, class U, class... Args>
 bool has_value() const noexcept;
 ```
 
-## <a name="operator"></a><a name="op_eq"></a>operator =
+## <a name="operator"></a><a name="op_eq"></a> operator =
 
 Any を別ののコピーで置き換えます。
 
@@ -111,7 +111,7 @@ template <class T>
 *そうです*\
 Any にコピーされる。
 
-## <a name="reset"></a><a name="reset"></a>解除
+## <a name="reset"></a><a name="reset"></a> 解除
 
 Any をリセットします。
 
@@ -119,7 +119,7 @@ Any をリセットします。
 void reset() noexcept;
 ```
 
-## <a name="swap"></a><a name="swap"></a>フォト
+## <a name="swap"></a><a name="swap"></a> フォト
 
 2つのオブジェクトを交換します。
 
