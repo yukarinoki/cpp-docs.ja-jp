@@ -16,32 +16,32 @@ f1_keywords:
 helpviewer_keywords:
 - compiler options, macros
 ms.assetid: a869adc6-b3de-4299-b040-9ae20b45f82c
-ms.openlocfilehash: d8c9538c9f3d889360c0527ba538e9e091df0755
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 90b80aaa34456677f2d7c2dd5717ae6837f4523f
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87229962"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88833570"
 ---
 # <a name="compiler-options-macros"></a>コンパイラオプションのマクロ
 
 これらのマクロは、特定のコンパイラ機能を制御します。
 
-|||
+|マクロ|説明|
 |-|-|
 |[_ATL_ALL_WARNINGS](#_atl_all_warnings)|以前のバージョンの ATL から変換されたプロジェクトのエラーを有効にするシンボル。|
 |[_ATL_APARTMENT_THREADED](#_atl_apartment_threaded)|1つ以上のオブジェクトがアパートメントスレッドを使用するかどうかを定義します。|
 |[_ATL_CSTRING_EXPLICIT_CONSTRUCTORS](#_atl_cstring_explicit_constructors)|特定 `CString` のコンストラクターを明示的に行い、意図しない変換を防止します。|
 |[_ATL_ENABLE_PTM_WARNING](#_atl_enable_ptm_warning)|このマクロは、C++ 標準準拠の構文を使用するために定義します。これにより、非標準の構文を使用してメンバー関数へのポインターを初期化するときに、C4867 コンパイラエラーが生成されます。|
 |[_ATL_FREE_THREADED](#_atl_free_threaded)|1つ以上のオブジェクトが、フリースレッドまたはニュートラルスレッドを使用するかどうかを定義します。|
-|[_ATL_MULTI_THREADED](#_atl_multi_threaded)|プロジェクトを示すシンボルには、"Free" または "ニュートラル" とマークされたオブジェクトが含まれます。 代わりに、マクロ[_ATL_FREE_THREADED](#_atl_free_threaded)を使用する必要があります。|
+|[_ATL_MULTI_THREADED](#_atl_multi_threaded)|プロジェクトを示すシンボルには、"Free" または "ニュートラル" とマークされたオブジェクトが含まれます。 代わりに、マクロ [_ATL_FREE_THREADED](#_atl_free_threaded) を使用する必要があります。|
 |[_ATL_NO_AUTOMATIC_NAMESPACE](#_atl_no_automatic_namespace)|名前空間の既定の使用を ATL として禁止するシンボル。|
 |[_ATL_NO_COM_SUPPORT](#_atl_no_com_support)|プロジェクトで COM 関連のコードがコンパイルされないようにするシンボル。|
 |[ATL_NO_VTABLE](#atl_no_vtable)|クラスのコンストラクターおよびデストラクターで vtable ポインターが初期化されないようにするシンボル。|
 |[ATL_NOINLINE](#atl_noinline)|関数をインライン化できないことを示す記号。|
 |[_ATL_SINGLE_THREADED](#_atl_single_threaded)|すべてのオブジェクトが単一のスレッドモデルを使用するかどうかを定義します。|
 
-## <a name="_atl_all_warnings"></a><a name="_atl_all_warnings"></a>_ATL_ALL_WARNINGS
+## <a name="_atl_all_warnings"></a><a name="_atl_all_warnings"></a> _ATL_ALL_WARNINGS
 
 以前のバージョンの ATL から変換されたプロジェクトのエラーを有効にするシンボル。
 
@@ -51,7 +51,7 @@ ms.locfileid: "87229962"
 
 ### <a name="remarks"></a>解説
 
-.NET 2002 を Visual C++ する前に、ATL は多くの警告を無効にし、ユーザーコードに示されないように無効にしました。 具体的には次のとおりです。
+.NET 2002 を Visual C++ する前に、ATL は多くの警告を無効にし、ユーザーコードに示されないように無効にしました。 具体的な内容は次のとおりです。
 
 - C4127 条件式は定数です
 
@@ -75,9 +75,9 @@ ms.locfileid: "87229962"
 
 これが追加された場合 `#define` 、ATL ヘッダーはこれらの警告の状態を保持し、グローバルに無効にしないようにします (または、ユーザーが個々の警告を明示的に無効にし、有効にしない場合)。
 
-新しいプロジェクトは、 `#define` 既定で*Pch* (Visual Studio 2017 以前の*stdafx.h* ) に設定されています。
+新しいプロジェクトは、 `#define` 既定で *Pch* (Visual Studio 2017 以前の*stdafx.h* ) に設定されています。
 
-## <a name="_atl_apartment_threaded"></a><a name="_atl_apartment_threaded"></a>_ATL_APARTMENT_THREADED
+## <a name="_atl_apartment_threaded"></a><a name="_atl_apartment_threaded"></a> _ATL_APARTMENT_THREADED
 
 1つ以上のオブジェクトがアパートメントスレッドを使用するかどうかを定義します。
 
@@ -87,9 +87,9 @@ _ATL_APARTMENT_THREADED
 
 ### <a name="remarks"></a>解説
 
-アパートメントスレッドを指定します。 ATL オブジェクトで使用できるスレッド処理モデルの説明については、「その他のスレッド処理オプションの[プロジェクトのスレッド処理モデルを指定](../../atl/specifying-the-threading-model-for-a-project-atl.md)する」および「 [Atl シンプルオブジェクトウィザード](../../atl/reference/options-atl-simple-object-wizard.md)」を参照してください。
+アパートメントスレッドを指定します。 ATL オブジェクトで使用できるスレッド処理モデルの説明については、「その他のスレッド処理オプションの [プロジェクトのスレッド処理モデルを指定](../../atl/specifying-the-threading-model-for-a-project-atl.md) する」および「 [Atl シンプルオブジェクトウィザード](../../atl/reference/options-atl-simple-object-wizard.md) 」を参照してください。
 
-## <a name="_atl_cstring_explicit_constructors"></a><a name="_atl_cstring_explicit_constructors"></a>_ATL_CSTRING_EXPLICIT_CONSTRUCTORS
+## <a name="_atl_cstring_explicit_constructors"></a><a name="_atl_cstring_explicit_constructors"></a> _ATL_CSTRING_EXPLICIT_CONSTRUCTORS
 
 特定 `CString` のコンストラクターを明示的に行い、意図しない変換を防止します。
 
@@ -103,7 +103,7 @@ _ATL_CSTRING_EXPLICIT_CONSTRUCTORS
 
 すべてのコンストラクター文字列引数に対して _T マクロを使用すると、_UNICODE が定義されているかどうかに関係なく、_ATL_CSTRING_EXPLICIT_CONSTRUCTORS を定義し、コンパイルエラーを回避できます。
 
-## <a name="_atl_enable_ptm_warning"></a><a name="_atl_enable_ptm_warning"></a>_ATL_ENABLE_PTM_WARNING
+## <a name="_atl_enable_ptm_warning"></a><a name="_atl_enable_ptm_warning"></a> _ATL_ENABLE_PTM_WARNING
 
 このマクロは、メンバー関数へのポインターに対して ANSI C++ 標準準拠の構文を強制的に使用するために定義します。 このマクロを使用すると、非標準の構文を使用してメンバー関数へのポインターを初期化するときに、C4867 コンパイラエラーが生成されます。
 
@@ -127,7 +127,7 @@ ATL および MFC ライブラリは、Microsoft C++ コンパイラによって
 
 マップマクロの場合は、アンパサンド ' & ' 文字を追加します。 コードにもう一度文字を追加しないでください。
 
-## <a name="_atl_free_threaded"></a><a name="_atl_free_threaded"></a>_ATL_FREE_THREADED
+## <a name="_atl_free_threaded"></a><a name="_atl_free_threaded"></a> _ATL_FREE_THREADED
 
 1つ以上のオブジェクトが、フリースレッドまたはニュートラルスレッドを使用するかどうかを定義します。
 
@@ -137,9 +137,9 @@ _ATL_FREE_THREADED
 
 ### <a name="remarks"></a>解説
 
-フリースレッド処理を指定します。 フリースレッドは、マルチスレッドアパートメントモデルと同じです。 ATL オブジェクトで使用できるスレッド処理モデルの説明については、「その他のスレッド処理オプションの[プロジェクトのスレッド処理モデルを指定](../../atl/specifying-the-threading-model-for-a-project-atl.md)する」および「 [Atl シンプルオブジェクトウィザード](../../atl/reference/options-atl-simple-object-wizard.md)」を参照してください。
+フリースレッド処理を指定します。 フリースレッドは、マルチスレッドアパートメントモデルと同じです。 ATL オブジェクトで使用できるスレッド処理モデルの説明については、「その他のスレッド処理オプションの [プロジェクトのスレッド処理モデルを指定](../../atl/specifying-the-threading-model-for-a-project-atl.md) する」および「 [Atl シンプルオブジェクトウィザード](../../atl/reference/options-atl-simple-object-wizard.md) 」を参照してください。
 
-## <a name="_atl_multi_threaded"></a><a name="_atl_multi_threaded"></a>_ATL_MULTI_THREADED
+## <a name="_atl_multi_threaded"></a><a name="_atl_multi_threaded"></a> _ATL_MULTI_THREADED
 
 プロジェクトを示すシンボルには、"Free" または "ニュートラル" とマークされたオブジェクトが含まれます。
 
@@ -149,9 +149,9 @@ _ATL_MULTI_THREADED
 
 ### <a name="remarks"></a>解説
 
-このシンボルが定義されている場合、ATL はグローバルデータへのアクセスを適切に同期するコードを取得します。 新しいコードでは、代わりに同等のマクロ[_ATL_FREE_THREADED](#_atl_free_threaded)を使用する必要があります。
+このシンボルが定義されている場合、ATL はグローバルデータへのアクセスを適切に同期するコードを取得します。 新しいコードでは、代わりに同等のマクロ [_ATL_FREE_THREADED](#_atl_free_threaded) を使用する必要があります。
 
-## <a name="_atl_no_automatic_namespace"></a><a name="_atl_no_automatic_namespace"></a>_ATL_NO_AUTOMATIC_NAMESPACE
+## <a name="_atl_no_automatic_namespace"></a><a name="_atl_no_automatic_namespace"></a> _ATL_NO_AUTOMATIC_NAMESPACE
 
 名前空間の既定の使用を ATL として禁止するシンボル。
 
@@ -161,9 +161,9 @@ _ATL_NO_AUTOMATIC_NAMESPACE
 
 ### <a name="remarks"></a>解説
 
-このシンボルが定義されていない場合 (atlbase. h を含む) は、既定で**名前空間 ATL を使用し**ます。これにより、名前の競合が発生する可能性があります。 これを回避するには、このシンボルを定義します。
+このシンボルが定義されていない場合 (atlbase. h を含む) は、既定で **名前空間 ATL を使用し** ます。これにより、名前の競合が発生する可能性があります。 これを回避するには、このシンボルを定義します。
 
-## <a name="_atl_no_com_support"></a><a name="_atl_no_com_support"></a>_ATL_NO_COM_SUPPORT
+## <a name="_atl_no_com_support"></a><a name="_atl_no_com_support"></a> _ATL_NO_COM_SUPPORT
 
 プロジェクトで COM 関連のコードがコンパイルされないようにするシンボル。
 
@@ -171,7 +171,7 @@ _ATL_NO_AUTOMATIC_NAMESPACE
 _ATL_NO_COM_SUPPORT
 ```
 
-## <a name="atl_no_vtable"></a><a name="atl_no_vtable"></a>ATL_NO_VTABLE
+## <a name="atl_no_vtable"></a><a name="atl_no_vtable"></a> ATL_NO_VTABLE
 
 クラスのコンストラクターおよびデストラクターで vtable ポインターが初期化されないようにするシンボル。
 
@@ -187,7 +187,7 @@ Vtable ポインターがクラスのコンストラクターおよびデスト�
 
 [!code-cpp[NVC_ATL_COM#53](../../atl/codesnippet/cpp/compiler-options-macros_4.h)]
 
-## <a name="atl_noinline"></a><a name="atl_noinline"></a>ATL_NOINLINE
+## <a name="atl_noinline"></a><a name="atl_noinline"></a> ATL_NOINLINE
 
 関数をインライン化できないことを示すシンボル。
 
@@ -208,7 +208,7 @@ Vtable ポインターがクラスのコンストラクターおよびデスト�
 
 関数をインラインとして宣言して、ヘッダーファイルに配置できるようにする必要がある場合でも、このシンボルを使用します。 をに展開 **`__declspec(noinline)`** します。
 
-## <a name="_atl_single_threaded"></a><a name="_atl_single_threaded"></a>_ATL_SINGLE_THREADED
+## <a name="_atl_single_threaded"></a><a name="_atl_single_threaded"></a> _ATL_SINGLE_THREADED
 
 すべてのオブジェクトが単一のスレッドモデルを使用するかどうかを定義します
 
@@ -218,7 +218,7 @@ _ATL_SINGLE_THREADED
 
 ### <a name="remarks"></a>解説
 
-オブジェクトが常にプライマリ COM スレッドで実行されることを指定します。 ATL オブジェクトで使用できるスレッド処理モデルの説明については、「その他のスレッド処理オプションの[プロジェクトのスレッド処理モデルを指定](../../atl/specifying-the-threading-model-for-a-project-atl.md)する」および「 [Atl シンプルオブジェクトウィザード](../../atl/reference/options-atl-simple-object-wizard.md)」を参照してください。
+オブジェクトが常にプライマリ COM スレッドで実行されることを指定します。 ATL オブジェクトで使用できるスレッド処理モデルの説明については、「その他のスレッド処理オプションの [プロジェクトのスレッド処理モデルを指定](../../atl/specifying-the-threading-model-for-a-project-atl.md) する」および「 [Atl シンプルオブジェクトウィザード](../../atl/reference/options-atl-simple-object-wizard.md) 」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

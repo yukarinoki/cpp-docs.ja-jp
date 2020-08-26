@@ -6,31 +6,31 @@ f1_keywords:
 helpviewer_keywords:
 - array header
 ms.assetid: 084147c1-e805-478e-8201-76846020f187
-ms.openlocfilehash: bdf9209b18328735f15393687528a40a94198730
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: b515578e658d658722f92e48a7ac5ab78727c465
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72690039"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88834948"
 ---
 # <a name="ltarraygt"></a>&lt;array&gt;
 
-コンテナークラステンプレート**配列**といくつかのサポートテンプレートを定義します。
+コンテナークラステンプレート **配列** といくつかのサポートテンプレートを定義します。
 
-## <a name="requirements"></a>［要件］
+## <a name="requirements"></a>必要条件
 
-**Header:** \<array>
+**ヘッダー:**\<array>
 
 **名前空間:** std
 
 > [!NOTE]
-> @No__t_0array > ライブラリでは、`#include <initializer_list>` ステートメントも使用します。
+> ライブラリは、 \<array> ステートメントも使用し `#include <initializer_list>` ます。
 
 ## <a name="members"></a>メンバー
 
 ### <a name="classes"></a>クラス
 
-|||
+|名前|説明|
 |-|-|
 |[array](../standard-library/array-class-stl.md)|要素の固定長シーケンスを格納します。|
 |[tuple_element](../standard-library/tuple-element-class-tuple.md)|配列要素の型をラップします。|
@@ -38,21 +38,21 @@ ms.locfileid: "72690039"
 
 ### <a name="operators"></a>演算子
 
-|||
+|名前|説明|
 |-|-|
-|[operator==](../standard-library/array-operators.md#op_eq_eq)|配列の比較 (等しい)|
-|[operator!=](../standard-library/array-operators.md#op_neq)|配列の比較 (等しくない)|
+|[operator = =](../standard-library/array-operators.md#op_eq_eq)|配列の比較 (等しい)|
+|[operator! =](../standard-library/array-operators.md#op_neq)|配列の比較 (等しくない)|
 |[operator\<](../standard-library/array-operators.md#op_lt)|配列の比較 (より小さい)|
 |[operator>=](../standard-library/array-operators.md#op_gt_eq)|配列の比較 (以上)|
-|[operator>](../standard-library/array-operators.md#op_gt)|配列の比較 (より大きい)|
+|[>演算子 ](../standard-library/array-operators.md#op_gt)|配列の比較 (より大きい)|
 |[operator<=](../standard-library/array-operators.md#op_lt_eq)|配列の比較 (以下)|
 
-### <a name="functions"></a>関数
+### <a name="functions"></a>Functions
 
-|||
+|名前|説明|
 |-|-|
 |[get](../standard-library/array-functions.md#get)|指定した配列要素を取得します。|
-|[swap](../standard-library/array-functions.md#swap)|1 つの配列の内容を別の配列の内容と交換します。|
+|[スワップ](../standard-library/array-functions.md#swap)|1 つの配列の内容を別の配列の内容と交換します。|
 
 ## <a name="see-also"></a>関連項目
 

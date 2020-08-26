@@ -1,5 +1,5 @@
 ---
-title: クラス
+title: CDialogImpl クラス
 ms.date: 11/04/2016
 f1_keywords:
 - CDialogImpl
@@ -17,16 +17,16 @@ helpviewer_keywords:
 - dialog boxes, ATL
 - CDialogImpl class
 ms.assetid: d430bc7b-8a28-4ad3-9507-277bdd2c2c2e
-ms.openlocfilehash: d5ab7293f73429a93c3fcab243c2e34d3c78f28a
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: b92b5130b31e88565d79b59a24b2bd377d0d84c0
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81747708"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88834727"
 ---
-# <a name="cdialogimpl-class"></a>クラス
+# <a name="cdialogimpl-class"></a>CDialogImpl クラス
 
-このクラスには、モーダル ダイアログ ボックスまたはモードレス ダイアログ ボックスを作成するためのメソッドが用意されています。
+このクラスには、モーダルまたはモードレスのダイアログボックスを作成するためのメソッドが用意されています。
 
 > [!IMPORTANT]
 > このクラスとそのメンバーは、Windows ランタイムで実行されるアプリケーションでは使用できません。
@@ -42,66 +42,66 @@ template <class T,
 #### <a name="parameters"></a>パラメーター
 
 *T*<br/>
-から派生したクラス`CDialogImpl`。
+から派生したクラス `CDialogImpl` 。
 
-*Tベース*<br/>
-新しいクラスの基本クラス。 既定の基本クラスは[CWindow です](../../atl/reference/cwindow-class.md)。
+*TBase*<br/>
+新しいクラスの基本クラス。 既定の基底クラスは [CWindow](../../atl/reference/cwindow-class.md)です。
 
 ## <a name="members"></a>メンバー
 
 ### <a name="methods"></a>メソッド
 
-|||
+|関数|説明|
 |-|-|
-|[作成](#create)|モードレス ダイアログ ボックスを作成します。|
-|[ウィンドウを破壊する](#destroywindow)|モードレス ダイアログ ボックスを破棄します。|
-|[Domodal](#domodal)|モーダル ダイアログ ボックスを作成します。|
-|[Enddialog](#enddialog)|モーダル ダイアログ ボックスを破棄します。|
+|[作成](#create)|モードレスダイアログボックスを作成します。|
+|[DestroyWindow](#destroywindow)|モードレスダイアログボックスを破棄します。|
+|[DoModal](#domodal)|モーダルダイアログボックスを作成します。|
+|[EndDialog](#enddialog)|モーダルダイアログボックスを破棄します。|
 
-### <a name="cdialogimplbaset-methods"></a>メソッド
+### <a name="cdialogimplbaset-methods"></a>CDialogImplBaseT メソッド
 
-|||
+|関数|説明|
 |-|-|
-|[ダイアログ を取得します。](#getdialogproc)|現在のダイアログ ボックス プロシージャを返します。|
-|[マップダイアログレック](#mapdialogrect)|指定された四角形のダイアログ ボックスの単位をスクリーン単位 (ピクセル) に割り当てします。|
-|[OnFinalMessage](#onfinalmessage)|通常、WM_NCDESTROY最後のメッセージを受信した後に呼び出されます。|
+|[Getの Proc](#getdialogproc)|現在のダイアログボックスプロシージャを返します。|
+|[Mapの Rect](#mapdialogrect)|指定した四角形のダイアログボックスの単位を画面単位 (ピクセル) にマップします。|
+|[OnFinalMessage](#onfinalmessage)|最後のメッセージの受信後に呼び出されます。通常は WM_NCDESTROY です。|
 
 ### <a name="static-functions"></a>静的関数
 
-|||
+|関数|説明|
 |-|-|
-|[DialogProc](#dialogproc)|ダイアログ ボックスに送信されたメッセージを処理します。|
-|[ダイアログ プロスを開始します。](#startdialogproc)|ダイアログ ボックスに送信されたメッセージを処理するために最初のメッセージを受信したときに呼び出されます。|
+|[DialogProc](#dialogproc)|ダイアログボックスに送信されたメッセージを処理します。|
+|[Startview Proc](#startdialogproc)|ダイアログボックスに送信されたメッセージを処理するために最初のメッセージを受信したときに呼び出されます。|
 
 ## <a name="remarks"></a>解説
 
-を`CDialogImpl`使用すると、モーダルまたはモードレスダイアログボックスを作成できます。 `CDialogImpl`には、既定のメッセージ マップを使用してメッセージを適切なハンドラーに送信するダイアログ ボックス プロシージャが用意されています。
+で `CDialogImpl` は、モーダルまたはモードレスのダイアログボックスを作成できます。 `CDialogImpl` 既定のメッセージマップを使用してメッセージを適切なハンドラーに送信するダイアログボックスの手順を示します。
 
-基本クラスのデストラクター`~CWindowImplRoot`は、オブジェクトを破棄する前にウィンドウが消え去ったことを確認します。
+基底クラスのデストラクターは、 `~CWindowImplRoot` オブジェクトを破棄する前に、ウィンドウが失われることを保証します。
 
 `CDialogImpl` は `CDialogImplBaseT` から派生します。また、後者は `CWindowImplRoot` から派生します。
 
 > [!NOTE]
-> クラスは、ダイアログ`IDD`テンプレート リソース ID を指定するメンバーを定義する必要があります。 たとえば、ATL プロジェクト ウィザードは、次の行を自動的にクラスに追加します。
+> クラスでは `IDD` 、ダイアログテンプレートリソース ID を指定するメンバーを定義する必要があります。 たとえば、ATL プロジェクトウィザードでは、クラスに次の行が自動的に追加されます。
 
 [!code-cpp[NVC_ATL_Windowing#41](../../atl/codesnippet/cpp/cdialogimpl-class_1.h)]
 
-は`MyDlg`、ウィザードの **[名前]** ページに入力された**短い名前**です。
+ここ `MyDlg` で、はウィザードの [**名前**] ページに入力された**短い名前**です。
 
-|詳細情報|参照先|
+|詳細情報|解決方法については、|
 |--------------------------------|---------|
 |コントロールの作成|[ATL チュートリアル](../../atl/active-template-library-atl-tutorial.md)|
-|ATL でのダイアログ ボックスの使用|[ATL ウィンドウ クラス](../../atl/atl-window-classes.md)|
+|ATL でのダイアログボックスの使用|[ATL ウィンドウクラス](../../atl/atl-window-classes.md)|
 |ATL プロジェクト ウィザード|[ATL プロジェクトの作成](../../atl/reference/creating-an-atl-project.md)|
-|ダイアログ ボックス|[ダイアログ ボックス](/windows/win32/dlgbox/dialog-boxes)と Windows SDK の後続のトピック|
+|ダイアログ ボックス|Windows SDK の[ダイアログボックス](/windows/win32/dlgbox/dialog-boxes)と後続トピック|
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** atlwin.h
+**ヘッダー:** atlwin. h
 
-## <a name="cdialogimplcreate"></a><a name="create"></a>クリッピング::作成
+## <a name="cdialogimplcreate"></a><a name="create"></a> CDialogImpl:: Create
 
-モードレス ダイアログ ボックスを作成します。
+モードレスダイアログボックスを作成します。
 
 ```
 HWND Create(
@@ -116,25 +116,25 @@ HWND Create(
 
 ### <a name="parameters"></a>パラメーター
 
-*スーンドペアレント*<br/>
-[in]所有者ウィンドウへのハンドル。
+*hWndParent*<br/>
+からオーナーウィンドウへのハンドル。
 
-**RECT&** ダイアログのサイズと位置を指定する[RECT](/windows/win32/api/windef/ns-windef-rect)構造体を*rect* .in.
+Rect **&** *rect* [in] ダイアログのサイズと位置を指定する[rect](/windows/win32/api/windef/ns-windef-rect)構造体。
 
-*ドウィニトパラム*<br/>
-[in]WM_INITDIALOG メッセージの*lParam*パラメータでダイアログ ボックスに渡す値を指定します。
+*dwInitParam*<br/>
+からWM_INITDIALOG メッセージの *lParam* パラメーターのダイアログボックスに渡す値を指定します。
 
 ### <a name="return-value"></a>戻り値
 
-新しく作成されたダイアログ ボックスへのハンドル。
+新しく作成されたダイアログボックスへのハンドル。
 
 ### <a name="remarks"></a>解説
 
-このダイアログ ボックスは、オブジェクトに`CDialogImpl`自動的にアタッチされます。 モーダル ダイアログ ボックスを作成するには[、DoModal](#domodal)を呼び出します。 上の 2 番目のオーバーライドは[CComControl](../../atl/reference/ccomcontrol-class.md)でのみ使用されます。
+このダイアログボックスは、自動的にオブジェクトにアタッチされ `CDialogImpl` ます。 モーダルダイアログボックスを作成するには、 [DoModal](#domodal)を呼び出します。 上記の2番目のオーバーライドは、 [CComControl](../../atl/reference/ccomcontrol-class.md)でのみ使用されます。
 
-## <a name="cdialogimpldestroywindow"></a><a name="destroywindow"></a>:Dエストロイウィンドウ
+## <a name="cdialogimpldestroywindow"></a><a name="destroywindow"></a> CDialogImpl::D estroyWindow
 
-モードレス ダイアログ ボックスを破棄します。
+モードレスダイアログボックスを破棄します。
 
 ```
 BOOL DestroyWindow();
@@ -142,15 +142,15 @@ BOOL DestroyWindow();
 
 ### <a name="return-value"></a>戻り値
 
-ダイアログ ボックスが正常に破棄された場合は TRUE。それ以外の場合は FALSE。
+ダイアログボックスが正常に破棄された場合は TRUE。それ以外の場合は FALSE。
 
 ### <a name="remarks"></a>解説
 
-ダイアログ ボックスが正常に破棄された場合は TRUE を返します。それ以外の場合は FALSE。
+ダイアログボックスが正常に破棄された場合は TRUE を返します。それ以外の場合は FALSE。
 
-## <a name="cdialogimpldialogproc"></a><a name="dialogproc"></a>:Dアログ・プロセス
+## <a name="cdialogimpldialogproc"></a><a name="dialogproc"></a> CDialogImpl::D ialogProc
 
-この静的関数は、ダイアログ ボックスプロシージャを実装します。
+この静的関数は、ダイアログボックスプロシージャを実装します。
 
 ```
 static LRESULT CALLBACK DialogProc(
@@ -163,16 +163,16 @@ static LRESULT CALLBACK DialogProc(
 ### <a name="parameters"></a>パラメーター
 
 *hWnd*<br/>
-[in]ダイアログ ボックスのハンドル。
+からダイアログボックスへのハンドル。
 
-*をクリックします。*<br/>
-[in]ダイアログ ボックスに送信されるメッセージ。
+*uMsg*<br/>
+からダイアログボックスに送信されたメッセージ。
 
 *wParam*<br/>
-[in]メッセージ固有の追加情報。
+からメッセージ固有の追加情報。
 
 *lParam*<br/>
-[in]メッセージ固有の追加情報。
+からメッセージ固有の追加情報。
 
 ### <a name="return-value"></a>戻り値
 
@@ -180,13 +180,13 @@ static LRESULT CALLBACK DialogProc(
 
 ### <a name="remarks"></a>解説
 
-`DialogProc`は、デフォルトのメッセージ・マップを使用して、適切なハンドラーにメッセージを送信します。
+`DialogProc` は、既定のメッセージマップを使用して、メッセージを適切なハンドラーに送信します。
 
-メッセージを処理`DialogProc`するための別のメカニズムを提供するためにオーバーライドできます。
+をオーバーライドし `DialogProc` て、メッセージを処理するためのさまざまなメカニズムを提供できます。
 
-## <a name="cdialogimpldomodal"></a><a name="domodal"></a>ダイアログインプル::Doモーダル
+## <a name="cdialogimpldomodal"></a><a name="domodal"></a> CDialogImpl::D oModal
 
-モーダル ダイアログ ボックスを作成します。
+モーダルダイアログボックスを作成します。
 
 ```
 INT_PTR DoModal(
@@ -196,25 +196,25 @@ INT_PTR DoModal(
 
 ### <a name="parameters"></a>パラメーター
 
-*スーンドペアレント*<br/>
-[in]所有者ウィンドウへのハンドル。 既定値は、[関数](/windows/win32/api/winuser/nf-winuser-getactivewindow)の戻り値です。
+*hWndParent*<br/>
+からオーナーウィンドウへのハンドル。 既定値は、 [GetActiveWindow](/windows/win32/api/winuser/nf-winuser-getactivewindow) Win32 関数の戻り値です。
 
-*ドウィニトパラム*<br/>
-[in]WM_INITDIALOG メッセージの*lParam*パラメータでダイアログ ボックスに渡す値を指定します。
+*dwInitParam*<br/>
+からWM_INITDIALOG メッセージの *lParam* パラメーターのダイアログボックスに渡す値を指定します。
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合は[、EndDialog](#enddialog)の呼び出しで指定された*nRetCode*パラメーターの値。 それ以外の場合は、-1。
+成功した場合は、 [EndDialog](#enddialog)への呼び出しで指定された*nRetCode*パラメーターの値。 それ以外の場合は、-1。
 
 ### <a name="remarks"></a>解説
 
-このダイアログ ボックスは、オブジェクトに`CDialogImpl`自動的にアタッチされます。
+このダイアログボックスは、自動的にオブジェクトにアタッチされ `CDialogImpl` ます。
 
-モードレス ダイアログ ボックスを作成するには、 [Create](#create)を呼び出します。
+モードレスダイアログボックスを作成するには、 [create](#create)を呼び出します。
 
-## <a name="cdialogimplenddialog"></a><a name="enddialog"></a>ダイアログボックスインプル::エンドダイアログ
+## <a name="cdialogimplenddialog"></a><a name="enddialog"></a> CDialogImpl:: EndDialog
 
-モーダル ダイアログ ボックスを破棄します。
+モーダルダイアログボックスを破棄します。
 
 ```
 BOOL EndDialog(int nRetCode);
@@ -222,23 +222,23 @@ BOOL EndDialog(int nRetCode);
 
 ### <a name="parameters"></a>パラメーター
 
-*nレットコード*<br/>
-[in]によって返される値[::DoModal.](#domodal)
+*nRetCode*<br/>
+からCDialogImpl によって返される値 [::D oModal](#domodal)。
 
 ### <a name="return-value"></a>戻り値
 
-ダイアログ ボックスが破棄された場合は TRUE。それ以外の場合は FALSE。
+ダイアログボックスが破棄される場合は TRUE。それ以外の場合は FALSE。
 
 ### <a name="remarks"></a>解説
 
-`EndDialog`ダイアログ プロシージャを通して呼び出す必要があります。 ダイアログ ボックスが破棄されると、ダイアログ ボックスを作成した`DoModal`戻り値として*nRetCode*の値が使用されます。
+`EndDialog` は、ダイアログプロシージャを使用して呼び出す必要があります。 ダイアログボックスが破棄された後、Windows では、ダイアログボックスを作成したの戻り値として *nRetCode* の値が使用 `DoModal` されます。
 
 > [!NOTE]
-> モードレス`EndDialog`ダイアログ ボックスを破棄するために呼び出しません。 代わりに[CWindow::Dエストロイウィンドウを](../../atl/reference/cwindow-class.md#destroywindow)呼び出します。
+> `EndDialog`モードレスダイアログボックスを破棄するためにを呼び出さないでください。 代わりに [CWindow::D estroywindow](../../atl/reference/cwindow-class.md#destroywindow) を呼び出します。
 
-## <a name="cdialogimplgetdialogproc"></a><a name="getdialogproc"></a>をクリックします。
+## <a name="cdialogimplgetdialogproc"></a><a name="getdialogproc"></a> CDialogImpl:: Get Proc
 
-現在`DialogProc`のダイアログ ボックス プロシージャを返します。
+`DialogProc`現在のダイアログボックスプロシージャであるを返します。
 
 ```
 virtual WNDPROC GetDialogProc();
@@ -246,15 +246,15 @@ virtual WNDPROC GetDialogProc();
 
 ### <a name="return-value"></a>戻り値
 
-現在のダイアログ ボックスプロシージャ。
+現在のダイアログボックスプロシージャ。
 
 ### <a name="remarks"></a>解説
 
-ダイアログ プロシージャを独自のプロシージャに置き換えるには、このメソッドをオーバーライドします。
+このメソッドをオーバーライドして、ダイアログプロシージャを独自のに置き換えます。
 
-## <a name="cdialogimplmapdialogrect"></a><a name="mapdialogrect"></a>ダイアログレクト::マップダイアログレック
+## <a name="cdialogimplmapdialogrect"></a><a name="mapdialogrect"></a> CDialogImpl:: Map Rect
 
-指定された四角形のダイアログ ボックスの単位を画面単位 (ピクセル) に変換 (マップ) します。
+指定した四角形のダイアログボックスの単位を画面単位 (ピクセル) に変換 (マップ) します。
 
 ```
 BOOL MapDialogRect(LPRECT lpRect);
@@ -262,20 +262,20 @@ BOOL MapDialogRect(LPRECT lpRect);
 
 ### <a name="parameters"></a>パラメーター
 
-*Lprect*<br/>
-更新領域を`CRect`囲む更新のクライアント座標を受け取るオブジェクトまたは[RECT](/windows/win32/api/windef/ns-windef-rect)構造体へのポインター。
+*lpRect*<br/>
+`CRect`更新領域を囲む更新プログラムのクライアント座標を受け取るオブジェクトまたは[RECT](/windows/win32/api/windef/ns-windef-rect)構造体を指します。
 
 ### <a name="return-value"></a>戻り値
 
-更新が成功した場合は 0 以外。更新が失敗した場合は 0。 拡張されたエラー情報を取得するには、`GetLastError` を呼び出します。
+更新が成功した場合は0以外の。更新が失敗した場合は0。 拡張されたエラー情報を取得するには、`GetLastError` を呼び出します。
 
 ### <a name="remarks"></a>解説
 
-この関数は、指定した`RECT`構造体の座標を変換された座標に置き換えます。
+関数は、指定された構造体の座標を変換された座標で置き換えます `RECT` 。これにより、構造体を使用してダイアログボックスを作成したり、ダイアログボックス内にコントロールを配置したりできます。
 
-## <a name="cdialogimplonfinalmessage"></a><a name="onfinalmessage"></a>終値::オンファイナルメッセージ
+## <a name="cdialogimplonfinalmessage"></a><a name="onfinalmessage"></a> CDialogImpl:: OnFinalMessage
 
-最後のメッセージを受信した後に`WM_NCDESTROY`呼び出されます (通常)。
+最後のメッセージを受信した後に呼び出されます (通常は `WM_NCDESTROY` )。
 
 ```
 virtual void OnFinalMessage(HWND hWnd);
@@ -284,15 +284,15 @@ virtual void OnFinalMessage(HWND hWnd);
 ### <a name="parameters"></a>パラメーター
 
 *hWnd*<br/>
-[in]破棄されるウィンドウへのハンドル。
+から破棄されるウィンドウへのハンドル。
 
 ### <a name="remarks"></a>解説
 
-ウィンドウの破棄時にオブジェクトを自動的に削除する場合は、**これを削除**します。
+ウィンドウの破棄時にオブジェクトを自動的に削除する場合は、[ **delete this** ] を呼び出すことができます。
 
-## <a name="cdialogimplstartdialogproc"></a><a name="startdialogproc"></a>を開始します。
+## <a name="cdialogimplstartdialogproc"></a><a name="startdialogproc"></a> CDialogImpl:: Startview Proc
 
-ダイアログ ボックスに送信されたメッセージを処理するために、最初のメッセージを受信したときに 1 回だけ呼び出されます。
+ダイアログボックスに送信されたメッセージを処理するために、最初のメッセージを受信したときに1回だけ呼び出されます。
 
 ```
 static LRESULT CALLBACK StartDialogProc(
@@ -305,24 +305,24 @@ static LRESULT CALLBACK StartDialogProc(
 ### <a name="parameters"></a>パラメーター
 
 *hWnd*<br/>
-[in]ダイアログ ボックスのハンドル。
+からダイアログボックスへのハンドル。
 
-*をクリックします。*<br/>
-[in]ダイアログ ボックスに送信されるメッセージ。
+*uMsg*<br/>
+からダイアログボックスに送信されたメッセージ。
 
 *wParam*<br/>
-[in]メッセージ固有の追加情報。
+からメッセージ固有の追加情報。
 
 *lParam*<br/>
-[in]メッセージ固有の追加情報。
+からメッセージ固有の追加情報。
 
 ### <a name="return-value"></a>戻り値
 
-ウィンドウ プロシージャ。
+ウィンドウプロシージャ。
 
 ### <a name="remarks"></a>解説
 
-の`StartDialogProc`最初の呼び出`DialogProc`しの後、ダイアログ プロシージャとして設定され、さらに呼び出しが行われます。
+への最初の呼び出しの後 `StartDialogProc` 、 `DialogProc` はダイアログプロシージャとして設定され、それ以降の呼び出しはそこに送られます。
 
 ## <a name="see-also"></a>関連項目
 

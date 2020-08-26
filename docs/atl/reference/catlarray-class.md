@@ -25,12 +25,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlArray class
 ms.assetid: 0b503aa8-2357-40af-a326-6654bf1da098
-ms.openlocfilehash: 5928a9bf8af12b2ce15a386871b845ef86cc7a2d
-ms.sourcegitcommit: 2bc15c5b36372ab01fa21e9bcf718fa22705814f
+ms.openlocfilehash: c4a4cd509a5d3078c6587ba7b29179a68912a258
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82168770"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88833843"
 ---
 # <a name="catlarray-class"></a>CAtlArray クラス
 
@@ -55,7 +55,7 @@ class CAtlArray
 
 ### <a name="methods"></a>メソッド
 
-|||
+|関数|説明|
 |-|-|
 |[追加](#add)|要素を配列オブジェクトに追加するには、このメソッドを呼び出します。|
 |[Append](#append)|ある配列の内容を別の配列の末尾に追加するには、このメソッドを呼び出します。|
@@ -76,26 +76,26 @@ class CAtlArray
 |[SetAtGrow](#setatgrow)|配列オブジェクトの要素の値を設定するには、このメソッドを呼び出し、必要に応じて配列を展開します。|
 |[SetCount](#setcount)|配列オブジェクトのサイズを設定するには、このメソッドを呼び出します。|
 
-### <a name="operators"></a>オペレーター
+### <a name="operators"></a>演算子
 
-|||
+|演算子|説明|
 |-|-|
-|[ &#91;&#93;演算子](#operator_at)|配列内の要素への参照を返すには、この演算子を呼び出します。|
+|[ &#91;&#93;演算子 ](#operator_at)|配列内の要素への参照を返すには、この演算子を呼び出します。|
 
 ### <a name="typedefs"></a>Typedefs
 
-|||
+|Typedef|説明|
 |-|-|
 |[INARGTYPE](#inargtype)|配列に要素を追加するために使用するデータ型。|
 |[OUTARGTYPE](#outargtype)|配列から要素を取得するために使用するデータ型。|
 
 ## <a name="remarks"></a>解説
 
-`CAtlArray`ユーザー定義型の要素の配列を作成および管理するためのメソッドを提供します。 標準 C 配列に似ています`CAtlArray`が、オブジェクトは必要に応じて動的に縮小および拡張できます。 配列インデックスは、常に位置0から開始し、上限は固定するか、新しい要素が追加されたときに拡張することができます。
+`CAtlArray` ユーザー定義型の要素の配列を作成および管理するためのメソッドを提供します。 標準 C 配列に似 `CAtlArray` ていますが、オブジェクトは必要に応じて動的に縮小および拡張できます。 配列インデックスは、常に位置0から開始し、上限は固定するか、新しい要素が追加されたときに拡張することができます。
 
-要素の数が少ない配列の場合、ATL クラス[CSimpleArray](../../atl/reference/csimplearray-class.md)を使用できます。
+要素の数が少ない配列の場合、ATL クラス [CSimpleArray](../../atl/reference/csimplearray-class.md) を使用できます。
 
-`CAtlArray`は MFC の`CArray`クラスに密接に関連しており、mfc プロジェクトでは機能しますが、シリアル化はサポートされていません。
+`CAtlArray` は MFC のクラスに密接に関連 `CArray` しており、mfc プロジェクトでは機能しますが、シリアル化はサポートされていません。
 
 詳細については、「 [ATL コレクションクラス](../../atl/atl-collection-classes.md)」を参照してください。
 
@@ -103,7 +103,7 @@ class CAtlArray
 
 **ヘッダー:** atlcoll. h
 
-## <a name="catlarrayadd"></a><a name="add"></a>CAtlArray:: Add
+## <a name="catlarrayadd"></a><a name="add"></a> CAtlArray:: Add
 
 要素を配列オブジェクトに追加するには、このメソッドを呼び出します。
 
@@ -123,13 +123,13 @@ size_t Add();
 
 ### <a name="remarks"></a>解説
 
-新しい要素が配列の末尾に追加されます。 要素が指定されていない場合は、空の要素が追加されます。つまり、実際の要素が追加されているかのように、配列のサイズが大きくなります。 操作が失敗した場合は、引数 E_OUTOFMEMORY を指定して[Atlthrow](debugging-and-error-reporting-global-functions.md#atlthrow)が呼び出されます。
+新しい要素が配列の末尾に追加されます。 要素が指定されていない場合は、空の要素が追加されます。つまり、実際の要素が追加されているかのように、配列のサイズが大きくなります。 操作が失敗した場合は、引数 E_OUTOFMEMORY を指定して [Atlthrow](debugging-and-error-reporting-global-functions.md#atlthrow) が呼び出されます。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_ATL_Utilities#1](../../atl/codesnippet/cpp/catlarray-class_1.cpp)]
 
-## <a name="catlarrayappend"></a><a name="append"></a>CAtlArray:: Append
+## <a name="catlarrayappend"></a><a name="append"></a> CAtlArray:: Append
 
 ある配列の内容を別の配列の末尾に追加するには、このメソッドを呼び出します。
 
@@ -152,13 +152,13 @@ size_t Append(const CAtlArray<E, ETraits>& aSrc);
 
 配列は同じ型である必要があり、それ自体に配列を追加することはできません。
 
-デバッグビルドでは、 `CAtlArray`引数が有効な配列でない場合、または*asrc*が同じオブジェクトを参照する場合、ATLASSERT が発生します。 リリースビルドでは、無効な引数が原因で予期しない動作が発生する可能性があります。
+デバッグビルドでは、 `CAtlArray` 引数が有効な配列でない場合、または *asrc* が同じオブジェクトを参照する場合、ATLASSERT が発生します。 リリースビルドでは、無効な引数が原因で予期しない動作が発生する可能性があります。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_ATL_Utilities#2](../../atl/codesnippet/cpp/catlarray-class_2.cpp)]
 
-## <a name="catlarrayassertvalid"></a><a name="assertvalid"></a>CAtlArray:: AssertValid
+## <a name="catlarrayassertvalid"></a><a name="assertvalid"></a> CAtlArray:: AssertValid
 
 配列オブジェクトが有効であることを確認するには、このメソッドを呼び出します。
 
@@ -174,7 +174,7 @@ void AssertValid() const;
 
 [!code-cpp[NVC_ATL_Utilities#3](../../atl/codesnippet/cpp/catlarray-class_3.cpp)]
 
-## <a name="catlarraycatlarray"></a><a name="catlarray"></a>CAtlArray::CAtlArray
+## <a name="catlarraycatlarray"></a><a name="catlarray"></a> CAtlArray::CAtlArray
 
 コンストラクターです。
 
@@ -190,7 +190,7 @@ CAtlArray() throw();
 
 [!code-cpp[NVC_ATL_Utilities#4](../../atl/codesnippet/cpp/catlarray-class_4.cpp)]
 
-## <a name="catlarraycatlarray"></a><a name="dtor"></a>CAtlArray:: ~ CAtlArray
+## <a name="catlarraycatlarray"></a><a name="dtor"></a> CAtlArray:: ~ CAtlArray
 
 デストラクターです。
 
@@ -202,7 +202,7 @@ CAtlArray() throw();
 
 配列オブジェクトによって使用されているすべてのリソースを解放します。
 
-## <a name="catlarraycopy"></a><a name="copy"></a>CAtlArray:: Copy
+## <a name="catlarraycopy"></a><a name="copy"></a> CAtlArray:: Copy
 
 1つの配列の要素を別の配列にコピーするには、このメソッドを呼び出します。
 
@@ -219,18 +219,18 @@ void Copy(const CAtlArray<E, ETraits>& aSrc);
 
 1つの配列の要素を別の配列の要素で上書きするには、このメソッドを呼び出します。 必要に応じて、新しい要素を格納するためにメモリが割り当てられます。 配列の要素をそれ自体にコピーすることはできません。
 
-配列の既存の内容を保持する場合は、代わりに[CAtlArray:: Append](#append)を使用します。
+配列の既存の内容を保持する場合は、代わりに [CAtlArray:: Append](#append) を使用します。
 
-デバッグビルドでは、既存`CAtlArray`のオブジェクトが有効でない場合、または*asrc*が同じオブジェクトを参照する場合、ATLASSERT が発生します。 リリースビルドでは、無効な引数が原因で予期しない動作が発生する可能性があります。
+デバッグビルドでは、既存の `CAtlArray` オブジェクトが有効でない場合、または *asrc* が同じオブジェクトを参照する場合、ATLASSERT が発生します。 リリースビルドでは、無効な引数が原因で予期しない動作が発生する可能性があります。
 
 > [!NOTE]
-> `CAtlArray::Copy`は、 [CAutoPtr](../../atl/reference/cautoptr-class.md)クラスを使用して作成された要素で構成される配列をサポートしていません。
+> `CAtlArray::Copy` は、 [CAutoPtr](../../atl/reference/cautoptr-class.md) クラスを使用して作成された要素で構成される配列をサポートしていません。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_ATL_Utilities#5](../../atl/codesnippet/cpp/catlarray-class_5.cpp)]
 
-## <a name="catlarrayfreeextra"></a><a name="freeextra"></a>CAtlArray:: FreeExtra
+## <a name="catlarrayfreeextra"></a><a name="freeextra"></a> CAtlArray:: FreeExtra
 
 空の要素を配列から削除するには、このメソッドを呼び出します。
 
@@ -244,7 +244,7 @@ void FreeExtra() throw();
 
 デバッグビルドでは、CAtlArray オブジェクトが有効でない場合、または配列の最大サイズを超える場合は、ATLASSERT が発生します。
 
-## <a name="catlarraygetat"></a><a name="getat"></a>CAtlArray:: GetAt
+## <a name="catlarraygetat"></a><a name="getat"></a> CAtlArray:: GetAt
 
 配列オブジェクトから1つの要素を取得するには、このメソッドを呼び出します。
 
@@ -264,13 +264,13 @@ E& GetAt(size_t iElement) throw();
 
 ### <a name="remarks"></a>解説
 
-デバッグビルドでは、 *Ielement*が配列内の要素の数を超えると ATLASSERT が発生します。 リリースビルドでは、無効な引数が原因で予期しない動作が発生する可能性があります。
+デバッグビルドでは、 *Ielement* が配列内の要素の数を超えると ATLASSERT が発生します。 リリースビルドでは、無効な引数が原因で予期しない動作が発生する可能性があります。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_ATL_Utilities#6](../../atl/codesnippet/cpp/catlarray-class_6.cpp)]
 
-## <a name="catlarraygetcount"></a><a name="getcount"></a>CAtlArray:: GetCount
+## <a name="catlarraygetcount"></a><a name="getcount"></a> CAtlArray:: GetCount
 
 配列に格納されている要素の数を返すには、このメソッドを呼び出します。
 
@@ -284,13 +284,13 @@ size_t GetCount() const throw();
 
 ### <a name="remarks"></a>解説
 
-配列内の最初の要素は0の位置にあるため、によっ`GetCount`て返される値は、常に最大のインデックスよりも1大きい値になります。
+配列内の最初の要素は0の位置にあるため、によって返される値 `GetCount` は、常に最大のインデックスよりも1大きい値になります。
 
 ### <a name="example"></a>例
 
 [CAtlArray:: GetAt](#getat)の例を参照してください。
 
-## <a name="catlarraygetdata"></a><a name="getdata"></a>CAtlArray:: GetData
+## <a name="catlarraygetdata"></a><a name="getdata"></a> CAtlArray:: GetData
 
 配列内の最初の要素へのポインターを返すには、このメソッドを呼び出します。
 
@@ -307,7 +307,7 @@ const E* GetData() const throw();
 
 [!code-cpp[NVC_ATL_Utilities#7](../../atl/codesnippet/cpp/catlarray-class_7.cpp)]
 
-## <a name="catlarrayinargtype"></a><a name="inargtype"></a>CAtlArray:: INARGTYPE
+## <a name="catlarrayinargtype"></a><a name="inargtype"></a> CAtlArray:: INARGTYPE
 
 配列に要素を追加するために使用するデータ型。
 
@@ -315,7 +315,7 @@ const E* GetData() const throw();
 typedef ETraits::INARGTYPE INARGTYPE;
 ```
 
-## <a name="catlarrayinsertarrayat"></a><a name="insertarrayat"></a>CAtlArray:: InsertArrayAt
+## <a name="catlarrayinsertarrayat"></a><a name="insertarrayat"></a> CAtlArray:: InsertArrayAt
 
 1つの配列を別の配列に挿入するには、このメソッドを呼び出します。
 
@@ -335,16 +335,16 @@ void InsertArrayAt(size_t iStart, const CAtlArray<E, ETraits>* paNew);
 
 配列*panew*の要素は、要素*iStart*から始まる配列オブジェクトにコピーされます。 既存の配列要素は、上書きされないように移動されます。
 
-デバッグビルドでは、 `CAtlArray`オブジェクトが有効でない場合、または*PANEW*ポインターが NULL または無効な場合に、そのオブジェクトが生成されます。
+デバッグビルドでは、 `CAtlArray` オブジェクトが有効でない場合、または *panew* ポインターが NULL または無効な場合に、そのオブジェクトが生成されます。
 
 > [!NOTE]
-> `CAtlArray::InsertArrayAt`は、 [CAutoPtr](../../atl/reference/cautoptr-class.md)クラスを使用して作成された要素で構成される配列をサポートしていません。
+> `CAtlArray::InsertArrayAt` は、 [CAutoPtr](../../atl/reference/cautoptr-class.md) クラスを使用して作成された要素で構成される配列をサポートしていません。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_ATL_Utilities#8](../../atl/codesnippet/cpp/catlarray-class_8.cpp)]
 
-## <a name="catlarrayinsertat"></a><a name="insertat"></a>CAtlArray:: InsertAt
+## <a name="catlarrayinsertat"></a><a name="insertat"></a> CAtlArray:: InsertAt
 
 このメソッドを呼び出して、新しい要素 (または要素の複数のコピー) を配列オブジェクトに挿入します。
 
@@ -365,15 +365,15 @@ void InsertAt(size_t iElement, INARGTYPE element, size_t nCount = 1);
 
 ### <a name="remarks"></a>解説
 
-インデックス*Ielement*を開始位置として、配列に1つ以上の要素を挿入します。 既存の要素は、上書きされないように移動されます。
+インデックス *Ielement*を開始位置として、配列に1つ以上の要素を挿入します。 既存の要素は、上書きされないように移動されます。
 
-デバッグビルドでは、 `CAtlArray`オブジェクトが無効である場合、追加される要素の数が0の場合、または要素の組み合わせ数が大きすぎて配列に格納できない場合に、ATLASSERT が発生します。 リテールビルドでは、無効なパラメーターを渡すと、予測できない結果が発生する可能性があります。
+デバッグビルドでは、 `CAtlArray` オブジェクトが無効である場合、追加される要素の数が0の場合、または要素の組み合わせ数が大きすぎて配列に格納できない場合に、ATLASSERT が発生します。 リテールビルドでは、無効なパラメーターを渡すと、予測できない結果が発生する可能性があります。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_ATL_Utilities#9](../../atl/codesnippet/cpp/catlarray-class_9.cpp)]
 
-## <a name="catlarrayisempty"></a><a name="isempty"></a>CAtlArray:: IsEmpty
+## <a name="catlarrayisempty"></a><a name="isempty"></a> CAtlArray:: IsEmpty
 
 配列が空かどうかをテストするには、このメソッドを呼び出します。
 
@@ -393,7 +393,7 @@ bool IsEmpty() const throw();
 
 [!code-cpp[NVC_ATL_Utilities#10](../../atl/codesnippet/cpp/catlarray-class_10.cpp)]
 
-## <a name="catlarrayoperator-"></a><a name="operator_at"></a>CAtlArray:: operator []
+## <a name="catlarrayoperator-"></a><a name="operator_at"></a> CAtlArray:: operator []
 
 配列内の要素への参照を返すには、この演算子を呼び出します。
 
@@ -413,11 +413,11 @@ const E& operator[](size_t ielement) const throw();
 
 ### <a name="remarks"></a>解説
 
-[CAtlArray:: GetAt](#getat)と同様の関数を実行します。 MFC クラス[CArray](../../mfc/reference/carray-class.md)とは異なり、この演算子を[CAtlArray:: SetAt](#setat)の代替として使用することはできません。
+[CAtlArray:: GetAt](#getat)と同様の関数を実行します。 MFC クラス [CArray](../../mfc/reference/carray-class.md)とは異なり、この演算子を [CAtlArray:: SetAt](#setat)の代替として使用することはできません。
 
-デバッグビルドでは、 *Ielement*が配列内の要素の合計数を超えると ATLASSERT が発生します。 リテールビルドでは、無効なパラメーターが原因で予期しない結果が発生する可能性があります。
+デバッグビルドでは、 *Ielement* が配列内の要素の合計数を超えると ATLASSERT が発生します。 リテールビルドでは、無効なパラメーターが原因で予期しない結果が発生する可能性があります。
 
-## <a name="catlarrayoutargtype"></a><a name="outargtype"></a>CAtlArray:: OUTARGTYPE
+## <a name="catlarrayoutargtype"></a><a name="outargtype"></a> CAtlArray:: OUTARGTYPE
 
 配列から要素を取得するために使用するデータ型。
 
@@ -425,7 +425,7 @@ const E& operator[](size_t ielement) const throw();
 typedef ETraits::OUTARGTYPE OUTARGTYPE;
 ```
 
-## <a name="catlarrayremoveall"></a><a name="removeall"></a>CAtlArray:: RemoveAll
+## <a name="catlarrayremoveall"></a><a name="removeall"></a> CAtlArray:: RemoveAll
 
 配列オブジェクトからすべての要素を削除するには、このメソッドを呼び出します。
 
@@ -437,13 +437,13 @@ void RemoveAll() throw();
 
 配列オブジェクトからすべての要素を削除します。
 
-このメソッドは、 [CAtlArray:: SetCount](#setcount)を呼び出して配列のサイズを変更した後、割り当てられたメモリを解放します。
+このメソッドは、 [CAtlArray:: SetCount](#setcount) を呼び出して配列のサイズを変更した後、割り当てられたメモリを解放します。
 
 ### <a name="example"></a>例
 
 [CAtlArray:: IsEmpty](#isempty)の例を参照してください。
 
-## <a name="catlarrayremoveat"></a><a name="removeat"></a>CAtlArray:: RemoveAt
+## <a name="catlarrayremoveat"></a><a name="removeat"></a> CAtlArray:: RemoveAt
 
 配列から1つ以上の要素を削除するには、このメソッドを呼び出します。
 
@@ -461,15 +461,15 @@ void RemoveAt(size_t iElement, size_t nCount = 1);
 
 ### <a name="remarks"></a>解説
 
-配列から1つ以上の要素を削除します。 残りの要素はすべて下に移動されます。 上限はデクリメントされますが、 [CAtlArray:: FreeExtra](#freeextra)の呼び出しが行われるまで、メモリは解放されません。
+配列から1つ以上の要素を削除します。 残りの要素はすべて下に移動されます。 上限はデクリメントされますが、 [CAtlArray:: FreeExtra](#freeextra) の呼び出しが行われるまで、メモリは解放されません。
 
-デバッグビルドでは、 `CAtlArray`オブジェクトが有効でない場合、または*Ielement*と*nCount*の合計が配列内の要素の合計数を超えた場合、ATLASSERT が発生します。 リテールビルドでは、無効なパラメーターが原因で予期しない結果が発生する可能性があります。
+デバッグビルドでは、 `CAtlArray` オブジェクトが有効でない場合、または *ielement* と *nCount* の合計が配列内の要素の合計数を超えた場合、ATLASSERT が発生します。 リテールビルドでは、無効なパラメーターが原因で予期しない結果が発生する可能性があります。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_ATL_Utilities#11](../../atl/codesnippet/cpp/catlarray-class_11.cpp)]
 
-## <a name="catlarraysetat"></a><a name="setat"></a>CAtlArray:: SetAt
+## <a name="catlarraysetat"></a><a name="setat"></a> CAtlArray:: SetAt
 
 配列オブジェクトの要素の値を設定するには、このメソッドを呼び出します。
 
@@ -487,13 +487,13 @@ void SetAt(size_t iElement, INARGTYPE element);
 
 ### <a name="remarks"></a>解説
 
-デバッグビルドでは、 *Ielement*が配列内の要素の数を超えると ATLASSERT が発生します。 リテールビルドでは、無効なパラメーターが原因で予測できない結果になる場合があります。
+デバッグビルドでは、 *Ielement* が配列内の要素の数を超えると ATLASSERT が発生します。 リテールビルドでは、無効なパラメーターが原因で予測できない結果になる場合があります。
 
 ### <a name="example"></a>例
 
 [CAtlArray:: GetAt](#getat)の例を参照してください。
 
-## <a name="catlarraysetcount"></a><a name="setcount"></a>CAtlArray:: SetCount
+## <a name="catlarraysetcount"></a><a name="setcount"></a> CAtlArray:: SetCount
 
 配列オブジェクトのサイズを設定するには、このメソッドを呼び出します。
 
@@ -517,13 +517,13 @@ bool SetCount(size_t nNewSize, int nGrowBy = - 1);
 
 配列のサイズを増減することができます。 増加した場合は、余分な空の要素が配列に追加されます。 値が小さくなると、インデックスの最大値を持つ要素が削除され、メモリが解放されます。
 
-使用する前に配列のサイズを設定するには、このメソッドを使用します。 が`SetCount`使用されていない場合、要素を追加するプロセスと、それ以降に実行されるメモリ割り当ては、パフォーマンスとフラグメントメモリを削減します。
+使用する前に配列のサイズを設定するには、このメソッドを使用します。 `SetCount`が使用されていない場合、要素を追加するプロセスと、それ以降に実行されるメモリ割り当ては、パフォーマンスとフラグメントメモリを削減します。
 
 ### <a name="example"></a>例
 
 [CAtlArray:: GetData](#getdata)の例を参照してください。
 
-## <a name="catlarraysetatgrow"></a><a name="setatgrow"></a>CAtlArray::SetAtGrow
+## <a name="catlarraysetatgrow"></a><a name="setatgrow"></a> CAtlArray::SetAtGrow
 
 配列オブジェクトの要素の値を設定するには、このメソッドを呼び出し、必要に応じて配列を展開します。
 
@@ -541,7 +541,7 @@ void SetAtGrow(size_t iElement, INARGTYPE element);
 
 ### <a name="remarks"></a>解説
 
-インデックスが指す要素の値を置き換えます。 *Ielement*が配列の現在のサイズより大きい場合、 [CAtlArray:: setcount](#setcount)の呼び出しを使用して配列が自動的に増加します。 デバッグビルドでは、 `CAtlArray`オブジェクトが有効でない場合に ATLASSERT が発生します。 リテールビルドでは、無効なパラメーターが原因で予期しない結果が発生する可能性があります。
+インデックスが指す要素の値を置き換えます。 *Ielement*が配列の現在のサイズより大きい場合、 [CAtlArray:: setcount](#setcount)の呼び出しを使用して配列が自動的に増加します。 デバッグビルドでは、オブジェクトが有効でない場合に ATLASSERT が発生 `CAtlArray` します。 リテールビルドでは、無効なパラメーターが原因で予期しない結果が発生する可能性があります。
 
 ### <a name="example"></a>例
 

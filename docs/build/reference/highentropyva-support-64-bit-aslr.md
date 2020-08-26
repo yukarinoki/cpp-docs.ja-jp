@@ -2,12 +2,12 @@
 title: /HIGHENTROPYVA (64 ビット ASLR のサポート)
 ms.date: 06/12/2018
 ms.assetid: fe35f9f7-d28e-4694-9aeb-a79db06168e0
-ms.openlocfilehash: 929d6aa71010c1f303bf7a1ce64109a01b8792e4
-ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
+ms.openlocfilehash: ead296b1bd31171fb1a187685f407f6a0cf8a74c
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86404126"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88835026"
 ---
 # <a name="highentropyva-support-64-bit-aslr"></a>/HIGHENTROPYVA (64 ビット ASLR のサポート)
 
@@ -31,7 +31,7 @@ ms.locfileid: "86404126"
 
 1. [**構成プロパティ**] [  >  **リンカー**  >  **コマンドライン**] プロパティページを選択します。
 
-1. [**追加オプション**] で、またはを入力し `/HIGHENTROPYVA` `/HIGHENTROPYVA:NO` ます。
+1. [ **追加オプション**] で、またはを入力し `/HIGHENTROPYVA` `/HIGHENTROPYVA:NO` ます。
 
 ## <a name="see-also"></a>関連項目
 
@@ -39,4 +39,4 @@ ms.locfileid: "86404126"
 - [MSVC リンカー オプション](linker-options.md)
 - [`/DYNAMICBASE`](dynamicbase-use-address-space-layout-randomization.md)
 - [`/LARGEADDRESSAWARE`](largeaddressaware-handle-large-addresses.md)
-- [Windows ISV ソフトウェアセキュリティ防御](https://docs.microsoft.com/previous-versions/bb430720(v=msdn.10))
+- [Windows ISV ソフトウェアセキュリティ防御](/previous-versions/bb430720(v=msdn.10))

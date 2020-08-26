@@ -1,5 +1,5 @@
 ---
-title: クラス
+title: CPrivateObjectSecurityDesc クラス
 ms.date: 11/04/2016
 f1_keywords:
 - CPrivateObjectSecurityDesc
@@ -12,16 +12,16 @@ f1_keywords:
 helpviewer_keywords:
 - CPrivateObjectSecurityDesc class
 ms.assetid: 2c4bbb13-bf99-4833-912a-197f6815bb5d
-ms.openlocfilehash: 2fcfdfecab649b571047613ec0889b02d2c7a7a0
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: f62d289418280a05f390bf9cdec23ea30632aed2
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81331413"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88833505"
 ---
-# <a name="cprivateobjectsecuritydesc-class"></a>クラス
+# <a name="cprivateobjectsecuritydesc-class"></a>CPrivateObjectSecurityDesc クラス
 
-このクラスは、プライベート オブジェクトのセキュリティ記述子オブジェクトを表します。
+このクラスは、プライベートオブジェクトのセキュリティ記述子オブジェクトを表します。
 
 ## <a name="syntax"></a>構文
 
@@ -35,43 +35,43 @@ class CPrivateObjectSecurityDesc : public CSecurityDesc
 
 |名前|説明|
 |----------|-----------------|
-|[セキュリティサービス::Cプライベートオブジェクトセキュリティデス](#cprivateobjectsecuritydesc)|コンストラクターです。|
-|[セキュリティサービス::~Cプライベートオブジェクトセキュリティデス](#dtor)|デストラクターです。|
+|[CPrivateObjectSecurityDesc:: CPrivateObjectSecurityDesc](#cprivateobjectsecuritydesc)|コンストラクターです。|
+|[CPrivateObjectSecurityDesc:: ~ CPrivateObjectSecurityDesc](#dtor)|デストラクターです。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
 |名前|説明|
 |----------|-----------------|
-|[を継承します。](#converttoautoinherit)|セキュリティ記述子とそのアクセス制御リスト (ACL) を、継承可能なアクセス制御エントリ (ACE) の自動伝達をサポートする形式に変換します。|
-|[Cプライベートオブジェクトセキュリティデスク::作成](#create)|呼び出し元のリソース マネージャーによって作成されたプライベート オブジェクトの自己相対セキュリティ記述子を割り当て、初期化します。|
-|[セキュリティサービス::取得](#get)|プライベート オブジェクトのセキュリティ記述子から情報を取得します。|
-|[セキュリティサービス::セット](#set)|プライベート オブジェクトのセキュリティ記述子を変更します。|
+|[CPrivateObjectSecurityDesc:: ConvertToAutoInherit](#converttoautoinherit)|セキュリティ記述子とそのアクセス制御リスト (Acl) を、継承可能なアクセス制御エントリ (Ace) の自動伝達をサポートする形式に変換するには、このメソッドを呼び出します。|
+|[CPrivateObjectSecurityDesc:: Create](#create)|呼び出し元のリソースマネージャーによって作成されたプライベートオブジェクトの自己相対セキュリティ記述子を割り当てて初期化するには、このメソッドを呼び出します。|
+|[CPrivateObjectSecurityDesc:: Get](#get)|プライベートオブジェクトのセキュリティ記述子から情報を取得するには、このメソッドを呼び出します。|
+|[CPrivateObjectSecurityDesc:: Set](#set)|プライベートオブジェクトのセキュリティ記述子を変更するには、このメソッドを呼び出します。|
 
-### <a name="operators"></a>オペレーター
+### <a name="operators"></a>演算子
 
-|||
+|演算子|説明|
 |-|-|
-|[演算子 =](#operator_eq)|代入演算子。|
+|[operator =](#operator_eq)|代入演算子。|
 
 ## <a name="remarks"></a>解説
 
-このクラスは[、CSecurityDesc](../../atl/reference/csecuritydesc-class.md)から派生したプライベート オブジェクトのセキュリティ記述子を作成および管理するためのメソッドを提供します。
+[Csecuritydesc](../../atl/reference/csecuritydesc-class.md)から派生したこのクラスは、プライベートオブジェクトのセキュリティ記述子を作成および管理するためのメソッドを提供します。
 
-Windows のアクセス制御モデルの概要については、Windows SDK の[アクセス制御](/windows/win32/SecAuthZ/access-control)を参照してください。
+Windows のアクセス制御モデルの概要については、Windows SDK の「 [Access Control](/windows/win32/SecAuthZ/access-control) 」を参照してください。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
-[セキュリティデス](../../atl/reference/csecuritydesc-class.md)
+[CSecurityDesc](../../atl/reference/csecuritydesc-class.md)
 
 `CPrivateObjectSecurityDesc`
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** atlsecurity.h
+**ヘッダー:** atlsecurity .h
 
-## <a name="cprivateobjectsecuritydescconverttoautoinherit"></a><a name="converttoautoinherit"></a>を継承します。
+## <a name="cprivateobjectsecuritydescconverttoautoinherit"></a><a name="converttoautoinherit"></a> CPrivateObjectSecurityDesc:: ConvertToAutoInherit
 
-セキュリティ記述子とそのアクセス制御リスト (ACL) を、継承可能なアクセス制御エントリ (ACE) の自動伝達をサポートする形式に変換します。
+セキュリティ記述子とそのアクセス制御リスト (Acl) を、継承可能なアクセス制御エントリ (Ace) の自動伝達をサポートする形式に変換するには、このメソッドを呼び出します。
 
 ```
 bool ConvertToAutoInherit(
@@ -83,17 +83,17 @@ bool ConvertToAutoInherit(
 
 ### <a name="parameters"></a>パラメーター
 
-*親*<br/>
-オブジェクトの親コンテナを参照する[CSecurityDesc](../../atl/reference/csecuritydesc-class.md)オブジェクトへのポインター。 親コンテナがない場合、このパラメータは NULL です。
+*pParent*<br/>
+オブジェクトの親コンテナーを参照している [Csecuritydesc](../../atl/reference/csecuritydesc-class.md) オブジェクトへのポインター。 親コンテナーが存在しない場合、このパラメーターは NULL になります。
 
-*オブジェクトタイプ*<br/>
-現在の`GUID`オブジェクトに関連付けられているオブジェクトの型を識別する構造体へのポインター。 オブジェクトに GUID がない場合は *、ObjectType*を NULL に設定します。
+*ObjectType*<br/>
+`GUID`現在のオブジェクトに関連付けられているオブジェクトの型を識別する構造体へのポインター。 オブジェクトに GUID がない場合は、 *ObjectType* を NULL に設定します。
 
-*オブジェクト*<br/>
-新しいオブジェクトに他のオブジェクトを含めることができるかどうかを指定します。 値が true の場合、新しいオブジェクトがコンテナーであることを示します。 値が false の場合、新しいオブジェクトがコンテナーではないことを示します。
+*bIsDirectoryObject*<br/>
+新しいオブジェクトに他のオブジェクトを含めることができるかどうかを指定します。 値が true の場合は、新しいオブジェクトがコンテナーであることを示します。 値が false の場合は、新しいオブジェクトがコンテナーではないことを示します。
 
-*ジェネリックマッピング*<br/>
-オブジェクトに対する各ジェネリック権限から特定の権限へのマッピングを指定する[GENERIC_MAPPING](/windows/win32/api/winnt/ns-winnt-generic_mapping)構造体へのポインター。
+*GenericMapping*<br/>
+各汎用権限からオブジェクトの特定の権限へのマッピングを指定する [GENERIC_MAPPING](/windows/win32/api/winnt/ns-winnt-generic_mapping) 構造体へのポインター。
 
 ### <a name="return-value"></a>戻り値
 
@@ -101,9 +101,9 @@ bool ConvertToAutoInherit(
 
 ### <a name="remarks"></a>解説
 
-このメソッドは、現在のセキュリティ記述子の随意アクセス制御リスト (DACL) およびシステム アクセス制御リスト (SACL) 内の ACE が親セキュリティ記述子から継承されたかどうかを判断しようとします。 関数[を](/windows/win32/api/securitybaseapi/nf-securitybaseapi-converttoautoinheritprivateobjectsecurity)呼び出します。
+このメソッドは、現在のセキュリティ記述子の随意アクセス制御リスト (DACL) とシステムアクセス制御リスト (SACL) の Ace が親セキュリティ記述子から継承されているかどうかを判断しようとします。 [Converttoautoinheritprivateobjectsecurity](/windows/win32/api/securitybaseapi/nf-securitybaseapi-converttoautoinheritprivateobjectsecurity)関数を呼び出します。
 
-## <a name="cprivateobjectsecuritydesccprivateobjectsecuritydesc"></a><a name="cprivateobjectsecuritydesc"></a>セキュリティサービス::Cプライベートオブジェクトセキュリティデス
+## <a name="cprivateobjectsecuritydesccprivateobjectsecuritydesc"></a><a name="cprivateobjectsecuritydesc"></a> CPrivateObjectSecurityDesc:: CPrivateObjectSecurityDesc
 
 コンストラクターです。
 
@@ -115,7 +115,7 @@ CPrivateObjectSecurityDesc() throw();
 
 `CPrivateObjectSecurityDesc` オブジェクトを初期化します。
 
-## <a name="cprivateobjectsecuritydesccprivateobjectsecuritydesc"></a><a name="dtor"></a>セキュリティサービス::~Cプライベートオブジェクトセキュリティデス
+## <a name="cprivateobjectsecuritydesccprivateobjectsecuritydesc"></a><a name="dtor"></a> CPrivateObjectSecurityDesc:: ~ CPrivateObjectSecurityDesc
 
 デストラクターです。
 
@@ -125,11 +125,11 @@ CPrivateObjectSecurityDesc() throw();
 
 ### <a name="remarks"></a>解説
 
-デストラクターは、割り当てられたすべてのリソースを解放し、プライベート オブジェクトのセキュリティ記述子を削除します。
+デストラクターは、割り当てられたすべてのリソースを解放し、プライベートオブジェクトのセキュリティ記述子を削除します。
 
-## <a name="cprivateobjectsecuritydesccreate"></a><a name="create"></a>Cプライベートオブジェクトセキュリティデスク::作成
+## <a name="cprivateobjectsecuritydesccreate"></a><a name="create"></a> CPrivateObjectSecurityDesc:: Create
 
-呼び出し元のリソース マネージャーによって作成されたプライベート オブジェクトの自己相対セキュリティ記述子を割り当て、初期化します。
+呼び出し元のリソースマネージャーによって作成されたプライベートオブジェクトの自己相対セキュリティ記述子を割り当てて初期化するには、このメソッドを呼び出します。
 
 ```
 bool Create(
@@ -151,29 +151,29 @@ bool Create(
 
 ### <a name="parameters"></a>パラメーター
 
-*親*<br/>
-新しいオブジェクトが作成される親ディレクトリを参照する[CSecurityDesc](../../atl/reference/csecuritydesc-class.md)オブジェクトへのポインター。 親ディレクトリがない場合は NULL に設定します。
+*pParent*<br/>
+新しいオブジェクトが作成される親ディレクトリを参照する [Csecuritydesc](../../atl/reference/csecuritydesc-class.md) オブジェクトへのポインター。 親ディレクトリがない場合は、NULL に設定します。
 
-*pクリエーター*<br/>
-オブジェクトの作成者によって提供されるセキュリティ記述子へのポインター。 オブジェクトの作成者が新しいオブジェクトのセキュリティ情報を明示的に渡さない場合は、このパラメーターを NULL に設定します。
+*pCreator*<br/>
+オブジェクトの作成者によって提供されたセキュリティ記述子へのポインター。 オブジェクトの作成者が新しいオブジェクトのセキュリティ情報を明示的に渡さない場合は、このパラメーターを NULL に設定します。
 
-*オブジェクト*<br/>
-新しいオブジェクトに他のオブジェクトを含めることができるかどうかを指定します。 値が true の場合、新しいオブジェクトがコンテナーであることを示します。 値が false の場合、新しいオブジェクトがコンテナーではないことを示します。
+*bIsDirectoryObject*<br/>
+新しいオブジェクトに他のオブジェクトを含めることができるかどうかを指定します。 値が true の場合は、新しいオブジェクトがコンテナーであることを示します。 値が false の場合は、新しいオブジェクトがコンテナーではないことを示します。
 
 *トークン*<br/>
-オブジェクトを作成するクライアント プロセスの[CAccessToken](../../atl/reference/caccesstoken-class.md)オブジェクトへの参照。
+オブジェクトの代理となるクライアントプロセスの [CAccessToken](../../atl/reference/caccesstoken-class.md) オブジェクトへの参照。
 
-*ジェネリックマッピング*<br/>
-オブジェクトに対する各ジェネリック権限から特定の権限へのマッピングを指定する[GENERIC_MAPPING](/windows/win32/api/winnt/ns-winnt-generic_mapping)構造体へのポインター。
+*GenericMapping*<br/>
+各汎用権限からオブジェクトの特定の権限へのマッピングを指定する [GENERIC_MAPPING](/windows/win32/api/winnt/ns-winnt-generic_mapping) 構造体へのポインター。
 
-*オブジェクトタイプ*<br/>
-現在の`GUID`オブジェクトに関連付けられているオブジェクトの型を識別する構造体へのポインター。 オブジェクトに GUID がない場合は *、ObjectType*を NULL に設定します。
+*ObjectType*<br/>
+`GUID`現在のオブジェクトに関連付けられているオブジェクトの型を識別する構造体へのポインター。 オブジェクトに GUID がない場合は、 *ObjectType* を NULL に設定します。
 
-*オブジェクト*<br/>
-新しいオブジェクトに他のオブジェクトを含めることができるかどうかを指定します。 値が true の場合、新しいオブジェクトがコンテナーであることを示します。 値が false の場合、新しいオブジェクトがコンテナーではないことを示します。
+*bIsContainerObject*<br/>
+新しいオブジェクトに他のオブジェクトを含めることができるかどうかを指定します。 値が true の場合は、新しいオブジェクトがコンテナーであることを示します。 値が false の場合は、新しいオブジェクトがコンテナーではないことを示します。
 
-*フラグを自動継承*<br/>
-アクセス制御エントリ (ACE) が*pParent*から継承される方法を制御するビット フラグのセット。 詳細については[、「プライベートオブジェクトセキュリティExの作成](/windows/win32/api/securitybaseapi/nf-securitybaseapi-createprivateobjectsecurityex)」を参照してください。
+*AutoInheritFlags*<br/>
+アクセス制御エントリ (Ace: access control entries) を *Pparent*から継承する方法を制御する一連のビットフラグ。 詳細については、「 [Createprivateobjectsecurityex](/windows/win32/api/securitybaseapi/nf-securitybaseapi-createprivateobjectsecurityex) 」を参照してください。
 
 ### <a name="return-value"></a>戻り値
 
@@ -181,16 +181,16 @@ bool Create(
 
 ### <a name="remarks"></a>解説
 
-このメソッド[は、プライベート オブジェクトのセルキュリティ](/windows/win32/api/securitybaseapi/nf-securitybaseapi-createprivateobjectsecurity)またはを呼び出[します](/windows/win32/api/securitybaseapi/nf-securitybaseapi-createprivateobjectsecurityex)。
+このメソッドは、 [Createprivateobjectsercursecurityex](/windows/win32/api/securitybaseapi/nf-securitybaseapi-createprivateobjectsecurity) または [Createprivateobjectsecurityex](/windows/win32/api/securitybaseapi/nf-securitybaseapi-createprivateobjectsecurityex)を呼び出します。
 
-2 番目のメソッドでは、新しいオブジェクトのオブジェクト型 GUID を指定したり、ACE の継承方法を制御したりできます。
+2番目の方法では、新しいオブジェクトのオブジェクトの種類の GUID を指定したり、Ace の継承方法を制御したりできます。
 
 > [!NOTE]
-> 自己相対セキュリティ記述子は、すべてのセキュリティ情報を連続したメモリ ブロックに格納するセキュリティ記述子です。
+> 自己相対セキュリティ記述子は、すべてのセキュリティ情報を連続したメモリブロックに格納するセキュリティ記述子です。
 
-## <a name="cprivateobjectsecuritydescget"></a><a name="get"></a>セキュリティサービス::取得
+## <a name="cprivateobjectsecuritydescget"></a><a name="get"></a> CPrivateObjectSecurityDesc:: Get
 
-プライベート オブジェクトのセキュリティ記述子から情報を取得します。
+プライベートオブジェクトのセキュリティ記述子から情報を取得するには、このメソッドを呼び出します。
 
 ```
 bool Get(
@@ -200,11 +200,11 @@ bool Get(
 
 ### <a name="parameters"></a>パラメーター
 
-*Si*<br/>
-取得するセキュリティ記述子の部分を示すビット フラグのセット。 この値は[、SECURITY_INFORMATION](/windows/win32/SecAuthZ/security-information)ビット フラグの組み合わせになります。
+*si*<br/>
+取得するセキュリティ記述子の部分を示すビットフラグのセット。 この値は、 [SECURITY_INFORMATION](/windows/win32/SecAuthZ/security-information) ビットフラグの組み合わせにすることができます。
 
-*結果*<br/>
-指定されたセキュリティ記述子から要求された情報のコピーを受け取る[CSecurityDesc](../../atl/reference/csecuritydesc-class.md)オブジェクトへのポインター。
+*pResult*<br/>
+指定されたセキュリティ記述子から要求された情報のコピーを受け取る [Csecuritydesc](../../atl/reference/csecuritydesc-class.md) オブジェクトへのポインター。
 
 ### <a name="return-value"></a>戻り値
 
@@ -212,9 +212,9 @@ bool Get(
 
 ### <a name="remarks"></a>解説
 
-セキュリティ記述子は、セキュリティ保護可能なオブジェクトのセキュリティ情報を含む構造体と関連データです。
+セキュリティ記述子は、セキュリティ保護可能なオブジェクトのセキュリティ情報を格納する構造体と関連付けられたデータです。
 
-## <a name="cprivateobjectsecuritydescoperator-"></a><a name="operator_eq"></a>を指定します。
+## <a name="cprivateobjectsecuritydescoperator-"></a><a name="operator_eq"></a> CPrivateObjectSecurityDesc:: operator =
 
 代入演算子。
 
@@ -229,11 +229,11 @@ CPrivateObjectSecurityDesc& operator= (const CPrivateObjectSecurityDesc& rhs) th
 
 ### <a name="return-value"></a>戻り値
 
-更新された`CPrivateObjectSecurityDesc`オブジェクトを返します。
+更新されたオブジェクトを返し `CPrivateObjectSecurityDesc` ます。
 
-## <a name="cprivateobjectsecuritydescset"></a><a name="set"></a>セキュリティサービス::セット
+## <a name="cprivateobjectsecuritydescset"></a><a name="set"></a> CPrivateObjectSecurityDesc:: Set
 
-プライベート オブジェクトのセキュリティ記述子を変更します。
+プライベートオブジェクトのセキュリティ記述子を変更するには、このメソッドを呼び出します。
 
 ```
 bool Set(
@@ -252,20 +252,20 @@ bool Set(
 
 ### <a name="parameters"></a>パラメーター
 
-*Si*<br/>
-設定するセキュリティ記述子の部分を示すビット フラグのセット。 この値は[、SECURITY_INFORMATION](/windows/win32/SecAuthZ/security-information)ビット フラグの組み合わせになります。
+*si*<br/>
+設定するセキュリティ記述子の部分を示すビットフラグのセット。 この値は、 [SECURITY_INFORMATION](/windows/win32/SecAuthZ/security-information) ビットフラグの組み合わせにすることができます。
 
 *変更*<br/>
-[オブジェクト](../../atl/reference/csecuritydesc-class.md)へのポインター。 *si*パラメータで示されるこのセキュリティ記述子の部分は、オブジェクトのセキュリティ記述子に適用されます。
+[Csecuritydesc](../../atl/reference/csecuritydesc-class.md)オブジェクトへのポインター。 *Si*パラメーターによって示されるこのセキュリティ記述子の部分は、オブジェクトのセキュリティ記述子に適用されます。
 
-*ジェネリックマッピング*<br/>
-オブジェクトに対する各ジェネリック権限から特定の権限へのマッピングを指定する[GENERIC_MAPPING](/windows/win32/api/winnt/ns-winnt-generic_mapping)構造体へのポインター。
+*GenericMapping*<br/>
+各汎用権限からオブジェクトの特定の権限へのマッピングを指定する [GENERIC_MAPPING](/windows/win32/api/winnt/ns-winnt-generic_mapping) 構造体へのポインター。
 
 *トークン*<br/>
-オブジェクトを作成するクライアント プロセスの[CAccessToken](../../atl/reference/caccesstoken-class.md)オブジェクトへの参照。
+オブジェクトの代理となるクライアントプロセスの [CAccessToken](../../atl/reference/caccesstoken-class.md) オブジェクトへの参照。
 
-*フラグを自動継承*<br/>
-アクセス制御エントリ (ACE) が*pParent*から継承される方法を制御するビット フラグのセット。 詳細については[、「プライベートオブジェクトセキュリティExの作成](/windows/win32/api/securitybaseapi/nf-securitybaseapi-createprivateobjectsecurityex)」を参照してください。
+*AutoInheritFlags*<br/>
+アクセス制御エントリ (Ace: access control entries) を *Pparent*から継承する方法を制御する一連のビットフラグ。 詳細については、「 [Createprivateobjectsecurityex](/windows/win32/api/securitybaseapi/nf-securitybaseapi-createprivateobjectsecurityex) 」を参照してください。
 
 ### <a name="return-value"></a>戻り値
 
@@ -273,11 +273,11 @@ bool Set(
 
 ### <a name="remarks"></a>解説
 
-2 番目のメソッドでは、オブジェクトのオブジェクト型 GUID を指定したり、ACE の継承方法を制御したりできます。
+2番目の方法では、オブジェクトのオブジェクトの種類の GUID を指定したり、Ace の継承方法を制御したりできます。
 
 ## <a name="see-also"></a>関連項目
 
 [SECURITY_DESCRIPTOR](/windows/win32/api/winnt/ns-winnt-security_descriptor)<br/>
 [クラスの概要](../../atl/atl-class-overview.md)<br/>
 [セキュリティグローバル関数](../../atl/reference/security-global-functions.md)<br/>
-[クラスをセキュリティします。](../../atl/reference/csecuritydesc-class.md)
+[CSecurityDesc クラス](../../atl/reference/csecuritydesc-class.md)

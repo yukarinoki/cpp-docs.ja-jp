@@ -9,24 +9,25 @@ helpviewer_keywords:
 - resource management, C++ classes
 - resources [C++], management
 ms.assetid: 1040e813-f1cd-4b13-83b6-d329f8e75d2e
-ms.openlocfilehash: 0113412fb86f7e0b326f4fa48462f8073f7754cc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b5fd88bf359cbc3221a8f2a259d031bdbd6b581f
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62384843"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88835013"
 ---
 # <a name="resource-management-classes"></a>リソース管理クラス
 
-これらのクラスは、マネージ クラスの自動管理を提供します。
+これらのクラスは、マネージクラスの自動管理を提供します。
 
 ## <a name="in-this-section"></a>このセクションの内容
 
-|||
-|-|-|
-|[auto_gcroot](../dotnet/auto-gcroot.md)|ネイティブ型には、仮想のハンドルを埋め込みます。|
-|[auto_handle](../dotnet/auto-handle.md)|マネージ型には、仮想のハンドルを埋め込みます。|
+[auto_gcroot](../dotnet/auto-gcroot.md)\
+仮想ハンドルをネイティブ型に埋め込みます。
+
+[auto_handle](../dotnet/auto-handle.md)\
+仮想ハンドルをマネージ型に埋め込みます。
 
 ## <a name="see-also"></a>関連項目
 
-[C++ のサポート ライブラリ](../dotnet/cpp-support-library.md)
+[C++ サポートライブラリ](../dotnet/cpp-support-library.md)

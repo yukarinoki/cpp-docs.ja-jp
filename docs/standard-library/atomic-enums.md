@@ -6,16 +6,16 @@ f1_keywords:
 ms.assetid: cd3a81c5-a19e-448f-952a-c34c717f21a9
 helpviewer_keywords:
 - std::memory_order
-ms.openlocfilehash: f41c5b238f74e85bc18e9ff5c3aa6a0050fe27e1
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: d8a4e9196e27933c75a32c256114e968b55678a6
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81376923"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88834896"
 ---
 # <a name="ltatomicgt-enums"></a>&lt;atomic&gt; 列挙型
 
-## <a name="memory_order-enum"></a><a name="memory_order_enum"></a>列挙型memory_order
+## <a name="memory_order-enum"></a><a name="memory_order_enum"></a> memory_order 列挙型
 
 メモリ位置に対する同期操作のシンボル名を提供します。 これらの操作は、1 つのスレッドの割り当てが別のスレッドにおいて表示される方法に影響します。
 
@@ -30,9 +30,9 @@ typedef enum memory_order {
 } memory_order;
 ```
 
-### <a name="enumeration-members"></a>列挙型のメンバー
+### <a name="enumeration-members"></a>列挙メンバー
 
-|||
+|名前|説明|
 |-|-|
 |`memory_order_relaxed`|順序付けは必要ありません。|
 |`memory_order_consume`|読み込み操作は、メモリ位置に対する消費操作として機能します。|
@@ -43,4 +43,4 @@ typedef enum memory_order {
 
 ## <a name="see-also"></a>関連項目
 
-[\<原子>](../standard-library/atomic.md)
+[\<atomic>](../standard-library/atomic.md)

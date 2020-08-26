@@ -1,5 +1,5 @@
 ---
-title: クラス
+title: CComAutoThreadModule クラス
 ms.date: 11/04/2016
 f1_keywords:
 - CComAutoThreadModule
@@ -17,16 +17,16 @@ helpviewer_keywords:
 - CComAutoThreadModule class
 - apartment model modules
 ms.assetid: 13063ea5-a57e-4aac-97d3-227137262811
-ms.openlocfilehash: 391354c5672cf15c0286491619a13c6005493cfa
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 405b05548cda2b2d379b849d9278293b8d747d2e
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81321064"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88833791"
 ---
-# <a name="ccomautothreadmodule-class"></a>クラス
+# <a name="ccomautothreadmodule-class"></a>CComAutoThreadModule クラス
 
-ATL 7.0 では`CComAutoThreadModule`、廃止されました:[詳細については、ATL モジュール クラス](../../atl/atl-module-classes.md)を参照してください。
+ATL 7.0 の場合、 `CComAutoThreadModule` は廃止されています。詳細については、「 [Atl モジュールクラス](../../atl/atl-module-classes.md) 」を参照してください。
 
 > [!IMPORTANT]
 > このクラスとそのメンバーは、Windows ランタイムで実行されるアプリケーションでは使用できません。
@@ -40,42 +40,40 @@ class CComAutoThreadModule : public CComModule
 
 #### <a name="parameters"></a>パラメーター
 
-*スレッドアロケーター*<br/>
-[in]スレッドの選択を管理するクラス。 既定値は[、CComSimple スレッドアロケーターです](../../atl/reference/ccomsimplethreadallocator-class.md)。
+*ThreadAllocator*<br/>
+からスレッド選択を管理するクラス。 既定値は [CComSimpleThreadAllocator](../../atl/reference/ccomsimplethreadallocator-class.md)です。
 
 ## <a name="members"></a>メンバー
 
 ### <a name="methods"></a>メソッド
 
-|||
+|関数|説明|
 |-|-|
-|[Createinstance](#createinstance)|スレッドを選択し、関連付けられたアパートメントにオブジェクトを作成します。|
-|[既定のスレッドを取得します。](#getdefaultthreads)|(静的)プロセッサの数に基づいて、モジュールのスレッド数を動的に計算します。|
+|[CreateInstance](#createinstance)|スレッドを選択し、関連付けられているアパートメント内にオブジェクトを作成します。|
+|[GetDefaultThreads](#getdefaultthreads)|雑音プロセッサの数に基づいて、モジュールのスレッド数を動的に計算します。|
 |[Init](#init)|モジュールのスレッドを作成します。|
-|[[Lock] (ロック)](#lock)|モジュールと現在のスレッドのロック数をインクリメントします。|
-|[ロック 解除](#unlock)|モジュールと現在のスレッドのロックカウントを減算します。|
+|[[Lock] (ロック)](#lock)|モジュールと現在のスレッドのロックカウントをインクリメントします。|
+|[ロック](#unlock)|モジュールと現在のスレッドのロックカウントをデクリメントします。|
 
 ### <a name="data-members"></a>データ メンバー
 
-### <a name="data-members"></a>データ メンバー
-
-|||
+|データ メンバー|説明|
 |-|-|
-|[を行う](#dwthreadid)|現在のスレッドの識別子を格納します。|
-|[m_Allocator](#m_allocator)|スレッド選択を管理します。|
-|[m_nThreads](#m_nthreads)|モジュール内のスレッド数を格納します。|
+|[dwThreadID](#dwthreadid)|現在のスレッドの識別子を格納します。|
+|[m_Allocator](#m_allocator)|スレッドの選択を管理します。|
+|[m_nThreads](#m_nthreads)|モジュール内のスレッドの数を格納します。|
 |[m_pApartments](#m_papartments)|モジュールのアパートメントを管理します。|
 
 ## <a name="remarks"></a>解説
 
 > [!NOTE]
-> このクラスは[、CAtlAutoThreadModule](../../atl/reference/catlautothreadmodule-class.md)および[CAtlModule](../../atl/reference/catlmodule-class.md)派生クラスに置き換えられた、廃止されました。 以下の情報は、ATL の古いリリースで使用するためのものです。
+> このクラスは互換性のために残されていますが、 [CAtlAutoThreadModule](../../atl/reference/catlautothreadmodule-class.md) と [CAtlModule](../../atl/reference/catlmodule-class.md) の派生クラスに置き換えられています。 次の情報は、ATL の古いリリースで使用されます。
 
-`CComAutoThreadModule`[は、ExE](../../atl/reference/ccommodule-class.md)および Windows サービス用のスレッド プールのアパートメント モデル COM サーバーを実装するために CComModule から派生します。 `CComAutoThreadModule`[では、CComApartment](../../atl/reference/ccomapartment-class.md)を使用して、モジュール内の各スレッドのアパートメントを管理します。
+`CComAutoThreadModule`[CComModule](../../atl/reference/ccommodule-class.md)から派生し、Exe および Windows サービス用のスレッドプールされたアパートメントモデル COM サーバーを実装します。 `CComAutoThreadModule`[CComApartment](../../atl/reference/ccomapartment-class.md)を使用して、モジュール内の各スレッドのアパートメントを管理します。
 
-複数のアパートメントに`CComAutoThreadModule`オブジェクトを作成する場合からモジュールを派生します。 [CComClassFactoryAutoThread](../../atl/reference/ccomclassfactoryautothread-class.md)をクラス ファクトリとして指定するには、オブジェクトのクラス定義に[DECLARE_CLASSFACTORY_AUTO_THREAD](aggregation-and-class-factory-macros.md#declare_classfactory_auto_thread)マクロを含める必要があります。
+`CComAutoThreadModule`複数のアパートメントでオブジェクトを作成する場合は、からモジュールを派生させます。 また、オブジェクトのクラス定義に [DECLARE_CLASSFACTORY_AUTO_THREAD](aggregation-and-class-factory-macros.md#declare_classfactory_auto_thread) マクロを追加して、クラスファクトリとして [CComClassFactoryAutoThread](../../atl/reference/ccomclassfactoryautothread-class.md) を指定する必要があります。
 
-既定では、ATL COM アプリケーション ウィザード (Visual Studio .NET の ATL プロジェクト`CComModule`ウィザード) は、モジュールを から派生します。 を使用`CComAutoThreadModule`するには、クラス定義を変更します。 次に例を示します。
+既定では、ATL COM AppWizard (Visual Studio .NET の ATL プロジェクトウィザード) によって、からモジュールが派生され `CComModule` ます。 を使用するには `CComAutoThreadModule` 、クラス定義を変更します。 次に例を示します。
 
 [!code-cpp[NVC_ATL_AxHost#2](../../atl/codesnippet/cpp/ccomautothreadmodule-class_1.cpp)]
 
@@ -83,25 +81,25 @@ class CComAutoThreadModule : public CComModule
 
 [_ATL_MODULE](atl-typedefs.md#_atl_module)
 
-[カトルモジュール](../../atl/reference/catlmodule-class.md)
+[CAtlModule](../../atl/reference/catlmodule-class.md)
 
 `IAtlAutoThreadModule`
 
-[カトルモジュール](../../atl/reference/catlmodulet-class.md)
+[CAtlModuleT](../../atl/reference/catlmodulet-class.md)
 
-[をクリックします。](../../atl/reference/catlautothreadmodulet-class.md)
+[CAtlAutoThreadModuleT](../../atl/reference/catlautothreadmodulet-class.md)
 
-[ココムモジュール](../../atl/reference/ccommodule-class.md)
+[CComModule](../../atl/reference/ccommodule-class.md)
 
 `CComAutoThreadModule`
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** atlbase.h
+**ヘッダー:** atlbase. h
 
-## <a name="ccomautothreadmodulecreateinstance"></a><a name="createinstance"></a>をインスタンス化します。
+## <a name="ccomautothreadmodulecreateinstance"></a><a name="createinstance"></a> CComAutoThreadModule:: CreateInstance
 
-ATL 7.0 では`CComAutoThreadModule`、廃止されました:[詳細については、ATL モジュール クラス](../../atl/atl-module-classes.md)を参照してください。
+ATL 7.0 の場合、 `CComAutoThreadModule` は廃止されています。詳細については、「 [Atl モジュールクラス](../../atl/atl-module-classes.md) 」を参照してください。
 
 ```
 HRESULT CreateInstance(
@@ -112,14 +110,14 @@ HRESULT CreateInstance(
 
 ### <a name="parameters"></a>パラメーター
 
-*インスタンス*<br/>
-[in]作成者関数へのポインター。
+*pfnCreateInstance*<br/>
+からCreator 関数へのポインター。
 
 *riid*<br/>
-[in]要求されたインターフェイスの IID。
+から要求されたインターフェイスの IID。
 
-*Ppvobj*<br/>
-[アウト]*riid*によって識別されるインターフェイス ポインターへのポインター。 オブジェクトがこのインターフェイスをサポートしていない場合 *、ppvObj*は NULL に設定されます。
+*ppvObj*<br/>
+入出力 *Riid*によって識別されるインターフェイスポインターへのポインター。 オブジェクトがこのインターフェイスをサポートしていない場合、 *ppvObj* は NULL に設定されます。
 
 ### <a name="return-value"></a>戻り値
 
@@ -127,11 +125,11 @@ HRESULT CreateInstance(
 
 ### <a name="remarks"></a>解説
 
-スレッドを選択し、関連付けられたアパートメントにオブジェクトを作成します。
+スレッドを選択し、関連付けられているアパートメント内にオブジェクトを作成します。
 
-## <a name="ccomautothreadmoduledwthreadid"></a><a name="dwthreadid"></a>を使用します :d。
+## <a name="ccomautothreadmoduledwthreadid"></a><a name="dwthreadid"></a> CComAutoThreadModule::d wThreadID
 
-ATL 7.0 では`CComAutoThreadModule`、廃止されました:[詳細については、ATL モジュール クラス](../../atl/atl-module-classes.md)を参照してください。
+ATL 7.0 の場合、 `CComAutoThreadModule` は廃止されています。詳細については、「 [Atl モジュールクラス](../../atl/atl-module-classes.md) 」を参照してください。
 
 ```
 DWORD dwThreadID;
@@ -141,9 +139,9 @@ DWORD dwThreadID;
 
 現在のスレッドの識別子を格納します。
 
-## <a name="ccomautothreadmodulegetdefaultthreads"></a><a name="getdefaultthreads"></a>を取得します。
+## <a name="ccomautothreadmodulegetdefaultthreads"></a><a name="getdefaultthreads"></a> CComAutoThreadModule:: GetDefaultThreads
 
-ATL 7.0 では`CComAutoThreadModule`、廃止されました:[詳細については、ATL モジュール クラス](../../atl/atl-module-classes.md)を参照してください。
+ATL 7.0 の場合、 `CComAutoThreadModule` は廃止されています。詳細については、「 [Atl モジュールクラス](../../atl/atl-module-classes.md) 」を参照してください。
 
 ```
 static int GetDefaultThreads();
@@ -151,15 +149,15 @@ static int GetDefaultThreads();
 
 ### <a name="return-value"></a>戻り値
 
-EXE モジュールで作成されるスレッドの数。
+EXE モジュールに作成されるスレッドの数。
 
 ### <a name="remarks"></a>解説
 
-この静的関数は、プロセッサの数に基づいて、EXE モジュールのスレッドの最大数を動的に計算します。 既定では、この戻り値は[Init](#init)メソッドに渡され、スレッドが作成されます。
+この静的関数は、プロセッサの数に基づいて、EXE モジュールのスレッドの最大数を動的に計算します。 既定では、この戻り値は、スレッドを作成するために [Init](#init) メソッドに渡されます。
 
-## <a name="ccomautothreadmoduleinit"></a><a name="init"></a>を使用します。
+## <a name="ccomautothreadmoduleinit"></a><a name="init"></a> CComAutoThreadModule:: Init
 
-ATL 7.0 では`CComAutoThreadModule`、廃止されました:[詳細については、ATL モジュール クラス](../../atl/atl-module-classes.md)を参照してください。
+ATL 7.0 の場合、 `CComAutoThreadModule` は廃止されています。詳細については、「 [Atl モジュールクラス](../../atl/atl-module-classes.md) 」を参照してください。
 
 ```
 HRESULT Init(
@@ -171,25 +169,25 @@ HRESULT Init(
 
 ### <a name="parameters"></a>パラメーター
 
-*P*<br/>
-[in]オブジェクト マップ エントリの配列へのポインター。
+*irtran-p*<br/>
+からオブジェクトマップエントリの配列へのポインター。
 
-*H*<br/>
-[in]HINSTANCE は`DLLMain`または`WinMain`に渡されます。
+*h*<br/>
+からまたはに渡される HINSTANCE `DLLMain` `WinMain` 。
 
-*プリビッド*<br/>
-[in]プロジェクトに関連付けられているタイプ ライブラリの LIBID へのポインター。
+*plibid*<br/>
+からプロジェクトに関連付けられているタイプライブラリの LIBID へのポインター。
 
-*nスレッド*<br/>
-[in]作成するスレッドの数。 既定では *、nThreads*は[GetDefaultThreads](#getdefaultthreads)によって返される値です。
+*nThreads*<br/>
+から作成されるスレッドの数。 既定では、 *nThreads* は [GetDefaultThreads](#getdefaultthreads)によって返される値です。
 
 ### <a name="remarks"></a>解説
 
-データ メンバーを初期化し *、nThreads*で指定されたスレッド数を作成します。
+データメンバーを初期化し、 *nThreads*によって指定されたスレッドの数を作成します。
 
-## <a name="ccomautothreadmodulelock"></a><a name="lock"></a>ロック
+## <a name="ccomautothreadmodulelock"></a><a name="lock"></a> CComAutoThreadModule:: Lock
 
-ATL 7.0 では`CComAutoThreadModule`、廃止されました:[詳細については、ATL モジュール クラス](../../atl/atl-module-classes.md)を参照してください。
+ATL 7.0 の場合、 `CComAutoThreadModule` は廃止されています。詳細については、「 [Atl モジュールクラス](../../atl/atl-module-classes.md) 」を参照してください。
 
 ```
 LONG Lock();
@@ -197,15 +195,15 @@ LONG Lock();
 
 ### <a name="return-value"></a>戻り値
 
-診断やテストに役立つ値。
+診断またはテストに役立つ可能性のある値。
 
 ### <a name="remarks"></a>解説
 
-モジュールと現在のスレッドのロック カウントに対してアトミック インクリメントを実行します。 `CComAutoThreadModule`は、モジュールロックカウントを使用して、どのクライアントもモジュールにアクセスしているかどうかを判断します。 現在のスレッドのロックカウントは、統計目的で使用されます。
+モジュールと現在のスレッドのロックカウントに対してアトミックインクリメントを実行します。 `CComAutoThreadModule` モジュールのロックカウントを使用して、クライアントがモジュールにアクセスしているかどうかを判断します。 現在のスレッドのロック数は、統計のために使用されます。
 
-## <a name="ccomautothreadmodulem_allocator"></a><a name="m_allocator"></a>を使用 m_Allocatorします。
+## <a name="ccomautothreadmodulem_allocator"></a><a name="m_allocator"></a> CComAutoThreadModule:: m_Allocator
 
-ATL 7.0 では`CComAutoThreadModule`、廃止されました:[詳細については、ATL モジュール クラス](../../atl/atl-module-classes.md)を参照してください。
+ATL 7.0 の場合、 `CComAutoThreadModule` は廃止されています。詳細については、「 [Atl モジュールクラス](../../atl/atl-module-classes.md) 」を参照してください。
 
 ```
 ThreadAllocator  m_Allocator;
@@ -213,11 +211,11 @@ ThreadAllocator  m_Allocator;
 
 ### <a name="remarks"></a>解説
 
-スレッド選択を管理するオブジェクト。 既定では、`ThreadAllocator`クラス テンプレート パラメーターは[CComSimpleThreadAllocator](../../atl/reference/ccomsimplethreadallocator-class.md)です。
+スレッド選択を管理するオブジェクト。 既定では、 `ThreadAllocator` クラステンプレートパラメーターは [CComSimpleThreadAllocator](../../atl/reference/ccomsimplethreadallocator-class.md)です。
 
-## <a name="ccomautothreadmodulem_nthreads"></a><a name="m_nthreads"></a>を使用 m_nThreadsします。
+## <a name="ccomautothreadmodulem_nthreads"></a><a name="m_nthreads"></a> CComAutoThreadModule:: m_nThreads
 
-ATL 7.0 では`CComAutoThreadModule`、廃止されました:[詳細については、ATL モジュール クラス](../../atl/atl-module-classes.md)を参照してください。
+ATL 7.0 の場合、 `CComAutoThreadModule` は廃止されています。詳細については、「 [Atl モジュールクラス](../../atl/atl-module-classes.md) 」を参照してください。
 
 ```
 int m_nThreads;
@@ -225,11 +223,11 @@ int m_nThreads;
 
 ### <a name="remarks"></a>解説
 
-EXE モジュール内のスレッド数を格納します。 [Init](#init)が呼び`m_nThreads`出されると *、nThreads*パラメーター値に設定されます。 各スレッドの関連付けられたアパートメントは[、CComApartment](../../atl/reference/ccomapartment-class.md)オブジェクトによって管理されます。
+EXE モジュール内のスレッドの数を格納します。 [Init](#init)が呼び出されると、 `m_nThreads` は*nThreads*パラメーター値に設定されます。 各スレッドに関連付けられているアパートメントは、 [CComApartment](../../atl/reference/ccomapartment-class.md) オブジェクトによって管理されます。
 
-## <a name="ccomautothreadmodulem_papartments"></a><a name="m_papartments"></a>を m_pApartments使用します。
+## <a name="ccomautothreadmodulem_papartments"></a><a name="m_papartments"></a> CComAutoThreadModule:: m_pApartments
 
-ATL 7.0 では`CComAutoThreadModule`、廃止されました:[詳細については、ATL モジュール クラス](../../atl/atl-module-classes.md)を参照してください。
+ATL 7.0 の場合、 `CComAutoThreadModule` は廃止されています。詳細については、「 [Atl モジュールクラス](../../atl/atl-module-classes.md) 」を参照してください。
 
 ```
 CComApartment* m_pApartments;
@@ -237,11 +235,11 @@ CComApartment* m_pApartments;
 
 ### <a name="remarks"></a>解説
 
-モジュール内のアパートメントを管理する[CComApartment](../../atl/reference/ccomapartment-class.md)オブジェクトの配列を指します。 配列内の要素の数は[、m_nThreads](#m_nthreads)メンバーに基づいています。
+は、 [CComApartment](../../atl/reference/ccomapartment-class.md) オブジェクトの配列をポイントし、それぞれがモジュールのアパートメントを管理します。 配列内の要素の数は、 [m_nThreads](#m_nthreads) のメンバーに基づいています。
 
-## <a name="ccomautothreadmoduleunlock"></a><a name="unlock"></a>クコムオートスレッドモジュール::ロック解除
+## <a name="ccomautothreadmoduleunlock"></a><a name="unlock"></a> CComAutoThreadModule:: Unlock
 
-ATL 7.0 では`CComAutoThreadModule`、廃止されました:[詳細については、ATL モジュール クラス](../../atl/atl-module-classes.md)を参照してください。
+ATL 7.0 の場合、 `CComAutoThreadModule` は廃止されています。詳細については、「 [Atl モジュールクラス](../../atl/atl-module-classes.md) 」を参照してください。
 
 ```
 LONG Unlock();
@@ -249,15 +247,15 @@ LONG Unlock();
 
 ### <a name="return-value"></a>戻り値
 
-診断やテストに役立つ値。
+診断またはテストに役立つ可能性のある値。
 
 ### <a name="remarks"></a>解説
 
-モジュールと現在のスレッドのロック カウントに対して、アトミックデクリメントを実行します。 `CComAutoThreadModule`は、モジュールロックカウントを使用して、どのクライアントもモジュールにアクセスしているかどうかを判断します。 現在のスレッドのロックカウントは、統計目的で使用されます。
+モジュールのロック数と現在のスレッドのアトミックデクリメントを実行します。 `CComAutoThreadModule` モジュールのロックカウントを使用して、クライアントがモジュールにアクセスしているかどうかを判断します。 現在のスレッドのロック数は、統計のために使用されます。
 
-モジュールのロックカウントがゼロになると、モジュールをアンロードできます。
+モジュールのロックカウントが0になると、モジュールをアンロードできます。
 
 ## <a name="see-also"></a>関連項目
 
 [クラスの概要](../../atl/atl-class-overview.md)<br/>
-[モジュール クラス](../../atl/atl-module-classes.md)
+[モジュールクラス](../../atl/atl-module-classes.md)
