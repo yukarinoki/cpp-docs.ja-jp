@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::Array Class
 ms.assetid: 7815ab40-88c5-42b0-83b8-081cef0cda31
-ms.openlocfilehash: 23548df6718b9397db8521b2bebc6e8389859dcd
-ms.sourcegitcommit: 65fead53d56d531d71be42216056aca5f44def11
+ms.openlocfilehash: 00b73b9fb113066c6948c49ec7d2039748284800
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "88610700"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88837761"
 ---
 # <a name="platformarray-class"></a>Platform::Array クラス
 
@@ -42,13 +42,13 @@ Platform:: Array は、 [platform:: WriteOnlyArray クラス](../cppcx/platform-
 
 [Platform:: WriteOnlyArray クラス](../cppcx/platform-writeonlyarray-class.md)を参照してください。
 
-### <a name="properties"></a>プロパティ
+### <a name="properties"></a>Properties
 
-|||
-|-|-|
-|[Array:: Value](#value)|現在の配列へのハンドルを取得します。|
+| 名前 | 説明 |
+|--|--|
+| [Array:: Value](#value) | 現在の配列へのハンドルを取得します。 |
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 この Array クラスはシール クラスであり、継承できません。
 
@@ -84,7 +84,7 @@ Array(T* data, unsigned int size);
 *data*<br/>
 この Array オブジェクトを初期化するために使用する型 `T` のデータ配列へのポインター。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 Platform:: Array のインスタンスを作成する方法の詳細については、「 [array および WriteOnlyArray](../cppcx/array-and-writeonlyarray-c-cx.md)」を参照してください。
 

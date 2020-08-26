@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - string attribute
 ms.assetid: ddde900a-2e99-4fcd-86e8-57e1bdba7c93
-ms.openlocfilehash: 68708cce2e167c6f40b461d52861fe4ed82be867
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 119e0aa60d123324c60825a9418e0b8c93696c5f
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87213815"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88845381"
 ---
 # <a name="string-c"></a>string (C++)
 
@@ -29,7 +29,7 @@ ms.locfileid: "87213815"
 
 ## <a name="example"></a>例
 
-次のコードは、インターフェイスおよび typedef で**文字列**を使用する方法を示しています。
+次のコードは、インターフェイスおよび typedef で **文字列** を使用する方法を示しています。
 
 ```cpp
 // cpp_attr_ref_string.cpp
@@ -46,9 +46,7 @@ __interface IFireTabCtrl
 
 ## <a name="requirements"></a>必要条件
 
-### <a name="attribute-context"></a>属性コンテキスト
-
-|||
+| 属性コンテキスト | 値 |
 |-|-|
 |**適用対象**|配列または配列へのポインター、インターフェイスパラメーター、インターフェイスメソッド|
 |**Repeatable**|いいえ|

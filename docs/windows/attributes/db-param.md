@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - db_param attribute
 ms.assetid: a28315f5-4722-459e-92ef-32e83c0b205a
-ms.openlocfilehash: 1a32dcceae1e4e4fbc730101381eda84b5350ffd
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 008a7f1ea07e6c23ad6d812ac4fbf3b30ef1da89
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87215310"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88833076"
 ---
 # <a name="db_param"></a>db_param
 
@@ -25,7 +25,7 @@ ms.locfileid: "87215310"
 
 ### <a name="parameters"></a>パラメーター
 
-*ordinal*<br/>
+*数値*<br/>
 データをバインドする行セット内のフィールドに対応する列番号 (DBCOLUMNINFO ordinal)。
 
 *が paramtype*<br/>
@@ -38,7 +38,7 @@ Optionalパラメーターに設定する型。 プロバイダーは、基に�
 - DBPARAMIO_NOTPARAM アクセサーにパラメーターがありません。 `eParamIO`行アクセサーでこの値をに設定すると、パラメーターが無視されることがユーザーに通知されます。
 
 *dbtype*<br/>
-Optional列エントリの OLE DB[型インジケーター](/previous-versions/windows/desktop/ms711251(v=vs.85)) 。
+Optional列エントリの OLE DB [型インジケーター](/previous-versions/windows/desktop/ms711251(v=vs.85)) 。
 
 *有効桁数 (precision)*<br/>
 Optional列エントリに使用される有効桁数。 詳細については、 `bPrecision` [DBBINDING 構造体](/previous-versions/windows/desktop/ms716845(v=vs.85))の要素の説明を参照してください。
@@ -54,11 +54,11 @@ Optional列のサイズを保持するために使用されるメンバー変数
 
 ## <a name="remarks"></a>解説
 
-**db_param**は、コマンドで使用するパラメーターを定義します。したがって、と共に使用し `db_command` ます。 たとえば、 **db_param**を使用して、SQL クエリまたはストアドプロシージャでパラメーターをバインドできます。 ストアドプロシージャのパラメーターは疑問符 (?) で示されます。また、パラメーターが表示される順序でデータメンバーをバインドする必要があります。
+**db_param** は、コマンドで使用するパラメーターを定義します。したがって、と共に使用し `db_command` ます。 たとえば、 **db_param** を使用して、SQL クエリまたはストアドプロシージャでパラメーターをバインドできます。 ストアドプロシージャのパラメーターは疑問符 (?) で示されます。また、パラメーターが表示される順序でデータメンバーをバインドする必要があります。
 
 OLE DB ベースのバインドに参加できるメンバーデータを区切る**db_param** `ICommandWithParameters` ます。 パラメーターの型 (入力または出力)、OLE DB 型、有効桁数、小数点以下桁数、状態、および長さを指定したパラメーターに設定します。 この属性は OLE DB コンシューマーマクロ BEGIN_PARAM_MAP を挿入します...END_PARAM_MAP。 **Db_param**属性でマークした各メンバーは、マップ内の1つのエントリを COLUMN_ENTRY の形式で使用します。
 
-**db_param**は、 [db_table](db-table.md)属性または[db_command](db-command.md)属性と組み合わせて使用されます。
+**db_param** は、 [db_table](db-table.md) 属性または [db_command](db-command.md) 属性と組み合わせて使用されます。
 
 コンシューマー属性プロバイダーがこの属性をクラスに適用すると、コンパイラはクラスの名前を \_ *classname*アクセサーに変更します。ここで、 *classname*はクラスに指定した名前になります。また、コンパイラは*classname と*いうクラスを作成します。これは classname アクセサーから派生し \_ *YourClassName*ます。  クラス ビューでは、両方のクラスが表示されます。
 
@@ -104,9 +104,7 @@ struct CSalesbyYear {
 
 ## <a name="requirements"></a>必要条件
 
-### <a name="attribute-context"></a>属性コンテキスト
-
-|||
+| 属性コンテキスト | 値 |
 |-|-|
 |**適用対象**|**`class`**、 **`struct`** 、member、method、local|
 |**Repeatable**|いいえ|

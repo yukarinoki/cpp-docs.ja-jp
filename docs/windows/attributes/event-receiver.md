@@ -12,12 +12,12 @@ helpviewer_keywords:
 - event sinks, creating
 - event sinks
 ms.assetid: bf8fe770-3ea2-4128-b46b-166222ee4097
-ms.openlocfilehash: fb17eaa5d94636cedd650eb1bfb393d7c09e4fcc
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 7280729a9ae3a054468e1f11bdcc4a563b32effe
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87217273"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88845290"
 ---
 # <a name="event_receiver"></a>event_receiver
 
@@ -35,7 +35,7 @@ ms.locfileid: "87217273"
 *type*<br/>
 次の値のいずれかの列挙です。
 
-- `native`アンマネージ C/c + + コードの場合 (ネイティブクラスの場合は既定)。
+- `native` アンマネージ C/c + + コードの場合 (ネイティブクラスの場合は既定)。
 
 - COM コード用の`com` 。 この値の場合、ユーザーが次のヘッダー ファイルを含める必要があります。
 
@@ -46,17 +46,17 @@ ms.locfileid: "87217273"
     ```
 
 *layout_dependent*<br/>
-Com の場合にのみ*layout_dependent*を指定し `type` = **com**ます。 *layout_dependent*はブール型です。
+Com の場合にのみ*layout_dependent*を指定し `type` = **com**ます。 *layout_dependent* はブール型です。
 
 - **`true`** は、イベントレシーバー内のデリゲートのシグネチャが、イベントソースでフックされるデリゲートと完全に一致する必要があることを意味します。 イベントレシーバーハンドラー名は、関連するイベントソースインターフェイスで指定されている名前と一致している必要があります。 `coclass` *Layout_dependent*がの場合は、を使用する必要があり **`true`** ます。 を指定する方が少し効率的です **`true`** 。
 
-- **`false`**(既定値) は、呼び出し規約とストレージクラス (virtual、static など) がイベントメソッドとハンドラーに一致する必要がないことを意味します。また、ハンドラー名は、イベントソースインターフェイスのメソッド名と一致する必要があります。
+- **`false`** (既定値) は、呼び出し規約とストレージクラス (virtual、static など) がイベントメソッドとハンドラーに一致する必要がないことを意味します。また、ハンドラー名は、イベントソースインターフェイスのメソッド名と一致する必要があります。
 
 ## <a name="remarks"></a>解説
 
 **Event_receiver** C++ 属性は、Visual C++ 統合イベントモデルを使用して、適用先のクラスまたは構造体がイベントレシーバーであることを指定します。
 
-**event_receiver**は、 [event_source](event-source.md)属性および[__hook](../../cpp/hook.md)および[__unhook](../../cpp/unhook.md)キーワードと共に使用されます。 `event_source`イベントソースを作成するには、を使用します。 イベントレシーバーのメソッド内でを使用して、イベントの **`__hook`** レシーバーメソッドをイベントソースのイベントに関連付けます。 これらの関連付け **`__unhook`** を解除するには、を使用します。
+**event_receiver** は、 [event_source](event-source.md) 属性および [__hook](../../cpp/hook.md) および [__unhook](../../cpp/unhook.md) キーワードと共に使用されます。 `event_source`イベントソースを作成するには、を使用します。 イベントレシーバーのメソッド内でを使用して、イベントの **`__hook`** レシーバーメソッドをイベントソースのイベントに関連付けます。 これらの関連付け **`__unhook`** を解除するには、を使用します。
 
 *layout_dependent*は com イベントレシーバー (com) に対してのみ指定され `type` = **com**ます。 *Layout_dependent*の既定値は **`false`** です。
 
@@ -65,9 +65,7 @@ Com の場合にのみ*layout_dependent*を指定し `type` = **com**ます。 *
 
 ## <a name="requirements"></a>必要条件
 
-### <a name="attribute-context"></a>属性コンテキスト
-
-|||
+| 属性コンテキスト | 値 |
 |-|-|
 |**適用対象**|**`class`**, **`struct`**|
 |**Repeatable**|いいえ|

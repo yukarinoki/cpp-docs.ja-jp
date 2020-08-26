@@ -26,12 +26,12 @@ helpviewer_keywords:
 - GetColumnInfo method
 - MapColumnIDs method
 ms.assetid: ba74c1c5-2eda-4452-8b57-84919fa0d066
-ms.openlocfilehash: 39aa3f5e89746d48057e0e8efe6fe62b1c2d8921
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 05e902e09c51012bd456751fb701ce2508a2fc16
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80210873"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88845602"
 ---
 # <a name="icolumnsinfoimpl-class"></a>IColumnsInfoImpl クラス
 
@@ -49,7 +49,7 @@ class ATL_NO_VTABLE IColumnsInfoImpl :
 ### <a name="parameters"></a>パラメーター
 
 *T*<br/>
-`IColumnsInfoImpl`から派生したクラス。
+から派生したクラス `IColumnsInfoImpl` 。
 
 ## <a name="requirements"></a>必要条件
 
@@ -59,16 +59,16 @@ class ATL_NO_VTABLE IColumnsInfoImpl :
 
 ### <a name="methods"></a>メソッド
 
-|||
+| 名前 | 説明 |
 |-|-|
 |[GetColumnInfo](#getcolumninfo)|ほとんどのコンシューマーが必要とする列のメタデータを返します。|
 |[MapColumnIDs](#mapcolumnids)|列 ID で識別される行セット内の列の序数を配列で返します。|
 
 ## <a name="remarks"></a>解説
 
-行セットとコマンドの必須のインターフェイスです。 プロバイダーの `IColumnsInfo` 実装の動作を変更するには、プロバイダーの列マップを変更する必要があります。
+行セットとコマンドの必須のインターフェイスです。 プロバイダーの実装の動作を変更するには、 `IColumnsInfo` プロバイダーの列マップを変更する必要があります。
 
-## <a name="icolumnsinfoimplgetcolumninfo"></a><a name="getcolumninfo"></a>IColumnsInfoImpl:: GetColumnInfo
+## <a name="icolumnsinfoimplgetcolumninfo"></a><a name="getcolumninfo"></a> IColumnsInfoImpl:: GetColumnInfo
 
 ほとんどのコンシューマーが必要とする列のメタデータを返します。
 
@@ -84,7 +84,7 @@ STDMETHOD (GetColumnInfo)(DBORDINAL* pcColumns,
 
 *OLE DB プログラマーリファレンス*の「 [IColumnsInfo:: GetColumnInfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\)) 」を参照してください。
 
-## <a name="icolumnsinfoimplmapcolumnids"></a><a name="mapcolumnids"></a>IColumnsInfoImpl:: MapColumnIDs
+## <a name="icolumnsinfoimplmapcolumnids"></a><a name="mapcolumnids"></a> IColumnsInfoImpl:: MapColumnIDs
 
 列 ID で識別される行セット内の列の序数を配列で返します。
 
@@ -100,7 +100,7 @@ STDMETHOD (MapColumnIDs)(DBORDINAL cColumnIDs,
 
 *OLE DB プログラマーリファレンス*の「 [IColumnsInfo:: mapcolumnids](/previous-versions/windows/desktop/ms714200(v=vs.85)) 」を参照してください。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [OLE DB プロバイダー テンプレートに関するページ](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
-[OLE DB プロバイダー テンプレートのアーキテクチャ](../../data/oledb/ole-db-provider-template-architecture.md)
+[OLE DB プロバイダーテンプレートのアーキテクチャ](../../data/oledb/ole-db-provider-template-architecture.md)

@@ -14,21 +14,22 @@ helpviewer_keywords:
 - std::sleep_until [C++]
 - std::swap [C++]
 - std::yield [C++]
-ms.openlocfilehash: 130328ca07de28e14eedd7fdc99fb8946f26c5cb
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 64a62180243d77f361c243b2a89de56b0a14920e
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87232860"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88845043"
 ---
 # <a name="ltthreadgt-functions"></a>&lt;thread&gt; 関数
 
-||||
-|-|-|-|
-|[get_id](#get_id)|[sleep_for](#sleep_for)|[sleep_until](#sleep_until)|
-|[スワップ](#swap)|[yield](#yield)|
+[get_id](#get_id)\
+[sleep_for](#sleep_for)\
+[sleep_until](#sleep_until)\
+[フォト](#swap)\
+[yield](#yield)
 
-## <a name="get_id"></a><a name="get_id"></a>get_id
+## <a name="get_id"></a><a name="get_id"></a> get_id
 
 現在の実行スレッドを一意に識別します。
 
@@ -40,7 +41,7 @@ thread::id this_thread::get_id() noexcept;
 
 現在の実行のスレッドを一意に識別する [thread::id](../standard-library/thread-class.md) 型のオブジェクト。
 
-## <a name="sleep_for"></a><a name="sleep_for"></a>sleep_for
+## <a name="sleep_for"></a><a name="sleep_for"></a> sleep_for
 
 呼び出し元のスレッドをブロックします。
 
@@ -59,7 +60,7 @@ inline void sleep_for(const chrono::duration<Rep, Period>& Rel_time);
 
 関数は、 *Rel_time*によって指定された時間以上、呼び出し元スレッドをブロックします。 この関数では、例外がスローされません。
 
-## <a name="sleep_until"></a><a name="sleep_until"></a>sleep_until
+## <a name="sleep_until"></a><a name="sleep_until"></a> sleep_until
 
 少なくとも指定された時間まで、呼び出し元スレッドをブロックします。
 
@@ -79,7 +80,7 @@ void sleep_until(const xtime *Abs_time);
 
 この関数では、例外がスローされません。
 
-## <a name="swap"></a><a name="swap"></a>フォト
+## <a name="swap"></a><a name="swap"></a> フォト
 
 2 つの `thread` オブジェクトの状態を交換します。
 
@@ -99,7 +100,7 @@ void swap(thread& Left, thread& Right) noexcept;
 
 関数は `Left.swap(Right)` を呼び出します。
 
-## <a name="yield"></a><a name="yield"></a>得
+## <a name="yield"></a><a name="yield"></a> 得
 
 現在のスレッドが通常引き続き実行される場合であっても、他のスレッドを実行するようオペレーティング システムに通知します。
 

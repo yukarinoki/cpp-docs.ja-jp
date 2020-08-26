@@ -18,12 +18,12 @@ helpviewer_keywords:
 - OLE controls [MFC], DDX functions
 - DDX (dialog data exchange), OLE support
 ms.assetid: 7ef1f288-ff65-40d4-aad2-5497bc00bb27
-ms.openlocfilehash: b5a7263ae5cac81508ab2450a530132879ed45b2
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 9133c30dd1ac069145862d4bf61ba0bc0d504838
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87222824"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88837360"
 ---
 # <a name="dialog-data-exchange-functions-for-ole-controls"></a>OLE コントロールのダイアログ データ エクスチェンジ (DDX) 関数
 
@@ -31,7 +31,7 @@ ms.locfileid: "87222824"
 
 ### <a name="ddx_oc-functions"></a>DDX_OC 関数
 
-|||
+|名前|説明|
 |-|-|
 |[DDX_OCBool](#ddx_ocbool)|OLE コントロールのプロパティと**bool**データメンバーとの間の**ブール**データの転送を管理します。|
 |[DDX_OCBoolRO](#ddx_ocboolro)|OLE コントロールの読み取り専用プロパティと**ブール**データメンバーとの間の**ブール**データの転送を管理します。|
@@ -46,7 +46,7 @@ ms.locfileid: "87222824"
 |[DDX_OCText](#ddx_octext)|OLE コントロールのプロパティと**cstring**データメンバーとの間での**cstring**データの転送を管理します。|
 |[DDX_OCTextRO](#ddx_octextro)|OLE コントロールの読み取り専用プロパティと**cstring**データメンバーとの間での**cstring**データの転送を管理します。|
 
-## <a name="ddx_ocbool"></a><a name="ddx_ocbool"></a>DDX_OCBool
+## <a name="ddx_ocbool"></a><a name="ddx_ocbool"></a> DDX_OCBool
 
 この `DDX_OCBool` 関数は、ダイアログボックス、フォームビュー、またはコントロールビューオブジェクトの OLE コントロールのプロパティと、ダイアログボックス、フォームビュー、またはコントロールビューオブジェクトの**ブール**データメンバーとの間で、**ブール**データの転送を管理します。
 
@@ -80,7 +80,7 @@ DDX の詳細については、「 [ダイアログ データ エクスチェン
 
   **ヘッダー :** afxdisp.h
 
-## <a name="ddx_ocboolro"></a><a name="ddx_ocboolro"></a>DDX_OCBoolRO
+## <a name="ddx_ocboolro"></a><a name="ddx_ocboolro"></a> DDX_OCBoolRO
 
 この `DDX_OCBoolRO` 関数は、ダイアログボックス、フォームビュー、またはコントロールビューオブジェクトの OLE コントロールの読み取り専用プロパティと、ダイアログボックス、フォームビュー、またはコントロールビューオブジェクトの**ブール**データメンバーとの間で、**ブール**データの転送を管理します。
 
@@ -114,7 +114,7 @@ DDX の詳細については、「 [ダイアログ データ エクスチェン
 
   **ヘッダー** afxdisp.h
 
-## <a name="ddx_occolor"></a><a name="ddx_occolor"></a>DDX_OCColor
+## <a name="ddx_occolor"></a><a name="ddx_occolor"></a> DDX_OCColor
 
 この `DDX_OCColor` 関数は、ダイアログボックス、フォームビュー、またはコントロールビューオブジェクトの OLE コントロールのプロパティと、ダイアログボックス、フォームビュー、またはコントロールビューオブジェクトの OLE_COLOR データメンバーの間で OLE_COLOR データの転送を管理します。
 
@@ -148,7 +148,7 @@ DDX の詳細については、「 [ダイアログ データ エクスチェン
 
   **ヘッダー** afxdisp.h
 
-## <a name="ddx_occolorro"></a><a name="ddx_occolorro"></a>DDX_OCColorRO
+## <a name="ddx_occolorro"></a><a name="ddx_occolorro"></a> DDX_OCColorRO
 
 この `DDX_OCColorRO` 関数は、ダイアログボックス、フォームビュー、またはコントロールビューオブジェクトの OLE コントロールの読み取り専用プロパティと、ダイアログボックス、フォームビュー、またはコントロールビューオブジェクトの OLE_COLOR データメンバーの間で OLE_COLOR データの転送を管理します。
 
@@ -182,7 +182,7 @@ DDX の詳細については、「 [ダイアログ データ エクスチェン
 
   **ヘッダー** afxdisp.h
 
-## <a name="ddx_ocfloat"></a><a name="ddx_ocfloat"></a>DDX_OCFloat
+## <a name="ddx_ocfloat"></a><a name="ddx_ocfloat"></a> DDX_OCFloat
 
 この `DDX_OCFloat` 関数は、 **`float`** **`double`** ダイアログボックス、フォームビュー、またはコントロールビューオブジェクトの OLE コントロールのプロパティと、 **`float`** **`double`** ダイアログボックス、フォームビュー、またはコントロールビューオブジェクトの (または) データメンバーの間の (または) データの転送を管理します。
 
@@ -222,7 +222,7 @@ DDX の詳細については、「 [ダイアログ データ エクスチェン
 
   **ヘッダー** afxdisp.h
 
-## <a name="ddx_ocfloatro"></a><a name="ddx_ocfloatro"></a>DDX_OCFloatRO
+## <a name="ddx_ocfloatro"></a><a name="ddx_ocfloatro"></a> DDX_OCFloatRO
 
 この `DDX_OCFloatRO` 関数は、 **`float`** **`double`** ダイアログボックス、フォームビュー、またはコントロールビューオブジェクトの OLE コントロールの読み取り専用プロパティと、 **`float`** **`double`** ダイアログボックス、フォームビュー、またはコントロールビューオブジェクトの (または) データメンバーの間で、(または) データの転送を管理します。
 
@@ -262,7 +262,7 @@ DDX の詳細については、「 [ダイアログ データ エクスチェン
 
   **ヘッダー** afxdisp.h
 
-## <a name="ddx_ocint"></a><a name="ddx_ocint"></a>DDX_OCInt
+## <a name="ddx_ocint"></a><a name="ddx_ocint"></a> DDX_OCInt
 
 この `DDX_OCInt` 関数は、 **`int`** **`long`** ダイアログボックス、フォームビュー、またはコントロールビューオブジェクトの OLE コントロールのプロパティと、 **`int`** **`long`** ダイアログボックス、フォームビュー、またはコントロールビューオブジェクトの (または) データメンバーの間の (または) データの転送を管理します。
 
@@ -302,7 +302,7 @@ DDX の詳細については、「 [ダイアログ データ エクスチェン
 
   **ヘッダー** afxdisp.h
 
-## <a name="ddx_ocintro"></a><a name="ddx_ocintro"></a>DDX_OCIntRO
+## <a name="ddx_ocintro"></a><a name="ddx_ocintro"></a> DDX_OCIntRO
 
 この `DDX_OCIntRO` 関数は、 **`int`** **`long`** ダイアログボックス、フォームビュー、またはコントロールビューオブジェクトの OLE コントロールの読み取り専用プロパティと、 **`int`** **`long`** ダイアログボックス、フォームビュー、またはコントロールビューオブジェクトの (または) データメンバーの間で、(または) データの転送を管理します。
 
@@ -342,7 +342,7 @@ DDX の詳細については、「 [ダイアログ データ エクスチェン
 
   **ヘッダー** afxdisp.h
 
-## <a name="ddx_ocshort"></a><a name="ddx_ocshort"></a>DDX_OCShort
+## <a name="ddx_ocshort"></a><a name="ddx_ocshort"></a> DDX_OCShort
 
 この `DDX_OCShort` 関数は、ダイアログボックス、フォームビュー、またはコントロールビューオブジェクトの OLE コントロールのプロパティと、ダイアログボックス、フォームビュー、またはコントロールビューオブジェクトの短いデータメンバーとの間で、短いデータの転送を管理します。
 
@@ -376,7 +376,7 @@ DDX の詳細については、「 [ダイアログ データ エクスチェン
 
   **ヘッダー** afxdisp.h
 
-## <a name="ddx_ocshortro"></a><a name="ddx_ocshortro"></a>DDX_OCShortRO
+## <a name="ddx_ocshortro"></a><a name="ddx_ocshortro"></a> DDX_OCShortRO
 
 この `DDX_OCShortRO` 関数は、ダイアログボックス、フォームビュー、またはコントロールビューオブジェクトの OLE コントロールの読み取り専用プロパティと、ダイアログボックス、フォームビュー、またはコントロールビューオブジェクトの短いデータメンバーとの間で、短いデータの転送を管理します。
 
@@ -410,7 +410,7 @@ DDX の詳細については、「 [ダイアログ データ エクスチェン
 
   **ヘッダー** afxdisp.h
 
-## <a name="ddx_octext"></a><a name="ddx_octext"></a>DDX_OCText
+## <a name="ddx_octext"></a><a name="ddx_octext"></a> DDX_OCText
 
 **DDX_OCText**関数は、ダイアログボックス、フォームビュー、またはコントロールビューオブジェクトの OLE コントロールのプロパティと、ダイアログボックス、フォームビュー、またはコントロールビューオブジェクトの**cstring**データメンバーとの間での**cstring**データの転送を管理します。
 
@@ -444,7 +444,7 @@ DDX の詳細については、「 [ダイアログ データ エクスチェン
 
   **ヘッダー** afxdisp.h
 
-## <a name="ddx_octextro"></a><a name="ddx_octextro"></a>DDX_OCTextRO
+## <a name="ddx_octextro"></a><a name="ddx_octextro"></a> DDX_OCTextRO
 
 `DDX_OCTextRO` 関数は、ダイアログ ボックス、フォーム ビュー、またはコントロール ビュー オブジェクトの OLE コントロールの読み取り専用プロパティと、ダイアログ ボックス、フォーム ビュー、またはコントロール ビュー オブジェクトの `CString` データ メンバーの間の `CString` データ転送を管理します。
 

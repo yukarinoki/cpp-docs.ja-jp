@@ -818,12 +818,12 @@ helpviewer_keywords:
 - CWnd [MFC], WindowProc
 - CWnd [MFC], m_hWnd
 ms.assetid: 49a832ee-bc34-4126-88b3-bc1d9974f6c4
-ms.openlocfilehash: aaeee501ef9c05fb19ac7561f7ff7567bae18793
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: 62298872def1a6e0e262c5339d323b83ad9bbc3d
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88562559"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88837646"
 ---
 # <a name="cwnd-class"></a>CWnd クラス
 
@@ -1088,7 +1088,7 @@ class CWnd : public CCmdTarget
 
 ### <a name="protected-methods"></a>プロテクト メソッド
 
-|Name|説明|
+|名前|説明|
 |----------|-----------------|
 |[CWnd::Default](#default)|既定のウィンドウ プロシージャを呼び出します。既定のウィンドウ プロシージャは、アプリケーションが処理しないウィンドウ メッセージに対する既定の処理を提供します。|
 |[CWnd::DefWindowProc](#defwindowproc)|既定のウィンドウ プロシージャを呼び出します。既定のウィンドウ プロシージャは、アプリケーションが処理しないウィンドウ メッセージに対する既定の処理を提供します。|
@@ -1259,7 +1259,7 @@ class CWnd : public CCmdTarget
 
 ### <a name="public-operators"></a>パブリック演算子
 
-|Name|説明|
+|名前|説明|
 |----------|-----------------|
 |[CWnd::operator HWND](#operator_hwnd)|ウィンドウへのハンドルを取得するために呼び出します。|
 |[CWnd::operator !=](#operator_neq)|ウィンドウが、ハンドルが [m_hWnd](#m_hwnd)ウィンドウと同じでないかどうかを判断します。|
@@ -1267,7 +1267,7 @@ class CWnd : public CCmdTarget
 
 ### <a name="public-data-members"></a>パブリック データ メンバー
 
-|Name|説明|
+|名前|説明|
 |----------|-----------------|
 |[CWnd::m_hWnd](#m_hwnd)|このにアタッチされている HWND を示し `CWnd` ます。|
 
@@ -5680,7 +5680,7 @@ int MessageBox(
 
 メッセージボックスで使用できるさまざまなシステムアイコンを次に示します。
 
-|||
+|アイコン|マクロ|
 |-|-|
 |![&#40;x&#41; の停止アイコン](../../mfc/reference/media/vc364f1.gif "&#40;x&#41; の停止アイコン")|MB_ICONHAND、MB_ICONSTOP、および MB_ICONERROR|
 |![ヘルプ &#40;? &#41; アイコン](../../mfc/reference/media/vc364f2.gif "ヘルプ &#40;? &#41; アイコン")|MB_ICONQUESTION|
@@ -7118,7 +7118,7 @@ afx_msg void OnHotKey(
 - `IDHOT_SNAPWINDOW` -スナップウィンドウのホットキーが押されました。
 
 *nKey1*\
-から *NKey2* パラメーターで指定したキーと組み合わせて押されたキーを示すフラグのビットごとの組み合わせ (or)。 次の値を指定できます。
+から *NKey2* パラメーターで指定したキーと組み合わせて押されたキーを示すフラグのビットごとの組み合わせ (or)。 指定できる値は、
 
 - `MOD_ALT` -ALT キーが押されました。
 - `MOD_CONTROL` -CTRL キーが押されました。
@@ -8763,7 +8763,7 @@ afx_msg UINT OnNotifyFormat(
 から `CWnd` [WM_NOTIFY](/windows/win32/controls/wm-notify) メッセージを送信するウィンドウを表すオブジェクトへのポインター。 このパラメーターは、 *n コマンド* パラメーターがの場合はコントロールへのポインター、 `NF_QUERY` *n コマンド* がの場合はコントロールの親ウィンドウへのポインターです `NF_REQUERY` 。
 
 *N コマンド*\
-からWM_NOTIFY メッセージを特殊化するコマンド値です。 次の値を指定できます。
+からWM_NOTIFY メッセージを特殊化するコマンド値です。 指定できる値は、
 
 - `NF_QUERY` -メッセージは、WM_NOTIFY メッセージで ANSI または Unicode の構造を使用する必要があるかどうかを判断するためのクエリです。 このメッセージは、コントロールの作成時にコントロールから親ウィンドウに送信され、このメッセージの形式に応答して送信され `NF_REQUERY` ます。
 - `NF_REQUERY` -メッセージは、 `NF_QUERY` このメッセージの形式を親ウィンドウに送信するコントロールの要求です。 この要求は親ウィンドウから送信され、WM_NOTIFY メッセージで使用する構造体の型について、親を再クエリするようにコントロールに要求します。 *N コマンド*パラメーターがの場合 `NF_REQUERY` 、戻り値は requery 操作の結果です。

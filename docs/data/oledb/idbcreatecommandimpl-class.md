@@ -11,12 +11,12 @@ helpviewer_keywords:
 - IDBCreateCommandImpl class
 - CreateCommand method
 ms.assetid: eac4755e-1668-42e1-958e-a35620c385ae
-ms.openlocfilehash: 4a4978401ba90e3a7a91ac40cc1b0668adf12ee8
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: b7b658b2b365eb84a39ae94cef7c77e18d7bd4a0
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80210718"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88845550"
 ---
 # <a name="idbcreatecommandimpl-class"></a>IDBCreateCommandImpl クラス
 
@@ -33,7 +33,7 @@ class ATL_NO_VTABLE IDBCreateCommandImpl
 ### <a name="parameters"></a>パラメーター
 
 *T*<br/>
-`IDBCreateCommandImpl`から派生したセッションオブジェクト。
+から派生したセッションオブジェクト `IDBCreateCommandImpl` 。
 
 *CommandClass*<br/>
 コマンドクラス。
@@ -46,7 +46,7 @@ class ATL_NO_VTABLE IDBCreateCommandImpl
 
 ### <a name="interface-methods"></a>インターフェイス メソッド
 
-|||
+| 名前 | 説明 |
 |-|-|
 |[CreateCommand](#createcommand)|新しいコマンドを作成します。|
 
@@ -54,7 +54,7 @@ class ATL_NO_VTABLE IDBCreateCommandImpl
 
 新しいコマンドを取得するための、セッションオブジェクトのオプションのインターフェイス。
 
-## <a name="idbcreatecommandimplcreatecommand"></a><a name="createcommand"></a>IDBCreateCommandImpl:: CreateCommand
+## <a name="idbcreatecommandimplcreatecommand"></a><a name="createcommand"></a> IDBCreateCommandImpl:: CreateCommand
 
 新しいコマンドを作成し、要求されたインターフェイスを返します。
 
@@ -70,13 +70,13 @@ STDMETHOD(CreateCommand)(IUnknown * pUnkOuter,
 
 *OLE DB プログラマーリファレンス*の「 [IDBCreateCommand:: createcommand](/previous-versions/windows/desktop/ms709772(v=vs.85)) 」を参照してください。
 
-一部のパラメーターは、`IDBCreateCommand::CreateCommand`で説明されているさまざまな名前の*プログラマの参照パラメーター OLE DB*に対応しています。
+一部のパラメーターは、「」で説明されている、さまざまな名前の *プログラマの参照パラメーター OLE DB* に対応してい `IDBCreateCommand::CreateCommand` ます。
 
-|テンプレートパラメーターの OLE DB|*OLE DB プログラマーの参照*パラメーター|
+|テンプレートパラメーターの OLE DB|*OLE DB プログラマーの参照* パラメーター|
 |--------------------------------|------------------------------------------------|
 |*ppvCommand*|*ppCommand*|
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [OLE DB プロバイダー テンプレートに関するページ](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
-[OLE DB プロバイダー テンプレートのアーキテクチャ](../../data/oledb/ole-db-provider-template-architecture.md)
+[OLE DB プロバイダーテンプレートのアーキテクチャ](../../data/oledb/ole-db-provider-template-architecture.md)

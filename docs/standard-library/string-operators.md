@@ -20,22 +20,26 @@ helpviewer_keywords:
 - std::operator&lt; (string)
 - std::operator&lt;&lt; (string)
 - std::operator&lt;= (string), std::operator== (string)
-ms.openlocfilehash: 0e63054365f4b29cf474a46dbf7c730f54759792
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: e031eb4421906e35a96a862855a140218f233778
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87217390"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88832543"
 ---
 # <a name="ltstringgt-operators"></a>&lt;string&gt; 演算子
 
-||||
-|-|-|-|
-|[operator! =](#op_neq)|[operator&gt;](#op_gt)|[operator&gt;&gt;](#op_gt_gt)|
-|[operator&gt;=](#op_gt_eq)|[operator&lt;](#op_lt)|[operator&lt;&lt;](#op_lt_lt)|
-|[operator&lt;=](#op_lt_eq)|[演算子 +](#op_add)|[operator = =](#op_eq_eq)|
+[operator! =](#op_neq)\
+[operator&gt;](#op_gt)\
+[operator&gt;&gt;](#op_gt_gt)\
+[operator&gt;=](#op_gt_eq)\
+[operator&lt;](#op_lt)\
+[operator&lt;&lt;](#op_lt_lt)\
+[operator&lt;=](#op_lt_eq)\
+[演算子 +](#op_add)\
+[operator = =](#op_eq_eq)
 
-## <a name="operator"></a><a name="op_add"></a>演算子 +
+## <a name="operator"></a><a name="op_add"></a> 演算子 +
 
 2 つの文字列オブジェクトを連結します。
 
@@ -115,7 +119,7 @@ basic_string<CharType, Traits, Allocator>&& operator+(
 
 ### <a name="remarks"></a>解説
 
-各関数は、 `operator+` クラステンプレート[basic_string クラス](../standard-library/basic-string-class.md)の2つのオブジェクトを連結するために、それぞれのオーバーロードを行います。 すべては実質的に `basic_string< CharType, Traits, Allocator>(Left).append(right)` を返します。 詳細については、「 [append](../standard-library/basic-string-class.md#append)」を参照してください。
+各関数は、 `operator+` クラステンプレート [basic_string クラス](../standard-library/basic-string-class.md)の2つのオブジェクトを連結するために、それぞれのオーバーロードを行います。 すべては実質的に `basic_string< CharType, Traits, Allocator>(Left).append(right)` を返します。 詳細については、「 [append](../standard-library/basic-string-class.md#append)」を参照してください。
 
 ### <a name="example"></a>例
 
@@ -169,7 +173,7 @@ The string concatenating s1 & s3 is: antiheroine
 The string concatenating s1 & s3 is: antiheroine!
 ```
 
-## <a name="operator"></a><a name="op_neq"></a>operator! =
+## <a name="operator"></a><a name="op_neq"></a> operator! =
 
 演算子の左辺の文字列オブジェクトが右辺の文字列オブジェクトと等しくないかどうかを調べます。
 
@@ -260,7 +264,7 @@ The strings s1 & s3 are equal.
 The strings s3 & s2 are not equal.
 ```
 
-## <a name="operator"></a><a name="op_eq_eq"></a>operator = =
+## <a name="operator"></a><a name="op_eq_eq"></a> operator = =
 
 演算子の左辺の文字列オブジェクトが右辺の文字列オブジェクトと等しいかどうかを調べます。
 
@@ -351,7 +355,7 @@ The strings s1 & s3 are equal.
 The strings s3 & s2 are not equal.
 ```
 
-## <a name="operatorlt"></a><a name="op_lt"></a>operator&lt;
+## <a name="operatorlt"></a><a name="op_lt"></a> operator&lt;
 
 演算子の左辺の文字列オブジェクトが右辺の文字列オブジェクトより小さいかどうかを調べます。
 
@@ -447,7 +451,7 @@ The string s1 is not less than the string s3.
 The string s3 is less than the string s2.
 ```
 
-## <a name="operatorlt"></a><a name="op_lt_eq"></a>operator&lt;=
+## <a name="operatorlt"></a><a name="op_lt_eq"></a> operator&lt;=
 
 演算子の左辺の文字列オブジェクトが右辺の文字列オブジェクト以下かどうかを調べます。
 
@@ -550,7 +554,7 @@ The string s1 is less than or equal to the string s3.
 The string s2 is greater than the string s3.
 ```
 
-## <a name="operatorltlt"></a><a name="op_lt_lt"></a>operator&lt;&lt;
+## <a name="operatorltlt"></a><a name="op_lt_lt"></a> operator&lt;&lt;
 
 出力ストリームに文字列を書き込むテンプレート関数。
 
@@ -577,7 +581,7 @@ basic_ostream<CharType, Traits>& operator<<(
 
 このテンプレート関数は、**演算子<<** をオーバーロードして、クラステンプレート[basic_string](../standard-library/basic-string-class.md)のオブジェクト*str*を stream * \_ ostr*に挿入します。 関数は、を実質的に返し `_Ostr.write( str.c_str, str.size )` ます。
 
-## <a name="operatorgt"></a><a name="op_gt"></a>operator&gt;
+## <a name="operatorgt"></a><a name="op_gt"></a> operator&gt;
 
 演算子の左辺の文字列オブジェクトが右辺の文字列オブジェクトより大きいかどうかを調べます。
 
@@ -680,7 +684,7 @@ The string s3 is greater than the string s1.
 The string s2 is greater than the string s3.
 ```
 
-## <a name="operatorgt"></a><a name="op_gt_eq"></a>operator&gt;=
+## <a name="operatorgt"></a><a name="op_gt_eq"></a> operator&gt;=
 
 演算子の左辺の文字列オブジェクトが右辺の文字列オブジェクト以上かどうかを調べます。
 
@@ -783,7 +787,7 @@ The string s3 is greater than or equal to the string s1.
 The string s2 is greater than or equal to the string s3.
 ```
 
-## <a name="operatorgtgt"></a><a name="op_gt_gt"></a>operator&gt;&gt;
+## <a name="operatorgtgt"></a><a name="op_gt_gt"></a> operator&gt;&gt;
 
 入力ストリームから文字列を読み取るテンプレート関数。
 
@@ -804,13 +808,13 @@ basic_istream<CharType, Traits>& operator>>(
 
 ### <a name="return-value"></a>戻り値
 
-指定した文字列の値を *_Istr*から読み取り、*右*に戻します。
+指定した文字列の値を *_Istr* から読み取り、 *右*に戻します。
 
 ### <a name="remarks"></a>解説
 
 `skipws` フラグが設定されていない場合、演算子は先頭の余白をスキップします。 次の文字が余白か、ファイルの終わりに到達するまでは、次のすべての文字を読み取ります。
 
-テンプレート関数は、**演算子>>** をオーバーロードして、 *right*によって制御されるシーケンスを、ストリーム *_Istr*から抽出された要素のシーケンスに置き換えます。 抽出は、次で停止します。
+テンプレート関数は、 **演算子>>** をオーバーロードして、 *right* によって制御されるシーケンスを、ストリーム *_Istr*から抽出された要素のシーケンスに置き換えます。 抽出は、次で停止します。
 
 - ファイルの終わり。
 

@@ -1,17 +1,17 @@
 ---
-title: イミディエイトの atebindC++ (COM 属性)
+title: イミディエイトの atebind (C++ COM 属性)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.immediatebind
 helpviewer_keywords:
 - immediatebind attribute
 ms.assetid: 186d40e6-9166-4d0c-9853-4e7e4d25226f
-ms.openlocfilehash: d0fb85a3f5642bc5fffcad29892ca15bb13a1ce0
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: d5241a6972ea0444a980e3e868c44e7e0c15dc64
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80166915"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88833050"
 ---
 # <a name="immediatebind"></a>immediatebind
 
@@ -25,7 +25,7 @@ ms.locfileid: "80166915"
 
 ## <a name="remarks"></a>解説
 
-**イミディエイトの atebind** C++属性には、[イミディエイトの atebind](/windows/win32/Midl/immediatebind) MIDL 属性と同じ機能があります。
+直 **ちに atebind** C++ 属性には、イミディエイトの [atebind](/windows/win32/Midl/immediatebind) MIDL 属性と同じ機能があります。
 
 ## <a name="example"></a>例
 
@@ -33,18 +33,16 @@ ms.locfileid: "80166915"
 
 ## <a name="requirements"></a>必要条件
 
-### <a name="attribute-context"></a>属性コンテキスト
-
-|||
+| 属性コンテキスト | 値 |
 |-|-|
-|**対象**|インターフェイス メソッド|
-|**反復可能**|いいえ|
-|**必要な属性**|なし|
+|**適用対象**|インターフェイス メソッド|
+|**Repeatable**|いいえ|
+|**必須属性**|なし|
 |**無効な属性**|なし|
 
 詳細については、「 [属性コンテキスト](cpp-attributes-com-net.md#contexts)」を参照してください。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [IDL 属性](idl-attributes.md)<br/>
 [メソッド属性](method-attributes.md)<br/>

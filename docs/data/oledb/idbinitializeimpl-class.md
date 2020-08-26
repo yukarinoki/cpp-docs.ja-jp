@@ -38,12 +38,12 @@ helpviewer_keywords:
 - m_dwStatus
 - m_pCUtlPropInfo
 ms.assetid: e4182f81-0443-44f5-a0d3-e7e075d6f883
-ms.openlocfilehash: 511d67586a7adc2b26cc6acbdf39beff78f9c38a
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: aff02e812d2806201a08164aeb4a8ef290550725
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87218326"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88845537"
 ---
 # <a name="idbinitializeimpl-class"></a>IDBInitializeImpl クラス
 
@@ -69,20 +69,20 @@ class ATL_NO_VTABLE IDBInitializeImpl : public IDBInitialize
 
 ### <a name="methods"></a>メソッド
 
-|||
+| 名前 | 説明 |
 |-|-|
 |[IDBInitializeImpl](#idbinitializeimpl)|コンストラクターです。|
 
 ### <a name="interface-methods"></a>インターフェイス メソッド
 
-|||
+| 名前 | 説明 |
 |-|-|
-|[初期化する](#initialize)|プロバイダーを起動します。|
+|[化](#initialize)|プロバイダーを起動します。|
 |[解除](#uninitialize)|プロバイダーを停止します。|
 
 ### <a name="data-members"></a>データ メンバー
 
-|||
+| 名前 | 説明 |
 |-|-|
 |[m_dwStatus](#dwstatus)|データソースフラグ。|
 |[m_pCUtlPropInfo](#pcutlpropinfo)|DB プロパティ情報の実装へのポインター。|
@@ -91,7 +91,7 @@ class ATL_NO_VTABLE IDBInitializeImpl : public IDBInitialize
 
 データソースオブジェクトの必須インターフェイスであり、列挙子のオプションのインターフェイスです。
 
-## <a name="idbinitializeimplidbinitializeimpl"></a><a name="idbinitializeimpl"></a>IDBInitializeImpl:: IDBInitializeImpl
+## <a name="idbinitializeimplidbinitializeimpl"></a><a name="idbinitializeimpl"></a> IDBInitializeImpl:: IDBInitializeImpl
 
 コンストラクターです。
 
@@ -105,7 +105,7 @@ IDBInitializeImpl();
 
 すべてのデータメンバーを初期化します。
 
-## <a name="idbinitializeimplinitialize"></a><a name="initialize"></a>IDBInitializeImpl:: Initialize
+## <a name="idbinitializeimplinitialize"></a><a name="initialize"></a> IDBInitializeImpl:: Initialize
 
 プロパティサポートを準備して、データソースオブジェクトを初期化します。
 
@@ -119,7 +119,7 @@ STDMETHOD(Initialize)(void);
 
 *OLE DB プログラマーリファレンス*の「 [IDBInitialize:: Initialize](/previous-versions/windows/desktop/ms718026(v=vs.85)) 」を参照してください。
 
-## <a name="idbinitializeimpluninitialize"></a><a name="uninitialize"></a>IDBInitializeImpl:: 初期化解除
+## <a name="idbinitializeimpluninitialize"></a><a name="uninitialize"></a> IDBInitializeImpl:: 初期化解除
 
 プロパティサポートなどの内部リソースを解放することによって、データソースオブジェクトを初期化されていない状態で配置します。
 
@@ -133,7 +133,7 @@ STDMETHOD(Uninitialize)(void);
 
 *OLE DB プログラマーのリファレンス*にある「 [IDBInitialize:: の初期化](/previous-versions/windows/desktop/ms719648(v=vs.85))を解除する」を参照してください。
 
-## <a name="idbinitializeimplm_dwstatus"></a><a name="dwstatus"></a>IDBInitializeImpl:: m_dwStatus
+## <a name="idbinitializeimplm_dwstatus"></a><a name="dwstatus"></a> IDBInitializeImpl:: m_dwStatus
 
 データソースフラグ。
 
@@ -155,13 +155,13 @@ enum DATASOURCE_FLAGS {
 };
 ```
 
-|||
+| 値 | 説明 |
 |-|-|
 |`DSF_MASK_INIT`|初期化されていない状態の復元を有効にするマスク。|
 |`DSF_PERSIST_DIRTY`|データソースオブジェクトが永続化を必要とする場合 (つまり、変更があった場合) に設定します。|
 |`DSF_INITIALIZED`|データソースが初期化されている場合に設定します。|
 
-## <a name="idbinitializeimplm_pcutlpropinfo"></a><a name="pcutlpropinfo"></a>IDBInitializeImpl:: m_pCUtlPropInfo
+## <a name="idbinitializeimplm_pcutlpropinfo"></a><a name="pcutlpropinfo"></a> IDBInitializeImpl:: m_pCUtlPropInfo
 
 DB プロパティ情報の実装オブジェクトへのポインター。
 

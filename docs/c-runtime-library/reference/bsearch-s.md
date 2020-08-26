@@ -28,12 +28,12 @@ helpviewer_keywords:
 - arrays [CRT], binary search
 - bsearch_s function
 ms.assetid: d5690d5e-6be3-4f1d-aa0b-5ca6dbded276
-ms.openlocfilehash: 91b015eb9005a9b447cdd9d74a38d7169bd90a73
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 20b4c482210f480730f7da4c89549d207ea6ca7d
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82913387"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88845173"
 ---
 # <a name="bsearch_s"></a>bsearch_s
 
@@ -67,7 +67,7 @@ void *bsearch_s(
 要素の幅。
 
 *対照*\
-2 つの要素を比較するコールバック関数。 最初の引数は*コンテキスト*ポインターです。 2番目の引数は、検索用の*キー*へのポインターです。 3番目の引数は、*キー*と比較する配列要素へのポインターです。
+2 つの要素を比較するコールバック関数。 最初の引数は *コンテキスト* ポインターです。 2番目の引数は、検索用の *キー* へのポインターです。 3番目の引数は、 *キー*と比較する配列要素へのポインターです。
 
 *関連*\
 比較関数内でアクセスできるオブジェクトへのポインター。
@@ -76,17 +76,16 @@ void *bsearch_s(
 
 **bsearch_s**は、 *base*が指す配列内の*キー*の出現箇所へのポインターを返します。 *Key*が見つからない場合、関数は**NULL**を返します。 配列が昇順でないか、同一キーで重複するレコードがある場合、結果は予測不可能になります。
 
-無効なパラメーターが関数に渡されると、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、 **errno**は**EINVAL**に設定され、関数は**NULL**を返します。 詳細については、「[errno、_doserrno、_sys_errlist、および _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」を参照してください。
+無効なパラメーターが関数に渡されると、「 [パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、 **errno** は **EINVAL** に設定され、関数は **NULL**を返します。 詳細については、「[errno、_doserrno、_sys_errlist、および _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」を参照してください。
 
 ### <a name="error-conditions"></a>エラー条件
 
-|||||||
+|*key*|*base*|*対照*|*number*|*width*|**`errno`**|
 |-|-|-|-|-|-|
-|*key*|*base*|*対照*|*number*|*width*|**errno**|
-|**空白**|any|any|any|any|**EINVAL**|
-|any|**空白**|any|!= 0|any|**EINVAL**|
+|**NULL**|any|any|any|any|**EINVAL**|
+|any|**NULL**|any|!= 0|any|**EINVAL**|
 |any|any|any|any|= 0|**EINVAL**|
-|any|any|**空白**|1 つ|any|**EINVAL**|
+|any|any|**NULL**|1 つ|any|**EINVAL**|
 
 ## <a name="remarks"></a>解説
 
@@ -104,9 +103,9 @@ void *bsearch_s(
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
-|**bsearch_s**|\<stdlib.h > と \<search.h >|
+|**bsearch_s**|\<stdlib.h> および \<search.h>|
 
 互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 

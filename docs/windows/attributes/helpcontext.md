@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - helpcontext attribute
 ms.assetid: 6fbb022d-a4b7-4989-a02f-7f18a9b0ad96
-ms.openlocfilehash: 77c085f96e778b19886c4e6e3c8f07b43fbe8f2c
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 60e6bf66e088872a357751e4a7b7e043cd9b4dfc
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87211984"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88845251"
 ---
 # <a name="helpcontext"></a>helpcontext
 
@@ -26,7 +26,7 @@ ms.locfileid: "87211984"
 ### <a name="parameters"></a>パラメーター
 
 *id*<br/>
-ヘルプトピックのコンテキスト ID。 コンテキスト Id の詳細については[、「HTML ヘルプ: プログラムの状況依存のヘルプ](../../mfc/html-help-context-sensitive-help-for-your-programs.md)」を参照してください。
+ヘルプトピックのコンテキスト ID。 コンテキスト Id の詳細については [、「HTML ヘルプ: プログラムの状況依存のヘルプ](../../mfc/html-help-context-sensitive-help-for-your-programs.md) 」を参照してください。
 
 ## <a name="remarks"></a>解説
 
@@ -38,9 +38,7 @@ ms.locfileid: "87211984"
 
 ## <a name="requirements"></a>必要条件
 
-### <a name="attribute-context"></a>属性コンテキスト
-
-|||
+| 属性コンテキスト | 値 |
 |-|-|
 |**適用対象**|**interface**、 **`typedef`** 、 **`class`** 、メソッド、プロパティ|
 |**Repeatable**|いいえ|

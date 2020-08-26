@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - db_accessor attribute
 ms.assetid: ec407a9f-24d7-4822-96d4-7cc6a0301815
-ms.openlocfilehash: 1e9725dad39974b828d87bd8b4cdeac623f4e12f
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 559838201e3d1c425b6b1bf7f3650d9635c44c97
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80214865"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88833141"
 ---
 # <a name="db_accessor"></a>db_accessor
 
-`IAccessor`ベースのバインドに参加する `db_column` 属性をグループ化します。
+`db_column`ベースのバインドに参加する属性をグループ化 `IAccessor` します。
 
 ## <a name="syntax"></a>構文
 
@@ -33,17 +33,17 @@ ms.locfileid: "80214865"
 
 ## <a name="remarks"></a>解説
 
-**db_accessor**は、同じクラスまたは関数内の後続の `db_column` および `db_param` 属性の基になる OLE DB アクセサーを定義します。 **db_accessor**はメンバーレベルで使用でき、OLE DB `IAccessor`ベースのバインドに参加する `db_column` 属性をグループ化するために使用されます。 これは、`db_table` 属性または `db_command` 属性と組み合わせて使用されます。 この属性を呼び出すことは、マクロの[BEGIN_ACCESSOR](../../data/oledb/begin-accessor.md)と[END_ACCESSOR](../../data/oledb/end-accessor.md)の呼び出しに似ています。
+**db_accessor** `db_column` `db_param` は、同じクラスまたは関数内の後続のおよび属性の基になる OLE DB アクセサーを定義します。 **db_accessor** はメンバーレベルで使用 `db_column` でき、OLE DB ベースのバインドに参加する属性をグループ化するために使用され `IAccessor` ます。 または属性と組み合わせて使用さ `db_table` れ `db_command` ます。 この属性を呼び出すことは、マクロの [BEGIN_ACCESSOR](../../data/oledb/begin-accessor.md) と [END_ACCESSOR](../../data/oledb/end-accessor.md) の呼び出しに似ています。
 
-**db_accessor**は、行セットを生成し、それを対応するアクセサーマップにバインドします。 **Db_accessor**を呼び出さないと、アクセサー0が自動的に生成され、すべての列のバインドがこのアクセサーブロックにマップされます。
+**db_accessor** は、行セットを生成し、それを対応するアクセサーマップにバインドします。 **Db_accessor**を呼び出さないと、アクセサー0が自動的に生成され、すべての列のバインドがこのアクセサーブロックにマップされます。
 
-**db_accessor** 、データベースの列バインドを1つ以上のアクセサーにグループ化します。 複数のアクセサーを使用する必要があるシナリオの詳細については、「[行セットでの複数のアクセサーの使用](../../data/oledb/using-multiple-accessors-on-a-rowset.md)」を参照してください。 「[ユーザーレコード](../../data/oledb/user-records.md)」の「複数のアクセサーのユーザーレコードのサポート」も参照してください。
+**db_accessor** 、データベースの列バインドを1つ以上のアクセサーにグループ化します。 複数のアクセサーを使用する必要があるシナリオの詳細については、「 [行セットでの複数のアクセサーの使用](../../data/oledb/using-multiple-accessors-on-a-rowset.md)」を参照してください。 「 [ユーザーレコード](../../data/oledb/user-records.md)」の「複数のアクセサーのユーザーレコードのサポート」も参照してください。
 
-コンシューマー属性プロバイダーがこの属性をクラスに適用すると、コンパイラはクラスの名前を*classname*アクセサーに \_します。ここで、 *classname*はクラスに指定した名前になります。また、コンパイラは classname というクラスも作成します。これ*は、\_* *classname*アクセサーから派生します。  クラス ビューでは、両方のクラスが表示されます。
+コンシューマー属性プロバイダーがこの属性をクラスに適用すると、コンパイラはクラスの名前を \_ *classname*アクセサーに変更します。ここで、 *classname*はクラスに指定した名前になります。また、コンパイラは*classname と*いうクラスを作成します。これは classname アクセサーから派生し \_ *YourClassName*ます。  クラス ビューでは、両方のクラスが表示されます。
 
 ## <a name="example"></a>例
 
-次の例では、 **db_accessor**を使用して、Orders テーブルの列を Northwind データベースから2つのアクセサーにグループ化します。 アクセサー0は自動アクセサーであり、アクセサー1はではありません。
+次の例では、 **db_accessor** を使用して、Orders テーブルの列を Northwind データベースから2つのアクセサーにグループ化します。 アクセサー0は自動アクセサーであり、アクセサー1はではありません。
 
 ```cpp
 // cpp_attr_ref_db_accessor.cpp
@@ -67,17 +67,15 @@ public:
 
 ## <a name="requirements"></a>必要条件
 
-### <a name="attribute-context"></a>属性コンテキスト
-
-|||
+| 属性コンテキスト | 値 |
 |-|-|
-|**対象**|属性ブロック|
-|**反復可能**|いいえ|
-|**必要な属性**|なし|
+|**適用対象**|属性ブロック|
+|**Repeatable**|いいえ|
+|**必須属性**|なし|
 |**無効な属性**|なし|
 
 属性コンテキストの詳細については、「 [属性コンテキスト](cpp-attributes-com-net.md#contexts)」を参照してください。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[OLE DB コンシューマー属性](ole-db-consumer-attributes.md)
+[OLE DB のコンシューマー属性](ole-db-consumer-attributes.md)

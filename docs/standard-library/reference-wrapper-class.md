@@ -18,14 +18,14 @@ helpviewer_keywords:
 - std::reference_wrapper [C++], type
 - std::reference_wrapper [C++], get
 ms.assetid: 90b8ed62-e6f1-44ed-acc7-9619bd58865a
-ms.openlocfilehash: 83b68d1fdf89519df0a26acd478467fddec8b662
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 623e1480bdec85120e504c8dc71b28d017c8872a
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68240276"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88845069"
 ---
-# <a name="referencewrapper-class"></a>reference_wrapper クラス
+# <a name="reference_wrapper-class"></a>reference_wrapper クラス
 
 参照をラップします。
 
@@ -47,7 +47,7 @@ class reference_wrapper
 };
 ```
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 `reference_wrapper<Ty>` は、構築可能で、オブジェクトまたは `Ty` 型の関数への参照の周りの割り当て可能なラッパーのコピーであり、その型のオブジェクトを指すポインターを保持します。 `reference_wrapper` を使用して参照を標準コンテナーに格納できるほか、`std::bind` への参照によってオブジェクトを渡すことができます。
 
@@ -59,31 +59,31 @@ class reference_wrapper
 
 ### <a name="constructors"></a>コンストラクター
 
-|||
+|名前|説明|
 |-|-|
 |[reference_wrapper](#reference_wrapper)|`reference_wrapper` を構築します。|
 
-### <a name="typedefs"></a>Typedef
+### <a name="typedefs"></a>Typedefs
 
-|||
+|名前|説明|
 |-|-|
 |[result_type](#result_type)|ラップされた参照の弱い結果型。|
 |[type](#type)|ラップされた参照の型。|
 
-### <a name="functions"></a>関数
+### <a name="functions"></a>Functions
 
-|||
+|名前|説明|
 |-|-|
 |[get](#get)|ラップされた参照を取得します。|
 
 ### <a name="operators"></a>演算子
 
-|||
+|名前|説明|
 |-|-|
-|[operator Ty&amp;](#op_ty_amp)|ラップされた参照へのポインターを取得します。|
-|[演算子 ()](#op_call)|ラップされた参照を呼び出します。|
+|[演算子 Ty&amp;](#op_ty_amp)|ラップされた参照へのポインターを取得します。|
+|[operator ()](#op_call)|ラップされた参照を呼び出します。|
 
-## <a name="get"></a> 取得
+## <a name="get"></a><a name="get"></a> 取得
 
 ラップされた参照を取得します。
 
@@ -91,7 +91,7 @@ class reference_wrapper
 Ty& get() const noexcept;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 このメンバー関数はラップされた参照を返します。
 
@@ -122,7 +122,7 @@ rwi = 1
 i = -1
 ```
 
-## <a name="op_ty_amp"></a> operator Ty&amp;
+## <a name="operator-tyamp"></a><a name="op_ty_amp"></a> 演算子 Ty&amp;
 
 ラップされた参照を取得します。
 
@@ -130,7 +130,7 @@ i = -1
 operator Ty&() const noexcept;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 このメンバー演算子は、 `*ptr`を返します。
 
@@ -158,7 +158,7 @@ i = 1
 (int)rwi = 1
 ```
 
-## <a name="op_call"></a> operator()
+## <a name="operator"></a><a name="op_call"></a> operator ()
 
 ラップされた参照を呼び出します。
 
@@ -169,13 +169,13 @@ auto operator()(Types&&... args);
 
 ### <a name="parameters"></a>パラメーター
 
-*型*\
+*な*\
 引数リストの型。
 
-*引数*\
+*value*\
 引数リスト。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 テンプレート メンバー `operator()` は `std::invoke(get(), std::forward<Types>(args)...)` を返します。
 
@@ -204,7 +204,7 @@ int main() {
 rwi(3) = -3
 ```
 
-## <a name="reference_wrapper"></a> reference_wrapper
+## <a name="reference_wrapper"></a><a name="reference_wrapper"></a> reference_wrapper
 
 `reference_wrapper` を構築します。
 
@@ -214,13 +214,13 @@ reference_wrapper(Ty& val) noexcept;
 
 ### <a name="parameters"></a>パラメーター
 
-*Ty*\
+*~*\
 ラップする型。
 
 *val*\
 ラップする値。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 このコンストラクターは、`ptr` の格納された値を `&val` に設定します。
 
@@ -255,7 +255,7 @@ rwi = 1
 i = -1
 ```
 
-## <a name="result_type"></a> result_type
+## <a name="result_type"></a><a name="result_type"></a> result_type
 
 ラップされた参照の弱い結果型。
 
@@ -263,7 +263,7 @@ i = -1
 typedef R result_type;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 `result_type` typedef は、ラップされた関数の弱い結果型のシノニムです。 この typedef は、関数型に対してのみ意味があります。
 
@@ -294,7 +294,7 @@ int main() {
 val = -3
 ```
 
-## <a name="type"></a> 型
+## <a name="type"></a><a name="type"></a> 型
 
 ラップされた参照の型。
 
@@ -302,7 +302,7 @@ val = -3
 typedef Ty type;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 この typedef は、テンプレート引数 `Ty` のシノニムです。
 

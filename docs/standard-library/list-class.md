@@ -98,12 +98,12 @@ helpviewer_keywords:
 - std::list [C++], swap
 - std::list [C++], unique
 ms.assetid: d3707f4a-10fd-444f-b856-f9ca2077c1cd
-ms.openlocfilehash: bf59438ca30462866cd90e281903356b863e36aa
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: ec53e2a907cd38b262ec305d10ae63ad746f29b5
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87224852"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88833336"
 ---
 # <a name="list-class"></a>list クラス
 
@@ -132,19 +132,19 @@ list のメンバー関数 [merge](#merge)、[reverse](#reverse)、[unique](#uni
 
 リストの再割り当ては、メンバー関数がリストの要素を挿入または消去する必要がある場合に発生します。 このような場合、制御対象シーケンスの消去部分を指す反復子または参照は常に無効になります。
 
-C++ 標準ライブラリの標準ヘッダーをインクルードして、 \<list> [コンテナー](../standard-library/stl-containers.md)クラステンプレートリストといくつかのサポートテンプレートを定義します。
+C++ 標準ライブラリの標準ヘッダーをインクルードして、 \<list> [コンテナー](../standard-library/stl-containers.md) クラステンプレートリストといくつかのサポートテンプレートを定義します。
 
 ## <a name="members"></a>メンバー
 
 ### <a name="constructors"></a>コンストラクター
 
-|||
+|名前|説明|
 |-|-|
 |[list](#list)|特定のサイズのリスト、特定の値の要素を持つリスト、特定の `allocator` を持つリストを構築します。または他のリストのコピーとしてリストを構築します。|
 
 ### <a name="typedefs"></a>Typedefs
 
-|||
+|名前|説明|
 |-|-|
 |[allocator_type](#allocator_type)|リスト オブジェクトの `allocator` クラスを表す型。|
 |[const_iterator](#const_iterator)|リスト内の要素を読み取ることができる双方向反復子を提供する型 **`const`** 。|
@@ -159,9 +159,9 @@ C++ 標準ライブラリの標準ヘッダーをインクルードして、 \<l
 |[size_type](#size_type)|リスト内の要素の数をカウントする型。|
 |[value_type](#value_type)|リスト内に格納されているデータ型を表す型。|
 
-### <a name="functions"></a>関数
+### <a name="functions"></a>Functions
 
-|||
+|名前|説明|
 |-|-|
 |[assign](#assign)|リストから要素を消去し、対象のリストに新しい要素のセットをコピーします。|
 |[戻る](#back)|リストの最後の要素への参照を返します。|
@@ -198,17 +198,17 @@ C++ 標準ライブラリの標準ヘッダーをインクルードして、 \<l
 |[スワップ](#swap)|2 つのリストの要素を交換します。|
 |[unique](#unique)|隣接する重複要素、または他のいずれかの二項述語の条件を満たす、隣接する要素をリストから削除します。|
 
-### <a name="operators"></a>オペレーター
+### <a name="operators"></a>演算子
 
-|||
+|名前|説明|
 |-|-|
 |[operator =](#op_eq)|別のリストのコピーでリストの要素を置き換えます。|
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー**:\<list>
+**ヘッダー**: \<list>
 
-## <a name="allocator_type"></a><a name="allocator_type"></a>allocator_type
+## <a name="allocator_type"></a><a name="allocator_type"></a> allocator_type
 
 リスト オブジェクトの allocator クラスを表す型。
 
@@ -218,13 +218,13 @@ typedef Allocator allocator_type;
 
 ### <a name="remarks"></a>解説
 
-`allocator_type`は、テンプレートパラメーター*アロケーター*のシノニムです。
+`allocator_type` は、テンプレートパラメーター *アロケーター*のシノニムです。
 
 ### <a name="example"></a>例
 
 [get_allocator](#get_allocator) の例をご覧ください。
 
-## <a name="assign"></a><a name="assign"></a>割り当てる
+## <a name="assign"></a><a name="assign"></a> 割り当てる
 
 リストから要素を消去し、対象のリストに新しい要素のセットをコピーします。
 
@@ -313,7 +313,7 @@ int main()
 c1 = 10 20 30c1 = 50 60c1 = 4 4 4 4 4 4 4c1 = 10 20 30 40
 ```
 
-## <a name="back"></a><a name="back"></a>戻る
+## <a name="back"></a><a name="back"></a> 戻る
 
 リストの最後の要素への参照を返します。
 
@@ -363,7 +363,7 @@ The last integer of c1 is 11
 The next-to-last integer of c1 is 10
 ```
 
-## <a name="begin"></a><a name="begin"></a>初め
+## <a name="begin"></a><a name="begin"></a> 初め
 
 リスト内の最初の要素を指す反復子を返します。
 
@@ -416,7 +416,7 @@ The first element of c1 is 1
 The first element of c1 is now 20
 ```
 
-## <a name="cbegin"></a><a name="cbegin"></a>cbegin
+## <a name="cbegin"></a><a name="cbegin"></a> cbegin
 
 **`const`** 範囲内の最初の要素を指す反復子を返します。
 
@@ -442,7 +442,7 @@ auto i2 = Container.cbegin();
 // i2 is Container<T>::const_iterator
 ```
 
-## <a name="cend"></a><a name="cend"></a>cend
+## <a name="cend"></a><a name="cend"></a> cend
 
 **`const`** 範囲内の最後の要素の次の位置を指す反復子を返します。
 
@@ -470,7 +470,7 @@ auto i2 = Container.cend();
 
 `cend` によって返された値は逆参照しないでください。
 
-## <a name="clear"></a><a name="clear"></a>クリア
+## <a name="clear"></a><a name="clear"></a> クリア
 
 リストのすべての要素を消去します。
 
@@ -505,7 +505,7 @@ The size of the list is initially 3
 The size of list after clearing is 0
 ```
 
-## <a name="const_iterator"></a><a name="const_iterator"></a>const_iterator
+## <a name="const_iterator"></a><a name="const_iterator"></a> const_iterator
 
 リスト内の要素を読み取ることができる双方向反復子を提供する型 **`const`** 。
 
@@ -521,7 +521,7 @@ typedef implementation-defined const_iterator;
 
 [back](#back) の例をご覧ください。
 
-## <a name="const_pointer"></a><a name="const_pointer"></a>const_pointer
+## <a name="const_pointer"></a><a name="const_pointer"></a> const_pointer
 
 リスト内の要素へのポインターを提供 **`const`** します。
 
@@ -535,7 +535,7 @@ typedef typename Allocator::const_pointer const_pointer;
 
 ほとんどの場合、リスト オブジェクト内の要素にアクセスするには、[反復子](#iterator)を使用する必要があります。
 
-## <a name="const_reference"></a><a name="const_reference"></a>const_reference
+## <a name="const_reference"></a><a name="const_reference"></a> const_reference
 
 **`const`** 読み取りと操作の実行のためにリストに格納されている要素への参照を提供する型 **`const`** 。
 
@@ -579,7 +579,7 @@ The first element is 10
 The second element is 20
 ```
 
-## <a name="const_reverse_iterator"></a><a name="const_reverse_iterator"></a>const_reverse_iterator
+## <a name="const_reverse_iterator"></a><a name="const_reverse_iterator"></a> const_reverse_iterator
 
 リスト内の任意の要素を読み取ることができる双方向反復子を提供する型 **`const`** 。
 
@@ -595,7 +595,7 @@ typedef std::reverse_iterator<const_iterator> const_reverse_iterator;
 
 [rbegin](#rbegin) の例をご覧ください。
 
-## <a name="crbegin"></a><a name="crbegin"></a>crbegin
+## <a name="crbegin"></a><a name="crbegin"></a> crbegin
 
 逆順のリスト内の最初の要素を指す定数反復子を返します。
 
@@ -639,7 +639,7 @@ int main( )
 The last element in the list is 30.
 ```
 
-## <a name="crend"></a><a name="crend"></a>crend
+## <a name="crend"></a><a name="crend"></a> crend
 
 逆順のリスト内の最後の要素の次の位置を指す定数反復子を返します。
 
@@ -690,7 +690,7 @@ int main( )
 The first element in the list is: 10
 ```
 
-## <a name="difference_type"></a><a name="difference_type"></a>difference_type
+## <a name="difference_type"></a><a name="difference_type"></a> difference_type
 
 list の要素の数を、反復子が指す要素の範囲に基づいて表すために使用できる符号付き整数型。
 
@@ -747,7 +747,7 @@ The number '20' is in c1 collection 2 times.
 The number '30' is in c1 collection 3 times.
 ```
 
-## <a name="emplace"></a><a name="emplace"></a>emplace
+## <a name="emplace"></a><a name="emplace"></a> emplace
 
 指定した位置において、構築された要素をリスト内の適切な場所に挿入します。
 
@@ -758,7 +758,7 @@ void emplace(iterator Where, Type&& val);
 ### <a name="parameters"></a>パラメーター
 
 *どこ*\
-最初の要素が挿入される、ターゲット[リスト](../standard-library/list-class.md)内の位置。
+最初の要素が挿入される、ターゲット [リスト](../standard-library/list-class.md) 内の位置。
 
 *val*\
 `list` の末尾に追加する要素。
@@ -791,7 +791,7 @@ int main( )
 Moved first element: a
 ```
 
-## <a name="emplace_back"></a><a name="emplace_back"></a>emplace_back
+## <a name="emplace_back"></a><a name="emplace_back"></a> emplace_back
 
 イン プレースで構築された要素をリストの末尾に追加します。
 
@@ -832,7 +832,7 @@ int main( )
 Moved first element: a
 ```
 
-## <a name="emplace_front"></a><a name="emplace_front"></a>emplace_front
+## <a name="emplace_front"></a><a name="emplace_front"></a> emplace_front
 
 イン プレースで構築された要素をリストの先頭に追加します。
 
@@ -873,7 +873,7 @@ int main( )
 Moved first element: a
 ```
 
-## <a name="empty"></a><a name="empty"></a>指定
+## <a name="empty"></a><a name="empty"></a> 指定
 
 リストが空かどうかをテストします。
 
@@ -883,7 +883,7 @@ bool empty() const;
 
 ### <a name="return-value"></a>戻り値
 
-**`true`** リストが空の場合は。**`false`** リストが空でない場合は。
+**`true`** リストが空の場合は。 **`false`** リストが空でない場合は。
 
 ### <a name="example"></a>例
 
@@ -910,7 +910,7 @@ int main( )
 The list is not empty.
 ```
 
-## <a name="end"></a><a name="end"></a>終わり
+## <a name="end"></a><a name="end"></a> 終わり
 
 リスト内の最後の要素の次の位置を指す反復子を返します。
 
@@ -925,7 +925,7 @@ iterator end();
 
 ### <a name="remarks"></a>解説
 
-`end`は、反復子がリストの末尾に到達したかどうかをテストするために使用されます。
+`end` は、反復子がリストの末尾に到達したかどうかをテストするために使用されます。
 
 ### <a name="example"></a>例
 
@@ -970,7 +970,7 @@ The new next-to-last integer of c1 is 400
 The list is now: 10 400 30
 ```
 
-## <a name="erase"></a><a name="erase"></a>消去
+## <a name="erase"></a><a name="erase"></a> 消去
 
 指定した位置からリスト内の要素または要素範囲を削除します。
 
@@ -1045,7 +1045,7 @@ After erasing the first element, the list becomes: 20 30 40 50
 After erasing all elements but the first, the list becomes:  20
 ```
 
-## <a name="front"></a><a name="front"></a>外側
+## <a name="front"></a><a name="front"></a> 外側
 
 リスト内の最初の要素への参照を返します。
 
@@ -1092,7 +1092,7 @@ The first integer of c1 is 10
 The first integer of c1 is 11
 ```
 
-## <a name="get_allocator"></a><a name="get_allocator"></a>get_allocator
+## <a name="get_allocator"></a><a name="get_allocator"></a> get_allocator
 
 リストの構築に使用されるアロケーター オブジェクトのコピーを返します。
 
@@ -1132,7 +1132,7 @@ int main( )
 }
 ```
 
-## <a name="insert"></a><a name="insert"></a>insert
+## <a name="insert"></a><a name="insert"></a> insert
 
 リストの指定した位置に要素、複数の要素、または要素の範囲を挿入します。
 
@@ -1238,7 +1238,7 @@ int main()
 }
 ```
 
-## <a name="iterator"></a><a name="iterator"></a>反
+## <a name="iterator"></a><a name="iterator"></a> 反
 
 リスト内の任意の要素の読み取りまたは変更ができる双方向反復子を提供する型。
 
@@ -1254,7 +1254,7 @@ typedef implementation-defined iterator;
 
 [begin](#begin) の例をご覧ください。
 
-## <a name="list"></a><a name="list"></a>表
+## <a name="list"></a><a name="list"></a> 表
 
 特定のサイズ、特定の値の要素、または特定のアロケーターを持つリストを構築します。あるいは他のリストの全体または一部のコピーとして構築します。
 
@@ -1311,9 +1311,9 @@ list(InputIterator First, InputIterator Last, const Allocator& Al);
 
 4番目と5番目のコンストラクターは、値*Val*の (*Count*) 要素の繰り返しを指定します。
 
-6番目のコンストラクターは、リストの*右側*のコピーを指定します。
+6番目のコンストラクターは、リストの *右側*のコピーを指定します。
 
-7番目のコンストラクターは、リストを*右*に移動します。
+7番目のコンストラクターは、リストを *右*に移動します。
 
 8 番目のコンストラクターは、initializer_list を使用して要素を指定します。
 
@@ -1412,7 +1412,7 @@ int main()
 c1 = 0 0 0c2 = 2 2 2 2 2c3 = 1 1 1c4 = 2 2 2 2 2c5 = 2 2c6 = 2 2 2c7 = 2 2 2c8 = 1 2 3 4
 ```
 
-## <a name="max_size"></a><a name="max_size"></a>max_size
+## <a name="max_size"></a><a name="max_size"></a> max_size
 
 リストの最大長を返します。
 
@@ -1443,7 +1443,7 @@ int main( )
 }
 ```
 
-## <a name="merge"></a><a name="merge"></a>マージ
+## <a name="merge"></a><a name="merge"></a> マージ
 
 引数リストから要素を削除し、それを対象のリストに挿入して、新たに組み合わされたセットの要素を昇順またはその他の指定された順序で並べ替えます。
 
@@ -1464,9 +1464,9 @@ void merge(list<Type, Allocator>& right, Traits comp);
 
 ### <a name="remarks"></a>解説
 
-引数リストの*右側*が対象のリストにマージされます。
+引数リストの *右側* が対象のリストにマージされます。
 
-引数リストと対象のリストはどちらも、結果のシーケンスを並べ替える場合と同じ比較関係を使用して並べ替える必要があります。 1 つ目のメンバー関数の既定の順序は昇順です。 2番*目のメンバー*関数は、クラスのユーザー指定の比較演算を実行し `Traits` ます。
+引数リストと対象のリストはどちらも、結果のシーケンスを並べ替える場合と同じ比較関係を使用して並べ替える必要があります。 1 つ目のメンバー関数の既定の順序は昇順です。 2番 *目のメンバー* 関数は、クラスのユーザー指定の比較演算を実行し `Traits` ます。
 
 ### <a name="example"></a>例
 
@@ -1527,7 +1527,7 @@ c3 = 5 1
 After merging c3 with c2 according to the '>' comparison relation: c2 = 6 5 4 3 2 1
 ```
 
-## <a name="operator"></a><a name="op_eq"></a>operator =
+## <a name="operator"></a><a name="op_eq"></a> operator =
 
 別のリストのコピーでリストの要素を置き換えます。
 
@@ -1543,7 +1543,7 @@ list& operator=(list&& right);
 
 ### <a name="remarks"></a>解説
 
-内の既存の要素を消去した後、 `list` 演算子はの内容*をに*コピーまたは移動し `list` ます。
+内の既存の要素を消去した後、 `list` 演算子はの内容 *をに* コピーまたは移動し `list` ます。
 
 ### <a name="example"></a>例
 
@@ -1600,7 +1600,7 @@ typedef typename Allocator::pointer pointer;
 
 ほとんどの場合、リスト オブジェクト内の要素にアクセスするには、[反復子](#iterator)を使用する必要があります。
 
-## <a name="pop_back"></a><a name="pop_back"></a>pop_back
+## <a name="pop_back"></a><a name="pop_back"></a> pop_back
 
 リストの末尾の要素を削除します。
 
@@ -1642,7 +1642,7 @@ The last element is: 2
 After deleting the element at the end of the list, the last element is: 1
 ```
 
-## <a name="pop_front"></a><a name="pop_front"></a>pop_front
+## <a name="pop_front"></a><a name="pop_front"></a> pop_front
 
 リストの先頭から要素を削除します。
 
@@ -1684,7 +1684,7 @@ The second element is: 2
 After deleting the element at the beginning of the list, the first element is: 2
 ```
 
-## <a name="push_back"></a><a name="push_back"></a>push_back
+## <a name="push_back"></a><a name="push_back"></a> push_back
 
 リストの末尾に要素を追加します。
 
@@ -1739,7 +1739,7 @@ New last element: 2
 Moved first element: a
 ```
 
-## <a name="push_front"></a><a name="push_front"></a>push_front
+## <a name="push_front"></a><a name="push_front"></a> push_front
 
 リストの先頭に要素を追加します。
 
@@ -1794,7 +1794,7 @@ New first element: 2
 Moved first element: a
 ```
 
-## <a name="rbegin"></a><a name="rbegin"></a>rbegin
+## <a name="rbegin"></a><a name="rbegin"></a> rbegin
 
 逆順のリスト内の最初の要素を示す反復子を返します。
 
@@ -1865,7 +1865,7 @@ The reversed list is: 30 20 10
 The last element in the list is now 40.
 ```
 
-## <a name="reference"></a><a name="reference"></a>「
+## <a name="reference"></a><a name="reference"></a> 「
 
 list に格納されている要素への参照を提供する型。
 
@@ -1901,7 +1901,7 @@ The first element is 10
 The second element is 20
 ```
 
-## <a name="remove"></a><a name="remove"></a>から
+## <a name="remove"></a><a name="remove"></a> から
 
 指定された値と一致するリストの要素を消去します。
 
@@ -1958,7 +1958,7 @@ The initial list is c1 = 5 100 5 200 5 300
 After removing elements with value 5, the list becomes c2 = 100 200 300
 ```
 
-## <a name="remove_if"></a><a name="remove_if"></a>remove_if
+## <a name="remove_if"></a><a name="remove_if"></a> remove_if
 
 指定した述語を満たすリストから要素を消去します。
 
@@ -2023,7 +2023,7 @@ The initial list is c1 = 3 4 5 6 7 8
 After removing the odd elements, the list becomes c2 = 4 6 8
 ```
 
-## <a name="rend"></a><a name="rend"></a>rend
+## <a name="rend"></a><a name="rend"></a> rend
 
 逆順のリスト内の最後の要素の次の場所を指す反復子を返します。
 
@@ -2109,7 +2109,7 @@ The reversed list is: 30 20 10
 The modified reversed list is: 30 20 40
 ```
 
-## <a name="resize"></a><a name="resize"></a>サイズ
+## <a name="resize"></a><a name="resize"></a> サイズ
 
 リストの新しいサイズを指定します。
 
@@ -2176,7 +2176,7 @@ The reduced size of c1 is: 2
 The value of the last element is now 20
 ```
 
-## <a name="reverse"></a><a name="reverse"></a>後ろ向き
+## <a name="reverse"></a><a name="reverse"></a> 後ろ向き
 
 要素がリストに出現する順序を反転させます。
 
@@ -2220,7 +2220,7 @@ c1 = 10 20 30
 Reversed c1 = 30 20 10
 ```
 
-## <a name="reverse_iterator"></a><a name="reverse_iterator"></a>reverse_iterator
+## <a name="reverse_iterator"></a><a name="reverse_iterator"></a> reverse_iterator
 
 逆順のリスト内の 1 つの要素の読み取りまたは変更ができる双方向反復子を提供する型。
 
@@ -2236,7 +2236,7 @@ typedef std::reverse_iterator<iterator> reverse_iterator;
 
 [rbegin](#rbegin) の例をご覧ください。
 
-## <a name="size"></a><a name="size"></a>幅
+## <a name="size"></a><a name="size"></a> 幅
 
 リスト内の要素数を返します。
 
@@ -2277,7 +2277,7 @@ List length is 1.
 List length is now 2.
 ```
 
-## <a name="size_type"></a><a name="size_type"></a>size_type
+## <a name="size_type"></a><a name="size_type"></a> size_type
 
 リスト内の要素の数をカウントする型。
 
@@ -2289,7 +2289,7 @@ typedef typename Allocator::size_type size_type;
 
 [size](#size) の例をご覧ください。
 
-## <a name="sort"></a><a name="sort"></a>基づく
+## <a name="sort"></a><a name="sort"></a> 基づく
 
 リストの要素を、昇順またはいくつかの他のユーザー指定の順序で整列します。
 
@@ -2309,7 +2309,7 @@ template <class Traits>
 
 既定では、最初のメンバー関数は要素を昇順に並べ替えます。
 
-メンバーテンプレート関数は、クラスのユーザー指定の比較操作*comp*に従って要素を並べ替え `Traits` ます。
+メンバーテンプレート関数は、クラスのユーザー指定の比較操作 *comp* に従って要素を並べ替え `Traits` ます。
 
 ### <a name="example"></a>例
 
@@ -2354,7 +2354,7 @@ After sorting c1 = 10 20 30
 After sorting with 'greater than' operation, c1 = 30 20 10
 ```
 
-## <a name="splice"></a><a name="splice"></a>連結
+## <a name="splice"></a><a name="splice"></a> 連結
 
 ソース リストから要素を削除して、ターゲット リストに挿入します。
 
@@ -2391,11 +2391,11 @@ void splice(const_iterator Where, list<Type, Allocator>&& Source, const_iterator
 
 ### <a name="remarks"></a>解説
 
-メンバー関数の最初のペアは、ソースリスト内のすべての要素を、 *Where*で参照される位置の前にコピー先リストに挿入し、ソースリストからすべての要素を削除します。 ( `&Source` はと等しくない必要があり **`this`** ます)。
+メンバー関数の最初のペアは、ソースリスト内のすべての要素を、 *Where* で参照される位置の前にコピー先リストに挿入し、ソースリストからすべての要素を削除します。 ( `&Source` はと等しくない必要があり **`this`** ます)。
 
-メンバー関数の2番目のペアは、 *Iter*によって参照される要素を、 *Where*で参照されるターゲットリスト内の位置の前に挿入し、ソースリストから*Iter*を削除します。 (`Where == Iter || Where == ++Iter` の場合は、何も変わりません)。
+メンバー関数の2番目のペアは、 *Iter* によって参照される要素を、 *Where* で参照されるターゲットリスト内の位置の前に挿入し、ソースリストから *Iter* を削除します。 (`Where == Iter || Where == ++Iter` の場合は、何も変わりません)。
 
-メンバー関数の3番目のペアは、[,) によって指定された範囲を、 `First` `Last` ターゲットリスト内の要素の前に挿入します。*ここ*で、は Where で参照し、ソースリストからその要素の範囲を削除します。 (の場合、範囲には、が `&Source == this` `[First, Last)` 指す要素を含める*ことは*できません)。
+メンバー関数の3番目のペアは、[,) によって指定された範囲を、 `First` `Last` ターゲットリスト内の要素の前に挿入します。 *ここ* で、は Where で参照し、ソースリストからその要素の範囲を削除します。 (の場合、範囲には、が `&Source == this` `[First, Last)` 指す要素を含める *ことは*できません)。
 
 範囲指定されたスプライスで `N` 個の要素が挿入され、さらに `&Source != this` の場合、クラス [iterator](../standard-library/forward-list-class.md#iterator) のオブジェクトは `N` 回インクリメントされます。
 
@@ -2477,7 +2477,7 @@ int main()
 Beginning state of lists:c1 = 2 elements: (10) (11)c2 = 3 elements: (20) (21) (22)c3 = 2 elements: (30) (31)c4 = 4 elements: (40) (41) (42) (43)After splicing c1 into c2:c1 = 0 elements:c2 = 5 elements: (20) (10) (11) (21) (22)After splicing the first element of c3 into c2:c3 = 1 elements: (31)c2 = 6 elements: (20) (10) (11) (30) (21) (22)After splicing a range of c4 into c2:c4 = 2 elements: (40) (43)c2 = 8 elements: (20) (10) (11) (30) (41) (42) (21) (22)
 ```
 
-## <a name="swap"></a><a name="swap"></a>フォト
+## <a name="swap"></a><a name="swap"></a> フォト
 
 2 つのリストの要素を交換します。
 
@@ -2489,10 +2489,10 @@ friend void swap(list<Type, Allocator>& left, list<Type, Allocator>& right)
 ### <a name="parameters"></a>パラメーター
 
 *そうです*\
-交換する要素を提供する*リスト。または、リスト内*の要素と交換される要素を含むリスト。
+交換する要素を提供する *リスト。または、リスト内*の要素と交換される要素を含むリスト。
 
 *左側*\
-リスト*右側*の要素と交換される要素を含むリスト。
+リスト *右側*の要素と交換される要素を含むリスト。
 
 ### <a name="example"></a>例
 
@@ -2542,7 +2542,7 @@ After swapping with c2, list c1 is: 10 20
 After swapping with c3, list c1 is: 100
 ```
 
-## <a name="unique"></a><a name="unique"></a>固有
+## <a name="unique"></a><a name="unique"></a> 固有
 
 隣接する重複要素、または他のいずれかの二項述語の条件を満たす隣接する要素を list から削除します。
 
@@ -2564,7 +2564,7 @@ void unique(BinaryPredicate pred);
 
 1 つ目のメンバー関数は、その直前の要素に一致するすべての要素を削除します。
 
-2番目のメンバー関数は、前の要素と比較したときに、述語関数*pred*を満たすすべての要素を削除します。 \<functional>引数*pred*のヘッダーで宣言されている任意のバイナリ関数オブジェクトを使用することも、独自の関数オブジェクトを作成することもできます。
+2番目のメンバー関数は、前の要素と比較したときに、述語関数 *pred* を満たすすべての要素を削除します。 \<functional>引数*pred*のヘッダーで宣言されている任意のバイナリ関数オブジェクトを使用することも、独自の関数オブジェクトを作成することもできます。
 
 ### <a name="example"></a>例
 
@@ -2615,7 +2615,7 @@ After removing successive duplicate elements, c2 = -10 10 20 -10
 After removing successive unequal elements, c3 = -10 -10
 ```
 
-## <a name="value_type"></a><a name="value_type"></a>value_type
+## <a name="value_type"></a><a name="value_type"></a> value_type
 
 リスト内に格納されているデータ型を表す型。
 

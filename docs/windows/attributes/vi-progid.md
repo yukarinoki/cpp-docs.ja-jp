@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - vi_progid attribute
 ms.assetid: a52449be-b93e-4111-b883-44bb8da53261
-ms.openlocfilehash: e7da3463b142fbca83387e52394ee33f42636124
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: b27a9a2f5a05535bd11b8091059e5be277b9692c
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87213789"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88832920"
 ---
 # <a name="vi_progid"></a>vi_progid
 
@@ -32,13 +32,13 @@ Progid には、COM/ActiveX オブジェクトを識別するために使用さ�
 
 ## <a name="remarks"></a>解説
 
-**Vi_progid** C++ 属性を使用すると、COM オブジェクトのバージョンに依存しない progid を指定できます。 ProgID は、name1. *name2.* という形式になります。 バージョンに依存しない ProgID には*バージョン*がありません。 では、と vi_progid の両方の属性を指定でき `progid` **vi_progid** `coclass` ます。 **Vi_progid**を指定しない場合、バージョンに依存しない progid が[progid](progid.md)属性によって指定された値になります。
+**Vi_progid** C++ 属性を使用すると、COM オブジェクトのバージョンに依存しない progid を指定できます。 ProgID は、name1. *name2.* という形式になります。 バージョンに依存しない ProgID には *バージョン*がありません。 では、と vi_progid の両方の属性を指定でき `progid` **vi_progid** `coclass` ます。 **Vi_progid**を指定しない場合、バージョンに依存しない progid が[progid](progid.md)属性によって指定された値になります。
 
-**vi_progid**は属性を意味し `coclass` ます。つまり、 **vi_progid**を指定した場合は、 `coclass` 属性と**vi_progid**属性を指定することと同じです。
+**vi_progid** は属性を意味し `coclass` ます。つまり、 **vi_progid**を指定した場合は、 `coclass` 属性と **vi_progid** 属性を指定することと同じです。
 
 **Vi_progid**属性を指定すると、指定した名前でクラスが自動的に登録されます。 生成された .idl ファイルには ProgID 値が表示されません。
 
-ATL プロジェクトでは、 [coclass](coclass.md)属性も存在する場合、指定した ProgID が関数によって使用され `GetVersionIndependentProgID` ます (属性によって挿入され `coclass` ます)。
+ATL プロジェクトでは、 [coclass](coclass.md) 属性も存在する場合、指定した ProgID が関数によって使用され `GetVersionIndependentProgID` ます (属性によって挿入され `coclass` ます)。
 
 ## <a name="example"></a>例
 
@@ -46,9 +46,7 @@ ATL プロジェクトでは、 [coclass](coclass.md)属性も存在する場合
 
 ## <a name="requirements"></a>必要条件
 
-### <a name="attribute-context"></a>属性コンテキスト
-
-|||
+| 属性コンテキスト | 値 |
 |-|-|
 |**適用対象**|**`class`**, **`struct`**|
 |**Repeatable**|いいえ|

@@ -41,12 +41,12 @@ helpviewer_keywords:
 - _outpw function
 - _outp function
 ms.assetid: c200fe22-41f6-46fd-b0be-ebb805b35181
-ms.openlocfilehash: ceaaefbbe6f9debfb5ac8e1e8f5f3d1bbb36c8a8
-ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
+ms.openlocfilehash: c66710fe31b5a657a4976bea7f0aa52aac3e3825
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86404061"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88837087"
 ---
 # <a name="outp-outpw-_outp-_outpw-_outpd"></a>outp、outp、_outp、_outpw、_outpd
 
@@ -91,7 +91,7 @@ unsigned long _outpd(
 
 これらの関数は i/o ポートに直接書き込みを行うため、ユーザーモードの Windows コードでは使用できません。
 
-Windows オペレーティングシステムでの i/o ポートの使用の詳細については、「 [Serial Communications](https://docs.microsoft.com/previous-versions/ff802693(v=msdn.10))」を参照してください。
+Windows オペレーティングシステムでの i/o ポートの使用の詳細については、「 [Serial Communications](/previous-versions/ff802693(v=msdn.10))」を参照してください。
 
 `outp`との `outpw` 名前は、関数および関数の古い名前で、非推奨とされてい `_outp` `_outpw` ます。 詳細については、「 [POSIX 関数名](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#posix-function-names)」を参照してください。
 

@@ -6,16 +6,16 @@ helpviewer_keywords:
 - CArchive class [MFC], storing and loading objects
 - CArchive class [MFC], operators
 ms.assetid: 56aef326-02dc-4992-8282-f0a4b78a064e
-ms.openlocfilehash: 5029227078ac0af9ebdd0c74522a7b0ae8ea4d42
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 0351cd0fad1d0fc838c75d3cdbd809a04b0fb393
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87228519"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88832296"
 ---
 # <a name="using-the-carchive-ltlt-and-gtgt-operators"></a>CArchive &lt; &lt; と &gt; &gt; 演算子の使用
 
-`CArchive`ファイルとの \< and > 間で簡単なデータ型の書き込みと読み取りを行うための <> 演算子を提供し `CObject` ます。
+`CArchive` ファイルとの \< and > 間で簡単なデータ型の書き込みと読み取りを行うための <> 演算子を提供し `CObject` ます。
 
 #### <a name="to-store-an-object-in-a-file-via-an-archive"></a>アーカイブを介してファイルにオブジェクトを格納するには
 
@@ -39,21 +39,40 @@ ms.locfileid: "87228519"
 
 [!code-cpp[NVC_MFCSerialization#10](../mfc/codesnippet/cpp/using-the-carchive-output-and-input-operators_4.cpp)]
 
-このライブラリは、の演算子を最初のオペランドとして定義し、 **<\<** and **>>** `CArchive` 次のデータ型とクラス型を2番目のオペランドとして定義します。
+このライブラリでは **`<<`** 、1番目のオペランドとしてと演算子を定義し、 **`>>`** `CArchive` 次のデータ型とクラス型を2番目のオペランドとして定義します。
 
-||||
-|-|-|-|
-|`CObject*`|**サイズ**と`CSize`|**`float`**|
-|**テキスト**|`CString`|**ポイント**と`CPoint`|
-|`DWORD`|**バイト**|`RECT` および `CRect`|
-|**Double**|**LONG**|`CTime` および `CTimeSpan`|
-|`Int`|**COleCurrency**|`COleVariant`|
-|`COleDateTime`|`COleDateTimeSpan`||
+:::row:::
+   :::column span="":::
+      `BYTE`\
+      `CObject*`\
+      `COleCurrency`\
+      `COleDateTime`\
+      `COleDateTimeSpan`
+   :::column-end:::
+   :::column span="":::
+      `COleVariant`\
+      `CString`\
+      `CTime` と `CTimeSpan`\
+      `Double`
+   :::column-end:::
+   :::column span="":::
+      `DWORD`\
+      `Float`\
+      `Int`\
+      `LONG`
+   :::column-end:::
+   :::column span="":::
+      `POINT` と `CPoint`\
+      `RECT` と `CRect`\
+      `SIZE` と `CSize`\
+      `WORD`
+   :::column-end:::
+:::row-end:::
 
 > [!NOTE]
-> アーカイブを使用して s を格納して読み込む `CObject` には、別途考慮が必要です。 詳細については、[アーカイブを使用した通じた cobject の格納と読み込み](../mfc/storing-and-loading-cobjects-via-an-archive.md)に関する記述を参照してください。
+> アーカイブを使用して s を格納して読み込む `CObject` には、別途考慮が必要です。 詳細については、 [アーカイブを使用した通じた cobject の格納と読み込み](../mfc/storing-and-loading-cobjects-via-an-archive.md)に関する記述を参照してください。
 
-**CArchive <\<** and **> > **の演算子は、常に、最初のオペランドであるオブジェクトへの参照を返し `CArchive` ます。 これにより、次に示すように、演算子を連鎖させることができます。
+`CArchive` **`<<`** および演算子は、 **`>>`** 常に、最初のオペランドであるオブジェクトへの参照を返し `CArchive` ます。 これにより、次に示すように、演算子を連鎖させることができます。
 
 [!code-cpp[NVC_MFCSerialization#11](../mfc/codesnippet/cpp/using-the-carchive-output-and-input-operators_5.cpp)]
 

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - IDBCreateSessionImpl class
 - CreateSession method
 ms.assetid: 48c02c5c-8362-45ac-af8e-bb119cf8c5c7
-ms.openlocfilehash: cff1ca374c9489cb9c5df0dad153c4bf7a4cbc9e
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: aeeca008499ca43cdcebd008390e5cb6c5a9e63c
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80210783"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88845524"
 ---
 # <a name="idbcreatesessionimpl-class"></a>IDBCreateSessionImpl クラス
 
@@ -47,7 +47,7 @@ class ATL_NO_VTABLE IDBCreateSessionImpl
 
 ### <a name="interface-methods"></a>インターフェイス メソッド
 
-|||
+| 名前 | 説明 |
 |-|-|
 |[CreateSession](#createsession)|データソースオブジェクトから新しいセッションを作成し、新しく作成されたセッションで要求されたインターフェイスを返します。|
 
@@ -55,7 +55,7 @@ class ATL_NO_VTABLE IDBCreateSessionImpl
 
 データソースオブジェクトの必須のインターフェイスです。
 
-## <a name="idbcreatesessionimplcreatesession"></a><a name="createsession"></a>IDBCreateSessionImpl:: CreateSession
+## <a name="idbcreatesessionimplcreatesession"></a><a name="createsession"></a> IDBCreateSessionImpl:: CreateSession
 
 データソースオブジェクトから新しいセッションを作成し、新しく作成されたセッションで要求されたインターフェイスを返します。
 
@@ -71,7 +71,7 @@ STDMETHOD(CreateSession)(IUnknown * pUnkOuter,
 
 *OLE DB プログラマーリファレンス*の「 [IDBCreateSession:: CreateSession](/previous-versions/windows/desktop/ms714942(v=vs.85)) 」を参照してください。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [OLE DB プロバイダー テンプレートに関するページ](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
-[OLE DB プロバイダー テンプレートのアーキテクチャ](../../data/oledb/ole-db-provider-template-architecture.md)
+[OLE DB プロバイダーテンプレートのアーキテクチャ](../../data/oledb/ole-db-provider-template-architecture.md)

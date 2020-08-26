@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - export attribute
 ms.assetid: 70b3e848-fad6-4e09-8c72-be60ca72a4df
-ms.openlocfilehash: ae7c426466bfaf4a325ba1cafe30c8ca74f8ef95
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 4854789d9f977b3b747fd9b546cb92642942be88
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87228077"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88845277"
 ---
 # <a name="export"></a>エクスポート
 
@@ -29,7 +29,7 @@ C++ 属性を使用する **`[export]`** と、データ構造が .idl ファイ
 
 **`[export]`** クラスにパブリックメンバーのみが含まれている場合でも、クラスに属性を適用することはできません (と同等 **`struct`** )。
 
-名前 **`enum`** のないまたはをエクスポートすると **`struct`** 、 **__unnamed**<em>x</em>で始まる名前が付けられます。ここで、 *x*は連番です。
+名前 **`enum`** のないまたはをエクスポートすると **`struct`** 、 **__unnamed**<em>x</em>で始まる名前が付けられます。ここで、 *x* は連番です。
 
 エクスポートに有効な typedef は、基本型、構造体、共用体、列挙型、または型識別子です。  詳細については、「」を参照してください [`typedef`](/windows/win32/Midl/typedef) 。
 
@@ -50,11 +50,9 @@ struct MyStruct {
 
 ## <a name="requirements"></a>必要条件
 
-### <a name="attribute-context"></a>属性コンテキスト
-
-|||
+| 属性コンテキスト | 値 |
 |-|-|
-|**適用対象**|**`union`**、 **`typedef`** 、 **`enum`** 、 **`struct`** 、または**`interface`**|
+|**適用対象**|**`union`**、 **`typedef`** 、 **`enum`** 、 **`struct`** 、または **`interface`**|
 |**Repeatable**|いいえ|
 |**必須属性**|なし|
 |**無効な属性**|なし|

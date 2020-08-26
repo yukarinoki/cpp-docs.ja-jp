@@ -162,12 +162,12 @@ helpviewer_keywords:
 - CTreeCtrl [MFC], SortChildren
 - CTreeCtrl [MFC], SortChildrenCB
 ms.assetid: 96e20031-6161-4143-8c12-8d1816c66d90
-ms.openlocfilehash: e193af8cb5c92f4a3f1ca7381783d90102e0764f
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: 6a824aceae39d5aa6685176354c48a9457a40e9e
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88561818"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88837620"
 ---
 # <a name="ctreectrl-class"></a>CTreeCtrl Class
 
@@ -269,7 +269,7 @@ class CTreeCtrl : public CWnd
 |[CTreeCtrl:: SortChildren](#sortchildren)|指定された親項目の子を並べ替えます。|
 |[CTreeCtrl:: SortChildrenCB](#sortchildrencb)|アプリケーション定義の並べ替え関数を使用して、指定した親項目の子を並べ替えます。|
 
-## <a name="remarks"></a>注釈
+## <a name="remarks"></a>解説
 
 "ツリービューコントロール" は、ドキュメント内の見出し、インデックス内のエントリ、ディスク上のファイルやディレクトリなどの項目の階層リストを表示するウィンドウです。 各項目は、ラベルとオプションのビットマップイメージで構成され、各項目に関連付けられているサブ項目のリストを持つことができます。 項目をクリックすると、関連付けられているサブ項目のリストを展開したり折りたたんだりできます。
 
@@ -327,7 +327,7 @@ virtual BOOL Create(
 
 初期化が成功した場合は0以外の。それ以外の場合は0です。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 他のウィンドウの子ウィンドウとしてツリーコントロールを作成する場合は、メンバー関数を使用し `Create` ます。 を使用してツリーコントロールを作成する場合は、 `Create` 他のツリービュースタイルに加えて、WS_VISIBLE に渡す必要があります。
 
@@ -373,7 +373,7 @@ virtual BOOL CreateEx(
 
 成功した場合は0以外。それ以外の場合は0。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 `CreateEx`Windows 拡張スタイルの先頭**WS_EX_** によって指定された拡張 windows スタイルを適用するには、[[作成](#create)] ではなくを使用します。
 
@@ -394,7 +394,7 @@ CImageList* CreateDragImage(HTREEITEM hItem);
 
 正常に終了した場合は、ドラッグしたビットマップが追加されたイメージリストへのポインター。それ以外の場合は NULL。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 アプリケーションでは、イメージリスト関数を使用して、項目をドラッグしているときにイメージを表示します。
 
@@ -464,7 +464,7 @@ CEdit* EditLabel(HTREEITEM hItem);
 
 正常に終了した場合は、 `CEdit` 項目のテキストを編集するために使用するオブジェクトへのポインター。それ以外の場合は NULL。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 編集を行うには、項目のテキストをテキストを含む単一行のエディットコントロールに置き換えます。
 
@@ -489,7 +489,7 @@ BOOL EndEditLabelNow(BOOL fCancelWithoutSave);
 
 このメソッドが成功した場合は TRUE。それ以外の場合は FALSE。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 このメソッドは、Windows SDK で説明されている [TVM_ENDEDITLABELNOW](/windows/win32/Controls/tvm-endeditlabelnow) メッセージを送信します。
 
@@ -510,7 +510,7 @@ BOOL EnsureVisible(HTREEITEM hItem);
 
 指定した項目が表示されていることを確認するために、ツリービューコントロール内の項目がスクロールされた場合に TRUE を返します。 それ以外の場合、戻り値は FALSE になります。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 必要に応じて、この関数は、項目が表示されるように、親項目を展開するか、ツリービューコントロールをスクロールします。
 
@@ -670,7 +670,7 @@ DWORD GetExtendedStyle() const;
 
 現在のツリービューコントロールの拡張スタイルのビットごとの組み合わせ (または) を格納している値。 詳細については、「 [ツリービューコントロールの拡張スタイル](/windows/win32/Controls/tree-view-control-window-extended-styles)」を参照してください。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 このメソッドは、Windows SDK で説明されている [TVM_GETEXTENDEDSTYLE](/windows/win32/Controls/tvm-getextendedstyle) メッセージを送信します。
 
@@ -711,7 +711,7 @@ CImageList* GetImageList(UINT nImageList) const;
 
 成功した場合は、コントロールのイメージリストへのポインター。それ以外の場合は NULL。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 ツリービューコントロール内の各項目には、1組のビットマップイメージを関連付けることができます。 項目が選択されると1つのイメージが表示され、項目が選択されていないときにもう一方のイメージが表示されます。 たとえば、項目を選択したときに開いているフォルダーを表示し、選択されていない場合は閉じたフォルダーを表示することができます。
 
@@ -812,7 +812,7 @@ int GetItemExpandedImageIndex(HTREEITEM hItem)const;
 
 指定した項目が展開された状態のときに表示されるイメージのインデックス。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 このメソッドは、Windows SDK で説明されている [TVM_GETITEM](/windows/win32/Controls/tvm-getitem) メッセージを送信します。 このメッセージは、ツリービューコントロール項目を記述する [TVITEMEX](/windows/win32/api/commctrl/ns-commctrl-tvitemexw) 構造体を返します。このメソッドは、この `iExpandedImage` 構造体からメンバーを取得します。
 
@@ -858,7 +858,7 @@ BOOL GetItemImage(
 
 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 項目のラベルの左側に画像が表示されます。 項目が選択されると1つのイメージが表示され、項目が選択されていないときにもう一方のイメージが表示されます。 たとえば、項目を選択したときに開いているフォルダーを表示し、選択されていない場合は閉じたフォルダーを表示することができます。
 
@@ -894,7 +894,7 @@ BOOL GetItemPartRect(
 
 このメソッドが成功した場合は TRUE。それ以外の場合は FALSE。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 各ツリーコントロール項目は、グラフィックスの四角形によって制限されます。 その四角形のポイントがクリックされるたびに、その項目は *ヒット*したと言われます。 このメソッドは、四角形のポイントがクリックされると、 *hItem* パラメーターで識別される項目がヒットする最大の四角形を返します。
 
@@ -985,7 +985,7 @@ UINT GetItemStateEx(HTREEITEM hItem) const;
 
 項目の拡張された状態。 詳細については、 `uStateEx` [TVITEMEX](/windows/win32/api/commctrl/ns-commctrl-tvitemexw) 構造体のメンバーを参照してください。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 このメソッドは、Windows SDK で説明されている [TVM_GETITEM](/windows/win32/Controls/tvm-getitem) メッセージを送信します。 このメッセージは、ツリービューコントロール項目を記述する [TVITEMEX](/windows/win32/api/commctrl/ns-commctrl-tvitemexw) 構造体を返します。このメソッドは、この `uStateEx` 構造体からメンバーを取得します。
 
@@ -1022,7 +1022,7 @@ HTREEITEM GetLastVisibleItem() const;
 
 メソッドが成功した場合は、展開されていない最後のノード項目へのハンドル。それ以外の場合は NULL。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 このメソッドは、Windows SDK で説明されている [TVM_GETNEXTITEM](/windows/win32/Controls/tvm-getnextitem) メッセージを送信します。 詳細については、そのメッセージの *フラグ* パラメーターの TVGN_LASTVISIBLE フラグを参照してください。
 
@@ -1098,7 +1098,7 @@ HTREEITEM GetNextItem(
 
 成功した場合は、次の項目のハンドル。それ以外の場合は NULL。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 取得する項目がツリーのルートノードである場合、この関数は NULL を返します。 たとえば、このメッセージをツリービューのルートノードの第1レベルの子の TVGN_PARENT フラグと共に使用すると、メッセージは NULL を返します。
 
@@ -1167,7 +1167,7 @@ HTREEITEM GetParentItem(HTREEITEM hItem) const;
 
 親項目のハンドル。それ以外の場合は NULL。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 指定した項目の親がツリーのルートノードである場合、この関数は NULL を返します。
 
@@ -1245,7 +1245,7 @@ UINT GetScrollTime() const;
 
 スクロール時間の最大値 (ミリ秒単位)。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 このメンバー関数は、Windows SDK で説明されているように、Win32 メッセージ [TVM_GETSCROLLTIME](/windows/win32/Controls/tvm-getscrolltime)の動作を実装します。
 
@@ -1261,7 +1261,7 @@ UINT GetSelectedCount();
 
 選択された項目の数。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 このメソッドは、Windows SDK で説明されている [TVM_GETSELECTEDCOUNT](/windows/win32/Controls/tvm-getselectedcount) メッセージを送信します。
 
@@ -1309,7 +1309,7 @@ CToolTipCtrl* GetToolTips() const;
 
 ツリーコントロールによって使用される [CToolTipCtrl](../../mfc/reference/ctooltipctrl-class.md) オブジェクトへのポインター。 [Create](#create) member 関数でスタイル TVS_NOTOOLTIPS が使用されている場合、ツールヒントは使用されず、NULL が返されます。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 の MFC 実装では、オブジェクトが返されます `GetToolTips` `CToolTipCtrl` 。これは、ツールヒントコントロールのハンドルではなく、ツリーコントロールによって使用されます。
 
@@ -1360,13 +1360,12 @@ HTREEITEM HitTest(TVHITTESTINFO* pHitTestInfo) const;
 
 指定されたポイントを占有するツリービュー項目のハンドル。項目がポイントを占有していない場合は NULL。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 この関数が呼び出されたときに、 *pt* パラメーターはテストする点の座標を指定します。 関数は、指定されたポイントにある項目のハンドルを返します。項目が存在しない場合は NULL を返します。 また、 *Pflags* パラメーターには、指定されたポイントの場所を示す値が含まれています。 次のいずれかの値になります。
 
-|||
+|値|説明|
 |-|-|
-|値|意味|
 |TVHT_ABOVE|クライアント領域の上にあります。|
 |TVHT_BELOW|クライアント領域の下。|
 |TVHT_NOWHERE|クライアント領域で、最後の項目の下にあります。|
@@ -1379,7 +1378,6 @@ HTREEITEM HitTest(TVHITTESTINFO* pHitTestInfo) const;
 |TVHT_ONITEMSTATEICON|ユーザー定義の状態にあるツリービューの項目の状態アイコン。|
 |TVHT_TOLEFT|クライアント領域の左側に移動します。|
 |TVHT_TORIGHT|クライアント領域の右側にあります。|
-|||
 
 ### <a name="example"></a>例
 
@@ -1452,7 +1450,7 @@ HTREEITEM InsertItem(
 
 成功した場合は、新しい項目のハンドル。それ以外の場合は NULL。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 この例では、ツリーコントロール項目を挿入するときに、関数の各バージョンを使用する必要がある状況を示します。
 
@@ -1477,7 +1475,7 @@ BOOL ItemHasChildren(HTREEITEM hItem) const;
 
 *HItem*によって指定されたツリー項目に子項目がある場合は0以外の。それ以外の場合は0。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 その場合は、 [CTreeCtrl:: GetChildItem](#getchilditem) を使用して、これらの子項目を取得できます。
 
@@ -1502,7 +1500,7 @@ HTREEITEM MapAccIdToItem(UINT uAccId) const;
 
 `HTREEITEM` *Uの id*パラメーターに対応するツリービューの項目 () を示すハンドル。 詳細については、 [TVITEMEX](/windows/win32/api/commctrl/ns-commctrl-tvitemexw)構造体の*hItem*メンバーを参照してください。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 ユーザー補助機能は、障碍のあるユーザーがコンピューターを使用できるようにするアプリケーションです。 ユーザー補助識別子は、 `IAccessible` ウィンドウ内の要素を一意に指定するためにインターフェイスによって使用されます。 アクセシビリティ識別子の詳細については、「 [Microsoft Developer Network](https://go.microsoft.com/fwlink/p/?linkid=56322)」の「Active Accessibility のサポートについて」を検索してください。
 
@@ -1537,7 +1535,7 @@ UINT MapItemToAccID(HTREEITEM hItem) const;
 
 *HItem*パラメーターに対応するアクセシビリティ識別子。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 ユーザー補助機能は、障碍のあるユーザーがコンピューターを使用できるようにするアプリケーションです。 ユーザー補助識別子は、 `IAccessible` ウィンドウ内の要素を一意に指定するためにインターフェイスによって使用されます。 アクセシビリティ識別子の詳細については、「 [Microsoft Developer Network](https://go.microsoft.com/fwlink/p/?linkid=56322)」の「Active Accessibility のサポートについて」を検索してください。
 
@@ -1583,7 +1581,7 @@ BOOL Select(
 
 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 *NCode*に TVGN_CARET 値が含まれている場合、親ウィンドウは TVN_SELCHANGING と TVN_SELCHANGED 通知メッセージを受信します。 さらに、指定した項目が折りたたまれた親項目の子である場合は、親の子項目のリストが展開され、指定した項目が表示されます。 この場合、親ウィンドウは TVN_ITEMEXPANDING と TVN_ITEMEXPANDED 通知メッセージを受信します。
 
@@ -1629,7 +1627,7 @@ BOOL SelectItem(HTREEITEM hItem);
 
 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 *HItem*が NULL の場合、この関数は項目を選択しません。
 
@@ -1654,7 +1652,7 @@ BOOL SelectSetFirstVisible(HTREEITEM hItem);
 
 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 関数は、TVM_SELECTITEM と TVGN_FIRSTVISIBLE メッセージパラメーターを使用して、ウィンドウにメッセージを送信します。
 
@@ -1684,7 +1682,7 @@ BOOL SetAutoscrollInfo(
 
 常に TRUE を返します。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 自動スクロールパラメーターを使用して、現在表示されていない項目を表示するようにスクロールします。 ツリービューコントロールには TVS_EX_AUTOHSCROLL 拡張スタイルが必要です。これについては、「 [ツリービューコントロールの拡張スタイル](/windows/win32/Controls/tree-view-control-window-extended-styles)」で説明されています。
 
@@ -1745,7 +1743,7 @@ BOOL SetCheck(
 
 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 ツリーコントロール項目がオンになっている場合 ( *Fcheck* が TRUE に設定されている場合)、項目は横のチェックマーク付きで表示されます。
 
@@ -1781,7 +1779,7 @@ DWORD SetExtendedStyle(
 
 前の拡張コントロールスタイルを含む値。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 このメソッドは、 *Dwexmask* パラメーターに指定されているスタイルをクリアし、 *dwexmask* パラメーターで指定されたスタイルを設定します。 *Dwexmask*のビットに対応する拡張スタイルのみが変更されます。
 
@@ -1944,7 +1942,7 @@ Windows SDK で説明されているように、新しい項目の属性を格�
 
 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 `TVITEM`構造体では、 `hItem` メンバーが項目を識別し、 `mask` メンバーは設定する属性を指定します。
 
@@ -2002,7 +2000,7 @@ BOOL SetItemExpandedImageIndex(
 
 このメソッドが成功した場合は TRUE。それ以外の場合は FALSE。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 このメソッドは、Windows SDK で説明されている [TVM_SETITEM](/windows/win32/Controls/tvm-setitem) メッセージを送信します。 このメソッドは、 *iExpandedImage* `iExpandedImage` TVITEMEX 構造体のメンバーに[i](/windows/win32/api/commctrl/ns-commctrl-tvitemexw)パラメーターを割り当て、メッセージ内でその構造体を使用します。
 
@@ -2065,7 +2063,7 @@ BOOL SetItemImage(
 
 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 ツリービューコントロール内の各項目には、1組のビットマップイメージを関連付けることができます。 項目のラベルの左側に画像が表示されます。 項目が選択されると1つのイメージが表示され、項目が選択されていないときにもう一方のイメージが表示されます。 たとえば、項目を選択したときに開いているフォルダーを表示し、選択されていない場合は閉じたフォルダーを表示することができます。
 
@@ -2103,7 +2101,7 @@ BOOL SetItemState(
 
 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 状態の詳細については、「 [CTreeCtrl:: GetItem](#getitem)」を参照してください。
 
@@ -2133,7 +2131,7 @@ BOOL SetItemStateEx(
 
 このメソッドが成功した場合は TRUE。それ以外の場合は FALSE。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 このメソッドは、Windows SDK で説明されている [TVM_SETITEM](/windows/win32/Controls/tvm-setitem) メッセージを送信します。 このメソッドは、TVITEMEX 構造体のメンバーに*Ustateex*パラメーターを割り当て `uStateEx` 、メッセージ内でその構造体を使用します。 [TVITEMEX](/windows/win32/api/commctrl/ns-commctrl-tvitemexw)
 
@@ -2192,7 +2190,7 @@ COLORREF SetLineColor(COLORREF clrNew = CLR_DEFAULT);
 
 前の行の色。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 このメンバー関数は、Windows SDK で説明されているように、Win32 メッセージ [TVM_SETLINECOLOR](/windows/win32/Controls/tvm-setlinecolor)の動作を実装します。
 
@@ -2217,7 +2215,7 @@ UINT SetScrollTime(UINT uScrollTime);
 
 前の最大スクロール時間 (ミリ秒単位)。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 このメンバー関数は、Windows SDK で説明されているように、Win32 メッセージ [TVM_SETSCROLLTIME](/windows/win32/Controls/tvm-setscrolltime)の動作を実装します。
 
@@ -2259,7 +2257,7 @@ CToolTipCtrl* SetToolTips(CToolTipCtrl* pWndTip);
 
 コントロールで以前に使用されていたツールヒントを格納している [CToolTipCtrl](../../mfc/reference/ctooltipctrl-class.md) オブジェクトへのポインター。以前にツールヒントが使用されていない場合は NULL。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 ツールヒントを使用するには、オブジェクトを作成するときに TVS_NOTOOLTIPS スタイルを指定し `CTreeCtrl` ます。
 
@@ -2280,7 +2278,7 @@ void ShowInfoTip(HTREEITEM hItem);
 *hItem*\
 からコントロール内のツリービュー項目へのハンドル。 詳細については、 `hItem` [TVITEMEX](/windows/win32/api/commctrl/ns-commctrl-tvitemexw) 構造体のメンバーを参照してください。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 ツールヒントとインフォヒントの違いの詳細については、「 [Microsoft Developer Network](https://go.microsoft.com/fwlink/p/?linkid=56322)」の「ツールヒントとヒント」を検索してください。
 
@@ -2303,7 +2301,7 @@ BOOL SortChildren(HTREEITEM hItem);
 
 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 `SortChildren` はツリーを再帰しません。 *hItem* の直下の子のみが並べ替えられます。
 
@@ -2328,7 +2326,7 @@ BOOL SortChildrenCB(LPTVSORTCB pSort);
 
 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 構造体の比較関数は、 `lpfnCompare` 最初の項目が2番目の項目の前にある場合は負の値を返す必要があり、最初の項目が2番目の項目の場合は正の値、2つの項目が等しい場合は0を返します。
 

@@ -1,5 +1,5 @@
 ---
-title: インターフェイス
+title: IAxWinAmbientDispatchEx インターフェイス
 ms.date: 11/04/2016
 f1_keywords:
 - IAxWinAmbientDispatchEx
@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - IAxWinAmbientDispatchEx interface
 ms.assetid: 2c25e079-6128-4278-bc72-b2c6195ba7ef
-ms.openlocfilehash: f4816846801e388619db62998ec979a1100916ee
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: f052c39424fc2ee6f43f249e3034be7c464d016c
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81329976"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88833388"
 ---
-# <a name="iaxwinambientdispatchex-interface"></a>インターフェイス
+# <a name="iaxwinambientdispatchex-interface"></a>IAxWinAmbientDispatchEx インターフェイス
 
-このインターフェイスは、ホストされたコントロールの補足的なアンビエント プロパティを実装します。
+このインターフェイスは、ホストされるコントロールの追加のアンビエントプロパティを実装します。
 
 > [!IMPORTANT]
 > このクラスとそのメンバーは、Windows ランタイムで実行されるアプリケーションでは使用できません。
@@ -32,35 +32,35 @@ MIDL_INTERFACE("B2D0778B - AC99 - 4c58 - A5C8 - E7724E5316B5") IAxWinAmbientDisp
 
 ### <a name="methods"></a>メソッド
 
-|||
+|名前|説明|
 |-|-|
-|[アンビエントディスパッチの設定](#setambientdispatch)|このメソッドは、既定のアンビエント プロパティ インターフェイスをユーザー定義インターフェイスで補完するために呼び出されます。|
+|[SetAmbientDispatch](#setambientdispatch)|このメソッドは、ユーザー定義のインターフェイスを使用して、既定のアンビエントプロパティインターフェイスを補うために呼び出されます。|
 
 ## <a name="remarks"></a>解説
 
-このインターフェイスは、ATL に静的にリンクされ、ActiveX コントロール 、特にアンビエント プロパティを持つ ActiveX コントロールに静的にリンクされている ATL アプリケーションに含めます。 このインターフェイスを含まないと、このアサーションが生成されます: "LIBID を CCom モジュールに渡すことを忘れたのは、次のとおりです: Init "
+ATL に静的にリンクされている ATL アプリケーションにこのインターフェイスを含め、ActiveX コントロール、特にアンビエントプロパティを持つ ActiveX コントロールをホストします。 このインターフェイスを含めないと、次のアサーションが生成されます。 "LIBID を CComModule:: Init に渡すことは忘れました"
 
-このインターフェイスは、ATL の ActiveX コントロールホスト オブジェクトによって公開されます。 [から](../../atl/reference/iaxwinambientdispatch-interface.md)派生したメソッドを`IAxWinAmbientDispatchEx`追加すると、ATL によって提供されるアンビエント プロパティ インターフェイスを独自のインターフェイスで補完できます。
+このインターフェイスは、ATL の ActiveX コントロールのホストオブジェクトによって公開されます。 [IAxWinAmbientDispatch](../../atl/reference/iaxwinambientdispatch-interface.md)から派生したメソッドを追加します。このメソッドを使用すると、 `IAxWinAmbientDispatchEx` ATL によって提供されるアンビエントプロパティインターフェイスを独自のものに補完することができます。
 
-<xref:System.Windows.Forms.AxHost>コードを含むタイプ ライブラリ`IAxWinAmbientDispatch`に`IAxWinAmbientDispatchEx`関する型情報と、コードを含むタイプ ライブラリから型情報を読み込もうとします。
+<xref:System.Windows.Forms.AxHost> は、 `IAxWinAmbientDispatch` `IAxWinAmbientDispatchEx` コードが格納されているタイプライブラリに関する型情報の読み込みを試みます。
 
-ATL90.dll にリンクしている場合 **、AXHost**はタイプ ライブラリから DLL に型情報を読み込みます。
+ATL90.dll にリンクしている場合、 **AXHost** は DLL のタイプライブラリから型情報を読み込みます。
 
-詳細については[、ATL AXHost を使用した ActiveX コントロールのホスティング](../../atl/hosting-activex-controls-using-atl-axhost.md)を参照してください。
+詳細については、「 [ATL AXHost を使用した ActiveX コントロールのホスト](../../atl/hosting-activex-controls-using-atl-axhost.md) 」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
 このインターフェイスの定義は、次の表に示すように、さまざまな形式で使用できます。
 
-|定義タイプ|ファイル|
+|定義の種類|ファイル|
 |---------------------|----------|
-|Idl|アトリファス.idl|
-|タイプ ライブラリ|ATL.dll|
-|C++|atliface.h (ATLBase.h にも含まれています)|
+|IDL|atliface|
+|タイプライブラリ|ATL.dll|
+|C++|atliface (ATLBase. h にも含まれる)|
 
-## <a name="iaxwinambientdispatchexsetambientdispatch"></a><a name="setambientdispatch"></a>IAxWin アンビエントディスパッチエックス::設定アンビエントディスパッチ
+## <a name="iaxwinambientdispatchexsetambientdispatch"></a><a name="setambientdispatch"></a> IAxWinAmbientDispatchEx::SetAmbientDispatch
 
-このメソッドは、既定のアンビエント プロパティ インターフェイスをユーザー定義インターフェイスで補完するために呼び出されます。
+このメソッドは、ユーザー定義のインターフェイスを使用して、既定のアンビエントプロパティインターフェイスを補うために呼び出されます。
 
 ```
 virtual HRESULT STDMETHODCALLTYPE SetAmbientDispatch(IDispatch* pDispatch) = 0;
@@ -68,17 +68,17 @@ virtual HRESULT STDMETHODCALLTYPE SetAmbientDispatch(IDispatch* pDispatch) = 0;
 
 ### <a name="parameters"></a>パラメーター
 
-*ディスパッチ*<br/>
+*pDispatch*<br/>
 新しいインターフェイスへのポインター。
 
 ### <a name="return-value"></a>戻り値
 
-成功時にS_OKを返すか、失敗した場合に HRESULT エラーを返します。
+成功した場合は S_OK を返し、失敗した場合はエラー HRESULT を返します。
 
 ### <a name="remarks"></a>解説
 
-新`SetAmbientDispatch`しいインターフェイスへのポインターを使用して呼び出されると、この新しいインターフェイスは、[ホスト](../../atl/reference/iaxwinambientdispatch-interface.md)されたコントロールによって求められるプロパティまたはメソッドを呼び出すために使用されます。
+`SetAmbientDispatch`新しいインターフェイスへのポインターを使用してを呼び出すと、そのプロパティが[IAxWinAmbientDispatch](../../atl/reference/iaxwinambientdispatch-interface.md)によってまだ提供されていない場合に、ホストされているコントロールによって要求されたプロパティやメソッドを呼び出すために、この新しいインターフェイスが使用されます。
 
 ## <a name="see-also"></a>関連項目
 
-[インターフェイス](../../atl/reference/iaxwinambientdispatch-interface.md)
+[IAxWinAmbientDispatch インターフェイス](../../atl/reference/iaxwinambientdispatch-interface.md)

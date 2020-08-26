@@ -82,12 +82,12 @@ helpviewer_keywords:
 - std::regex_constants [C++], optimize
 - std::regex_constants [C++], collate
 ms.assetid: 4a69c0ba-c46d-46e4-bd29-6f4efb805f26
-ms.openlocfilehash: ee016e5cee1bde94a49a1b339d6910d60db4cea1
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 422d29f16220ae2c2db93c9f84410316bf08f5e7
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81331958"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88845056"
 ---
 # <a name="regex_constants-namespace"></a>regex_constants 名前空間
 
@@ -107,7 +107,7 @@ namespace regex_constants {
 
 `regex_constants` 名前空間は、各種のフラグおよび関連するフラグ値をカプセル化します。
 
-|||
+|名前|説明|
 |-|-|
 |[error_type](#error_type)|正規表現の構文エラーを報告するためのフラグです。|
 |[match_flag_type](#match_flag_type)|正規表現照合オプションのフラグ。|
@@ -115,11 +115,11 @@ namespace regex_constants {
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** \<regex>
+**ヘッダー:**\<regex>
 
 **名前空間:** std
 
-## <a name="regex_constantserror_type"></a><a name="error_type"></a>regex_constants::error_type
+## <a name="regex_constantserror_type"></a><a name="error_type"></a> regex_constants:: error_type
 
 正規表現の構文エラーを報告するためのフラグです。
 
@@ -180,7 +180,7 @@ enum error_type
 
 `error_backref` -- 式に正しくない前方参照が存在する
 
-## <a name="regex_constantsmatch_flag_type"></a><a name="match_flag_type"></a>regex_constants::match_flag_type
+## <a name="regex_constantsmatch_flag_type"></a><a name="match_flag_type"></a> regex_constants:: match_flag_type
 
 正規表現照合オプションのフラグ。
 
@@ -238,7 +238,7 @@ enum match_flag_type
 
 `format_first_only` -- 最初の一致の後は一致を検索しません
 
-## <a name="regex_constantssyntax_option_type"></a><a name="syntax_option_type"></a>regex_constants::syntax_option_type
+## <a name="regex_constantssyntax_option_type"></a><a name="syntax_option_type"></a> regex_constants:: syntax_option_type
 
 構文オプションを選択するためのフラグ。
 
@@ -290,11 +290,11 @@ enum syntax_option_type
 
 ## <a name="see-also"></a>関連項目
 
-[\<正規表現>](../standard-library/regex.md)\
-[regex_errorクラス](../standard-library/regex-error-class.md)\
-[\<正規表現>関数](../standard-library/regex-functions.md)\
-[regex_iteratorクラス](../standard-library/regex-iterator-class.md)\
-[\<正規表現>演算子](../standard-library/regex-operators.md)\
-[regex_token_iteratorクラス](../standard-library/regex-token-iterator-class.md)\
-[regex_traitsクラス](../standard-library/regex-traits-class.md)\
-[\<正規表現>のタイプ定義](../standard-library/regex-typedefs.md)
+[\<regex>](../standard-library/regex.md)\
+[regex_error クラス](../standard-library/regex-error-class.md)\
+[\<regex> 関数](../standard-library/regex-functions.md)\
+[regex_iterator クラス](../standard-library/regex-iterator-class.md)\
+[\<regex> 通信](../standard-library/regex-operators.md)\
+[regex_token_iterator クラス](../standard-library/regex-token-iterator-class.md)\
+[regex_traits クラス](../standard-library/regex-traits-class.md)\
+[\<regex> typedef](../standard-library/regex-typedefs.md)

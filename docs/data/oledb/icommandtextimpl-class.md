@@ -22,12 +22,12 @@ helpviewer_keywords:
 - m_strCommandText
 - SetCommandText method
 ms.assetid: 9c2715cc-1e55-4468-8327-85341617ed46
-ms.openlocfilehash: d91221dd509122ebbd6490c2de7fab1ce51eb2f8
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 8d435cd8c5c8723d008be98482631f081c967058
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80210731"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88845121"
 ---
 # <a name="icommandtextimpl-class"></a>ICommandTextImpl クラス
 
@@ -44,7 +44,7 @@ class ATL_NO_VTABLE ICommandTextImpl
 ### <a name="parameters"></a>パラメーター
 
 *T*<br/>
-`ICommandTextImpl`から派生したコマンドクラス。
+から派生したコマンドクラス `ICommandTextImpl` 。
 
 ## <a name="requirements"></a>必要条件
 
@@ -54,14 +54,14 @@ class ATL_NO_VTABLE ICommandTextImpl
 
 ### <a name="interface-methods"></a>インターフェイス メソッド
 
-|||
+| 名前 | 説明 |
 |-|-|
 |[GetCommandText](#getcommandtext)|[Setcommandtext](../../data/oledb/icommandtextimpl-setcommandtext.md)の最後の呼び出しで設定されたテキストコマンドを返します。|
 |[SetCommandText](#setcommandtext)|既存のコマンドテキストを置き換えて、コマンドテキストを設定します。|
 
 ### <a name="data-members"></a>データ メンバー
 
-|||
+| 名前 | 説明 |
 |-|-|
 |[m_strCommandText](#strcommandtext)|コマンドテキストを格納します。|
 
@@ -69,7 +69,7 @@ class ATL_NO_VTABLE ICommandTextImpl
 
 コマンドの必須のインターフェイスです。
 
-## <a name="icommandtextimplgetcommandtext"></a><a name="getcommandtext"></a>ICommandTextImpl:: GetCommandText
+## <a name="icommandtextimplgetcommandtext"></a><a name="getcommandtext"></a> ICommandTextImpl:: GetCommandText
 
 [Setcommandtext](../../data/oledb/icommandtextimpl-setcommandtext.md)の最後の呼び出しで設定されたテキストコマンドを返します。
 
@@ -82,9 +82,9 @@ STDMETHOD(GetCommandText)(GUID * pguidDialect,
 
 #### <a name="parameters"></a>パラメーター
 
-*OLE DB プログラマーリファレンス*の「 [ICommandText:: getcommandtext](/previous-versions/windows/desktop/ms709825(v=vs.85)) 」を参照してください。 既定では、 *Pguiddialect*パラメーターは無視されます。
+*OLE DB プログラマーリファレンス*の「 [ICommandText:: getcommandtext](/previous-versions/windows/desktop/ms709825(v=vs.85)) 」を参照してください。 既定では、 *Pguiddialect* パラメーターは無視されます。
 
-## <a name="icommandtextimplsetcommandtext"></a><a name="setcommandtext"></a>ICommandTextImpl:: SetCommandText
+## <a name="icommandtextimplsetcommandtext"></a><a name="setcommandtext"></a> ICommandTextImpl:: SetCommandText
 
 既存のコマンドテキストを置き換えて、コマンドテキストを設定します。
 
@@ -99,7 +99,7 @@ STDMETHOD(SetCommandText)(REFGUID rguidDialect,
 
 *OLE DB プログラマーリファレンス*の「 [ICommandText:: setcommandtext](/previous-versions/windows/desktop/ms709757(v=vs.85)) 」を参照してください。
 
-## <a name="icommandtextimplm_strcommandtext"></a><a name="strcommandtext"></a>ICommandTextImpl:: m_strCommandText
+## <a name="icommandtextimplm_strcommandtext"></a><a name="strcommandtext"></a> ICommandTextImpl:: m_strCommandText
 
 コマンドテキスト文字列を格納します。
 
@@ -109,7 +109,7 @@ STDMETHOD(SetCommandText)(REFGUID rguidDialect,
 CComBSTR m_strCommandText;
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [OLE DB プロバイダー テンプレートに関するページ](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
-[OLE DB プロバイダー テンプレートのアーキテクチャ](../../data/oledb/ole-db-provider-template-architecture.md)
+[OLE DB プロバイダーテンプレートのアーキテクチャ](../../data/oledb/ole-db-provider-template-architecture.md)

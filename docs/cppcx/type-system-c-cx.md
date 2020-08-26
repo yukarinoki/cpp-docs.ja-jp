@@ -2,12 +2,12 @@
 title: 型システム (C++/CX)
 ms.date: 02/03/2017
 ms.assetid: b67bee8a-b526-4872-969e-ef22724e88fe
-ms.openlocfilehash: b9d26f0fc79b2dc5000be6e6a06f51efd3f0b53f
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 242fbde1774ef4537eedce26cafff6b8625ac2a5
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87221550"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88845147"
 ---
 # <a name="type-system-ccx"></a>型システム (C++/CX)
 
@@ -35,17 +35,16 @@ C++ で記述されたユニバーサル Windows プラットフォームアプ�
 
 型またはメソッドがメタデータに表示されるかどうかは、適用されるアクセシビリティ修飾子によって異なります。 型を表示するには、型が名前空間で宣言され、パブリックとして宣言されている必要があります。 非パブリックの ref クラスは、コード内で内部ヘルパー型として許可されています。これは、メタデータでは表示されません。 パブリック ref クラスでも、すべてのメンバーが表示されるとは限りません。 次の表は、パブリック ref クラスでの C++ アクセス指定子と Windows ランタイムメタデータの可視性の関係を示しています。
 
-|||
-|-|-|
-|**メタデータで公開**|**メタデータで非公開**|
-|public|private|
-|protected|内部|
-|public protected|private protected|
+| メタデータで公開 | メタデータで非公開 |
+|--|--|
+| public | private |
+| protected | internal |
+| public protected | private protected |
 
 .winmd ファイルの内容を表示するために、 **オブジェクト ブラウザー** を使用できます。 Windows に含まれる Windows ランタイムコンポーネントは、Windows の winmd ファイルにあります。 既定の winmd ファイルには、C++/CX で使用される基本的な型が含まれています。また、platform.object には、Platform 名前空間からの追加の型が含まれています。 既定では、これら3つの winmd ファイルは、ユニバーサル Windows プラットフォームアプリのすべての C++ プロジェクトに含まれています。
 
 > [!TIP]
-> [Platform::Collections Namespace](../cppcx/platform-collections-namespace.md) 型は、パブリックではないので、.winmd ファイルには表示されません。 これらは、 `Windows::Foundation::Collections`で定義されているインターフェイスのプライベート C++ 固有の実装です。 JavaScript または C# で記述された Windows ランタイムアプリは、 [Platform:: Collections:: Vector クラス](../cppcx/platform-collections-vector-class.md)がどのようなものであるかを認識しませんが、を使用することはでき `Windows::Foundation::Collections::IVector` ます。 `Platform::Collections` 型は、collection.h で定義されます。
+> [Platform::Collections Namespace](../cppcx/platform-collections-namespace.md) 型は、パブリックではないので、.winmd ファイルには表示されません。 これらは、 `Windows::Foundation::Collections`で定義されているインターフェイスのプライベート C++ 固有の実装です。 JavaScript または C# で記述された Windows ランタイムアプリは、 [Platform:: Collections:: Vector クラス](../cppcx/platform-collections-vector-class.md) がどのようなものであるかを認識しませんが、を使用することはでき `Windows::Foundation::Collections::IVector` ます。 `Platform::Collections` 型は、collection.h で定義されます。
 
 ## <a name="windows-runtime-type-system-in-ccx"></a>C++/CX の Windows ランタイム型システム
 
@@ -57,7 +56,7 @@ C++ で記述されたユニバーサル Windows プラットフォームアプ�
 
 Windows API 自体が、名前空間ごとに構成された、十分にファクタリングされたクラス ライブラリとして再開発されました。  すべての Windows ランタイムコンポーネントは、Windows. * 名前空間で宣言されています。
 
-詳細については、「[名前空間と型の可視性](../cppcx/namespaces-and-type-visibility-c-cx.md)」を参照してください。
+詳細については、「 [名前空間と型の可視性](../cppcx/namespaces-and-type-visibility-c-cx.md)」を参照してください。
 
 ### <a name="fundamental-types"></a>基本的な型
 
@@ -77,7 +76,7 @@ Windows ランタイム文字列は、16ビットの UNICODE 文字の変更で�
 
 ### <a name="arrays"></a>配列
 
-Windows ランタイムは、任意の型の1次元配列をサポートしています。 配列の配列はサポートされていません。  C++/CX では、Windows ランタイム配列は[Platform:: Array クラス](../cppcx/platform-array-class.md)として射影されます。
+Windows ランタイムは、任意の型の1次元配列をサポートしています。 配列の配列はサポートされていません。  C++/CX では、Windows ランタイム配列は [Platform:: Array クラス](../cppcx/platform-array-class.md)として射影されます。
 
 詳細については、「 [array と WriteOnlyArray](../cppcx/array-and-writeonlyarray-c-cx.md) 」を参照してください。
 
@@ -109,7 +108,7 @@ Windows ランタイムクラスは、参照によってコピーされるため
 
 詳細については、「 [部分クラス](../cppcx/partial-classes-c-cx.md)
 
-### <a name="properties"></a>プロパティ
+### <a name="properties"></a>Properties
 
 プロパティは、任意の Windows ランタイム型のパブリックデータメンバーであり、get/set メソッドのペアとして実装されます。 クライアント コードは、パブリック フィールドのようにプロパティにアクセスします。 カスタムの get または set コードを必要とするプロパティは、 *trivial プロパティ* と呼ばれ、明示的な get または set メソッドを使用せずに宣言できます。
 
@@ -139,7 +138,7 @@ Windows ランタイムの列挙型クラスは、C++ のスコープ列挙型�
 
 詳細については、「 [列挙体](../cppcx/enums-c-cx.md)で定義されているインターフェイスのプライベート C++ 固有の実装です。
 
-### <a name="delegates"></a>デリゲート
+### <a name="delegates"></a>代理人
 
 Windows ランタイム内のデリゲートは、C++ の std:: function オブジェクトに似ています。 これは、互換性のあるシグニチャを持つクライアント提供関数を呼び出すために使用される、特殊な種類の ref クラスです。  デリゲートは、イベントの種類として Windows ランタイムで最もよく使用されます。
 
@@ -151,7 +150,7 @@ C++/CX では、カスタムの例外の種類、 [std::exception](../standard-l
 
 詳細については、「 [例外](../cppcx/exceptions-c-cx.md)で定義されているインターフェイスのプライベート C++ 固有の実装です。
 
-### <a name="events"></a>events
+### <a name="events"></a>イベント
 
 イベントは、型がデリゲート型の、ref クラスまたは ref 構造体のパブリック メンバーです。 イベントに対して可能なのは、所有するクラスによる呼び出し (つまり、発生) だけです。 ただし、クライアント コードが独自の関数を提供することはできます。それらの関数はイベント ハンドラーと呼ばれ、所有クラスでイベントが発生したときに呼び出されます。
 
@@ -177,7 +176,7 @@ C++/CX は、標準 C++ のキャスト演算子 [static_cast](../cpp/static-cas
 
 Windows ランタイムシステム型で使用されているのと同じ属性を使用して、パブリック Api を非推奨としてマークする方法について説明します。
 
-詳細については、「[非推奨 types and members](../cppcx/deprecating-types-and-members-c-cx.md)」を参照してください。
+詳細については、「 [非推奨 types and members](../cppcx/deprecating-types-and-members-c-cx.md)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

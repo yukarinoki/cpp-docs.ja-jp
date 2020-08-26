@@ -8,18 +8,18 @@ helpviewer_keywords:
 - data [C++], data access technologies
 - data access [C++], class libraries for databases
 ms.assetid: 95da6237-bbe2-480a-ae50-3a520051ceff
-ms.openlocfilehash: 42c36259b14a7f0341e383bb3a7f2760bab165aa
-ms.sourcegitcommit: fcc3aeb271449f8be80348740cffef39ba543407
+ms.openlocfilehash: a5421ff05fdbad7d78066bb95410aafe69bfaa51
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82538594"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88836947"
 ---
 # <a name="data-access-in-visual-c"></a>Visual C++ でのデータ アクセス
 
 ほぼすべてのデータベース製品 (SQL および NoSQL) には、ネイティブ C++ アプリケーション用のインターフェイスが用意されています。 業界標準のインターフェイスは ODBC です。ODBC は主要な SQL データベース製品と多数の NoSQL 製品でサポートされています。 Microsoft 以外の製品の詳細については、ベンダーにお問い合わせください。 さまざまなライセンス条項のサードパーティのライブラリも使用できます。
 
-Microsoft は、2011 年以降、オンプレミスとクラウドの両方で Microsoft SQL Server データベースに接続するネイティブ アプリケーションの標準として ODBC を調整してきました。 詳細については、「[データ アクセス プログラミング \(MFC-ATL\)](data-access-programming-mfc-atl.md)」を参照してください。 C++/CLI ライブラリでは、ネイティブ ODBC ドライバーまたは ADO.NET を使用できます。 詳細については、「 [ADO.NET を使用したデータアクセス (C++/cli)](../dotnet/data-access-using-adonet-cpp-cli.md) 」と「 [Visual Studio でのデータ](https://docs.microsoft.com/visualstudio/data-tools/accessing-data-in-visual-studio)へのアクセス」を参照してください。
+Microsoft は、2011 年以降、オンプレミスとクラウドの両方で Microsoft SQL Server データベースに接続するネイティブ アプリケーションの標準として ODBC を調整してきました。 詳細については、「[データ アクセス プログラミング \(MFC-ATL\)](data-access-programming-mfc-atl.md)」を参照してください。 C++/CLI ライブラリでは、ネイティブ ODBC ドライバーまたは ADO.NET を使用できます。 詳細については、「 [ADO.NET を使用したデータアクセス (C++/cli)](../dotnet/data-access-using-adonet-cpp-cli.md) 」と「 [Visual Studio でのデータ](/visualstudio/data-tools/accessing-data-in-visual-studio)へのアクセス」を参照してください。
 
 ## <a name="in-this-section"></a>このセクションの内容
 
@@ -49,10 +49,10 @@ C または C++ アプリケーションから Azure SQL Database に接続し�
 [Microsoft Azure C および C++ デベロッパー センター](https://azure.microsoft.com/develop/cpp/)<br/>
 Azure を使用すると、柔軟性、スケーラビリティ、信頼性の高い C++ アプリケーションを好みのツールで容易に構築できます。
 
-[C++ から Blob Storage を使用する方法](https://docs.microsoft.com/azure/storage/storage-c-plus-plus-how-to-use-blobs)<br/>
+[C++ から BLOB ストレージを使用する方法](/azure/storage/storage-c-plus-plus-how-to-use-blobs)<br/>
 Azure Blob Storage は、非構造化データをクラウド内にオブジェクト/BLOB として格納するサービスです。 Blob Storage は、ドキュメント、メディア ファイル、アプリケーション インストーラーなど、任意の種類のテキスト データやバイナリ データを格納できます。 Blob Storage は、オブジェクト ストレージとも呼ばれます。
 
-[ODBC プログラマー リファレンス](https://docs.microsoft.com/sql/odbc/reference/odbc-programmer-s-reference)<br/>
+[ODBC プログラマー リファレンス](/sql/odbc/reference/odbc-programmer-s-reference)<br/>
 ODBC インターフェイスは、C プログラミング言語で使用するために設計されています。 ODBC インターフェイスは、SQL ステートメント、ODBC 関数呼び出し、C プログラミングという 3 つの領域で使用されます。
 
 ## <a name="see-also"></a>関連項目

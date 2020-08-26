@@ -35,12 +35,12 @@ helpviewer_keywords:
 - commands, executing
 - command interpreter
 ms.assetid: 7d3df2b6-f742-49ce-bf52-012b0aee3df5
-ms.openlocfilehash: 09353c9cda2bc85d91f57806bc3497e49a19f803
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 15e4637d709fdf4600ecb4c66c7d4a75c4fa07eb
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82912387"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88844978"
 ---
 # <a name="system-_wsystem"></a>system、_wsystem
 
@@ -62,14 +62,14 @@ int _wsystem(
 
 ### <a name="parameters"></a>パラメーター
 
-*メニュー*<br/>
+*command*<br/>
 実行するコマンド。
 
 ## <a name="return-value"></a>戻り値
 
-*Command*が**NULL**でコマンドインタープリターが見つかった場合、は0以外の値を返します。 コマンドインタープリターが見つからない場合、は0を返し、 **errno**を**ENOENT**に設定します。 *Command*が**NULL**でない場合、 **system**はコマンドインタープリターによって返された値を返します。 コマンド インタープリターから値 0 が返された場合にのみ、値 0 を返します。 戻り値-1 はエラーを示し、 **errno**は次のいずれかの値に設定されます。
+*Command*が**NULL**でコマンドインタープリターが見つかった場合、は0以外の値を返します。 コマンドインタープリターが見つからない場合、は0を返し、 **errno** を **ENOENT**に設定します。 *Command*が**NULL**でない場合、 **system**はコマンドインタープリターによって返された値を返します。 コマンド インタープリターから値 0 が返された場合にのみ、値 0 を返します。 戻り値-1 はエラーを示し、 **errno** は次のいずれかの値に設定されます。
 
-|||
+| 値 | 説明 |
 |-|-|
 | **E2BIG** | 引数リスト (システムに依存する) が大きすぎます。 |
 | **ENOENT** | コマンド インタープリターが見つかりません。 |
@@ -80,7 +80,7 @@ int _wsystem(
 
 ## <a name="remarks"></a>解説
 
-**System**関数は、コマンドインタープリターに*コマンド*を渡します。このコマンドは、オペレーティングシステムコマンドとして文字列を実行します。 **システム**は、 **COMSPEC**および**PATH**環境変数を使用して、コマンドインタープリターファイル cmd.exe を検索します。 *Command*が**NULL**の場合、関数は、コマンドインタープリターが存在するかどうかをチェックします。
+**System**関数は、コマンドインタープリターに*コマンド*を渡します。このコマンドは、オペレーティングシステムコマンドとして文字列を実行します。 **システム** では、 **COMSPEC** および **PATH** 環境変数を使用して、コマンドインタープリターファイル CMD.exe を検索します。 *Command*が**NULL**の場合、関数は、コマンドインタープリターが存在するかどうかをチェックします。
 
 **システム**を呼び出す前に、 [fflush](fflush.md)または[_flushall](flushall.md)を使用して明示的にフラッシュするか、ストリームを閉じる必要があります。
 
@@ -96,7 +96,7 @@ int _wsystem(
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**システム**|\<process.h> または \<stdlib.h>|
 |**_wsystem**|\<process.h> または \<stdlib.h> または \<wchar.h>|
@@ -105,7 +105,7 @@ int _wsystem(
 
 ## <a name="example"></a>例
 
-この例では、**システム**を使用してテキストファイルを入力します。
+この例では、 **システム** を使用してテキストファイルを入力します。
 
 ```C
 // crt_system.c
@@ -135,7 +135,7 @@ Line two.
 ## <a name="see-also"></a>関連項目
 
 [プロセスと環境の制御](../../c-runtime-library/process-and-environment-control.md)<br/>
-[_exec、_wexec 系関数](../../c-runtime-library/exec-wexec-functions.md)<br/>
+[_exec, _wexec 関数](../../c-runtime-library/exec-wexec-functions.md)<br/>
 [終了、_Exit、_exit](exit-exit-exit.md)<br/>
 [_flushall](flushall.md)<br/>
-[_spawn 系関数と _wspawn 系関数](../../c-runtime-library/spawn-wspawn-functions.md)<br/>
+[_spawn, _wspawn 関数](../../c-runtime-library/spawn-wspawn-functions.md)<br/>

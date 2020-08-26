@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - dual attribute
 ms.assetid: 5d4a9069-d819-42cd-ba56-bbcda17157d9
-ms.openlocfilehash: 66cd6eb9141244397609cc6421ead74d1eb8547e
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 4cc974bef46a403cbdc5b290f623acb06f40722f
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80168214"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88845407"
 ---
 # <a name="dual"></a>dual
 
@@ -25,11 +25,11 @@ ms.locfileid: "80168214"
 
 ## <a name="remarks"></a>解説
 
-**デュアル** C++属性がインターフェイスの前にあると、インターフェイスは生成された .idl ファイルのライブラリブロック内に配置されます。
+**デュアル**C++ 属性がインターフェイスの前にあると、インターフェイスは生成された .idl ファイルのライブラリブロック内に配置されます。
 
 ## <a name="example"></a>例
 
-次のコードは、インターフェイス定義の前に**デュアル**を使用する属性ブロックです。
+次のコードは、インターフェイス定義の前に **デュアル** を使用する属性ブロックです。
 
 ```cpp
 // cpp_attr_ref_dual.cpp
@@ -55,22 +55,20 @@ __interface IStatic : IDispatch
 
 ## <a name="requirements"></a>必要条件
 
-### <a name="attribute-context"></a>属性コンテキスト
-
-|||
+| 属性コンテキスト | 値 |
 |-|-|
-|**対象**|**interface**|
-|**反復可能**|いいえ|
-|**必要な属性**|なし|
+|**適用対象**|**interface**|
+|**Repeatable**|いいえ|
+|**必須属性**|なし|
 |**無効な属性**|`dispinterface`|
 
 詳細については、「 [属性コンテキスト](cpp-attributes-com-net.md#contexts)」を参照してください。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [IDL 属性](idl-attributes.md)<br/>
 [使用法別の属性](attributes-by-usage.md)<br/>
-[custom](custom-cpp.md)<br/>
+[ショー](custom-cpp.md)<br/>
 [dispinterface](dispinterface.md)<br/>
 [object](object-cpp.md)<br/>
 [__interface](../../cpp/interface.md)

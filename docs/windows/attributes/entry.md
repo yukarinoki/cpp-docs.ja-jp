@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - entry attribute
 ms.assetid: ba4843e3-d7ad-4b86-9a15-0b4192f0f698
-ms.openlocfilehash: 9bdfc64506f26ee4e9876920821883a0fa12bc7e
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 63e5ccebb1d3844af8dd11b4b094abe96e3e257c
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80167096"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88845316"
 ---
 # <a name="entry"></a>entry
 
@@ -30,7 +30,7 @@ DLL 内のエントリポイントを識別することによって、モジュ�
 
 ## <a name="remarks"></a>解説
 
-**Entry** C++属性には、 [entry](/windows/win32/Midl/entry) MIDL 属性と同じ機能があります。
+**エントリ**の C++ 属性には、 [entry](/windows/win32/Midl/entry) MIDL 属性と同じ機能があります。
 
 ## <a name="example"></a>例
 
@@ -38,17 +38,15 @@ DLL 内のエントリポイントを識別することによって、モジュ�
 
 ## <a name="requirements"></a>必要条件
 
-### <a name="attribute-context"></a>属性コンテキスト
-
-|||
+| 属性コンテキスト | 値 |
 |-|-|
-|**対象**|`idl_module` 属性|
-|**反復可能**|いいえ|
-|**必要な属性**|なし|
+|**適用対象**|`idl_module` 属性|
+|**Repeatable**|いいえ|
+|**必須属性**|なし|
 |**無効な属性**|なし|
 
 詳細については、「 [属性コンテキスト](cpp-attributes-com-net.md#contexts)」を参照してください。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [IDL 属性](idl-attributes.md)

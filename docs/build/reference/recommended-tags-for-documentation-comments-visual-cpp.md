@@ -1,17 +1,17 @@
 ---
-title: ドキュメント コメントの推奨タグ (C++ ドキュメント コメント)
+title: ドキュメントコメント用の推奨タグ (C++ ドキュメントコメント)
 ms.date: 11/04/2016
 ms.assetid: 6548e798-5235-4a38-9482-bdc7b88f40a9
-ms.openlocfilehash: 1648d0eb019a3aad25641d7f6a7edd1ba26acf7e
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 9f41e450215e2bce02dbaf66910fc2fc1a131a99
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81336169"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88836856"
 ---
 # <a name="recommended-tags-for-documentation-comments"></a>ドキュメント コメントとして推奨されるタグ
 
-MSVC コンパイラは、コード内のドキュメント コメントを処理し、コンパイルおよび各コンパイル用の .xdc ファイルを作成し、xdcmake.exe は .xdc ファイルを .xml ファイルに処理します。 .xml ファイルを加工してドキュメントを作成することは、自分のサイトで実行する必要がある項目です。
+MSVC コンパイラは、コード内のドキュメントコメントを処理し、コンパイル単位ごとに .xdc ファイルを作成します。また、xdcmake.exe は、.xdc ファイルを .xml ファイルに処理します。 .xml ファイルを加工してドキュメントを作成することは、自分のサイトで実行する必要がある項目です。
 
 型や型メンバーなどのコンストラクトでタグが処理されます。
 
@@ -22,18 +22,26 @@ MSVC コンパイラは、コード内のドキュメント コメントを処�
 
 コンパイラは、有効な XML のタグをすべて処理します。 次のタグによって、ユーザー ドキュメントで一般的に使用される機能が与えられます。
 
-||||
-|-|-|-|
-|[\<c>](c-visual-cpp.md)|[\<コード>](code-visual-cpp.md)|[\<>例](example-visual-cpp.md)|
-|例外>1 [ \< ](exception-visual-cpp.md)|>1[を含む\<](include-visual-cpp.md)|[\<リスト>](list-visual-cpp.md)|
-|[\<パラ>](para-visual-cpp.md)|パラム>1 [ \< ](param-visual-cpp.md)|パラムレフ>1 [ \< ](paramref-visual-cpp.md)|
-|アクセス許可>1 [ \< ](permission-visual-cpp.md)|[\<>の発言](remarks-visual-cpp.md)|[\<>を返す](returns-visual-cpp.md)|
-|>1[を参照してください。 \< ](see-visual-cpp.md)|参照も>1 [ \< ](seealso-visual-cpp.md)|[\<概要>](summary-visual-cpp.md)|
-|[\<値>](value-visual-cpp.md)|||
+[`<c>`](c-visual-cpp.md)
+[`<code>`](code-visual-cpp.md)
+[`<example>`](example-visual-cpp.md)
+[`<exception>`](exception-visual-cpp.md)<sup>1</sup> 
+ 1 [`<include>`](include-visual-cpp.md)<sup>1</sup> 
+ [`<list>`](list-visual-cpp.md) 1 
+ [`<para>`](para-visual-cpp.md) 
+ [`<param>`](param-visual-cpp.md)<sup>1</sup> 
+ 1 [`<paramref>`](paramref-visual-cpp.md)<sup>1</sup> 
+ 1 [`<permission>`](permission-visual-cpp.md)<sup>1</sup> 
+ [`<remarks>`](remarks-visual-cpp.md) 1 
+ [`<returns>`](returns-visual-cpp.md) 
+ [`<see>`](see-visual-cpp.md)<sup>1</sup> 
+ 1 [`<seealso>`](seealso-visual-cpp.md)<sup>1</sup>
+[`<summary>`](summary-visual-cpp.md)
+[`<value>`](value-visual-cpp.md)
 
 1. コンパイラによって構文が検証されます。
 
-現在のリリースでは、MSVC コンパイラは、他`<paramref>`の Visual Studio コンパイラでサポートされているタグをサポートしていません。 Visual C++ では、将来のリリースで `<paramref>` がサポートされる可能性があります。
+現在のリリースでは、MSVC コンパイラは `<paramref>` 、他の Visual Studio コンパイラでサポートされているタグをサポートしていません。 Visual C++ では、将来のリリースで `<paramref>` がサポートされる可能性があります。
 
 ## <a name="see-also"></a>関連項目
 

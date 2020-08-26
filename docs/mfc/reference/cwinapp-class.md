@@ -192,12 +192,12 @@ helpviewer_keywords:
 - CWinApp [MFC], m_nAutosaveInterval
 - CWinApp [MFC], m_pDataRecoveryHandler
 ms.assetid: e426a3cd-0d15-40d6-bd55-beaa5feb2343
-ms.openlocfilehash: 515307bd79059c22b5b40cd8b47ce8809ede8f04
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: f8ca4ad2023902d40a1f63c881a8dd2fd38a9ae9
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88560856"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88837607"
 ---
 # <a name="cwinapp-class"></a>CWinApp クラス
 
@@ -287,7 +287,7 @@ class CWinApp : public CWinThread
 
 ### <a name="protected-methods"></a>プロテクト メソッド
 
-|Name|説明|
+|名前|説明|
 |----------|-----------------|
 |[CWinApp:: EnableShellOpen](#enableshellopen)|ユーザーが Windows ファイルマネージャーからデータファイルを開くことを許可します。|
 |[CWinApp:: LoadStdProfileSettings](#loadstdprofilesettings)|標準を読み込みます。INI ファイルの設定を使用すると、MRU ファイルリスト機能が有効になります。|
@@ -306,7 +306,7 @@ class CWinApp : public CWinThread
 
 ### <a name="public-data-members"></a>パブリック データ メンバー
 
-|Name|説明|
+|名前|説明|
 |----------|-----------------|
 |[CWinApp:: m_bHelpMode](#m_bhelpmode)|ユーザーがヘルプコンテキストモードであるかどうかを示します (通常は SHIFT + F1 キーを使用して呼び出されます)。|
 |[CWinApp:: m_eHelpType](#m_ehelptype)|アプリケーションで使用されるヘルプの種類を指定します。|
@@ -315,7 +315,7 @@ class CWinApp : public CWinThread
 |[CWinApp:: m_nCmdShow](#m_ncmdshow)|ウィンドウを最初に表示する方法を指定します。|
 |[CWinApp:: m_pActiveWnd](#m_pactivewnd)|OLE サーバーがアクティブになっている場合の、コンテナーアプリケーションのメインウィンドウへのポインター。|
 |[CWinApp:: m_pszAppID](#m_pszappid)|アプリケーションユーザーモデル ID。|
-|[CWinApp:: m_pszAppName](#m_pszappname)|アプリケーションの名前を指定します。|
+|[CWinApp:: m_pszAppName](#m_pszappname)|アプリケーション名を示します。|
 |[CWinApp:: m_pszExeName](#m_pszexename)|アプリケーションのモジュール名。|
 |[CWinApp:: m_pszHelpFilePath](#m_pszhelpfilepath)|アプリケーションのヘルプファイルへのパス。|
 |[CWinApp:: m_pszProfileName](#m_pszprofilename)|アプリケーションの。INI ファイル名。|
@@ -323,7 +323,7 @@ class CWinApp : public CWinThread
 
 ### <a name="protected-data-members"></a>プロテクト データ メンバー
 
-|Name|説明|
+|名前|説明|
 |----------|-----------------|
 |[CWinApp:: m_dwRestartManagerSupportFlags](#m_dwrestartmanagersupportflags)|再起動マネージャーの動作を決定するフラグ。|
 |[CWinApp:: m_nAutosaveInterval](#m_nautosaveinterval)|自動保存の時間の長さ (ミリ秒単位)。|
@@ -1303,9 +1303,8 @@ DWORD m_dwRestartManagerSupportFlags;
 
 再起動マネージャーを有効にするには、を `m_dwRestartManagerSupportFlags` 目的の動作に設定します。 次の表は、使用可能なフラグを示しています。
 
-|||
-|-|-|
 |フラグ|説明|
+|-|-|
 |AFX_RESTART_MANAGER_SUPPORT_RESTART|アプリケーションは、 [CWinApp:: RegisterWithRestartManager](#registerwithrestartmanager)を使用して登録されます。 再起動マネージャーは、予期せず終了した場合に、アプリケーションを再起動する役割を担います。|
 |-AFX_RESTART_MANAGER_SUPPORT_RECOVERY|アプリケーションは再起動マネージャーに登録され、再起動マネージャーはアプリケーションを再起動するときに、回復コールバック関数を呼び出します。 既定の回復コールバック関数は、 [CWinApp:: ApplicationRecoveryCallback](#applicationrecoverycallback)です。|
 |-AFX_RESTART_MANAGER_AUTOSAVE_AT_RESTART|自動保存が有効になり、再起動マネージャーによって、アプリケーションの再起動時に開いているすべてのドキュメントが自動保存されます。|
@@ -1424,7 +1423,7 @@ CDataRecoveryHandler* m_pDataRecoveryHandler;
 
 ## <a name="cwinappm_pszappname"></a><a name="m_pszappname"></a> CWinApp:: m_pszAppName
 
-アプリケーションの名前を指定します。
+アプリケーション名を示します。
 
 ```
 LPCTSTR m_pszAppName;
@@ -1982,7 +1981,7 @@ virtual HRESULT RegisterWithRestartManager(
 から再起動マネージャーが復旧コールバック関数から戻るまで待機する時間の長さ。 このパラメーターは、ミリ秒単位で指定します。
 
 *Dwのフラグ*\
-から復旧コールバック関数に渡されるフラグ。 将来利用するために予約されています。
+から復旧コールバック関数に渡されるフラグ。 将来使用するために予約されています。
 
 ### <a name="return-value"></a>戻り値
 

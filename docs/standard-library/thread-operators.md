@@ -18,22 +18,24 @@ helpviewer_keywords:
 - std::operator&lt;&lt; (thread)
 - std::operator&lt;= (thread)
 - std::operator== (thread)
-ms.openlocfilehash: e7321831b9356fdb9ae5ce147319726def69efc7
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 26ed8157685502618fe6fb82fbf9c9ad4c47cba3
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87215570"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88845030"
 ---
 # <a name="ltthreadgt-operators"></a>&lt;thread&gt; 演算子
 
-||||
-|-|-|-|
-|[operator! =](#op_neq)|[operator&gt;](#op_gt)|[operator&gt;=](#op_gt_eq)|
-|[operator&lt;](#op_lt)|[operator&lt;&lt;](#op_lt_lt)|[operator&lt;=](#op_lt_eq)|
-|[operator = =](#op_eq_eq)|
+[operator! =](#op_neq)\
+[operator&gt;](#op_gt)\
+[operator&gt;=](#op_gt_eq)\
+[operator&lt;](#op_lt)\
+[operator&lt;&lt;](#op_lt_lt)\
+[operator&lt;=](#op_lt_eq)\
+[operator = =](#op_eq_eq)
 
-## <a name="operatorgt"></a><a name="op_gt_eq"></a>operator&gt;=
+## <a name="operatorgt"></a><a name="op_gt_eq"></a> operator&gt;=
 
 一方の `thread::id` オブジェクトの値が、もう一方のオブジェクトの値以上かどうかを判断します。
 
@@ -59,7 +61,7 @@ bool operator>= (
 
 この関数では、例外がスローされません。
 
-## <a name="operatorgt"></a><a name="op_gt"></a>operator&gt;
+## <a name="operatorgt"></a><a name="op_gt"></a> operator&gt;
 
 一方の `thread::id` オブジェクトの値が、もう一方のオブジェクトの値より大きいかどうかを判断します。
 
@@ -85,7 +87,7 @@ bool operator> (
 
 この関数では、例外がスローされません。
 
-## <a name="operatorlt"></a><a name="op_lt_eq"></a>operator&lt;=
+## <a name="operatorlt"></a><a name="op_lt_eq"></a> operator&lt;=
 
 一方の `thread::id` オブジェクトの値が、もう一方のオブジェクトの値以下かどうかを判断します。
 
@@ -111,7 +113,7 @@ bool operator<= (
 
 この関数では、例外がスローされません。
 
-## <a name="operatorlt"></a><a name="op_lt"></a>operator&lt;
+## <a name="operatorlt"></a><a name="op_lt"></a> operator&lt;
 
 一方の `thread::id` オブジェクトの値が、もう一方のオブジェクトの値より小さいかどうかを判断します。
 
@@ -139,7 +141,7 @@ bool operator<(
 
 この関数では、例外がスローされません。
 
-## <a name="operator"></a><a name="op_neq"></a>operator! =
+## <a name="operator"></a><a name="op_neq"></a> operator! =
 
 2 つの `thread::id` オブジェクトが等しくないかどうかを比較します。
 
@@ -165,7 +167,7 @@ bool operator!= (
 
 この関数では、例外がスローされません。
 
-## <a name="operator"></a><a name="op_eq_eq"></a>operator = =
+## <a name="operator"></a><a name="op_eq_eq"></a> operator = =
 
 2 つの `thread::id` オブジェクトが等しいかどうかを比較します。
 
@@ -191,7 +193,7 @@ bool operator== (
 
 この関数では、例外がスローされません。
 
-## <a name="operatorltlt"></a><a name="op_lt_lt"></a>operator&lt;&lt;
+## <a name="operatorltlt"></a><a name="op_lt_lt"></a> operator&lt;&lt;
 
 `thread::id` オブジェクトのテキスト表現をストリームに挿入します。
 

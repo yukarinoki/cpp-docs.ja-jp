@@ -4,12 +4,12 @@ ms.date: 09/07/2019
 helpviewer_keywords:
 - event maps [MFC]
 ms.assetid: 1ed53aee-bc53-43cd-834a-6fb935c0d29b
-ms.openlocfilehash: ef8ee6b87bdeb9d5da9f34d303e0c0fda89443c5
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: aa11dbe1a0a3dc45893d1a05cda0ef1addb9e665
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87222798"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88837347"
 ---
 # <a name="event-maps"></a>イベント マップ
 
@@ -21,7 +21,7 @@ Microsoft Foundation Class ライブラリには、イベントを発生させ�
 
 マクロは、 `EVENT_STOCK_CLICK` マウスクリックが検出されるたびに、コントロールがストッククリックイベントを起動することを示します。 その他のストックイベントの詳細な一覧については、「 [ActiveX コントロール: イベント](../../mfc/mfc-activex-controls-events.md)」を参照してください。 カスタムイベントを示すマクロを使用することもできます。
 
-イベントマップマクロは重要ですが、通常は直接挿入されません。 これは、[**プロパティ**] ウィンドウ (**クラスビュー**) では、イベント発生関数をイベントに関連付ける際に、ソースファイルにイベントマップエントリが自動的に作成されるためです。 イベントマップエントリを編集または追加する場合はいつでも、[**プロパティ**] ウィンドウを使用できます。
+イベントマップマクロは重要ですが、通常は直接挿入されません。 これは、[ **プロパティ** ] ウィンドウ ( **クラスビュー**) では、イベント発生関数をイベントに関連付ける際に、ソースファイルにイベントマップエントリが自動的に作成されるためです。 イベントマップエントリを編集または追加する場合はいつでも、[ **プロパティ** ] ウィンドウを使用できます。
 
 MFC には、イベントマップをサポートするために次のマクロが用意されています。
 
@@ -29,7 +29,7 @@ MFC には、イベントマップをサポートするために次のマクロ�
 
 ### <a name="event-map-declaration-and-demarcation"></a>イベントマップの宣言と境界
 
-|||
+|名前|説明|
 |-|-|
 |[DECLARE_EVENT_MAP](#declare_event_map)|イベントをイベント発生関数にマップするために、クラスでイベントマップが使用されることを宣言します (クラス宣言で使用する必要があります)。|
 |[BEGIN_EVENT_MAP](#begin_event_map)|イベントマップの定義を開始します (クラスの実装で使用する必要があります)。|
@@ -37,19 +37,19 @@ MFC には、イベントマップをサポートするために次のマクロ�
 
 ### <a name="event-mapping-macros"></a>イベントマッピングマクロ
 
-|||
+|名前|説明|
 |-|-|
 |[EVENT_CUSTOM](#event_custom)|指定されたイベントを発生させるイベント発生関数を示します。|
 |[EVENT_CUSTOM_ID](#event_custom_id)|指定されたディスパッチ ID を使用して、指定されたイベントを発生させるイベント発生関数を示します。|
 
 ### <a name="message-mapping-macros"></a>メッセージマッピングマクロ
 
-|||
+|名前|説明|
 |-|-|
 |[ON_OLEVERB](#on_oleverb)|OLE コントロールによって処理されるカスタム動詞を示します。|
 |[ON_STDOLEVERB](#on_stdoleverb)|OLE コントロールの標準動詞マッピングをオーバーライドします。|
 
-## <a name="declare_event_map"></a><a name="declare_event_map"></a>DECLARE_EVENT_MAP
+## <a name="declare_event_map"></a><a name="declare_event_map"></a> DECLARE_EVENT_MAP
 
 `COleControl`プログラム内の各派生クラスは、イベントマップを提供して、コントロールが起動するイベントを指定できます。
 
@@ -67,7 +67,7 @@ DECLARE_EVENT_MAP()
 
 **ヘッダー** afxctl.h
 
-## <a name="begin_event_map"></a><a name="begin_event_map"></a>BEGIN_EVENT_MAP
+## <a name="begin_event_map"></a><a name="begin_event_map"></a> BEGIN_EVENT_MAP
 
 イベントマップの定義を開始します。
 
@@ -93,7 +93,7 @@ BEGIN_EVENT_MAP(theClass,  baseClass)
 
 **ヘッダー** afxctl.h
 
-## <a name="end_event_map"></a><a name="end_event_map"></a>END_EVENT_MAP
+## <a name="end_event_map"></a><a name="end_event_map"></a> END_EVENT_MAP
 
 END_EVENT_MAP マクロを使用して、イベントマップの定義を終了します。
 
@@ -105,7 +105,7 @@ END_EVENT_MAP()
 
 **ヘッダー** afxctl.h
 
-## <a name="event_custom"></a><a name="event_custom"></a>EVENT_CUSTOM
+## <a name="event_custom"></a><a name="event_custom"></a> EVENT_CUSTOM
 
 カスタムイベントのイベントマップエントリを定義します。
 
@@ -171,7 +171,7 @@ RGB カラー値を表す32ビット整数を含むリストを指定し、そ�
 
 **ヘッダー** afxctl.h
 
-## <a name="event_custom_id"></a><a name="event_custom_id"></a>EVENT_CUSTOM_ID
+## <a name="event_custom_id"></a><a name="event_custom_id"></a> EVENT_CUSTOM_ID
 
 *Dispid*によって指定されたディスパッチ ID に属するカスタムイベントのイベント発生関数を定義します。
 
@@ -211,7 +211,7 @@ RGB カラー値を表す32ビット整数を含むリストを指定し、そ�
 
 **ヘッダー** afxctl.h
 
-## <a name="on_oleverb"></a><a name="on_oleverb"></a>ON_OLEVERB
+## <a name="on_oleverb"></a><a name="on_oleverb"></a> ON_OLEVERB
 
 このマクロは、カスタム動詞をコントロールの特定のメンバー関数にマップするメッセージマップエントリを定義します。
 
@@ -246,7 +246,7 @@ BOOL memberFxn(
 
 **ヘッダー** afxole
 
-## <a name="on_stdoleverb"></a><a name="on_stdoleverb"></a>ON_STDOLEVERB
+## <a name="on_stdoleverb"></a><a name="on_stdoleverb"></a> ON_STDOLEVERB
 
 標準動詞の既定の動作をオーバーライドするには、このマクロを使用します。
 

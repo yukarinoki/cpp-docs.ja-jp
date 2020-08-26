@@ -13,12 +13,12 @@ helpviewer_keywords:
 - CRestrictions class
 - Open method
 ms.assetid: 0aaa2364-641c-4318-b110-7446aada4b4f
-ms.openlocfilehash: 9fb911b469497a007550c042ade97b5a463e78fe
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: a380f1ba00dcc444099f186071b7d55c9db71291
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87220445"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88844965"
 ---
 # <a name="crestrictions-class"></a>CRestrictions クラス
 
@@ -51,11 +51,11 @@ class CRestrictions :
 
 ### <a name="methods"></a>メソッド
 
-|||
+| 名前 | 説明 |
 |-|-|
 |[[ファイル]](#open)|ユーザーが指定した制限に従って結果セットを返します。|
 
-## <a name="crestrictionsopen"></a><a name="open"></a>CRestrictions:: Open
+## <a name="crestrictionsopen"></a><a name="open"></a> CRestrictions:: Open
 
 ユーザーが指定した制限に従って結果セットを返します。
 

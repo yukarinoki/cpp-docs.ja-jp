@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - idl_module attribute
 ms.assetid: 3578b337-e38a-4334-b747-15404c02dbc0
-ms.openlocfilehash: 6dd0a34d5d957838613bde2c9e05d5ef26a1f678
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 651d2e133d7ef08fce48feded1b7a5aff458adb1
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80168045"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88845225"
 ---
 # <a name="idl_module"></a>idl_module
 
@@ -44,10 +44,10 @@ Optional.Hlp または .chm ファイル内のヘルプトピックの ID。
 *helpcontext*<br/>
 Optionalこのタイプライブラリのヘルプ ID です。
 
-*hidden*<br/>
+*表示*<br/>
 Optionalライブラリが表示されないようにするパラメーター。 詳細については、「 [hidden](/windows/win32/Midl/hidden) 」の MIDL 属性に関する説明を参照してください。
 
-*restricted*<br/>
+*限定*<br/>
 Optionalライブラリのメンバーは、任意に呼び出すことはできません。 詳細については、「 [restricted](/windows/win32/Midl/restricted) 」の MIDL 属性に関する説明を参照してください。
 
 *関数の宣言*<br/>
@@ -55,17 +55,17 @@ Optionalライブラリのメンバーは、任意に呼び出すことはでき
 
 ## <a name="remarks"></a>解説
 
-**Idl_module** C++属性を使用すると、.dll ファイルのエントリポイントを指定できます。これにより、.dll ファイルからインポートできます。
+**Idl_module** C++ 属性を使用すると、.dll ファイルのエントリポイントを指定できます。これにより、.dll ファイルからインポートできます。
 
 **Idl_module**属性には、 [module](/windows/win32/Midl/module) MIDL 属性と同様の機能があります。
 
 .Dll ファイルからエクスポートできる COM オブジェクトから任意のものをエクスポートするには、.idl ファイルのライブラリブロックに DLL エントリポイントを配置します。
 
-では、2つの手順で**idl_module**を使用する必要があります。 まず、名前と DLL のペアを定義する必要があります。 次に、 **idl_module**を使用してエントリポイントを指定するときに、名前とその他の属性を指定します。
+では、2つの手順で **idl_module** を使用する必要があります。 まず、名前と DLL のペアを定義する必要があります。 次に、 **idl_module** を使用してエントリポイントを指定するときに、名前とその他の属性を指定します。
 
 ## <a name="example"></a>例
 
-次のコードは、 **idl_module**属性の使用方法を示しています。
+次のコードは、 **idl_module** 属性の使用方法を示しています。
 
 ```cpp
 // cpp_attr_ref_idl_module.cpp
@@ -78,19 +78,17 @@ void FuncName(int i);
 
 ## <a name="requirements"></a>必要条件
 
-### <a name="attribute-context"></a>属性コンテキスト
-
-|||
+| 属性コンテキスト | 値 |
 |-|-|
-|**対象**|任意の場所|
-|**反復可能**|いいえ|
-|**必要な属性**|なし|
+|**適用対象**|任意の場所|
+|**Repeatable**|いいえ|
+|**必須属性**|なし|
 |**無効な属性**|なし|
 
 詳細については、「 [属性コンテキスト](cpp-attributes-com-net.md#contexts)」を参照してください。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [IDL 属性](idl-attributes.md)<br/>
 [スタンドアロン属性](stand-alone-attributes.md)<br/>
-[entry](entry.md)
+[キー](entry.md)

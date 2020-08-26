@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::piecewise_linear_distribution [C++], param_type
 - std::piecewise_linear_distribution [C++], param_type
 ms.assetid: cd141152-7163-4754-8f98-c6d6500005e0
-ms.openlocfilehash: 085ab8eda0a07decf69d139382a272700bebac7b
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 57c6e19bc56068c98f6c85978c7af68e56cb4f2a
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87232977"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88832686"
 ---
 # <a name="piecewise_linear_distribution-class"></a>piecewise_linear_distribution クラス
 
@@ -89,10 +89,8 @@ public:
 
 次の表は、個々のメンバーに関する記事にリンクしています。
 
-||||
-|-|-|-|
-|[piecewise_linear_distribution](#piecewise_linear_distribution)|`piecewise_linear_distribution::intervals`|`piecewise_linear_distribution::param`|
-|`piecewise_linear_distribution::operator()`|`piecewise_linear_distribution::densities`|[param_type](#param_type)|
+[piecewise_linear_distribution](#piecewise_linear_distribution)\
+[param_type](#param_type)
 
 プロパティ関数 `intervals()` は、格納されている分布の区間セットを含む `vector<result_type>` を返します。
 
@@ -219,7 +217,7 @@ Distribution for 100 samples:
 
 **名前空間:** std
 
-## <a name="piecewise_linear_distributionpiecewise_linear_distribution"></a><a name="piecewise_linear_distribution"></a>piecewise_linear_distribution::p iecewise_linear_distribution
+## <a name="piecewise_linear_distributionpiecewise_linear_distribution"></a><a name="piecewise_linear_distribution"></a> piecewise_linear_distribution::p iecewise_linear_distribution
 
 分布を作成します。
 
@@ -301,7 +299,7 @@ piecewise_linear_distribution(
     UnaryOperation weightfunc);
 ```
 
-初期化子リストの*間隔*、および関数*weightfunc*から生成された重みを持つ分布オブジェクトを構築します。
+初期化子リストの *間隔* 、および関数 *weightfunc*から生成された重みを持つ分布オブジェクトを構築します。
 
 次のように定義されたコンストラクターは
 
@@ -314,7 +312,7 @@ piecewise_linear_distribution(
     UnaryOperation weightfunc);
 ```
 
-[] で均等に分布した*数*の間隔を持つ分布オブジェクトを構築し `xmin,xmax` 、各間隔の重みを関数*weightfunc*に従って割り当てます。 *weightfunc*は、1つのパラメーターを受け取り、戻り値を持つ必要があります。どちらもに変換 **`double`** できます。 **前提条件:** `xmin < xmax` 。
+[] で均等に分布した *数* の間隔を持つ分布オブジェクトを構築し `xmin,xmax` 、各間隔の重みを関数 *weightfunc*に従って割り当てます。 *weightfunc* は、1つのパラメーターを受け取り、戻り値を持つ必要があります。どちらもに変換 **`double`** できます。 **前提条件:** `xmin < xmax` 。
 
 次のように定義されたコンストラクターは
 
@@ -322,9 +320,9 @@ piecewise_linear_distribution(
 explicit piecewise_linear_distribution(const param_type& parm);
 ```
 
-格納されているパラメーター構造として*parm*を使用して、配布オブジェクトを構築します。
+格納されているパラメーター構造として *parm* を使用して、配布オブジェクトを構築します。
 
-## <a name="piecewise_linear_distributionparam_type"></a><a name="param_type"></a>piecewise_linear_distribution::p aram_type
+## <a name="piecewise_linear_distributionparam_type"></a><a name="param_type"></a> piecewise_linear_distribution::p aram_type
 
 分布のすべてのパラメーターを格納します。
 

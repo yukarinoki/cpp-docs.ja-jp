@@ -22,12 +22,12 @@ helpviewer_keywords:
 - std::queue [C++], push
 - std::queue [C++], size
 ms.assetid: 28c20ab0-3a72-4185-9e0f-5a44eea0e204
-ms.openlocfilehash: 331ca298507e0ebecac0376f660feefdafd9d99d
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: e0bfa4ab037b52b237bd674d5f705de4e9699383
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87232938"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88832608"
 ---
 # <a name="queue-class"></a>queue クラス
 
@@ -52,7 +52,7 @@ class queue
 
 `Type`Queue オブジェクトの最初のテンプレートパラメーターで指定されるクラスの要素は[value_type](#value_type)と同義であり、 `Container` 2 番目のテンプレートパラメーターで指定されている、基になるコンテナークラスの要素の型と一致している必要があります。 その `Type` 型のオブジェクトをコピーし、その型の変数に値を割り当てることができるように、は割り当て可能である必要があります。
 
-キューに適した基になるコンテナークラスには、 [deque](../standard-library/deque-class.md)と[list](../standard-library/list-class.md)、または、、、およびの操作をサポートするその他のシーケンスコンテナーが含ま `front` `back` `push_back` `pop_front` れます。 基になるコンテナー クラスは、コンテナー アダプター内にカプセル化されます。コンテナー アダプターは、限られた一連のシーケンス コンテナーのメンバーの関数のみをパブリック インターフェイスとして公開します。
+キューに適した基になるコンテナークラスには、 [deque](../standard-library/deque-class.md) と [list](../standard-library/list-class.md)、または、、、およびの操作をサポートするその他のシーケンスコンテナーが含ま `front` `back` `push_back` `pop_front` れます。 基になるコンテナー クラスは、コンテナー アダプター内にカプセル化されます。コンテナー アダプターは、限られた一連のシーケンス コンテナーのメンバーの関数のみをパブリック インターフェイスとして公開します。
 
 Queue オブジェクトは、クラスの要素が等価比較できる場合にのみ等価比較が可能 `Type` で、クラスの要素が比較可能な値よりも小さい場合に限り、小なり比較 `Type` できます。
 
@@ -68,21 +68,21 @@ C++ 標準ライブラリで定義されたコンテナー アダプターには
 
 ### <a name="constructors"></a>コンストラクター
 
-|||
+|名前|説明|
 |-|-|
 |[再生](#queue)|空であるか、基本のコンテナー オブジェクトのコピーである `queue` を構築します。|
 
 ### <a name="typedefs"></a>Typedefs
 
-|||
+|名前|説明|
 |-|-|
 |[container_type](#container_type)|`queue` によって適合されるように、基本のコンテナーを提供する型。|
 |[size_type](#size_type)|`queue` 内の要素の数を表すことができる符号なし整数型。|
 |[value_type](#value_type)|`queue` 内に要素として格納されるオブジェクトの種類を表す型。|
 
-### <a name="functions"></a>関数
+### <a name="functions"></a>Functions
 
-|||
+|名前|説明|
 |-|-|
 |[戻る](#back)|`queue` の後ろに最も直近に追加された要素への参照を返します。|
 |[empty](#empty)|`queue` が空かどうかをテストします。|
@@ -91,7 +91,7 @@ C++ 標準ライブラリで定義されたコンテナー アダプターには
 |[push](#push)|`queue` の後ろに要素を追加します。|
 |[size](#size)|`queue` 内の要素数を返します。|
 
-## <a name="back"></a><a name="back"></a>戻る
+## <a name="back"></a><a name="back"></a> 戻る
 
 キューの後ろに最も直近に追加された要素への参照を返します。
 
@@ -137,7 +137,7 @@ int main( )
 }
 ```
 
-## <a name="container_type"></a><a name="container_type"></a>container_type
+## <a name="container_type"></a><a name="container_type"></a> container_type
 
 適合されるように、基本のコンテナーを提供する型。
 
@@ -155,7 +155,7 @@ typedef Container container_type;
 
 `container_type` の宣言方法や使用方法の例については、[queue](#queue) の例をご覧ください。
 
-## <a name="empty"></a><a name="empty"></a>指定
+## <a name="empty"></a><a name="empty"></a> 指定
 
 キューが空かどうかをテストします。
 
@@ -165,7 +165,7 @@ bool empty() const;
 
 ### <a name="return-value"></a>戻り値
 
-**`true`** キューが空の場合は。**`false`** キューが空でない場合はです。
+**`true`** キューが空の場合は。 **`false`** キューが空でない場合はです。
 
 ### <a name="example"></a>例
 
@@ -201,7 +201,7 @@ The queue q1 is not empty.
 The queue q2 is empty.
 ```
 
-## <a name="front"></a><a name="front"></a>外側
+## <a name="front"></a><a name="front"></a> 外側
 
 キューの一番前にある最初の要素への参照を返します。
 
@@ -253,7 +253,7 @@ int main() {
 }
 ```
 
-## <a name="pop"></a><a name="pop"></a>ショート
+## <a name="pop"></a><a name="pop"></a> ショート
 
 キューの一番前から要素を削除します。
 
@@ -309,7 +309,7 @@ After a pop the queue length is 2.
 After a pop, the element at the front of the queue is 20.
 ```
 
-## <a name="push"></a><a name="push"></a>押し付け
+## <a name="push"></a><a name="push"></a> 押し付け
 
 キューの一番後ろに要素を追加します。
 
@@ -358,7 +358,7 @@ The queue length is 3.
 The element at the front of the queue is 10.
 ```
 
-## <a name="queue"></a><a name="queue"></a>再生
+## <a name="queue"></a><a name="queue"></a> 再生
 
 空であるか、基本のコンテナー オブジェクトのコピーであるキューを構築します。
 
@@ -425,7 +425,7 @@ The element at the front of queue q5 is 1.
 The element at the back of queue q5 is 2.
 ```
 
-## <a name="size"></a><a name="size"></a>幅
+## <a name="size"></a><a name="size"></a> 幅
 
 キュー内の要素の数を返します。
 
@@ -466,7 +466,7 @@ The queue length is 1.
 The queue length is now 2.
 ```
 
-## <a name="size_type"></a><a name="size_type"></a>size_type
+## <a name="size_type"></a><a name="size_type"></a> size_type
 
 キュー内の要素の数を表すことができる符号なし整数型。
 
@@ -482,7 +482,7 @@ typedef typename Container::size_type size_type;
 
 `size_type` の宣言方法や使用方法の例については、[queue::front](#front) の例をご覧ください。
 
-## <a name="value_type"></a><a name="value_type"></a>value_type
+## <a name="value_type"></a><a name="value_type"></a> value_type
 
 キュー内に要素として格納されるオブジェクトの型を表す型。
 
