@@ -4,12 +4,12 @@ ms.date: 08/20/2019
 helpviewer_keywords:
 - tasks.vs.json file [C++]
 ms.assetid: abd1985e-3717-4338-9e80-869db5435175
-ms.openlocfilehash: cc6b2983d3cc3d40449357a554df5feee38c21d9
-ms.sourcegitcommit: 6c1960089b92d007fc28c32af1e4bef0f85fdf0c
+ms.openlocfilehash: a2aea1b64d5a6c62604c680bf1a4a26478b7b52a
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75556657"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88844991"
 ---
 # <a name="tasksvsjson-schema-reference-c"></a>tasks.vs.json スキーマ リファレンス (C++)
 
@@ -21,9 +21,8 @@ ms.locfileid: "75556657"
 
 既定のプロパティは、すべての種類のタスクで使用できます。
 
-||||
+|プロパティ|Type|説明|
 |-|-|-|
-|**Property**|**Type**|**説明**|
 |`taskLabel`|string| (必須) ユーザー インターフェイスで使用されるタスク ラベルを指定します。|
 |`appliesTo`|string| (必須) コマンドを実行できるファイルを指定します。 ワイルドカードの使用はサポートされています (例: " *"、"* .cpp"、"/*.txt")。|
 |`contextType`|string| 使用できる値: "custom"、"build"、"clean"、"rebuild"。 タスクが表示されるコンテキスト メニュー内の場所を指定します。 既定値は "custom" です。|
@@ -35,9 +34,8 @@ ms.locfileid: "75556657"
 
 タスクの種類が `launch` の場合、次のプロパティを使用できます。
 
-||||
+|プロパティ|Type|説明|
 |-|-|-|
-|**Property**|**Type**|**説明**|
 |`command`|string| 起動するプロセスまたはスクリプトの完全なパスを指定します。|
 |`args`|array| コマンドに渡される引数のコンマ区切りのリストを指定します。|
 |`launchOption`|string| 使用できる値は以下の通りです。"None"、"ContinueOnError"、"IgnoreError"。 エラーが発生したときにコマンドを続行する方法を指定します。|
@@ -88,9 +86,8 @@ C++ ワークロードを含む Linux 開発をインストールし、Visual St
 
 タスクの種類が `remote` の場合、次のプロパティを使用できます。
 
-||||
+|プロパティ|Type|説明|
 |-|-|-|
-|**Property**|**Type**|**説明**|
 |`remoteMachineName`|string|リモート マシンの名前。 **接続マネージャー**のマシン名と一致している必要があります。|
 |`command`|string|リモート マシンに送信するコマンド。 既定では、コマンドはリモート システム上の $HOME ディレクトリで実行されます。|
 |`remoteWorkingDirectory`|string|リモート マシンの現在の作業ディレクトリ。|
@@ -129,9 +126,8 @@ C++ ワークロードを含む Linux 開発をインストールし、Visual St
 
 タスクの種類が `msbuild` の場合、次のプロパティを使用できます。
 
-||||
+|プロパティ|Type|説明|
 |-|-|-|
-|**Property**|**Type**|**説明**|
 |`verbosity`|string| MSBuild プロジェクトのビルド出力の verbosityAllowed 値を指定します ("Quiet"、"Minimal"、"Normal"、"Detailed"、"Diagnostic")。|
 |`toolsVersion`|string| プロジェクトをビルドするツールセットのバージョンを指定します (例: "2.0"、"3.5"、"4.0"、"Current")。 既定値は "Current" です。|
 |`globalProperties`|object|プロジェクトに渡すグローバル プロパティのキーと値のリストを指定します (例: "Configuration":"Release")|

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - command line [C++], building from
 - command line [C++], compilers
 ms.assetid: 7ca9daed-a003-4162-842d-908f79058365
-ms.openlocfilehash: f729947e4d798e5817ff8d4e5abe09eaca090e01
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 1fe8e59c85e0c6b00bff4de639267a44c6ae369e
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87229897"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88838803"
 ---
 # <a name="use-the-microsoft-c-toolset-from-the-command-line"></a>コマンド ラインから Microsoft C++ ツールセットを使用する
 
@@ -237,7 +237,7 @@ Visual Studio インストール ディレクトリが反映されるように�
 [NMAKE](reference/nmake-reference.md)<br/>
 Windows で NMAKE (nmake.exe) を使用し、従来のメイクファイルに基づいて C++ プロジェクトをビルドします。
 
-コマンド ラインでビルドするとき、F1 コマンドでヘルプを瞬時に表示することはできません。 代わりに、検索エンジンを使用して警告、エラー、メッセージに関する情報を取得できます。 また、オフラインのヘルプ ファイルをダウンロードして使用することもできます。 [docs.microsoft.com](https://docs.microsoft.com/cpp/) で検索を使用するには、記事の上部にある検索ボックスにクエリを入力します。
+コマンド ラインでビルドするとき、F1 コマンドでヘルプを瞬時に表示することはできません。 代わりに、検索エンジンを使用して警告、エラー、メッセージに関する情報を取得できます。 また、オフラインのヘルプ ファイルをダウンロードして使用することもできます。 docs.microsoft.com で検索を使用するには、記事の上部にある検索ボックスにクエリを入力します。
 
 ## <a name="command-line-project-management-tools"></a>コマンド ライン プロジェクト管理ツール
 

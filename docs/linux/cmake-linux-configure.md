@@ -2,12 +2,12 @@
 title: Visual Studio で Linux CMake プロジェクトを構成する
 description: Visual Studio で Linux CMake の設定を構成する方法
 ms.date: 08/08/2020
-ms.openlocfilehash: d39423b803b66d6bdf55cc67d488e74ccb682323
-ms.sourcegitcommit: 2034f8e744a8b36cff8b15e9a5cfe684afebadfb
+ms.openlocfilehash: 4bc6d5d82a0f1cd21e8f989eb92b431d38b2bf5c
+ms.sourcegitcommit: 111ee74772d7f308d3414b5d42cbc1e90287f081
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/10/2020
-ms.locfileid: "88047744"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88659345"
 ---
 # <a name="configure-a-linux-cmake-project-in-visual-studio"></a>Visual Studio で Linux CMake プロジェクトを構成する
 
@@ -145,7 +145,7 @@ Visual studio はインストールされているパッケージを管理また
 
 ## <a name="next-steps"></a>次の手順
 
-[CMake デバッグ セッションを構成する](../build/configure-cmake-debugging-sessions.md)
+[CMake デバッグ セッションを構成する](../build/configure-cmake-debugging-sessions.md?toc=/cpp/linux/toc.json&bc=/cpp/_breadcrumb/toc.json)
 
 ## <a name="see-also"></a>関連項目
 

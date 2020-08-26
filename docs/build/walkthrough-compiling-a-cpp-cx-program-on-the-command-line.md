@@ -2,19 +2,19 @@
 title: 'チュートリアル: コマンド ラインでの C++/CX プログラムのコンパイル'
 ms.date: 04/23/2019
 ms.assetid: 626f5544-69ed-4736-83a9-f11389b371b2
-ms.openlocfilehash: 456373fc9009920b734243f6a6c1af3d2c0301d4
-ms.sourcegitcommit: 31a443c9998cf5cfbaff00fcf815b133f55b2426
+ms.openlocfilehash: 8dcd27ca8fff826f33ee8bd752cd32f2d44d3691
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86373685"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88836713"
 ---
 # <a name="walkthrough-compiling-a-ccx-program-on-the-command-line"></a>チュートリアル: コマンド ラインでの C++/CX プログラムのコンパイル
 
 > [!NOTE]
 > 新しい UWP アプリとコンポーネントでは、Windows ランタイム API の標準 C++17 言語投影である [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/) を使用することをお勧めします。 C++/WinRT は、Windows 10 SDK のバージョン 1803 以降で使用できます。 C++/WinRT は、全体がヘッダー ファイル内に実装され、最新の Windows API に対する最高級のアクセスを提供するように設計されています。
 
-Microsoft C++ コンパイラ (MSVC) では Visual C++ コンポーネント拡張機能 (C++/CX) がサポートされ、Windows ランタイム プログラミング モデルをターゲットとする型と演算子が追加されています。 C++/CX を使用して、ユニバーサル Windows プラットフォーム (UWP) と Windows デスクトップ用のアプリをビルドできます。 詳細については、「[C++/CX のツアー](https://docs.microsoft.com/archive/msdn-magazine/2013/april/component-extensions-a-tour-of-c-cx)」と[ランタイム プラットフォーム用のコンポーネント拡張機能](../extensions/component-extensions-for-runtime-platforms.md)に関する記事を参照してください。
+Microsoft C++ コンパイラ (MSVC) では Visual C++ コンポーネント拡張機能 (C++/CX) がサポートされ、Windows ランタイム プログラミング モデルをターゲットとする型と演算子が追加されています。 C++/CX を使用して、ユニバーサル Windows プラットフォーム (UWP) と Windows デスクトップ用のアプリをビルドできます。 詳細については、「[C++/CX のツアー](/archive/msdn-magazine/2013/april/component-extensions-a-tour-of-c-cx)」と[ランタイム プラットフォーム用のコンポーネント拡張機能](../extensions/component-extensions-for-runtime-platforms.md)に関する記事を参照してください。
 
 このチュートリアルでは、テキスト エディターを使って基本的な C++/CX プログラムを作成し、コマンド ラインでコンパイルします。 (表示されているプログラムをタイプするのではなく、自分の C++/CX プログラムを使用するか、別のヘルプ記事の C++/CX コード サンプルを使用できます。 この手法は UI 要素が含まれていない小さなモジュールをビルドおよびテストするのに便利です)。
 

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 724df913400abb6d33c333f0a16c20fb982769bc
-ms.sourcegitcommit: 98139766b548c55181ff5ec5ad3bfd9db2bf5c89
+ms.openlocfilehash: f3a0b4a9c57fd55c6788481adbf91c48e362444e
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83865053"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88833401"
 ---
 # <a name="tutorial-vcperf-and-windows-performance-analyzer"></a>チュートリアル: vcperf および Windows パフォーマンス アナライザー
 
@@ -35,7 +35,7 @@ C++ Build Insights をサポートする WPA のバージョンは、現在 Wind
 
 注:Windows パフォーマンス アナライザーをインストールするには、Windows 8 以降が必要です。
 
-1. Windows ADK の[ダウンロード ページ](https://docs.microsoft.com/windows-hardware/get-started/adk-install)を参照してください。
+1. Windows ADK の[ダウンロード ページ](/windows-hardware/get-started/adk-install)を参照してください。
 
 1. Windows ADK の最新バージョンをダウンロードしてインストールします。
 

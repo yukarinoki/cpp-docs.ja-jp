@@ -3,12 +3,12 @@ title: launch.vs.json スキーマ リファレンス (C++)
 ms.date: 08/20/2019
 helpviewer_keywords:
 - launch.vs.json file [C++]
-ms.openlocfilehash: 0410f22a680d5bfc12270ff686938a54e2e8a8fd
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 1161e8fa8ac3751ca8cc2b96ec063cd6063bb245
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87223955"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88841988"
 ---
 # <a name="launchvsjson-schema-reference-c"></a>launch.vs.json スキーマ リファレンス (C++)
 
@@ -16,9 +16,8 @@ ms.locfileid: "87223955"
 
 ## <a name="default-properties"></a>既定のプロパティ
 
-||||
+|プロパティ|Type|説明|
 |-|-|-|
-|**Property**|**Type**|**説明**|
 |`name`|string|[デバッグ ターゲット] ドロップダウンでエントリの名前を指定します。|
 |`type`|string|プロジェクトが dll であるか .exe であるかを指定します (既定値は .exe)|
 |`project`|string|プロジェクト ファイルへの相対パスを指定します。|
@@ -36,9 +35,8 @@ ms.locfileid: "87223955"
 
 ## <a name="c-linux-properties"></a>C++ Linux のプロパティ
 
-||||
+|プロパティ|Type|説明|
 |-|-|-|
-|**Property**|**Type**|**説明**|
 |`program`|string|リモート マシン上のプログラム実行可能ファイルへの完全なパス。 CMake を使用する場合、このフィールドの値としてマクロ `${debugInfo.fullTargetPath}` を使用できます。|
 |`processId`|整数|デバッガーをアタッチする省略可能なプロセス ID。|
 |`sourceFileMap`|object|デバッグ エンジンに渡される省略可能なソース ファイル マッピング。 形式: `{ "\<Compiler source location>": "\<Editor source location>" }` または `{ "\<Compiler source location>": { "editorPath": "\<Editor source location>", "useForBreakpoints": true } }`。 例: `{ "/home/user/foo": "C:\\foo" }` または `{ "/home/user/foo": { "editorPath": "c:\\foo", "useForBreakpoints": true } }`。 「[ソース ファイル マップ オプション](#source_file_map_options)」を参照してください。|
@@ -67,7 +65,7 @@ externalConsole|boolean|true の場合、デバッグ対象のためにコンソ
 
 `setupCommands` プロパティと共に使用します。
 
-||||
+|プロパティ|Type|説明|
 |-|-|-|
 |`text`|string|実行するデバッガー コマンド。|
 |`description`|string|コマンドの説明 (省略可能)。|
@@ -77,7 +75,7 @@ externalConsole|boolean|true の場合、デバッグ対象のためにコンソ
 
 `pipeTransport` プロパティと共に使用します。
 
-||||
+|プロパティ|Type|説明|
 |-|-|-|
 |`pipeCwd`|string|パイプ プログラムに渡す作業ディレクトリの完全修飾パス。|
 |`pipeProgram`|string|実行するパイプ コマンドの完全修飾パス。|
@@ -90,7 +88,7 @@ externalConsole|boolean|true の場合、デバッグ対象のためにコンソ
 
 `sourceFileMap` プロパティと共に使用します。
 
-||||
+|プロパティ|Type|説明|
 |-|-|-|
 |`editorPath`|string|エディターが配置するソース コードの場所。|
 |`useForBreakpoints`|boolean|ブレークポイントを設定する場合は、このソース マッピングを使用する必要があります。 **`false`** に設定すると、ブレークポイントを設定するのにファイル名と行番号のみが使用されます。 **`true`** に設定すると、ブレークポイントは、このソース マッピングが使用されている場合にのみ、ファイルへの完全パスと行番号で設定されます。 それ以外の場合は、ファイル名と行番号のみがブレークポイントの設定に使用されます。 既定値は **`true`** です。|

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - dialog box controls, variable types
 - variables, dialog box control member variables
 ms.assetid: 437783bd-8eb4-4508-8b73-7380116e9d71
-ms.openlocfilehash: a8f693345fcb265cf8e97af342c6e0cd539c9001
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: e7fd5bd93198c494f18fe18755d13d40fe7fbf96
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87215999"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88845134"
 ---
 # <a name="add-a-member-variable"></a>メンバー変数を追加する
 
@@ -80,13 +80,15 @@ ms.locfileid: "87215999"
 
     戻り値の型については、「[基本型](../cpp/fundamental-types-cpp.md)」を参照してください。
 
-    |||
-    |-|-|
-    |**`char`**|**`short`**|
-    |**`double`**|**`unsigned char`**|
-    |**`float`**|**`unsigned int`**|
-    |**`int`**|**`unsigned long`**|
-    |**`long`**||
+    - **`char`**
+    - **`double`**
+    - **`float`**
+    - **`int`**
+    - **`long`**
+    - **`short`**
+    - **`unsigned char`**
+    - **`unsigned int`**
+    - **`unsigned long`**
 
   - ダイアログ ボックス コントロールのメンバー変数を追加する場合、このボックスにはコントロールまたは値に対して返されるオブジェクトの型が入力されます。 **[コントロール]** を選択した場合、 **[変数の型]** により **[コントロール ID]** ボックスで選択したコントロールの基底クラスが指定されます。 ダイアログ ボックス コントロールに値を保持することができ、 **[値]** を選択した場合、 **[変数の型]** によってコントロールで保持できる値の適切な型が指定されます。 詳細については、「[ダイアログ ボックス コントロールおよび変数の型](#dialog-box-controls-and-variable-types)」を参照してください。
 

@@ -3,12 +3,12 @@ title: CppProperties.json リファレンス
 ms.date: 08/09/2019
 helpviewer_keywords:
 - CppProperties.json file [C++]
-ms.openlocfilehash: 2409c1d93d4e9d814407dbd4334daa73ae630775
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 31b4e7901bf35986e553a9e280da0243d61982a2
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87224059"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88837906"
 ---
 # <a name="cpppropertiesjson-reference"></a>CppProperties.json リファレンス
 
@@ -18,7 +18,7 @@ CMake を使用していない "フォルダーを開く" プロジェクトで�
 
 構成には、次のどのプロパティでも含めることができます。
 
-|||
+|名前|説明|
 |-|-|
 |`inheritEnvironments`| この構成に適用する環境を指定します。|
 |`name`|C++ の構成ドロップダウンに表示される構成の名前|
@@ -125,7 +125,7 @@ Linux ワークロードがインストールされている場合、Linux お�
 
 *CppProperties.json* 内の次の組み込みマクロにアクセスできます。
 
-|||
+|マクロ|説明|
 |-|-|
 |`${workspaceRoot}`| ワークスペース フォルダーへの完全なパスです|
 |`${projectRoot}`| *CppProperties.json* が配置されているフォルダーへの完全なパスです|
@@ -160,7 +160,7 @@ Linux ワークロードがインストールされている場合、Linux お�
 
 ## <a name="troubleshoot-intellisense-errors"></a>IntelliSense エラーのトラブルシューティング
 
-予期した IntelliSense が表示されない場合、トラブルシューティングを行うには、 **[ツール]**  >  **[オプション]**  >  **[テキスト エディター]**  >  **[C/C++]**  >  **[詳細設定]** に移動し、 **[ログを有効にする]** を **`true`** に設定にします。 まずは、 **[ログ記録レベル]** を 5 に設定し、 **[ログ フィルター]** を 8 に設定してみてください。
+予期した IntelliSense が表示されない場合、トラブルシューティングを行うには、 **[ツール]**  >  **[オプション]**  >  **[テキスト エディター]**  >  **[C/C++]**  >  **[詳細設定]** に移動し、 **[ログを有効にする]** を **`true`** に設定にします。 最初は、 **[ログ記録レベル]** を [5] に設定し、 **[ログ フィルター]** を [8] に設定します。
 
 ![診断ログ記録](media/diagnostic-logging.png)
 

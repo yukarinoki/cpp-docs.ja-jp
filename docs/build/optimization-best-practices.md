@@ -5,12 +5,12 @@ helpviewer_keywords:
 - C++, optimization
 - optimization, best practices
 ms.assetid: f3433148-7255-4ca6-8a4f-7c31aac88508
-ms.openlocfilehash: 7b1cea29a782f291f1e85f7a143730825958d91b
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 425fa0bb6b7aab502ce493ced8b587fad8ce59a8
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87229780"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88833349"
 ---
 # <a name="optimization-best-practices"></a>最適化の推奨事項
 
@@ -40,7 +40,7 @@ Visual Studio では、"*ガイド付き最適化のプロファイル*" (PGO) �
 
 **`/Op`** コンパイラ オプションがなくなり、浮動小数点の最適化を処理する次の 4 つのコンパイラ オプションが追加されました。
 
-|||
+|オプション|説明|
 |-|-|
 |**`/fp:precise`**|既定で推奨されているオプションです。ほとんどの場合は、これを使用します。|
 |**`/fp:fast`**|パフォーマンスが最も重要視される場合 (ゲームなど) に推奨されます。 このオプションを使用すると、パフォーマンスが最も高速になります。|

@@ -3,12 +3,12 @@ title: Visual C++ のヘルプおよびコミュニティ
 ms.date: 08/03/2020
 ms.technology: cpp-ide
 ms.assetid: 6bc23c18-fcd9-47bc-bff2-17537700be4a
-ms.openlocfilehash: e3dd475112f217e9d7891a18f7dc91972b221dd9
-ms.sourcegitcommit: 4eda68a0b3c23d8cefa56b7ba11583412459b32f
+ms.openlocfilehash: 36bc8cc37d3e0018088f284ad00bbefe2eafd22a
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87565925"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88839765"
 ---
 # <a name="visual-c-help-and-community"></a>Visual C++ のヘルプおよびコミュニティ
 
@@ -18,7 +18,7 @@ ms.locfileid: "87565925"
 
 |Title|説明|
 |-----------|-----------------|
-|[開発者コード サンプル](https://docs.microsoft.com/samples)|Microsoft およびコミュニティから提供されているダウンロード可能なサンプル コードが含まれています。|
+|[開発者コード サンプル](/samples)|Microsoft およびコミュニティから提供されているダウンロード可能なサンプル コードが含まれています。|
 
 ## <a name="product-documentation"></a>製品ドキュメント
 
@@ -42,4 +42,4 @@ Microsoft デベロッパー コンテンツをオンラインで見ることが
 |[C++ チーム ブログ](https://devblogs.microsoft.com/cppblog/)|Microsoft の C++ 製品チームの専門家によるさまざまなテーマの投稿が含まれています。|
 |[Channel 9](https://channel9.msdn.com/)|ビデオ インタビューや講義が含まれています。 C++ コンテンツを検索するには、Channel 9 ホーム ページの検索ボックスを使用します。|
 |[Visual Studio](https://visualstudio.microsoft.com/)|Visual Studio および関連する開発ツールに関する記事やニュースが含まれています。|
-|[Microsoft Docs の Q&A](https://docs.microsoft.com/answers/topics/c%2B%2B.html) と Visual Studio C++ の [Developer Community](https://developercommunity.visualstudio.com/spaces/62/index.html)|Microsoft 公式のフォーラムです。C++ に関する質問を投稿し、その回答を Microsoft やコミュニティ内の専門家から得ることができます。|
+|[Microsoft Docs の Q&A](/answers/topics/c%2B%2B.html) と Visual Studio C++ の [Developer Community](https://developercommunity.visualstudio.com/spaces/62/index.html)|Microsoft 公式のフォーラムです。C++ に関する質問を投稿し、その回答を Microsoft やコミュニティ内の専門家から得ることができます。|

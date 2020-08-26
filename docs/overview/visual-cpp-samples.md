@@ -4,18 +4,18 @@ description: GitHub にアーカイブされている Visual Studio C++ サン�
 ms.date: 03/23/2020
 ms.technology: cpp-language
 ms.assetid: 76798022-5886-48e7-a7f2-f99352b15cbf
-ms.openlocfilehash: cb8d2aa8322cb3e9bfc30dc9ad041e7c70662049
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 56e9cfe72e58a12fb381c88616496820908006c8
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87226764"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88846369"
 ---
 # <a name="visual-studio-c-samples"></a>Visual Studio C++ のサンプル
 
 Visual Studio C++ のサンプルは Web で利用できます。 Microsoft では、複数のテクノロジのさまざまな機能を示す C++ の多くのサンプルを作っています。 さらに、次の場所でもサンプルが見つかります。
 
-- [Microsoft Docs のサンプル - C++](https://docs.microsoft.com/samples/browse/?term=c%2B%2B)
+- [Microsoft Docs のサンプル - C++](/samples/browse/?term=c%2B%2B)
 
 - [GitHub の Windows サンプル](https://microsoft.github.io/windows/)
 
@@ -25,7 +25,7 @@ Visual Studio C++ のサンプルは Web で利用できます。 Microsoft で�
 
 - [ADO コードのサンプル](/office/client-developer/access/desktop-database-reference/ado-code-examples-in-microsoft-visual-c)
 
-- [Windows ハードウェア開発のサンプル](https://docs.microsoft.com/samples/browse/?products=windows-wdk)
+- [Windows ハードウェア開発のサンプル](/samples/browse/?products=windows-wdk)
 
 ## <a name="archived-c-samples-on-github"></a>GitHub にアーカイブされている C++ のサンプル
 
