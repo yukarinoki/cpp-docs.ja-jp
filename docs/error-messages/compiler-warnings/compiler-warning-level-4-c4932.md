@@ -1,23 +1,24 @@
 ---
 title: コンパイラの警告 (レベル 4) C4932
-ms.date: 11/04/2016
+description: Microsoft C/c + + コンパイラの警告 C4932 について説明します。
+ms.date: 08/25/2020
 f1_keywords:
 - C4932
 helpviewer_keywords:
 - C4932
 ms.assetid: 0b8d88cc-21f6-45cb-a9f5-1795b7db0dfa
-ms.openlocfilehash: 992e047f31e4a30edd29ba6110bf119d2bc8928b
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: ece2ae14fd8e1198a97f5e772fcce52c47464878
+ms.sourcegitcommit: efc8c32205c9d610f40597556273a64306dec15d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87230598"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88898298"
 ---
 # <a name="compiler-warning-level-4-c4932"></a>コンパイラの警告 (レベル 4) C4932
 
-__identifier (識別子) と \_ _identifier (識別子) は区別されません
+> `__identifier(identifier_1)` と `__identifier(identifier_2)` は区別されません。
 
-コンパイラは、 **_finally** **`__finally`** `__try` [__identifier](../../extensions/identifier-cpp-cli.md)に渡されるパラメーターとして、_finally とまたはの **_try**とを区別できません。 [C2374](../../error-messages/compiler-errors-1/compiler-error-c2374.md) エラーが発生するため、同じプログラム内で識別子として両方を使用しないようにします。
+コンパイラは **`_finally`** 、とまたはを、 **`__finally`** **`__try`** **`_try`** に渡されるパラメーターとして [`__identifier`](../../extensions/identifier-cpp-cli.md) 区別できません。 [C2374](../../error-messages/compiler-errors-1/compiler-error-c2374.md) エラーが発生するため、同じプログラム内で識別子として両方を使用しないようにします。
 
 次の例では C4932 警告が生成されます。
 

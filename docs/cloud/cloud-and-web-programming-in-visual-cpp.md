@@ -3,12 +3,12 @@ title: Visual C++ でのクラウドおよび Web プログラミング
 ms.date: 05/14/2019
 ms.assetid: b63611f1-9723-44d0-ba7f-c3ebef341313
 ms.topic: overview
-ms.openlocfilehash: 4e50557733d474d68b8e503d00b28b2ae8cb7f09
-ms.sourcegitcommit: 7750e4c291d56221c8893120c56a1fe6c9af60d6
+ms.openlocfilehash: 675502e9ae50c9e69ad4555502000d128d5d4cbe
+ms.sourcegitcommit: efc8c32205c9d610f40597556273a64306dec15d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71274641"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88898665"
 ---
 # <a name="cloud-and-web-programming-in-visual-c"></a>Visual C++ でのクラウドおよび Web プログラミング
 
@@ -30,7 +30,7 @@ C++ では、Web とクラウドに接続するためのいくつかの方法が
 
 - [Microsoft Graph での OneDrive および SharePoint](https://dev.onedrive.com/README.htm)
 
-  OneDrive API では、アプリケーションを Office 365 と SharePoint Server 2016 のファイルとフォルダーに接続する一連の HTTP サービスが提供されます。
+  OneDrive API には、アプリケーションを Microsoft 365 および SharePoint Server 2016 のファイルとフォルダーに接続するための HTTP サービスのセットが用意されています。
 
 ## <a name="windows-and-cross-platform-networking-apis"></a>Windows およびクロスプラットフォームのネットワーク API
 
@@ -51,7 +51,7 @@ C++ では、Web とクラウドに接続するためのいくつかの方法が
 
 - [IXMLHTTPRequest2 インターフェイス](/windows/win32/api/msxml6/nn-msxml6-ixmlhttprequest2)
 
-  Windows ランタイム アプリまたは Windows デスクトップ アプリで、HTTP 経由でインターネットに接続し、GET、PUT などの HTTP コマンドを発行するために使用できる、ネイティブな COM インターフェイスを提供します。 詳細については、「[チュートリアル:タスクおよび XML HTTP 要求を使用した接続](../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md)」を参照してください。
+  Windows ランタイム アプリまたは Windows デスクトップ アプリで、HTTP 経由でインターネットに接続し、GET、PUT などの HTTP コマンドを発行するために使用できる、ネイティブな COM インターフェイスを提供します。 詳細については、「 [チュートリアル: タスクと XML HTTP 要求を使用した接続](../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md)」を参照してください。
 
 - [Windows インターネット (WinInet)](/windows/win32/WinInet/portal)
 
