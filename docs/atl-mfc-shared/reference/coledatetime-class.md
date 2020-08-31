@@ -1,6 +1,7 @@
 ---
 title: COleDateTime クラス
-ms.date: 03/27/2019
+description: OLE オートメーションで使用されるデータ型をカプセル化する MFC COleDateTime クラスの API リファレンス `DATE` です。
+ms.date: 08/27/2020
 f1_keywords:
 - COleDateTime
 - ATLCOMTIME/ATL::COleDateTime
@@ -34,12 +35,12 @@ helpviewer_keywords:
 - dates, handling in MFC
 - time, handling in MFC
 ms.assetid: e718f294-16ec-4649-88b6-a4dbae5178fb
-ms.openlocfilehash: 5cbc131a81afef1ee94069f39e79f22ce7addfcb
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: 9ebbab02860daaeb57c24d3e0901666861adfc2b
+ms.sourcegitcommit: c8f1605354724a13566bc3b0fac3c5d98265f1d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88562468"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89062159"
 ---
 # <a name="coledatetime-class"></a>COleDateTime クラス
 
@@ -85,7 +86,7 @@ class COleDateTime
 
 ### <a name="public-operators"></a>パブリック演算子
 
-|Name|説明|
+|名前|説明|
 |----------|-----------------|
 |[COleDateTime:: operator = =、COleDateTime:: operator < など。](#coledatetime_relational_operators)|2つ `COleDateTime` の値を比較します。|
 |[COleDateTime:: operator +, COleDateTime:: operator-](#operator_add_-)|値を加算および減算 `COleDateTime` します。|
@@ -95,12 +96,12 @@ class COleDateTime
 
 ### <a name="public-data-members"></a>パブリック データ メンバー
 
-|Name|説明|
+|名前|説明|
 |----------|-----------------|
 |[COleDateTime:: m_dt](#m_dt)|このオブジェクトの基になるを格納 `DATE` `COleDateTime` します。|
 |[COleDateTime:: m_status](#m_status)|このオブジェクトの状態を格納 `COleDateTime` します。|
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>注釈
 
 `COleDateTime` に基底クラスがありません。
 
@@ -128,7 +129,7 @@ class COleDateTime
 
 100未満の日付を使用してオブジェクトを作成した場合、その `COleDateTime` 日付は受け入れられますが、、、、、、およびへの後続の呼び出しは `GetYear` `GetMonth` `GetDay` `GetHour` `GetMinute` `GetSecond` 失敗し、-1 を返します。 以前は、2桁の日付を使用できましたが、MFC 4.2 以降では、日付は100以上である必要があります。
 
-問題を回避するには、4桁の日付を指定します。 次に例を示します。
+問題を回避するには、4桁の日付を指定します。 たとえば、次のように入力します。
 
 [!code-cpp[NVC_ATLMFC_Utilities#1](../../atl-mfc-shared/codesnippet/cpp/coledatetime-class_1.cpp)]
 
@@ -136,7 +137,7 @@ class COleDateTime
 
 クラスとクラスの詳細については、 `COleDateTime` `COleDateTimeSpan` 「 [日付と時刻: オートメーションサポート](../../atl-mfc-shared/date-and-time-automation-support.md)」を参照してください。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** ATLComTime .h
 
@@ -158,7 +159,7 @@ bool operator>=(const COleDateTime& date) const throw();
 *date*<br/>
 比較される `COleDateTime` オブジェクト。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 > [!NOTE]
 > 2つのオペランドのいずれかが無効な場合、ATLASSERT が発生します。
@@ -227,7 +228,7 @@ COleDateTime(const DBTIMESTAMP& timeStamp) throw();
 *タイムスタンプ*<br/>
 現在の現地時刻を格納している [Dbtimestamp](/dotnet/api/system.data.oledb.oledbtype) 構造体への参照。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 これらのすべてのコンストラクター `COleDateTime` は、指定された値に初期化された新しいオブジェクトを作成します。 次の表は、各日付と時刻のコンポーネントの有効な範囲を示しています。
 
@@ -317,7 +318,7 @@ CString Format(UINT nFormatID) const;
 
 `CString`書式設定された日付/時刻値を格納している。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 このオブジェクトの状態 `COleDateTime` が null の場合、戻り値は空の文字列になります。 状態が無効である場合は、文字列リソース ATL_IDS_DATETIME_INVALID によって返される文字列が指定されます。
 
@@ -353,7 +354,7 @@ bool GetAsDBTIMESTAMP(DBTIMESTAMP& timeStamp) const throw();
 
 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 結果として得られた時間を参照された *タイムスタンプ* 構造体に格納します。 `DBTIMESTAMP`この関数によって初期化されるデータ構造体は、 `fraction` メンバーが0に設定されます。
 
@@ -378,7 +379,7 @@ bool GetAsSystemTime(SYSTEMTIME& sysTime) const throw();
 
 成功した場合は TRUE を返します。変換に失敗した場合は FALSE `COleDateTime` 。オブジェクトが NULL または無効の場合は。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 `GetAsSystemTime` 結果として得られた時間を参照先の *sysTime* オブジェクトに格納します。 `SYSTEMTIME`この関数によって初期化されるデータ構造体は、 `wMilliseconds` メンバーが0に設定されます。
 
@@ -401,7 +402,7 @@ bool GetAsUDATE(UDATE& uDate) const throw();
 
 成功した場合は TRUE を返します。変換に失敗した場合は FALSE `COleDateTime` 。オブジェクトが NULL または無効の場合は。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 `UDATE`構造体は、"アンパック済み" の日付を表します。
 
@@ -429,7 +430,7 @@ int GetDay() const throw();
 
 このオブジェクトの値で表される月の日付、 `COleDateTime` または `COleDateTime::error` 日を取得できなかった場合は。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 有効な戻り値の範囲は 1 ~ 31 です。
 
@@ -455,7 +456,7 @@ int GetDay() const throw();
 
 ## <a name="coledatetimegetdayofweek"></a><a name="getdayofweek"></a> COleDateTime:: GetDayOfWeek
 
-この日付/時刻値によって表される月の日付を取得します。
+この日付/時刻値によって表される曜日を取得します。
 
 ```
 int GetDayOfWeek() const throw();
@@ -465,7 +466,7 @@ int GetDayOfWeek() const throw();
 
 このオブジェクトの値で表される曜日、 `COleDateTime` または `COleDateTime::error` 曜日を取得できなかった場合は。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 有効な戻り値の範囲は 1 ~ 7 です。1は日曜日、2 = 月曜日のようになります。
 
@@ -501,7 +502,7 @@ int GetDayOfYear() const throw();
 
 このオブジェクトの値で表される年の日付、 `COleDateTime` または `COleDateTime::error` 年の通算日を取得できなかった場合は。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 有効な戻り値の範囲は 1 ~ 366 で、1月1日です。
 
@@ -537,7 +538,7 @@ int GetHour() const throw();
 
 このオブジェクトの値で表される時間 `COleDateTime` 。または `COleDateTime::error` 時間を取得できなかった場合は。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 有効な戻り値の範囲は 0 ~ 23 です。
 
@@ -573,7 +574,7 @@ int GetMinute() const throw();
 
 このオブジェクトの値で表される分、 `COleDateTime` または分を取得できなかった `COleDateTime::error` 場合は。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 有効な戻り値の範囲は 0 ~ 59 です。
 
@@ -609,7 +610,7 @@ int GetMonth() const throw();
 
 このオブジェクトの値で表される月 `COleDateTime` `COleDateTime::error` 。月を取得できなかった場合は。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 有効な戻り値の範囲は 1 ~ 12 です。
 
@@ -645,7 +646,7 @@ int GetSecond() const throw();
 
 このオブジェクトの値で表される2番目の `COleDateTime` `COleDateTime::error` 。2番目のを取得できなかった場合は。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 有効な戻り値の範囲は 0 ~ 59 です。
 
@@ -686,7 +687,7 @@ DateTimeStatus GetStatus() const throw();
 
 この値の状態を返し `COleDateTime` ます。 `GetStatus`既定のを使用して構築されたオブジェクトでを呼び出すと `COleDateTime` 、有効なが返されます。 `GetStatus` `COleDateTime` コンストラクターを null に設定して初期化されたオブジェクトでを呼び出すと、 `GetStatus` は null を返します。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 戻り値は、クラス内で定義されている列挙型によって定義され `DateTimeStatus` `COleDateTime` ます。
 
@@ -752,7 +753,7 @@ int GetYear() const throw();
 
 このオブジェクトの値で表される年 `COleDateTime` 。または `COleDateTime::error` 年を取得できなかった場合は。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 有効な戻り値の範囲は 100 ~ 9999 です。これには、世紀が含まれます。
 
@@ -786,7 +787,7 @@ int GetYear() const throw();
 DATE m_dt;
 ```
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 > [!CAUTION]
 > `DATE`この関数によって返されるポインターによってアクセスされるオブジェクトの値を変更すると、このオブジェクトの値が変更され `COleDateTime` ます。 このオブジェクトの状態は変更されません `COleDateTime` 。
@@ -801,7 +802,7 @@ DATE m_dt;
 DateTimeStatus m_status;
 ```
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 このデータメンバーの型は列挙型であり `DateTimeStatus` 、クラス内で定義されてい `COleDateTime` ます。 詳細については、「 [COleDateTime:: GetStatus](#getstatus)」を参照してください。
 
@@ -822,7 +823,7 @@ COleDateTime& operator=(const FILETIME& filetimeSrc) throw();
 COleDateTime& operator=(const UDATE& uDate) throw();
 ```
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 これらのオーバーロードされた代入演算子は、ソースの日付/時刻値をこのオブジェクトにコピー `COleDateTime` します。 これらのオーバーロードされた代入演算子の簡単な説明を次に示します。
 
@@ -858,7 +859,7 @@ COleDateTime operator-(COleDateTimeSpan dateSpan) const throw();
 COleDateTimeSpan operator-(const COleDateTime& date) const throw();
 ```
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 `COleDateTime` オブジェクトは絶対時刻を表します。 [COleDateTimeSpan](../../atl-mfc-shared/reference/coledatetimespan-class.md) オブジェクトは相対時刻を表します。 最初の2つの演算子を使用すると、値の値を加算および減算でき `COleDateTimeSpan` `COleDateTime` ます。 3番目の演算子を使用すると、ある `COleDateTime` 値を別の値から減算して値を生成することができ `COleDateTimeSpan` ます。
 
@@ -887,7 +888,7 @@ COleDateTime& operator+=(COleDateTimeSpan dateSpan) throw();
 COleDateTime& operator-=(COleDateTimeSpan dateSpan) throw();
 ```
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 これらの演算子を使用すると、 `COleDateTimeSpan` このに対して値を加算および減算でき `COleDateTime` ます。 オペランドのいずれかが null の場合、結果の値の状態 `COleDateTime` は null になります。
 
@@ -909,7 +910,7 @@ COleDateTime& operator-=(COleDateTimeSpan dateSpan) throw();
 operator DATE() const throw();
 ```
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 この演算子は、 `DATE` このオブジェクトから値がコピーされるオブジェクトを返し `COleDateTime` ます。 オブジェクトの実装の詳細については `DATE` 、「 [日付と時刻: オートメーションのサポート](../../atl-mfc-shared/date-and-time-automation-support.md)」を参照してください。
 
@@ -947,7 +948,7 @@ bool ParseDateTime(
 
 文字列が日付/時刻値に正常に変換された場合は TRUE を返し、それ以外の場合は FALSE を返します。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 文字列が日付/時刻値に正常に変換された場合、このオブジェクトの値 `COleDateTime` はその値に設定され、その状態が有効になります。
 
@@ -1002,7 +1003,7 @@ int SetDate(
 
 このオブジェクトの値が `COleDateTime` 正常に設定された場合は0。それ以外の場合は1。 この戻り値は、列挙型に基づいてい `DateTimeStatus` ます。 詳細については、「 [SetStatus](#setstatus) メンバー関数」を参照してください。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 日付は、指定した値に設定されます。 時刻は、時刻 0 (午前0時) に設定されます。
 
@@ -1076,7 +1077,7 @@ int SetDateTime(
 
 このオブジェクトの値が `COleDateTime` 正常に設定された場合は0。それ以外の場合は1。 この戻り値は、列挙型に基づいてい `DateTimeStatus` ます。 詳細については、「 [SetStatus](#setstatus) メンバー関数」を参照してください。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 パラメーター値の境界については、次の表を参照してください。
 
@@ -1150,7 +1151,7 @@ void SetStatus(DateTimeStatus status) throw();
 *status*<br/>
 このオブジェクトの新しいステータス値 `COleDateTime` 。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 *Status*パラメーターの値は、クラス内で定義されている列挙型によって定義され `DateTimeStatus` `COleDateTime` ます。 詳細については、「 [COleDateTime:: GetStatus](#getstatus) 」を参照してください。
 
@@ -1181,7 +1182,7 @@ int SetTime(
 
 このオブジェクトの値が `COleDateTime` 正常に設定された場合は0。それ以外の場合は1。 この戻り値は、列挙型に基づいてい `DateTimeStatus` ます。 詳細については、「 [SetStatus](#setstatus) メンバー関数」を参照してください。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 時刻は、指定された値に設定されます。 日付は、1899年12月30日の日付0に設定されます。
 

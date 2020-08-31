@@ -1,6 +1,6 @@
 ---
-title: コンパイラパスクラス
-description: C++ ビルド インサイト SDK コンパイラパス クラスリファレンス。
+title: CompilerPass クラス
+description: C++ Build Insights SDK の CompilerPass クラスのリファレンスです。
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 11af981b647d5183f88dad024d90c0ef4f8a28bc
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
-ms.translationtype: MT
+ms.openlocfilehash: 054bdf75dcfca42b8c202565fb44df671f17f912
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81325041"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88831620"
 ---
-# <a name="compilerpass-class"></a>コンパイラパスクラス
+# <a name="compilerpass-class"></a>CompilerPass クラス
 
 ::: moniker range="<=vs-2015"
 
-C++ ビルド インサイト SDK は、Visual Studio 2017 以降と互換性があります。 これらのバージョンのドキュメントを参照するには、この記事の Visual Studio**バージョン**セレクター コントロールを Visual Studio 2017 または Visual Studio 2019 に設定します。 このページの目次の上部に表示されます。
+C++ Build Insights SDK は、Visual Studio 2017 以降と互換性があります。 これらのバージョンのドキュメントを表示するには、この記事の Visual Studio **Version** セレクター コントロールを Visual Studio 2017 または Visual Studio 2019 に設定します。 このページの目次の一番上にあります。
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-クラス`CompilerPass`[は、](../functions/match-event-in-member-function.md)[関数](../functions/match-event.md)で使用されます。 [MatchEventStack](../functions/match-event-stack.md) [MatchEventStackInMemberFunction](../functions/match-event-stack-in-member-function.md) [BACK_END_PASS](../event-table.md#back-end-pass)または[FRONT_END_PASS](../event-table.md#front-end-pass)イベントに一致させるために使用します。
+`CompilerPass` クラスは、[MatchEvent](../functions/match-event.md)、[MatchEventInMemberFunction](../functions/match-event-in-member-function.md)、[MatchEventStack](../functions/match-event-stack.md)、および [MatchEventStackInMemberFunction](../functions/match-event-stack-in-member-function.md) 関数と共に使用されます。 これを使用して [BACK_END_PASS](../event-table.md#back-end-pass) または [FRONT_END_PASS](../event-table.md#front-end-pass) イベントを照合します。
 
 ## <a name="syntax"></a>構文
 
@@ -49,28 +49,28 @@ public:
 
 ## <a name="members"></a>メンバー
 
-クラスには、[その Activity](activity.md)基本クラスから継承された`CompilerPass`メンバーと共に、次のメンバーが含まれます。
+その基底クラス [Activity](activity.md) から継承されたメンバーに加えて、`CompilerPass` クラスには以下のメンバーが含まれます。
 
 ### <a name="constructors"></a>コンストラクター
 
-[コンパイラパス](#compiler-pass)
+[CompilerPass](#compiler-pass)
 
-### <a name="enums"></a>列挙体
+### <a name="enums"></a>列挙型
 
-#### <a name="passcode"></a>パスコード
+#### <a name="passcode"></a>PassCode
 
-|||
+|値|説明|
 |-|-|
-|FRONT_END|フロントエンドパス。|
+|FRONT_END|フロントエンド パス。|
 |BACK_END|バックエンド パス。|
 
 ### <a name="functions"></a>関数
 
-[ソースパス](#input-source-path)\
-[オブジェクトパスを出力します。](#output-object-path)\
-[パスコード](#pass-code)\
+[InputSourcePath](#input-source-path)\
+[OutputObjectPath](#output-object-path)\
+[PassCode](#pass-code)\
 
-## <a name="compilerpass"></a><a name="compiler-pass"></a>コンパイラパス
+## <a name="compilerpass"></a><a name="compiler-pass"></a> CompilerPass
 
 ```cpp
 CompilerPass(const RawEvent& event);
@@ -78,10 +78,10 @@ CompilerPass(const RawEvent& event);
 
 ### <a name="parameters"></a>パラメーター
 
-*イベント*\
-[BACK_END_PASS](../event-table.md#back-end-pass)イベントまたは[FRONT_END_PASS](../event-table.md#front-end-pass)イベント。
+*event*\
+[BACK_END_PASS](../event-table.md#back-end-pass) または [FRONT_END_PASS](../event-table.md#front-end-pass) イベント。
 
-## <a name="inputsourcepath"></a><a name="input-source-path"></a>ソースパス
+## <a name="inputsourcepath"></a><a name="input-source-path"></a> InputSourcePath
 
 ```cpp
 const wchar_t* InputSourcePath() const;
@@ -89,9 +89,9 @@ const wchar_t* InputSourcePath() const;
 
 ### <a name="return-value"></a>戻り値
 
-このコンパイラ パスによって処理される入力ソース ファイルへの絶対パス。
+このコンパイラ パスによって処理された入力ソース ファイルへの絶対パス。
 
-## <a name="outputobjectpath"></a><a name="output-object-path"></a>オブジェクトパスを出力します。
+## <a name="outputobjectpath"></a><a name="output-object-path"></a> OutputObjectPath
 
 ```cpp
 const wchar_t* OutputObjectPath() const;
@@ -99,9 +99,9 @@ const wchar_t* OutputObjectPath() const;
 
 ### <a name="return-value"></a>戻り値
 
-このコンパイラ パスによって生成される出力オブジェクト ファイルへの絶対パス。
+このコンパイラ パスによって生成された出力オブジェクト ファイルへの絶対パス。
 
-## <a name="passcode"></a><a name="pass-code"></a>パスコード
+## <a name="passcode"></a><a name="pass-code"></a> PassCode
 
 ```cpp
 PassCode PassCode() const;
@@ -109,6 +109,6 @@ PassCode PassCode() const;
 
 ### <a name="return-value"></a>戻り値
 
-このコンパイラ パスオブジェクトによって表されるコンパイラ パスを示すコード。
+この CompilerPass オブジェクトによって表されるコンパイラ パスを示すコード。
 
 ::: moniker-end
