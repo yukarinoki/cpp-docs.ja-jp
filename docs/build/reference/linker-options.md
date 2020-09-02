@@ -1,7 +1,7 @@
 ---
 title: MSVC リンカーオプション
 description: Microsoft LINK リンカーでサポートされているオプションの一覧。
-ms.date: 02/09/2020
+ms.date: 09/01/2020
 f1_keywords:
 - link
 helpviewer_keywords:
@@ -10,12 +10,12 @@ helpviewer_keywords:
 - libraries [C++], linking to COFF
 - LINK tool [C++], linker options
 ms.assetid: c1d51b8a-bd23-416d-81e4-900e02b2c129
-ms.openlocfilehash: 12710aff1cf833e277e48ab2f13abc702c7d6c14
-ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
+ms.openlocfilehash: 0d85361b8d4b5896d9ed7beae0d310fe28dc98e9
+ms.sourcegitcommit: e58918c45316d799c1952ca7797a85adbcd0c472
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77257547"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89281797"
 ---
 # <a name="linker-options"></a>リンカー オプション
 
@@ -23,15 +23,15 @@ LINK.exe は、COFF (Common Object File Format) オブジェクト ファイル�
 
 LINK.exe のオプションの一覧を次の表に示します。 LINK の詳細については、下記を参照してください。
 
-- [Compiler-Controlled LINK Options](compiler-controlled-link-options.md)
+- [コンパイラで制御されるリンクオプション](compiler-controlled-link-options.md)
 
-- [LINK の入力ファイル](link-input-files.md)
+- [リンク入力ファイル](link-input-files.md)
 
-- [LINK 出力](link-output.md)
+- [リンクの出力](link-output.md)
 
 - [予約語](reserved-words.md)
 
-コマンドラインでは、リンカーオプションの大文字と小文字は区別されません。たとえば、`/base` と `/BASE` は同じことを意味します。 コマンド ラインまたは Visual Studio で各オプションを指定する方法の詳細については、そのオプションのドキュメントを参照してください。
+コマンドラインでは、リンカーオプションの大文字と小文字は区別されません。たとえば、とは同じことを `/base` `/BASE` 意味します。 コマンド ラインまたは Visual Studio で各オプションを指定する方法の詳細については、そのオプションのドキュメントを参照してください。
 
 [comment](../../preprocessor/comment-c-cpp.md) プラグマを使用して、一部のリンカー オプションを指定できます。
 
@@ -49,6 +49,7 @@ LINK.exe のオプションの一覧を次の表に示します。 LINK の詳�
 |[/ASSEMBLYMODULE](assemblymodule-add-a-msil-module-to-the-assembly.md)|MSIL (Microsoft Intermediate Language) モジュールをアセンブリにインポートする必要があることを指定します。|
 |[/ASSEMBLYRESOURCE](assemblyresource-embed-a-managed-resource.md)|マネージド リソース ファイルをアセンブリに埋め込みます。|
 |[/BASE](base-base-address.md)|プログラムのベース アドレスを設定します。|
+|[/Cetcompat](cetcompat.md)|バイナリをバイナリシャドウスタック互換としてマークします。|
 |[/CGTHREADS](cgthreads-compiler-threads.md)|リンク時のコード生成を指定するときに、最適化およびコード生成に使用する cl.exe スレッド数を設定します。|
 |[/CLRIMAGETYPE](clrimagetype-specify-type-of-clr-image.md)|CLR イメージの種類 (IJW、純粋、または安全) を設定します。|
 |[/CLRSUPPORTLASTERROR](clrsupportlasterror-preserve-last-error-code-for-pinvoke-calls.md)|P/Invoke 機構を通じて呼び出された関数の最終エラー コードを保持します。|
@@ -66,19 +67,19 @@ LINK.exe のオプションの一覧を次の表に示します。 LINK の詳�
 |[/DRIVER](driver-windows-nt-kernel-mode-driver.md)|カーネル モード ドライバーを作成します。|
 |[/DYNAMICBASE](dynamicbase-use-address-space-layout-randomization.md)|アドレス空間レイアウトのランダム化 (ASLR) 機能を使用して、読み込み時に再配置される実行可能イメージを生成するかどうかを指定します。|
 |[/ENTRY](entry-entry-point-symbol.md)|開始アドレスを設定します。|
-|[/ERRORREPORT](errorreport-report-internal-linker-errors.md)| 非推奨。 エラー報告は、 [Windows エラー報告 (WER)](/windows/win32/wer/windows-error-reporting)設定によって制御されます。 |
+|[/ERRORREPORT](errorreport-report-internal-linker-errors.md)| 非推奨になりました。 エラー報告は、 [Windows エラー報告 (WER)](/windows/win32/wer/windows-error-reporting) 設定によって制御されます。 |
 |[/EXPORT](export-exports-a-function.md)|関数をエクスポートします。|
 |[/FILEALIGN](filealign.md)|出力ファイル内のセクションを指定した値の倍数に配置します。|
 |[/FIXED](fixed-fixed-base-address.md)|指定のベース アドレスだけに読み込まれるプログラムを作成します。|
 |[/FORCE](force-force-file-output.md)|未解決のシンボルまたは複数定義のシンボルがある場合でも、リンクを強制的に終了します。|
 |[/FUNCTIONPADMIN](functionpadmin-create-hotpatchable-image.md)|ホット パッチ可能なイメージを作成します。|
-|[/GENPROFILE、/FASTGENPROFILE](genprofile-fastgenprofile-generate-profiling-instrumented-build.md)|これらのオプションは、ガイド付き最適化のプロファイル (PGO) をサポートするために、リンカーによる *`.pgd`* ファイルの生成を指定します。 /GENPROFILE と /FASTGENPROFILE は、それぞれに異なる既定のパラメーターを使用します。|
+|[/GENPROFILE、/FASTGENPROFILE](genprofile-fastgenprofile-generate-profiling-instrumented-build.md)|これらのオプションは *`.pgd`* 、ガイド付き最適化のプロファイル (PGO) をサポートするために、リンカーによるファイルの生成を指定します。 /GENPROFILE と /FASTGENPROFILE は、それぞれに異なる既定のパラメーターを使用します。|
 |[/GUARD](guard-enable-guard-checks.md)|制御フロー ガードによる保護を有効にします。|
 |[/HEAP](heap-set-heap-size.md)|ヒープ サイズをバイト単位で設定します。|
 |[/HIGHENTROPYVA](highentropyva-support-64-bit-aslr.md)|高エントロピの 64 ビット ASLR (Address Space Layout Randomization) のサポートを指定します。|
-|[/IDLOUT](idlout-name-midl-output-files.md)|*`.idl`* ファイルの名前とその他の MIDL 出力ファイルを指定します。|
+|[/IDLOUT](idlout-name-midl-output-files.md)|ファイルの名前 *`.idl`* とその他の MIDL 出力ファイルを指定します。|
 |[/IGNORE](ignore-ignore-specific-warnings.md)|指定されたリンカー警告の出力を抑制します。|
-|[/IGNOREIDL](ignoreidl-don-t-process-attributes-into-midl.md)|*`.idl`* ファイルに属性情報を処理しないようにします。|
+|[/IGNOREIDL](ignoreidl-don-t-process-attributes-into-midl.md)|ファイルに属性情報を処理しないようにし *`.idl`* ます。|
 |[/IMPLIB](implib-name-import-library.md)|既定のインポート ライブラリ名をオーバーライドします。|
 |[/INCLUDE](include-force-symbol-references.md)|シンボルを明示的に参照します。|
 |[/INCREMENTAL](incremental-link-incrementally.md)|インクリメンタル リンクの処理方法を制御します。|
@@ -92,7 +93,7 @@ LINK.exe のオプションの一覧を次の表に示します。 LINK の詳�
 |[/LTCG](ltcg-link-time-code-generation.md)|リンク時のコード生成を指定します。|
 |[/MACHINE](machine-specify-target-platform.md)|ターゲット プラットフォームを指定します。|
 |[/MANIFEST](manifest-create-side-by-side-assembly-manifest.md)|side-by-side マニフェスト ファイルを作成し、バイナリに埋め込むことができるようにします。|
-|[/MANIFESTDEPENDENCY](manifestdependency-specify-manifest-dependencies.md)|マニフェストファイルの \<dependentAssembly > セクションを指定します。|
+|[/MANIFESTDEPENDENCY](manifestdependency-specify-manifest-dependencies.md)|\<dependentAssembly>マニフェストファイル内のセクションを指定します。|
 |[/MANIFESTFILE](manifestfile-name-manifest-file.md)|マニフェスト ファイルの既定の名前を変更します。|
 |[/MANIFESTINPUT](manifestinput-specify-manifest-input.md)|リンカーが処理を行い、バイナリに埋め込むための、マニフェスト入力ファイルを指定します。 このオプションを複数回使用して、複数のマニフェストの入力ファイルを指定できます。|
 |[/MANIFESTUAC](manifestuac-embeds-uac-information-in-manifest.md)|ユーザー アカウント制御 (UAC) 情報をプログラム マニフェストに組み込むかどうかを指定します。|
@@ -112,19 +113,19 @@ LINK.exe のオプションの一覧を次の表に示します。 LINK の詳�
 |[/PDB](pdb-use-program-database.md)|PDB ファイルを作成します。|
 |[/PDBALTPATH](pdbaltpath-use-alternate-pdb-path.md)|別の場所を使用して PDB ファイルを保存します。|
 |[/PDBSTRIPPED](pdbstripped-strip-private-symbols.md)|プライベートシンボルを持たない PDB ファイルを作成します。|
-|[/PGD](pgd-specify-database-for-profile-guided-optimizations.md)|ガイド付き最適化のプロファイル用の *`.pgd`* ファイルを指定します。|
-|[/POGOSAFEMODE](pogosafemode-linker-option.md)|**廃止**スレッドセーフな PGO によってインストルメント化されたビルドを作成します。|
+|[/PGD](pgd-specify-database-for-profile-guided-optimizations.md)|*`.pgd`* ガイド付き最適化のプロファイル用のファイルを指定します。|
+|[/POGOSAFEMODE](pogosafemode-linker-option.md)|**廃止** スレッドセーフな PGO によってインストルメント化されたビルドを作成します。|
 |[/PROFILE](profile-performance-tools-profiler.md)|パフォーマンス ツール プロファイラーで使用できる出力ファイルを作成します。|
-|[/RELEASE](release-set-the-checksum.md)|*`.exe`* ヘッダーにチェックサムを設定します。|
+|[/RELEASE](release-set-the-checksum.md)|ヘッダーにチェックサムを設定し *`.exe`* ます。|
 |[/SAFESEH](safeseh-image-has-safe-exception-handlers.md)|安全な例外ハンドラーのテーブルがイメージに含まれるように指定します。|
 |[/SECTION](section-specify-section-attributes.md)|セクションの属性をオーバーライドします。|
 |[/SOURCELINK](sourcelink.md)|PDB に追加する SourceLink ファイルを指定します。|
 |[/STACK](stack-stack-allocations.md)|スタック サイズをバイト単位で設定します。|
 |[/STUB](stub-ms-dos-stub-file-name.md)|MS-DOS スタブ プログラムを Win32 プログラムにアタッチします。|
-|[/SUBSYSTEM](subsystem-specify-subsystem.md)|*`.exe`* ファイルの実行方法をオペレーティングシステムに指示します。|
+|[/SUBSYSTEM](subsystem-specify-subsystem.md)|ファイルの実行方法をオペレーティングシステムに指示し *`.exe`* ます。|
 |[/SWAPRUN](swaprun-load-linker-output-to-swap-file.md)|リンカー出力をスワップファイルにコピーしてから実行するように、オペレーティングシステムに指示します。|
 |[/TLBID](tlbid-specify-resource-id-for-typelib.md)|リンカーによって生成されたタイプ ライブラリのリソース ID を指定します。|
-|[/TLBOUT](tlbout-name-dot-tlb-file.md)|*`.tlb`* ファイルの名前とその他の MIDL 出力ファイルを指定します。|
+|[/TLBOUT](tlbout-name-dot-tlb-file.md)|ファイルの名前 *`.tlb`* とその他の MIDL 出力ファイルを指定します。|
 |[/TSAWARE](tsaware-create-terminal-server-aware-application.md)|ターミナル サーバーでの実行専用のアプリケーションを作成します。|
 |[/USEPROFILE](useprofile.md)|ガイド付き最適化のプロファイルのトレーニングデータを使用して、最適化されたイメージを作成します。|
 |[/VERBOSE](verbose-print-progress-messages.md)|リンカーの進行状況メッセージを出力します。|
@@ -137,9 +138,9 @@ LINK.exe のオプションの一覧を次の表に示します。 LINK の詳�
 |[/WINMDDELAYSIGN](winmddelaysign-partially-sign-a-winmd.md)|winmd ファイルに公開キーを設定して、Windows のランタイム メタデータ (.winmd) ファイルに部分的に署名します。|
 |[/WX](wx-treat-linker-warnings-as-errors.md)|リンカー警告をエラーとして扱います。|
 
-<sup>16.1</sup>このオプションは、Visual Studio 2019 バージョン16.1 以降で使用できます。
+<sup>16.1</sup> このオプションは、Visual Studio 2019 バージョン16.1 以降で使用できます。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[C/C++ ビルドのリファレンス](c-cpp-building-reference.md)\
+[C/c + + ビルドのリファレンス](c-cpp-building-reference.md)\
 [MSVC リンカーのリファレンス](linking.md)

@@ -1,17 +1,17 @@
 ---
 title: /Cetcompat (中央のシャドウスタックと互換性あり)
-ms.date: 06/30/2020
+ms.date: 09/01/2020
 f1_keywords:
 - /CETCOMPAT
 helpviewer_keywords:
 - /CETCOMPAT linker option
 - /CETCOMPAT
-ms.openlocfilehash: 35078ac9e6177e34562db14b30f4ef8f987d98bc
-ms.sourcegitcommit: 83ea5df40917885e261089b103d5de3660314104
+ms.openlocfilehash: 7de7c2007c29769cb3ac8f89d07de8b00bf44c26
+ms.sourcegitcommit: e58918c45316d799c1952ca7797a85adbcd0c472
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85813564"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89281829"
 ---
 # <a name="cetcompat-cet-shadow-stack-compatible"></a>/Cetcompat (中央のシャドウスタックと互換性あり)
 
@@ -27,7 +27,7 @@ ms.locfileid: "85813564"
 **`NO`**<br/>
 実行可能ファイルが、中央のシャドウスタックと互換性があるとマークされないように指定します。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 制御フロー強制テクノロジ (中央値) シャドウスタックは、リターン指向プログラミング (ROP) ベースのマルウェア攻撃に対して防御する機能を提供するコンピュータープロセッサ機能です。 詳細については、「 [Intel Control Flow 強制テクノロジプレビュー](https://software.intel.com/sites/default/files/managed/4d/2a/control-flow-enforcement-technology-preview.pdf)」を参照してください。
 
@@ -43,9 +43,9 @@ Visual Studio 2019 バージョン16.7 以降:
 
 1. [**構成プロパティ**]  >  **リンカー**の  >  **[詳細設定**] プロパティページを選択します。
 
-1. [中央値の**シャドウスタック互換**] プロパティを選択します。
+1. [中央値の **シャドウスタック互換** ] プロパティを選択します。
 
-1. ドロップダウンコントロールで、 **`Yes (/CETCOMPAT)`** EH 継続メタデータを有効にするか、無効にするかを選択し **`No (/CETCOMPAT:NO)`** ます。
+1. ドロップダウンコントロールで、 **`Yes (/CETCOMPAT)`** バイナリをバイナリシャドウスタック互換としてマークするか、互換性なしとしてマークするかを選択し **`No (/CETCOMPAT:NO)`** ます。
 
 以前のバージョンの Visual Studio 2019 では、次のようになります。
 
@@ -53,7 +53,7 @@ Visual Studio 2019 バージョン16.7 以降:
 
 1. [**構成プロパティ**] [  >  **リンカー**  >  **コマンドライン**] プロパティページを選択します。
 
-1. [**追加オプション]** の [編集コントロール] で、[追加] を選択し *`/CETCOMPAT`* て EH 継続メタデータを有効にするか、 *`/CETCOMPAT:NO`* 明示的に無効にします。
+1. [ **追加オプション]** の [コントロールの追加] で、バイナリを " *`/CETCOMPAT`* バイナリシャドウスタック互換" としてマークするか、 *`/CETCOMPAT:NO`* 互換性なしとして明示的にマークするには、を追加します。
 
 ### <a name="to-set-this-linker-option-programmatically"></a>このリンカーをコードから設定するには
 
@@ -61,4 +61,4 @@ Visual Studio 2019 バージョン16.7 以降:
 
 ## <a name="see-also"></a>関連項目
 
-[リンカーのオプション](linker-options.md)
+[リンカーオプション](linker-options.md)
