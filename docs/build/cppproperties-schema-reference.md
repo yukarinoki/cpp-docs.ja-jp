@@ -18,7 +18,7 @@ CMake を使用していない "フォルダーを開く" プロジェクトで�
 
 構成には、次のどのプロパティでも含めることができます。
 
-|名前|説明|
+|Name|説明|
 |-|-|
 |`inheritEnvironments`| この構成に適用する環境を指定します。|
 |`name`|C++ の構成ドロップダウンに表示される構成の名前|
@@ -34,7 +34,7 @@ CMake を使用していない "フォルダーを開く" プロジェクトで�
 
 コード エディターでは、入力を開始すると、使用可能なオプションが次のように表示されます。
 
-!["フォルダーを開く" の IntelliSense](media/open-folder-intellisense-mode.png ""フォルダーを開く" の IntelliSense")
+!["フォルダーを開く" の IntelliSense](media/open-folder-intellisense-mode.png "フォルダーを開く の IntelliSense")
 
 サポートされる値は次のとおりです。
 
