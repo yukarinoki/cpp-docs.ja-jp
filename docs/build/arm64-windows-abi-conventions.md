@@ -1,12 +1,12 @@
 ---
 title: ARM64 ABI 規則の概要
 ms.date: 03/27/2019
-ms.openlocfilehash: 07d58bbd64795235ad63a7b26b6f18fcffdcd1d2
-ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
+ms.openlocfilehash: bfe55513ffd24175dbe62efc6d5afcfd82f71e4c
+ms.sourcegitcommit: 7f378314c5692d897ead10b7f6c96d4cb2abd266
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74303267"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88972674"
 ---
 # <a name="overview-of-arm64-abi-conventions"></a>ARM64 ABI 規則の概要
 
@@ -205,13 +205,13 @@ AArch64 システムでは、IEEE 浮動小数点例外のサポートはオプ�
 
 HFA と HVA の値は、s0-s3、d0-d3、または v0-v3 に適宜返されます。
 
-値で返される型は、特定のプロパティがあるかどうかによって異なる方法で処理されます。 型に次のプロパティがすべて含まれる場合:
+値で返される型は、特定のプロパティがあるかどうか、および関数が静的でないメンバー関数であるかどうかによって、異なる方法で処理されます。 型に次のプロパティがすべて含まれる場合:
 
 - C++14 標準定義で*集約*される。つまり、ユーザー指定のコンストラクターがなく、プライベートまたは保護された非静的データ メンバーを持たず、基底クラスや仮想関数もありません。
 - トリビアルなコピー代入演算子がある。
 - トリビアルなデストラクターがある。
 
-次の戻り値のスタイルが使用されます。
+この場合は、次の戻り値のスタイルを使用して、非メンバー関数または静的メンバー関数によって返されます。
 
 - 8 バイト以下の型は x0 で返されます。
 - 16 バイト以下の型は x0 と x1 で返され、x0 には下位 8 バイトが含まれます。

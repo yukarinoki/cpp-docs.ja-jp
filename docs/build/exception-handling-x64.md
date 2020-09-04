@@ -1,16 +1,17 @@
 ---
 title: x64 での例外処理
+description: x64 での Microsoft C++ 例外処理規則の概要です。
 ms.date: 10/14/2019
 helpviewer_keywords:
 - C++ exception handling, x64
 - exception handling, x64
 ms.assetid: 41fecd2d-3717-4643-b21c-65dcd2f18c93
-ms.openlocfilehash: 3d973354f94ca8c9f2e0901e60f2a8009ac08cd6
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 1c55ecf8755e208b2f47acdfda185123ee0255e2
+ms.sourcegitcommit: efc8c32205c9d610f40597556273a64306dec15d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88835052"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88898565"
 ---
 # <a name="x64-exception-handling"></a>x64 での例外処理
 
@@ -221,7 +222,7 @@ UNWIND_INFO 構造体は、メモリ内で DWORD にアラインされている�
 
 演算情報ビットの意味は、オペコードによって異なります。 汎用 (整数) レジスタをエンコードするには、次のマッピングを使用します。
 
-|ビット|登録|
+|ビット|[登録]|
 |-|-|
 |0|RAX|
 |1|RCX|
@@ -305,7 +306,7 @@ typedef struct _DISPATCHER_CONTEXT {
 } DISPATCHER_CONTEXT, *PDISPATCHER_CONTEXT;
 ```
 
-**ControlPc** は、この関数内の RIP の値です。 この値は、例外アドレスか、制御が確立元の関数から離れたアドレスです。 RIP は、制御がこの関数内の保護されたコンストラクト内にあるかどうかを判断するために使用されます。たとえば、`__try`/ **`__except`** または `__try`/ **`__finally`** の `__try` ブロックなどです。
+**ControlPc** は、この関数内の RIP の値です。 この値は、例外アドレスか、制御が確立元の関数から離れたアドレスです。 RIP は、制御がこの関数内の保護されたコンストラクト内にあるかどうかを判断するために使用されます。たとえば、 **`__try`** / **`__except`** または **`__try`** / **`__finally`** の **`__try`** ブロックなどです。
 
 **ImageBase** は、この関数を含むモジュールのイメージ ベース (読み込みアドレス) であり、関数エントリで使用される 32 ビット オフセットと、相対アドレスを記録するアンワインド情報に追加されます。
 

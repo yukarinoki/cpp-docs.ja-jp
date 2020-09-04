@@ -1,67 +1,71 @@
 ---
-title: ステートメントの概要
-ms.date: 11/04/2016
+title: C ステートメントの概要
+description: Microsoft C 実装におけるステートメント文法の概要です。
+ms.date: 08/24/2020
 ms.assetid: ce45d2fe-ec0e-459f-afb1-80ab6a7f0239
-ms.openlocfilehash: 122c79b53a8af8a384097dec51a14746a090b1cf
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 448aa7ccb8c78e20ef09f47f4a3c77f447c76f60
+ms.sourcegitcommit: efc8c32205c9d610f40597556273a64306dec15d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87220796"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88898397"
 ---
-# <a name="summary-of-statements"></a>ステートメントの概要
+# <a name="summary-of-c-statements"></a>C ステートメントの概要
 
-*statement*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*labeled-statement*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*compound-statement*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*expression-statement*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*selection-statement*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*iteration-statement*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*jump-statement*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*try-except-statement* /\* Microsoft 固有の仕様 \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*try-finally-statement* /\* Microsoft 固有の仕様 \*/
+*`statement`*:<br/>
+&emsp;*`labeled-statement`*<br/>
+&emsp;*`compound-statement`*<br/>
+&emsp;*`expression-statement`*<br/>
+&emsp;*`selection-statement`*<br/>
+&emsp;*`iteration-statement`*<br/>
+&emsp;*`jump-statement`*<br/>
+&emsp; *`try-except-statement`*  /\* Microsoft 固有の仕様 \*/<br/>
+&emsp; *`try-finally-statement`*  /\* Microsoft 固有の仕様 \*/
 
-*jump-statement*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **`goto`**  *identifier*  **;**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**continue ;**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**break ;**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **`return`** *expression*<sub>opt</sub> **;**
+*`jump-statement`*:<br/>
+&emsp;**`goto`** *`identifier`* **`;`**<br/>
+&emsp;**`continue ;`**<br/>
+&emsp;**`break ;`**<br/>
+&emsp; **`return`** *`expression`* <sub>opt</sub> **`;`**<br/>
+&emsp; **`__leave ;`**  /\* Microsoft 固有の仕様<sup>1</sup> \*/
 
-*compound-statement*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **{** *declaration-list*<sub>opt</sub> *statement-list*<sub>opt</sub> **}**
+*`compound-statement`*:<br/>
+&emsp; **`{`** *`declaration-list`* <sub>opt</sub> *`statement-list`* <sub>opt</sub> **`}`**
 
-*declaration-list*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*declaration*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*declaration-list* *declaration*
+*`declaration-list`*:<br/>
+&emsp;*`declaration`*<br/>
+&emsp;*`declaration-list`* *`declaration`*
 
-*statement-list*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*statement*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*statement-list* *statement*
+*`statement-list`*:<br/>
+&emsp;*`statement`*<br/>
+&emsp;*`statement-list`* *`statement`*
 
-*expression-statement*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*expression*<sub>opt</sub> **;**
+*`expression-statement`*:<br/>
+&emsp; *`expression`* <sub>opt</sub> **`;`**
 
-*iteration-statement*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**while (**  *expression*  **)**  *statement*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **`do`**  *statement*  **while (**  *expression*  **) ;**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**for (**  *expression*<sub>opt</sub> **;** *expression*<sub>opt</sub> **;** *expression*<sub>opt</sub> **)** *statement*
+*`iteration-statement`*:<br/>
+&emsp;**`while (`** *`expression`* **`)`** *`statement`*<br/>
+&emsp;**`do`** *`statement`* **`while (`** *`expression`* **`) ;`**<br/>
+&emsp; **`for (`** *`expression`* <sub>opt</sub> **`;`** *`expression`* <sub>opt</sub> **`;`** *`expression`* <sub>opt</sub> **`)`** *`statement`*
 
-*selection-statement*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**if (**  *expression*  **)**  *statement*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**if (**  *expression*  **)**  *statement*  **`else`**  *statement*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**switch (**  *expression*  **)**  *statement*
+*`selection-statement`*:<br/>
+&emsp;**`if (`** *`expression`* **`)`** *`statement`*<br/>
+&emsp;**`if (`** *`expression`* **`)`** *`statement`* **`else`** *`statement`*<br/>
+&emsp;**`switch (`** *`expression`* **`)`** *`statement`*
 
-*labeled-statement*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*identifier*  **:**  *statement*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **`case`**  *constant-expression*  **:**  *statement*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**default :**  *statement*
+*`labeled-statement`*:<br/>
+&emsp;*`identifier`* **`:`** *`statement`*<br/>
+&emsp;**`case`** *`constant-expression`* **`:`** *`statement`*<br/>
+&emsp;**`default :`** *`statement`*
 
-*try-except-statement*:   /\* Microsoft 固有の仕様 \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **__try**  *compound-statement* **__except (**  *expression*  **)**  *compound-statement*
+*`try-except-statement`* : /\* Microsoft 固有の仕様 \*/<br/>
+&emsp;**`__try`** *`compound-statement`* **`__except (`** *`expression`* **`)`** *`compound-statement`*
 
-*try-finally-statement*:   /\* Microsoft 固有の仕様 \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **__try**  *compound-statement* **`__finally`**  *compound-statement*
+*`try-finally-statement`* : /\* Microsoft 固有の仕様 \*/<br/>
+&emsp;**`__try`** *`compound-statement`* **`__finally`** *`compound-statement`*
+
+1 **`__leave`** キーワードは、 *`try-except-statement`* または *`try-finally-statement`* の **`__try`** ブロック内でのみ有効です。
 
 ## <a name="see-also"></a>関連項目
 
-[句の構造文法](../c-language/phrase-structure-grammar.md)
+[語句構造の文法](../c-language/phrase-structure-grammar.md)
