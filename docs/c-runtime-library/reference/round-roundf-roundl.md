@@ -1,6 +1,7 @@
 ---
 title: round、roundf、roundl
-ms.date: 4/2/2020
+description: Round、roundf、および roundl の API リファレンス浮動小数点値を最も近い整数に丸める。
+ms.date: 9/1/2020
 api_name:
 - round
 - roundl
@@ -34,12 +35,12 @@ helpviewer_keywords:
 - round function
 - roundf function
 ms.assetid: 6be90877-193c-4b80-a32b-c3eca33f9c6f
-ms.openlocfilehash: ed7f8457373466e442d7998cee0a14389de4321e
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 0a7e47dd3a528e45abc8247a64bf5c4d81164e95
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87226178"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89556646"
 ---
 # <a name="round-roundf-roundl"></a>round、roundf、roundl
 
@@ -63,11 +64,12 @@ float roundf(
 long double roundl(
    long double x
 );
+#define round(X) // Requires C11 or higher
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*x*<br/>
+*閉じる*\
 丸める浮動小数点値。
 
 ## <a name="return-value"></a>戻り値
@@ -80,7 +82,9 @@ long double roundl(
 
 ## <a name="remarks"></a>解説
 
-C++ ではオーバーロードが可能であるため、との値を受け取って返す**ラウンド**のオーバーロードを呼び出すことができ **`float`** **`long double`** ます。 C プログラムでは、 **round**は常にを受け取り、を返し **`double`** ます。
+C++ ではオーバーロードが可能であるため、との値を受け取って返す **ラウンド** のオーバーロードを呼び出すことができ **`float`** **`long double`** ます。 C プログラムでは、この関数を呼び出すためにマクロを使用している場合を除き、 \<tgmath.h> **round** は常にを受け取り、を返し **`double`** ます。
+
+マクロを使用する場合 \<tgmath.h> `round()` 、引数の型によって、どのバージョンの関数が選択されているかが決まります。 詳細については [、「型汎用の算術演算](../../c-runtime-library/tgmath.md) 」を参照してください。
 
 既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
@@ -89,6 +93,7 @@ C++ ではオーバーロードが可能であるため、との値を受け取�
 |ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**round**、 **roundf**、 **roundl**|\<math.h>|
+|**round** マクロ | \<tgmath.h> ||
 
 互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 

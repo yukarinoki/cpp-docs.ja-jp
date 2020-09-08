@@ -1,6 +1,7 @@
 ---
 title: log2、log2f、log2l
-ms.date: 4/2/2020
+description: Log2、log2f、および log2l の API リファレンス指定した値の2進 (2 進数) の対数を決定します。
+ms.date: 9/1/2020
 api_name:
 - log2
 - log2l
@@ -26,12 +27,12 @@ api_type:
 topic_type:
 - apiref
 ms.assetid: 94d11b38-70b7-4d3a-94ac-523153c92b2e
-ms.openlocfilehash: 58da7790e6fbce915c16a02a1b0d972a6fe1049e
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 37319560891dbd64030495750aaf347d9dedd7e7
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82911415"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89555359"
 ---
 # <a name="log2-log2f-log2l"></a>log2、log2f、log2l
 
@@ -59,11 +60,13 @@ float log2f(
 long double log2l(
    long double x
 );
+
+#define log2(X) // Requires C11 or higher
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*x*<br/>
+*閉じる*\
 2 を底とする対数を決定する値。
 
 ## <a name="return-value"></a>戻り値
@@ -74,32 +77,33 @@ long double log2l(
 
 |問題|戻り値|
 |-----------|------------|
-|*x* < 0|(NaN)|
+|*x* < 0|NaN|
 |*x* = ±0|-INFINITY|
 |*x* = 1|+0|
 |+INFINITY|+INFINITY|
-|(NaN)|(NaN)|
-|ドメイン エラー|(NaN)|
+|NaN|NaN|
+|ドメイン エラー|NaN|
 |極エラー|-HUGE_VAL、-HUGE_VALF、または -HUGE_VALL|
 
 エラーは、[_matherr](matherr.md) で指定されたとおりに報告されます。
 
 ## <a name="remarks"></a>解説
 
-X が整数の場合、この関数は基本的に、 *x*の最上位1ビットの0から始まるインデックスを返します。
+*X*が整数の場合、この関数は基本的に、 *x*の最上位1ビットの0から始まるインデックスを返します。
 
 既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 |関数|C ヘッダー|C++ ヘッダー|
 |--------------|--------------|------------------|
 |**log2**、 **log2f**、 **log2l**|\<math.h>|\<cmath>|
+|**log2** マクロ | \<tgmath.h> ||
 
 互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 
-[関数リファレンス (アルファベット順)](crt-alphabetical-function-reference.md)<br/>
+[アルファベット順の関数リファレンス](crt-alphabetical-function-reference.md)<br/>
 [exp2、exp2f、exp2l](exp2-exp2f-exp2l.md)<br/>
 [log、logf、log10、log10f](log-logf-log10-log10f.md)<br/>

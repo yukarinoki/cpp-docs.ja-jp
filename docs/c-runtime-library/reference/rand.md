@@ -1,5 +1,6 @@
 ---
 title: rand
+description: よく知られている、完全に再現可能なアルゴリズムを使用して擬似乱数を生成する rand の API リファレンス。
 ms.date: 4/2/2020
 api_name:
 - rand
@@ -31,16 +32,16 @@ helpviewer_keywords:
 - rand function
 - pseudorandom numbers
 - numbers, generating pseudorandom
-ms.openlocfilehash: 8f2a4d00310671e8ba80055e38e479e348562ac2
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 50c4f921c81ecad00abb19e6ce50158d450b170e
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82919524"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89555333"
 ---
 # <a name="rand"></a>rand
 
-よく知られている、完全に再現可能なアルゴリズムを使用して、擬似乱数を生成します。 プログラムによってセキュリティで保護されたこの関数のバージョンを利用できます。「 [rand_s](rand-s.md)」を参照してください。 **Rand**によって生成される数値は、暗号的には安全ではありません。 より暗号的に安全な乱数生成を行うには、 [rand_s](rand-s.md)または C++ 標準ライブラリで宣言された関数を[ \<ランダム>](../../standard-library/random.md)で使用します。
+よく知られている、完全に再現可能なアルゴリズムを使用して、擬似乱数を生成します。 プログラムによってセキュリティで保護されたこの関数のバージョンを利用できます。「 [rand_s](rand-s.md)」を参照してください。 **Rand**によって生成される数値は、暗号的には安全ではありません。 より暗号的に安全な乱数生成を行うには、 [rand_s](rand-s.md) またはの C++ 標準ライブラリで宣言されている関数を使用し [\<random>](../../standard-library/random.md) ます。
 
 ## <a name="syntax"></a>構文
 
@@ -56,13 +57,13 @@ int rand( void );
 
 **Rand**関数は、0 ~ **RAND_MAX** (32767) の範囲で、擬似乱数の整数を返します。 [Srand](srand.md)関数を使用して、 **rand**を呼び出す前に擬似乱数ジェネレーターをシード処理します。
 
-**Rand**関数は、既知のシーケンスを生成します。暗号関数としての使用には適していません。 より暗号的に安全な乱数生成を行うには、 [rand_s](rand-s.md)または C++ 標準ライブラリで宣言された関数を[ \<ランダム>](../../standard-library/random.md)で使用します。 **Rand**の問題と、ランダム> によって\<これらの欠点に対処する方法の詳細については、「このビデオでは、互換性が[あると考えられる rand](https://channel9.msdn.com/Events/GoingNative/2013/rand-Considered-Harmful)」を参照してください。
+**Rand**関数は、既知のシーケンスを生成します。暗号関数としての使用には適していません。 より暗号的に安全な乱数生成を行うには、 [rand_s](rand-s.md) またはの C++ 標準ライブラリで宣言されている関数を使用し [\<random>](../../standard-library/random.md) ます。 **Rand**の問題と、これらの欠点に対処する方法について \<random> は、「互換性の[ある rand と見なさ](https://channel9.msdn.com/Events/GoingNative/2013/rand-Considered-Harmful)れるこのビデオ」を参照してください。
 
 既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**rand**|\<stdlib.h>|
 
@@ -140,6 +141,6 @@ int main( void )
 
 ## <a name="see-also"></a>関連項目
 
-[浮動小数点サポート](../../c-runtime-library/floating-point-support.md)<br/>
+[浮動小数点のサポート](../../c-runtime-library/floating-point-support.md)<br/>
 [srand](srand.md)<br/>
 [rand_s](rand-s.md)<br/>

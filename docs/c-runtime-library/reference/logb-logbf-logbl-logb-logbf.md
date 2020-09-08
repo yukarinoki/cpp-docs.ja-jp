@@ -1,6 +1,7 @@
 ---
 title: logb、logbf、logbl、_logb、_logbf
-ms.date: 4/2/2020
+description: Logb、logb、logb、_logb、_logbf の API リファレンス浮動小数点引数の指数値を抽出します。
+ms.date: 9/1/2020
 api_name:
 - logb
 - _logb
@@ -47,12 +48,12 @@ helpviewer_keywords:
 - floating-point functions, mantissa and exponent
 - exponents and mantissas
 ms.assetid: 780c4daa-6fe6-4fbc-9412-4c1ba1a1766f
-ms.openlocfilehash: d923fe3a8c23c1c5e983d8766835af2c266b17d2
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 1131fda94e4748d2fb2f2197f68966aaacc11d05
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87218573"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89556215"
 ---
 # <a name="logb-logbf-logbl-_logb-_logbf"></a>logb、logbf、logbl、_logb、_logbf
 
@@ -82,22 +83,25 @@ double _logb(
 float _logbf(
    float x
 );
+#define logb(X) // Requires C11 or higher
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*x*<br/>
+*閉じる*\
 浮動小数点値。
 
 ## <a name="return-value"></a>戻り値
 
-**logb**は、浮動小数点値として表される符号付き整数として、バイアスをかける*x*の指数値を返します。
+**logb** は、浮動小数点値として表される符号付き整数として、バイアスをかける *x* の指数値を返します。
 
 ## <a name="remarks"></a>解説
 
-**Logb**関数は、浮動小数点引数*x*の指数値を抽出します。ただし、 *x*は無限範囲で表されます。 引数*x*が非正規化されている場合は、正規化されているかのように扱われます。
+**Logb**関数は、浮動小数点引数*x*の指数値を抽出します。ただし、 *x*は無限範囲で表されます。 引数 *x* が非正規化されている場合は、正規化されているかのように扱われます。
 
-C++ ではオーバーロードが可能であるため、またはの値を受け取って返す**logb**のオーバーロードを呼び出すことができ **`float`** **`long double`** ます。 C プログラムでは、 **logb**は常にを受け取り、を返し **`double`** ます。
+C++ ではオーバーロードが可能であるため、またはの値を受け取って返す **logb** のオーバーロードを呼び出すことができ **`float`** **`long double`** ます。 C プログラムでは、この関数を呼び出すためにマクロを使用している場合を除いて、 \<tgmath.h> **logb** は常にを受け取り、を返し **`double`** ます。
+
+マクロを使用する場合 \<tgmath.h> `logb()` 、引数の型によって、どのバージョンの関数が選択されているかが決まります。 詳細については [、「型汎用の算術演算](../../c-runtime-library/tgmath.md) 」を参照してください。
 
 |入力|SEH 例外|Matherr 例外|
 |-----------|-------------------|-----------------------|
@@ -112,6 +116,7 @@ C++ ではオーバーロードが可能であるため、またはの値を受�
 |-------------|---------------------|
 |**_logb**|\<float.h>|
 |**logb**、 **logb**、 **logb**、 **_logbf**|\<math.h>|
+|**logb** マクロ | \<tgmath.h> |
 
 互換性について詳しくは、「 [Compatibility](../../c-runtime-library/compatibility.md)」をご覧ください。
 

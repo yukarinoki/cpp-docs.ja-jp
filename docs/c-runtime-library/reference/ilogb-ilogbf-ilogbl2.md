@@ -1,6 +1,7 @@
-﻿---
+---
 title: ilogb、ilogbf、ilogbl2
-ms.date: 04/05/2018
+description: Ilogb、ilogbf、および ilogbl2 の API リファレンス指定した値のバイアスを適用しない底2の指数を表す整数を取得します。
+ms.date: 9/1/2020
 api_name:
 - ilogb
 - ilogbf
@@ -33,12 +34,12 @@ helpviewer_keywords:
 - ilogbf function
 - ilogbl function
 ms.assetid: 9ef19d57-1caa-41d5-8233-2faad3562fcb
-ms.openlocfilehash: 6feea7a242a066f669429944226f4ca6022505b6
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: b27c329cca1edb9d30bb6b9b641f94d174c9c406
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87232522"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89556373"
 ---
 # <a name="ilogb-ilogbf-ilogbl"></a>ilogb、ilogbf、ilogbl
 
@@ -66,16 +67,18 @@ int ilogbf(
 int ilogbl(
    long double x
 );
+
+#define ilogbl(X) // Requires C11 or higher
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*x*<br/>
+*閉じる*\
 指定した値。
 
 ## <a name="return-value"></a>戻り値
 
-成功した場合は、 *x*の底2の指数を値として返し **`signed int`** ます。
+成功した場合は、 *x* の底2の指数を値として返し **`signed int`** ます。
 
 それ以外の場合は、で定義されている次のいずれかの値を返し \<math.h> ます。
 
@@ -88,15 +91,18 @@ int ilogbl(
 
 ## <a name="remarks"></a>解説
 
-C++ ではオーバーロードが可能であるため、型と型を受け取って返す**ilogb**のオーバーロードを呼び出すことができ **`float`** **`long double`** ます。 C プログラムでは、 **ilogb**は常にを受け取り、を返し **`double`** ます。
+C++ ではオーバーロードが可能であるため、型と型を受け取って返す **ilogb** のオーバーロードを呼び出すことができ **`float`** **`long double`** ます。 C プログラムでは、この関数を呼び出すためにマクロを使用している場合を除き、 \<tgmath.h> **ilogb** は常にを受け取り、を返し **`double`** ます。
 
-この関数の呼び出しは、同等の**logb**関数を呼び出し、戻り値をにキャストすることと似てい **`int`** ます。
+マクロを使用する場合 \<tgmath.h> `ilogb()` 、引数の型によって、どのバージョンの関数が選択されているかが決まります。 詳細については [、「型汎用の算術演算](../../c-runtime-library/tgmath.md) 」を参照してください。
+
+この関数の呼び出しは、同等の **logb** 関数を呼び出し、戻り値をにキャストすることと似てい **`int`** ます。
 
 ## <a name="requirements"></a>必要条件
 
 |ルーチンによって返される値|C ヘッダー|C++ ヘッダー|
 |-------------|--------------|------------------|
 |**ilogb**、 **ilogbf**、 **ilogbl**|\<math.h>|\<cmath>|
+|**ilogb** マクロ | \<tgmath.h> ||
 
 互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 

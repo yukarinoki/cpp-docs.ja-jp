@@ -1,6 +1,7 @@
 ---
 title: tanh、tanhf、tanhl
-ms.date: 4/2/2020
+description: Tanh、tanhf、および tanhl の API リファレンス浮動小数点値のハイパーボリックタンジェントを計算する。
+ms.date: 08/31/2020
 api_name:
 - tanh
 - tanhf
@@ -35,12 +36,12 @@ helpviewer_keywords:
 - tanhf function
 - trigonometric functions
 - hyperbolic functions
-ms.openlocfilehash: 9e280e489d5da5d66a48b72b38fe22a6943b7318
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 5fa93f56ebec5e8aa06c7317534adb12ae9e68e2
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87215115"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89556581"
 ---
 # <a name="tanh-tanhf-tanhl"></a>tanh、tanhf、tanhl
 
@@ -52,6 +53,7 @@ ms.locfileid: "87215115"
 double tanh( double x );
 float tanhf( float x );
 long double tanhl( long double x );
+#define tanh(x) // Requires C11 or higher
 ```
 
 ```cpp
@@ -61,20 +63,22 @@ long double tanh( long double x );  // C++ only
 
 ### <a name="parameters"></a>パラメーター
 
-*x*<br/>
+*閉じる*\
 角度 (ラジアン)。
 
 ## <a name="return-value"></a>戻り値
 
 **Tanh**関数は、 *x*のハイパーボリックタンジェントを返します。 エラーの戻り値はありません。
 
-|入力|SEH 例外|**Matherr**例外的|
+|入力|SEH 例外|**Matherr** 例外的|
 |-----------|-------------------|-------------------------|
 |± QNAN、IND|なし|_DOMAIN|
 
 ## <a name="remarks"></a>解説
 
-C++ ではオーバーロードが可能であるため、またはの値を受け取って返す**tanh**のオーバーロードを呼び出すことができ **`float`** **`long double`** ます。 C プログラムでは、 **tanh**は常にを受け取り、を返し **`double`** ます。
+C++ ではオーバーロードが可能であるため、またはの値を受け取って返す **tanh** のオーバーロードを呼び出すことができ **`float`** **`long double`** ます。 C プログラムでは、この関数を呼び出すためにマクロを使用している場合を除き \<tgmath.h> 、 **tanh** は常にを受け取り、を返し **`double`** ます。
+
+マクロを使用する場合 \<tgmath.h> `tanh()` 、引数の型によって、どのバージョンの関数が選択されているかが決まります。 詳細については [、「型汎用の算術演算](../../c-runtime-library/tgmath.md) 」を参照してください。
 
 既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
@@ -83,6 +87,7 @@ C++ ではオーバーロードが可能であるため、またはの値を受�
 |ルーチンによって返される値|必須ヘッダー (C)|必須ヘッダー (C)|
 |-------------|---------------------|-|
 |**tanh**、 **tanhf**、 **tanhl**|\<math.h>|\<cmath> または \<math.h>|
+|**tanh ()** マクロ | \<tgmath.h> ||
 
 互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 

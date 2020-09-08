@@ -1,6 +1,7 @@
 ---
 title: ceil、ceilf、ceill
-ms.date: 6/5/2020
+description: Calcuating の API ref は、ceil () を使用して値の切り上げを行います。
+ms.date: 9/1/2020
 api_name:
 - ceilf
 - ceil
@@ -35,12 +36,12 @@ helpviewer_keywords:
 - ceil function
 - ceilf function
 ms.assetid: f4e5acab-5c8f-4b10-9ae2-9561e6453718
-ms.openlocfilehash: 2cacd0ad9fa08e903d2ab5cff5f73611c85fab3e
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 3079f52c79d6d888923025357bb21adc782aa5cd
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87221953"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89555244"
 ---
 # <a name="ceil-ceilf-ceill"></a>ceil、ceilf、ceill
 
@@ -64,11 +65,12 @@ float ceilf(
 long double ceill(
    long double x
 );
+#define ceil(X) // Requires C11 or higher
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*x*<br/>
+*閉じる*\
 浮動小数点値。
 
 ## <a name="return-value"></a>戻り値
@@ -79,11 +81,13 @@ long double ceill(
 |-----------|-------------------|-----------------------|
 |± **QNAN**、 **IND**|なし|**_DOMAIN**|
 
-**ceil**には、ストリーミング SIMD 拡張命令 2 (SSE2) を使用する実装があります。 SSE2 実装の使い方の詳細および制約については、「[_set_SSE2_enable](set-sse2-enable.md)」を参照してください。
+**ceil** には、ストリーミング SIMD 拡張命令 2 (SSE2) を使用する実装があります。 SSE2 実装の使い方の詳細および制約については、「[_set_SSE2_enable](set-sse2-enable.md)」を参照してください。
 
 ## <a name="remarks"></a>解説
 
-C++ ではオーバーロードが可能であるため、型または型を受け取る**ceil**のオーバーロードを呼び出すことができ **`float`** **`long double`** ます。 C プログラムでは、 **ceil**は常にを受け取り、を返し **`double`** ます。
+C++ ではオーバーロードが可能であるため、型または型を受け取る **ceil** のオーバーロードを呼び出すことができ **`float`** **`long double`** ます。 C プログラムでは、この関数を呼び出すためにマクロを使用している場合を除き、 \<tgmath.h> **ceil** は常にを受け取り、を返し **`double`** ます。
+
+<tgmath.h>> マクロを使用すると `ceil()` 、引数の型によって、どのバージョンの関数が選択されているかが決まります。 詳細については [、「型汎用の算術演算](../../c-runtime-library/tgmath.md) 」を参照してください。
 
 既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
@@ -92,6 +96,7 @@ C++ ではオーバーロードが可能であるため、型または型を受�
 |ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**ceil**、 **ceilf**、 **ceil**|\<math.h>|
+|**ceil** マクロ | \<tgmath.h> ||
 
 互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 

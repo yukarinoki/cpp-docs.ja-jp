@@ -1,6 +1,7 @@
 ---
 title: frexp、frexpf、frexpl
-ms.date: 4/2/2020
+description: Frexp、frexpf、frexpf の API リファレンス浮動小数点数の仮数と指数を取得します。
+ms.date: 9/1/2020
 api_name:
 - frexp
 - _o_frexp
@@ -32,12 +33,12 @@ helpviewer_keywords:
 - frexp function
 - floating-point functions, mantissa and exponent
 ms.assetid: 9b020f2e-3967-45ec-a6a8-d467a071aa55
-ms.openlocfilehash: 34d8877d4b8372a33fb5f0f6095a7027cae50555
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: a23de4160abcfab2518125bfa0fd35a389901674
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87220705"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89555749"
 ---
 # <a name="frexp-frexpf-frexpl"></a>frexp、frexpf、frexpl
 
@@ -58,6 +59,10 @@ long double frexpl(
    long double x,
    int * expptr
 );
+#define frexpl(X, INT_PTR) // Requires C11 or higher
+```
+
+```cpp
 float frexp(
    float x,
    int * expptr
@@ -70,29 +75,32 @@ long double frexp(
 
 ### <a name="parameters"></a>パラメーター
 
-*x*<br/>
+*閉じる*\
 浮動小数点値。
 
-*すべての ptr*<br/>
+*すべての ptr*\
 格納された整数の指数へのポインター。
 
 ## <a name="return-value"></a>戻り値
 
-**frexp**は仮数を返します。 *X*が0の場合、関数は仮数と指数の両方に対して0を返します。 **値が NULL**の場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明され*ているよう*に、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、この関数は**errno**を**EINVAL**に設定し、0を返します。
+**frexp** は仮数を返します。 *X*が0の場合、関数は仮数と指数の両方に対して0を返します。 **値が NULL**の場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明され*ているよう*に、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、この関数は **errno** を **EINVAL** に設定し、0を返します。
 
 ## <a name="remarks"></a>解説
 
-**Frexp**関数は、浮動小数点値 (*x*) を仮数 (*m*) と指数 (*n*) に分割します。これは、 *m*の絶対値が0.5 以上1.0 未満で*x*  =  *m* * 2<sup>*n*</sup>よりも大きいことを示します。 整数の指数*n*は、によって示される位置に格納*されます*。
+**Frexp**関数は、浮動小数点値 (*x*) を仮数 (*m*) と指数 (*n*) に分割します。これは、 *m*の絶対値が0.5 以上1.0 未満で*x*  =  *m* * 2<sup>*n*</sup>よりも大きいことを示します。 整数の指数 *n* は、によって示される位置に格納 *されます*。
 
-C++ ではオーバーロードが可能であるため、 **frexp**のオーバーロードを呼び出すことができます。 C プログラムでは、 **frexp**は常に **`double`** とポインターを受け取り、 **`int`** を返し **`double`** ます。
+C++ ではオーバーロードが可能であるため、 **frexp**のオーバーロードを呼び出すことができます。 C プログラムでは、この関数を呼び出すためにマクロを使用している場合を除き \<tgmath.h> 、 **frexp** は常にとポインターを受け取り、 **`double`** **`int`** を返し **`double`** ます。
+
+マクロを使用する場合 \<tgmath.h> `frexp()` 、引数の型によって、どのバージョンの関数が選択されているかが決まります。 詳細については [、「型汎用の算術演算](../../c-runtime-library/tgmath.md) 」を参照してください。
 
 既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-|機能|必須ヘッダー|
+|関数|必須ヘッダー|
 |--------------|---------------------|
 |**frexp**、 **frexpf**、 **frexpf**|\<math.h>|
+|**frexp** マクロ | \<tgmath.h> |
 
 互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 

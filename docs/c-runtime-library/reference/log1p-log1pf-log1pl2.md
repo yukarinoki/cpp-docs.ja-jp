@@ -1,6 +1,7 @@
-﻿---
+---
 title: log1p、log1pf、log1pl2
-ms.date: 4/2/2020
+description: Log1p、log1pf、log1pl2 の API リファレンス1に指定された値を加算した自然対数を計算します。
+ms.date: 9/1/2020
 api_name:
 - log1p
 - log1pf
@@ -37,12 +38,12 @@ helpviewer_keywords:
 - log1pf function
 - log1pl function
 ms.assetid: a40d965d-b4f6-42f4-ba27-2395546f7c12
-ms.openlocfilehash: d599567e38d216e78720a3d6b330310095acdd11
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 8858d761428d4dad6e3fe836b82041ae92f1827a
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87218586"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89556231"
 ---
 # <a name="log1p-log1pf-log1pl"></a>log1p、log1pf、log1pl
 
@@ -54,6 +55,14 @@ ms.locfileid: "87218586"
 double log1p(
    double x
 );
+float log1pf(
+   float x
+);
+long double log1pl(
+   long double x
+);
+
+#define log1p(X) // Requires C11 or higher
 
 float log1p(
    float x
@@ -62,19 +71,11 @@ float log1p(
 long double log1p(
    long double x
 ); //C++ only
-
-float log1pf(
-   float x
-);
-
-long double log1pl(
-   long double x
-);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*x*<br/>
+*閉じる*\
 浮動小数点引数。
 
 ## <a name="return-value"></a>戻り値
@@ -100,22 +101,25 @@ long double log1pl(
 
 **log1p** `log(x + 1)` *X*が0に近い場合、log1p 関数はを使用するよりも正確な場合があります。
 
-C++ ではオーバーロードが可能であるため、型と型を受け取って返す**log1p**のオーバーロードを呼び出すことができ **`float`** **`long double`** ます。 C プログラムでは、 **log1p**は常にを受け取り、を返し **`double`** ます。
+C++ ではオーバーロードが可能であるため、型と型を受け取って返す **log1p** のオーバーロードを呼び出すことができ **`float`** **`long double`** ます。 C プログラムでは、この関数を呼び出すためにマクロを使用している場合を除き、 \<tgmath.h> **log1p** は常にを受け取り、を返し **`double`** ます。
+
+マクロを使用する場合 \<tgmath.h> `log1p()` 、引数の型によって、どのバージョンの関数が選択されているかが決まります。 詳細については [、「型汎用の算術演算](../../c-runtime-library/tgmath.md) 」を参照してください。
 
 *X*が自然数の場合、この関数は (*x* -1) の階乗の対数を返します。
 
 既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-|機能|C ヘッダー|C++ ヘッダー|
+|関数|C ヘッダー|C++ ヘッダー|
 |--------------|--------------|------------------|
 |**log1p**、 **log1pf**、 **log1pl**|\<math.h>|\<cmath>|
+|**log1p** マクロ | \<tgmath.h> ||
 
 互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 
-[アルファベット順の関数リファレンス](crt-alphabetical-function-reference.md)<br/>
-[log2、log2f、log2l](log2-log2f-log2l.md)<br/>
-[log、logf、log10、log10f](log-logf-log10-log10f.md)<br/>
+[アルファベット順の関数リファレンス](crt-alphabetical-function-reference.md)\
+[log2、log2f、log2l](log2-log2f-log2l.md)\
+[log、logf、log10、log10f](log-logf-log10-log10f.md)

@@ -1,5 +1,6 @@
 ---
 title: _getpid
+description: プロセス id を取得する _getpid の API リファレンスです。
 ms.date: 11/04/2016
 api_name:
 - _getpid
@@ -26,12 +27,12 @@ helpviewer_keywords:
 - _getpid function
 - process identification numbers
 ms.assetid: d3e13bae-9a0c-4f33-86d3-ec9df9519285
-ms.openlocfilehash: b0848e5eb01f39c009fcdc650ea551f18e23c6fb
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: fc2de8e0b6e87d04bd9ae29ce3a945c048af00e2
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70954998"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89556490"
 ---
 # <a name="_getpid"></a>_getpid
 
@@ -50,7 +51,7 @@ int _getpid( void );
 
 システムから取得したプロセス ID を返します。 エラーの戻り値はありません。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 **_Getpid**関数は、システムからプロセス ID を取得します。 プロセス ID は、呼び出し元プロセスを一意に識別します。
 
@@ -60,7 +61,7 @@ int _getpid( void );
 |-------------|---------------------|
 |**_getpid**|\<process.h>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性について詳しくは、「 [Compatibility](../../c-runtime-library/compatibility.md)」をご覧ください。
 
 ## <a name="example"></a>例
 
@@ -87,5 +88,5 @@ Process id: 3584
 
 ## <a name="see-also"></a>関連項目
 
-[プロセス制御と環境制御](../../c-runtime-library/process-and-environment-control.md)<br/>
+[プロセスと環境の制御](../../c-runtime-library/process-and-environment-control.md)<br/>
 [_mktemp、_wmktemp](mktemp-wmktemp.md)<br/>

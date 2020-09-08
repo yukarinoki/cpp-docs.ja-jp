@@ -1,6 +1,7 @@
 ---
 title: pow、powf、powl
-ms.date: 4/2/2020
+description: Pow、powf、および powl の API リファレンス計算によって指数演算が発生します。
+ms.date: 08/31/2020
 api_name:
 - powl
 - pow
@@ -39,12 +40,12 @@ helpviewer_keywords:
 - powf function
 - pow function
 ms.assetid: e75c33ed-2e59-48b1-be40-81da917324f1
-ms.openlocfilehash: 16038cbb2c572575a9424065825697eb4115e43f
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 58d23f53de8dc5323fe0818611bccb647984fd9b
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87232444"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89555762"
 ---
 # <a name="pow-powf-powl"></a>pow、powf、powl
 
@@ -56,9 +57,8 @@ ms.locfileid: "87232444"
 double pow( double x, double y );
 float powf( float x, float y );
 long double powl( long double x, long double y );
-```
+define pow(X, Y) // Requires C11 or higher 
 
-```cpp
 double pow( double x, int y );  // C++ only
 float pow( float x, float y );  // C++ only
 float pow( float x, int y );  // C++ only
@@ -68,10 +68,10 @@ long double pow( long double x, int y );  // C++ only
 
 ### <a name="parameters"></a>パラメーター
 
-*x*<br/>
+*閉じる*\
 底。
 
-*y*<br/>
+*前年*\
 指数。
 
 ## <a name="return-value"></a>戻り値
@@ -80,19 +80,21 @@ long double pow( long double x, int y );  // C++ only
 
 |x の値と y の値|pow の値を返す|
 |-----------------------|-------------------------|
-|*x* ! = 0.0 および*y* = = 0.0|1|
-|*x* = = 0.0 および*y* = = 0.0|1|
-|*x* = = 0.0 および*y* < 0|INF|
+|*x* ! = 0.0 および *y* = = 0.0|1|
+|*x* = = 0.0 および *y* = = 0.0|1|
+|*x* = = 0.0 および *y* < 0|INF|
 
 ## <a name="remarks"></a>解説
 
-**pow**は、2<sup>64</sup>を超える整数の浮動小数点値を認識しません (たとえば、1.0 e100)。
+**pow** は、2<sup>64</sup> を超える整数の浮動小数点値を認識しません (たとえば、1.0 e100)。
 
-**pow**には、ストリーミング SIMD 拡張命令 2 (SSE2) を使用する実装があります。 SSE2 実装の使い方の詳細および制約については、「[_set_SSE2_enable](set-sse2-enable.md)」を参照してください。
+**pow** には、ストリーミング SIMD 拡張命令 2 (SSE2) を使用する実装があります。 SSE2 実装の使い方の詳細および制約については、「[_set_SSE2_enable](set-sse2-enable.md)」を参照してください。
 
-C++ ではオーバーロードが可能であるため、 **pow**のさまざまなオーバーロードを呼び出すことができます。 C プログラムでは、 **pow**は常に2つの値を受け取り、 **`double`** 値を返し **`double`** ます。
+C++ ではオーバーロードが可能であるため、 **pow**のさまざまなオーバーロードを呼び出すことができます。 C プログラムでは、この関数を呼び出すためにマクロを使用している場合を除き \<tgmath.h> 、 **pow** は常に2つの値を受け取り、 **`double`** 値を返し **`double`** ます。
 
-`pow(int, int)` オーバーロードは使用できなくなりました。 このオーバーロードを使用する場合、コンパイラは[C2668](../../error-messages/compiler-errors-2/compiler-error-c2668.md)を生成することがあります。 この問題を回避するには、最初のパラメーターを **`double`** 、、 **`float`** またはにキャスト **`long double`** します。
+マクロを使用する場合 \<tgmath.h> `pow()` 、引数の型によって、どのバージョンの関数が選択されているかが決まります。 詳細については [、「型汎用の算術演算](../../c-runtime-library/tgmath.md) 」を参照してください。
+
+`pow(int, int)` オーバーロードは使用できなくなりました。 このオーバーロードを使用する場合、コンパイラは [C2668](../../error-messages/compiler-errors-2/compiler-error-c2668.md)を生成することがあります。 この問題を回避するには、最初のパラメーターを **`double`** 、、 **`float`** またはにキャスト **`long double`** します。
 
 既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
@@ -101,6 +103,7 @@ C++ ではオーバーロードが可能であるため、 **pow**のさまざ�
 |ルーチンによって返される値|必須ヘッダー (C)|必須ヘッダー (C++)|
 |-|-|-|
 |**pow**、 **powf**、 **powl**|\<math.h>|\<math.h> または \<cmath>|
+|**pow** マクロ | \<tgmath.h> ||
 
 互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 

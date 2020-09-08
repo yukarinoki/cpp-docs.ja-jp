@@ -1,5 +1,6 @@
 ---
 title: _lrotl、_lrotr
+description: '_Lrotl と _lrotr の API リファレンスビットを左 (_lrotl) または右 (_lrotr) に回転させます。 '
 ms.date: 04/04/2018
 api_name:
 - _lrotl
@@ -34,16 +35,16 @@ helpviewer_keywords:
 - _lrotl function
 - bits, rotating
 ms.assetid: d42f295b-35f9-49d2-9ee4-c66896ffe68e
-ms.openlocfilehash: ea78aeb8829a80abae345b4e9e6ac3a7bbaddf8b
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: ccd14f7aa6ba3c1278063593aecee20c6789110d
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70953031"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89555008"
 ---
 # <a name="_lrotl-_lrotr"></a>_lrotl、_lrotr
 
-ビットを左 ( **_lrotl**) または右 ( **_lrotr**) に回転させます。
+ビットを左 (**_lrotl**) または右 (**_lrotr**) に回転させます。
 
 ## <a name="syntax"></a>構文
 
@@ -64,9 +65,9 @@ unsigned long _lrotr( unsigned long value, int shift );
 
 どちらの関数も、回転後の値を返します。 エラーの戻り値はありません。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-**_Lrotl**関数と **_lrotr**関数は、*シフト*ビットごとに*値*を回転させます。 **_lrotl**は、より重要なビットに向かって値を左に回転させます。 **_lrotr**は、重要度の低いビットに向かって値を右に回転します。 どちらの関数でも、回転により *value* の一端から溢れたビットは他端に折り返されます。
+**_Lrotl**関数と **_lrotr**関数は、*シフト*ビットで*値*を回転させます。 **_lrotl** は、より重要なビットに向かって値を左に回転します。 **_lrotr** は、値を最下位のビットに向かって右に回転します。 どちらの関数でも、回転により *value* の一端から溢れたビットは他端に折り返されます。
 
 ## <a name="requirements"></a>必要条件
 
@@ -74,7 +75,7 @@ unsigned long _lrotr( unsigned long value, int shift );
 |-------------|---------------------|
 |**_lrotl**、 **_lrotr**|\<stdlib.h>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性について詳しくは、「 [Compatibility](../../c-runtime-library/compatibility.md)」をご覧ください。
 
 ## <a name="example"></a>例
 
@@ -102,5 +103,5 @@ int main( void )
 
 ## <a name="see-also"></a>関連項目
 
-[浮動小数点サポート](../../c-runtime-library/floating-point-support.md)<br/>
+[浮動小数点のサポート](../../c-runtime-library/floating-point-support.md)<br/>
 [_rotl、_rotl64、_rotr、_rotr64](rotl-rotl64-rotr-rotr64.md)<br/>

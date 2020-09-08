@@ -1,5 +1,6 @@
 ---
 title: clog、clogf、clogl
+description: 待機、clogf、clogf の API リファレンス負の実数軸に沿って分岐を切り取って、複素数の自然対数を取得します。
 ms.date: 11/04/2016
 api_name:
 - clog
@@ -33,12 +34,12 @@ helpviewer_keywords:
 - clogf function
 - clogl function
 ms.assetid: 870b9b0b-6618-46f3-bfcf-da595cbd5e18
-ms.openlocfilehash: 76ee6e4e81c275c8cbed0f74914521c0b44499bb
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 255f83a93c5c7a0c724fad143f028c2832be3173
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70942924"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89555073"
 ---
 # <a name="clog-clogf-clogl"></a>clog、clogf、clogl
 
@@ -66,7 +67,7 @@ _Lcomplex clogl(
 
 ### <a name="parameters"></a>パラメーター
 
-*z*<br/>
+*方向*\
 対数の底。
 
 ## <a name="return-value"></a>戻り値
@@ -78,26 +79,26 @@ _Lcomplex clogl(
 |z パラメーター|戻り値|
 |-----------------|------------------|
 |正|z の底 10 の対数|
-|Zero|- ∞|
+|ゼロ|- ∞|
 |負|NaN|
 |NaN|NaN|
 |+ ∞|+ ∞|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-でC++はオーバーロードが可能であるため、 **_Fcomplex**と **_Lcomplex**の値を受け取って返す、オーバー**ロードのオーバーロード**を呼び出すことができます。 C プログラムでは、**いっぱい**になると、常**に値が**取得され、返されます。
+C++ ではオーバーロードが可能であるため、 **_Fcomplex**と **_Lcomplex**の値を受け取って返す、オーバー**ロードのオーバーロード**を呼び出すことができます。 C プログラムでは、 **いっぱい** になると **_Dcomplex** 値が返されます。
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチン|C ヘッダー|C++ ヘッダー|
+|ルーチンによって返される値|C ヘッダー|C++ ヘッダー|
 |-------------|--------------|------------------|
-|**いっぱい**、 **clogf**、 **clogf**|\<complex.h>|\<ccomplex>|
+|**いっぱい**、               **clogf**、 **clogf**|\<complex.h>|\<ccomplex>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性について詳しくは、「 [Compatibility](../../c-runtime-library/compatibility.md)」をご覧ください。
 
 ## <a name="see-also"></a>関連項目
 
-[関数リファレンス (アルファベット順)](crt-alphabetical-function-reference.md)<br/>
+[アルファベット順の関数リファレンス](crt-alphabetical-function-reference.md)<br/>
 [cexp、cexpf、cexpl](cexp-cexpf-cexpl.md)<br/>
 [cpow、cpowf、cpowl](cpow-cpowf-cpowl.md)<br/>
 [clog10、clog10f、clog10l](clog10-clog10f-clog10l.md)<br/>

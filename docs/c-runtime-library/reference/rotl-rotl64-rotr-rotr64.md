@@ -1,5 +1,6 @@
 ---
 title: _rotl、_rotl64、_rotr、_rotr64
+description: _Rotl、_rotl64、_rotr、および _rotr64 の API リファレンスビットを左 (_rotl) または右 (_rotr) に回転させます。
 ms.date: 04/05/2018
 api_name:
 - _rotr64
@@ -43,16 +44,16 @@ helpviewer_keywords:
 - _rotr64 function
 - bits, rotating
 ms.assetid: cfce439b-366f-4584-8ab1-d527b13fcfc6
-ms.openlocfilehash: 0ae2df7d80778cd4c573192a13b1fd91fb358eef
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: d2fb6b2674ed7d50cff63ae45f22af63b0120597
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70949148"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89556594"
 ---
 # <a name="_rotl-_rotl64-_rotr-_rotr64"></a>_rotl、_rotl64、_rotr、_rotr64
 
-ビットを左 ( **_rotl**) または右 ( **_rotr**) に回転させます。
+ビットを左 (**_rotl**) または右 (**_rotr**) に回転させます。
 
 ## <a name="syntax"></a>構文
 
@@ -88,18 +89,18 @@ unsigned __int64 _rotr64(
 
 回転後の値。 エラーの戻り値はありません。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-**_Rotl**関数と **_rotr**関数は、符号なしの*値*を*シフト*ビットで回転させます。 **_rotl**は、値を左に回転します。 **_rotr**は、値を右に回転します。 どちらの関数でも、回転により *value* の一端から溢れたビットは他端に折り返されます。
+**_Rotl**関数と **_rotr**関数は、符号なしの*値*を*シフト*ビットで回転させます。 **_rotl** 値を左に回転します。 **_rotr** 値を右に回転します。 どちらの関数でも、回転により *value* の一端から溢れたビットは他端に折り返されます。
 
 ## <a name="requirements"></a>必要条件
 
 |ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**_rotl**、 **_rotl64**|\<stdlib.h>|
-|**_rotr**、 **rotr64**|\<stdlib.h>|
+|**_rotr**、 **_rotr64**|\<stdlib.h>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性について詳しくは、「 [Compatibility](../../c-runtime-library/compatibility.md)」をご覧ください。
 
 ## <a name="libraries"></a>ライブラリ
 
@@ -132,7 +133,7 @@ int main( void )
 }
 ```
 
-### <a name="output"></a>Output
+### <a name="output"></a>出力
 
 ```Output
 0xfd93 rotated left three times is 0x7ec98
@@ -143,5 +144,5 @@ int main( void )
 
 ## <a name="see-also"></a>関連項目
 
-[浮動小数点サポート](../../c-runtime-library/floating-point-support.md)<br/>
+[浮動小数点のサポート](../../c-runtime-library/floating-point-support.md)<br/>
 [_lrotl、_lrotr](lrotl-lrotr.md)<br/>

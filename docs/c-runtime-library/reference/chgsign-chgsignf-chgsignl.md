@@ -1,5 +1,6 @@
 ---
 title: _chgsign、_chgsignf、_chgsignl
+description: _Chgsign、_chgsignf、および _chgsignl の API リファレンスこれにより、浮動小数点引数の符号が反転されます。
 ms.date: 04/05/2018
 api_name:
 - _chgsignl
@@ -32,12 +33,12 @@ helpviewer_keywords:
 - chgsign function
 - _chgsign function
 ms.assetid: a6646f8e-213d-4564-8617-f43bc66f989f
-ms.openlocfilehash: 17c8cc05efbcf2ab338d6032eded4ba13ec6197a
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 7dc934f3c2d22cc36abe5f31f7d64e0674ccdd3a
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70943123"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89555203"
 ---
 # <a name="_chgsign-_chgsignf-_chgsignl"></a>_chgsign、_chgsignf、_chgsignl
 
@@ -64,7 +65,7 @@ long double _chgsignl(
 
 ## <a name="return-value"></a>戻り値
 
-**_Chgsign**関数は、浮動小数点引数*x*と同じ値を返しますが、符号は反転されています。 エラーの戻り値はありません。
+**_Chgsign**関数は、浮動小数点引数*x*と等しいが、符号が反転された値を返します。 エラーの戻り値はありません。
 
 ## <a name="requirements"></a>必要条件
 
@@ -73,10 +74,10 @@ long double _chgsignl(
 |**_chgsign**|\<float.h>|
 |**_chgsignf**、 **_chgsignl**|\<math.h>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性について詳しくは、「 [Compatibility](../../c-runtime-library/compatibility.md)」をご覧ください。
 
 ## <a name="see-also"></a>関連項目
 
-[浮動小数点サポート](../../c-runtime-library/floating-point-support.md)<br/>
+[浮動小数点のサポート](../../c-runtime-library/floating-point-support.md)<br/>
 [fabs、fabsf、fabsl](fabs-fabsf-fabsl.md)<br/>
 [copysign、copysignf、copysignl、_copysign、_copysignf、_copysignl](copysign-copysignf-copysignl-copysign-copysignf-copysignl.md)<br/>

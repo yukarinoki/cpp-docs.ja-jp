@@ -1,6 +1,7 @@
 ---
 title: lrint、lrintf、lrintl、llrint、llrintf、llrintl
-ms.date: 4/2/2020
+description: Lrint ()、lrintf ()、lrintl ()、llrint ()、llrintf ()、および llrintl (); の API リファレンス現在の丸めモードと方向を使用して、指定した浮動小数点値を最も近い整数値に丸めます。
+ms.date: 9/1/2020
 api_name:
 - lrint
 - lrintl
@@ -52,12 +53,12 @@ helpviewer_keywords:
 - llrintf function
 - llrintl function
 ms.assetid: 28ccd5b3-5e6f-434f-997d-a21d51b8ce7f
-ms.openlocfilehash: c692b97598e2342628c3171fc22aeead9c864d60
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: f208c183400aac7a110bb6fd87398d4377fe8f06
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87216909"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89555021"
 ---
 # <a name="lrint-lrintf-lrintl-llrint-llrintf-llrintl"></a>lrint、lrintf、lrintl、llrint、llrintf、llrintl
 
@@ -105,11 +106,13 @@ long long int llrintf(
 long long int llrintl(
    long double x
 );
+
+#define lrint(X) // Requires C11 or higher
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*x*<br/>
+*閉じる*\
 丸める値。
 
 ## <a name="return-value"></a>戻り値
@@ -118,11 +121,13 @@ long long int llrintl(
 
 |問題|戻り値|
 |-----------|------------|
-|*x*が戻り値の型の範囲外です。<br /><br /> *x* = ±∞<br /><br /> *x* = NaN|**FE_INVALID**を発生させ、ゼロ (0) を返します。|
+|*x* が戻り値の型の範囲外です。<br /><br /> *x* = ±∞<br /><br /> *x* = NaN|**FE_INVALID**を発生させ、ゼロ (0) を返します。|
 
 ## <a name="remarks"></a>解説
 
-C++ ではオーバーロードが可能であるため、型と型を受け取る**lrint**と**llrint**のオーバーロードを呼び出すことができ **`float`** **`long double`** ます。 C プログラムでは、 **lrint**と**llrint**は常にを受け取り **`double`** ます。
+C++ ではオーバーロードが可能であるため、型と型を受け取る **lrint** と **llrint** のオーバーロードを呼び出すことができ **`float`** **`long double`** ます。 C プログラムでは、この関数を呼び出すためにマクロを使用している場合を除き、 \<tgmath.h> **lrint** と **llrint** は常にを受け取り **`double`** ます。
+
+マクロを使用する場合 \<tgmath.h> `llrint()` 、引数の型によって、どのバージョンの関数が選択されているかが決まります。 詳細については [、「型汎用の算術演算](../../c-runtime-library/tgmath.md) 」を参照してください。
 
 *X*が整数値に相当する浮動小数点値を表さない場合、これらの関数は**FE_INEXACT**を発生させます。
 
@@ -130,14 +135,15 @@ C++ ではオーバーロードが可能であるため、型と型を受け取�
 
 既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-|機能|C ヘッダー|C++ ヘッダー|
+|関数|C ヘッダー|C++ ヘッダー|
 |--------------|--------------|------------------|
 |**lrint**、 **lrintf**、 **lrintl**、 **llrint**、 **llrintf**、 **llrintl**|\<math.h>|\<cmath>|
+|**lrint** マクロ | \<tgmath.h> ||
 
 互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 
-[アルファベット順の関数リファレンス](crt-alphabetical-function-reference.md)<br/>
+[アルファベット順の関数リファレンス](crt-alphabetical-function-reference.md)

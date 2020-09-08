@@ -1,6 +1,7 @@
 ---
 title: lgamma、lgammaf、lgammal
-ms.date: 4/2/2020
+description: Lgamma、lgammaf、lgammal の API リファレンス指定された値のガンマ関数の絶対値の自然対数を決定します。
+ms.date: 9/1/2020
 api_name:
 - lgamma
 - lgammaf
@@ -37,12 +38,12 @@ helpviewer_keywords:
 - lgammal function
 - lgammaf function
 ms.assetid: 6e326c58-7077-481a-a329-c82ae56ae9e6
-ms.openlocfilehash: d751a3487db1d7c0135d4a1ae87cb84d374825fa
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 202250f3575f61fcef1cf29a687b8fdf36e6db33
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87218651"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89555398"
 ---
 # <a name="lgamma-lgammaf-lgammal"></a>lgamma、lgammaf、lgammal
 
@@ -54,16 +55,15 @@ ms.locfileid: "87218651"
 double lgamma( double x );
 float lgammaf( float x );
 long double lgammal( long double x );
-```
+#define lgammal(X) // Requires C11 or higher
 
-```cpp
 float lgamma( float x ); //C++ only
 long double lgamma( long double x ); //C++ only
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*x*<br/>
+*閉じる*\
 計算される値です。
 
 ## <a name="return-value"></a>戻り値
@@ -83,17 +83,20 @@ long double lgamma( long double x ); //C++ only
 
 ## <a name="remarks"></a>解説
 
-C++ ではオーバーロードが可能であるため、型と型を受け取って返す**lgamma**のオーバーロードを呼び出すことができ **`float`** **`long double`** ます。 C プログラムでは、 **lgamma**は常にを受け取り、を返し **`double`** ます。
+C++ ではオーバーロードが可能であるため、型と型を受け取って返す **lgamma** のオーバーロードを呼び出すことができ **`float`** **`long double`** ます。 C プログラムでは、この関数を呼び出すためにマクロを使用している場合を除き、 \<tgmath.h> **lgamma** は常にを受け取り、を返し **`double`** ます。
+
+マクロを使用する場合 \<tgmath.h> `lgamma()` 、引数の型によって、どのバージョンの関数が選択されているかが決まります。 詳細については [、「型汎用の算術演算](../../c-runtime-library/tgmath.md) 」を参照してください。
 
 X が有理数の場合、この関数は (x-1) の階乗の対数を返します。
 
 既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-|機能|C ヘッダー|C++ ヘッダー|
+|関数|C ヘッダー|C++ ヘッダー|
 |--------------|--------------|------------------|
 |**lgamma**、 **lgammaf**、 **lgammal**|\<math.h>|\<cmath>|
+|**lgamma** マクロ | \<tgmath.h> ||
 
 互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 

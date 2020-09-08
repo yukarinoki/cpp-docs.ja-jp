@@ -1,5 +1,6 @@
 ---
 title: imaxabs
+description: Imaxabs の API リファレンス。任意のサイズの整数の絶対値を計算します。
 ms.date: 04/05/2018
 api_name:
 - imaxabs
@@ -24,12 +25,12 @@ f1_keywords:
 helpviewer_keywords:
 - imaxabs function
 ms.assetid: de2566a3-1415-4e9a-91b5-7ac3a49ebf5e
-ms.openlocfilehash: c1f20c4de2ff9070bae3bfaeb8ba2d97d87d2d4d
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 599e8a0cb20f24bda24201be40fa1acc0ade993c
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70954691"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89555502"
 ---
 # <a name="imaxabs"></a>imaxabs
 
@@ -53,7 +54,7 @@ intmax_t imaxabs(
 **Imaxabs**関数は、引数の絶対値を返します。 エラーの戻り値はありません。
 
 > [!NOTE]
-> **Intmax_t**を使用して表すことができる負の整数の範囲は、表すことができる正の整数の範囲より大きいため、変換できない**imaxabs**に引数を指定することができます。 引数の絶対値を戻り値の型で表すことができない場合、 **imaxabs**の動作は未定義になります。
+> **Intmax_t**を使用して表すことができる負の整数の範囲は、表すことができる正の整数の範囲より大きいため、変換できない引数を**imaxabs**に渡すことができます。 引数の絶対値を戻り値の型で表すことができない場合、 **imaxabs** の動作は未定義になります。
 
 ## <a name="requirements"></a>必要条件
 
@@ -61,7 +62,7 @@ intmax_t imaxabs(
 |-------------|---------------------|
 |**imaxabs**|\<inttypes.h>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
 ## <a name="libraries"></a>ライブラリ
 
@@ -94,7 +95,7 @@ The absolute value of -9223372036854775806 is 9223372036854775806
 ## <a name="see-also"></a>関連項目
 
 [データ変換](../../c-runtime-library/data-conversion.md)<br/>
-[浮動小数点サポート](../../c-runtime-library/floating-point-support.md)<br/>
+[浮動小数点のサポート](../../c-runtime-library/floating-point-support.md)<br/>
 [abs、labs、llabs、_abs64](abs-labs-llabs-abs64.md)<br/>
 [_cabs](cabs.md)<br/>
 [fabs、fabsf、fabsl](fabs-fabsf-fabsl.md)<br/>

@@ -1,6 +1,7 @@
 ---
 title: fmod、fmodf、fmodl
-ms.date: 4/2/2020
+description: Fmod、fmodf、および fmodl の API リファレンスこれは、浮動小数点の剰余を計算します。
+ms.date: 9/1/2020
 api_name:
 - fmod
 - fmodf
@@ -34,12 +35,12 @@ helpviewer_keywords:
 - fmod function
 - floating-point numbers, calculating remainders
 ms.assetid: 6962d369-d11f-40b1-a6d7-6f67239f8a23
-ms.openlocfilehash: 4fa3df46358932b8a62a6b8529baed4a5c9e5c49
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 2b610dec79c98b973af09f8efb147ad6797f7946
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87216974"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89556087"
 ---
 # <a name="fmod-fmodf-fmodl"></a>fmod、fmodf、fmodl
 
@@ -68,11 +69,13 @@ long double fmodl(
    long double x,
    long double y
 );
+
+#define fmod(X, Y) // Requires C11 or higher
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*x*、 *y*<br/>
+*x*、 *y*\
 浮動小数点値。
 
 ## <a name="return-value"></a>戻り値
@@ -83,15 +86,18 @@ long double fmodl(
 
 **Fmod**関数*は x*y の浮動小数点の剰余*f*を計算します。ここで、  /  *y* *x*  =  *i* \* *y*  +  *f* *i*は整数、 *f*は*x*と同じ符号、 *f*の絶対値は*y*の絶対値よりも小さくなります。
 
-C++ ではオーバーロードが可能であるため、との値を受け取って返す**fmod**のオーバーロードを呼び出すことができ **`float`** **`long double`** ます。 C プログラムでは、 **fmod**は常に2つの引数を受け取り、を **`double`** 返し **`double`** ます。
+C++ ではオーバーロードが可能であるため、との値を受け取って返す **fmod** のオーバーロードを呼び出すことができ **`float`** **`long double`** ます。 C プログラムでは、この関数を呼び出すためにマクロを使用している場合を除き \<tgmath.h> 、 **fmod** は常に2つの引数を受け取り、を **`double`** 返し **`double`** ます。
+
+マクロを使用する場合 \<tgmath.h> `fmod()` 、引数の型によって、どのバージョンの関数が選択されているかが決まります。 詳細については [、「型汎用の算術演算](../../c-runtime-library/tgmath.md) 」を参照してください。
 
 既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-|機能|必須ヘッダー|
+|関数|必須ヘッダー|
 |--------------|---------------------|
 |**fmod**、 **fmodf**、 **fmodl**|\<math.h>|
+|**fmod** マクロ | \<tgmath.h> |
 
 互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 

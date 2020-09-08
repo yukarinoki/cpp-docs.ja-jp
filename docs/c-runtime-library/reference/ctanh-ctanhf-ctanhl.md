@@ -1,5 +1,6 @@
 ---
 title: ctanh、ctanhf、ctanhl
+description: Ctanh、ctanhf、ctanhl の API リファレンス複素数の複素ハイパーボリックタンジェントを計算します。
 ms.date: 11/04/2016
 api_name:
 - ctanh
@@ -33,12 +34,12 @@ helpviewer_keywords:
 - ctanhl function
 - ctanhf function
 ms.assetid: 807f2cd1-8740-4988-afff-5911c346385b
-ms.openlocfilehash: dae59dcd4a71045b27c6ba9501580bf981b9828f
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 959d48853e3edac707a7daea615270b20dad37e7
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70941979"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89555867"
 ---
 # <a name="ctanh-ctanhf-ctanhl"></a>ctanh、ctanhf、ctanhl
 
@@ -66,33 +67,33 @@ _Lcomplex ctanhl(
 
 ### <a name="parameters"></a>パラメーター
 
-*z*<br/>
+*方向*\
 角度をラジアンで表す複素数。
 
 ## <a name="return-value"></a>戻り値
 
 *Z*の複合ハイパーボリックタンジェント。
 
-|入力|SEH 例外|**_matherr**例外的|
+|入力|SEH 例外|**_matherr** 例外的|
 |-----------|-------------------|--------------------------|
-|± ∞、QNAN、IND|none|_DOMAIN|
+|± ∞、QNAN、IND|なし|_DOMAIN|
 |±∞ (tan, tanf)|INVALID|_DOMAIN|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-でC++はオーバーロードが可能であるため、 **_Fcomplex**と **_Lcomplex**の値を受け取って返す**ctanh**のオーバーロードを呼び出すことができます。 C プログラムでは、 **ctanh** **は常に値を**取得して返します。
+C++ ではオーバーロードが可能であるため、 **_Fcomplex**と **_Lcomplex**値を取得して返す、 **ctanh**のオーバーロードを呼び出すことができます。 C プログラムでは、 **ctanh** は常に **_Dcomplex** 値を取得して返します。
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチン|C ヘッダー|C++ ヘッダー|
+|ルーチンによって返される値|C ヘッダー|C++ ヘッダー|
 |-------------|--------------|------------------|
-|**ctanh**、 **ctanhf**、 **ctanhl**|\<complex.h>|\<ccomplex>|
+|**ctanh**、               **ctanhf**、 **ctanhl**|\<complex.h>|\<ccomplex>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 
-[関数リファレンス (アルファベット順)](crt-alphabetical-function-reference.md)<br/>
+[アルファベット順の関数リファレンス](crt-alphabetical-function-reference.md)<br/>
 [catanh、catanhf、catanhl](catanh-catanhf-catanhl.md)<br/>
 [catan、catanf、catanl](catan-catanf-catanl.md)<br/>
 [csinh、csinhf、csinhl](csinh-csinhf-csinhl.md)<br/>

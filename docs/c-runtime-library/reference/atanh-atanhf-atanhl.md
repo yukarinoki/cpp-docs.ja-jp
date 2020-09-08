@@ -1,6 +1,7 @@
 ---
 title: atanh、atanhf、atanhl
-ms.date: 4/2/2020
+description: Atanh、atanhf、および atanhl の API リファレンス浮動小数点値の逆双曲線正接を計算する。
+ms.date: 08/31/2020
 api_name:
 - atanhl
 - atanhf
@@ -34,12 +35,12 @@ helpviewer_keywords:
 - atanhl function
 - atanh funciton
 ms.assetid: 83a43b5b-2580-4461-854f-dc84236d9f32
-ms.openlocfilehash: 9fee03d16ab1ad7783ebf389e290856955f2dc57
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: c0a8e06963519553144c7e49d26e61dbbde51c21
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87232600"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89555593"
 ---
 # <a name="atanh-atanhf-atanhl"></a>atanh、atanhf、atanhl
 
@@ -51,38 +52,40 @@ ms.locfileid: "87232600"
 double atanh( double x );
 float atanhf( float x );
 long double atanhl( long double x );
-```
+#define atanh(X) // Requires C11 or higher
 
-```cpp
 float atanh( float x );  // C++ only
 long double atanh( long double x );  // C++ only
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*x*<br/>
+*閉じる*\
 浮動小数点値。
 
 ## <a name="return-value"></a>戻り値
 
 **Atanh**関数は、 *x*の逆ハイパーボリックタンジェント (アークハイパーボリックタンジェント) を返します。 *X*が1より大きいか、または-1 未満の場合、 **errno**は**EDOM**に設定され、結果は簡易な NaN になります。 *X*が1または-1 の場合、それぞれ正または負の無限大が返され、 **errno**は**ERANGE**に設定されます。
 
-|入力|SEH 例外|**Matherr**例外的|
+|入力|SEH 例外|**Matherr** 例外的|
 |-----------|-------------------|-------------------------|
 |± QNAN、IND|なし|なし|
-|*X* ≥ 1;*x* ≤-1|なし|なし|
+|*X* ≥ 1; *x* ≤-1|なし|なし|
 
 ## <a name="remarks"></a>解説
 
-C++ ではオーバーロードが可能であるため、またはの値を受け取って返す**atanh**のオーバーロードを呼び出すことができ **`float`** **`long double`** ます。 C プログラムでは、 **atanh**は常にを受け取り、を返し **`double`** ます。
+C++ ではオーバーロードが可能であるため、またはの値を受け取って返す **atanh** のオーバーロードを呼び出すことができ **`float`** **`long double`** ます。 C プログラムでは、この関数を呼び出すためにマクロを使用している場合を除き \<tgmath.h> 、 **atanh** は常にを受け取り、を返し **`double`** ます。
+
+マクロを使用する場合 \<tgmath.h> `atanh()` 、引数の型によって、どのバージョンの関数が選択されているかが決まります。 詳細については [、「型汎用の算術演算](../../c-runtime-library/tgmath.md) 」を参照してください。
 
 既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-|機能|C ヘッダー|C++ ヘッダー|
+|関数|C ヘッダー|C++ ヘッダー|
 |--------------|--------------|------------------|
 |**atanh**、 **atanhf**、 **atanhl**|\<math.h>|\<cmath> または \<math.h>|
+|**atanh ()** マクロ | \<tgmath.h> ||
 
 互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 

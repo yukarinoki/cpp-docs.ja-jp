@@ -1,6 +1,7 @@
 ---
 title: tan、tanf、tanl
-ms.date: 4/2/2020
+description: Tan、tanf、および tanl の API リファレンス浮動小数点値のタンジェントを計算する。
+ms.date: 08/31/2020
 api_name:
 - tan
 - tanf
@@ -37,12 +38,12 @@ helpviewer_keywords:
 - tanf function
 - trigonometric functions
 ms.assetid: 36cc0ce8-9c80-4653-b354-ddb3b378b6bd
-ms.openlocfilehash: ada853087cb0c6c127873e2929a73e4d3c92035c
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 8137bf4cbce59083e8e7c09557400fbff4f6b1df
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87215128"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89556542"
 ---
 # <a name="tan-tanf-tanl"></a>tan、tanf、tanl
 
@@ -54,6 +55,7 @@ ms.locfileid: "87215128"
 double tan( double x );
 float tanf( float x );
 long double tanl( long double x );
+#define tan(x) // Requires C11 or higher
 ```
 
 ```cpp
@@ -63,21 +65,23 @@ long double tan( long double x );  // C++ only
 
 ### <a name="parameters"></a>パラメーター
 
-*x*<br/>
+*閉じる*\
 角度 (ラジアン)。
 
 ## <a name="return-value"></a>戻り値
 
 **Tan**関数は、 *x*のタンジェントを返します。 *X*が263以上、または-263 以下の場合は、結果の有意性が失われます。
 
-|入力|SEH 例外|**Matherr**例外的|
+|入力|SEH 例外|**Matherr** 例外的|
 |-----------|-------------------|-------------------------|
 |± QNAN、IND|なし|_DOMAIN|
 |± INF|**無効です**|_DOMAIN|
 
 ## <a name="remarks"></a>解説
 
-C++ ではオーバーロードが可能であるため、またはの値を受け取って返す**tan**のオーバーロードを呼び出すことができ **`float`** **`long double`** ます。 C プログラムでは、 **tan**は常にを受け取り、を返し **`double`** ます。
+C++ ではオーバーロードが可能であるため、またはの値を受け取って返す **tan** のオーバーロードを呼び出すことができ **`float`** **`long double`** ます。 C プログラムでは、この関数を呼び出すためにマクロを使用している場合を除き \<tgmath.h> 、 **tan** は常にを受け取り、を返し **`double`** ます。
+
+マクロを使用する場合 \<tgmath.h> `tan()` 、引数の型によって、どのバージョンの関数が選択されているかが決まります。 詳細については [、「型汎用の算術演算](../../c-runtime-library/tgmath.md) 」を参照してください。
 
 既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
@@ -86,6 +90,7 @@ C++ ではオーバーロードが可能であるため、またはの値を受�
 |ルーチンによって返される値|必須ヘッダー (C)|必須ヘッダー (C++)|
 |-------------|---------------------|-|
 |**tan**、 **tanf**、 **tanl**|\<math.h>|\<cmath> または \<math.h>|
+|**tan ()** マクロ | \<tgmath.h> ||
 
 互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 

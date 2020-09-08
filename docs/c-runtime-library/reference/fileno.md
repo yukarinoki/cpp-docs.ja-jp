@@ -1,5 +1,6 @@
 ---
 title: _fileno
+description: _Fileno の API リファレンスストリームに関連付けられているファイル記述子を取得します。
 ms.date: 4/2/2020
 api_name:
 - _fileno
@@ -29,12 +30,12 @@ helpviewer_keywords:
 - _fileno function
 - streams, getting file handles
 ms.assetid: 86474174-2f17-4100-bcc4-352dd976c7b5
-ms.openlocfilehash: 0ac0a8d2cf4185dab0aa3d335c16cf89da58c7a6
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: c07f446cc3c5c29fb102a74b2b095957589eab46
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82919473"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89554852"
 ---
 # <a name="_fileno"></a>_fileno
 
@@ -55,7 +56,7 @@ int _fileno(
 
 ## <a name="return-value"></a>戻り値
 
-**_fileno**は、ファイル記述子を返します。 エラーの戻り値はありません。 *ストリーム*が開いているファイルを指定していない場合、結果は未定義になります。 Stream が**NULL**の場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、 **_fileno**によって無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、この関数は -1 を返し、**errno** を **EINVAL** に設定します。
+**_fileno** は、ファイル記述子を返します。 エラーの戻り値はありません。 *ストリーム*が開いているファイルを指定していない場合、結果は未定義になります。 Stream が**NULL**の場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、 **_fileno**によって無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、この関数は -1 を返し、**errno** を **EINVAL** に設定します。
 
 エラー コードの詳細については、「[_doserrno、errno、_sys_errlist、および _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」を参照してください。
 
@@ -68,7 +69,7 @@ int _fileno(
 
 既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 |関数|必須ヘッダー|
 |--------------|---------------------|

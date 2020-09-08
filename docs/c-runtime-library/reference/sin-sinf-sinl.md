@@ -1,6 +1,7 @@
 ---
 title: sin、sinf、sinl
-ms.date: 6/5/2020
+description: Sin、sinf、および sinf の API リファレンス浮動小数点値のサインを計算する。
+ms.date: 08/31/2020
 api_name:
 - sinl
 - sinf
@@ -37,12 +38,12 @@ helpviewer_keywords:
 - trigonometric functions
 - sinf function
 ms.assetid: 737de73e-3590-45f9-8257-dc1c0c489dfc
-ms.openlocfilehash: 7e6e4d9fee0df20ab81f15483cd5f7f4de16d751
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 7d1921dd4537c9dcc955c264a36992d86defada8
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87216727"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89556193"
 ---
 # <a name="sin-sinf-sinl"></a>sin、sinf、sinl
 
@@ -54,6 +55,7 @@ ms.locfileid: "87216727"
 double sin(double x);
 float sinf(float x);
 long double sinl(long double x);
+#define sin(x) // Requires C11 or higher
 ```
 
 ```cpp
@@ -63,7 +65,7 @@ long double sin(long double x);  // C++ only
 
 ### <a name="parameters"></a>パラメーター
 
-*x*<br/>
+*閉じる*\
 角度 (ラジアン)。
 
 ## <a name="return-value"></a>戻り値
@@ -79,7 +81,9 @@ long double sin(long double x);  // C++ only
 
 ## <a name="remarks"></a>解説
 
-C++ ではオーバーロードが可能であるため、またはの値を受け取って返す**sin**のオーバーロードを呼び出すことができ **`float`** **`long double`** ます。 C プログラムでは、 **sin**は常にを受け取り、を返し **`double`** ます。
+C++ ではオーバーロードが可能であるため、またはの値を受け取って返す **sin** のオーバーロードを呼び出すことができ **`float`** **`long double`** ます。 C プログラムでは、この関数を呼び出すためにマクロを使用している場合を除き、 \<tgmath.h> **sin** は常にを受け取り、を返し **`double`** ます。
+
+マクロを使用する場合 \<tgmath.h> `sin()` 、引数の型によって、どのバージョンの関数が選択されているかが決まります。 詳細については [、「型汎用の算術演算](../../c-runtime-library/tgmath.md) 」を参照してください。
 
 既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
@@ -88,6 +92,7 @@ C++ ではオーバーロードが可能であるため、またはの値を受�
 |ルーチンによって返される値|必須ヘッダー (C)|必須ヘッダー (C++)|
 |-|-|-|
 |**sin**、 **sinf**、 **sinf**|\<math.h>|\<cmath> または \<math.h>|
+|**sin ()** マクロ | \<tgmath.h> ||
 
 互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 

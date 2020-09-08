@@ -1,6 +1,7 @@
 ---
 title: acos、acosf、acosl
-ms.date: 4/2/2020
+description: '`acos`、 `acosf` 、およびの API リファレンス `acosl` 。浮動小数点値のアークコサインを計算します。'
+ms.date: 08/31/2020
 api_name:
 - acosf
 - acos
@@ -36,12 +37,12 @@ helpviewer_keywords:
 - trigonometric functions
 - arccosine function
 ms.assetid: 00b89c48-8faf-4824-aa95-fa4349a4975d
-ms.openlocfilehash: b6188c585d2f3b7f2bce1a50569e6bae60ee4942
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: eeee51cea2a81882ee1ed8b014312ee9f9095dc6
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87220770"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89555099"
 ---
 # <a name="acos-acosf-acosl"></a>acos、acosf、acosl
 
@@ -53,23 +54,22 @@ ms.locfileid: "87220770"
 double acos( double x );
 float acosf( float x );
 long double acosl( long double x );
-```
+#define acos(X) // Requires C11 or higher
 
-```cpp
 float acos( float x );   // C++ only
 long double acos( long double x );   // C++ only
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*x*<br/>
+*閉じる*\
 アークコサイン (逆余弦) を計算する-1 ~ 1 の範囲の値。
 
 ## <a name="return-value"></a>戻り値
 
 **Acos**関数は、0 ~ πラジアンの範囲の*x*のアークコサインを返します。
 
-既定では、 *x*が-1 より小さいか、または1より大きい場合、 **acos**は不定を返します。
+既定では、 *x* が-1 より小さいか、または1より大きい場合、 **acos** は不定を返します。
 
 |入力|SEH 例外|Matherr 例外|
 |-----------|-------------------|-----------------------|
@@ -79,7 +79,9 @@ long double acos( long double x );   // C++ only
 
 ## <a name="remarks"></a>解説
 
-C++ ではオーバーロードが可能であるため、型と型を受け取って返す**acos**のオーバーロードを呼び出すことができ **`float`** **`long double`** ます。 C プログラムでは、 **acos**は常にを受け取り、を返し **`double`** ます。
+C++ ではオーバーロードが可能であるため、型と型を受け取って返す **acos** のオーバーロードを呼び出すことができ **`float`** **`long double`** ます。 C プログラムでは、この関数を呼び出すためにマクロを使用している場合を除き、 \<tgmath.h> **acos** は常にを受け取り、を返し **`double`** ます。
+
+マクロを使用する場合 \<tgmath.h> `acos()` 、引数の型によって、どのバージョンの関数が選択されているかが決まります。 詳細については [、「型汎用の算術演算](../../c-runtime-library/tgmath.md) 」を参照してください。
 
 既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
@@ -88,6 +90,7 @@ C++ ではオーバーロードが可能であるため、型と型を受け取�
 |ルーチンによって返される値|必須ヘッダー|省略可能なヘッダー|
 |-------------|---------------------|----------------------|
 |**acos**、 **acosf**、 **acosl**|\<math.h>|\<errno.h>|
+|**acos ()** マクロ | \<tgmath.h> ||
 
 ## <a name="example"></a>例
 

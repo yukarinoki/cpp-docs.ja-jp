@@ -1,6 +1,6 @@
 ---
 title: snprintf、_snprintf、_snprintf_l、_snwprintf、_snwprintf_l
-description: 書式設定されたデータを文字列に書き込む snprintf、_snprintf、_snprintf_l、_snwprintf、 _snwprintf_の API リファレンスです。
+description: Snprintf、_snprintf、_snprintf_l、_snwprintf、および _snwprintf_の API リファレンス書式設定されたデータを文字列に書き込みます。
 ms.date: 08/27/2020
 api_name:
 - _snwprintf
@@ -52,12 +52,12 @@ helpviewer_keywords:
 - sntprintf function
 - formatted text [C++]
 ms.assetid: 5976c9c8-876e-4ac9-a515-39f3f7fd0925
-ms.openlocfilehash: b4d8865d5297afe3d48f2bb48cc85a0d10535dfd
-ms.sourcegitcommit: c8f1605354724a13566bc3b0fac3c5d98265f1d0
+ms.openlocfilehash: 9a851f08e50d11d3716ea59e00e5e9028b6cd6d5
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "89062199"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89556113"
 ---
 # <a name="snprintf-_snprintf-_snprintf_l-_snwprintf-_snwprintf_l"></a>snprintf、_snprintf、_snprintf_l、_snwprintf、_snwprintf_l
 
@@ -165,7 +165,7 @@ int _snwprintf_l(
 
 エラー コードの詳細については、「[errno、_doserrno、_sys_errlist、および _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」を参照してください。
 
-## <a name="remarks"></a>注釈
+## <a name="remarks"></a>解説
 
 **Snprintf**関数と関数の **_snprintf**ファミリでは、*バッファー*内の文字*数*を書式指定して格納します。 **Snprintf**関数は、常に終端の null 文字を格納し、必要に応じて出力を切り捨てます。 **_Snprintf**ファミリの関数は、書式設定された文字列の長さが厳密に*カウント*文字未満の場合にのみ、終端の null 文字を追加します。 各 *引数* (存在する場合) は変換され、 *形式*の対応する書式指定に従って出力されます。 形式は通常の文字で構成され、 [printf](printf-printf-l-wprintf-wprintf-l.md)の*format*引数と同じ形式と機能を持ちます。 重なり合う文字列間でコピーした場合の動作は未定義です。
 

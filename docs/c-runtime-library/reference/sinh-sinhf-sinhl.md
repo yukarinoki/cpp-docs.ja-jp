@@ -1,6 +1,7 @@
 ---
 title: sinh、sinhf、sinhl
-ms.date: 4/2/2020
+description: 浮動小数点値のハイパーボリックサインを計算するための API リファレンスです。
+ms.date: 08/31/2020
 api_name:
 - sinh
 - sinhl
@@ -37,12 +38,12 @@ helpviewer_keywords:
 - sinhf function
 - sinhl function
 - hyperbolic functions
-ms.openlocfilehash: ea7051fc086a254dabcf7fcd59f6a70e8fa0c0cd
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 6a8c9c4195eab66a46230e7a3baf6194e17c4519
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87229416"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89556178"
 ---
 # <a name="sinh-sinhf-sinhl"></a>sinh、sinhf、sinhl
 
@@ -54,21 +55,20 @@ ms.locfileid: "87229416"
 double sinh(double x);
 float sinhf(float x);
 long double sinhl(long double x);
-```
+#define sinh(x) // Requires C11 or higher
 
-```cpp
 float sinh(float x);  // C++ only
 long double sinh(long double x);  // C++ only
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*x*<br/>
+*閉じる*\
 角度 (ラジアン)。
 
 ## <a name="return-value"></a>戻り値
 
-**Sinh**関数は、 *x*のハイパーボリックサインを返します。 既定では、結果が大きすぎる場合、 **sinh**は**errno**を**ERANGE**に設定し、±**HUGE_VAL**を返します。
+**Sinh**関数は、 *x*のハイパーボリックサインを返します。 既定では、結果が大きすぎる場合、 **sinh** は **errno** を **ERANGE** に設定し、±**HUGE_VAL**を返します。
 
 |入力|SEH 例外|Matherr 例外|
 |-----------|-------------------|-----------------------|
@@ -79,7 +79,9 @@ long double sinh(long double x);  // C++ only
 
 ## <a name="remarks"></a>解説
 
-C++ ではオーバーロードが可能であるため、またはの値を受け取って返す**sinh**のオーバーロードを呼び出すことができ **`float`** **`long double`** ます。 C プログラムでは、 **sinh**は常にを受け取り、を返し **`double`** ます。
+C++ ではオーバーロードが可能であるため、またはの値を受け取って返す **sinh** のオーバーロードを呼び出すことができ **`float`** **`long double`** ます。 C プログラムでは、この関数を呼び出すためにマクロを使用している場合を除き \<tgmath.h> 、 **sinh** は常にを受け取り、を返し **`double`** ます。
+
+マクロを使用する場合 \<tgmath.h> `sinh()` 、引数の型によって、どのバージョンの関数が選択されているかが決まります。 詳細については [、「型汎用の算術演算](../../c-runtime-library/tgmath.md) 」を参照してください。
 
 既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
@@ -88,6 +90,7 @@ C++ ではオーバーロードが可能であるため、またはの値を受�
 |ルーチンによって返される値|必須ヘッダー (C)|必須ヘッダー (C++)|
 |-|-|-|
 |**sinh**、 **sinhf**、 **sinhf**|\<math.h>|\<cmath> または \<math.h>|
+|**sinh ()** マクロ | \<tgmath.h> ||
 
 互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 

@@ -1,6 +1,7 @@
-﻿---
+---
 title: tgamma、tgammaf、tgammal
-ms.date: 4/2/2020
+description: Tgamma、tgammaf、および tgammal の API リファレンス指定された値のガンマ関数を決定する。
+ms.date: 9/1/2020
 api_name:
 - tgamma
 - tgammaf
@@ -37,12 +38,12 @@ helpviewer_keywords:
 - tgammaf function
 - tgammal function
 ms.assetid: f1bd2681-8af2-48a9-919d-5358fd068acd
-ms.openlocfilehash: f38ae3f3ad38eeb9806803fd8dad1b8297393168
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: b49020ca0697e920dccf188df4ad024820966571
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87218521"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89555177"
 ---
 # <a name="tgamma-tgammaf-tgammal"></a>tgamma、tgammaf、tgammal
 
@@ -55,14 +56,6 @@ double tgamma(
    double x
 );
 
-float tgamma(
-   float x
-); //C++ only
-
-long double tgamma(
-   long double x
-); //C++ only
-
 float tgammaf(
    float x
 );
@@ -70,11 +63,21 @@ float tgammaf(
 long double tgammal(
    long double x
 );
+
+#define tgamma(X) // Requires C11 or higher
+
+float tgamma(
+   float x
+); //C++ only
+
+long double tgamma(
+   long double x
+); //C++ only
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*x*<br/>
+*閉じる*\
 ガンマを検索する値。
 
 ## <a name="return-value"></a>戻り値
@@ -99,17 +102,20 @@ long double tgammal(
 
 ## <a name="remarks"></a>解説
 
-C++ ではオーバーロードが可能であるため、型と型を受け取って返す**tgamma**のオーバーロードを呼び出すことができ **`float`** **`long double`** ます。 C プログラムでは、 **tgamma**は常にを受け取り、を返し **`double`** ます。
+C++ ではオーバーロードが可能であるため、型と型を受け取って返す **tgamma** のオーバーロードを呼び出すことができ **`float`** **`long double`** ます。 C プログラムでは、この関数を呼び出すためにマクロを使用している場合を除いて、 \<tgmath.h> **tgamma** は常にを受け取り、を返し **`double`** ます。
+
+マクロを使用する場合 \<tgmath.h> `tgamma()` 、引数の型によって、どのバージョンの関数が選択されているかが決まります。 詳細については [、「型汎用の算術演算](../../c-runtime-library/tgmath.md) 」を参照してください。
 
 x が自然数の場合、この関数は (x-1) の階乗を返します。
 
 既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-|機能|C ヘッダー|C++ ヘッダー|
+|関数|C ヘッダー|C++ ヘッダー|
 |--------------|--------------|------------------|
-|**tgamma**、 **tgammaf**、 **tgammal**|\<math.h>|\<cmath>|
+|**tgamma**、 **tgammaf**、  **tgammal**|\<math.h>|\<cmath>|
+|**tgamma** マクロ | \<tgmath.h> ||
 
 互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 

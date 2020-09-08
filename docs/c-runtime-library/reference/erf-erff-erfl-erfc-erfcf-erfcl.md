@@ -1,6 +1,7 @@
 ---
 title: erf、erff、erfl、erfc、erfcf、erfcl
-ms.date: 4/2/2020
+description: '% 1>、erff、erff、erfc、erfcf、erff; の API リファレンスこれにより、値のエラー関数または相補的なエラー関数が計算されます。'
+ms.date: 9/1/2020
 api_name:
 - erff
 - erfl
@@ -46,12 +47,12 @@ helpviewer_keywords:
 - erfcf function
 - erfc function
 ms.assetid: 144d90d3-e437-41c2-a659-cd57596023b5
-ms.openlocfilehash: 5511e7a7d17c47deaaaf61eedf3c00eec12db119
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: ef83275515c66341798395bbfc2bb5b088e6cfb7
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87234186"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89555645"
 ---
 # <a name="erf-erff-erfl-erfc-erfcf-erfcl"></a>erf、erff、erfl、erfc、erfcf、erfcl
 
@@ -90,34 +91,39 @@ float erfcf(
 long double erfcl(
    long double x
 );
+#define erf(X) // Requires C11 or higher
+#define erfc(X) // Requires C11 or higher
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*x*<br/>
+*閉じる*\
 浮動小数点値。
 
 ## <a name="return-value"></a>戻り値
 
-誤差**関数は、** *x*のガウス誤差 error 関数を返します。 **Erfc**関数は、 *x*の相補的なガウス誤差 error 関数を返します。
+誤差 **関数は、** *x*のガウス誤差 error 関数を返します。 **Erfc**関数は、 *x*の相補的なガウス誤差 error 関数を返します。
 
 ## <a name="remarks"></a>解説
 
-誤差**関数は** *x*のガウス誤差 error 関数を計算します。これは次のように定義されています。
+誤差 **関数は** *x*のガウス誤差 error 関数を計算します。これは次のように定義されています。
 
 ![x の誤差関数](media/crt_erf_formula.PNG "x の誤差関数")
 
-相補的なガウス誤差 error 関数は、1-誤差 (x) として定義されています。 -1.0 ~ 1.0 の範囲の値が**返されます**。 エラーの戻り値はありません。 **Erfc**関数は、0 ~ 2 の範囲の値を返します。 *X*が**erfc**に対して大きすぎる場合、 **errno**変数は**ERANGE**に設定されます。
+相補的なガウス誤差 error 関数は、1-誤差 (x) として定義されています。 -1.0 ~ 1.0 の範囲の値が **返されます** 。 エラーの戻り値はありません。 **Erfc**関数は、0 ~ 2 の範囲の値を返します。 *X*が**erfc**に対して大きすぎる場合、 **errno**変数は**ERANGE**に設定されます。
 
-C++ ではオーバーロードが可能であるため、型と型を受け取って返す、 **erfc** **のオーバーロードを呼び**出すことができ **`float`** **`long double`** ます。 C プログラムでは、 **erfc**は常にを**受け取り、を**返し **`double`** ます。
+C++ ではオーバーロードが可能であるため、型と型を受け取って返す、 **erfc** **のオーバーロードを呼び**出すことができ **`float`** **`long double`** ます。 C プログラムでは、この関数を呼び出すためにマクロを使用している場合を除き、 \<tgmath.h> **erfc**とは常にを受け取り、を返し**erf** **`double`** ます。
+
+マクロを使用する場合 \<tgmath.h> `erf()` 、引数の型によって、どのバージョンの関数が選択されているかが決まります。 詳細については [、「型汎用の算術演算](../../c-runtime-library/tgmath.md) 」を参照してください。
 
 既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-|機能|必須ヘッダー|
+|関数|必須ヘッダー|
 |--------------|---------------------|
 |**erf**erfc、 **erff**、 **erff**、 **erfc**、 **erfcf**、 **erff**|\<math.h>|
+|を**持つマクロ** | \<tgmath.h> |
 
 互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 

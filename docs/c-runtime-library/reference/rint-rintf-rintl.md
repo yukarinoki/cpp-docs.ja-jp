@@ -1,6 +1,7 @@
 ---
 title: rint、rintf、rintl
-ms.date: 4/2/2020
+description: Rint、rintf、および rintl; の API リファレンス浮動小数点値を、浮動小数点形式で最も近い整数に丸めます。
+ms.date: 9/1/2020
 api_name:
 - rintf
 - rintl
@@ -34,12 +35,12 @@ helpviewer_keywords:
 - rint function
 - rintl function
 ms.assetid: 312ae3e6-278c-459a-9393-11b8f87d9184
-ms.openlocfilehash: 009f56de506b50f81502a2aad7632244b069d09a
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 1ed1fa279694d3df75db5963e5a571d58299e415
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87216766"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89555346"
 ---
 # <a name="rint-rintf-rintl"></a>rint、rintf、rintl
 
@@ -51,38 +52,40 @@ ms.locfileid: "87216766"
 double rint( double x );
 float rintf( float x );
 long double rintl( long double x );
-```
+#define rint(X) // Requires C11 or higher
 
-```cpp
 float rint( float x );  // C++ only
 long double rint( long double x );  // C++ only
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*x*<br/>
+*閉じる*\
 丸める浮動小数点値。
 
 ## <a name="return-value"></a>戻り値
 
-**Rint**関数は、最も近い整数を表す浮動小数点値を*x*に返します。 中間の値は、浮動小数点丸めモードの現在の設定に従って丸められます。これは、 **nearbyint**関数と同じです。 **Nearbyint**関数とは異なり、 **rint**関数は、結果が引数の値と異なる場合に**FE_INEXACT**浮動小数点例外を発生させる可能性があります。 エラーの戻り値はありません。
+**Rint**関数は、最も近い整数を表す浮動小数点値を*x*に返します。 中間の値は、浮動小数点丸めモードの現在の設定に従って丸められます。これは、 **nearbyint** 関数と同じです。 **Nearbyint**関数とは異なり、 **rint**関数は、結果が引数の値と異なる場合に**FE_INEXACT**浮動小数点例外を発生させる可能性があります。 エラーの戻り値はありません。
 
-|入力|SEH 例外|**_matherr**例外的|
+|入力|SEH 例外|**_matherr** 例外的|
 |-----------|-------------------|--------------------------|
 |± ∞、QNAN、IND|なし|なし|
 |非正規化数|EXCEPTION_FLT_UNDERFLOW|なし|
 
 ## <a name="remarks"></a>解説
 
-C++ ではオーバーロードが可能であるため、およびの値を受け取って返す**rint**のオーバーロードを呼び出すことができ **`float`** **`long double`** ます。 C プログラムでは、 **rint**は常にを受け取り、を返し **`double`** ます。
+C++ ではオーバーロードが可能であるため、およびの値を受け取って返す **rint** のオーバーロードを呼び出すことができ **`float`** **`long double`** ます。 C プログラムでは、この関数を呼び出すためにマクロを使用している場合を除き、 \<tgmath.h> **rint** は常にを受け取り、を返し **`double`** ます。
+
+マクロを使用する場合 \<tgmath.h> `rint()` 、引数の型によって、どのバージョンの関数が選択されているかが決まります。 詳細については [、「型汎用の算術演算](../../c-runtime-library/tgmath.md) 」を参照してください。
 
 既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-|機能|C ヘッダー|C++ ヘッダー|
+|関数|C ヘッダー|C++ ヘッダー|
 |--------------|--------------|------------------|
 |**rint**、 **rintf**、 **rintl**|\<math.h>|\<cmath>|
+|**rint** マクロ | \<tgmath.h> ||
 
 互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 

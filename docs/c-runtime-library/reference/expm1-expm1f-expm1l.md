@@ -1,6 +1,7 @@
-﻿---
+---
 title: expm1、expm1f、expm1l
-ms.date: 04/05/2018
+description: Expm1、expm1f、および expm1 の API リファレンスこれにより、底 e の値の指数から1を引いた値が計算されます。
+ms.date: 9/1/2020
 api_name:
 - expm1l
 - expm1
@@ -30,12 +31,12 @@ helpviewer_keywords:
 - expm1l function
 - expm1 function
 ms.assetid: 2a4dd2d9-370c-42b0-9067-0625efa272e0
-ms.openlocfilehash: 63e984f2228ac6896cd9d2ea959b491565bfb8d8
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 6d352e91d895cd63c7134faff90bc1bc43a50708
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87234134"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89556503"
 ---
 # <a name="expm1-expm1f-expm1l"></a>expm1、expm1f、expm1l
 
@@ -59,11 +60,12 @@ float expm1f(
 long double expm1l(
    long double x
 );
+#define expm1(X) // Requires C11 or higher
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*x*<br/>
+*閉じる*\
 浮動小数点の指数値。
 
 ## <a name="return-value"></a>戻り値
@@ -72,13 +74,16 @@ long double expm1l(
 
 ## <a name="remarks"></a>解説
 
-C++ ではオーバーロードが可能であるため、およびの値を受け取って返す**expm1**のオーバーロードを呼び出すことができ **`float`** **`long double`** ます。 C プログラムでは、 **expm1**は常にを受け取り、を返し **`double`** ます。
+C++ ではオーバーロードが可能であるため、およびの値を受け取って返す **expm1** のオーバーロードを呼び出すことができ **`float`** **`long double`** ます。 C プログラムでは、この関数を呼び出すためにマクロを使用している場合を除き、 \<tgmath.h> **expm1** は常にを受け取り、を返し **`double`** ます。
+
+マクロを使用する場合 \<tgmath.h> `expm1()` 、引数の型によって、どのバージョンの関数が選択されているかが決まります。 詳細については [、「型汎用の算術演算](../../c-runtime-library/tgmath.md) 」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
 |ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**expm1**、 **expm1f**、 **expm1l**|\<math.h>|
+|**expm1** マクロ | \<tgmath.h> |
 
 互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 

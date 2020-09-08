@@ -1,6 +1,7 @@
 ---
 title: floor、floorf、floorl
-ms.date: 6/5/2020
+description: Floor、floorf、および floorl の API リファレンス値の floor を計算する。
+ms.date: 9/1/2020
 api_name:
 - floorf
 - floorl
@@ -35,12 +36,12 @@ helpviewer_keywords:
 - calculating floors of values
 - floorl function
 ms.assetid: e9955f70-d659-414f-8050-132e13c8ff36
-ms.openlocfilehash: dd1b88f51dfd414fc1668199350db1e2c34b9f33
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 6af047d3da891270ab6a596dfc3ebef0941a91cf
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87218684"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89556737"
 ---
 # <a name="floor-floorf-floorl"></a>floor、floorf、floorl
 
@@ -64,11 +65,12 @@ float floorf(
 long double floorl(
    long double x
 );
+#define floor(X) // Requires C11 or higher
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*x*<br/>
+*閉じる*\
 浮動小数点値。
 
 ## <a name="return-value"></a>戻り値
@@ -79,19 +81,22 @@ long double floorl(
 |-----------|-------------------|-----------------------|
 |± QNAN、IND|なし|_DOMAIN|
 
-**floor**には、ストリーミング SIMD 拡張命令 2 (SSE2) を使用する実装があります。 SSE2 実装の使い方の詳細および制約については、「[_set_SSE2_enable](set-sse2-enable.md)」を参照してください。
+**floor** には、ストリーミング SIMD 拡張命令 2 (SSE2) を使用する実装があります。 SSE2 実装の使い方の詳細および制約については、「[_set_SSE2_enable](set-sse2-enable.md)」を参照してください。
 
 ## <a name="remarks"></a>解説
 
-C++ ではオーバーロードが可能であるため、との値を受け取って返す**floor**のオーバーロードを呼び出すことができ **`float`** **`long double`** ます。 C プログラムでは、 **floor**は常にを受け取り、を返し **`double`** ます。
+C++ ではオーバーロードが可能であるため、との値を受け取って返す **floor** のオーバーロードを呼び出すことができ **`float`** **`long double`** ます。 C プログラムでは、この関数を呼び出すためにマクロを使用している場合を除き、 \<tgmath.h> **floor** はを常に取得し、を返し **`double`** ます。
+
+マクロを使用する場合 \<tgmath.h> `floor()` 、引数の型によって、どのバージョンの関数が選択されているかが決まります。 詳細については [、「型汎用の算術演算](../../c-runtime-library/tgmath.md) 」を参照してください。
 
 既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-|機能|必須ヘッダー|
+|関数|必須ヘッダー|
 |--------------|---------------------|
 |**floor**、 **floorf**、 **floorl**|\<math.h>|
+|**floor** マクロ | \<tgmath.h> ||
 
 互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 

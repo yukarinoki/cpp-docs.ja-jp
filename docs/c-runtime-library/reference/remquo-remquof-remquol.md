@@ -1,6 +1,7 @@
 ---
 title: remquo、remquof、remquol
-ms.date: 4/2/2020
+description: Remquo remquof、remquol の API リファレンス2つの整数値の剰余を計算し、パラメーターで指定された位置に、商の符号とおおよその大きさを持つ整数値を格納します。
+ms.date: 9/1/2020
 api_name:
 - remquof
 - remquo
@@ -34,12 +35,12 @@ helpviewer_keywords:
 - remquof function
 - remquo function
 ms.assetid: a1d3cb8b-8027-4cd3-8deb-04eb17f299fc
-ms.openlocfilehash: d1b5c60e2e6bd8ba4d5f3b4297dff4bd57c650f2
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: d99204ad9a80c6320869cbb72aee905981a5224d
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87216792"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89554969"
 ---
 # <a name="remquo-remquof-remquol"></a>remquo、remquof、remquol
 
@@ -51,22 +52,21 @@ ms.locfileid: "87216792"
 double remquo( double numer, double denom, int* quo );
 float remquof( float numer, float denom, int* quo );
 long double remquol( long double numer, long double denom, int* quo );
-```
+#define remquo(X, Y, INT_PTR) // Requires C11 or higher
 
-```cpp
 float remquo( float numer, float denom, int* quo ); /* C++ only */
 long double remquo( long double numer, long double denom, int* quo ); /* C++ only */
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*数値*<br/>
+*数値*\
 分子。
 
-*デ om*<br/>
+*デ om*\
 分母。
 
-*従来*<br/>
+*従来*\
 符号と商の近似値を持つ値を格納する整数へのポインター。
 
 ## <a name="return-value"></a>戻り値
@@ -77,15 +77,18 @@ long double remquo( long double numer, long double denom, int* quo ); /* C++ onl
 
 **Remquo** *は x y の浮動*小数点の剰余*f*を計算します。ここで、  /  *y* *x*  =  *i* \* *y*  +  *f* *i*は整数、 *f*は*x*と同じ符号、 *f*の絶対値は*y*の絶対値よりも小さくなっています。
 
-C++ ではオーバーロードが可能であるため、またはの値を受け取って返す、 **remquo**オーバーロードを呼び出すことができ **`float`** **`long double`** ます。 C プログラムでは、 **remquo**常に2つの引数を受け取り、を **`double`** 返し **`double`** ます。
+C++ ではオーバーロードが可能であるため、またはの値を受け取って返す、 **remquo** オーバーロードを呼び出すことができ **`float`** **`long double`** ます。 C プログラムでは、この関数を呼び出すためにマクロを使用している場合を除いて、 \<tgmath.h> **remquo** 常に2つの引数を受け取り、を **`double`** 返し **`double`** ます。
+
+マクロを使用する場合 \<tgmath.h> `remquo()` 、引数の型によって、どのバージョンの関数が選択されているかが決まります。 詳細については [、「型汎用の算術演算](../../c-runtime-library/tgmath.md) 」を参照してください。
 
 既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-|機能|必須ヘッダー (C)|必須ヘッダー (C++)|
+|関数|必須ヘッダー (C)|必須ヘッダー (C++)|
 |--------------|---------------------|-|
 |**remquo** **remquof**、 **remquol**|\<math.h>|\<cmath> または \<math.h>|
+|**remquo** | \<tgmath.h> ||
 
 互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 

@@ -1,5 +1,6 @@
 ---
 title: gmtime、_gmtime32、_gmtime64
+description: Gmtime、_gmtime32、_gmtime64 の API リファレンスtime_t 値を tm 構造体に変換します。
 ms.date: 4/2/2020
 api_name:
 - _gmtime32
@@ -37,12 +38,12 @@ helpviewer_keywords:
 - gmtime64 function
 - time structure conversion
 ms.assetid: 315501f3-477e-475d-a414-ef100ee0db27
-ms.openlocfilehash: 86919e2ba6f5e301f1dffd87dfb4ecd22ce416e2
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: b3dd09e828b972f05a4c45c30ebc3e5edb68f551
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87234108"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89556464"
 ---
 # <a name="gmtime-_gmtime32-_gmtime64"></a>gmtime、_gmtime32、_gmtime64
 
@@ -63,9 +64,9 @@ struct tm *_gmtime64( const __time64_t *sourceTime );
 
 ## <a name="return-value"></a>戻り値
 
-型 [tm](../../c-runtime-library/standard-types.md) 構造体へのポインター。 返される構造体のフィールドには、 *sourcetime*引数の評価値が現地時刻ではなく UTC で格納されます。 構造体の各フィールドは **`int`** 、次のように型になります。
+型 [tm](../../c-runtime-library/standard-types.md) 構造体へのポインター。 返される構造体のフィールドには、 *sourcetime* 引数の評価値が現地時刻ではなく UTC で格納されます。 構造体の各フィールドは **`int`** 、次のように型になります。
 
-|フィールド|[説明]|
+|フィールド|説明|
 |-|-|
 |**tm_sec**|秒後 (0-59)。|
 |**tm_min**|分後 (0-59)。|
@@ -83,11 +84,11 @@ struct tm *_gmtime64( const __time64_t *sourceTime );
 
 **gmtime**は **_gmtime64**に評価されるインライン関数で、 **_USE_32BIT_TIME_T**が定義されている場合を除き、 **time_t**は **__time64_t**に相当します。 以前の32ビット**time_t**として**time_t**を解釈するようにコンパイラに強制する必要がある場合は **_USE_32BIT_TIME_T**を定義できますが、これを行うと、 **gmtime**が **_gmtime32**にインライン配置され time_t として定義される**ことになり****ます。** この方法は使用しないことをお勧めします。これは 64 ビット プラットフォームでは使用できず、また 2038 年 1 月 18 日以降はアプリケーションでエラーが発生する可能性があるためです。
 
-これらの関数では、パラメーターの検証が行われます。 *Sourcetime*が null ポインターの場合、または*sourcetime*値が負の場合、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、これらの関数は無効なパラメーターハンドラーを呼び出します。 実行の継続が許可された場合、関数は**NULL**を返し、 **errno**を**EINVAL**に設定します。
+これらの関数では、パラメーターの検証が行われます。 *Sourcetime*が null ポインターの場合、または*sourcetime*値が負の場合、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、これらの関数は無効なパラメーターハンドラーを呼び出します。 実行の継続が許可された場合、関数は **NULL** を返し、 **errno** を **EINVAL**に設定します。
 
 ## <a name="remarks"></a>解説
 
-**_Gmtime32**関数は、 *sourcetime*値を分割し、time で定義された**tm**型の静的に割り当てられた構造体に格納します。始め. *Sourcetime*の値は、通常、 [time](time-time32-time64.md)関数の呼び出しから取得されます。
+**_Gmtime32**関数は、 *sourcetime*値を分割し、time. H で定義されている**tm**型の静的に割り当てられた構造体に格納します。 *Sourcetime*の値は、通常、 [time](time-time32-time64.md)関数の呼び出しから取得されます。
 
 > [!NOTE]
 > ほとんどの場合は、対象の環境で夏時間が有効かどうかを確認してください。 C ランタイム ライブラリでは、夏時間 (DST) の計算にアメリカ合衆国の規則が使用されていることを前提とします。

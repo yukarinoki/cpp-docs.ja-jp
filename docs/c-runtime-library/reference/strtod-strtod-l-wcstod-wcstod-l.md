@@ -1,6 +1,6 @@
 ---
 title: strtod、_strtod_l、wcstod、_wcstod_l
-description: 文字列を倍精度値に変換する strtod、_strtod_l、wcstod、_wcstod_l の API リファレンスです。
+description: Strtod、_strtod_l、wcstod、_wcstod_l の API リファレンス文字列を倍精度値に変換します。
 ms.date: 08/27/2020
 api_name:
 - wcstod
@@ -51,12 +51,12 @@ helpviewer_keywords:
 - _strtod_l function
 - string conversion, to floating point values
 ms.assetid: 0444f74a-ba2a-4973-b7f0-1d77ba88c6ed
-ms.openlocfilehash: 5a9c7fd36b28b0a709c2e21a5e23d8a71d5f8a15
-ms.sourcegitcommit: c8f1605354724a13566bc3b0fac3c5d98265f1d0
+ms.openlocfilehash: aa6f40c91f9be906e3f51df5788483410f6077a3
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "89062173"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89554956"
 ---
 # <a name="strtod-_strtod_l-wcstod-_wcstod_l"></a>strtod、_strtod_l、wcstod、_wcstod_l
 
@@ -107,7 +107,7 @@ NULL で終わる変換対象の文字列。
 
 このリターンコードの詳細については、「 [_doserrno、errno、_sys_errlist、および _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」を参照してください。
 
-## <a name="remarks"></a>注釈
+## <a name="remarks"></a>解説
 
 各関数は、入力文字列 *Strsource* をに変換し **`double`** ます。 **Strtod**関数は、 *strsource*を倍精度値に変換します。 **strtod** は、数値の一部として認識できない最初の文字で文字列 *strsource* の読み取りを停止します。 この文字は、終端の null 文字である場合があります。 **wcstod** は **strtod**のワイド文字バージョンです。 *Strsource* 引数はワイド文字列です。 それ以外では、これらの関数の動作は同じです。
 

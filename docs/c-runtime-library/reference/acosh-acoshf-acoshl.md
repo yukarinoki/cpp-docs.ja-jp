@@ -1,6 +1,7 @@
 ---
 title: acosh、acoshf、acoshl
-ms.date: 4/2/2020
+description: Acosh、acoshf、および acoshl の API リファレンス浮動小数点値の逆双曲線余弦を計算する。
+ms.date: 08/31/2020
 api_name:
 - acoshf
 - acosh
@@ -37,12 +38,12 @@ helpviewer_keywords:
 - acosh function
 - acoshl function
 ms.assetid: 6985c4d7-9e2a-44ce-9a9b-5a43015f15f7
-ms.openlocfilehash: a6883c23d06115c8775dd919123671feac380b99
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: ef6d47ca07f96be84962303c13162b154086e5f2
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87220757"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89555112"
 ---
 # <a name="acosh-acoshf-acoshl"></a>acosh、acoshf、acoshl
 
@@ -54,21 +55,20 @@ ms.locfileid: "87220757"
 double acosh( double x );
 float acoshf( float x );
 long double acoshl( long double x );
-```
+#define acosh(X) // Requires C11 or higher
 
-```cpp
 float acosh( float x );  // C++ only
 long double acosh( long double x );  // C++ only
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*x*<br/>
+*閉じる*\
 浮動小数点値。
 
 ## <a name="return-value"></a>戻り値
 
-**Acosh**関数は、 *x*の逆ハイパーボリックコサイン (アークハイパーボリックコサイン) を返します。 これらの関数は、ドメイン*x* ≥1で有効です。 *X*が1未満の場合、 `errno` がに設定され、結果は簡易な NaN になり `EDOM` ます。 *X*が簡易な NaN、無限、または無限大の場合は、同じ値が返されます。
+**Acosh**関数は、 *x*の逆ハイパーボリックコサイン (アークハイパーボリックコサイン) を返します。 これらの関数は、ドメイン *x* ≥1で有効です。 *X*が1未満の場合、 `errno` がに設定され、結果は簡易な NaN になり `EDOM` ます。 *X*が簡易な NaN、無限、または無限大の場合は、同じ値が返されます。
 
 |入力|SEH 例外|`_matherr` 例外|
 |-----------|-------------------|--------------------------|
@@ -77,15 +77,18 @@ long double acosh( long double x );  // C++ only
 
 ## <a name="remarks"></a>解説
 
-C++ を使用すると、またはの値を受け取って返す**acosh**のオーバーロードを呼び出すことができ **`float`** **`long double`** ます。 C プログラムでは、 **acosh**は常にを受け取り、を返し **`double`** ます。
+C++ を使用すると、またはの値を受け取って返す **acosh** のオーバーロードを呼び出すことができ **`float`** **`long double`** ます。 C プログラムでは、この関数を呼び出すためにマクロを使用している場合を除き \<tgmath.h> 、 **acosh** は常にを受け取り、を返し **`double`** ます。
+
+マクロを使用する場合 \<tgmath.h> `acosh()` 、引数の型によって、どのバージョンの関数が選択されているかが決まります。 詳細については [、「型汎用の算術演算](../../c-runtime-library/tgmath.md) 」を参照してください。
 
 既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-|機能|C ヘッダー|C++ ヘッダー|
+|関数|C ヘッダー|C++ ヘッダー|
 |--------------|--------------|------------------|
 |**acosh**、 **acoshf**、 **acoshl**|\<math.h>|\<cmath>|
+|**acosh ()** マクロ | \<tgmath.h> ||
 
 互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 

@@ -1,6 +1,7 @@
 ---
 title: lround、lroundf、lroundl、llround、llroundf、llroundl
-ms.date: 4/2/2020
+description: Lround、lroundf、lroundl、llround、llroundf、llroundl の API リファレンス浮動小数点値を最も近い整数に丸めます。
+ms.date: 9/1/2020
 api_name:
 - llround
 - llroundf
@@ -46,12 +47,12 @@ helpviewer_keywords:
 - llroundf function
 - lroundl function
 ms.assetid: cfb88a35-54c6-469f-85af-f7d695dcfdd8
-ms.openlocfilehash: 0be17ceb579bfc7da7b9f47ac1b6942383eebb91
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: c5db62da7cdba58fdc58e8acbfe3aff0e2c386d6
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87216896"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89555320"
 ---
 # <a name="lround-lroundf-lroundl-llround-llroundf-llroundl"></a>lround、lroundf、lroundl、llround、llroundf、llroundl
 
@@ -90,11 +91,12 @@ long long llroundf(
 long long llroundl(
    long double x
 );
+#define lround(X) // Requires C11 or higher
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*x*<br/>
+*閉じる*\
 丸める浮動小数点値。
 
 ## <a name="return-value"></a>戻り値
@@ -107,7 +109,9 @@ long long llroundl(
 
 ## <a name="remarks"></a>解説
 
-C++ ではオーバーロードが可能であるため、との値を受け取って返す**lround**または**llround**のオーバーロードを呼び出すことができ **`float`** **`long double`** ます。 C プログラムでは、 **lround**と**llround**は常にを受け取り、を返し **`double`** ます。
+C++ ではオーバーロードが可能であるため、との値を受け取って返す **lround** または **llround** のオーバーロードを呼び出すことができ **`float`** **`long double`** ます。 C プログラムでは、この関数を呼び出すためにマクロを使用している場合を除き、 \<tgmath.h> **lround** と **llround** は常にを受け取り、を返し **`double`** ます。
+
+マクロを使用する場合 \<tgmath.h> `lround()` 、引数の型によって、どのバージョンの関数が選択されているかが決まります。 詳細については [、「型汎用の算術演算](../../c-runtime-library/tgmath.md) 」を参照してください。
 
 既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
@@ -116,6 +120,7 @@ C++ ではオーバーロードが可能であるため、との値を受け取�
 |ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**lround**、 **lroundf**、 **lroundl**、 **llround**、 **llroundf**、 **llroundl**|\<math.h>|
+|**lround** マクロ | \<tgmath.h> ||
 
 互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 

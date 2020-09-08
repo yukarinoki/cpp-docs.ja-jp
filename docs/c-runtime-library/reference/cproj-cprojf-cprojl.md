@@ -1,6 +1,7 @@
 ---
 title: cproj、cprojf、cprojl
-ms.date: 11/04/2016
+description: Cproj、cprojf、cprojl の API リファレンスReimann 球の複素数の射影を取得します。
+ms.date: 9/2/2020
 api_name:
 - cproj
 - cprojf
@@ -33,12 +34,12 @@ helpviewer_keywords:
 - cprojf function
 - cprojl function
 ms.assetid: 32b49623-13bf-4cae-802e-7912d75030fe
-ms.openlocfilehash: fdeefe10814b887af04d6f4adbb01300785e8b46
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: fcc3c0a42c8c6392130ad58ed12c4985e7ad4907
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70938949"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89555944"
 ---
 # <a name="cproj-cprojf-cprojl"></a>cproj、cprojf、cprojl
 
@@ -62,32 +63,36 @@ _Fcomplex cprojf(
 _Lcomplex cprojl(
    _Lcomplex z
 );
+#define cproj(X) // Requires C11 or higher
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*z*<br/>
+*方向*\
 複素数。
 
 ## <a name="return-value"></a>戻り値
 
-Reimann 球の*z*の投影。
+Reimann 球の *z* の投影。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-でC++はオーバーロードが可能であるため、 **_Fcomplex**と **_Lcomplex**の値を受け取って返す**cproj**のオーバーロードを呼び出すことができます。 C プログラムでは、 **cproj** **は常に値を**取得して返します。
+C++ ではオーバーロードが可能であるため、 **_Fcomplex**と **_Lcomplex**の値を受け取って返す**cproj**のオーバーロードを呼び出すことができます。 C プログラムでは、この関数を呼び出すためにマクロを使用している場合を除いて \<tgmath.h> 、 **cproj** は常に **_Dcomplex** 値を取得して返します。
+
+マクロを使用する場合 \<tgmath.h> `cproj()` 、引数の型によって、どのバージョンの関数が選択されているかが決まります。 詳細については [、「型汎用の算術演算](../../c-runtime-library/tgmath.md) 」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチン|C ヘッダー|C++ ヘッダー|
+|ルーチンによって返される値|C ヘッダー|C++ ヘッダー|
 |-------------|--------------|------------------|
 |**cproj**、 **cprojf**、 **cprojl**|\<complex.h>|\<ccomplex>|
+|**cproj** マクロ | \<tgmath.h> ||
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性について詳しくは、「 [Compatibility](../../c-runtime-library/compatibility.md)」をご覧ください。
 
 ## <a name="see-also"></a>関連項目
 
-[関数リファレンス (アルファベット順)](crt-alphabetical-function-reference.md)<br/>
+[アルファベット順の関数リファレンス](crt-alphabetical-function-reference.md)<br/>
 [norm、normf、norml](norm-normf-norml1.md)<br/>
 [creal、crealf、creall](creal-crealf-creall.md)<br/>
 [conj、conjf、conjl](conj-conjf-conjl.md)<br/>

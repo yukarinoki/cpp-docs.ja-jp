@@ -1,6 +1,7 @@
 ---
 title: asin、asinf、asinl
-ms.date: 4/2/2020
+description: アークサイン、asinf、および asinl の API リファレンス浮動小数点値のアークサインを計算する。
+ms.date: 08/31/2020
 api_name:
 - asinf
 - asinl
@@ -34,12 +35,12 @@ helpviewer_keywords:
 - trigonometric functions
 - arcsine function
 ms.assetid: ca05f9ea-b711-49f6-9f32-2f4019abfd69
-ms.openlocfilehash: 98f7babfbfcbfcdbf36b79b70aac33f002e3bc90
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 7167debcfb605ab05720d9441943439ea9982324
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87189442"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89556659"
 ---
 # <a name="asin-asinf-asinl"></a>asin、asinf、asinl
 
@@ -51,23 +52,22 @@ ms.locfileid: "87189442"
 double asin( double x );
 float asinf ( float x );
 long double asinl( long double x );
-```
+#define asin(X) // Requires C11 or higher
 
-```cpp
 float asin( float x );  // C++ only
 long double asin( long double x );  // C++ only
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*x*<br/>
+*閉じる*\
 アークサインが計算される値。
 
 ## <a name="return-value"></a>戻り値
 
 **アーク**サイン関数は、-π/2 ~ π/2 ラジアンの範囲の*x*のアークサイン (逆正弦関数) を返します。
 
-既定では、 *x*が-1 より小さいか、または1より大きい場合、**アークサイン**は不定を返します。
+既定では、 *x* が-1 より小さいか、または1より大きい場合、 **アークサイン** は不定を返します。
 
 |入力|SEH 例外|Matherr 例外|
 |-----------|-------------------|-----------------------|
@@ -77,7 +77,9 @@ long double asin( long double x );  // C++ only
 
 ## <a name="remarks"></a>解説
 
-C++ ではオーバーロードが可能であるため、との値を使用して、**アークサイン**のオーバーロードを呼び出すことができ **`float`** **`long double`** ます。 C プログラムでは、**アークサイン**は常にを受け取り、を返し **`double`** ます。
+C++ ではオーバーロードが可能であるため、との値を使用して、 **アークサイン** のオーバーロードを呼び出すことができ **`float`** **`long double`** ます。 C プログラムでは、この関数を呼び出すためにマクロを使用している場合を除き、 \<tgmath.h> **アークサイン** は常にを受け取り、を返し **`double`** ます。
+
+マクロを使用する場合 \<tgmath.h> `asin()` 、引数の型によって、どのバージョンの関数が選択されているかが決まります。 詳細については [、「型汎用の算術演算](../../c-runtime-library/tgmath.md) 」を参照してください。
 
 既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
@@ -86,6 +88,7 @@ C++ ではオーバーロードが可能であるため、との値を使用し�
 |ルーチンによって返される値|必須ヘッダー (C)|必須ヘッダー (C++)|
 |-------------|---------------------|-|
 |**アークサイン**、 **asinf**、 **asinl**|\<math.h>|\<cmath> または \<math.h>|
+|**アークサイン ()** マクロ | \<tgmath.h> ||
 
 ## <a name="example"></a>例
 

@@ -36,16 +36,16 @@ helpviewer_keywords:
 - I/O [CRT], port
 - _inpw function
 ms.assetid: 5d9c2e38-fc85-4294-86d5-7282cc02d1b3
-ms.openlocfilehash: f7b822c4b694969407e32ba26026465fb39bd8d6
-ms.sourcegitcommit: 6b749db14b4cf3a2b8d581fda6fdd8cb98bc3207
+ms.openlocfilehash: aafcd633b2ee04c9ced1520d4ecd1520475d0fea
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82825830"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89556477"
 ---
 # <a name="inp-_inp-inpw-_inpw-_inpd"></a>sct.inp、_inp、inpw、_inpw、_inpd
 
-ポート、`inp`バイト (、 `_inp`)、語 (`inpw`, `_inpw`)、またはダブルワード (`_inpd`) からの入力。
+ポート、バイト ( `inp` 、 `_inp` )、語 ( `inpw` , `_inpw` )、またはダブルワード ( `_inpd` ) からの入力。
 
 > [!IMPORTANT]
 > これらは古い関数です。 Visual Studio 2015 以降では、CRT では使用できません。
@@ -80,11 +80,11 @@ I/O ポート番号。
 
 これらの関数は I/O ポートから直接読み込まれるため、ユーザー コードで使用できません。
 
-と`inp` `inpw`の名前は、関数`_inp`および関数の古い名前`_inpw`で、非推奨とされています。 詳細については、「 [POSIX 関数名](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#posix-function-names)」を参照してください。
+`inp`との `inpw` 名前は、関数および関数の古い名前で、非推奨とされてい `_inp` `_inpw` ます。 詳細については、「 [POSIX 関数名](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#posix-function-names)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |`_inp`|\<conio.h>|
 |`_inpw`|\<conio.h>|

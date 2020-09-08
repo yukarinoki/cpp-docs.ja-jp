@@ -1,6 +1,7 @@
 ---
 title: exp2、exp2f、exp2l
-ms.date: 4/2/2020
+description: Exp2 ()、exp2f ()、および exp2l () の API ref。ここでは、指定された値に2が発生します。
+ms.date: 9/1/2020
 api_name:
 - exp2
 - exp2f
@@ -37,12 +38,12 @@ helpviewer_keywords:
 - exp2f function
 - exp2l function
 ms.assetid: 526e3e10-201a-4610-a886-533f44ece344
-ms.openlocfilehash: d2eb3f6d27e943110c5e82968d4fee949644601f
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 518525a38ef575583fde3b7732561f2fa553dd18
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87234160"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89556620"
 ---
 # <a name="exp2-exp2f-exp2l"></a>exp2、exp2f、exp2l
 
@@ -70,11 +71,12 @@ float exp2f(
 long double exp2l(
    long double x
 );
+#define exp2(X) // Requires C11 or higher
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*x*<br/>
+*閉じる*\
 指数部の値です。
 
 ## <a name="return-value"></a>戻り値
@@ -94,7 +96,9 @@ long double exp2l(
 
 ## <a name="remarks"></a>解説
 
-C++ ではオーバーロードが可能であるため、型と型を受け取って返す**exp2**のオーバーロードを呼び出すことができ **`float`** **`long double`** ます。 C プログラムでは、 **exp2**は常にを受け取り、を返し **`double`** ます。
+C++ ではオーバーロードが可能であるため、型と型を受け取って返す **exp2** のオーバーロードを呼び出すことができ **`float`** **`long double`** ます。 C プログラムでは、この関数を呼び出すためにマクロを使用している場合を除き、 \<tgmath.h> **exp2** **`double`**> <でマクロを使用しない限り、は常にを取得して返します。
+
+マクロを使用する場合 \<tgmath.h> `exp2()` 、引数の型によって、どのバージョンの関数が選択されているかが決まります。 詳細については [、「型汎用の算術演算](../../c-runtime-library/tgmath.md) 」を参照してください。
 
 既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
@@ -102,7 +106,8 @@ C++ ではオーバーロードが可能であるため、型と型を受け取�
 
 |ルーチンによって返される値|C ヘッダー|C++ ヘッダー|
 |-------------|--------------|------------------|
-|**exp**, **、** **expl**|\<math.h>|\<cmath>|
+|**exp2**、 **expf2**、 **expl2**|\<math.h>|\<cmath>|
+|**exp2** マクロ | \<tgmath.h> ||
 
 互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 

@@ -1,6 +1,7 @@
 ---
 title: hypot、hypotf、hypotl、_hypot、_hypotf、_hypotl
-ms.date: 4/2/2020
+description: Hypot、hypotf、hypotl、_hypot、_hypotf、および _hypotl の API リファレンス斜辺を計算します。
+ms.date: 9/1/2020
 api_name:
 - _hypotf
 - hypot
@@ -44,12 +45,12 @@ helpviewer_keywords:
 - calculating hypotenuses
 - _hypot function
 ms.assetid: 6a13887f-bd53-43fc-9d77-5b42d6e49925
-ms.openlocfilehash: 16db920d6e7d3836eb4a395b2029e2f9329f2681
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 199e330dcd78c372a0279cac9f0e96cb47c561e8
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82919841"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89556451"
 ---
 # <a name="hypot-hypotf-hypotl-_hypot-_hypotf-_hypotl"></a>hypot、hypotf、hypotl、_hypot、_hypotf、_hypotl
 
@@ -82,32 +83,36 @@ long double _hypotl(
    long double x,
    long double y
 );
+#define hypotf(X, Y) // Requires C11 or higher
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*x*、 *y*<br/>
+*x*、 *y*\
 浮動小数点値。
 
 ## <a name="return-value"></a>戻り値
 
-成功した場合、 **hypot**は斜辺の長さを返します。オーバーフローの場合、 **hypot**は INF (無限大) を返し、 **Errno**変数は**ERANGE**に設定されます。 **_Matherr**を使用すると、エラー処理を変更できます。
+成功した場合、 **hypot** は斜辺の長さを返します。オーバーフローの場合、 **hypot** は INF (無限大) を返し、 **Errno** 変数は **ERANGE**に設定されます。 **_Matherr**を使用すると、エラー処理を変更できます。
 
 リターン コードの詳細については、「[errno、_doserrno、_sys_errlist、_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」をご覧ください。
 
 ## <a name="remarks"></a>解説
 
-**Hypot**関数は、2辺の*x*と*y*の長さ (つまり、 *x*<sup>2</sup> + *y*<sup>2</sup>の平方根) を指定して、直角三角形の斜辺の長さを計算します。
+**Hypot**関数は、2辺の*x*と*y*の長さ (つまり、 *x*<sup>2</sup>  +  *y*<sup>2</sup>の平方根) を指定して、直角三角形の斜辺の長さを計算します。
 
 以前の標準との互換性のために、先頭にアンダースコアがある関数のバージョンが用意されています。 これらの動作は、先頭にアンダースコアがないバージョンと同じです。 新しいコードには、先頭にアンダースコアがないバージョンを使用することをお勧めします。
+
+マクロを使用する場合 \<tgmath.h> `hypot()` 、引数の型によって、どのバージョンの関数が選択されているかが決まります。 詳細については [、「型汎用の算術演算](../../c-runtime-library/tgmath.md) 」を参照してください。
 
 既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**hypot**、 **hypotf**、 **hypotl**、 **_hypot**、 **_hypotf**、 **_hypotl**|\<math.h>|
+|**hypot** マクロ | \<tgmath.h> |
 
 互換性について詳しくは、「 [Compatibility](../../c-runtime-library/compatibility.md)」をご覧ください。
 
@@ -135,6 +140,6 @@ If a right triangle has sides 3.0 and 4.0, its hypotenuse is 5.0
 
 ## <a name="see-also"></a>関連項目
 
-[浮動小数点サポート](../../c-runtime-library/floating-point-support.md)<br/>
+[浮動小数点のサポート](../../c-runtime-library/floating-point-support.md)<br/>
 [_cabs](cabs.md)<br/>
 [_matherr](matherr.md)<br/>

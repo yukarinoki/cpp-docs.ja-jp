@@ -1,6 +1,7 @@
 ---
 title: exp、expf、expl
-ms.date: 4/2/2020
+description: Exp、tf、および金の API リファレンス指数を計算します。
+ms.date: 08/31/2020
 api_name:
 - expf
 - expl
@@ -35,12 +36,12 @@ helpviewer_keywords:
 - calculating exponentials
 - exp function
 ms.assetid: 7070016d-1143-407e-9e9a-6b059bb88867
-ms.openlocfilehash: 9872a83ba3ec5346b7aed5fb51ee837d3ed827aa
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 44652e5d06d842bd2eb2e280409a1e55fc66f582
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87234173"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89555892"
 ---
 # <a name="exp-expf-expl"></a>exp、expf、expl
 
@@ -64,16 +65,17 @@ float expf(
 long double expl(
    long double x
 );
+#define exp(z) // Requires C11 or higher
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*x*<br/>
-自然対数*の底を*exponentiate する浮動小数点値。
+*閉じる*\
+自然対数 *の底を* exponentiate する浮動小数点値。
 
 ## <a name="return-value"></a>戻り値
 
-**Exp**関数は、成功した場合は、浮動小数点パラメーター *x*の指数値を返します。 つまり、結果は*e*<sup>*x*</sup>になります。ここで、 *e*は自然対数の底です。 オーバーフローの場合、関数は INF (無限大) を返し、アンダーフローでは 0**を返します**。
+**Exp**関数は、成功した場合は、浮動小数点パラメーター *x*の指数値を返します。 つまり、結果は *e*<sup>*x*</sup>になります。ここで、 *e* は自然対数の底です。 オーバーフローの場合、関数は INF (無限大) を返し、アンダーフローでは 0 **を返します** 。
 
 |入力|SEH 例外|Matherr 例外|
 |-----------|-------------------|-----------------------|
@@ -86,15 +88,18 @@ long double expl(
 
 ## <a name="remarks"></a>解説
 
-C++ ではオーバーロードが可能であるため、または引数を受け取る**exp**のオーバーロードを呼び出すことができ **`float`** **`long double`** ます。 C プログラムでは、 **exp**は常にを受け取り、を返し **`double`** ます。
+C++ ではオーバーロードが可能であるため、または引数を受け取る **exp** のオーバーロードを呼び出すことができ **`float`** **`long double`** ます。 C プログラムでは、この関数を呼び出すためにマクロを使用している場合を除き、 \<tgmath.h> **exp** は常にを受け取り、を返し **`double`** ます。
+
+マクロを使用する場合 \<tgmath.h> `exp()` 、引数の型によって、どのバージョンの関数が選択されているかが決まります。 詳細については [、「型汎用の算術演算](../../c-runtime-library/tgmath.md) 」を参照してください。
 
 既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-|機能|必須の C ヘッダー|必須の C++ ヘッダー|
+|関数|必須の C ヘッダー|必須の C++ ヘッダー|
 |--------------|---------------------|---|
 |**exp**, **、** **expl**|\<math.h>|\<cmath> または \<math.h>|
+|**exp** マクロ| \<tgmath.h> || 
 
 互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 

@@ -1,5 +1,6 @@
 ---
 title: _itoa, _itow 関数
+description: _Itoa、_itow の API リファレンス整数を文字列に変換します。
 ms.date: 4/2/2020
 api_name:
 - itoa
@@ -113,16 +114,16 @@ helpviewer_keywords:
 - converting numbers, to strings
 - _itoa function
 ms.assetid: 46592a00-77bb-4e73-98c0-bf629d96cea6
-ms.openlocfilehash: 7fd776c860e8f3ba071d7fad10c99dfb7b3bf2d7
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: c8d64dcc1efdb9371feb98d8674a7a2c41c7ab3a
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88843496"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89555464"
 ---
 # <a name="itoa-_itoa-ltoa-_ltoa-ultoa-_ultoa-_i64toa-_ui64toa-_itow-_ltow-_ultow-_i64tow-_ui64tow"></a>itoa、_itoa、ltoa、_ltoa、ultoa、_ultoa、_i64toa、_ui64toa、_itow、_ltow、_ultow、_i64tow、_ui64tow
 
-整数を文字列に変換します。 これらの関数のセキュリティを強化したバージョンを使用できます。「 [_itoa_s、_itow_s functions」を](itoa-s-itow-s.md)参照してください。
+整数を文字列に変換します。 これらの関数のセキュリティを強化したバージョンについては、「 [_itoa_s、_itow_s 関数」を](itoa-s-itow-s.md)参照してください。
 
 ## <a name="syntax"></a>構文
 
@@ -231,7 +232,7 @@ POSIX 名 **itoa**、 **ltoa**、および **ultoa** は、 **_itoa**、 **_ltoa
 
 文字列変換関数でこれらのマクロのいずれかを使用するには、適切な文字型の変換バッファーを宣言し、整数型にはマクロ値を、ベースにはバッファーディメンションとしてを使用します。 次の表に、表示されるベースの各関数に適したマクロを示します。
 
-|Functions|radix|[マクロ]|
+|機能|radix|[マクロ]|
 |-|-|-|
 |**_itoa**、 **_itow**|16<br/>10<br/>8<br/>2|**_MAX_ITOSTR_BASE16_COUNT**<br/>**_MAX_ITOSTR_BASE10_COUNT**<br/>**_MAX_ITOSTR_BASE8_COUNT**<br/>**_MAX_ITOSTR_BASE2_COUNT**|
 |**_ltoa**、 **_ltow**|16<br/>10<br/>8<br/>2|**_MAX_LTOSTR_BASE16_COUNT**<br/>**_MAX_LTOSTR_BASE10_COUNT**<br/>**_MAX_LTOSTR_BASE8_COUNT**<br/>**_MAX_LTOSTR_BASE2_COUNT**|
