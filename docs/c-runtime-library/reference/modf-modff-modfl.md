@@ -1,5 +1,6 @@
 ---
 title: modf、modff、modfl
+description: Modf、modff、および modff の API リファレンス浮動小数点値を小数部と整数部に分割します。
 ms.date: 4/2/2020
 api_name:
 - modff
@@ -36,12 +37,12 @@ helpviewer_keywords:
 - modff function
 - modfl function
 ms.assetid: b1c7abf5-d476-43ca-a03c-02072a86e32d
-ms.openlocfilehash: 644e50564f1b433921a6a0d8099ea5229db7ed93
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 0d3522079acc8a9d2c8409b1cad78e7f50a7f788
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87216870"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89556763"
 ---
 # <a name="modf-modff-modfl"></a>modf、modff、modfl
 
@@ -76,9 +77,9 @@ long double modf( long double x, long double * intptr );  // C++ only
 
 **Modf**関数は、浮動小数点値*x*を小数部と整数部に分割し、それぞれが*x*と同じ符号を持ちます。 *X*の符号付き小数部が返されます。 整数部分は、 *intptr*に浮動小数点値として格納されます。
 
-**modf**には、ストリーミング SIMD 拡張命令 2 (SSE2) を使用する実装があります。 SSE2 実装の使い方の詳細および制約については、「[_set_SSE2_enable](set-sse2-enable.md)」をご覧ください。
+**modf** には、ストリーミング SIMD 拡張命令 2 (SSE2) を使用する実装があります。 SSE2 実装の使い方の詳細および制約については、「[_set_SSE2_enable](set-sse2-enable.md)」をご覧ください。
 
-C++ ではオーバーロードが可能であるため、またはパラメーターを受け取って返す**modf**のオーバーロードを呼び出すことができ **`float`** **`long double`** ます。 C プログラムでは、 **modf**は常に2つの double 値を受け取り、double 値を返します。
+C++ ではオーバーロードが可能であるため、またはパラメーターを受け取って返す **modf** のオーバーロードを呼び出すことができ **`float`** **`long double`** ます。 C プログラムでは、 **modf** は常に2つの double 値を受け取り、double 値を返します。
 
 既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
@@ -86,7 +87,7 @@ C++ ではオーバーロードが可能であるため、またはパラメー�
 
 |ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
-|**modf**、 **modff**、 **modff**|40u-c\<math.h><br /><br /> C++:、 \<cmath> または\<math.h>|
+|**modf**、 **modff**、 **modff**|40u-c \<math.h><br /><br /> C++:、 \<cmath> または \<math.h>|
 
 互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 

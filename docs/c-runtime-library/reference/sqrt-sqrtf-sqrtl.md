@@ -1,6 +1,7 @@
-﻿---
+---
 title: sqrt、sqrtf、sqrtl
-ms.date: 6/5/2020
+description: Sqrt、sqrtf、sqrtf の API リファレンス浮動小数点数の平方根を計算します。
+ms.date: 08/31/2020
 api_name:
 - sqrtl
 - sqrtf
@@ -37,12 +38,12 @@ helpviewer_keywords:
 - calculating square roots
 - square roots, calculating
 ms.assetid: 2ba9467b-f172-41dc-8f10-b86f68fa813c
-ms.openlocfilehash: 6b769be6bcb0fba8c322e3df7a9ac96e4e83a85d
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 17526b4e4a7eca5d36c01069dbe975bb035d1f58
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87229364"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89556776"
 ---
 # <a name="sqrt-sqrtf-sqrtl"></a>sqrt、sqrtf、sqrtl
 
@@ -66,34 +67,38 @@ float sqrtf(
 long double sqrtl(
    long double x
 );
+#define sqrt(x) // Requires C11 or higher
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*x*<br/>
+*閉じる*\
 負でない浮動小数点値
 
 ## <a name="remarks"></a>解説
 
-C++ ではオーバーロードが可能であるため、または型を受け取る**sqrt**のオーバーロードを呼び出すことができ **`float`** **`long double`** ます。 C プログラムでは、 **sqrt**は常にを受け取り、を返し **`double`** ます。
+C++ ではオーバーロードが可能であるため、または型を受け取る **sqrt** のオーバーロードを呼び出すことができ **`float`** **`long double`** ます。 C プログラムでは、この関数を呼び出すためにマクロを使用している場合を除き \<tgmath.h> 、 **sqrt** は常にを受け取り、を返し **`double`** ます。
+
+マクロを使用する場合 \<tgmath.h> `sqrt()` 、引数の型によって、どのバージョンの関数が選択されているかが決まります。 詳細については [、「型汎用の算術演算](../../c-runtime-library/tgmath.md) 」を参照してください。
 
 既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ## <a name="return-value"></a>戻り値
 
-**Sqrt**関数は*x*の平方根を返します。 既定では、 *x*が負の場合、 **sqrt**は無限の NaN を返します。
+**Sqrt**関数は*x*の平方根を返します。 既定では、 *x* が負の場合、 **sqrt** は無限の NaN を返します。
 
-|入力|SEH 例外|**_matherr**例外的|
+|入力|SEH 例外|**_matherr** 例外的|
 |-----------|-------------------|--------------------------|
 |± QNAN、IND|なし|_DOMAIN|
 |- ∞|なし|_DOMAIN|
 |x<0|なし|_DOMAIN|
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-|機能|C ヘッダー|C++ ヘッダー|
+|関数|C ヘッダー|C++ ヘッダー|
 |--------------|--------------|------------------|
 |**sqrt**、 **sqrtf**、 **sqrtf**|\<math.h>|\<cmath>|
+|**sqrt ()** マクロ | \<tgmath.h> ||
 
 互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 

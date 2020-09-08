@@ -1,6 +1,7 @@
 ---
 title: asinh、asinhf、asinhl
-ms.date: 4/2/2020
+description: Asinh、asinhf、および asinhf の API リファレンス浮動小数点値の逆双曲線正弦を計算する。
+ms.date: 08/31/2020
 api_name:
 - asinh
 - asinhf
@@ -34,12 +35,12 @@ helpviewer_keywords:
 - asinhl function
 - asinhf function
 ms.assetid: 4488babe-1a7e-44ca-8b7b-c2db0a70084f
-ms.openlocfilehash: 0443648d33929082042881c14562b34356cb6063
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 332e6bfc95bd297d703d879cdd468b450cfdc763
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87232652"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89556789"
 ---
 # <a name="asinh-asinhf-asinhl"></a>asinh、asinhf、asinhl
 
@@ -51,9 +52,8 @@ ms.locfileid: "87232652"
 double asinh( double x );
 float asinhf( float x );
 long double asinhl( long double x );
-```
+#define asinh(X) // Requires C11 or higher
 
-```cpp
 float asinh( float x );  // C++ only
 long double asinh( long double x );  // C++ only
 ```
@@ -67,21 +67,25 @@ long double asinh( long double x );  // C++ only
 
 **Asinh**関数は、 *x*の逆ハイパーボリックサイン (アークハイパーボリックサイン) を返します。 この関数は浮動小数点ドメインで有効です。 *X*が簡易な NaN、無限、または無限大の場合は、同じ値が返されます。
 
-|入力|SEH 例外|**_matherr**例外的|
+|入力|SEH 例外|**_matherr** 例外的|
 |-----------|-------------------|--------------------------|
 |± QNAN、IND、INF|なし|なし|
 
 ## <a name="remarks"></a>解説
 
-C++ を使用すると、またはの値を受け取って返す**asinh**のオーバーロードを呼び出すことができ **`float`** **`long double`** ます。 C プログラムでは、 **asinh**は常にを受け取り、を返し **`double`** ます。
+C++ を使用すると、またはの値を受け取って返す **asinh** のオーバーロードを呼び出すことができ **`float`** **`long double`** ます。 C プログラムでは、この関数を呼び出すためにマクロを使用している場合を除き \<tgmath.h> 、 **asinh** は常にを受け取り、を返し **`double`** ます。
+
+マクロを使用する場合 \<tgmath.h> `asinh()` 、引数の型によって、どのバージョンの関数が選択されているかが決まります。 詳細については [、「型汎用の算術演算](../../c-runtime-library/tgmath.md) 」を参照してください。
+
 
 既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-|機能|必須の C ヘッダー|必須の C++ ヘッダー|
+|関数|必須の C ヘッダー|必須の C++ ヘッダー|
 |--------------|--------------|------------------|
-|**asinh**、 **asinhf**、 **asinhf**|\<math.h>|\<cmath>または、 \<<|
+|**asinh**、 **asinhf**、 **asinhf**|\<math.h>|\<cmath> または \<math.h>|
+|**asinh ()** マクロ | \<tgmath.h> ||
 
 互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 

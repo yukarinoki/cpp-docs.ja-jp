@@ -1,5 +1,6 @@
 ---
 title: abs、labs、llabs、_abs64
+description: Abs、labs、llabs、_abs64 の API リファレンス値の絶対値を計算します。
 ms.date: 04/05/2018
 api_name:
 - abs
@@ -39,12 +40,12 @@ helpviewer_keywords:
 - _abs64 function
 - calculating absolute values
 ms.assetid: 60f789d1-4a1e-49f5-9e4e-0bdb277ea26a
-ms.openlocfilehash: 96363f8d2139a5c75ee25a2c43b4c7ef55094f13
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 4527950e4f5577b9285d12309742accb64b9a24a
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87221992"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89556750"
 ---
 # <a name="abs-labs-llabs-_abs64"></a>abs、labs、llabs、_abs64
 
@@ -69,27 +70,27 @@ float abs( float n );   // C++ only
 
 ### <a name="parameters"></a>パラメーター
 
-*n*<br/>
+*非該当*\
 数値。
 
 ## <a name="return-value"></a>戻り値
 
-**Abs**、 **labs**、 **llabs** 、および **_abs64**関数は、パラメーター *n*の絶対値を返します。 エラーの戻り値はありません。
+**Abs**、 **labs**、 **llabs**、および **_abs64**関数は、パラメーター *n*の絶対値を返します。 エラーの戻り値はありません。
 
 ## <a name="remarks"></a>解説
 
-C++ ではオーバーロードが可能であるため、 **abs** 、、 **`long`** **`long long`** **`float`** 、 **`double`** 、およびの値を受け取って返す abs のオーバーロードを呼び出すことができ **`long double`** ます。 これらのオーバーロードは、ヘッダーで定義されてい \<cmath> ます。 C プログラムでは、 **abs**は常にを受け取り、を返し **`int`** ます。
+C++ ではオーバーロードが可能であるため、 **abs** 、、 **`long`** **`long long`** **`float`** 、 **`double`** 、およびの値を受け取って返す abs のオーバーロードを呼び出すことができ **`long double`** ます。 これらのオーバーロードは、ヘッダーで定義されてい \<cmath> ます。 C プログラムでは、 **abs** は常にを受け取り、を返し **`int`** ます。
 
-**Microsoft 固有**: 任意の整数型を使用して表すことができる負の整数の範囲は、その型を使用して表すことができる正の整数の範囲より大きいため、変換できないこれらの関数に引数を指定することができます。 引数の絶対値を戻り値の型で表すことができない場合、 **abs**関数は引数の値を変更せずに返します。 具体的には、`abs(INT_MIN)` は `INT_MIN` を返し、`labs(LONG_MIN)` は `LONG_MIN` を返します。また `llabs(LLONG_MIN)` は `LLONG_MIN` を返し、`_abs64(_I64_MIN)` は `_I64_MIN` を返します。 これは、 **abs**関数を使用して正の値を保証することができないことを意味します。
+**Microsoft 固有**: 任意の整数型を使用して表すことができる負の整数の範囲は、その型を使用して表すことができる正の整数の範囲より大きいため、変換できないこれらの関数に引数を指定することができます。 引数の絶対値を戻り値の型で表すことができない場合、 **abs** 関数は引数の値を変更せずに返します。 具体的には、`abs(INT_MIN)` は `INT_MIN` を返し、`labs(LONG_MIN)` は `LONG_MIN` を返します。また `llabs(LLONG_MIN)` は `LLONG_MIN` を返し、`_abs64(_I64_MIN)` は `_I64_MIN` を返します。 これは、 **abs** 関数を使用して正の値を保証することができないことを意味します。
 
 ## <a name="requirements"></a>必要条件
 
 |ルーチンによって返される値|必須の C ヘッダー|必須の C++ ヘッダー|
 |-------------|-----------------------|---------------------------|
-|**abs**、 **labs**、 **llabs**|\<math.h> または \<stdlib.h>|\<cmath>、\<cstdlib>、\<stdlib.h>、または \<math.h>|
+|**abs**、 **labs**、 **llabs**|\<math.h> または \<stdlib.h>|\<cmath>、\<cstdlib>、\<stdlib.h> または \<math.h>|
 |**_abs64**|\<stdlib.h>|\<cstdlib> または \<stdlib.h>|
 
-C++ で**abs**のオーバーロードされたバージョンを使用するには、ヘッダーを含める必要があり \<cmath> ます。
+C++ で **abs** のオーバーロードされたバージョンを使用するには、ヘッダーを含める必要があり \<cmath> ます。
 
 ## <a name="example"></a>例
 
