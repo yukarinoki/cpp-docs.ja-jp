@@ -5,12 +5,12 @@ ms.topic: reference
 f1_keywords:
 - event/Microsoft::WRL::Callback
 ms.assetid: afb15d25-3230-44f7-b321-e17c54872943
-ms.openlocfilehash: 138ad9d5d3bd4cf9e5263845f950dbbe7971fde6
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 8615b92f9b46dcfc6e36867c51eeefdb7a5f5e81
+ms.sourcegitcommit: 0df2b7ab4e81284c5248e4584767591dcc1950c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80214137"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89609088"
 ---
 # <a name="callback-function-wrl"></a>Callback 関数 (WRL)
 
@@ -24,7 +24,7 @@ template<
    typename TCallback
 >
 ComPtr<TDelegateInterface> Callback(
-   TCallbackcallback
+   TCallback callback
 );
 template<
    typename TDelegateInterface,
@@ -242,7 +242,7 @@ ComPtr<TDelegateInterface> Callback(
 
 ## <a name="remarks"></a>解説
 
-デリゲートオブジェクトの基本は、`IInspectable`ではなく `IUnknown`である必要があります。
+デリゲートオブジェクトの基本は、ではなくである必要があり `IUnknown` `IInspectable` ます。
 
 ## <a name="requirements"></a>必要条件
 
@@ -250,6 +250,6 @@ ComPtr<TDelegateInterface> Callback(
 
 **名前空間:** Microsoft::WRL
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[Microsoft::WRL 名前空間](microsoft-wrl-namespace.md)
+[Microsoft:: WRL 名前空間](microsoft-wrl-namespace.md)

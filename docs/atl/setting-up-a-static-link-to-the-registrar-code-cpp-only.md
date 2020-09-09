@@ -1,29 +1,30 @@
 ---
-title: レジストラー コード (C++ のみ) に静的にリンクの設定
-ms.date: 11/04/2016
+title: レジストラー コードに静的リンクを設定する (C++ のみ)
+description: C++ コードを ATL レジストラーコードに静的にリンクする方法。
+ms.date: 09/03/2020
 helpviewer_keywords:
 - statically linking to ATL Registrar code
 - linking [C++], to ATL Registrar code
 ms.assetid: 835f5885-87a6-48fa-91e6-60988ee65538
-ms.openlocfilehash: b95bd17abca3237710956f3a1bf1b1d6fa9df51e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f08f7d9433ae1344c7a98a5c52502d03bad21e91
+ms.sourcegitcommit: 0df2b7ab4e81284c5248e4584767591dcc1950c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62196667"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89609159"
 ---
-# <a name="setting-up-a-static-link-to-the-registrar-code-c-only"></a>レジストラー コード (C++ のみ) に静的にリンクの設定
+# <a name="setting-up-a-static-link-to-the-registrar-code-c-only"></a>レジストラーコードへの静的リンクの設定 (C++ のみ)
 
-C++ クライアントは、レジストラーのコードに静的にリンクを作成できます。 レジストラーのパーサーの静的リンクは、リリース ビルドに約 5 K を追加します。
+C++ クライアントは、レジストラーのコードへの静的なリンクを作成できます。 レジストラーのパーサーの静的なリンクは、リリースビルドに約5K を追加します。
 
-静的リンクを設定する最も簡単な方法は、指定した前提としています。[代入](reference/registry-macros.md#declare_registry_resourceid)オブジェクトの宣言でします。 (これは、ATL で使用される既定の指定)
+静的リンクを設定する最も簡単な方法は、オブジェクトの宣言でを指定していることを前提としてい [`DECLARE_REGISTRY_RESOURCEID`](reference/registry-macros.md#declare_registry_resourceid) ます。 (これは ATL によって使用される既定の仕様です)。
 
-## <a name="to-create-a-static-link-using-declareregistryresourceid"></a>代入を使用して静的リンクを作成するには
+## <a name="to-create-a-static-link-using-declare_registry_resourceid"></a>を使用して静的リンクを作成するには `DECLARE_REGISTRY_RESOURCEID`
 
-1. 指定[/D](../build/reference/d-preprocessor-definitions.md)  **\_ATL\_静的\_レジストリ**の代わりに **/D \_ATL\_DLL**します。
+1. **`/D _ATL_STATIC_REGISTRY`** **`/D _ATL_DLL`** CL コマンドラインで、の代わりにを指定します。 詳細については、「[`/D`](../build/reference/d-preprocessor-definitions.md)」を参照してください。
 
-1. 再コンパイルします。
+1. Recompile.
 
 ## <a name="see-also"></a>関連項目
 
-[レジストリ コンポーネント (レジストラー)](../atl/atl-registry-component-registrar.md)
+[レジストリコンポーネント (レジストラー)](../atl/atl-registry-component-registrar.md)

@@ -6,12 +6,12 @@ ms.date: 07/25/2020
 helpviewer_keywords:
 - keywords [C++]
 ms.assetid: d7ca94a8-f785-41ce-9f73-d3c4fd508489
-ms.openlocfilehash: 13b174a40621b8aeeae58d4ccae8e4e51c8fdd44
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 96fb4e6a51630f3b5297c6428297980b5c51ca36
+ms.sourcegitcommit: 0df2b7ab4e81284c5248e4584767591dcc1950c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88843327"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89609148"
 ---
 # <a name="keywords-c"></a>C++ キーワード
 
@@ -288,7 +288,7 @@ Microsoft 拡張機能を有効にすると、Microsoft 固有のキーワード
 
 <sup>f</sup> Managed Extensions for C++ にのみ適用されます。 この構文は現在非推奨とされます。 詳細については、「[Component Extensions for Runtime Platforms](../extensions/component-extensions-for-runtime-platforms.md)」を参照してください。
 
-<sup>f</sup> C++/Cli に適用可能
+C++/CLI に適用される<sup>g</sup>
 
 ## <a name="see-also"></a>関連項目
 

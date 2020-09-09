@@ -1,5 +1,6 @@
 ---
 title: assert マクロ、_assert、_wassert
+description: Assert マクロと関数が C ランタイムに与える影響。
 ms.date: 11/04/2016
 api_name:
 - assert
@@ -31,12 +32,12 @@ helpviewer_keywords:
 - assert function
 - assert macro
 ms.assetid: a9ca031a-648b-47a6-bdf1-65fc7399dd40
-ms.openlocfilehash: 173974cfd9d3f9b3fc054bb71ad70b757f8ef819
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 071424f2201ceda43438fe1056801811fe444a01
+ms.sourcegitcommit: 0df2b7ab4e81284c5248e4584767591dcc1950c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87232626"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89609085"
 ---
 # <a name="assert-macro-_assert-_wassert"></a>assert マクロ、_assert、_wassert
 
@@ -71,38 +72,48 @@ void _wassert(
 *ファイル名*<br/>
 アサーションが失敗したソース ファイルの名前。
 
-*直線*<br/>
+*line*<br/>
 失敗したアサーションのソース ファイルの行番号。
 
 ## <a name="remarks"></a>解説
 
-**Assert**マクロは、通常、プログラム開発中の論理エラーを識別するために使用されます。 予期しない条件が発生したときにプログラムの実行*expression*を停止するに **`false`** は、プログラムが正しく動作していないときにのみに評価されるように expression 引数を実装します。 マクロ**NDEBUG**を定義することで、コンパイル時にアサーションチェックをオフにすることができます。 **/Dndebug**コマンドラインオプションを使用して、ソースファイルを変更せずに**assert**マクロをオフにすることができます。 を含める前にディレクティブを使用して、ソースコード内の**assert**マクロをオフにすることができ `#define NDEBUG` \<assert.h> ます。
+`assert` マクロは通常、プログラム開発中の論理エラーを識別するために使用されます。 予期しない条件が発生したときにプログラムの実行*expression*を停止するに **`false`** は、プログラムが正しく動作していないときにのみに評価されるように expression 引数を実装します。 マクロ **NDEBUG**を定義することで、コンパイル時にアサーションチェックをオフにすることができます。 &lt;assert.h&gt; が組み込まれる前に `assert` コマンド ライン オプションを使用することにより、ソース ファイルを変更せずに **assert** マクロをオフにすることができます。 `assert` `#define NDEBUG` を含める前にディレクティブを使用して、ソースコードのマクロをオフにすることができ \<assert.h> ます。
 
-*Expression*が (0) に評価された場合、 **assert**マクロは診断メッセージを出力 **`false`** し、 [abort](abort.md)を呼び出してプログラムの実行を終了します。 *Expression*が **`true`** (0 以外) の場合、アクションは実行されません。 診断メッセージには、失敗した式、ソース ファイルの名前、アサーションが失敗した行番号が含まれます。
+`assert`*式*が (0) に評価され、が呼び出されてプログラムの実行が停止されると、マクロは診断メッセージを出力し **`false`** [`abort`](abort.md) ます。 *Expression*が **`true`** (0 以外) の場合、アクションは実行されません。 診断メッセージには、失敗した式、ソース ファイルの名前、アサーションが失敗した行番号が含まれます。
 
-診断メッセージはワイド文字で出力されます。 したがって、式に Unicode 文字がある場合でも、予期していたとおりに機能します。
+診断メッセージは、ワイド文字 () で出力され `wchar_t` ます。 そのため、式に Unicode 文字がある場合でも、予期したとおりに動作します。
 
-ルーチンを呼び出したアプリケーションの種類に基づいて診断メッセージの出力先が決まります。 コンソールアプリケーションは、常に**stderr**を通じてメッセージを受信します。 Windows ベースのアプリケーションでは、 **assert**は windows [MessageBox](/windows/win32/api/winuser/nf-winuser-messagebox)関数を呼び出して、メッセージボックスを作成し、メッセージを **[OK** ] ボタンと共に表示します。 ユーザーが **[OK]** をクリックすると、プログラムはすぐに中止されます。
+ルーチンを呼び出したアプリケーションの種類に基づいて診断メッセージの出力先が決まります。 コンソールアプリケーションは、 **stderr**を通じてメッセージを受信します。 Windows ベースのアプリケーションでは、は、 `assert` Windows [MessageBox](/windows/win32/api/winuser/nf-winuser-messagebox) 関数を呼び出してメッセージボックスを作成し、3つのボタン ( **Abort**、 **Retry**、および **Ignore**) を使用してメッセージを表示します。 ユーザーが **[中止]** をクリックすると、プログラムはすぐに中止されます。 ユーザーが **[再試行]** をクリックすると、Just-In-Time (JIT) デバッグが有効になっている場合、デバッガーが呼び出され、ユーザーはプログラムをデバッグできます。 ユーザーが [ **無視**] をクリックすると、プログラムは通常の実行を続行します。 エラー状態が存在するときに [ **無視** ] をクリックすると、呼び出し元のコードの事前条件が満たされていないため、未定義の動作が発生する可能性があります。
 
-アプリケーションがランタイムライブラリのデバッグバージョンにリンクされている場合、 **assert**は、 **Abort**、 **Retry**、および**Ignore**の3つのボタンを含むメッセージボックスを作成します。 ユーザーが **[中止]** をクリックすると、プログラムはすぐに中止されます。 ユーザーが **[再試行]** をクリックすると、Just-In-Time (JIT) デバッグが有効になっている場合、デバッガーが呼び出され、ユーザーはプログラムをデバッグできます。 ユーザーが [**無視**] をクリックすると、通常の実行である**assert**が続行されます。 **[OK** ] ボタンを使用したメッセージボックスの作成です。 なお、エラー状況が存在するときに **[無視]** をクリックすると、"未定義の動作" という結果になることがあります。
+アプリの種類に関係なく既定の出力動作をオーバーライドするには、を呼び出して、 [`_set_error_mode`](set-error-mode.md) stderr から stderr への出力と表示-ダイアログボックスの動作を選択します。
+
+に `assert` よってメッセージが表示されると、が呼び出され [`abort`](abort.md) ます。このダイアログボックスには、[  **中止**]、[ **再試行**]、および [ **無視** ] ボタンが表示されます。 [`abort`](abort.md) プログラムを終了します。そのため、[ **再試行** ] と [ **無視** ] ボタンをクリックしても、呼び出し後のプログラムの実行は再開されません `assert` 。 `assert`ダイアログボックスが表示されている場合、 [`abort`](abort.md) ダイアログボックスは表示されません。 [`abort`](abort.md)ダイアログボックスが表示されるのは、が `assert` stderr に出力を送信するときだけです。
+
+上記の動作の結果、デバッグモードでの呼び出しの後にダイアログボックスが常に表示され `assert` ます。 各ボタンの動作は次の表のようにキャプチャされます。
+
+|エラーモード|Stderr への出力 (コンソール/_OUT_TO_STDERR)|[表示] ダイアログボックス (Windows/_OUT_TO_MSGBOX)|
+|----------|----------------|------------------|
+|中止|終了コード3を使用してすぐに終了する|終了コード3を使用してすぐに終了する|
+|再試行|実行中にデバッガーを中断 `abort`|実行中にデバッガーを中断 `assert`|
+|無視|終了の終了日 `abort`|Assert が起動されなかったかのようにプログラムを続行します (呼び出し元のコードの事前条件が満たされていないため、未定義の動作が発生する可能性があります)|
 
 CRT デバッグの詳細については、「 [CRT のデバッグ技術](/visualstudio/debugger/crt-debugging-techniques)」を参照してください。
 
-**_Assert**関数と **_wassert**関数は、内部 CRT 関数です。 これらは、アサーションをサポートするためのオブジェクト ファイルに必要なコードを最小限に抑えるうえで役立ちます。 これらの関数を直接呼び出すことはお勧めしません。
+`_assert` 関数と `_wassert` 関数は、内部 CRT 関数です。 これらは、アサーションをサポートするためのオブジェクト ファイルに必要なコードを最小限に抑えるうえで役立ちます。 これらの関数を直接呼び出すことはお勧めしません。
 
-**Assert**マクロは、 **NDEBUG**が定義されていない場合に、C ランタイムライブラリのリリースバージョンとデバッグバージョンの両方で有効になります。 **NDEBUG**が定義されている場合、マクロは使用できますが、引数は評価されず、効果はありません。 この設定を有効にすると、 **assert**マクロは実装のために **_wassert**を呼び出します。 その他のアサーション マクロの [_ASSERT](assert-asserte-assert-expr-macros.md)、[_ASSERTE](assert-asserte-assert-expr-macros.md)、[_ASSERT_EXPR](assert-asserte-assert-expr-macros.md) も使用できますが、これらは、[_DEBUG](../../c-runtime-library/debug.md) マクロが定義されており、かつ C ランタイム ライブラリのデバッグ バージョンとリンクされたコードにある場合にのみ、渡される式を評価します。
+マクロは、 `assert` **NDEBUG** が定義されていない場合に、C ランタイムライブラリのリリースバージョンとデバッグバージョンの両方で有効になります。 **NDEBUG**が定義されている場合、マクロは使用できますが、引数は評価されず、効果はありません。 有効にすると、 `assert` マクロは `_wassert` その実装に対してを呼び出します。 その他のアサーション マクロの [_ASSERT](assert-asserte-assert-expr-macros.md)、[_ASSERTE](assert-asserte-assert-expr-macros.md)、[_ASSERT_EXPR](assert-asserte-assert-expr-macros.md) も使用できますが、これらは、[_DEBUG](../../c-runtime-library/debug.md) マクロが定義されており、かつ C ランタイム ライブラリのデバッグ バージョンとリンクされたコードにある場合にのみ、渡される式を評価します。
 
 ## <a name="requirements"></a>必要条件
 
 |ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
-|**assert**、 **_wassert**|\<assert.h>|
+|`assert`, `_wassert`|\<assert.h>|
 
-**_Assert**関数の署名は、ヘッダーファイルでは使用できません。 **_Wassert**関数のシグネチャは、 **NDEBUG**マクロが定義されていない場合にのみ使用できます。
+関数の署名は、 `_assert` ヘッダーファイルでは使用できません。 関数の署名 `_wassert` は、 **NDEBUG** マクロが定義されていない場合にのみ使用できます。
 
 ## <a name="example"></a>例
 
-このプログラムでは、 **analyze_string**関数は**assert**マクロを使用して、文字列と長さに関連するいくつかの条件をテストします。 条件のいずれかが失敗した場合、プログラムは失敗の原因を示すメッセージを出力します。
+このプログラムでは、 **analyze_string** 関数はマクロを使用して、 `assert` 文字列と長さに関連するいくつかの条件をテストします。 条件のいずれかが失敗した場合、プログラムは失敗の原因を示すメッセージを出力します。
 
 ```C
 // crt_assert.c
@@ -143,7 +154,7 @@ Analyzing string '(null)'
 Assertion failed: string != NULL, file crt_assert.c, line 25
 ```
 
-アサーションが失敗した後、オペレーティング システムとランタイム ライブラリのバージョンに応じて、以下のような内容のメッセージ ボックスが表示される可能性があります。
+アサーションエラーが発生すると、オペレーティングシステムとランタイムライブラリのバージョンによっては、次のようなメッセージボックスが表示される場合があります。
 
 ```Output
 A problem caused the program to stop working correctly. Windows will close the program and notify you if a solution is available.
@@ -155,8 +166,8 @@ A problem caused the program to stop working correctly. Windows will close the p
 
 [エラー処理](../../c-runtime-library/error-handling-crt.md)<br/>
 [プロセスと環境の制御](../../c-runtime-library/process-and-environment-control.md)<br/>
-[を呼び出してプログラム実行を終了する際、](abort.md)<br/>
-[raise](raise.md)<br/>
+[取り消し](abort.md)<br/>
+[発生](raise.md)<br/>
 [signal](signal.md)<br/>
 [_ASSERT、_ASSERTE、_ASSERT_EXPR マクロ](assert-asserte-assert-expr-macros.md)<br/>
 [_DEBUG](../../c-runtime-library/debug.md)<br/>
