@@ -51,12 +51,12 @@ helpviewer_keywords:
 - _strtod_l function
 - string conversion, to floating point values
 ms.assetid: 0444f74a-ba2a-4973-b7f0-1d77ba88c6ed
-ms.openlocfilehash: aa6f40c91f9be906e3f51df5788483410f6077a3
-ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
+ms.openlocfilehash: 1e75fe39c8ab7020a088307421926327d4043ba8
+ms.sourcegitcommit: efed9ed109862c6c2a042f2663b680e8ca4e16a1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89554956"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89933828"
 ---
 # <a name="strtod-_strtod_l-wcstod-_wcstod_l"></a>strtod、_strtod_l、wcstod、_wcstod_l
 
@@ -120,7 +120,7 @@ NULL で終わる変換対象の文字列。
 |**_tcstod**|**strtod**|**strtod**|**wcstod**|
 |**_tcstod_l**|**_strtod_l**|**_strtod_l**|**_wcstod_l**|
 
-現在のロケールの **LC_NUMERIC** カテゴリの設定によって、 *strsource*の小数点文字が認識されます。 詳細については、「[setlocale](setlocale-wsetlocale.md)」をご覧ください。 **_L**サフィックスが付いていない関数は、現在のロケールを使用します。**_strtod_l**は、渡された*ロケール*を代わりに使用する点を除いて、 **_strtod_l**と同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
+現在のロケールの **LC_NUMERIC** カテゴリの設定によって、 *strsource*の小数点文字が認識されます。 詳細については、「[setlocale](setlocale-wsetlocale.md)」をご覧ください。 **_L**サフィックスが付いていない関数は、現在のロケールを使用します。**_strtod_l**は **_strtod**と同じですが、前者では代わりに渡された*ロケール*を使用します。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
 
 *Endptr*が**NULL**でない場合は、スキャンを停止した文字へのポインターが*endptr*が指す位置に格納されます。 変換を実行できない場合 (有効な数字が見つからなかった場合、または無効な base を指定した場合)、 *Strsource* の値は *endptr*が指す位置に格納されます。
 
