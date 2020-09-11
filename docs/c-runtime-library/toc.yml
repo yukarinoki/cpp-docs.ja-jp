@@ -64,6 +64,8 @@
       href: ../c-runtime-library/crt-initialization.md
     - name: CRT でのグローバル状態
       href: ../c-runtime-library/global-state.md
+    - name: ジェネリック型数値演算
+      href: ../c-runtime-library/tgmath.md
 - name: カテゴリ別ユニバーサル C ランタイム ルーチン
   expanded: false
   items:
