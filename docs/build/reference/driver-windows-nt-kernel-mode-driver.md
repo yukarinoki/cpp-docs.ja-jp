@@ -10,18 +10,18 @@ helpviewer_keywords:
 - DRIVER linker option
 - /DRIVER linker option
 ms.assetid: aeee8e28-5d97-40f5-ba16-9f370fe8a1b8
-ms.openlocfilehash: 5639344ede4007bd66a3d51043f4acb423426b94
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: c935c20d6c1c009cff64d48e0c0122c8b91bbba3
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88842976"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90041160"
 ---
 # <a name="driver-windows-nt-kernel-mode-driver"></a>/DRIVER (Windows NT カーネル モード ドライバー)
 
 >/DRIVER [: UPONLY |: WDM]
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>注釈
 
 Windows NT カーネルモードドライバーをビルドするには、 **/DRIVER** リンカーオプションを使用します。
 
@@ -33,9 +33,9 @@ Windows NT カーネルモードドライバーをビルドするには、 **/DR
 
 **/DRIVER**が指定されている場合:
 
-- **/Fixed: NO** が有効です。 詳細については、「[/FIXED (固定ベース アドレス)](fixed-fixed-base-address.md)」を参照してください。
+- **/Fixed: NO** が有効です。 詳細については、「 [/fixed (固定ベースアドレス)](fixed-fixed-base-address.md)」を参照してください。
 
-- 出力ファイルの拡張子は、.sys に設定されます。 **/Out**を使用して、既定のファイル名と拡張子を変更します。 詳細については、「[/OUT (出力ファイル名)](out-output-file-name.md)」を参照してください。
+- 出力ファイルの拡張子は、.sys に設定されます。 **/Out**を使用して、既定のファイル名と拡張子を変更します。 詳細については、「 [/out (出力ファイル名)](out-output-file-name.md)」を参照してください。
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのリンカー オプションを設定するには
 
@@ -49,9 +49,9 @@ Windows NT カーネルモードドライバーをビルドするには、 **/DR
 
 ### <a name="to-set-this-linker-option-programmatically"></a>このリンカーをコードから設定するには
 
-- 「 [VCLinkerTool プロパティ](/dotnet/api/microsoft.visualstudio.vcprojectengine.vclinkertool.driver?view=visualstudiosdk-2017#Microsoft_VisualStudio_VCProjectEngine_VCLinkerTool_driver)」を参照してください。
+- 「 [VCLinkerTool プロパティ](/dotnet/api/microsoft.visualstudio.vcprojectengine.vclinkertool.driver)」を参照してください。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [MSVC リンカーのリファレンス](linking.md)<br/>
 [MSVC リンカー オプション](linker-options.md)

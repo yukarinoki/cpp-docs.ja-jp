@@ -2,22 +2,22 @@
 title: グラフィックス (C++ AMP)
 ms.date: 11/04/2016
 ms.assetid: 190a98a4-5f7d-442e-866b-b374ca74c16f
-ms.openlocfilehash: e0ea4de44f5215f47fe8c1a5e018bd91a82708ac
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 3f68766c2c38b74df6e57aaa52419baf5d1151a3
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87182812"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90041459"
 ---
 # <a name="graphics-c-amp"></a>グラフィックス (C++ AMP)
 
-C++ AMP には、Gpu のテクスチャサポートにアクセスするために使用できる[Concurrency:: graphics](../../parallel/amp/reference/concurrency-graphics-namespace.md)名前空間にいくつかの api が含まれています。 一般的なシナリオを次に示します。
+C++ AMP には、Gpu のテクスチャサポートにアクセスするために使用できる [Concurrency:: graphics](../../parallel/amp/reference/concurrency-graphics-namespace.md) 名前空間にいくつかの api が含まれています。 一般的なシナリオを次に示します。
 
 - [テクスチャ](../../parallel/amp/reference/texture-class.md)クラスは、計算用のデータコンテナーとして使用し、GPU ハードウェアのテクスチャキャッシュとレイアウトの*空間の局所性*を活用できます。 空間的局所性は相互に物理的に近い場所に存在するデータ要素のプロパティです。
 
 - ランタイムには、非計算シェーダーとの効率的な相互運用性が提供されます。 ピクセル、頂点、テセレーション、およびハルの各シェーダーは、C++ AMP 計算で使用できるテクスチャを頻繁に使用または生成します。
 
-- C++ AMP のグラフィックス API には、サブワードがパックされたバッファーにアクセスするための別の方法が用意されています。 8ビットまたは16ビットのスカラーで構成されている*テクセル*(テクスチャ要素) を表す形式を持つテクスチャは、このようなパックされたデータストレージにアクセスできます。
+- C++ AMP のグラフィックス API には、サブワードがパックされたバッファーにアクセスするための別の方法が用意されています。 8ビットまたは16ビットのスカラーで構成されている *テクセル* (テクスチャ要素) を表す形式を持つテクスチャは、このようなパックされたデータストレージにアクセスできます。
 
 ## <a name="the-norm-and-unorm-types"></a>norm 型および unorm 型
 
@@ -25,9 +25,9 @@ C++ AMP には、Gpu のテクスチャサポートにアクセスするため�
 
 ## <a name="short-vector-library"></a>short ベクター ライブラリ
 
-Short Vector ライブラリは、HLSL で定義されている[ベクター型](https://go.microsoft.com/fwlink/p/?linkid=248500)の一部の機能を提供し、通常はテクセルを定義するために使用されます。 short ベクターは同じ型の 1 ～ 4 つの値を保持するデータ構造体です。 サポートされている型は、、、、、 **`double`** **`float`** **`int`** `norm` `uint` 、および `unorm` です。 次の表に型名を示します。 型ごとに、名前にアンダースコアがない対応するもあり **`typedef`** ます。 アンダースコアを持つ型は、 [Concurrency:: Graphics 名前空間](../../parallel/amp/reference/concurrency-graphics-namespace.md)にあります。 アンダースコアを持たない型は、 [Concurrency:: graphics::d Irect3d 名前空間](../../parallel/amp/reference/concurrency-graphics-direct3d-namespace.md)にあります。これにより、やなどの同様の名前の基本型から明確に分離され **`__int8`** **`__int16`** ます。
+Short Vector ライブラリは、HLSL で定義されている [ベクター型](https://go.microsoft.com/fwlink/p/?linkid=248500) の一部の機能を提供し、通常はテクセルを定義するために使用されます。 short ベクターは同じ型の 1 ～ 4 つの値を保持するデータ構造体です。 サポートされている型は、、、、、 **`double`** **`float`** **`int`** `norm` `uint` 、および `unorm` です。 次の表に型名を示します。 型ごとに、名前にアンダースコアがない対応するもあり **`typedef`** ます。 アンダースコアを持つ型は、 [Concurrency:: Graphics 名前空間](../../parallel/amp/reference/concurrency-graphics-namespace.md)にあります。 アンダースコアを持たない型は、 [Concurrency:: graphics::d Irect3d 名前空間](../../parallel/amp/reference/concurrency-graphics-direct3d-namespace.md) にあります。これにより、やなどの同様の名前の基本型から明確に分離され **`__int8`** **`__int16`** ます。
 
-||長さ 2|長さ3|長さ4|
+|Type|長さ 2|長さ3|長さ4|
 |-|--------------|--------------|--------------|
 |double|double_2<br /><br /> double2|double_3<br /><br /> double3|double_4<br /><br /> double4|
 |float|float_2<br /><br /> float2|float_3<br /><br /> float3|float_4<br /><br /> float4|
@@ -210,7 +210,7 @@ void UseBitsPerScalarElement() { // Create the image data. // Each unsigned int 
 
 ### <a name="writing-to-texture-objects"></a>テクスチャ オブジェクトへの書き込み
 
-オブジェクトに書き込むには、[テクスチャ:: set](reference/texture-class.md#set)メソッドを使用し `texture` ます。 テクスチャ オブジェクトは読み取り専用または読み取り/書き込み可能にすることができます。 読み取り/書き込み可能なテクスチャ オブジェクトについては、次の条件が満たされている必要があります。
+オブジェクトに書き込むには、 [テクスチャ:: set](reference/texture-class.md#set) メソッドを使用し `texture` ます。 テクスチャ オブジェクトは読み取り専用または読み取り/書き込み可能にすることができます。 読み取り/書き込み可能なテクスチャ オブジェクトについては、次の条件が満たされている必要があります。
 
 - T にあるのは 1 つのスカラー コンポーネントのみです。 (short ベクターは使用できません。)
 
@@ -218,7 +218,7 @@ void UseBitsPerScalarElement() { // Create the image data. // Each unsigned int 
 
 - `texture::bits_per_scalar_element` プロパティは 32 です。
 
-3 つすべてが満たされない場合、`texture` オブジェクトは読み取り専用です。 最初の 2 つの条件は、コンパイル中にチェックされます。 `readonly` テクスチャ オブジェクトに書き込もうとするコードがあると、コンパイル エラーが生成されます。 の条件 `texture::bits_per_scalar_element` は実行時に検出され、読み取り専用オブジェクトへの書き込みを試みると、ランタイムは[unsupported_feature](../../parallel/amp/reference/unsupported-feature-class.md)例外を生成し `texture` ます。
+3 つすべてが満たされない場合、`texture` オブジェクトは読み取り専用です。 最初の 2 つの条件は、コンパイル中にチェックされます。 `readonly` テクスチャ オブジェクトに書き込もうとするコードがあると、コンパイル エラーが生成されます。 の条件 `texture::bits_per_scalar_element` は実行時に検出され、読み取り専用オブジェクトへの書き込みを試みると、ランタイムは [unsupported_feature](../../parallel/amp/reference/unsupported-feature-class.md) 例外を生成し `texture` ます。
 
 次のコード例では、値をテクスチャ オブジェクトに書き込みます。
 
@@ -234,7 +234,7 @@ void writeTexture() {
 
 ### <a name="copying-texture-objects"></a>テクスチャ オブジェクトをコピーする
 
-次のコード例に示すように、 [copy](reference/concurrency-namespace-functions-amp.md#copy)関数または[copy_async](reference/concurrency-namespace-functions-amp.md#copy_async)関数を使用して、テクスチャオブジェクト間をコピーできます。
+次のコード例に示すように、 [copy](reference/concurrency-namespace-functions-amp.md#copy) 関数または [copy_async](reference/concurrency-namespace-functions-amp.md#copy_async) 関数を使用して、テクスチャオブジェクト間をコピーできます。
 
 ```cpp
 void copyHostArrayToTexture() { // Copy from source array to texture object by using the copy function.
@@ -259,11 +259,11 @@ void copyHostArrayToTexture() { // Copy from source array to texture object by u
 }
 ```
 
-また、[テクスチャ:: copy_to](reference/texture-class.md#copy_to)メソッドを使用して、あるテクスチャから別のテクスチャにコピーすることもできます。 2 つのテクスチャは異なる accelerator_views に置くことができます。 `writeonly_texture_view` オブジェクトにコピーすると、データは基になる `texture` オブジェクトにコピーされます。 スカラー要素ごとのビットおよび範囲はコピー元とコピー先の `texture` オブジェクトで同じにする必要があります。 これらの条件が満たされない場合、ランタイムは例外をスローします。
+また、 [テクスチャ:: copy_to](reference/texture-class.md#copy_to) メソッドを使用して、あるテクスチャから別のテクスチャにコピーすることもできます。 2 つのテクスチャは異なる accelerator_views に置くことができます。 `writeonly_texture_view` オブジェクトにコピーすると、データは基になる `texture` オブジェクトにコピーされます。 スカラー要素ごとのビットおよび範囲はコピー元とコピー先の `texture` オブジェクトで同じにする必要があります。 これらの条件が満たされない場合、ランタイムは例外をスローします。
 
 ## <a name="texture-view-classes"></a>テクスチャ ビューのクラス
 
-C++ AMP では、Visual Studio 2013 に[Texture_view クラス](../../parallel/amp/reference/texture-view-class.md)が導入されています。 テクスチャビューは[テクスチャクラス](../../parallel/amp/reference/texture-class.md)と同じテクセル型および順位をサポートしますが、テクスチャとは異なり、テクスチャサンプリングや mipmap などの追加のハードウェア機能へのアクセスを提供します。 テクスチャ ビューは基になるテクスチャ データへの読み取り専用、書き込み専用、読み取り/書き込みアクセスをサポートします。
+C++ AMP では、Visual Studio 2013 に [Texture_view クラス](../../parallel/amp/reference/texture-view-class.md) が導入されています。 テクスチャビューは [テクスチャクラス](../../parallel/amp/reference/texture-class.md)と同じテクセル型および順位をサポートしますが、テクスチャとは異なり、テクスチャサンプリングや mipmap などの追加のハードウェア機能へのアクセスを提供します。 テクスチャ ビューは基になるテクスチャ データへの読み取り専用、書き込み専用、読み取り/書き込みアクセスをサポートします。
 
 - 読み取り専用アクセスは `texture_view<const T, N>` テンプレートの特殊化によって提供されます。これは 1、2、または 4 つのコンポーネント、テクスチャ サンプリング、およびビューをインスタンス化するときに決定される MIPMAP レベルの範囲への動的アクセスを持つ要素をサポートします。
 
@@ -271,7 +271,7 @@ C++ AMP では、Visual Studio 2013 に[Texture_view クラス](../../parallel/a
 
 - 読み取り/書き込みアクセスは、特殊化されていないテンプレート クラス `texture_view<T, N>` によって提供されます。これはテクスチャのように、コンポーネントを 1 つだけ持つ要素をサポートし、ビューはインスタンス化されるときに決定される 1 つの MIPMAP レベルにアクセスできます。 サンプリングはサポートされません。
 
-テクスチャビューは配列ビューに似ていますが、 [Array_view クラス](../../parallel/amp/reference/array-view-class.md)が[配列クラス](../../parallel/amp/reference/array-class.md)で提供する自動的なデータ管理および移動機能は提供しません。 `texture_view` は、基になるテクスチャ データが存在するアクセラレータ ビューにのみアクセスできます。
+テクスチャビューは配列ビューに似ていますが、 [Array_view クラス](../../parallel/amp/reference/array-view-class.md) が [配列クラス](../../parallel/amp/reference/array-class.md)で提供する自動的なデータ管理および移動機能は提供しません。 `texture_view` は、基になるテクスチャ データが存在するアクセラレータ ビューにのみアクセスできます。
 
 ### <a name="writeonly_texture_view-deprecated"></a>非推奨とされる writeonly_texture_view
 
@@ -307,7 +307,7 @@ void write2ComponentTexture() {
 
 おわかりのように、2 つのコード例は、プライマリ MIPMAP レベルに書き込んでいるだけである場合にはほぼ同じです。 既存のコードで `writeonly_texture_view` を使用し、そのコードを拡張するつもりがない限り、変更する必要はありません。 ただし、そのコードをさらに改善するつもりであるなら、その中で機能を強化すると新しいハードウェア テクスチャ機能をサポートできるため、`texture_view` を使用できるように書き直すことをお勧めします。 これらの新しい機能の詳細については、以下をお読みください。
 
-の非推奨の詳細については `writeonly_texture_view` 、「ネイティブコードでの並列プログラミング」ブログの「 [C++ AMP でのテクスチャビューのデザインの概要](/archive/blogs/nativeconcurrency/overview-of-the-texture-view-design-in-c-amp)」を参照してください。
+の非推奨の詳細については `writeonly_texture_view` 、「ネイティブコードでの並列プログラミング」ブログの「 [C++ AMP でのテクスチャビューのデザインの概要](/archive/blogs/nativeconcurrency/overview-of-the-texture-view-design-in-c-amp) 」を参照してください。
 
 ### <a name="instantiating-texture-view-objects"></a>テクスチャ ビュー オブジェクトのインスタンス化
 
@@ -379,13 +379,13 @@ void write2ComponentTexture() {
 
 たとえば、float、float_2、または float_4 などの、浮動小数点型に基づく要素のテクスチャ ビューは、さまざまなフィルター処理モードおよびアドレッシング モードに対するハードウェア サポートを利用するにテクスチャ サンプリングを使用して読み取ることもできます。 C++ AMP は計算シナリオで最も一般的な 2 つのフィルター処理モード (ポイント フィルタリング (ニアレストネイバー) およびリニア フィルタリング (加重平均))、および 4 つのアドレッシング モード (wrapped、mirrored、clamped、border) をサポートしています。 アドレス指定モードの詳細については、「 [Address_mode 列挙型](reference/concurrency-graphics-namespace-enums.md#address_mode)」を参照してください。
 
-C++ AMP が直接サポートするモードに加えて、プラットフォーム API を直接使用して作成されたテクスチャ サンプラーを採用する相互運用 API を使用して、基になるプラットフォームの他のフィルター処理モードとアドレッシング モードにアクセスすることができます。 たとえば、Direct3D は異方性フィルタリングなどの他のフィルター処理モードをサポートし、テクスチャの大きさごとに別のアドレッシング モードを適用できます。 座標が垂直方向にラップされ、水平方向にミラー化され、Direct3D API を使用した異方性フィルタリングでサンプル化されるテクスチャ サンプラーを作成し、`make_sampler` 相互運用 API を使用して C++ AMP コードでサンプラーを利用することができます。 詳細については、「ネイティブコードでの並列プログラミング」ブログの「 [C++ AMP のテクスチャサンプリング](/archive/blogs/nativeconcurrency/texture-sampling-in-c-amp)」を参照してください。
+C++ AMP が直接サポートするモードに加えて、プラットフォーム API を直接使用して作成されたテクスチャ サンプラーを採用する相互運用 API を使用して、基になるプラットフォームの他のフィルター処理モードとアドレッシング モードにアクセスすることができます。 たとえば、Direct3D は異方性フィルタリングなどの他のフィルター処理モードをサポートし、テクスチャの大きさごとに別のアドレッシング モードを適用できます。 座標が垂直方向にラップされ、水平方向にミラー化され、Direct3D API を使用した異方性フィルタリングでサンプル化されるテクスチャ サンプラーを作成し、`make_sampler` 相互運用 API を使用して C++ AMP コードでサンプラーを利用することができます。 詳細については、「ネイティブコードでの並列プログラミング」ブログの「 [C++ AMP のテクスチャサンプリング](/archive/blogs/nativeconcurrency/texture-sampling-in-c-amp) 」を参照してください。
 
-また、テクスチャ ビューは MIPMAP の読み取りをサポートします。 定数要素型である読み取り専用のテクスチャ ビューは最も高い柔軟性を備えています。これはインスタンス化で決定された MIPMAP レベルの範囲が動的にサンプル化され、1、2、または 4 つのコンポーネントを持つ要素がサポートされるためです。 また、1 つのコンポーネントを持つ要素がある読み取り/書き込みテクスチャ ビューも MIPMAP をサポートしますが、インスタンス化で決定されたレベルのみです。 詳細については、「ネイティブコードでの並列プログラミングにおける[mipmap のテクスチャ](/archive/blogs/nativeconcurrency/texture-with-mipmaps)」ブログを参照してください。
+また、テクスチャ ビューは MIPMAP の読み取りをサポートします。 定数要素型である読み取り専用のテクスチャ ビューは最も高い柔軟性を備えています。これはインスタンス化で決定された MIPMAP レベルの範囲が動的にサンプル化され、1、2、または 4 つのコンポーネントを持つ要素がサポートされるためです。 また、1 つのコンポーネントを持つ要素がある読み取り/書き込みテクスチャ ビューも MIPMAP をサポートしますが、インスタンス化で決定されたレベルのみです。 詳細については、「ネイティブコードでの並列プログラミングにおける [mipmap のテクスチャ](/archive/blogs/nativeconcurrency/texture-with-mipmaps) 」ブログを参照してください。
 
 ### <a name="writing-to-texture-view-objects"></a>テクスチャ ビュー オブジェクトへの書き込み
 
-オブジェクトを介して基になるに書き込むには、 [texture_view:: Get メソッド](reference/texture-view-class.md#get)を使用し `texture` `texture_view` ます。 テクスチャ ビューは読み取り専用、読み取り/書き込み、または書き込み専用のいずれかです。 書き込み可能なテクスチャ ビューは非定数である要素型を持つ必要があり、読み取り/書き込み可能なテクスチャ ビューの要素型は、1 つのコンポーネントのみを持つ必要があります。 それ以外の場合、テクスチャ ビューは読み取り専用です。 テクスチャ ビューで一度にテクスチャの 1 つの MIPMAP レベルにのみアクセスでき、ビューがインスタンス化されるときにレベルが指定されます。
+オブジェクトを介して基になるに書き込むには、 [texture_view:: Get メソッド](reference/texture-view-class.md#get) を使用し `texture` `texture_view` ます。 テクスチャ ビューは読み取り専用、読み取り/書き込み、または書き込み専用のいずれかです。 書き込み可能なテクスチャ ビューは非定数である要素型を持つ必要があり、読み取り/書き込み可能なテクスチャ ビューの要素型は、1 つのコンポーネントのみを持つ必要があります。 それ以外の場合、テクスチャ ビューは読み取り専用です。 テクスチャ ビューで一度にテクスチャの 1 つの MIPMAP レベルにのみアクセスでき、ビューがインスタンス化されるときにレベルが指定されます。
 
 この例では、4 つの MIPMAP レベルを持つテクスチャの 2 番目に詳細な MIPMAP レベルに書き込む方法を示します。 最も詳細な MIPMAP レベルはレベル 0 です。
 
@@ -406,7 +406,7 @@ parallel_for_each(w_view.extent, [=](index<2> idx) restrict(amp)
 
 C++ AMP ランタイムは、と `texture<T,1>` [ID3D11Texture1D インターフェイス](https://go.microsoft.com/fwlink/p/?linkId=248503)の間、と `texture<T,2>` [ID3D11Texture2D インターフェイス](https://go.microsoft.com/fwlink/p/?linkId=255317)の間、および `texture<T,3>` [ID3D11Texture3D インターフェイス](https://go.microsoft.com/fwlink/p/?linkId=255377)間の相互運用性をサポートします。 [Get_texture](reference/concurrency-graphics-direct3d-namespace-functions.md#get_texture)メソッドは、オブジェクトを受け取り、 `texture` インターフェイスを返し `IUnknown` ます。 [Make_texture](reference/concurrency-graphics-direct3d-namespace-functions.md#make_texture)メソッドは、 `IUnknown` インターフェイスとオブジェクトを受け取り `accelerator_view` 、オブジェクトを返し `texture` ます。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [double_2 クラス](../../parallel/amp/reference/double-2-class.md)<br/>
 [double_3 クラス](../../parallel/amp/reference/double-3-class.md)<br/>

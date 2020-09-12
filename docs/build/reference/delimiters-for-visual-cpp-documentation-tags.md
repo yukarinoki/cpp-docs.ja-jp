@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - XML documentation, delimiters
 ms.assetid: debfbdd9-63fa-4c58-a18e-a4d203d241d7
-ms.openlocfilehash: a5a0534ba74cc9b125e94d4ece133c2449700a67
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
-ms.translationtype: HT
+ms.openlocfilehash: e8e312eacb46d82270d7ca1782b04d06012b207d
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65446536"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90041537"
 ---
 # <a name="delimiters-for-visual-c-documentation-tags"></a>Visual C++ ドキュメント タグの区切り記号
 
@@ -17,9 +17,9 @@ ms.locfileid: "65446536"
 
 XML ドキュメント タグでは、次の種類の区切り記号を使用できます。
 
-| | |
+| 区切り記号 | 説明 |
 |-|-|
-| `///` | これは、ドキュメントの例に示すように、Visual Studio によって使用される形式C++プロジェクト テンプレート。  |
+| `///` | これは、ドキュメントの例に示されており、Visual Studio C++ プロジェクトテンプレートで使用されるフォームです。  |
 | `/** */`  | これらは複数行の区切り記号です。  |
 
 `/** */` 区切り記号を使用する場合は、次のいくつかの書式設定規則があります。
@@ -30,7 +30,7 @@ XML ドキュメント タグでは、次の種類の区切り記号を使用で
 
 - `/**` 区切り記号で始まる行の後にある行では、コンパイラは各行の先頭で共通のパターンを検索します。このパターンは、空白 (省略可能) + アスタリスク (`*`) + 空白 (省略可能) で構成されます。 コンパイラは、各行の先頭で共通の文字セットを見つけた場合、`/**` 区切り記号の後にあるすべての行のそのパターンを無視します。これらの行には、`*/` 区切り記号がある行まで (その行を含む) が含まれることがあります。
 
-以下に、いくつかの例を示します。
+次に例をいくつか示します。
 
 - 次のコメントでは、`<summary>` で始まる行だけがコメントの一部として処理されます。 次の 2 つのタグ形式では同じコメントが生成されます。
 
@@ -68,6 +68,6 @@ XML ドキュメント タグでは、次の種類の区切り記号を使用で
     */
     ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [XML に関するドキュメント](xml-documentation-visual-cpp.md)

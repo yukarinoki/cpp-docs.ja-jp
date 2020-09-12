@@ -2,19 +2,19 @@
 title: iOS を使用してビルドするためのツールのインストールおよび構成
 ms.date: 10/17/2019
 ms.assetid: d0c311c9-9eb9-42c5-ba07-25604362cd28
-ms.openlocfilehash: 87c02f5399465c6131fad2bb9839698699d1e488
-ms.sourcegitcommit: a673f6a54cc97e3d4cd032b10aa8dce7f0539d39
+ms.openlocfilehash: 26dea080f3d3f05885f348dcaf1c66a0db2a36b5
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "79470005"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90041992"
 ---
 # <a name="install-and-configure-tools-to-build-using-ios"></a>iOS を使用してビルドするためのツールのインストールおよび構成
 
 Visual Studio でクロスプラットフォームの **C++ によるモバイル開発**ツールを使用して、iOS Simulator または iOS デバイス用の iOS コードを編集、デバッグ、配置することができます。 ただし、ライセンスの制限により、コードのビルドと実行はリモート環境の Mac で行う必要があります。 Visual Studio を使用して iOS アプリをビルドおよび実行するには、Mac 上にリモート エージェント [vcremote](https://www.npmjs.com/package/vcremote)をセットアップして構成する必要があります。 このリモート エージェントが、Visual Studio からのビルド要求を処理し、Mac に接続された iOS デバイスまたは Mac 上の iOS シミュレーターでアプリを実行します。
 
 > [!NOTE]
-> Mac ではなくクラウド ホスト型 Mac サービスを使用する場合の詳細については、「[Visual Studio をクラウドでホストされた Mac に接続するよう構成する](/visualstudio/cross-platform/tools-for-cordova/tips-workarounds/host-a-mac-in-the-cloud?view=toolsforcordova-2017#configure-visual-studio-to-connect-to-your-cloud-hosted-mac)」をご覧ください。 ここでは、Visual Studio Tools for Apache Cordova を使用してビルドする場合の手順を説明します。 C++ を使用してビルドする場合は、`vcremote` を `remotebuild` に置き換えます。
+> Mac ではなくクラウド ホスト型 Mac サービスを使用する場合の詳細については、「[Visual Studio をクラウドでホストされた Mac に接続するよう構成する](/visualstudio/cross-platform/tools-for-cordova/tips-workarounds/host-a-mac-in-the-cloud?view=toolsforcordova-2017&preserve-view=true#configure-visual-studio-to-connect-to-your-cloud-hosted-mac)」をご覧ください。 ここでは、Visual Studio Tools for Apache Cordova を使用してビルドする場合の手順を説明します。 C++ を使用してビルドする場合は、`remotebuild` を `vcremote` に置き換えます。
 
 iOS を使用してビルドするためのツールをインストールしたら、この記事を参照して、Visual Studio および Mac で iOS 開発用のリモート エージェントを素早く構成して更新する方法を確認してください。
 
@@ -24,7 +24,7 @@ iOS のコードを開発するためのリモート エージェントをイン
 
 - macOS Mojave バージョン 10.14 以降を実行する Mac コンピューター
 
-- [Apple ID](https://appleid.apple.com/)
+- [APPLE ID](https://appleid.apple.com/)
 
 - アクティブな [Apple Developer Program](https://developer.apple.com/programs/) アカウント
 
@@ -52,29 +52,29 @@ iOS のコードを開発するためのリモート エージェントをイン
 
    手動で署名する場合、アプリのプロビジョニング プロファイルを作成する必要があります。 プロビジョニング プロファイルを作成する方法の詳細については、「[Create a development provisioning profile](https://help.apple.com/developer-account/#/devf2eb157f8)」 (プロビジョニング プロファイルの作成) を参照してください。
 
-- [Node.js](https://nodejs.org/) バージョン 12.14.1 と npm バージョン 6.13.4
+- [Node.js](https://nodejs.org/) バージョン12.14.1 と npm バージョン6.13.4
 
-   バージョン 12.14.1 の Node.js を Mac にインストールします。 Node.js パッケージをインストールする場合、それは npm バージョン 6.13.4 に付属しているはずです。 他のバージョンの Node.js と npm は、リモート エージェント `vcremote` で使用されている一部のモジュールに対応していない場合があり、`vcremote` のインストールが失敗する可能性があります。 Node.js は、[Node Version Manager](https://nodejs.org/en/download/package-manager/#nvm) などのパッケージ マネージャーを使用してインストールすることをお勧めします。 `sudo` を使用すると、一部のモジュールがインストールに失敗する可能性があるため、Node.js のインストールにはコマンド `sudo` を使用しないようにしてください。
+   Mac にバージョン12.14.1 の Node.js をインストールします。 Node.js パッケージをインストールすると、npm バージョン6.13.4 が表示されます。 他のバージョンの Node.js と npm は、リモート エージェント `vcremote` で使用されている一部のモジュールに対応していない場合があり、`vcremote` のインストールが失敗する可能性があります。 [ノードバージョンマネージャー](https://nodejs.org/en/download/package-manager/#nvm)などのパッケージマネージャーを使用して Node.js をインストールすることをお勧めします。 Node.js のインストールにはコマンドを使用しない `sudo` でください。を使用すると、一部のモジュールがインストールに失敗する可能性があり `sudo` ます。
 
-## <a name="Install"></a> iOS 用リモート エージェントをインストールする
+## <a name="install-the-remote-agent-for-ios"></a><a name="Install"></a> iOS 用リモート エージェントをインストールする
 
 C++ によるモバイル開発ワークロードをインストールすると、Visual Studio は、Mac 上で実行されているリモート エージェント [vcremote](https://www.npmjs.com/package/vcremote) と通信して、ファイルを転送したり、iOS アプリをビルドして実行したり、デバッグ コマンドを送信したりできます。
 
 リモート エージェントをインストールする前に、[前提条件](#prerequisites)を満たしていること、および「[C++ によるクロスプラットフォーム モバイル開発をインストールする](../cross-platform/install-visual-cpp-for-cross-platform-mobile-development.md#install-the-tools)」のインストール手順が完了していることを確認してください。
 
-### <a name="DownloadInstall"></a> リモート エージェントをダウンロードしてインストールするには
+### <a name="to-download-and-install-the-remote-agent"></a><a name="DownloadInstall"></a> リモート エージェントをダウンロードしてインストールするには
 
-- Mac 上のターミナル アプリから、現在使用されている Node.js のバージョンが、必須バージョン 12.14.1 であることを確認します。 バージョンを確認するには、次のコマンドを実行します。
+- Mac 上のターミナルアプリから、現在使用されている Node.js バージョンが必要なバージョン12.14.1 であることを確認します。 バージョンを確認するには、次のコマンドを実行します。
 
   `node -v`
   
-  適切なバージョンでない場合は、「必須コンポーネント」の Node.js のインストール手順に従う必要があります。 次に Node.js を再起動します。
+  適切なバージョンでない場合は、「前提条件」の Node.js インストール手順に従う必要があります。 次に、Node.js を再起動します。
 
-- 必須の Node.js が使用されていることを確認した後、次のコマンドを実行して、その Node.js バージョンで vcremote をインストールします。
+- Node.js が使用されていることを確認した後、次のコマンドを実行して、その Node.js バージョンの下に vcremote をインストールします。
 
    `npm install -g --unsafe-perm vcremote`
 
-   グローバル インストール ( **-g**) スイッチが推奨されますが、必須ではありません。 グローバル インストール スイッチを使用しない場合、vcremote は、ターミナル アプリの現在のアクティブなパスの下にインストールされます。
+   グローバルインストール (**-g**) スイッチをお勧めしますが、必須ではありません。 グローバルインストールスイッチを使用しない場合、vcremote は、ターミナルアプリの現在のアクティブなパスの下にインストールされます。
 
    インストールの間に、Mac に `vcremote` がインストールされて、開発者モードがアクティブ化されます。 [Homebrew](https://brew.sh/) および 2 つの npm パッケージ `vcremote-lib` と `vcremote-utils` もインストールされます。 インストールが完了したら、スキップしたオプションの依存関係に関する警告は無視しても安全です。
 
@@ -83,11 +83,11 @@ C++ によるモバイル開発ワークロードをインストールすると�
 
 Visual Studio を新しいバージョンに更新した場合は、リモート エージェントも現在のバージョンに更新する必要があります。 リモート エージェントを更新するには、リモート エージェントをダウンロードしてインストールする手順を繰り返します。
 
-## <a name="Start"></a> リモート エージェントを起動する
+## <a name="start-the-remote-agent"></a><a name="Start"></a> リモート エージェントを起動する
 
 Visual Studio で iOS コードをビルドして実行するには、リモート エージェントが実行されている必要があります。 Visual Studio がリモート エージェントとペアリングされていないと、Visual Studio はリモート エージェントと通信できません。 既定では、リモート エージェントはセキュリティで保護された接続モードで実行されます。この場合、PIN を使用して Visual Studio とペアリングする必要があります。
 
-### <a name="RemoteAgentStartServer"></a> リモート エージェントを起動するには
+### <a name="to-start-the-remote-agent"></a><a name="RemoteAgentStartServer"></a> リモート エージェントを起動するには
 
 - Mac 上のターミナル アプリから、次のように入力します。
 
@@ -121,9 +121,9 @@ Visual Studio で iOS コードをビルドして実行するには、リモー�
 
 #### <a name="to-stop-the-remote-agent"></a>リモート エージェントを停止するには
 
-- `vcremote` が実行されているターミナル ウィンドウで、**Control**+**C** キーを押します。
+- で実行されているターミナルウィンドウで `vcremote` 、「 **Control**C」と入力し + **C**ます。
 
-## <a name="ConfigureVS"></a> Visual Studio でリモート エージェントを構成する
+## <a name="configure-the-remote-agent-in-visual-studio"></a><a name="ConfigureVS"></a> Visual Studio でリモートエージェントを構成する
 
 Visual Studio からリモート エージェントに接続するには、Visual Studio のオプションで、リモート構成を指定する必要があります。
 
@@ -135,9 +135,9 @@ Visual Studio からリモート エージェントに接続するには、Visua
 
    IP アドレスを取得するには、ターミナル ウィンドウで **ifconfig** コマンドを使用します。 アクティブなネットワーク インターフェイスの下に表示される inet アドレスを使用します。
 
-1. Visual Studio のメニュー バーで、 **[ツール]** 、 **[オプション]** の順に選択します。
+1. Visual Studio のメニュー バーで、 **[ツール]**、 **[オプション]** の順に選択します。
 
-1. **[オプション]** ダイアログ ボックスで、 **[クロス プラットフォーム]** 、 **[C++]** 、 **[iOS]** の順に展開します。
+1. **[オプション]** ダイアログ ボックスで、 **[クロス プラットフォーム]**、 **[C++]**、 **[iOS]** の順に展開します。
 
 1. **[ホスト名]** フィールドと **[ポート]** フィールドに、リモート エージェントの起動時に示された値を入力します。 ホスト名には、Mac の DNS 名または IP アドレスを使用できます。 既定のポートは 3030 です。
 
@@ -154,13 +154,13 @@ Visual Studio からリモート エージェントに接続するには、Visua
 
    ペアリングが成功しなかった場合は、「 [Start the remote agent](#Start)」の手順に従って、リモート エージェントが実行されていることを確認します。 リモート エージェントの PIN が生成されてから経過した時間が長すぎる場合は、Mac 上で「 [Generate a new security PIN](#GeneratePIN) 」の手順に従ってからもう一度実行します。 Mac のホスト名を使用している場合は、代わりに IP アドレスを **[ホスト名]** に使用してみてください。
 
-1. **[リモート ルート]** フィールドのフォルダー名を更新して、Mac のホーム ( *~* ) ディレクトリ内のリモート エージェントで使用されるフォルダーを指定します。 既定の場合、リモート エージェントではリモート ルートとして `/Users/<username>/vcremote` が使用されます。
+1. **[リモート ルート]** フィールドのフォルダー名を更新して、Mac のホーム (*~*) ディレクトリ内のリモート エージェントで使用されるフォルダーを指定します。 既定の場合、リモート エージェントではリモート ルートとして `/Users/<username>/vcremote` が使用されます。
 
 1. **[OK]** を選択して、リモート ペアリング接続設定を保存します。
 
 リモート エージェントを使用するたびに、Visual Studio は、この同じ情報を使用して Mac 上のリモート エージェントに接続します。 Visual Studio を再度リモート エージェントにペアリングさせる必要はありません。それが必要になるのは、Mac 上で新しいセキュリティ証明書を生成した場合、あるいは Mac のホスト名または IP アドレスが変更された場合のみです。
 
-## <a name="GeneratePIN"></a> Generate a new security PIN
+## <a name="generate-a-new-security-pin"></a><a name="GeneratePIN"></a> Generate a new security PIN
 
 初めてリモート エージェントを起動すると、生成された PIN が期間限定で有効になります (既定では 10 分)。 Visual Studio とリモート エージェントをペアリングする前に期限切れになった場合は、新しい PIN を生成する必要があります。
 
@@ -174,7 +174,7 @@ Visual Studio からリモート エージェントに接続するには、Visua
 
    リモート エージェントが新しい一時 PIN を生成します。 新しい PIN を使用して Visual Studio をペアリングするには、「 [Visual Studio でリモート エージェントを構成する](#ConfigureVS)」の手順を繰り返します。
 
-## <a name="GenerateCert"></a> 新しいサーバー証明書を生成する
+## <a name="generate-a-new-server-certificate"></a><a name="GenerateCert"></a> 新しいサーバー証明書を生成する
 
 セキュリティ上の目的で、Visual Studio とリモート エージェントをペアリングするサーバー証明書は、Mac の IP アドレスまたはホスト名と関連付けられています。 これらの値が変更された場合、新しいサーバー証明書を生成し、新しい値で Visual Studio を再構成する必要があります。
 
@@ -196,7 +196,7 @@ Visual Studio からリモート エージェントに接続するには、Visua
 
 1. 新しい PIN を使用して Visual Studio をペアリングするには、「 [Visual Studio でリモート エージェントを構成する](#ConfigureVS)」の手順を繰り返します。
 
-## <a name="ConfigureMac"></a> Configure the remote agent on the Mac
+## <a name="configure-the-remote-agent-on-the-mac"></a><a name="ConfigureMac"></a> Configure the remote agent on the Mac
 
 さまざまなコマンドライン オプションを使用して、リモート エージェントを構成することができます。 たとえば、ビルド要求をリッスンするポートを指定したり、ファイル システムに保持するビルドの最大数を指定したりできます。 既定では、10 個のビルドに制限されます。 最大数を超えたビルドは、リモート エージェントによってシャットダウン時に削除されます。
 
@@ -210,7 +210,7 @@ Visual Studio からリモート エージェントに接続するには、Visua
 
    `vcremote --secure false`
 
-   このオプションを使用する場合、Visual Studio でエージェントを構成する際に、 **[セキュア]** チェック ボックスをオフにして、 **[PIN]** フィールドを空白のままにします。
+   このオプションを使用する場合、Visual Studio でエージェントを構成する際に、**[セキュア]** チェック ボックスをオフにして、**[PIN]** フィールドを空白のままにします。
 
 - リモート エージェント ファイルの場所を指定するには、次のように入力します。
 
@@ -268,7 +268,7 @@ iOS デバイスでのデバッグがうまくいかない場合、[ideviceinsta
 
 `ideviceinstaller -l`
 
-フォルダー `ideviceinstaller` にアクセスできないというエラーが `/var/db/lockdown` で発生する場合は、次のようにしてフォルダーの権限を変更します。
+フォルダー `/var/db/lockdown` にアクセスできないというエラーが `ideviceinstaller` で発生する場合は、次のようにしてフォルダーの権限を変更します。
 
 `sudo chmod 777 /var/db/lockdown`
 

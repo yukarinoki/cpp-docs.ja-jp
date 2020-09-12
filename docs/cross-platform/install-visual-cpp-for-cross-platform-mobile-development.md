@@ -2,12 +2,12 @@
 title: C++ によるクロスプラットフォーム モバイル開発をインストールする
 ms.date: 10/17/2019
 ms.assetid: aaea6b8d-55eb-4427-8185-c050f855c257
-ms.openlocfilehash: 935e427710d55120055be476a5cfb5fbcf73641b
-ms.sourcegitcommit: 0df2b7ab4e81284c5248e4584767591dcc1950c3
+ms.openlocfilehash: 6a573b0f7ba261b97af9de24e67f733acac0532f
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89609187"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90041953"
 ---
 # <a name="install-cross-platform-mobile-development-with-c"></a>C++ によるクロスプラットフォーム モバイル開発をインストールする
 
@@ -15,7 +15,7 @@ Visual Studio で C++ を使用して、Windows デスクトップアプリ、�
 
 この記事では、Visual Studio を使って C++ でクロスプラットフォーム アプリを開発するために必要なツールとサード パーティのソフトウェアをインストールする方法について説明します。 概要については、「[Visual C++ クロスプラットフォーム モバイル](https://visualstudio.microsoft.com/vs/features/cplusplus-mdd/)」を参照してください。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 ::: moniker range="vs-2017"
 
@@ -60,7 +60,7 @@ Visual Studio インストーラーには、**C++ によるモバイル開発**�
 - iOS プラットフォームを対象とする C++ コードをビルドするには、C++ iOS 開発ツールが必要です。
 
 > [!NOTE]
-> Visual Studio 2015 を使用している場合は、「[Visual C++ for Cross-Platform Mobile Development のインストール (Visual Studio 2015)](install-visual-cpp-for-cross-platform-mobile-development.md?view=vs-2015)」をご覧ください
+> Visual Studio 2015 を使用している場合は、「[Visual C++ for Cross-Platform Mobile Development のインストール (Visual Studio 2015)](install-visual-cpp-for-cross-platform-mobile-development.md?view=vs-2015&preserve-view=true)」をご覧ください
 
 ### <a name="install-the-mobile-development-with-c-workload"></a>C++ によるモバイル開発ワークロードをインストールする
 
@@ -109,7 +109,7 @@ Sdk Manager アプリを Android SDK ディレクトリでもう一度実行し�
 
 1. **[OK]** を選んで、カスタム ツール フォルダーの場所を保存します。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [IOS を使用してビルドするためのツールのインストールと構成](install-and-configure-tools-to-build-using-ios.md)\
 [Visual C++ クロスプラットフォーム モバイル](https://visualstudio.microsoft.com/vs/features/cplusplus-mdd/)

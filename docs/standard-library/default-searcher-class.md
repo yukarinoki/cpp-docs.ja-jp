@@ -5,16 +5,16 @@ f1_keywords:
 - functional/std::default_searcher
 helpviewer_keywords:
 - std::default_searcher [C++]
-ms.openlocfilehash: 3b5b05dfa2613f9eeaaa18fa8066bcd44f57d1be
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 307fc6da3b383690e0b65bff2a72f386a37d6711
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87203729"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90039691"
 ---
 # <a name="default_searcher-class"></a>default_searcher クラス
 
-は、 `default_searcher` オブジェクトのコンストラクターで指定されたシーケンスを検索する操作の関数オブジェクト型です。 検索は、オブジェクトの関数呼び出し演算子に渡された別のシーケンス内で実行されます。 は `default_searcher` 、 [std:: search](algorithm-functions.md#search)を呼び出して検索を実行します。
+は、 `default_searcher` オブジェクトのコンストラクターで指定されたシーケンスを検索する操作の関数オブジェクト型です。 検索は、オブジェクトの関数呼び出し演算子に渡された別のシーケンス内で実行されます。 は `default_searcher` 、 [std:: search](algorithm-functions.md#search) を呼び出して検索を実行します。
 
 ## <a name="syntax"></a>構文
 
@@ -36,14 +36,14 @@ class default_searcher
 
 ## <a name="members"></a>メンバー
 
-| | |
+| メンバー | 説明 |
 | - | - |
 | **コンストラクター** | |
-| [default_searcher](#default-searcher-constructor) | |
+| [default_searcher](#default-searcher-constructor) | サーチャーインスタンスを構築します。 |
 | **オペレーター** | |
-| [operator ()](#operator-call) | |
+| [operator ()](#operator-call) | シーケンスに対して操作を呼び出します。 |
 
-## <a name="default_searcher-constructor"></a><a name="default-searcher-constructor"></a>default_searcher コンストラクター
+## <a name="default_searcher-constructor"></a><a name="default-searcher-constructor"></a> default_searcher コンストラクター
 
 `default_searcher`検索するシーケンスと等値述語を使用して、関数オブジェクトを構築します。
 
@@ -70,13 +70,13 @@ constexpr default_searcher(         // C++20
 *pred*\
 Sequence 要素のオプションの等値比較述語。 等値比較型が指定されていない場合、既定値はに `std::equal_to` なります。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 *Binarypredicate*型または*ForwardIterator*型のコピーコンストラクターによってスローされた例外をスローします。
 
 このクラスは、C++ 17 で新しく追加されたものです。 C++ 20 によってコンストラクターが作成されました **`constexpr`** 。
 
-## <a name="operator"></a><a name="operator-call"></a>operator ()
+## <a name="operator"></a><a name="operator-call"></a> operator ()
 
 関数演算子の呼び出し演算子。 引数シーケンス内で、 `[first, last)` コンストラクターに指定されたシーケンスを検索します。
 
@@ -100,9 +100,9 @@ constexpr pair<ForwardIterator2, ForwardIterator2> operator()(
 *前の*\
 検索するシーケンスの末尾。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
-反復子のペアを返します。 最初の反復子*i*は、次のような結果になります。
+反復子のペアを返します。 最初の反復子 *i* は、次のような結果になります。
 
 `std::search( first, last, pat_first, pat_last, pred )`.
 
@@ -112,7 +112,7 @@ constexpr pair<ForwardIterator2, ForwardIterator2> operator()(
 
 このクラスは、C++ 17 で新しく追加されたものです。 C++ 20 は呼び出し演算子を作成しました **`constexpr`** 。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [\<functional>](functional.md)\
 [アルゴリズム関数](algorithm-functions.md)\

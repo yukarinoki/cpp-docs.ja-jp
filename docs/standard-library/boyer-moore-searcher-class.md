@@ -1,20 +1,20 @@
 ---
-title: boyer_moore_searcherクラス
+title: boyer_moore_searcher クラス
 ms.date: 08/03/2019
 f1_keywords:
 - functional/std::boyer_moore_searcher
 helpviewer_keywords:
 - std::boyer_moore_searcher [C++]
-ms.openlocfilehash: 54e5c4b7c9fe27d6df32f56d57eb1207fa09332c
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: d6fa4dd203336107614ca3431f38846f0c3c89af
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81366767"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90039817"
 ---
-# <a name="boyer_moore_searcher-class"></a>boyer_moore_searcherクラス
+# <a name="boyer_moore_searcher-class"></a>boyer_moore_searcher クラス
 
-クラス`boyer_moore_searcher`は、ボイヤー-ムーア アルゴリズムを使用してオブジェクトのコンストラクターで指定されたシーケンスを検索する関数オブジェクト型です。 検索は、オブジェクトの関数呼び出し演算子に提供される別のシーケンス内で行われます。 このクラスは、パラメーターとして[std::search](algorithm-functions.md#search)のオーバーロードの 1 つに渡されます。
+クラスは、 `boyer_moore_searcher` オブジェクトのコンストラクターで指定されたシーケンスを検索するためにボイヤー-真人アルゴリズムを使用する関数オブジェクト型です。 検索は、オブジェクトの関数呼び出し演算子に渡された別のシーケンス内で実行されます。 このクラスは、 [std:: search](algorithm-functions.md#search)のオーバーロードのいずれかにパラメーターとして渡されます。
 
 ## <a name="syntax"></a>構文
 
@@ -40,16 +40,16 @@ class boyer_moore_searcher
 
 ## <a name="members"></a>メンバー
 
-| | |
+| メンバー | 説明 |
 | - | - |
-| **Constructor** | |
-|[boyer_moore_searcher](#boyer-moore-searcher-constructor)||
+| **コンストラクター** | |
+| [boyer_moore_searcher](#boyer-moore-searcher-constructor) | サーチャーインスタンスを構築します。 |
 | **オペレーター** | |
-| [Operator()](#operator-call) | |
+| [operator ()](#operator-call) | シーケンスに対して操作を呼び出します。 |
 
-## <a name="boyer_moore_searcher-constructor"></a><a name="boyer-moore-searcher-constructor"></a>boyer_moore_searcherコンストラクター
+## <a name="boyer_moore_searcher-constructor"></a><a name="boyer-moore-searcher-constructor"></a> boyer_moore_searcher コンストラクター
 
-検索するシーケンス`boyer_moore_searcher`、ハッシュ関数オブジェクト、および等価述語を使用して、関数オブジェクトを構築します。
+`boyer_moore_searcher`検索するシーケンス、ハッシュ関数オブジェクト、および等値述語を使用して、関数オブジェクトを構築します。
 
 ```cpp
 boyer_moore_searcher(
@@ -62,26 +62,26 @@ boyer_moore_searcher(
 ### <a name="parameters"></a>パラメーター
 
 *pat_first*\
-検索するシーケンスの初期要素。
+検索するシーケンスの最初の要素。
 
 *pat_last*\
 検索するシーケンスの末尾。
 
-*Hf*\
-シーケンス要素のハッシュに使用される呼び出し可能オブジェクト。
+*hf*\
+シーケンスの要素をハッシュするために使用される呼び出し可能オブジェクト。
 
-*Pred*\
-シーケンス要素の省略可能な等価比較述語。 等値比較の種類が指定されていない場合、既定値は`std::equal_to`です。
+*pred*\
+Sequence 要素のオプションの等値比較述語。 等値比較型が指定されていない場合、既定値はに `std::equal_to` なります。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
-*二項述語*、*ハッシュ*、または*RandomAccessIterator*型のコピー コンストラクター、または*BinaryPredicate*または*Hash*の呼び出し演算子によってスローされる例外をスローします。
+*Binarypredicate*、 *Hash*、または*RandomAccessIterator*型のコピーコンストラクター、または*Binarypredicate*または*Hash*の call 演算子によってスローされた例外をスローします。
 
-このクラスは C++17 で新しく追加されました。
+このクラスは、C++ 17 で新しく追加されたものです。
 
-## <a name="operator"></a><a name="operator-call"></a>Operator()
+## <a name="operator"></a><a name="operator-call"></a> operator ()
 
-関数オブジェクトの呼び出し演算子。 コンストラクタに指定されたシーケンス`[first, last)`を引数シーケンス内で検索します。
+関数オブジェクトの呼び出し演算子。 引数シーケンス内で、 `[first, last)` コンストラクターに指定されたシーケンスを検索します。
 
 ```cpp
 template <class ForwardIterator2>
@@ -93,20 +93,20 @@ pair<RandomAccessIterator2, RandomAccessIterator2> operator()(
 ### <a name="parameters"></a>パラメーター
 
 *まずは*\
-検索するシーケンスの初期要素。
+検索するシーケンスの最初の要素。
 
 *前の*\
 検索するシーケンスの末尾。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
-検索パターン`[pat_first, pat_last)`が空の場合は、`make_pair(first, first)`を返します。 検索パターンが見つからない場合は、 を`make_pair(last, last)`返します。 それ以外の場合は、述語`[first, last)`*pred*に`[pat_first, pat_last)`従って等しいシーケンスの先頭と末尾に反復子のペアを返します。
+検索パターンが空の場合、はを `[pat_first, pat_last)` 返し `make_pair(first, first)` ます。 検索パターンが見つからない場合は、を返し `make_pair(last, last)` ます。 それ以外の場合は、 `[first, last)` `[pat_first, pat_last)` 述語 *pred*に従って、に等しいシーケンスの先頭と末尾に反復子のペアを返します。
 
-このクラスは C++17 で新しく追加されました。
+このクラスは、C++ 17 で新しく追加されたものです。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[\<機能>](functional.md)\
+[\<functional>](functional.md)\
 [アルゴリズム関数](algorithm-functions.md)\
-[boyer_moore_horspool_searcherクラス](boyer-moore-horspool-searcher-class.md)\
-[std::検索](algorithm-functions.md#search)
+[boyer_moore_horspool_searcher クラス](boyer-moore-horspool-searcher-class.md)\
+[std:: search](algorithm-functions.md#search)

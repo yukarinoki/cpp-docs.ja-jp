@@ -3,12 +3,12 @@ title: ユニバーサル Windows プラットフォーム アプリでサポー
 description: ユニバーサル Windows プラットフォームアプリでサポートされていない CRT 関数のリファレンスガイドです。
 ms.date: 04/16/2020
 ms.assetid: cbfc957d-6c60-48f4-97e3-1ed8526743b4
-ms.openlocfilehash: cfe5fbc1ce505c255e074dda2c3a240b46754eee
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 793283a5c20f04e58de22fcfca5ede1926de369c
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88845719"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90041836"
 ---
 # <a name="crt-functions-not-supported-in-universal-windows-platform-apps"></a>ユニバーサル Windows プラットフォーム アプリでサポートされていない CRT 関数
 
@@ -18,7 +18,7 @@ ms.locfileid: "88845719"
 
 ## <a name="unsupported-crt-functions"></a>サポートされない CRT 関数
 
-|関数|説明|回避策|
+| 機能 | 説明 | 回避策 |
 |-|-|-|
 |`_beep` `_sleep` `_seterrormode`|これらの関数は以前のバージョンの CRT で廃止されています。 また、それに対応する Win32 API は UWP アプリでは使用できません。|回避策はありません。|
 |`chdir` `_chdrive` `getcwd`|これらの関数は廃止されているか、またはスレッド セーフではありません。|`_chdir`、、 `_getcwd` および関連する関数を使用します。|
@@ -33,12 +33,12 @@ ms.locfileid: "88845719"
 |`_getsystime` `_setsystime`|これらは以前のバージョンの CRT で廃止された API です。 また、ユーザーはアクセス許可がないため、UWP アプリのシステム時刻を設定できません。|システム時刻のみを取得するには、Win32 API `GetSystemTime`を使用します。 システム時刻は設定できません。|
 |`_environ``_putenv` `_putenv_s` `_searchenv``_searchenv_s` `_dupenv_s` `_wputenv``_wputenv_s` `_wsearchenv` getenv `_wdupenv_s` `_wenviron` getenv_s `_wgetenv` putenv `_wgetenv_s` `_wsearchenv_s``tzset`|UWP アプリでは環境変数を使用できません。|回避策はありません。 タイムゾーンを設定するには、を使用 `_tzset` します。|
 |`_loaddll` `_getdllprocaddr` `_unloaddll`|これらは以前のバージョンの CRT で廃止された関数です。 また、ユーザーは、同じアプリケーションパッケージ内の Dll を除く Dll を読み込むことはできません。|パッケージ化された DLL を読み込んで使用するには、Win32 API `LoadPackagedLibrary`、 `GetProcAddress`、 `FreeLibrary` を使用します。|
-|`_wexecl``_wexecle` `_wexeclp` `_wexeclpe``_wexecv` `_wexecve` `_wexecvp``_wexecvpe` `_execl` `_execle``_execlp` `_execlpe` `_execv``_execve` `_execvp` `_execvpe``_spawnl` `_spawnle` `_spawnlp``_spawnlpe` `_spawnv` `_spawnve``_spawnvp` `_spawnvpe` `_wspawnl``_wspawnle` `_wspawnlp` `_wspawnlpe``_wspawnv` `_wspawnve` `_wspawnvp``_wspawnvpe` `_wsystem` `execl``execle` `execlp` `execlpe``execv` `execve` `execvp``execvpe`' ' spawnl ` ` spawnle ` ` spawnlp ` ` spawnlpe spawnv spawnve spawnvp spawnvpe ` ` ` ` ` ` ` ` ` ` system '|この機能は、UWP アプリでは使用できません。 UWP アプリから別の UWP アプリまたはデスクトップ アプリを起動することはできません。|回避策はありません。|
+|`_wexecl` `_wexecle` `_wexeclp` `_wexeclpe` `_wexecv` `_wexecve` `_wexecvp` `_wexecvpe` `_execl` `_execle` `_execlp` `_execlpe` `_execv` `_execve` `_execvp` `_execvpe` `_spawnl` `_spawnle` `_spawnlp` `_spawnlpe` `_spawnv` `_spawnve` `_spawnvp` `_spawnvpe` `_wspawnl` `_wspawnle` `_wspawnlp` `_wspawnlpe` `_wspawnv` `_wspawnve` `_wspawnvp` `_wspawnvpe` `_wsystem` `execl` `execle` `execlp` `execlpe` `execv` `execve` `execvp` `execvpe` `spawnl` `spawnle` `spawnlp` `spawnlpe` `spawnv` `spawnve` `spawnvp` `spawnvpe` `system`|この機能は、UWP アプリでは使用できません。 UWP アプリから別の UWP アプリまたはデスクトップ アプリを起動することはできません。|回避策はありません。|
 |`_heapwalk` `_heapadd` `_heapchk` `_heapset` `_heapused`|ここに挙げた関数は通常、ヒープを使用するために使用します。 しかし、UWP アプリでは対応する Win32 API がサポートされていません。 アプリがプライベート ヒープを作成したり使用したりすることはありません。|回避策はありません。 ただし、 `_heapwalk` はデバッグを目的とする場合にのみ DEBUG CRT で使用できます。 これらの関数は、Microsoft Store にアップロードされるアプリでは使用できません。|
 
 次の関数は、UWP アプリの CRT で使用できます。 ただし、大規模なコードベースを移植する場合など、対応する Win32 または Windows ランタイム Api を使用できない場合にのみ使用してください。
 
-|Functions|回避策|
+| 機能 | 回避策 |
 |-|-|
 |1 バイト文字列関数 ( `strcat`、 `strcpy`、 `strlwr`など)。|公開されているすべての Win32 Api と Windows ランタイム Api が Unicode 文字セットのみを使用するため、UWP アプリを厳密に Unicode にしてください。  大規模なコードベースを移植するための1バイト関数は残されましたが、それ以外は避ける必要があります。 可能であれば、対応するワイド文字関数を使用する必要があります。|
 |ストリーム IO 関数と低レベル ファイル IO 関数 ( `fopen`、 `open`など)。|これらの関数は同期的であり、UWP アプリには推奨されません。 UWP アプリでは、UI スレッドがロックされることがないように、ファイルを開くとき、ファイルから読み取るとき、ファイルに書き込むときは非同期 API を使用します。 このような API には、 `Windows::Storage::FileIO` クラスのものなどが挙げられます。|
@@ -47,7 +47,7 @@ ms.locfileid: "88845719"
 
 以前に説明した Api と次の Api はどちらも、Windows 8.x ストアアプリと Windows Phone 2.x アプリでは使用できません。
 
-|Functions|説明|回避策|
+| 機能 | 説明 | 回避策 |
 |-|-|-|
 |`_beginthread` `_beginthreadex` `_endthread` `_endthreadex`|Windows 8.x ストア アプリで Win32 API をスレッド化することはできません。|代わりに `Windows Runtime Windows::System::Threading::ThreadPool` または `concurrency::task` を使用します。|
 |`_chdir` `_wchdir` `_getcwd` `_getdcwd` `_wgetcwd` `_wgetdcwd`|作業ディレクトリの概念は Windows 8.x ストア アプリには適用されません。|代わりに完全パスを使用します。|

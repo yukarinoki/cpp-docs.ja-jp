@@ -21,12 +21,12 @@ helpviewer_keywords:
 - std::locale [C++], facet
 - std::locale [C++], id
 ms.assetid: 7dd6d271-472d-4750-8fb5-ea8f55fbef62
-ms.openlocfilehash: 94063b2c66d201da3b0e822a7118b3e48020ed3c
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 55aeaf27b1c31ef0dba68d0ead3633590777cbdf
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88833258"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90040602"
 ---
 # <a name="locale-class"></a>locale クラス
 
@@ -164,7 +164,7 @@ cout.imbue(loc);
 |[classic](#classic)|この静的メンバー関数は、クラシック C ロケールを表すロケール オブジェクトを返します。|
 |[global](#global)|プログラムの既定のロケールをリセットします。|
 
-### <a name="operators"></a>演算子
+### <a name="operators"></a>オペレーター
 
 |演算子|説明|
 |-|-|
@@ -180,7 +180,7 @@ cout.imbue(loc);
 |[facet](#facet_class)|すべてのロケールのファセットの基底クラスとして機能するクラス。|
 |[`id`](#id_class)|このメンバー クラスは、ロケール内でファセットを検索するためのインデックスとして使用される一意のファセット ID を提供します。|
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:**\<locale>
 
@@ -202,7 +202,7 @@ static const int all = LC_ALL;
 static const int none = 0;
 ```
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 この型は、 **`int`** クラスロケールに対してローカルなビットマスク型の個別の要素のグループを表すことができる型のシノニムです。または、対応する C ロケールカテゴリのいずれかを表すために使用できます。 要素は次のとおりです。
 
@@ -238,7 +238,7 @@ static const locale& classic();
 
 C ロケールへの参照。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 Classic C ロケールは、標準 C ライブラリ内の米国英語の ASCII ロケールです。 これは、国際化されていないプログラムで暗黙的に使用されるロケールです。
 
@@ -344,7 +344,7 @@ private:
 };
 ```
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 クラスのオブジェクトをコピーしたり、割り当てたりすることはできません `facet` 。 クラス `locale::facet` から派生したオブジェクトは構築および破棄できますが、厳密な意味での基底クラスのオブジェクトは構築および破棄できません。 通常は、を構築する `_Myfac` ときにから派生したオブジェクトを構築します。 `facet` `locale``locale loc(locale::classic(), new _Myfac);`
 
@@ -367,7 +367,7 @@ static locale global(const locale& new_default_locale);
 
 既定のロケールがリセットされる前の以前のロケール。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 プログラムの起動時には、グローバル ロケールはクラシック ロケールと同じです。 `global()` 関数は `setlocale( LC_ALL, loc.name. c_str())` を呼び出して、標準 C ライブラリ内で一致するロケールを設定します。
 
@@ -412,7 +412,7 @@ class id
 };
 ```
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 このメンバー クラスは、一意の各ロケール ファセットに必要な静的メンバー オブジェクトを表します。 クラスのオブジェクトをコピーしたり、割り当てたりすることはできません `id` 。
 
@@ -452,7 +452,7 @@ locale(const locale& from_locale, const Facet* new_facet);
 *new_facet*\
 構築されるロケール内での置換後のファセット。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 最初のコンストラクターは、グローバル ロケールと一致するようにオブジェクトを初期化します。 2番目と3番目のコンストラクターは、すべてのロケールカテゴリを初期化して、ロケール名 *locale_name*との動作が一致するようにします。 残りのコンストラクターは *from_locale*をコピーします。ただし、次の点に注意してください。
 
@@ -576,7 +576,7 @@ bool operator!=(const locale& right) const;
 
 **`true`** ロケールが同じロケールのコピーでない場合は、ブール値。 ロケールが **`false`** 同じロケールのコピーである場合は、
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 2つのロケールは、それらが同じロケールである場合、一方が他方のコピーである場合、または同じ名前を持つ場合に等しくなります。
 
@@ -622,7 +622,7 @@ loc3 (English_United States.1252) are not equal.
 
 ## <a name="localeoperator"></a><a name="op_call"></a> locale:: operator ()
 
-`basic_string`このロケールの std:: collate ファセットによって定義された辞書式比較規則に従って、2つのオブジェクトを比較し <charT> ます。
+`basic_string`このロケールのファセットで定義されている辞書式比較規則に従って、2つのオブジェクトを比較し `std::collate<charT>` ます。
 
 ```cpp
 template <class CharType, class Traits, class Allocator>
@@ -643,7 +643,7 @@ bool operator()(
 
 - **`true`***left*が辞書式未満の場合*は、それ以外の場合*は **`false`** 。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 このメンバー関数は、実質的に次の内容を実行します。
 
@@ -703,7 +703,7 @@ bool operator==(const locale& right) const;
 
 **`true`** ロケールが同じロケールのコピーである場合は、ブール値。 **`false`** ロケールが同じロケールのコピーではない場合です。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 2つのロケールは、それらが同じロケールである場合、一方が他方のコピーである場合、または同じ名前を持つ場合に等しくなります。
 

@@ -1,20 +1,21 @@
 ---
 title: /Zc (準拠)
-ms.date: 03/06/2018
+description: /Zc 準拠コンパイラオプションは、準拠または下位互換性の動作のサポートを有効または無効にします。
+ms.date: 09/10/2020
 helpviewer_keywords:
 - /Zc compiler options [C++]
 - -Zc compiler options [C++]
 - Conformance compiler options
 - Zc compiler options [C++]
 ms.assetid: db1cc175-6e93-4a2e-9396-c3725d2d8f71
-ms.openlocfilehash: 6d6d3b7736fd1775372a3b2093c53e177db5099e
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 13e06cd75f1ee684c2ee1ad6239aeb77b805675e
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87234355"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90041524"
 ---
-# <a name="zc-conformance"></a>`/Zc`互換性
+# <a name="zc-conformance"></a>`/Zc` 互換性
 
 コンパイラオプションを使用して、 **`/Zc`** 標準または Microsoft 固有のコンパイラの動作を指定できます。
 
@@ -22,7 +23,7 @@ ms.locfileid: "87234355"
 
 > **`/Zc:`**_オプション_{、_オプション_}
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>注釈
 
 Visual Studio で、標準と互換性のない C または C++ の拡張機能が実装されている場合は、準拠オプションを使用して、 **`/Zc`** 標準準拠または Microsoft 固有の動作を指定できます。 一部のオプションでは、既存のコードに大きな変更が加えられないように、Microsoft 固有の動作が既定値になります。 それ以外の場合、既定値は標準の動作であり、セキュリティ、パフォーマンス、または互換性の向上が重大な変更のコストよりも優先されます。 各準拠オプションの既定の設定は、新しいバージョンの Visual Studio で変更される可能性があります。 各準拠オプションの詳細については、「」を参照してください。 [`/permissive-`](permissive-standards-conformance.md)コンパイラオプションは、既定では、準拠する設定に設定されていない準拠オプションを暗黙的に設定します。
 
@@ -38,6 +39,7 @@ Visual Studio で、標準と互換性のない C または C++ の拡張機能�
 | [`/ZcimplicitNoexcept`](zc-implicitnoexcept-implicit-exception-specifiers.md) | 必須の関数に対して暗黙的に有効に **`noexcept`** します (既定ではオン)。 |
 | [`/Zc:inline`](zc-inline-remove-unreferenced-comdat.md) | 参照されていない関数またはデータが COMDAT である場合、または内部リンケージのみを持つ場合 (既定ではオフ) は、削除します。 |
 | [`/Zc:noexceptTypes`](zc-noexcepttypes.md) | C++ 17 の **`noexcept`** 規則を適用します (既定では c++ 17 以降で)。 |
+| [`/Zc:preprocessor`](zc-preprocessor.md) | 新しい準拠プリプロセッサを使用します (既定ではオフになっていますが、C11/C17 は除きます)。 |
 | [`/Zc:referenceBinding`](zc-referencebinding-enforce-reference-binding-rules.md) | UDT の一時停止は、非定数の左辺値参照にバインドされません (既定ではオフ)。 |
 | [`/Zc:rvalueCast`](zc-rvaluecast-enforce-type-conversion-rules.md) | 標準 C++ 明示的な型変換規則を適用します (既定ではオフ)。 |
 | [`/Zc:sizedDealloc`](zc-sizeddealloc-enable-global-sized-dealloc-functions.md) | C++ 14 グローバルサイズ割り当て解除関数を有効にします (既定ではオン)。 |
@@ -51,7 +53,7 @@ Visual Studio で、標準と互換性のない C または C++ の拡張機能�
 
 Visual C++ の準拠に関する問題について詳しくは、「 [Nonstandard Behavior](../../cpp/nonstandard-behavior.md)」をご覧ください。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [MSVC コンパイラ オプション](compiler-options.md)<br/>
 [MSVC コンパイラのコマンドライン構文](compiler-command-line-syntax.md)

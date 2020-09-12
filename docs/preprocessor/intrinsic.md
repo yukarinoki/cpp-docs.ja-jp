@@ -9,12 +9,12 @@ helpviewer_keywords:
 - intrinsic pragma
 - pragmas, intrinsic
 ms.assetid: 25c86ac7-ef40-47b7-a2c0-fada9c5dc3c5
-ms.openlocfilehash: 31f4ebc2fdd4c5c984160d441b4e0a723c686a46
-ms.sourcegitcommit: 80c8a512b361bd84e38958beb1a1bf6db7434021
+ms.openlocfilehash: 45a5a13f3bda3657b93e1a89e7a842a4465b01d5
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86180956"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90041108"
 ---
 # <a name="intrinsic-pragma"></a>`intrinsic` プラグマ
 
@@ -24,7 +24,7 @@ ms.locfileid: "86180956"
 
 > **`#pragma intrinsic(`** *`function1`* [**`,`** _`function2`_ ... ] **`)`**
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>注釈
 
 **`intrinsic`** プラグマは、関数が既知の動作を持つことをコンパイラに通知します。 コンパイラは、関数を呼び出し、より優れたパフォーマンスを得られる場合は、関数呼び出しをインライン命令に置き換えないことがあります。
 
@@ -32,14 +32,37 @@ ms.locfileid: "86180956"
 
 次の関数には固有のフォームがあり、組み込みフォームはを指定するときに使用され [`/Oi`](../build/reference/oi-generate-intrinsic-functions.md) ます。
 
-|  |  |  |  |
-|--|--|--|--|
-| [`_disable`](../intrinsics/disable.md) | [`_outp`](../c-runtime-library/outp-outpw-outpd.md) | [`fabs`](../c-runtime-library/reference/fabs-fabsf-fabsl.md) | [`strcmp`](../c-runtime-library/reference/strcmp-wcscmp-mbscmp.md) |
-| [`_enable`](../intrinsics/enable.md) | [`_outpw`](../c-runtime-library/outp-outpw-outpd.md) | [`labs`](../c-runtime-library/reference/abs-labs-llabs-abs64.md) | [`strcpy`](../c-runtime-library/reference/strcpy-wcscpy-mbscpy.md) |
-| [`_inp`](../c-runtime-library/inp-inpw-inpd.md) | [`_rotl`](../c-runtime-library/reference/rotl-rotl64-rotr-rotr64.md) | [`memcmp`](../c-runtime-library/reference/memcmp-wmemcmp.md) | [`strlen`](../c-runtime-library/reference/strlen-wcslen-mbslen-mbslen-l-mbstrlen-mbstrlen-l.md) |
-| [`_inpw`](../c-runtime-library/inp-inpw-inpd.md) | [`_rotr`](../c-runtime-library/reference/rotl-rotl64-rotr-rotr64.md) | [`memcpy`](../c-runtime-library/reference/memcpy-wmemcpy.md) |  |
-| [`_lrotl`](../c-runtime-library/reference/lrotl-lrotr.md) | [`_strset`](../c-runtime-library/reference/strset-strset-l-wcsset-wcsset-l-mbsset-mbsset-l.md) | [`memset`](../c-runtime-library/reference/memset-wmemset.md) |  |
-| [`_lrotr`](../c-runtime-library/reference/lrotl-lrotr.md) | [`abs`](../c-runtime-library/reference/abs-labs-llabs-abs64.md) | [`strcat`](../c-runtime-library/reference/strcat-wcscat-mbscat.md) |  |
+:::row:::
+   :::column span="":::
+      [`abs`](../c-runtime-library/reference/abs-labs-llabs-abs64.md)\
+      [`_disable`](../intrinsics/disable.md)\
+      [`_enable`](../intrinsics/enable.md)\
+      [`fabs`](../c-runtime-library/reference/fabs-fabsf-fabsl.md)\
+      [`_inp`](../c-runtime-library/inp-inpw-inpd.md)\
+      [`_inpw`](../c-runtime-library/inp-inpw-inpd.md)\
+   :::column-end:::
+   :::column span="":::
+      [`labs`](../c-runtime-library/reference/abs-labs-llabs-abs64.md)\
+      [`_lrotl`](../c-runtime-library/reference/lrotl-lrotr.md)\
+      [`_lrotr`](../c-runtime-library/reference/lrotl-lrotr.md)\
+      [`memcmp`](../c-runtime-library/reference/memcmp-wmemcmp.md)\
+      [`memcpy`](../c-runtime-library/reference/memcpy-wmemcpy.md)\
+   :::column-end:::
+   :::column span="":::
+      [`memset`](../c-runtime-library/reference/memset-wmemset.md)\
+      [`_outp`](../c-runtime-library/outp-outpw-outpd.md)\
+      [`_outpw`](../c-runtime-library/outp-outpw-outpd.md)\
+      [`_rotl`](../c-runtime-library/reference/rotl-rotl64-rotr-rotr64.md)\
+      [`_rotr`](../c-runtime-library/reference/rotl-rotl64-rotr-rotr64.md)\
+   :::column-end:::
+   :::column span="":::
+      [`strcat`](../c-runtime-library/reference/strcat-wcscat-mbscat.md)\
+      [`strcmp`](../c-runtime-library/reference/strcmp-wcscmp-mbscmp.md)\
+      [`strcpy`](../c-runtime-library/reference/strcpy-wcscpy-mbscpy.md)\
+      [`strlen`](../c-runtime-library/reference/strlen-wcslen-mbslen-mbslen-l-mbstrlen-mbstrlen-l.md)\
+      [`_strset`](../c-runtime-library/reference/strset-strset-l-wcsset-wcsset-l-mbsset-mbsset-l.md)\
+   :::column-end:::
+:::row-end:::
 
 組み込み関数を使用するプログラムは、関数呼び出しのオーバーヘッドがないため、高速です。 ただし、追加のコードが生成されるため、サイズが大きくなる可能性があります。
 
@@ -68,24 +91,51 @@ int main() {
 
 これらの浮動小数点関数には、真の組み込み形式はありません。 代わりに、引数をスタックにプッシュするのではなく、浮動小数点チップに直接渡すバージョンがあります。
 
-|  |  |  |  |
-|--|--|--|--|
-| [`acos`](../c-runtime-library/reference/acos-acosf-acosl.md) | [`cosh`](../c-runtime-library/reference/cosh-coshf-coshl.md) | [`pow`](../c-runtime-library/reference/pow-powf-powl.md) | [`tanh`](../c-runtime-library/reference/tanh-tanhf-tanhl.md) |
-| [`asin`](../c-runtime-library/reference/asin-asinf-asinl.md) | [`fmod`](../c-runtime-library/reference/fmod-fmodf.md) | [`sinh`](../c-runtime-library/reference/sinh-sinhf-sinhl.md) |  |
+:::row:::
+   :::column span="":::
+      [`acos`](../c-runtime-library/reference/acos-acosf-acosl.md)\
+      [`asin`](../c-runtime-library/reference/asin-asinf-asinl.md)\
+   :::column-end:::
+   :::column span="":::
+      [`cosh`](../c-runtime-library/reference/cosh-coshf-coshl.md)\
+      [`fmod`](../c-runtime-library/reference/fmod-fmodf.md)\
+   :::column-end:::
+   :::column span="":::
+      [`pow`](../c-runtime-library/reference/pow-powf-powl.md)\
+      [`sinh`](../c-runtime-library/reference/sinh-sinhf-sinhl.md)\
+   :::column-end:::
+   :::column span="":::
+      [`tanh`](../c-runtime-library/reference/tanh-tanhf-tanhl.md)\
+   :::column-end:::
+:::row-end:::
 
 これらの浮動小数点関数は [`/Oi`](../build/reference/oi-generate-intrinsic-functions.md) 、および [`/fp:fast`](../build/reference/fp-specify-floating-point-behavior.md) (または、、、およびを含む任意のオプション) を指定するときに、真の組み込み形式を持ち **`/Oi`** [`/Ox`](../build/reference/ox-full-optimization.md) [`/O1`](../build/reference/o1-o2-minimize-size-maximize-speed.md) [`/O2`](../build/reference/o1-o2-minimize-size-maximize-speed.md) ます。
 
-|  |  |  |  |
-|--|--|--|--|
-| [`atan`](../c-runtime-library/reference/atan-atanf-atanl-atan2-atan2f-atan2l.md) | [`exp`](../c-runtime-library/reference/exp-expf.md) | [`log10`](../c-runtime-library/reference/log-logf-log10-log10f.md) | [`sqrt`](../c-runtime-library/reference/sqrt-sqrtf-sqrtl.md) |
-| [`atan2`](../c-runtime-library/reference/atan-atanf-atanl-atan2-atan2f-atan2l.md) | [`log`](../c-runtime-library/reference/log-logf-log10-log10f.md) | [`sin`](../c-runtime-library/reference/sin-sinf-sinl.md) | [`tan`](../c-runtime-library/reference/tan-tanf-tanl.md) |
-| [`cos`](../c-runtime-library/reference/cos-cosf-cosl.md) |  |  |  |
+:::row:::
+   :::column span="":::
+      [`atan`](../c-runtime-library/reference/atan-atanf-atanl-atan2-atan2f-atan2l.md)\
+      [`atan2`](../c-runtime-library/reference/atan-atanf-atanl-atan2-atan2f-atan2l.md)\
+      [`cos`](../c-runtime-library/reference/cos-cosf-cosl.md)\
+   :::column-end:::
+   :::column span="":::
+      [`exp`](../c-runtime-library/reference/exp-expf.md)\
+      [`log`](../c-runtime-library/reference/log-logf-log10-log10f.md)\
+   :::column-end:::
+   :::column span="":::
+      [`log10`](../c-runtime-library/reference/log-logf-log10-log10f.md)\
+      [`sin`](../c-runtime-library/reference/sin-sinf-sinl.md)\
+   :::column-end:::
+   :::column span="":::
+      [`sqrt`](../c-runtime-library/reference/sqrt-sqrtf-sqrtl.md)\
+      [`tan`](../c-runtime-library/reference/tan-tanf-tanl.md)\
+   :::column-end:::
+:::row-end:::
 
 またはを使用して、 [`/fp:strict`](../build/reference/fp-specify-floating-point-behavior.md) [`/Za`](../build/reference/za-ze-disable-language-extensions.md) 真の組み込み浮動小数点オプションの生成をオーバーライドできます。 浮動小数点関数はライブラリ ルーチンとして生成されます。これらのライブラリ ルーチンでは、引数はプログラム スタックにプッシュされずに、数値演算コプロセッサに直接渡されます。
 
 [`#pragma function`](../preprocessor/function-c-cpp.md)ソーステキストのブロックの組み込みを有効または無効にする方法の詳細と例については、「」を参照してください。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [プラグマディレクティブと `__pragma` キーワード](../preprocessor/pragma-directives-and-the-pragma-keyword.md)\
 [コンパイラの組み込み](../intrinsics/compiler-intrinsics.md)

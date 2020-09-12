@@ -1,6 +1,7 @@
 ---
 title: unordered_set クラス
-ms.date: 11/04/2016
+description: 順序付けられ `unordered_set` ていないコレクションのデータを格納および取得するために使用される、C++ 標準ライブラリコンテナークラスの API リファレンスです。
+ms.date: 9/9/2020
 f1_keywords:
 - unordered_set/std::unordered_set
 - unordered_set/std::unordered_set::allocator_type
@@ -26,6 +27,7 @@ f1_keywords:
 - unordered_set/std::unordered_set::cend
 - unordered_set/std::unordered_set::clear
 - unordered_set/std::unordered_set::count
+- unordered_set/std::unordered_set::contains
 - unordered_set/std::unordered_set::emplace
 - unordered_set/std::unordered_set::emplace_hint
 - unordered_set/std::unordered_set::empty
@@ -71,6 +73,7 @@ helpviewer_keywords:
 - std::unordered_set::cbegin
 - std::unordered_set::cend
 - std::unordered_set::clear
+- std::unordered_set::contains
 - std::unordered_set::count
 - std::unordered_set::emplace
 - std::unordered_set::emplace_hint
@@ -134,16 +137,16 @@ helpviewer_keywords:
 - std::unordered_set::size
 - std::unordered_set::swap
 ms.assetid: ac08084e-05a7-48c0-9ae4-d40c529922dd
-ms.openlocfilehash: 5eb8a6902324ee069ff275e77b97703ba6ba3356
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 396465b24e9d7cf0facbe324c7b01479fe8e9b6b
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88839518"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90040042"
 ---
 # <a name="unordered_set-class"></a>unordered_set クラス
 
-クラステンプレートは、型の要素の可変長シーケンスを制御するオブジェクトを表し `const Key` ます。 このシーケンスは、ハッシュ関数によって、"バケット" と呼ばれる一列に並んだサブシーケンスに分割され、弱い順序付けがなされます。 各バケット内では、比較関数によって要素間の大小関係が決定されます。 各要素には、並べ替えキーと値という、2 つの側面があります。 このシーケンスは、すべてのバケットの長さがおおよそ等しければ、シーケンス内の要素数にかかわらず一定の演算回数 (定数時間) で、任意の要素を検索、挿入、削除できるような方法で表現されます。 最悪のケースは、すべての要素が 1 つのバケットに集められたときです。演算の回数は、シーケンス内の要素数に比例して増えることになります (線形時間)。 要素を挿入しても反復子の有効性は失われません。また、要素を削除した場合は、削除された要素を指す反復子だけが無効化されます。
+クラステンプレートは、型の要素の可変長シーケンスを制御するオブジェクトを表し `const Key` ます。 このシーケンスは、ハッシュ関数によって、"バケット" と呼ばれる一列に並んだサブシーケンスに分割され、弱い順序付けがなされます。 各バケット内で、比較関数は、要素のペアの順序が等しいかどうかを判断します。 各要素には、並べ替えキーと値という、2 つの側面があります。 このシーケンスは、すべてのバケットの長さがおおよそ等しければ、シーケンス内の要素数にかかわらず一定の演算回数 (定数時間) で、任意の要素を検索、挿入、削除できるような方法で表現されます。 最悪のケースは、すべての要素が 1 つのバケットに集められたときです。演算の回数は、シーケンス内の要素数に比例して増えることになります (線形時間)。 要素を挿入すると反復子は無効になり、要素を削除すると、削除された要素を指す反復子のみが無効になります。
 
 ## <a name="syntax"></a>構文
 
@@ -192,17 +195,18 @@ class unordered_set;
 |[size_type](#size_type)|2 つの要素間の距離を表す、符号なしの型です。|
 |[value_type](#value_type)|要素の型。|
 
-### <a name="functions"></a>Functions
+### <a name="functions"></a>機能
 
 |名前|説明|
 |-|-|
 |[初め](#begin)|被制御シーケンスの先頭を指定します。|
-|[つぶし](#bucket)|キー値のバケット番号を取得します。|
+|[bucket](#bucket)|キー値のバケット番号を取得します。|
 |[bucket_count](#bucket_count)|バケット数を取得します。|
 |[bucket_size](#bucket_size)|バケットのサイズを取得します。|
 |[cbegin](#cbegin)|被制御シーケンスの先頭を指定します。|
 |[cend](#cend)|被制御シーケンスの末尾を指定します。|
 |[オフ](#clear)|すべての要素を削除します。|
+|[contains](#contains)<sup>c++ 20</sup>を含む|内に指定されたキーを持つ要素があるかどうかを確認し `unordered_set` ます。|
 |[count](#count)|指定したキーに一致する要素の数を検索します。|
 |[emplace](#emplace)|構築された要素を適切な場所に追加します。|
 |[emplace_hint](#emplace_hint)|構築された要素を適切な場所にヒントと一緒に追加します。|
@@ -224,21 +228,21 @@ class unordered_set;
 |[スワップ](#swap)|2 つのコンテナーのコンテンツを交換します。|
 |[unordered_set](#unordered_set)|コンテナー オブジェクトを構築します。|
 
-### <a name="operators"></a>演算子
+### <a name="operators"></a>オペレーター
 
 |名前|説明|
 |-|-|
 |[unordered_set:: operator =](#op_eq)|ハッシュ テーブルをコピーします。|
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>注釈
 
 オブジェクトは、格納されている2つのオブジェクト、型 [unordered_set:: key_equal](#key_equal) の比較関数オブジェクト、および [unordered_set:: hasher](#hasher)型のハッシュ関数オブジェクトを呼び出すことによって、制御するシーケンスを並べ替えます。 最初に格納されたオブジェクトにアクセスするには、メンバー関数[unordered_set:: key_eq](#key_eq)を呼び出します。次に、 `()` メンバー関数[unordered_set:: hash_function](#hash)を呼び出して、2番目に格納されているオブジェクトにアクセスし `()` ます。 具体的には、`X` 型のすべての値 `Y` と `Key` について、`key_eq()(X, Y)` が呼び出され、2 つの引数値の大小関係が等しい場合は true が返されます。`hash_function()(keyval)` の呼び出しからは、`size_t` 型の値の分布が生成されます。 クラステンプレート [Unordered_multiset クラス](../standard-library/unordered-multiset-class.md)とは異なり、型のオブジェクトは、 `unordered_set` `key_eq()(X, Y)` 被制御シーケンスの任意の2つの要素に対して常に false になります。 キーの重複は許されません。
 
 このオブジェクトには、さらに、適切とされるバケットあたりの最大平均要素数を指定する最大テーブル占有率が格納されます。 要素を挿入することによって[unordered_set:: load_factor](#load_factor)が `()` 最大占有率を超える場合、コンテナーはバケット数を増やし、必要に応じてハッシュテーブルを再構築します。
 
-被制御シーケンスにおける要素の実際の順序は、ハッシュ関数、比較関数、挿入の順序、最大テーブル占有率、現在のバケット数などによって異なります。 通常、被制御シーケンス内の要素の順序を予測することはできません。 ただし、被制御シーケンス内で同じ大小関係を持った一連の要素は必ず隣接して存在します。
+被制御シーケンスにおける要素の実際の順序は、ハッシュ関数、比較関数、挿入の順序、最大テーブル占有率、現在のバケット数などによって異なります。 一般に、被制御シーケンス内の要素の順序を予測することはできません。 ただし、被制御シーケンス内で同じ大小関係を持った一連の要素は必ず隣接して存在します。
 
-オブジェクトは、 [unordered_set:: allocator_type](#allocator_type)型の格納されたアロケーターオブジェクトを介して制御するシーケンスのストレージを割り当てて解放します。 このようなアロケーターオブジェクトは、型のオブジェクトと同じ外部インターフェイスを持っている必要があり `allocator` ます。 コンテナー オブジェクトを代入しても、格納されているアロケーター オブジェクトはコピーされない点に注意してください。
+オブジェクトは、 [unordered_set:: allocator_type](#allocator_type)型の格納されたアロケーターオブジェクトを介して制御するシーケンスのストレージを割り当てて解放します。 このようなアロケーターオブジェクトは、型のオブジェクトと同じ外部インターフェイスを持っている必要があり `allocator` ます。 コンテナーオブジェクトが割り当てられても、格納されているアロケーターオブジェクトはコピーされません。
 
 ## <a name="unordered_setallocator_type"></a><a name="allocator_type"></a> unordered_set:: allocator_type
 
@@ -248,7 +252,7 @@ class unordered_set;
 typedef Alloc allocator_type;
 ```
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 この型は、テンプレート パラメーター `Alloc` のシノニムです。
 
@@ -297,7 +301,7 @@ const_local_iterator begin(size_type nbucket) const;
 *nbucket*\
 バケット番号。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 最初の 2 つのメンバー関数は、シーケンスの最初の要素 (または空のシーケンスの末尾の次の位置) を示す前方反復子を返します。 最後の2つのメンバー関数は、バケット *nbucket* の最初の要素 (または空のバケットの末尾の次の位置) を示す前方反復子を返します。
 
@@ -370,7 +374,7 @@ size_type bucket(const Key& keyval) const;
 *keyval*\
 マップするキー値。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 このメンバー関数は、キー値 *keyval*に現在対応しているバケット番号を返します。
 
@@ -420,7 +424,7 @@ bucket_size(7) == 1
 size_type bucket_count() const;
 ```
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 このメンバー関数は、現在のバケット数を返します。
 
@@ -510,7 +514,7 @@ size_type bucket_size(size_type nbucket) const;
 *nbucket*\
 バケット番号。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 このメンバー関数は、バケット数 *nbucket*のサイズを返します。
 
@@ -564,9 +568,9 @@ const_iterator cbegin() const;
 
 **`const`** 範囲の最初の要素、または空の範囲の末尾の次の位置 (空の範囲の場合は) を指す前方アクセス反復子 `cbegin() == cend()` 。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
-`cbegin` の戻り値で範囲内の要素を変更することはできません。
+の戻り値を使用して、 `cbegin` 範囲内の要素を変更することはできません。
 
 `begin()` メンバー関数の代わりにこのメンバー関数を使用して、戻り値が `const_iterator` になることを保証できます。 通常は、次の例に示すように [auto](../cpp/auto-cpp.md) 型推論キーワードと共に使用します。 この例では、 `Container` **`const`** とをサポートする任意の種類の変更可能な (非) コンテナーである `begin()` と見なし `cbegin()` ます。
 
@@ -590,7 +594,7 @@ const_iterator cend() const;
 
 **`const`** 範囲の末尾の次の位置を指し示す前方アクセス反復子。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 `cend` は、反復子が範囲の末尾を超えたかどうかをテストするために使用されます。
 
@@ -604,7 +608,7 @@ auto i2 = Container.cend();
 // i2 isContainer<T>::const_iterator
 ```
 
-`cend` によって返された値は逆参照しないでください。
+によって返された値を `cend` 逆参照することはできません。
 
 ## <a name="clear"></a><a name="clear"></a> クリア
 
@@ -614,7 +618,7 @@ auto i2 = Container.cend();
 void clear();
 ```
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 このメンバー関数は、 [unordered_set:: erase](#erase) `(` [unordered_set:: begin](#begin) `(),` [unordered_set:: end](#end) `())` を呼び出します。
 
@@ -678,9 +682,9 @@ empty() == false
 typedef T1 const_iterator;
 ```
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
-この型は、被制御シーケンスの定数前方反復子として使用できるオブジェクトを表します。 ここでは、実装定義型 `T1`のシノニムとして記述されています。
+この型は、被制御シーケンスの定数前方反復子として使用できるオブジェクトを表します。 ここでは、実装定義型のシノニムとして記述さ `T1` れています。
 
 ### <a name="example"></a>例
 
@@ -720,9 +724,9 @@ int main()
 typedef T5 const_local_iterator;
 ```
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
-この型は、バケットの定数前方反復子として使用できるオブジェクトを表します。 ここでは、実装定義型 `T5`のシノニムとして記述されています。
+この型は、バケットの定数前方反復子として使用できるオブジェクトを表します。 ここでは、実装定義型のシノニムとして記述さ `T5` れています。
 
 ### <a name="example"></a>例
 
@@ -767,7 +771,7 @@ int main()
 typedef Alloc::const_pointer const_pointer;
 ```
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 この型は、被制御シーケンスの要素への定数ポインターとして使用できるオブジェクトを表します。
 
@@ -812,7 +816,7 @@ int main()
 typedef Alloc::const_reference const_reference;
 ```
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 この型は、被制御シーケンスの要素への定数参照として使用できるオブジェクトを表します。
 
@@ -849,6 +853,57 @@ int main()
 [c] [b] [a]
 ```
 
+## <a name="contains"></a><a name="contains"></a> は
+
+指定したキーを持つ要素が内に存在するかどうかを確認し `unordered_set` ます。
+
+```cpp
+bool contains(const Key& key) const;
+template<class K> bool contains(const K& key) const;
+```
+
+### <a name="parameters"></a>パラメーター
+
+*Kb*\
+キーの型。
+
+*レジストリ*\
+検索する要素のキー値。
+
+### <a name="return-value"></a>戻り値
+
+`true` 要素がコンテナーで見つかった場合は。 `false` それ以外の場合は。
+
+### <a name="remarks"></a>注釈
+
+`contains()` は C++ 20 で新しく追加されたものです。 これを使用するには、 [/std: c + + latest](../build/reference/std-specify-language-standard-version.md) コンパイラオプションを指定します。
+
+`template<class K> bool contains(const K& key) const` が透過的な場合にのみ、オーバーロードの解決に参加 `key_compare` します。
+
+### <a name="example"></a>例
+
+```cpp
+// Requires /std:c++latest
+#include <unordered_set>
+#include <iostream>
+
+int main()
+{
+    std::unordered_set<int> theUnorderedSet = { 1, 2 };
+
+    std::cout << std::boolalpha; // so booleans show as 'true' or 'false'
+    std::cout << theUnorderedSet.contains(2) << '\n';
+    std::cout << theUnorderedSet.contains(3) << '\n';
+    
+    return 0;
+}
+```
+
+```Output
+true
+false
+```
+
 ## <a name="count"></a><a name="count"></a> 数
 
 指定したキーに一致する要素の数を検索します。
@@ -862,7 +917,7 @@ size_type count(const Key& keyval) const;
 *keyval*\
 検索対象のキー値。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 このメンバー関数は、 [unordered_set:: equal_range](#equal_range)で区切られた範囲内の要素の数を返します `(keyval)` 。
 
@@ -911,9 +966,9 @@ count('C') == 0
 typedef T3 difference_type;
 ```
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
-符号付き整数型は、被制御シーケンス内にある 2 つの要素のアドレスの違いを表すことのできるオブジェクトを記述します。 ここでは、実装定義型 `T3`のシノニムとして記述されています。
+符号付き整数型は、被制御シーケンス内にある 2 つの要素のアドレスの違いを表すことのできるオブジェクトを記述します。 ここでは、実装定義型のシノニムとして記述さ `T3` れています。
 
 ### <a name="example"></a>例
 
@@ -981,11 +1036,11 @@ Args&&... args);
 
 このメンバー関数によって返されたペア `pr` の反復子コンポーネントにアクセスするには `pr.first` を使用し、この反復子を逆参照するには `*(pr.first)` を使用します。 **`bool`** `pr` このメンバー関数によって返されたペアのコンポーネントにアクセスするには、を使用し `pr.second` ます。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 この関数では、反復子や参照は無効になりません。
 
-挿入時、例外がスローされたが、コンテナーのハッシュ関数ではエラーが発生しなかった場合、コンテナーは変更されません。 ハッシュ関数で例外がスローされた場合、結果は未定義になります。
+挿入時に例外がスローされたが、コンテナーのハッシュ関数では発生しなかった場合、コンテナーは変更されません。 ハッシュ関数で例外がスローされた場合、結果は未定義になります。
 
 コード例については、「 [set:: emplace](../standard-library/set-class.md#emplace)」を参照してください。
 
@@ -1014,11 +1069,11 @@ Args&&... args);
 
 要素が既に存在するために挿入が失敗した場合は、既存の要素を指す反復子を返します。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 この関数では、反復子や参照は無効になりません。
 
-挿入時、例外がスローされたが、コンテナーのハッシュ関数ではエラーが発生しなかった場合、コンテナーは変更されません。 ハッシュ関数で例外がスローされた場合、結果は未定義になります。
+挿入時に例外がスローされたが、コンテナーのハッシュ関数では発生しなかった場合、コンテナーは変更されません。 ハッシュ関数で例外がスローされた場合、結果は未定義になります。
 
 コード例については、「[set::emplace_hint](../standard-library/set-class.md#emplace_hint)」をご覧ください。
 
@@ -1030,7 +1085,7 @@ Args&&... args);
 bool empty() const;
 ```
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 このメンバー関数は、被制御シーケンスが空の場合に true を返します。
 
@@ -1105,7 +1160,7 @@ const_local_iterator end(size_type nbucket) const;
 *nbucket*\
 バケット番号。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 最初の 2 つのメンバー関数は、シーケンスの末尾の次を示す前方反復子を返します。 最後の2つのメンバー関数は、バケット *nbucket*の末尾の次の位置を示す前方反復子を返します。
 
@@ -1171,7 +1226,7 @@ equal_range(const Key& keyval) const;
 *keyval*\
 検索対象のキー値。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 このメンバー関数は、 `X` `[X.first, X.second)` *keyval*と同等の順序付けを持つ被制御シーケンスの要素だけを区切る反復子のペアを返します。 そのような要素が存在しない場合は、どちらの反復子も `end()`です。
 
@@ -1254,7 +1309,7 @@ size_type erase(const key_type& Key);
 
 3 番目のメンバー関数では、unordered_set から削除された要素の数が返されます。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 コード例については、「[set::erase](../standard-library/set-class.md#erase)」をご覧ください。
 
@@ -1271,7 +1326,7 @@ const_iterator find(const Key& keyval) const;
 *keyval*\
 検索対象のキー値。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 このメンバー関数は[unordered_set:: equal_range](#equal_range)を返し `(keyval).first` ます。
 
@@ -1325,7 +1380,7 @@ find('b') == true: [b]
 Alloc get_allocator() const;
 ```
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 このメンバー関数は、格納されているアロケーター オブジェクトを返します。
 
@@ -1363,7 +1418,7 @@ al == std::allocator() is true
 Hash hash_function() const;
 ```
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 このメンバー関数は、格納されているハッシュ関数オブジェクトを返します。
 
@@ -1401,7 +1456,7 @@ hfn('b') == 1647086
 typedef Hash hasher;
 ```
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 この型は、テンプレート パラメーター `Hash` のシノニムです。
 
@@ -1487,11 +1542,11 @@ Unordered_set が [value_type](../standard-library/map-class.md#value_type)の�
 
 単一要素とヒントのメンバー関数 (3) と (4) は、unordered_set に挿入された新しい要素の位置を指す反復子を返します。ただし、同じキーを持つ要素が既に存在する場合、この反復子は既存の要素を指します。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 この関数では、反復子、ポインター、参照は無効になりません。
 
-要素を 1 つだけ挿入するとき、例外がスローされたが、コンテナーのハッシュ関数ではエラーが発生しなかった場合、コンテナーの状態は変更されません。 ハッシュ関数で例外がスローされた場合、結果は未定義になります。 複数の要素を挿入するときに例外がスローされた場合、コンテナーの状態は未指定ですが、有効な状態になっています。
+要素を1つだけ挿入するときに、例外がスローされ、コンテナーのハッシュ関数では発生しない場合、コンテナーの状態は変更されません。 ハッシュ関数で例外がスローされた場合、結果は未定義になります。 複数の要素を挿入するときに例外がスローされた場合、コンテナーの状態は未指定ですが、有効な状態になっています。
 
 単一要素のメンバー関数によって返されるの反復子コンポーネントにアクセスするには、を使用します `pair` `pr` `pr.first` 。返されるペア内で反復子を逆参照するには、を使用して要素を指定し `*pr.first` ます。 コンポーネントにアクセスするには **`bool`** 、を使用 `pr.second` します。 例については、この記事で後ほど説明するサンプル コードを参照してください。
 
@@ -1525,7 +1580,7 @@ typedef implementation-defined iterator;
 Pred key_eq() const;
 ```
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 このメンバー関数は、格納されている比較関数オブジェクトを返します。
 
@@ -1565,7 +1620,7 @@ cmpfn('a', 'b') == false
 typedef Pred key_equal;
 ```
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 この型は、テンプレート パラメーター `Pred` のシノニムです。
 
@@ -1605,7 +1660,7 @@ cmpfn('a', 'b') == false
 typedef Key key_type;
 ```
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 この型は、テンプレート パラメーター `Key` のシノニムです。
 
@@ -1657,7 +1712,7 @@ int main()
 float load_factor() const;
 ```
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 このメンバー関数は、 `(float)` バケットごとの平均要素数である[unordered_set:: size](#size) `() / (float)` [unordered_set:: bucket_count](#bucket_count)を返し `()` ます。
 
@@ -1742,9 +1797,9 @@ max_load_factor() == 0.1
 typedef T4 local_iterator;
 ```
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
-この型は、バケットの前方反復子として使用できるオブジェクトを表します。 ここでは、実装定義型 `T4`のシノニムとして記述されています。
+この型は、バケットの前方反復子として使用できるオブジェクトを表します。 ここでは、実装定義型のシノニムとして記述さ `T4` れています。
 
 ### <a name="example"></a>例
 
@@ -1789,7 +1844,7 @@ int main()
 size_type max_bucket_count() const;
 ```
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 このメンバー関数は、現在許可されているバケットの最大数を返します。
 
@@ -1881,7 +1936,7 @@ void max_load_factor(float factor);
 *段階*\
 新しい最大テーブル占有率。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 1 つ目のメンバー関数は、格納されている最大テーブル占有率を返します。 2番目のメンバー関数は、格納されている最大占有率を *係数*に置き換えます。
 
@@ -1966,7 +2021,7 @@ max_load_factor() == 0.1
 size_type max_size() const;
 ```
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 このメンバー関数は、オブジェクトが制御できる最も長いシーケンスの長さを返します。
 
@@ -2008,7 +2063,7 @@ unordered_set& operator=(unordered_set&& right);
 *そうです*\
 にコピーされる [unordered_set](../standard-library/unordered-set-class.md) `unordered_set` 。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 内の既存の要素を消去した後、 `unordered_set` `operator=` の内容をに*right*コピーまたは移動し `unordered_set` ます。
 
@@ -2057,7 +2112,7 @@ int main( )
 typedef Alloc::pointer pointer;
 ```
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 この型は、被制御シーケンスの要素へのポインターとして機能するオブジェクトを表します。
 
@@ -2103,7 +2158,7 @@ int main()
 typedef Alloc::reference reference;
 ```
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 この型は、被制御シーケンスの要素への参照として使用できるオブジェクトを表します。
 
@@ -2154,7 +2209,7 @@ void rehash(size_type nbuckets);
 *nbuckets*\
 要求されたバケット数。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 このメンバー関数は、バケットの数を少なくとも *nbuckets* に変更し、必要に応じてハッシュテーブルを再構築します。
 
@@ -2226,7 +2281,7 @@ max_load_factor() == 0.1
 size_type size() const;
 ```
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 このメンバー関数は、被制御シーケンスの長さを返します。
 
@@ -2291,9 +2346,9 @@ empty() == false
 typedef T2 size_type;
 ```
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
-符号なし整数型は、被制御シーケンスの長さを表すことができるオブジェクトを表します。 ここでは、実装定義型 `T2`のシノニムとして記述されています。
+符号なし整数型は、被制御シーケンスの長さを表すことができるオブジェクトを表します。 ここでは、実装定義型のシノニムとして記述さ `T2` れています。
 
 ### <a name="example"></a>例
 
@@ -2332,7 +2387,7 @@ void swap(unordered_set& right);
 *そうです*\
 交換先のコンテナー。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 このメンバー関数は、との間で被制御シーケンスを交換し **`*this`** ます。 *right* [Unordered_set:: get_allocator](#get_allocator)の場合は、一定の時間内にこれを実行します。この場合、 `() == right.get_allocator()` 型の格納された特性オブジェクトをコピーした結果としてのみ例外がスローされ、 `Tr` 2 つの被制御シーケンス内の要素を指定する参照、ポインター、反復子は無効になります。 それ以外の場合、2 つの被制御シーケンス内の要素数に比例した回数、要素の割り当てとコンストラクター呼び出しが実行されます。
 
@@ -2458,7 +2513,7 @@ unordered_set(
 *IList*\
 コピーする要素を含む initializer_list。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 1つ目のコンストラクターは、 *Right*によって制御されるシーケンスのコピーを指定します。 2 つ目のコンストラクターは、空の被制御シーケンスのコピーを指定します。 3番目のコンストラクターは、4番目のコンストラクターを *右* に移動することによってシーケンスのコピーを指定します。4番目のコンストラクターは、initializer_list を使用して、コピーする要素を指定します。 9 つ目のコンストラクターは、要素値 `[first, last)` のシーケンスを挿入します。
 
@@ -2480,7 +2535,7 @@ unordered_set(
 typedef Key value_type;
 ```
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 この型は、被制御シーケンス内の要素を示します。
 

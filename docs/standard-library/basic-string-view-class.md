@@ -1,6 +1,7 @@
 ---
 title: basic_string_view クラス
-ms.date: 04/20/2019
+description: が、 `basic_string_view` char 形式のオブジェクトの定数連続シーケンスを参照する API リファレンス。
+ms.date: 9/8/2020
 f1_keywords:
 - xstring/std::basic_string_view
 - xstring/std::basic_string_view::allocator_type
@@ -9,6 +10,8 @@ f1_keywords:
 - xstring/std::basic_string_view::const_reference
 - xstring/std::basic_string_view::const_reverse_iterator
 - xstring/std::basic_string_view::difference_type
+- xstring/std::basic_string_view::ends_with
+- xstring/std::basic_string_view::starts_with
 - xstring/std::basic_string_view::iterator
 - xstring/std::basic_string_view::npos
 - xstring/std::basic_string_view::pointer
@@ -93,6 +96,7 @@ helpviewer_keywords:
 - std::basic_string_view, data
 - std::basic_string_view, empty
 - std::basic_string_view, end
+- std::basic_string_view, ends_with
 - std::basic_string_view, erase
 - std::basic_string_view, find
 - std::basic_string_view, find_first_not_of
@@ -116,15 +120,16 @@ helpviewer_keywords:
 - std::basic_string_view, rfind
 - std::basic_string_view, shrink_to_fit
 - std::basic_string_view, size
+- std::basic_string_view, starts_with
 - std::basic_string_view, substr
 - std::basic_string_view, swap
 ms.assetid: a9c3e0a2-39bf-4c8a-b093-9abe30839591
-ms.openlocfilehash: 6609f8e8ee8ccb0d14dbdf11cefc29f4b0dfa6f0
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 8eddf4bc6aae0338dc2e914aa57e6c1e7cc5c912
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87219184"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90040211"
 ---
 # <a name="basic_string_view-class"></a>basic_string_view クラス
 
@@ -181,7 +186,7 @@ class basic_string_view;
 String_view に格納されている文字の型。 C++ 標準ライブラリでは、このテンプレートの特殊化のために次の typedef が提供されています。
 
 - 型の要素の[string_view](../standard-library/string-view-typedefs.md#string_view)**`char`**
-- [wstring_view](../standard-library/string-view-typedefs.md#wstring_view)、**`wchar_t`**
+- [wstring_view](../standard-library/string-view-typedefs.md#wstring_view)、 **`wchar_t`**
 - [u16string_view](../standard-library/string-view-typedefs.md#u16string_view)**`char16_t`**
 - [u32string_view](../standard-library/string-view-typedefs.md#u32string_view)の u32string_view **`char32_t`** 。
 
@@ -236,6 +241,7 @@ String_view に格納されている文字の型。 C++ 標準ライブラリで
 |[data](#data)|文字シーケンスに対して所有されていない生のポインターを返します。|
 |[empty](#empty)|String_view に文字が含まれているかどうかをテストします。|
 |[end](#end)|[Cend](#cend)と同じです。|
+|[ends_with](#ends_with)<sup>c++ 20</sup>|文字列ビューが指定されたサフィックスで終わるかどうかを確認します。|
 |[find](#find)|指定した文字シーケンスに一致する部分文字列の最初の出現を前方方向で検索します。|
 |[find_first_not_of](#find_first_not_of)|指定した string_view または変換可能な文字列オブジェクトの要素ではない最初の文字を検索します。|
 |[find_first_of](#find_first_of)|指定した string_view または変換可能な文字列オブジェクトの要素と一致する最初の文字を検索します。|
@@ -250,22 +256,23 @@ String_view に格納されている文字の型。 C++ 標準ライブラリで
 |[rend](#rend)|反転された string_view 内の最後の要素の1つ後ろを指す定数反復子を返します。|
 |[rfind](#rfind)|指定した文字シーケンスに一致する部分文字列が最初に見つかったときに、その string_view を逆方向に検索します。|
 |[size](#size)|現在の要素数を返します。|
+|[starts_with](#starts_with)<sup>c++ 20</sup>|文字列ビューが特定のプレフィックスで始まるかどうかを確認します。|
 |[substr](#substr)|指定したインデックスを開始位置として、指定した長さの部分文字列を返します。|
 |[スワップ](#swap)|2つの string_views の内容を交換します。|
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>注釈
 
 関数が [max_size](#max_size) の要素よりも長いシーケンスを生成するように指示された場合、関数は [length_error](../standard-library/length-error-class.md) 型のオブジェクトをスローして長さエラーを報告します。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-[std: c++ 17](../build/reference/std-specify-language-standard-version.md)以降
+[std: c++ 17](../build/reference/std-specify-language-standard-version.md) 以降。
 
 **ヘッダー:**\<string_view>
 
 **名前空間:** std
 
-## <a name="basic_string_viewat"></a><a name="at"></a>basic_string_view:: at
+## <a name="basic_string_viewat"></a><a name="at"></a> basic_string_view:: at
 
 指定した0から始まるインデックス位置にある文字に const_reference を返します。
 
@@ -282,11 +289,11 @@ constexpr const_reference at(size_type offset) const;
 
 パラメーターインデックスによって指定された位置にある文字への const_reference。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 最初の要素は0のインデックスを持ち、次の要素は正の整数で連続してインデックスが付けられます。これにより、長さ*n*の string_view には、n *-* 1 という数値でインデックス付けされた*n*番目の要素が含まれるようになります。 **で**は、[演算子 \[ \] ](#op_at)とは異なり、無効なインデックスに対して例外がスローされます。
 
-一般に、や string_view などのシーケンスの場合は、**で**は使用しないことをお勧めし `std::vector` ます。 シーケンスに渡された無効なインデックスは、開発中に検出および修正する必要のある論理エラーです。 プログラムがインデックスが有効であることを確実に特定できない場合は、() でを呼び出さずにテストし、無頓着プログラミングに対する防御のために例外に依存する必要があります。
+一般に、や string_view などのシーケンスの場合は、 **で** は使用しないことをお勧めし `std::vector` ます。 シーケンスに渡された無効なインデックスは、開発中に検出および修正する必要のある論理エラーです。 プログラムがインデックスが有効であることを特定できない場合は、() でを呼び出さずにテストし、無頓着プログラミングに対する防御のために例外に依存します。
 
 詳細については、「 [basic_string_view:: operator \[ \] ](#op_at) 」を参照してください。
 
@@ -307,7 +314,7 @@ int main()
 }
 ```
 
-## <a name="basic_string_viewback"></a><a name="back"></a>basic_string_view:: back
+## <a name="basic_string_viewback"></a><a name="back"></a> basic_string_view:: back
 
 最後の要素に const_reference を返します。
 
@@ -319,7 +326,7 @@ constexpr const_reference back() const;
 
 String_view 内の最後の要素への const_reference。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 String_view が空の場合、例外をスローします。
 
@@ -327,7 +334,7 @@ String_view が変更された後、たとえばを呼び出すことによっ�
 
 ### <a name="example"></a>例
 
-C 文字列リテラルを使用して構築された string_view には終端の null は含まれないため、次の例では ' `back` \ 0 ' ではなく ' p ' が返されます。
+`string_view`C 文字列リテラルを使用して構築されたには、終端の null は含まれません。 したがって、次の例では、はを返し、はを `back` 返し `'p'` ません `'\0'` 。
 
 ```cpp
 char c[] = "Help"; // char[5]
@@ -343,7 +350,7 @@ string_view e = "embedded\0nulls"sv;
 cout << boolalpha << (e.back() == 's'); // true
 ```
 
-## <a name="basic_string_viewbasic_string_view"></a><a name="basic_string_view"></a>basic_string_view:: basic_string_view
+## <a name="basic_string_viewbasic_string_view"></a><a name="basic_string_view"></a> basic_string_view:: basic_string_view
 
 String_view を構築します。
 
@@ -362,13 +369,13 @@ constexpr basic_string_view(const charT* str, size_type len);
 *len*\
 ビューに含める文字数。
 
-## <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 グラフ * パラメーターを持つコンストラクターでは、入力が null で終わることが想定されていますが、終端の null は string_view に含まれていません。
 
 リテラルを使用して string_view を構築することもできます。 「 ["Sv" 演算子](string-view-operators.md#op_sv)」を参照してください。
 
-## <a name="basic_string_viewbegin"></a><a name="begin"></a>basic_string_view:: begin
+## <a name="basic_string_viewbegin"></a><a name="begin"></a> basic_string_view:: begin
 
 [Cbegin](#cbegin)と同じです。
 
@@ -380,7 +387,7 @@ constexpr const_iterator begin() const noexcept;
 
 最初の要素をアドレス指定する const_iterator を返します。
 
-## <a name="basic_string_viewcbegin"></a><a name="cbegin"></a>basic_string_view:: cbegin
+## <a name="basic_string_viewcbegin"></a><a name="cbegin"></a> basic_string_view:: cbegin
 
 範囲内の最初の要素を指す const_iterator を返します。
 
@@ -392,7 +399,7 @@ constexpr const_iterator cbegin() const noexcept;
 
 **`const`** 範囲の最初の要素、または空の範囲の末尾の次の位置 (空の範囲の場合は) を指すランダムアクセス反復子 `cbegin() == cend()` 。
 
-## <a name="basic_string_viewcend"></a><a name="cend"></a>basic_string_view:: cend
+## <a name="basic_string_viewcend"></a><a name="cend"></a> basic_string_view:: cend
 
 範囲内の最後の要素の次の位置を指す const_iterator を返します。
 
@@ -404,13 +411,13 @@ constexpr const_iterator cend() const noexcept;
 
 **`const`** 範囲の末尾の次の位置を指し示すランダムアクセス反復子。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
-`cend` によって返された値は逆参照しないでください。
+によって返された値を `cend` 逆参照することはできません。
 
-## <a name="basic_string_viewcompare"></a><a name="compare"></a>basic_string_view:: compare
+## <a name="basic_string_viewcompare"></a><a name="compare"></a> basic_string_view:: compare
 
-2つのオブジェクトが等しいかどうかを判断するために、指定した string_view (または変換可能な文字列型) を使用して大文字と小文字を区別する比較を実行します。 [ \<string_view> 演算子](string-view-operators.md)は、このメンバー関数を使用して比較を実行します。
+2つのオブジェクトが等しいかどうか、または辞書式が他方よりも小さいかどうかを判断するために、指定した string_view (または変換可能な文字列型) との大文字と小文字を区別した比較を行います。 [ \<string_view> 演算子](string-view-operators.md)は、このメンバー関数を使用して比較を行います。
 
 ```cpp
 constexpr int compare(basic_string_view strv) const noexcept;
@@ -433,21 +440,23 @@ constexpr int compare(size_type pos, size_type num, const charT* ptr, size_type 
 この string_view から比較する最大文字数。
 
 *num2*\
-比較する*strv*の最大文字数。
+比較する *strv* の最大文字数。
 
 *影*\
-比較を開始する*strv*のインデックス。
+比較を開始する *strv* のインデックス。
 
 *ポインター*\
 この string_view と比較する C 文字列。
 
 ### <a name="return-value"></a>戻り値
 
-この string_view が*strv*または*ptr*より小さい場合は、負の値です。2つの文字シーケンスが等しい場合は0。または、この string_view が*strv*または*ptr*より大きい場合は、正の値を指定します。
+- この `string_view` が*strv*または*ptr*より小さい場合は、負の値。
+- 2つの文字シーケンスが等しい場合は0。
+- この `string_view` が*strv*または*ptr*より大きい場合は正の値
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
-`compare`メンバー関数は、各文字シーケンスの全体または一部の比較を大文字と小文字を区別して実行します。
+`compare`メンバー関数は、すべての文字シーケンスの全体または一部を比較して、大文字と小文字を区別します。
 
 ### <a name="example"></a>例
 
@@ -557,9 +566,9 @@ cs_C: ACAB
 The 3 characters from position 1 of sv_I are equal to the first 3 characters of cs_C.
 ```
 
-## <a name="basic_string_viewcopy"></a><a name="copy"></a>basic_string_view:: コピー
+## <a name="basic_string_viewcopy"></a><a name="copy"></a> basic_string_view:: コピー
 
-ソース string_view 内のインデックス位置からターゲットの文字配列に、指定した文字数だけコピーします。 代わりに、セキュリティで保護された関数[basic_string_view:: _Copy_s](#_copy_s)を使用することをお勧めします。
+ソース string_view 内のインデックス位置からターゲットの文字配列に、指定した文字数だけコピーします。 代わりに、セキュリティで保護された関数 [basic_string_view:: _Copy_s](#_copy_s) を使用することをお勧めします。
 
 ```cpp
 size_type copy(charT* ptr, size_type count, size_type offset = 0) const;
@@ -578,15 +587,15 @@ size_type copy(charT* ptr, size_type count, size_type offset = 0) const;
 
 ### <a name="return-value"></a>戻り値
 
-実際にコピーされた文字数。
+コピーされた文字数。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 null 文字はコピーの末尾には追加されません。
 
-## <a name="basic_string_view_copy_s"></a><a name="_copy_s"></a>basic_string_view:: _Copy_s
+## <a name="basic_string_view_copy_s"></a><a name="_copy_s"></a> basic_string_view:: _Copy_s
 
-安全な CRT コピー関数を[コピー](#copy)の代わりに使用します。
+安全な CRT コピー関数を [コピー](#copy)の代わりに使用します。
 
 ```cpp
 size_type _Copy_s(
@@ -604,22 +613,22 @@ size_type _Copy_s(
 *dest_size*\
 *Dest*のサイズ。
 
-_*カウント*ソース文字列からコピーされる文字数の最大値。
+_ *カウント* ソース文字列からコピーされる文字数の最大値。
 
 *_Off*\
 ソース文字列内のコピーの作成開始位置。
 
 ### <a name="return-value"></a>戻り値
 
-実際にコピーされた文字数。
+コピーされた文字数。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 null 文字はコピーの末尾には追加されません。
 
 詳細については、「 [c-runtime-ライブラリ/セキュリティ-機能-crt](../c-runtime-library/security-features-in-the-crt.md)」を参照してください。
 
-## <a name="basic_string_viewcrbegin"></a><a name="crbegin"></a>basic_string_view:: crbegin
+## <a name="basic_string_viewcrbegin"></a><a name="crbegin"></a> basic_string_view:: crbegin
 
 反転された string_view 内の最初の要素を指す const_reverse_iterator を返します。
 
@@ -631,7 +640,7 @@ constexpr const_reverse_iterator crbegin() const noexcept;
 
 反転された string_view 内の最初の要素を指す const_reverse_iterator。
 
-## <a name="basic_string_viewcrend"></a><a name="crend"></a>basic_string_view:: crend
+## <a name="basic_string_viewcrend"></a><a name="crend"></a> basic_string_view:: crend
 
 [Rend](#rend)と同じです。
 
@@ -643,7 +652,7 @@ constexpr const_reverse_iterator crend() const noexcept;
 
 反転された string_view の末尾を越える1つの const_reverse_iterator を返します。
 
-## <a name="basic_string_viewdata"></a><a name="data"></a>basic_string_view::d ata
+## <a name="basic_string_viewdata"></a><a name="data"></a> basic_string_view::d ata
 
 String_view の構築に使用されたオブジェクトの const 文字シーケンスへの、未処理の非所有ポインターを返します。
 
@@ -655,13 +664,13 @@ constexpr value_type *data() const noexcept;
 
 文字シーケンスの最初の要素への、const へのポインター。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 ポインターは文字を変更できません。
 
 String_view 文字のシーケンスは必ずしも null で終わるとは限りません。 の戻り値の型は、null 文字が追加されていない `data` ため、有効な C 文字列ではありません。 Null 文字 ' \ 0 ' は string_view 型のオブジェクトでは特別な意味を持たず、他の文字と同様に string_view オブジェクトの一部である可能性があります。
 
-## <a name="basic_string_viewempty"></a><a name="empty"></a>basic_string_view:: empty
+## <a name="basic_string_viewempty"></a><a name="empty"></a> basic_string_view:: empty
 
 String_view に文字が含まれているかどうかをテストします。
 
@@ -671,13 +680,13 @@ constexpr bool empty() const noexcept;
 
 ### <a name="return-value"></a>戻り値
 
-**`true`** string_view オブジェクトに文字が含まれていない場合は。**`false`** 少なくとも1つの文字がある場合。
+**`true`** string_view オブジェクトに文字が含まれていない場合は。 **`false`** 少なくとも1つの文字がある場合。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 このメンバー関数は、 [size](#size)() = = 0 に相当します。
 
-## <a name="basic_string_viewend"></a><a name="end"></a>basic_string_view:: end
+## <a name="basic_string_viewend"></a><a name="end"></a> basic_string_view:: end
 
 最後の要素の1つ後ろを指すランダムアクセス const_iterator を返します。
 
@@ -689,13 +698,71 @@ constexpr const_iterator end() const noexcept;
 
 最後の要素の1つ後ろを指すランダムアクセス const_iterator を返します。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
-`end`は、const_iterator が string_view の末尾に達したかどうかをテストするために使用されます。 `end` によって返された値は逆参照しないでください。
+`end` は、const_iterator が string_view の末尾に達したかどうかをテストするために使用されます。 によって返された値を `end` 逆参照することはできません。
 
-## <a name="basic_string_viewfind"></a><a name="find"></a>basic_string_view:: find
+## <a name="basic_string_viewends_with"></a><a name="ends_with"></a> basic_string_view:: ends_with
 
-指定された文字シーケンスに一致する文字または部分文字列の最初の出現を前方方向に string_view 検索します。
+文字列ビューが指定されたサフィックスで終わるかどうかを確認します。
+
+```cpp
+bool ends_with(const CharType c) const noexcept;
+bool ends_with(const CharType* const x) const noexcept;
+bool ends_with(const basic_string_view sv) const noexcept;
+```
+
+### <a name="parameters"></a>パラメーター
+
+*40u-c*\
+検索する単一の文字のサフィックス。
+
+*sv*\
+検索するサフィックスを含む文字列ビュー。 \
+文字列ビューに変換するを渡すことができ `std::basic_string` ます。
+
+*閉じる*\
+検索するサフィックスを格納している Null で終わる文字列。
+
+### <a name="return-value"></a>戻り値
+
+`true` 文字列ビューが指定したサフィックスで終わる場合は。 `false` それ以外の場合は。
+
+### <a name="remarks"></a>注釈
+
+`ends_with()` は C++ 20 で新しく追加されたものです。 これを使用するには、 [/std: c + + latest](../build/reference/std-specify-language-standard-version.md) コンパイラオプションを指定します。
+
+文字列ビューが指定したプレフィックスで始まるかどうかを確認するには、「 [starts_with](#starts_with) 」を参照してください。
+
+### <a name="example"></a>例
+
+```cpp
+// Requires /std:c++latest
+#include <string>
+#include <iostream>
+
+int main()
+{
+    std::cout << std::boolalpha; // so booleans show as 'true'/'false'  
+    std::cout << std::string_view("abcdefg").ends_with('g') << '\n';
+    std::cout << std::string_view("abcdefg").ends_with("eFg") << '\n';
+
+    std::basic_string<char> str2 = "efg";
+    std::cout << std::string_view("abcdefg").ends_with(str2);
+
+    return 0;
+}
+```
+
+```Output
+true
+false
+true
+```
+
+## <a name="basic_string_viewfind"></a><a name="find"></a> basic_string_view:: find
+
+`string_view`指定された文字シーケンスに一致する文字または部分文字列が最初に出現する位置を前方に検索します。
 
 ```cpp
 constexpr size_type find(basic_string_view str, size_type offset = 0) const noexcept;
@@ -707,7 +774,7 @@ constexpr size_type find(const charT* ptr, size_type offset = 0) const;
 ### <a name="parameters"></a>パラメーター
 
 *引数*\
-メンバー関数が検索する string_view。
+`string_view`メンバー関数が検索する対象の。
 
 *chVal*\
 メンバー関数が検索される文字値。
@@ -725,7 +792,7 @@ constexpr size_type find(const charT* ptr, size_type offset = 0) const;
 
 成功した場合、検索する部分文字列の最初の文字のインデックス、それ以外の場合 `npos`。
 
-## <a name="basic_string_viewfind_first_not_of"></a><a name="find_first_not_of"></a>basic_string_view:: find_first_not_of
+## <a name="basic_string_viewfind_first_not_of"></a><a name="find_first_not_of"></a> basic_string_view:: find_first_not_of
 
 指定した string_view または変換可能な文字列オブジェクトの要素ではない最初の文字を検索します。
 
@@ -757,7 +824,7 @@ constexpr size_type find_first_not_of(const charT* ptr, size_type offset = 0) co
 
 成功した場合、検索する部分文字列の最初の文字のインデックス、それ以外の場合 `npos`。
 
-## <a name="basic_string_viewfind_first_of"></a><a name="find_first_of"></a>basic_string_view:: find_first_of
+## <a name="basic_string_viewfind_first_of"></a><a name="find_first_of"></a> basic_string_view:: find_first_of
 
 指定した string_view の任意の要素と一致する最初の文字を検索します。
 
@@ -789,7 +856,7 @@ constexpr size_type find_first_of(const charT* str, size_type offset = 0) const;
 
 成功した場合、検索する部分文字列の最初の文字のインデックス、それ以外の場合 `npos`。
 
-## <a name="basic_string_viewfind_last_not_of"></a><a name="find_last_not_of"></a>basic_string_view:: find_last_not_of
+## <a name="basic_string_viewfind_last_not_of"></a><a name="find_last_not_of"></a> basic_string_view:: find_last_not_of
 
 指定した string_view の要素ではない最後の文字を検索します。
 
@@ -821,7 +888,7 @@ constexpr size_type find_last_not_of(const charT* ptr, size_type offset = npos) 
 
 成功した場合、検索する部分文字列の最初の文字のインデックス、それ以外の場合 `string_view::npos`。
 
-## <a name="basic_string_viewfind_last_of"></a><a name="find_last_of"></a>basic_string_view:: find_last_of
+## <a name="basic_string_viewfind_last_of"></a><a name="find_last_of"></a> basic_string_view:: find_last_of
 
 指定した string_view の任意の要素と一致する最後の文字を検索します。
 
@@ -853,7 +920,7 @@ constexpr size_type find_last_of(const charT* ptr, size_type offset = npos) cons
 
 成功した場合は検索する部分文字列の最後の文字のインデックス、それ以外の場合は `npos`。
 
-## <a name="basic_string_viewfront"></a><a name="front"></a>basic_string_view:: front
+## <a name="basic_string_viewfront"></a><a name="front"></a> basic_string_view:: front
 
 最初の要素に const_reference を返します。
 
@@ -865,11 +932,11 @@ constexpr const_reference front() const;
 
 最初の要素に const_reference。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 String_view が空の場合、例外をスローします。
 
-## <a name="basic_string_viewlength"></a><a name="length"></a>basic_string_view:: length
+## <a name="basic_string_viewlength"></a><a name="length"></a> basic_string_view:: length
 
 現在の要素数を返します。
 
@@ -877,11 +944,11 @@ String_view が空の場合、例外をスローします。
 constexpr size_type length() const noexcept;
 ```
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 このメンバー関数は [size](#size) と同じです。
 
-## <a name="basic_string_viewmax_size"></a><a name="max_size"></a>basic_string_view:: max_size
+## <a name="basic_string_viewmax_size"></a><a name="max_size"></a> basic_string_view:: max_size
 
 String_view に含めることができる最大文字数を返します。
 
@@ -893,11 +960,11 @@ constexpr size_type max_size() const noexcept;
 
 String_view に含めることができる最大文字数。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
-操作がより大きい長さの string_view を生成した場合、 [length_error](../standard-library/length-error-class.md)型の例外がスローされ `max_size()` ます。
+操作がより大きい長さの string_view を生成した場合、 [length_error](../standard-library/length-error-class.md) 型の例外がスローされ `max_size()` ます。
 
-## <a name="basic_string_viewoperator"></a><a name="op_eq"></a>basic_string_view:: operator =
+## <a name="basic_string_viewoperator"></a><a name="op_eq"></a> basic_string_view:: operator =
 
 String_view または変換可能な文字列オブジェクトを別の string_view に割り当てます。
 
@@ -912,7 +979,7 @@ constexpr basic_string_view& operator=(const basic_string_view&) noexcept = defa
    string_view s2 = s;
 ```
 
-## <a name="basic_string_viewoperator"></a><a name="op_at"></a>basic_string_view:: operator []
+## <a name="basic_string_viewoperator"></a><a name="op_at"></a> basic_string_view:: operator []
 
 指定したインデックスを持つ文字への const_reference を提供します。
 
@@ -929,19 +996,19 @@ constexpr const_reference operator[](size_type offset) const;
 
 パラメーターインデックスによって指定された位置にある文字への const_reference。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 最初の要素は0のインデックスを持ち、次の要素は正の整数で連続してインデックスが付けられます。これにより、長さ*n*の string_view には、 *n-1*という数値でインデックス付けされた*n*番目の要素が含まれるようになります。
 
-`operator[]`は、のメンバー関数よりも高速[で](#at)、string_view の要素に対する読み取りアクセスを提供します。
+`operator[]` は、のメンバー関数よりも高速 [で](#at) 、string_view の要素に対する読み取りアクセスを提供します。
 
-`operator[]`では、引数として渡されたインデックスが有効かどうかは確認されません。 無効なインデックスがに渡されると、 `operator[]` 未定義の動作が発生します。
+`operator[]` では、引数として渡されたインデックスが有効かどうかは確認されません。 無効なインデックスがに渡されると、 `operator[]` 未定義の動作が発生します。
 
 基になる文字列データが所有オブジェクトによって変更または削除された場合、返される参照は無効になることがあります。
 
 [ \_ 反復子 \_ デバッグ \_ レベル](../standard-library/iterator-debug-level.md)を1または2に設定してコンパイルすると、string_view の境界の外側にある要素にアクセスしようとすると、ランタイムエラーが発生します。 詳細については、「[チェックを行う反復子](../standard-library/checked-iterators.md)」を参照してください。
 
-## <a name="basic_string_viewrbegin"></a><a name="rbegin"></a>basic_string_view:: rbegin
+## <a name="basic_string_viewrbegin"></a><a name="rbegin"></a> basic_string_view:: rbegin
 
 反転された string_view 内の最初の要素を指す定数反復子を返します。
 
@@ -953,11 +1020,11 @@ constexpr const_reverse_iterator rbegin() const noexcept;
 
 反転された string_view 内の最初の要素を指すランダムアクセス反復子を返します。これは、対応する反転されていない string_view の最後の要素となるものです。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
-`rbegin`は、 [begin](#begin)が string_view で使用されるのと同様に、反転された string_view と共に使用されます。 `rbegin`は、反復処理を逆に初期化するために使用できます。
+`rbegin` は、 [begin](#begin) が string_view で使用されるのと同様に、反転された string_view と共に使用されます。 `rbegin` は、反復処理を逆に初期化するために使用できます。
 
-## <a name="basic_string_viewremove_prefix"></a><a name="remove_prefix"></a>basic_string_view:: remove_prefix
+## <a name="basic_string_viewremove_prefix"></a><a name="remove_prefix"></a> basic_string_view:: remove_prefix
 
 指定された数の要素でポインターを前方に移動します。
 
@@ -965,11 +1032,11 @@ constexpr const_reverse_iterator rbegin() const noexcept;
 constexpr void remove_prefix(size_type n);
 ```
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 基になるデータを変更せずに残します。 String_view ポインターを n 個の要素順に移動し、プライベート `size` データメンバーをサイズ-n に設定します。
 
-## <a name="basic_string_viewremove_suffix"></a><a name="remove_suffix"></a>basic_string_view:: remove_suffix
+## <a name="basic_string_viewremove_suffix"></a><a name="remove_suffix"></a> basic_string_view:: remove_suffix
 
 返される要素の数を指定して、ビューのサイズを小さくします。
 
@@ -977,11 +1044,11 @@ constexpr void remove_prefix(size_type n);
 constexpr void remove_suffix(size_type n);
 ```
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 基になるデータとポインターを変更せずに残します。 プライベート `size` データメンバーをサイズ-n に設定します。
 
-## <a name="basic_string_viewrend"></a><a name="rend"></a>basic_string_view:: rend
+## <a name="basic_string_viewrend"></a><a name="rend"></a> basic_string_view:: rend
 
 反転された string_view 内の最後の要素の1つ後ろを指す定数反復子を返します。
 
@@ -993,11 +1060,11 @@ constexpr reverse_iterator rend() const noexcept;
 
 反転された string_view 内の最後の要素の1つ後ろを指す、定数逆順ランダムアクセス反復子。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
-`rend`は、 [end](#end)が string_view と共に使用されるのと同様に、反転された string_view と共に使用されます。 `rend`を使用すると、逆順反復子が string_view の末尾に達したかどうかをテストできます。 `rend` によって返された値は逆参照しないでください。
+`rend` は、 [end](#end) が string_view と共に使用されるのと同様に、反転された string_view と共に使用されます。 `rend` を使用すると、逆順反復子が string_view の末尾に達したかどうかをテストできます。 によって返された値を `rend` 逆参照することはできません。
 
-## <a name="basic_string_viewrfind"></a><a name="rfind"></a>basic_string_view:: rfind
+## <a name="basic_string_viewrfind"></a><a name="rfind"></a> basic_string_view:: rfind
 
 指定した文字シーケンスに一致する部分文字列の string_view を逆方向に検索します。
 
@@ -1029,7 +1096,7 @@ constexpr size_type rfind(const charT* ptr, size_type offset = npos) const;
 
 成功した場合は、部分文字列の最初の文字のインデックス。それ以外の場合は `npos` 。
 
-## <a name="basic_string_viewsize"></a><a name="size"></a>basic_string_view:: size
+## <a name="basic_string_viewsize"></a><a name="size"></a> basic_string_view:: size
 
 String_view 内の要素の数を返します。
 
@@ -1041,11 +1108,69 @@ constexpr size_type size() const noexcept;
 
 String_view の長さ。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 String_view では、やなどの長さを変更 `remove_prefix` でき `remove_suffix` ます。 これによって基になる文字列データが変更されることはないため、string_view のサイズは必ずしも基になるデータのサイズとは限りません。
 
-## <a name="basic_string_viewsubstr"></a><a name="substr"></a>basic_string_view:: substr
+## <a name="basic_string_viewstarts_with"></a><a name="starts_with"></a> basic_string_view:: starts_with
+
+文字列ビューが指定されたプレフィックスで始まるかどうかを確認します。
+
+```cpp
+bool starts_with(const CharType c) const noexcept;
+bool starts_with(const CharType* const x) const noexcept;
+bool starts_with(const basic_string_view sv) const noexcept;
+```
+
+### <a name="parameters"></a>パラメーター
+
+*40u-c*\
+検索する単一の文字のプレフィックス。
+
+*sv*\
+検索するプレフィックスを含む文字列ビュー。 \
+文字列ビューに変換するを渡すことができ `std::basic_string` ます。
+
+*閉じる*\
+検索するプレフィックスを格納している Null で終わる文字列。
+
+### <a name="return-value"></a>戻り値
+
+`true` 文字列が指定したプレフィックスで始まる場合は。 `false` それ以外の場合は。
+
+### <a name="remarks"></a>注釈
+
+`starts_with()` は C++ 20 で新しく追加されたものです。 これを使用するには、 [/std: c + + latest](../build/reference/std-specify-language-standard-version.md) コンパイラオプションを指定します。
+
+文字列の末尾がサフィックスであるかどうかを確認するには、「 [ends_with](#ends_with) 」を参照してください。
+
+### <a name="example"></a>例
+
+```cpp
+// Requires /std:c++latest
+#include <string>
+#include <iostream>
+
+int main()
+{
+    std::cout << std::boolalpha; // so booleans show as 'true'/'false'  
+    std::cout << std::string_view("abcdefg").starts_with('b') << '\n';
+    std::cout << std::string_view("abcdefg").starts_with("aBc") << '\n';
+
+    std::basic_string<char> str2 = "abc";
+    std::cout << std::string_view("abcdefg").starts_with(str2);
+
+    return 0;
+}
+```
+
+```Output
+false
+false
+true
+```
+
+## <a name="basic_string_viewsubstr"></a><a name="substr"></a> basic_string_view:: substr
 
 指定した位置から、指定した文字数だけを表す string_view を返します。
 
@@ -1063,9 +1188,9 @@ constexpr basic_string_view substr(size_type offset = 0, size_type count = npos)
 
 ### <a name="return-value"></a>戻り値
 
-要素の指定したサブシーケンスを表す string_view オブジェクト。
+指定した要素のサブシーケンスを表す string_view オブジェクト。
 
-## <a name="basic_string_viewswap"></a><a name="swap"></a>basic_string_view:: swap
+## <a name="basic_string_viewswap"></a><a name="swap"></a> basic_string_view:: swap
 
 2つの string_views を交換します。つまり、基になる文字列データへのポインターとサイズ値を交換します。
 
@@ -1078,7 +1203,7 @@ constexpr void swap(basic_string_view& sv) noexcept;
 *sv*\
 ポインターとサイズの値をコピー先の string_view と交換するソース string_view。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [\<string_view>](../standard-library/string-view.md)\
 [C++ 標準ライブラリのスレッドセーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)

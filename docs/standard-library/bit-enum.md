@@ -1,19 +1,19 @@
 ---
-title: エンディアン列挙型
+title: endian 列挙型
 description: スカラー型のエンディアンを指定するために使用される列挙型
 ms.date: 08/27/2020
 f1_keywords:
 - bit/std::endian
 helpviewer_keywords:
 - std::endian
-ms.openlocfilehash: 78df181e20d0e5d72508bd0fc86118528a312d6b
-ms.sourcegitcommit: 3628707bc17c99aac7aac27eb126cc2eaa4d07b4
+ms.openlocfilehash: b535bc009fbdc0b047444a6bc2ca36eed7a6d1cb
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89194760"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90040081"
 ---
-# <a name="endian-enum"></a>エンディアン列挙型
+# <a name="endian-enum"></a>endian 列挙型
 
 すべてのスカラー型のエンディアンを示します。
 
@@ -38,13 +38,13 @@ enum class endian {
 
 すべてのネイティブスカラー型は、ターゲットを Microsoft Visual C++ するプラットフォーム (x86、x64、ARM、ARM64) のリトルエンディアンです。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:**\<bit>
 
 **名前空間:** std
 
-`/std:c++latest` 必須
+[/std: c + + latest](../build/reference/std-specify-language-standard-version.md) が必要です。
 
 ## <a name="see-also"></a>関連項目
 

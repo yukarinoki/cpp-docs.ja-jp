@@ -1,6 +1,7 @@
 ---
 title: unordered_multiset クラス
-ms.date: 11/04/2016
+description: C++ 標準ライブラリコンテナークラスの API リファレンス。このクラスは、 `unordered_multiset` コレクションのデータを格納および取得するために使用されるオブジェクトを記述します。このクラスは、要素の値が一意である必要はなく、キー値として機能します。 データは自動的には並べ替えられません。
+ms.date: 9/10/2020
 f1_keywords:
 - unordered_set/std::unordered_multiset
 - unordered_set/std::unordered_multiset::allocator_type
@@ -25,6 +26,7 @@ f1_keywords:
 - unordered_set/std::unordered_multiset::cbegin
 - unordered_set/std::unordered_multiset::cend
 - unordered_set/std::unordered_multiset::clear
+- unordered_set/std::unordered_multiset::contains
 - unordered_set/std::unordered_multiset::count
 - unordered_set/std::unordered_multiset::emplace
 - unordered_set/std::unordered_multiset::emplace_hint
@@ -71,6 +73,7 @@ helpviewer_keywords:
 - std::unordered_multiset::cbegin
 - std::unordered_multiset::cend
 - std::unordered_multiset::clear
+- std::unordered_multiset::contains
 - std::unordered_multiset::count
 - std::unordered_multiset::emplace
 - std::unordered_multiset::emplace_hint
@@ -134,12 +137,12 @@ helpviewer_keywords:
 - std::unordered_multiset::size
 - std::unordered_multiset::swap
 ms.assetid: 70c8dfc5-492a-4af2-84f5-1aa9cb04b71c
-ms.openlocfilehash: 83b2b1a97972fa63f7cf7d2b9a6a48b49dbeda8d
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: 8252ecc7051c1bad2ca1e7683ea32206dd0f10f4
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88562520"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90042031"
 ---
 # <a name="unordered_multiset-class"></a>unordered_multiset クラス
 
@@ -192,12 +195,13 @@ class unordered_multiset;
 |メンバー関数|説明|
 |-|-|
 |[初め](#begin)|被制御シーケンスの先頭を指定します。|
-|[つぶし](#bucket)|キー値のバケット番号を取得します。|
+|[bucket](#bucket)|キー値のバケット番号を取得します。|
 |[bucket_count](#bucket_count)|バケット数を取得します。|
 |[bucket_size](#bucket_size)|バケットのサイズを取得します。|
 |[cbegin](#cbegin)|被制御シーケンスの先頭を指定します。|
 |[cend](#cend)|被制御シーケンスの末尾を指定します。|
 |[オフ](#clear)|すべての要素を削除します。|
+|[contains](#contains)<sup>c++ 20</sup>を含む|指定したキーを持つ要素があるかどうかを確認します。|
 |[count](#count)|指定したキーに一致する要素の数を検索します。|
 |[emplace](#emplace)|構築された要素を適切な場所に追加します。|
 |[emplace_hint](#emplace_hint)|構築された要素を適切な場所にヒントと一緒に追加します。|
@@ -223,7 +227,7 @@ class unordered_multiset;
 |-|-|
 |[unordered_multiset:: operator =](#op_eq)|ハッシュ テーブルをコピーします。|
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>注釈
 
 このオブジェクトは、このオブジェクトが制御するシーケンスを、格納されている 2 つのオブジェクト ([unordered_multiset::key_equal](#key_equal) 型の比較関数オブジェクトと、[unordered_multiset::hasher](#hasher) 型のハッシュ関数オブジェクト) を呼び出すことによって並べ替えます。 最初に格納されたオブジェクトにアクセスするには、メンバー関数[unordered_multiset:: key_eq](#key_eq)を呼び出します。次に、 `()` メンバー関数[unordered_multiset:: hash_function](#hash)を呼び出して、2番目に格納されているオブジェクトにアクセスし `()` ます。 具体的には、`X` 型のすべての値 `Y` と `Key` について、`key_eq()(X, Y)` が呼び出され、2 つの引数値の大小関係が等しい場合は true が返されます。`hash_function()(keyval)` の呼び出しからは、`size_t` 型の値の分布が生成されます。 クラステンプレート [Unordered_set クラス](../standard-library/unordered-set-class.md)とは異なり、型のオブジェクトで `unordered_multiset` `key_eq()(X, Y)` は、被制御シーケンスの任意の2つの要素に対してが常に false になるとは限りません。 つまり、キーの重複が許されることになります。
 
@@ -233,7 +237,7 @@ class unordered_multiset;
 
 被制御シーケンスに対するストレージの割り当ておよび解放は、格納されている [unordered_multiset::allocator_type](#allocator_type) 型のアロケーター オブジェクトを介して行われます。 このようなアロケーターオブジェクトは、型のオブジェクトと同じ外部インターフェイスを持っている必要があり `allocator` ます。 コンテナー オブジェクトを代入しても、格納されているアロケーター オブジェクトはコピーされない点に注意してください。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:**\<unordered_set>
 
@@ -247,7 +251,7 @@ class unordered_multiset;
 typedef Alloc allocator_type;
 ```
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 この型は、テンプレート パラメーター `Alloc` のシノニムです。
 
@@ -296,7 +300,7 @@ const_local_iterator begin(size_type nbucket) const;
 *nbucket*\
 バケット番号。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 最初の 2 つのメンバー関数は、シーケンスの最初の要素 (または空のシーケンスの末尾の次の位置) を示す前方反復子を返します。 最後の2つのメンバー関数は、バケット *nbucket* の最初の要素 (または空のバケットの末尾の次の位置) を示す前方反復子を返します。
 
@@ -357,7 +361,7 @@ size_type bucket(const Key& keyval) const;
 *keyval*\
 マップするキー値。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 このメンバー関数は、その時点でキー値 `keyval`に対応しているバケット番号を返します。
 
@@ -408,7 +412,7 @@ bucket_size(7) == 1
 size_type bucket_count() const;
 ```
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 このメンバー関数は、現在のバケット数を返します。
 
@@ -498,7 +502,7 @@ size_type bucket_size(size_type nbucket) const;
 *nbucket*\
 バケット番号。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 このメンバー関数は、バケット数 *nbucket*のサイズを返します。
 
@@ -553,7 +557,7 @@ const_iterator cbegin() const;
 
 **`const`** 範囲の最初の要素、または空の範囲の末尾の次の位置 (空の範囲の場合は) を指す前方アクセス反復子 `cbegin() == cend()` 。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 `cbegin` の戻り値で範囲内の要素を変更することはできません。
 
@@ -579,7 +583,7 @@ const_iterator cend() const;
 
 **`const`** 範囲の末尾の次の位置を指し示す前方アクセス反復子。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 `cend` は、反復子が範囲の末尾を超えたかどうかをテストするために使用されます。
 
@@ -603,7 +607,7 @@ auto i2 = Container.cend();
 void clear();
 ```
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 メンバー関数の呼び出し[unordered_multiset::erase](#erase)`(` [unordered_multiset::begin](#begin)`(),` [unordered_multiset::end](#end)`())`します。
 
@@ -670,7 +674,7 @@ empty() == false
 typedef T1 const_iterator;
 ```
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 この型は、被制御シーケンスの定数前方反復子として使用できるオブジェクトを表します。 ここでは、実装定義型 `T1`のシノニムとして記述されています。
 
@@ -713,7 +717,7 @@ int main()
 typedef T5 const_local_iterator;
 ```
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 この型は、バケットの定数前方反復子として使用できるオブジェクトを表します。 ここでは、実装定義型 `T5`のシノニムとして記述されています。
 
@@ -761,7 +765,7 @@ int main()
 typedef Alloc::const_pointer const_pointer;
 ```
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 この型は、被制御シーケンスの要素への定数ポインターとして使用できるオブジェクトを表します。
 
@@ -807,7 +811,7 @@ int main()
 typedef Alloc::const_reference const_reference;
 ```
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 この型は、被制御シーケンスの要素への定数参照として使用できるオブジェクトを表します。
 
@@ -845,6 +849,57 @@ int main()
 [c] [b] [a]
 ```
 
+## <a name="unordered_multisetcontains"></a><a name="contains"></a> unordered_multiset:: contains
+
+指定したキーを持つ要素が内に存在するかどうかを確認し `unordered_multiset` ます。
+
+```cpp
+bool contains(const Key& key) const;
+template<class K> bool contains(const K& key) const;
+```
+
+### <a name="parameters"></a>パラメーター
+
+*Kb*\
+キーの型。
+
+*レジストリ*\
+検索する要素のキー値。
+
+### <a name="return-value"></a>戻り値
+
+`true` 要素がコンテナーで見つかった場合は。 `false` それ以外の場合は。
+
+### <a name="remarks"></a>注釈
+
+`contains()` は C++ 20 で新しく追加されたものです。 これを使用するには、 [/std: c + + latest](../build/reference/std-specify-language-standard-version.md) コンパイラオプションを指定します。
+
+`template<class K> bool contains(const K& key) const` が透過的な場合にのみ、オーバーロードの解決に参加 `key_compare` します。
+
+### <a name="example"></a>例
+
+```cpp
+// Requires /std:c++latest
+#include <unordered_set>
+#include <iostream>
+
+int main()
+{
+    std::unordered_multiset<int> theUnorderedMultiset = { 1, 2, 3 };
+
+    std::cout << std::boolalpha; // so booleans show as 'true' or 'false'
+    std::cout << theUnorderedMultiset.contains(1) << '\n';
+    std::cout << theUnorderedMultiset.contains(4) << '\n';
+
+    return 0;
+}
+```
+
+```Output
+true
+false
+```
+
 ## <a name="unordered_multisetcount"></a><a name="count"></a> unordered_multiset:: count
 
 指定したキーに一致する要素の数を検索します。
@@ -858,7 +913,7 @@ size_type count(const Key& keyval) const;
 *keyval*\
 検索対象のキー値。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 このメンバー関数は、 [unordered_multiset:: equal_range](#equal_range)で区切られた範囲内の要素の数を返します `(keyval)` 。
 
@@ -908,7 +963,7 @@ count('C') == 0
 typedef T3 difference_type;
 ```
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 符号付き整数型は、被制御シーケンス内にある 2 つの要素のアドレスの違いを表すことのできるオブジェクトを記述します。 ここでは、実装定義型 `T3`のシノニムとして記述されています。
 
@@ -977,7 +1032,7 @@ unordered_multiset に挿入される要素を構築するために転送され�
 
 新しく挿入される要素を指す反復子。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 この関数では、コンテナー要素を指す参照は無効になりません。ただし、コンテナーを指すすべての反復子が無効になる場合があります。
 
@@ -1008,7 +1063,7 @@ unordered_multiset に挿入される要素を構築するために転送され�
 
 新しく挿入される要素を指す反復子。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 この関数では、コンテナー要素を指す参照は無効になりません。ただし、コンテナーを指すすべての反復子が無効になる場合があります。
 
@@ -1024,7 +1079,7 @@ unordered_multiset に挿入される要素を構築するために転送され�
 bool empty() const;
 ```
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 このメンバー関数は、被制御シーケンスが空の場合に true を返します。
 
@@ -1099,7 +1154,7 @@ const_local_iterator end(size_type nbucket) const;
 *nbucket*\
 バケット番号。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 最初の 2 つのメンバー関数は、シーケンスの末尾の次を示す前方反復子を返します。 最後の2つのメンバー関数は、バケット *nbucket*の末尾の次の位置を示す前方反復子を返します。
 
@@ -1166,7 +1221,7 @@ std::pair<const_iterator, const_iterator>
 *keyval*\
 検索対象のキー値。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 このメンバー関数は、 `X` `[X.first, X.second)` *keyval*と同等の順序付けを持つ被制御シーケンスの要素だけを区切る反復子のペアを返します。 そのような要素が存在しない場合は、どちらの反復子も `end()`です。
 
@@ -1254,7 +1309,7 @@ size_type erase(
 
 3 番目のメンバー関数では、unordered_multiset から削除された要素の数が返されます。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 コード例については、「[set::erase](../standard-library/set-class.md#erase)」をご覧ください。
 
@@ -1271,7 +1326,7 @@ const_iterator find(const Key& keyval) const;
 *keyval*\
 検索対象のキー値。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 このメンバー関数は[unordered_multiset:: equal_range](#equal_range)を返し `(keyval).first` ます。
 
@@ -1326,7 +1381,7 @@ find('b') == true: [b]
 Alloc get_allocator() const;
 ```
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 このメンバー関数は、格納されているアロケーター オブジェクトを返します。
 
@@ -1364,7 +1419,7 @@ al == std::allocator() is true
 Hash hash_function() const;
 ```
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 このメンバー関数は、格納されているハッシュ関数オブジェクトを返します。
 
@@ -1402,7 +1457,7 @@ hfn('b') == 1647086
 typedef Hash hasher;
 ```
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 この型は、テンプレート パラメーター `Hash` のシノニムです。
 
@@ -1499,7 +1554,7 @@ Unordered_multiset が [value_type](../standard-library/map-class.md#value_type)
 
 単一要素の with-hint メンバー関数 (3) および (4) は、新しい要素が unordered_multiset に挿入される位置を指す反復子を返します。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 この関数では、ポインターや参照は無効になりません。ただし、コンテナーを指すすべての反復子が無効になる場合があります。
 
@@ -1535,7 +1590,7 @@ typedef implementation-defined iterator;
 Pred key_eq() const;
 ```
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 このメンバー関数は、格納されている比較関数オブジェクトを返します。
 
@@ -1575,7 +1630,7 @@ cmpfn('a', 'b') == false
 typedef Pred key_equal;
 ```
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 この型は、テンプレート パラメーター `Pred` のシノニムです。
 
@@ -1615,7 +1670,7 @@ cmpfn('a', 'b') == false
 typedef Key key_type;
 ```
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 この型は、テンプレート パラメーター `Key` のシノニムです。
 
@@ -1669,7 +1724,7 @@ int main()
 float load_factor() const;
 ```
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 このメンバー関数は、 `(float)` バケットごとの平均要素数である[unordered_multiset:: size](#size) `() / (float)` [unordered_multiset:: bucket_count](#bucket_count)を返し `()` ます。
 
@@ -1737,7 +1792,7 @@ int main()
 typedef T4 local_iterator;
 ```
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 この型は、バケットの前方反復子として使用できるオブジェクトを表します。 ここでは、実装定義型 `T4`のシノニムとして記述されています。
 
@@ -1785,7 +1840,7 @@ int main()
 size_type max_bucket_count() const;
 ```
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 このメンバー関数は、現在許可されているバケットの最大数を返します。
 
@@ -1878,7 +1933,7 @@ void max_load_factor(float factor);
 *段階*\
 新しい最大テーブル占有率。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 1 つ目のメンバー関数は、格納されている最大テーブル占有率を返します。 2番目のメンバー関数は、格納されている最大占有率を *係数*に置き換えます。
 
@@ -1964,7 +2019,7 @@ max_load_factor() == 0.1
 size_type max_size() const;
 ```
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 このメンバー関数は、オブジェクトが制御できる最も長いシーケンスの長さを返します。
 
@@ -2006,7 +2061,7 @@ unordered_multiset& operator=(unordered_multiset&& right);
 *そうです*\
 `unordered_multiset` にコピーする [unordered_multiset](../standard-library/unordered-multiset-class.md)。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 内の既存の要素を消去した後、 `unordered_multiset` `operator=` の内容をに*right*コピーまたは移動し `unordered_multiset` ます。
 
@@ -2055,7 +2110,7 @@ int main( )
 typedef Alloc::pointer pointer;
 ```
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 この型は、被制御シーケンスの要素へのポインターとして機能するオブジェクトを表します。
 
@@ -2102,7 +2157,7 @@ int main()
 typedef Alloc::reference reference;
 ```
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 この型は、被制御シーケンスの要素への参照として使用できるオブジェクトを表します。
 
@@ -2154,7 +2209,7 @@ void rehash(size_type nbuckets);
 *nbuckets*\
 要求されたバケット数。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 このメンバー関数は、バケットの数を少なくとも *nbuckets* に変更し、必要に応じてハッシュテーブルを再構築します。
 
@@ -2227,7 +2282,7 @@ max_load_factor() == 0.1
 size_type size() const;
 ```
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 このメンバー関数は、被制御シーケンスの長さを返します。
 
@@ -2294,7 +2349,7 @@ empty() == false
 typedef T2 size_type;
 ```
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 符号なし整数型は、被制御シーケンスの長さを表すことができるオブジェクトを表します。 ここでは、実装定義型 `T2`のシノニムとして記述されています。
 
@@ -2335,7 +2390,7 @@ void swap(unordered_multiset& right);
 *そうです*\
 交換先のコンテナー。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 このメンバー関数は、との間で被制御シーケンスを交換し **`*this`** ます。 *right* [Unordered_multiset:: get_allocator](#get_allocator)の場合は、一定の時間内にこれを実行します。この場合、 `() == right.get_allocator()` 型の格納された特性オブジェクトをコピーした結果としてのみ例外がスローされ、 `Tr` 2 つの被制御シーケンス内の要素を指定する参照、ポインター、反復子は無効になります。 それ以外の場合、2 つの被制御シーケンス内の要素数に比例した回数、要素の割り当てとコンストラクター呼び出しが実行されます。
 
@@ -2469,7 +2524,7 @@ unordered_multiset(
 *IList*\
 コピー元の initializer_list。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 1つ目のコンストラクターは、 *Right*によって制御されるシーケンスのコピーを指定します。 2 つ目のコンストラクターは、空の被制御シーケンスのコピーを指定します。 3 つ目のコンストラクターは、要素値 `[First, Last)` のシーケンスを挿入します。 4番目のコンストラクターは、 *右*に移動して、シーケンスのコピーを指定します。
 
@@ -2491,7 +2546,7 @@ unordered_multiset(
 typedef Key value_type;
 ```
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 この型は、被制御シーケンス内の要素を示します。
 

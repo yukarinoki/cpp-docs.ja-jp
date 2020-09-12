@@ -28,12 +28,12 @@ helpviewer_keywords:
 - std::bit [C++], countr_zero
 - std::bit [C++], countr_one
 - std::bit [C++], popcount
-ms.openlocfilehash: f06e181a4fe6683adb0cc63c016cbd879f2fc574
-ms.sourcegitcommit: e58918c45316d799c1952ca7797a85adbcd0c472
+ms.openlocfilehash: a2408df9aa13c6e714f615561871397be17fc4a3
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "89281810"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90039814"
 ---
 # <a name="ltbitgt-functions"></a>&lt;ビット &gt; 関数
 
@@ -101,17 +101,17 @@ float f = inf
 std::bit_cat<int>(f) = 7f800000
 ```
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 多くの場合、下位レベルのコードでは、ある型のオブジェクトを別の型として解釈する必要があります。 再解釈されたオブジェクトは元のと同じビット表現を持ちますが、型は異なります。
 
 `reinterpret_cast`、、またはを使用する代わりに、これらの `memcpy()` `bit_cast()` 変換を行う方がより適切な方法です。 次のような場合に適しています。
-- `bit_cast()` が `constexpr` である
+- `bit_cast()` は `constexpr` です
 - `bit_cast()` 型は、普通にコピー可能で、同じサイズである必要があります。 これにより、およびを使用して発生する可能性のある潜在的な問題を回避でき `reinterpret_cast` `memcpy` ます。これは、不注意によるコピーが可能な型を誤って変換するために使用される可能性があるためです。 また、 `memcpy()` 同じサイズではない型を誤ってコピーする場合にも使用できます。 たとえば、double (8 バイト) が符号なし整数 (4 バイト)、またはその逆になります。
 
 このオーバーロードは、次の場合にのみ、オーバーロードの解決に関与します。
 -  `sizeof(To) == sizeof(From)`
-- `To` および `From` は [is_trivially_copyable](https://docs.microsoft.com/cpp/standard-library/is-trivially-copyable-class?view=vs-2019`)です。
+- `To` および `From` は [is_trivially_copyable](is-trivially-copyable-class.md)です。
 
 この関数テンプレートは `constexpr` `To` 、、 `From` 、およびサブオブジェクトの型がである場合にのみ、次のようになります。
 - 共用体型またはポインター型ではありません
@@ -165,7 +165,7 @@ bit_ceil(0b0100) = 0b0100
 bit_ceil(0b0101) = 0b1000
 ```
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 このテンプレート関数 `T` は、が符号なし整数型である場合にのみ、オーバーロードの解決に関与します。 たとえば、、、、 `unsigned int` `unsigned long` などです `unsigned short` `unsigned char` 。
 
@@ -216,7 +216,7 @@ bit_floor(0b0100) = 0b0100
 bit_floor(0b0101) = 0b0100
 ```
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 このテンプレート関数 `T` は、が符号なし整数型である場合にのみ、オーバーロードの解決に関与します。 たとえば、、、、 `unsigned int` `unsigned long` などです `unsigned short` `unsigned char` 。
 
@@ -270,7 +270,7 @@ bit_width(7) = 3
 bit_width(8) = 4
 ```
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 このテンプレート関数 `T` は、が符号なし整数型である場合にのみ、オーバーロードの解決に関与します。 たとえば、、、、 `unsigned int` `unsigned long` などです `unsigned short` `unsigned char` 。
 
@@ -323,7 +323,7 @@ countl_zero(0b01000000) = 1
 countl_zero(0b10000000) = 0
 ```
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 このテンプレート関数 `T` は、が符号なし整数型である場合にのみ、オーバーロードの解決に関与します。 たとえば、、、、 `unsigned int` `unsigned long` などです `unsigned short` `unsigned char` 。
 
@@ -376,7 +376,7 @@ countl_one(0b11111110) = 7
 countl_one(0b11111111) = 8
 ```
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 このテンプレート関数 `T` は、が符号なし整数型である場合にのみ、オーバーロードの解決に関与します。 たとえば、、、、 `unsigned int` `unsigned long` などです `unsigned short` `unsigned char` 。
 
@@ -430,7 +430,7 @@ countr_zero(0b01000000) = 6
 countr_zero(0b10000000) = 7
 ```
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 このテンプレート関数 `T` は、が符号なし整数型である場合にのみ、オーバーロードの解決に関与します。 たとえば、、、、 `unsigned int` `unsigned long` などです `unsigned short` `unsigned char` 。
 
@@ -483,7 +483,7 @@ countr_one(0b01111111) = 7
 countr_one(0b11111111) = 8
 ```
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 このテンプレート関数 `T` は、が符号なし整数型である場合にのみ、オーバーロードの解決に関与します。 たとえば、、、、 `unsigned int` `unsigned long` などです `unsigned short` `unsigned char` 。
 
@@ -537,7 +537,7 @@ has_single_bit(0b1000) = true
 has_single_bit(0b1001) = false
 ```
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 このテンプレート関数 `T` は、が符号なし整数型である場合にのみ、オーバーロードの解決に関与します。 たとえば、、、、 `unsigned int` `unsigned long` などです `unsigned short` `unsigned char` 。
 
@@ -596,7 +596,7 @@ popcount(0b1110) = 3
 popcount(0b1111) = 4
 ```
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 このテンプレート関数 `T` は、が符号なし整数型である場合にのみ、オーバーロードの解決に関与します。 たとえば、、、、 `unsigned int` `unsigned long` などです `unsigned short` `unsigned char` 。
 
@@ -658,7 +658,7 @@ rotl(0b10000000, 1) = 0b00000001
 rotl(0b00000001,-1) = 0b10000000
 ```
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 このテンプレート関数 `T` は、が符号なし整数型である場合にのみ、オーバーロードの解決に関与します。 たとえば、、、、 `unsigned int` `unsigned long` などです `unsigned short` `unsigned char` 。
 
@@ -720,7 +720,7 @@ rotr(0b00000001, 1) = 0b10000000
 rotr(0b10000000,-1) = 0b00000001
 ```
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 このテンプレート関数 `T` は、が符号なし整数型である場合にのみ、オーバーロードの解決に関与します。 たとえば、、、、 `unsigned int` `unsigned long` などです `unsigned short` `unsigned char` 。
 
@@ -730,7 +730,7 @@ rotr(0b10000000,-1) = 0b00000001
 
 **名前空間:** std
 
-`/std:c++latest` 必須
+[/std: c + + latest](../build/reference/std-specify-language-standard-version.md) が必要です。
 
 ## <a name="see-also"></a>関連項目
 

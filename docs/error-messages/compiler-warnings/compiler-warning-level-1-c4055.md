@@ -1,25 +1,25 @@
 ---
-title: コンパイラの警告 (レベル 1) C4052
+title: コンパイラの警告 (レベル 1) C4055
 ms.date: 11/04/2016
 f1_keywords:
 - C4055
 helpviewer_keywords:
 - C4055
 ms.assetid: f9955421-16ab-46e5-8f9d-bf1639a519ef
-ms.openlocfilehash: e9fcb4356d993d86b622fd49c4a75d587554f7c2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 47883f60c3205125a8ee88b804c1d622b3ba0b41
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62388606"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90041030"
 ---
 # <a name="compiler-warning-level-1-c4055"></a>コンパイラの警告 (レベル 1) C4055
 
-> '*変換*': データ ポインターが'*type1*'関数ポインター' に*type2*'
+> '*conversion*': データポインター ' type1 ' から関数*ポインター '**type1*' へ
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>注釈
 
-**廃止されました。** Visual Studio 2017 およびそれ以降のバージョンでは、この警告は生成されません。
+**廃止:** この警告は、Visual Studio 2017 以降のバージョンでは生成されません。
 
 データポインターが、誤って関数ポインターにキャストされています。 これは /Za ではレベル 1 の警告になり、/Ze ではレベル 4 の警告になります。
 

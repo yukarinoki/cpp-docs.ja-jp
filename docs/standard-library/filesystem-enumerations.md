@@ -11,24 +11,24 @@ f1_keywords:
 - filesystem/std::filesystem::perms
 - filesystem/std::experimental::filesystem::perms
 ms.assetid: 0096c046-d101-464c-8259-b878a48280b0
-ms.openlocfilehash: 0d5b31b31f9f435c52db89521b4b753c16d86501
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 3c94ec899f0ea7abf71530f6aca44638fdb216c9
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81368424"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90041940"
 ---
 # <a name="ltfilesystemgt-enumerations"></a>&lt;filesystem&gt; 列挙体
 
 このトピックでは、filesystem ヘッダーの列挙体について説明します。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-**ヘッダー:** \<experimental/filesystem>
+**ヘッダー:**\<experimental/filesystem>
 
 **名前空間:** std::experimental::filesystem
 
-## <a name="copy_options"></a><a name="copy_options"></a>copy_options
+## <a name="copy_options"></a><a name="copy_options"></a> copy_options
 
 動作を指定するために [copy](filesystem-functions.md#copy) および [copy_file](filesystem-functions.md#copy_file) 関数で使用されるビットマスク値の列挙体。
 
@@ -51,7 +51,7 @@ enum class copy_options {
 
 ### <a name="values"></a>値
 
-|`Name`|説明|
+| 名前 | 説明 |
 |------------|-----------------|
 |`none`|演算の既定の動作を実行します。|
 |`skip_existing`|ファイルが既に存在する場合はコピーしません。エラーをレポートしません。|
@@ -84,9 +84,9 @@ enum class directory_options {
 |`none`|既定の動作: ディレクトリへのシンボリック リンクを無視します。 アクセス許可の拒否はエラーです。|
 |`follow_directory_symlink`|ディレクトリへのシンボリック リンクを実際のディレクトリとして処理します。|
 
-## <a name="file_type"></a><a name="file_type"></a>file_type
+## <a name="file_type"></a><a name="file_type"></a> file_type
 
-ファイルの種類の列挙型。 サポートされる値は、通常、ディレクトリー、not_found、および不明です。
+ファイルの種類の列挙型。 サポートされる値は、regular、directory、not_found、および unknown です。
 
 ### <a name="syntax"></a>構文
 
@@ -107,7 +107,7 @@ enum class file_type {
 
 ### <a name="values"></a>値
 
-|名前|[値]|説明|
+|名前|値|説明|
 |----------|-----------|-----------------|
 |`not_found`|-1|存在しないファイルを表します。|
 |`none`|0|type 属性を持たないファイルを表します  (サポートされていません)。|
@@ -120,17 +120,17 @@ enum class file_type {
 |`socket`|7|UNIX ベースのシステム上のソケットを表します  (サポートされていません)。|
 |`unknown`|8|状態が確認できないファイルを表します。|
 
-## <a name="perm_options"></a><a name="perm_options"></a>perm_options
+## <a name="perm_options"></a><a name="perm_options"></a> perm_options
 
-値`replace`、 `add` `remove`、および`nofollow`が含まれます。
+には、、、およびの値が含まれ `replace` `add` `remove` `nofollow` ます。
 
 ```cpp
 enum class perm_options;
 ```
 
-## <a name="perms"></a><a name="perms"></a>パーマ
+## <a name="perms"></a><a name="perms"></a> perms
 
-ファイルのアクセス許可のフラグを設定します。 サポートされる値は、基本的に「読み取り専用」であり、すべてです。 readonly ファイルの場合、*_write ビットは設定されません。 それ以外の場合、 `all` ビット (0x0777) が設定されます。
+ファイルのアクセス許可のフラグを設定します。 サポートされる値は、基本的に "readonly" と all です。 readonly ファイルの場合、*_write ビットは設定されません。 それ以外の場合、 `all` ビット (0x0777) が設定されます。
 
 ### <a name="syntax"></a>構文
 
@@ -163,5 +163,5 @@ enum class perms {// names for permissions
 
 ## <a name="see-also"></a>関連項目
 
-[ヘッダー ファイル リファレンス](../standard-library/cpp-standard-library-header-files.md)\
-[\<ファイルシステム>](../standard-library/filesystem.md)
+[ヘッダーファイルのリファレンス](../standard-library/cpp-standard-library-header-files.md)\
+[\<filesystem>](../standard-library/filesystem.md)

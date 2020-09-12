@@ -1,5 +1,6 @@
 ---
 title: span クラス (C++ 標準ライブラリ) |Microsoft Docs
+description: 標準テンプレートライブラリ (STL) スパンクラスの API リファレンス。連続した一連のオブジェクトに対して簡易ビューを提供します。
 ms.date: 05/28/2020
 f1_keywords:
 - span/std::span
@@ -51,12 +52,12 @@ helpviewer_keywords:
 - std::span [C++], rend
 - std::span [C++], size
 - std::span [C++], size_bytes
-ms.openlocfilehash: 4d5cf7f38d10814b3112a25a8da0e412f0d65093
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: 297104820f5498e59397db9025aed1675984a060
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88560453"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90039965"
 ---
 # <a name="span-class-c-standard-library"></a>span クラス (C++ 標準ライブラリ)
 
@@ -121,19 +122,19 @@ class span;
 |[span:: operator =](#op_eq)| スパンを置き換えます。|
 |[span:: 演算子\[\]](#op_at)| 指定した位置にある要素を取得します。 |
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>注釈
 
 すべて `span` のメンバー関数には、一定時間の複雑さがあります。
 
 またはとは異なり `array` `vector` 、スパンは、その中の要素を "所有" しません。 スパンは、それらのオブジェクトのストレージを所有していないため、その中のアイテムのストレージを解放しません。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:**\<span>
 
 **名前空間:** std
 
-**コンパイラオプション:** /std: c + + latest
+**コンパイラオプション:** [/std: c + + latest](../build/reference/std-specify-language-standard-version.md)
 
 ## <a name="spanback"></a><a name="back"></a> `span::back`
 
@@ -271,7 +272,7 @@ int main()
 using element_type = T;
 ```
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 スパンが作成されると、テンプレートパラメーターから型が取得され `T` ます。
 
@@ -337,7 +338,7 @@ constexpr iterator end() const noexcept;
 
 スパンの末尾の次の位置を指す反復子。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 `end` は、反復子が範囲の末尾を超えたかどうかをテストするために使用されます。
 
@@ -372,7 +373,7 @@ template <size_t count> constexpr auto first() const noexcept;
 
 `count`このスパンの先頭からの要素を格納しているスパン。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 コンパイル時にを検証し、範囲に関する情報を保持するために、可能な場合は、この関数のテンプレートバージョンを使用し `count` ます。これにより、固定エクステントの範囲が返されます。
 
@@ -452,7 +453,7 @@ Span 要素に対する反復子の型。
 using iterator = implementation-defined-iterator-type;
 ```
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 この型は、スパン内の要素に対する反復子として機能します。
 
@@ -497,7 +498,7 @@ template <size_t count> constexpr span<element_type, count> last() const noexcep
 
 このスパンの最後の要素を格納しているスパン `count` 。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 コンパイル時にを検証し、範囲に関する情報を保持するために、可能な場合は、この関数のテンプレートバージョンを使用し `count` ます。これにより、固定エクステントの範囲が返されます。
 
@@ -589,7 +590,7 @@ constexpr span& operator=(const span& other) noexcept = default;
 
 `*this`
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 割り当てでは、データポインターとサイズの簡易コピーが行われます。 は、 `span` それに含まれる要素にメモリを割り当てないため、浅いコピーは安全です。
 
@@ -741,7 +742,7 @@ constexpr reverse_iterator rend() const noexcept;
 
 反転されたスパン内の最後の要素の次のプレースホルダーへの反転反復子。つまり、反転されていないスパン内の最初の要素の前のプレースホルダーです。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 `rend` span [:: end](#end) が span で使用されるのと同様に、反転スパンと共に使用されます。 これを使用して、逆順反復子がスパンの末尾に達したかどうかをテストします。
 
@@ -955,7 +956,7 @@ span(const span<T, OtherExtent>& other) noexcept
 *\r\n\r\n*\
 この範囲からスパンを構築します。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 スパンは、スパン内のオブジェクトのストレージを所有していないため、スパン内のアイテムのストレージを解放しません。
 
@@ -1016,7 +1017,7 @@ constexpr auto subspan() const noexcept
 
 このスパンのから開始するスパン `offset` 。 要素が含まれてい `count` ます。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 この関数のテンプレートバージョンを使用すると、コンパイル時にカウントを確認できます。これにより、一定の範囲の範囲を返すことによってスパンに関する情報が保持されます。
 
@@ -1116,7 +1117,7 @@ template <ranges::contiguous_range Rng>
 span(Rng &&) -> span<remove_reference_t<ranges::range_reference_t<Rng>>>;
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [\<span>](../standard-library/span.md)  
 [クラステンプレート引数の推論を使用する方法](https://devblogs.microsoft.com/cppblog/how-to-use-class-template-argument-deduction/)

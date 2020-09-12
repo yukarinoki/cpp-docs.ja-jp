@@ -1,6 +1,7 @@
 ---
 title: '&lt;string_view &gt; 演算子'
-ms.date: 04/19/2019
+description: '`string_view`2 つの `string_view` オブジェクト、または `string_view` とその他の文字列オブジェクトを比較するために使用される演算子の API リファレンス'
+ms.date: 9/4/2020
 f1_keywords:
 - xstring/basic_string_view::operator!=
 - xstring/basic_string_view::operator&gt;
@@ -17,12 +18,12 @@ helpviewer_keywords:
 - std::basic_string_view::operator&lt;
 - std::basic_string_view::operator&lt;&lt;
 - std::basic_string_view::operator&lt;=, std::basic_string_view::operator==
-ms.openlocfilehash: b0761c1af7b2ed9f34917d2e4165561b357f0a30
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 832e49aaf01a4ea124b7a6881b93bd93b7337215
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88833219"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90039886"
 ---
 # <a name="ltstring_viewgt-operators"></a>&lt;string_view &gt; 演算子
 
@@ -70,7 +71,7 @@ bool operator!=(
 
 **`true`** 演算子の左側のオブジェクトが右側のオブジェクトと等しくない場合は、辞書式になります。それ以外の場合は **`false`** 。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 *Convertible_string_type*からもう一方の側の string_view への暗黙的な変換が存在する必要があります。
 
@@ -109,7 +110,7 @@ bool operator==(
 
 **`true`** 演算子の左側のオブジェクトが右側のオブジェクトと等しい場合は、辞書式を返します。それ以外の場合は **`false`** 。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 *Convertible_string_type*からもう一方の側の string_view への暗黙的な変換が存在する必要があります。
 
@@ -148,7 +149,7 @@ bool operator<(
 
 **`true`** 演算子の左側のオブジェクトが右側のオブジェクトよりも辞書式小さい場合は、それ以外の場合は **`false`** 。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 *Convertible_string_type*からもう一方の側の string_view への暗黙的な変換が存在する必要があります。
 
@@ -209,7 +210,7 @@ bool operator<=(
 
 **`true`** 演算子の左側のオブジェクトが右側のオブジェクト以下である場合は、辞書式を返します。それ以外の場合は **`false`** 。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 「[演算子 &lt; ](#op_lt)」を参照してください。
 
@@ -235,7 +236,7 @@ inline basic_ostream<CharType, Traits>& operator<<(
 
 書き込み先の出力ストリーム。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 この演算子を使用して、string_view の内容を出力ストリームに挿入します。たとえば、 [std:: cout](iostream.md#cout)を使用します。
 
@@ -272,7 +273,7 @@ bool operator>(
 
 **`true`** 演算子の左側のオブジェクトが右側の string_view オブジェクトよりも大きい場合はです。それ以外の場合は **`false`** 。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 「[演算子 &lt; ](#op_lt)」を参照してください。
 
@@ -309,7 +310,7 @@ bool operator>=(
 
 **`true`** 演算子の左側のオブジェクトが右側のオブジェクト以上である場合は、辞書式の場合は。それ以外の場合は **`false`** 。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 「[演算子 &lt; ](#op_lt)」を参照してください。
 
@@ -329,6 +330,10 @@ using namespace literals::string_view_literals;
     u16string_view sv16{ u"Hello"sv };
     u32string_view sv32{ U"Hello"sv };
 ```
+
+## <a name="requirements"></a>要件
+
+[/std:c++17](../build/reference/std-specify-language-standard-version.md)
 
 ## <a name="see-also"></a>関連項目
 
