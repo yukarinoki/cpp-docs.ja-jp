@@ -169,7 +169,7 @@ map では、[key_compare](#key_compare) 型の格納されている関数オブ
 
 ### <a name="typedefs"></a>Typedefs
 
-|名前|説明|
+|Name|説明|
 |-|-|
 |[allocator_type](#allocator_type)|map オブジェクトの `allocator` クラスの typedef。|
 |[const_iterator](#const_iterator)|内の要素を読み取ることができる双方向反復子の typedef **`const`** `map` 。|
@@ -221,7 +221,7 @@ map では、[key_compare](#key_compare) 型の格納されている関数オブ
 
 ### <a name="operators"></a>オペレーター
 
-|名前|説明|
+|Name|説明|
 |-|-|
 |[operator&#91;&#93;](#op_at)|map に、指定したキー値を持つ要素を挿入します。|
 |[operator =](#op_eq)|別の map のコピーで map の要素を置き換えます。|

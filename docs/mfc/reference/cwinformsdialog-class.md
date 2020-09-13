@@ -56,7 +56,7 @@ MFC アプリケーションに表示される .NET Framework ユーザーコン
 
 ### <a name="public-operators"></a>パブリック演算子
 
-|名前|説明|
+|Name|説明|
 |----------|-|
 |[CWinFormsDialog:: operator-&gt;](#operator_-_gt)|式の [CWinFormsDialog:: GetControl](#getcontrol) を置き換えます。|
 |[CWinFormsDialog:: operator TManagedControl ^](#operator-tmanagedcontrol-hat)|型を Windows フォームユーザーコントロールへの参照としてキャストします。|

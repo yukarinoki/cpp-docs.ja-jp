@@ -177,7 +177,7 @@ class unordered_set;
 
 ### <a name="typedefs"></a>Typedefs
 
-|名前|説明|
+|Name|説明|
 |-|-|
 |[allocator_type](#allocator_type)|ストレージを管理するためのアロケーターの型です。|
 |[const_iterator](#const_iterator)|被制御シーケンスの定数反復子の型です。|
@@ -197,7 +197,7 @@ class unordered_set;
 
 ### <a name="functions"></a>機能
 
-|名前|説明|
+|Name|説明|
 |-|-|
 |[初め](#begin)|被制御シーケンスの先頭を指定します。|
 |[bucket](#bucket)|キー値のバケット番号を取得します。|
@@ -230,7 +230,7 @@ class unordered_set;
 
 ### <a name="operators"></a>オペレーター
 
-|名前|説明|
+|Name|説明|
 |-|-|
 |[unordered_set:: operator =](#op_eq)|ハッシュ テーブルをコピーします。|
 

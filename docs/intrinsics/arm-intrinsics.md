@@ -1,6 +1,6 @@
 ---
 title: ARM 組み込み
-description: Visual Studio でマイクロソフト C++ コンパイラでサポートされている ARM64 の組み込みのリファレンス リスト。
+description: Visual Studio の Microsoft C++ コンパイラでサポートされている ARM 組み込みのリファレンスリスト。
 ms.date: 09/02/2019
 f1_keywords:
 - arm_neon/vsetq_lane_p8
@@ -3857,31 +3857,31 @@ helpviewer_keywords:
 - vzipq_u32 ARM intrinsic
 - vzipq_u8 ARM intrinsic
 ms.assetid: d3d7dadd-7bd5-4508-8bff-371a66913e20
-ms.openlocfilehash: 0b0ad779ad9d4c8de1623ea84dd6bc54e30703cc
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: 5a15740e5b0f3136614ef34ea481a675ca012e79
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81754495"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90039782"
 ---
 # <a name="arm-intrinsics"></a>ARM 組み込み
 
-マイクロソフト C++ コンパイラ (MSVC) は、ARM アーキテクチャで次の組み込みが使用可能になります。 ARM の詳細については[、ARM 開発者ドキュメント](https://developer.arm.com/docs)Web サイトのアーキテクチャとソフトウェア開発ツールのセクションを参照してください。
+Microsoft C++ コンパイラ (MSVC) は、ARM アーキテクチャで次の組み込みを使用できるようにします。 ARM の詳細については、 [Arm 開発者ドキュメント](https://developer.arm.com/docs) web サイトのアーキテクチャとソフトウェア開発ツールに関するセクションを参照してください。
 
-## <a name="neon"></a><a name="top"></a>ネオン
+## <a name="neon"></a><a name="top"></a> NEON
 
-ARM の NEON ベクトル命令セット拡張は、x86 および x64 アーキテクチャー・プロセッサーに共通する MMX および SSE ベクトル命令セットのものと類似した単一命令多重データ (SIMD) 機能を提供します。
+ARM のネオンベクター命令セット拡張は、x86 および x64 アーキテクチャのプロセッサに共通する MMX および SSE ベクター命令セットに似た Single Instruction Multiple Data (SIMD) 機能を提供します。
 
-ヘッダー ファイル `arm_neon.h` に記載されているように、NEON 組み込みはサポートされています。 NEON 組み込み用の MSVC サポートは、ARM コンパイラ ツールチェーンの付録 G、[バージョン 4.1 コンパイラ リファレンス(ARM](https://go.microsoft.com/fwlink/p/?LinkId=251083)情報センター Web サイト)に記載されている ARM コンパイラのサポートに似ています。
+ヘッダー ファイル `arm_neon.h` に記載されているように、NEON 組み込みはサポートされています。 MSVC のネオン組み込みのサポートは、arm コンパイラの章で説明されている arm コンパイラに似ています。 arm のインフォ web サイトの「 [Arm コンパイラツールチェーン」、「バージョン4.1 コンパイラリファレンス](https://go.microsoft.com/fwlink/p/?LinkId=251083) 」を参照してください。
 
-MSVC と ARM コンパイラの主な違いは、MSVC が`vldX`ベクトル`vstX`ロードとストア命令のバリアントを追加`_ex`することです。 `_ex` バリアントは、ポインター引数の配置を指定する追加パラメーターを受け取りますが、それ以外は `_ex` の付かない命令と変わりありません。
+MSVC と ARM コンパイラの主な違いは、MSVC によって、 `_ex` ベクターの `vldX` `vstX` 読み込みおよび格納命令のバリアントが追加されることです。 `_ex` バリアントは、ポインター引数の配置を指定する追加パラメーターを受け取りますが、それ以外は `_ex` の付かない命令と変わりありません。
 
-## <a name="arm-specific-intrinsics-listing"></a><a name="A"></a>ARM 固有の組み込みリスト
+## <a name="arm-specific-intrinsics-listing"></a><a name="A"></a> ARM 固有の組み込みリスト
 
 |関数名|命令|関数プロトタイプ|
 |-------------------|-----------------|------------------------|
-|_arm_smlal|SMLAL|__int64_arm_smlal(_int64_RdHiLo、_Rn、int\__Rm)|
-|_arm_umlal|UMLAL|未署名__int64 _arm_umlal(未\_署名の_int64_RdHiLo、符号なしの int _Rn、未署名の int _Rm)|
+|_arm_smlal|SMLAL|__int64 _arm_smlal ( \_ _int64 _RdHiLo、int _Rn、int _Rm)|
+|_arm_umlal|UMLAL|署名されていない __int64 _arm_umlal (unsigned \_ _int64 _RdHiLo、unsigned int _Rn、unsigned int _Rm)|
 |_arm_clz|CLZ|unsigned int _arm_clz(unsigned int _Rm)|
 |_arm_qadd|QADD|int _arm_qadd(int _Rm, int _Rn)|
 |_arm_qdadd|QDADD|int _arm_qdadd(int _Rm, int _Rn)|
@@ -3891,10 +3891,10 @@ MSVC と ARM コンパイラの主な違いは、MSVC が`vldX`ベクトル`vstX
 |_arm_smlabt|SMLABT|int _arm_smlabt(int _Rn, int _Rm, int _Ra)|
 |_arm_smlatb|SMLATB|int _arm_smlatb(int _Rn, int _Rm, int _Ra)|
 |_arm_smlatt|SMLATT|int _arm_smlatt(int _Rn, int _Rm, int _Ra)|
-|_arm_smlalbb|SMLALBB|__int64_arm_smlalbb(_int64_RdHiLo、_Rn、_Rm)\_|
-|_arm_smlalbt|SMLALBT|__int64_arm_smlalbt(_int64_RdHiLo、_Rn、int\__Rm)|
-|_arm_smlaltb|SMLALTB|__int64_arm_smlaltb(_int64_RdHiLo、_Rn、_Rm)\_|
-|_arm_smlaltt|SMLALTT|__int64_arm_smlaltt(_int64_RdHiLo、_Rn、\_イント_Rm)|
+|_arm_smlalbb|SMLALBB|__int64 _arm_smlalbb ( \_ _int64 _RdHiLo、int _Rn、int _Rm)|
+|_arm_smlalbt|SMLALBT|__int64 _arm_smlalbt ( \_ _int64 _RdHiLo、int _Rn、int _Rm)|
+|_arm_smlaltb|SMLALTB|__int64 _arm_smlaltb ( \_ _int64 _RdHiLo、int _Rn、int _Rm)|
+|_arm_smlaltt|SMLALTT|__int64 _arm_smlaltt ( \_ _int64 _RdHiLo、int _Rn、int _Rm)|
 |_arm_smlawb|SMLAWB|int _arm_smlawb(int _Rn, int _Rm, int _Ra)|
 |_arm_smlawt|SMLAWT|int _arm_smlawt(int _Rn, int _Rm, int _Ra)|
 |_arm_smulbb|SMULBB|int _arm_smulbb(int _Rn, int _Rm)|
@@ -3972,10 +3972,10 @@ MSVC と ARM コンパイラの主な違いは、MSVC が`vldX`ベクトル`vstX
 |_arm_smmlsr|SMMLSR|int _arm_smmlsr(int _Rn, int _Rm, int _Ra)|
 |_arm_smmul|SMMUL|int _arm_smmul(int _Rn, int _Rm)|
 |_arm_smmulr|SMMULR|int _arm_smmulr(int _Rn, int _Rm)|
-|_arm_smlald|SMLALD|__int64_arm_smlald(_int64_RdHiLo、_Rn、_Rm)\_|
-|_arm_smlaldx|SMLALDX|__int64_arm_smlaldx(_int64_RdHiLo、_Rn、int\__Rm)|
-|_arm_smlsld|SMLSLD|__int64_arm_smlsld(_int64_RdHiLo、_Rn、_Rm)\_|
-|_arm_smlsldx|SMLSLDX|__int64_arm_smlsldx(_int64_RdHiLo、_Rn、int\__Rm)|
+|_arm_smlald|SMLALD|__int64 _arm_smlald ( \_ _int64 _RdHiLo、int _Rn、int _Rm)|
+|_arm_smlaldx|SMLALDX|__int64 _arm_smlaldx ( \_ _int64 _RdHiLo、int _Rn、int _Rm)|
+|_arm_smlsld|SMLSLD|__int64 _arm_smlsld ( \_ _int64 _RdHiLo、int _Rn、int _Rm)|
+|_arm_smlsldx|SMLSLDX|__int64 _arm_smlsldx ( \_ _int64 _RdHiLo、int _Rn、int _Rm)|
 |_arm_smuad|SMUAD|int _arm_smuad(int _Rn, int _Rm)|
 |_arm_smuadx|SMUADX|int _arm_muadxs(int _Rn, int _Rm)|
 |_arm_smusd|SMUSD|int _arm_smusd(int _Rn, int _Rm)|
@@ -3991,51 +3991,51 @@ MSVC と ARM コンパイラの主な違いは、MSVC が`vldX`ベクトル`vstX
 |_arm_sdiv|SDIV|int _arm_sdiv(int _Rn, int _Rm)|
 |_arm_udiv|UDIV|unsigned int _arm_udiv(unsigned int _Rn, unsigned int _Rm)|
 |__cps|CPS|void __cps(unsigned int _Ops, unsigned int _Flags, unsigned int _Mode)|
-|__dmb|DMB|void __dmb(unsigned int `_Type`)<br /><br /> 命令ストリームにメモリ バリア操作を挿入します。 パラメーター `_Type` で、バリアによって適用される制限の種類を指定します。<br /><br /> 適用できる制限の種類の詳細については、「[メモリ バリアの制限](#BarrierRestrictions)」を参照してください。|
-|__dsb|DSB|void __dsb(unsigned int _Type)<br /><br /> 命令ストリームにメモリ バリア操作を挿入します。 パラメーター `_Type` で、バリアによって適用される制限の種類を指定します。<br /><br /> 適用できる制限の種類の詳細については、「[メモリ バリアの制限](#BarrierRestrictions)」を参照してください。|
-|__isb|ISB|void __isb(unsigned int _Type)<br /><br /> 命令ストリームにメモリ バリア操作を挿入します。 パラメーター `_Type` で、バリアによって適用される制限の種類を指定します。<br /><br /> 適用できる制限の種類の詳細については、「[メモリ バリアの制限](#BarrierRestrictions)」を参照してください。|
-|__emit||void __emit (\_署名されていない_int32オペコード)<br /><br /> コンパイラから出力される命令ストリームに、指定された命令を挿入します。<br /><br /> `opcode` の値は、コンパイル時に既知の定数式である必要があります。 命令語のサイズは 16 ビットであり、`opcode` の最上位 16 ビットは無視されます。<br /><br /> コンパイラは、挿入された命令が実行される前`opcode`に、内容を解釈しようとせず、CPU またはメモリの状態を保証しません。<br /><br /> コンパイラは、挿入された命令を実行した後に CPU とメモリの状態が変更されていないことを前提としています。 したがって、状態を変更する命令は、コンパイラによって生成される通常のコードに悪影響を及ぼす可能性があります。<br /><br /> このため、コンパイラが通常`emit`処理しない CPU 状態 (コプロセッサ状態など) に影響を与える命令を挿入する場合や、 を使用して宣言された関数を実装`declspec(naked)`する場合にのみ使用します。|
+|__dmb|DMB|void __dmb(unsigned int `_Type`)<br /><br /> 命令ストリームにメモリ バリア操作を挿入します。 パラメーター `_Type` で、バリアによって適用される制限の種類を指定します。<br /><br /> 適用できる制限の種類の詳細については、「 [メモリバリアの制限](#BarrierRestrictions)」を参照してください。|
+|__dsb|DSB|void __dsb(unsigned int _Type)<br /><br /> 命令ストリームにメモリ バリア操作を挿入します。 パラメーター `_Type` で、バリアによって適用される制限の種類を指定します。<br /><br /> 適用できる制限の種類の詳細については、「 [メモリバリアの制限](#BarrierRestrictions)」を参照してください。|
+|__isb|ISB|void __isb(unsigned int _Type)<br /><br /> 命令ストリームにメモリ バリア操作を挿入します。 パラメーター `_Type` で、バリアによって適用される制限の種類を指定します。<br /><br /> 適用できる制限の種類の詳細については、「 [メモリバリアの制限](#BarrierRestrictions)」を参照してください。|
+|__emit||void __emit (unsigned \_ _int32 オペコード)<br /><br /> コンパイラから出力される命令ストリームに、指定された命令を挿入します。<br /><br /> `opcode` の値は、コンパイル時に既知の定数式である必要があります。 命令語のサイズは 16 ビットであり、`opcode` の最上位 16 ビットは無視されます。<br /><br /> コンパイラは、の内容を解釈せず、 `opcode` 挿入命令が実行される前に CPU またはメモリの状態を保証しません。<br /><br /> コンパイラは、挿入された命令を実行した後に CPU とメモリの状態が変更されていないことを前提としています。 したがって、状態を変更する命令は、コンパイラによって生成される通常のコードに悪影響を及ぼす可能性があります。<br /><br /> このため、を使用 `emit` するのは、コンパイラが通常処理しない CPU の状態 (コプロセッサの状態など) に影響する命令を挿入する場合、またはを使用して宣言された関数を実装する場合のみ `declspec(naked)` です。|
 |__hvc|HVC|unsigned int __hvc(unsigned int, ...)|
-|__iso_volatile_load16||__int16_iso_volatile_load16(\_定数揮発性\__int16) \*<br /><br /> 詳細については、「 [__iso_volatile_load/ストアの組み込み](#IsoVolatileLoadStore)」を参照してください。|
-|__iso_volatile_load32||__int32 \__iso_volatile_load32(定数\_揮発性\*_int32)<br /><br /> 詳細については、「 [__iso_volatile_load/ストアの組み込み](#IsoVolatileLoadStore)」を参照してください。|
-|__iso_volatile_load64||__int64 \__iso_volatile_load64(恒\_常\*性揮発性_int64)<br /><br /> 詳細については、「 [__iso_volatile_load/ストアの組み込み](#IsoVolatileLoadStore)」を参照してください。|
-|__iso_volatile_load8||__int8 \__iso_volatile_load8(定数\_揮発性\*_int8)<br /><br /> 詳細については、「 [__iso_volatile_load/ストアの組み込み](#IsoVolatileLoadStore)」を参照してください。|
-|__iso_volatile_store16||ボイド__iso_volatile_store16(揮発性\__int16 \* \_,_int16)<br /><br /> 詳細については、「 [__iso_volatile_load/ストアの組み込み](#IsoVolatileLoadStore)」を参照してください。|
-|__iso_volatile_store32||ボイド__iso_volatile_store32(揮発性\__int32 \* \_、_int32)<br /><br /> 詳細については、「 [__iso_volatile_load/ストアの組み込み](#IsoVolatileLoadStore)」を参照してください。|
-|__iso_volatile_store64||ボイド__iso_volatile_store64(揮発性\__int64 \* \_,_int64)<br /><br /> 詳細については、「 [__iso_volatile_load/ストアの組み込み](#IsoVolatileLoadStore)」を参照してください。|
-|__iso_volatile_store8||ボイド__iso_volatile_store8(揮発性\__int8 \* \_、_int8)<br /><br /> 詳細については、「 [__iso_volatile_load/ストアの組み込み](#IsoVolatileLoadStore)」を参照してください。|
-|__ldrexd|LDREXD|__int64 \__ldrexd(定数\_揮発性\*_int64)|
-|__prefetch|PLD|void \___cdecl _prefetch \*(const void )<br /><br /> 指定したアドレス、またはその付近のアドレスのメモリに間もなくアクセスする可能性があるという `PLD` メモリ ヒントをシステムに提供します。 システムによっては、実行時のパフォーマンスを向上させるために、そのメモリへのアクセス パターンを最適化する場合があります。 ただし、C++ 言語側からすると、この関数には目に見える効果がなく、何も実行しないことがあります。|
-|__rdpmccntr64||符号なし__int64 \__rdpmccntr64(void)|
+|__iso_volatile_load16||__int16 \_ _iso_volatile_load16 (const volatile \_ _int16 \* )<br /><br /> 詳細については、「 [__iso_volatile_load/ストアの組み込み](#IsoVolatileLoadStore)」を参照してください。|
+|__iso_volatile_load32||__int32 \_ _iso_volatile_load32 (const volatile \_ _int32 \* )<br /><br /> 詳細については、「 [__iso_volatile_load/ストアの組み込み](#IsoVolatileLoadStore)」を参照してください。|
+|__iso_volatile_load64||__int64 \_ _iso_volatile_load64 (const volatile \_ _int64 \* )<br /><br /> 詳細については、「 [__iso_volatile_load/ストアの組み込み](#IsoVolatileLoadStore)」を参照してください。|
+|__iso_volatile_load8||__int8 \_ _iso_volatile_load8 (const volatile \_ _int8 \* )<br /><br /> 詳細については、「 [__iso_volatile_load/ストアの組み込み](#IsoVolatileLoadStore)」を参照してください。|
+|__iso_volatile_store16||void __iso_volatile_store16 (volatile \_ _int16 \* 、 \_ _int16)<br /><br /> 詳細については、「 [__iso_volatile_load/ストアの組み込み](#IsoVolatileLoadStore)」を参照してください。|
+|__iso_volatile_store32||void __iso_volatile_store32 (volatile \_ _int32 \* 、 \_ _int32)<br /><br /> 詳細については、「 [__iso_volatile_load/ストアの組み込み](#IsoVolatileLoadStore)」を参照してください。|
+|__iso_volatile_store64||void __iso_volatile_store64 (volatile \_ _int64 \* 、 \_ _int64)<br /><br /> 詳細については、「 [__iso_volatile_load/ストアの組み込み](#IsoVolatileLoadStore)」を参照してください。|
+|__iso_volatile_store8||void __iso_volatile_store8 (volatile \_ _int8 \* 、 \_ _int8)<br /><br /> 詳細については、「 [__iso_volatile_load/ストアの組み込み](#IsoVolatileLoadStore)」を参照してください。|
+|__ldrexd|LDREXD|__int64 \_ _ldrexd (const volatile \_ _int64 \* )|
+|__prefetch|PLD|void __cdecl \_ _prefetch (const void \* )<br /><br /> 指定したアドレス、またはその付近のアドレスのメモリに間もなくアクセスする可能性があるという `PLD` メモリ ヒントをシステムに提供します。 システムによっては、実行時のパフォーマンスを向上させるために、そのメモリへのアクセス パターンを最適化する場合があります。 ただし、C++ 言語側からすると、この関数には目に見える効果がなく、何も実行しないことがあります。|
+|__rdpmccntr64||署名されていない __int64 \_ _rdpmccntr64 (void)|
 |__sev|SEV|void __sev(void)|
-|__static_assert||void __static_assert (int, \*const char )|
+|__static_assert||void __static_assert (int, const char \* )|
 |__swi|SVC|unsigned int __swi(unsigned int, ...)|
 |__trap|BKPT|int __trap(int, ...)|
 |__wfe|WFE|void __wfe(void)|
 |__wfi|WFI|void __wfi(void)|
 |_AddSatInt|QADD|int _AddSatInt(int, int)|
-|_CopyDoubleFromInt64||ダブル_CopyDoubleFromInt64(_int64)\_|
-|_CopyFloatFromInt32||フロート_CopyFloatFromInt32(_int32)\_|
+|_CopyDoubleFromInt64||double _CopyDoubleFromInt64 ( \_ _int64)|
+|_CopyFloatFromInt32||float _CopyFloatFromInt32 ( \_ _int32)|
 |_CopyInt32FromFloat||__int32 _CopyInt32FromFloat(float)|
 |_CopyInt64FromDouble||__int64 _CopyInt64FromDouble(double)|
 |_CountLeadingOnes||unsigned int _CountLeadingOnes(unsigned long)|
-|_CountLeadingOnes64||符号なしの int _CountLeadingOnes64 \_(署名されていない_int64)|
+|_CountLeadingOnes64||unsigned int _CountLeadingOnes64 (unsigned \_ _int64)|
 |_CountLeadingSigns||unsigned int _CountLeadingSigns(long)|
-|_CountLeadingSigns64||符号なし _CountLeadingSigns64(\__int64)|
+|_CountLeadingSigns64||unsigned int _CountLeadingSigns64 ( \_ _int64)|
 |_CountLeadingZeros||unsigned int _CountLeadingZeros(unsigned long)|
-|_CountLeadingZeros64||符号なし int _CountLeadingZeros64 \_(署名されていない_int64)|
+|_CountLeadingZeros64||unsigned int _CountLeadingZeros64 (unsigned \_ _int64)|
 |_CountOneBits||unsigned int _CountOneBits(unsigned long)|
-|_CountOneBits64||符号なしの int _CountOneBits64 \_(署名されていない_int64)|
+|_CountOneBits64||unsigned int _CountOneBits64 (unsigned \_ _int64)|
 |_DAddSatInt|QDADD|int _DAddSatInt(int, int)|
 |_DSubSatInt|QDSUB|int _DSubSatInt(int, int)|
 |_isunordered||int _isunordered(double, double)|
 |_isunorderedf||int _isunorderedf(float, float)|
-|_MoveFromCoprocessor|MRC|unsigned int _MoveFromCoprocessor(unsigned int, unsigned int, unsigned int, unsigned int, unsigned int)<br /><br /> コプロセッサのデータ転送命令を使用して、ARM コプロセッサからデータを読み取ります。 詳細については[、「_MoveFromCoprocessor、_MoveFromCoprocessor2」を](#MoveFromCo)参照してください。|
-|_MoveFromCoprocessor2|MRC2|unsigned int _MoveFromCoprocessor2(unsigned int, unsigned int, unsigned int, unsigned int, unsigned int)<br /><br /> コプロセッサのデータ転送命令を使用して、ARM コプロセッサからデータを読み取ります。 詳細については[、「_MoveFromCoprocessor、_MoveFromCoprocessor2」を](#MoveFromCo)参照してください。|
-|_MoveFromCoprocessor64|MRRC|unsigned __int64 _MoveFromCoprocessor64(unsigned int, unsigned int, unsigned int)<br /><br /> コプロセッサのデータ転送命令を使用して、ARM コプロセッサからデータを読み取ります。 詳細については[、「_MoveFromCoprocessor64」](#MoveFromCo64)を参照してください。|
-|_MoveToCoprocessor|MCR|void _MoveToCoprocessor(unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int)<br /><br /> コプロセッサのデータ転送命令を使用して、ARM コプロセッサからデータを読み取ります。 詳細については、「 [_MoveToCoprocessor 、 _MoveToCoprocessor2](#MoveToCo)」 を参照してください。|
-|_MoveToCoprocessor2|MCR2|void _MoveToCoprocessor2(unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int)<br /><br /> コプロセッサのデータ転送命令を使用して、ARM コプロセッサからデータを読み取ります。 詳細については、「 [_MoveToCoprocessor 、 _MoveToCoprocessor2](#MoveToCo)」 を参照してください。|
-|_MoveToCoprocessor64|MCRR|void _MoveToCoprocessor64 (\_未署名_int64、符号なし、符号なし int、符号なし int、 符号なし int)<br /><br /> コプロセッサのデータ転送命令を使用して、ARM コプロセッサからデータを読み取ります。 詳細については、「 [_MoveToCoprocessor64](#MoveToCo64)」を参照してください。|
+|_MoveFromCoprocessor|MRC|unsigned int _MoveFromCoprocessor(unsigned int, unsigned int, unsigned int, unsigned int, unsigned int)<br /><br /> コプロセッサのデータ転送命令を使用して、ARM コプロセッサからデータを読み取ります。 詳細については、「 [_MoveFromCoprocessor、_MoveFromCoprocessor2](#MoveFromCo)」を参照してください。|
+|_MoveFromCoprocessor2|MRC2|unsigned int _MoveFromCoprocessor2(unsigned int, unsigned int, unsigned int, unsigned int, unsigned int)<br /><br /> コプロセッサのデータ転送命令を使用して、ARM コプロセッサからデータを読み取ります。 詳細については、「 [_MoveFromCoprocessor、_MoveFromCoprocessor2](#MoveFromCo)」を参照してください。|
+|_MoveFromCoprocessor64|MRRC|unsigned __int64 _MoveFromCoprocessor64(unsigned int, unsigned int, unsigned int)<br /><br /> コプロセッサのデータ転送命令を使用して、ARM コプロセッサからデータを読み取ります。 詳細については、「 [_MoveFromCoprocessor64](#MoveFromCo64)」を参照してください。|
+|_MoveToCoprocessor|MCR|void _MoveToCoprocessor(unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int)<br /><br /> コプロセッサのデータ転送命令を使用して、ARM コプロセッサからデータを読み取ります。 詳細については、「 [_MoveToCoprocessor、_MoveToCoprocessor2](#MoveToCo)」を参照してください。|
+|_MoveToCoprocessor2|MCR2|void _MoveToCoprocessor2(unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int)<br /><br /> コプロセッサのデータ転送命令を使用して、ARM コプロセッサからデータを読み取ります。 詳細については、「 [_MoveToCoprocessor、_MoveToCoprocessor2](#MoveToCo)」を参照してください。|
+|_MoveToCoprocessor64|MCRR|void _MoveToCoprocessor64 (unsigned \_ _int64、unsigned int、unsigned int、unsigned int)<br /><br /> コプロセッサのデータ転送命令を使用して、ARM コプロセッサからデータを読み取ります。 詳細については、「 [_MoveToCoprocessor64](#MoveToCo64)」を参照してください。|
 |_MulHigh||long _MulHigh(long, long)|
 |_MulUnsignedHigh||unsigned long _MulUnsignedHigh(unsigned long, unsigned long)|
 |_ReadBankedReg|MRS|int _ReadBankedReg(int _Reg)|
@@ -4044,11 +4044,11 @@ MSVC と ARM コンパイラの主な違いは、MSVC が`vldX`ベクトル`vstX
 |_WriteBankedReg|MSR|void _WriteBankedReg(int _Value, int _Reg)|
 |_WriteStatusReg|MSR|void _WriteStatusReg(int, int, int)|
 
-[[ トップに戻る](#top)]
+[[トップに戻る](#top)]
 
-### <a name="memory-barrier-restrictions"></a><a name="BarrierRestrictions"></a>メモリ バリアの制限
+### <a name="memory-barrier-restrictions"></a><a name="BarrierRestrictions"></a> メモリバリアの制限
 
-組み込`__dmb`み関数 (データ`__dsb`メモリ バリア)、(データ同期バリア)、および`__isb`(命令同期バリア) は、次の定義済みの値を使用して、共有ドメインの観点からメモリ バリアの制限と、操作の影響を受けるアクセスの種類を指定します。
+組み込み関数 `__dmb` (データメモリバリア)、 `__dsb` (データ同期バリア)、および `__isb` (命令同期バリア) は、次の定義済みの値を使用して、共有ドメインおよび操作の影響を受けるアクセスの種類に関して、メモリバリアの制限を指定します。
 
 |制限値|説明|
 |-----------------------|-----------------|
@@ -4063,9 +4063,9 @@ MSVC と ARM コンパイラの主な違いは、MSVC が`vldX`ベクトル`vstX
 
 組み込みが `__isb` の場合、現在有効な制限は _ARM_BARRIER_SY のみです。その他のすべての値は、アーキテクチャによって予約されています。
 
-### <a name="__iso_volatile_loadstore-intrinsics"></a><a name="IsoVolatileLoadStore"></a>__iso_volatile_load/ストア組み込み
+### <a name="__iso_volatile_loadstore-intrinsics"></a><a name="IsoVolatileLoadStore"></a> __iso_volatile_load/ストア組み込み
 
-これらの組み込み関数は、コンパイラの最適化の対象とならない読み込みと格納を明示的に実行します。
+これらの組み込み関数は、コンパイラの最適化の対象にならない読み込みと格納を明示的に実行します。
 
 ```C
 __int16 __iso_volatile_load16(const volatile __int16 * Location);
@@ -4081,30 +4081,30 @@ void __iso_volatile_store8(volatile __int8 * Location, __int8 Value);
 
 #### <a name="parameters"></a>パラメーター
 
-*場所*\
+*位置情報*\
 読み取る、または書き込むメモリ位置のアドレスです。
 
 *値*\
-指定したメモリ位置に書き込む値 (固有の値のみを格納)。
+指定したメモリ位置に書き込む値 (ストア組み込みのみ)。
 
-#### <a name="return-value-load-intrinsics-only"></a>戻り値 (組み込み値の読み込みのみ)
+#### <a name="return-value-load-intrinsics-only"></a>戻り値 (組み込みの読み込みのみ)
 
 `Location` で指定されたメモリ位置の値。
 
-#### <a name="remarks"></a>解説
+#### <a name="remarks"></a>注釈
 
-`__iso_volatile_load8/16/32/64`組み込みと`__iso_volatile_store8/16/32/64`組み込み関数を使用すると、コンパイラの最適化の対象ではないメモリ アクセスを明示的に実行できます。 コンパイラは、これらの操作の相対的な順序を削除、合成、または変更することはできませんが、暗黙のハードウェア メモリ バリアは生成されません。 したがって、ハードウェアでも複数のスレッド間で観察可能なメモリ アクセスの順序が変更される場合があります。 より正確には、これらの組み込みは **、/volatile:iso**でコンパイルされた次の式と同じです。
+およびの組み込みを使用して、 `__iso_volatile_load8/16/32/64` `__iso_volatile_store8/16/32/64` コンパイラの最適化の対象になっていないメモリアクセスを明示的に実行できます。 コンパイラは、これらの操作の相対順序を削除、同期、または変更することはできませんが、暗黙的なハードウェアメモリバリアは生成されません。 したがって、ハードウェアでも複数のスレッド間で観察可能なメモリ アクセスの順序が変更される場合があります。 より正確に言うと、これらの組み込みは、 **/volatile: iso**でコンパイルされる次の式と同じです。
 
 ```cpp
 int a = __iso_volatile_load32(p);    // equivalent to: int a = *(const volatile __int32*)p;
 __iso_volatile_store32(p, a);        // equivalent to: *(volatile __int32*)p = a;
 ```
 
-組み込みは、volatile 変数を格納する volatile ポインターを受け取ることに注意してください。 ただし、引数として揮発性のポインターを使用する必要はありません。 これらの操作のセマンティクスは、通常の非揮発性型を使用する場合とまったく同じです。
+組み込みは、volatile 変数を格納する volatile ポインターを受け取ることに注意してください。 ただし、volatile ポインターを引数として使用するための要件や推奨事項はありません。 これらの操作のセマンティクスは、通常の非 volatile 型が使用される場合とまったく同じです。
 
-**/volatile:iso**コマンド ライン引数の詳細については[、「/volatile (揮発性キーワード解釈)」](../build/reference/volatile-volatile-keyword-interpretation.md)を参照してください。
+**/Volatile: iso**コマンドライン引数の詳細については、「 [/Volatile (Volatile キーワードの解釈)](../build/reference/volatile-volatile-keyword-interpretation.md)」を参照してください。
 
-### <a name="_movefromcoprocessor-_movefromcoprocessor2"></a><a name="MoveFromCo"></a>_MoveFromCoprocessor、_MoveFromCoprocessor2
+### <a name="_movefromcoprocessor-_movefromcoprocessor2"></a><a name="MoveFromCo"></a> _MoveFromCoprocessor、_MoveFromCoprocessor2
 
 これらの組み込み関数は、コプロセッサのデータ転送命令を使用して、ARM コプロセッサからデータを読み取ります。
 
@@ -4128,32 +4128,32 @@ int _MoveFromCoprocessor2(
 
 #### <a name="parameters"></a>パラメーター
 
-*コプロセス*\
+*coproc*\
 コプロセッサ番号 (範囲は 0 ～ 15)。
 
-*オプコード1*\
+*opcode1*\
 コプロセッサ固有のオペコード (範囲は 0 ～ 7)。
 
-*Crn*\
+*crn*\
 コプロセッサのレジスタ番号 (範囲は 0 ～ 15)。これは、命令に対する最初のオペランドを指定します。
 
-*Crm*\
+*crm*\
 コプロセッサのレジスタ番号 (範囲は 0 ～ 15)。これは、追加のソースまたはターゲットのオペランドを指定します。
 
-*オプトコード2*\
+*opcode2*\
 コプロセッサ固有の追加オペコード (範囲は 0 ～ 7)。
 
 #### <a name="return-value"></a>戻り値
 
 コプロセッサから読み取られる値。
 
-#### <a name="remarks"></a>解説
+#### <a name="remarks"></a>注釈
 
-組み込みのすべての 5 つのパラメーターの値は、コンパイル時に認識される定数式でなければなりません。
+組み込みの5つのすべてのパラメーターの値は、コンパイル時に既知の定数式である必要があります。
 
 `_MoveFromCoprocessor` は MRC 命令を使用し、`_MoveFromCoprocessor2` は MRC2 を使用します。 パラメーターは、命令語に直接エンコードされたビットフィールドに対応します。 パラメーターの解釈は、コプロセッサに依存しています。 詳細については、対象のコプロセッサのマニュアルを参照してください。
 
-### <a name="_movefromcoprocessor64"></a><a name="MoveFromCo64"></a>_MoveFromCoprocessor64
+### <a name="_movefromcoprocessor64"></a><a name="MoveFromCo64"></a> _MoveFromCoprocessor64
 
 コプロセッサのデータ転送命令を使用して、ARM コプロセッサからデータを読み取ります。
 
@@ -4167,26 +4167,26 @@ unsigned __int64 _MoveFromCoprocessor64(
 
 #### <a name="parameters"></a>パラメーター
 
-*コプロセス*\
+*coproc*\
 コプロセッサ番号 (範囲は 0 ～ 15)。
 
-*オプコード1*\
+*opcode1*\
 コプロセッサ固有のオペコード (範囲は 0 ～ 15)。
 
-*Crm*\
+*crm*\
 コプロセッサのレジスタ番号 (範囲は 0 ～ 15)。これは、追加のソースまたはターゲットのオペランドを指定します。
 
 #### <a name="return-value"></a>戻り値
 
 コプロセッサから読み取られる値。
 
-#### <a name="remarks"></a>解説
+#### <a name="remarks"></a>注釈
 
-組み込みの 3 つのパラメーターの値は、コンパイル時に既知の定数式でなければなりません。
+組み込みの3つのすべてのパラメーターの値は、コンパイル時に既知の定数式である必要があります。
 
 `_MoveFromCoprocessor64` は MRRC 命令を使用します。 パラメーターは、命令語に直接エンコードされたビットフィールドに対応します。 パラメーターの解釈は、コプロセッサに依存しています。 詳細については、対象のコプロセッサのマニュアルを参照してください。
 
-### <a name="_movetocoprocessor-_movetocoprocessor2"></a><a name="MoveToCo"></a>_MoveToCoprocessor、_MoveToCoprocessor2
+### <a name="_movetocoprocessor-_movetocoprocessor2"></a><a name="MoveToCo"></a> _MoveToCoprocessor、_MoveToCoprocessor2
 
 これらの組み込み関数は、コプロセッサのデータ転送命令を使用して、ARM コプロセッサにデータを書き込みます。
 
@@ -4212,22 +4212,22 @@ void _MoveToCoprocessor2(
 
 #### <a name="parameters"></a>パラメーター
 
-*値*\
+*数値*\
 コプロセッサに書き込まれる値。
 
-*コプロセス*\
+*coproc*\
 コプロセッサ番号 (範囲は 0 ～ 15)。
 
-*オプコード1*\
+*opcode1*\
 コプロセッサ固有のオペコード (範囲は 0 ～ 7)。
 
-*Crn*\
+*crn*\
 コプロセッサのレジスタ番号 (範囲は 0 ～ 15)。これは、命令に対する最初のオペランドを指定します。
 
-*Crm*\
+*crm*\
 コプロセッサのレジスタ番号 (範囲は 0 ～ 15)。これは、追加のソースまたはターゲットのオペランドを指定します。
 
-*オプトコード2*\
+*opcode2*\
 コプロセッサ固有の追加オペコード (範囲は 0 ～ 7)。
 
 #### <a name="return-value"></a>戻り値
@@ -4236,11 +4236,11 @@ void _MoveToCoprocessor2(
 
 #### <a name="remarks"></a>解説
 
-組み込みの`coproc` `opcode1`、 `crn` `crm`、 `opcode2` 、、および パラメーターの値は、コンパイル時に認識される定数式である必要があります。
+`coproc`組み込みの、、、、およびの各パラメーターの値は、 `opcode1` `crn` `crm` `opcode2` コンパイル時に既知の定数式である必要があります。
 
 `_MoveToCoprocessor` は MCR 命令を使用し、`_MoveToCoprocessor2` は MCR2 を使用します。 パラメーターは、命令語に直接エンコードされたビットフィールドに対応します。 パラメーターの解釈は、コプロセッサに依存しています。 詳細については、対象のコプロセッサのマニュアルを参照してください。
 
-### <a name="_movetocoprocessor64"></a><a name="MoveToCo64"></a>_MoveToCoprocessor64
+### <a name="_movetocoprocessor64"></a><a name="MoveToCo64"></a> _MoveToCoprocessor64
 
 これらの組み込み関数は、コプロセッサのデータ転送命令を使用して、ARM コプロセッサにデータを書き込みます。
 
@@ -4255,13 +4255,13 @@ void _MoveFromCoprocessor64(
 
 #### <a name="parameters"></a>パラメーター
 
-*コプロセス*\
+*coproc*\
 コプロセッサ番号 (範囲は 0 ～ 15)。
 
-*オプコード1*\
+*opcode1*\
 コプロセッサ固有のオペコード (範囲は 0 ～ 15)。
 
-*Crm*\
+*crm*\
 コプロセッサのレジスタ番号 (範囲は 0 ～ 15)。これは、追加のソースまたはターゲットのオペランドを指定します。
 
 #### <a name="return-value"></a>戻り値
@@ -4270,59 +4270,59 @@ void _MoveFromCoprocessor64(
 
 #### <a name="remarks"></a>解説
 
-組み込みの`coproc` `opcode1`、 `crm` 、および パラメーターの値は、コンパイル時に認識される定数式である必要があります。
+組み込みの、、およびの各パラメーターの値は、 `coproc` `opcode1` `crm` コンパイル時に既知の定数式である必要があります。
 
 `_MoveFromCoprocessor64` は MCRR 命令を使用します。 パラメーターは、命令語に直接エンコードされたビットフィールドに対応します。 パラメーターの解釈は、コプロセッサに依存しています。 詳細については、対象のコプロセッサのマニュアルを参照してください。
 
-## <a name="arm-support-for-intrinsics-from-other-architectures"></a><a name="I"></a>他のアーキテクチャの組み込みのための ARM サポート
+## <a name="arm-support-for-intrinsics-from-other-architectures"></a><a name="I"></a> 他のアーキテクチャからの組み込みの ARM サポート
 
 次の表は、ARM プラットフォームでサポートされている他のアーキテクチャの組み込みを示しています。 ARM の組み込みの動作が他のハードウェア アーキテクチャの動作と異なる場合は、さらに詳細な情報がメモに記載されています。
 
 |関数名|関数プロトタイプ|
 |-------------------|------------------------|
 |__assume|void __assume(int)|
-|__code_seg|void __code_seg(const \*char)|
-|__debugbreak|ボイド__cdecl_debugbreak(\_ボイド)|
-|__fastfail|__declspec(noreturn)\_無効_fastfail (符号なし int)|
-|__nop|void __nop(void)**注:** ARM プラットフォームでは、ターゲット アーキテクチャに実装されている場合、この関数は NOP 命令を生成します。それ以外の場合は、プログラムや CPU の状態を変更しない代替命令が生成されます`MOV r8, r8`( など)。 これは、他のハードウェア アーキテクチャの\_組み込み_nopと機能的に同等です。 プログラムや CPU の状態に影響を与えない命令は最適化としてターゲットアーキテクチャによって無視される可能性があるため、その命令は必ずしも CPU サイクルを消費しません。 したがって、CPU の動作\_が確実でない限り、コード シーケンスの実行時間を操作するために、_nop組み込みを使用しないでください。 代わりに\_、_nop組み込みを使用して、次の命令を特定の 32 ビット境界アドレスに揃えることができます。|
-|__yield|void __yield(void)**注:** ARM プラットフォームでは、この関数は、プログラムに悪影響を与えることなく、スレッドが一時的に実行を中断できるタスク (スピンロックなど) を実行していることを示す YIELD 命令を生成します。 これにより、CPU は、他の場合は無駄になる可能性のある実行サイクル中に他のタスクを実行できます。|
-|_AddressOfReturnAddress|ボイド\*_AddressOfReturnAddress(ボイド)|
-|_BitScanForward|符号なし char _BitScanForward(符号\*なし長_Index、符号なし長_Mask)|
-|_BitScanReverse|符号なし文字_BitScanReverse(符号なし長\*_Index、符号なし長_Mask)|
-|_bittest|符号なし文字_bittest(長い\*定数、長い)|
-|_bittestandcomplement|符号なし文字_bittestandcomplement(長\*い、 長い)|
-|_bittestandreset|符号なし文字_bittestandreset(長\*い、 長い)|
-|_bittestandset|符号なし文字_bittestandset(長\*い、 長い)|
-|_byteswap_uint64|未署名の\___int64_cdecl_byteswap_uint64 (\_署名されていない_int64)|
+|__code_seg|void __code_seg (const char \* )|
+|__debugbreak|void __cdecl \_ _debugbreak (void)|
+|__fastfail|__declspec (noreturn) void \_ _fastfail (unsigned int)|
+|__nop|void __nop (void) **注:**  ARM プラットフォームでは、ターゲットアーキテクチャに実装されている場合、この関数は nop 命令を生成します。それ以外の場合は、プログラムまたは CPU の状態を変更しない代替命令が生成されます (例:) `MOV r8, r8` 。 機能的には、 \_ 他のハードウェアアーキテクチャに固有の _nop に相当します。 プログラムまたは CPU の状態に影響を与えない命令は、最適化としてターゲットアーキテクチャによって無視される可能性があるため、命令は必ずしも CPU サイクルを消費するわけではありません。 したがって、 \_ CPU の動作方法がわからない場合は、コードシーケンスの実行時間を操作するために組み込み _nop を使用しないでください。 代わりに、_nop 組み込みを使用して、 \_ 次の命令を特定の32ビット境界アドレスに合わせることができます。|
+|__yield|void __yield (void) **注:**  ARM プラットフォームでは、この関数は yield 命令を生成します。これは、スレッドが、プログラムに悪影響を与えずに (スピンロックなどの) 実行から一時的に中断できるタスクを実行していることを示します。 これにより、CPU は実行サイクル中に他のタスクを実行し、無駄になる可能性があります。|
+|_AddressOfReturnAddress|void \* _AddressOfReturnAddress (void)|
+|_BitScanForward|unsigned char _BitScanForward (unsigned long \* _Index、unsigned long _Mask)|
+|_BitScanReverse|unsigned char _BitScanReverse (unsigned long \* _Index、unsigned long _Mask)|
+|_bittest|unsigned char _bittest (long const \* , long)|
+|_bittestandcomplement|unsigned char _bittestandcomplement (long \* 、long)|
+|_bittestandreset|unsigned char _bittestandreset (long \* 、long)|
+|_bittestandset|unsigned char _bittestandset (long \* 、long)|
+|_byteswap_uint64|署名されていない __int64 _cdecl _byteswap_uint64 (署名されていない \_ \_ _int64)|
 |_byteswap_ulong|unsigned long __cdecl _byteswap_ulong(unsigned long)|
 |_byteswap_ushort|unsigned short __cdecl _byteswap_ushort(unsigned short)|
-|_disable|void __cdecl _disable(void)**注:** ARM プラットフォームでは、この関数は CPSID 命令を生成します。組み込みとしてのみ利用できます。|
-|_enable|void __cdecl _enable(void)**注:** ARM プラットフォームでは、この関数は CPSIE 命令を生成します。組み込みとしてのみ利用できます。|
+|_disable|void __cdecl _disable (void) **注:**  ARM プラットフォームでは、この関数は cpsid 命令を生成します。これは組み込みとしてのみ使用できます。|
+|_enable|void __cdecl _enable (void) **注:**  ARM プラットフォームでは、この関数は CPSIE 命令を生成します。これは組み込みとしてのみ使用できます。|
 |_lrotl|unsigned long __cdecl _lrotl(unsigned long, int)|
 |_lrotr|unsigned long __cdecl _lrotr(unsigned long, int)|
 |_ReadBarrier|void _ReadBarrier(void)|
 |_ReadWriteBarrier|void _ReadWriteBarrier(void)|
-|_ReturnAddress|ボイド\*_ReturnAddress(ボイド)|
+|_ReturnAddress|void \* _ReturnAddress (void)|
 |_rotl|unsigned int __cdecl _rotl(unsigned int _Value, int _Shift)|
 |_rotl16|unsigned short _rotl16(unsigned short _Value, unsigned char _Shift)|
-|_rotl64|未署名の\___int64_cdecl_rotl64(署名\_されていない_int64_Value、int _Shift)|
+|_rotl64|署名されていない __int64 \_ _cdecl _rotl64 (unsigned \_ _int64 _Value、int _Shift)|
 |_rotl8|unsigned char _rotl8(unsigned char _Value, unsigned char _Shift)|
 |_rotr|unsigned int __cdecl _rotr(unsigned int _Value, int _Shift)|
 |_rotr16|unsigned short _rotr16(unsigned short _Value, unsigned char _Shift)|
-|_rotr64|符号なし__int64_cdecl_rotr64(\_未署名\__int64_Value、int _Shift)|
+|_rotr64|署名されていない __int64 \_ _cdecl _rotr64 (unsigned \_ _int64 _Value、int _Shift)|
 |_rotr8|unsigned char _rotr8(unsigned char _Value, unsigned char _Shift)|
 |_setjmpex|int __cdecl _setjmpex(jmp_buf)|
 |_WriteBarrier|void _WriteBarrier(void)|
 
-[[ トップに戻る](#top)]
+[[トップに戻る](#top)]
 
-## <a name="interlocked-intrinsics"></a>インターロック組み込み
+## <a name="interlocked-intrinsics"></a>インタロック組み込み
 
-インタロックされた組み込みは、アトミックな読み取り/変更/書き込み操作を実行するときに使用する一連の組み込みです。 一部の組み込みは、すべてのプラットフォームに共通です。 多数の定義が存在するため、ここには別々に記載されていますが、定義はほとんど冗長であるため、一般的に考える方が簡単です。 組み込みの名前から、その具体的な動作を推測できます。
+インタロックされた組み込みは、アトミックな読み取り/変更/書き込み操作を実行するときに使用する一連の組み込みです。 一部の組み込みは、すべてのプラットフォームに共通です。 これらは多数存在するため、ここでは個別に記載されていますが、多くの場合、定義はほとんど冗長であるため、一般的な用語について考える方が簡単です。 組み込みの名前から、その具体的な動作を推測できます。
 
-次の表は、bittest 以外のインタロック組み込みについて、ARM サポートの概要を示しています。 テーブル内の各セルで、行の一番左のセルにある操作名と、列の一番上にある型名を `_Interlocked` の最後に付け加えると、組み込みの名前になります。 たとえば、行と`Xor``8`列の交差部分のセルは、完全にサポートされているの`_InterlockedXor8`に対応しています。 サポートされているほとんどの関数には、オプションのサフィックス `_acq`、`_rel`、および `_nf` が用意されています。 `_acq` サフィックスは "取得" のセマンティクスを示し、`_rel` サフィックスは "解放" のセマンティクスを示します。 「`_nf`フェンスなし」の接尾辞はARMに固有で、次のセクションで説明します。
+次の表は、bittest 以外のインタロック組み込みについて、ARM サポートの概要を示しています。 テーブル内の各セルで、行の一番左のセルにある操作名と、列の一番上にある型名を `_Interlocked` の最後に付け加えると、組み込みの名前になります。 たとえば、行と列の交差部分にあるセルは `Xor` `8` に対応し、 `_InterlockedXor8` 完全にサポートされています。 サポートされているほとんどの関数には、オプションのサフィックス `_acq`、`_rel`、および `_nf` が用意されています。 `_acq` サフィックスは "取得" のセマンティクスを示し、`_rel` サフィックスは "解放" のセマンティクスを示します。 `_nf`または "フェンスなし" サフィックスは ARM に固有であり、次のセクションで説明します。
 
-||8|16|32|64|P|
+|操作|8|16|32|64|P|
 |-|-------|--------|--------|--------|-------|
 |追加|なし|なし|[完全]|[完全]|なし|
 |And|[完全]|[完全]|[完全]|[完全]|なし|
@@ -4331,179 +4331,179 @@ void _MoveFromCoprocessor64(
 |Exchange|Partial|Partial|Partial|Partial|Partial|
 |ExchangeAdd|[完全]|[完全]|[完全]|[完全]|なし|
 |Increment|なし|[完全]|[完全]|[完全]|なし|
-|Or|[完全]|[完全]|[完全]|[完全]|なし|
+|または|[完全]|[完全]|[完全]|[完全]|なし|
 |Xor|[完全]|[完全]|[完全]|[完全]|なし|
 
 キー:
 
-- **完全**: プレーン`_acq`、 `_rel`、 `_nf` 、および フォームをサポートします。
+- **Full**: プレーン、、、およびの各形式をサポートし `_acq` `_rel` `_nf` ます。
 
-- **Partial**: プレーン`_acq`、および`_nf`フォームをサポートします。
+- **Partial**: プレーン、、およびの各形式をサポートし `_acq` `_nf` ます。
 
 - **なし**: サポートされていません
 
-### <a name="_nf-no-fence-suffix"></a><a name="nf_suffix"></a>_nf (フェンスなし) 接尾辞
+### <a name="_nf-no-fence-suffix"></a><a name="nf_suffix"></a> _nf (フェンスなし) サフィックス
 
-"no fence" サフィックスは`_nf`、他の 3 つの形式 (プレーン、、`_acq`および`_rel`) とは対照的に、操作がメモリ バリアとして動作しないことを示します。 フォームの`_nf`使用の 1 つとして、複数のスレッドによって同時に更新されるが、複数のスレッドの実行中に値が使用されない統計カウンターを維持することが考えられます。
+`_nf`または "フェンスなし" サフィックスは、他の3つの形式 (標準、、および) とは対照的に、操作がなんらかのメモリバリアとして動作しないことを示し `_acq` `_rel` ます。これは、すべての種類のバリアとして動作します。 フォームの使用方法の1つ `_nf` は、複数のスレッドによって同時に更新される統計カウンターを維持することですが、複数のスレッドが実行されている間は値が使用されません。
 
-### <a name="list-of-interlocked-intrinsics"></a>インタロック組み込みリスト
-
-|関数名|関数プロトタイプ|
-|-------------------|------------------------|
-|_InterlockedAdd|長い_InterlockedAdd(長\*い_volatile 、長い)|
-|_InterlockedAdd64|__int64_InterlockedAdd64(_int64\_揮発性\* \_、_int64)|
-|_InterlockedAdd64_acq|__int64_InterlockedAdd64_acq(_int64\_揮発性\*、_int64) \_|
-|_InterlockedAdd64_nf|__int64_InterlockedAdd64_nf(\_揮発性_int64 \* \_、_int64)|
-|_InterlockedAdd64_rel|__int64_InterlockedAdd64_rel(\_揮発性\*_int64、_int64) \_|
-|_InterlockedAdd_acq|長い_InterlockedAdd_acq(長\*揮発性、長い)|
-|_InterlockedAdd_nf|長い_InterlockedAdd_nf(長\*揮発性、長い)|
-|_InterlockedAdd_rel|長い_InterlockedAdd_rel(長\*揮発性、長)|
-|_InterlockedAnd|ロング_InterlockedAnd(長揮発性\*、長)|
-|_InterlockedAnd16|ショート_InterlockedAnd16(ショート揮発性\*、ショート)|
-|_InterlockedAnd16_acq|ショート_InterlockedAnd16_acq(ショート揮発性\*、ショート)|
-|_InterlockedAnd16_nf|ショート_InterlockedAnd16_nf(ショート揮発性\*、ショート)|
-|_InterlockedAnd16_rel|ショート_InterlockedAnd16_rel(ショート揮発性\*、ショート)|
-|_InterlockedAnd64|__int64_InterlockedAnd64(_int64\_揮発性\* \_、_int64)|
-|_InterlockedAnd64_acq|__int64_InterlockedAnd64_acq(_int64\_揮発性\* \_、_int64)|
-|_InterlockedAnd64_nf|__int64_InterlockedAnd64_nf(_int64\_揮発性\* \_、_int64)|
-|_InterlockedAnd64_rel|__int64_InterlockedAnd64_rel(_int64\_揮発性\*、_int64) \_|
-|_InterlockedAnd8|char _InterlockedAnd8(char\*揮発性、char)|
-|_InterlockedAnd8_acq|char _InterlockedAnd8_acq(char\*揮発性、char)|
-|_InterlockedAnd8_nf|文字_InterlockedAnd8_nf(char\*揮発性、char)|
-|_InterlockedAnd8_rel|char _InterlockedAnd8_rel(char\*揮発性、char)|
-|_InterlockedAnd_acq|長い_InterlockedAnd_acq(長\*揮発性、長)|
-|_InterlockedAnd_nf|長い_InterlockedAnd_nf(長\*揮発性、長い)|
-|_InterlockedAnd_rel|長い_InterlockedAnd_rel(長\*揮発性、長)|
-|_InterlockedCompareExchange|長__cdecl_InterlockedCompareExchange(長揮発性\*、長い、長い)|
-|_InterlockedCompareExchange16|短い_InterlockedCompareExchange16(短\*い揮発性 、短い、短い)|
-|_InterlockedCompareExchange16_acq|短い_InterlockedCompareExchange16_acq(短\*い揮発性 、短い、短い)|
-|_InterlockedCompareExchange16_nf|ショート_InterlockedCompareExchange16_nf(短揮発性\*、 ショート、 ショート)|
-|_InterlockedCompareExchange16_rel|ショート_InterlockedCompareExchange16_rel(短揮発性\*、ショート、ショート)|
-|_InterlockedCompareExchange64|__int64_InterlockedCompareExchange64(\_揮発性\*_int64、_int64、_int64) \_ \_|
-|_InterlockedCompareExchange64_acq|__int64_InterlockedCompareExchange64_acq(\_揮発性\*_int64、_int64、_int64) \_ \_|
-|_InterlockedCompareExchange64_nf|__int64_InterlockedCompareExchange64_nf(_int64\_揮発性\*、_int64、_int64) \_ \_|
-|_InterlockedCompareExchange64_rel|__int64_InterlockedCompareExchange64_rel(\_揮発性\*_int64 \_、_int64、_int64) \_|
-|_InterlockedCompareExchange8|文字_InterlockedCompareExchange8(char \*volatile 、char、char)|
-|_InterlockedCompareExchange8_acq|char _InterlockedCompareExchange8_acq(char \*volatile 、char、char)|
-|_InterlockedCompareExchange8_nf|char _InterlockedCompareExchange8_nf(char\*揮発性、文字、文字)|
-|_InterlockedCompareExchange8_rel|char _InterlockedCompareExchange8_rel(char \*volatile 、char、char)|
-|_InterlockedCompareExchangePointer|ボイド\*_InterlockedCompareExchangePointer(ボイド\*揮発性\*、\*ボイド\*、ボイド)|
-|_InterlockedCompareExchangePointer_acq|ボイド\*_InterlockedCompareExchangePointer_acq(ボイド\*揮発性\*、\*ボイド\*、 ボイド )|
-|_InterlockedCompareExchangePointer_nf|ボイド\*_InterlockedCompareExchangePointer_nf(ボイド\*揮発性\*、\*ボイド\*、 ボイド )|
-|_InterlockedCompareExchangePointer_rel|ボイド\*_InterlockedCompareExchangePointer_rel(ボイド\*揮発性\*、\*ボイド\*、ボイド)|
-|_InterlockedCompareExchange_acq|長い_InterlockedCompareExchange_acq(長\*い揮発性、長い、長い)|
-|_InterlockedCompareExchange_nf|長い_InterlockedCompareExchange_nf(長\*揮発性、長い、長い)|
-|_InterlockedCompareExchange_rel|長い_InterlockedCompareExchange_rel(長\*い揮発性、長い、長い)|
-|_InterlockedDecrement|長い__cdecl_InterlockedDecrement(長\*揮発性)|
-|_InterlockedDecrement16|ショート_InterlockedDecrement16(ショート揮発性\*)|
-|_InterlockedDecrement16_acq|ショート_InterlockedDecrement16_acq(ショート揮発性\*)|
-|_InterlockedDecrement16_nf|ショート_InterlockedDecrement16_nf(ショート揮発性\*)|
-|_InterlockedDecrement16_rel|ショート_InterlockedDecrement16_rel(ショート揮発性\*)|
-|_InterlockedDecrement64|__int64_InterlockedDecrement64(_int64\_揮発性\*)|
-|_InterlockedDecrement64_acq|__int64_InterlockedDecrement64_acq(_int64\_揮発性\*)|
-|_InterlockedDecrement64_nf|__int64_InterlockedDecrement64_nf(_int64\_揮発性\*)|
-|_InterlockedDecrement64_rel|__int64_InterlockedDecrement64_rel(_int64\_揮発性\*)|
-|_InterlockedDecrement_acq|ロング_InterlockedDecrement_acq(長揮発性\*)|
-|_InterlockedDecrement_nf|ロング_InterlockedDecrement_nf(長揮発性\*)|
-|_InterlockedDecrement_rel|ロング_InterlockedDecrement_rel(長揮発性\*)|
-|_InterlockedExchange|長い__cdecl_InterlockedExchange(長\*揮発性_Target、長い)|
-|_InterlockedExchange16|ショート_InterlockedExchange16(短い\*揮発性_Target、ショート)|
-|_InterlockedExchange16_acq|ショート_InterlockedExchange16_acq(短い\*揮発性_Target、ショート)|
-|_InterlockedExchange16_nf|ショート_InterlockedExchange16_nf(短い\*揮発性_Target、ショート)|
-|_InterlockedExchange64|__int64_InterlockedExchange64(_int64\_揮発性\*_Target、_int64) \_|
-|_InterlockedExchange64_acq|__int64_InterlockedExchange64_acq(\_揮発性\*_Target_int64_int64) \_|
-|_InterlockedExchange64_nf|__int64_InterlockedExchange64_nf(_int64\_揮発性\*_Target、_int64) \_|
-|_InterlockedExchange8|char _InterlockedExchange8(char\*揮発性_Target、char)|
-|_InterlockedExchange8_acq|char _InterlockedExchange8_acq(char\*揮発性_Target、char)|
-|_InterlockedExchange8_nf|char _InterlockedExchange8_nf(char\*揮発性_Target、char)|
-|_InterlockedExchangeAdd|長い__cdecl_InterlockedExchangeAdd(長\*揮発性、長)|
-|_InterlockedExchangeAdd16|ショート_InterlockedExchangeAdd16(ショート揮発性\*、ショート)|
-|_InterlockedExchangeAdd16_acq|ショート_InterlockedExchangeAdd16_acq(ショート揮発性\*、ショート)|
-|_InterlockedExchangeAdd16_nf|ショート_InterlockedExchangeAdd16_nf(ショート揮発性\*、ショート)|
-|_InterlockedExchangeAdd16_rel|ショート_InterlockedExchangeAdd16_rel(ショート揮発性\*、ショート)|
-|_InterlockedExchangeAdd64|__int64_InterlockedExchangeAdd64(_int64\_揮発性\* \_、_int64)|
-|_InterlockedExchangeAdd64_acq|__int64_InterlockedExchangeAdd64_acq(\_揮発性\*_int64、_int64) \_|
-|_InterlockedExchangeAdd64_nf|__int64_InterlockedExchangeAdd64_nf(_int64\_揮発性\* \_、_int64)|
-|_InterlockedExchangeAdd64_rel|__int64_InterlockedExchangeAdd64_rel(_int64\_揮発性\* \_、_int64)|
-|_InterlockedExchangeAdd8|文字_InterlockedExchangeAdd8(char \*volatile 、char)|
-|_InterlockedExchangeAdd8_acq|char _InterlockedExchangeAdd8_acq(char \*volatile 、char)|
-|_InterlockedExchangeAdd8_nf|char _InterlockedExchangeAdd8_nf(char \*volatile 、char)|
-|_InterlockedExchangeAdd8_rel|char _InterlockedExchangeAdd8_rel(char \*volatile 、char)|
-|_InterlockedExchangeAdd_acq|長い_InterlockedExchangeAdd_acq(長\*揮発性、長い)|
-|_InterlockedExchangeAdd_nf|長い_InterlockedExchangeAdd_nf(長\*揮発性、長)|
-|_InterlockedExchangeAdd_rel|長い_InterlockedExchangeAdd_rel(長\*揮発性、長い)|
-|_InterlockedExchangePointer|ボイド\*_InterlockedExchangePointer(ボイド\*揮発性\*_Target、ボイド\*)|
-|_InterlockedExchangePointer_acq|ボイド\*_InterlockedExchangePointer_acq(揮発性\*\*_Targetボイド、ボイド\*)|
-|_InterlockedExchangePointer_nf|ボイド\*_InterlockedExchangePointer_nf(ボイド\*揮発性\*_Target、ボイド\*)|
-|_InterlockedExchange_acq|長い_InterlockedExchange_acq(長\*揮発性_Target、長い)|
-|_InterlockedExchange_nf|長い_InterlockedExchange_nf(長\*揮発性_Target、長い)|
-|_InterlockedIncrement|長い__cdecl_InterlockedIncrement(長\*揮発性)|
-|_InterlockedIncrement16|短い_InterlockedIncrement16(短\*揮発性)|
-|_InterlockedIncrement16_acq|ショート_InterlockedIncrement16_acq(短揮発性\*)|
-|_InterlockedIncrement16_nf|ショート_InterlockedIncrement16_nf(ショート揮発性\*)|
-|_InterlockedIncrement16_rel|ショート_InterlockedIncrement16_rel(ショート揮発性\*)|
-|_InterlockedIncrement64|__int64_InterlockedIncrement64(_int64\_揮発性\*)|
-|_InterlockedIncrement64_acq|__int64_InterlockedIncrement64_acq(_int64\_揮発性\*)|
-|_InterlockedIncrement64_nf|__int64_InterlockedIncrement64_nf(_int64\_揮発性\*)|
-|_InterlockedIncrement64_rel|__int64_InterlockedIncrement64_rel(_int64\_揮発性\*)|
-|_InterlockedIncrement_acq|ロング_InterlockedIncrement_acq(長揮発性\*)|
-|_InterlockedIncrement_nf|ロング_InterlockedIncrement_nf(長揮発性\*)|
-|_InterlockedIncrement_rel|ロング_InterlockedIncrement_rel(長揮発性\*)|
-|_InterlockedOr|長い_InterlockedOr(長\*揮発性、長)|
-|_InterlockedOr16|ショート_InterlockedOr16(短揮発性\*、ショート)|
-|_InterlockedOr16_acq|ショート_InterlockedOr16_acq(ショート揮発性\*、ショート)|
-|_InterlockedOr16_nf|短い_InterlockedOr16_nf(短\*い揮発性、短い)|
-|_InterlockedOr16_rel|ショート_InterlockedOr16_rel(短揮発性\*、ショート)|
-|_InterlockedOr64|__int64_InterlockedOr64(\_揮発性_int64 \* \_、_int64)|
-|_InterlockedOr64_acq|__int64_InterlockedOr64_acq(\_揮発性\*_int64、_int64) \_|
-|_InterlockedOr64_nf|__int64_InterlockedOr64_nf(\_揮発性\*_int64_int64) \_|
-|_InterlockedOr64_rel|__int64_InterlockedOr64_rel(\_揮発性\*_int64、_int64) \_|
-|_InterlockedOr8|char _InterlockedOr8(char \*volatile 、char)|
-|_InterlockedOr8_acq|文字_InterlockedOr8_acq(char \*volatile 、char)|
-|_InterlockedOr8_nf|文字_InterlockedOr8_nf(char\*揮発性、char)|
-|_InterlockedOr8_rel|char _InterlockedOr8_rel(チャ\*ル揮発性、char)|
-|_InterlockedOr_acq|長い_InterlockedOr_acq(長\*揮発性、長い)|
-|_InterlockedOr_nf|長い_InterlockedOr_nf(長\*揮発性、長)|
-|_InterlockedOr_rel|長い_InterlockedOr_rel(長\*揮発性、長い)|
-|_InterlockedXor|ロング_InterlockedXor(長揮発性\*、ロング)|
-|_InterlockedXor16|短い_InterlockedXor16(短\*い揮発性、短い)|
-|_InterlockedXor16_acq|ショート_InterlockedXor16_acq(ショート揮発性\*、ショート)|
-|_InterlockedXor16_nf|ショート_InterlockedXor16_nf(ショート揮発性\*、ショート)|
-|_InterlockedXor16_rel|ショート_InterlockedXor16_rel(短揮発性\*、ショート)|
-|_InterlockedXor64|__int64_InterlockedXor64(_int64\_揮発性\*、_int64) \_|
-|_InterlockedXor64_acq|__int64_InterlockedXor64_acq(_int64\_揮発性\*、_int64) \_|
-|_InterlockedXor64_nf|__int64_InterlockedXor64_nf(_int64\_揮発性\* \_、_int64)|
-|_InterlockedXor64_rel|__int64_InterlockedXor64_rel(_int64\_揮発性\* \_、_int64)|
-|_InterlockedXor8|文字_InterlockedXor8(char\*揮発性、char)|
-|_InterlockedXor8_acq|文字_InterlockedXor8_acq(char\*揮発性、文字)|
-|_InterlockedXor8_nf|char _InterlockedXor8_nf(char \*volatile 、char)|
-|_InterlockedXor8_rel|文字_InterlockedXor8_rel(char\*揮発性、文字)|
-|_InterlockedXor_acq|長い_InterlockedXor_acq(長\*揮発性、長い)|
-|_InterlockedXor_nf|長い_InterlockedXor_nf(長\*揮発性、長い)|
-|_InterlockedXor_rel|長い_InterlockedXor_rel(長\*揮発性、長い)|
-
-[[ トップに戻る](#top)]
-
-### <a name="_interlockedbittest-intrinsics"></a>_interlockedbittest組み込み
-
-プレーンインターロックビットテスト組み込みは、すべてのプラットフォームに共通です。 ARM`_acq`は`_rel`、この`_nf`資料の前半の[「_nf (フェンスなし) サフィックス](#nf_suffix)」で説明したように、操作のバリア セマンティクスを変更する 、、、およびバリアントを追加します。
+### <a name="list-of-interlocked-intrinsics"></a>インタロック組み込みのリスト
 
 |関数名|関数プロトタイプ|
 |-------------------|------------------------|
-|_interlockedbittestandreset|符号なし char _interlockedbittestandreset(\*長揮発性、長)|
-|_interlockedbittestandreset_acq|符号なし char _interlockedbittestandreset_acq(\*長揮発性 、長い)|
-|_interlockedbittestandreset_nf|符号なし char _interlockedbittestandreset_nf(\*長揮発性、長)|
-|_interlockedbittestandreset_rel|符号なし文字_interlockedbittestandreset_rel(長揮発性\*、長)|
-|_interlockedbittestandset|符号なし char _interlockedbittestandset(\*長揮発性 、長)|
-|_interlockedbittestandset_acq|符号なし char _interlockedbittestandset_acq(\*長揮発性、長)|
-|_interlockedbittestandset_nf|符号なし char _interlockedbittestandset_nf(\*長揮発性、長)|
-|_interlockedbittestandset_rel|符号なし char _interlockedbittestandset_rel(\*長揮発性、長)|
+|_InterlockedAdd|長い _InterlockedAdd (long _volatile \* 、long)|
+|_InterlockedAdd64|__int64 _InterlockedAdd64 ( \_ _int64 volatile \* 、 \_ _int64)|
+|_InterlockedAdd64_acq|__int64 _InterlockedAdd64_acq ( \_ _int64 volatile \* 、 \_ _int64)|
+|_InterlockedAdd64_nf|__int64 _InterlockedAdd64_nf ( \_ _int64 volatile \* 、 \_ _int64)|
+|_InterlockedAdd64_rel|__int64 _InterlockedAdd64_rel ( \_ _int64 volatile \* 、 \_ _int64)|
+|_InterlockedAdd_acq|長い _InterlockedAdd_acq (long volatile \* 、long)|
+|_InterlockedAdd_nf|長い _InterlockedAdd_nf (long volatile \* 、long)|
+|_InterlockedAdd_rel|長い _InterlockedAdd_rel (long volatile \* 、long)|
+|_InterlockedAnd|長い _InterlockedAnd (long volatile \* 、long)|
+|_InterlockedAnd16|短い _InterlockedAnd16 (短い揮発性 \* 、短い)|
+|_InterlockedAnd16_acq|短い _InterlockedAnd16_acq (短い揮発性 \* 、短い)|
+|_InterlockedAnd16_nf|短い _InterlockedAnd16_nf (短い揮発性 \* 、短い)|
+|_InterlockedAnd16_rel|短い _InterlockedAnd16_rel (短い揮発性 \* 、短い)|
+|_InterlockedAnd64|__int64 _InterlockedAnd64 ( \_ _int64 volatile \* 、 \_ _int64)|
+|_InterlockedAnd64_acq|__int64 _InterlockedAnd64_acq ( \_ _int64 volatile \* 、 \_ _int64)|
+|_InterlockedAnd64_nf|__int64 _InterlockedAnd64_nf ( \_ _int64 volatile \* 、 \_ _int64)|
+|_InterlockedAnd64_rel|__int64 _InterlockedAnd64_rel ( \_ _int64 volatile \* 、 \_ _int64)|
+|_InterlockedAnd8|char _InterlockedAnd8 (char volatile \* 、char)|
+|_InterlockedAnd8_acq|char _InterlockedAnd8_acq (char volatile \* 、char)|
+|_InterlockedAnd8_nf|char _InterlockedAnd8_nf (char volatile \* 、char)|
+|_InterlockedAnd8_rel|char _InterlockedAnd8_rel (char volatile \* 、char)|
+|_InterlockedAnd_acq|長い _InterlockedAnd_acq (long volatile \* 、long)|
+|_InterlockedAnd_nf|長い _InterlockedAnd_nf (long volatile \* 、long)|
+|_InterlockedAnd_rel|長い _InterlockedAnd_rel (long volatile \* 、long)|
+|_InterlockedCompareExchange|長い __cdecl _InterlockedCompareExchange (long volatile \* 、long、long)|
+|_InterlockedCompareExchange16|短い _InterlockedCompareExchange16 (短い揮発性 \* 、短い、短い)|
+|_InterlockedCompareExchange16_acq|短い _InterlockedCompareExchange16_acq (短い揮発性 \* 、短い、短い)|
+|_InterlockedCompareExchange16_nf|短い _InterlockedCompareExchange16_nf (短い揮発性 \* 、短い、短い)|
+|_InterlockedCompareExchange16_rel|短い _InterlockedCompareExchange16_rel (短い揮発性 \* 、短い、短い)|
+|_InterlockedCompareExchange64|__int64 _InterlockedCompareExchange64 ( \_ _int64 volatile \* 、 \_ _int64、 \_ _int64)|
+|_InterlockedCompareExchange64_acq|__int64 _InterlockedCompareExchange64_acq ( \_ _int64 volatile \* 、 \_ _int64、 \_ _int64)|
+|_InterlockedCompareExchange64_nf|__int64 _InterlockedCompareExchange64_nf ( \_ _int64 volatile \* 、 \_ _int64、 \_ _int64)|
+|_InterlockedCompareExchange64_rel|__int64 _InterlockedCompareExchange64_rel ( \_ _int64 volatile \* 、 \_ _int64、 \_ _int64)|
+|_InterlockedCompareExchange8|char _InterlockedCompareExchange8 (char volatile \* 、char、char)|
+|_InterlockedCompareExchange8_acq|char _InterlockedCompareExchange8_acq (char volatile \* 、char、char)|
+|_InterlockedCompareExchange8_nf|char _InterlockedCompareExchange8_nf (char volatile \* 、char、char)|
+|_InterlockedCompareExchange8_rel|char _InterlockedCompareExchange8_rel (char volatile \* 、char、char)|
+|_InterlockedCompareExchangePointer|void \* _InterlockedCompareExchangePointer (void \* volatile \* 、void \* 、void \* )|
+|_InterlockedCompareExchangePointer_acq|void \* _InterlockedCompareExchangePointer_acq (void \* volatile \* 、void \* 、void \* )|
+|_InterlockedCompareExchangePointer_nf|void \* _InterlockedCompareExchangePointer_nf (void \* volatile \* 、void \* 、void \* )|
+|_InterlockedCompareExchangePointer_rel|void \* _InterlockedCompareExchangePointer_rel (void \* volatile \* 、void \* 、void \* )|
+|_InterlockedCompareExchange_acq|長い _InterlockedCompareExchange_acq (long volatile \* 、long、long)|
+|_InterlockedCompareExchange_nf|長い _InterlockedCompareExchange_nf (long volatile \* 、long、long)|
+|_InterlockedCompareExchange_rel|長い _InterlockedCompareExchange_rel (long volatile \* 、long、long)|
+|_InterlockedDecrement|長い __cdecl _InterlockedDecrement (長 volatile \* )|
+|_InterlockedDecrement16|短い _InterlockedDecrement16 (短い揮発性 \* )|
+|_InterlockedDecrement16_acq|短い _InterlockedDecrement16_acq (短い揮発性 \* )|
+|_InterlockedDecrement16_nf|短い _InterlockedDecrement16_nf (短い揮発性 \* )|
+|_InterlockedDecrement16_rel|短い _InterlockedDecrement16_rel (短い揮発性 \* )|
+|_InterlockedDecrement64|__int64 _InterlockedDecrement64 ( \_ _int64 volatile \* )|
+|_InterlockedDecrement64_acq|__int64 _InterlockedDecrement64_acq ( \_ _int64 volatile \* )|
+|_InterlockedDecrement64_nf|__int64 _InterlockedDecrement64_nf ( \_ _int64 volatile \* )|
+|_InterlockedDecrement64_rel|__int64 _InterlockedDecrement64_rel ( \_ _int64 volatile \* )|
+|_InterlockedDecrement_acq|長い _InterlockedDecrement_acq (長 volatile \* )|
+|_InterlockedDecrement_nf|長い _InterlockedDecrement_nf (長 volatile \* )|
+|_InterlockedDecrement_rel|長い _InterlockedDecrement_rel (長 volatile \* )|
+|_InterlockedExchange|長い __cdecl _InterlockedExchange (long volatile \* _Target、long)|
+|_InterlockedExchange16|短い _InterlockedExchange16 (短い揮発性 \* _Target、短い)|
+|_InterlockedExchange16_acq|短い _InterlockedExchange16_acq (短い揮発性 \* _Target、短い)|
+|_InterlockedExchange16_nf|短い _InterlockedExchange16_nf (短い揮発性 \* _Target、短い)|
+|_InterlockedExchange64|__int64 _InterlockedExchange64 ( \_ _int64 volatile \* _Target、 \_ _int64)|
+|_InterlockedExchange64_acq|__int64 _InterlockedExchange64_acq ( \_ _int64 volatile \* _Target、 \_ _int64)|
+|_InterlockedExchange64_nf|__int64 _InterlockedExchange64_nf ( \_ _int64 volatile \* _Target、 \_ _int64)|
+|_InterlockedExchange8|char _InterlockedExchange8 (char volatile \* _Target, char)|
+|_InterlockedExchange8_acq|char _InterlockedExchange8_acq (char volatile \* _Target, char)|
+|_InterlockedExchange8_nf|char _InterlockedExchange8_nf (char volatile \* _Target, char)|
+|_InterlockedExchangeAdd|長い __cdecl _InterlockedExchangeAdd (long volatile \* 、long)|
+|_InterlockedExchangeAdd16|短い _InterlockedExchangeAdd16 (短い揮発性 \* 、短い)|
+|_InterlockedExchangeAdd16_acq|短い _InterlockedExchangeAdd16_acq (短い揮発性 \* 、短い)|
+|_InterlockedExchangeAdd16_nf|短い _InterlockedExchangeAdd16_nf (短い揮発性 \* 、短い)|
+|_InterlockedExchangeAdd16_rel|短い _InterlockedExchangeAdd16_rel (短い揮発性 \* 、短い)|
+|_InterlockedExchangeAdd64|__int64 _InterlockedExchangeAdd64 ( \_ _int64 volatile \* 、 \_ _int64)|
+|_InterlockedExchangeAdd64_acq|__int64 _InterlockedExchangeAdd64_acq ( \_ _int64 volatile \* 、 \_ _int64)|
+|_InterlockedExchangeAdd64_nf|__int64 _InterlockedExchangeAdd64_nf ( \_ _int64 volatile \* 、 \_ _int64)|
+|_InterlockedExchangeAdd64_rel|__int64 _InterlockedExchangeAdd64_rel ( \_ _int64 volatile \* 、 \_ _int64)|
+|_InterlockedExchangeAdd8|char _InterlockedExchangeAdd8 (char volatile \* 、char)|
+|_InterlockedExchangeAdd8_acq|char _InterlockedExchangeAdd8_acq (char volatile \* 、char)|
+|_InterlockedExchangeAdd8_nf|char _InterlockedExchangeAdd8_nf (char volatile \* 、char)|
+|_InterlockedExchangeAdd8_rel|char _InterlockedExchangeAdd8_rel (char volatile \* 、char)|
+|_InterlockedExchangeAdd_acq|長い _InterlockedExchangeAdd_acq (long volatile \* 、long)|
+|_InterlockedExchangeAdd_nf|長い _InterlockedExchangeAdd_nf (long volatile \* 、long)|
+|_InterlockedExchangeAdd_rel|長い _InterlockedExchangeAdd_rel (long volatile \* 、long)|
+|_InterlockedExchangePointer|void \* _InterlockedExchangePointer (void \* volatile \* _Target、void \* )|
+|_InterlockedExchangePointer_acq|void \* _InterlockedExchangePointer_acq (void \* volatile \* _Target、void \* )|
+|_InterlockedExchangePointer_nf|void \* _InterlockedExchangePointer_nf (void \* volatile \* _Target、void \* )|
+|_InterlockedExchange_acq|長い _InterlockedExchange_acq (long volatile \* _Target、long)|
+|_InterlockedExchange_nf|長い _InterlockedExchange_nf (long volatile \* _Target、long)|
+|_InterlockedIncrement|長い __cdecl _InterlockedIncrement (長 volatile \* )|
+|_InterlockedIncrement16|短い _InterlockedIncrement16 (短い揮発性 \* )|
+|_InterlockedIncrement16_acq|短い _InterlockedIncrement16_acq (短い揮発性 \* )|
+|_InterlockedIncrement16_nf|短い _InterlockedIncrement16_nf (短い揮発性 \* )|
+|_InterlockedIncrement16_rel|短い _InterlockedIncrement16_rel (短い揮発性 \* )|
+|_InterlockedIncrement64|__int64 _InterlockedIncrement64 ( \_ _int64 volatile \* )|
+|_InterlockedIncrement64_acq|__int64 _InterlockedIncrement64_acq ( \_ _int64 volatile \* )|
+|_InterlockedIncrement64_nf|__int64 _InterlockedIncrement64_nf ( \_ _int64 volatile \* )|
+|_InterlockedIncrement64_rel|__int64 _InterlockedIncrement64_rel ( \_ _int64 volatile \* )|
+|_InterlockedIncrement_acq|長い _InterlockedIncrement_acq (長 volatile \* )|
+|_InterlockedIncrement_nf|長い _InterlockedIncrement_nf (長 volatile \* )|
+|_InterlockedIncrement_rel|長い _InterlockedIncrement_rel (長 volatile \* )|
+|_InterlockedOr|長い _InterlockedOr (long volatile \* 、long)|
+|_InterlockedOr16|短い _InterlockedOr16 (短い揮発性 \* 、短い)|
+|_InterlockedOr16_acq|短い _InterlockedOr16_acq (短い揮発性 \* 、短い)|
+|_InterlockedOr16_nf|短い _InterlockedOr16_nf (短い揮発性 \* 、短い)|
+|_InterlockedOr16_rel|短い _InterlockedOr16_rel (短い揮発性 \* 、短い)|
+|_InterlockedOr64|__int64 _InterlockedOr64 ( \_ _int64 volatile \* 、 \_ _int64)|
+|_InterlockedOr64_acq|__int64 _InterlockedOr64_acq ( \_ _int64 volatile \* 、 \_ _int64)|
+|_InterlockedOr64_nf|__int64 _InterlockedOr64_nf ( \_ _int64 volatile \* 、 \_ _int64)|
+|_InterlockedOr64_rel|__int64 _InterlockedOr64_rel ( \_ _int64 volatile \* 、 \_ _int64)|
+|_InterlockedOr8|char _InterlockedOr8 (char volatile \* 、char)|
+|_InterlockedOr8_acq|char _InterlockedOr8_acq (char volatile \* 、char)|
+|_InterlockedOr8_nf|char _InterlockedOr8_nf (char volatile \* 、char)|
+|_InterlockedOr8_rel|char _InterlockedOr8_rel (char volatile \* 、char)|
+|_InterlockedOr_acq|長い _InterlockedOr_acq (long volatile \* 、long)|
+|_InterlockedOr_nf|長い _InterlockedOr_nf (long volatile \* 、long)|
+|_InterlockedOr_rel|長い _InterlockedOr_rel (long volatile \* 、long)|
+|_InterlockedXor|長い _InterlockedXor (long volatile \* 、long)|
+|_InterlockedXor16|短い _InterlockedXor16 (短い揮発性 \* 、短い)|
+|_InterlockedXor16_acq|短い _InterlockedXor16_acq (短い揮発性 \* 、短い)|
+|_InterlockedXor16_nf|短い _InterlockedXor16_nf (短い揮発性 \* 、短い)|
+|_InterlockedXor16_rel|短い _InterlockedXor16_rel (短い揮発性 \* 、短い)|
+|_InterlockedXor64|__int64 _InterlockedXor64 ( \_ _int64 volatile \* 、 \_ _int64)|
+|_InterlockedXor64_acq|__int64 _InterlockedXor64_acq ( \_ _int64 volatile \* 、 \_ _int64)|
+|_InterlockedXor64_nf|__int64 _InterlockedXor64_nf ( \_ _int64 volatile \* 、 \_ _int64)|
+|_InterlockedXor64_rel|__int64 _InterlockedXor64_rel ( \_ _int64 volatile \* 、 \_ _int64)|
+|_InterlockedXor8|char _InterlockedXor8 (char volatile \* 、char)|
+|_InterlockedXor8_acq|char _InterlockedXor8_acq (char volatile \* 、char)|
+|_InterlockedXor8_nf|char _InterlockedXor8_nf (char volatile \* 、char)|
+|_InterlockedXor8_rel|char _InterlockedXor8_rel (char volatile \* 、char)|
+|_InterlockedXor_acq|長い _InterlockedXor_acq (long volatile \* 、long)|
+|_InterlockedXor_nf|長い _InterlockedXor_nf (long volatile \* 、long)|
+|_InterlockedXor_rel|長い _InterlockedXor_rel (long volatile \* 、long)|
 
-[[ トップに戻る](#top)]
+[[トップに戻る](#top)]
 
-## <a name="see-also"></a>関連項目
+### <a name="_interlockedbittest-intrinsics"></a>組み込みの _interlockedbittest
 
-[コンパイラ組み込み](../intrinsics/compiler-intrinsics.md)\
+プレーンインタロックされたビットテストの組み込みは、すべてのプラットフォームに共通です。 ARM は `_acq` 、、、およびの各バリアントを追加します `_rel` 。これは、 `_nf` この記事の「 [_nf (フェンスなし) サフィックス](#nf_suffix) 」で説明されているように、操作のバリアセマンティクスを変更するだけです。
+
+|関数名|関数プロトタイプ|
+|-------------------|------------------------|
+|_interlockedbittestandreset|unsigned char _interlockedbittestandreset (long volatile \* 、long)|
+|_interlockedbittestandreset_acq|unsigned char _interlockedbittestandreset_acq (long volatile \* 、long)|
+|_interlockedbittestandreset_nf|unsigned char _interlockedbittestandreset_nf (long volatile \* 、long)|
+|_interlockedbittestandreset_rel|unsigned char _interlockedbittestandreset_rel (long volatile \* 、long)|
+|_interlockedbittestandset|unsigned char _interlockedbittestandset (long volatile \* 、long)|
+|_interlockedbittestandset_acq|unsigned char _interlockedbittestandset_acq (long volatile \* 、long)|
+|_interlockedbittestandset_nf|unsigned char _interlockedbittestandset_nf (long volatile \* 、long)|
+|_interlockedbittestandset_rel|unsigned char _interlockedbittestandset_rel (long volatile \* 、long)|
+
+[[トップに戻る](#top)]
+
+## <a name="see-also"></a>参照
+
+[コンパイラの組み込み](../intrinsics/compiler-intrinsics.md)\
 [ARM64 組み込み](arm64-intrinsics.md)\
-[ARM アセンブラ参照](../assembler/arm/arm-assembler-reference.md)\
+[ARM アセンブラーリファレンス](../assembler/arm/arm-assembler-reference.md)\
 [C++ 言語リファレンス](../cpp/cpp-language-reference.md)

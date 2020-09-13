@@ -154,7 +154,7 @@ set クラスに用意されている反復子は双方向反復子ですが、�
 
 ### <a name="typedefs"></a>Typedefs
 
-|名前|説明|
+|Name|説明|
 |-|-|
 |[allocator_type](#allocator_type)|set オブジェクトの `allocator` クラスを表す型。|
 |[const_iterator](#const_iterator)|セット内の要素を読み取ることができる双方向反復子を提供する型 **`const`** 。|
@@ -174,7 +174,7 @@ set クラスに用意されている反復子は双方向反復子ですが、�
 
 ### <a name="functions"></a>機能
 
-|名前|説明|
+|Name|説明|
 |-|-|
 |[初め](#begin)|`set` 内の最初の要素を指す反復子を返します。|
 |[cbegin](#cbegin)|`set` 内の最初の要素を指す定数反復子を返します。|
@@ -205,7 +205,7 @@ set クラスに用意されている反復子は双方向反復子ですが、�
 
 ### <a name="operators"></a>オペレーター
 
-|名前|説明|
+|Name|説明|
 |-|-|
 |[operator =](#op_eq)|別の set のコピーで set の要素を置き換えます。|
 

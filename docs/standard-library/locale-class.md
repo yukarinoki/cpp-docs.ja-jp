@@ -159,7 +159,7 @@ cout.imbue(loc);
 
 ### <a name="static-functions"></a>静的関数
 
-|名前|説明|
+|Name|説明|
 |-|-|
 |[classic](#classic)|この静的メンバー関数は、クラシック C ロケールを表すロケール オブジェクトを返します。|
 |[global](#global)|プログラムの既定のロケールをリセットします。|

@@ -63,21 +63,21 @@ int main()
 
 ### <a name="operators"></a>オペレーター
 
-|名前|説明|
+|Name|説明|
 |-|:-|
 |[operator =](span-class.md#op_eq)| スパンの割り当て |
 |[operator\[\]](span-class.md#op_at)| 要素アクセス |
 
 ### <a name="functions"></a>機能
 
-|名前|説明|
+|Name|説明|
 |-|:-|
 | [as_bytes](span-functions.md#as_bytes)| スパンの基になる読み取り専用のバイトを取得します。 |
 | [as_writable_bytes](span-functions.md#as_writable_bytes) | スパンの基になるバイトを取得します。 |
 
 ### <a name="constants"></a>定数
 
-|名前|説明|
+|Name|説明|
 |-|:-|
 | **dynamic_extent** | スパンサイズがコンパイル時ではなく実行時に決定されることを示します。 スパン内の要素の数がコンパイル時にわかっている場合は、テンプレートパラメーターとして指定され `Extent` ます。 ランタイムまでの数値がわからない場合は、代わりにを指定し `dynamic_extent` ます。 |
 

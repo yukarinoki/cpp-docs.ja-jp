@@ -27,7 +27,7 @@ C++ AMP には、Gpu のテクスチャサポートにアクセスするため�
 
 Short Vector ライブラリは、HLSL で定義されている [ベクター型](https://go.microsoft.com/fwlink/p/?linkid=248500) の一部の機能を提供し、通常はテクセルを定義するために使用されます。 short ベクターは同じ型の 1 ～ 4 つの値を保持するデータ構造体です。 サポートされている型は、、、、、 **`double`** **`float`** **`int`** `norm` `uint` 、および `unorm` です。 次の表に型名を示します。 型ごとに、名前にアンダースコアがない対応するもあり **`typedef`** ます。 アンダースコアを持つ型は、 [Concurrency:: Graphics 名前空間](../../parallel/amp/reference/concurrency-graphics-namespace.md)にあります。 アンダースコアを持たない型は、 [Concurrency:: graphics::d Irect3d 名前空間](../../parallel/amp/reference/concurrency-graphics-direct3d-namespace.md) にあります。これにより、やなどの同様の名前の基本型から明確に分離され **`__int8`** **`__int16`** ます。
 
-|Type|長さ 2|長さ3|長さ4|
+|型|長さ 2|長さ3|長さ4|
 |-|--------------|--------------|--------------|
 |double|double_2<br /><br /> double2|double_3<br /><br /> double3|double_4<br /><br /> double4|
 |float|float_2<br /><br /> float2|float_3<br /><br /> float3|float_4<br /><br /> float4|
@@ -342,7 +342,7 @@ void declareTextureViews()
 
 `texture_view` の要素型 (定数であるかどうかとそのコンポーネントの数) も、ビューがテクスチャ サンプリングをサポートするかどうかおよび MIPMAP レベルへのアクセス方法の決定に役割を果たします。
 
-|Type|コンポーネント|Read|Write|サンプリング|MIPMAP アクセス|
+|型|コンポーネント|Read|Write|サンプリング|MIPMAP アクセス|
 |----------|----------------|----------|-----------|--------------|-------------------|
 |texture_view\<const T, N>|1, 2, 4|はい|いいえ (1)|はい|○、インデックス可能。 範囲はインスタンス化時に決定。|
 |Texture_view\<T, N>|1<br /><br /> 2, 4|はい<br /><br /> いいえ (2)|はい<br /><br /> はい|いいえ (1)<br /><br /> いいえ (1)|○、1 レベル。 レベルはインスタンス化時に決定。<br /><br /> ○、1 レベル。 レベルはインスタンス化時に決定。|

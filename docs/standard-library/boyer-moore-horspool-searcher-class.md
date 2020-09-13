@@ -1,20 +1,20 @@
 ---
-title: boyer_moore_horspool_searcherクラス
+title: boyer_moore_horspool_searcher クラス
 ms.date: 08/03/2019
 f1_keywords:
 - functional/std::boyer_moore_horspool_searcher
 helpviewer_keywords:
 - std::boyer_moore_horspool_searcher [C++]
-ms.openlocfilehash: 4d404b414ad632e02be5f4e9fad0e22cefb86ce2
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 1eb1f099ca2976dd4b0ea80ebdfb93a8b5c61f70
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81366774"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90039834"
 ---
-# <a name="boyer_moore_horspool_searcher-class"></a>boyer_moore_horspool_searcherクラス
+# <a name="boyer_moore_horspool_searcher-class"></a>boyer_moore_horspool_searcher クラス
 
-この`boyer_moore_horspool_searcher`クラスは、ボイヤー-ムーア-ホースプール アルゴリズムを使用して、オブジェクトのコンストラクタで指定されたシーケンスを検索する関数オブジェクト型です。 検索は、オブジェクトの関数呼び出し演算子に提供される別のシーケンス内で行われます。 このクラスは、パラメーターとして[std::search](algorithm-functions.md#search)のオーバーロードの 1 つに渡されます。
+クラスは、 `boyer_moore_horspool_searcher` ボイヤー-Horspool アルゴリズムを使用して、オブジェクトのコンストラクターで指定されたシーケンスを検索する関数オブジェクト型です。 検索は、オブジェクトの関数呼び出し演算子に渡された別のシーケンス内で実行されます。 このクラスは、 [std:: search](algorithm-functions.md#search)のオーバーロードのいずれかにパラメーターとして渡されます。
 
 ## <a name="syntax"></a>構文
 
@@ -40,16 +40,16 @@ class boyer_moore_horspool_searcher
 
 ## <a name="members"></a>メンバー
 
-| | |
+| メンバー | 説明 |
 | - | - |
-| **Constructor** | |
-| [boyer_moore_horspool_searcher](#boyer-moore-horspool-searcher-constructor) | |
+| **コンストラクター** | |
+| [boyer_moore_horspool_searcher](#boyer-moore-horspool-searcher-constructor) | サーチャーインスタンスを構築します。 |
 | **オペレーター** | |
-| [Operator()](#operator-call) | |
+| [operator ()](#operator-call) | シーケンスに対して操作を呼び出します。 |
 
-## <a name="boyer_moore_horspool_searcher-constructor"></a><a name="boyer-moore-horspool-searcher-constructor"></a>boyer_moore_horspool_searcher コンストラクター
+## <a name="boyer_moore_horspool_searcher-constructor"></a><a name="boyer-moore-horspool-searcher-constructor"></a> boyer_moore_horspool_searcher コンストラクター
 
-検索するシーケンス`boyer_moore_horspool_searcher`、ハッシュ関数オブジェクト、および等価述語を使用して、関数オブジェクトを構築します。
+`boyer_moore_horspool_searcher`検索するシーケンス、ハッシュ関数オブジェクト、および等値述語を使用して、関数オブジェクトを構築します。
 
 ```cpp
 boyer_moore_horspool_searcher(
@@ -62,26 +62,26 @@ boyer_moore_horspool_searcher(
 ### <a name="parameters"></a>パラメーター
 
 *pat_first*\
-検索するシーケンスの初期要素。
+検索するシーケンスの最初の要素。
 
 *pat_last*\
 検索するシーケンスの末尾。
 
-*Hf*\
-シーケンス要素のハッシュに使用される呼び出し可能オブジェクト。
+*hf*\
+シーケンスの要素をハッシュするために使用される呼び出し可能オブジェクト。
 
-*Pred*\
-シーケンス要素の省略可能な等価比較述語。 等値比較の種類が指定されていない場合、既定値は`std::equal_to`です。
+*pred*\
+Sequence 要素のオプションの等値比較述語。 等値比較型が指定されていない場合、既定値はに `std::equal_to` なります。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
-*二項述語*、*ハッシュ*、または*RandomAccessIterator*型のコピー コンストラクター、または*BinaryPredicate*または*Hash*の呼び出し演算子によってスローされる例外をスローします。
+*Binarypredicate*、 *Hash*、または*RandomAccessIterator*型のコピーコンストラクター、または*Binarypredicate*または*Hash*の call 演算子によってスローされた例外をスローします。
 
-このクラスは C++17 で新しく追加されました。
+このクラスは、C++ 17 で新しく追加されたものです。
 
-## <a name="operator"></a><a name="operator-call"></a>Operator()
+## <a name="operator"></a><a name="operator-call"></a> operator ()
 
-関数オブジェクトの呼び出し演算子。 コンストラクタに指定されたシーケンス`[first, last)`を引数シーケンス内で検索します。
+関数オブジェクトの呼び出し演算子。 引数シーケンス内で、 `[first, last)` コンストラクターに指定されたシーケンスを検索します。
 
 ```cpp
 template <class ForwardIterator2>   // C++17
@@ -93,20 +93,20 @@ pair<RandomAccessIterator2, RandomAccessIterator2> operator()(
 ### <a name="parameters"></a>パラメーター
 
 *まずは*\
-検索するシーケンスの初期要素。
+検索するシーケンスの最初の要素。
 
 *前の*\
 検索するシーケンスの末尾。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
-検索パターン`[pat_first, pat_last)`が空の場合は、`make_pair(first, first)`を返します。 検索パターンが見つからない場合は、 を`make_pair(last, last)`返します。 それ以外の場合は、述語`[first, last)`*pred*に`[pat_first, pat_last)`従って等しいシーケンスの先頭と末尾に反復子のペアを返します。
+検索パターンが空の場合、はを `[pat_first, pat_last)` 返し `make_pair(first, first)` ます。 検索パターンが見つからない場合は、を返し `make_pair(last, last)` ます。 それ以外の場合は、 `[first, last)` `[pat_first, pat_last)` 述語 *pred*に従って、に等しいシーケンスの先頭と末尾に反復子のペアを返します。
 
-このクラスは C++17 で新しく追加されました。
+このクラスは、C++ 17 で新しく追加されたものです。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[\<機能>](functional.md)\
+[\<functional>](functional.md)\
 [アルゴリズム関数](algorithm-functions.md)\
-[boyer_moore_searcherクラス](boyer-moore-searcher-class.md)\
-[std::検索](algorithm-functions.md#search)
+[boyer_moore_searcher クラス](boyer-moore-searcher-class.md)\
+[std:: search](algorithm-functions.md#search)

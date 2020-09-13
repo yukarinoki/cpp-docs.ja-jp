@@ -43,7 +43,7 @@ class CWinFormsView : public CView;
 
 ### <a name="public-operators"></a>パブリック演算子
 
-|名前|説明|
+|Name|説明|
 |----------|-|
 |[CWinFormsView:: operator コントロール ^](#operator_control)|型を Windows フォームコントロールへのポインターとしてキャストします。|
 

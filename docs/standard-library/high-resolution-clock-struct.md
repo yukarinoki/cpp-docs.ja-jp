@@ -33,7 +33,7 @@ class high_resolution_clock
 
 ### <a name="typedefs"></a>Typedefs
 
-|名前|説明|
+|Name|説明|
 |----------|-----------------|
 |`duration`|に `nanoseconds` 定義されているのシノニム \<chrono> 。|
 |`period`|に `nano` 定義されているのシノニム \<ratio> 。|
@@ -42,12 +42,12 @@ class high_resolution_clock
 
 ## <a name="functions"></a>機能
 
-|名前|説明|
+|Name|説明|
 |-|-|
 |`now`|現在の時刻を値として返し `time_point` ます。|
 
 ## <a name="constants"></a>定数
 
-|名前|説明|
+|Name|説明|
 |----------|-----------------|
 |`is_steady`|**`true`** を保持します。 `high_resolution_clock` は*安定*しています。|
