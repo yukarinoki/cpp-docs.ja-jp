@@ -6,12 +6,12 @@ helpviewer_keywords:
 - objects [C++], creating
 - instance constructors
 ms.assetid: 3e9f7211-313a-4a92-9584-337452e061a9
-ms.openlocfilehash: f5340f2e56a367734293d661d9d89eb0db522fd2
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 3694dc72860892d778533de2e40898faf9cc287d
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88842053"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90042161"
 ---
 # <a name="constructors-c"></a>コンストラクター (C++)
 
@@ -643,7 +643,7 @@ Derived d4 calls: Base()*/
 
 ::: moniker range=">=vs-2017"
 
-**Visual Studio 2017 以降**: **`using`** **/std: c++ 17** モードのステートメントは、派生クラスのコンストラクターに対して同じシグネチャを持つものを除き、基底クラスのすべてのコンストラクターのスコープを設定します。 一般に、派生クラスが新しいデータ メンバーまたはコンストラクターを宣言しない場合は、コンストラクターの継承を使用することをお勧めします。 「 [Visual Studio 2017 バージョン15.7 の機能強化](../overview/cpp-conformance-improvements.md?view=vs-2017#improvements_157)」も参照してください。
+**Visual Studio 2017 以降**: **`using`** **/std: c++ 17** モードのステートメントは、派生クラスのコンストラクターに対して同じシグネチャを持つものを除き、基底クラスのすべてのコンストラクターのスコープを設定します。 一般に、派生クラスが新しいデータ メンバーまたはコンストラクターを宣言しない場合は、コンストラクターの継承を使用することをお勧めします。
 
 ::: moniker-end
 
@@ -698,6 +698,6 @@ int main(){
 - [移動コンストラクターと移動代入演算子](move-constructors-and-move-assignment-operators-cpp.md)
 - [コンストラクターのデリゲート](delegating-constructors.md)
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [クラスと構造体](classes-and-structs-cpp.md)

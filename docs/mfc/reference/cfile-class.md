@@ -115,20 +115,20 @@ class CFile : public CObject
 
 ### <a name="public-operators"></a>パブリック演算子
 
-|名前|説明|
+|Name|説明|
 |----------|-----------------|
 |[CFile:: operator ハンドル](#operator_handle)|オブジェクトへのハンドル `CFile` 。|
 
 ### <a name="public-data-members"></a>パブリック データ メンバー
 
-|名前|説明|
+|Name|説明|
 |----------|-----------------|
 |[CFile:: hFileNull](#hfilenull)|`CFile`オブジェクトが有効なハンドルを持っているかどうかを判断します。|
 |[CFile:: m_hFile](#m_hfile)|通常、にはオペレーティングシステムのファイルハンドルが含まれます。|
 
 ### <a name="protected-data-members"></a>プロテクト データ メンバー
 
-|名前|説明|
+|Name|説明|
 |----------|-----------------|
 |[CFile:: m_pTM](#m_ptm)|オブジェクトへのポインター `CAtlTransactionManager` 。|
 
@@ -601,7 +601,7 @@ CAtlTransactionManager オブジェクトへのポインター。
 | `pError` | エラーが発生しました | 戻り値 | CFileException コンテンツ |
 |--|--|--|--|
 | NULL | いいえ | true | 該当なし |
-| ptr `CFileException` | いいえ | true | 変更なし |
+| ptr `CFileException` | No | true | 変更なし |
 | NULL | はい | false | 該当なし |
 | ptr `CFileException` | はい | false | エラーを記述するように初期化されました |
 
