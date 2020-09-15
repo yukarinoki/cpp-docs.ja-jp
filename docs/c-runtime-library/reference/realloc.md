@@ -1,6 +1,7 @@
 ---
 title: realloc
-ms.date: 4/2/2020
+description: Realloc (); の API リファレンスメモリブロックを再割り当てします。
+ms.date: 9/11/2020
 api_name:
 - realloc
 - _o_realloc
@@ -37,12 +38,12 @@ helpviewer_keywords:
 - _frealloc function
 - reallocate memory blocks
 ms.assetid: 2b2239de-810b-4b11-9438-32ab0a244185
-ms.openlocfilehash: 72c38021452940553bad770160ecc5db7ea546d0
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: c68909b2f5d73959465d63af522ceeb00c8ce23e
+ms.sourcegitcommit: b492516cc65120250b9ea23f96f7f63f37f99fae
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87216818"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90075817"
 ---
 # <a name="realloc"></a>realloc
 
@@ -59,31 +60,34 @@ void *realloc(
 
 ### <a name="parameters"></a>パラメーター
 
-*memblock*<br/>
+*`memblock`*\
 以前に割り当てられていたメモリ ブロックへのポインター。
 
-*size*<br/>
+*`size`*\
 新しいサイズ (バイト単位)。
 
 ## <a name="return-value"></a>戻り値
 
-**realloc**は **`void`** 、再割り当てされた (移動される可能性もある) メモリブロックへのポインターを返します。
+**`realloc`** 再 **`void`** 割り当てされた (移動された可能性もある) メモリブロックへのポインターを返します。
 
-指定されたサイズまでブロックを拡張するのに十分なメモリがない場合、元のブロックは変更されず、 **NULL**が返されます。
+指定されたサイズまでブロックを拡張するのに十分なメモリが不足している場合、元のブロックは変更されずに残り、 **`NULL`** が返されます。
 
-*Size*が0の場合、 *memblock*が指すブロックは解放されます。戻り値は**NULL**で、 *memblock*は解放されたブロックを指しています。
+*`size`* が0の場合、が指すブロックは *`memblock`* 解放されます。戻り値は **`NULL`** で、 *`memblock`* は解放されたブロックを指します。
 
-戻り値は、どの型のオブジェクトを格納する場合でも適切なアラインメントが保証されるストレージ領域を指します。 以外の型へのポインターを取得するには **`void`** 、戻り値に型キャストを使用します。
+戻り値は、任意の種類のオブジェクトを格納するために適切にアラインされた記憶域スペースを指します。 以外の型へのポインターを取得するには **`void`** 、戻り値に型キャストを使用します。
 
 ## <a name="remarks"></a>解説
 
-**Realloc**関数は、割り当てられたメモリブロックのサイズを変更します。 *Memblock*引数は、メモリブロックの先頭を指します。 *Memblock*が**NULL**の場合、 **realloc**は**malloc**と同じように動作し、*サイズ*バイトの新しいブロックを割り当てます。 *Memblock*が**NULL**でない場合は、 **calloc**、 **malloc**、または**realloc**の前の呼び出しによって返されたポインターである必要があります。
+> [!NOTE]
+> **`realloc`** は、新しい動作が Windows オペレーティングシステムと互換性がないため、C17 動作を実装するために更新されていません。
 
-*Size*引数は、ブロックの新しいサイズをバイト単位で示します。 新旧のサイズのうち、小さい方のブロックの内容は変更されませんが、新しいブロックの場所は異なる場合があります。 新しいブロックは新しいメモリ位置にある可能性があるため、 **realloc**によって返されるポインターは、 *memblock*引数を通じて渡されるポインターであるとは限りません。 バッファーのサイズが増加した場合、 **realloc**は、新しく割り当てられたメモリをゼロにしません。
+関数は、 **`realloc`** 割り当てられたメモリブロックのサイズを変更します。 引数は、 *`memblock`* メモリブロックの先頭を指します。 がの場合 *`memblock`* **`NULL`** 、は **`realloc`** と同じように動作し、 **`malloc`** 新しいバイトのブロックを割り当て *`size`* ます。 がでない場合は、、 *`memblock`* **`NULL`** 、またはの前回の呼び出しによって返されたポインターである必要があり **`calloc`** **`malloc`** **`realloc`** ます。
 
-**realloc**は、メモリ割り当てが失敗した場合、または要求されたメモリの量が **_HEAP_MAXREQ**を超えた場合に、 **errno**を**ENOMEM**に設定します。 その他のエラー コードの詳細については、「[errno、_doserrno、_sys_errlist、_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」をご覧ください。
+引数は、 *`size`* ブロックの新しいサイズをバイト単位で示します。 新旧のサイズのうち、小さい方のブロックの内容は変更されませんが、新しいブロックの場所は異なる場合があります。 新しいブロックは新しいメモリ位置にある可能性があるため、によって返されるポインターは、 **`realloc`** 引数を通じて渡されるポインターであるとは限りません *`memblock`* 。 **`realloc`** では、バッファーのサイズが増加した場合、新しく割り当てられたメモリはゼロになりません。
 
-**realloc**は、C++ の[_set_new_mode](set-new-mode.md)関数を使用して新しいハンドラーモードを設定するために**malloc**を呼び出します。 新しいハンドラーモードは、エラー発生時に**malloc**が[_set_new_handler](set-new-handler.md)によって設定された新しいハンドラールーチンを呼び出すかどうかを示します。 既定では、 **malloc**は、メモリの割り当てに失敗したときに新しいハンドラールーチンを呼び出しません。 この既定の動作をオーバーライドして、 **realloc**がメモリの割り当てに失敗したときに、 **malloc**は、同じ理由で失敗したときと同じ方法で新しいハンドラールーチンを呼び出します **`new`** 。 既定の動作をオーバーライドするには、次の関数を呼び出します。
+**`realloc`****`errno`** **`ENOMEM`** メモリ割り当てが失敗した場合、または要求されたメモリの量がを超えた場合に、をに設定し **`_HEAP_MAXREQ`** ます。 その他のエラー コードの詳細については、「[errno、_doserrno、_sys_errlist、_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」をご覧ください。
+
+**`realloc`****`malloc`** は、C++ の[_set_new_mode](set-new-mode.md)関数を使用して新しいハンドラーモードを設定するためにを呼び出します。 新しいハンドラーモードは、エラーが発生した **`malloc`** ときに [_set_new_handler](set-new-handler.md)によって設定された新しいハンドラールーチンを呼び出すかどうかを示します。 既定で **`malloc`** は、は、メモリの割り当てに失敗したときに新しいハンドラールーチンを呼び出しません。 この既定の動作をオーバーライドすると、がメモリの割り当てに失敗したときに、 **`realloc`** **`malloc`** 同じ理由で失敗した場合と同じ方法で新しいハンドラールーチンを呼び出すことができ **`new`** ます。 既定の動作をオーバーライドするには、次の関数を呼び出します。
 
 ```C
 _set_new_mode(1);
@@ -91,9 +95,9 @@ _set_new_mode(1);
 
 この呼び出しはプログラムの最初の方で指定するか、NEWMODE.OBJ にリンクします (「[リンク オプション](../../c-runtime-library/link-options.md)」を参照してください)。
 
-アプリケーションが C ランタイムライブラリのデバッグバージョンにリンクされている場合、 **realloc**は[_realloc_dbg](realloc-dbg.md)に解決されます。 デバッグ プロセス中のヒープの管理方法の詳細については、「[CRT デバッグ ヒープ](/visualstudio/debugger/crt-debug-heap-details)」を参照してください。
+アプリケーションが C ランタイムライブラリのデバッグバージョンにリンクされている場合、は _realloc_dbg として解決され **`realloc`** ます。 [_realloc_dbg](realloc-dbg.md) デバッグ プロセス中のヒープの管理方法の詳細については、「[CRT デバッグ ヒープ](/visualstudio/debugger/crt-debug-heap-details)」を参照してください。
 
-**realloc**はとマークされてい `__declspec(noalias)` `__declspec(restrict)` ます。つまり、関数はグローバル変数を変更せず、返されるポインターがエイリアス化されていないことが保証されます。 詳細については、「[noalias](../../cpp/noalias.md)」、および「[restrict](../../cpp/restrict.md)」を参照してください。
+**`realloc`** はとマークされてい `__declspec(noalias)` `__declspec(restrict)` ます。つまり、関数はグローバル変数を変更せず、返されるポインターがエイリアス化されていないことが保証されます。 詳細については、「[noalias](../../cpp/noalias.md)」、および「[restrict](../../cpp/restrict.md)」を参照してください。
 
 既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
@@ -101,7 +105,7 @@ _set_new_mode(1);
 
 |ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
-|**realloc**|\<stdlib.h> および \<malloc.h>|
+|**`realloc`**|\<stdlib.h> および \<malloc.h>|
 
 互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
@@ -154,7 +158,7 @@ Size of block after realloc of 1000 more longs: 8000
 
 ## <a name="see-also"></a>関連項目
 
-[メモリの割り当て](../../c-runtime-library/memory-allocation.md)<br/>
-[calloc](calloc.md)<br/>
-[空け](free.md)<br/>
-[malloc](malloc.md)<br/>
+[メモリの割り当て](../../c-runtime-library/memory-allocation.md)\
+[calloc](calloc.md)\
+[空け](free.md)\
+[malloc](malloc.md)

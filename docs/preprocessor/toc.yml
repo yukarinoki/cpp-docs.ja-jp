@@ -5,7 +5,7 @@
   items:
     - name: プリプロセッサ
       href: ../preprocessor/preprocessor.md
-    - name: 試験的なプリプロセッサの概要
+    - name: 新しいプリプロセッサの概要
       href: ../preprocessor/preprocessor-experimental-overview.md
     - name: 変換フェーズ
       href: ../preprocessor/phases-of-translation.md
@@ -35,7 +35,7 @@
               href: ../preprocessor/auto-search.md
             - name: embedded_idl
               href: ../preprocessor/embedded-idl.md
-            - name: 'exclude (#import)'
+            - name: exclude (#import)
               href: ../preprocessor/exclude-hash-import.md
             - name: high_method_prefix
               href: ../preprocessor/high-method-prefix.md
@@ -73,7 +73,7 @@
               href: ../preprocessor/raw-native-types.md
             - name: raw_property_prefixes
               href: ../preprocessor/raw-property-prefixes.md
-            - name: '名前の変更 (#import)'
+            - name: 名前の変更 (#import)
               href: ../preprocessor/rename-hash-import.md
             - name: rename_namespace
               href: ../preprocessor/rename-namespace.md
@@ -96,11 +96,11 @@
       items:
         - name: プリプロセッサ演算子
           href: ../preprocessor/preprocessor-operators.md
-        - name: '文字列化演算子 (#)'
+        - name: 文字列化演算子 (#)
           href: ../preprocessor/stringizing-operator-hash.md
-        - name: '文字定数化演算子 (#@)'
+        - name: 文字定数化演算子 (#@)
           href: ../preprocessor/charizing-operator-hash-at.md
-        - name: 'トークン連結演算子 (##)'
+        - name: トークン連結演算子 (##)
           href: ../preprocessor/token-pasting-operator-hash-hash.md
     - name: プリプロセッサ マクロ (C/C++)
       expanded: false

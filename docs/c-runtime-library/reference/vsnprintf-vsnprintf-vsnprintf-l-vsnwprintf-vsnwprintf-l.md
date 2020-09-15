@@ -1,5 +1,6 @@
 ---
 title: vsnprintf、_vsnprintf、_vsnprintf_l、_vsnwprintf、_vsnwprintf_l
+description: Vsnprintf、_vsnprintf、_vsnprintf_l、_vsnwprintf、および _vsnwprintf_l の API リファレンス引数リストへのポインターを使用して、書式付き出力を書き込みます。
 ms.date: 06/24/2020
 api_name:
 - _vsnprintf
@@ -55,12 +56,12 @@ helpviewer_keywords:
 - formatted text [C++]
 - vsnwprintf function
 ms.assetid: a97f92df-c2f8-4ea0-9269-76920d2d566a
-ms.openlocfilehash: 1cbb41d63669644f51b4d951d5b5507f64cf3da1
-ms.sourcegitcommit: 8fd49f8ac20457710ceb5403ca46fc73cb3f95f8
+ms.openlocfilehash: 63a2cd2e6287f9fe960cd60d799f4518b47572ae
+ms.sourcegitcommit: b492516cc65120250b9ea23f96f7f63f37f99fae
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85737584"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90075765"
 ---
 # <a name="vsnprintf-_vsnprintf-_vsnprintf_l-_vsnwprintf-_vsnwprintf_l"></a>vsnprintf、_vsnprintf、_vsnprintf_l、_vsnwprintf、_vsnwprintf_l
 
@@ -161,29 +162,29 @@ int _vsnwprintf_l(
 
 ## <a name="return-value"></a>戻り値
 
-**Vsnprintf**関数は、書き込まれた文字数を返します。終端の null 文字はカウントされません。 *Count*で指定したバッファーサイズが、 *format*および*argptr*によって指定された出力を格納するのに十分な大きさではない場合、 **vsnprintf**の戻り値は、書き込まれる文字数で、 *count*が十分に大きい場合は null 文字をカウントしません。 戻り値が*count* -1 より大きい場合、出力は切り捨てられます。 戻り値 -1 は、エンコード エラーが発生したことを示します。
+**Vsnprintf**関数は、書き込まれた文字数を返します。終端の null 文字はカウントされません。 *Count*で指定したバッファーサイズが、 *format*および*argptr*によって指定された出力を格納するのに十分な大きさではない場合、 **vsnprintf**の戻り値は、書き込まれる文字数で、 *count*が十分に大きい場合は null 文字をカウントしません。 戻り値が *count* -1 より大きい場合、出力は切り捨てられます。 戻り値 -1 は、エンコード エラーが発生したことを示します。
 
-**_Vsnprintf**関数と **_vsnwprintf**関数は、書き込み対象の文字数が*count*以下の場合に書き込まれた文字数を返します。 書き込む文字数が*count*よりも大きい場合、これらの関数は、出力が切り捨てられたことを示す-1 を返します。
+**_Vsnprintf**関数と **_vsnwprintf**関数は、書き込み対象の文字数が*count*以下の場合に書き込まれた文字数を返します。 書き込む文字数が *count*よりも大きい場合、これらの関数は、出力が切り捨てられたことを示す-1 を返します。
 
 これらのすべての関数によって返される値には、記述されているかどうかにかかわらず、終端の null は含まれません。
 
-- *Count*が0で、 *buffer*が**NULL**の場合、返される値は、関数が書き込む文字数になります。 この値では、終端の**NULL**は考慮されません。 この結果を用いて文字列と終端の null に対して十分なバッファー領域を割り当て、関数を再び呼び出してバッファーを埋めることができます。
+- *Count*が0で、 *buffer*が**NULL**の場合、返される値は、関数が書き込む文字数になります。 この値では、終端の **NULL**は考慮されません。 この結果を用いて文字列と終端の null に対して十分なバッファー領域を割り当て、関数を再び呼び出してバッファーを埋めることができます。
 - *Count*が0でも、 *buffer*が**NULL**でない場合は、何も書き込まれず、関数はを返し `-1` ます。
-- *Format*が**null**の場合、または*buffer*が**null**で、 *Count*が0ではない場合、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、これらの関数は無効なパラメーターハンドラーを呼び出します。 実行の継続が許可された場合、これらの関数は-1 を返し、 **errno**を**EINVAL**に設定します。
+- *Format*が**null**の場合、または*buffer*が**null**で、 *Count*が0ではない場合、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、これらの関数は無効なパラメーターハンドラーを呼び出します。 実行の継続が許可された場合、これらの関数は-1 を返し、 **errno** を **EINVAL**に設定します。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 これらの各関数は、引数リストへのポインターを受け取り、データを書式設定して、*バッファー*が指すメモリに最大文字*数*を書き込みます。 **Vsnprintf**関数は、出力を切り捨てる場合でも、常に null 終端文字を書き込みます。 **_Vsnprintf**と **_vsnwprintf**を使用する場合、バッファーは、末尾に余裕がある場合 (つまり、書き込む文字数が*カウント*未満の場合) にのみ null で終了します。
 
 > [!IMPORTANT]
-> 特定の種類のセキュリティリスクを回避するには、*形式*がユーザー定義の文字列ではないことを確認します。 詳しくは、「 [バッファー オーバーランの回避](/windows/win32/SecBP/avoiding-buffer-overruns)」をご覧ください。
+> 特定の種類のセキュリティリスクを回避するには、 *形式* がユーザー定義の文字列ではないことを確認します。 詳しくは、「 [バッファー オーバーランの回避](/windows/win32/SecBP/avoiding-buffer-overruns)」をご覧ください。
 
 > [!NOTE]
 > **_Vsnprintf**、 **_vsnprintf_l**、 **_vsnwprintf**および **_vsnwprintf_l**を呼び出すときに、終端の null 用の空き領域があることを確認するには、 *count*の値がバッファーの長さより厳密に小さく、関数を呼び出す前にバッファーを null に初期化します。
 >
 > **Vsnprintf**は常に終端の null を書き込むため、 *count*パラメーターはバッファーのサイズと同じにすることができます。
 
-Visual Studio 2015 と Windows 10 の UCRT 以降、 **vsnprintf**は **_vsnprintf**と同じではなくなりました。 **Vsnprintf**関数は、C99 標準に準拠しています。**_vnsprintf**は、旧バージョンの Visual Studio code との下位互換性のために残されています。
+Visual Studio 2015 と Windows 10 の UCRT 以降、 **vsnprintf** は **_vsnprintf**と同じではなくなりました。 **Vsnprintf**関数は、C99 標準に準拠しています。**_vnsprintf**は、旧バージョンの Visual Studio code との下位互換性のために残されています。
 
 **_L**サフィックスを持つこれらの関数のバージョンは、現在のスレッドロケールの代わりに渡されたロケールパラメーターを使用する点を除いて同じです。
 

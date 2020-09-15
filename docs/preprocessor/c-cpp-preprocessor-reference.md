@@ -6,18 +6,18 @@ helpviewer_keywords:
 - preprocessor
 - preprocessor, reference overview
 ms.assetid: e4a52843-7016-4f6d-8b40-cb1ace18f805
-ms.openlocfilehash: e53f7270a71e5e7c3f456be7d55d49eaf352aecb
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: e72146d8b88f5a4bffcaaa121f6851d740ec948b
+ms.sourcegitcommit: b492516cc65120250b9ea23f96f7f63f37f99fae
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90040744"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90075635"
 ---
 # <a name="cc-preprocessor-reference"></a>C/C++ のプリプロセッサ リファレンス
 
 『 *C/c + + プリプロセッサリファレンス* 』では、Microsoft c/c + + で実装されているプリプロセッサについて説明しています。 プリプロセッサは C および C++ ファイルをコンパイラに渡す前の準備的な処理を実行します。 プリプロセッサを使用して、コードの条件付きコンパイル、ファイルの挿入、コンパイル時のエラー メッセージの指定、コード セクションへのコンピューター固有の規則の適用を行うことができます。
 
-Visual Studio 2019 では、 [/実験的: プリプロセッサ](../build/reference/experimental-preprocessor.md) コンパイラオプションを使用すると、プリプロセッサの新しい実装が有効になります。 新しい実装はまだ進行中であるため、実験的と見なされます。 最終的には、C99、C11、および C++ 20 に準拠していることを意図しています。 詳細については、「 [MSVC new プリプロセッサの概要](preprocessor-experimental-overview.md)」を参照してください。
+Visual Studio 2019 では、 [/zc: プリプロセッサ](../build/reference/zc-preprocessor.md) コンパイラオプションは完全に準拠した C11 および C17 プリプロセッサを提供します。 これは、コンパイラフラグまたはを使用する場合の既定値です `/std:c11` `/std:c17` 。
 
 ## <a name="in-this-section"></a>このセクションの内容
 

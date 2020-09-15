@@ -13,12 +13,12 @@ helpviewer_keywords:
 - value struct keyword [C++]
 - ref struct keyword [C++]
 ms.assetid: 5c360764-b229-49c6-9357-66213afbc372
-ms.openlocfilehash: d01768eeb179ffdd0c39ce0717b84204d988528d
-ms.sourcegitcommit: 68ae6f9ea17f32734b32bb06ffeec12d8d33f0fe
+ms.openlocfilehash: 1ec29dcc09cd338136102c0f3b769055d5143973
+ms.sourcegitcommit: b492516cc65120250b9ea23f96f7f63f37f99fae
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87807772"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90075804"
 ---
 # <a name="ref-class-and-ref-struct--ccli-and-ccx"></a>ref class と ref struct (C++/CLI および C++/CX)
 
@@ -29,7 +29,7 @@ ms.locfileid: "87807772"
 ### <a name="syntax"></a>構文
 
 ```cpp
-class_access ref class name modifier : inherit_accessbase_type {};
+class_access ref class name modifier : inherit_access base_type {};
 class_access ref struct name modifier : inherit_access base_type {};
 class_access value class name modifier : inherit_access base_type {};
 class_access value struct name modifier : inherit_access base_type {};
@@ -54,9 +54,9 @@ class_access value struct name modifier : inherit_access base_type {};
 
 詳細については、Windows ランタイムと共通言語ランタイムに関するセクションで、このパラメーターの言語別の説明を参照してください。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-**Ref クラス**または**値クラス**で宣言されたオブジェクトの既定のメンバーアクセシビリティは **`private`** です。 また、 **ref 構造**体または**値構造体**で宣言されたオブジェクトの既定のメンバーアクセシビリティは **`public`** です。
+**Ref クラス**または**値クラス**で宣言されたオブジェクトの既定のメンバーアクセシビリティは **`private`** です。 また、 **ref 構造** 体または **値構造体** で宣言されたオブジェクトの既定のメンバーアクセシビリティは **`public`** です。
 
 参照型が別の参照型から継承される場合、基底クラスの仮想関数は ([override](override-cpp-component-extensions.md) を使用して) 明示的にオーバーライドするか、([new (vtable の新しいスロット)](new-new-slot-in-vtable-cpp-component-extensions.md) を使用して) 非表示にする 必要があります。 派生クラスの関数も、として明示的にマークする必要があり **`virtual`** ます。
 
@@ -82,7 +82,7 @@ class_access value struct name modifier : inherit_access base_type {};
 
 ## <a name="windows-runtime"></a>Windows ランタイム
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 [Ref クラスと構造体](../cppcx/ref-classes-and-structs-c-cx.md)と「[値クラスと構造体](../cppcx/value-classes-and-structs-c-cx.md)」を参照してください。
 
@@ -95,13 +95,13 @@ class_access value struct name modifier : inherit_access base_type {};
 
 **value class** または **value struct** キーワードを使用してオブジェクトを宣言すると、宣言されたオブジェクトのオブジェクト有効期間は監視されません。 このオブジェクトは、C++ の他の標準のクラスや構造体と同様です。
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 コンパイラ オプション: `/ZW`
 
 ## <a name="common-language-runtime"></a>共通言語ランタイム
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 次の表に、「**すべてのランタイム**」セクションに示されている構文の C++/CLI に固有の違いを示します。
 
@@ -114,7 +114,7 @@ class_access value struct name modifier : inherit_access base_type {};
 
 **value class** キーワードと **value struct** キーワードを指定すると、コンパイラは、割り当てられたクラスまたは構造体の値を関数に渡すか、メンバーに格納します。
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 コンパイラ オプション: `/clr`
 
