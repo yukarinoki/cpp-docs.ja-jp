@@ -1,6 +1,7 @@
 ---
 title: 数値演算と浮動小数点のサポート
-ms.date: 01/31/2019
+description: Microsoft Universal C Runtime library (UCRT) での浮動小数点サポートについて説明します。
+ms.date: 9/14/2020
 f1_keywords:
 - c.math
 helpviewer_keywords:
@@ -8,16 +9,18 @@ helpviewer_keywords:
 - math routines
 - floating-point numbers
 ms.assetid: e4fcaf69-5c8e-4854-a9bb-1f412042131e
-ms.openlocfilehash: ca1648719a4a98efc56ea3f543336b803c81c40f
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 99a5de3ce816e64d4b477c8c1d3226da5f8f292e
+ms.sourcegitcommit: a6b97f5d78299ad93675de2fe0f0561f528d26c7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87226230"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90569604"
 ---
 # <a name="math-and-floating-point-support"></a>数値演算と浮動小数点のサポート
 
 ユニバーサル C ランタイム ライブラリ (UCRT) では、ISO C99 で必要とされる関数をすべて含む、多数の整数値および浮動小数点数値演算ライブラリ関数を提供しています。 浮動小数点関数は、正確性とパフォーマンスのバランスをとるために実装されます。 正確に丸めた結果を生成するには非常にコストがかかる場合があるため、正確に丸めた結果の近似値を効率的に生成できるように当該関数が設計されました。 ほとんどのケースでは、生成される結果は正確に丸めた結果の +/- 1 ulp の誤差範囲内に収まります。ただし、不正確さがそれより大きくなる場合もあります。
+
+ISO C Standard 11 (C11) 以降では、 \<tgmath.h> ヘッダーにやを含めることに加えて、 \<math.h> \<complex.h> パラメーターの型に基づいて対応する数学関数を呼び出すマクロが用意されています。 詳細については [、「型汎用の算術演算](tgmath.md) 」を参照してください。
 
 浮動小数点数値演算ライブラリ関数の多くは、CPU アーキテクチャの種類に応じて実装の種類も異なります。 たとえば、32 ビット x86 CRT の実装は、64 ビット x64 CRT の実装とは異なります。 さらに、関数の中には特定の CPU アーキテクチャに対して複数の実装が用意されているものもあります。 CPU でサポートされている命令セットに応じて実行時に動的に実装を選択するのが最も効率的な方法です。 たとえば、32 ビット x86 CRT で、一部の関数には x87 実装と SSE2 実装の両方が用意されています。 SSE2 をサポートしている CPU で実行すると、速い方の SSE2 実装が使用されます。 SSE2 をサポートしていない CPU で実行すると、遅い方の x87 実装が使用されます。 数値演算ライブラリ関数の実装の種類が異なると、結果を生成するために使用する CPU 命令およびアルゴリズムも異なる場合があります。このため、CPU 間で、関数の生成する結果が異なる場合があります。 ほとんどの場合、結果は正確に丸めた結果の +/- 1 ulp の誤差範囲内に収まります。ただし、実際の結果は、CPU 間で異なる場合があります。
 
@@ -25,7 +28,7 @@ ms.locfileid: "87226230"
 
 ## <a name="supported-math-and-floating-point-routines"></a>サポートされている数値演算と浮動小数点のルーチン
 
-|ルーチンによって返される値|用途|
+|ルーチンによって返される値|vmmblue_2|
 |-|-|
 [abs、labs、llabs、_abs64](../c-runtime-library/reference/abs-labs-llabs-abs64.md)|整数型の絶対値を計算します
 [acos、acosf、acosl](../c-runtime-library/reference/acos-acosf-acosl.md)|アーク コサインを計算します
@@ -34,8 +37,8 @@ ms.locfileid: "87226230"
 [asinh、asinhf、asinhl](../c-runtime-library/reference/asinh-asinhf-asinhl.md)|双曲線アーク サインを計算します
 [atan、atanf、atanl、atan2、atan2f、atan2l](../c-runtime-library/reference/atan-atanf-atanl-atan2-atan2f-atan2l.md)|アーク タンジェントを計算します
 [atanh、atanhf、atanhl](../c-runtime-library/reference/atanh-atanhf-atanhl.md)|双曲線アーク タンジェントを計算します
-[_atodbl、_atodbl_l](../c-runtime-library/reference/atodbl-atodbl-l-atoldbl-atoldbl-l-atoflt-atoflt-l.md)|ロケール固有の文字列をに変換します。**`double`**
-[atof、_atof_l](../c-runtime-library/reference/atof-atof-l-wtof-wtof-l.md)|文字列をに変換します。**`double`**
+[_atodbl、_atodbl_l](../c-runtime-library/reference/atodbl-atodbl-l-atoldbl-atoldbl-l-atoflt-atoflt-l.md)|ロケール固有の文字列をに変換します。 **`double`**
+[atof、_atof_l](../c-runtime-library/reference/atof-atof-l-wtof-wtof-l.md)|文字列をに変換します。 **`double`**
 [_atoflt、_atoflt_l、_atoldbl、_atoldbl_l](../c-runtime-library/reference/atodbl-atodbl-l-atoldbl-atoldbl-l-atoflt-atoflt-l.md)|ロケール固有の文字列をまたはに変換します。 **`float`****`long double`**
 [cbrt、cbrtf、cbrtl](../c-runtime-library/reference/cbrt-cbrtf-cbrtl.md)|立方根を計算します
 [ceil、ceilf、ceill](../c-runtime-library/reference/ceil-ceilf-ceill.md)|切り上げを計算します
@@ -126,16 +129,16 @@ ms.locfileid: "87226230"
 [sinh、sinhf、sinhl](../c-runtime-library/reference/sinh-sinhf-sinhl.md)|双曲線サインを計算します
 [sqrt、sqrtf、sqrtl](../c-runtime-library/reference/sqrt-sqrtf-sqrtl.md)|平方根を計算します
 [_status87、_statusfp、_statusfp2](../c-runtime-library/reference/status87-statusfp-statusfp2.md)|浮動小数点ステータス ワードを取得します
-[strtof、_strtof_l](../c-runtime-library/reference/strtof-strtof-l-wcstof-wcstof-l.md)|文字列をに変換します。**`float`**
-[strtold、_strtold_l](../c-runtime-library/reference/strtold-strtold-l-wcstold-wcstold-l.md)|文字列をに変換します。**`long double`**
+[strtof、_strtof_l](../c-runtime-library/reference/strtof-strtof-l-wcstof-wcstof-l.md)|文字列をに変換します。 **`float`**
+[strtold、_strtold_l](../c-runtime-library/reference/strtold-strtold-l-wcstold-wcstold-l.md)|文字列をに変換します。 **`long double`**
 [tan、tanf、tanl](../c-runtime-library/reference/tan-tanf-tanl.md)|タンジェントを計算します
 [tanh、tanhf、tanhl](../c-runtime-library/reference/tanh-tanhf-tanhl.md)|双曲線タンジェントを計算します
 [tgamma、tgammaf、tgammal](../c-runtime-library/reference/tgamma-tgammaf-tgammal.md)|ガンマ関数を計算します
 [trunc、truncf、truncl](../c-runtime-library/reference/trunc-truncf-truncl.md)|小数部を切り捨てます
-[_wtof、_wtof_l](../c-runtime-library/reference/atof-atof-l-wtof-wtof-l.md)|ワイド文字列をに変換します。**`double`**
+[_wtof、_wtof_l](../c-runtime-library/reference/atof-atof-l-wtof-wtof-l.md)|ワイド文字列をに変換します。 **`double`**
 [_y0、_y1、_yn](../c-runtime-library/reference/bessel-functions-j0-j1-jn-y0-y1-yn.md)|Bessel 関数を計算します
 
 ## <a name="see-also"></a>関連項目
 
-[カテゴリ別ユニバーサル C ランタイム ルーチン](../c-runtime-library/run-time-routines-by-category.md)<br/>
-[浮動小数点プリミティブ](../c-runtime-library/reference/floating-point-primitives.md)<br/>
+[カテゴリ別のユニバーサル C ランタイムルーチン](../c-runtime-library/run-time-routines-by-category.md)\
+[浮動小数点プリミティブ](../c-runtime-library/reference/floating-point-primitives.md)

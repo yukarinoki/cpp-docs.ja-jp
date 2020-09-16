@@ -1,5 +1,6 @@
 ---
 title: 関数またはマクロの選択に関する推奨事項
+description: Microsoft C ランタイムライブラリ (CRT) でのマクロと関数の使用の違いについて説明します。
 ms.date: 11/04/2016
 f1_keywords:
 - c.functions
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - functions [CRT], vs. macros
 - macros, vs. functions
 ms.assetid: 18a633d6-cf1c-470c-a649-fa7677473e2b
-ms.openlocfilehash: 234fcd8a0439240bc7585414254c5687dcb8f21b
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: 8c47bf1924aeb94e2e4c9ee9358627cafcf90cba
+ms.sourcegitcommit: a6b97f5d78299ad93675de2fe0f0561f528d26c7
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57749309"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90569531"
 ---
 # <a name="recommendations-for-choosing-between-functions-and-macros"></a>関数またはマクロの選択に関する推奨事項
 
@@ -44,4 +45,5 @@ Microsoft ランタイム ライブラリ ルーチンのほとんどは、コ�
 
 ## <a name="see-also"></a>関連項目
 
+[型-汎用数値演算](tgmath.md)\
 [CRT ライブラリの機能](../c-runtime-library/crt-library-features.md)

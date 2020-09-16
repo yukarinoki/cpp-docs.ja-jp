@@ -1,5 +1,6 @@
 ---
 title: C の複雑な数値演算のサポート
+description: Microsoft C ランタイムライブラリ (CRT) での C 言語の複雑な数値演算のサポートについて説明します。
 ms.date: 05/14/2019
 f1_keywords:
 - c.complex
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - complex numbers, math routines
 - math routines
 - complex numbers
-ms.openlocfilehash: dac032940ed9d96764b64809c5f8901ac273898b
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 0616f846030e5d5260b5d781884387614e12051d
+ms.sourcegitcommit: a6b97f5d78299ad93675de2fe0f0561f528d26c7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87215180"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90569550"
 ---
 # <a name="c-complex-math-support"></a>C の複雑な数値演算のサポート
 
@@ -36,7 +37,7 @@ math.h ヘッダーは個別の型 **struct _complex** を定義します。こ�
 
 ## <a name="complex-constants-and-macros"></a>複雑な定数とマクロ
 
-**I**は、によって初期化 **_Fcomplex**複合型として定義されてい `{ 0.0f, 1.0f }` ます。
+**I** は、によって初期化 **_Fcomplex** 複合型として定義されてい `{ 0.0f, 1.0f }` ます。
 
 ## <a name="trigonometric-functions"></a>三角関数
 
@@ -99,4 +100,5 @@ math.h ヘッダーは個別の型 **struct _complex** を定義します。こ�
 
 ## <a name="see-also"></a>関連項目
 
-[カテゴリ別ユニバーサル C ランタイム ルーチン](../c-runtime-library/run-time-routines-by-category.md)<br/>
+[型-汎用数値演算](tgmath.md)\
+[カテゴリ別ユニバーサル C ランタイム ルーチン](../c-runtime-library/run-time-routines-by-category.md)
