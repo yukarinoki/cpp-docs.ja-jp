@@ -583,6 +583,8 @@
                   href: ../build/reference/gz-enable-stack-frame-run-time-error-checking.md
                 - name: /H (外部名の長さの制限)
                   href: ../build/reference/h-restrict-length-of-external-names.md
+                - name: /headerUnit (ヘッダー ユニット IFC の使用)
+                  href: ../build/reference/headerunit.md
                 - name: /HELP (コンパイラのコマンド ライン ヘルプ)
                   href: ../build/reference/help-compiler-command-line-help.md
                 - name: /homeparams (レジスタ パラメーターのスタックへのコピー)
@@ -603,6 +605,10 @@
                   href: ../build/reference/ln-create-msil-module.md
                 - name: /MD、/MT、/LD (ランタイム ライブラリの使用)
                   href: ../build/reference/md-mt-ld-use-run-time-library.md
+                - name: '/module:exportHeader (ヘッダー ユニットの作成)'
+                  href: ../build/reference/module-exportheader.md
+                - name: '/module:reference (名前付きモジュール IFC の使用)'
+                  href: ../build/reference/module-reference.md
                 - name: /MP (複数のプロセスを使用したビルド)
                   href: ../build/reference/mp-build-with-multiple-processes.md
                 - name: /nologo (著作権情報の非表示) (C/C++)
@@ -675,6 +681,8 @@
                   href: ../build/reference/std-specify-language-standard-version.md
                 - name: /Tc、/Tp、/TC、/TP (ソース ファイル タイプの指定)
                   href: ../build/reference/tc-tp-tc-tp-specify-source-file-type.md
+                - name: /translateInclude (インクルード ディレクティブをインポート ディレクティブに変換する)
+                  href: ../build/reference/translateinclude.md
                 - name: /U、/u (シンボルの未定義化)
                   href: ../build/reference/u-u-undefine-symbols.md
                 - name: /utf-8 (ソースと実行可能ファイルの文字セットを UTF-8 に設定する)
