@@ -7,18 +7,18 @@ helpviewer_keywords:
 - examples [C++], strings
 - strings [C++], accessing characters
 ms.assetid: cfc89756-aef3-4988-907e-fb236dcb7087
-ms.openlocfilehash: a91f82d0377b9065c2927e61e9f2a558a49985f0
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: cb62eb0fecbee202e4d01635a60da565241822ee
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87221368"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90686796"
 ---
 # <a name="how-to-access-characters-in-a-systemstring"></a>方法: System::String の文字にアクセスする
 
 オブジェクトの文字にアクセスして、 <xref:System.String> 文字列を受け取るアンマネージ関数に対する高パフォーマンスの呼び出しを行うことができ `wchar_t*` ます。 メソッドは、オブジェクトの最初の文字への内部ポインターを生成し <xref:System.String> ます。 このポインターを直接操作したり、固定して、通常の文字列を必要とする関数に渡すことができ **`wchar_t`** ます。
 
-## <a name="example"></a>例
+## <a name="examples"></a>例
 
 `PtrToStringChars`<xref:System.Char>内部ポインター (とも呼ばれます) であるを返し `byref` ます。 そのため、ガベージコレクションの対象になります。 ネイティブ関数に渡す場合を除き、このポインターを固定する必要はありません。
 
@@ -46,8 +46,6 @@ int main() {
 abcdefg
 ```
 
-## <a name="example"></a>例
-
 この例では、ピン留めが必要な場所を示します。
 
 ```cpp
@@ -74,8 +72,6 @@ int main() {
 ```Output
 7
 ```
-
-## <a name="example"></a>例
 
 内部ポインターには、ネイティブ C++ ポインターのすべてのプロパティが含まれています。 たとえば、このメソッドを使用して、リンクされたデータ構造を調べ、1つのポインターだけを使用して挿入と削除を行うことができます。
 

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - where keyword [C++]
 - constraints, C++
 ms.assetid: eb828cc9-684f-48a3-a898-b327700c0a63
-ms.openlocfilehash: d001cab897323d86d284958f322d155120a726a5
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 829f11c9f0c3935f9a415cae381cfc12d88df18a
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87219755"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90686757"
 ---
 # <a name="constraints-on-generic-type-parameters-ccli"></a>ジェネリック型パラメーターの制約 (C++/CLI)
 
@@ -41,7 +41,7 @@ where type-parameter: constraint list
 
 制約としてジェネリック パラメーターを指定することもできます。 制約が適用されている型に提供される型引数は、制約の型から派生する必要があります。 これは、生の型制約と呼ばれます。
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>注釈
 
 制約句は **where**、型パラメーター、コロン (**:**)、および制約で構成され、型パラメーターに対する制約の性質を規定します。 **where** は状況依存キーワードです。詳細については、「[状況依存キーワード](context-sensitive-keywords-cpp-component-extensions.md)」を参照してください。 複数の **where** 句はスペースで分離します。
 
@@ -113,7 +113,7 @@ ref class Dictionary {};
     ref class G2{};
     ```
 
-## <a name="example"></a>例
+## <a name="examples"></a>例
 
 次の例では、制約を使用して、型パラメーターでインスタンス メソッドを呼び出すことを示します。
 
@@ -174,8 +174,6 @@ int main() {
 "parent" is not a senior
 "grandfather" is a senior
 ```
-
-## <a name="example"></a>例
 
 制約としてジェネリック型パラメーターを使用すると、生の型制約が呼び出されます。 生の型制約は、独自の型パラメーターを持つ名前付き関数で、パラメーターの型パラメーターをコンテナー型に制限する必要がある場合に有用です。
 

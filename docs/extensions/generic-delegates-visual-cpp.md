@@ -6,12 +6,12 @@ helpviewer_keywords:
 - generic delegates
 - delegates, generic [C++]
 ms.assetid: 09d430b2-1aef-4fbc-87f9-9d7b8185d798
-ms.openlocfilehash: 527f2837f0c29299727a22df8d4f3d807be0e25b
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 980beb21325e78baa9c6f3691f7b814c5266b79a
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87228714"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90686614"
 ---
 # <a name="generic-delegates-ccli"></a>汎用デリゲート (C++/CLI)
 
@@ -50,7 +50,7 @@ Optionalアクセシビリティ修飾子 (例: **`public`** **`private`** )。
 *formal-parameters*<br/>
 (省略可能) デリゲートのパラメーターの一覧。
 
-## <a name="example"></a>例
+## <a name="examples"></a>例
 
 デリゲート型パラメーターは、デリゲート オブジェクトが作成されるポイントで指定されます。 デリゲートとそれに関連付けられているメソッドの両方に、同じシグネチャを含める必要があります。 汎用デリゲート宣言の例を次に示します。
 
@@ -60,8 +60,6 @@ Optionalアクセシビリティ修飾子 (例: **`public`** **`private`** )。
 generic <class ItemType>
 delegate ItemType GenDelegate(ItemType p1, ItemType% p2);
 ```
-
-## <a name="example"></a>例
 
 次の例は、以下を示しています。
 
@@ -104,8 +102,6 @@ int main() {
       gcnew GenDelegate<int>(&MyClass::MyStaticMethod<int>);
 }
 ```
-
-## <a name="example"></a>例
 
 次の例では、汎用デリゲート `GenDelegate<ItemType>` を宣言した後、それを型パラメーター `ItemType` を使用する `MyMethod` メソッドに関連付けることによってインスタンス化します。 デリゲートの 2 つのインスタンス (integerと double) が作成されて呼び出されます。
 

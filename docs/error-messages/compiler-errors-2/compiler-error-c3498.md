@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3498
 ms.assetid: 0a5a7817-0872-4119-83bf-980a19113374
-ms.openlocfilehash: 771e8c72ab4386bb45a11983318f412e784f5bc9
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: f1b978a585f3404cd3a881f25d6ef6a0f66b212d
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74738103"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90686156"
 ---
 # <a name="compiler-error-c3498"></a>コンパイラ エラー C3498
 
@@ -23,7 +23,7 @@ ms.locfileid: "74738103"
 
 - マネージド変数または Windows ランタイム変数をラムダ式のパラメーター リストに渡します。
 
-## <a name="example"></a>使用例
+## <a name="examples"></a>例
 
 次の例では、マネージド型を持つ変数がラムダ式のキャプチャ リストに表示されるため、C3498 が生成されます。
 
@@ -40,8 +40,6 @@ int main()
 }
 ```
 
-## <a name="example"></a>使用例
-
 次の例では、マネージド型の変数 `s` をラムダ式のパラメーター リストに渡すことにより、C3498 を解決します。
 
 ```cpp
@@ -57,6 +55,6 @@ int main()
 }
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [ラムダ式](../../cpp/lambda-expressions-in-cpp.md)

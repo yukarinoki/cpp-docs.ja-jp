@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3535
 ms.assetid: 24449c98-f681-484d-a00b-32533dca3a88
-ms.openlocfilehash: 60ffd5d8decd5c9065ca55cfed34383278359f3e
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 673fe6a8b5eb6dfcd9caa841b18d5b47fb7858bf
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87228792"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90686091"
 ---
 # <a name="compiler-error-c3535"></a>コンパイラ エラー C3535
 
@@ -23,11 +23,11 @@ ms.locfileid: "87228792"
 
 1. 初期化式の型がでないことを確認 **`void`** してください。
 
-1. 宣言が基本型へのポインターではないことを確認してください。 詳細については、「[基本型](../../cpp/fundamental-types-cpp.md)」を参照してください。
+1. 宣言が基本型へのポインターではないことを確認してください。 詳細については、「 [基本型](../../cpp/fundamental-types-cpp.md)」を参照してください。
 
 1. 宣言が型へのポインターである場合は、初期化式がポインター型であることを確認します。
 
-## <a name="example"></a>例
+## <a name="examples"></a>例
 
 次の例では、初期化式がに評価されるため、C3535 が生成され **`void`** ます。
 
@@ -42,8 +42,6 @@ int main()
 }
 ```
 
-## <a name="example"></a>例
-
 次の例では、ステートメントが `x` 推測された型へのポインターとして変数を宣言していますが、初期化子式の型が double であるため、C3535 が生成されます。 そのため、コンパイラは変数の型を推測できません。
 
 ```cpp
@@ -55,8 +53,6 @@ int main()
    return 0;
 }
 ```
-
-## <a name="example"></a>例
 
 次の例では、変数が `p` 推測された型へのポインターを宣言していますが、初期化式がポインター型ではないため、C3535 が生成されます。
 

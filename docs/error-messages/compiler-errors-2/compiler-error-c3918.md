@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3918
 ms.assetid: a8b3a90a-3fe1-4244-a5ff-a31cdae97d98
-ms.openlocfilehash: ff2b59338c707767fa1d3c382feaa1bfcdf29ce2
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: cd9c40ef90715e9beca43a114dba475ab29b5e78
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74758490"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90686039"
 ---
 # <a name="compiler-error-c3918"></a>コンパイラ エラー C3918
 
@@ -19,7 +19,7 @@ ms.locfileid: "74758490"
 
 C3918 は、イベントに関連するいくつかの理由で発生する可能性があります。
 
-## <a name="example"></a>使用例
+## <a name="examples"></a>例
 
 C3918 は、現在のコンテキストでクラスメンバーが必要であるために発生する可能性があります。 次の例では、C3918 が生成されます。
 
@@ -40,8 +40,6 @@ public:
    }
 };
 ```
-
-## <a name="example"></a>使用例
 
 また、C3918 は、単純なイベントを null に対してチェックしようとした場合にも発生します (イベント名は、イベントのバッキングストアデリゲートへの直接アクセスを提供しなくなります)。
 
@@ -65,8 +63,6 @@ ref struct EventSource : public IEFace {
    }
 };
 ```
-
-## <a name="example"></a>使用例
 
 C3918 は、誤ってイベントをサブスクライブしている場合にも発生する可能性があります。 次の例では、C3918 が生成されます。
 

@@ -7,18 +7,18 @@ helpviewer_keywords:
 - unmanaged resources, loading into Byte array
 - native resources
 ms.assetid: cdada6cd-6d42-437a-a90f-44a0b18d6a93
-ms.openlocfilehash: 425def1cd0557298985148d7bb9f74da489643e8
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: b2b98ff3c4bbd857e3f5d861c1e0e8e2bd2f357b
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "79544959"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90685806"
 ---
 # <a name="how-to-load-unmanaged-resources-into-a-byte-array"></a>方法: アンマネージ リソースをバイト配列に読み込む
 
-このトピックでは、アンマネージリソースを <xref:System.Byte> 配列に読み込むいくつかの方法について説明します。
+このトピックでは、アンマネージリソースを配列に読み込むいくつかの方法について説明 <xref:System.Byte> します。
 
-## <a name="example"></a>例
+## <a name="examples"></a>例
 
 アンマネージリソースのサイズがわかっている場合は、clr 配列を事前に割り当てると、CLR 配列の配列ブロックへのポインターを使用して、そのリソースを配列に読み込むことができます。
 
@@ -54,8 +54,6 @@ int main() {
 0123456789
 ```
 
-## <a name="example"></a>例
-
 このサンプルでは、アンマネージメモリブロックからマネージ配列にデータをコピーする方法を示します。
 
 ```cpp
@@ -75,6 +73,6 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [C++ Interop (暗黙の PInvoke) の使用](../dotnet/using-cpp-interop-implicit-pinvoke.md)

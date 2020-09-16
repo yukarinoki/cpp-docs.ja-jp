@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - implements attribute
 ms.assetid: 9cf0858b-cb7d-4d3c-81a6-97d87ed00d25
-ms.openlocfilehash: e18e874473925c0198b8645162546c9abe13b3ef
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 946972a9a7c3041c75e82865acb35feb4a97254a
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88842352"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90686744"
 ---
 # <a name="implements-c"></a>implements (C++)
 
@@ -32,7 +32,7 @@ IDL コクラスのメンバーになるインターフェイスのコンマ区�
 *ディスパッチ*<br/>
 IDL コクラスのメンバーになるディスパッチインターフェイスのコンマ区切りのリスト。 単一のディスパッチインターフェイスを指定するための簡単な方法は、 **(ディスパッチインターフェイス =** *dispinterface_name* **)** を実装することです。
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>注釈
 
 既定では、の基本クラスである COM インターフェイスのみ `coclass` が IDL コクラスに追加されます。 **implements** を使用すると、他のインターフェイスを強制的に IDL メンバーにすることができ `coclass` ます。
 
@@ -47,7 +47,7 @@ IDL コクラスのメンバーになるディスパッチインターフェイ�
 
 詳細については、「 [属性コンテキスト](cpp-attributes-com-net.md#contexts)」を参照してください。
 
-## <a name="example"></a>例
+## <a name="examples"></a>例
 
 次の例は、.idl ファイルとそれに関連付けられている .h ファイル、および C++ ファイルの3つの部分に分かれています。
 
@@ -96,8 +96,6 @@ library odod
    };
 }
 ```
-
-## <a name="example"></a>例
 
 また、次の .h ファイルもコンパイラで使用できる必要があります。
 
@@ -376,8 +374,6 @@ CBar;
 #endif
 #endif
 ```
-
-## <a name="example"></a>例
 
 次のプログラムでは、を実装しないと、、、、およびは、生成された IDL のに `IBar1` `IBar2` 含まれ `ISna` ません `coclass` 。
 

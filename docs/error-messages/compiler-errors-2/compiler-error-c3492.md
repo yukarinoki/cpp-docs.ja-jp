@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3492
 ms.assetid: b1dc6342-9133-4b1f-a9c3-e8c65d20d121
-ms.openlocfilehash: 37129c198096be91a8104aedcb508732d79e3630
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: bdaeb8797eb71b205f737d08e74430f161cb8caa
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74738311"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90686549"
 ---
 # <a name="compiler-error-c3492"></a>コンパイラ エラー C3492
 
@@ -23,7 +23,7 @@ ms.locfileid: "74738311"
 
 - 共用体に名前を付け、ラムダ式のキャプチャの一覧に、完全な共用体の構造体を渡します。
 
-## <a name="example"></a>使用例
+## <a name="examples"></a>例
 
 次の例では、匿名共用体のメンバーをキャプチャするために C3492 が生成されます。
 
@@ -43,8 +43,6 @@ int main()
 }
 ```
 
-## <a name="example"></a>使用例
-
 次の例では、共用体に名前を付け、ラムダ式のキャプチャの一覧に完全な共用体の構造を渡すことによって、C3492 が解決されます。
 
 ```cpp
@@ -63,6 +61,6 @@ int main()
 }
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [ラムダ式](../../cpp/lambda-expressions-in-cpp.md)

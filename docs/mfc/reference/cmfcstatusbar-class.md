@@ -72,18 +72,18 @@ helpviewer_keywords:
 - CMFCStatusBar [MFC], SetTipText
 - CMFCStatusBar [MFC], OnDrawPane
 ms.assetid: f2960d1d-f4ed-41e8-bd99-0382b2f8d88e
-ms.openlocfilehash: 024fbad44af2fb11e967141fc8e7ccc0aad0ccbe
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: 004873ef2696eb9504cdd4df77e700c4a145e886
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81753470"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90686575"
 ---
 # <a name="cmfcstatusbar-class"></a>CMFCStatusBar クラス
 
-クラス`CMFCStatusBar`は、クラスに似たステータス バー`CStatusBar`を実装します。 ただし、`CMFCStatusBar` クラスには、イメージ、アニメーション、およびプログレス バーを表示する機能や、マウスのダブルクリックに応答する機能など、`CStatusBar` クラスでは提供されない機能が含まれています。
+クラスは、 `CMFCStatusBar` クラスに似たステータスバーを実装し `CStatusBar` ます。 ただし、`CMFCStatusBar` クラスには、イメージ、アニメーション、およびプログレス バーを表示する機能や、マウスのダブルクリックに応答する機能など、`CStatusBar` クラスでは提供されない機能が含まれています。
 
-詳細については、Visual Studio のインストールの**\\VC\\atlmfc\\src mfc**フォルダーにあるソース コードを参照してください。
+詳細については、Visual Studio のインストールの **VC \\ atlmfc \\ src \\ mfc** フォルダーにあるソースコードを参照してください。
 
 ## <a name="syntax"></a>構文
 
@@ -95,69 +95,65 @@ class CMFCStatusBar : public CPane
 
 ### <a name="public-methods"></a>パブリック メソッド
 
-|名前|説明|
+|名前|[説明]|
 |----------|-----------------|
-|[CMFC ステータスバー::計算式レイアウト](#calcfixedlayout)|(CBase ペインをオーバーライド[します::計算固定レイアウト](../../mfc/reference/cbasepane-class.md#calcfixedlayout).)|
-|[をクリックします。](#commandtoindex)||
-|[ステータスバー::作成](#create)|コントロール バーを作成し[、CPane](../../mfc/reference/cpane-class.md)オブジェクトにアタッチします。 (CPane をオーバーライド[::作成](../../mfc/reference/cpane-class.md#create).)|
-|[CMFC ステータスバー::作成します。](#createex)|コントロール バーを作成し[、CPane](../../mfc/reference/cpane-class.md)オブジェクトにアタッチします。 (CPane をオーバーライド[します::CreateEx](../../mfc/reference/cpane-class.md#createex).)|
-|[前に :D挿入します。](#doesallowdyninsertbefore)|このペインと親フレームの間に別のペインを動的に挿入できるかどうかを指定します。 [(CBase ペインをオーバーライドします::DoesAllowDynInsert前に](../../mfc/reference/cbasepane-class.md#doesallowdyninsertbefore).)|
-|[CMFC ステータスバー::有効ペインダブルクリック](#enablepanedoubleclick)|ステータス バーでのマウスダブルクリックの処理を有効または無効にします。|
-|[CMFC ステータスバー::有効ペインプログレスバー](#enablepaneprogressbar)|指定したペインにプログレス バーを表示します。|
-|[ステータスバー::カウントを取得します。](#getcount)|ステータス バーのペインの数を返します。|
-|[状態バー::ページ拡張エリア](#getdrawextendedarea)||
-|[を使用します。](#getextendedarea)||
-|[をクリックします。](#getitemid)||
-|[ステータスバー::ゲットアイテムレクト](#getitemrect)||
-|[ステータスバー::GetPaneInfo](#getpaneinfo)||
-|[ステータスバー::ペインの進行状況](#getpaneprogress)||
-|[ステータスバー::ゲパネスタイル](#getpanestyle)|ペインのスタイルを返します。 [(CBasePane をオーバーライドします。::GetPaneStyle](../../mfc/reference/cbasepane-class.md#getpanestyle).)|
-|[ステータスバー::テキストを取得します。](#getpanetext)||
-|[ウィンドウの幅を取得します。](#getpanewidth)|ステータス バーの指定されたペインの幅をピクセル単位で返します。|
-|[ステータスバー::テキストを取得します。](#gettiptext)|ステータス バーの指定されたペインのツール ヒント テキストを返します。|
-|[コンテンツを無効にする](#invalidatepanecontent)|指定されたペインを無効にし、その内容を再描画します。|
-|[ウィンドウを:P](#precreatewindow)|この`CWnd`オブジェクトにアタッチされたウィンドウの作成前に、フレームワークによって呼び出されます。 [(CWnd::P再作成ウィンドウ](../../mfc/reference/cwnd-class.md#precreatewindow)をオーバーライドします。|
-|[を使用します。](#setdrawextendedarea)||
-|[ステータスバー::セットインディケータ](#setindicators)||
-|[CMFC ステータスバー::セットペインアニメーション](#setpaneanimation)|指定したペインにアニメーションを割り当てます。|
-|[コントロール の状態バー::設定ウィンドウの背景色](#setpanebackgroundcolor)|ステータス バーの指定されたペインの背景色を設定します。|
-|[ステータスバー::セットペインアイコン](#setpaneicon)|ステータス バーの指定されたペインのインジケーター アイコンを設定します。|
-|[ステータスバー::設定ウィンドウ情報](#setpaneinfo)||
-|[ステータスバー::設定ウィンドウの進行状況](#setpaneprogress)|ステータス バーの指定されたペインの進行状況バーの現在の進行状況を設定します。|
-|[ステータスバー::セットペインスタイル](#setpanestyle)|ペインのスタイルを設定します。 (CBase ペインをオーバーライド[します::セットペインスタイル](../../mfc/reference/cbasepane-class.md#setpanestyle).)|
-|[ステータスバー::テキストを設定します。](#setpanetext)||
-|[ステータスバー::テキストの色を設定します。](#setpanetextcolor)|ステータス バーの指定されたペインのテキストの色を設定します。|
-|[ステータスバー::ウィンドウ幅の設定](#setpanewidth)|ステータス バーの指定されたペインの幅をピクセル単位で設定します。|
-|[ステータスバー::テキストを設定します。](#settiptext)|ステータス バーの指定されたペインにツール ヒントテキストを設定します。|
+|[CMFCStatusBar:: CalcFixedLayout](#calcfixedlayout)|( [Cbasepane:: CalcFixedLayout](../../mfc/reference/cbasepane-class.md#calcfixedlayout)をオーバーライドします)。|
+|[CMFCStatusBar:: CommandToIndex](#commandtoindex)||
+|[CMFCStatusBar:: Create](#create)|コントロールバーを作成し、 [CPane](../../mfc/reference/cpane-class.md) オブジェクトにアタッチします。 ( [CPane:: Create](../../mfc/reference/cpane-class.md#create)をオーバーライドします)。|
+|[CMFCStatusBar:: CreateEx](#createex)|コントロールバーを作成し、 [CPane](../../mfc/reference/cpane-class.md) オブジェクトにアタッチします。 ( [CPane:: CreateEx](../../mfc/reference/cpane-class.md#createex)をオーバーライドします。)|
+|[CMFCStatusBar::D oesAllowDynInsertBefore](#doesallowdyninsertbefore)|このペインと親フレームの間に別のペインを動的に挿入できるかどうかを決定します。 ( [Cbasepane::D oesallowdyninsertbefore](../../mfc/reference/cbasepane-class.md#doesallowdyninsertbefore)をオーバーライドします)。|
+|[CMFCStatusBar:: EnablePaneDoubleClick](#enablepanedoubleclick)|ステータスバーでのマウスのダブルクリックの処理を有効または無効にします。|
+|[CMFCStatusBar:: Enable Progressbar](#enablepaneprogressbar)|指定したペインにプログレスバーを表示します。|
+|[CMFCStatusBar:: GetCount](#getcount)|ステータスバーのウィンドウの数を返します。|
+|[CMFCStatusBar:: GetDrawExtendedArea](#getdrawextendedarea)||
+|[CMFCStatusBar:: GetExtendedArea](#getextendedarea)||
+|[CMFCStatusBar:: GetItemID](#getitemid)||
+|[CMFCStatusBar:: GetItemRect](#getitemrect)||
+|[CMFCStatusBar:: Get Info](#getpaneinfo)||
+|[CMFCStatusBar:: Get Progress](#getpaneprogress)||
+|[CMFCStatusBar:: Get Style](#getpanestyle)|ペインのスタイルを返します。 ( [Cbasepane:: Getpane style](../../mfc/reference/cbasepane-class.md#getpanestyle)をオーバーライドします)。|
+|[CMFCStatusBar:: Getて Text](#getpanetext)||
+|[CMFCStatusBar:: Get Width](#getpanewidth)|ステータスバーの指定されたペインの幅 (ピクセル単位) を返します。|
+|[CMFCStatusBar:: GetTipText](#gettiptext)|ステータスバーの指定されたペインのツールヒントテキストを返します。|
+|[CMFCStatusBar:: InvalidatePaneContent](#invalidatepanecontent)|指定されたペインを無効にし、そのコンテンツを再描画します。|
+|[CMFCStatusBar::P reCreateWindow](#precreatewindow)|このオブジェクトに関連付けられた Windows ウィンドウを作成する前に、フレームワークによって呼び出され `CWnd` ます。 ( [CWnd::P recreatewindow](../../mfc/reference/cwnd-class.md#precreatewindow)をオーバーライドします)。|
+|[CMFCStatusBar:: SetDrawExtendedArea](#setdrawextendedarea)||
+|[CMFCStatusBar:: SetIndicators](#setindicators)||
+|[CMFCStatusBar:: Setて Animation](#setpaneanimation)|指定したペインにアニメーションを割り当てます。|
+|[CMFCStatusBar:: Set区画 Backgroundcolor](#setpanebackgroundcolor)|ステータスバーの指定したペインの背景色を設定します。|
+|[CMFCStatusBar:: Set区画アイコン](#setpaneicon)|ステータスバーの指定したペインのインジケーターアイコンを設定します。|
+|[CMFCStatusBar:: Setて Info](#setpaneinfo)||
+|[CMFCStatusBar:: Set Progress](#setpaneprogress)|ステータスバーの指定したペインの進行状況バーの現在の進行状況を設定します。|
+|[CMFCStatusBar:: Setて Style](#setpanestyle)|ペインのスタイルを設定します。 ( [Cbasepane:: Setpane style](../../mfc/reference/cbasepane-class.md#setpanestyle)をオーバーライドします)。|
+|[CMFCStatusBar:: Setて Text](#setpanetext)||
+|[CMFCStatusBar:: SetPaneTextColor](#setpanetextcolor)|ステータスバーの指定したペインのテキストの色を設定します。|
+|[CMFCStatusBar:: Set区画の幅](#setpanewidth)|ステータスバーの指定したペインの幅をピクセル単位で設定します。|
+|[CMFCStatusBar:: SetTipText](#settiptext)|ステータスバーの指定したペインにツールヒントテキストを設定します。|
 
 ### <a name="protected-methods"></a>プロテクト メソッド
 
-|名前|説明|
+|名前|[説明]|
 |----------|-----------------|
-|[ウィンドウの状態バー::オンドローペイン](#ondrawpane)|ステータス バーのペインを再描画するときに、フレームワークによって呼び出されます。|
+|[CMFCStatusBar:: OnDrawPane](#ondrawpane)|ステータスバーのペインを再描画するときに、フレームワークによって呼び出されます。|
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>注釈
 
-次の図は、ステータス バー デモ[サンプル](../../overview/visual-cpp-samples.md)アプリケーションのステータス バーの図を示しています。
+次の図は、 [ステータスバーのデモサンプル](../../overview/visual-cpp-samples.md) アプリケーションのステータスバーの図を示しています。
 
 ![CMFCStatusBar の例](../../mfc/reference/media/cmfcstatusbar.png "CMFCStatusBar の例")
 
-## <a name="example"></a>例
+## <a name="examples"></a>例
 
-次の例は、アプリケーションがクラス内のさまざまなメソッドを呼び出すために使用する`CMFCStatusBar`ローカル変数を示しています。 これらの変数は、ステータスバーデモビュー.hで宣言されています。 メイン フレームは MainFrm.h で宣言され、ドキュメントは StatusBarDemoDoc.h で宣言され、ビューは StatusBarDemoView.h で宣言されます。 このコード スニペットは、[ステータス バーデモのサンプル](../../overview/visual-cpp-samples.md)の一部です。
+次の例は、アプリケーションがクラス内のさまざまなメソッドを呼び出すために使用するローカル変数を示して `CMFCStatusBar` います。 これらの変数は、StatusBarDemoView で宣言されています。 メインフレームは Mainfrm.cpp で宣言され、ドキュメントは StatusBarDemoDoc で宣言され、ビューは StatusBarDemoView で宣言されます。 このコードスニペットは、 [ステータスバーのデモサンプル](../../overview/visual-cpp-samples.md)に含まれています。
 
 [!code-cpp[NVC_MFC_StatusBarDemo#9](../../mfc/reference/codesnippet/cpp/cmfcstatusbar-class_1.h)]
 
-## <a name="example"></a>例
-
-次の例は、MainFrm.h`CMFCStatusBar`で`GetStatusBar`メソッドを導入し、StatusBarDemoView.h のメソッドからこのメソッドを`GetStatusBar`呼び出すことによって、オブジェクトへの参照を取得する方法を示しています。 このコード スニペットは、[ステータス バーデモのサンプル](../../overview/visual-cpp-samples.md)の一部です。
+次の例は、 `CMFCStatusBar` mainfrm.cpp にメソッドを導入し、 `GetStatusBar` StatusBarDemoView のメソッドからこのメソッドを呼び出すことによって、オブジェクトへの参照を取得する方法を示しています。 `GetStatusBar` このコードスニペットは、 [ステータスバーのデモサンプル](../../overview/visual-cpp-samples.md)に含まれています。
 
 [!code-cpp[NVC_MFC_StatusBarDemo#7](../../mfc/reference/codesnippet/cpp/cmfcstatusbar-class_2.h)]
 [!code-cpp[NVC_MFC_StatusBarDemo#8](../../mfc/reference/codesnippet/cpp/cmfcstatusbar-class_3.h)]
 
-## <a name="example"></a>例
-
-次の例は、クラス内のさまざまなメソッドを呼び`CMFCStatusBar`出す方法を示しています。 定数は MainFrm.h で宣言されます。 この例では、アイコンの設定方法、ステータス バー ペインのツールヒント テキストの設定、指定したペインへのプログレス バーの表示、指定したペインへのアニメーションの割り当て、ステータス バー ペインのテキストと幅の設定、ステータス バー ペインの進行状況バーの現在の進行状況インジケータの設定方法を示します。 このコード スニペットは、[ステータス バーデモのサンプル](../../overview/visual-cpp-samples.md)の一部です。
+次の例は、StatusBarDemoView でクラスのさまざまなメソッドを呼び出す方法を示して `CMFCStatusBar` います。 定数は、Mainfrm.cpp で宣言されています。 この例では、アイコンを設定する方法、ステータスバーペインのツールヒントテキストを設定する方法、指定したウィンドウに進行状況バーを表示する方法、指定したペインにアニメーションを割り当てる方法、ステータスバーペインのテキストと幅を設定する方法、ステータスバーペインの進行状況バーの現在の進行状況インジケーターを設定する方法を示します。 このコードスニペットは、 [ステータスバーのデモサンプル](../../overview/visual-cpp-samples.md)に含まれています。
 
 [!code-cpp[NVC_MFC_StatusBarDemo#6](../../mfc/reference/codesnippet/cpp/cmfcstatusbar-class_4.h)]
 [!code-cpp[NVC_MFC_StatusBarDemo#1](../../mfc/reference/codesnippet/cpp/cmfcstatusbar-class_5.cpp)]
@@ -182,9 +178,9 @@ class CMFCStatusBar : public CPane
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** afxstatusbar.h
+**ヘッダー:** afxstatusbar
 
-## <a name="cmfcstatusbarcalcfixedlayout"></a><a name="calcfixedlayout"></a>CMFC ステータスバー::計算式レイアウト
+## <a name="cmfcstatusbarcalcfixedlayout"></a><a name="calcfixedlayout"></a> CMFCStatusBar:: CalcFixedLayout
 
 ```
 virtual CSize CalcFixedLayout(
@@ -194,14 +190,14 @@ virtual CSize CalcFixedLayout(
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*bストレッチ*<br/>
-[in]*bHorz*<br/>
+から *Bstretch*<br/>
+から *bHorz*<br/>
 
 ### <a name="return-value"></a>戻り値
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
-## <a name="cmfcstatusbarcommandtoindex"></a><a name="commandtoindex"></a>をクリックします。
+## <a name="cmfcstatusbarcommandtoindex"></a><a name="commandtoindex"></a> CMFCStatusBar:: CommandToIndex
 
 ```
 int CommandToIndex(UINT nIDFind) const;
@@ -209,13 +205,13 @@ int CommandToIndex(UINT nIDFind) const;
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*nID検索*<br/>
+から *nIDFind*<br/>
 
 ### <a name="return-value"></a>戻り値
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
-## <a name="cmfcstatusbarcreate"></a><a name="create"></a>ステータスバー::作成
+## <a name="cmfcstatusbarcreate"></a><a name="create"></a> CMFCStatusBar:: Create
 
 ```
 BOOL Create(
@@ -226,15 +222,15 @@ BOOL Create(
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*親子*<br/>
-[in]*ドウスタイル*<br/>
-[in]*nID*<br/>
+から *pParentWnd*<br/>
+から *dwStyle*<br/>
+から *nID*<br/>
 
 ### <a name="return-value"></a>戻り値
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
-## <a name="cmfcstatusbarcreateex"></a><a name="createex"></a>CMFC ステータスバー::作成します。
+## <a name="cmfcstatusbarcreateex"></a><a name="createex"></a> CMFCStatusBar:: CreateEx
 
 ```
 BOOL CreateEx(
@@ -246,16 +242,16 @@ BOOL CreateEx(
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*親子*<br/>
-[in]*スタイル*<br/>
-[in]*ドウスタイル*<br/>
-[in]*nID*<br/>
+から *pParentWnd*<br/>
+から *dwCtrlStyle*<br/>
+から *dwStyle*<br/>
+から *nID*<br/>
 
 ### <a name="return-value"></a>戻り値
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
-## <a name="cmfcstatusbardoesallowdyninsertbefore"></a><a name="doesallowdyninsertbefore"></a>前に :D挿入します。
+## <a name="cmfcstatusbardoesallowdyninsertbefore"></a><a name="doesallowdyninsertbefore"></a> CMFCStatusBar::D oesAllowDynInsertBefore
 
 ```
 virtual BOOL DoesAllowDynInsertBefore() const;
@@ -263,11 +259,11 @@ virtual BOOL DoesAllowDynInsertBefore() const;
 
 ### <a name="return-value"></a>戻り値
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
-## <a name="cmfcstatusbarenablepanedoubleclick"></a><a name="enablepanedoubleclick"></a>CMFC ステータスバー::有効ペインダブルクリック
+## <a name="cmfcstatusbarenablepanedoubleclick"></a><a name="enablepanedoubleclick"></a> CMFCStatusBar:: EnablePaneDoubleClick
 
-ステータス バーでのマウスダブルクリックの処理を有効または無効にします。
+ステータスバーでのマウスのダブルクリックの処理を有効または無効にします。
 
 ```cpp
 void EnablePaneDoubleClick(BOOL bEnable=TRUE);
@@ -275,16 +271,16 @@ void EnablePaneDoubleClick(BOOL bEnable=TRUE);
 
 ### <a name="parameters"></a>パラメーター
 
-*b 有効にする*<br/>
-[in]TRUE の場合は、マウスダブルクリックの処理を有効にします。 それ以外の場合は、マウスのダブルクリックの処理を無効にします。
+*bEnable*<br/>
+からTRUE の場合は、マウスのダブルクリックの処理を有効にします。 それ以外の場合は、マウスのダブルクリックの処理を無効にします。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
-ステータス バーでダブルクリックの処理が有効になっている場合、Windows は、ユーザーがステータス バー ペインをダブルクリックするたびに、リソース ID と共にWM_COMMAND通知をステータス バーの所有者に送信します。
+ステータスバーでダブルクリックの処理が有効になっている場合、ユーザーがステータスバーペインをダブルクリックするたびに、Windows によって、WM_COMMAND 通知がリソース ID と共にステータスバーの所有者に送信されます。
 
-## <a name="cmfcstatusbarenablepaneprogressbar"></a><a name="enablepaneprogressbar"></a>CMFC ステータスバー::有効ペインプログレスバー
+## <a name="cmfcstatusbarenablepaneprogressbar"></a><a name="enablepaneprogressbar"></a> CMFCStatusBar:: Enable Progressbar
 
-指定したペインにプログレス バーを表示します。
+指定されたウィンドウに進行状況バーを表示します。
 
 ```cpp
 void EnablePaneProgressBar(
@@ -299,34 +295,34 @@ void EnablePaneProgressBar(
 ### <a name="parameters"></a>パラメーター
 
 *nIndex*<br/>
-[in]プログレス バーを有効にするペインのインデックスを指定します。
+からプログレスバーを有効にするペインのインデックスを指定します。
 
-*n合計*<br/>
-[in]プログレス バーの最大値を指定します。
+*nTotal*<br/>
+からプログレスバーの最大値を指定します。
 
-*テキストを表示します。*<br/>
-[in]進行状況バーに現在の進行状況の値を表示するかどうかを指定します。
+*bDisplayText テキスト*<br/>
+からプログレスバーに現在の進行状況の値を表示するかどうかを指定します。
 
 *clrBar*<br/>
-[in]プログレス バーの背景色を指定します。
+からプログレスバーの背景色を指定します。
 
 *clrBarDest*<br/>
-[in]プログレス バーの背景の 2 番目の色を指定します。 グラデーションにブレンドされたカラーで塗りつぶすには *、clrBar*とは異なる値を使用します。
+からプログレスバーの背景の2番目の色を指定します。 グラデーションにブレンドする色で塗りつぶすには、 *Clrbar* とは異なる値を使用します。
 
 *clrProgressText*<br/>
-[in]プログレス バーのテキストの色を指定します。
+からプログレスバーのテキストの色を指定します。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
-*nTotal*を -1 に`EnablePaneProgressBar`設定してプログレス バーの呼び出しを無効にする場合。 デフォルトでは *、nTotal*は 100 に設定されています。 したがって、進捗状況をパーセンテージで表示するために追加の計算は必要ありません。
+`EnablePaneProgressBar` *Ntotal*が-1 に設定された進行状況バーの呼び出しを無効にする場合。 既定では、 *Ntotal* は100に設定されています。 そのため、進行状況をパーセンテージとして表示するための追加の計算は必要ありません。
 
-プログレス バーの背景色にグラデーションにブレンドされた色が表示されるように *、clrBar*と*clrBarDest*に異なる値を渡す必要があります。 .
+状態バーの背景色にグラデーションの色が表示されるように、 *clrbar* と *clrbardest* に異なる値を渡す必要があります。 .
 
-現在の進行状況を設定するには、[メソッド](#setpaneprogress)を呼び出します。
+現在の進行状況を設定するには、 [CMFCStatusBar:: Setて progress](#setpaneprogress) メソッドを呼び出します。
 
-## <a name="cmfcstatusbargetcount"></a><a name="getcount"></a>ステータスバー::カウントを取得します。
+## <a name="cmfcstatusbargetcount"></a><a name="getcount"></a> CMFCStatusBar:: GetCount
 
-ステータス バーのペインの数を取得します。
+ステータスバーのウィンドウの数を取得します。
 
 ```
 int GetCount() const;
@@ -334,9 +330,9 @@ int GetCount() const;
 
 ### <a name="return-value"></a>戻り値
 
-ステータス バーのペインの数。
+ステータスバーのウィンドウの数。
 
-## <a name="cmfcstatusbargetdrawextendedarea"></a><a name="getdrawextendedarea"></a>状態バー::ページ拡張エリア
+## <a name="cmfcstatusbargetdrawextendedarea"></a><a name="getdrawextendedarea"></a> CMFCStatusBar:: GetDrawExtendedArea
 
 ```
 BOOL GetDrawExtendedArea() const;
@@ -344,9 +340,9 @@ BOOL GetDrawExtendedArea() const;
 
 ### <a name="return-value"></a>戻り値
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
-## <a name="cmfcstatusbargetextendedarea"></a><a name="getextendedarea"></a>を使用します。
+## <a name="cmfcstatusbargetextendedarea"></a><a name="getextendedarea"></a> CMFCStatusBar:: GetExtendedArea
 
 ```
 virtual BOOL GetExtendedArea(CRect& rect) const;
@@ -354,13 +350,13 @@ virtual BOOL GetExtendedArea(CRect& rect) const;
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*レクト*<br/>
+から *rect*<br/>
 
 ### <a name="return-value"></a>戻り値
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
-## <a name="cmfcstatusbargetitemid"></a><a name="getitemid"></a>をクリックします。
+## <a name="cmfcstatusbargetitemid"></a><a name="getitemid"></a> CMFCStatusBar:: GetItemID
 
 ```
 UINT GetItemID(int nIndex) const;
@@ -368,13 +364,13 @@ UINT GetItemID(int nIndex) const;
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*nインデックス*<br/>
+から *nIndex*<br/>
 
 ### <a name="return-value"></a>戻り値
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
-## <a name="cmfcstatusbargetitemrect"></a><a name="getitemrect"></a>ステータスバー::ゲットアイテムレクト
+## <a name="cmfcstatusbargetitemrect"></a><a name="getitemrect"></a> CMFCStatusBar:: GetItemRect
 
 ```cpp
 void GetItemRect(
@@ -384,12 +380,12 @@ void GetItemRect(
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*nインデックス*<br/>
-[in]*lpRect*<br/>
+から *nIndex*<br/>
+から *lpRect*<br/>
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
-## <a name="cmfcstatusbargetpaneinfo"></a><a name="getpaneinfo"></a>ステータスバー::GetPaneInfo
+## <a name="cmfcstatusbargetpaneinfo"></a><a name="getpaneinfo"></a> CMFCStatusBar:: Get Info
 
 ```cpp
 void GetPaneInfo(
@@ -401,14 +397,14 @@ void GetPaneInfo(
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*nインデックス*<br/>
-[in]*nID*<br/>
-[in]*nスタイル*<br/>
-[in]*幅*<br/>
+から *nIndex*<br/>
+から *nID*<br/>
+から *Nstyle*<br/>
+から *Cxwidth*<br/>
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
-## <a name="cmfcstatusbargetpaneprogress"></a><a name="getpaneprogress"></a>ステータスバー::ペインの進行状況
+## <a name="cmfcstatusbargetpaneprogress"></a><a name="getpaneprogress"></a> CMFCStatusBar:: Get Progress
 
 ```
 long GetPaneProgress(int nIndex) const;
@@ -416,13 +412,13 @@ long GetPaneProgress(int nIndex) const;
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*nインデックス*<br/>
+から *nIndex*<br/>
 
 ### <a name="return-value"></a>戻り値
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
-## <a name="cmfcstatusbargetpanestyle"></a><a name="getpanestyle"></a>ステータスバー::ゲパネスタイル
+## <a name="cmfcstatusbargetpanestyle"></a><a name="getpanestyle"></a> CMFCStatusBar:: Get Style
 
 ```
 UINT GetPaneStyle(int nIndex) const;
@@ -430,13 +426,13 @@ UINT GetPaneStyle(int nIndex) const;
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*nインデックス*<br/>
+から *nIndex*<br/>
 
 ### <a name="return-value"></a>戻り値
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
-## <a name="cmfcstatusbargetpanetext"></a><a name="getpanetext"></a>ステータスバー::テキストを取得します。
+## <a name="cmfcstatusbargetpanetext"></a><a name="getpanetext"></a> CMFCStatusBar:: Getて Text
 
 ```cpp
 void GetPaneText(
@@ -448,16 +444,16 @@ CString GetPaneText(int nIndex) const;
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*nインデックス*<br/>
-[in]*s*<br/>
+から *nIndex*<br/>
+から *s*<br/>
 
 ### <a name="return-value"></a>戻り値
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
-## <a name="cmfcstatusbargetpanewidth"></a><a name="getpanewidth"></a>ウィンドウの幅を取得します。
+## <a name="cmfcstatusbargetpanewidth"></a><a name="getpanewidth"></a> CMFCStatusBar:: Get Width
 
-ステータス バーのペインの幅を取得します。
+ステータスバーのペインの幅を取得します。
 
 ```
 int GetPaneWidth(int nIndex) const;
@@ -466,15 +462,15 @@ int GetPaneWidth(int nIndex) const;
 ### <a name="parameters"></a>パラメーター
 
 *nIndex*<br/>
-[in]ステータス バー ペインのインデックスを指定します。
+からステータスバーペインのインデックスを指定します。
 
 ### <a name="return-value"></a>戻り値
 
-*nIndex*が指定するステータス バー ペインの幅。それ以外の場合は 0 を返します。
+*NIndex*が指定するステータスバーペインの幅。それ以外の場合は、ステータスバーペインが存在しない場合は0です。
 
-## <a name="cmfcstatusbargettiptext"></a><a name="gettiptext"></a>ステータスバー::テキストを取得します。
+## <a name="cmfcstatusbargettiptext"></a><a name="gettiptext"></a> CMFCStatusBar:: GetTipText
 
-ステータス バーのペインのツールヒント テキストを取得します。
+ステータスバーのペインのツールヒントテキストを取得します。
 
 ```
 CString GetTipText(int nIndex) const;
@@ -483,15 +479,15 @@ CString GetTipText(int nIndex) const;
 ### <a name="parameters"></a>パラメーター
 
 *nIndex*<br/>
-[in]ツール ヒント テキストを取得するペインのインデックスを指定します。
+からツールヒントのテキストを取得するペインのインデックスを指定します。
 
 ### <a name="return-value"></a>戻り値
 
-*nIndex*が指定するステータス バー ペインのツールヒント テキスト。 それ以外の場合は、指定した*nIndex*に対してステータス バー ペインが存在しない場合、またはツールヒント のテキストが空の場合は、空の文字列を返します。
+*NIndex*が指定するステータスバーペインのツールヒントテキスト。 それ以外の場合は、指定された *nIndex* にステータスバーペインが存在しない場合、またはツールヒントテキストが空の場合は空の文字列。
 
-## <a name="cmfcstatusbarinvalidatepanecontent"></a><a name="invalidatepanecontent"></a>コンテンツを無効にする
+## <a name="cmfcstatusbarinvalidatepanecontent"></a><a name="invalidatepanecontent"></a> CMFCStatusBar:: InvalidatePaneContent
 
-ステータス バー ペインを無効にし、コンテンツを再描画します。
+ステータスバーペインを無効にして、コンテンツを再描画します。
 
 ```cpp
 void InvalidatePaneContent(int nIndex);
@@ -500,15 +496,15 @@ void InvalidatePaneContent(int nIndex);
 ### <a name="parameters"></a>パラメーター
 
 *nIndex*<br/>
-[in]コンテンツを無効にして再描画するペインのインデックスを指定します。
+からコンテンツを無効にして再描画するペインのインデックスを指定します。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
-ステータス バーが無効になると、再描画のマークが付けられます。 メソッドがメソッドにWM_PAINTメッセージ`UpdateWindow`を送信すると、Windows は`OnPaint`再描画します。
+ステータスバーが無効化されると、再描画のマークが付けられます。 `UpdateWindow`メソッドがメソッドに WM_PAINT メッセージを送信すると、Windows はそれを再描画し `OnPaint` ます。
 
-## <a name="cmfcstatusbarondrawpane"></a><a name="ondrawpane"></a>ウィンドウの状態バー::オンドローペイン
+## <a name="cmfcstatusbarondrawpane"></a><a name="ondrawpane"></a> CMFCStatusBar:: OnDrawPane
 
-ステータス バーのペインを再描画します。
+ステータスバーのウィンドウを再描画します。
 
 ```
 virtual void OnDrawPane(
@@ -519,18 +515,18 @@ virtual void OnDrawPane(
 ### <a name="parameters"></a>パラメーター
 
 *pDC*<br/>
-[in]描画するデバイス コンテキストへのポインター。
+から描画するデバイスコンテキストへのポインター。
 
-*pペイン*<br/>
-[in]再描画する`CMFCStatusBarPaneInfo`ペインに関する情報を含む構造体へのポインター。
+*pPane*<br/>
+から再 `CMFCStatusBarPaneInfo` 描画するペインに関する情報を格納している構造体へのポインター。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
-既定では、`OnDrawPane`ウィンドウのスタイルと内容に従ってデバイス コンテキスト*pDC*を使用してペインを再描画します。
+既定では、 `OnDrawPane` ウィンドウのスタイルと内容に応じて、デバイスコンテキスト *pDC* を使用してウィンドウを再描画します。
 
-ペインの外観をカスタマイズ`CMFCStatusBar`するには、このメソッドを派生クラスでオーバーライドします。
+派生クラスでこのメソッド `CMFCStatusBar` をオーバーライドして、ペインの外観をカスタマイズします。
 
-## <a name="cmfcstatusbarprecreatewindow"></a><a name="precreatewindow"></a>ウィンドウを:P
+## <a name="cmfcstatusbarprecreatewindow"></a><a name="precreatewindow"></a> CMFCStatusBar::P reCreateWindow
 
 ```
 virtual BOOL PreCreateWindow(CREATESTRUCT& cs);
@@ -538,13 +534,13 @@ virtual BOOL PreCreateWindow(CREATESTRUCT& cs);
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*cs*<br/>
+から *cs*<br/>
 
 ### <a name="return-value"></a>戻り値
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
-## <a name="cmfcstatusbarsetdrawextendedarea"></a><a name="setdrawextendedarea"></a>を使用します。
+## <a name="cmfcstatusbarsetdrawextendedarea"></a><a name="setdrawextendedarea"></a> CMFCStatusBar:: SetDrawExtendedArea
 
 ```cpp
 void SetDrawExtendedArea(BOOL bSet = TRUE);
@@ -552,11 +548,11 @@ void SetDrawExtendedArea(BOOL bSet = TRUE);
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*bセット*<br/>
+から *Bset*<br/>
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
-## <a name="cmfcstatusbarsetindicators"></a><a name="setindicators"></a>ステータスバー::セットインディケータ
+## <a name="cmfcstatusbarsetindicators"></a><a name="setindicators"></a> CMFCStatusBar:: SetIndicators
 
 ```
 BOOL SetIndicators(
@@ -566,14 +562,14 @@ BOOL SetIndicators(
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*を指定します。*<br/>
-[in]*NIDカウント*<br/>
+から *Lpidarray*<br/>
+から *nIDCount*<br/>
 
 ### <a name="return-value"></a>戻り値
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
-## <a name="cmfcstatusbarsetpaneanimation"></a><a name="setpaneanimation"></a>CMFC ステータスバー::セットペインアニメーション
+## <a name="cmfcstatusbarsetpaneanimation"></a><a name="setpaneanimation"></a> CMFCStatusBar:: Setて Animation
 
 指定したペインにアニメーションを割り当てます。
 
@@ -588,24 +584,24 @@ void SetPaneAnimation(
 ### <a name="parameters"></a>パラメーター
 
 *nIndex*<br/>
-[in]アニメーションを割り当てるペインのインデックスを指定します。
+からアニメーションの割り当て先となるペインのインデックスを指定します。
 
-*一覧*<br/>
-[in]アニメーション フレームを保持するイメージ リストへのハンドルを指定します。
+*hImageList*<br/>
+からアニメーションフレームを保持するイメージリストへのハンドルを指定します。
 
-*nフレームレート*<br/>
-[in]アニメーションのフレーム レートをミリ秒単位で指定します。
+*nFrameRate レート*<br/>
+からアニメーションのフレームレートをミリ秒単位で指定します。
 
-*b更新*<br/>
-[in]TRUE の場合は、ペインの内容を直ちに更新します。 それ以外の場合、ペインの内容は無効化されたときに更新されます。
+*bUpdate*<br/>
+からTRUE の場合は、すぐにウィンドウコンテンツを更新します。 それ以外の場合は、無効になったときにウィンドウの内容が更新されます。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
-現在のアニメーションを無効にする場合は、NULL`hImageList`を設定して呼び出します`SetPaneAnimation`。
+現在のアニメーションを無効にする場合は、 `SetPaneAnimation` `hImageList` を NULL に設定してを呼び出します。
 
-## <a name="cmfcstatusbarsetpanebackgroundcolor"></a><a name="setpanebackgroundcolor"></a>コントロール の状態バー::設定ウィンドウの背景色
+## <a name="cmfcstatusbarsetpanebackgroundcolor"></a><a name="setpanebackgroundcolor"></a> CMFCStatusBar:: Set区画 Backgroundcolor
 
-ステータス バー ペインの背景色を設定します。
+ステータスバーペインの背景色を設定します。
 
 ```cpp
 void SetPaneBackgroundColor(
@@ -617,17 +613,17 @@ void SetPaneBackgroundColor(
 ### <a name="parameters"></a>パラメーター
 
 *nIndex*<br/>
-[in]新しい背景色を設定するペインのインデックスを指定します。
+から新しい背景色を設定するペインのインデックスを指定します。
 
 *clrBackground*<br/>
-[in]新しい背景色を指定します。
+から新しい背景色を指定します。
 
-*b更新*<br/>
-[in]TRUE の場合は、ペインの内容を直ちに更新します。 それ以外の場合は、ペインが別のメソッドによって無効になるまで、ペインの内容を更新しないでください。
+*bUpdate*<br/>
+からTRUE の場合は、すぐにウィンドウコンテンツを更新します。 それ以外の場合は、別の方法でペインが無効になるまで、ペインの内容を更新しないでください。
 
-## <a name="cmfcstatusbarsetpaneicon"></a><a name="setpaneicon"></a>ステータスバー::セットペインアイコン
+## <a name="cmfcstatusbarsetpaneicon"></a><a name="setpaneicon"></a> CMFCStatusBar:: Set区画アイコン
 
-ステータス バー ペインのアイコンを設定します。
+ステータスバーペインのアイコンを設定します。
 
 ```cpp
 void SetPaneIcon(
@@ -645,27 +641,27 @@ void SetPaneIcon(
 ### <a name="parameters"></a>パラメーター
 
 *nIndex*<br/>
-[in]イメージを設定するペインのインデックスを指定します。
+からイメージを設定するペインのインデックスを指定します。
 
-*Hicon*<br/>
-[in]ペイン イメージとして設定するアイコンへのハンドルを指定します。
+*hIcon*<br/>
+からペインイメージとして設定するアイコンへのハンドルを指定します。
 
-*b更新*<br/>
-[in]ペインの内容を直ちに更新するかどうかを指定します。
+*bUpdate*<br/>
+からペインコンテンツをすぐに更新するかどうかを指定します。
 
 *hBmp*<br/>
-[in]ペイン イメージとして設定するビットマップへのハンドルを指定します。
+からペインイメージとして設定するビットマップへのハンドルを指定します。
 
-*clr透明*<br/>
-[in]*hBmp*が示すビットマップの透明色を指定します。
+*clrTransparent*<br/>
+から *HBmp* が示すビットマップの透明色を指定します。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
-HICON または HBITMAP を透明色と共に渡して、ペインのイメージを設定できます。 イメージを表示しない場合は、イメージ ハンドルとして NULL 値を渡します。
+HICON または HBITMAP を透明色と共に渡して、ウィンドウのイメージを設定できます。 イメージを今後表示しない場合は、イメージハンドルとして NULL 値を渡します。
 
-[CMFCStatusBar::SetPaneAnimation](#setpaneanimation)が設定したアニメーションが実行されている場合、アニメーションは停止します。
+[CMFCStatusBar:: Setて animation](#setpaneanimation)で設定されている実行中のアニメーションがある場合、アニメーションは停止されます。
 
-## <a name="cmfcstatusbarsetpaneinfo"></a><a name="setpaneinfo"></a>ステータスバー::設定ウィンドウ情報
+## <a name="cmfcstatusbarsetpaneinfo"></a><a name="setpaneinfo"></a> CMFCStatusBar:: Setて Info
 
 ```cpp
 void SetPaneInfo(
@@ -677,16 +673,16 @@ void SetPaneInfo(
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*nインデックス*<br/>
-[in]*nID*<br/>
-[in]*nスタイル*<br/>
-[in]*幅*<br/>
+から *nIndex*<br/>
+から *nID*<br/>
+から *Nstyle*<br/>
+から *Cxwidth*<br/>
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
-## <a name="cmfcstatusbarsetpaneprogress"></a><a name="setpaneprogress"></a>ステータスバー::設定ウィンドウの進行状況
+## <a name="cmfcstatusbarsetpaneprogress"></a><a name="setpaneprogress"></a> CMFCStatusBar:: Set Progress
 
-指定したペインの進行状況バーの現在の進行状況インジケーターを設定します。
+指定したペインのプログレスバーの現在の進行状況インジケーターを設定します。
 
 ```cpp
 void SetPaneProgress(
@@ -698,21 +694,21 @@ void SetPaneProgress(
 ### <a name="parameters"></a>パラメーター
 
 *nIndex*<br/>
-[in]進行状況インジケーターを更新するペインのインデックスを指定します。
+からプログレスインジケーターを更新するペインのインデックスを指定します。
 
-*nカー*<br/>
-[in]進行状況インジケーターの現在の値を指定します。
+*nCurr*<br/>
+から進行状況インジケーターの現在の値を指定します。
 
-*b更新*<br/>
-[in]ペインを直ちに更新するかどうかを指定します。
+*bUpdate*<br/>
+からペインをすぐに更新するかどうかを指定します。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
-指定したペインの進行状況バーの進行状況インジケーターを更新する場合は、このメソッドを呼び出します。
+指定したペインのプログレスバーの進行状況インジケーターを更新する場合は、このメソッドを呼び出します。
 
-指定されたペインに対してこの関数を使用するには、最初に[CMFCStatusBar::EnablePaneProgressBar を](#enablepaneprogressbar)呼び出す必要があります。
+特定のペインに対してこの関数を使用するには、最初に [CMFCStatusBar:: Enablepane progressbar](#enablepaneprogressbar) を呼び出す必要があります。
 
-## <a name="cmfcstatusbarsetpanestyle"></a><a name="setpanestyle"></a>ステータスバー::セットペインスタイル
+## <a name="cmfcstatusbarsetpanestyle"></a><a name="setpanestyle"></a> CMFCStatusBar:: Setて Style
 
 ```cpp
 void SetPaneStyle(
@@ -722,12 +718,12 @@ void SetPaneStyle(
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*nインデックス*<br/>
-[in]*nスタイル*<br/>
+から *nIndex*<br/>
+から *Nstyle*<br/>
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
-## <a name="cmfcstatusbarsetpanetext"></a><a name="setpanetext"></a>ステータスバー::テキストを設定します。
+## <a name="cmfcstatusbarsetpanetext"></a><a name="setpanetext"></a> CMFCStatusBar:: Setて Text
 
 ```
 virtual BOOL SetPaneText(
@@ -738,15 +734,15 @@ virtual BOOL SetPaneText(
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*nインデックス*<br/>
-[in]*テキスト*<br/>
-[in]*b更新*<br/>
+から *nIndex*<br/>
+から *lpszNewText*<br/>
+から *bUpdate*<br/>
 
 ### <a name="return-value"></a>戻り値
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
-## <a name="cmfcstatusbarsetpanetextcolor"></a><a name="setpanetextcolor"></a>ステータスバー::テキストの色を設定します。
+## <a name="cmfcstatusbarsetpanetextcolor"></a><a name="setpanetextcolor"></a> CMFCStatusBar:: SetPaneTextColor
 
 指定したペインのテキストの色を設定します。
 
@@ -760,17 +756,17 @@ void SetPaneTextColor(
 ### <a name="parameters"></a>パラメーター
 
 *nIndex*<br/>
-[in]新しいテキストの色を割り当てるペインのインデックスを指定します。
+から新しいテキストの色を割り当てるペインのインデックスを指定します。
 
 *clrText*<br/>
-[in]テキストの色を指定します。
+からテキストの色を指定します。
 
-*b更新*<br/>
-[in]TRUE の場合は、ペインの内容を直ちに更新します。 それ以外の場合は、ペインが別のメソッドによって無効になるまで、ペインの内容を更新しないでください。
+*bUpdate*<br/>
+からTRUE の場合は、すぐにウィンドウコンテンツを更新します。 それ以外の場合は、別の方法でペインが無効になるまで、ペインの内容を更新しないでください。
 
-## <a name="cmfcstatusbarsetpanewidth"></a><a name="setpanewidth"></a>ステータスバー::ウィンドウ幅の設定
+## <a name="cmfcstatusbarsetpanewidth"></a><a name="setpanewidth"></a> CMFCStatusBar:: Set区画の幅
 
-ステータス バー ペインの幅を設定します。
+ステータスバーペインの幅を設定します。
 
 ```cpp
 void SetPaneWidth(
@@ -781,14 +777,14 @@ void SetPaneWidth(
 ### <a name="parameters"></a>パラメーター
 
 *nIndex*<br/>
-[in]新しい幅を設定するステータス バー ペインのインデックス。
+から新しい幅を設定するステータスバーペインのインデックス。
 
-*Cx*<br/>
-[in]ステータス バー ペインの新しい幅 (ピクセル単位)。
+*シリーズ*<br/>
+からステータスバーウィンドウの新しい幅 (ピクセル単位)。
 
-## <a name="cmfcstatusbarsettiptext"></a><a name="settiptext"></a>ステータスバー::テキストを設定します。
+## <a name="cmfcstatusbarsettiptext"></a><a name="settiptext"></a> CMFCStatusBar:: SetTipText
 
-ステータス バー ペインのツールヒント テキストを設定します。
+ステータスバーペインのツールヒントテキストを設定します。
 
 ```cpp
 void SetTipText(
@@ -799,14 +795,14 @@ void SetTipText(
 ### <a name="parameters"></a>パラメーター
 
 *nIndex*<br/>
-[in]ツールヒント テキストを割り当てるペインのインデックス。
+からツールヒントテキストの割り当て先となるペインのインデックス。
 
-*テキスト*<br/>
-[in]新しいツールヒント テキスト。
+*pszTipText*<br/>
+から新しいツールヒントのテキスト。
 
 ## <a name="see-also"></a>関連項目
 
-[階層グラフ](../../mfc/hierarchy-chart.md)<br/>
+[階層図](../../mfc/hierarchy-chart.md)<br/>
 [クラス](../../mfc/reference/mfc-classes.md)<br/>
-[CPane Class](../../mfc/reference/cpane-class.md)<br/>
-[クラス](../../mfc/reference/cstatusbar-class.md)
+[CPane クラス](../../mfc/reference/cpane-class.md)<br/>
+[CStatusBar クラス](../../mfc/reference/cstatusbar-class.md)

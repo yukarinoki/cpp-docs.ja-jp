@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3499
 ms.assetid: 6717de5c-ae0f-4024-bdf2-b5598009e7b6
-ms.openlocfilehash: 21d7424e727dab54ff507a8ec9a38db44df1806f
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: b49c868b696df75a5b5148d32fb286019c6293e4
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87228844"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90686138"
 ---
 # <a name="compiler-error-c3499"></a>コンパイラ エラー C3499
 
@@ -27,7 +27,7 @@ void の戻り値の型を持つように指定されているラムダは、値
 
 - ラムダ式の本体を構成するステートメントを結合して、単一のステートメントにする
 
-## <a name="example"></a>例
+## <a name="examples"></a>例
 
 次の例では、ラムダ式の本体に複数のステートメントが含まれており、値を返すものの、ラムダ式で戻り値の型が指定されていないため、C3499 が生成されます。
 
@@ -39,8 +39,6 @@ int main()
    [](int x) { int n = x * 2; return n; } (5); // C3499
 }
 ```
-
-## <a name="example"></a>例
 
 次の例では、C3499 について考えられる 2 つの解決策を示します。 最初の解決策では、ラムダ式の戻り値の型を指定します。 2 番目の解決策では、ラムダ式の本体を構成するステートメントを結合して、単一のステートメントにします。
 

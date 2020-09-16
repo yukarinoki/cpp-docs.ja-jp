@@ -5,12 +5,12 @@ helpviewer_keywords:
 - cast operators [C++]
 - () cast operator
 ms.assetid: 4c99eb92-1b19-4a5d-9840-5d8c29b8453e
-ms.openlocfilehash: 491e8ea3bc3ff81e88825700de6a549324a0d5af
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 6b1abfc4e2798f973951a24ea27f35b2dcf6cca7
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80190158"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90686320"
 ---
 # <a name="cast-operator-"></a>キャスト演算子: ()
 
@@ -28,7 +28,7 @@ unary-expression ( type-name ) cast-expression
 
 コンパイラは、型キャストが実行された後で、*cast-expression* を *type-name* 型として処理します。 キャストを使用すると、スカラー型オブジェクトの型を他のスカラー型との間で変換できます。 明示的な型キャストは、暗黙的な変換の結果を決定するのと同じ規則によって制限されます。 特定の型の実際のサイズまたは表現から、キャストにさらに制限が課せられる場合があります。
 
-## <a name="example"></a>例
+## <a name="examples"></a>例
 
 ```cpp
 // expre_CastOperator.cpp
@@ -47,8 +47,6 @@ int main()
     cout << "i = " << i << endl;
 }
 ```
-
-## <a name="example"></a>例
 
 ```cpp
 // expre_CastOperator2.cpp
@@ -118,10 +116,10 @@ Note that the cast changed the raw internal string
 Raw Bytes after cast:   Exciting
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [単項演算子を含む式](../cpp/expressions-with-unary-operators.md)<br/>
-[C++ の組み込み演算子、優先順位と結合規則](../cpp/cpp-built-in-operators-precedence-and-associativity.md)<br/>
+[C++ の演算子、優先順位と結合規則](../cpp/cpp-built-in-operators-precedence-and-associativity.md)<br/>
 [明示的な型変換演算子: ()](../cpp/explicit-type-conversion-operator-parens.md)<br/>
 [キャスト演算子](../cpp/casting-operators.md)<br/>
-[キャスト演算子](../c-language/cast-operators.md)
+[Cast 演算子](../c-language/cast-operators.md)

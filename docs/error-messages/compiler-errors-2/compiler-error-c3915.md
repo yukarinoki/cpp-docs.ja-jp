@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3915
 ms.assetid: 2b0a5e5f-3aec-4a4b-9157-233031817084
-ms.openlocfilehash: 26fdcd3b7989d9030249133e6dc1d277aa1a9f44
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: d83a837a24fe36b61d3f0fccae4dbe4e93cd3261
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74756280"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90686052"
 ---
 # <a name="compiler-error-c3915"></a>コンパイラ エラー C3915
 
@@ -21,7 +21,7 @@ ms.locfileid: "74756280"
 
 詳細については、「 [property](../../extensions/property-cpp-component-extensions.md)」を参照してください。
 
-## <a name="example"></a>使用例
+## <a name="examples"></a>例
 
 次の例では、C3915 が生成されます。
 
@@ -46,9 +46,7 @@ int main() {
 }
 ```
 
-## <a name="example"></a>使用例
-
-また、C3915 <xref:System.Reflection.DefaultMemberAttribute>で定義されているのと同じコンパイル単位で既定のインデクサーを使用しようとした場合にも発生する可能性があります。
+C3915 は、が定義されているのと同じコンパイル単位で既定のインデクサーを使用しようとした場合にも発生する可能性があり <xref:System.Reflection.DefaultMemberAttribute> ます。
 
 次の例では、C3915 が生成されます。
 

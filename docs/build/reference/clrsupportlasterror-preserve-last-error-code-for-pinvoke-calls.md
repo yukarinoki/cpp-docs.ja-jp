@@ -7,12 +7,12 @@ helpviewer_keywords:
 - /CLRSUPPORTLASTERROR linker option
 - -CLRSUPPORTLASTERROR linker option
 ms.assetid: b7057990-4154-4b1d-9fc9-6236f7be7575
-ms.openlocfilehash: 071846e18dfef6cad0b7c5fb983dac3f6c85a689
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: ccf13971bf77fb8e960b781e4a1aa2a0e06a5d61
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88839167"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90686104"
 ---
 # <a name="clrsupportlasterror-preserve-last-error-code-for-pinvoke-calls"></a>/CLRSUPPORTLASTERROR (PInvoke 呼び出しの最終エラー コードの保持)
 
@@ -49,7 +49,7 @@ ms.locfileid: "88839167"
 
 - 以下を参照してください。<xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.AdditionalOptions%2A>
 
-## <a name="example"></a>例
+## <a name="examples"></a>例
 
 次の例では、最後のエラーを変更するエクスポートされた関数を1つ持つネイティブ DLL を定義します。
 
@@ -65,8 +65,6 @@ __declspec(dllexport) double MySqrt(__int64 n) {
    return sqrt(double(n));
 }
 ```
-
-## <a name="example"></a>例
 
 次の例では、DLL を使用して、 **/CLRSUPPORTLASTERROR**の使用方法を示しています。
 

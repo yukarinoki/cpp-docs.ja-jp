@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3490
 ms.assetid: 7638559a-fd06-4527-a9c1-0c8ae68b3123
-ms.openlocfilehash: ea7341b9c587a764c7366fa7b7c89e4fc67bc7d8
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 76729f49358e2a05b425730517e88ba14f2909c6
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87230858"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90685725"
 ---
 # <a name="compiler-error-c3490"></a>コンパイラ エラー C3490
 
@@ -23,7 +23,7 @@ ms.locfileid: "87230858"
 
 - **`const`** メソッド宣言から修飾子を削除します。
 
-## <a name="example"></a>例
+## <a name="examples"></a>例
 
 次の例では、メソッドでメンバー変数を変更するため、C3490 が生成され `_i` **`const`** ます。
 
@@ -41,8 +41,6 @@ class C
    int _i;
 };
 ```
-
-## <a name="example"></a>例
 
 次の例では、メソッド宣言から修飾子を削除することによって、C3490 を解決し **`const`** ます。
 

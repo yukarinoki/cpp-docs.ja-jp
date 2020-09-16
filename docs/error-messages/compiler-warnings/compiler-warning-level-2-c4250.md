@@ -6,22 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C4250
 ms.assetid: d47f7249-6b5a-414b-b2d4-56e5d246a782
-ms.openlocfilehash: e0feb1cb7131b4388c87213a85ff1c921f636e1b
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 10064784e1124ac365475f00b3577d22f5e7f3f1
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80162037"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90686523"
 ---
 # <a name="compiler-warning-level-2-c4250"></a>コンパイラの警告 (レベル 2) C4250
 
 ' class1 ': 優先順位を使用して ' class2:: member ' を継承します
 
-2つ以上のメンバーが同じ名前を持っています。 このメンバーを格納している他のクラスの基底クラスであるため、`class2` 内の1つのが継承されます。
+2つ以上のメンバーが同じ名前を持っています。 の1つは、 `class2` このメンバーを格納している他のクラスの基本クラスであるため、継承されます。
 
-C4250 を抑制するには、 [warning](../../preprocessor/warning.md)プラグマを使用します。
+C4250 を抑制するには、 [warning](../../preprocessor/warning.md) プラグマを使用します。
 
 仮想基底クラスは複数の派生クラス間で共有されるため、派生クラスの名前は基底クラスの名前の方が優先されます。 たとえば、次のクラス階層については、ダイヤモンド内で継承される func の定義が2つあります。弱いクラスを介して vbc.exe:: func () インスタンス、および最も優先順位の高いクラスを使用して、最も優先順位の高い:: func () です。 ダイヤモンドクラスオブジェクトを介した func () の修飾されていない呼び出しでは、常に、プロセッサ:: func () インスタンスが呼び出されます。  Weak クラスが func () のインスタンスを導入する場合、どちらの定義も優位ではなく、呼び出しにあいまいなフラグが設定されます。
+
+## <a name="examples"></a>例
 
 ```cpp
 // C4250.cpp
@@ -44,8 +46,6 @@ int main() {
    d.func();   // C4250
 }
 ```
-
-## <a name="example"></a>例
 
 次の例では、C4250 が生成されます。
 
@@ -77,8 +77,6 @@ int main() {
    cout << eObject.operator int() << endl;
 }
 ```
-
-## <a name="example"></a>例
 
 このサンプルでは、より複雑な状況を示します。 次の例では、C4250 が生成されます。
 

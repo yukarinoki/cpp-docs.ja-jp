@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C1202
 ms.assetid: c859adb8-17a7-4fa1-a1f3-5820b7bf3849
-ms.openlocfilehash: 08694e8df4e72d730f19e08db7370f7bd866266e
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 64e0ee6a98d7005bb2b15833f88c31d593b5b5c2
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74747216"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90686562"
 ---
 # <a name="fatal-error-c1202"></a>致命的なエラー C1202
 
@@ -19,7 +19,7 @@ ms.locfileid: "74747216"
 
 テンプレート定義が再帰的であるか、複雑さの制限を超えました。
 
-## <a name="example"></a>使用例
+## <a name="examples"></a>例
 
 次の例では C1202 が生成されます。
 
@@ -35,8 +35,6 @@ public:
 };
 Factorial<7> facSeven;
 ```
-
-## <a name="example"></a>使用例
 
 考えられる解決策。
 

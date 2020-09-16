@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3484
 ms.assetid: 2fe847fa-f6ee-4978-bc1d-b6dc6ae906ac
-ms.openlocfilehash: c9895a3e5a8ae7e941fccde2da85fedfb3d2c6dd
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: ded4a183f69e4903afb4c9dfeae22f7751ef76ad
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74743121"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90686281"
 ---
 # <a name="compiler-error-c3484"></a>コンパイラ エラー C3484
 
@@ -23,7 +23,7 @@ ms.locfileid: "74743121"
 
 - 戻り値の型の前に `->` を指定します。
 
-## <a name="example"></a>使用例
+## <a name="examples"></a>例
 
 次の例では C3484 が生成されます。
 
@@ -36,8 +36,6 @@ int main()
 }
 ```
 
-## <a name="example"></a>使用例
-
 次の例では、ラムダ式の戻り値の型の前に `->` を指定して C3484 を解決します。
 
 ```cpp
@@ -49,6 +47,6 @@ int main()
 }
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [ラムダ式](../../cpp/lambda-expressions-in-cpp.md)

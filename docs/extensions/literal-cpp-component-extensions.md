@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - literal keyword [C++]
 ms.assetid: 6b1a1f36-2e1d-4a23-8eb6-172f4f3c477f
-ms.openlocfilehash: 2470d5680f7538af2db7bda3611abad11b827970
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 2687352c02bed609ffaa60ee8b1df40b51126d21
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87214257"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90686731"
 ---
 # <a name="literal-ccli-and-ccx"></a>literal (C++/CLI および C++/CX)
 
@@ -21,13 +21,13 @@ ms.locfileid: "87214257"
 
 ## <a name="all-platforms"></a>すべてのプラットフォーム
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 (この言語機能にはランタイムに適用される特記事項がありません。)
 
 ## <a name="windows-runtime"></a>Windows ランタイム
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 (この言語機能には Windows ランタイムのみに適用される特記事項がありません。)
 
@@ -37,7 +37,7 @@ ms.locfileid: "87214257"
 
 ## <a name="common-language-runtime"></a>共通言語ランタイム
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>注釈
 
 **literal** とマークされたデータ メンバーは宣言時に初期化される必要があり、値は constant integral、enum、または string 型である必要があります。 初期化式の型から static const 型のデータ メンバーへの変換では、ユーザー定義の変換は必要ありません。
 
@@ -49,9 +49,9 @@ ms.locfileid: "87214257"
 
 **literal** は状況依存キーワードです。 詳細については、「[状況依存キーワード](context-sensitive-keywords-cpp-component-extensions.md)」を参照してください。
 
-## <a name="example"></a>例
+## <a name="examples"></a>例
 
-この例は、**リテラル**変数がを意味することを示して **`static`** います。
+この例は、 **リテラル** 変数がを意味することを示して **`static`** います。
 
 ```cpp
 // mcppv2_literal.cpp
@@ -64,8 +64,6 @@ int main() {
    int value = X::i;
 }
 ```
-
-## <a name="example"></a>例
 
 次の例は、メタデータでの literal の効果を示しています。
 
@@ -87,8 +85,6 @@ public ref struct A {
 ```
 .field public static literal int32 lit = int32(0x0000000A)
 ```
-
-## <a name="example"></a>例
 
 C# で作成された次の例は、前の例で作成されたメタデータを参照し、**literal** 変数と **static const** 変数の効果を示しています。
 

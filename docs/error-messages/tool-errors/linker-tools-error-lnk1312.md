@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - LNK1312
 ms.assetid: 48284abb-d849-43fc-ab53-45aded14fd8a
-ms.openlocfilehash: e462d24f2eb54718ba73617146aab96bb14a66df
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: 69af2bd2c22fdb1188cf0b7119791e451e80f966
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74990905"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90686497"
 ---
 # <a name="linker-tools-error-lnk1312"></a>リンカ ツール エラー LNK1312
 
 ファイルが無効であるか壊れています: アセンブリをインポートできません
 
-アセンブリをビルドするときに、 **/clr**でコンパイルされたモジュールまたはアセンブリ以外のファイルが、 **/assemblymodule**リンカーオプションに渡されました。  オブジェクトファイルを **/Dns モジュール**に渡した場合は、 **/assemblymodule**ではなく、直接リンカーにオブジェクトを渡します。
+アセンブリをビルドするときに、 **/clr** でコンパイルされたモジュールまたはアセンブリ以外のファイルが、 **/assemblymodule** リンカーオプションに渡されました。  オブジェクトファイルを **/Dns モジュール**に渡した場合は、 **/assemblymodule**ではなく、直接リンカーにオブジェクトを渡します。
 
-## <a name="example"></a>使用例
+## <a name="examples"></a>例
 
 次の例では、.obj ファイルを作成しました。
 
@@ -31,8 +31,6 @@ public:
    int i;
 };
 ```
-
-## <a name="example"></a>使用例
 
 次の例では、LNK1312 が生成されます。
 

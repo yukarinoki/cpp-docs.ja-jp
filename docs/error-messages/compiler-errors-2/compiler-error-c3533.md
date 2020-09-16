@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3533
 ms.assetid: a68b1ba5-466e-4190-a1a4-505ccfe548b7
-ms.openlocfilehash: 18ca9f7d61d96dcc81935bd3563f57bc37da8cd7
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 4e3c773d0498a35c7b5d053268bff26f9943103b
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87228805"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90686770"
 ---
 # <a name="compiler-error-c3533"></a>コンパイラ エラー C3533
 
@@ -23,7 +23,7 @@ ms.locfileid: "87228805"
 
 1. **`auto`** パラメーター宣言からキーワードを削除します。
 
-## <a name="example"></a>例
+## <a name="examples"></a>例
 
 次の例では、キーワードを使用して関数パラメーターを宣言 **`auto`** し、 **/zc: auto**を指定してコンパイルするため、C3533 が生成されます。
 
@@ -32,8 +32,6 @@ ms.locfileid: "87228805"
 // Compile with /Zc:auto
 void f(auto j) {} // C3533
 ```
-
-## <a name="example"></a>例
 
 次の例では、C3533 を C++ 14 モードで生成します。これは、キーワードを使用してテンプレートパラメーターを宣言 **`auto`** し、 **/zc: auto**を指定してコンパイルするためです。(C++ 17 では、これは、型が推測される単一の非型テンプレートパラメーターを持つクラステンプレートの有効な定義です)。
 

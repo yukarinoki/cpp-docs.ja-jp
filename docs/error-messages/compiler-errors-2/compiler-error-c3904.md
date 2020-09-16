@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C3904
 ms.assetid: 08297605-e4f2-4c6c-b637-011f1fd40631
-ms.openlocfilehash: 1861810f4598fa81d1b7662a57651b1648de1317
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: b2c5737a4442761cbaa84b532907e579eddb423d
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74749049"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90686066"
 ---
 # <a name="compiler-error-c3904"></a>コンパイラ エラー C3904
 
 ' property_accessor ': 数値パラメーターを指定しなければなりません
 
-`get` のパラメーターの数を確認し、プロパティディメンションに対してメソッドを `set` します。
+`get`プロパティディメンションに対して、およびメソッドのパラメーターの数を確認し `set` ます。
 
-- `get` メソッドのパラメーターの数は、プロパティの次元数と同じであるか、インデックスが設定されていないプロパティの場合は0である必要があります。
+- メソッドのパラメーターの数は、 `get` プロパティの次元数と同じであるか、またはインデックスが設定されていないプロパティの場合は0である必要があります。
 
-- `set` メソッドのパラメーターの数は、プロパティの次元数より1つ多くする必要があります。
+- メソッドのパラメーターの数は、 `set` プロパティの次元数より1つ多くする必要があります。
 
 詳細については、「 [property](../../extensions/property-cpp-component-extensions.md)」を参照してください。
 
-## <a name="example"></a>使用例
+## <a name="examples"></a>例
 
 次の例では、C3904 が生成されます。
 
@@ -46,8 +46,6 @@ ref class X {
    };
 };
 ```
-
-## <a name="example"></a>使用例
 
 次の例では、C3904 が生成されます。
 
