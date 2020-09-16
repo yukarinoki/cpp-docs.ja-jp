@@ -9,12 +9,12 @@ helpviewer_keywords:
 - operators [C++], type of an expression
 - operators [C++], deduce expression type
 ms.assetid: 6dcf8888-8196-4f13-af50-51e3797255d4
-ms.openlocfilehash: 270500d2353c2d14a23ddad378521488cdec136f
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: 9e769bbef66bd1b55b9d445874f00d37a736025e
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88561389"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90683482"
 ---
 # <a name="decltype--c"></a>decltype  (C++)
 
@@ -33,7 +33,7 @@ ms.locfileid: "88561389"
 
 *式*パラメーターの型。
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>注釈
 
 **`decltype`** 型指定子は、Visual Studio 2010 以降のバージョンでサポートされており、ネイティブコードまたはマネージコードと共に使用できます。 `decltype(auto)` (C++14) は Visual Studio 2015 以降でサポートされています。
 
@@ -56,7 +56,7 @@ const A* a = new A();
 
 次に、次の表に示す4つのステートメントによって返される型を確認し **`decltype`** ます。
 
-|ステートメント|Type|Notes|
+|ステートメント|種類|メモ|
 |---------------|----------|-----------|
 |`decltype(fx());`|`const int&&`|への [右辺](../cpp/rvalue-reference-declarator-amp-amp.md) 値参照 **`const int`** 。|
 |`decltype(var);`|**`int`**|変数 `var` の型。|
@@ -100,7 +100,7 @@ decltype(auto) myFunc(T&& t, U&& u)
 
 このシナリオでは、型指定子を使用せずに適切な型の式を記述することはできません **`decltype`** 。 **`decltype`** 型指定子は、関数が参照型を返すかどうかに関する必要な情報を失うことはないため、汎用転送関数を有効にします。 転送関数のコード例については、前の `myFunc` テンプレート関数の例を参照してください。
 
-## <a name="example"></a>例
+## <a name="examples"></a>例
 
 次のコード例は、テンプレート関数 `Plus()` の遅延指定の戻り値の型を宣言します。 関数は、 `Plus` オーバーロードを使用して2つのオペランドを処理し **`operator+`** ます。 そのため、関数のプラス演算子 ( **`+`** ) と戻り値の型の解釈は、関数の `Plus` 引数の型によって異なります。
 
@@ -173,8 +173,6 @@ Plus(dx, dy) = 13.5
 Hello, world!
 x3.Dump() = 42
 ```
-
-## <a name="example"></a>例
 
 **Visual Studio 2017 以降:** コンパイラは **`decltype`** 、テンプレートがインスタンス化されるのではなく、宣言されている場合に引数を解析します。 したがって、引数に非依存の特殊化が見つかった場合は、 **`decltype`** インスタンス化時に遅延されることはなく、直ちに処理され、結果のエラーはその時点で診断されます。
 

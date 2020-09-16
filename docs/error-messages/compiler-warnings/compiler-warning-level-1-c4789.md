@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C4789
 ms.assetid: 5800c301-5afb-4af0-85c1-ceb54d775234
-ms.openlocfilehash: 36278615631d017db1d1c2fc4eecf8c1612892de
-ms.sourcegitcommit: a930a9b47bd95599265d6ba83bb87e46ae748949
+ms.openlocfilehash: 1e089c45598a53ff337e389feb2a6983a2997041
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/22/2020
-ms.locfileid: "76518401"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90684626"
 ---
 # <a name="compiler-warning-level-1-c4789"></a>コンパイラの警告 (レベル 1) C4789
 
 > サイズが*N*バイトのバッファー '*identifier*' がオーバーランします。*M*バイトはオフセット*L*から書き込まれます
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>注釈
 
 特定の C ランタイム (CRT) 関数が使用されている場合、 **C4789**はバッファーオーバーランについて警告します。 また、パラメーターが渡されたときや割り当てが行われたときに、サイズの不一致を報告することもできます。 コンパイル時にデータサイズがわかっている場合は、警告が発生する可能性があります。 この警告は、一般的なデータ サイズの不一致の検出が回避されるような状況のためのものです。
 
-**C4789**は、コンパイル時に小さすぎることがわかっているデータブロックにデータがコピーされるときに警告を出します。
+**C4789** は、コンパイル時に小さすぎることがわかっているデータブロックにデータがコピーされるときに警告を出します。
 
 この警告は、次のいずれかの CRT 関数の組み込み形式をコピーで使用した場合に発生します。
 
@@ -33,7 +33,7 @@ ms.locfileid: "76518401"
 
 また、パラメーターをより大きなデータ型にキャストしてから、左辺値参照からコピー割り当てを作成した場合にも、警告が表示されます。
 
-ビジュアルC++では、実行されないコードパスに対してこの警告が生成されることがあります。 次の例に示すように、`#pragma` を使用して、警告を一時的に無効にすることができます。
+Visual C++ では、実行されないコードパスに対してこの警告が生成されることがあります。 次の例に示すように、`#pragma` を使用して、警告を一時的に無効にすることができます。
 
 ```cpp
 #pragma warning( push )
@@ -42,9 +42,9 @@ ms.locfileid: "76518401"
 #pragma warning( pop )
 ```
 
-この表現を使用C++すると、その特定のコードブロックに対する警告がビジュアルに生成されません。 `#pragma warning(push)` は、`#pragma warning(disable: 4789)` によって変更される前に、既存の状態を維持します。 `#pragma warning(pop)` はプッシュされた状態を復元し、`#pragma warning(disable:4789)` の効果を削除します。 プリプロセッサディレクティブ `#pragma`のC++詳細については、「 [Warning](../../preprocessor/warning.md) [ディレクティブと Pragma ディレクティブ」および「__Pragma キーワード](../../preprocessor/pragma-directives-and-the-pragma-keyword.md)」を参照してください。
+この表現形式は、その特定のコードブロックに対して警告を生成することを Visual C++ します。 `#pragma warning(push)` は、`#pragma warning(disable: 4789)` によって変更される前に、既存の状態を維持します。 `#pragma warning(pop)` はプッシュされた状態を復元し、`#pragma warning(disable:4789)` の効果を削除します。 C++ プリプロセッサディレクティブの詳細につい `#pragma` ては、「 [warning](../../preprocessor/warning.md) [ディレクティブと Pragma ディレクティブ」および「__Pragma キーワード](../../preprocessor/pragma-directives-and-the-pragma-keyword.md)」を参照してください。
 
-## <a name="example"></a>使用例
+## <a name="examples"></a>例
 
 次の例では C4789 が生成されます。
 
@@ -67,8 +67,6 @@ int main()
     memcpy(&c, &w, sizeof(wchar_t));
 }
 ```
-
-## <a name="example"></a>使用例
 
 次の例でも C4789 が生成されます。
 

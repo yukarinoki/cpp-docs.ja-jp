@@ -6,25 +6,25 @@ f1_keywords:
 helpviewer_keywords:
 - C4744
 ms.assetid: f2a7d0b5-afd5-4926-abc3-cfbd367e3ff5
-ms.openlocfilehash: f932b1bcdf011678d4f85e0edf1e116a954b59fe
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 38a05c04181efb95ec3e7549c40056b8d223e128
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81367379"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90685555"
 ---
 # <a name="compiler-warning-level-1-c4744"></a>コンパイラの警告 (レベル 1) C4744
 
-'var' は 'file1' と 'file2' で異なる型を持っています: 'type1' と 'type2'
+' var ' は、' file1 ' および ' file2 ' で異なる型を含んでいます: ' type1 ' と ' type1 '
 
-2 つのファイルで参照または定義された外部変数のファイルのタイプは異なります。  解決するには、型定義を同じにするか、いずれかのファイルの変数名を変更します。
+2つのファイルで参照または定義されている外部変数の型は、これらのファイルによって異なります。  解決するには、型定義を同じにするか、いずれかのファイルで変数名を変更します。
 
-C4744 は、ファイルが /GL でコンパイルされる場合にのみ出力されます。  詳細については、「[/GL (プログラム全体の最適化)](../../build/reference/gl-whole-program-optimization.md)」を参照してください。
+C4744 は、ファイルが/GL. でコンパイルされた場合にのみ生成されます。  詳細については、「[/GL (プログラム全体の最適化)](../../build/reference/gl-whole-program-optimization.md)」を参照してください。
 
 > [!NOTE]
-> C4744 は、C++ では変数名が型情報で修飾されるため、通常 C (C++ ではない) ファイルで発生します。  サンプル (下) が C++ としてコンパイルされると、リンカ エラー LNK2019 が表示されます。
+> C4744 は、通常、c++ ではなく C (C++) ファイルで発生します。これは、C++ では変数名が型情報で修飾されるためです。  サンプル (下記参照) が C++ としてコンパイルされると、リンカーエラー LNK2019 が発生します。
 
-## <a name="example"></a>例
+## <a name="examples"></a>例
 
 このサンプルには、最初の定義が含まれています。
 
@@ -34,9 +34,7 @@ C4744 は、ファイルが /GL でコンパイルされる場合にのみ出力
 int global;
 ```
 
-## <a name="example"></a>例
-
-次のサンプルでは、C4744 が生成されます。
+次の例では、C4744 が生成されます。
 
 ```c
 // C4744b.c

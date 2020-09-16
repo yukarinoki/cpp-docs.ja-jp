@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - LNK4227
 ms.assetid: 941a0414-9964-4e02-8487-f9daa42ef7f9
-ms.openlocfilehash: 7b75cff4f03370951245bde1b485d538ffdb4007
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 7ac3ef2b6ad8f05a454dafe5e6a7ea0abc07a066
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80182943"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90685490"
 ---
 # <a name="linker-tools-warning-lnk4227"></a>リンカー ツールの警告 LNK4227
 
@@ -23,13 +23,13 @@ ms.locfileid: "80182943"
 
 - コンパイル内の1つ以上のソースコードファイル。
 
-たとえば、同じ名前の2つのグローバル関数があり、パラメーター情報が異なる方法で宣言されている (つまり、すべての compilands で宣言が一致しない) 場合、LNK4227 が発生する可能性があります。 各 .obj ファイルに対して ildasm.exe の*object_file*を使用して、型がどのように異なるかを確認します。
+たとえば、同じ名前の2つのグローバル関数があり、パラメーター情報が異なる方法で宣言されている (つまり、すべての compilands で宣言が一致しない) 場合、LNK4227 が発生する可能性があります。 各 .obj ファイルに対して ildasm.exe/TEXT/METADATA *object_file* を使用して、型がどのように異なるかを確認します。
 
 LNK4227 は、別のツールで発生した問題を報告するためにも使用されます。 詳細については、警告メッセージを検索してください。
 
 警告を解決するには、メタデータの問題を修正する必要があります。
 
-## <a name="example"></a>例
+## <a name="examples"></a>例
 
 LNK4227 は、参照されたアセンブリがそれを参照するアセンブリとは異なる方法で署名された場合に生成されます。
 
@@ -62,9 +62,7 @@ ref class MyClass
 };
 ```
 
-## <a name="example"></a>例
-
-LNK4227 は、間違った形式のバージョン番号がアセンブリ属性に渡された場合にも生成できます。  ' * ' 表記は、`AssemblyVersionAttribute`に固有です。  この警告を解決するには、`AssemblyVersionAttribute`以外のバージョン属性の数値のみを使用します。
+LNK4227 は、間違った形式のバージョン番号がアセンブリ属性に渡された場合にも生成できます。  ' * ' 表記は、に固有です `AssemblyVersionAttribute` 。  この警告を解決するには、以外のバージョン属性の数値のみを使用 `AssemblyVersionAttribute` します。
 
 次の例では、LNK4227 が生成されます。
 

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - LNK4248
 ms.assetid: e40523ff-e3cb-4ba6-ab79-23f0f339f6cf
-ms.openlocfilehash: 4ba05ef067c539dc9c0aca6dc2a395748fd217a2
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: 81f3c2abc41673e6e4c9e3f59ff1dd515e1cf365
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74988102"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90685426"
 ---
 # <a name="linker-tools-warning-lnk4248"></a>リンカー ツールの警告 LNK4248
 
@@ -25,13 +25,13 @@ LNK4248 は、msil モジュール ( **/clr**でコンパイルされた) 内の
 
 ただし、前方型宣言が CLR 型である場合、リンカーのネイティブ型定義が正しくない可能性があります。
 
-詳細については、「[/clr (共通言語ランタイムのコンパイル)](../../build/reference/clr-common-language-runtime-compilation.md)」を参照してください。
+詳細については、「 [/clr (共通言語ランタイムのコンパイル)](../../build/reference/clr-common-language-runtime-compilation.md)」を参照してください。
 
 ### <a name="to-correct-this-error"></a>このエラーを解決するには
 
 1. MSIL モジュールで型定義を指定します。
 
-## <a name="example"></a>使用例
+## <a name="examples"></a>例
 
 次の例では、LNK4248 が生成されます。 解決する構造体を定義します。
 
@@ -47,8 +47,6 @@ int main() {
 }
 ```
 
-## <a name="example"></a>使用例
-
 次の例には、型の事前定義が含まれています。
 
 ```cpp
@@ -63,8 +61,6 @@ int main() {
    return valueA(a);
 }
 ```
-
-## <a name="example"></a>使用例
 
 次の例では、LNK4248 が生成されます。
 

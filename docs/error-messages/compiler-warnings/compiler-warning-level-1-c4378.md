@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - C4378
 ms.assetid: d08e11ef-891a-4752-9a5e-360e7394acf7
-ms.openlocfilehash: be3cdaac79c60143648985c1782df76422a1fc98
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 20897ba27350835b4b896c5afd89790331c59220
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80162830"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90685607"
 ---
 # <a name="compiler-warning-level-1-c4378"></a>コンパイラの警告 (レベル 1) C4378
 
 初期化子を実行するには、関数ポインターを取得する必要があります。System:: ModuleHandle:: ResolveMethodHandle を検討します。
 
-**/Clr**の下では、初期化子シンボルに関数のポインターではなく関数トークンが含まれています。  <xref:System.ModuleHandle.ResolveMethodHandle%2A>を使用して、トークンをポインターに変換する必要があります。
+**/Clr**の下では、初期化子シンボルに関数のポインターではなく関数トークンが含まれています。  を使用して、トークンをポインターに変換する必要があり <xref:System.ModuleHandle.ResolveMethodHandle%2A> ます。
 
-## <a name="example"></a>例
+## <a name="examples"></a>例
 
 次の例では、C4378 が生成されます。
 
@@ -62,8 +62,6 @@ int main () {
    InitializeObjects();
 }
 ```
-
-## <a name="example"></a>例
 
 次の例は、C4378 を解決する方法を示しています。
 

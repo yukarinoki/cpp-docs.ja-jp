@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - db_command attribute
 ms.assetid: 714c3e15-85d7-408b-9a7c-88505c3e5d24
-ms.openlocfilehash: d9ee1ed1bede6a5deaeae0be3783d6abbd05a0d9
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 868ff862cc41543c8ebc7880a5d1a9a7e6b103f3
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88831373"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90684587"
 ---
 # <a name="db_command"></a>db_command
 
@@ -46,7 +46,7 @@ OLE DB コマンドのテキストを含むコマンド文字列。 簡単な例
 
 > **( \[ ** *bindtype* **]** *szVar1* \[ 、 *szVar2* \[ 、 *nVar3* \[ 、...]] **)**
 
-各値の説明:
+ここで、
 
 - **(** は、データ バインディング ブロックの開始を示します。
 
@@ -113,7 +113,7 @@ Optionalフェッチする行の数を指定する整数値。
 
 *bulk_fetch* が 1 より小さい場合は、 `SetRows` は 0 を返します。
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>注釈
 
 OLE DB コンシューマーは、**db_command** によって作成された [CCommand](../../data/oledb/ccommand-class.md) オブジェクトを使用して、コマンドを実行します。
 
@@ -123,7 +123,7 @@ OLE DB コンシューマーは、**db_command** によって作成された [CC
 
 コンシューマー属性プロバイダーがこの属性をクラスに適用すると、コンパイラはクラスの名前を \_ *classname*アクセサーに変更します。ここで、 *classname*はクラスに指定した名前になります。また、コンパイラは*classname と*いうクラスを作成します。これは classname アクセサーから派生し \_ *YourClassName*ます。  クラス ビューでは、両方のクラスが表示されます。
 
-## <a name="example"></a>例
+## <a name="examples"></a>例
 
 この例では、テーブルから state 列が 'CA' と一致する姓と名を選択するコマンドを定義しています。 **db_command** は、ウィザードで生成される [OpenAll and CloseAll](../../data/oledb/consumer-wizard-generated-methods.md)などの関数および `CRowset` MoveNext [などの](../../data/oledb/crowset-movenext.md)メンバー関数を呼び出すことができる行セットを作成して読み取ります。
 
@@ -163,8 +163,6 @@ struct CAuthors {
 };
 ```
 
-## <a name="example"></a>例
-
 ```cpp
 // db_command.cpp
 // compile with: /c
@@ -192,8 +190,6 @@ int main(int argc, _TCHAR* argv[]) {
    CoUninitialize();
 }
 ```
-
-## <a name="example"></a>例
 
 この例では、データ ソース クラス `db_source` で `CMySource`を使用し、コマンド クラス `db_command` と `CCommand1` で `CCommand2`を使用します。
 

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4754
 ms.assetid: e0e4606a-754a-4f42-a274-21a34978d21d
-ms.openlocfilehash: f55d40044fef58275ad0e1fbd281b5f1af43c243
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 85c99feee72d94f50ec19394cf8aec7a3c9811bc
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80198134"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90684981"
 ---
 # <a name="compiler-warning-level-4-c4754"></a>コンパイラの警告 (レベル 4) C4754
 
@@ -21,7 +21,7 @@ ms.locfileid: "80198134"
 
 整数変換の規則は複雑であり、気付きにくい落とし穴が数多くあります。 各 C4754 警告を修正する代わりに、 [SafeInt ライブラリ](../../safeint/safeint-library.md)を使用するようにコードを更新することもできます。
 
-## <a name="example"></a>例
+## <a name="examples"></a>例
 
 このサンプルでは、C4754 が生成されます。
 
@@ -59,8 +59,6 @@ unsigned long long x =
    (unsigned long long)a + (unsigned long long)b;
 ```
 
-## <a name="example"></a>例
-
 次の例でも C4754 警告が出力されます。
 
 ```cpp
@@ -96,7 +94,7 @@ Warning C4754: Conversion rules for arithmetic operations in the comparison at C
 if (a + (unsigned long)sizeof(unsigned long) < a)
 ```
 
-**メモ**コンパイラの警告で参照されている行番号は、ステートメントの最後の行です。 複数の行にまたがる複雑な条件文に関する警告メッセージでは、コードの欠陥がある行は、報告された行の前の数行になる場合があります。 次に例を示します。
+**メモ** コンパイラの警告で参照されている行番号は、ステートメントの最後の行です。 複数の行にまたがる複雑な条件文に関する警告メッセージでは、コードの欠陥がある行は、報告された行の前の数行になる場合があります。 次に例を示します。
 
 ```cpp
 unsigned long a;

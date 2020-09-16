@@ -13,12 +13,12 @@ helpviewer_keywords:
 - stdext::checked_array_iterator [C++], reference
 - stdext::checked_array_iterator [C++], base
 ms.assetid: 7f07185e-d588-4ae3-9c4f-84ec4aa25a28
-ms.openlocfilehash: f177a45e700ab15852cd9c6d947873d247cf3828
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 467a94212d7b1e9d28a3229660b8a8619993b201
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81363872"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90684942"
 ---
 # <a name="checked_array_iterator-class"></a>checked_array_iterator クラス
 
@@ -40,7 +40,7 @@ class checked_array_iterator;
 
 チェックを行う反復子機能の詳細とコード例については、「[チェックを行う反復子](../standard-library/checked-iterators.md)」をご覧ください。
 
-## <a name="example"></a>例
+## <a name="examples"></a>例
 
 次の例は、チェックを行う配列反復子を定義および使用する方法を示しています。
 
@@ -50,7 +50,7 @@ class checked_array_iterator;
 copy(a, a + 5, checked_array_iterator<int*>(b, 5));
 ```
 
-to
+を
 
 ```cpp
 copy(a, a + 5, checked_array_iterator<int*>(b, 4));
@@ -90,8 +90,6 @@ int main() {
 ( 0 1 2 3 4 )
 */
 ```
-
-## <a name="example"></a>例
 
 C++ 標準ライブラリ アルゴリズムを使用する場合の `checked_array_iterator` クラスの必要性を回避するため、動的に割り当てられた配列の代わりに `vector` を使用することを検討してください。 この方法を次の例に示します。
 
@@ -141,17 +139,17 @@ int main()
 
 ### <a name="constructors"></a>コンストラクター
 
-|Constructor|説明|
+|コンストラクター|説明|
 |-|-|
 |[checked_array_iterator](#checked_array_iterator)|基になる反復子の既定の `checked_array_iterator` または `checked_array_iterator` を構築します。|
 
 ### <a name="typedefs"></a>Typedefs
 
-|種類の名前。|説明|
+|型名|説明|
 |-|-|
 |[difference_type](#difference_type)|同じコンテナー内の要素を参照する 2 つの `checked_array_iterator` の違いを提供する型。|
-|[ポインター (pointer)](#pointer)|`checked_array_iterator` によってアドレス指定される要素へのポインターを提供する型。|
-|[参照](#reference)|`checked_array_iterator` によってアドレス指定される要素への参照を提供する型。|
+|[pointer](#pointer)|`checked_array_iterator` によってアドレス指定される要素へのポインターを提供する型。|
+|[reference](#reference)|`checked_array_iterator` によってアドレス指定される要素への参照を提供する型。|
 
 ### <a name="member-functions"></a>メンバー関数
 
@@ -161,31 +159,31 @@ int main()
 
 ### <a name="operators"></a>オペレーター
 
-|演算子|説明|
+|演算子|[説明]|
 |-|-|
-|[演算子==](#op_eq_eq)|2 つの `checked_array_iterator` が等しいかどうかをテストします。|
-|[演算子!=](#op_neq)|2 つの `checked_array_iterator` が等しくないかどうかをテストします。|
-|[演算子<](#op_lt)|演算子の左側の `checked_array_iterator` オブジェクトが右側の `checked_array_iterator` オブジェクトより小さいかどうかをテストします。|
-|[演算子>](#op_gt)|演算子の左側の `checked_array_iterator` オブジェクトが右側の `checked_array_iterator` オブジェクトより大きいかどうかをテストします。|
-|[演算子<=](#op_lt_eq)|演算子の左側の `checked_array_iterator` が右側の `checked_array_iterator` 以下かどうかをテストします。|
-|[演算子>=](#op_gt_eq)|演算子の左側の `checked_array_iterator` が右側の `checked_array_iterator` 以上かどうかをテストします。|
-|[演算子*](#op_star)|`checked_array_iterator` がアドレス指定する要素を返します。|
-|[オペレーター->](#op_arrow)|`checked_array_iterator` によってアドレス指定される要素へのポインターを返します。|
-|[演算子++](#op_add_add)|`checked_array_iterator` を次の要素にインクリメントします。|
-|[演算子 --](#operator--)|`checked_array_iterator` を直前の要素にデクリメントします。|
-|[演算子 +=](#op_add_eq)|指定したオフセットを `checked_array_iterator` に追加します。|
-|[演算子+](#op_add)|反復子にオフセットを追加し、新しいオフセット位置に挿入された要素をアドレス指定する新しい `checked_array_iterator` アドレスを返します。|
-|[演算子-=](#operator-_eq)|指定したオフセットを `checked_array_iterator` からデクリメントします。|
-|[演算子-](#operator-)|反復子からオフセットをデクリメントし、新しいオフセット位置に挿入された要素をアドレス指定する新しい `checked_array_iterator` アドレスを返します。|
+|[operator = =](#op_eq_eq)|2 つの `checked_array_iterator` が等しいかどうかをテストします。|
+|[operator! =](#op_neq)|2 つの `checked_array_iterator` が等しくないかどうかをテストします。|
+|[<演算子 ](#op_lt)|演算子の左側の `checked_array_iterator` オブジェクトが右側の `checked_array_iterator` オブジェクトより小さいかどうかをテストします。|
+|[>演算子 ](#op_gt)|演算子の左側の `checked_array_iterator` オブジェクトが右側の `checked_array_iterator` オブジェクトより大きいかどうかをテストします。|
+|[operator<=](#op_lt_eq)|演算子の左側の `checked_array_iterator` が右側の `checked_array_iterator` 以下かどうかをテストします。|
+|[operator>=](#op_gt_eq)|演算子の左側の `checked_array_iterator` が右側の `checked_array_iterator` 以上かどうかをテストします。|
+|[operator](#op_star)|`checked_array_iterator` がアドレス指定する要素を返します。|
+|[演算子->](#op_arrow)|`checked_array_iterator` によってアドレス指定される要素へのポインターを返します。|
+|[+ + 演算子](#op_add_add)|`checked_array_iterator` を次の要素にインクリメントします。|
+|[operator--](#operator--)|`checked_array_iterator` を直前の要素にデクリメントします。|
+|[演算子 + =](#op_add_eq)|指定したオフセットを `checked_array_iterator` に追加します。|
+|[演算子 +](#op_add)|反復子にオフセットを追加し、新しいオフセット位置に挿入された要素をアドレス指定する新しい `checked_array_iterator` アドレスを返します。|
+|[operator-=](#operator-_eq)|指定したオフセットを `checked_array_iterator` からデクリメントします。|
+|[operator](#operator-)|反復子からオフセットをデクリメントし、新しいオフセット位置に挿入された要素をアドレス指定する新しい `checked_array_iterator` アドレスを返します。|
 |[operator&#91;&#93;](#op_at)|`checked_array_iterator` によってアドレス指定される要素からの要素のオフセットへの参照を返します。|
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** \<iterator>
+**ヘッダー:**\<iterator>
 
 **名前空間:** stdext
 
-## <a name="checked_array_iteratorbase"></a><a name="base"></a>checked_array_iterator::ベース
+## <a name="checked_array_iteratorbase"></a><a name="base"></a> checked_array_iterator:: base
 
 その `checked_array_iterator` から基になる反復子を復元します。
 
@@ -193,7 +191,7 @@ int main()
 _Iterator base() const;
 ```
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 詳細については、「[チェックを行う反復子](../standard-library/checked-iterators.md)」を参照してください。
 
@@ -228,7 +226,7 @@ The iterator underlying rpos is bpos & it points to: 1.
 */
 ```
 
-## <a name="checked_array_iteratorchecked_array_iterator"></a><a name="checked_array_iterator"></a>checked_array_iterator::checked_array_iterator
+## <a name="checked_array_iteratorchecked_array_iterator"></a><a name="checked_array_iterator"></a> checked_array_iterator:: checked_array_iterator
 
 基になる反復子の既定の `checked_array_iterator` または `checked_array _iterator` を構築します。
 
@@ -243,16 +241,16 @@ checked_array_iterator(
 
 ### <a name="parameters"></a>パラメーター
 
-*Ptr*\
+*ポインター*\
 配列データへのポインター。
 
-*サイズ*\
+*幅*\
 配列のサイズ。
 
-*インデックス*\
+*化*\
 (省略可能) 反復子を初期化するための配列内の要素。  既定では、反復子は、配列内の最初の要素に初期化されます。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 詳細については、「[チェックを行う反復子](../standard-library/checked-iterators.md)」を参照してください。
 
@@ -292,7 +290,7 @@ int main() {
 */
 ```
 
-## <a name="checked_array_iteratordifference_type"></a><a name="difference_type"></a>checked_array_iterator::difference_type
+## <a name="checked_array_iteratordifference_type"></a><a name="difference_type"></a> checked_array_iterator::d ifference_type
 
 同じコンテナー内の要素を参照する 2 つの `checked_array_iterator` の違いを提供する型。
 
@@ -300,15 +298,15 @@ int main() {
 typedef typename iterator_traits<_Iterator>::difference_type difference_type;
 ```
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 `checked_array_iterator` の異なる型は、反復子の異なる型と同じです。
 
-コードサンプルについては[checked_array_iterator::operator[] を](#op_at)参照してください。
+コードサンプルについては、「 [checked_array_iterator:: operator []](#op_at) 」を参照してください。
 
 詳細については、「[チェックを行う反復子](../standard-library/checked-iterators.md)」を参照してください。
 
-## <a name="checked_array_iteratoroperator"></a><a name="op_eq_eq"></a>checked_array_iterator::演算子==
+## <a name="checked_array_iteratoroperator"></a><a name="op_eq_eq"></a> checked_array_iterator:: operator = =
 
 2 つの `checked_array_iterator` が等しいかどうかをテストします。
 
@@ -321,7 +319,7 @@ bool operator==(const checked_array_iterator<_Iterator>& right) const;
 *そうです*\
 等しいかどうかを確認する対象の `checked_array_iterator`。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 詳細については、「[チェックを行う反復子](../standard-library/checked-iterators.md)」を参照してください。
 
@@ -364,7 +362,7 @@ checked_array_iterators are not equal
 */
 ```
 
-## <a name="checked_array_iteratoroperator"></a><a name="op_neq"></a>checked_array_iterator::演算子!=
+## <a name="checked_array_iteratoroperator"></a><a name="op_neq"></a> checked_array_iterator:: operator! =
 
 2 つの `checked_array_iterator` が等しくないかどうかをテストします。
 
@@ -377,7 +375,7 @@ bool operator!=(const checked_array_iterator<_Iterator>& right) const;
 *そうです*\
 等しくないかどうかを確認する対象の `checked_array_iterator`。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 詳細については、「[チェックを行う反復子](../standard-library/checked-iterators.md)」を参照してください。
 
@@ -420,7 +418,7 @@ checked_array_iterators are not equal
 */
 ```
 
-## <a name="checked_array_iteratoroperatorlt"></a><a name="op_lt"></a>checked_array_iterator::演算子&lt;
+## <a name="checked_array_iteratoroperatorlt"></a><a name="op_lt"></a> checked_array_iterator:: operator&lt;
 
 演算子の左側の `checked_array_iterator` オブジェクトが右側の `checked_array_iterator` オブジェクトより小さいかどうかをテストします。
 
@@ -433,7 +431,7 @@ bool operator<(const checked_array_iterator<_Iterator>& right) const;
 *そうです*\
 等しくないかどうかを確認する対象の `checked_array_iterator`。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 詳細については、「[チェックを行う反復子](../standard-library/checked-iterators.md)」を参照してください。
 
@@ -476,7 +474,7 @@ checked_output_iterator2 is less than checked_output_iterator
 */
 ```
 
-## <a name="checked_array_iteratoroperatorgt"></a><a name="op_gt"></a>checked_array_iterator::演算子&gt;
+## <a name="checked_array_iteratoroperatorgt"></a><a name="op_gt"></a> checked_array_iterator:: operator&gt;
 
 演算子の左側の `checked_array_iterator` オブジェクトが右側の `checked_array_iterator` オブジェクトより大きいかどうかをテストします。
 
@@ -489,13 +487,13 @@ bool operator>(const checked_array_iterator<_Iterator>& right) const;
 *そうです*\
 比較対象の `checked_array_iterator`。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
-コードサンプルについては[、checked_array_iterator::演算子&lt;](#op_lt)を参照してください。
+コードサンプルについては、「 [checked_array_iterator:: operator &lt; ](#op_lt) 」を参照してください。
 
 詳細については、「[チェックを行う反復子](../standard-library/checked-iterators.md)」を参照してください。
 
-## <a name="checked_array_iteratoroperatorlt"></a><a name="op_lt_eq"></a>checked_array_iterator::演算子&lt;=
+## <a name="checked_array_iteratoroperatorlt"></a><a name="op_lt_eq"></a> checked_array_iterator:: operator&lt;=
 
 演算子の左側の `checked_array_iterator` が右側の `checked_array_iterator` 以下かどうかをテストします。
 
@@ -508,13 +506,13 @@ bool operator<=(const checked_array_iterator<_Iterator>& right) const;
 *そうです*\
 比較対象の `checked_array_iterator`。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
-コードサンプルについては[、checked_array_iterator::演算子&gt;](#op_gt_eq)を参照してください。
+コードサンプルについては、「 [checked_array_iterator:: operator &gt; = ](#op_gt_eq) 」を参照してください。
 
 詳細については、「[チェックを行う反復子](../standard-library/checked-iterators.md)」を参照してください。
 
-## <a name="checked_array_iteratoroperatorgt"></a><a name="op_gt_eq"></a>checked_array_iterator::演算子&gt;=
+## <a name="checked_array_iteratoroperatorgt"></a><a name="op_gt_eq"></a> checked_array_iterator:: operator&gt;=
 
 演算子の左側の `checked_array_iterator` が右側の `checked_array_iterator` 以上かどうかをテストします。
 
@@ -527,7 +525,7 @@ bool operator>=(const checked_array_iterator<_Iterator>& right) const;
 *そうです*\
 比較対象の `checked_array_iterator`。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 詳細については、「[チェックを行う反復子](../standard-library/checked-iterators.md)」を参照してください。
 
@@ -570,7 +568,7 @@ checked_output_iterator2 is less than checked_output_iterator
 */
 ```
 
-## <a name="checked_array_iteratoroperator"></a><a name="op_star"></a>checked_array_iterator::演算子*
+## <a name="checked_array_iteratoroperator"></a><a name="op_star"></a> checked_array_iterator:: operator *
 
 `checked_array_iterator` がアドレス指定する要素を返します。
 
@@ -582,7 +580,7 @@ reference operator*() const;
 
 `checked_array_iterator` によってアドレス指定される要素の値。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 詳細については、「[チェックを行う反復子](../standard-library/checked-iterators.md)」を参照してください。
 
@@ -631,7 +629,7 @@ c[0].first = 10
 */
 ```
 
-## <a name="checked_array_iteratoroperator-gt"></a><a name="op_arrow"></a>checked_array_iterator::オペレーター-&gt;
+## <a name="checked_array_iteratoroperator-gt"></a><a name="op_arrow"></a> checked_array_iterator:: operator-&gt;
 
 `checked_array_iterator` によってアドレス指定される要素へのポインターを返します。
 
@@ -643,13 +641,13 @@ pointer operator->() const;
 
 `checked_array_iterator` によってアドレス指定される要素へのポインター。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 コード サンプルについては、[checked_array_iterator::pointer](#pointer) を参照してください。
 
 詳細については、「[チェックを行う反復子](../standard-library/checked-iterators.md)」を参照してください。
 
-## <a name="checked_array_iteratoroperator"></a><a name="op_add_add"></a>checked_array_iterator::演算子++
+## <a name="checked_array_iteratoroperator"></a><a name="op_add_add"></a> checked_array_iterator:: operator + +
 
 `checked_array_iterator` を次の要素にインクリメントします。
 
@@ -663,7 +661,7 @@ checked_array_iterator<_Iterator> operator++(int);
 
 最初の演算子は、プリインクリメントされた `checked_array_iterator` を返し、2 番目のポストインクリメント演算子は、インクリメントされた `checked_array_iterator` のコピーを返します。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 詳細については、「[チェックを行う反復子](../standard-library/checked-iterators.md)」を参照してください。
 
@@ -697,7 +695,7 @@ int main() {
 */
 ```
 
-## <a name="checked_array_iteratoroperator--"></a><a name="operator--"></a>checked_array_iterator::演算子--
+## <a name="checked_array_iteratoroperator--"></a><a name="operator--"></a> checked_array_iterator:: operator--
 
 `checked_array_iterator` を直前の要素にデクリメントします。
 
@@ -711,7 +709,7 @@ checked_array_iterator<_Iterator> operator--(int);
 
 最初の演算子はプリデクリメントされた `checked_array_iterator` を返し、2 番目のポストデクリメント演算子は、デクリメントされた `checked_array_iterator` のコピーを返します。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 詳細については、「[チェックを行う反復子](../standard-library/checked-iterators.md)」を参照してください。
 
@@ -745,7 +743,7 @@ int main() {
 */
 ```
 
-## <a name="checked_array_iteratoroperator"></a><a name="op_add_eq"></a>checked_array_iterator::演算子+=
+## <a name="checked_array_iteratoroperator"></a><a name="op_add_eq"></a> checked_array_iterator:: operator + =
 
 指定したオフセットを `checked_array_iterator` に追加します。
 
@@ -762,7 +760,7 @@ checked_array_iterator<_Iterator>& operator+=(difference_type _Off);
 
 `checked_array_iterator` によってアドレス指定される要素への参照を返します。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 詳細については、「[チェックを行う反復子](../standard-library/checked-iterators.md)」を参照してください。
 
@@ -793,7 +791,7 @@ int main() {
 */
 ```
 
-## <a name="checked_array_iteratoroperator"></a><a name="op_add"></a>checked_array_iterator::演算子+
+## <a name="checked_array_iteratoroperator"></a><a name="op_add"></a> checked_array_iterator:: operator +
 
 反復子にオフセットを追加し、新しいオフセット位置に挿入された要素をアドレス指定する新しい `checked_array_iterator` アドレスを返します。
 
@@ -810,7 +808,7 @@ checked_array_iterator<_Iterator> operator+(difference_type _Off) const;
 
 オフセット要素を指す `checked_array_iterator`。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 詳細については、「[チェックを行う反復子](../standard-library/checked-iterators.md)」を参照してください。
 
@@ -841,7 +839,7 @@ int main() {
 */
 ```
 
-## <a name="checked_array_iteratoroperator-"></a><a name="operator-_eq"></a>checked_array_iterator::演算子-=
+## <a name="checked_array_iteratoroperator-"></a><a name="operator-_eq"></a> checked_array_iterator:: operator-=
 
 指定したオフセットを `checked_array_iterator` からデクリメントします。
 
@@ -858,7 +856,7 @@ checked_array_iterator<_Iterator>& operator-=(difference_type _Off);
 
 `checked_array_iterator` によってアドレス指定される要素への参照を返します。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 詳細については、「[チェックを行う反復子](../standard-library/checked-iterators.md)」を参照してください。
 
@@ -890,7 +888,7 @@ int main() {
 */
 ```
 
-## <a name="checked_array_iteratoroperator-"></a><a name="operator-"></a>checked_array_iterator::オペレーター-
+## <a name="checked_array_iteratoroperator-"></a><a name="operator-"></a> checked_array_iterator:: operator-
 
 反復子からオフセットをデクリメントし、新しいオフセット位置に挿入された要素をアドレス指定する新しい `checked_array_iterator` アドレスを返します。
 
@@ -909,11 +907,11 @@ difference_type operator-(const checked_array_iterator& right) const;
 
 オフセット要素を指す `checked_array_iterator`。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 詳細については、「[チェックを行う反復子](../standard-library/checked-iterators.md)」を参照してください。
 
-## <a name="checked_array_iteratoroperator"></a><a name="op_at"></a>checked_array_iterator::演算子[]
+## <a name="checked_array_iteratoroperator"></a><a name="op_at"></a> checked_array_iterator:: operator []
 
 `checked_array_iterator` によってアドレス指定される要素からの要素のオフセットへの参照を返します。
 
@@ -930,7 +928,7 @@ reference operator[](difference_type _Off) const;
 
 オフセット要素への参照。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 詳細については、「[チェックを行う反復子](../standard-library/checked-iterators.md)」を参照してください。
 
@@ -963,7 +961,7 @@ int main() {
 */
 ```
 
-## <a name="checked_array_iteratorpointer"></a><a name="pointer"></a>checked_array_iterator::pオインター
+## <a name="checked_array_iteratorpointer"></a><a name="pointer"></a> checked_array_iterator::p ointer
 
 `checked_array_iterator` によってアドレス指定される要素へのポインターを提供する型。
 
@@ -971,13 +969,13 @@ int main() {
 typedef typename iterator_traits<_Iterator>::pointer pointer;
 ```
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
-コードサンプルについては[、checked_array_iterator::operator*](#op_star)を参照してください。
+コードサンプルについては、「 [checked_array_iterator:: operator *](#op_star) 」を参照してください。
 
 詳細については、「[チェックを行う反復子](../standard-library/checked-iterators.md)」を参照してください。
 
-## <a name="checked_array_iteratorreference"></a><a name="reference"></a>checked_array_iterator::参照
+## <a name="checked_array_iteratorreference"></a><a name="reference"></a> checked_array_iterator:: reference
 
 `checked_array_iterator` によってアドレス指定される要素への参照を提供する型。
 
@@ -985,13 +983,13 @@ typedef typename iterator_traits<_Iterator>::pointer pointer;
 typedef typename iterator_traits<_Iterator>::reference reference;
 ```
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
-コードサンプルについては[checked_array_iterator::operator[] を](#op_at)参照してください。
+コードサンプルについては、「 [checked_array_iterator:: operator []](#op_at) 」を参照してください。
 
 詳細については、「[チェックを行う反復子](../standard-library/checked-iterators.md)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 
-[\<反復器>](../standard-library/iterator.md)\
-[C++ 標準ライブラリ リファレンス](../standard-library/cpp-standard-library-reference.md)
+[\<iterator>](../standard-library/iterator.md)\
+[C++ 標準ライブラリリファレンス](../standard-library/cpp-standard-library-reference.md)

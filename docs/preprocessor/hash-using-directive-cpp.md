@@ -12,12 +12,12 @@ helpviewer_keywords:
 - LIBPATH environment variable
 - preprocessor, directives
 ms.assetid: 870b15e5-f361-40a8-ba1c-c57d75c8809a
-ms.openlocfilehash: 0da255957e92a570750da2687bf1444df2e6ab13
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 0245eb15219585421be83def0258415ab4b573b6
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87219431"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90684262"
 ---
 # <a name="using-directive-ccli"></a>#using ディレクティブ (C++/CLI)
 
@@ -35,15 +35,15 @@ Microsoft 中間言語 (MSIL) *`.dll`* 、 *`.exe`* 、、 *`.netmodule`* また
 `#using <MyComponent.dll>`
 
 **`as_friend`**\
-*ファイル*内のすべての型がアクセス可能であることを指定します。 詳細については、「[フレンドアセンブリ (C++)](../dotnet/friend-assemblies-cpp.md)」を参照してください。
+*ファイル*内のすべての型がアクセス可能であることを指定します。 詳細については、「 [フレンドアセンブリ (C++)](../dotnet/friend-assemblies-cpp.md)」を参照してください。
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>注釈
 
-*ファイル*は、マネージデータとマネージコンストラクト用にインポートする Microsoft 中間言語 (MSIL) ファイルにすることができます。 DLL にアセンブリマニフェストが含まれている場合は、マニフェストで参照されるすべての Dll がインポートされます。 作成中のアセンブリによって、メタデータ内の*ファイル*がアセンブリ参照として一覧表示されます。
+*ファイル* は、マネージデータとマネージコンストラクト用にインポートする Microsoft 中間言語 (MSIL) ファイルにすることができます。 DLL にアセンブリマニフェストが含まれている場合は、マニフェストで参照されるすべての Dll がインポートされます。 作成中のアセンブリによって、メタデータ内の *ファイル* がアセンブリ参照として一覧表示されます。
 
 *ファイル*にアセンブリが含まれていない (*ファイル*がモジュールである) 場合、現在の (アセンブリ) アプリケーションのモジュールからの型情報を使用しないことが考えられます。 [/Assemblymodule](../build/reference/assemblymodule-add-a-msil-module-to-the-assembly.md)を使用して、モジュールがアセンブリの一部であることを示すことができます。 その場合、アセンブリを参照するすべてのアプリケーションで、そのモジュール内の型を使用できます。
 
-使用する代わりに、 **`#using`** [/fu](../build/reference/fu-name-forced-hash-using-file.md)コンパイラオプションを使用することもできます。
+使用する代わりに、 **`#using`** [/fu](../build/reference/fu-name-forced-hash-using-file.md) コンパイラオプションを使用することもできます。
 
 に渡される .exe アセンブリは **`#using`** 、.Net Visual Studio コンパイラ (Visual Basic または Visual C# など) のいずれかを使用してコンパイルする必要があります。  でコンパイルされた .exe アセンブリからメタデータをインポートしようとすると **`/clr`** 、ファイル読み込み例外が発生します。
 
@@ -72,7 +72,7 @@ LIBPATH 環境変数は、コンパイラがに渡されたファイル名を解
 
 - LIBPATH 環境変数のディレクトリ。
 
-## <a name="example"></a>例
+## <a name="examples"></a>例
 
 第3のアセンブリを参照する2番目のアセンブリを参照するアセンブリを構築できます。 型のいずれかを明示的に使用する場合にのみ、最初のアセンブリから3番目のアセンブリを明示的に参照する必要があります。
 
@@ -81,8 +81,6 @@ LIBPATH 環境変数は、コンパイラがに渡されたファイル名を解
 // compile with: /clr /LD
 public ref class A {};
 ```
-
-## <a name="example"></a>例
 
 ```cpp
 // using_assembly_B.cpp
@@ -95,9 +93,7 @@ public:
 };
 ```
 
-## <a name="example"></a>例
-
-次の例では、コンパイラは、 *using_assembly_A.dll*の参照に関するエラーを報告しません。これは、プログラムが*using_assembly_A .cpp*で定義されている型を使用しないためです。
+次の例では、コンパイラは、 *using_assembly_A.dll*の参照に関するエラーを報告しません。これは、プログラムが *using_assembly_A .cpp*で定義されている型を使用しないためです。
 
 ```cpp
 // using_assembly_C.cpp

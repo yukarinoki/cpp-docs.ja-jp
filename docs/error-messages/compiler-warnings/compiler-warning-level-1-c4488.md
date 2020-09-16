@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4488
 ms.assetid: 55625e46-ddb5-4c7c-99c7-cd4aa9f879bd
-ms.openlocfilehash: b83845f0ed0efeee6485780c7e4f828e40473e9e
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 6db814e405c0b13cdf40fc81a1f23c6d59fd5f00
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80186700"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90684665"
 ---
 # <a name="compiler-warning-level-1-c4488"></a>コンパイラの警告 (レベル 1) C4488
 
@@ -19,7 +19,7 @@ ms.locfileid: "80186700"
 
 クラスは、直接継承元のインターフェイスのすべてのメンバーを実装する必要があります。 実装されたメンバーは、パブリックアクセシビリティを持つ必要があり、virtual としてマークする必要があります。
 
-## <a name="example"></a>例
+## <a name="examples"></a>例
 
 C4488 は、実装されたメンバーがパブリックでない場合に発生する可能性があります。 次の例では、C4488 が生成されます。
 
@@ -39,8 +39,6 @@ public:
    virtual void f1() {}
 };
 ```
-
-## <a name="example"></a>例
 
 C4488 は、実装されたメンバーが virtual とマークされていない場合に発生する可能性があります。 次の例では、C4488 が生成されます。
 

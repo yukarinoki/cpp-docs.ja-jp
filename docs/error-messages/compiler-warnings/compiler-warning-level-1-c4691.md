@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4691
 ms.assetid: 722133d9-87f6-46c1-9e86-9825453d6999
-ms.openlocfilehash: 8065129e20b627eb387421455527f6aaec3fdc2f
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 6a4d1de621983794acfae4de7707ba127df9a1b7
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80175377"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90685568"
 ---
 # <a name="compiler-warning-level-1-c4691"></a>コンパイラの警告 (レベル 1) C4691
 
@@ -21,9 +21,9 @@ ms.locfileid: "80175377"
 
 *ファイル*を再構築する場合は、C4691 を無視することも、プラグマ[警告](../../preprocessor/warning.md)を使用して無効にすることもできます。  つまり、ビルドするファイルが、コンパイラが型定義を検索するファイルと同じである場合は、C4691 を無視できます。
 
-ただし、メタデータで参照されているアセンブリとは異なる定義をコンパイラが使用すると、予期しない動作が発生する可能性があります。CLR 型は、型の名前だけでなく、アセンブリによっても型指定されます。  つまり、アセンブリ z .dll からの型 Z は、アセンブリ y .dll の型 Z とは異なります。
+ただし、メタデータで参照されているアセンブリとは異なる定義をコンパイラが使用すると、予期しない動作が発生する可能性があります。CLR 型は、型の名前だけでなく、アセンブリによっても型指定されます。  つまり、アセンブリ z.dll からの型 Z は、アセンブリ y.dll の型 Z とは異なります。
 
-## <a name="example"></a>例
+## <a name="examples"></a>例
 
 このサンプルには、元の型定義が含まれています。
 
@@ -33,9 +33,7 @@ ms.locfileid: "80175377"
 public ref class Original_Type {};
 ```
 
-## <a name="example"></a>例
-
-このサンプルでは C4691_a .dll を参照し、Original_Type 型のフィールドを宣言します。
+このサンプルでは、C4691_a.dll を参照し、Original_Type 型のフィールドを宣言します。
 
 ```cpp
 // C4691_b.cpp
@@ -47,9 +45,7 @@ public:
 };
 ```
 
-## <a name="example"></a>例
-
-次の例では、C4691 が生成されます。  このサンプルには Original_Type の定義が含まれており、C4691a を参照していないことに注意してください。
+次の例では、C4691 が生成されます。  このサンプルには Original_Type の定義が含まれており、C4691a.dll を参照していないことに注意してください。
 
 解決するには、元の型定義を含むメタデータファイルを参照し、ローカルの宣言と定義を削除します。
 

@@ -8,18 +8,18 @@ helpviewer_keywords:
 - references, to objects in native functions
 - gcroot keyword [C++], object reference in native function
 ms.assetid: a61eb8ce-3982-477d-8d3d-2173fd57166d
-ms.openlocfilehash: 2f2471e36d7551cab9edb68d7babeb1419e8e20c
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: 13d5bd37a0f5e0b065aecb8c5b264fb70685363f
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "79544953"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90684509"
 ---
 # <a name="how-to-hold-object-reference-in-unmanaged-memory"></a>方法: アンマネージ メモリ内にオブジェクト参照を保持する
 
-<xref:System.Runtime.InteropServices.GCHandle>をラップする gcroot を使用して、アンマネージメモリに CLR オブジェクト参照を保持することができます。 または、`GCHandle` を直接使用することもできます。
+をラップして <xref:System.Runtime.InteropServices.GCHandle> 、アンマネージメモリ内の CLR オブジェクト参照を保持するために、をラップする gcroot を使用できます。 または、を直接使用することもでき `GCHandle` ます。
 
-## <a name="example"></a>例
+## <a name="examples"></a>例
 
 ```cpp
 // hold_object_reference.cpp
@@ -55,9 +55,7 @@ int main() {
 StringWrapper::x == ManagedString
 ```
 
-## <a name="example"></a>例
-
-`GCHandle` には、アンマネージメモリにマネージオブジェクト参照を保持する手段が用意されています。  <xref:System.Runtime.InteropServices.GCHandle.Alloc%2A> メソッドを使用して、マネージオブジェクトへの非透過的ハンドルを作成し、それを解放する <xref:System.Runtime.InteropServices.GCHandle.Free%2A> します。 また、<xref:System.Runtime.InteropServices.GCHandle.Target%2A> メソッドを使用すると、マネージコードのハンドルからオブジェクト参照を取得できます。
+`GCHandle` アンマネージメモリにマネージオブジェクト参照を保持する手段を提供します。  メソッドを使用して、 <xref:System.Runtime.InteropServices.GCHandle.Alloc%2A> マネージオブジェクトへの不透明なハンドルを作成し、そのハンドルを <xref:System.Runtime.InteropServices.GCHandle.Free%2A> 解放します。 また、 <xref:System.Runtime.InteropServices.GCHandle.Target%2A> メソッドを使用すると、マネージコードのハンドルからオブジェクト参照を取得できます。
 
 ```cpp
 // hold_object_reference_2.cpp
@@ -94,6 +92,6 @@ int main() {
 StringWrapper::m_handle == ManagedString
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [C++ Interop (暗黙の PInvoke) の使用](../dotnet/using-cpp-interop-implicit-pinvoke.md)

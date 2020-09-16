@@ -10,18 +10,18 @@ helpviewer_keywords:
 - iterators, checked
 - checked iterators
 ms.assetid: cfc87df8-e3d9-403b-ab78-e9483247d940
-ms.openlocfilehash: 4918cd9df34e5c728c4aa2d90d4eb7f55784e4c2
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 2327638208f30908cd3429ae656ce569f5821195
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88845693"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90684904"
 ---
 # <a name="checked-iterators"></a>Checked Iterators
 
 チェックを行う反復子は、コンテナーの境界が上書きされないようにします。 チェックを行う反復子は、リリース ビルドおよびデバッグ ビルドの両方に適用されます。 デバッグ モードでのコンパイル時に debug 反復子を使用する方法の詳細については、「[debug 反復子のサポート](../standard-library/debug-iterator-support.md)」を参照してください。
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>注釈
 
 チェックを行う反復子によって生成される警告を無効にする方法の詳細については、「[_SCL_SECURE_NO_WARNINGS](../standard-library/scl-secure-no-warnings.md)」を参照してください。
 
@@ -73,7 +73,7 @@ _ITERATOR_DEBUG_LEVEL が0として定義されている場合:
 
 チェックを行う反復子をサポートする反復子アダプターは、[checked_array_iterator クラス](../standard-library/checked-array-iterator-class.md)と [unchecked_array_iterator クラス](../standard-library/unchecked-array-iterator-class.md)です。
 
-## <a name="example"></a>例
+## <a name="examples"></a>例
 
 1または2に設定された _ITERATOR_DEBUG_LEVEL を使用してコンパイルすると、特定のクラスのインデックス演算子を使用して、コンテナーの境界の外側にある要素にアクセスしようとすると、ランタイムエラーが発生します。
 
@@ -102,8 +102,6 @@ int main()
 
 このプログラムは、"67" をポイントし、その後でエラーに関する追加情報を含むアサーション エラー ダイアログ ボックスを表示します。
 
-## <a name="example"></a>例
-
 同様に、1または2に設定された _ITERATOR_DEBUG_LEVEL を使用してコンパイルする場合、 `front` `back` コンテナーが空のときにコンテナークラスのまたはを使用して要素にアクセスしようとすると、ランタイムエラーが発生します。
 
 ```cpp
@@ -125,8 +123,6 @@ int main()
 ```
 
 このプログラムは、エラーに関する追加情報を含むアサーション エラー ダイアログ ボックスを表示します。
-
-## <a name="example"></a>例
 
 次のコードは、さまざまな反復子のユース ケースのシナリオを示しており、それぞれにコメントが付けられています。 既定では、_ITERATOR_DEBUG_LEVEL はデバッグビルドでは2に、リテールビルドでは0に設定されます。
 

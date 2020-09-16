@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - LNK1313
 ms.assetid: 5df0b72e-bb3f-428c-8d84-6084238f9827
-ms.openlocfilehash: a2314f160dc6add45547082c7804ec5e2c8f2349
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 03ff61a1f3501b3ea106138e957a657ed064e645
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80194864"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90683443"
 ---
 # <a name="linker-tools-error-lnk1313"></a>リンカ ツール エラー LNK1313
 
 > ijw/ネイティブ モジュールが検出されました。純粋なモジュールとリンクできません。
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>注釈
 
-現在のバージョンの Visual C++は、 **/clr: pure**を使用してコンパイルされた .obj ファイルを使用したネイティブまたは混合マネージ/ネイティブ .obj ファイルのリンクをサポートしていません。
+現在のバージョンの Visual C++ は、 **/clr: pure**を使用してコンパイルされた .obj ファイルを使用したネイティブまたは混合マネージ/ネイティブ .obj ファイルのリンクをサポートしていません。
 
 **/Clr: pure**コンパイラオプションは visual studio 2015 で非推奨とされており、visual studio 2017 ではサポートされていません。
 
-## <a name="example"></a>例
+## <a name="examples"></a>例
 
 ```cpp
 // LNK1313.cpp
@@ -32,16 +32,12 @@ ms.locfileid: "80194864"
 int main() {}
 ```
 
-## <a name="example"></a>例
-
 ```cpp
 // LNK1313_b.cpp
 // compile with: /c /clr
 // an IJW module
 void test(){}
 ```
-
-## <a name="example"></a>例
 
 次の例では lnk1313 エラーが生成されます。
 
