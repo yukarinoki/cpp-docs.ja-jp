@@ -9,12 +9,12 @@ helpviewer_keywords:
 - classes [C++], adding members
 - add member function wizard [C++]
 ms.assetid: 55b25ddb-541d-44ed-957c-974ef91cfc85
-ms.openlocfilehash: c5423cfb8e2ea1b39001ec512c9c7f460d6a1a19
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 0e63771e3e01c3829e20d2fe62fa2caf0f8b26f5
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87228688"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90040783"
 ---
 # <a name="add-a-member-function"></a>メンバー関数を追加する
 
@@ -44,12 +44,25 @@ ms.locfileid: "87228688"
 
   追加するメンバー関数の戻り値の型を設定します。 独自の戻り値の型を設定することも、使用できる型の一覧から選択することもできます。 戻り値の型については、「[基本型](../cpp/fundamental-types-cpp.md)」を参照してください。
 
-  | | | |
-  |---|---|---|
-  | **`char`** | **`int`** | **`unsigned int`** |
-  | **`double`** | **`long`** | **`unsigned long`** |
-  | **`float`** | **`short`** | **`void`** |
-  | `HRESULT` | **`unsigned char`** | |
+:::row:::
+   :::column span="":::
+      **`char`**\
+      **`double`**\
+      **`float`**\
+      **`int`**
+   :::column-end:::
+   :::column span="":::
+      **`long`**\
+      **`short`**\
+      **`unsigned char`**\
+      **`unsigned int`**
+   :::column-end:::
+   :::column span="":::
+      **`unsigned long`**\
+      **`void`**\
+      `HRESULT`
+   :::column-end:::
+:::row-end:::
 
 - **関数名**
 
@@ -59,11 +72,23 @@ ms.locfileid: "87228688"
 
   メンバー関数にパラメーターがある場合は、メンバー関数に追加するパラメーターの型を設定します。 独自のパラメーターの型を設定することも、使用できる型の一覧から選択することもできます。
 
-  | | | |
-  |---|---|---|
-  | **`char`** | **`int`** | **`unsigned char`** |
-  | **`double`** | **`long`** | **`unsigned int`** |
-  | **`float`** | **`short`** | **`unsigned long`** |
+:::row:::
+   :::column span="":::
+      **`char`**\
+      **`double`**\
+      **`float`**
+   :::column-end:::
+   :::column span="":::
+      **`int`**\
+      **`long`**\
+      **`short`**
+   :::column-end:::
+   :::column span="":::
+      **`unsigned char`**\
+      **`unsigned int`**\
+      **`unsigned long`**
+   :::column-end:::
+:::row-end:::
 
 - **パラメーター名**
 

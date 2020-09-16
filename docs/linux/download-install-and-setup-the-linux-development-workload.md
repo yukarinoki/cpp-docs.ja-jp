@@ -3,12 +3,12 @@ title: Visual Studio で C++ の Linux ワークロードをインストール�
 description: Visual Studio で C++ の Linux ワークロードをダウンロード、インストール、セットアップする方法。
 ms.date: 05/03/2020
 ms.assetid: e11b40b2-f3a4-4f06-b788-73334d58dfd9
-ms.openlocfilehash: bc75610aaefe2a3bdd919cbc4dd81413202794c6
-ms.sourcegitcommit: 8a01ae145bc65f5bc90d6e47b4a1bdf47b073ee7
+ms.openlocfilehash: 3f8e6eb8285652078e5f26ca58601bc6ccfa80d1
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82765748"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90040978"
 ---
 # <a name="download-install-and-set-up-the-linux-workload"></a>Linux ワークロードのダウンロード、インストール、セットアップ
 
@@ -56,7 +56,7 @@ Windows 10 の Windows Subsystem for Linux (WSL) では、お好みの Linux デ
 
 Visual Studio の Linux プロジェクトを使用する場合、リモートの Linux システムまたは WSL に次の依存関係がインストールされている必要があります。
 
-- **コンパイラ** - Visual Studio 2019 では、GCC と [Clang](/cpp/build/clang-support-cmake?view=vs-2019) が完全にサポートされています。
+- **コンパイラ** - Visual Studio 2019 では、GCC と [Clang](../build/clang-support-cmake.md) が完全にサポートされています。
 - **gdb** - Visual Studio によって Linux システム上の gdb が自動的に起動され、Visual Studio デバッガーのフロント エンドを使用した、Linux 上の完全に忠実なデバッグ エクスペリエンスが提供されます。
 - **rsync** および **zip** - rsync と zip を含めることにより、IntelliSense で使用するためのヘッダー ファイルを、Visual Studio が Linux システムから Windows ファイルシステムに抽出できるようになります。
 - **make**

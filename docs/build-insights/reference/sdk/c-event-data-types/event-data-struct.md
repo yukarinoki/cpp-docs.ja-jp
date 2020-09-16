@@ -9,12 +9,12 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: ccba320a8bb9279b874fae2484c71af913253148
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 468fc30d337e5cfc5ab90f7558904fc90588c3df
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87229923"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90041823"
 ---
 # <a name="event_data-structure"></a>EVENT_DATA 構造体
 
@@ -58,7 +58,7 @@ typedef struct EVENT_DATA_TAG
 
 ## <a name="members"></a>メンバー
 
-|  |  |
+| 名前 | [説明] |
 |--|--|
 | `EventId` | イベントを識別する番号です。 イベント識別子の一覧については、[EVENT_ID](event-id-enum.md) に関する記事をご覧ください。 |
 | `EventInstanceId` | トレース内の現在のイベントを一意に識別する番号です。 この値は、同じトレースを複数回分析またはログに再記録しても変わりません。 このフィールドを使用して、同じトレースに対する複数の分析または再ログのパスから同じイベントを識別します。 |

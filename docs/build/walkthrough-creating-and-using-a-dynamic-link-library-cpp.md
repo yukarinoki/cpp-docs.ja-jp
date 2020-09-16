@@ -7,12 +7,12 @@ helpviewer_keywords:
 - libraries [C++], DLLs
 - DLLs [C++], walkthroughs
 ms.assetid: 3ae94848-44e7-4955-bbad-7d40f493e941
-ms.openlocfilehash: 37dc59dfb77af9fff240c0d44b21de84b17d073b
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: adca441a1b1b4e5e7b7efa44c4a292a8f1ddec35
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77127843"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90042200"
 ---
 # <a name="walkthrough-create-and-use-your-own-dynamic-link-library-c"></a>チュートリアル: 独自のダイナミック リンク ライブラリを作成して使用する (C++)
 
@@ -54,7 +54,7 @@ DLL に関する詳細情報へのリンクについては、「[Visual Studio �
 
 ::: moniker range="vs-2015"
 
-- Visual Studio。 Visual Studio 2015 をダウンロードしてインストールする方法について詳しくは、「[Visual Studio 2015 のインストール](/visualstudio/install/install-visual-studio-2015?view=vs-2015)」をご覧ください。 C++ コンパイラとツールは既定ではインストールされないため、**カスタム** インストールを使用してインストールしてください。
+- Visual Studio。 Visual Studio 2015 をダウンロードしてインストールする方法について詳しくは、「[Visual Studio 2015 のインストール](/visualstudio/install/install-visual-studio-2015?view=vs-2015&preserve-view=true)」をご覧ください。 C++ コンパイラとツールは既定ではインストールされないため、**カスタム** インストールを使用してインストールしてください。
 
 ::: moniker-end
 

@@ -3,12 +3,12 @@ title: Visual Studio で C++ クロスプラットフォーム プロジェク�
 description: Linux と Windows の両方を対象とする C++ のオープンソース CMake プロジェクトを Visual Studio でセットアップ、コンパイル、デバッグする方法。
 ms.topic: tutorial
 ms.date: 01/08/2020
-ms.openlocfilehash: aac536f488cf22adf5aa835c9fe5b884fc5d7298
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 3fdd9b1dfb5075f3a71f62bc4f1e2f3c646f9e6b
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81328745"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90040484"
 ---
 # <a name="tutorial-create-c-cross-platform-projects-in-visual-studio"></a>チュートリアル: Visual Studio で C++ クロスプラットフォーム プロジェクトを作成する
 
@@ -155,7 +155,7 @@ Visual Studio では、Windows 用の既定の **x64-Debug** 構成が作成さ�
 
    リモート接続を既に追加している場合は、 **[ツール] > [オプション] > [クロス プラットフォーム] > [接続マネージャー]** に移動して、このウィンドウを開くことができます。
 
-1. [Linux マシンへの接続情報](/cpp/linux/connect-to-your-remote-linux-computer)を入力し、 **[接続]** を選択します。 Visual Studio により、そのマシンが **Linux-Debug** の既定の接続として CMakeSettings.json に追加されます。 また、リモート マシンからヘッダーが取得され、[そのリモート接続に固有の IntelliSense](/cpp/linux/configure-a-linux-project?view=vs-2019#remote_intellisense) を利用できます。 次に、Visual Studio によって対象ファイルがリモート マシンに送信され、リモート システム上に CMake キャッシュが生成されます。 ネットワークの速度とリモート マシンの能力によっては、これらのステップに時間がかかる場合があります。 CMake 出力ウィンドウに "ターゲット情報の抽出が完了しました" というメッセージが表示されると、完了したことがわかります。
+1. [Linux マシンへの接続情報](../linux/connect-to-your-remote-linux-computer.md)を入力し、 **[接続]** を選択します。 Visual Studio により、そのマシンが **Linux-Debug** の既定の接続として CMakeSettings.json に追加されます。 また、リモート マシンからヘッダーが取得され、[そのリモート接続に固有の IntelliSense](../linux/configure-a-linux-project.md#remote_intellisense) を利用できます。 次に、Visual Studio によって対象ファイルがリモート マシンに送信され、リモート システム上に CMake キャッシュが生成されます。 ネットワークの速度とリモート マシンの能力によっては、これらのステップに時間がかかる場合があります。 CMake 出力ウィンドウに "ターゲット情報の抽出が完了しました" というメッセージが表示されると、完了したことがわかります。
 
 ## <a name="set-a-breakpoint-build-and-run-on-linux"></a>Linux でブレークポイントを設定し、ビルドして、実行する
 

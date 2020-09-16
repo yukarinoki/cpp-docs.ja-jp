@@ -4,12 +4,12 @@ ms.date: 12/02/2019
 helpviewer_keywords:
 - Open Folder Projects in Visual Studio
 ms.assetid: abd1985e-3717-4338-9e80-869db5435175
-ms.openlocfilehash: 73d6ff9fb9411b146082989d581ed35298b911ad
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 9d9f59817a499f4d529363c88adc57154268c0bc
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87229806"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90039587"
 ---
 # <a name="open-folder-support-for-c-build-systems-in-visual-studio"></a>Visual Studio での C++ ビルド システムの [フォルダーを開く] のサポート
 
@@ -31,7 +31,7 @@ CMake は、C++ デスクトップ ワークロードのコンポーネントと
 
 メイン メニューから直接サポートされないビルド システムまたはコンパイラ ツールセットを使用して Visual Studio IDE を使用するには、 **[ファイル] > [開く] > [フォルダー]** を選択するか、**Ctrl + Shift + Alt + O** を押します。ソース コード ファイルが格納されているフォルダーに移動します。 プロジェクトをビルドし、IntelliSense を構成し、デバッグ パラメーターを設定するために、3 つの JSON ファイルを追加します。
 
-| | |
+| ファイル | 説明 |
 |-|-|
 |CppProperties.json|参照のためのカスタム構成情報を指定します。 必要な場合は、ルート プロジェクト フォルダーにこのファイルを作成します。 (CMake プロジェクトで使用されません。)|
 |tasks.vs.json|カスタム ビルド コマンドを指定します。 指定するには、**ソリューション エクスプローラー**のコンテキスト メニュー項目 **[タスクの構成]** を使用します。|

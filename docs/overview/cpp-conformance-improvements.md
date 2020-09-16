@@ -3,12 +3,12 @@ title: C++ 準拠の強化
 ms.date: 08/04/2020
 description: Visual Studio の Microsoft C++ は、C++20 言語標準との完全準拠に向かって進んでいます。
 ms.technology: cpp-language
-ms.openlocfilehash: a28281eb7b47dcfc633467c96e520c7e97e26777
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 3a0e21bf08fcf7861feedd3fd43666bd3768deee
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88841390"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90042122"
 ---
 # <a name="c-conformance-improvements-in-visual-studio"></a>Visual Studio の C++ 準拠の強化
 
@@ -744,7 +744,7 @@ int main() {
 
 ### <a name="preprocessor-output-preserves-newlines"></a>プリプロセッサ出力によって改行が維持される
 
-実験用のプリプロセッサでは、 **`/experimental:preprocessor`** と共に **`/P`** または **`/E`** を使用するとき、改行と空白が維持されるようになりました。 この変更は、 **`/d1experimental:preprocessor:oldWhitespace`** を使用して無効にできます。
+実験用のプリプロセッサでは、 **`/experimental:preprocessor`** と共に **`/P`** または **`/E`** を使用するとき、改行と空白が維持されるようになりました。
 
 このようなサンプル ソースがあります。
 
