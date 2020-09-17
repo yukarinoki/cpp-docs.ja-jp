@@ -1,8 +1,8 @@
-﻿---
+---
 title: 定義済みマクロ
 description: Microsoft C++ コンパイラの定義済みプリプロセッサ マクロを一覧にして説明します。
 ms.custom: update_every_version
-ms.date: 06/08/2020
+ms.date: 09/11/2020
 f1_keywords:
 - _ATL_VER
 - __ATOM__
@@ -65,6 +65,11 @@ f1_keywords:
 - _RTC_CONVERSION_CHECKS_ENABLED
 - __STDC__
 - __STDC_HOSTED__
+- __STDC_NO_ATOMICS__
+- __STDC_NO_COMPLEX__
+- __STDC_NO_THREADS__
+- __STDC_NO_VLA__
+- __STDC_VERSION__
 - __STDCPP_THREADS__
 - __TIME__
 - __TIMESTAMP__
@@ -142,6 +147,11 @@ helpviewer_keywords:
 - _RTC_CONVERSION_CHECKS_ENABLED macro
 - __STDC__ macro
 - __STDC_HOSTED__ macro
+- __STDC_NO_ATOMICS__ macro
+- __STDC_NO_COMPLEX__ macro
+- __STDC_NO_THREADS__ macro
+- __STDC_NO_VLA__ macro
+- __STDC_VERSION__ macro
 - __STDCPP_THREADS__ macro
 - __TIME__ macro
 - __TIMESTAMP__ macro
@@ -215,6 +225,11 @@ no-loc:
 - _RTC_CONVERSION_CHECKS_ENABLED
 - __STDC__
 - __STDC_HOSTED__
+- __STDC_NO_ATOMICS__
+- __STDC_NO_COMPLEX__
+- __STDC_NO_THREADS__
+- __STDC_NO_VLA__
+- __STDC_VERSION__
 - __STDCPP_THREADS__
 - __TIME__
 - __TIMESTAMP__
@@ -225,18 +240,18 @@ no-loc:
 - _WIN64
 - _WINRT_DLL
 - __func__
-ms.openlocfilehash: 1c7b2f18aede84d8067c36537f33261554c16c17
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 85b467a0ac3db67b2715a849966618697437658b
+ms.sourcegitcommit: b492516cc65120250b9ea23f96f7f63f37f99fae
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87222642"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90075700"
 ---
 # <a name="predefined-macros"></a>定義済みマクロ
 
 Microsoft C/C++ コンパイラ (MSVC) では、言語 (C または C++)、コンパイル ターゲット、および選択されたコンパイラ オプションに応じて、特定のプリプロセッサ マクロが事前定義されます。
 
-MSVC では、ANSI/ISO C99 標準および ISO C++14 と C++17 標準で必要とされる定義済みプリプロセッサ マクロがサポートされています。 実装では、さらにいくつかの Microsoft 固有のプリプロセッサ マクロもサポートされています。 一部のマクロは、特定のビルド環境またはコンパイラ オプションに対してのみ定義されます。 特に明記されていない限り、マクロは **`/D`** コンパイラ オプションの引数として指定されているかのように、翻訳単位全体で定義されます。 マクロは定義されている場合、プリプロセッサによってコンパイルの前に、指定された値に展開されます。 定義済みマクロは引数を取らず、再定義することはできません。
+MSVC では、ANSI/ISO C99、C11、C17 標準および ISO C++14 と C++17 標準で必要とされる定義済みプリプロセッサ マクロがサポートされています。 実装では、さらにいくつかの Microsoft 固有のプリプロセッサ マクロもサポートされています。 一部のマクロは、特定のビルド環境またはコンパイラ オプションに対してのみ定義されます。 特に明記されていない限り、マクロは **`/D`** コンパイラ オプションの引数として指定されているかのように、翻訳単位全体で定義されます。 マクロは定義されている場合、プリプロセッサによってコンパイルの前に、指定された値に展開されます。 定義済みマクロは引数を取らず、再定義することはできません。
 
 ## <a name="standard-predefined-identifier"></a>標準の定義済み識別子
 
@@ -252,7 +267,7 @@ MSVC では、ANSI/ISO C99 標準および ISO C++14 と C++17 標準で必要�
 
 ## <a name="standard-predefined-macros"></a>標準の定義済みマクロ
 
-コンパイラでは、ISO C99 および ISO C++17 標準によって指定されているこれらの定義済みマクロがサポートされています。
+コンパイラでは、ISO C99、C11、C17 および ISO C++17 標準によって指定されているこれらの定義済みマクロがサポートされています。
 
 - `__cplusplus` 翻訳単位が C++ としてコンパイルされるときに、整数リテラル値として定義されます。 それ以外の場合は、定義されません。
 
@@ -265,6 +280,16 @@ MSVC では、ANSI/ISO C99 標準および ISO C++14 と C++17 標準で必要�
 - `__STDC__` C としてコンパイルされるときにのみ、[ **`/Za`** ](../build/reference/za-ze-disable-language-extensions.md) コンパイラ オプションが指定されている場合に 1 として定義されます。 それ以外の場合は、定義されません。
 
 - `__STDC_HOSTED__` 実装が必要な標準ライブラリ全体をサポートする*ホストされた実装*である場合、1 として定義されます。 それ以外の場合は、0 として定義されます。
+
+- `__STDC_NO_ATOMICS__` 実装で任意の標準アトミックがサポートされない場合、1 として定義されます。 MSVC 実装では、C としてコンパイルされ、[ **`/std`** ](../build/reference/std-specify-language-standard-version.md) の C11 か C17 オプションが指定されているとき、1 として定義されます。
+
+- `__STDC_NO_COMPLEX__` 実装で任意の標準複素数がサポートされない場合、1 として定義されます。 MSVC 実装では、C としてコンパイルされ、[ **`/std`** ](../build/reference/std-specify-language-standard-version.md) の C11 か C17 オプションが指定されているとき、1 として定義されます。
+
+- `__STDC_NO_THREADS__` 実装で任意の標準スレッドがサポートされない場合、1 として定義されます。 MSVC 実装では、C としてコンパイルされ、[ **`/std`** ](../build/reference/std-specify-language-standard-version.md) の C11 か C17 オプションが指定されているとき、1 として定義されます。
+
+- `__STDC_NO_VLA__` 実装で任意の標準可変長配列がサポートされない場合、1 として定義されます。 MSVC 実装では、C としてコンパイルされ、[ **`/std`** ](../build/reference/std-specify-language-standard-version.md) の C11 か C17 オプションが指定されているとき、1 として定義されます。
+
+- `__STDC_VERSION__` C としてコンパイルされ、 **`/std`** の C11 か C17 オプションが指定されているとき、定義されます。 [ **`/std:c11`** ](../build/reference/std-specify-language-standard-version.md) の場合は `201112L` に、[ **`/std:c17`** ](../build/reference/std-specify-language-standard-version.md) の場合は `201710L` に展開されます。
 
 - `__STDCPP_THREADS__` プログラムが複数の実行スレッドを持つことができ、C++ としてコンパイルされる場合にのみ、1 として定義されます。 それ以外の場合は、定義されません。
 
@@ -462,7 +487,7 @@ MSVC では、次の定義済みマクロがサポートされます。
    | Visual Studio 2005 (8.0) | 1400 |
    | Visual Studio 2008 (9.0) | 1500 |
    | Visual Studio 2010 (10.0) | 1600 |
-   | Visual Studio 2012 (11.0) | 1700 |
+   | Visual Studio 2012 (11.0) | 1,700 |
    | Visual Studio 2013 (12.0) | 1800 |
    | Visual Studio 2015 (14.0) | 1900 |
    | Visual Studio 2017 RTW (15.0) | 1910 |
@@ -480,6 +505,7 @@ MSVC では、次の定義済みマクロがサポートされます。
    | Visual Studio 2019 バージョン 16.5 | 1925 |
    | Visual Studio 2019 バージョン 16.6 | 1926 |
    | Visual Studio 2019 バージョン 16.7 | 1927 |
+   | Visual Studio 2019 バージョン 16.8 | 1928 |
 
    特定のバージョン以降の Visual Studio でコンパイラのリリースまたは更新プログラムをテストするには、`>=` 演算子を使用します。 条件付きディレクティブで使用して、その既知のバージョンに対して `_MSC_VER` を比較することができます。 比較対象として相互に排他的な複数のバージョンがある場合は、バージョン番号の降順で比較を行います。 たとえば、このコードでは Visual Studio 2017 以降でリリースされたコンパイラがチェックされます。 次に、Visual Studio 2015 以降でリリースされたコンパイラがチェックされます。 その後、Visual Studio 2015 より前にリリースされたすべてのコンパイラがチェックされます。
 
