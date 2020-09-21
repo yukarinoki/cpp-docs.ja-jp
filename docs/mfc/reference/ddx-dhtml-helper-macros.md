@@ -17,12 +17,12 @@ helpviewer_keywords:
 - DDX (dialog data exchange), DHtml helper macros
 - macros [MFC], DDX_DHtml helpers
 ms.assetid: c46302d2-ea43-4fea-bfc2-6f590d99f267
-ms.openlocfilehash: 6158bffceda7ac83b79b6ff8bd7fce0378759819
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: eeea85872422edcf421ba2fe254c8f03c093fe3c
+ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88837464"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90743452"
 ---
 # <a name="ddx_dhtml-helper-macros"></a>DDX_DHtml ヘルパーマクロ
 
@@ -67,7 +67,7 @@ HTML コントロールの ID パラメーターに指定した値。
 *var*<br/>
 交換される値。
 
-## <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 このマクロは、DISPID_IHTMLANCHORELEMENT_HREF ディスパッチ ID を使用して、 [CDHtmlDialog::D DX_DHtml_ElementText](../../mfc/reference/cdhtmldialog-class.md#ddx_dhtml_elementtext) 関数を呼び出します。
 
@@ -93,7 +93,7 @@ HTML コントロールの ID パラメーターに指定した値。
 *var*<br/>
 交換される値。
 
-## <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 このマクロは、DISPID_IHTMLANCHORELEMENT_TARGET ディスパッチ ID を使用して、 [CDHtmlDialog::D DX_DHtml_ElementText](../../mfc/reference/cdhtmldialog-class.md#ddx_dhtml_elementtext) 関数を呼び出します。
 
@@ -119,7 +119,7 @@ HTML コントロールの ID パラメーターに指定した値。
 *var*<br/>
 交換される値。
 
-## <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 このマクロは、DISPID_IHTMLELEMENT_INNERHTML ディスパッチ ID を使用して、 [CDHtmlDialog::D DX_DHtml_ElementText](../../mfc/reference/cdhtmldialog-class.md#ddx_dhtml_elementtext) 関数を呼び出します。
 
@@ -145,7 +145,7 @@ HTML コントロールの ID パラメーターに指定した値。
 *var*<br/>
 交換される値。
 
-## <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 このマクロは、DISPID_IHTMLELEMENT_INNERTEXT ディスパッチ ID を使用して、 [CDHtmlDialog::D DX_DHtml_ElementText](../../mfc/reference/cdhtmldialog-class.md#ddx_dhtml_elementtext) 関数を呼び出します。
 
@@ -171,7 +171,7 @@ HTML コントロールの ID パラメーターに指定した値。
 *var*<br/>
 交換される値。 「 [CDHtmlDialog::D DX_DHtml_ElementText](../../mfc/reference/cdhtmldialog-class.md#ddx_dhtml_elementtext)」の*値*を参照してください。
 
-## <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 このマクロは、Value プロパティを持つコントロールに対して実行した場合にのみ成功します。 値プロパティを持つコントロールには、エディットボックス、リストボックス、およびコンボボックスが含まれます。
 
@@ -199,7 +199,7 @@ HTML コントロールの ID パラメーターに指定した値。
 *var*<br/>
 交換される値。
 
-## <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 このマクロは、DISPID_IHTMLFRAMEBASE_SRC ディスパッチ ID を使用して、 [CDHtmlDialog::D DX_DHtml_ElementText](../../mfc/reference/cdhtmldialog-class.md#ddx_dhtml_elementtext) 関数を呼び出します。
 
@@ -225,7 +225,7 @@ HTML コントロールの ID パラメーターに指定した値。
 *var*<br/>
 交換される値。
 
-## <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 このマクロは、DISPID_IHTMLFRAMEBASE_SRC ディスパッチ ID を使用して、 [CDHtmlDialog::D DX_DHtml_ElementText](../../mfc/reference/cdhtmldialog-class.md#ddx_dhtml_elementtext) 関数を呼び出します。
 
@@ -251,7 +251,7 @@ HTML コントロールの ID パラメーターに指定した値。
 *var*<br/>
 交換される値。
 
-## <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 DDX_DHtml_Img_Src マクロを使用してイメージ要素の Src プロパティを取得すると、Internet Explorer のイメージオブジェクトは、イメージソースの完全にエスケープされた URL を返します。 たとえば、DDX_DHtml_Img_Src マクロを使用して IMAGE 要素の Src プロパティを "some おもしろい picture" という文字列に設定した場合、Internet Explorer は "res://d:\myapplication\myapp.exe/some%20interesting%20picture." という文字列を返します。
 

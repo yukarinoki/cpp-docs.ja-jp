@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2370
 ms.assetid: 03403e8f-f393-47c4-bd25-5c1c7ea7d5cd
-ms.openlocfilehash: ab7b19799925f9aa02f67ffdbec181628391e495
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: fe48dff881bb478a6d00fa3fe6f9446a68cbd787
+ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74745656"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90743478"
 ---
 # <a name="compiler-error-c2370"></a>コンパイラ エラー C2370
 
@@ -19,7 +19,7 @@ ms.locfileid: "74745656"
 
 識別子は、異なるストレージ クラスで既に宣言されています。
 
-## <a name="example"></a>使用例
+## <a name="examples"></a>例
 
 次の例では C2370 が生成されます。
 
@@ -30,8 +30,6 @@ extern int i;
 static int i;   // C2370
 int i;   // OK
 ```
-
-## <a name="example"></a>使用例
 
 次の例では C2370 が生成されます。
 

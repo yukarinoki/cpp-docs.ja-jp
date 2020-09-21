@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2440
 ms.assetid: 36e6676c-f04f-4715-8ba1-f096c4bf3b44
-ms.openlocfilehash: 75b2ba62182a33137b433c836b4acf7c9e1fc231
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 74c5032338b3f4cf30bdb75bdf070cee7b67ce58
+ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87207980"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90742113"
 ---
 # <a name="compiler-error-c2440"></a>コンパイラ エラー C2440
 
@@ -19,9 +19,11 @@ ms.locfileid: "87207980"
 
 コンパイラは、からにキャストできません `type1` `type2` 。
 
-## <a name="example"></a>例
+C2440 は、 **`char*`** `wchar_t*` コンパイラ準拠オプション [/zc: strictStrings](../../build/reference/zc-strictstrings-disable-string-literal-type-conversion.md) が設定されている場合に、C++ コード内の文字列リテラルを使用して非定数 (または) を初期化しようとした場合に発生することがあります。 C では、文字列リテラルの型はの配列です **`char`** が、C++ ではの配列です `const char` 。
 
-C2440 は、 **`char*`** `wchar_t*` コンパイラ準拠オプション[/zc: strictStrings](../../build/reference/zc-strictstrings-disable-string-literal-type-conversion.md)が設定されている場合に、C++ コード内の文字列リテラルを使用して非定数 (または) を初期化しようとした場合に発生することがあります。 C では、文字列リテラルの型はの配列です **`char`** が、C++ ではの配列です `const char` 。 次の例では C2440 エラーが生成されます。
+## <a name="examples"></a>例
+
+次の例では C2440 エラーが生成されます。
 
 ```cpp
 // C2440s.cpp
@@ -37,8 +39,6 @@ int main() {
    const char* s2 = "tests"; // OK
 }
 ```
-
-## <a name="example"></a>例
 
 C2440 は、メンバーへのポインターを void* に変換しようとして発生することもあります。 次の例では C2440 が生成されます。
 
@@ -61,8 +61,6 @@ public:
 };
 ```
 
-## <a name="example"></a>例
-
 C2440 は、事前宣言するだけで定義されていない型をキャストしようとした場合にも発生することがあります。 次の例では C2440 エラーが生成されます。
 
 ```cpp
@@ -75,8 +73,6 @@ Base * func(Derived * d) {
     return static_cast<Base *>(d); // error C2440: 'static_cast' : cannot convert from 'Derived *' to 'Base *'
 }
 ```
-
-## <a name="example"></a>例
 
 次の例の 15 行目と 16 行目の C2440 エラーには、"`Incompatible calling conventions for UDT return value` (UDT 戻り値の呼び出し規約に互換性がありません)" というメッセージが表示されます。 *UDT*は、クラス、構造体、共用体などのユーザー定義型です。 このような種類の非互換性エラーが発生するのは、事前宣言の戻り値の型で指定された UDT の呼び出し規約が UDT の実際の呼び出し規約と競合する場合や、関数ポインターが関連する場合です。
 
@@ -126,8 +122,6 @@ int main() {
 }
 ```
 
-## <a name="example"></a>例
-
 C2440 は、内部ポインターに 0 を割り当てた場合にも発生することがあります。
 
 ```cpp
@@ -141,9 +135,7 @@ int main() {
 }
 ```
 
-## <a name="example"></a>例
-
-C2440 は、ユーザー定義の規約の使用方法が間違っている場合にも発生することがあります。 たとえば、変換演算子がとして定義されている場合、 **`explicit`** コンパイラは暗黙的な変換でそれを使用できません。 ユーザー定義変換の詳細については、「[ユーザー定義変換 (C++/cli)](../../dotnet/user-defined-conversions-cpp-cli.md)」を参照してください。 次の例では C2440 エラーが生成されます。
+C2440 は、ユーザー定義の規約の使用方法が間違っている場合にも発生することがあります。 たとえば、変換演算子がとして定義されている場合、 **`explicit`** コンパイラは暗黙的な変換でそれを使用できません。 ユーザー定義変換の詳細については、「 [ユーザー定義変換 (C++/cli)](../../dotnet/user-defined-conversions-cpp-cli.md)」を参照してください。 次の例では C2440 エラーが生成されます。
 
 ```cpp
 // C2440d.cpp
@@ -165,8 +157,6 @@ int main() {
 }
 ```
 
-## <a name="example"></a>例
-
 C2440 は、型が <xref:System.Array> である Visual C++ 配列のインスタンスを作成しようとした場合にも発生することがあります。  詳細については、「[配列](../../extensions/arrays-cpp-component-extensions.md)」を参照してください。  次の例では C2440 が生成されます。
 
 ```cpp
@@ -180,8 +170,6 @@ int main() {
 }
 ```
 
-## <a name="example"></a>例
-
 C2440 は、属性機能の変更が原因で発生することもあります。  次の例では C2440 エラーが生成されます。
 
 ```cpp
@@ -192,11 +180,9 @@ C2440 は、属性機能の変更が原因で発生することもあります�
 // [ module(name="PropDemoLib", version="1.0") ];
 ```
 
-## <a name="example"></a>例
-
 Microsoft C++ コンパイラでは、 **/clr**プログラミングを使用するソースコードがコンパイルされるときに、 [const_cast 演算子](../../cpp/const-cast-operator.md)をダウンキャストすることができなくなりました。
 
-この C2440 エラーを解決するには、正しいキャスト演算子を使用します。 詳細については、「[キャスト演算子](../../cpp/casting-operators.md)」を参照してください。
+この C2440 エラーを解決するには、正しいキャスト演算子を使用します。 詳細については、「 [キャスト演算子](../../cpp/casting-operators.md)」を参照してください。
 
 次の例では C2440 エラーが生成されます。
 
@@ -212,8 +198,6 @@ int main() {
    d = dynamic_cast<Derived^>(b);   // OK
 }
 ```
-
-## <a name="example"></a>例
 
 C2440 は、Visual Studio 2015 Update 3 のコンパイラに対する準拠の変更のために発生する可能性があります。 以前は、操作のテンプレート一致を識別するときに、コンパイラは特定の異なる式を同じ型として誤って処理しました **`static_cast`** 。 これで、コンパイラは型を正しく識別し、以前の動作に依存するコード **`static_cast`** は破損します。 この問題を解決するには、テンプレートパラメーターの型に一致するようにテンプレート引数を変更するか、 **`reinterpret_cast`** または C スタイルのキャストを使用します。
 
@@ -239,8 +223,6 @@ int main()
 
 This error can appear in ATL code that uses the SINK_ENTRY_INFO macro defined in <atlcom.h>.
 ```
-
-## <a name="example"></a>例
 
 ### <a name="copy-list-initialization"></a>Copy-list-initialization
 
@@ -278,8 +260,6 @@ int main()
     const A& a2{ 1 };
 }
 ```
-
-## <a name="example"></a>例
 
 ### <a name="cv-qualifiers-in-class-construction"></a>クラス コンストラクションの cv 修飾子
 

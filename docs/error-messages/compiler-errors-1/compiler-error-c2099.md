@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2099
 ms.assetid: 30e151ee-d458-4901-b0c0-d45054a913f5
-ms.openlocfilehash: e9fb7739111d13a585579455ed97cecaca3266e4
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: 84070b36506a657dde5d2e7bd5594c2b7434d81d
+ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75301939"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90743413"
 ---
 # <a name="compiler-error-c2099"></a>コンパイラ エラー C2099
 
@@ -19,7 +19,7 @@ ms.locfileid: "75301939"
 
 このエラーは C コンパイラでのみ発生し、非自動変数に対してのみ発生します。  コンパイラは、プログラムの開始時に非自動変数を初期化します。変数の初期化に使用される値は定数でなければなりません。
 
-## <a name="example"></a>使用例
+## <a name="examples"></a>例
 
 次の例では C2099 エラーが生成されます。
 
@@ -29,8 +29,6 @@ int j;
 int *p;
 j = *p;   // C2099 *p is not a constant
 ```
-
-## <a name="example"></a>使用例
 
 浮動小数点の有効桁数の環境設定 (詳細については「 **_controlfp_s** 」を参照) が実行時とコンパイル時では異なるため、 [/fp:strict](../../c-runtime-library/reference/controlfp-s.md) で式への定数の圧縮を実行できない場合にも、C2099 が発生します。
 

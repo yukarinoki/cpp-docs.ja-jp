@@ -1,4 +1,4 @@
-﻿---
+---
 title: Visual Studio で C++ コンパイラとビルド プロパティを設定する
 description: Visual Studio IDE を使用して、C++ コンパイラ オプション、リンカー オプション、およびその他のビルド設定を変更します。
 ms.date: 07/17/2019
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Visual C++ projects, properties
 - projects [C++], properties
 ms.assetid: 9b0d6f8b-7d4e-4e61-aa75-7d14944816cd
-ms.openlocfilehash: 6c05dd00324113819dd145e46bf10dfeb96a66a3
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 17b54311670f78cda78403c273cfbf57d43e84da
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80078230"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90042187"
 ---
 # <a name="set-compiler-and-build-properties"></a>コンパイラとビルドのプロパティを設定する
 
@@ -90,13 +90,13 @@ MSBuild では、特定の文字列値 (ディレクトリやパスなど) に�
 
 ## <a name=""></a><a name="property_editor">プロパティ エディター</a>
 
-プロパティ エディターを使用して、特定の文字列プロパティを変更し、値としてマクロを選択できます。 プロパティ エディターにアクセスするには、プロパティ ページのプロパティを選択し、右側のドロップダウン矢印をクリックします。 ドロップダウン リストに **[\<編集>]** が含まれている場合、それを選ぶと、そのプロパティのプロパティ エディターを表示できます。
+プロパティ エディターを使用して、特定の文字列プロパティを変更し、値としてマクロを選択できます。 プロパティ エディターにアクセスするには、プロパティ ページのプロパティを選択し、右側のドロップダウン矢印をクリックします。 ドロップダウン リストに **\<Edit>** が含まれている場合、それを選ぶと、そのプロパティのプロパティ エディターを表示できます。
 
-![プロパティ&#95;エディター&#95;のドロップダウン](media/property_editor_dropdown.png "Property_Editor_Dropdown")
+![プロパティのドロップダウン コントロールは、プロパティ エディターにアクセスするために使用されます。](media/property_editor_dropdown.png "[プロパティ エディター] ドロップダウン")
 
 プロパティ エディターで **[マクロ]** を選んで、使用できるマクロとその現在の値を見ることができます。 次の図は、 **[マクロ]** を選んだ後の **[追加のインクルード ディレクトリ]** プロパティのプロパティ エディターを示したものです。 **[親またはプロジェクトの既定値から継承]** チェック ボックスをオンにして新しい値を追加すると、現在継承されているすべての値に追加されます。 チェック ボックスをオフにすると、継承された値が新しい値に置き換えられます。 ほとんどの場合、チェック ボックスはオンのままにします。
 
-![プロパティ エディター、Visual C&#43;&#43;](media/propertyeditorvc.png "PropertyEditorVC")
+![インクルード ディレクトリ プロパティの [プロパティ エディター] ダイアログ](media/propertyeditorvc.png "PropertyEditorVC")
 
 ## <a name="add-an-include-directory-to-the-set-of-default-directories"></a>既定のディレクトリ セットにインクルード ディレクトリを追加する
 
