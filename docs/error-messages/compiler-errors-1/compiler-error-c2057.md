@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2057
 ms.assetid: 038a99d6-1f5a-42fa-8449-03b4ff11ee0b
-ms.openlocfilehash: 1c873a0ba956adedea3311ac8e1844a629caa44b
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: bdcf97ab6ea877af4e0713fc96ffd38f299e8234
+ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75302030"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90741450"
 ---
 # <a name="compiler-error-c2057"></a>コンパイラエラー C2057
 
@@ -21,7 +21,7 @@ ms.locfileid: "75302030"
 
 コンパイラは、型のインスタンスに領域を割り当てるため、コンパイル時にその型のサイズを認識する必要があります。
 
-## <a name="example"></a>使用例
+## <a name="examples"></a>例
 
 次の例では、C2057 を生成し、その修正方法を示しています。
 
@@ -34,8 +34,6 @@ int main() {
    int b[i]; // OK - value of i is fixed and known to compiler
 }
 ```
-
-## <a name="example"></a>使用例
 
 C 言語の定数式には、より制限の厳しい規則があります。  次の例では、C2057 を生成し、その修正方法を示しています。
 

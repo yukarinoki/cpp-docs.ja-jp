@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2885
 ms.assetid: 7743e5f3-a034-44b4-9ee8-5a6254c27f8c
-ms.openlocfilehash: 9b6b7bb54d5dce48dc6fce517eb0c909b0284da2
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 1953cb8fb9f80c5c1f967e10583c2b7303075f59
+ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87233445"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90742672"
 ---
 # <a name="compiler-error-c2885"></a>コンパイラ エラー C2885
 
@@ -19,9 +19,9 @@ ms.locfileid: "87233445"
 
 [Using](../../cpp/using-declaration.md)宣言を正しく使用しませんでした。
 
-## <a name="example"></a>例
-
 このエラーは、Visual Studio 2005 で実行されたコンパイラ準拠作業の結果として生成される場合があります。入れ子にされた型への宣言を持つことは無効になります。入れ子になった **`using`** 型に対する各参照を明示的に修飾するか、型を名前空間に配置するか、typedef を作成します。
+
+## <a name="examples"></a>例
 
 次の例では、C2885 が生成されます。
 
@@ -51,8 +51,6 @@ int main () {
    X13.i = 9;
 }
 ```
-
-## <a name="example"></a>例
 
 **`using`** クラスメンバーでキーワードを使用する場合、C++ では、そのメンバーを別のクラス (派生クラス) 内で定義する必要があります。
 

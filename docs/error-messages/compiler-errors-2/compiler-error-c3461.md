@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3461
 ms.assetid: bd66833a-545d-445a-bdfe-dee771a450a4
-ms.openlocfilehash: d1bf4af63bac2aaee1da4bb98f23c3b15e98c671
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: c5195e0a9bba1bc9e5962f3d3ae1795bb098be3d
+ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74756631"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90742880"
 ---
 # <a name="compiler-error-c3461"></a>コンパイラ エラー C3461
 
 'type': マネージド型のみ転送できます
 
-型の転送は、CLR 型でのみ実行できます。  詳細については[、「クラスと構造体](../../extensions/classes-and-structs-cpp-component-extensions.md)」を参照してください。
+型の転送は、CLR 型でのみ実行できます。  詳細については [、「クラスと構造体](../../extensions/classes-and-structs-cpp-component-extensions.md) 」を参照してください。
 
-詳細については、「[型C++の転送 (/cli)](../../extensions/type-forwarding-cpp-cli.md)」を参照してください。
+詳細については、「 [型の転送 (C++/cli)](../../extensions/type-forwarding-cpp-cli.md)」を参照してください。
 
-## <a name="example"></a>使用例
+## <a name="examples"></a>例
 
 コンポーネントを作成する例を次に示します。
 
@@ -30,8 +30,6 @@ ms.locfileid: "74756631"
 // compile with: /clr /LD
 public ref class R {};
 ```
-
-## <a name="example"></a>使用例
 
 次の例では C3461 が生成されます。
 

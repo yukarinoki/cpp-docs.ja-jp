@@ -5,12 +5,12 @@ f1_keywords:
 - unordered_map/std::operator!=
 - unordered_map/std::operator==
 ms.assetid: 9d5add0b-84bd-4a79-bd82-3f58b55145ed
-ms.openlocfilehash: 0ecedcfa8444b5cbae8fbe64b528a593ed3498b4
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 2c09fa0070151f7cdd502e8f5583645110e91c5b
+ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88844250"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90741958"
 ---
 # <a name="ltunordered_mapgt-operators"></a>&lt;unordered_map&gt; 演算子
 
@@ -39,7 +39,7 @@ bool operator!=(const unordered_map <Key, Type, Hash, Pred, Allocator>& left, co
 
 **`true`** unordered_maps が等しくない場合は。 **`false`** 等しい場合は。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 unordered_map オブジェクト間の比較は、要素を任意の順序で格納することによる影響を受けません。 同じ数の要素が存在し、一方のコンテナー内の要素がもう一方のコンテナー内の要素の順列である場合、2 つの unordered_map は等しくなります。 それ以外の場合は等しくありません。
 
@@ -101,7 +101,7 @@ bool operator==(const unordered_map <Key, Type, Hash, Pred, Allocator>& left, co
 
 **`true`** unordered_maps が等しい場合は。 **`false`** 等しくない場合。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 unordered_map オブジェクト間の比較は、要素を任意の順序で格納することによる影響を受けません。 同じ数の要素が存在し、一方のコンテナー内の要素がもう一方のコンテナー内の要素の順列である場合、2 つの unordered_map は等しくなります。 それ以外の場合は等しくありません。
 
@@ -143,7 +143,7 @@ um2 == um3: false
 */
 ```
 
-## <a name="operator"></a><a name="op_neq_multimap"></a> operator! =
+## <a name="operator-multimap"></a><a name="op_neq_multimap"></a> operator! = (multimap)
 
 演算子の左側の [unordered_multimap](../standard-library/unordered-multimap-class.md) オブジェクトが右側の unordered_multimap オブジェクトと等しくないかどうかをテストします。
 
@@ -163,7 +163,7 @@ bool operator!=(const unordered_multimap <Key, Type, Hash, Pred, Allocator>& lef
 
 **`true`** unordered_multimaps が等しくない場合は。 **`false`** 等しい場合は。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 unordered_multimap オブジェクト間の比較は、要素を任意の順序で格納することによる影響を受けません。 同じ数の要素が存在し、一方のコンテナー内の要素がもう一方のコンテナー内の要素の順列である場合、2 つの unordered_multimap は等しくなります。 それ以外の場合は等しくありません。
 
@@ -206,7 +206,7 @@ um2 != um3: true
 */
 ```
 
-## <a name="operator"></a><a name="op_eq_eq_multimap"></a> operator = =
+## <a name="operator-multimap"></a><a name="op_eq_eq_multimap"></a> operator = = (multimap)
 
 演算子の左側の [unordered_multimap](../standard-library/unordered-multimap-class.md) オブジェクトが右側の unordered_multimap オブジェクトと等しいかどうかをテストします。
 
@@ -226,7 +226,7 @@ bool operator==(const unordered_multimap <Key, Type, Hash, Pred, Allocator>& lef
 
 **`true`** unordered_multimaps が等しい場合は。 **`false`** 等しくない場合。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 unordered_multimap オブジェクト間の比較は、要素を任意の順序で格納することによる影響を受けません。 同じ数の要素が存在し、一方のコンテナー内の要素がもう一方のコンテナー内の要素の順列である場合、2 つの unordered_multimap は等しくなります。 それ以外の場合は等しくありません。
 

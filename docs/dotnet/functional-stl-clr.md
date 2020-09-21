@@ -63,12 +63,12 @@ helpviewer_keywords:
 - unary_delegate_noreturn function [STL/CLR]
 - unary_negate function [STL/CLR]
 ms.assetid: 88738b8c-5d37-4375-970e-a4442bf5efde
-ms.openlocfilehash: 9349de8c42bbed72384ea2b61b39bdea82172f9d
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 5cfec19ad8a25d3b44647e490b2c328a5639e675
+ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87221433"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90743309"
 ---
 # <a name="functional-stlclr"></a>functional (STL/CLR)
 
@@ -117,7 +117,7 @@ ms.locfileid: "87221433"
 |[plus (STL/CLR)](#plus)|ファンクタを追加します。|
 |[unary_negate (STL/CLR)](#unary_negate)|1つの引数のファンクタを反転させるためのファンクタ。|
 
-|機能|Description|
+|機能|説明|
 |--------------|-----------------|
 |[bind1st (STL/CLR)](#bind1st)|引数とファンクタの binder1st を生成します。|
 |[bind2nd (STL/CLR)](#bind2nd)|引数とファンクタの binder2nd を生成します。|
@@ -126,7 +126,7 @@ ms.locfileid: "87221433"
 
 ## <a name="members"></a>メンバー
 
-## <a name="binary_delegate-stlclr"></a><a name="binary_delegate"></a>binary_delegate (STL/CLR)
+## <a name="binary_delegate-stlclr"></a><a name="binary_delegate"></a> binary_delegate (STL/CLR)
 
 このクラスは、2つの引数を持つデリゲートを記述します。 これを使用して、引数と戻り値の型に関してデリゲートを指定します。
 
@@ -150,7 +150,7 @@ generic<typename Arg1,
 *結果*<br/>
 戻り値の型。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 このデリゲートでは、2つの引数を持つ関数が記述されています。
 
@@ -202,7 +202,7 @@ compare(L'a', L'b') = True
 compare(L'b', L'a') = False
 ```
 
-## <a name="binary_delegate_noreturn-stlclr"></a><a name="binary_delegate_noreturn"></a>binary_delegate_noreturn (STL/CLR)
+## <a name="binary_delegate_noreturn-stlclr"></a><a name="binary_delegate_noreturn"></a> binary_delegate_noreturn (STL/CLR)
 
 このクラスは、を返す2つの引数を持つデリゲートを記述し **`void`** ます。 引数を使用してデリゲートを指定します。
 
@@ -222,7 +222,7 @@ generic<typename Arg1,
 *引数*<br/>
 2番目の引数の型。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 このデリゲートは、を返す2つの引数を持つ関数を記述し **`void`** ます。
 
@@ -272,7 +272,7 @@ compare(a, b) = True
 compare(b, a) = False
 ```
 
-## <a name="binary_negate-stlclr"></a><a name="binary_negate"></a>binary_negate (STL/CLR)
+## <a name="binary_negate-stlclr"></a><a name="binary_negate"></a> binary_negate (STL/CLR)
 
 このテンプレートクラスは、が呼び出されると、格納されている2つの引数のファンクタの論理 NOT を返す、ファンクタを記述します。 これを使用して、格納されているファンクタの観点から関数オブジェクトを指定します。
 
@@ -305,7 +305,7 @@ public:
 *Fun*<br/>
 格納されているファンクタの種類。
 
-## <a name="member-functions"></a>メンバー関数
+### <a name="member-functions"></a>メンバー関数
 
 |型の定義|説明|
 |---------------------|-----------------|
@@ -319,12 +319,12 @@ public:
 |------------|-----------------|
 |binary_negate|ファンクタを構築します。|
 
-|演算子|[説明]|
+|演算子|説明|
 |--------------|-----------------|
 |演算子 ()|目的の関数を計算します。|
 |演算子 delegate_type ^ ()|ファンクタをデリゲートにキャストします。|
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 このテンプレートクラスは、別の2つの引数を持つファンクタを格納する2つの引数のファンクタを記述します。 このメソッドは、メンバー演算子を定義し `operator()` ます。これにより、オブジェクトが関数として呼び出されたときに、2つの引数を指定して呼び出された格納されたファンの論理 NOT が返されます。
 
@@ -386,7 +386,7 @@ int main()
 1 0
 ```
 
-## <a name="bind1st-stlclr"></a><a name="bind1st"></a>bind1st (STL/CLR)
+## <a name="bind1st-stlclr"></a><a name="bind1st"></a> bind1st (STL/CLR)
 
 `binder1st`引数とファンクタのを生成します。
 
@@ -412,10 +412,10 @@ template<typename Fun,
 *クタ*<br/>
 ラップするファンクタ。
 
-*左側*<br/>
+*left*<br/>
 ラップする1番目の引数。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 このテンプレート関数は、 [binder1st (STL/CLR)](../dotnet/binder1st-stl-clr.md)を返し `<Fun>(functor, left)` ます。 2つの引数を持つファンクタと、2番目の引数を使用して呼び出す1つの引数のファンクタでその最初の引数をラップする便利な方法として使用します。
 
@@ -467,7 +467,7 @@ int main()
 -1 0
 ```
 
-## <a name="bind2nd-stlclr"></a><a name="bind2nd"></a>bind2nd (STL/CLR)
+## <a name="bind2nd-stlclr"></a><a name="bind2nd"></a> bind2nd (STL/CLR)
 
 `binder2nd`引数とファンクタのを生成します。
 
@@ -493,10 +493,10 @@ template<typename Fun,
 *クタ*<br/>
 ラップするファンクタ。
 
-*そうです*<br/>
+*right*<br/>
 ラップする2番目の引数。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 このテンプレート関数は、 [binder2nd (STL/CLR)](../dotnet/binder2nd-stl-clr.md)を返し `<Fun>(functor, right)` ます。 これは、2つの引数を持つファンクタと2番目の引数を、1番目の引数を使用して呼び出す1つの引数のファンクタにラップするための便利な方法として使用します。
 
@@ -548,7 +548,7 @@ int main()
 0 -1
 ```
 
-## <a name="binder1st-stlclr"></a><a name="binder1st"></a>binder1st (STL/CLR)
+## <a name="binder1st-stlclr"></a><a name="binder1st"></a> binder1st (STL/CLR)
 
 このテンプレートクラスは、1つの引数を持つファンクタを記述します。これは、呼び出されると、格納されている最初の引数と指定された2番目の引数と共に、格納されている2つの引数のファンクタ これを使用して、格納されているファンクタの観点から関数オブジェクトを指定します。
 
@@ -594,12 +594,12 @@ public:
 |------------|-----------------|
 |binder1st|ファンクタを構築します。|
 
-|演算子|[説明]|
+|演算子|説明|
 |--------------|-----------------|
 |演算子 ()|目的の関数を計算します。|
 |演算子 delegate_type ^ ()|ファンクタをデリゲートにキャストします。|
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 このテンプレートクラスは、2つの引数を持つファンクタと1番目の引数を格納する1つの引数のファンクタを記述します。 このメソッドは、メンバー演算子を定義します `operator()` 。これにより、オブジェクトが関数として呼び出されると、格納されている最初の引数と指定した2番目の引数を使用して、格納されたファンを呼び出した結果が返されます。
 
@@ -653,7 +653,7 @@ int main()
 -1 0
 ```
 
-## <a name="binder2nd-stlclr"></a><a name="binder2nd"></a>binder2nd (STL/CLR)
+## <a name="binder2nd-stlclr"></a><a name="binder2nd"></a> binder2nd (STL/CLR)
 
 このテンプレートクラスは、1つの引数を持つファンクタを記述します。これは、呼び出されると、指定された最初の引数と、格納されている2番目の引数で呼び出される、格納されている2つの引数のファン これを使用して、格納されているファンクタの観点から関数オブジェクトを指定します。
 
@@ -685,7 +685,7 @@ public:
 *Fun*<br/>
 格納されているファンクタの種類。
 
-## <a name="member-functions"></a>メンバー関数
+### <a name="member-functions"></a>メンバー関数
 
 |型の定義|説明|
 |---------------------|-----------------|
@@ -699,12 +699,12 @@ public:
 |------------|-----------------|
 |binder2nd|ファンクタを構築します。|
 
-|演算子|[説明]|
+|演算子|説明|
 |--------------|-----------------|
 |演算子 ()|目的の関数を計算します。|
 |演算子 delegate_type ^ ()|ファンクタをデリゲートにキャストします。|
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 このテンプレートクラスは、2つの引数を持つファンクタと2番目の引数を格納する1つの引数のファンクタを記述します。 このメソッドは、メンバー演算子を定義し `operator()` ます。これにより、オブジェクトが関数として呼び出されたときに、指定された最初の引数と格納された2番目の引数を使用して、格納されたファンを呼び出した結果が返されます。
 
@@ -758,7 +758,7 @@ int main()
 0 -1
 ```
 
-## <a name="divides-stlclr"></a><a name="divides"></a>除算 (STL/CLR)
+## <a name="divides-stlclr"></a><a name="divides"></a> 除算 (STL/CLR)
 
 このテンプレートクラスは、が呼び出されると、2番目の引数で除算された最初の引数を返す、ファンクタを記述します。 これを使用して、引数の型に関して関数オブジェクトを指定します。
 
@@ -803,12 +803,12 @@ public:
 |------------|-----------------|
 |divides|ファンクタを構築します。|
 
-|演算子|[説明]|
+|演算子|説明|
 |--------------|-----------------|
 |演算子 ()|目的の関数を計算します。|
 |演算子 delegate_type ^ ()|ファンクタをデリゲートにキャストします。|
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 このテンプレートクラスは、2つの引数を持つファンクタを記述します。 メンバー演算子を定義します `operator()` 。これにより、オブジェクトが関数として呼び出されたときに、最初の引数を2番目の引数で割った値が返されます。
 
@@ -859,7 +859,7 @@ int main()
 2 3
 ```
 
-## <a name="equal_to-stlclr"></a><a name="equal_to"></a>equal_to (STL/CLR)
+## <a name="equal_to-stlclr"></a><a name="equal_to"></a> equal_to (STL/CLR)
 
 このテンプレートクラスは、最初の引数が2番目の引数と等しい場合にのみ true を返す、ファンクタを記述します。 これを使用して、引数の型に関して関数オブジェクトを指定します。
 
@@ -904,12 +904,12 @@ public:
 |------------|-----------------|
 |equal_to|ファンクタを構築します。|
 
-|演算子|[説明]|
+|演算子|説明|
 |--------------|-----------------|
 |演算子 ()|目的の関数を計算します。|
 |演算子 delegate_type ^ ()|ファンクタをデリゲートにキャストします。|
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 このテンプレートクラスは、2つの引数を持つファンクタを記述します。 メンバー演算子を定義します。これにより、 `operator()` オブジェクトが関数として呼び出されたときに、最初の引数が2番目の引数と等しい場合にのみ true が返されます。
 
@@ -960,7 +960,7 @@ int main()
 1 0
 ```
 
-## <a name="greater-stlclr"></a><a name="greater"></a>より大きい (STL/CLR)
+## <a name="greater-stlclr"></a><a name="greater"></a> より大きい (STL/CLR)
 
 このテンプレートクラスは、最初の引数が2番目の引数より大きい場合にのみ true を返す、ファンクタを記述します。 これを使用して、引数の型に関して関数オブジェクトを指定します。
 
@@ -1005,12 +1005,12 @@ public:
 |------------|-----------------|
 |greater|ファンクタを構築します。|
 
-|演算子|[説明]|
+|演算子|説明|
 |--------------|-----------------|
 |演算子 ()|目的の関数を計算します。|
 |演算子 delegate_type ^|ファンクタをデリゲートにキャストします。|
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 このテンプレートクラスは、2つの引数を持つファンクタを記述します。 メンバー演算子を定義して、 `operator()` オブジェクトが関数として呼び出されたときに、最初の引数が2番目の引数より大きい場合にのみ true を返します。
 
@@ -1061,7 +1061,7 @@ int main()
 1 0
 ```
 
-## <a name="greater_equal-stlclr"></a><a name="greater_equal"></a>greater_equal (STL/CLR)
+## <a name="greater_equal-stlclr"></a><a name="greater_equal"></a> greater_equal (STL/CLR)
 
 このテンプレートクラスは、最初の引数が2番目の引数以上の場合にのみ true を返す、ファンクタを記述します。 これを使用して、引数の型に関して関数オブジェクトを指定します。
 
@@ -1106,12 +1106,12 @@ public:
 |------------|-----------------|
 |greater_equal|ファンクタを構築します。|
 
-|演算子|[説明]|
+|演算子|説明|
 |--------------|-----------------|
 |演算子 ()|目的の関数を計算します。|
 |演算子 delegate_type ^|ファンクタをデリゲートにキャストします。|
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 このテンプレートクラスは、2つの引数を持つファンクタを記述します。 メンバー演算子を定義して、 `operator()` オブジェクトが関数として呼び出されたときに、最初の引数が2番目の引数以上の場合にのみ true を返します。
 
@@ -1162,7 +1162,7 @@ int main()
 1 0
 ```
 
-## <a name="less-stlclr"></a><a name="less"></a>less (STL/CLR)
+## <a name="less-stlclr"></a><a name="less"></a> less (STL/CLR)
 
 このテンプレートクラスは、最初の引数が2番目の引数より小さい場合にのみ true を返す、ファンクタを記述します。 これを使用して、引数の型に関して関数オブジェクトを指定します。
 
@@ -1207,12 +1207,12 @@ public:
 |------------|-----------------|
 |less|ファンクタを構築します。|
 
-|演算子|[説明]|
+|演算子|説明|
 |--------------|-----------------|
 |演算子 ()|目的の関数を計算します。|
 |演算子 delegate_type ^|ファンクタをデリゲートにキャストします。|
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 このテンプレートクラスは、2つの引数を持つファンクタを記述します。 メンバー演算子を定義して、 `operator()` オブジェクトが関数として呼び出されたときに、最初の引数が2番目の引数より小さい場合にのみ true を返します。
 
@@ -1263,7 +1263,7 @@ int main()
 0 1
 ```
 
-## <a name="less_equal-stlclr"></a><a name="less_equal"></a>less_equal (STL/CLR)
+## <a name="less_equal-stlclr"></a><a name="less_equal"></a> less_equal (STL/CLR)
 
 このテンプレートクラスは、最初の引数が2番目の引数の値以下である場合にのみ true を返す、ファンクタを表します。 これを使用して、引数の型に関して関数オブジェクトを指定します。
 
@@ -1308,12 +1308,12 @@ public:
 |------------|-----------------|
 |less_equal|ファンクタを構築します。|
 
-|演算子|[説明]|
+|演算子|説明|
 |--------------|-----------------|
 |演算子 ()|目的の関数を計算します。|
 |演算子 delegate_type ^|ファンクタをデリゲートにキャストします。|
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 このテンプレートクラスは、2つの引数を持つファンクタを記述します。 メンバー演算子を定義します `operator()` 。これにより、オブジェクトが関数として呼び出されたときに、最初の引数が2番目の引数の値以下である場合にのみ、true が返されます。
 
@@ -1364,7 +1364,7 @@ int main()
 0 1
 ```
 
-## <a name="logical_and-stlclr"></a><a name="logical_and"></a>logical_and (STL/CLR)
+## <a name="logical_and-stlclr"></a><a name="logical_and"></a> logical_and (STL/CLR)
 
 このテンプレートクラスは、1つ目の引数と2番目のテストの両方が true の場合にのみ true を返す、ファンクタを記述します。 これを使用して、引数の型に関して関数オブジェクトを指定します。
 
@@ -1409,12 +1409,12 @@ public:
 |------------|-----------------|
 |logical_and|ファンクタを構築します。|
 
-|演算子|[説明]|
+|演算子|説明|
 |--------------|-----------------|
 |演算子 ()|目的の関数を計算します。|
 |演算子 delegate_type ^|ファンクタをデリゲートにキャストします。|
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 このテンプレートクラスは、2つの引数を持つファンクタを記述します。 メンバー演算子を定義し `operator()` ます。これにより、オブジェクトが関数として呼び出されたときに、最初の引数と2番目のテストの両方が true の場合にのみ true を返します。
 
@@ -1465,7 +1465,7 @@ int main()
 1 0
 ```
 
-## <a name="logical_not-stlclr"></a><a name="logical_not"></a>logical_not (STL/CLR)
+## <a name="logical_not-stlclr"></a><a name="logical_not"></a> logical_not (STL/CLR)
 
 このテンプレートクラスは、その引数が false としてテストされている場合にのみ true を返す、ファンクタを記述します。 これを使用して、引数の型に関して関数オブジェクトを指定します。
 
@@ -1507,12 +1507,12 @@ public:
 |------------|-----------------|
 |logical_not|ファンクタを構築します。|
 
-|演算子|[説明]|
+|演算子|説明|
 |--------------|-----------------|
 |演算子 ()|目的の関数を計算します。|
 |演算子 delegate_type ^|ファンクタをデリゲートにキャストします。|
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 このテンプレートクラスは、1つの引数を持つファンクタを記述します。 メンバー演算子を定義し `operator()` ます。これにより、オブジェクトが関数として呼び出されたときに、引数が false としてテストされた場合にのみ true が返されるようになります。
 
@@ -1555,7 +1555,7 @@ int main()
 0 1
 ```
 
-## <a name="logical_or-stlclr"></a><a name="logical_or"></a>logical_or (STL/CLR)
+## <a name="logical_or-stlclr"></a><a name="logical_or"></a> logical_or (STL/CLR)
 
 このテンプレートクラスは、1つ目の引数または2番目のテストが true の場合にのみ true を返す、ファンクタを記述します。 これを使用して、引数の型に関して関数オブジェクトを指定します。
 
@@ -1600,12 +1600,12 @@ public:
 |------------|-----------------|
 |logical_or|ファンクタを構築します。|
 
-|演算子|[説明]|
+|演算子|説明|
 |--------------|-----------------|
 |演算子 ()|目的の関数を計算します。|
 |演算子 delegate_type ^|ファンクタをデリゲートにキャストします。|
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 このテンプレートクラスは、2つの引数を持つファンクタを記述します。 メンバー演算子を定義し `operator()` ます。これにより、オブジェクトが関数として呼び出されたときに、最初の引数または2番目のテストが true の場合にのみ true が返されます。
 
@@ -1656,7 +1656,7 @@ int main()
 1 0
 ```
 
-## <a name="minus-stlclr"></a><a name="minus"></a>マイナス (STL/CLR)
+## <a name="minus-stlclr"></a><a name="minus"></a> マイナス (STL/CLR)
 
 このテンプレートクラスは、呼び出したときに、最初の引数から2番目の引数を減算したものを返す、ファンクタを表します。 これを使用して、引数の型に関して関数オブジェクトを指定します。
 
@@ -1701,12 +1701,12 @@ public:
 |------------|-----------------|
 |minus|ファンクタを構築します。|
 
-|演算子|[説明]|
+|演算子|説明|
 |--------------|-----------------|
 |演算子 ()|目的の関数を計算します。|
 |演算子 delegate_type ^|ファンクタをデリゲートにキャストします。|
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 このテンプレートクラスは、2つの引数を持つファンクタを記述します。 メンバー演算子を定義し `operator()` ます。これにより、オブジェクトが関数として呼び出されたときに、最初の引数から2番目の引数を減算した値が返されます。
 
@@ -1757,7 +1757,7 @@ int main()
 2 2
 ```
 
-## <a name="modulus-stlclr"></a><a name="modulus"></a>剰余 (STL/CLR)
+## <a name="modulus-stlclr"></a><a name="modulus"></a> 剰余 (STL/CLR)
 
 このテンプレートクラスは、を呼び出すと2番目の引数の剰余を返す、ファンクタを記述します。 これを使用して、引数の型に関して関数オブジェクトを指定します。
 
@@ -1802,12 +1802,12 @@ public:
 |------------|-----------------|
 |modulus|ファンクタを構築します。|
 
-|演算子|[説明]|
+|演算子|説明|
 |--------------|-----------------|
 |演算子 ()|目的の関数を計算します。|
 |演算子 delegate_type ^|ファンクタをデリゲートにキャストします。|
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 このテンプレートクラスは、2つの引数を持つファンクタを記述します。 メンバー演算子を定義し `operator()` ます。これにより、オブジェクトが関数として呼び出されたときに、1番目の引数の剰余が返されます。
 
@@ -1858,7 +1858,7 @@ int main()
 1 0
 ```
 
-## <a name="multiplies-stlclr"></a><a name="multiplies"></a>乗算 (STL/CLR)
+## <a name="multiplies-stlclr"></a><a name="multiplies"></a> 乗算 (STL/CLR)
 
 このテンプレートクラスは、呼び出したときに、最初の引数の1秒の時刻を返す、ファンクタを表します。 これを使用して、引数の型に関して関数オブジェクトを指定します。
 
@@ -1903,12 +1903,12 @@ public:
 |------------|-----------------|
 |multiplies|ファンクタを構築します。|
 
-|演算子|[説明]|
+|演算子|説明|
 |--------------|-----------------|
 |演算子 ()|目的の関数を計算します。|
 |演算子 delegate_type ^|ファンクタをデリゲートにキャストします。|
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 このテンプレートクラスは、2つの引数を持つファンクタを記述します。 メンバー演算子を定義し `operator()` ます。これにより、オブジェクトが関数として呼び出されたときに、最初の引数の1回目の時間が返されます。
 
@@ -1959,7 +1959,7 @@ int main()
 8 3
 ```
 
-## <a name="negate-stlclr"></a><a name="negate"></a>否定 (STL/CLR)
+## <a name="negate-stlclr"></a><a name="negate"></a> 否定 (STL/CLR)
 
 このテンプレートクラスは、呼び出したときにその引数を否定したものを返す、ファンクタを記述します。 これを使用して、引数の型に関して関数オブジェクトを指定します。
 
@@ -2001,12 +2001,12 @@ public:
 |------------|-----------------|
 |negate|ファンクタを構築します。|
 
-|演算子|[説明]|
+|演算子|説明|
 |--------------|-----------------|
 |演算子 ()|目的の関数を計算します。|
 |演算子 delegate_type ^|ファンクタをデリゲートにキャストします。|
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 このテンプレートクラスは、1つの引数を持つファンクタを記述します。 メンバー演算子を定義し `operator()` ます。これにより、オブジェクトが関数として呼び出されたときに、その引数を否定した値が返されます。
 
@@ -2049,7 +2049,7 @@ int main()
 -4 3
 ```
 
-## <a name="not_equal_to-stlclr"></a><a name="not_equal_to"></a>not_equal_to (STL/CLR)
+## <a name="not_equal_to-stlclr"></a><a name="not_equal_to"></a> not_equal_to (STL/CLR)
 
 このテンプレートクラスは、最初の引数が2番目の引数と等しくない場合にのみ true を返す、ファンクタを記述します。 これを使用して、引数の型に関して関数オブジェクトを指定します。
 
@@ -2094,12 +2094,12 @@ public:
 |------------|-----------------|
 |not_equal_to|ファンクタを構築します。|
 
-|演算子|[説明]|
+|演算子|説明|
 |--------------|-----------------|
 |演算子 ()|目的の関数を計算します。|
 |演算子 delegate_type ^|ファンクタをデリゲートにキャストします。|
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 このテンプレートクラスは、2つの引数を持つファンクタを記述します。 メンバー演算子を定義します。これにより、 `operator()` オブジェクトが関数として呼び出されたときに、最初の引数が2番目の引数と等しくない場合にのみ、true が返されます。
 
@@ -2150,7 +2150,7 @@ int main()
 0 1
 ```
 
-## <a name="not1-stlclr"></a><a name="not1"></a>not1 (STL/CLR)
+## <a name="not1-stlclr"></a><a name="not1"></a> not1 (STL/CLR)
 
 `unary_negate`ファンクタのを生成します。
 
@@ -2171,7 +2171,7 @@ template<typename Fun>
 *クタ*<br/>
 ラップするファンクタ。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 このテンプレート関数は、 [unary_negate (STL/CLR)](../dotnet/unary-negate-stl-clr.md)を返し `<Fun>(functor)` ます。 これは、論理 NOT を提供するファンクタで1つの引数のファンクタをラップするための便利な方法として使用します。
 
@@ -2222,7 +2222,7 @@ int main()
 1 0
 ```
 
-## <a name="not2-stlclr"></a><a name="not2"></a>not2 (STL/CLR)
+## <a name="not2-stlclr"></a><a name="not2"></a> not2 (STL/CLR)
 
 `binary_negate`ファンクタのを生成します。
 
@@ -2243,7 +2243,7 @@ template<typename Fun>
 *クタ*<br/>
 ラップするファンクタ。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 このテンプレート関数は、 [binary_negate (STL/CLR)](../dotnet/binary-negate-stl-clr.md)を返し `<Fun>(functor)` ます。 論理 NOT を提供するファンクタで2つの引数を持つファンクタをラップする便利な方法として使用します。
 
@@ -2303,7 +2303,7 @@ int main()
 1 0
 ```
 
-## <a name="plus-stlclr"></a><a name="plus"></a>プラス (STL/CLR)
+## <a name="plus-stlclr"></a><a name="plus"></a> プラス (STL/CLR)
 
 このテンプレートクラスは、呼び出したときに最初の引数に1を加算したものを返す、ファンクタを表します。 これを使用して、引数の型に関して関数オブジェクトを指定します。
 
@@ -2348,12 +2348,12 @@ public:
 |------------|-----------------|
 |plus|ファンクタを構築します。|
 
-|演算子|[説明]|
+|演算子|説明|
 |--------------|-----------------|
 |演算子 ()|目的の関数を計算します。|
 |演算子 delegate_type ^|ファンクタをデリゲートにキャストします。|
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 このテンプレートクラスは、2つの引数を持つファンクタを記述します。 メンバー演算子を定義します `operator()` 。これにより、オブジェクトが関数として呼び出されるときに、最初の引数に1を加算した値が返されます。
 
@@ -2404,7 +2404,7 @@ int main()
 6 4
 ```
 
-## <a name="unary_delegate-stlclr"></a><a name="unary_delegate"></a>unary_delegate (STL/CLR)
+## <a name="unary_delegate-stlclr"></a><a name="unary_delegate"></a> unary_delegate (STL/CLR)
 
 このクラスは、1つの引数を持つデリゲートを記述します。 これを使用して、引数と戻り値の型に関してデリゲートを指定します。
 
@@ -2424,7 +2424,7 @@ generic<typename Arg,
 *結果*<br/>
 戻り値の型。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 このデリゲートは、1つの引数を持つ関数を記述します。
 
@@ -2470,7 +2470,7 @@ hash(L'a') = 5
 hash(L'b') = 22
 ```
 
-## <a name="unary_delegate_noreturn-stlclr"></a><a name="unary_delegate_noreturn"></a>unary_delegate_noreturn (STL/CLR)
+## <a name="unary_delegate_noreturn-stlclr"></a><a name="unary_delegate_noreturn"></a> unary_delegate_noreturn (STL/CLR)
 
 このクラスは、を返す1つの引数を持つデリゲートを記述し **`void`** ます。 これを使用して、引数の型に関してデリゲートを指定します。
 
@@ -2486,7 +2486,7 @@ generic<typename Arg>
 *Arg*<br/>
 引数の型。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 この関数では、を返す1つの引数を持つデリゲートが記述されて **`void`** います。
 
@@ -2533,7 +2533,7 @@ hash(a) = 5
 hash(b) = 22
 ```
 
-## <a name="unary_negate-stlclr"></a><a name="unary_negate"></a>unary_negate (STL/CLR)
+## <a name="unary_negate-stlclr"></a><a name="unary_negate"></a> unary_negate (STL/CLR)
 
 このテンプレートクラスは、が呼び出されると、格納されている1つの引数のファンクタの論理 NOT を返す、ファンクタを記述します。 これを使用して、格納されているファンクタの観点から関数オブジェクトを指定します。
 
@@ -2576,12 +2576,12 @@ public:
 |------------|-----------------|
 |unary_negate|ファンクタを構築します。|
 
-|演算子|[説明]|
+|演算子|説明|
 |--------------|-----------------|
 |演算子 ()|目的の関数を計算します。|
 |delegate_type ^|ファンクタをデリゲートにキャストします。|
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 このテンプレートクラスは、1つの引数を持つ別のファンクタを格納する1つの引数を持つファンクタを記述します。 このメソッドは、メンバー演算子を定義します `operator()` 。これにより、オブジェクトが関数として呼び出されたときに、引数と共に呼び出された格納されたファンの論理 NOT が返されます。
 

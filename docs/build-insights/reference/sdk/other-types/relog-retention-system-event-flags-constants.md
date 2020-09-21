@@ -1,6 +1,6 @@
 ---
-title: 定数をRELOG_RETENTION_SYSTEM_EVENT_FLAGSする
-description: C++ ビルドインサイト SDK RELOG_RETENTION_SYSTEM_EVENT_FLAGS定数のリファレンスです。
+title: RELOG_RETENTION_SYSTEM_EVENT_FLAGS 定数
+description: C++ Build Insights SDK RELOG_RETENTION_SYSTEM_EVENT_FLAGS 定数のリファレンス。
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 7110f809a819357b31951c203c1fa6ac9fb9f42e
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
-ms.translationtype: MT
+ms.openlocfilehash: 5444c1a6b8799b1de8eea228211a5f2d6de638f8
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81323471"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90041407"
 ---
-# <a name="relog_retention_system_event_flags-constants"></a>定数をRELOG_RETENTION_SYSTEM_EVENT_FLAGSする
+# <a name="relog_retention_system_event_flags-constants"></a>RELOG_RETENTION_SYSTEM_EVENT_FLAGS 定数
 
 ::: moniker range="<=vs-2015"
 
-C++ ビルド インサイト SDK は、Visual Studio 2017 以降と互換性があります。 これらのバージョンのドキュメントを参照するには、この記事の Visual Studio**バージョン**セレクター コントロールを Visual Studio 2017 または Visual Studio 2019 に設定します。 このページの目次の上部に表示されます。
+C++ Build Insights SDK は、Visual Studio 2017 以降と互換性があります。 これらのバージョンのドキュメントを表示するには、この記事の Visual Studio **Version** セレクター コントロールを Visual Studio 2017 または Visual Studio 2019 に設定します。 このページの目次の一番上にあります。
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-定数`RELOG_RETENTION_SYSTEM_EVENT_FLAGS`は、ログに記録されたトレースに保持するシステム イベントを記述するために使用されます。 これらのフィールドを使用して[、RELOG_DESCRIPTOR](relog-descriptor-struct.md)構造体の`SystemEventsRetentionFlags`フィールドを初期化します。
+`RELOG_RETENTION_SYSTEM_EVENT_FLAGS` 定数は、再ログ記録トレースに保持するシステム イベントを表すために使用されます。 これを使用し、[RELOG_DESCRIPTOR](relog-descriptor-struct.md) 構造の `SystemEventsRetentionFlags` フィールドを初期化します。
 
 ## <a name="syntax"></a>構文
 
@@ -39,11 +39,11 @@ static const unsigned long long
 
 ## <a name="members"></a>メンバー
 
-|  |  |
+| 名前 | [説明] |
 |--|--|
-| `RELOG_RETENTION_SYSTEM_EVENT_FLAGS_CPU_SAMPLES` | 再ログされたトレースで CPU サンプル システム イベントを保持します。 |
-| `RELOG_RETENTION_SYSTEM_EVENT_FLAGS_ALL` | すべてのシステム イベントを再ログトレースに保持します。 |
+| `RELOG_RETENTION_SYSTEM_EVENT_FLAGS_CPU_SAMPLES` | 再ログ記録トレースに CPU サンプル システム イベントを保持します。 |
+| `RELOG_RETENTION_SYSTEM_EVENT_FLAGS_ALL` | 再ログ記録トレースにすべてのシステム イベントを保持します。 |
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>注釈
 
 ::: moniker-end

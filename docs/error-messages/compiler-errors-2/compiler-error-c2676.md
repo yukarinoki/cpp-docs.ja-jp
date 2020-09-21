@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2676
 ms.assetid: 838a5e34-c92f-4f65-a597-e150bf8cf737
-ms.openlocfilehash: 1b999875aa1c7ef34065c0a36046c634308075f5
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 94e56581f6583fa69e46d4deb3d82663a65cd1d1
+ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87218196"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90743192"
 ---
 # <a name="compiler-error-c2676"></a>コンパイラ エラー C2676
 
@@ -19,7 +19,7 @@ ms.locfileid: "87218196"
 
 この演算子を使うには、型を指定してこの演算子をオーバーロードするか、この演算子が定義された型への変換を定義する必要があります。
 
-## <a name="example"></a>例
+## <a name="examples"></a>例
 
 次の例では、C2676 が生成されます。
 
@@ -50,8 +50,6 @@ int main() {
                // and then the builtin-operator==(int, int)
 }
 ```
-
-## <a name="example"></a>例
 
 C2676 は、参照型のポインターに対してポインター演算を実行しようとした場合にも発生する可能性があり **`this`** ます。
 

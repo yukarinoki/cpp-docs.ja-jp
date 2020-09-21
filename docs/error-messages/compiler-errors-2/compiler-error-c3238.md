@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3238
 ms.assetid: 19942497-b3c5-4df0-9144-142ced92468b
-ms.openlocfilehash: 6f60a9abbc5702c1a0d14d0f894c9b1684378c3f
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 1f238a3be27023c755544438166aae1b2b2967d3
+ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74759361"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90741984"
 ---
 # <a name="compiler-error-c3238"></a>コンパイラ エラー C3238
 
@@ -19,9 +19,9 @@ ms.locfileid: "74759361"
 
 クライアント アプリケーションで定義された型は、参照されているアセンブリでも、型の転送構文によって定義されています。 アプリケーションのスコープで、両方の型を定義することはできません。
 
-詳細については、「[型の転送C++(/cli)](../../extensions/type-forwarding-cpp-cli.md) 」を参照してください。
+詳細については、「 [型の転送 (C++/cli)](../../extensions/type-forwarding-cpp-cli.md) 」を参照してください。
 
-## <a name="example"></a>使用例
+## <a name="examples"></a>例
 
 次の例では、別のアセンブリから転送された型を含むアセンブリを作成します。
 
@@ -31,8 +31,6 @@ ms.locfileid: "74759361"
 public ref class R {};
 ```
 
-## <a name="example"></a>使用例
-
 次の例は型定義を含んでいたアセンブリを作成しますが、型の転送構文だけを含んでいるわけではありません。
 
 ```cpp
@@ -41,8 +39,6 @@ public ref class R {};
 #using "C3238.dll"
 [ assembly:TypeForwardedTo(R::typeid) ];
 ```
-
-## <a name="example"></a>使用例
 
 次の例では C3238 が生成されます。
 

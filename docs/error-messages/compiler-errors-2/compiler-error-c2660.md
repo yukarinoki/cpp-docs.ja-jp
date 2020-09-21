@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2660
 ms.assetid: 2e01a1db-4f00-4df6-a04d-cb6f70a6922b
-ms.openlocfilehash: febeb75cbde6738bd9079b7bd86f88c521c29e40
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 179cdc6379fd26f5acd436d5ca6cacc08df8dce3
+ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74756059"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90743244"
 ---
 # <a name="compiler-error-c2660"></a>コンパイラ エラー C2660
 
@@ -25,7 +25,7 @@ MFC メンバー関数ではなく同じ名前の Windows API 関数を誤って
 
 - スコープ解決演算子 (`::`) を使用して、グローバルな名前空間で関数名を検索するようにコンパイラに通知します。
 
-## <a name="example"></a>使用例
+## <a name="examples"></a>例
 
 次の例では、C2660 が生成されます。
 
@@ -39,9 +39,7 @@ int main() {
 }
 ```
 
-## <a name="example"></a>使用例
-
-C2660 エラーは、マネージド型の Dispose メソッドを直接呼び出す場合にも発生することがあります。 詳細については、「[デストラクターとファイナライザー](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers)」を参照してください。 次の例では、C2660 が生成されます。
+C2660 エラーは、マネージド型の Dispose メソッドを直接呼び出す場合にも発生することがあります。 詳細については、「 [デストラクターとファイナライザー](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers)」を参照してください。 次の例では、C2660 が生成されます。
 
 ```cpp
 // C2660_a.cpp
@@ -60,8 +58,6 @@ int main() {
    stateTimer->~Timer();   // OK
 }
 ```
-
-## <a name="example"></a>使用例
 
 派生クラスによって関数が隠ぺいされると、C2660 が発生します。
 
@@ -92,8 +88,6 @@ int main() {
 }
 ```
 
-## <a name="example"></a>使用例
-
 インデックス付きプロパティの呼び出しを正しく行わないと、C2660 が発生します。
 
 ```cpp
@@ -117,8 +111,6 @@ int main() {
 }
 ```
 
-## <a name="example"></a>使用例
-
 インデックス付きプロパティの呼び出しを正しく行わないと、C2660 が発生します。
 
 ```cpp
@@ -139,8 +131,6 @@ int main() {
    int x2 = a[3,5];   // OK
 }
 ```
-
-## <a name="example"></a>使用例
 
 テンプレート クラスに定義した新しい演算子が、囲い型以外の型を持つオブジェクトを作成すると、C2660 が発生します。
 

@@ -1,6 +1,6 @@
 ---
-title: INVOCATION_VERSION_DATA構造
-description: C++ ビルド インサイト SDK INVOCATION_VERSION_DATA構造参照。
+title: INVOCATION_VERSION_DATA 構造体
+description: C++ Build Insights SDK INVOCATION_VERSION_DATA 構造体のリファレンス。
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 1211b4eb999fd63767af71c6884d7d20d6920df0
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
-ms.translationtype: MT
+ms.openlocfilehash: ec54c560dd408dc3beecbc20eaac69d389c7ec37
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81325472"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90041560"
 ---
-# <a name="invocation_version_data-structure"></a>INVOCATION_VERSION_DATA構造
+# <a name="invocation_version_data-structure"></a>INVOCATION_VERSION_DATA 構造体
 
 ::: moniker range="<=vs-2015"
 
-C++ ビルド インサイト SDK は、Visual Studio 2017 以降と互換性があります。 これらのバージョンのドキュメントを参照するには、この記事の Visual Studio**バージョン**セレクター コントロールを Visual Studio 2017 または Visual Studio 2019 に設定します。 このページの目次の上部に表示されます。
+C++ Build Insights SDK は、Visual Studio 2017 以降と互換性があります。 これらのバージョンのドキュメントを表示するには、この記事の Visual Studio **Version** セレクター コントロールを Visual Studio 2017 または Visual Studio 2019 に設定します。 このページの目次の一番上にあります。
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-この`INVOCATION_VERSION_DATA`構造体は、バージョン番号を整数値のグループとして記述します。
+`INVOCATION_VERSION_DATA` 構造体は、整数値のグループとしてバージョン番号を表します。
 
 ## <a name="syntax"></a>構文
 
@@ -42,7 +42,7 @@ typedef struct INVOCATION_VERSION_DATA_TAG
 
 ## <a name="members"></a>メンバー
 
-|  |  |
+| 名前 | [説明] |
 |--|--|
 | `VersionMajor` | バージョンのメジャー番号。 |
 | `VersionMinor` | バージョンのマイナー番号。 |

@@ -6,18 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - C2666
 ms.assetid: 78364d15-c6eb-439a-9088-e04a0176692b
-ms.openlocfilehash: ca779269d573e3e5d270fccad6afe6220083fa42
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: ebe41a4c4aa090e609d3352635d4e1fc06e22454
+ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74755994"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90743218"
 ---
 # <a name="compiler-error-c2666"></a>コンパイラエラー C2666
 
 ' identifier ': 数値のオーバーロードに似た変換があります
 
 オーバーロードされた関数または演算子があいまいです。   あいまいさを解決するために、仮パラメーターリストがコンパイラに似ている場合があります。  このエラーを解決するには、1つまたは複数の実際のパラメーターを明示的にキャストします。
+
+## <a name="examples"></a>例
 
 次の例では、C2666 が生成されます。
 
@@ -41,11 +43,9 @@ int main() {
 
 - 修飾変換は id 変換と同じではありません
 
-二項演算子 \<、>、\<=、および > = の場合、渡されたパラメーターは、オペランドの型に変換するユーザー定義の変換演算子をパラメーターの型が定義する場合に、オペランドの型に暗黙的に変換されるようになりました。 あいまいさが生じる可能性があります。
+二項演算子 = の場合、渡されたパラメーターは、オペランドの型 \<, > \<=, and > に変換するユーザー定義変換演算子をパラメーターの型が定義する場合に、オペランドの型に暗黙的に変換されるようになりました。 あいまいさが生じる可能性があります。
 
-Visual Studio .NET 2003 と visual Studio .NET の両方のバージョンの Visual C++studio で有効なコードについては、関数構文を使用してクラス演算子を明示的に呼び出します。
-
-## <a name="example"></a>使用例
+Visual Studio .NET 2003 と Visual Studio .NET の両方のバージョンの Visual C++ で有効なコードについては、関数構文を使用してクラス演算子を明示的に呼び出します。
 
 ```cpp
 // C2666b.cpp
@@ -101,8 +101,6 @@ int main()
         printf_s("str1.operator char*() < str2\n");
 }
 ```
-
-## <a name="example"></a>使用例
 
 次の例では、C2666 が生成されます。
 

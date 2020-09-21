@@ -95,18 +95,18 @@ helpviewer_keywords:
 - value_compare member [STL/CLR]
 - value_type member [STL/CLR]
 ms.assetid: d110e356-ba3e-4e52-9e2d-d997bf975c96
-ms.openlocfilehash: a2f7dafc99c8632f420bcd8119fe489353cf4b28
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: a7db6367ae7d5096c47666a1ea930720f061c9dd
+ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87221381"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90743127"
 ---
 # <a name="hash_set-stlclr"></a>hash_set (STL/CLR)
 
 このテンプレートクラスは、双方向アクセスを持つ要素の可変長シーケンスを制御するオブジェクトを表します。 コンテナーを使用し `hash_set` て、一連の要素をハッシュテーブルとして管理します。各テーブルエントリは、ノードの双方向のリンクリストを格納し、各ノードには1つの要素を格納します。 各要素の値は、シーケンスの順序付けのためにキーとして使用されます。
 
-以下の説明で `GValue` は、はと同じですが、 `GKey` 後者が参照型である場合を除いて、*キー*と同じです。この場合、は `Key^` です。
+以下の説明で `GValue` は、はと同じですが、 `GKey` 後者が参照型である場合を除いて、 *キー* と同じです。この場合、は `Key^` です。
 
 ## <a name="syntax"></a>構文
 
@@ -126,7 +126,7 @@ template<typename Key>
 
 ### <a name="parameters"></a>パラメーター
 
-*[キー]*<br/>
+*キー*<br/>
 被制御シーケンス内の要素のキー コンポーネントの型。
 
 ## <a name="requirements"></a>必要条件
@@ -200,31 +200,31 @@ template<typename Key>
 |<xref:System.Collections.Generic.ICollection%601>|型指定された要素のグループを保持します。|
 |IHash\<Key, Value>|ジェネリックコンテナーを管理します。|
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>注釈
 
 オブジェクトは、双方向のリンクリスト内の個々のノードとして制御するシーケンスのストレージを割り当て、解放します。 オブジェクトは、アクセスを高速化するために、リスト内のさまざまな長さのポインター (ハッシュテーブル) を維持し、一覧全体をサブリストまたはバケットのシーケンスとして効果的に管理します。 要素は、ノード間のリンクを変更することによって順序を維持するバケットに挿入されます。つまり、あるノードのコンテンツを別のノードにコピーすることはできません。 つまり、要素を自由に挿入および削除できます。
 
-オブジェクトは、hash_set:: key_compare 型の格納されたデリゲートオブジェクトを呼び出すことによって制御する各バケットを並べ替えます[(STL/CLR)](../dotnet/hash-set-key-compare-stl-clr.md)。 Hash_set を構築するときに、格納されているデリゲートオブジェクトを指定できます。デリゲートオブジェクトを指定しない場合、既定では比較が行われ `operator<=(key_type, key_type)` ます。
+オブジェクトは、hash_set:: key_compare 型の格納されたデリゲートオブジェクトを呼び出すことによって制御する各バケットを並べ替えます [(STL/CLR)](../dotnet/hash-set-key-compare-stl-clr.md)。 Hash_set を構築するときに、格納されているデリゲートオブジェクトを指定できます。デリゲートオブジェクトを指定しない場合、既定では比較が行われ `operator<=(key_type, key_type)` ます。
 
-格納されているデリゲートオブジェクトにアクセスするには、メンバー関数[hash_set:: key_comp (STL/CLR)](../dotnet/hash-set-key-comp-stl-clr.md)を呼び出し `()` ます。 このようなデリゲートオブジェクトでは、hash_set:: key_type 型のキー間の等価な順序を定義する必要があります[(STL/CLR)](../dotnet/hash-set-key-type-stl-clr.md)。 つまり、任意の2つのキーについては、次のようになり `X` `Y` ます。
+格納されているデリゲートオブジェクトにアクセスするには、メンバー関数[hash_set:: key_comp (STL/CLR)](../dotnet/hash-set-key-comp-stl-clr.md)を呼び出し `()` ます。 このようなデリゲートオブジェクトでは、hash_set:: key_type 型のキー間の等価な順序を定義する必要があります [(STL/CLR)](../dotnet/hash-set-key-type-stl-clr.md)。 つまり、任意の2つのキーについては、次のようになり `X` `Y` ます。
 
-`key_comp()(X, Y)`すべての呼び出しで同じブール型の結果を返します。
+`key_comp()(X, Y)` すべての呼び出しで同じブール型の結果を返します。
 
 `key_comp()(X, Y) && key_comp()(Y, X)`が true の場合、 `X` と `Y` は等価の順序付けと呼ばれます。
 
 のように動作する任意の順序付け規則 `operator<=(key_type, key_type)` `operator>=(key_type, key_type)` 。または、 `operator==(key_type, key_type)` eqivalent の順序を定義します。
 
-コンテナーは、キーが同等の順序付け (および同じ整数値へのハッシュ) を持つ要素のみがバケット内で隣接していることを確認します。 テンプレートクラス[hash_multiset (STL/CLR)](../dotnet/hash-multiset-stl-clr.md)とは異なり、テンプレートクラスのオブジェクトは、 `hash_set` すべての要素のキーが一意であることを保証します。 (2 つのキーの順序が同じではありません)。
+コンテナーは、キーが同等の順序付け (および同じ整数値へのハッシュ) を持つ要素のみがバケット内で隣接していることを確認します。 テンプレートクラス [hash_multiset (STL/CLR)](../dotnet/hash-multiset-stl-clr.md)とは異なり、テンプレートクラスのオブジェクトは、 `hash_set` すべての要素のキーが一意であることを保証します。 (2 つのキーの順序が同じではありません)。
 
 オブジェクトは、 [hash_set:: hasher (STL/CLR)](../dotnet/hash-set-hasher-stl-clr.md)型の格納されたデリゲートオブジェクトを呼び出すことによって、指定された順序付けキーを格納するバケットを決定します。 この格納されたオブジェクトにアクセスするには、メンバー関数[hash_set:: hash_delegate (STL/CLR)](../dotnet/hash-set-hash-delegate-stl-clr.md)を呼び出して、 `()` キー値に依存する整数値を取得します。 Hash_set を構築するときに、格納されているデリゲートオブジェクトを指定できます。delegate オブジェクトを指定しない場合、既定値は関数 `System::Object::hash_value(key_type)` です。 つまり、任意のキー `X` と `Y` :
 
-`hash_delegate()(X)`すべての呼び出しで同じ整数の結果を返します。
+`hash_delegate()(X)` すべての呼び出しで同じ整数の結果を返します。
 
 `X`と `Y` の順序が等価である場合、 `hash_delegate()(X)` はと同じ整数の結果を返す必要があり `hash_delegate()(Y)` ます。
 
 各要素は、キーと値の両方として機能します。 シーケンスは、シーケンス内の要素数に依存しない複数の操作 (定数時間) を使用して、任意の要素の検索、挿入、および削除を許可する方法で表現されます。 要素を挿入しても反復子の有効性は失われません。また、要素を削除した場合は、削除された要素を指す反復子だけが無効化されます。
 
-ただし、ハッシュされた値が一様に分布していない場合は、ハッシュテーブルが逆になることがあります。 極端なでは、常に同じ値を返すハッシュ関数の場合、lookup、挿入、および削除は、シーケンス内の要素数に比例します (線形時間)。 コンテナーは適切なハッシュ関数を選択します。バケットのサイズとハッシュテーブルのサイズ (バケットの合計数) を選択しますが、これらのオプションのいずれかまたはすべてを上書きすることができます。 たとえば、関数[hash_set:: max_load_factor (stl/clr)](../dotnet/hash-set-max-load-factor-stl-clr.md)と[hash_set:: rehash (stl/clr)](../dotnet/hash-set-rehash-stl-clr.md)を参照してください。
+ただし、ハッシュされた値が一様に分布していない場合は、ハッシュテーブルが逆になることがあります。 極端なでは、常に同じ値を返すハッシュ関数の場合、lookup、挿入、および削除は、シーケンス内の要素数に比例します (線形時間)。 コンテナーは適切なハッシュ関数を選択します。バケットのサイズとハッシュテーブルのサイズ (バケットの合計数) を選択しますが、これらのオプションのいずれかまたはすべてを上書きすることができます。 たとえば、関数 [hash_set:: max_load_factor (stl/clr)](../dotnet/hash-set-max-load-factor-stl-clr.md) と [hash_set:: rehash (stl/clr)](../dotnet/hash-set-rehash-stl-clr.md)を参照してください。
 
 Hash_set は双方向反復子をサポートします。これは、被制御シーケンス内の要素を指定する反復子が指定されている場合に隣接する要素にステップインできることを意味します。 特別なヘッドノードは[hash_set:: end (STL/CLR)](../dotnet/hash-set-end-stl-clr.md)によって返される反復子に対応 `()` します。 この反復子をデクリメントして、被制御シーケンスの最後の要素 (存在する場合) に移動することができます。 Hash_set 反復子をインクリメントしてヘッドノードに移動することができ、これはと等しいと比較され `end()` ます。 ただし、によって返される反復子を逆参照することはできません `end()` 。
 
@@ -232,11 +232,11 @@ Hash_set は双方向反復子をサポートします。これは、被制御�
 
 Hash_set 反復子は、関連付けられている hash_set ノードへのハンドルを格納します。このハンドルは、関連付けられているコンテナーへのハンドルを格納します。 反復子は、関連付けられているコンテナーオブジェクトと共にのみ使用できます。 関連する hash_set ノードが hash_set に関連付けられている限り、hash_set 反復子は有効なままです。 さらに、有効な反復子は dereferencable です。これを使用すると、に指定した要素の値にアクセスしたり、変更したりすることができ `end()` ます。
 
-要素を消去または削除すると、格納されている値のデストラクターが呼び出されます。 コンテナーを破棄すると、すべての要素が消去されます。 したがって、要素の型が ref クラスであるコンテナーは、コンテナーの直後要素が存在しないことを保証します。 ただし、ハンドルのコンテナーが要素を破棄し*ない*ことに注意してください。
+要素を消去または削除すると、格納されている値のデストラクターが呼び出されます。 コンテナーを破棄すると、すべての要素が消去されます。 したがって、要素の型が ref クラスであるコンテナーは、コンテナーの直後要素が存在しないことを保証します。 ただし、ハンドルのコンテナーが要素を破棄し *ない* ことに注意してください。
 
 ## <a name="members"></a>メンバー
 
-## <a name="hash_setbegin-stlclr"></a><a name="begin"></a>hash_set:: begin (STL/CLR)
+## <a name="hash_setbegin-stlclr"></a><a name="begin"></a> hash_set:: begin (STL/CLR)
 
 被制御シーケンスの先頭を指定します。
 
@@ -278,7 +278,7 @@ int main()
     }
 ```
 
-## <a name="hash_setbucket_count-stlclr"></a><a name="bucket_count"></a>hash_set:: bucket_count (STL/CLR)
+## <a name="hash_setbucket_count-stlclr"></a><a name="bucket_count"></a> hash_set:: bucket_count (STL/CLR)
 
 バケット数をカウントします。
 
@@ -352,7 +352,7 @@ load_factor() = 0.0234375
 max_load_factor() = 0.25
 ```
 
-## <a name="hash_setclear-stlclr"></a><a name="clear"></a>hash_set:: clear (STL/CLR)
+## <a name="hash_setclear-stlclr"></a><a name="clear"></a> hash_set:: clear (STL/CLR)
 
 すべての要素を削除します。
 
@@ -410,7 +410,7 @@ a b
 size() = 0
 ```
 
-## <a name="hash_setconst_iterator-stlclr"></a><a name="const_iterator"></a>hash_set:: const_iterator (STL/CLR)
+## <a name="hash_setconst_iterator-stlclr"></a><a name="const_iterator"></a> hash_set:: const_iterator (STL/CLR)
 
 被制御シーケンスの定数反復子の型です。
 
@@ -452,7 +452,7 @@ int main()
 a b c
 ```
 
-## <a name="hash_setconst_reference-stlclr"></a><a name="const_reference"></a>hash_set:: const_reference (STL/CLR)
+## <a name="hash_setconst_reference-stlclr"></a><a name="const_reference"></a> hash_set:: const_reference (STL/CLR)
 
 要素への定数参照の型です。
 
@@ -497,7 +497,7 @@ int main()
 a b c
 ```
 
-## <a name="hash_setconst_reverse_iterator-stlclr"></a><a name="const_reverse_iterator"></a>hash_set:: const_reverse_iterator (STL/CLR)
+## <a name="hash_setconst_reverse_iterator-stlclr"></a><a name="const_reverse_iterator"></a> hash_set:: const_reverse_iterator (STL/CLR)
 
 被制御シーケンスの定数反転反復子の型。
 
@@ -539,7 +539,7 @@ int main()
 c b a
 ```
 
-## <a name="hash_setcount-stlclr"></a><a name="count"></a>hash_set:: count (STL/CLR)
+## <a name="hash_setcount-stlclr"></a><a name="count"></a> hash_set:: count (STL/CLR)
 
 指定したキーに一致する要素の数を検索します。
 
@@ -554,9 +554,9 @@ size_type count(key_type key);
 *key*<br/>
 検索対象のキー値。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
-このメンバー関数は、*キー*と同じ順序付けを持つ被制御シーケンス内の要素の数を返します。 被制御シーケンス内の指定したキーに一致する現在の要素の数を確認する場合に、これを使用します。
+このメンバー関数は、 *キー*と同じ順序付けを持つ被制御シーケンス内の要素の数を返します。 被制御シーケンス内の指定したキーに一致する現在の要素の数を確認する場合に、これを使用します。
 
 ### <a name="example"></a>例
 
@@ -592,7 +592,7 @@ count(L'b') = 1
 count(L'C') = 0
 ```
 
-## <a name="hash_setdifference_type-stlclr"></a><a name="difference_type"></a>hash_set::d ifference_type (STL/CLR)
+## <a name="hash_setdifference_type-stlclr"></a><a name="difference_type"></a> hash_set::d ifference_type (STL/CLR)
 
 2つの要素間の符号付き距離の型。
 
@@ -647,7 +647,7 @@ end()-begin() = 3
 begin()-end() = -3
 ```
 
-## <a name="hash_setempty-stlclr"></a><a name="empty"></a>hash_set:: empty (STL/CLR)
+## <a name="hash_setempty-stlclr"></a><a name="empty"></a> hash_set:: empty (STL/CLR)
 
 要素が存在しないかどうかをテストします。
 
@@ -699,7 +699,7 @@ size() = 0
 empty() = True
 ```
 
-## <a name="hash_setend-stlclr"></a><a name="end"></a>hash_set:: end (STL/CLR)
+## <a name="hash_setend-stlclr"></a><a name="end"></a> hash_set:: end (STL/CLR)
 
 被制御シーケンスの末尾を指定します。
 
@@ -748,7 +748,7 @@ a b c
 *--end() = c
 ```
 
-## <a name="hash_setequal_range-stlclr"></a><a name="equal_range"></a>hash_set:: equal_range (STL/CLR)
+## <a name="hash_setequal_range-stlclr"></a><a name="equal_range"></a> hash_set:: equal_range (STL/CLR)
 
 指定したキーに一致する範囲を検索します。
 
@@ -763,7 +763,7 @@ cliext::pair<iterator, iterator> equal_range(key_type key);
 *key*<br/>
 検索対象のキー値。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 このメンバー関数は、 `cliext::pair<iterator, iterator>(` [hash_set:: lower_bound (stl/clr)](../dotnet/hash-set-lower-bound-stl-clr.md) `(key),` [hash_set:: upper_bound (stl/clr)](../dotnet/hash-set-upper-bound-stl-clr.md)という反復子のペアを `(key))` 返します。 このメソッドを使用して、被制御シーケンス内の指定したキーに一致する要素の範囲を特定します。
 
@@ -808,7 +808,7 @@ equal_range(L'x') empty = True
 b
 ```
 
-## <a name="hash_seterase-stlclr"></a><a name="erase"></a>hash_set:: erase (STL/CLR)
+## <a name="hash_seterase-stlclr"></a><a name="erase"></a> hash_set:: erase (STL/CLR)
 
 指定した位置にある要素を削除します。
 
@@ -834,13 +834,13 @@ bool erase(key_type key)
 *where*<br/>
 消去する要素。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 最初のメンバー関数*は、が*指す被制御シーケンスの要素を削除し、削除された要素の後に残っている最初の要素を指定する反復子を返します。そのような要素が存在しない場合は[hash_set:: end (STL/CLR)](../dotnet/hash-set-end-stl-clr.md)を返し `()` ます。 このメソッドを使用して、1つの要素を削除します。
 
 2番目のメンバー関数は、範囲 [,) 内の被制御シーケンスの要素を削除 `first` `last` し、削除された要素の後に残っている最初の要素を指定する反復子を返します。その `end()` ような要素が存在しない場合は、を返します。 これを使用して、0個以上の連続する要素を削除します。
 
-3番目のメンバー関数は、キーの順序が同じ*キーを持つ*被制御シーケンスの要素を削除し、削除された要素の数を返します。 これを使用して、指定されたキーに一致するすべての要素を削除およびカウントします。
+3番目のメンバー関数は、キーの順序が同じ *キーを持つ*被制御シーケンスの要素を削除し、削除された要素の数を返します。 これを使用して、指定されたキーに一致するすべての要素を削除およびカウントします。
 
 各要素の消去では、被制御シーケンス内の要素数の対数に比例して時間がかかります。
 
@@ -892,7 +892,7 @@ erase(begin(), end()-1) = e
 size() = 1
 ```
 
-## <a name="hash_setfind-stlclr"></a><a name="find"></a>hash_set:: find (STL/CLR)
+## <a name="hash_setfind-stlclr"></a><a name="find"></a> hash_set:: find (STL/CLR)
 
 指定したキーに一致する要素を検索します。
 
@@ -907,7 +907,7 @@ iterator find(key_type key);
 *key*<br/>
 検索対象のキー値。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 被制御シーケンス内の少なくとも1つの要素の順序が同じである*場合、メンバー*関数は、これらの要素のいずれかを指定する反復子を返します。それ以外の場合は、 [hash_set:: end (STL/CLR)](../dotnet/hash-set-end-stl-clr.md)が返さ `()` れます。 このメソッドを使用して、被制御シーケンス内で、指定したキーに一致する要素を検索します。
 
@@ -948,7 +948,7 @@ find b = b
 find C = False
 ```
 
-## <a name="hash_setgeneric_container-stlclr"></a><a name="generic_container"></a>hash_set:: generic_container (STL/CLR)
+## <a name="hash_setgeneric_container-stlclr"></a><a name="generic_container"></a> hash_set:: generic_container (STL/CLR)
 
 コンテナーのジェネリックインターフェイスの型。
 
@@ -1012,7 +1012,7 @@ a b c d
 a b c d e
 ```
 
-## <a name="hash_setgeneric_iterator-stlclr"></a><a name="generic_iterator"></a>hash_set:: generic_iterator (STL/CLR)
+## <a name="hash_setgeneric_iterator-stlclr"></a><a name="generic_iterator"></a> hash_set:: generic_iterator (STL/CLR)
 
 コンテナーのジェネリックインターフェイスで使用する反復子の型。
 
@@ -1068,7 +1068,7 @@ a b c
 a
 ```
 
-## <a name="hash_setgeneric_reverse_iterator-stlclr"></a><a name="generic_reverse_iterator"></a>hash_set:: generic_reverse_iterator (STL/CLR)
+## <a name="hash_setgeneric_reverse_iterator-stlclr"></a><a name="generic_reverse_iterator"></a> hash_set:: generic_reverse_iterator (STL/CLR)
 
 コンテナーのジェネリックインターフェイスで使用する逆順反復子の型。
 
@@ -1124,7 +1124,7 @@ a b c
 c
 ```
 
-## <a name="hash_setgeneric_value-stlclr"></a><a name="generic_value"></a>hash_set:: generic_value (STL/CLR)
+## <a name="hash_setgeneric_value-stlclr"></a><a name="generic_value"></a> hash_set:: generic_value (STL/CLR)
 
 コンテナーのジェネリックインターフェイスで使用する要素の型。
 
@@ -1178,7 +1178,7 @@ a b c
 a
 ```
 
-## <a name="hash_sethash_delegate-stlclr"></a><a name="hash_delegate"></a>hash_set:: hash_delegate (STL/CLR)
+## <a name="hash_sethash_delegate-stlclr"></a><a name="hash_delegate"></a> hash_set:: hash_delegate (STL/CLR)
 
 指定したキーに一致する要素を検索します。
 
@@ -1216,7 +1216,7 @@ hash(L'a') = 1616896120
 hash(L'b') = 570892832
 ```
 
-## <a name="hash_sethash_set-stlclr"></a><a name="hash_set"></a>hash_set:: hash_set (STL/CLR)
+## <a name="hash_sethash_set-stlclr"></a><a name="hash_set"></a> hash_set:: hash_set (STL/CLR)
 
 コンテナー オブジェクトを構築します。
 
@@ -1257,10 +1257,10 @@ hash_set(System::Collections::Generic::IEnumerable<GValue>^ right,
 *pred*<br/>
 被制御シーケンスの順序付け述語。
 
-*そうです*<br/>
+*right*<br/>
 挿入するオブジェクトまたは範囲。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 コンストラクター:
 
@@ -1272,25 +1272,25 @@ hash_set(System::Collections::Generic::IEnumerable<GValue>^ right,
 
 `explicit hash_set(key_compare^ pred);`
 
-順序述語*pred*、および既定のハッシュ関数を使用して、要素を含まない被制御シーケンスを初期化します。 このメソッドを使用して、指定した順序述語と既定のハッシュ関数を使用して、空の初期被制御シーケンスを指定します。
+順序述語 *pred*、および既定のハッシュ関数を使用して、要素を含まない被制御シーケンスを初期化します。 このメソッドを使用して、指定した順序述語と既定のハッシュ関数を使用して、空の初期被制御シーケンスを指定します。
 
 コンストラクター:
 
 `hash_set(key_compare^ pred, hasher^ hashfn);`
 
-順序述語*pred*とハッシュ関数*hashfn*を使用して、要素を含まない被制御シーケンスを初期化します。 このメソッドを使用して、指定された順序述語とハッシュ関数を使用して、空の初期被制御シーケンスを指定します。
+順序述語 *pred*とハッシュ関数 *hashfn*を使用して、要素を含まない被制御シーケンスを初期化します。 このメソッドを使用して、指定された順序述語とハッシュ関数を使用して、空の初期被制御シーケンスを指定します。
 
 コンストラクター:
 
 `hash_set(hash_set<Key>% right);`
 
-`right.begin()`既定の順序述語と既定のハッシュ関数を使用して、シーケンス [,) を使用して被制御シーケンスを初期化し `right.end()` ます。 これを使用して、hash_set オブジェクト*権限*によって制御されるシーケンスのコピーである初期被制御シーケンスを指定します。既定の順序述語とハッシュ関数を使用します。
+`right.begin()`既定の順序述語と既定のハッシュ関数を使用して、シーケンス [,) を使用して被制御シーケンスを初期化し `right.end()` ます。 これを使用して、hash_set オブジェクト *権限*によって制御されるシーケンスのコピーである初期被制御シーケンスを指定します。既定の順序述語とハッシュ関数を使用します。
 
 コンストラクター:
 
 `hash_set(hash_set<Key>^ right);`
 
-`right->begin()`既定の順序述語と既定のハッシュ関数を使用して、シーケンス [,) を使用して被制御シーケンスを初期化し `right->end()` ます。 これを使用して、hash_set オブジェクト*権限*によって制御されるシーケンスのコピーである初期被制御シーケンスを指定します。既定の順序述語とハッシュ関数を使用します。
+`right->begin()`既定の順序述語と既定のハッシュ関数を使用して、シーケンス [,) を使用して被制御シーケンスを初期化し `right->end()` ます。 これを使用して、hash_set オブジェクト *権限*によって制御されるシーケンスのコピーである初期被制御シーケンスを指定します。既定の順序述語とハッシュ関数を使用します。
 
 コンストラクター:
 
@@ -1302,19 +1302,19 @@ hash_set(System::Collections::Generic::IEnumerable<GValue>^ right,
 
 `template<typename InIter> hash_set(InIter first, InIter last, key_compare^ pred);`
 
-順序 `first` `last` 述語*pred*を使用し、既定のハッシュ関数を使用して、シーケンス [,) を使用して被制御シーケンスを初期化します。 このメソッドを使用して、指定された順序述語と既定のハッシュ関数を使用して、被制御シーケンスを別のシーケンスのコピーにします。
+順序 `first` `last` 述語 *pred*を使用し、既定のハッシュ関数を使用して、シーケンス [,) を使用して被制御シーケンスを初期化します。 このメソッドを使用して、指定された順序述語と既定のハッシュ関数を使用して、被制御シーケンスを別のシーケンスのコピーにします。
 
 コンストラクター:
 
 `template<typename InIter> hash_set(InIter first, InIter last, key_compare^ pred, hasher^ hashfn);`
 
-順序 `first` `last` 述語*pred*を使用し、ハッシュ関数*hashfn*を使用して、被制御シーケンスをシーケンス [,) で初期化します。 このメソッドを使用して、被制御シーケンスに別のシーケンスのコピーを指定し、順序付け述語とハッシュ関数を指定します。
+順序 `first` `last` 述語 *pred*を使用し、ハッシュ関数 *hashfn*を使用して、被制御シーケンスをシーケンス [,) で初期化します。 このメソッドを使用して、被制御シーケンスに別のシーケンスのコピーを指定し、順序付け述語とハッシュ関数を指定します。
 
 コンストラクター:
 
 `hash_set(System::Collections::Generic::IEnumerable<Key>^ right);`
 
-列挙子*権限*によって指定されたシーケンス、既定の順序述語、および既定のハッシュ関数を使用して、被制御シーケンスを初期化します。 このメソッドを使用して、被制御シーケンスを、列挙子によって記述された別のシーケンスのコピーにし、既定の順序述語とハッシュ関数を使用します。
+列挙子 *権限*によって指定されたシーケンス、既定の順序述語、および既定のハッシュ関数を使用して、被制御シーケンスを初期化します。 このメソッドを使用して、被制御シーケンスを、列挙子によって記述された別のシーケンスのコピーにし、既定の順序述語とハッシュ関数を使用します。
 
 コンストラクター:
 
@@ -1456,7 +1456,7 @@ a b c
 a b c
 ```
 
-## <a name="hash_sethasher-stlclr"></a><a name="hasher"></a>hash_set:: hasher (STL/CLR)
+## <a name="hash_sethasher-stlclr"></a><a name="hasher"></a> hash_set:: hasher (STL/CLR)
 
 キーのハッシュデリゲート。
 
@@ -1495,7 +1495,7 @@ hash(L'a') = 1616896120
 hash(L'b') = 570892832
 ```
 
-## <a name="hash_setinsert-stlclr"></a><a name="insert"></a>hash_set:: insert (STL/CLR)
+## <a name="hash_setinsert-stlclr"></a><a name="insert"></a> hash_set:: insert (STL/CLR)
 
 要素を追加します。
 
@@ -1517,7 +1517,7 @@ void insert(System::Collections::Generic::IEnumerable<value_type>^ right);
 *last*<br/>
 挿入する範囲の末尾。
 
-*そうです*<br/>
+*right*<br/>
 挿入する列挙体。
 
 *val*<br/>
@@ -1526,17 +1526,17 @@ void insert(System::Collections::Generic::IEnumerable<value_type>^ right);
 *where*<br/>
 コンテナー内の挿入位置 (ヒントのみ)。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 各メンバー関数は、残りのオペランドによって指定されたシーケンスを挿入します。
 
-1つ目のメンバー関数は、値*val*を持つ要素を挿入し、値のペアを返し `X` ます。 が true の場合は `X.second` 、新しく挿入された要素を指定し `X.first` ます。それ以外の場合は、 `X.first` 既に存在し、新しい要素が挿入されない、同じ順序の要素を指定します。 1つの要素を挿入するために使用します。
+1つ目のメンバー関数は、値 *val*を持つ要素を挿入し、値のペアを返し `X` ます。 が true の場合は `X.second` 、新しく挿入された要素を指定し `X.first` ます。それ以外の場合は、 `X.first` 既に存在し、新しい要素が挿入されない、同じ順序の要素を指定します。 1つの要素を挿入するために使用します。
 
 2番目のメンバー関数は、(パフォーマンスを向上させるために) ヒントと*してを使用し*て、値*val*を持つ要素を挿入し、新しく挿入された要素を指定する反復子を返します。 これを使用して、既知の要素に隣接している可能性のある単一の要素を挿入します。
 
 3番目のメンバー関数は、シーケンス [,) を挿入し `first` `last` ます。 このメソッドを使用して、別のシーケンスからコピーされた0個以上の要素を挿入します。
 
-4番目のメンバー関数は、*右側*に指定されたシーケンスを挿入します。 このメソッドを使用して、列挙子によって記述されたシーケンスを挿入します。
+4番目のメンバー関数は、 *右側*に指定されたシーケンスを挿入します。 このメソッドを使用して、列挙子によって記述されたシーケンスを挿入します。
 
 各要素の挿入には、被制御シーケンス内の要素数の対数に比例した時間がかかります。 挿入ポイントに隣接する要素を指定するヒントを指定すると、挿入は償却定数時間で実行できます。
 
@@ -1611,7 +1611,7 @@ a b c x
 a b c x y
 ```
 
-## <a name="hash_setiterator-stlclr"></a><a name="iterator"></a>hash_set:: iterator (STL/CLR)
+## <a name="hash_setiterator-stlclr"></a><a name="iterator"></a> hash_set:: iterator (STL/CLR)
 
 被制御シーケンスの反復子の型です。
 
@@ -1653,7 +1653,7 @@ int main()
 a b c
 ```
 
-## <a name="hash_setkey_comp-stlclr"></a><a name="key_comp"></a>hash_set:: key_comp (STL/CLR)
+## <a name="hash_setkey_comp-stlclr"></a><a name="key_comp"></a> hash_set:: key_comp (STL/CLR)
 
 2つのキーの順序付けデリゲートをコピーします。
 
@@ -1712,66 +1712,7 @@ compare(L'a', L'b') = False
 compare(L'b', L'a') = True
 ```
 
-## <a name="hash_setkey_comp-stlclr"></a><a name="key_comp"></a>hash_set:: key_comp (STL/CLR)
-
-2つのキーの順序付けデリゲートをコピーします。
-
-### <a name="syntax"></a>構文
-
-```cpp
-key_compare^key_comp();
-```
-
-### <a name="remarks"></a>解説
-
-このメンバー関数は、被制御シーケンスの順序付けに使用される順序付けデリゲートを返します。 2 つのキーを比較する場合にこれを使用します。
-
-### <a name="example"></a>例
-
-```cpp
-// cliext_hash_set_key_comp.cpp
-// compile with: /clr
-#include <cliext/hash_set>
-
-typedef cliext::hash_set<wchar_t> Myhash_set;
-int main()
-    {
-    Myhash_set c1;
-    Myhash_set::key_compare^ kcomp = c1.key_comp();
-
-    System::Console::WriteLine("compare(L'a', L'a') = {0}",
-        kcomp(L'a', L'a'));
-    System::Console::WriteLine("compare(L'a', L'b') = {0}",
-        kcomp(L'a', L'b'));
-    System::Console::WriteLine("compare(L'b', L'a') = {0}",
-        kcomp(L'b', L'a'));
-    System::Console::WriteLine();
-
-    // test a different ordering rule
-    Myhash_set c2 = cliext::greater<wchar_t>();
-    kcomp = c2.key_comp();
-
-    System::Console::WriteLine("compare(L'a', L'a') = {0}",
-        kcomp(L'a', L'a'));
-    System::Console::WriteLine("compare(L'a', L'b') = {0}",
-        kcomp(L'a', L'b'));
-    System::Console::WriteLine("compare(L'b', L'a') = {0}",
-        kcomp(L'b', L'a'));
-    return (0);
-    }
-```
-
-```Output
-compare(L'a', L'a') = True
-compare(L'a', L'b') = True
-compare(L'b', L'a') = False
-
-compare(L'a', L'a') = False
-compare(L'a', L'b') = False
-compare(L'b', L'a') = True
-```
-
-## <a name="hash_setkey_compare-stlclr"></a><a name="key_compare"></a>hash_set:: key_compare (STL/CLR)
+## <a name="hash_setkey_compare-stlclr"></a><a name="key_compare"></a> hash_set:: key_compare (STL/CLR)
 
 2つのキーの順序付けデリゲート。
 
@@ -1831,7 +1772,7 @@ compare(L'a', L'b') = False
 compare(L'b', L'a') = True
 ```
 
-## <a name="hash_setkey_type-stlclr"></a><a name="key_type"></a>hash_set:: key_type (STL/CLR)
+## <a name="hash_setkey_type-stlclr"></a><a name="key_type"></a> hash_set:: key_type (STL/CLR)
 
 順序付けキーの型です。
 
@@ -1843,7 +1784,7 @@ typedef Key key_type;
 
 ### <a name="remarks"></a>解説
 
-この型は、テンプレートパラメーター*キー*のシノニムです。
+この型は、テンプレートパラメーター *キー*のシノニムです。
 
 ### <a name="example"></a>例
 
@@ -1876,7 +1817,7 @@ int main()
 a b c
 ```
 
-## <a name="hash_setload_factor-stlclr"></a><a name="load_factor"></a>hash_set:: load_factor (STL/CLR)
+## <a name="hash_setload_factor-stlclr"></a><a name="load_factor"></a> hash_set:: load_factor (STL/CLR)
 
 バケットごとの平均要素数をカウントします。
 
@@ -1950,7 +1891,7 @@ load_factor() = 0.0234375
 max_load_factor() = 0.25
 ```
 
-## <a name="hash_setlower_bound-stlclr"></a><a name="lower_bound"></a>hash_set:: lower_bound (STL/CLR)
+## <a name="hash_setlower_bound-stlclr"></a><a name="lower_bound"></a> hash_set:: lower_bound (STL/CLR)
 
 指定されたキーに一致する範囲の先頭を検索します。
 
@@ -1965,9 +1906,9 @@ iterator lower_bound(key_type key);
 *key*<br/>
 検索対象のキー値。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
-このメンバー関数は、 `X` *キー*と同じバケットにハッシュし、*キー*と同等の順序を持つ被制御シーケンス内の最初の要素を決定します。 そのような要素が存在しない場合は[hash_set:: end (STL/CLR)](../dotnet/hash-set-end-stl-clr.md)を返します。それ以外の場合はを `()` 指定する反復子を返し `X` ます。 このメソッドを使用して、被制御シーケンスの中で、指定したキーに一致する要素のシーケンスの先頭を検索します。
+このメンバー関数は、 `X` *キー* と同じバケットにハッシュし、 *キー*と同等の順序を持つ被制御シーケンス内の最初の要素を決定します。 そのような要素が存在しない場合は[hash_set:: end (STL/CLR)](../dotnet/hash-set-end-stl-clr.md)を返します。それ以外の場合はを `()` 指定する反復子を返し `X` ます。 このメソッドを使用して、被制御シーケンスの中で、指定したキーに一致する要素のシーケンスの先頭を検索します。
 
 ### <a name="example"></a>例
 
@@ -2007,7 +1948,7 @@ lower_bound(L'x')==end() = True
 *lower_bound(L'b') = b
 ```
 
-## <a name="hash_setmake_value-stlclr"></a><a name="make_value"></a>hash_set:: make_value (STL/CLR)
+## <a name="hash_setmake_value-stlclr"></a><a name="make_value"></a> hash_set:: make_value (STL/CLR)
 
 値オブジェクトを構築します。
 
@@ -2022,9 +1963,9 @@ static value_type make_value(key_type key);
 *key*<br/>
 使用するキー値。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
-このメンバー関数は、キー `value_type` が*key*であるオブジェクトを返します。 これを使用して、他のいくつかのメンバー関数との使用に適したオブジェクトを作成します。
+このメンバー関数は、キー `value_type` が *key*であるオブジェクトを返します。 これを使用して、他のいくつかのメンバー関数との使用に適したオブジェクトを作成します。
 
 ### <a name="example"></a>例
 
@@ -2053,7 +1994,7 @@ int main()
 a b c
 ```
 
-## <a name="hash_setmax_load_factor-stlclr"></a><a name="max_load_factor"></a>hash_set:: max_load_factor (STL/CLR)
+## <a name="hash_setmax_load_factor-stlclr"></a><a name="max_load_factor"></a> hash_set:: max_load_factor (STL/CLR)
 
 バケットあたりの最大要素数を取得または設定します。
 
@@ -2069,11 +2010,11 @@ void max_load_factor(float new_factor);
 *new_factor*<br/>
 格納する新しい最大負荷係数。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 最初のメンバー関数は、現在格納されている最大テーブル占有率を返します。 この値を使用して、バケットの最大サイズを決定します。
 
-2番目のメンバー関数は、ストアの最大占有率を*new_factor*に置き換えます。 後続の挿入まで自動悪くは発生しません。
+2番目のメンバー関数は、ストアの最大占有率を *new_factor*に置き換えます。 後続の挿入まで自動悪くは発生しません。
 
 ### <a name="example"></a>例
 
@@ -2120,7 +2061,7 @@ int main()
     }
 ```
 
-## <a name="hash_setoperator-stlclr"></a><a name="op"></a>hash_set:: operator = (STL/CLR)
+## <a name="hash_setoperator-stlclr"></a><a name="op"></a> hash_set:: operator = (STL/CLR)
 
 被制御シーケンスを置き換えます。
 
@@ -2132,12 +2073,12 @@ hash_set<Key>% operator=(hash_set<Key>% right);
 
 #### <a name="parameters"></a>パラメーター
 
-*そうです*<br/>
+*right*<br/>
 コピーするコンテナー。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
-メンバー演算子は、オブジェクトに*right*をコピーし、を返し **`*this`** ます。 このメソッドを使用して、被制御シーケンスを*右側*の被制御シーケンスのコピーで置き換えます。
+メンバー演算子は、オブジェクトに *right* をコピーし、を返し **`*this`** ます。 このメソッドを使用して、被制御シーケンスを *右側*の被制御シーケンスのコピーで置き換えます。
 
 ### <a name="example"></a>例
 
@@ -2175,7 +2116,7 @@ a b c
 a b c
 ```
 
-## <a name="hash_setrbegin-stlclr"></a><a name="rbegin"></a>hash_set:: rbegin (STL/CLR)
+## <a name="hash_setrbegin-stlclr"></a><a name="rbegin"></a> hash_set:: rbegin (STL/CLR)
 
 反転被制御シーケンスの先頭を指定します。
 
@@ -2223,7 +2164,7 @@ a b c
 *++rbegin() = b
 ```
 
-## <a name="hash_setreference-stlclr"></a><a name="reference"></a>hash_set:: reference (STL/CLR)
+## <a name="hash_setreference-stlclr"></a><a name="reference"></a> hash_set:: reference (STL/CLR)
 
 要素への参照の型です。
 
@@ -2268,7 +2209,7 @@ int main()
 a b c
 ```
 
-## <a name="hash_setrehash-stlclr"></a><a name="rehash"></a>hash_set:: rehash (STL/CLR)
+## <a name="hash_setrehash-stlclr"></a><a name="rehash"></a> hash_set:: rehash (STL/CLR)
 
 ハッシュ テーブルをリビルドします。
 
@@ -2342,7 +2283,7 @@ load_factor() = 0.0234375
 max_load_factor() = 0.25
 ```
 
-## <a name="hash_setrend-stlclr"></a><a name="rend"></a>hash_set:: rend (STL/CLR)
+## <a name="hash_setrend-stlclr"></a><a name="rend"></a> hash_set:: rend (STL/CLR)
 
 反転被制御シーケンスの末尾を指定します。
 
@@ -2391,7 +2332,7 @@ a b c
 *--rend() = a
 ```
 
-## <a name="hash_setreverse_iterator-stlclr"></a><a name="reverse_iterator"></a>hash_set:: reverse_iterator (STL/CLR)
+## <a name="hash_setreverse_iterator-stlclr"></a><a name="reverse_iterator"></a> hash_set:: reverse_iterator (STL/CLR)
 
 被制御シーケンスの反転反復子の型です。
 
@@ -2433,7 +2374,7 @@ int main()
 c b a
 ```
 
-## <a name="hash_setsize-stlclr"></a><a name="size"></a>hash_set:: size (STL/CLR)
+## <a name="hash_setsize-stlclr"></a><a name="size"></a> hash_set:: size (STL/CLR)
 
 要素の数をカウントします。
 
@@ -2487,7 +2428,7 @@ size() = 0 after clearing
 size() = 2 after adding 2
 ```
 
-## <a name="hash_setsize_type-stlclr"></a><a name="size_type"></a>hash_set:: size_type (STL/CLR)
+## <a name="hash_setsize_type-stlclr"></a><a name="size_type"></a> hash_set:: size_type (STL/CLR)
 
 2つの要素間の符号付き距離の型。
 
@@ -2535,7 +2476,7 @@ a b c
 end()-begin() = 3
 ```
 
-## <a name="hash_setswap-stlclr"></a><a name="swap"></a>hash_set:: swap (STL/CLR)
+## <a name="hash_setswap-stlclr"></a><a name="swap"></a> hash_set:: swap (STL/CLR)
 
 2 つのコンテナーのコンテンツを交換します。
 
@@ -2547,10 +2488,10 @@ void swap(hash_set<Key>% right);
 
 #### <a name="parameters"></a>パラメーター
 
-*そうです*<br/>
+*right*<br/>
 コンテンツを交換するコンテナー。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 このメンバー関数は、との間で被制御シーケンスを交換し **`this`** ます。 *right* この処理は一定時間に実行され、例外はスローされません。 2つのコンテナーの内容を簡単に交換する方法として使用します。
 
@@ -2603,7 +2544,7 @@ d e f
 a b c
 ```
 
-## <a name="hash_setto_array-stlclr"></a><a name="to_array"></a>hash_set:: to_array (STL/CLR)
+## <a name="hash_setto_array-stlclr"></a><a name="to_array"></a> hash_set:: to_array (STL/CLR)
 
 被制御シーケンスを新しい配列にコピーします。
 
@@ -2653,7 +2594,7 @@ a b c d
 a b c
 ```
 
-## <a name="hash_setupper_bound-stlclr"></a><a name="upper_bound"></a>hash_set:: upper_bound (STL/CLR)
+## <a name="hash_setupper_bound-stlclr"></a><a name="upper_bound"></a> hash_set:: upper_bound (STL/CLR)
 
 指定されたキーに一致する範囲の末尾を検索します。
 
@@ -2668,9 +2609,9 @@ iterator upper_bound(key_type key);
 *key*<br/>
 検索対象のキー値。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
-このメンバー関数は、 `X` *キー*と同じバケットにハッシュし、*キー*と同等の順序を持つ被制御シーケンスの最後の要素を決定します。 そのような要素が存在しない場合、またはが被制御シーケンスの最後の要素である場合は、 `X` [hash_set:: END (STL/CLR)](../dotnet/hash-set-end-stl-clr.md)を返します。それ以外の場合は、 `()` 最初の要素を指定する反復子を返し `X` ます。 このメソッドを使用して、被制御シーケンスの中で、指定したキーに一致する要素のシーケンスの末尾を検索します。
+このメンバー関数は、 `X` *キー* と同じバケットにハッシュし、 *キー*と同等の順序を持つ被制御シーケンスの最後の要素を決定します。 そのような要素が存在しない場合、またはが被制御シーケンスの最後の要素である場合は、 `X` [hash_set:: END (STL/CLR)](../dotnet/hash-set-end-stl-clr.md)を返します。それ以外の場合は、 `()` 最初の要素を指定する反復子を返し `X` ます。 このメソッドを使用して、被制御シーケンスの中で、指定したキーに一致する要素のシーケンスの末尾を検索します。
 
 ### <a name="example"></a>例
 
@@ -2710,7 +2651,7 @@ upper_bound(L'x')==end() = True
 *upper_bound(L'b') = c
 ```
 
-## <a name="hash_setvalue_comp-stlclr"></a><a name="value_comp"></a>hash_set:: value_comp (STL/CLR)
+## <a name="hash_setvalue_comp-stlclr"></a><a name="value_comp"></a> hash_set:: value_comp (STL/CLR)
 
 2つの要素の値の順序付けデリゲートをコピーします。
 
@@ -2754,7 +2695,7 @@ compare(L'a', L'b') = True
 compare(L'b', L'a') = False
 ```
 
-## <a name="hash_setvalue_compare-stlclr"></a><a name="value_compare"></a>hash_set:: value_compare (STL/CLR)
+## <a name="hash_setvalue_compare-stlclr"></a><a name="value_compare"></a> hash_set:: value_compare (STL/CLR)
 
 2つの要素の値の順序付けデリゲート。
 
@@ -2799,7 +2740,7 @@ compare(L'a', L'b') = True
 compare(L'b', L'a') = False
 ```
 
-## <a name="hash_setvalue_type-stlclr"></a><a name="value_type"></a>hash_set:: value_type (STL/CLR)
+## <a name="hash_setvalue_type-stlclr"></a><a name="value_type"></a> hash_set:: value_type (STL/CLR)
 
 要素の型。
 

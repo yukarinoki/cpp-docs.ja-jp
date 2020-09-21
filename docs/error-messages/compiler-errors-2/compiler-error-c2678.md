@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2678
 ms.assetid: 1f0a4e26-b429-44f5-9f94-cb66441220c8
-ms.openlocfilehash: 390752d5d34685afc8b5fc5401fd75585bb48dd0
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: c8f5b06e6c2f9966d714f4a360525617dbff400f
+ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74760336"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90743179"
 ---
 # <a name="compiler-error-c2678"></a>コンパイラエラー C2678
 
@@ -19,9 +19,9 @@ ms.locfileid: "74760336"
 
 この演算子を使うには、型を指定してこの演算子をオーバーロードするか、この演算子が定義された型への変換を定義する必要があります。
 
-## <a name="example"></a>使用例
-
 左側のオペランドが const で修飾されていても、演算子が非 const 引数を受け取るように定義されている場合に、C2678 が発生する可能性があります。
+
+## <a name="examples"></a>例
 
 次の例では、C2678 を生成し、その修正方法を示しています。
 
@@ -46,8 +46,6 @@ int main() {
    combo2 += 9; // OK - operator+= matches non-const Combo
 }
 ```
-
-## <a name="example"></a>使用例
 
 C2678 は、ネイティブ メンバーを固定せずにその中でメンバー関数を呼び出した場合にも発生する可能性があります。
 

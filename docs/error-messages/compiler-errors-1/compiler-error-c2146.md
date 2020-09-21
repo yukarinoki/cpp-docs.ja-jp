@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2146
 ms.assetid: 6bfb7de6-6723-4486-9350-c66ef88d7a64
-ms.openlocfilehash: c1a790902af92d72eb73be7fc2321762ab01fd8c
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: ff9dc9861643afa364db4b6364fa5e7bb33e8c8c
+ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87214764"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90742620"
 ---
 # <a name="compiler-error-c2146"></a>コンパイラ エラー C2146
 
@@ -23,9 +23,9 @@ ms.locfileid: "87214764"
 
 1. 識別子の宣言に型指定子がありません。
 
-このエラーは、タイポグラフィエラーが原因で発生する可能性があります。 通常、エラー [C2065](../../error-messages/compiler-errors-1/compiler-error-c2065.md)はこのエラーの前にあります。
+このエラーは、タイポグラフィエラーが原因で発生する可能性があります。 通常、エラー [C2065](../../error-messages/compiler-errors-1/compiler-error-c2065.md) はこのエラーの前にあります。
 
-## <a name="example"></a>例
+## <a name="examples"></a>例
 
 次の例では、C2146 が生成されます。
 
@@ -43,8 +43,6 @@ int main() {
    int t x;   // C2146 : missing semicolon before 'x'
 }
 ```
-
-## <a name="example"></a>例
 
 このエラーは、Visual Studio .NET 2003 で実行されたコンパイラ準拠作業の結果として生成されることもあります。キーワードがありません **`typename`** 。
 
@@ -68,8 +66,6 @@ X<T>::Y func() { }   // C2146
 template <typename T>
 typename X<T>::Y func() { }
 ```
-
-## <a name="example"></a>例
 
 このエラーは、Visual Studio .NET 2003 で実行されたコンパイラ準拠作業の結果としても表示されます。明示的な特殊化では、プライマリテンプレートからテンプレートパラメーターが見つからなくなりました。
 

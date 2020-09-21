@@ -1,6 +1,6 @@
 ---
-title: NAME_VALUE_PAIR_DATA構造
-description: C++ ビルド インサイト SDK NAME_VALUE_PAIR_DATA構造リファレンスです。
+title: NAME_VALUE_PAIR_DATA 構造体
+description: C++ Build Insights SDK の NAME_VALUE_PAIR_DATA 構造体のリファレンス。
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 4a0bf8e8ba32d94d30a56d0ef26ca4ed0c9b0711
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
-ms.translationtype: MT
+ms.openlocfilehash: 384ed0340cd8de09101e2fe3e62e1a75f25e2bc1
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81325353"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90041693"
 ---
-# <a name="name_value_pair_data-structure"></a>NAME_VALUE_PAIR_DATA構造
+# <a name="name_value_pair_data-structure"></a>NAME_VALUE_PAIR_DATA 構造体
 
 ::: moniker range="<=vs-2015"
 
-C++ ビルド インサイト SDK は、Visual Studio 2017 以降と互換性があります。 これらのバージョンのドキュメントを参照するには、この記事の Visual Studio**バージョン**セレクター コントロールを Visual Studio 2017 または Visual Studio 2019 に設定します。 このページの目次の上部に表示されます。
+C++ Build Insights SDK は、Visual Studio 2017 以降と互換性があります。 これらのバージョンのドキュメントを表示するには、この記事の Visual Studio **Version** セレクター コントロールを Visual Studio 2017 または Visual Studio 2019 に設定します。 このページの目次の一番上にあります。
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-構造体`NAME_VALUE_PAIR_DATA`は、名前と値のペアを記述します。
+`NAME_VALUE_PAIR_DATA` 構造体は、名前と値のペアを表します。
 
 ## <a name="syntax"></a>構文
 
@@ -39,9 +39,9 @@ typedef struct NAME_VALUE_PAIR_DATA_TAG
 
 ## <a name="members"></a>メンバー
 
-|  |  |
+| 名前 | [説明] |
 |--|--|
-| `Name` | 名前です。 |
+| `Name` | 名前。 |
 | `Value` | 値。 |
 
 ::: moniker-end

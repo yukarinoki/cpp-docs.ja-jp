@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - C3460
 ms.assetid: adbf8775-10ca-4654-acdf-58dd765351cd
-ms.openlocfilehash: 9dc30eea73140ea6f0f436339de249bb714a46c2
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: cb1dc84ea7b6666368708e9493349d9c7a9a0571
+ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74756618"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90743075"
 ---
 # <a name="compiler-error-c3460"></a>コンパイラ エラー C3460
 
 'type': 転送できるのはユーザー定義型のみです
 
-詳細については、「[型C++の転送 (/cli)](../../extensions/type-forwarding-cpp-cli.md)」を参照してください。
+詳細については、「 [型の転送 (C++/cli)](../../extensions/type-forwarding-cpp-cli.md)」を参照してください。
 
-## <a name="example"></a>使用例
+## <a name="examples"></a>例
 
 コンポーネントを作成する例を次に示します。
 
@@ -28,8 +28,6 @@ ms.locfileid: "74756618"
 // compile with: /LD /clr
 public ref class R {};
 ```
-
-## <a name="example"></a>使用例
 
 次の例では C3460 が生成されます。
 

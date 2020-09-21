@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2027
 ms.assetid: a39150c0-ec04-45ec-934c-a838bfe76627
-ms.openlocfilehash: 62cf208d9d0025afba06d32a15b9a1e50777c473
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 59d0e5d5a5f0957f2d73cdb863ccee9a2dd2a026
+ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74751002"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90743257"
 ---
 # <a name="compiler-error-c2027"></a>コンパイラエラー C2027
 
@@ -19,7 +19,7 @@ ms.locfileid: "74751002"
 
 型は、定義されるまで使用できません。 エラーを解決するには、型が参照前に完全に定義されていることを確認してください。
 
-## <a name="example"></a>使用例
+## <a name="examples"></a>例
 
 次の例では、C2027 が生成されます。
 
@@ -41,9 +41,7 @@ int main() {
 }
 ```
 
-## <a name="example"></a>使用例
-
-宣言されているが未定義の型へのポインターを宣言することができます。 ただしC++ 、未定義の型への参照は許可されません。
+宣言されているが未定義の型へのポインターを宣言することができます。 ただし、C++ では未定義の型への参照は許可されません。
 
 次の例では、C2027 が生成されます。
 

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3465
 ms.assetid: aeb815e5-b3fc-4525-afe2-d738e9321df1
-ms.openlocfilehash: 1d82d367c5b77f54548403b7b142aa740919b6c2
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 56eeac18d5b8efc32501bf54e2de3aa216e05a13
+ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74756566"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90742022"
 ---
 # <a name="compiler-error-c3465"></a>コンパイラ エラー C3465
 
@@ -19,9 +19,9 @@ ms.locfileid: "74756566"
 
 クライアント アプリケーションで型の転送が機能するのは、クライアントを再コンパイルするまでの間です。 再コンパイルする場合は、クライアント アプリケーションで使用される型の定義を含む各アセンブリの参照が必要です。
 
-詳細については、「[型C++の転送 (/cli)](../../extensions/type-forwarding-cpp-cli.md)」を参照してください。
+詳細については、「 [型の転送 (C++/cli)](../../extensions/type-forwarding-cpp-cli.md)」を参照してください。
 
-## <a name="example"></a>使用例
+## <a name="examples"></a>例
 
 次の例では、型の新しい場所を含むアセンブリを作成します。
 
@@ -34,8 +34,6 @@ public:
 };
 ```
 
-## <a name="example"></a>使用例
-
 次の例は型定義を含んでいたアセンブリを作成しますが、今回は型の転送構文が含まれています。
 
 ```cpp
@@ -44,8 +42,6 @@ public:
 #using "C3465.dll"
 [ assembly:TypeForwardedTo(R::typeid) ];
 ```
-
-## <a name="example"></a>使用例
 
 次の例では C3465 が生成されます。
 

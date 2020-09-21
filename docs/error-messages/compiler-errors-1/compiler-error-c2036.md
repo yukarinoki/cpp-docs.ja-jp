@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - C2036
 ms.assetid: 895821a9-65d1-44b5-bde1-dae827f3e486
-ms.openlocfilehash: df36dc5d6e399a0fc35b71e6d3a82ea77aeb5105
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: 06d292224108434065dfdca2a75d38fd3bb0243c
+ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75302082"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90742698"
 ---
 # <a name="compiler-error-c2036"></a>コンパイラエラー C2036
 
 ' identifier ': サイズが不明です
 
-`identifier` に対する操作には、データオブジェクトのサイズが必要です。これは特定できません。
+に対する操作では、 `identifier` データオブジェクトのサイズを指定する必要がありますが、これは特定できません。
 
-## <a name="example"></a>使用例
+## <a name="examples"></a>例
 
 次の例では、C2036 が生成されます。
 
@@ -35,8 +35,6 @@ int main() {
    pB++;   // OK
 }
 ```
-
-## <a name="example"></a>使用例
 
 次の例では、C2036 が生成されます。
 

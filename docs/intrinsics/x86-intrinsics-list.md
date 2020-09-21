@@ -1,6 +1,6 @@
 ---
 title: x86 組み込み一覧
-description: Visual Studio の Microsoft C++ コンパイラでサポートされている x64 (AMD64) 組み込みのリファレンスリスト。
+description: Visual Studio の Microsoft C++ コンパイラでサポートされている x86 組み込みのリファレンスリスト。
 ms.date: 02/28/2020
 f1_keywords:
 - intrin/_addcarry_u16
@@ -2309,12 +2309,12 @@ helpviewer_keywords:
 - _xsaveopt x86 intrinsic
 - _xsetbv x86 intrinsic
 - _xtest x86 intrinsic
-ms.openlocfilehash: f13be5ddaa79382e3d58e96b2f4aaa0d7f9d6566
-ms.sourcegitcommit: 65fead53d56d531d71be42216056aca5f44def11
+ms.openlocfilehash: a5892b809e74e04806f27f06437b9fbedae68754
+ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "88610921"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90741879"
 ---
 # <a name="x86-intrinsics-list"></a>x86 組み込み一覧
 

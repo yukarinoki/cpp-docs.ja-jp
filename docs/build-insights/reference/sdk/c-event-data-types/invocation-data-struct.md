@@ -1,6 +1,6 @@
 ---
-title: INVOCATION_DATA構造
-description: C++ ビルド インサイト SDK INVOCATION_DATA構造参照。
+title: INVOCATION_DATA 構造体
+description: C++ Build Insights SDK INVOCATION_DATA 構造体のリファレンス。
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 4e1f428facac413d7a4a5c059452dd8cdb07be4c
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
-ms.translationtype: MT
+ms.openlocfilehash: 48b4c28d3c01d61a31343894312a54ba2ab17a70
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81325483"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90041641"
 ---
-# <a name="invocation_data-structure"></a>INVOCATION_DATA構造
+# <a name="invocation_data-structure"></a>INVOCATION_DATA 構造体
 
 ::: moniker range="<=vs-2015"
 
-C++ ビルド インサイト SDK は、Visual Studio 2017 以降と互換性があります。 これらのバージョンのドキュメントを参照するには、この記事の Visual Studio**バージョン**セレクター コントロールを Visual Studio 2017 または Visual Studio 2019 に設定します。 このページの目次の上部に表示されます。
+C++ Build Insights SDK は、Visual Studio 2017 以降と互換性があります。 これらのバージョンのドキュメントを表示するには、この記事の Visual Studio **Version** セレクター コントロールを Visual Studio 2017 または Visual Studio 2019 に設定します。 このページの目次の一番上にあります。
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-この`INVOCATION_DATA`構造体は、コンパイラまたはリンカー呼び出しを記述します。
+`INVOCATION_DATA` 構造体は、コンパイラまたはリンカーの呼び出しを表します。
 
 ## <a name="syntax"></a>構文
 
@@ -45,12 +45,12 @@ typedef struct INVOCATION_DATA_TAG
 
 ## <a name="members"></a>メンバー
 
-|  |  |
+| 名前 | [説明] |
 |--|--|
-| `MSVCToolCode` | 呼び出しの型を識別するコード。 詳細については、「 [MSVC_TOOL_CODE](msvc-tool-code-enum.md)」を参照してください。 |
-| `ToolVersion` | 呼び出されたツールのバージョンを整数値のグループとして格納するオブジェクト。 |
-| `ToolVersionString` | 呼び出されたツールのバージョンをテキスト形式で記述します。 |
-| `WorkingDirectory` | 呼び出しが行われたディレクトリ。 |
+| `MSVCToolCode` | 呼び出しの種類を識別するコード。 詳細については、[MSVC_TOOL_CODE](msvc-tool-code-enum.md) に関するページを参照してください。 |
+| `ToolVersion` | 呼び出されたツールのバージョンを整数値として格納するオブジェクト。 |
+| `ToolVersionString` | 呼び出されたツールのバージョンをテキスト形式で表します。 |
+| `WorkingDirectory` | 呼び出し元のディレクトリ。 |
 | `ToolPath` | 呼び出されたツールの絶対パス。 |
 
 ::: moniker-end

@@ -1,19 +1,20 @@
-﻿---
+---
 title: 'チュートリアル: コマンド ラインでの C プログラムのコンパイル'
+description: 単純な Hello World スタイルの C プログラムの作成方法を示すチュートリアル。
 ms.custom: conceptual
-ms.date: 04/25/2019
+ms.date: 9/10/2020
 helpviewer_keywords:
 - command-line applications [C++], C programs
 - Visual C, compiling
 - compiling programs [C++]
 - C program compiling [C++]
 ms.assetid: 7e74cc2d-54b1-49de-b7ad-d3ae6b39ab8d
-ms.openlocfilehash: d807fa75b32b515c2222fec9ea9d070266303e33
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 57276f61ca8ff848db0313935bc1841de50f9874
+ms.sourcegitcommit: b492516cc65120250b9ea23f96f7f63f37f99fae
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81335260"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90075609"
 ---
 # <a name="walkthrough-compile-a-c-program-on-the-command-line"></a>チュートリアル: コマンド ラインでの C プログラムのコンパイル
 
@@ -178,9 +179,9 @@ usage: cl [ option... ] filename... [ /link linkoption... ]
 
 NMAKE とメイクファイル、または MSBuild とプロジェクト ファイルを使用すると、さらに複雑なプロジェクトをコマンド ラインで構成し、ビルドすることができます。 これらのツールの使用方法の詳細については、「[NMAKE リファレンス](reference/nmake-reference.md)」および「[MSBuild](msbuild-visual-cpp.md)」を参照してください。
 
-C 言語と C++ 言語は似ていますが、同じではありません。 Microsoft C/C++ コンパイラ (MSVC) では、簡単なルールを使用して、コードをコンパイルするときに使用する言語が決定されます。 既定の MSVC コンパイラでは、末尾が .c のファイルはすべて C ソース コードとして扱われ、末尾が .cpp のファイルはすべて C++ ソース コードとして扱われます。 ファイル名拡張子に関係なくコンパイラですべてのファイルが C として扱われるように強制するには、[/Tc](reference/tc-tp-tc-tp-specify-source-file-type.md) コンパイラ オプションを使用します。
+C 言語と C++ 言語は似ていますが、同じではありません。 Microsoft C/C++ コンパイラ (MSVC) では、簡単なルールを使用して、コードをコンパイルするときに使用する言語が決定されます。 既定の MSVC コンパイラでは、末尾が .c のファイルはすべて C ソース コードとして扱われ、末尾が .cpp のファイルはすべて C++ ソース コードとして扱われます。 ファイル名拡張子に関係なくコンパイラですべてのファイルが C として扱われるように強制するには、[/TC](reference/tc-tp-tc-tp-specify-source-file-type.md) コンパイラ オプションを使用します。
 
-MSVC は ISO C99 標準と互換性がありますが、厳密には準拠していません。 ほとんどの場合、移植可能な C コードは予期されるとおりにコンパイルされて実行されます。 Visual C++ では、ISO C11 でのほとんどの変更がサポートされていません。 一部のライブラリ関数と POSIX 関数名は、MSVC では非推奨になっています。 関数はサポートされていますが、推奨される名前は変更されています。 詳細については、「[CRT のセキュリティ機能](../c-runtime-library/security-features-in-the-crt.md)」と「[コンパイラ警告 (レベル 3) C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md)」を参照してください。
+MSVC は ISO C99 標準と互換性がありますが、厳密には準拠していません。 ほとんどの場合、移植可能な C コードは予期されるとおりにコンパイルされて実行されます。 Visual C++ からは、ISO C11/C17 における変更のサポートが提供されます。 C11/C17 サポートを使用してコンパイルするには、コンパイラ フラッグの `/std:c11` または `/std:c17` を使用します。 一部のライブラリ関数と POSIX 関数名は、MSVC では非推奨になっています。 関数はサポートされていますが、推奨される名前は変更されています。 詳細については、「[CRT のセキュリティ機能](../c-runtime-library/security-features-in-the-crt.md)」と「[コンパイラ警告 (レベル 3) C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

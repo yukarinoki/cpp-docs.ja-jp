@@ -1,20 +1,21 @@
 ---
 title: Visual Studio での C++ の新機能
+description: Visual Studio の Microsoft C/C++ のコンパイラとツールにおける新機能と修正プログラム。
 ms.date: 05/19/2020
 ms.technology: cpp-ide
 ms.assetid: 8801dbdb-ca0b-491f-9e33-01618bff5ae9
-ms.openlocfilehash: 509c9d458360c2ba8f46054b69de38aad8bbf56a
-ms.sourcegitcommit: 8140647370017b885432349ce89f187c3068b46a
+ms.openlocfilehash: 1a0fc228b6c91b1e529db6676c1a1193f5db99e1
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88144179"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90041680"
 ---
 # <a name="whats-new-for-c-in-visual-studio"></a>Visual Studio での C++ の新機能
 
 ::: moniker range=">=vs-2019"
 
-Visual Studio 2019 には、Microsoft C++ 環境に対する多くの更新プログラムと修正プログラムが導入されています。 コンパイラおよびツールの多くのバグと問題を修正しました。 多くの問題は、 **[フィードバックの送信]** の [[問題の報告]](/visualstudio/ide/how-to-report-a-problem-with-visual-studio?view=vs-2019) および [[提案の送信]](https://developercommunity.visualstudio.com/spaces/62/index.html) オプションを通じてお客様から寄せられたものです。 バグ レポートをお寄せいただきありがとうございました。 Visual Studio 全体の新機能の詳細については、「[Visual Studio 2019 の新機能](/visualstudio/ide/whats-new-visual-studio-2019)」を参照してください。 Visual Studio 2017 での C++ の新機能については、「[Visual Studio 2017 での C++ の新機能](/cpp/overview/what-s-new-for-visual-cpp-in-visual-studio?view=vs-2017)」を参照してください。 Visual Studio 2015 以前のバージョンでの C++ の新機能については、「[Visual Studio 2003 から 2015 の Visual C++ の新機能](/cpp/porting/visual-cpp-what-s-new-2003-through-2015)」を参照してください。
+Visual Studio 2019 には、Microsoft C++ 環境に対する多くの更新プログラムと修正プログラムが導入されています。 コンパイラおよびツールの多くのバグと問題を修正しました。 多くの問題は、 **[フィードバックの送信]** の [[問題の報告]](/visualstudio/ide/how-to-report-a-problem-with-visual-studio?view=vs-2019&preserve-view=true) および [[提案の送信]](https://developercommunity.visualstudio.com/spaces/62/index.html) オプションを通じてお客様から寄せられたものです。 バグ レポートをお寄せいただきありがとうございました。 Visual Studio 全体の新機能の詳細については、「[Visual Studio 2019 の新機能](/visualstudio/ide/whats-new-visual-studio-2019)」を参照してください。 Visual Studio 2017 での C++ の新機能については、「[Visual Studio 2017 での C++ の新機能](/cpp/overview/what-s-new-for-visual-cpp-in-visual-studio?view=vs-2017&preserve-view=true)」を参照してください。 Visual Studio 2015 以前のバージョンでの C++ の新機能については、「[Visual Studio 2003 から 2015 の Visual C++ の新機能](/cpp/porting/visual-cpp-what-s-new-2003-through-2015)」を参照してください。
 
 ## <a name="c-compiler"></a>C++ コンパイラ
 
@@ -239,7 +240,7 @@ C++ Android エクスペリエンスは、既定では Android SDK 25 および 
 
 ::: moniker range="=vs-2017"
 
-Visual Studio 2017 には、C++ 環境に対する多くの更新プログラムと修正プログラムが導入されています。 コンパイラとツールで報告された 250 件を超えるバグと問題を修正しました。 その多くは、 **[フィードバックの送信]** の [[問題の報告] および [提案の送信]](/visualstudio/ide/how-to-report-a-problem-with-visual-studio?view=vs-2017) オプションを通じてお客様から寄せられたものです。 バグ レポートをお寄せいただきありがとうございました。 Visual Studio 全体の新機能の詳細については、「[Visual Studio 2017 の新機能](/visualstudio/ide/whats-new-visual-studio-2017?view=vs-2017)」を参照してください。 Visual Studio 2019 での C++ の新機能については、「[Visual Studio での C++ の新機能](/cpp/overview/what-s-new-for-visual-cpp-in-visual-studio?view=vs-2019)」を参照してください。 Visual Studio 2015 以前のバージョンでの C++ の新機能については、「[Visual Studio 2003 から 2015 の Visual C++ の新機能](/cpp/porting/visual-cpp-what-s-new-2003-through-2015)」を参照してください。
+Visual Studio 2017 には、C++ 環境に対する多くの更新プログラムと修正プログラムが導入されています。 コンパイラとツールで報告された 250 件を超えるバグと問題を修正しました。 その多くは、 **[フィードバックの送信]** の [[問題の報告] および [提案の送信]](/visualstudio/ide/how-to-report-a-problem-with-visual-studio?view=vs-2017&preserve-view=true) オプションを通じてお客様から寄せられたものです。 バグ レポートをお寄せいただきありがとうございました。 Visual Studio 全体の新機能の詳細については、「[Visual Studio 2017 の新機能](/visualstudio/ide/whats-new-visual-studio-2017?view=vs-2017&preserve-view=true)」を参照してください。 Visual Studio 2019 での C++ の新機能については、「[Visual Studio での C++ の新機能](/cpp/overview/what-s-new-for-visual-cpp-in-visual-studio?view=vs-2019&preserve-view=true)」を参照してください。 Visual Studio 2015 以前のバージョンでの C++ の新機能については、「[Visual Studio 2003 から 2015 の Visual C++ の新機能](/cpp/porting/visual-cpp-what-s-new-2003-through-2015)」を参照してください。
 
 ## <a name="visual-studio-2017-c-compiler"></a>Visual Studio 2017 C++ コンパイラ
 
@@ -257,7 +258,7 @@ Visual Studio バージョン 15.7 の MSVC コンパイラ ツールセット�
 
 ##### <a name="visual-studio-2017-version-158"></a>Visual Studio 2017 バージョン 15.8
 
-[`/experimental:preprocessor`](../build/reference/experimental-preprocessor.md) コンパイラ スイッチを使用すると、新しい実験的な MSVC プリプロセッサが有効になり、最終的に該当するすべての C および C++ 標準に準拠するようになります。 詳細については、「[MSVC experimental preprocessor overview](../preprocessor/preprocessor-experimental-overview.md)」(MSVC の実験的なプリプロセッサの概要) を参照してください。
+[`/experimental:preprocessor`](../build/reference/experimental-preprocessor.md) コンパイラ スイッチを使用すると、新しい実験的な MSVC プリプロセッサが有効になり、最終的に該当するすべての C および C++ 標準に準拠するようになります。 詳細については、「[MSVC の新しいプリプロセッサの概要](../preprocessor/preprocessor-experimental-overview.md)」を参照してください。
 
 ### <a name="new-compiler-options"></a>新しいコンパイラ オプション
 
@@ -648,7 +649,7 @@ Visual Studio 2017 に同梱されている Clang/C2 ツールセットが **`/b
 
 [C++ コア ガイドライン](https://github.com/isocpp/CppCoreGuidelines)を適用するための C++ コア チェッカーが Visual Studio で配布されています。 チェッカーは、プロジェクトのプロパティ ページの **[Code Analysis Extensions]\(コード分析の拡張機能\)** ページで有効にしてください。 拡張機能は、コード分析を実行するときに含まれます。 詳細については、「[Using the C++ Core Guidelines checkers (C++ Core ガイドラインのチェッカーを使用する)](/cpp/code-quality/using-the-cpp-core-guidelines-checkers)」をご覧ください。
 
-![CppCoreCheck](media/CppCoreCheck.png "CppCoreCheck のプロパティ ページ")
+![Code Analysis プロパティ ページを使用して C++ Core チェック ルールセットを選択する方法を示します。](media/CppCoreCheck.png "CppCoreCheck のプロパティ ページ")
 
 ##### <a name="visual-studio-2017-version-153"></a>Visual Studio 2017 バージョン 15.3
 
@@ -696,7 +697,7 @@ Visual Studio グラフィックス診断ツール:これらを使用して、Di
 
 - **オブジェクト テーブルでの検索とフィルター:** 探しているリソースを検索する迅速かつ簡単な手段を提供します。
 
-  ![検索](media/search.png)
+  ![[オブジェクト テーブル] ウィンドウでのフィルターと検索コントロールの位置を示します。](media/search.png)
 
 - **リソース履歴:** この新しいビューは、キャプチャされたフレームのレンダリング時に使われたリソースの全体の変更履歴を表示する簡単な手段を提供します。 リソースの履歴を呼び出すには、リソースのハイパーリンクの横にある時計のアイコンをクリックします。
 
@@ -740,8 +741,8 @@ Visual Studio 2015 更新プログラム 3 での新機能の完全な一覧に�
 
 Visual Studio 2015 のすべての新機能の詳細については、リリース ノートを参照してください。 「[Visual Studio 2015 リリース ノート履歴](/visualstudio/releasenotes/vs2015-version-history)」からリンクされています。
 
-Visual Studio 2019 での C++ の新機能については、「[Visual Studio での C++ の新機能](/cpp/overview/what-s-new-for-visual-cpp-in-visual-studio?view=vs-2019)」を参照してください。
+Visual Studio 2019 での C++ の新機能については、[Visual Studio 2019 での C++ の新機能](/cpp/overview/what-s-new-for-visual-cpp-in-visual-studio?view=vs-2019&preserve-view=true)に関するページを参照してください。
 
-Visual Studio 2017 での C++ の新機能については、「[Visual Studio 2017 での C++ の新機能](/cpp/overview/what-s-new-for-visual-cpp-in-visual-studio?view=vs-2017)」を参照してください。
+Visual Studio 2017 での C++ の新機能については、「[Visual Studio 2017 での C++ の新機能](/cpp/overview/what-s-new-for-visual-cpp-in-visual-studio?view=vs-2017&preserve-view=true)」を参照してください。
 
 ::: moniker-end

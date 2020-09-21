@@ -6,12 +6,12 @@ ms.technology: cpp-language
 ms.assetid: 475da6e9-0d78-4b4e-bd23-f41c406c4efe
 author: corob-msft
 ms.author: corob
-ms.openlocfilehash: 84572d44cd994da07d44e736983270a1e7acd1ec
-ms.sourcegitcommit: b51703a96ee35ee2376d5f0775b70f03ccbe6d9a
+ms.openlocfilehash: d9fbbc4f0eddba0ae6a7dbc3250a26d36155506e
+ms.sourcegitcommit: b492516cc65120250b9ea23f96f7f63f37f99fae
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88086982"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90075791"
 ---
 # <a name="microsoft-c-language-conformance-table"></a>Microsoft C++ 言語の準拠表
 
@@ -432,7 +432,7 @@ __VS 2019 16.7__ は、Visual Studio 2019 バージョン 16.7 でサポート�
 
 <a name="note_B"></a> __B__ Visual Studio 2017 バージョン 15.7 の [`/permissive-`](../build/reference/permissive-standards-conformance.md) モードでサポートされています。 詳細については、「[2 フェーズの名前参照のサポートを MSVC に導入](https://devblogs.microsoft.com/cppblog/two-phase-name-lookup-support-comes-to-msvc/)」を参照してください。
 
-<a name="note_C"></a> __C__ Visual Studio 2017 では、C99 プリプロセッサ ルールはコンパイラで完全にサポートされていません。 プリプロセッサを徹底的に見直し、Visual Studio 2017 バージョン 15.8 で [/experimental:preprocessor](../build/reference/experimental-preprocessor.md) コンパイラ スイッチを使った変更内容の配布を開始しました。
+<a name="note_C"></a> __C__ Visual Studio 2017 バージョン 15.8 以降、コンパイラからは、[/experimental:preprocessor](../build/reference/experimental-preprocessor.md) コンパイラ スイッチ経由で C99 プリプロセッサのサポートが提供されます。 Visual Studio 2019 バージョン 16.6 以降、コンパイラによって、[`/Zc:preprocessor`](../build/reference/zc-conformance.md) スイッチ経由で C99 プリプロセッサが完全実装されます。 コンパイラ スイッチの `/std:c11` または `/std:c17` が指定されているとき、これは既定でオンになります。
 
 <a name="note_D"></a> __D__ [`/std:c++14`](../build/reference/std-specify-language-standard-version.md) で、非表示にできる警告 [`C4984`](../error-messages/compiler-warnings/compiler-warning-c4984.md) と共にサポートされています。
 
@@ -450,7 +450,7 @@ __VS 2019 16.7__ は、Visual Studio 2019 バージョン 16.7 でサポート�
 
 <a name="note_byte"></a> __byte__ `std::byte` は [`/std:c++17`](../build/reference/std-specify-language-standard-version.md) (または [`/std:c++latest`](../build/reference/std-specify-language-standard-version.md)) により有効になっていますが、Windows SDK のヘッダーと競合することがあるため、細かいオプトアウト マクロがあります。 `_HAS_STD_BYTE` を `0` として定義することで無効にできます。
 
-<a name="note_C11"></a> __C11__ ユニバーサル CRT では、C++17 で必要となる C11 標準ライブラリの部分を実装しました。C99 `strftime()` E/O 代替変換指定子、C11 `fopen()` 排他モード、C11 `aligned_alloc()` は除きます。 C11 は `aligned_alloc()` を、Microsoft の `free()` の実装と互換性のない方法で指定したため (つまり、その `free()` は高度にアライメントされた割り当てを処理できる必要があるため)、後者が実装される可能性はほとんどありません。
+<a name="note_C11"></a> __C11__ C11 のコンパイラ サポートには、Visual Studio バージョン 16.8 以降が必要です。 C11 ライブラリ サポートには、Windows SDK バージョン 20211 以降が必要です。 ユニバーサル CRT では、C++17 で必要となる C11 標準ライブラリの部分を実装します。C99 `strftime()` E/O 代替変換指定子と C11 `aligned_alloc()` は除きます。 Windows オペレーティング システムでは割り当てを調整しないため、後者は実装される可能性が少ないです。
 
 <a name="note_rem"></a> __rem__ [`/std:c++17`](../build/reference/std-specify-language-standard-version.md) (または [`/std:c++latest`](../build/reference/std-specify-language-standard-version.md)) コンパイラ オプションが指定されたときに削除される機能。 次のマクロを使うことで、これらの機能を再び有効化し、新しい言語モードへの移行を容易にすることができます: `_HAS_AUTO_PTR_ETC`、`_HAS_FUNCTION_ALLOCATOR_SUPPORT`、`_HAS_OLD_IOSTREAMS_MEMBERS`、`_HAS_UNEXPECTED`。
 

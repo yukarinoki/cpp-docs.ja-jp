@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3225
 ms.assetid: f5f66973-256e-4298-ac46-c87819cbde34
-ms.openlocfilehash: 1caa1e7ce787ffc14e615c946b5d670c75e0332a
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: ed645535300e0a7c4d27f8bed43d3143bae7e97a
+ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74757619"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90742867"
 ---
 # <a name="compiler-error-c3225"></a>コンパイラ エラー C3225
 
@@ -21,7 +21,7 @@ ms.locfileid: "74757619"
 
 詳細については、「[ジェネリック](../../extensions/generics-cpp-component-extensions.md)」を参照してください。
 
-## <a name="example"></a>使用例
+## <a name="examples"></a>例
 
 ネイティブ型を使用してジェネリック型をインスタンス化することはできません。 次の例では、C3225 が生成されます。
 
@@ -41,9 +41,7 @@ int main() {
 }
 ```
 
-## <a name="example"></a>使用例
-
-次の例では、をC#使用してコンポーネントを作成します。 制約によって、ジェネリック型が値型でのみインスタンス化できることが指定されていることに注意してください。
+次の例では、C# を使用してコンポーネントを作成します。 制約によって、ジェネリック型が値型でのみインスタンス化できることが指定されていることに注意してください。
 
 ```
 // C3225_b.cs
@@ -52,9 +50,7 @@ int main() {
 public class MyList<T> where T: struct {}
 ```
 
-## <a name="example"></a>使用例
-
-このサンプルではC#、作成されたコンポーネントを使用し、MyList が <xref:System.Nullable>以外の値型でのみインスタンス化できる制約に違反します。 次の例では、C3225 が生成されます。
+このサンプルでは、C# で作成されたコンポーネントを使用し、MyList が以外の値型を使用してのみインスタンス化できる制約に違反し <xref:System.Nullable> ます。 次の例では、C3225 が生成されます。
 
 ```cpp
 // C3225_c.cpp

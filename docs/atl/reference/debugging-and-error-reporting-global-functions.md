@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - functions [ATL], error reporting
 ms.assetid: 11339c02-98cd-428d-b3b9-7deeb155a6a3
-ms.openlocfilehash: b4af5dd3839672152c53c902b73c1ea51b7feb6b
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 10aca6862f6989c126981a9f6437c61f1c07bdae
+ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88835469"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90742789"
 ---
 # <a name="debugging-and-error-reporting-global-functions"></a>デバッグとエラー報告のグローバル関数
 
@@ -35,7 +35,7 @@ ms.locfileid: "88835469"
 HRESULT AtlHresultFromLastError();
 ```
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 `AtlHresultFromLastError` を呼び出して `GetLastError` 、最後のエラーを取得し、HRESULT_FROM_WIN32 マクロを使用して HRESULT に変換した後にエラーを返します。
 
@@ -56,7 +56,7 @@ AtlHresultFromWin32(DWORD error);
 *error*<br/>
 変換するエラー値。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 マクロ HRESULT_FROM_WIN32 を使用して、Win32 エラーコードを HRESULT に変換します。
 
@@ -147,7 +147,7 @@ HRESULT WINAPI AtlReportError(
 
 *Hres*パラメーターが0以外の場合、は*hres*の値を返します。 *Hres*が0の場合、の最初の4つのバージョンが `AtlReportError` DISP_E_EXCEPTION を返します。 最後の2つのバージョンでは、マクロ**MAKE_HRESULT (1, FACILITY_ITF,** ) の結果が返され `nID` **)** ます。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 文字列 *Lpszdesc* は、エラーの説明テキストとして使用されます。 クライアントは、返された *Hres* を受け取ると、 `AtlReportError` `IErrorInfo` エラーの詳細を表す構造にアクセスできます。
 
@@ -175,7 +175,7 @@ __declspec(noreturn) inline void AtlThrow(HRESULT hr);
 *時間*<br/>
 標準の HRESULT 値。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 この関数は、エラー条件が発生した場合に ATL および MFC コードによって使用されます。 また、独自のコードから呼び出すこともできます。 この関数の既定の実装は、シンボルの定義と、プロジェクトの種類 (MFC または ATL) によって _ATL_NO_EXCEPTIONS ます。
 
@@ -195,7 +195,7 @@ ATL プロジェクトでは、エラーが発生した場合に ATL が使用�
 
 [!code-cpp[NVC_ATL_Windowing#95](../../atl/codesnippet/cpp/debugging-and-error-reporting-global-functions_2.h)]
 
-## <a name="requirements"></a>必要条件
+### <a name="requirements"></a>必要条件
 
 **ヘッダー:** atldef. h
 
@@ -207,7 +207,7 @@ Windows の `GetLastError` 関数の結果に基づいてエラーを通知し�
 inline void AtlThrowLastWin32();
 ```
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 この関数は、の結果を `GetLastError` デバッガーにトレースします。
 
@@ -217,7 +217,7 @@ ATL プロジェクトで _ATL_NO_EXCEPTIONS が定義されていない場合�
 
 _ATL_NO_EXCEPTIONS が定義されている場合、関数は、例外をスローする代わりにアサーションエラーを発生させます。
 
-## <a name="requirements"></a>必要条件
+### <a name="requirements"></a>必要条件
 
 **ヘッダー:** atldef. h
 
