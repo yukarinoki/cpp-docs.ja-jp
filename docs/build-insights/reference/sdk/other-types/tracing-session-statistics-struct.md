@@ -1,6 +1,6 @@
 ---
-title: TRACING_SESSION_STATISTICS構造
-description: C++ ビルド インサイト SDK TRACING_SESSION_OPTIONS構造体の参照。
+title: TRACING_SESSION_STATISTICS 構造体
+description: C++ Build Insights SDK の TRACING_SESSION_OPTIONS 構造体のリファレンス。
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 96cff3a231fd515ec1c52a048b8350a63ba46a39
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
-ms.translationtype: MT
+ms.openlocfilehash: 5f6126fb469dc13b814b91942fe9f7bc480ba3f1
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81323375"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90041186"
 ---
-# <a name="tracing_session_statistics-structure"></a>TRACING_SESSION_STATISTICS構造
+# <a name="tracing_session_statistics-structure"></a>TRACING_SESSION_STATISTICS 構造体
 
 ::: moniker range="<=vs-2015"
 
-C++ ビルド インサイト SDK は、Visual Studio 2017 以降と互換性があります。 これらのバージョンのドキュメントを参照するには、この記事の Visual Studio**バージョン**セレクター コントロールを Visual Studio 2017 または Visual Studio 2019 に設定します。 このページの目次の上部に表示されます。
+C++ Build Insights SDK は、Visual Studio 2017 以降と互換性があります。 これらのバージョンのドキュメントを表示するには、この記事の Visual Studio **Version** セレクター コントロールを Visual Studio 2017 または Visual Studio 2019 に設定します。 このページの目次の一番上にあります。
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-この`TRACING_SESSION_STATISTICS`構造体は、収集されたトレースに関する統計を記述します。 トレース セッションを停止するときに、そのフィールドが設定されます。
+`TRACING_SESSION_STATISTICS` 構造体は、収集されたトレースでの統計を表します。 トレース セッションの終了時にそのフィールドが設定されます。
 
 ## <a name="syntax"></a>構文
 
@@ -42,25 +42,25 @@ typedef struct TRACING_SESSION_STATISTICS_TAG
 
 ## <a name="members"></a>メンバー
 
-|  |  |
+| 名前 | [説明] |
 |--|--|
-| `MSVCEventsLost` | ドロップされた MSVC イベントの数。 |
-| `MSVCBuffersLost` | ドロップされた MSVC イベント・バッファーの数。 |
-| `SystemEventsLost` | ドロップされたシステム イベントの数。 |
-| `SystemBuffersLost` | ドロップされたシステム イベント バッファの数。 |
+| `MSVCEventsLost` | 削除された MSVC イベントの数。 |
+| `MSVCBuffersLost` | 削除された MSVC イベント バッファーの数。 |
+| `SystemEventsLost` | 削除されたシステム イベントの数。 |
+| `SystemBuffersLost` | 削除されたシステム イベント バッファーの数。 |
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>注釈
 
-この構造体は、次の関数を呼び出すときに設定されます。
+この構造体には、次の関数の呼び出し時にデータが入力されます。
 
-- [セッションを停止します。](../functions/stop-tracing-session.md)
-- [ストップトレースセッションA](../functions/stop-tracing-session-a.md)
-- [ストップトレースセッションW](../functions/stop-tracing-session-w.md)
-- [トレースセッションを停止して分析する](../functions/stop-and-analyze-tracing-session.md)
-- [トレースセッションを停止して分析する](../functions/stop-and-analyze-tracing-session-a.md)
-- [停止してトレースセッションを分析します。](../functions/stop-and-analyze-tracing-session-w.md)
-- [セッションを停止します。](../functions/stop-and-relog-tracing-session.md)
-- [ストップアンドログトレーシングセッション](../functions/stop-and-relog-tracing-session-a.md)
-- [停止アンドログトレーシングセッション](../functions/stop-and-relog-tracing-session-w.md)
+- [StopTracingSession](../functions/stop-tracing-session.md)
+- [StopTracingSessionA](../functions/stop-tracing-session-a.md)
+- [StopTracingSessionW](../functions/stop-tracing-session-w.md)
+- [StopAndAnalyzeTracingSession](../functions/stop-and-analyze-tracing-session.md)
+- [StopAndAnalyzeTracingSessionA](../functions/stop-and-analyze-tracing-session-a.md)
+- [StopAndAnalyzeTracingSessionW](../functions/stop-and-analyze-tracing-session-w.md)
+- [StopAndRelogTracingSession](../functions/stop-and-relog-tracing-session.md)
+- [StopAndRelogTracingSessionA](../functions/stop-and-relog-tracing-session-a.md)
+- [StopAndRelogTracingSessionW](../functions/stop-and-relog-tracing-session-w.md)
 
 ::: moniker-end

@@ -1,6 +1,6 @@
 ---
-title: EVENT_COLLECTION_DATA構造
-description: C++ ビルド インサイト SDK EVENT_COLLECTION_DATA構造リファレンスです。
+title: EVENT_COLLECTION_DATA 構造体
+description: C++ Build Insights SDK の EVENT_COLLECTION_DATA 構造体のリファレンス。
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 88ba39ede8c86f47c2e6458332ae005eddc06fda
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
-ms.translationtype: MT
+ms.openlocfilehash: 58be46d31af154bfe7ecef5c440092eaafdcbb0f
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81325693"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90039600"
 ---
-# <a name="event_collection_data-structure"></a>EVENT_COLLECTION_DATA構造
+# <a name="event_collection_data-structure"></a>EVENT_COLLECTION_DATA 構造体
 
 ::: moniker range="<=vs-2015"
 
-C++ ビルド インサイト SDK は、Visual Studio 2017 以降と互換性があります。 これらのバージョンのドキュメントを参照するには、この記事の Visual Studio**バージョン**セレクター コントロールを Visual Studio 2017 または Visual Studio 2019 に設定します。 このページの目次の上部に表示されます。
+C++ Build Insights SDK は、Visual Studio 2017 以降と互換性があります。 これらのバージョンのドキュメントを表示するには、この記事の Visual Studio **Version** セレクター コントロールを Visual Studio 2017 または Visual Studio 2019 に設定します。 このページの目次の一番上にあります。
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-構造体`EVENT_COLLECTION_DATA`は[、EVENT_DATA](event-data-struct.md)要素の配列を記述します。
+`EVENT_COLLECTION_DATA` 構造体は [EVENT_DATA](event-data-struct.md) 要素の配列を表します。
 
 ## <a name="syntax"></a>構文
 
@@ -40,9 +40,9 @@ typedef struct EVENT_COLLECTION_DATA_TAG
 
 ## <a name="members"></a>メンバー
 
-|  |  |
+| 名前 | [説明] |
 |--|--|
-| `Count` | 配列内の`EVENT_DATA`要素の数。 |
-| `Elements` | 配列の最初`EVENT_DATA`の要素へのポインター。 |
+| `Count` | 配列内の `EVENT_DATA` 要素の数。 |
+| `Elements` | 配列における最初の `EVENT_DATA` 要素のポインター。 |
 
 ::: moniker-end

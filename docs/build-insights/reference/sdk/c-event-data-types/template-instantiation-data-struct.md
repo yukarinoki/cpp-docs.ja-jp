@@ -1,6 +1,6 @@
 ---
-title: TEMPLATE_INSTANTIATION_DATA構造
-description: C++ ビルド インサイト SDK TEMPLATE_INSTANTIATION_DATA構造体のリファレンス。
+title: TEMPLATE_INSTANTIATION_DATA 構造体
+description: C++ Build Insights SDK の TEMPLATE_INSTANTIATION_DATA 構造体のリファレンス。
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: a38d19368e7c0a9912907f1da6e7a2e31ffe8d90
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
-ms.translationtype: MT
+ms.openlocfilehash: 15bbb25c3abac339201179e763bffd916dba0480
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81325326"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90040874"
 ---
-# <a name="template_instantiation_data-structure"></a>TEMPLATE_INSTANTIATION_DATA構造
+# <a name="template_instantiation_data-structure"></a>TEMPLATE_INSTANTIATION_DATA 構造体
 
 ::: moniker range="<=vs-2015"
 
-C++ ビルド インサイト SDK は、Visual Studio 2017 以降と互換性があります。 これらのバージョンのドキュメントを参照するには、この記事の Visual Studio**バージョン**セレクター コントロールを Visual Studio 2017 または Visual Studio 2019 に設定します。 このページの目次の上部に表示されます。
+C++ Build Insights SDK は、Visual Studio 2017 以降と互換性があります。 これらのバージョンのドキュメントを表示するには、この記事の Visual Studio **Version** セレクター コントロールを Visual Studio 2017 または Visual Studio 2019 に設定します。 このページの目次の一番上にあります。
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-この`TEMPLATE_INSTANTIATION_DATA`構造体は、テンプレートのインスタンス化を記述します。
+`TEMPLATE_INSTANTIATION_DATA` 構造体はテンプレートのインスタンス化を表します。
 
 ## <a name="syntax"></a>構文
 
@@ -41,14 +41,14 @@ typedef struct TEMPLATE_INSTANTIATION_DATA_TAG
 
 ## <a name="members"></a>メンバー
 
-|  |  |
+| 名前 | [説明] |
 |--|--|
-| `SpecializationSymbolKey` | テンプレート特化の種類のキー。 この値は、分析されるトレース内で一意です。 |
-| `PrimaryTemplateSymbolKey` | 特殊化された基本テンプレートの種類のキー。 この値は、分析されるトレース内で一意です。 |
-| `KindCode` | テンプレートのインスタンス化の種類。 詳細については、「 [TEMPLATE_INSTANTIATION_KIND_CODE](template-instantiation-kind-code-enum.md)」を参照してください。 |
+| `SpecializationSymbolKey` | テンプレート特殊化の種類を表すキー。 この値は分析対象のトレース内で一意です。 |
+| `PrimaryTemplateSymbolKey` | 特殊化されたプライマリ テンプレートの種類を表すキー。 この値は分析対象のトレース内で一意です。 |
+| `KindCode` | テンプレート インスタンス化の種類。 詳細については、[TEMPLATE_INSTANTIATION_KIND_CODE](template-instantiation-kind-code-enum.md) に関するページを参照してください。 |
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>注釈
 
-構造内の`TEMPLATE_INSTANTIATION_DATA`キーは、分析されるトレース内で一意です。 ただし、異なるコンパイラのフロントエンド パスから来る 2 つの異なるキーは、2 つの同じ型を指している可能性があります。 複数の`TEMPLATE_INSTANTIATION_DATA`コンパイラ フロントエンド パスから情報を取得する場合は[、SYMBOL_NAME](../event-table.md#symbol-name)イベントを使用して、2 つの型が同じかどうかを判断します。 `SymbolName`イベントは、すべてのテンプレートのインスタンス化が行われた後、コンパイラのフロントエンド パスの最後に出力されます。
+`TEMPLATE_INSTANTIATION_DATA` 構造体内のキーは分析対象のトレース内で一意です。 ただし、異なるコンパイラ フロントエンド パスから受け取る 2 つの異なるキーで、2 つの同じ型が示されている場合があります。 複数のコンパイラ フロントエンド パスからの `TEMPLATE_INSTANTIATION_DATA` 情報を使用するとき、[SYMBOL_NAME](../event-table.md#symbol-name) イベントを使用し、2 つの型が同じかどうかを判断します。 `SymbolName` イベントは、すべてのテンプレートのインスタンス化が行われた後で、コンパイラ フロントエンド パスの最後に生成されます。
 
 ::: moniker-end

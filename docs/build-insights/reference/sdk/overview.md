@@ -1,6 +1,6 @@
 ---
-title: C++ ビルド インサイト SDK
-description: ビジュアル スタジオ C++ ビルド インサイト SDK の概要。
+title: C++Build Insights SDK
+description: Visual Studio の C++ Build Insights SDK の概要。
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -10,90 +10,90 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 126abb0d039227eb269500966d46ef0a729763ee
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
-ms.translationtype: MT
+ms.openlocfilehash: 6f53a9b6c682a0af7d8a01f6378ed0574d8fa4ca
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81323261"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90041173"
 ---
-# <a name="c-build-insights-sdk"></a>C++ ビルド インサイト SDK
+# <a name="c-build-insights-sdk"></a>C++Build Insights SDK
 
 ::: moniker range="<=vs-2015"
 
-C++ ビルド インサイト SDK は、Visual Studio 2017 以降と互換性があります。 これらのバージョンのドキュメントを参照するには、この記事の Visual Studio**バージョン**セレクター コントロールを Visual Studio 2017 または Visual Studio 2019 に設定します。 このページの目次の上部に表示されます。
+C++ Build Insights SDK は、Visual Studio 2017 以降と互換性があります。 これらのバージョンのドキュメントを表示するには、この記事の Visual Studio **Version** セレクター コントロールを Visual Studio 2017 または Visual Studio 2019 に設定します。 このページの目次の一番上にあります。
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-C++ ビルド インサイト SDK は、C++ ビルド インサイト プラットフォームの上にパーソナライズされたツールを作成できる API のコレクションです。 このページでは、概要を説明し、作業を開始できます。
+C++ Build Insights SDK は、C++ Build Insights プラットフォーム上でパーソナライズされたツールを作成できる API のコレクションです。 このページでは、作業を開始するために役立つ概要を説明します。
 
 ## <a name="obtaining-the-sdk"></a>SDK の取得
 
-次の手順に従って、C++ ビルド インサイト SDK を NuGet パッケージとしてダウンロードできます。
+次の手順に従って、C++ Build Insights SDK を NuGet パッケージとしてダウンロードできます。
 
-1. Visual Studio 2017 以降では、新しい C++ プロジェクトを作成します。
-1. ソリューション**エクスプローラー**ペインで、プロジェクトを右クリックします。
-1. コンテキスト メニューから **[NuGet パッケージの管理**] を選択します。
-1. 右上で **、nuget.org**パッケージ ソースを選択します。
-1. パッケージの最新バージョンを検索します。
-1. [**インストール ]** を選択します。
-1. ライセンスを受け入れます。
+1. Visual Studio 2017 以降で、新しい C++ プロジェクトを作成します。
+1. **[ソリューション エクスプローラー]** ウィンドウで、プロジェクトを右クリックします。
+1. コンテキスト メニューから **[NuGet パッケージの管理]** を選択します。
+1. 右上で、 **[nuget.org]** パッケージ ソースを選択します。
+1. Microsoft.Cpp.BuildInsights パッケージの最新バージョンを検索します。
+1. **[インストール]** を選択します。
+1. ライセンスに同意します。
 
-SDK を取り巻く一般的な概念については、このトピックを参照してください。 公式[C++ ビルドインサイトサンプル GitHub リポジトリ](https://github.com/microsoft/cpp-build-insights-samples)にアクセスして、SDK を使用する実際の C++ アプリケーションの例を確認することもできます。
+SDK の一般的な概念に関する情報を参照してください。 公式の [C++ Build Insights サンプルの GitHub リポジトリ](https://github.com/microsoft/cpp-build-insights-samples)にアクセスして、SDK を使用する C++ アプリケーションの実例を参照することもできます。
 
 ## <a name="collecting-a-trace"></a>トレースの収集
 
-C++ ビルド インサイト SDK を使用して MSVC ツールチェーンから発生するイベントを分析するには、まずトレースを収集する必要があります。 SDK では、Windows のイベント トレース (ETW) を基になるトレース テクノロジとして使用します。 トレースの収集は、次の 2 つの方法で行うことができます。
+C++ Build Insights SDK を使用して、MSVC ツールチェーンから発生するイベントを分析するには、最初にトレースを収集する必要があります。 この SDK では、基になるトレース テクノロジとして Event Tracing for Windows (ETW) が使用されます。 トレースを収集するには、次の 2 つの方法があります。
 
-### <a name="method-1-using-vcperf-in-visual-studio-2019-and-above"></a>方法 1: Visual Studio 2019 以降で vcperf を使用する
+### <a name="method-1-using-vcperf-in-visual-studio-2019-and-above"></a>方法 1: Visual Studio 2019 以降の vcperf を使用する
 
-1. VS 2019 の管理者特権で x64 ネイティブ ツール コマンド プロンプトを開きます。
+1. VS 2019 用の x64 Native Tools コマンド プロンプトを管理者特権で開きます。
 1. 次のコマンドを実行します。`vcperf /start MySessionName`
 1. プロジェクトをビルドします。
 1. 次のコマンドを実行します。`vcperf /stopnoanalyze MySessionName outputTraceFile.etl`
 
    > [!IMPORTANT]
-   > vcperf でトレースを`/stopnoanalyze`停止する場合は、このコマンドを使用します。 C++ ビルドインサイト SDK を使用して、通常`/stop`のコマンドによって停止されたトレースを分析することはできません。
+   > vcperf を使用してトレースを停止する場合は、`/stopnoanalyze` コマンドを使用します。 通常の `/stop` コマンドによって停止されたトレースの分析に、C++ Build Insights SDK を使用することはできません。
 
-### <a name="method-2-programmatically"></a>方法 2 : プログラムを使用して
+### <a name="method-2-programmatically"></a>方法 2: プログラムを使用する
 
-これらの C++ Build Insights SDK トレース コレクション関数を使用して、プログラムでトレースを開始および停止します。 **これらの関数呼び出しを実行するプログラムには、管理者特権が必要です。** 管理特権が必要なのは、開始および停止のトレース機能だけです。 C++ ビルドインサイト SDK の他のすべての関数は、それらを使用せずに実行できます。
+プログラムでトレースを開始および停止するには、C++ Build Insights SDK の次のトレース収集関数のいずれかを使用します。 **これらの関数呼び出しを実行するプログラムには、管理特権が必要です。** 管理特権を必要とするのは、トレースの開始および停止関数のみです。 C++ Build Insights SDK 内のその他のすべての関数は、管理特権がなくても実行できます。
 
-### <a name="sdk-functions-related-to-trace-collection"></a>トレースコレクションに関連する SDK 関数
+### <a name="sdk-functions-related-to-trace-collection"></a>トレースの収集に関連する SDK 関数
 
 | 機能 | C++ API | C API |
 |--|--|--|
-| トレースの開始 | [トレースセッションを開始する](functions/start-tracing-session.md) | [トレースセッションを開始する](functions/start-tracing-session-a.md)<br />[トレースセッションを開始](functions/start-tracing-session-w.md) |
-| トレースの停止 | [セッションを停止します。](functions/stop-tracing-session.md) | [ストップトレースセッションA](functions/stop-tracing-session-a.md)<br />[ストップトレースセッションW](functions/stop-tracing-session-w.md) |
-| トレースを停止し、<br />結果を直ちに分析する | [トレースセッションを停止して分析する](functions/stop-and-analyze-tracing-session.md) | [トレースセッションを停止して分析する](functions/stop-and-analyze-tracing-session-a.md)<br />[トレースセッションを停止して分析する](functions/stop-and-analyze-tracing-session-w.md) |
-| トレースを停止し、<br />結果を直ちに再ログする | [セッションを停止します。](functions/stop-and-relog-tracing-session.md) | [ストップアンドログトレーシングセッション](functions/stop-and-relog-tracing-session-a.md)<br />[停止アンドログトレーシングセッション](functions/stop-and-relog-tracing-session-w.md) |
+| トレースの開始 | [StartTracingSession](functions/start-tracing-session.md) | [StartTracingSessionA](functions/start-tracing-session-a.md)<br />[StartTracingSessionW](functions/start-tracing-session-w.md) |
+| トレースの停止 | [StopTracingSession](functions/stop-tracing-session.md) | [StopTracingSessionA](functions/stop-tracing-session-a.md)<br />[StopTracingSessionW](functions/stop-tracing-session-w.md) |
+| トレースを停止し、<br />即座に結果を分析する | [StopAndAnalyzeTracingSession](functions/stop-and-analyze-tracing-session.md) | [StopAndAnalyzeTracingSessionA](functions/stop-and-analyze-tracing-session-a.md)<br />[StopAndAnalyzeTracingSession](functions/stop-and-analyze-tracing-session-w.md) |
+| トレースを停止し、<br />即座に結果を再ロギングする | [StopAndRelogTracingSession](functions/stop-and-relog-tracing-session.md) | [StopAndRelogTracingSessionA](functions/stop-and-relog-tracing-session-a.md)<br />[StopAndRelogTracingSessionW](functions/stop-and-relog-tracing-session-w.md) |
 
-以下のセクションでは、分析セッションまたは再ロギング セッションの構成方法を示します。 これは、組み合わされた機能 ([たとえば、StopAndAnalyzeTracingSession](functions/stop-and-analyze-tracing-session.md)など) に必要です。
+以降のセクションでは、分析または再ログ セッションを構成する方法について説明します。 これは、機能を結合した関数 ([StopAndAnalyzeTracingSession](functions/stop-and-analyze-tracing-session.md) など) に必要です。
 
 ## <a name="consuming-a-trace"></a>トレースの使用
 
-ETW トレースを取得したら、C++ ビルド インサイト SDK を使用してアンパックします。 SDK では、ツールを迅速に開発できる形式のイベントが提供されます。 SDK を使用せずに、未処理の ETW トレースを使用することはお勧めしません。 MSVC で使用されるイベント形式は文書化されておらず、巨大なビルドに合わせて最適化されており、意味を理解するのは難しいです。 さらに、C++ ビルド インサイト SDK API は安定していますが、未処理の ETW トレース形式は予告なく変更される可能性があります。
+ETW トレースを収集したら、C++ Build Insights SDK を使用してアンパックします。 SDK によって、ツールをすばやく開発できる形式でイベントが提供されます。 SDK を使用せずに未処理の ETW トレースを使用することはお勧めしません。 MSVC で使用されるイベント形式はドキュメント化されておらず、非常に大規模なビルドにスケーリングできるように最適化されており、理解するのは困難です。 さらに、C++ Build Insights SDK API は安定していますが、未処理の ETW トレースは予告なしに変更される可能性があります。
 
-### <a name="sdk-types-and-functions-related-to-trace-consumption"></a>トレースの消費に関連する SDK の種類と関数
+### <a name="sdk-types-and-functions-related-to-trace-consumption"></a>トレースの使用に関連する SDK の種類と関数
 
-| 機能 | C++ API | C API | Notes |
+| 機能 | C++ API | C API | メモ |
 |--|--|--|--|
-| イベントコールバックの設定 | [Iアナライザ](other-types/ianalyzer-class.md)<br />[イレロガー](other-types/irelogger-class.md) | [ANALYSIS_CALLBACKS](other-types/analysis-callbacks-struct.md)<br />[RELOG_CALLBACKS](other-types/relog-callbacks-struct.md) | C++ ビルドインサイト SDK は、コールバック関数を通じてイベントを提供します。 C++ では、IAnalyzer または IRelogger インターフェイスを継承するアナライザーまたはリロガー クラスを作成してコールバック関数を実装します。 C では、グローバル関数でコールバックを実装し、ANALYSIS_CALLBACKSまたはRELOG_CALLBACKS構造体でコールバックへのポインターを提供します。 |
-| ビルディンググループ | [メイクアップスタティックアナライザグループ](functions/make-static-analyzer-group.md)<br />[リロガーグループを作成します。](functions/make-static-relogger-group.md)<br />[メイクダイナミックアナライザグループ](functions/make-dynamic-analyzer-group.md)<br />[メイクダイナミックリロガーグループ](functions/make-dynamic-relogger-group.md) |  | C++ API は、複数のアナライザーとリロガー オブジェクトをグループ化するためのヘルパー関数と型を提供します。 グループは、複雑な分析を簡単なステップに分割する適切な方法です。 [vcperf](https://github.com/microsoft/vcperf)はこのように編成されます。 |
-| 分析または再ロギング | [分析](functions/analyze.md)<br />[リログ](functions/relog.md) | [分析A](functions/analyze-a.md)<br />[分析W](functions/analyze-w.md)<br />[リロガ](functions/relog-a.md)<br />[リログ](functions/relog-w.md) |  |
+| イベント コールバックの設定 | [IAnalyzer](other-types/ianalyzer-class.md)<br />[IRelogger](other-types/irelogger-class.md) | [ANALYSIS_CALLBACKS](other-types/analysis-callbacks-struct.md)<br />[RELOG_CALLBACKS](other-types/relog-callbacks-struct.md) | C++ Build Insights SDK によって、コールバック関数を介してイベントが提供されます。 C++ では、IAnalyzer または IRelogger を継承するアナライザーまたは再ロガー クラスを作成することによって、コールバック関数を実装します。 C では、コールバックをグローバル関数で実装し、それらを指すポインターを ANALYSIS_CALLBACKS または RELOG_CALLBACKS 構造体で提供します。 |
+| グループの構築 | [MakeStaticAnalyzerGroup](functions/make-static-analyzer-group.md)<br />[MakeStaticReloggerGroup](functions/make-static-relogger-group.md)<br />[MakeDynamicAnalyzerGroup](functions/make-dynamic-analyzer-group.md)<br />[MakeDynamicReloggerGroup](functions/make-dynamic-relogger-group.md) |  | C++ API には、複数のアナライザーおよび再ロガー オブジェクトをグループ化するヘルパー関数と型が用意されています。 グループは、複雑な分析をより簡単な手順に分割するための便利な方法です。 [vcperf](https://github.com/microsoft/vcperf) は、この方法で整理されています。 |
+| 分析または再ログ | [分析](functions/analyze.md)<br />[再ログ](functions/relog.md) | [AnalyzeA](functions/analyze-a.md)<br />[AnalyzeW](functions/analyze-w.md)<br />[RelogA](functions/relog-a.md)<br />[RelogW](functions/relog-w.md) |  |
 
-### <a name="analyzing-and-relogging"></a>分析と再ロギング
+### <a name="analyzing-and-relogging"></a>分析と再ログ
 
-トレースの使用は、分析セッションまたは再ロギング セッションを通じて行われます。
+トレースの使用は、分析セッションまたは再ログ セッションのいずれかを介して行われます。
 
-通常の分析を使用することは、ほとんどのシナリオに適しています。 このメソッドを使用すると、`printf`テキスト、xml、JSON、データベース、REST 呼び出しなどの出力形式を柔軟に選択できます。
+ほとんどのシナリオでは、通常の分析の使用が適しています。 この方法を使用すると、出力形式 (`printf` テキスト、xml、JSON、データベース、REST 呼び出しなど) を柔軟に選択できます。
 
-ログの記録は、ETW 出力ファイルを生成する必要がある特殊な分析のためのものです。 再ロギングを使用すると、C++ のビルドインサイトイベントを独自の ETW イベント形式に変換できます。 再ロギングの適切な使用は、既存の ETW ツールとインフラストラクチャに C++ ビルドインサイトデータをフックすることです。 たとえば[、vcperf](https://github.com/microsoft/vcperf)は再ロギング インターフェイスを使用します。 これは、ETW ツールである Windows パフォーマンス アナライザーが理解できるデータを生成する必要があるためです。 再ロギング インターフェイスを使用する場合は、ETW の動作に関する事前知識が必要です。
+再ログは、ETW 出力ファイルを生成する必要がある特定用途の分析に使用されます。 再ログを使用すると、C++ Build Insights イベントを独自の ETW イベント形式に変換できます。 再ログの使用が適切なのは、C ++ Build Insights データを既存の ETW ツールとインフラストラクチャにフックする場合です。 たとえば、[vcperf](https://github.com/microsoft/vcperf) では、再ログ インターフェイスが使用されます。 これは、ETW ツールである Windows Performance Analyzer で理解できるデータを生成する必要があるためです。 再ログ インターフェイスの使用を計画する場合は、ETW の動作方法について事前の知識が多少必要です。
 
-### <a name="creating-analyzer-groups"></a>アナライザ グループの作成
+### <a name="creating-analyzer-groups"></a>アナライザー グループの作成
 
-グループの作成方法を知ることが重要です。 Hello world を印刷するアナライザー グループを作成する方法を示す例を次に示*します。* 受信するすべてのアクティビティ開始イベントに対して。
+グループの作成方法を理解することが重要です。 アクティビティ開始イベントを受け取るごとに *Hello, world!* を印刷するアナライザー グループの 作成方法を示す例を次に示します。
 
 ```cpp
 using namespace Microsoft::Cpp::BuildInsights;
@@ -143,87 +143,87 @@ int main()
 
 ## <a name="using-events"></a>イベントの使用
 
-### <a name="sdk-types-and-functions-related-to-events"></a>イベントに関連する SDK の型と関数
+### <a name="sdk-types-and-functions-related-to-events"></a>イベントに関連する SDK の種類と関数
 
-| 機能 | C++ API | C API | Notes |
+| 機能 | C++ API | C API | メモ |
 |--|--|--|--|
-| イベントのマッチングとフィルタリング | [関数を一致させます。](functions/match-event-stack-in-member-function.md)<br />[イベントスタックを一致させる](functions/match-event-stack.md)<br />[関数を指定します。](functions/match-event-in-member-function.md)<br />[マッチイベント](functions/match-event.md) |  | C++ API には、トレースから関心のあるイベントを簡単に抽出できる関数が用意されています。 C API では、このフィルタリングは手操作で行う必要があります。 |
-| イベント データ型 | [アクティビティ](cpp-event-data-types/activity.md)<br />[バックエンドパス](cpp-event-data-types/back-end-pass.md)<br />[ボトムアップ](cpp-event-data-types/bottom-up.md)<br />[C1DLL](cpp-event-data-types/c1-dll.md)<br />[C2DLL](cpp-event-data-types/c2-dll.md)<br />[コードジェネレーション](cpp-event-data-types/code-generation.md)<br />[コマンドライン](cpp-event-data-types/command-line.md)<br />[コンパイラ](cpp-event-data-types/compiler.md)<br />[コンパイラパス](cpp-event-data-types/compiler-pass.md)<br />[EnvironmentVariable](cpp-event-data-types/environment-variable.md)<br />[イベント](cpp-event-data-types/event.md)<br />[イベントグループ](cpp-event-data-types/event-group.md)<br />[イベントスタック](cpp-event-data-types/event-stack.md)<br />[イメージ出力](cpp-event-data-types/executable-image-output.md)<br />[出力](cpp-event-data-types/exp-output.md)<br />[ファイル入力](cpp-event-data-types/file-input.md)<br />[ファイル出力](cpp-event-data-types/file-output.md)<br />[フォースインリネ](cpp-event-data-types/force-inlinee.md)<br />[フロントエンドファイル](cpp-event-data-types/front-end-file.md)<br />[フロントエンドファイルグループ](cpp-event-data-types/front-end-file-group.md)<br />[フロントエンドパス](cpp-event-data-types/front-end-pass.md)<br />[関数](cpp-event-data-types/function.md)<br />[インプリブ出力](cpp-event-data-types/imp-lib-output.md)<br />[[呼び出し]](cpp-event-data-types/invocation.md)<br />[呼び出しグループ](cpp-event-data-types/invocation-group.md)<br />[リブアウトプット](cpp-event-data-types/lib-output.md)<br />[リンカー](cpp-event-data-types/linker.md)<br />[リンカーグループ](cpp-event-data-types/linker-group.md)<br />[リンカーパス](cpp-event-data-types/linker-pass.md)<br />[Ltcg](cpp-event-data-types/ltcg.md)<br />[出力](cpp-event-data-types/obj-output.md)<br />[オプティフ](cpp-event-data-types/opt-icf.md)<br />[オプトLBR](cpp-event-data-types/opt-lbr.md)<br />[オプトレフ](cpp-event-data-types/opt-ref.md)<br />[パス1](cpp-event-data-types/pass1.md)<br />[パス2](cpp-event-data-types/pass2.md)<br />[プレエルトCGオプトレフ](cpp-event-data-types/pre-ltcg-opt-ref.md)<br />[シンプルイベント](cpp-event-data-types/simple-event.md)<br />[シンボル名](cpp-event-data-types/symbol-name.md)<br />[テンプレートのインスタンス化](cpp-event-data-types/template-instantiation.md)<br />[テンプレートインスタンス化グループ](cpp-event-data-types/template-instantiation-group.md)<br />[スレッド](cpp-event-data-types/thread.md)<br />[トップダウン](cpp-event-data-types/top-down.md)<br />[トレース情報](cpp-event-data-types/trace-info.md)<br />[プログラム分析全体](cpp-event-data-types/whole-program-analysis.md) | [CL_PASS_DATA](c-event-data-types/cl-pass-data-struct.md)<br />[EVENT_COLLECTION_DATA](c-event-data-types/event-collection-data-struct.md)<br />[EVENT_DATA](c-event-data-types/event-data-struct.md)<br />[EVENT_ID](c-event-data-types/event-id-enum.md)<br />[FILE_DATA](c-event-data-types/file-data-struct.md)<br />[FILE_TYPE_CODE](c-event-data-types/file-type-code-enum.md)<br />[FRONT_END_FILE_DATA](c-event-data-types/front-end-file-data-struct.md)<br />[FUNCTION_DATA](c-event-data-types/function-data-struct.md)<br />[FUNCTION_FORCE_INLINEE_DATA](c-event-data-types/function-force-inlinee-data-struct.md)<br />[INVOCATION_DATA](c-event-data-types/invocation-data-struct.md)<br />[INVOCATION_VERSION_DATA](c-event-data-types/invocation-version-data-struct.md)<br />[MSVC_TOOL_CODE](c-event-data-types/msvc-tool-code-enum.md)<br />[NAME_VALUE_PAIR_DATA](c-event-data-types/name-value-pair-data-struct.md)<br />[SYMBOL_NAME_DATA](c-event-data-types/symbol-name-data-struct.md)<br />[TEMPLATE_INSTANTIATION_DATA](c-event-data-types/template-instantiation-data-struct.md)<br />[TEMPLATE_INSTANTIATION_KIND_CODE](c-event-data-types/template-instantiation-kind-code-enum.md)<br />[TRACE_INFO_DATA](c-event-data-types/trace-info-data-struct.md)<br />[TRANSLATION_UNIT_PASS_CODE](c-event-data-types/translation-unit-pass-code-enum.md) |  |
+| イベントの照合とフィルター処理 | [MatchEventStackInMemberFunction](functions/match-event-stack-in-member-function.md)<br />[MatchEventStack](functions/match-event-stack.md)<br />[MatchEventInMemberFunction](functions/match-event-in-member-function.md)<br />[MatchEvent](functions/match-event.md) |  | C++ API には、注意を要するイベントをトレースから簡単に抽出できる関数が用意されています。 C API では、このフィルター処理を手動で行う必要があります。 |
+| イベント データ型 | [アクティビティ](cpp-event-data-types/activity.md)<br />[BackEndPass](cpp-event-data-types/back-end-pass.md)<br />[BottomUp](cpp-event-data-types/bottom-up.md)<br />[C1DLL](cpp-event-data-types/c1-dll.md)<br />[C2DLL](cpp-event-data-types/c2-dll.md)<br />[CodeGeneration](cpp-event-data-types/code-generation.md)<br />[CommandLine](cpp-event-data-types/command-line.md)<br />[Compiler](cpp-event-data-types/compiler.md)<br />[CompilerPass](cpp-event-data-types/compiler-pass.md)<br />[EnvironmentVariable](cpp-event-data-types/environment-variable.md)<br />[Event](cpp-event-data-types/event.md)<br />[EventGroup](cpp-event-data-types/event-group.md)<br />[EventStack](cpp-event-data-types/event-stack.md)<br />[ExecutableImageOutput](cpp-event-data-types/executable-image-output.md)<br />[ExpOutput](cpp-event-data-types/exp-output.md)<br />[FileInput](cpp-event-data-types/file-input.md)<br />[FileOutput](cpp-event-data-types/file-output.md)<br />[ForceInlinee](cpp-event-data-types/force-inlinee.md)<br />[FrontEndFile](cpp-event-data-types/front-end-file.md)<br />[FrontEndFileGroup](cpp-event-data-types/front-end-file-group.md)<br />[FrontEndPass](cpp-event-data-types/front-end-pass.md)<br />[関数](cpp-event-data-types/function.md)<br />[ImpLibOutput](cpp-event-data-types/imp-lib-output.md)<br />[[呼び出し]](cpp-event-data-types/invocation.md)<br />[InvocationGroup](cpp-event-data-types/invocation-group.md)<br />[LibOutput](cpp-event-data-types/lib-output.md)<br />[リンカー](cpp-event-data-types/linker.md)<br />[LinkerGroup](cpp-event-data-types/linker-group.md)<br />[LinkerPass](cpp-event-data-types/linker-pass.md)<br />[LTCG](cpp-event-data-types/ltcg.md)<br />[ObjOutput](cpp-event-data-types/obj-output.md)<br />[OptICF](cpp-event-data-types/opt-icf.md)<br />[OptLBR](cpp-event-data-types/opt-lbr.md)<br />[OptRef](cpp-event-data-types/opt-ref.md)<br />[Pass1](cpp-event-data-types/pass1.md)<br />[Pass2](cpp-event-data-types/pass2.md)<br />[PreLTCGOptRef](cpp-event-data-types/pre-ltcg-opt-ref.md)<br />[SimpleEvent](cpp-event-data-types/simple-event.md)<br />[SymbolName](cpp-event-data-types/symbol-name.md)<br />[TemplateInstantiation](cpp-event-data-types/template-instantiation.md)<br />[TemplateInstantiationGroup](cpp-event-data-types/template-instantiation-group.md)<br />[スレッド](cpp-event-data-types/thread.md)<br />[TopDown](cpp-event-data-types/top-down.md)<br />[TraceInfo](cpp-event-data-types/trace-info.md)<br />[WholeProgramAnalysis](cpp-event-data-types/whole-program-analysis.md) | [CL_PASS_DATA](c-event-data-types/cl-pass-data-struct.md)<br />[EVENT_COLLECTION_DATA](c-event-data-types/event-collection-data-struct.md)<br />[EVENT_DATA](c-event-data-types/event-data-struct.md)<br />[EVENT_ID](c-event-data-types/event-id-enum.md)<br />[FILE_DATA](c-event-data-types/file-data-struct.md)<br />[FILE_TYPE_CODE](c-event-data-types/file-type-code-enum.md)<br />[FRONT_END_FILE_DATA](c-event-data-types/front-end-file-data-struct.md)<br />[FUNCTION_DATA](c-event-data-types/function-data-struct.md)<br />[FUNCTION_FORCE_INLINEE_DATA](c-event-data-types/function-force-inlinee-data-struct.md)<br />[INVOCATION_DATA](c-event-data-types/invocation-data-struct.md)<br />[INVOCATION_VERSION_DATA](c-event-data-types/invocation-version-data-struct.md)<br />[MSVC_TOOL_CODE](c-event-data-types/msvc-tool-code-enum.md)<br />[NAME_VALUE_PAIR_DATA](c-event-data-types/name-value-pair-data-struct.md)<br />[SYMBOL_NAME_DATA](c-event-data-types/symbol-name-data-struct.md)<br />[TEMPLATE_INSTANTIATION_DATA](c-event-data-types/template-instantiation-data-struct.md)<br />[TEMPLATE_INSTANTIATION_KIND_CODE](c-event-data-types/template-instantiation-kind-code-enum.md)<br />[TRACE_INFO_DATA](c-event-data-types/trace-info-data-struct.md)<br />[TRANSLATION_UNIT_PASS_CODE](c-event-data-types/translation-unit-pass-code-enum.md) |  |
 
-### <a name="activities-and-simple-events"></a>アクティビティと簡単なイベント
+### <a name="activities-and-simple-events"></a>アクティビティと簡易イベント
 
-イベントには *、アクティビティ*と*シンプルイベント*の 2 つのカテゴリがあります。 活動は、開始と終了を持つ時間内の継続的なプロセスです。 単純なイベントは時間厳守の発生であり、期間がありません。 C++ ビルド インサイト SDK を使用して MSVC トレースを分析する場合、アクティビティが開始および停止したときに個別のイベントが表示されます。 単純なイベントが発生した場合は、1 つのイベントのみが表示されます。
+発生するイベントには、"*アクティビティ*" と "*簡易イベント*" の 2 つのカテゴリがあります。 アクティビティは継続的なプロセスであり、時間に始まりと終わりがあります。 簡易イベントは時間どおりに発生し、継続時間はありません。 C++ Build Insights SDK を使用して MSVC トレースを分析する場合、アクティビティが開始したときと停止したときに個別のイベントを受け取ります。 簡易イベントの場合、発生時に 1 つのイベントのみを受け取ります。
 
 ### <a name="parent-child-relationships"></a>親子関係
 
-アクティビティと単純なイベントは、親子関係を介して相互に関連付けられます。 アクティビティまたは単純なイベントの親は、それらが発生する包括的なアクティビティです。 たとえば、ソース ファイルをコンパイルする場合、コンパイラはファイルを解析してからコードを生成する必要があります。 解析とコード生成アクティビティは、コンパイラ アクティビティの子です。
+アクティビティおよび簡易イベントは、親子関係を介して相互に関連付けられます。 アクティビティまたは簡易イベントの親は包括的なアクティビティであり、アクティビティまたは簡易イベントはその中で発生します。 たとえば、ソース ファイルをコンパイルする場合、コンパイラでは、ファイルを解析し、その後コードを生成する必要があります。 解析とコード生成のアクティビティは両方とも、コンパイラ アクティビティの子です。
 
-単純なイベントには期間が設定されていないので、その中で何も起こり得ません。 したがって、彼らは子供を持つことはありません。
+簡易イベントに継続時間はないので、その中で他のイベントは発生しません。 したがって、それらに子はありません。
 
-各アクティビティと単純イベントの親子関係は、[イベント テーブル](event-table.md)に示されています。 C++ の分析情報イベントを使用する場合は、これらの関係を把握することが重要です。 イベントの完全なコンテキストを理解するために、多くの場合、それらに頼る必要があります。
+各アクティビティおよび簡易イベントの親子関係は、[イベント テーブル](event-table.md) に示されます。 C++ Build Insights イベントを使用する場合、これらの関係を把握することが重要です。 多くの場合、イベントの完全なコンテキストを理解するには、それらに依存する必要があります。
 
-### <a name="properties"></a>プロパティ
+### <a name="properties"></a>Properties
 
-すべてのイベントには、次のプロパティがあります。
+すべてのイベントには次のプロパティがあります。
 
-| プロパティ | 説明 |
+| プロパティ | [説明] |
 |--|--|
-| 型識別子 | イベントの種類を一意に識別する数値。 |
-| インスタンス識別子 | トレース内のイベントを一意に識別する番号。 同じタイプの 2 つのイベントがトレースで発生した場合、どちらも一意のインスタンス識別子を取得します。 |
-| 開始時刻 | アクティビティーが開始された時刻、または単純なイベントが発生した時刻。 |
-| プロセス識別子 | イベントが発生したプロセスを識別する番号。 |
-| スレッド識別子 | イベントが発生したスレッドを識別する番号。 |
-| プロセッサ インデックス | イベントがどの論理プロセッサによって生成されたかを示す 0 から始まるインデックス。 |
+| 種類識別子 | イベントの種類を一意に識別する数字。 |
+| インスタンス識別子 | トレース内のイベントを一意に識別する数字。 トレース内で同じ種類の 2 つのイベントが発生した場合、両方とも一意のインスタンス識別子を取得します。 |
+| 開始時刻 | アクティビティが開始した時刻、または簡易イベントが発生した時刻。 |
+| プロセス識別子 | イベントが発生したプロセスを識別する数字。 |
+| スレッド識別子 | イベントが発生したスレッドを識別する数字。 |
+| プロセッサ インデックス | イベントを生成した論理プロセッサを示す、0 から始まるインデックス。 |
 | イベント名 | イベントの種類を説明する文字列。 |
 
-単純なイベント以外のすべてのアクティビティにも、次のプロパティがあります。
+簡易イベント以外のすべてのアクティビティには、次のプロパティもあります。
 
-| プロパティ | 説明 |
+| プロパティ | [説明] |
 |--|--|
-| 停止時間 | アクティビティが停止した時刻。 |
-| 排他期間 | 子アクティビティで費やされた時間を除く、アクティビティで費やされた時間。 |
-| CPU 時間 | アクティビティにアタッチされたスレッドのコードの実行に CPU が費やした時間。 アクティビティにアタッチされたスレッドがスリープ状態になっていた時間は含みません。 |
-| 排他 CPU 時間 | CPU 時間と同じですが、子アクティビティーによって費やされた CPU 時間は除きます。 |
-| ウォールクロック時間責任 | 全体的な壁時計時間へのアクティビティの貢献。 ウォールクロック時間の責任は、アクティビティ間の並列性を考慮に入れます。 たとえば、2 つの無関係なアクティビティが並列に実行されているとします。 どちらも 10 秒の持続時間があり、開始時間と停止時間はまったく同じです。 この場合、Build Insights は両方とも 5 秒のウォールクロック時間の責任を割り当てます。 これに対し、これらのアクティビティがオーバーラップなしで次々に実行される場合、両方とも 10 秒のウォールクロック時間の責任が割り当てられます。 |
-| 排他的なウォールクロック時間責任 | ウォールクロックの時間責任と同じですが、子アクティビティのウォールクロック時間の責任は除外されます。 |
+| 停止時刻 | アクティビティが停止した時刻。 |
+| 排他継続時間 | アクティビティに費やされた時間。子アクティビティに費やされた時間は含まれません。 |
+| CPU 時間 | アクティビティに接続されたスレッド内でコードの実行に費やされた CPU 時間。 アクティビティに接続されたスレッドがスリープ状態だった時間は含まれません。 |
+| 排他 CPU 時間 | CPU 時間と同じです。ただし、子アクティビティによって費やされた CPU 時間は含まれません。 |
+| ウォール クロック時間責任 | ウォール クロック時間全体に対するアクティビティの影響。 ウォール クロック時間責任では、アクティビティ間の並列処理が考慮されます。 たとえば、2 つの関連のないアクティビティが並行して実行されているとしましょう。 どちらの継続時間も 10 秒で、開始時刻と終了時刻はまったく同じです。 この場合、Build Insights では、両方に 5 秒のウォール クロック時間責任を割り当てます。 これに対して、これらのアクティビティが重複することなく順に実行される場合、両方に 10 秒のウォール クロック時間責任が割り当てられます。 |
+| 排他的ウォール クロック時間責任 | ウォール クロック時間責任と同じですが、子アクティビティのウォール クロック時間責任は含まれません。 |
 
-一部のイベントには、言及されているものを超える独自のプロパティがあります。 この場合、これらの追加プロパティは[イベント テーブル](event-table.md)に一覧表示されます。
+一部のイベントには、前述以外の独自のプロパティがあります。 この場合、これらの追加プロパティは、[イベント テーブル](event-table.md)に一覧表示されます。
 
-### <a name="consuming-events-provided-by-the-c-build-insights-sdk"></a>C++ ビルドインサイト SDK によって提供されるイベントの使用
+### <a name="consuming-events-provided-by-the-c-build-insights-sdk"></a>C++ Build Insights SDK で提供されるイベントの使用
 
 #### <a name="the-event-stack"></a>イベント スタック
 
-C++ ビルドインサイト SDK がイベントを提供するたびに、スタックの形式で表示されます。 スタックの最後のエントリは現在のイベントであり、その親階層になる前のエントリです。 たとえば[、LTCG](event-table.md#ltcg)の開始イベントと停止イベントは、リンカーのパス 1 の間に発生します。 この場合、受信するスタックには\[[LINKER](event-table.md#linker) [、PASS1](event-table.md#pass1)、LTCG が\]含まれます。 親階層は、イベントをルートにトレースバックできるため便利です。 上記の LTCG アクティビティが遅い場合は、どのリンカー呼び出しが関係していたかをすぐに知ることができます。
+C++ Build Insights SDK では、イベントを提供する場合、必ずスタックの形式で提供します。 スタック内の最後のエントリは現在のイベントであり、それより前のエントリは、その親階層です。 たとえば、[LTCG](event-table.md#ltcg) の開始および停止イベントは、リンカーのパス 1 で発生するとします。 この場合、受け取るスタックには、\[[LINKER](event-table.md#linker)、[PASS1](event-table.md#pass1)、LTCG\] が含まれます。 親階層は、イベントをそのルートまでトレースできるので便利です。 前述の LTCG アクティビティの速度が遅い場合、どのリンカー呼び出しが関係していたかをすぐに知ることができます。
 
 #### <a name="matching-events-and-event-stacks"></a>イベントとイベント スタックの照合
 
-C++ ビルドインサイト SDK は、トレース内のすべてのイベントを提供しますが、ほとんどの場合、そのサブセットのみを気にします。 場合によっては、イベント スタックのサブセットだけを気*にする場合があります*。 SDK には、必要なイベントやイベント スタックをすばやく抽出し、必要としないイベントスタックを拒否する機能が用意されています。 この関数は、次の一致関数を使用して実行されます。
+C++ Build Insights SDK では、トレース内のすべてのイベントが提供されますが、ほとんどの場合、注意を要するのはそれらのサブセットのみです。 場合によっては、注意を要するのは、"*イベント スタック*" のサブセットのみであることもあります。 SDK では、必要なイベントまたはイベント スタックをすばやく抽出して、不要なイベントを拒否するのに役立つ機能が提供されます。 これは、次の照合関数を使用して実行されます。
 
-|  |  |
+| 機能 | [説明] |
 |--|--|
-| [マッチイベント](functions/match-event.md) | イベントが指定された型のいずれかに一致する場合は、イベントを保持します。 一致したイベントをラムダまたはその他の呼び出し可能な型に転送します。 イベントの親階層は、この関数では考慮されません。 |
-| [関数を指定します。](functions/match-event-in-member-function.md) | メンバー関数のパラメーターで指定された型と一致する場合は、イベントを保持します。 一致したイベントをメンバー関数に転送します。 イベントの親階層は、この関数では考慮されません。 |
-| [イベントスタックを一致させる](functions/match-event-stack.md) | イベントとその親階層の両方が指定された型と一致する場合は、イベントを保持します。 イベントと一致する親階層イベントをラムダまたはその他の呼び出し可能な型に転送します。 |
-| [関数を一致させます。](functions/match-event-stack-in-member-function.md) | イベントとその親階層の両方がメンバー関数のパラメーター リストで指定された型と一致する場合は、イベントを保持します。 イベントと一致する親階層イベントをメンバー関数に転送します。 |
+| [MatchEvent](functions/match-event.md) | イベントが指定された種類のいずれかと一致する場合、それを保持します。 一致するイベントをラムダまたはその他の呼び出し可能な型に転送します。 この関数では、イベントの親階層は考慮されません。 |
+| [MatchEventInMemberFunction](functions/match-event-in-member-function.md) | イベントがメンバー関数のパラメーターで指定された種類と一致する場合、それを保持します。 一致するイベントをメンバー関数に転送します。 この関数では、イベントの親階層は考慮されません。 |
+| [MatchEventStack](functions/match-event-stack.md) | イベントとその親階層の両方が指定された種類と一致する場合、そのイベントを保持します。 イベントおよび一致する親階層イベントをラムダまたはその他の呼び出し可能な型に転送します。 |
+| [MatchEventStackInMemberFunction](functions/match-event-stack-in-member-function.md) | イベントとその親階層の両方がメンバー関数のパラメーター リストで指定された種類と一致する場合、そのイベントを保持します。 イベントおよび一致する親階層イベントをメンバー関数に転送します。 |
 
-イベント スタックの照合関数`MatchEventStack`などは、親階層を一致させるときにギャップを許容します。 たとえば、\[[リンカー](event-table.md#linker) [、LTCG](event-table.md#ltcg)\]スタックに興味があるとします。 また、\[リンカー、[パス1、LTCG](event-table.md#pass1)\]スタックにも一致します。 最後に指定する型は、一致するイベントの種類である必要があり、親階層の一部ではありません。
+`MatchEventStack` などのイベント スタック照合関数では、親階層を照合するときにギャップを許容します。 たとえば、\[[LINKER](event-table.md#linker)、[LTCG](event-table.md#ltcg)\]スタックに関心があるとします。 これは、\[LINKER, [PASS1](event-table.md#pass1), LTCG\] スタックとも一致します。 最後に指定する種類は、照合するイベントの種類である必要があり、親階層には含まれません。
 
-#### <a name="capture-classes"></a>クラスのキャプチャ
+#### <a name="capture-classes"></a>キャプチャ クラス
 
-関数を`Match*`使用するには、一致させる型を指定する必要があります。 これらの型は、*キャプチャ クラス*の一覧から選択されます。 キャプチャ クラスには、以下に説明するいくつかのカテゴリがあります。
+`Match*` 関数を使用するには、照合する種類を指定する必要があります。 これらの種類は、"*キャプチャ クラス*" の一覧から選択されます。 キャプチャ クラスには、次に示す複数のカテゴリがあります。
 
 | カテゴリ | 説明 |
 |--|--|
-| [Exact] | これらのキャプチャ クラスは、特定のイベントタイプと一致するために使用され、他には一致しません。 たとえば[、COMPILER](cpp-event-data-types/compiler.md)[イベントと](event-table.md#compiler)一致するコンパイラ クラスがあります。 |
-| ワイルドカード | これらのキャプチャ クラスは、サポートするイベントのリストから任意のイベントを照合するために使用できます。 たとえば、[アクティビティ](cpp-event-data-types/activity.md)ワイルドカードは、任意のアクティビティ イベントと一致します。 もう 1 つの例として、FRONT_END_PASS[イベントまたは](event-table.md#front-end-pass)[BACK_END_PASS](event-table.md#back-end-pass)イベントのいずれかに一致する[CompilerPass](cpp-event-data-types/compiler-pass.md)ワイルドカードがあります。 |
-| グループ | グループ キャプチャ クラスの名前は *、グループ*で終わる 。 これらは、同じ種類の複数のイベントを連続して照合するために使用され、ギャップは無視されます。 再帰的なイベントを照合する場合にのみ意味をなします。 たとえば[、FRONT_END_FILE](event-table.md#front-end-file)アクティビティは、コンパイラがファイルを解析するたびに発生します。 コンパイラはファイルの解析中に include ディレクティブを見つける可能性があるため、このアクティビティは再帰的です。 [クラス](cpp-event-data-types/front-end-file.md)は、スタック内の 1 つのFRONT_END_FILEイベントにのみ一致します。 [クラスを](cpp-event-data-types/front-end-file-group.md)使用して、インクルード階層全体を一致させます。 |
-| ワイルドカード グループ | ワイルドカード グループは、ワイルドカードとグループのプロパティを結合します。 このカテゴリの唯一のクラスは[InvocationGroup](cpp-event-data-types/invocation-group.md)で、すべての[LINKER](event-table.md#linker)イベントと[COMPILER](event-table.md#compiler)イベントを 1 つのイベント スタックに一致してキャプチャします。 |
+| [Exact] | これらのキャプチャ クラスは、特定のイベントの種類と照合するためにのみ使用されます。 1 つの例として、[Compiler](cpp-event-data-types/compiler.md) があります。これは、[COMPILER](event-table.md#compiler) イベントと一致します。 |
+| ワイルドカード | これらのキャプチャ クラスは、サポートされるイベントの一覧にあるいずれかのイベントと照合するために使用できます。 たとえば、[Activity](cpp-event-data-types/activity.md) ワイルドカードは、任意のアクティビティ イベントと一致します。 もう 1 つの例は、[CompilerPass](cpp-event-data-types/compiler-pass.md) ワイルドカードです。これは、[FRONT_END_PASS](event-table.md#front-end-pass) または [BACK_END_PASS](event-table.md#back-end-pass) イベントのいずれかと一致します。 |
+| Group | グループ キャプチャ クラスの名前は、*Group* で終わります。 これらは、ギャップを無視して、同じ種類の複数のイベントを連続して照合するために使用されます。 イベント スタック内に存在する個数がわからないため、再帰イベントを照合する場合にのみ意味があります。 たとえば、[FRONT_END_FILE](event-table.md#front-end-file) アクティビティは、コンパイラでファイルを解析するたびに発生します。 ファイルの解析中にコンパイラによってインクルード ディレクティブが検出される可能性があるため、このアクティビティは再帰的です。 [FrontEndFile](cpp-event-data-types/front-end-file.md) クラスは、スタック内の 1 つの FRONT_END_FILE イベントとのみ一致します。 インクルード階層全体を一致させるには、[FrontEndFileGroup](cpp-event-data-types/front-end-file-group.md) クラスを使用します。 |
+| ワイルドカード グループ | ワイルドカード グループは、ワイルドカードとグループのプロパティを組み合わせたものです。 このカテゴリのクラスは、[InvocationGroup](cpp-event-data-types/invocation-group.md)のみです。これは、単一のイベント スタック内にあるすべての [LINKER](event-table.md#linker) および [COMPILER](event-table.md#compiler) イベントを照合し、キャプチャします。 |
 
-[イベントテーブル](event-table.md)を参照して、各イベントに一致させるためにどのキャプチャクラスを使用できるかを確認してください。
+各イベントの照合に使用できるキャプチャ クラスについては、「[イベント テーブル](event-table.md)」を参照してください。
 
-#### <a name="after-matching-using-captured-events"></a>マッチング後: キャプチャされたイベントを使用する
+#### <a name="after-matching-using-captured-events"></a>照合後: キャプチャされたイベントの使用
 
-一致が正常に完了すると、関数`Match*`はキャプチャ クラス オブジェクトを構築し、指定された関数に転送します。 これらのキャプチャ クラス オブジェクトを使用して、イベントのプロパティにアクセスします。
+照合が正常に完了すると、`Match*` 関数によって、キャプチャ クラス オブジェクトが構築され、指定された関数に転送されます。 これらのキャプチャ クラス オブジェクトを使用して、イベントのプロパティにアクセスします。
 
 #### <a name="example"></a>例
 

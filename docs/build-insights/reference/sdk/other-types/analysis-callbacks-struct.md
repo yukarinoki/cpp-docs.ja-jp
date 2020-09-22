@@ -1,6 +1,6 @@
 ---
-title: ANALYSIS_CALLBACKS構造
-description: C++ ビルド インサイト SDK ANALYSIS_CALLBACKS構造参照。
+title: ANALYSIS_CALLBACKS 構造体
+description: C++ Build Insights SDK ANALYSIS_CALLBACKS 構造体のリファレンス。
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 3c6de999b19657f999f884075ee53e21a4d2f2b5
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
-ms.translationtype: MT
+ms.openlocfilehash: a24755befdd446051ae376b49d3dca06c7bc3320
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81323506"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90041043"
 ---
-# <a name="analysis_callbacks-structure"></a>ANALYSIS_CALLBACKS構造
+# <a name="analysis_callbacks-structure"></a>ANALYSIS_CALLBACKS 構造体
 
 ::: moniker range="<=vs-2015"
 
-C++ ビルド インサイト SDK は、Visual Studio 2017 以降と互換性があります。 これらのバージョンのドキュメントを参照するには、この記事の Visual Studio**バージョン**セレクター コントロールを Visual Studio 2017 または Visual Studio 2019 に設定します。 このページの目次の上部に表示されます。
+C++ Build Insights SDK は、Visual Studio 2017 以降と互換性があります。 これらのバージョンのドキュメントを表示するには、この記事の Visual Studio **Version** セレクター コントロールを Visual Studio 2017 または Visual Studio 2019 に設定します。 このページの目次の一番上にあります。
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-この`ANALYSIS_CALLBACKS`構造体は[、ANALYSIS_DESCRIPTOR](analysis-descriptor-struct.md)または[RELOG_DESCRIPTOR](relog-descriptor-struct.md)オブジェクトを初期化するときに使用されます。 Windows イベント トレース (ETW) トレースの分析または再ロギング中に呼び出す関数を指定します。
+`ANALYSIS_CALLBACKS` 構造体は、[ANALYSIS_DESCRIPTOR](analysis-descriptor-struct.md) または [RELOG_DESCRIPTOR](relog-descriptor-struct.md) オブジェクトを初期化するときに使用され、 Event Tracing for Windows (ETW) トレースの分析または再ログ中に呼び出す関数を指定します。
 
 ## <a name="syntax"></a>構文
 
@@ -45,23 +45,23 @@ typedef struct ANALYSIS_CALLBACKS_TAG
 
 ## <a name="members"></a>メンバー
 
-|  |  |
+| 名前 | [説明] |
 |--|--|
-| `OnStartActivity` | アクティビティ開始イベントを処理するために呼び出されます。 |
-| `OnStopActivity` | アクティビティ停止イベントを処理するために呼び出されます。 |
-| `OnSimpleEvent` | 単純なイベントを処理するために呼び出されます。 |
-| `OnTraceInfo` | 各分析パスの先頭で呼び出される分析セッションの場合。 各分析パスの先頭で呼び出され、再ロギング パスの先頭で再び呼び出される再ロギング セッションの場合。 この関数は、OnBeginAnalysisPass が呼び出された後にのみ呼び出されます。 |
-| `OnBeginAnalysis` | 分析セッションの場合、解析パスが開始される前に呼び出されます。 再ロギング セッションの場合、分析フェーズが開始される前に 2 回呼び出されます。 |
-| `OnEndAnalysis` | 分析セッションの場合、この関数は、すべての分析パスが終了した後に呼び出されます。 再ロギング・セッションの場合、この関数は分析フェーズのすべての分析パスが終了したときに呼び出されます。 その後、再ログパスが終了した後に再び呼び出されます。 |
-| `OnBeginAnalysisPass` | イベントを処理する前に、分析パスまたは再ロギング パスを開始するときに呼び出されます。 |
-| `OnEndAnalysisPass` | すべてのイベントを処理した後、分析パスまたは再ロギング パスを終了するときに呼び出されます。 |
+| `OnStartActivity` | アクティビティの開始イベントを処理するために呼び出されます。 |
+| `OnStopActivity` | アクティビティの停止イベントを処理するために呼び出されます。 |
+| `OnSimpleEvent` | 簡易イベントを処理するために呼び出されます。 |
+| `OnTraceInfo` | 分析セッションの場合、各分析パスの開始時に呼び出されます。 再ログ セッションの場合、各分析パスの開始時に呼び出され、再ログ パスの開始時に再度呼び出されます。 この関数は、OnBeginAnalysisPass が呼び出された後にのみ呼び出されます。 |
+| `OnBeginAnalysis` | 分析セッションの場合、分析パスが開始される前に呼び出されます。 再ログ セッションの場合、分析フェーズが開始される前に 2 回 (再ログ セッションの開始を通知するために 1 回、分析フェーズの開始を通知するためにもう 1 回) 呼び出されます。 |
+| `OnEndAnalysis` | 分析セッションの場合、この関数は、すべての分析パスが終了した後に呼び出されます。 再ログ セッションの場合、この関数は、分析フェーズのすべての分析パスが終了したときに呼び出されます。 その後、再ログ パスが終了した後に再度呼び出されます。 |
+| `OnBeginAnalysisPass` | 任意のイベントを処理する前に、分析パスまたは再ログ パスの開始時に呼び出されます。 |
+| `OnEndAnalysisPass` | すべてのイベントを処理した後、分析パスまたは再ログ パスの終了時に呼び出されます。 |
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>注釈
 
-再ロギング セッションの分析フェーズは、再ロギング セッションの一部と見なされ、複数の分析パスを含めることができます。 このため、`OnBeginAnalysis`再ロギング セッションの開始時に 2 回連続して呼び出されます。 `OnEndAnalysis`は、再ロギングフェーズを開始する前に、分析フェーズの最後に呼び出され、再ロギングフェーズの最後にもう一度呼び出されます。 再ログフェーズには、常に 1 つの再ロギング パスが含まれます。
+再ログ セッションの分析フェーズは、再ログ セッションの一部と見なされ、複数の分析パスが含まれる場合があります。 このため、`OnBeginAnalysis` は、再ログ セッションの開始時に連続して 2 回呼び出されます。 `OnEndAnalysis` は、再ログ フェーズを開始する前に、分析フェーズの終了時に呼び出され、再ログ フェーズの終了時にもう 1 回呼び出されます。 再ログ フェーズには、常に単一の再ログ パスが含まれます。
 
-アナライザーは、再ロギング セッションの分析フェーズと再ロギング フェーズの両方に参加する可能性があります。 これらのアナライザーは、OnBeginAnalysis と呼び出し`OnEndAnalysis`のペアを追跡することによって、現在進行中のフェーズを特定できます。 コール`OnBeginAnalysis`を行わない`OnEndAnalysis`2 つのコールは、分析フェーズが進行中であることを意味します。 2`OnBeginAnalysis`つの呼`OnEndAnalysis`び出しと 1 つの呼び出しは、再ログフェーズが進行中であることを意味します。 2 つの OnBeginAnalysis と 2 つの`OnEndAnalysis`呼び出しは、両方のフェーズが終了した場合を意味します。
+アナライザーは、再ログ セッションの分析フェーズと再ログ フェーズの両方に含めることができます。 これらのアナライザーでは、OnBeginAnalysis と `OnEndAnalysis` の呼び出しペアを追跡することにより、現在進行中のフェーズを特定できます。 `OnEndAnalysis` 呼び出しのない 2 回の `OnBeginAnalysis` 呼び出しは、分析フェーズが進行中であることを意味します。 2 回の `OnBeginAnalysis` 呼び出しと 1 回の `OnEndAnalysis` 呼び出しは、再ログ フェーズが進行中であることを意味します。 2 回の OnBeginAnalysis 呼び出しと 2 回の `OnEndAnalysis` 呼び出しは、両方のフェーズが終了したことを意味します。
 
-構造体のすべてのメンバーは`ANALYSIS_CALLBACKS`、有効な関数を指している必要があります。 受け入れられた関数シグネチャの詳細については、「を参照してください[。](on-analysis-event-func-typedef.md) [OnTraceInfoFunc](on-trace-info-func-typedef.md) [OnBeginEndPassFunc](on-begin-end-pass-func-typedef.md)
+`ANALYSIS_CALLBACKS` 構造体のすべてのメンバーは、有効な関数を指す必要があります。 許容される関数シグネチャの詳細については、「[OnAnalysisEventFunc](on-analysis-event-func-typedef.md)」、「[OnTraceInfoFunc](on-trace-info-func-typedef.md)」、「[OnBeginEndPassFunc](on-begin-end-pass-func-typedef.md)」を参照してください。
 
 ::: moniker-end
