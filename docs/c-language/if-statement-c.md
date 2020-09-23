@@ -11,12 +11,12 @@ helpviewer_keywords:
 - if keyword [C], if statement syntax
 - nested statements
 ms.assetid: d7fc16a0-fdbc-4f39-b596-76e1ca4ad4a5
-ms.openlocfilehash: 67cdae033c3c8669c8bc7ae1d2e3584ef68498f0
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 6fe92d3f2927cd6c5b3df16850e2925fc42055d0
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87227843"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90684145"
 ---
 # <a name="if-statement-c"></a>if ステートメント (C)
 
@@ -34,7 +34,7 @@ ms.locfileid: "87227843"
 
 **`if`** ステートメントの例を次に示します。
 
-```
+```C
 if ( i > 0 )
     y = x / i;
 else
@@ -48,7 +48,7 @@ else
 
 **`if`** ステートメントと **`else`** 句を入れ子にする場合は、意図がはっきりわかるように、中かっこを使用してステートメントと句を複合ステートメントにグループ化します。 中かっこがない場合、コンパイラでは各 **`else`** を **`else`** のない最も近い **`if`** と関連付けることによって、あいまいさが解消されます。
 
-```
+```C
 if ( i > 0 )           /* Without braces */
     if ( j > i )
         x = j;
@@ -58,7 +58,7 @@ if ( i > 0 )           /* Without braces */
 
 **`else`** 句は、この例の内側の **`if`** ステートメントに関連付けられます。 `i` が 0 以下の場合、`x` に値は割り当てられません。
 
-```
+```C
 if ( i > 0 )
 {                      /* With braces */
     if ( j > i )
