@@ -160,12 +160,12 @@ helpviewer_keywords:
 - CRT_REPORT_HOOK type
 - _finddata_t type
 ms.assetid: 23312dd2-4a6a-4d70-9b48-2a5d0d8c9f28
-ms.openlocfilehash: 38906579a449941d6dad767afa97a32d63fe3445
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: bf90adbdbc739a2dd26d8e59ab38e56aef3bd312
+ms.sourcegitcommit: d9c94dcabd94537e304be0261b3263c2071b437b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87231274"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91352935"
 ---
 # <a name="standard-types"></a>基本データ型
 
@@ -189,7 +189,7 @@ Microsoft ランタイム ライブラリには、次の基本データ型およ
 |int_fast64_t、uint_fast64_t|long long、unsigned long long|
 |intmax_t、uintmax_t|long long、unsigned long long|
 
-|Type|説明|ヘッダー ファイル|
+|型|説明|ヘッダー ファイル|
 |----------|-----------------|-----------------|
 |`clock_t` (long 型)|[clock](../c-runtime-library/reference/clock.md) で使用される時刻値を格納します。|TIME.H|
 |`_complex` 構造体|[_cabs](../c-runtime-library/reference/cabs.md) で使用される複素数の実数部および虚数部を格納します。|MATH.H|
@@ -199,21 +199,21 @@ Microsoft ランタイム ライブラリには、次の基本データ型およ
 |`_CRT_REPORT_HOOK`,<br /><br /> `_CRT_REPORT_HOOKW`,<br /><br /> `_CRT_REPORT_HOOKW_M`|[_CrtDbgReport](../c-runtime-library/reference/crtdbgreport-crtdbgreportw.md) で呼び出されるコールバック関数の型定義。<br /><br /> この関数のパラメーターは、レポートの種類、出力メッセージ、およびコールバック関数の戻り値です。|CRTDBG.H|
 |`dev_t`、`_dev_t` の短整数または符号なし整数|デバイス ハンドルを表します。|SYS\TYPES.H|
 |`_diskfree_t` 構造体|ディスク ドライブに関する情報を格納します。 [_getdiskfree](../c-runtime-library/reference/getdiskfree.md) で使用します **。**|DOS.H および DIRECT.H|
-|`div_t`、`ldiv_t`、および `lldiv_t` の各構造体|それぞれ [div](../c-runtime-library/reference/div.md)、[ldiv](../c-runtime-library/reference/ldiv-lldiv.md)、および [lldiv](../c-runtime-library/reference/ldiv-lldiv.md) によって返される値を格納します。|STDLIB.H|
+|`div_t`、`ldiv_t`、および `lldiv_t` の各構造体|それぞれ [div](reference/div.md)、[ldiv](../c-runtime-library/reference/ldiv-lldiv.md)、および [lldiv](../c-runtime-library/reference/ldiv-lldiv.md) によって返される値を格納します。|STDLIB.H|
 |`errno_t` 整数|`errno` のエラー コードを処理する関数の戻り値の型またはパラメーターに使用されます。|STDDEF.H、<br /><br /> CRTDEFS.H|
 |`_exception` 構造体|[_matherr](../c-runtime-library/reference/matherr.md) のエラー情報を格納します。|MATH.H|
 |`_EXCEPTION_POINTERS`|例外レコードを格納します。 詳細については、[EXCEPTION_POINTERS](/windows/win32/api/winnt/ns-winnt-exception_pointers) に関するページをご覧ください。|FPIEEE.H|
 |`FILE` 構造体|ストリームの現在の状態に関する情報を格納します。すべてのストリーム I/O 操作で使用します。|STDIO.H|
 |`_finddata_t`、`_wfinddata_t`、`_finddata32_t`、`_wfinddata32_t`、`_finddatai64_t`、`_wfinddatai64_t`、`__finddata64_t`、`__wfinddata64_t`、`__finddata32i64_t`、`__wfinddata32i64_t`、`__finddata64i32_t`、`__wfinddata64i32_t` の各構造体|[_findfirst、_wfindfirst および関連する関数](../c-runtime-library/reference/findfirst-functions.md)、[_findnext、_wfindnext および関連する関数](../c-runtime-library/reference/findnext-functions.md)によって返されるファイル属性情報を格納します。 構造体のメンバーについては、「[ファイル名検索関数](../c-runtime-library/filename-search-functions.md)」をご覧ください。|IO.H、WCHAR.H|
 |`_FPIEEE_RECORD` 構造体|[_fpieee_flt](../c-runtime-library/reference/fpieee-flt.md) によってユーザー定義トラップに渡される、IEEE 浮動小数点例外に関する情報を格納します。|FPIEEE.H|
-|`fpos_t`( **`__int64`** ターゲットプラットフォームに応じた long 整数、、または構造体)|[fgetpos](../c-runtime-library/reference/fgetpos.md) および [fsetpos](../c-runtime-library/reference/fsetpos.md) によって、一意に指定したファイル内の各位置の情報を記録するために使用されます。|STDIO.H|
+|`fpos_t` ( **`__int64`** ターゲットプラットフォームに応じた long 整数、、または構造体)|[fgetpos](../c-runtime-library/reference/fgetpos.md) および [fsetpos](../c-runtime-library/reference/fsetpos.md) によって、一意に指定したファイル内の各位置の情報を記録するために使用されます。|STDIO.H|
 |`_fsize_t` (符号なし長整数)|ファイルのサイズを表すために使用されます。|IO.H、<br /><br /> WCHAR.H|
 |`_HEAPINFO` 構造体|[_heapwalk](../c-runtime-library/reference/heapwalk.md) の次のヒープ エントリに関する情報を格納しています。|MALLOC.H|
 |`_HFILE` (void \*)|オペレーティング システムのファイル ハンドル|CRTDBG.H|
 |`imaxdiv_t`|[imaxdiv](../c-runtime-library/reference/imaxdiv.md) 関数によって返される、商と剰余の両方を含む値の型。|inttypes.h|
 |`ino_t`、`_ino_t` (unsigned short 型)|ステータス情報を返します。|WCHAR.H|
 |`intmax_t`|任意の符号付き整数型の任意の値を表すことができる符号付き整数型。|stdint.h|
-|`intptr_t`( **`__int64`** 対象のプラットフォームによっては長整数または)|Win32 および Win64 の両方のプラットフォームにポインター (または HANDLE) を格納します。|STDDEF.H およびその他のインクルード ファイル|
+|`intptr_t` ( **`__int64`** 対象のプラットフォームによっては長整数または)|Win32 および Win64 の両方のプラットフォームにポインター (または HANDLE) を格納します。|STDDEF.H およびその他のインクルード ファイル|
 |`jmp_buf` 配列|[setjmp](../c-runtime-library/reference/setjmp.md) および[longjmp](../c-runtime-library/reference/longjmp.md) によって、プログラム環境を保存および復元するために使用されます。|SETJMP.H|
 |`lconv` 構造体|各国/地域の数値形式に関する規則を格納しています。 [localeconv](../c-runtime-library/reference/localeconv.md) によって使用されます。|LOCALE.H|
 |`_LDOUBLE`,<br /><br /> `_LONGDOUBLE`,<br /><br /> `_LDBL12` (long double 型または unsigned char 配列)|long double 型の値を表すために使用します。|STDLIB.H|
@@ -222,7 +222,7 @@ Microsoft ランタイム ライブラリには、次の基本データ型およ
 |`off_t` 長整数、`_off_t` 長整数|ファイル オフセット値を表します。|WCHAR.H、SYS\TYPES.H|
 |`_onexit_t`,<br /><br /> `_onexit_m_t` ポインター|[_onexit、_onexit_m](../c-runtime-library/reference/onexit-onexit-m.md) によって返されます。|STDLIB.H|
 |関数への `_PNH` ポインター|[_set_new_handler](../c-runtime-library/reference/set-new-handler.md) に対する引数の型。|NEW.H|
-|`ptrdiff_t`( **`__int64`** 対象のプラットフォームによっては長整数または)|2 つのポインターの減算結果。|CRTDEFS.H|
+|`ptrdiff_t` ( **`__int64`** 対象のプラットフォームによっては長整数または)|2 つのポインターの減算結果。|CRTDEFS.H|
 |`_purecall_handler`,<br /><br /> `_purecall_handler_m`|純粋仮想関数を呼び出したときに呼び出されるコールバック関数の型定義。 [_get_purecall_handler、_set_purecall_handler](../c-runtime-library/reference/get-purecall-handler-set-purecall-handler.md) によって使用されます。 `_purecall_handler` 関数の戻り値は void 型です。|STDLIB.H|
 |`_RTC_error_fn` の型定義|ランタイム エラー チェックを処理する関数の型定義。 [_RTC_SetErrorFunc](../c-runtime-library/reference/rtc-seterrorfunc.md) で使用します。|RTCAPI.H|
 |`_RTC_error_fnW` の型定義|ランタイム エラー チェックを処理する関数の型定義。 [_RTC_SetErrorFuncW](../c-runtime-library/reference/rtc-seterrorfuncw.md) で使用します。|RTCAPI.H|
@@ -242,7 +242,7 @@ Microsoft ランタイム ライブラリには、次の基本データ型およ
 |`__timeb64` 構造体|[_ftime64](../c-runtime-library/reference/ftime-ftime32-ftime64.md) および [_ftime_s、_ftime32_s、_ftime64_s](../c-runtime-library/reference/ftime-s-ftime32-s-ftime64-s.md) が現在のシステム時刻を格納するために使用します。|SYS\TIMEB.H|
 |`tm` 構造体|[asctime、_wasctime](../c-runtime-library/reference/asctime-wasctime.md)、[asctime_s、_wasctime_s](../c-runtime-library/reference/asctime-s-wasctime-s.md)、[gmtime、_gmtime32、_gmtime64](../c-runtime-library/reference/gmtime-gmtime32-gmtime64.md)、[gmtime_s、_gmtime32_s、_gmtime64_s](../c-runtime-library/reference/gmtime-s-gmtime32-s-gmtime64-s.md)、[localtime、_localtime32、_localtime64](../c-runtime-library/reference/localtime-localtime32-localtime64.md)、[localtime_s、_localtime32_s、_localtime64_s](../c-runtime-library/reference/localtime-s-localtime32-s-localtime64-s.md)、[mktime、_mktime32、_mktime64](../c-runtime-library/reference/mktime-mktime32-mktime64.md) および [strftime、wcsftime、_strftime_l、_wcsftime_l](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md) が時間情報を格納または取得するために使用します。|TIME.H|
 |`uintmax_t`|任意の符号なし整数型の任意の値を表すことができる符号なし整数型。|stdint.h|
-|`uintptr_t`( **`__int64`** 対象のプラットフォームによっては長整数または)|`intptr_t` の符号なし整数バージョンまたは符号なし __int64 バージョン。|STDDEF.H およびその他のインクルード ファイル|
+|`uintptr_t` ( **`__int64`** 対象のプラットフォームによっては長整数または)|`intptr_t` の符号なし整数バージョンまたは符号なし __int64 バージョン。|STDDEF.H およびその他のインクルード ファイル|
 |`unexpected_function`|[unexpected](../c-runtime-library/reference/unexpected-crt.md) を呼び出したときに呼び出されるコールバック関数の型定義。 [set_unexpected](../c-runtime-library/reference/set-unexpected-crt.md) で使用します。|EH.H|
 |`_utimbuf` 構造体|[_utime、_wutime](../c-runtime-library/reference/utime-utime32-utime64-wutime-wutime32-wutime64.md) および [_futime、_futime32、_futime64](../c-runtime-library/reference/futime-futime32-futime64.md) でファイル変更日付を変更するために使用する、ファイルへのアクセス時刻および変更時刻を格納します。|SYS\UTIME.H|
 |`_utimbuf32` 構造体|[_utime、_utime32、_utime64、_wutime、_wutime32、_wutime64](../c-runtime-library/reference/utime-utime32-utime64-wutime-wutime32-wutime64.md) および [_futime、_futime32、_futime64](../c-runtime-library/reference/futime-futime32-futime64.md) でファイル変更日付を変更するために使用する、ファイルへのアクセス時刻および変更時刻を格納します。|SYS\UTIME.H|

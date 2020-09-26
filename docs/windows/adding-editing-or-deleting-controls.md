@@ -42,12 +42,12 @@ helpviewer_keywords:
 - RichEdit 1.0 control
 - rich edit controls [C++], RichEdit 1.0
 ms.assetid: 73cef03f-5c8c-456a-87d1-1458dff185cf
-ms.openlocfilehash: 90e4eb659de6d1d5ed1488365f6637de2d537e57
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 79ea16e2d1737063040302a1ce111d275ae28e27
+ms.sourcegitcommit: d9c94dcabd94537e304be0261b3263c2071b437b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88831685"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91352753"
 ---
 # <a name="how-to-add-edit-or-delete-controls-c"></a>方法: コントロールを追加、編集、または削除する (C++)
 
@@ -201,7 +201,7 @@ RichEdit コントロールを使用するには、を呼び出す必要があ�
 >
 > 古い RichEdit 1.0 コントロールで現在の [CRichEditCtrl](../mfc/reference/cricheditctrl-class.md) クラスを使用できますが、 `CRichEditCtrl` は richedit 2.0 コントロールをサポートするように設計されています。 RichEdit 1.0 と RichEdit 2.0 は似ているため、ほとんどのメソッドは動作します。 ただし、1.0 と2.0 のコントロールにはいくつかの違いがあるため、一部のメソッドが正しく機能しないか、まったく動作しない可能性があります。
 
-### <a name="activex-controls"></a>ActiveX コントロール
+## <a name="insert-activex-controls"></a>ActiveX コントロールの挿入
 
 Visual Studio では、ActiveX コントロールをダイアログ ボックスに挿入することができます。 詳細については、「 [MFC Activex コントロール](../mfc/mfc-activex-controls.md) と [activex コントロールコンテナー](../mfc/activex-control-containers.md)」を参照してください。
 
@@ -215,7 +215,7 @@ Visual Studio では、ActiveX コントロールをダイアログ ボックス
 > [!CAUTION]
 > システム上の ActiveX コントロールの中には、配布が法的に許可されていないものもあります。 コントロールをインストールしたソフトウェアの使用許諾契約書を参照するか、ソフトウェア会社に問い合わせてください。
 
-#### <a name="to-add-an-activex-control"></a>ActiveX コントロールを追加するには
+### <a name="to-add-an-activex-control"></a>ActiveX コントロールを追加するには
 
 1. ダイアログ **エディター**でダイアログボックスを開きます。
 
@@ -230,7 +230,7 @@ Visual Studio では、ActiveX コントロールをダイアログ ボックス
 > [!TIP]
 > **ダイアログエディター**のショートカットメニューを使用して、登録されている activex コントロールをダイアログボックスにすばやく追加したり、**ツールボックス**ウィンドウに activex コントロールを追加して簡単にアクセスしたりすることができます。
 
-#### <a name="to-edit-properties-for-an-activex-control"></a>ActiveX コントロールのプロパティを編集するには
+### <a name="to-edit-properties-for-an-activex-control"></a>ActiveX コントロールのプロパティを編集するには
 
 独立系ベンダーによって提供される ActiveX コントロールには、独自のプロパティと特性が用意されている場合があります。 これらのプロパティは、[ **プロパティ** ] ウィンドウに表示されます。 ActiveX コントロールのライターによって作成されたプロパティページは、[ **プロパティページ** ] ダイアログボックスに表示されます。 (特定の ActiveX コントロールの**プロパティページ**を表示するには、[プロパティウィンドウ](/visualstudio/ide/reference/properties-window)の [**プロパティページ**] ボタンを選択します)。
 

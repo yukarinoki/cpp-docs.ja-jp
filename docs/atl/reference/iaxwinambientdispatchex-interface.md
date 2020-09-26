@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - IAxWinAmbientDispatchEx interface
 ms.assetid: 2c25e079-6128-4278-bc72-b2c6195ba7ef
-ms.openlocfilehash: f052c39424fc2ee6f43f249e3034be7c464d016c
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 3359c17996eb78c3249abc83ff2d439381f209fe
+ms.sourcegitcommit: d9c94dcabd94537e304be0261b3263c2071b437b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88833388"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91352987"
 ---
 # <a name="iaxwinambientdispatchex-interface"></a>IAxWinAmbientDispatchEx インターフェイス
 
@@ -46,7 +46,7 @@ ATL に静的にリンクされている ATL アプリケーションにこの�
 
 ATL90.dll にリンクしている場合、 **AXHost** は DLL のタイプライブラリから型情報を読み込みます。
 
-詳細については、「 [ATL AXHost を使用した ActiveX コントロールのホスト](../../atl/hosting-activex-controls-using-atl-axhost.md) 」を参照してください。
+詳細については、「 [ATL AXHost を使用した ActiveX コントロールのホスト](../../atl/atl-control-containment-faq.md#hosting-activex-controls-using-atl-axhost) 」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 

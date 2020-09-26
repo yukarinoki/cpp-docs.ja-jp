@@ -4,12 +4,12 @@ description: Modern C++ の新しいプログラミング イディオムとそ�
 ms.date: 05/17/2020
 ms.topic: conceptual
 ms.assetid: 1cb1b849-ed9c-4721-a972-fd8f3dab42e2
-ms.openlocfilehash: f2b9159e74ba7ce37c7eab1513826da939a3be49
-ms.sourcegitcommit: f1752bf90b4f869633a859ace85439ca19e208b2
+ms.openlocfilehash: 05c1fe80086e5b98d3f8a9c66c6759fddab39fa0
+ms.sourcegitcommit: d9c94dcabd94537e304be0261b3263c2071b437b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "87232197"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91353052"
 ---
 # <a name="welcome-back-to-c---modern-c"></a>C++ へようこそ - Modern C++
 
@@ -75,7 +75,7 @@ apple_color["Granny Smith"] = "Green";
 
 - 順序指定されていない連想コンテナー (例: [`unordered_map`](../standard-library/unordered-map-class.md))。 これらの、要素ごとのオーバーヘッドが軽減され、一定時間ルックアップを使用できますが、正確かつ効率的に使用するのは困難な場合があります。
 
-- 並べ替えられた `vector`。 詳細については、「[アルゴリズム](../cpp/algorithms-modern-cpp.md)」をご覧ください。
+- 並べ替えられた `vector`。 詳細については、「[アルゴリズム](../standard-library/algorithms.md)」をご覧ください。
 
 C スタイルの配列を使用しないでください。 データへの直接アクセスを必要とする古い API については、代わりに、`f(vec.data(), vec.size());` などのアクセサー メソッドを使用します。 コンテナーの詳細については、「[C++ 標準ライブラリのコンテナー](../standard-library/stl-containers.md)」を参照してください。
 

@@ -7,18 +7,18 @@ helpviewer_keywords:
 - ATL projects, adding objects
 - ATL Simple Object Wizard
 ms.assetid: f7f85741-9aad-4543-a917-a29b996364da
-ms.openlocfilehash: bd4c9eede16ed086020dd8f12d90876e50a0a341
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8bc611442e98e467a174ebd52ea3c540cf72975f
+ms.sourcegitcommit: d9c94dcabd94537e304be0261b3263c2071b437b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81319201"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91352688"
 ---
 # <a name="atl-simple-object-wizard"></a>ATL シンプル オブジェクト ウィザード
 
-このウィザードは、最小限の COM オブジェクトをプロジェクトに挿入します。 ウィザードのこのページを使用して、オブジェクトの C++ クラスとファイル、および COM 機能を識別する名前を指定します。
+このウィザードでは、プロジェクトに最小 COM オブジェクトが挿入されます。 ウィザードのこのページを使用して、オブジェクトとその COM 機能の C++ クラスとファイルを識別する名前を指定します。
 
-このウィザードの[[オプション]](../../atl/reference/options-atl-simple-object-wizard.md)ページを使用して、オブジェクトのスレッド モデル、オブジェクトの集約サポート、およびオブジェクトがデュアル インターフェイスとオートメーションをサポートするかどうかを指定します。 エラー情報インターフェイス、コネクション ポイント、Internet Explorer のサポート、およびフリー スレッド マーシャリングのサポートを指定することもできます。
+このウィザードの [ [オプション](../../atl/reference/options-atl-simple-object-wizard.md) ] ページを使用すると、オブジェクトのスレッドモデル、その集計サポート、およびデュアルインターフェイスとオートメーションをサポートするかどうかを指定できます。 また、エラー情報インターフェイス、接続ポイント、Internet Explorer のサポート、およびフリースレッドマーシャリングのサポートを指定することもできます。
 
 ## <a name="remarks"></a>解説
 
@@ -63,7 +63,7 @@ Visual Studio 2008 以降、このウィザードによって生成された登�
 
    既定では、このオプションを設定した後に追加するすべてのオブジェクトは、属性付きとして指定されます (チェック ボックスが選択されます)。 このボックスをオフにして、属性を使わないオブジェクトを追加することができます。
 
-   詳細については、「[アプリケーションの設定、ATL プロジェクト ウィザード](../../atl/reference/application-settings-atl-project-wizard.md)」と「[属性の基本的なしくみ](../../windows/basic-mechanics-of-attributes.md)」を参照してください。
+   詳細については [、「アプリケーションの設定」、「ATL プロジェクトウィザード](../../atl/reference/application-settings-atl-project-wizard.md) 」、および「 [属性の基本的な機構](../../windows/attributes/cpp-attributes-com-net.md#basic-mechanics-of-attributes) 」を参照してください。
 
 ## <a name="com"></a>COM (COM)
 
@@ -74,17 +74,17 @@ Visual Studio 2008 以降、このウィザードによって生成された登�
    オブジェクトでサポートされるインターフェイスの一覧を含むコンポーネント クラスの名前を設定します。
 
    > [!NOTE]
-   > 属性を使用してプロジェクトを作成する場合、またはこのウィザード ページでオブジェクトが属性を使用することを指定した場合、ATL には属性が含まれない`coclass`ため、このオプションを変更できません。
+   > 属性を使用してプロジェクトを作成する場合、またはこのウィザードのページで、オブジェクトが属性を使用することを指定した場合、ATL には属性が含まれないため、このオプションを変更することはできません `coclass` 。
 
 - **Type**
 
    レジストリに表示されるオブジェクトの説明を設定します。
 
-- **インターフェイス**
+- **Interface**
 
    オブジェクト用に作成するインターフェイスを設定します。 このインターフェイスには、カスタム メソッドが含まれます。
 
-- **Progid**
+- **ProgID**
 
    オブジェクトの CLSID の代わりにコンテナーで使用できる名前を設定します。
 

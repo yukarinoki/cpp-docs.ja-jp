@@ -16,12 +16,12 @@ helpviewer_keywords:
 - CAxWindow class
 - ATL, hosting ActiveX controls
 ms.assetid: 85e79261-43e4-4770-bde0-1ff87f222b0f
-ms.openlocfilehash: 1301baef874ac4e482a1b2a7f0a2ee6b1b63396f
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: b74ecb9af2decf92f873cef8d016907b6c9474cf
+ms.sourcegitcommit: d9c94dcabd94537e304be0261b3263c2071b437b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88833830"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91353078"
 ---
 # <a name="caxwindow-class"></a>CAxWindow クラス
 
@@ -40,7 +40,7 @@ class CAxWindow : public CWindow
 
 ### <a name="methods"></a>メソッド
 
-|関数|説明|
+|機能|説明|
 |-|-|
 |[AttachControl](#attachcontrol)|既存の ActiveX コントロールをオブジェクトにアタッチ `CAxWindow` します。|
 |[CAxWindow](#caxwindow)|`CAxWindow` オブジェクトを構築します。|
@@ -170,7 +170,7 @@ HTML リソースのリソース ID。 指定したリソースを使用して�
 
 ### <a name="example"></a>例
 
-を使用するサンプルについては、「 [ATL AXHost を使用した ActiveX コントロールのホスト](../../atl/hosting-activex-controls-using-atl-axhost.md) 」を参照してください `CreateControl` 。
+を使用するサンプルについては、「 [ATL AXHost を使用した ActiveX コントロールのホスト](../../atl/atl-control-containment-faq.md#hosting-activex-controls-using-atl-axhost) 」を参照してください `CreateControl` 。
 
 ## <a name="caxwindowcreatecontrolex"></a><a name="createcontrolex"></a> CAxWindow::CreateControlEx
 
@@ -242,7 +242,7 @@ HRESULT CreateControlEx(
 
 ### <a name="example"></a>例
 
-を使用するサンプルについては、「 [ATL AXHost を使用した ActiveX コントロールのホスト](../../atl/hosting-activex-controls-using-atl-axhost.md) 」を参照してください `CreateControlEx` 。
+を使用するサンプルについては、「 [ATL AXHost を使用した ActiveX コントロールのホスト](../../atl/atl-control-containment-faq.md#hosting-activex-controls-using-atl-axhost) 」を参照してください `CreateControlEx` 。
 
 ## <a name="caxwindowgetwndclassname"></a><a name="getwndclassname"></a> CAxWindow::GetWndClassName
 

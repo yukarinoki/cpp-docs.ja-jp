@@ -18,12 +18,12 @@ f1_keywords:
 helpviewer_keywords:
 - composite controls, global functions
 ms.assetid: 536884cd-e863-4c7a-ab0a-604dc60a0bbe
-ms.openlocfilehash: 467925baf59598d743650d4f98d210f789f2b179
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: fe9d9a3a0538e2e5744987adcd64e67562711ea8
+ms.sourcegitcommit: d9c94dcabd94537e304be0261b3263c2071b437b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88833557"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91353117"
 ---
 # <a name="composite-control-global-functions"></a>複合コントロールのグローバル関数
 
@@ -32,7 +32,7 @@ ms.locfileid: "88833557"
 > [!IMPORTANT]
 > 次の表に示す関数は、Windows ランタイムで実行するアプリケーションでは使用できません。
 
-|関数|説明|
+|機能|説明|
 |-|-|
 |[AtlAxDialogBox](#atlaxdialogbox)|ユーザーが用意するダイアログ テンプレートからモーダル ダイアログ ボックスを作成します。 表示されるダイアログボックスには、ActiveX コントロールを含めることができます。|
 |[AtlAxCreateDialog](#atlaxcreatedialog)|ユーザーが用意するダイアログ テンプレートからモードレス ダイアログ ボックスを作成します。 表示されるダイアログボックスには、ActiveX コントロールを含めることができます。|
@@ -95,7 +95,7 @@ CONTROL    "{04FE35E9-ADBC-4f1d-83FE-8FA4D1F71C7F}", IDC_TEST,
     "AtlAxWin80", WS_GROUP | WS_TABSTOP, 0, 0, 100, 100
 ```
 
-リソーススクリプトの編集の詳細については、「 [方法: テキスト形式でリソーススクリプトファイルを開く](../../windows/how-to-open-a-resource-script-file-in-text-format.md)」を参照してください。 コントロールのリソース定義ステートメントの詳細については、「Windows SDK: SDK Tools」の「 [コモンコントロールパラメーター](/windows/win32/menurc/common-control-parameters) 」を参照してください。
+リソーススクリプトの編集の詳細については、「 [方法: リソースを作成する](../../windows/how-to-create-a-resource-script-file.md)」を参照してください。 コントロールのリソース定義ステートメントの詳細については、「Windows SDK: SDK Tools」の「 [コモンコントロールパラメーター](/windows/win32/menurc/common-control-parameters) 」を参照してください。
 
 一般的なダイアログボックスの詳細については、Windows SDK の「ダイアログボックスと[Createdialogparam](/windows/win32/api/winuser/nf-winuser-createdialogparamw) 」を[参照して](/windows/win32/api/winuser/nf-winuser-dialogboxw)ください。
 
@@ -298,7 +298,7 @@ ATLAPI AtlAxCreateControlLic(
 
 ### <a name="example"></a>例
 
-の使用例については、「 [ATL AXHost を使用した ActiveX コントロールのホスト](../../atl/hosting-activex-controls-using-atl-axhost.md) 」を参照してください `AtlAxCreateControlLic` 。
+の使用例については、「 [ATL AXHost を使用した ActiveX コントロールのホスト](../../atl/atl-control-containment-faq.md#hosting-activex-controls-using-atl-axhost) 」を参照してください `AtlAxCreateControlLic` 。
 
 ## <a name="atlaxcreatecontrollicex"></a><a name="atlaxcreatecontrollicex"></a> AtlAxCreateControlLicEx
 
@@ -365,7 +365,7 @@ ATLAPI AtlAxCreateControlLicEx(
 
 ### <a name="example"></a>例
 
-の使用例については、「 [ATL AXHost を使用した ActiveX コントロールのホスト](../../atl/hosting-activex-controls-using-atl-axhost.md) 」を参照してください `AtlAxCreateControlLicEx` 。
+の使用例については、「 [ATL AXHost を使用した ActiveX コントロールのホスト](../../atl/atl-control-containment-faq.md#hosting-activex-controls-using-atl-axhost) 」を参照してください `AtlAxCreateControlLicEx` 。
 
 ## <a name="atlaxattachcontrol"></a><a name="atlaxattachcontrol"></a> AtlAxAttachControl
 

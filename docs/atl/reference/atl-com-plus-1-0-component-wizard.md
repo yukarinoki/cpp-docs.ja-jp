@@ -4,12 +4,12 @@ ms.date: 05/08/2019
 helpviewer_keywords:
 - ATL projects, adding components
 ms.assetid: 11670681-8671-4122-96a4-2e52f8dadce0
-ms.openlocfilehash: d5c0c0c8edb6b698d3d8f50736121d987af98492
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 6b1fea925c5f6d657e398933b5fb26cf09c28055
+ms.sourcegitcommit: d9c94dcabd94537e304be0261b3263c2071b437b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81321687"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91353156"
 ---
 # <a name="atl-com-10-component-wizard"></a>ATL COM+ 1.0 コンポーネント ウィザード
 
@@ -61,7 +61,7 @@ Visual Studio 2008 以降、このウィザードによって生成された登�
 
    このオプションを設定した後に追加するすべてのオブジェクトは、既定で属性付きと指定されます (チェック ボックスがオンになっています)。 このボックスをオフにして、属性を使わないオブジェクトを追加することができます。
 
-   詳細については、「[アプリケーションの設定、ATL プロジェクト ウィザード](../../atl/reference/application-settings-atl-project-wizard.md)」と「[属性の基本的なしくみ](../../windows/basic-mechanics-of-attributes.md)」を参照してください。
+   詳細については [、「アプリケーションの設定」、「ATL プロジェクトウィザード](../../atl/reference/application-settings-atl-project-wizard.md) 」、および「 [属性の基本的な機構](../../windows/attributes/cpp-attributes-com-net.md#basic-mechanics-of-attributes) 」を参照してください。
 
 ### <a name="com"></a>COM (COM)
 
@@ -78,11 +78,11 @@ Visual Studio 2008 以降、このウィザードによって生成された登�
 
    レジストリに表示されるオブジェクトの説明を設定します。
 
-- **インターフェイス**
+- **Interface**
 
    オブジェクト用に作成するインターフェイスを設定します。 このインターフェイスには、カスタム メソッドが含まれます。
 
-- **Progid**
+- **ProgID**
 
    オブジェクトの CLSID の代わりにコンテナーで使用できる名前を設定します。
 

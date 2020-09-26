@@ -1,4 +1,4 @@
-﻿---
+---
 title: auto (C++)
 ms.date: 12/10/2019
 f1_keywords:
@@ -7,19 +7,19 @@ f1_keywords:
 helpviewer_keywords:
 - auto keyword [C++]
 ms.assetid: e9d495d7-601c-4547-b897-998389a311f4
-ms.openlocfilehash: 675f6919b6804cfb1d2c5395d046cb5fa39e625d
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: be268635e61005efbdb01ed8c4eec79c7cb9b800
+ms.sourcegitcommit: d9c94dcabd94537e304be0261b3263c2071b437b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87229195"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91353039"
 ---
 # <a name="auto-c"></a>`auto` (C++)
 
 宣言された変数の型を、その初期化式から推測します。
 
 > [!NOTE]
-> C++ 標準では、このキーワードの元の意味と改訂された意味が定義されています。 Visual Studio 2010 より前では、キーワードは、 **`auto`** *自動*ストレージクラスの変数、つまりローカルの有効期間を持つ変数を宣言しています。 Visual Studio 2010 以降では、 **`auto`** キーワードは、宣言の初期化式から推測される型を持つ変数を宣言します。 [ `/Zc:auto`&#91; &#93;](../build/reference/zc-auto-deduce-variable-type.md)コンパイラオプションは、キーワードの意味を制御し **`auto`** ます。
+> C++ 標準では、このキーワードの元の意味と改訂された意味が定義されています。 Visual Studio 2010 より前では、キーワードは、 **`auto`** *自動* ストレージクラスの変数、つまりローカルの有効期間を持つ変数を宣言しています。 Visual Studio 2010 以降では、 **`auto`** キーワードは、宣言の初期化式から推測される型を持つ変数を宣言します。 [ `/Zc:auto`&#91; &#93;](../build/reference/zc-auto-deduce-variable-type.md)コンパイラオプションは、キーワードの意味を制御し **`auto`** ます。
 
 ## <a name="syntax"></a>構文
 
@@ -49,7 +49,7 @@ ms.locfileid: "87229195"
 
 キーワードを使用するには、 **`auto`** 変数を宣言するために型の代わりに使用し、初期化式を指定します。 また、、 **`auto`** **`const`** **`volatile`** 、pointer ( **`*`** )、reference ( **`&`** )、右辺値参照 () などの指定子と宣言子を使用して、キーワードを変更することもでき **`&&`** ます。 コンパイラは初期化式を評価し、その情報を使用して変数の型を推測します。
 
-初期化式には、代入 (等号の構文)、直接の初期化 (関数形式の構文)、 [`operator new`](new-operator-cpp.md) 式、または、[範囲ベースの `for` ステートメント (C++)](../cpp/range-based-for-statement-cpp.md)ステートメントで*の範囲宣言*のパラメーターを指定できます。 詳細については、このドキュメントで後述する「[初期化子](../cpp/initializers.md)とコード例」を参照してください。
+初期化式には、代入 (等号の構文)、直接の初期化 (関数形式の構文)、 [`operator new`](new-operator-cpp.md) 式、または、[範囲ベースの `for` ステートメント (C++)](../cpp/range-based-for-statement-cpp.md)ステートメントで*の範囲宣言*のパラメーターを指定できます。 詳細については、このドキュメントで後述する「 [初期化子](../cpp/initializers.md) とコード例」を参照してください。
 
 キーワードは、 **`auto`** 型のプレースホルダーですが、それ自体は型ではありません。 そのため、キーワードは、やなどの **`auto`** キャストまたは演算子では使用できません [`sizeof`](../cpp/sizeof-operator.md) (C++/cli の場合) [`typeid`](../extensions/typeid-cpp-component-extensions.md) 。
 
@@ -57,15 +57,15 @@ ms.locfileid: "87229195"
 
 **`auto`** キーワードは、複雑な型を持つ変数を宣言する簡単な方法です。 たとえば、を使用して、 **`auto`** 初期化式にテンプレート、関数へのポインター、またはメンバーへのポインターが含まれる変数を宣言できます。
 
-また、を使用し **`auto`** て、変数を宣言し、ラムダ式に初期化することもできます。 ラムダ式の型を認識できるのはコンパイラのみであるため、プログラマが変数の型を宣言することはできません。 詳細については、「[ラムダ式の例](../cpp/examples-of-lambda-expressions.md)」を参照してください。
+また、を使用し **`auto`** て、変数を宣言し、ラムダ式に初期化することもできます。 ラムダ式の型を認識できるのはコンパイラのみであるため、プログラマが変数の型を宣言することはできません。 詳細については、「 [ラムダ式の例](../cpp/examples-of-lambda-expressions.md)」を参照してください。
 
 ## <a name="trailing-return-types"></a>後続の戻り値の型
 
-を型指定子と共に使用すると、 **`auto`** **`decltype`** テンプレートライブラリを記述するのに役立ちます。 とを使用し **`auto`** て、 **`decltype`** 戻り値の型がテンプレート引数の型に依存するテンプレート関数を宣言します。 または、とを使用して、 **`auto`** **`decltype`** 別の関数の呼び出しをラップするテンプレート関数を宣言し、その他の関数の戻り値の型を返します。 詳細については、「[`decltype`](../cpp/decltype-cpp.md)」を参照してください。
+を型指定子と共に使用すると、 **`auto`** **`decltype`** テンプレートライブラリを記述するのに役立ちます。 とを使用し **`auto`** て、 **`decltype`** 戻り値の型がテンプレート引数の型に依存するテンプレート関数を宣言します。 または、とを使用して、 **`auto`** **`decltype`** 別の関数の呼び出しをラップするテンプレート関数を宣言し、その他の関数の戻り値の型を返します。 詳細については、[`decltype`](../cpp/decltype-cpp.md) を参照してください。
 
 ## <a name="references-and-cv-qualifiers"></a>参照と cv 修飾子
 
-を使用する **`auto`** と、参照、修飾子、および修飾子が削除されることに注意 **`const`** **`volatile`** してください。 次の例を確認してください。
+を使用する **`auto`** と、参照、修飾子、および修飾子が削除されることに注意 **`const`** **`volatile`** してください。 次に例を示します。
 
 ```cpp
 // cl.exe /analyze /EHsc /W4
@@ -122,7 +122,7 @@ int main()
 
 次の表に、キーワードの使用に関する制限 **`auto`** と、コンパイラによって生成される対応する診断エラーメッセージの一覧を示します。
 
-|エラー番号|[説明]|
+|エラー番号|説明|
 |------------------|-----------------|
 |[C3530](../error-messages/compiler-errors-2/compiler-error-c3530.md)|**`auto`** キーワードを他の型指定子と組み合わせることはできません。|
 |[C3531](../error-messages/compiler-errors-2/compiler-error-c3531.md)|キーワードで宣言されたシンボルには **`auto`** 初期化子が必要です。|
@@ -131,7 +131,7 @@ int main()
 |[C3535](../error-messages/compiler-errors-2/compiler-error-c3535.md)|メソッドまたはテンプレートパラメーターをキーワードで宣言することはできません **`auto`** 。|
 |[C3536](../error-messages/compiler-errors-2/compiler-error-c3536.md)|シンボルは初期化前に使用することはできません。 実際には、変数はその変数自体を初期化するために使用できないことを意味します。|
 |[C3537](../error-messages/compiler-errors-2/compiler-error-c3537.md)|キーワードで宣言された型にキャストすることはできません **`auto`** 。|
-|[C3538](../error-messages/compiler-errors-2/compiler-error-c3538.md)|キーワードを使用して宣言されている宣言子リスト内のすべてのシンボルは、 **`auto`** 同じ型に解決する必要があります。 詳細については、「[宣言と定義](declarations-and-definitions-cpp.md)」を参照してください。|
+|[C3538](../error-messages/compiler-errors-2/compiler-error-c3538.md)|キーワードを使用して宣言されている宣言子リスト内のすべてのシンボルは、 **`auto`** 同じ型に解決する必要があります。 詳細については、「 [宣言と定義](declarations-and-definitions-cpp.md)」を参照してください。|
 |[C3540](../error-messages/compiler-errors-2/compiler-error-c3540.md)、 [C3541](../error-messages/compiler-errors-2/compiler-error-c3541.md)|[Sizeof](../cpp/sizeof-operator.md)および[typeid](../extensions/typeid-cpp-component-extensions.md)演算子は、キーワードで宣言されたシンボルには適用できません **`auto`** 。|
 
 ## <a name="examples"></a>例
@@ -220,9 +220,8 @@ int main()
 
 ## <a name="see-also"></a>関連項目
 
-[`auto`キーワード](../cpp/auto-keyword.md)<br/>
 [キーワード](../cpp/keywords-cpp.md)<br/>
-[`/Zc:auto`(変数の型の推測)](../build/reference/zc-auto-deduce-variable-type.md)<br/>
+[`/Zc:auto` (変数の型の推測)](../build/reference/zc-auto-deduce-variable-type.md)<br/>
 [`sizeof` 演算子](../cpp/sizeof-operator.md)<br/>
 [`typeid`](../extensions/typeid-cpp-component-extensions.md)<br/>
 [`operator new`](new-operator-cpp.md)<br/>

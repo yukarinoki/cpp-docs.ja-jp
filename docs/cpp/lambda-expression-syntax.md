@@ -4,20 +4,20 @@ ms.date: 05/07/2019
 helpviewer_keywords:
 - lambda expressions [C++], syntax
 ms.assetid: 5d6154a4-f34d-4a15-970d-7e7de45f54e9
-ms.openlocfilehash: 9ac2fdea1a8fc8dcf2b03059455c3141daf86aa8
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 8db094dd14e63c08fbe8514f245c1777922224cf
+ms.sourcegitcommit: d9c94dcabd94537e304be0261b3263c2071b437b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80179654"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91352714"
 ---
 # <a name="lambda-expression-syntax"></a>ラムダ式の構文
 
-この記事では、ラムダ式の構文と構造体要素を説明します。 ラムダ式の詳細については、「[ラムダ式](../cpp/lambda-expressions-in-cpp.md)」を参照してください。
+この記事では、ラムダ式の構文と構造体要素を説明します。 ラムダ式の詳細については、「 [ラムダ式](../cpp/lambda-expressions-in-cpp.md)」を参照してください。
 
 ## <a name="function-objects-vs-lambdas"></a>関数オブジェクトとラムダ
 
-コードを記述する場合、特に[ C++標準ライブラリアルゴリズム](../cpp/algorithms-modern-cpp.md)を使用する場合は、関数ポインターと関数オブジェクトを使用して問題を解決し、計算を実行します。 関数ポインターと関数オブジェクトには、それぞれに利点と欠点があります。たとえば、関数ポインターは、最小限の構文オーバーヘッドで済みますが、スコープ内の状態を保持しません。関数オブジェクトは、状態を保持できますが、クラス定義の構文オーバーヘッドが必要となります。
+コードを記述する場合、特に [C++ 標準ライブラリアルゴリズム](../standard-library/algorithms.md)を使用する場合は、関数ポインターと関数オブジェクトを使用して問題を解決し、計算を実行します。 関数ポインターと関数オブジェクトには、それぞれに利点と欠点があります。たとえば、関数ポインターは、最小限の構文オーバーヘッドで済みますが、スコープ内の状態を保持しません。関数オブジェクトは、状態を保持できますが、クラス定義の構文オーバーヘッドが必要となります。
 
 ラムダは、関数ポインターと関数オブジェクトの両方の利点を持ち、それらの欠点を回避できます。 ラムダは、関数オブジェクトのように柔軟性があり状態を保持できますが、関数オブジェクトとは異なり、その簡潔な構文には明示的なクラス定義は必要ありません。 ラムダを使用すると、同等の関数オブジェクトのコードよりも使いやすくエラーが発生しにくいコードを作成できます。
 
@@ -25,7 +25,7 @@ ms.locfileid: "80179654"
 
 ## <a name="example-1-using-a-lambda"></a>例 1: ラムダの使用
 
-この例では、ラムダを**for_each**関数に渡します。 ラムダは、`vector` オブジェクト内の各要素が偶数か奇数かを示す結果を出力します。
+この例では、ラムダを **for_each** 関数に渡します。 ラムダは、`vector` オブジェクト内の各要素が偶数か奇数かを示す結果を出力します。
 
 ### <a name="code"></a>コード
 
@@ -79,11 +79,11 @@ There are 4 even numbers in the vector.
 
 ### <a name="comments"></a>説明
 
-この例では、 **for_each**関数の3番目の引数はラムダです。 `[&evenCount]` の部分は、式の capture 句を指定します。`(int n)` はパラメーター リストを指定します。残りの部分は、式の本体を指定します。
+この例では、 **for_each** 関数の3番目の引数はラムダです。 `[&evenCount]` の部分は、式の capture 句を指定します。`(int n)` はパラメーター リストを指定します。残りの部分は、式の本体を指定します。
 
 ## <a name="example-2-using-a-function-object"></a>例 2: 関数オブジェクトの使用
 
-ラムダは、前の例よりも拡張するのがはるかに複雑になる場合があります。 次の例では、ラムダの代わりに関数オブジェクトを**for_each**関数と共に使用して、例1と同じ結果を生成します。 どちらの例でも `vector` オブジェクトに含まれる偶数の数を格納します。 操作の状態を保持するために、`FunctorClass` クラスはメンバー変数の参照として `m_evenCount` 変数を格納します。 この操作を実行するには、`FunctorClass` が関数呼び出し演算子である**operator ()** を実装します。 Microsoft C++コンパイラは、サイズとパフォーマンスに匹敵するコードを例1のラムダコードに生成します。 ここで紹介したような基本的な問題の場合は、おそらく、より単純なラムダのデザインの方が関数オブジェクトよりも適切です。 ただし、後で大幅な機能拡張が必要となる可能性がある場合は、コードの保守が容易になるように、関数オブジェクトのデザインを使用します。
+ラムダは、前の例よりも拡張するのがはるかに複雑になる場合があります。 次の例では、ラムダの代わりに関数オブジェクトを **for_each** 関数と共に使用して、例1と同じ結果を生成します。 どちらの例でも `vector` オブジェクトに含まれる偶数の数を格納します。 操作の状態を保持するために、`FunctorClass` クラスはメンバー変数の参照として `m_evenCount` 変数を格納します。 操作を実行するために、は `FunctorClass` 関数呼び出し演算子である **operator ()** を実装します。 Microsoft C++ コンパイラは、サイズとパフォーマンスに匹敵するコードを例1のラムダコードに生成します。 ここで紹介したような基本的な問題の場合は、おそらく、より単純なラムダのデザインの方が関数オブジェクトよりも適切です。 ただし、後で大幅な機能拡張が必要となる可能性がある場合は、コードの保守が容易になるように、関数オブジェクトのデザインを使用します。
 
 **演算子 ()** の詳細については、「[関数呼び出し](../cpp/function-call-cpp.md)」を参照してください。 **For_each**関数の詳細については、「 [for_each](../standard-library/algorithm-functions.md#for_each)」を参照してください。
 
@@ -157,13 +157,13 @@ int main()
 There are 4 even numbers in the vector.
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [ラムダ式](../cpp/lambda-expressions-in-cpp.md)<br/>
 [ラムダ式の例](../cpp/examples-of-lambda-expressions.md)<br/>
-[generate](../standard-library/algorithm-functions.md#generate)<br/>
+[生み](../standard-library/algorithm-functions.md#generate)<br/>
 [generate_n](../standard-library/algorithm-functions.md#generate_n)<br/>
 [for_each](../standard-library/algorithm-functions.md#for_each)<br/>
-[例外の仕様 (スロー)](../cpp/exception-specifications-throw-cpp.md)<br/>
+[例外の指定 (throw)](../cpp/exception-specifications-throw-cpp.md)<br/>
 [コンパイラの警告 (レベル 1) C4297](../error-messages/compiler-warnings/compiler-warning-level-1-c4297.md)<br/>
 [Microsoft 固有の修飾子](../cpp/microsoft-specific-modifiers.md)
