@@ -56,12 +56,12 @@ helpviewer_keywords:
 - OpenWithPromptFileName method
 - OpenWithServiceComponents method
 ms.assetid: 99bf862c-9d5c-4117-9501-aa0e2672085c
-ms.openlocfilehash: 2ce5090d7e1c74607a82ddbb79afebe185a1dca7
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: f94cd631f1c6febdc07d53f84803b1203f4116bc
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88838348"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91502542"
 ---
 # <a name="cdatasource-class"></a>CDataSource クラス
 
@@ -93,9 +93,9 @@ class CDataSource
 |[OpenWithPromptFileName](#openwithpromptfilename)|ユーザーは、以前に作成したデータリンクファイルを選択して、対応するデータソースを開くことができます。|
 |[OpenWithServiceComponents](#openwithservicecomponents)|[データリンク] ダイアログボックスを使用して、データソースオブジェクトを開きます。|
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>注釈
 
-1つの接続に対して1つ以上のデータベースセッションを作成できます。 これらのセッションは、によって表され `CSession` ます。 でセッションを作成する前に、 [CDataSource:: Open](../../data/oledb/cdatasource-open.md) を呼び出して接続を開く必要があり `CSession::Open` ます。
+1つの接続に対して1つ以上のデータベースセッションを作成できます。 これらのセッションは、によって表され `CSession` ます。 でセッションを作成する前に、 [CDataSource:: Open](#open) を呼び出して接続を開く必要があり `CSession::Open` ます。
 
 の使用例については `CDataSource` 、 [CatDB](../../overview/visual-cpp-samples.md) サンプルを参照してください。
 
@@ -132,7 +132,7 @@ HRESULT GetInitializationString(BSTR* pInitializationString,
 
 標準の HRESULT です。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 結果の初期化文字列を使用して、後でこのデータソース接続を再び開くことができます。
 
@@ -157,9 +157,9 @@ Windows SDK の*OLE DB プログラマーリファレンス*の「 [IDBPropertie
 
 標準の HRESULT です。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
-1つのプロパティを取得するには、 [GetProperty](../../data/oledb/cdatasource-getproperty.md)を使用します。
+1つのプロパティを取得するには、 [GetProperty](#getproperty)を使用します。
 
 ## <a name="cdatasourcegetproperty"></a><a name="getproperty"></a> CDataSource:: GetProperty
 
@@ -188,9 +188,9 @@ HRESULT GetProperty(const GUID& guid,
 
 標準の HRESULT です。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
-複数のプロパティを取得するには、 [GetProperties](../../data/oledb/cdatasource-getproperties.md)を使用します。
+複数のプロパティを取得するには、 [GetProperties](#getproperties)を使用します。
 
 ## <a name="cdatasourceopen"></a><a name="open"></a> CDataSource:: Open
 
@@ -276,7 +276,7 @@ HRESULT Open(LPCSTR szProgID,
 
 標準の HRESULT です。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 *HWnd*パラメーターを使用するメソッドオーバーロードは、oledb32.dll 内のサービスコンポーネントを持つデータソースオブジェクトを開きます。この DLL には、リソースプーリング、自動トランザクション参加などのサービスコンポーネント機能の実装が含まれています。 詳細については、『 [OLE DB プログラマーズガイド』](/previous-versions/windows/desktop/ms713643(v=vs.85))の OLE DB リファレンスを参照してください。
 
@@ -309,7 +309,7 @@ HRESULT OpenFromFileName(LPCOLESTR szFileName) throw();
 
 標準の HRESULT です。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 このメソッドは、oledb32.dll 内のサービス コンポーネントを使ってデータ ソース オブジェクトを開きます。この DLL には、リソース共有や自動トランザクション登録などのサービス コンポーネント機能の実装が含まれています。 詳細については、『 [OLE DB プログラマーズガイド』](/previous-versions/windows/desktop/ms713643(v=vs.85))の OLE DB リファレンスを参照してください。
 
@@ -338,7 +338,7 @@ HRESULT OpenFromInitializationString(LPCOLESTR szInitializationString,
 
 標準の HRESULT です。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 このメソッドは、oledb32.dll 内のサービス コンポーネントを使ってデータ ソース オブジェクトを開きます。この DLL には、リソース共有や自動トランザクション登録などのサービス コンポーネント機能の実装が含まれています。
 
@@ -369,7 +369,7 @@ HRESULT OpenWithPromptFileName(HWND hWnd = GetActiveWindow(   ),
 
 標準の HRESULT です。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 このメソッドは、oledb32.dll 内のサービス コンポーネントを使ってデータ ソース オブジェクトを開きます。この DLL には、リソース共有や自動トランザクション登録などのサービス コンポーネント機能の実装が含まれています。 詳細については、『 [OLE DB プログラマーズガイド』](/previous-versions/windows/desktop/ms713643(v=vs.85))の OLE DB リファレンスを参照してください。
 
@@ -407,7 +407,7 @@ HRESULT OpenWithServiceComponents (LPCSTR szProgID,
 
 標準の HRESULT です。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 このメソッドは、oledb32.dll 内のサービス コンポーネントを使ってデータ ソース オブジェクトを開きます。この DLL には、リソース共有や自動トランザクション登録などのサービス コンポーネント機能の実装が含まれています。 詳細については、『 [OLE DB プログラマーズガイド』](/previous-versions/windows/desktop/ms713643(v=vs.85))の OLE DB リファレンスを参照してください。
 

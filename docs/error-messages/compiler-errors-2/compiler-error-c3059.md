@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3059
 ms.assetid: 57220324-8286-4cab-a1ab-45385eb1eae0
-ms.openlocfilehash: 897ed2beb7634cec787f0776616d9a60596a979f
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 9b1efc0969373b6a91b0800ae71477b2371814bb
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74756462"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91501443"
 ---
 # <a name="compiler-error-c3059"></a>コンパイラ エラー C3059
 
 'var' : 'threadprivate' シンボルは 'clause' 句の中で使用することはできません
 
-[threadprivate](../../parallel/openmp/reference/threadprivate.md) シンボルが句の中で使用されました。
+[threadprivate](../../parallel/openmp/reference/openmp-directives.md#threadprivate) シンボルが句の中で使用されました。
 
 次の例では C3059 が生成されます。
 
@@ -36,7 +36,7 @@ int main() {
 }
 ```
 
-解決方法:
+考えられる解決策:
 
 ```cpp
 // C3059b.cpp

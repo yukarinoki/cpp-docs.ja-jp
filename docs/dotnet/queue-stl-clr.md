@@ -57,18 +57,18 @@ helpviewer_keywords:
 - to_array member [STL/CLR]
 - value_type member [STL/CLR]
 ms.assetid: 9ea7dec3-ea98-48ff-87d0-a5afc924aaf2
-ms.openlocfilehash: ce4b3ca37fc5e13ace3058cb9ec9e9daad073b47
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 2d5c1d30704838cdb69516d68d328c90a094a08e
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87210931"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91502387"
 ---
 # <a name="queue-stlclr"></a>queue (STL/CLR)
 
 このテンプレートクラスは、先入れ先出しアクセスを持つ要素の可変長シーケンスを制御するオブジェクトを表します。 コンテナーアダプターは、 `queue` 基になるコンテナーをキューとして管理するために使用します。
 
-次の説明で、 `GValue` は、後者が参照型である場合を除き、*値*と同じです。この場合、は `Value^` です。 同様に、 `GContainer` は、後者が参照型である場合を除き、*コンテナー*と同じです。この場合、は `Container^` です。
+次の説明で、 `GValue` は、後者が参照型である場合を除き、 *値* と同じです。この場合、は `Value^` です。 同様に、 `GContainer` は、後者が参照型である場合を除き、 *コンテナー* と同じです。この場合、は `Container^` です。
 
 ## <a name="syntax"></a>構文
 
@@ -122,7 +122,7 @@ template<typename Value,
 |[queue::size (STL/CLR)](#size)|要素の数をカウントします。|
 |[queue::to_array (STL/CLR)](#to_array)|被制御シーケンスを新しい配列にコピーします。|
 
-|プロパティ|Description|
+|プロパティ|説明|
 |--------------|-----------------|
 |[queue::back_item (STL/CLR)](#back_item)|最後の要素にアクセスします。|
 |[queue::front_item (STL/CLR)](#front_item)|最初の要素にアクセスします。|
@@ -144,13 +144,13 @@ template<typename Value,
 |<xref:System.ICloneable>|オブジェクトを複製します。|
 |IQueue\<Value, Container>|汎用コンテナーアダプターを維持します。|
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>注釈
 
 オブジェクトは、 `Container` 要素を格納し、必要に応じて拡張する、基になるコンテナー (型) によって制御されるシーケンスのストレージを割り当て、解放し `Value` ます。 オブジェクトは、最初の要素をプッシュして最後の要素をポップするだけにアクセスを制限し、先入れ先出しのキュー (FIFO キューとも呼ばれます) または単なるキューを実装します。
 
 ## <a name="members"></a>メンバー
 
-## <a name="queueassign-stlclr"></a><a name="assign"></a>queue:: assign (STL/CLR)
+## <a name="queueassign-stlclr"></a><a name="assign"></a> queue:: assign (STL/CLR)
 
 すべての要素を置換します。
 
@@ -165,7 +165,7 @@ void assign(queue<Value, Container>% right);
 *そうです*<br/>
 挿入するコンテナーアダプター。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 このメンバー関数は、 `right.get_container()` 基になるコンテナーにを割り当てます。 キューの内容全体を変更するには、これを使用します。
 
@@ -204,7 +204,7 @@ a b c
 a b c
 ```
 
-## <a name="queueback-stlclr"></a><a name="back"></a>queue:: back (STL/CLR)
+## <a name="queueback-stlclr"></a><a name="back"></a> queue:: back (STL/CLR)
 
 最後の要素にアクセスします。
 
@@ -256,7 +256,7 @@ back() = c
 a b x
 ```
 
-## <a name="queueback_item-stlclr"></a><a name="back_item"></a>queue:: back_item (STL/CLR)
+## <a name="queueback_item-stlclr"></a><a name="back_item"></a> queue:: back_item (STL/CLR)
 
 最後の要素にアクセスします。
 
@@ -308,7 +308,7 @@ back_item = c
 a b x
 ```
 
-## <a name="queueconst_reference-stlclr"></a><a name="const_reference"></a>queue:: const_reference (STL/CLR)
+## <a name="queueconst_reference-stlclr"></a><a name="const_reference"></a> queue:: const_reference (STL/CLR)
 
 要素への定数参照の型です。
 
@@ -352,7 +352,7 @@ int main()
 a b c
 ```
 
-## <a name="queuecontainer_type-stlclr"></a><a name="container_type"></a>queue:: container_type (STL/CLR)
+## <a name="queuecontainer_type-stlclr"></a><a name="container_type"></a> queue:: container_type (STL/CLR)
 
 基になるコンテナーの型。
 
@@ -394,7 +394,7 @@ int main()
 a b c
 ```
 
-## <a name="queuedifference_type-stlclr"></a><a name="difference_type"></a>queue::d ifference_type (STL/CLR)
+## <a name="queuedifference_type-stlclr"></a><a name="difference_type"></a> queue::d ifference_type (STL/CLR)
 
 2つの要素間の符号付き距離の型。
 
@@ -452,7 +452,7 @@ pushing 2 = -2
 popping 3 = 3
 ```
 
-## <a name="queueempty-stlclr"></a><a name="empty"></a>queue:: empty (STL/CLR)
+## <a name="queueempty-stlclr"></a><a name="empty"></a> queue:: empty (STL/CLR)
 
 要素が存在しないかどうかをテストします。
 
@@ -464,7 +464,7 @@ bool empty();
 
 ### <a name="remarks"></a>解説
 
-このメンバー関数は、被制御シーケンスが空の場合に true を返します。 これは[queue:: size (STL/CLR)](../dotnet/queue-size-stl-clr.md)に相当 `() == 0` します。 このメソッドを使用して、キューが空かどうかをテストします。
+このメンバー関数は、被制御シーケンスが空の場合に true を返します。 これは[queue:: size (STL/CLR)](#size)に相当 `() == 0` します。 このメソッドを使用して、キューが空かどうかをテストします。
 
 ### <a name="example"></a>例
 
@@ -506,7 +506,7 @@ size() = 0
 empty() = True
 ```
 
-## <a name="queuefront-stlclr"></a><a name="front"></a>queue:: front (STL/CLR)
+## <a name="queuefront-stlclr"></a><a name="front"></a> queue:: front (STL/CLR)
 
 最初の要素にアクセスします。
 
@@ -558,7 +558,7 @@ front() = a
 x b c
 ```
 
-## <a name="queuefront_item-stlclr"></a><a name="front_item"></a>queue:: front_item (STL/CLR)
+## <a name="queuefront_item-stlclr"></a><a name="front_item"></a> queue:: front_item (STL/CLR)
 
 最初の要素にアクセスします。
 
@@ -610,7 +610,7 @@ front_item = a
 x b c
 ```
 
-## <a name="queuegeneric_container-stlclr"></a><a name="generic_container"></a>queue:: generic_container (STL/CLR)
+## <a name="queuegeneric_container-stlclr"></a><a name="generic_container"></a> queue:: generic_container (STL/CLR)
 
 コンテナーアダプターのジェネリックインターフェイスの型。
 
@@ -673,7 +673,7 @@ a b c d
 a b c d e
 ```
 
-## <a name="queuegeneric_value-stlclr"></a><a name="generic_value"></a>queue:: generic_value (STL/CLR)
+## <a name="queuegeneric_value-stlclr"></a><a name="generic_value"></a> queue:: generic_value (STL/CLR)
 
 コンテナーのジェネリックインターフェイスで使用する要素の型。
 
@@ -731,7 +731,7 @@ a b c
 a b c
 ```
 
-## <a name="queueget_container-stlclr"></a><a name="get_container"></a>queue:: get_container (STL/CLR)
+## <a name="queueget_container-stlclr"></a><a name="get_container"></a> queue:: get_container (STL/CLR)
 
 基になるコンテナーにアクセスします。
 
@@ -772,7 +772,7 @@ int main()
 a b c
 ```
 
-## <a name="queueoperator-stlclr"></a><a name="op_as"></a>queue:: operator = (STL/CLR)
+## <a name="queueoperator-stlclr"></a><a name="op_as"></a> queue:: operator = (STL/CLR)
 
 被制御シーケンスを置き換えます。
 
@@ -787,9 +787,9 @@ queue <Value, Container>% operator=(queue <Value, Container>% right);
 *そうです*<br/>
 コピーするコンテナーアダプター。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
-メンバー演算子は、オブジェクトに*right*をコピーし、を返し **`*this`** ます。 このメソッドを使用して、被制御シーケンスを*右側*の被制御シーケンスのコピーで置き換えます。
+メンバー演算子は、オブジェクトに *right* をコピーし、を返し **`*this`** ます。 このメソッドを使用して、被制御シーケンスを *右側*の被制御シーケンスのコピーで置き換えます。
 
 ### <a name="example"></a>例
 
@@ -826,7 +826,7 @@ a b c
 a b c
 ```
 
-## <a name="queuepop-stlclr"></a><a name="pop"></a>queue::p op (STL/CLR)
+## <a name="queuepop-stlclr"></a><a name="pop"></a> queue::p op (STL/CLR)
 
 最後の要素を削除します。
 
@@ -874,7 +874,7 @@ a b c
 b c
 ```
 
-## <a name="queuepush-stlclr"></a><a name="push"></a>queue::p u (STL/CLR)
+## <a name="queuepush-stlclr"></a><a name="push"></a> queue::p u (STL/CLR)
 
 新しい最後の要素を追加します。
 
@@ -915,7 +915,7 @@ int main()
 a b c
 ```
 
-## <a name="queuequeue-stlclr"></a><a name="queue"></a>queue:: queue (STL/CLR)
+## <a name="queuequeue-stlclr"></a><a name="queue"></a> queue:: queue (STL/CLR)
 
 コンテナーアダプターオブジェクトを構築します。
 
@@ -936,7 +936,7 @@ explicit queue(container_type% wrapped);
 *回り*<br/>
 使用するためにラップされたコンテナー。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 コンストラクター:
 
@@ -948,7 +948,7 @@ explicit queue(container_type% wrapped);
 
 `queue(queue<Value, Container>% right);`
 
-のコピーである、ラップされたコンテナーを作成し `right.get_container()` ます。 このメソッドを使用して、キューオブジェクト*権限*によって制御されるシーケンスのコピーである最初の被制御シーケンスを指定します。
+のコピーである、ラップされたコンテナーを作成し `right.get_container()` ます。 このメソッドを使用して、キューオブジェクト *権限*によって制御されるシーケンスのコピーである最初の被制御シーケンスを指定します。
 
 コンストラクター:
 
@@ -960,7 +960,7 @@ explicit queue(container_type% wrapped);
 
 `explicit queue(container_type wrapped);`
 
-ラップされたコンテナーとして*ラップ*された既存のコンテナーを使用します。 これを使用して、既存のコンテナーからキューを構築します。
+ラップされたコンテナーとして *ラップ* された既存のコンテナーを使用します。 これを使用して、既存のコンテナーからキューを構築します。
 
 ### <a name="example"></a>例
 
@@ -1008,7 +1008,7 @@ x x x x x
 x x x x x
 ```
 
-## <a name="queuereference-stlclr"></a><a name="reference"></a>queue:: reference (STL/CLR)
+## <a name="queuereference-stlclr"></a><a name="reference"></a> queue:: reference (STL/CLR)
 
 要素への参照の型です。
 
@@ -1057,7 +1057,7 @@ a b c
 a b x
 ```
 
-## <a name="queuesize-stlclr"></a><a name="size"></a>queue:: size (STL/CLR)
+## <a name="queuesize-stlclr"></a><a name="size"></a> queue:: size (STL/CLR)
 
 要素の数をカウントします。
 
@@ -1069,7 +1069,7 @@ size_type size();
 
 ### <a name="remarks"></a>解説
 
-このメンバー関数は、被制御シーケンスの長さを返します。 このメソッドを使用して、被制御シーケンス内の現在の要素数を決定します。 シーケンスのサイズが0以外であるかどうかについては、「 [queue:: empty (STL/CLR)](../dotnet/queue-empty-stl-clr.md)」を参照してください `()` 。
+このメンバー関数は、被制御シーケンスの長さを返します。 このメソッドを使用して、被制御シーケンス内の現在の要素数を決定します。 シーケンスのサイズが0以外であるかどうかについては、「 [queue:: empty (STL/CLR)](#empty)」を参照してください `()` 。
 
 ### <a name="example"></a>例
 
@@ -1111,7 +1111,7 @@ size() = 2 after popping
 size() = 4 after adding 2
 ```
 
-## <a name="queuesize_type-stlclr"></a><a name="size_type"></a>queue:: size_type (STL/CLR)
+## <a name="queuesize_type-stlclr"></a><a name="size_type"></a> queue:: size_type (STL/CLR)
 
 2つの要素間の符号付き距離の型。
 
@@ -1160,7 +1160,7 @@ a b c
 size difference = 2
 ```
 
-## <a name="queueto_array-stlclr"></a><a name="to_array"></a>queue:: to_array (STL/CLR)
+## <a name="queueto_array-stlclr"></a><a name="to_array"></a> queue:: to_array (STL/CLR)
 
 被制御シーケンスを新しい配列にコピーします。
 
@@ -1210,7 +1210,7 @@ a b c d
 a b c
 ```
 
-## <a name="queuevalue_type-stlclr"></a><a name="value_type"></a>queue:: value_type (STL/CLR)
+## <a name="queuevalue_type-stlclr"></a><a name="value_type"></a> queue:: value_type (STL/CLR)
 
 要素の型。
 
@@ -1222,7 +1222,7 @@ typedef Value value_type;
 
 ### <a name="remarks"></a>解説
 
-この型は、テンプレートパラメーター*値*のシノニムです。
+この型は、テンプレートパラメーター *値*のシノニムです。
 
 ### <a name="example"></a>例
 
@@ -1255,7 +1255,7 @@ int main()
 a b c
 ```
 
-## <a name="operator-queue-stlclr"></a><a name="op_neq"></a>operator! = (queue) (STL/CLR)
+## <a name="operator-queue-stlclr"></a><a name="op_neq"></a> operator! = (queue) (STL/CLR)
 
 キューが等しくないかどうかの比較。
 
@@ -1276,9 +1276,9 @@ template<typename Value,
 *そうです*<br/>
 比較する右のコンテナー。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
-演算子関数はを返し `!(left == right)` ます。 このメソッドを使用して、2つのキューが要素別に比較されるときに、 *left*が*right*と同じ順序で並んでいないかどうかをテストします。
+演算子関数はを返し `!(left == right)` ます。 このメソッドを使用して、2つのキューが要素別に比較されるときに、 *left* が *right* と同じ順序で並んでいないかどうかをテストします。
 
 ### <a name="example"></a>例
 
@@ -1326,7 +1326,7 @@ a b d
 [a b c] != [a b d] is True
 ```
 
-## <a name="operatorlt-queue-stlclr"></a><a name="op_lt"></a>演算子 &lt; (queue) (STL/CLR)
+## <a name="operatorlt-queue-stlclr"></a><a name="op_lt"></a> 演算子 &lt; (queue) (STL/CLR)
 
 キューの比較が少なくなっています。
 
@@ -1347,9 +1347,9 @@ template<typename Value,
 *そうです*<br/>
 比較する右のコンテナー。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
-演算子関数は、が true である場合にも true を返し `i` `!(right[i] < left[i])` `left[i] < right[i]` ます。 それ以外の場合は、 `left->` [queue:: size (STL/CLR)](../dotnet/queue-size-stl-clr.md)を返し `() <` `right->size()` ます。このメソッドを使用して、2つのキューが要素別に比較されるときに、 *left*が*right*の前に並べられているかどうかをテストします。
+演算子関数は、が true である場合にも true を返し `i` `!(right[i] < left[i])` `left[i] < right[i]` ます。 それ以外の場合は、 `left->` [queue:: size (STL/CLR)](#size)を返し `() <` `right->size()` ます。このメソッドを使用して、2つのキューが要素別に比較されるときに、 *left*が*right*の前に並べられているかどうかをテストします。
 
 ### <a name="example"></a>例
 
@@ -1397,7 +1397,7 @@ a b d
 [a b c] < [a b d] is True
 ```
 
-## <a name="operatorlt-queue-stlclr"></a><a name="op_lteq"></a>operator &lt; = (queue) (STL/CLR)
+## <a name="operatorlt-queue-stlclr"></a><a name="op_lteq"></a> operator &lt; = (queue) (STL/CLR)
 
 キューの値が以下であるかどうかを比較します。
 
@@ -1418,7 +1418,7 @@ template<typename Value,
 *そうです*<br/>
 比較する右のコンテナー。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 演算子関数はを返し `!(right < left)` ます。 このメソッドを使用して、2つのキューが要素別に比較されるときに、 *right*の後に*left*が順序付けされていないかどうかをテストします。
 
@@ -1468,7 +1468,7 @@ a b d
 [a b d] <= [a b c] is False
 ```
 
-## <a name="operator-queue-stlclr"></a><a name="op_eq"></a>operator = = (queue) (STL/CLR)
+## <a name="operator-queue-stlclr"></a><a name="op_eq"></a> operator = = (queue) (STL/CLR)
 
 キューが等しいかどうかの比較。
 
@@ -1489,9 +1489,9 @@ template<typename Value,
 *そうです*<br/>
 比較する右のコンテナー。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
-演算子関数は、*左*と*右*で制御されるシーケンスの長さが同じで、各位置についてがである場合にのみ true を返し `i` `left[i] ==` `right[i]` ます。 このメソッドを使用して、2つのキューが要素別に比較されるときに、 *left*が*right*と同じ順序で並んでいるかどうかをテストします。
+演算子関数は、 *左* と *右* で制御されるシーケンスの長さが同じで、各位置についてがである場合にのみ true を返し `i` `left[i] ==` `right[i]` ます。 このメソッドを使用して、2つのキューが要素別に比較されるときに、 *left* が *right* と同じ順序で並んでいるかどうかをテストします。
 
 ### <a name="example"></a>例
 
@@ -1539,7 +1539,7 @@ a b d
 [a b c] == [a b d] is False
 ```
 
-## <a name="operatorgt-queue-stlclr"></a><a name="op_gt"></a>演算子 &gt; (queue) (STL/CLR)
+## <a name="operatorgt-queue-stlclr"></a><a name="op_gt"></a> 演算子 &gt; (queue) (STL/CLR)
 
 キューが比較を超えています。
 
@@ -1560,7 +1560,7 @@ template<typename Value,
 *そうです*<br/>
 比較する右のコンテナー。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 演算子関数はを返し `right` `<` `left` ます。 このメソッドを使用して、2つのキューが要素別に比較されたときに、 *right*の後にある*かどうか*をテストします。
 
@@ -1610,7 +1610,7 @@ a b d
 [a b d] > [a b c] is True
 ```
 
-## <a name="operatorgt-queue-stlclr"></a><a name="op_gteq"></a>operator &gt; = (queue) (STL/CLR)
+## <a name="operatorgt-queue-stlclr"></a><a name="op_gteq"></a> operator &gt; = (queue) (STL/CLR)
 
 キューが以上比較しています。
 
@@ -1631,9 +1631,9 @@ template<typename Value,
 *そうです*<br/>
 比較する右のコンテナー。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
-演算子関数はを返し `!(left < right)` ます。 このメソッドを使用して、2つのキューが要素別に比較されるときに、 *left*が*right*の前に順序付けされていないかどうかをテストします。
+演算子関数はを返し `!(left < right)` ます。 このメソッドを使用して、2つのキューが要素別に比較されるときに、 *left* が *right* の前に順序付けされていないかどうかをテストします。
 
 ### <a name="example"></a>例
 

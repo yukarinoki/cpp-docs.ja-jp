@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2201
 ms.assetid: ed927659-6e9c-447d-9963-19969ae1e957
-ms.openlocfilehash: 05f8bb3e9b77d547bce363ea82b8e3816ed998cc
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: d6697de48c4868170e8c7afa287b0eb43e9523f5
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87216324"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91501650"
 ---
 # <a name="compiler-error-c2201"></a>コンパイラ エラー C2201
 
@@ -30,4 +30,4 @@ __declspec(dllexport) void func2() {}   // OK
 
 ## <a name="see-also"></a>関連項目
 
-[リンケージの種類](../../cpp/types-of-linkage.md)
+[リンケージの種類](../../cpp/program-and-linkage-cpp.md)

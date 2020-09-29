@@ -32,12 +32,12 @@ helpviewer_keywords:
 - SetGUID method
 - AddProperty method
 ms.assetid: 54190149-c277-4679-b81a-ef484d4d1c00
-ms.openlocfilehash: 48aa2e3e26bed7c9306ca3005231e464d7b7555b
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 45772896cac520eba35ec475f8b6ae7bd2993045
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88838258"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91502465"
 ---
 # <a name="cdbpropset-class"></a>CDBPropSet クラス
 
@@ -63,13 +63,13 @@ class CDBPropSet : public tagDBPROPSET
 |[CDBPropSet](#cdbpropset)|コンストラクターです。|
 |[SetGUID](#setguid)|`guidPropertySet`構造体のフィールドを設定 `DBPROPSET` します。|
 
-### <a name="operators"></a>演算子
+### <a name="operators"></a>オペレーター
 
 | 名前 | 説明 |
 |-|-|
 |[operator =](#op_equal)|1つのプロパティセットの内容を別のプロパティに割り当てます。|
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>注釈
 
 OLE DB プロバイダーとコンシューマーは、構造体を使用して `DBPROPSET` 構造体の配列を渡し `DBPROP` ます。 各 `DBPROP` 構造体は、設定できる1つのプロパティを表します。
 
@@ -161,9 +161,9 @@ void SetGUID(const GUID& guid) throw();
 *guid*<br/>
 から `guidPropertySet` [DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85)) 構造体のフィールドを設定するために使用される GUID。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
-このフィールドは、 [コンストラクター](../../data/oledb/cdbpropset-cdbpropset.md) でも設定できます。
+このフィールドは、 [コンストラクター](#cdbpropset) でも設定できます。
 
 ## <a name="cdbpropsetoperator-"></a><a name="op_equal"></a> CDBPropSet:: operator =
 

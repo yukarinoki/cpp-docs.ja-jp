@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3761
 ms.assetid: 0c16f093-7a78-4838-b90b-0c67ef6e9270
-ms.openlocfilehash: f3ac54b7f72cbcc8107aeaebaac4b8e824d3c315
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 615992a2cf7563ab474f2547098a645dde0a31f8
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74757268"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91501261"
 ---
 # <a name="compiler-error-c3761"></a>コンパイラ エラー C3761
 
 ' function ': ' retval ' は関数の最後の引数でのみ使用できます
 
-[Retval](../../windows/retval.md)属性が、リストの最後の引数ではない関数引数で使用されました。
+[Retval](../../windows/attributes/retval.md)属性が、リストの最後の引数ではない関数引数で使用されました。
 
 次の例では、C3761 が生成されます。
 

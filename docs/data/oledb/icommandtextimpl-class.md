@@ -22,12 +22,12 @@ helpviewer_keywords:
 - m_strCommandText
 - SetCommandText method
 ms.assetid: 9c2715cc-1e55-4468-8327-85341617ed46
-ms.openlocfilehash: 8d435cd8c5c8723d008be98482631f081c967058
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 7d31933b162a74db31bdd3c65dc68e396a3896c4
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88845121"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91501723"
 ---
 # <a name="icommandtextimpl-class"></a>ICommandTextImpl クラス
 
@@ -56,7 +56,7 @@ class ATL_NO_VTABLE ICommandTextImpl
 
 | 名前 | 説明 |
 |-|-|
-|[GetCommandText](#getcommandtext)|[Setcommandtext](../../data/oledb/icommandtextimpl-setcommandtext.md)の最後の呼び出しで設定されたテキストコマンドを返します。|
+|[GetCommandText](#getcommandtext)|[Setcommandtext](#setcommandtext)の最後の呼び出しで設定されたテキストコマンドを返します。|
 |[SetCommandText](#setcommandtext)|既存のコマンドテキストを置き換えて、コマンドテキストを設定します。|
 
 ### <a name="data-members"></a>データ メンバー
@@ -65,13 +65,13 @@ class ATL_NO_VTABLE ICommandTextImpl
 |-|-|
 |[m_strCommandText](#strcommandtext)|コマンドテキストを格納します。|
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>注釈
 
 コマンドの必須のインターフェイスです。
 
 ## <a name="icommandtextimplgetcommandtext"></a><a name="getcommandtext"></a> ICommandTextImpl:: GetCommandText
 
-[Setcommandtext](../../data/oledb/icommandtextimpl-setcommandtext.md)の最後の呼び出しで設定されたテキストコマンドを返します。
+[Setcommandtext](#setcommandtext)の最後の呼び出しで設定されたテキストコマンドを返します。
 
 ### <a name="syntax"></a>構文
 

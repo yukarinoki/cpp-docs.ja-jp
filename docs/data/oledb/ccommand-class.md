@@ -49,12 +49,12 @@ helpviewer_keywords:
 - SetParameterInfo method
 - Unprepare method
 ms.assetid: 0760bfc5-b9ee-4aee-8e54-31bd78714d3a
-ms.openlocfilehash: beabe73ff4ce0e6be8aaccfcdc636adc1ba04d5c
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 109998dd742828b3c41672fa2afa8716e4687f6a
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88838439"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91501014"
 ---
 # <a name="ccommand-class"></a>CCommand クラス
 
@@ -78,7 +78,7 @@ class CCommand :
 コマンドで使用するアクセサークラスの型 ( `CDynamicParameterAccessor` 、 `CDynamicStringAccessor` 、またはなど `CEnumeratorAccessor` )。 既定値はです `CNoAccessor` 。これは、クラスがパラメーターまたは出力列をサポートしていないことを指定します。
 
 *TRowset*<br/>
-コマンドで使用する行セットクラスの型 ( `CArrayRowset` やなど `CNoRowset` )。 既定では、 `CRowset`です。
+コマンドで使用する行セットクラスの型 ( `CArrayRowset` やなど `CNoRowset` )。 既定値は、`CRowset` です。
 
 *TMultiple*<br/>
 複数の結果を返すことができる OLE DB コマンドを使用するには、 [C乗数 Eresults](../../data/oledb/cmultipleresults-class.md)を指定します。 それ以外の場合は、 [Cno乗数 Eresults](../../data/oledb/cnomultipleresults-class.md)を使用します。 詳細については、「 [IMultipleResults](/previous-versions/windows/desktop/ms721289(v=vs.85))」を参照してください。
@@ -104,12 +104,12 @@ class CCommand :
 |[作成](#create)|指定されたセッションに対して新しいコマンドを作成し、コマンドテキストを設定します。|
 |[CreateCommand](#createcommand)|新しいコマンドを作成します。|
 |[GetParameterInfo](#getparameterinfo)|コマンドのパラメーターとその名前、およびその型の一覧を取得します。|
-|[立て](#prepare)|現在のコマンドを検証して最適化します。|
+|[準備](#prepare)|現在のコマンドを検証して最適化します。|
 |[ReleaseCommand](#releasecommand)|必要に応じてパラメーターアクセサーを解放してから、コマンドを解放します。|
 |[SetParameterInfo](#setparameterinfo)|各コマンドパラメーターのネイティブな型を指定します。|
 |[Unprepare](#unprepare)|現在のコマンド実行プランを破棄します。|
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>注釈
 
 このクラスは、パラメーターベースの操作を実行したり、コマンドを実行したりする必要がある場合に使用します。 単純な行セットを開く必要があるだけの場合は、代わりに [CTable](../../data/oledb/ctable-class.md) を使用します。
 
@@ -131,7 +131,7 @@ void Close();
 
 コマンドは、行セット、結果セットアクセサー、および (必要に応じて) パラメーターアクセサーを使用します。これは、パラメーターをサポートせず、パラメーターアクセサーを必要としないテーブルとは異なります。
 
-コマンドを実行するときは、 `Close` コマンドの後にと [ReleaseCommand](../../data/oledb/ccommand-releasecommand.md) の両方を呼び出す必要があります。
+コマンドを実行するときは、 `Close` コマンドの後にと [ReleaseCommand](#releasecommand) の両方を呼び出す必要があります。
 
 同じコマンドを繰り返し実行する場合は、を呼び出す前にを呼び出して、各結果セットアクセサーを解放する必要があり `Close` `Execute` ます。 シリーズの最後に、を呼び出してパラメーターアクセサーを解放する必要があり `ReleaseCommand` ます。 もう1つの一般的なシナリオは、出力パラメーターを持つストアドプロシージャを呼び出すことです。 多くのプロバイダー (SQL Server の OLE DB プロバイダーなど) では、結果セットのアクセサーを閉じるまで、出力パラメーターの値にはアクセスできません。 を呼び出して、 `Close` 返された行セットと結果セットアクセサーを閉じます。ただし、パラメーターアクセサーは使用しないため、出力パラメーターの値を取得できます。
 
@@ -164,7 +164,7 @@ HRESULT GetNextResult(DBROWCOUNT* pulRowsAffected,
 
 標準の HRESULT です。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 結果セットが既にフェッチされている場合、この関数は前の結果セットを解放し、列をバインド解除します。 *Bbind*がの場合は **`true`** 、新しい列をバインドします。
 
@@ -213,7 +213,7 @@ HRESULT Open(DBPROPSET *pPropSet = NULL,
 からコマンドを実行するセッション。
 
 *wszCommand*<br/>
-から実行するコマンド。 Unicode 文字列として渡されます。 を使用する場合、NULL を指定できます `CAccessor` 。この場合、コマンドは [DEFINE_COMMAND](../../data/oledb/define-command.md) マクロに渡された値から取得されます。 詳細については、 *OLE DB プログラマーリファレンス*の「 [ICommand:: Execute](/previous-versions/windows/desktop/ms718095(v=vs.85)) 」を参照してください。
+から実行するコマンド。 Unicode 文字列として渡されます。 を使用する場合、NULL を指定できます `CAccessor` 。この場合、コマンドは [DEFINE_COMMAND](./macros-and-global-functions-for-ole-db-consumer-templates.md#define_command) マクロに渡された値から取得されます。 詳細については、 *OLE DB プログラマーリファレンス*の「 [ICommand:: Execute](/previous-versions/windows/desktop/ms718095(v=vs.85)) 」を参照してください。
 
 *szCommand*<br/>
 から *WszCommand* と同じですが、このパラメーターは ANSI コマンド文字列を受け取る点が異なります。 このメソッドの4番目の形式は、NULL 値を受け取ることができます。 詳細については、このトピックで後述する「解説」を参照してください。
@@ -224,7 +224,7 @@ HRESULT Open(DBPROPSET *pPropSet = NULL,
 *pRowsAffected 影響を受けた*<br/>
 [入力/出力]コマンドの影響を受ける行の数を返すメモリへのポインターが返されます。 * \* Prowsaffected を受け*たが NULL の場合、行数は返されません。 それ以外の場合は、 `Open` 次の条件に従って、適用される* \* prowsaffected*設定します。
 
-|状況|THEN|
+|If|THEN|
 |--------|----------|
 |`cParamSets`の要素 `pParams` が1を超えています。|* \* prowsaffected* 、実行時に指定されたすべてのパラメーターセットの影響を受ける行の合計数を表します。|
 |影響を受ける行の数は使用できません|* \* prowsaffected* -1 に設定されています。|
@@ -243,7 +243,7 @@ HRESULT Open(DBPROPSET *pPropSet = NULL,
 
 標準の HRESULT です。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 最初の3つの形式は、セッションを取得し、 `Open` コマンドを作成し、必要に応じてパラメーターをバインドして、コマンドを実行します。
 
@@ -253,14 +253,14 @@ HRESULT Open(DBPROPSET *pPropSet = NULL,
 
 の3番目の形式では、 `Open` コマンド文字列を null にすることができます。これは、型の既定値が null であるため **`int`** です。 またはを呼び出すために用意されてい `Open(session, NULL);` `Open(session);` ます。 NULL は型 **`int`** です。 このバージョンでは、パラメーターが NULL であることを要求し、アサートし **`int`** ます。
 
-`Open`コマンドが既に作成されていて、1回の[準備](../../data/oledb/ccommand-prepare.md)と複数の実行を実行する場合は、の4番目の形式を使用します。
+`Open`コマンドが既に作成されていて、1回の[準備](#prepare)と複数の実行を実行する場合は、の4番目の形式を使用します。
 
 > [!NOTE]
 > `Open``Execute`はを呼び出し、はを呼び出し `GetNextResult` ます。
 
 ## <a name="ccommandcreate"></a><a name="create"></a> CCommand:: Create
 
-[CCommand:: CreateCommand](../../data/oledb/ccommand-createcommand.md)を呼び出して、指定されたセッションのコマンドを作成し、 [ICommandText:: setcommandtext](/previous-versions/windows/desktop/ms709825(v=vs.85))を呼び出してコマンドテキストを指定します。
+[CCommand:: CreateCommand](#createcommand)を呼び出して、指定されたセッションのコマンドを作成し、 [ICommandText:: setcommandtext](/previous-versions/windows/desktop/ms709825(v=vs.85))を呼び出してコマンドテキストを指定します。
 
 ### <a name="syntax"></a>構文
 
@@ -292,7 +292,7 @@ HRESULT CCommandBase::Create(const CSession& session,
 
 標準の HRESULT です。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 の最初の形式は、 `Create` Unicode のコマンド文字列を受け取ります。 の2番目の形式は、 `Create` ansi コマンド文字列を受け取ります (既存の ansi アプリケーションとの下位互換性のために用意されています)。
 
@@ -315,7 +315,7 @@ HRESULT CCommandBase::CreateCommand(const CSession& session) throw ();
 
 標準の HRESULT です。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 このメソッドは、指定されたセッションオブジェクトを使用してコマンドを作成します。
 
@@ -358,7 +358,7 @@ HRESULT CCommandBase::Prepare(ULONG cExpectedRuns = 0) throw();
 
 標準の HRESULT です。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 このメソッドは、OLE DB メソッド [ICommandPrepare::P repare](/previous-versions/windows/desktop/ms718370(v=vs.85))をラップします。
 
@@ -374,7 +374,7 @@ void CCommandBase::ReleaseCommand() throw();
 
 ### <a name="remarks"></a>解説
 
-`ReleaseCommand` は、と組み合わせて使用され `Close` ます。 詳細については、「 [Close](../../data/oledb/ccommand-close.md) 」を参照してください。
+`ReleaseCommand` は、と組み合わせて使用され `Close` ます。 詳細については、「 [Close](#close) 」を参照してください。
 
 ## <a name="ccommandsetparameterinfo"></a><a name="setparameterinfo"></a> CCommand:: SetParameterInfo
 
@@ -410,7 +410,7 @@ HRESULT CCommandBase::Unprepare() throw();
 
 標準の HRESULT です。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 このメソッドは、OLE DB メソッド [ICommandPrepare:: Unprepare](/previous-versions/windows/desktop/ms719635(v=vs.85))をラップします。
 

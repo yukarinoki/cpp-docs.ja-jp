@@ -7,16 +7,16 @@ helpviewer_keywords:
 - stored procedures, defining
 - stored procedures, OLE DB
 ms.assetid: 54949b81-3275-4dd9-96e4-3eda1ed755f2
-ms.openlocfilehash: 9bab086bf6982eae5779d3199cfd2ac2c8efe77f
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 47f68bcf5c62aa54cc5ee60de166e1085f5a3fc5
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80211005"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91500927"
 ---
 # <a name="defining-stored-procedures"></a>ストアド プロシージャの定義
 
-ストアドプロシージャを呼び出す前に、 [DEFINE_COMMAND](../../data/oledb/define-command.md)マクロを使用して、ストアドプロシージャを定義する必要があります。 コマンドを定義すると、はパラメーターマーカーとして疑問符 (?) を使用してパラメーターを表します。
+ストアドプロシージャを呼び出す前に、 [DEFINE_COMMAND](./macros-and-global-functions-for-ole-db-consumer-templates.md#define_command) マクロを使用して、ストアドプロシージャを定義する必要があります。 コマンドを定義すると、はパラメーターマーカーとして疑問符 (?) を使用してパラメーターを表します。
 
 ```cpp
 DEFINE_COMMAND_EX(CMySProcAccessor, _T("{INSERT {name, phone} INTO shippers (?,?)}"))
@@ -35,7 +35,7 @@ BEGIN_PARAM_MAP(CMySProcAccessor)
 END_PARAM_MAP()
 ```
 
-前の例では、ストアドプロシージャを定義します。 通常、コードを効率的に再利用するために、データベースには、`Sales by Year` や `dt_adduserobject`などの名前を持つ定義済みストアドプロシージャのセットが含まれています。 SQL Server Enterprise マネージャーを使用して、定義を表示できます。 これらを次のように呼び出し*ます (?* パラメーターは、ストアドプロシージャのインターフェイスによって異なります。
+前の例では、ストアドプロシージャを定義します。 通常、コードを効率的に再利用するために、データベースには、やなどの名前を持つ定義済みストアドプロシージャのセットが含まれてい `Sales by Year` `dt_adduserobject` ます。 SQL Server Enterprise マネージャーを使用して、定義を表示できます。 これらを次のように呼び出し *ます (?* パラメーターは、ストアドプロシージャのインターフェイスによって異なります。
 
 ```cpp
 DEFINE_COMMAND_EX(CMySProcAccessor, _T("{CALL \"Sales by Year\" (?,?) }"))
@@ -48,7 +48,7 @@ DEFINE_COMMAND_EX(CMySProcAccessor, _T("{CALL dbo.dt_adduserobject (?,?) }"))
 class CMySProc : public CCommand<CAccessor<CMySProcAccessor>>
 ```
 
-最後に、次のように `OpenRowset` でストアドプロシージャを呼び出します。
+最後に、次のように、でストアドプロシージャを呼び出し `OpenRowset` ます。
 
 ```cpp
 CSession m_session;
@@ -59,12 +59,12 @@ HRESULT OpenRowset()
 }
 ```
 
-また、次のように[db_command](../../windows/db-command.md)データベース属性を使用してストアドプロシージャを定義することもできます。
+また、次のように [db_command](../../windows/attributes/db-command.md) データベース属性を使用してストアドプロシージャを定義することもできます。
 
 ```cpp
 db_command("{ ? = CALL dbo.dt_adduserobject }")
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[ストアド プロシージャの使用](../../data/oledb/using-stored-procedures.md)
+[ストアドプロシージャの使用](../../data/oledb/using-stored-procedures.md)

@@ -31,16 +31,16 @@ helpviewer_keywords:
 - operator=, property sets
 - SetGUID method
 ms.assetid: 52bb806c-9581-494d-9af7-50d8a4834805
-ms.openlocfilehash: 24cc621e522ed1939fe3127d97e8d54b75fa1618
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 4de218188326dad434c5b0d355a3a15d39bb576c
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88838296"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91502502"
 ---
 # <a name="cdbpropidset-class"></a>CDBPropIDSet クラス
 
-は `DBPROPIDSET` 構造体から継承し、キーフィールドと [AddPropertyID](../../data/oledb/cdbpropidset-addpropertyid.md) アクセスメソッドを初期化するコンストラクターを追加します。
+は `DBPROPIDSET` 構造体から継承し、キーフィールドと [AddPropertyID](#addpropertyid) アクセスメソッドを初期化するコンストラクターを追加します。
 
 ## <a name="syntax"></a>構文
 
@@ -62,13 +62,13 @@ class CDBPropIDSet : public tagDBPROPIDSET
 |[CDBPropIDSet](#cdbpropidset)|コンストラクターです。|
 |[SetGUID](#setguid)|プロパティ ID セットの GUID を設定します。|
 
-### <a name="operators"></a>演算子
+### <a name="operators"></a>オペレーター
 
 | 名前 | 説明 |
 |-|-|
 |[operator =](#op_equal)|あるプロパティ ID の内容を別のプロパティ ID に設定します。|
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>注釈
 
 OLE DB コンシューマー `DBPROPIDSET` は、構造体を使用して、コンシューマーがプロパティ情報を取得するプロパティ id の配列を渡します。 1つの [Dbpropidset](/previous-versions/windows/desktop/ms717981(v=vs.85)) 構造体で識別されるプロパティは、1つのプロパティセットに属します。
 
@@ -124,9 +124,9 @@ void SetGUID(const GUID& guid) throw();
 *guid*<br/>
 から `guidPropertySet` [Dbpropidset](/previous-versions/windows/desktop/ms717981(v=vs.85)) 構造体のフィールドを設定するために使用される GUID です。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
-このフィールドは、 [コンストラクター](../../data/oledb/cdbpropidset-cdbpropidset.md) でも設定できます。 このクラスの既定のコンストラクターを使用する場合は、この関数を呼び出します。
+このフィールドは、 [コンストラクター](#cdbpropidset) でも設定できます。 このクラスの既定のコンストラクターを使用する場合は、この関数を呼び出します。
 
 ## <a name="cdbpropidsetoperator-"></a><a name="op_equal"></a> CDBPropIDSet:: operator =
 

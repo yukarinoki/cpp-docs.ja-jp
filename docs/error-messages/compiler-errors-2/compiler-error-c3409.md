@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3409
 ms.assetid: e372d9fa-230c-4b28-b6d3-6ad81ccf9dbb
-ms.openlocfilehash: 360fedc6cadf275704a790c257c42ac8bde7873d
-ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
+ms.openlocfilehash: d3800998ded1758ab1de92af689d9d4613c2c61e
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90742061"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91502335"
 ---
 # <a name="compiler-error-c3409"></a>コンパイラ エラー C3409
 
@@ -19,7 +19,7 @@ ms.locfileid: "90742061"
 
 ## <a name="remarks"></a>注釈
 
-角かっこは、コンパイラによって [属性](../../windows/attributes-alphabetical-reference.md) ブロックとして解釈されましたが、属性が見つかりませんでした。
+角かっこは、コンパイラによって [属性](../../windows/attributes/attributes-alphabetical-reference.md) ブロックとして解釈されましたが、属性が見つかりませんでした。
 
 ラムダ式の定義の一部として角かっこを使用すると、コンパイラはこのエラーを生成することがあります。 このエラーは、コンパイラが、角かっこがラムダ式または属性ブロックの定義の一部であるかどうかを判断できない場合に発生します。 ラムダ式について詳しくは、「[ラムダ式](../../cpp/lambda-expressions-in-cpp.md)」をご覧ください。
 
@@ -67,6 +67,6 @@ int main()
 
 ## <a name="see-also"></a>関連項目
 
-[attribute](../../windows/attributes-alphabetical-reference.md)<br/>
+[attribute](../../windows/attributes/attributes-alphabetical-reference.md)<br/>
 [ラムダ式](../../cpp/lambda-expressions-in-cpp.md)<br/>
 [ラムダ式の構文](../../cpp/lambda-expression-syntax.md)

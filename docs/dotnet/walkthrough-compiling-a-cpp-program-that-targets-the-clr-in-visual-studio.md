@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Visual C++, managed code
 - managed code [C++]
 ms.assetid: 339f89df-a5d2-4040-831a-ddbe25b5dce4
-ms.openlocfilehash: 63996af56f03890c9a78e95743367d47416d5d48
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 2fceb57e062b9179245ba235fb497ff526a6660e
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87214829"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91501687"
 ---
 # <a name="walkthrough-compile-a-ccli-program-that-targets-the-clr-in-visual-studio"></a>チュートリアル: Visual Studio で CLR を対象とする C++/CLI プログラムをコンパイルする
 
@@ -24,7 +24,7 @@ C++/CLI を使用すると、.NET クラスとネイティブ C++ 型を使用�
 ## <a name="prerequisites"></a>必須コンポーネント
 
 - C++ 言語の基本の理解。
-- Visual Studio 2017 以降では、C++/CLI のサポートはオプションのコンポーネントです。 インストールするには、Windows の [スタート] メニューから**Visual Studio インストーラー**を開きます。 [ **C++ を使用したデスクトップ開発**] タイルがオンになっていることを確認し、[**オプション**コンポーネント] セクションで、[ **c++/cli サポート**] もオンにします。
+- Visual Studio 2017 以降では、C++/CLI のサポートはオプションのコンポーネントです。 インストールするには、Windows の [スタート] メニューから **Visual Studio インストーラー** を開きます。 [ **C++ を使用したデスクトップ開発** ] タイルがオンになっていることを確認し、[ **オプション** コンポーネント] セクションで、[ **c++/cli サポート**] もオンにします。
 
 ## <a name="create-a-new-project"></a>新しいプロジェクトを作成する
 
@@ -84,13 +84,13 @@ C++/CLI を使用すると、.NET クラスとネイティブ C++ 型を使用�
 
 1. Visual Studio で新しく作成されたタブをクリックして、有効な Visual C++ プログラムを入力するか、サンプル プログラムのいずれかをコピーして貼り付けます。
 
-   たとえば、(プログラミング ガイドの**ファイル処理と I/O** ノード内の) 「[方法: テキスト ファイルを記述する (C++/CLI)](how-to-write-a-text-file-cpp-cli.md)」サンプル プログラムを使用できます。
+   たとえば、(プログラミング ガイドの**ファイル処理と I/O** ノード内の) 「[方法: テキスト ファイルを記述する (C++/CLI)](./file-handling-and-i-o-cpp-cli.md#write_text)」サンプル プログラムを使用できます。
 
    サンプルプログラムを使用する場合は、 **`gcnew`** .net オブジェクトを作成するときにの代わりにキーワードを使用 **`new`** し、 **`gcnew`** `^` ポインター () ではなくハンドル () を返すことに注意して `*` ください。
 
    `StreamWriter^ sw = gcnew StreamWriter(fileName);`
 
-   C++/CLI 構文の詳細については、「[ランタイムプラットフォームのコンポーネント拡張](../extensions/component-extensions-for-runtime-platforms.md)」を参照してください。
+   C++/CLI 構文の詳細については、「 [ランタイムプラットフォームのコンポーネント拡張](../extensions/component-extensions-for-runtime-platforms.md)」を参照してください。
 
 1. **[ビルド]** メニューの **[ソリューションのビルド]** をクリックします。
 
@@ -98,7 +98,7 @@ C++/CLI を使用すると、.NET クラスとネイティブ C++ 型を使用�
 
    ビルドを行わずに、プログラムを変更して実行する場合、ダイアログ ボックスにプロジェクトが有効期限切れであることが示される場合があります。 Visual Studio がアプリケーションをビルドするたびに入力を求めるのではなく、常にファイルの現在のバージョンを使用するようにする場合は、このダイアログでチェック ボックスを選択してから **[OK]** をクリックします。
 
-1. [**デバッグ**] メニューの [**デバッグなしで開始**] をクリックします。
+1. [ **デバッグ** ] メニューの [ **デバッグなしで開始**] をクリックします。
 
 1. サンプル プログラムを使用した場合は、プログラムを実行するときに、テキスト ファイルが作成されたことを示すコマンド ウィンドウが表示されます。
 

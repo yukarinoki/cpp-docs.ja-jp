@@ -6,12 +6,12 @@ helpviewer_keywords:
 - dynamic column binding
 - providers [C++], dynamic column binding
 ms.assetid: 45e811e3-f5a7-4627-98cc-bf817c4e556e
-ms.openlocfilehash: 8a0b4c399bf25137be86d95102da9723c3116d51
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 3eee52004e1418b3e756a78c8c2a04040d0bd7ff
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80210978"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91501856"
 ---
 # <a name="dynamically-binding-columns-in-your-provider"></a>プロバイダーでの列の動的な連結
 
@@ -23,7 +23,7 @@ ms.locfileid: "80210978"
 
 ## <a name="to-implement-dynamic-column-binding"></a>動的な列バインドを実装するには
 
-1. `PROVIDER_COLUMN_MAP`をコードから削除します。
+1. `PROVIDER_COLUMN_MAP`コードからを削除します。
 
 1. ユーザーレコード (構造) で、次の宣言を追加します。
 
@@ -31,9 +31,9 @@ ms.locfileid: "80210978"
     static ATLCOLUMNINFO* GetColumnInfo(void* pThis, ULONG* pcCols);
     ```
 
-1. `GetColumnInfo` 関数を実装します。 この関数は、情報がどのように格納されるかをレイアウトします。 この関数については、プロパティまたはその他の情報の取得が必要になる場合があります。 [COLUMN_ENTRY](../../data/oledb/column-entry.md)マクロと同様にマクロを作成して、独自の情報を追加することもできます。
+1. 関数を実装 `GetColumnInfo` します。 この関数は、情報がどのように格納されるかをレイアウトします。 この関数については、プロパティまたはその他の情報の取得が必要になる場合があります。 [COLUMN_ENTRY](./macros-and-global-functions-for-ole-db-consumer-templates.md#column_entry)マクロと同様にマクロを作成して、独自の情報を追加することもできます。
 
-   次の例は、`GetColumnInfo` 関数を示しています。
+   次の例は、関数を示して `GetColumnInfo` います。
 
     ```cpp
     // Check the property flag for bookmarks, if it is set, set the zero
@@ -86,6 +86,6 @@ ms.locfileid: "80210978"
     }
     ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[OLE DB プロバイダー テンプレートの操作](../../data/oledb/working-with-ole-db-provider-templates.md)
+[OLE DB プロバイダーテンプレートの操作](../../data/oledb/working-with-ole-db-provider-templates.md)

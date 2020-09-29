@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - OLE DB templates
 ms.assetid: 73918f6f-1fd7-4fa2-a0ff-7f9d792fce7e
-ms.openlocfilehash: 00a54a65b6f23df358d1e140eeb1c3f9174a6ace
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: d3b709bbebdf040ac818d2d2d44576cf49aafdd4
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80209873"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91500904"
 ---
 # <a name="ole-db-templates"></a>OLE DB テンプレート
 
@@ -19,7 +19,7 @@ OLE DB テンプレートを使用すると、OLE DB によるデータ アク�
 
 ## <a name="in-this-section"></a>このセクションの内容
 
-[OLE DB コンシューマー テンプレートに関するページ](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
+[OLE DB コンシューマー テンプレート](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
 OLE DB コンシューマー テンプレート クラスへのリンクが用途別に記載されています。
 
 [OLE DB プロバイダー テンプレートに関するページ](../../data/oledb/ole-db-provider-templates-reference.md)<br/>
@@ -33,10 +33,10 @@ OLE DB の概要と OLE DB のユニバーサル データ アクセスに関す
 [OLE DB プログラマーズ リファレンス](/sql/connect/oledb/ole-db/oledb-driver-for-sql-server-programming)<br/>
 OLE DB に関する Windows SDK ドキュメントへのリンクが記載されています。
 
-[OLE DB テンプレートのサンプルに関するページ](../../overview/visual-cpp-samples.md)<br/>
+[OLE DB テンプレートのサンプル](../../overview/visual-cpp-samples.md)<br/>
 プロジェクトでの OLE DB の使用方法を示す OLE DB テンプレートのサンプルへのリンクが記載されています。
 
-[OLE DB コンシューマー テンプレートに関するページ](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[OLE DB コンシューマー テンプレート](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 OLE DB コンシューマー テンプレートに関する概念が記載されています。
 
 [OLE DB プロバイダー テンプレートに関するページ](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
@@ -51,7 +51,7 @@ OLE DB テンプレート コンシューマーの作成に関する説明が記
 [更新可能なプロバイダーの作成](../../data/oledb/creating-an-updatable-provider.md)<br/>
 データ ストアへの書き込みが可能なプロバイダーの作成に関する説明が記載されています。
 
-[OLE DB コンシューマー属性](../../windows/ole-db-consumer-attributes.md)<br/>
+[OLE DB のコンシューマー属性](../../windows/attributes/ole-db-consumer-attributes.md)<br/>
 OLE DB コンシューマー テンプレートに基づいてコードを挿入し、実用的な OLE DB コンシューマーを作成するためのシンプルなインターフェイスの説明が記載されています。
 
 [Active Template Library (ATL) リファレンスに関するページ](../../atl/atl-com-desktop-components.md)<br/>

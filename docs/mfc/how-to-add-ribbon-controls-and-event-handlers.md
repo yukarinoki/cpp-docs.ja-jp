@@ -5,12 +5,12 @@ helpviewer_keywords:
 - event handlers [MFC], adding
 - ribbon controls [MFC], adding
 ms.assetid: b31f25bc-ede7-49c3-9e3c-dffe4e174a69
-ms.openlocfilehash: 560524c36dbf57faec3b4b6372cade047f9fe7de
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: d6382c8ebf73fe7a26b3950cc1965b229c22dbb7
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84618478"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91501233"
 ---
 # <a name="how-to-add-ribbon-controls-and-event-handlers"></a>方法: リボン コントロールとイベント ハンドラーを追加する
 
@@ -20,7 +20,7 @@ ms.locfileid: "84618478"
 
 ### <a name="to-open-the-ribbon-designer"></a>リボンデザイナーを開くには
 
-1. Visual Studio の [**表示**] メニューで、[**リソースビュー**] をクリックします。
+1. Visual Studio の [ **表示** ] メニューで、[ **リソースビュー**] をクリックします。
 
 1. **リソースビュー**で、リボンリソースをダブルクリックしてデザイン画面に表示します。
 
@@ -28,9 +28,9 @@ ms.locfileid: "84618478"
 
 1. **ツールバー**の [**ボタン**] をクリックし、デザイン画面のパネルにドラッグします。
 
-1. ボタンを右クリックし、[**イベントハンドラーの追加**] をクリックします。
+1. ボタンを右クリックし、[ **イベントハンドラーの追加**] をクリックします。
 
-1. **イベントハンドラーウィザード**で、既定の設定を確認し、[**追加と編集**] をクリックします。 詳細については、「[イベントハンドラーウィザード](../ide/event-handler-wizard.md)」を参照してください。
+1. **イベントハンドラーウィザード**で、既定の設定を確認し、[**追加と編集**] をクリックします。 詳細については、「 [イベントハンドラーウィザード](../ide/adding-an-event-handler-visual-cpp.md#event-handler-wizard)」を参照してください。
 
 1. コードエディターで、次のコードをハンドラー関数に追加します。
 

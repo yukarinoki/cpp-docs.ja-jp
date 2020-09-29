@@ -51,18 +51,18 @@ helpviewer_keywords:
 - value_compare member [STL/CLR]
 - value_type member [STL/CLR]
 ms.assetid: 4d0000d3-68ff-4c4b-8157-7060540136f5
-ms.openlocfilehash: 6c5a37cc76f6ac3a3f92cf54b440960d7476daa9
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: fd87c39db279fb70d5c5b5f20e583251dc519755
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87211036"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91502396"
 ---
 # <a name="priority_queue-stlclr"></a>priority_queue (STL/CLR)
 
 このテンプレートクラスは、アクセスが制限されている要素のさまざまな長さの順序付け順序を制御するオブジェクトを表します。 コンテナーアダプターは、 `priority_queue` 基になるコンテナーを優先順位キューとして管理するために使用します。
 
-次の説明で、 `GValue` は、後者が参照型である場合を除き、*値*と同じです。この場合、は `Value^` です。 同様に、 `GContainer` は、後者が参照型である場合を除き、*コンテナー*と同じです。この場合、は `Container^` です。
+次の説明で、 `GValue` は、後者が参照型である場合を除き、 *値* と同じです。この場合、は `Value^` です。 同様に、 `GContainer` は、後者が参照型である場合を除き、 *コンテナー* と同じです。この場合、は `Container^` です。
 
 ## <a name="syntax"></a>構文
 
@@ -116,7 +116,7 @@ template<typename Value,
 |[priority_queue::to_array (STL/CLR)](#to_array)|被制御シーケンスを新しい配列にコピーします。|
 |[priority_queue::value_comp (STL/CLR)](#value_comp)|2 つの要素のための順序付けデリゲートをコピーします。|
 
-|プロパティ|Description|
+|プロパティ|説明|
 |--------------|-----------------|
 |[priority_queue::top_item (STL/CLR)](#top_item)|最も優先順位の高い要素にアクセスします。|
 
@@ -131,15 +131,15 @@ template<typename Value,
 |<xref:System.ICloneable>|オブジェクトを複製します。|
 |I優先キュー\<Value, Container>|汎用コンテナーアダプターを維持します。|
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>注釈
 
 オブジェクトは、 `Container` 要素を格納し、必要に応じて拡張する、基になるコンテナー (型) によって制御されるシーケンスのストレージを割り当て、解放し `Value` ます。 シーケンスはヒープとして保持され、優先順位の高い要素 (最上位要素) はすぐにアクセス可能で、リムーバブルになります。 オブジェクトは、新しい要素をプッシュするためのアクセスを制限し、優先順位キューを実装して、優先順位の高い要素だけをポップします。
 
-オブジェクトは、priority_queue:: value_compare 型の格納されたデリゲートオブジェクトを呼び出すことによって、制御するシーケンスを並べ替えます[(STL/CLR)](../dotnet/priority-queue-value-compare-stl-clr.md)。 Priority_queue を構築するときに、格納されているデリゲートオブジェクトを指定できます。デリゲートオブジェクトを指定しない場合、既定では比較が行われ `operator<(value_type, value_type)` ます。 この格納されているオブジェクトにアクセスするには、メンバー関数[priority_queue:: value_comp (STL/CLR)](../dotnet/priority-queue-value-comp-stl-clr.md)を呼び出し `()` ます。
+オブジェクトは、priority_queue:: value_compare 型の格納されたデリゲートオブジェクトを呼び出すことによって、制御するシーケンスを並べ替えます [(STL/CLR)](#value_compare)。 Priority_queue を構築するときに、格納されているデリゲートオブジェクトを指定できます。デリゲートオブジェクトを指定しない場合、既定では比較が行われ `operator<(value_type, value_type)` ます。 この格納されているオブジェクトにアクセスするには、メンバー関数[priority_queue:: value_comp (STL/CLR)](#value_comp)を呼び出し `()` ます。
 
-このようなデリゲートオブジェクトは、 [priority_queue:: value_type 型の値 (STL/CLR)](../dotnet/priority-queue-value-type-stl-clr.md)に対して厳密弱順序を強制する必要があります。 つまり、任意の2つのキーについては、次のようになり `X` `Y` ます。
+このようなデリゲートオブジェクトは、 [priority_queue:: value_type 型の値 (STL/CLR)](#value_type)に対して厳密弱順序を強制する必要があります。 つまり、任意の2つのキーについては、次のようになり `X` `Y` ます。
 
-`value_comp()(X, Y)`すべての呼び出しで同じブール型の結果を返します。
+`value_comp()(X, Y)` すべての呼び出しで同じブール型の結果を返します。
 
 `value_comp()(X, Y)`が true の場合、は `value_comp()(Y, X)` false である必要があります。
 
@@ -157,11 +157,11 @@ template<typename Value,
 
 順序が同等の要素は、プッシュされた順序とは異なる順序でポップされることがあります。 (順序は安定していません)。
 
-したがって、基になるコンテナーの候補として、 [deque (stl/clr)](../dotnet/deque-stl-clr.md)と[vector (stl/clr)](../dotnet/vector-stl-clr.md)があります。
+したがって、基になるコンテナーの候補として、 [deque (stl/clr)](../dotnet/deque-stl-clr.md) と [vector (stl/clr)](../dotnet/vector-stl-clr.md)があります。
 
 ## <a name="members"></a>メンバー
 
-## <a name="priority_queueassign-stlclr"></a><a name="assign"></a>priority_queue:: assign (STL/CLR)
+## <a name="priority_queueassign-stlclr"></a><a name="assign"></a> priority_queue:: assign (STL/CLR)
 
 すべての要素を置換します。
 
@@ -176,7 +176,7 @@ void assign(priority_queue<Value, Container>% right);
 *そうです*<br/>
 挿入するコンテナーアダプター。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 このメンバー関数は、 `right.get_container()` 基になるコンテナーにを割り当てます。 キューの内容全体を変更するには、これを使用します。
 
@@ -215,7 +215,7 @@ c a b
 c a b
 ```
 
-## <a name="priority_queueconst_reference-stlclr"></a><a name="const_reference"></a>priority_queue:: const_reference (STL/CLR)
+## <a name="priority_queueconst_reference-stlclr"></a><a name="const_reference"></a> priority_queue:: const_reference (STL/CLR)
 
 要素への定数参照の型です。
 
@@ -259,7 +259,7 @@ int main()
 c b a
 ```
 
-## <a name="priority_queuecontainer_type-stlclr"></a><a name="container_type"></a>priority_queue:: container_type (STL/CLR)
+## <a name="priority_queuecontainer_type-stlclr"></a><a name="container_type"></a> priority_queue:: container_type (STL/CLR)
 
 基になるコンテナーの型。
 
@@ -301,7 +301,7 @@ int main()
 c a b
 ```
 
-## <a name="priority_queuedifference_type-stlclr"></a><a name="difference_type"></a>priority_queue::d ifference_type (STL/CLR)
+## <a name="priority_queuedifference_type-stlclr"></a><a name="difference_type"></a> priority_queue::d ifference_type (STL/CLR)
 
 2つの要素間の符号付き距離の型。
 
@@ -359,7 +359,7 @@ pushing 2 = -2
 popping 3 = 3
 ```
 
-## <a name="priority_queueempty-stlclr"></a><a name="empty"></a>priority_queue:: empty (STL/CLR)
+## <a name="priority_queueempty-stlclr"></a><a name="empty"></a> priority_queue:: empty (STL/CLR)
 
 要素が存在しないかどうかをテストします。
 
@@ -371,7 +371,7 @@ bool empty();
 
 ### <a name="remarks"></a>解説
 
-このメンバー関数は、被制御シーケンスが空の場合に true を返します。 これは[priority_queue:: size (STL/CLR)](../dotnet/priority-queue-size-stl-clr.md)に相当 `() == 0` します。 Priority_queue が空であるかどうかをテストするために使用します。
+このメンバー関数は、被制御シーケンスが空の場合に true を返します。 これは[priority_queue:: size (STL/CLR)](#size)に相当 `() == 0` します。 Priority_queue が空であるかどうかをテストするために使用します。
 
 ### <a name="example"></a>例
 
@@ -413,7 +413,7 @@ size() = 0
 empty() = True
 ```
 
-## <a name="priority_queuegeneric_container-stlclr"></a><a name="generic_container"></a>priority_queue:: generic_container (STL/CLR)
+## <a name="priority_queuegeneric_container-stlclr"></a><a name="generic_container"></a> priority_queue:: generic_container (STL/CLR)
 
 コンテナーのジェネリックインターフェイスの型。
 
@@ -476,7 +476,7 @@ d c b a
 e d b a c
 ```
 
-## <a name="priority_queuegeneric_value-stlclr"></a><a name="generic_value"></a>priority_queue:: generic_value (STL/CLR)
+## <a name="priority_queuegeneric_value-stlclr"></a><a name="generic_value"></a> priority_queue:: generic_value (STL/CLR)
 
 コンテナーのジェネリックインターフェイスで使用する要素の型。
 
@@ -534,7 +534,7 @@ c a b
 c b a
 ```
 
-## <a name="priority_queueget_container-stlclr"></a><a name="get_container"></a>priority_queue:: get_container (STL/CLR)
+## <a name="priority_queueget_container-stlclr"></a><a name="get_container"></a> priority_queue:: get_container (STL/CLR)
 
 基になるコンテナーにアクセスします。
 
@@ -575,7 +575,7 @@ int main()
 c a b
 ```
 
-## <a name="priority_queueoperator-stlclr"></a><a name="op_as"></a>priority_queue:: operator = (STL/CLR)
+## <a name="priority_queueoperator-stlclr"></a><a name="op_as"></a> priority_queue:: operator = (STL/CLR)
 
 被制御シーケンスを置き換えます。
 
@@ -590,9 +590,9 @@ priority_queue <Value, Container>% operator=(priority_queue <Value, Container>% 
 *そうです*<br/>
 コピーするコンテナーアダプター。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
-メンバー演算子は、オブジェクトに*right*をコピーし、を返し **`*this`** ます。 このメソッドを使用して、被制御シーケンスを*右側*の被制御シーケンスのコピーで置き換えます。
+メンバー演算子は、オブジェクトに *right* をコピーし、を返し **`*this`** ます。 このメソッドを使用して、被制御シーケンスを *右側*の被制御シーケンスのコピーで置き換えます。
 
 ### <a name="example"></a>例
 
@@ -629,7 +629,7 @@ c a b
 c a b
 ```
 
-## <a name="priority_queuepop-stlclr"></a><a name="pop"></a>priority_queue::p op (STL/CLR)
+## <a name="priority_queuepop-stlclr"></a><a name="pop"></a> priority_queue::p op (STL/CLR)
 
 最上位の要素を削除します。
 
@@ -677,7 +677,7 @@ c a b
 b a
 ```
 
-## <a name="priority_queuepriority_queue-stlclr"></a><a name="priority_queue"></a>priority_queue::p riority_queue (STL/CLR)
+## <a name="priority_queuepriority_queue-stlclr"></a><a name="priority_queue"></a> priority_queue::p riority_queue (STL/CLR)
 
 コンテナーアダプターオブジェクトを構築します。
 
@@ -716,7 +716,7 @@ template<typename InIt>
 *そうです*<br/>
 挿入するオブジェクトまたは範囲。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 コンストラクター:
 
@@ -728,7 +728,7 @@ template<typename InIt>
 
 `priority_queue(priority_queue<Value, Container>% right);`
 
-順序述語を使用して、のコピーであるラップされたコンテナーを作成し `right.get_container()` `right.value_comp()` ます。 このメソッドを使用して、キューオブジェクト*権限*によって制御されるシーケンスのコピーである最初の被制御シーケンスを、同じ順序述語を使用して指定します。
+順序述語を使用して、のコピーであるラップされたコンテナーを作成し `right.get_container()` `right.value_comp()` ます。 このメソッドを使用して、キューオブジェクト *権限*によって制御されるシーケンスのコピーである最初の被制御シーケンスを、同じ順序述語を使用して指定します。
 
 コンストラクター:
 
@@ -740,13 +740,13 @@ template<typename InIt>
 
 `explicit priority_queue(value_compare^ pred);`
 
-順序述語*pred*を使用して、空のラップされたコンテナーを作成します。 このメソッドを使用して、指定された順序述語を使用して、空の初期被制御シーケンスを指定します。
+順序述語 *pred*を使用して、空のラップされたコンテナーを作成します。 このメソッドを使用して、指定された順序述語を使用して、空の初期被制御シーケンスを指定します。
 
 コンストラクター:
 
 `priority_queue(value_compare^ pred, container_type cont);`
 
-順序述語*pred*を使用して、空のラップされたコンテナーを作成します。次に、指定された順序述語を使用して、*既存のコンテナー*からの初期被制御シーケンスを指定するために、のすべての要素をプッシュします。
+順序述語 *pred*を使用して、空のラップされたコンテナーを作成します。次に、指定された順序述語を使用して、 *既存のコンテナー* からの初期被制御シーケンスを指定するために、のすべての要素をプッシュします。
 
 コンストラクター:
 
@@ -758,13 +758,13 @@ template<typename InIt>
 
 `template<typename InIt> priority_queue(InIt first, InIt last, value_compare^ pred);`
 
-順序述語*pred*を使用して、空のラップされたコンテナーを作成し、シーケンス [,) をプッシュし `first` `last` ます。 指定された順序述語を使用して、指定された seqeuence の最初の被制御シーケンスを指定します。
+順序述語 *pred*を使用して、空のラップされたコンテナーを作成し、シーケンス [,) をプッシュし `first` `last` ます。 指定された順序述語を使用して、指定された seqeuence の最初の被制御シーケンスを指定します。
 
 コンストラクター:
 
 `template<typename InIt> priority_queue(InIt first, InIt last, value_compare^ pred, container_type% cont);`
 
-順序述語*pred*を使用して、空のラップされたコンテナーを作成し、*継続*のすべての要素とシーケンス [,) をプッシュし `first` `last` ます。 このメソッドを使用して、指定された順序述語を使用して、既存のコンテナーと指定された seqeuence の最初の被制御シーケンスを指定します。
+順序述語 *pred*を使用して、空のラップされたコンテナーを作成し、 *継続* のすべての要素とシーケンス [,) をプッシュし `first` `last` ます。 このメソッドを使用して、指定された順序述語を使用して、既存のコンテナーと指定された seqeuence の最初の被制御シーケンスを指定します。
 
 ### <a name="example"></a>例
 
@@ -864,7 +864,7 @@ c a b
 a c b
 ```
 
-## <a name="priority_queuepush-stlclr"></a><a name="push"></a>priority_queue::p u (STL/CLR)
+## <a name="priority_queuepush-stlclr"></a><a name="push"></a> priority_queue::p u (STL/CLR)
 
 新しい要素を追加します。
 
@@ -905,7 +905,7 @@ int main()
 c a b
 ```
 
-## <a name="priority_queuereference-stlclr"></a><a name="reference"></a>priority_queue:: reference (STL/CLR)
+## <a name="priority_queuereference-stlclr"></a><a name="reference"></a> priority_queue:: reference (STL/CLR)
 
 要素への参照の型です。
 
@@ -954,7 +954,7 @@ c a b
 x a b
 ```
 
-## <a name="priority_queuesize-stlclr"></a><a name="size"></a>priority_queue:: size (STL/CLR)
+## <a name="priority_queuesize-stlclr"></a><a name="size"></a> priority_queue:: size (STL/CLR)
 
 要素の数をカウントします。
 
@@ -966,7 +966,7 @@ size_type size();
 
 ### <a name="remarks"></a>解説
 
-このメンバー関数は、被制御シーケンスの長さを返します。 このメソッドを使用して、被制御シーケンス内の現在の要素数を決定します。 シーケンスにゼロ以外のサイズがあるかどうかについては、「 [priority_queue:: empty (STL/CLR)](../dotnet/priority-queue-empty-stl-clr.md)」を参照してください `()` 。
+このメンバー関数は、被制御シーケンスの長さを返します。 このメソッドを使用して、被制御シーケンス内の現在の要素数を決定します。 シーケンスにゼロ以外のサイズがあるかどうかについては、「 [priority_queue:: empty (STL/CLR)](#empty)」を参照してください `()` 。
 
 ### <a name="example"></a>例
 
@@ -1008,7 +1008,7 @@ size() = 2 after popping
 size() = 4 after adding 2
 ```
 
-## <a name="priority_queuesize_type-stlclr"></a><a name="size_type"></a>priority_queue:: size_type (STL/CLR)
+## <a name="priority_queuesize_type-stlclr"></a><a name="size_type"></a> priority_queue:: size_type (STL/CLR)
 
 2つの要素間の符号付き距離の型。
 
@@ -1057,7 +1057,7 @@ c a b
 size difference = 2
 ```
 
-## <a name="priority_queueto_array-stlclr"></a><a name="to_array"></a>priority_queue:: to_array (STL/CLR)
+## <a name="priority_queueto_array-stlclr"></a><a name="to_array"></a> priority_queue:: to_array (STL/CLR)
 
 被制御シーケンスを新しい配列にコピーします。
 
@@ -1107,7 +1107,7 @@ d c b a
 c a b
 ```
 
-## <a name="priority_queuetop-stlclr"></a><a name="top"></a>priority_queue:: top (STL/CLR)
+## <a name="priority_queuetop-stlclr"></a><a name="top"></a> priority_queue:: top (STL/CLR)
 
 最も優先順位の高い要素にアクセスします。
 
@@ -1153,7 +1153,7 @@ int main()
     }
 ```
 
-## <a name="priority_queuetop_item-stlclr"></a><a name="top_item"></a>priority_queue:: top_item (STL/CLR)
+## <a name="priority_queuetop_item-stlclr"></a><a name="top_item"></a> priority_queue:: top_item (STL/CLR)
 
 最も優先順位の高い要素にアクセスします。
 
@@ -1205,7 +1205,7 @@ top_item = c
 x a b
 ```
 
-## <a name="priority_queuevalue_comp-stlclr"></a><a name="value_comp"></a>priority_queue:: value_comp (STL/CLR)
+## <a name="priority_queuevalue_comp-stlclr"></a><a name="value_comp"></a> priority_queue:: value_comp (STL/CLR)
 
 2 つの要素のための順序付けデリゲートをコピーします。
 
@@ -1264,7 +1264,7 @@ compare(L'a', L'b') = False
 compare(L'b', L'a') = True
 ```
 
-## <a name="priority_queuevalue_compare-stlclr"></a><a name="value_compare"></a>priority_queue:: value_compare (STL/CLR)
+## <a name="priority_queuevalue_compare-stlclr"></a><a name="value_compare"></a> priority_queue:: value_compare (STL/CLR)
 
 2つの値の順序付けデリゲート。
 
@@ -1323,7 +1323,7 @@ compare(L'a', L'b') = False
 compare(L'b', L'a') = True
 ```
 
-## <a name="priority_queuevalue_type-stlclr"></a><a name="value_type"></a>priority_queue:: value_type (STL/CLR)
+## <a name="priority_queuevalue_type-stlclr"></a><a name="value_type"></a> priority_queue:: value_type (STL/CLR)
 
 要素の型。
 
@@ -1335,7 +1335,7 @@ typedef Value value_type;
 
 ### <a name="remarks"></a>解説
 
-この型は、テンプレートパラメーター*値*のシノニムです。
+この型は、テンプレートパラメーター *値*のシノニムです。
 
 ### <a name="example"></a>例
 

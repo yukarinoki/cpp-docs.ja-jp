@@ -9,12 +9,12 @@ helpviewer_keywords:
 - math routines
 - floating-point numbers
 ms.assetid: e4fcaf69-5c8e-4854-a9bb-1f412042131e
-ms.openlocfilehash: 99a5de3ce816e64d4b477c8c1d3226da5f8f292e
-ms.sourcegitcommit: a6b97f5d78299ad93675de2fe0f0561f528d26c7
+ms.openlocfilehash: d1caaf5c9c0cfc7a3b6650bcb72a66b4c0028e28
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90569604"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91502110"
 ---
 # <a name="math-and-floating-point-support"></a>数値演算と浮動小数点のサポート
 
@@ -28,7 +28,7 @@ ISO C Standard 11 (C11) 以降では、 \<tgmath.h> ヘッダーにやを含め�
 
 ## <a name="supported-math-and-floating-point-routines"></a>サポートされている数値演算と浮動小数点のルーチン
 
-|ルーチンによって返される値|vmmblue_2|
+|ルーチンによって返される値|用途|
 |-|-|
 [abs、labs、llabs、_abs64](../c-runtime-library/reference/abs-labs-llabs-abs64.md)|整数型の絶対値を計算します
 [acos、acosf、acosl](../c-runtime-library/reference/acos-acosf-acosl.md)|アーク コサインを計算します

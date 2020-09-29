@@ -4,12 +4,12 @@ ms.date: 05/09/2019
 helpviewer_keywords:
 - OLE DB consumers, wizard-generated classes and methods
 ms.assetid: d80ee51c-8bb3-4dca-8760-5808e0fb47b4
-ms.openlocfilehash: ce2442909fd318187a1508300a75ff4f634b3410
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: f3bcc799f2a9591cfe7b2fc364b03161b5c0da33
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80211511"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91500699"
 ---
 # <a name="consumer-wizard-generated-methods"></a>コンシューマー ウィザードで生成されたメソッド
 
@@ -31,7 +31,7 @@ ATL OLE DB コンシューマー ウィザードは、Visual Studio 2019 以降�
 
 - `GetRowsetProperties` は、行セットのプロパティ セットへのポインターを取得します。このポインターを使用してプロパティを設定できます。
 
-- `OpenDataSource` は、 **[データ リンク プロパティ]** ダイアログ ボックスで指定された初期化文字列を使用してデータ ソースを開きます。
+- `OpenDataSource` は、**[データ リンク プロパティ]** ダイアログ ボックスで指定された初期化文字列を使用してデータ ソースを開きます。
 
 - `CloseDataSource` は、適切な方法でデータ ソースを閉じます。
 
@@ -43,7 +43,7 @@ HRESULT OpenAll();
 void CloseAll();
 ```
 
-次の例は、同じコマンドを繰り返し実行する場合に `OpenAll` と `CloseAll` を呼び出す方法を示しています。 [ の代わりに ](../../data/oledb/ccommand-close.md) と `Close` を呼び出すバリエーションを示す `ReleaseCommand`CCommand::Close`CloseAll` のコード例と比べてみてください。
+次の例は、同じコマンドを繰り返し実行する場合に `OpenAll` と `CloseAll` を呼び出す方法を示しています。 `CloseAll` の代わりに `Close` と `ReleaseCommand` を呼び出すバリエーションを示す [CCommand::Close](./ccommand-class.md#close) のコード例と比べてみてください。
 
 ```cpp
 int main(int argc, char* argv[])
@@ -76,7 +76,7 @@ int main(int argc, char* argv[])
 }
 ```
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 `HasBookmark` メソッドを定義すると、`OpenAll` コードによって `DBPROP_IRowsetLocate` プロパティが設定されます。これを行う場合、プロバイダーでこのプロパティがサポートされていることを確認してください。
 
@@ -141,7 +141,7 @@ void GetRowsetProperties(CDBPropSet* pPropSet)
 }
 ```
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 グローバルな `GetRowsetProperties` メソッドは、ウィザードによって定義されるメソッドと競合する可能性があるため、定義しないでください。 これは、テンプレート プロジェクトと属性プロジェクトとともに得られるウィザード生成メソッドであり、属性ではこのコードが挿入されません。
 
@@ -153,12 +153,12 @@ HRESULT OpenDataSource();
 void CloseDataSource();
 ```
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
-ウィザードがメソッド `OpenDataSource` と `CloseDataSource` を定義します。`OpenDataSource` は [CDataSource::OpenFromInitializationString](../../data/oledb/cdatasource-openfrominitializationstring.md) を呼び出します。
+ウィザードがメソッド `OpenDataSource` と `CloseDataSource` を定義します。`OpenDataSource` は [CDataSource::OpenFromInitializationString](./cdatasource-class.md#openfrominitializationstring) を呼び出します。
 
 ::: moniker-end
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[ウィザードを使用した OLE DB コンシューマーの作成](../../data/oledb/creating-an-ole-db-consumer-using-a-wizard.md)
+[ウィザードを使用して OLE DB コンシューマーを作成する](../../data/oledb/creating-an-ole-db-consumer-using-a-wizard.md)

@@ -14,12 +14,12 @@ helpviewer_keywords:
 - GetProperties method
 - SetProperties method
 ms.assetid: b3cf6aea-527e-4f0d-96e0-669178b021a2
-ms.openlocfilehash: f71ca7f5fb675916c9db7e5720e6c148f2131351
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: bd4dd73c79085a2c2d85a5dbacbfd20bc920108e
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88845576"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91501761"
 ---
 # <a name="icommandpropertiesimpl-class"></a>ICommandPropertiesImpl クラス
 
@@ -54,9 +54,9 @@ class ATL_NO_VTABLE ICommandPropertiesImpl
 |[GetProperties](#getproperties)|行セットに現在要求されている、行セットプロパティグループ内のプロパティの一覧を返します。|
 |[SetProperties](#setproperties)|行セットプロパティグループのプロパティを設定します。|
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>注釈
 
-これは、コマンドでは必須です。 実装は、 [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md) マクロによって定義される静的関数によって提供されます。
+これは、コマンドでは必須です。 実装は、 [BEGIN_PROPSET_MAP](./macros-for-ole-db-provider-templates.md#begin_propset_map) マクロによって定義される静的関数によって提供されます。
 
 ## <a name="icommandpropertiesimplgetproperties"></a><a name="getproperties"></a> ICommandPropertiesImpl:: GetProperties
 
@@ -75,9 +75,9 @@ STDMETHOD(GetProperties)(const ULONG cPropertyIDSets,
 
 *OLE DB プログラマーリファレンス*の「 [ICommandProperties:: GetProperties](/previous-versions/windows/desktop/ms723119(v=vs.85)) 」を参照してください。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
-「 [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md)」を参照してください。
+「 [BEGIN_PROPSET_MAP](./macros-for-ole-db-provider-templates.md#begin_propset_map)」を参照してください。
 
 ## <a name="icommandpropertiesimplsetproperties"></a><a name="setproperties"></a> ICommandPropertiesImpl:: SetProperties
 
