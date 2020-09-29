@@ -19,12 +19,12 @@ helpviewer_keywords:
 - SelectStockFont method [MFC]
 - fonts [MFC], ActiveX controls
 ms.assetid: 7c51d602-3f5a-481d-84d1-a5d8a3a71761
-ms.openlocfilehash: 58f387ba6f4d7cdffb3ffc1f7be6f9acde8314f4
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 02c52d2544afdc9d13fc3ec67ad9eed757a3f277
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84618162"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91499696"
 ---
 # <a name="mfc-activex-controls-using-fonts"></a>MFC ActiveX コントロール: フォントの使用
 
@@ -36,13 +36,13 @@ ActiveX コントロールにテキストが表示されている場合は、コ
 
 - [コントロールでカスタムフォントプロパティを使用する](#_core_implementing_a_custom_font_property)
 
-## <a name="using-the-stock-font-property"></a><a name="_core_using_the_stock_font_property"></a>ストックフォントプロパティの使用
+## <a name="using-the-stock-font-property"></a><a name="_core_using_the_stock_font_property"></a> ストックフォントプロパティの使用
 
-ストックフォントプロパティは、クラスによってクラスによって事前に実装され[ています](reference/colecontrol-class.md)。 また、標準のフォントプロパティページも使用できるため、ユーザーは、名前、サイズ、スタイルなど、フォントオブジェクトのさまざまな属性を変更できます。
+ストックフォントプロパティは、クラスによってクラスによって事前に実装され [ています](reference/colecontrol-class.md)。 また、標準のフォントプロパティページも使用できるため、ユーザーは、名前、サイズ、スタイルなど、フォントオブジェクトのさまざまな属性を変更できます。
 
-の[Getfont](reference/colecontrol-class.md#getfont)、 [SetFont](reference/colecontrol-class.md#setfont)、および[internalgetfont](reference/colecontrol-class.md#internalgetfont)関数を使用して、フォントオブジェクトにアクセスし `COleControl` ます。 コントロールユーザーは、 `GetFont` `SetFont` 他の Get/Set プロパティと同じ方法で、および関数を使用して、フォントオブジェクトにアクセスします。 コントロール内から font オブジェクトへのアクセスが必要な場合は、関数を使用し `InternalGetFont` ます。
+の [Getfont](reference/colecontrol-class.md#getfont)、 [SetFont](reference/colecontrol-class.md#setfont)、および [internalgetfont](reference/colecontrol-class.md#internalgetfont) 関数を使用して、フォントオブジェクトにアクセスし `COleControl` ます。 コントロールユーザーは、 `GetFont` `SetFont` 他の Get/Set プロパティと同じ方法で、および関数を使用して、フォントオブジェクトにアクセスします。 コントロール内から font オブジェクトへのアクセスが必要な場合は、関数を使用し `InternalGetFont` ます。
 
-[「MFC ActiveX コントロール: プロパティ](mfc-activex-controls-properties.md)」で説明したように、プロパティの[追加ウィザード](../ide/names-add-property-wizard.md)を使用すると、ストックプロパティを簡単に追加できます。 [フォント] プロパティを選択すると、プロパティの追加ウィザードによって、ストックフォントエントリがコントロールのディスパッチマップに自動的に挿入されます。
+[「MFC ActiveX コントロール: プロパティ](mfc-activex-controls-properties.md)」で説明したように、プロパティの[追加ウィザード](../ide/adding-a-property-visual-cpp.md#names-add-property-wizard)を使用すると、ストックプロパティを簡単に追加できます。 [フォント] プロパティを選択すると、プロパティの追加ウィザードによって、ストックフォントエントリがコントロールのディスパッチマップに自動的に挿入されます。
 
 #### <a name="to-add-the-stock-font-property-using-the-add-property-wizard"></a>プロパティの追加ウィザードを使用してストックフォントプロパティを追加するには
 
@@ -52,11 +52,11 @@ ActiveX コントロールにテキストが表示されている場合は、コ
 
 1. コントロールのインターフェイス ノード (ライブラリ ノードの 2 番目のノード) を右クリックし、ショートカット メニューを開きます。
 
-1. ショートカットメニューの [**追加**] をクリックし、[**プロパティの追加**] をクリックします。
+1. ショートカットメニューの [ **追加** ] をクリックし、[ **プロパティの追加**] をクリックします。
 
    これにより、プロパティの追加ウィザードが開きます。
 
-1. [**プロパティ名**] ボックスで、[**フォント**] をクリックします。
+1. [ **プロパティ名** ] ボックスで、[ **フォント**] をクリックします。
 
 1. **[完了]** をクリックします。
 
@@ -78,11 +78,11 @@ Stock Caption プロパティは、ストックフォントプロパティ情報
 
 1. コントロールのインターフェイス ノード (ライブラリ ノードの 2 番目のノード) を右クリックし、ショートカット メニューを開きます。
 
-1. ショートカットメニューの [**追加**] をクリックし、[**プロパティの追加**] をクリックします。
+1. ショートカットメニューの [ **追加** ] をクリックし、[ **プロパティの追加**] をクリックします。
 
    これにより、プロパティの追加ウィザードが開きます。
 
-1. [**プロパティ名**] ボックスで、[**キャプション**] をクリックします。
+1. [ **プロパティ名** ] ボックスで、[ **キャプション**] をクリックします。
 
 1. **[完了]** をクリックします。
 
@@ -90,15 +90,15 @@ Stock Caption プロパティは、ストックフォントプロパティ情報
 
 [!code-cpp[NVC_MFC_AxFont#3](codesnippet/cpp/mfc-activex-controls-using-fonts_3.cpp)]
 
-## <a name="modifying-the-ondraw-function"></a><a name="_core_modifying_the_ondraw_function"></a>OnDraw 関数の変更
+## <a name="modifying-the-ondraw-function"></a><a name="_core_modifying_the_ondraw_function"></a> OnDraw 関数の変更
 
-の既定の実装では、 `OnDraw` コントロールに表示されるすべてのテキストに対して Windows システムフォントが使用されます。 これは、 `OnDraw` デバイスコンテキストに対して font オブジェクトを選択して、コードを変更する必要があることを意味します。 これを行うには、次の例に示すように、 [COleControl:: SelectStockFont](reference/colecontrol-class.md#selectstockfont)を呼び出して、コントロールのデバイスコンテキストを渡します。
+の既定の実装では、 `OnDraw` コントロールに表示されるすべてのテキストに対して Windows システムフォントが使用されます。 これは、 `OnDraw` デバイスコンテキストに対して font オブジェクトを選択して、コードを変更する必要があることを意味します。 これを行うには、次の例に示すように、 [COleControl:: SelectStockFont](reference/colecontrol-class.md#selectstockfont) を呼び出して、コントロールのデバイスコンテキストを渡します。
 
 [!code-cpp[NVC_MFC_AxFont#4](codesnippet/cpp/mfc-activex-controls-using-fonts_4.cpp)]
 
 `OnDraw`フォントオブジェクトを使用するように関数を変更すると、コントロール内のテキストが、コントロールのストックフォントプロパティの特性と共に表示されます。
 
-## <a name="using-custom-font-properties-in-your-control"></a><a name="_core_using_custom_font_properties_in_your_control"></a>コントロールでカスタムフォントプロパティを使用する
+## <a name="using-custom-font-properties-in-your-control"></a><a name="_core_using_custom_font_properties_in_your_control"></a> コントロールでカスタムフォントプロパティを使用する
 
 [ストックフォント] プロパティに加えて、ActiveX コントロールにはカスタムフォントプロパティを設定できます。 カスタムフォントプロパティを追加するには、次のことを行う必要があります。
 
@@ -108,7 +108,7 @@ Stock Caption プロパティは、ストックフォントプロパティ情報
 
 - [新しいフォント通知インターフェイスを実装](#_core_implementing_a_new_font_notification_interface)しています。
 
-### <a name="implementing-a-custom-font-property"></a><a name="_core_implementing_a_custom_font_property"></a>カスタムフォントプロパティの実装
+### <a name="implementing-a-custom-font-property"></a><a name="_core_implementing_a_custom_font_property"></a> カスタムフォントプロパティの実装
 
 カスタムフォントプロパティを実装するには、プロパティの追加ウィザードを使用してプロパティを追加し、コードにいくつかの変更を加えます。 次のセクションでは、サンプルコントロールにカスタムプロパティを追加する方法について説明し `HeadingFont` ます。
 
@@ -120,11 +120,11 @@ Stock Caption プロパティは、ストックフォントプロパティ情報
 
 1. コントロールのインターフェイス ノード (ライブラリ ノードの 2 番目のノード) を右クリックし、ショートカット メニューを開きます。
 
-1. ショートカットメニューの [**追加**] をクリックし、[**プロパティの追加**] をクリックします。
+1. ショートカットメニューの [ **追加** ] をクリックし、[ **プロパティの追加**] をクリックします。
 
    これにより、プロパティの追加ウィザードが開きます。
 
-1. [**プロパティ名**] ボックスに、プロパティの名前を入力します。 この例では、 **HeadingFont**を使用します。
+1. [ **プロパティ名** ] ボックスに、プロパティの名前を入力します。 この例では、 **HeadingFont**を使用します。
 
 1. **[実装型]** として、 **[Get/Set メソッド]** をクリックします。
 
@@ -156,7 +156,7 @@ DISP_PROPERTY_EX マクロは、 `HeadingFont` プロパティ名を対応する
 
 コントロールの実装ファイル (「」を指定します。CPP) を実行し、次の操作を行います。
 
-- コントロールコンストラクターの*m_fontHeading*を初期化します。
+- コントロールコンストラクターの *m_fontHeading* を初期化します。
 
    [!code-cpp[NVC_MFC_AxFont#9](codesnippet/cpp/mfc-activex-controls-using-fonts_9.cpp)]
 
@@ -198,7 +198,7 @@ DISP_PROPERTY_EX マクロは、 `HeadingFont` プロパティ名を対応する
 
 これらの変更が行われた後、プロジェクト全体をリビルドして、追加の機能を組み込みます。
 
-### <a name="processing-font-notifications"></a><a name="_core_processing_font_notifications"></a>フォント通知の処理
+### <a name="processing-font-notifications"></a><a name="_core_processing_font_notifications"></a> フォント通知の処理
 
 ほとんどの場合、コントロールは、フォントオブジェクトの特性が変更されたことを認識している必要があります。 各フォントオブジェクトは、によって実装されたインターフェイスのメンバー関数を呼び出すことによって変更されるときに、通知を提供 `IFontNotification` `COleControl` できます。
 
@@ -211,7 +211,7 @@ DISP_PROPERTY_EX マクロは、 `HeadingFont` プロパティ名を対応する
 
 コントロールのフォントオブジェクト通知を区別する方法の1つは、 `IFontNotification` コントロールの各フォントオブジェクトに対して、インターフェイスの個別の実装を作成することです。 この方法では、最近変更されたフォントを使用する文字列 (または文字列) のみを更新することで、描画コードを最適化できます。 次のセクションでは、2番目のフォントプロパティに個別の通知インターフェイスを実装するために必要な手順について説明します。 2番目のフォントプロパティは、 `HeadingFont` 前のセクションで追加したプロパティと見なされます。
 
-### <a name="implementing-a-new-font-notification-interface"></a><a name="_core_implementing_a_new_font_notification_interface"></a>新しいフォント通知インターフェイスの実装
+### <a name="implementing-a-new-font-notification-interface"></a><a name="_core_implementing_a_new_font_notification_interface"></a> 新しいフォント通知インターフェイスの実装
 
 2つ以上のフォントの通知を区別するには、コントロールで使用されるフォントごとに新しい通知インターフェイスを実装する必要があります。 以下のセクションでは、コントロールヘッダーおよび実装ファイルを変更して、新しいフォント通知インターフェイスを実装する方法について説明します。
 
@@ -225,7 +225,7 @@ DISP_PROPERTY_EX マクロは、 `HeadingFont` プロパティ名を対応する
 
 ### <a name="additions-to-the-implementation-file"></a>実装ファイルへの追加
 
-(コントロールコンストラクター内の) 見出しのフォントを初期化するコードで、&*m_xFontNotification*を &*m_xHeadingFontNotify*に変更します。 次のコードを追加します。
+(コントロールコンストラクター内の) 見出しのフォントを初期化するコードで、&*m_xFontNotification* を &*m_xHeadingFontNotify*に変更します。 次のコードを追加します。
 
 [!code-cpp[NVC_MFC_AxFont#20](codesnippet/cpp/mfc-activex-controls-using-fonts_20.cpp)]
 
@@ -236,5 +236,5 @@ DISP_PROPERTY_EX マクロは、 `HeadingFont` プロパティ名を対応する
 ## <a name="see-also"></a>関連項目
 
 [MFC ActiveX コントロール](mfc-activex-controls.md)<br/>
-[MFC ActiveX コントロール: ActiveX コントロールにおけるピクチャの使用](mfc-activex-controls-using-pictures-in-an-activex-control.md)<br/>
-[MFC ActiveX コントロール : ストック プロパティ ページの使用](mfc-activex-controls-using-stock-property-pages.md)
+[MFC ActiveX コントロール: ActiveX コントロールでの画像の使用](mfc-activex-controls-using-pictures-in-an-activex-control.md)<br/>
+[MFC ActiveX コントロール: ストックプロパティページの使用](mfc-activex-controls-using-stock-property-pages.md)

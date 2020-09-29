@@ -5,12 +5,12 @@ helpviewer_keywords:
 - simple properties
 - properties [C++], simple
 ms.assetid: f5d82547-e214-4f05-9e1b-ddb6d0dc5e4c
-ms.openlocfilehash: 2b5543e9a9ff70e827778adf2aee89cbc96f0c1d
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: c786c7746cd40a970af3a5ae4436119def4c805b
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87225671"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91499688"
 ---
 # <a name="how-to-use-properties-in-ccli"></a>方法: C++/CLI でプロパティを使用する
 
@@ -88,7 +88,7 @@ int main() {
 
 既定のインデックス付きプロパティを使用する場合は、クラス名を参照するだけでデータ構造にアクセスできますが、ユーザー定義のインデックス付きプロパティを使用する場合は、データ構造にアクセスするためのプロパティ名を指定する必要があります。
 
-C# で記述されたインデクサーを使用する方法については、「[方法: C# インデクサーを使用する (C++/cli)](../dotnet/how-to-consume-a-csharp-indexer-cpp-cli.md)」を参照してください。
+C# で記述されたインデクサーを使用する方法については、「 [方法: C# インデクサーを使用する (C++/cli)](./interoperability-with-other-dotnet-languages-cpp-cli.md#consume_indexer)」を参照してください。
 
 このコードサンプルでは、既定のインデックス付きプロパティとユーザー定義のインデックス付きプロパティを使用する方法を示します。
 

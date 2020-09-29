@@ -35,12 +35,12 @@ helpviewer_keywords:
 - round function
 - roundf function
 ms.assetid: 6be90877-193c-4b80-a32b-c3eca33f9c6f
-ms.openlocfilehash: 381ae4464b23cb929e0511e6d2c228602f06a249
-ms.sourcegitcommit: 94893973211d0b254c8bcdcf0779997dcc136b0c
+ms.openlocfilehash: 2e51eb375ab814119dcf34d85c7f5aff11559784
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/28/2020
-ms.locfileid: "91413854"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91499174"
 ---
 # <a name="round-roundf-roundl"></a>round、roundf、roundl
 
@@ -80,7 +80,7 @@ long double roundl(
 |-----------|-------------------|-----------------------|
 |± **QNAN**、 **IND**|なし|**_DOMAIN**|
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>注釈
 
 C++ ではオーバーロードが可能であるため、との値を受け取って返す **ラウンド** のオーバーロードを呼び出すことができ **`float`** **`long double`** ます。 C プログラムでは、この関数を呼び出すためにマクロを使用している場合を除き、 \<tgmath.h> **round** は常にを受け取り、を返し **`double`** ます。
 
@@ -156,4 +156,4 @@ roundl(-2.499999900000000163657887242152355611324310302734375) is -2
 [lrint、lrintf、lrintl、llrint、llrintf、llrintl](lrint-lrintf-lrintl-llrint-llrintf-llrintl.md)\
 [lround、lroundf、lroundl、llround、llroundf、llroundl](lround-lroundf-lroundl-llround-llroundf-llroundl.md)\
 [nearbyint、nearbyintf、nearbyintl](nearbyint-nearbyintf-nearbyintl1.md)\
-[rint、rintf、rintl](rint-rintf-rintl.md)\
+[rint、rintf、rintl](rint-rintf-rintl.md)

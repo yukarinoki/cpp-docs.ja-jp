@@ -1,23 +1,23 @@
 ---
-title: nonextensible 属性
+title: 非拡張属性
 ms.date: 11/04/2016
 helpviewer_keywords:
 - nonextensible attribute
 - dual interfaces, nonextensible attribute
 ms.assetid: 02a4a18b-ffd3-4d53-8fd1-feb1c05ad5ac
-ms.openlocfilehash: cc57acb8bd7bc3e32c764606da651f57316ceabf
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fda2a0d43144b6e9832e061e7198b3f3e65f8b86
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62250105"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91500109"
 ---
-# <a name="nonextensible-attribute"></a>nonextensible 属性
+# <a name="nonextensible-attribute"></a>非拡張属性
 
-かどうかは、デュアル インターフェイスは実行時に拡張できません (つまり、メソッドまたはプロパティを使用してを提供しません`IDispatch::Invoke`は、vtable を使用して使用できません)、適用する必要があります、 **nonextensible**属性のインターフェイスを定義。 この属性は、コンパイル時に完全なコードの検証を有効にするために使用する (Visual Basic) などのクライアント言語に情報を提供します。 この属性が指定されていないバグが非表示のままクライアント コードで実行時まで。
+デュアルインターフェイスが実行時に拡張されない場合 (つまり、vtable 経由では使用できないからのメソッドまたはプロパティを指定しない場合 `IDispatch::Invoke` ) は、 **非拡張** 属性をインターフェイス定義に適用する必要があります。 この属性は、コンパイル時に完全なコード検証を有効にするために使用できるクライアント言語 (Visual Basic など) に情報を提供します。 この属性が指定されていない場合、実行時までクライアントコードでバグが非表示のままになる可能性があります。
 
-詳細については、 **nonextensible**属性と例を参照してください[nonextensible](../windows/nonextensible.md)します。
+**非拡張**属性と例の詳細については、「[非拡張](../windows/attributes/nonextensible.md)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 
-[デュアル インターフェイスと ATL](../atl/dual-interfaces-and-atl.md)
+[デュアルインターフェイスと ATL](../atl/dual-interfaces-and-atl.md)

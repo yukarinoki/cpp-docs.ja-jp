@@ -4,12 +4,12 @@ ms.date: 05/09/2019
 helpviewer_keywords:
 - property pages, implementing
 ms.assetid: c30b67fe-ce08-4249-ae29-f3060fa8d61e
-ms.openlocfilehash: 688cd337d0754fc49ede0f39fd774c9990f7c79f
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: dd74dd4562a3c4a8bff2c58d5f1d801f5dd06fd8
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87224358"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91499616"
 ---
 # <a name="example-implementing-a-property-page"></a>例: プロパティページの実装
 
@@ -133,7 +133,7 @@ ATL プロパティ ページ ウィザードは、Visual Studio 2019 以降で�
 
 このページを表示するには、単純なヘルパー オブジェクトを作成する必要があります。 ヘルパー オブジェクトは、単一のオブジェクトに接続された単一のページを表示するための `OleCreatePropertyFrame` API を簡素化するメソッドを提供します。 このヘルパーは、Visual Basic から使用できるように設計されます。
 
-[[クラスの追加] ダイアログ ボックス](../ide/add-class-dialog-box.md)と [ATL シンプル オブジェクト ウィザード](../atl/reference/atl-simple-object-wizard.md)を使用して新しいクラスを作成し、その短い名前として `Helper` を使用します。 作成したら、次の表に示すように、メソッドを追加します。
+[[クラスの追加] ダイアログ ボックス](../ide/adding-a-class-visual-cpp.md#add-class-dialog-box)と [ATL シンプル オブジェクト ウィザード](../atl/reference/atl-simple-object-wizard.md)を使用して新しいクラスを作成し、その短い名前として `Helper` を使用します。 作成したら、次の表に示すように、メソッドを追加します。
 
 |Item|値|
 |----------|-----------|

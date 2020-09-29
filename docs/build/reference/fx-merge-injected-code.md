@@ -12,12 +12,12 @@ helpviewer_keywords:
 - merging injected code
 - /Fx compiler option [C++]
 ms.assetid: 14f0e301-3bab-45a3-bbdf-e7ce66f20560
-ms.openlocfilehash: f1a266eee4edc524fbbe49bdef31a8235f62bd3c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b928ca63171f0f6d28859d049a1ed5008b908686
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62292303"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91500092"
 ---
 # <a name="fx-merge-injected-code"></a>/Fx (挿入されたコードのマージ)
 
@@ -29,7 +29,7 @@ ms.locfileid: "62292303"
 /Fx
 ```
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 **/Fx** では、元のソース ファイルとマージされたソース ファイルを区別するため、ファイル名とファイル拡張子の間に .mrg 拡張子を追加します。 たとえば、属性付きのコードを含んだ MyCode.cpp という名前のファイルを **/Fx** でビルドすると、次のコードを含んだ MyCode.mrg.cpp という名前のファイルが作成されます。
 
@@ -52,7 +52,7 @@ ms.locfileid: "62292303"
 //--- End Injected Code
 ```
 
-[no_injected_text](../../windows/no-injected-text.md) 属性が .mrg ファイルに埋め込まれることにより、テキストを再挿入せずに .mrg ファイルのコンパイルができます。
+[no_injected_text](../../windows/attributes/no-injected-text.md) 属性が .mrg ファイルに埋め込まれることにより、テキストを再挿入せずに .mrg ファイルのコンパイルができます。
 
 .mrg ソース ファイルは、コンパイラによって挿入されたソース コードの表示を目的としていることに留意する必要があります。 .mrg ファイルは元のソース ファイルと完全に同じようにはコンパイルまたは実行されない場合があります。
 
@@ -62,7 +62,7 @@ ms.locfileid: "62292303"
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのコンパイラ オプションを設定するには
 
-1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。 [Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)します。
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、[Visual Studio での C++ コンパイラとビルド プロパティの設定](../working-with-project-properties.md)に関するページを参照してください。
 
 1. **[C/C++]** フォルダーをクリックします。
 
@@ -78,4 +78,4 @@ ms.locfileid: "62292303"
 
 [出力ファイル (/F) オプション](output-file-f-options.md)<br/>
 [MSVC コンパイラ オプション](compiler-options.md)<br/>
-[MSVC コンパイラ コマンド ラインの構文](compiler-command-line-syntax.md)
+[MSVC コンパイラのコマンドライン構文](compiler-command-line-syntax.md)

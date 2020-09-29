@@ -5,12 +5,12 @@ helpviewer_keywords:
 - STL/CLR Containers [STL/CLR]
 - STL/CLR, converting to .NET collections
 ms.assetid: 70b2dfd9-869c-4e0f-9a29-b1ee0cb0d107
-ms.openlocfilehash: f5e289c330c83ac0c630a5b1f8f97b8c65fc7efb
-ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
+ms.openlocfilehash: a4a754bbee08e93e2db9af50f98d7603fabcd8d4
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90686445"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91498493"
 ---
 # <a name="how-to-convert-from-a-stlclr-container-to-a-net-collection"></a>方法: STL/CLR コンテナーを .NET コレクションに変換する
 
@@ -20,7 +20,7 @@ ms.locfileid: "90686445"
 
 1. 以下のいずれかの方法を使用します。
 
-   - コンテナーの一部を変換するには、 [make_collection](../dotnet/make-collection-stl-clr.md) 関数を呼び出し、.net コレクションにコピーする STL/CLR コンテナーの開始反復子と終了反復子を渡します。 このテンプレート関数は、テンプレート引数として STL/CLR 反復子を受け取ります。 最初の例では、このメソッドを示しています。
+   - コンテナーの一部を変換するには、 [make_collection](./adapter-stl-clr.md#make_collection) 関数を呼び出し、.net コレクションにコピーする STL/CLR コンテナーの開始反復子と終了反復子を渡します。 このテンプレート関数は、テンプレート引数として STL/CLR 反復子を受け取ります。 最初の例では、このメソッドを示しています。
 
    - コンテナー全体を変換するには、適切な .NET コレクションインターフェイスまたはインターフェイスコレクションにコンテナーをキャストします。 2番目の例では、このメソッドを示します。
 
@@ -113,4 +113,4 @@ Key: 74.00 Value: 74
 
 [STL/CLR ライブラリリファレンス](../dotnet/stl-clr-library-reference.md)<br/>
 [方法: .NET コレクションを STL/CLR コンテナーに変換する](../dotnet/how-to-convert-from-a-dotnet-collection-to-a-stl-clr-container.md)<br/>
-[range_adapter (STL/CLR)](../dotnet/range-adapter-stl-clr.md)
+[range_adapter (STL/CLR)](./adapter-stl-clr.md#range_adapter)

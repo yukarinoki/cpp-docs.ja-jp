@@ -39,12 +39,12 @@ helpviewer_keywords:
 - operator<= member [STL/CLR]
 - operator< member [STL/CLR]
 ms.assetid: fb48cb75-d5ef-47ce-b526-bf60dc86c552
-ms.openlocfilehash: b21f9ec2ace54281f30f8f32134c7fb3466a1faa
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 271bc01f5c8fd9dd07bfa03035ae3d0204ebd8e7
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87214855"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91500598"
 ---
 # <a name="utility-stlclr"></a>utility (STL/CLR)
 
@@ -68,7 +68,7 @@ ms.locfileid: "87214855"
 |-----------|-----------------|
 |[pair (STL/CLR)](#pair)|要素のペアをラップします。|
 
-|演算子|Description|
+|演算子|説明|
 |--------------|-----------------|
 |[operator = = (pair) (STL/CLR)](#op_eq)|ペアが等しいかどうかの比較。|
 |[operator! = (pair) (STL/CLR)](#op_neq)|ペアが等しくないかどうかの比較。|
@@ -83,7 +83,7 @@ ms.locfileid: "87214855"
 
 ## <a name="members"></a>メンバー
 
-## <a name="pair-stlclr"></a><a name="pair"></a>pair (STL/CLR)
+## <a name="pair-stlclr"></a><a name="pair"></a> pair (STL/CLR)
 
 このテンプレートクラスは、値のペアをラップするオブジェクトを表します。
 
@@ -120,15 +120,15 @@ template<typename Value1,
 |[pair::pair (STL/CLR)](#pair_pair)|ペアオブジェクトを構築します。|
 |[pair::swap (STL/CLR)](#swap)|2つのペアの内容を交換します。|
 
-|演算子|Description|
+|演算子|説明|
 |--------------|-----------------|
 |[pair::operator= (STL/CLR)](#op_as)|格納されている値のペアを置き換えます。|
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>注釈
 
 オブジェクトは、値のペアを格納します。 このテンプレートクラスを使用して、2つの値を1つのオブジェクトに結合します。 また、オブジェクト `cliext::pair` (ここで説明) はマネージ型のみを格納します。アンマネージ型のペアを格納するには `std::pair` 、で宣言 `<utility>` します。
 
-## <a name="pairfirst-stlclr"></a><a name="first"></a>pair:: first (STL/CLR)
+## <a name="pairfirst-stlclr"></a><a name="first"></a> pair:: first (STL/CLR)
 
 最初にラップされた値。
 
@@ -165,7 +165,7 @@ int main()
 [x, 3]
 ```
 
-## <a name="pairfirst_type-stlclr"></a><a name="first_type"></a>pair:: first_type (STL/CLR)
+## <a name="pairfirst_type-stlclr"></a><a name="first_type"></a> pair:: first_type (STL/CLR)
 
 最初にラップされた値の型。
 
@@ -202,7 +202,7 @@ int main()
 [x, 3]
 ```
 
-## <a name="pairoperator-stlclr"></a><a name="op_as"></a>pair:: operator = (STL/CLR)
+## <a name="pairoperator-stlclr"></a><a name="op_as"></a> pair:: operator = (STL/CLR)
 
 格納されている値のペアを置き換えます。
 
@@ -217,9 +217,9 @@ pair<Value1, Value2>% operator=(pair<Value1, Value2>% right);
 *そうです*<br/>
 コピーするペア。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
-メンバー演算子は、オブジェクトに*right*をコピーし、を返し **`*this`** ます。 格納されている値のペアを、格納され*ている値*のペアのコピーに置き換えるために使用します。
+メンバー演算子は、オブジェクトに *right* をコピーし、を返し **`*this`** ます。 格納されている値のペアを、格納され *ている値*のペアのコピーに置き換えるために使用します。
 
 ### <a name="example"></a>例
 
@@ -246,7 +246,7 @@ int main()
 [x, 3]
 ```
 
-## <a name="pairpair-stlclr"></a><a name="pair_pair"></a>ペア: エア:p (STL/CLR)
+## <a name="pairpair-stlclr"></a><a name="pair_pair"></a> ペア: エア:p (STL/CLR)
 
 ペアオブジェクトを構築します。
 
@@ -270,7 +270,7 @@ pair(Value1 val1, Value2 val2);
 *val2*<br/>
 格納する2番目の値。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 コンストラクター:
 
@@ -282,11 +282,11 @@ pair(Value1 val1, Value2 val2);
 
 `pair(pair<Value1, Value2>% right);`
 
-`right.`[ペア:: FIRST (STL/clr)](../dotnet/pair-first-stl-clr.md)と `right.` [PAIR:: second (stl/clr)](../dotnet/pair-second-stl-clr.md)を使用して、格納されているペアを初期化します。
+`right.`[ペア:: FIRST (STL/clr)](#first)と `right.` [PAIR:: second (stl/clr)](#second)を使用して、格納されているペアを初期化します。
 
 `pair(pair<Value1, Value2>^ right);`
 
-`right->`[ペア:: FIRST (STL/clr)](../dotnet/pair-first-stl-clr.md)と `right>` [PAIR:: second (stl/clr)](../dotnet/pair-second-stl-clr.md)を使用して、格納されているペアを初期化します。
+`right->`[ペア:: FIRST (STL/clr)](#first)と `right>` [PAIR:: second (stl/clr)](#second)を使用して、格納されているペアを初期化します。
 
 コンストラクター:
 
@@ -331,7 +331,7 @@ int main()
 [x, 3]
 ```
 
-## <a name="pairsecond-stlclr"></a><a name="second"></a>pair:: second (STL/CLR)
+## <a name="pairsecond-stlclr"></a><a name="second"></a> pair:: second (STL/CLR)
 
 2番目にラップされた値。
 
@@ -368,7 +368,7 @@ int main()
 [x, 3]
 ```
 
-## <a name="pairsecond_type-stlclr"></a><a name="second_type"></a>pair:: second_type (STL/CLR)
+## <a name="pairsecond_type-stlclr"></a><a name="second_type"></a> pair:: second_type (STL/CLR)
 
 2番目にラップされた値の型。
 
@@ -405,7 +405,7 @@ int main()
 [x, 3]
 ```
 
-## <a name="pairswap-stlclr"></a><a name="swap"></a>pair:: swap (STL/CLR)
+## <a name="pairswap-stlclr"></a><a name="swap"></a> pair:: swap (STL/CLR)
 
 2つのペアの内容を交換します。
 
@@ -420,7 +420,7 @@ void swap(pair<Value1, Value2>% right);
 *そうです*<br/>
 コンテンツのスワップに使用するペア。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 このメンバー関数は、との間に格納されている値のペアを交換し **`*this`** ます。 *right*
 
@@ -474,7 +474,7 @@ x x x x x
 a b c
 ```
 
-## <a name="make_pair-stlclr"></a><a name="make_pair"></a>make_pair (STL/CLR)
+## <a name="make_pair-stlclr"></a><a name="make_pair"></a> make_pair (STL/CLR)
 
 `pair`値のペアからを作成します。
 
@@ -500,7 +500,7 @@ template<typename Value1,
 *second*<br/>
 2番目に折り返す値。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 このテンプレート関数は `pair<Value1, Value2>(first, second)` を返します。 値のペアからオブジェクトを構築するために使用し `pair<Value1, Value2>` ます。
 
@@ -527,7 +527,7 @@ int main()
 [y, 4]
 ```
 
-## <a name="operator-pair-stlclr"></a><a name="op_neq"></a>operator! = (pair) (STL/CLR)
+## <a name="operator-pair-stlclr"></a><a name="op_neq"></a> operator! = (pair) (STL/CLR)
 
 ペアが等しくないかどうかの比較。
 
@@ -548,9 +548,9 @@ template<typename Value1,
 *そうです*<br/>
 比較する右のペア。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
-演算子関数はを返し `!(left == right)` ます。 このメソッドを使用して、2つのペアが要素ごとに比較されるときに、 *left*が*right*と同じ順序で並んでいないかどうかをテストします。
+演算子関数はを返し `!(left == right)` ます。 このメソッドを使用して、2つのペアが要素ごとに比較されるときに、 *left* が *right* と同じ順序で並んでいないかどうかをテストします。
 
 ### <a name="example"></a>例
 
@@ -581,7 +581,7 @@ int main()
 [x 3] != [x 4] is True
 ```
 
-## <a name="operatorlt-pair-stlclr"></a><a name="op_lt"></a>演算子 &lt; (pair) (STL/CLR)
+## <a name="operatorlt-pair-stlclr"></a><a name="op_lt"></a> 演算子 &lt; (pair) (STL/CLR)
 
 対が比較より小さい。
 
@@ -602,9 +602,9 @@ template<typename Value1,
 *そうです*<br/>
 比較する右のペア。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
-演算子関数はを返し `left.first <` `right.first || !(right.first <` `left.first &&` `left.second <` `right.second` ます。 このメソッドを使用して、2つのペアが要素ごとに比較されたときに、 *left*が*右*に並んでいるかどうかをテストします。
+演算子関数はを返し `left.first <` `right.first || !(right.first <` `left.first &&` `left.second <` `right.second` ます。 このメソッドを使用して、2つのペアが要素ごとに比較されたときに、 *left* が *右* に並んでいるかどうかをテストします。
 
 ### <a name="example"></a>例
 
@@ -635,7 +635,7 @@ int main()
 [x 3] < [x 4] is True
 ```
 
-## <a name="operatorlt-pair-stlclr"></a><a name="op_lteq"></a>operator &lt; = (pair) (STL/CLR)
+## <a name="operatorlt-pair-stlclr"></a><a name="op_lteq"></a> operator &lt; = (pair) (STL/CLR)
 
 ペア以下の比較。
 
@@ -656,7 +656,7 @@ template<typename Value1,
 *そうです*<br/>
 比較する右のペア。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 演算子関数はを返し `!(right < left)` ます。 このメソッドを使用して、2つのペアが要素ごとに比較されたときに、 *right*の後に*left*が順序付けされていないかどうかをテストします。
 
@@ -689,7 +689,7 @@ int main()
 [x 4] <= [x 3] is False
 ```
 
-## <a name="operator-pair-stlclr"></a><a name="op_eq"></a>operator = = (pair) (STL/CLR)
+## <a name="operator-pair-stlclr"></a><a name="op_eq"></a> operator = = (pair) (STL/CLR)
 
 ペアが等しいかどうかの比較。
 
@@ -710,9 +710,9 @@ template<typename Value1,
 *そうです*<br/>
 比較する右のペア。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
-演算子関数はを返し `left.first ==` `right.first &&` `left.second ==` `right.second` ます。 このメソッドを使用して、2つのペアが要素ごとに比較された場合に、 *left*が*right*と同じであるかどうかをテストします。
+演算子関数はを返し `left.first ==` `right.first &&` `left.second ==` `right.second` ます。 このメソッドを使用して、2つのペアが要素ごとに比較された場合に、 *left* が *right* と同じであるかどうかをテストします。
 
 ### <a name="example"></a>例
 
@@ -743,7 +743,7 @@ int main()
 [x 3] == [x 4] is False
 ```
 
-## <a name="operatorgt-pair-stlclr"></a><a name="op_gt"></a>演算子 &gt; (pair) (STL/CLR)
+## <a name="operatorgt-pair-stlclr"></a><a name="op_gt"></a> 演算子 &gt; (pair) (STL/CLR)
 
 対が比較を超えています。
 
@@ -764,7 +764,7 @@ template<typename Value1,
 *そうです*<br/>
 比較する右のペア。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 演算子関数はを返し `right` `<` `left` ます。 このメソッドを使用して、2つのペアが要素によって比較されたときに、*右側*の順序が並べ替えられて*いるかどう*かをテストします。
 
@@ -797,7 +797,7 @@ int main()
 [x 4] > [x 3] is True
 ```
 
-## <a name="operatorgt-pair-stlclr"></a><a name="op_gteq"></a>operator &gt; = (pair) (STL/CLR)
+## <a name="operatorgt-pair-stlclr"></a><a name="op_gteq"></a> operator &gt; = (pair) (STL/CLR)
 
 対以上の比較。
 
@@ -818,9 +818,9 @@ template<typename Value1,
 *そうです*<br/>
 比較する右のペア。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
-演算子関数はを返し `!(left < right)` ます。 このメソッドを使用して、2つのペアが要素ごとに比較されるときに、 *left*が*right*の前に順序付けされていないかどうかをテストします。
+演算子関数はを返し `!(left < right)` ます。 このメソッドを使用して、2つのペアが要素ごとに比較されるときに、 *left* が *right* の前に順序付けされていないかどうかをテストします。
 
 ### <a name="example"></a>例
 

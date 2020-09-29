@@ -90,12 +90,12 @@ helpviewer_keywords:
 - SetParamStatus method
 - SetParamString method
 ms.assetid: 5f22626e-e80d-491f-8b3b-cedc50331960
-ms.openlocfilehash: de9aafe5b04b949112c44be09ac36bede7e7f660
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 4596f5181dd197b16786ee4d4d16cf06721b13b6
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88838179"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91498652"
 ---
 # <a name="cdynamicparameteraccessor-class"></a>CDynamicParameterAccessor クラス
 
@@ -131,11 +131,11 @@ class CDynamicParameterAccessor : public CDynamicAccessor
 |[SetParamStatus](#setparamstatus)|バッファーに格納され、指定されたパラメーターのステータスを設定します。|
 |[SetParamString](#setparamstring)|バッファーに格納され、指定されたパラメーターの文字列データを設定します。|
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>注釈
 
 コンシューマーがこのクラスを使用するには、プロバイダーで `ICommandWithParameters` がサポートされている必要があります。
 
-パラメーター情報は、このクラスによって作成および管理されるバッファーに格納されます。 [GetParam](../../data/oledb/cdynamicparameteraccessor-getparam.md) と [GetParamType](../../data/oledb/cdynamicparameteraccessor-getparamtype.md)を使用してバッファーからパラメーター データを取得します。
+パラメーター情報は、このクラスによって作成および管理されるバッファーに格納されます。 [GetParam](#getparam) と [GetParamType](#getparamtype)を使用してバッファーからパラメーター データを取得します。
 
 このクラスを使用して SQL Server のストアドプロシージャを実行し、出力パラメーターの値を取得する方法を示す例については、GitHub の[Microsoft VCSamples](https://github.com/Microsoft/VCSamples)リポジトリにある[dynamicconsumer](https://github.com/Microsoft/VCSamples/tree/master/VC2008Samples/ATL/OLEDB/Consumer/DynamicConsumer)サンプルコードを参照してください。
 
@@ -156,14 +156,14 @@ CDynamicParameterAccessor(
 #### <a name="parameters"></a>パラメーター
 
 *eBlobHandling*<br/>
-BLOB データを処理する方法を指定します。 既定値は DBBLOBHANDLING_DEFAULT です。 DBBLOBCDYNAMICACCESSOR LINGENUM 値の説明については、「 [:: SetBlobHandling](../../data/oledb/cdynamicaccessor-setblobhandling.md) 」を参照してください。
+BLOB データを処理する方法を指定します。 既定値は DBBLOBHANDLING_DEFAULT です。 DBBLOBCDYNAMICACCESSOR LINGENUM 値の説明については、「 [:: SetBlobHandling](./cdynamicaccessor-class.md#setblobhandling) 」を参照してください。
 
 *nBlobSize*<br/>
-BLOB の最大サイズ (バイト単位)。この値に対する列データは、BLOB として扱われます。 既定値は8000です。 詳細については、「 [CDynamicAccessor:: SetBlobSizeLimit](../../data/oledb/cdynamicaccessor-setblobsizelimit.md) 」を参照してください。
+BLOB の最大サイズ (バイト単位)。この値に対する列データは、BLOB として扱われます。 既定値は8000です。 詳細については、「 [CDynamicAccessor:: SetBlobSizeLimit](./cdynamicaccessor-class.md#setblobsizelimit) 」を参照してください。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
-BLOB 処理の詳細については、 [CDynamicAccessor:: CDynamicAccessor](../../data/oledb/cdynamicaccessor-cdynamicaccessor.md) コンストラクターを参照してください。
+BLOB 処理の詳細については、 [CDynamicAccessor:: CDynamicAccessor](./cdynamicaccessor-class.md#cdynamicaccessor) コンストラクターを参照してください。
 
 ## <a name="cdynamicparameteraccessorgetparam"></a><a name="getparam"></a> CDynamicParameterAccessor:: GetParam
 
@@ -189,7 +189,7 @@ void* GetParam(TCHAR* pParamName) const throw();
 データ型であるテンプレート化されたパラメーター。
 
 *nParam*<br/>
-からパラメーターの数 (1 からのオフセット)。 パラメーター0は戻り値用に予約されています。 パラメーター番号は、SQL またはストアドプロシージャの呼び出しの順序に基づいてパラメーターのインデックスを指定します。 例については、「 [Setparam](../../data/oledb/cdynamicparameteraccessor-setparam.md) 」を参照してください。
+からパラメーターの数 (1 からのオフセット)。 パラメーター0は戻り値用に予約されています。 パラメーター番号は、SQL またはストアドプロシージャの呼び出しの順序に基づいてパラメーターのインデックスを指定します。 例については、「 [Setparam](#setparam) 」を参照してください。
 
 *pParamName*<br/>
 からパラメーター名。
@@ -201,7 +201,7 @@ void* GetParam(TCHAR* pParamName) const throw();
 
 テンプレートが使用されていないバージョンでは、はバッファーから取得したデータを格納しているメモリを指します。 テンプレート化されたバージョンの場合、成功した場合は、失敗した場合はを返し **`true`** **`false`** ます。
 
-`GetParam`バッファーから文字列以外のパラメーターデータを取得するには、を使用します。 [Getparamstring](../../data/oledb/cdynamicparameteraccessor-getparamstring.md)を使用して、バッファーから文字列パラメーターデータを取得します。
+`GetParam`バッファーから文字列以外のパラメーターデータを取得するには、を使用します。 [Getparamstring](#getparamstring)を使用して、バッファーから文字列パラメーターデータを取得します。
 
 ## <a name="cdynamicparameteraccessorgetparamcount"></a><a name="getparamcount"></a> CDynamicParameterAccessor:: GetParamCount
 
@@ -231,7 +231,7 @@ bool GetParamIO(DBORDINAL nParam,
 #### <a name="parameters"></a>パラメーター
 
 *nParam*<br/>
-からパラメーターの数 (1 からのオフセット)。 パラメーター0は戻り値用に予約されています。 パラメーター番号は、SQL またはストアドプロシージャの呼び出しの順序に基づいてパラメーターのインデックスを指定します。 例については、「 [Setparam](../../data/oledb/cdynamicparameteraccessor-setparam.md) 」を参照してください。
+からパラメーターの数 (1 からのオフセット)。 パラメーター0は戻り値用に予約されています。 パラメーター番号は、SQL またはストアドプロシージャの呼び出しの順序に基づいてパラメーターのインデックスを指定します。 例については、「 [Setparam](#setparam) 」を参照してください。
 
 *pParamIO*<br/>
 `DBPARAMIO`指定されたパラメーターの型 (入力または出力) を格納している変数へのポインター。 次のように定義します。
@@ -266,12 +266,12 @@ DBLENGTH* GetParamLength(DBORDINAL nParam) const throw();
 #### <a name="parameters"></a>パラメーター
 
 *nParam*<br/>
-からパラメーターの数 (1 からのオフセット)。 パラメーター0は戻り値用に予約されています。 パラメーター番号は、SQL またはストアドプロシージャの呼び出しの順序に基づいてパラメーターのインデックスを指定します。 例については、「 [Setparam](../../data/oledb/cdynamicparameteraccessor-setparam.md) 」を参照してください。
+からパラメーターの数 (1 からのオフセット)。 パラメーター0は戻り値用に予約されています。 パラメーター番号は、SQL またはストアドプロシージャの呼び出しの順序に基づいてパラメーターのインデックスを指定します。 例については、「 [Setparam](#setparam) 」を参照してください。
 
 *pLength*<br/>
 入出力指定されたパラメーターの長さ (バイト単位) を格納している変数へのポインター。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 最初のオーバーライドは、成功した場合はを返し、失敗した場合はを返し **`true`** **`false`** ます。 2番目のオーバーライドは、パラメーターの長さを格納しているメモリを指します。
 
@@ -288,7 +288,7 @@ LPOLESTR GetParamName(DBORDINAL nParam) const throw();
 #### <a name="parameters"></a>パラメーター
 
 *nParam*<br/>
-からパラメーターの数 (1 からのオフセット)。 パラメーター0は戻り値用に予約されています。 パラメーター番号は、SQL またはストアドプロシージャの呼び出しの順序に基づいてパラメーターのインデックスを指定します。 例については、「 [Setparam](../../data/oledb/cdynamicparameteraccessor-setparam.md) 」を参照してください。
+からパラメーターの数 (1 からのオフセット)。 パラメーター0は戻り値用に予約されています。 パラメーター番号は、SQL またはストアドプロシージャの呼び出しの順序に基づいてパラメーターのインデックスを指定します。 例については、「 [Setparam](#setparam) 」を参照してください。
 
 ### <a name="return-value"></a>戻り値
 
@@ -310,12 +310,12 @@ DBSTATUS* GetParamStatus(DBORDINAL nParam) const throw();
 #### <a name="parameters"></a>パラメーター
 
 *nParam*<br/>
-からパラメーターの数 (1 からのオフセット)。 パラメーター0は戻り値用に予約されています。 パラメーター番号は、SQL またはストアドプロシージャの呼び出しの順序に基づいてパラメーターのインデックスを指定します。 例については、「 [Setparam](../../data/oledb/cdynamicparameteraccessor-setparam.md) 」を参照してください。
+からパラメーターの数 (1 からのオフセット)。 パラメーター0は戻り値用に予約されています。 パラメーター番号は、SQL またはストアドプロシージャの呼び出しの順序に基づいてパラメーターのインデックスを指定します。 例については、「 [Setparam](#setparam) 」を参照してください。
 
 *pStatus*<br/>
 入出力指定されたパラメーターの DBSTATUS status を格納している変数へのポインター。 DBSTATUS 値の詳細については、 *OLE DB プログラマーリファレンス*の「 [Status](/previous-versions/windows/desktop/ms722617(v=vs.85)) 」を参照するか、DBSTATUS の「」を検索してください。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 最初のオーバーライドは、成功した場合はを返し、失敗した場合はを返し **`true`** **`false`** ます。 2番目のオーバーライドは、指定されたパラメーターの状態を格納しているメモリを指します。
 
@@ -344,7 +344,7 @@ bool GetParamString(DBORDINAL nParam,
 #### <a name="parameters"></a>パラメーター
 
 *nParam*<br/>
-からパラメーターの数 (1 からのオフセット)。 パラメーター0は戻り値用に予約されています。 パラメーター番号は、SQL またはストアドプロシージャの呼び出しの順序に基づいてパラメーターのインデックスを指定します。 例については、「 [Setparam](../../data/oledb/cdynamicparameteraccessor-setparam.md) 」を参照してください。
+からパラメーターの数 (1 からのオフセット)。 パラメーター0は戻り値用に予約されています。 パラメーター番号は、SQL またはストアドプロシージャの呼び出しの順序に基づいてパラメーターのインデックスを指定します。 例については、「 [Setparam](#setparam) 」を参照してください。
 
 *strOutput*<br/>
 入出力`CSimpleStringA`指定されたパラメーターの ANSI () 文字列データまたは Unicode ( `CSimpleStringW` ) 文字列データ。 型のパラメーターを渡す必要があり `CString` ます。次に例を示します。
@@ -357,7 +357,7 @@ bool GetParamString(DBORDINAL nParam,
 *pMaxLen*<br/>
 入出力 *Pbuffer* によってポイントされるバッファーのサイズへのポインター (終端の NULL を含む文字数)。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 **`true`** 成功した場合、または失敗した場合はを返し **`false`** ます。
 
@@ -365,7 +365,7 @@ bool GetParamString(DBORDINAL nParam,
 
 バッファーの *Pbuffer* が文字列全体を格納するのに十分な大きさでない場合、このメソッドは失敗します。
 
-`GetParamString`バッファーから文字列パラメーターデータを取得するには、を使用します。 [Getparam](../../data/oledb/cdynamicparameteraccessor-getparam.md)を使用して、バッファーから文字列以外のパラメーターデータを取得します。
+`GetParamString`バッファーから文字列パラメーターデータを取得するには、を使用します。 [Getparam](#getparam)を使用して、バッファーから文字列以外のパラメーターデータを取得します。
 
 ## <a name="cdynamicparameteraccessorgetparamtype"></a><a name="getparamtype"></a> CDynamicParameterAccessor:: GetParamType
 
@@ -381,7 +381,7 @@ bool GetParamType(DBORDINAL nParam,
 #### <a name="parameters"></a>パラメーター
 
 *nParam*<br/>
-からパラメーターの数 (1 からのオフセット)。 パラメーター0は戻り値用に予約されています。 パラメーター番号は、SQL またはストアドプロシージャの呼び出しの順序に基づいてパラメーターのインデックスを指定します。 例については、「 [Setparam](../../data/oledb/cdynamicparameteraccessor-setparam.md) 」を参照してください。
+からパラメーターの数 (1 からのオフセット)。 パラメーター0は戻り値用に予約されています。 パラメーター番号は、SQL またはストアドプロシージャの呼び出しの順序に基づいてパラメーターのインデックスを指定します。 例については、「 [Setparam](#setparam) 」を参照してください。
 
 *pType*<br/>
 入出力指定されたパラメーターのデータ型を格納している変数へのポインター。
@@ -431,7 +431,7 @@ bool SetParam(TCHAR* pParamName,
 
 **`true`** 成功した場合、または失敗した場合はを返し **`false`** ます。
 
-`SetParam`バッファーに文字列以外のパラメーターデータを設定するには、を使用します。 [Setparamstring](../../data/oledb/cdynamicparameteraccessor-setparamstring.md)を使用して、バッファー内の文字列パラメーターデータを設定します。
+`SetParam`バッファーに文字列以外のパラメーターデータを設定するには、を使用します。 [Setparamstring](#setparamstring)を使用して、バッファー内の文字列パラメーターデータを設定します。
 
 ## <a name="cdynamicparameteraccessorsetparamlength"></a><a name="setparamlength"></a> CDynamicParameterAccessor:: SetParamLength
 
@@ -447,12 +447,12 @@ bool SetParamLength(DBORDINAL nParam,
 #### <a name="parameters"></a>パラメーター
 
 *nParam*<br/>
-からパラメーターの数 (1 からのオフセット)。 パラメーター0は戻り値用に予約されています。 パラメーター番号は、SQL またはストアドプロシージャの呼び出しの順序に基づいてパラメーターのインデックスを指定します。 例については、「 [Setparam](../../data/oledb/cdynamicparameteraccessor-setparam.md) 」を参照してください。
+からパラメーターの数 (1 からのオフセット)。 パラメーター0は戻り値用に予約されています。 パラメーター番号は、SQL またはストアドプロシージャの呼び出しの順序に基づいてパラメーターのインデックスを指定します。 例については、「 [Setparam](#setparam) 」を参照してください。
 
 *length*<br/>
 から指定されたパラメーターの長さ (バイト単位)。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 **`true`** 成功した場合、または失敗した場合はを返し **`false`** ます。
 
@@ -470,12 +470,12 @@ bool SetParamStatus(DBORDINAL nParam,
 #### <a name="parameters"></a>パラメーター
 
 *nParam*<br/>
-からパラメーターの数 (1 からのオフセット)。 パラメーター0は戻り値用に予約されています。 パラメーター番号は、SQL またはストアドプロシージャの呼び出しの順序に基づいてパラメーターのインデックスを指定します。 例については、「 [Setparam](../../data/oledb/cdynamicparameteraccessor-setparam.md) 」を参照してください。
+からパラメーターの数 (1 からのオフセット)。 パラメーター0は戻り値用に予約されています。 パラメーター番号は、SQL またはストアドプロシージャの呼び出しの順序に基づいてパラメーターのインデックスを指定します。 例については、「 [Setparam](#setparam) 」を参照してください。
 
 *status*<br/>
 から指定されたパラメーターの DBSTATUS の状態。 DBSTATUS 値の詳細については、 *OLE DB プログラマーリファレンス*の「 [Status](/previous-versions/windows/desktop/ms722617(v=vs.85)) 」を参照するか、DBSTATUS の「」を検索してください。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 **`true`** 成功した場合、または失敗した場合はを返し **`false`** ます。
 
@@ -496,7 +496,7 @@ bool SetParamString(DBORDINAL nParam,
 #### <a name="parameters"></a>パラメーター
 
 *nParam*<br/>
-からパラメーターの数 (1 からのオフセット)。 パラメーター0は戻り値用に予約されています。 パラメーター番号は、SQL またはストアドプロシージャの呼び出しの順序に基づいてパラメーターのインデックスを指定します。 例については、「 [Setparam](../../data/oledb/cdynamicparameteraccessor-setparam.md) 」を参照してください。
+からパラメーターの数 (1 からのオフセット)。 パラメーター0は戻り値用に予約されています。 パラメーター番号は、SQL またはストアドプロシージャの呼び出しの順序に基づいてパラメーターのインデックスを指定します。 例については、「 [Setparam](#setparam) 」を参照してください。
 
 *pString*<br/>
 から指定されたパラメーターの ANSI (**CHAR**) または Unicode (**WCHAR**) 文字列データへのポインター。 「DBSTATUS in oledb」を参照してください。
@@ -504,13 +504,13 @@ bool SetParamString(DBORDINAL nParam,
 *status*<br/>
 から指定されたパラメーターの DBSTATUS の状態。 DBSTATUS 値の詳細については、 *OLE DB プログラマーリファレンス*の「 [Status](/previous-versions/windows/desktop/ms722617(v=vs.85)) 」を参照するか、DBSTATUS の「」を検索してください。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 **`true`** 成功した場合、または失敗した場合はを返し **`false`** ます。
 
 `SetParamString` は、 *pstring*に指定された最大サイズを超える文字列を設定しようとすると失敗します。
 
-`SetParamString`バッファーに文字列パラメーターデータを設定するには、を使用します。 バッファーに文字列以外のパラメーターデータを設定するには、 [Setparam](../../data/oledb/cdynamicparameteraccessor-setparam.md) を使用します。
+`SetParamString`バッファーに文字列パラメーターデータを設定するには、を使用します。 バッファーに文字列以外のパラメーターデータを設定するには、 [Setparam](#setparam) を使用します。
 
 ## <a name="see-also"></a>関連項目
 

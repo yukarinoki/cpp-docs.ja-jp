@@ -27,12 +27,12 @@ helpviewer_keywords:
 - FreeRecordMemory method
 - GetColumnInfo method
 ms.assetid: bd4f58ed-cebf-4d43-8985-1e5fcbf06953
-ms.openlocfilehash: 9ad4292b69d0219aa1732638ae250758e4456f4b
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: d9dd2eec3948896487b5b977d1107db1f4a1046b
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88843288"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91498714"
 ---
 # <a name="caccessorrowset-class"></a>CAccessorRowset クラス
 
@@ -64,19 +64,19 @@ class CAccessorRowset : public TAccessor, public TRowset<TAccessor>
 
 | 名前 | 説明 |
 |--|--|
-| [束縛](#bind) | ( `bBind` が **`false`** [CCommand:: Open](../../data/oledb/ccommand-open.md)のとして指定されている場合に使用される) バインドを作成します。 |
+| [束縛](#bind) | ( `bBind` が **`false`** [CCommand:: Open](./ccommand-class.md#open)のとして指定されている場合に使用される) バインドを作成します。 |
 | [CAccessorRowset](#caccessorrowset) | コンストラクターです。 |
 | [閉じる](#close) | 行セットと任意のアクセサーを閉じます。 |
 | [FreeRecordMemory](#freerecordmemory) | 解放する必要がある現在のレコード内のすべての列を解放します。 |
 | [GetColumnInfo](#getcolumninfo) | [IColumnsInfo:: GetColumnInfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\))を実装します。 |
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>注釈
 
 クラス `TAccessor` は、アクセサーを管理します。 クラス *trowset* は、行セットを管理します。
 
 ## <a name="caccessorrowsetbind"></a><a name="bind"></a> CAccessorRowset:: Bind
 
-`bBind` **`false`** [CCommand:: Open](../../data/oledb/ccommand-open.md)でとしてを指定した場合、バインドを作成します。
+`bBind` **`false`** [CCommand:: Open](./ccommand-class.md#open)でとしてを指定した場合、バインドを作成します。
 
 ### <a name="syntax"></a>構文
 
@@ -145,7 +145,7 @@ HRESULT GetColumnInfo(DBORDINAL* pColumns,
 
 標準の HRESULT です。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 ユーザーは、返された列情報と文字列バッファーを解放する必要があります。 [CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md)を使用し、バインドをオーバーライドする必要がある場合は、このメソッドの2番目のバージョンを使用します。
 

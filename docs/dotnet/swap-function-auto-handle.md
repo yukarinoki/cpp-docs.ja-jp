@@ -5,16 +5,16 @@ ms.topic: reference
 helpviewer_keywords:
 - swap function
 ms.assetid: 7dd91b5c-f0de-4634-a2e2-642626706e27
-ms.openlocfilehash: 9e6cde103eefb6e14fdf2a3fc7e3299070afbc25
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: ed0e4ab7bce52d4dee54e7f9149edae535445d65
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79545943"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91498581"
 ---
 # <a name="swap-function-auto_handle"></a>swap 関数 (auto_handle)
 
-オブジェクトを1つの `auto_handle` 間で交換します。
+オブジェクトを相互に交換 `auto_handle` します。
 
 ## <a name="syntax"></a>構文
 
@@ -61,13 +61,13 @@ s1 = 'string one', s2 = 'string two'
 s1 = 'string two', s2 = 'string one'
 ```
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-**ヘッダーファイル**\<msclr \ auto_handle >
+**ヘッダー ファイル** \<msclr\auto_handle.h>
 
-**名前空間**msclr
+**名前空間** msclr
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [auto_handle](../dotnet/auto-handle.md)<br/>
-[auto_handle::swap](../dotnet/auto-handle-swap.md)
+[auto_handle::swap](./auto-handle-class.md#swap)

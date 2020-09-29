@@ -63,12 +63,12 @@ helpviewer_keywords:
 - unary_delegate_noreturn function [STL/CLR]
 - unary_negate function [STL/CLR]
 ms.assetid: 88738b8c-5d37-4375-970e-a4442bf5efde
-ms.openlocfilehash: 5cfec19ad8a25d3b44647e490b2c328a5639e675
-ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
+ms.openlocfilehash: 00d719df2fdba892d1d9362da2b2172bac9ca16f
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90743309"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91499707"
 ---
 # <a name="functional-stlclr"></a>functional (STL/CLR)
 
@@ -412,12 +412,12 @@ template<typename Fun,
 *クタ*<br/>
 ラップするファンクタ。
 
-*left*<br/>
+*左側*<br/>
 ラップする1番目の引数。
 
 ### <a name="remarks"></a>注釈
 
-このテンプレート関数は、 [binder1st (STL/CLR)](../dotnet/binder1st-stl-clr.md)を返し `<Fun>(functor, left)` ます。 2つの引数を持つファンクタと、2番目の引数を使用して呼び出す1つの引数のファンクタでその最初の引数をラップする便利な方法として使用します。
+このテンプレート関数は、 [binder1st (STL/CLR)](#binder1st)を返し `<Fun>(functor, left)` ます。 2つの引数を持つファンクタと、2番目の引数を使用して呼び出す1つの引数のファンクタでその最初の引数をラップする便利な方法として使用します。
 
 ### <a name="example"></a>例
 
@@ -493,12 +493,12 @@ template<typename Fun,
 *クタ*<br/>
 ラップするファンクタ。
 
-*right*<br/>
+*そうです*<br/>
 ラップする2番目の引数。
 
 ### <a name="remarks"></a>注釈
 
-このテンプレート関数は、 [binder2nd (STL/CLR)](../dotnet/binder2nd-stl-clr.md)を返し `<Fun>(functor, right)` ます。 これは、2つの引数を持つファンクタと2番目の引数を、1番目の引数を使用して呼び出す1つの引数のファンクタにラップするための便利な方法として使用します。
+このテンプレート関数は、 [binder2nd (STL/CLR)](#binder2nd)を返し `<Fun>(functor, right)` ます。 これは、2つの引数を持つファンクタと2番目の引数を、1番目の引数を使用して呼び出す1つの引数のファンクタにラップするための便利な方法として使用します。
 
 ### <a name="example"></a>例
 
@@ -2173,7 +2173,7 @@ template<typename Fun>
 
 ### <a name="remarks"></a>注釈
 
-このテンプレート関数は、 [unary_negate (STL/CLR)](../dotnet/unary-negate-stl-clr.md)を返し `<Fun>(functor)` ます。 これは、論理 NOT を提供するファンクタで1つの引数のファンクタをラップするための便利な方法として使用します。
+このテンプレート関数は、 [unary_negate (STL/CLR)](#unary_negate)を返し `<Fun>(functor)` ます。 これは、論理 NOT を提供するファンクタで1つの引数のファンクタをラップするための便利な方法として使用します。
 
 ### <a name="example"></a>例
 
@@ -2245,7 +2245,7 @@ template<typename Fun>
 
 ### <a name="remarks"></a>注釈
 
-このテンプレート関数は、 [binary_negate (STL/CLR)](../dotnet/binary-negate-stl-clr.md)を返し `<Fun>(functor)` ます。 論理 NOT を提供するファンクタで2つの引数を持つファンクタをラップする便利な方法として使用します。
+このテンプレート関数は、 [binary_negate (STL/CLR)](#negate)を返し `<Fun>(functor)` ます。 論理 NOT を提供するファンクタで2つの引数を持つファンクタをラップする便利な方法として使用します。
 
 ### <a name="example"></a>例
 

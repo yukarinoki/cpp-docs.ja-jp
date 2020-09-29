@@ -12,12 +12,12 @@ helpviewer_keywords:
 - GetString method
 - SetString method
 ms.assetid: 138dc4de-c7c3-478c-863e-431e48249027
-ms.openlocfilehash: 927ea5ceef9ac74ae3cc1e06a47969b537209002
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 891c80a7c21fd046fba393b494ed6d84f731db6f
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88838166"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91498668"
 ---
 # <a name="cdynamicstringaccessor-class"></a>CDynamicStringAccessor クラス
 
@@ -43,7 +43,7 @@ class CDynamicStringAccessorT : public CDynamicAccessor
 |[GetString](#getstring)|指定された列データを文字列として取得します。|
 |[SetString](#setstring)|指定された列データを文字列として設定します。|
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>注釈
 
 [CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md)は、プロバイダーによって報告されたネイティブ形式のデータを要求しますが、は、 `CDynamicStringAccessor` データストアからアクセスされるすべてのデータを文字列データとして取得するようにプロバイダーに要求します。 これは、データストアの内容の表示や印刷など、データストアの値の計算を必要としない単純なタスクに特に便利です。
 
@@ -51,7 +51,7 @@ class CDynamicStringAccessorT : public CDynamicAccessor
 
 `CDynamicStringAccessor`列情報を取得するには、メソッドを使用します。 この列情報は、実行時にアクセサーを動的に作成するために使用します。
 
-列情報は、このクラスによって作成および管理されるバッファーに格納されます。 [GetString](../../data/oledb/cdynamicstringaccessor-getstring.md)を使用してバッファーからデータを取得するか、 [setstring](../../data/oledb/cdynamicstringaccessor-setstring.md)を使用してバッファーに格納します。
+列情報は、このクラスによって作成および管理されるバッファーに格納されます。 [GetString](#getstring)を使用してバッファーからデータを取得するか、 [setstring](#setstring)を使用してバッファーに格納します。
 
 動的アクセサークラスの使用例については、「 [動的アクセサーの使用](../../data/oledb/using-dynamic-accessors.md)」を参照してください。
 
@@ -81,7 +81,7 @@ BaseType* GetString(const WCHAR* pColumnName) const throw();
 
 指定した列から取得した文字列値へのポインター。 値の型は `BaseType` で、_UNICODE が定義されているかどうかによって、 **CHAR** または **WCHAR** になります。 指定された列が見つからない場合は NULL を返します。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 2番目のオーバーライド形式では、列名が ANSI 文字列として取得されます。 3番目のオーバーライド形式では、列名が Unicode 文字列として取得されます。
 
@@ -117,7 +117,7 @@ HRESULT SetString(const WCHAR* pColumnName,
 
 指定された列を設定する文字列値へのポインター。 値の型は `BaseType` で、_UNICODE が定義されているかどうかによって、 **CHAR** または **WCHAR** になります。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 2番目のオーバーライド形式では、列名が ANSI 文字列として取得され、3番目のオーバーライド形式では列名が Unicode 文字列として取得されます。
 

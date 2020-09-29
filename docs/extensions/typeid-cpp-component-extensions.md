@@ -5,12 +5,12 @@ ms.topic: reference
 helpviewer_keywords:
 - typeid keyword [C++]
 ms.assetid: e9706cae-e7c4-4d6d-b474-646d73df3e70
-ms.openlocfilehash: 56319fb773b8398f85f5fd82c812f0efdb7dde15
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: bfb226bc11f0fd7d3feddfb2c50ffe1aa6311d3d
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87225112"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91500388"
 ---
 # <a name="typeid--ccli-and-ccx"></a>typeid (C++/CLI および C++/CX)
 
@@ -45,7 +45,7 @@ Platform::Type^ type = T::typeid;
 *T*<br/>
 型の名前。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 C++/CX では、typeid は、ランタイムの型情報から構築された [Platform::Type](../cppcx/platform-type-class.md) を返します。
 
@@ -66,7 +66,7 @@ type::typeid
 *type*<br/>
 `System::Type` オブジェクトに適用する型 (抽象宣言子) の名前。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 **`typeid`** は、 <xref:System.Type> コンパイル時に型のを取得するために使用されます。
 
@@ -74,7 +74,7 @@ type::typeid
 
 **`typeid`** はコンパイル時に型名 (型) を評価できる必要がありますが、GetType は実行時に返される型を評価します。
 
-**`typeid`** ネイティブ型名またはネイティブ型名の共通言語ランタイムエイリアスを受け取ることができます。詳細については、「 [C++ ネイティブ型に相当する .NET Framework (c++/cli)」を](../dotnet/dotnet-framework-equivalents-to-cpp-native-types-cpp-cli.md)参照してください。
+**`typeid`** ネイティブ型名またはネイティブ型名の共通言語ランタイムエイリアスを受け取ることができます。詳細については、「 [C++ ネイティブ型に相当する .NET Framework (c++/cli)」を](../dotnet/managed-types-cpp-cli.md#dotnet) 参照してください。
 
 **`typeid`** はネイティブ型とも連携しますが、は引き続きを返し `System::Type` ます。  Type_info 構造体を取得するには、 [ `typeid` 演算子](../cpp/typeid-operator.md)を使用します。
 

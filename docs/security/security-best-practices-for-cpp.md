@@ -8,12 +8,12 @@ helpviewer_keywords:
 - security [C++]
 - security [C++], best practices
 ms.assetid: 86acaccf-cdb4-4517-bd58-553618e3ec42
-ms.openlocfilehash: 12b2db55a393928683e65c8faca49595fbbebc51
-ms.sourcegitcommit: 6e55aeb538b1c39af754f82d6f7738a18f5aa031
+ms.openlocfilehash: 63c5567cf1b06d52aa4b458a9ca127039e5c5daf
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87389962"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91499590"
 ---
 # <a name="security-best-practices-for-c"></a>C++ のセキュリティ推奨事項
 
@@ -23,21 +23,21 @@ ms.locfileid: "87389962"
 
 これらのセキュリティ機能は、Microsoft C++ コンパイラとリンカーに組み込まれています。
 
-[`/guard`(制御フローガードを有効にする)](../build/reference/guard-enable-control-flow-guard.md)<br/>
+[`/guard` (制御フローガードを有効にする)](../build/reference/guard-enable-control-flow-guard.md)<br/>
 コンパイラは、コンパイル時に間接呼び出しターゲットの制御フローを分析し、実行時にターゲットを確認するコードを挿入します。
 
-[`/GS`(バッファーセキュリティチェック)](../build/reference/gs-buffer-security-check.md)<br/>
+[`/GS` (バッファーセキュリティチェック)](../build/reference/gs-buffer-security-check.md)<br/>
 利用される危険性がある関数に、オーバーラン検出コードがコンパイラによって挿入されます。 オーバーランが検出されると、実行が停止します。 このオプションの既定値はオンです。
 
-[`/SAFESEH`(安全な例外ハンドラーがあるイメージ)](../build/reference/safeseh-image-has-safe-exception-handlers.md)<br/>
+[`/SAFESEH` (安全な例外ハンドラーがあるイメージ)](../build/reference/safeseh-image-has-safe-exception-handlers.md)<br/>
 各例外ハンドラーのアドレスを格納したテーブルが、リンカーによって出力イメージに含められます。 実行時に、オペレーティング システムはこのテーブルを使用して適切な例外ハンドラーのみが実行されるようにします。 これにより、実行時に悪意のある攻撃を受けて例外ハンドラーが実行されることを回避できます。 既定では、このオプションはオフになっています。
 
 [`/NXCOMPAT`](../build/reference/nxcompat.md)、 [ `/NXCOMPAT` (データ実行防止と互換性が](../build/reference/nxcompat-compatible-with-data-execution-prevention.md)あります) これらのコンパイラオプションとリンカーオプションでは、データ実行防止 (DEP) の互換性が有効になります。 DEP は、CPU で非コード ページが実行されないようにします。
 
-[`/analyze`(コード分析)](../build/reference/analyze-code-analysis.md)<br/>
-このコンパイラ オプションを使用すると、潜在的なセキュリティ上の問題 (バッファー オーバーラン、非初期化メモリ、null ポインターの逆参照、メモリ リークなど) を報告するコード解析がアクティブになります。 既定では、このオプションはオフになっています。 詳細については、「 [C/c + + のコード分析の概要](/cpp/code-quality/code-analysis-for-c-cpp-overview)」を参照してください。
+[`/analyze` (コード分析)](../build/reference/analyze-code-analysis.md)<br/>
+このコンパイラ オプションを使用すると、潜在的なセキュリティ上の問題 (バッファー オーバーラン、非初期化メモリ、null ポインターの逆参照、メモリ リークなど) を報告するコード解析がアクティブになります。 既定では、このオプションはオフになっています。 詳細については、「 [C/c + + のコード分析の概要](../code-quality/code-analysis-for-c-cpp-overview.md)」を参照してください。
 
-[`/DYNAMICBASE`(アドレス空間のレイアウトのランダム化を使用します)](../build/reference/dynamicbase-use-address-space-layout-randomization.md)<br/>
+[`/DYNAMICBASE` (アドレス空間のレイアウトのランダム化を使用します)](../build/reference/dynamicbase-use-address-space-layout-randomization.md)<br/>
 このリンカー オプションにより、実行開始時にメモリ内の個別の場所で読み込むことができる実行可能イメージをビルドできます。 また、このオプションを使用すると、メモリ内のスタックの位置を予測することが非常に難しくなります。
 
 ## <a name="security-enhanced-crt"></a>セキュリティが拡張された CRT
@@ -46,7 +46,7 @@ C ランタイム ライブラリ (CRT) が強化され、セキュリティ上�
 
 ## <a name="safeint-library"></a>SafeInt ライブラリ
 
-[SafeInt ライブラリ](../safeint/safeint-library.md)は、アプリケーションが数学的な操作を実行したときに発生する可能性がある、整数オーバーフローやその他の悪用可能なエラーを回避するのに役立ちます。 このライブラリには、 `SafeInt` [safeint クラス](../safeint/safeint-class.md)、 [safeintexception クラス](../safeint/safeintexception-class.md)、およびいくつかの[safeint 関数](../safeint/safeint-functions.md)が含まれています。
+[SafeInt ライブラリ](../safeint/safeint-library.md) は、アプリケーションが数学的な操作を実行したときに発生する可能性がある、整数オーバーフローやその他の悪用可能なエラーを回避するのに役立ちます。 このライブラリには、 `SafeInt` [safeint クラス](../safeint/safeint-class.md)、 [safeintexception クラス](../safeint/safeintexception-class.md)、およびいくつかの [safeint 関数](../safeint/safeint-functions.md)が含まれています。
 
 `SafeInt` クラスを使用することで、整数オーバーフローおよびゼロ除算による攻撃を防止できます。 型が異なる値の比較を処理するために使用できます。 2つのエラー処理ポリシーが用意されています。 `SafeInt` クラスの既定のポリシーは、`SafeIntException` クラス例外をスローして、数値演算を完了できない理由を報告することです。 `SafeInt` クラスの 2 番目のポリシーは、プログラムの実行を停止することです。 カスタム ポリシーも定義できます。
 
@@ -54,7 +54,7 @@ C ランタイム ライブラリ (CRT) が強化され、セキュリティ上�
 
 ## <a name="checked-iterators"></a>Checked Iterators
 
-チェックを行う反復子は、コンテナー境界を強制します。 既定では、チェックを行う反復子が境界の外側にあると、例外が生成され、プログラムの実行が終了します。 チェックを行う反復子は、やなど、プリプロセッサ定義に割り当てられた値に依存する他のレベルの応答を提供し `_SECURE_SCL_THROWS` `_ITERATOR_DEBUG_LEVEL` ます。 たとえば、では、チェックを行う `_ITERATOR_DEBUG_LEVEL=2` 反復子は、デバッグモードでの包括的な正確性チェックを提供します。これは、アサートを使用して利用できます。 詳細については、「チェックを行う[反復子](../standard-library/checked-iterators.md)」および「」を参照してください [`_ITERATOR_DEBUG_LEVEL`](../standard-library/iterator-debug-level.md) 。
+チェックを行う反復子は、コンテナー境界を強制します。 既定では、チェックを行う反復子が境界の外側にあると、例外が生成され、プログラムの実行が終了します。 チェックを行う反復子は、やなど、プリプロセッサ定義に割り当てられた値に依存する他のレベルの応答を提供し `_SECURE_SCL_THROWS` `_ITERATOR_DEBUG_LEVEL` ます。 たとえば、では、チェックを行う `_ITERATOR_DEBUG_LEVEL=2` 反復子は、デバッグモードでの包括的な正確性チェックを提供します。これは、アサートを使用して利用できます。 詳細については、「チェックを行う [反復子](../standard-library/checked-iterators.md) 」および「」を参照してください [`_ITERATOR_DEBUG_LEVEL`](../standard-library/iterator-debug-level.md) 。
 
 ## <a name="code-analysis-for-managed-code"></a>マネージド コードのコード分析
 
@@ -62,7 +62,7 @@ C ランタイム ライブラリ (CRT) が強化され、セキュリティ上�
 
 - ライブラリ デザイン
 
-- ローカライズ
+- ローカリゼーション
 
 - 名前付け規則
 
@@ -86,11 +86,11 @@ AppVerifier は、次の用途で使用できます。
 
 ## <a name="windows-user-accounts"></a>Windows ユーザー アカウント
 
-Administrators グループに属する Windows ユーザー アカウントを使用すると、開発者とユーザー (機能拡張により) がセキュリティ上の危険にさらされます。 詳細については、「 [Users グループのメンバーとしての実行](running-as-a-member-of-the-users-group.md)」および「[ユーザーアカウント制御 (UAC) によるアプリケーション](how-user-account-control-uac-affects-your-application.md)への影響」を参照してください。
+Administrators グループに属する Windows ユーザー アカウントを使用すると、開発者とユーザー (機能拡張により) がセキュリティ上の危険にさらされます。 詳細については、「 [Users グループのメンバーとしての実行](running-as-a-member-of-the-users-group.md) 」および「 [ユーザーアカウント制御 (UAC) によるアプリケーション](how-user-account-control-uac-affects-your-application.md)への影響」を参照してください。
 
 ## <a name="guidance-for-speculative-execution-side-channels"></a>予測実行側チャネルに関するガイダンス
 
-C++ ソフトウェアの予測実行側チャネルハードウェアの脆弱性に対する識別と軽減の方法の詳細については、「予測[実行側チャネルに関する C++ 開発者ガイド](developer-guidance-speculative-execution.md)」を参照してください。
+C++ ソフトウェアの予測実行側チャネルハードウェアの脆弱性に対する識別と軽減の方法の詳細については、「予測 [実行側チャネルに関する C++ 開発者ガイド](developer-guidance-speculative-execution.md)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

@@ -1,25 +1,25 @@
 ---
-title: UCRT のアルファベット順の関数リファレンス
+title: UCRT 関数リファレンス (アルファベット順)
 ms.date: 01/31/2019
 f1_keywords:
 - vc.tables.runtime
 ms.assetid: c2169b0e-cd86-489a-a2fa-2ee15c03b5c2
-ms.openlocfilehash: 855af5b7518ba36418d58f1dc2ac5f0bb6e54208
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 73fd08ffa58aabfd9a40e0296b21d4a5baea8750
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62340340"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91499398"
 ---
-# <a name="ucrt-alphabetical-function-reference"></a>UCRT のアルファベット順の関数リファレンス
+# <a name="ucrt-alphabetical-function-reference"></a>UCRT 関数リファレンス (アルファベット順)
 
-ルーチンがユニバーサル C ランタイム (UCRT、だけで多くの場合、CRT) ライブラリのリファレンス ドキュメントがアルファベット順に配置されています。 機能に基づいた CRT ルーチンを検索するには、次を参照してください。[カテゴリ別ユニバーサル C ランタイム ルーチン](../../c-runtime-library/run-time-routines-by-category.md)します。
+ユニバーサル C ランタイム (UCRT、多くの場合、CRT のみ) ライブラリリファレンスドキュメントは、ルーチンによってアルファベット順に配置されています。 機能に基づいて CRT ルーチンを検索するには、「 [カテゴリ別のユニバーサル C ランタイムルーチン](../../c-runtime-library/run-time-routines-by-category.md)」を参照してください。
 
 ## <a name="a"></a>A
 
-[abort](abort.md)
+[取り消し](abort.md)
 
-[abs](abs-labs-llabs-abs64.md)
+[絶対](abs-labs-llabs-abs64.md)
 
 [_abs64](abs-labs-llabs-abs64.md)
 
@@ -77,7 +77,7 @@ ms.locfileid: "62340340"
 
 [_amsg_exit](amsg-exit.md)
 
-[および](and.md)
+[and](and.md)
 
 [and_eq](and-eq.md)
 
@@ -85,7 +85,7 @@ ms.locfileid: "62340340"
 
 [asctime_s](asctime-s-wasctime-s.md)
 
-[asin](asin-asinf-asinl.md)
+[サイン](asin-asinf-asinl.md)
 
 [asinf](asin-asinf-asinl.md)
 
@@ -97,7 +97,7 @@ ms.locfileid: "62340340"
 
 [asinl](asin-asinf-asinl.md)
 
-[assert](assert-macro-assert-wassert.md)
+[アサート](assert-macro-assert-wassert.md)
 
 [_assert](assert-macro-assert-wassert.md)
 
@@ -191,7 +191,7 @@ ms.locfileid: "62340340"
 
 [_cabs](cabs.md)
 
-[cabs](cabs-cabsf-cabsl.md)
+[タクシー](cabs-cabsf-cabsl.md)
 
 [cabsf](cabs-cabsf-cabsl.md)
 
@@ -1219,7 +1219,7 @@ ms.locfileid: "62340340"
 
 [islessequal](floating-point-ordering.md)
 
-[islessgreater](floating-point-ordering.md)
+[より大きい](floating-point-ordering.md)
 
 [islower](islower-iswlower-islower-l-iswlower-l.md)
 
@@ -1369,7 +1369,7 @@ ms.locfileid: "62340340"
 
 [_isspace_l](isspace-iswspace-isspace-l-iswspace-l.md)
 
-[isunordered](floating-point-ordering.md)
+[isunordered なし](floating-point-ordering.md)
 
 [isupper](isupper-isupper-l-iswupper-iswupper-l.md)
 
@@ -1463,7 +1463,7 @@ ms.locfileid: "62340340"
 
 [_jn](bessel-functions-j0-j1-jn-y0-y1-yn.md)
 
-[jn](j0-j1-jn.md)
+[ジェニー](j0-j1-jn.md)
 
 ## <a name="k"></a>K
 
@@ -1477,7 +1477,7 @@ ms.locfileid: "62340340"
 
 [ldexp](ldexp.md)
 
-[ldiv](ldiv-lldiv.md)
+[ldiv](./div.md)
 
 [_lfind](lfind.md)
 
@@ -1493,7 +1493,7 @@ ms.locfileid: "62340340"
 
 [llabs](abs-labs-llabs-abs64.md)
 
-[lldiv](ldiv-lldiv.md)
+[lldiv](./div.md)
 
 [llrint](lrint-lrintf-lrintl-llrint-llrintf-llrintl.md)
 
@@ -1523,11 +1523,11 @@ ms.locfileid: "62340340"
 
 [_lock_file](lock-file.md)
 
-[locking](posix-locking.md)
+[カスタ](posix-locking.md)
 
 [_locking](locking.md)
 
-[log](log-logf-log10-log10f.md)
+[出力](log-logf-log10-log10f.md)
 
 [log10](log-logf-log10-log10f.md)
 
@@ -2019,7 +2019,7 @@ ms.locfileid: "62340340"
 
 [_open_osfhandle](open-osfhandle.md)
 
-[または](or.md)
+[or](or.md)
 
 [or_eq](or-eq.md)
 
@@ -2033,7 +2033,7 @@ ms.locfileid: "62340340"
 
 [_popen](popen-wpopen.md)
 
-[pow](pow-powf-powl.md)
+[えい](pow-powf-powl.md)
 
 [powf](pow-powf-powl.md)
 
@@ -2113,7 +2113,7 @@ ms.locfileid: "62340340"
 
 [rand_s](rand-s.md)
 
-[read](posix-read.md)
+[込ん](posix-read.md)
 
 [_read](read.md)
 
@@ -2125,7 +2125,7 @@ ms.locfileid: "62340340"
 
 [_recalloc_dbg](recalloc-dbg.md)
 
-[remainder](remainder-remainderf-remainderl.md)
+[後述](remainder-remainderf-remainderl.md)
 
 [remainderf](remainder-remainderf-remainderl.md)
 
@@ -2143,7 +2143,7 @@ ms.locfileid: "62340340"
 
 [_resetstkoflw](resetstkoflw.md)
 
-[rewind](rewind.md)
+[巻き](rewind.md)
 
 [rint](rint-rintf-rintl.md)
 
@@ -2167,7 +2167,7 @@ ms.locfileid: "62340340"
 
 [_rotr64](rotl-rotl64-rotr-rotr64.md)
 
-[round](round-roundf-roundl.md)
+[誤差](round-roundf-roundl.md)
 
 [roundf](round-roundf-roundl.md)
 
@@ -2295,7 +2295,7 @@ ms.locfileid: "62340340"
 
 [signbit](signbit.md)
 
-[sin](sin-sinf-sinl.md)
+[サイン](sin-sinf-sinl.md)
 
 [sinf](sin-sinf-sinl.md)
 
@@ -2671,11 +2671,11 @@ ms.locfileid: "62340340"
 
 [_swscanf_s_l](sscanf-s-sscanf-s-l-swscanf-s-swscanf-s-l.md)
 
-[system](system-wsystem.md)
+[システム](system-wsystem.md)
 
 ## <a name="t"></a>T
 
-[tan](tan-tanf-tanl.md)
+[タンジェント](tan-tanf-tanl.md)
 
 [tanf](tan-tanf-tanl.md)
 
@@ -2699,7 +2699,7 @@ ms.locfileid: "62340340"
 
 [_tempnam_dbg](tempnam-dbg-wtempnam-dbg.md)
 
-[terminate](terminate-crt.md)
+[解約](terminate-crt.md)
 
 [tgamma](tgamma-tgammaf-tgammal.md)
 
@@ -2791,7 +2791,7 @@ ms.locfileid: "62340340"
 
 [__uncaught_exception](uncaught-exception.md)
 
-[unexpected](unexpected-crt.md)
+[不適切](unexpected-crt.md)
 
 [ungetc](ungetc-ungetwc.md)
 
@@ -3385,7 +3385,7 @@ ms.locfileid: "62340340"
 
 [_write](write.md)
 
-[write](posix-write.md)
+[企画](posix-write.md)
 
 [_wrmdir](rmdir-wrmdir.md)
 
@@ -3485,7 +3485,7 @@ ms.locfileid: "62340340"
 
 [_wutime64](utime-utime32-utime64-wutime-wutime32-wutime64.md)
 
-## <a name="x"></a>x
+## <a name="x"></a>X
 
 [xor](xor.md)
 
@@ -3507,4 +3507,4 @@ ms.locfileid: "62340340"
 
 ## <a name="see-also"></a>関連項目
 
-[C ランタイム ライブラリ リファレンス](../../c-runtime-library/c-run-time-library-reference.md)<br/>
+[C ランタイムライブラリリファレンス](../../c-runtime-library/c-run-time-library-reference.md)<br/>

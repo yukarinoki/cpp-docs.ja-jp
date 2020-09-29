@@ -11,12 +11,12 @@ helpviewer_keywords:
 - objects [C++], adding to ATL projects
 - ATL Control Wizard
 ms.assetid: c0adcbd0-07fe-4c55-a8fd-8c2c65ecdaad
-ms.openlocfilehash: b1bf4f85ccf7a0bb2d77bfb96c512349f581f193
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 6acd60d430f13906d11e9a9b3e7c5655ee94badb
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88832452"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91499300"
 ---
 # <a name="adding-objects-and-controls-to-an-atl-project"></a>ATL プロジェクトへのオブジェクトとコントロールの追加
 
@@ -42,7 +42,7 @@ ATL または MFC ベースのプロジェクトにオブジェクトまたは�
 
 1. **ソリューション エクスプローラー**で、プロジェクト ノードを右クリックし、ショートカット メニューの **[追加]** をクリックします。 **[クラスの追加]** をクリックします。
 
-   [[クラスの追加]](../../ide/add-class-dialog-box.md) ダイアログ ボックスが表示されます。
+   [[クラスの追加]](../../ide/adding-a-class-visual-cpp.md#add-class-dialog-box) ダイアログ ボックスが表示されます。
 
 1. **[カテゴリ]** ウィンドウで **[ATL]** フォルダーが選択された状態で、**[テンプレート]** ウィンドウから挿入するオブジェクトを選択します。 **[開く]** をクリックします。 選択したオブジェクトのコード ウィザードが表示されます。
 

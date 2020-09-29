@@ -6,59 +6,59 @@ helpviewer_keywords:
 - dialog box controls [MFC], common controls
 - Windows common controls [MFC], in dialog boxes
 ms.assetid: 17713caf-09f8-484a-bf54-5f48bf09cce9
-ms.openlocfilehash: ade1b464d3851fb9294a1ba7180b48771f0468cc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1a3dcb7151952b52affcfeb838ced15f0d116fce
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62411787"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91500349"
 ---
 # <a name="using-common-controls-in-a-dialog-box"></a>ダイアログ ボックスでのコモン コントロールの使い方
 
-Windows コモン コントロールで使用できる[ ダイアログ ボックス](../mfc/dialog-boxes.md)ビュー、レコード ビュー、およびダイアログのテンプレートに基づくその他のウィンドウを形成します。 フォームにも軽微な変更で、次の手順で機能します。
+Windows コモンコントロールは、ダイアログ [ボックス](../mfc/dialog-boxes.md)、フォームビュー、レコードビュー、およびダイアログテンプレートに基づくその他のウィンドウで使用できます。 次の手順は軽微な変更を加えて、フォームにも使用できます。
 
 ## <a name="procedures"></a>手順
 
-#### <a name="to-use-a-common-control-in-a-dialog-box"></a>ダイアログ ボックスで、一般的なコントロールを使用するには
+#### <a name="to-use-a-common-control-in-a-dialog-box"></a>コモンコントロールをダイアログボックスで使用するには
 
-1. ダイアログ テンプレートにコントロールを配置[ダイアログ エディターを使用して](../mfc/using-the-dialog-editor-to-add-controls.md)します。
+1. ダイアログ [エディターを使用して](../mfc/using-the-dialog-editor-to-add-controls.md)、ダイアログテンプレートにコントロールを配置します。
 
-1. ダイアログ クラスには、コントロールを表すメンバー変数を追加します。 **メンバー変数の追加**ダイアログ ボックスで、**コントロール変数**いることを確認および**コントロール**が選択されている、**カテゴリ**します。
+1. コントロールを表すメンバー変数をダイアログクラスに追加します。 [ **メンバー変数の追加** ] ダイアログボックスで、[ **コントロール変数** ] チェックボックスをオンにし、カテゴリに対して [ **コントロール** **]** が選択されていることを確認します。
 
-1. この一般的なコントロールがプログラムに入力を提供している場合は、追加のメンバーを宣言します。 それらを処理するために、ダイアログ クラスで variable(s) が値を入力します。
-
-    > [!NOTE]
-    >  クラス ビュー コンテキスト メニューを使用してこれらのメンバー変数を追加することができます (を参照してください[メンバー変数の追加](../ide/adding-a-member-variable-visual-cpp.md))。
-
-1. [OnInitDialog](../mfc/reference/cdialog-class.md#oninitdialog)ダイアログ クラスの一般的なコントロールの初期条件を設定します。 前の手順で作成したメンバー変数を使用して、初期値とその他の設定を設定するのにメンバー関数を使用します。 設定には、次の詳細については、コントロールの説明を参照してください。
-
-   使用することも[ダイアログ データ エクス チェンジ](../mfc/dialog-data-exchange-and-validation.md)チェンジ (DDX) ダイアログ ボックスのコントロールを初期化します。
-
-1. ダイアログ ボックス上のコントロールのハンドラーでは、コントロールを操作するのにメンバー変数を使用します。 メソッドでは、次の詳細については、コントロールの説明を参照してください。
+1. このコモンコントロールがプログラムに入力を提供している場合は、これらの入力値を処理するために、ダイアログクラスの追加のメンバー変数を宣言します。
 
     > [!NOTE]
-    >  のみ、ダイアログ ボックス自体が存在する限り、メンバー変数が存在します。 ダイアログ ボックスが閉じられた後に、コントロールの入力値を照会することはできません。 コモン コントロールからの入力値を使用するオーバーライド`OnOK`ダイアログ クラスにします。 オーバーライドの中では、クエリの入力値に対する制御し、ダイアログ クラスのメンバー変数にそれらの値を格納します。
+    >  これらのメンバー変数は、クラスビューのコンテキストメニューを使用して追加できます (「 [メンバー変数の追加](../ide/adding-a-member-variable-visual-cpp.md)」を参照してください)。
+
+1. ダイアログクラスの [OnInitDialog](../mfc/reference/cdialog-class.md#oninitdialog) で、コモンコントロールの初期条件を設定します。 前の手順で作成したメンバー変数を使用して、メンバー関数を使用して初期値とその他の設定を設定します。 設定の詳細については、次のコントロールの説明を参照してください。
+
+   ダイアログボックスでコントロールを初期化するには、 [ダイアログデータエクスチェンジ](../mfc/dialog-data-exchange-and-validation.md) (DDX) を使用することもできます。
+
+1. ダイアログボックスのコントロールのハンドラーでは、メンバー変数を使用してコントロールを操作します。 メソッドの詳細については、次のコントロールの説明を参照してください。
 
     > [!NOTE]
-    >  ダイアログ データ エクス チェンジ ダイアログ ボックス内のコントロールから値を取得または設定を使用することもできます。
+    >  メンバー変数は、ダイアログボックス自体が存在する間だけ存在します。 ダイアログボックスを閉じた後に、コントロールに対して入力値をクエリすることはできません。 コモンコントロールからの入力値を操作するには、 `OnOK` ダイアログクラスでをオーバーライドします。 オーバーライドで、コントロールに対して入力値をクエリし、それらの値をダイアログクラスのメンバー変数に格納します。
 
-## <a name="remarks"></a>Remarks
+    > [!NOTE]
+    >  ダイアログボックス内のコントロールの値を設定または取得するために、ダイアログデータエクスチェンジを使用することもできます。
 
-ダイアログ ボックスにいくつかの一般的なコントロールの追加には、不要になった関数にダイアログ ボックスが発生します。 参照してください[ダイアログ ボックスにコントロールを追加、ダイアログ ボックスでなくなった機能](../windows/adding-controls-to-a-dialog-causes-the-dialog-to-no-longer-function.md)この状況を処理の詳細についてはします。
+## <a name="remarks"></a>注釈
+
+ダイアログボックスにいくつかの一般的なコントロールが追加されると、ダイアログボックスが機能しなくなります。 この状況の処理の詳細については [、「コントロールをダイアログに追加](../windows/adding-editing-or-deleting-controls.md) する」を参照してください。
 
 ## <a name="what-do-you-want-to-do"></a>どうしたいんですか
 
-- [コントロールを追加 ダイアログ ボックスを手動での代わりにダイアログ エディター](../mfc/adding-controls-by-hand.md)
+- [ダイアログエディターではなく、手動でコントロールをダイアログボックスに追加する](../mfc/adding-controls-by-hand.md)
 
-- [コントロールの標準の Windows コモン コントロールのいずれかから派生します。](../mfc/deriving-controls-from-a-standard-control.md)
+- [標準の Windows コモンコントロールの1つからコントロールを派生させる](../mfc/deriving-controls-from-a-standard-control.md)
 
-- [子ウィンドウとしてのコモン コントロールを使用します。](../mfc/using-a-common-control-as-a-child-window.md)
+- [子ウィンドウとしてコモンコントロールを使用する](../mfc/using-a-common-control-as-a-child-window.md)
 
-- [コントロールから通知メッセージを受信します。](../mfc/receiving-notification-from-common-controls.md)
+- [コントロールから通知メッセージを受信する](../mfc/receiving-notification-from-common-controls.md)
 
-- [ダイアログ データ エクス (チェンジ DDX)](../mfc/dialog-data-exchange-and-validation.md)
+- [ダイアログデータエクスチェンジ (DDX) を使用する](../mfc/dialog-data-exchange-and-validation.md)
 
 ## <a name="see-also"></a>関連項目
 
-[コントロールの作成方法と使い方](../mfc/making-and-using-controls.md)<br/>
+[コントロールの作成と使用](../mfc/making-and-using-controls.md)<br/>
 [コントロール](../mfc/controls-mfc.md)
