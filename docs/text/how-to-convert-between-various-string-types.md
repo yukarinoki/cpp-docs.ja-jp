@@ -7,20 +7,18 @@ helpviewer_keywords:
 - string conversion [C++]
 - strings [C++], converting
 ms.assetid: e7e4f741-3c82-45f0-b8c0-1e1e343b0e77
-ms.openlocfilehash: e7d8239f49e527ead0a2e9dfbcca5e7e55f8c766
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 068665c594f2fbeb531be21ded7ef16f3f5c1ef3
+ms.sourcegitcommit: 94893973211d0b254c8bcdcf0779997dcc136b0c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87224501"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91414517"
 ---
 # <a name="how-to-convert-between-various-string-types"></a>方法: さまざまな文字列型間で変換する
 
 このトピックでは、さまざまな Visual C++ 文字列型を他の文字列に変換する方法について説明します。 対象となる文字列型には `char *` 、 `wchar_t*` 、、 [_bstr_t](../cpp/bstr-t-class.md)、 [CComBSTR](../atl/reference/ccombstr-class.md)、 [CString](../atl-mfc-shared/using-cstring.md)、 [basic_string](../standard-library/basic-string-class.md)、およびがあり <xref:System.String?displayProperty=fullName> ます。 どの場合も、新しい型に変換すると文字列のコピーが作成されます。 新しい文字列に何らかの変更を加えても元の文字列には影響しません。また、逆に、元の文字列に何らかの変更を加えても新しい文字列には影響しません。
 
-## <a name="converting-from-char-"></a>変換 (char から)\*
-
-## <a name="example"></a>例
+## <a name="example-convert-from-char-"></a>例: char * からの変換
 
 ### <a name="description"></a>説明
 
@@ -119,9 +117,7 @@ Hello, World! (basic_string)
 Hello, World! (System::String)
 ```
 
-## <a name="converting-from-wchar_t-"></a>変換 (wchar_t から)\*
-
-## <a name="example"></a>例
+## <a name="example-convert-from-wchar_t-"></a>例: 変換 wchar_t *
 
 ### <a name="description"></a>説明
 
@@ -243,9 +239,7 @@ Hello, World! (basic_string)
 Hello, World! (System::String)
 ```
 
-## <a name="converting-from-_bstr_t"></a>_bstr_t からの変換
-
-## <a name="example"></a>例
+## <a name="example-convert-from-_bstr_t"></a>例: _bstr_t からの変換
 
 ### <a name="description"></a>説明
 
@@ -343,9 +337,7 @@ Hello, World! (basic_string)
 Hello, World! (System::String)
 ```
 
-## <a name="converting-from-ccombstr"></a>CComBSTR からの変換
-
-## <a name="example"></a>例
+## <a name="example-convert-from-ccombstr"></a>例: CComBSTR からの変換
 
 ### <a name="description"></a>説明
 
@@ -453,9 +445,7 @@ Hello, World! (basic_string)
 Hello, World! (System::String)
 ```
 
-## <a name="converting-from-cstring"></a>CString からの変換
-
-## <a name="example"></a>例
+## <a name="example-convert-from-cstring"></a>例: CString からの変換
 
 ### <a name="description"></a>説明
 
@@ -597,9 +587,7 @@ Hello, World! (basic_string)
 Hello, World! (System::String)
 ```
 
-## <a name="converting-from-basic_string"></a>basic_string からの変換
-
-## <a name="example"></a>例
+## <a name="example-convert-from-basic_string"></a>例: basic_string からの変換
 
 ### <a name="description"></a>説明
 
@@ -693,13 +681,11 @@ Hello, World! (CStringW)
 Hello, World! (System::String)
 ```
 
-## <a name="converting-from-systemstring"></a>System::String からの変換
-
-## <a name="example"></a>例
+## <a name="example-convert-from-systemstring"></a>例: System:: String からの変換
 
 ### <a name="description"></a>説明
 
-この例では、ワイド文字 (Unicode) [System:: string](/dotnet/api/system.string)から、上記の他の文字列型に変換する方法を示します。
+この例では、ワイド文字 (Unicode) [System:: string](/dotnet/api/system.string) から、上記の他の文字列型に変換する方法を示します。
 
 ### <a name="code"></a>コード
 

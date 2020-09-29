@@ -9,12 +9,12 @@ helpviewer_keywords:
 - generic classes
 - generics [C++], declaring generic classes
 ms.assetid: 0beb99e1-1ec4-4fee-9836-ce9657d67a3a
-ms.openlocfilehash: 894bbffcc73693e5d0976831d65df54b09c853d2
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: fd287d8e9fe08ccd42436569eafee3f6935700e2
+ms.sourcegitcommit: 94893973211d0b254c8bcdcf0779997dcc136b0c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87216025"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91414127"
 ---
 # <a name="generic-classes-ccli"></a>ジェネリック クラス (C++/CLI)
 
@@ -157,9 +157,9 @@ ref class MyClass : IInterface<ItemType> {};
 
 ジェネリック クラスのインスタンス変数は、外側のクラスからの型と任意の型パラメーターを含む変数初期化子を持つことができます。
 
-## <a name="example"></a>例
+## <a name="example-different-generic-classes"></a>例: 異なるジェネリッククラス
 
-次の例では、ジェネリッククラス MyClass の3つの異なるインスタンス \<ItemType> が、適切な型引数 ( **`int`** 、 **`double`** 、および**string**) を使用して作成されます。
+次の例では、ジェネリッククラス MyClass の3つの異なるインスタンス \<ItemType> が、適切な型引数 ( **`int`** 、 **`double`** 、および **string**) を使用して作成されます。
 
 ```cpp
 // generics_instance_fields1.cpp
@@ -205,7 +205,7 @@ String field = ABC
 
 静的変数では、外側のクラスから任意の型パラメーターを使用できます。
 
-## <a name="example"></a>例
+## <a name="example-use-static-variables"></a>例: 静的変数を使用する
 
 次の例では、静的コンストラクター内での静的フィールドと汎用クラスの使用を示します。
 
@@ -282,7 +282,7 @@ Test1
 
 このようなメソッドの本文でも、これらの型パラメーターを使用できます。
 
-## <a name="example"></a>例
+## <a name="example-declare-non-generic-method"></a>例: 非ジェネリックメソッドの宣言
 
 次の例では、ジェネリック クラス `MyClass<ItemType>` 内に非ジェネリック メソッド `ProtectData` を宣言します。 このメソッドは、クラス型パラメーター `ItemType` をオープン構築型のシグニチャ内で使用します。
 
@@ -343,7 +343,7 @@ Amount: $123.00**
 
 ジェネリックと非ジェネリック クラスの両方でジェネリック メソッドを宣言できます。 次に例を示します。
 
-## <a name="example"></a>例
+## <a name="example-declare-generic-and-non-generic-methods"></a>例: ジェネリックメソッドと非ジェネリックメソッドを宣言する
 
 ```cpp
 // generics_method2.cpp
@@ -369,7 +369,7 @@ public:
 
 ジェネリック クラスのメソッドのすべての型は、静的、インスタンス、および仮想メソッドを含むジェネリックにすることができます。
 
-## <a name="example"></a>例
+## <a name="example-declare-and-use-generic-methods"></a>例: ジェネリックメソッドの宣言と使用
 
 次の例では、ジェネリック クラス内でジェネリック メソッドを宣言して使用することを示します。
 
@@ -453,9 +453,9 @@ ref class Outer {
 
 入れ子になったジェネリック構築型に名前がある場合、内側の型が外側の型の型パラメーターによって暗黙的にパラメーター化されるにもかかわらず、外側の型の型パラメーターは内側の型の型パラメーターの一覧に含まれることはありません。 上記の場合、構築型の名前は、`Outer<int>::Inner<string>` になります。
 
-次の例では、ジェネリック クラスの入れ子にされた型を使用して、リンクされた一覧をビルドして読み取ることを示します。
+## <a name="example-build-and-read-linked-list"></a>例: ビルドと読み取りのリンクリスト
 
-## <a name="example"></a>例
+次の例では、ジェネリック クラスの入れ子にされた型を使用して、リンクされた一覧をビルドして読み取ることを示します。
 
 ```cpp
 // generics_linked_list.cpp
@@ -556,7 +556,7 @@ Reading nodes:
 
 - プロパティ、イベント、インデクサー、おおび演算子そのものをパラメーター化することはできません。
 
-## <a name="example"></a>例
+## <a name="example-declare-instance-property"></a>例: instance プロパティの宣言
 
 この例では、ジェネリック クラス内のインスタンス プロパティの宣言を示します。
 
@@ -596,7 +596,7 @@ int main() {
 John, 234
 ```
 
-## <a name="example"></a>例
+## <a name="example-generic-class-with-event"></a>例: イベントのあるジェネリッククラス
 
 次の例では、イベントを持つジェネリック クラスを示します。
 
@@ -663,7 +663,7 @@ int main() {
 
 ジェネリック構造体を宣言して使用するためのルールは、Visual C++ 言語リファレンスに記載されている違いを除いて、ジェネリック クラスのルールと同じです。
 
-## <a name="example"></a>例
+## <a name="example-declare-generic-struct"></a>例: ジェネリック構造体を宣言する
 
 次の例では、1つのフィールドを持つジェネリック構造体を宣言 `MyGenStruct` `myField` し、別の型 ( **`int`** 、、) の値を **`double`** `String^` このフィールドに代入します。
 

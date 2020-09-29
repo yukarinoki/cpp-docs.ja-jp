@@ -6,12 +6,12 @@ helpviewer_keywords:
 - _ptr keyword
 - value types, declaring
 ms.assetid: 49eea66e-eeba-49bd-95b0-ba297be436e3
-ms.openlocfilehash: 46f8c39affe5a3c0ad8648162f0fde5371eb30ca
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: b5d17f3621271faa03e30e24f259d8d7cebbb491
+ms.sourcegitcommit: 94893973211d0b254c8bcdcf0779997dcc136b0c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87195578"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91414491"
 ---
 # <a name="how-to-declare-value-types-with-the-interior_ptr-keyword-ccli"></a>方法: interior_ptr キーワードを含む値型を宣言する (C++/CLI)
 
@@ -20,7 +20,7 @@ ms.locfileid: "87195578"
 > [!IMPORTANT]
 > この言語機能は、`/clr` コンパイラ オプションではサポートされていますが、`/ZW` コンパイラ オプションではサポートされていません。
 
-## <a name="example"></a>例
+## <a name="example-interior_ptr-with-value-type"></a>例: 値型の interior_ptr
 
 ### <a name="description"></a>説明
 
@@ -65,7 +65,7 @@ int main() {
 3
 ```
 
-## <a name="example"></a>例
+## <a name="example-this-pointer"></a>例: this ポインター
 
 ### <a name="description"></a>説明
 
@@ -87,7 +87,7 @@ value struct V {
 };
 ```
 
-## <a name="example"></a>例
+## <a name="example-address-of-operator"></a>例: アドレス演算子
 
 ### <a name="description"></a>説明
 

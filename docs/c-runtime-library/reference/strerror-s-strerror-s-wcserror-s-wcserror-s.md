@@ -1,6 +1,7 @@
 ---
 title: strerror_s、_strerror_s、_wcserror_s、__wcserror_s
-ms.date: 06/09/2020
+description: システムエラーメッセージを取得したり、ユーザーが指定したエラーメッセージを出力したりするためのセキュリティが強化された関数。
+ms.date: 09/25/2020
 api_name:
 - __wcserror_s
 - _strerror_s
@@ -46,12 +47,12 @@ helpviewer_keywords:
 - wcserror_s function
 - error messages, getting
 ms.assetid: 9e5b15a0-efe1-4586-b7e3-e1d7c31a03d6
-ms.openlocfilehash: 91be8803a0695670e7afe673b25b54fccde40a9c
-ms.sourcegitcommit: 8167c67d76de58a7c2df3b4dcbf3d53e3b151b77
+ms.openlocfilehash: 4e594a37425714ef521c083785120e2262225b19
+ms.sourcegitcommit: 94893973211d0b254c8bcdcf0779997dcc136b0c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84664327"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91414621"
 ---
 # <a name="strerror_s-_strerror_s-_wcserror_s-__wcserror_s"></a>strerror_s、_strerror_s、_wcserror_s、__wcserror_s
 
@@ -80,6 +81,9 @@ errno_t __wcserror_s(
    size_t sizeInWords,
    const wchar_t *strErrMsg
 );
+```
+
+```cpp
 template <size_t size>
 errno_t strerror_s(
    char (&buffer)[size],
@@ -104,35 +108,37 @@ errno_t __wcserror_s(
 
 ### <a name="parameters"></a>パラメーター
 
-*格納*<br/>
+*格納*\
 エラー文字列を格納するバッファー。
 
-*sizeInBytes*<br/>
+*sizeInBytes*\
 バッファー内のバイト数。
 
-*sizeInWords*<br/>
+*sizeInWords*\
 バッファー内の単語数。
 
-*errnum*<br/>
+*errnum*\
 エラー番号。
 
-*strErrMsg*<br/>
+*strErrMsg*\
 ユーザーが指定したメッセージ。
 
 ## <a name="return-value"></a>戻り値
 
 正常終了した場合は 0 を返します。失敗した場合はエラー コードを返します。
 
-### <a name="error-condtions"></a>エラー条件
+### <a name="error-conditions"></a>エラー条件
 
 |*格納*|*sizeInBytes/Sizeinbytes*|*strErrMsg*|*バッファー*の内容|
 |--------------|------------------------|-----------------|--------------------------|
 |**NULL**|any|any|該当なし|
 |any|0|any|変更されない|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-**Strerror_s**関数は、 *errnum*をエラーメッセージ文字列にマップし、*バッファー*内の文字列を返します。 **_strerror_s**はエラー番号を受け取りません。**errno**の現在の値を使用して、適切なメッセージを決定します。 **Strerror_s**も **_strerror_s**でも、実際にはメッセージを出力しません。そのため、 [fprintf](fprintf-fprintf-l-fwprintf-fwprintf-l.md)などの出力関数を呼び出す必要があります。
+**Strerror_s**関数はスレッドセーフです。
+
+**Strerror_s**関数は、 *errnum*をエラーメッセージ文字列にマップし、*バッファー*内の文字列を返します。 **_strerror_s** はエラー番号を受け取りません。 **errno** の現在の値を使用して、適切なメッセージを決定します。 **Strerror_s**も **_strerror_s**でも、実際にはメッセージを出力しません。そのため、 [fprintf](fprintf-fprintf-l-fwprintf-fwprintf-l.md)などの出力関数を呼び出す必要があります。
 
 ```C
 if (( _access( "datafile",2 )) == -1 )
@@ -142,17 +148,17 @@ if (( _access( "datafile",2 )) == -1 )
 }
 ```
 
-*StrErrMsg*が**NULL**の場合、 **_strerror_s**は、エラーを生成した最後のライブラリの呼び出しのシステムエラーメッセージを含む*バッファー*内の文字列を返します。 エラー メッセージ文字列は、改行文字 (「\n」) で終了します。 *StrErrMsg*が**NULL**でない場合、 **_strerror_s**は、文字列メッセージ、コロン、空白、エラーを生成した最後のライブラリの呼び出しのシステムエラーメッセージ、および改行文字を含む*バッファー*内の文字列を返します。 文字列のメッセージの長さは、最大で 94 文字です。
+*StrErrMsg*が**NULL**の場合、 **_strerror_s**は、エラーを生成した最後のライブラリの呼び出しのシステムエラーメッセージを含む文字列を*buffer*に返します。 エラー メッセージ文字列は、改行文字 (「\n」) で終了します。 *StrErrMsg*が**NULL**と等しくない場合、 **_strerror_s**は、文字列メッセージ、コロン、空白、エラーを生成した最後のライブラリの呼び出しのシステムエラーメッセージ、および改行文字を含む文字列を*バッファー*内に返します。 文字列のメッセージの長さは、最大で 94 文字です。
 
 これらの関数は、長さがバッファー-1 のサイズを超えた場合にエラーメッセージを切り捨てます。 *バッファー*内の結果の文字列は、常に null で終了します。
 
-**_Strerror_s**の実際のエラー番号は、変数[errno](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)に格納されます。 システム エラー メッセージは、エラー番号順のメッセージの配列である変数 [_sys_errlist](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) を使用してアクセスできます。 **_strerror_s**は、変数 **_sys_errlist**のインデックスとして**errno**値を使用して、適切なエラーメッセージにアクセスします。 変数[_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)の値は、 **_sys_errlist**配列内の要素の最大数として定義されます。 正確な結果を生成するには、ライブラリルーチンからエラーが返された直後に **_strerror_s**を呼び出します。 それ以外の場合、 **strerror_s**または **_strerror_s**を呼び出すと、 **errno**値が上書きされる可能性があります。
+**_Strerror_s**の実際のエラー番号は、変数[errno](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)に格納されます。 システム エラー メッセージは、エラー番号順のメッセージの配列である変数 [_sys_errlist](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) を使用してアクセスできます。 **_strerror_s**は、変数 **_sys_errlist**のインデックスとして**errno**値を使用して、適切なエラーメッセージにアクセスします。 変数 [_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) の値は、 **_sys_errlist** 配列内の要素の最大数として定義されます。 正確な結果を生成するには、ライブラリルーチンからエラーが返された直後に **_strerror_s** を呼び出します。 それ以外の場合、 **strerror_s** または **_strerror_s** を呼び出すと、 **errno** 値が上書きされる可能性があります。
 
-**_wcserror_s**と **__wcserror_s**は、それぞれ**strerror_s**と **_strerror_s**のワイド文字バージョンです。
+**_wcserror_s** と **__wcserror_s** は、それぞれ **strerror_s** と **_strerror_s**のワイド文字バージョンです。
 
-これらの関数では、パラメーターの検証が行われます。 Buffer が**NULL**の場合、または size パラメーターが0の場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、関数は**einval**を返し、 **errno**を**einval**に設定します。
+これらの関数では、パラメーターの検証が行われます。 Buffer が **NULL** の場合、または size パラメーターが0の場合は、「 [パラメーターの検証](../../c-runtime-library/parameter-validation.md) 」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、関数は **einval** を返し、 **errno** を **einval**に設定します。
 
-**_strerror_s**、 **_wcserror_s**、および **__wcserror_s**は、ANSI 定義の一部ではありませんが、Microsoft の拡張機能です。 移植性が必要な場合は使用しないでください。ANSI 互換の場合は、代わりに**strerror_s**を使用します。
+**_strerror_s**、 **_wcserror_s**、 **__wcserror_s** は、ANSI 定義の一部ではありませんが、Microsoft の拡張機能です。 移植性が必要な場合は使用しないでください。ANSI 互換の場合は、代わりに **strerror_s** を使用します。
 
 C++ では、テンプレートのオーバーロードによってこれらの関数を簡単に使用できます。オーバーロードでは、バッファー長を自動的に推論できるため、サイズ引数を指定する必要がなくなります。 詳細については、「[セキュリティ保護されたテンプレート オーバーロード](../../c-runtime-library/secure-template-overloads.md)」を参照してください。
 
@@ -181,7 +187,7 @@ C++ では、テンプレートのオーバーロードによってこれらの�
 
 ## <a name="see-also"></a>関連項目
 
-[文字列操作](../../c-runtime-library/string-manipulation-crt.md)<br/>
-[clearerr](clearerr.md)<br/>
-[ferror](ferror.md)<br/>
-[perror、_wperror](perror-wperror.md)<br/>
+[文字列操作](../../c-runtime-library/string-manipulation-crt.md)\
+[clearerr](clearerr.md)\
+[ferror](ferror.md)\
+[perror、_wperror](perror-wperror.md)

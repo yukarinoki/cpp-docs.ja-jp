@@ -1,27 +1,30 @@
 ---
 title: コンパイラ エラー C3287
-ms.date: 11/04/2016
+description: Microsoft C++ コンパイラエラー C3287 について説明します。
+ms.date: 09/25/2020
 f1_keywords:
 - C3287
 helpviewer_keywords:
 - C3287
 ms.assetid: c1fa73d2-2c82-4136-a7da-0e75e3b420ad
-ms.openlocfilehash: f0f3441b749e3ae074e18e1132dcc4003eba3ba3
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 4067355ef1bc1992d0f8519656bcd1063179aef4
+ms.sourcegitcommit: 94893973211d0b254c8bcdcf0779997dcc136b0c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74749608"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91414322"
 ---
 # <a name="compiler-error-c3287"></a>コンパイラ エラー C3287
 
-型 'type' (GetEnumerator の戻り値の型) は、適切なパブリック MoveNext メンバー関数およびパブリック Current プロパティを含んでいなければなりません
+> 型 '*type*' (GetEnumerator の戻り値の型) には、適切なパブリック MoveNext メンバー関数およびパブリック Current プロパティが含まれている必要があります
+
+## <a name="remarks"></a>解説
 
 ユーザー定義のコレクション クラスには、 `MoveNext` と `Current`の定義を含める必要があります。
 
-詳細については、「 [How to: Iterate Over a User-Defined Collection with for each](../../dotnet/how-to-iterate-over-a-user-defined-collection-with-for-each.md) 」を参照してください。
+詳細については、「 [」](../../dotnet/for-each-in.md)の「」を参照してください。
 
-## <a name="example"></a>使用例
+## <a name="example"></a>例
 
 次の例では C3287 が生成されます。
 

@@ -1,5 +1,5 @@
 ---
-title: '方法: ジェネリックを使用してパフォーマンスC++を向上させる (/cli)'
+title: '方法: ジェネリックを使用してパフォーマンスを改善する (C++/CLI)'
 ms.date: 10/12/2018
 ms.topic: reference
 helpviewer_keywords:
@@ -8,20 +8,20 @@ helpviewer_keywords:
 - C++, generics
 - generics [C++], performance
 ms.assetid: f14a175b-301f-46cc-86e4-c82d35f9aa3e
-ms.openlocfilehash: a460456a383fcb3eb81e17c1ad5817f790f3c399
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 039c5b069351249e51d961d9d1757ed6b09ef99c
+ms.sourcegitcommit: 94893973211d0b254c8bcdcf0779997dcc136b0c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80181942"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91414166"
 ---
-# <a name="how-to-improve-performance-with-generics-ccli"></a>方法: ジェネリックを使用してパフォーマンスC++を向上させる (/cli)
+# <a name="how-to-improve-performance-with-generics-ccli"></a>方法: ジェネリックを使用してパフォーマンスを改善する (C++/CLI)
 
 ジェネリックを使用して、型パラメーターに基づく再利用可能なコードを作成できます。 型パラメーターの実際の型は、クライアント コードによって呼び出されるまで遅延されます。 ジェネリックの詳細については、「 [Generics](generics-cpp-component-extensions.md)」を参照してください。
 
 この記事では、コレクションを使用するアプリケーションのパフォーマンスを向上させるのにジェネリックがどのように役立つかについて説明します。
 
-## <a name="example"></a>例
+## <a name="example-two-main-drawbacks-of-net-framework-collections"></a>例: .NET Framework コレクションの2つの主な欠点
 
 .NET Framework には、<xref:System.Collections?displayProperty=fullName> 名前空間内に多数のコレクション クラスが付属しています。 これらのコレクションのほとんどは、<xref:System.Object?displayProperty=fullName> 型のオブジェクトで動作します。 これにより、.NET Framework の型は、値の型も含めて、すべて <xref:System.Object?displayProperty=fullName> から派生するため、任意の型をコレクションに格納できます。 ただし、この方法には 2 つの欠点があります。
 
@@ -78,7 +78,7 @@ Popped a String: Seven
 Popped an int: 7
 ```
 
-## <a name="example"></a>例
+## <a name="example-benefit-of-using-generic-collection"></a>例: ジェネリックコレクションを使用する利点
 
 新しい <xref:System.Collections.Generic?displayProperty=fullName> 名前空間には <xref:System.Collections?displayProperty=fullName> 名前空間と同じコレクションの多くが含まれていますが、それらはジェネリック型パラメーターを受け入れるように変更されています。 これにより、値型のボックス化とボックス化解除およびコレクションに格納される型の指定不可という非ジェネリック コレクションの 2 つの欠点が取り除かれます。 この 2 つのコレクションに対する操作は同じです。インスタンス化方法のみが異なります。
 
@@ -124,6 +124,6 @@ int main()
 14
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [ジェネリック](generics-cpp-component-extensions.md)

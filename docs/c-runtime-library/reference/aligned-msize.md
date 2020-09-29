@@ -28,12 +28,12 @@ helpviewer_keywords:
 - aligned_msize function
 - _aligned_msize function
 ms.assetid: 10995edc-2110-4212-9ca9-5e0220a464f4
-ms.openlocfilehash: e3ff243ba9a135cf660d09fc5b3690f531702aab
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 1037c63af17a844959bc72e42da2c33267b43004
+ms.sourcegitcommit: 94893973211d0b254c8bcdcf0779997dcc136b0c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82912911"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91414036"
 ---
 # <a name="_aligned_msize"></a>_aligned_msize
 
@@ -42,7 +42,7 @@ ms.locfileid: "82912911"
 ## <a name="syntax"></a>構文
 
 ```C
-size_t _msize(
+size_t _aligned_msize(
    void *memblock,
    size_t alignment,
    size_t offset
@@ -68,17 +68,17 @@ size_t _msize(
 
 **_Aligned_msize**関数は、 [_aligned_malloc](aligned-malloc.md)または[_aligned_realloc](aligned-realloc.md)の呼び出しによって割り当てられたメモリブロックのサイズ (バイト単位) を返します。 *アラインメント*値と*オフセット*値は、ブロックを割り当てた関数に渡された値と同じである必要があります。
 
-アプリケーションが C ランタイムライブラリのデバッグバージョンにリンクされている場合、 **_aligned_msize**は[_aligned_msize_dbg](aligned-msize-dbg.md)に解決されます。 デバッグ プロセス中のヒープの管理方法の詳細については、「[CRT デバッグ ヒープ](/visualstudio/debugger/crt-debug-heap-details)」を参照してください。
+アプリケーションが C ランタイムライブラリのデバッグバージョンにリンクされている場合、 **_aligned_msize** は [_aligned_msize_dbg](aligned-msize-dbg.md)に解決されます。 デバッグ プロセス中のヒープの管理方法の詳細については、「[CRT デバッグ ヒープ](/visualstudio/debugger/crt-debug-heap-details)」を参照してください。
 
-この関数は、そのパラメーターを検証します。 *Memblock*が null ポインターであるか、または*アラインメント*が2の累乗ではない場合、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、 **_msize**は無効なパラメーターハンドラーを呼び出します。 エラーが処理された場合、関数は**errno**を**EINVAL**に設定し、-1 を返します。
+この関数は、そのパラメーターを検証します。 *Memblock*が null ポインターであるか、または*アラインメント*が2の累乗ではない場合、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、 **_aligned_msize**は無効なパラメーターハンドラーを呼び出します。 エラーが処理された場合、関数は **errno** を **EINVAL** に設定し、-1 を返します。
 
 既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
-|**_msize**|\<malloc.h>|
+|**_aligned_msize**|\<malloc.h>|
 
 互換性について詳しくは、「 [Compatibility](../../c-runtime-library/compatibility.md)」をご覧ください。
 

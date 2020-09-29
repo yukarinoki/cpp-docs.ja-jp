@@ -6,26 +6,26 @@ helpviewer_keywords:
 - .NET Framework [C++], Debug class
 - Debug class
 ms.assetid: 076bd528-1b6f-4e8a-a372-eb5849cf969a
-ms.openlocfilehash: 3a262a0d2ef429cb94f4648eb7c7180e7b130279
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 47e1b949cb6e998508a3bd362b1c74961cf4cc23
+ms.sourcegitcommit: 94893973211d0b254c8bcdcf0779997dcc136b0c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62393780"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91414153"
 ---
 # <a name="debug-class-ccli"></a>Debug クラス (C++/CLI)
 
-使用する場合<xref:System.Diagnostics.Debug>Visual C アプリケーションで、動作が、デバッグとリリース ビルドの間変更されません。
+Visual C++ アプリケーションでを使用する場合、 <xref:System.Diagnostics.Debug> デバッグビルドとリリースビルドの間で動作が変わることはありません。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-動作は、<xref:System.Diagnostics.Trace>デバッグ クラスの動作と同じですが、シンボルが定義されているトレースによって異なります。 つまりする必要のある`#ifdef`トレースに関連するコードをリリース ビルドでのデバッグ動作を防ぐためにします。
+の動作 <xref:System.Diagnostics.Trace> は Debug クラスの動作と同じですが、定義されているシンボルトレースに依存しています。 これは、 `#ifdef` リリースビルドでのデバッグ動作を防ぐために、トレース関連のコードを必要とすることを意味します。
 
-## <a name="example"></a>例
+## <a name="example-always-executes-output-statements"></a>例: 常に出力ステートメントを実行する
 
 ### <a name="description"></a>説明
 
-次の例は、常に使用してコンパイルするかどうかに関係なく、出力ステートメントを実行 **/DDEBUG**または **/DTRACE**します。
+次の例では、 **/DDEBUG** または **/DTRACE**のどちらを使用してコンパイルしたかにかかわらず、常に output ステートメントを実行します。
 
 ### <a name="code"></a>コード
 
@@ -58,11 +58,11 @@ Hello World.
 test
 ```
 
-## <a name="example"></a>例
+## <a name="example-use-ifdef-and-endif-directives"></a>例: #ifdef ディレクティブと #endif ディレクティブを使用する
 
 ### <a name="description"></a>説明
 
-想定される動作を取得する (つまり、"test"出力されない、リリース ビルド) を使用する必要があります、`#ifdef`と`#endif`ディレクティブ。 上記のコード サンプルは、この修正プログラムを示すために以下に変更されます。
+予想される動作を取得するには (リリースビルドに対して "テスト" 出力を印刷しない場合)、ディレクティブとディレクティブを使用する必要があり `#ifdef` `#endif` ます。 前のコードサンプルは、この修正を示すために次のように変更されています。
 
 ### <a name="code"></a>コード
 
@@ -93,4 +93,4 @@ int main() {
 
 ## <a name="see-also"></a>関連項目
 
-[C++/CLI (Visual C++) による .NET プログラミング](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
+[C++/CLI を使用した .NET プログラミング (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)

@@ -5,18 +5,18 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - Marshaling Library, extending
 ms.assetid: 4c4a56d7-1d44-4118-b85f-f9686515e6e9
-ms.openlocfilehash: 2a3dccd33b7ad2caee64e31e0f79180dda4649be
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 071ea72a2aa03dcf16eb0f09e121eba4514e5828
+ms.sourcegitcommit: 94893973211d0b254c8bcdcf0779997dcc136b0c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87216389"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91414608"
 ---
 # <a name="how-to-extend-the-marshaling-library"></a>方法: マーシャリング ライブラリを拡張する
 
 このトピックでは、マーシャリングライブラリを拡張して、データ型間の変換をさらに提供する方法について説明します。 ユーザーは、ライブラリで現在サポートされていないデータ変換のマーシャリングライブラリを拡張できます。
 
-マーシャリングライブラリは、 [Marshal_context クラス](../dotnet/marshal-context-class.md)の有無にかかわらず、次の2つの方法のいずれかで拡張できます。 新しい変換にコンテキストが必要かどうかを判断するには、「 [C++ におけるマーシャリングの概要](../dotnet/overview-of-marshaling-in-cpp.md)」を参照してください。
+マーシャリングライブラリは、 [Marshal_context クラス](../dotnet/marshal-context-class.md)の有無にかかわらず、次の2つの方法のいずれかで拡張できます。 新しい変換にコンテキストが必要かどうかを判断するには、「 [C++ におけるマーシャリングの概要](../dotnet/overview-of-marshaling-in-cpp.md) 」を参照してください。
 
 どちらの場合も、最初に新しいマーシャリング変換用のファイルを作成します。 これは、標準マーシャリングライブラリファイルの整合性を維持するために行います。 プロジェクトを別のコンピューターまたは別のプログラマに移植する場合は、新しいマーシャリングファイルをプロジェクトの残りの部分と共にコピーする必要があります。 この方法では、プロジェクトを受け取るユーザーは新しい変換を受け取ることが保証されるため、ライブラリファイルを変更する必要はありません。
 
@@ -67,7 +67,7 @@ namespace msclr {
 
 1. の初期化に関するコメントをコードに置き換えて、を `toPtr` 適切な空の値に初期化します。 たとえば、ポインターである場合は、に設定 `NULL` します。
 
-1. 変換ロジックに関するコメントをコードに置き換えて、 `from` パラメーターをのオブジェクトの型*に*変換します。 この変換されたオブジェクトはに格納され `toPtr` ます。
+1. 変換ロジックに関するコメントをコードに置き換えて、 `from` パラメーターをのオブジェクトの型 *に* 変換します。 この変換されたオブジェクトはに格納され `toPtr` ます。
 
 1. 設定に関するコメントをコードに置き換えて、 `toObject` `toObject` 変換されたオブジェクトに設定します。
 
@@ -102,7 +102,7 @@ namespace msclr {
 }
 ```
 
-## <a name="example"></a>例
+## <a name="example-extend-marshaling-library"></a>例: マーシャリングライブラリの拡張
 
 次の例では、コンテキストを必要としない変換を使用して、マーシャリングライブラリを拡張します。 この例では、コードによって、従業員情報がネイティブデータ型からマネージデータ型に変換されます。
 
@@ -164,7 +164,7 @@ Managed address: 123 Main Street
 Managed zip code: 98111
 ```
 
-## <a name="example"></a>例
+## <a name="example-convert-employee-information"></a>例: 従業員情報を変換する
 
 次の例では、従業員情報をマネージデータ型からネイティブデータ型に変換します。 この変換にはマーシャリングコンテキストが必要です。
 

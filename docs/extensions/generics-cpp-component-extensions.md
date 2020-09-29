@@ -1,6 +1,7 @@
 ---
 title: ジェネリック (C++/CLI および C++/CX)
-ms.date: 10/12/2018
+description: C++/CLI および C++/CX のジェネリック機能、型、およびメソッドに関するコンテンツへのリンクが掲載されています。
+ms.date: 09/25/2020
 ms.topic: reference
 f1_keywords:
 - generic_cpp
@@ -8,23 +9,23 @@ f1_keywords:
 helpviewer_keywords:
 - generics [C++]
 ms.assetid: c7ccc316-a411-4c00-b2e2-f0c0eadc6cfd
-ms.openlocfilehash: 29c6b22189ea1f644c0fa52ec0f4d605604361ba
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: d98084df876b5e68701696239a9fc8a88377fa9d
+ms.sourcegitcommit: 94893973211d0b254c8bcdcf0779997dcc136b0c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80181994"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91414647"
 ---
 # <a name="generics--ccli-and-ccx"></a>ジェネリック (C++/CLI および C++/CX)
 
-ジェネリックは、パラメーター化された型およびメソッドです。 このセクションでは、Windows ランタイムと共通言語ランタイムの両方でサポートされている汎用的な機能と、共通言語ランタイムのみでサポートされている機能を調べます。 さらに、C++/CLI で独自のジェネリック メソッドと型を作成する方法と、.NET Framework 言語で作成されたジェネリック型を C++/CLI で使用する方法を調べます。 最後に、このセクションでは、ジェネリックと C++ テンプレートを比較します。
+ジェネリックは、パラメーター化された型およびメソッドです。 このセクションでは、Windows ランタイムと共通言語ランタイムの両方でサポートされているジェネリック機能と、共通言語ランタイムのみがサポートしているジェネリック機能について説明します。 また、C++/CLI で独自のジェネリックメソッドと型を作成する方法と、C++/CLI で .NET Framework 言語で作成されたジェネリック型を使用する方法についても説明します。 最後に、このセクションでは、ジェネリックと C++ テンプレートを比較します。
 
 ## <a name="in-this-section"></a>このセクションの内容
 
 ### <a name="supported-by-the-windows-runtime-and-the-common-language-runtime"></a>Windows ランタイムと共通言語ランタイムでサポートされるもの
 
 [C++/CLI でのジェネリックの概要](overview-of-generics-in-visual-cpp.md)<br/>
-この言語機能の動機、ジェネリックを記述するために使用される用語の定義、およびジェネリックの型パラメーターとしての参照型と値型の使用に関する情報です。
+ジェネリックについての情報、言語機能の動機、ジェネリックの記述に使用される用語の定義について説明します。 また、ジェネリックの型パラメーターとして参照型と値型を使用する方法についても説明します。
 
 [ジェネリック インターフェイス (C++/CLI)](generic-interfaces-visual-cpp.md)<br/>
 ジェネリック インターフェイスの定義と使用についての情報です。
@@ -51,9 +52,8 @@ ms.locfileid: "80181994"
 
 ## <a name="related-sections"></a>関連項目
 
-[方法: for each を使用してジェネリック コレクションを反復処理する](../dotnet/how-to-iterate-over-a-generic-collection-with-for-each.md)<br/>
 ジェネリック コレクションでの [for each, in](../dotnet/for-each-in.md) キーワードの使用
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[.NET および UWP でのコンポーネント拡張](component-extensions-for-runtime-platforms.md)
+[.NET および UWP 用のコンポーネントの拡張機能](component-extensions-for-runtime-platforms.md)

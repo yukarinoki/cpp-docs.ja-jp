@@ -6,22 +6,22 @@ helpviewer_keywords:
 - using the transformer class [Concurrency Runtime]
 - using the call class [Concurrency Runtime]
 ms.assetid: df715ce4-8507-41ca-b204-636d11707a73
-ms.openlocfilehash: cecb8b2e6ab3f3ac8b010007018b76e6f58e0ed8
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: b629d0e0e11388e212c56b8e1f6bea290368c884
+ms.sourcegitcommit: 94893973211d0b254c8bcdcf0779997dcc136b0c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87205887"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91414348"
 ---
 # <a name="how-to-provide-work-functions-to-the-call-and-transformer-classes"></a>方法: call クラスおよび transformer クラスに処理関数を提供する
 
-このトピックでは、 [concurrency:: call](../../parallel/concrt/reference/call-class.md)クラスおよび[concurrency:: トランスフォーマー](../../parallel/concrt/reference/transformer-class.md)クラスに処理関数を提供するいくつかの方法について説明します。
+このトピックでは、 [concurrency:: call](../../parallel/concrt/reference/call-class.md) クラスおよび [concurrency:: トランスフォーマー](../../parallel/concrt/reference/transformer-class.md) クラスに処理関数を提供するいくつかの方法について説明します。
 
 最初の例では、ラムダ式を `call` オブジェクトに渡す方法を示します。 2 番目の例では、関数オブジェクトを `call` オブジェクトに渡す方法を示します。 3 番目の例では、クラス メソッドを `call` オブジェクトにバインドする方法を示します。
 
-このトピックの説明では、すべての例で `call` クラスを使用します。 クラスを使用する例につい `transformer` ては、「[方法: データパイプラインでトランスフォーマーを使用](../../parallel/concrt/how-to-use-transformer-in-a-data-pipeline.md)する」を参照してください。
+このトピックの説明では、すべての例で `call` クラスを使用します。 クラスを使用する例につい `transformer` ては、「 [方法: データパイプラインでトランスフォーマーを使用](../../parallel/concrt/how-to-use-transformer-in-a-data-pipeline.md)する」を参照してください。
 
-## <a name="example"></a>例
+## <a name="example-call-class"></a>例: call クラス
 
 次の例は、`call` クラスを使用する一般的な方法を示しています。 この例は、ラムダ関数を `call` コンストラクターに渡します。
 
@@ -33,15 +33,15 @@ ms.locfileid: "87205887"
 13 squared is 169.
 ```
 
-## <a name="example"></a>例
+## <a name="example-call-class-with-function-object"></a>例: function オブジェクトを使用したクラスの呼び出し
 
 次の例は前の例に似ていますが、関数オブジェクト (ファンクタ) と共に `call` クラスを使用する点が異なります。
 
 [!code-cpp[concrt-call-functor#1](../../parallel/concrt/codesnippet/cpp/how-to-provide-work-functions-to-the-call-and-transformer-classes_2.cpp)]
 
-## <a name="example"></a>例
+## <a name="example-functions-to-bind-call-object"></a>例: 呼び出しオブジェクトをバインドする関数
 
-次の例は前の例と似ていますが、 [std:: bind1st](../../standard-library/functional-functions.md#bind1st)関数と[std:: mem_fun](../../standard-library/functional-functions.md#mem_fun)関数を使用してオブジェクトをクラスメソッドにバインドする点が異なり `call` ます。
+次の例は前の例と似ていますが、 [std:: bind1st](../../standard-library/functional-functions.md#bind1st) 関数と [std:: mem_fun](../../standard-library/functional-functions.md#mem_fun) 関数を使用してオブジェクトをクラスメソッドにバインドする点が異なり `call` ます。
 
 この方法は、関数呼び出し演算子 `call` ではなく、特定のクラス メソッドに `transformer` オブジェクトまたは `operator()` オブジェクトをバインドする必要がある場合に使用します。
 

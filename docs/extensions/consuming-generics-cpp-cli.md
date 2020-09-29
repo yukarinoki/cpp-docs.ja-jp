@@ -5,18 +5,18 @@ ms.topic: reference
 helpviewer_keywords:
 - generics [C++], consuming from .NET languages
 ms.assetid: e6330ef5-e907-432e-b527-7a22f5899639
-ms.openlocfilehash: 303fa73f09220b2139d681bf3109fd843299a900
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: bea22a0d9fdc5c1ddbd9da2af7078228a6315e80
+ms.sourcegitcommit: 94893973211d0b254c8bcdcf0779997dcc136b0c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80172413"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91414140"
 ---
 # <a name="consuming-generics-ccli"></a>ジェネリックの使用 (C++/CLI)
 
 ある .NET (または UWP) 言語で作成されたジェネリックを、他の言語で使用できます。 テンプレートとは異なり、コンパイル済みのアセンブリ内のジェネリックは、ジェネリックのままです。 したがって、ジェネリック型が定義されたアセンブリとは別のアセンブリと別の言語で、ジェネリック型をインスタンス化できます。
 
-## <a name="example"></a>例
+## <a name="example-generic-class-defined-in-c"></a>例: C で定義されたジェネリッククラス#
 
 ### <a name="description"></a>説明
 
@@ -80,7 +80,7 @@ public class CircularList<ItemType> {
 }
 ```
 
-## <a name="example"></a>例
+## <a name="example-consume-assembly-authored-in-c"></a>例: C で作成されるアセンブリの使用#
 
 ### <a name="description"></a>説明
 
@@ -118,6 +118,6 @@ int main() {
 10
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [ジェネリック](generics-cpp-component-extensions.md)
