@@ -4,12 +4,12 @@ description: Visual Studio の C++ コード エディターを使用して、�
 ms.date: 05/31/2019
 ms.assetid: 56ffb9e9-514f-41f4-a3cf-fd9ce2daf3b6
 ms.topic: overview
-ms.openlocfilehash: 43c4529ae0c5ac5a8c4fae2ae402ed3c6e222c37
-ms.sourcegitcommit: 426e327c9f7c3a3b02300e3f924f9786d62958e9
+ms.openlocfilehash: bf34bf39bc41841be72c9400ec63c501d7aa56a3
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84206220"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90686333"
 ---
 # <a name="edit-and-refactor-c-code-in-visual-studio"></a>Visual Studio での C++ コードの編集とリファクター
 
@@ -98,11 +98,11 @@ Visual Studio 2017 では、IntelliCode は Visual Studio Marketplace で拡張�
 
 次の例では、`vector` が宣言されましたが、定義が見つからなかったため、エディターによって含める必要があるヘッダー ファイルが提供されます。
 
-![C&#43;&#43; クイック修正](../ide/media/quick-fix-for-header-cpp.png "C++ クイック修正")
+![エラーの波線とエディターによって提供されるクイック修正を示すスクリーンショット。](../ide/media/quick-fix-for-header-cpp.png "C++ クイック修正")
 
 エディターでは、いくつかのリファクタリングの機会のためのクイック修正も提供されます。 たとえば、ヘッダー ファイルでクラスを宣言すると、Visual Studio により別の .cpp ファイルでその定義を作成することが提案されます。
 
-![C&#43;&#43; クイック修正](../ide/media/quick-fix.png "C++ クイック修正")
+![[Create definition of Channel Route Iterator in channels dot C P P]\(channels ドット C P P の Channel Route Iterator の定義を作成\) オプションが強調表示されているクイック修正を示すスクリーンショット。](../ide/media/quick-fix.png "C++ クイック修正")
 
 ## <a name="change-tracking"></a>Change tracking
 

@@ -3,12 +3,12 @@ title: Visual Studio で Linux MSBuild C++ プロジェクトを作成する
 ms.date: 08/04/2020
 description: Visual Studio で新しい MSBuild ベースの Linux プロジェクトを作成します。
 ms.assetid: 5d7c1d67-bc31-4f96-8622-2b4cf91372fd
-ms.openlocfilehash: 86d8b8fd2abe8970b5146d4ab08dc4251b5562d5
-ms.sourcegitcommit: 2034f8e744a8b36cff8b15e9a5cfe684afebadfb
+ms.openlocfilehash: 559a868ebdea7e3b835a82c31849d0e2fdeaa6c9
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/10/2020
-ms.locfileid: "88043851"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90686692"
 ---
 # <a name="create-a-linux-msbuild-c-project-in-visual-studio"></a>Visual Studio で Linux MSBuild C++ プロジェクトを作成する
 
@@ -31,7 +31,7 @@ Visual Studio 2017 で新しい Linux プロジェクトを作成するには、
 1. Visual Studio で **[ファイル]、[新しいプロジェクト]** の順に選択するか、**Ctrl + Shift + N** キーを押します。
 1. **[Visual C++]、[クロス プラットフォーム]、[Linux]** ノードの順に選択し、作成するプロジェクト タイプを選択します。 **[名前]** と **[場所]** を入力し、 **[OK]** を選択します。
 
-   ![新しい Linux プロジェクト](media/newproject.png)
+   ![[Visual C++] > [クロス プラットフォーム] > [Linux] が選択され、すべてのプロジェクト タイプが強調され、[名前] および [場所] テキスト ボックスも強調されている [新しいプロジェクト] ダイアログ ボックスを示すスクリーンショット。](media/newproject.png)
 
    | プロジェクトの種類 | 説明 |
    | ------------ | --- |
@@ -61,7 +61,7 @@ Visual Studio 2019 で新しい Linux プロジェクトを作成するには、
 1. Visual Studio で **[ファイル]、[新しいプロジェクト]** の順に選択するか、**Ctrl + Shift + N** キーを押します。
 1. **[言語]** を **[C++]** に設定し、「Linux」を検索します。 作成するプロジェクトの種類を選択し、 **[次へ]** を選択します。 **[名前]** と **[場所]** を入力し、 **[作成]** を選択します。
 
-   ![新しい Linux プロジェクト](media/newproject-vs2019.png)
+   ![検索テキスト ボックスに「Linux」と入力されている [新しいプロジェクトの追加] ダイアログ ボックスのスクリーンショット。](media/newproject-vs2019.png)
 
    | プロジェクトの種類 | 説明 |
    | ------------ | --- |

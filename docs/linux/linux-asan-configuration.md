@@ -2,12 +2,12 @@
 title: Linux プロジェクトを構成してアドレス サニタイザーを使用する
 description: Visual Studio で C++ の Linux プロジェクトを構成して、アドレス サニタイザーを使用する方法について説明します。
 ms.date: 06/07/2019
-ms.openlocfilehash: 80e9ab46c948f2062391ae723c3425c435bd4507
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 0e862e09d8178ce35fe26f2be138d7f6843b5ef1
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81364307"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90686666"
 ---
 # <a name="configure-linux-projects-to-use-address-sanitizer"></a>Linux プロジェクトを構成してアドレス サニタイザーを使用する
 
@@ -49,11 +49,11 @@ CMake で ASan を有効にするには、**ソリューション エクスプ�
 
 ダイアログ ボックスの左ウィンドウで、(「**Linux-Debug**」などの) Linux の構成が選択されていることを確認します。
 
-![Linux のデバッグ構成](media/linux-debug-configuration.png)
+![Linux デバッグが構成オプションの 1 つとして一覧表示されている左側のペインのスクリーンショット。](media/linux-debug-configuration.png)
 
 ASan のオプションは **[全般]** の下にあります。 ASan ランタイム フラグは、セミコロンで区切って "フラグ=値" の形式で入力します。
 
-![Linux のデバッグ構成](media/cmake-settings-asan-options.png)
+![いくつかの Address Sanitizer 実行時フラグが表示されている [Address Sanitizer を有効にする] オプションのスクリーンショット。](media/cmake-settings-asan-options.png)
 
 ## <a name="install-the-asan-debug-symbols"></a>ASan のデバッグ シンボルをインストールする
 

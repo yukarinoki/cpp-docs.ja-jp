@@ -5,12 +5,12 @@ ms.date: 01/08/2020
 helpviewer_keywords:
 - CMake in Visual C++
 ms.assetid: 444d50df-215e-4d31-933a-b41841f186f8
-ms.openlocfilehash: 49ba53eaa8ac075ab6d3b2a66f33160c5c3ec410
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: a4eea2b321bc07fc40c9a42b3ce515435e808ee4
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81329158"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90685033"
 ---
 # <a name="cmake-projects-in-visual-studio"></a>Visual Studio の CMake プロジェクト
 
@@ -27,7 +27,7 @@ CMake は、複数のプラットフォームで動作するビルド プロセ�
 
 **Windows 用 C++ CMake ツール**は、**C++ によるデスクトップ開発**および **C++ による Linux 開発**のワークロードの一部としてインストールされます。 詳細については、[クロスプラットフォーム CMake プロジェクト](../linux/cmake-linux-project.md)に関するページを参照してください。
 
-![C++ デスクトップ ワークロードでの CMake コンポーネント](media/cmake-install-2019.png)
+![[C++ によるデスクトップ開発] ドロップダウンが選択され、[Windows 用 C++ CMake ツール] オプションが強調されているスクリーンショット。](media/cmake-install-2019.png)
 
 詳細については、「[Install the C++ Linux workload in Visual Studio](../linux/download-install-and-setup-the-linux-development-workload.md)」(Visual Studio で C++ の Linux ワークロードをインストールする) を参照してください。
 
@@ -51,7 +51,7 @@ CMake は、複数のプラットフォームで動作するビルド プロセ�
 
 ![CMake ターゲット ビュー ボタン](media/cmake-targets-view.png)
 
-**ソリューション エクスプローラー**の上部にある **[すべてのファイルの表示]** ボタンをクリックして、*out/build/\<config >* フォルダー内の CMake で生成されたすべての出力を表示します。
+**ソリューション エクスプローラー**の上部にある **[すべてのファイルの表示]** ボタンをクリックして、*out/build/\<config>* フォルダー内の CMake によって生成されたすべての出力を表示します。
 
 Visual Studio では **CMakeSettings.json** という構成ファイルを使用します。 このファイルを使用すると、複数のビルド構成を定義して格納し、IDE 内でそれらを簡単に切り替えることができます。 "*構成*" は、特定のビルドの種類に固有の設定をカプセル化する Visual Studio のコンストラクトです。 この設定は、Visual Studio が cmake.exe に渡す既定のコマンド ライン オプションを構成するために使用されます。 ここで追加の CMake オプションを指定し、必要に応じて追加の変数を定義することもできます。 すべてのオプションは、内部または外部変数として CMake キャッシュに書き込まれます。 Visual Studio 2019 では、設定を編集する便利な方法が **CMake 設定エディター**で提供されます。 詳細については、「[Customize CMake settings](customize-cmake-settings.md)」 (CMake 設定のカスタマイズ) を参照してください。
 
@@ -160,7 +160,7 @@ Visual Studio 2017 では、[クロスプラットフォーム CMake プロジ�
 
 **CMake の Visual C++ ツール**は、**C++ によるデスクトップ開発**および **C++ による Linux 開発**のワークロードの一部としてインストールされます。
 
-![C++ デスクトップ ワークロードでの CMake コンポーネント](media/cmake-install.png)
+![[CMake の Visual C++ ツール] オプションが強調されている [個別のコンポーネント] タブのスクリーンショット。](media/cmake-install.png)
 
 詳細については、「[Install the C++ Linux workload in Visual Studio](../linux/download-install-and-setup-the-linux-development-workload.md)」(Visual Studio で C++ の Linux ワークロードをインストールする) を参照してください。
 

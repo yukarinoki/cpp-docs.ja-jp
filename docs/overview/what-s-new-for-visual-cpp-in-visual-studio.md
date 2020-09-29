@@ -4,12 +4,12 @@ description: Visual Studio の Microsoft C/C++ のコンパイラとツールに
 ms.date: 05/19/2020
 ms.technology: cpp-ide
 ms.assetid: 8801dbdb-ca0b-491f-9e33-01618bff5ae9
-ms.openlocfilehash: 1a0fc228b6c91b1e529db6676c1a1193f5db99e1
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: a21bb8f8c629b3d9c8c765958d6a52891c90898a
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90041680"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90684746"
 ---
 # <a name="whats-new-for-c-in-visual-studio"></a>Visual Studio での C++ の新機能
 
@@ -649,7 +649,7 @@ Visual Studio 2017 に同梱されている Clang/C2 ツールセットが **`/b
 
 [C++ コア ガイドライン](https://github.com/isocpp/CppCoreGuidelines)を適用するための C++ コア チェッカーが Visual Studio で配布されています。 チェッカーは、プロジェクトのプロパティ ページの **[Code Analysis Extensions]\(コード分析の拡張機能\)** ページで有効にしてください。 拡張機能は、コード分析を実行するときに含まれます。 詳細については、「[Using the C++ Core Guidelines checkers (C++ Core ガイドラインのチェッカーを使用する)](/cpp/code-quality/using-the-cpp-core-guidelines-checkers)」をご覧ください。
 
-![Code Analysis プロパティ ページを使用して C++ Core チェック ルールセットを選択する方法を示します。](media/CppCoreCheck.png "CppCoreCheck のプロパティ ページ")
+![[構成プロパティ] > [コード分析] > [全般] が選択され、[この規則セットを実行] セクションにいくつかの Core Checks が一覧表示されている [プロパティ ページ] ダイアログ ボックスのスクリーンショット。](media/CppCoreCheck.png "CppCoreCheck のプロパティ ページ")
 
 ##### <a name="visual-studio-2017-version-153"></a>Visual Studio 2017 バージョン 15.3
 
@@ -697,7 +697,7 @@ Visual Studio グラフィックス診断ツール:これらを使用して、Di
 
 - **オブジェクト テーブルでの検索とフィルター:** 探しているリソースを検索する迅速かつ簡単な手段を提供します。
 
-  ![[オブジェクト テーブル] ウィンドウでのフィルターと検索コントロールの位置を示します。](media/search.png)
+  ![[種類] ドロップダウンと [検索] テキスト ボックスが強調された [オブジェクト テーブル] セクションのスクリーンショット。](media/search.png)
 
 - **リソース履歴:** この新しいビューは、キャプチャされたフレームのレンダリング時に使われたリソースの全体の変更履歴を表示する簡単な手段を提供します。 リソースの履歴を呼び出すには、リソースのハイパーリンクの横にある時計のアイコンをクリックします。
 

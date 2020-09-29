@@ -4,12 +4,12 @@ ms.date: 07/01/2019
 ms.description: Configure a CMake project in Visual Studio to use the Clang/LLVM toolchain.
 helpviewer_keywords:
 - Clang support for C++ CMake projects
-ms.openlocfilehash: 46bfe788c13df3a37dd9cba654d16cfe4c3fe177
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: a23526cf5216e4cc37c3131a0d1ba94a6e923f56
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81323181"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90686432"
 ---
 # <a name="clangllvm-support-in-visual-studio-cmake-projects"></a>Visual Studio CMake プロジェクトでの Clang/LLVM のサポート
 
@@ -57,7 +57,7 @@ Clang を使用するように既存の構成を変更するには、次の手�
 
 1. **[General]\(全般\)** で、 **[ツールセット]** ドロップダウンを選択し、目的の Clang ツールセットを選択します。
 
-   ![CMake Clang ツールセット](media/cmake-clang-toolset.png)
+   ![[ツールセット] が選択され、clang cl x 86 が強調表示されている [全般] ダイアログ ボックスのスクリーンショット。](media/cmake-clang-toolset.png)
 
 ## <a name="custom-clang-locations"></a>カスタムの Clang の場所
 
@@ -68,7 +68,7 @@ Clang を使用するように既存の構成を変更するには、次の手�
 
 **[CMake Settings]\(CMake の設定\)** で **CMAKE_C_COMPILER** および **CMAKE_CXX_COMPILER** の CMake 変数を設定して、別の場所を指定できます。
 
-![CMake Clang ツールセット](media/clang-location-cmake.png)
+![C Make C X X コンパイラが強調表示されている [CMake の設定] ダイアログ ボックスのスクリーンショット。](media/clang-location-cmake.png)
 
 ## <a name="clang-compatibility-modes"></a>Clang 互換モード
 

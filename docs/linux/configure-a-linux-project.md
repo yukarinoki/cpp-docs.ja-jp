@@ -3,12 +3,12 @@ title: Visual Studio で Linux MSBuild C++ プロジェクトを構成する
 ms.date: 08/06/2020
 description: Visual Studio で MSBuild ベースの Linux プロジェクトを構成し、ビルドできるようにします。
 ms.assetid: 4d7c6adf-54b9-4b23-bd23-5de0c825b768
-ms.openlocfilehash: 7f4664dfc364cbd9a3b499e02de4cf0e7f44fe78
-ms.sourcegitcommit: 2034f8e744a8b36cff8b15e9a5cfe684afebadfb
+ms.openlocfilehash: 4e99645eea89682b4beac5452da01755ea555ec4
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/10/2020
-ms.locfileid: "88043864"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90685957"
 ---
 # <a name="configure-a-linux-msbuild-c-project-in-visual-studio"></a>Visual Studio で Linux MSBuild C++ プロジェクトを構成する
 
@@ -110,13 +110,13 @@ sudo apt install zip
 
 ::: moniker range="vs-2017"
 
-![リモート ヘッダー IntelliSense](media/remote-header-intellisense.png)
+![[クロス プラットフォーム] > [接続マネージャー] > [リモート ヘッダー IntelliSense マネージャー] が選択された [オプション] ダイアログ ボックスを示すスクリーンショット。](media/remote-header-intellisense.png)
 
 ::: moniker-end
 
 ::: moniker range="vs-2019"
 
-![リモート ヘッダー IntelliSense](media/connection-manager-vs2019.png)
+![[クロス プラットフォーム] > [接続マネージャー] が選択された [オプション] ダイアログ ボックスを示すスクリーンショット。](media/connection-manager-vs2019.png)
 
 ログ記録を有効にして、問題のトラブルシューティングに役立てることができます。
 
