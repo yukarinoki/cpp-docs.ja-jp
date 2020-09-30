@@ -1,7 +1,8 @@
 ---
 title: CRT ライブラリの機能
-description: Microsoft C ランタイムライブラリを含むファイル、およびそれらに関連付けられているコンパイラオプションとプリプロセッサディレクティブ。
+description: Microsoft C ランタイムライブラリが含まれているファイルの一覧と、それらに関連付けられているコンパイラオプションとプリプロセッサディレクティブ。
 ms.date: 09/03/2020
+ms.topic: conceptual
 helpviewer_keywords:
 - MSVCR71.dll
 - libraries [C++], multithreaded
@@ -17,12 +18,12 @@ helpviewer_keywords:
 - libraries [C++], run-time
 - linking [C++], libraries
 ms.assetid: a889fd39-807d-48f2-807f-81492612463f
-ms.openlocfilehash: 2f46577ba81c57c2050f0cae4ae2af73152ba2a4
-ms.sourcegitcommit: 0df2b7ab4e81284c5248e4584767591dcc1950c3
+ms.openlocfilehash: 0e0d34c1121f0bf4e2fdfabc521e0365084761eb
+ms.sourcegitcommit: 9451db8480992017c46f9d2df23fb17b503bbe74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89609100"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91589784"
 ---
 # <a name="crt-library-features"></a>CRT ライブラリの機能
 
@@ -38,8 +39,8 @@ Visual Studio 2015 より、CRT が新しいバイナリにリファクタリン
 
 | ライブラリ | 関連付けられている DLL | 特性 | オプション | プリプロセッサ ディレクティブ |
 |--|--|--|--|--|
-| *`libucrt.lib`* | なし | UCRT をコードに静的にリンクします。 | **`/MT`** | `_MT` |
-| *`libucrtd.lib`* | なし | 静的リンク用の UCRT のデバッグ バージョン。 再頒布可能パッケージではありません。 | **`/MTd`** | `_DEBUG`, `_MT` |
+| *`libucrt.lib`* | None | UCRT をコードに静的にリンクします。 | **`/MT`** | `_MT` |
+| *`libucrtd.lib`* | None | 静的リンク用の UCRT のデバッグ バージョン。 再頒布可能パッケージではありません。 | **`/MTd`** | `_DEBUG`, `_MT` |
 | *`ucrt.lib`* | *`ucrtbase.dll`* | UCRT 用の DLL インポート ライブラリ。 | **`/MD`** | `_MT`, `_DLL` |
 | *`ucrtd.lib`* | *`ucrtbased.dll`* | UCRT のデバッグ バージョン用の DLL インポート ライブラリ。 再頒布可能パッケージではありません。 | **`/MDd`** | `_DEBUG`, `_MT`, `_DLL` |
 
@@ -49,8 +50,8 @@ vcruntime ライブラリには、例外処理やデバッグ サポートなど
 
 | ライブラリ | 関連付けられている DLL | 特性 | オプション | プリプロセッサ ディレクティブ |
 |--|--|--|--|--|
-| *`libvcruntime.lib`* | なし | コードに静的にリンクされています。 | **`/MT`** | `_MT` |
-| *`libvcruntimed.lib`* | なし | 静的リンク用のデバッグ バージョン。 再頒布可能パッケージではありません。 | **`/MTd`** | `_MT`, `_DEBUG` |
+| *`libvcruntime.lib`* | None | コードに静的にリンクされています。 | **`/MT`** | `_MT` |
+| *`libvcruntimed.lib`* | None | 静的リンク用のデバッグ バージョン。 再頒布可能パッケージではありません。 | **`/MTd`** | `_MT`, `_DEBUG` |
 | *`vcruntime.lib`* | *`vcruntime<version>.dll`* | vcruntime 用の DLL インポート ライブラリ。 | **`/MD`** | `_MT`, `_DLL` |
 | *`vcruntimed.lib`* | *`vcruntime<version>d.dll`* | デバッグ vcruntime 用の DLL インポート ライブラリ。 再頒布可能パッケージではありません。 | **`/MDd`** | `_DEBUG`, `_MT`, `_DLL` |
 

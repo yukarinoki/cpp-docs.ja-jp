@@ -1,5 +1,7 @@
 ---
 title: SBCS および MBCS データ型
+description: Microsoft C ランタイムで1つの文字とマルチバイト文字を表す方法。
+ms.topic: conceptual
 ms.date: 04/11/2018
 f1_keywords:
 - MBCS
@@ -8,12 +10,12 @@ helpviewer_keywords:
 - SBCS and MBCS data types
 - data types [C], MBCS and SBCS
 ms.assetid: 4c3ef9da-e397-48d4-800e-49dba36db171
-ms.openlocfilehash: 72215b7a3fff638daf02f136e3a107ce8a8a00d5
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 27d32ffd079cdc82ab8a799df9d9ec778b546a3b
+ms.sourcegitcommit: 9451db8480992017c46f9d2df23fb17b503bbe74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87233913"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91590252"
 ---
 # <a name="sbcs-and-mbcs-data-types"></a>SBCS および MBCS データ型
 
@@ -22,13 +24,13 @@ ms.locfileid: "87233913"
 > [!CAUTION]
 > マルチバイト文字の各バイトは8ビットで表すことができ **`char`** ます。 ただし、0x7F よりも大きい値を持つ型の SBCS または MBCS の1バイト文字 **`char`** は負になります。 このような文字が直接またはに変換されると、 **`int`** **`long`** 結果はコンパイラによって符号拡張されるため、予期しない結果が発生する可能性があります。
 
-したがって、マルチバイト文字のバイトを8ビットとして表すことをお勧めし **`unsigned char`** ます。 または、負の結果を回避するには、型の1バイト文字を **`char`** またはに変換する前に、単にをに変換し **`unsigned char`** **`int`** **`long`** ます。
+マルチバイト文字のバイトを8ビットとして表すことをお勧めし **`unsigned char`** ます。 または、負の結果を回避するには、型の1バイト文字を **`char`** またはに変換する前に、に変換し **`unsigned char`** **`int`** **`long`** ます。
 
 一部の SBCS 文字列処理関数は (符号付き) **`char`** <strong>\*</strong> パラメーターを受け取るため、 **_MBCS**が定義されていると、型の不一致コンパイラの警告が発生します。 この警告を回避する方法を 3 つ、効率の順に次に示します。
 
-1. TCHAR.H のタイプ セーフなインライン関数を使用します。 これは既定の動作です。
+1. TCHAR.H のタイプ セーフなインライン関数を使用します。 これが既定の動作です。
 
-1. コマンド ラインで **_MB_MAP_DIRECT** を定義して、TCHAR.H の直接マクロを使用します。 この場合は、型を手作業で一致させる必要があります。 これは一番速い方法ですが、タイプ セーフではありません。
+1. コマンド ラインで **_MB_MAP_DIRECT** を定義して、TCHAR.H の直接マクロを使用します。 この場合は、型を手作業で一致させる必要があります。 これは最速の方法ですが、タイプセーフではありません。
 
 1. TCHAR.H のタイプ セーフな静的リンク ライブラリ関数を使用します。 この場合は、コマンド ラインで定数 **_NO_INLINING** を定義します。 これは、一番時間がかかりますが、一番タイプ セーフな方法です。
 

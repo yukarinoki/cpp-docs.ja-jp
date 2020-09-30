@@ -1,6 +1,8 @@
 ---
 title: ANSI C 準拠
+description: ANSI C 準拠のための Microsoft C ランタイムの名前付け規則の概要について説明します。
 ms.date: 11/04/2016
+ms.topic: conceptual
 f1_keywords:
 - Ansi
 helpviewer_keywords:
@@ -13,12 +15,12 @@ helpviewer_keywords:
 - ANSI [C++], C standard
 - Microsoft extensions naming conventions
 ms.assetid: 6be271bf-eecf-491a-a928-0ee2dd60e3b9
-ms.openlocfilehash: 7a4462e84ec01bd236849c6aed024b636b315243
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: 39a3f9299be7dbef4783faa8e6d08fe6ad8461f5
+ms.sourcegitcommit: 9451db8480992017c46f9d2df23fb17b503bbe74
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57742821"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91590304"
 ---
 # <a name="ansi-c-compliance"></a>ANSI C 準拠
 

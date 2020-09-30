@@ -1,16 +1,18 @@
 ---
 title: ファイルとストリーム
+description: Microsoft C ランタイムライブラリのファイルとストリームの概要について説明します。
 ms.date: 11/04/2016
+ms.topic: conceptual
 helpviewer_keywords:
 - files [C++]
 - streams
 ms.assetid: f61e712b-eac9-4c28-bb18-97c3786ef387
-ms.openlocfilehash: ea11ea76ade8a68c2d8a92e08d3652035c996d3d
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: 39133cfdb4784c42561a159d6d176bcbd23644af
+ms.sourcegitcommit: 9451db8480992017c46f9d2df23fb17b503bbe74
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57750794"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91589966"
 ---
 # <a name="files-and-streams"></a>ファイルとストリーム
 
@@ -26,7 +28,7 @@ ms.locfileid: "57750794"
 
 ファイルで多くの操作を実行する前に、ファイルを開く必要があります。 ファイルを開くことによって、各種ファイル間の多くの違いが無視される標準 C ライブラリ内のデータ構造であるストリームと、ファイルが関連付けられます。 ライブラリでは、各ストリームの状態が FILE 型のオブジェクトで維持されます。
 
-対象の環境では、プログラムの起動前に 3 つのファイルを開きます。 2 つの引数を使用してライブラリ関数 [fopen, _wfopen](../c-runtime-library/reference/fopen-wfopen.md) を呼び出すことによってファイルを開くことができます。 (`fopen` 関数は非推奨とされます。代わりに [fopen_s, _wfopen_s](../c-runtime-library/reference/fopen-s-wfopen-s.md) を使用してください。)1 つ目の引数は、ファイル名です。 2 つ目の引数は、次を指定する C 文字列です。
+対象の環境では、プログラムの起動前に 3 つのファイルを開きます。 2 つの引数を使用してライブラリ関数 [fopen, _wfopen](../c-runtime-library/reference/fopen-wfopen.md) を呼び出すことによってファイルを開くことができます。 ( `fopen` 関数は非推奨とされており、代わりに [fopen_s、_wfopen_s](../c-runtime-library/reference/fopen-s-wfopen-s.md) 使用してください)。最初の引数はファイル名です。 2 つ目の引数は、次を指定する C 文字列です。
 
 - ファイルからデータを読み込む、ファイルにデータを書き込む、または両方を行うかどうか。
 
@@ -42,7 +44,7 @@ ms.locfileid: "57750794"
 
 ## <a name="see-also"></a>関連項目
 
-[テキスト ストリームとバイナリ ストリーム](../c-runtime-library/text-and-binary-streams.md)<br/>
-[バイト ストリームとワイド ストリーム](../c-runtime-library/byte-and-wide-streams.md)<br/>
-[ストリームの制御](../c-runtime-library/controlling-streams.md)<br/>
+[テキストストリームとバイナリストリーム](../c-runtime-library/text-and-binary-streams.md)<br/>
+[バイトストリームとワイドストリーム](../c-runtime-library/byte-and-wide-streams.md)<br/>
+[制御 (ストリームを)](../c-runtime-library/controlling-streams.md)<br/>
 [ストリームの状態](../c-runtime-library/stream-states.md)

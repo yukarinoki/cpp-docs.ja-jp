@@ -1,18 +1,20 @@
 ---
 title: マルチスレッド ライブラリのパフォーマンス
+description: Microsoft C ランタイムマルチスレッドライブラリのパフォーマンスを最大限に引き出す方法の概要について説明します。
 ms.date: 11/04/2016
+ms.topic: conceptual
 helpviewer_keywords:
 - threading [C++], performance
 - libraries, multithreaded
 - performance, multithreading
 - multithreaded libraries
 ms.assetid: faa5d808-087c-463d-8f0d-8c478d137296
-ms.openlocfilehash: 48f491b6d82acb566669302e4d607e85faf9012a
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: edfbbf3055e9023c74cf0e154577d4b1853f557b
+ms.sourcegitcommit: 9451db8480992017c46f9d2df23fb17b503bbe74
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57748365"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91590200"
 ---
 # <a name="multithreaded-libraries-performance"></a>マルチスレッド ライブラリのパフォーマンス
 

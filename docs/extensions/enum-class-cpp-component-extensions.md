@@ -3,12 +3,12 @@ title: enum class (C++/CLI および C++/CX)
 ms.date: 10/12/2018
 ms.topic: reference
 ms.assetid: 8010fa8c-bad6-45b4-8214-b4db64d7ffe1
-ms.openlocfilehash: a1b99cb2265c9a9bdb40a7239a21412123772570
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 9acf93976b2f7751e85bf3ed0ddd2735c29e121c
+ms.sourcegitcommit: 9451db8480992017c46f9d2df23fb17b503bbe74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87219717"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91590317"
 ---
 # <a name="enum-class--ccli-and-ccx"></a>enum class (C++/CLI および C++/CX)
 
@@ -16,9 +16,9 @@ ms.locfileid: "87219717"
 
 ## <a name="all-runtimes"></a>すべてのランタイム
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
-C++/CX および C++/CLI では、**public enum class** と **private enum class** をサポートします。これらは、標準 C++ の **enum class** に似ていますが、アクセシビリティ指定子が追加されている点が異なります。 **/clr** では、C++11 の **enum class** 型を使用できますが、C++/CX と C++/CLI の型ではなく ISO の列挙型でよいかどうかを確認する警告 C4472 が生成されます。 ISO 標準 C++ キーワードの詳細については **`enum`** 、「[列挙型](../cpp/enumerations-cpp.md)」を参照してください。
+C++/CX および C++/CLI では、**public enum class** と **private enum class** をサポートします。これらは、標準 C++ の **enum class** に似ていますが、アクセシビリティ指定子が追加されている点が異なります。 **/clr** では、C++11 の **enum class** 型を使用できますが、C++/CX と C++/CLI の型ではなく ISO の列挙型でよいかどうかを確認する警告 C4472 が生成されます。 ISO 標準 C++ キーワードの詳細については **`enum`** 、「 [列挙型](../cpp/enumerations-cpp.md)」を参照してください。
 
 ## <a name="windows-runtime"></a>Windows ランタイム
 
@@ -53,19 +53,19 @@ accessenum structenumeration-identifier[:underlying-type] { enumerator-list } [v
 *var*<br/>
 (省略可能) 列挙型の変数の名前。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 使用例を含む詳細については、「 [列挙型](../cppcx/enums-c-cx.md)」をご覧ください。
 
 列挙子の値を定義する定数式が *underlying-type*で表すことができない場合、コンパイラはエラー メッセージを生成します。  ただし、基になる型に対して値が不適切であるというエラーは生成されません。 次に例を示します。
 
-- *underlying-type* が数値であり、列挙子がその型の最大値を指定する場合は、次に暗黙的に定義されている列挙型の値は表すことができません。
+- *基になる型*が numeric で、列挙子がその型の最大値を指定する場合、暗黙的に定義された次の列挙値を表すことはできません。
 
 - *基になる型*が **`bool`** で、3つ以上の列挙子が暗黙的に定義されている場合、最初の2つの列挙子は表すことができません。
 
 - *underlying-type* が `char16`であり、列挙型の値が 0xD800 から 0xDFFF の範囲にある場合、その値を表すことができます。 この値は Unicode サロゲート ペアの一方を表していますが、このペアは分離して表すことができないため、論理的にはこの値は正しくありません。
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 コンパイラ オプション: `/ZW`
 
@@ -97,7 +97,7 @@ accessenum structname [:type] { enumerator-list } var;
 *var*<br/>
 (省略可能) 列挙型の変数の名前。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 **enum class** と **enum struct** は同等の宣言です。
 
@@ -174,7 +174,7 @@ CLR 列挙型の詳細については、次のページを参照してくださ�
 
 - [Underlying Type of an Enum (列挙型の基になる型)](../dotnet/how-to-define-and-consume-enums-in-cpp-cli.md)
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 コンパイラ オプション: `/clr`
 

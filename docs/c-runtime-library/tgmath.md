@@ -1,17 +1,18 @@
 ---
-title: 型-汎用数値演算
+title: ジェネリック型数値演算
 description: 引数の型に基づいて、右の数値演算関数を呼び出す C コードを簡単に記述できるようにする <tgmath.h>> のマクロについて説明します。
+ms.topic: conceptual
 ms.date: 9/3/2020
 helpviewer_keywords:
 - CRT tgmath.h
-ms.openlocfilehash: 8994edcaa05247a16d90b47bca8ec26fca27cda7
-ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
+ms.openlocfilehash: 98c786d91963973ad9384cea2fe6563d1e3174ac
+ms.sourcegitcommit: 9451db8480992017c46f9d2df23fb17b503bbe74
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89557747"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91590226"
 ---
-# <a name="type-generic-math"></a>型-汎用数値演算
+# <a name="type-generic-math"></a>ジェネリック型数値演算
 
 ISO C Standard 11 (C11) 以降では、 \<tgmath.h> ヘッダーにやを含めることに加えて、 \<math.h> \<complex.h> パラメーターの型に基づいて対応する数学関数を呼び出すマクロが用意されています。
 
