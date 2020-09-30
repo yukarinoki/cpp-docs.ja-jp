@@ -1,5 +1,5 @@
 ---
-title: /sourceDependencies (レポートソースレベルの依存関係)
+title: /sourceDependencies (レポート ソースレベルの依存関係)
 description: Microsoft C++ の/sourceDependencies コンパイラオプションのリファレンスガイドです。
 ms.date: 07/29/2020
 f1_keywords:
@@ -7,18 +7,19 @@ f1_keywords:
 helpviewer_keywords:
 - /sourceDependencies compiler option
 - /sourceDependencies
-ms.openlocfilehash: 3198353ea7569c426a556522d6b931fe23c7f12c
-ms.sourcegitcommit: f2a135d69a2a8ef1777da60c53d58fe06980c997
+ms.openlocfilehash: 0c1866812435c777f6f1fd7ed7f9db788a8cf031
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87520704"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91502837"
 ---
-# <a name="sourcedependencies-report-source-level-dependencies"></a>`/sourceDependencies`(ソースレベルの依存関係をレポートする)
+# <a name="sourcedependencies-report-source-level-dependencies"></a>`/sourceDependencies` (ソースレベルの依存関係をレポートする)
 
 コンパイル中に使用されるソースレベルの依存関係の詳細を示す JSON ファイルを生成するようにコンパイラに指示します。
 
 JSON ファイルには、次のようなソースの依存関係の一覧が含まれています。
+
 - ヘッダーファイル (推移的なヘッダーと直接付加されたヘッダーの両方)。
 - 使用される PCH (が指定されている場合 **`/Yu`** )。
 - インポートされたモジュールとインポートされたヘッダーユニット (推移性および直接インポートされたモジュール/ヘッダーユニット)。
@@ -36,7 +37,7 @@ JSON ファイルには、次のようなソースの依存関係の一覧が含
 *名簿*\
 引数がディレクトリの場合、コンパイラは指定されたディレクトリにソース依存関係ファイルを生成します。 出力ファイル名は、入力ファイルの完全な名前に基づき、拡張子が追加され *`.json`* ます。 たとえば、コンパイラに指定されたファイルがの場合、 *`main.cpp`* 生成される出力ファイル名はに *`main.cpp.json`* なります。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>注釈
 
 **`/sourceDependencies`** コンパイラオプションは、Visual Studio 2019 バージョン16.7 以降で使用できます。 既定では有効になっていません。
 
@@ -46,7 +47,7 @@ JSON ファイルには、次のようなソースの依存関係の一覧が含
 
 すべてのファイルパスは、出力に絶対パスとして表示されます。
 
-### <a name="examples"></a>使用例
+### <a name="examples"></a>例
 
 次のサンプルコードを指定します。
 
@@ -90,7 +91,7 @@ int main() { }
 
 1. [**構成プロパティ**] [  >  **C/c + +**  >  **コマンドライン**] プロパティページを選択します。
 
-1. [**追加オプション**] ボックスで、を追加し、[ *`/sourceDependencies: <filename>`* **OK]** または [**適用**] を選択して変更を保存します。
+1. [ **追加オプション** ] ボックスで、を追加し、[ *`/sourceDependencies: <filename>`* **OK]** または [ **適用** ] を選択して変更を保存します。
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>このコンパイラ オプションをコードから設定するには
 
@@ -98,5 +99,5 @@ int main() { }
 
 ## <a name="see-also"></a>関連項目
 
-[MSVC コンパイラオプション](compiler-options.md)<br/>
+[MSVC コンパイラ オプション](compiler-options.md)<br/>
 [MSVC コンパイラ コマンド ラインの構文](compiler-command-line-syntax.md)<br/>

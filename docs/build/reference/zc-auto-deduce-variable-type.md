@@ -9,26 +9,26 @@ helpviewer_keywords:
 - /Zc compiler options (C++)
 - Zc compiler options (C++)
 ms.assetid: 5f5bc102-44c3-4688-bbe1-080594dcee5c
-ms.openlocfilehash: 866cccb490136e951effb1f8da20877c8d5ec763
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 6bb1c8f2b14c483cbd46ecb6534a33db020e23e0
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87217182"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91502831"
 ---
-# <a name="zcauto-deduce-variable-type"></a>`/Zc:auto`(変数の型の推測)
+# <a name="zcauto-deduce-variable-type"></a>`/Zc:auto` (変数の型の推測)
 
-**`/Zc:auto`** コンパイラオプションは、 [ `auto` キーワード](../../cpp/auto-keyword.md)を使用して変数を宣言する方法をコンパイラに指示します。 既定のオプションであるを指定した場合、 **`/Zc:auto`** コンパイラは初期化式から宣言された変数の型を推測します。 を指定すると **`/Zc:auto-`** 、コンパイラは変数を自動ストレージクラスに割り当てます。
+**`/Zc:auto`** コンパイラオプションは、 [ `auto` キーワード](../../cpp/auto-cpp.md)を使用して変数を宣言する方法をコンパイラに指示します。 既定のオプションであるを指定した場合、 **`/Zc:auto`** コンパイラは初期化式から宣言された変数の型を推測します。 を指定すると **`/Zc:auto-`** 、コンパイラは変数を自動ストレージクラスに割り当てます。
 
 ## <a name="syntax"></a>構文
 
 > **`/Zc:auto`**[**`-`**]
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>注釈
 
 C++ 標準では、キーワードの元の意味と改訂された意味が定義されて **`auto`** います。 Visual Studio 2010 より前では、キーワードは自動ストレージクラスの変数を宣言しています。つまり、ローカルの有効期間を持つ変数です。 Visual Studio 2010 以降では、キーワードは、宣言の初期化式から変数の型を推測します。 **`/Zc:auto`** コンパイラがキーワードの改訂された意味を使用するようにコンパイラに指示するには、コンパイラオプションを使用し **`auto`** ます。 **`/Zc:auto`** 既定では、このオプションはオンになっています。 オプションでは、 [`/permissive-`](permissive-standards-conformance.md) の既定の設定は変更されません **`/Zc:auto`** 。
 
-キーワードの使用が **`auto`** 現在のコンパイラオプションと矛盾している場合、コンパイラは適切な診断メッセージを発行し **`/Zc:auto`** ます。 詳細については、「 [ `auto` キーワード](../../cpp/auto-keyword.md)」を参照してください。 Visual C++ の準拠に関する問題の詳細については、「[非標準動作](../../cpp/nonstandard-behavior.md)」を参照してください。
+キーワードの使用が **`auto`** 現在のコンパイラオプションと矛盾している場合、コンパイラは適切な診断メッセージを発行し **`/Zc:auto`** ます。 詳細については、「 [ `auto` キーワード](../../cpp/auto-cpp.md)」を参照してください。 Visual C++ の準拠に関する問題の詳細については、「 [非標準動作](../../cpp/nonstandard-behavior.md)」を参照してください。
 
 ### <a name="to-set-this-compiler-option-in-visual-studio"></a>このコンパイラ オプションを Visual Studio で使用するには
 
@@ -40,5 +40,5 @@ C++ 標準では、キーワードの元の意味と改訂された意味が定�
 
 ## <a name="see-also"></a>関連項目
 
-[`/Zc`互換性](zc-conformance.md)<br/>
-[`auto`キーワード](../../cpp/auto-keyword.md)
+[`/Zc` 互換性](zc-conformance.md)<br/>
+[`auto` キーワード](../../cpp/auto-cpp.md)

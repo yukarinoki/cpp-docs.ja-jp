@@ -25,12 +25,12 @@ helpviewer_keywords:
 - GetReferencedRowset method
 - GetSpecification method
 ms.assetid: 9c654155-7727-464e-bd31-143e68391a47
-ms.openlocfilehash: dfa3873917d5215d0069e504e0556c31744f4334
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 7ceaf30318c176b13cb6f81c8401501863b988a4
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88840389"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91504045"
 ---
 # <a name="irowsetinfoimpl-class"></a>IRowsetInfoImpl クラス
 
@@ -67,9 +67,9 @@ class ATL_NO_VTABLE IRowsetInfoImpl :
 |[GetReferencedRowset](#getreferencedrowset)|ブックマークが適用される行セットへのインターフェイスポインターを返します。|
 |[GetSpecification](#getspecification)|この行セットを作成したオブジェクト (コマンドまたはセッション) へのインターフェイス ポインターを返します。|
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>注釈
 
-行セットの必須のインターフェイスです。 このクラスは、コマンドクラスで定義された [プロパティセットマップ](../../data/oledb/begin-propset-map.md) を使用して、行セットプロパティを実装します。 行セットクラスはコマンドクラスのプロパティセットを使用しているように見えますが、コマンドまたはセッションオブジェクトによって作成された場合、その行セットには実行時プロパティの独自のコピーが用意されています。
+行セットの必須のインターフェイスです。 このクラスは、コマンドクラスで定義された [プロパティセットマップ](./macros-for-ole-db-provider-templates.md#begin_propset_map) を使用して、行セットプロパティを実装します。 行セットクラスはコマンドクラスのプロパティセットを使用しているように見えますが、コマンドまたはセッションオブジェクトによって作成された場合、その行セットには実行時プロパティの独自のコピーが用意されています。
 
 ## <a name="irowsetinfoimplgetproperties"></a><a name="getproperties"></a> IRowsetInfoImpl:: GetProperties
 
@@ -119,7 +119,7 @@ STDMETHOD (GetSpecification )(REFIID riid,
 
 *OLE DB プログラマーリファレンス*の「 [IRowsetInfo:: getspecification](/previous-versions/windows/desktop/ms716746(v=vs.85)) 」を参照してください。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 このメソッドを [Igetdatasourceimpl](../../data/oledb/igetdatasourceimpl-class.md) と共に使用して、データソースオブジェクトからプロパティを取得します。
 

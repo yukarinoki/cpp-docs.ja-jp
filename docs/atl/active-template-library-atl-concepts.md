@@ -4,18 +4,18 @@ ms.date: 05/06/2019
 helpviewer_keywords:
 - ATL, about ATL
 ms.assetid: a3960991-4d76-4da5-9568-3fa7fde53ff4
-ms.openlocfilehash: cc96b5ed931713ca64a0582ca1cc18a8526ea8af
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: c87eedff5b6ce7d906c05ac0678425af575f0af8
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84616680"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91504270"
 ---
 # <a name="active-template-library-atl-concepts"></a>ATL (Active Template Library) の概念
 
 Active Template Library (ATL) は、小さくて高速のコンポーネント オブジェクト モデル (COM) オブジェクトを作成できる、テンプレートに基づく C++ クラスのセットです。 ストックの実装、デュアル インターフェイス、標準 COM 列挙子インターフェイス、接続ポイント、ティアオフ インターフェイス、ActiveX コントロールなど、COM の重要な機能が特別にサポートされています。
 
-ATL プログラミングを多用する場合は、COM プログラミングが簡単になるように設計されている COM と .NET の属性について、さらに詳しく学習する必要があります。 詳しくは、[Attributed Programming (属性付きプログラミング)](../windows/attributed-programming-concepts.md) に関するページをご覧ください。 (COM および .NET の属性を、C++ 標準\[\[attribute]] 機能と混同しないでください。)
+ATL プログラミングを多用する場合は、COM プログラミングが簡単になるように設計されている COM と .NET の属性について、さらに詳しく学習する必要があります。 詳しくは、[Attributed Programming (属性付きプログラミング)](../windows/attributes/cpp-attributes-com-net.md) に関するページをご覧ください。 (COM および .NET の属性を、C++ 標準\[\[attribute]] 機能と混同しないでください。)
 
 ## <a name="in-this-section"></a>このセクションの内容
 
@@ -40,7 +40,7 @@ ATL でのコントロールのホストに関連する基本的な質問につ�
 [ATL COM プロパティページ](atl-com-property-pages.md)<br/>
 COM プロパティ ページを指定および実装する方法を示します。
 
-[DHTML コントロールに対する ATL のサポート](atl-support-for-dhtml-controls.md)<br/>
+[DHTML コントロールの ATL サポート](atl-support-for-dhtml-controls.md)<br/>
 DHTML コントロールを作成する詳細な手順について説明します。
 
 [ATL コネクションポイント](atl-connection-points.md)<br/>
@@ -55,7 +55,7 @@ ATL の [IDispEventImpl](reference/idispeventimpl-class.md) および [IDispEven
 [プロジェクトのスレッド モデルの指定](specifying-the-threading-model-for-a-project-atl.md)<br/>
 プロジェクトでのスレッドに関連する実行時のパフォーマンスの制御に使用できるマクロについて説明します。
 
-[ATL モジュール クラス](atl-module-classes.md)<br/>
+[ATL モジュールクラス](atl-module-classes.md)<br/>
 ATL 7.0 の新しいモジュール クラスについて説明します。 モジュール クラスでは、ATL で必要な基本機能が実装されています。
 
 [ATL サービス](atl-services.md)<br/>
@@ -70,7 +70,7 @@ ATL で配列とマップを使用する方法について説明します。
 [ATL レジストリ コンポーネント (レジストラー)](atl-registry-component-registrar.md)<br/>
 ATL のスクリプト構文と置き換え可能パラメーターについて説明します。 また、レジストラーへの静的リンクを設定する方法も説明します。
 
-[ATL および C ランタイム コードによるプログラミング](programming-with-atl-and-c-run-time-code.md)<br/>
+[ATL および C ランタイムコードによるプログラミング](programming-with-atl-and-c-run-time-code.md)<br/>
 C ランタイム ライブラリ (CRT) への静的または動的なリンクの利点について説明します。
 
 [CComBSTR を使用したプログラミング](programming-with-ccombstr-atl.md)<br/>
@@ -96,7 +96,7 @@ ATL プロジェクト ウィザードについての説明が含まれます。
 [ATL コントロール ウィザード](reference/atl-control-wizard.md)<br/>
 クラスを追加する方法について説明します。
 
-[属性付きプログラミング](../windows/attributed-programming-concepts.md)<br/>
+[属性付きプログラミング](../windows/attributes/cpp-attributes-com-net.md)<br/>
 属性を使って COM プログラミングを簡単にする方法の概要を説明し、さらに詳細なトピックへのリンクを提供します。
 
 [ATL クラスの概要](atl-class-overview.md)<br/>

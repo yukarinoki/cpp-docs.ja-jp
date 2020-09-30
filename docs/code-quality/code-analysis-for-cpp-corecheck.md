@@ -5,16 +5,16 @@ ms.topic: reference
 helpviewer_keywords:
 - code analysis, C++ core check
 ms.assetid: f1429463-136e-41ed-8a75-a8dbf0b4fd89
-ms.openlocfilehash: e85ce8baed9a1ef39e0ab759ab86a5b570a42fa6
-ms.sourcegitcommit: 6e55aeb538b1c39af754f82d6f7738a18f5aa031
+ms.openlocfilehash: a4dc50395a1da0eda68148123651123cf1607184
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87389949"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91503383"
 ---
 # <a name="c-core-guidelines-checker-reference"></a>C++ Core Guidelines チェッカーリファレンス
 
-このセクションでは、C++ Core Guidelines チェッカーの警告を示します。 コード分析の詳細については、「 [ `/analyze` (コード分析)](/cpp/build/reference/analyze-code-analysis) 」および「[クイックスタート: C/c + + のコード分析](../code-quality/quick-start-code-analysis-for-c-cpp.md)」を参照してください。
+このセクションでは、C++ Core Guidelines チェッカーの警告を示します。 コード分析の詳細については、「 [ `/analyze` (コード分析)](../build/reference/analyze-code-analysis.md) 」および「[クイックスタート: C/c + + のコード分析](../code-quality/quick-start-code-analysis-for-c-cpp.md)」を参照してください。
 
 > [!NOTE]
 > いくつかの警告は複数のグループに属しており、すべての警告に完全な参照トピックが含まれているわけではありません。
@@ -75,10 +75,10 @@ New と delete を明示的に呼び出すのは避けてください。代わ�
 式 '*expr*' の型は既に gsl:: not_null です。 Null 性をテストしないでください。 [C++ Core Guidelines 「F. 23](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#f23-use-a-not_nullt-to-indicate-that-null-is-not-a-valid-value)」を参照してください。
 
 [C26481 NO_POINTER_ARITHMETIC](C26481.md)\
-ポインター演算は使用しないでください。 代わりに span を使用します。 「C++ Core Guidelines の境界」を参照してください[。 1](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#SS-bounds).
+ポインター演算は使用しないでください。 代わりに span を使用します。 「C++ Core Guidelines の境界」を参照してください [。 1](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#SS-bounds).
 
 [C26485 NO_ARRAY_TO_POINTER_DECAY](C26485.md)\
-式 '*expr*': 配列からポインターが減衰されていません。 「C++ Core Guidelines の境界」を参照してください[。 3](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#SS-bounds).
+式 '*expr*': 配列からポインターが減衰されていません。 「C++ Core Guidelines の境界」を参照してください [。 3](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#SS-bounds).
 
 ## <a name="unique_pointer-group"></a>UNIQUE_POINTER Group
 
@@ -185,10 +185,10 @@ C++ Core Guidelines を参照してください: [F. 6: 関数がスローされ
 変数 '*variable*' が割り当てられるのは1回だけです。としてマークして `const` ください。 [C++ Core Guidelines con](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#con4-use-const-to-define-objects-with-values-that-do-not-change-after-construction)を参照してください。
 
 [C26497 USE_CONSTEXPR_FOR_FUNCTION](c26497.md)\
-この関数*関数*は、 `constexpr` コンパイル時の評価が必要な場合にマークすることができます。 [C++ Core Guidelines F. 4](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#Rf-constexpr)を参照してください。
+この関数 *関数* は、 `constexpr` コンパイル時の評価が必要な場合にマークすることができます。 [C++ Core Guidelines F. 4](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#Rf-constexpr)を参照してください。
 
 [C26498 USE_CONSTEXPR_FOR_FUNCTIONCALL](c26498.md)\
-この関数呼び出し*関数*は `constexpr` 、コンパイル時の評価が必要な場合にを使用できます。 [C++ Core Guidelines con](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#Rconst-constexpr)を参照してください。
+この関数呼び出し *関数* は `constexpr` 、コンパイル時の評価が必要な場合にを使用できます。 [C++ Core Guidelines con](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#Rconst-constexpr)を参照してください。
 
 ## <a name="type-group"></a>型グループ
 
@@ -196,7 +196,7 @@ C++ Core Guidelines を参照してください: [F. 6: 関数がスローされ
 スライスしないでください。 「 [C++ CORE GUIDELINES ES](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#es63-dont-slice)」を参照してください。
 
 [C26465 NO_CONST_CAST_UNNECESSARY](c26465.md)\
-を使用せず `const_cast` にキャスト `const` してください。 `const_cast`は必要ありません。この変換では、変動性または揮発性が削除されていません。 C++ Core Guidelines 「」を参照してください[。 3](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#Pro-type-constcast).
+を使用せず `const_cast` にキャスト `const` してください。 `const_cast` は必要ありません。この変換では、変動性または揮発性が削除されていません。 C++ Core Guidelines 「」を参照してください [。 3](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#Pro-type-constcast).
 
 [C26466 NO_STATIC_DOWNCAST_POLYMORPHIC](c26466.md)\
 Downcasts は使用しないで `static_cast` ください。 ポリモーフィックな型からのキャストでは、dynamic_cast を使用する必要があります。 [C++ Core Guidelines の種類を参照してください。 2](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#Pro-type-downcast).
@@ -223,7 +223,7 @@ Downcasts は使用しないで `static_cast` ください。 ポリモーフィ
 Downcasts は使用しないで `static_cast` ください。 [C++ Core Guidelines の種類を参照してください。 2](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#SS-type).
 
 [C26492 NO_CONST_CAST](c26492.md)\
-を使用せず `const_cast` にキャスト `const` してください。 C++ Core Guidelines 「」を参照してください[。 3](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#SS-type).
+を使用せず `const_cast` にキャスト `const` してください。 C++ Core Guidelines 「」を参照してください [。 3](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#SS-type).
 
 [C26493 NO_CSTYLE_CAST](c26493.md)\
 C スタイルのキャストは使用しないでください。 「 [C++ Core Guidelines 種類 4](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#SS-type)」を参照してください。
@@ -264,7 +264,7 @@ Unchecked 添字演算子の代わりにを使用することをお勧め `gsl::
 `gsl::finally`最後のアクションが意図されている場合は、の使用を検討してください。 「 [C++ Core Guidelines: GSL. util: Utilities](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#SS-utilities)」を参照してください。
 
 [C26449 NO_SPAN_FROM_TEMPORARY](c26449.md)\
-`gsl::span`または一時 `std::string_view` から作成された場合、一時が無効になると無効になります。 「 [C++ Core Guidelines: GSL. view: Views](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#gslview-views)」を参照してください。
+`gsl::span` または一時 `std::string_view` から作成された場合、一時が無効になると無効になります。 「 [C++ Core Guidelines: GSL. view: Views](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#gslview-views)」を参照してください。
 
 ## <a name="deprecated-warnings"></a>非推奨の警告
 

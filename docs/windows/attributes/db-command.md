@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - db_command attribute
 ms.assetid: 714c3e15-85d7-408b-9a7c-88505c3e5d24
-ms.openlocfilehash: 868ff862cc41543c8ebc7880a5d1a9a7e6b103f3
-ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
+ms.openlocfilehash: 5910e72b10d5b849d203d088564d79d0f80a7961
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90684587"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91504598"
 ---
 # <a name="db_command"></a>db_command
 
@@ -125,7 +125,7 @@ OLE DB コンシューマーは、**db_command** によって作成された [CC
 
 ## <a name="examples"></a>例
 
-この例では、テーブルから state 列が 'CA' と一致する姓と名を選択するコマンドを定義しています。 **db_command** は、ウィザードで生成される [OpenAll and CloseAll](../../data/oledb/consumer-wizard-generated-methods.md)などの関数および `CRowset` MoveNext [などの](../../data/oledb/crowset-movenext.md)メンバー関数を呼び出すことができる行セットを作成して読み取ります。
+この例では、テーブルから state 列が 'CA' と一致する姓と名を選択するコマンドを定義しています。 **db_command** は、ウィザードで生成される [OpenAll and CloseAll](../../data/oledb/consumer-wizard-generated-methods.md)などの関数および `CRowset` MoveNext [などの](../../data/oledb/crowset-class.md#movenext)メンバー関数を呼び出すことができる行セットを作成して読み取ります。
 
 このコードでは、pubs データベースに接続する独自の接続文字列を指定する必要があることに注意してください。 開発環境でこれを行う方法については、「 [方法: データベースに接続して既存のオブジェクトを参照](/sql/ssdt/how-to-connect-to-a-database-and-browse-existing-objects) し、 [新しい接続を追加](/visualstudio/data-tools/add-new-connections)する」を参照してください。
 
@@ -238,8 +238,8 @@ int main() {
 |-|-|
 |**適用対象**|**`class`**、 **`struct`** 、member、method、local|
 |**Repeatable**|いいえ|
-|**必須属性**|なし|
-|**無効な属性**|なし|
+|**必須属性**|None|
+|**無効な属性**|None|
 
 属性コンテキストの詳細については、「 [属性コンテキスト](cpp-attributes-com-net.md#contexts)」を参照してください。
 

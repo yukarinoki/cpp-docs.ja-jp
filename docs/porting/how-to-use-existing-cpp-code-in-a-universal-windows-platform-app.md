@@ -3,12 +3,12 @@ title: '方法: ユニバーサル Windows プラットフォーム アプリで
 description: ユニバーサル Windows プラットフォームアプリで既存のコードアプリとライブラリを使用する方法。
 ms.date: 09/04/2020
 ms.assetid: 87e5818c-3081-42f3-a30d-3dca2cf0645c
-ms.openlocfilehash: 1e946d588f1a14018ebb11a60b319c2d54658f25
-ms.sourcegitcommit: 0df2b7ab4e81284c5248e4584767591dcc1950c3
+ms.openlocfilehash: fd23c875d67654e96a828f4dba412dd74652912a
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89609127"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91503670"
 ---
 # <a name="how-to-use-existing-c-code-in-a-universal-windows-platform-app"></a>方法: ユニバーサル Windows プラットフォーム アプリで既存の C++ コードを使用する
 
@@ -30,7 +30,7 @@ DLL またはスタティックライブラリのソースコードがある場�
 
 前の説明は COM コンポーネントには適用されません。 COM コンポーネントは、異なる方法で処理する必要があります。 EXE または DLL に COM サーバーがある場合は、ユニバーサル Windows プロジェクトで使用できます。 これを登録を必要としない [COM コンポーネント](/windows/win32/sbscs/creating-registration-free-com-objects)としてパッケージ化し、それをコンテンツファイルとしてプロジェクトに追加し、を使用してインスタンス化し [`CoCreateInstanceFromApp`](/windows/win32/api/combaseapi/nf-combaseapi-cocreateinstancefromapp) ます。 詳細については、「[Using Free-COM DLL in Windows Store C++ Project](/archive/blogs/win8devsupport/using-free-com-dll-in-windows-store-c-project)」 (Windows ストア C++ プロジェクトでの Free-COM DLL の使用) をご覧ください。
 
-既存の COM ライブラリを UWP に移植する場合は、それを Windows ランタイムコンポーネントに変換することもできます。 このようなポートには C++/WinRT ライブラリをお勧めしますが、 [Windows ランタイム C++ テンプレートライブラリ (WRL)](../windows/windows-runtime-cpp-template-library-wrl.md)を使用することもできます。 WRL は非推奨とされており、ATL および OLE のすべての機能をサポートしているわけではありません。 このようなポートが実現可能であるかどうかは、コンポーネントに必要な COM、ATL、および OLE の機能によって異なります。
+既存の COM ライブラリを UWP に移植する場合は、それを Windows ランタイムコンポーネントに変換することもできます。 このようなポートには C++/WinRT ライブラリをお勧めしますが、 [Windows ランタイム C++ テンプレートライブラリ (WRL)](../cppcx/wrl/windows-runtime-cpp-template-library-wrl.md)を使用することもできます。 WRL は非推奨とされており、ATL および OLE のすべての機能をサポートしているわけではありません。 このようなポートが実現可能であるかどうかは、コンポーネントに必要な COM、ATL、および OLE の機能によって異なります。
 
 どちらの開発シナリオを選択した場合でも、多くのマクロ定義に注意する必要があります。 これらのマクロをコード内で使用すると、従来のデスクトップ Win32 と UWP の両方で条件付きでコードをコンパイルできます。
 

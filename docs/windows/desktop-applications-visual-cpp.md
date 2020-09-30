@@ -3,18 +3,18 @@ title: デスクトップ アプリケーション (Visual C++)
 ms.date: 07/28/2019
 ms.assetid: a020b534-293c-44e2-aa48-516c43ddeb8f
 ms.topic: overview
-ms.openlocfilehash: f8e3dd386aee835ff383ba7567a5c320f206476e
-ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
+ms.openlocfilehash: 26448ca65b3162e2adfe6988dfd8c9e85432429c
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86404962"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91504438"
 ---
 # <a name="desktop-applications-visual-c"></a>デスクトップ アプリケーション (Visual C++)
 
-C++ の*デスクトップアプリケーション*は、Windows api の完全なセットにアクセスできるネイティブアプリケーションであり、ウィンドウまたはシステムコンソールで実行されます。 C++ のデスクトップアプリケーションは windows 10 を通じて Windows XP で実行できます (ただし、Windows XP は正式にはサポートされなくなり、その後に導入された Windows Api は多数あります)。
+C++ の *デスクトップアプリケーション* は、Windows api の完全なセットにアクセスできるネイティブアプリケーションであり、ウィンドウまたはシステムコンソールで実行されます。 C++ のデスクトップアプリケーションは windows 10 を通じて Windows XP で実行できます (ただし、Windows XP は正式にはサポートされなくなり、その後に導入された Windows Api は多数あります)。
 
-デスクトップアプリケーションは、Windows 10 を実行する Pc 上でも、XBox、Windows Phone、Surface Hub、およびその他のデバイスでも実行できるユニバーサル Windows プラットフォーム (UWP) アプリとは異なります。 デスクトップと UWP アプリケーションの詳細については、「[テクノロジを選択する](/windows/win32/choose-your-technology)」を参照してください。
+デスクトップアプリケーションは、Windows 10 を実行する Pc 上でも、XBox、Windows Phone、Surface Hub、およびその他のデバイスでも実行できるユニバーサル Windows プラットフォーム (UWP) アプリとは異なります。 デスクトップと UWP アプリケーションの詳細については、「 [テクノロジを選択する](/windows/win32/choose-your-technology)」を参照してください。
 
 ## <a name="desktop-bridge"></a>デスクトップ ブリッジ
 
@@ -28,7 +28,7 @@ Visual Studio 2017 バージョン15.4 以降では、Windows アプリケーシ
 
 - [コンポーネントオブジェクトモデル (COM)](/windows/win32/com/the-component-object-model)は、さまざまな言語で記述されたプログラムが相互に通信できるようにするための仕様です。 多くの Windows コンポーネントは COM オブジェクトとして実装され、オブジェクトの作成、インターフェイスの検出、およびオブジェクトの破棄に関する標準的な COM 規則に従います。  C++ デスクトップアプリケーションから COM オブジェクトを使用するのは比較的簡単ですが、独自の COM オブジェクトを作成する方がより高度です。 [Active Template Library (ATL)](../atl/atl-com-desktop-components.md)には、COM 開発を簡略化するマクロとヘルパー関数が用意されています。
 
-- MFC アプリケーションは、ユーザーインターフェイスを作成するために[Microsoft Foundation Classes](../mfc/mfc-desktop-applications.md)を使用する Windows デスクトップアプリケーションです。 MFC アプリケーションでは、CRT および標準ライブラリの Api だけでなく、COM コンポーネントを使用することもできます。 MFC は、ウィンドウメッセージループと Windows Api に対して、シン C++ オブジェクト指向ラッパーを提供します。 MFC は、多くのユーザーインターフェイスコントロールまたはカスタムユーザーコントロールを持つアプリケーション (特にエンタープライズ型のアプリケーション) の既定の選択肢です。 MFC には、ウィンドウの管理、シリアル化、テキスト操作、印刷、リボンなどの最新のユーザーインターフェイス要素に便利なヘルパークラスが用意されています。 MFC を効果的に使用するには、Win32 に精通している必要があります。
+- MFC アプリケーションは、ユーザーインターフェイスを作成するために [Microsoft Foundation Classes](../mfc/mfc-desktop-applications.md) を使用する Windows デスクトップアプリケーションです。 MFC アプリケーションでは、CRT および標準ライブラリの Api だけでなく、COM コンポーネントを使用することもできます。 MFC は、ウィンドウメッセージループと Windows Api に対して、シン C++ オブジェクト指向ラッパーを提供します。 MFC は、多くのユーザーインターフェイスコントロールまたはカスタムユーザーコントロールを持つアプリケーション (特にエンタープライズ型のアプリケーション) の既定の選択肢です。 MFC には、ウィンドウの管理、シリアル化、テキスト操作、印刷、リボンなどの最新のユーザーインターフェイス要素に便利なヘルパークラスが用意されています。 MFC を効果的に使用するには、Win32 に精通している必要があります。
 
 - C++/CLI アプリケーションまたはコンポーネントでは、c++ 構文の拡張機能 (C++ 標準で許可されている) を使用して、.NET とネイティブの C + + コードの間の対話を可能にします。  C++/CLI アプリケーションは、ネイティブで実行される部分と、.NET 基底クラスライブラリへのアクセスを持つ .NET Framework で実行される部分を持つことができます。 C++/CLI は、C# または Visual Basic で記述されたコードを操作する必要があるネイティブ C++ コードがある場合に推奨されるオプションです。 これは、ユーザーインターフェイスコードではなく、.NET Dll で使用することを目的としています。 詳細については、「[C++/CLI による .NET プログラミング (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)」を参照してください。
 
@@ -36,15 +36,15 @@ C++ のすべてのデスクトップアプリケーションでは、C ラン�
 
 ## <a name="in-this-section"></a>このセクションの内容
 
-|タイトル|説明|
+|Title|説明|
 |-----------|-----------------|
-|[C++ による Windows コンソール アプリケーション](console-applications-in-visual-cpp.md)|コンソール アプリに関する情報が含まれています。 Win32 (または Win64) コンソール アプリケーションには、独自のウィンドウとメッセージ ループはありません。 コンソール ウィンドウで動作し、入出力はコマンド ラインを使用して扱われます。|
+|[C++ による Windows コンソール アプリケーション](./overview-of-windows-programming-in-cpp.md)|コンソール アプリに関する情報が含まれています。 Win32 (または Win64) コンソール アプリケーションには、独自のウィンドウとメッセージ ループはありません。 コンソール ウィンドウで動作し、入出力はコマンド ラインを使用して扱われます。|
 |[チュートリアル: Windows デスクトップ アプリケーション (C++) の作成](walkthrough-creating-windows-desktop-applications-cpp.md)|単純な Windows デスクトップアプリケーションを作成します。|
-|[空の Windows デスクトップ アプリケーションを作成する](creating-an-empty-windows-desktop-application.md)|既定のファイルを持たない Windows デスクトッププロジェクトを作成する方法。|
-|[空の Win32 アプリケーションへのファイルの追加](adding-files-to-an-empty-win32-applications.md)|空のプロジェクトにファイルを追加する方法。|
+|[空の Windows デスクトップ アプリケーションを作成する](./overview-of-windows-programming-in-cpp.md)|既定のファイルを持たない Windows デスクトッププロジェクトを作成する方法。|
+|[空の Win32 アプリケーションへのファイルの追加](./overview-of-windows-programming-in-cpp.md)|空のプロジェクトにファイルを追加する方法。|
 |[リソース ファイルの操作](working-with-resource-files.md)|画像、アイコン、文字列テーブル、およびその他のリソースをデスクトップアプリケーションに追加する方法。|
 |[DirectX を使用するゲームを作成するためのリソース (C++)](resources-for-creating-a-game-using-directx.md)|C++ でゲームを作成するためのコンテンツへのリンク。|
-|[チュートリアル: スタティック ライブラリの作成と使用](walkthrough-creating-and-using-a-static-library-cpp.md)|.Lib バイナリファイルを作成する方法。|
+|[チュートリアル: スタティック ライブラリの作成と使用](../build/walkthrough-creating-and-using-a-static-library-cpp.md)|.Lib バイナリファイルを作成する方法。|
 |[方法: windows デスクトップアプリケーションで Windows 10 SDK を使用する](how-to-use-the-windows-10-sdk-in-a-windows-desktop-application.md)|Windows 10 SDK を使用してビルドするプロジェクトの設定手順が示されています。|
 
 ## <a name="related-articles"></a>関連トピック

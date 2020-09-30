@@ -137,12 +137,12 @@ helpviewer_keywords:
 - std::unordered_set::size
 - std::unordered_set::swap
 ms.assetid: ac08084e-05a7-48c0-9ae4-d40c529922dd
-ms.openlocfilehash: 396465b24e9d7cf0facbe324c7b01479fe8e9b6b
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: 0feff4e595be7929fd0bc80eb53a0a65a9a61f43
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90040042"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91502958"
 ---
 # <a name="unordered_set-class"></a>unordered_set クラス
 
@@ -177,7 +177,7 @@ class unordered_set;
 
 ### <a name="typedefs"></a>Typedefs
 
-|Name|説明|
+|名前|説明|
 |-|-|
 |[allocator_type](#allocator_type)|ストレージを管理するためのアロケーターの型です。|
 |[const_iterator](#const_iterator)|被制御シーケンスの定数反復子の型です。|
@@ -195,9 +195,9 @@ class unordered_set;
 |[size_type](#size_type)|2 つの要素間の距離を表す、符号なしの型です。|
 |[value_type](#value_type)|要素の型。|
 
-### <a name="functions"></a>機能
+### <a name="functions"></a>関数
 
-|Name|説明|
+|名前|説明|
 |-|-|
 |[初め](#begin)|被制御シーケンスの先頭を指定します。|
 |[bucket](#bucket)|キー値のバケット番号を取得します。|
@@ -230,7 +230,7 @@ class unordered_set;
 
 ### <a name="operators"></a>オペレーター
 
-|Name|説明|
+|名前|説明|
 |-|-|
 |[unordered_set:: operator =](#op_eq)|ハッシュ テーブルをコピーします。|
 
@@ -894,7 +894,7 @@ int main()
     std::cout << std::boolalpha; // so booleans show as 'true' or 'false'
     std::cout << theUnorderedSet.contains(2) << '\n';
     std::cout << theUnorderedSet.contains(3) << '\n';
-    
+
     return 0;
 }
 ```

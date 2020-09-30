@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - message handling [MFC], adding handlers
 ms.assetid: 4251cfce-76ca-443d-bd2f-6303afa6d942
-ms.openlocfilehash: bbd88225249ac18a2bb3ca4006e1edbe62fbddfc
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: c5ec71083c82a71c2b2aaa86a3e9dca37fc37b2b
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81371655"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91502996"
 ---
 # <a name="adding-an-mfc-message-handler"></a>MFC メッセージ ハンドラーの追加
 
-[クラス ウィザード](mfc-class-wizard.md)または**CLass ビュー**の**プロパティ**ウィンドウを使用して、メッセージ ハンドラー (Windows メッセージを処理するメンバー関数) をクラスに追加し、Windows メッセージをメッセージ ハンドラーにマップできます。 また、ダイアログ[ボックス コントロールに対してイベント ハンドラを](../../windows/adding-event-handlers-for-dialog-box-controls.md)追加することもできます。
+クラス[ウィザード](mfc-class-wizard.md)または**クラスビュー**の [**プロパティ**] ウィンドウを使用すると、メッセージハンドラー (windows メッセージを処理するメンバー関数) をクラスに追加し、windows メッセージをメッセージハンドラーにマップできます。 また、 [ダイアログボックスコントロールのイベントハンドラー](../../windows/adding-editing-or-deleting-controls.md)を追加することもできます。
 
-**クラス ウィザード**または **[プロパティ**] ウィンドウ **([クラス ビュー**] ) を使用してメッセージ処理関数とイベント処理関数を定義すると、メッセージ ディスパッチ テーブル (またはメッセージ マップ) とクラス ヘッダー ファイルを自動的に更新できます。
+**クラスウィザード**または [**プロパティ**] ウィンドウ (**クラスビュー**) を使用してメッセージおよびイベント処理関数を定義すると、メッセージディスパッチテーブル (またはメッセージマップ) とクラスヘッダーファイルを自動的に更新できます。
 
 > [!NOTE]
-> クラス ウィザードを使用して ATL クラスにメッセージ ハンドラーを追加できます。ただし、結果の一部は異なる場合があります。 詳細については、ATL のトピック ATL[メッセージ ハンドラーの追加を参照してください](../../atl/adding-an-atl-message-handler.md)。
+> クラスウィザードを使用して、ATL クラスにメッセージハンドラーを追加できます。ただし、結果によっては異なる場合があります。 詳細については、atl のトピック「 [Atl メッセージハンドラーの追加](../../atl/adding-an-atl-message-handler.md)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 
@@ -30,4 +30,4 @@ ms.locfileid: "81371655"
 [メンバー変数の追加](../../ide/adding-a-member-variable-visual-cpp.md)<br/>
 [仮想関数のオーバーライド](../../ide/overriding-a-virtual-function-visual-cpp.md)<br/>
 [クラス各部へのジャンプ](../../ide/navigate-code-cpp.md)<br/>
-[ダイアログ エディター](../../windows/dialog-editor.md)
+[ダイアログエディター](../../windows/dialog-editor.md)

@@ -1,6 +1,6 @@
 ---
 title: initializer_list クラス
-description: Visual Studio でマイクロソフトによって実装される C++ 標準ライブラリのinitializer_list クラスの参照。
+description: Visual Studio で Microsoft によって実装された、C++ 標準ライブラリの initializer_list クラスのリファレンスです。
 ms.date: 01/28/2020
 f1_keywords:
 - initializer_list/std::initializer_list::initializer_list
@@ -13,12 +13,12 @@ helpviewer_keywords:
 - std::initializer_list::begin
 - std::initializer_list::end
 - std::initializer_list::size
-ms.openlocfilehash: b1d33ce484948e731f8d3062b7a99df06ef26073
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 232855fbcac1e4df9af7cf956fda80201326a401
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81373357"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91504630"
 ---
 # <a name="initializer_list-class"></a>initializer_list クラス
 
@@ -33,10 +33,10 @@ class initializer_list
 
 ### <a name="parameters"></a>パラメーター
 
-*型*\
+*各種*\
 `initializer_list` に格納される要素のデータ型。
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>注釈
 
 `initializer_list` は、中かっこで囲んだ初期化子リストを使用して構築できます。
 
@@ -44,17 +44,17 @@ class initializer_list
 initializer_list<int> i1{ 1, 2, 3, 4 };
 ```
 
-関数のシグネチャで `initializer_list` が必要になる場合、コンパイラでは、中かっこで囲んだ初期化子リストが同種の要素を含んでいると、このリストは必ず `initializer_list` に変換されます。 の使用`initializer_list`の詳細については、「[一様な初期化とコンストラクタの委任」を](../cpp/uniform-initialization-and-delegating-constructors.md)参照してください。
+関数のシグネチャで `initializer_list` が必要になる場合、コンパイラでは、中かっこで囲んだ初期化子リストが同種の要素を含んでいると、このリストは必ず `initializer_list` に変換されます。 の使用方法の詳細について `initializer_list` は、「 [Uniform initialization and デリゲートコンストラクター](../cpp/initializing-classes-and-structs-without-constructors-cpp.md) 」を参照してください。
 
 ### <a name="constructors"></a>コンストラクター
 
-|Constructor|説明|
+|コンストラクター|説明|
 |-|-|
 |[initializer_list](#initializer_list)|`initializer_list` 型のオブジェクトを構築します。|
 
 ### <a name="typedefs"></a>Typedefs
 
-|種類の名前。|説明|
+|型名|説明|
 |-|-|
 |`value_type`|`initializer_list` 内の要素の型。|
 |`reference`|`initializer_list` 内の要素への参照を提供する型。|
@@ -67,17 +67,17 @@ initializer_list<int> i1{ 1, 2, 3, 4 };
 
 |メンバー関数|説明|
 |-|-|
-|[開始](#begin)|`initializer_list` 内の最初の要素へのポインターを返します。|
+|[初め](#begin)|`initializer_list` 内の最初の要素へのポインターを返します。|
 |[end](#end)|`initializer_list` 内の最後の要素の 1 つ後ろへのポインターを返します。|
-|[サイズ](#size)|`initializer_list` 内の要素数を返します。|
+|[size](#size)|`initializer_list` 内の要素数を返します。|
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** \<initializer_list>
+**ヘッダー:**\<initializer_list>
 
 **名前空間:** std
 
-## <a name="initializer_listbegin"></a><a name="begin"></a>initializer_list::開始
+## <a name="initializer_listbegin"></a><a name="begin"></a> initializer_list:: begin
 
 `initializer_list` 内の最初の要素へのポインターを返します。
 
@@ -89,7 +89,7 @@ constexpr const InputIterator* begin() const noexcept;
 
 `initializer_list` の最初の要素へのポインター。 リストが空の場合、ポインターはリストの先頭および末尾と同じです。
 
-## <a name="initializer_listend"></a><a name="end"></a>initializer_list::終了
+## <a name="initializer_listend"></a><a name="end"></a> initializer_list:: end
 
 `initializer list` 内の最後の要素の 1 つ後ろへのポインターを返します。
 
@@ -99,9 +99,9 @@ constexpr const InputIterator* end() const noexcept;
 
 ### <a name="return-value"></a>戻り値
 
-リスト内の最後の要素の 1 つ後ろを指すポインター。 リストが空の場合は、リストの最初の要素へのポインターと同じです。
+リスト内の最後の要素の 1 つ後ろを指すポインター。 リストが空の場合は、リスト内の最初の要素へのポインターと同じになります。
 
-## <a name="initializer_listinitializer_list"></a><a name="initializer_list"></a>initializer_list::initializer_list
+## <a name="initializer_listinitializer_list"></a><a name="initializer_list"></a> initializer_list:: initializer_list
 
 `initializer_list` 型のオブジェクトを構築します。
 
@@ -118,9 +118,9 @@ initializer_list(const InputIterator First, const InputIterator Last);
 *前の*\
 コピーする要素範囲を超える最初の要素の位置。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
-`initializer_list` は、指定された型のオブジェクトの配列に基づいています。 コピーすると、`initializer_list`同じオブジェクトを指すリストの 2 番目のインスタンスが作成されます。基になるオブジェクトはコピーされません。
+`initializer_list` は、指定された型のオブジェクトの配列に基づいています。 をコピーすると、 `initializer_list` 同じオブジェクトを指すリストの2番目のインスタンスが作成されます。基になるオブジェクトはコピーされません。
 
 ### <a name="example"></a>例
 
@@ -183,7 +183,7 @@ c3 = 5 4 3 2 1
 c5 = 5 4
 ```
 
-## <a name="initializer_listsize"></a><a name="size"></a>initializer_list:サイズ
+## <a name="initializer_listsize"></a><a name="size"></a> initializer_list:: size
 
 リストの要素数を返します。
 

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - db_column attribute
 ms.assetid: 58da4afc-f69c-4ae6-af9a-3f9515f56081
-ms.openlocfilehash: 2828a33a31d806c04cfce76a3156674778efbe6e
-ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
+ms.openlocfilehash: 05f734a9b083d93f2501172d9455b7889c65a5a6
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90686484"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91503541"
 ---
 # <a name="db_column"></a>db_column
 
@@ -50,7 +50,7 @@ Optional列のサイズを保持するために使用されるメンバー変数
 
 ## <a name="remarks"></a>注釈
 
-**db_column** は、指定されたテーブル列を行セット内の変数にバインドします。 OLE DB ベースのバインドに参加できるメンバーデータを区切り `IAccessor` ます。 この属性は、OLE DB コンシューマーマクロ [BEGIN_COLUMN_MAP](../../data/oledb/begin-column-map.md)、 [END_COLUMN_MAP](../../data/oledb/end-column-map.md)、および [COLUMN_ENTRY](../../data/oledb/column-entry.md)を使用して通常定義される列マップを設定します。 これらは、OLE DB [DBBINDING 構造体](/previous-versions/windows/desktop/ms716845(v=vs.85)) を操作して、指定された列をバインドします。 **Db_column**属性でマークする各メンバーは、列エントリの形式で列マップ内の1つのエントリを使用します。 したがって、この属性は、コマンドまたはテーブルクラスに列マップを配置するときに使用します。
+**db_column** は、指定されたテーブル列を行セット内の変数にバインドします。 OLE DB ベースのバインドに参加できるメンバーデータを区切り `IAccessor` ます。 この属性は、OLE DB コンシューマーマクロ [BEGIN_COLUMN_MAP](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md#begin_column_map)、 [END_COLUMN_MAP](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md#end_column_map)、および [COLUMN_ENTRY](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md#column_entry)を使用して通常定義される列マップを設定します。 これらは、OLE DB [DBBINDING 構造体](/previous-versions/windows/desktop/ms716845(v=vs.85)) を操作して、指定された列をバインドします。 **Db_column**属性でマークする各メンバーは、列エントリの形式で列マップ内の1つのエントリを使用します。 したがって、この属性は、コマンドまたはテーブルクラスに列マップを配置するときに使用します。
 
 **Db_column**は、 [db_table](db-table.md)または[db_command](db-command.md)の属性と組み合わせて使用します。
 
@@ -102,8 +102,8 @@ class CProducts {
 |-|-|
 |**適用対象**|**`class`**、 **`struct`** 、member、メソッド|
 |**Repeatable**|いいえ|
-|**必須属性**|なし|
-|**無効な属性**|なし|
+|**必須属性**|None|
+|**無効な属性**|None|
 
 属性コンテキストの詳細については、「 [属性コンテキスト](cpp-attributes-com-net.md#contexts)」を参照してください。
 

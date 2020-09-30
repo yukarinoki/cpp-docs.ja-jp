@@ -99,12 +99,12 @@ helpviewer_keywords:
 - END_PARAM_MAP macro
 - SET_PARAM_TYPE macro
 ms.assetid: 8765eb7b-32dd-407c-bacf-8890ef959837
-ms.openlocfilehash: 07fbdf7dfcd82937721955c5ba08e2241df162e5
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 60f642366589bb13b15665331a81d440322eb13f
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88846538"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91504033"
 ---
 # <a name="macros-and-global-functions-for-ole-db-consumer-templates"></a>OLE DB コンシューマー テンプレート用マクロおよびグローバル関数
 
@@ -169,7 +169,7 @@ OLE DB コンシューマーテンプレートには、次のマクロとグロ�
 
 | 名前 | 説明 |
 |-|-|
-|[DEFINE_COMMAND](#define_command)|[CCommand](../../data/oledb/ccommand-class.md)クラスを使用するときに行セットを作成するために使用されるコマンドを指定します。 指定されたアプリケーションの種類 (ANSI または Unicode) に一致する文字列型のみを受け入れます。 DEFINE_COMMAND ではなく [DEFINE_COMMAND_EX](../../data/oledb/define-command-ex.md) を使用することをお勧めします。|
+|[DEFINE_COMMAND](#define_command)|[CCommand](../../data/oledb/ccommand-class.md)クラスを使用するときに行セットを作成するために使用されるコマンドを指定します。 指定されたアプリケーションの種類 (ANSI または Unicode) に一致する文字列型のみを受け入れます。 DEFINE_COMMAND ではなく [DEFINE_COMMAND_EX](#define_command_ex) を使用することをお勧めします。|
 |[DEFINE_COMMAND_EX](#define_command_ex)|[CCommand](../../data/oledb/ccommand-class.md)クラスを使用するときに行セットを作成するために使用されるコマンドを指定します。 は、ANSI および Unicode のアプリケーションをサポートしています。|
 
 ## <a name="parameter-map-macros"></a>パラメーターマップマクロ
@@ -195,7 +195,7 @@ inline void AtlTraceErrorRecords(HRESULT hrErr = S_OK);
 *hErr*<br/>
 からOLE DB コンシューマーテンプレートメンバー関数によって返される HRESULT。
 
-#### <a name="remarks"></a>解説
+#### <a name="remarks"></a>注釈
 
 *HErr*が S_OK ない場合、 `AtlTraceErrorRecords` OLE DB エラーレコード情報をダンプデバイス ([出力] ウィンドウの [**デバッグ**] タブまたはファイル) にダンプします。 プロバイダーから取得されるエラーレコード情報には、行番号、ソース、説明、ヘルプファイル、コンテキスト、および各エラーレコードエントリの GUID が含まれます。 `AtlTraceErrorRecords` デバッグビルドでのみこの情報をダンプします。 リリースビルドでは、空のスタブは最適化されています。詳細については、「 [CDBErrorInfo クラス](../../data/oledb/cdberrorinfo-class.md)」を参照してください。
 
@@ -217,13 +217,13 @@ BEGIN_ACCESSOR(num, bAuto)
 *bAuto*<br/>
 からこのアクセサーが自動アクセサーまたは手動アクセサーのどちらであるかを指定します。 の場合 **`true`** 、アクセサーは auto です。の場合 **`false`** 、アクセサーは手動です。 自動アクセサーは、移動操作でデータがフェッチされることを意味します。
 
-#### <a name="remarks"></a>解説
+#### <a name="remarks"></a>注釈
 
 行セットに複数のアクセサーがある場合は、BEGIN_ACCESSOR_MAP を指定し、個々のアクセサーに対して BEGIN_ACCESSOR マクロを使用する必要があります。 BEGIN_ACCESSOR マクロは、END_ACCESSOR マクロを使用して完了します。 BEGIN_ACCESSOR_MAP マクロは、END_ACCESSOR_MAP マクロを使用して完了します。
 
 #### <a name="example"></a>例
 
-「 [BEGIN_ACCESSOR_MAP](../../data/oledb/begin-accessor-map.md)」を参照してください。
+「 [BEGIN_ACCESSOR_MAP](#begin_accessor_map)」を参照してください。
 
 ### <a name="begin_accessor_map"></a><a name="begin_accessor_map"></a> BEGIN_ACCESSOR_MAP
 
@@ -243,11 +243,11 @@ BEGIN_ACCESSOR_MAP(x, num)
 *num*<br/>
 [入力] このアクセサー マップのアクセサーの数。
 
-#### <a name="remarks"></a>解説
+#### <a name="remarks"></a>注釈
 
 行セットに複数のアクセサーがある場合は、先頭に BEGIN_ACCESSOR_MAP を指定し、個々のアクセサーに対して BEGIN_ACCESSOR マクロを使用する必要があります。 BEGIN_ACCESSOR マクロは、END_ACCESSOR マクロを使用して完了します。 アクセサーマップは、END_ACCESSOR_MAP マクロを使用して完了します。
 
-ユーザー レコードに含まれるアクセサーが 1 つのみの場合は、 [BEGIN_COLUMN_MAP](../../data/oledb/begin-column-map.md)マクロを使用します。
+ユーザー レコードに含まれるアクセサーが 1 つのみの場合は、 [BEGIN_COLUMN_MAP](#begin_column_map)マクロを使用します。
 
 #### <a name="example"></a>例
 
@@ -310,7 +310,7 @@ END_ACCESSOR()
 
 #### <a name="example"></a>例
 
-「 [BEGIN_ACCESSOR_MAP](../../data/oledb/begin-accessor-map.md)」を参照してください。
+「 [BEGIN_ACCESSOR_MAP](#begin_accessor_map)」を参照してください。
 
 ### <a name="end_accessor_map"></a><a name="end_accessor_map"></a> END_ACCESSOR_MAP
 
@@ -328,7 +328,7 @@ END_ACCESSOR_MAP()
 
 #### <a name="example"></a>例
 
-「 [BEGIN_ACCESSOR_MAP](../../data/oledb/begin-accessor-map.md)」を参照してください。
+「 [BEGIN_ACCESSOR_MAP](#begin_accessor_map)」を参照してください。
 
 ### <a name="begin_column_map"></a><a name="begin_column_map"></a> BEGIN_COLUMN_MAP
 
@@ -345,9 +345,9 @@ BEGIN_COLUMN_MAP(x)
 *x*<br/>
 [入力] `CAccessor`から派生したユーザー レコード クラスの名前。
 
-#### <a name="remarks"></a>解説
+#### <a name="remarks"></a>注釈
 
-このマクロは、行セットに対してアクセサーが 1 つしか必要ない場合に使用します。 1 つの行セットに対して複数のアクセサーが必要な場合は、 [BEGIN_ACCESSOR_MAP](../../data/oledb/begin-accessor-map.md)を使用します。
+このマクロは、行セットに対してアクセサーが 1 つしか必要ない場合に使用します。 1 つの行セットに対して複数のアクセサーが必要な場合は、 [BEGIN_ACCESSOR_MAP](#begin_accessor_map)を使用します。
 
 BEGIN_COLUMN_MAP マクロは、END_COLUMN_MAP マクロを使用して完了します。 このマクロは、ユーザー レコードで 1 つのアクセサーだけが必要な場合に使用します。
 
@@ -389,7 +389,7 @@ BLOB_ENTRY(nOrdinal, IID, flags, data)
 
 ### <a name="blob_entry_length"></a><a name="blob_entry_length"></a> BLOB_ENTRY_LENGTH
 
-BEGIN_COLUMN_MAP および END_COLUMN_MAP と共に使用して、バイナリラージオブジェクト ([BLOB](/previous-versions/windows/desktop/ms711511(v=vs.85))) をバインドします。 [BLOB_ENTRY](../../data/oledb/blob-entry.md)に似ていますが、このマクロも BLOB 列の長さをバイト単位で取得する点が異なります。
+BEGIN_COLUMN_MAP および END_COLUMN_MAP と共に使用して、バイナリラージオブジェクト ([BLOB](/previous-versions/windows/desktop/ms711511(v=vs.85))) をバインドします。 [BLOB_ENTRY](#blob_entry)に似ていますが、このマクロも BLOB 列の長さをバイト単位で取得する点が異なります。
 
 #### <a name="syntax"></a>構文
 
@@ -420,7 +420,7 @@ BLOB_ENTRY_LENGTH(nOrdinal, IID, flags, data, length)
 
 ### <a name="blob_entry_length_status"></a><a name="blob_entry_length_status"></a> BLOB_ENTRY_LENGTH_STATUS
 
-BEGIN_COLUMN_MAP および END_COLUMN_MAP と共に使用して、バイナリラージオブジェクト ([BLOB](/previous-versions/windows/desktop/ms711511(v=vs.85))) をバインドします。 [BLOB_ENTRY](../../data/oledb/blob-entry.md)に似ていますが、このマクロも BLOB 列の長さと状態を取得する点が異なります。
+BEGIN_COLUMN_MAP および END_COLUMN_MAP と共に使用して、バイナリラージオブジェクト ([BLOB](/previous-versions/windows/desktop/ms711511(v=vs.85))) をバインドします。 [BLOB_ENTRY](#blob_entry)に似ていますが、このマクロも BLOB 列の長さと状態を取得する点が異なります。
 
 #### <a name="syntax"></a>構文
 
@@ -460,7 +460,7 @@ BLOB_ENTRY_LENGTH_STATUS(
 
 ### <a name="blob_entry_status"></a><a name="blob_entry_status"></a> BLOB_ENTRY_STATUS
 
-BEGIN_COLUMN_MAP または BEGIN_ACCESSOR_MAP と共に使用して、バイナリラージオブジェクト ([BLOB](/previous-versions/windows/desktop/ms711511(v=vs.85))) をバインドします。 [BLOB_ENTRY](../../data/oledb/blob-entry.md)に似ていますが、このマクロは BLOB 列の状態も取得する点が異なります。
+BEGIN_COLUMN_MAP または BEGIN_ACCESSOR_MAP と共に使用して、バイナリラージオブジェクト ([BLOB](/previous-versions/windows/desktop/ms711511(v=vs.85))) をバインドします。 [BLOB_ENTRY](#blob_entry)に似ていますが、このマクロは BLOB 列の状態も取得する点が異なります。
 
 #### <a name="syntax"></a>構文
 
@@ -491,7 +491,7 @@ BLOB_ENTRY_STATUS(nOrdinal, IID, flags, data, status)
 
 ### <a name="blob_name"></a><a name="blob_name"></a> BLOB_NAME
 
-BEGIN_COLUMN_MAP および END_COLUMN_MAP と共に使用して、バイナリラージオブジェクト ([BLOB](/previous-versions/windows/desktop/ms711511(v=vs.85))) をバインドします。 [BLOB_ENTRY](../../data/oledb/blob-entry.md)に似ていますが、このマクロは列番号ではなく列名を受け取る点が異なります。
+BEGIN_COLUMN_MAP および END_COLUMN_MAP と共に使用して、バイナリラージオブジェクト ([BLOB](/previous-versions/windows/desktop/ms711511(v=vs.85))) をバインドします。 [BLOB_ENTRY](#blob_entry)に似ていますが、このマクロは列番号ではなく列名を受け取る点が異なります。
 
 #### <a name="syntax"></a>構文
 
@@ -519,7 +519,7 @@ BLOB_NAME(pszName, IID, flags, data )
 
 ### <a name="blob_name_length"></a><a name="blob_name_length"></a> BLOB_NAME_LENGTH
 
-BEGIN_COLUMN_MAP および END_COLUMN_MAP と共に使用して、バイナリラージオブジェクト ([BLOB](/previous-versions/windows/desktop/ms711511(v=vs.85))) をバインドします。 [BLOB_NAME](../../data/oledb/blob-name.md)に似ていますが、このマクロでも BLOB データ列の長さ (バイト単位) が取得される点が異なります。
+BEGIN_COLUMN_MAP および END_COLUMN_MAP と共に使用して、バイナリラージオブジェクト ([BLOB](/previous-versions/windows/desktop/ms711511(v=vs.85))) をバインドします。 [BLOB_NAME](#blob_name)に似ていますが、このマクロでも BLOB データ列の長さ (バイト単位) が取得される点が異なります。
 
 #### <a name="syntax"></a>構文
 
@@ -546,7 +546,7 @@ BLOB_NAME_LENGTH(pszName, IID, flags, data, length )
 
 ### <a name="blob_name_length_status"></a><a name="blob_name_length_status"></a> BLOB_NAME_LENGTH_STATUS
 
-BEGIN_COLUMN_MAP および END_COLUMN_MAP と共に使用して、バイナリラージオブジェクト ([BLOB](/previous-versions/windows/desktop/ms711511(v=vs.85))) をバインドします。 [BLOB_NAME](../../data/oledb/blob-name.md)に似ていますが、このマクロも BLOB データ列の長さと状態を取得する点が異なります。
+BEGIN_COLUMN_MAP および END_COLUMN_MAP と共に使用して、バイナリラージオブジェクト ([BLOB](/previous-versions/windows/desktop/ms711511(v=vs.85))) をバインドします。 [BLOB_NAME](#blob_name)に似ていますが、このマクロも BLOB データ列の長さと状態を取得する点が異なります。
 
 #### <a name="syntax"></a>構文
 
@@ -576,7 +576,7 @@ BLOB_NAME_LENGTH_STATUS(pszName, IID, flags, data, length, status )
 
 ### <a name="blob_name_status"></a><a name="blob_name_status"></a> BLOB_NAME_STATUS
 
-BEGIN_COLUMN_MAP および END_COLUMN_MAP と共に使用して、バイナリラージオブジェクト ([BLOB](/previous-versions/windows/desktop/ms711511(v=vs.85))) をバインドします。 [BLOB_NAME](../../data/oledb/blob-name.md)に似ていますが、このマクロは BLOB データ列の状態も取得する点が異なります。
+BEGIN_COLUMN_MAP および END_COLUMN_MAP と共に使用して、バイナリラージオブジェクト ([BLOB](/previous-versions/windows/desktop/ms711511(v=vs.85))) をバインドします。 [BLOB_NAME](#blob_name)に似ていますが、このマクロは BLOB データ列の状態も取得する点が異なります。
 
 #### <a name="syntax"></a>構文
 
@@ -686,19 +686,19 @@ COLUMN_ENTRY(nOrdinal, data)
 *data*<br/>
 からユーザーレコード内の対応するデータメンバー。
 
-#### <a name="remarks"></a>解説
+#### <a name="remarks"></a>注釈
 
 COLUMN_ENTRY マクロは、次の場所で使用されます。
 
-- [BEGIN_COLUMN_MAP](../../data/oledb/begin-column-map.md)と[END_COLUMN_MAP](../../data/oledb/end-column-map.md)のマクロの間。
+- [BEGIN_COLUMN_MAP](#begin_column_map)と[END_COLUMN_MAP](#end_column_map)のマクロの間。
 
-- [BEGIN_ACCESSOR](../../data/oledb/begin-accessor.md)と[END_ACCESSOR](../../data/oledb/end-accessor.md)のマクロの間。
+- [BEGIN_ACCESSOR](#begin_accessor)と[END_ACCESSOR](#end_accessor)のマクロの間。
 
-- [BEGIN_PARAM_MAP](../../data/oledb/begin-param-map.md)と[END_PARAM_MAP](../../data/oledb/end-param-map.md)のマクロの間。
+- [BEGIN_PARAM_MAP](#begin_param_map)と[END_PARAM_MAP](#end_param_map)のマクロの間。
 
 #### <a name="example"></a>例
 
-マクロに関するトピックの例を参照してください。 [BEGIN_COLUMN_MAP](../../data/oledb/begin-column-map.md) と [BEGIN_ACCESSOR_MAP](../../data/oledb/begin-accessor-map.md)です。
+マクロに関するトピックの例を参照してください。 [BEGIN_COLUMN_MAP](#begin_column_map) と [BEGIN_ACCESSOR_MAP](#begin_accessor_map)です。
 
 ### <a name="column_entry_ex"></a><a name="column_entry_ex"></a> COLUMN_ENTRY_EX
 
@@ -738,19 +738,19 @@ COLUMN_ENTRY_EX(nOrdinal, wType, nLength, nPrecision, nScale, data, length, stat
 *status*<br/>
 から列の状態にバインドされる変数。
 
-#### <a name="remarks"></a>解説
+#### <a name="remarks"></a>注釈
 
 COLUMN_ENTRY_EX マクロは、次の場所で使用されます。
 
-- [BEGIN_COLUMN_MAP](../../data/oledb/begin-column-map.md)と[END_COLUMN_MAP](../../data/oledb/end-column-map.md)のマクロの間。
+- [BEGIN_COLUMN_MAP](#begin_column_map)と[END_COLUMN_MAP](#end_column_map)のマクロの間。
 
-- [BEGIN_ACCESSOR](../../data/oledb/begin-accessor.md)と[END_ACCESSOR](../../data/oledb/end-accessor.md)のマクロの間。
+- [BEGIN_ACCESSOR](#begin_accessor)と[END_ACCESSOR](#end_accessor)のマクロの間。
 
-- [BEGIN_PARAM_MAP](../../data/oledb/begin-param-map.md)と[END_PARAM_MAP](../../data/oledb/end-param-map.md)のマクロの間。
+- [BEGIN_PARAM_MAP](#begin_param_map)と[END_PARAM_MAP](#end_param_map)のマクロの間。
 
 #### <a name="example"></a>例
 
-「 [BOOKMARK_ENTRY](../../data/oledb/bookmark-entry.md)」を参照してください。
+「 [BOOKMARK_ENTRY](#bookmark_entry)」を参照してください。
 
 ### <a name="column_entry_length"></a><a name="column_entry_length"></a> COLUMN_ENTRY_LENGTH
 
@@ -775,15 +775,15 @@ COLUMN_ENTRY_LENGTH(nOrdinal, data, length)
 *length*<br/>
 から列の長さにバインドされる変数。
 
-#### <a name="remarks"></a>解説
+#### <a name="remarks"></a>注釈
 
 このマクロは、 *長さ* の変数をサポートします。 これは次の場所で使用されます。
 
-- [BEGIN_COLUMN_MAP](../../data/oledb/begin-column-map.md)と[END_COLUMN_MAP](../../data/oledb/end-column-map.md)のマクロの間。
+- [BEGIN_COLUMN_MAP](#begin_column_map)と[END_COLUMN_MAP](#end_column_map)のマクロの間。
 
-- [BEGIN_ACCESSOR](../../data/oledb/begin-accessor.md)と[END_ACCESSOR](../../data/oledb/end-accessor.md)のマクロの間。
+- [BEGIN_ACCESSOR](#begin_accessor)と[END_ACCESSOR](#end_accessor)のマクロの間。
 
-- [BEGIN_PARAM_MAP](../../data/oledb/begin-param-map.md)と[END_PARAM_MAP](../../data/oledb/end-param-map.md)のマクロの間。
+- [BEGIN_PARAM_MAP](#begin_param_map)と[END_PARAM_MAP](#end_param_map)のマクロの間。
 
 ### <a name="column_entry_length_status"></a><a name="column_entry_length_status"></a> COLUMN_ENTRY_LENGTH_STATUS
 
@@ -811,15 +811,15 @@ COLUMN_ENTRY_LENGTH_STATUS(nOrdinal, data, length, status)
 *status*<br/>
 から列の状態にバインドされる変数。
 
-#### <a name="remarks"></a>解説
+#### <a name="remarks"></a>注釈
 
 このマクロは、長さと状態の変数をサポートする場合に使用します。 これは次の場所で使用されます。
 
-- [BEGIN_COLUMN_MAP](../../data/oledb/begin-column-map.md)と[END_COLUMN_MAP](../../data/oledb/end-column-map.md)のマクロの間。
+- [BEGIN_COLUMN_MAP](#begin_column_map)と[END_COLUMN_MAP](#end_column_map)のマクロの間。
 
-- [BEGIN_ACCESSOR](../../data/oledb/begin-accessor.md)と[END_ACCESSOR](../../data/oledb/end-accessor.md)のマクロの間。
+- [BEGIN_ACCESSOR](#begin_accessor)と[END_ACCESSOR](#end_accessor)のマクロの間。
 
-- [BEGIN_PARAM_MAP](../../data/oledb/begin-param-map.md)と[END_PARAM_MAP](../../data/oledb/end-param-map.md)のマクロの間。
+- [BEGIN_PARAM_MAP](#begin_param_map)と[END_PARAM_MAP](#end_param_map)のマクロの間。
 
 ### <a name="column_entry_ps"></a><a name="column_entry_ps"></a> COLUMN_ENTRY_PS
 
@@ -847,15 +847,15 @@ COLUMN_ENTRY_PS(nOrdinal, nPrecision, nScale, data)
 *data*<br/>
 からユーザーレコード内の対応するデータメンバー。
 
-#### <a name="remarks"></a>解説
+#### <a name="remarks"></a>注釈
 
 バインドする列の有効桁数と小数点以下桁数を指定できます。 これは次の場所で使用されます。
 
-- [BEGIN_COLUMN_MAP](../../data/oledb/begin-column-map.md)と[END_COLUMN_MAP](../../data/oledb/end-column-map.md)のマクロの間。
+- [BEGIN_COLUMN_MAP](#begin_column_map)と[END_COLUMN_MAP](#end_column_map)のマクロの間。
 
-- [BEGIN_ACCESSOR](../../data/oledb/begin-accessor.md)と[END_ACCESSOR](../../data/oledb/end-accessor.md)のマクロの間。
+- [BEGIN_ACCESSOR](#begin_accessor)と[END_ACCESSOR](#end_accessor)のマクロの間。
 
-- [BEGIN_PARAM_MAP](../../data/oledb/begin-param-map.md)と[END_PARAM_MAP](../../data/oledb/end-param-map.md)のマクロの間。
+- [BEGIN_PARAM_MAP](#begin_param_map)と[END_PARAM_MAP](#end_param_map)のマクロの間。
 
 ### <a name="column_entry_ps_length"></a><a name="column_entry_ps_length"></a> COLUMN_ENTRY_PS_LENGTH
 
@@ -886,15 +886,15 @@ COLUMN_ENTRY_PS_LENGTH(nOrdinal, nPrecision, nScale, data, length)
 *length*<br/>
 から列の長さにバインドされる変数。
 
-#### <a name="remarks"></a>解説
+#### <a name="remarks"></a>注釈
 
 バインドする列の有効桁数と小数点以下桁数を指定できます。 このマクロは、 *長さ* の変数をサポートします。 これは次の場所で使用されます。
 
-- [BEGIN_COLUMN_MAP](../../data/oledb/begin-column-map.md)と[END_COLUMN_MAP](../../data/oledb/end-column-map.md)のマクロの間。
+- [BEGIN_COLUMN_MAP](#begin_column_map)と[END_COLUMN_MAP](#end_column_map)のマクロの間。
 
-- [BEGIN_ACCESSOR](../../data/oledb/begin-accessor.md)と[END_ACCESSOR](../../data/oledb/end-accessor.md)のマクロの間。
+- [BEGIN_ACCESSOR](#begin_accessor)と[END_ACCESSOR](#end_accessor)のマクロの間。
 
-- [BEGIN_PARAM_MAP](../../data/oledb/begin-param-map.md)と[END_PARAM_MAP](../../data/oledb/end-param-map.md)のマクロの間。
+- [BEGIN_PARAM_MAP](#begin_param_map)と[END_PARAM_MAP](#end_param_map)のマクロの間。
 
 ### <a name="column_entry_ps_length_status"></a><a name="column_entry_ps_length_status"></a> COLUMN_ENTRY_PS_LENGTH_STATUS
 
@@ -928,15 +928,15 @@ COLUMN_ENTRY_PS_LENGTH_STATUS(nOrdinal, nPrecision, nScale, data, length, status
 *status*<br/>
 から列の状態にバインドされる変数。
 
-#### <a name="remarks"></a>解説
+#### <a name="remarks"></a>注釈
 
 バインドする列の有効桁数と小数点以下桁数を指定できます。 このマクロは、長さと状態の変数をサポートする場合に使用します。 これは次の場所で使用されます。
 
-- [BEGIN_COLUMN_MAP](../../data/oledb/begin-column-map.md)と[END_COLUMN_MAP](../../data/oledb/end-column-map.md)のマクロの間。
+- [BEGIN_COLUMN_MAP](#begin_column_map)と[END_COLUMN_MAP](#end_column_map)のマクロの間。
 
-- [BEGIN_ACCESSOR](../../data/oledb/begin-accessor.md)と[END_ACCESSOR](../../data/oledb/end-accessor.md)のマクロの間。
+- [BEGIN_ACCESSOR](#begin_accessor)と[END_ACCESSOR](#end_accessor)のマクロの間。
 
-- [BEGIN_PARAM_MAP](../../data/oledb/begin-param-map.md)と[END_PARAM_MAP](../../data/oledb/end-param-map.md)のマクロの間。
+- [BEGIN_PARAM_MAP](#begin_param_map)と[END_PARAM_MAP](#end_param_map)のマクロの間。
 
 ### <a name="column_entry_ps_status"></a><a name="column_entry_ps_status"></a> COLUMN_ENTRY_PS_STATUS
 
@@ -967,15 +967,15 @@ COLUMN_ENTRY_PS_STATUS(nOrdinal, nPrecision, nScale, data, status)
 *status*<br/>
 から列の状態にバインドされる変数。
 
-#### <a name="remarks"></a>解説
+#### <a name="remarks"></a>注釈
 
 バインドする列の有効桁数と小数点以下桁数を指定できます。 このマクロは、 *status* 変数をサポートしています。 これは次の場所で使用されます。
 
-- [BEGIN_COLUMN_MAP](../../data/oledb/begin-column-map.md)と[END_COLUMN_MAP](../../data/oledb/end-column-map.md)のマクロの間。
+- [BEGIN_COLUMN_MAP](#begin_column_map)と[END_COLUMN_MAP](#end_column_map)のマクロの間。
 
-- [BEGIN_ACCESSOR](../../data/oledb/begin-accessor.md)と[END_ACCESSOR](../../data/oledb/end-accessor.md)のマクロの間。
+- [BEGIN_ACCESSOR](#begin_accessor)と[END_ACCESSOR](#end_accessor)のマクロの間。
 
-- [BEGIN_PARAM_MAP](../../data/oledb/begin-param-map.md)と[END_PARAM_MAP](../../data/oledb/end-param-map.md)のマクロの間。
+- [BEGIN_PARAM_MAP](#begin_param_map)と[END_PARAM_MAP](#end_param_map)のマクロの間。
 
 ### <a name="column_entry_status"></a><a name="column_entry_status"></a> COLUMN_ENTRY_STATUS
 
@@ -1000,15 +1000,15 @@ COLUMN_ENTRY_STATUS(nOrdinal, data, status)
 *status*<br/>
 から列の状態にバインドされる変数。
 
-#### <a name="remarks"></a>解説
+#### <a name="remarks"></a>注釈
 
 このマクロは、 *status* 変数をサポートしています。 これは次の場所で使用されます。
 
-- [BEGIN_COLUMN_MAP](../../data/oledb/begin-column-map.md)と[END_COLUMN_MAP](../../data/oledb/end-column-map.md)のマクロの間。
+- [BEGIN_COLUMN_MAP](#begin_column_map)と[END_COLUMN_MAP](#end_column_map)のマクロの間。
 
-- [BEGIN_ACCESSOR](../../data/oledb/begin-accessor.md)と[END_ACCESSOR](../../data/oledb/end-accessor.md)のマクロの間。
+- [BEGIN_ACCESSOR](#begin_accessor)と[END_ACCESSOR](#end_accessor)のマクロの間。
 
-- [BEGIN_PARAM_MAP](../../data/oledb/begin-param-map.md)と[END_PARAM_MAP](../../data/oledb/end-param-map.md)のマクロの間。
+- [BEGIN_PARAM_MAP](#begin_param_map)と[END_PARAM_MAP](#end_param_map)のマクロの間。
 
 ### <a name="column_entry_type"></a><a name="column_entry_type"></a> COLUMN_ENTRY_TYPE
 
@@ -1031,9 +1031,9 @@ COLUMN_ENTRY_TYPE (nOrdinal, wType, data)
 *data*<br/>
 からユーザーレコード内の対応するデータメンバー。
 
-#### <a name="remarks"></a>解説
+#### <a name="remarks"></a>注釈
 
-このマクロは、データ型を指定する手段を提供する [COLUMN_ENTRY](../../data/oledb/column-entry.md) マクロの特殊なバリアントです。
+このマクロは、データ型を指定する手段を提供する [COLUMN_ENTRY](#column_entry) マクロの特殊なバリアントです。
 
 ### <a name="column_entry_type_size"></a><a name="column_entry_type_size"></a> COLUMN_ENTRY_TYPE_SIZE
 
@@ -1059,13 +1059,13 @@ COLUMN_ENTRY_TYPE_SIZE(nOrdinal, wType, nLength, data)
 *data*<br/>
 からユーザーレコード内の対応するデータメンバー。
 
-#### <a name="remarks"></a>解説
+#### <a name="remarks"></a>注釈
 
-このマクロは、データサイズと型を指定する手段を提供する、 [COLUMN_ENTRY](../../data/oledb/column-entry.md) マクロの特殊なバリアントです。
+このマクロは、データサイズと型を指定する手段を提供する、 [COLUMN_ENTRY](#column_entry) マクロの特殊なバリアントです。
 
 ### <a name="column_name"></a><a name="column_name"></a> COLUMN_NAME
 
-行セットのバインドを、行セット内の特定の列に対して表します。 [COLUMN_ENTRY](../../data/oledb/column-entry.md)に似ていますが、このマクロは列番号ではなく列名を受け取る点が異なります。
+行セットのバインドを、行セット内の特定の列に対して表します。 [COLUMN_ENTRY](#column_entry)に似ていますが、このマクロは列番号ではなく列名を受け取る点が異なります。
 
 #### <a name="syntax"></a>構文
 
@@ -1081,19 +1081,19 @@ COLUMN_NAME(pszName, data)
 *data*<br/>
 からユーザーレコード内の対応するデータメンバー。
 
-#### <a name="remarks"></a>解説
+#### <a name="remarks"></a>注釈
 
-COLUMN_NAME_ * マクロは、 [COLUMN_ENTRY](../../data/oledb/column-entry.md)と同じ場所で使用されます。
+COLUMN_NAME_ * マクロは、 [COLUMN_ENTRY](#column_entry)と同じ場所で使用されます。
 
-- [BEGIN_COLUMN_MAP](../../data/oledb/begin-column-map.md)と[END_COLUMN_MAP](../../data/oledb/end-column-map.md)のマクロの間。
+- [BEGIN_COLUMN_MAP](#begin_column_map)と[END_COLUMN_MAP](#end_column_map)のマクロの間。
 
-- [BEGIN_ACCESSOR](../../data/oledb/begin-accessor.md)と[END_ACCESSOR](../../data/oledb/end-accessor.md)のマクロの間。
+- [BEGIN_ACCESSOR](#begin_accessor)と[END_ACCESSOR](#end_accessor)のマクロの間。
 
-- [BEGIN_PARAM_MAP](../../data/oledb/begin-param-map.md)と[END_PARAM_MAP](../../data/oledb/end-param-map.md)のマクロの間。
+- [BEGIN_PARAM_MAP](#begin_param_map)と[END_PARAM_MAP](#end_param_map)のマクロの間。
 
 ### <a name="column_name_ex"></a><a name="column_name_ex"></a> COLUMN_NAME_EX
 
-行セットのバインドを、行セット内の特定の列に対して表します。 [COLUMN_NAME](../../data/oledb/column-name.md)に似ていますが、このマクロもデータ型、サイズ、有効桁数、小数点以下桁数、列の長さ、列の状態を取得する点が異なります。
+行セットのバインドを、行セット内の特定の列に対して表します。 [COLUMN_NAME](#column_name)に似ていますが、このマクロもデータ型、サイズ、有効桁数、小数点以下桁数、列の長さ、列の状態を取得する点が異なります。
 
 #### <a name="syntax"></a>構文
 
@@ -1127,13 +1127,13 @@ COLUMN_NAME_EX(pszName, wType, nLength, nPrecision, nScale, data, length, status
 *status*<br/>
 から列の状態にバインドされる変数。
 
-#### <a name="remarks"></a>解説
+#### <a name="remarks"></a>注釈
 
-COLUMN_NAME_ * マクロを使用する場所の詳細については、「 [COLUMN_NAME](../../data/oledb/column-name.md) 」を参照してください。
+COLUMN_NAME_ * マクロを使用する場所の詳細については、「 [COLUMN_NAME](#column_name) 」を参照してください。
 
 ### <a name="column_name_length"></a><a name="column_name_length"></a> COLUMN_NAME_LENGTH
 
-行セットのバインドを、行セット内の特定の列に対して表します。 [COLUMN_NAME](../../data/oledb/column-name.md)に似ていますが、このマクロも列長をとります。
+行セットのバインドを、行セット内の特定の列に対して表します。 [COLUMN_NAME](#column_name)に似ていますが、このマクロも列長をとります。
 
 #### <a name="syntax"></a>構文
 
@@ -1152,13 +1152,13 @@ COLUMN_NAME_LENGTH(pszName, data, length)
 *length*<br/>
 から列の長さにバインドされる変数。
 
-#### <a name="remarks"></a>解説
+#### <a name="remarks"></a>注釈
 
-COLUMN_NAME_ * マクロを使用する場所の詳細については、「 [COLUMN_NAME](../../data/oledb/column-name.md) 」を参照してください。
+COLUMN_NAME_ * マクロを使用する場所の詳細については、「 [COLUMN_NAME](#column_name) 」を参照してください。
 
 ### <a name="column_name_length_status"></a><a name="column_name_length_status"></a> COLUMN_NAME_LENGTH_STATUS
 
-行セットのバインドを、行セット内の特定の列に対して表します。 [COLUMN_NAME](../../data/oledb/column-name.md)に似ていますが、このマクロも列の長さと列の状態を取得する点が異なります。
+行セットのバインドを、行セット内の特定の列に対して表します。 [COLUMN_NAME](#column_name)に似ていますが、このマクロも列の長さと列の状態を取得する点が異なります。
 
 #### <a name="syntax"></a>構文
 
@@ -1180,13 +1180,13 @@ COLUMN_NAME_LENGTH_STATUS(pszName, data, length, status )
 *status*<br/>
 から列の状態にバインドされる変数。
 
-#### <a name="remarks"></a>解説
+#### <a name="remarks"></a>注釈
 
-COLUMN_NAME_ * マクロを使用する場所の詳細については、「 [COLUMN_NAME](../../data/oledb/column-name.md) 」を参照してください。
+COLUMN_NAME_ * マクロを使用する場所の詳細については、「 [COLUMN_NAME](#column_name) 」を参照してください。
 
 ### <a name="column_name_ps"></a><a name="column_name_ps"></a> COLUMN_NAME_PS
 
-行セットのバインドを、行セット内の特定の列に対して表します。 [COLUMN_NAME](../../data/oledb/column-name.md)に似ていますが、このマクロも有効桁数と小数点以下桁数が異なります。
+行セットのバインドを、行セット内の特定の列に対して表します。 [COLUMN_NAME](#column_name)に似ていますが、このマクロも有効桁数と小数点以下桁数が異なります。
 
 #### <a name="syntax"></a>構文
 
@@ -1208,13 +1208,13 @@ COLUMN_NAME_PS(pszName, nPrecision, nScale, data )
 *data*<br/>
 からユーザーレコード内の対応するデータメンバー。
 
-#### <a name="remarks"></a>解説
+#### <a name="remarks"></a>注釈
 
-COLUMN_NAME_ * マクロを使用する場所の詳細については、「 [COLUMN_NAME](../../data/oledb/column-name.md) 」を参照してください。
+COLUMN_NAME_ * マクロを使用する場所の詳細については、「 [COLUMN_NAME](#column_name) 」を参照してください。
 
 ### <a name="column_name_ps_length"></a><a name="column_name_ps_length"></a> COLUMN_NAME_PS_LENGTH
 
-行セットのバインドを、行セット内の特定の列に対して表します。 [COLUMN_NAME](../../data/oledb/column-name.md)に似ていますが、このマクロでも有効桁数、小数点以下桁数、および列の長さが必要です。
+行セットのバインドを、行セット内の特定の列に対して表します。 [COLUMN_NAME](#column_name)に似ていますが、このマクロでも有効桁数、小数点以下桁数、および列の長さが必要です。
 
 #### <a name="syntax"></a>構文
 
@@ -1239,13 +1239,13 @@ COLUMN_NAME_PS_LENGTH(pszName, nPrecision, nScale, data, length )
 *length*<br/>
 から列の長さにバインドされる変数。
 
-#### <a name="remarks"></a>解説
+#### <a name="remarks"></a>注釈
 
-COLUMN_NAME_ * マクロを使用する場所の詳細については、「 [COLUMN_NAME](../../data/oledb/column-name.md) 」を参照してください。
+COLUMN_NAME_ * マクロを使用する場所の詳細については、「 [COLUMN_NAME](#column_name) 」を参照してください。
 
 ### <a name="column_name_ps_length_status"></a><a name="column_name_ps_length_status"></a> COLUMN_NAME_PS_LENGTH_STATUS
 
-行セットのバインドを、行セット内の特定の列に対して表します。 [COLUMN_NAME](../../data/oledb/column-name.md)に似ていますが、このマクロでは、有効桁数、小数点以下桁数、列の長さ、および列の状態も取得します。
+行セットのバインドを、行セット内の特定の列に対して表します。 [COLUMN_NAME](#column_name)に似ていますが、このマクロでは、有効桁数、小数点以下桁数、列の長さ、および列の状態も取得します。
 
 #### <a name="syntax"></a>構文
 
@@ -1273,13 +1273,13 @@ COLUMN_NAME_PS_LENGTH_STATUS(pszName, nPrecision, nScale, data, length, status )
 *status*<br/>
 から列の状態にバインドされる変数。
 
-#### <a name="remarks"></a>解説
+#### <a name="remarks"></a>注釈
 
-COLUMN_NAME_ * マクロを使用する場所の詳細については、「 [COLUMN_NAME](../../data/oledb/column-name.md) 」を参照してください。
+COLUMN_NAME_ * マクロを使用する場所の詳細については、「 [COLUMN_NAME](#column_name) 」を参照してください。
 
 ### <a name="column_name_ps_status"></a><a name="column_name_ps_status"></a> COLUMN_NAME_PS_STATUS
 
-行セットのバインドを、行セット内の特定の列に対して表します。 [COLUMN_NAME](../../data/oledb/column-name.md)に似ていますが、このマクロも有効桁数、小数点以下桁数、および列の状態を取得する点が異なります。
+行セットのバインドを、行セット内の特定の列に対して表します。 [COLUMN_NAME](#column_name)に似ていますが、このマクロも有効桁数、小数点以下桁数、および列の状態を取得する点が異なります。
 
 #### <a name="syntax"></a>構文
 
@@ -1304,13 +1304,13 @@ COLUMN_NAME_PS_STATUS(pszName, nPrecision, nScale, data, status )
 *status*<br/>
 から列の状態にバインドされる変数。
 
-#### <a name="remarks"></a>解説
+#### <a name="remarks"></a>注釈
 
-COLUMN_NAME_ * マクロを使用する場所の詳細については、「 [COLUMN_NAME](../../data/oledb/column-name.md) 」を参照してください。
+COLUMN_NAME_ * マクロを使用する場所の詳細については、「 [COLUMN_NAME](#column_name) 」を参照してください。
 
 ### <a name="column_name_status"></a><a name="column_name_status"></a> COLUMN_NAME_STATUS
 
-行セットのバインドを、行セット内の特定の列に対して表します。 [COLUMN_NAME](../../data/oledb/column-name.md)に似ていますが、このマクロも列の状態を取得する点が異なります。
+行セットのバインドを、行セット内の特定の列に対して表します。 [COLUMN_NAME](#column_name)に似ていますが、このマクロも列の状態を取得する点が異なります。
 
 #### <a name="syntax"></a>構文
 
@@ -1329,13 +1329,13 @@ COLUMN_NAME_STATUS(pszName, data, status )
 *status*<br/>
 から列の状態にバインドされる変数。
 
-#### <a name="remarks"></a>解説
+#### <a name="remarks"></a>注釈
 
-COLUMN_NAME_ * マクロを使用する場所の詳細については、「 [COLUMN_NAME](../../data/oledb/column-name.md) 」を参照してください。
+COLUMN_NAME_ * マクロを使用する場所の詳細については、「 [COLUMN_NAME](#column_name) 」を参照してください。
 
 ### <a name="column_name_type"></a><a name="column_name_type"></a> COLUMN_NAME_TYPE
 
-行セットのバインドを、行セット内の特定の列に対して表します。 [COLUMN_NAME](../../data/oledb/column-name.md)に似ていますが、このマクロもデータ型を受け取る点が異なります。
+行セットのバインドを、行セット内の特定の列に対して表します。 [COLUMN_NAME](#column_name)に似ていますが、このマクロもデータ型を受け取る点が異なります。
 
 #### <a name="syntax"></a>構文
 
@@ -1354,13 +1354,13 @@ COLUMN_NAME_TYPE(pszName, wType, data)
 *data*<br/>
 からユーザーレコード内の対応するデータメンバー。
 
-#### <a name="remarks"></a>解説
+#### <a name="remarks"></a>注釈
 
-COLUMN_NAME_ * マクロを使用する場所の詳細については、「 [COLUMN_NAME](../../data/oledb/column-name.md) 」を参照してください。
+COLUMN_NAME_ * マクロを使用する場所の詳細については、「 [COLUMN_NAME](#column_name) 」を参照してください。
 
 ### <a name="column_name_type_ps"></a><a name="column_name_type_ps"></a> COLUMN_NAME_TYPE_PS
 
-行セットのバインドを、行セット内の特定の列に対して表します。 [COLUMN_NAME](../../data/oledb/column-name.md)に似ていますが、このマクロもデータ型、有効桁数、および小数点以下桁数を取得します。
+行セットのバインドを、行セット内の特定の列に対して表します。 [COLUMN_NAME](#column_name)に似ていますが、このマクロもデータ型、有効桁数、および小数点以下桁数を取得します。
 
 #### <a name="syntax"></a>構文
 
@@ -1385,13 +1385,13 @@ COLUMN_NAME_TYPE_PS(pszName, wType, nPrecision, nScale, data)
 *data*<br/>
 からユーザーレコード内の対応するデータメンバー。
 
-#### <a name="remarks"></a>解説
+#### <a name="remarks"></a>注釈
 
-COLUMN_NAME_ * マクロを使用する場所の詳細については、「 [COLUMN_NAME](../../data/oledb/column-name.md) 」を参照してください。
+COLUMN_NAME_ * マクロを使用する場所の詳細については、「 [COLUMN_NAME](#column_name) 」を参照してください。
 
 ### <a name="column_name_type_size"></a><a name="column_name_type_size"></a> COLUMN_NAME_TYPE_SIZE
 
-行セットのバインドを、行セット内の特定の列に対して表します。 [COLUMN_NAME](../../data/oledb/column-name.md)と似ていますが、このマクロもデータ型とサイズを取得する点が異なります。
+行セットのバインドを、行セット内の特定の列に対して表します。 [COLUMN_NAME](#column_name)と似ていますが、このマクロもデータ型とサイズを取得する点が異なります。
 
 #### <a name="syntax"></a>構文
 
@@ -1413,13 +1413,13 @@ COLUMN_NAME_TYPE_SIZE(pszName, wType, nLength, data)
 *data*<br/>
 からユーザーレコード内の対応するデータメンバー。
 
-#### <a name="remarks"></a>解説
+#### <a name="remarks"></a>注釈
 
-COLUMN_NAME_ * マクロを使用する場所の詳細については、「 [COLUMN_NAME](../../data/oledb/column-name.md) 」を参照してください。
+COLUMN_NAME_ * マクロを使用する場所の詳細については、「 [COLUMN_NAME](#column_name) 」を参照してください。
 
 ### <a name="column_name_type_status"></a><a name="column_name_type_status"></a> COLUMN_NAME_TYPE_STATUS
 
-行セットのバインドを、行セット内の特定の列に対して表します。 [COLUMN_NAME](../../data/oledb/column-name.md)に似ていますが、このマクロでもデータ型と列の状態が取得される点が異なります。
+行セットのバインドを、行セット内の特定の列に対して表します。 [COLUMN_NAME](#column_name)に似ていますが、このマクロでもデータ型と列の状態が取得される点が異なります。
 
 #### <a name="syntax"></a>構文
 
@@ -1441,9 +1441,9 @@ COLUMN_NAME_TYPE_STATUS(pszName, wType, status, data)
 *data*<br/>
 からユーザーレコード内の対応するデータメンバー。
 
-#### <a name="remarks"></a>解説
+#### <a name="remarks"></a>注釈
 
-COLUMN_NAME_ * マクロを使用する場所の詳細については、「 [COLUMN_NAME](../../data/oledb/column-name.md) 」を参照してください。
+COLUMN_NAME_ * マクロを使用する場所の詳細については、「 [COLUMN_NAME](#column_name) 」を参照してください。
 
 ### <a name="end_column_map"></a><a name="end_column_map"></a> END_COLUMN_MAP
 
@@ -1461,14 +1461,14 @@ END_COLUMN_MAP()
 
 #### <a name="example"></a>例
 
-「 [BEGIN_COLUMN_MAP](../../data/oledb/begin-column-map.md)」を参照してください。
+「 [BEGIN_COLUMN_MAP](#begin_column_map)」を参照してください。
 
 ### <a name="define_command"></a><a name="define_command"></a> DEFINE_COMMAND
 
 [CCommand](../../data/oledb/ccommand-class.md)クラスを使用するときに行セットを作成するために使用されるコマンドを指定します。 指定されたアプリケーションの種類 (ANSI または Unicode) に一致する文字列型のみを受け入れます。
 
 > [!NOTE]
-> DEFINE_COMMAND ではなく [DEFINE_COMMAND_EX](../../data/oledb/define-command-ex.md) を使用することをお勧めします。
+> DEFINE_COMMAND ではなく [DEFINE_COMMAND_EX](#define_command_ex) を使用することをお勧めします。
 
 #### <a name="syntax"></a>構文
 
@@ -1484,15 +1484,15 @@ DEFINE_COMMAND(x, szCommand)
 *szCommand*<br/>
 から [CCommand](../../data/oledb/ccommand-class.md)を使用するときに行セットを作成するために使用されるコマンド文字列。
 
-#### <a name="remarks"></a>解説
+#### <a name="remarks"></a>注釈
 
-[CCommand:: Open](../../data/oledb/ccommand-open.md)メソッドでコマンドテキストを指定しない場合、指定したコマンド文字列が既定値として使用されます。
+[CCommand:: Open](./ccommand-class.md#open)メソッドでコマンドテキストを指定しない場合、指定したコマンド文字列が既定値として使用されます。
 
-アプリケーションを ANSI としてビルドする場合、または unicode としてアプリケーションをビルドする場合は Unicode 文字列を使用します。 DEFINE_COMMAND ではなく [DEFINE_COMMAND_EX](../../data/oledb/define-command-ex.md) を使用することをお勧めします。これは、ANSI または unicode のアプリケーションの種類に関係なく、unicode 文字列を許可するためです。
+アプリケーションを ANSI としてビルドする場合、または unicode としてアプリケーションをビルドする場合は Unicode 文字列を使用します。 DEFINE_COMMAND ではなく [DEFINE_COMMAND_EX](#define_command_ex) を使用することをお勧めします。これは、ANSI または unicode のアプリケーションの種類に関係なく、unicode 文字列を許可するためです。
 
 #### <a name="example"></a>例
 
-「 [BOOKMARK_ENTRY](../../data/oledb/bookmark-entry.md)」を参照してください。
+「 [BOOKMARK_ENTRY](#bookmark_entry)」を参照してください。
 
 ### <a name="define_command_ex"></a><a name="define_command_ex"></a> DEFINE_COMMAND_EX
 
@@ -1512,15 +1512,15 @@ DEFINE_COMMAND_EX(x, wszCommand)
 *wszCommand*<br/>
 から [CCommand](../../data/oledb/ccommand-class.md)を使用するときに行セットを作成するために使用されるコマンド文字列。
 
-#### <a name="remarks"></a>解説
+#### <a name="remarks"></a>注釈
 
-[CCommand:: Open](../../data/oledb/ccommand-open.md)メソッドでコマンドテキストを指定しない場合、指定したコマンド文字列が既定値として使用されます。
+[CCommand:: Open](./ccommand-class.md#open)メソッドでコマンドテキストを指定しない場合、指定したコマンド文字列が既定値として使用されます。
 
-このマクロは、アプリケーションの種類に関係なく、Unicode 文字列を受け入れます。 このマクロは、Unicode と ANSI アプリケーションをサポートしているため、 [DEFINE_COMMAND](../../data/oledb/define-command.md) よりも優先されます。
+このマクロは、アプリケーションの種類に関係なく、Unicode 文字列を受け入れます。 このマクロは、Unicode と ANSI アプリケーションをサポートしているため、 [DEFINE_COMMAND](#define_command) よりも優先されます。
 
 #### <a name="example"></a>例
 
-「 [BOOKMARK_ENTRY](../../data/oledb/bookmark-entry.md)」を参照してください。
+「 [BOOKMARK_ENTRY](#bookmark_entry)」を参照してください。
 
 ### <a name="begin_param_map"></a><a name="begin_param_map"></a> BEGIN_PARAM_MAP
 
@@ -1537,13 +1537,13 @@ BEGIN_PARAM_MAP(x)
 *x*<br/>
 [入力] ユーザー レコード クラスの名前。
 
-#### <a name="remarks"></a>解説
+#### <a name="remarks"></a>注釈
 
 パラメーターは [コマンド](/previous-versions/windows/desktop/ms724608(v=vs.85))によって使用されます。
 
 #### <a name="example"></a>例
 
-[BEGIN_COLUMN_MAP](../../data/oledb/begin-column-map.md)マクロの例を参照してください。
+[BEGIN_COLUMN_MAP](#begin_column_map)マクロの例を参照してください。
 
 ### <a name="end_param_map"></a><a name="end_param_map"></a> END_PARAM_MAP
 
@@ -1557,7 +1557,7 @@ END_PARAM_MAP()
 
 #### <a name="example"></a>例
 
-[BEGIN_PARAM_MAP](../../data/oledb/begin-param-map.md)マクロの例を参照してください。
+[BEGIN_PARAM_MAP](#begin_param_map)マクロの例を参照してください。
 
 ### <a name="set_param_type"></a><a name="set_param_type"></a> SET_PARAM_TYPE
 
@@ -1574,7 +1574,7 @@ SET_PARAM_TYPE(type)
 *type*<br/>
 [入力] 設定するパラメーターの種類。
 
-#### <a name="remarks"></a>解説
+#### <a name="remarks"></a>注釈
 
 プロバイダーは、基になるデータ ソースによってサポートされているパラメーター入出力タイプだけをサポートします。 型は1つ以上の値の組み合わせです `DBPARAMIO` ( *OLE DB プログラマーリファレンス*の「 [DBBINDING 構造体](/previous-versions/windows/desktop/ms716845(v=vs.85))」を参照してください)。
 

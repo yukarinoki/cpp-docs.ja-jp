@@ -16,12 +16,12 @@ helpviewer_keywords:
 - '#pragma directives, code analysis'
 - C, code analysis
 ms.assetid: 81f0c9e8-f471-4de5-aac4-99db336a8809
-ms.openlocfilehash: e5f5b75057985dc769c8f1ab84765d628dc42fcc
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: f128c9722138f453c72ca97b09cc1a69a737dbf6
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90040304"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91504193"
 ---
 # <a name="code-analysis-for-cc-overview"></a>C/C++ のコード分析の概要
 
@@ -45,7 +45,7 @@ C:\>cl /analyze Sample.cpp
 
 ## <a name="pragma-support"></a>#pragma サポート
 
-このディレクティブを使用すると、警告を `#pragma` エラーとして扱うことができます。警告を有効または無効にしたり、個々のコード行の警告を非表示にしたりすることができます。 詳細については、「[プラグマ ディレクティブと __Pragma キーワード](/cpp/preprocessor/pragma-directives-and-the-pragma-keyword)」を参照してください。
+このディレクティブを使用すると、警告を `#pragma` エラーとして扱うことができます。警告を有効または無効にしたり、個々のコード行の警告を非表示にしたりすることができます。 詳細については、「[プラグマ ディレクティブと __Pragma キーワード](../preprocessor/pragma-directives-and-the-pragma-keyword.md)」を参照してください。
 
 ## <a name="annotation-support"></a>注釈のサポート
 
@@ -59,7 +59,7 @@ C:\>cl /analyze Sample.cpp
 
 ビルドシステムの統合された機能を使用して、Azure DevOps のビルドプロセスの手順としてコード分析ツールを実行できます。 詳細については、「[Azure Pipelines](/azure/devops/pipelines/index)」を参照してください。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [クイックスタート: C/C++ のコード分析](quick-start-code-analysis-for-c-cpp.md)
 - [チュートリアル: C/c + + コード分析による欠陥の分析](walkthrough-analyzing-c-cpp-code-for-defects.md)

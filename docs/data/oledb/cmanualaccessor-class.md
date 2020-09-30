@@ -30,12 +30,12 @@ helpviewer_keywords:
 - CreateAccessor method
 - CreateParameterAccessor method
 ms.assetid: a0088074-7135-465c-b228-69097a50b8cc
-ms.openlocfilehash: 32ab31734b8c6e3f72053e1e4f2a8a9233b73995
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 24938812ea254fe0150cbabf58dd72bf45ebd0a1
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88838101"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91504099"
 ---
 # <a name="cmanualaccessor-class"></a>CManualAccessor クラス
 
@@ -62,7 +62,7 @@ class CManualAccessor : public CAccessorBase
 |[CreateAccessor](#createaccessor)|列バインド構造にメモリを割り当て、列データメンバーを初期化します。|
 |[CreateParameterAccessor](#createparameteraccessor)|パラメーターバインド構造体にメモリを割り当て、パラメーターデータメンバーを初期化します。|
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>注釈
 
 を使用 `CManualAccessor` すると、実行時の関数呼び出しによってパラメーターと出力列のバインドを指定できます。
 
@@ -102,9 +102,9 @@ void AddBindEntry(DBORDINAL nOrdinal,
 *pStatus*<br/>
 から必要に応じて、列の状態にバインドする変数へのポインター。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
-この関数を使用するには、最初に [Createaccessor](../../data/oledb/cmanualaccessor-createaccessor.md)を呼び出す必要があります。 に指定された列数よりも多くのエントリを追加することはできません `CreateAccessor` 。
+この関数を使用するには、最初に [Createaccessor](#createaccessor)を呼び出す必要があります。 に指定された列数よりも多くのエントリを追加することはできません `CreateAccessor` 。
 
 ## <a name="cmanualaccessoraddparameterentry"></a><a name="addparameterentry"></a> CManualAccessor:: AddParameterEntry
 
@@ -146,9 +146,9 @@ void AddParameterEntry(DBORDINAL nOrdinal,
 *eParamIO*<br/>
 からバインドが関連付けられているパラメーターが入力、入力、出力、または出力パラメーターであるかどうかを指定します。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
-この関数を使用するには、最初に [Createparameteraccessor](../../data/oledb/cmanualaccessor-createparameteraccessor.md)を呼び出す必要があります。
+この関数を使用するには、最初に [Createparameteraccessor](#createparameteraccessor)を呼び出す必要があります。
 
 ## <a name="cmanualaccessorcreateaccessor"></a><a name="createaccessor"></a> CManualAccessor:: CreateAccessor
 
@@ -165,7 +165,7 @@ HRESULT CreateAccessor(int nBindEntries,
 #### <a name="parameters"></a>パラメーター
 
 *nBindEntries*<br/>
-から列の数。 この数値は、 [CManualAccessor:: AddBindEntry](../../data/oledb/cmanualaccessor-addbindentry.md) 関数の呼び出し回数と一致している必要があります。
+から列の数。 この数値は、 [CManualAccessor:: AddBindEntry](#addbindentry) 関数の呼び出し回数と一致している必要があります。
 
 *pBuffer*<br/>
 から出力列が格納されるバッファーへのポインター。
@@ -177,7 +177,7 @@ HRESULT CreateAccessor(int nBindEntries,
 
 標準の HRESULT 値の1つ。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 関数を呼び出す前に、この関数を呼び出し `CManualAccessor::AddBindEntry` ます。
 
@@ -208,9 +208,9 @@ HRESULT CreateParameterAccessor(int nBindEntries,
 
 標準の HRESULT 値の1つ。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
-[Addparameterentry](../../data/oledb/cmanualaccessor-addparameterentry.md)を呼び出す前に、この関数を呼び出す必要があります。
+[Addparameterentry](#addparameterentry)を呼び出す前に、この関数を呼び出す必要があります。
 
 ## <a name="see-also"></a>関連項目
 

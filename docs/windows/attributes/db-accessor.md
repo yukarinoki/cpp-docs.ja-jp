@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - db_accessor attribute
 ms.assetid: ec407a9f-24d7-4822-96d4-7cc6a0301815
-ms.openlocfilehash: 559838201e3d1c425b6b1bf7f3650d9635c44c97
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 2a4c5475007cbc516f1a06c6bf858089ba24311f
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88833141"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91503554"
 ---
 # <a name="db_accessor"></a>db_accessor
 
@@ -31,9 +31,9 @@ ms.locfileid: "88833141"
 *auto*<br/>
 アクセサーが自動的に取得されるか (TRUE)、取得されないか (FALSE) を指定するブール値。
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>注釈
 
-**db_accessor** `db_column` `db_param` は、同じクラスまたは関数内の後続のおよび属性の基になる OLE DB アクセサーを定義します。 **db_accessor** はメンバーレベルで使用 `db_column` でき、OLE DB ベースのバインドに参加する属性をグループ化するために使用され `IAccessor` ます。 または属性と組み合わせて使用さ `db_table` れ `db_command` ます。 この属性を呼び出すことは、マクロの [BEGIN_ACCESSOR](../../data/oledb/begin-accessor.md) と [END_ACCESSOR](../../data/oledb/end-accessor.md) の呼び出しに似ています。
+**db_accessor** `db_column` `db_param` は、同じクラスまたは関数内の後続のおよび属性の基になる OLE DB アクセサーを定義します。 **db_accessor** はメンバーレベルで使用 `db_column` でき、OLE DB ベースのバインドに参加する属性をグループ化するために使用され `IAccessor` ます。 または属性と組み合わせて使用さ `db_table` れ `db_command` ます。 この属性を呼び出すことは、マクロの [BEGIN_ACCESSOR](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md#begin_accessor) と [END_ACCESSOR](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md#end_accessor) の呼び出しに似ています。
 
 **db_accessor** は、行セットを生成し、それを対応するアクセサーマップにバインドします。 **Db_accessor**を呼び出さないと、アクセサー0が自動的に生成され、すべての列のバインドがこのアクセサーブロックにマップされます。
 
@@ -71,8 +71,8 @@ public:
 |-|-|
 |**適用対象**|属性ブロック|
 |**Repeatable**|いいえ|
-|**必須属性**|なし|
-|**無効な属性**|なし|
+|**必須属性**|None|
+|**無効な属性**|None|
 
 属性コンテキストの詳細については、「 [属性コンテキスト](cpp-attributes-com-net.md#contexts)」を参照してください。
 

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Windows applications [C++], Win32
 - Windows Desktop applications [C++]
 - Windows API [C++]
-ms.openlocfilehash: 01b1f4a1d021dee6d1d7afbf55bbd13211af247d
-ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
+ms.openlocfilehash: c729fa183a03860de012e64d110f3b3ac7e7e8d0
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90686601"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91503663"
 ---
 # <a name="walkthrough-create-a-traditional-windows-desktop-application-c"></a>チュートリアル: 従来の Windows デスクトップアプリケーションの作成 (C++)
 
@@ -73,7 +73,7 @@ Windows API (Win32 API、Windows デスクトップ API、および Windows Clas
 
 1. [**新しいプロジェクト**] ダイアログボックスの左側のウィンドウで、[**インストール済み**の  >  **Visual C++**] を展開し、[ **Windows デスクトップ**] を選択します。 中央のウィンドウで、[ **Windows デスクトップウィザード**] を選択します。
 
-   [ **名前** ] ボックスに、プロジェクトの名前 (「 *desktopapp*」など) を入力します。 **[OK]** を選びます。
+   [ **名前** ] ボックスに、プロジェクトの名前 (「 *desktopapp*」など) を入力します。 **[OK]** をクリックします。
 
    ![Visual Studio 2017 の [新しいプロジェクト] ダイアログボックスがインストールされている状態で、visual C と、[Windows デスクトップ] が選択された >、[Windows デスクトップウィザード] オプションが強調表示されている >、[名前] ボックスに「DesktopApp」と入力した場合のスクリーンショット。](../build/media/desktop-app-new-project-name-153.png "DesktopApp プロジェクトに名前を指定する")
 
@@ -99,7 +99,7 @@ Windows API (Win32 API、Windows デスクトップ API、および Windows Clas
 
 1. [**新しいプロジェクト**] ダイアログボックスの左側のウィンドウで、[**インストールされている**  >  **テンプレート**  >  **Visual C++**] を展開し、[ **Win32**] を選択します。 中央のペインで、 **[Win32 プロジェクト]** を選択します。
 
-   [ **名前** ] ボックスに、プロジェクトの名前 (「 *desktopapp*」など) を入力します。 **[OK]** を選びます。
+   [ **名前** ] ボックスに、プロジェクトの名前 (「 *desktopapp*」など) を入力します。 **[OK]** をクリックします。
 
    ![Visual Studio 2015 の [新しいプロジェクト] ダイアログボックスがインストールされた > テンプレート > Visual C > プラス + 選択された win32 プロジェクトオプション、[Win32 プロジェクト] オプション、[名前] テキストボックスに表示された DesktopApp のスクリーンショット](../build/media/desktop-app-new-project-name-150.png "DesktopApp プロジェクトに名前を指定する")
 
@@ -141,7 +141,7 @@ Windows API (Win32 API、Windows デスクトップ API、および Windows Clas
    この関数のパラメーターと戻り値の詳細については、「 [WinMain entry point](/windows/win32/api/winbase/nf-winbase-winmain)」を参照してください。
 
    > [!NOTE]
-   > 、、またはなどの余分な単語は何です `CALLBACK` `HINSTANCE` `_In_` か。 従来の Windows API では、typedef およびプリプロセッサマクロを広範囲にわたって使用して、呼び出し規約、宣言、コンパイラプラグマなど、型の詳細とプラットフォーム固有のコードを抽象化して **`__declspec`** います。 Visual Studio では、IntelliSense の [クイックヒント](/visualstudio/ide/using-intellisense#quick-info) 機能を使用して、これらの typedef とマクロで定義されている内容を確認できます。 目的の単語の上にマウスポインターを移動するか、それを選択して**ctrl** + **K**キー、 **ctrl** + **I**キーを押します。定義を含む小さなポップアップウィンドウが表示されます。 詳細については、「[IntelliSense の使用](/visualstudio/ide/using-intellisense)」を参照してください。 多くの場合、パラメーターと戻り値の型は *SAL 注釈* を使用して、プログラミングエラーをキャッチします。 詳細については、「 [SAL 注釈を使用して C/c + + コードの欠陥を減らす](/cpp/code-quality/using-sal-annotations-to-reduce-c-cpp-code-defects)」を参照してください。
+   > 、、またはなどの余分な単語は何です `CALLBACK` `HINSTANCE` `_In_` か。 従来の Windows API では、typedef およびプリプロセッサマクロを広範囲にわたって使用して、呼び出し規約、宣言、コンパイラプラグマなど、型の詳細とプラットフォーム固有のコードを抽象化して **`__declspec`** います。 Visual Studio では、IntelliSense の [クイックヒント](/visualstudio/ide/using-intellisense#quick-info) 機能を使用して、これらの typedef とマクロで定義されている内容を確認できます。 目的の単語の上にマウスポインターを移動するか、それを選択して**ctrl** + **K**キー、 **ctrl** + **I**キーを押します。定義を含む小さなポップアップウィンドウが表示されます。 詳細については、「[IntelliSense の使用](/visualstudio/ide/using-intellisense)」を参照してください。 多くの場合、パラメーターと戻り値の型は *SAL 注釈* を使用して、プログラミングエラーをキャッチします。 詳細については、「 [SAL 注釈を使用して C/c + + コードの欠陥を減らす](../code-quality/using-sal-annotations-to-reduce-c-cpp-code-defects.md)」を参照してください。
 
 1. Windows デスクトッププログラムでは、 &lt; windows .h> が必要です。 &lt;tchar.h> はマクロを定義します。 `TCHAR` このマクロは、最終的には、 **`wchar_t`** プロジェクトで UNICODE シンボルが定義されている場合に解決されます。それ以外の場合は、に解決され **`char`** ます。  常に UNICODE が有効な状態でビルドする場合は、TCHAR は不要で、直接だけを使用でき **`wchar_t`** ます。
 
@@ -588,8 +588,8 @@ Windows API (Win32 API、Windows デスクトップ API、および Windows Clas
 
    ![DesktopApp プロジェクトを実行する](../build/media/desktop-app-project-run-157.PNG "DesktopApp プロジェクトを実行する")
 
-お疲れさまでした。 このチュートリアルを完了し、従来の Windows デスクトップアプリケーションをビルドしました。
+おめでとうございます! このチュートリアルを完了し、従来の Windows デスクトップアプリケーションをビルドしました。
 
 ## <a name="see-also"></a>関連項目
 
-[Windows デスクトップアプリケーション](../windows/windows-desktop-applications-cpp.md)
+[Windows デスクトップアプリケーション](./desktop-applications-visual-cpp.md)
