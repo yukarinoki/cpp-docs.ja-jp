@@ -3,12 +3,12 @@ title: Visual Studio で CMake Linux プロジェクトを作成する
 description: Visual Studio で Linux CMake プロジェクトを作成する方法
 ms.date: 08/06/2020
 ms.assetid: f8707b32-f90d-494d-ae0b-1d44425fdc25
-ms.openlocfilehash: 1b622bcd2af49ee51f7546be4c7a6d804c3102d0
-ms.sourcegitcommit: 2034f8e744a8b36cff8b15e9a5cfe684afebadfb
+ms.openlocfilehash: 5753dbb37c11686becb3e141261284b68468a3bc
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/10/2020
-ms.locfileid: "88043825"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91507947"
 ---
 # <a name="create-a-cmake-linux-project-in-visual-studio"></a>Visual Studio で CMake Linux プロジェクトを作成する
 
@@ -67,6 +67,7 @@ Visual Studio 2019 で CMake スクリプトを理解し、編集し、作成す
 ::: moniker-end
 
 ::: moniker range=">=vs-2017"
+
 ## <a name="open-a-cmake-project-folder"></a>CMake プロジェクト フォルダーを開く
 
 既存の CMake プロジェクトを含むフォルダーを開くと、Visual Studio では CMake キャッシュの変数が使用され、IntelliSense とビルドが自動的に構成されます。 ローカルの構成とデバッグの設定は、JSON ファイルに格納されます。 必要に応じて、Visual Studio を使用している他のユーザーとこれらのファイルを共有することもできます。

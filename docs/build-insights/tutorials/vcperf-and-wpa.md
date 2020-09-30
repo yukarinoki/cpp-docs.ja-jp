@@ -7,12 +7,12 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: f3a0b4a9c57fd55c6788481adbf91c48e362444e
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: b82c1f7105b3fd03d8c21dd79617dbc66f3e090c
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88833401"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91507780"
 ---
 # <a name="tutorial-vcperf-and-windows-performance-analyzer"></a>チュートリアル: vcperf および Windows パフォーマンス アナライザー
 
@@ -123,10 +123,10 @@ WPA を起動し、先ほど収集したトレースを開きます。 WPA で�
 [チュートリアル: Windows パフォーマンス アナライザーの基本](wpa-basics.md)\
 ビルド トレースの分析に役立つ一般的な WPA 操作について説明します。
 
-[リファレンス: vcperf コマンド](/cpp/build-insights/reference/vcperf-commands)\
+[リファレンス: vcperf コマンド](../reference/vcperf-commands.md)\
 *vcperf.exe* コマンド リファレンスには、使用できるすべてのコマンド オプションが掲載されています。
 
-[リファレンス: Windows パフォーマンス アナライザーのビュー](/cpp/build-insights/reference/wpa-views)\
+[リファレンス: Windows パフォーマンス アナライザーのビュー](../reference/wpa-views.md)\
 WPA の C++ Build Insights ビューの詳細については、この記事を参照してください。
 
 [Windows パフォーマンス アナライザー](/windows-hardware/test/wpt/windows-performance-analyzer)\

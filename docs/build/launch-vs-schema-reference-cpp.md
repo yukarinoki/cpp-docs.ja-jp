@@ -3,16 +3,16 @@ title: launch.vs.json スキーマ リファレンス (C++)
 ms.date: 08/20/2019
 helpviewer_keywords:
 - launch.vs.json file [C++]
-ms.openlocfilehash: 1161e8fa8ac3751ca8cc2b96ec063cd6063bb245
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 1e235b5f1ff4d7573ddbe57ac4e3c7c9bdbc2eb8
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88841988"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91505673"
 ---
 # <a name="launchvsjson-schema-reference-c"></a>launch.vs.json スキーマ リファレンス (C++)
 
-*launch.vs.json* ファイルを使用してデバッグ パラメーターを構成します。 ファイルを作成するには、 **ソリューション エクスプローラー**で実行可能ファイルを右クリックし、 **[デバッグ設定と起動設定]** を選択します。 ご自分のプロジェクトに最も近いオプションを選択した後、次のプロパティを使用して必要に応じて構成を変更します。 CMake プロジェクトのデバッグについて詳しくは、「[CMake デバッグ セッションを構成する](/cpp/build/configure-cmake-debugging-sessions)」を参照してください。
+*launch.vs.json* ファイルを使用してデバッグ パラメーターを構成します。 ファイルを作成するには、 **ソリューション エクスプローラー**で実行可能ファイルを右クリックし、 **[デバッグ設定と起動設定]** を選択します。 ご自分のプロジェクトに最も近いオプションを選択した後、次のプロパティを使用して必要に応じて構成を変更します。 CMake プロジェクトのデバッグについて詳しくは、「[CMake デバッグ セッションを構成する](./configure-cmake-debugging-sessions.md)」を参照してください。
 
 ## <a name="default-properties"></a>既定のプロパティ
 

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - generic classes
 - generic C++ class wizard [C++]
 ms.assetid: e95a5a14-dbed-4edc-8551-344fe48613cb
-ms.openlocfilehash: e81ea442578e69bdd28301eba8f70561f6aa76c6
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: d5c00a35e375d133fbd3a6ed7fe3591e4b0cd54b
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87230546"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91503130"
 ---
 # <a name="add-a-generic-c-class"></a>一般 C++ クラスを追加する
 
@@ -25,7 +25,7 @@ ms.locfileid: "87230546"
 
 1. **クラス ビュー**で、新しいクラスを追加するプロジェクトを右クリックし、 **[追加]** 、 **[クラス]** の順に選択します。
 
-1. [[クラスの追加]](../ide/add-class-dialog-box.md) ダイアログ ボックスのテンプレート ウィンドウで **[C++ クラス]** を選択します。 **[追加]** を選択して、[[汎用 C++ クラス ウィザード]](#generic-c-class-wizard) を表示します。
+1. [[クラスの追加]](./adding-a-class-visual-cpp.md#add-class-dialog-box) ダイアログ ボックスのテンプレート ウィンドウで **[C++ クラス]** を選択します。 **[追加]** を選択して、[[汎用 C++ クラス ウィザード]](#generic-c-class-wizard) を表示します。
 
 1. ウィザードでクラス名を指定し、設定を定義するか、既定値を受け入れます。
 

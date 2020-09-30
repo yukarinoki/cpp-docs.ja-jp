@@ -7,12 +7,12 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 449fc2ddabc2bcf5b9b9f130a5e6816cdf4bc98d
-ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
+ms.openlocfilehash: 2d4473e3682a6e00e0eef61cb73d7450976bcc0c
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90685516"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91507722"
 ---
 # <a name="tutorial-windows-performance-analyzer-basics"></a>チュートリアル: Windows パフォーマンス アナライザーの基本
 
@@ -59,8 +59,8 @@ WPA には、トレースを調べるための 2 つの基本的な表示モー�
 ## <a name="see-also"></a>関連項目
 
 [チュートリアル: vcperf および Windows パフォーマンス アナライザー](vcperf-and-wpa.md)\
-[リファレンス: vcperf コマンド](/cpp/build-insights/reference/vcperf-commands)\
-[リファレンス: Windows パフォーマンス アナライザーのビュー](/cpp/build-insights/reference/wpa-views)\
+[リファレンス: vcperf コマンド](../reference/vcperf-commands.md)\
+[リファレンス: Windows パフォーマンス アナライザーのビュー](../reference/wpa-views.md)\
 [Windows Performance Analyzer](/windows-hardware/test/wpt/windows-performance-analyzer)
 
 ::: moniker-end

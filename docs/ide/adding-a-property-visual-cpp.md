@@ -12,12 +12,12 @@ helpviewer_keywords:
 - stock properties, about stock properties
 - stock properties
 ms.assetid: 37bd4db7-efd3-4faa-87ad-64902ed16a36
-ms.openlocfilehash: 125d7272b5b9fb0f656ba0621667885026e152fb
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 63985643973782ea2b4240a338d66cb5cc2195dc
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87228675"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91504681"
 ---
 # <a name="add-a-property"></a>プロパティを追加する
 
@@ -107,8 +107,8 @@ ms.locfileid: "87228675"
 
   |オプション|説明|
   |------------|-----------------|
-  |**PropPut**|[PropPut](../windows/propput.md) 関数は、オブジェクトのコピーを返します。 これが既定で、プロパティを書き込み可能にする最も一般的な方法です。|
-  |**PropPutRef**|[PropPutRef](../windows/propputref.md) 関数は、オブジェクト自体のコピーを返すのではなく、オブジェクトへの参照を返します。 このオプションは、初期化のオーバーヘッドが発生する可能性がある、大規模な構造体や配列などのオブジェクトに対して使用することを検討してください。|
+  |**PropPut**|[PropPut](../windows/attributes/propput.md) 関数は、オブジェクトのコピーを返します。 これが既定で、プロパティを書き込み可能にする最も一般的な方法です。|
+  |**PropPutRef**|[PropPutRef](../windows/attributes/propputref.md) 関数は、オブジェクト自体のコピーを返すのではなく、オブジェクトへの参照を返します。 このオプションは、初期化のオーバーヘッドが発生する可能性がある、大規模な構造体や配列などのオブジェクトに対して使用することを検討してください。|
 
 - **パラメーター属性**
 
@@ -179,7 +179,7 @@ ms.locfileid: "87228675"
 
 ## <a name="stock-properties"></a>ストック プロパティ
 
-[プロパティ追加ウィザード](#idl-attributes-add-property-wizard)を使用して、MFC ディスパッチ インターフェイスにプロパティを追加する場合、ウィザードの [[名前]](../ide/names-add-property-wizard.md) ページの **[プロパティ名]** 一覧からストック プロパティを選択できます。 選択できるプロパティは次のとおりです。
+[プロパティ追加ウィザード](#idl-attributes-add-property-wizard)を使用して、MFC ディスパッチ インターフェイスにプロパティを追加する場合、ウィザードの [[名前]](#names-add-property-wizard) ページの **[プロパティ名]** 一覧からストック プロパティを選択できます。 選択できるプロパティは次のとおりです。
 
 |プロパティ名|説明|
 |-------------------|-----------------|
