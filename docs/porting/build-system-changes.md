@@ -1,6 +1,6 @@
 ---
-title: VCBuild と MSBuild の比較
-description: Visual studio C++ビルドシステムが、visual studio 2010 の VCBuild から MSBuild に変更されました。
+title: VCBuild とMSBuild
+description: Visual studio C++ ビルドシステムが、Visual Studio 2010 の VCBuild から MSBuild に変更されました。
 ms.date: 10/25/2019
 helpviewer_keywords:
 - Build system changes, project file (.vcxprog)
@@ -11,35 +11,35 @@ helpviewer_keywords:
 - Build system changes, $(Inherit)
 - Build system changes, $(NoInherit)
 ms.assetid: e564d95f-a6cc-4d97-b57e-1a71daf66f4a
-ms.openlocfilehash: ce3eb9e51a103aa54b74c7b5b4f775eb402269f1
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: b1b963aca3de75cf9852c55f59a99422568ab4b4
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80076943"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91505919"
 ---
 # <a name="vcbuild-vs-msbuild-build-system-changes-in-visual-studio-2010"></a>VCBuild と MSBuild: Visual Studio 2010 でのビルドシステムの変更点
 
-プロジェクトのC++ MSBuild システムは、Visual Studio 2010 で導入されました。 Visual Studio 2008 以前のリリースでは、VCBuild システムが使用されていました。 VCBuild に依存する特定のファイルの種類と概念は、MSBuild では存在しないか、異なる方法で表されます。 このドキュメントでは、現在のビルド システムにおける違いについて説明します。 Visual Studio 2008 プロジェクトを MSBuild に変換するには、Visual Studio 2010 を使用する必要があります。 プロジェクトを変換した後、最新バージョンの Visual Studio を使用して、現在の IDE およびコンパイラツールセットにアップグレードする必要があります。 Visual Studio 2010 の入手方法などの詳細については、 [Visual studio 2008 の手順](use-native-multi-targeting.md#instructions-for-visual-studio-2008)を参照してください。
+C++ プロジェクト用の MSBuild システムは、Visual Studio 2010 で導入されました。 Visual Studio 2008 以前のリリースでは、VCBuild システムが使用されていました。 VCBuild に依存する特定のファイルの種類と概念は、MSBuild では存在しないか、異なる方法で表されます。 このドキュメントでは、現在のビルド システムにおける違いについて説明します。 Visual Studio 2008 プロジェクトを MSBuild に変換するには、Visual Studio 2010 を使用する必要があります。 プロジェクトを変換した後、最新バージョンの Visual Studio を使用して、現在の IDE およびコンパイラツールセットにアップグレードする必要があります。 Visual Studio 2010 の入手方法などの詳細については、 [Visual studio 2008 の手順](use-native-multi-targeting.md#instructions-for-visual-studio-2008)を参照してください。
 
-以下のセクションでは、VCBuild から MSBuild への変更点をまとめます。 カスタムビルド規則または msbuild によって認識されないマクロがある場合は、「 [Visual C++ Studio プロジェクト](../build/creating-and-managing-visual-cpp-projects.md)」を参照して、これらの命令を msbuild システムに変換する方法を確認してください。 VCBuild から MSBuild への最初の変換は、中間の手順にすぎません。 プロジェクトファイルを完全に修正したり、エラーを発生させずにプログラムをコンパイルしたりする必要はありません。 Visual Studio 2010 を使用してプロジェクトを MSBuild 形式に変換するだけで、プロジェクトを最新バージョンの Visual Studio で使用できるようになります。
+以下のセクションでは、VCBuild から MSBuild への変更点をまとめます。 カスタムビルド規則または MSBuild によって認識されないマクロがある場合は、「 [Visual Studio Projects-C++](../build/creating-and-managing-visual-cpp-projects.md) 」を参照して、これらの命令を msbuild システムに変換する方法を確認してください。 VCBuild から MSBuild への最初の変換は、中間の手順にすぎません。 プロジェクトファイルを完全に修正したり、エラーを発生させずにプログラムをコンパイルしたりする必要はありません。 Visual Studio 2010 を使用してプロジェクトを MSBuild 形式に変換するだけで、プロジェクトを最新バージョンの Visual Studio で使用できるようになります。
 
 ## <a name="vcproj-is-now-vcxproj"></a>.vcproj が .vcxproj になりました
 
-プロジェクト ファイルには .vcproj というファイル名拡張子が使用されなくなりました。 Visual Studio 2010 では、Visual C++ Studio の以前のリリースで作成されたプロジェクトファイルが MSBuild 形式に自動的に変換されます。この形式では、プロジェクトファイルの .vcxproj 拡張子が使用されます。
+プロジェクト ファイルには .vcproj というファイル名拡張子が使用されなくなりました。 以前のリリースの Visual C++ によって作成されたプロジェクトファイルは、プロジェクトファイルの .vcxproj 拡張子を使用する MSBuild 形式に自動的に変換されます。2010
 
 ## <a name="vsprops-is-now-props"></a>.vsprops が .props になりました
 
-Visual Studio 2008 以前では、*プロジェクトプロパティシート*は、ファイル名拡張子が VSPROPS の XML ベースのファイルです。 プロジェクト プロパティ シートを利用すれば、コンパイラやリンカーなどのビルド ツールのスイッチを指定したり、ユーザー定義のマクロを作成したりできます。 MSBuild では、プロジェクトプロパティシートのファイル名拡張子は props です。
+Visual Studio 2008 以前では、 *プロジェクトプロパティシート* は、ファイル名拡張子が VSPROPS の XML ベースのファイルです。 プロジェクト プロパティ シートを利用すれば、コンパイラやリンカーなどのビルド ツールのスイッチを指定したり、ユーザー定義のマクロを作成したりできます。 MSBuild では、プロジェクトプロパティシートのファイル名拡張子は props です。
 
 ## <a name="custom-build-rules-and-rules-files"></a>カスタムビルド規則と規則ファイル
 
-Visual Studio 2008 以前では、*規則ファイル*は、ファイル名拡張子が RULES の XML ベースのファイルです。 ルール ファイルを利用すれば、カスタム ビルド ルールを定義し、それを Visual Studio C++ プロジェクトのビルド プロセスに組み込むことができます。 カスタム ビルド ルールには 1 つまたは複数のファイル名拡張子を関連付けることができるため、このルールを利用すると、1 つまたは複数の出力ファイルを作成するツールに入力ファイルを渡すことができます。
+Visual Studio 2008 以前では、 *規則ファイル* は、ファイル名拡張子が RULES の XML ベースのファイルです。 ルール ファイルを利用すれば、カスタム ビルド ルールを定義し、それを Visual Studio C++ プロジェクトのビルド プロセスに組み込むことができます。 カスタム ビルド ルールには 1 つまたは複数のファイル名拡張子を関連付けることができるため、このルールを利用すると、1 つまたは複数の出力ファイルを作成するツールに入力ファイルを渡すことができます。
 
-MSBuild システムでは、カスタムビルド規則は、. rules ファイルではなく、.xml、props、および .targets の3種類のファイルで表されます。 以前のリリースの Visual C++ Studio を使用して作成された. rules ファイルが visual Studio 2010 に移行されると、同じ .xml、props、および .targets ファイルが作成され、元の rules ファイルと共にプロジェクトに格納されます。
+MSBuild システムでは、カスタムビルド規則は、. rules ファイルではなく、.xml、props、および .targets の3種類のファイルで表されます。 以前のリリースの Visual C++ を使用して作成されたルールファイルが Visual Studio 2010 に移行されると、同じ .xml、props、および .targets ファイルが作成され、元の rules ファイルと共にプロジェクトに格納されます。
 
 > [!IMPORTANT]
-> Visual Studio 2010 では、IDE は新しい規則の作成をサポートしていません。 そのため、以前のリリースの Visual C++ Studio を使用して作成されたプロジェクトのルールファイルを使用する最も簡単な方法は、プロジェクトを visual Studio 2010 に移行することです。
+> Visual Studio 2010 では、IDE は新しい規則の作成をサポートしていません。 このため、以前のリリースの Visual C++ を使用して作成されたプロジェクトのルールファイルを使用する最も簡単な方法は、プロジェクトを Visual Studio 2010 に移行することです。
 
 ## <a name="inheritance-macros"></a>継承マクロ
 
@@ -47,7 +47,7 @@ Visual Studio 2008 以前では、 **$ (Inherit)** マクロは、プロジェ�
 
 Visual Studio 2010 では、1つ以上のリテラル値とプロパティマクロの連結としてプロパティの値を指定することで、継承がサポートされています。 **$(Inherit)** マクロと **$(NoInherit)** マクロはサポートされていません。
 
-次の例では、プロパティ ページのプロパティにセミコロンで区切られた一覧が割り当てられています。 この一覧は *\<value>* リテラルと `MyProperty` プロパティの値を連結したもので構成されます。このプロパティは **$(** <em>MyProperty</em> **)** というマクロ表記でアクセスされます。
+次の例では、プロパティ ページのプロパティにセミコロンで区切られた一覧が割り当てられています。 このリストは、リテラルとプロパティの値を連結したもので *\<value>* `MyProperty` あり、マクロ表記 **$ (**<em>t.myproperty</em>**)** を使用してアクセスします。
 
 ```
 Property=<value>;$(MyProperty)
@@ -59,20 +59,20 @@ Property=<value>;$(MyProperty)
 
 ## <a name="vcxprojfilters-file"></a>.vcxproj. フィルターファイル
 
-プロジェクトにファイルを追加するために**ソリューションエクスプローラー**を使用すると、ファイル名拡張子に基づいて、ファイルの追加先となる**ソリューションエクスプローラー**ツリービュー内の場所がフィルターファイル ( *.vcxproj. filters*) によって定義されます。
+プロジェクトにファイルを追加するために**ソリューションエクスプローラー**を使用すると、ファイル名拡張子に基づいて、ファイルの追加先となる**ソリューションエクスプローラー**ツリービュー内の場所がフィルターファイル (*.vcxproj. filters*) によって定義されます。
 
 ## <a name="vc-directories-settings"></a>VC + + ディレクトリの設定
 
-Visual C++ ディレクトリ設定は [[VC++ ディレクトリ プロパティ ページ]](../ide/vcpp-directories-property-page.md) で指定されます。 Visual Studio 2008 以前では、ディレクトリ設定はユーザーごとに適用され、除外されたディレクトリの一覧は*sysincl*ファイルで指定されています。
+Visual C++ ディレクトリ設定は [[VC++ ディレクトリ プロパティ ページ]](../build/reference/vcpp-directories-property-page.md) で指定されます。 Visual Studio 2008 以前では、ディレクトリ設定はユーザーごとに適用され、除外されたディレクトリの一覧は *sysincl* ファイルで指定されています。
 
-コマンド ラインで [devenv /resetsettings](/visualstudio/ide/reference/resetsettings-devenv-exe) を実行する場合、VC++ ディレクトリ設定を変更できません。 **[ツール]** メニューを開き、 **[設定のインポートとエクスポート]** をクリックし、 **[すべての設定をリセット]** オプションを選択した場合も設定を変更できません。
+コマンド ラインで [devenv /resetsettings](/visualstudio/ide/reference/resetsettings-devenv-exe) を実行する場合、VC++ ディレクトリ設定を変更できません。 **[ツール]** メニューを開き、**[設定のインポートとエクスポート]** をクリックし、**[すべての設定をリセット]** オプションを選択した場合も設定を変更できません。
 
-以前のリリースの Visual Studio で作成された *.vssettings*ファイルから VC + + ディレクトリ設定を移行するには、次の手順を実行します。
+以前のリリースの Visual Studio で作成された *.vssettings* ファイルから VC + + ディレクトリ設定を移行するには、次の手順を実行します。
 
-1. **[ツール]** メニューを開き、 **[設定のインポートとエクスポート]** をクリックします。
-2. **[選択した環境設定のインポート]** を選択
+1. [**ツール**] メニューを開き、[**設定のインポートとエクスポート**] をクリックします。
+2. [**選択した環境設定のインポート**] を選択
 3. ウィザードの指示に従います。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[コマンド ラインでの MSBuild - C++](../build/msbuild-visual-cpp.md)
+[コマンドラインでの MSBuild-C++](../build/msbuild-visual-cpp.md)

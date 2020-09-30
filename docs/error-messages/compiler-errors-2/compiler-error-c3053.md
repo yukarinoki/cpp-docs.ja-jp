@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3053
 ms.assetid: ab9a25f3-e341-4f6e-8e69-069b4a963a64
-ms.openlocfilehash: 07514dfb931dcb5bf45bb8526cd19cf19103a56f
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 8889388dc07f871bb60de44d317f9c8882795b03
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74761205"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91506186"
 ---
 # <a name="compiler-error-c3053"></a>コンパイラ エラー C3053
 
 'symbol' : 'threadprivate' は、グローバルまたは静的データ項目にのみ有効です
 
-[threadprivate](../../parallel/openmp/reference/threadprivate.md) に渡されるシンボルはグローバルと静的のどちらかでなければなりません。
+[threadprivate](../../parallel/openmp/reference/openmp-directives.md#threadprivate) に渡されるシンボルはグローバルと静的のどちらかでなければなりません。
 
 次の例では C3053 が生成されます。
 
@@ -34,7 +34,7 @@ void Test() {
 }
 ```
 
-解決方法:
+考えられる解決策:
 
 ```cpp
 // C3053b.cpp

@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3044
 ms.assetid: 9f3e25b2-4676-49ab-97bf-6c88cd0fa377
-ms.openlocfilehash: 74e931d8110c1104125b977e45ad0c6fd3ffd5f0
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 0ac2a6a86ffd719dbb5f39fc085d3f5cbca0567d
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74761365"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91506362"
 ---
 # <a name="compiler-error-c3044"></a>コンパイラ エラー C3044
 
 'section' : OpenMP 'sections' ディレクティブの直下でのみ入れ子にすることができます
 
-コンパイラによって、 `section` ディレクティブが正しく使用されていないことが検出されました。 詳細については、「 [sections](../../parallel/openmp/reference/sections-openmp.md)」を参照してください。
+コンパイラによって、 `section` ディレクティブが正しく使用されていないことが検出されました。 詳細については、「」 [セクション](../../parallel/openmp/reference/openmp-directives.md#sections-openmp)を参照してください。
 
 次の例では C3044 が生成されます。
 

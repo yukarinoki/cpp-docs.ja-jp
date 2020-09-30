@@ -35,12 +35,12 @@ helpviewer_keywords:
 - asinhl function
 - asinhf function
 ms.assetid: 4488babe-1a7e-44ca-8b7b-c2db0a70084f
-ms.openlocfilehash: 332e6bfc95bd297d703d879cdd468b450cfdc763
-ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
+ms.openlocfilehash: face2eb5f7c6220e1a4369ae0aa11514a918d21c
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89556789"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91505600"
 ---
 # <a name="asinh-asinhf-asinhl"></a>asinh、asinhf、asinhl
 
@@ -71,18 +71,17 @@ long double asinh( long double x );  // C++ only
 |-----------|-------------------|--------------------------|
 |± QNAN、IND、INF|なし|なし|
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>注釈
 
 C++ を使用すると、またはの値を受け取って返す **asinh** のオーバーロードを呼び出すことができ **`float`** **`long double`** ます。 C プログラムでは、この関数を呼び出すためにマクロを使用している場合を除き \<tgmath.h> 、 **asinh** は常にを受け取り、を返し **`double`** ます。
 
 マクロを使用する場合 \<tgmath.h> `asinh()` 、引数の型によって、どのバージョンの関数が選択されているかが決まります。 詳細については [、「型汎用の算術演算](../../c-runtime-library/tgmath.md) 」を参照してください。
 
-
 既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-|関数|必須の C ヘッダー|必須の C++ ヘッダー|
+|機能|必須の C ヘッダー|必須の C++ ヘッダー|
 |--------------|--------------|------------------|
 |**asinh**、 **asinhf**、 **asinhf**|\<math.h>|\<cmath> または \<math.h>|
 |**asinh ()** マクロ | \<tgmath.h> ||

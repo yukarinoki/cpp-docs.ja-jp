@@ -51,12 +51,12 @@ helpviewer_keywords:
 - _strtod_l function
 - string conversion, to floating point values
 ms.assetid: 0444f74a-ba2a-4973-b7f0-1d77ba88c6ed
-ms.openlocfilehash: 1e75fe39c8ab7020a088307421926327d4043ba8
-ms.sourcegitcommit: efed9ed109862c6c2a042f2663b680e8ca4e16a1
+ms.openlocfilehash: 5a791b5d0be218a49be28930c191de3eb4acf4be
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89933828"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91505536"
 ---
 # <a name="strtod-_strtod_l-wcstod-_wcstod_l"></a>strtod、_strtod_l、wcstod、_wcstod_l
 
@@ -107,7 +107,7 @@ NULL で終わる変換対象の文字列。
 
 このリターンコードの詳細については、「 [_doserrno、errno、_sys_errlist、および _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」を参照してください。
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>注釈
 
 各関数は、入力文字列 *Strsource* をに変換し **`double`** ます。 **Strtod**関数は、 *strsource*を倍精度値に変換します。 **strtod** は、数値の一部として認識できない最初の文字で文字列 *strsource* の読み取りを停止します。 この文字は、終端の null 文字である場合があります。 **wcstod** は **strtod**のワイド文字バージョンです。 *Strsource* 引数はワイド文字列です。 それ以外では、これらの関数の動作は同じです。
 
@@ -135,9 +135,9 @@ NULL で終わる変換対象の文字列。
 *基数* は、小数点文字 (既定の "C" ロケールのピリオド (.))、またはロケールに固有の値 (現在のロケールが異なる場合、または *ロケール* が指定されている場合) です。
  *シーケンス*は、英数字またはアンダースコア文字のシーケンスです。
 
-10進数と16進数の両方の形式で、小数点文字の前に数字がない場合は、少なくとも1つは小数点以下を表す必要があります。 
+10進数と16進数の両方の形式で、小数点文字の前に数字がない場合は、少なくとも1つは小数点以下を表す必要があります。
 
-10進数形式では、10進数の後に指数部を指定できます。指数部は、指数部の導入文字 (**e** または **e**) と、必要に応じて符号付き整数で構成されます。 
+10進数形式では、10進数の後に指数部を指定できます。指数部は、指数部の導入文字 (**e** または **e**) と、必要に応じて符号付き整数で構成されます。
 
 16進数形式では、16進数字の後に指数部を指定できます。指数部は、指数部を表す文字 (**p** または **p**) と、必要に応じて符号付き10進整数 (指数部は2の累乗) で構成されます。
 

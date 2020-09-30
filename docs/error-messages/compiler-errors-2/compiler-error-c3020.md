@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3020
 ms.assetid: f625c7a3-afaa-4bd8-9c1b-51891b832f36
-ms.openlocfilehash: 89b28ae396322859596b99ba56a28375e9c9d6d5
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: cb32ceaf71d0a1c121b6e01e4b49f1db79a84d79
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87232028"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91506506"
 ---
 # <a name="compiler-error-c3020"></a>コンパイラ エラー C3020
 
@@ -38,7 +38,7 @@ int main() {
 }
 ```
 
-[A.6 lastprivate](../../parallel/openmp/reference/lastprivate.md)で宣言された変数を、並列化されたループ内のインデックスとして使用することはできません。
+[A.6 lastprivate](../../parallel/openmp/reference/openmp-clauses.md#lastprivate)で宣言された変数を、並列化されたループ内のインデックスとして使用することはできません。
 
 次の例では、C3020 を2番目の a.6 lastprivate に対して指定します。これは、a.6 lastprivate が最も外側の for ループ内の idx_a への書き込みをトリガーするためです。 最初の a.6 lastprivate ではエラーが発生しません。これは、a.6 lastprivate が最も外側の for ループの外側に (技術的には最後の反復処理の最後に) idx_a への書き込みをトリガーするためです。 次の例では、C3020 が生成されます。
 

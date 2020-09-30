@@ -89,12 +89,12 @@ helpviewer_keywords:
 - std::multiset [C++], upper_bound
 - std::multiset [C++], value_comp
 ms.assetid: 630e8c10-0ce9-4ad9-8d79-9e91a600713f
-ms.openlocfilehash: cb28b0b31188fcf7fefef95ddb44c9aab813e6ac
-ms.sourcegitcommit: d9c94dcabd94537e304be0261b3263c2071b437b
+ms.openlocfilehash: cf7f071ab98cb872537af076b89e0a1b07a1a6a1
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91353182"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91505882"
 ---
 # <a name="multiset-class"></a>multiset クラス
 
@@ -203,7 +203,7 @@ C++ 14 で `std::less<>` は、型パラメーターを持たない述語また�
 |[upper_bound](#upper_bound)|指定したキー以上のキーを持つ、`multiset` 内の最初の要素を指す反復子を返します。|
 |[value_comp](#value_comp)|`multiset` 内の要素の値を並べ替えるために使用される比較オブジェクトのコピーを取得します。|
 
-### <a name="operators"></a>演算子
+### <a name="operators"></a>オペレーター
 
 |演算子|説明|
 |-|-|
@@ -223,7 +223,7 @@ multiset オブジェクトのアロケーター クラスを表す型。
 typedef Allocator allocator_type;
 ```
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 `allocator_type` はテンプレート パラメーター `Allocator` のシノニムです。
 
@@ -298,7 +298,7 @@ const_iterator cbegin() const;
 
 **`const`** 範囲の最初の要素、または空の範囲の末尾の次の位置 (空の範囲の場合は) を指す双方向アクセス反復子 `cbegin() == cend()` 。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 の戻り値を使用して、 `cbegin` 範囲内の要素を変更することはできません。
 
@@ -324,7 +324,7 @@ const_iterator cend() const;
 
 **`const`** 範囲の末尾の次の位置を指し示す双方向アクセス反復子。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 `cend` は、反復子が範囲の末尾を超えたかどうかをテストするために使用されます。
 
@@ -386,7 +386,7 @@ The size of the multiset after clearing is 0.
 typedef implementation-defined const_iterator;
 ```
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 型を `const_iterator` 使用して要素の値を変更することはできません。
 
@@ -402,7 +402,7 @@ typedef implementation-defined const_iterator;
 typedef typename allocator_type::const_pointer const_pointer;
 ```
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 型を `const_pointer` 使用して要素の値を変更することはできません。
 
@@ -457,7 +457,7 @@ The first element in the multiset is 10.
 typedef std::reverse_iterator<const_iterator> const_reverse_iterator;
 ```
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 型は、 `const_reverse_iterator` 要素の値を変更することはできません。また、逆方向にマルチセットを反復処理するために使用されます。
 
@@ -486,11 +486,11 @@ template<class K> bool contains(const K& key) const;
 
 `true` 要素がコンテナーで見つかった場合は。 `false` それ以外の場合は。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 `contains()` は C++ 20 で新しく追加されたものです。 これを使用するには、 [/std: c + + latest](../build/reference/std-specify-language-standard-version.md) コンパイラオプションを指定します。
 
-`template<class K> bool contains(const K& key) const` が透過的な場合にのみ、オーバーロードの解決に参加 `key_compare` します。 詳細については、「 [連想コンテナーの異種ルックアップ](https://docs.microsoft.com/cpp/standard-library/stl-containers#heterogeneous-lookup-in-associative-containers-c14) 」を参照してください。
+`template<class K> bool contains(const K& key) const` が透過的な場合にのみ、オーバーロードの解決に参加 `key_compare` します。 詳細については、「 [連想コンテナーの異種ルックアップ](./stl-containers.md#heterogeneous-lookup-in-associative-containers-c14) 」を参照してください。
 
 ### <a name="example"></a>例
 
@@ -506,7 +506,7 @@ int main()
     std::cout << std::boolalpha; // so booleans show as 'true' or 'false'
     std::cout << theMultiSet.contains(2) << '\n';
     std::cout << theMultiSet.contains(3) << '\n';
-    
+
     return 0;
 }
 ```
@@ -533,7 +533,7 @@ size_type count(const Key& key) const;
 
 並べ替えキーがパラメーター キーと一致する multiset 内の要素の数。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 メンバー関数は、次の範囲内の要素 *x* の数を返します。
 
@@ -593,7 +593,7 @@ const_reverse_iterator crbegin() const;
 
 反転された multiset 内の最初の要素を示す、または反転されていない multiset 内の最後の要素だったものを示す const 反転双方向反復子。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 `crbegin` は、begin が multiset で使用されるのと同様に、反転された multiset で使用されます。
 
@@ -641,7 +641,7 @@ const_reverse_iterator crend() const;
 
 反転された multiset 内の最後の要素の次の場所 (反転されていない multiset 内の最初の要素の前の場所) を指す定数逆順双方向反復子。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 `crend` は、[end](#end) が multiset で使用されるのと同様に、反転された multiset で使用されます。
 
@@ -683,7 +683,7 @@ int main() {
 typedef typename allocator_type::difference_type difference_type;
 ```
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 `difference_type` は、コンテナーの反復子を減算またはインクリメントするときに返される型です。 通常、`difference_type` は、[ `first`, `last`) の範囲内で、反復子 `first` と `last` の間にある要素の数を表すために使用され、`first` が指す要素と、`last` が指す要素の 1 つ前までの範囲の要素を含みます。
 
@@ -765,7 +765,7 @@ multiset に挿入される要素を構築するために転送される引数�
 
 新しく挿入される要素を指す反復子。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 この関数では、コンテナー要素を指す参照は無効になりません。ただし、コンテナーを指すすべての反復子が無効になる場合があります。
 
@@ -835,7 +835,7 @@ multiset に挿入される要素を構築するために転送される引数�
 
 新しく挿入される要素を指す反復子。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 この関数では、コンテナー要素を指す参照は無効になりません。ただし、コンテナーを指すすべての反復子が無効になる場合があります。
 
@@ -900,7 +900,7 @@ iterator end();
 
 末尾超え反復子。 multiset が空の場合は、`multiset::end() == multiset::begin()`。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 **end** は、反復子が multiset の末尾を超えたかどうかをテストするために使用します。
 
@@ -1023,7 +1023,7 @@ size_type erase(
 
 3 番目のメンバー関数では、multiset から削除された要素の数が返されます。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 コード例については、「[set::erase](../standard-library/set-class.md#erase)」をご覧ください。
 
@@ -1046,7 +1046,7 @@ const_iterator find(const Key& key) const;
 
 指定したキーを持つ要素の位置を参照する反復子。キーの一致が検出されない場合は、multiset 内の最後の要素の次の位置 (`multiset::end()`)。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 このメンバー関数は、小なり比較関係に基づいて順序を誘発する二項述語の下で、キーが引数 *キー* と等価であるマルチセット内の要素を参照する反復子を返します。
 
@@ -1125,7 +1125,7 @@ allocator_type get_allocator() const;
 
 multiset で使用されるアロケーター。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 multiset クラスのアロケーターは、クラスがどのようにストレージを管理するかを指定します。 C++ 標準ライブラリ コンテナー クラスで提供される既定のアロケーターは、ほとんどのプログラミング要件に対応しています。 独自のアロケーター クラスを作成して使用することは、C++ における高度な作業の 1 つです。
 
@@ -1248,7 +1248,7 @@ multiset に挿入する要素の値。
 
 単一要素とヒントのメンバー関数 (3) と (4) は、新しい要素が multiset に挿入された位置を指す反復子を返します。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 この関数では、ポインターや参照は無効になりません。ただし、コンテナーを指すすべての反復子が無効になる場合があります。
 
@@ -1378,7 +1378,7 @@ multiset が要素の並べ替えに使用する関数オブジェクトを返�
 
 `Compare` の詳細については、[multiset クラス](../standard-library/multiset-class.md)のトピックのコメントのセクションをご覧ください。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 格納されているオブジェクトはメンバー関数を定義します。
 
@@ -1447,7 +1447,7 @@ kc2( 2,3 ) returns value of false, where kc2 is the function object of ms2.
 typedef Compare key_compare;
 ```
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 `key_compare` はテンプレート パラメーター `Compare` のシノニムです。
 
@@ -1465,7 +1465,7 @@ typedef Compare key_compare;
 typedef Key key_type;
 ```
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 `key_type` はテンプレート パラメーター `Key` のシノニムです。
 
@@ -1646,7 +1646,7 @@ multiset 内の要素の並べ替えに使用される、`const Compare` 型の�
 *IList*\
 要素のコピー元の initializer_list。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 すべてのコンストラクターは、アロケーター オブジェクトの型を格納します。このオブジェクトは multiset のメモリ ストレージを管理し、後で [get_allocator](#get_allocator) を呼び出して取得することができます。 代替アロケーターの代わりに使用されるクラス宣言やプリプロセス マクロでは、アロケーターのパラメーターが省略される場合があります。
 
@@ -1780,7 +1780,7 @@ multiset& operator=(multiset&& right);
 *そうです*\
 要素のコピー元または移動元である `multiset`。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 `operator=`*right* `multiset` 使用される参照型 (左辺値または右辺値) に応じて、要素を右にコピーまたは移動します。 `operator=` が実行される前にこの `multiset` に存在する要素は、破棄されます。
 
@@ -1829,7 +1829,7 @@ multiset 内の要素へのポインターを提供する型。
 typedef typename allocator_type::pointer pointer;
 ```
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 **pointer** 型を使って要素の値を変更できます。
 
@@ -1849,7 +1849,7 @@ reverse_iterator rbegin();
 
 反転された multiset 内の最初の要素、または反転されていない multiset 内の最後の要素だったものを示す反転双方向反復子。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 `rbegin` は、rbegin が multiset で使用されるのと同様に、反転された multiset で使用されます。
 
@@ -1962,7 +1962,7 @@ reverse_iterator rend();
 
 反転された multiset 内の最後の要素の次の場所 (反転されていない multiset 内の最初の要素の前の場所) を指す逆順双方向反復子。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 `rend` は、[end](#end) が multiset で使用されるのと同様に、反転された multiset で使用されます。
 
@@ -2029,7 +2029,7 @@ int main() {
 typedef std::reverse_iterator<iterator> reverse_iterator;
 ```
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 型 `reverse_iterator` は、マルチセットを逆に反復処理するために使用されます。
 
@@ -2104,7 +2104,7 @@ void swap(
 *そうです*\
 ターゲットの multiset と交換する要素を提供する引数の multiset。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 メンバー関数は、要素を交換する 2 つの multiset において要素を指定している参照、ポインター、反復子を無効化することはありません。
 
@@ -2240,7 +2240,7 @@ multiset が要素の並べ替えに使用する関数オブジェクトを返�
 
 `Compare` の詳細については、[multiset クラス](../standard-library/multiset-class.md)のトピックのコメントのセクションをご覧ください。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 格納されているオブジェクトはメンバー関数を定義します。
 
@@ -2309,7 +2309,7 @@ vc2( 2,3 ) returns value of false, where vc2 is the function object of ms2.
 typedef key_compare value_compare;
 ```
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 `value_compare` はテンプレート パラメーター `Compare` のシノニムです。
 
@@ -2329,7 +2329,7 @@ typedef key_compare value_compare;
 typedef Key value_type;
 ```
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 `value_type` はテンプレート パラメーター `Key` のシノニムです。
 

@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3360
 ms.assetid: 6acf983a-dbb6-422b-b045-a34bb4ba6761
-ms.openlocfilehash: 785dbf3a96e97b68f2f8a5ede79ac8288eba4b21
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 5ac496d8ad981a8e36c7b69e73a42a1e1d2e214d
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74757372"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91504702"
 ---
 # <a name="compiler-error-c3360"></a>コンパイラ エラー C3360
 
 'string': 名前を作成できません
 
-[uuid](../../windows/uuid-cpp-attributes.md) 属性に渡された値は無効です。
+[uuid](../../windows/attributes/uuid-cpp-attributes.md) 属性に渡された値は無効です。
 
 次の例では C3360 が生成されます。
 

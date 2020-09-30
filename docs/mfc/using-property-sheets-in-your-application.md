@@ -11,55 +11,55 @@ helpviewer_keywords:
 - Create method [MFC], property sheets
 - CPropertyPage class [MFC], styles
 ms.assetid: 240654d4-152b-4e3f-af7b-44234339206e
-ms.openlocfilehash: 4fd68f57db082ab0b0da0e8248e0be239c63c99a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 789764c9af988135219bd710d4f8aec1cda9143a
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62411527"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91504647"
 ---
 # <a name="using-property-sheets-in-your-application"></a>アプリケーションでのプロパティ シートの使用
 
-プロパティ シートをアプリケーションで使用するには、次の手順を完了します。
+アプリケーションでプロパティシートを使用するには、次の手順を実行します。
 
-1. 各プロパティ ページのダイアログ テンプレート リソースを作成します。 ユーザー切り替えて使用する 1 つのページから、各レイアウト ページできるだけ一貫性を保つため、注意してください。
+1. 各プロパティページのダイアログテンプレートリソースを作成します。 ユーザーがページ間を切り替える可能性があることに注意してください。したがって、各ページはできるだけ一貫して配置してください。
 
-   すべてのページのダイアログ テンプレートは同じサイズではありません。 フレームワークでは、最大のページのサイズを使用して、プロパティ ページのプロパティ シートで割り当てる領域の量を決定します。
+   すべてのページのダイアログテンプレートは、同じサイズである必要はありません。 フレームワークは、最大ページサイズを使用して、プロパティページのプロパティシートで割り当てられる領域を決定します。
 
-   プロパティ ページのダイアログ テンプレート リソースを作成するときに、ダイアログのプロパティのプロパティ シートで、次のスタイルを指定する必要があります。
+   プロパティページのダイアログテンプレートリソースを作成する場合は、[ダイアログのプロパティ] プロパティシートで次のスタイルを指定する必要があります。
 
-   - 設定、**キャプション**で編集ボックス、**全般**をこのページのタブに表示するテキスト ページ。
+   - **[全般**] ページの [**キャプション**] 編集ボックスに、このページのタブに表示されるテキストを設定します。
 
-   - 設定、**スタイル**でリスト ボックス、**スタイル**へのページング**子**します。
+   - [**スタイル**] ページの [**スタイル**] ボックスを [**子**] に設定します。
 
-   - 設定、**境界線**でリスト ボックス、**スタイル**へのページング**Thin**します。
+   - [**スタイル**] ページの [**罫線**] ボックスを [**細**] に設定します。
 
-   - いることを確認、 **Titlebar**チェック ボックスをオン、**スタイル**ページが選択されています。
+   - [**スタイル**] ページの [**タイトルバー** ] チェックボックスがオンになっていることを確認します。
 
-   - いることを確認、**無効になっている**チェック ボックスをオン、**スタイルより**ページが選択されています。
+   - [その**他のスタイル**] ページで [**無効**] チェックボックスがオンになっていることを確認します。
 
-1. 作成、 [CPropertyPage](../mfc/reference/cpropertypage-class.md)-プロパティ ページ ダイアログの各テンプレートに対応するクラスを派生します。 参照してください[クラスの追加](../ide/adding-a-class-visual-cpp.md)します。 選択`CPropertyPage`基底クラスとして。
+1. 各プロパティページダイアログテンプレートに対応する [CPropertyPage](../mfc/reference/cpropertypage-class.md)派生クラスを作成します。 「 [クラスの追加」を](../ide/adding-a-class-visual-cpp.md)参照してください。 `CPropertyPage`基本クラスとしてを選択します。
 
-1. このプロパティ ページの値を保持する変数のメンバーを作成します。 プロパティ ページにメンバー変数を追加するプロセスは、プロパティ ページが特別なダイアログ ボックスであるため正確に ダイアログ ボックスでは、メンバー変数を追加すると同じです。 詳細については、次を参照してください。[ダイアログ コントロールのメンバー変数を定義する](../windows/defining-member-variables-for-dialog-controls.md)します。
+1. このプロパティページの値を保持するメンバー変数を作成します。 プロパティページは特化されたダイアログボックスであるため、プロパティページにメンバー変数を追加するプロセスは、ダイアログボックスにメンバー変数を追加する場合とまったく同じです。 詳細については、「 [ダイアログコントロールのメンバー変数の定義](../windows/adding-editing-or-deleting-controls.md)」を参照してください。
 
-1. 構築、 [CPropertySheet](../mfc/reference/cpropertysheet-class.md)ソース コード内のオブジェクト。 通常、構築、`CPropertySheet`プロパティ シートを表示するコマンドのハンドラー内のオブジェクト。 このオブジェクトは、プロパティ シート全体を表します。 持つモーダル プロパティ シートを作成する場合、 [DoModal](../mfc/reference/cpropertysheet-class.md#domodal)関数、フレームワークは、既定で 3 つのコマンド ボタンを提供します。[Ok] をキャンセルし、適用します。 フレームワークにはコマンド ボタン作成なしで作成したモードレス プロパティ シートの[作成](../mfc/reference/cpropertysheet-class.md#create)関数。 クラスを派生する必要はありません`CPropertySheet`(プレビュー ウィンドウ) などの他のコントロールを追加するか、モードレス プロパティ シートを表示する場合を除き、します。 プロパティ シートを閉じてするために使用する既定のコントロールが含まれていないために、この手順はモードレス プロパティ シートの必要があります。
+1. ソースコードで [CPropertySheet](../mfc/reference/cpropertysheet-class.md) オブジェクトを構築します。 通常、 `CPropertySheet` プロパティシートを表示するコマンドのハンドラーにオブジェクトを構築します。 このオブジェクトは、プロパティシート全体を表します。 [DoModal](../mfc/reference/cpropertysheet-class.md#domodal)関数を使用してモーダルプロパティシートを作成する場合、フレームワークには既定で [OK]、[キャンセル]、および [適用] の3つのコマンドボタンが用意されています。 フレームワークは、 [Create](../mfc/reference/cpropertysheet-class.md#create) 関数で作成されたモードレスプロパティシートに対してコマンドボタンを作成しません。 `CPropertySheet`他のコントロール (プレビューウィンドウなど) を追加するか、モードレスプロパティシートを表示する場合を除き、からクラスを派生させる必要はありません。 この手順は、プロパティシートを閉じるために使用できる既定のコントロールが含まれていないため、モードレスプロパティシートに対して必要です。
 
-1. プロパティ シートに追加するには、各ページには、次の操作を行います。
+1. プロパティシートに追加するページごとに、次の操作を行います。
 
-   - ごとに 1 つのオブジェクトを構築`CPropertyPage`-このプロセスで以前に作成したクラスを派生します。
+   - `CPropertyPage`このプロセスで前に作成した派生クラスごとに1つのオブジェクトを構築します。
 
-   - 呼び出す[が](../mfc/reference/cpropertysheet-class.md#addpage)ページごとにします。
+   - 各ページに対して [CPropertySheet:: AddPage](../mfc/reference/cpropertysheet-class.md#addpage) を呼び出します。
 
-   通常、オブジェクトを作成する、`CPropertySheet`も作成、`CPropertyPage`この手順内のオブジェクト。 ただし、実装する場合、 `CPropertySheet`-派生クラスで埋め込むことができます、`CPropertyPage`内のオブジェクト、`CPropertySheet`オブジェクトと呼び出し`AddPage`からページごとに、 `CPropertySheet`-派生したクラスのコンス トラクター。 `AddPage` 追加、`CPropertyPage`オブジェクトのページのプロパティ シートの一覧には、そのページは、ウィンドウを実際には作成されません。 そのため、ウィンドウの作成、プロパティ シートを呼び出すまで待機する必要はありません`AddPage`; 呼び出せる`AddPage`プロパティ シートのコンス トラクターから。
+   通常、を作成するオブジェクトは、 `CPropertySheet` `CPropertyPage` この手順でもオブジェクトを作成します。 ただし、派生クラスを実装する場合は、オブジェクトを `CPropertySheet` `CPropertyPage` オブジェクトに埋め込み、 `CPropertySheet` から派生した `AddPage` クラスコンストラクターから各ページに対してを呼び出すことができ `CPropertySheet` ます。 `AddPage``CPropertyPage`プロパティシートのページの一覧にオブジェクトを追加しますが、実際にはそのページのウィンドウを作成しません。 そのため、プロパティシートのコンストラクターからを呼び出すことができるように、プロパティシートウィンドウが作成されるまで待つ必要はありません。 `AddPage` `AddPage`
 
-   既定では、プロパティ シートのプロパティ シートで、1 行に収まらないのタブがある場合、タブは複数の行に積み重ねられます。 重なりを無効にする[CPropertySheet::EnableStackedTabs](../mfc/reference/cpropertysheet-class.md#enablestackedtabs)パラメーターを設定して**FALSE**します。 呼び出す必要があります`EnableStackedTabs`プロパティ シートを作成する場合。
+   既定では、プロパティシートに表示されるタブの数がプロパティシートの1行に収まりきらない場合、タブは複数の行にスタックされます。 スタックを無効にするには、パラメーターを**FALSE**に設定して[CPropertySheet:: EnableStackedTabs](../mfc/reference/cpropertysheet-class.md#enablestackedtabs)を呼び出します。 プロパティシートを作成するときに、を呼び出す必要があり `EnableStackedTabs` ます。
 
-1. 呼び出す[する](../mfc/reference/cpropertysheet-class.md#domodal)または[作成](../mfc/reference/cpropertysheet-class.md#create)プロパティ シートを表示します。 呼び出す`DoModal`モーダル ダイアログ ボックスのプロパティ シートを作成します。 呼び出す**作成**モードレス ダイアログ ボックスのプロパティ シートを作成します。
+1. [CPropertySheet::D oModal](../mfc/reference/cpropertysheet-class.md#domodal)または[Create](../mfc/reference/cpropertysheet-class.md#create)を呼び出して、プロパティシートを表示します。 `DoModal`を呼び出して、モーダルダイアログボックスとしてプロパティシートを作成します。 [ **作成** ] を呼び出して、モードレスダイアログボックスとしてプロパティシートを作成します。
 
-1. プロパティ ページとプロパティ シートの所有者間でデータを交換します。 これは、情報の記事で説明[データの交換](../mfc/exchanging-data.md)します。
+1. プロパティページとプロパティシートの所有者の間でデータを交換します。 これについては、「 [データの交換](../mfc/exchanging-data.md)」をご覧ください。
 
-プロパティ シートを使用する方法の例は、MFC 標準サンプルを参照してください。 [PROPDLG](../overview/visual-cpp-samples.md)します。
+プロパティシートの使用方法の例については、MFC の一般的なサンプル [PROPDLG](../overview/visual-cpp-samples.md)を参照してください。
 
 ## <a name="see-also"></a>関連項目
 
-[プロパティ シート](../mfc/property-sheets-mfc.md)
+[プロパティシート](../mfc/property-sheets-mfc.md)

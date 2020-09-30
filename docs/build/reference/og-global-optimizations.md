@@ -14,16 +14,16 @@ helpviewer_keywords:
 - common subexpression elimination
 - Og compiler option [C++]
 ms.assetid: d10630cc-b9cf-4e97-bde3-8d7ee79e9435
-ms.openlocfilehash: 7dde5e97bd8690dc491916de8fb279e80a2c9ed4
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 2d5baf4967f4f4f945540d2a7baef399974d2d42
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87215206"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91506572"
 ---
-# <a name="og-global-optimizations"></a>`/Og`(グローバルな最適化)
+# <a name="og-global-optimizations"></a>`/Og` (グローバルな最適化)
 
-非推奨。 ローカルおよびグローバルの最適化、自動レジスタ割り当て、およびループの最適化を提供します。 代わりに、 [ `/O1` (サイズを最小化する)](o1-o2-minimize-size-maximize-speed.md)または[ `/O2` (最大速度)](o1-o2-minimize-size-maximize-speed.md)のいずれかを使用することをお勧めします。
+非推奨になりました。 ローカルおよびグローバルの最適化、自動レジスタ割り当て、およびループの最適化を提供します。 代わりに、 [ `/O1` (サイズを最小化する)](o1-o2-minimize-size-maximize-speed.md)または[ `/O2` (最大速度)](o1-o2-minimize-size-maximize-speed.md)のいずれかを使用することをお勧めします。
 
 ## <a name="syntax"></a>構文
 
@@ -49,7 +49,7 @@ ms.locfileid: "87215206"
 
 - 自動レジスタ割り当て
 
-   この最適化により、コンパイラは、頻繁に使用される変数と部分式をレジスタに格納できます。**`register`** キーワードは無視されます。
+   この最適化により、コンパイラは、頻繁に使用される変数と部分式をレジスタに格納できます。 **`register`** キーワードは無視されます。
 
 - ループの最適化
 
@@ -77,7 +77,7 @@ ms.locfileid: "87215206"
    > [!NOTE]
    > プラグマをオプションと共に使用して、関数ごとにグローバル最適化を有効または無効にすることができ `optimize` `g` ます。
 
-関連情報については、「 [ `/Oi` (組み込み関数の生成)](oi-generate-intrinsic-functions.md) 」および「 [ `/Ox ` (ほとんどの速度の最適化を有効にする)](ox-full-optimization.md)」を参照してください。
+関連情報については、「 [ `/Oi` (組み込み関数の生成)](oi-generate-intrinsic-functions.md) 」および「 [ `/Ox` (ほとんどの速度の最適化を有効にする)](ox-full-optimization.md)」を参照してください。
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのコンパイラ オプションを設定するには
 
@@ -85,7 +85,7 @@ ms.locfileid: "87215206"
 
 1. [**構成プロパティ**] [  >  **C/c + +**  >  **コマンドライン**] プロパティページを選択します。
 
-1. [**追加オプション**] ボックスにコンパイラオプションを入力します。
+1. [ **追加オプション** ] ボックスにコンパイラオプションを入力します。
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>このコンパイラ オプションをコードから設定するには
 

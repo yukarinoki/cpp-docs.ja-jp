@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3347
 ms.assetid: e939ad29-0b78-4681-9618-9bdae5675cee
-ms.openlocfilehash: 9f62d66148aa75040f7bab5ea69931d2ef9c474a
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 105c34fff8b118682ae736683fae5f64a7323c81
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74755617"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91504830"
 ---
 # <a name="compiler-error-c3347"></a>コンパイラ エラー C3347
 
 'arg': 必要な引数が属性 idl_module 内で指定されていません
 
-[idl_module](../../windows/idl-module.md) 属性に必須の引数が渡されていません。
+[idl_module](../../windows/attributes/idl-module.md) 属性に必須の引数が渡されていません。
 
 次の例では C3347 が生成されます。
 

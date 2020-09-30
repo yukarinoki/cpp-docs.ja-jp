@@ -24,12 +24,12 @@ f1_keywords:
 helpviewer_keywords:
 - imaxdiv function
 ms.assetid: 7d90126f-fdc2-4986-9cdf-94e4c9123d26
-ms.openlocfilehash: 72bbb1198b79d79bb81acc35ce6c2a836fdd5f1d
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 298356da8e8e76c132b963ef4f71db6a3d0e74f7
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70954633"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91505632"
 ---
 # <a name="imaxdiv"></a>imaxdiv
 
@@ -54,11 +54,11 @@ imaxdiv_t imaxdiv(
 
 ## <a name="return-value"></a>戻り値
 
-**imaxdiv**型の引数を指定して呼び出された[intmax_t](../../c-runtime-library/standard-types.md)は、商と剰余で構成される[imaxdiv_t](../../c-runtime-library/standard-types.md)型の構造体を返します。
+**imaxdiv** は、 [intmax_t](../../c-runtime-library/standard-types.md) 型の引数を指定して呼び出され、商と剰余で構成される [imaxdiv_t](../../c-runtime-library/standard-types.md) 型の構造体を返します。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>注釈
 
-**Imaxdiv**関数は、*数値*を*デ om*で除算し、商と剰余を計算します。 **Imaxdiv_t**構造体には、商、 **intmax_t** **quot**、および剰余 ( **intmax_t** **rem**) が含まれています。商の符号は、数学的な商の符号と同じです。 この絶対値が最も大きい整数であり、商の絶対値よりも小さくなります。 分母が 0 の場合、プログラムはエラー メッセージにより終了します。
+**Imaxdiv**関数は、*数値*を*デ om*で除算し、商と剰余を計算します。 **Imaxdiv_t**構造体には、商、 **intmax_t** **quot**、および残りの**intmax_t** **rem**が含まれています。商の符号は、数学的な商の符号と同じです。 この絶対値が最も大きい整数であり、商の絶対値よりも小さくなります。 分母が 0 の場合、プログラムはエラー メッセージにより終了します。
 
 ## <a name="requirements"></a>必要条件
 
@@ -66,7 +66,7 @@ imaxdiv_t imaxdiv(
 |-------------|---------------------|
 |**imaxdiv**|\<inttypes.h>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
 ## <a name="example"></a>例
 
@@ -105,6 +105,6 @@ results in a quotient of 1079252848505, and a remainder of 5170
 
 ## <a name="see-also"></a>関連項目
 
-[浮動小数点サポート](../../c-runtime-library/floating-point-support.md)<br/>
+[浮動小数点のサポート](../../c-runtime-library/floating-point-support.md)<br/>
 [div](div.md)<br/>
-[ldiv、lldiv](ldiv-lldiv.md)<br/>
+[ldiv、lldiv](./div.md)<br/>

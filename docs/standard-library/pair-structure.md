@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - pair class
 ms.assetid: 539d3d67-80a2-4170-b347-783495d42109
-ms.openlocfilehash: 6ccbea23835326d1e1840d8454f86c0eb72a5a7d
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: 0a78d5074c37f4fbbfb736125626fa4b7fc7e275
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90042057"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91505756"
 ---
 # <a name="pair-structure"></a>pair 構造体
 
@@ -75,7 +75,6 @@ template<class T1, class T2>
 2番目のコンストラクターは、ペアの最初の要素を *Val1* に初期化し、2番目のコンストラクターを Val2 に初期化し *ます。*  これは、両方の型がコピーによって構築可能である場合に定義されます。
 
 3番目の (テンプレート) コンストラクターは、ペアの最初の要素をに初期化し `Right` ます。 **最初** に、2番目のをにし `Right` ます。 **second**。  これは、指定された値型から両方の型のペアが構築可能である場合に定義されます。
-
 
 4番目のコンストラクターは、ペアの最初の要素を*Val1*に初期化し、2番目のコンストラクターを[右辺値参照宣言子 ( &&](../cpp/rvalue-reference-declarator-amp-amp.md)) を使用して*Val2*に初期化します。  これは、指定された値型から両方の型のペアが構築可能である場合に定義されます。
 

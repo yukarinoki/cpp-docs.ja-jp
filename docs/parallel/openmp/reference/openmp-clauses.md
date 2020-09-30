@@ -32,12 +32,12 @@ helpviewer_keywords:
 - schedule OpenMP clause
 - shared OpenMP clause
 ms.assetid: 806e7d8f-b204-4e4c-a12c-273ab540a7ca
-ms.openlocfilehash: 1c4c7961a173eb47394d03e9aabdd14574e62b08
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 495f77003fa43922d49f2fc5203076cbf927f86f
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81363891"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91505926"
 ---
 # <a name="openmp-clauses"></a>OpenMP 句
 
@@ -45,32 +45,32 @@ OpenMP API で使用される句へのリンクを提供します。
 
 Visual C++ では、次の OpenMP 句がサポートされています。
 
-一般属性の場合:
+一般的な属性の場合:
 
 |句|説明|
 |------|-----------|
-|[if](#if-openmp)|ループを並列で実行するか、シリアルで実行するかを指定します。|
-|[num_threads](#num-threads)|スレッド チームのスレッド数を設定します。|
-|[注文](#ordered-openmp-clauses)|[順序付き](openmp-directives.md#ordered-openmp-directives)ディレクティブをループで使用する場合は、並列[for](openmp-directives.md#for-openmp)ステートメントで必要です。|
-|[スケジュール](#schedule)|[ディレクティブ](openmp-directives.md#for-openmp)に適用されます。|
-|[Nowait](#nowait)|ディレクティブ内のバリアをオーバーライドします。|
+|[if](#if-openmp)|ループを並列で実行するか、直列で実行するかを指定します。|
+|[num_threads](#num-threads)|スレッドチーム内のスレッドの数を設定します。|
+|[番号](#ordered-openmp-clauses)|[順次](openmp-directives.md#ordered-openmp-directives)ディレクティブをループで使用する場合は、parallel [for](openmp-directives.md#for-openmp)ステートメントで必要です。|
+|[schedule](#schedule)|[For](openmp-directives.md#for-openmp)ディレクティブに適用されます。|
+|[nowait](#nowait)|ディレクティブで暗黙的にバリアをオーバーライドします。|
 
-データ共用属性の場合:
+データ共有属性の場合:
 
 |句|説明|
 |------|-----------|
-|[プライベート](#private-openmp)|各スレッドが変数の独自のインスタンスを持つ必要があることを指定します。|
-|[firstprivate](#firstprivate)|各スレッドが変数の独自のインスタンスを持つ必要があり、変数が並列構成の前に存在するため、変数を変数の値で初期化する必要があることを指定します。|
-|[lastprivate](#lastprivate)|外側のコンテキストの変数のバージョンが、最後の反復 (for-loop コンストラクト) または最後のセクション (#pragma セクション) を実行するスレッドのプライベート バージョンと等しく設定されることを指定します。|
-|[共有](#shared-openmp)|1 つ以上の変数をすべてのスレッドで共有することを指定します。|
-|[default](#default-openmp)|並列領域でのスコープなしの変数の動作を指定します。|
-|[reduction](#reduction)|各スレッドに対してプライベートな 1 つ以上の変数が、並列領域の最後にある縮小演算の対象であることを指定します。|
-|[copyin](#copyin)|スレッドがスレッド[プライベート](openmp-directives.md#threadprivate)変数のマスタースレッドの値にアクセスできるようにします。|
-|[copyprivate](#copyprivate)|1 つ以上の変数をすべてのスレッドで共有することを指定します。|
+|[private](#private-openmp)|各スレッドが変数の独自のインスタンスを持つ必要があることを指定します。|
+|[firstprivate](#firstprivate)|各スレッドが変数の独自のインスタンスを持つ必要があり、変数の値を使用して変数を初期化する必要があることを指定します。これは、parallel コンストラクトの前に存在するためです。|
+|[lastprivate](#lastprivate)|外側のコンテキストの変数のバージョンが、最後の反復処理 (for ループコンストラクト) または最後のセクション (#pragma セクション) を実行するいずれかのスレッドのプライベートバージョンと等しいように設定されていることを指定します。|
+|[共用](#shared-openmp)|1つ以上の変数をすべてのスレッド間で共有することを指定します。|
+|[default](#default-openmp)|並行領域内の対象範囲外の変数の動作を指定します。|
+|[reduction](#reduction)|各スレッドに対してプライベートである1つ以上の変数が、並列領域の最後のリダクション操作の対象であることを指定します。|
+|[copyin](#copyin)|スレッドが [threadprivate](openmp-directives.md#threadprivate) 変数のマスタースレッドの値にアクセスできるようにします。|
+|[copyprivate](#copyprivate)|1つ以上の変数をすべてのスレッド間で共有することを指定します。|
 
-## <a name="copyin"></a><a name="copyin"></a>コピーイン
+## <a name="copyin"></a><a name="copyin"></a> copyin
 
-スレッドがスレッド[プライベート](openmp-directives.md#threadprivate)変数のマスタースレッドの値にアクセスできるようにします。
+スレッドが [threadprivate](openmp-directives.md#threadprivate) 変数のマスタースレッドの値にアクセスできるようにします。
 
 ```cpp
 copyin(var)
@@ -78,26 +78,26 @@ copyin(var)
 
 ### <a name="parameters"></a>パラメーター
 
-*Var*<br/>
-並列`threadprivate`構成の前に存在する、マスター スレッド内の変数の値で初期化される変数。
+*var*<br/>
+`threadprivate`Parallel コンストラクトの前に存在するように、マスタースレッドで変数の値を使用して初期化される変数。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
-`copyin`は、次のディレクティブに適用されます。
+`copyin` 次のディレクティブに適用されます。
 
-- [parallel](openmp-directives.md#parallel)
+- [対応](openmp-directives.md#parallel)
 - [for](openmp-directives.md#for-openmp)
-- [セクション](openmp-directives.md#sections-openmp)
+- [各項](openmp-directives.md#sections-openmp)
 
-詳細については、 [2.7.2.7 コピーを](../../../parallel/openmp/2-7-2-7-copyin.md)参照してください。
+詳細については、「 [2.7.2.7 copyin](../2-directives.md#2727-copyin)」を参照してください。
 
 ### <a name="example"></a>例
 
-の使用例については[、スレッドプライベート](openmp-directives.md#threadprivate)を参照`copyin`してください。
+の使用例については、「 [threadprivate](openmp-directives.md#threadprivate) 」を参照してください `copyin` 。
 
-## <a name="copyprivate"></a><a name="copyprivate"></a>Copyprivate
+## <a name="copyprivate"></a><a name="copyprivate"></a> copyprivate
 
-1 つ以上の変数をすべてのスレッドで共有することを指定します。
+1つ以上の変数をすべてのスレッド間で共有することを指定します。
 
 ```cpp
 copyprivate(var)
@@ -105,14 +105,14 @@ copyprivate(var)
 
 ### <a name="parameters"></a>パラメーター
 
-*Var*<br/>
-共有する 1 つ以上の変数。 複数の変数を指定する場合は、変数名をコンマで区切ります。
+*var*<br/>
+共有する1つ以上の変数。 複数の変数を指定する場合は、変数名をコンマで区切ります。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
-`copyprivate`[は、単一](openmp-directives.md#single)のディレクティブに適用されます。
+`copyprivate`[単一](openmp-directives.md#single)のディレクティブに適用されます。
 
-詳細については、 [2.7.2.8 copyprivate](../../../parallel/openmp/2-7-2-8-copyprivate.md)を参照してください。
+詳細については、「 [2.7.2.8 copyprivate](../2-directives.md#2728-copyprivate)」を参照してください。
 
 ### <a name="example"></a>例
 
@@ -180,33 +180,33 @@ Value = 1.008000, thread = 0
 Value = 1.008000, thread = 1
 ```
 
-## <a name="default"></a><a name="default-openmp"></a>既定
+## <a name="default"></a><a name="default-openmp"></a> 標準
 
-並列領域でのスコープなしの変数の動作を指定します。
+並行領域内の対象範囲外の変数の動作を指定します。
 
 ```cpp
 default(shared | none)
 ```
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
-`shared``default`句が指定されていない場合に有効な場合は、並列領域内の変数は[shared](#shared-openmp)句で指定されたかのように扱われます。 `none`は、プライベート 、 [shared](#shared-openmp)、 [、 reduction](#reduction)、 [firstprivate](#private-openmp)、 または[firstprivate](#firstprivate)[lastprivate](#lastprivate)句でスコープが設定されていない並列領域で使用される変数がコンパイラ エラーを引き起こすことを意味します。
+`shared`は、句が指定されていない場合に有効です。これは、 `default` 並列領域内の任意の変数が、 [shared](#shared-openmp) 句で指定されているかのように処理されることを意味します。 `none` は、 [private](#private-openmp)、 [shared](#shared-openmp)、 [reduction](#reduction)、 [firstprivate](#firstprivate)、または [a.6 lastprivate](#lastprivate) 句でスコープが設定されていない並列領域で使用される変数があると、コンパイラエラーが発生することを意味します。
 
-`default`は、次のディレクティブに適用されます。
+`default` 次のディレクティブに適用されます。
 
-- [parallel](openmp-directives.md#parallel)
+- [対応](openmp-directives.md#parallel)
 - [for](openmp-directives.md#for-openmp)
-- [セクション](openmp-directives.md#sections-openmp)
+- [各項](openmp-directives.md#sections-openmp)
 
-詳細については[、2.7.2.5 のデフォルト](../../../parallel/openmp/2-7-2-5-default.md)を参照してください。
+詳細については、「 [2.7.2.5 default](../2-directives.md#2725-default)」を参照してください。
 
 ### <a name="example"></a>例
 
-の使用例については[、private](#private-openmp)を`default`参照してください。
+の使用例については、「 [private](#private-openmp) 」を参照してください `default` 。
 
-## <a name="firstprivate"></a><a name="firstprivate"></a>最初のプライベート
+## <a name="firstprivate"></a><a name="firstprivate"></a> firstprivate
 
-各スレッドが変数の独自のインスタンスを持つ必要があり、変数が並列構成の前に存在するため、変数を変数の値で初期化する必要があることを指定します。
+各スレッドが変数の独自のインスタンスを持つ必要があり、変数の値を使用して変数を初期化する必要があることを指定します。これは、parallel コンストラクトの前に存在するためです。
 
 ```cpp
 firstprivate(var)
@@ -214,27 +214,27 @@ firstprivate(var)
 
 ### <a name="parameters"></a>パラメーター
 
-*Var*<br/>
-各スレッドにインスタンスを持ち、並列構成の前に存在するため、変数の値で初期化される変数。 複数の変数を指定する場合は、変数名をコンマで区切ります。
+*var*<br/>
+変数は、各スレッド内にインスタンスを持ち、変数の値を使用して初期化されます。これは、parallel コンストラクトの前に存在するためです。 複数の変数を指定する場合は、変数名をコンマで区切ります。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
-`firstprivate`は、次のディレクティブに適用されます。
+`firstprivate` 次のディレクティブに適用されます。
 
 - [for](openmp-directives.md#for-openmp)
-- [parallel](openmp-directives.md#parallel)
-- [セクション](openmp-directives.md#sections-openmp)
+- [対応](openmp-directives.md#parallel)
+- [各項](openmp-directives.md#sections-openmp)
 - [single](openmp-directives.md#single)
 
-詳細については、 [2.7.2.2 firstprivate](../../../parallel/openmp/2-7-2-2-firstprivate.md)を参照してください。
+詳細については、「 [2.7.2.2 firstprivate](../2-directives.md#2722-firstprivate)」を参照してください。
 
 ### <a name="example"></a>例
 
-の使用例`firstprivate`については、 [private](#private-openmp)の例を参照してください。
+の使用例については `firstprivate` 、「 [private](#private-openmp)」の例を参照してください。
 
-## <a name="if-openmp"></a><a name="if-openmp"></a>if (オープンMP)
+## <a name="if-openmp"></a><a name="if-openmp"></a> if (OpenMP)
 
-ループを並列で実行するか、シリアルで実行するかを指定します。
+ループを並列で実行するか、直列で実行するかを指定します。
 
 ```cpp
 if(expression)
@@ -242,18 +242,18 @@ if(expression)
 
 ### <a name="parameters"></a>パラメーター
 
-*式*<br/>
-true (ゼロ以外) と評価された場合に、並列領域のコードを並列実行する整数式。 式が false (ゼロ) に評価されると、並列領域はシリアル (単一のスレッド) で実行されます。
+*式 (expression)*<br/>
+True (0 以外) に評価された場合に並列領域内のコードが並列実行される整数式。 式が false (ゼロ) に評価されると、並列領域は (1 つのスレッドによって) シリアルで実行されます。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
-`if`は、次のディレクティブに適用されます。
+`if` 次のディレクティブに適用されます。
 
-- [parallel](openmp-directives.md#parallel)
+- [対応](openmp-directives.md#parallel)
 - [for](openmp-directives.md#for-openmp)
-- [セクション](openmp-directives.md#sections-openmp)
+- [各項](openmp-directives.md#sections-openmp)
 
-詳細については、 [2.3 並列構造](../../../parallel/openmp/2-3-parallel-construct.md)を参照してください。
+詳細については、「 [2.3 parallel コンストラクト](../2-directives.md#23-parallel-construct)」を参照してください。
 
 ### <a name="example"></a>例
 
@@ -291,9 +291,9 @@ val = 0, serialized
 val = 2, parallelized with 2 threads
 ```
 
-## <a name="lastprivate"></a><a name="lastprivate"></a>ラストプライベート
+## <a name="lastprivate"></a><a name="lastprivate"></a> a.6 lastprivate
 
-外側のコンテキストの変数のバージョンが、最後の反復 (for-loop コンストラクト) または最後のセクション (#pragma セクション) を実行するスレッドのプライベート バージョンと等しく設定されることを指定します。
+外側のコンテキストの変数のバージョンが、最後の反復処理 (for ループコンストラクト) または最後のセクション (#pragma セクション) を実行するいずれかのスレッドのプライベートバージョンと等しいように設定されていることを指定します。
 
 ```cpp
 lastprivate(var)
@@ -301,39 +301,39 @@ lastprivate(var)
 
 ### <a name="parameters"></a>パラメーター
 
-*Var*<br/>
-最後の反復 (for-loop コンストラクト) または最後のセクション (#pragma セクション) を実行するスレッドのプライベート バージョンと等しく設定されている変数。
+*var*<br/>
+いずれかのスレッドのプライベートバージョンと同じように設定されている変数は、最後の反復処理 (for ループコンストラクト) または最後のセクション (#pragma セクション) を実行します。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
-`lastprivate`は、次のディレクティブに適用されます。
+`lastprivate` 次のディレクティブに適用されます。
 
 - [for](openmp-directives.md#for-openmp)
-- [セクション](openmp-directives.md#sections-openmp)
+- [各項](openmp-directives.md#sections-openmp)
 
-詳細については、 [2.7.2.3 lastprivate](../../../parallel/openmp/2-7-2-3-lastprivate.md)を参照してください。
+詳細については、「 [2.7.2.3 a.6 lastprivate](../2-directives.md#2723-lastprivate)」を参照してください。
 
 ### <a name="example"></a>例
 
-句の使用例`lastprivate`については[、スケジュール](#schedule)を参照してください。
+Using 句の例については、「 [schedule](#schedule) 」を参照してください `lastprivate` 。
 
-## <a name="nowait"></a><a name="nowait"></a>Nowait
+## <a name="nowait"></a><a name="nowait"></a> nowait
 
-ディレクティブ内のバリアをオーバーライドします。
+ディレクティブで暗黙的にバリアをオーバーライドします。
 
 ```cpp
 nowait
 ```
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
-`nowait`は、次のディレクティブに適用されます。
+`nowait` 次のディレクティブに適用されます。
 
 - [for](openmp-directives.md#for-openmp)
-- [セクション](openmp-directives.md#sections-openmp)
+- [各項](openmp-directives.md#sections-openmp)
 - [single](openmp-directives.md#single)
 
-詳細については、 [2.4.1 の構成要素](../../../parallel/openmp/2-4-1-for-construct.md)[、2.4.2 セクションの構成要素](../../../parallel/openmp/2-4-2-sections-construct.md)、および[2.4.3 単一構造](../../../parallel/openmp/2-4-3-single-construct.md)を参照してください。
+詳細については、「 [2.4.1 for construct](../2-directives.md#241-for-construct)、 [2.4.2 sections コンストラクト](../2-directives.md#242-sections-construct)、および [2.4.3 single construct](../2-directives.md#243-single-construct)」を参照してください。
 
 ### <a name="example"></a>例
 
@@ -382,9 +382,9 @@ int main( )
 4, 16, 2
 ```
 
-## <a name="num_threads"></a><a name="num-threads"></a>num_threads
+## <a name="num_threads"></a><a name="num-threads"></a> num_threads
 
-スレッド チームのスレッド数を設定します。
+スレッドチーム内のスレッドの数を設定します。
 
 ```cpp
 num_threads(num)
@@ -393,43 +393,43 @@ num_threads(num)
 ### <a name="parameters"></a>パラメーター
 
 *num*<br/>
-スレッドの数
+スレッド数
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
-この`num_threads`句は[、omp_set_num_threads](openmp-functions.md#omp-set-num-threads)関数と同じ機能を持ちます。
+句には、 `num_threads` [omp_set_num_threads](openmp-functions.md#omp-set-num-threads) 関数と同じ機能があります。
 
-`num_threads`は、次のディレクティブに適用されます。
+`num_threads` 次のディレクティブに適用されます。
 
-- [parallel](openmp-directives.md#parallel)
+- [対応](openmp-directives.md#parallel)
 - [for](openmp-directives.md#for-openmp)
-- [セクション](openmp-directives.md#sections-openmp)
+- [各項](openmp-directives.md#sections-openmp)
 
-詳細については、 [2.3 並列構造](../../../parallel/openmp/2-3-parallel-construct.md)を参照してください。
+詳細については、「 [2.3 parallel コンストラクト](../2-directives.md#23-parallel-construct)」を参照してください。
 
 ### <a name="example"></a>例
 
-句の使用例`num_threads`については[、並列](openmp-directives.md#parallel)を参照してください。
+Using 句の例については、「 [parallel](openmp-directives.md#parallel) 」を参照してください `num_threads` 。
 
-## <a name="ordered"></a><a name="ordered-openmp-clauses"></a>注文
+## <a name="ordered"></a><a name="ordered-openmp-clauses"></a> 番号
 
-[順序付き](openmp-directives.md#ordered-openmp-directives)ディレクティブをループで使用する場合は、並列[for](openmp-directives.md#for-openmp)ステートメントで必要です。
+[順次](openmp-directives.md#ordered-openmp-directives)ディレクティブをループで使用する場合は、parallel [for](openmp-directives.md#for-openmp)ステートメントで必要です。
 
 ```cpp
 ordered
 ```
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
-`ordered`は[、for](openmp-directives.md#for-openmp)ディレクティブに適用されます。
+`ordered`[for](openmp-directives.md#for-openmp)ディレクティブに適用されます。
 
-詳細については、 [2.4.1 の構築を参照](../../../parallel/openmp/2-4-1-for-construct.md)してください。
+詳細については、「 [2.4.1 for コンストラクト](../2-directives.md#241-for-construct)」を参照してください。
 
 ### <a name="example"></a>例
 
-句[ordered](openmp-directives.md#ordered-openmp-directives)の使用例`ordered`については、順序付けを参照してください。
+Using 句の例については、「 [ordered](openmp-directives.md#ordered-openmp-directives) 」を参照してください `ordered` 。
 
-## <a name="private"></a><a name="private-openmp"></a>プライベート
+## <a name="private"></a><a name="private-openmp"></a> プライバシー
 
 各スレッドが変数の独自のインスタンスを持つ必要があることを指定します。
 
@@ -439,19 +439,19 @@ private(var)
 
 ### <a name="parameters"></a>パラメーター
 
-*Var*<br/>
+*var*<br/>
 各スレッドにインスタンスを持つ変数。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
-`private`は、次のディレクティブに適用されます。
+`private` 次のディレクティブに適用されます。
 
 - [for](openmp-directives.md#for-openmp)
-- [parallel](openmp-directives.md#parallel)
-- [セクション](openmp-directives.md#sections-openmp)
+- [対応](openmp-directives.md#parallel)
+- [各項](openmp-directives.md#sections-openmp)
 - [single](openmp-directives.md#single)
 
-詳細については、 [2.7.2.1 プライベート](../../../parallel/openmp/2-7-2-1-private.md)を参照してください。
+詳細については、「 [2.7.2.1 private](../2-directives.md#2721-private)」を参照してください。
 
 ### <a name="example"></a>例
 
@@ -631,9 +631,9 @@ nFirstPrivate = 4 (The value prior to entering parallel region)
        nShared = 1 (The value assigned, from the delayed thread, 1)
 ```
 
-## <a name="reduction"></a><a name="reduction"></a>削減
+## <a name="reduction"></a><a name="reduction"></a> reduction
 
-各スレッドに対してプライベートな 1 つ以上の変数が、並列領域の最後にある縮小演算の対象であることを指定します。
+各スレッドに対してプライベートである1つ以上の変数が、並列領域の最後のリダクション操作の対象であることを指定します。
 
 ```cpp
 reduction(operation:var)
@@ -641,21 +641,21 @@ reduction(operation:var)
 
 ### <a name="parameters"></a>パラメーター
 
-*操作*<br/>
-並列領域の最後にある変数*var*に対して実行する操作の演算子。
+*operation*<br/>
+並列領域の最後にある変数 *var* に対して操作を実行する演算子。
 
-*Var*<br/>
-スカラー縮小を行う 1 つ以上の変数。 複数の変数を指定する場合は、変数名をコンマで区切ります。
+*var*<br/>
+スカラーを減らすために使用する1つ以上の変数。 複数の変数を指定する場合は、変数名をコンマで区切ります。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
-`reduction`は、次のディレクティブに適用されます。
+`reduction` 次のディレクティブに適用されます。
 
-- [parallel](openmp-directives.md#parallel)
+- [対応](openmp-directives.md#parallel)
 - [for](openmp-directives.md#for-openmp)
-- [セクション](openmp-directives.md#sections-openmp)
+- [各項](openmp-directives.md#sections-openmp)
 
-詳細については[、2.7.2.6 の縮小](../../../parallel/openmp/2-7-2-6-reduction.md)を参照してください。
+詳細については、「 [2.7.2.6 reduction](../2-directives.md#2726-reduction)」を参照してください。
 
 ### <a name="example"></a>例
 
@@ -770,9 +770,9 @@ The sum of the consecutive integers from 1 to 10, is 55
 All of the functions, func1 through func5 succeeded!
 ```
 
-## <a name="schedule"></a><a name="schedule"></a>スケジュール
+## <a name="schedule"></a><a name="schedule"></a> 予定
 
-[ディレクティブ](openmp-directives.md#for-openmp)に適用されます。
+[For](openmp-directives.md#for-openmp)ディレクティブに適用されます。
 
 ```cpp
 schedule(type[,size])
@@ -781,14 +781,14 @@ schedule(type[,size])
 ### <a name="parameters"></a>パラメーター
 
 *type*<br/>
-スケジュールの種類 ( `dynamic`、 `guided` `runtime`、 `static`、 、 、 、 のいずれか ) 。
+スケジュールの種類 (、、 `dynamic` `guided` `runtime` 、または) `static` 。
 
-*サイズ*<br/>
-(オプション)反復のサイズを指定します。 *size*は整数でなければなりません。 *型*が の場合`runtime`は無効です。
+*size*<br/>
+Optionalイテレーションのサイズを指定します。 *サイズ* は整数でなければなりません。 *型*がの場合は無効です `runtime` 。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
-詳細については、 [2.4.1 の構築を参照](../../../parallel/openmp/2-4-1-for-construct.md)してください。
+詳細については、「 [2.4.1 for コンストラクト](../2-directives.md#241-for-construct)」を参照してください。
 
 ### <a name="example"></a>例
 
@@ -904,9 +904,9 @@ int main( )
 ------------------------------------------------
 ```
 
-## <a name="shared"></a><a name="shared-openmp"></a>共有
+## <a name="shared"></a><a name="shared-openmp"></a> 共用
 
-1 つ以上の変数をすべてのスレッドで共有することを指定します。
+1つ以上の変数をすべてのスレッド間で共有することを指定します。
 
 ```cpp
 shared(var)
@@ -914,21 +914,21 @@ shared(var)
 
 ### <a name="parameters"></a>パラメーター
 
-*Var*<br/>
-共有する 1 つ以上の変数。 複数の変数を指定する場合は、変数名をコンマで区切ります。
+*var*<br/>
+共有する1つ以上の変数。 複数の変数を指定する場合は、変数名をコンマで区切ります。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
-スレッド間で変数を共有するもう 1 つの方法は[、copyprivate](#copyprivate)句を使用することです。
+スレッド間で変数を共有するもう1つの方法は、 [copyprivate](#copyprivate) 句を使用することです。
 
-`shared`は、次のディレクティブに適用されます。
+`shared` 次のディレクティブに適用されます。
 
-- [parallel](openmp-directives.md#parallel)
+- [対応](openmp-directives.md#parallel)
 - [for](openmp-directives.md#for-openmp)
-- [セクション](openmp-directives.md#sections-openmp)
+- [各項](openmp-directives.md#sections-openmp)
 
-詳細については[、2.7.2.4 共有](../../../parallel/openmp/2-7-2-4-shared.md)を参照してください。
+詳細については、「 [2.7.2.4 shared](../2-directives.md#2724-shared)」を参照してください。
 
 ### <a name="example"></a>例
 
-の使用例については[、private](#private-openmp)を`shared`参照してください。
+の使用例については、「 [private](#private-openmp) 」を参照してください `shared` 。

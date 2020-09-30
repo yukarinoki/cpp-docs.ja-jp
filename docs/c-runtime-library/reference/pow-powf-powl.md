@@ -40,12 +40,12 @@ helpviewer_keywords:
 - powf function
 - pow function
 ms.assetid: e75c33ed-2e59-48b1-be40-81da917324f1
-ms.openlocfilehash: 58d23f53de8dc5323fe0818611bccb647984fd9b
-ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
+ms.openlocfilehash: 8fb6679e2b509274b4ea60c410a81b54df866416
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89555762"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91505566"
 ---
 # <a name="pow-powf-powl"></a>pow、powf、powl
 
@@ -57,7 +57,7 @@ ms.locfileid: "89555762"
 double pow( double x, double y );
 float powf( float x, float y );
 long double powl( long double x, long double y );
-define pow(X, Y) // Requires C11 or higher 
+define pow(X, Y) // Requires C11 or higher
 
 double pow( double x, int y );  // C++ only
 float pow( float x, float y );  // C++ only
@@ -84,7 +84,7 @@ long double pow( long double x, int y );  // C++ only
 |*x* = = 0.0 および *y* = = 0.0|1|
 |*x* = = 0.0 および *y* < 0|INF|
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>注釈
 
 **pow** は、2<sup>64</sup> を超える整数の浮動小数点値を認識しません (たとえば、1.0 e100)。
 

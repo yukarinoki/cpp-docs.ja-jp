@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3345
 ms.assetid: 1dda4c79-73bb-441b-b939-746154c3afba
-ms.openlocfilehash: e6962e5c127a92acc5dfdad580c7bc89fa134751
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 8682069fdf719f4e85d1d6f5107de1903e3ae071
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74753446"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91504838"
 ---
 # <a name="compiler-error-c3345"></a>コンパイラ エラー C3345
 
@@ -23,7 +23,7 @@ ms.locfileid: "74753446"
 
 1. *識別子* に空白またはその他の無効な文字が含まれていないことを確認します。
 
-## <a name="example"></a>使用例
+## <a name="example"></a>例
 
 次のコード例では、 `name` 属性の `module` パラメーターに空白が含まれているので、エラー メッセージ C3345 が発生します。
 
@@ -52,8 +52,8 @@ BOOL WINAPI DllMain(DWORD dwReason, LPVOID lpReserved) {
 };
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [__iscsym](../../c-runtime-library/reference/iscsym-functions.md)<br/>
 [文字分類](../../c-runtime-library/character-classification.md)<br/>
-[module](../../windows/module-cpp.md)
+[第](../../windows/attributes/module-cpp.md)
