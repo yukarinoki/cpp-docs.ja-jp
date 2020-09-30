@@ -3,12 +3,12 @@ title: C++ 準拠の強化
 ms.date: 08/04/2020
 description: Visual Studio の Microsoft C++ は、C++20 言語標準との完全準拠に向かって進んでいます。
 ms.technology: cpp-language
-ms.openlocfilehash: 3a0e21bf08fcf7861feedd3fd43666bd3768deee
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: 3cf06b092b79068b22e62dfdbbcfbd2c2cf5ad91
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90042122"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91500249"
 ---
 # <a name="c-conformance-improvements-in-visual-studio"></a>Visual Studio の C++ 準拠の強化
 
@@ -1432,7 +1432,7 @@ int main()
 
 - rvalue コンテナーを受け取るコンテナー結合関数およびメンバー抽出関数に対してオーバーロードが追加されました 詳細については、[P0083 「マップと設定のスプライス」](https://wg21.link/p0083r3)を参照してください
 
-### <a name="stdbasic_istreamread-processing-of-rn--n"></a>`std::basic_istream::read` での `\r\n`` => `\n` の処理
+### <a name="stdbasic_istreamread-processing-of-rn-n"></a>`std::basic_istream::read` での `\r\n`` =>`\n` の処理
 
 `\r\n` => `\n` 処理の一環として、与えられたバッファーの一部を一時的に書き込まないよう、`std::basic_istream::read` が修正されました。 この変更により、Visual Studio 2017 15.8 において 4K を超える読み込みで得られるパフォーマンス上のいくつかの長所を放棄することになります。 ただし、文字ごとに 3 つの仮想呼び出しを回避することから得られる効率性の改善が残されています。
 
@@ -1621,7 +1621,7 @@ void f(E e) {
 
 ## <a name="conformance-improvements-in-visual-studio-2017-rtw-version-150"></a><a name="improvements_150"></a> Visual Studio 2017 RTW (バージョン 15.0) の準拠の強化
 
-Visual Studio 2017 の Microsoft C++ コンパイラは、汎用の **`constexpr`** および集計用の非静的データ メンバーの初期化 (NSDMI) のサポートと共に、C++ 14 標準で追加されたすべての機能に対応するようになりました。 ただし、コンパイラには、C++11 標準および C++98 標準の一部の機能がありません。 コンパイラの現在の状態については、「[Microsoft C++ 言語の準拠表](../visual-cpp-language-conformance.md)」を参照してください。
+Visual Studio 2017 の Microsoft C++ コンパイラは、汎用の **`constexpr`** および集計用の非静的データ メンバーの初期化 (NSDMI) のサポートと共に、C++ 14 標準で追加されたすべての機能に対応するようになりました。 ただし、コンパイラには、C++11 標準および C++98 標準の一部の機能がありません。 コンパイラの現在の状態については、「[Microsoft C++ 言語の準拠表](./visual-cpp-language-conformance.md)」を参照してください。
 
 ### <a name="c11-expression-sfinae-support-in-more-libraries"></a>C++11:より多くのライブラリでの SFINAE 式のサポート
 
@@ -3647,7 +3647,7 @@ note: see usage of 'g'.
 
 ## <a name="c-conformance-improvements-in-visual-studio-2015"></a>Visual Studio 2015 の C++ 準拠の強化
 
-Visual Studio 2015 更新プログラム 3 での準拠の機能強化の完全な一覧が用意されています。 詳細については、「[Visual C++ 2003 ～ 2015 の新機能](/cpp/porting/visual-cpp-what-s-new-2003-through-2015)」を参照してください。
+Visual Studio 2015 更新プログラム 3 での準拠の機能強化の完全な一覧が用意されています。 詳細については、「[Visual C++ 2003 ～ 2015 の新機能](../porting/visual-cpp-what-s-new-2003-through-2015.md)」を参照してください。
 
 ::: moniker-end
 

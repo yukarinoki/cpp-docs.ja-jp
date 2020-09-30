@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Visual C++, development tools
 author: corob-msft
 ms.author: corob
-ms.openlocfilehash: 02364f778cdab3416cbac7cc1462ce79287b1ad9
-ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
+ms.openlocfilehash: 5a03590074d8de05153b2d9442da8b916e6eba82
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90684366"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91500276"
 ---
 # <a name="overview-of-c-development-in-visual-studio"></a>Visual Studio での C++ 開発の概要
 
@@ -75,7 +75,7 @@ Git と Azure のリポジトリの統合については、「[Share your code w
 
 ユニバーサル Windows プラットフォーム アプリのユーザー インターフェイスの設計方法について詳しくは、[デザインと UI](https://developer.microsoft.com/windows/design) に関するページを参照してください。
 
-MFC アプリケーションのユーザー インターフェイスの作成方法については、「[MFC デスクトップ アプリケーション](../mfc/mfc-desktop-applications.md)」を参照してください。 Win32 Windows プログラムについては、「[Windows デスクトップ アプリケーション](../windows/windows-desktop-applications-cpp.md)」を参照してください。
+MFC アプリケーションのユーザー インターフェイスの作成方法については、「[MFC デスクトップ アプリケーション](../mfc/mfc-desktop-applications.md)」を参照してください。 Win32 Windows プログラムについては、「[Windows デスクトップ アプリケーション](../windows/desktop-applications-visual-cpp.md)」を参照してください。
 
 ## <a name="write-code"></a>コードの記述
 
@@ -117,7 +117,7 @@ Visual Studio には、C++ 用の Microsoft 単体テスト フレームワー�
 
 ## <a name="analyze"></a>解析
 
-Visual Studio には、ソース コードの潜在的な問題を検出できる静的コード分析ツールが含まれています。 それらのツールには、[C++ Core Guidelines](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md) ルール チェッカーの実装が含まれています。 詳細については、「[C/C++ のコード分析の概要](/cpp/code-quality/code-analysis-for-c-cpp-overview)」を参照してください。
+Visual Studio には、ソース コードの潜在的な問題を検出できる静的コード分析ツールが含まれています。 それらのツールには、[C++ Core Guidelines](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md) ルール チェッカーの実装が含まれています。 詳細については、「[C/C++ のコード分析の概要](../code-quality/code-analysis-for-c-cpp-overview.md)」を参照してください。
 
 ## <a name="deploy-completed-applications"></a>完成したアプリケーションの配置
 

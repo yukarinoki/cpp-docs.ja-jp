@@ -5,12 +5,12 @@ ms.date: 07/02/2019
 ms.technology: cpp-ide
 helpviewer_keywords:
 - Visual C++, home page
-ms.openlocfilehash: adcf1334979fd083a4f32074f13b0bc204405a5c
-ms.sourcegitcommit: f7ebdfc3a260778c2ef938747cba1376c70ced15
+ms.openlocfilehash: cde4bf73548df2dd7f65e20aa39fa7275dd7e11b
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84108433"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91500160"
 ---
 # <a name="c-in-visual-studio"></a>Visual Studio での C++
 
@@ -82,7 +82,7 @@ C++ エディターの生産性機能を使用し、コードのリファクタ�
 [ネイティブ コードのデバッグ](/visualstudio/debugger/debugging-native-code)<br/>
 C++ プロジェクトで Visual Studio デバッガーを使用します。
 
-[C/C++ のコード分析の概要](/cpp/code-quality/code-analysis-for-c-cpp-overview)<br/>
+[C/C++ のコード分析の概要](../code-quality/code-analysis-for-c-cpp-overview.md)<br/>
 静的な分析を行うために、SAL 注釈または C++ Core Guidelines チェッカーを使用します。
 
 [Visual Studio で C/C++ 用の単体テストを作成する](/visualstudio/test/writing-unit-tests-for-c-cpp)<br/>
@@ -152,7 +152,7 @@ CPU で実行する非同期および並列アルゴリズム。
 [C++ AMP (C++ Accelerated Massive Parallelism)](../parallel/amp/cpp-amp-cpp-accelerated-massive-parallelism.md)<br/>
 GPU で実行する膨大な並列アルゴリズム。
 
-[Windows ランタイム C++ テンプレート ライブラリ (WRL)](../windows/windows-runtime-cpp-template-library-wrl.md)<br/>
+[Windows ランタイム C++ テンプレート ライブラリ (WRL)](../cppcx/wrl/windows-runtime-cpp-template-library-wrl.md)<br/>
 ユニバーサル Windows プラットフォーム (UWP) アプリとコンポーネント。
 
 [C++/CLI による .NET プログラミング](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)<br/>
