@@ -34,12 +34,12 @@ helpviewer_keywords:
 - m_dwRef
 - m_iRowset
 ms.assetid: 06d9621d-60cc-4508-8b0c-528d1b1a809b
-ms.openlocfilehash: c332fc0c653bbde3a69421b8166d4d099eaeeaf4
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: c0d7ea0966b9a582e4a6969573458bca2e8a0fea
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88841078"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91507227"
 ---
 # <a name="csimplerow-class"></a>CSimpleRow クラス
 
@@ -73,9 +73,9 @@ class CSimpleRow
 |[m_dwRef](#dwref)|既存の行ハンドルに対する参照カウント。|
 |[m_iRowset](#irowset)|カーソルを表す行セットへのインデックス。|
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>注釈
 
-行ハンドルは、論理的には結果行の一意のタグです。 `IRowsetImpl``CSimpleRow` [IRowsetImpl:: GetNextRows](../../data/oledb/irowsetimpl-getnextrows.md)で要求されたすべての行に対して新しいを作成します。 `CSimpleRow` は、の既定のテンプレート引数であるため、行ハンドルの独自の実装に置き換えることもでき `IRowsetImpl` ます。 このクラスを置き換える唯一の要件は、置換クラスに **LONG**型の1つのパラメーターを受け取るコンストラクターを提供させることです。
+行ハンドルは、論理的には結果行の一意のタグです。 `IRowsetImpl``CSimpleRow` [IRowsetImpl:: GetNextRows](./irowsetimpl-class.md#getnextrows)で要求されたすべての行に対して新しいを作成します。 `CSimpleRow` は、の既定のテンプレート引数であるため、行ハンドルの独自の実装に置き換えることもでき `IRowsetImpl` ます。 このクラスを置き換える唯一の要件は、置換クラスに **LONG**型の1つのパラメーターを受け取るコンストラクターを提供させることです。
 
 ## <a name="csimplerowaddrefrow"></a><a name="addrefrow"></a> CSimpleRow:: AddRefRow
 
@@ -121,9 +121,9 @@ CSimpleRow(DBCOUNTITEM iRowsetCur);
 *iRowsetCur*<br/>
 から現在の行セットへのインデックス。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
-[M_iRowset](../../data/oledb/csimplerow-m-irowset.md)を*iRowsetCur*に設定します。
+[M_iRowset](#irowset)を*iRowsetCur*に設定します。
 
 ## <a name="csimplerowreleaserow"></a><a name="releaserow"></a> CSimpleRow:: ReleaseRow
 

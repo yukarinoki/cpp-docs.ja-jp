@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - std::charconv [C++], to_chars
 - std::charconv [C++], from_chars
-ms.openlocfilehash: b8117f2a272f33be2bb5fef6ba8fa53ec794b63b
-ms.sourcegitcommit: f1752bf90b4f869633a859ace85439ca19e208b2
+ms.openlocfilehash: cde2ae6b6275543ec74d859b9a953f8673da9c2b
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88722155"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91507754"
 ---
 # <a name="ltcharconvgt-functions"></a>&lt;charconv &gt; 関数
 
@@ -94,7 +94,7 @@ to_chars_result to_chars(char* first, char* last, long double value, chars_forma
 
 変換の結果を格納している [to_chars_result](to-chars-result-structure.md) 。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 [Chars_format](chars-format-class.md)パラメーターを受け取る関数は、次のようにを使用しているかのように変換指定子を決定します。がの場合、変換指定子は、がの場合は、がである場合は、がである場合はになり、がの場合はになり `printf()` `'f'` `fmt` `chars_format::fixed` `'e'` `fmt` `chars_format::scientific` `'a'` `0x` `fmt` `chars_format::hex` `'g'` `fmt` `chars_format::general` ます。 最短の固定表記法を指定しても、値が非常に大きい場合や非常に小さい場合には、最小の表現になる可能性があるため、出力が長くなる可能性があります。
 
@@ -121,7 +121,7 @@ template <typename T> void TestToChars(const T t)
     char buf[100]; // 100 is large enough for double and long double values because the longest possible outputs are "-1.23456735e-36" and "-1.2345678901234567e-100".
     constexpr size_t size = IsFloat ? 15 : 24;
     const std::to_chars_result res = std::to_chars(buf, buf + size, t);  // points to buffer area it can use. Must be char, not wchar_t, etc.
-    
+
     if (res.ec == std::errc{}) // no error
     {
         // %.*s provides the exact number of characters to output because the output range, [buf, res.ptr), isn't null-terminated
@@ -183,7 +183,7 @@ from_chars_result from_chars(const char* first, const char* last, long double& v
 *fmt*\
 浮動小数点変換の場合は、変換される文字のシーケンスの形式。 詳細については、「 [chars_format](chars-format-class.md) 」を参照してください。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 `from_chars()`関数は文字列を分析し \[ `first` `last` ます。) では、数値パターン () \[ `first` `last` は有効な範囲である必要があります。
 

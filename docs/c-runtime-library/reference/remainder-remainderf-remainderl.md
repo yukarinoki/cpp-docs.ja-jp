@@ -35,12 +35,12 @@ helpviewer_keywords:
 - remainderl
 - remainder
 ms.assetid: 5f721fb3-8b78-4597-9bc0-ca9bcd1f1d0e
-ms.openlocfilehash: ef2b326bef2288b52dba8988749e030ff0b46077
-ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
+ms.openlocfilehash: 288d6b0d373a5b318a139b030181c671e2c01048
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89556010"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91507573"
 ---
 # <a name="remainder-remainderf-remainderl"></a>remainder、remainderf、remainderl
 
@@ -70,7 +70,7 @@ long double remainder( long double x, long double y ); /* C++ only */
 
 *X*y の浮動小数点の剰余  /  *y*。 *Y*の値が0.0 の場合、**剰余**は簡易な NaN を返します。 **Printf**ファミリによる簡易な NaN の表現については、「 [printf、_printf_l、wprintf、_wprintf_l](printf-printf-l-wprintf-wprintf-l.md)」を参照してください。
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>注釈
 
 **剰余**関数は x y*の浮動小数点の剰余* *r*を計算します。  /  *y* *x*  =  *n* \* *y*  +  *r*ここで、 *n*は x y の値に最も近い*x*整数、n は  /  *y* &#124; *n* *n*  -  *x*  /  *y* &#124; = 1/2 になるたびに n になります。 *R* = 0 の場合、 *r*は*x*と同じ符号を持ちます。
 
@@ -80,9 +80,9 @@ C++ ではオーバーロードが可能であるため、またはの値を受�
 
 既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-|関数|必須ヘッダー (C)|必須ヘッダー (C++)|
+|機能|必須ヘッダー (C)|必須ヘッダー (C++)|
 |--------------|---------------------|-|
 |**残り、残りの部分**は **、** 残って**います。**|\<math.h>|\<cmath> または \<math.h>|
 |**剰余** マクロ | \<tgmath.h> ||
@@ -114,7 +114,7 @@ The remainder of -10.00 / 3.00 is -1.000000
 ## <a name="see-also"></a>関連項目
 
 [浮動小数点のサポート](../../c-runtime-library/floating-point-support.md)\
-[ldiv、lldiv](ldiv-lldiv.md)\
+[ldiv、lldiv](./div.md)\
 [imaxdiv](imaxdiv.md)\
 [fmod、fmodf](fmod-fmodf.md)\
 [remquo、remquof、remquol](remquo-remquof-remquol.md)

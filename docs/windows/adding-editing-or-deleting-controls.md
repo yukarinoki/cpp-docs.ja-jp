@@ -42,18 +42,18 @@ helpviewer_keywords:
 - RichEdit 1.0 control
 - rich edit controls [C++], RichEdit 1.0
 ms.assetid: 73cef03f-5c8c-456a-87d1-1458dff185cf
-ms.openlocfilehash: 79ea16e2d1737063040302a1ce111d275ae28e27
-ms.sourcegitcommit: d9c94dcabd94537e304be0261b3263c2071b437b
+ms.openlocfilehash: be2923c98ed1b92d4aeb2692591abcaf9f13c5ec
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91352753"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91508828"
 ---
 # <a name="how-to-add-edit-or-delete-controls-c"></a>方法: コントロールを追加、編集、または削除する (C++)
 
 ダイアログ **エディター**を使用すると、ダイアログボックス内のコントロールの追加、サイズ変更、編集、および削除を行うことができます。 また、ID などのコントロールのプロパティや、実行時に最初に表示されるかどうかを編集することもできます。
 
-ダイアログ**エディターで**作業している場合は、[[ツールボックス] ウィンドウ](/visualstudio/ide/reference/toolbox)に [**ダイアログエディター** ] タブが表示されます。 **ツールボックス**ウィンドウをカスタマイズして、簡単に使用できるようにすることもできます。 詳細については、「 [ツールボックスの使用](/visualstudio/ide/using-the-toolbox) 」および「 [ツールボックスウィンドウの表示と非表示](showing-or-hiding-the-dialog-editor-toolbar.md)を切り替える」を参照してください。
+ダイアログ**エディターで**作業している場合は、[[ツールボックス] ウィンドウ](/visualstudio/ide/reference/toolbox)に [**ダイアログエディター** ] タブが表示されます。 **ツールボックス**ウィンドウをカスタマイズして、簡単に使用できるようにすることもできます。 詳細については、「 [ツールボックスの使用](/visualstudio/ide/using-the-toolbox) 」および「 [ツールボックスウィンドウの表示と非表示](./dialog-editor.md)を切り替える」を参照してください。
 
 > [!TIP]
 > **ダイアログエディター**を使用する場合、多くの場合、マウスの右ボタンを選択すると、頻繁に使用するコマンドのショートカットメニューを表示できます。
@@ -94,7 +94,7 @@ ms.locfileid: "91352753"
 1. マウスのボタンを離します。 指定したサイズのダイアログボックスにコントロールが表示されます。
 
 > [!TIP]
-> コントロールの境界線のサイズ変更ハンドルを移動すると、ダイアログボックスにドロップした後でコントロールのサイズを変更できます。 詳細については、「 [個々のコントロールのサイズ変更](../windows/sizing-individual-controls.md)」を参照してください。
+> コントロールの境界線のサイズ変更ハンドルを移動すると、ダイアログボックスにドロップした後でコントロールのサイズを変更できます。 詳細については、「 [個々のコントロールのサイズ変更](./arrangement-of-controls-on-dialog-boxes.md)」を参照してください。
 
 ### <a name="to-add-a-custom-control"></a>カスタム コントロールを追加するには
 
@@ -129,7 +129,7 @@ ms.locfileid: "91352753"
 
 1. **Ctrl**キーを押しながら、ダイアログボックスコントロールをダブルクリックします。
 
-   [メンバー変数の追加ウィザード](../ide/add-member-variable-wizard.md)が表示されます。
+   [メンバー変数の追加ウィザード](../ide/adding-a-member-variable-visual-cpp.md#add-member-variable-wizard)が表示されます。
 
 1. [ **メンバー変数の追加** ウィザード] に適切な情報を入力します。 詳細については、「 [ダイアログデータエクスチェンジ](../mfc/dialog-data-exchange.md)」を参照してください。
 

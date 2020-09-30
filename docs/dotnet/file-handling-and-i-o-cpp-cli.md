@@ -1,5 +1,5 @@
 ---
-title: ファイル処理と I/o (C +/cli CLI)
+title: ファイル処理と i/o (C++/CLI)
 ms.date: 11/04/2016
 helpviewer_keywords:
 - .NET Framework [C++], file handling
@@ -24,12 +24,12 @@ helpviewer_keywords:
 - files [C++], text
 - text files, writing in C++
 ms.assetid: 3296fd59-a83a-40d4-bd4a-6096cc13101b
-ms.openlocfilehash: 7009c0b017c403c3f0108aa84b8ddb25a1d1564f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a1cfdc4239506f22368753d8c37765e550d9b835
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62325001"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91508941"
 ---
 # <a name="file-handling-and-io-ccli"></a>ファイル処理と I/O (C++/CLI)
 
@@ -37,7 +37,7 @@ ms.locfileid: "62325001"
 
 次のトピックでは、<xref:System.IO> 名前空間で定義されたクラスを使用してさまざまなファイル操作を実行する方法について説明します。
 
-## <a name="enumerate"></a> ディレクトリ内のファイルを列挙します。
+## <a name="enumerate-files-in-a-directory"></a><a name="enumerate"></a> ディレクトリ内のファイルを列挙する
 
 ディレクトリ内のファイル リストを取得する方法を次のコード例に示します。 また、サブディレクトリも列挙します。 <xref:System.IO.Directory.GetFiles%2A><xref:System.IO.Directory.GetFiles%2A> メソッドと <xref:System.IO.Directory.GetDirectories%2A> メソッドを使用して、C:\Windows ディレクトリの内容を表示する方法を次のコード例に示します。
 
@@ -66,9 +66,9 @@ int main()
 }
 ```
 
-## <a name="monitor"></a> ファイル システムの変更の監視
+## <a name="monitor-file-system-changes"></a><a name="monitor"></a> ファイルシステムの変更の監視
 
-次のコード例では<xref:System.IO.FileSystemWatcher>作成、変更、削除、または名前が変更されたファイルに対応するイベントを登録します。 ディレクトリのファイルへの変更を定期的にポーリングするには、代わりに使用することができます、<xref:System.IO.FileSystemWatcher>変更が検出されたときにイベントを発生させるクラス。
+次のコード例では、を使用し <xref:System.IO.FileSystemWatcher> て、作成、変更、削除、または名前を変更するファイルに対応するイベントを登録します。 ファイルへの変更をディレクトリに定期的にポーリングするのではなく、クラスを使用して、 <xref:System.IO.FileSystemWatcher> 変更が検出されたときにイベントを発生させることができます。
 
 ### <a name="example"></a>例
 
@@ -132,11 +132,11 @@ int main()
 }
 ```
 
-## <a name="read_binary"></a> バイナリ ファイルを読み込む
+## <a name="read-a-binary-file"></a><a name="read_binary"></a> バイナリファイルの読み取り
 
 次のコード例では、<xref:System.IO?displayProperty=fullName> の名前空間の 2 つのクラス <xref:System.IO.FileStream> と <xref:System.IO.BinaryReader> を使用して、ファイルからバイナリ データを読み取る方法を示します。 <xref:System.IO.FileStream> は実際のファイルを表し、 <xref:System.IO.BinaryReader> はバイナリへのアクセスを可能にするストリームへのインターフェイスを提供します。
 
-このコード例は、data.bin という名前のファイルを読み取り、整数をバイナリ形式で含めます。 この種類のファイルについては、次を参照してください。[方法。バイナリ ファイルを書き込む (C +/cli CLI)](../dotnet/how-to-write-a-binary-file-cpp-cli.md)します。
+このコード例は、data.bin という名前のファイルを読み取り、整数をバイナリ形式で含めます。 この種類のファイルの詳細については、「 [方法: バイナリファイルを書き込む (C++/cli)](#write_binary)」を参照してください。
 
 ### <a name="example"></a>例
 
@@ -173,11 +173,11 @@ int main()
 }
 ```
 
-## <a name="read_text"></a> テキスト ファイルを読み込む
+## <a name="read-a-text-file"></a><a name="read_text"></a> テキストファイルの読み取り
 
 <xref:System.IO.StreamReader> クラスを使用して、テキスト ファイルを一度に 1 行ずつ開いて読み取る方法を次の例に示します。このクラスは、<xref:System.IO?displayProperty=fullName> 名前空間で定義されています。 このクラスのインスタンスを使用してテキスト ファイルを開いてから、<xref:System.IO.StreamReader.ReadLine%2A?displayProperty=fullName> メソッドを使用して各行を取得します。
 
-このコード例では、テキストが含まれる textfile.txt というファイルを読み取ります。 この種類のファイルについては、次を参照してください。[方法。テキスト ファイルを書き込む (C +/cli CLI)](../dotnet/how-to-write-a-text-file-cpp-cli.md)します。
+このコード例では、テキストが含まれる textfile.txt というファイルを読み取ります。 この種類のファイルの詳細については、「 [方法: テキストファイルを書き込む (C++/cli)](#write_text)」を参照してください。
 
 ### <a name="example"></a>例
 
@@ -216,7 +216,7 @@ int main()
 }
 ```
 
-## <a name="retrieve"></a> ファイル情報を取得します。
+## <a name="retrieve-file-information"></a><a name="retrieve"></a> ファイル情報の取得
 
 <xref:System.IO.FileInfo> クラスのコード例を次に示します。 ファイル名がわかっている場合、このクラスを使用して、ファイル サイズ、ディレクトリ、完全名、ファイルの作成日時や最終更新日時などのファイル情報を取得できます。
 
@@ -257,11 +257,11 @@ int main()
 }
 ```
 
-## <a name="write_binary"></a> バイナリ ファイルを書き込む
+## <a name="write-a-binary-file"></a><a name="write_binary"></a> バイナリファイルを書き込む
 
 バイナリ データをファイルに書き込む方法を次のコード例に示します。 <xref:System.IO> 名前空間の 2 つのクラス、<xref:System.IO.FileStream> と <xref:System.IO.BinaryWriter> が使用されます。 <xref:System.IO.FileStream> は実際のファイルを表し、<xref:System.IO.BinaryWriter> はバイナリへのアクセスを可能にするストリームへのインターフェイスを提供します。
 
-バイナリ形式の整数を含むファイルを書き込む方法を次のコード例に示します。 内のコードでこのファイルを読み取れる[方法。バイナリ ファイルの読み取り (C +/cli CLI)](../dotnet/how-to-read-a-binary-file-cpp-cli.md)します。
+バイナリ形式の整数を含むファイルを書き込む方法を次のコード例に示します。 このファイルは、「 [方法: バイナリファイルを読み取る (C++/cli)](#read_binary)」のコードを使用して読み取ることができます。
 
 ### <a name="example"></a>例
 
@@ -300,7 +300,7 @@ int main()
 }
 ```
 
-## <a name="write_text"></a> テキスト ファイルを書き込む
+## <a name="write-a-text-file"></a><a name="write_text"></a> テキストファイルの書き込み
 
 テキスト ファイルを作成し、<xref:System.IO.StreamWriter> クラスを使用してそのファイルにテキストを書き込む方法を次の例に示します。このクラスは、<xref:System.IO> 名前空間で定義されています。 <xref:System.IO.StreamWriter> コンストラクターは、作成されるファイル名を受け取ります。 ファイルが存在する場合、そのファイルに上書きされます (ただし、2 番目の <xref:System.IO.StringWriter> コンストラクター引数として True を渡す場合は例外です)。
 
@@ -334,6 +334,6 @@ int main()
 
 ## <a name="see-also"></a>関連項目
 
-[C++/CLI (Visual C++) による .NET プログラミング](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)<br/>
+[C++/CLI を使用した .NET プログラミング (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)<br/>
 [ファイルおよびストリーム入出力](/dotnet/standard/io/index)<br/>
 [System.IO 名前空間](/dotnet/api/system.io)

@@ -33,12 +33,12 @@ helpviewer_keywords:
 - m_strCommandText
 - m_strIndexText
 ms.assetid: e97614b3-b11d-4806-a0d3-b9401331473f
-ms.openlocfilehash: dbd1629070b78f43d94efd06155f2f12c2a9e76e
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: cca74504c80b964b14742e7405953ad68764aa62
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88841117"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91507261"
 ---
 # <a name="crowsetimpl-class"></a>CRowsetImpl クラス
 
@@ -86,15 +86,15 @@ class CRowsetImpl :
 | 名前 | 説明 |
 |-|-|
 |[NameFromDBID](#namefromdbid)|から文字列を抽出 `DBID` し、渡された *bstr* にコピーします。|
-|[SetCommandText](#setcommandtext)|を検証し、 `DBID` 2 つの文字列 ([m_strCommandText](../../data/oledb/crowsetimpl-m-strcommandtext.md) および [m_strIndexText](../../data/oledb/crowsetimpl-m-strindextext.md)) に格納します。|
+|[SetCommandText](#setcommandtext)|を検証し、 `DBID` 2 つの文字列 ([m_strCommandText](#strcommandtext) および [m_strIndexText](#strindextext)) に格納します。|
 
 ### <a name="overridable-methods"></a>オーバーライド可能なメソッド
 
 | 名前 | 説明 |
 |-|-|
 |[GetColumnInfo](#getcolumninfo)|特定のクライアント要求の列情報を取得します。|
-|[GetCommandFromID](#getcommandfromid)|いずれかまたは両方のパラメーターに文字列値が含まれているかどうかを確認します。存在する場合は、 [m_strCommandText](../../data/oledb/crowsetimpl-m-strcommandtext.md) のデータメンバーに文字列値をコピーし、 [m_strIndexText](../../data/oledb/crowsetimpl-m-strindextext.md)します。|
-|[ValidateCommandID](#validatecommandid)|とのどちらか一方または両方に文字列値が含まれているかどうかを確認 `DBID` します。存在する場合は、データメンバー [m_strCommandText](../../data/oledb/crowsetimpl-m-strcommandtext.md) および [m_strIndexText](../../data/oledb/crowsetimpl-m-strindextext.md)にコピーします。|
+|[GetCommandFromID](#getcommandfromid)|いずれかまたは両方のパラメーターに文字列値が含まれているかどうかを確認します。存在する場合は、 [m_strCommandText](#strcommandtext) のデータメンバーに文字列値をコピーし、 [m_strIndexText](#strindextext)します。|
+|[ValidateCommandID](#validatecommandid)|とのどちらか一方または両方に文字列値が含まれているかどうかを確認 `DBID` します。存在する場合は、データメンバー [m_strCommandText](#strcommandtext) および [m_strIndexText](#strindextext)にコピーします。|
 
 ### <a name="data-members"></a>データ メンバー
 
@@ -104,7 +104,7 @@ class CRowsetImpl :
 |[m_strCommandText](#strcommandtext)|行セットの初期コマンドが含まれています。|
 |[m_strIndexText](#strindextext)|行セットの初期インデックスが含まれています。|
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>注釈
 
 `CRowsetImpl` 静的アップキャストの形式でオーバーライドを提供します。 メソッドは、指定された行セットがコマンドテキストを検証する方法を制御します。 `CRowsetImpl`実装インターフェイスを複数継承することで、独自のスタイルのクラスを作成できます。 実装を提供する必要があるメソッドは、だけです `Execute` 。 作成しようとしている行セットの種類によっては、の作成者メソッドでの異なるシグネチャが想定され `Execute` ます。 たとえば、派生クラスを使用して `CRowsetImpl` スキーマ行セットを実装している場合、 `Execute` メソッドは次のシグネチャを持ちます。
 
@@ -114,7 +114,7 @@ class CRowsetImpl :
 
 `HRESULT Execute(LONG* pcRows, DBPARAMS* pParams)`
 
-の派生メソッドを実装するには、 `CRowsetImpl` `Execute` 内部データバッファー ([m_rgRowData](../../data/oledb/crowsetimpl-m-rgrowdata.md)) を設定する必要があります。
+の派生メソッドを実装するには、 `CRowsetImpl` `Execute` 内部データバッファー ([m_rgRowData](#rgrowdata)) を設定する必要があります。
 
 ## <a name="crowsetimplnamefromdbid"></a><a name="namefromdbid"></a> CRowsetImpl:: NameFromDBID
 
@@ -143,13 +143,13 @@ HRESULT CRowsetBaseImpl::NameFromDBID(DBID* pDBID,
 
 標準の HRESULT です。 `DBID`がテーブルとインデックスのどちらであるか ( *bindex*によって示されます) に応じて、メソッドは DB_E_NOINDEX または DB_E_NOTABLE を返します。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
-このメソッドは、 `CRowsetImpl` [Validatecommandid](../../data/oledb/crowsetimpl-validatecommandid.md) と [getcommandfromid](../../data/oledb/crowsetimpl-getcommandfromid.md)の実装によって呼び出されます。
+このメソッドは、 `CRowsetImpl` [Validatecommandid](#validatecommandid) と [getcommandfromid](#getcommandfromid)の実装によって呼び出されます。
 
 ## <a name="crowsetimplsetcommandtext"></a><a name="setcommandtext"></a> CRowsetImpl:: SetCommandText
 
-を検証し、 `DBID` 2 つの文字列 ([m_strCommandText](../../data/oledb/crowsetimpl-m-strcommandtext.md) および [m_strIndexText](../../data/oledb/crowsetimpl-m-strindextext.md)) に格納します。
+を検証し、 `DBID` 2 つの文字列 ([m_strCommandText](#strcommandtext) および [m_strIndexText](#strindextext)) に格納します。
 
 ### <a name="syntax"></a>構文
 
@@ -170,11 +170,11 @@ HRESULT CRowsetBaseImpl::SetCommandText(DBID* pTableID,
 
 標準の HRESULT です。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 `SetCommentText`メソッドは `CreateRowset` 、の静的なテンプレート化メソッドで呼び出され `IOpenRowsetImpl` ます。
 
-このメソッドは、 [Upecommandid](../../data/oledb/crowsetimpl-validatecommandid.md) と [Getcommandfromid](../../data/oledb/crowsetimpl-getcommandfromid.md) をアップキャストポインターで呼び出して、その作業を委任します。
+このメソッドは、 [Upecommandid](#validatecommandid) と [Getcommandfromid](#getcommandfromid) をアップキャストポインターで呼び出して、その作業を委任します。
 
 ## <a name="crowsetimplgetcolumninfo"></a><a name="getcolumninfo"></a> CRowsetImpl:: GetColumnInfo
 
@@ -199,7 +199,7 @@ static ATLCOLUMNINFO* CRowsetBaseImpl::GetColumnInfo(T* pv,
 
 静的構造体へのポインター `ATLCOLUMNINFO` 。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 このメソッドは高度なオーバーライドです。
 
@@ -211,7 +211,7 @@ static ATLCOLUMNINFO* CRowsetBaseImpl::GetColumnInfo(T* pv,
 
 ## <a name="crowsetimplgetcommandfromid"></a><a name="getcommandfromid"></a> CRowsetImpl:: GetCommandFromID
 
-いずれかまたは両方のパラメーターに文字列値が含まれているかどうかを確認します。存在する場合は、 [m_strCommandText](../../data/oledb/crowsetimpl-m-strcommandtext.md) のデータメンバーに文字列値をコピーし、 [m_strIndexText](../../data/oledb/crowsetimpl-m-strindextext.md)します。
+いずれかまたは両方のパラメーターに文字列値が含まれているかどうかを確認します。存在する場合は、 [m_strCommandText](#strcommandtext) のデータメンバーに文字列値をコピーし、 [m_strIndexText](#strindextext)します。
 
 ### <a name="syntax"></a>構文
 
@@ -232,13 +232,13 @@ HRESULT CRowsetBaseImpl::GetCommandFromID(DBID* pTableID,
 
 標準の HRESULT です。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
-このメソッドは、によって静的なアップキャストを通じて呼び出され、 `CRowsetImpl` [m_strCommandText](../../data/oledb/crowsetimpl-m-strcommandtext.md) データメンバーと [m_strIndexText](../../data/oledb/crowsetimpl-m-strindextext.md)を設定します。 既定では、このメソッドは、いずれかまたは両方のパラメーターに文字列値が含まれているかどうかを確認します。 文字列値が含まれている場合、このメソッドは文字列値をデータメンバーにコピーします。 このシグネチャを持つメソッドをの派生クラスに配置すると `CRowsetImpl` 、基本実装ではなく、メソッドが呼び出されます。
+このメソッドは、によって静的なアップキャストを通じて呼び出され、 `CRowsetImpl` [m_strCommandText](#strcommandtext) データメンバーと [m_strIndexText](#strindextext)を設定します。 既定では、このメソッドは、いずれかまたは両方のパラメーターに文字列値が含まれているかどうかを確認します。 文字列値が含まれている場合、このメソッドは文字列値をデータメンバーにコピーします。 このシグネチャを持つメソッドをの派生クラスに配置すると `CRowsetImpl` 、基本実装ではなく、メソッドが呼び出されます。
 
 ## <a name="crowsetimplvalidatecommandid"></a><a name="validatecommandid"></a> CRowsetImpl:: ValidateCommandID
 
-とのどちらか一方または両方に文字列値が含まれているかどうかを確認 `DBID` します。存在する場合は、データメンバー [m_strCommandText](../../data/oledb/crowsetimpl-m-strcommandtext.md) および [m_strIndexText](../../data/oledb/crowsetimpl-m-strindextext.md)にコピーします。
+とのどちらか一方または両方に文字列値が含まれているかどうかを確認 `DBID` します。存在する場合は、データメンバー [m_strCommandText](#strcommandtext) および [m_strIndexText](#strindextext)にコピーします。
 
 ### <a name="syntax"></a>構文
 
@@ -259,9 +259,9 @@ HRESULT CRowsetBaseImpl::ValidateCommandID(DBID* pTableID,
 
 標準の HRESULT です。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
-このメソッドは、 `CRowsetImpl` [m_strCommandText](../../data/oledb/crowsetimpl-m-strcommandtext.md) と [m_strIndexText](../../data/oledb/crowsetimpl-m-strindextext.md)のデータメンバーを設定するために、によって静的アップキャストによって呼び出されます。 既定では、このメソッドは、いずれかまたは両方のに文字列値が含まれているかどうかを確認 `DBID` し、存在する場合はそれらをデータメンバーにコピーします。 このシグネチャを持つメソッドをの派生クラスに配置すると `CRowsetImpl` 、基本実装ではなく、メソッドが呼び出されます。
+このメソッドは、 `CRowsetImpl` [m_strCommandText](#strcommandtext) と [m_strIndexText](#strindextext)のデータメンバーを設定するために、によって静的アップキャストによって呼び出されます。 既定では、このメソッドは、いずれかまたは両方のに文字列値が含まれているかどうかを確認 `DBID` し、存在する場合はそれらをデータメンバーにコピーします。 このシグネチャを持つメソッドをの派生クラスに配置すると `CRowsetImpl` 、基本実装ではなく、メソッドが呼び出されます。
 
 ## <a name="crowsetimplm_rgrowdata"></a><a name="rgrowdata"></a> CRowsetImpl:: m_rgRowData
 

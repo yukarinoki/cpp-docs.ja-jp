@@ -8,12 +8,12 @@ helpviewer_keywords:
 - ActiveX controls [MFC], properties
 - controls [MFC], properties
 ms.assetid: 14ce5152-742b-4e0d-a9ab-c7b456e32918
-ms.openlocfilehash: b0ca43f59cf70dea1348f22a08cfb4e89b45c3dd
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 052da13619fae5004ee573bd4957266a545d8335
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84617367"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91507920"
 ---
 # <a name="activex-control-containers-viewing-and-modifying-control-properties"></a>ActiveX コントロール コンテナー : コントロール プロパティの表示と変更
 
@@ -27,17 +27,17 @@ ActiveX コントロールコンテナーアプリケーションで埋め込み
 
 ### <a name="to-view-the-properties-of-a-control"></a>コントロールのプロパティを表示するには
 
-1. リソースビューで、**ダイアログ**フォルダーを開きます。
+1. リソースビューで、 **ダイアログ** フォルダーを開きます。
 
 1. メインダイアログボックステンプレートを開きます。
 
-1. [ **Activex コントロールの挿入**] ダイアログボックスを使用して activex コントロールを挿入します。 詳細については、「[ダイアログボックスへの ActiveX コントロールの表示と追加](../windows/viewing-and-adding-activex-controls-to-a-dialog-box.md)」を参照してください。
+1. [ **Activex コントロールの挿入** ] ダイアログボックスを使用して activex コントロールを挿入します。 詳細については、「 [ダイアログボックスへの ActiveX コントロールの表示と追加](../windows/adding-editing-or-deleting-controls.md)」を参照してください。
 
 1. ダイアログボックスで ActiveX コントロールを選択します。
 
-1. [**プロパティ**] ウィンドウで、[**プロパティ**] ボタンをクリックします。
+1. [ **プロパティ** ] ウィンドウで、[ **プロパティ** ] ボタンをクリックします。
 
-[**プロパティ**] ダイアログボックスを使用すると、新しいプロパティをすぐに変更およびテストできます。
+[ **プロパティ** ] ダイアログボックスを使用すると、新しいプロパティをすぐに変更およびテストできます。
 
 ## <a name="see-also"></a>関連項目
 

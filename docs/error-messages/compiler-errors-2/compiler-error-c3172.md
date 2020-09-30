@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3172
 ms.assetid: 1834e2fd-6036-4c33-aff2-b51bc7c99441
-ms.openlocfilehash: 1da2676d660d23e3fb71b56263779b1f1edacbf9
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: ca0eab35f6e60d81a324156905619ceb7ace8830
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74761739"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91508283"
 ---
 # <a name="compiler-error-c3172"></a>コンパイラエラー C3172
 
 ' module_name ': プロジェクトで異なる idl_module 属性を指定することはできません
 
-同じ名前で `dllname` または `version` パラメーターが異なる[idl_module](../../windows/idl-module.md)属性が、コンパイルの2つのファイルに見つかりました。 コンパイルごとに指定できる一意の `idl_module` 属性は1つだけです。
+同じ名前の、またはパラメーターが異なる[idl_module](../../windows/attributes/idl-module.md)属性が、 `dllname` コンパイルの `version` 2 つのファイルに見つかりました。 コンパイルごとに指定できる一意の属性は1つだけ `idl_module` です。
 
-同一の `idl_module` 属性は、複数のソースコードファイルで指定できます。
+複数 `idl_module` のソースコードファイルで、同一の属性を指定できます。
 
-たとえば、次の `idl_module` 属性が見つかったとします。
+たとえば、次のような属性が見つかったとし `idl_module` ます。
 
 ```cpp
 // C3172.cpp

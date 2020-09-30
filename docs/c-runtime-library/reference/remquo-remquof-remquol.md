@@ -35,12 +35,12 @@ helpviewer_keywords:
 - remquof function
 - remquo function
 ms.assetid: a1d3cb8b-8027-4cd3-8deb-04eb17f299fc
-ms.openlocfilehash: d99204ad9a80c6320869cbb72aee905981a5224d
-ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
+ms.openlocfilehash: b80815ef9a92e6551b7866ccc2b589268642c095
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89554969"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91507553"
 ---
 # <a name="remquo-remquof-remquol"></a>remquo、remquof、remquol
 
@@ -73,7 +73,7 @@ long double remquo( long double numer, long double denom, int* quo ); /* C++ onl
 
 その後、 *x*y の浮動小数点の剰余**を返し**  /  *y*ます。 *Y*の値が0.0 の場合、 **Remquo** quiet NaN を返します。 **Printf**ファミリによる簡易な NaN の表現については、「 [printf、_printf_l、wprintf、_wprintf_l](printf-printf-l-wprintf-wprintf-l.md)」を参照してください。
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>注釈
 
 **Remquo** *は x y の浮動*小数点の剰余*f*を計算します。ここで、  /  *y* *x*  =  *i* \* *y*  +  *f* *i*は整数、 *f*は*x*と同じ符号、 *f*の絶対値は*y*の絶対値よりも小さくなっています。
 
@@ -83,9 +83,9 @@ C++ ではオーバーロードが可能であるため、またはの値を受�
 
 既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-|関数|必須ヘッダー (C)|必須ヘッダー (C++)|
+|機能|必須ヘッダー (C)|必須ヘッダー (C++)|
 |--------------|---------------------|-|
 |**remquo** **remquof**、 **remquol**|\<math.h>|\<cmath> または \<math.h>|
 |**remquo** | \<tgmath.h> ||
@@ -120,7 +120,7 @@ Approximate signed quotient is -3
 ## <a name="see-also"></a>関連項目
 
 [浮動小数点のサポート](../../c-runtime-library/floating-point-support.md)<br/>
-[ldiv、lldiv](ldiv-lldiv.md)<br/>
+[ldiv、lldiv](./div.md)<br/>
 [imaxdiv](imaxdiv.md)<br/>
 [fmod、fmodf](fmod-fmodf.md)<br/>
 [remainder、remainderf、remainderl](remainder-remainderf-remainderl.md)<br/>

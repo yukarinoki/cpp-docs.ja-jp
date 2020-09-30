@@ -1,6 +1,6 @@
 ---
-title: __argcでは、 __argvでは、 __wargv
-description: Microsoft C ランタイムライブラリのグローバル定数 __argc、__argv、および __wargvについて説明します。
+title: __argc, __argv, __wargv
+description: Microsoft C ランタイムライブラリグローバル定数、、およびについて説明し __argc __argv __wargv ます。
 ms.date: 11/04/2016
 api_name:
 - __wargv
@@ -27,14 +27,14 @@ no-loc:
 - __wargv
 - main
 - wmain
-ms.openlocfilehash: 86a22a7391c7bde34d7734631a2970a45851dda3
-ms.sourcegitcommit: e93f3e6a110fe38bc642055bdf4785e620d4220f
+ms.openlocfilehash: 02c130be0d2dcb8e48d2bb5c75438c94003fc9dd
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76123982"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91507589"
 ---
-# <a name="opno-loc__argc-opno-loc__argv-opno-loc__wargv"></a>__argcでは、 __argvでは、 __wargv
+# <a name="no-loc__argc-no-loc__argv-no-loc__wargv"></a>__argc, __argv, __wargv
 
 `__argc` グローバル変数は、プログラムに渡されるコマンド ライン引数の数です。 `__argv` は、プログラム引数を含む 1 バイト文字列またはマルチバイト文字列の配列へのポインターです。`__wargv` は、プログラム引数を含むワイド文字列の配列へのポインターです。 これらのグローバル変数によって、`main` または `wmain` に引数が提供されます。
 
@@ -46,7 +46,7 @@ extern char ** __argv;
 extern wchar_t ** __wargv;
 ```
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 `main` 関数を使用するプログラムでは、`__argc` および `__argv` は、プログラムの起動に使用されるコマンド ラインを使用してプログラムの起動時に初期化されます。 コマンド ラインは解析されて個々の引数になり、ワイルドカードは展開されます。 引数の数は `__argc` に代入され、引数の文字列はヒープ上に割り当てられ、引数の配列へのポインターは `__argv` に代入されます。 ワイド文字および `wmain` 関数を使用するようにコンパイルされたプログラムでは、ワイド文字列として引数は解析されワイルドカードは展開されて、引数の文字列の配列へのポインターは `__wargv` に代入されます。
 
@@ -58,16 +58,16 @@ extern wchar_t ** __wargv;
 |---------------------|---------------------------|-----------------------|
 |`__targv`|`__argv`|`__wargv`|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 |グローバル変数|必須ヘッダー|
 |---------------------|---------------------|
-|`__argc`では、 `__argv`では、 `__wargv`|\<stdlib.h>、\<cstdlib> (C++)|
+|`__argc`, `__argv`, `__wargv`|\<stdlib.h>、 \<cstdlib> (C++)|
 
 `__argc`、`__argv`、および `__wargv` は Microsoft 拡張機能です。 互換性の詳細については、「[互換性](../c-runtime-library/compatibility.md)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 
-[グローバル変数](../c-runtime-library/global-variables.md)の\
-[main 関数とコマンドライン引数C++()](../cpp/main-function-command-line-args.md)\
-[main の代わりに wmain を使用する](../cpp/using-wmain-instead-of-main.md)
+[グローバル変数](../c-runtime-library/global-variables.md)\
+[main 関数とコマンドライン引数 (C++)](../cpp/main-function-command-line-args.md)\
+[wmainの代わりにを使用するmain](../cpp/main-function-command-line-args.md)

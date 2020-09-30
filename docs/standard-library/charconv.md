@@ -5,12 +5,12 @@ f1_keywords:
 - <charconv>
 helpviewer_keywords:
 - charconv header
-ms.openlocfilehash: 59807749105512e0eb61acfdf60ef463febbc3a8
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: c9dfb8e18a8f7fd367ec4f6b52b1a0af74b3f939
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87230191"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91507712"
 ---
 # <a name="ltcharconvgt"></a>&lt;charconv&gt;
 
@@ -39,7 +39,7 @@ ms.locfileid: "87230191"
 
 ### <a name="types"></a>型
 
-| Type | [説明] |
+| Type | 説明 |
 |-|:-|
 | [chars_format](chars-format-class.md) | 科学的、16進数などの書式設定の種類を指定します。 |
 | [from_chars_result](from-chars-result-structure.md) | 変換の結果を保持 `from_chars` します。 |
@@ -55,4 +55,3 @@ ms.locfileid: "87230191"
 ## <a name="see-also"></a>関連項目
 
 [ヘッダー ファイル リファレンス](cpp-standard-library-header-files.md)
-

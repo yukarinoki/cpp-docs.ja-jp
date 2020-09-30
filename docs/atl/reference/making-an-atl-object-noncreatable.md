@@ -1,5 +1,5 @@
 ---
-title: ATL オブジェクトを作成できないをこと
+title: ATL オブジェクトを作成できないようにする
 ms.date: 11/04/2016
 f1_keywords:
 - vc.appwiz.ATL.objects
@@ -7,22 +7,22 @@ helpviewer_keywords:
 - noncreatable ATL objects
 - ATL projects, noncreatable objects
 ms.assetid: 80d0bca2-dea0-4801-9a85-6243124437f6
-ms.openlocfilehash: 5b259a677fdf3013ae1be6073afaf34f76a6e2fd
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
-ms.translationtype: HT
+ms.openlocfilehash: b2d0a21ec9e68f76650f0f6cb78446bd93540fa2
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65221052"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91506951"
 ---
-# <a name="making-an-atl-object-noncreatable"></a>ATL オブジェクトを作成できないをこと
+# <a name="making-an-atl-object-noncreatable"></a>ATL オブジェクトを作成できないようにする
 
-ATL ベースの COM オブジェクトの属性を変更するには、クライアントからオブジェクトを直接作成することはできませんようにします。 この場合、オブジェクトが別のオブジェクトのメソッドの呼び出しによって返されるのではなく直接作成します。
+ATL ベースの COM オブジェクトの属性を変更して、クライアントがオブジェクトを直接作成できないようにすることができます。 この場合、オブジェクトは、直接作成されるのではなく、別のオブジェクトに対するメソッド呼び出しによって返されます。
 
-## <a name="to-make-an-object-noncreatable"></a>オブジェクトを作成できないようにするには
+## <a name="to-make-an-object-noncreatable"></a>オブジェクトを noncreatable にするには
 
-1. 削除、 [OBJECT_ENTRY_AUTO](object-map-macros.md#object_entry_auto)オブジェクト。 Noncreatable が登録するコントロール オブジェクトを実行する場合に、置換と OBJECT_ENTRY_AUTO[役立つ](object-map-macros.md#object_entry_non_createable_ex_auto)します。
+1. オブジェクトの [OBJECT_ENTRY_AUTO](object-map-macros.md#object_entry_auto) を削除します。 オブジェクトを noncreatable にして、コントロールを登録する場合は、OBJECT_ENTRY_AUTO を [OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO](object-map-macros.md#object_entry_non_createable_ex_auto)に置き換えます。
 
-1. 追加、 [noncreatable](../../windows/noncreatable.md) .idl ファイルのコクラスの属性します。 例:
+1. [Noncreatable](../../windows/attributes/noncreatable.md)属性を .idl ファイル内のコクラスに追加します。 次に例を示します。
 
     ```
     [uuid(A1992E3D-3CF0-11D0-826F-00A0C90F2851),
@@ -37,7 +37,7 @@ ATL ベースの COM オブジェクトの属性を変更するには、クラ�
 ## <a name="see-also"></a>関連項目
 
 [ATL プロジェクト ウィザード](../../atl/reference/atl-project-wizard.md)<br/>
-[C++Visual Studio でプロジェクトの種類](../../build/reference/visual-cpp-project-types.md)<br/>
-[ATL および C ランタイム コードによるプログラミング](../../atl/programming-with-atl-and-c-run-time-code.md)<br/>
+[Visual Studio の C++ プロジェクトの種類](../../build/reference/visual-cpp-project-types.md)<br/>
+[ATL および C ランタイムコードによるプログラミング](../../atl/programming-with-atl-and-c-run-time-code.md)<br/>
 [ATL COM オブジェクトの基礎](../../atl/fundamentals-of-atl-com-objects.md)<br/>
-[ATL プロジェクトの既定の構成](../../atl/reference/default-atl-project-configurations.md)
+[既定の ATL プロジェクト構成](../../atl/reference/default-atl-project-configurations.md)

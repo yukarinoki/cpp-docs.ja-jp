@@ -99,12 +99,12 @@ helpviewer_keywords:
 - operator> (map) member [STL/CLR]
 - operator>= (map) member [STL/CLR]
 ms.assetid: 8b0a7764-b5e4-4175-a802-82b72eb8662a
-ms.openlocfilehash: cd06942d3795dda9e6c6aaa8794957018fa96ace
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 31d696c1bf85cdcb1d662474042c82524abdfcf1
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87216376"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91508600"
 ---
 # <a name="map-stlclr"></a>map (STL/CLR)
 
@@ -114,11 +114,11 @@ ms.locfileid: "87216376"
 
 `Microsoft::VisualC::StlClr::GenericPair<GKey, GMapped>`
 
-各値の説明:
+ここで、
 
-`GKey`は、後者が ref 型である場合を除いて、*キー*と同じです。この場合、`Key^`
+`GKey` は、後者が ref 型である場合を除いて、 *キー* と同じです。この場合、 `Key^`
 
-`GMapped`は、後者が参照型でない限り、*マップ*と同じです。この場合、`Mapped^`
+`GMapped` は、後者が参照型でない限り、 *マップ* と同じです。この場合、 `Mapped^`
 
 ## <a name="syntax"></a>構文
 
@@ -140,10 +140,10 @@ template<typename Key,
 
 ### <a name="parameters"></a>パラメーター
 
-*[キー]*<br/>
+*キー*<br/>
 被制御シーケンス内の要素のキー コンポーネントの型。
 
-*Mapped*<br/>
+*付け*<br/>
 被制御シーケンス内の要素の追加コンポーネントの型。
 
 ## <a name="requirements"></a>必要条件
@@ -220,15 +220,15 @@ template<typename Key,
 |<xref:System.Collections.Generic.IDictionary%602>|{Key, value} 組のグループを管理します。|
 |ITree キー、値>|ジェネリックコンテナーを管理します。|
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>注釈
 
 オブジェクトは、制御するシーケンスのストレージを個々のノードとして割り当て、解放します。 要素は、ノード間のリンクを変更することによって、ノード間のリンクを変更することによって順序を維持する、(ほぼ) 均衡ツリーに挿入されます。ノード間でのコンテンツのコピーは行われません。 つまり、要素を自由に挿入および削除できます。
 
-オブジェクトは、 [map:: key_compare (STL/CLR)](../dotnet/map-key-compare-stl-clr.md)型の格納されたデリゲートオブジェクトを呼び出すことによって、制御するシーケンスを並べ替えます。 マップを構築するときに、格納されているデリゲートオブジェクトを指定できます。デリゲートオブジェクトを指定しない場合、既定では比較が行われ `operator<(key_type, key_type)` ます。 この格納されているオブジェクトにアクセスするには、メンバー関数[map:: key_comp (STL/CLR)](../dotnet/map-key-comp-stl-clr.md)を呼び出し `()` ます。
+オブジェクトは、 [map:: key_compare (STL/CLR)](#key_compare)型の格納されたデリゲートオブジェクトを呼び出すことによって、制御するシーケンスを並べ替えます。 マップを構築するときに、格納されているデリゲートオブジェクトを指定できます。デリゲートオブジェクトを指定しない場合、既定では比較が行われ `operator<(key_type, key_type)` ます。 この格納されているオブジェクトにアクセスするには、メンバー関数[map:: key_comp (STL/CLR)](#key_comp)を呼び出し `()` ます。
 
-このようなデリゲートオブジェクトは、 [map:: key_type (STL/CLR)](../dotnet/map-key-type-stl-clr.md)型のキーに対して厳密弱順序を強制する必要があります。 つまり、任意の2つのキーについては、次のようになり `X` `Y` ます。
+このようなデリゲートオブジェクトは、 [map:: key_type (STL/CLR)](#key_type)型のキーに対して厳密弱順序を強制する必要があります。 つまり、任意の2つのキーについては、次のようになり `X` `Y` ます。
 
-`key_comp()(X, Y)`すべての呼び出しで同じブール型の結果を返します。
+`key_comp()(X, Y)` すべての呼び出しで同じブール型の結果を返します。
 
 `key_comp()(X, Y)`が true の場合、は `key_comp()(Y, X)` false である必要があります。
 
@@ -236,21 +236,21 @@ template<typename Key,
 
 `!key_comp()(X, Y) && !key_comp()(Y, X)`が true の場合、 `X` と `Y` は等価の順序付けと呼ばれます。
 
-`X`被制御シーケンスの前にある要素の場合 `Y` 、 `key_comp()(Y, X)` は false になります。 (既定のデリゲートオブジェクトの場合、キーの値が減少することはありません)。テンプレートクラスの[マップ](../dotnet/map-stl-clr.md)とは異なり、テンプレートクラスのオブジェクトでは、 `map` すべての要素のキーが一意である必要はありません。 (2 つ以上のキーが同等の順序を持つことができます)。
+`X`被制御シーケンスの前にある要素の場合 `Y` 、 `key_comp()(Y, X)` は false になります。 (既定のデリゲートオブジェクトの場合、キーの値が減少することはありません)。テンプレートクラスの [マップ](../dotnet/map-stl-clr.md)とは異なり、テンプレートクラスのオブジェクトでは、 `map` すべての要素のキーが一意である必要はありません。 (2 つ以上のキーが同等の順序を持つことができます)。
 
 各要素には、個別のキーとマップされた値が含まれます。 シーケンスは、シーケンス内の要素数の対数に比例した数の操作で、任意の要素の検索、挿入、および削除を許可する方法で表現されます (対数時間)。 要素を挿入しても反復子の有効性は失われません。また、要素を削除した場合は、削除された要素を指す反復子だけが無効化されます。
 
-マップは双方向反復子をサポートします。したがって、被制御シーケンス内の要素を指定する反復子によって隣接する要素にステップインすることができます。 特殊なヘッドノードは、 [map:: end (STL/CLR)](../dotnet/map-end-stl-clr.md)によって返される反復子に対応 `()` します。 この反復子をデクリメントして、被制御シーケンスの最後の要素 (存在する場合) に移動することができます。 マップ反復子をインクリメントしてヘッドノードに移動することができ、これはと等しいことを比較し `end()` ます。 ただし、によって返される反復子を逆参照することはできません `end()` 。
+マップは双方向反復子をサポートします。したがって、被制御シーケンス内の要素を指定する反復子によって隣接する要素にステップインすることができます。 特殊なヘッドノードは、 [map:: end (STL/CLR)](#end)によって返される反復子に対応 `()` します。 この反復子をデクリメントして、被制御シーケンスの最後の要素 (存在する場合) に移動することができます。 マップ反復子をインクリメントしてヘッドノードに移動することができ、これはと等しいことを比較し `end()` ます。 ただし、によって返される反復子を逆参照することはできません `end()` 。
 
 数値の位置 (ランダムアクセス反復子を必要とする) を指定してマップ要素を直接参照することはできないことに注意してください。
 
 マップ反復子は、関連付けられているマップノードへのハンドルを格納します。このノードは、関連付けられているコンテナーへのハンドルを格納します。 反復子は、関連付けられているコンテナーオブジェクトと共にのみ使用できます。 マップ反復子は、関連付けられているマップノードがマップに関連付けられている限り、有効なままです。 さらに、有効な反復子は dereferencable です。これを使用すると、に指定した要素の値にアクセスしたり、変更したりすることができ `end()` ます。
 
-要素を消去または削除すると、格納されている値のデストラクターが呼び出されます。 コンテナーを破棄すると、すべての要素が消去されます。 したがって、要素の型が ref クラスであるコンテナーは、コンテナーの直後要素が存在しないことを保証します。 ただし、ハンドルのコンテナーが要素を破棄し*ない*ことに注意してください。
+要素を消去または削除すると、格納されている値のデストラクターが呼び出されます。 コンテナーを破棄すると、すべての要素が消去されます。 したがって、要素の型が ref クラスであるコンテナーは、コンテナーの直後要素が存在しないことを保証します。 ただし、ハンドルのコンテナーが要素を破棄し *ない* ことに注意してください。
 
 ## <a name="members"></a>メンバー
 
-## <a name="mapbegin-stlclr"></a><a name="begin"></a>map:: begin (STL/CLR)
+## <a name="mapbegin-stlclr"></a><a name="begin"></a> map:: begin (STL/CLR)
 
 被制御シーケンスの先頭を指定します。
 
@@ -301,7 +301,7 @@ int main()
 *++begin() = [b 2]
 ```
 
-## <a name="mapclear-stlclr"></a><a name="clear"></a>map:: clear (STL/CLR)
+## <a name="mapclear-stlclr"></a><a name="clear"></a> map:: clear (STL/CLR)
 
 すべての要素を削除します。
 
@@ -313,7 +313,7 @@ void clear();
 
 ### <a name="remarks"></a>解説
 
-このメンバー関数は、map:: [erase](../dotnet/map-erase-stl-clr.md) (stl/clr) map:: begin (stl/clr) map: `(` [map::begin (STL/CLR)](../dotnet/map-begin-stl-clr.md) `(),` [: end (stl/clr)](../dotnet/map-end-stl-clr.md)を実際に呼び出し `())` ます。 このメソッドを使用して、被制御シーケンスが空であることを確認します。
+このメンバー関数は、map:: [erase](#erase) (stl/clr) map:: begin (stl/clr) map: `(` [map::begin (STL/CLR)](#begin) `(),` [: end (stl/clr)](#end)を実際に呼び出し `())` ます。 このメソッドを使用して、被制御シーケンスが空であることを確認します。
 
 ### <a name="example"></a>例
 
@@ -359,7 +359,7 @@ size() = 0
 size() = 0
 ```
 
-## <a name="mapconst_iterator-stlclr"></a><a name="const_iterator"></a>map:: const_iterator (STL/CLR)
+## <a name="mapconst_iterator-stlclr"></a><a name="const_iterator"></a> map:: const_iterator (STL/CLR)
 
 被制御シーケンスの定数反復子の型です。
 
@@ -401,7 +401,7 @@ int main()
 [a 1] [b 2] [c 3]
 ```
 
-## <a name="mapconst_reference-stlclr"></a><a name="const_reference"></a>map:: const_reference (STL/CLR)
+## <a name="mapconst_reference-stlclr"></a><a name="const_reference"></a> map:: const_reference (STL/CLR)
 
 要素への定数参照の型です。
 
@@ -446,7 +446,7 @@ int main()
 [a 1] [b 2] [c 3]
 ```
 
-## <a name="mapconst_reverse_iterator-stlclr"></a><a name="const_reverse_iterator"></a>map:: const_reverse_iterator (STL/CLR)
+## <a name="mapconst_reverse_iterator-stlclr"></a><a name="const_reverse_iterator"></a> map:: const_reverse_iterator (STL/CLR)
 
 被制御シーケンスの定数反転反復子の型。
 
@@ -488,7 +488,7 @@ int main()
 [c 3] [b 2] [a 1]
 ```
 
-## <a name="mapcount-stlclr"></a><a name="count"></a>map:: count (STL/CLR)
+## <a name="mapcount-stlclr"></a><a name="count"></a> map:: count (STL/CLR)
 
 指定したキーに一致する要素の数を検索します。
 
@@ -503,9 +503,9 @@ size_type count(key_type key);
 *key*<br/>
 検索対象のキー値。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
-このメンバー関数は、*キー*と同じ順序付けを持つ被制御シーケンス内の要素の数を返します。 被制御シーケンス内の指定したキーに一致する現在の要素の数を確認する場合に、これを使用します。
+このメンバー関数は、 *キー*と同じ順序付けを持つ被制御シーケンス内の要素の数を返します。 被制御シーケンス内の指定したキーに一致する現在の要素の数を確認する場合に、これを使用します。
 
 ### <a name="example"></a>例
 
@@ -541,7 +541,7 @@ count(L'b') = 1
 count(L'C') = 0
 ```
 
-## <a name="mapdifference_type-stlclr"></a><a name="difference_type"></a>マップ::d ifference_type (STL/CLR)
+## <a name="mapdifference_type-stlclr"></a><a name="difference_type"></a> マップ::d ifference_type (STL/CLR)
 
 2つの要素間の符号付き距離の型。
 
@@ -596,7 +596,7 @@ end()-begin() = 3
 begin()-end() = -3
 ```
 
-## <a name="mapempty-stlclr"></a><a name="empty"></a>map:: empty (STL/CLR)
+## <a name="mapempty-stlclr"></a><a name="empty"></a> map:: empty (STL/CLR)
 
 要素が存在しないかどうかをテストします。
 
@@ -608,7 +608,7 @@ bool empty();
 
 ### <a name="remarks"></a>解説
 
-このメンバー関数は、被制御シーケンスが空の場合に true を返します。 これは[map:: size (STL/CLR)](../dotnet/map-size-stl-clr.md)に相当 `() == 0` します。 マップが空であるかどうかをテストするために使用します。
+このメンバー関数は、被制御シーケンスが空の場合に true を返します。 これは[map:: size (STL/CLR)](#size)に相当 `() == 0` します。 マップが空であるかどうかをテストするために使用します。
 
 ### <a name="example"></a>例
 
@@ -648,7 +648,7 @@ size() = 0
 empty() = True
 ```
 
-## <a name="mapend-stlclr"></a><a name="end"></a>map:: end (STL/CLR)
+## <a name="mapend-stlclr"></a><a name="end"></a> map:: end (STL/CLR)
 
 被制御シーケンスの末尾を指定します。
 
@@ -695,7 +695,7 @@ int main()
     }
 ```
 
-## <a name="mapequal_range-stlclr"></a><a name="equal_range"></a>map:: equal_range (STL/CLR)
+## <a name="mapequal_range-stlclr"></a><a name="equal_range"></a> map:: equal_range (STL/CLR)
 
 指定したキーに一致する範囲を検索します。
 
@@ -710,9 +710,9 @@ cliext::pair<iterator, iterator> equal_range(key_type key);
 *key*<br/>
 検索対象のキー値。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
-このメンバー関数は、2つの反復子 `cliext::pair<iterator, iterator>(` [map:: lower_bound (stl/clr)](../dotnet/map-lower-bound-stl-clr.md) `(key),` [map:: upper_bound (stl/clr)](../dotnet/map-upper-bound-stl-clr.md)を返し `(key))` ます。 このメソッドを使用して、被制御シーケンス内の指定したキーに一致する要素の範囲を特定します。
+このメンバー関数は、2つの反復子 `cliext::pair<iterator, iterator>(` [map:: lower_bound (stl/clr)](#lower_bound) `(key),` [map:: upper_bound (stl/clr)](#upper_bound)を返し `(key))` ます。 このメソッドを使用して、被制御シーケンス内の指定したキーに一致する要素の範囲を特定します。
 
 ### <a name="example"></a>例
 
@@ -756,7 +756,7 @@ equal_range(L'x') empty = True
 [b 2]
 ```
 
-## <a name="maperase-stlclr"></a><a name="erase"></a>map:: erase (STL/CLR)
+## <a name="maperase-stlclr"></a><a name="erase"></a> map:: erase (STL/CLR)
 
 指定した位置にある要素を削除します。
 
@@ -782,13 +782,13 @@ bool erase(key_type key)
 *where*<br/>
 消去する要素。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
-最初のメンバー関数*は、が*指す被制御シーケンスの要素を削除し、削除された要素の後に残っている最初の要素を指定する反復子を返します。そのような要素が存在しない場合は[map:: end (STL/CLR)](../dotnet/map-end-stl-clr.md)を返します `()` 。 このメソッドを使用して、1つの要素を削除します。
+最初のメンバー関数*は、が*指す被制御シーケンスの要素を削除し、削除された要素の後に残っている最初の要素を指定する反復子を返します。そのような要素が存在しない場合は[map:: end (STL/CLR)](#end)を返します `()` 。 このメソッドを使用して、1つの要素を削除します。
 
 2番目のメンバー関数は、範囲 [,) 内の被制御シーケンスの要素を削除 `first` `last` し、削除された要素の後に残っている最初の要素を指定する反復子を返します。その `end()` ような要素が存在しない場合は、を返します。 これを使用して、0個以上の連続する要素を削除します。
 
-3番目のメンバー関数は、キーの順序が同じ*キーを持つ*被制御シーケンスの要素を削除し、削除された要素の数を返します。 これを使用して、指定されたキーに一致するすべての要素を削除およびカウントします。
+3番目のメンバー関数は、キーの順序が同じ *キーを持つ*被制御シーケンスの要素を削除し、削除された要素の数を返します。 これを使用して、指定されたキーに一致するすべての要素を削除およびカウントします。
 
 各要素の消去では、被制御シーケンス内の要素数の対数に比例して時間がかかります。
 
@@ -849,7 +849,7 @@ erase(L'x') = 0
 erase(L'e') = 1
 ```
 
-## <a name="mapfind-stlclr"></a><a name="find"></a>map:: find (STL/CLR)
+## <a name="mapfind-stlclr"></a><a name="find"></a> map:: find (STL/CLR)
 
 指定したキーに一致する要素を検索します。
 
@@ -864,9 +864,9 @@ iterator find(key_type key);
 *key*<br/>
 検索対象のキー値。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
-被制御シーケンス内の少なくとも1つの要素の順序が同じである*場合、メンバー*関数は、これらの要素のいずれかを指定する反復子を返します。それ以外の場合は、 [map:: end (STL/CLR)](../dotnet/map-end-stl-clr.md)を返し `()` ます。 このメソッドを使用して、被制御シーケンス内で、指定したキーに一致する要素を検索します。
+被制御シーケンス内の少なくとも1つの要素の順序が同じである*場合、メンバー*関数は、これらの要素のいずれかを指定する反復子を返します。それ以外の場合は、 [map:: end (STL/CLR)](#end)を返し `()` ます。 このメソッドを使用して、被制御シーケンス内で、指定したキーに一致する要素を検索します。
 
 ### <a name="example"></a>例
 
@@ -908,7 +908,7 @@ find b = [b 2]
 find C = False
 ```
 
-## <a name="mapgeneric_container-stlclr"></a><a name="generic_container"></a>map:: generic_container (STL/CLR)
+## <a name="mapgeneric_container-stlclr"></a><a name="generic_container"></a> map:: generic_container (STL/CLR)
 
 コンテナーのジェネリックインターフェイスの型。
 
@@ -972,7 +972,7 @@ int main()
 [a 1] [b 2] [c 3] [d 4] [e 5]
 ```
 
-## <a name="mapgeneric_iterator-stlclr"></a><a name="generic_iterator"></a>map:: generic_iterator (STL/CLR)
+## <a name="mapgeneric_iterator-stlclr"></a><a name="generic_iterator"></a> map:: generic_iterator (STL/CLR)
 
 コンテナーのジェネリックインターフェイスで使用する反復子の型。
 
@@ -1029,7 +1029,7 @@ int main()
 [a 1]
 ```
 
-## <a name="mapgeneric_reverse_iterator-stlclr"></a><a name="generic_reverse_iterator"></a>map:: generic_reverse_iterator (STL/CLR)
+## <a name="mapgeneric_reverse_iterator-stlclr"></a><a name="generic_reverse_iterator"></a> map:: generic_reverse_iterator (STL/CLR)
 
 コンテナーのジェネリックインターフェイスで使用する逆順反復子の型。
 
@@ -1085,7 +1085,7 @@ int main()
 [c 3]
 ```
 
-## <a name="mapgeneric_value-stlclr"></a><a name="generic_value"></a>map:: generic_value (STL/CLR)
+## <a name="mapgeneric_value-stlclr"></a><a name="generic_value"></a> map:: generic_value (STL/CLR)
 
 コンテナーのジェネリックインターフェイスで使用する要素の型。
 
@@ -1139,7 +1139,7 @@ int main()
 [a 1]
 ```
 
-## <a name="mapinsert-stlclr"></a><a name="insert"></a>map:: insert (STL/CLR)
+## <a name="mapinsert-stlclr"></a><a name="insert"></a> map:: insert (STL/CLR)
 
 要素を追加します。
 
@@ -1170,17 +1170,17 @@ void insert(System::Collections::Generic::IEnumerable<value_type>^ right);
 *where*<br/>
 コンテナー内の挿入位置 (ヒントのみ)。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 各メンバー関数は、残りのオペランドによって指定されたシーケンスを挿入します。
 
-1つ目のメンバー関数は、値*val*を持つ要素を挿入し、値のペアを返し `X` ます。 が true の場合は `X.second` 、新しく挿入された要素を指定し `X.first` ます。それ以外の場合は、 `X.first` 既に存在し、新しい要素が挿入されない、同じ順序の要素を指定します。 1つの要素を挿入するために使用します。
+1つ目のメンバー関数は、値 *val*を持つ要素を挿入し、値のペアを返し `X` ます。 が true の場合は `X.second` 、新しく挿入された要素を指定し `X.first` ます。それ以外の場合は、 `X.first` 既に存在し、新しい要素が挿入されない、同じ順序の要素を指定します。 1つの要素を挿入するために使用します。
 
 2番目のメンバー関数は、(パフォーマンスを向上させるために) ヒントと*してを使用し*て、値*val*を持つ要素を挿入し、新しく挿入された要素を指定する反復子を返します。 これを使用して、既知の要素に隣接している可能性のある単一の要素を挿入します。
 
 3番目のメンバー関数は、シーケンス [,) を挿入し `first` `last` ます。 このメソッドを使用して、別のシーケンスからコピーされた0個以上の要素を挿入します。
 
-4番目のメンバー関数は、*右側*に指定されたシーケンスを挿入します。 このメソッドを使用して、列挙子によって記述されたシーケンスを挿入します。
+4番目のメンバー関数は、 *右側*に指定されたシーケンスを挿入します。 このメソッドを使用して、列挙子によって記述されたシーケンスを挿入します。
 
 各要素の挿入には、被制御シーケンス内の要素数の対数に比例した時間がかかります。 挿入ポイントに隣接する要素を指定するヒントを指定すると、挿入は償却定数時間で実行できます。
 
@@ -1259,7 +1259,7 @@ insert(begin(), [L'y' 25]) = [y 25]
 [a 1] [b 2] [c 3] [x 24] [y 25]
 ```
 
-## <a name="mapiterator-stlclr"></a><a name="iterator"></a>map:: iterator (STL/CLR)
+## <a name="mapiterator-stlclr"></a><a name="iterator"></a> map:: iterator (STL/CLR)
 
 被制御シーケンスの反復子の型です。
 
@@ -1301,7 +1301,7 @@ int main()
 [a 1] [b 2] [c 3]
 ```
 
-## <a name="mapkey_comp-stlclr"></a><a name="key_comp"></a>map:: key_comp (STL/CLR)
+## <a name="mapkey_comp-stlclr"></a><a name="key_comp"></a> map:: key_comp (STL/CLR)
 
 2つのキーの順序付けデリゲートをコピーします。
 
@@ -1360,7 +1360,7 @@ compare(L'a', L'b') = False
 compare(L'b', L'a') = True
 ```
 
-## <a name="mapkey_compare-stlclr"></a><a name="key_compare"></a>map:: key_compare (STL/CLR)
+## <a name="mapkey_compare-stlclr"></a><a name="key_compare"></a> map:: key_compare (STL/CLR)
 
 2つのキーの順序付けデリゲート。
 
@@ -1420,7 +1420,7 @@ compare(L'a', L'b') = False
 compare(L'b', L'a') = True
 ```
 
-## <a name="mapkey_type-stlclr"></a><a name="key_type"></a>map:: key_type (STL/CLR)
+## <a name="mapkey_type-stlclr"></a><a name="key_type"></a> map:: key_type (STL/CLR)
 
 順序付けキーの型です。
 
@@ -1432,7 +1432,7 @@ typedef Key key_type;
 
 ### <a name="remarks"></a>解説
 
-この型は、テンプレートパラメーター*キー*のシノニムです。
+この型は、テンプレートパラメーター *キー*のシノニムです。
 
 ### <a name="example"></a>例
 
@@ -1465,7 +1465,7 @@ int main()
 a b c
 ```
 
-## <a name="maplower_bound-stlclr"></a><a name="lower_bound"></a>map:: lower_bound (STL/CLR)
+## <a name="maplower_bound-stlclr"></a><a name="lower_bound"></a> map:: lower_bound (STL/CLR)
 
 指定されたキーに一致する範囲の先頭を検索します。
 
@@ -1480,9 +1480,9 @@ iterator lower_bound(key_type key);
 *key*<br/>
 検索対象のキー値。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
-このメンバー関数は、 `X` *キー*への順序が同じである被制御シーケンス内の最初の要素を決定します。 そのような要素が存在しない場合は、 [map:: end (STL/CLR)](../dotnet/map-end-stl-clr.md)を返します。それ以外の場合は、を `()` 指定する反復子を返し `X` ます。 このメソッドを使用して、被制御シーケンスの中で、指定したキーに一致する要素のシーケンスの先頭を検索します。
+このメンバー関数は、 `X` *キー*への順序が同じである被制御シーケンス内の最初の要素を決定します。 そのような要素が存在しない場合は、 [map:: end (STL/CLR)](#end)を返します。それ以外の場合は、を `()` 指定する反復子を返し `X` ます。 このメソッドを使用して、被制御シーケンスの中で、指定したキーに一致する要素のシーケンスの先頭を検索します。
 
 ### <a name="example"></a>例
 
@@ -1524,7 +1524,7 @@ lower_bound(L'x')==end() = True
 *lower_bound(L'b') = [b 2]
 ```
 
-## <a name="mapmake_value-stlclr"></a><a name="make_value"></a>map:: make_value (STL/CLR)
+## <a name="mapmake_value-stlclr"></a><a name="make_value"></a> map:: make_value (STL/CLR)
 
 値オブジェクトを構築します。
 
@@ -1539,12 +1539,12 @@ static value_type make_value(key_type key, mapped_type mapped);
 *key*<br/>
 使用するキー値。
 
-*付け*<br/>
+*マッピング済み*<br/>
 検索するマップされた値。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
-このメンバー関数は、キー `value_type` が*キー*で、マップされた値が*マップ*されているオブジェクトを返します。 これを使用して、他のいくつかのメンバー関数との使用に適したオブジェクトを作成します。
+このメンバー関数は、キー `value_type` が *キー* で、マップされた値が *マップ*されているオブジェクトを返します。 これを使用して、他のいくつかのメンバー関数との使用に適したオブジェクトを作成します。
 
 ### <a name="example"></a>例
 
@@ -1573,7 +1573,7 @@ int main()
 [a 1] [b 2] [c 3]
 ```
 
-## <a name="mapmap-stlclr"></a><a name="map"></a>map:: map (STL/CLR)
+## <a name="mapmap-stlclr"></a><a name="map"></a> map:: map (STL/CLR)
 
 コンテナー オブジェクトを構築します。
 
@@ -1608,7 +1608,7 @@ map(System::Collections::Generic::IEnumerable<GValue>^ right,
 *そうです*<br/>
 挿入するオブジェクトまたは範囲。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 コンストラクター:
 
@@ -1620,19 +1620,19 @@ map(System::Collections::Generic::IEnumerable<GValue>^ right,
 
 `explicit map(key_compare^ pred);`
 
-順序述語*pred*を使用して、要素を含まない被制御シーケンスを初期化します。 このメソッドを使用して、指定された順序述語を使用して、空の初期被制御シーケンスを指定します。
+順序述語 *pred*を使用して、要素を含まない被制御シーケンスを初期化します。 このメソッドを使用して、指定された順序述語を使用して、空の初期被制御シーケンスを指定します。
 
 コンストラクター:
 
 `map(map<Key, Mapped>% right);`
 
-`right.begin()`既定の順序述語を使用して、シーケンス [,) を使用して被制御シーケンスを初期化し `right.end()` ます。 このメソッドを使用して、マップオブジェクト*権限*によって制御されるシーケンスのコピーである初期被制御シーケンスを、既定の順序述語で指定します。
+`right.begin()`既定の順序述語を使用して、シーケンス [,) を使用して被制御シーケンスを初期化し `right.end()` ます。 このメソッドを使用して、マップオブジェクト *権限*によって制御されるシーケンスのコピーである初期被制御シーケンスを、既定の順序述語で指定します。
 
 コンストラクター:
 
 `map(map<Key, Mapped>^ right);`
 
-`right->begin()`既定の順序述語を使用して、シーケンス [,) を使用して被制御シーケンスを初期化し `right->end()` ます。 このメソッドを使用して、マップオブジェクト*権限*によって制御されるシーケンスのコピーである初期被制御シーケンスを、既定の順序述語で指定します。
+`right->begin()`既定の順序述語を使用して、シーケンス [,) を使用して被制御シーケンスを初期化し `right->end()` ます。 このメソッドを使用して、マップオブジェクト *権限*によって制御されるシーケンスのコピーである初期被制御シーケンスを、既定の順序述語で指定します。
 
 コンストラクター:
 
@@ -1650,7 +1650,7 @@ map(System::Collections::Generic::IEnumerable<GValue>^ right,
 
 `map(System::Collections::Generic::IEnumerable<Key>^ right);`
 
-既定の順序述語を使用して、列挙子*権限*によって指定されたシーケンスを使用して被制御シーケンスを初期化します。 このメソッドは、既定の順序述語を使用して、被制御シーケンスを、列挙子によって記述された別のシーケンスのコピーにするために使用します。
+既定の順序述語を使用して、列挙子 *権限*によって指定されたシーケンスを使用して被制御シーケンスを初期化します。 このメソッドは、既定の順序述語を使用して、被制御シーケンスを、列挙子によって記述された別のシーケンスのコピーにするために使用します。
 
 コンストラクター:
 
@@ -1746,7 +1746,7 @@ size() = 0
 [a 1] [b 2] [c 3]
 ```
 
-## <a name="mapmapped_type-stlclr"></a><a name="mapped_type"></a>map:: mapped_type (STL/CLR)
+## <a name="mapmapped_type-stlclr"></a><a name="mapped_type"></a> map:: mapped_type (STL/CLR)
 
 各キーに関連付けられた、マップされた値の型です。
 
@@ -1758,7 +1758,7 @@ typedef Mapped mapped_type;
 
 ### <a name="remarks"></a>解説
 
-この型は、*マップ*されたテンプレートパラメーターのシノニムです。
+この型は、 *マップ*されたテンプレートパラメーターのシノニムです。
 
 ### <a name="example"></a>例
 
@@ -1791,7 +1791,7 @@ int main()
 1 2 3
 ```
 
-## <a name="mapoperator-stlclr"></a><a name="op_as"></a>map:: operator = (STL/CLR)
+## <a name="mapoperator-stlclr"></a><a name="op_as"></a> map:: operator = (STL/CLR)
 
 被制御シーケンスを置き換えます。
 
@@ -1806,9 +1806,9 @@ map<Key, Mapped>% operator=(map<Key, Mapped>% right);
 *そうです*<br/>
 コピーするコンテナー。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
-メンバー演算子は、オブジェクトに*right*をコピーし、を返し **`*this`** ます。 このメソッドを使用して、被制御シーケンスを*右側*の被制御シーケンスのコピーで置き換えます。
+メンバー演算子は、オブジェクトに *right* をコピーし、を返し **`*this`** ます。 このメソッドを使用して、被制御シーケンスを *右側*の被制御シーケンスのコピーで置き換えます。
 
 ### <a name="example"></a>例
 
@@ -1846,7 +1846,7 @@ int main()
 [a 1] [b 2] [c 3]
 ```
 
-## <a name="mapoperatorstlclr"></a><a name="op"></a>map:: 演算子 (STL/CLR)
+## <a name="mapoperatorstlclr"></a><a name="op"></a> map:: 演算子 (STL/CLR)
 
 キーを関連付けられているマップ値にマップします。
 
@@ -1861,9 +1861,9 @@ mapped_type operator[](key_type key);
 *key*<br/>
 検索対象のキー値。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
-このメンバー関数は、*キー*と同等の順序で要素を検索します。 見つかった場合は、関連付けられたマップされた値を返します。それ以外の場合は、 `value_type(key, mapped_type())` 関連付けられた (既定の) マップ値を挿入して返します。 それを使用して、関連付けられているキーを指定してマップされた値を検索したり、何も見つからない場合はキーのエントリが存在することを確認したりします。
+このメンバー関数は、 *キー*と同等の順序で要素を検索します。 見つかった場合は、関連付けられたマップされた値を返します。それ以外の場合は、 `value_type(key, mapped_type())` 関連付けられた (既定の) マップ値を挿入して返します。 それを使用して、関連付けられているキーを指定してマップされた値を検索したり、何も見つからない場合はキーのエントリが存在することを確認したりします。
 
 ### <a name="example"></a>例
 
@@ -1913,7 +1913,7 @@ c1[b] = 2
 [A 10] [a 1] [b 2] [c 13]
 ```
 
-## <a name="maprbegin-stlclr"></a><a name="rbegin"></a>map:: rbegin (STL/CLR)
+## <a name="maprbegin-stlclr"></a><a name="rbegin"></a> map:: rbegin (STL/CLR)
 
 反転被制御シーケンスの先頭を指定します。
 
@@ -1964,7 +1964,7 @@ int main()
 *++rbegin() = [b 2]
 ```
 
-## <a name="mapreference-stlclr"></a><a name="reference"></a>map:: reference (STL/CLR)
+## <a name="mapreference-stlclr"></a><a name="reference"></a> map:: reference (STL/CLR)
 
 要素への参照の型です。
 
@@ -2009,7 +2009,7 @@ int main()
 [a 1] [b 2] [c 3]
 ```
 
-## <a name="maprend-stlclr"></a><a name="rend"></a>map:: rend (STL/CLR)
+## <a name="maprend-stlclr"></a><a name="rend"></a> map:: rend (STL/CLR)
 
 反転被制御シーケンスの末尾を指定します。
 
@@ -2062,7 +2062,7 @@ int main()
 *--rend() = [a 1]
 ```
 
-## <a name="mapreverse_iterator-stlclr"></a><a name="reverse_iterator"></a>map:: reverse_iterator (STL/CLR)
+## <a name="mapreverse_iterator-stlclr"></a><a name="reverse_iterator"></a> map:: reverse_iterator (STL/CLR)
 
 被制御シーケンスの反転反復子の型です。
 
@@ -2104,7 +2104,7 @@ int main()
 [c 3] [b 2] [a 1]
 ```
 
-## <a name="mapsize-stlclr"></a><a name="size"></a>map:: size (STL/CLR)
+## <a name="mapsize-stlclr"></a><a name="size"></a> map:: size (STL/CLR)
 
 要素の数をカウントします。
 
@@ -2116,7 +2116,7 @@ size_type size();
 
 ### <a name="remarks"></a>解説
 
-このメンバー関数は、被制御シーケンスの長さを返します。 このメソッドを使用して、被制御シーケンス内の現在の要素数を決定します。 シーケンスに0以外のサイズがあるかどうかは、「 [map:: empty (STL/CLR)](../dotnet/map-empty-stl-clr.md)」を参照してください `()` 。
+このメンバー関数は、被制御シーケンスの長さを返します。 このメソッドを使用して、被制御シーケンス内の現在の要素数を決定します。 シーケンスに0以外のサイズがあるかどうかは、「 [map:: empty (STL/CLR)](#empty)」を参照してください `()` 。
 
 ### <a name="example"></a>例
 
@@ -2156,7 +2156,7 @@ size() = 0 after clearing
 size() = 2 after adding 2
 ```
 
-## <a name="mapsize_type-stlclr"></a><a name="size_type"></a>map:: size_type (STL/CLR)
+## <a name="mapsize_type-stlclr"></a><a name="size_type"></a> map:: size_type (STL/CLR)
 
 2つの要素間の符号付き距離の型。
 
@@ -2204,7 +2204,7 @@ int main()
 end()-begin() = 3
 ```
 
-## <a name="mapswap-stlclr"></a><a name="swap"></a>map:: swap (STL/CLR)
+## <a name="mapswap-stlclr"></a><a name="swap"></a> map:: swap (STL/CLR)
 
 2 つのコンテナーのコンテンツを交換します。
 
@@ -2219,7 +2219,7 @@ void swap(map<Key, Mapped>% right);
 *そうです*<br/>
 コンテンツを交換するコンテナー。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 このメンバー関数は、との間で被制御シーケンスを交換し **`this`** ます。 *right* この処理は一定時間に実行され、例外はスローされません。 2つのコンテナーの内容を簡単に交換する方法として使用します。
 
@@ -2272,7 +2272,7 @@ int main()
 [a 1] [b 2] [c 3]
 ```
 
-## <a name="mapto_array-stlclr"></a><a name="to_array"></a>map:: to_array (STL/CLR)
+## <a name="mapto_array-stlclr"></a><a name="to_array"></a> map:: to_array (STL/CLR)
 
 被制御シーケンスを新しい配列にコピーします。
 
@@ -2322,7 +2322,7 @@ int main()
 [a 1] [b 2] [c 3]
 ```
 
-## <a name="mapupper_bound-stlclr"></a><a name="upper_bound"></a>map:: upper_bound (STL/CLR)
+## <a name="mapupper_bound-stlclr"></a><a name="upper_bound"></a> map:: upper_bound (STL/CLR)
 
 指定されたキーに一致する範囲の末尾を検索します。
 
@@ -2337,9 +2337,9 @@ iterator upper_bound(key_type key);
 *key*<br/>
 検索対象のキー値。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
-このメンバー関数は、 `X` *キー*への順序が同じである被制御シーケンスの最後の要素を決定します。 そのような要素が存在しない場合、または `X` が被制御シーケンスの最後の要素である場合は、 [map:: END (STL/CLR)](../dotnet/map-end-stl-clr.md)を返します。それ以外の場合は、 `()` 最初の要素を指定する反復子を返し `X` ます。 このメソッドを使用して、被制御シーケンスの中で、指定したキーに一致する要素のシーケンスの末尾を検索します。
+このメンバー関数は、 `X` *キー*への順序が同じである被制御シーケンスの最後の要素を決定します。 そのような要素が存在しない場合、または `X` が被制御シーケンスの最後の要素である場合は、 [map:: END (STL/CLR)](#end)を返します。それ以外の場合は、 `()` 最初の要素を指定する反復子を返し `X` ます。 このメソッドを使用して、被制御シーケンスの中で、指定したキーに一致する要素のシーケンスの末尾を検索します。
 
 ### <a name="example"></a>例
 
@@ -2381,7 +2381,7 @@ upper_bound(L'x')==end() = True
 *upper_bound(L'b') = [c 3]
 ```
 
-## <a name="mapvalue_comp-stlclr"></a><a name="value_comp"></a>map:: value_comp (STL/CLR)
+## <a name="mapvalue_comp-stlclr"></a><a name="value_comp"></a> map:: value_comp (STL/CLR)
 
 2つの要素の値の順序付けデリゲートをコピーします。
 
@@ -2428,7 +2428,7 @@ compare([L'a', 1], [L'b', 2]) = True
 compare([L'b', 2], [L'a', 1]) = False
 ```
 
-## <a name="mapvalue_compare-stlclr"></a><a name="value_compare"></a>map:: value_compare (STL/CLR)
+## <a name="mapvalue_compare-stlclr"></a><a name="value_compare"></a> map:: value_compare (STL/CLR)
 
 2つの要素の値の順序付けデリゲート。
 
@@ -2476,7 +2476,7 @@ compare([L'a', 1], [L'b', 2]) = True
 compare([L'b', 2], [L'a', 1]) = False
 ```
 
-## <a name="mapvalue_type-stlclr"></a><a name="value_type"></a>map:: value_type (STL/CLR)
+## <a name="mapvalue_type-stlclr"></a><a name="value_type"></a> map:: value_type (STL/CLR)
 
 要素の型。
 
@@ -2520,7 +2520,7 @@ int main()
 [a 1] [b 2] [c 3]
 ```
 
-## <a name="operator-map-stlclr"></a><a name="op_neq"></a>operator! = (map) (STL/CLR)
+## <a name="operator-map-stlclr"></a><a name="op_neq"></a> operator! = (map) (STL/CLR)
 
 リストが等しくないかどうかの比較。
 
@@ -2541,9 +2541,9 @@ template<typename Key,
 *そうです*<br/>
 比較する右のコンテナー。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
-演算子関数はを返し `!(left == right)` ます。 このメソッドを使用して、2つのマップが要素別に比較されるときに、 *left*が*right*と同じ順序で並んでいないかどうかをテストします。
+演算子関数はを返し `!(left == right)` ます。 このメソッドを使用して、2つのマップが要素別に比較されるときに、 *left* が *right* と同じ順序で並んでいないかどうかをテストします。
 
 ### <a name="example"></a>例
 
@@ -2591,7 +2591,7 @@ int main()
 [a b c] != [a b d] is True
 ```
 
-## <a name="operatorlt-map-stlclr"></a><a name="op_lt"></a>演算子 &lt; (map) (STL/CLR)
+## <a name="operatorlt-map-stlclr"></a><a name="op_lt"></a> 演算子 &lt; (map) (STL/CLR)
 
 比較より小さいリスト。
 
@@ -2612,9 +2612,9 @@ template<typename Key,
 *そうです*<br/>
 比較する右のコンテナー。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
-演算子関数は、が true である場合にも true を返し `i` `!(right[i] < left[i])` `left[i] < right[i]` ます。 それ以外の場合は、このメソッドを `left->size() < right->size()` 使用して、2つのマップが要素別に比較されるときに、 *left*が*right*の前に並べられているかどうかをテストします。
+演算子関数は、が true である場合にも true を返し `i` `!(right[i] < left[i])` `left[i] < right[i]` ます。 それ以外の場合は、このメソッドを `left->size() < right->size()` 使用して、2つのマップが要素別に比較されるときに、 *left* が *right* の前に並べられているかどうかをテストします。
 
 ### <a name="example"></a>例
 
@@ -2662,7 +2662,7 @@ int main()
 [a b c] < [a b d] is True
 ```
 
-## <a name="operatorlt-map-stlclr"></a><a name="op_lteq"></a>operator &lt; = (map) (STL/CLR)
+## <a name="operatorlt-map-stlclr"></a><a name="op_lteq"></a> operator &lt; = (map) (STL/CLR)
 
 以下を比較します。
 
@@ -2683,7 +2683,7 @@ template<typename Key,
 *そうです*<br/>
 比較する右のコンテナー。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 演算子関数はを返し `!(right < left)` ます。 このメソッドを使用して、2つのマップが要素別に比較されたときに、 *right*の後に*left*が順序付けされていないかどうかをテストします。
 
@@ -2733,7 +2733,7 @@ int main()
 [a b d] <= [a b c] is False
 ```
 
-## <a name="operator-map-stlclr"></a><a name="op_eq"></a>operator = = (map) (STL/CLR)
+## <a name="operator-map-stlclr"></a><a name="op_eq"></a> operator = = (map) (STL/CLR)
 
 同じ比較を一覧表示します。
 
@@ -2754,9 +2754,9 @@ template<typename Key,
 *そうです*<br/>
 比較する右のコンテナー。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
-演算子関数は、*左*と*右*で制御されるシーケンスの長さが同じで、各位置についてがである場合にのみ true を返し `i` `left[i] ==` `right[i]` ます。 このメソッドを使用して、2つのマップが要素別に比較されるときに、 *left*が*right*と同じであるかどうかをテストします。
+演算子関数は、 *左* と *右* で制御されるシーケンスの長さが同じで、各位置についてがである場合にのみ true を返し `i` `left[i] ==` `right[i]` ます。 このメソッドを使用して、2つのマップが要素別に比較されるときに、 *left* が *right* と同じであるかどうかをテストします。
 
 ### <a name="example"></a>例
 
@@ -2804,7 +2804,7 @@ int main()
 [a b c] == [a b d] is False
 ```
 
-## <a name="operatorgt-map-stlclr"></a><a name="op_gt"></a>演算子 &gt; (map) (STL/CLR)
+## <a name="operatorgt-map-stlclr"></a><a name="op_gt"></a> 演算子 &gt; (map) (STL/CLR)
 
 比較よりも大きいリストです。
 
@@ -2825,9 +2825,9 @@ template<typename Key,
 *そうです*<br/>
 比較する右のコンテナー。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
-演算子関数はを返し `right` `<` `left` ます。 このメソッドを使用して、2つのマップが要素別に比較されたときに、 *left*が*right*の後に並べられているかどうかをテストします。
+演算子関数はを返し `right` `<` `left` ます。 このメソッドを使用して、2つのマップが要素別に比較されたときに、 *left* が *right* の後に並べられているかどうかをテストします。
 
 ### <a name="example"></a>例
 
@@ -2875,7 +2875,7 @@ int main()
 [a b d] > [a b c] is True
 ```
 
-## <a name="operatorgt-map-stlclr"></a><a name="op_gteq"></a>operator &gt; = (map) (STL/CLR)
+## <a name="operatorgt-map-stlclr"></a><a name="op_gteq"></a> operator &gt; = (map) (STL/CLR)
 
 以上の比較を一覧表示します。
 
@@ -2896,9 +2896,9 @@ template<typename Key,
 *そうです*<br/>
 比較する右のコンテナー。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
-演算子関数はを返し `!(left` `<` `right)` ます。 このメソッドを使用して、2つのマップが要素別に比較されるときに、 *left*が*right*の前に順序付けされていないかどうかをテストします。
+演算子関数はを返し `!(left` `<` `right)` ます。 このメソッドを使用して、2つのマップが要素別に比較されるときに、 *left* が *right* の前に順序付けされていないかどうかをテストします。
 
 ### <a name="example"></a>例
 

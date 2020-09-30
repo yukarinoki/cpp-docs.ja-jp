@@ -7,19 +7,20 @@ helpviewer_keywords:
 - compatibility, C runtime libraries
 - compatibility
 ms.assetid: 346709cb-edda-4909-9a19-3d253eddb6b7
-ms.openlocfilehash: d6562be0abde8e9d51260b2d230f225ed159c199
-ms.sourcegitcommit: b492516cc65120250b9ea23f96f7f63f37f99fae
+ms.openlocfilehash: 711d5b3c95269413a0d94f568d3e3cb7b7dff721
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/14/2020
-ms.locfileid: "90075751"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91506874"
 ---
 # <a name="compatibility"></a>互換性
 
 ユニバーサル C ランタイムライブラリ (UCRT) は、C++ に準拠するために必要な C 標準ライブラリの大部分をサポートしています。 このメソッドは、C99 (ISO/IEC 9899:1999) ライブラリを実装しますが、特定の例外があります。
-- での厳密な型の互換性 \<complex.h> 。 
+
+- での厳密な型の互換性 \<complex.h> 。
 - `aligned_alloc`。 Windows オペレーティングシステムでは、アラインされた割り当てがサポートされていないため、実装されない可能性があります。 代わりに、標準以外の `_aligned_malloc` を使用してください。
--  `strerrorlen_s`
+- `strerrorlen_s`
 - アトミックサポート \<stdatomic.h>
 - でのスレッド処理のサポート \<threads.h>
 

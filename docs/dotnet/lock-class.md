@@ -14,12 +14,12 @@ f1_keywords:
 helpviewer_keywords:
 - msclr::lock class
 ms.assetid: 5123edd9-6aed-497d-9a0b-f4b6d6c0d666
-ms.openlocfilehash: b06c293200bc85945e95996db3109c1f5fba8d8a
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 7b2f187ec940af95523d0bbfb9265d7d9d6f69e8
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87225619"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91508647"
 ---
 # <a name="lock-class"></a>lock クラス
 
@@ -33,7 +33,7 @@ ref class lock;
 
 ## <a name="remarks"></a>解説
 
-`lock`は CLR オブジェクトに対してのみ使用でき、CLR コードでのみ使用できます。
+`lock` は CLR オブジェクトに対してのみ使用でき、CLR コードでのみ使用できます。
 
 内部的には、ロッククラスはを使用して <xref:System.Threading.Monitor> アクセスを同期します。 詳細については、参照されている記事を参照してください。
 
@@ -41,14 +41,14 @@ ref class lock;
 
 ### <a name="public-constructors"></a>パブリック コンストラクター
 
-|名前|[説明]|
+|名前|説明|
 |---------|-----------|
 |[lock:: lock](#lock)|オブジェクトを構築し `lock` 、必要に応じて、ロックの取得を無期限に待機するか、指定した時間だけ待機するか、またはまったく使用しないかを待機します。|
 |[lock::~lock](#tilde-lock)|オブジェクトを Destructs `lock` します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
-|名前|[説明]|
+|名前|説明|
 |---------|-----------|
 |[lock::acquire](#acquire)|オブジェクトのロックを取得します。また、必要に応じて、ロックの取得を無期限に、指定した時間だけ待機するか、まったく使用しないかを待機します。|
 |[lock::is_locked](#is-locked)|ロックが保持されているかどうかを示します。|
@@ -57,7 +57,7 @@ ref class lock;
 
 ### <a name="public-operators"></a>パブリック演算子
 
-|名前|[説明]|
+|名前|説明|
 |---------|-----------|
 |[lock:: operator &nbsp; bool](#operator-bool)|条件式でを使用するための演算子 `lock` 。|
 |[lock::operator==](#operator-equality)|等値演算子。|
@@ -67,9 +67,9 @@ ref class lock;
 
 **ヘッダー ファイル** \<msclr\lock.h>
 
-**名前空間**msclr
+**名前空間** msclr
 
-## <a name="locklock"></a><a name="lock"></a>lock:: lock
+## <a name="locklock"></a><a name="lock"></a> lock:: lock
 
 オブジェクトを構築し `lock` 、必要に応じて、ロックの取得を無期限に待機するか、指定した時間だけ待機するか、またはまったく使用しないかを待機します。
 
@@ -103,15 +103,15 @@ template<class T> lock(
 
 <xref:System.ApplicationException>タイムアウト前にロックの取得が行われない場合にスローします。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 コンストラクターの最初の3つの形式は、 `_object` 指定されたタイムアウト期間内 (または <xref:System.Threading.Timeout.Infinite> 何も指定されていない場合) にロックを取得しようとします。
 
-コンストラクターの4番目の形式では、のロックが取得されません `_object` 。 `lock_later`は[lock_when 列挙型](../dotnet/lock-when-enum.md)のメンバーです。 Lock [:: 獲得](../dotnet/lock-acquire.md)または[lock:: try_acquire](../dotnet/lock-try-acquire.md)を使用して、この場合にロックを取得します。
+コンストラクターの4番目の形式では、のロックが取得されません `_object` 。 `lock_later` は [lock_when 列挙型](../dotnet/lock-when-enum.md)のメンバーです。 Lock [:: 獲得](#acquire) または [lock:: try_acquire](#try-acquire) を使用して、この場合にロックを取得します。
 
 このロックは、デストラクターが呼び出されたときに自動的に解放されます。
 
-`_object`をにすることはできません <xref:System.Threading.ReaderWriterLock> 。  そのような場合は、コンパイラエラーが発生します。
+`_object` をにすることはできません <xref:System.Threading.ReaderWriterLock> 。  そのような場合は、コンパイラエラーが発生します。
 
 ### <a name="example"></a>例
 
@@ -203,7 +203,7 @@ In thread 6, Counter = 10
 All threads completed.
 ```
 
-## <a name="locklock"></a><a name="tilde-lock"></a>lock:: ~ lock
+## <a name="locklock"></a><a name="tilde-lock"></a> lock:: ~ lock
 
 オブジェクトを Destructs `lock` します。
 
@@ -211,9 +211,9 @@ All threads completed.
 ~lock();
 ```
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
-デストラクターは[lock:: release](../dotnet/lock-release.md)を呼び出します。
+デストラクターは [lock:: release](#release)を呼び出します。
 
 ### <a name="example"></a>例
 
@@ -305,7 +305,7 @@ In thread 6, Counter = 10
 All threads completed.
 ```
 
-## <a name="lockacquire"></a><a name="acquire"></a>lock:: 獲得
+## <a name="lockacquire"></a><a name="acquire"></a> lock:: 獲得
 
 オブジェクトのロックを取得します。また、必要に応じて、ロックの取得を無期限に、指定した時間だけ待機するか、まったく使用しないかを待機します。
 
@@ -328,7 +328,7 @@ void acquire(
 
 <xref:System.ApplicationException>タイムアウト前にロックの取得が行われない場合にスローします。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 タイムアウト値が指定されていない場合、既定のタイムアウトはに <xref:System.Threading.Timeout.Infinite> なります。
 
@@ -424,7 +424,7 @@ In thread 6, Counter = 10
 All threads completed.
 ```
 
-## <a name="lockis_locked"></a><a name="is-locked"></a>lock:: is_locked
+## <a name="lockis_locked"></a><a name="is-locked"></a> lock:: is_locked
 
 ロックが保持されているかどうかを示します。
 
@@ -527,7 +527,7 @@ In thread 6, Counter = 10
 All threads completed.
 ```
 
-## <a name="lockoperator-bool"></a><a name="operator-bool"></a>lock:: operator bool
+## <a name="lockoperator-bool"></a><a name="operator-bool"></a> lock:: operator bool
 
 条件式でを使用するための演算子 `lock` 。
 
@@ -539,7 +539,7 @@ operator bool();
 
 **`true`** ロックが保持されている場合は **`false`** 。それ以外の場合は。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 この演算子は、実際に `_detail_class::_safe_bool` は、 **`bool`** 整数型に変換できないため、より安全なに変換されます。
 
@@ -634,7 +634,7 @@ In thread 6, Counter = 10
 All threads completed.
 ```
 
-## <a name="lockrelease"></a><a name="release"></a>lock:: release
+## <a name="lockrelease"></a><a name="release"></a> lock:: release
 
 ロックを解放します。
 
@@ -642,7 +642,7 @@ All threads completed.
 void release();
 ```
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 ロックが保持されていない場合、 `release` は何も行いません。
 
@@ -738,7 +738,7 @@ In thread 6, Counter = 10
 All threads completed.
 ```
 
-## <a name="locktry_acquire"></a><a name="try-acquire"></a>lock:: try_acquire
+## <a name="locktry_acquire"></a><a name="try-acquire"></a> lock:: try_acquire
 
 オブジェクトのロックを取得し、指定した時間待機した後、を返して、 **`bool`** 例外をスローする代わりに、取得の成功を報告します。
 
@@ -760,7 +760,7 @@ bool try_acquire(
 
 **`true`** ロックが取得された場合は **`false`** 。それ以外の場合は。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 ロックが既に取得されている場合、この関数は何も行いません。
 
@@ -854,7 +854,7 @@ In thread 6, Counter = 10
 All threads completed.
 ```
 
-## <a name="lockoperator"></a><a name="operator-equality"></a>lock:: operator = =
+## <a name="lockoperator"></a><a name="operator-equality"></a> lock:: operator = =
 
 等値演算子。
 
@@ -866,7 +866,7 @@ template<class T> bool operator==(
 
 ### <a name="parameters"></a>パラメーター
 
-*\t*<br/>
+*t*<br/>
 等しいかどうかを比較するオブジェクト。
 
 ### <a name="return-value"></a>戻り値
@@ -897,7 +897,7 @@ int main () {
 Equal!
 ```
 
-## <a name="lockoperator"></a><a name="operator-inequality"></a>lock:: operator! =
+## <a name="lockoperator"></a><a name="operator-inequality"></a> lock:: operator! =
 
 非等値演算子。
 
@@ -909,7 +909,7 @@ template<class T> bool operator!=(
 
 ### <a name="parameters"></a>パラメーター
 
-*\t*<br/>
+*t*<br/>
 等しくないかどうかを比較するオブジェクト。
 
 ### <a name="return-value"></a>戻り値

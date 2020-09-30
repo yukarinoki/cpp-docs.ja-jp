@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - C3170
 ms.assetid: ca9a59d6-7df3-42f0-b028-c09d0af3ac2a
-ms.openlocfilehash: e2d74a637e2902fcf636b49068882f32aa706f94
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: c4eb4a2551312791d05c8badb66af0070e74b630
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74761765"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91508330"
 ---
 # <a name="compiler-error-c3170"></a>コンパイラエラー C3170
 
 プロジェクト内で異なるモジュール識別子を持つことはできません
 
-異なる名前の[モジュール](../../windows/module-cpp.md)属性が、コンパイルの2つのファイルに見つかりました。 コンパイルごとに指定できる一意の `module` 属性は1つだけです。
+異なる名前の[モジュール](../../windows/attributes/module-cpp.md)属性が、コンパイルの2つのファイルに見つかりました。 コンパイルごとに指定できる一意の属性は1つだけ `module` です。
 
-同一の `module` 属性は、複数のソースコードファイルで指定できます。
+複数 `module` のソースコードファイルで、同一の属性を指定できます。
 
 たとえば、次のモジュール属性が見つかったとします。
 

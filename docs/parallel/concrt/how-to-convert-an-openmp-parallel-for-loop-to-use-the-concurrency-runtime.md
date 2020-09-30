@@ -7,16 +7,16 @@ helpviewer_keywords:
 - parallel for loops, converting from OpenMP to the Concurrency Runtime
 - parallel loops, converting from OpenMP to the Concurrency Runtime
 ms.assetid: d8a7b656-f86c-456e-9c5d-a7d52f94646e
-ms.openlocfilehash: 2d96ba23582368fe72e61003823826a6f3ab807a
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: 4f523f9f6de7f1ffb4c3b578b60de587239dffb6
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77141758"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91507874"
 ---
 # <a name="how-to-convert-an-openmp-parallel-for-loop-to-use-the-concurrency-runtime"></a>方法: OpenMP の parallel for ループを変換し、コンカレンシー ランタイムを使用する
 
-この例では、OpenMP [parallel](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md#parallel)および[for](../../parallel/openmp/reference/for-openmp.md)ディレクティブを使用する基本的なループを変換して、同時実行ランタイム[Concurrency::p arallel_for](reference/concurrency-namespace-functions.md#parallel_for)アルゴリズムを使用する方法を示します。
+この例では、OpenMP [parallel](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md#parallel) および [for](../openmp/reference/openmp-directives.md#for-openmp) ディレクティブを使用する基本的なループを変換して、同時実行ランタイム [Concurrency::p arallel_for](reference/concurrency-namespace-functions.md#parallel_for) アルゴリズムを使用する方法を示します。
 
 ## <a name="example---prime-count"></a>例-素数
 
@@ -35,23 +35,23 @@ found 107254 prime numbers.
 
 `parallel_for` アルゴリズムおよび OpenMP 3.0 では、インデックス型を符号付き整数型として使用することも、符号なし整数型として使用することもできます。 また、`parallel_for` アルゴリズムを使用すると、指定の範囲が符号付きの型をオーバーフローすることがなくなります。 OpenMP Version 2.0 および 2.5 では、符号付き整数のインデックス型しか使用できません。 また、OpenMP でインデックス範囲は検証されません。
 
-同時実行ランタイムを使用するこの例のバージョンでは、 [atomic](../../parallel/openmp/reference/atomic.md)ディレクティブの代わりに[Concurrency:: 組み合わせ](../../parallel/concrt/reference/combinable-class.md)可能オブジェクトを使用して、同期を必要とせずにカウンター値をインクリメントします。
+同時実行ランタイムを使用するこの例のバージョンでは、 [atomic](../openmp/reference/openmp-directives.md#atomic)ディレクティブの代わりに[Concurrency:: 組み合わせ](../../parallel/concrt/reference/combinable-class.md)可能オブジェクトを使用して、同期を必要とせずにカウンター値をインクリメントします。
 
-`parallel_for` およびその他の並列アルゴリズムの詳細については、「[並列アルゴリズム](../../parallel/concrt/parallel-algorithms.md)」を参照してください。 `combinable` クラスの詳細については、「[並列コンテナーとオブジェクト](../../parallel/concrt/parallel-containers-and-objects.md)」を参照してください。
+とその他の並列アルゴリズムの詳細について `parallel_for` は、「 [並列アルゴリズム](../../parallel/concrt/parallel-algorithms.md)」を参照してください。 クラスの詳細については `combinable` 、「 [並列コンテナーとオブジェクト](../../parallel/concrt/parallel-containers-and-objects.md)」を参照してください。
 
 ## <a name="example---use-stdarray"></a>例-std:: array を使用する
 
-この例では、前の例を変更して、ネイティブ配列ではなく[std:: array](../../standard-library/array-class-stl.md)オブジェクトを操作します。 OpenMP バージョン2.0 および2.5 では、`parallel_for` コンストラクトでのみ符号付き整数インデックス型が許可されるため、反復子を使用しC++て標準ライブラリコンテナーの要素に並列でアクセスすることはできません。 並列パターンライブラリ (PPL) では、 [concurrency::p arallel_for_each](reference/concurrency-namespace-functions.md#parallel_for_each)アルゴリズムが提供されています。これは、 C++標準ライブラリによって提供されるものなど、反復的なコンテナーに対してタスクを並行して実行します。 このアルゴリズムでは、`parallel_for` アルゴリズムで使用されるのと同じ分割ロジックが使用されます。 `parallel_for_each` アルゴリズムはC++標準ライブラリ[std:: for_each](../../standard-library/algorithm-functions.md#for_each)アルゴリズムに似ていますが、`parallel_for_each` アルゴリズムによってタスクが同時に実行される点が異なります。
+この例では、前の例を変更して、ネイティブ配列ではなく [std:: array](../../standard-library/array-class-stl.md) オブジェクトを操作します。 OpenMP バージョン2.0 および2.5 では、コンストラクターでのみ符号付き整数インデックス型が許可されるため `parallel_for` 、反復子を使用して C++ 標準ライブラリコンテナーの要素に並列でアクセスすることはできません。 並列パターンライブラリ (PPL) は、 [concurrency::p arallel_for_each](reference/concurrency-namespace-functions.md#parallel_for_each) アルゴリズムを提供しています。これは、C++ 標準ライブラリによって提供されるものなど、反復的なコンテナーでタスクを並行して実行します。 このアルゴリズムでは、`parallel_for` アルゴリズムで使用されるのと同じ分割ロジックが使用されます。 この `parallel_for_each` アルゴリズムは、C++ 標準ライブラリ [std:: for_each](../../standard-library/algorithm-functions.md#for_each) アルゴリズムに似ていますが、アルゴリズムによってタスクが同時に実行される点が異なり `parallel_for_each` ます。
 
 [!code-cpp[concrt-openmp#10](../../parallel/concrt/codesnippet/cpp/how-to-convert-an-openmp-parallel-for-loop-to-use-the-concurrency-runtime_2.cpp)]
 
 ## <a name="compiling-the-code"></a>コードのコンパイル
 
-コード例をコピーし、Visual Studio プロジェクトに貼り付けるか、`concrt-omp-count-primes.cpp` という名前のファイルに貼り付けてから、Visual Studio のコマンドプロンプトウィンドウで次のコマンドを実行します。
+コード例をコピーし、Visual Studio プロジェクトに貼り付けるか、という名前のファイルに貼り付けて `concrt-omp-count-primes.cpp` から、Visual studio のコマンドプロンプトウィンドウで次のコマンドを実行します。
 
 > **cl.exe/EHsc/openmp concrt-omp-count-primes**
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [OpenMP からコンカレンシー ランタイムへの移行](../../parallel/concrt/migrating-from-openmp-to-the-concurrency-runtime.md)<br/>
 [並列アルゴリズム](../../parallel/concrt/parallel-algorithms.md)<br/>

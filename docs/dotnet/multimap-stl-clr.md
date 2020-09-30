@@ -97,12 +97,12 @@ helpviewer_keywords:
 - operator> member [STL/CLR]
 - operator>= member [STL/CLR]
 ms.assetid: 3dfe329d-a078-462a-b050-7999ce6110ad
-ms.openlocfilehash: 6a2491b5c9e3c95a805d69265caf3267fd1e9c8c
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 6bdd9b308a4917fde7de7b97ed7b9f7cfc8519a9
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87212931"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91508561"
 ---
 # <a name="multimap-stlclr"></a>multimap (STL/CLR)
 
@@ -112,11 +112,11 @@ ms.locfileid: "87212931"
 
 `Microsoft::VisualC::StlClr::GenericPair<GKey, GMapped>`
 
-各値の説明:
+ここで、
 
-`GKey`は、後者が ref 型である場合を除いて、*キー*と同じです。この場合、`Key^`
+`GKey` は、後者が ref 型である場合を除いて、 *キー* と同じです。この場合、 `Key^`
 
-`GMapped`は、後者が参照型でない限り、*マップ*と同じです。この場合、`Mapped^`
+`GMapped` は、後者が参照型でない限り、 *マップ* と同じです。この場合、 `Mapped^`
 
 ## <a name="syntax"></a>構文
 
@@ -137,10 +137,10 @@ template<typename Key,
 
 ### <a name="parameters"></a>パラメーター
 
-*[キー]*<br/>
+*キー*<br/>
 被制御シーケンス内の要素のキー コンポーネントの型。
 
-*Mapped*<br/>
+*付け*<br/>
 被制御シーケンス内の要素の追加コンポーネントの型。
 
 ## <a name="requirements"></a>必要条件
@@ -215,15 +215,15 @@ template<typename Key,
 |<xref:System.Collections.Generic.ICollection%601>|型指定された要素のグループを保持します。|
 |ITree\<Key, Value>|ジェネリックコンテナーを管理します。|
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>注釈
 
 オブジェクトは、制御するシーケンスのストレージを個々のノードとして割り当て、解放します。 要素は、ノード間のリンクを変更することによって、ノード間のリンクを変更することによって順序を維持する、(ほぼ) 均衡ツリーに挿入されます。ノード間でのコンテンツのコピーは行われません。 つまり、要素を自由に挿入および削除できます。
 
-オブジェクトは、multimap:: key_compare 型の格納されたデリゲートオブジェクトを呼び出すことによって、制御するシーケンスを並べ替えます[(STL/CLR)](../dotnet/multimap-key-compare-stl-clr.md)。 Multimap を構築するときに、格納されているデリゲートオブジェクトを指定できます。デリゲートオブジェクトを指定しない場合、既定では比較が行われ `operator<(key_type, key_type)` ます。 この格納されているオブジェクトにアクセスするには、メンバー関数[multimap:: key_comp (STL/CLR)](../dotnet/multimap-key-comp-stl-clr.md)を呼び出し `()` ます。
+オブジェクトは、multimap:: key_compare 型の格納されたデリゲートオブジェクトを呼び出すことによって、制御するシーケンスを並べ替えます [(STL/CLR)](#key_compare)。 Multimap を構築するときに、格納されているデリゲートオブジェクトを指定できます。デリゲートオブジェクトを指定しない場合、既定では比較が行われ `operator<(key_type, key_type)` ます。 この格納されているオブジェクトにアクセスするには、メンバー関数[multimap:: key_comp (STL/CLR)](#key_comp)を呼び出し `()` ます。
 
-このようなデリゲートオブジェクトは、multimap:: key_type 型のキーに対して厳密弱順序を強制する必要があります[(STL/CLR)](../dotnet/multimap-key-type-stl-clr.md)。 つまり、任意の2つのキーについては、次のようになり `X` `Y` ます。
+このようなデリゲートオブジェクトは、multimap:: key_type 型のキーに対して厳密弱順序を強制する必要があります [(STL/CLR)](#key_type)。 つまり、任意の2つのキーについては、次のようになり `X` `Y` ます。
 
-`key_comp()(X, Y)`すべての呼び出しで同じブール型の結果を返します。
+`key_comp()(X, Y)` すべての呼び出しで同じブール型の結果を返します。
 
 `key_comp()(X, Y)`が true の場合、は `key_comp()(Y, X)` false である必要があります。
 
@@ -231,21 +231,21 @@ template<typename Key,
 
 `!key_comp()(X, Y) && !key_comp()(Y, X)`が true の場合、 `X` と `Y` は等価の順序付けと呼ばれます。
 
-`X`被制御シーケンスの前にある要素の場合 `Y` 、 `key_comp()(Y, X)` は false になります。 (既定のデリゲートオブジェクトの場合、キーの値が減少することはありません)。テンプレートクラス[map (STL/CLR)](../dotnet/map-stl-clr.md)とは異なり、テンプレートクラスのオブジェクトでは、 `multimap` すべての要素のキーが一意である必要はありません。 (2 つ以上のキーが同等の順序を持つことができます)。
+`X`被制御シーケンスの前にある要素の場合 `Y` 、 `key_comp()(Y, X)` は false になります。 (既定のデリゲートオブジェクトの場合、キーの値が減少することはありません)。テンプレートクラス [map (STL/CLR)](../dotnet/map-stl-clr.md)とは異なり、テンプレートクラスのオブジェクトでは、 `multimap` すべての要素のキーが一意である必要はありません。 (2 つ以上のキーが同等の順序を持つことができます)。
 
 各要素には、個別のキーとマップされた値が含まれます。 シーケンスは、シーケンス内の要素数の対数に比例した数の操作で、任意の要素の検索、挿入、および削除を許可する方法で表現されます (対数時間)。 要素を挿入しても反復子の有効性は失われません。また、要素を削除した場合は、削除された要素を指す反復子だけが無効化されます。
 
-Multimap は双方向反復子をサポートします。これは、被制御シーケンス内の要素を指定する反復子によって隣接する要素にステップインできることを意味します。 特別なヘッドノードは、 [multimap:: end (STL/CLR)](../dotnet/multimap-end-stl-clr.md)によって返される反復子に対応 `()` します。 この反復子をデクリメントして、被制御シーケンスの最後の要素 (存在する場合) に移動することができます。 Multimap iterator をインクリメントしてヘッドノードに移動することができ、これはと等しいと比較され `end()` ます。 ただし、によって返される反復子を逆参照することはできません `end()` 。
+Multimap は双方向反復子をサポートします。これは、被制御シーケンス内の要素を指定する反復子によって隣接する要素にステップインできることを意味します。 特別なヘッドノードは、 [multimap:: end (STL/CLR)](#end)によって返される反復子に対応 `()` します。 この反復子をデクリメントして、被制御シーケンスの最後の要素 (存在する場合) に移動することができます。 Multimap iterator をインクリメントしてヘッドノードに移動することができ、これはと等しいと比較され `end()` ます。 ただし、によって返される反復子を逆参照することはできません `end()` 。
 
 ランダムアクセス反復子を必要とする数値の位置を指定して、multimap 要素を直接参照することはできないことに注意してください。
 
 Multimap iterator は、関連付けられている multimap ノードへのハンドルを格納します。このノードは、関連付けられたコンテナーへのハンドルを格納します。 反復子は、関連付けられているコンテナーオブジェクトと共にのみ使用できます。 関連する multimap ノードが一部の multimap に関連付けられている限り、multimap iterator は有効なままです。 さらに、有効な反復子は dereferencable です。これを使用すると、に指定した要素の値にアクセスしたり、変更したりすることができ `end()` ます。
 
-要素を消去または削除すると、格納されている値のデストラクターが呼び出されます。 コンテナーを破棄すると、すべての要素が消去されます。 したがって、要素の型が ref クラスであるコンテナーは、コンテナーの直後要素が存在しないことを保証します。 ただし、ハンドルのコンテナーが要素を破棄し*ない*ことに注意してください。
+要素を消去または削除すると、格納されている値のデストラクターが呼び出されます。 コンテナーを破棄すると、すべての要素が消去されます。 したがって、要素の型が ref クラスであるコンテナーは、コンテナーの直後要素が存在しないことを保証します。 ただし、ハンドルのコンテナーが要素を破棄し *ない* ことに注意してください。
 
 ## <a name="members"></a>メンバー
 
-## <a name="multimapbegin-stlclr"></a><a name="begin"></a>multimap:: begin (STL/CLR)
+## <a name="multimapbegin-stlclr"></a><a name="begin"></a> multimap:: begin (STL/CLR)
 
 被制御シーケンスの先頭を指定します。
 
@@ -296,7 +296,7 @@ int main()
 *++begin() = [b 2]
 ```
 
-## <a name="multimapclear-stlclr"></a><a name="clear"></a>multimap:: clear (STL/CLR)
+## <a name="multimapclear-stlclr"></a><a name="clear"></a> multimap:: clear (STL/CLR)
 
 すべての要素を削除します。
 
@@ -308,7 +308,7 @@ void clear();
 
 ### <a name="remarks"></a>解説
 
-このメンバー関数は、実質的に[multimap:: erase (stl](../dotnet/multimap-erase-stl-clr.md) /clr) `(` [multimap:: begin (](../dotnet/multimap-begin-stl-clr.md) stl/clr) `(),` [multimap:: end (stl/clr)](../dotnet/multimap-end-stl-clr.md) `())` を呼び出します。 このメソッドを使用して、被制御シーケンスが空であることを確認します。
+このメンバー関数は、実質的に[multimap:: erase (stl](#erase) /clr) `(` [multimap:: begin (](#begin) stl/clr) `(),` [multimap:: end (stl/clr)](#end) `())` を呼び出します。 このメソッドを使用して、被制御シーケンスが空であることを確認します。
 
 ### <a name="example"></a>例
 
@@ -354,7 +354,7 @@ size() = 0
 size() = 0
 ```
 
-## <a name="multimapconst_iterator-stlclr"></a><a name="const_iterator"></a>multimap:: const_iterator (STL/CLR)
+## <a name="multimapconst_iterator-stlclr"></a><a name="const_iterator"></a> multimap:: const_iterator (STL/CLR)
 
 被制御シーケンスの定数反復子の型です。
 
@@ -396,7 +396,7 @@ int main()
 [a 1] [b 2] [c 3]
 ```
 
-## <a name="multimapconst_reference-stlclr"></a><a name="const_reference"></a>multimap:: const_reference (STL/CLR)
+## <a name="multimapconst_reference-stlclr"></a><a name="const_reference"></a> multimap:: const_reference (STL/CLR)
 
 要素への定数参照の型です。
 
@@ -441,7 +441,7 @@ int main()
 [a 1] [b 2] [c 3]
 ```
 
-## <a name="multimapconst_reverse_iterator-stlclr"></a><a name="const_reverse_iterator"></a>multimap:: const_reverse_iterator (STL/CLR)
+## <a name="multimapconst_reverse_iterator-stlclr"></a><a name="const_reverse_iterator"></a> multimap:: const_reverse_iterator (STL/CLR)
 
 被制御シーケンスの定数反転反復子の型です。
 
@@ -483,7 +483,7 @@ int main()
 [c 3] [b 2] [a 1]
 ```
 
-## <a name="multimapcount-stlclr"></a><a name="count"></a>multimap:: count (STL/CLR)
+## <a name="multimapcount-stlclr"></a><a name="count"></a> multimap:: count (STL/CLR)
 
 指定したキーに一致する要素の数を検索します。
 
@@ -498,9 +498,9 @@ size_type count(key_type key);
 *key*<br/>
 検索対象のキー値。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
-このメンバー関数は、*キー*と同じ順序付けを持つ被制御シーケンス内の要素の数を返します。 被制御シーケンス内の指定したキーに一致する現在の要素の数を確認する場合に、これを使用します。
+このメンバー関数は、 *キー*と同じ順序付けを持つ被制御シーケンス内の要素の数を返します。 被制御シーケンス内の指定したキーに一致する現在の要素の数を確認する場合に、これを使用します。
 
 ### <a name="example"></a>例
 
@@ -536,7 +536,7 @@ count(L'b') = 1
 count(L'C') = 0
 ```
 
-## <a name="multimapdifference_type-stlclr"></a><a name="difference_type"></a>multimap::d ifference_type (STL/CLR)
+## <a name="multimapdifference_type-stlclr"></a><a name="difference_type"></a> multimap::d ifference_type (STL/CLR)
 
 2つの要素間の符号付き距離の型。
 
@@ -591,7 +591,7 @@ end()-begin() = 3
 begin()-end() = -3
 ```
 
-## <a name="multimapempty-stlclr"></a><a name="empty"></a>multimap:: empty (STL/CLR)
+## <a name="multimapempty-stlclr"></a><a name="empty"></a> multimap:: empty (STL/CLR)
 
 要素が存在しないかどうかをテストします。
 
@@ -603,7 +603,7 @@ bool empty();
 
 ### <a name="remarks"></a>解説
 
-このメンバー関数は、被制御シーケンスが空の場合に true を返します。 これは、 [multimap:: size (STL/CLR)](../dotnet/multimap-size-stl-clr.md)に相当 `() == 0` します。 このメソッドを使用して、multimap が空かどうかをテストします。
+このメンバー関数は、被制御シーケンスが空の場合に true を返します。 これは、 [multimap:: size (STL/CLR)](#size)に相当 `() == 0` します。 このメソッドを使用して、multimap が空かどうかをテストします。
 
 ### <a name="example"></a>例
 
@@ -643,7 +643,7 @@ size() = 0
 empty() = True
 ```
 
-## <a name="multimapend-stlclr"></a><a name="end"></a>multimap:: end (STL/CLR)
+## <a name="multimapend-stlclr"></a><a name="end"></a> multimap:: end (STL/CLR)
 
 被制御シーケンスの末尾を指定します。
 
@@ -696,7 +696,7 @@ int main()
 *--end() = [c 3]
 ```
 
-## <a name="multimapequal_range-stlclr"></a><a name="equal_range"></a>multimap:: equal_range (STL/CLR)
+## <a name="multimapequal_range-stlclr"></a><a name="equal_range"></a> multimap:: equal_range (STL/CLR)
 
 指定したキーに一致する範囲を検索します。
 
@@ -711,9 +711,9 @@ pair_iter_iter equal_range(key_type _Keyval);
 *_Keyval*<br/>
 検索対象のキー値。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
-メソッドは、反復子 `-` [multimap:: lower_bound (stl/clr)](../dotnet/multimap-lower-bound-stl-clr.md) `(_Keyval),` [multimap:: upper_bound (stl/clr)](../dotnet/multimap-upper-bound-stl-clr.md)のペアを返し `(_Keyval)` ます。 このメソッドを使用して、被制御シーケンス内の指定したキーに一致する要素の範囲を特定します。
+メソッドは、反復子 `-` [multimap:: lower_bound (stl/clr)](#lower_bound) `(_Keyval),` [multimap:: upper_bound (stl/clr)](#upper_bound)のペアを返し `(_Keyval)` ます。 このメソッドを使用して、被制御シーケンス内の指定したキーに一致する要素の範囲を特定します。
 
 ### <a name="example"></a>例
 
@@ -757,7 +757,7 @@ equal_range(L'x') empty = True
 [b 2]
 ```
 
-## <a name="multimaperase-stlclr"></a><a name="erase"></a>multimap:: erase (STL/CLR)
+## <a name="multimaperase-stlclr"></a><a name="erase"></a> multimap:: erase (STL/CLR)
 
 指定した位置にある要素を削除します。
 
@@ -783,13 +783,13 @@ bool erase(key_type key)
 *where*<br/>
 消去する要素。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
-最初のメンバー関数*は、が*指す被制御シーケンスの要素を削除し、そのような要素が存在しない場合は、削除された要素の後に残っ[ている最初](../dotnet/multimap-end-stl-clr.md)の要素を指定する反復子を返し `()` ます。 このメソッドを使用して、1つの要素を削除します。
+最初のメンバー関数*は、が*指す被制御シーケンスの要素を削除し、そのような要素が存在しない場合は、削除された要素の後に残っ[ている最初](#end)の要素を指定する反復子を返し `()` ます。 このメソッドを使用して、1つの要素を削除します。
 
 2番目のメンバー関数は、範囲 [,) 内の被制御シーケンスの要素を削除 `first` `last` し、削除された要素の後に残っている最初の要素を指定する反復子を返します。その `end()` ような要素が存在しない場合は、を返します。 これを使用して、0個以上の連続する要素を削除します。
 
-3番目のメンバー関数は、キーの順序が同じ*キーを持つ*被制御シーケンスの要素を削除し、削除された要素の数を返します。 これを使用して、指定されたキーに一致するすべての要素を削除およびカウントします。
+3番目のメンバー関数は、キーの順序が同じ *キーを持つ*被制御シーケンスの要素を削除し、削除された要素の数を返します。 これを使用して、指定されたキーに一致するすべての要素を削除およびカウントします。
 
 各要素の消去では、被制御シーケンス内の要素数の対数に比例して時間がかかります。
 
@@ -850,7 +850,7 @@ erase(L'x') = 0
 erase(L'e') = 1
 ```
 
-## <a name="multimapfind-stlclr"></a><a name="find"></a>multimap:: find (STL/CLR)
+## <a name="multimapfind-stlclr"></a><a name="find"></a> multimap:: find (STL/CLR)
 
 指定したキーに一致する要素を検索します。
 
@@ -865,9 +865,9 @@ iterator find(key_type key);
 *key*<br/>
 検索対象のキー値。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
-被制御シーケンス内の少なくとも1つの要素の順序が同じである*場合、メンバー*関数は、これらの要素のいずれかを指定する反復子を返します。それ以外の場合は、 [multimap:: end (STL/CLR)](../dotnet/multimap-end-stl-clr.md)を返し `()` ます。 このメソッドを使用して、被制御シーケンス内で、指定したキーに一致する要素を検索します。
+被制御シーケンス内の少なくとも1つの要素の順序が同じである*場合、メンバー*関数は、これらの要素のいずれかを指定する反復子を返します。それ以外の場合は、 [multimap:: end (STL/CLR)](#end)を返し `()` ます。 このメソッドを使用して、被制御シーケンス内で、指定したキーに一致する要素を検索します。
 
 ### <a name="example"></a>例
 
@@ -909,7 +909,7 @@ find b = [b 2]
 find C = False
 ```
 
-## <a name="multimapgeneric_container-stlclr"></a><a name="generic_container"></a>multimap:: generic_container (STL/CLR)
+## <a name="multimapgeneric_container-stlclr"></a><a name="generic_container"></a> multimap:: generic_container (STL/CLR)
 
 コンテナーのジェネリックインターフェイスの型。
 
@@ -973,7 +973,7 @@ int main()
 [a 1] [b 2] [c 3] [d 4] [e 5]
 ```
 
-## <a name="multimapgeneric_iterator-stlclr"></a><a name="generic_iterator"></a>multimap:: generic_iterator (STL/CLR)
+## <a name="multimapgeneric_iterator-stlclr"></a><a name="generic_iterator"></a> multimap:: generic_iterator (STL/CLR)
 
 コンテナーのジェネリックインターフェイスで使用する反復子の型。
 
@@ -1030,7 +1030,7 @@ int main()
 [a 1]
 ```
 
-## <a name="multimapgeneric_reverse_iterator-stlclr"></a><a name="generic_reverse_iterator"></a>multimap:: generic_reverse_iterator (STL/CLR)
+## <a name="multimapgeneric_reverse_iterator-stlclr"></a><a name="generic_reverse_iterator"></a> multimap:: generic_reverse_iterator (STL/CLR)
 
 コンテナーのジェネリックインターフェイスで使用する逆順反復子の型。
 
@@ -1086,7 +1086,7 @@ int main()
 [c 3]
 ```
 
-## <a name="multimapgeneric_value-stlclr"></a><a name="generic_value"></a>multimap:: generic_value (STL/CLR)
+## <a name="multimapgeneric_value-stlclr"></a><a name="generic_value"></a> multimap:: generic_value (STL/CLR)
 
 コンテナーのジェネリックインターフェイスで使用する要素の型。
 
@@ -1140,7 +1140,7 @@ int main()
 [a 1]
 ```
 
-## <a name="multimapinsert-stlclr"></a><a name="insert"></a>multimap:: insert (STL/CLR)
+## <a name="multimapinsert-stlclr"></a><a name="insert"></a> multimap:: insert (STL/CLR)
 
 要素を追加します。
 
@@ -1171,17 +1171,17 @@ void insert(System::Collections::Generic::IEnumerable<value_type>^ right);
 *where*<br/>
 コンテナー内の挿入位置 (ヒントのみ)。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 各メンバー関数は、残りのオペランドによって指定されたシーケンスを挿入します。
 
-1つ目のメンバー関数は、値*val*を持つ要素を挿入し、新しく挿入された要素を指定する反復子を返します。 1つの要素を挿入するために使用します。
+1つ目のメンバー関数は、値 *val*を持つ要素を挿入し、新しく挿入された要素を指定する反復子を返します。 1つの要素を挿入するために使用します。
 
 2番目のメンバー関数は、(パフォーマンスを向上させるために) ヒントと*してを使用し*て、値*val*を持つ要素を挿入し、新しく挿入された要素を指定する反復子を返します。 これを使用して、既知の要素に隣接している可能性のある単一の要素を挿入します。
 
 3番目のメンバー関数は、シーケンス [,) を挿入し `first` `last` ます。 このメソッドを使用して、別のシーケンスからコピーされた0個以上の要素を挿入します。
 
-4番目のメンバー関数は、*右側*に指定されたシーケンスを挿入します。 このメソッドを使用して、列挙子によって記述されたシーケンスを挿入します。
+4番目のメンバー関数は、 *右側*に指定されたシーケンスを挿入します。 このメソッドを使用して、列挙子によって記述されたシーケンスを挿入します。
 
 各要素の挿入には、被制御シーケンス内の要素数の対数に比例した時間がかかります。 挿入ポイントに隣接する要素を指定するヒントを指定すると、挿入は償却定数時間で実行できます。
 
@@ -1258,7 +1258,7 @@ insert(begin(), [L'y' 25]) = [y 25]
 [a 1] [b 2] [b 2] [c 3] [x 24] [y 25]
 ```
 
-## <a name="multimapiterator-stlclr"></a><a name="iterator"></a>multimap:: iterator (STL/CLR)
+## <a name="multimapiterator-stlclr"></a><a name="iterator"></a> multimap:: iterator (STL/CLR)
 
 被制御シーケンスの反復子の型です。
 
@@ -1300,7 +1300,7 @@ int main()
 [a 1] [b 2] [c 3]
 ```
 
-## <a name="multimapkey_comp-stlclr"></a><a name="key_comp"></a>multimap:: key_comp (STL/CLR)
+## <a name="multimapkey_comp-stlclr"></a><a name="key_comp"></a> multimap:: key_comp (STL/CLR)
 
 2つのキーの順序付けデリゲートをコピーします。
 
@@ -1359,7 +1359,7 @@ compare(L'a', L'b') = False
 compare(L'b', L'a') = True
 ```
 
-## <a name="multimapkey_compare-stlclr"></a><a name="key_compare"></a>multimap:: key_compare (STL/CLR)
+## <a name="multimapkey_compare-stlclr"></a><a name="key_compare"></a> multimap:: key_compare (STL/CLR)
 
 2つのキーの順序付けデリゲート。
 
@@ -1419,7 +1419,7 @@ compare(L'a', L'b') = False
 compare(L'b', L'a') = True
 ```
 
-## <a name="multimapkey_type-stlclr"></a><a name="key_type"></a>multimap:: key_type (STL/CLR)
+## <a name="multimapkey_type-stlclr"></a><a name="key_type"></a> multimap:: key_type (STL/CLR)
 
 順序付けキーの型です。
 
@@ -1431,7 +1431,7 @@ typedef Key key_type;
 
 ### <a name="remarks"></a>解説
 
-この型は、テンプレートパラメーター*キー*のシノニムです。
+この型は、テンプレートパラメーター *キー*のシノニムです。
 
 ### <a name="example"></a>例
 
@@ -1464,7 +1464,7 @@ int main()
 a b c
 ```
 
-## <a name="multimaplower_bound-stlclr"></a><a name="lower_bound"></a>multimap:: lower_bound (STL/CLR)
+## <a name="multimaplower_bound-stlclr"></a><a name="lower_bound"></a> multimap:: lower_bound (STL/CLR)
 
 指定されたキーに一致する範囲の先頭を検索します。
 
@@ -1479,9 +1479,9 @@ iterator lower_bound(key_type key);
 *key*<br/>
 検索対象のキー値。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
-このメンバー関数は、 `X` *キー*への順序が同じである被制御シーケンス内の最初の要素を決定します。 そのような要素が存在しない場合は、 [multimap:: end (STL/CLR)](../dotnet/multimap-end-stl-clr.md)を返します。それ以外の場合は、を `()` 指定する反復子を返し `X` ます。 このメソッドを使用して、被制御シーケンスの中で、指定したキーに一致する要素のシーケンスの先頭を検索します。
+このメンバー関数は、 `X` *キー*への順序が同じである被制御シーケンス内の最初の要素を決定します。 そのような要素が存在しない場合は、 [multimap:: end (STL/CLR)](#end)を返します。それ以外の場合は、を `()` 指定する反復子を返し `X` ます。 このメソッドを使用して、被制御シーケンスの中で、指定したキーに一致する要素のシーケンスの先頭を検索します。
 
 ### <a name="example"></a>例
 
@@ -1523,7 +1523,7 @@ lower_bound(L'x')==end() = True
 *lower_bound(L'b') = [b 2]
 ```
 
-## <a name="multimapmake_value-stlclr"></a><a name="make_value"></a>multimap:: make_value (STL/CLR)
+## <a name="multimapmake_value-stlclr"></a><a name="make_value"></a> multimap:: make_value (STL/CLR)
 
 値オブジェクトを構築します。
 
@@ -1538,12 +1538,12 @@ static value_type make_value(key_type key, mapped_type mapped);
 *key*<br/>
 使用するキー値。
 
-*付け*<br/>
+*マッピング済み*<br/>
 検索するマップされた値。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
-このメンバー関数は、キー `value_type` が*キー*で、マップされた値が*マップ*されているオブジェクトを返します。 これを使用して、他のいくつかのメンバー関数との使用に適したオブジェクトを作成します。
+このメンバー関数は、キー `value_type` が *キー* で、マップされた値が *マップ*されているオブジェクトを返します。 これを使用して、他のいくつかのメンバー関数との使用に適したオブジェクトを作成します。
 
 ### <a name="example"></a>例
 
@@ -1572,7 +1572,7 @@ int main()
 [a 1] [b 2] [c 3]
 ```
 
-## <a name="multimapmapped_type-stlclr"></a><a name="mapped_type"></a>multimap:: mapped_type (STL/CLR)
+## <a name="multimapmapped_type-stlclr"></a><a name="mapped_type"></a> multimap:: mapped_type (STL/CLR)
 
 各キーに関連付けられた、マップされた値の型です。
 
@@ -1584,7 +1584,7 @@ typedef Mapped mapped_type;
 
 ### <a name="remarks"></a>解説
 
-この型は、*マップ*されたテンプレートパラメーターのシノニムです。
+この型は、 *マップ*されたテンプレートパラメーターのシノニムです。
 
 ### <a name="example"></a>例
 
@@ -1617,7 +1617,7 @@ int main()
 1 2 3
 ```
 
-## <a name="multimapmultimap-stlclr"></a><a name="multimap"></a>multimap:: multimap (STL/CLR)
+## <a name="multimapmultimap-stlclr"></a><a name="multimap"></a> multimap:: multimap (STL/CLR)
 
 コンテナー オブジェクトを構築します。
 
@@ -1652,7 +1652,7 @@ multimap(System::Collections::Generic::IEnumerable<GValue>^ right,
 *そうです*<br/>
 挿入するオブジェクトまたは範囲。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 コンストラクター:
 
@@ -1664,19 +1664,19 @@ multimap(System::Collections::Generic::IEnumerable<GValue>^ right,
 
 `explicit multimap(key_compare^ pred);`
 
-順序述語*pred*を使用して、要素を含まない被制御シーケンスを初期化します。 このメソッドを使用して、指定された順序述語を使用して、空の初期被制御シーケンスを指定します。
+順序述語 *pred*を使用して、要素を含まない被制御シーケンスを初期化します。 このメソッドを使用して、指定された順序述語を使用して、空の初期被制御シーケンスを指定します。
 
 コンストラクター:
 
 `multimap(multimap<Key, Mapped>% right);`
 
-`right.begin()`既定の順序述語を使用して、シーケンス [,) を使用して被制御シーケンスを初期化し `right.end()` ます。 このメソッドは、既定の順序述語を使用して、multimap オブジェクト*権限*によって制御されるシーケンスのコピーである最初の被制御シーケンスを指定するために使用します。
+`right.begin()`既定の順序述語を使用して、シーケンス [,) を使用して被制御シーケンスを初期化し `right.end()` ます。 このメソッドは、既定の順序述語を使用して、multimap オブジェクト *権限*によって制御されるシーケンスのコピーである最初の被制御シーケンスを指定するために使用します。
 
 コンストラクター:
 
 `multimap(multimap<Key, Mapped>^ right);`
 
-`right->begin()`既定の順序述語を使用して、シーケンス [,) を使用して被制御シーケンスを初期化し `right->end()` ます。 このメソッドは、既定の順序述語を使用して、multimap オブジェクト*権限*によって制御されるシーケンスのコピーである最初の被制御シーケンスを指定するために使用します。
+`right->begin()`既定の順序述語を使用して、シーケンス [,) を使用して被制御シーケンスを初期化し `right->end()` ます。 このメソッドは、既定の順序述語を使用して、multimap オブジェクト *権限*によって制御されるシーケンスのコピーである最初の被制御シーケンスを指定するために使用します。
 
 コンストラクター:
 
@@ -1694,7 +1694,7 @@ multimap(System::Collections::Generic::IEnumerable<GValue>^ right,
 
 `multimap(System::Collections::Generic::IEnumerable<Key>^ right);`
 
-既定の順序述語を使用して、列挙子*権限*によって指定されたシーケンスを使用して被制御シーケンスを初期化します。 このメソッドは、既定の順序述語を使用して、被制御シーケンスを、列挙子によって記述された別のシーケンスのコピーにするために使用します。
+既定の順序述語を使用して、列挙子 *権限*によって指定されたシーケンスを使用して被制御シーケンスを初期化します。 このメソッドは、既定の順序述語を使用して、被制御シーケンスを、列挙子によって記述された別のシーケンスのコピーにするために使用します。
 
 コンストラクター:
 
@@ -1790,7 +1790,7 @@ size() = 0
 [a 1] [b 2] [c 3]
 ```
 
-## <a name="multimapoperator-stlclr"></a><a name="op_as"></a>multimap:: operator = (STL/CLR)
+## <a name="multimapoperator-stlclr"></a><a name="op_as"></a> multimap:: operator = (STL/CLR)
 
 被制御シーケンスを置き換えます。
 
@@ -1805,9 +1805,9 @@ multimap<Key, Mapped>% operator=(multimap<Key, Mapped>% right);
 *そうです*<br/>
 コピーするコンテナー。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
-メンバー演算子は、オブジェクトに*right*をコピーし、を返し **`*this`** ます。 このメソッドを使用して、被制御シーケンスを*右側*の被制御シーケンスのコピーで置き換えます。
+メンバー演算子は、オブジェクトに *right* をコピーし、を返し **`*this`** ます。 このメソッドを使用して、被制御シーケンスを *右側*の被制御シーケンスのコピーで置き換えます。
 
 ### <a name="example"></a>例
 
@@ -1845,7 +1845,7 @@ int main()
 [a 1] [b 2] [c 3]
 ```
 
-## <a name="multimaprbegin-stlclr"></a><a name="rbegin"></a>multimap:: rbegin (STL/CLR)
+## <a name="multimaprbegin-stlclr"></a><a name="rbegin"></a> multimap:: rbegin (STL/CLR)
 
 反転被制御シーケンスの先頭を指定します。
 
@@ -1896,7 +1896,7 @@ int main()
 *++rbegin() = [b 2]
 ```
 
-## <a name="multimapreference-stlclr"></a><a name="reference"></a>multimap:: reference (STL/CLR)
+## <a name="multimapreference-stlclr"></a><a name="reference"></a> multimap:: reference (STL/CLR)
 
 要素への参照の型です。
 
@@ -1941,7 +1941,7 @@ int main()
 [a 1] [b 2] [c 3]
 ```
 
-## <a name="multimaprend-stlclr"></a><a name="rend"></a>multimap:: rend (STL/CLR)
+## <a name="multimaprend-stlclr"></a><a name="rend"></a> multimap:: rend (STL/CLR)
 
 反転被制御シーケンスの末尾を指定します。
 
@@ -1994,7 +1994,7 @@ int main()
 *--rend() = [a 1]
 ```
 
-## <a name="multimapreverse_iterator-stlclr"></a><a name="reverse_iterator"></a>multimap:: reverse_iterator (STL/CLR)
+## <a name="multimapreverse_iterator-stlclr"></a><a name="reverse_iterator"></a> multimap:: reverse_iterator (STL/CLR)
 
 被制御シーケンスの反転反復子の型です。
 
@@ -2036,7 +2036,7 @@ int main()
 [c 3] [b 2] [a 1]
 ```
 
-## <a name="multimapsize-stlclr"></a><a name="size"></a>multimap:: size (STL/CLR)
+## <a name="multimapsize-stlclr"></a><a name="size"></a> multimap:: size (STL/CLR)
 
 要素の数をカウントします。
 
@@ -2048,7 +2048,7 @@ size_type size();
 
 ### <a name="remarks"></a>解説
 
-このメンバー関数は、被制御シーケンスの長さを返します。 このメソッドを使用して、被制御シーケンス内の現在の要素数を決定します。 シーケンスのサイズがゼロ以外であるかどうかは、「 [multimap:: empty (STL/CLR)](../dotnet/multimap-empty-stl-clr.md)」を参照してください `()` 。
+このメンバー関数は、被制御シーケンスの長さを返します。 このメソッドを使用して、被制御シーケンス内の現在の要素数を決定します。 シーケンスのサイズがゼロ以外であるかどうかは、「 [multimap:: empty (STL/CLR)](#empty)」を参照してください `()` 。
 
 ### <a name="example"></a>例
 
@@ -2088,7 +2088,7 @@ size() = 0 after clearing
 size() = 2 after adding 2
 ```
 
-## <a name="multimapsize_type-stlclr"></a><a name="size_type"></a>multimap:: size_type (STL/CLR)
+## <a name="multimapsize_type-stlclr"></a><a name="size_type"></a> multimap:: size_type (STL/CLR)
 
 2つの要素間の符号付き距離の型。
 
@@ -2136,7 +2136,7 @@ int main()
 end()-begin() = 3
 ```
 
-## <a name="multimapswap-stlclr"></a><a name="swap"></a>multimap:: swap (STL/CLR)
+## <a name="multimapswap-stlclr"></a><a name="swap"></a> multimap:: swap (STL/CLR)
 
 2 つのコンテナーのコンテンツを交換します。
 
@@ -2151,7 +2151,7 @@ void swap(multimap<Key, Mapped>% right);
 *そうです*<br/>
 コンテンツを交換するコンテナー。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 このメンバー関数は、との間で被制御シーケンスを交換し **`this`** ます。 *right* この処理は一定時間に実行され、例外はスローされません。 2つのコンテナーの内容を簡単に交換する方法として使用します。
 
@@ -2204,7 +2204,7 @@ int main()
 [a 1] [b 2] [c 3]
 ```
 
-## <a name="multimapto_array-stlclr"></a><a name="to_array"></a>multimap:: to_array (STL/CLR)
+## <a name="multimapto_array-stlclr"></a><a name="to_array"></a> multimap:: to_array (STL/CLR)
 
 被制御シーケンスを新しい配列にコピーします。
 
@@ -2254,7 +2254,7 @@ int main()
 [a 1] [b 2] [c 3]
 ```
 
-## <a name="multimapupper_bound-stlclr"></a><a name="upper_bound"></a>multimap:: upper_bound (STL/CLR)
+## <a name="multimapupper_bound-stlclr"></a><a name="upper_bound"></a> multimap:: upper_bound (STL/CLR)
 
 指定されたキーに一致する範囲の末尾を検索します。
 
@@ -2269,9 +2269,9 @@ iterator upper_bound(key_type key);
 *key*<br/>
 検索対象のキー値。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
-このメンバー関数は、 `X` *キー*への順序が同じである被制御シーケンスの最後の要素を決定します。 そのような要素が存在しない場合、またはが被制御シーケンスの最後の要素である場合は、 `X` [multimap:: END (STL/CLR)](../dotnet/multimap-end-stl-clr.md)を返し `()` ます。それ以外の場合は、最初の要素を指定する反復子を返し `X` ます。 このメソッドを使用して、被制御シーケンスの中で、指定したキーに一致する要素のシーケンスの末尾を検索します。
+このメンバー関数は、 `X` *キー*への順序が同じである被制御シーケンスの最後の要素を決定します。 そのような要素が存在しない場合、またはが被制御シーケンスの最後の要素である場合は、 `X` [multimap:: END (STL/CLR)](#end)を返し `()` ます。それ以外の場合は、最初の要素を指定する反復子を返し `X` ます。 このメソッドを使用して、被制御シーケンスの中で、指定したキーに一致する要素のシーケンスの末尾を検索します。
 
 ### <a name="example"></a>例
 
@@ -2313,7 +2313,7 @@ upper_bound(L'x')==end() = True
 *upper_bound(L'b') = [c 3]
 ```
 
-## <a name="multimapvalue_comp-stlclr"></a><a name="value_comp"></a>multimap:: value_comp (STL/CLR)
+## <a name="multimapvalue_comp-stlclr"></a><a name="value_comp"></a> multimap:: value_comp (STL/CLR)
 
 2つの要素の値の順序付けデリゲートをコピーします。
 
@@ -2360,7 +2360,7 @@ compare([L'a', 1], [L'b', 2]) = True
 compare([L'b', 2], [L'a', 1]) = False
 ```
 
-## <a name="multimapvalue_compare-stlclr"></a><a name="value_compare"></a>multimap:: value_compare (STL/CLR)
+## <a name="multimapvalue_compare-stlclr"></a><a name="value_compare"></a> multimap:: value_compare (STL/CLR)
 
 2つの要素の値の順序付けデリゲート。
 
@@ -2408,7 +2408,7 @@ compare([L'a', 1], [L'b', 2]) = True
 compare([L'b', 2], [L'a', 1]) = False
 ```
 
-## <a name="multimapvalue_type-stlclr"></a><a name="value_type"></a>multimap:: value_type (STL/CLR)
+## <a name="multimapvalue_type-stlclr"></a><a name="value_type"></a> multimap:: value_type (STL/CLR)
 
 要素の型。
 
@@ -2452,7 +2452,7 @@ int main()
 [a 1] [b 2] [c 3]
 ```
 
-## <a name="operator-multimap-stlclr"></a><a name="op_neq"></a>operator! = (multimap) (STL/CLR)
+## <a name="operator-multimap-stlclr"></a><a name="op_neq"></a> operator! = (multimap) (STL/CLR)
 
 リストが等しくないかどうかの比較。
 
@@ -2473,9 +2473,9 @@ template<typename Key,
 *そうです*<br/>
 比較する右のコンテナー。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
-演算子関数はを返し `!(left == right)` ます。 このメソッドを使用して、2つの multimap が要素によって比較されるときに、 *left*が*right*と同じ順序で並んでいないかどうかをテストします。
+演算子関数はを返し `!(left == right)` ます。 このメソッドを使用して、2つの multimap が要素によって比較されるときに、 *left* が *right* と同じ順序で並んでいないかどうかをテストします。
 
 ### <a name="example"></a>例
 
@@ -2523,7 +2523,7 @@ int main()
 [a b c] != [a b d] is True
 ```
 
-## <a name="operatorlt-multimap-stlclr"></a><a name="op_lt"></a>operator &lt; (multimap) (STL/CLR)
+## <a name="operatorlt-multimap-stlclr"></a><a name="op_lt"></a> operator &lt; (multimap) (STL/CLR)
 
 比較より小さいリスト。
 
@@ -2544,9 +2544,9 @@ template<typename Key,
 *そうです*<br/>
 比較する右のコンテナー。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
-演算子関数は、が true である場合にも true を返し `i` `!(right[i] < left[i])` `left[i] < right[i]` ます。 それ以外の場合は、このメソッドを `left->size() < right->size()` 使用して、2つの multimap が要素によって要素を比較したときに、 *left*が*right*の前に並んでいるかどうかをテストします。
+演算子関数は、が true である場合にも true を返し `i` `!(right[i] < left[i])` `left[i] < right[i]` ます。 それ以外の場合は、このメソッドを `left->size() < right->size()` 使用して、2つの multimap が要素によって要素を比較したときに、 *left* が *right* の前に並んでいるかどうかをテストします。
 
 ### <a name="example"></a>例
 
@@ -2594,7 +2594,7 @@ int main()
 [a b c] < [a b d] is True
 ```
 
-## <a name="operatorlt-multimap-stlclr"></a><a name="op_lteq"></a>operator &lt; = (multimap) (STL/CLR)
+## <a name="operatorlt-multimap-stlclr"></a><a name="op_lteq"></a> operator &lt; = (multimap) (STL/CLR)
 
 以下を比較します。
 
@@ -2615,7 +2615,7 @@ template<typename Key,
 *そうです*<br/>
 比較する右のコンテナー。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 演算子関数はを返し `!(right < left)` ます。 このメソッドを使用して、2つの multimap が要素別に比較されるときに、 *right*の後に*left*が順序付けされていないかどうかをテストします。
 
@@ -2665,7 +2665,7 @@ int main()
 [a b d] <= [a b c] is False
 ```
 
-## <a name="operator-multimap-stlclr"></a><a name="op_eq"></a>operator = = (multimap) (STL/CLR)
+## <a name="operator-multimap-stlclr"></a><a name="op_eq"></a> operator = = (multimap) (STL/CLR)
 
 同じ比較を一覧表示します。
 
@@ -2686,9 +2686,9 @@ template<typename Key,
 *そうです*<br/>
 比較する右のコンテナー。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
-演算子関数は、*左*と*右*で制御されるシーケンスの長さが同じで、各位置についてがである場合にのみ true を返し `i` `left[i] ==` `right[i]` ます。 このメソッドを使用して、2つの multimap が要素によって比較されるときに、 *left*が*right*と同じ順序で並んでいるかどうかをテストします。
+演算子関数は、 *左* と *右* で制御されるシーケンスの長さが同じで、各位置についてがである場合にのみ true を返し `i` `left[i] ==` `right[i]` ます。 このメソッドを使用して、2つの multimap が要素によって比較されるときに、 *left* が *right* と同じ順序で並んでいるかどうかをテストします。
 
 ### <a name="example"></a>例
 
@@ -2736,7 +2736,7 @@ int main()
 [a b c] == [a b d] is False
 ```
 
-## <a name="operatorgt-multimap-stlclr"></a><a name="op_gt"></a>operator &gt; (multimap) (STL/CLR)
+## <a name="operatorgt-multimap-stlclr"></a><a name="op_gt"></a> operator &gt; (multimap) (STL/CLR)
 
 比較よりも大きいリストです。
 
@@ -2757,9 +2757,9 @@ template<typename Key,
 *そうです*<br/>
 比較する右のコンテナー。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
-演算子関数はを返し `right` `<` `left` ます。 このメソッドを使用して、2つの multimap が要素によって比較されたときに、 *left*が*right*の後に並べられているかどうかをテストします。
+演算子関数はを返し `right` `<` `left` ます。 このメソッドを使用して、2つの multimap が要素によって比較されたときに、 *left* が *right* の後に並べられているかどうかをテストします。
 
 ### <a name="example"></a>例
 
@@ -2807,7 +2807,7 @@ int main()
 [a b d] > [a b c] is True
 ```
 
-## <a name="operatorgt-multimap-stlclr"></a><a name="op_gteq"></a>operator &gt; = (multimap) (STL/CLR)
+## <a name="operatorgt-multimap-stlclr"></a><a name="op_gteq"></a> operator &gt; = (multimap) (STL/CLR)
 
 以上の比較を一覧表示します。
 
@@ -2828,9 +2828,9 @@ template<typename Key,
 *そうです*<br/>
 比較する右のコンテナー。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
-演算子関数はを返し `!(left` `<` `right)` ます。 このメソッドを使用して、2つのマルチマップが要素別に比較されるときに、 *left*が*right*の前に順序付けされていないかどうかをテストします。
+演算子関数はを返し `!(left` `<` `right)` ます。 このメソッドを使用して、2つのマルチマップが要素別に比較されるときに、 *left* が *right* の前に順序付けされていないかどうかをテストします。
 
 ### <a name="example"></a>例
 

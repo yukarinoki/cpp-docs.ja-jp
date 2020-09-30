@@ -13,12 +13,12 @@ helpviewer_keywords:
 - -IDLOUT linker option
 - IDLOUT linker option
 ms.assetid: 10d00a6a-85b4-4de1-8732-e422c6931509
-ms.openlocfilehash: 3816bb85cb3c711075e3fefeec2d706c2f8cc2ff
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8dc26a0564a979c918d1eb1eb85e63e9c73caba0
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62291577"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91506923"
 ---
 # <a name="idlout-name-midl-output-files"></a>/IDLOUT (MIDL 出力ファイルの指定)
 
@@ -29,40 +29,40 @@ ms.locfileid: "62291577"
 ## <a name="parameters"></a>パラメーター
 
 *path*<br/>
-絶対パスまたは相対パス仕様では。 .Idl ファイルの場所のみに影響するパスを指定すると、その他のすべてのファイルは、プロジェクト ディレクトリに配置されます。
+絶対パスまたは相対パスを指定します。 パスを指定すると、.idl ファイルの場所のみに影響します。その他のすべてのファイルは、プロジェクトディレクトリに配置されます。
 
-*ファイル名*<br/>
-MIDL コンパイラによって作成された .idl ファイルの名前を指定します。 ファイル拡張子は想定されていません。指定*filename*.idl .idl 拡張する場合。
+*filename*<br/>
+MIDL コンパイラによって作成される .idl ファイルの名前を指定します。 ファイル拡張子は想定されていません。.idl 拡張子が必要な場合は、 *filename*を指定します。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>注釈
 
-/IDLOUT オプションは、.idl ファイルの拡張機能と名前を指定します。
+/IDLOUT オプションは、.idl ファイルの名前と拡張子を指定します。
 
-持つプロジェクトをリンクするときに、MIDL コンパイラは、MSVC リンカーによって呼び出されます、[モジュール](../../windows/module-cpp.md)属性。
+MIDL コンパイラは、 [module](../../windows/attributes/module-cpp.md) 属性を持つプロジェクトをリンクするときに、MSVC リンカーによって呼び出されます。
 
-/IDLOUT には、MIDL コンパイラに関連付けられているその他の出力ファイルのファイル名も指定します。
+/IDLOUT は、MIDL コンパイラに関連付けられている他の出力ファイルのファイル名も指定します。
 
 - *ファイル名*.tlb
 
-- *filename*_p.c
+- *ファイル名*_p .c
 
-- *filename*_i.c
+- *ファイル名*_i .c
 
 - *ファイル名*.h
 
-*ファイル名*/IDLOUT に渡すパラメーターです。 場合[/TLBOUT](tlbout-name-dot-tlb-file.md) /TLBOUT からその名前を取得、.tlb ファイル指定*filename*します。
+*filename* は、/IDLOUT. に渡すパラメーターです。 [/TLBOUT](tlbout-name-dot-tlb-file.md)を指定した場合、.tlb ファイルの名前は/TLBOUT *filename*から取得されます。
 
-/IDLOUT も/TLBOUT を指定する場合、リンカーは、vc70.tlb、vc70.idl、vc70_p.c、vc70_i.c、および vc70.h に作成されます。
+/IDLOUT と/TLBOUT のどちらも指定しない場合、リンカーは vc70、vc70、vc70_p .c、vc70_i、および vc70 を作成します。
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのリンカー オプションを設定するには
 
-1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。 [Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)します。
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、[Visual Studio での C++ コンパイラとビルド プロパティの設定](../working-with-project-properties.md)に関するページを参照してください。
 
-1. をクリックして、**リンカー**フォルダー。
+1. **[リンカー]** フォルダーをクリックします。
 
-1. をクリックして、**埋め込み IDL**プロパティ ページ。
+1. [ **埋め込み IDL** ] プロパティページをクリックします。
 
-1. 変更、 **IDL ベース ファイル名のマージ**プロパティ。
+1. **MERGE IDL Base File Name**プロパティを変更します。
 
 ### <a name="to-set-this-linker-option-programmatically"></a>このリンカーをコードから設定するには
 
@@ -72,6 +72,6 @@ MIDL コンパイラによって作成された .idl ファイルの名前を指
 
 [MSVC リンカーのリファレンス](linking.md)<br/>
 [MSVC リンカー オプション](linker-options.md)<br/>
-[/IGNOREIDL (属性を MIDL に挿入しない)](ignoreidl-don-t-process-attributes-into-midl.md)<br/>
-[/MIDL (MIDL コマンド ライン オプションの指定)](midl-specify-midl-command-line-options.md)<br/>
-[属性付きプログラムの作成](../../windows/building-an-attributed-program.md)
+[/IGNOREIDL (属性を MIDL に処理しない)](ignoreidl-don-t-process-attributes-into-midl.md)<br/>
+[/Midl (MIDL コマンドラインオプションの指定)](midl-specify-midl-command-line-options.md)<br/>
+[属性付きプログラムの作成](../../windows/attributes/cpp-attributes-com-net.md)

@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3540
 ms.assetid: 3c0c959c-e3b7-40eb-b922-ccac44bd9d85
-ms.openlocfilehash: a041961e8a91832be67d8def8f2a6a3ef70906d9
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 897defd5643a90234c2ae3b7bb4f58904864e858
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87223396"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91508083"
 ---
 # <a name="compiler-error-c3540"></a>コンパイラ エラー C3540
 
 ' type ': sizeof を ' auto ' を含む型に適用することはできません
 
-指定された型には指定子が含まれているため、 [sizeof](../../cpp/sizeof-operator.md)演算子を適用することはできません **`auto`** 。
+指定された型には指定子が含まれているため、 [sizeof](../../cpp/sizeof-operator.md) 演算子を適用することはできません **`auto`** 。
 
 ## <a name="example"></a>例
 
@@ -36,6 +36,6 @@ int main() {
 
 ## <a name="see-also"></a>関連項目
 
-[auto キーワード](../../cpp/auto-keyword.md)<br/>
+[auto キーワード](../../cpp/auto-cpp.md)<br/>
 [/Zc: auto (変数の型の推測)](../../build/reference/zc-auto-deduce-variable-type.md)<br/>
 [sizeof 演算子](../../cpp/sizeof-operator.md)

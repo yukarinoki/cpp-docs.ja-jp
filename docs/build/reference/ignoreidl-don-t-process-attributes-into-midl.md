@@ -1,5 +1,5 @@
 ---
-title: /IGNOREIDL (Don&#39;t プロセスの属性を MIDL に挿入)
+title: /IGNOREIDL (Don&#39;t が MIDL に属性を処理する)
 ms.date: 11/04/2016
 f1_keywords:
 - VC.Project.VCLinkerTool.IgnoreEmbeddedIDL
@@ -9,32 +9,32 @@ helpviewer_keywords:
 - -IGNOREIDL linker option
 - /IGNOREIDL linker option
 ms.assetid: 29514098-6a1c-4317-af2f-1dc268972780
-ms.openlocfilehash: 210778adecd87ffdd5f2702c10106f12bd5a1b79
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: eac6209e0c34562254117d6ab9db5f47545037ea
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62291680"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91506888"
 ---
-# <a name="ignoreidl-don39t-process-attributes-into-midl"></a>/IGNOREIDL (Don&#39;t プロセスの属性を MIDL に挿入)
+# <a name="ignoreidl-don39t-process-attributes-into-midl"></a>/IGNOREIDL (Don&#39;t が MIDL に属性を処理する)
 
 ```
 /IGNOREIDL
 ```
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>注釈
 
-/IGNOREIDL オプションを指定する[IDL 属性](../../windows/idl-attributes.md)ソース コードを .idl ファイルに処理するされません。
+/IGNOREIDL オプションは、ソースコード内の [idl 属性](../../windows/attributes/idl-attributes.md) を .idl ファイルに処理しないように指定します。
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのリンカー オプションを設定するには
 
-1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。 [Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)します。
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、[Visual Studio での C++ コンパイラとビルド プロパティの設定](../working-with-project-properties.md)に関するページを参照してください。
 
-1. をクリックして、**リンカー**フォルダー。
+1. **[リンカー]** フォルダーをクリックします。
 
-1. をクリックして、**埋め込み IDL**プロパティ ページ。
+1. [ **埋め込み IDL** ] プロパティページをクリックします。
 
-1. 変更、**埋め込み IDL の無視**プロパティ。
+1. " **埋め込み IDL の無視** " プロパティを変更します。
 
 ### <a name="to-set-this-linker-option-programmatically"></a>このリンカーをコードから設定するには
 
@@ -44,7 +44,7 @@ ms.locfileid: "62291680"
 
 [MSVC リンカーのリファレンス](linking.md)<br/>
 [MSVC リンカー オプション](linker-options.md)<br/>
-[/IDLOUT (MIDL 出力ファイルの指定)](idlout-name-midl-output-files.md)<br/>
-[/TLBOUT (.TLB ファイル名の指定)](tlbout-name-dot-tlb-file.md)<br/>
-[/MIDL (MIDL コマンド ライン オプションの指定)](midl-specify-midl-command-line-options.md)<br/>
-[属性付きプログラムの作成](../../windows/building-an-attributed-program.md)
+[/IDLOUT (MIDL 出力ファイルの名前の指定)](idlout-name-midl-output-files.md)<br/>
+[/TLBOUT (名前。TLB ファイル)](tlbout-name-dot-tlb-file.md)<br/>
+[/Midl (MIDL コマンドラインオプションの指定)](midl-specify-midl-command-line-options.md)<br/>
+[属性付きプログラムの作成](../../windows/attributes/cpp-attributes-com-net.md)

@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3541
 ms.assetid: 252cfd4c-5fd2-415e-a17d-6b0c254350db
-ms.openlocfilehash: 32926d0ef9343bad9ed73458e4d52d317b628109
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 2d6179657462325a30de0c4548becff4b4cf86c9
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87221043"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91508069"
 ---
 # <a name="compiler-error-c3541"></a>コンパイラ エラー C3541
 
 ' type ': typeid を ' auto ' を含む型に適用することはできません
 
-指定子が含まれているため、 [typeid](../../extensions/typeid-cpp-component-extensions.md)演算子を指定された型に適用できません **`auto`** 。
+指定子が含まれているため、 [typeid](../../extensions/typeid-cpp-component-extensions.md) 演算子を指定された型に適用できません **`auto`** 。
 
 ## <a name="example"></a>例
 
@@ -37,6 +37,6 @@ int main() {
 
 ## <a name="see-also"></a>関連項目
 
-[auto キーワード](../../cpp/auto-keyword.md)<br/>
+[auto キーワード](../../cpp/auto-cpp.md)<br/>
 [/Zc: auto (変数の型の推測)](../../build/reference/zc-auto-deduce-variable-type.md)<br/>
 [typeid](../../extensions/typeid-cpp-component-extensions.md)

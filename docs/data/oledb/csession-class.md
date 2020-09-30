@@ -40,12 +40,12 @@ helpviewer_keywords:
 - Open method
 - StartTransaction method
 ms.assetid: 83cd798f-b45d-4f11-a23c-29183390450c
-ms.openlocfilehash: 6858c26df5f5ee364717d089704117e650282278
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: f507ed432e107f586d34bb6b08fa9d3f7dc509d8
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88841104"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91507247"
 ---
 # <a name="csession-class"></a>CSession クラス
 
@@ -67,16 +67,16 @@ class CSession
 
 | 名前 | 説明 |
 |-|-|
-|[中止](#abort)|トランザクションをキャンセル (終了) します。|
+|[取り消し](#abort)|トランザクションをキャンセル (終了) します。|
 |[閉じる](#close)|セッションを閉じます。|
 |[コミット](#commit)|トランザクションをコミットします。|
 |[GetTransactionInfo](#gettransactioninfo)|トランザクションに関する情報を返します。|
 |[[ファイル]](#open)|データソースオブジェクトの新しいセッションを開きます。|
 |[StartTransaction](#starttransaction)|このセッションの新しいトランザクションを開始します。|
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>注釈
 
-1つ以上のセッションを各プロバイダー接続 (データソース) に関連付けることができます。これは、 [CDataSource](../../data/oledb/cdatasource-class.md) オブジェクトによって表されます。 の新しいを作成するには `CSession` `CDataSource` 、 [CSession:: Open](../../data/oledb/csession-open.md)を呼び出します。 データベーストランザクションを開始するには、 `CSession` メソッドを提供し `StartTransaction` ます。 トランザクションが開始されたら、メソッドを使用してコミットするか、メソッドを使用して取り消すことができ `Commit` `Abort` ます。
+1つ以上のセッションを各プロバイダー接続 (データソース) に関連付けることができます。これは、 [CDataSource](../../data/oledb/cdatasource-class.md) オブジェクトによって表されます。 の新しいを作成するには `CSession` `CDataSource` 、 [CSession:: Open](#open)を呼び出します。 データベーストランザクションを開始するには、 `CSession` メソッドを提供し `StartTransaction` ます。 トランザクションが開始されたら、メソッドを使用してコミットするか、メソッドを使用して取り消すことができ `Commit` `Abort` ます。
 
 ## <a name="csessionabort"></a><a name="abort"></a> CSession:: Abort
 
@@ -100,7 +100,7 @@ HRESULT Abort(BOID* pboidReason = NULL,
 
 ## <a name="csessionclose"></a><a name="close"></a> CSession:: Close
 
-[CSession:: Open](../../data/oledb/csession-open.md)によって開かれたセッションを閉じます。
+[CSession:: Open](#open)によって開かれたセッションを閉じます。
 
 ### <a name="syntax"></a>構文
 
@@ -132,7 +132,7 @@ HRESULT Commit(BOOL bRetaining = FALSE,
 
 標準の HRESULT です。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 詳細については、「 [ITransaction:: Commit](/previous-versions/windows/desktop/ms713008(v=vs.85))」を参照してください。
 
@@ -154,7 +154,7 @@ HRESULT GetTransactionInfo(XACTTRANSINFO* pInfo) const throw();
 
 標準の HRESULT です。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 詳細については、 *OLE DB プログラマーリファレンス*の「 [ITransaction:: gettransactioninfo](/previous-versions/windows/desktop/ms714975(v=vs.85)) 」を参照してください。
 
@@ -185,9 +185,9 @@ HRESULT Open(const CDataSource& ds,
 
 標準の HRESULT です。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
-に渡す前に、 [CDataSource:: open](../../data/oledb/cdatasource-open.md) を使用してデータソースオブジェクトを開く必要があり `CSession::Open` ます。
+に渡す前に、 [CDataSource:: open](./cdatasource-class.md#open) を使用してデータソースオブジェクトを開く必要があり `CSession::Open` ます。
 
 ## <a name="csessionstarttransaction"></a><a name="starttransaction"></a> CSession:: StartTransaction
 
@@ -210,7 +210,7 @@ HRESULT StartTransaction(ISOLEVEL isoLevel = ISOLATIONLEVEL_READCOMMITTED,
 
 標準の HRESULT です。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 詳細については、 *OLE DB プログラマーリファレンス*の「 [ITransactionLocal:: starttransaction](/previous-versions/windows/desktop/ms709786(v=vs.85)) 」を参照してください。
 

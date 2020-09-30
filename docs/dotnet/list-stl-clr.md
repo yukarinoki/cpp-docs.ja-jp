@@ -108,18 +108,18 @@ helpviewer_keywords:
 - operator>(list) member [STL/CLR]
 - operator>=(list) member [STL/CLR]
 ms.assetid: a70c45c8-a257-4f6b-8434-b27ff6685bac
-ms.openlocfilehash: 1c05aff71b16c3edf1348466df325caacb027554
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 9ef9f68c6bef72bf251d270b3bc8142448016a11
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87225632"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91508733"
 ---
 # <a name="list-stlclr"></a>list (STL/CLR)
 
 このテンプレートクラスは、双方向アクセスを持つ要素の可変長シーケンスを制御するオブジェクトを表します。 コンテナーを使用して、一連の `list` 要素を双方向のリンクリストとして管理します。各ノードには1つの要素が格納されます。
 
-次の説明で、 `GValue` は、後者が参照型である場合を除き、*値*と同じです。この場合、は `Value^` です。
+次の説明で、 `GValue` は、後者が参照型である場合を除き、 *値* と同じです。この場合、は `Value^` です。
 
 ## <a name="syntax"></a>構文
 
@@ -149,7 +149,7 @@ template<typename Value>
 
 ## <a name="declarations"></a>宣言
 
-|型の定義|[説明]|
+|型の定義|説明|
 |---------------------|-----------------|
 |[list::const_iterator (STL/CLR)](#const_iterator)|被制御シーケンスの定数反復子の型です。|
 |[list::const_reference (STL/CLR)](#const_reference)|要素への定数参照の型です。|
@@ -165,7 +165,7 @@ template<typename Value>
 |[list::size_type (STL/CLR)](#size_type)|2 つの要素間の距離を表す、符号付きの型です。|
 |[list::value_type (STL/CLR)](#value_type)|要素の型。|
 
-|メンバー関数|[説明]|
+|メンバー関数|説明|
 |---------------------|-----------------|
 |[list::assign (STL/CLR)](#assign)|すべての要素を置換します。|
 |[list::back (STL/CLR)](#back)|最後の要素にアクセスします。|
@@ -195,12 +195,12 @@ template<typename Value>
 |[list::to_array (STL/CLR)](#to_array)|被制御シーケンスを新しい配列にコピーします。|
 |[list::unique (STL/CLR)](#unique)|指定されたテストに合格した隣接する要素を削除します。|
 
-|プロパティ|[説明]|
+|プロパティ|説明|
 |--------------|-----------------|
 |[list::back_item (STL/CLR)](#back_item)|最後の要素にアクセスします。|
 |[list::front_item (STL/CLR)](#front_item)|最初の要素にアクセスします。|
 
-|演算子|[説明]|
+|演算子|説明|
 |--------------|-----------------|
 |[list::operator= (STL/CLR)](#op_as)|被制御シーケンスを置き換えます。|
 |[operator!= (list) (STL/CLR)](#op_neq)|オブジェクトが別のオブジェクトと等しくないかどうかを判断し `list` `list` ます。|
@@ -221,21 +221,21 @@ template<typename Value>
 |<xref:System.Collections.Generic.ICollection%601>|型指定された要素のグループを保持します。|
 |IList\<Value>|ジェネリックコンテナーを管理します。|
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>注釈
 
-オブジェクトは、双方向リンクリスト内の個々のノードとして制御するシーケンスのストレージを割り当て、解放します。 ノード間のリンクを変更して要素を再配置します。1つのノードのコンテンツを別のノードにコピーすることはできません。 つまり、要素を自由に挿入および削除できます。 そのため、リストは、テンプレートクラス[キュー (stl/clr)](../dotnet/queue-stl-clr.md)またはテンプレートクラス[スタック (stl/clr)](../dotnet/stack-stl-clr.md)の基になるコンテナーの候補として適しています。
+オブジェクトは、双方向リンクリスト内の個々のノードとして制御するシーケンスのストレージを割り当て、解放します。 ノード間のリンクを変更して要素を再配置します。1つのノードのコンテンツを別のノードにコピーすることはできません。 つまり、要素を自由に挿入および削除できます。 そのため、リストは、テンプレートクラス [キュー (stl/clr)](../dotnet/queue-stl-clr.md) またはテンプレートクラス [スタック (stl/clr)](../dotnet/stack-stl-clr.md)の基になるコンテナーの候補として適しています。
 
-`list`オブジェクトは双方向反復子をサポートします。したがって、被制御シーケンス内の要素を指定する反復子によって隣接する要素にステップインできます。 特別なヘッドノードは、 [list:: end (STL/CLR)](../dotnet/list-end-stl-clr.md)によって返される反復子に対応 `()` します。 この反復子をデクリメントして、被制御シーケンスの最後の要素 (存在する場合) に移動することができます。 リスト反復子をインクリメントしてヘッドノードに移動することができ、これはと等しいと比較され `end()` ます。 ただし、によって返される反復子を逆参照することはできません `end()` 。
+`list`オブジェクトは双方向反復子をサポートします。したがって、被制御シーケンス内の要素を指定する反復子によって隣接する要素にステップインできます。 特別なヘッドノードは、 [list:: end (STL/CLR)](#end)によって返される反復子に対応 `()` します。 この反復子をデクリメントして、被制御シーケンスの最後の要素 (存在する場合) に移動することができます。 リスト反復子をインクリメントしてヘッドノードに移動することができ、これはと等しいと比較され `end()` ます。 ただし、によって返される反復子を逆参照することはできません `end()` 。
 
 ランダムアクセス反復子を必要とする数値の位置を指定して、リスト要素を直接参照することはできないことに注意してください。 そのため、リストは、テンプレートクラス[priority_queue (STL/CLR)](../dotnet/priority-queue-stl-clr.md)の基になるコンテナーとして使用*できません*。
 
 リスト反復子は、関連付けられたリストノードへのハンドルを格納します。このノードは、関連付けられたコンテナーへのハンドルを格納します。 反復子は、関連付けられているコンテナーオブジェクトと共にのみ使用できます。 リストの反復子は、関連付けられたリストノードがリストに関連付けられている限り有効です。 さらに、有効な反復子は dereferencable です。これを使用すると、に指定した要素の値にアクセスしたり、変更したりすることができ `end()` ます。
 
-要素を消去または削除すると、格納されている値のデストラクターが呼び出されます。 コンテナーを破棄すると、すべての要素が消去されます。 したがって、要素の型が ref クラスであるコンテナーは、コンテナーの直後要素が存在しないことを保証します。 ただし、ハンドルのコンテナーが要素を破棄し*ない*ことに注意してください。
+要素を消去または削除すると、格納されている値のデストラクターが呼び出されます。 コンテナーを破棄すると、すべての要素が消去されます。 したがって、要素の型が ref クラスであるコンテナーは、コンテナーの直後要素が存在しないことを保証します。 ただし、ハンドルのコンテナーが要素を破棄し *ない* ことに注意してください。
 
 ## <a name="members"></a>メンバー
 
-## <a name="listassign-stlclr"></a><a name="assign"></a>list:: assign (STL/CLR)
+## <a name="listassign-stlclr"></a><a name="assign"></a> list:: assign (STL/CLR)
 
 すべての要素を置換します。
 
@@ -265,13 +265,13 @@ void assign(System::Collections::Generic::IEnumerable<Value>^ right);
 *val*<br/>
 挿入する要素の値。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 最初のメンバー関数は、被制御シーケンスを、値*val*の*count*要素の繰り返しで置き換えます。 このメソッドを使用して、すべての要素が同じ値を持つコンテナーを塗りつぶします。
 
 `InIt`が整数型の場合、2番目のメンバー関数はと同じように動作し `assign((size_type)first, (value_type)last)` ます。 それ以外の場合は、被制御シーケンスをシーケンス [ `first` ,) で置き換え `last` ます。 このメソッドを使用して、被制御シーケンスを別のシーケンスにコピーします。
 
-3番目のメンバー関数は、被制御シーケンスを列挙子*権限*によって指定されたシーケンスに置き換えます。 このメソッドを使用して、被制御シーケンスを列挙子によって記述されたシーケンスのコピーにします。
+3番目のメンバー関数は、被制御シーケンスを列挙子 *権限*によって指定されたシーケンスに置き換えます。 このメソッドを使用して、被制御シーケンスを列挙子によって記述されたシーケンスのコピーにします。
 
 ### <a name="example"></a>例
 
@@ -317,7 +317,7 @@ a b
 a b c
 ```
 
-## <a name="listback-stlclr"></a><a name="back"></a>list:: back (STL/CLR)
+## <a name="listback-stlclr"></a><a name="back"></a> list:: back (STL/CLR)
 
 最後の要素にアクセスします。
 
@@ -368,7 +368,7 @@ back() = c
 a b x
 ```
 
-## <a name="listback_item-stlclr"></a><a name="back_item"></a>list:: back_item (STL/CLR)
+## <a name="listback_item-stlclr"></a><a name="back_item"></a> list:: back_item (STL/CLR)
 
 最後の要素にアクセスします。
 
@@ -419,7 +419,7 @@ back_item = c
 a b x
 ```
 
-## <a name="listbegin-stlclr"></a><a name="begin"></a>list:: begin (STL/CLR)
+## <a name="listbegin-stlclr"></a><a name="begin"></a> list:: begin (STL/CLR)
 
 被制御シーケンスの先頭を指定します。
 
@@ -474,7 +474,7 @@ a b c
 x y c
 ```
 
-## <a name="listclear-stlclr"></a><a name="clear"></a>list:: clear (STL/CLR)
+## <a name="listclear-stlclr"></a><a name="clear"></a> list:: clear (STL/CLR)
 
 すべての要素を削除します。
 
@@ -486,7 +486,7 @@ void clear();
 
 ### <a name="remarks"></a>解説
 
-このメンバー関数は、list:: [erase](../dotnet/list-erase-stl-clr.md) (stl/clr) list:: begin (stl/clr) list: `(` [list::begin (STL/CLR)](../dotnet/list-begin-stl-clr.md) `(),` [: end (stl/](../dotnet/list-end-stl-clr.md)clr) を実際に呼び出し `())` ます。 このメソッドを使用して、被制御シーケンスが空であることを確認します。
+このメンバー関数は、list:: [erase](#erase) (stl/clr) list:: begin (stl/clr) list: `(` [list::begin (STL/CLR)](#begin) `(),` [: end (stl/](#end)clr) を実際に呼び出し `())` ます。 このメソッドを使用して、被制御シーケンスが空であることを確認します。
 
 ### <a name="example"></a>例
 
@@ -531,7 +531,7 @@ a b
 size() = 0
 ```
 
-## <a name="listconst_iterator-stlclr"></a><a name="const_iterator"></a>list:: const_iterator (STL/CLR)
+## <a name="listconst_iterator-stlclr"></a><a name="const_iterator"></a> list:: const_iterator (STL/CLR)
 
 被制御シーケンスの定数反復子の型です。
 
@@ -572,7 +572,7 @@ int main()
 a b c
 ```
 
-## <a name="listconst_reference-stlclr"></a><a name="const_reference"></a>list:: const_reference (STL/CLR)
+## <a name="listconst_reference-stlclr"></a><a name="const_reference"></a> list:: const_reference (STL/CLR)
 
 要素への定数参照の型です。
 
@@ -616,7 +616,7 @@ int main()
 a b c
 ```
 
-## <a name="listconst_reverse_iterator-stlclr"></a><a name="const_reverse_iterator"></a>list:: const_reverse_iterator (STL/CLR)
+## <a name="listconst_reverse_iterator-stlclr"></a><a name="const_reverse_iterator"></a> list:: const_reverse_iterator (STL/CLR)
 
 被制御シーケンスの定数反転反復子の型。
 
@@ -658,7 +658,7 @@ int main()
 c b a
 ```
 
-## <a name="listdifference_type-stlclr"></a><a name="difference_type"></a>list::d ifference_type (STL/CLR)
+## <a name="listdifference_type-stlclr"></a><a name="difference_type"></a> list::d ifference_type (STL/CLR)
 
 2つの要素間の符号付き距離の型。
 
@@ -712,7 +712,7 @@ end()-begin() = 3
 begin()-end() = -3
 ```
 
-## <a name="listempty-stlclr"></a><a name="empty"></a>list:: empty (STL/CLR)
+## <a name="listempty-stlclr"></a><a name="empty"></a> list:: empty (STL/CLR)
 
 要素が存在しないかどうかをテストします。
 
@@ -724,7 +724,7 @@ bool empty();
 
 ### <a name="remarks"></a>解説
 
-このメンバー関数は、被制御シーケンスが空の場合に true を返します。 [List:: size (STL/CLR)](../dotnet/list-size-stl-clr.md)に相当 `() == 0` します。 このメソッドを使用して、リストが空かどうかをテストします。
+このメンバー関数は、被制御シーケンスが空の場合に true を返します。 [List:: size (STL/CLR)](#size)に相当 `() == 0` します。 このメソッドを使用して、リストが空かどうかをテストします。
 
 ### <a name="example"></a>例
 
@@ -763,7 +763,7 @@ size() = 0
 empty() = True
 ```
 
-## <a name="listend-stlclr"></a><a name="end"></a>list:: end (STL/CLR)
+## <a name="listend-stlclr"></a><a name="end"></a> list:: end (STL/CLR)
 
 被制御シーケンスの末尾を指定します。
 
@@ -819,7 +819,7 @@ a b c
 a x y
 ```
 
-## <a name="listerase-stlclr"></a><a name="erase"></a>list:: erase (STL/CLR)
+## <a name="listerase-stlclr"></a><a name="erase"></a> list:: erase (STL/CLR)
 
 指定した位置にある要素を削除します。
 
@@ -841,13 +841,13 @@ iterator erase(iterator first, iterator last);
 *where*<br/>
 消去する要素。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
-最初のメンバー関数は、によって示さ*れる*被制御シーケンスの要素を削除します。 このメソッドを使用して、1つの要素を削除します。
+最初のメンバー関数は、によって示さ *れる*被制御シーケンスの要素を削除します。 このメソッドを使用して、1つの要素を削除します。
 
 2 番目のメンバー関数は、範囲 [`first`, `last`) の被制御シーケンスの要素を削除します。 これを使用して、0個以上の連続する要素を削除します。
 
-どちらのメンバー関数も、削除された要素の後に残った最初の要素を指定する反復子を返します。そのような要素が存在しない場合は、 [list:: end (STL/CLR)](../dotnet/list-end-stl-clr.md)を返し `()` ます。
+どちらのメンバー関数も、削除された要素の後に残った最初の要素を指定する反復子を返します。そのような要素が存在しない場合は、 [list:: end (STL/CLR)](#end)を返し `()` ます。
 
 要素が消去されるときに、要素のコピー数は、消去の終了位置とシーケンスの一番近い方の要素の数で線形になります。 (シーケンスの両端で1つ以上の要素を消去すると、要素のコピーは行われません)。
 
@@ -898,7 +898,7 @@ erase(begin(), end()-1) = e
 size() = 1
 ```
 
-## <a name="listfront-stlclr"></a><a name="front"></a>list:: front (STL/CLR)
+## <a name="listfront-stlclr"></a><a name="front"></a> list:: front (STL/CLR)
 
 最初の要素にアクセスします。
 
@@ -949,7 +949,7 @@ front() = a
 x b c
 ```
 
-## <a name="listfront_item-stlclr"></a><a name="front_item"></a>list:: front_item (STL/CLR)
+## <a name="listfront_item-stlclr"></a><a name="front_item"></a> list:: front_item (STL/CLR)
 
 最初の要素にアクセスします。
 
@@ -1000,7 +1000,7 @@ front_item = a
 x b c
 ```
 
-## <a name="listgeneric_container-stlclr"></a><a name="generic_container"></a>list:: generic_container (STL/CLR)
+## <a name="listgeneric_container-stlclr"></a><a name="generic_container"></a> list:: generic_container (STL/CLR)
 
 コンテナーのジェネリックインターフェイスの型。
 
@@ -1066,7 +1066,7 @@ a b c d
 a b c d e
 ```
 
-## <a name="listgeneric_iterator-stlclr"></a><a name="generic_iterator"></a>list:: generic_iterator (STL/CLR)
+## <a name="listgeneric_iterator-stlclr"></a><a name="generic_iterator"></a> list:: generic_iterator (STL/CLR)
 
 コンテナーのジェネリックインターフェイスで使用する反復子の型。
 
@@ -1124,7 +1124,7 @@ a b c
 a a c
 ```
 
-## <a name="listgeneric_reverse_iterator-stlclr"></a><a name="generic_reverse_iterator"></a>list:: generic_reverse_iterator (STL/CLR)
+## <a name="listgeneric_reverse_iterator-stlclr"></a><a name="generic_reverse_iterator"></a> list:: generic_reverse_iterator (STL/CLR)
 
 コンテナーのジェネリックインターフェイスで使用する逆順反復子の型。
 
@@ -1181,7 +1181,7 @@ a b c
 a c c
 ```
 
-## <a name="listgeneric_value-stlclr"></a><a name="generic_value"></a>list:: generic_value (STL/CLR)
+## <a name="listgeneric_value-stlclr"></a><a name="generic_value"></a> list:: generic_value (STL/CLR)
 
 コンテナーのジェネリックインターフェイスで使用する要素の型。
 
@@ -1237,7 +1237,7 @@ a b c
 a a c
 ```
 
-## <a name="listinsert-stlclr"></a><a name="insert"></a>list:: insert (STL/CLR)
+## <a name="listinsert-stlclr"></a><a name="insert"></a> list:: insert (STL/CLR)
 
 指定した位置に要素を追加します。
 
@@ -1272,19 +1272,19 @@ void insert(iterator where,
 *where*<br/>
 コンテナー内のの前に挿入する場所。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
-各メンバー関数は、被制御シーケンス内の*where*が指す要素の前に、残りのオペランドによって指定されたシーケンスを挿入します。
+各メンバー関数は、被制御シーケンス内の *where* が指す要素の前に、残りのオペランドによって指定されたシーケンスを挿入します。
 
-1つ目のメンバー関数は、値*val*を持つ要素を挿入し、新しく挿入された要素を指定する反復子を返します。 反復子によって指定された場所の前に1つの要素を挿入する場合に使用します。
+1つ目のメンバー関数は、値 *val* を持つ要素を挿入し、新しく挿入された要素を指定する反復子を返します。 反復子によって指定された場所の前に1つの要素を挿入する場合に使用します。
 
 2番目のメンバー関数は、値*val*の*count*要素の繰り返しを挿入します。 これを使用して、同じ値のすべてのコピーである0個以上の連続する要素を挿入します。
 
 `InIt` が整数型である場合、3 番目のメンバー関数は `insert(where, (size_type)first, (value_type)last)` と同じように動作します。 それ以外の場合は、シーケンス [ `first` ,) を挿入 `last` します。 このメソッドを使用して、別のシーケンスからコピーされた0個以上の連続する要素を挿入します。
 
-4番目のメンバー関数は、*右側*に指定されたシーケンスを挿入します。 このメソッドを使用して、列挙子によって記述されたシーケンスを挿入します。
+4番目のメンバー関数は、 *右側*に指定されたシーケンスを挿入します。 このメソッドを使用して、列挙子によって記述されたシーケンスを挿入します。
 
-1つの要素を挿入する場合、要素のコピー数は、挿入ポイントとそれに近いシーケンスの末尾との間の要素の数で線形になります。 (シーケンスの両端に1つ以上の要素を挿入する場合、要素のコピーは行われません)。`InIt`が入力反復子の場合、3番目のメンバー関数は、シーケンス内の各要素に対して1つの挿入を効果的に実行します。 それ以外の場合、要素を挿入するときに、 `N` 要素のコピーの数には、 `N` 挿入ポイントとそれに近いシーケンスの末尾との間の要素数が加算されます。
+1つの要素を挿入する場合、要素のコピー数は、挿入ポイントとそれに近いシーケンスの末尾との間の要素の数で線形になります。 (シーケンスの両端に1つ以上の要素を挿入する場合、要素のコピーは行われません)。 `InIt` が入力反復子の場合、3番目のメンバー関数は、シーケンス内の各要素に対して1つの挿入を効果的に実行します。 それ以外の場合、要素を挿入するときに、 `N` 要素のコピーの数には、 `N` 挿入ポイントとそれに近いシーケンスの末尾との間の要素数が加算されます。
 
 ### <a name="example"></a>例
 
@@ -1355,7 +1355,7 @@ y y a x b
 a x b c y y a x b
 ```
 
-## <a name="listiterator-stlclr"></a><a name="iterator"></a>list:: iterator (STL/CLR)
+## <a name="listiterator-stlclr"></a><a name="iterator"></a> list:: iterator (STL/CLR)
 
 被制御シーケンスの反復子の型です。
 
@@ -1404,7 +1404,7 @@ a b c
 x b c
 ```
 
-## <a name="listlist-stlclr"></a><a name="list"></a>list:: list (STL/CLR)
+## <a name="listlist-stlclr"></a><a name="list"></a> list:: list (STL/CLR)
 
 コンテナー オブジェクトを構築します。
 
@@ -1438,7 +1438,7 @@ list(System::Collections::Generic::IEnumerable<Value>^ right);
 *val*<br/>
 挿入する要素の値。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 コンストラクター:
 
@@ -1450,19 +1450,19 @@ list(System::Collections::Generic::IEnumerable<Value>^ right);
 
 `list(list<Value>% right);`
 
-シーケンス [,) を使用して被制御シーケンスを初期化し `right.begin()` `right.end()` ます。 これを使用して、リストオブジェクト*権限*によって制御されるシーケンスのコピーである最初の被制御シーケンスを指定します。
+シーケンス [,) を使用して被制御シーケンスを初期化し `right.begin()` `right.end()` ます。 これを使用して、リストオブジェクト *権限*によって制御されるシーケンスのコピーである最初の被制御シーケンスを指定します。
 
 コンストラクター:
 
 `list(list<Value>^ right);`
 
-シーケンス [,) を使用して被制御シーケンスを初期化し `right->begin()` `right->end()` ます。 これを使用して、ハンドルが*right*であるリストオブジェクトによって制御されるシーケンスのコピーである、最初の被制御シーケンスを指定します。
+シーケンス [,) を使用して被制御シーケンスを初期化し `right->begin()` `right->end()` ます。 これを使用して、ハンドルが *right*であるリストオブジェクトによって制御されるシーケンスのコピーである、最初の被制御シーケンスを指定します。
 
 コンストラクター:
 
 `explicit list(size_type count);`
 
-値を持つ*カウント*要素を使用して被制御シーケンスを初期化し `value_type()` ます。 このメソッドを使用して、すべての要素に既定値が設定されたコンテナーにデータを格納します。
+値を持つ *カウント* 要素を使用して被制御シーケンスを初期化し `value_type()` ます。 このメソッドを使用して、すべての要素に既定値が設定されたコンテナーにデータを格納します。
 
 コンストラクター:
 
@@ -1482,7 +1482,7 @@ list(System::Collections::Generic::IEnumerable<Value>^ right);
 
 `list(System::Collections::Generic::IEnumerable<Value>^ right);`
 
-列挙子*権限*によって指定されたシーケンスを使用して、被制御シーケンスを初期化します。 このメソッドを使用して、被制御シーケンスを、列挙子によって記述された別のシーケンスのコピーとして作成します。
+列挙子 *権限*によって指定されたシーケンスを使用して、被制御シーケンスを初期化します。 このメソッドを使用して、被制御シーケンスを、列挙子によって記述された別のシーケンスのコピーとして作成します。
 
 ### <a name="example"></a>例
 
@@ -1549,7 +1549,7 @@ x x x x x x
 x x x x x x
 ```
 
-## <a name="listmerge-stlclr"></a><a name="merge"></a>list:: merge (STL/CLR)
+## <a name="listmerge-stlclr"></a><a name="merge"></a> list:: merge (STL/CLR)
 
 2 つの順序付けされた被制御シーケンスをマージします。
 
@@ -1569,13 +1569,13 @@ template<typename Pred2>
 *そうです*<br/>
 マージするコンテナー。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
-1つ目のメンバー関数は、 *right*によって制御されるシーケンスからすべての要素を削除し、被制御シーケンスに挿入します。 2つのシーケンスは、どちらの順序でも、値を小さくすることはできませ `operator<` ん。 結果のシーケンスもによって並べ替えられ `operator<` ます。 このメンバー関数を使用すると、値が増加する2つのシーケンスを、値の増加もするシーケンスにマージできます。
+1つ目のメンバー関数は、 *right* によって制御されるシーケンスからすべての要素を削除し、被制御シーケンスに挿入します。 2つのシーケンスは、どちらの順序でも、値を小さくすることはできませ `operator<` ん。 結果のシーケンスもによって並べ替えられ `operator<` ます。 このメンバー関数を使用すると、値が増加する2つのシーケンスを、値の増加もするシーケンスにマージできます。
 
 2番目のメンバー関数は、最初と同じように動作しますが、 `pred`  --  `pred(X, Y)` シーケンス内の要素の後に続くすべての要素について、シーケンスが false である必要があり `X` `Y` ます。 これを使用して、指定した述語関数またはデリゲートによって順序付けられた2つのシーケンスをマージします。
 
-どちらの関数も安定したマージを実行します。元の被制御シーケンスのいずれかの要素のペアは、結果の被制御シーケンスでは逆になります。 また、 `X` 結果として `Y` 得られる被制御シーケンス内の要素とのペアが等価の順序付けを持つ場合 ( `!(X < Y) && !(X < Y)` 元の被制御シーケンスの要素は、*右辺*で制御されるシーケンスの要素の前にあります)。
+どちらの関数も安定したマージを実行します。元の被制御シーケンスのいずれかの要素のペアは、結果の被制御シーケンスでは逆になります。 また、 `X` 結果として `Y` 得られる被制御シーケンス内の要素とのペアが等価の順序付けを持つ場合 ( `!(X < Y) && !(X < Y)` 元の被制御シーケンスの要素は、 *右辺*で制御されるシーケンスの要素の前にあります)。
 
 ### <a name="example"></a>例
 
@@ -1646,7 +1646,7 @@ f e e d c c b a a
 c1.size() = 0
 ```
 
-## <a name="listoperator-stlclr"></a><a name="op_as"></a>list:: operator = (STL/CLR)
+## <a name="listoperator-stlclr"></a><a name="op_as"></a> list:: operator = (STL/CLR)
 
 被制御シーケンスを置き換えます。
 
@@ -1661,9 +1661,9 @@ list<Value>% operator=(list<Value>% right);
 *そうです*<br/>
 コピーするコンテナー。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
-メンバー演算子は、オブジェクトに*right*をコピーし、を返し **`*this`** ます。 このメソッドを使用して、被制御シーケンスを*右側*の被制御シーケンスのコピーで置き換えます。
+メンバー演算子は、オブジェクトに *right* をコピーし、を返し **`*this`** ます。 このメソッドを使用して、被制御シーケンスを *右側*の被制御シーケンスのコピーで置き換えます。
 
 ### <a name="example"></a>例
 
@@ -1699,7 +1699,7 @@ a b c
 a b c
 ```
 
-## <a name="listpop_back-stlclr"></a><a name="pop_back"></a>list::p op_back (STL/CLR)
+## <a name="listpop_back-stlclr"></a><a name="pop_back"></a> list::p op_back (STL/CLR)
 
 最後の要素を削除します。
 
@@ -1746,7 +1746,7 @@ a b c
 a b
 ```
 
-## <a name="listpop_front-stlclr"></a><a name="pop_front"></a>list::p op_front (STL/CLR)
+## <a name="listpop_front-stlclr"></a><a name="pop_front"></a> list::p op_front (STL/CLR)
 
 最初の要素を削除します。
 
@@ -1793,7 +1793,7 @@ a b c
 b c
 ```
 
-## <a name="listpush_back-stlclr"></a><a name="push_back"></a>list::p ush_back (STL/CLR)
+## <a name="listpush_back-stlclr"></a><a name="push_back"></a> list::p ush_back (STL/CLR)
 
 新しい最後の要素を追加します。
 
@@ -1833,7 +1833,7 @@ int main()
 a b c
 ```
 
-## <a name="listpush_front-stlclr"></a><a name="push_front"></a>list::p ush_front (STL/CLR)
+## <a name="listpush_front-stlclr"></a><a name="push_front"></a> list::p ush_front (STL/CLR)
 
 新しい最初の要素を追加します。
 
@@ -1873,7 +1873,7 @@ int main()
 c b a
 ```
 
-## <a name="listrbegin-stlclr"></a><a name="rbegin"></a>list:: rbegin (STL/CLR)
+## <a name="listrbegin-stlclr"></a><a name="rbegin"></a> list:: rbegin (STL/CLR)
 
 反転被制御シーケンスの先頭を指定します。
 
@@ -1928,7 +1928,7 @@ a b c
 a y x
 ```
 
-## <a name="listreference-stlclr"></a><a name="reference"></a>list:: reference (STL/CLR)
+## <a name="listreference-stlclr"></a><a name="reference"></a> list:: reference (STL/CLR)
 
 要素への参照の型です。
 
@@ -1983,7 +1983,7 @@ a b c
 A B C
 ```
 
-## <a name="listremove-stlclr"></a><a name="remove"></a>list:: remove (STL/CLR)
+## <a name="listremove-stlclr"></a><a name="remove"></a> list:: remove (STL/CLR)
 
 指定した値を持つ要素を削除します。
 
@@ -1998,7 +1998,7 @@ void remove(value_type val);
 *val*<br/>
 削除する要素の値。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 このメンバー関数は、が true (存在する場合) の被制御シーケンス内の要素を削除し `((System::Object^)val)->Equals((System::Object^)x)` ます。 このメソッドを使用して、指定した値を持つ任意の要素を消去します。
 
@@ -2042,7 +2042,7 @@ a b c
 a c
 ```
 
-## <a name="listremove_if-stlclr"></a><a name="remove_if"></a>list:: remove_if (STL/CLR)
+## <a name="listremove_if-stlclr"></a><a name="remove_if"></a> list:: remove_if (STL/CLR)
 
 指定したテストに合格した要素を削除します。
 
@@ -2058,7 +2058,7 @@ template<typename Pred1>
 *pred*<br/>
 削除する要素をテストします。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 このメンバー関数は、が true であるすべての要素を被制御シーケンスから削除し `X` `pred(X)` ます。 関数またはデリゲートとして指定した条件を満たすすべての要素を削除するには、これを使用します。
 
@@ -2106,7 +2106,7 @@ a b b b c
 b b b
 ```
 
-## <a name="listrend-stlclr"></a><a name="rend"></a>list:: rend (STL/CLR)
+## <a name="listrend-stlclr"></a><a name="rend"></a> list:: rend (STL/CLR)
 
 反転被制御シーケンスの末尾を指定します。
 
@@ -2162,7 +2162,7 @@ a b c
 y x c
 ```
 
-## <a name="listresize-stlclr"></a><a name="resize"></a>list:: resize (STL/CLR)
+## <a name="listresize-stlclr"></a><a name="resize"></a> list:: resize (STL/CLR)
 
 要素の数を変更します。
 
@@ -2181,9 +2181,9 @@ void resize(size_type new_size, value_type val);
 *val*<br/>
 埋め込み要素の値。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
-メンバー関数は、 [list:: size (STL/CLR)](../dotnet/list-size-stl-clr.md) `()` その後が*new_size*を返すことを保証します。 被制御シーケンスを長くする必要がある場合、最初のメンバー関数は値を持つ要素を追加し、 `value_type()` 2 番目のメンバー関数は値*val*を持つ要素を追加します。 被制御シーケンスを短くするために、両方のメンバー関数は、最後の要素[リスト:: size (STL/CLR)](../dotnet/list-size-stl-clr.md)の時刻を効果的に消去し `() -` `new_size` ます。 このメソッドを使用すると、現在の被制御シーケンスのトリミングまたは埋め込みによって、被制御シーケンスのサイズが*new_size*になるようにすることができます。
+メンバー関数は、 [list:: size (STL/CLR)](#size) `()` その後が*new_size*を返すことを保証します。 被制御シーケンスを長くする必要がある場合、最初のメンバー関数は値を持つ要素を追加し、 `value_type()` 2 番目のメンバー関数は値 *val*を持つ要素を追加します。 被制御シーケンスを短くするために、両方のメンバー関数は、最後の要素[リスト:: size (STL/CLR)](#size)の時刻を効果的に消去し `() -` `new_size` ます。 このメソッドを使用すると、現在の被制御シーケンスのトリミングまたは埋め込みによって、被制御シーケンスのサイズが *new_size*になるようにすることができます。
 
 ### <a name="example"></a>例
 
@@ -2222,7 +2222,7 @@ size() = 0
 x x x x x
 ```
 
-## <a name="listreverse-stlclr"></a><a name="reverse"></a>list:: reverse (STL/CLR)
+## <a name="listreverse-stlclr"></a><a name="reverse"></a> list:: reverse (STL/CLR)
 
 被制御シーケンスを反転させます。
 
@@ -2269,7 +2269,7 @@ a b c
 c b a
 ```
 
-## <a name="listreverse_iterator-stlclr"></a><a name="reverse_iterator"></a>list:: reverse_iterator (STL/CLR)
+## <a name="listreverse_iterator-stlclr"></a><a name="reverse_iterator"></a> list:: reverse_iterator (STL/CLR)
 
 被制御シーケンスの反転反復子の型です。
 
@@ -2318,7 +2318,7 @@ c b a
 x b a
 ```
 
-## <a name="listsize-stlclr"></a><a name="size"></a>list:: size (STL/CLR)
+## <a name="listsize-stlclr"></a><a name="size"></a> list:: size (STL/CLR)
 
 要素の数をカウントします。
 
@@ -2330,7 +2330,7 @@ size_type size();
 
 ### <a name="remarks"></a>解説
 
-このメンバー関数は、被制御シーケンスの長さを返します。 このメソッドを使用して、被制御シーケンス内の現在の要素数を決定します。 シーケンスにゼロ以外のサイズがあるかどうかは、「 [list:: empty (STL/CLR)](../dotnet/list-empty-stl-clr.md)」を参照してください `()` 。
+このメンバー関数は、被制御シーケンスの長さを返します。 このメソッドを使用して、被制御シーケンス内の現在の要素数を決定します。 シーケンスにゼロ以外のサイズがあるかどうかは、「 [list:: empty (STL/CLR)](#empty)」を参照してください `()` 。
 
 ### <a name="example"></a>例
 
@@ -2371,7 +2371,7 @@ size() = 0 after clearing
 size() = 2 after adding 2
 ```
 
-## <a name="listsize_type-stlclr"></a><a name="size_type"></a>list:: size_type (STL/CLR)
+## <a name="listsize_type-stlclr"></a><a name="size_type"></a> list:: size_type (STL/CLR)
 
 2つの要素間の符号付き距離の型。
 
@@ -2419,7 +2419,7 @@ a b c
 end()-begin() = 3
 ```
 
-## <a name="listsort-stlclr"></a><a name="sort"></a>list:: sort (STL/CLR)
+## <a name="listsort-stlclr"></a><a name="sort"></a> list:: sort (STL/CLR)
 
 被制御シーケンスを順序付けます。
 
@@ -2436,7 +2436,7 @@ template<typename Pred2>
 *pred*<br/>
 要素のペアの比較子。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 1つ目のメンバー関数は、被制御シーケンス内の要素を再配置して、 `operator<` シーケンス処理の進行に応じて値が減少しないようにします。 シーケンスを昇順に並べ替えるには、このメンバー関数を使用します。
 
@@ -2484,7 +2484,7 @@ c b a
 a b c
 ```
 
-## <a name="listsplice-stlclr"></a><a name="splice"></a>list:: スプライス (STL/CLR)
+## <a name="listsplice-stlclr"></a><a name="splice"></a> list:: スプライス (STL/CLR)
 
 ノード間のリンクを再合成します。
 
@@ -2512,9 +2512,9 @@ void splice(iterator where, list<Value>% right,
 *where*<br/>
 コンテナー内のスプライスの前の場所。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
-1つ目のメンバー関数は、 *where*でポイントされた被制御シーケンス内の要素の前に、 *right*で制御されるシーケンスを挿入します。 また、すべての要素を*右*から削除します。 ( `%right` はと等しくない必要があり **`this`** ます)。このメソッドを使用して、すべてのリストを別のリストにスプライスします。
+1つ目のメンバー関数は、 *where*でポイントされた被制御シーケンス内の要素の前に、 *right*で制御されるシーケンスを挿入します。 また、すべての要素を *右*から削除します。 ( `%right` はと等しくない必要があり **`this`** ます)。このメソッドを使用して、すべてのリストを別のリストにスプライスします。
 
 2番目のメンバー関数は、 *right*によって制御されるシーケンス内の*最初*のが指す要素を削除し、 *where*によって示される被制御シーケンス内の要素の前に挿入します。 (If `where` `==``first` `||` `where``== ++first`では、変更は行われません)。このメソッドを使用して、あるリストの1つの要素を別のリストにスプライスします。
 
@@ -2577,7 +2577,7 @@ b c a
 c2.size() = 0
 ```
 
-## <a name="listswap-stlclr"></a><a name="swap"></a>list:: swap (STL/CLR)
+## <a name="listswap-stlclr"></a><a name="swap"></a> list:: swap (STL/CLR)
 
 2 つのコンテナーのコンテンツを交換します。
 
@@ -2592,7 +2592,7 @@ void swap(list<Value>% right);
 *そうです*<br/>
 コンテンツを交換するコンテナー。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 このメンバー関数は、との間で被制御シーケンスを交換し **`*this`** ます。 *right* この処理は一定時間に実行され、例外はスローされません。 2つのコンテナーの内容を簡単に交換する方法として使用します。
 
@@ -2641,7 +2641,7 @@ x x x x x
 a b c
 ```
 
-## <a name="listto_array-stlclr"></a><a name="to_array"></a>list:: to_array (STL/CLR)
+## <a name="listto_array-stlclr"></a><a name="to_array"></a> list:: to_array (STL/CLR)
 
 被制御シーケンスを新しい配列にコピーします。
 
@@ -2690,7 +2690,7 @@ a b c d
 a b c
 ```
 
-## <a name="listunique-stlclr"></a><a name="unique"></a>list:: unique (STL/CLR)
+## <a name="listunique-stlclr"></a><a name="unique"></a> list:: unique (STL/CLR)
 
 指定されたテストに合格した隣接する要素を削除します。
 
@@ -2707,9 +2707,9 @@ template<typename Pred2>
 *pred*<br/>
 要素のペアの比較子。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
-1つ目のメンバー関数は、前の要素と等しいかどうかを比較するすべての要素を被制御シーケンス (消去) から削除します。要素がの前にある場合は `X` `Y` `X == Y` 、メンバー関数はを削除し `Y` ます。 これを使用すると、隣接する要素のすべてのサブシーケンスのうち、等しいものを比較して1つを除くすべてのコピーが削除されます。 [List:: sort (STL/CLR)](../dotnet/list-sort-stl-clr.md)を呼び出すなどして被制御シーケンスが順序付けされている場合、 `()` メンバー関数は、一意の値を持つ要素のみを残します。 (ターミナル メソッドという名前なのはそのためです)。
+1つ目のメンバー関数は、前の要素と等しいかどうかを比較するすべての要素を被制御シーケンス (消去) から削除します。要素がの前にある場合は `X` `Y` `X == Y` 、メンバー関数はを削除し `Y` ます。 これを使用すると、隣接する要素のすべてのサブシーケンスのうち、等しいものを比較して1つを除くすべてのコピーが削除されます。 [List:: sort (STL/CLR)](#sort)を呼び出すなどして被制御シーケンスが順序付けされている場合、 `()` メンバー関数は、一意の値を持つ要素のみを残します。 (ターミナル メソッドという名前なのはそのためです)。
 
 2番目のメンバー関数は、1番目のメンバー関数と同じように動作しますが、 `Y` の要素の後にある各要素が削除される点が異なり `X` `pred(X, Y)` ます。 これを使用して、指定した述語関数またはデリゲートを満たす隣接する要素のすべてのサブシーケンスの1つを除くすべてのコピーを削除します。 を呼び出した場合など、被制御シーケンスが順序付けされている場合、 `sort(pred)` メンバー関数は、他の要素と等価な順序付けを持たない要素だけを残します。
 
@@ -2756,7 +2756,7 @@ a b c
 a a
 ```
 
-## <a name="listvalue_type-stlclr"></a><a name="value_type"></a>list:: value_type (STL/CLR)
+## <a name="listvalue_type-stlclr"></a><a name="value_type"></a> list:: value_type (STL/CLR)
 
 要素の型。
 
@@ -2768,7 +2768,7 @@ typedef Value value_type;
 
 ### <a name="remarks"></a>解説
 
-この型は、テンプレートパラメーター*値*のシノニムです。
+この型は、テンプレートパラメーター *値*のシノニムです。
 
 ### <a name="example"></a>例
 
@@ -2801,7 +2801,7 @@ int main()
 a b c
 ```
 
-## <a name="operator-list-stlclr"></a><a name="op_neq"></a>operator! = (list) (STL/CLR)
+## <a name="operator-list-stlclr"></a><a name="op_neq"></a> operator! = (list) (STL/CLR)
 
 リストが等しくないかどうかの比較。
 
@@ -2821,9 +2821,9 @@ template<typename Value>
 *そうです*<br/>
 比較する右のコンテナー。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
-演算子関数はを返し `!(left == right)` ます。 このメソッドを使用して、2つのリストが要素ごとに比較されるときに、 *left*が*right*と同じ順序で並んでいないかどうかをテストします。
+演算子関数はを返し `!(left == right)` ます。 このメソッドを使用して、2つのリストが要素ごとに比較されるときに、 *left* が *right* と同じ順序で並んでいないかどうかをテストします。
 
 ### <a name="example"></a>例
 
@@ -2870,7 +2870,7 @@ a b d
 [a b c] != [a b d] is True
 ```
 
-## <a name="operatorlt-list-stlclr"></a><a name="op_lt"></a>operator &lt; (list) (STL/CLR)
+## <a name="operatorlt-list-stlclr"></a><a name="op_lt"></a> operator &lt; (list) (STL/CLR)
 
 比較より小さいリスト。
 
@@ -2890,9 +2890,9 @@ template<typename Value>
 *そうです*<br/>
 比較する右のコンテナー。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
-演算子関数は、が true である場合にも true を返し `i` `!(right[i] < left[i])` `left[i] < right[i]` ます。 それ以外の場合は、このメソッドを `left->size() < right->size()` 使用して、2つのリストが要素で比較されるときに、 *left*が*right*の前に並べられているかどうかをテストします。
+演算子関数は、が true である場合にも true を返し `i` `!(right[i] < left[i])` `left[i] < right[i]` ます。 それ以外の場合は、このメソッドを `left->size() < right->size()` 使用して、2つのリストが要素で比較されるときに、 *left* が *right* の前に並べられているかどうかをテストします。
 
 ### <a name="example"></a>例
 
@@ -2939,7 +2939,7 @@ a b d
 [a b c] < [a b d] is True
 ```
 
-## <a name="operatorlt-list-stlclr"></a><a name="op_lteq"></a>operator &lt; = (list) (STL/CLR)
+## <a name="operatorlt-list-stlclr"></a><a name="op_lteq"></a> operator &lt; = (list) (STL/CLR)
 
 以下を比較します。
 
@@ -2959,7 +2959,7 @@ template<typename Value>
 *そうです*<br/>
 比較する右のコンテナー。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 演算子関数はを返し `!(right < left)` ます。 このメソッドを使用して、2つのリストが要素別に比較されるときに、 *right*の後に*left*が順序付けされていないかどうかをテストします。
 
@@ -3008,7 +3008,7 @@ a b d
 [a b d] <= [a b c] is False
 ```
 
-## <a name="operator-list-stlclr"></a><a name="op_eq"></a>operator = = (list) (STL/CLR)
+## <a name="operator-list-stlclr"></a><a name="op_eq"></a> operator = = (list) (STL/CLR)
 
 同じ比較を一覧表示します。
 
@@ -3028,9 +3028,9 @@ template<typename Value>
 *そうです*<br/>
 比較する右のコンテナー。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
-演算子関数は、*左*と*右*で制御されるシーケンスの長さが同じで、各位置についてがである場合にのみ true を返し `i` `left[i] ==` `right[i]` ます。 このメソッドを使用して、2つのリストが要素によって比較されるときに、 *left*が*right*と同じ順序で並んでいるかどうかをテストします。
+演算子関数は、 *左* と *右* で制御されるシーケンスの長さが同じで、各位置についてがである場合にのみ true を返し `i` `left[i] ==` `right[i]` ます。 このメソッドを使用して、2つのリストが要素によって比較されるときに、 *left* が *right* と同じ順序で並んでいるかどうかをテストします。
 
 ### <a name="example"></a>例
 
@@ -3077,7 +3077,7 @@ a b d
 [a b c] == [a b d] is False
 ```
 
-## <a name="operatorgt-list-stlclr"></a><a name="op_gt"></a>operator &gt; (list) (STL/CLR)
+## <a name="operatorgt-list-stlclr"></a><a name="op_gt"></a> operator &gt; (list) (STL/CLR)
 
 比較よりも大きいリストです。
 
@@ -3097,9 +3097,9 @@ template<typename Value>
 *そうです*<br/>
 比較する右のコンテナー。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
-演算子関数はを返し `right` `<` `left` ます。 このメソッドを使用して、2つのリストが要素別に比較されたときに、 *left*が*right*の後に並べられているかどうかをテストします。
+演算子関数はを返し `right` `<` `left` ます。 このメソッドを使用して、2つのリストが要素別に比較されたときに、 *left* が *right* の後に並べられているかどうかをテストします。
 
 ### <a name="example"></a>例
 
@@ -3146,7 +3146,7 @@ a b d
 [a b d] > [a b c] is True
 ```
 
-## <a name="operatorgt-list-stlclr"></a><a name="op_gteq"></a>operator &gt; = (list) (STL/CLR)
+## <a name="operatorgt-list-stlclr"></a><a name="op_gteq"></a> operator &gt; = (list) (STL/CLR)
 
 以上の比較を一覧表示します。
 
@@ -3166,9 +3166,9 @@ template<typename Value>
 *そうです*<br/>
 比較する右のコンテナー。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
-演算子関数はを返し `!(left` `<` `right)` ます。 このメソッドを使用して、2つのリストが要素別に比較されるときに、 *left*が*right*の前に順序付けされていないかどうかをテストします。
+演算子関数はを返し `!(left` `<` `right)` ます。 このメソッドを使用して、2つのリストが要素別に比較されるときに、 *left* が *right* の前に順序付けされていないかどうかをテストします。
 
 ### <a name="example"></a>例
 
