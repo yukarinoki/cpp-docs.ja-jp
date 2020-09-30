@@ -6,12 +6,12 @@ helpviewer_keywords:
 - external linkage, about external linkage
 - external linkage
 ms.assetid: a6f8ea69-b405-4cdd-bf12-ad5462b73183
-ms.openlocfilehash: 05fd4bd07aca995a938c7744dfd506d2a71b8774
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: d8a7655b7504aa8458bda8db24ff3f919b5b09c1
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87217091"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91509912"
 ---
 # <a name="external-linkage"></a>外部リンケージ
 
@@ -23,4 +23,4 @@ ID のファイル スコープ レベルの最初の宣言で **`static`** ス�
 
 ## <a name="see-also"></a>関連項目
 
-[extern を使用したリンケージの指定](../cpp/using-extern-to-specify-linkage.md)
+[extern を使用したリンケージの指定](../cpp/extern-cpp.md)
