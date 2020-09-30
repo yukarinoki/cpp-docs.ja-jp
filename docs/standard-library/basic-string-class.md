@@ -121,12 +121,12 @@ helpviewer_keywords:
 - std::basic_string [C++], substr
 - std::basic_string [C++], swap
 ms.assetid: a9c3e0a2-39bf-4c8a-b093-9abe30839591
-ms.openlocfilehash: 9012fc8203bf8b54e87e2c21f47f2ef6ef764c2d
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: 0016926ff82be9ef2b52cf55b16bde2a6099f237
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90040314"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91509995"
 ---
 # <a name="basic_string-class"></a>basic_string クラス
 
@@ -237,7 +237,7 @@ Basic_string 特殊化の要素のさまざまな重要なプロパティ `CharT
 
 被制御シーケンスの要素を指定する参照、ポインター、および反復子は、被制御シーケンスを変更する関数の呼び出しの後、または非メンバー関数への最初の呼び出しの後に無効になることがあり **`const`** ます。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:**\<string>
 
@@ -4765,7 +4765,7 @@ int main()
 {
     std::basic_string<char> str = "abcdefg";
 
-    std::cout << std::boolalpha; // so booleans show as 'true'/'false'     
+    std::cout << std::boolalpha; // so booleans show as 'true'/'false'
     std::cout << str.starts_with('b') << '\n';
     std::cout << str.starts_with("aBc") << '\n';
 

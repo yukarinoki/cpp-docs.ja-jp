@@ -28,12 +28,12 @@ helpviewer_keywords:
 - std::bit [C++], countr_zero
 - std::bit [C++], countr_one
 - std::bit [C++], popcount
-ms.openlocfilehash: a2408df9aa13c6e714f615561871397be17fc4a3
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: 94e44493b9356b3a0717c42aa1bed510ebe460dd
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90039814"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91509982"
 ---
 # <a name="ltbitgt-functions"></a>&lt;ビット &gt; 関数
 
@@ -106,14 +106,17 @@ std::bit_cat<int>(f) = 7f800000
 多くの場合、下位レベルのコードでは、ある型のオブジェクトを別の型として解釈する必要があります。 再解釈されたオブジェクトは元のと同じビット表現を持ちますが、型は異なります。
 
 `reinterpret_cast`、、またはを使用する代わりに、これらの `memcpy()` `bit_cast()` 変換を行う方がより適切な方法です。 次のような場合に適しています。
+
 - `bit_cast()` は `constexpr` です
 - `bit_cast()` 型は、普通にコピー可能で、同じサイズである必要があります。 これにより、およびを使用して発生する可能性のある潜在的な問題を回避でき `reinterpret_cast` `memcpy` ます。これは、不注意によるコピーが可能な型を誤って変換するために使用される可能性があるためです。 また、 `memcpy()` 同じサイズではない型を誤ってコピーする場合にも使用できます。 たとえば、double (8 バイト) が符号なし整数 (4 バイト)、またはその逆になります。
 
 このオーバーロードは、次の場合にのみ、オーバーロードの解決に関与します。
--  `sizeof(To) == sizeof(From)`
+
+- `sizeof(To) == sizeof(From)`
 - `To` および `From` は [is_trivially_copyable](is-trivially-copyable-class.md)です。
 
 この関数テンプレートは `constexpr` `To` 、、 `From` 、およびサブオブジェクトの型がである場合にのみ、次のようになります。
+
 - 共用体型またはポインター型ではありません
 - メンバー型へのポインターではありません
 - volatile で修飾されていません
@@ -490,7 +493,7 @@ countr_one(0b11111111) = 8
 ## <a name="has_single_bit"></a>`has_single_bit`
 
 値にビットセットが1つだけ含まれているかどうかを確認します。これは、値が2の累乗であるかどうかをテストすることと同じです。
- 
+
 ```cpp
 template <class T>
 [[nodiscard]] constexpr bool has_single_bit(T value) noexcept;
@@ -544,7 +547,7 @@ has_single_bit(0b1001) = false
 ## <a name="popcount"></a>`popcount`
 
 符号なし整数値で1に設定されたビット数をカウントします。
- 
+
 ```cpp
 template<class T>
 [[nodiscard]] constexpr int popcount(T value) noexcept;
@@ -603,7 +606,7 @@ popcount(0b1111) = 4
 ## <a name="rotl"></a>`rotl`
 
 符号なし整数値のビットを、指定した回数だけ左に回転します。 左端のビットの "フォールアウト" されるビットは、右端のビットに回転されます。
- 
+
 ```cpp
 template<class T>
 [[nodiscard]] constexpr T rotl(T value, int s) noexcept;
@@ -665,7 +668,7 @@ rotl(0b00000001,-1) = 0b10000000
 ## <a name="rotr"></a>`rotr`
 
 `value`指定した回数だけ右のビットを回転させます。 右端のビットの "フォールアウト" されたビットは、左端のビットに戻ります。
- 
+
 ```cpp
 template<class T>
 [[nodiscard]] constexpr T rotr(T value, int s) noexcept;
@@ -724,7 +727,7 @@ rotr(0b10000000,-1) = 0b00000001
 
 このテンプレート関数 `T` は、が符号なし整数型である場合にのみ、オーバーロードの解決に関与します。 たとえば、、、、 `unsigned int` `unsigned long` などです `unsigned short` `unsigned char` 。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:**\<bit>
 

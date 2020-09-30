@@ -20,12 +20,12 @@ helpviewer_keywords:
 - GetPropertyInfo method
 - SetProperties method
 ms.assetid: a7f15a8b-95b2-4316-b944-d5d03f8d74ab
-ms.openlocfilehash: 16f1a3f8ae9b50e43bfd67d9ac8c65507bf4f147
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: d94c5d121386989d223a55b8ce7626444c3f8950
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88834337"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91509061"
 ---
 # <a name="idbpropertiesimpl-class"></a>IDBPropertiesImpl クラス
 
@@ -58,9 +58,9 @@ class ATL_NO_VTABLE IDBPropertiesImpl
 |[GetPropertyInfo](#getpropertyinfo)|プロバイダーでサポートされているすべてのプロパティに関する情報を返します。|
 |[SetProperties](#setproperties)|データソースオブジェクト、または初期化プロパティグループの列挙子について、データソースおよび初期化プロパティグループのプロパティを設定します。|
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>注釈
 
-[IDBProperties](/previous-versions/windows/desktop/ms719607(v=vs.85)) は、データソースオブジェクトの必須のインターフェイスであり、列挙子のオプションのインターフェイスです。 ただし、列挙子が [IDBInitialize](/previous-versions/windows/desktop/ms713706(v=vs.85))を公開する場合は、を公開する必要があり `IDBProperties` ます。 `IDBPropertiesImpl``IDBProperties` [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md)によって定義された静的関数を使用してを実装します。
+[IDBProperties](/previous-versions/windows/desktop/ms719607(v=vs.85)) は、データソースオブジェクトの必須のインターフェイスであり、列挙子のオプションのインターフェイスです。 ただし、列挙子が [IDBInitialize](/previous-versions/windows/desktop/ms713706(v=vs.85))を公開する場合は、を公開する必要があり `IDBProperties` ます。 `IDBPropertiesImpl``IDBProperties` [BEGIN_PROPSET_MAP](./macros-for-ole-db-provider-templates.md#begin_propset_map)によって定義された静的関数を使用してを実装します。
 
 ## <a name="idbpropertiesimplgetproperties"></a><a name="getproperties"></a> IDBPropertiesImpl:: GetProperties
 
@@ -88,7 +88,7 @@ STDMETHOD(GetProperties)(ULONG cPropertySets,
 |*pcProperties*|*pcPropertySets*|
 |*prgProperties*|*prgPropertySets*|
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 プロバイダーが初期化されている場合、このメソッドは、データソースオブジェクトに現在設定されている DBPROPSET_DATASOURCE、DBPROPSET_DATASOURCEINFO、DBPROPSET_DBINIT プロパティグループのプロパティの値を返します。 プロバイダーが初期化されていない場合は、DBPROPSET_DBINIT グループのプロパティのみが返されます。
 
@@ -117,9 +117,9 @@ STDMETHOD(GetPropertyInfo)(ULONG cPropertySets,
 |*cPropertySets*|*cPropertyIDSets*|
 |*rgPropertySets*|*rgPropertyIDSets*|
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
-では、 [IDBInitializeImpl:: m_pCUtlPropInfo](../../data/oledb/idbinitializeimpl-m-pcutlpropinfo.md) を使用してこの機能を実装します。
+では、 [IDBInitializeImpl:: m_pCUtlPropInfo](./idbinitializeimpl-class.md#pcutlpropinfo) を使用してこの機能を実装します。
 
 ## <a name="idbpropertiesimplsetproperties"></a><a name="setproperties"></a> IDBPropertiesImpl:: SetProperties
 
@@ -136,7 +136,7 @@ STDMETHOD(SetProperties)(ULONG cPropertySets,
 
 *OLE DB プログラマーリファレンス*の「 [IDBProperties:: SetProperties](/previous-versions/windows/desktop/ms723049(v=vs.85)) 」を参照してください。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 プロバイダーが初期化されている場合、このメソッドは、データソースオブジェクトの DBPROPSET_DATASOURCE、DBPROPSET_DATASOURCEINFO、DBPROPSET_DBINIT プロパティグループのプロパティの値を設定します。 プロバイダーが初期化されていない場合は、DBPROPSET_DBINIT グループのプロパティのみが設定されます。
 

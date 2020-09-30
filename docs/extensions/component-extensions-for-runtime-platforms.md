@@ -9,19 +9,19 @@ helpviewer_keywords:
 - keywords [C++]
 - Managed Extensions for C++, replacement syntax
 ms.assetid: 1e400ee6-3ac9-4910-a608-9d3d5993e423
-ms.openlocfilehash: aa6e5d1ea7d1bc2d7ebfaf07c7c9f808b37e9804
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 887fa14153e728735937604d531782a9ae7535bb
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87219769"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91509714"
 ---
 # <a name="component-extensions-for-net-and-uwp"></a>.NET および UWP 用のコンポーネントの拡張機能
 
 C++ 標準では、コンパイラ ベンダーがその言語に対して非標準の拡張機能を提供できます。 Microsoft では、ネイティブ C++ コードを .NET Framework またはユニバーサル Windows プラットフォーム (UWP) 上で実行されるコードに接続するために役立つ拡張機能を提供しています。 .NET 拡張機能は C++/CLI と呼ばれ、共通言語ランタイム (CLR) と呼ばれる .NET マネージド実行環境で実行されるコードを生成します。 UWP 拡張機能は C++/CX と呼ばれ、ネイティブ マシン コードを生成します。
 
 > [!NOTE]
-> 新しいアプリケーションでは、C++/CX ではなく C++/WinRT を使用することをお勧めします。 C++/WinRT は、Windows ランタイム API 用の新しい標準的な C++17 言語プロジェクションです。 C++/CX と WRL は引き続きサポートされますが、新しいアプリケーションでは C++/WinRT を使用することを強くお勧めします。 詳細については、「 [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/index)」を参照してください。
+> 新しいアプリケーションでは、C++/CX ではなく C++/WinRT を使用することをお勧めします。 C++/WinRT は、Windows ランタイム API 用の新しい標準的な C++17 言語プロジェクションです。 C++/CX と WRL は引き続きサポートされますが、新しいアプリケーションでは C++/WinRT を使用することを強くお勧めします。 詳細については、「[C++/WinRT](/windows/uwp/cpp-and-winrt-apis/index)」を参照してください。
 
 ### <a name="two-runtimes-one-set-of-extensions"></a>2 つのランタイムに共通の拡張
 
@@ -37,7 +37,7 @@ C++/CX 拡張機能は、C++/CLI のサブセットです。 拡張構文はほ�
 
 次の表に、C++ 言語拡張のキーワードの一覧を示します。
 
-|キーワード|状況依存|目的|リファレンス|
+|Keyword|状況依存|目的|リファレンス|
 |-------------|-----------------------|-------------|---------------|
 |**ref class**<br /><br /> **ref struct**|いいえ|クラスを宣言します。|[クラスと構造体](classes-and-structs-cpp-component-extensions.md)|
 |**value class**<br /><br /> **value struct**|いいえ|値クラスを宣言します。|[クラスと構造体](classes-and-structs-cpp-component-extensions.md)|
@@ -49,9 +49,9 @@ C++/CX 拡張機能は、C++/CLI のサブセットです。 拡張構文はほ�
 
 ## <a name="override-specifiers"></a>オーバーライド指定子
 
-次のキーワードは、派生のオーバーライド動作を修飾するために使用できます。 キーワードは **`new`** C++ の拡張ではありませんが、追加のコンテキストで使用できるため、ここに記載されています。 一部の指定子は、ネイティブのプログラミングに対しても有効です。 詳細については、「[方法: ネイティブコンパイルでオーバーライド指定子を宣言する (C++/cli)](../dotnet/how-to-declare-override-specifiers-in-native-compilations-cpp-cli.md)」を参照してください。
+次のキーワードは、派生のオーバーライド動作を修飾するために使用できます。 キーワードは **`new`** C++ の拡張ではありませんが、追加のコンテキストで使用できるため、ここに記載されています。 一部の指定子は、ネイティブのプログラミングに対しても有効です。 詳細については、「 [方法: ネイティブコンパイルでオーバーライド指定子を宣言する (C++/cli)](../dotnet/how-to-declare-override-specifiers-in-native-compilations-cpp-cli.md)」を参照してください。
 
-|キーワード|状況依存|目的|リファレンス|
+|Keyword|状況依存|目的|リファレンス|
 |-------------|-----------------------|-------------|---------------|
 |**abstract**|はい|関数またはクラスが抽象型であることを示します。|[abstract](abstract-cpp-component-extensions.md)|
 |**`new`**|いいえ|関数が基底クラスのバージョンのオーバーライドでないことを示します。|[new (vtable の新しいスロット)](new-new-slot-in-vtable-cpp-component-extensions.md)|
@@ -62,7 +62,7 @@ C++/CX 拡張機能は、C++/CLI のサブセットです。 拡張構文はほ�
 
 ジェネリック型をサポートするために追加されたキーワードを次に示します。 詳細については、「[ジェネリック](generics-cpp-component-extensions.md)」を参照してください。
 
-|キーワード|状況依存|目的|
+|Keyword|状況依存|目的|
 |-------------|-----------------------|-------------|
 |**通常**|いいえ|ジェネリック型を宣言します。|
 |**where**|はい|ジェネリック型パラメーターに適用される制約を指定します。|
@@ -71,21 +71,21 @@ C++/CX 拡張機能は、C++/CLI のサブセットです。 拡張構文はほ�
 
 C++ 拡張に追加されたその他のキーワードを次に示します。
 
-|キーワード|状況依存|目的|リファレンス|
+|Keyword|状況依存|目的|リファレンス|
 |-------------|-----------------------|-------------|---------------|
 |**finally**|はい|例外処理の既定の動作を示します。|[例外処理](exception-handling-cpp-component-extensions.md)|
 |**for each、in**|いいえ|コレクションの要素を列挙します。|[for each、in](../dotnet/for-each-in.md)|
 |**gcnew**|いいえ|ガベージ コレクション ヒープに型を割り当てます。 およびの代わりにを使用し **`new`** **`delete`** ます。|[ref new、gcnew](ref-new-gcnew-cpp-component-extensions.md)|
 |**ref new**|はい|Windows ランタイム型を割り当てます。 およびの代わりにを使用し **`new`** **`delete`** ます。|[ref new、gcnew](ref-new-gcnew-cpp-component-extensions.md)|
 |**initonly**|はい|宣言または静的コンストラクターでしかメンバーを初期化できないことを示します。|[initonly (C++/CLI)](../dotnet/initonly-cpp-cli.md)|
-|**まま**|はい|リテラル変数を作成します。|[リテラル](literal-cpp-component-extensions.md)|
+|**literal**|はい|リテラル変数を作成します。|[literal](literal-cpp-component-extensions.md)|
 |**`nullptr`**|いいえ|ハンドルまたはポインターでオブジェクトを参照しないことを示します。|[nullptr](nullptr-cpp-component-extensions.md)|
 
 ## <a name="template-constructs"></a>テンプレートの構成要素
 
 次の言語構成要素は、キーワードとしてではなく、テンプレートとして実装されています。 `/ZW` コンパイラ オプションを指定した場合は `lang` 名前空間で定義され、 `/clr` コンパイラ オプションを指定した場合は `cli` 名前空間で定義され、
 
-|キーワード|目的|リファレンス|
+|Keyword|目的|リファレンス|
 |-------------|-------------|---------------|
 |**array**|配列を宣言します。|[配列](arrays-cpp-component-extensions.md)|
 |**interior_ptr**|(CLR のみ) 参照型でデータを参照します。|[interior_ptr (C++/CLI)](interior-ptr-cpp-cli.md)|
@@ -110,7 +110,7 @@ C++ 拡張に追加されたその他のキーワードを次に示します。
 |-----------|-----------------|
 |[__identifier (C++/CLI)](identifier-cpp-cli.md)|(Windows ランタイムおよび CLR) キーワードを識別子として使用できるようにします。|
 |[可変個引数リスト (...)(C++/CLI)](variable-argument-lists-dot-dot-dot-cpp-cli.md)|(Windows ランタイムおよび CLR) 関数で受け取ることができる引数の数を可変にします。|
-|[C++ ネイティブ型に相当する .NET Framework (C++/CLI)](../dotnet/dotnet-framework-equivalents-to-cpp-native-types-cpp-cli.md)|C++ の整数型の代わりに使用される CLR 型を示します。|
+|[C++ ネイティブ型に相当する .NET Framework (C++/CLI)](../dotnet/managed-types-cpp-cli.md#dotnet)|C++ の整数型の代わりに使用される CLR 型を示します。|
 |[appdomain](../cpp/appdomain.md) **`__declspec`** 変換|**`__declspec`** 修飾子は、appdomain ごとに静的変数とグローバル変数が存在することを義務付けます。|
 |[C スタイル キャストと /clr (C++/CLI)](c-style-casts-with-clr-cpp-cli.md)|C スタイル キャストがどのように解釈されるかについて説明します。|
 |[__clrcall](../cpp/clrcall.md) 呼び出し規則|CLR 準拠の呼び出し規則を示します。|
@@ -121,7 +121,7 @@ C++ 拡張に追加されたその他のキーワードを次に示します。
 |[フレンドアセンブリ (C++)](../dotnet/friend-assemblies-cpp.md)|クライアント アセンブリでアセンブリ コンポーネントのすべての型にアクセスする方法について説明します。|
 |[ボックス化](boxing-cpp-component-extensions.md)|値型がボックス化される条件を示します。|
 |[型の特徴のコンパイラサポート](compiler-support-for-type-traits-cpp-component-extensions.md)|コンパイル時に型の特性を検出する方法について説明します。|
-|[マネージド、アンマネージ](../preprocessor/managed-unmanaged.md)プラグマ|同じモジュールにマネージド 関数とアンマネージド 関数を共存させる方法を示します。|
+|[マネージド、アンマネージ](../preprocessor/managed-unmanaged.md) プラグマ|同じモジュールにマネージド 関数とアンマネージド 関数を共存させる方法を示します。|
 |[プロセス](../cpp/process.md) **`__declspec`** 変換|**`__declspec`** 静的変数とグローバル変数がプロセスごとに存在することを必須にする修飾子です。|
 |[リフレクション (C++/CLI)](../dotnet/reflection-cpp-cli.md)|CLR バージョンのランタイム型情報を示します。|
 |[String](string-cpp-component-extensions.md)|文字列リテラルから <xref:System.String> へのコンパイラによる変換について説明します。|

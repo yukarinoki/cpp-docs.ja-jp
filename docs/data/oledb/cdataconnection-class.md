@@ -61,12 +61,12 @@ helpviewer_keywords:
 - operator CSession*
 - CSession* operator
 ms.assetid: 77432d85-4e20-49ec-a0b0-142137828471
-ms.openlocfilehash: 118b8d09b90899eca0f257e319aabbefd92f359f
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: c456f4bf5891f550fcd9523fa376333d66e079a6
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88838401"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91509105"
 ---
 # <a name="cdataconnection-class"></a>CDataConnection クラス
 
@@ -93,7 +93,7 @@ class CDataConnection
 |[[ファイル]](#open)|初期化文字列を使用して、データソースへの接続を開きます。|
 |[OpenNewSession](#opennewsession)|現在の接続で新しいセッションを開きます。|
 
-### <a name="operators"></a>演算子
+### <a name="operators"></a>オペレーター
 
 | 名前 | 説明 |
 |-|-|
@@ -104,16 +104,16 @@ class CDataConnection
 |[operator CSession&](#op_csession_amp)|格納されているオブジェクトへの参照を返し `CSession` ます。|
 |[演算子 CSession*](#op_csession_star)|格納されているオブジェクトへのポインターを返し `CSession` ます。|
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>注釈
 
 `CDataConnection` は、クライアントを作成するのに便利なクラスです。これは、必要なオブジェクト (データソースとセッション) と、データソースに接続するときに必要な作業の一部をカプセル化するためです。
 
-を使用しない場合は `CDataConnection` 、オブジェクトを作成し、 `CDataSource` その [OpenFromInitializationString](../../data/oledb/cdatasource-openfrominitializationstring.md) メソッドを呼び出してから、 [CSession](../../data/oledb/csession-class.md) オブジェクトのインスタンスを作成し、その [Open](../../data/oledb/csession-open.md) メソッドを呼び出した後、 [CCommand](../../data/oledb/ccommand-class.md) オブジェクトを作成し、その * メソッドを呼び出す必要があり `Open` ます。
+を使用しない場合は `CDataConnection` 、オブジェクトを作成し、 `CDataSource` その [OpenFromInitializationString](./cdatasource-class.md#openfrominitializationstring) メソッドを呼び出してから、 [CSession](../../data/oledb/csession-class.md) オブジェクトのインスタンスを作成し、その [Open](./csession-class.md#open) メソッドを呼び出した後、 [CCommand](../../data/oledb/ccommand-class.md) オブジェクトを作成し、その * メソッドを呼び出す必要があり `Open` ます。
 
 では `CDataConnection` 、接続オブジェクトを作成し、初期化文字列を渡してから、その接続を使用してコマンドを開くだけです。 データベースへの接続を繰り返し使用する予定がある場合は、接続を開いたままにしておくことをお勧めします。これには便利な方法が用意されてい `CDataConnection` ます。
 
 > [!NOTE]
-> 複数のセッションを処理する必要があるデータベースアプリケーションを作成する場合は、 [Opennewsession](../../data/oledb/cdataconnection-opennewsession.md)を使用する必要があります。
+> 複数のセッションを処理する必要があるデータベースアプリケーションを作成する場合は、 [Opennewsession](#opennewsession)を使用する必要があります。
 
 ## <a name="cdataconnectioncdataconnection"></a><a name="cdataconnection"></a> CDataConnection:: CDataConnection
 
@@ -131,7 +131,7 @@ CDataConnection(const CDataConnection &ds);
 *ds*<br/>
 から既存のデータ接続への参照。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 最初のオーバーライドでは、 `CDataConnection` 既定の設定を使用して新しいオブジェクトを作成します。
 
@@ -186,7 +186,7 @@ HRESULT OpenNewSession(CSession & session) throw();
 *セッション*<br/>
 [入力/出力]新しいセッションオブジェクトへの参照。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 新しいセッションでは、現在の接続オブジェクトに含まれているデータソースオブジェクトを親として使用し、データソースと同じすべての情報にアクセスできます。
 
@@ -258,7 +258,7 @@ operator const CDataSource*() throw();
 
 この演算子は、含まれているオブジェクトへのポインターを返します。これにより、 `CDataSource` ポインターが必要なオブジェクトを渡すことができ `CDataConnection` `CDataSource` ます。
 
-使用例については、「 [Operator CDataSource&](../../data/oledb/cdataconnection-operator-cdatasource-amp.md) 」を参照してください。
+使用例については、「 [Operator CDataSource&](#op_cdata_amp) 」を参照してください。
 
 ## <a name="cdataconnectionoperator-csessionamp"></a><a name="op_csession_amp"></a> CDataConnection:: operator CSession&amp;
 
@@ -298,7 +298,7 @@ operator const CSession*() throw();
 
 ### <a name="example"></a>例
 
-使用例については、「 [Operator CSession&](../../data/oledb/cdataconnection-operator-csession-amp.md) 」を参照してください。
+使用例については、「 [Operator CSession&](#op_csession_amp) 」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

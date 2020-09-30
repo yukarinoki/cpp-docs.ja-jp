@@ -7,12 +7,12 @@ helpviewer_keywords:
 - updating rowsets
 - rowsets
 ms.assetid: 39588758-5c72-4254-a10d-cc2b1f473357
-ms.openlocfilehash: 22e362170d645574b40070c6db39c2576d3ae9c8
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 134ab73428b7535bb34094b7d5b1952fd61a3d69
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87212944"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91509436"
 ---
 # <a name="updating-rowsets"></a>更新 (行セットを)
 
@@ -20,11 +20,11 @@ ms.locfileid: "87212944"
 
 コンシューマーが行セット データに対して実行できる更新の種類は、行内の列値の設定、行の挿入、行の削除です。 これらの操作を実行するために、OLE DB テンプレート クラスの [CRowset](../../data/oledb/crowset-class.md) は、[IRowsetChange](/previous-versions/windows/desktop/ms715790(v=vs.85)) インターフェイスを実装し、次のインターフェイス メソッドをオーバーライドします。
 
-- [SetData](../../data/oledb/crowset-setdata.md) は行セットの行の列値を変更します。これは SQL の UPDATE コマンドに相当します。
+- [SetData](./crowset-class.md#setdata) は行セットの行の列値を変更します。これは SQL の UPDATE コマンドに相当します。
 
-- [Insert](../../data/oledb/crowset-insert.md) は行を行セットに挿入します。これは SQL の INSERT コマンドに相当します。
+- [Insert](./crowset-class.md#insert) は行を行セットに挿入します。これは SQL の INSERT コマンドに相当します。
 
-- [Delete](../../data/oledb/crowset-delete.md) は行を行セットから削除します。これは SQL の DELETE コマンドに相当します。
+- [Delete](./crowset-class.md#delete) は行を行セットから削除します。これは SQL の DELETE コマンドに相当します。
 
 ## <a name="supporting-update-operations"></a>更新操作のサポート
 
@@ -52,7 +52,7 @@ ps.AddProperty(DBPROP_UPDATABILITY, DBPROPVAL_UP_CHANGE | DBPROPVAL_UP_INSERT | 
 
 ## <a name="setting-data-in-rows"></a>行のデータの設定
 
-[CRowset::SetData](../../data/oledb/crowset-setdata.md) は、現在の行の 1 つ以上の列にデータ値を設定します。 次のコードは、テーブル `Products` の列 `Name` および `Units in Stock` にバインドされたデータ メンバーの値を設定してから、`SetData` を呼び出して、行セットの 100 行目にこれらの値を書き込みます。
+[CRowset::SetData](./crowset-class.md#setdata) は、現在の行の 1 つ以上の列にデータ値を設定します。 次のコードは、テーブル `Products` の列 `Name` および `Units in Stock` にバインドされたデータ メンバーの値を設定してから、`SetData` を呼び出して、行セットの 100 行目にこれらの値を書き込みます。
 
 ```cpp
 // Instantiate a rowset based on the user record class
@@ -74,13 +74,13 @@ HRESULT hr = product.SetData();
 
 ## <a name="inserting-rows-into-rowsets"></a>行セットへの行の挿入
 
-[CRowset::Insert](../../data/oledb/crowset-insert.md) は、アクセサーのデータを使用して新しい行を作成し、初期化します。 `Insert` は、現在の行の後にまったく新しい行を作成します。現在の行を次の行にインクリメントするか、そのまま変更しないでおくかを指定する必要があります。 これを指定するには、 *bGetRow* パラメーターを設定します。
+[CRowset::Insert](./crowset-class.md#insert) は、アクセサーのデータを使用して新しい行を作成し、初期化します。 `Insert` は、現在の行の後にまったく新しい行を作成します。現在の行を次の行にインクリメントするか、そのまま変更しないでおくかを指定する必要があります。 これを指定するには、 *bGetRow* パラメーターを設定します。
 
 ```cpp
 HRESULT Insert(int nAccessor = 0, bool bGetRow = false)
 ```
 
-- **`false`**(既定値) は、現在の行が次の行にインクリメントすることを指定します (この場合、挿入された行を指します)。
+- **`false`** (既定値) は、現在の行が次の行にインクリメントすることを指定します (この場合、挿入された行を指します)。
 
 - **`true`** 現在の行をそのままにすることを指定します。
 
@@ -131,13 +131,13 @@ m_dwQuantityPerUnitLength = 10;        // "Pack of 10" has 10 characters
 HRESULT hr = product.Insert();
 ```
 
-詳しい例については、「 [CRowset::Insert](../../data/oledb/crowset-insert.md)」をご覧ください。
+詳しい例については、「 [CRowset::Insert](./crowset-class.md#insert)」をご覧ください。
 
 ステータスや長さのデータ メンバーを設定する方法について詳しくは、「 [ウィザードで生成されたアクセサーのフィールド ステータスのデータ メンバー](../../data/oledb/field-status-data-members-in-wizard-generated-accessors.md)」をご覧ください。
 
 ## <a name="deleting-rows-from-rowsets"></a>行セットからの行の削除
 
-[CRowset::Delete](../../data/oledb/crowset-delete.md) は、行セットから現在の行を削除します。 次のコードは、`Delete` を呼び出して、行セットの 100 行目を削除します。
+[CRowset::Delete](./crowset-class.md#delete) は、行セットから現在の行を削除します。 次のコードは、`Delete` を呼び出して、行セットの 100 行目を削除します。
 
 ```cpp
 // Instantiate a rowset based on the user record class
@@ -156,9 +156,9 @@ HRESULT hr = product.Delete();
 
 特に指定しない限り、`SetData`、`Insert`、`Delete` の各メソッドを呼び出すと、データ ストアがすぐに更新されます。 しかし、すべての変更をコンシューマーがローカル キャッシュに格納しておき、次の更新メソッドの 1 つが呼び出されたらそれらをデータ ストアに転送するという方法で、更新を遅らせることができます。
 
-- [CRowset::Update](../../data/oledb/crowset-update.md) は、最後のフェッチまたは `Update` 呼び出し以降に行われた現在の行に対する保留中のあらゆる変更を転送します。
+- [CRowset::Update](./crowset-class.md#update) は、最後のフェッチまたは `Update` 呼び出し以降に行われた現在の行に対する保留中のあらゆる変更を転送します。
 
-- [CRowset::UpdateAll](../../data/oledb/crowset-updateall.md) は、最後のフェッチまたは `Update` 呼び出し以降に行われたすべての行に対する保留中のあらゆる変更を転送します。
+- [CRowset::UpdateAll](./crowset-class.md#updateall) は、最後のフェッチまたは `Update` 呼び出し以降に行われたすべての行に対する保留中のあらゆる変更を転送します。
 
 更新メソッドで使用される "更新" には、"コマンド上の変更" という特有の意味があります。これを SQL の **UPDATE** コマンドと混同しないようにしてください (`SetData` が SQL の **UPDATE** コマンドに相当します)。
 
@@ -204,7 +204,7 @@ product.Update();                 // Update row 101 now
 
 たとえば、上記のコードの最初の `Update` 呼び出しがない場合は、100 行目は変更されないままになり、101 行目が変更されます。 100 行目が更新されるには、その後で、アプリケーションが `UpdateAll` を呼び出すか、100 行目に戻って `Update` を呼び出す必要があります。
 
-変更を遅延させる主な理由は、変更を元に戻すことができるようにするためです。 [CRowset::Undo](../../data/oledb/crowset-undo.md) を呼び出すと、ローカル変更キャッシュの状態が、保留中の変更が作成される前のデータ ストアの状態にロールバックされます。 `Undo` は、ローカル キャッシュの状態を 1 ステップだけ (最後の変更の直前の状態に) ロールバックするのではないことにご注意ください。この処理を実行すると、その行のローカル キャッシュがクリアされます。 また、`Undo` は現在の行のみに影響します。
+変更を遅延させる主な理由は、変更を元に戻すことができるようにするためです。 [CRowset::Undo](./crowset-class.md#undo) を呼び出すと、ローカル変更キャッシュの状態が、保留中の変更が作成される前のデータ ストアの状態にロールバックされます。 `Undo` は、ローカル キャッシュの状態を 1 ステップだけ (最後の変更の直前の状態に) ロールバックするのではないことにご注意ください。この処理を実行すると、その行のローカル キャッシュがクリアされます。 また、`Undo` は現在の行のみに影響します。
 
 ## <a name="see-also"></a>関連項目
 

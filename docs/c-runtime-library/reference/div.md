@@ -28,12 +28,12 @@ helpviewer_keywords:
 - dividing integers
 - remainder computing
 ms.assetid: 8ae80d97-54fd-499e-b14c-e30993b58119
-ms.openlocfilehash: 24432ec1514f6cd2d569fd5752a8ed7118059d6a
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: e0c87ad44986363e871d68bccde757214f5e2c45
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87234225"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91509885"
 ---
 # <a name="div-ldiv-lldiv"></a>div、ldiv、lldiv
 
@@ -77,13 +77,13 @@ lldiv_t div(
 
 ## <a name="return-value"></a>戻り値
 
-型の引数を使用して呼び出された**div**は、 **`int`** 商と剰余で構成される**div_t**型の構造体を返します。 型の引数を持つ戻り値 **`long`** が**ldiv_t**であり、型の引数を持つ戻り値 **`long long`** が**lldiv_t**です。 **div_t**、 **ldiv_t**、および**lldiv_t**は、「」で定義されてい \<stdlib.h> ます。
+型の引数を使用して呼び出された**div**は、 **`int`** 商と剰余で構成される**div_t**型の構造体を返します。 型の引数を持つ戻り値 **`long`** が **ldiv_t**であり、型の引数を持つ戻り値 **`long long`** が **lldiv_t**です。 **div_t**、 **ldiv_t**、および **lldiv_t** は、「」で定義されてい \<stdlib.h> ます。
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>注釈
 
 **Div**関数は、*数値*を*デ om*によって除算し、商と剰余を計算します。 [Div_t](../../c-runtime-library/standard-types.md)構造体には、商、 **quot**、剰余 ( **rem**) が含まれています。商の符号は、数学的な商の符号と同じです。 この絶対値が最も大きい整数であり、商の絶対値よりも小さくなります。 分母が 0 の場合、プログラムはエラー メッセージにより終了します。
 
-型または型の引数を受け取る**div**のオーバーロードは、 **`long`** **`long long`** C++ コードでのみ使用できます。 戻り値の[型 ldiv_t](../../c-runtime-library/standard-types.md)および[lldiv_t](../../c-runtime-library/standard-types.md)には、 **div_t**のメンバーと同じ意味を持つメンバー **quot**と**rem**が含まれています。
+型または型の引数を受け取る **div** のオーバーロードは、 **`long`** **`long long`** C++ コードでのみ使用できます。 戻り値の[型 ldiv_t](../../c-runtime-library/standard-types.md)および[lldiv_t](../../c-runtime-library/standard-types.md)には、 **div_t**のメンバーと同じ意味を持つメンバー **quot**と**rem**が含まれています。
 
 ## <a name="requirements"></a>必要条件
 
@@ -134,5 +134,5 @@ The quotient is 67, and the remainder is 5
 ## <a name="see-also"></a>関連項目
 
 [浮動小数点のサポート](../../c-runtime-library/floating-point-support.md)<br/>
-[ldiv、lldiv](ldiv-lldiv.md)<br/>
+[ldiv、lldiv]()<br/>
 [imaxdiv](imaxdiv.md)<br/>

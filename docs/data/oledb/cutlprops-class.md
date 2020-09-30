@@ -29,12 +29,12 @@ helpviewer_keywords:
 - OnPropertyChanged method
 - SetPropValue method
 ms.assetid: bb525178-765c-4e23-a110-c0fd70c05437
-ms.openlocfilehash: 46fa266c5a8328bbcf7cfd1257ce1ff3e38ed2bb
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 1e9e636824ff67ee93587637c0e098e625229c06
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88845667"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91509094"
 ---
 # <a name="cutlprops-class"></a>CUtlProps クラス
 
@@ -68,13 +68,13 @@ class ATL_NO_VTABLE CUtlProps : public CUtlPropsBase
 |[OnPropertyChanged](#onpropertychanged)|プロパティを設定した後に、チェーンプロパティを処理するために呼び出されます。|
 |[SetPropValue](#setpropvalue)|プロパティセット内のプロパティを設定します。|
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>注釈
 
 このクラスのほとんどは実装の詳細です。
 
-`CUtlProps` 内部的にプロパティを設定するための2つのメンバー ( [getpropvalue](../../data/oledb/cutlprops-getpropvalue.md) と [setpropvalue](../../data/oledb/cutlprops-setpropvalue.md)) が含まれています。
+`CUtlProps` 内部的にプロパティを設定するための2つのメンバー ( [getpropvalue](#getpropvalue) と [setpropvalue](#setpropvalue)) が含まれています。
 
-プロパティセットマップで使用されるマクロの詳細については、「 [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md) 」および「 [END_PROPSET_MAP](../../data/oledb/end-propset-map.md)」を参照してください。
+プロパティセットマップで使用されるマクロの詳細については、「 [BEGIN_PROPSET_MAP](./macros-for-ole-db-provider-templates.md#begin_propset_map) 」および「 [END_PROPSET_MAP](./macros-for-ole-db-provider-templates.md#end_propset_map)」を参照してください。
 
 ## <a name="cutlpropsgetpropvalue"></a><a name="getpropvalue"></a> CUtlProps:: GetPropValue
 
@@ -126,7 +126,7 @@ virtual HRESULT CUtlPropsBase::IsValidValue(ULONG /* iCurSet */,
 
 標準の HRESULT です。 既定の戻り値は S_OK です。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 プロパティの設定に使用しようとしている値に対して実行する検証ルーチンがある場合は、この関数をオーバーライドする必要があります。 たとえば、パスワードテーブルに対して DBPROP_AUTH_PASSWORD を検証して、有効な値を判断することができます。
 
@@ -145,7 +145,7 @@ virtual HRESULT CUtlPropsBase::OnInterfaceRequested(REFIID riid);
 *riid*<br/>
 から要求されたインターフェイスの IID。 詳細については、 *riid* `ICommand::Execute` *OLE DB プログラマーのリファレンス*( *MDAC SDK*) にある、の riid パラメーターの説明を参照してください。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 `OnInterfaceRequested` コンシューマーがオブジェクト作成インターフェイス (、、、など) のいずれかでメソッドを呼び出したときに、オプションのインターフェイスのコンシューマー要求を処理 `IDBCreateSession` `IDBCreateCommand` `IOpenRowset` `ICommand` します。 これは、要求されたインターフェイスに対応する OLE DB プロパティを設定します。 たとえば、コンシューマーから要求された場合、は `IID_IRowsetLocate` `OnInterfaceRequested` インターフェイスを設定し `DBPROP_IRowsetLocate` ます。 これにより、行セットの作成時に適切な状態が維持されます。
 
@@ -163,7 +163,7 @@ virtual HRESULT CUtlPropsBase::OnInterfaceRequested(REFIID riid);
 
 - `IRowsetScroll`
 
-他のインターフェイスを処理する場合は、関数を処理するために、データソース、セッション、コマンド、または行セットクラスでこの関数をオーバーライドします。 このオーバーライドでは、通常の set/get プロパティインターフェイスを使用して、設定プロパティにチェーンプロパティも設定されていることを確認する必要があります (「 [OnPropertyChanged](../../data/oledb/cutlprops-onpropertychanged.md)」を参照してください)。
+他のインターフェイスを処理する場合は、関数を処理するために、データソース、セッション、コマンド、または行セットクラスでこの関数をオーバーライドします。 このオーバーライドでは、通常の set/get プロパティインターフェイスを使用して、設定プロパティにチェーンプロパティも設定されていることを確認する必要があります (「 [OnPropertyChanged](#onpropertychanged)」を参照してください)。
 
 ## <a name="cutlpropsonpropertychanged"></a><a name="onpropertychanged"></a> CUtlProps:: OnPropertyChanged
 
@@ -188,7 +188,7 @@ virtual HRESULT OnPropertyChanged(ULONG /* iCurSet */,
 
 標準の HRESULT です。 既定の戻り値は S_OK です。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 値が別のプロパティの値に依存するブックマークや更新などの連結されたプロパティを処理する場合は、この関数をオーバーライドする必要があります。
 

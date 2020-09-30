@@ -10,12 +10,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAccessor class
 ms.assetid: b2ba959f-a686-46f3-8837-176248aef748
-ms.openlocfilehash: 2b30cef2baf8c13c5001e44901b984aa1293494d
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 032274d7dc85aa823cd28cf61e4606903f13ad9e
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80212304"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91509563"
 ---
 # <a name="caccessor-class"></a>CAccessor クラス
 
@@ -33,19 +33,19 @@ class CAccessor : public CAccessorBase, public T
 *T*<br/>
 ユーザーレコードクラス。
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>注釈
 
 レコードがデータソースに静的にバインドされている場合に使用されます。 レコードにはバッファーが含まれています。 このクラスは、行セットに対して複数のアクセサーをサポートします。
 
 このアクセサー型は、データベースの構造と型がわかっている場合に使用します。
 
-解放する必要があるメモリ (`BSTR` やインターフェイスなど) を指すフィールドがアクセサーに含まれている場合は、次のレコードが読み取られる前に、メンバー関数[CAccessorRowset:: FreeRecordMemory](../../data/oledb/caccessorrowset-freerecordmemory.md)を呼び出します。
+解放する必要があるメモリ (インターフェイスやインターフェイスなど) を指すフィールドがアクセサーに含まれている場合は、 `BSTR` 次のレコードが読み取られる前にメンバー関数 [CAccessorRowset:: FreeRecordMemory](./caccessorrowset-class.md#freerecordmemory) を呼び出します。
 
 ## <a name="requirements"></a>必要条件
 
 **ヘッダー:** atldbcli.h
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[OLE DB コンシューマー テンプレートに関するページ](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
-[OLE DB コンシューマー テンプレート リファレンス](../../data/oledb/ole-db-consumer-templates-reference.md)
+[OLE DB コンシューマー テンプレート](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[OLE DB コンシューマーテンプレートリファレンス](../../data/oledb/ole-db-consumer-templates-reference.md)

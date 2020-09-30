@@ -49,12 +49,12 @@ helpviewer_keywords:
 - IsUpdateAllowed method
 - m_mapCachedData
 ms.assetid: f85af76b-ab6f-4f8b-8f4a-337c9679d68f
-ms.openlocfilehash: 7a63062a02ebcc6c8a89fadceb36dc81bc9af88c
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 88ee9257655c96195339ded79f2dd4d3b7c7caf5
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88844926"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91509771"
 ---
 # <a name="irowsetupdateimpl-class"></a>IRowsetUpdateImpl クラス
 
@@ -116,7 +116,7 @@ class IRowsetUpdateImpl : public IRowsetChangeImpl<
 |[GetPendingRows](#getpendingrows)|保留中の変更がある行の一覧を返します。|
 |[GetRowStatus](#getrowstatus)|指定された行の状態を返します。|
 |[元に戻す](#undo)|前回のフェッチまたは更新以降に行に加えられたすべての変更を元に戻します。|
-|[アップデート](#update)|前回のフェッチまたは更新以降に行に加えられた変更を転送します。|
+|[Update](#update)|前回のフェッチまたは更新以降に行に加えられた変更を転送します。|
 
 ### <a name="implementation-methods-callback"></a>実装方法 (コールバック)
 
@@ -130,7 +130,7 @@ class IRowsetUpdateImpl : public IRowsetChangeImpl<
 |-|-|
 |[m_mapCachedData](#mapcacheddata)|遅延操作の元のデータを格納します。|
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>注釈
 
 ここに記載されているすべてのものはここにも適用されるため、まず [IRowsetChange](/previous-versions/windows/desktop/ms715790(v=vs.85))のドキュメントを読んで理解しておく必要があります。 また、データの設定に関する *OLE DB プログラマーリファレンス* の第6章も参照してください。
 
@@ -161,9 +161,9 @@ STDMETHOD (SetData )(HROW hRow,
 
 *OLE DB プログラマーリファレンス*の「 [IRowsetChange:: SetData](/previous-versions/windows/desktop/ms721232(v=vs.85)) 」を参照してください。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
-このメソッドは [IRowsetChangeImpl:: SetData](../../data/oledb/irowsetchangeimpl-setdata.md) メソッドをオーバーライドしますが、操作の即時処理または遅延処理を許可する元のデータのキャッシュを含みます。
+このメソッドは [IRowsetChangeImpl:: SetData](./irowsetchangeimpl-class.md#setdata) メソッドをオーバーライドしますが、操作の即時処理または遅延処理を許可する元のデータのキャッシュを含みます。
 
 ## <a name="irowsetupdateimplgetoriginaldata"></a><a name="getoriginaldata"></a> IRowsetUpdateImpl:: GetOriginalData
 
@@ -202,7 +202,7 @@ STDMETHOD (GetPendingRows )(HCHAPTER /* hReserved */,
 
 その他のパラメーターについては、 *OLE DB プログラマーリファレンス*の「 [IRowsetUpdate:: getpendingrows](/previous-versions/windows/desktop/ms719626(v=vs.85)) 」を参照してください。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
 詳細については、 *OLE DB プログラマーリファレンス*の「 [IRowsetUpdate:: getpendingrows](/previous-versions/windows/desktop/ms719626(v=vs.85)) 」を参照してください。
 
@@ -276,9 +276,9 @@ STDMETHOD (Update )(HCHAPTER /* hReserved */,
 
 その他のパラメーターについては、 *OLE DB プログラマーリファレンス*の「 [IRowsetUpdate:: Update](/previous-versions/windows/desktop/ms719709(v=vs.85)) 」を参照してください。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
-変更は、 [IRowsetChangeImpl:: FlushData](../../data/oledb/irowsetchangeimpl-flushdata.md)を呼び出すことによって送信されます。 変更を有効にするには、コンシューマーが [CRowset:: Update](../../data/oledb/crowset-update.md) を呼び出す必要があります。 「 *OLE DB プログラマーのリファレンス*」の「[行の状態](/previous-versions/windows/desktop/ms722752(v=vs.85))」で説明されているように、 *prgrowstatus*を適切な値に設定します。
+変更は、 [IRowsetChangeImpl:: FlushData](./irowsetchangeimpl-class.md#flushdata)を呼び出すことによって送信されます。 変更を有効にするには、コンシューマーが [CRowset:: Update](./crowset-class.md#update) を呼び出す必要があります。 「 *OLE DB プログラマーのリファレンス*」の「[行の状態](/previous-versions/windows/desktop/ms722752(v=vs.85))」で説明されているように、 *prgrowstatus*を適切な値に設定します。
 
 ## <a name="irowsetupdateimplisupdateallowed"></a><a name="isupdateallowed"></a> IRowsetUpdateImpl:: IsUpdateAllowed
 
@@ -303,9 +303,9 @@ HRESULT IsUpdateAllowed(DBPENDINGSTATUS /* [in] */ /* status */,
 *pRowStatus*<br/>
 入出力ユーザーに返されるステータス。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
-更新を許可する必要があると判断した場合、は S_OK を返します。それ以外の場合は E_FAIL を返します。 更新を許可する場合は、 `DBROWSTATUS` [IRowsetUpdateImpl:: update](../../data/oledb/irowsetupdateimpl-update.md) のを適切な [行の状態](/previous-versions/windows/desktop/ms722752(v=vs.85))に設定する必要もあります。
+更新を許可する必要があると判断した場合、は S_OK を返します。それ以外の場合は E_FAIL を返します。 更新を許可する場合は、 `DBROWSTATUS` [IRowsetUpdateImpl:: update](#update) のを適切な [行の状態](/previous-versions/windows/desktop/ms722752(v=vs.85))に設定する必要もあります。
 
 ## <a name="irowsetupdateimplm_mapcacheddata"></a><a name="mapcacheddata"></a> IRowsetUpdateImpl:: m_mapCachedData
 

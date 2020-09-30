@@ -11,12 +11,12 @@ helpviewer_keywords:
 - OLE DB consumers [C++], database attributes
 - attributes [C++], OLE DB consumer
 ms.assetid: 560d2456-e307-4cb7-ba7b-4d0ed674697f
-ms.openlocfilehash: d22f8a25bc7bb58f72346a15edb51f062c44e1b4
-ms.sourcegitcommit: 44eeb065c3148d0484de791080a3f963109744fc
+ms.openlocfilehash: faee3ea47a6d96b09729d9d4b5bfa21584096d31
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79546177"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91509474"
 ---
 # <a name="simplifying-data-access-with-database-attributes"></a>データベース属性によるデータ アクセスの簡略化
 
@@ -28,26 +28,26 @@ ms.locfileid: "79546177"
 
 2つのファイルを比較することで、属性をどれほど簡単に使用できるかを確認できます。 違いは次のとおりです。
 
-- 属性を使用する場合、1つのクラスを宣言するだけで済みます `CAuthors`。テンプレートでは、2つの `CAuthorsNoAttrAccessor` と `CAuthorsNoAttr`を宣言する必要があります。
+- 属性を使用する場合、1つのクラスを宣言するだけで済みます。 `CAuthors` テンプレートでは、との2つを宣言する必要があります `CAuthorsNoAttrAccessor` `CAuthorsNoAttr` 。
 
-- 属性付きバージョンでの `db_source` の呼び出しは、テンプレート宣言の `OpenDataSource()` 呼び出しに相当します。
+- `db_source`属性付きバージョンでの呼び出しは、 `OpenDataSource()` テンプレート宣言内の呼び出しに相当します。
 
-- 属性付きバージョンでの `db_table` の呼び出しは、次のテンプレート宣言と同じです。
+- `db_table`属性付きバージョンでの呼び出しは、次のテンプレート宣言と同じです。
 
     ```cpp
     class CAuthorsNoAttr : public CTable<CAccessor<CAuthorsNoAttrAccessor>>
     ```
 
-- 属性付きバージョンでの `db_column` の呼び出しは、テンプレート宣言の列マップ (`BEGIN_COLUMN_MAP ... END_COLUMN_MAP`を参照) に相当します。
+- `db_column`属性付きバージョンでの呼び出しは、テンプレート宣言の列マップに相当します (「」を参照してください `BEGIN_COLUMN_MAP ... END_COLUMN_MAP` )。
 
-属性によって、ユーザーレコードクラスの宣言が挿入されます。 ユーザーレコードクラスは、テンプレート宣言内の `CAuthorsNoAttrAccessor` に相当します。 テーブルクラスが `CAuthors`場合、挿入されたユーザーレコードクラスの名前は `CAuthorsAccessor`であり、挿入されたコードでのみ宣言を表示できます。 詳細については、「[ユーザーレコード](../../data/oledb/user-records.md)」の「属性で挿入されたユーザーレコードクラス」を参照してください。
+属性によって、ユーザーレコードクラスの宣言が挿入されます。 ユーザーレコードクラスは、テンプレート宣言のと同じです `CAuthorsNoAttrAccessor` 。 テーブルクラスがの場合 `CAuthors` 、挿入されたユーザーレコードクラスにはという名前が付けられ、挿入され `CAuthorsAccessor` たコードでのみ、その宣言を表示できます。 詳細については、「 [ユーザーレコード](../../data/oledb/user-records.md)」の「属性で挿入されたユーザーレコードクラス」を参照してください。
 
-属性付きコードとテンプレート化されたコードの両方で、`CDBPropSet::AddProperty`を使用して行セットプロパティを設定する必要があります。
+属性付きコードとテンプレート化されたコードの両方で、を使用して行セットプロパティを設定する必要があり `CDBPropSet::AddProperty` ます。
 
-このトピックで説明する属性の詳細については、「 [OLE DB コンシューマー属性](../../windows/ole-db-consumer-attributes.md)」を参照してください。
+このトピックで説明する属性の詳細については、「 [OLE DB コンシューマー属性](../../windows/attributes/ole-db-consumer-attributes.md)」を参照してください。
 
 > [!NOTE]
-> 次の `include` ステートメントは、以下の例をコンパイルするために必要です。
+> 以下の `include` 例をコンパイルするには、次のステートメントが必要です。
 
 > ```cpp
 > #include <atlbase.h>
@@ -57,7 +57,7 @@ ms.locfileid: "79546177"
 
 ## <a name="table-and-accessor-declaration-using-attributes"></a>属性を使用したテーブルとアクセサーの宣言
 
-次のコードは、table クラスで `db_source` と `db_table` を呼び出します。 `db_source` は、使用するデータソースと接続を指定します。 `db_table` は、テーブルクラスを宣言するための適切なテンプレートコードを挿入します。 列マップを指定し、アクセサー宣言を挿入 `db_column` ます。 ATL をサポートするプロジェクトでは OLE DB コンシューマー属性を使用できます。
+次のコードは `db_source` 、 `db_table` table クラスでおよびを呼び出します。 `db_source` 使用するデータソースと接続を指定します。 `db_table` テーブルクラスを宣言するための適切なテンプレートコードを挿入します。 `db_column` 列マップを指定し、アクセサー宣言を挿入します。 ATL をサポートするプロジェクトでは OLE DB コンシューマー属性を使用できます。
 
 属性を使用したテーブルとアクセサーの宣言を次に示します。
 
@@ -200,6 +200,6 @@ HRESULT hr = Open(m_session, "Authors", pPropSet);
 };
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[OLE DB コンシューマー属性](../../windows/ole-db-consumer-attributes.md)
+[OLE DB のコンシューマー属性](../../windows/attributes/ole-db-consumer-attributes.md)

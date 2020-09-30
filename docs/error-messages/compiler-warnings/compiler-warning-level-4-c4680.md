@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C4680
 ms.assetid: 6e043f4c-c601-4b77-8130-920cff1d912e
-ms.openlocfilehash: 21ea9bf54a493a72dc24c607812eaed69f9ef71b
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: ea9eb681d1696c77184a9999a94367a0bce8c454
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74990460"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91510047"
 ---
 # <a name="compiler-warning-level-4-c4680"></a>コンパイラの警告 (レベル 4) C4680
 
 ' class ': コクラスは既定のインターフェイスを指定していません
 
-[コクラス](../../windows/coclass.md)属性でマークされたクラスの[既定](../../windows/default-cpp.md)のインターフェイスが指定されませんでした。 オブジェクトを使用するためには、インターフェイスを実装する必要があります。
+[コクラス](../../windows/attributes/coclass.md)属性でマークされたクラスの[既定](../../windows/attributes/default-cpp.md)のインターフェイスが指定されませんでした。 オブジェクトを使用するためには、インターフェイスを実装する必要があります。
 
 次の例では、C4680 が生成されます。
 

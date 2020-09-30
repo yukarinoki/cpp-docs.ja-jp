@@ -4,18 +4,18 @@ ms.date: 08/19/2019
 helpviewer_keywords:
 - OLE DB consumers, implementing
 ms.assetid: 13828167-23a4-4e94-8b6c-878262fda464
-ms.openlocfilehash: 2f290f2a17c51682c75fbc09118757e5fd12c4f7
-ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
+ms.openlocfilehash: 9e93b40313a215dfe5872b33dc7d41641204a2f1
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "79544706"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91508979"
 ---
 # <a name="implementing-a-simple-consumer"></a>単純なコンシューマーの実装
 
 ::: moniker range="vs-2019"
 
-ATL OLE DB コンシューマー ウィザードは、Visual Studio 2019 以降では使用できません。 ただし、この機能を手動で追加することは可能です。 詳細については、「[ウィザードを使用しないコンシューマーの作成](creating-a-consumer-without-using-a-wizard.md)」を参照してください。
+ATL OLE DB コンシューマー ウィザードは、Visual Studio 2019 以降では使用できません。 ただし、この機能を手動で追加することは可能です。 詳細については、「[ウィザードを使用しないコンシューマーの作成](creating-a-consumer-without-using-a-wizard.md)」をご覧ください。
 
 ::: moniker-end
 
@@ -72,7 +72,7 @@ ATL OLE DB コンシューマー ウィザードは、Visual Studio 2019 以降�
 
 - `DBPROP_IRowsetLocate` プロパティを設定して、プロバイダーにブックマーク列を要求します。
 
-- [BOOKMARK_ENTRY](../../data/oledb/bookmark-entry.md) マクロを使用して、列マップにブックマーク エントリを追加します。
+- [BOOKMARK_ENTRY](./macros-and-global-functions-for-ole-db-consumer-templates.md#bookmark_entry) マクロを使用して、列マップにブックマーク エントリを追加します。
 
 上の手順で、ブックマーク サポートと使用するブックマーク オブジェクトが得られました。 このコード例では、次の手順でブックマークの使用例を示します。
 
@@ -80,7 +80,7 @@ ATL OLE DB コンシューマー ウィザードは、Visual Studio 2019 以降�
 
 - 行セットのデータを 1 行ずつファイルに出力します。
 
-- [MoveToBookmark](../../data/oledb/crowset-movetobookmark.md) を呼び出して、行セットのカーソルをブックマークに移動します。
+- [MoveToBookmark](./crowset-class.md#movetobookmark) を呼び出して、行セットのカーソルをブックマークに移動します。
 
 - ブックマークが設定された行を、ファイルの末尾に追加することで出力します。
 
@@ -205,6 +205,6 @@ ATL OLE DB コンシューマー ウィザードは、Visual Studio 2019 以降�
 
 ::: moniker-end
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[ウィザードを使用した OLE DB コンシューマーの作成](../../data/oledb/creating-an-ole-db-consumer-using-a-wizard.md)
+[ウィザードを使用して OLE DB コンシューマーを作成する](../../data/oledb/creating-an-ole-db-consumer-using-a-wizard.md)

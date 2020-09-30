@@ -3,12 +3,12 @@ title: Windows ランタイム C++ テンプレート ライブラリ (WRL)
 ms.date: 11/04/2016
 ms.topic: overview
 ms.assetid: b915afce-553b-44a7-b8dc-0ab601758eb0
-ms.openlocfilehash: 10e2303fa5498079fc1f9bb6f82aa909c9a6c3ee
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 12bda00d6687340fbddfb8f81bbb83b6c2bd98a6
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88840538"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91509799"
 ---
 # <a name="windows-runtime-c-template-library-wrl"></a>Windows ランタイム C++ テンプレート ライブラリ (WRL)
 
@@ -32,7 +32,7 @@ Windows ランタイム C++ テンプレートライブラリと C++/CX では�
 - C++/CX は、COM HRESULT 値を例外として表します。 COM を使用するコードベース、または例外を使用しないコードベースを継承した場合は、例外を使用する必要がないため、Windows ランタイム C++ テンプレートライブラリが Windows ランタイムを操作するより自然な方法であることがわかります。
 
    > [!NOTE]
-   > Windows ランタイム C++ テンプレートライブラリでは HRESULT 値が使用され、例外はスローされません。 さらに、Windows ランタイム C++ テンプレートライブラリでは、スマートポインターと RAII パターンを使用して、アプリケーションコードが例外をスローしたときにオブジェクトが正しく破棄されることを保証します。 スマートポインターと RAII の詳細については、「 [スマートポインター](../../cpp/smart-pointers-modern-cpp.md) と [オブジェクトのリソース (RAII)](../../cpp/objects-own-resources-raii.md)」を参照してください。
+   > Windows ランタイム C++ テンプレートライブラリでは HRESULT 値が使用され、例外はスローされません。 さらに、Windows ランタイム C++ テンプレートライブラリでは、スマートポインターと RAII パターンを使用して、アプリケーションコードが例外をスローしたときにオブジェクトが正しく破棄されることを保証します。 スマートポインターと RAII の詳細については、「 [スマートポインター](../../cpp/smart-pointers-modern-cpp.md) と [オブジェクトのリソース (RAII)](../../cpp/object-lifetime-and-resource-management-modern-cpp.md)」を参照してください。
 
 - Windows ランタイム C++ テンプレートライブラリの目的と設計は、COM オブジェクトのプログラミングを簡略化する、テンプレートベースの C++ クラスのセットである Active Template Library (ATL) によって作成されています。 Windows ランタイム C++ テンプレートライブラリは標準 C++ を使用して Windows ランタイムをラップするため、ATL で記述された多くの既存の COM コンポーネントを Windows ランタイムに簡単に移植して操作できます。 ATL が既にわかっている場合は、Windows ランタイム C++ テンプレートライブラリのプログラミングが簡単であることがわかります。
 
@@ -76,7 +76,7 @@ Windows ランタイム C++ テンプレートライブラリを使用してイ�
 [DirectX マーブル メイズ ゲームのサンプル](/samples/microsoft/windows-appsample-marble-maze/directx-marble-maze-game-sample/)<br/>
 Windows ランタイム C++ テンプレートライブラリを使用して、完全な3-d ゲームのコンテキストで DirectX やメディアファンデーションなどの COM コンポーネントの有効期間を管理する方法を示します。
 
-[デスクトップ アプリからのトースト通知](/windows/uwp/design/shell/tiles-and-notifications/toast-desktop-apps)<br/>
+[デスクトップアプリからのトースト通知](/windows/uwp/design/shell/tiles-and-notifications/toast-desktop-apps)<br/>
 デスクトップアプリからトースト通知を送信する方法について説明します。
 
 ## <a name="windows-runtime-c-template-library-compared-to-atl"></a>Windows ランタイム C++ テンプレートライブラリと ATL の比較

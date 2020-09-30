@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3531
 ms.assetid: 2bdb9fdc-9ddf-403e-8b92-02763d434487
-ms.openlocfilehash: 7da9da2daedc79db619f82848dc864d1cb7bd1f1
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 4537c6c76814f2aeb8f8d62579caec86785de252
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74750092"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91510137"
 ---
 # <a name="compiler-error-c3531"></a>コンパイラ エラー C3531
 
@@ -23,9 +23,9 @@ ms.locfileid: "74750092"
 
 1. 変数を宣言するときに、等号構文を使用する単純な代入などの初期化子式を指定します。
 
-## <a name="example"></a>使用例
+## <a name="example"></a>例
 
-次の例では、変数 `x1`、`y1, y2, y3`、および `z2` が初期化されていないため、C3531 が生成されます。
+次の例では、変数 `x1` 、 `y1, y2, y3` 、およびが初期化されていないため、C3531 `z2` が生成されます。
 
 ```cpp
 // C3531.cpp
@@ -39,6 +39,6 @@ int main()
 }
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[auto キーワード](../../cpp/auto-keyword.md)
+[auto キーワード](../../cpp/auto-cpp.md)

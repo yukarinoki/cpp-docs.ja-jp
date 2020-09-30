@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3533
 ms.assetid: a68b1ba5-466e-4190-a1a4-505ccfe548b7
-ms.openlocfilehash: 4e3c773d0498a35c7b5d053268bff26f9943103b
-ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
+ms.openlocfilehash: c77c5c0fff8f8d9c1c64ba11773503b197006b67
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90686770"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91510107"
 ---
 # <a name="compiler-error-c3533"></a>コンパイラ エラー C3533
 
@@ -43,5 +43,5 @@ template<auto T> class C {}; // C3533
 
 ## <a name="see-also"></a>関連項目
 
-[auto キーワード](../../cpp/auto-keyword.md)<br/>
+[auto キーワード](../../cpp/auto-cpp.md)<br/>
 [/Zc: auto (変数の型の推測)](../../build/reference/zc-auto-deduce-variable-type.md)

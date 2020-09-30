@@ -11,12 +11,12 @@ helpviewer_keywords:
 - .tlb files, renaming
 - -TLBOUT linker option
 ms.assetid: 0df6d078-2e48-46c9-a1a5-02674d85dce8
-ms.openlocfilehash: 4e04514933a521bbf9d927fa6b47bacb87896353
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 62913eaadd0f0a88f05ce347a6778062a1e66f17
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62317641"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91509338"
 ---
 # <a name="tlbout-name-tlb-file"></a>/TLBOUT (.TLB ファイル名の指定)
 
@@ -27,28 +27,28 @@ ms.locfileid: "62317641"
 ## <a name="arguments"></a>引数
 
 *path*<br/>
-.Tlb ファイルを作成する必要があります絶対または相対パス仕様。
+.Tlb ファイルを作成する場所の絶対パスまたは相対パスを指定します。
 
-*ファイル名*<br/>
-MIDL コンパイラによって作成された .tlb ファイルの名前を指定します。 ファイル拡張子は想定されていません。指定*filename*.tlb 拡張子 .tlb を付加する場合。
+*filename*<br/>
+MIDL コンパイラによって作成される .tlb ファイルの名前を指定します。 ファイル拡張子は想定されていません。.tlb 拡張子を付ける場合は、 *ファイル名*.tlb を指定します。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>注釈
 
-/TLBOUT オプションは、.tlb ファイルの拡張子と名前を指定します。
+/TLBOUT オプションは、.tlb ファイルの名前と拡張子を指定します。
 
-持つプロジェクトをリンクするときに、MIDL コンパイラは、MSVC リンカーによって呼び出されます、[モジュール](../../windows/module-cpp.md)属性。
+MIDL コンパイラは、 [module](../../windows/attributes/module-cpp.md) 属性を持つプロジェクトをリンクするときに、MSVC リンカーによって呼び出されます。
 
-.Tlb ファイルから、その名前を受け取ります/TLBOUT が指定されていない場合[/IDLOUT](idlout-name-midl-output-files.md) *filename*します。 /IDLOUT が指定されていない場合、.tlb ファイルには、vc70.tlb が呼び出されます。
+/TLBOUT が指定されていない場合、.tlb ファイルの名前は [/IDLOUT](idlout-name-midl-output-files.md) *filename*から取得されます。 /IDLOUT が指定されていない場合、.tlb ファイルは vc70 という名前になります。
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのリンカー オプションを設定するには
 
-1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。 [Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)します。
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、[Visual Studio での C++ コンパイラとビルド プロパティの設定](../working-with-project-properties.md)に関するページを参照してください。
 
-1. をクリックして、**リンカー**フォルダー。
+1. **[リンカー]** フォルダーをクリックします。
 
-1. をクリックして、**埋め込み IDL**プロパティ ページ。
+1. [ **埋め込み IDL** ] プロパティページをクリックします。
 
-1. 変更、**タイプ ライブラリ**プロパティ。
+1. **タイプライブラリ**のプロパティを変更します。
 
 ### <a name="to-set-this-linker-option-programmatically"></a>このリンカーをコードから設定するには
 
@@ -58,6 +58,6 @@ MIDL コンパイラによって作成された .tlb ファイルの名前を指
 
 [MSVC リンカーのリファレンス](linking.md)<br/>
 [MSVC リンカー オプション](linker-options.md)<br/>
-[/IGNOREIDL (属性を MIDL に挿入しない)](ignoreidl-don-t-process-attributes-into-midl.md)<br/>
-[/MIDL (MIDL コマンド ライン オプションの指定)](midl-specify-midl-command-line-options.md)<br/>
-[属性付きプログラムの作成](../../windows/building-an-attributed-program.md)
+[/IGNOREIDL (属性を MIDL に処理しない)](ignoreidl-don-t-process-attributes-into-midl.md)<br/>
+[/Midl (MIDL コマンドラインオプションの指定)](midl-specify-midl-command-line-options.md)<br/>
+[属性付きプログラムの作成](../../windows/attributes/cpp-attributes-com-net.md)

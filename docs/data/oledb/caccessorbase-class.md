@@ -25,12 +25,12 @@ helpviewer_keywords:
 - IsAutoAccessor method
 - ReleaseAccessors method
 ms.assetid: 389b65be-11ca-4ae0-9290-60c621c4982b
-ms.openlocfilehash: eff7eff855bcccefee7e051c67d583d28e488293
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 81b0ecd8ded7acb0c0e376d0869decb2bfcb590e
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88843301"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91509114"
 ---
 # <a name="caccessorbase-class"></a>CAccessorBase クラス
 
@@ -70,7 +70,7 @@ void Close();
 
 ### <a name="remarks"></a>解説
 
-最初に [Releaseaccessors](../../data/oledb/caccessorbase-releaseaccessors.md) を呼び出す必要があります。
+最初に [Releaseaccessors](#release) を呼び出す必要があります。
 
 ## <a name="caccessorbasegethaccessor"></a><a name="geth"></a> CAccessorBase:: GetHAccessor
 
@@ -143,9 +143,9 @@ HRESULT ReleaseAccessors(IUnknown* pUnk);
 
 標準の HRESULT です。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>注釈
 
-[CAccessorRowset:: Close](../../data/oledb/caccessorrowset-close.md)から呼び出されます。
+[CAccessorRowset:: Close](./caccessorrowset-class.md#close)から呼び出されます。
 
 ## <a name="see-also"></a>関連項目
 

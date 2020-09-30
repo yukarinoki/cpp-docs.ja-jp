@@ -1,4 +1,4 @@
-﻿---
+---
 title: delete 演算子 (C++)
 ms.date: 08/12/2019
 f1_keywords:
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - delete keyword [C++], deallocating objects
 - delete keyword [C++]
 ms.assetid: de39c900-3f57-489c-9598-dcb73c4b3930
-ms.openlocfilehash: 19f92e2aa62adf1ede4c0e6ab1187fd9e4106e68
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 8ce9b8e606d5bbc2051af76e6dc4ac1350ec81a6
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87221693"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91509142"
 ---
 # <a name="delete-operator-c"></a>delete 演算子 (C++)
 
@@ -24,7 +24,7 @@ ms.locfileid: "87221693"
 > [ `::` ] `delete` *キャスト式*\
 > [ `::` ] `delete []` *キャスト式*
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>注釈
 
 *キャスト式*の引数は、 [new 演算子](../cpp/new-operator-cpp.md)で作成されたオブジェクトに対して以前に割り当てられたメモリブロックへのポインターである必要があります。 **`delete`** 演算子の結果は型である **`void`** ため、値を返しません。 次に例を示します。
 
@@ -50,7 +50,7 @@ delete [] set;
 
 演算子のオペランド **`delete`** が変更可能な左辺値の場合、オブジェクトが削除された後、その値は未定義になります。
 
-[/Sdl (追加のセキュリティチェックを有効にする)](/cpp/build/reference/sdl-enable-additional-security-checks)コンパイラオプションが指定されている場合、 **`delete`** オブジェクトが削除された後、演算子のオペランドが無効な値に設定されます。
+[/Sdl (追加のセキュリティチェックを有効にする)](../build/reference/sdl-enable-additional-security-checks.md)コンパイラオプションが指定されている場合、 **`delete`** オブジェクトが削除された後、演算子のオペランドが無効な値に設定されます。
 
 ## <a name="using-delete"></a>delete の使用
 
@@ -88,9 +88,9 @@ int main()
 
 ## <a name="how-delete-works"></a>delete の動作方法
 
-Delete 演算子は、関数**operator delete**を呼び出します。
+Delete 演算子は、関数 **operator delete**を呼び出します。
 
-クラス型 ([クラス](../cpp/class-cpp.md)、[構造体](../cpp/struct-cpp.md)、または[共用体](../cpp/unions.md)) ではないオブジェクトの場合、グローバルな delete 演算子が呼び出されます。 クラス型のオブジェクトの場合、delete 式が単項スコープ解決演算子 () で始まる場合、割り当て解除関数の名前はグローバルスコープで解決され `::` ます。 それ以外の場合、delete 演算子は、メモリ (ポインターが null でない場合) の割り当てを解除する前に、オブジェクトのデストラクターを呼び出します。 delete 演算子は、クラス単位で定義できます。指定のクラスの定義がない場合、グローバル delete 演算子が呼び出されます。 静的な型に仮想デストラクターが含まれるクラス オブジェクトの割り当ての解放に delete 式を使用した場合、deallocation 関数は動的な型のオブジェクトの仮想デストラクターを通じて解決されます。
+クラス型 ([クラス](../cpp/class-cpp.md)、 [構造体](../cpp/struct-cpp.md)、または [共用体](../cpp/unions.md)) ではないオブジェクトの場合、グローバルな delete 演算子が呼び出されます。 クラス型のオブジェクトの場合、delete 式が単項スコープ解決演算子 () で始まる場合、割り当て解除関数の名前はグローバルスコープで解決され `::` ます。 それ以外の場合、delete 演算子は、メモリ (ポインターが null でない場合) の割り当てを解除する前に、オブジェクトのデストラクターを呼び出します。 delete 演算子は、クラス単位で定義できます。指定のクラスの定義がない場合、グローバル delete 演算子が呼び出されます。 静的な型に仮想デストラクターが含まれるクラス オブジェクトの割り当ての解放に delete 式を使用した場合、deallocation 関数は動的な型のオブジェクトの仮想デストラクターを通じて解決されます。
 
 ## <a name="see-also"></a>関連項目
 

@@ -6,12 +6,12 @@ f1_keywords:
 - <bit>
 helpviewer_keywords:
 - bit header
-ms.openlocfilehash: 5652d0af767520710ee08b1827e0df27c477ee6d
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: f9742ce1e15a817923c144544eb3bb6325e76765
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90040055"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91509961"
 ---
 # <a name="ltbitgt"></a>&lt;bit&gt;
 
@@ -19,7 +19,7 @@ ms.locfileid: "90040055"
 
 たとえば、ビットを回転させる関数、連続するセットまたはクリアビットの数を検索する関数、数値が2の整数の累乗であるかどうか、数値を表す最小ビット数などがあるかどうかなどがあります。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:**\<bit>
 
@@ -31,7 +31,7 @@ ms.locfileid: "90040055"
 
 ### <a name="types"></a>型
 
-| 型 | 説明 |
+| Type | 説明 |
 |--------|----------|
 | [ビッグ](bit-enum.md) | スカラー型のエンディアンを指定します。 |
 
@@ -52,6 +52,6 @@ ms.locfileid: "90040055"
 |[rotl](bit-functions.md#rotl) | ビットごとの左回転の結果を計算します。 |
 |[rotr](bit-functions.md#rotr) | ビットごとの右回転の結果を計算します。 |
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [ヘッダー ファイル リファレンス](cpp-standard-library-header-files.md)

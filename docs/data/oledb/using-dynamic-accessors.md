@@ -5,22 +5,22 @@ helpviewer_keywords:
 - accessors [C++], dynamic
 - dynamic accessors
 ms.assetid: e5d5bfa6-2b1d-49d0-8ced-914666422431
-ms.openlocfilehash: 4539247894c3980464e744c76cea450324372382
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: eea1c6199fed5a4e6e331c1c76f34b96090b709a
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62403062"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91509412"
 ---
 # <a name="using-dynamic-accessors"></a>動的アクセサーの使用
 
-動的アクセサーを使用すると、データベース スキーマ (構造体の基になる) の知識があるない場合にデータ ソースにアクセスできます。 OLE DB テンプレート ライブラリに役立ついくつかのクラスを提供します。
+動的アクセサーを使用すると、データベーススキーマ (基になる構造) に関する知識がなくても、データソースにアクセスできます。 OLE DB テンプレートライブラリには、支援するクラスがいくつか用意されています。
 
-[DynamicConsumer](https://github.com/Microsoft/VCSamples/tree/master/VC2008Samples/ATL/OLEDB/Consumer/DynamicConsumer)サンプル動的アクセサー クラスを使用して、列の情報を取得し、動的にアクセサーを作成する方法を示しています。
+[Dynamicconsumer](https://github.com/Microsoft/VCSamples/tree/master/VC2008Samples/ATL/OLEDB/Consumer/DynamicConsumer)サンプルでは、動的アクセサークラスを使用して、列情報を取得し、アクセサーを動的に作成する方法を示します。
 
-## <a name="using-cdynamicaccessor"></a>CDynamicAccessor を使用します。
+## <a name="using-cdynamicaccessor"></a>CDynamicAccessor の使用
 
-[CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md)データベース スキーマ (データベースの基になる構造) の知識があるない場合にデータ ソースにアクセスすることができます。 `CDynamicAccessor` メソッドは、列名、数、およびデータ型などの列情報を取得します。 実行時に動的にアクセサーを作成するのにには、この列の情報を使用します。 列情報が作成され、このクラスで管理されるバッファーに格納されます。 使用してバッファーからデータを取得、 [GetValue](../../data/oledb/cdynamicaccessor-getvalue.md)メソッド。
+[CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md) を使用すると、データベーススキーマ (データベースの基になる構造) に関する知識がなくても、データソースにアクセスできます。 `CDynamicAccessor` メソッドは、列名、カウント、データ型などの列情報を取得します。 この列情報は、実行時にアクセサーを動的に作成するために使用します。 列情報は、このクラスによって作成および管理されるバッファーに格納されます。 [GetValue](./cdynamicaccessor-class.md#getvalue)メソッドを使用してバッファーからデータを取得します。
 
 ## <a name="example"></a>例
 
@@ -88,11 +88,11 @@ int main(int argc, char* argv[] )
 }
 ```
 
-## <a name="using-cdynamicstringaccessor"></a>CDynamicStringAccessor を使用します。
+## <a name="using-cdynamicstringaccessor"></a>CDynamicStringAccessor の使用
 
-[CDynamicStringAccessor](../../data/oledb/cdynamicstringaccessor-class.md)と同様に動作[CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md)、1 つの重要な点を除きます。 中に`CDynamicAccessor`、プロバイダーによって報告されたネイティブ形式でデータを要求`CDynamicStringAccessor`要求プロバイダーが文字列データとしてデータ ストアからすべてのデータをフェッチします。 プロセスは単純なタスクを表示またはデータ ストアの内容を印刷するなど、データ ストア内の値の計算を必要としない場合に特に役立ちます。
+[CDynamicStringAccessor](../../data/oledb/cdynamicstringaccessor-class.md) は、1つの重要な方法を除いて、 [CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md)のように機能します。 は `CDynamicAccessor` プロバイダーによって報告されたネイティブ形式のデータを要求しますが、は、 `CDynamicStringAccessor` データストアからアクセスされるすべてのデータを文字列データとして取得するようにプロバイダーに要求します。 このプロセスは、データストアのコンテンツの表示や印刷など、データストアの値の計算を必要としない単純なタスクに特に便利です。
 
-使用`CDynamicStringAccessor`列情報を取得するメソッド。 実行時に動的にアクセサーを作成するのにには、この列の情報を使用します。 列の情報は、このクラスによって作成および管理のバッファーに格納されます。 使用してバッファーからデータを取得[cdynamicstringaccessor::getstring](../../data/oledb/cdynamicstringaccessor-getstring.md)を使用して、バッファーに格納または[cdynamicstringaccessor::setstring](../../data/oledb/cdynamicstringaccessor-setstring.md)します。
+`CDynamicStringAccessor`列情報を取得するには、メソッドを使用します。 この列情報は、実行時にアクセサーを動的に作成するために使用します。 列情報は、このクラスによって作成および管理されるバッファーに格納されます。 [CDynamicStringAccessor:: GetString](./cdynamicstringaccessor-class.md#getstring)を使用してバッファーからデータを取得するか、 [CDynamicStringAccessor:: setstring](./cdynamicstringaccessor-class.md#setstring)を使用してバッファーに格納します。
 
 ## <a name="example"></a>例
 
@@ -148,13 +148,13 @@ int main(int argc, char* argv[] )
 }
 ```
 
-## <a name="using-cdynamicparameteraccessor"></a>Using CDynamicParameterAccessor
+## <a name="using-cdynamicparameteraccessor"></a>CDynamicParameterAccessor の使用
 
-[CDynamicParameterAccessor](../../data/oledb/cdynamicparameteraccessor-class.md)のような[CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md)ことを除いて、`CDynamicParameterAccessor`呼び出すことによって設定されるパラメーター情報を取得、 [ICommandWithParameters](/sql/relational-databases/native-client-ole-db-interfaces/icommandwithparameters)インターフェイス。 コンシューマーがこのクラスを使用するには、プロバイダーで `ICommandWithParameters` がサポートされている必要があります。
+[CDynamicParameterAccessor](../../data/oledb/cdynamicparameteraccessor-class.md) は [CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md)に似ていますが、 `CDynamicParameterAccessor` [ICommandWithParameters](/sql/relational-databases/native-client-ole-db-interfaces/icommandwithparameters) インターフェイスを呼び出すことによって設定されるパラメーター情報を取得する点が異なります。 コンシューマーがこのクラスを使用するには、プロバイダーで `ICommandWithParameters` がサポートされている必要があります。
 
-パラメーター情報は、このクラスによって作成および管理されるバッファーに格納されます。 使用して、バッファーからパラメーター データを取得[cdynamicparameteraccessor::getparam](../../data/oledb/cdynamicparameteraccessor-getparam.md)と[Cdynamicparameteraccessor:getparamtype](../../data/oledb/cdynamicparameteraccessor-getparamtype.md)します。
+パラメーター情報は、このクラスによって作成および管理されるバッファーに格納されます。 [CDynamicParameterAccessor:: GetParam](./cdynamicparameteraccessor-class.md#getparam)と[CDynamicParameterAccessor:: getparamtype](./cdynamicparameteraccessor-class.md#getparamtype)を使用して、バッファーからパラメーターデータを取得します。
 
-このクラスを使用して、SQL Server のストアド プロシージャを実行し、出力パラメーターの値を取得する方法を示す例では、次を参照してください、 [DynamicConsumer](https://github.com/Microsoft/VCSamples/tree/master/VC2008Samples/ATL/OLEDB/Consumer/DynamicConsumer)サンプル コード、 [Microsoft VCSamples](https://github.com/Microsoft/VCSamples) 。GitHub のリポジトリ。
+このクラスを使用して SQL Server のストアドプロシージャを実行し、出力パラメーターの値を取得する方法を示す例については、GitHub の[Microsoft VCSamples](https://github.com/Microsoft/VCSamples)リポジトリにある[dynamicconsumer](https://github.com/Microsoft/VCSamples/tree/master/VC2008Samples/ATL/OLEDB/Consumer/DynamicConsumer)サンプルコードを参照してください。
 
 ## <a name="see-also"></a>関連項目
 

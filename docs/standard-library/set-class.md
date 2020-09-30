@@ -89,12 +89,12 @@ helpviewer_keywords:
 - std::set [C++], upper_bound
 - std::set [C++], value_comp
 ms.assetid: 8991f9aa-5509-4440-adc1-371512d32018
-ms.openlocfilehash: cb19b0d9987ef4ff4624602426930c9f9920dbcd
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: 2898c06d998653a25ce771c80086ef8aef27a60b
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90040016"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91509946"
 ---
 # <a name="set-class"></a>set クラス
 
@@ -154,7 +154,7 @@ set クラスに用意されている反復子は双方向反復子ですが、�
 
 ### <a name="typedefs"></a>Typedefs
 
-|Name|説明|
+|名前|説明|
 |-|-|
 |[allocator_type](#allocator_type)|set オブジェクトの `allocator` クラスを表す型。|
 |[const_iterator](#const_iterator)|セット内の要素を読み取ることができる双方向反復子を提供する型 **`const`** 。|
@@ -172,9 +172,9 @@ set クラスに用意されている反復子は双方向反復子ですが、�
 |[value_compare](#value_compare)|2 つの要素を比較して、set 内の要素の相対順序を決定できる関数オブジェクトを提供する型。|
 |[value_type](#value_type)|この型は、値としてキャパシティ内で set の要素として格納されるオブジェクトを表します。|
 
-### <a name="functions"></a>機能
+### <a name="functions"></a>関数
 
-|Name|説明|
+|名前|説明|
 |-|-|
 |[初め](#begin)|`set` 内の最初の要素を指す反復子を返します。|
 |[cbegin](#cbegin)|`set` 内の最初の要素を指す定数反復子を返します。|
@@ -205,7 +205,7 @@ set クラスに用意されている反復子は双方向反復子ですが、�
 
 ### <a name="operators"></a>オペレーター
 
-|Name|説明|
+|名前|説明|
 |-|-|
 |[operator =](#op_eq)|別の set のコピーで set の要素を置き換えます。|
 
@@ -490,7 +490,7 @@ template<class K> bool contains(const K& key) const;
 
 `contains()` は C++ 20 で新しく追加されたものです。 これを使用するには、 [/std: c + + latest](../build/reference/std-specify-language-standard-version.md) コンパイラオプションを指定します。
 
-`template<class K> bool contains(const K& key) const` が透過的な場合にのみ、オーバーロードの解決に参加 `key_compare` します。 詳細については、「 [連想コンテナーの異種ルックアップ](https://docs.microsoft.com/cpp/standard-library/stl-containers#heterogeneous-lookup-in-associative-containers-c14) 」を参照してください。
+`template<class K> bool contains(const K& key) const` が透過的な場合にのみ、オーバーロードの解決に参加 `key_compare` します。 詳細については、「 [連想コンテナーの異種ルックアップ](./stl-containers.md#heterogeneous-lookup-in-associative-containers-c14) 」を参照してください。
 
 ### <a name="example"></a>例
 

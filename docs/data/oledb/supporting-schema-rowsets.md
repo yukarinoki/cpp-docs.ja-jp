@@ -7,28 +7,28 @@ helpviewer_keywords:
 - OLE DB providers, schema rowsets
 - OLE DB, schema rowsets
 ms.assetid: 71c5e14b-6e33-4502-a2d9-a1dc6d6e9ba0
-ms.openlocfilehash: 1ad1a91e8a79238eee773d92a756b0238e8901d5
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
-ms.translationtype: HT
+ms.openlocfilehash: f87e6cc0a307eed4f00f1fb90ac16a840a1759af
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65707498"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91509458"
 ---
 # <a name="supporting-schema-rowsets"></a>スキーマ行セットのサポート
 
-スキーマ行セットにより、コンシューマーはデータ ストアに関する情報を、その基になる構造体 (スキーマ) を知らなくても取得することができます。 たとえば、データ ストアにはユーザー定義の階層に整理されたテーブルがある可能性があるため、スキーマについて知るには、それを読み込むこと以外に方法がありません (別の例としては、Visual C++ ウィザードはスキーマ行セットを使用して、コンシューマーのアクセサーを生成します)。コンシューマーがこれを行えるようにするには、プロバイダーのセッション オブジェクトで [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686(v=vs.85)) インターフェイスにメソッドを公開します。 Visual C++ アプリケーションで、[IDBSchemaRowsetImpl](../../data/oledb/idbschemarowsetimpl-class.md) クラスを使用して `IDBSchemaRowset` を実装します。
+スキーマ行セットにより、コンシューマーはデータ ストアに関する情報を、その基になる構造体 (スキーマ) を知らなくても取得することができます。 たとえば、データ ストアにはユーザー定義の階層に整理されたテーブルがある可能性があるため、スキーマについて知るには、それを読み込むこと以外に方法がありません (別の例として、Visual C++ ウィザードでは、スキーマ行セットを使用してコンシューマーのアクセサーが生成されます)。コンシューマーがこれを実行できるようにするために、プロバイダーの session オブジェクトは [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686(v=vs.85)) インターフェイスでメソッドを公開します。 Visual C++ アプリケーションで、[IDBSchemaRowsetImpl](../../data/oledb/idbschemarowsetimpl-class.md) クラスを使用して `IDBSchemaRowset` を実装します。
 
 `IDBSchemaRowsetImpl` は、次のメソッドをサポートしています。
 
-- [CheckRestrictions](../../data/oledb/idbschemarowsetimpl-checkrestrictions.md) は、スキーマ行セットに対して制限の妥当性をチェックします。
+- [CheckRestrictions](./idbschemarowsetimpl-class.md#checkrestrictions) は、スキーマ行セットに対して制限の妥当性をチェックします。
 
-- [CreateSchemaRowset](../../data/oledb/idbschemarowsetimpl-createschemarowset.md) は、テンプレート パラメーターで指定されたオブジェクトの COM オブジェクトの作成関数を実装します。
+- [CreateSchemaRowset](./idbschemarowsetimpl-class.md#createschemarowset) は、テンプレート パラメーターで指定されたオブジェクトの COM オブジェクトの作成関数を実装します。
 
-- [SetRestrictions](../../data/oledb/idbschemarowsetimpl-setrestrictions.md) は、特定のスキーマ行セットでサポートする制限を指定します。
+- [SetRestrictions](./idbschemarowsetimpl-class.md#setrestrictions) は、特定のスキーマ行セットでサポートする制限を指定します。
 
-- [Idbschemarowset::getrowset](../../data/oledb/idbschemarowsetimpl-getrowset.md) は、スキーマ行セットを返します (インターフェイスから継承)。
+- [Idbschemarowset::getrowset](./idbschemarowsetimpl-class.md#getrowset) は、スキーマ行セットを返します (インターフェイスから継承)。
 
-- [GetSchemas](../../data/oledb/idbschemarowsetimpl-getschemas.md) は、`IDBSchemaRowsetImpl::GetRowset` がアクセスできるスキーマ行セットの一覧を返します (インターフェイスから継承)。
+- [GetSchemas](./idbschemarowsetimpl-class.md#getschemas) は、`IDBSchemaRowsetImpl::GetRowset` がアクセスできるスキーマ行セットの一覧を返します (インターフェイスから継承)。
 
 ## <a name="atl-ole-db-provider-wizard-support"></a>ATL OLE DB プロバイダー ウィザードのサポート
 
@@ -94,7 +94,7 @@ class CUpdateSessionTRSchemaRowset :
                     ULONG cRestrictions, const VARIANT* rgRestrictions)
 ```
 
-`CUpdateSession` は `IDBSchemaRowsetImpl` から継承されるため、制限を処理するすべてのメソッドが含まれています。 `CSchemaRowsetImpl` を使用して、(上記のスキーマ マップにある) 3 つの子クラス `CUpdateSessionTRSchemaRowset`、`CUpdateSessionColSchemaRowset`、および `CUpdateSessionPTSchemaRowset` を宣言します。 これらの子クラスのそれぞれが、各自の一連の制限 (検索条件) を処理する `Execute` メソッドを持っています。 各 `Execute` メソッドは、パラメーター *cRestrictions* と *rgRestrictions* の値を比較します。 これらのパラメーターの説明については、[SetRestrictions](../../data/oledb/idbschemarowsetimpl-setrestrictions.md) を参照してください。
+`CUpdateSession` は `IDBSchemaRowsetImpl` から継承されるため、制限を処理するすべてのメソッドが含まれています。 `CSchemaRowsetImpl` を使用して、(上記のスキーマ マップにある) 3 つの子クラス `CUpdateSessionTRSchemaRowset`、`CUpdateSessionColSchemaRowset`、および `CUpdateSessionPTSchemaRowset` を宣言します。 これらの子クラスのそれぞれが、各自の一連の制限 (検索条件) を処理する `Execute` メソッドを持っています。 各 `Execute` メソッドは、パラメーター *cRestrictions* と *rgRestrictions* の値を比較します。 これらのパラメーターの説明については、[SetRestrictions](./idbschemarowsetimpl-class.md#setrestrictions) を参照してください。
 
 特定のスキーマ行セットに対応する制限については、Windows SDK の **OLE DB プログラマーズ リファレンス**の「[IDBSchemaRowset](/previous-versions/windows/desktop/ms713686(v=vs.85))」にあるスキーマ行セット GUID の表を参照してください。
 
@@ -115,7 +115,7 @@ class CUpdateSessionTRSchemaRowset :
 
 ### <a name="example"></a>例
 
-このコードは、[UpdatePV](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Provider/UPDATEPV) サンプルから引用しています。 `UpdatePv` は、次の 3 つの必須スキーマ行セットをサポートしています。DBSCHEMA_TABLES、DBSCHEMA_COLUMNS、および DBSCHEMA_PROVIDER_TYPES。 プロバイダーにスキーマのサポートを実装する例として、このトピックでは DBSCHEMA_TABLE 行セットの実装方法を示します。
+このコードは、[UpdatePV](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Provider/UPDATEPV) サンプルから引用しています。 `UpdatePv` では、DBSCHEMA_TABLES、DBSCHEMA_COLUMNS、および DBSCHEMA_PROVIDER_TYPES の3つの必要なスキーマ行セットをサポートしています。 プロバイダーにスキーマのサポートを実装する例として、このトピックでは DBSCHEMA_TABLE 行セットの実装方法を示します。
 
 > [!NOTE]
 > サンプル コードは、ここに記載されているものと異なる場合があります。サンプル コードの方を最新バージョンと見なしてください。
@@ -224,7 +224,7 @@ wcspy_s(trData.m_szDesc, OLESTR("The Directory Table"), 19);
 wcsncpy_s(trData.m_szTable, T2OLE(szFile), _TRUNCATE());
 ```
 
-`UpdatePV` は、次の 3 列のみを設定します。TABLE_NAME、TABLE_TYPE、および DESCRIPTION。 情報を返す列をメモします。`GetDBStatus` を実装するときに、この情報が必要になるためです。
+`UpdatePV` TABLE_NAME、TABLE_TYPE、および説明の3つの列のみを設定します。 情報を返す列をメモします。`GetDBStatus` を実装するときに、この情報が必要になるためです。
 
 ```cpp
     _ATLTRY
