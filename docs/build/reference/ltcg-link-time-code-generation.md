@@ -14,14 +14,14 @@ helpviewer_keywords:
 - -LTCG linker option
 - LTCG linker option
 ms.assetid: 788c6f52-fdb8-40c2-90af-4026ea2cf2e2
-ms.openlocfilehash: c954794d6d0fd087eee74ebb7e86d77b89a9a8fc
-ms.sourcegitcommit: 80c8a512b361bd84e38958beb1a1bf6db7434021
+ms.openlocfilehash: 6c0009e5236f33119ed411dc81ce6a4385f21a2a
+ms.sourcegitcommit: f7fbdc39d73e1fb3793c396fccf7a1602af7248b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86180800"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91662269"
 ---
-# <a name="ltcg-link-time-code-generation"></a>`/LTCG`(リンク時のコード生成)
+# <a name="ltcg-link-time-code-generation"></a>`/LTCG` (リンク時のコード生成)
 
 を使用すると、 **`/LTCG`** プログラム全体の最適化を実行したり、ガイド付き最適化のプロファイル (pgo) インストルメンテーションを作成したり、トレーニングを実行したり、ガイド付き最適化ビルドを作成したりすることができます。
 
@@ -38,20 +38,20 @@ ms.locfileid: "86180800"
 **`INCREMENTAL`**<br/>
 Optionalリンカーが、プロジェクト全体ではなく、編集の影響を受けるファイルに対して、プログラム全体の最適化またはリンク時のコード生成 (LTCG) のみを適用するように指定します。 を指定した場合、既定では、このフラグは設定されません **`/LTCG`** 。また、プロジェクト全体がプログラム全体の最適化を使用してリンクされます。
 
-**`NOSTATUS`**&#124;**`STATUS`**<br/>
+**`NOSTATUS`** &#124; **`STATUS`**<br/>
 (省略可能) リンクの何パーセントが完了したかを示す進行状況のインジケーターをリンカーによって表示するかどうかを指定します。 既定では、この状態情報は表示されません。
 
 **`OFF`**<br/>
 (省略可能) リンク時のコード生成を無効にします。 この動作は、 **`/LTCG`** コマンドラインでが指定されていない場合と同じです。
 
 **`PGINSTRUMENT`**<br/>
-(省略可能) このオプションは、Visual Studio 2015 から非推奨とされます。 代わりに、、 **`/LTCG`** 、 `[/GENPROFILE` または] (genprofile-fastgenprofile-generate-profiling-instrumented-build.md) を使用して、 `/FASTGENPROFILE` ガイド付き最適化のプロファイル用にインストルメント化されたビルドを生成します。 インストルメント化された実行から収集されるデータは、最適化されたイメージの作成に使用されます。 詳細については、「[ガイド付き最適化のプロファイル](../profile-guided-optimizations.md)」を参照してください。 このオプションの短い形式は **`/LTCG:PGI`** です。
+(省略可能) このオプションは、Visual Studio 2015 から非推奨とされます。 代わりに、 **`/LTCG`** および[ `/GENPROFILE` または `/FASTGENPROFILE` ](genprofile-fastgenprofile-generate-profiling-instrumented-build.md)を使用して、ガイド付き最適化のプロファイル用にインストルメント化されたビルドを生成します。 インストルメント化された実行から収集されるデータは、最適化されたイメージの作成に使用されます。 詳細については、「[ガイド付き最適化のプロファイル](../profile-guided-optimizations.md)」を参照してください。 このオプションの短い形式は **`/LTCG:PGI`** です。
 
 **`PGOPTIMIZE`**<br/>
-(省略可能) このオプションは、Visual Studio 2015 から非推奨とされます。 代わりに、およびを使用し **`/LTCG`** て、 [`/USEPROFILE`](useprofile.md) 最適化されたイメージを作成します。 詳細については、「[ガイド付き最適化のプロファイル](../profile-guided-optimizations.md)」を参照してください。 このオプションの短い形式は **`/LTCG:PGO`** です。
+(省略可能) このオプションは、Visual Studio 2015 から非推奨とされます。 代わりに、およびを使用し **`/LTCG`** て、  [`/USEPROFILE`](useprofile.md) 最適化されたイメージを作成します。 詳細については、「[ガイド付き最適化のプロファイル](../profile-guided-optimizations.md)」を参照してください。 このオプションの短い形式は **`/LTCG:PGO`** です。
 
 **`PGUPDATE`**<br/>
-(省略可能) このオプションは、Visual Studio 2015 から非推奨とされます。 代わりに、およびを使用し **`/LTCG`** て、 **`/USEPROFILE`** 最適化されたイメージをリビルドします。 詳細については、「[ガイド付き最適化のプロファイル](../profile-guided-optimizations.md)」を参照してください。 このオプションの短い形式は **`/LTCG:PGU`** です。
+(省略可能) このオプションは、Visual Studio 2015 から非推奨とされます。 代わりに、およびを使用し **`/LTCG`** て、  **`/USEPROFILE`** 最適化されたイメージをリビルドします。 詳細については、「[ガイド付き最適化のプロファイル](../profile-guided-optimizations.md)」を参照してください。 このオプションの短い形式は **`/LTCG:PGU`** です。
 
 ## <a name="remarks"></a>解説
 
@@ -91,7 +91,7 @@ Optionalリンカーが、プロジェクト全体ではなく、編集の影響
 
 リンカーは、または MSIL モジュールを使用してコンパイルされたモジュールが渡されると、リンク時のコード生成を呼び出し **`/GL`** ます (「 [ `.netmodule` リンカー入力とし](netmodule-files-as-linker-input.md)てのファイル」を参照してください)。 **`/LTCG`** または MSIL モジュールをリンカーに渡すときに明示的にを指定しない場合 **`/GL`** 、リンカーは最終的にこの状況を検出し、を使用してリンクを再起動し **`/LTCG`** ます。 **`/LTCG`** **`/GL`** と MSIL モジュールをリンカーに渡して、最速のビルドパフォーマンスを実現するには、明示的にを指定します。
 
-さらに高速なパフォーマンスを実現するには、を使用 **`/LTCG:INCREMENTAL`** します。 このオプションは、プロジェクト全体ではなく、ソースファイルの変更によって影響を受けるファイルのみを再最適化するようにリンカーに指示します。 このオプションを使用すると、必要なリンク時間を大幅に短縮できます。 このオプションは、[インクリメンタルリンク](incremental-link-incrementally.md)と同じオプションではありません。
+さらに高速なパフォーマンスを実現するには、を使用 **`/LTCG:INCREMENTAL`** します。 このオプションは、プロジェクト全体ではなく、ソースファイルの変更によって影響を受けるファイルのみを再最適化するようにリンカーに指示します。 このオプションを使用すると、必要なリンク時間を大幅に短縮できます。 このオプションは、 [インクリメンタルリンク](incremental-link-incrementally.md)と同じオプションではありません。
 
 **`/LTCG`** は、では使用 [`/INCREMENTAL`](incremental-link-incrementally.md) できません。
 
@@ -129,7 +129,7 @@ Optionalリンカーが、プロジェクト全体ではなく、編集の影響
 > [!NOTE]
 > とを使用する場合 **`/LTCG`** `mainCRTStartup` 、アプリケーションは、グローバルオブジェクトが初期化される前に実行されるユーザーコードに関連する、予測できない動作を持つことができます。 この問題に対処するには、再定義しない `mainCRTStartup` 、を使用してを含むファイルをコンパイルしない、 `mainCRTStartup` **`/LTCG`** グローバル変数とオブジェクトを静的に初期化する、の3つの方法があります。
 
-### <a name="ltcg-and-msil-modules"></a>`/LTCG`および MSIL モジュール
+### <a name="ltcg-and-msil-modules"></a>`/LTCG` および MSIL モジュール
 
 およびを使用してコンパイルされたモジュール [`/GL`](gl-whole-program-optimization.md) [`/clr`](clr-common-language-runtime-compilation.md) は、が指定されている場合にリンカーへの入力として使用でき **`/LTCG`** ます。
 
