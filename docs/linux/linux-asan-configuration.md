@@ -1,13 +1,13 @@
 ---
 title: Linux プロジェクトを構成してアドレス サニタイザーを使用する
 description: Visual Studio で C++ の Linux プロジェクトを構成して、アドレス サニタイザーを使用する方法について説明します。
-ms.date: 06/07/2019
-ms.openlocfilehash: 0e862e09d8178ce35fe26f2be138d7f6843b5ef1
-ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
+ms.date: 09/25/2020
+ms.openlocfilehash: 7e68d0af4d2ab27820f894bafc58bed444f141d9
+ms.sourcegitcommit: 94893973211d0b254c8bcdcf0779997dcc136b0c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90686666"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91414200"
 ---
 # <a name="configure-linux-projects-to-use-address-sanitizer"></a>Linux プロジェクトを構成してアドレス サニタイザーを使用する
 
@@ -33,7 +33,7 @@ ASan の (破損したメモリが割り当てられているまたは割り当�
 ## <a name="enable-asan-for-msbuild-based-linux-projects"></a>MSBuild ベースの Linux プロジェクトで ASan を有効にする
 
 > [!NOTE]
-> Visual Studio 2019 バージョン 16.4 以降では、Linux プロジェクト用の AddressSanitizer は **[構成プロパティ]**  >  **[C/C++]**  >  **[Address Sanitizer を有効にする]** を使って有効にします。
+> Visual Studio 2019 バージョン 16.4 以降では、Linux プロジェクト用の AddressSanitizer は **[プロジェクトのプロパティ]**  >  **[構成プロパティ]**  >  **[C/C++]**  >  **[Address Sanitizer を有効にする]** を使って有効にします。
 
 ASan を MSBuild ベースの Linux プロジェクトで有効にするには、そのプロジェクトを**ソリューション エクスプローラー**で右クリックし、 **[プロパティ]** を選択します。 次に **[構成プロパティ]**  >  **[C/C++]**  >  **[サニタイザー]** の順に移動します。 ASan はコンパイラとリンカー フラグから有効にし、プロジェクトを再コンパイルして動作するようにします。
 
@@ -51,7 +51,7 @@ CMake で ASan を有効にするには、**ソリューション エクスプ�
 
 ![Linux デバッグが構成オプションの 1 つとして一覧表示されている左側のペインのスクリーンショット。](media/linux-debug-configuration.png)
 
-ASan のオプションは **[全般]** の下にあります。 ASan ランタイム フラグは、セミコロンで区切って "フラグ=値" の形式で入力します。
+ASan のオプションは **[全般]** の下にあります。 ASan ランタイム フラグは、スペースで区切った "フラグ=値" の形式で入力します。 UI にはセミコロンを使用する誤った提案が表示されます。 スペースまたはコロンを使用してフラグを区切ってください。
 
 ![いくつかの Address Sanitizer 実行時フラグが表示されている [Address Sanitizer を有効にする] オプションのスクリーンショット。](media/cmake-settings-asan-options.png)
 

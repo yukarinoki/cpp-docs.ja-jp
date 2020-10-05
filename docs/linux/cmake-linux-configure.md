@@ -2,12 +2,12 @@
 title: Visual Studio で Linux CMake プロジェクトを構成する
 description: Visual Studio で Linux CMake の設定を構成する方法
 ms.date: 08/08/2020
-ms.openlocfilehash: 4bc6d5d82a0f1cd21e8f989eb92b431d38b2bf5c
-ms.sourcegitcommit: 111ee74772d7f308d3414b5d42cbc1e90287f081
+ms.openlocfilehash: 32c851791402b59c941ae088fa637d3d9953dd1b
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88659345"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91504725"
 ---
 # <a name="configure-a-linux-cmake-project-in-visual-studio"></a>Visual Studio で Linux CMake プロジェクトを構成する
 
@@ -53,6 +53,7 @@ Visual Studio 2017 (および Visual Studio 2019 バージョン 16.0) での Li
       "inheritEnvironments": [ "linux-x64" ]
 }
 ```
+
 ::: moniker-end
 
 ::: moniker range="vs-2019"
@@ -97,12 +98,13 @@ Visual Studio 2019 バージョン 16.6 以降では、Ninja が、リモート 
 これらの設定の詳細については、[CMakeSettings.json リファレンス](../build/cmakesettings-reference.md)に関するページを参照してください。
 
 ビルドを実行する場合:
+
 - リモート システムを対象にしている場合、Visual Studio では、リモート ターゲットに対する既定として、 **[ツール]** > **[オプション]** > **[クロス プラットフォーム]** > **[接続マネージャー]** の下にある最初のリモート システムが選択されます。
 - リモート接続が見つからない場合、リモート接続を作成するように求められます。 詳細については、[リモートの Linux コンピューターへの接続](connect-to-your-remote-linux-computer.md)に関するページを参照してください。
 
 ## <a name="choose-a-linux-target"></a>Linux ターゲットを選ぶ
 
-CMake プロジェクト フォルダーを開くと、Visual Studio によって *CMakeLists.txt* ファイルが解析され、**x86-Debug** の Windows ターゲットが指定されます。 リモートの Linux を対象とするには、プロジェクト設定を **Linux-Debug** または **Linux-Release** に変更します。
+CMake プロジェクト フォルダーを開くと、Visual Studio によって *CMakeLists.txt* ファイルが解析され、**x86-Debug** の Windows ターゲットが指定されます。 リモート Linux システムをターゲットにするには、Linux コンパイラに基づいてプロジェクト設定を変更します。 たとえば、Linux で GCC を使用し、デバッグ情報を使用してコンパイルする場合は、次を選択します:**Linux-GCC-Debug** または **Linux-GCC-Release**。
 
 リモートの Linux を対象に指定した場合、ソースはリモート システムにコピーされます。
 
@@ -117,7 +119,15 @@ CMake プロジェクト フォルダーを開くと、Visual Studio によっ�
 
 Linux 用 Windows サブシステム (WSL) が対象の場合は、リモート接続を追加する必要はありません。
 
-WSL を対象にするには、メイン ツールバーの構成ドロップダウンの **[構成の管理]** を選択します。 次に、 **[構成の追加]** ボタンを押し、GCC を使用する場合は **[WSL-Debug]** または **[WSL-Release]** を選択します。 Clang/LLVM ツールセットを使用する場合は [Clang バリアント] を使用します。
+WSL を対象にするには、メイン ツールバーの構成ドロップダウンの **[構成の管理]** を選択します。
+
+![CMake の [構成の管理]](../build/media/vs2019-cmake-manage-configurations.png "CMake 構成ドロップダウン")
+
+**[CMakeSettings.json]** ウィンドウが表示されます。
+
+![構成の追加](media/cmake-linux-configurations.png "CMake の設定に構成を追加する")
+
+**[構成の追加]** (緑の '+' ボタン) を押した後、GCC を使用する場合は **Linux-GCC-Debug** または **Linux-GCC-Release** を選択します。 Clang/LLVM ツールセットを使用する場合は [Clang バリアント] を使用します。  **[選択]** を押した後、**Ctrl + S** キーを押して構成を保存します。
 
 **Visual Studio 2019 バージョン 16.1** WSL が対象の場合、Visual Studio では、ソース ファイルをコピーし、ビルド ツリーの 2 つの同期コピーを保持する必要はありません。これは、Linux 上のコンパイラが、マウントされた Windows ファイル システムのソース ファイルに直接アクセスできるためです。
 ::: moniker-end
