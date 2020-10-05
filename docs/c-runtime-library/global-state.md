@@ -2,21 +2,21 @@
 title: CRT でのグローバル状態
 description: Microsoft Universal C ランタイムで共有グローバル状態を処理する方法について説明します。
 ms.topic: conceptual
-ms.date: 04/02/2020
+ms.date: 10/02/2020
 helpviewer_keywords:
 - CRT global state
-ms.openlocfilehash: 60532fbdb905bd8ea78b4ce705ec8ecc3e374d9d
-ms.sourcegitcommit: 9451db8480992017c46f9d2df23fb17b503bbe74
+ms.openlocfilehash: 6c8b97e2bd6fa71891aedacb1fbfec2bbe382d84
+ms.sourcegitcommit: faedcc3be78b29c78e5d51e3c7c7c2f448c745bf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91589732"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91717516"
 ---
 # <a name="global-state-in-the-crt"></a>CRT でのグローバル状態
 
 ユニバーサル C ランタイム (UCRT) の一部の関数は、グローバル状態を使用します。 たとえば、は `setlocale()` プログラム全体のロケールを設定します。これは、桁区切り記号、テキストコードページなどに影響します。
 
-UCRT のグローバル状態は、アプリケーションと OS 間で共有されません。 たとえば、アプリケーションがを呼び出す場合、 `setlocale()` C ランタイムを使用する OS コンポーネントのロケールには影響しません。その逆も同様です。
+UCRT のグローバル状態は、アプリケーションと OS 間で共有されません。 たとえば、アプリケーションがを呼び出す場合、 `setlocale()` C ランタイムを使用する OS コンポーネントのロケールや、その逆の方法には影響しません。
 
 ## <a name="os-specific-versions-of-crt-functions"></a>CRT 関数の OS 固有バージョン
 
@@ -31,8 +31,8 @@ UCRT では、グローバル状態と対話する関数に "ツイン" 関数�
 
 コンポーネントの CRT 状態をアプリの CRT 状態から分離するには、次の2つの方法があります。
 
-- コンパイラオプション/MT (release) または MTd (デバッグ) を使用して、コンポーネントを静的にリンクします。 詳細については、「 [/md、/mt、/ld](../build/reference/md-mt-ld-use-run-time-library.md)」を参照してください。 静的リンクによってバイナリサイズが大幅に増加することに注意してください。
-- Windows 10 20H2 以降では、crt に動的にリンクすることで CRT 状態の分離を取得しますが、OS モードのエクスポート ( _o_で始まる関数) を呼び出します。 OS モードのエクスポートを呼び出すには、前と同じように静的にリンクしますが、リンカーオプション (release) または (debug) を使用して静的な UCRT を無視し `/NODEFAULTLIB:libucrt.lib` `/NODEFAULTLIB:libucrtd.lib` ます。詳細については、「 [/NODEFAULTLIB (ライブラリを無視する)](../build/reference/nodefaultlib-ignore-libraries.md) 」を参照してください。 とを `ucrt.osmode.lib` リンカー入力に追加します。
+- コンパイラオプション `/MT` (release) または (デバッグ) を使用して、コンポーネントを静的にリンク `/MTd` します。 詳細については、「 [/md、/mt、/ld](../build/reference/md-mt-ld-use-run-time-library.md)」を参照してください。 静的リンクを使用すると、バイナリサイズを大幅に増やすことができます。
+- Windows 10 バージョン2004以降では、CRT に動的にリンクしますが、OS モードのエクスポート ( _o_で始まる関数) を呼び出します。 OS モードのエクスポートを呼び出すには、を前と同じように静的にリンクしますが、リンカーオプション `/NODEFAULTLIB:libucrt.lib` (release) または (debug) を使用して静的 UCRT を無視し `/NODEFAULTLIB:libucrtd.lib` ます。 とを `ucrt.osmode.lib` リンカー入力に追加します。 詳細については、「 [/NODEFAULTLIB (ライブラリを無視する)](../build/reference/nodefaultlib-ignore-libraries.md) 」を参照してください。
 
 > [!Note]
 > ソースコードでは、では `setlocale()` なく、を記述し `_o_setlocale()` ます。 に対してリンクすると `ucrt.osmode.lib` 、リンカーは自動的に OS 固有の関数のバージョンに置き換えます。 つまり、は `setlocale()` に置き換えられ `_o_setlocale()` ます。
@@ -55,6 +55,6 @@ UCRT では、グローバル状態と対話する関数に "ツイン" 関数�
 - [fmode](text-and-binary-mode-file-i-o.md)
 - [タイムゾーン情報](time-management.md)
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [C ランタイムライブラリリファレンス](c-run-time-library-reference.md)
