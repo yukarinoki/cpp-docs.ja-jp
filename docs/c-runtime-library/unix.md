@@ -11,12 +11,12 @@ helpviewer_keywords:
 - POSIX file names
 - UNIX, compatibility
 ms.assetid: 40792414-7a5b-415d-bfa8-2bfb1ebb3731
-ms.openlocfilehash: 07f5ffeec8696ded5880c45ed2ea1a5107bee48c
-ms.sourcegitcommit: 9451db8480992017c46f9d2df23fb17b503bbe74
+ms.openlocfilehash: 3975db2407943b329fa7eded0d72d63524428210
+ms.sourcegitcommit: 30792632548d1c71894f9fecbe2f554294b86020
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91590148"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91765220"
 ---
 # <a name="unix"></a>UNIX
 
@@ -29,7 +29,7 @@ ms.locfileid: "91590148"
 - UNIX で正しく動作するパスとファイル名を使用します。これは大文字と小文字が区別されます。 Win32 オペレーティングシステムのファイルアロケーションテーブル (FAT) ファイルシステムでは、大文字と小文字が区別されません。 NTFS ファイルシステムでは、ディレクトリの一覧の大文字と小文字が維持されますが、ファイルの検索やその他のシステム操作は無視されます。
 
 > [!NOTE]
->  このバージョンの Visual C++ では、UNIX と互換性のある情報は、関数の説明から削除されています。
+> このバージョンの Visual C++ では、UNIX と互換性のある情報は、関数の説明から削除されています。
 
 ## <a name="see-also"></a>関連項目
 

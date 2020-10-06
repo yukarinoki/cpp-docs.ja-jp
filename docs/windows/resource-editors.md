@@ -21,12 +21,12 @@ helpviewer_keywords:
 - properties [C++], resources
 - resources [C++], properties
 ms.assetid: e20a29ec-d6fb-4ead-98f3-431a0e23aaaf
-ms.openlocfilehash: 2552f9eea79aa0a3545d9746d85cacfbd9a3f25d
-ms.sourcegitcommit: d9c94dcabd94537e304be0261b3263c2071b437b
+ms.openlocfilehash: f854f3cc6e61e3022e784befc738bf28c1adeb6c
+ms.sourcegitcommit: 30792632548d1c71894f9fecbe2f554294b86020
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91353169"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91765246"
 ---
 # <a name="resource-editors-c"></a>リソースエディター (C++)
 
@@ -58,7 +58,7 @@ ms.locfileid: "91353169"
 
 一部のリソースの種類は、さまざまな方法でインポートして使用できる個別のファイルです。これには、ビットマップ、アイコン、カーソル、ツールバー、および html ファイルが含まれます。 このようなリソースには、ファイル名と [リソース識別子](../windows/symbols-resource-identifiers.md)があります。 他のダイアログ、メニュー、Win32 プロジェクトの文字列テーブルなどは、リソーススクリプト (.rc) ファイルまたはリソーステンプレート (.rct) ファイルの一部としてのみ存在します。
 
-また、プロジェクトを開かずに、プロジェクトの外部でリソースを編集することもできます。 詳細については、「 [方法: リソースを作成する](../windows/how-to-open-a-resource-script-file-outside-of-a-project-standalone.md)」を参照してください。
+また、プロジェクトを開かずに、プロジェクトの外部でリソースを編集することもできます。 詳細については、「 [方法: リソースを作成する](./how-to-create-a-resource-script-file.md)」を参照してください。
 
 > [!NOTE]
 > リソースのプロパティは、[ **プロパティ** ] ウィンドウを使用して変更できます。
@@ -124,7 +124,7 @@ Win32 リソースには、[ [リソースビュー](how-to-create-a-resource-sc
 
 ## <a name="requirements"></a>必要条件
 
-None
+なし
 
 ## <a name="see-also"></a>関連項目
 

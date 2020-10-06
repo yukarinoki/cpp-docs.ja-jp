@@ -1,5 +1,6 @@
 ---
 title: /RTC (ランタイム エラー チェック)
+description: Microsoft C/c + + コンパイラは、実行時エラーチェックのためのオプションです。
 ms.date: 07/31/2020
 f1_keywords:
 - /rtc
@@ -25,14 +26,14 @@ helpviewer_keywords:
 - RTCc compiler option
 - -RTCc compiler option [C++]
 ms.assetid: 9702c558-412c-4004-acd5-80761f589368
-ms.openlocfilehash: eefec0956bebe9f72324f3cbc61fccbc5e2e24d7
-ms.sourcegitcommit: f2a135d69a2a8ef1777da60c53d58fe06980c997
+ms.openlocfilehash: 888a81d0d5c21b0b85420a43d534c5b2742aa082
+ms.sourcegitcommit: 30792632548d1c71894f9fecbe2f554294b86020
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87520539"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91765237"
 ---
-# <a name="rtc-run-time-error-checks"></a>`/RTC`(ランタイムエラーチェック)
+# <a name="rtc-run-time-error-checks"></a>`/RTC` (ランタイムエラーチェック)
 
 [Runtime_checks](../../preprocessor/runtime-checks.md)プラグマと共に、実行時エラーチェック機能を有効または無効にするために使用します。
 
@@ -93,9 +94,9 @@ c = a;  // No run-time error with /RTCu
 
 変数が初期化されている場合は、実行時にによって報告されません **`/RTCu`** 。 たとえば、変数がポインターによってエイリアス化された後、コンパイラは変数を追跡せず、未初期化の使用をレポートします。 実際には、変数のアドレスを取得することによって変数を初期化できます。 **`&`** この場合、演算子は代入演算子のように動作します。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-実行時エラーチェックを使用すると、実行中のコードで問題を見つけることができます。詳細については、「[方法: ネイティブランタイムチェックを使用する](/visualstudio/debugger/how-to-use-native-run-time-checks)」を参照してください。
+実行時エラーチェックを使用すると、実行中のコードで問題を見つけることができます。詳細については、「 [方法: ネイティブランタイムチェックを使用する](/visualstudio/debugger/how-to-use-native-run-time-checks)」を参照してください。
 
 コマンドラインでは、複数のオプションを指定でき **`/RTC`** ます。 オプションの引数は、組み合わせて使用できます。たとえば、 **`/RTCcu`** はと同じ **`/RTCc /RTCu`** です。
 
@@ -109,9 +110,9 @@ c = a;  // No run-time error with /RTCu
 
 1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、[Visual Studio での C++ コンパイラとビルド プロパティの設定](../working-with-project-properties.md)に関するページを参照してください。
 
-1. [**構成プロパティ**] [  >  **C/c + +****コード生成**] プロパティページを選択します。  
+1. [**構成プロパティ**] [  >  **C/c + +**  >  **コード生成**] プロパティページを選択します。
 
-1. 次のプロパティの一方または両方を変更します:**基本ランタイムチェック**または**小さい型チェック**。
+1. 次のプロパティの一方または両方を変更します: **基本ランタイムチェック** または **小さい型チェック**。
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>このコンパイラ オプションをコードから設定するには
 
@@ -119,6 +120,6 @@ c = a;  // No run-time error with /RTCu
 
 ## <a name="see-also"></a>関連項目
 
-[MSVC コンパイラオプション](compiler-options.md)<br/>
+[MSVC コンパイラ オプション](compiler-options.md)<br/>
 [MSVC コンパイラ コマンド ラインの構文](compiler-command-line-syntax.md)<br/>
 [方法: ネイティブ ランタイム チェックを使用する](/visualstudio/debugger/how-to-use-native-run-time-checks)

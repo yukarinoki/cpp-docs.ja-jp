@@ -6,12 +6,12 @@ ms.topic: conceptual
 helpviewer_keywords:
 - parameters, validation
 ms.assetid: 019dd5f0-dc61-4d2e-b4e9-b66409ddf1f2
-ms.openlocfilehash: 60ded7fc5a4388b2c4bf87ab5a388caab5fc47c2
-ms.sourcegitcommit: 9451db8480992017c46f9d2df23fb17b503bbe74
+ms.openlocfilehash: 8378e4bf9bdfc950002c3ed8c3ef50c27a3c162d
+ms.sourcegitcommit: 30792632548d1c71894f9fecbe2f554294b86020
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91589823"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91765258"
 ---
 # <a name="parameter-validation"></a>パラメーターの検証
 
@@ -25,7 +25,7 @@ C ランタイムライブラリ関数は、無効なパラメーターを検出
 
 無効なパラメーターハンドラーディスパッチ関数は、現在割り当てられている無効なパラメーターハンドラーを呼び出します。 既定では、無効なパラメーターはを呼び出します `_invoke_watson` 。これにより、アプリケーションがミニダンプを閉じて生成します。 オペレーティングシステムで有効になっている場合、分析のためにクラッシュダンプを Microsoft に送信するかどうかを確認するダイアログボックスが表示されます。
 
-この動作を変更するには、関数 [_set_invalid_parameter_handler](../c-runtime-library/reference/set-invalid-parameter-handler-set-thread-local-invalid-parameter-handler.md) または [_set_thread_local_invalid_parameter_handler](../c-runtime-library/reference/set-invalid-parameter-handler-set-thread-local-invalid-parameter-handler.md) を使用して、無効なパラメーターハンドラーを独自の関数に設定します。 指定した関数がアプリケーションを終了しない場合、無効なパラメーターを取得した関数に制御が返されます。 CRT では、通常、これらの関数は関数の実行を停止し、 `errno` エラーコードに設定して、エラーコードを返します。 多くの場合、 `errno` 値と戻り値は両方とも、 `EINVAL` 無効なパラメーターを示します。 場合によっては、より具体的なエラー コードが返されます。たとえば、無効なファイル ポインターがパラメーターとして渡された場合の `EBADF` などです。 
+この動作を変更するには、関数 [_set_invalid_parameter_handler](../c-runtime-library/reference/set-invalid-parameter-handler-set-thread-local-invalid-parameter-handler.md) または [_set_thread_local_invalid_parameter_handler](../c-runtime-library/reference/set-invalid-parameter-handler-set-thread-local-invalid-parameter-handler.md) を使用して、無効なパラメーターハンドラーを独自の関数に設定します。 指定した関数がアプリケーションを終了しない場合、無効なパラメーターを取得した関数に制御が返されます。 CRT では、通常、これらの関数は関数の実行を停止し、 `errno` エラーコードに設定して、エラーコードを返します。 多くの場合、 `errno` 値と戻り値は両方とも、 `EINVAL` 無効なパラメーターを示します。 場合によっては、より具体的なエラー コードが返されます。たとえば、無効なファイル ポインターがパラメーターとして渡された場合の `EBADF` などです。
 
 `errno` の詳細については、[errno、_doserrno、_sys_errlist, and _sys_nerr](../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) をご覧ください。
 

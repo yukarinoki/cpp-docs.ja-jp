@@ -1,7 +1,7 @@
-﻿---
+---
 title: if-else ステートメント (C++)
-ms.date: 07/20/2019
-description: C++ の if-else ステートメントを使用して、条件分岐を制御します。
+description: If-else、if-else with initializer、および if-constexpr ステートメントを使用して条件分岐を制御します。
+ms.date: 10/02/2020
 f1_keywords:
 - else_cpp
 - if_cpp
@@ -9,62 +9,69 @@ helpviewer_keywords:
 - if keyword [C++]
 - else keyword [C++]
 ms.assetid: f8c45cde-6bce-42ae-81db-426b3dbd4caa
-ms.openlocfilehash: a9256e32c89890635c5473a85b4bb3b56bec26d4
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 20d828bf00a79687fe0a9fffbeb1a9cc56fae08c
+ms.sourcegitcommit: 30792632548d1c71894f9fecbe2f554294b86020
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87187570"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91765296"
 ---
 # <a name="if-else-statement-c"></a>if-else ステートメント (C++)
 
-条件分岐を制御します。 If*ブロック*内のステートメントは、 *if 式*が0以外の値 (または) に評価される場合にのみ実行され **`true`** ます。 *Expression*の値が0以外の場合は、*ステートメント*とブロック内の他のすべてのステートメントが実行され、else ブロック (存在する場合) がスキップされます。 *Expression*の値が0の場合は、if ブロックがスキップされ、else ブロック (存在する場合) が実行されます。 0以外に評価される式は、
+If-else ステートメントは、条件分岐を制御します。 が *`if-branch`* *`condition`* 0 以外の値 (または) に評価される場合にのみ、内のステートメントが実行され **`true`** ます。 の値が0以外の場合は、 *`condition`* 次のステートメントが実行され、省略可能なの後のステートメントがスキップされ **`else`** ます。 それ以外の場合、次のステートメントがスキップされ、がある場合は **`else`** 、に続くステートメントが実行され **`else`** ます。
+
+*`condition`* 0以外に評価される式は次のとおりです。
 
 - **`true`**
 - null 以外のポインター。
 - 0以外の算術値。
-- 算術、ブール型、またはポインター型への明確な変換を定義するクラス型。 (変換の詳細については、「[標準変換](../cpp/standard-conversions.md)」を参照してください)。
+- 算術型、ブール型、またはポインター型への明確な変換を定義するクラス型。 (変換の詳細については、「 [標準変換](../cpp/standard-conversions.md)」を参照してください)。
 
 ## <a name="syntax"></a>構文
 
-```cpp
-if ( expression )
-{
-   statement1;
-   ...
-}
-else  // optional
-{
-   statement2;
-   ...
-}
+*`init-statement`*:\
+&emsp; *`expression-statement`*\
+&emsp; *`simple-declaration`*
 
-// C++17 - Visual Studio 2017 version 15.3 and later:
-if ( initialization; expression )
-{
-   statement1;
-   ...
-}
-else  // optional
-{
-   statement2;
-   ...
-}
+*`condition`*:\
+&emsp; *`expression`*\
+&emsp;*`attribute-specifier-seq`* <sub>*opt*</sub> *`decl-specifier-seq`* 選択 *`declarator`**`brace-or-equal-initializer`*
 
-// C++17 - Visual Studio 2017 version 15.3 and later:
-if constexpr (expression)
-{
-    statement1;
-    ...
-}
-else  // optional
-{
-   statement2;
-   ...
-}
-```
+*`statement`*:\
+&emsp; *`expression-statement`*\
+&emsp; *`compound-statement`*
 
-## <a name="example"></a>例
+*`expression-statement`*:\
+&emsp;*`expression`*<sub>*選択*</sub>**`;`**
+
+*`compound-statement`*:\
+&emsp;**`{`** *`statement-seq`* <sub>*選択*</sub>**`}`**
+
+*`statement-seq`*:\
+&emsp; *`statement`*\
+&emsp; *`statement-seq`* *`statement`*
+
+*`if-branch`*:\
+&emsp; *`statement`*
+
+*`else-branch`*:\
+&emsp; *`statement`*
+
+*`selection-statement`*:\
+&emsp;**`if`** **`constexpr`** <sub>*opt*</sub><sup>17</sup> **`(`** *`init-statement`* <sub>*opt*</sub><sup>17</sup> 17 *`condition`* **`)`***`if-branch`*\
+&emsp;**`if`** **`constexpr`** <sub>*opt*</sub><sup>17</sup> **`(`** *`init-statement`* <sub>*opt*</sub><sup>17</sup> 17 *`condition`* **`)`** *`if-branch`* **`else`***`else-branch`*
+
+<sup>17</sup> この省略可能な要素は、c++ 17 以降で使用できます。
+
+## <a name="if-else-statements"></a>if-else ステートメント
+
+ステートメントのすべての形式で、 **`if`** *`condition`* 構造体以外の任意の値を持つことができるすべての副作用が評価されます。 **`if`** が実行されたか、、、 *`if-branch`* *`else-branch`* またはが含まれていない限り、ステートメントからプログラムの次のステートメントに制御が渡され [`break`](../cpp/break-statement-cpp.md) [`continue`](../cpp/continue-statement-cpp.md) [`goto`](../cpp/goto-statement-cpp.md) ます。
+
+**`else`** ステートメントの句は、 `if...else` **`if`** 同じスコープ内で、対応するステートメントが含まれていない最も近い前のステートメントに関連付けられてい **`else`** ます。
+
+### <a name="example"></a>例
+
+このサンプルコードでは **`if`** 、次のいずれかを使用し、使用しないステートメントをいくつか示し **`else`** ます。
 
 ```cpp
 // if_else_statement.cpp
@@ -111,11 +118,11 @@ int main()
 }
 ```
 
-## <a name="if-statement-with-an-initializer"></a><a name="if_with_init"></a>if ステートメントと初期化子
+## <a name="if-statement-with-an-initializer"></a><a name="if_with_init"></a> if ステートメントと初期化子
 
-**Visual Studio 2017 バージョン15.3 以降**( [/std: c++ 17](../build/reference/std-specify-language-standard-version.md)で利用可能): ステートメントには、 **`if`** 名前付き変数を宣言して初期化する式を含めることもできます。 変数が if ブロックのスコープ内でのみ必要な場合は、この形式の if ステートメントを使用します。
+C++ 17 以降では、 **`if`** ステートメントに *`init-statement`* 名前付き変数を宣言して初期化する式を含めることもできます。 If ステートメントのスコープ内でのみ変数が必要な場合は、この形式の if ステートメントを使用します。 **Microsoft 固有**: このフォームは、Visual Studio 2017 バージョン15.3 以降で使用でき、少なくともコンパイラオプションが必要です [`/std:c++17`](../build/reference/std-specify-language-standard-version.md) 。
 
-## <a name="example"></a>例
+### <a name="example"></a>例
 
 ```cpp
 #include <iostream>
@@ -159,13 +166,13 @@ int main()
 }
 ```
 
-ステートメントのすべての形式で、 **`if`** 構造体以外の任意の値を持つことができる*expression*は、すべての副作用を含めて評価されます。 ステートメントの **`if`** 1 つが[break](../cpp/break-statement-cpp.md)、 *statement* [continue](../cpp/continue-statement-cpp.md)、または[goto](../cpp/goto-statement-cpp.md)を含む場合を除き、ステートメントからプログラムの次のステートメントに制御が渡されます。
+## <a name="a-nameif_constexpr-if-constexpr-statements"></a><a name="if_constexpr"> constexpr ステートメントの場合
 
-**`else`** ステートメントの句は、 `if...else` **`if`** 対応するステートメントが含まれていない、同じスコープ内の最も近い前のステートメントに関連付けられてい **`else`** ます。
+C++ 17 以降では、関数テンプレートのステートメントを使用して、 **`if constexpr`** 複数の関数オーバーロードに頼ることなく、コンパイル時の分岐を決定することができます。 **Microsoft 固有**: このフォームは、Visual Studio 2017 バージョン15.3 以降で使用でき、少なくともコンパイラオプションが必要です [`/std:c++17`](../build/reference/std-specify-language-standard-version.md) 。
 
-## <a name="a-nameif_constexpr-if-constexpr-statements"></a><a name="if_constexpr">constexpr ステートメントの場合
+### <a name="example"></a>例
 
-**Visual Studio 2017 バージョン15.3 以降**( [/std: c++ 17](../build/reference/std-specify-language-standard-version.md)で利用可能): 関数テンプレートで**は、if constexpr**ステートメントを使用して、複数の関数オーバーロードに頼ることなく、コンパイル時の分岐決定を行うことができます。 たとえば、パラメーターのアンパックを処理する1つの関数を記述できます (ゼロパラメーターのオーバーロードは必要ありません)。
+この例は、パラメーターのアンパックを処理する1つの関数を記述する方法を示しています。 ゼロパラメーターのオーバーロードは必要ありません。
 
 ```cpp
 template <class T, class... Rest>
@@ -188,6 +195,6 @@ void f(T&& t, Rest&&... r)
 
 ## <a name="see-also"></a>関連項目
 
-[選択ステートメント](../cpp/selection-statements-cpp.md)<br/>
-[キーワード](../cpp/keywords-cpp.md)<br/>
-[switch ステートメント (C++)](../cpp/switch-statement-cpp.md)
+[選択ステートメント](../cpp/selection-statements-cpp.md)\
+[Keywords](../cpp/keywords-cpp.md)\
+[`switch` ステートメント (C++)](../cpp/switch-statement-cpp.md)

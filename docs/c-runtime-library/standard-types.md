@@ -160,12 +160,12 @@ helpviewer_keywords:
 - CRT_REPORT_HOOK type
 - _finddata_t type
 ms.assetid: 23312dd2-4a6a-4d70-9b48-2a5d0d8c9f28
-ms.openlocfilehash: bf90adbdbc739a2dd26d8e59ab38e56aef3bd312
-ms.sourcegitcommit: d9c94dcabd94537e304be0261b3263c2071b437b
+ms.openlocfilehash: 376c29371fb9213ed46435b41bea1666058c7b4e
+ms.sourcegitcommit: 30792632548d1c71894f9fecbe2f554294b86020
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91352935"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91765312"
 ---
 # <a name="standard-types"></a>基本データ型
 
@@ -189,7 +189,7 @@ Microsoft ランタイム ライブラリには、次の基本データ型およ
 |int_fast64_t、uint_fast64_t|long long、unsigned long long|
 |intmax_t、uintmax_t|long long、unsigned long long|
 
-|型|説明|ヘッダー ファイル|
+|Type|説明|ヘッダー ファイル|
 |----------|-----------------|-----------------|
 |`clock_t` (long 型)|[clock](../c-runtime-library/reference/clock.md) で使用される時刻値を格納します。|TIME.H|
 |`_complex` 構造体|[_cabs](../c-runtime-library/reference/cabs.md) で使用される複素数の実数部および虚数部を格納します。|MATH.H|
@@ -199,7 +199,7 @@ Microsoft ランタイム ライブラリには、次の基本データ型およ
 |`_CRT_REPORT_HOOK`,<br /><br /> `_CRT_REPORT_HOOKW`,<br /><br /> `_CRT_REPORT_HOOKW_M`|[_CrtDbgReport](../c-runtime-library/reference/crtdbgreport-crtdbgreportw.md) で呼び出されるコールバック関数の型定義。<br /><br /> この関数のパラメーターは、レポートの種類、出力メッセージ、およびコールバック関数の戻り値です。|CRTDBG.H|
 |`dev_t`、`_dev_t` の短整数または符号なし整数|デバイス ハンドルを表します。|SYS\TYPES.H|
 |`_diskfree_t` 構造体|ディスク ドライブに関する情報を格納します。 [_getdiskfree](../c-runtime-library/reference/getdiskfree.md) で使用します **。**|DOS.H および DIRECT.H|
-|`div_t`、`ldiv_t`、および `lldiv_t` の各構造体|それぞれ [div](reference/div.md)、[ldiv](../c-runtime-library/reference/ldiv-lldiv.md)、および [lldiv](../c-runtime-library/reference/ldiv-lldiv.md) によって返される値を格納します。|STDLIB.H|
+|`div_t`、`ldiv_t`、および `lldiv_t` の各構造体|それぞれ [div](reference/div.md)、[ldiv](./reference/div.md)、および [lldiv](./reference/div.md) によって返される値を格納します。|STDLIB.H|
 |`errno_t` 整数|`errno` のエラー コードを処理する関数の戻り値の型またはパラメーターに使用されます。|STDDEF.H、<br /><br /> CRTDEFS.H|
 |`_exception` 構造体|[_matherr](../c-runtime-library/reference/matherr.md) のエラー情報を格納します。|MATH.H|
 |`_EXCEPTION_POINTERS`|例外レコードを格納します。 詳細については、[EXCEPTION_POINTERS](/windows/win32/api/winnt/ns-winnt-exception_pointers) に関するページをご覧ください。|FPIEEE.H|
