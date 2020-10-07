@@ -1,49 +1,52 @@
 ---
 title: C ランタイム ライブラリ リファレンス
 description: Microsoft C ランタイムライブラリ関数の情報とリファレンスへのリンク。
-ms.date: 11/04/2016
+ms.date: 10/05/2020
 f1_keywords:
 - c.runtime
 helpviewer_keywords:
 - CRT
-- run-time libraries
+- runtime libraries
 - CRT, reference
 ms.assetid: a503e11c-8dca-4846-84fb-025a826c32b8
-ms.openlocfilehash: 99d8463ddd9dd7b9037cb96e214af7f9581ba074
-ms.sourcegitcommit: 9451db8480992017c46f9d2df23fb17b503bbe74
+ms.openlocfilehash: 2e5fcadca5dcca30370b0f03917650136ab46ee8
+ms.sourcegitcommit: 8caaf5e00aeb727741a273aecafa15de293426cf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91590057"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91806527"
 ---
-# <a name="c-run-time-library-reference"></a>C ランタイム ライブラリ リファレンス
+# <a name="c-runtime-library-reference"></a>C ランタイムライブラリリファレンス
 
-Microsoft ランタイム ライブラリでは、Microsoft Windows オペレーティング システムのプログラミングに使用できるルーチンを提供しています。 これらのルーチンは、C および C++ 言語では提供されない、多くの一般的なプログラミング タスクを自動化します。
+Microsoft ランタイムライブラリには、Microsoft Windows オペレーティングシステム用のプログラミングルーチンが用意されています。 これらのルーチンは、C および C++ 言語では提供されない、多くの一般的なプログラミング タスクを自動化します。
 
 ライブラリ内のほとんどのルーチンに対して、サンプル プログラムが、個別のリファレンス トピックに含まれています。
 
 ## <a name="in-this-section"></a>このセクションの内容
 
 [C ランタイムライブラリ](crt-library-features.md)\
-C ランタイム ライブラリを構成する .lib ファイルについて説明します。
+C ランタイムライブラリを構成する .lib ファイルについて説明します。
 
 [カテゴリ別のユニバーサル C ランタイムルーチン](run-time-routines-by-category.md)\
-カテゴリ別のランタイム ライブラリへのリンクがあります。
+カテゴリ別のランタイムライブラリへのリンクを提供します。
 
 [グローバル変数と標準型](global-variables-and-standard-types.md)\
-ランタイム ライブラリによって提供される、グローバル変数と基本データ型へのリンクがあります。
+ランタイムライブラリによって提供されるグローバル変数と標準の型へのリンクを示します。
 
 [グローバル定数](global-constants.md)\
-ランタイム ライブラリによって定義されるグローバル定数へのリンクがあります。
+ランタイムライブラリによって定義されるグローバル定数へのリンクを示します。
 
 [グローバル状態](global-state.md)\
-C ランタイムライブラリのグローバル状態のスコープについて説明します。
-
-[アルファベット順の関数リファレンス](reference/crt-alphabetical-function-reference.md)\
-すべての C ランタイム ライブラリ関数をアルファベット順に一覧したエントリポイントの目次があります。
+C ランタイムライブラリにおけるグローバルな状態のスコープについて説明します。
 
 [汎用テキストマッピング](generic-text-mappings.md)\
 Tchar.h で定義されている汎用テキスト マップへのリンクがあります。
+
+[アルファベット順の関数リファレンス](reference/crt-alphabetical-function-reference.md)\
+アルファベット順に編成された C ランタイムライブラリ関数へのリンクを示します。
+
+[関数ファミリの概要](function-family-overviews.md)\
+関数ファミリ別に編成された C ランタイムライブラリ関数へのリンクを示します。
 
 [言語および国/地域識別文字列](locale-names-languages-and-country-region-strings.md)\
 `setlocale` 関数を使用して、言語および国/地域識別文字列を設定する方法について説明します。
@@ -51,12 +54,12 @@ Tchar.h で定義されている汎用テキスト マップへのリンクが�
 ## <a name="related-sections"></a>関連項目
 
 [デバッグルーチン](debug-routines.md)\
-ランタイム ライブラリ ルーチンのデバッグ バージョンへのリンクがあります。
+ランタイムライブラリルーチンのデバッグバージョンへのリンクを示します。
 
-[実行時エラーチェック](run-time-error-checking.md)\
-ランタイム エラー チェックをサポートする関数へのリンクがあります。
+[ランタイムエラーチェック](run-time-error-checking.md)\
+ランタイムエラーチェックをサポートする関数へのリンクを示します。
 
-[DLL と Visual C++ ランタイム ライブラリの動作](../build/run-time-library-behavior.md)\
+[Dll および Visual C++ ランタイムライブラリの動作](../build/run-time-library-behavior.md)\
 DLL に使用されるエントリ ポイントとスタートアップ コードについて説明します。
 
 [デバッギング](/visualstudio/debugger/debugging-in-visual-studio)\

@@ -1,5 +1,6 @@
 ---
 title: カテゴリ別ユニバーサル C ランタイム ルーチン
+description: カテゴリ別の Microsoft Universal C runtime (UCRT) ライブラリルーチンの一覧。
 ms.date: 04/06/2018
 helpviewer_keywords:
 - routines, run-time
@@ -7,16 +8,16 @@ helpviewer_keywords:
 - categories, run-time functions
 - functions [CRT]
 ms.assetid: de6f5ac4-2226-4dad-be9f-deeb31138c9d
-ms.openlocfilehash: be58ce7550c8f15c1c12eafa1dd4187f12fb71cd
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 3106c97bfcaf6ed273ba9f826edf7b268fdca782
+ms.sourcegitcommit: 8caaf5e00aeb727741a273aecafa15de293426cf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88846343"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91806540"
 ---
 # <a name="universal-c-runtime-routines-by-category"></a>カテゴリ別ユニバーサル C ランタイム ルーチン
 
-このセクションでは、ユニバーサル C ランタイム (UCRT) ライブラリ ルーチンの一覧をカテゴリ別に示して説明します。 参照しやすいように、一部のルーチンは複数のカテゴリに記載されています。 マルチバイト文字ルーチンとワイド文字ルーチンは、対応する 1 バイト文字ルーチンと共にグループ化されています (存在する場合)。
+このセクションでは、ユニバーサル C ランタイム (UCRT) ライブラリルーチンをカテゴリ別に一覧表示します。 参照しやすいように、一部のルーチンは複数のカテゴリに記載されています。 マルチバイト文字ルーチンとワイド文字ルーチンは、対応する 1 バイト文字ルーチンと共にグループ化されています (存在する場合)。
 
 ## <a name="ucrt-library-routine-categories"></a>UCRT ライブラリ ルーチンのカテゴリ
 
@@ -52,6 +53,6 @@ UCRT ライブラリ ルーチンの主なカテゴリは次のとおりです�
    :::column-end:::
 :::row-end:::
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [C ランタイムライブラリリファレンス](../c-runtime-library/c-run-time-library-reference.md)<br/>
