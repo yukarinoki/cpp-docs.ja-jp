@@ -7,12 +7,12 @@ helpviewer_keywords:
 - __declspec keyword [C++], selectany
 - selectany __declspec keyword
 ms.assetid: 9c353017-5a42-4f50-b741-bd13da1ce84d
-ms.openlocfilehash: e279184322c239e7768eb8fd4321ee451b2cb94c
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 6cd2ec4e22d94c42432a1fc3e39afd5540302d22
+ms.sourcegitcommit: 43cee7a0d41a062661229043c2f7cbc6ace17fa3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87213230"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92008207"
 ---
 # `selectany`
 
@@ -37,7 +37,7 @@ ms.locfileid: "87213230"
 > [!NOTE]
 > **`selectany`** 外部から参照できるグローバルデータ項目を実際に初期化する場合にのみ適用できます。
 
-## <a name="example"></a>例
+## <a name="example-selectany-attribute"></a>例: `selectany` 属性
 
 このコードは、属性の使用方法を示してい **`selectany`** ます。
 
@@ -71,7 +71,7 @@ int i;
 __declspec(selectany) X x(1);
 ```
 
-## <a name="example"></a>例
+## <a name="example-use-selectany-attribute-to-ensure-data-comdat-folding"></a>例: `selectany` 属性を使用してデータ COMDAT を確実に圧縮する
 
 このコードは、リンカーオプションを使用するときに、属性を使用してデータ COMDAT を確実に圧縮する方法を示して **`selectany`** [`/OPT:ICF`](../build/reference/opt-optimizations.md) います。 データは、でマーク **`selectany`** し、 **`const`** (readonly) セクションに配置する必要があることに注意してください。 読み取り専用セクションを明示的に指定する必要があります。
 

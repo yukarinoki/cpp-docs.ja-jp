@@ -7,12 +7,12 @@ helpviewer_keywords:
 - namespaces [C++], unqualified names in
 - using keyword [C++]
 ms.assetid: 4184e2b1-3adc-408e-b5f3-0b3f8b554723
-ms.openlocfilehash: 3aa0c7c4615aaf5eae9f4eae534e52167bf79ff0
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 072ecd325a76e80dbd710c241e39fdf7b969e537
+ms.sourcegitcommit: 43cee7a0d41a062661229043c2f7cbc6ace17fa3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87227024"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92008247"
 ---
 # <a name="using-declaration"></a>using 宣言
 
@@ -27,17 +27,17 @@ using declarator-list ;
 
 ### <a name="parameters"></a>パラメーター
 
-*nested-name-指定子*スコープ解決演算子によって終了された名前空間、クラス、または列挙体の名前とスコープ解決演算子 (::) のシーケンス。 単一のスコープ解決演算子を使用して、グローバル名前空間から名前を導入することができます。 キーワード **`typename`** は省略可能であり、基底クラスからクラステンプレートに導入された場合に依存名を解決するために使用できます。
+*nested-name-指定子* スコープ解決演算子によって終了された名前空間、クラス、または列挙体の名前とスコープ解決演算子 (::) のシーケンス。 単一のスコープ解決演算子を使用して、グローバル名前空間から名前を導入することができます。 キーワード **`typename`** は省略可能であり、基底クラスからクラステンプレートに導入された場合に依存名を解決するために使用できます。
 
-*修飾なしの id*修飾されていない id 式。識別子、オーバーロードされた演算子名、ユーザー定義のリテラル演算子または変換関数の名前、クラスデストラクター名、テンプレート名、および引数リストを指定できます。
+*修飾なしの id* 修飾されていない id 式。識別子、オーバーロードされた演算子名、ユーザー定義のリテラル演算子または変換関数の名前、クラスデストラクター名、テンプレート名、および引数リストを指定できます。
 
 *宣言子リスト*[ **`typename`** ]*入れ子になった名前指定子* *unqualified-id*宣言子のコンマ区切りのリスト。オプションで省略記号を指定します。
 
 ## <a name="remarks"></a>解説
 
-Using 宣言では、他の場所で宣言されたエンティティのシノニムとして非修飾名が導入されます。 これにより、特定の名前空間の単一の名前を、それが出現する宣言領域で明示的に修飾することなく使用できます。 これは、 [using ディレクティブ](../cpp/namespaces-cpp.md#using_directives)とは異なり、名前空間内の*すべて*の名前を修飾なしで使用できます。 キーワードは、 **`using`** [型のエイリアス](../cpp/aliases-and-typedefs-cpp.md)にも使用されます。
+Using 宣言では、他の場所で宣言されたエンティティのシノニムとして非修飾名が導入されます。 これにより、特定の名前空間の単一の名前を、それが出現する宣言領域で明示的に修飾することなく使用できます。 これは、 [using ディレクティブ](../cpp/namespaces-cpp.md#using_directives)とは異なり、名前空間内の *すべて* の名前を修飾なしで使用できます。 キーワードは、 **`using`** [型のエイリアス](../cpp/aliases-and-typedefs-cpp.md)にも使用されます。
 
-## <a name="example"></a>例
+## <a name="example-using-declaration-in-class-field"></a>例: `using` クラスフィールド内の宣言
 
 using 宣言は、クラス定義で使用できます。
 
@@ -83,7 +83,7 @@ In B::f()
 In B::g()
 ```
 
-## <a name="example"></a>例
+## <a name="example-using-declaration-to-declare-a-member"></a>例: `using` メンバーを宣言する宣言
 
 メンバーの宣言に使用する場合、using 宣言は基底クラスのメンバーを参照する必要があります。
 
@@ -123,7 +123,7 @@ int main() {
 In B::f()
 ```
 
-## <a name="example"></a>例
+## <a name="example-using-declaration-with-explicit-qualification"></a>例: `using` 明示的修飾子を使用した宣言
 
 Using 宣言を使用して宣言されたメンバーは、明示的な修飾を使用して参照できます。 `::` プレフィックスは、グローバル名前空間を参照します。
 
@@ -163,7 +163,7 @@ In f
 In A::g
 ```
 
-## <a name="example"></a>例
+## <a name="example-using-declaration-synonyms-and-aliases"></a>例: `using` 宣言のシノニムとエイリアス
 
 using 宣言を行うと、宣言によって作成されるシノニムは、using 宣言の時点で有効である定義のみを参照します。 using 宣言の後で名前空間に追加される定義は、無効なシノニムです。
 
@@ -192,7 +192,7 @@ void b() {
 }
 ```
 
-## <a name="example"></a>例
+## <a name="example-local-declarations-and-using-declarations"></a>例: ローカル宣言と `using` 宣言
 
 名前空間内の関数では、1 つの名前のローカル宣言と using 宣言が同じスコープ内にある場合、それらはすべて同じエンティティ、つまり関数を参照している必要があります。
 
@@ -215,7 +215,7 @@ void g() {
 
 この例では、`using B::i` ステートメントにより、2 つ目の `int i` が `g()` 関数で宣言されます。 `using B::f` 内に定義された関数名に異なるパラメーター型があるため、`f(char)` ステートメントと `B::f` 関数は競合しません。
 
-## <a name="example"></a>例
+## <a name="example-local-function-declarations-and-using-declarations"></a>例: ローカル関数の宣言と `using` 宣言
 
 ローカル関数宣言は、using 宣言で定義された関数と同じ名前および型を含むことはできません。 次に例を示します。
 
@@ -242,7 +242,7 @@ void h() {
 }
 ```
 
-## <a name="example"></a>例
+## <a name="example-using-declaration-and-inheritance"></a>例: `using` 宣言と継承
 
 継承では、using 宣言で基底クラスの名前を派生クラスのスコープ内に定義すると、派生クラスのメンバー関数によって、基底クラスで同じ名前と引数の型を持つ仮想メンバー関数がオーバーライドされます。
 
@@ -300,11 +300,11 @@ In B::g
 In D::g(char)
 ```
 
-## <a name="example"></a>例
+## <a name="example-using-declaration-accessibility"></a>例: `using` 宣言アクセシビリティ
 
 using 宣言で定義された名前のすべてのインスタンスはアクセス可能である必要があります。 特に、派生クラスが基底クラスのメンバーにアクセスするために using 宣言を使用する場合は、そのメンバー名がアクセス可能である必要があります。 名前がオーバーロードされたメンバー関数の名前である場合、その名前のすべての関数にアクセス可能である必要があります。
 
-メンバーのアクセシビリティの詳細については、「[メンバー Access Control](../cpp/member-access-control-cpp.md)」を参照してください。
+メンバーのアクセシビリティの詳細については、「 [メンバー Access Control](../cpp/member-access-control-cpp.md)」を参照してください。
 
 ```cpp
 // using_declaration_inheritance2.cpp

@@ -45,12 +45,12 @@ helpviewer_keywords:
 - formatted text [C++]
 - _stprintf_p_l function
 ms.assetid: a2ae78e8-6b0c-48d5-87a9-ea2365b0693d
-ms.openlocfilehash: 5bb8993293236a20c87707db06715e9a012e643e
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: c694567aa7554319d5821678a18c3b5392f89965
+ms.sourcegitcommit: 43cee7a0d41a062661229043c2f7cbc6ace17fa3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70958026"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92008843"
 ---
 # <a name="_sprintf_p-_sprintf_p_l-_swprintf_p-_swprintf_p_l"></a>_sprintf_p、_sprintf_p_l、_swprintf_p、_swprintf_p_l
 
@@ -89,7 +89,7 @@ int _swprintf_p_l(
 
 ### <a name="parameters"></a>パラメーター
 
-*バッファー*<br/>
+*格納*<br/>
 出力の格納場所。
 
 *sizeOfBuffer*<br/>
@@ -104,19 +104,19 @@ int _swprintf_p_l(
 *locale*<br/>
 使用するロケール。
 
-詳細については、「 [printf 関数と wprintf 関数の書式指定フィールド](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)」を参照してください。
+詳細については、[書式の指定](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)に関する記事をご覧ください。
 
 ## <a name="return-value"></a>戻り値
 
 書き込まれた文字数。エラーが発生した場合は-1。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-**_Sprintf_p**関数は、一連の文字と値の書式を設定し、*バッファー*に格納します。 *Argument_list*内の各引数 (存在する場合) は、*形式*の対応する形式指定に従って変換および出力されます。 *Format*引数は、 [printf 関数と wprintf 関数の書式指定構文](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)を使用します。 最後に書き込まれる文字の後に NULL 文字が追加されます。 重なり合う文字列間でコピーした場合の動作は未定義です。 **_Sprintf_p**と**sprintf_s**の違いは、 **_sprintf_p**は位置指定パラメーターをサポートしている点です。これにより、書式設定文字列で引数を使用する順序を指定できます。 詳細については、「[printf_p の位置指定パラメーター](../../c-runtime-library/printf-p-positional-parameters.md)」をご覧ください。
+**_Sprintf_p**関数は、一連の文字と値の書式を設定し、*バッファー*に格納します。 *Argument_list*内の各引数 (存在する場合) は、対応する形式仕様に従って変換および出力さ*れます。* *Format*引数は、 [printf 関数と wprintf 関数の書式指定構文](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)を使用します。 最後に書き込まれる文字の後に NULL 文字が追加されます。 重なり合う文字列間でコピーした場合の動作は未定義です。 **_Sprintf_p**と**sprintf_s**の違いは、 **_sprintf_p**が位置指定パラメーターをサポートしていることです。これにより、書式設定文字列で引数が使用される順序を指定できます。 詳細については、「[printf_p の位置指定パラメーター](../../c-runtime-library/printf-p-positional-parameters.md)」を参照してください。
 
-**_swprintf_p**は、 **_sprintf_p**のワイド文字バージョンです。 **_swprintf_p**へのポインター引数はワイド文字列です。 **_Swprintf_p**でのエンコードエラーの検出は、 **_sprintf_p**の場合とは異なる場合があります。 **_swprintf_p**と**fwprintf_p**は同じように動作しますが、 **_swprintf_p**は、型**ファイル**の出力先ではなく文字列に出力を書き込む点と、 **_swprintf_p**は*count*パラメーターを指定して書き込む最大文字数。 **_L**サフィックスを持つこれらの関数のバージョンは、現在のスレッドロケールの代わりに渡されたロケールパラメーターを使用する点を除いて同じです。
+**_swprintf_p** は **_sprintf_p**のワイド文字バージョンです。 **_swprintf_p** するポインター引数はワイド文字列です。 **_Swprintf_p**でのエンコードエラーの検出は、 **_sprintf_p**とは異なる場合があります。 **_swprintf_p** と **fwprintf_p** は同じように動作しますが、 **_Swprintf_p** では、型 **ファイル**の出力先ではなく文字列に出力が書き込まれる点が異なります。また、 **_swprintf_p** では、書き込む最大文字数を指定するために *count* パラメーターが必要です。 **_L**サフィックスを持つこれらの関数のバージョンは、現在のスレッドロケールの代わりに渡されたロケールパラメーターを使用する点を除いて同じです。
 
-**_sprintf_p**は、*バッファー*に格納されているバイト数を返します。終端の null 文字はカウントされません。 **_swprintf_p**は、*バッファー*に格納されているワイド文字の数を返します。終端の null ワイド文字はカウントされません。 *バッファー*または*形式*が null ポインターの場合、または書式指定文字列に無効な書式指定文字が含まれている場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、これらの関数は-1 を返し、 **errno**を**EINVAL**に設定します。
+**_sprintf_p** は、 *バッファー*に格納されているバイト数を返します。終端の null 文字はカウントされません。 **_swprintf_p** は、 *バッファー*に格納されているワイド文字数を返します。終端の null ワイド文字はカウントされません。 *バッファー*または*形式*が null ポインターの場合、または書式指定文字列に無効な書式指定文字が含まれている場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、これらの関数は-1 を返し、 **errno** を **EINVAL**に設定します。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -132,9 +132,9 @@ int _swprintf_p_l(
 |**_sprintf_p**、 **_sprintf_p_l**|\<stdio.h>|
 |**_swprintf_p**、 **_swprintf_p_l**|\<stdio.h> または \<wchar.h>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
-## <a name="example"></a>例
+## <a name="example-use-_sprintf_p-to-format-data"></a>例: _sprintf_p を使用したデータの書式設定
 
 ```C
 // crt_sprintf_p.c
@@ -177,7 +177,7 @@ Output:
 character count = 79
 ```
 
-## <a name="example"></a>例
+## <a name="example-error-code-handling"></a>例: エラーコードの処理
 
 ```C
 // crt_swprintf_p.c
@@ -220,5 +220,5 @@ Wrote -1 characters
 [scanf、_scanf_l、wscanf、_wscanf_l](scanf-scanf-l-wscanf-wscanf-l.md)<br/>
 [sscanf、_sscanf_l、swscanf、_swscanf_l](sscanf-sscanf-l-swscanf-swscanf-l.md)<br/>
 [sscanf_s、_sscanf_s_l、swscanf_s、_swscanf_s_l](sscanf-s-sscanf-s-l-swscanf-s-swscanf-s-l.md)<br/>
-[vprintf 系関数](../../c-runtime-library/vprintf-functions.md)<br/>
-[printf_p の位置指定パラメーター](../../c-runtime-library/printf-p-positional-parameters.md)<br/>
+[vprintf 関数](../../c-runtime-library/vprintf-functions.md)<br/>
+[位置指定パラメーターの printf_p](../../c-runtime-library/printf-p-positional-parameters.md)<br/>

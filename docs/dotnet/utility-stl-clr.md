@@ -39,12 +39,12 @@ helpviewer_keywords:
 - operator<= member [STL/CLR]
 - operator< member [STL/CLR]
 ms.assetid: fb48cb75-d5ef-47ce-b526-bf60dc86c552
-ms.openlocfilehash: 271bc01f5c8fd9dd07bfa03035ae3d0204ebd8e7
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: faf7f607f9433fa3e4813957b24220a5e66e1e49
+ms.sourcegitcommit: 43cee7a0d41a062661229043c2f7cbc6ace17fa3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91500598"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92008620"
 ---
 # <a name="utility-stlclr"></a>utility (STL/CLR)
 
@@ -80,8 +80,6 @@ ms.locfileid: "91500598"
 |機能|説明|
 |--------------|-----------------|
 |[make_pair (STL/CLR)](#make_pair)|値のペアからペアを作成します。|
-
-## <a name="members"></a>メンバー
 
 ## <a name="pair-stlclr"></a><a name="pair"></a> pair (STL/CLR)
 
@@ -124,7 +122,7 @@ template<typename Value1,
 |--------------|-----------------|
 |[pair::operator= (STL/CLR)](#op_as)|格納されている値のペアを置き換えます。|
 
-## <a name="remarks"></a>注釈
+## <a name="remarks"></a>解説
 
 オブジェクトは、値のペアを格納します。 このテンプレートクラスを使用して、2つの値を1つのオブジェクトに結合します。 また、オブジェクト `cliext::pair` (ここで説明) はマネージ型のみを格納します。アンマネージ型のペアを格納するには `std::pair` 、で宣言 `<utility>` します。
 
@@ -217,7 +215,7 @@ pair<Value1, Value2>% operator=(pair<Value1, Value2>% right);
 *そうです*<br/>
 コピーするペア。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 メンバー演算子は、オブジェクトに *right* をコピーし、を返し **`*this`** ます。 格納されている値のペアを、格納され *ている値*のペアのコピーに置き換えるために使用します。
 
@@ -270,7 +268,7 @@ pair(Value1 val1, Value2 val2);
 *val2*<br/>
 格納する2番目の値。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 コンストラクター:
 
@@ -420,7 +418,7 @@ void swap(pair<Value1, Value2>% right);
 *そうです*<br/>
 コンテンツのスワップに使用するペア。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 このメンバー関数は、との間に格納されている値のペアを交換し **`*this`** ます。 *right*
 
@@ -500,7 +498,7 @@ template<typename Value1,
 *second*<br/>
 2番目に折り返す値。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 このテンプレート関数は `pair<Value1, Value2>(first, second)` を返します。 値のペアからオブジェクトを構築するために使用し `pair<Value1, Value2>` ます。
 
@@ -548,7 +546,7 @@ template<typename Value1,
 *そうです*<br/>
 比較する右のペア。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 演算子関数はを返し `!(left == right)` ます。 このメソッドを使用して、2つのペアが要素ごとに比較されるときに、 *left* が *right* と同じ順序で並んでいないかどうかをテストします。
 
@@ -602,7 +600,7 @@ template<typename Value1,
 *そうです*<br/>
 比較する右のペア。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 演算子関数はを返し `left.first <` `right.first || !(right.first <` `left.first &&` `left.second <` `right.second` ます。 このメソッドを使用して、2つのペアが要素ごとに比較されたときに、 *left* が *右* に並んでいるかどうかをテストします。
 
@@ -656,7 +654,7 @@ template<typename Value1,
 *そうです*<br/>
 比較する右のペア。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 演算子関数はを返し `!(right < left)` ます。 このメソッドを使用して、2つのペアが要素ごとに比較されたときに、 *right*の後に*left*が順序付けされていないかどうかをテストします。
 
@@ -710,7 +708,7 @@ template<typename Value1,
 *そうです*<br/>
 比較する右のペア。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 演算子関数はを返し `left.first ==` `right.first &&` `left.second ==` `right.second` ます。 このメソッドを使用して、2つのペアが要素ごとに比較された場合に、 *left* が *right* と同じであるかどうかをテストします。
 
@@ -764,7 +762,7 @@ template<typename Value1,
 *そうです*<br/>
 比較する右のペア。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 演算子関数はを返し `right` `<` `left` ます。 このメソッドを使用して、2つのペアが要素によって比較されたときに、*右側*の順序が並べ替えられて*いるかどう*かをテストします。
 
@@ -818,7 +816,7 @@ template<typename Value1,
 *そうです*<br/>
 比較する右のペア。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 演算子関数はを返し `!(left < right)` ます。 このメソッドを使用して、2つのペアが要素ごとに比較されるときに、 *left* が *right* の前に順序付けされていないかどうかをテストします。
 

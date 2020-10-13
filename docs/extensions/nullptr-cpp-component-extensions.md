@@ -6,12 +6,12 @@ helpviewer_keywords:
 - __nullptr keyword (C++)
 - nullptr keyword [C++]
 ms.assetid: 594cfbf7-06cb-4366-9ede-c0b703e1d095
-ms.openlocfilehash: 5e7a5d3f9a42968dee35f82d3f19d0fdb6da5d0c
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 7e9cf88fdc0444f736f1cfac0d06dfc675a162cc
+ms.sourcegitcommit: 43cee7a0d41a062661229043c2f7cbc6ace17fa3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87214231"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92008353"
 ---
 # <a name="nullptr--ccli-and-ccx"></a>nullptr (C++/CLI および C++/CX)
 
@@ -19,7 +19,7 @@ ms.locfileid: "87214231"
 
 **`nullptr`** マネージコードまたはネイティブコードと共にを使用します。 コンパイラからは、マネージドおよびネイティブの Null ポインター値に適した異なる命令が発行されます。 このキーワードの ISO 標準の C++ バージョンの使用については、「[nullptr](../cpp/nullptr.md)」を参照してください。
 
-**__Nullptr**キーワードは、と同じ意味を持つ Microsoft 固有のキーワードです **`nullptr`** が、ネイティブコードにのみ適用されます。 を **`nullptr`** ネイティブ c/c + + コードと共に使用し、 [/clr](../build/reference/clr-common-language-runtime-compilation.md)コンパイラオプションを指定してコンパイルする場合、が **`nullptr`** ネイティブまたはマネージの null ポインター値を示すかどうかをコンパイラで判断できません。 コンパイラに対して意図を明確にするために、を使用して **`nullptr`** マネージ値を指定するか、 **__nullptr**ネイティブ値を指定します。
+**__Nullptr**キーワードは、と同じ意味を持つ Microsoft 固有のキーワードです **`nullptr`** が、ネイティブコードにのみ適用されます。 を **`nullptr`** ネイティブ c/c + + コードと共に使用し、 [/clr](../build/reference/clr-common-language-runtime-compilation.md) コンパイラオプションを指定してコンパイルする場合、が **`nullptr`** ネイティブまたはマネージの null ポインター値を示すかどうかをコンパイラで判断できません。 コンパイラに対して意図を明確にするために、を使用して **`nullptr`** マネージ値を指定するか、 **__nullptr** ネイティブ値を指定します。
 
 **`nullptr`** キーワードは、C# で**Nothing**は Visual Basic と**null**に相当します。
 
@@ -51,7 +51,7 @@ ms.locfileid: "87214231"
 
 ハンドルをゼロに初期化することはできません。のみ **`nullptr`** 使用できます。 オブジェクト ハンドルに定数 0 を割り当てると、ボックス化された `Int32` と `Object^` へのキャストが生成されます。
 
-## <a name="example"></a>例
+## <a name="example-nullptr-keyword"></a>例: `nullptr` キーワード
 
 次のコード例は、 **`nullptr`** ハンドル、ネイティブポインター、または関数の引数を使用できる場所であれば、キーワードを使用できることを示しています。 この例では、キーワードを使用 **`nullptr`** して、参照を使用する前に確認できることを示しています。
 
@@ -80,7 +80,7 @@ int main() {
 }
 ```
 
-## <a name="example"></a>例
+## <a name="example-use-nullptr-and-zero-interchangeably"></a>例: 使用 `nullptr` とゼロの区別
 
 次のコード例は、 **`nullptr`** と0をネイティブポインターで同義に使用できることを示しています。
 
@@ -119,7 +119,7 @@ pMyClass == nullptr
 pMyClass == 0
 ```
 
-## <a name="example"></a>例
+## <a name="example-interpret-nullptr-as-a-handle"></a>例: `nullptr` ハンドルとして解釈する
 
 次のコード例は、が任意の型への **`nullptr`** ハンドル、または任意の型へのネイティブポインターとして解釈されることを示しています。 異なる型へのハンドルを使用した関数のオーバーロードの場合、あいまいさのエラーが発生します。 は、 **`nullptr`** 型に明示的にキャストする必要があります。
 
@@ -137,7 +137,7 @@ void f_null() {
 }
 ```
 
-## <a name="example"></a>例
+## <a name="example-cast-nullptr"></a>例: Cast `nullptr`
 
 キャストが許可され、 **`nullptr`** 値を格納するキャスト型へのポインターまたはハンドルを返すコード例を次に示します **`nullptr`** 。
 
@@ -158,7 +158,7 @@ int main() {
 }
 ```
 
-## <a name="example"></a>例
+## <a name="example-pass-nullptr-as-a-function-parameter"></a>例: `nullptr` 関数パラメーターとして渡す
 
 次のコード例は、を **`nullptr`** 関数パラメーターとして使用できることを示しています。
 
@@ -179,7 +179,7 @@ int main() {
 test
 ```
 
-## <a name="example"></a>例
+## <a name="example-default-initialization"></a>例: 既定の初期化
 
 次のコード例では、ハンドルが宣言されており、明示的に初期化されていない場合、既定値はに初期化されることを示してい **`nullptr`** ます。
 
@@ -206,7 +206,7 @@ int main() {
 NULL
 ```
 
-## <a name="example"></a>例
+## <a name="example-assign-nullptr-to-a-native-pointer"></a>例: `nullptr` ネイティブポインターに割り当てる
 
 次のコード例は、を **`nullptr`** 使用してコンパイルするときに、をネイティブポインターに割り当てることができることを示して `/clr` います。
 

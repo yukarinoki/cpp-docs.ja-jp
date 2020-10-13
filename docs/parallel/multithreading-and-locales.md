@@ -7,35 +7,35 @@ helpviewer_keywords:
 - threading [C++], locales
 - per-thread locale
 ms.assetid: d6fb159a-eaca-4130-a51a-f95d62f71485
-ms.openlocfilehash: c12a3fa1922db7a1ec0a7bcd43ddf09000d97961
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 82b410c592e5b68737514dda5a864c7bd15f6dc3
+ms.sourcegitcommit: 43cee7a0d41a062661229043c2f7cbc6ace17fa3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62213252"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92008593"
 ---
 # <a name="multithreading-and-locales"></a>マルチスレッドとロケール
 
-C ランタイム ライブラリと C++ 標準ライブラリの両方、プログラムのロケールの変更のサポートを提供します。 このトピックでは、マルチ スレッド アプリケーションで両方のライブラリのロケール機能を使用するときに発生する問題について説明します。
+C ランタイムライブラリと C++ 標準ライブラリは両方とも、プログラムのロケールの変更をサポートしています。 このトピックでは、マルチスレッドアプリケーションで両方のライブラリのロケール機能を使用するときに発生する問題について説明します。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-使用してマルチ スレッド アプリケーションを作成すると、C ランタイム ライブラリ、`_beginthread`と`_beginthreadex`関数。 このトピックでは、これらの関数を使用して作成されたマルチ スレッド アプリケーションのみを説明します。 詳細については、次を参照してください。 [_beginthread、_beginthreadex](../c-runtime-library/reference/beginthread-beginthreadex.md)します。
+C ランタイムライブラリでは、関数と関数を使用してマルチスレッドアプリケーションを作成でき `_beginthread` `_beginthreadex` ます。 このトピックでは、これらの関数を使用して作成されたマルチスレッドアプリケーションのみを取り上げます。 詳細については、「 [_beginthread、_beginthreadex](../c-runtime-library/reference/beginthread-beginthreadex.md)」を参照してください。
 
-C ランタイム ライブラリを使用してロケールを変更するには、使用、 [setlocale](../preprocessor/setlocale.md)関数。 以前のバージョンの Visual C では、この関数は常に、アプリケーション全体のロケールを変更していました。 これは、スレッドごとに、ロケールを設定するようになりました。 これを使用して、 [_configthreadlocale](../c-runtime-library/reference/configthreadlocale.md)関数。 指定する[setlocale](../preprocessor/setlocale.md)のみ呼び出し、現在のスレッドのロケールを変更する必要があります`_configthreadlocale(_ENABLE_PER_THREAD_LOCALE)`そのスレッドでします。 逆に、呼び出す`_configthreadlocale(_DISABLE_PER_THREAD_LOCALE)`と、そのスレッドでは、グローバル ロケールを使用してすべての呼び出しに[setlocale](../preprocessor/setlocale.md)ことで、スレッドはスレッドごとのロケールを明示的に有効にしていないすべてのスレッドのロケールを変更します。
+C ランタイムライブラリを使用してロケールを変更するには、 [setlocale](../preprocessor/setlocale.md) 関数を使用します。 以前のバージョンの Visual C++ では、この関数は常に、アプリケーション全体にわたってロケールを変更します。 スレッドごとのロケールの設定がサポートされるようになりました。 これを行うには、 [_configthreadlocale](../c-runtime-library/reference/configthreadlocale.md) 関数を使用します。 [Setlocale](../preprocessor/setlocale.md)が現在のスレッドのロケールのみを変更するように指定するには、 `_configthreadlocale(_ENABLE_PER_THREAD_LOCALE)` そのスレッドでを呼び出します。 逆に、を呼び出すと、 `_configthreadlocale(_DISABLE_PER_THREAD_LOCALE)` そのスレッドはグローバルロケールを使用し、そのスレッドの [setlocale](../preprocessor/setlocale.md) を呼び出すと、スレッドごとのロケールを明示的に有効にしていないすべてのスレッドのロケールが変更されます。
 
-C++ ランタイム ライブラリを使用してロケールを変更するには、使用、 [locale クラス](../standard-library/locale-class.md)します。 呼び出すことによって、 [locale::global](../standard-library/locale-class.md#global)メソッドが明示的に有効になっていないスレッドごとのロケールのすべてのスレッドのロケールを変更します。 1 つのスレッドまたはアプリケーションの部分でロケールを変更するのインスタンスを作成、`locale`スレッドまたはコードの一部のオブジェクト。
+C++ ランタイムライブラリを使用してロケールを変更するには、 [Locale クラス](../standard-library/locale-class.md)を使用します。 [Locale:: global](../standard-library/locale-class.md#global)メソッドを呼び出すことによって、スレッドごとのロケールを明示的に有効にしていないすべてのスレッドでロケールを変更します。 1つのスレッドまたはアプリケーションの一部でロケールを変更するには、 `locale` そのスレッドまたはコードの一部にオブジェクトのインスタンスを作成するだけです。
 
 > [!NOTE]
-> 呼び出す[locale::global](../standard-library/locale-class.md#global) C++ 標準ライブラリと C ランタイム ライブラリの両方のロケールを変更します。 ただし、呼び出す[setlocale](../preprocessor/setlocale.md)のみ、C ランタイム ライブラリは、C++ 標準ライブラリが影響を受けませんのロケールを変更します。
+> [Locale:: global](../standard-library/locale-class.md#global)を呼び出すと、C++ 標準ライブラリと c ランタイムライブラリの両方のロケールが変更されます。 ただし、 [setlocale](../preprocessor/setlocale.md) を呼び出すと、C ランタイムライブラリのロケールのみが変更されます。C++ 標準ライブラリは影響を受けません。
 
-次の例を使用する方法を示して、 [setlocale](../preprocessor/setlocale.md)関数の場合、 [locale クラス](../standard-library/locale-class.md)、および[_configthreadlocale](../c-runtime-library/reference/configthreadlocale.md)関数内のアプリケーションのロケールを変更するにはさまざまなシナリオをいくつか。
+次の例は、 [setlocale](../preprocessor/setlocale.md) 関数、 [locale クラス](../standard-library/locale-class.md)、および [_configthreadlocale](../c-runtime-library/reference/configthreadlocale.md) 関数を使用して、いくつかの異なるシナリオでアプリケーションのロケールを変更する方法を示しています。
 
-## <a name="example"></a>例
+## <a name="example-change-locale-with-per-thread-locale-enabled"></a>例: スレッドごとのロケールが有効になっているロケールを変更する
 
-この例では、メイン スレッドは、2 つの子スレッドを生成します。 最初のスレッドでは、スレッド A、により呼び出すことによって、スレッドごとのロケール`_configthreadlocale(_ENABLE_PER_THREAD_LOCALE)`します。 2 番目のスレッド、スレッド B は、ほか、メイン スレッドは、スレッドごとのロケールを有効にしないでください。 スレッド a がロケールを使用して、変更に進みます、 [setlocale](../preprocessor/setlocale.md) C ランタイム ライブラリの関数。
+この例では、メインスレッドによって2つの子スレッドが生成されます。 最初のスレッド (スレッド A) は、を呼び出すことにより、スレッドごとのロケールを有効にし `_configthreadlocale(_ENABLE_PER_THREAD_LOCALE)` ます。 2番目のスレッドであるスレッド B とメインスレッドは、スレッドごとのロケールを有効にしません。 次に、C ランタイムライブラリの [setlocale](../preprocessor/setlocale.md) 関数を使用して、スレッド A がロケールの変更に進みます。
 
-スレッド A は、スレッドごとのロケールに有効にすると、「フランス」ロケールを使用して、スレッド A スタートでは、C ランタイム ライブラリ関数のみを持っています。 メイン スレッドでスレッド B および C ランタイム ライブラリ関数は、"C"ロケールを使用し続けます。 また、 [setlocale](../preprocessor/setlocale.md) C++ 標準ライブラリのロケール オブジェクトを"C"ロケールを使用して、引き続きすべての C++ 標準ライブラリには影響しません。
+スレッド A にはスレッドごとのロケールが有効になっているため、スレッド A の C ランタイムライブラリ関数のみが "フランス語" ロケールを使用して開始されます。 スレッド B の C ランタイムライブラリ関数とメインスレッドでは、"C" ロケールが引き続き使用されます。 また、 [setlocale](../preprocessor/setlocale.md) は C++ 標準ライブラリのロケールには影響しないため、すべての C++ 標準ライブラリオブジェクトは引き続き "C" ロケールを使用します。
 
 ```cpp
 // multithread_locale_1.cpp
@@ -130,11 +130,11 @@ unsigned __stdcall RunThreadB(void *params)
 [Thread main] locale::global is set to "C"
 ```
 
-## <a name="example"></a>例
+## <a name="example-change-global-locale-with-per-thread-locale-enabled"></a>例: スレッドごとのロケールが有効になっているグローバルロケールを変更する
 
-この例では、メイン スレッドは、2 つの子スレッドを生成します。 最初のスレッドでは、スレッド A、により呼び出すことによって、スレッドごとのロケール`_configthreadlocale(_ENABLE_PER_THREAD_LOCALE)`します。 2 番目のスレッド、スレッド B は、ほか、メイン スレッドは、スレッドごとのロケールを有効にしないでください。 スレッド a がロケールを使用して、変更に進みます、 [locale::global](../standard-library/locale-class.md#global) C++ 標準ライブラリのメソッド。
+この例では、メインスレッドによって2つの子スレッドが生成されます。 最初のスレッド (スレッド A) は、を呼び出すことにより、スレッドごとのロケールを有効にし `_configthreadlocale(_ENABLE_PER_THREAD_LOCALE)` ます。 2番目のスレッドであるスレッド B とメインスレッドは、スレッドごとのロケールを有効にしません。 次に、スレッド A は、C++ 標準ライブラリの [locale:: global](../standard-library/locale-class.md#global) メソッドを使用してロケールを変更します。
 
-スレッド A は、スレッドごとのロケールに有効にすると、「フランス」ロケールを使用して、スレッド A スタートでは、C ランタイム ライブラリ関数のみを持っています。 メイン スレッドでスレッド B および C ランタイム ライブラリ関数は、"C"ロケールを使用し続けます。 ただし、以降、 [locale::global](../standard-library/locale-class.md#global)メソッドが「グローバル」、ロケールを変更、すべてのスレッド内のすべての C++ 標準ライブラリ オブジェクトは、「フランス」ロケールの使用を開始します。
+スレッド A にはスレッドごとのロケールが有効になっているため、スレッド A の C ランタイムライブラリ関数のみが "フランス語" ロケールを使用して開始されます。 スレッド B の C ランタイムライブラリ関数とメインスレッドでは、"C" ロケールが引き続き使用されます。 ただし、 [locale:: global](../standard-library/locale-class.md#global) メソッドによってロケールが "グローバル" に変更されるため、すべてのスレッド内のすべての C++ 標準ライブラリオブジェクトは、"フランス語" ロケールの使用を開始します。
 
 ```cpp
 // multithread_locale_2.cpp
@@ -229,11 +229,11 @@ unsigned __stdcall RunThreadB(void *params)
 [Thread main] locale::global is set to "French_France.1252"
 ```
 
-## <a name="example"></a>例
+## <a name="example-change-locale-without-per-thread-locale-enabled"></a>例: スレッドごとのロケールを有効にしないでロケールを変更する
 
-この例では、メイン スレッドは、2 つの子スレッドを生成します。 最初のスレッドでは、スレッド A、により呼び出すことによって、スレッドごとのロケール`_configthreadlocale(_ENABLE_PER_THREAD_LOCALE)`します。 2 番目のスレッド、スレッド B は、ほか、メイン スレッドは、スレッドごとのロケールを有効にしないでください。 次を使用して、ロケールにスレッド B、 [setlocale](../preprocessor/setlocale.md) C ランタイム ライブラリの関数。
+この例では、メインスレッドによって2つの子スレッドが生成されます。 最初のスレッド (スレッド A) は、を呼び出すことにより、スレッドごとのロケールを有効にし `_configthreadlocale(_ENABLE_PER_THREAD_LOCALE)` ます。 2番目のスレッドであるスレッド B とメインスレッドは、スレッドごとのロケールを有効にしません。 次に、C ランタイムライブラリの [setlocale](../preprocessor/setlocale.md) 関数を使用して、スレッド B がロケールの変更に進みます。
 
-スレッド B が有効になっているスレッドごとのロケールがあるないため「フランス」ロケールを使用してメイン スレッドでスレッド B および C ランタイム ライブラリ関数を開始します。 スレッド A があるスレッドごとのロケールを有効になっているために、"C"ロケールを使用するスレッド A 続行で C ランタイム ライブラリ関数。 また、 [setlocale](../preprocessor/setlocale.md) C++ 標準ライブラリのロケール オブジェクトを"C"ロケールを使用して、引き続きすべての C++ 標準ライブラリには影響しません。
+スレッド B ではスレッドごとのロケールが有効になっていないため、スレッド B の C ランタイムライブラリ関数とメインスレッドでは、"フランス語" ロケールの使用が開始されます。 スレッド a にはスレッドごとのロケールが有効になっているため、スレッド A の C ランタイムライブラリ関数では、"C" ロケールが引き続き使用されます。 また、 [setlocale](../preprocessor/setlocale.md) は C++ 標準ライブラリのロケールには影響しないため、すべての C++ 標準ライブラリオブジェクトは引き続き "C" ロケールを使用します。
 
 ```cpp
 // multithread_locale_3.cpp
@@ -332,11 +332,11 @@ unsigned __stdcall RunThreadB(void *params)
 [Thread main] locale::global is set to "C"
 ```
 
-## <a name="example"></a>例
+## <a name="example-change-global-locale-without-per-thread-locale-enabled"></a>例: スレッドごとのロケールを有効にせずにグローバルロケールを変更する
 
-この例では、メイン スレッドは、2 つの子スレッドを生成します。 最初のスレッドでは、スレッド A、により呼び出すことによって、スレッドごとのロケール`_configthreadlocale(_ENABLE_PER_THREAD_LOCALE)`します。 2 番目のスレッド、スレッド B は、ほか、メイン スレッドは、スレッドごとのロケールを有効にしないでください。 次を使用して、ロケールにスレッド B、 [locale::global](../standard-library/locale-class.md#global) C++ 標準ライブラリのメソッド。
+この例では、メインスレッドによって2つの子スレッドが生成されます。 最初のスレッド (スレッド A) は、を呼び出すことにより、スレッドごとのロケールを有効にし `_configthreadlocale(_ENABLE_PER_THREAD_LOCALE)` ます。 2番目のスレッドであるスレッド B とメインスレッドは、スレッドごとのロケールを有効にしません。 次に、スレッド B は、C++ 標準ライブラリの [locale:: global](../standard-library/locale-class.md#global) メソッドを使用してロケールを変更します。
 
-スレッド B が有効になっているスレッドごとのロケールがあるないため「フランス」ロケールを使用してメイン スレッドでスレッド B および C ランタイム ライブラリ関数を開始します。 スレッド A があるスレッドごとのロケールを有効になっているために、"C"ロケールを使用するスレッド A 続行で C ランタイム ライブラリ関数。 ただし、以降、 [locale::global](../standard-library/locale-class.md#global)メソッドが「グローバル」、ロケールを変更、すべてのスレッド内のすべての C++ 標準ライブラリ オブジェクトは、「フランス」ロケールの使用を開始します。
+スレッド B ではスレッドごとのロケールが有効になっていないため、スレッド B の C ランタイムライブラリ関数とメインスレッドでは、"フランス語" ロケールの使用が開始されます。 スレッド a にはスレッドごとのロケールが有効になっているため、スレッド A の C ランタイムライブラリ関数では、"C" ロケールが引き続き使用されます。 ただし、 [locale:: global](../standard-library/locale-class.md#global) メソッドによってロケールが "グローバル" に変更されるため、すべてのスレッド内のすべての C++ 標準ライブラリオブジェクトは、"フランス語" ロケールの使用を開始します。
 
 ```cpp
 // multithread_locale_4.cpp

@@ -31,12 +31,12 @@ helpviewer_keywords:
 - files [C++], translation
 - setmode function
 ms.assetid: 996ff7cb-11d1-43f4-9810-f6097182642a
-ms.openlocfilehash: 1995d54e972f99543773fff374e56c0dd7cf4988
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: abedba6f1d414191732859e3e44b54cc16acc4e9
+ms.sourcegitcommit: 43cee7a0d41a062661229043c2f7cbc6ace17fa3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82915806"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92008425"
 ---
 # <a name="_setmode"></a>_setmode
 
@@ -71,12 +71,12 @@ int _setmode (
 
 **_Setmode**関数は、 *fd*によって指定されたファイルの変換モードを*モード*に設定します。 *モード*として **_O_TEXT**を渡すと、テキスト (変換) モードが設定されます。 キャリッジリターンラインフィード (CR-LF) の組み合わせは、入力時に1つのラインフィード文字に変換されます。 ライン フィード文字は、出力時に CR-LF の組み合わせに変換されます。 **_O_BINARY**を渡すと、変換が抑制されるバイナリ (無変換) モードが設定されます。
 
-このドキュメントで後述する2番目の例に示すように、 **_O_U16TEXT**、 **_O_U8TEXT**、または **_O_WTEXT**を渡して Unicode モードを有効にすることもできます。
+このドキュメントで後述する2番目の例に示すように、 **_O_U16TEXT**、 **_O_U8TEXT**、または **_O_WTEXT** を渡して Unicode モードを有効にすることもできます。
 
 > [!CAUTION]
-> Unicode モードは、ワイド印刷関数 (など`wprintf`) 用であり、ナロー印刷関数ではサポートされていません。 Unicode モードストリームでナロー print 関数を使用すると、アサートがトリガーされます。
+> Unicode モードは、ワイド印刷関数 (など) 用で `wprintf` あり、ナロー印刷関数ではサポートされていません。 Unicode モードストリームでナロー print 関数を使用すると、アサートがトリガーされます。
 
-**_setmode**は通常、 **stdin**と**stdout**の既定の変換モードを変更するために使用されますが、任意のファイルで使用できます。 ストリームのファイル記述子に **_setmode**を適用する場合は、ストリームに対して入力または出力操作を実行する前に **_setmode**を呼び出します。
+**_setmode** は通常、 **stdin** と **stdout**の既定の変換モードを変更するために使用されますが、任意のファイルで使用できます。 ストリームのファイル記述子に **_setmode** を適用する場合は、ストリームに対して入力または出力操作を実行する前に **_setmode** を呼び出します。
 
 > [!CAUTION]
 > ファイルストリームにデータを書き込む場合は、 **_setmode**を使用してモードを変更する前に、 [fflush](fflush.md)を使用して明示的にコードをフラッシュします。 コードをフラッシュしないと、予期しない動作が発生することがあります。 ストリームにデータを書き込んでいない場合は、コードをフラッシュする必要はありません。
@@ -85,13 +85,13 @@ int _setmode (
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|省略可能なヘッダー|
+|ルーチンによって返される値|必須ヘッダー|省略可能なヘッダー|
 |-------------|---------------------|----------------------|
 |**_setmode**|\<io.h>|\<fcntl.h>|
 
 互換性について詳しくは、「 [Compatibility](../../c-runtime-library/compatibility.md)」をご覧ください。
 
-## <a name="example"></a>例
+## <a name="example-use-_setmode-to-change-stdin"></a>例: _setmode を使用した stdin の変更
 
 ```C
 // crt_setmode.c
@@ -119,7 +119,7 @@ int main( void )
 'stdin' successfully changed to binary mode
 ```
 
-## <a name="example"></a>例
+## <a name="example-use-_setmode-to-change-stdout"></a>例: _setmode を使用して stdout を変更する
 
 ```C
 // crt_setmodeunicode.c
@@ -141,7 +141,7 @@ int main(void) {
 
 ## <a name="see-also"></a>関連項目
 
-[ファイル処理](../../c-runtime-library/file-handling.md)<br/>
+[ファイルの処理](../../c-runtime-library/file-handling.md)<br/>
 [_creat、_wcreat](creat-wcreat.md)<br/>
 [fopen、_wfopen](fopen-wfopen.md)<br/>
 [_open、_wopen](open-wopen.md)<br/>

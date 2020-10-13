@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - function templates, member functions
 ms.assetid: 83d51835-6a27-40ed-997c-7d90dc9182d8
-ms.openlocfilehash: ee36d4f33f3e4216e2ad9c434ac1da4ca3aa83e8
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 8514c8ffe630f5bc44d8d287d6ccf08c7755e3a0
+ms.sourcegitcommit: 43cee7a0d41a062661229043c2f7cbc6ace17fa3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80177982"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92008559"
 ---
 # <a name="member-function-templates"></a>メンバー関数テンプレート
 
@@ -17,7 +17,7 @@ ms.locfileid: "80177982"
 
 メンバー関数は複数のコンテキストの関数テンプレートになります。 クラス テンプレートのすべての関数はジェネリックですが、メンバー テンプレートまたはメンバー関数テンプレートとしては参照されません。 これらのメンバー関数が独自のテンプレート引数を受け取る場合、それらの関数はメンバー関数テンプレートと見なされます。
 
-## <a name="example"></a>例
+## <a name="example-declare-member-function-templates"></a>例: メンバー関数テンプレートを宣言する
 
 非テンプレート クラスまたはテンプレート クラスのメンバー関数テンプレートは、テンプレート パラメーターを持つ関数テンプレートとして宣言されます。
 
@@ -36,7 +36,7 @@ int main()
 }
 ```
 
-## <a name="example"></a>例
+## <a name="example-member-function-template-of-template-class"></a>例: テンプレートクラスのメンバー関数テンプレート
 
 次の例は、テンプレート クラスのメンバー関数テンプレートを示します。
 
@@ -57,7 +57,7 @@ int main()
 }
 ```
 
-## <a name="example"></a>例
+## <a name="example-define-member-templates-outside-class"></a>例: クラス外でメンバーテンプレートを定義する
 
 ```cpp
 // defining_member_templates_outside_class.cpp
@@ -79,7 +79,7 @@ int main()
 }
 ```
 
-## <a name="example"></a>例
+## <a name="example-templated-user-defined-conversion"></a>例: テンプレート化されたユーザー定義の変換
 
 ローカル クラスはメンバー テンプレートを持つことができません。
 
@@ -105,6 +105,6 @@ int main()
 }
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [関数テンプレート](../cpp/function-templates.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - assertions [C++], static_assert
 - static_assert
 ms.assetid: 28dd3668-e78c-4de8-ba68-552084743426
-ms.openlocfilehash: b30af5fcf5d4f58143e657d84e743ef09a34e268
-ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
+ms.openlocfilehash: bf796b853d21d33d97e25c05101b7486e1eb112f
+ms.sourcegitcommit: 43cee7a0d41a062661229043c2f7cbc6ace17fa3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90742971"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92008867"
 ---
 # <a name="static_assert"></a>static_assert
 
@@ -34,7 +34,7 @@ static_assert( constant-expression ); // C++17 (Visual Studio 2017 and later)
 *文字列-リテラル*\
 *定数式*のパラメーターが0の場合に表示されるメッセージ。 メッセージは、コンパイラの [基本文字セット](../c-language/ascii-character-set.md) 内の文字の文字列です。つまり、 [マルチバイト文字またはワイド文字](../c-language/multibyte-and-wide-characters.md)ではありません。
 
-## <a name="remarks"></a>注釈
+## <a name="remarks"></a>解説
 
 宣言の *定数式* のパラメーターは、 **`static_assert`** ソフトウェアの *アサーション*を表します。 ソフトウェアのアサーションは、プログラムの特定位置にある true となるはずの条件を指定します。 条件が true の場合、 **`static_assert`** 宣言は無効です。 条件が false の場合、アサーションは失敗し、コンパイラは *文字列リテラル* パラメーターにメッセージを表示し、コンパイルはエラーで失敗します。 Visual Studio 2017 以降では、文字列リテラルパラメーターは省略可能です。
 
@@ -44,21 +44,21 @@ static_assert( constant-expression ); // C++17 (Visual Studio 2017 and later)
 
 キーワードは、 **`static_assert`** 名前空間、クラス、またはブロックスコープで使用できます。 (キーワードは、 **`static_assert`** プログラムに新しい名前が導入されていない場合でも、名前空間のスコープで使用できるため、技術的には宣言です)。
 
-## <a name="description-of-static_assert-with-namespace-scope"></a>名前空間スコープを持つ static_assert の説明
+## <a name="description-of-static_assert-with-namespace-scope"></a>`static_assert`名前空間スコープを持つの説明
 
 次の例では、 **`static_assert`** 宣言に名前空間スコープが含まれています。 コンパイラは `void *` 型のサイズがわかっているので、式は直ちに評価されます。
 
-## <a name="example-of-static_assert-with-namespace-scope"></a>名前空間スコープを持つ static_assert の例
+## <a name="example-static_assert-with-namespace-scope"></a>例: `static_assert` 名前空間スコープを使用する
 
 ```cpp
 static_assert(sizeof(void *) == 4, "64-bit code generation is not supported.");
 ```
 
-## <a name="description-of-static_assert-with-class-scope"></a>クラススコープを持つ static_assert の説明
+## <a name="description-of-static_assert-with-class-scope"></a>`static_assert`クラススコープを持つの説明
 
 次の例では、 **`static_assert`** 宣言にクラススコープが含まれています。 は、 **`static_assert`** テンプレートパラメーターが *plain old data* (ポッド) 型であることを確認します。 コンパイラは宣言 **`static_assert`** されているときに宣言を調べますが、 *constant-expression* `basic_string` クラステンプレートがでインスタンス化されるまで、定数式のパラメーターは評価されません `main()` 。
 
-## <a name="example-of-static_assert-with-class-scope"></a>クラススコープを持つ static_assert の例
+## <a name="example-static_assert-with-class-scope"></a>例: `static_assert` クラススコープを使用する
 
 ```cpp
 #include <type_traits>
@@ -83,11 +83,11 @@ int main()
 }
 ```
 
-## <a name="description"></a>説明
+## <a name="description-of-static_assert-with-block-scope"></a>`static_assert`ブロックスコープを使用したの説明
 
 次の例では、 **`static_assert`** 宣言にブロックスコープが含まれています。 は、 **`static_assert`** VMPage 構造のサイズがシステムの仮想メモリ pagesize と同じであることを確認します。
 
-## <a name="example"></a>例
+## <a name="example-static_assert-at-block-scope"></a>例: `static_assert` at ブロックのスコープ
 
 ```cpp
 #include <sys/param.h> // defines PAGESIZE

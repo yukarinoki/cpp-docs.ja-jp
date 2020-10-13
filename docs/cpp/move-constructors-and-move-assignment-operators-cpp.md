@@ -4,16 +4,16 @@ ms.date: 03/05/2018
 helpviewer_keywords:
 - move constructor [C++]
 ms.assetid: e75efe0e-4b74-47a9-96ed-4e83cfc4378d
-ms.openlocfilehash: 2c8fed15787ec4b347694d8c4e40bf7912f3421d
-ms.sourcegitcommit: d4da3693f83a24f840e320e35c24a4a07cae68e2
+ms.openlocfilehash: e57f67eeca93572b26ee03033cbe4dcf90431f78
+ms.sourcegitcommit: 43cee7a0d41a062661229043c2f7cbc6ace17fa3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/18/2020
-ms.locfileid: "83550772"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92008879"
 ---
 # <a name="move-constructors-and-move-assignment-operators-c"></a>移動コンストラクターと移動代入演算子 (C++)
 
-このトピックでは、C++ クラスの*移動コンストラクター*と移動代入演算子を記述する方法について説明します。 Move コンストラクターを使用すると、右辺値オブジェクトによって所有されているリソースを、コピーせずに左辺値に移動できます。 移動セマンティクスの詳細については、「[右辺値参照宣言子:  &&](../cpp/rvalue-reference-declarator-amp-amp.md)」を参照してください。
+このトピックでは、C++ クラスの *移動コンストラクター* と移動代入演算子を記述する方法について説明します。 Move コンストラクターを使用すると、右辺値オブジェクトによって所有されているリソースを、コピーせずに左辺値に移動できます。 移動セマンティクスの詳細については、「 [右辺値参照宣言子:  &&](../cpp/rvalue-reference-declarator-amp-amp.md)」を参照してください。
 
 このセクションは、メモリ バッファーを管理する次の C++ クラス、`MemoryBlock` に基づいています。
 
@@ -168,7 +168,7 @@ private:
     return *this;
     ```
 
-## <a name="example"></a>例
+## <a name="example-complete-move-constructor-and-assignment-operator"></a>例: 完全な移動コンストラクターと代入演算子
 
 次の例は、`MemoryBlock` クラスの完全な移動コンストラクターと移動代入演算子です。
 
@@ -217,7 +217,7 @@ MemoryBlock& operator=(MemoryBlock&& other) noexcept
 }
 ```
 
-## <a name="example"></a>例
+## <a name="example-use-move-semantics-to-improve-performance"></a>例移動セマンティクスを使用してパフォーマンスを向上させる
 
 次の例は、移動セマンティクスがアプリケーションのパフォーマンスをどのように改善するかを示します。 この例では、2 つの要素をベクター オブジェクトに追加し、2 つの既存の要素の間に新しい要素を挿入しています。 クラスは、 `vector` 移動セマンティクスを使用して、コピーではなくベクターの要素を移動して、挿入操作を効率的に実行します。
 

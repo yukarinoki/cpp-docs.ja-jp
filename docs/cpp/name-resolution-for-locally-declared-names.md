@@ -2,18 +2,18 @@
 title: ローカルに宣言された名前の名前解決
 ms.date: 11/04/2016
 ms.assetid: 743b88f3-de11-48f4-ae83-931449ea3886
-ms.openlocfilehash: 2c75c09308f6ba07039de4d2811b9bedaba71e44
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 0216154b55e9742c2c4f3f5df7e6d612e16ec9b1
+ms.sourcegitcommit: 43cee7a0d41a062661229043c2f7cbc6ace17fa3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80177899"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92008925"
 ---
 # <a name="name-resolution-for-locally-declared-names"></a>ローカルに宣言された名前の名前解決
 
 テンプレートの名前自体は、テンプレート引数の有無に関係なく参照できます。 クラス テンプレートのスコープ内で、名前がテンプレートを示します。 テンプレートの特殊化または部分的特殊化のスコープ内で、名前は単独で特殊化または部分的特殊化を示します。 テンプレートのその他の特化または部分的な特化は、適切なテンプレート引数を使用して参照できます。
 
-## <a name="example"></a>例
+## <a name="example-specialization-versus-partial-specialization"></a>例: 特殊化と部分的特殊化
 
 次のコードは、クラス テンプレートの名前 A が特殊化または部分的特殊化のスコープ内で異なる方法で解釈されることを示します。
 
@@ -35,7 +35,7 @@ template<> class A<int> {
 };
 ```
 
-## <a name="example"></a>例
+## <a name="example-name-conflict-between-template-parameter-and-object"></a>例: テンプレートパラメーターとオブジェクトの間で名前が競合しています
 
 テンプレート パラメーターと別のオブジェクト間で名前が競合するときは、テンプレート パラメーターを隠せる場合と隠せない場合があります。 次の規則は、優先度の決定に使用できます。
 
@@ -55,7 +55,7 @@ int main() {
 }
 ```
 
-## <a name="example"></a>例
+## <a name="example-define-member-function-outside-class-template"></a>例: クラステンプレートの外部でメンバー関数を定義する
 
 クラス テンプレートの外部でテンプレートのメンバー関数を定義するときは、異なるテンプレート パラメーター名を使用できます。 テンプレート メンバー関数定義で、テンプレート パラメーターに宣言とは異なる名前が使用され、定義で使用される名前が宣言の他のメンバーと競合する場合、テンプレート宣言のメンバーが優先されます。
 
@@ -90,7 +90,7 @@ int main() {
 Z::Z()
 ```
 
-## <a name="example"></a>例
+## <a name="example-define-template-or-member-function-outside-namespace"></a>例: 名前空間の外部のテンプレートまたはメンバー関数を定義する
 
 テンプレートが宣言された名前空間の外部でテンプレート関数またはメンバー関数を定義するときは、テンプレート引数が名前空間の他のメンバーの名前より優先されます。
 
@@ -124,7 +124,7 @@ int main() {
 C<T>::g
 ```
 
-## <a name="example"></a>例
+## <a name="example-base-class-or-member-name-hides-template-argument"></a>例: 基底クラスまたはメンバー名はテンプレート引数を隠します
 
 テンプレート クラス宣言の外側の定義で、テンプレート クラスに、テンプレート引数に依存しない基底クラスがあり、その基底クラスまたはそのメンバーがテンプレート引数と同じ名前である場合、基底クラスまたはメンバー名にはテンプレート引数が表示されません。
 
@@ -162,6 +162,6 @@ Base
 1
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [名前解決](../cpp/templates-and-name-resolution.md)

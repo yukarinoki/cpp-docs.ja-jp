@@ -26,12 +26,12 @@ helpviewer_keywords:
 - exception handling, changing
 - _set_se_translator function
 ms.assetid: 280842bc-d72a-468b-a565-2d3db893ae0f
-ms.openlocfilehash: f1c9446f9c3f0d637ea53d54584258959677b339
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 9de0c62b9e9a0bca0753d31ef64396e00c379253
+ms.sourcegitcommit: 43cee7a0d41a062661229043c2f7cbc6ace17fa3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87232418"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92008633"
 ---
 # <a name="_set_se_translator"></a>_set_se_translator
 
@@ -60,13 +60,13 @@ _se_translator_function _set_se_translator(
 
 **_Set_se_translator**を使用する場合は、 [/eha](../../build/reference/eh-exception-handling-model.md)を使用する必要があります。
 
-カスタム変換関数を指定するには、変換関数の名前を引数として使用して **_set_se_translator**を呼び出します。 記述する変換関数は、ブロックを持つスタック上の関数呼び出しごとに1回呼び出され **`try`** ます。 既定の変換関数はありません。
+カスタム変換関数を指定するには、変換関数の名前を引数として使用して **_set_se_translator** を呼び出します。 記述する変換関数は、ブロックを持つスタック上の関数呼び出しごとに1回呼び出され **`try`** ます。 既定の変換関数はありません。
 
 変換関数は、C++ 型の例外をスローする以外のことは何もすべきではありません。 スローに加えて何かを行う場合 (たとえば、ログ ファイルへの書き込みなど)、プログラムが期待どおりに動作しない可能性があります。それは、変換関数が呼び出される回数がプラットフォームに依存するためです。
 
-マルチスレッド環境では、変換関数は各スレッドとは別に管理されます。 新しい各スレッドは、それぞれの変換関数をインストールする必要があります。 したがって、各スレッドが、それぞれの変換処理を担当します。 **_set_se_translator**は、1つのスレッドに固有です。別の DLL で別の変換関数をインストールすることもできます。
+マルチスレッド環境では、変換関数は各スレッドとは別に管理されます。 新しい各スレッドは、それぞれの変換関数をインストールする必要があります。 したがって、各スレッドが、それぞれの変換処理を担当します。 **_set_se_translator** は、1つのスレッドに固有です。別の DLL で別の変換関数をインストールすることもできます。
 
-記述する*Setransfunction*関数は、ネイティブコンパイル関数 (/clr でコンパイルされません) である必要があります。 引数として、符号なし整数と Win32 **_EXCEPTION_POINTERS**構造体へのポインターを受け取る必要があります。 引数は、それぞれ Win32 API **Getexceptioncode**関数と**getexceptioncode**関数への呼び出しの戻り値です。
+記述する *Setransfunction* 関数は、ネイティブコンパイル関数 (/clr でコンパイルされません) である必要があります。 引数として、符号なし整数と Win32 **_EXCEPTION_POINTERS** 構造体へのポインターを受け取る必要があります。 引数は、それぞれ Win32 API **Getexceptioncode** 関数と **getexceptioncode** 関数への呼び出しの戻り値です。
 
 ```cpp
 typedef void (__cdecl *_se_translator_function)(unsigned int, struct _EXCEPTION_POINTERS* );
@@ -74,7 +74,7 @@ typedef void (__cdecl *_se_translator_function)(unsigned int, struct _EXCEPTION_
 
 **_Set_se_translator**の場合、CRT に動的にリンクするときには影響があります。プロセス内の別の DLL が **_set_se_translator**を呼び出し、ハンドラーをそれ自体のに置き換える場合があります。
 
-マネージコード (/clr でコンパイルされたコード) または混合ネイティブコードまたはマネージコードから **_set_se_translator**を使用する場合は、変換プログラムがネイティブコードでのみ生成される例外に影響することに注意してください。 マネージド コードで生成されるマネージド例外 (`System::Exception` の発生時のものなど) はいずれも、変換関数経由ではルーティングされません。 Win32 関数**RaiseException**を使用してマネージコードで発生した例外や、ゼロ除算例外などのシステム例外によって発生した例外は、変換プログラムを通じてルーティングされます。
+マネージコード (/clr でコンパイルされたコード) または混合ネイティブコードまたはマネージコードから **_set_se_translator** を使用する場合は、変換プログラムがネイティブコードでのみ生成される例外に影響することに注意してください。 マネージド コードで生成されるマネージド例外 (`System::Exception` の発生時のものなど) はいずれも、変換関数経由ではルーティングされません。 Win32 関数 **RaiseException** を使用してマネージコードで発生した例外や、ゼロ除算例外などのシステム例外によって発生した例外は、変換プログラムを通じてルーティングされます。
 
 ## <a name="requirements"></a>必要条件
 
@@ -84,7 +84,7 @@ typedef void (__cdecl *_se_translator_function)(unsigned int, struct _EXCEPTION_
 
 互換性について詳しくは、「 [Compatibility](../../c-runtime-library/compatibility.md)」をご覧ください。
 
-## <a name="example"></a>例
+## <a name="example-catch-__try-exception-error"></a>例: キャッチ __try 例外エラー
 
 このサンプルでは、の呼び出しをラップして、構造化例外変換器を設定し、RAII クラスで古いものを復元し `Scoped_SE_Translator` ます。 このクラスを使用すると、スコープ固有の変換を1つの宣言として導入できます。 クラスデストラクターは、コントロールがスコープから外れたときに元のトランスレーターを復元します。
 
@@ -157,7 +157,7 @@ In __finally
 Caught a __try exception, error c0000094.
 ```
 
-## <a name="example"></a>例
+## <a name="example-catch-se_exception-error"></a>例: キャッチ SE_Exception エラー
 
 **_Set_se_translator**によって提供される機能はマネージコードでは使用できませんが、ネイティブコードが **/clr**スイッチの下のコンパイルにある場合でも、ネイティブコードがを使用して指定されている限り、ネイティブコードでこのマッピングを使用でき `#pragma unmanaged` ます。 構造化例外が、マップされるマネージコードでスローされている場合は、例外を生成して処理するコードをとしてマークする必要があり `#pragma unmanaged` ます。 次のコードは考えられる使用法を示しています。 詳細については、「[プラグマ ディレクティブと __Pragma キーワード](../../preprocessor/pragma-directives-and-the-pragma-keyword.md)」を参照してください。
 
@@ -236,4 +236,4 @@ Caught SE_Exception, error c0000094
 [set_terminate](set-terminate-crt.md)<br/>
 [set_unexpected](set-unexpected-crt.md)<br/>
 [解約](terminate-crt.md)<br/>
-[不適切](unexpected-crt.md)<br/>
+[予期しない](unexpected-crt.md)<br/>

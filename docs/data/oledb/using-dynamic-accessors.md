@@ -5,12 +5,12 @@ helpviewer_keywords:
 - accessors [C++], dynamic
 - dynamic accessors
 ms.assetid: e5d5bfa6-2b1d-49d0-8ced-914666422431
-ms.openlocfilehash: eea1c6199fed5a4e6e331c1c76f34b96090b709a
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 4f42d6f20da819cf325cad06a04878b46e52352a
+ms.sourcegitcommit: 43cee7a0d41a062661229043c2f7cbc6ace17fa3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91509412"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92008674"
 ---
 # <a name="using-dynamic-accessors"></a>動的アクセサーの使用
 
@@ -22,7 +22,7 @@ ms.locfileid: "91509412"
 
 [CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md) を使用すると、データベーススキーマ (データベースの基になる構造) に関する知識がなくても、データソースにアクセスできます。 `CDynamicAccessor` メソッドは、列名、カウント、データ型などの列情報を取得します。 この列情報は、実行時にアクセサーを動的に作成するために使用します。 列情報は、このクラスによって作成および管理されるバッファーに格納されます。 [GetValue](./cdynamicaccessor-class.md#getvalue)メソッドを使用してバッファーからデータを取得します。
 
-## <a name="example"></a>例
+## <a name="example-cdynamic-accessors"></a>例: CDynamic アクセサー
 
 ```cpp
 // Using_Dynamic_Accessors.cpp
@@ -94,7 +94,7 @@ int main(int argc, char* argv[] )
 
 `CDynamicStringAccessor`列情報を取得するには、メソッドを使用します。 この列情報は、実行時にアクセサーを動的に作成するために使用します。 列情報は、このクラスによって作成および管理されるバッファーに格納されます。 [CDynamicStringAccessor:: GetString](./cdynamicstringaccessor-class.md#getstring)を使用してバッファーからデータを取得するか、 [CDynamicStringAccessor:: setstring](./cdynamicstringaccessor-class.md#setstring)を使用してバッファーに格納します。
 
-## <a name="example"></a>例
+## <a name="example-cdynamicstringaccessor"></a>例: CDynamicStringAccessor
 
 ```cpp
 // Using_Dynamic_Accessors_b.cpp

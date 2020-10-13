@@ -6,30 +6,30 @@ helpviewer_keywords:
 - MFC [C++], hosting a Windows Forms Control
 - Windows Forms [C++], MFC support
 ms.assetid: b2957370-cf1f-4779-94ac-228cd393686c
-ms.openlocfilehash: 31629a4db2559112ba49f5c069b08de7abdfc2db
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: a0759eba1c55e72f2c0a99964b0b2d254df82a25
+ms.sourcegitcommit: 43cee7a0d41a062661229043c2f7cbc6ace17fa3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81754351"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92008313"
 ---
 # <a name="how-to-do-ddxddv-data-binding-with-windows-forms"></a>方法: Windows フォームで DDX/DDV データ バインドを実行する
 
-[DDX_ManagedControl](../mfc/reference/standard-dialog-data-exchange-routines.md#ddx_managedcontrol)呼び出し[CWinFormsControl::CreateManagedControl](../mfc/reference/cwinformscontrol-class.md#createmanagedcontrol)リソース コントロール ID に一致するコントロールを作成します。 コントロール (`DDX_ManagedControl`ウィザードによって生成されたコード) に使用する場合は、同`CreateManagedControl`じコントロールに対して明示的に呼び出す必要はありません。 `CWinFormsControl`
+[DDX_ManagedControl](../mfc/reference/standard-dialog-data-exchange-routines.md#ddx_managedcontrol) は、 [CWinFormsControl:: CreateManagedControl](../mfc/reference/cwinformscontrol-class.md#createmanagedcontrol) を呼び出して、リソースコントロール ID に一致するコントロールを作成します。 を `DDX_ManagedControl` `CWinFormsControl` (ウィザードで生成されたコードで) コントロールに対して使用する場合は、 `CreateManagedControl` 同じコントロールに対してを明示的に呼び出すことはできません。
 
-`DDX_ManagedControl` [CWnd::DoDataExchange](../mfc/reference/cwnd-class.md#dodataexchange)を呼び出して、リソース ID からコントロールを作成します。 データ交換の場合、Windows フォーム コントロールで DDX/DDV 関数を使用する必要はありません。 代わりに、次の例のように、ダイアログ (またはビュー) クラス`DoDataExchange`のメソッドでマネージ コントロールのプロパティにアクセスするコードを配置できます。
+`DDX_ManagedControl` [CWnd::D odataexchange](../mfc/reference/cwnd-class.md#dodataexchange)でを呼び出して、リソース id からコントロールを作成します。 データ交換では、Windows フォームコントロールで DDX/DDV 関数を使用する必要はありません。 代わりに、 `DoDataExchange` 次の例に示すように、ダイアログ (またはビュー) クラスのメソッドでマネージコントロールのプロパティにアクセスするコードを配置できます。
 
-ネイティブ C++ 文字列を .NET ユーザー コントロールにバインドする方法を次の例に示します。
+次の例は、ネイティブ C++ 文字列を .NET ユーザーコントロールにバインドする方法を示しています。
 
-## <a name="example"></a>例
+## <a name="example-ddxddv-data-binding"></a>例: DDX/DDV データバインディング
 
-次に示す例は、.NET ユーザー コントロールのユーザー定義`m_str``NameText`プロパティを使用した MFC 文字列の DDX/DDV データ バインディングの例です。
+次に、 `m_str` .net ユーザーコントロールのユーザー定義プロパティを使用した MFC 文字列の DDX/DDV データバインドの例を示し `NameText` ます。
 
-コントロールは[、CDialog::OnInitDialog](../mfc/reference/cdialog-class.md#oninitdialog)が初`CMyDlg::DoDataExchange`めて呼び出されたときに作成されるため、参照`m_UserControl`するコードは呼び`DDX_ManagedControl`出しの後に指定する必要があります。
+このコントロールは、 [CDialog:: OnInitDialog](../mfc/reference/cdialog-class.md#oninitdialog) が初めてを呼び出したときに作成され `CMyDlg::DoDataExchange` ます。そのため、を参照するコードは、 `m_UserControl` 呼び出しの後に指定する必要があり `DDX_ManagedControl` ます。
 
-このコードは、「方法 : ダイアログ ボックスでユーザー[コントロールとホストを作成する](../dotnet/how-to-create-the-user-control-and-host-in-a-dialog-box.md)」で作成した MFC01 アプリケーションに実装できます。
+このコードは、 [「方法: ダイアログボックスにユーザーコントロールとホストを作成](../dotnet/how-to-create-the-user-control-and-host-in-a-dialog-box.md)する」で作成した mfc01] アプリケーションで実装できます。
 
-CMFC01Dlg の宣言に次のコードを記述します。
+CMFC01Dlg の宣言に次のコードを追加します。
 
 ```
 class CMFC01Dlg : public CDialog
@@ -39,7 +39,7 @@ class CMFC01Dlg : public CDialog
 };
 ```
 
-## <a name="example"></a>例
+## <a name="example-implement-dodataexchange"></a>例: DoDataExchange () を実装する
 
 CMFC01Dlg の実装に次のコードを記述します。
 
@@ -58,11 +58,11 @@ void CMFC01Dlg::DoDataExchange(CDataExchange* pDX)
 }
 ```
 
-## <a name="example"></a>例
+## <a name="example-add-handler-method"></a>例: ハンドラーメソッドの追加
 
-次に、[OK] ボタンをクリックするためのハンドラメソッドを追加します。 [**リソース ビュー** ] タブをクリックします。リソース ビューで、`IDD_MFC01_DIALOG`をダブルクリックします。 リソース エディターにダイアログ リソースが表示されます。 次に、[OK]ボタンをダブルクリックします。
+次に、[OK] ボタンをクリックするためのハンドラーメソッドを追加します。 [ **リソースビュー** ] タブをクリックします。リソースビューで、[] をダブルクリックし `IDD_MFC01_DIALOG` ます。 リソース エディターにダイアログ リソースが表示されます。 次に、[OK] ボタンをダブルクリックします。
 
-ハンドラを次のように定義します。
+次のようにハンドラーを定義します。
 
 ```cpp
 void CMFC01Dlg::OnBnClickedOk()
@@ -72,15 +72,15 @@ void CMFC01Dlg::OnBnClickedOk()
 }
 ```
 
-## <a name="example"></a>例
+## <a name="example-set-the-textbox-text"></a>例: テキストボックスのテキストを設定する
 
-そして、BOOL CMFC01Dlg::OnInitDialog() の実装に次の行を追加します。
+次の行を、BOOL CMFC01Dlg:: OnInitDialog () の実装に追加します。
 
 ```
 m_MyControl.GetControl()->textBox1->Text = "hello";
 ```
 
-アプリケーションをビルドして実行できる状態になりました。 アプリケーションを閉じると、テキスト ボックス内のテキストがポップアップ メッセージ ボックスに表示されます。
+アプリケーションをビルドして実行できる状態になりました。 アプリケーションを閉じると、テキストボックス内のテキストがポップアップメッセージボックスに表示されます。
 
 ## <a name="see-also"></a>関連項目
 

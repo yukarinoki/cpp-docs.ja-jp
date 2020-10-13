@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - std::tuple_element
 ms.assetid: 4c51a6c1-ce81-462f-8c6c-291d69f2b77c
-ms.openlocfilehash: 21efed39fdaabe0f95f83e9dc5cdfcc508a147c5
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: be9d9fe56d35e96e4179eb511edccd475a369f32
+ms.sourcegitcommit: 43cee7a0d41a062661229043c2f7cbc6ace17fa3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72684463"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92008287"
 ---
 # <a name="tuple_element-class"></a>tuple_element クラス
 
@@ -56,37 +56,37 @@ template <class T1, class T2>
 
 ### <a name="parameters"></a>パラメーター
 
-*インデックス*\
+*[インデックス]* \
 指定した要素のインデックス。
 
-*タプル*の \
+*タプル*\
 タプルの型。
 
-*Elem* \
+*Elem*\
 配列要素の型。
 
-@No__t_1*サイズ*
+*サイズ*\
 配列のサイズ。
 
-*T1* \
+*T1*\
 ペア内の最初の要素の型。
 
-*T2* \
+*T2*\
 ペアの 2 番目の要素の型。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-クラステンプレート `tuple_element` には、タプル型の*タプル*のインデックス*インデックス*にある型のシノニムである、入れ子になった typedef `type` が含まれています。
+クラステンプレートには、 `tuple_element` `type` タプル型の*タプル*のインデックス*インデックス*にある型のシノニムである、入れ子になった typedef があります。
 
 Typedef `tuple_element_t` は `tuple_element<Index, Tuple>::type` の便利なエイリアスです。
 
-配列のクラステンプレートの特殊化によって、`Size` 要素の組として `array` へのインターフェイスが提供されます。各要素の型は同じです。 それぞれの特殊化には、`array` の*Index*要素の型のシノニムであり、const volatile の制限が保持されている `type` 入れ子になった typedef があります。
+配列のクラステンプレートの特殊化は、 `array` 要素の組としてのインターフェイスを提供し `Size` ます。各要素は同じ型を持ちます。 それぞれの特殊化には `type` 、の *Index* 要素の型のシノニムである入れ子になった typedef があり `array` ます。 const volatile の制限が保持されます。
 
 `pair` の型のテンプレートの特殊化では、それぞれ 1 つのメンバーの typedef である `type` を提供します。これはペアの指定された位置にある要素の型のシノニムであり、const または volatile の制限が保持されます。 Typedef `tuple_element_t` は `tuple_element<N, pair<T1, T2>>::type` の便利なエイリアスです。
 
-[Get 関数 &lt;utility &gt;](../standard-library/utility-functions.md#get)を使用して、指定した位置、または指定した型の要素を返します。
+[Get Function &lt; ユーティリティ &gt; ](../standard-library/utility-functions.md#get)を使用して、指定した位置、または指定した型の要素を返します。
 
-## <a name="example"></a>例
+## <a name="example-get-an-element-from-a-tuple"></a>例: 組から要素を取得する
 
 ```cpp
 #include <tuple>
@@ -111,7 +111,7 @@ int main() {
 0 1.5 Tail
 ```
 
-## <a name="example"></a>例
+## <a name="example-get-an-element-from-an-array"></a>例: 配列から要素を取得する
 
 ```cpp
 #include <array>
@@ -141,7 +141,7 @@ int main()
 0
 ```
 
-## <a name="example"></a>例
+## <a name="example-get-an-element-from-a-pair"></a>例: ペアから要素を取得する
 
 ```cpp
 #include <utility>
@@ -172,12 +172,12 @@ int main() {
 0 1.333
 ```
 
-## <a name="requirements"></a>［要件］
+## <a name="requirements"></a>必要条件
 
-**ヘッダー:** \<tuple>
+**ヘッダー:**\<tuple>
 
 **ヘッダー:** \<array> (配列の特殊化用)
 
-**ヘッダー:** \<utility > (ペアの特殊化用)
+**ヘッダー:** \<utility> (ペアの特殊化の場合)
 
 **名前空間:** std

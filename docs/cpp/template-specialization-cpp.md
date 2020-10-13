@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - partial specialization of class templates
 ms.assetid: f3c67c0b-3875-434a-b8d8-bb47e99cf4f0
-ms.openlocfilehash: 17f1f15a5356d760119123214e939a7dd2d1fbaf
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 7f71c2c3862bd015ba3edcd17aeac85472eb2562
+ms.sourcegitcommit: 43cee7a0d41a062661229043c2f7cbc6ace17fa3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87223578"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92008914"
 ---
 # <a name="template-specialization-c"></a>クラス テンプレートの部分的特殊化 (C++)
 
@@ -19,7 +19,7 @@ ms.locfileid: "87223578"
 
 - テンプレートには型は 1 つだけですが、特殊化は、ポインター、参照、メンバーへのポインター、または関数ポインターの型に必要です。 特殊化自体は、ポイントまたは参照される型のテンプレートです。
 
-## <a name="example"></a>例
+## <a name="example-partial-specialization-of-class-templates"></a>例: クラステンプレートの部分的特殊化
 
 ```cpp
 // partial_specialization_of_class_templates.cpp
@@ -66,7 +66,7 @@ PTS<S*>::IsPointer == 1 PTS<S*>::IsPointerToDataMember ==0
 PTS<int S::*>::IsPointer == 0 PTS<int S::*>::IsPointerToDataMember == 1
 ```
 
-## <a name="example"></a>例
+## <a name="example-partial-specialization-for-pointer-types"></a>例: ポインター型の部分的特殊化
 
 任意の型を受け取るテンプレートコレクションクラスがある場合は `T` 、任意のポインター型を受け取る部分的特殊化を作成でき `T*` ます。 次のコードは、コレクション クラス テンプレート `Bag` と、配列にコピーする前にコレクションがポインター型を逆参照するポインター型の部分的特殊化を示します。 次に、コレクションは、指されている値を格納します。 元のテンプレートでは、ポインター自体だけがコレクションに格納され、データは削除や変更の危険性がある状態のままにされます。 コレクションのこの特殊なポインター バージョンでは、`add` メソッドの null ポインターを確認するコードが追加されます。
 
@@ -178,7 +178,7 @@ Null pointer!
 3 87 8 100
 ```
 
-## <a name="example"></a>例
+## <a name="example-define-partial-specialization-so-one-type-is-int"></a>例: 部分的特殊化を定義して、1つの型を `int`
 
 次の例では、任意の2つの型のペアを受け取り、型の1つがであるように特殊化されたそのテンプレートクラスの部分的特殊化を定義するテンプレートクラスを定義して **`int`** います。 特殊化では、整数に基づいて簡単なバブル ソートを実装する追加のソート メソッドを定義します。
 

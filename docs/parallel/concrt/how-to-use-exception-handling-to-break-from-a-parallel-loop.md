@@ -5,32 +5,32 @@ helpviewer_keywords:
 - search algorithm, writing [Concurrency Runtime]
 - writing a search algorithm [Concurrency Runtime]
 ms.assetid: 16d7278c-2d10-4014-9f58-f1899e719ff9
-ms.openlocfilehash: 9cf42df0926022f93633a6b5b1365ae9fc646a1a
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: f6842e3093a577289c0c4432d96298e3c7b2bb92
+ms.sourcegitcommit: 43cee7a0d41a062661229043c2f7cbc6ace17fa3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87213919"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92008503"
 ---
 # <a name="how-to-use-exception-handling-to-break-from-a-parallel-loop"></a>方法: 例外処理を使用して並列ループを中断する
 
 このトピックでは、基本的なツリー構造の検索アルゴリズムを記述する方法について説明します。
 
-このトピックでは、並列パターンライブラリに[おけるキャンセルの](cancellation-in-the-ppl.md)役割について説明します。 例外処理の使用は、 [concurrency:: task_group:: cancel](reference/task-group-class.md#cancel)メソッドと[concurrency:: structured_task_group:: cancel](reference/structured-task-group-class.md#cancel)メソッドを使用する場合よりも、並列処理を取り消す方法としてはあまり効率的ではありません。 ただし、例外処理を使用して作業を取り消す場合は、タスクまたは並列アルゴリズムを使用するサードパーティ製のライブラリを呼び出すときに、 `task_group` キャンセルするオブジェクトまたはオブジェクトを提供しないというシナリオがあり `structured_task_group` ます。
+このトピックでは、並列パターンライブラリに [おけるキャンセルの](cancellation-in-the-ppl.md) 役割について説明します。 例外処理の使用は、 [concurrency:: task_group:: cancel](reference/task-group-class.md#cancel) メソッドと [concurrency:: structured_task_group:: cancel](reference/structured-task-group-class.md#cancel) メソッドを使用する場合よりも、並列処理を取り消す方法としてはあまり効率的ではありません。 ただし、例外処理を使用して作業を取り消す場合は、タスクまたは並列アルゴリズムを使用するサードパーティ製のライブラリを呼び出すときに、 `task_group` キャンセルするオブジェクトまたはオブジェクトを提供しないというシナリオがあり `structured_task_group` ます。
 
-## <a name="example"></a>例
+## <a name="example-basic-tree-type"></a>例: 基本的なツリーの種類
 
 次の例は、 `tree` データ要素と子ノードのリストを含む基本的な型を示しています。 次のセクションでは、 `for_all` 各子ノードで処理関数を再帰的に実行するメソッドの本体について説明します。
 
 [!code-cpp[concrt-task-tree-search#2](../../parallel/concrt/codesnippet/cpp/how-to-use-exception-handling-to-break-from-a-parallel-loop_1.cpp)]
 
-## <a name="example"></a>例
+## <a name="example-perform-work-in-parallel"></a>例: 並列での作業の実行
 
 次の例は、メソッドを示して `for_all` います。 [同時実行::p arallel_for_each](reference/concurrency-namespace-functions.md#parallel_for_each)アルゴリズムを使用して、ツリーの各ノードで処理関数を並列に実行します。
 
 [!code-cpp[concrt-task-tree-search#1](../../parallel/concrt/codesnippet/cpp/how-to-use-exception-handling-to-break-from-a-parallel-loop_2.cpp)]
 
-## <a name="example"></a>例
+## <a name="example--search-the-tree-for-a-value"></a>例: ツリーで値を検索する
 
 次の例は `search_for_value` 関数で、提供された `tree` オブジェクト内で値を検索します。 この関数は、 `for_all` 指定された値を含むツリーノードが見つかったときにスローする処理関数をメソッドに渡します。
 
@@ -40,15 +40,15 @@ ms.locfileid: "87213919"
 
 [!code-cpp[concrt-task-tree-search#3](../../parallel/concrt/codesnippet/cpp/how-to-use-exception-handling-to-break-from-a-parallel-loop_3.cpp)]
 
-## <a name="example"></a>例
+## <a name="example-create-and-search-a-tree-in-parallel"></a>例: ツリーを並行して作成および検索する
 
 次の例では、オブジェクトを作成 `tree` し、複数の値を並行して検索します。 関数について `build_tree` は、このトピックの後半で説明します。
 
 [!code-cpp[concrt-task-tree-search#4](../../parallel/concrt/codesnippet/cpp/how-to-use-exception-handling-to-break-from-a-parallel-loop_4.cpp)]
 
-この例では、 [concurrency::p arallel_invoke](reference/concurrency-namespace-functions.md#parallel_invoke)アルゴリズムを使用して、値を並列に検索します。 このアルゴリズムの詳細については、「[並列アルゴリズム](../../parallel/concrt/parallel-algorithms.md)」を参照してください。
+この例では、 [concurrency::p arallel_invoke](reference/concurrency-namespace-functions.md#parallel_invoke) アルゴリズムを使用して、値を並列に検索します。 このアルゴリズムの詳細については、「 [並列アルゴリズム](../../parallel/concrt/parallel-algorithms.md)」を参照してください。
 
-## <a name="example"></a>例
+## <a name="example-finished-exception-handling-code-sample"></a>例: 完成した例外処理のコードサンプル
 
 次の完全な例では、例外処理を使用して、基本的なツリー構造の値を検索します。
 

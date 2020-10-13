@@ -6,12 +6,12 @@ ms.topic: conceptual
 helpviewer_keywords:
 - DLL conflicts [C++]
 ms.assetid: c217ffd2-5d9a-4678-a1df-62a637a96460
-ms.openlocfilehash: f6d831ac8b86be8a6669e8ee6c66da64507d129f
-ms.sourcegitcommit: 9451db8480992017c46f9d2df23fb17b503bbe74
+ms.openlocfilehash: 2d42803b5eca7a43f122d209b7d9e2d4e45c38de
+ms.sourcegitcommit: 43cee7a0d41a062661229043c2f7cbc6ace17fa3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91590187"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92008937"
 ---
 # <a name="potential-errors-passing-crt-objects-across-dll-boundaries"></a>DLL の境界を越えて CRT オブジェクトを渡す場合に発生する可能性のあるエラー
 
@@ -33,7 +33,7 @@ CRT ライブラリの各コピーには独自のヒープマネージャーが�
 
 DLL とそのクライアントは通常、読み込み時に両方とも同じバージョンの CRT DLL にリンクされている場合にのみ、CRT ライブラリの同じコピーを使用します。 Visual Studio 2015 によって使用されているユニバーサル CRT ライブラリの DLL バージョンと、それ以降の Windows 10 は、中央に配置された Windows コンポーネント (ucrtbase.dll) であるため、Visual Studio 2015 以降のバージョンでビルドされたアプリでも同じです。 ただし、CRT コードが同一であっても、あるヒープで割り当てられたメモリを別のヒープを使用するコンポーネントに割り当てることはできません。
 
-## <a name="example"></a>例
+## <a name="example-pass-file-handle-across-dll-boundary"></a>例: DLL の境界を越えてファイルハンドルを渡す
 
 ### <a name="description"></a>説明
 
@@ -75,7 +75,7 @@ int main(void)
 this is a string
 ```
 
-## <a name="example"></a>例
+## <a name="example-pass-environment-variables-across-dll-boundary"></a>例: DLL の境界を越えて環境変数を渡す
 
 ### <a name="description"></a>説明
 

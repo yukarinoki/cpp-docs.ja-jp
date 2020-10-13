@@ -49,12 +49,12 @@ helpviewer_keywords:
 - sprintf_l function
 - formatted text [C++]
 ms.assetid: f6efe66f-3563-4c74-9455-5411ed939b81
-ms.openlocfilehash: 9a3f10fc89d93717edfb032dea910040589c1254
-ms.sourcegitcommit: 8645408c7929558b8162f781776d0908d790a41c
+ms.openlocfilehash: da3c5b3660b481fd3a7140adbc236f44cd51f37e
+ms.sourcegitcommit: 43cee7a0d41a062661229043c2f7cbc6ace17fa3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85334947"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92008821"
 ---
 # <a name="sprintf-_sprintf_l-swprintf-_swprintf_l-__swprintf_l"></a>sprintf、_sprintf_l、swprintf、_swprintf_l、__swprintf_l
 
@@ -129,18 +129,18 @@ int _sprintf_l(
 
 ## <a name="return-value"></a>戻り値
 
-書き込まれた文字数。エラーが発生した場合は-1。 *Buffer*または*format*が null ポインターの場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、これらの関数は-1 を返し、 **errno**を**EINVAL**に設定します。
+書き込まれた文字数。エラーが発生した場合は-1。 *Buffer*または*format*が null ポインターの場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、これらの関数は-1 を返し、 **errno** を **EINVAL**に設定します。
 
-**sprintf**は、*バッファー*に格納されているバイト数を返します。終端の null 文字はカウントされません。 **swprintf**は、*バッファー*に格納されているワイド文字の数を返します。終端の null ワイド文字はカウントされません。
+**sprintf** は、 *バッファー*に格納されているバイト数を返します。終端の null 文字はカウントされません。 **swprintf** は、 *バッファー*に格納されているワイド文字の数を返します。終端の null ワイド文字はカウントされません。
 
-## <a name="remarks"></a>注釈
+## <a name="remarks"></a>解説
 
 **Sprintf**関数は、一連の文字と値の書式を設定し、*バッファー*に格納します。 各*引数*(存在する場合) は、対応する書式指定に従って変換および出力さ*れます。* 形式は通常の文字で構成され、 [printf](printf-printf-l-wprintf-wprintf-l.md)の*format*引数と同じ形式と機能を持ちます。 最後に書き込まれる文字の後に NULL 文字が追加されます。 重なり合う文字列間でコピーした場合の動作は未定義です。
 
 > [!IMPORTANT]
-> **Sprintf**を使用すると、書き込まれる文字数を制限することはできません。これは、 **sprintf**を使用するコードがバッファーオーバーランの影響を受ける可能性があることを意味します。 関連する関数[_snprintf](snprintf-snprintf-snprintf-l-snwprintf-snwprintf-l.md)を使用することを検討してください。これは、*バッファー*に書き込む最大文字数を指定するか、 [_scprintf](scprintf-scprintf-l-scwprintf-scwprintf-l.md)を使用してバッファーのサイズを決定します。 また、*形式*がユーザー定義の文字列ではないことを確認します。
+> **Sprintf**を使用すると、書き込まれる文字数を制限することはできません。これは、 **sprintf**を使用するコードがバッファーオーバーランの影響を受ける可能性があることを意味します。 関連する関数 [_snprintf](snprintf-snprintf-snprintf-l-snwprintf-snwprintf-l.md)を使用することを検討してください。これは、 *バッファー*に書き込む最大文字数を指定するか、 [_scprintf](scprintf-scprintf-l-scwprintf-scwprintf-l.md) を使用してバッファーのサイズを決定します。 また、 *形式* がユーザー定義の文字列ではないことを確認します。
 
-**swprintf**は、 **sprintf**のワイド文字バージョンです。**swprintf**へのポインター引数はワイド文字列です。 **Swprintf**でのエンコードエラーの検出は、 **sprintf**とは異なる場合があります。 **swprintf**と**fwprintf**は同じように動作します。ただし、 **swprintf**は型**ファイル**の出力先ではなく文字列に出力します。 **swprintf**では、書き込む最大文字数を指定するために*count*パラメーターが必要です。 **_L**サフィックスを持つこれらの関数のバージョンは、現在のスレッドロケールの代わりに渡されたロケールパラメーターを使用する点を除いて同じです。
+**swprintf** は、 **sprintf**のワイド文字バージョンです。 **swprintf** へのポインター引数はワイド文字列です。 **Swprintf**でのエンコードエラーの検出は、 **sprintf**とは異なる場合があります。 **swprintf** と **fwprintf** は同じように動作します。ただし、 **swprintf** は型 **ファイル**の出力先ではなく文字列に出力します。 **swprintf** では、書き込む最大文字数を指定するために *count* パラメーターが必要です。 **_L**サフィックスを持つこれらの関数のバージョンは、現在のスレッドロケールの代わりに渡されたロケールパラメーターを使用する点を除いて同じです。
 
 **swprintf**は ISO C 規格に準拠しています。これには**size_t**型の2番目のパラメーター *count*が必要です。 古い非標準の動作を強制するには、 **_CRT_NON_CONFORMING_SWPRINTFS**を定義します。 この古い動作は、将来的には削除される可能性があるので、規格に準拠した新しい動作を使用するようにコードを変更する必要があります。
 
@@ -162,7 +162,7 @@ C++ では、これらの関数にテンプレートのオーバーロードが�
 
 互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
-## <a name="example"></a>例
+## <a name="example-use-sprintf-to-format-data"></a>例: sprintf を使用したデータの書式設定
 
 ```C
 // crt_sprintf.c
@@ -199,7 +199,7 @@ Output:
 character count = 79
 ```
 
-## <a name="example"></a>例
+## <a name="example-error-code-handling"></a>例: エラーコードの処理
 
 ```C
 // crt_swprintf.c

@@ -44,12 +44,12 @@ helpviewer_keywords:
 - _sprintf_s_l function
 - formatted text [C++]
 ms.assetid: 424f0a29-22ef-40e8-b565-969f5f57782f
-ms.openlocfilehash: 34b3ddce68563479b26abff34e8fa31f6298558a
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 006b0f84494466b5c23a8c86f586774b66839b03
+ms.sourcegitcommit: 43cee7a0d41a062661229043c2f7cbc6ace17fa3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70958018"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92008835"
 ---
 # <a name="sprintf_s-_sprintf_s_l-swprintf_s-_swprintf_s_l"></a>sprintf_s、_sprintf_s_l、swprintf_s、_swprintf_s_l
 
@@ -100,7 +100,7 @@ int swprintf_s(
 
 ### <a name="parameters"></a>パラメーター
 
-*バッファー*<br/>
+*格納*<br/>
 出力の格納場所。
 
 *sizeOfBuffer*<br/>
@@ -115,45 +115,45 @@ int swprintf_s(
 *locale*<br/>
 使用するロケール。
 
-詳細については、「 [printf 関数と wprintf 関数の書式指定フィールド](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)」を参照してください。
+詳細については、[書式の指定](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)に関する記事をご覧ください。
 
 ## <a name="return-value"></a>戻り値
 
-書き込まれた文字数。エラーが発生した場合は-1。 *Buffer*または*format*が null ポインターの場合、 **sprintf_s**と**swprintf_s**は-1 を返し、 **errno**を**EINVAL**に設定します。
+書き込まれた文字数。エラーが発生した場合は-1。 *バッファー*または*形式*が null ポインターの場合は、 **sprintf_s**して**swprintf_s**を返し、 **errno**を**EINVAL**に設定します。
 
-**sprintf_s**は、*バッファー*に格納されているバイト数を返します。終端の null 文字はカウントされません。 **swprintf_s**は、*バッファー*に格納されているワイド文字の数を返します。終端の null ワイド文字はカウントされません。
+**sprintf_s** は、 *バッファー*に格納されているバイト数を返します。終端の null 文字はカウントされません。 **swprintf_s** は、 *バッファー*に格納されているワイド文字数を返します。終端の null ワイド文字はカウントされません。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 **Sprintf_s**関数は、一連の文字と値の書式を設定し、*バッファー*に格納します。 各*引数*(存在する場合) は、対応する書式指定に従って変換および出力さ*れます。* 形式は通常の文字で構成され、 [printf](printf-printf-l-wprintf-wprintf-l.md)の*format*引数と同じ形式と機能を持ちます。 最後に書き込まれる文字の後に NULL 文字が追加されます。 重なり合う文字列間でコピーした場合の動作は未定義です。
 
-**Sprintf_s**と[sprintf](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)の主な違いは、 **sprintf_s**では書式指定文字列が有効な書式指定文字であることを確認するのに対し、 [sprintf](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)では書式指定文字列またはバッファーが**NULL**ポインターであるかどうかのみをチェックするためです。 いずれかのチェックが失敗した場合、「 [Parameter Validation](../../c-runtime-library/parameter-validation.md)」に説明されているように、無効なパラメーター ハンドラーが呼び出されます。 実行の継続が許可された場合、この関数は-1 を返し、 **errno**を**EINVAL**に設定します。
+**Sprintf_s**と[sprintf](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)の主な違いの1つは、 **sprintf_s**によって書式文字列が有効な書式設定文字であるかどうかを確認するのに対し、 [sprintf](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)では書式文字列またはバッファーが**NULL**ポインターであるかどうかのみをチェックするためです。 いずれかのチェックが失敗した場合、「 [Parameter Validation](../../c-runtime-library/parameter-validation.md)」に説明されているように、無効なパラメーター ハンドラーが呼び出されます。 実行の継続が許可された場合、この関数は-1 を返し、 **errno** を **EINVAL**に設定します。
 
-**Sprintf_s**と[sprintf](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)のもう1つの主な違いは、 **sprintf_s**では、出力バッファーのサイズを文字数で指定する長さのパラメーターを受け取ることです。 バッファーが、終端の null を含め、書式設定されたテキストに対して小さすぎる場合は、*バッファー [0*] に null 文字を配置することでバッファーが空の文字列に設定され、無効なパラメーターハンドラーが呼び出されます。 **_Snprintf**とは異なり、 **sprintf_s**では、バッファーサイズがゼロでない限り、バッファーは null で終わることが保証されます。
+**Sprintf_s**と[sprintf](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)のもう1つの主な違いは、 **sprintf_s**では、出力バッファーのサイズを文字数で指定する長さのパラメーターを受け取ることです。 バッファーが、終端の null を含め、書式設定されたテキストに対して小さすぎる場合は、 *バッファー [0*] に null 文字を配置することでバッファーが空の文字列に設定され、無効なパラメーターハンドラーが呼び出されます。 **_Snprintf**とは異なり、 **sprintf_s**では、バッファーサイズがゼロでない限り、バッファーは null で終わることが保証されます。
 
-**swprintf_s**は、 **sprintf_s**のワイド文字バージョンです。**swprintf_s**へのポインター引数はワイド文字列です。 **Swprintf_s**でのエンコードエラーの検出は、 **sprintf_s**の場合とは異なる場合があります。 **_L**サフィックスを持つこれらの関数のバージョンは、現在のスレッドロケールの代わりに渡されたロケールパラメーターを使用する点を除いて同じです。
+**swprintf_s** は **sprintf_s**のワイド文字バージョンです。 **swprintf_s** するポインター引数はワイド文字列です。 **Swprintf_s**でのエンコードエラーの検出は、 **sprintf_s**とは異なる場合があります。 **_L**サフィックスを持つこれらの関数のバージョンは、現在のスレッドロケールの代わりに渡されたロケールパラメーターを使用する点を除いて同じです。
 
-C++ では、これらの関数の使用はテンプレートのオーバーロードによって簡素化されます。オーバーロードでは、バッファー長を自動的に推論できる (サイズの引数を指定する必要がなくなる) だけでなく、古くてセキュリティが万全ではない関数を新しく安全な関数に自動的に置き換えることができます。 詳細については、「 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)」を参照してください。
+C++ では、これらの関数の使用はテンプレートのオーバーロードによって簡素化されます。オーバーロードでは、バッファー長を自動的に推論できる (サイズの引数を指定する必要がなくなる) だけでなく、古くてセキュリティが万全ではない関数を新しく安全な関数に自動的に置き換えることができます。 詳細については、「[セキュリティ保護されたテンプレート オーバーロード](../../c-runtime-library/secure-template-overloads.md)」を参照してください。
 
-バッファーが小さすぎる場合に何が起こるかについて、追加の制御を提供する**sprintf_s**のバージョンがあります。 詳細については、「 [_snprintf_s, _snprintf_s_l, _snwprintf_s, _snwprintf_s_l](snprintf-s-snprintf-s-l-snwprintf-s-snwprintf-s-l.md)」を参照してください。
+バッファーが小さすぎる場合に何が起こるかについて、追加の制御を提供する **sprintf_s** のバージョンがあります。 詳細については、「 [_snprintf_s, _snprintf_s_l, _snwprintf_s, _snwprintf_s_l](snprintf-s-snprintf-s-l-snwprintf-s-snwprintf-s-l.md)」を参照してください。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
 |TCHAR.H のルーチン|_UNICODE および _MBCS が未定義の場合|_MBCS が定義されている場合|_UNICODE が定義されている場合|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**stprintf_s (_d)**|**sprintf_s**|**sprintf_s**|**swprintf_s**|
+|**_stprintf_s**|**sprintf_s**|**sprintf_s**|**swprintf_s**|
 |**_stprintf_s_l**|**_sprintf_s_l**|**_sprintf_s_l**|**_swprintf_s_l**|
 
 ## <a name="requirements"></a>必要条件
 
 |ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
-|**sprintf_s**、 **_sprintf_s_l**|C: \<stdio.h><br /><br /> C++: \<cstdio> または \<stdio.h>|
-|**swprintf_s**、 **_swprintf_s_l**|C: \<stdio.h> または \<wchar.h><br /><br /> C++: \<cstdio>、\<cwchar>、\<stdio.h> または \<wchar.h>|
+|**sprintf_s**、 **_sprintf_s_l**|40u-c \<stdio.h><br /><br /> C++: \<cstdio> または \<stdio.h>|
+|**swprintf_s**、 **_swprintf_s_l**|C: \<stdio.h> または \<wchar.h><br /><br /> C++: \<cstdio> 、 \<cwchar> 、 \<stdio.h> または \<wchar.h>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
-## <a name="example"></a>例
+## <a name="example-use-sprintf_s-to-format-data"></a>例: sprintf_s を使用したデータの書式設定
 
 ```C
 // crt_sprintf_s.c
@@ -189,7 +189,7 @@ Output:
 character count = 79
 ```
 
-## <a name="example"></a>例
+## <a name="example-error-code-handling"></a>例: エラーコードの処理
 
 ```C
 // crt_swprintf_s.c
@@ -221,4 +221,4 @@ wrote -1 characters
 [sprintf、_sprintf_l、swprintf、_swprintf_l、__swprintf_l](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)<br/>
 [scanf、_scanf_l、wscanf、_wscanf_l](scanf-scanf-l-wscanf-wscanf-l.md)<br/>
 [sscanf、_sscanf_l、swscanf、_swscanf_l](sscanf-sscanf-l-swscanf-swscanf-l.md)<br/>
-[vprintf 系関数](../../c-runtime-library/vprintf-functions.md)<br/>
+[vprintf 関数](../../c-runtime-library/vprintf-functions.md)<br/>
