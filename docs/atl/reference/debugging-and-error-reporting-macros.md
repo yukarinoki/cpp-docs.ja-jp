@@ -11,12 +11,12 @@ f1_keywords:
 helpviewer_keywords:
 - macros, error reporting
 ms.assetid: 4da9b87f-ec5c-4a32-ab93-637780909b9d
-ms.openlocfilehash: 2bcdfb474ee852e55bd54f1b125716e7785f28be
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 6b969cfb841a9a95d695eacc0a25f9dd378379ac
+ms.sourcegitcommit: ced5ff1431ffbd25b20d106901955532723bd188
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88833479"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92135542"
 ---
 # <a name="debugging-and-error-reporting-macros"></a>デバッグとエラー報告のマクロ
 
@@ -94,7 +94,7 @@ ATLASSERT(booleanExpression);
 
 デバッグビルドでは、ATLASSERT は *booleanExpression* を評価し、結果が false の場合にデバッグレポートを生成します。
 
-## <a name="requirements"></a>必要条件
+### <a name="requirements"></a>必要条件
 
 **ヘッダー:** atldef. h
 
@@ -131,7 +131,7 @@ ATLENSURE と ATLASSERT の違いは、ATLENSURE はリリースビルドだけ�
 
 [!code-cpp[NVC_ATL_Utilities#108](../../atl/codesnippet/cpp/debugging-and-error-reporting-macros_1.cpp)]
 
-## <a name="requirements"></a>必要条件
+### <a name="requirements"></a>必要条件
 
 **ヘッダー:** afx
 
@@ -156,7 +156,7 @@ ATLTRACENOTIMPL(funcname);
 
 [!code-cpp[NVC_ATL_Utilities#127](../../atl/codesnippet/cpp/debugging-and-error-reporting-macros_2.cpp)]
 
-## <a name="requirements"></a>必要条件
+### <a name="requirements"></a>必要条件
 
 **ヘッダー:** atltrace .h
 
@@ -285,5 +285,5 @@ ATLTRACE と ATLTRACE2 の動作は同じですが、旧バージョンとの互
 
 ## <a name="see-also"></a>関連項目
 
-[[マクロ]](../../atl/reference/atl-macros.md)<br/>
+[マクロ](../../atl/reference/atl-macros.md)<br/>
 [デバッグとエラー報告のグローバル関数](../../atl/reference/debugging-and-error-reporting-global-functions.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - generic interfaces
 - interfaces, generic [C++}
 ms.assetid: f3da788a-ba83-4db7-9dcf-9b95a8fb9d1a
-ms.openlocfilehash: f5a74eaafa7ff348079ec367a7c2318f86081f15
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 61ab514d244c8b41d467d382fa97e30556ccbb32
+ms.sourcegitcommit: ced5ff1431ffbd25b20d106901955532723bd188
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87218027"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92135529"
 ---
 # <a name="generic-interfaces-ccli"></a>ジェネリック インターフェイス (C++/CLI)
 
@@ -59,7 +59,7 @@ Optionalアクセシビリティ修飾子 (例: **public、private**)。
 *declarators*<br/>
 (省略可能) この型に基づく変数の宣言。
 
-## <a name="example"></a>例
+## <a name="example-how-to-declare-and-instantiate-a-generic-interface"></a>例: ジェネリックインターフェイスを宣言およびインスタンス化する方法
 
 次の例では、ジェネリック インターフェイスを宣言し、インスタンス化する方法を示します。 この例では、ジェネリック インターフェイス `IList<ItemType>` が宣言されます。 その後、2 つのジェネリック クラス (`List1<ItemType>` と `List2<ItemType>`) によって、異なる実装で実装されます。
 
@@ -236,7 +236,7 @@ Array List
 List2
 ```
 
-## <a name="example"></a>例
+## <a name="example-declare-a-generic-interface"></a>例: ジェネリックインターフェイスを宣言する
 
 この例では、ジェネリック インターフェイス `IMyGenIface` と、`IMyGenIface` を特殊化する 2 つの非ジェネリック インターフェイス (`IMySpecializedInt` と `ImySpecializedString`) を宣言します。 次に、2 つの特殊化されたインターフェイスが、2 つのクラス (`MyIntClass` と `MyStringClass`) で実装されます。 この例では、ジェネリック インターフェイスを特殊化し、ジェネリック インターフェイスと非ジェネリック インターフェイスをインスタンス化し、インターフェイスの明示的に実装されたメンバーを呼び出します。
 

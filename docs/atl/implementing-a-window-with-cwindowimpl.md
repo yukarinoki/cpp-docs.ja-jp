@@ -1,5 +1,5 @@
 ---
-title: ウィンドウを実装する
+title: CWindowImpl を使用したウィンドウの実装
 ms.date: 11/04/2016
 helpviewer_keywords:
 - ATL, windows
@@ -9,60 +9,60 @@ helpviewer_keywords:
 - subclassing ATL window classes
 - superclassing, ATL
 ms.assetid: 3fc40550-f1d6-4702-8b7c-4cf682b6a855
-ms.openlocfilehash: e5fdbf15ddd7edc69f0667a9b7e08c7c5e531a5e
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 7ce1a2ec08e49e047aee5248bda0094d9e392614
+ms.sourcegitcommit: ced5ff1431ffbd25b20d106901955532723bd188
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81319450"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92135516"
 ---
-# <a name="implementing-a-window-with-cwindowimpl"></a>ウィンドウを実装する
+# <a name="implementing-a-window-with-cwindowimpl"></a>CWindowImpl を使用したウィンドウの実装
 
-ウィンドウを実装するには、 から`CWindowImpl`クラスを派生させます。 派生クラスで、メッセージ マップとメッセージ ハンドラー関数を宣言します。 クラスを使用するには、次の 3 つの方法があります。
+ウィンドウを実装するには、からクラスを派生させ `CWindowImpl` ます。 派生クラスで、メッセージマップとメッセージハンドラー関数を宣言します。 これで、次の3つの方法でクラスを使用できるようになりました。
 
 - [新しい Windows クラスに基づいてウィンドウを作成する](#_atl_creating_a_window_based_on_a_new_windows_class)
 
-- [既存の Windows クラスをスーパークラス化する](#_atl_superclassing_an_existing_windows_class)
+- [既存の Windows クラスをスーパークラスにする](#_atl_superclassing_an_existing_windows_class)
 
 - [既存のウィンドウをサブクラス化する](#_atl_subclassing_an_existing_window)
 
-## <a name="creating-a-window-based-on-a-new-windows-class"></a><a name="_atl_creating_a_window_based_on_a_new_windows_class"></a>新しいウィンドウ クラスに基づくウィンドウの作成
+## <a name="creating-a-window-based-on-a-new-windows-class"></a><a name="_atl_creating_a_window_based_on_a_new_windows_class"></a> 新しい Windows クラスに基づくウィンドウの作成
 
-`CWindowImpl`には、Windows クラス情報を宣言する[DECLARE_WND_CLASS](reference/window-class-macros.md#declare_wnd_class)マクロが含まれています。 このマクロは、新`GetWndClassInfo`しい Windows クラスの情報を定義するのに[CWndClassInfo](../atl/reference/cwndclassinfo-class.md)を使用する関数を実装します。 呼`CWindowImpl::Create`び出されると、この Windows クラスが登録され、新しいウィンドウが作成されます。
+`CWindowImpl` Windows クラス情報を宣言するための [DECLARE_WND_CLASS](reference/window-class-macros.md#declare_wnd_class) マクロを格納します。 このマクロは、 `GetWndClassInfo` [CWndClassInfo](../atl/reference/cwndclassinfo-class.md) を使用して新しい Windows クラスの情報を定義する関数を実装します。 `CWindowImpl::Create`が呼び出されると、この Windows クラスは登録され、新しいウィンドウが作成されます。
 
 > [!NOTE]
-> `CWindowImpl`マクロに NULL`DECLARE_WND_CLASS`を渡します。 独自の名前を指定するには、派生クラスのDECLARE_WND_CLASSに文字列`CWindowImpl`を渡します。
+> `CWindowImpl` マクロに NULL を渡します `DECLARE_WND_CLASS` 。これは、ATL によって Windows クラス名が生成されることを意味します。 独自の名前を指定するには、から派生したクラスの DECLARE_WND_CLASS に文字列を渡し `CWindowImpl` ます。
 
-## <a name="example"></a>例
+## <a name="example-implement-a-window"></a>例: ウィンドウを実装する
 
 新しい Windows クラスに基づいてウィンドウを実装するクラスの例を次に示します。
 
 [!code-cpp[NVC_ATL_Windowing#64](../atl/codesnippet/cpp/implementing-a-window-with-cwindowimpl_1.h)]
 
-ウィンドウを作成するには、のインスタンスを作成`CMyWindow`し、メソッドを`Create`呼び出します。
+ウィンドウを作成するには、のインスタンスを作成 `CMyWindow` してから、メソッドを呼び出し `Create` ます。
 
 > [!NOTE]
-> 既定の Windows クラス情報をオーバーライドするには`GetWndClassInfo`、メンバーを適切な値に設定`CWndClassInfo`して、派生クラスにメソッドを実装します。
+> 既定の Windows クラス情報をオーバーライドするには、 `GetWndClassInfo` `CWndClassInfo` メンバーを適切な値に設定して、派生クラスにメソッドを実装します。
 
-## <a name="superclassing-an-existing-windows-class"></a><a name="_atl_superclassing_an_existing_windows_class"></a>既存の Windows クラスのスーパークラス化
+## <a name="superclassing-an-existing-windows-class"></a><a name="_atl_superclassing_an_existing_windows_class"></a> Superclassing 既存の Windows クラス
 
-[DECLARE_WND_SUPERCLASS](reference/window-class-macros.md#declare_wnd_superclass)マクロを使用すると、既存の Windows クラスをスーパークラス化するウィンドウを作成できます。 派生クラスでこのマクロを`CWindowImpl`指定します。 他の ATL ウィンドウと同様に、メッセージはメッセージ マップによって処理されます。
+[DECLARE_WND_SUPERCLASS](reference/window-class-macros.md#declare_wnd_superclass)マクロを使用すると、既存の Windows クラスをスーパークラスにするウィンドウを作成できます。 派生クラスでこのマクロを指定し `CWindowImpl` ます。 他の ATL ウィンドウと同様に、メッセージはメッセージマップによって処理されます。
 
-DECLARE_WND_SUPERCLASSを使用すると、新しい Windows クラスが登録されます。 この新しいクラスは、指定した既存のクラスと同じですが、ウィンドウ プロシージャを`CWindowImpl::WindowProc`(またはこのメソッドをオーバーライドする関数) に置き換えます。
+DECLARE_WND_SUPERCLASS を使用すると、新しい Windows クラスが登録されます。 この新しいクラスは、指定した既存のクラスと同じになりますが、ウィンドウプロシージャは `CWindowImpl::WindowProc` (またはこのメソッドをオーバーライドする関数で) に置き換えられます。
 
-## <a name="example"></a>例
+## <a name="example-superclass-the-edit-class"></a>例: Edit クラスのスーパークラス
 
-標準の Edit クラスをスーパークラス化するクラスの例を次に示します。
+標準の Edit クラスをスーパークラスにするクラスの例を次に示します。
 
 [!code-cpp[NVC_ATL_Windowing#65](../atl/codesnippet/cpp/implementing-a-window-with-cwindowimpl_2.h)]
 
-スーパークラス化された編集ウィンドウを作成するには、インスタンスを作成`CMyEdit`してからメソッドを`Create`呼び出します。
+スーパークラス Edit ウィンドウを作成するには、のインスタンスを作成 `CMyEdit` してから、メソッドを呼び出し `Create` ます。
 
-## <a name="subclassing-an-existing-window"></a><a name="_atl_subclassing_an_existing_window"></a>既存ウィンドウのサブクラス化
+## <a name="subclassing-an-existing-window"></a><a name="_atl_subclassing_an_existing_window"></a> 既存のウィンドウのサブクラス化
 
-既存のウィンドウをサブクラス化するには、前の`CWindowImpl`2 つのケースのように、クラスを派生させ、メッセージ マップを宣言します。 ただし、既存のウィンドウをサブクラス化するため、Windows クラス情報は指定しません。
+既存のウィンドウをサブクラス化するには、前の2つのケースのように、からクラスを派生させ、 `CWindowImpl` メッセージマップを宣言します。 ただし、既に存在するウィンドウをサブクラス化するため、Windows クラスの情報は指定しないことに注意してください。
 
-を呼び`Create`出す`SubclassWindow`代わりに、サブクラス化する既存のウィンドウにハンドルを呼び出して渡します。 ウィンドウがサブクラス化されると、メッセージ マップに`CWindowImpl::WindowProc`メッセージを送信するために、このメソッドをオーバーライドする関数を使用します。 サブクラス化されたウィンドウをオブジェクトからデタッチするには、`UnsubclassWindow`を呼び出します。 ウィンドウの元のウィンドウ プロシージャが復元されます。
+を呼び出すので `Create` はなく、を呼び出し `SubclassWindow` て、サブクラス化する既存のウィンドウへのハンドルを渡します。 ウィンドウがサブクラス化されたら、 `CWindowImpl::WindowProc` (またはこのメソッドをオーバーライドする関数) を使用してメッセージをメッセージマップに送信します。 サブクラスウィンドウをオブジェクトからデタッチするには、を呼び出し `UnsubclassWindow` ます。 ウィンドウの元のウィンドウプロシージャが復元されます。
 
 ## <a name="see-also"></a>関連項目
 

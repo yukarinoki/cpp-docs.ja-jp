@@ -1,15 +1,15 @@
 ---
 title: Visual Studio の C++ プロジェクトの MSBuild の内部
-ms.date: 02/26/2020
+description: MSBuild for Visual Studio C++ プロジェクトで使用されるサポートファイル、プロパティ、およびターゲット。
+ms.date: 10/14/2020
 helpviewer_keywords:
 - MSBuild overview
-ms.assetid: dd258f6f-ab51-48d9-b274-f7ba911d05ca
-ms.openlocfilehash: c52434fa4b652d52baea70df705920db4ee68a5f
-ms.sourcegitcommit: 65fead53d56d531d71be42216056aca5f44def11
+ms.openlocfilehash: b08db751bfe04c7cd3ce2c2f4741c9ee8956cf74
+ms.sourcegitcommit: 6e5429e076e552b32e8bdc49480c51498d7924c1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "88610850"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92099681"
 ---
 # <a name="msbuild-internals-for-c-projects"></a>C++ プロジェクトの MSBuild の内部
 
@@ -21,51 +21,59 @@ IDE でプロジェクト プロパティを設定し、プロジェクトを保
 
 既定では、Visual Studio の主要なサポート ファイルは、次のディレクトリに配置されています。 この情報はバージョン固有です。
 
+::: moniker range=">=vs-2019"
+
 ### <a name="visual-studio-2019"></a>Visual Studio 2019
 
-- % VSINSTALLDIR% MSBuild \\ Microsoft \\ VC \\ *バージョン*\\
+- *`%VSINSTALLDIR%MSBuild\Microsoft\VC\<version>\`*
 
-  ターゲットによって使用される主要なターゲット ファイル (.targets) およびプロパティ ファイル (.props) があります。 既定では、$(VCTargetsPath) マクロはこのディレクトリを参照します。 *バージョン*のプレースホルダーは、visual studio のバージョン: V160 for visual studio 2019、V150 For visual studio 2017 を参照しています。
+  ターゲットによって使用される主要なターゲット ファイル (.targets) およびプロパティ ファイル (.props) があります。 既定では、$(VCTargetsPath) マクロはこのディレクトリを参照します。 このプレースホルダーは、visual studio の *`<version>`* バージョン: v160 For visual studio 2019、v150 For Visual studio 2017 を参照しています。
 
-- % VSINSTALLDIR% MSBuild \\ Microsoft \\ VC \\ *バージョン* \\ プラットフォーム \\ *プラットフォーム*\\
+- *`%VSINSTALLDIR%MSBuild\Microsoft\VC\<version>\Platforms\<platform>\`*
 
-  親ディレクトリ内のターゲットおよびプロパティをオーバーライドする、プラットフォーム固有のターゲット ファイルおよびプロパティ ファイルがあります。 このディレクトリ内のターゲットによって使用されるタスクを定義する DLL も含まれています。 *platform* プレースホルダーは、ARM、Win32、または x64 サブディレクトリを表します。
+  親ディレクトリ内のターゲットおよびプロパティをオーバーライドする、プラットフォーム固有のターゲット ファイルおよびプロパティ ファイルがあります。 このディレクトリ内のターゲットによって使用されるタスクを定義する DLL も含まれています。 プレースホルダーは、 *`<platform>`* ARM、ARM64、Win32、または x64 サブディレクトリを表します。
 
-- % VSINSTALLDIR% MSBuild \\ Microsoft \\ VC \\ *バージョン* \\ プラットフォーム \\ *プラットフォーム* \\ platformtoolsets \\ *セットツールセット*\\
+- *`%VSINSTALLDIR%MSBuild\Microsoft\VC\<version>\Platforms\<platform>\PlatformToolsets\<toolset>\`*
 
-  指定の *toolset* を使用してビルドで Visual C++ アプリケーションを生成するためのディレクトリが含まれています。 *platform* プレースホルダーは、ARM、Win32、または x64 サブディレクトリを表します。 *ツールセット*プレースホルダーは、ツールセットサブディレクトリを表します。
+  指定されたを使用してビルドが C++ アプリケーションを生成できるようにするディレクトリを格納し *`<toolset>`* ます。 プレースホルダーは、 *`<platform>`* ARM、ARM64、Win32、または x64 サブディレクトリを表します。 プレースホルダーは、 *`<toolset>`* ツールセットサブディレクトリを表します。
+
+::: moniker-end
+
+::: moniker range=">=vs-2017"
 
 ### <a name="visual-studio-2017"></a>Visual Studio 2017
 
-- % VSINSTALLDIR% Common7 \\ IDE \\ VC \\ vctargets\\
+- *`%VSINSTALLDIR%Common7\IDE\VC\VCTargets\`*
 
-  ターゲットによって使用される主要なターゲット ファイル (.targets) およびプロパティ ファイル (.props) があります。 既定では、$(VCTargetsPath) マクロはこのディレクトリを参照します。
+  ターゲットによって使用されるプライマリターゲットファイル ( *`.targets`* ) とプロパティファイル () を格納し *`.props`* ます。 既定では、 `$(VCTargetsPath)` マクロはこのディレクトリを参照します。
 
-- % VSINSTALLDIR% Common7 \\ IDE \\ VC \\ vctargets \\ プラットフォーム \\ *プラットフォーム*\\
+- *`%VSINSTALLDIR%Common7\IDE\VC\VCTargets\Platforms\<platform>\`*
 
-  親ディレクトリ内のターゲットおよびプロパティをオーバーライドする、プラットフォーム固有のターゲット ファイルおよびプロパティ ファイルがあります。 このディレクトリ内のターゲットによって使用されるタスクを定義する DLL も含まれています。 *platform* プレースホルダーは、ARM、Win32、または x64 サブディレクトリを表します。
+  親ディレクトリ内のターゲットおよびプロパティをオーバーライドする、プラットフォーム固有のターゲット ファイルおよびプロパティ ファイルがあります。 このディレクトリ内のターゲットによって使用されるタスクを定義する DLL も含まれています。 プレースホルダーは、 *`<platform>`* ARM、ARM64、Win32、または x64 サブディレクトリを表します。
 
-- % VSINSTALLDIR% Common7 \\ IDE \\ VC \\ vctargets \\ プラットフォーム \\ *プラットフォーム* \\ platformtoolsets セット \\ *ツールセット*\\
+- *`%VSINSTALLDIR%Common7\IDE\VC\VCTargets\Platforms\<platform>\PlatformToolsets\<toolset>\`*
 
-  指定の *toolset* を使用してビルドで Visual C++ アプリケーションを生成するためのディレクトリが含まれています。 *platform* プレースホルダーは、ARM、Win32、または x64 サブディレクトリを表します。 *ツールセット*プレースホルダーは、ツールセットサブディレクトリを表します。
+  指定されたを使用してビルドが C++ アプリケーションを生成できるようにするディレクトリを格納し *`<toolset>`* ます。 プレースホルダーは、 *`<platform>`* ARM、Win32、または x64 サブディレクトリを表します。 プレースホルダーは、 *`<toolset>`* ツールセットサブディレクトリを表します。
+
+::: moniker-end
 
 ### <a name="visual-studio-2015-and-earlier"></a>Visual Studio 2015 以前
 
-- *ドライブ*: \\ Program Files *(X86)* \\ MSBuild \\ Microsoft .cpp (x86) v1.0 \\ \\ *バージョン*\\
+- *`<drive>:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\<version>\`*
 
   ターゲットによって使用される主要なターゲット ファイル (.targets) およびプロパティ ファイル (.props) があります。 既定では、$(VCTargetsPath) マクロはこのディレクトリを参照します。
 
-- *ドライブ*: \\ Program Files *(X86)* \\ MSBuild \\ Microsoft .cpp \\ \\ *version 4.0 バージョン* \\ プラットフォーム \\ *プラットフォーム*\\
+- *`<drive>:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\<version>\Platforms\<platform>\`*
 
-  親ディレクトリ内のターゲットおよびプロパティをオーバーライドする、プラットフォーム固有のターゲット ファイルおよびプロパティ ファイルがあります。 このディレクトリ内のターゲットによって使用されるタスクを定義する DLL も含まれています。 *platform* プレースホルダーは、ARM、Win32、または x64 サブディレクトリを表します。
+  親ディレクトリ内のターゲットおよびプロパティをオーバーライドする、プラットフォーム固有のターゲット ファイルおよびプロパティ ファイルがあります。 このディレクトリ内のターゲットによって使用されるタスクを定義する DLL も含まれています。 プレースホルダーは、 *`<platform>`* ARM、Win32、または x64 サブディレクトリを表します。
 
-- *ドライブ*: \\ Program Files *(X86)* \\ MSBuild \\ Microsoft .cpp v4.0 \\ \\ *バージョン* \\ プラットフォーム \\ *プラットフォーム* \\ platformtoolsets \\ *セット*\\
+- *`<drive>:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\<version>\Platforms\<platform>\PlatformToolsets\<toolset>\`*
 
-  指定の *toolset* を使用してビルドで Visual C++ アプリケーションを生成するためのディレクトリが含まれています。 *バージョン*のプレースホルダーは V110 For visual studio 2012、V120 for Visual Studio 2013、および V140 For visual studio 2015 です。 *platform* プレースホルダーは、ARM、Win32、または x64 サブディレクトリを表します。 *ツールセット*プレースホルダーは、ツールセットサブディレクトリを表します。 たとえば、Visual Studio 2015 ツールセットを使用して Windows アプリをビルドするのは v140 です。 または、Visual Studio 2013 ツールセットを使用して Windows XP 用にビルド v120_xp ます。
+  指定されたを使用してビルドが C++ アプリケーションを生成できるようにするディレクトリを格納し *`<toolset>`* ます。 *`<version>`* プレースホルダーは V110 For Visual studio 2012、V120 for Visual Studio 2013、および V140 For Visual studio 2015 です。 プレースホルダーは、 *`<platform>`* ARM、Win32、または x64 サブディレクトリを表します。 プレースホルダーは、 *`<toolset>`* ツールセットサブディレクトリを表します。 たとえば、Visual Studio 2015 ツールセットを使用して Windows アプリをビルドするのは v140 です。 または、Visual Studio 2013 ツールセットを使用して Windows XP 用にビルド v120_xp ます。
 
-- *ドライブ*: \\ Program Files *(X86)* \\ MSBuild \\ Microsoft .cpp v2.0 \\ \\ プラットフォーム \\ *プラットフォーム* \\ platformtoolsets \\ *セット*\\
+- *`<drive>:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\Platforms\<platform>\PlatformToolsets\<toolset>\`*
 
-  ビルドによる Visual Studio 2008 または Visual Studio 2010 アプリケーションの生成を可能にするパスには、 *バージョン*が含まれていません。 これらのバージョンでは、 *プラットフォーム* のプレースホルダーは、Itanium、Win32、または x64 サブディレクトリを表します。 *toolset* プレースホルダーは、v90 または v100 ツールセット サブディレクトリを表します。
+  ビルドが Visual Studio 2008 または Visual Studio 2010 アプリケーションを生成できるようにするためのパスには、が含まれていません *`<version>`* 。 これらのバージョンでは、 *`<platform>`* プレースホルダーは Itanium、Win32、または x64 サブディレクトリを表します。 *`<toolset>`* プレースホルダーは、v90 または v100 ツールセットサブディレクトリを表します。
 
 ## <a name="support-files"></a>サポート ファイル
 
@@ -73,15 +81,15 @@ IDE でプロジェクト プロパティを設定し、プロジェクトを保
 
 | 拡張機能 | 説明 |
 | --------- | ----------- |
-| .targets | ターゲットによって実行されるタスクを指定する `Target` XML 要素が含まれます。 タスク パラメーターにファイルとコマンド ライン オプションを割り当てるために使用される、`PropertyGroup`、`ItemGroup`、`ItemDefinitionGroup`、およびユーザー定義の `Item` の各要素が含まれることもあります。<br /><br /> 詳細については、「[Target 要素 (MSBuild)](/visualstudio/msbuild/target-element-msbuild)」を参照してください。 |
-| .props | ビルド時に使用されるファイル設定とパラメーター設定を指定する `Property Group` XML 要素およびユーザー定義の `Property` XML 要素が含まれます。<br /><br /> 追加の設定を指定する `ItemDefinitionGroup` XML 要素およびユーザー定義の `Item` XML 要素が含まれることもあります。 項目定義グループで定義された項目はプロパティと似ていますが、コマンドラインからはアクセスできません。 Visual Studio プロジェクト ファイルでは、プロパティではなく項目を使用して設定を表すことがよくあります。<br /><br /> 詳細については、「 [ItemGroup 要素 (msbuild)](/visualstudio/msbuild/itemgroup-element-msbuild)」、「 [Itemdefinitiongroup 要素 (msbuild)](/visualstudio/msbuild/itemdefinitiongroup-element-msbuild)」、および「 [Item 要素 (msbuild)](/visualstudio/msbuild/item-element-msbuild)」を参照してください。 |
-| .xml | IDE ユーザーインターフェイス要素を宣言および初期化する XML 要素が含まれています。 たとえば、プロパティシート、プロパティページ、テキストボックスコントロール、および listbox コントロールなどです。<br /><br /> .xml ファイルは、MSBuild ではなく IDE を直接サポートします。 ただし、IDE プロパティの値は、ビルド プロパティおよび項目に割り当てられます。<br /><br /> ほとんどの .xml ファイルは、ロケール固有のサブディレクトリにあります。 たとえば、英語-米国地域のファイルは $ (VCTargetsPath) 1033 にあり \\ \\ ます。 |
+| *`.targets`* | ターゲットによって実行されるタスクを指定する `Target` XML 要素が含まれます。 タスク パラメーターにファイルとコマンド ライン オプションを割り当てるために使用される、`PropertyGroup`、`ItemGroup`、`ItemDefinitionGroup`、およびユーザー定義の `Item` の各要素が含まれることもあります。<br /><br /> 詳細については、「[Target 要素 (MSBuild)](/visualstudio/msbuild/target-element-msbuild)」を参照してください。 |
+| *`.props`* | ビルド時に使用されるファイル設定とパラメーター設定を指定する `Property Group` XML 要素およびユーザー定義の `Property` XML 要素が含まれます。<br /><br /> 追加の設定を指定する `ItemDefinitionGroup` XML 要素およびユーザー定義の `Item` XML 要素が含まれることもあります。 項目定義グループで定義された項目はプロパティと似ていますが、コマンドラインからはアクセスできません。 Visual Studio プロジェクト ファイルでは、プロパティではなく項目を使用して設定を表すことがよくあります。<br /><br /> 詳細については、「 [ItemGroup 要素 (msbuild)](/visualstudio/msbuild/itemgroup-element-msbuild)」、「 [Itemdefinitiongroup 要素 (msbuild)](/visualstudio/msbuild/itemdefinitiongroup-element-msbuild)」、および「 [Item 要素 (msbuild)](/visualstudio/msbuild/item-element-msbuild)」を参照してください。 |
+| *`.xml`* | IDE ユーザーインターフェイス要素を宣言および初期化する XML 要素が含まれています。 たとえば、プロパティシート、プロパティページ、テキストボックスコントロール、および listbox コントロールなどです。<br /><br /> ファイルは、 *`.xml`* MSBuild ではなく IDE を直接サポートします。 ただし、IDE プロパティの値は、ビルド プロパティおよび項目に割り当てられます。<br /><br /> ほとんどの *`.xml`* ファイルは、ロケール固有のサブディレクトリにあります。 たとえば、英語-米国地域のファイルはに `$(VCTargetsPath)\1033\` あります。 |
 
 ## <a name="user-targets-and-properties"></a>ユーザー ターゲットおよびプロパティ
 
 MSBuild を効果的に使用するために、役に立つプロパティとターゲットを把握することができます。 ほとんどのプロパティとターゲットは、Visual Studio ビルドシステムを実装するのに役立ちます。そのため、ユーザーには関係ありません。 ここでは、について理解しておくべきユーザー指向のプロパティとターゲットについて説明します。
 
-### <a name="platformtoolset-property"></a>PlatformToolset プロパティ
+### <a name="platformtoolset-property"></a>`PlatformToolset` プロパティ
 
 `PlatformToolset` プロパティでは、ビルドでどの MSVC ツールセットを使用するかを決定します。 既定では、現在のツールセットが使用されます。 このプロパティを設定すると、その値がリテラル文字列と連結され、パスが形成されます。 これは、特定のプラットフォーム用にプロジェクトをビルドするために必要なプロパティとターゲットファイルが格納されているディレクトリです。 特定のバージョンのプラットフォーム ツールセットを使用してビルドするには、そのプラットフォーム ツールセットをインストールする必要があります。
 
@@ -89,7 +97,7 @@ MSBuild を効果的に使用するために、役に立つプロパティとタ
 
 `msbuild myProject.vcxproj /p:PlatformToolset=v140`
 
-### <a name="preferredtoolarchitecture-property"></a>PreferredToolArchitecture プロパティ
+### <a name="preferredtoolarchitecture-property"></a>`PreferredToolArchitecture` プロパティ
 
 `PreferredToolArchitecture` プロパティは、ビルドで使用されているコンパイラとツールが 32 ビットか 64 ビットかを判定します。 このプロパティは、出力プラットフォームのアーキテクチャや構成には影響しません。 既定では、このプロパティが設定されていない場合、MSBuild は x86 バージョンのコンパイラおよびツールを使用します。
 
@@ -97,15 +105,15 @@ MSBuild を効果的に使用するために、役に立つプロパティとタ
 
 `msbuild myProject.vcxproj /p:PreferredToolArchitecture=x64`
 
-### <a name="useenv-property"></a>UseEnv プロパティ
+### <a name="useenv-property"></a>`UseEnv` プロパティ
 
 既定では、現在のプロジェクトのプラットフォーム固有の設定によって、PATH、INCLUDE、LIB、LIBPATH、CONFIGURATION、および PLATFORM の各環境変数がオーバーライドされます。 `UseEnv` **`true`** 環境変数がオーバーライドされないことを保証するために、プロパティをに設定します。
 
-`msbuild myProject.vcxproj /p:UseEnv=true`
+> `msbuild myProject.vcxproj /p:UseEnv=true`
 
 ### <a name="targets"></a>対象サーバー
 
-Visual Studio のサポート ファイル内には、ターゲットが数多く存在します。 ただし、ほとんどはシステム指向のターゲットであり、ユーザーは無視できます。 ほとんどのシステムターゲットには、先頭にアンダースコア () が付けられているか、または名前の先頭が "/"、" `_` Compute"、"Before"、"After"、"Pre"、または "Post" であることが必要です。
+Visual Studio のサポート ファイル内には、ターゲットが数多く存在します。 ただし、ほとんどはシステム指向のターゲットであり、ユーザーは無視できます。 ほとんどのシステムターゲットには、先頭にアンダースコア () が付いているか、または、、、、、 `_` またはで始まる名前が付いてい `PrepareFor` `Compute` `Before` `After` `Pre` `Post` ます。
 
 ユーザー指向の有用なターゲットを次の表に示します。
 
@@ -122,7 +130,7 @@ Visual Studio のサポート ファイル内には、ターゲットが数多�
 | [再構築] | プロジェクトを消去してからビルドします。 |
 | ResourceCompile | Microsoft Windows リソース コンパイラ ツール (rc.exe) を実行します。 |
 | XdcMake | XML ドキュメント ツール (xdcmake.exe) を実行します。 |
-| Xsd | XML スキーマ定義ツール (Xsd.exe) を実行します。 *下記の「注意」を参照。* |
+| Xsd | XML スキーマ定義ツール (Xsd.exe) を実行します。 *注を参照してください。* |
 
 > [!NOTE]
 > Visual Studio 2017 以降では、C++ プロジェクトでの **xsd** ファイルのサポートは非推奨です。 **CppCodeProvider.dll** を手動で GAC に追加して、**Microsoft.VisualC.CppCodeProvider** を引き続き使用できます。

@@ -1,8 +1,8 @@
 - name: C 言語のドキュメント
   href: ../c-language/index.yml
-- name: 'C# 言語リファレンス'
+- name: C# 言語リファレンス
   items:
-    - name: 'C# 言語リファレンス'
+    - name: C# 言語リファレンス
       href: ../c-language/c-language-reference.md
     - name: 「C 言語リファレンス」の構成
       items:
@@ -400,6 +400,8 @@
           href: ../c-language/null-statement-c.md
         - name: return ステートメント (C)
           href: ../c-language/return-statement-c.md
+        - name: static_assert statement (C11)
+          href: ../c-language/static-assert-c.md
         - name: switch ステートメント (C)
           href: ../c-language/switch-statement-c.md
         - name: try-except ステートメント (C)
