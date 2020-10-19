@@ -1,15 +1,16 @@
 ---
 title: コンパイラのバージョン別のコンパイラの警告
-ms.date: 04/22/2019
+description: コンパイラのバージョン別の Microsoft C/c + + コンパイラの警告の表。
+ms.date: 10/18/2020
 helpviewer_keywords:
 - warnings, by compiler version
 - cl.exe compiler, setting warning options
-ms.openlocfilehash: d8d47e9dbfce9e22cf7aab2e3e7beab72d86c770
-ms.sourcegitcommit: 00af3df3331854b23693ee844e5e7c10c8b05a90
+ms.openlocfilehash: b470663e3cea8ec62a1737fb19e9ec5a277d27cc
+ms.sourcegitcommit: f19f02f217b80804ab321d463c76ce6f681abcc6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86491376"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92176314"
 ---
 # <a name="compiler-warnings-by-compiler-version"></a>コンパイラのバージョン別のコンパイラの警告
 
@@ -44,6 +45,7 @@ ms.locfileid: "86491376"
 | Visual Studio 2019 バージョン 16.4 | 19.24.28314.0 |
 | Visual Studio 2019 バージョン 16.5 | 19.25.28610.0 |
 | Visual Studio 2019 バージョン 16.6 | 19.26.28805.0 |
+| Visual Studio 2019 バージョン 16.7 | 19.26.29112.0 |
 
 オプションには、メジャー番号、メジャー番号、マイナー番号、メジャー番号、マイナー番号、およびビルド番号のみを指定でき **`/Wv`** ます。 コンパイラは、指定された数で始まるバージョンに一致するすべての警告を報告します。 指定された数を超えるバージョンのすべての警告を抑制します。 たとえば、 **`/Wv:17`** は、Visual Studio 2012 のいずれかのバージョン以前に発生した警告を報告し、Visual Studio 2013 (バージョン 18) 以降のコンパイラによって導入された警告を抑制します。 Visual Studio 2015 update 2 以降で導入された警告を非表示にするには、を使用し **`/Wv:19.00.23506`** ます。 Visual studio **`/Wv:19.11`** 2017 バージョン15.5 より前のバージョンの Visual studio で導入された警告をレポートするために使用します。ただし、Visual studio 2017 バージョン15.5 以降で導入された警告は表示されません。
 
@@ -51,11 +53,31 @@ ms.locfileid: "86491376"
 
 ::: moniker range=">= vs-2019"
 
+## <a name="warnings-introduced-in-visual-studio-2019-version-167-compiler-version-1927291120"></a>Visual Studio 2019 バージョン16.7 で導入された警告 (コンパイラバージョン 19.27.29112.0)
+
+これらの警告と、それ以降のバージョンのすべての警告は、コンパイラオプションを使用して抑制され **`/Wv:19.26`** ます。
+
+| 警告 | メッセージ |
+|--|--|
+| C5207 | `the simple requirement asserts the validity of expression 'e->id'. Did you mean '{ e } -> id'? You can suppress the warning using '{ e->id }'` |
+| C5209 | `the C++20 syntax for an init-capture has changed to '& ...opt identifier initializer'` |
+| C5210 | `'name' is not a valid header unit reference; ignoring` |
+| C5212 | `'name' is not a valid named reference; treating as reference to file` |
+| C5213 | `'name' named reference is treated as a named partition but the name is not specified; treating as reference to file` |
+| C5214 | `applying 'modifier' to an operand with a volatile qualified type is deprecated in C++20` |
+| C5215 | `'name' a function parameter with a volatile qualified type is deprecated in C++20` |
+| C5216 | `'name' a volatile qualified return type is deprecated in C++20` |
+| C5217 | `a structured binding declaration that includes volatile is deprecated in C++20` |
+| C5218 | `destroying delete may not behave as intended when non-conforming switches '/Zc:sizedDealloc-' or '/Zc:alignedNew-' are used` |
+| C5219 | `implicit conversion from 'type-1' to 'type-2', possible loss of data` |
+| C5220 | `'name': a non-static data member with a volatile qualified type no longer implies%$N that compiler generated copy/move constructors and copy/move assignment operators are not trivial` |
+| C5221 | `xfg::rename is deprecated.` |
+
 ## <a name="warnings-introduced-in-visual-studio-2019-version-166-compiler-version-1926288050"></a>Visual Studio 2019 バージョン16.6 で導入された警告 (コンパイラバージョン 19.26.28805.0)
 
 これらの警告と、それ以降のバージョンのすべての警告は、コンパイラオプションを使用して抑制され **`/Wv:19.25`** ます。
 
-| 警告 | Message |
+| 警告 | メッセージ |
 |--|--|
 | C5207 | `the simple requirement asserts the validity of expression 'e->id'. Did you mean '{ e } -> id'? You can suppress the warning using '{ e->id }'` |
 | C5208 | `unnamed class used in typedef name cannot declare members other than non-static data members, member enumerations, or member classes` |
@@ -64,7 +86,7 @@ ms.locfileid: "86491376"
 
 これらの警告と、それ以降のバージョンのすべての警告は、コンパイラオプションを使用して抑制され **`/Wv:19.24`** ます。
 
-|警告|Message|
+|警告|メッセージ|
 |-|-|
 | C5061 | `the use of a comma operator as a subscript expression has been deprecated` |
 | C5062 | `enum direct list initialization between 'type-1' and 'type-2' is no longer supported` |
@@ -78,7 +100,7 @@ ms.locfileid: "86491376"
 
 これらの警告と、それ以降のバージョンのすべての警告は、コンパイラオプションを使用して抑制され **`/Wv:19.23`** ます。
 
-| 警告 | Message |
+| 警告 | メッセージ |
 |--|--|
 | C5200 | `feature 'feature-name' requires compiler flag 'option-name'` | 言語機能の C2429 に相当する警告
 | C5201 | `a module declaration can appear only at the start of a translation unit unless a global module fragment is used` |
@@ -89,7 +111,7 @@ ms.locfileid: "86491376"
 
 これらの警告と、それ以降のバージョンのすべての警告は、コンパイラオプションを使用して抑制され **`/Wv:19.22`** ます。
 
-| 警告 | Message |
+| 警告 | メッセージ |
 |--|--|
 | C4856 | `'value' is not a valid argument for '/d1initAll:FillPattern' (value must be between 0 and 255). Command-line flag ignored` |
 | C4857 | `C++/CLI mode does not support C++ versions newer than C++17; setting language to /std:c++17` |
@@ -98,7 +120,7 @@ ms.locfileid: "86491376"
 
 これらの警告と、それ以降のバージョンのすべての警告は、コンパイラオプションを使用して抑制され **`/Wv:19.21`** ます。
 
-| 警告 | Message |
+| 警告 | メッセージ |
 |--|--|
 | C4855 | `implicit capture of 'this' via '[=]' is deprecated in 'version'` |
 | C5054 | `operator 'operator-name': deprecated between enumerations of different types` |
@@ -113,7 +135,7 @@ ms.locfileid: "86491376"
 
 これらの警告と、それ以降のバージョンのすべての警告は、コンパイラオプションを使用して抑制され **`/Wv:19.20`** ます。
 
-| 警告 | Message |
+| 警告 | メッセージ |
 |--|--|
 | C5052 | `Keyword 'keyword-name' was introduced in C++<version> and requires use of the 'option-name' command-line option` |
 | C5053 | `support for 'explicit(<expr>)' in C++17 and earlier is a vendor extension` |
@@ -122,7 +144,7 @@ ms.locfileid: "86491376"
 
 これらの警告と、それ以降のバージョンのすべての警告は、コンパイラオプションを使用して抑制され **`/Wv:19.15`** ます。
 
-| 警告 | Message |
+| 警告 | メッセージ |
 |--|--|
 | C4848 | `support for standard attribute 'no_unique_address' in C++17 and earlier is a vendor extension` |
 | C4854 | `binding dereferenced null pointer to reference has undefined behavior` |
@@ -135,7 +157,7 @@ ms.locfileid: "86491376"
 
 これらの警告と、それ以降のバージョンのすべての警告は、コンパイラオプションを使用して抑制され **`/Wv:19.14`** ます。
 
-| 警告 | Message |
+| 警告 | メッセージ |
 |--|--|
 | C4643 | `Forward declaring 'identifier' in namespace std is not permitted by the C++ Standard.` |
 | C4644 | `usage of the macro-based offsetof pattern in constant expressions is non-standard; use offsetof defined in the C++ standard library instead` |
@@ -161,7 +183,7 @@ ms.locfileid: "86491376"
 
 これらの警告と、それ以降のバージョンのすべての警告は、コンパイラオプションを使用して抑制され **`/Wv:19.13`** ます。
 
-| 警告 | Message |
+| 警告 | メッセージ |
 |--|--|
 | C4642 | `'issue': could not import the constraints for generic parameter 'parameter'` |
 | C5045 | `Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified` |
@@ -170,7 +192,7 @@ ms.locfileid: "86491376"
 
 これらの警告と、それ以降のバージョンのすべての警告は、コンパイラオプションを使用して抑制され **`/Wv:19.12`** ます。
 
-| 警告 | Message |
+| 警告 | メッセージ |
 |--|--|
 | C5044 | `An argument to command-line option option points to a path 'path' that does not exist` |
 
@@ -178,7 +200,7 @@ ms.locfileid: "86491376"
 
 これらの警告と、それ以降のバージョンのすべての警告は、コンパイラオプションを使用して抑制され **`/Wv:19.11`** ます。
 
-| 警告 | Message |
+| 警告 | メッセージ |
 |--|--|
 | C4843 | `'type1': An exception handler of reference to array or function type is unreachable, use 'type2' instead` |
 | C4844 | `'export module module_name;' is now the preferred syntax for declaring a module interface` |
@@ -192,7 +214,7 @@ ms.locfileid: "86491376"
 
 これらの警告と、それ以降のバージョンのすべての警告は、コンパイラオプションを使用して抑制され **`/Wv:19.10`** ます。
 
-| 警告 | Message |
+| 警告 | メッセージ |
 |--|--|
 | C4597 | `undefined behavior: description` |
 | C4604 | `'type': passing argument by value across native and managed boundary requires valid copy constructor. Otherwise the runtime behavior is undefined` |
@@ -214,7 +236,7 @@ ms.locfileid: "86491376"
 
 これらの警告と、それ以降のバージョンのすべての警告は、コンパイラオプションを使用して抑制され **`/Wv:19.00`** ます。
 
-| 警告 | Message |
+| 警告 | メッセージ |
 |--|--|
 | C4468 | `'fallthrough': attribute must be followed by a case label or a default label` |
 | C4698 | `'feature' is for evaluation purposes only and is subject to change or removal in future updates.` |
@@ -227,7 +249,7 @@ ms.locfileid: "86491376"
 
 これらの警告と、それ以降のバージョンのすべての警告は、コンパイラオプションを使用して抑制され **`/Wv:19.00.23918`** ます。
 
-| 警告 | Message |
+| 警告 | メッセージ |
 |--|--|
 | C4467 | `usage of ATL attributes is deprecated` |
 | C4596 | `'name': illegal qualified name in member declaration` |
@@ -238,7 +260,7 @@ ms.locfileid: "86491376"
 
 これらの警告と、それ以降のバージョンのすべての警告は、コンパイラオプションを使用して抑制され **`/Wv:19.00.23506`** ます。
 
-| 警告 | Message |
+| 警告 | メッセージ |
 |--|--|
 | C4466 | `Could not perform coroutine heap elision` |
 | C4595 | `'class': non-member operator new or delete functions may not be declared inline` |
@@ -249,7 +271,7 @@ ms.locfileid: "86491376"
 
 これらの警告と、それ以降のバージョンのすべての警告は、コンパイラオプションを使用して抑制され **`/Wv:19.00.23026`** ます。
 
-| 警告 | Message |
+| 警告 | メッセージ |
 |--|--|
 | C4426 | `optimization flags changed after including header, may be due to #pragma optimize()` |
 | C4654 | `Code placed before include of precompiled header line will be ignored. Add code to precompiled header.` |
@@ -260,7 +282,7 @@ ms.locfileid: "86491376"
 
 これらの警告と、それ以降のバージョンのすべての警告は、コンパイラオプションを使用して抑制され **`/Wv:18`** ます。
 
-| 警告 | Message |
+| 警告 | メッセージ |
 |--|--|
 | C4427 | `'error': overflow in constant division, undefined behavior` |
 | C4438 | `'type': cannot be called safely in /await:clrcompat mode. If 'type' calls into the CLR it may result in CLR head corruption` |
@@ -319,7 +341,7 @@ ms.locfileid: "86491376"
 
 これらの警告と、それ以降のバージョンのすべての警告は、コンパイラオプションを使用して抑制され **`/Wv:17`** ます。
 
-| 警告 | Message |
+| 警告 | メッセージ |
 |--|--|
 | C4301 | `'type': overriding virtual function only differs from 'declaration' by const/volatile qualifier` |
 | C4316 | `'type': object allocated on the heap may not be aligned number` |
@@ -348,7 +370,7 @@ ms.locfileid: "86491376"
 
 これらの警告と、それ以降のバージョンのすべての警告は、コンパイラオプションを使用して抑制され **`/Wv:16`** ます。
 
-| 警告 | Message |
+| 警告 | メッセージ |
 |--|--|
 | C4330 | `attribute 'attribute' for section 'section' ignored` |
 | C4415 | `duplicate __declspec(code_seg('name'))` |
@@ -391,7 +413,7 @@ ms.locfileid: "86491376"
 
 これらの警告と、それ以降のバージョンのすべての警告は、コンパイラオプションを使用して抑制され **`/Wv:15`** ます。
 
-| 警告 | Message |
+| 警告 | メッセージ |
 |--|--|
 | C4352 | `'name': intrinsic function already defined` |
 | C4573 | `the usage of 'type' requires the compiler to capture 'this' but the current default capture mode does not allow it` |
@@ -407,7 +429,7 @@ ms.locfileid: "86491376"
 
 これらの警告と、それ以降のバージョンのすべての警告は、コンパイラオプションを使用して抑制され **`/Wv:14`** ます。
 
-| 警告 | Message |
+| 警告 | メッセージ |
 |--|--|
 | C4396 | `'type': the inline specifier cannot be used when a friend declaration refers to a specialization of a function template` |
 | C4413 | `'declaration': reference member is initialized to a temporary that doesn't persist after the constructor exits` |
@@ -422,7 +444,7 @@ ms.locfileid: "86491376"
 
 これらの警告と、それ以降のバージョンのすべての警告は、コンパイラオプションを使用して抑制され **`/Wv:13`** ます。
 
-| 警告 | Message |
+| 警告 | メッセージ |
 |--|--|
 | C4000 | `UNKNOWN WARNING    Please choose the Technical Support command on the Visual C++     Help menu, or open the Technical Support help file for more information` |
 | C4272 | `'type': is marked __declspec(dllimport); must specify native calling convention when importing a function.` |
@@ -565,7 +587,7 @@ ms.locfileid: "86491376"
 
 これらの警告と、それ以降のバージョンのすべての警告は、コンパイラオプションを使用して抑制され **`/Wv:13.00.9466`** ます。
 
-| 警告 | Message |
+| 警告 | メッセージ |
 |--|--|
 | C4343 | `#pragma optimize(description,off) overrides /Og option` |
 | C4344 | `behavior change: use of explicit template arguments results in call to 'declaration'` |
@@ -601,7 +623,7 @@ ms.locfileid: "86491376"
 
 これらの警告と、それ以降のバージョンのすべての警告は、コンパイラオプションを使用して抑制され **`/Wv:12`** ます。
 
-| 警告 | Message |
+| 警告 | メッセージ |
 |--|--|
 | C4096 | `'type': interface is not a COM interface; will not be emitted to IDL` |
 | C4097 | `expected pragma parameter to be 'restore' or 'off'` |
