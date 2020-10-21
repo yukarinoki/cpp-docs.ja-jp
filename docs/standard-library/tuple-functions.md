@@ -14,15 +14,15 @@ helpviewer_keywords:
 - std::make_tuple [C++]
 - std::tie [C++]
 ms.openlocfilehash: 46c386ecffb8fbbf7c07d40b334afd91d261ebcf
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.sourcegitcommit: 19016630f9d35f365e9ba249e0f3617515d7ca33
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79427813"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92274519"
 ---
 # <a name="lttuplegt-functions"></a>&lt;tuple&gt; 関数
 
-## <a name="apply"></a>付ける
+## <a name="apply"></a><a name="apply"></a> 付ける
 
 ```cpp
 template <class F, class Tuple> constexpr decltype(auto) apply(F&& f, Tuple&& t);
@@ -32,7 +32,7 @@ template <class F, class Tuple> constexpr decltype(auto) apply(F&& f, Tuple&& t)
 
 組*t*を使用して関数*F*を呼び出します。
 
-## <a name="forward"></a>forward_as_tuple
+## <a name="forward_as_tuple"></a><a name="forward"></a> forward_as_tuple
 
 ```cpp
 template <class... TTypes>
@@ -41,13 +41,13 @@ template <class... TTypes>
 
 ### <a name="return-value"></a>戻り値
 
-`tuple<TTypes&&...>(std::forward<TTypes>(t)...)` が返されます。
+`tuple<TTypes&&...>(std::forward<TTypes>(t)...)` を返します。
 
 ### <a name="remarks"></a>解説
 
-関数への引数としての転送に適した*t*の引数への参照のタプルを構築します。
+関数への引数としての転送に適した *t* の引数への参照のタプルを構築します。
 
-## <a name="get"></a>取得
+## <a name="get"></a><a name="get"></a> 取得
 
 `tuple` オブジェクトから、インデックスまたは (C++14 の場合は) 型別に要素を取得します。
 
@@ -84,18 +84,18 @@ template <class T, class... Types>
 *[インデックス]* \
 取得する要素のインデックス。
 
-*型*\
+*な*\
 タプルで宣言された型のシーケンス (宣言順)。
 
-*T*\
+*\T*\
 取得する要素の型。
 
-*タプル*の\
-任意の数の要素を含む `std::tuple`。
+*タプル*\
+`std::tuple`任意の数の要素を格納している。
 
 ### <a name="remarks"></a>解説
 
-このテンプレート関数は、インデックス*インデックス*または `tuple` オブジェクトの*T*型の値への参照を返します。
+このテンプレート関数は、インデックス *インデックス*またはオブジェクト内の *T* 型の値への参照を返し `tuple` ます。
 
 タプルに含まれる型 T の要素の数が 1 より大きいか小さい場合、 `get<T>(Tuple)` を呼び出すと、コンパイラ エラーが生成されます。
 
@@ -128,7 +128,7 @@ int main() {
 0 1.42 Call me Tuple
 ```
 
-## <a name="make_from_tuple"></a>make_from_tuple
+## <a name="make_from_tuple"></a><a name="make_from_tuple"></a> make_from_tuple
 
 ```cpp
 template <class T, class Tuple> constexpr T make_from_tuple(Tuple&& t);
@@ -138,7 +138,7 @@ template <class T, class Tuple> constexpr T make_from_tuple(Tuple&& t);
 
 `return make_from_tuple_impl<T>(forward<Tuple>(t), make_index_sequence<tuple_size_v<decay_t<Tuple>>>{})` と同じ。
 
-## <a name="make_tuple"></a>make_tuple
+## <a name="make_tuple"></a><a name="make_tuple"></a> make_tuple
 
 要素値から `tuple` を作成します。
 
@@ -149,15 +149,15 @@ template <class T1, class T2, ..., class TN>
 
 ### <a name="parameters"></a>パラメーター
 
-*TN*\
+*TN5250*\
 N 番目の関数パラメーターの型。
 
-*tN*\
+*Tn5250*\
 N 番目の関数パラメーターの値。
 
 ### <a name="remarks"></a>解説
 
-このテンプレート関数は `tuple<V1, V2, ..., VN>(t1, t2, ..., tN)`を返します。対応する型 `Ti` が `cv` の場合、各型 `Vi` が `X&` ます。それ以外の場合は、`Ti`ます。`reference_wrapper<X>`
+このテンプレート関数はを返します。 `tuple<V1, V2, ..., VN>(t1, t2, ..., tN)` 各型 `Vi` は `X&` 対応する型がの場合は、 `Ti` `cv` `reference_wrapper<X>` それ以外の場合は `Ti` です。
 
 `make_tuple` の利点の 1 つは、格納されるオブジェクトの型がコンパイラによって自動的に決定され、明示的に指定する必要がないことです。 `make_tuple<int, int>(1, 2)` を使用する場合は、`make_tuple` などの明示的なテンプレート引数を使用しないでください。これは、不必要に詳細になり、複雑な右辺値参照の問題が追加され、コンパイル エラーの原因となる可能性があるためです。
 
@@ -196,14 +196,14 @@ int main() {
 4 5 6 7
 ```
 
-## <a name="swap"></a>フォト
+## <a name="swap"></a><a name="swap"></a> フォト
 
 ```cpp
 template <class... Types>
     void swap(tuple<Types...>& x, tuple<Types...>& y) noexcept(see below );
 ```
 
-## <a name="tie"></a>同順位
+## <a name="tie"></a><a name="tie"></a> 同順位
 
 要素参照から `tuple` を作成します。
 
@@ -214,7 +214,7 @@ tuple<T1&, T2&, ..., TN&> tie(T1& t1, T2& t2, ..., TN& tN);
 
 ### <a name="parameters"></a>パラメーター
 
-*TN*\
+*TN5250*\
 N 番目の tuple 要素の基本データ型。
 
 ### <a name="remarks"></a>解説
@@ -262,7 +262,7 @@ int main() {
 0 1 2 3
 ```
 
-## <a name="tuple_cat"></a>tuple_cat
+## <a name="tuple_cat"></a><a name="tuple_cat"></a> tuple_cat
 
 ```cpp
 template <class... Tuples> constexpr tuple<CTypes...> tuple_cat(Tuples&&...);
@@ -272,14 +272,14 @@ template <class... Tuples> constexpr tuple<CTypes...> tuple_cat(Tuples&&...);
 
 各型要素を初期化することによって構築される組オブジェクト。
 
-## <a name="tuple_element_t"></a>tuple_element_t
+## <a name="tuple_element_t"></a><a name="tuple_element_t"></a> tuple_element_t
 
 ```cpp
 template <size_t I, class T>
     using tuple_element_t = typename tuple_element<I, T>::type;
 ```
 
-## <a name="tuple_size_v"></a>tuple_size_v
+## <a name="tuple_size_v"></a><a name="tuple_size_v"></a> tuple_size_v
 
 ```cpp
 template <class T>

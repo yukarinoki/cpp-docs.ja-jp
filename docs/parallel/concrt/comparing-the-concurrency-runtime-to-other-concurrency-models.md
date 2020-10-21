@@ -5,11 +5,11 @@ helpviewer_keywords:
 - Concurrency Runtime, compared to other models
 ms.assetid: d8b9a1f4-f15f-43c3-a5b4-c0991edf9c86
 ms.openlocfilehash: 5bc6691f6d0b166bb3084091ee6af70474937568
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.sourcegitcommit: 19016630f9d35f365e9ba249e0f3617515d7ca33
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79427471"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92274700"
 ---
 # <a name="comparing-the-concurrency-runtime-to-other-concurrency-models"></a>コンカレンシー ランタイムとその他のコンカレンシー モデルの比較
 
@@ -19,21 +19,21 @@ ms.locfileid: "79427471"
 
 コンカレンシー ランタイムの機能と生産性向上を通して、別のコンカレンシー モデルを使用する既存のアプリケーションを補完できます。 コンカレンシー ランタイムでは、複数のタスク スケジューラが同じコンピューティング リソースを求めて競合する場合に、負荷分散は保証されません。 ただし、作業負荷が重複しない場合、この影響はごくわずかです。
 
-## <a name="top"></a> セクション
+## <a name="sections"></a><a name="top"></a> 各項
 
-- [プリエンプティブ スケジューリングと協調スケジューリングの比較](#models)
+- [プリエンプティブスケジューリングと協調スケジューリングの比較](#models)
 
-- [コンカレンシー ランタイムと Windows API の比較](#winapi)
+- [同時実行ランタイムと Windows API の比較](#winapi)
 
-- [コンカレンシー ランタイムと OpenMP の比較](#openmp)
+- [同時実行ランタイムと OpenMP の比較](#openmp)
 
-## <a name="models"></a> プリエンプティブ スケジューリングと協調スケジューリングの比較
+## <a name="comparing-preemptive-scheduling-to-cooperative-scheduling"></a><a name="models"></a> プリエンプティブ スケジューリングと協調スケジューリングの比較
 
 プリエンプティブ モデルと協調スケジューリング モデルは、複数のタスクで、プロセッサやハードウェア スレッドなど、コンピューティング リソースを共有するための 2 つの一般的な方法です。
 
 ### <a name="preemptive-and-cooperative-scheduling"></a>プリエンプティブ スケジューリングと協調スケジューリング
 
-*プリエンプティブ スケジューリング* は、ラウンド ロビン方式の優先順位ベースのメカニズムで、すべてのタスクに対し、コンピューティング リソースへの排他アクセス権を所定の時間だけ与え、その後別のタスクに切り替えます。 プリエンプティブ スケジューリングは、Windows などのマルチタスク オペレーティング システムで一般的です。 *協調スケジューリング*は、タスクが終了するまで、またはタスクがリソースへのアクセスを生成するまで、すべてのタスクにコンピューティングリソースへの排他アクセスを提供するメカニズムです。 コンカレンシー ランタイムは、処理リソースを最大限活用するために、協調スケジューリングを、オペレーティング システムのプリエンプティブ スケジューラと共に使用します。
+*プリエンプティブ スケジューリング* は、ラウンド ロビン方式の優先順位ベースのメカニズムで、すべてのタスクに対し、コンピューティング リソースへの排他アクセス権を所定の時間だけ与え、その後別のタスクに切り替えます。 プリエンプティブ スケジューリングは、Windows などのマルチタスク オペレーティング システムで一般的です。 *協調スケジューリング* は、タスクが終了するまで、またはタスクがリソースへのアクセスを生成するまで、すべてのタスクにコンピューティングリソースへの排他アクセスを提供するメカニズムです。 コンカレンシー ランタイムは、処理リソースを最大限活用するために、協調スケジューリングを、オペレーティング システムのプリエンプティブ スケジューラと共に使用します。
 
 ### <a name="differences-between-preemptive-and-cooperative-schedulers"></a>プリエンプティブ スケジューラと協調スケジューラの違い
 
@@ -49,9 +49,9 @@ ms.locfileid: "79427471"
 
 協調スケジューリングで、スケジューリングのすべての問題が解決するわけではありません。 たとえば、他のタスクに公平に譲歩しないタスクが、使用できるすべてのコンピューティング リソースを占有し、それにより他のタスクの処理が妨げられる可能性があります。 コンカレンシー ランタイムは、協調スケジューリングの効率面での利点を使用して、プリエンプティブ スケジューリングの公平性を補完します。 既定では、コンカレンシー ランタイムで使用される協調スケジューラは、ワーク スティーリング アルゴリズムを使用して、作業をコンピューティング リソース間で効率的に分散させます。 ただし、コンカレンシー ランタイム スケジューラは、複数のアプリケーションにリソースを公平に配分するために、オペレーティング システムのプリエンプティブ スケジューラにも依存します。 また、アプリケーションでカスタム スケジューラおよびスケジューラ ポリシーを作成して、スレッドの実行を細かく制御することもできます。
 
-[[トップ](#top)]
+[[上](#top)]
 
-## <a name="winapi"></a> コンカレンシー ランタイムと Windows API の比較
+## <a name="comparing-the-concurrency-runtime-to-the-windows-api"></a><a name="winapi"></a> コンカレンシー ランタイムと Windows API の比較
 
 Microsoft Windows アプリケーション プログラミング インターフェイス (通常は Windows API と呼ばれます。以前は Win32 と呼ばれていました) は、アプリケーションでコンカレンシーを可能にするプログラミング モデルを提供します。 コンカレンシー ランタイムは、基になるオペレーティング システムから利用できない追加のプログラミング モデルを提供するために、Windows API を基に構築されています。
 
@@ -79,9 +79,9 @@ Windows 7 および Windows Server 2008 R2 では、オペレーティング シ
 
 [base.user mode_scheduling](/windows/win32/procthread/user-mode-scheduling)
 
-[[トップ](#top)]
+[[上](#top)]
 
-## <a name="openmp"></a> コンカレンシー ランタイムと OpenMP の比較
+## <a name="comparing-the-concurrency-runtime-to-openmp"></a><a name="openmp"></a> コンカレンシー ランタイムと OpenMP の比較
 
 コンカレンシー ランタイムでは、さまざまなプログラミング モデルを使用できます。 これらのモデルは、他のライブラリのモデルと重複する場合や、他のライブラリのモデルを補完する場合があります。 このセクションでは、コンカレンシー ランタイムと [OpenMP](../../parallel/concrt/comparing-the-concurrency-runtime-to-other-concurrency-models.md#openmp)を比較します。
 
@@ -93,9 +93,9 @@ OpenMP プログラミング モデルは、オープン標準により定義さ
 
 コンカレンシー ランタイムと OpenMP の違いや、既存の OpenMP コードからコンカレンシー ランタイムの使用に移行する方法の詳細については、「[Migrating from OpenMP to the Concurrency Runtime](../../parallel/concrt/migrating-from-openmp-to-the-concurrency-runtime.md)」を参照してください。
 
-[[トップ](#top)]
+[[上](#top)]
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [コンカレンシー ランタイム](../../parallel/concrt/concurrency-runtime.md)<br/>
 [概要](../../parallel/concrt/asynchronous-message-blocks.md)<br/>
