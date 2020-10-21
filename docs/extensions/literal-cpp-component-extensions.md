@@ -1,57 +1,51 @@
 ---
-title: literal (C++/CLI および C++/CX)
-ms.date: 10/12/2018
+title: literal (C++/CLI)
+description: Literal キーワードは、Microsoft C++/CLI の状況依存のキーワードで、コンパイル時の定数を示します。
+ms.date: 10/20/2020
 ms.topic: reference
 f1_keywords:
 - literal
 - literal_cpp
 helpviewer_keywords:
 - literal keyword [C++]
-ms.assetid: 6b1a1f36-2e1d-4a23-8eb6-172f4f3c477f
-ms.openlocfilehash: 2687352c02bed609ffaa60ee8b1df40b51126d21
-ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
+ms.openlocfilehash: 2d71a535252ba51f89407670b474a34b407eaffc
+ms.sourcegitcommit: 59b7c18703d1ffd66827db0e2eeece490d3d8789
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90686731"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92337214"
 ---
-# <a name="literal-ccli-and-ccx"></a>literal (C++/CLI および C++/CX)
+# <a name="literal-ccli"></a>`literal` (C++/CLI)
 
-**/clr** のコンパイルで **literal** としてマークされた変数 (データ メンバー) は、**static const** 変数のネイティブの同等物です。
+コンパイル時にとしてマークされた変数 (データメンバー) **`literal`** **`/clr`** は、コンパイル時の定数です。 これは、C# 変数にネイティブに相当し [`const`](/dotnet/csharp/language-reference/keywords/const) ます。
 
 ## <a name="all-platforms"></a>すべてのプラットフォーム
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 (この言語機能にはランタイムに適用される特記事項がありません。)
 
 ## <a name="windows-runtime"></a>Windows ランタイム
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 (この言語機能には Windows ランタイムのみに適用される特記事項がありません。)
 
-### <a name="requirements"></a>必要条件
-
-コンパイラ オプション: `/ZW`
-
 ## <a name="common-language-runtime"></a>共通言語ランタイム
 
-## <a name="remarks"></a>注釈
+## <a name="remarks"></a>解説
 
-**literal** とマークされたデータ メンバーは宣言時に初期化される必要があり、値は constant integral、enum、または string 型である必要があります。 初期化式の型から static const 型のデータ メンバーへの変換では、ユーザー定義の変換は必要ありません。
+としてマークされたデータメンバーは、 **`literal`** 宣言時に初期化する必要があります。 また、値は定数整数、列挙型、または文字列型である必要があります。 初期化式の型からデータメンバーの型への変換 **`literal`** では、ユーザー定義の変換は必要ありません。
 
-実行時に literal フィールドにメモリは割り当てられません。コンパイラは、その値をクラスのメタデータに挿入するだけです。
+実行時にフィールドに割り当てられるメモリがありません **`literal`** 。コンパイラは、その値をクラスのメタデータに挿入するだけです。 **`literal`** 値は、コンパイル時の定数として扱われます。 標準 C++ で最も近いものはです **`constexpr`** が、データメンバーを **`constexpr`** C++/cli に配置することはできません。
 
-**static const** とマークされた変数は、他のコンパイラへのメタデータでは利用できません。
+としてマークされている変数は、マークされたとは **`literal`** 異なり **`static const`** ます。 **`static const`** データメンバーは、メタデータで他のコンパイラに使用できるようにはなりません。 詳細については、[`static`](../cpp/storage-classes-cpp.md) および [`const`](../cpp/const-cpp.md) を参照してください。
 
-詳細については、[static](../cpp/storage-classes-cpp.md) と [const](../cpp/const-cpp.md) を参照してください。
-
-**literal** は状況依存キーワードです。 詳細については、「[状況依存キーワード](context-sensitive-keywords-cpp-component-extensions.md)」を参照してください。
+**`literal`** は、状況依存のキーワードです。 詳細については、「 [状況依存のキーワード](context-sensitive-keywords-cpp-component-extensions.md)」を参照してください。
 
 ## <a name="examples"></a>例
 
-この例は、 **リテラル** 変数がを意味することを示して **`static`** います。
+この例は、変数がを意味することを示して **`literal`** **`static`** います。
 
 ```cpp
 // mcppv2_literal.cpp
@@ -65,7 +59,7 @@ int main() {
 }
 ```
 
-次の例は、メタデータでの literal の効果を示しています。
+次の例は、メタデータでのの効果を示してい **`literal`** ます。
 
 ```cpp
 // mcppv2_literal2.cpp
@@ -78,15 +72,15 @@ public ref struct A {
 
 メタデータでの `sc` と `lit` の違いに注目してください。`sc` には `modopt` ディレクティブが 適用され、他のコンパイラでは無視される可能性があることを意味します。
 
-```
-.field public static int32 modopt([mscorlib]System.Runtime.CompilerServices.IsConst) sc = int32(0x0000000A)
-```
-
-```
-.field public static literal int32 lit = int32(0x0000000A)
+```MSIL
+.field public static int32 modopt([mscorlib]System.Runtime.CompilerServices.IsConst) sc = int32(0x00000001)
 ```
 
-C# で作成された次の例は、前の例で作成されたメタデータを参照し、**literal** 変数と **static const** 変数の効果を示しています。
+```MSIL
+.field public static literal int32 lit = int32(0x00000000)
+```
+
+C# で作成された次のサンプルは、前の例で作成したメタデータを参照し、変数と変数の効果を示してい **`literal`** **`static const`** ます。
 
 ```csharp
 // mcppv2_literal3.cs
