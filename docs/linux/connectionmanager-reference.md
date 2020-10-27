@@ -1,16 +1,17 @@
 ---
 title: ConnectionManager リファレンス
-ms.date: 01/17/2020
+description: コマンドライン ツールからリモート SSH 接続を管理する方法。
+ms.date: 10/7/2020
 f1_keywords:
 - ConnectionManager
 helpviewer_keywords:
 - ConnectionManager program
-ms.openlocfilehash: 1c6236cedba88714e9918dd2c096b5e78d2f08ce
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 2f38fec21e7526fa214db811b00fc545504f0610
+ms.sourcegitcommit: 611e903f222ec794ef14195796b332851ab98904
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "77258034"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91847139"
 ---
 # <a name="connectionmanager-reference"></a>ConnectionManager リファレンス
 
@@ -22,77 +23,88 @@ ConnectionManager.exe は、Visual Studio 2019 バージョン 16.5 以降で使
 
 ::: moniker range="vs-2019"
 
-ConnectionManager.exe は、Visual Studio 外でのリモート開発の接続を管理するためのコマンドライン ユーティリティです。 これは、新しい開発マシンをプロビジョニングするなどのタスクに役立ちます。 または、これを利用して Visual Studio で継続的インテグレーションを設定することもできます。 これは、[開発者コマンド プロンプト] ウィンドウで使用することができます。 開発者コマンド プロンプトの詳細については、「[コマンドラインから C++ Microsoft ツールセットを使用する](../build/building-on-the-command-line.md)」を参照してください。
+ConnectionManager.exe は、Visual Studio 外でのリモート開発の接続を管理するためのコマンドライン ユーティリティです。 これは、新しい開発マシンをプロビジョニングするなどのタスクに役立ちます。 または、これを利用して Visual Studio で継続的インテグレーションを設定することもできます。これは、[開発者コマンド プロンプト] ウィンドウで使用することができます。 開発者コマンド プロンプトの詳細については、「[コマンドラインから C++ Microsoft ツールセットを使用する](../build/building-on-the-command-line.md)」を参照してください。
 
-ConnectionManager.exe は、Visual Studio 2019 バージョン 16.5 以降で使用できます。 これは、Visual Studio インストーラーの **[C++ による Linux 開発]** ワークロードに含まれています。 インストーラーで**接続マネージャー**を選択した場合も、自動的にインストールされます。 これは、 *%VCIDEInstallDir%\\Linux\\bin\\ConnectionManagerExe\\ConnectionManager.exe* にインストールされます。
+ConnectionManager.exe は、Visual Studio 2019 バージョン 16.5 以降で使用できます。 これは、Visual Studio インストーラーの **[C++ による Linux 開発]** ワークロードに含まれています。 インストーラーで **接続マネージャー** を選択した場合も、自動的にインストールされます。 これは、 *%VCIDEInstallDir%\\Linux\\bin\\ConnectionManagerExe\\ConnectionManager.exe* にインストールされます。
 
 ConnectionManager.exe の機能は Visual Studio でも利用することができます。 IDE 内でリモート開発の接続を管理するには、メニュー バーで **[ツール]**  >  **[オプション]** を選択して、[オプション] ダイアログを開きます。 [オプション] ダイアログで、 **[クロス プラットフォーム]**  >  **[接続マネージャー]** を選択します。
 
 ## <a name="syntax"></a>構文
 
-> **ConnectionManager.exe** *command* \[*arguments*] \[*options*]
+> **`ConnectionManager.exe`** *command* \[*arguments* ] \[*options* ]
 
 ### <a name="commands-and-arguments"></a>コマンドと引数
 
-- **add** *user\@host* \[ **--port** *port*] \[ **--password** *password*] \[ **--privatekey** *privatekey_file*]
+- **`add`** *user\@host* \[ **`--port`** *port* ] \[ **`--password`** *password* ] \[ **`--privatekey`** *privatekey_file* ]
 
-  新しい接続を認証し、追加します。 既定では、ポート 22 とパスワード認証を使用します。 (パスワードを入力するように求められます。) **--password** および **--privatekey** の両方を使用して秘密キーのパスワードを指定します。
+  新しい接続を認証し、追加します。 既定では、ポート 22 とパスワード認証を使用します。 (パスワードを入力するように求められます。) **-`-password`** および **`--privatekey`** の両方を使用して、秘密キーのパスワードを指定します。
 
-- **remove** \[*connection_id* \| *user\@host* \[ **--port** *port*]]
+- **`remove`** \[*connection_id* \| *user\@host* \[ **`--port`** *port* ]]
 
   接続を削除します。 引数が指定されていない場合、削除する接続を指定するよう求められます。
+  
+- **`modify`** \[*default* \| *connection_id* \| *user\@host* \[ **`--port`** *port* ]] \[ **`--property`** *key=value* ]
 
-- **remove-all**
+  接続のプロパティを定義または変更します。\
+  *value* が空の場合、プロパティ *key* は削除されます。\
+  認証が失敗した場合、変更は行われません。\
+  接続が指定されていない場合 (上記の *default* で意図されているもの)、ユーザーの既定のリモート接続が使用されます。
+
+- **`remove-all`**
 
   すべての保存されている接続を削除します。
+  
+- **`clean`**
 
-- **list**
+  存在しなくなった接続のヘッダー キャッシュを削除します。 
 
-  すべての保存されている接続の情報と ID を表示します。
+- **`list`** \[**`--properties`** ]
 
-- **help**
+  保存されているすべての接続の情報、ID、およびプロパティを表示します。 
+
+- **`help`**
 
   ヘルプ画面を表示します。
 
-- **version**
+- **`version`**
 
   バージョン情報を表示します。
 
 ### <a name="options"></a>オプション
 
-- **-q**、 **--quiet**
+- **`-q`** , **`--quiet`**
 
   `stdout` または `stderr` への出力を抑止します。
 
-- **--no-prompt**
+- **`--no-prompt`**
 
   適切な場合、プロンプトを表示せず失敗します。
 
-- **--no-verify**
+- **`--no-verify`**
 
   認証せずに接続を追加または変更します。
 
-- **--file** *filename*
+- **`--file`** *filename*
 
   指定された *filename* から接続情報を読み取ります。
 
-- **--no-telemetry**
+- **`--no-telemetry`**
 
-  利用状況データの Microsoft への送信を無効にします。 **--no-telemetry** フラグが渡されない限り、利用状況データは収集されて Microsoft に送信されます。  
+  利用状況データの Microsoft への送信を無効にします。 **`--no-telemetry`** フラグが渡されない限り、利用状況データは収集されて Microsoft に送信されます。  
 
-- **-n**、 **--dry-run**
+- **`-n`** , **`--dry-run`**
 
   コマンドのドライ ランを実行します。
+ 
+- **`--p`**
 
-- **-p**
+  **`--password`** と同じ。
 
-  **--password** と同じです。
+- **`-i`**
 
-- **-i**
+  **`--privatekey`** と同じ。
 
-  **--privatekey** と同じです。
-
-## <a name="examples"></a>使用例
+## <a name="examples"></a>例
 
 このコマンドは、localhost で "user" という名前のユーザーの接続を追加します。 この接続では、 *%USERPROFILE%\.ssh\id_rsa* にあるキー ファイルを認証に使用します。
 
@@ -104,6 +116,12 @@ ConnectionManager.exe add user@127.0.0.1 --privatekey "%USERPROFILE%\.ssh\id_rsa
 
 ```cmd
 ConnectionManager.exe remove 1975957870
+```
+
+このコマンドを使用すると、接続 ID が 21212121 である接続について、シェルの選択がオーバーライドされます。 サポートされるシェルは **`sh, csh, bash, tcsh, ksh, zsh, dash`** です。 Linux システム上で見つかったシェルがサポートされていない場合は、フォールバックして、すべてのコマンドに **`sh`** を明示的に使用します。
+
+```cmd
+ConnectionManager.exe modify 21212121 --property shell=csh
 ```
 
 ## <a name="see-also"></a>関連項目

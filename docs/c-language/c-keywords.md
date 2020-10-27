@@ -1,22 +1,22 @@
 ---
 title: C キーワード
 description: 標準の C および Microsoft C コンパイラ拡張機能のキーワード。
-ms.date: 09/12/2020
+ms.date: 10/15/2020
 helpviewer_keywords:
 - keywords [C]
 - redefining keywords
 - Microsoft-specific keywords
 ms.assetid: 2d932335-97bf-45cd-b367-4ae00db0ff42
-ms.openlocfilehash: f459b81c2b3f314218108f3f367eec0c1bf17f26
-ms.sourcegitcommit: b492516cc65120250b9ea23f96f7f63f37f99fae
+ms.openlocfilehash: 24981c8d70cb56b4578fd905a30ccc57eaa83d45
+ms.sourcegitcommit: f19f02f217b80804ab321d463c76ce6f681abcc6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/14/2020
-ms.locfileid: "90075739"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92176232"
 ---
 # <a name="c-keywords"></a>C キーワード
 
-"*キーワード*" は、C コンパイラに対して特別な意味を持つ単語です。 変換フェーズ 7 および 8 では、識別子は、C キーワードと同じスペル (大文字と小文字を区別する) にすることはできません。 詳細については、*プリプロセッサ リファレンス*の「[変換フェーズ](../preprocessor/phases-of-translation.md)」を参照してください。 識別子の詳細については、[識別子](../c-language/c-identifiers.md)に関するページを参照してください。
+" *キーワード* " は、C コンパイラに対して特別な意味を持つ単語です。 変換フェーズ 7 および 8 では、識別子は、C キーワードと同じスペル (大文字と小文字を区別する) にすることはできません。 詳細については、 *プリプロセッサ リファレンス* の「 [変換フェーズ](../preprocessor/phases-of-translation.md)」を参照してください。 識別子の詳細については、[識別子](../c-language/c-identifiers.md)に関するページを参照してください。
 
 ## <a name="standard-c-keywords"></a>標準の C キーワード
 
@@ -119,7 +119,8 @@ ANSI C および ISO C 規格では、先頭にアンダースコアが 2 つ付
         **`__try`** <sup>5</sup>\
         **`dllexport`** <sup>4</sup>\
         **`__inline`** <sup>5</sup>\
-        **`__leave`** <sup>5</sup>
+        **`__leave`** <sup>5</sup>\
+        **`static_assert`** <sup>6</sup>
     :::column-end:::
 :::row-end:::
 
@@ -128,6 +129,8 @@ ANSI C および ISO C 規格では、先頭にアンダースコアが 2 つ付
 <sup>4</sup> これらは、 **`__declspec`** で使用するときは特殊な識別子です。他のコンテキストでの使用は制限されません。
 
 <sup>5</sup> 以前のバージョンとの互換性のため、これらのキーワードは先頭に 2 つのアンダースコアが付いているものだけでなく、Microsoft の拡張機能を有効にしている場合は 1 つのアンダースコアが付いているものも使用できます。
+
+<sup>6</sup> <assert.h> を含めない場合、Microsoft Visual C コンパイラによって **`static_assert`** が C11 **`_Static_assert`** キーワードにマッピングされます。
 
 Microsoft 拡張機能は既定で有効になっています。 移植可能なコードの作成を支援するために、コンパイル時に [/Za \(言語拡張機能の無効化)](../build/reference/za-ze-disable-language-extensions.md) オプションを指定することで、Microsoft 拡張機能を無効にできます。 このオプションを使用すると、Microsoft 固有のキーワードの一部が無効になります。
 

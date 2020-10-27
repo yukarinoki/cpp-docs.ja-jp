@@ -1,13 +1,13 @@
 ---
 title: Linux プロジェクトを構成してアドレス サニタイザーを使用する
 description: Visual Studio で C++ の Linux プロジェクトを構成して、アドレス サニタイザーを使用する方法について説明します。
-ms.date: 09/25/2020
-ms.openlocfilehash: 7e68d0af4d2ab27820f894bafc58bed444f141d9
-ms.sourcegitcommit: 94893973211d0b254c8bcdcf0779997dcc136b0c
+ms.date: 10/7/2020
+ms.openlocfilehash: 3c2f78346e4a2049e3482ba4093d8a6212f54e9a
+ms.sourcegitcommit: 611e903f222ec794ef14195796b332851ab98904
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/28/2020
-ms.locfileid: "91414200"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91847152"
 ---
 # <a name="configure-linux-projects-to-use-address-sanitizer"></a>Linux プロジェクトを構成してアドレス サニタイザーを使用する
 
@@ -35,7 +35,7 @@ ASan の (破損したメモリが割り当てられているまたは割り当�
 > [!NOTE]
 > Visual Studio 2019 バージョン 16.4 以降では、Linux プロジェクト用の AddressSanitizer は **[プロジェクトのプロパティ]**  >  **[構成プロパティ]**  >  **[C/C++]**  >  **[Address Sanitizer を有効にする]** を使って有効にします。
 
-ASan を MSBuild ベースの Linux プロジェクトで有効にするには、そのプロジェクトを**ソリューション エクスプローラー**で右クリックし、 **[プロパティ]** を選択します。 次に **[構成プロパティ]**  >  **[C/C++]**  >  **[サニタイザー]** の順に移動します。 ASan はコンパイラとリンカー フラグから有効にし、プロジェクトを再コンパイルして動作するようにします。
+ASan を MSBuild ベースの Linux プロジェクトで有効にするには、そのプロジェクトを **ソリューション エクスプローラー** で右クリックし、 **[プロパティ]** を選択します。 次に **[構成プロパティ]**  >  **[C/C++]**  >  **[サニタイザー]** の順に移動します。 ASan はコンパイラとリンカー フラグから有効にし、プロジェクトを再コンパイルして動作するようにします。
 
 ![MSBuild プロジェクトで ASan を有効にする](media/msbuild-asan-prop-page.png)
 
@@ -45,9 +45,9 @@ ASan を MSBuild ベースの Linux プロジェクトで有効にするには�
 
 ## <a name="enable-asan-for-visual-studio-cmake-projects"></a>Visual Studio の CMake プロジェクトで ASan を有効にする
 
-CMake で ASan を有効にするには、**ソリューション エクスプローラー**の CMakeLists.txt ファイルを右クリックし、 **[CMake Settings for Project]** \(プロジェクトの CMake 設定\) を選択します。
+CMake で ASan を有効にするには、 **ソリューション エクスプローラー** の CMakeLists.txt ファイルを右クリックし、 **[CMake Settings for Project]** \(プロジェクトの CMake 設定\) を選択します。
 
-ダイアログ ボックスの左ウィンドウで、(「**Linux-Debug**」などの) Linux の構成が選択されていることを確認します。
+ダイアログ ボックスの左ウィンドウで、(「 **Linux-Debug** 」などの) Linux の構成が選択されていることを確認します。
 
 ![Linux デバッグが構成オプションの 1 つとして一覧表示されている左側のペインのスクリーンショット。](media/linux-debug-configuration.png)
 
@@ -84,5 +84,7 @@ Loaded '/usr/lib/x86_64-linux-gnu/libasan.so.4'. Symbols loaded.
 ```bash
 sudo apt-get install libasan4-dbg
 ```
+
+Ubuntu にデバッグ シンボル パッケージをインストールする詳細な手順については、「[Debug symbol packages](https://wiki.ubuntu.com/Debug%20Symbol%20Packages)」(デバッグ シンボル パッケージ) を参照してください。
 
 ASan が有効な場合、Visual Studio の **[出力]** ウィンドウの **[デバッグ]** ウィンドウの上部で、ASan のデバッグ シンボルをインストールするよう求められます。
