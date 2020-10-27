@@ -1,6 +1,7 @@
 ---
 title: /clr (共通言語ランタイムのコンパイル)
-ms.date: 05/16/2019
+description: Microsoft C++ コンパイラオプション/clr を使用して、C++/CLI および C++ コードをマネージコードとしてコンパイルします。
+ms.date: 10/25/2020
 f1_keywords:
 - /CLR
 - VC.Project.VCNMakeTool.CompileAsManaged
@@ -13,87 +14,87 @@ helpviewer_keywords:
 - Managed Extensions for C++, compiling
 - common language runtime, /clr compiler option
 ms.assetid: fec5a8c0-40ec-484c-a213-8dec918c1d6c
-ms.openlocfilehash: fa2be3d3ce17df104cda121e4869c975ec6dd440
-ms.sourcegitcommit: a10c9390413978d36b8096b684d5ed4cf1553bc8
+ms.openlocfilehash: b4634b63e58344893d99e2217e57693a2c169f66
+ms.sourcegitcommit: faecabcdd12ff53eb79dc0df193fc3567f2f037c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "65837304"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92639095"
 ---
-# <a name="clr-common-language-runtime-compilation"></a>/clr (共通言語ランタイムのコンパイル)
+# <a name="clr-common-language-runtime-compilation"></a>`/clr` (共通言語ランタイムのコンパイル)
 
 アプリケーションおよびコンポーネントで、共通言語ランタイム (CLR) の機能を使用できるようにします。
 
 ## <a name="syntax"></a>構文
 
-> **/clr**[ **:** _options_]
+> **`/clr`**\[**`:`**_オプション_ ]
 
 ## <a name="arguments"></a>引数
 
-*options*<br/>
-次の 1 つまたは複数のスイッチをコンマで区切って指定します。
+*オプション*\
+次のコンマ区切りの引数の1つ以上。
 
-- none
+- なし
 
-   オプションを指定しない場合、 **/clr** によってアプリケーションのメタデータが作成されます。 このメタデータは、他の CLR アプリケーションで使用できます。また、このメタデータによって、他の CLR コンポーネントのメタデータの型とデータをアプリケーションで使用できるようになります。 「[混在 (ネイティブおよびマネージド) アセンブリ](../../dotnet/mixed-native-and-managed-assemblies.md)」を参照してください。
+   オプションを使用しない場合、 **`/clr`** アプリケーションのメタデータが作成されます。 このメタデータは、他の CLR アプリケーションで使用できます。また、このメタデータによって、他の CLR コンポーネントのメタデータの型とデータをアプリケーションで使用できるようになります。 「[混在 (ネイティブおよびマネージド) アセンブリ](../../dotnet/mixed-native-and-managed-assemblies.md)」を参照してください。
 
-- **pure**
+- **`pure`**
 
-   **/clr:pure の使用は非推奨とされます**。 このオプションは、Visual Studio 2017 以降で削除されます。 純粋 MSIL にする必要があるコードは、C# に移植することをお勧めします。
+   **`/clr:pure` は非推奨とさ** れます。 このオプションは、Visual Studio 2017 以降で削除されます。 純粋 MSIL にする必要があるコードは、C# に移植することをお勧めします。
 
-- **safe**
+- **`safe`**
 
-   **/clr:safe は非推奨とされます**。 このオプションは、Visual Studio 2017 以降で削除されます。 安全 MSIL にする必要があるコードは、C# に移植することをお勧めします。
+   **`/clr:safe` は非推奨とさ** れます。 このオプションは、Visual Studio 2017 以降で削除されます。 安全 MSIL にする必要があるコードは、C# に移植することをお勧めします。
 
-- **noAssembly**
+- **`noAssembly`**
 
-   **/clr:noAssembly は非推奨とされます**。 代わりに、 [/LN (Create MSIL Module)](ln-create-msil-module.md) を使用してください。
+   **`/clr:noAssembly` は非推奨とさ** れます。 代わりに[ `/LN` (MSIL モジュールの作成)](ln-create-msil-module.md)を使用してください。
 
-   アセンブリ マニフェストを出力ファイルに挿入できないことを指定します。 既定では、 **noAssembly** オプションはオフです。
+   アセンブリマニフェストを出力ファイルに挿入しないようコンパイラに指示します。 既定では、このオプションは無効になってい **`noAssembly`** ます。
 
-   マニフェストにアセンブリ メタデータがないマネージド プログラムを、 *モジュール*と呼びます。 **noAssembly** オプションは、モジュールを生成するときのみ使用できます。 [/c](c-compile-without-linking.md) と **/clr:noAssembly**を使用してコンパイルする場合は、リンカーのフェーズで [/NOASSEMBLY](noassembly-create-a-msil-module.md) オプションを指定してモジュールを作成します。
+   マニフェストにアセンブリメタデータがないマネージプログラムは、 *モジュール* と呼ばれます。 オプションは、 **`noAssembly`** モジュールを生成するためにのみ使用できます。 およびを使用してコンパイルする場合は、 [`/c`](c-compile-without-linking.md) **`/clr:noAssembly`** [`/NOASSEMBLY`](noassembly-create-a-msil-module.md) リンカーフェーズでオプションを指定してモジュールを作成します。
 
-   Visual Studio 2005 より前のバージョンでは、 **/clr:noAssembly** には **/LD** が必要です。 現在は、 **/LD** を指定すると **/LD**が暗黙的に指定されるようになっています。
+   Visual Studio 2005 より前 **`/clr:noAssembly`** 。が必要 **`/LD`** です。 **`/LD`** を指定すると、が暗黙的に使用されるようになり **`/clr:noAssembly`** ます。
 
-- **initialAppDomain**
+- **`initialAppDomain`**
 
-   Visual C++ アプリケーションを CLR の Version 1 で実行できるようにします。  CLR の Version 1 では ASP.NET をサポートしていないため、 **initialAppDomain** を使用してコンパイルされたアプリケーションは、ASP.NET を使用しているアプリケーションでは使用しないでください。
+   C++/CLI アプリケーションを CLR の version 1 で実行できるようにします。  を使用するアプリケーションは **`initialAppDomain`** 、CLR のバージョン1ではサポートされていないため、ASP.NET を使用するアプリケーションでは使用できません。
 
-- **nostdlib**
+- **`nostdlib`**
 
-   既定の \clr ディレクトリを無視するようにコンパイラに指示します。 System.dll などの DLL の複数のバージョンを含めると、コンパイラはエラーを生成します。 このオプションを使用すると、コンパイル時に使用する特定のフレームワークを指定できます。
+   既定のディレクトリを無視するようにコンパイラに指示し *`\clr`* ます。 System.dll などの DLL の複数のバージョンを含めると、コンパイラはエラーを生成します。 このオプションを使用すると、コンパイル時に使用する特定のフレームワークを指定できます。
 
 ## <a name="remarks"></a>解説
 
-マネージド コードは、CLR によって検査および管理できるコードです。 マネージド コードはマネージド オブジェクトにアクセスできます。 詳細については、「 [/clr Restrictions](clr-restrictions.md)」を参照してください。
+マネージド コードは、CLR によって検査および管理できるコードです。 マネージド コードはマネージド オブジェクトにアクセスできます。 詳細については、「 [ `/clr ` 制限](clr-restrictions.md)」を参照してください。
 
-マネージド型を定義および使用するアプリケーションの開発方法については、「 [Component Extensions for Runtime Platforms](../../extensions/component-extensions-for-runtime-platforms.md)。
+C++ でマネージ型を定義および使用するアプリケーションを開発する方法については、「 [ランタイムプラットフォームのコンポーネント拡張](../../extensions/component-extensions-for-runtime-platforms.md)」を参照してください。
 
-**/clr** を使用してコンパイルされたアプリケーションには、マネージド データがある場合とない場合があります。
+を使用してコンパイルされたアプリケーションは、 **`/clr`** マネージデータを含むことができます。
 
-マネージド アプリケーションでのデバッグを有効にするには、「[/ASSEMBLYDEBUG (DebuggableAttribute の追加)](assemblydebug-add-debuggableattribute.md)」を参照してください。
+マネージアプリケーションでのデバッグを有効にするには、「 [ `/ASSEMBLYDEBUG` (DebuggableAttribute の追加)](assemblydebug-add-debuggableattribute.md)」を参照してください。
 
-ガベージ コレクトされたヒープでインスタンス化されるのは CLR 型のみです。 詳細については、「[クラスと構造体](../../extensions/classes-and-structs-cpp-component-extensions.md)」を参照してください。 関数をネイティブ コードにコンパイルするには、 `unmanaged` プラグマを使用します。 詳細については、「[マネージド、アンマネージド](../../preprocessor/managed-unmanaged.md)」を参照してください。
+CLR 型のみがガベージコレクションヒープでインスタンス化されます。 詳細については、「[クラスと構造体](../../extensions/classes-and-structs-cpp-component-extensions.md)」を参照してください。 関数をネイティブ コードにコンパイルするには、 `unmanaged` プラグマを使用します。 詳細については、「」 [ `managed` を `unmanaged` ](../../preprocessor/managed-unmanaged.md)参照してください。
 
-既定では、 **/clr** は無効です。 **/clr** が有効な場合は **/MD** も有効です。 詳細については、「[/MD、/MT、/LD (ランタイム ライブラリの使用)](md-mt-ld-use-run-time-library.md)」を参照してください。 **/MD** を使用すると、動的にリンクされるマルチスレッド バージョンのランタイム ルーチンが標準ヘッダー (.h) ファイルから選択されるようになります。 マネージド プログラミングでマルチスレッドが必要なのは、CLR のガベージ コレクターが、補助スレッドでファイナライザーを実行するためです。
+既定では、は **`/clr`** 無効です。 **`/clr`** が有効な場合は、 **`/MD`** も有効になります。 詳細については、「」、「」 [ `/MD` `/MT` `/LD` (Run-Time ライブラリの使用)](md-mt-ld-use-run-time-library.md)を参照してください。 **`/MD`** 動的にリンクされたマルチスレッドバージョンのランタイムルーチンが標準ヘッダーファイルから選択されていることを確認します。 マネージド プログラミングでマルチスレッドが必要なのは、CLR のガベージ コレクターが、補助スレッドでファイナライザーを実行するためです。
 
-**/c** を使用してコンパイルする場合は、[/CLRIMAGETYPE](clrimagetype-specify-type-of-clr-image.md) を使用して、結果として出力されるファイルの CLR 型を指定できます。
+を使用してコンパイルする場合は、リンカーオプションを使用して、結果として生成される **`/c`** 出力ファイルの CLR 型を指定でき [`/CLRIMAGETYPE`](clrimagetype-specify-type-of-clr-image.md) ます。
 
-**/clr** は **/EHa**を暗黙的に指定するため、 **/clr** では他の **/EH**オプションを指定できません。 詳細については、「[/EH (例外処理モデル)](eh-exception-handling-model.md)」を参照してください。
+**`/clr`** は **`/EHa`** を意味し、では他の **`/EH`** オプションはサポートされていません **`/clr`** 。 詳細については、「 [ `/EH` (例外処理モデル)](eh-exception-handling-model.md)」を参照してください。
 
-ファイルの CLR イメージのタイプを判断する方法については、「 [/CLRHEADER](clrheader.md)」を参照してください。
+ファイルの CLR イメージの種類を確認する方法の詳細については、「」を参照してください [`/CLRHEADER`](clrheader.md) 。
 
-リンカーの特定の呼び出しに渡されるすべてのモジュールは、同じランタイム ライブラリ コンパイラ オプション ( **/MD** または **/LD**) を使用してコンパイルされている必要があります。
+リンカーの特定の呼び出しに渡されるすべてのモジュールは、同じランタイムライブラリコンパイラオプション (または) を使用してコンパイルする必要があり **`/MD`** **`/LD`** ます。
 
-[/ASSEMBLYRESOURCE](assemblyresource-embed-a-managed-resource.md) リンカー オプションを使用して、アセンブリにリソースを埋め込みます。 [/DELAYSIGN](delaysign-partially-sign-an-assembly.md)、 [/KEYCONTAINER](keycontainer-specify-a-key-container-to-sign-an-assembly.md)、および [/KEYFILE](keyfile-specify-key-or-key-pair-to-sign-an-assembly.md) の各リンカー オプションでも、アセンブリの作成方法をカスタマイズできます。
+リンカーオプションを使用して、 [`/ASSEMBLYRESOURCE`](assemblyresource-embed-a-managed-resource.md) リソースをアセンブリに埋め込みます。 [`/DELAYSIGN`](delaysign-partially-sign-an-assembly.md)、 [`/KEYCONTAINER`](keycontainer-specify-a-key-container-to-sign-an-assembly.md) 、および [`/KEYFILE`](keyfile-specify-key-or-key-pair-to-sign-an-assembly.md) リンカーオプションでは、アセンブリの作成方法をカスタマイズすることもできます。
 
-**/clr** が使用されるときは、 `_MANAGED` シンボルは 1 に定義されます。 詳細については、「 [Predefined Macros](../../preprocessor/predefined-macros.md)」を参照してください。
+**`/clr`** を使用する場合、 `_MANAGED` シンボルは1に定義されます。 詳細については、「 [定義済みマクロ](../../preprocessor/predefined-macros.md)」を参照してください。
 
-最初にネイティブなオブジェクト ファイルのグローバル変数が (実行可能ファイルが DLL の場合は DllMain の実行中に) 初期化され、その後でマネージド セクションのグローバル変数が (いずれかのマネージド コードが実行される前に) 初期化されます。 `#pragma` [init_seg](../../preprocessor/init-seg.md) は、マネージド カテゴリ内およびアンマネージド カテゴリ内での初期化の順序にのみ影響を与えます。
+ネイティブオブジェクトファイル内のグローバル変数は、( `DllMain` 実行可能ファイルが DLL である場合は) 最初に初期化され、その後、マネージセクションのグローバル変数が (マネージコードが実行される前に) 初期化されます。 [`#pragma init_seg`](../../preprocessor/init-seg.md) は、マネージカテゴリおよびアンマネージカテゴリの初期化の順序にのみ影響します。
 
-## <a name="metadata-and-unnamed-classes"></a>メタデータと名前のないクラス
+### <a name="metadata-and-unnamed-classes"></a>メタデータと名前のないクラス
 
-名前のないクラスは、メタデータに `$UnnamedClass$`*crc-of-current-file-name*`$`*index*`$`のような名前で表示されます。この *index* は、コンパイル時に名前のないクラスに与えられる連続番号です。 次のコードの例では、名前のないクラスをメタデータに生成します。
+名前のないクラスは、などの名前のメタデータに表示され  `$UnnamedClass$<crc-of-current-file-name>$<index>$` `<index>` ます。は、コンパイル時に名前のないクラスの順次カウントです。 次のコードの例では、名前のないクラスをメタデータに生成します。
 
 ```cpp
 // clr_unnamed_class.cpp
@@ -103,7 +104,21 @@ class {} x;
 
 メタデータを表示するには、ildasm.exe を使用します。
 
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのコンパイラ オプションを設定するには
+
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、[Visual Studio での C++ コンパイラとビルド プロパティの設定](../working-with-project-properties.md)に関するページを参照してください。
+
+1. [ **構成** ] ドロップダウンを [ **すべての構成** ] に設定し、[ **プラットフォーム** ] ドロップダウンを [ **すべてのプラットフォーム** ] に設定します。
+
+1. [ **構成プロパティ** ] の [  >  **詳細設定** ] ページを選択します。
+
+1. **共通言語ランタイムサポート** プロパティを変更します。 **[OK]** を選択して変更を保存します。
+
+### <a name="to-set-this-compiler-option-programmatically"></a>このコンパイラ オプションをコードから設定するには
+
+- 「<xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.CompileAsManaged>」を参照してください。
+
 ## <a name="see-also"></a>関連項目
 
-[MSVC コンパイラ オプション](compiler-options.md)<br/>
-[MSVC コンパイラ コマンド ラインの構文](compiler-command-line-syntax.md)
+[MSVC コンパイラオプション](compiler-options.md)\
+[MSVC Compiler Command-Line 構文](compiler-command-line-syntax.md)

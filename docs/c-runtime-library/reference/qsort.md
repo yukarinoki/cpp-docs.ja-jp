@@ -1,6 +1,7 @@
 ---
 title: qsort
-ms.date: 4/2/2020
+description: Microsoft C ランタイムクイックソート API について説明します。 `qsort`
+ms.date: 10/23/2020
 api_name:
 - qsort
 - _o_qsort
@@ -31,12 +32,12 @@ helpviewer_keywords:
 - sorting arrays
 - arrays [CRT], sorting
 ms.assetid: d6cb33eb-d209-485f-8d41-229eb743c027
-ms.openlocfilehash: 3d9c3481b37e94dbb59ee7356caafc53501045ea
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: c658ffae69cd662809eb4dac09c06b6a13f4e051
+ms.sourcegitcommit: faecabcdd12ff53eb79dc0df193fc3567f2f037c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82913260"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92639121"
 ---
 # <a name="qsort"></a>qsort
 
@@ -55,23 +56,23 @@ void qsort(
 
 ### <a name="parameters"></a>パラメーター
 
-*base*<br/>
+*`base`*\
 対象となる配列の先頭。
 
-*number*<br/>
+*`number`*\
 配列サイズ (要素数)。
 
-*width*<br/>
+*`width`*\
 要素のサイズ (バイト単位)。
 
-*対照*<br/>
+*`compare`*\
 2 つの配列要素を比較してそれらの関係を指定する値を返すユーザー指定のルーチンへのポインターです。
 
 ## <a name="remarks"></a>解説
 
-**Qsort**関数は、*数値*要素の配列 (それぞれの*幅*バイト) を並べ替えるクイックソートアルゴリズムを実装します。 引数*base*は、並べ替えられる配列のベースへのポインターです。 **qsort**は、並べ替えられた要素を使用して、この配列を上書きします。
+関数は、 **`qsort`** 要素の配列 *`number`* (バイト単位) を並べ替えるクイックソートアルゴリズムを実装し *`width`* ます。 引数 *`base`* は、並べ替えられる配列のベースへのポインターです。 **`qsort`** 並べ替えられた要素を使用して、この配列を上書きします。
 
-**qsort**は、並べ替え中に*比較*ルーチンを1回以上呼び出し、各呼び出しで2つの配列要素へのポインターを渡します。
+**`qsort`***`compare`* 並べ替え中にルーチンを1回以上呼び出し、各呼び出しで2つの配列要素へのポインターを渡します。 が *`compare`* 2 つの要素が同じである場合、結果の並べ替えられた配列内の順序は指定されません。
 
 ```C
 compare( (void *) & elem1, (void *) & elem2 );
@@ -81,21 +82,21 @@ compare( (void *) & elem1, (void *) & elem2 );
 
 |関数の戻り値の比較|説明|
 |-----------------------------------|-----------------|
-|< 0|**elem1**未満**elem2**|
-|0|**elem2**に相当する**elem1**|
-|> 0|**elem1** **elem2**より大きい|
+|< 0|**`elem1`** より小さい **`elem2`**|
+|0|**`elem1`** はと同じです。 **`elem2`**|
+|> 0|**`elem1`** より大きい **`elem2`**|
 
 配列は、比較関数による定義に従って、昇順で並べ替えられます。 配列を降順で並べ替えるには、比較関数の "より大きい" と "より小さい" の意味を入れ替えます。
 
-この関数は、パラメーターを検証します。 *Compare*または*number*が**null**の場合、または*base*が**null**で*数値*が0以外の場合、または*width*が0未満の場合は、「パラメーターの[検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、関数はを返し、 **errno**は**EINVAL**に設定されます。
+この関数は、パラメーターを検証します。 またはがの場合、またはがでが0以外の場合、またはが0未満の場合 *`compare`* *`number`* は、 **`NULL`** *`base`* **`NULL`** *`number`* *`width`* 「パラメーターの [検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、関数はを返し、 **`errno`** はに設定され **`EINVAL`** ます。
 
 既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
-|**qsort**|\<stdlib.h > と \<search.h >|
+|**`qsort`**|\<stdlib.h> および \<search.h>|
 
 互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
@@ -145,6 +146,6 @@ boy deserves every favor good
 
 ## <a name="see-also"></a>関連項目
 
-[検索と並べ替え](../../c-runtime-library/searching-and-sorting.md)<br/>
-[bsearch](bsearch.md)<br/>
-[_lsearch](lsearch.md)<br/>
+[検索と並べ替え](../../c-runtime-library/searching-and-sorting.md)\
+[`bsearch`](bsearch.md)\
+[`_lsearch`](lsearch.md)
