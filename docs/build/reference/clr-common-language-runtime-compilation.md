@@ -1,7 +1,7 @@
 ---
 title: /clr (共通言語ランタイムのコンパイル)
 description: Microsoft C++ コンパイラオプション/clr を使用して、C++/CLI および C++ コードをマネージコードとしてコンパイルします。
-ms.date: 10/25/2020
+ms.date: 10/27/2020
 f1_keywords:
 - /CLR
 - VC.Project.VCNMakeTool.CompileAsManaged
@@ -14,16 +14,16 @@ helpviewer_keywords:
 - Managed Extensions for C++, compiling
 - common language runtime, /clr compiler option
 ms.assetid: fec5a8c0-40ec-484c-a213-8dec918c1d6c
-ms.openlocfilehash: b4634b63e58344893d99e2217e57693a2c169f66
-ms.sourcegitcommit: faecabcdd12ff53eb79dc0df193fc3567f2f037c
+ms.openlocfilehash: 9d27d9fb6226f84c4ea67a8f9387a595ba65468b
+ms.sourcegitcommit: 9c801a43ee0d4d84956b03fd387716c818705e0d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92639095"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92907598"
 ---
 # <a name="clr-common-language-runtime-compilation"></a>`/clr` (共通言語ランタイムのコンパイル)
 
-アプリケーションおよびコンポーネントで、共通言語ランタイム (CLR) の機能を使用できるようにします。
+アプリケーションとコンポーネントが共通言語ランタイム (CLR) の機能を使用して、C++/CLI コンパイルを有効にできるようにします。
 
 ## <a name="syntax"></a>構文
 
@@ -36,7 +36,15 @@ ms.locfileid: "92639095"
 
 - なし
 
-   オプションを使用しない場合、 **`/clr`** アプリケーションのメタデータが作成されます。 このメタデータは、他の CLR アプリケーションで使用できます。また、このメタデータによって、他の CLR コンポーネントのメタデータの型とデータをアプリケーションで使用できるようになります。 「[混在 (ネイティブおよびマネージド) アセンブリ](../../dotnet/mixed-native-and-managed-assemblies.md)」を参照してください。
+   オプションを使用しない場合、 **`/clr`** コンポーネントのメタデータが作成されます。 このメタデータは、他の CLR アプリケーションで使用でき、コンポーネントが他の CLR コンポーネントのメタデータの型とデータを使用できるようにします。 「[混在 (ネイティブおよびマネージド) アセンブリ](../../dotnet/mixed-native-and-managed-assemblies.md)」を参照してください。
+
+- **`NetCore`**
+
+   **`/clr:NetCore`** 最新のクロスプラットフォーム .NET framework (.NET Core とも呼ばれます) を使用して、コンポーネントのメタデータとコードを作成します。 メタデータは、他の .NET Core アプリケーションで使用できます。 また、オプションを使用すると、コンポーネントは、他の .NET Core コンポーネントのメタデータの型とデータを使用できます。
+
+- **`nostdlib`**
+
+   既定のディレクトリを無視するようにコンパイラに指示し *`\clr`* ます。 System.dll などの DLL の複数のバージョンを含めると、コンパイラはエラーを生成します。 このオプションを使用すると、コンパイル時に使用する特定のフレームワークを指定できます。
 
 - **`pure`**
 
@@ -58,15 +66,11 @@ ms.locfileid: "92639095"
 
 - **`initialAppDomain`**
 
-   C++/CLI アプリケーションを CLR の version 1 で実行できるようにします。  を使用するアプリケーションは **`initialAppDomain`** 、CLR のバージョン1ではサポートされていないため、ASP.NET を使用するアプリケーションでは使用できません。
-
-- **`nostdlib`**
-
-   既定のディレクトリを無視するようにコンパイラに指示し *`\clr`* ます。 System.dll などの DLL の複数のバージョンを含めると、コンパイラはエラーを生成します。 このオプションを使用すると、コンパイル時に使用する特定のフレームワークを指定できます。
+   **`initialAppDomain` は互換性のために残さ** れています。 C++/CLI アプリケーションを CLR の version 1 で実行できるようにします。  を使用するアプリケーションは **`initialAppDomain`** 、CLR のバージョン1ではサポートされていないため、ASP.NET を使用するアプリケーションでは使用できません。
 
 ## <a name="remarks"></a>解説
 
-マネージド コードは、CLR によって検査および管理できるコードです。 マネージド コードはマネージド オブジェクトにアクセスできます。 詳細については、「 [ `/clr ` 制限](clr-restrictions.md)」を参照してください。
+*マネージコード* は、CLR によって検査および管理できるコードです。 マネージド コードはマネージド オブジェクトにアクセスできます。 詳細については、「 [ `/clr` 制限](clr-restrictions.md)」を参照してください。
 
 C++ でマネージ型を定義および使用するアプリケーションを開発する方法については、「 [ランタイムプラットフォームのコンポーネント拡張](../../extensions/component-extensions-for-runtime-platforms.md)」を参照してください。
 
@@ -110,9 +114,12 @@ class {} x;
 
 1. [ **構成** ] ドロップダウンを [ **すべての構成** ] に設定し、[ **プラットフォーム** ] ドロップダウンを [ **すべてのプラットフォーム** ] に設定します。
 
-1. [ **構成プロパティ** ] の [  >  **詳細設定** ] ページを選択します。
+1. [ **構成プロパティ** ] [  >  **C/c + +**  >  **全般** ] ページを選択します。
 
 1. **共通言語ランタイムサポート** プロパティを変更します。 **[OK]** を選択して変更を保存します。
+
+> [!NOTE]
+> Visual Studio IDE では、[ **`/clr`** **Configuration Properties**  >  プロパティページ] ダイアログボックスの [構成プロパティ] [ **C/c + +**  >  **全般** ] ページで、コンパイラオプションを個別に設定できます。 ただし、プロジェクトを作成するには CLR テンプレートを使用することをお勧めします。 CLR コンポーネントを正常に作成するために必要なすべてのプロパティを設定します。 これらのプロパティを設定するもう1つの方法は、[プロパティページ] ダイアログボックスの [ **構成プロパティ** ] の [詳細設定] ページで、[ **共通言語ランタイムサポート** ] プロパティを使用することです  >  **Advanced** 。 このプロパティは、その他のすべての CLR 関連ツールオプションを一度に設定します。
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>このコンパイラ オプションをコードから設定するには
 

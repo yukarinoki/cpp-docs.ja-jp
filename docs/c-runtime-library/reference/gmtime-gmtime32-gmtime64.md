@@ -1,7 +1,7 @@
 ---
 title: gmtime、_gmtime32、_gmtime64
-description: Gmtime、_gmtime32、_gmtime64 の API リファレンスtime_t 値を tm 構造体に変換します。
-ms.date: 4/2/2020
+description: '`gmtime` `_gmtime32` `_gmtime64` 値を `time_t` 構造体に変換する `tm` 、、およびの API リファレンス。'
+ms.date: 10/27/2020
 api_name:
 - _gmtime32
 - gmtime
@@ -38,16 +38,16 @@ helpviewer_keywords:
 - gmtime64 function
 - time structure conversion
 ms.assetid: 315501f3-477e-475d-a414-ef100ee0db27
-ms.openlocfilehash: b3dd09e828b972f05a4c45c30ebc3e5edb68f551
-ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
+ms.openlocfilehash: bb8bee6b752f64d85dfb0f8c9e5ba7acf204a76f
+ms.sourcegitcommit: 9c801a43ee0d4d84956b03fd387716c818705e0d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89556464"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92907546"
 ---
-# <a name="gmtime-_gmtime32-_gmtime64"></a>gmtime、_gmtime32、_gmtime64
+# <a name="gmtime-_gmtime32-_gmtime64"></a>`gmtime`, `_gmtime32`, `_gmtime64`
 
-**Time_t**時刻値を**tm**構造体に変換します。 これらの関数のセキュリティを強化したバージョンを使用できます。「[gmtime_s、_gmtime32_s、_gmtime64_s](gmtime-s-gmtime32-s-gmtime64-s.md)」を参照してください。
+`time_t`時刻値を `tm` 構造体に変換します。 これらの関数のセキュリティを強化したバージョンを使用できます。「 [」、「」を参照し `gmtime_s` てください。 `_gmtime32_s` `_gmtime64_s` ](gmtime-s-gmtime32-s-gmtime64-s.md)
 
 ## <a name="syntax"></a>構文
 
@@ -59,36 +59,36 @@ struct tm *_gmtime64( const __time64_t *sourceTime );
 
 ### <a name="parameters"></a>パラメーター
 
-*sourceTime*<br/>
+*`sourceTime`*\
 格納されている時刻へのポインター。 時刻は、世界協定時刻 (UTC: Coordinated Universal Time) の 1970 年 1 月 1 日の深夜 00:00:00 から経過した時間 (秒単位) を表します。
 
 ## <a name="return-value"></a>戻り値
 
-型 [tm](../../c-runtime-library/standard-types.md) 構造体へのポインター。 返される構造体のフィールドには、 *sourcetime* 引数の評価値が現地時刻ではなく UTC で格納されます。 構造体の各フィールドは **`int`** 、次のように型になります。
+型の構造体へのポインター [`tm`](../../c-runtime-library/standard-types.md) 。 返される構造体のフィールドには、引数の評価値が *`sourceTime`* 現地時刻ではなく UTC で格納されます。 構造体の各フィールドは `int` 型で、次のとおりです:
 
 |フィールド|説明|
 |-|-|
-|**tm_sec**|秒後 (0-59)。|
-|**tm_min**|分後 (0-59)。|
-|**tm_hour**|深夜からの時間 (0-23)。|
-|**tm_mday**|月の通算日 (1-31)。|
-|**tm_mon**|月 (0-11;1月 = 0)。|
-|**tm_year**|年 (実際の西暦から 1900 を引いた数)|
-|**tm_wday**|曜日 (0-6;日曜日 = 0)。|
-|**tm_yday**|年の通算日 (0-365;1月1日 = 0)。|
-|**tm_isdst**|**Gmtime**の場合は常に0です。|
+|`tm_sec`|秒後 (0-59)。|
+|`tm_min`|分後 (0-59)。|
+|`tm_hour`|深夜からの時間 (0-23)。|
+|`tm_mday`|月の通算日 (1-31)。|
+|`tm_mon`|月 (0-11;1月 = 0)。|
+|`tm_year`|年 (実際の西暦から 1900 を引いた数)|
+|`tm_wday`|曜日 (0-6;日曜日 = 0)。|
+|`tm_yday`|年の通算日 (0-365;1月1日 = 0)。|
+|`tm_isdst`|**Gmtime** の場合は常に0です。|
 
-**Gmtime**、 [mktime](mktime-mktime32-mktime64.md)、 [mkgmtime](mkgmtime-mkgmtime32-mkgmtime64.md)、および[localtime](localtime-localtime32-localtime64.md)の32ビットバージョンと64ビットバージョンの両方で、変換にスレッドごとに1つの共通の**tm**構造が使用されます。 これらの関数を呼び出すたびに、前の呼び出しの結果は破棄されます。 *Sourcetime*が1970年1月1日午前0時より前の日付を表している場合、 **gmtime**は**NULL**を返します。 エラーの戻り値はありません。
+、、、およびの32ビットバージョンと64ビットバージョンは、いずれも、 **`gmtime`** [`mktime`](mktime-mktime32-mktime64.md) [`mkgmtime`](mkgmtime-mkgmtime32-mkgmtime64.md) [`localtime`](localtime-localtime32-localtime64.md) `tm` 変換のためにスレッドごとに1つの共通構造を使用します。 これらの関数を呼び出すたびに、前の呼び出しの結果は破棄されます。 が *`sourceTime`* 1970 年1月1日の午前0時より前の日付を表している場合、は **`gmtime`** を返し `NULL` ます。 エラーの戻り値はありません。
 
-**__time64_t**構造体を使用する **_gmtime64**では、23:59:59 年12月31日から3000日までの日付を表すことができます。一方、 **_Gmtime32**は、2038年1月18日から23:59:59 までの日付のみを表します。 これらの関数の日付範囲の下限は、どちらも 1970 年 1 月 1 日の午前 0 時です。
+構造体を使用する **_gmtime64** では `__time64_t` 、23:59:59 年12月 31 3000 日の UTC で日付を表すことができます。 **`_gmtime32`** は、23:59:59 年1月 2038 18 日からまでの日付のみを表します。 これらの関数の日付範囲の下限は、どちらも 1970 年 1 月 1 日の午前 0 時です。
 
-**gmtime**は **_gmtime64**に評価されるインライン関数で、 **_USE_32BIT_TIME_T**が定義されている場合を除き、 **time_t**は **__time64_t**に相当します。 以前の32ビット**time_t**として**time_t**を解釈するようにコンパイラに強制する必要がある場合は **_USE_32BIT_TIME_T**を定義できますが、これを行うと、 **gmtime**が **_gmtime32**にインライン配置され time_t として定義される**ことになり****ます。** この方法は使用しないことをお勧めします。これは 64 ビット プラットフォームでは使用できず、また 2038 年 1 月 18 日以降はアプリケーションでエラーが発生する可能性があるためです。
+**`gmtime`** はに評価されるインライン関数であり、は **`_gmtime64`** `time_t` `__time64_t` が定義されている場合を除き、と同じです `_USE_32BIT_TIME_T` 。 コンパイラが古い32ビットとして解釈されるようにする必要がある場合は `time_t` `time_t` 、を定義できますが、これを行うと、がとして定義され、として `_USE_32BIT_TIME_T` 定義されるようになり **`gmtime`** **`_gmtime32`** `time_t` `__time32_t` ます。 64ビットプラットフォームでは許可されていないため、この方法はお勧めしません。 いずれの場合も、2038年1月18日以降、アプリケーションが失敗する可能性があります。
 
-これらの関数では、パラメーターの検証が行われます。 *Sourcetime*が null ポインターの場合、または*sourcetime*値が負の場合、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、これらの関数は無効なパラメーターハンドラーを呼び出します。 実行の継続が許可された場合、関数は **NULL** を返し、 **errno** を **EINVAL**に設定します。
+これらの関数では、パラメーターの検証が行われます。 *`sourceTime`* が null ポインターの場合、または *`sourceTime`* 値が負の場合、「パラメーターの [検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、これらの関数は無効なパラメーターハンドラーを呼び出します。 実行の継続が許可された場合、関数は `NULL` を返し、`errno` を `EINVAL` に設定します。
 
 ## <a name="remarks"></a>解説
 
-**_Gmtime32**関数は、 *sourcetime*値を分割し、time. H で定義されている**tm**型の静的に割り当てられた構造体に格納します。 *Sourcetime*の値は、通常、 [time](time-time32-time64.md)関数の呼び出しから取得されます。
+関数は、 **`_gmtime32`** 値を分解 *`sourceTime`* し、 `tm` で定義されている型の静的に割り当てられた構造体に格納し `TIME.H` ます。 の値は、 *`sourceTime`* 通常、関数の呼び出しから取得され [`time`](time-time32-time64.md) ます。
 
 > [!NOTE]
 > ほとんどの場合は、対象の環境で夏時間が有効かどうかを確認してください。 C ランタイム ライブラリでは、夏時間 (DST) の計算にアメリカ合衆国の規則が使用されていることを前提とします。
@@ -99,7 +99,7 @@ struct tm *_gmtime64( const __time64_t *sourceTime );
 
 |ルーチンによって返される値|必須の C ヘッダー|必須の C++ ヘッダー|
 |-------------|---------------------|-|
-|**gmtime**、 **_gmtime32**、 **_gmtime64**|\<time.h>|\<ctime> または \<time.h>|
+|**`gmtime`** , **`_gmtime32`** , **`_gmtime64`**|`<time.h>`| `<ctime>` または `<time.h>`|
 
 互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
@@ -116,7 +116,7 @@ struct tm *_gmtime64( const __time64_t *sourceTime );
 #include <time.h>
 #include <stdio.h>
 
-int main( void )
+int main(void)
 {
    struct tm *newtime;
    __int64 ltime;
@@ -138,12 +138,12 @@ Coordinated universal time is Tue Feb 12 23:11:31 2002
 
 ## <a name="see-also"></a>関連項目
 
-[時間管理](../../c-runtime-library/time-management.md)<br/>
-[asctime、_wasctime](asctime-wasctime.md)<br/>
-[ctime、_ctime32、_ctime64、_wctime、_wctime32、_wctime64](ctime-ctime32-ctime64-wctime-wctime32-wctime64.md)<br/>
-[_ftime、_ftime32、_ftime64](ftime-ftime32-ftime64.md)<br/>
-[gmtime_s、_gmtime32_s、_gmtime64_s](gmtime-s-gmtime32-s-gmtime64-s.md)<br/>
-[localtime、_localtime32、_localtime64](localtime-localtime32-localtime64.md)<br/>
-[_mkgmtime、_mkgmtime32、_mkgmtime64](mkgmtime-mkgmtime32-mkgmtime64.md)<br/>
-[mktime、_mktime32、_mktime64](mktime-mktime32-mktime64.md)<br/>
-[time、_time32、_time64](time-time32-time64.md)<br/>
+[時間管理](../../c-runtime-library/time-management.md)\
+[`asctime`, `_wasctime`](asctime-wasctime.md)\
+[`ctime`, `_ctime32`, `_ctime64`, `_wctime`, `_wctime32`, `_wctime64`](ctime-ctime32-ctime64-wctime-wctime32-wctime64.md)\
+[`_ftime`, `_ftime32`, `_ftime64`](ftime-ftime32-ftime64.md)\
+[`gmtime_s`, `_gmtime32_s`, `_gmtime64_s`](gmtime-s-gmtime32-s-gmtime64-s.md)\
+[`localtime`, `_localtime32`, `_localtime64`](localtime-localtime32-localtime64.md)\
+[`_mkgmtime`, `_mkgmtime32`, `_mkgmtime64`](mkgmtime-mkgmtime32-mkgmtime64.md)\
+[`mktime`, `_mktime32`, `_mktime64`](mktime-mktime32-mktime64.md)\
+[`time`, `_time32`, `_time64`](time-time32-time64.md)
