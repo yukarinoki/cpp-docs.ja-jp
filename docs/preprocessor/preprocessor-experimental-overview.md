@@ -5,22 +5,22 @@ ms.date: 09/10/2020
 helpviewer_keywords:
 - preprocessor, experimental
 - preprocessor, new
-ms.openlocfilehash: c95f923d8c38250958e26431b61a71a1e6a7fdda
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: 5327a8148f78a07e222fae7fb92e6ed741d12011
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90041368"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92924578"
 ---
 # <a name="msvc-new-preprocessor-overview"></a>MSVC の新しいプリプロセッサの概要
 
-::: moniker range="vs-2015"
+::: moniker range="msvc-140"
 
 Visual Studio 2015 では、標準 C++ または C99 に準拠していない従来のプリプロセッサが使用されます。 Visual Studio 2019 バージョン16.5 以降では、C++ 20 standard の新しいプリプロセッササポートは機能が完全になりました。 これらの変更は、 [/zc: プリプロセッサ](../build/reference/zc-preprocessor.md) コンパイラスイッチを使用して利用できます。 新しいプリプロセッサの実験的なバージョンは、Visual Studio 2017 バージョン15.8 以降では、 [/実験的: プリプロセッサ](../build/reference/experimental-preprocessor.md) コンパイラスイッチを使用して利用できます。 Visual Studio 2017 および Visual Studio 2019 で新しいプリプロセッサを使用する方法の詳細については、こちらを参照してください。 優先するバージョンの Visual Studio のドキュメントを表示するには、 **[バージョン]** セレクター コントロールを使用します。 このページの目次の一番上にあります。
 
 ::: moniker-end
 
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 
 標準への準拠を改善し、長期的なバグを修正し、正式に定義されていない動作を変更するために、Microsoft C++ プリプロセッサを更新しています。 また、マクロ定義にエラーが発生した場合に警告する新しい診断も追加しました。
 
@@ -128,7 +128,7 @@ ADD_STD(string) s;
 
 ### <a name="comma-elision-in-variadic-macros"></a>可変個引数マクロでのコンマ省略
 
-従来の MSVC プリプロセッサでは、空の置換の前に、常にコンマが削除され `__VA_ARGS__` ます。 新しいプリプロセッサは、他の一般的なクロスプラットフォームコンパイラの動作により厳密に準拠しています。 コンマを削除するには、可変個引数引数が不足している (空ではない) 必要があり、演算子でマークされている必要があり `##` ます。 次に例を示します。
+従来の MSVC プリプロセッサでは、空の置換の前に、常にコンマが削除され `__VA_ARGS__` ます。 新しいプリプロセッサは、他の一般的なクロスプラットフォームコンパイラの動作により厳密に準拠しています。 コンマを削除するには、可変個引数引数が不足している (空ではない) 必要があり、演算子でマークされている必要があり `##` ます。 次の例を確認してください。
 
 ```cpp
 void func(int, int = 2, int = 3);

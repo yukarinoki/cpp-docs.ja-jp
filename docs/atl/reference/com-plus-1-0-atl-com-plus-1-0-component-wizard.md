@@ -4,22 +4,22 @@ ms.date: 05/09/2019
 f1_keywords:
 - vc.codewiz.class.atl.mts.options
 ms.assetid: 2fbe259c-6be1-4d0e-9cfe-721c75c97cb1
-ms.openlocfilehash: 83b7beafe537f6b271b254d16505b515a41acf27
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 986e579de4d04aea4db8ab74e1e4d4c9e3263014
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69496692"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92923682"
 ---
 # <a name="com-10-atl-com-10-component-wizard"></a>COM+ 1.0、ATL COM+ 1.0 コンポーネント ウィザード
 
-::: moniker range="vs-2019"
+::: moniker range="msvc-160"
 
 このウィザードは Visual Studio 2019 以降で使用できません。
 
 ::: moniker-end
 
-::: moniker range="<=vs-2017"
+::: moniker range="<=msvc-150"
 
 ATL COM+ 1.0 コンポーネント ウィザードのこのページを使用して、サポートするインターフェイスの種類と追加のインターフェイスを指定します。
 
@@ -45,7 +45,7 @@ ATL プロジェクトや ATL COM クラスの詳細については、「[ATL CO
    |オプション|説明|
    |------------|-----------------|
    |**ISupportErrorInfo**|オブジェクトがクライアントにエラー情報を返すことができるように、[ISupportErrorInfo](../../atl/reference/isupporterrorinfoimpl-class.md) インターフェイスのサポートを作成します。|
-   |**IObjectControl**|オブジェクトで次の 3 つの [IObjectControl](/windows/win32/api/comsvcs/nn-comsvcs-iobjectcontrol) メソッドにアクセスできるようにします。[Activate](/windows/win32/api/comsvcs/nf-comsvcs-iobjectcontrol-activate)、[CanBePooled](/windows/win32/api/comsvcs/nf-comsvcs-iobjectcontrol-canbepooled)、[Deactivate](/windows/win32/api/comsvcs/nf-comsvcs-iobjectcontrol-deactivate)。|
+   |**IObjectControl**|オブジェクトに、[アクティブ化](/windows/win32/api/comsvcs/nf-comsvcs-iobjectcontrol-activate)、 [canbepooled](/windows/win32/api/comsvcs/nf-comsvcs-iobjectcontrol-canbepooled)、および[非アクティブ化](/windows/win32/api/comsvcs/nf-comsvcs-iobjectcontrol-deactivate)の3つの[IObjectControl](/windows/win32/api/comsvcs/nn-comsvcs-iobjectcontrol)メソッドへのアクセスを提供します。|
    |**IObjectConstruct**|他のメソッドやオブジェクトからのパラメーターの受け渡しを管理するための [IObjectConstruct](/windows/win32/api/comsvcs/nn-comsvcs-iobjectconstruct) インターフェイスのサポートを作成します。|
 
 - **トランザクション**
@@ -54,14 +54,14 @@ ATL プロジェクトや ATL COM クラスの詳細については、「[ATL CO
 
    |オプション|説明|
    |------------|-----------------|
-   |**サポート状況**|コンポーネント属性マクロ custom(TLBATTR_TRANS_SUPPORTED,0) を .h ファイル (属性付きプロジェクト) または .idl ファイル (属性なしプロジェクト) に追加して、オブジェクトがトランザクション ストリームのルートにならないことを指定します。|
+   |**サポートされています**|コンポーネント属性マクロ custom(TLBATTR_TRANS_SUPPORTED,0) を .h ファイル (属性付きプロジェクト) または .idl ファイル (属性なしプロジェクト) に追加して、オブジェクトがトランザクション ストリームのルートにならないことを指定します。|
    |**必須**|コンポーネント属性マクロ custom(TLBATTR_TRANS_REQUIRED,0) を .h ファイル (属性付きプロジェクト) または .idl ファイル (属性なしプロジェクト) に追加して、オブジェクトがトランザクション ストリームのルートになる場合もならない場合もあることを指定します。|
    |**サポートされていません**|オブジェクトでトランザクションを除外することを指定します。 コンポーネント属性マクロ custom(TLBATTR_TRANS_NOTSUPP,0) を .h ファイル (属性付きプロジェクト) または .idl ファイル (属性なしプロジェクト) に追加します。|
-   |**新しく必要**|コンポーネント属性マクロ custom(TLBATTR_TRANS_REQNEW,0) を .h ファイル (属性付きプロジェクト) または .idl ファイル (属性なしプロジェクト) に追加して、オブジェクトが常にトランザクション ストリームのルートになることを指定します。|
+   |**新しいものが必要**|コンポーネント属性マクロ custom(TLBATTR_TRANS_REQNEW,0) を .h ファイル (属性付きプロジェクト) または .idl ファイル (属性なしプロジェクト) に追加して、オブジェクトが常にトランザクション ストリームのルートになることを指定します。|
 
 ::: moniker-end
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>こちらもご覧ください
 
 [ATL COM+ 1.0 コンポーネント ウィザード](../../atl/reference/atl-com-plus-1-0-component-wizard.md)<br/>
 [ATL COM+ 1.0 コンポーネント](../../atl/reference/adding-an-atl-com-plus-1-0-component.md)

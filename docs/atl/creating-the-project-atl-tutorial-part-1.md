@@ -3,12 +3,12 @@ title: プロジェクトの作成 (ATL チュートリアル、パート 1)
 ms.custom: get-started-article
 ms.date: 08/19/2019
 ms.assetid: f6b727d1-390a-4b27-b82f-daadcd9fc059
-ms.openlocfilehash: 31ecee084f620256820a685df1f0e6891046fb8f
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 8a0374fcaf9a18c82e90bde2abc032158ecc537a
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80075328"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92923867"
 ---
 # <a name="creating-the-project-atl-tutorial-part-1"></a>プロジェクトの作成 (ATL チュートリアル、パート 1)
 
@@ -16,7 +16,7 @@ ms.locfileid: "80075328"
 
 > [!NOTE]
 > このチュートリアルでは、Polygon サンプルと同じソースコードを作成します。 ソースコードが手動で入力されないようにする場合は、 [Polygon sample abstract](https://github.com/Microsoft/VCSamples/tree/master/VC2008Samples/ATL/Controls/Polygon)からダウンロードできます。 その後、チュートリアルで作業するときに Polygon ソースコードを参照するか、またはそれを使用して独自のプロジェクトでエラーをチェックすることができます。
-> コンパイルするには、 *.pch* (Visual Studio 2017 以前では*stdafx.h* ) を開き、次のように置き換えます。
+> コンパイルするには、 *.pch* (Visual Studio 2017 以前では *stdafx.h* ) を開き、次のように置き換えます。
 >
 > ```
 > #ifndef WINVER
@@ -33,60 +33,60 @@ ms.locfileid: "80075328"
 > #endif
 > ```
 >
-> コンパイラは、正常に終了していない `regsvr32` を引き続き通知しますが、コントロールの DLL をビルドして使用できるようにする必要があります。
+> コンパイラは、正常に終了して `regsvr32` いないことを通知しますが、コントロールの DLL をビルドし、使用できるようにする必要があります。
 
 ### <a name="to-create-the-initial-atl-project-using-the-atl-project-wizard"></a>ATL プロジェクトウィザードを使用して最初の ATL プロジェクトを作成するには
 
-1. Visual Studio 2017 以前の場合: **File** > **New** > **Project** を実行します。 **[ビジュアルC++ ]** タブを開き、 **[MFC/ATL]** を選択します。 **[ATL プロジェクト]** を選択します。
+1. Visual Studio 2017 以前の場合: [ **ファイル** ] [  >  **新しい**  >  **プロジェクト** ]。 [ **Visual C++** ] タブを開き、[ **MFC/ATL** ] を選択します。 [ **ATL プロジェクト** ] を選択します。
 
-   Visual Studio 2019: [**ファイル** > **新しい** > **プロジェクト**] を選択し、検索ボックスに「atl」と入力して、 **[atl プロジェクト]** を選択します。
+   Visual Studio 2019: [ **ファイル** ] [新規作成] [プロジェクト] の順に選択し、  >  **New**  >  **Project** 検索ボックスに「atl」と入力して、[ **atl プロジェクト** ] を選択します。
 
 1. プロジェクト名として「 *Polygon* 」と入力します。
 
-    通常、ソースコードの場所は、既定では \ ユーザー\\\<ユーザー名 > になります。新しいフォルダーが自動的に作成されます。
+    通常、ソースコードの場所は既定で \ ユーザー名に設定され、 \\ \<username> 新しいフォルダーが自動的に作成されます。
 
 1. Visual Studio 2019 で、既定値をそのまま使用し、[ **OK]** をクリックします。
-   Visual Studio 2017 で **[OK]** をクリックして、 **ATL プロジェクト**ウィザードを開きます。 **[アプリケーションの設定]** をクリックして、使用可能なオプションを表示します。 このプロジェクトはコントロールを作成し、コントロールはインプロセスサーバーである必要があるため、**アプリケーションの種類**は DLL として残しておきます。 **[OK]** をクリックします。
+   Visual Studio 2017 で [ **OK** ] をクリックして、 **ATL プロジェクト** ウィザードを開きます。 [ **アプリケーションの設定** ] をクリックして、使用可能なオプションを表示します。 このプロジェクトはコントロールを作成し、コントロールはインプロセスサーバーである必要があるため、 **アプリケーションの種類** は DLL として残しておきます。 **[OK]** をクリックします。
 
-Visual Studio では、複数のファイルを生成することでプロジェクトが作成されます。 これらのファイルを**ソリューションエクスプローラー**で表示するには、`Polygon` オブジェクトを展開します。 ファイルは次のとおりです。
+Visual Studio では、複数のファイルを生成することでプロジェクトが作成されます。 オブジェクトを展開することで、これらのファイルを **ソリューションエクスプローラー** で表示でき `Polygon` ます。 ファイルは次のとおりです。
 
-::: moniker range="<=vs-2017"
+::: moniker range="<=msvc-150"
 
-|ファイル|Description|
+|ファイル|説明|
 |----------|-----------------|
-|Polygon|`DllMain`、`DllCanUnloadNow`、`DllGetClassObject`、`DllRegisterServer`、および `DllUnregisterServer`の実装が含まれています。 には、プロジェクト内の ATL オブジェクトのリストであるオブジェクトマップも含まれています。 最初は空白になります。|
+|Polygon|、、、、およびの実装が含まれてい `DllMain` `DllCanUnloadNow` `DllGetClassObject` `DllRegisterServer` `DllUnregisterServer` ます。 には、プロジェクト内の ATL オブジェクトのリストであるオブジェクトマップも含まれています。 最初は空白になります。|
 |Polygon .def|このモジュール定義ファイルは、DLL で必要とされるエクスポートに関する情報をリンカーに提供します。|
 |Polygon .idl|インターフェイス定義言語ファイル。オブジェクトに固有のインターフェイスを記述します。|
 |Polygon .rgs|このレジストリスクリプトには、プログラムの DLL を登録するための情報が含まれています。|
 |Polygon|リソースファイル。最初はバージョン情報とプロジェクト名を含む文字列が含まれています。|
 |Resource.h|リソース ファイルのヘッダー ファイルです。|
 |Polygonps|このモジュール定義ファイルは、アパートメント間の呼び出しをサポートするプロキシおよびスタブコードに必要なエクスポートに関する情報をリンカーに提供します。|
-|stdafx.cpp|*Stdafx.h*を `#include` するファイル。|
-|stdafx.h|ATL ヘッダーファイルの `#include` およびプリコンパイルを実行するファイル。|
+|stdafx.cpp|Stdafx.h にするファイル `#include` *stdafx.h* 。|
+|stdafx.h|`#include`ATL ヘッダーファイルをプリコンパイルするファイル。|
 
 ::: moniker-end
 
-::: moniker range=">=vs-2019"
+::: moniker range=">=msvc-160"
 
-|ファイル|Description|
+|ファイル|説明|
 |----------|-----------------|
-|Polygon|`DllMain`、`DllCanUnloadNow`、`DllGetClassObject`、`DllRegisterServer`、および `DllUnregisterServer`の実装が含まれています。 には、プロジェクト内の ATL オブジェクトのリストであるオブジェクトマップも含まれています。 最初は空白になります。|
+|Polygon|、、、、およびの実装が含まれてい `DllMain` `DllCanUnloadNow` `DllGetClassObject` `DllRegisterServer` `DllUnregisterServer` ます。 には、プロジェクト内の ATL オブジェクトのリストであるオブジェクトマップも含まれています。 最初は空白になります。|
 |Polygon .def|このモジュール定義ファイルは、DLL で必要とされるエクスポートに関する情報をリンカーに提供します。|
 |Polygon .idl|インターフェイス定義言語ファイル。オブジェクトに固有のインターフェイスを記述します。|
 |Polygon .rgs|このレジストリスクリプトには、プログラムの DLL を登録するための情報が含まれています。|
 |Polygon|リソースファイル。最初はバージョン情報とプロジェクト名を含む文字列が含まれています。|
 |Resource.h|リソース ファイルのヘッダー ファイルです。|
 |Polygonps|このモジュール定義ファイルは、アパートメント間の呼び出しをサポートするプロキシおよびスタブコードに必要なエクスポートに関する情報をリンカーに提供します。|
-|pch|*Pch*`#include` れるファイル。|
-|.pch. h|ATL ヘッダーファイルの `#include` およびプリコンパイルを実行するファイル。|
+|pch|.Pch になるファイル `#include` *pch.h* 。|
+|.pch. h|`#include`ATL ヘッダーファイルをプリコンパイルするファイル。|
 
 ::: moniker-end
 
-1. **ソリューション エクスプローラー**で、`Polygon` プロジェクトを右クリックします。
+1. **ソリューションエクスプローラー** で、プロジェクトを右クリックし `Polygon` ます。
 
-1. ショートカットメニューの **[プロパティ]** をクリックします。
+1. ショートカットメニューの [ **プロパティ** ] をクリックします。
 
-1. **[リンカー]** をクリックします。 **UserRedirection**オプションを **[はい]** に変更します。
+1. [ **リンカー** ] をクリックします。 **UserRedirection** オプションを **[はい]** に変更します。
 
 1. **[OK]** をクリックします。
 
@@ -94,6 +94,6 @@ Visual Studio では、複数のファイルを生成することでプロジェ
 
 [手順2に進みます。](../atl/adding-a-control-atl-tutorial-part-2.md)
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>こちらもご覧ください
 
 [チュートリアル](../atl/active-template-library-atl-tutorial.md)

@@ -6,22 +6,22 @@ helpviewer_keywords:
 - IPropertyPage class
 - property pages, implementing
 ms.assetid: 62f29440-33a7-40eb-a1ef-3634c95f640c
-ms.openlocfilehash: 6544f5ddf0b81fdec893308bb10e0c19cea73005
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: c9b1c0c159a15ec7d9a5c99208baa2ed6af2d6d1
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91499442"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92923896"
 ---
 # <a name="implementing-property-pages"></a>プロパティ ページの実装
 
-::: moniker range="vs-2019"
+::: moniker range="msvc-160"
 
 ATL プロパティ ページ ウィザードは、Visual Studio 2019 以降では使用できません。
 
 ::: moniker-end
 
-::: moniker range="<=vs-2017"
+::: moniker range="<=msvc-150"
 
 プロパティ ページは、`IPropertyPage` または `IPropertyPage2` インターフェイスを実装する COM オブジェクトです。 ATL では、[[クラスの追加] ダイアログ ボックス](../ide/adding-a-class-visual-cpp.md#add-class-dialog-box)の [ATL プロパティ ページ ウィザード](../atl/reference/atl-property-page-wizard.md)経由のプロパティ ページの実装をサポートしています。
 
@@ -29,7 +29,7 @@ ATL を使用してプロパティ ページを作成するには:
 
 - ATL ダイナミック リンク ライブラリ (DLL) サーバー プロジェクトを作成するか開きます。
 
-- [[クラスの追加] ダイアログ ボックス](../ide/adding-a-class-visual-cpp.md#add-class-dialog-box)を開き、**[ATL プロパティ ページ]** を開きます。
+- [[クラスの追加] ダイアログ ボックス](../ide/adding-a-class-visual-cpp.md#add-class-dialog-box)を開き、 **[ATL プロパティ ページ]** を開きます。
 
 - プロパティ ページがアパートメント スレッドであることを確認します (ユーザー インターフェイスがあるため)。
 
@@ -51,11 +51,11 @@ ATL を使用してプロパティ ページを作成するには:
 プロパティページの実装例については、「 [例: プロパティページの実装](../atl/example-implementing-a-property-page.md)」を参照してください。
 
 > [!NOTE]
-> プロパティ ページに ActiveX コントロールをホストする場合は、ウィザードで生成されたクラスの派生を変更する必要があります。 基底クラスの一覧で、 **CDialogImpl \<CYourClass> **を**CAxDialogImpl \<CYourClass> **に置き換えます。
+> プロパティ ページに ActiveX コントロールをホストする場合は、ウィザードで生成されたクラスの派生を変更する必要があります。 基底クラスの一覧で、 **CDialogImpl \<CYourClass>** を **CAxDialogImpl \<CYourClass>** に置き換えます。
 
 ::: moniker-end
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>こちらもご覧ください
 
 [[プロパティ ページ]](../atl/atl-com-property-pages.md)<br/>
 [ATLPages の例](../overview/visual-cpp-samples.md)

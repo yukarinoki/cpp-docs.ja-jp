@@ -6,27 +6,27 @@ f1_keywords:
 helpviewer_keywords:
 - C4727
 ms.assetid: 991b0087-3a50-40f5-9cdb-cdc367cd472c
-ms.openlocfilehash: 6b0ca74bbd03682f91206c21c3413d4ad168b60a
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: e1eeb7e466e325772d6a1522e77983fd3de04293
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80185868"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92923956"
 ---
 # <a name="compiler-warning-level-1-c4727"></a>コンパイラの警告 (レベル 1) C4727
 
 "Obj_file_1 と obj_file_2 で同じタイムスタンプを持つ pch_file という名前の PCH が見つかりました。  最初の PCH を使用します。
 
 > [!NOTE]
-> Visual Studio 2017 以前では、プリコンパイル済みヘッダーは既定で*stdafx.h*と呼ばれており、visual studio 2019 以降では既定で*pch*と呼ばれています。
+> Visual Studio 2017 以前では、プリコンパイル済みヘッダーは既定で *stdafx.h* と呼ばれており、visual studio 2019 以降では既定で *pch* と呼ばれています。
 
-C4727 は、 **/yc**を使用して複数の compilands をコンパイルするとき、およびコンパイラが同じ .pch タイムスタンプですべての .obj ファイルをマークできるようになったときに発生します。
+C4727 は、 **/yc** を使用して複数の compilands をコンパイルするとき、およびコンパイラが同じ .pch タイムスタンプですべての .obj ファイルをマークできるようになったときに発生します。
 
 解決するには、 **/yc/c** (pch を作成) を使用して1つのソースファイルをコンパイルし、その他のファイルを **/yu/c** (pch を使用) で個別にコンパイルしてから、それらをリンクします。
 
 次のようにした場合、C4727 が生成されます。
 
-::: moniker range="<=vs-2017"
+::: moniker range="<=msvc-150"
 
 **cl/clr/GL a .cpp b. .cpp/Ycstdafx.h**
 
@@ -38,7 +38,7 @@ C4727 は、 **/yc**を使用して複数の compilands をコンパイルする
 
 ::: moniker-end
 
-::: moniker range=">=vs-2019"
+::: moniker range=">=msvc-160"
 
 **cl/clr/GL a .cpp b. .cpp/Ycpch.h**
 
@@ -52,6 +52,6 @@ C4727 は、 **/yc**を使用して複数の compilands をコンパイルする
 
 詳細については、「
 
-- [/Yc (プリコンパイル済みヘッダー ファイルの作成)](../../build/reference/yc-create-precompiled-header-file.md)
+- [/Yc (プリコンパイル済みヘッダーファイルの作成)](../../build/reference/yc-create-precompiled-header-file.md)
 
-- [/Yu (プリコンパイル済みヘッダー ファイルの使用)](../../build/reference/yu-use-precompiled-header-file.md)
+- [/Yu (プリコンパイル済みヘッダーファイルの使用)](../../build/reference/yu-use-precompiled-header-file.md)

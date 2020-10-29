@@ -6,12 +6,12 @@ helpviewer_keywords:
 - MFC, creating applications
 - MFC applications
 ms.assetid: b8b8aa08-9c49-404c-8078-b42079ac18f0
-ms.openlocfilehash: 7e7435a8538c04867a810e525e053109a7abc04d
-ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
+ms.openlocfilehash: dd4a0b8a7a06debdc3556d48e000fe09deccf857
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90683456"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92924432"
 ---
 # <a name="creating-an-mfc-application"></a>MFC アプリケーションの作成
 
@@ -21,26 +21,26 @@ MFC アプリケーションは、MFC (Microsoft Foundation Class) ライブラ�
 
 - [ダイアログボックスの作成と表示](../../mfc/creating-and-displaying-dialog-boxes.md)
 
-- [フォームベースの MFC アプリケーションの作成](../../mfc/reference/creating-a-forms-based-mfc-application.md)
+- [Forms-Based MFC アプリケーションの作成](../../mfc/reference/creating-a-forms-based-mfc-application.md)
 
-- [エクスプローラー形式の MFC アプリケーションの作成](../../mfc/reference/creating-a-file-explorer-style-mfc-application.md)
+- [MFC アプリケーション Explorer-Style のファイルの作成](../../mfc/reference/creating-a-file-explorer-style-mfc-application.md)
 
-- [Web ブラウザー形式の MFC アプリケーションの作成](../../mfc/reference/creating-a-web-browser-style-mfc-application.md)
+- [Web Browser-Style MFC アプリケーションの作成](../../mfc/reference/creating-a-web-browser-style-mfc-application.md)
 
 MFC アプリケーション ウィザードでは、これらのアプリケーションのすべてに適したクラスやファイルが生成されます。作成されるクラスやファイルは、ウィザードで選択したオプションによって異なります。
 
-MFC アプリケーションを作成する最も簡単な方法は、MFC アプリケーションウィザード (Visual Studio 2019 の**Mfc アプリプロジェクト** ) を使用することです。 Mfc コンソールアプリケーション (MFC ライブラリを使用し、コンソールウィンドウで実行されるコマンドラインプログラム) を作成するには、Windows デスクトップウィザードを使用して、[ **コンソールアプリケーション** ] オプションと [ **MFC ヘッダー** ] オプションを選択します。
+MFC アプリケーションを作成する最も簡単な方法は、MFC アプリケーションウィザード (Visual Studio 2019 の **Mfc アプリプロジェクト** ) を使用することです。 Mfc コンソールアプリケーション (MFC ライブラリを使用し、コンソールウィンドウで実行されるコマンドラインプログラム) を作成するには、Windows デスクトップウィザードを使用して、[ **コンソールアプリケーション** ] オプションと [ **MFC ヘッダー** ] オプションを選択します。
 
-::: moniker range=">=vs-2019"
+::: moniker range=">=msvc-160"
 
 ## <a name="to-create-an-mfc-forms-or-dialog-based-application"></a>MFC フォームまたはダイアログベースのアプリケーションを作成するには
 
-1. メインメニューから、[**ファイル**] [ > **新規作成**] [プロジェクト] の順に選択し > **Project**ます。
+1. メインメニューから、[ **ファイル** ] [ > **新規作成** ] [プロジェクト] の順に選択し > **Project** ます。
 1. 検索ボックスに「MFC」と入力し、結果の一覧で [ **Mfc アプリ** ] を選択します。
-1. 必要に応じて既定値を変更し、[ **作成** ] をクリックして、 **MFC アプリケーションウィザード**を開きます。
-1. 必要に応じて構成値を変更し、[ **完了**] を押します。
+1. 必要に応じて既定値を変更し、[ **作成** ] をクリックして、 **MFC アプリケーションウィザード** を開きます。
+1. 必要に応じて構成値を変更し、[ **完了** ] を押します。
 
-詳細については、「 [フォームベースの MFC アプリケーションの作成](creating-a-forms-based-mfc-application.md)」を参照してください。
+詳細については、「 [Forms-Based MFC アプリケーションの作成](creating-a-forms-based-mfc-application.md)」を参照してください。
 
 ![Visual Studio 2019 の MFC アプリケーションウィザードのスクリーンショット。](media/mfc-app-wizard.png)
 
@@ -48,25 +48,25 @@ MFC アプリケーションを作成する最も簡単な方法は、MFC アプ
 
 MFC コンソールアプリケーションは、MFC ライブラリを使用するコマンドラインプログラムであり、コンソールウィンドウで実行されます。
 
-1. メインメニューから、[**ファイル**] [ > **新規作成**] [プロジェクト] の順に選択し > **Project**ます。
+1. メインメニューから、[ **ファイル** ] [ > **新規作成** ] [プロジェクト] の順に選択し > **Project** ます。
 1. 検索ボックスに「デスクトップ」と入力し、結果の一覧から [ **Windows デスクトップウィザード** ] を選択します。
-1. 必要に応じてプロジェクト名を変更し、[ **次へ** ] をクリックして **Windows デスクトップウィザード**を開きます。
-1. [ **MFC ヘッダー** ] ボックスを確認し、必要に応じて他の値を設定して、[ **完了**] を押します。
+1. 必要に応じてプロジェクト名を変更し、[ **次へ** ] をクリックして **Windows デスクトップウィザード** を開きます。
+1. [ **MFC ヘッダー** ] ボックスを確認し、必要に応じて他の値を設定して、[ **完了** ] を押します。
 
 ![Visual Studio 2019 の Windows デスクトップウィザードのスクリーンショット。](media/windows-desktop-wizard.png)
 
 ::: moniker-end
 
-::: moniker range="=vs-2017"
+::: moniker range="=msvc-150"
 
 ## <a name="to-create-an-mfc-forms-or-dialog-based-application"></a>MFC フォームまたはダイアログベースのアプリケーションを作成するには
 
-1. メインメニューから、[**ファイル**] [ > **新規作成**] [プロジェクト] の順に選択し > **Project**ます。
-1. [**インストールされ**たテンプレート**Visual C++**] で、[  >  **MFC/ATL**Visual C++] を選択します。 これらが表示されない場合は、Visual Studio インストーラーを使用して追加します。
+1. メインメニューから、[ **ファイル** ] [ > **新規作成** ] [プロジェクト] の順に選択し > **Project** ます。
+1. [ **インストールされ** たテンプレート **Visual C++** ] で、[  >  **MFC/ATL** Visual C++] を選択します。 これらが表示されない場合は、Visual Studio インストーラーを使用して追加します。
 1. 中央のウィンドウで [ **MFC アプリケーション** ] を選択します。
-1. 必要に応じて構成値を変更し、[ **完了**] を押します。
+1. 必要に応じて構成値を変更し、[ **完了** ] を押します。
 
-詳細については、「 [フォームベースの MFC アプリケーションの作成](creating-a-forms-based-mfc-application.md)」を参照してください。
+詳細については、「 [Forms-Based MFC アプリケーションの作成](creating-a-forms-based-mfc-application.md)」を参照してください。
 
 ![Visual Studio 2017 の MFC アプリケーションウィザードのスクリーンショット。](media/mfc-app-wizard.png)
 
@@ -74,26 +74,26 @@ MFC コンソールアプリケーションは、MFC ライブラリを使用す
 
 MFC コンソールアプリケーションは、MFC ライブラリを使用するコマンドラインプログラムであり、コンソールウィンドウで実行されます。
 
-1. メインメニューから、[**ファイル**] [ > **新規作成**] [プロジェクト] の順に選択し > **Project**ます。
-1. [ **インストールされ** たテンプレート] で、[ **Visual C++** > **Windows デスクトップ**] を選択します。
+1. メインメニューから、[ **ファイル** ] [ > **新規作成** ] [プロジェクト] の順に選択し > **Project** ます。
+1. [ **インストールされ** たテンプレート] で、[ **Visual C++** > **Windows デスクトップ** ] を選択します。
 1. 中央のウィンドウで、[ **Windows デスクトップウィザード** ] を選択します。
-1. 必要に応じてプロジェクト名を変更し、[ **OK]** をクリックして **Windows デスクトップウィザード**を開きます。
-1. [ **MFC ヘッダー** ] ボックスを確認し、必要に応じて他の値を設定して、[ **完了**] を押します。
+1. 必要に応じてプロジェクト名を変更し、[ **OK]** をクリックして **Windows デスクトップウィザード** を開きます。
+1. [ **MFC ヘッダー** ] ボックスを確認し、必要に応じて他の値を設定して、[ **完了** ] を押します。
 
 ![Visual Studio 2017 の Windows デスクトップウィザードのスクリーンショット。](media/windows-desktop-wizard-2017.png)
 
 ::: moniker-end
 
-::: moniker range="=vs-2015"
+::: moniker range="=msvc-140"
 
 ## <a name="to-create-an-mfc-forms-or-dialog-based-application"></a>MFC フォームまたはダイアログベースのアプリケーションを作成するには
 
-1. メインメニューから、[**ファイル**] [ > **新規作成**] [プロジェクト] の順に選択し > **Project**ます。
-1. [**インストールされ**たテンプレート] で、[ **Visual C++** MFC] を選択し > **MFC**ます。
+1. メインメニューから、[ **ファイル** ] [ > **新規作成** ] [プロジェクト] の順に選択し > **Project** ます。
+1. [ **インストールされ** たテンプレート] で、[ **Visual C++** MFC] を選択し > **MFC** ます。
 1. 中央のウィンドウで [ **MFC アプリケーション** ] を選択します。
-1. [ **次へ** ] をクリックして、 **MFC アプリケーションウィザード**を起動します。
+1. [ **次へ** ] をクリックして、 **MFC アプリケーションウィザード** を起動します。
 
-詳細については、「 [フォームベースの MFC アプリケーションの作成](creating-a-forms-based-mfc-application.md)」を参照してください。
+詳細については、「 [Forms-Based MFC アプリケーションの作成](creating-a-forms-based-mfc-application.md)」を参照してください。
 
 ![Visual Studio 2015 の MFC アプリケーションウィザードのスクリーンショット。](media/mfc-app-wizard-2015.png)
 
@@ -101,17 +101,17 @@ MFC コンソールアプリケーションは、MFC ライブラリを使用す
 
 MFC コンソールアプリケーションは、MFC ライブラリを使用するコマンドラインプログラムであり、コンソールウィンドウで実行されます。
 
-1. メインメニューから、[**ファイル**] [ > **新規作成**] [プロジェクト] の順に選択し > **Project**ます。
-1. [**インストールされ**たテンプレート] で、[Win32 **Visual C++** ] を選択し > **Win32**ます。
+1. メインメニューから、[ **ファイル** ] [ > **新規作成** ] [プロジェクト] の順に選択し > **Project** ます。
+1. [ **インストールされ** たテンプレート] で、[Win32 **Visual C++** ] を選択し > **Win32** ます。
 1. 中央のウィンドウで [ **Win32 コンソールアプリケーション** ] を選択します。
 1. 必要に応じてプロジェクト名を変更し、[ **OK]** をクリックします。
-1. ウィザードの2ページ目で、[ **MFC の共通ヘッダーを追加** する] ボックスをオンにし、必要に応じて他の値を設定して、[ **完了**] をクリックします。
+1. ウィザードの2ページ目で、[ **MFC の共通ヘッダーを追加** する] ボックスをオンにし、必要に応じて他の値を設定して、[ **完了** ] をクリックします。
 
 ::: moniker-end
 
-プロジェクトを作成したら、**ソリューション エクスプローラー**で、作成したファイルを表示できます。 ウィザードでプロジェクト用に作成されるファイルの詳細については、プロジェクトが生成する ReadMe.txt ファイルを参照してください。 ファイルの種類の詳細については、「[Visual Studio の C++ プロジェクトに対して作成されるファイルの種類](../../build/reference/file-types-created-for-visual-cpp-projects.md)」を参照してください。
+プロジェクトを作成したら、 **ソリューション エクスプローラー** で、作成したファイルを表示できます。 ウィザードでプロジェクト用に作成されるファイルの詳細については、プロジェクトが生成する ReadMe.txt ファイルを参照してください。 ファイルの種類の詳細については、「[Visual Studio の C++ プロジェクトに対して作成されるファイルの種類](../../build/reference/file-types-created-for-visual-cpp-projects.md)」を参照してください。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>こちらもご覧ください
 
 [コード ウィザードを使用した機能の追加](../../ide/adding-functionality-with-code-wizards-cpp.md)<br/>
 [[プロパティ ページ]](../../build/reference/property-pages-visual-cpp.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - OLE DB providers, schema rowsets
 - OLE DB, schema rowsets
 ms.assetid: 71c5e14b-6e33-4502-a2d9-a1dc6d6e9ba0
-ms.openlocfilehash: f87e6cc0a307eed4f00f1fb90ac16a840a1759af
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 156fe9c7a2b15f7254fb0c83f8b25982aa5ad09a
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91509458"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92924311"
 ---
 # <a name="supporting-schema-rowsets"></a>スキーマ行セットのサポート
 
@@ -32,15 +32,15 @@ ms.locfileid: "91509458"
 
 ## <a name="atl-ole-db-provider-wizard-support"></a>ATL OLE DB プロバイダー ウィザードのサポート
 
-::: moniker range="vs-2019"
+::: moniker range="msvc-160"
 
 ATL OLE DB プロバイダー ウィザードは、Visual Studio 2019 以降では使用できません。
 
 ::: moniker-end
 
-::: moniker range="<=vs-2017"
+::: moniker range="<=msvc-150"
 
-**ATL OLE DB プロバイダー ウィザード**は、セッション ヘッダー ファイルに次の 3 つのスキーマ クラスを作成します。
+**ATL OLE DB プロバイダー ウィザード** は、セッション ヘッダー ファイルに次の 3 つのスキーマ クラスを作成します。
 
 - **C**<em>ShortName</em>**SessionTRSchemaRowset**
 
@@ -96,7 +96,7 @@ class CUpdateSessionTRSchemaRowset :
 
 `CUpdateSession` は `IDBSchemaRowsetImpl` から継承されるため、制限を処理するすべてのメソッドが含まれています。 `CSchemaRowsetImpl` を使用して、(上記のスキーマ マップにある) 3 つの子クラス `CUpdateSessionTRSchemaRowset`、`CUpdateSessionColSchemaRowset`、および `CUpdateSessionPTSchemaRowset` を宣言します。 これらの子クラスのそれぞれが、各自の一連の制限 (検索条件) を処理する `Execute` メソッドを持っています。 各 `Execute` メソッドは、パラメーター *cRestrictions* と *rgRestrictions* の値を比較します。 これらのパラメーターの説明については、[SetRestrictions](./idbschemarowsetimpl-class.md#setrestrictions) を参照してください。
 
-特定のスキーマ行セットに対応する制限については、Windows SDK の **OLE DB プログラマーズ リファレンス**の「[IDBSchemaRowset](/previous-versions/windows/desktop/ms713686(v=vs.85))」にあるスキーマ行セット GUID の表を参照してください。
+特定のスキーマ行セットに対応する制限については、Windows SDK の **OLE DB プログラマーズ リファレンス** の「 [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686(v=vs.85))」にあるスキーマ行セット GUID の表を参照してください。
 
 たとえば、DBSCHEMA_TABLES の TABLE_NAME 制限をサポートした場合、次のようにします。
 
@@ -146,7 +146,7 @@ if (InlineIsEqualGUID(rguidSchema[l], DBSCHEMA_TABLES))
     rgRestrictions[l] = 0x0C;
 ```
 
-次の `Execute` 関数は、通常の行セットのそれと似ています。 3 つの引数 *pcRowsAffected*、*cRestrictions*、および*rgRestrictions* があります。 *pcRowsAffected* 変数は、プロバイダーがスキーマ行セットの行の数を返すことができる出力パラメーターです。 *cRestrictions* パラメーターは、コンシューマーによってプロバイダーに渡される制限の数を保持する入力パラメーターです。 *rgRestrictions* パラメーターは、制限値を保持する VARIANT 値の配列です。
+次の `Execute` 関数は、通常の行セットのそれと似ています。 3 つの引数 *pcRowsAffected* 、 *cRestrictions* 、および *rgRestrictions* があります。 *pcRowsAffected* 変数は、プロバイダーがスキーマ行セットの行の数を返すことができる出力パラメーターです。 *cRestrictions* パラメーターは、コンシューマーによってプロバイダーに渡される制限の数を保持する入力パラメーターです。 *rgRestrictions* パラメーターは、制限値を保持する VARIANT 値の配列です。
 
 ```cpp
 HRESULT Execute(DBROWCOUNT* pcRowsAffected, ULONG cRestrictions,
@@ -194,7 +194,7 @@ if (cRestrictions >= 3 && rgRestrictions[2].vt != VT_EMPTY)
 }
 ```
 
-4 番目の制限 (TABLE_TYPE) のサポートは、3 番目の制限と似ています。 値が VT_EMPTY ではないことを確認します。 この制限は、テーブルの型 TABLE のみを返します。 DBSCHEMA_TABLES の有効な値を調べるには、**OLE DB プログラマーズ リファレンス**の「**付録 B**」で TABLES 行セットのセクションを確認します。
+4 番目の制限 (TABLE_TYPE) のサポートは、3 番目の制限と似ています。 値が VT_EMPTY ではないことを確認します。 この制限は、テーブルの型 TABLE のみを返します。 DBSCHEMA_TABLES の有効な値を調べるには、 **OLE DB プログラマーズ リファレンス** の「 **付録 B** 」で TABLES 行セットのセクションを確認します。
 
 ```cpp
 // TABLE_TYPE restriction:
@@ -213,7 +213,7 @@ if (cRestrictions >=4 && rgRestrictions[3].vt != VT_EMPTY)
 }
 ```
 
-ここで、行セットの行エントリを実際に作成します。 変数 `trData` は、OLE DB プロバイダー テンプレートで定義されている構造体の `CTABLESRow` に対応しています。 `CTABLESRow` は、OLE DB 仕様の「**付録 B**」の TABLES 行セットの定義に対応しています。 同時に複数のテーブルをサポートすることはできないので、追加するのは 1 行だけです。
+ここで、行セットの行エントリを実際に作成します。 変数 `trData` は、OLE DB プロバイダー テンプレートで定義されている構造体の `CTABLESRow` に対応しています。 `CTABLESRow` は、OLE DB 仕様の「 **付録 B** 」の TABLES 行セットの定義に対応しています。 同時に複数のテーブルをサポートすることはできないので、追加するのは 1 行だけです。
 
 ```cpp
 // Bring over the data:
@@ -263,14 +263,14 @@ virtual DBSTATUS GetDBStatus(CSimpleRow* , ATLCOLUMNINFO* pColInfo)
 }
 ```
 
-`Execute` 関数は、TABLES 行セットの TABLE_NAME、TABLE_TYPE、および DESCRIPTION フィールドのデータを返すので、OLE DB 仕様の「**付録 B**」を調べて、これらが (前から数えて) 3 番目、4 番目、および 6 番目であることを確認します。 これらの各列に対して、DBSTATUS_S_OK を返します。 他のすべての列に対しては、DBSTATUS_S_ISNULL を返します。 返された値が NULL かそれ以外の値かをコンシューマーで判別できない場合があるため、このステータスを返すことが重要です。 ここでも、NULL は空と同等でないことに注意してください。
+`Execute` 関数は、TABLES 行セットの TABLE_NAME、TABLE_TYPE、および DESCRIPTION フィールドのデータを返すので、OLE DB 仕様の「 **付録 B** 」を調べて、これらが (前から数えて) 3 番目、4 番目、および 6 番目であることを確認します。 これらの各列に対して、DBSTATUS_S_OK を返します。 他のすべての列に対しては、DBSTATUS_S_ISNULL を返します。 返された値が NULL かそれ以外の値かをコンシューマーで判別できない場合があるため、このステータスを返すことが重要です。 ここでも、NULL は空と同等でないことに注意してください。
 
-OLE DB スキーマ行セットのインターフェイスの詳細については、**OLE DB プログラマーズ リファレンス**の [IDBSchemaRowset](../../data/oledb/idbschemarowsetimpl-class.md) インターフェイスを参照してください。
+OLE DB スキーマ行セットのインターフェイスの詳細については、 **OLE DB プログラマーズ リファレンス** の [IDBSchemaRowset](../../data/oledb/idbschemarowsetimpl-class.md) インターフェイスを参照してください。
 
 コンシューマーでの `IDBSchemaRowset` メソッドの使用方法については、「[スキーマ行セットを使用したメタデータの取得](../../data/oledb/obtaining-metadata-with-schema-rowsets.md)」を参照してください。
 
 スキーマ行セットをサポートするプロバイダーの例については、[UpdatePV](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Provider/UPDATEPV) サンプルを参照してください。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>こちらもご覧ください
 
 [高度なプロバイダー手法](../../data/oledb/advanced-provider-techniques.md)
