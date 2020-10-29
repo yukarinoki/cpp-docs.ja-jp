@@ -4,24 +4,24 @@ ms.date: 05/09/2019
 helpviewer_keywords:
 - ATL projects, adding ATL OLE DB providers
 ms.assetid: cf91ba78-01d1-4d12-b673-e95d96bfbebe
-ms.openlocfilehash: 91384d6c61368ee56ed303622e5c1bdfad09bd8a
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
+ms.openlocfilehash: 43b8ed4507b004f1e78bc1b9dda64c44ff56e1d7
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65706963"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92921140"
 ---
 # <a name="atl-ole-db-provider-wizard"></a>ATL OLE DB プロバイダー ウィザード
 
-::: moniker range="vs-2019"
+::: moniker range="msvc-160"
 
-このウィザードは、Visual Studio 2019 以降では利用できません。
+このウィザードは Visual Studio 2019 以降で使用できません。
 
 ::: moniker-end
 
-::: moniker range="<=vs-2017"
+::: moniker range="<=msvc-150"
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>注釈
 
 Visual Studio 2008 以降、このウィザードによって生成された登録スクリプトでは、その COM コンポーネントが **HKEY_LOCAL_MACHINE** ではなく **HKEY_CURRENT_USER** 下に登録されます。 この動作を変更するには、ATL ウィザードの **[すべてのユーザーについてコンポーネントを登録]** オプションを設定します。
 
@@ -43,15 +43,15 @@ Visual Studio 2008 以降、このウィザードによって生成された登�
 
 - **ProgID**
 
-   ProgID (プログラム識別子) は、アプリケーションで GUID の代わりに使用できるテキスト文字列です。 ProgID 名の形式は *Projectname.Coclassname*です。
+   ProgID (プログラム識別子) は、アプリケーションで GUID の代わりに使用できるテキスト文字列です。 ProgID 名の形式は *Projectname.Coclassname* です。
 
-- **Version**
+- **バージョン**
 
    プロバイダーのバージョン番号です。 既定値は 1 です。
 
 - **DataSource クラス**
 
-   データ ソース クラスの名前。C*Shortname*Source 形式です。
+   データ ソース クラスの名前。C *Shortname* Source 形式です。
 
 - **DataSource .h ファイル**
 
@@ -59,7 +59,7 @@ Visual Studio 2008 以降、このウィザードによって生成された登�
 
 - **セッション クラス**
 
-   セッションクラスの名前。C*Shortname*Session 形式です。
+   セッションクラスの名前。C *Shortname* Session 形式です。
 
 - **セッション .h ファイル**
 
@@ -67,7 +67,7 @@ Visual Studio 2008 以降、このウィザードによって生成された登�
 
 - **コマンド クラス**
 
-   コマンド クラスの名前。C*Shortname*Command 形式です。
+   コマンド クラスの名前。C *Shortname* Command 形式です。
 
 - **コマンド .h ファイル**
 
@@ -75,7 +75,7 @@ Visual Studio 2008 以降、このウィザードによって生成された登�
 
 - **行セット クラス**
 
-   行セット クラスの名前。C*Shortname*Rowset 形式です。
+   行セット クラスの名前。C *Shortname* Rowset 形式です。
 
 - **行セット .h ファイル**
 
@@ -87,6 +87,6 @@ Visual Studio 2008 以降、このウィザードによって生成された登�
 
 ::: moniker-end
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>こちらもご覧ください
 
 [ATL OLE DB プロバイダー](../../atl/reference/adding-an-atl-ole-db-provider.md)

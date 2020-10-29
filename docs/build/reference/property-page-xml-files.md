@@ -4,32 +4,32 @@ description: Visual Studio IDE の C++ プロパティページの XML 規則フ
 ms.date: 10/14/2020
 helpviewer_keywords:
 - property page XML files
-ms.openlocfilehash: 96cbf6a32cada2b594874493868ec884823016cb
-ms.sourcegitcommit: 6e5429e076e552b32e8bdc49480c51498d7924c1
+ms.openlocfilehash: f8aa893fa2b062da2f1d0784e5a9b1a6f2b30c95
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/15/2020
-ms.locfileid: "92099720"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92921400"
 ---
 # <a name="property-page-xml-rule-files"></a>プロパティ ページの XML 規則ファイル
 
 IDE のプロジェクトプロパティページは、既定の rules フォルダー内の XML ファイルによって構成されます。 XML ファイルには、ルールの名前、カテゴリ、個々のプロパティ、データ型、既定値、およびそれらを表示する方法が記述されています。 IDE でプロパティを設定すると、新しい値がプロジェクト ファイルに格納されます。
 
-::: moniker range="vs-2015"
+::: moniker range="msvc-140"
 
-既定の規則フォルダーへのパスは、使用されている Visual Studio のロケールとバージョンによって異なります。 Visual Studio 2015 またはそれ以前の開発者コマンドプロンプトでは、rules フォルダーは *`%ProgramFiles(x86)%\MSBuild\Microsoft.Cpp\v4.0\<version>\<locale>`* です。 `<version>`値は *`v140`* Visual Studio 2015 にあります。 は、 `<locale>` たとえば `1033` 英語の LCID です。 インストールされている Visual Studio の各エディションと、言語ごとに異なるパスを使用します。 たとえば、英語の Visual Studio 2015 Community edition の既定の規則フォルダーパスは、のようになり *`C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\v140\1033\`* ます。
-
-::: moniker-end
-
-::: moniker range="vs-2017"
-
-既定の規則フォルダーへのパスは、使用されている Visual Studio のロケールとバージョンによって異なります。 Visual Studio 2017 開発者コマンドプロンプトで、rules フォルダーはに *`%VSINSTALLDIR%Common7\IDE\VC\VCTargets\<locale>\`* なります。 は、 `<locale>` たとえば `1033` 英語の LCID です。 Visual Studio 2015 またはそれ以前の開発者コマンドプロンプトでは、rules フォルダーはです *`%ProgramFiles(x86)%\MSBuild\Microsoft.Cpp\v4.0\<version>\<locale>\`* `<version>` 。値は *`v140`* visual studio 2015 にあります。 インストールされている Visual Studio の各エディションと、言語ごとに異なるパスを使用します。 たとえば、英語の Visual Studio 2017 Community edition の既定の規則フォルダーパスは、のようになり *`C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\1033\`* ます。
+既定の規則フォルダーへのパスは、使用されている Visual Studio のロケールとバージョンによって異なります。 Visual Studio 2015 以前の開発者コマンド プロンプトの場合、ルール フォルダーは *`%ProgramFiles(x86)%\MSBuild\Microsoft.Cpp\v4.0\<version>\<locale>`* です。 Visual Studio 2015 の場合、`<version>` 値は *`v140`* です。 `<locale>` は LCID です。たとえば、英語の場合は `1033` です。 インストールされている Visual Studio のエディションおよび言語ごとに異なるパスを使用します。 たとえば、Visual Studio 2015 Community エディションの英語版の既定のルール フォルダー パスは *`C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\v140\1033\`* になります。
 
 ::: moniker-end
 
-::: moniker range=">=vs-2019"
+::: moniker range="msvc-150"
 
-既定の規則フォルダーへのパスは、使用されている Visual Studio のロケールとバージョンによって異なります。 Visual Studio 2019 以降の開発者コマンドプロンプトでは、rules フォルダーはです *`%VSINSTALLDIR%MSBuild\Microsoft\VC\<version>\<locale>\`* `<version>` 。値は *`v160`* visual studio 2019 にあります。 は、 `<locale>` たとえば `1033` 英語の LCID です。 Visual Studio 2017 では、rules フォルダーは *`%VSINSTALLDIR%Common7\IDE\VC\VCTargets\<locale>\`* です。 Visual Studio 2015 またはそれ以前の開発者コマンドプロンプトでは、rules フォルダーは *`%ProgramFiles(x86)%\MSBuild\Microsoft.Cpp\v4.0\<version>\<locale>\`* です。 インストールされている Visual Studio の各エディションと、言語ごとに異なるパスを使用します。 たとえば、英語の Visual Studio 2019 Community edition の既定の規則フォルダーパスは、のようになり *`C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\1033\`* ます。
+既定の規則フォルダーへのパスは、使用されている Visual Studio のロケールとバージョンによって異なります。 Visual Studio 2017 の開発者コマンド プロンプトの場合、ルール フォルダーは *`%VSINSTALLDIR%Common7\IDE\VC\VCTargets\<locale>\`* です。 `<locale>` は LCID です。たとえば、英語の場合は `1033` です。 Visual Studio 2015 以前の開発者コマンド プロンプトの場合、ルール フォルダーは *`%ProgramFiles(x86)%\MSBuild\Microsoft.Cpp\v4.0\<version>\<locale>\`* です。`<version>` 値は Visual Studio 2015 の場合は *`v140`* です。 インストールされている Visual Studio のエディションおよび言語ごとに異なるパスを使用します。 たとえば、Visual Studio 2017 Community エディションの英語版の既定のルール フォルダー パスは *`C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\1033\`* になります。
+
+::: moniker-end
+
+::: moniker range=">=msvc-160"
+
+既定の規則フォルダーへのパスは、使用されている Visual Studio のロケールとバージョンによって異なります。 Visual Studio 2019 以降の開発者コマンド プロンプトのルール フォルダーは *`%VSINSTALLDIR%MSBuild\Microsoft\VC\<version>\<locale>\`* です。Visual Studio 2019 の場合、`<version>` 値は *`v160`* です。 `<locale>` は LCID です。たとえば、英語の場合は `1033` です。 Visual Studio 2017 の場合、ルール フォルダーは *`%VSINSTALLDIR%Common7\IDE\VC\VCTargets\<locale>\`* です。 Visual Studio 2015 以前の開発者コマンド プロンプトの場合、ルール フォルダーは *`%ProgramFiles(x86)%\MSBuild\Microsoft.Cpp\v4.0\<version>\<locale>\`* です。 インストールされている Visual Studio のエディションおよび言語ごとに異なるパスを使用します。 たとえば、Visual Studio 2019 Community エディションの英語版の既定のルール フォルダー パスは *`C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\1033\`* になります。
 
 ::: moniker-end
 
@@ -40,13 +40,13 @@ IDE のプロジェクトプロパティページは、既定の rules フォル
 
 ## <a name="contents-of-rule-files"></a>規則ファイルの内容
 
-まず、プロジェクトのプロパティページを開きます。 **ソリューションエクスプローラー**でプロジェクトノードを右クリックし、[**プロパティ**] を選択します。
+まず、プロジェクトのプロパティページを開きます。 **ソリューションエクスプローラー** でプロジェクトノードを右クリックし、[ **プロパティ** ] を選択します。
 
 ![Visual Studio C++ プロジェクトのプロパティダイアログを表示します](../media/cpp-property-page-2017.png)
 
-[ **構成プロパティ** ] の下の各ノードは、" *ルール*" と呼ばれます。 規則は、コンパイラのような1つのツールを表す場合があります。 一般に、という用語は、を実行し、出力を生成する可能性のあるプロパティを持つものを指します。 各ルールは、既定のルールフォルダー内の XML ファイルから設定されます。 たとえば、ここに示されている C/c + + の規則は、 *'cl.xml '* によって設定されます。
+[ **構成プロパティ** ] の下の各ノードは、" *ルール* " と呼ばれます。 規則は、コンパイラのような1つのツールを表す場合があります。 一般に、という用語は、を実行し、出力を生成する可能性のあるプロパティを持つものを指します。 各ルールは、既定のルールフォルダー内の XML ファイルから設定されます。 たとえば、ここに示されている C/c + + の規則は、 *'cl.xml '* によって設定されます。
 
-各ルールには一連のプロパティがあり、それらは *カテゴリ*別に分類されています。 ルールの下にある各サブノードは、カテゴリを表します。 たとえば、[ **C/c + +** ] の下の [**最適化**] ノードには、コンパイラツールの最適化に関連するすべてのプロパティが含まれています。 プロパティとその値は、右側のウィンドウにグリッド形式で表示されます。
+各ルールには一連のプロパティがあり、それらは *カテゴリ* 別に分類されています。 ルールの下にある各サブノードは、カテゴリを表します。 たとえば、[ **C/c + +** ] の下の [ **最適化** ] ノードには、コンパイラツールの最適化に関連するすべてのプロパティが含まれています。 プロパティとその値は、右側のウィンドウにグリッド形式で表示されます。
 
 *`cl.xml`* メモ帳または任意の XML エディターで開くことができます。 というルートノードが表示され `Rule` ます。 これは、UI に表示されるプロパティの同じリストと、追加のメタデータを定義します。
 
@@ -111,19 +111,19 @@ IDE のプロジェクトプロパティページは、既定の rules フォル
   </Rule.DisplayName>
 ```
 
-- **`Name`**: Name 属性はの ID です `Rule` 。 これは、プロジェクトのすべてのプロパティページ XML ファイル内で一意である必要があります。
+- **`Name`** : Name 属性はの ID です `Rule` 。 これは、プロジェクトのすべてのプロパティページ XML ファイル内で一意である必要があります。
 
-- **`PageTemplate`**: この属性の値は、ui テンプレートのコレクションから選択するために UI によって使用されます。 "tool" テンプレートは、標準のグリッド形式でプロパティをレンダリングします。 この属性のその他の組み込みの値は、"debugger" と "generic" です。 これらの値を指定した結果の UI 形式を確認するには、デバッグ ノードと全般ノードをそれぞれ確認します。 "デバッガー" ページテンプレートの UI では、ドロップダウンボックスを使用して、さまざまなデバッガーのプロパティを切り替えます。 "Generic" テンプレートでは、ノードの下に複数のカテゴリサブノードがあるのではなく、すべてのプロパティカテゴリが1ページに表示され `Rule` ます。 この属性は、UI の提案にすぎません。 XML ファイルは、UI に依存しないように設計されています。 UI ごとに異なる目的のためにこの属性を使用することができます。
+- **`PageTemplate`** : この属性の値は、ui テンプレートのコレクションから選択するために UI によって使用されます。 "tool" テンプレートは、標準のグリッド形式でプロパティをレンダリングします。 この属性のその他の組み込みの値は、"debugger" と "generic" です。 これらの値を指定した結果の UI 形式を確認するには、デバッグ ノードと全般ノードをそれぞれ確認します。 "デバッガー" ページテンプレートの UI では、ドロップダウンボックスを使用して、さまざまなデバッガーのプロパティを切り替えます。 "Generic" テンプレートでは、ノードの下に複数のカテゴリサブノードがあるのではなく、すべてのプロパティカテゴリが1ページに表示され `Rule` ます。 この属性は、UI の提案にすぎません。 XML ファイルは、UI に依存しないように設計されています。 UI ごとに異なる目的のためにこの属性を使用することができます。
 
-- **`SwitchPrefix`**: スイッチのコマンドラインで使用されるプレフィックス。 の値を指定すると、、、 `"/"` などのスイッチが表示さ **`/ZI`** **`/nologo`** **`/W3`** れます。
+- **`SwitchPrefix`** : スイッチのコマンドラインで使用されるプレフィックス。 の値を指定すると、、、 `"/"` などのスイッチが表示さ **`/ZI`** **`/nologo`** **`/W3`** れます。
 
-- **`Order`**: `Rule` システム内の他のすべてのルールと比較した、予想される UI クライアントの相対的な位置に対する提案。
+- **`Order`** : `Rule` システム内の他のすべてのルールと比較した、予想される UI クライアントの相対的な位置に対する提案。
 
-- **`xmlns`**: 標準の XML 要素。 3 つの名前空間が一覧表示されます。 これらの属性は、それぞれ XML 逆シリアル化クラス、XML スキーマ、およびシステム名前空間の名前空間に対応しています。
+- **`xmlns`** : 標準の XML 要素。 3 つの名前空間が一覧表示されます。 これらの属性は、それぞれ XML 逆シリアル化クラス、XML スキーマ、およびシステム名前空間の名前空間に対応しています。
 
-- **`DisplayName`**: ノードのプロパティページの UI に表示される名前。 `Rule` この値はローカライズされます。 `DisplayName` `Rule` `Name` `SwitchPrefix` 内部ローカライズツールの要件により、属性 (やなど) としてではなく、の子要素として作成されました。 XML の観点からは、両方とも同じです。 そのため、単に属性にして煩雑さを軽減することも、そのままにしておくこともできます。
+- **`DisplayName`** : ノードのプロパティページの UI に表示される名前。 `Rule` この値はローカライズされます。 `DisplayName` `Rule` `Name` `SwitchPrefix` 内部ローカライズツールの要件により、属性 (やなど) としてではなく、の子要素として作成されました。 XML の観点からは、両方とも同じです。 そのため、単に属性にして煩雑さを軽減することも、そのままにしておくこともできます。
 
-- **`DataSource`**: この重要なプロパティは、プロパティ値の読み取りと書き込みを行う場所と、そのグループ化 (後で説明します) をプロジェクトシステムに指示します。 の場合 *`cl.xml`* 、これらの値は次のとおりです。
+- **`DataSource`** : この重要なプロパティは、プロパティ値の読み取りと書き込みを行う場所と、そのグループ化 (後で説明します) をプロジェクトシステムに指示します。 の場合 *`cl.xml`* 、これらの値は次のとおりです。
 
     ```xml
     <DataSource Persistence="ProjectFile" ItemType="ClCompile" Label="" HasConfigurationCondition="true" />
@@ -135,7 +135,7 @@ IDE のプロジェクトプロパティページは、既定の rules フォル
 
   - `Label=""` は、プロパティが `ItemDefinition` メタデータとして書き込まれるときに、親 ItemDefinitionGroup のラベルが空になることを示しますます (すべての MSBuild 要素がラベルを持つことができます)。 Visual Studio 2017 以降では、ラベルの付いたグループを使用して、.vcxproj プロジェクト ファイルを移動します。 ほとんどのプロパティを含むグループには、 `Rule` ラベルとして空の文字列があります。
 
-  - `HasConfigurationCondition="true"` は、現在のプロジェクト構成に対してのみ有効になるように、値に構成条件を添えるようにプロジェクト システムに指示します (条件は、親グループまたは値そのものに添えることができます)。 たとえば、プロジェクト ノードのプロパティ ページを開き、**[構成プロパティ] > [C/C++ の全般]** の下でプロパティ **Treat Warnings As Error** の値を "Yes" に設定します。 次の値がプロジェクト ファイルに書き込まれます。 親 Itemdefinitiongroup に構成条件が添付されていることに注目してください。
+  - `HasConfigurationCondition="true"` は、現在のプロジェクト構成に対してのみ有効になるように、値に構成条件を添えるようにプロジェクト システムに指示します (条件は、親グループまたは値そのものに添えることができます)。 たとえば、プロジェクト ノードのプロパティ ページを開き、 **[構成プロパティ] > [C/C++ の全般]** の下でプロパティ **Treat Warnings As Error** の値を "Yes" に設定します。 次の値がプロジェクト ファイルに書き込まれます。 親 Itemdefinitiongroup に構成条件が添付されていることに注目してください。
 
     ```xml
     <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
@@ -161,7 +161,7 @@ IDE のプロジェクトプロパティページは、既定の rules フォル
 
 - ここでは、やなど、の他の属性を示してい `Rule` `Description` ません `SupportsFileBatching` 。 またはその他の要素に適用できる属性の完全なセットは、 `Rule` これらの型のドキュメントを参照することによって取得できます。 または、`Microsoft.Build.Framework.dll` アセンブリ内の `Microsoft.Build.Framework.XamlTypes` 名前空間内の型でパブリック プロパティを調べることもできます。
 
-- **`DisplayName`**、 **`PageTemplate`** 、および **`Order`** は、この ui に依存しないデータモデルに存在する ui 関連のプロパティです。 これらのプロパティは、プロパティ ページを表示するために使用される任意の UI でほぼ確実に使用されます。 `DisplayName` と `Description` は、XML ファイル内のほぼすべての要素に存在する2つのプロパティです。 また、これら2つのプロパティはローカライズされているもののみです。
+- **`DisplayName`** 、 **`PageTemplate`** 、および **`Order`** は、この ui に依存しないデータモデルに存在する ui 関連のプロパティです。 これらのプロパティは、プロパティ ページを表示するために使用される任意の UI でほぼ確実に使用されます。 `DisplayName` と `Description` は、XML ファイル内のほぼすべての要素に存在する2つのプロパティです。 また、これら2つのプロパティはローカライズされているもののみです。
 
 ### <a name="category-elements"></a>Category 要素
 
@@ -196,14 +196,14 @@ IDE のプロジェクトプロパティページは、既定の rules フォル
 
 - **`Subtype`** は `StringProperty` 、要素と要素に対してのみ使用できる属性です `StringListProperty` 。 コンテキスト情報が提供されます。 たとえば、この値は、 `file` プロパティがファイルパスを表すことを示します。 Visual Studio では、このようなコンテキスト情報を使用して編集エクスペリエンスを強化します。 たとえば、ユーザーがプロパティエディターとして視覚的にファイルを選択できるようにする Windows エクスプローラーウィンドウが用意されている場合があります。
 
-- **`Category`**: このプロパティが分類されるカテゴリ。 UI 内の **[出力ファイル]** カテゴリの下で、このプロパティの検索を試みます。
+- **`Category`** : このプロパティが分類されるカテゴリ。 UI 内の **[出力ファイル]** カテゴリの下で、このプロパティの検索を試みます。
 
-- **`Switch`**: ルールがコンパイラツールなどのツールを表す場合、ほとんどの `Rule` プロパティはビルド時にツールの実行可能ファイルにスイッチとして渡されます。 この属性の値は、使用するスイッチリテラルを示します。 この例では、 `<StringProperty>` スイッチをにする必要があることを指定して **`Fo`** います。 親の属性と組み合わせる `SwitchPrefix` `Rule` と、このプロパティはとして実行可能ファイルに渡され  **`/Fo"Debug\"`** ます。 これは、プロパティページの UI で C/c + + のコマンドラインに表示されます。
+- **`Switch`** : ルールがコンパイラツールなどのツールを表す場合、ほとんどの `Rule` プロパティはビルド時にツールの実行可能ファイルにスイッチとして渡されます。 この属性の値は、使用するスイッチリテラルを示します。 この例では、 `<StringProperty>` スイッチをにする必要があることを指定して **`Fo`** います。 親の属性と組み合わせる `SwitchPrefix` `Rule` と、このプロパティはとして実行可能ファイルに渡され  **`/Fo"Debug\"`** ます。 これは、プロパティページの UI で C/c + + のコマンドラインに表示されます。
 
    その他のプロパティの属性は次のとおりです。
 
-- **`Visible`**: プロパティをプロパティページに表示しないが、ビルド時に使用できるようにする場合は、この属性をに設定し `false` ます。
+- **`Visible`** : プロパティをプロパティページに表示しないが、ビルド時に使用できるようにする場合は、この属性をに設定し `false` ます。
 
-- **`ReadOnly`**: プロパティページでこのプロパティの値の読み取り専用ビューを指定する場合は、この属性をに設定 `true` します。
+- **`ReadOnly`** : プロパティページでこのプロパティの値の読み取り専用ビューを指定する場合は、この属性をに設定 `true` します。
 
-- **`IncludeInCommandLine`**: ビルド時に、ツールがプロパティの一部を必要としない場合があります。 `false`特定のプロパティが渡されないようにするには、この属性をに設定します。
+- **`IncludeInCommandLine`** : ビルド時に、ツールがプロパティの一部を必要としない場合があります。 `false`特定のプロパティが渡されないようにするには、この属性をに設定します。

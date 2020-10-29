@@ -4,22 +4,22 @@ ms.date: 05/09/2019
 helpviewer_keywords:
 - ATL OLE DB consumers
 ms.assetid: f940a513-4e42-4148-b521-dd0d7dc89fa2
-ms.openlocfilehash: 1e384a283a2a149faa5b8d6e0817eac3cacfeff9
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
+ms.openlocfilehash: c298a841bf0d37f90bcd6b53bc0c6cdf501f4dd3
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65706920"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92921153"
 ---
 # <a name="adding-an-atl-ole-db-consumer"></a>ATL OLE DB コンシューマーの追加
 
-::: moniker range="vs-2019"
+::: moniker range="msvc-160"
 
-ATL OLE DB コンシューマー ウィザードは、Visual Studio 2019 以降では使用できません。 ただし、この機能を手動で追加することは可能です。 詳細については、「[ウィザードを使用しないコンシューマーの作成](../../data/oledb/creating-a-consumer-without-using-a-wizard.md)」を参照してください。
+ATL OLE DB コンシューマー ウィザードは、Visual Studio 2019 以降では使用できません。 ただし、この機能を手動で追加することは可能です。 詳細については、「[ウィザードを使用しないコンシューマーの作成](../../data/oledb/creating-a-consumer-without-using-a-wizard.md)」をご覧ください。
 
 ::: moniker-end
 
-::: moniker range="<=vs-2017"
+::: moniker range="<=msvc-150"
 
 このウィザードを使用して、ATL OLE DB コンシューマーをプロジェクトに追加します。 ATL OLE DB コンシューマーは、OLE DB アクセサー クラスとデータ ソースにアクセスするために必要データ バインドで構成されます。 プロジェクトは、ATL COM アプリケーションとして作成されているか、ATL のサポート (ATL OLE DB コンシューマー ウィザードによって自動的に追加されます) を含む MFC または Win32 アプリケーションとして作成されている必要があります。
 
@@ -28,7 +28,7 @@ ATL OLE DB コンシューマー ウィザードは、Visual Studio 2019 以降�
 
 ## <a name="to-add-an-atl-ole-db-consumer-to-your-project"></a>プロジェクトに ATL OLE DB コンシューマーを追加するには
 
-1. **クラス ビュー**で、プロジェクトを右クリックします。 ショートカット メニューの **[追加]** をクリックし、 **[クラスの追加]** をクリックします。
+1. **クラス ビュー** で、プロジェクトを右クリックします。 ショートカット メニューの **[追加]** をクリックし、 **[クラスの追加]** をクリックします。
 
 1. Visual C++ フォルダーで **[ATL OLE DB コンシューマー]** アイコンをダブルクリックするかそれを選択し、 **[開く]** をクリックします。
 
@@ -40,6 +40,6 @@ ATL OLE DB コンシューマー ウィザードは、Visual Studio 2019 以降�
 
 ::: moniker-end
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>こちらもご覧ください
 
 [コード ウィザードを使用した機能の追加](../../ide/adding-functionality-with-code-wizards-cpp.md)
