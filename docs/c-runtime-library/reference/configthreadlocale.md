@@ -1,6 +1,7 @@
 ---
 title: _configthreadlocale
-ms.date: 4/2/2020
+ms.date: 10/29/2020
+description: '`_configthreadlocale`スレッドごとのロケールオプションを構成するために使用される Microsoft C ランタイム関数について説明します。'
 api_name:
 - _configthreadlocale
 - _o__configthreadlocale
@@ -31,14 +32,14 @@ helpviewer_keywords:
 - per-thread locale
 - thread locale
 ms.assetid: 10e4050e-b587-4f30-80bc-6c76b35fc770
-ms.openlocfilehash: 26bcfe0d93a8c2b1a14e6afc0d413a5c7e4a7f6e
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 3ffea30f8547088d6117ee980cdf28f017e87e83
+ms.sourcegitcommit: 868838273eda35eb72c78dccf4121940dcc04706
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82917317"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93102325"
 ---
-# <a name="_configthreadlocale"></a>_configthreadlocale
+# `_configthreadlocale`
 
 スレッドごとのロケール オプションを設定します。
 
@@ -50,36 +51,36 @@ int _configthreadlocale( int per_thread_locale_type );
 
 ### <a name="parameters"></a>パラメーター
 
-*per_thread_locale_type*<br/>
+*`per_thread_locale_type`*\
 設定する値。 次の一覧に示すオプションのいずれかを指定します。
 
 ## <a name="return-value"></a>戻り値
 
-前のスレッドごとのロケールの状態 (**_DISABLE_PER_THREAD_LOCALE**または **_ENABLE_PER_THREAD_LOCALE**)、または失敗した場合は-1。
+前のスレッドごとのロケールの状態 ( **`_DISABLE_PER_THREAD_LOCALE`** または **`_ENABLE_PER_THREAD_LOCALE`** )、または失敗した場合は-1。
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>注釈
 
-**_Configurethreadlocale**関数は、スレッド固有のロケールの使用を制御するために使用されます。 次のいずれかの*per_thread_locale_type*オプションを使用して、スレッドごとのロケールの状態を指定または決定します。
+関数は、 **`_configthreadlocale`** スレッド固有のロケールの使用を制御するために使用されます。 *`per_thread_locale_type`* スレッドごとのロケールの状態を指定または確認するには、次のいずれかのオプションを使用します。
 
 | オプション | 説明 |
 |-|-|
-| **_ENABLE_PER_THREAD_LOCALE** | 現在のスレッドでスレッド固有のロケールを使用させます。 このスレッドで**setlocale**を呼び出すと、スレッド独自のロケールだけに影響します。 |
-| **_DISABLE_PER_THREAD_LOCALE** | 現在のスレッドでグローバルなロケールを使用させます。 このスレッドで**setlocale**を呼び出すと、グローバルロケールを使用する他のスレッドに影響します。 |
+| **`_ENABLE_PER_THREAD_LOCALE`** | 現在のスレッドでスレッド固有のロケールを使用させます。 このスレッドでの後続の呼び出しは **`setlocale`** 、スレッド独自のロケールだけに影響します。 |
+| **`_DISABLE_PER_THREAD_LOCALE`** | 現在のスレッドでグローバルなロケールを使用させます。 **`setlocale`** このスレッドでの後続の呼び出しは、グローバルロケールを使用する他のスレッドに影響します。 |
 | **0** | この特定のスレッドの現在の設定を取得します。 |
 
-これらの関数は、 **setlocale**、 **_tsetlocale**、 **_wsetlocale**、および **_setmbcp**の動作に影響します。 スレッドごとのロケールを無効にすると、その後に**setlocale**または **_wsetlocale**を呼び出すと、グローバルロケールを使用するすべてのスレッドのロケールが変更されます。 スレッドごとのロケールが有効になっている場合、 **setlocale**または **_wsetlocale**は現在のスレッドのロケールにのみ影響します。
+これらの関数は、、、、およびの動作に影響し **`setlocale`** **`_tsetlocale`** **`_wsetlocale`** **`_setmbcp`** ます。 スレッドごとのロケールが無効になっている場合、またはの後続の呼び出しで **`setlocale`** は、 **`_wsetlocale`** グローバルロケールを使用するすべてのスレッドのロケールが変更されます。 スレッドごとのロケールが有効な場合、 **`setlocale`** またはは **`_wsetlocale`** 現在のスレッドのロケールにのみ影響します。
 
-**_Configurethreadlocale**を使用してスレッドごとのロケールを有効にする場合は、その後すぐに**setlocale**または **_wsetlocale**を呼び出して、そのスレッドで優先ロケールを設定することをお勧めします。
+を使用し **`_configthreadlocale`** てスレッドごとのロケールを有効にする場合 **`setlocale`** は、その後すぐにまたはを呼び出して、 **`_wsetlocale`** そのスレッドで優先ロケールを設定することをお勧めします。
 
-*Per_thread_locale_type*がテーブルに示されている値のいずれでもない場合、この関数は「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーを呼び出します。 実行の継続が許可された場合、この関数は**errno**を**EINVAL**に設定し、-1 を返します。
+が *`per_thread_locale_type`* 表に示されている値のいずれでもない場合、この関数は「 [パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーを呼び出します。 実行の継続が許可された場合、この関数は **`errno`** をに設定 **`EINVAL`** し、-1 を返します。
 
 既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
-|**_configthreadlocale**|\<locale.h>|
+|**`_configthreadlocale`**|\`<locale .h>'|
 
 ## <a name="example"></a>例
 
@@ -192,7 +193,7 @@ The time in German locale is: 'Mittwoch, 12. Mai 2004'
 
 ## <a name="see-also"></a>関連項目
 
-[setlocale、_wsetlocale](setlocale-wsetlocale.md)<br/>
-[_beginthread、_beginthreadex](beginthread-beginthreadex.md)<br/>
-[国](../../c-runtime-library/locale.md)<br/>
-[マルチスレッドとロケール](../../parallel/multithreading-and-locales.md)<br/>
+[`setlocale`, `_wsetlocale`](setlocale-wsetlocale.md)\
+[`_beginthread`, `_beginthreadex`](beginthread-beginthreadex.md)\
+[国](../../c-runtime-library/locale.md)\
+[マルチスレッドとロケール](../../parallel/multithreading-and-locales.md)
