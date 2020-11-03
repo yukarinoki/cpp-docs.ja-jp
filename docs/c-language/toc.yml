@@ -481,23 +481,7 @@
         - name: 定義と規則
           href: ../c-language/definitions-and-conventions.md
         - name: 字句文法
-          items:
-            - name: 字句文法
-              href: ../c-language/lexical-grammar.md
-            - name: トークンの概要
-              href: ../c-language/summary-of-tokens.md
-            - name: キーワードの概要
-              href: ../c-language/summary-of-keywords.md
-            - name: 識別子の概要
-              href: ../c-language/summary-of-identifiers.md
-            - name: 定数の概要
-              href: ../c-language/summary-of-constants.md
-            - name: 文字列リテラルの概要
-              href: ../c-language/summary-of-string-literals.md
-            - name: 演算子 (C)
-              href: ../c-language/operators-c.md
-            - name: 区切り記号
-              href: ../c-language/punctuators.md
+          href: ../c-language/lexical-grammar.md
         - name: 語句構造の文法
           items:
             - name: 語句構造の文法
