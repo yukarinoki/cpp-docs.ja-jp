@@ -1,7 +1,7 @@
 ---
 title: /std (言語の標準バージョンの指定)
 description: MSVC コンパイラオプション/std は、コンパイラでサポートされている C または C++ 言語の標準を指定します。
-ms.date: 09/11/2020
+ms.date: 10/29/2020
 f1_keywords:
 - /std
 - -std
@@ -11,12 +11,12 @@ f1_keywords:
 - /std:c17
 - VC.Project.VCCLCompilerTool.CppLanguageStandard
 ms.assetid: 0acb74ba-1aa8-4c05-b96c-682988dc19bd
-ms.openlocfilehash: 82f37377dc223bfe3f5e578e1c7f390da91752a1
-ms.sourcegitcommit: b492516cc65120250b9ea23f96f7f63f37f99fae
+ms.openlocfilehash: 208789071ff028107d3c7311c3b5c6cf3eea7c1d
+ms.sourcegitcommit: 4abc6c4c9694f91685cfd77940987e29a51e3143
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/14/2020
-ms.locfileid: "90075830"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93238474"
 ---
 # <a name="std-specify-language-standard-version"></a>`/std` (言語の標準バージョンの指定)
 
@@ -77,13 +77,13 @@ Visual Studio 2019 バージョン16.8 以降で **`/std:c11`** は、 **`/std:c
 
 またはを指定すると **`/std:c11`** **`/std:c17`** 、MSVC は C11 と C17 のすべての必要な機能をサポートします。 コンパイラオプションは、次の機能のサポートを有効にします。
 
-- **`_Pragma`**
+- [`_Pragma`](../../preprocessor/pragma-directives-and-the-pragma-keyword.md#the-_pragma-preprocessing-operator-c99-c11)
 
 - **`restrict`**
 
 - **`_Noreturn`** そして \<stdnoreturn.h>
 
-- **`_Alignas`**、、 **`_Alignof`** および \<stdalign.h>
+- **`_Alignas`** 、、 **`_Alignof`** および \<stdalign.h>
 
 - **`_Generic`** そして \<tgmath.h>
 
@@ -107,11 +107,11 @@ C17 は ISO C11 のバグ修正リリースであるため、MSVC support for C1
 
 1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、[Visual Studio での C++ コンパイラとビルド プロパティの設定](../working-with-project-properties.md)に関するページを参照してください。
 
-1. **[構成プロパティ]**、**[C/C++]**、**[言語]** の順に選択します。
+1. **[構成プロパティ]** 、 **[C/C++]** 、 **[言語]** の順に選択します。
 
-1. **C++ 言語標準**(または c**言語標準**の場合) で、ドロップダウンコントロールからサポートする言語標準を選択し、[ **OK]** または [**適用**] を選択して変更を保存します。
+1. **C++ 言語標準** (または c **言語標準** の場合) で、ドロップダウンコントロールからサポートする言語標準を選択し、[ **OK]** または [ **適用** ] を選択して変更を保存します。
 
 ## <a name="see-also"></a>関連項目
 
 [MSVC コンパイラ オプション](compiler-options.md)<br/>
-[MSVC コンパイラのコマンドライン構文](compiler-command-line-syntax.md)
+[MSVC Compiler Command-Line 構文](compiler-command-line-syntax.md)
