@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: e6b1d4da-7275-467f-a58c-a0a8a5835199
 no-loc:
 - noentry
-ms.openlocfilehash: ef79de77e35cbef6acd4af1cec82a4edc1b7d105
-ms.sourcegitcommit: b8c22e6d555cf833510753cba7a368d57e5886db
+ms.openlocfilehash: 5b7b3b4767c32bce52ad2c36c9ecc5d34b2e29b4
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76821344"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92922167"
 ---
 # <a name="creating-a-resource-only-dll"></a>リソースのみの DLL の作成
 
@@ -23,11 +23,11 @@ ms.locfileid: "76821344"
 
 リソースのみの DLL を作成するには、Windows DLL (非 MFC) プロジェクトを新規作成し、ここにリソースを追加します。
 
-::: moniker range="vs-2015"
+::: moniker range="msvc-140"
 
 1. **[新しいプロジェクト]** ダイアログ ボックスで **[Win32 プロジェクト]** を選択します。 プロジェクトとソリューションの名前を入力し、 **[OK]** を選択します。
 
-1. **Win32 アプリケーション ウィザード**で、 **[アプリケーション設定]** を選択します。 **[DLL]** の **[アプリケーションの種類]** を選択します。 **[追加のオプション]** の **[空のプロジェクト]** を選択します。 **[完了]** を選択してプロジェクトを作成します。
+1. **Win32 アプリケーション ウィザード** で、 **[アプリケーション設定]** を選択します。 **[DLL]** の **[アプリケーションの種類]** を選択します。 **[追加のオプション]** の **[空のプロジェクト]** を選択します。 **[完了]** を選択してプロジェクトを作成します。
 
 1. DLL のリソース (文字列やメニューなど) を含む新しいリソース スクリプトを作成します。 `.rc` ファイルを保存します。
 
@@ -38,7 +38,7 @@ ms.locfileid: "76821344"
 1. DLL をビルドします。
 
 ::: moniker-end
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 
 1. **[新しいプロジェクト]** ダイアログ ボックスで **[Windows デスクトップ ウィザード]** を選択し、 **[次へ]** を選択します **[新しいプロジェクトの構成]** ページで、プロジェクトとソリューションの名前を入力し、 **[作成]** を選択します。
 

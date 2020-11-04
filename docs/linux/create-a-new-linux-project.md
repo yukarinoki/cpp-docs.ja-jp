@@ -3,22 +3,22 @@ title: Visual Studio で Linux MSBuild C++ プロジェクトを作成する
 ms.date: 10/15/2020
 description: Visual Studio で新しい MSBuild ベースの Linux プロジェクトを作成します。
 ms.assetid: 5d7c1d67-bc31-4f96-8622-2b4cf91372fd
-ms.openlocfilehash: dddb9dbdee4cefc58a2bd5ccefa493b25e1c9f24
-ms.sourcegitcommit: f19f02f217b80804ab321d463c76ce6f681abcc6
+ms.openlocfilehash: 458a26408bfd29b714150e5259fd23807c9b2908
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92176309"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92921634"
 ---
 # <a name="create-a-linux-msbuild-c-project-in-visual-studio"></a>Visual Studio で Linux MSBuild C++ プロジェクトを作成する
 
-::: moniker range="vs-2015"
+::: moniker range="msvc-140"
 
 Linux プロジェクトは Visual Studio 2017 以降で使用できます。
 
 ::: moniker-end
 
-::: moniker range="vs-2017"
+::: moniker range="msvc-150"
 
 最初に、Visual Studio 対応の **Linux 開発ワークロード** を必ずインストールします。 詳細については、「[Linux ワークロードのダウンロード、インストール、セットアップ](download-install-and-setup-the-linux-development-workload.md)」を参照してください。
 
@@ -46,7 +46,7 @@ Visual Studio 2017 で新しい Linux プロジェクトを作成するには、
 
 ::: moniker-end
 
-::: moniker range="vs-2019"
+::: moniker range="msvc-160"
 
 最初に、Visual Studio 対応の **Linux 開発ワークロード** を必ずインストールします。 詳細については、「[Linux ワークロードのダウンロード、インストール、セットアップ](download-install-and-setup-the-linux-development-workload.md)」をご覧ください。
 

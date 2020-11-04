@@ -3,16 +3,16 @@ title: Visual Studio で Linux MSBuild C++ プロジェクトを構成する
 ms.date: 10/16/2020
 description: Visual Studio で MSBuild ベースの Linux プロジェクトを構成し、ビルドできるようにします。
 ms.assetid: 4d7c6adf-54b9-4b23-bd23-5de0c825b768
-ms.openlocfilehash: 51837dc86d041b9120f984cc01f8db06d696b292
-ms.sourcegitcommit: f19f02f217b80804ab321d463c76ce6f681abcc6
+ms.openlocfilehash: 451f34c257c210463ce11b11f27bc218d41b45c8
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92176340"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92921816"
 ---
 # <a name="configure-a-linux-msbuild-c-project-in-visual-studio"></a>Visual Studio で Linux MSBuild C++ プロジェクトを構成する
 
-::: moniker range="vs-2015"
+::: moniker range="msvc-140"
 
 Linux サポートは Visual Studio 2017 以降で使用できます。
 
@@ -22,7 +22,7 @@ Linux サポートは Visual Studio 2017 以降で使用できます。
 
 物理的な Linux マシン、仮想マシン、または [Windows Subsystem for Linux](/windows/wsl/about) (WSL) を対象にするように、Linux プロジェクトを構成できます。
 
-::: moniker range="vs-2019"
+::: moniker range="msvc-160"
 
 **Visual Studio 2019 バージョン 16.1** :
 
@@ -54,7 +54,7 @@ Linux 用 Windows サブシステム (WSL) をビルドする場合、WSL バー
 
    ![ビルド マシン](media/remote-build-machine-vs2019.png)
 
-   ::: moniker range="vs-2019"
+   ::: moniker range="msvc-160"
 
    **Visual Studio 2019 バージョン 16.7** :Linux 用 Windows サブシステム (WSL) を対象にするには、 **[プラットフォームのツールセット]** ドロップダウンを **[GCC for Windows Subsystem for Linux]\(Linux 用 Windows サブシステムの GCC\)** に設定します。 その他のリモート オプションは消え、既定の WSL シェルへのパスが代わりに表示されます。
 
@@ -75,7 +75,7 @@ Linux 用 Windows サブシステム (WSL) をビルドする場合、WSL バー
 
 ## <a name="copy-sources-remote-systems-only"></a>ソースのコピー (リモート システムのみ)
 
-::: moniker range="vs-2019"
+::: moniker range="msvc-160"
 
 このセクションは、WSL を対象とするときには適用されません。
 
@@ -112,13 +112,13 @@ sudo apt install zip
 
 ヘッダーのキャッシュを管理するには、 **[ツール] > [オプション]、[クロス プラットフォーム] > [接続マネージャー] > [リモート ヘッダー IntelliSense マネージャー]** の順に移動します。 Linux コンピューターに変更を行った後にヘッダー キャッシュ更新するには、リモート接続を選択してから、 **[更新]** を選択します。 接続自体を削除せずにヘッダーを削除するには、 **[削除]** を選択します。 **ファイル エクスプローラー** でローカル ディレクトリを開くには、 **[探索]** を選択します。 このフォルダーを読み取り専用として扱います。 Visual Studio 2017 バージョン 15.3 より前に作成された既存の接続用にヘッダーをダウンロードするには、その接続を選択し、 **[ダウンロード]** を選択します。
 
-::: moniker range="vs-2017"
+::: moniker range="msvc-150"
 
 ![[クロス プラットフォーム] > [接続マネージャー] > [リモート ヘッダー IntelliSense マネージャー] が選択された [オプション] ダイアログ ボックスを示すスクリーンショット。](media/remote-header-intellisense.png)
 
 ::: moniker-end
 
-::: moniker range="vs-2019"
+::: moniker range="msvc-160"
 
 ![[クロス プラットフォーム] > [接続マネージャー] が選択された [オプション] ダイアログ ボックスを示すスクリーンショット。](media/connection-manager-vs2019.png)
 

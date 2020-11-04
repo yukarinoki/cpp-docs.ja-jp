@@ -6,24 +6,24 @@ f1_keywords:
 - ConnectionManager
 helpviewer_keywords:
 - ConnectionManager program
-ms.openlocfilehash: 2f38fec21e7526fa214db811b00fc545504f0610
-ms.sourcegitcommit: 611e903f222ec794ef14195796b332851ab98904
+ms.openlocfilehash: 065a2cf6d6a2fe7d7e418299255c5bbf1f2bf753
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/08/2020
-ms.locfileid: "91847139"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92921621"
 ---
 # <a name="connectionmanager-reference"></a>ConnectionManager リファレンス
 
-::: moniker range="<=vs-2017"
+::: moniker range="<=msvc-150"
 
 ConnectionManager.exe は、Visual Studio 2019 バージョン 16.5 以降で使用できます。
 
 ::: moniker-end
 
-::: moniker range="vs-2019"
+::: moniker range="msvc-160"
 
-ConnectionManager.exe は、Visual Studio 外でのリモート開発の接続を管理するためのコマンドライン ユーティリティです。 これは、新しい開発マシンをプロビジョニングするなどのタスクに役立ちます。 または、これを利用して Visual Studio で継続的インテグレーションを設定することもできます。これは、[開発者コマンド プロンプト] ウィンドウで使用することができます。 開発者コマンド プロンプトの詳細については、「[コマンドラインから C++ Microsoft ツールセットを使用する](../build/building-on-the-command-line.md)」を参照してください。
+ConnectionManager.exe は、Visual Studio 外でのリモート開発の接続を管理するためのコマンドライン ユーティリティです。 これは、新しい開発マシンをプロビジョニングするなどのタスクに役立ちます。 または、これを利用して Visual Studio で継続的インテグレーションを設定することもできます。 これは、[開発者コマンド プロンプト] ウィンドウで使用することができます。 開発者コマンド プロンプトの詳細については、「[コマンドラインから C++ Microsoft ツールセットを使用する](../build/building-on-the-command-line.md)」を参照してください。
 
 ConnectionManager.exe は、Visual Studio 2019 バージョン 16.5 以降で使用できます。 これは、Visual Studio インストーラーの **[C++ による Linux 開発]** ワークロードに含まれています。 インストーラーで **接続マネージャー** を選択した場合も、自動的にインストールされます。 これは、 *%VCIDEInstallDir%\\Linux\\bin\\ConnectionManagerExe\\ConnectionManager.exe* にインストールされます。
 

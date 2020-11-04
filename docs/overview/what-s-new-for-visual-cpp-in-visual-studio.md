@@ -4,18 +4,18 @@ description: Visual Studio の Microsoft C/C++ のコンパイラとツールに
 ms.date: 05/19/2020
 ms.technology: cpp-ide
 ms.assetid: 8801dbdb-ca0b-491f-9e33-01618bff5ae9
-ms.openlocfilehash: 5e82e39b9480b83e2d1c8143338654467a08b7d0
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: c5e1f368060b650781c413a03e1bc2f9e368941a
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91500261"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92924840"
 ---
 # <a name="whats-new-for-c-in-visual-studio"></a>Visual Studio での C++ の新機能
 
-::: moniker range=">=vs-2019"
+::: moniker range=">=msvc-160"
 
-Visual Studio 2019 には、Microsoft C++ 環境に対する多くの更新プログラムと修正プログラムが導入されています。 コンパイラおよびツールの多くのバグと問題を修正しました。 多くの問題は、 **[フィードバックの送信]** の [[問題の報告]](/visualstudio/ide/how-to-report-a-problem-with-visual-studio?view=vs-2019&preserve-view=true) および [[提案の送信]](https://developercommunity.visualstudio.com/spaces/62/index.html) オプションを通じてお客様から寄せられたものです。 バグ レポートをお寄せいただきありがとうございました。 Visual Studio 全体の新機能の詳細については、「[Visual Studio 2019 の新機能](/visualstudio/ide/whats-new-visual-studio-2019)」を参照してください。 Visual Studio 2017 での C++ の新機能については、「[Visual Studio 2017 での C++ の新機能](?preserve-view=true&view=vs-2017)」を参照してください。 Visual Studio 2015 以前のバージョンでの C++ の新機能については、「[Visual Studio 2003 から 2015 の Visual C++ の新機能](../porting/visual-cpp-what-s-new-2003-through-2015.md)」を参照してください。
+Visual Studio 2019 には、Microsoft C++ 環境に対する多くの更新プログラムと修正プログラムが導入されています。 コンパイラおよびツールの多くのバグと問題を修正しました。 多くの問題は、 **[フィードバックの送信]** の [[問題の報告]](/visualstudio/ide/how-to-report-a-problem-with-visual-studio?view=vs-2019&preserve-view=true) および [[提案の送信]](https://developercommunity.visualstudio.com/spaces/62/index.html) オプションを通じてお客様から寄せられたものです。 バグ レポートをお寄せいただきありがとうございました。 Visual Studio 全体の新機能の詳細については、「[Visual Studio 2019 の新機能](/visualstudio/ide/whats-new-visual-studio-2019)」を参照してください。 Visual Studio 2017 での C++ の新機能については、「[Visual Studio 2017 での C++ の新機能](?preserve-view=true&view=msvc-150)」を参照してください。 Visual Studio 2015 以前のバージョンでの C++ の新機能については、「[Visual Studio 2003 から 2015 の Visual C++ の新機能](../porting/visual-cpp-what-s-new-2003-through-2015.md)」を参照してください。
 
 ## <a name="c-compiler"></a>C++ コンパイラ
 
@@ -103,7 +103,7 @@ IntelliCode では、独自の広範なトレーニングとコード コンテ�
 
 ### <a name="template-intellisense"></a>テンプレート IntelliSense
 
-**テンプレート バー**で、モーダル ウィンドウではなく**ピーク ウィンドウ** UI が使用され、入れ子になったテンプレートがサポートされ、**ピーク ウィンドウ**に既定の引数が設定されるようになりました。 詳細については、「[Template IntelliSense Improvements for Visual Studio 2019 Preview 2](https://devblogs.microsoft.com/cppblog/template-intellisense-improvements-for-visual-studio-2019-preview-2/)」 (Visual Studio 2019 プレビュー 2 のテンプレート IntelliSense 改善) を参照してください。 **テンプレート バー**の **[直前に使用]** ドロップダウンでは、前に使用したサンプル引数のセットを簡単に切り替えることができます。
+**テンプレート バー** で、モーダル ウィンドウではなく **ピーク ウィンドウ** UI が使用され、入れ子になったテンプレートがサポートされ、 **ピーク ウィンドウ** に既定の引数が設定されるようになりました。 詳細については、「[Template IntelliSense Improvements for Visual Studio 2019 Preview 2](https://devblogs.microsoft.com/cppblog/template-intellisense-improvements-for-visual-studio-2019-preview-2/)」 (Visual Studio 2019 プレビュー 2 のテンプレート IntelliSense 改善) を参照してください。 **テンプレート バー** の **[直前に使用]** ドロップダウンでは、前に使用したサンプル引数のセットを簡単に切り替えることができます。
 
 ### <a name="new-start-window-experience"></a>新しいスタート画面のエクスペリエンス
 
@@ -139,7 +139,7 @@ Visual Studio 2019 では、コードをもっと簡単に、もっと直観的�
 
 ##### <a name="visual-studio-2019-version-161"></a>Visual Studio 2019 バージョン 16.1
 
-IntelliCode がオプションのコンポーネントとして**C++ によるデスクトップ開発**ワークロードに付属するようになりました。 詳細については、[Visual Studio 2019 に付属する強化された C++ IntelliCode](https://devblogs.microsoft.com/cppblog/improved-c-intellicode-now-ships-with-visual-studio-2019/) に関するページをご覧ください。
+IntelliCode がオプションのコンポーネントとして **C++ によるデスクトップ開発** ワークロードに付属するようになりました。 詳細については、[Visual Studio 2019 に付属する強化された C++ IntelliCode](https://devblogs.microsoft.com/cppblog/improved-c-intellicode-now-ships-with-visual-studio-2019/) に関するページをご覧ください。
 
 ## <a name="cmake-support"></a>CMake サポート
 
@@ -165,7 +165,7 @@ IntelliCode がオプションのコンポーネントとして**C++ による�
 
 - CMake のコマンド ラインを手動で変更することなくツールチェーンを指定するための `cmakeToolchain` の設定が、CMakeSettings.json でサポートされるようになりました。
 
-- 新しい **[すべてビルド]** メニューのショートカット **Ctrl+Shift+B**。
+- 新しい **[すべてビルド]** メニューのショートカット **Ctrl+Shift+B** 。
 
 ##### <a name="visual-studio-2019-version-161"></a>Visual Studio 2019 バージョン 16.1
 
@@ -181,7 +181,7 @@ IntelliCode がオプションのコンポーネントとして**C++ による�
 
 ## <a name="incredibuild-integration"></a>IncrediBuild の統合
 
-IncrediBuild がオプションのコンポーネントとして**C++ によるデスクトップ開発**ワークロードに含まれるようになりました。 IncrediBuild のビルド モニターは、Visual Studio IDE に完全に統合されています。 詳細については、「[IncrediBuild のビルド モニターと Visual Studio 2019 を使ってビルドを視覚化する](https://devblogs.microsoft.com/cppblog/visualize-your-build-with-incredibuilds-build-monitor-and-visual-studio-2019/)」を参照してください。
+IncrediBuild がオプションのコンポーネントとして **C++ によるデスクトップ開発** ワークロードに含まれるようになりました。 IncrediBuild のビルド モニターは、Visual Studio IDE に完全に統合されています。 詳細については、「[IncrediBuild のビルド モニターと Visual Studio 2019 を使ってビルドを視覚化する](https://devblogs.microsoft.com/cppblog/visualize-your-build-with-incredibuilds-build-monitor-and-visual-studio-2019/)」を参照してください。
 
 ## <a name="debugging"></a>デバッグ
 
@@ -238,9 +238,9 @@ C++ Android エクスペリエンスは、既定では Android SDK 25 および 
 
 ::: moniker-end
 
-::: moniker range="=vs-2017"
+::: moniker range="=msvc-150"
 
-Visual Studio 2017 には、C++ 環境に対する多くの更新プログラムと修正プログラムが導入されています。 コンパイラとツールで報告された 250 件を超えるバグと問題を修正しました。 その多くは、 **[フィードバックの送信]** の [[問題の報告] および [提案の送信]](/visualstudio/ide/how-to-report-a-problem-with-visual-studio?view=vs-2017&preserve-view=true) オプションを通じてお客様から寄せられたものです。 バグ レポートをお寄せいただきありがとうございました。 Visual Studio 全体の新機能の詳細については、「[Visual Studio 2017 の新機能](/visualstudio/ide/whats-new-visual-studio-2017?view=vs-2017&preserve-view=true)」を参照してください。 Visual Studio 2019 での C++ の新機能については、「[Visual Studio での C++ の新機能](?preserve-view=true&view=vs-2019)」を参照してください。 Visual Studio 2015 以前のバージョンでの C++ の新機能については、「[Visual Studio 2003 から 2015 の Visual C++ の新機能](../porting/visual-cpp-what-s-new-2003-through-2015.md)」を参照してください。
+Visual Studio 2017 には、C++ 環境に対する多くの更新プログラムと修正プログラムが導入されています。 コンパイラとツールで報告された 250 件を超えるバグと問題を修正しました。 その多くは、 **[フィードバックの送信]** の [[問題の報告] および [提案の送信]](/visualstudio/ide/how-to-report-a-problem-with-visual-studio?view=vs-2017&preserve-view=true) オプションを通じてお客様から寄せられたものです。 バグ レポートをお寄せいただきありがとうございました。 Visual Studio 全体の新機能の詳細については、「[Visual Studio 2017 の新機能](/visualstudio/ide/whats-new-visual-studio-2017?view=vs-2017&preserve-view=true)」を参照してください。 Visual Studio 2019 での C++ の新機能については、「[Visual Studio での C++ の新機能](?preserve-view=true&view=msvc-160)」を参照してください。 Visual Studio 2015 以前のバージョンでの C++ の新機能については、「[Visual Studio 2003 から 2015 の Visual C++ の新機能](../porting/visual-cpp-what-s-new-2003-through-2015.md)」を参照してください。
 
 ## <a name="visual-studio-2017-c-compiler"></a>Visual Studio 2017 C++ コンパイラ
 
@@ -333,7 +333,7 @@ Visual Studio 2017 RTM では、標準ライブラリの機能がさらに強化
 - 標準での必要性に応じて、`future::get()` は `future` を無効化するようになりました。
 - `iterator_traits<void *>` は `void&` を形成しようとするため、ハード エラーとして使用されていましたが、これが明確に空の構造体となり、"is iterator" SFINAE 条件で `iterator_traits` が使用できるようになりました。
 - Clang **-Wsystem-headers** によって報告される警告の一部を修正しました。
-- Clang -**Wmicrosoft-exception-spec** によって報告された "宣言での例外指定が以前の宣言と一致しない" 問題も修正しました。
+- Clang - **Wmicrosoft-exception-spec** によって報告された "宣言での例外指定が以前の宣言と一致しない" 問題も修正しました。
 - Clang と C1XX によって報告された mem-initializer-list 順序付けの警告も修正しました。
 - 順序なしのコンテナーは、コンテナー自体がスワップされるときにハッシュ関数や述語のスワップを行っていませんでした。 現在は行うようになりました。
 - 多くのコンテナー スワップ操作は、マークされた **`noexcept`** となりました (標準ライブラリが non-`propagate_on_container_swap` non-equal-allocator の未定義の動作条件を検出したときに、例外をスローすることがないため)。
@@ -343,7 +343,7 @@ Visual Studio 2017 RTM では、標準ライブラリの機能がさらに強化
 - `basic_string::shrink_to_fit()` は、アロケーターの `propagate_on_container_swap` によって影響を受けることがなくなりました。
 - `std::decay` では、煩雑な関数の型 (cv-qualified、ref-qualified、またはその両方の関数型) が処理されるようになりました。
 - include ディレクティブを変更した結果、正しい大文字小文字の区別とスラッシュの使用が可能となり、移植性が向上させました。
-- 警告 C4061 "列挙型 '*enumeration*' の switch 文内の列挙子 ’*enumerator*’ は、case ラベルによって明示的に扱われていません" を修正しました。 この警告は既定ではオフになっており、標準ライブラリの警告の全般的なポリシーに対する例外として修正されました。 (標準ライブラリは **`/W4`** クリーンですが、 **`/Wall`** クリーンにしようとはしません。 既定でオフである警告の多くは、非常にノイズが多く、日常的に使用するためのものではありません)。
+- 警告 C4061 "列挙型 ' *enumeration* ' の switch 文内の列挙子 ’ *enumerator* ’ は、case ラベルによって明示的に扱われていません" を修正しました。 この警告は既定ではオフになっており、標準ライブラリの警告の全般的なポリシーに対する例外として修正されました。 (標準ライブラリは **`/W4`** クリーンですが、 **`/Wall`** クリーンにしようとはしません。 既定でオフである警告の多くは、非常にノイズが多く、日常的に使用するためのものではありません)。
 - `std::list` のデバッグ チェックが強化されました。 リストの反復子は `operator->()` をチェックし、`list::unique()` では反復子を無効としてマークするようになりました。
 - `tuple` 内の uses-allocator メタプログラミングを修正しました。
 
@@ -508,7 +508,7 @@ C++ 用のクロスプラットフォーム Web API である CPPRestSDK が、�
 - プロジェクトとコードのいくつかのウィザードを署名ダイアログのスタイルで書き直しました。
 - **[クラスの追加]** でクラス追加ウィザードが直接起動されるようになりました。 以前ここにあったその他の項目はすべて、 **[追加] > [新しい項目]** に移動しています。
 - **[新しいプロジェクト]** ダイアログで、Win32 プロジェクトが **[Windows デスクトップ]** カテゴリに表示されるようになりました。
-- **Windows コンソール**のテンプレートと **Windows デスクトップ アプリケーション**のテンプレートで、ウィザードなしでプロジェクトを作成するようになりました。 以前の **Win32 コンソール アプリケーション** ウィザードと同じオプションを表示する同じカテゴリに新しい **Windows デスクトップ ウィザード**が追加されました。
+- **Windows コンソール** のテンプレートと **Windows デスクトップ アプリケーション** のテンプレートで、ウィザードなしでプロジェクトを作成するようになりました。 以前の **Win32 コンソール アプリケーション** ウィザードと同じオプションを表示する同じカテゴリに新しい **Windows デスクトップ ウィザード** が追加されました。
 
 ##### <a name="visual-studio-2017-version-155"></a>Visual Studio 2017 バージョン 15.5
 
@@ -542,7 +542,7 @@ C++ では、Ctrl を押しながら **[定義へ移動]** をクリックでき
 - **[すべての参照の検索]** (Shift + F12) を使って、複雑なコードベースでも簡単に参照できるようになりました。 高度なグループ化、フィルター処理、並べ替え、結果内の検索と色づけ (一部の言語) が提供され、参照を明確に理解できます。 C++ では、新しい UI に、変数から読み取っているのか、または変数に書き込んでいるのかに関する情報が含まれます。
 - Dot-to-Arrow IntelliSense 機能が試験段階から進んだ段階に移り、既定で有効になっています。 エディターの **[Expand Scopes]\(スコープの展開\)** および **[Expand Precedence]\(優先順位の展開\)** 機能が試験段階から進んだ段階に移ります。
 - 試験的なリファクタリング機能である **署名の変更** および **関数の抽出** が既定で使用可能になりました。
-- C++ プロジェクトの "迅速なプロジェクトの読み込み" の試験的機能が追加されました。 C++ プロジェクトを次回に開いた際に、読み込みが速くなり、またそれ以降、読み込みが "*さらに*" 速くなります。
+- C++ プロジェクトの "迅速なプロジェクトの読み込み" の試験的機能が追加されました。 C++ プロジェクトを次回に開いた際に、読み込みが速くなり、またそれ以降、読み込みが " *さらに* " 速くなります。
 - 他の言語と共通の機能と、C++ に固有の機能があります。 これらの新機能について詳しくは、「[Announcing Visual Studio "15" Preview 5 (Visual Studio "15" プレビュー 5 のご案内)](https://devblogs.microsoft.com/visualstudio/announcing-visual-studio-15-preview-5/)」をご覧ください。
 
 ##### <a name="visual-studio-2017-version-157"></a>Visual Studio 2017 バージョン 15.7
@@ -607,7 +607,7 @@ Visual C++ Build ツール (以前はスタンドアロン製品として入手�
 ##### <a name="visual-studio-2017-version-155"></a>Visual Studio 2017 バージョン 15.5
 
 - Linux ワークロードでは、リモート Linux マシンにファイルを同期するための **sftp** の代替として **rsync** が使えるようになりました。
-- ARM マイクロコントローラーを対象とするクロス コンパイルのサポートが追加されました。 インストールでそれを有効にするには、**C++ による Linux 開発**ワークロードを選び、**埋め込みおよび IoT 開発**のオプションを選びます。 このオプションでは、ARM GCC クロス コンパイル ツールと Make がインストールに追加されます。 詳細については、「[ARM GCC Cross Compilation in Visual Studio](https://devblogs.microsoft.com/cppblog/arm-gcc-cross-compilation-in-visual-studio/)」 (Visual Studio の ARM GCC クロス コンパイル) を参照してください。
+- ARM マイクロコントローラーを対象とするクロス コンパイルのサポートが追加されました。 インストールでそれを有効にするには、 **C++ による Linux 開発** ワークロードを選び、 **埋め込みおよび IoT 開発** のオプションを選びます。 このオプションでは、ARM GCC クロス コンパイル ツールと Make がインストールに追加されます。 詳細については、「[ARM GCC Cross Compilation in Visual Studio](https://devblogs.microsoft.com/cppblog/arm-gcc-cross-compilation-in-visual-studio/)」 (Visual Studio の ARM GCC クロス コンパイル) を参照してください。
 - CMake のサポートが追加されました。 Visual Studio プロジェクトに変換しなくても、既存の CMake コード ベースで作業できるようになりました。 詳細については、「[Configure a Linux CMake Project](../linux/cmake-linux-project.md)」 (Linux CMake プロジェクトを構成する) を参照してください。
 - リモート タスクを実行するためのサポートが追加されました。 この機能により、Visual Studio の接続マネージャーに定義されているリモート システムであらゆるコマンドを実行できます。 リモート タスクでは、リモート システムにファイルをコピーすることもできます。
 詳細については、「[Configure a Linux CMake Project](../linux/cmake-linux-project.md)」 (Linux CMake プロジェクトを構成する) を参照してください。
@@ -635,7 +635,7 @@ Android および iOS を対象とするモバイル アプリを、Visual Studi
 
 ##### <a name="visual-studio-2017-version-155"></a>Visual Studio 2017 バージョン 15.5
 
-**Windows アプリケーション パッケージ プロジェクト**というプロジェクト テンプレートが追加されました。このテンプレートでは、デスクトップ ブリッジでのデスクトップ アプリケーションのパッケージ化が大幅に簡略化されます。 **[ファイル] > [新規] > [プロジェクト] > [インストール] > [Visual C++] > [ユニバーサル Windows プラットフォーム]** の下にあります。 詳細については、「[Visual Studio を使ったアプリのパッケージ化 (デスクトップ ブリッジ)](/windows/uwp/porting/desktop-to-uwp-packaging-dot-net)」をご覧ください。
+**Windows アプリケーション パッケージ プロジェクト** というプロジェクト テンプレートが追加されました。このテンプレートでは、デスクトップ ブリッジでのデスクトップ アプリケーションのパッケージ化が大幅に簡略化されます。 **[ファイル] > [新規] > [プロジェクト] > [インストール] > [Visual C++] > [ユニバーサル Windows プラットフォーム]** の下にあります。 詳細については、「[Visual Studio を使ったアプリのパッケージ化 (デスクトップ ブリッジ)](/windows/uwp/porting/desktop-to-uwp-packaging-dot-net)」をご覧ください。
 
 新しいコードを作成するときに、ヘッダー ファイルだけに実装される Windows ランタイム向けの標準 C++ 言語プロジェクションである C++/WinRT を使うことができるようになりました。 標準に準拠した C++ コンパイラを使用して、Windows ランタイム API を使用および作成できます。 C++/WinRT は、C++ の開発者が最新の Windows API に最適にアクセスできるように設計されています。 詳細については、「[C++/WinRT](/windows/uwp/cpp-and-winrt-apis/)」を参照してください。
 
@@ -674,7 +674,7 @@ Visual Studio 2017 に同梱されている Clang/C2 ツールセットが **`/b
 
 ##### <a name="visual-studio-2017-version-155"></a>Visual Studio 2017 バージョン 15.5
 
-**[C++ によるデスクトップ開発]** ワークロードのコンポーネントとして、Google Test Adapter と Boost.Test Adapter を使用できるようになりました。 これらは**テスト エクスプローラー**と統合されています。 CMake プロジェクト ([フォルダーを開く] を使用) のための CTest サポートが追加されました。ただし、**テスト エクスプローラー**との完全統合はまだ利用できません。 詳細については、「[C/C++ 用の単体テストの記述](/visualstudio/test/writing-unit-tests-for-c-cpp)」を参照してください。
+**[C++ によるデスクトップ開発]** ワークロードのコンポーネントとして、Google Test Adapter と Boost.Test Adapter を使用できるようになりました。 これらは **テスト エクスプローラー** と統合されています。 CMake プロジェクト ([フォルダーを開く] を使用) のための CTest サポートが追加されました。ただし、 **テスト エクスプローラー** との完全統合はまだ利用できません。 詳細については、「[C/C++ 用の単体テストの記述](/visualstudio/test/writing-unit-tests-for-c-cpp)」を参照してください。
 
 ##### <a name="visual-studio-2017-version-156"></a>Visual Studio 2017 バージョン 15.6
 
@@ -703,7 +703,7 @@ Visual Studio グラフィックス診断ツール:これらを使用して、Di
 
   ![リソース履歴](media/resource-history.png)
 
-  新しい**リソース履歴**ツール ウィンドウに、リソースの変更履歴が表示されます。
+  新しい **リソース履歴** ツール ウィンドウに、リソースの変更履歴が表示されます。
 
   ![リソース履歴の変更](media/resource-history-change.png)
 
@@ -713,7 +713,7 @@ Visual Studio グラフィックス診断ツール:これらを使用して、Di
 
   ![API 統計情報](media/api-stats.png)
 
-- **メモリ統計情報:** フレームで作成されたリソースにドライバーが割り当てているメモリの量を表示します。 このウィンドウは、**Visual Studio Graphics Analyzer** の **[表示]、[メモリ統計情報]** から表示できます。 スプレッドシートで表示するためにデータを CSV ファイルにコピーするには、右クリックして **[すべてコピー]** を選択します。
+- **メモリ統計情報:** フレームで作成されたリソースにドライバーが割り当てているメモリの量を表示します。 このウィンドウは、 **Visual Studio Graphics Analyzer** の **[表示]、[メモリ統計情報]** から表示できます。 スプレッドシートで表示するためにデータを CSV ファイルにコピーするには、右クリックして **[すべてコピー]** を選択します。
 
   ![メモリ統計情報](media/memory-stats.png)
 
@@ -735,14 +735,14 @@ Visual Studio グラフィックス診断ツール:これらを使用して、Di
 
 ::: moniker-end
 
-::: moniker range="=vs-2015"
+::: moniker range="=msvc-140"
 
 Visual Studio 2015 更新プログラム 3 での新機能の完全な一覧については、「[Visual Studio 2003 から 2015 の Visual C++ の新機能](../porting/visual-cpp-what-s-new-2003-through-2015.md)」を参照してください。
 
 Visual Studio 2015 のすべての新機能の詳細については、リリース ノートを参照してください。 「[Visual Studio 2015 リリース ノート履歴](/visualstudio/releasenotes/vs2015-version-history)」からリンクされています。
 
-Visual Studio 2019 での C++ の新機能については、[Visual Studio 2019 での C++ の新機能](?preserve-view=true&view=vs-2019)に関するページを参照してください。
+Visual Studio 2019 での C++ の新機能については、[Visual Studio 2019 での C++ の新機能](?preserve-view=true&view=msvc-160)に関するページを参照してください。
 
-Visual Studio 2017 での C++ の新機能については、「[Visual Studio 2017 での C++ の新機能](?preserve-view=true&view=vs-2017)」を参照してください。
+Visual Studio 2017 での C++ の新機能については、「[Visual Studio 2017 での C++ の新機能](?preserve-view=true&view=msvc-150)」を参照してください。
 
 ::: moniker-end

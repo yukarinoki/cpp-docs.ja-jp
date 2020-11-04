@@ -3,18 +3,18 @@ title: Windows XP 用プログラムの構成
 description: Visual Studio で C++ Windows XP ツールセットをインストールして使用する方法について説明します。
 ms.date: 03/16/2020
 ms.assetid: 1e4487b3-d815-4123-878b-5718b22f0fd5
-ms.openlocfilehash: 92364d7fd25ac617baacc125b279fb0ee9c92f62
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 09fe1a511c92f999e02646b9e606a3631a175215
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79440478"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92919372"
 ---
 # <a name="configuring-programs-for-windows-xp"></a>Windows XP 用プログラムの構成
 
 Visual Studio では、複数のプラットフォーム ツールセットがサポートされています。 つまり、既定のツールセットによってサポートされていないオペレーティング システムとランタイム ライブラリをターゲットにすることができます。 たとえば、プラットフォーム ツールセットを切り替えることで、Visual Studio 2017 C++ コンパイラを使用して、ターゲットが Windows XP と Windows Server 2003 であるアプリを作成できます。 また、以前のプラットフォーム ツールセットを使用して、バイナリ互換性のあるレガシ コードを保守しながら、Visual Studio IDE の最新の機能も利用できます。
 
-::: moniker range="vs-2019"
+::: moniker range="msvc-160"
 
 Visual Studio 2019 で提供される v142 ツールセットには、Windows XP 用のコード作成のサポートは含まれていません。 Visual Studio 2017 の v141_xp ツールセットを使用した Windows XP の開発のサポートは、Visual Studio インストーラーの独立したコンポーネント オプションとして入手できます。
 
@@ -22,15 +22,15 @@ Visual Studio 2019 で提供される v142 ツールセットには、Windows XP
 
 ## <a name="install-the-windows-xp-platform-toolset"></a>Windows XP プラットフォーム ツールセットのインストール
 
-::: moniker range="<=vs-2017"
+::: moniker range="<=msvc-150"
 
 ターゲットが Windows XP と Windows Server 2003 である Visual Studio 2017 プラットフォーム ツールセットとコンポーネントを取得するには、Visual Studio インストーラーを実行します。 Visual Studio を初めてインストールするとき、または既存のインストールを変更するとき、 **[C++ によるデスクトップ開発]** ワークロードを必ず選択します。 このワークロードのオプション コンポーネントの一覧で、 **[C++ に関する Windows XP サポート]** を選択し、 **[インストール]** または **[変更]** を選択します。
 
 ::: moniker-end
 
-::: moniker range="vs-2019"
+::: moniker range="msvc-160"
 
-ターゲットが Windows XP と Windows Server 2003 である v141_xp プラットフォーム ツールセットとコンポーネントを取得するには、Visual Studio インストーラーを実行します。 Visual Studio を初めてインストールするとき、または既存のインストールを変更するとき、 **[C++ によるデスクトップ開発]** ワークロードを必ず選択します。 **[個々のコンポーネント]** タブの **[コンパイラ、ビルド ツール、およびランタイム]** で、**VS 2017 (v141) ツールの C++ Windows XP サポート \[非推奨]** を選択し、 **[インストール]** または **[変更]** を選択します。
+ターゲットが Windows XP と Windows Server 2003 である v141_xp プラットフォーム ツールセットとコンポーネントを取得するには、Visual Studio インストーラーを実行します。 Visual Studio を初めてインストールするとき、または既存のインストールを変更するとき、 **[C++ によるデスクトップ開発]** ワークロードを必ず選択します。 **[個々のコンポーネント]** タブの **[コンパイラ、ビルド ツール、およびランタイム]** で、 **VS 2017 (v141) ツールの C++ Windows XP サポート \[非推奨]** を選択し、 **[インストール]** または **[変更]** を選択します。
 
 ::: moniker-end
 
@@ -40,7 +40,7 @@ Visual Studio に含まれている Windows XP プラットフォーム ツー�
 
 ### <a name="to-target-windows-xp"></a>Windows XP に対応するには
 
-1. **ソリューション エクスプローラー**で、プロジェクトのショートカット メニューを開き、 **[プロパティ]** を選択します。
+1. **ソリューション エクスプローラー** で、プロジェクトのショートカット メニューを開き、 **[プロパティ]** を選択します。
 
 1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスで、 **[構成プロパティ]**  >  **[全般]** を選択します。 **[プラットフォーム ツールセット]** プロパティを、優先する Windows XP ツールセットに設定します。 たとえば、Visual Studio 2017 の Microsoft C++ コンパイラを使用し、Windows XP および Windows Server 2003 向けのコードを作成するには、 **[Visual Studio 2017 - Windows XP (v141_xp)]** を選択します。
 

@@ -2,22 +2,22 @@
 title: FIPS 準拠の安全なリモート Linux 開発のセットアップ
 description: リモート開発のために Visual Studio と Linux マシンとの間で FIPS 準拠の暗号化された接続を設定する方法を説明します。
 ms.date: 01/17/2020
-ms.openlocfilehash: 9a0e87f4ddf69bf489b52d4f83934d3279f2d085
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: b7eb6bfd32d362415eda057bfa78afe80fb9e2f4
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "76520463"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92924687"
 ---
 # <a name="set-up-fips-compliant-secure-remote-linux-development"></a>FIPS 準拠の安全なリモート Linux 開発のセットアップ
 
-::: moniker range="<=vs-2017"
+::: moniker range="<=msvc-150"
 
 Linux サポートは Visual Studio 2017 以降で使用できます。 FIPS 準拠の安全なリモート Linux 開発は、Visual Studio 2019 バージョン 16.5 以降で利用できます。
 
 ::: moniker-end
 
-::: moniker range="vs-2019"
+::: moniker range="msvc-160"
 
 Federal Information Processing Standard (FIPS) パブリケーション 140-2 は、暗号化モジュールに関する米国政府の標準です。 標準の実装は、NIST によって検証されています。 Windows では、[FIPS 準拠の暗号化モジュールのサポートが検証](/windows/security/threat-protection/fips-140-validation)されています。 Visual Studio 2019 バージョン 16.5 以降では、リモート開発のために Linux システムへの安全な FIPS 準拠の暗号化された接続を使用できます。
 
@@ -122,7 +122,7 @@ Visual Studio とリモート Linux システムとの間で FIPS 準拠の暗�
    | **秘密キー ファイル**    | ssh 接続用に作成された秘密キー ファイル
    | **パスフレーズ**          | 上で選択した秘密キーで使用されるパスフレーズ
 
-   認証の種類を**秘密キー**に変更します。 **[秘密キー ファイル]** フィールドに秘密キーへのパスを入力します。 **[参照]** ボタンを使用して秘密キー ファイルを探すこともできます。 その後、 **[パスフレーズ]** フィールドに、秘密キー ファイルを暗号化するために使用するパスフレーズを入力します。
+   認証の種類を **秘密キー** に変更します。 **[秘密キー ファイル]** フィールドに秘密キーへのパスを入力します。 **[参照]** ボタンを使用して秘密キー ファイルを探すこともできます。 その後、 **[パスフレーズ]** フィールドに、秘密キー ファイルを暗号化するために使用するパスフレーズを入力します。
 
 1. **[接続]** ボタンを選択すると、リモート コンピューターへの接続が試行されます。
 
@@ -136,19 +136,19 @@ Visual Studio とリモート Linux システムとの間で FIPS 準拠の暗�
 
 ## <a name="command-line-utility-for-the-connection-manager"></a>接続マネージャーのコマンドライン ユーティリティ  
 
-**Visual Studio 2019 バージョン 16.5 以降**:ConnectionManager.exe は、Visual Studio 外でのリモート開発の接続を管理するためのコマンドライン ユーティリティです。 これは、新しい開発マシンをプロビジョニングするなどのタスクに役立ちます。 または、これを利用して Visual Studio で継続的インテグレーションを設定することもできます。 ConnectionManager コマンドの例とすべてのリファレンスについては、「[ConnectionManager リファレンス](connectionmanager-reference.md)」を参照してください。  
+**Visual Studio 2019 バージョン 16.5 以降** :ConnectionManager.exe は、Visual Studio 外でのリモート開発の接続を管理するためのコマンドライン ユーティリティです。 これは、新しい開発マシンをプロビジョニングするなどのタスクに役立ちます。 または、これを利用して Visual Studio で継続的インテグレーションを設定することもできます。 ConnectionManager コマンドの例とすべてのリファレンスについては、「[ConnectionManager リファレンス](connectionmanager-reference.md)」を参照してください。  
 
 ## <a name="optional-enable-or-disable-fips-mode"></a>省略可能:FIPS モードを有効または無効にする
 
 Windows で FIPS モードをグローバルに有効にすることができます。
 
-1. FIPS モードを有効にするには、**Windows+R** を押して [ファイル名を指定して実行] ダイアログを開き、gpedit.msc を実行します。
+1. FIPS モードを有効にするには、 **Windows+R** を押して [ファイル名を指定して実行] ダイアログを開き、gpedit.msc を実行します。
 
 1. **[ローカル コンピューター ポリシー] > [コンピューターの構成] > [Windows の設定] > [セキュリティの設定] > [ローカル ポリシー]** を展開して、 **[セキュリティ オプション]** を選択します。
 
-1. **[ポリシー]** の下で、 **[システム暗号化: 暗号化、ハッシュ、署名のための FIPS 準拠アルゴリズムを使う]** を選択し、**Enter** を押してそのダイアログ ボックスを開きます。
+1. **[ポリシー]** の下で、 **[システム暗号化: 暗号化、ハッシュ、署名のための FIPS 準拠アルゴリズムを使う]** を選択し、 **Enter** を押してそのダイアログ ボックスを開きます。
 
-1. **[ローカル セキュリティの設定]** タブで、 **[有効]** または **[無効]** を選択した後、**OK** を選択して変更を保存します。
+1. **[ローカル セキュリティの設定]** タブで、 **[有効]** または **[無効]** を選択した後、 **OK** を選択して変更を保存します。
 
 > [!WARNING]
 > FIPS モードを有効にすると、アプリケーションによっては中断したり予想外の動作をしたりすることがあります。 詳細については、ブログ記事「["FIPS モード" をお勧めしない理由](https://techcommunity.microsoft.com/t5/microsoft-security-baselines/why-we-8217-re-not-recommending-8220-fips-mode-8221-anymore/ba-p/701037)」を参照してください。

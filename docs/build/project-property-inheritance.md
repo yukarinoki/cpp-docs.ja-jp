@@ -4,12 +4,12 @@ description: ネイティブ (MSBuild) Visual Studio C++ プロジェクトで�
 ms.date: 02/21/2020
 helpviewer_keywords:
 - C++ projects, property inheritance
-ms.openlocfilehash: 00afe982156597aa166c2c5de98f3027e3f84bdb
-ms.sourcegitcommit: 6e5429e076e552b32e8bdc49480c51498d7924c1
+ms.openlocfilehash: 17b23426f70bb2d306491e538d30cffc0f202362
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/15/2020
-ms.locfileid: "92099707"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92919216"
 ---
 # <a name="property-inheritance-in-visual-studio-projects"></a>Visual Studio プロジェクトでのプロパティの継承
 
@@ -17,19 +17,19 @@ Visual Studio のネイティブ プロジェクト システムは、MSBuild �
 
 ## <a name="the-vcxproj-file-props-files-and-targets-files"></a>.vcxproj ファイル、.props ファイル、および .targets ファイル
 
-::: moniker range="vs-2015"
+::: moniker range="msvc-140"
 
 プロジェクトのプロパティは、いくつかのファイルに格納されます。 一部は、 *`.vcxproj`* プロジェクト ファイルに直接格納されます。 その他は、プロジェクト ファイルによってインポートされ、既定値を提供する *`.targets`* ファイル、または *`.props`* ファイルから取得されます。 Visual Studio 2015 プロジェクト ファイルは、基本ディレクトリ ( *`%ProgramFiles(x86)%\MSBuild\Microsoft.Cpp\v4.0\v140`* ) のロケール固有のフォルダーにあります。
 
 ::: moniker-end
 
-::: moniker range="vs-2017"
+::: moniker range="msvc-150"
 
 プロジェクトのプロパティは、いくつかのファイルに格納されます。 一部は、 *`.vcxproj`* プロジェクト ファイルに直接格納されます。 その他は、プロジェクト ファイルによってインポートされ、既定値を提供する *`.targets`* ファイル、または *`.props`* ファイルから取得されます。 Visual Studio 2017 プロジェクト ファイルは、基本ディレクトリ ( *`%VSINSTALLDIR%Common7\IDE\VC\VCTargets\`* ) のロケール固有のフォルダーにあります。
 
 ::: moniker-end
 
-::: moniker range=">=vs-2019"
+::: moniker range=">=msvc-160"
 
 プロジェクトのプロパティは、いくつかのファイルに格納されます。 一部は、 *`.vcxproj`* プロジェクト ファイルに直接格納されます。 その他は、プロジェクト ファイルによってインポートされ、既定値を提供する *`.targets`* ファイル、または *`.props`* ファイルから取得されます。 Visual Studio プロジェクト ファイルは、基本ディレクトリ ( *`%VSINSTALLDIR%MSBuild\Microsoft\VC\<version>`* ) のロケール固有のフォルダーにあります。 `<version>` は、Visual Studio のバージョンに固有のものです。 Visual Studio 2019 の場合は *`v160`* です。
 

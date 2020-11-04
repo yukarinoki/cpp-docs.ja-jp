@@ -9,21 +9,21 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: db02ce5656bf8970ead7b49d5580f7d81bebb1b2
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 4d416a10d5e2803cd978243a1e44625a2e696d42
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87224137"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92920178"
 ---
 # <a name="matcheventstackinmemberfunction"></a>MatchEventStackInMemberFunction
 
-::: moniker range="<=vs-2015"
+::: moniker range="<=msvc-140"
 
 C++ Build Insights SDK は、Visual Studio 2017 以降と互換性があります。 これらのバージョンのドキュメントを表示するには、この記事の Visual Studio **Version** セレクター コントロールを Visual Studio 2017 または Visual Studio 2019 に設定します。 このページの目次の一番上にあります。
 
 ::: moniker-end
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 
 `MatchEventStackInMemberFunction` 関数は、メンバー関数のパラメーター リストによって記述される特定のイベント階層に対してイベント スタックを照合するために使用されます。 一致した階層は、後続の処理のためにそのメンバー関数に転送されます。 イベント、イベント スタック、階層の詳細については、[イベント テーブル](../event-table.md)に関する記事を参照してください。
 
@@ -87,7 +87,7 @@ bool MatchEventStackInMemberFunction(
 *TReturn*\
 メンバー関数の戻り値の型。
 
-*T1*, ..., *T10*\
+*T1* , ..., *T10*\
 照合するイベント階層が記述されている型。
 
 *TExtraParams*\
@@ -114,9 +114,9 @@ bool MatchEventStackInMemberFunction(
 
 ## <a name="remarks"></a>Remarks
 
-*eventStack* の最後のイベントは常に、照合対象のイベント型階層の最後のエントリと照合されます。 イベント型階層の他のすべての型は、同じ順序になっている限り、*eventStack* 内の最後を除く任意の位置と照合できます。
+*eventStack* の最後のイベントは常に、照合対象のイベント型階層の最後のエントリと照合されます。 イベント型階層の他のすべての型は、同じ順序になっている限り、 *eventStack* 内の最後を除く任意の位置と照合できます。
 
-*T1* から *T10* パラメーターに使用するイベントの型は、"*キャプチャ クラス*" のリストから選択します。 照合に使用できるイベントのリストとキャプチャ クラスについては、[イベント テーブル](../event-table.md)に関する記事を参照してください。
+*T1* から *T10* パラメーターに使用するイベントの型は、" *キャプチャ クラス* " のリストから選択します。 照合に使用できるイベントのリストとキャプチャ クラスについては、[イベント テーブル](../event-table.md)に関する記事を参照してください。
 
 ## <a name="example"></a>例
 

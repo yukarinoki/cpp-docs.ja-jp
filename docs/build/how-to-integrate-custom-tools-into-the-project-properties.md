@@ -4,12 +4,12 @@ description: Visual Studio C++ プロジェクトでカスタム ツールをプ
 ms.date: 10/08/2020
 helpviewer_keywords:
 - 'MSBuild (C++), howto: integrate custom tools'
-ms.openlocfilehash: 4b88bf94a92efaf5046fd83e5c6358f3fdf80895
-ms.sourcegitcommit: 6e5429e076e552b32e8bdc49480c51498d7924c1
+ms.openlocfilehash: 58626101d54c5b1f9749174e5f3e8938c431d025
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/15/2020
-ms.locfileid: "92099668"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92922154"
 ---
 # <a name="how-to-integrate-custom-tools-into-the-project-properties"></a>方法: カスタム ツールをプロジェクトのプロパティに統合する
 
@@ -19,19 +19,19 @@ XML ファイルを作成することにより、Visual Studio の **[プロパ�
 
 カスタム ツールのプロパティを含むルール ファイルを作成して、Visual Studio の起動時にプロパティが読み込まれるようにすることができます。 ファイルを変更する方法については、Visual Studio プロジェクト チーム ブログの「[ラットフォームの拡張性 - パート 2](/archive/blogs/vsproject/platform-extensibility-part-2)」をご覧ください。
 
-::: moniker range="vs-2015"
+::: moniker range="msvc-140"
 
 ルール ファイルを配置するフォルダーは、使用している Visual Studio のロケールとバージョンによって異なります。 Visual Studio 2015 以前の開発者コマンド プロンプトの場合、ルール フォルダーは *`%ProgramFiles(x86)%\MSBuild\Microsoft.Cpp\v4.0\<version>\<locale>`* です。 Visual Studio 2015 の場合、`<version>` 値は *`v140`* です。 `<locale>` は LCID です。たとえば、英語の場合は `1033` です。 インストールされている Visual Studio のエディションおよび言語ごとに異なるパスを使用します。 たとえば、Visual Studio 2015 Community エディションの英語版の既定のルール フォルダー パスは *`C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\v140\1033\`* になります。
 
 ::: moniker-end
 
-::: moniker range="vs-2017"
+::: moniker range="msvc-150"
 
 ルール ファイルを配置するフォルダーは、使用している Visual Studio のロケールとバージョンによって異なります。 Visual Studio 2017 の開発者コマンド プロンプトの場合、ルール フォルダーは *`%VSINSTALLDIR%Common7\IDE\VC\VCTargets\<locale>\`* です。 `<locale>` は LCID です。たとえば、英語の場合は `1033` です。 Visual Studio 2015 以前の開発者コマンド プロンプトの場合、ルール フォルダーは *`%ProgramFiles(x86)%\MSBuild\Microsoft.Cpp\v4.0\<version>\<locale>\`* です。`<version>` 値は Visual Studio 2015 の場合は *`v140`* です。 インストールされている Visual Studio のエディションおよび言語ごとに異なるパスを使用します。 たとえば、Visual Studio 2017 Community エディションの英語版の既定のルール フォルダー パスは *`C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\1033\`* になります。
 
 ::: moniker-end
 
-::: moniker range=">=vs-2019"
+::: moniker range=">=msvc-160"
 
 ルール ファイルを配置するフォルダーは、使用している Visual Studio のロケールとバージョンによって異なります。 Visual Studio 2019 以降の開発者コマンド プロンプトのルール フォルダーは *`%VSINSTALLDIR%MSBuild\Microsoft\VC\<version>\<locale>\`* です。Visual Studio 2019 の場合、`<version>` 値は *`v160`* です。 `<locale>` は LCID です。たとえば、英語の場合は `1033` です。 Visual Studio 2017 の場合、ルール フォルダーは *`%VSINSTALLDIR%Common7\IDE\VC\VCTargets\<locale>\`* です。 Visual Studio 2015 以前の開発者コマンド プロンプトの場合、ルール フォルダーは *`%ProgramFiles(x86)%\MSBuild\Microsoft.Cpp\v4.0\<version>\<locale>\`* です。 インストールされている Visual Studio のエディションおよび言語ごとに異なるパスを使用します。 たとえば、Visual Studio 2019 Community エディションの英語版の既定のルール フォルダー パスは *`C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\1033\`* になります。
 

@@ -2,22 +2,22 @@
 title: 全般プロパティ (Linux C++ メイクファイル プロジェクト)| Microsoft Docs
 ms.date: 06/07/2019
 ms.assetid: 3dec6853-43f6-412b-9806-9bfad333a204
-ms.openlocfilehash: 72a7919bc94be80acdbf7a2cef5b4a9875595545
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: dd92d77069024456020a09b22de3596b8192c5af
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "79446154"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92924662"
 ---
 # <a name="makefile-project-properties-linux-c"></a>メイクファイル プロジェクトのプロパティ (Linux C++)
 
-::: moniker range="vs-2015"
+::: moniker range="msvc-140"
 
 Linux サポートは Visual Studio 2017 以降で使用できます。
 
 ::: moniker-end
 
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 
 これは、Linux メイクファイル プロジェクトで使用できるプロパティの一覧の一部です。 多くのメイクファイル プロジェクトのプロパティは Linux C++ コンソール アプリケーション プロジェクトのプロパティと同じです。
 

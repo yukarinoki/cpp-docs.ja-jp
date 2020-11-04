@@ -9,21 +9,21 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: ae476c402c3ea0cad558ce41a979b4233e0f1dd3
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 08627b6af601f6894aa228683ffb51232b015310
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87224124"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92922817"
 ---
 # <a name="matcheventstack"></a>MatchEventStack
 
-::: moniker range="<=vs-2015"
+::: moniker range="<=msvc-140"
 
 C++ Build Insights SDK は、Visual Studio 2017 以降と互換性があります。 これらのバージョンのドキュメントを表示するには、この記事の Visual Studio **Version** セレクター コントロールを Visual Studio 2017 または Visual Studio 2019 に設定します。 このページの目次の一番上にあります。
 
 ::: moniker-end
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 
 `MatchEventStack` 関数は、イベント スタックを特定のイベント階層と照合するために使用されます。 一致した階層は、後続の処理のためにハンドラーに転送されます。 イベント、イベント スタック、階層の詳細については、[イベント テーブル](../event-table.md)に関する記事を参照してください。
 
@@ -50,7 +50,7 @@ bool MatchEventStack(
 イベント スタックで照合する残りの型。
 
 *TCallable*\
-`operator()` をサポートする型。 この演算子に渡される引数の詳細については、*callable* パラメーターの説明を参照してください。
+`operator()` をサポートする型。 この演算子に渡される引数の詳細については、 *callable* パラメーターの説明を参照してください。
 
 *TExtraArgs*\
 `MatchEventStack` に渡される追加の引数の型。
@@ -59,7 +59,7 @@ bool MatchEventStack(
 *TEvent* と *TEvents* によって記述されるイベントの型の階層と照合するイベント スタック。
 
 *callable*\
-*TEvent* および *TEvents* によって記述されるイベント型階層とイベント スタックが正常に照合されると、`MatchEventStack` によって *callable* が呼び出されます。 *callable* には、イベント階層内の型ごとに 1 つの右辺値引数が渡されます。 *extraArgs* パラメーター パックは、*callable* の残りのパラメーターで完全に転送されます。
+*TEvent* および *TEvents* によって記述されるイベント型階層とイベント スタックが正常に照合されると、`MatchEventStack` によって *callable* が呼び出されます。 *callable* には、イベント階層内の型ごとに 1 つの右辺値引数が渡されます。 *extraArgs* パラメーター パックは、 *callable* の残りのパラメーターで完全に転送されます。
 
 *extraArgs*\
 一致したイベントの型と共に *callable* に完全に転送される引数。
@@ -70,9 +70,9 @@ bool MatchEventStack(
 
 ## <a name="remarks"></a>Remarks
 
-*eventStack* の最後のイベントは、連結された \[*TEvent*, *TEvents...* \] 型リストの最後のエントリと常に照合されます。 *TEvent* と *TEvents* の他のすべてのエントリは、同じ順序になっている限り、*eventStack* 内の最後を除く任意の位置と照合できます。
+*eventStack* の最後のイベントは、連結された \[*TEvent* , *TEvents...* \] 型リストの最後のエントリと常に照合されます。 *TEvent* と *TEvents* の他のすべてのエントリは、同じ順序になっている限り、 *eventStack* 内の最後を除く任意の位置と照合できます。
 
-*TEvent* および *TEvents* パラメーターに使用するイベントの型は、"*キャプチャ クラス*" のリストから選択します。 照合に使用できるイベントのリストとキャプチャ クラスについては、[イベント テーブル](../event-table.md)に関する記事を参照してください。
+*TEvent* および *TEvents* パラメーターに使用するイベントの型は、" *キャプチャ クラス* " のリストから選択します。 照合に使用できるイベントのリストとキャプチャ クラスについては、[イベント テーブル](../event-table.md)に関する記事を参照してください。
 
 ## <a name="example"></a>例
 

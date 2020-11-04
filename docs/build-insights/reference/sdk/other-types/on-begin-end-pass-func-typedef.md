@@ -9,21 +9,21 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 2008dfb86d6f45a1c05a59e1f0f4f8c7868dcda2
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: 2a97ae792392e5cc0dc83bab00a92d05609a4815
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90041979"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92922491"
 ---
 # <a name="onbeginendpassfunc-typedef"></a>OnBeginEndPassFunc typedef
 
-::: moniker range="<=vs-2015"
+::: moniker range="<=msvc-140"
 
 C++ Build Insights SDK は、Visual Studio 2017 以降と互換性があります。 これらのバージョンのドキュメントを表示するには、この記事の Visual Studio **Version** セレクター コントロールを Visual Studio 2017 または Visual Studio 2019 に設定します。 このページの目次の一番上にあります。
 
 ::: moniker-end
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 
 `OnBeginEndPassFunc` typedef は、[ANALYSIS_CALLBACKS](analysis-callbacks-struct.md) 構造体と [RELOG_CALLBACKS](relog-callbacks-struct.md) 構造体で使用される関数シグネチャの 1 つです。
 

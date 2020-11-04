@@ -9,21 +9,21 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: c1db302d9e816591624f0fc63633351d32684097
-ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
+ms.openlocfilehash: 7135c49bdf95ef5ba39db090c95ad46d266d8f65
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90742763"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92919658"
 ---
 # <a name="tracing_session_statistics-structure"></a>TRACING_SESSION_STATISTICS 構造体
 
-::: moniker range="<=vs-2015"
+::: moniker range="<=msvc-140"
 
 C++ Build Insights SDK は、Visual Studio 2017 以降と互換性があります。 これらのバージョンのドキュメントを表示するには、この記事の Visual Studio **Version** セレクター コントロールを Visual Studio 2017 または Visual Studio 2019 に設定します。 このページの目次の一番上にあります。
 
 ::: moniker-end
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 
 `TRACING_SESSION_STATISTICS` 構造体は、収集されたトレースでの統計を表します。 トレース セッションの終了時にそのフィールドが設定されます。
 

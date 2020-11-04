@@ -3,22 +3,22 @@ title: 全般プロパティ (Linux C++ プロジェクト)
 description: Visual Studio の [全般プロパティ] ページで設定できる Linux プロジェクト プロパティについて説明します。
 ms.date: 10/14/2020
 ms.assetid: 56c800a9-3df9-4196-87b2-81adb00e4767
-ms.openlocfilehash: 9d6cb4ca51eff799788776c2641364939d438d63
-ms.sourcegitcommit: f19f02f217b80804ab321d463c76ce6f681abcc6
+ms.openlocfilehash: 188e73f20eccc0e61278e154dd26e34e8613e1e9
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92176182"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92924493"
 ---
 # <a name="general-properties-linux-c"></a>全般プロパティ (Linux C++)
 
-::: moniker range="vs-2015"
+::: moniker range="msvc-140"
 
 Linux サポートは Visual Studio 2017 以降で使用できます。
 
 ::: moniker-end
 
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 
 | プロパティ | 説明 |
 |--|--|

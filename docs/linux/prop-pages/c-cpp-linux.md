@@ -4,22 +4,22 @@ ms.date: 10/14/2020
 description: Visual Studio C/C++ プロパティ ページの Linux コンパイル オプションについて説明します
 ms.assetid: 4bb8894b-c874-4a68-935e-b127d54e484f
 f1_keywords: []
-ms.openlocfilehash: 0840327b30d94b4845adef7788fd73f4e797775f
-ms.sourcegitcommit: f19f02f217b80804ab321d463c76ce6f681abcc6
+ms.openlocfilehash: b8cb1d8c6c585262e966c3015660adeaeab60307
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92176239"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92924556"
 ---
 # <a name="cc-properties-linux-c"></a>C/C++ プロパティ (Linux C++)
 
-::: moniker range="vs-2015"
+::: moniker range="msvc-140"
 
 Linux サポートは Visual Studio 2017 以降で使用できます。
 
 ::: moniker-end
 
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 
 ## <a name="general"></a>全般
 

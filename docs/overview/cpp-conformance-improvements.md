@@ -3,18 +3,18 @@ title: C++ 準拠の強化
 ms.date: 08/04/2020
 description: Visual Studio の Microsoft C++ は、C++20 言語標準との完全準拠に向かって進んでいます。
 ms.technology: cpp-language
-ms.openlocfilehash: 3cf06b092b79068b22e62dfdbbcfbd2c2cf5ad91
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: fc88406a3d2e291d06e01c3e92261b8dfc624ced
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91500249"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92921426"
 ---
 # <a name="c-conformance-improvements-in-visual-studio"></a>Visual Studio の C++ 準拠の強化
 
-Microsoft C++ では、リリースごとに準拠強化とバグ修正を行っています。 この記事では、機能強化をメジャー リリースごと、バージョンごとに一覧で紹介します。 また、主要なバグ修正もバージョンごとに一覧で紹介します。 特定のバージョンで行われた変更に直接移動するには、**この記事**の一覧を使用します。
+Microsoft C++ では、リリースごとに準拠強化とバグ修正を行っています。 この記事では、機能強化をメジャー リリースごと、バージョンごとに一覧で紹介します。 また、主要なバグ修正もバージョンごとに一覧で紹介します。 特定のバージョンで行われた変更に直接移動するには、 **この記事** の一覧を使用します。
 
-::: moniker range="vs-2019"
+::: moniker range="msvc-160"
 
 ## <a name="conformance-improvements-in-visual-studio-2019-rtw-version-160"></a><a name="improvements_160"></a> Visual Studio 2019 RTW (バージョン 16.0) の準拠の強化
 
@@ -202,7 +202,7 @@ long j = static_cast<long>(i);
 
 ### <a name="syntax-checks-for-generic-lambdas"></a>汎用ラムダの構文チェック
 
-新しいラムダ プロセッサにより、[`/std:c++latest`](../build/reference/std-specify-language-standard-version.md) で、または **`/experimental:newLambdaProcessor`** を使用する他のに似の言語モードで、汎用ラムダの一部の準拠モード構文チェックが有効になります。
+新しいラムダ プロセッサにより、 [`/std:c++latest`](../build/reference/std-specify-language-standard-version.md) で、または **`/experimental:newLambdaProcessor`** を使用する他のに似の言語モードで、汎用ラムダの一部の準拠モード構文チェックが有効になります。
 
 Visual Studio 2017 の場合、このコードは警告なくコンパイルされますが、Visual Studio 2019 ではエラー C2760 `syntax error: unexpected token '\<id-expr>', expected 'id-expression'` が発生します。
 
@@ -230,7 +230,7 @@ void f() {
 
 ### <a name="designated-initialization"></a>初期化の指定
 
-[P0329R4](https://wg21.link/p0329r4) (C++20) "*初期化の指定*" により、集計初期化で `Type t { .member = expr }` 構文を使用して、特定のメンバーを選択できます。 **`/std:c++latest`** が必要です。
+[P0329R4](https://wg21.link/p0329r4) (C++20) " *初期化の指定* " により、集計初期化で `Type t { .member = expr }` 構文を使用して、特定のメンバーを選択できます。 **`/std:c++latest`** が必要です。
 
 ### <a name="new-and-updated-standard-library-functions-c20"></a>新規および更新された標準ライブラリ関数 (C++20)
 
@@ -341,7 +341,7 @@ std::equal(std::begin(a), std::end(a), std::begin(b), std::end(b));
 
 ### <a name="effect-of-defining-spaceship-operator-on--and-"></a>`==` と `!=` で宇宙船演算子を定義した場合の効果
 
-宇宙船演算子 ( **`<=>`** ) のみを定義しても、宇宙船演算子が **`= default`** ([P1185R2](https://wg21.link/p1185r2)) とマークされていなければ、 **`==`** または **`!=`** を伴う式は書き換えられなくなります。 次の例は、Visual Studio 2019 RTW およびバージョン 16.1 ではコンパイルされますが、Visual Studio 2019 バージョン 16.2 では C2678 が生成されます。
+宇宙船演算子 ( **`<=>`** ) のみを定義しても、宇宙船演算子が **`= default`** ( [P1185R2](https://wg21.link/p1185r2)) とマークされていなければ、 **`==`** または **`!=`** を伴う式は書き換えられなくなります。 次の例は、Visual Studio 2019 RTW およびバージョン 16.1 ではコンパイルされますが、Visual Studio 2019 バージョン 16.2 では C2678 が生成されます。
 
 ```cpp
 #include <compare>
@@ -502,7 +502,7 @@ namespace N {
 
 ### <a name="implicit-conversion-of-integral-constant-expressions-to-null-pointer"></a>整数定数式から Null ポインターへの暗黙的な変換
 
-MSVC コンパイラの準拠モード ( **`/permissive-`** ) において、[CWG イシュー 903](https://wg21.link/cwg903) が実装されるようになりました。 このルールにより、整数定数式 (整数リテラル '0' を除く) を Null ポインター定数に暗黙的に変換することが許可されなくなります。 次の例では、準拠モードで C2440 が生成されます。
+MSVC コンパイラの準拠モード ( **`/permissive-`** ) において、 [CWG イシュー 903](https://wg21.link/cwg903) が実装されるようになりました。 このルールにより、整数定数式 (整数リテラル '0' を除く) を Null ポインター定数に暗黙的に変換することが許可されなくなります。 次の例では、準拠モードで C2440 が生成されます。
 
 ```cpp
 int* f(bool* p) {
@@ -1064,9 +1064,9 @@ public class R {
 
 ## <a name="conformance-improvements-in-visual-studio-2019-version-167"></a><a name="improvements_167"></a> Visual Studio 2019 バージョン 16.7 の準拠の強化
 
-### <a name="definition-of-is-trivially-copyable"></a>"*普通にコピー可能である*" の定義
+### <a name="definition-of-is-trivially-copyable"></a>" *普通にコピー可能である* " の定義
 
-C++20 では、"*トリビアルにコピー可能である*" の定義が変更されました。 クラスに **`volatile`** 修飾型の非静的データ メンバーが含まれている場合、それにより、コンパイラによって生成されたコピーまたは移動コンストラクター、あるいはコピーまたは移動代入演算子は非トリビアルである、ということは意味されなくなりました。 この変更は、C++ 標準化委員会により障害レポートとしてさかのぼって適用されました。 MSVC では、 **`/std:c++14`** や **`/std:c++latest`** などの異なる言語モードでは、コンパイラの動作は変更されません。
+C++20 では、" *トリビアルにコピー可能である* " の定義が変更されました。 クラスに **`volatile`** 修飾型の非静的データ メンバーが含まれている場合、それにより、コンパイラによって生成されたコピーまたは移動コンストラクター、あるいはコピーまたは移動代入演算子は非トリビアルである、ということは意味されなくなりました。 この変更は、C++ 標準化委員会により障害レポートとしてさかのぼって適用されました。 MSVC では、 **`/std:c++14`** や **`/std:c++latest`** などの異なる言語モードでは、コンパイラの動作は変更されません。
 
 新しい動作の例を次に示します。
 
@@ -1119,7 +1119,7 @@ int main() {
 
 ### <a name="nullptr_t-is-only-convertible-to-bool-as-a-direct-initialization"></a>`nullptr_t` は、直接的な初期化として `bool` にのみ変換可能である
 
-C++11 では、 **`nullptr`** は "*直接変換*" として **`bool`** にのみ変換可能です。たとえば、中かっこで囲まれた初期化子リストを使用して **`bool`** を初期化するときなどです。 この制限は、MSVC では適用されませんでした。 現在の MSVC では、[`/permissive-`](../build/reference/permissive-standards-conformance.md) でルールが実装されています。 暗黙的な変換は、不正な形式として診断されるようになりました。 直接初期化 `bool b(nullptr)` が有効であるため、 **`bool`** へのコンテキスト変換は引き続き許可されます。
+C++11 では、 **`nullptr`** は " *直接変換* " として **`bool`** にのみ変換可能です。たとえば、中かっこで囲まれた初期化子リストを使用して **`bool`** を初期化するときなどです。 この制限は、MSVC では適用されませんでした。 現在の MSVC では、[`/permissive-`](../build/reference/permissive-standards-conformance.md) でルールが実装されています。 暗黙的な変換は、不正な形式として診断されるようになりました。 直接初期化 `bool b(nullptr)` が有効であるため、 **`bool`** へのコンテキスト変換は引き続き許可されます。
 
 ほとんどの場合、次の例に示すように、このエラーは **`nullptr`** を **`false`** に置き換えることによって解決できます。
 
@@ -1617,7 +1617,7 @@ void f(E e) {
 
 ::: moniker-end
 
-::: moniker range="vs-2017"
+::: moniker range="msvc-150"
 
 ## <a name="conformance-improvements-in-visual-studio-2017-rtw-version-150"></a><a name="improvements_150"></a> Visual Studio 2017 RTW (バージョン 15.0) の準拠の強化
 
@@ -2419,7 +2419,7 @@ void f()
 
 ### <a name="default-arguments-arent-allowed-on-out-of-line-definitions-of-member-functions"></a>メンバー関数のアウトオブライン定義で既定の引数が許可されない
 
-テンプレート クラスのメンバー関数のアウトオブライン定義では、既定の引数が許可されません。 コンパイラでは、 **`/permissive`** では警告が発生し、[`/permissive-`](../build/reference/permissive-standards-conformance.md) ではハード エラーが発生します。
+テンプレート クラスのメンバー関数のアウトオブライン定義では、既定の引数が許可されません。 コンパイラでは、 **`/permissive`** では警告が発生し、 [`/permissive-`](../build/reference/permissive-standards-conformance.md) ではハード エラーが発生します。
 
 Visual Studio の以前のバージョンでは、形式が間違っている次のコードでランタイム クラッシュが発生する可能性がありました。 Visual Studio 2017 バージョン 15.3 では、警告 C5034: `'A\<T>::f': an out-of-line definition of a member of a class template cannot have default arguments` が発生します。
 
@@ -2440,7 +2440,7 @@ T A<T>::f(T t, bool b = false) // C5034
 
 ### <a name="use-of-offsetof-with-compound-member-designator"></a>複合メンバー指定子での `offsetof` の使用
 
-Visual Studio 2017 バージョン 15.3 では、*m* が "複合メンバー指定子" である `offsetof(T, m)` を使用して、 **`/Wall`** オプションを指定してコンパイルすると、警告が発生します。 次のコードは形式が不適切であり、実行時にクラッシュが発生する可能性があります。 Visual Studio 2017 バージョン 15.3 では、警告 C4841: `non-standard extension used: compound member designator in offsetof` が発生します。
+Visual Studio 2017 バージョン 15.3 では、 *m* が "複合メンバー指定子" である `offsetof(T, m)` を使用して、 **`/Wall`** オプションを指定してコンパイルすると、警告が発生します。 次のコードは形式が不適切であり、実行時にクラッシュが発生する可能性があります。 Visual Studio 2017 バージョン 15.3 では、警告 C4841: `non-standard extension used: compound member designator in offsetof` が発生します。
 
 ```cpp
 struct A {
@@ -2462,7 +2462,7 @@ constexpr auto off = offsetof(A, arr[2]);
 
 ### <a name="using-offsetof-with-static-data-member-or-member-function"></a>静的なデータ メンバーまたはメンバー関数での `offsetof` の使用
 
-Visual Studio 2017 バージョン 15.3 では、*m* が静的なデータ メンバーまたはメンバー関数である `offsetof(T, m)` を使うと、エラーになります。 次のコードでは、エラー C4597: `undefined behavior: offsetof applied to member function 'example'` とエラー C4597: `undefined behavior: offsetof applied to static data member 'sample'` が生成されます。
+Visual Studio 2017 バージョン 15.3 では、 *m* が静的なデータ メンバーまたはメンバー関数である `offsetof(T, m)` を使うと、エラーになります。 次のコードでは、エラー C4597: `undefined behavior: offsetof applied to member function 'example'` とエラー C4597: `undefined behavior: offsetof applied to static data member 'sample'` が生成されます。
 
 ```cpp
 #include <cstddef>
@@ -3357,11 +3357,11 @@ public:
 
 ### <a name="offsetof-with-constant-expressions"></a>定数式を含む `offsetof`
 
-[offsetof](../c-runtime-library/reference/offsetof-macro.md) は従来から [reinterpret_cast](../cpp/reinterpret-cast-operator.md) を必要とするマクロを使用して実装されています。 この用法は、定数式を必要とするコンテキストでは正しくありませんが、Microsoft C++ コンパイラではこれまで許可されていました。 標準ライブラリの一部としてリリースされている `offsetof` マクロはコンパイラ組み込み型 ( **__builtin_offsetof**) が正しく使用されますが、多くのユーザーはマクロのトリックを使用して独自の `offsetof` を定義しています。
+[offsetof](../c-runtime-library/reference/offsetof-macro.md) は従来から [reinterpret_cast](../cpp/reinterpret-cast-operator.md) を必要とするマクロを使用して実装されています。 この用法は、定数式を必要とするコンテキストでは正しくありませんが、Microsoft C++ コンパイラではこれまで許可されていました。 標準ライブラリの一部としてリリースされている `offsetof` マクロはコンパイラ組み込み型 ( **__builtin_offsetof** ) が正しく使用されますが、多くのユーザーはマクロのトリックを使用して独自の `offsetof` を定義しています。
 
 Visual Studio 2017 バージョン 15.8 では、コードが標準の C++ の動作に準拠するように、これらの **`reinterpret_cast`** 演算子が既定のモードで表示される領域がコンパイラにより制約されます。 [`/permissive-`](../build/reference/permissive-standards-conformance.md) の下では、制約がさらに厳しくなります。 定数式を必要とする場所で `offsetof` の結果を使用すると、警告 C4644 `usage of the macro-based offsetof pattern in constant expressions is non-standard; use offsetof defined in the C++ standard library instead` または C2975 `invalid template argument, expected compile-time constant expression` を発生させるコードが生成される場合があります。
 
-次のコードでは、 **`/default`** モードと **`/std:c++17`** モードでは C4644 が、[`/permissive-`](../build/reference/permissive-standards-conformance.md) モードでは C2975 が発生します。
+次のコードでは、 **`/default`** モードと **`/std:c++17`** モードでは C4644 が、 [`/permissive-`](../build/reference/permissive-standards-conformance.md) モードでは C2975 が発生します。
 
 ```cpp
 struct Data {
@@ -3643,7 +3643,7 @@ note: see usage of 'g'.
 
 ::: moniker-end
 
-::: moniker range="vs-2015"
+::: moniker range="msvc-140"
 
 ## <a name="c-conformance-improvements-in-visual-studio-2015"></a>Visual Studio 2015 の C++ 準拠の強化
 

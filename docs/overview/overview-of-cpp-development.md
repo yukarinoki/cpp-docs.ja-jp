@@ -6,34 +6,34 @@ helpviewer_keywords:
 - Visual C++, development tools
 author: corob-msft
 ms.author: corob
-ms.openlocfilehash: 5a03590074d8de05153b2d9442da8b916e6eba82
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: db0a4ccbab142d01f0506b77237dbb09d43a1cf0
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91500276"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92924360"
 ---
 # <a name="overview-of-c-development-in-visual-studio"></a>Visual Studio での C++ 開発の概要
 
-Visual Studio 統合開発環境 (IDE) に属する Microsoft C++ (MSVC) では、他の言語と共通の多くのウィンドウやツールを共有します。 **ソリューション エクスプローラー**、コード エディター、デバッガーなどの多くは、「[Visual Studio IDE](/visualstudio/get-started/visual-studio-ide)」に記載されています。 共有ツールやウィンドウの一連の機能は、C++ 用と他の言語用のものでは若干異なることがよくあります。 一部のウィンドウやツールは、Visual Studio Professional 版または Visual Studio Enterprise 版でのみ使用できます。
+Visual Studio 統合開発環境 (IDE) に属する Microsoft C++ (MSVC) では、他の言語と共通の多くのウィンドウやツールを共有します。 **ソリューション エクスプローラー** 、コード エディター、デバッガーなどの多くは、「 [Visual Studio IDE](/visualstudio/get-started/visual-studio-ide)」に記載されています。 共有ツールやウィンドウの一連の機能は、C++ 用と他の言語用のものでは若干異なることがよくあります。 一部のウィンドウやツールは、Visual Studio Professional 版または Visual Studio Enterprise 版でのみ使用できます。
 
 Visual Studio IDE の共有ツールに加えて、MSVC には、ネイティブ コード開発に特化したいくつかのツールがあります。 この記事には、これらのツールの一覧も掲載します。 Visual Studio の各エディションで使用可能なツールの一覧については、「[C++ Tools and Features in Visual Studio Editions](visual-cpp-tools-and-features-in-visual-studio-editions.md)」 (さまざまな Visual Studio エディションの C++ ツールと機能) を参照してください。
 
 ## <a name="create-projects"></a>プロジェクトを作成する
 
-*プロジェクト*は基本的に、実行可能プログラムやライブラリに組み込まれている、イメージやデータ ファイルなどの一連のソース コード ファイルとリソースです。
+*プロジェクト* は基本的に、実行可能プログラムやライブラリに組み込まれている、イメージやデータ ファイルなどの一連のソース コード ファイルとリソースです。
 
 Visual Studio では、使用するすべてのプロジェクト システムやカスタム ビルド ツールがサポートされ、IntelliSense、参照、デバッグなどが完全にサポートされます。
 
-- **MSBuild** は、Visual Studio 用のネイティブ プロジェクト システムです。 メイン メニューから **[ファイル]**  >  **[新規]**  >  **[プロジェクト]** の順に選択すると、さまざまな種類の MSBuild *プロジェクト テンプレート*が表示されます。これを利用すると、さまざまな種類の C++ アプリケーションの開発を簡単に始められます。
+- **MSBuild** は、Visual Studio 用のネイティブ プロジェクト システムです。 メイン メニューから **[ファイル]**  >  **[新規]**  >  **[プロジェクト]** の順に選択すると、さまざまな種類の MSBuild *プロジェクト テンプレート* が表示されます。これを利用すると、さまざまな種類の C++ アプリケーションの開発を簡単に始められます。
 
-   ::: moniker range="vs-2019"
+   ::: moniker range="msvc-160"
 
    ![新しいプロジェクト テンプレート](../build/media/mathclient-project-name-2019.png "Visual Studio 2019 の [新しいプロジェクト] ダイアログ")
 
    ::: moniker-end
 
-   ::: moniker range="<=vs-2017"
+   ::: moniker range="<=msvc-150"
 
    ![プロジェクト テンプレート](media/vs2017-new-project.png "Visual Studio 2017 の [新しいプロジェクト] ダイアログ")
 
@@ -47,15 +47,15 @@ Visual Studio では、使用するすべてのプロジェクト システム�
 
 ## <a name="add-to-source-control"></a>ソース管理に追加
 
-ソース管理では、複数の開発者間で作業を調整したり、開発中の作業を運用コードから分離したり、ソース コードをバックアップしたりすることができます。 Visual Studio は、Git と [Team Foundation バージョン管理 \(TFVC\)](/azure/devops/repos/tfvc/) をその**チーム エクスプローラー** ウィンドウをサポートしています。
+ソース管理では、複数の開発者間で作業を調整したり、開発中の作業を運用コードから分離したり、ソース コードをバックアップしたりすることができます。 Visual Studio は、Git と [Team Foundation バージョン管理 \(TFVC\)](/azure/devops/repos/tfvc/) をその **チーム エクスプローラー** ウィンドウをサポートしています。
 
-::: moniker range="vs-2019"
+::: moniker range="msvc-160"
 
 ![Visual Studio 2019 の [チーム エクスプローラー] ウィンドウのスクリーンショット。](media/vs2019-team-explorer.png "Visual Studio 2017 のチーム エクスプローラー")
 
 ::: moniker-end
 
-::: moniker range="<=vs-2017"
+::: moniker range="<=msvc-150"
 
 ![Visual Studio 2017 の [チーム エクスプローラー] ウィンドウのスクリーンショット。](media/vs2017-team-explorer.png "Visual Studio 2017 のチーム エクスプローラー")
 
@@ -79,7 +79,7 @@ MFC アプリケーションのユーザー インターフェイスの作成方
 
 ## <a name="write-code"></a>コードの記述
 
-プロジェクトを作成すると、すべてのプロジェクト ファイルが**ソリューション エクスプローラー** ウィンドウに表示されます。 (*ソリューション*は、1 つまたは複数の関連プロジェクトのための論理コンテナーです。)**ソリューション エクスプローラー**で .h または .cpp ファイルをクリックすると、ファイルがコード エディターで開きます。
+プロジェクトを作成すると、すべてのプロジェクト ファイルが **ソリューション エクスプローラー** ウィンドウに表示されます。 ( *ソリューション* は、1 つまたは複数の関連プロジェクトのための論理コンテナーです。) **ソリューション エクスプローラー** で .h または .cpp ファイルをクリックすると、ファイルがコード エディターで開きます。
 
 ![ソリューション エクスプローラーとコード エディター](media/vs2017-solution-explorer-code-editor.png "Visual Studio 2017 のソリューション エクスプローラーとコード エディター")
 
@@ -87,11 +87,11 @@ MFC アプリケーションのユーザー インターフェイスの作成方
 
 ## <a name="add-and-edit-resources"></a>リソースの追加と編集
 
-通常、Windows プログラムや DLL には、ダイアログ、アイコン、画像、ローカライズ可能な文字列、スプラッシュ画面、データベースの接続文字列、または任意のデータなど、いくつかの "*リソース*" が含まれます。 Visual Studio には、リソースの追加や編集を行うためのツールが含まれています。 詳細については、「[リソース ファイルの操作](../windows/working-with-resource-files.md)」をご覧ください。
+通常、Windows プログラムや DLL には、ダイアログ、アイコン、画像、ローカライズ可能な文字列、スプラッシュ画面、データベースの接続文字列、または任意のデータなど、いくつかの " *リソース* " が含まれます。 Visual Studio には、リソースの追加や編集を行うためのツールが含まれています。 詳細については、「[リソース ファイルの操作](../windows/working-with-resource-files.md)」をご覧ください。
 
 ## <a name="build-compile-and-link"></a>ビルド (コンパイルおよびリンク)
 
-メニュー バーの **[ビルド]**  >  **[ソリューションのビルド]** を選択するか、**Ctrl + Shift + B** キーの組み合わせを押して、プロジェクトのコンパイルおよびリンクを行います。 ビルド エラーと警告は、[エラー一覧] (**Ctrl + \\、E**) に報告されます。 **[出力]** ウィンドウ (**Alt + 2**) にビルド プロセスに関する情報が表示されます。
+メニュー バーの **[ビルド]**  >  **[ソリューションのビルド]** を選択するか、 **Ctrl + Shift + B** キーの組み合わせを押して、プロジェクトのコンパイルおよびリンクを行います。 ビルド エラーと警告は、[エラー一覧] ( **Ctrl + \\、E** ) に報告されます。 **[出力]** ウィンドウ ( **Alt + 2** ) にビルド プロセスに関する情報が表示されます。
 
 ![[出力] ウィンドウと [エラー一覧]](media/vs2017-output-error-list.png "Visual Studio 2017 の [出力] ウィンドウと [エラー一覧]")
 
@@ -101,7 +101,7 @@ MFC アプリケーションのユーザー インターフェイスの作成方
 
 ## <a name="debug"></a>デバッグ
 
-**[F5]** を押すことでデバッグを開始できます。 (**F9** キーを押して) 設定した任意のブレークポイントで、実行を一時停止することができます。 また、コードを一度に 1 行ずつステップ実行したり (**F10** キー)、変数やレジスタの値を表示したり、場合によってはコードに変更を加え、再コンパイルせずにデバッグを続行したりできます。 次の図は、ブレークポイントで実行が停止したデバッグ セッションを示しています。 データ構造体メンバーの値は**ウォッチ ウィンドウ**に表示されます。
+**[F5]** を押すことでデバッグを開始できます。 ( **F9** キーを押して) 設定した任意のブレークポイントで、実行を一時停止することができます。 また、コードを一度に 1 行ずつステップ実行したり ( **F10** キー)、変数やレジスタの値を表示したり、場合によってはコードに変更を加え、再コンパイルせずにデバッグを続行したりできます。 次の図は、ブレークポイントで実行が停止したデバッグ セッションを示しています。 データ構造体メンバーの値は **ウォッチ ウィンドウ** に表示されます。
 
 ![デバッグ セッション](media/vs2017-debug-watch.png "Visual Studio 2017 のデバッグ セッション")
 

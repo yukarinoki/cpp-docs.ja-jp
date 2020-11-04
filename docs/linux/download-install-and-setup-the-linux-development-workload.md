@@ -3,22 +3,22 @@ title: Visual Studio で C++ の Linux ワークロードをインストール�
 description: Visual Studio で C++ の Linux ワークロードをダウンロード、インストール、セットアップする方法。
 ms.date: 05/03/2020
 ms.assetid: e11b40b2-f3a4-4f06-b788-73334d58dfd9
-ms.openlocfilehash: 1a1b42927d440d1cde847fd1c1b6593e87a3824a
-ms.sourcegitcommit: f19f02f217b80804ab321d463c76ce6f681abcc6
+ms.openlocfilehash: 9d0c832ec383286b5f89b8ed1474e69d72b5cb98
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92176276"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92921608"
 ---
 # <a name="download-install-and-set-up-the-linux-workload"></a>Linux ワークロードのダウンロード、インストール、セットアップ
 
-::: moniker range="vs-2015"
+::: moniker range="msvc-140"
 
 Linux プロジェクトは Visual Studio 2017 以降でサポートされます。 これらのバージョンのドキュメントを表示するには、この記事の Visual Studio **Version** セレクター コントロールを Visual Studio 2017 または Visual Studio 2019 に設定します。 このページの目次の一番上にあります。
 
 ::: moniker-end
 
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 
 Windows 上の Visual Studio IDE を使って、リモートの Linux システムや、仮想マシン、または [Linux 用 Windows サブシステム](/windows/wsl/about)上で実行される C++ プロジェクトの作成、編集、およびデバッグを行うことができます。
 
@@ -28,7 +28,7 @@ Visual Studio プロジェクトに変換しなくても、CMake を使用する
 
 ::: moniker-end
 
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 
 ## <a name="visual-studio-setup"></a>Visual Studio のセットアップ
 
@@ -52,7 +52,7 @@ Windows 10 の Windows Subsystem for Linux (WSL) では、お好みの Linux デ
 
 ::: moniker-end
 
-::: moniker range="vs-2019"
+::: moniker range="msvc-160"
 
 Visual Studio の Linux プロジェクトを使用する場合、リモートの Linux システムまたは WSL に次の依存関係がインストールされている必要があります。
 
@@ -68,7 +68,7 @@ Visual Studio の Linux プロジェクトを使用する場合、リモート�
 
 ::: moniker-end
 
-::: moniker range="vs-2017"
+::: moniker range="msvc-150"
 
 Visual Studio の Linux プロジェクトを使用する場合、リモートの Linux システムまたは WSL に次の依存関係がインストールされている必要があります。
 
@@ -81,7 +81,7 @@ Visual Studio の Linux プロジェクトを使用する場合、リモート�
 
 ::: moniker-end
 
-::: moniker range="vs-2019"
+::: moniker range="msvc-160"
 
 ## <a name="linux-setup-ubuntu-on-wsl"></a>Linux のセットアップ: WSL 上の Ubuntu
 
@@ -93,7 +93,7 @@ sudo apt-get install g++ gdb make ninja-build rsync zip
 
 ::: moniker-end
 
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 
 ## <a name="ubuntu-on-remote-linux-systems"></a>リモートの Linux システム上の Ubuntu
 
@@ -117,7 +117,7 @@ sudo apt-get install g++ gdb make ninja-build rsync zip
 
 ::: moniker-end
 
-::: moniker range="vs-2019"
+::: moniker range="msvc-160"
 
 ## <a name="fedora-on-wsl"></a>WSL 上の Fedora
 
@@ -131,7 +131,7 @@ Intellisense のサポートで Linux のヘッダーを Visual Studio と自動
 
 ::: moniker-end
 
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 
 ## <a name="fedora-on-remote-linux-systems"></a>リモートの Linux システム上の Fedora
 

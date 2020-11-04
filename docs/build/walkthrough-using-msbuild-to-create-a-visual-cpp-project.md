@@ -4,12 +4,12 @@ description: コマンドライン MSBuild C++ .vcxproj プロジェクトをゼ
 ms.date: 10/08/2020
 helpviewer_keywords:
 - 'MSBuild (C++), walkthrough: create a project'
-ms.openlocfilehash: 4f17cd8c4f5f48d8be5cd7cb25940db87029e111
-ms.sourcegitcommit: 6e5429e076e552b32e8bdc49480c51498d7924c1
+ms.openlocfilehash: b3d4e8881f926e80e95832a27f7a5106ce876265
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/15/2020
-ms.locfileid: "92099733"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92924334"
 ---
 # <a name="walkthrough-using-msbuild-to-create-a-visual-c-project"></a>チュートリアル: MSBuild を使用した Visual C++ プロジェクトの作成
 
@@ -36,21 +36,21 @@ ms.locfileid: "92099733"
 
 - MSBuild システムの基本的な知識。
 
-::: moniker range="vs-2015"
+::: moniker range="msvc-140"
 
 > [!NOTE]
 > 下位レベルのビルド命令のほとんどは、プロパティ `$(VCTargetsPath)` に格納されている既定のターゲット フォルダーの下に定義されている *`.targets`* と *`.props`* のファイルに含まれています。 ここには、 *`Microsoft.Cpp.Common.props`* などのファイルがあります。 Visual Studio 2015 以前のバージョンの場合、これらのファイルの既定のパスは *`%ProgramFiles(x86)%\MSBuild\Microsoft.Cpp\v4.0\<version>\`* の下にあります。
 
 ::: moniker-end
 
-::: moniker range="vs-2017"
+::: moniker range="msvc-150"
 
 > [!NOTE]
 > 下位レベルのビルド命令のほとんどは、プロパティ `$(VCTargetsPath)` に格納されている既定のターゲット フォルダーの下に定義されている *`.targets`* と *`.props`* のファイルに含まれています。 ここには、 *`Microsoft.Cpp.Common.props`* などのファイルがあります。 Visual Studio 2017 の場合、これらのファイルの既定のパスは *`%VSINSTALLDIR%Common7\IDE\VC\VCTargets\`* の下にあります。 Visual Studio 2015 以前のバージョンの場合、これらは *`%ProgramFiles(x86)%\MSBuild\Microsoft.Cpp\v4.0\<version>\`* の下に格納されていました。
 
 ::: moniker-end
 
-::: moniker range=">=vs-2019"
+::: moniker range=">=msvc-160"
 
 > [!NOTE]
 > 下位レベルのビルド命令のほとんどは、プロパティ `$(VCTargetsPath)` に格納されている既定のターゲット フォルダーの下に定義されている *`.targets`* と *`.props`* のファイルに含まれています。 ここには、 *`Microsoft.Cpp.Common.props`* などのファイルがあります。 これらのファイルの既定のパスは *`%VSINSTALLDIR%MSBuild\Microsoft\VC\<version>\`* の下にあります。 `<version>` パス要素は、Visual Studio のバージョンに固有のものです。 Visual Studio 2019 の場合は *`v160`* です。 Visual Studio 2017 により、これらのファイルは *`%VSINSTALLDIR%Common7\IDE\VC\VCTargets\`* に格納されていました。 Visual Studio 2015 以前のバージョンの場合、これらは *`%ProgramFiles(x86)%\MSBuild\Microsoft.Cpp\v4.0\<version>\`* の下に格納されていました。

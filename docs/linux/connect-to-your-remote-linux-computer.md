@@ -2,48 +2,48 @@
 title: Visual Studio でターゲットの Linux システムに接続する
 description: Visual Studio の C++ プロジェクト内からリモートの Linux マシンまたは Linux 用 Windows サブシステムに接続する方法です。
 ms.date: 01/17/2020
-ms.openlocfilehash: 624dce6bb05e4f4a961628e0c6f455e11c14dff8
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: da74d1c735a29304fdf46e920eac45580f386259
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81364360"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92921790"
 ---
 # <a name="connect-to-your-target-linux-system-in-visual-studio"></a>Visual Studio でターゲットの Linux システムに接続する
 
-::: moniker range="vs-2015"
+::: moniker range="msvc-140"
 
 Linux サポートは Visual Studio 2017 以降で使用できます。
 
 ::: moniker-end
 
-::: moniker range="vs-2017"
+::: moniker range="msvc-150"
 
 Linux プロジェクトのターゲットは、リモート マシンとなるように構成することも、Windows Subsystem for Linux (WSL) とすることもできます。 両方のリモート マシンと WSL に対して、Visual Studio 2017 でリモート接続を設定する必要があります。
 
 ::: moniker-end
 
-::: moniker range="vs-2019"
+::: moniker range="msvc-160"
 
 Linux プロジェクトのターゲットは、リモート マシンとなるように構成することも、Windows Subsystem for Linux (WSL) とすることもできます。 リモート マシンの場合は、Visual Studio でリモート接続を設定する必要があります。 WSL に接続するには、[WSL への接続](#connect-to-wsl)に関するセクションに進んでください。
 
 ::: moniker-end
 
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 
 リモート接続を使用する場合、Visual Studio はリモート マシンで C++ Linux プロジェクトをビルドします。 物理マシン、クラウド内の VM、WSL のいずれであるかは関係ありません。
 プロジェクトをビルドするために、Visual Studio はソース コードをリモートの Linux コンピューターにコピーします。 その後、コードは Visual Studio の設定に基づいてコンパイルされます。
 
 ::: moniker-end
 
-::: moniker range="vs-2019"
+::: moniker range="msvc-160"
 
 > [!NOTE]
 > Visual Studio 2019 バージョン 16.5 以降でも、リモート開発のために、Linux システムへの安全な Federal Information Processing Standard (FIPS) 140-2 準拠の暗号化接続がサポートされています。 FISP 準拠の接続を使用するには、代わりに「[FIPS 準拠の安全なリモート Linux 開発のセットアップ](set-up-fips-compliant-secure-remote-linux-development.md)」のステップに従ってください。
 
 ::: moniker-end
 
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 
 ## <a name="set-up-the-ssh-server-on-the-remote-system"></a>リモート システム上で SSH サーバーを設定する
 
@@ -102,7 +102,7 @@ Linux システム上でまだ ssh が設定および実行されていない場
 
    ::: moniker-end
 
-   ::: moniker range="vs-2019"
+   ::: moniker range="msvc-160"
 
 ## <a name="logging-for-remote-connections"></a>リモート接続のログを記録する
 
@@ -116,21 +116,21 @@ Linux システム上でまだ ssh が設定および実行されていない場
 
 ## <a name="command-line-utility-for-the-connection-manager"></a>接続マネージャーのコマンドライン ユーティリティ  
 
-**Visual Studio 2019 バージョン 16.5 以降**:ConnectionManager.exe は、Visual Studio 外でのリモート開発の接続を管理するためのコマンドライン ユーティリティです。 これは、新しい開発マシンをプロビジョニングするなどのタスクに役立ちます。 または、これを利用して Visual Studio で継続的インテグレーションを設定することもできます。 ConnectionManager コマンドの例とすべてのリファレンスについては、「[ConnectionManager リファレンス](connectionmanager-reference.md)」を参照してください。  
+**Visual Studio 2019 バージョン 16.5 以降** :ConnectionManager.exe は、Visual Studio 外でのリモート開発の接続を管理するためのコマンドライン ユーティリティです。 これは、新しい開発マシンをプロビジョニングするなどのタスクに役立ちます。 または、これを利用して Visual Studio で継続的インテグレーションを設定することもできます。 ConnectionManager コマンドの例とすべてのリファレンスについては、「[ConnectionManager リファレンス](connectionmanager-reference.md)」を参照してください。  
 
 ::: moniker-end
 
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 
 ## <a name="tcp-port-forwarding"></a>TCP ポート フォワーディング
 
-Visual Studio の Linux サポートは、TCP ポート フォワーディングに依存しています。 リモート システムで TCP ポート フォワーディングが無効になっている場合、**Rsync** と **gdbserver** が影響を受けます。 お客様がこの依存関係の影響を受けている場合は、Developer Community でこちらの[提案チケット](https://developercommunity.visualstudio.com/idea/840265/dont-rely-on-ssh-tcp-port-forwarding-for-c-remote.html)に賛成票を投じることができます。
+Visual Studio の Linux サポートは、TCP ポート フォワーディングに依存しています。 リモート システムで TCP ポート フォワーディングが無効になっている場合、 **Rsync** と **gdbserver** が影響を受けます。 お客様がこの依存関係の影響を受けている場合は、Developer Community でこちらの[提案チケット](https://developercommunity.visualstudio.com/idea/840265/dont-rely-on-ssh-tcp-port-forwarding-for-c-remote.html)に賛成票を投じることができます。
 
 rsync は、MSBuild ベースの Linux プロジェクトと CMake プロジェクトの両方で使用され、[IntelliSense で使用するヘッダーをリモート システムから Windows にコピーします](configure-a-linux-project.md#remote_intellisense)。 TCP ポート フォワーディングを有効にできない場合は、リモート ヘッダーの自動ダウンロードを無効にします。 無効にするには、 **[ツール] > [オプション]、[クロス プラットフォーム] > [接続マネージャー] > [リモート ヘッダー IntelliSense マネージャー]** の順に移動します。 リモート システムで TCP ポート フォワーディングが有効になっていない場合、IntelliSense のリモート ヘッダーのダウンロードが開始されると、次のエラーが表示されます。
 
 ![ヘッダー エラー](media/port-forwarding-headers-error.png)
 
-rsync は、ソース ファイルをリモート システムにコピーするために、Visual Studio の CMake サポートでも使用されます。 TCP ポート フォワーディングを有効にできない場合は、リモート コピー ソース メソッドとして sftp を使用できます。 sftp は rsync よりも低速なことが多いですが、TCP ポート フォワーディングとの依存関係がありません。 [CMake 設定エディター](../build/cmakesettings-reference.md#additional-settings-for-cmake-linux-projects)で、**remoteCopySourcesMethod** プロパティを使用してリモート コピー ソース メソッドを管理できます。 リモート システムで TCP ポート フォワーディングが無効になっている場合は、最初に rsync が呼び出されたときに CMake 出力ウィンドウにエラーが表示されます。
+rsync は、ソース ファイルをリモート システムにコピーするために、Visual Studio の CMake サポートでも使用されます。 TCP ポート フォワーディングを有効にできない場合は、リモート コピー ソース メソッドとして sftp を使用できます。 sftp は rsync よりも低速なことが多いですが、TCP ポート フォワーディングとの依存関係がありません。 [CMake 設定エディター](../build/cmakesettings-reference.md#additional-settings-for-cmake-linux-projects)で、 **remoteCopySourcesMethod** プロパティを使用してリモート コピー ソース メソッドを管理できます。 リモート システムで TCP ポート フォワーディングが無効になっている場合は、最初に rsync が呼び出されたときに CMake 出力ウィンドウにエラーが表示されます。
 
 ![Rsync エラー](media/port-forwarding-copy-error.png)
 
@@ -140,13 +140,13 @@ gdbserver は、埋め込みデバイスでのデバッグに使用できます�
 
 ::: moniker-end
 
-::: moniker range="vs-2017"
+::: moniker range="msvc-150"
 
-Visual Studio 2017 では、リモート Linux マシンに使用するのと同じ手順を使用して WSL に接続できます。 **ホスト名**には **localhost** を使います。
+Visual Studio 2017 では、リモート Linux マシンに使用するのと同じ手順を使用して WSL に接続できます。 **ホスト名** には **localhost** を使います。
 
 ::: moniker-end
 
-::: moniker range="vs-2019"
+::: moniker range="msvc-160"
 
 Visual Studio 2019 バージョン 16.1 では、C++ を [Windows Subsystem for Linux (WSL)](/windows/wsl/about) とともに使用するためのネイティブ サポートが追加されています。 これは、ローカルの WSL インストールで直接ビルドおよびデバッグできることを意味します。 リモート接続を追加したり、SSH を構成したりする必要がなくなりました。 詳細については、こちらの [WSL をインストールする方法](/windows/wsl/install-win10)の説明をご覧ください。
 

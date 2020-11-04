@@ -10,21 +10,21 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 6f53a9b6c682a0af7d8a01f6378ed0574d8fa4ca
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: a6ecff81a9f3d2b22107a8fa7fc26fad85d4f579
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90041173"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92919515"
 ---
 # <a name="c-build-insights-sdk"></a>C++Build Insights SDK
 
-::: moniker range="<=vs-2015"
+::: moniker range="<=msvc-140"
 
 C++ Build Insights SDK は、Visual Studio 2017 以降と互換性があります。 これらのバージョンのドキュメントを表示するには、この記事の Visual Studio **Version** セレクター コントロールを Visual Studio 2017 または Visual Studio 2019 に設定します。 このページの目次の一番上にあります。
 
 ::: moniker-end
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 
 C++ Build Insights SDK は、C++ Build Insights プラットフォーム上でパーソナライズされたツールを作成できる API のコレクションです。 このページでは、作業を開始するために役立つ概要を説明します。
 
@@ -152,7 +152,7 @@ int main()
 
 ### <a name="activities-and-simple-events"></a>アクティビティと簡易イベント
 
-発生するイベントには、"*アクティビティ*" と "*簡易イベント*" の 2 つのカテゴリがあります。 アクティビティは継続的なプロセスであり、時間に始まりと終わりがあります。 簡易イベントは時間どおりに発生し、継続時間はありません。 C++ Build Insights SDK を使用して MSVC トレースを分析する場合、アクティビティが開始したときと停止したときに個別のイベントを受け取ります。 簡易イベントの場合、発生時に 1 つのイベントのみを受け取ります。
+発生するイベントには、" *アクティビティ* " と " *簡易イベント* " の 2 つのカテゴリがあります。 アクティビティは継続的なプロセスであり、時間に始まりと終わりがあります。 簡易イベントは時間どおりに発生し、継続時間はありません。 C++ Build Insights SDK を使用して MSVC トレースを分析する場合、アクティビティが開始したときと停止したときに個別のイベントを受け取ります。 簡易イベントの場合、発生時に 1 つのイベントのみを受け取ります。
 
 ### <a name="parent-child-relationships"></a>親子関係
 
@@ -197,7 +197,7 @@ C++ Build Insights SDK では、イベントを提供する場合、必ずスタ
 
 #### <a name="matching-events-and-event-stacks"></a>イベントとイベント スタックの照合
 
-C++ Build Insights SDK では、トレース内のすべてのイベントが提供されますが、ほとんどの場合、注意を要するのはそれらのサブセットのみです。 場合によっては、注意を要するのは、"*イベント スタック*" のサブセットのみであることもあります。 SDK では、必要なイベントまたはイベント スタックをすばやく抽出して、不要なイベントを拒否するのに役立つ機能が提供されます。 これは、次の照合関数を使用して実行されます。
+C++ Build Insights SDK では、トレース内のすべてのイベントが提供されますが、ほとんどの場合、注意を要するのはそれらのサブセットのみです。 場合によっては、注意を要するのは、" *イベント スタック* " のサブセットのみであることもあります。 SDK では、必要なイベントまたはイベント スタックをすばやく抽出して、不要なイベントを拒否するのに役立つ機能が提供されます。 これは、次の照合関数を使用して実行されます。
 
 | 機能 | [説明] |
 |--|--|
@@ -210,13 +210,13 @@ C++ Build Insights SDK では、トレース内のすべてのイベントが提
 
 #### <a name="capture-classes"></a>キャプチャ クラス
 
-`Match*` 関数を使用するには、照合する種類を指定する必要があります。 これらの種類は、"*キャプチャ クラス*" の一覧から選択されます。 キャプチャ クラスには、次に示す複数のカテゴリがあります。
+`Match*` 関数を使用するには、照合する種類を指定する必要があります。 これらの種類は、" *キャプチャ クラス* " の一覧から選択されます。 キャプチャ クラスには、次に示す複数のカテゴリがあります。
 
 | カテゴリ | 説明 |
 |--|--|
 | [Exact] | これらのキャプチャ クラスは、特定のイベントの種類と照合するためにのみ使用されます。 1 つの例として、[Compiler](cpp-event-data-types/compiler.md) があります。これは、[COMPILER](event-table.md#compiler) イベントと一致します。 |
 | ワイルドカード | これらのキャプチャ クラスは、サポートされるイベントの一覧にあるいずれかのイベントと照合するために使用できます。 たとえば、[Activity](cpp-event-data-types/activity.md) ワイルドカードは、任意のアクティビティ イベントと一致します。 もう 1 つの例は、[CompilerPass](cpp-event-data-types/compiler-pass.md) ワイルドカードです。これは、[FRONT_END_PASS](event-table.md#front-end-pass) または [BACK_END_PASS](event-table.md#back-end-pass) イベントのいずれかと一致します。 |
-| Group | グループ キャプチャ クラスの名前は、*Group* で終わります。 これらは、ギャップを無視して、同じ種類の複数のイベントを連続して照合するために使用されます。 イベント スタック内に存在する個数がわからないため、再帰イベントを照合する場合にのみ意味があります。 たとえば、[FRONT_END_FILE](event-table.md#front-end-file) アクティビティは、コンパイラでファイルを解析するたびに発生します。 ファイルの解析中にコンパイラによってインクルード ディレクティブが検出される可能性があるため、このアクティビティは再帰的です。 [FrontEndFile](cpp-event-data-types/front-end-file.md) クラスは、スタック内の 1 つの FRONT_END_FILE イベントとのみ一致します。 インクルード階層全体を一致させるには、[FrontEndFileGroup](cpp-event-data-types/front-end-file-group.md) クラスを使用します。 |
+| Group | グループ キャプチャ クラスの名前は、 *Group* で終わります。 これらは、ギャップを無視して、同じ種類の複数のイベントを連続して照合するために使用されます。 イベント スタック内に存在する個数がわからないため、再帰イベントを照合する場合にのみ意味があります。 たとえば、[FRONT_END_FILE](event-table.md#front-end-file) アクティビティは、コンパイラでファイルを解析するたびに発生します。 ファイルの解析中にコンパイラによってインクルード ディレクティブが検出される可能性があるため、このアクティビティは再帰的です。 [FrontEndFile](cpp-event-data-types/front-end-file.md) クラスは、スタック内の 1 つの FRONT_END_FILE イベントとのみ一致します。 インクルード階層全体を一致させるには、[FrontEndFileGroup](cpp-event-data-types/front-end-file-group.md) クラスを使用します。 |
 | ワイルドカード グループ | ワイルドカード グループは、ワイルドカードとグループのプロパティを組み合わせたものです。 このカテゴリのクラスは、[InvocationGroup](cpp-event-data-types/invocation-group.md)のみです。これは、単一のイベント スタック内にあるすべての [LINKER](event-table.md#linker) および [COMPILER](event-table.md#compiler) イベントを照合し、キャプチャします。 |
 
 各イベントの照合に使用できるキャプチャ クラスについては、「[イベント テーブル](event-table.md)」を参照してください。

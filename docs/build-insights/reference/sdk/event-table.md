@@ -9,21 +9,21 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 6b1cf6871329fcce3166495e173360a88ac38ee0
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 2a6270e8e166bb38754314fcb308b86232dbb68b
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87224215"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92922901"
 ---
 # <a name="c-build-insights-sdk-event-table"></a>C++ Build Insights SDK: イベント テーブル
 
-::: moniker range="<=vs-2015"
+::: moniker range="<=msvc-140"
 
 C++ Build Insights SDK は、Visual Studio 2017 以降と互換性があります。 これらのバージョンのドキュメントを表示するには、この記事の Visual Studio **Version** セレクター コントロールを Visual Studio 2017 または Visual Studio 2019 に設定します。 このページの目次の一番上にあります。
 
 ::: moniker-end
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 
 ## <a name="compiler-events"></a>コンパイラ イベント
 
@@ -92,13 +92,13 @@ C++ Build Insights SDK は、Visual Studio 2017 以降と互換性がありま�
 |  | Children | [FRONT_END_FILE](#front-end-file)<br/>[SYMBOL_NAME](#symbol-name)<br/>[TEMPLATE_INSTANTIATION](#template-instantiation) |
 |  | プロパティ | None |
 |  | キャプチャ クラス | [アクティビティ](cpp-event-data-types/activity.md)<br/>[C1DLL](cpp-event-data-types/c1-dll.md) |
-|  | 説明 | *c1.dll* または *c1xx.dll* の呼び出しの開始時と停止時に発生します。 これらの DLL は、コンパイラの C および C++ フロントエンドです。 これらは、コンパイラ ドライバー (*cl.exe*) によってのみ呼び出されます。 |
+|  | 説明 | *c1.dll* または *c1xx.dll* の呼び出しの開始時と停止時に発生します。 これらの DLL は、コンパイラの C および C++ フロントエンドです。 これらは、コンパイラ ドライバー ( *cl.exe* ) によってのみ呼び出されます。 |
 | <a name="c2-dll"></a> C2_DLL | 種類 | アクティビティ |
 |  | Parents | [BACK_END_PASS](#back-end-pass)<br/>[LTCG](#ltcg) |
 |  | Children | [CODE_GENERATION](#code-generation)<br/>[WHOLE_PROGRAM_ANALYSIS](#whole-program-analysis) |
 |  | プロパティ | None |
 |  | キャプチャ クラス | [アクティビティ](cpp-event-data-types/activity.md)<br/>[C2DLL](cpp-event-data-types/c2-dll.md) |
-|  | 説明 | *c2.dll* の呼び出しの開始時と停止時に発生します。 この DLL は、コンパイラのバックエンドです。 コンパイラ ドライバー (*cl.exe*) によって呼び出されます。 また、リンク時のコード生成が使用されるときにも、リンカーによって (*link.exe*) 呼び出されます。 |
+|  | 説明 | *c2.dll* の呼び出しの開始時と停止時に発生します。 この DLL は、コンパイラのバックエンドです。 コンパイラ ドライバー ( *cl.exe* ) によって呼び出されます。 また、リンク時のコード生成が使用されるときにも、リンカーによって ( *link.exe* ) 呼び出されます。 |
 | <a name="code-generation"></a> CODE_GENERATION | 種類 | アクティビティ |
 |  | Parents | [C2_DLL](#c2-dll) |
 |  | Children | [FUNCTION](#function)<br/>[THREAD](#thread) |

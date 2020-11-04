@@ -5,26 +5,26 @@ ms.date: 09/11/2020
 helpviewer_keywords:
 - Install preview Windows SDK
 ms.assetid: 45138d70-719d-42dc-90d7-1d0ca31a2f54
-ms.openlocfilehash: 86de38feb66ab0a057005140d22cf0dd3b03d4cf
-ms.sourcegitcommit: b492516cc65120250b9ea23f96f7f63f37f99fae
+ms.openlocfilehash: 9310b0dbb4e436245de820622ec9dd0f52292871
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/14/2020
-ms.locfileid: "90078997"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92924421"
 ---
 # <a name="install-c11-and-c17-support-in-visual-studio"></a>Visual Studio に C11 および C17 サポートをインストールする
 
-::: moniker range="<=vs-2017"
+::: moniker range="<=msvc-150"
 
 C11 および C17 標準のサポートには、Visual Studio 2019 バージョン 16.8 以降が必要です。 このバージョンのドキュメントを表示するには、この記事の Visual Studio の **[バージョン]** セレクター コントロールを Visual Studio 2019 に設定してください。 このページの目次の一番上にあります。
 
 ::: moniker-end
 
-::: moniker range="vs-2019"
+::: moniker range="msvc-160"
 
 C11 および C17 標準のサポートは、Visual Studio 2019 バージョン 16.8 以降で使用できます。 サポートには、準拠するプリプロセッサ ([`/Zc:preprocessor`](../build/reference/zc-preprocessor.md)) で正常に動作するために、更新されたユニバーサル C ランタイム (UCRT) と最新の Windows SDK 更新プログラムが必要です。
 
-Windows SDK のリリースは、Windows OS のリリースに対応しています。 これらの変更が加えられた Windows リリースがないため、*Insider Preview Windows SDK* が必要になります。 これは、Windows Insider によって現在 "*フライト化*" (テスト) されている Windows ビルドに対応する Windows SDK のプレビュー版です。 Insider Preview Windows 10 SDK をインストールした後は、最新の Windows SDK を使用するように Visual Studio プロジェクトを構成すると、Insider Preview が使用されます。
+Windows SDK のリリースは、Windows OS のリリースに対応しています。 これらの変更が加えられた Windows リリースがないため、 *Insider Preview Windows SDK* が必要になります。 これは、Windows Insider によって現在 " *フライト化* " (テスト) されている Windows ビルドに対応する Windows SDK のプレビュー版です。 Insider Preview Windows 10 SDK をインストールした後は、最新の Windows SDK を使用するように Visual Studio プロジェクトを構成すると、Insider Preview が使用されます。
 
 ## <a name="prerequisites"></a>前提条件
 
@@ -76,7 +76,7 @@ Visual Studio で、新規または既存の C プロジェクトを開き、プ
 
 Insider Preview Windows 10 SDK を使用するようにプロジェクトを設定します。 **[構成プロパティ]**  >  **[全般]** ページで、 **[Windows SDK バージョン]** プロパティを **10.0 (最新のインストール済みバージョン)** に設定するか、インストールした特定のプレビュー バージョンに設定します。
 
-新しいオプションも表示されます:**C 言語標準**。 このプロパティを **[ISO C11 Standard (`/std:c11`)]\(ISO C11 標準 (`/std:c11`)\)** または **[ISO C17 (2018) Standard (`/std:c17`)]\(ISO C17 (2018) 標準 (`/std:c17`)\)** に設定します。  
+新しいオプションも表示されます: **C 言語標準** 。 このプロパティを **[ISO C11 Standard (`/std:c11`)]\(ISO C11 標準 (`/std:c11`)\)** または **[ISO C17 (2018) Standard (`/std:c17`)]\(ISO C17 (2018) 標準 (`/std:c17`)\)** に設定します。  
 
 ![[構成プロパティ] の [全般] ページの [プロパティ ページ] ダイアログで、[C 言語の標準] プロパティのドロップダウンで ISO C 17 が選択されていることを示すスクリーンショット](media/c11-9-project-property-page-c-language-standard.png)
 

@@ -4,26 +4,26 @@ ms.date: 11/22/2019
 helpviewer_keywords:
 - CMake in Visual C++
 ms.assetid: 444d50df-215e-4d31-933a-b41841f186f8
-ms.openlocfilehash: 55327d53f3f9e8439ba6e008f1b5a6b384722d54
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 61da0fd70ad68928872a2212b70377ab8a83a76a
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87229871"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92919398"
 ---
 # <a name="cmakesettingsjson-schema-reference"></a>CMakeSettings.json スキーマ リファレンス
 
-::: moniker range="vs-2015"
+::: moniker range="msvc-140"
 
 CMake プロジェクトは Visual Studio 2017 以降でサポートされます。
 
 ::: moniker-end
 
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 
-**CMakeSettings.json** ファイルには、Visual Studio が IntelliSense に使用する情報と、指定された "*構成*" とコンパイラの "*環境*" 用の cmake.exe に渡すマンドライン引数を作成するための情報が含まれています。 構成では、特定のプラットフォームおよびビルドの種類に適用されるプロパティ (`x86-Debug`や `Linux-Release` など) を指定します。 各構成では、コンパイラ ツールセット (MSVC、GCC、Clang など) に関する情報をカプセル化する環境を指定します。 CMake では、コマンドライン引数を使用して、プロジェクトのルートの *CMakeCache.txt* ファイルおよびその他のプロジェクト ファイルを再生成します。 値は *CMakeLists.txt* ファイルでオーバーライドできます。
+**CMakeSettings.json** ファイルには、Visual Studio が IntelliSense に使用する情報と、指定された " *構成* " とコンパイラの " *環境* " 用の cmake.exe に渡すマンドライン引数を作成するための情報が含まれています。 構成では、特定のプラットフォームおよびビルドの種類に適用されるプロパティ (`x86-Debug`や `Linux-Release` など) を指定します。 各構成では、コンパイラ ツールセット (MSVC、GCC、Clang など) に関する情報をカプセル化する環境を指定します。 CMake では、コマンドライン引数を使用して、プロジェクトのルートの *CMakeCache.txt* ファイルおよびその他のプロジェクト ファイルを再生成します。 値は *CMakeLists.txt* ファイルでオーバーライドできます。
 
-IDE で構成を追加または削除できます。また、JSON ファイルで直接編集したり、**CMake 設定エディター** (Visual Studio 2019 以降) を使用したりすることができます。 IDE で構成を簡単に切り替えてさまざまなプロジェクト ファイルを生成できます。 詳細については、[Visual Studio での CMake ビルド設定のカスタマイズ](customize-cmake-settings.md)に関する記事を参照してください。
+IDE で構成を追加または削除できます。また、JSON ファイルで直接編集したり、 **CMake 設定エディター** (Visual Studio 2019 以降) を使用したりすることができます。 IDE で構成を簡単に切り替えてさまざまなプロジェクト ファイルを生成できます。 詳細については、[Visual Studio での CMake ビルド設定のカスタマイズ](customize-cmake-settings.md)に関する記事を参照してください。
 
 ## <a name="configurations"></a>構成
 
@@ -34,7 +34,7 @@ IDE で構成を追加または削除できます。また、JSON ファイル�
 - `addressSanitizerEnabled`: **`true`** の場合、Address Sanitizer (Windows で試験段階) を使用してプログラムをコンパイルします。 Linux の場合、最善の結果を得るには、-fno-omit-frame-pointer およびコンパイラ最適化レベル -Os または -Oo でコンパイルします。
 - `addressSanitizerRuntimeFlags`: ASAN_OPTIONS 環境変数により、AddressSanitizer に渡されるランタイム フラグです。 形式: フラグ 1=値:フラグ 2=値 2。
 - `buildCommandArgs`: --ビルド-- の後に CMake に渡されるネイティブ ビルド スイッチを指定します。 たとえば、Ninja ジェネレーターの使用時に -v を渡すと、コマンド ラインの出力が Ninja に強制されます。 Ninja コマンドの詳細については、「[Ninja のコマンド ライン引数](#ninja)」参照してください。
-- `buildRoot`: 選択したジェネレーターに CMake がビルド スクリプトを生成するディレクトリを指定します。  **-DCMAKE_BINARY_DIR** スイッチにマップし、*CMakeCache.txt* が作成される場所を指定します。 フォルダーが存在しない場合は、作成されます。 サポートされているマクロには、`${workspaceRoot}`、`${workspaceHash}`、`${projectFile}`、`${projectDir}`、`${thisFile}`、`${thisFileDir}`、`${name}`、`${generator}`、`${env.VARIABLE}` などがあります。
+- `buildRoot`: 選択したジェネレーターに CMake がビルド スクリプトを生成するディレクトリを指定します。  **-DCMAKE_BINARY_DIR** スイッチにマップし、 *CMakeCache.txt* が作成される場所を指定します。 フォルダーが存在しない場合は、作成されます。 サポートされているマクロには、`${workspaceRoot}`、`${workspaceHash}`、`${projectFile}`、`${projectDir}`、`${thisFile}`、`${thisFileDir}`、`${name}`、`${generator}`、`${env.VARIABLE}` などがあります。
 - `cacheGenerationCommand`: コマンド ライン ツールと引数を指定します (キャッシュを生成するための *gencache.bat debug* など)。 このコマンドは、ユーザーが再生成を明示的にリクエストした場合か、CMakeLists.txt または CMakeSettings.json file が変更された場合に、構成に指定された環境のシェルから実行されます。
 - `cacheRoot`: CMake キャッシュへのパスを指定します。 このディレクトリには、既存の *CMakeCache.txt* ファイルが含まれている必要があります。
 - `clangTidyChecks`: clang-tidy に渡される警告のコンマ区切りリスト。ワイルドカードを使用でき、'-' プレフィックスによりチェックは削除されます。
@@ -73,9 +73,9 @@ Ninja は柔軟性や機能ではなく、ビルド速度が速いことを目�
 
 Visual Studio 2017 で Visual Studio ジェネレーターを指定するには、メイン メニューから **[CMake] > [CMake の設定を変更]** を選択して、設定エディターを開きます。 "Ninja" を削除して「V」と入力します。 これにより IntelliSense がアクティブになり、必要なジェネレーターを選択できます。
 
-Visual Studio 2019 で Visual Studio ジェネレーターを指定するには、**ソリューション エクスプローラー**の *CMakeLists.txt* ファイルを右クリックし、 **[CMake settings for project]\(プロジェクトの CMake 設定\)** > **[詳細設定の表示]** > **[CMake ジェネレーター]** を選択します。
+Visual Studio 2019 で Visual Studio ジェネレーターを指定するには、 **ソリューション エクスプローラー** の *CMakeLists.txt* ファイルを右クリックし、 **[CMake settings for project]\(プロジェクトの CMake 設定\)** > **[詳細設定の表示]** > **[CMake ジェネレーター]** を選択します。
 
-アクティブな構成で Visual Studio ジェネレーターを指定すると、`-m -v:minimal` 引数を指定して MSBuild.exe が既定で呼び出されます。 ビルドをカスタマイズするには、*CMakeSettings.json* ファイル内で、`buildCommandArgs` プロパティによりビルド システムに渡される追加の [MSBuild コマンド ライン引数](../build/reference/msbuild-visual-cpp-overview.md)を指定できます。
+アクティブな構成で Visual Studio ジェネレーターを指定すると、`-m -v:minimal` 引数を指定して MSBuild.exe が既定で呼び出されます。 ビルドをカスタマイズするには、 *CMakeSettings.json* ファイル内で、`buildCommandArgs` プロパティによりビルド システムに渡される追加の [MSBuild コマンド ライン引数](../build/reference/msbuild-visual-cpp-overview.md)を指定できます。
 
    ```json
    "buildCommandArgs": "-m:8 -v:minimal -p:PreferredToolArchitecture=x64"
@@ -147,11 +147,11 @@ Visual Studio 2019 で Visual Studio ジェネレーターを指定するには�
 
 `"type"` を定義していない場合、既定では `"STRING"` 型と見なされます。
 
-- `remoteCopyOptimizations`:リモート ターゲットへのソースのコピーを制御するための **Visual Studio 2019 バージョン 16.5 以降**のプロパティ。 既定で最適化が有効になっています。 `remoteCopyUseOptimizations`、`rsyncSingleDirectoryCommandArgs`、および `remoteCopySourcesMaxSmallChange` が含まれます。
+- `remoteCopyOptimizations`:リモート ターゲットへのソースのコピーを制御するための **Visual Studio 2019 バージョン 16.5 以降** のプロパティ。 既定で最適化が有効になっています。 `remoteCopyUseOptimizations`、`rsyncSingleDirectoryCommandArgs`、および `remoteCopySourcesMaxSmallChange` が含まれます。
 
 ## <a name="environments"></a><a name="environments"></a>環境
 
-"*環境*" では、Visual Studio が cmake.exe を呼び出すために使用するプロセスで設定される環境変数がカプセル化されます。 MSVC プロジェクトの場合、変数は、特定のプラットフォーム用に[開発者コマンド プロンプト](building-on-the-command-line.md)で設定されるものです。 たとえば、`msvc_x64_x64` 環境は、 **-arch=amd64 -host_arch=amd64** 引数を指定して **VS 2017 の開発者コマンド プロンプト**または **VS 2019 の開発者コマンド プロンプト**を実行するのと同じです。 たとえば、フォルダーへのパスを作成する場合などに、*CMakeSettings.json* で `env.{<variable_name>}` 構文を使用して、個々の環境変数を参照できます。  次の定義済みの環境が用意されています。
+" *環境* " では、Visual Studio が cmake.exe を呼び出すために使用するプロセスで設定される環境変数がカプセル化されます。 MSVC プロジェクトの場合、変数は、特定のプラットフォーム用に[開発者コマンド プロンプト](building-on-the-command-line.md)で設定されるものです。 たとえば、`msvc_x64_x64` 環境は、 **-arch=amd64 -host_arch=amd64** 引数を指定して **VS 2017 の開発者コマンド プロンプト** または **VS 2019 の開発者コマンド プロンプト** を実行するのと同じです。 たとえば、フォルダーへのパスを作成する場合などに、 *CMakeSettings.json* で `env.{<variable_name>}` 構文を使用して、個々の環境変数を参照できます。  次の定義済みの環境が用意されています。
 
 - linux_arm:ARM Linux をリモートでターゲットにします。
 - linux_x64:x64 Linux をリモートでターゲットにします。
@@ -178,7 +178,7 @@ CMakeLists .txt ファイルからは、すべての環境変数が `$ENV{variab
 - `groupPriority`:これらの変数を評価するときの優先順位を指定する整数。 数字が大きい大きい項目が最初に評価されます。
 - `inheritEnvironments`:このグループによって継承される環境セットを指定する値の配列。 この機能を使用すると、既定の環境を継承し、実行時に CMake.exe に渡されるカスタム環境変数を作成することができます。
 
-**Visual Studio 2019 バージョン 16.4 以降:** デバッグ ターゲットは、*CMakeSettings.json*で指定した環境で自動的に起動されます。 [launch.vs.json](launch-vs-schema-reference-cpp.md) および [tasks.vs.json](tasks-vs-json-schema-reference-cpp.md)では、ターゲットまたはタスクごとに環境変数をオーバーライドまたは追加できます。
+**Visual Studio 2019 バージョン 16.4 以降:** デバッグ ターゲットは、 *CMakeSettings.json* で指定した環境で自動的に起動されます。 [launch.vs.json](launch-vs-schema-reference-cpp.md) および [tasks.vs.json](tasks-vs-json-schema-reference-cpp.md)では、ターゲットまたはタスクごとに環境変数をオーバーライドまたは追加できます。
 
 次の例では、1 つのグローバル変数 **BuildDir** を定義します。これは、x86-Debug と x64-Debug の両方の構成で継承されます。 各構成は、この変数を使って、その構成の **buildRoot** プロパティの値を指定します。 各構成が **inheritEnvironments** プロパティを使ってその構成のみに適用される変数を指定する方法にも注意してください。
 
@@ -212,7 +212,7 @@ CMakeLists .txt ファイルからは、すべての環境変数が `$ENV{variab
 }
 ```
 
-次の例では、x86 デバッグ構成が **BuildDir** プロパティに対して独自の値を定義します。 この値は、**BuildRoot** が `D:\custom-builddir\x86-Debug` に評価されるように、グローバル **BuildDir** プロパティによって設定される値をオーバーライドします。
+次の例では、x86 デバッグ構成が **BuildDir** プロパティに対して独自の値を定義します。 この値は、 **BuildRoot** が `D:\custom-builddir\x86-Debug` に評価されるように、グローバル **BuildDir** プロパティによって設定される値をオーバーライドします。
 
 ```json
 {
@@ -258,7 +258,7 @@ CMakeLists .txt ファイルからは、すべての環境変数が `$ENV{variab
 
 ## <a name="macros"></a>[マクロ]
 
-*CMakeSettings.json*では次のマクロを使用できます。
+*CMakeSettings.json* では次のマクロを使用できます。
 
 - `${workspaceRoot}` - ワークスペース フォルダーへの完全なパスです
 - `${workspaceHash}` – ワークスペースの場所のハッシュです。現在のワークスペースの一意識別子を作成するのに便利です (たとえば、フォルダーのパスで使用する場合)

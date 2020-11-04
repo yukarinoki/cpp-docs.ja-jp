@@ -9,21 +9,21 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 325910f747f75f1f8d2904c248f8de69566464c7
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: ec2d0a76618d6ff2cf0e7fdff7e360a4fd2e0174
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90042005"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92919853"
 ---
 # <a name="analysis_descriptor-structure"></a>ANALYSIS_DESCRIPTOR 構造体
 
-::: moniker range="<=vs-2015"
+::: moniker range="<=msvc-140"
 
 C++ Build Insights SDK は、Visual Studio 2017 以降と互換性があります。 これらのバージョンのドキュメントを表示するには、この記事の Visual Studio **Version** セレクター コントロールを Visual Studio 2017 または Visual Studio 2019 に設定します。 このページの目次の一番上にあります。
 
 ::: moniker-end
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 
 `ANALYSIS_DESCRIPTOR` 構造体は [AnalyzeA](../functions/analyze-a.md) 関数と [AnalyzeW](../functions/analyze-w.md) 関数と共に使用されます。 ここでは、Windows イベント トレーシング (ETW) を分析する方法について説明します。
 

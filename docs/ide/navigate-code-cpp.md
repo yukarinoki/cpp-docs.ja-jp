@@ -3,10 +3,10 @@ title: Visual Studio で C++ コード間を移動する
 description: Visual Studio のさまざまなツールを使用して、C++ のコードベースを移動します。
 ms.date: 05/28/2019
 ms.openlocfilehash: cc13326dee14e952c78e521344a6244249179cb8
-ms.sourcegitcommit: 59b7c18703d1ffd66827db0e2eeece490d3d8789
+ms.sourcegitcommit: 868838273eda35eb72c78dccf4121940dcc04706
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/22/2020
+ms.lasthandoff: 11/01/2020
 ms.locfileid: "90683495"
 ---
 # <a name="navigate-c-code-in-visual-studio"></a>Visual Studio で C++ コード間を移動する

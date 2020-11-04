@@ -2,22 +2,22 @@
 title: カスタム ビルド ステップのプロパティ (Linux C++)
 ms.date: 06/07/2019
 ms.assetid: 77a9c1fb-7c41-4a9b-9418-18ac17ce4e74
-ms.openlocfilehash: 67b281e245c4fff8f37baff8875cbc3dc84ca718
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 51111b7ff1ab68ecc49b54efdeeef5f95368ab0c
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "79441336"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92924533"
 ---
 # <a name="custom-build-step-properties-linux-c"></a>カスタム ビルド ステップのプロパティ (Linux C++)
 
-::: moniker range="vs-2015"
+::: moniker range="msvc-140"
 
 Linux サポートは Visual Studio 2017 以降で使用できます。
 
 ::: moniker-end
 
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 
 | プロパティ | 説明 |
 |--|--|
