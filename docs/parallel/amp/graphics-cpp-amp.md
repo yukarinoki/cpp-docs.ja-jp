@@ -2,18 +2,18 @@
 title: グラフィックス (C++ AMP)
 ms.date: 11/04/2016
 ms.assetid: 190a98a4-5f7d-442e-866b-b374ca74c16f
-ms.openlocfilehash: 3f68766c2c38b74df6e57aaa52419baf5d1151a3
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: 97fd433387aac809053ea6dd8ac59a56207a4fc8
+ms.sourcegitcommit: d77159732a8e782b2a1b7abea552065f2b6f61c1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90041459"
+ms.lasthandoff: 11/04/2020
+ms.locfileid: "93344723"
 ---
 # <a name="graphics-c-amp"></a>グラフィックス (C++ AMP)
 
 C++ AMP には、Gpu のテクスチャサポートにアクセスするために使用できる [Concurrency:: graphics](../../parallel/amp/reference/concurrency-graphics-namespace.md) 名前空間にいくつかの api が含まれています。 一般的なシナリオを次に示します。
 
-- [テクスチャ](../../parallel/amp/reference/texture-class.md)クラスは、計算用のデータコンテナーとして使用し、GPU ハードウェアのテクスチャキャッシュとレイアウトの*空間の局所性*を活用できます。 空間的局所性は相互に物理的に近い場所に存在するデータ要素のプロパティです。
+- [テクスチャ](../../parallel/amp/reference/texture-class.md)クラスは、計算用のデータコンテナーとして使用し、GPU ハードウェアのテクスチャキャッシュとレイアウトの *空間の局所性* を活用できます。 空間的局所性は相互に物理的に近い場所に存在するデータ要素のプロパティです。
 
 - ランタイムには、非計算シェーダーとの効率的な相互運用性が提供されます。 ピクセル、頂点、テセレーション、およびハルの各シェーダーは、C++ AMP 計算で使用できるテクスチャを頻繁に使用または生成します。
 
@@ -21,13 +21,13 @@ C++ AMP には、Gpu のテクスチャサポートにアクセスするため�
 
 ## <a name="the-norm-and-unorm-types"></a>norm 型および unorm 型
 
-`norm`型と `unorm` 型は、値の範囲を制限するスカラー型です **`float`** 。これは、*クランプ*と呼ばれます。 これらの型は他のスカラー型から明示的に作成することができます。 キャストでは、値は最初ににキャストされた **`float`** 後、標準 [-1.0、1.0] または unorm [0.0、1.0] で許可されている各リージョンにクランプされます。 +/- 無限値からのキャストは +/-1 を返します。 NaN からキャストは未定義です。 norm は unorm から暗黙的に作成することができ、データは失われません。 float への暗黙の変換演算子がこれらの型に定義されます。 二項演算子は、これらの型と **`float`** 、and **`int`** : +、-、 \* 、/、= =、! =、>、 \<, > =、<= などの他の組み込みスカラー型の間で定義されます。 複合代入演算子もサポートされています。 + =、-=、 \* =、/=。 単項否定演算子 (-) は、norm 型に定義されます。
+`norm`型と `unorm` 型は、値の範囲を制限するスカラー型です **`float`** 。これは、 *クランプ* と呼ばれます。 これらの型は他のスカラー型から明示的に作成することができます。 キャストでは、値は最初ににキャストされた **`float`** 後、標準 [-1.0、1.0] または unorm [0.0、1.0] で許可されている各リージョンにクランプされます。 +/- 無限値からのキャストは +/-1 を返します。 NaN からキャストは未定義です。 norm は unorm から暗黙的に作成することができ、データは失われません。 float への暗黙の変換演算子がこれらの型に定義されます。 二項演算子は、これらの型と **`float`** 、and **`int`** : +、-、 \* 、/、= =、! =、>、 \<, > =、<= などの他の組み込みスカラー型の間で定義されます。 複合代入演算子もサポートされています。 + =、-=、 \* =、/=。 単項否定演算子 (-) は、norm 型に定義されます。
 
 ## <a name="short-vector-library"></a>short ベクター ライブラリ
 
-Short Vector ライブラリは、HLSL で定義されている [ベクター型](https://go.microsoft.com/fwlink/p/?linkid=248500) の一部の機能を提供し、通常はテクセルを定義するために使用されます。 short ベクターは同じ型の 1 ～ 4 つの値を保持するデータ構造体です。 サポートされている型は、、、、、 **`double`** **`float`** **`int`** `norm` `uint` 、および `unorm` です。 次の表に型名を示します。 型ごとに、名前にアンダースコアがない対応するもあり **`typedef`** ます。 アンダースコアを持つ型は、 [Concurrency:: Graphics 名前空間](../../parallel/amp/reference/concurrency-graphics-namespace.md)にあります。 アンダースコアを持たない型は、 [Concurrency:: graphics::d Irect3d 名前空間](../../parallel/amp/reference/concurrency-graphics-direct3d-namespace.md) にあります。これにより、やなどの同様の名前の基本型から明確に分離され **`__int8`** **`__int16`** ます。
+Short Vector ライブラリは、HLSL で定義されている [ベクター型](/windows/win32/direct3dhlsl/dx-graphics-hlsl-vector) の一部の機能を提供し、通常はテクセルを定義するために使用されます。 short ベクターは同じ型の 1 ～ 4 つの値を保持するデータ構造体です。 サポートされている型は、、、、、 **`double`** **`float`** **`int`** `norm` `uint` 、および `unorm` です。 次の表に型名を示します。 型ごとに、名前にアンダースコアがない対応するもあり **`typedef`** ます。 アンダースコアを持つ型は、 [Concurrency:: Graphics 名前空間](../../parallel/amp/reference/concurrency-graphics-namespace.md)にあります。 アンダースコアを持たない型は、 [Concurrency:: graphics::d Irect3d 名前空間](../../parallel/amp/reference/concurrency-graphics-direct3d-namespace.md) にあります。これにより、やなどの同様の名前の基本型から明確に分離され **`__int8`** **`__int16`** ます。
 
-|型|長さ 2|長さ3|長さ4|
+|Type|長さ 2|長さ3|長さ4|
 |-|--------------|--------------|--------------|
 |double|double_2<br /><br /> double2|double_3<br /><br /> double3|double_4<br /><br /> double4|
 |float|float_2<br /><br /> float2|float_3<br /><br /> float3|float_4<br /><br /> float4|
@@ -36,7 +36,7 @@ Short Vector ライブラリは、HLSL で定義されている [ベクター型
 |uint|uint_2<br /><br /> uint2|uint_3<br /><br /> uint3|uint_4<br /><br /> uint4|
 |unorm|unorm_2<br /><br /> unorm2|unorm_3<br /><br /> unorm3|unorm_4<br /><br /> unorm4|
 
-### <a name="operators"></a>オペレーター
+### <a name="operators"></a>演算子
 
 演算子が 2 つの short ベクターの間で定義されている場合、その演算子は short ベクターとスカラーの間でも定義されます。 また、これらのどちらかが TRUE である必要があります。
 
@@ -57,17 +57,17 @@ Short Vector ライブラリは、HLSL で定義されている [ベクター型
 
 ### <a name="swizzling-expressions"></a>スウィズリング式
 
-short ベクター ライブラリは、short ベクターのコンポーネントにアクセスする `vector_type.identifier` アクセサー構成体をサポートします。 `identifier`*スウィズリング式*と呼ばれるは、ベクターのコンポーネントを指定します。 式は左辺値または右辺値のいずれかになります。 識別子には、x、y、z、w の各文字を使用できます。または、r、g、b、およびです。 "x" と "r" は、ゼロ番目のコンポーネント "y" と "g" が最初のコンポーネントを意味することを意味します。 ("X" と "r" は同じ識別子で使用できないことに注意してください)。したがって、"rgba" と "xyzw" は同じ結果を返します。 "x" と "y" のような単一コンポーネント アクセサーはスカラー値型です。 複数コンポーネント アクセサーは short ベクター型です。 たとえば、`int_4` という名前で、値 2、4、6、8 を持つ `fourInts` ベクターを作成すると、`fourInts.y` は整数 4 を返し、`fourInts.rg` は値 2 および 4 を持つ `int_2` オブジェクトを返します。
+short ベクター ライブラリは、short ベクターのコンポーネントにアクセスする `vector_type.identifier` アクセサー構成体をサポートします。 `identifier`*スウィズリング式* と呼ばれるは、ベクターのコンポーネントを指定します。 式は左辺値または右辺値のいずれかになります。 識別子には、x、y、z、w の各文字を使用できます。または、r、g、b、およびです。 "x" と "r" は、ゼロ番目のコンポーネント "y" と "g" が最初のコンポーネントを意味することを意味します。 ("X" と "r" は同じ識別子で使用できないことに注意してください)。したがって、"rgba" と "xyzw" は同じ結果を返します。 "x" と "y" のような単一コンポーネント アクセサーはスカラー値型です。 複数コンポーネント アクセサーは short ベクター型です。 たとえば、`int_4` という名前で、値 2、4、6、8 を持つ `fourInts` ベクターを作成すると、`fourInts.y` は整数 4 を返し、`fourInts.rg` は値 2 および 4 を持つ `int_2` オブジェクトを返します。
 
 ## <a name="texture-classes"></a>テクスチャのクラス
 
 多くの GPU には、ピクセルとテクセルをフェッチし、イメージとテクスチャを表示するために最適化されたハードウェアとキャッシュがあります。 この[テクスチャ \<T,N> ](../../parallel/amp/reference/texture-class.md)クラスは、テクセルオブジェクトのコンテナークラスであり、これらの gpu のテクスチャ機能を公開します。 テクセルは次のようになります。
 
-- **`int`**、、 `uint` 、 **`float`** 、 **`double`** `norm` 、または `unorm` スカラー。
+- **`int`** 、、 `uint` 、 **`float`** 、 **`double`** `norm` 、または `unorm` スカラー。
 
 - 2 つまたは 4 つのコンポーネントを持つ short ベクター。 許可されない唯一の例外は `double_4` です。
 
-`texture` オブジェクトは、1、2、または 3 のランクになります。 `texture` オブジェクトは `parallel_for_each` の呼び出しのラムダの参照によってのみキャプチャできます。 テクスチャは、Direct3D テクスチャ オブジェクトとして GPU に格納されます。 Direct3D のテクスチャとテクセルの詳細については、「 [direct3d 11 のテクスチャの概要](https://go.microsoft.com/fwlink/p/?linkid=248502)」を参照してください。
+`texture` オブジェクトは、1、2、または 3 のランクになります。 `texture` オブジェクトは `parallel_for_each` の呼び出しのラムダの参照によってのみキャプチャできます。 テクスチャは、Direct3D テクスチャ オブジェクトとして GPU に格納されます。 Direct3D のテクスチャとテクセルの詳細については、「 [direct3d 11 のテクスチャの概要](/windows/win32/direct3d11/overviews-direct3d-11-resources-textures-intro)」を参照してください。
 
 使用するテクセル型が、グラフィックス プログラミングで使用される多くのテクスチャ形式の 1 つになっている場合があります。 たとえば、RGBA 形式は、R、G、B、A のスカラー要素に対してそれぞれ 8 ビットで、32 ビットを使用できます。 グラフィックス カードのテクスチャ ハードウェアは、形式に基づいて個々の要素にアクセスできます。 たとえば、RGBA 形式を使用すると、テクスチャ ハードウェアは各 8 ビット要素を 32 ビット形式に復元できます。 C++ AMP では、ビット シフトを使用しないでコードの個々のスカラー要素に自動的にアクセスできるように、テクセルのスカラー要素ごとにビットを設定できます。
 
@@ -311,7 +311,7 @@ void write2ComponentTexture() {
 
 ### <a name="instantiating-texture-view-objects"></a>テクスチャ ビュー オブジェクトのインスタンス化
 
-を宣言 `texture_view` することは、 `array_view` **配列**に関連付けられているを宣言することと似ています。 次のコード例では、複数の `texture` オブジェクトとそれらに関連付けられた `texture_view` オブジェクトを宣言しています。
+を宣言 `texture_view` することは、 `array_view` **配列** に関連付けられているを宣言することと似ています。 次のコード例では、複数の `texture` オブジェクトとそれらに関連付けられた `texture_view` オブジェクトを宣言しています。
 
 ```cpp
 #include <amp.h>
@@ -342,7 +342,7 @@ void declareTextureViews()
 
 `texture_view` の要素型 (定数であるかどうかとそのコンポーネントの数) も、ビューがテクスチャ サンプリングをサポートするかどうかおよび MIPMAP レベルへのアクセス方法の決定に役割を果たします。
 
-|型|コンポーネント|Read|Write|サンプリング|MIPMAP アクセス|
+|Type|コンポーネント|Read|Write|サンプリング|MIPMAP アクセス|
 |----------|----------------|----------|-----------|--------------|-------------------|
 |texture_view\<const T, N>|1, 2, 4|はい|いいえ (1)|はい|○、インデックス可能。 範囲はインスタンス化時に決定。|
 |Texture_view\<T, N>|1<br /><br /> 2, 4|はい<br /><br /> いいえ (2)|はい<br /><br /> はい|いいえ (1)<br /><br /> いいえ (1)|○、1 レベル。 レベルはインスタンス化時に決定。<br /><br /> ○、1 レベル。 レベルはインスタンス化時に決定。|
@@ -404,9 +404,9 @@ parallel_for_each(w_view.extent, [=](index<2> idx) restrict(amp)
 
 ## <a name="interoperability"></a>相互運用性
 
-C++ AMP ランタイムは、と `texture<T,1>` [ID3D11Texture1D インターフェイス](https://go.microsoft.com/fwlink/p/?linkId=248503)の間、と `texture<T,2>` [ID3D11Texture2D インターフェイス](https://go.microsoft.com/fwlink/p/?linkId=255317)の間、および `texture<T,3>` [ID3D11Texture3D インターフェイス](https://go.microsoft.com/fwlink/p/?linkId=255377)間の相互運用性をサポートします。 [Get_texture](reference/concurrency-graphics-direct3d-namespace-functions.md#get_texture)メソッドは、オブジェクトを受け取り、 `texture` インターフェイスを返し `IUnknown` ます。 [Make_texture](reference/concurrency-graphics-direct3d-namespace-functions.md#make_texture)メソッドは、 `IUnknown` インターフェイスとオブジェクトを受け取り `accelerator_view` 、オブジェクトを返し `texture` ます。
+C++ AMP ランタイムは、と `texture<T,1>` [ID3D11Texture1D インターフェイス](/windows/win32/api/d3d11/nn-d3d11-id3d11texture1d)の間、と `texture<T,2>` [ID3D11Texture2D インターフェイス](/windows/win32/api/d3d11/nn-d3d11-id3d11texture2d)の間、および `texture<T,3>` [ID3D11Texture3D インターフェイス](/windows/win32/api/d3d11/nn-d3d11-id3d11texture3d)間の相互運用性をサポートします。 [Get_texture](reference/concurrency-graphics-direct3d-namespace-functions.md#get_texture)メソッドは、オブジェクトを受け取り、 `texture` インターフェイスを返し `IUnknown` ます。 [Make_texture](reference/concurrency-graphics-direct3d-namespace-functions.md#make_texture)メソッドは、 `IUnknown` インターフェイスとオブジェクトを受け取り `accelerator_view` 、オブジェクトを返し `texture` ます。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [double_2 クラス](../../parallel/amp/reference/double-2-class.md)<br/>
 [double_3 クラス](../../parallel/amp/reference/double-3-class.md)<br/>

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - C++ Accelerated Massive Parallelism, overview
 - C++ Accelerated Massive Parallelism
 ms.assetid: 9e593b06-6e3c-43e9-8bae-6d89efdd39fc
-ms.openlocfilehash: 2629f243f3db3b8fabbd87ee0a211380ac3d45a2
-ms.sourcegitcommit: 093f49b8b69daf86661adc125b1d2d7b1f0e0650
+ms.openlocfilehash: 0eeda43a279be74ea71669b55356603e980cab40
+ms.sourcegitcommit: d77159732a8e782b2a1b7abea552065f2b6f61c1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/03/2020
-ms.locfileid: "89427726"
+ms.lasthandoff: 11/04/2020
+ms.locfileid: "93344749"
 ---
 # <a name="c-amp-overview"></a>C++ AMP の概要
 
@@ -104,7 +104,7 @@ void CppAmpMethod() {
 
 - データ: C++ の配列を使用して、3つの C++ AMP [array_view](../../parallel/amp/reference/array-view-class.md) オブジェクトを構築します。 4 個の値を指定して `array_view` オブジェクトを構築します。すなわち、各次元の `array_view` オブジェクトのデータ値、ランク、要素の型、および長さです。 ランクと型は型パラメーターとして渡されます。 データと長さは、コンストラクターのパラメーターとして渡されます。 この例では、コンストラクターに渡される C++ 配列は 1 次元です。 ランクと長さは `array_view` オブジェクト内のデータの四角形を構築するために使用され、データ値は配列の値を設定するために使用されます。 ランタイムライブラリには、クラスに似たインターフェイスを備えた [配列クラス](../../parallel/amp/reference/array-class.md)も含まれてい `array_view` ます。このクラスについては、この記事の後半で説明します。
 
-- イテレーション: [Parallel_for_each 関数 (C++ AMP)](reference/concurrency-namespace-functions-amp.md#parallel_for_each) は、データ要素または *計算ドメイン*を反復処理するメカニズムを提供します。 この例では、計算のドメインは `sum.extent` によって指定されます。 実行するコードは、ラムダ式または *カーネル関数*に含まれています。 `restrict(amp)` は、C++ AMP で高速化できる C++ 言語のサブセットのみが使用されることを示します。
+- イテレーション: [Parallel_for_each 関数 (C++ AMP)](reference/concurrency-namespace-functions-amp.md#parallel_for_each) は、データ要素または *計算ドメイン* を反復処理するメカニズムを提供します。 この例では、計算のドメインは `sum.extent` によって指定されます。 実行するコードは、ラムダ式または *カーネル関数* に含まれています。 `restrict(amp)` は、C++ AMP で高速化できる C++ 言語のサブセットのみが使用されることを示します。
 
 - インデックス: [インデックスクラス](../../parallel/amp/reference/index-class.md) 変数は、 `idx` オブジェクトのランクと一致するように、ランクが1で宣言されてい `array_view` ます。 インデックスを使用することによって、`array_view` オブジェクトの個々の要素にアクセスできます。
 
@@ -316,9 +316,9 @@ void AddArrays() {
 
 `parallel_for_each` メソッドは、計算ドメインとラムダ式の 2 個の引数を使用します。
 
-*計算ドメイン*は、 `extent` `tiled_extent` 並列実行のために作成するスレッドのセットを定義するオブジェクトまたはオブジェクトです。 計算ドメインの各要素について、1 つのスレッドが生成されます。 この場合、`extent` オブジェクトは 1 次元で、5 個の要素があります。 したがって、5 個のスレッドが開始されます。
+*計算ドメイン* は、 `extent` `tiled_extent` 並列実行のために作成するスレッドのセットを定義するオブジェクトまたはオブジェクトです。 計算ドメインの各要素について、1 つのスレッドが生成されます。 この場合、`extent` オブジェクトは 1 次元で、5 個の要素があります。 したがって、5 個のスレッドが開始されます。
 
-*ラムダ式*は、各スレッドで実行するコードを定義します。 Capture 句は、 `[=]` ラムダ式の本体がすべてのキャプチャされた変数に値でアクセスすることを指定します。この場合、は `a` 、、 `b` および `sum` です。 この例では、パラメーター リストは `index`という名前の 1 次元の `idx` 変数を作成します。 `idx[0]` の値は、最初のスレッドでは 0、それ以降の各スレッドでは 1 ずつ増加します。 `restrict(amp)` は、C++ AMP で高速化できる C++ 言語のサブセットのみが使用されることを示します。  制限修飾子を持つ関数の制限事項については、「 [制限 (C++ AMP)](../../cpp/restrict-cpp-amp.md)」を参照してください。 詳細については、「 [ラムダ式の構文](../../cpp/lambda-expression-syntax.md)」を参照してください。
+*ラムダ式* は、各スレッドで実行するコードを定義します。 Capture 句は、 `[=]` ラムダ式の本体がすべてのキャプチャされた変数に値でアクセスすることを指定します。この場合、は `a` 、、 `b` および `sum` です。 この例では、パラメーター リストは `index`という名前の 1 次元の `idx` 変数を作成します。 `idx[0]` の値は、最初のスレッドでは 0、それ以降の各スレッドでは 1 ずつ増加します。 `restrict(amp)` は、C++ AMP で高速化できる C++ 言語のサブセットのみが使用されることを示します。  制限修飾子を持つ関数の制限事項については、「 [制限 (C++ AMP)](../../cpp/restrict-cpp-amp.md)」を参照してください。 詳細については、「 [ラムダ式の構文](../../cpp/lambda-expression-syntax.md)」を参照してください。
 
 ラムダ式では、実行するコードを含めることも、別のカーネル関数を呼び出すこともできます。 カーネル関数には `restrict(amp)` 修飾子を含める必要があります。 次の例は前の例と同じですが、別のカーネル関数を呼び出します。
 
@@ -360,9 +360,9 @@ void AddArraysWithFunction() {
 
 ## <a name="accelerating-code-tiles-and-barriers"></a>コードの加速化: タイルとバリア
 
-タイルを使用することによって、さらに高速化を実現できます。 タイルでは、スレッドが等しい四角形のサブセットまたは *タイル*に分割されます。 データ セットと、コーディングしているアルゴリズムに基づいて、適切なタイトルのサイズを決定します。 各スレッドについて、データ要素の全体または全体に対するアクセス権を *持ち、* `array` `array_view` タイルを基準とした *ローカル* の場所にアクセスできます。 ローカル インデックス値を使用すると、インデックス値をグローバルからローカルに変換するコードを記述する必要がないため、コードは簡略化されます。 タイルを使用するには、メソッドでコンピューティングドメインの [extent:: Tile メソッド](reference/extent-class.md#tile) を呼び出し、 `parallel_for_each` ラムダ式で [tiled_index](../../parallel/amp/reference/tiled-index-class.md) オブジェクトを使用します。
+タイルを使用することによって、さらに高速化を実現できます。 タイルでは、スレッドが等しい四角形のサブセットまたは *タイル* に分割されます。 データ セットと、コーディングしているアルゴリズムに基づいて、適切なタイトルのサイズを決定します。 各スレッドについて、データ要素の全体または全体に対するアクセス権を *持ち、* `array` `array_view` タイルを基準とした *ローカル* の場所にアクセスできます。 ローカル インデックス値を使用すると、インデックス値をグローバルからローカルに変換するコードを記述する必要がないため、コードは簡略化されます。 タイルを使用するには、メソッドでコンピューティングドメインの [extent:: Tile メソッド](reference/extent-class.md#tile) を呼び出し、 `parallel_for_each` ラムダ式で [tiled_index](../../parallel/amp/reference/tiled-index-class.md) オブジェクトを使用します。
 
-一般的なアプリケーションでは、タイルの要素はなんらかの方法で関連付けられており、コードではタイル全体で値にアクセスして追跡する必要があります。 これを行うには、 [Tile_static キーワード](../../cpp/tile-static-keyword.md) キーワードと [tile_barrier:: wait メソッド](reference/tile-barrier-class.md#wait) を使用します。 **Tile_static**キーワードを持つ変数は、タイル全体でスコープを持ち、各タイルに対して変数のインスタンスが作成されます。 タイル スレッドの変数に対するアクセスの同期を処理する必要があります。 [Tile_barrier:: Wait メソッド](reference/tile-barrier-class.md#wait)は、タイル内のすべてのスレッドがの呼び出しに到達するまで、現在のスレッドの実行を停止し `tile_barrier::wait` ます。 そのため、 **tile_static** 変数を使用して、タイル全体に値を蓄積できます。 次に、すべての値にアクセスする必要がある計算を終了できます。
+一般的なアプリケーションでは、タイルの要素はなんらかの方法で関連付けられており、コードではタイル全体で値にアクセスして追跡する必要があります。 これを行うには、 [Tile_static キーワード](../../cpp/tile-static-keyword.md) キーワードと [tile_barrier:: wait メソッド](reference/tile-barrier-class.md#wait) を使用します。 **Tile_static** キーワードを持つ変数は、タイル全体でスコープを持ち、各タイルに対して変数のインスタンスが作成されます。 タイル スレッドの変数に対するアクセスの同期を処理する必要があります。 [Tile_barrier:: Wait メソッド](reference/tile-barrier-class.md#wait)は、タイル内のすべてのスレッドがの呼び出しに到達するまで、現在のスレッドの実行を停止し `tile_barrier::wait` ます。 そのため、 **tile_static** 変数を使用して、タイル全体に値を蓄積できます。 次に、すべての値にアクセスする必要がある計算を終了できます。
 
 次の図は、タイルに配置されたサンプリング データの 2 次元配列を表します。
 
@@ -473,9 +473,9 @@ C++ AMP には、アクセラレータ機能を使用するグラフィックス
 
 - [UWP アプリでの C++ AMP の使用](../../parallel/amp/using-cpp-amp-in-windows-store-apps.md)
 
-- [チュートリアル: C++ での基本的な Windows ランタイムコンポーネントの作成と JavaScript からの呼び出し](https://go.microsoft.com/fwlink/p/?linkid=249077)
+- [チュートリアル: C++ での基本的な Windows ランタイムコンポーネントの作成と JavaScript からの呼び出し](/previous-versions/windows/apps/hh755833(v=vs.140))
 
-- [JavaScript および C++ の Windows ストアアプリである Bing マップトリップオプティマイザー](https://go.microsoft.com/fwlink/p/?linkid=249078)
+- [JavaScript および C++ の Windows ストアアプリである Bing マップトリップオプティマイザー](/previous-versions/windows/apps/hh699893(v=vs.140))
 
 - [Windows ランタイムを使用して C# から C++ AMP を使用する方法](https://devblogs.microsoft.com/pfxteam/how-to-use-c-amp-from-c-using-winrt/)
 
