@@ -1,4 +1,4 @@
-﻿---
+---
 title: Visual Studio に C および C++ サポートをインストールする
 description: Visual Studio の Visual C++ のためのサポートをインストールします
 ms.custom: mvc
@@ -6,18 +6,18 @@ ms.date: 04/02/2019
 ms.topic: tutorial
 ms.devlang: cpp
 ms.assetid: 45138d70-719d-42dc-90d7-1d0ca31a2f54
-ms.openlocfilehash: a850803b8804c2463cd3388ec2bcf0ad9f4f3610
-ms.sourcegitcommit: d4da3693f83a24f840e320e35c24a4a07cae68e2
+ms.openlocfilehash: 6f547b7e50d39b073232e913e660bf3ab96789cb
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/18/2020
-ms.locfileid: "83550811"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92922128"
 ---
 # <a name="install-c-and-c-support-in-visual-studio"></a>Visual Studio に C および C++ サポートをインストールする
 
 まだ Visual Studio と Microsoft C/C++ ツールをダウンロードしてインストールしていない場合は、ここで説明する方法に従って始めることができます。
 
-::: moniker range="vs-2019"
+::: moniker range="msvc-160"
 
 ## <a name="visual-studio-2019-installation"></a>Visual Studio 2019 のインストール
 
@@ -67,7 +67,7 @@ Visual Studio 2019 と以前のバージョンの Visual Studio を共存させ�
 
 ### <a name="step-4---choose-workloads"></a>手順 4 - ワークロードを選択する
 
-インストーラーのインストールが済んだら、それを使用して、必要な "*ワークロード*" (機能セット) を選択することにより、インストールをカスタマイズできます。 ここではその方法を説明します。
+インストーラーのインストールが済んだら、それを使用して、必要な " *ワークロード* " (機能セット) を選択することにより、インストールをカスタマイズできます。 ここではその方法を説明します。
 
 1. **[Visual Studio のインストール]** 画面で、必要なワークロードを見つけます。
 
@@ -84,7 +84,7 @@ Visual Studio 2019 と以前のバージョンの Visual Studio を共存させ�
    そうすると、ステータス画面が表示され、Visual Studio のインストールの進行状況が示されます。
 
 > [!TIP]
-> インストール後いつでも、最初にインストールしなかったワークロードまたはコンポーネントをインストールできます。 Visual Studio を開いている場合は、 **[ツール]**  >  **[ツールと機能を取得]** に移動すると、Visual Studio インストーラーが開きます。 または、スタート メニューから **Visual Studio インストーラー**を開きます。 そこから、インストールするワークロードまたはコンポーネントを選択できます。 次に、 **[変更]** を選択します。
+> インストール後いつでも、最初にインストールしなかったワークロードまたはコンポーネントをインストールできます。 Visual Studio を開いている場合は、 **[ツール]**  >  **[ツールと機能を取得]** に移動すると、Visual Studio インストーラーが開きます。 または、スタート メニューから **Visual Studio インストーラー** を開きます。 そこから、インストールするワークロードまたはコンポーネントを選択できます。 次に、 **[変更]** を選択します。
 
 ### <a name="step-5---choose-individual-components-optional"></a>手順 5 - 個々のコンポーネントを選択する (省略可能)
 
@@ -125,7 +125,7 @@ Visual Studio 2019 と以前のバージョンの Visual Studio を共存させ�
 
 ::: moniker-end
 
-::: moniker range="vs-2017"
+::: moniker range="msvc-150"
 
 ## <a name="visual-studio-2017-installation"></a>Visual Studio 2017 のインストール
 
@@ -181,11 +181,11 @@ Visual Studio 2017 では、必要な機能だけを簡単に選択してイン�
 
 ::: moniker-end
 
-::: moniker range="<vs-2017"
+::: moniker range="<msvc-150"
 
 ## <a name="visual-studio-2015-installation"></a>Visual Studio 2015 のインストール
 
-Visual Studio 2015 をインストールするには、[以前のバージョンの Visual Studio のダウンロード](https://www.visualstudio.com/vs/older-downloads/) ページに移動してください。 セットアップ プログラムを実行し、**カスタム インストール**で C++ コンポーネントを選択します。 Visual Studio 2015 の既存のインストールに C および C++ のサポートを追加するには、Windows の [スタート] ボタンをクリックし、「**プログラムの追加と削除**」と入力します。 結果の一覧からプログラムを開き、インストールされているプログラムの一覧で、Visual Studio 2015 のインストールを見つけます。 それをダブルクリックし、 **[変更]** を選択して、インストールする Visual C++ コンポーネントを選択します。
+Visual Studio 2015 をインストールするには、[以前のバージョンの Visual Studio のダウンロード](https://www.visualstudio.com/vs/older-downloads/) ページに移動してください。 セットアップ プログラムを実行し、 **カスタム インストール** で C++ コンポーネントを選択します。 Visual Studio 2015 の既存のインストールに C および C++ のサポートを追加するには、Windows の [スタート] ボタンをクリックし、「 **プログラムの追加と削除** 」と入力します。 結果の一覧からプログラムを開き、インストールされているプログラムの一覧で、Visual Studio 2015 のインストールを見つけます。 それをダブルクリックし、 **[変更]** を選択して、インストールする Visual C++ コンポーネントを選択します。
 
 一般に、Visual Studio 2015 コンパイラを使用してコードをコンパイルする必要がある場合でも、最新バージョンの Visual Studio を使用することを強くお勧めします。 詳細については、「[Visual Studio でネイティブ マルチ ターゲットを利用し、古いプロジェクトを作成する](../porting/use-native-multi-targeting.md)」を参照してください。
 
