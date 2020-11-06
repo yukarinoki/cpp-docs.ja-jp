@@ -1,26 +1,27 @@
 ---
-title: Visual C++ 2003 ～ 2015 の変更履歴
+title: Microsoft C/c + + の変更履歴 2003-2015
+description: Microsoft C/c + + のすべての重大な変更については、visual Studio 2003 から Visual Studio 2015 を参照してください。
 ms.date: 10/21/2019
 helpviewer_keywords:
 - breaking changes [C++]
 ms.assetid: b38385a9-a483-4de9-99a6-797488bc5110
-ms.openlocfilehash: b68d9c857db35791486dfc0c1ee02a096a8f5a0a
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: c444a44a7e32491783502486f1acbda464378e9c
+ms.sourcegitcommit: 12eb6a824dd7187a065d44fceca4c410f58e121e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87219470"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "94334108"
 ---
-# <a name="visual-c-change-history-2003---2015"></a>Visual C++ 2003 ～ 2015 の変更履歴
+# <a name="microsoft-cc-change-history-2003---2015"></a>Microsoft C/c + + の変更履歴 2003-2015
 
 この記事では、Visual Studio 2003 から Visual Studio 2015 の互換性に影響する変更についてすべて説明します。この記事の「新しい動作」や「現在」という語は、Visual Studio 2015 以降を指します。 「従来の動作」や「以前」という語は、Visual Studio 2013 以前のリリースを指します。
 
-最新版の Visual Studio については、「[What's new for Visual C++ in Visual Studio](../overview/what-s-new-for-visual-cpp-in-visual-studio.md)」 (Visual Studio における Visual C++ の新機能) と「[Conformance Improvements in Visual C++ in Visual Studio](../overview/cpp-conformance-improvements.md)」 (Visual Studio における Visual C++ の準拠の強化) を参照してください。
+最新バージョンの Visual studio については、「visual studio [での c++ の新機能](../overview/what-s-new-for-visual-cpp-in-visual-studio.md) 」および「 [visual studio での c++ 準拠の強化](../overview/cpp-conformance-improvements.md)」を参照してください。
 
 > [!NOTE]
 > Visual Studio 2015 と Visual Studio 2017 では、バイナリに関して重大な変更はありません。
 
-Visual Studio の新しいバージョンにアップグレードすると、以前にコンパイルと動作が正常に行えたコードでコンパイルやランタイム エラーが発生する場合があります。 新しいバージョンでこのような問題を引き起こす変更は *互換性に影響する変更*と呼ばれ、通常は C++ 言語の基準、関数シグネチャ、またはメモリ オブジェクトのレイアウトの変更によって必要となります。
+Visual Studio の新しいバージョンにアップグレードすると、以前にコンパイルと動作が正常に行えたコードでコンパイルやランタイム エラーが発生する場合があります。 新しいバージョンでこのような問題を引き起こす変更は *互換性に影響する変更* と呼ばれ、通常は C++ 言語の基準、関数シグネチャ、またはメモリ オブジェクトのレイアウトの変更によって必要となります。
 
 検出や診断が難しいランタイム エラーを回避するには、異なるバージョンのコンパイラを使用してコンパイルされたバイナリには静的にリンクしないことをお勧めします。 また、EXE または DLL プロジェクトをアップグレードする場合、リンクするライブラリもアップグレードします。 異なるバージョンのコンパイラを使用してコンパイルされたバイナリ間 (DLL を含む) で CRT (C Runtime) または C++ 標準ライブラリ (C++ Standard Library) 型を渡さないようにしてください。 詳細については、「 [Potential Errors Passing CRT Objects Across DLL Boundaries](../c-runtime-library/potential-errors-passing-crt-objects-across-dll-boundaries.md)」を参照してください。
 
@@ -38,13 +39,13 @@ COM インターフェイスまたは POD オブジェクトではないオブ�
 
 ## <a name="visual-studio-2015-conformance-changes"></a><a name="VC_2015"></a> Visual Studio 2015 の準拠に関する変更
 
-### <a name="c-runtime-library-crt"></a><a name="BK_CRT"></a>C ランタイムライブラリ (CRT)
+### <a name="c-runtime-library-crt"></a><a name="BK_CRT"></a> C ランタイムライブラリ (CRT)
 
 #### <a name="general-changes"></a>一般的な変更
 
 - **リファクタリング バイナリ**
 
-   CRT ライブラリは 2 つの異なるバイナリにリファクタリングされています。その 1 つはユニバーサル CRT (ucrtbase) で、標準機能のほとんどが含まれています。もう 1 つは VC ランタイム ライブラリ (vcruntime) です。 vcruntime ライブラリには、例外処理や組み込み関数などのコンパイラ関連の機能が含まれています。 既定のプロジェクト設定を使用している場合は、この変更による影響は受けません。リンカーは、新しい既定のライブラリを自動的に使用するためです。 プロジェクトの [**リンカー**] プロパティの [**すべての既定のライブラリの無視**] を [**はい**] に設定するか、コマンドラインで `/NODEFAULTLIB` リンカー オプションを使用する場合、([**追加の依存ファイル**] プロパティの) ライブラリのリストを更新して、新しいリファクタリング ライブラリを組み込む必要があります。 古い CRT ライブラリ (libcmt.lib、libcmtd.lib、msvcrt.lib、msvcrtd.lib) をリファクタリングした同等のライブラリで置き換えます。 2 つのリファクタリング ライブラリのそれぞれについて、静的 (.lib) バージョンと動的 (.dll) バージョンがあり、リリース (サフィックスなし) バージョンとデバッグ (サフィックス "d" を持つ) バージョンがあります。 動的バージョンには、リンク先インポート ライブラリがあります。 2 つのリファクタリング ライブラリとは、ユニバーサル CRT (具体的には ucrtbase.dll または ucrtbase.lib、ucrtbased.dll または ucrtbased.lib)、と VC ランタイム ライブラリ (libvcruntime.lib、vcruntime*version*.dll、libvcruntimed.lib、vcruntimed*version*.dll) です。 Visual Studio 2015 と Visual Studio 2017 における*バージョン*は 140 です。 「[CRT ライブラリの機能](../c-runtime-library/crt-library-features.md)」を参照してください。
+   CRT ライブラリは 2 つの異なるバイナリにリファクタリングされています。その 1 つはユニバーサル CRT (ucrtbase) で、標準機能のほとんどが含まれています。もう 1 つは VC ランタイム ライブラリ (vcruntime) です。 vcruntime ライブラリには、例外処理や組み込み関数などのコンパイラ関連の機能が含まれています。 既定のプロジェクト設定を使用している場合は、この変更による影響は受けません。リンカーは、新しい既定のライブラリを自動的に使用するためです。 プロジェクトの [ **リンカー** ] プロパティの [ **すべての既定のライブラリの無視** ] を [ **はい** ] に設定するか、コマンドラインで `/NODEFAULTLIB` リンカー オプションを使用する場合、([ **追加の依存ファイル** ] プロパティの) ライブラリのリストを更新して、新しいリファクタリング ライブラリを組み込む必要があります。 古い CRT ライブラリ (libcmt.lib、libcmtd.lib、msvcrt.lib、msvcrtd.lib) をリファクタリングした同等のライブラリで置き換えます。 2 つのリファクタリング ライブラリのそれぞれについて、静的 (.lib) バージョンと動的 (.dll) バージョンがあり、リリース (サフィックスなし) バージョンとデバッグ (サフィックス "d" を持つ) バージョンがあります。 動的バージョンには、リンク先インポート ライブラリがあります。 2 つのリファクタリング ライブラリとは、ユニバーサル CRT (具体的には ucrtbase.dll または ucrtbase.lib、ucrtbased.dll または ucrtbased.lib)、と VC ランタイム ライブラリ (libvcruntime.lib、vcruntime *version*.dll、libvcruntimed.lib、vcruntimed *version*.dll) です。 Visual Studio 2015 と Visual Studio 2017 における *バージョン* は 140 です。 「[CRT ライブラリの機能](../c-runtime-library/crt-library-features.md)」を参照してください。
 
 #### \<locale.h>
 
@@ -62,11 +63,11 @@ COM インターフェイスまたは POD オブジェクトではないオブ�
 
    エラーを解決するには、を含め、 \<cmath> から削除された関数の宣言を取得し \<math.h> ます。 次の関数は移動されました。
 
-  - `double abs(double)` および `float abs(float)`
+  - `double abs(double)` と `float abs(float)`
 
   - `double pow(double, int)`, `float pow(float, float)`, `float pow(float, int)`, `long double pow(long double, long double)`, `long double pow(long double, int)`
 
-  - **`float`** および **`long double`** の各バージョンの浮動小数点関数 `acos` 、 `acosh` 、、 `asin` `asinh` 、 `atan` `atanh` `atan2` `cbrt` `ceil` `copysign` `cos` `cosh` `erf` `erfc` `exp` `exp2` `expm1` `fabs` `fdim` `floor` `fma` `fmax` `fmin` `fmod` `frexp` `hypot` `ilogb` `ldexp` `lgamma` `llrint` `llround` `log` `log10` `log1p` `log2` `lrint` `lround` `modf` `nearbyint` `nextafter` `nexttoward` `remainder` `remquo` `rint` `round` `scalbln` `scalbn` `sin` `sinh` `sqrt` `tan` `tanh` `tgamma` 、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、およびです。`trunc`
+  - **`float`** および **`long double`** の各バージョンの浮動小数点関数 `acos` 、 `acosh` 、、 `asin` `asinh` 、 `atan` `atanh` `atan2` `cbrt` `ceil` `copysign` `cos` `cosh` `erf` `erfc` `exp` `exp2` `expm1` `fabs` `fdim` `floor` `fma` `fmax` `fmin` `fmod` `frexp` `hypot` `ilogb` `ldexp` `lgamma` `llrint` `llround` `log` `log10` `log1p` `log2` `lrint` `lround` `modf` `nearbyint` `nextafter` `nexttoward` `remainder` `remquo` `rint` `round` `scalbln` `scalbn` `sin` `sinh` `sqrt` `tan` `tanh` `tgamma` 、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、およびです。 `trunc`
 
   `abs`ヘッダーのみを含む浮動小数点型でを使用するコードがある場合 \<math.h> 、浮動小数点バージョンは使用できなくなります。 エラーを生成する浮動小数点引数を持つ場合でも、現在は `abs(int)` の呼び出しで解決します。
 
@@ -86,7 +87,7 @@ COM インターフェイスまたは POD オブジェクトではないオブ�
 
    Visual Studio 2013 で FLT_ROUNDS マクロは定数式に拡張されましたが、これは正しくありませんでした。丸めモードは実行時に (たとえば、fesetround を呼び出すことにより) 構成することができるからです。 FLT_ROUNDS マクロは動的になり、現在の丸めモードを正確に反映します。
 
-#### <a name="new-and-newh"></a>\<new> および \<new.h>
+#### <a name="new-and-newh"></a>\<new> と \<new.h>
 
 - **new と delete**
 
@@ -112,14 +113,14 @@ COM インターフェイスまたは POD オブジェクトではないオブ�
 
    および関数のすべての定義 `printf` は `scanf` \<stdio.h> 、、、 \<conio.h> およびその他の CRT ヘッダーにインラインで移動されています。 この破壊的変更は、プログラムで適切な CRT ヘッダーが組み込まれずにこれらの関数をローカルで宣言した場合にリンカー エラー (LNK2019、外部シンボルは未解決です) につながります。 可能な場合、CRT ヘッダーが組み込まれるよう (つまり、`#include <stdio.h>` を追加するよう) またインライン関数が組み込まれるようコードを更新してください。これらのヘッダー ファイルが組み込まれるようコードを変更しない場合、別の方法として、付加的なライブラリをリンカー入力 legacy_stdio_definitions.lib に追加することもできます。
 
-   このライブラリを IDE のリンカー入力に追加するには、プロジェクト ノードのコンテキスト メニューを開き、[**プロパティ**] を選択し、[**プロジェクトのプロパティ**] ダイアログ ボックスで [**リンカー**] を選択し、[**リンカー入力**] を編集して `legacy_stdio_definitions.lib` をセミコロン区切りリストに追加します。
+   このライブラリを IDE のリンカー入力に追加するには、プロジェクト ノードのコンテキスト メニューを開き、[ **プロパティ** ] を選択し、[ **プロジェクトのプロパティ** ] ダイアログ ボックスで [ **リンカー** ] を選択し、[ **リンカー入力** ] を編集して `legacy_stdio_definitions.lib` をセミコロン区切りリストに追加します。
 
-   プロジェクトが、2015 より前のリリースの Visual Studio でコンパイルされた静的ライブラリとリンクする場合、リンカーによって、未解決の外部シンボルが報告される可能性があります。 これらのエラー `_iob` `_iob_func` は、 \<stdio.h> _imp_の形式で、、、または特定の関数の関連インポートの内部定義を参照する場合があり \* ます。 Microsoft は、プロジェクトをアップグレードするときに、最新バージョンの C++ コンパイラおよびライブラリですべての静的ライブラリを再コンパイルすることを推奨しています。 ライブラリが、ソースを使用できないサード パーティ ライブラリである場合、更新されたバイナリをサード パーティから要求するか、そのライブラリの使用を、古いバージョンのコンパイラおよびライブラリでコンパイルする別個の DLL にカプセル化する必要があります。
+   プロジェクトが、2015 より前のリリースの Visual Studio でコンパイルされた静的ライブラリとリンクする場合、リンカーによって、未解決の外部シンボルが報告される可能性があります。 これらのエラー `_iob` `_iob_func` は、 \<stdio.h> _imp_ の形式で、、、または特定の関数の関連インポートの内部定義を参照する場合があり \* ます。 Microsoft は、プロジェクトをアップグレードするときに、最新バージョンの C++ コンパイラおよびライブラリですべての静的ライブラリを再コンパイルすることを推奨しています。 ライブラリが、ソースを使用できないサード パーティ ライブラリである場合、更新されたバイナリをサード パーティから要求するか、そのライブラリの使用を、古いバージョンのコンパイラおよびライブラリでコンパイルする別個の DLL にカプセル化する必要があります。
 
     > [!WARNING]
     > Windows SDK 8.1 以前とリンクする場合、これらの未解決外部シンボル エラーが発生する可能性があります。 その場合、前述のように、legacy_stdio_definitions.lib をリンカー入力に追加することにより、エラーを解決する必要があります。
 
-   未解決のシンボルエラーのトラブルシューティングを行うには、 [dumpbin.exe](../build/reference/dumpbin-reference.md)を使用して、バイナリで定義されているシンボルを調べることができます。 次のコマンド ラインを試行して、ライブラリで定義されているシンボルを表示してください。
+   未解決のシンボルエラーのトラブルシューティングを行うには、 [dumpbin.exe](../build/reference/dumpbin-reference.md) を使用して、バイナリで定義されているシンボルを調べることができます。 次のコマンド ラインを試行して、ライブラリで定義されているシンボルを表示してください。
 
     ```cpp
     dumpbin.exe /LINKERMEMBER somelibrary.lib
@@ -225,7 +226,7 @@ COM インターフェイスまたは POD オブジェクトではないオブ�
 
 - **snprintf および vsnprintf**
 
-   現在、[snprintf](../c-runtime-library/reference/snprintf-snprintf-snprintf-l-snwprintf-snwprintf-l.md) 関数と [vsnprintf](../c-runtime-library/reference/vsnprintf-vsnprintf-vsnprintf-l-vsnwprintf-vsnwprintf-l.md) 関数が実装されています。 古いコードは CRT ライブラリによって実装されていなかったため、これらの関数の定義マクロ バージョンを提供していました。しかし、新しいバージョンではこれらが不要になりました。 を含める前に[snprintf](../c-runtime-library/reference/snprintf-snprintf-snprintf-l-snwprintf-snwprintf-l.md)または[vsnprintf](../c-runtime-library/reference/vsnprintf-vsnprintf-vsnprintf-l-vsnwprintf-vsnwprintf-l.md)がマクロとして定義されている場合 \<stdio.h> 、コンパイルが失敗し、マクロが定義された場所を示すエラーが表示されるようになりました。
+   現在、[snprintf](../c-runtime-library/reference/snprintf-snprintf-snprintf-l-snwprintf-snwprintf-l.md) 関数と [vsnprintf](../c-runtime-library/reference/vsnprintf-vsnprintf-vsnprintf-l-vsnwprintf-vsnwprintf-l.md) 関数が実装されています。 古いコードは CRT ライブラリによって実装されていなかったため、これらの関数の定義マクロ バージョンを提供していました。しかし、新しいバージョンではこれらが不要になりました。 を含める前に [snprintf](../c-runtime-library/reference/snprintf-snprintf-snprintf-l-snwprintf-snwprintf-l.md) または [vsnprintf](../c-runtime-library/reference/vsnprintf-vsnprintf-vsnprintf-l-vsnwprintf-vsnwprintf-l.md) がマクロとして定義されている場合 \<stdio.h> 、コンパイルが失敗し、マクロが定義された場所を示すエラーが表示されるようになりました。
 
    通常、この問題は、ユーザー コードの `snprintf` または `vsnprintf` の宣言を削除することによって修正されます。
 
@@ -275,7 +276,7 @@ COM インターフェイスまたは POD オブジェクトではないオブ�
 
 #### \<time.h>
 
-- **clock**
+- **クロック**
 
    以前のバージョンでは、Windows API [GetSystemTimeAsFileTime](/windows/win32/api/sysinfoapi/nf-sysinfoapi-getsystemtimeasfiletime) を使用して [clock](../c-runtime-library/reference/clock.md) 関数が実装されていました。 この実装により、clock 関数はシステム時刻の影響を受け、単調になることがありませんでした。 現在は、 [QueryPerformanceCounter](/windows/win32/api/profileapi/nf-profileapi-queryperformancecounter) によって clock 関数が再実装されたため、単調になっています。
 
@@ -283,7 +284,7 @@ COM インターフェイスまたは POD オブジェクトではないオブ�
 
    以前のバージョンでは、[_stat](../c-runtime-library/reference/stat-functions.md) 関数、[fstat](../c-runtime-library/reference/fstat-fstat32-fstat64-fstati64-fstat32i64-fstat64i32.md)関数、および [_utime](../c-runtime-library/reference/utime-utime32-utime64-wutime-wutime32-wutime64.md) 関数での夏時間の処理が正しくありませんでした。 Visual Studio 2013 より前では、これらの関数はすべて、標準時刻をあたかも夏時間にあるかのようにに調整していましたが、これは正しい処理ではありませんでした。
 
-   Visual Studio 2013 では、**_stat** 関数ファミリでは問題が解決されましたが、**fstat** 関数ファミリと **_utime** 関数ファミリでは修正されていませんでした。 この部分的な修正は、関数間の不整合による問題につながっていました。 **fstat** および **_utime** の関数ファミリは現在修正され、これらすべての関数が、正確かつ一貫して夏時間を処理できるようになりました。
+   Visual Studio 2013 では、 **_stat** 関数ファミリでは問題が解決されましたが、 **fstat** 関数ファミリと **_utime** 関数ファミリでは修正されていませんでした。 この部分的な修正は、関数間の不整合による問題につながっていました。 **fstat** および **_utime** の関数ファミリは現在修正され、これらすべての関数が、正確かつ一貫して夏時間を処理できるようになりました。
 
 - **asctime**
 
@@ -303,7 +304,7 @@ COM インターフェイスまたは POD オブジェクトではないオブ�
 
    現在、CLOCKS_PER_SEC マクロは `clock_t` 型の整数に拡張されており、これは C 言語で必要です。
 
-#### <a name="c-standard-library"></a><a name="BK_STL"></a>C++ 標準ライブラリ
+#### <a name="c-standard-library"></a><a name="BK_STL"></a> C++ 標準ライブラリ
 
 新しい最適化とデバッグのチェックを有効にするために、C++ 標準ライブラリの Visual Studio の実装では、バイナリの互換性がバージョンごとに意図的に保たれていません。 そのため、C++ 標準ライブラリを使用すると、異なるバージョンを使用してコンパイルされたオブジェクト ファイルとスタティック ライブラリは 1 つのバイナリ (EXE または DLL) に混在させることができず、C++ 標準ライブラリ オブジェクトは異なるバージョンを使用してコンパイルされたバイナリ間で渡すことができません。 混在があると、_MSC_VER の不一致に関するリンカー エラーが発生します (_MSC_VER は、コンパイラのメジャーバージョンを含むマクロです。たとえば、Visual Studio 2013 の場合は1800です)。このチェックでは、DLL の混在を検出できず、Visual Studio 2008 以前のバージョンを含む混在を検出することはできません。
 
@@ -335,7 +336,7 @@ COM インターフェイスまたは POD オブジェクトではないオブ�
 
 - **std::allocator::deallocate**
 
-   Visual Studio 2013 以前では、`std::allocator::deallocate(p, n)` は、*n* に対して渡されていた引数を無視していました。  C++ 標準では常に、*p* を返した `allocate` の呼び出しに最初の引数として渡される値と *n* が同等である必要がありました。 ただし、現在のバージョンでは、 *n*の値は検査されます。 標準で必要なものとは異なる引数を *n* に渡すコードは、ランタイムにクラッシュする可能性があります。
+   Visual Studio 2013 以前では、`std::allocator::deallocate(p, n)` は、 *n* に対して渡されていた引数を無視していました。  C++ 標準では常に、 *p* を返した `allocate` の呼び出しに最初の引数として渡される値と *n* が同等である必要がありました。 ただし、現在のバージョンでは、 *n* の値は検査されます。 標準で必要なものとは異なる引数を *n* に渡すコードは、ランタイムにクラッシュする可能性があります。
 
 - **hash_map および hash_set**
 
@@ -389,11 +390,11 @@ COM インターフェイスまたは POD オブジェクトではないオブ�
 
 - **Microsoft Foundation Classes (MFC)**
 
-   はサイズが大きすぎるため、Visual Studio の "標準" インストールから除外されました。 MFC をインストールするには、Visual Studio 2015 セットアップで**カスタム** インストール オプションを選択します。 既に Visual Studio 2015 がインストールされている場合は、**Visual Studio** セットアップを再度実行して MFC をインストールできます。 **カスタム** インストール オプションを選択してから、**Microsoft Foundation Classes** を選択します。 **Visual Studio** セットアップの実行は、**コントロール パネル**のコントロールである**プログラムと機能**か、インストール メディアからすることができます。
+   はサイズが大きすぎるため、Visual Studio の "標準" インストールから除外されました。 MFC をインストールするには、Visual Studio 2015 セットアップで **カスタム** インストール オプションを選択します。 既に Visual Studio 2015 がインストールされている場合は、 **Visual Studio** セットアップを再度実行して MFC をインストールできます。 **カスタム** インストール オプションを選択してから、 **Microsoft Foundation Classes** を選択します。 **Visual Studio** セットアップの実行は、 **コントロール パネル** のコントロールである **プログラムと機能** か、インストール メディアからすることができます。
 
    Visual C++ 再頒布可能パッケージにも、引き続きこのライブラリが含まれています。
 
-#### <a name="concurrency-runtime"></a><a name="BK_ConcRT"></a>同時実行ランタイム
+#### <a name="concurrency-runtime"></a><a name="BK_ConcRT"></a> 同時実行ランタイム
 
 - **concurrency::Context::Yield と競合する Windows.h の Yield マクロ**
 
@@ -411,7 +412,7 @@ Visual Studio 2015 では、コンパイラの準拠に関する継続的な強�
 
 さいわい、これらの相違点は、ほとんどのソース コードにおいて、ほとんどまたは全く影響を与えません。 これらの相違点に対処するためにソース コードまたはその他の変更が必要な場合、修正は小さく簡単なものになる傾向があります。 以前は問題がなかったソース コードで、変更が必要な *(修正前の)* コード例と、正しい *(修正後の)* コード例を多数紹介します。
 
-これらの変更点はソース コードや他のビルド成果物に影響はあっても、Visual Studio の異なるバージョン間のバイナリの互換性には影響がありません。 *破壊的変更*はより重大で、バイナリの互換性に影響が及ぶ可能性がありますが、このようなバイナリの互換性に影響する変更は、Visual Studio 2013 と Visual Studio 2015 など、Visual Studio のメジャー バージョンが異なる場合にのみ発生します。 Visual Studio 2013 と Visual Studio 2015 の間の互換性に影響する変更点については、「[Visual Studio 2015 の準拠に関する変更](#VC_2015)」を参照してください。
+これらの変更点はソース コードや他のビルド成果物に影響はあっても、Visual Studio の異なるバージョン間のバイナリの互換性には影響がありません。 *破壊的変更* はより重大で、バイナリの互換性に影響が及ぶ可能性がありますが、このようなバイナリの互換性に影響する変更は、Visual Studio 2013 と Visual Studio 2015 など、Visual Studio のメジャー バージョンが異なる場合にのみ発生します。 Visual Studio 2013 と Visual Studio 2015 の間の互換性に影響する変更点については、「[Visual Studio 2015 の準拠に関する変更](#VC_2015)」を参照してください。
 
 - [Visual Studio 2015 の準拠の強化](#VS_RTM)
 
@@ -421,7 +422,7 @@ Visual Studio 2015 では、コンパイラの準拠に関する継続的な強�
 
 - [更新プログラム3の準拠の強化](#VS_Update3)
 
-### <a name="conformance-improvements-in-visual-studio-2015"></a><a name="VS_RTM"></a>Visual Studio 2015 での準拠の強化
+### <a name="conformance-improvements-in-visual-studio-2015"></a><a name="VS_RTM"></a> Visual Studio 2015 での準拠の強化
 
 - /Zc:forScope - オプション
 
@@ -431,7 +432,7 @@ Visual Studio 2015 では、コンパイラの準拠に関する継続的な強�
     Command line warning  D9035: option 'Zc:forScope-' has been deprecated and will be removed in a future release
     ```
 
-   このオプションは通常、標準ではスコープから外れるポイントの後のループ変数を使用する、非標準のコードを許可するために使用されていました。 これは `/Za` オプションを使ってコンパイルするときにのみ必要でした。`/Za` がない場合は、ループの後でも常に for ループ変数が使用できるからです。 標準への準拠を考慮しない場合 (たとえば、コードを他のコンパイラに移植しない場合)、`/Za` オプションをオフにする (または、**[言語拡張機能の無効化]** プロパティを **[いいえ]** に設定する) こともできます。 移植可能で標準に準拠したコードの記述を考慮する場合、標準に準拠するようコードを再記述する必要があります。そのためには、変数の宣言をループの外側に移動します。
+   このオプションは通常、標準ではスコープから外れるポイントの後のループ変数を使用する、非標準のコードを許可するために使用されていました。 これは `/Za` オプションを使ってコンパイルするときにのみ必要でした。`/Za` がない場合は、ループの後でも常に for ループ変数が使用できるからです。 標準への準拠を考慮しない場合 (たとえば、コードを他のコンパイラに移植しない場合)、`/Za` オプションをオフにする (または、 **[言語拡張機能の無効化]** プロパティを **[いいえ]** に設定する) こともできます。 移植可能で標準に準拠したコードの記述を考慮する場合、標準に準拠するようコードを再記述する必要があります。そのためには、変数の宣言をループの外側に移動します。
 
     ```cpp
     // C2065 expected
@@ -641,9 +642,9 @@ Visual Studio 2015 では、コンパイラの準拠に関する継続的な強�
 
 - **placement new と delete**
 
-   **`delete`** C++ 14 標準に準拠するために、演算子が変更されました。 標準の変更について詳しくは、「 [C++ サイズの割り当て解除](https://isocpp.org/files/papers/n3778.html)」をご覧ください。 変更により、サイズパラメーターを受け取るグローバル演算子のフォームが追加され **`delete`** ます。 互換性に影響する変更点として、以前に **`delete`** 同じシグネチャを持つ演算子を ( **placement new**演算子に対応するために) 使用していた場合、コンパイラエラー (C2956 は、配置 new が使用されている位置で発生します。これは、コンパイラが適切な一致演算子を識別しようとするコード内の位置であるためです **`delete`** )
+   **`delete`** C++ 14 標準に準拠するために、演算子が変更されました。 標準の変更について詳しくは、「 [C++ サイズの割り当て解除](https://isocpp.org/files/papers/n3778.html)」をご覧ください。 変更により、サイズパラメーターを受け取るグローバル演算子のフォームが追加され **`delete`** ます。 互換性に影響する変更点として、以前に **`delete`** 同じシグネチャを持つ演算子を ( **placement new** 演算子に対応するために) 使用していた場合、コンパイラエラー (C2956 は、配置 new が使用されている位置で発生します。これは、コンパイラが適切な一致演算子を識別しようとするコード内の位置であるためです **`delete`** )
 
-   関数 `void operator delete(void *, size_t)` は、C++11 の **placement new** 関数 `void * operator new(size_t, size_t)` に対応する **placement delete** 演算子でした。 C++ 14 サイズの割り当て解除では、この delete 関数は*通常の解放関数*(グローバル演算子) になりました **`delete`** 。 標準では、placement new の使用で対応する delete 関数を検索し、通常の解放関数を見つけた場合、プログラムの形式が不適切である必要があります。
+   関数 `void operator delete(void *, size_t)` は、C++11 の **placement new** 関数 `void * operator new(size_t, size_t)` に対応する **placement delete** 演算子でした。 C++ 14 サイズの割り当て解除では、この delete 関数は *通常の解放関数* (グローバル演算子) になりました **`delete`** 。 標準では、placement new の使用で対応する delete 関数を検索し、通常の解放関数を見つけた場合、プログラムの形式が不適切である必要があります。
 
    たとえば、コードで **placement new** と **placement delete** の両方を定義するとします。
 
@@ -652,17 +653,17 @@ Visual Studio 2015 では、コンパイラの準拠に関する継続的な強�
     void operator delete(void*, std::size_t) noexcept;
     ```
 
-   この問題が発生するのは、定義した**placement delete**演算子と新しいグローバルサイズ演算子の間の関数シグネチャが一致したため **`delete`** です。 別の型を使用できるかどうかを検討してください、 `size_t` **配置の新しい**と **`delete`** 演算子。 の型 `size_t` **`typedef`** はコンパイラに依存しており、MSVC の **`typedef`** のです **`unsigned int`** 。 適切なソリューションでは、次のように列挙型を使用します。
+   この問題が発生するのは、定義した **placement delete** 演算子と新しいグローバルサイズ演算子の間の関数シグネチャが一致したため **`delete`** です。 別の型を使用できるかどうかを検討してください、 `size_t` **配置の新しい** と **`delete`** 演算子。 の型 `size_t` **`typedef`** はコンパイラに依存しており、MSVC の **`typedef`** のです **`unsigned int`** 。 適切なソリューションでは、次のように列挙型を使用します。
 
     ```cpp
     enum class my_type : size_t {};
     ```
 
-   次に、 **placement new**の定義を変更し、 **`delete`** この型をの代わりに2番目の引数として使用するように変更し `size_t` ます。 また、placement new の呼び出しを更新して新しい型を渡す (たとえば、を使用して `static_cast<my_type>` 整数値から変換する) 必要があります。また、との定義を更新し、 **`new`** **`delete`** 整数型にキャストバックする必要もあります。 このためにを使用する必要はありません **`enum`** 。メンバーを持つクラス型 `size_t` も機能します。
+   次に、 **placement new** の定義を変更し、 **`delete`** この型をの代わりに2番目の引数として使用するように変更し `size_t` ます。 また、placement new の呼び出しを更新して新しい型を渡す (たとえば、を使用して `static_cast<my_type>` 整数値から変換する) 必要があります。また、との定義を更新し、 **`new`** **`delete`** 整数型にキャストバックする必要もあります。 このためにを使用する必要はありません **`enum`** 。メンバーを持つクラス型 `size_t` も機能します。
 
-   代わりの方法として、**placement new** を完全に除去することもできます。 配置の引数が割り当てまたは削除されるオブジェクトのサイズであるメモリプールを実装するために、**配置の新しい**機能が使用されている場合、サイズの割り当て解除機能は、独自のカスタムメモリプールコードを置き換えるのに適しています。また、配置関数の代わりに独自の2つの引数演算子を使用することもでき **`delete`** ます。
+   代わりの方法として、 **placement new** を完全に除去することもできます。 配置の引数が割り当てまたは削除されるオブジェクトのサイズであるメモリプールを実装するために、 **配置の新しい** 機能が使用されている場合、サイズの割り当て解除機能は、独自のカスタムメモリプールコードを置き換えるのに適しています。また、配置関数の代わりに独自の2つの引数演算子を使用することもでき **`delete`** ます。
 
-   コードを即時に更新しない場合は、コンパイラ オプション `/Zc:sizedDealloc-` を使用して、従来の動作に戻すことができます。 このオプションを使用すると、2つの引数を持つ delete 関数は存在せず、 **placement delete**演算子との競合は発生しません。
+   コードを即時に更新しない場合は、コンパイラ オプション `/Zc:sizedDealloc-` を使用して、従来の動作に戻すことができます。 このオプションを使用すると、2つの引数を持つ delete 関数は存在せず、 **placement delete** 演算子との競合は発生しません。
 
 - **共用体データ メンバー**
 
@@ -1106,7 +1107,7 @@ Visual Studio 2015 では、コンパイラの準拠に関する継続的な強�
 
 - **文字列リテラルは定数配列である**
 
-   次のコードに対しては、"C2664: 'void f(void *)': 引数 1 を 'const char (*)[2]' から 'void *' へ変換できません" が発生します。
+   次のコードに対しては、"C2664: 'void f(void *)': 引数 1 を 'const char (* )[2]' から 'void *' へ変換できません" が発生します。
 
     ```cpp
     void f(void *);
@@ -1215,7 +1216,7 @@ Visual Studio 2015 では、コンパイラの準拠に関する継続的な強�
 
    コードを修正するには、catch ブロックを `catch (const D &)` に変更してもかまいませんが、一般にもっとよい解決策は、MFC TRY/CATCH マクロを使うことです。
 
-- **`alignof`はキーワードになりました**
+- **`alignof` はキーワードになりました**
 
    次のコードに対しては、エラー C2332: "'class': タグ名がありません" が発生するようになりました。 コードを修正するには、クラスの名前を変更する必要があります。また、クラスがと同じ作業を実行している場合は、 **`alignof`** クラスを new キーワードに置き換えるだけです。
 
@@ -1223,7 +1224,7 @@ Visual Studio 2015 では、コンパイラの準拠に関する継続的な強�
     class alignof{}
     ```
 
-- **`constexpr`はキーワードになりました**
+- **`constexpr` はキーワードになりました**
 
    次のコードに対しては、エラー C2059: "構文エラー: ')'" が発生するようになりました。 コードを修正するには、呼び出される関数または変数の名前の名前を変更する必要があり **`constexpr`** ます。
 
@@ -1496,7 +1497,7 @@ Visual Studio 2015 では、コンパイラの準拠に関する継続的な強�
 
    このエラーを解決するには、`S2` でコンストラクターから `S1()` の呼び出しを削除し、必要がある場合は別の関数に配置します。
 
-- **{}ポインターへの変換を禁止します**
+- **{} ポインターへの変換を禁止します**
 
    次のコードに対しては、C2439: "'S::p': 指定されたメンバーは初期化できません" が発生するようになりました。
 
@@ -1739,7 +1740,7 @@ Visual Studio 2015 では、コンパイラの準拠に関する継続的な強�
     }
     ```
 
-   \- - または -
+   \- または
 
     ```cpp
     class base;  // as above
@@ -1775,9 +1776,9 @@ Visual Studio 2015 では、コンパイラの準拠に関する継続的な強�
 
    また、コンパイラは特定の診断を提供しませんが、インライン演算子 **`new`** は不適切な形式と見なされます。
 
-- **非クラス型で 'operator *type*()' (ユーザー定義の変換) を呼び出す**
+- **非クラス型で 'operator *type* ()' (ユーザー定義の変換) を呼び出す**
 
-   以前のバージョンのコンパイラでは 'operator *type*()' を非クラス型で呼び出すことが許可されていましたが、それは何の警告もなく無視されていました。 この従来の動作のせいで、問題のあるコードが警告なしに生成される危険性が生じ、結果として、予期しないランタイム動作の原因となっていました。 コンパイラはこの方法で記述されたコードを受け入れなくなりました。代わりにコンパイラ エラー C2228 を発行します。
+   以前のバージョンのコンパイラでは 'operator *type* ()' を非クラス型で呼び出すことが許可されていましたが、それは何の警告もなく無視されていました。 この従来の動作のせいで、問題のあるコードが警告なしに生成される危険性が生じ、結果として、予期しないランタイム動作の原因となっていました。 コンパイラはこの方法で記述されたコードを受け入れなくなりました。代わりにコンパイラ エラー C2228 を発行します。
 
     ```Output
     error C2228: left of '.operator type' must have class/struct/union
@@ -2292,7 +2293,7 @@ Visual Studio 2015 では、コンパイラの準拠に関する継続的な強�
     };
     ```
 
-- **`volatile`****メンバー変数は、暗黙的に定義されたコンストラクターと代入演算子を防ぎ**ます
+- **`volatile`****メンバー変数は、暗黙的に定義されたコンストラクターと代入演算子を防ぎ** ます
 
    以前のバージョンのコンパイラでは、メンバー変数を持つクラスで、 **`volatile`** 既定のコピー/移動コンストラクターと既定のコピー/移動代入演算子が自動的に生成されるようになりました。 この従来の動作は正しい動作ではなく、C++ 標準に準拠していません。 コンパイラは、メンバー変数を持つクラスが重要な構築および代入演算子を持つことを認識するようになりました。これに **`volatile`** より、これらの演算子の既定の実装が自動的に生成されるのを防ぐことができます。 そのようなクラスが共用体 (またはクラス内の匿名共用体) のメンバーである場合は、共用体のコピー/移動コンストラクターとコピー/移動代入演算子 (または匿名共用体を含むクラス) は、暗黙的に削除済みとして定義されます。 明示的に定義することなく、共用体 (または無名共用体を含むクラス) を構築またはコピーしようとするとエラーとなり、結果として、コンパイラはコンパイラ エラー C2280 を発行します。
 
@@ -2706,7 +2707,7 @@ Visual Studio 2015 では、コンパイラの準拠に関する継続的な強�
 
 ### <a name="compiler"></a>コンパイラ
 
-- **Final**キーワードは、以前にコンパイルされた未解決のシンボルエラーを生成するようになりました。
+- **Final** キーワードは、以前にコンパイルされた未解決のシンボルエラーを生成するようになりました。
 
     ```cpp
     struct S1 {
@@ -2942,7 +2943,7 @@ Visual Studio 2013 の C++ コンパイラは、Visual Studio 2010 で実装さ�
 
 - `reference_wrapper`、`ref()`、および `cref()` は、一時オブジェクトへのバインディングを禁止するようになります。
 
-- \<random>では、コンパイル時の事前条件が厳密に適用されるようになりました。
+- \<random> では、コンパイル時の事前条件が厳密に適用されるようになりました。
 
 - さまざまな C++ 標準ライブラリ型の特徴は、"T は完全な型であるものとする" という事前条件を持つことです。 コンパイラは、この事前条件をより厳密に実装するようになりましたが、あらゆる状況でこのことを強制するとは限りません。 (C++ 標準ライブラリ事前条件に違反すると、未定義の動作がトリガーされるため、標準では、強制を保証していません)。
 
@@ -2962,7 +2963,7 @@ Visual Studio 2013 の C++ コンパイラは、Visual Studio 2010 で実装さ�
 
 ### <a name="mfc-and-atl"></a>MFC と ATL
 
-- **Visual Studio 2013 のみ**: Unicode が広く使用されていて、MBCS の使用が大幅に拒否されたため、MFC MBCS ライブラリは Visual Studio に含まれていません。 この変更により、新しいコントロールとメッセージの多くは Unicode 専用になったため、MFC は Windows SDK 自体により緊密に整合するようになりました。 ただし、MFC MBCS ライブラリを引き続き使用する必要がある場合は、Microsoft ダウンロードセンターの「 [Visual Studio 2013 用のマルチバイト MFC ライブラリ](https://www.microsoft.com/download/details.aspx?id=40770)」からダウンロードできます。 Visual C++ 再頒布可能パッケージにも、引き続きこのライブラリが含まれています。  (注: MBCS DLL は Visual Studio 2015 以降の C++ セットアップ コンポーネントに含まれています。)
+- **Visual Studio 2013 のみ** : Unicode が広く使用されていて、MBCS の使用が大幅に拒否されたため、MFC MBCS ライブラリは Visual Studio に含まれていません。 この変更により、新しいコントロールとメッセージの多くは Unicode 専用になったため、MFC は Windows SDK 自体により緊密に整合するようになりました。 ただし、MFC MBCS ライブラリを引き続き使用する必要がある場合は、Microsoft ダウンロードセンターの「 [Visual Studio 2013 用のマルチバイト MFC ライブラリ](https://www.microsoft.com/download/details.aspx?id=40770)」からダウンロードできます。 Visual C++ 再頒布可能パッケージにも、引き続きこのライブラリが含まれています。  (注: MBCS DLL は Visual Studio 2015 以降の C++ セットアップ コンポーネントに含まれています。)
 
 - MFC リボンのアクセシビリティが変更されました。  1 レベルのアーキテクチャではなく、階層的なアーキテクチャが用意されました。 `CRibbonBar::EnableSingleLevelAccessibilityMode()` を呼び出して、引き続き古い動作を使用することもできます。
 
@@ -3266,7 +3267,7 @@ Visual Studio 2013 の C++ コンパイラは、Visual Studio 2010 で実装さ�
 
 - アプリケーションの終了ダイアログ ボックスで、アプリケーションは終了しなくなります。 以前のリリースでは、`abort()` または `terminate()` 関数でアプリケーションの製品版ビルドを閉じると、C ランタイム ライブラリのコンソール ウィンドウまたはダイアログ ボックスにアプリケーションの終了メッセージが表示されていました。 メッセージの一部を引用すると、"このアプリケーションは、通常と異なる方法でランタイムにアプリケーションを中止するように要求しました。 詳細については、アプリケーションのサポート チームに問い合わせてください" と表示されていました。 Windows によって現在の終了ハンドラー (通常は Windows エラー報告 (ワトソン博士) ダイアログボックスまたは Visual Studio デバッガー) が表示されたため、アプリケーション終了メッセージは冗長でした。 Visual Studio 2010 以降、C ランタイム ライブラリではこのメッセージが表示されなくなりました。 また、ランタイムでは、デバッガーの起動前にアプリケーションが終了しなくなりました。 アプリケーションの終了メッセージの以前の動作に依存している場合にのみ、これは互換性に影響する変更です。
 
-- 特に Visual Studio 2010 では、IntelliSense は C++/CLI コードまたは属性に使用できません。[**すべての参照の検索**] はローカル変数には使用できません。また、コード モデルでは、インポートしたアセンブリから型名を取得したり、型を完全修飾名に解決したりすることはできません。
+- 特に Visual Studio 2010 では、IntelliSense は C++/CLI コードまたは属性に使用できません。[ **すべての参照の検索** ] はローカル変数には使用できません。また、コード モデルでは、インポートしたアセンブリから型名を取得したり、型を完全修飾名に解決したりすることはできません。
 
 ### <a name="libraries"></a>ライブラリ
 
@@ -3408,25 +3409,25 @@ Visual Studio 2013 の C++ コンパイラは、Visual Studio 2010 で実装さ�
 
 - MFC ダイアログのコントロールのタブ オーダー: タブ オーダーに MFC ActiveX コントロールが挿入されている場合、MFC ダイアログに含まれる複数のコントロールは正しいタブ オーダーになりません。 今回の変更で、この問題は解決します。
 
-   たとえば、ActiveX コントロールといくつかの編集コントロールがある MFC ダイアログ アプリケーションを作成します。 ActiveX コントロールを編集コントロールのタブ オーダーの中間に配置します。 アプリケーションを起動して、タブオーダーが ActiveX コントロールの後にある編集コントロールをクリックし、次に tab キーを押します。この変更を行う前に、タブオーダーの次の編集コントロールではなく、ActiveX コントロールの次の編集コントロールにフォーカスを移動します。
+   たとえば、ActiveX コントロールといくつかの編集コントロールがある MFC ダイアログ アプリケーションを作成します。 ActiveX コントロールを編集コントロールのタブ オーダーの中間に配置します。 アプリケーションを起動し、タブオーダーが ActiveX コントロールの後にある編集コントロールをクリックして、tab キーを押します。この変更を行う前は、タブオーダーの次の編集コントロールではなく、ActiveX コントロールの次の編集コントロールにフォーカスが移動しました。
 
-- `CFileDialog`クラス: クラスのカスタムテンプレート `CFileDialog` を Windows Vista に自動的に移植することはできません。 使用することはできますが、Windows Vista スタイルのダイアログの機能や外観を追加することはできません。
+- `CFileDialog` クラス: クラスのカスタムテンプレート `CFileDialog` を Windows Vista に自動的に移植することはできません。 使用することはできますが、Windows Vista スタイルのダイアログの機能や外観を追加することはできません。
 
 - `CWnd` クラスと `CFrameWnd` クラス: `CWnd::GetMenuBarInfo` メソッドは削除されました。
 
-   `CFrameWnd::GetMenuBarInfo` メソッドは仮想メソッドではなくなりました。 詳細については、Windows SDK の **GetMenuBarInfo 関数**を参照してください。
+   `CFrameWnd::GetMenuBarInfo` メソッドは仮想メソッドではなくなりました。 詳細については、Windows SDK の **GetMenuBarInfo 関数** を参照してください。
 
 - MFC ISAPI のサポート: MFC は、Internet Server Application Programming Interface (ISAPI) を使用したアプリケーションのビルドをサポートしなくなりました。 ISAPI アプリケーションをビルドするには、ISAPI 拡張機能を直接呼び出してください。
 
-- 非推奨になった ANSI API: ANSI バージョンの一部の MFC メソッドは非推奨になりました。 今後のアプリケーションでは、これらのメソッドの Unicode バージョンを使用してください。 詳細については、「**Windows Vista コモン コントロールの作成要件**」を参照してください。
+- 非推奨になった ANSI API: ANSI バージョンの一部の MFC メソッドは非推奨になりました。 今後のアプリケーションでは、これらのメソッドの Unicode バージョンを使用してください。 詳細については、「 **Windows Vista コモン コントロールの作成要件** 」を参照してください。
 
 ## <a name="visual-studio-2005-breaking-changes"></a>Visual Studio 2005 の重要な変更点
 
 ### <a name="crt"></a>CRT
 
-- 多くの関数は非推奨になりました。 「**Deprecated CRT Functions**」(非推奨の CRT 関数) を参照してください。
+- 多くの関数は非推奨になりました。 「 **Deprecated CRT Functions** 」(非推奨の CRT 関数) を参照してください。
 
-- 多くの関数はパラメーターを検証し、パラメーターが無効な場合は実行を停止するようになりました。 無効なパラメーターを渡しているコードで、無効なパラメーターを無視するか単にエラー コードを返すだけの関数に依存しているコードの場合、この検証によってコードに障害を起こす可能性があります。 「**Parameter Validation**」(パラメーターの検証) を参照してください。
+- 多くの関数はパラメーターを検証し、パラメーターが無効な場合は実行を停止するようになりました。 無効なパラメーターを渡しているコードで、無効なパラメーターを無視するか単にエラー コードを返すだけの関数に依存しているコードの場合、この検証によってコードに障害を起こす可能性があります。 「 **Parameter Validation** 」(パラメーターの検証) を参照してください。
 
 - ファイル記述子の値 -2 は、出力に `stdout` と `stderr` を使用できないことを示すために使用されるようになりました。たとえば、コンソール ウィンドウがない Windows アプリケーションで使用されます。 以前に使用されていた値は -1 でした。 詳細については、「[_fileno](../c-runtime-library/reference/fileno.md)」を参照してください
 
@@ -3490,9 +3491,9 @@ Visual Studio 2013 の C++ コンパイラは、Visual Studio 2010 で実装さ�
 
 - 静的データ メンバーは派生クラスを使って初期化できません ([コンパイラ エラー C2477](../error-messages/compiler-errors-1/compiler-error-c2477.md))。
 
-- の初期化が **`typedef`** 標準で許可されていないため、コンパイラエラー ([コンパイラエラー C2513](../error-messages/compiler-errors-2/compiler-error-c2513.md)) が生成されるようになりました。
+- の初期化が **`typedef`** 標準で許可されていないため、コンパイラエラー ( [コンパイラエラー C2513](../error-messages/compiler-errors-2/compiler-error-c2513.md)) が生成されるようになりました。
 
-- **`bool`** は、適切な型 ([コンパイラエラー C2632](../error-messages/compiler-errors-2/compiler-error-c2632.md)) になりました。
+- **`bool`** は、適切な型 ( [コンパイラエラー C2632](../error-messages/compiler-errors-2/compiler-error-c2632.md)) になりました。
 
 - オーバーロードされた演算子がある場合、UDC であいまいさが生じるようになりました ([C2666](../error-messages/compiler-errors-2/compiler-error-c2666.md))。
 

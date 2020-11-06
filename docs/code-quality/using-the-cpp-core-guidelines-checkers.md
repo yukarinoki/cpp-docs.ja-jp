@@ -5,12 +5,12 @@ ms.date: 07/27/2020
 ms.topic: conceptual
 dev_langs:
 - CPP
-ms.openlocfilehash: a041ecd4053360ebfc0da198efe9a3decb73ffd2
-ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
+ms.openlocfilehash: 4fb06b0f78c93e6b76e0b8d64d7dfbdc541cf299
+ms.sourcegitcommit: 12eb6a824dd7187a065d44fceca4c410f58e121e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "92924786"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "94334144"
 ---
 # <a name="use-the-c-core-guidelines-checkers"></a>C++ Core ガイドライン チェッカーの使用
 
@@ -67,7 +67,7 @@ Microsoft ネイティブ推奨規則セットには、C++ Core Check の規則�
 
 ::: moniker-end
 
-## <a name="examples"></a>例
+## <a name="examples"></a>使用例
 
 C++ Core Check の規則によって検出される可能性のあるいくつかの問題の例を次に示します。
 
@@ -130,7 +130,7 @@ C++ Core Guidelines は、より適切で安全なコードを記述するのに
 
 - **列挙規則** : これらの規則は [、C++ Core Guidelines からの列挙型関連のチェックを](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#S-enum)適用します。 <sup>16.3</sup>
 
-- **試験** 的な規則これらは試験的な C++ Core Check ルールであり、日常的に使用するのに便利ですが、準備はできません。 試してみて、フィードバックをお [寄せ](https://developercommunity.visualstudio.com/content/idea/post.html?space=62)ください。<sup>16.0</sup>
+- **試験** 的な規則これらは試験的な C++ Core Check ルールであり、日常的に使用するのに便利ですが、準備はできません。 試してみて、フィードバックをお [寄せ](https://aka.ms/feedback/suggest?space=62)ください。<sup>16.0</sup>
 
 - **関数の規則** : 指定子の導入に役立つ2つのチェックを行い **`noexcept`** ます。 これらは、 [関数の設計と実装を明確](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#S-functions)にするためのガイドラインに含まれています。<sup>15.5</sup>
 
@@ -334,6 +334,6 @@ Visual Studio 2015 を使用する場合、C++ Core Check コード分析規則�
 
 ::: moniker-end
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 
 - [Visual Studio C++ Core Check リファレンス](code-analysis-for-cpp-corecheck.md)
