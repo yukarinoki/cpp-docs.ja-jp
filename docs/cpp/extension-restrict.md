@@ -1,38 +1,38 @@
 ---
-title: __restrict
-ms.date: 10/10/2018
+title: '`__restrict`'
+description: Microsoft Visual C++ キーワードについて説明し `__restrict` ます。
+ms.date: 11/6/2020
 f1_keywords:
 - __restrict_cpp
 - __restrict
 - _restrict
 helpviewer_keywords:
 - __restrict keyword [C++]
-ms.assetid: 2d151b4d-f930-49df-bd16-d8757ec7fa83
-ms.openlocfilehash: 6318e6d78f6c4c4bb6827a79d26bca028dfe3f3f
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: f23574f49712928e0095f29a3b88b0c05b185eab
+ms.sourcegitcommit: 3f0c1dcdcce25865d1a1022bcc5b9eec79f69025
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87233744"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94381572"
 ---
-# <a name="__restrict"></a>__restrict
+# `__restrict`
 
-**__Declspec ( [restrict](../cpp/restrict.md) )** 修飾子と同様に、 **`__restrict`** キーワードは、現在のスコープでシンボルがエイリアス化されていないことを示します。 キーワードは、 **`__restrict`** 修飾子と `__declspec ( restrict )` 次の点で異なります。
+**`__declspec` ( [`restrict`](../cpp/restrict.md) )** 修飾子と同様に、 **`__restrict`** キーワード (2 つの先頭のアンダースコア ' _ ') は、現在のスコープでシンボルがエイリアス化されていないことを示します。 キーワードは、 **`__restrict`** 修飾子と `__declspec (restrict)` 次の点で異なります。
 
-- **`__restrict`** キーワードは変数でのみ有効で、 `__declspec ( restrict )` 関数の宣言と定義でのみ有効です。
+- **`__restrict`** キーワードは変数でのみ有効で、 `__declspec (restrict)` 関数の宣言と定義でのみ有効です。
 
-- **`__restrict`** は C99 仕様のと似 **`restrict`** ていますが、 **`__restrict`** C++ または C プログラムで使用できます。
+- **`__restrict`** は [`restrict`](../c-language/type-qualifiers.md#restrict) 、C99 で始まる C のと似ていますが、 **`__restrict`** C++ と C プログラムの両方で使用できます。
 
-- を使用した場合 **`__restrict`** 、コンパイラは変数のエイリアスなしのプロパティを伝達しません。 つまり、変数を非変数に割り当てた場合で **`__restrict`** **`__restrict`** も、コンパイラは非 __restrict 変数に別名を付けることができます。 これは、C99 仕様のキーワードの動作とは異なり **`restrict`** ます。
+- を使用した場合 **`__restrict`** 、コンパイラは変数のエイリアスなしのプロパティを反映しません。 つまり、変数を非変数に割り当てた場合で **`__restrict`** **`__restrict`** も、コンパイラは非 __restrict 変数に別名を付けることができます。 これは、C99 C 言語キーワードの動作とは異なり **`restrict`** ます。
 
-一般に、関数全体の動作に影響を及ぼす場合、キーワードよりも `__declspec ( restrict )` を使用する方が適切です。
+一般に、関数全体の動作に影響を与える場合は、キーワードの代わりにを使用し **`__declspec (restrict)`** ます。
 
-以前のバージョンとの互換性 **_restrict**を維持するために、 **`__restrict`** コンパイラオプションの [ [ \( 言語拡張を無効にする](../build/reference/za-ze-disable-language-extensions.md)] が指定されていない場合、_restrict はのシノニムになります。
+以前のバージョンとの互換性のために、 **`_restrict`** **`__restrict`** コンパイラオプションの [ [ `/Za` \( 言語拡張を無効にする](../build/reference/za-ze-disable-language-extensions.md)] が指定されていない場合、はのシノニムになります。
 
 Visual Studio 2015 以降では、を **`__restrict`** C++ 参照で使用できます。
 
 > [!NOTE]
-> [Volatile](../cpp/volatile-cpp.md)キーワードも含む変数で使用すると、 **`volatile`** が優先されます。
+> キーワードも含む変数で使用すると [`volatile`](../cpp/volatile-cpp.md) 、 **`volatile`** が優先されます。
 
 ## <a name="example"></a>例
 

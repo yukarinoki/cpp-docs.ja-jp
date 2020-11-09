@@ -14,12 +14,12 @@ helpviewer_keywords:
 - preprocessor, pragmas
 - pragma directives (#pragma)
 ms.assetid: 9867b438-ac64-4e10-973f-c3955209873f
-ms.openlocfilehash: bf4bbdcf74808edd8ef54149f8258f47bd94c600
-ms.sourcegitcommit: 4abc6c4c9694f91685cfd77940987e29a51e3143
+ms.openlocfilehash: 784cd413b6b81033c9e49b22d979ece72e5ee101
+ms.sourcegitcommit: 3f0c1dcdcce25865d1a1022bcc5b9eec79f69025
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93238409"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94381546"
 ---
 # <a name="pragma-directives-and-the-__pragma-keyword"></a>プラグマ ディレクティブと __pragma キーワード
 
@@ -30,7 +30,7 @@ ms.locfileid: "93238409"
 > **#`pragma`***トークン-文字列*\
 > **`__pragma(`***トークン-文字列* **`)`** 2つの先頭のアンダースコア-Microsoft 固有の拡張 **`_Pragma(`** *文字列-リテラル* **`)`** //C99
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>Remarks
 
 C および C++ の各実装は、そのホスト コンピューターまたはオペレーティング システムに固有の機能をいくつかサポートしています。 たとえば、一部のプログラムでは、メモリ内のデータの場所を正確に制御したり、特定の関数がパラメーターを受け取る方法を制御したりする必要があります。 **#Pragma** ディレクティブは、C および C++ 言語との全体的な互換性を維持しながら、各コンパイラがコンピューターおよびオペレーティングシステム固有の機能を提供する手段を提供します。
 
@@ -148,7 +148,7 @@ return _hr; \
 文字列リテラルは、ステートメントの後に記述する場合と同じにする必要があり *`#pragma`* ます。 次に例を示します。
 
 ```c
-#pragma message("--the #pragma way")
+#pragma message("the #pragma way")
 _Pragma ("message( \"the _Pragma way\")") 
 ```
 

@@ -5,16 +5,16 @@ helpviewer_keywords:
 - value struct
 - value class
 ms.assetid: 262a0992-9721-4c02-8297-efc07d90e5a4
-ms.openlocfilehash: 3350af722993d6b23efa3dc9dbd5a7c33ee5165b
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 15d54d139f086ce5bb025aaeab145c71d33903c0
+ms.sourcegitcommit: 3f0c1dcdcce25865d1a1022bcc5b9eec79f69025
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87214946"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94381598"
 ---
 # <a name="value-classes-and-structs-ccx"></a>値クラスと構造体 (C++/CX)
 
-*値構造体*または*値クラス*は、WINDOWS ランタイム互換性のあるポッド ("plain old data structure") です。 これは、サイズが固定され、フィールドだけで構成されています。ref クラスとは異なり、プロパティはありません。
+*値構造体* または *値クラス* は、WINDOWS ランタイム互換性のあるポッド ("plain old data structure") です。 これは、サイズが固定され、フィールドだけで構成されています。ref クラスとは異なり、プロパティはありません。
 
 次の例で、値構造体の宣言および初期化の方法について説明します。
 
@@ -48,11 +48,11 @@ ms.locfileid: "87214946"
     ts3.str = "Another way to init a value struct.";
 ```
 
-値型の変数を別の変数に代入すると、2 つの変数がそれぞれ独自にデータのコピーを持つように値がコピーされます。 *値構造体*は、パブリックデータフィールドのみを含み、キーワードを使用して宣言される固定サイズの構造体です **`value struct`** 。
+値型の変数を別の変数に代入すると、2 つの変数がそれぞれ独自にデータのコピーを持つように値がコピーされます。 *値構造体* は、パブリックデータフィールドのみを含み、キーワードを使用して宣言される固定サイズの構造体です **`value struct`** 。
 
-*値クラス*はと同様ですが、 **`value struct`** フィールドにパブリックアクセシビリティを明示的に指定する必要がある点が異なります。 キーワードを使用して宣言さ **`value class`** れています。
+*値クラス* はと同様ですが、 **`value struct`** フィールドにパブリックアクセシビリティを明示的に指定する必要がある点が異なります。 キーワードを使用して宣言さ **`value class`** れています。
 
-値の構造体または値クラスは、フィールドとしてのみ、基本数値型、列挙型クラス、 `Platform::String^` 、または[Platform:: ibox \<T> ^ ](../cppcx/platform-ibox-interface.md)を含むことができます。ここで、T は数値型または列挙型クラスまたは値クラスまたは構造体です。 `IBox<T>^`フィールドは値を持つことができ **`nullptr`** ます。これは、C++ が*null 許容値型*の概念を実装する方法です。
+値の構造体または値クラスは、フィールドとしてのみ、基本数値型、列挙型クラス、 `Platform::String^` 、または[Platform:: ibox \<T> ^ ](../cppcx/platform-ibox-interface.md)を含むことができます。ここで、T は数値型または列挙型クラスまたは値クラスまたは構造体です。 `IBox<T>^`フィールドは値を持つことができ **`nullptr`** ます。これは、C++ が *null 許容値型* の概念を実装する方法です。
 
 `Platform::String^` 型または `IBox<T>^` 型をメンバーとして含む値クラスまたは値構造体は、 `memcpy`可能ではありません。
 
@@ -64,7 +64,7 @@ ms.locfileid: "87214946"
 
 ## <a name="parameter-passing-for-value-types"></a>値型のパラメーターの引き渡し
 
-値の型を関数パラメーターまたはメソッド パラメーターとして持っている場合、通常、値によって渡されます。 大きなオブジェクトの場合、パフォーマンスの問題が生じる可能性があります。 Visual Studio2013 以前では、C++/CX の値の型は値によって渡されていました。 Visual Studio 2015 以降では、参照または値によって値の型を渡すことができます。
+値の型を関数パラメーターまたはメソッド パラメーターとして持っている場合、通常、値によって渡されます。 大きなオブジェクトの場合、パフォーマンスの問題が生じる可能性があります。 Visual Studio 2013 以前では、C++/CX の値型は常に値によって渡されました。 Visual Studio 2015 以降では、参照または値によって値の型を渡すことができます。
 
 値によって値の型を渡すパラメーターを宣言するには、次のようなコードを使用します。
 
