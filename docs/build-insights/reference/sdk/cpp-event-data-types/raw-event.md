@@ -1,6 +1,6 @@
 ---
-title: クラス
-description: C++ ビルド インサイト SDK RawEvent クラスリファレンス。
+title: RawEvent クラス
+description: C++ Build Insights SDK の RawEvent クラスのリファレンス。
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 83629457ac3a0d1f991f6b084af2f3400612b2ac
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
-ms.translationtype: MT
+ms.openlocfilehash: 1cf96e1b8eadaf1de9fe2cf565a993f3bcafe358
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81324384"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92920464"
 ---
-# <a name="rawevent-class"></a>クラス
+# <a name="rawevent-class"></a>RawEvent クラス
 
-::: moniker range="<=vs-2015"
+::: moniker range="<=msvc-140"
 
-C++ ビルド インサイト SDK は、Visual Studio 2017 以降と互換性があります。 これらのバージョンのドキュメントを参照するには、この記事の Visual Studio**バージョン**セレクター コントロールを Visual Studio 2017 または Visual Studio 2019 に設定します。 このページの目次の上部に表示されます。
+C++ Build Insights SDK は、Visual Studio 2017 以降と互換性があります。 これらのバージョンのドキュメントを表示するには、この記事の Visual Studio **Version** セレクター コントロールを Visual Studio 2017 または Visual Studio 2019 に設定します。 このページの目次の一番上にあります。
 
 ::: moniker-end
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 
-クラス`RawEvent`は、[イベントスタック](event-stack.md)内の一般的なイベントを表すために使用されます。
+`RawEvent` クラスは、[EventStack](event-stack.md) の一般的なイベントを表すために使用されます。
 
 ## <a name="syntax"></a>構文
 
@@ -63,42 +63,42 @@ public:
 
 ## <a name="remarks"></a>解説
 
-クラス内のいくつかのメンバー関数`RawEvent`は、ティック数を返します。 C++ ビルドインサイトは、ティックのソースとして Windows のパフォーマンス カウンターを使用します。 ティック数は、秒のような時間単位に変換するためにティック周波数と一緒に使用する必要があります。 メンバー`TickFrequency`関数は、ティック周波数を取得するために呼び出されるかもしれません。 ティックを時間単位に変換する方法の例については[、EVENT_DATA](../c-event-data-types/event-data-struct.md#tick-conversion-example)ページを参照してください。
+`RawEvent` クラスのいくつかのメンバー関数からは、ティック数が返されます。 C++ Build Insights では、ティックのソースとして Window のパフォーマンス カウンターが使用されます。 ティック数をティック周波数と共に使用して、秒などの時間単位に変換する必要があります。 `TickFrequency` メンバー関数を呼び出して、ティック周波数を取得できます。 ティック数を時間単位に変換する方法の例については、[EVENT_DATA](../c-event-data-types/event-data-struct.md#tick-conversion-example) に関するページを参照してください。
 
-自分でティックを変換しない場合、`RawEvent`クラスは時間の値をナノ秒単位で返すメンバー関数を提供します。 標準の C++`chrono`ライブラリを使用して、ナノ秒を他の時間単位に変換します。
+ティック数を自分で変換したくない場合は、`RawEvent` クラスに、時間の値をナノ秒単位で返すメンバー関数が用意されています。 ナノ秒単位を他の時間単位に変換するには、C++ の標準 `chrono` ライブラリを使用します。
 
 ## <a name="members"></a>メンバー
 
-### <a name="constructor"></a>Constructor
+### <a name="constructor"></a>コンストラクター
 
-[生のイベント](#raw-event)
+[RawEvent](#raw-event)
 
-### <a name="functions"></a>関数
+### <a name="functions"></a>機能
 
-[CPUティック](#cpu-ticks)\
-[CPUタイム](#cpu-time)\
+[CPUTicks](#cpu-ticks)\
+[CPUTime](#cpu-time)\
 [データ](#data)\
-[期間](#duration)\
+[Duration](#duration)\
 [EventId](#event-id)
-[イベント](#event-instance-id)
-[Id イベント名](#event-name)\
-[イベントワイドネーム](#event-wide-name)\
-[排他的なCPUティック](#exclusive-cpu-ticks)\
-[排他 CPU タイム](#exclusive-cpu-time)\
-[エクスクルーシブ期間](#exclusive-duration)\
-[エクスクルーシブ・デュレーション・ティック](#exclusive-duration-ticks)\
-[エクスクルーシブウォールクロックタイム責任](#exclusive-wall-clock-time-responsibility)\
-[排他的なウォールクロックタイム責任ティック](#exclusive-wall-clock-time-responsibility-ticks)\
-[プロセスId](#process-id)\
-[プロセッサインデックス](#processor-index)\
-[スタートタイムスタンプ](#start-timestamp)\
-[ストップタイムスタンプ](#stop-timestamp)\
-[Threadid](#thread-id)\
-[ティック周波数](#tick-frequency)\
-[ウォールクロックタイム責任](#wall-clock-time-responsibility)\
-[ウォールクロックタイム責任ティック](#wall-clock-time-responsibility-ticks)
+[EventInstanceId](#event-instance-id)
+[EventName](#event-name)\
+[EventWideName](#event-wide-name)\
+[ExclusiveCPUTicks](#exclusive-cpu-ticks)\
+[ExclusiveCPUTime](#exclusive-cpu-time)\
+[ExclusiveDuration](#exclusive-duration)\
+[ExclusiveDurationTicks](#exclusive-duration-ticks)\
+[ExclusiveWallClockTimeResponsibility](#exclusive-wall-clock-time-responsibility)\
+[ExclusiveWallClockTimeResponsibilityTicks](#exclusive-wall-clock-time-responsibility-ticks)\
+[ProcessId](#process-id)\
+[ProcessorIndex](#processor-index)\
+[StartTimestamp](#start-timestamp)\
+[StopTimestamp](#stop-timestamp)\
+[ThreadId](#thread-id)\
+[TickFrequency](#tick-frequency)\
+[WallClockTimeResponsibility](#wall-clock-time-responsibility)\
+[WallClockTimeResponsibilityTicks](#wall-clock-time-responsibility-ticks)
 
-## <a name="rawevent"></a><a name="raw-event"></a>生のイベント
+## <a name="rawevent"></a><a name="raw-event"></a> RawEvent
 
 ```cpp
 RawEvent(const EVENT_DATA& data);
@@ -106,10 +106,10 @@ RawEvent(const EVENT_DATA& data);
 
 ### <a name="parameters"></a>パラメーター
 
-*イベント*\
+*event*\
 イベントのデータ。
 
-## <a name="cputicks"></a><a name="cpu-ticks"></a>CPUティック
+## <a name="cputicks"></a><a name="cpu-ticks"></a> CPUTicks
 
 ```cpp
 const long long& CPUTicks() const;
@@ -117,9 +117,9 @@ const long long& CPUTicks() const;
 
 ### <a name="return-value"></a>戻り値
 
-このアクティビティ中に発生した CPU ティックの数。 CPU ティックは、通常のティックとは異なります。 CPU ティックは、CPU がアクティビティ内のコードを実行している場合にのみカウントされます。 アクティビティに関連付けられたスレッドがスリープ状態の場合、CPU ティックはカウントされません。
+このアクティビティの間に発生した CPU ティックの数。 CPU ティックは、通常のティックとは異なります。 CPU ティックは、アクティビティ内のコードが CPU によって実行されている場合にのみカウントされます。 アクティビティに関連付けられているスレッドがスリープ状態のときには、CPU ティックはカウントされません。
 
-## <a name="cputime"></a><a name="cpu-time"></a>CPUタイム
+## <a name="cputime"></a><a name="cpu-time"></a> CPUTime
 
 ```cpp
 std::chrono::nanoseconds CPUTime()() const;
@@ -127,9 +127,9 @@ std::chrono::nanoseconds CPUTime()() const;
 
 ### <a name="return-value"></a>戻り値
 
-このアクティビティ内で CPU がコードを実行していた時間。 子アクティビティが別々のスレッドで実行される場合、この値はアクティビティの期間よりも長くなることがあります。 値はナノ秒単位で返されます。
+CPU がこのアクティビティ内でコードを実行していた時間の長さ。 子アクティビティが別のスレッドで実行される場合、この値はアクティビティの期間より長くなる可能性があります。 値はナノ秒単位で返されます。
 
-## <a name="data"></a><a name="data"></a>データ
+## <a name="data"></a><a name="data"></a> Data
 
 ```cpp
 const void* Data() const;
@@ -137,9 +137,9 @@ const void* Data() const;
 
 ### <a name="return-value"></a>戻り値
 
-このイベントに含まれる追加データへのポインター。 このフィールドの解釈方法の詳細については[、「EVENT_DATA」](../c-event-data-types/event-data-struct.md)を参照してください。
+このイベントに含まれる追加データへのポインター。 このフィールドを解釈する方法の詳細については、[EVENT_DATA](../c-event-data-types/event-data-struct.md) に関する記事を参照してください。
 
-## <a name="duration"></a><a name="duration"></a>期間
+## <a name="duration"></a><a name="duration"></a> Duration
 
 ```cpp
 std::chrono::nanoseconds Duration() const;
@@ -147,9 +147,9 @@ std::chrono::nanoseconds Duration() const;
 
 ### <a name="return-value"></a>戻り値
 
-アクティビティの時間 (ナノ秒単位)。
+アクティビティの継続時間 (ナノ秒単位)。
 
-## <a name="eventid"></a><a name="event-id"></a>Eventid
+## <a name="eventid"></a><a name="event-id"></a> EventId
 
 ```cpp
 const unsigned short& EventId() const;
@@ -157,9 +157,9 @@ const unsigned short& EventId() const;
 
 ### <a name="return-value"></a>戻り値
 
-イベントの種類を識別する数値。 イベント識別子の一覧については、「 [EVENT_ID](../c-event-data-types/event-id-enum.md)」 を参照してください。
+イベントの種類を識別する番号。 イベント識別子の一覧については、[EVENT_ID](../c-event-data-types/event-id-enum.md) に関する記事をご覧ください。
 
-## <a name="eventinstanceid"></a><a name="event-instance-id"></a>イベントインスタンスId
+## <a name="eventinstanceid"></a><a name="event-instance-id"></a> EventInstanceId
 
 ```cpp
 const unsigned long long& EventInstanceId() const;
@@ -167,9 +167,9 @@ const unsigned long long& EventInstanceId() const;
 
 ### <a name="return-value"></a>戻り値
 
-トレース内のイベントを一意に識別する番号。 同じトレースを複数回分析または再ログしても、この値は変わりません。 この値を使用して、複数の分析または再ロギングパスで同じトレースを渡す場合に同じイベントを識別します。
+トレース内のイベントを一意に識別する番号。 この値は、同じトレースを複数回分析またはログに再記録しても変わりません。 この値を使用して、同じトレースに対する複数の分析パスまたは再ログ記録パスで同じイベントを識別します。
 
-## <a name="eventname"></a><a name="event-name"></a>Eventname
+## <a name="eventname"></a><a name="event-name"></a> EventName
 
 ```cpp
 const char* EventName() const;
@@ -177,9 +177,9 @@ const char* EventName() const;
 
 ### <a name="return-value"></a>戻り値
 
-イベントタイプの名前を含む ANSI[文字列です。](#event-id)
+[EventId](#event-id) によって示されるイベントの種類の名前が含まれる ANSI 文字列。
 
-## <a name="eventwidename"></a><a name="event-wide-name"></a>イベントワイドネーム
+## <a name="eventwidename"></a><a name="event-wide-name"></a> EventWideName
 
 ```cpp
 const wchar_t* EventWideName() const;
@@ -187,9 +187,9 @@ const wchar_t* EventWideName() const;
 
 ### <a name="return-value"></a>戻り値
 
-[EventId](#event-id)で識別されるイベントの種類の名前を含むワイド文字列。
+[EventId](#event-id) によって示されるイベントの種類の名前が含まれるワイド文字列。
 
-## <a name="exclusivecputicks"></a><a name="exclusive-cpu-ticks"></a>排他的なCPUティック
+## <a name="exclusivecputicks"></a><a name="exclusive-cpu-ticks"></a> ExclusiveCPUTicks
 
 ```cpp
 const long long& ExclusiveCPUTicks() const;
@@ -197,9 +197,9 @@ const long long& ExclusiveCPUTicks() const;
 
 ### <a name="return-value"></a>戻り値
 
-[CPUTicks](#cpu-ticks)と同じですが、子アクティビティで発生した CPU ティックは含まれません。
+[CPUTicks](#cpu-ticks) と同じですが、子アクティビティで発生した CPU ティック数は含まれません。
 
-## <a name="exclusivecputime"></a><a name="exclusive-cpu-time"></a>排他 CPU タイム
+## <a name="exclusivecputime"></a><a name="exclusive-cpu-time"></a> ExclusiveCPUTime
 
 ```cpp
 std::chrono::nanoseconds ExclusiveCPUTime() const;
@@ -207,9 +207,9 @@ std::chrono::nanoseconds ExclusiveCPUTime() const;
 
 ### <a name="return-value"></a>戻り値
 
-[CPUTime](#cpu-time)と同じですが、子アクティビティの CPU 時間は含まれません。
+子アクティビティの CPU 時間が含まれない点を除いて、[CPUTime](#cpu-time) と同じです。
 
-## <a name="exclusiveduration"></a><a name="exclusive-duration"></a>エクスクルーシブ期間
+## <a name="exclusiveduration"></a><a name="exclusive-duration"></a> ExclusiveDuration
 
 ```cpp
 std::chrono::nanoseconds ExclusiveDuration() const;
@@ -217,9 +217,9 @@ std::chrono::nanoseconds ExclusiveDuration() const;
 
 ### <a name="return-value"></a>戻り値
 
-アクティビティの期間 (子アクティビティに費やされた時間は含まない)
+アクティビティの継続時間 (ナノ秒単位)。子アクティビティで費やされた時間は含まれません。
 
-## <a name="exclusivedurationticks"></a><a name="exclusive-duration-ticks"></a>エクスクルーシブ・デュレーション・ティック
+## <a name="exclusivedurationticks"></a><a name="exclusive-duration-ticks"></a> ExclusiveDurationTicks
 
 ```cpp
 const long long& ExclusiveDurationTicks() const;
@@ -227,9 +227,9 @@ const long long& ExclusiveDurationTicks() const;
 
 ### <a name="return-value"></a>戻り値
 
-子アクティビティで発生したティックの数を除き、このアクティビティで発生したティックの数。
+このアクティビティで発生したティックの数。子アクティビティで発生したティックの数は除きます。
 
-## <a name="exclusivewallclocktimeresponsibility"></a><a name="exclusive-wall-clock-time-responsibility"></a>エクスクルーシブウォールクロックタイム責任
+## <a name="exclusivewallclocktimeresponsibility"></a><a name="exclusive-wall-clock-time-responsibility"></a> ExclusiveWallClockTimeResponsibility
 
 ```cpp
 std::chrono::nanoseconds ExclusiveWallClockTimeResponsibility() const;
@@ -237,9 +237,9 @@ std::chrono::nanoseconds ExclusiveWallClockTimeResponsibility() const;
 
 ### <a name="return-value"></a>戻り値
 
-[は、子](#wall-clock-time-responsibility)アクティビティのウォールクロックタイム責任と同じですが、ウォールクロック時間の責任は含まれていません。
+[WallClockTimeResponsibility](#wall-clock-time-responsibility) と同じですが、子アクティビティのウォール クロック時間責任は含まれません。
 
-## <a name="exclusivewallclocktimeresponsibilityticks"></a><a name="exclusive-wall-clock-time-responsibility-ticks"></a>排他的なウォールクロックタイム責任ティック
+## <a name="exclusivewallclocktimeresponsibilityticks"></a><a name="exclusive-wall-clock-time-responsibility-ticks"></a> ExclusiveWallClockTimeResponsibilityTicks
 
 ```cpp
 const long long& ExclusiveWallClockTimeResponsibilityTicks() const;
@@ -247,9 +247,9 @@ const long long& ExclusiveWallClockTimeResponsibilityTicks() const;
 
 ### <a name="return-value"></a>戻り値
 
-[ウォールクロックタイム責任ティックと](#wall-clock-time-responsibility-ticks)同じですが、子アクティビティのウォールクロック時間の責任ティックは含まれていません。
+[WallClockTimeResponsibilityTicks](#wall-clock-time-responsibility-ticks) と同じですが、子アクティビティのウォール クロック時間責任ティック数は含まれません。
 
-## <a name="processid"></a><a name="process-id"></a>プロセスId
+## <a name="processid"></a><a name="process-id"></a> ProcessId
 
 ```cpp
 const unsigned long& ProcessId() const;
@@ -259,7 +259,7 @@ const unsigned long& ProcessId() const;
 
 イベントが発生したプロセスの識別子。
 
-## <a name="processorindex"></a><a name="processor-index"></a>プロセッサインデックス
+## <a name="processorindex"></a><a name="processor-index"></a> ProcessorIndex
 
 ```cpp
 const unsigned short& ProcessorIndex() const;
@@ -267,9 +267,9 @@ const unsigned short& ProcessorIndex() const;
 
 ### <a name="return-value"></a>戻り値
 
-イベントが発生した論理プロセッサの 0 から始まるインデックス。
+イベントが発生した論理プロセッサに対する 0 から始まるインデックス。
 
-## <a name="starttimestamp"></a><a name="start-timestamp"></a>スタートタイムスタンプ
+## <a name="starttimestamp"></a><a name="start-timestamp"></a> StartTimestamp
 
 ```cpp
 const long long& StartTimestamp() const;
@@ -277,9 +277,9 @@ const long long& StartTimestamp() const;
 
 ### <a name="return-value"></a>戻り値
 
-アクティビティの開始時にキャプチャされたティック値。
+アクティビティが開始した時刻にキャプチャされたティック値。
 
-## <a name="stoptimestamp"></a><a name="stop-timestamp"></a>ストップタイムスタンプ
+## <a name="stoptimestamp"></a><a name="stop-timestamp"></a> StopTimestamp
 
 ```cpp
 const long long& StopTimestamp() const;
@@ -287,9 +287,9 @@ const long long& StopTimestamp() const;
 
 ### <a name="return-value"></a>戻り値
 
-アクティビティが停止した時点でキャプチャされたティック値。
+アクティビティが停止した時刻にキャプチャされたティック値。
 
-## <a name="threadid"></a><a name="thread-id"></a>Threadid
+## <a name="threadid"></a><a name="thread-id"></a> ThreadId
 
 ```cpp
 const unsigned long& ThreadId() const;
@@ -299,7 +299,7 @@ const unsigned long& ThreadId() const;
 
 イベントが発生したスレッドの識別子。
 
-## <a name="tickfrequency"></a><a name="tick-frequency"></a>ティック周波数
+## <a name="tickfrequency"></a><a name="tick-frequency"></a> TickFrequency
 
 ```cpp
 const long long& TickFrequency() const;
@@ -307,9 +307,9 @@ const long long& TickFrequency() const;
 
 ### <a name="return-value"></a>戻り値
 
-このイベントのティック数で測定された期間を評価するときに使用する 1 秒あたりのティック数。
+このイベントのティック単位で計測された期間を評価するときに使用する、1 秒あたりのティック数。
 
-## <a name="wallclocktimeresponsibility"></a><a name="wall-clock-time-responsibility"></a>ウォールクロックタイム責任
+## <a name="wallclocktimeresponsibility"></a><a name="wall-clock-time-responsibility"></a> WallClockTimeResponsibility
 
 ```cpp
 std::chrono::nanoseconds WallClockTimeResponsibility() const;
@@ -317,9 +317,9 @@ std::chrono::nanoseconds WallClockTimeResponsibility() const;
 
 ### <a name="return-value"></a>戻り値
 
-この活動のウォールクロック時間の責任(ナノ秒単位)。 ウォールクロック時間責任の意味の詳細については、「[ウォールクロックタイムレニシアルティック」](#wall-clock-time-responsibility-ticks)を参照してください。
+このアクティビティのウォール クロック時間責任 (ナノ秒単位)。 ウォール クロック時間責任の詳細については、「[WallClockTimeResponsibilityTicks](#wall-clock-time-responsibility-ticks)」を参照してください。
 
-## <a name="wallclocktimeresponsibilityticks"></a><a name="wall-clock-time-responsibility-ticks"></a>ウォールクロックタイム責任ティック
+## <a name="wallclocktimeresponsibilityticks"></a><a name="wall-clock-time-responsibility-ticks"></a> WallClockTimeResponsibilityTicks
 
 ```cpp
 const long long& WallClockTimeResponsibilityTicks() const;
@@ -327,6 +327,6 @@ const long long& WallClockTimeResponsibilityTicks() const;
 
 ### <a name="return-value"></a>戻り値
 
-このアクティビティの全体的なウォール クロック時間への貢献度を表すティック数。 ウォールクロックの時間責任ティックは、通常のティックとは異なります。 ウォールクロック時間の責任ティックは、アクティビティ間の並列性を考慮に入れます。 2 つの並列アクティビティの時間は 50 ティックで、開始時間と停止時間は同じです。 この場合、両方とも 25 ティックのウォールクロック時間の責任が割り当てられます。
+全体的なウォール クロック時間に対するこのアクティビティの影響を表すティック数。 実時間の責任ティックは、通常のティックとは異なります。 実時間の責任ティックでは、アクティビティ間の並列処理が考慮されます。 2 つの並列アクティビティが 50 ティックの期間を持ち、開始時刻と終了時刻が同じであるとします。 この場合、両方に 25 ティックのウォール クロック時間責任が割り当てられます。
 
 ::: moniker-end

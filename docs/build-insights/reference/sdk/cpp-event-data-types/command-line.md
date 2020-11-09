@@ -1,6 +1,6 @@
 ---
-title: コマンド ライン クラス
-description: C++ ビルド インサイト SDK コマンド ライン クラスリファレンス。
+title: CommandLine クラス
+description: C++ Build Insights SDK の CommandLine クラスのリファレンスです。
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: b35d688acf06579cc27f2fee053ef58032e204e0
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
-ms.translationtype: MT
+ms.openlocfilehash: 5214f2970329510088184dc3092db66607f4d67e
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81325058"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92923338"
 ---
-# <a name="commandline-class"></a>コマンド ライン クラス
+# <a name="commandline-class"></a>CommandLine クラス
 
-::: moniker range="<=vs-2015"
+::: moniker range="<=msvc-140"
 
-C++ ビルド インサイト SDK は、Visual Studio 2017 以降と互換性があります。 これらのバージョンのドキュメントを参照するには、この記事の Visual Studio**バージョン**セレクター コントロールを Visual Studio 2017 または Visual Studio 2019 に設定します。 このページの目次の上部に表示されます。
+C++ Build Insights SDK は、Visual Studio 2017 以降と互換性があります。 これらのバージョンのドキュメントを表示するには、この記事の Visual Studio **Version** セレクター コントロールを Visual Studio 2017 または Visual Studio 2019 に設定します。 このページの目次の一番上にあります。
 
 ::: moniker-end
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 
-クラス`CommandLine`[は、](../functions/match-event-in-member-function.md)[関数](../functions/match-event.md)で使用されます。 [MatchEventStack](../functions/match-event-stack.md) [MatchEventStackInMemberFunction](../functions/match-event-stack-in-member-function.md) [COMMAND_LINE](../event-table.md#command-line)イベントに一致させるために使用します。
+`CommandLine` クラスは、[MatchEvent](../functions/match-event.md)、[MatchEventInMemberFunction](../functions/match-event-in-member-function.md)、[MatchEventStack](../functions/match-event-stack.md)、および [MatchEventStackInMemberFunction](../functions/match-event-stack-in-member-function.md) 関数と共に使用されます。 [COMMAND_LINE](../event-table.md#command-line) イベントを照合するために使用します。
 
 ## <a name="syntax"></a>構文
 
@@ -41,17 +41,17 @@ public:
 
 ## <a name="members"></a>メンバー
 
-[クラスには、SimpleEvent](simple-event.md)基本クラスから継承されたメンバーと`CommandLine`共に、次のメンバーが含まれます。
+その基底クラス [SimpleEvent](simple-event.md) から継承されたメンバーに加えて、`CommandLine` クラスには以下のメンバーが含まれます。
 
 ### <a name="constructors"></a>コンストラクター
 
-[コマンドライン](#command-line)
+[CommandLine](#command-line)
 
-### <a name="functions"></a>関数
+### <a name="functions"></a>機能
 
 [Value](#value)
 
-## <a name="commandline"></a><a name="command-line"></a>コマンドライン
+## <a name="commandline"></a><a name="command-line"></a> CommandLine
 
 ```cpp
 CommandLine(const RawEvent& event);
@@ -59,10 +59,10 @@ CommandLine(const RawEvent& event);
 
 ### <a name="parameters"></a>パラメーター
 
-*イベント*\
-[COMMAND_LINE](../event-table.md#command-line)イベント。
+*event*\
+[COMMAND_LINE](../event-table.md#command-line) イベント。
 
-## <a name="value"></a><a name="value"></a> の値
+## <a name="value"></a><a name="value"></a> 値
 
 ```cpp
 const wchar_t Value() const;
@@ -70,6 +70,6 @@ const wchar_t Value() const;
 
 ### <a name="return-value"></a>戻り値
 
-コマンド ラインを含む文字列。 この値には、応答ファイルから取得された引数、および環境変数 (CL、CL、\_\_リンク、LINK\_など\_) から取得された引数が含まれます。
+コマンド ラインが格納されている文字列。 この値には、応答ファイルと、CL、\_CL\_、Link、\_LINK\_ などの環境変数から取得された引数が含まれます。
 
 ::: moniker-end

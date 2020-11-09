@@ -1,6 +1,6 @@
 ---
-title: パス1クラス
-description: C++ ビルド インサイト SDK Pass1 クラスリファレンス。
+title: Pass1 クラス
+description: C++ Build Insights SDK の Pass1 クラスのリファレンス。
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 039c2cc92b8461009c235baa7e49484eb2a4f49f
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
-ms.translationtype: MT
+ms.openlocfilehash: 99ada8a2db5ac464113d9805797d4b4555367e77
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81324421"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92923031"
 ---
-# <a name="pass1-class"></a>パス1クラス
+# <a name="pass1-class"></a>Pass1 クラス
 
-::: moniker range="<=vs-2015"
+::: moniker range="<=msvc-140"
 
-C++ ビルド インサイト SDK は、Visual Studio 2017 以降と互換性があります。 これらのバージョンのドキュメントを参照するには、この記事の Visual Studio**バージョン**セレクター コントロールを Visual Studio 2017 または Visual Studio 2019 に設定します。 このページの目次の上部に表示されます。
+C++ Build Insights SDK は、Visual Studio 2017 以降と互換性があります。 これらのバージョンのドキュメントを表示するには、この記事の Visual Studio **Version** セレクター コントロールを Visual Studio 2017 または Visual Studio 2019 に設定します。 このページの目次の一番上にあります。
 
 ::: moniker-end
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 
-クラス`Pass1`[は、](../functions/match-event-in-member-function.md)[関数](../functions/match-event.md)で使用されます。 [MatchEventStack](../functions/match-event-stack.md) [MatchEventStackInMemberFunction](../functions/match-event-stack-in-member-function.md) [PASS1](../event-table.md#pass1)イベントと一致させるために使用します。
+`Pass1` クラスは、[MatchEvent](../functions/match-event.md)、[MatchEventInMemberFunction](../functions/match-event-in-member-function.md)、[MatchEventStack](../functions/match-event-stack.md)、および [MatchEventStackInMemberFunction](../functions/match-event-stack-in-member-function.md) 関数と共に使用されます。 [PASS1](../event-table.md#pass1) イベントを照合するために使用します。
 
 ## <a name="syntax"></a>構文
 
@@ -39,13 +39,13 @@ public:
 
 ## <a name="members"></a>メンバー
 
-継承されたメンバーの基底クラスからの[継承](linker-pass.md)メンバーと共に`Pass1`、クラスには次のメンバーが含まれています。
+その基底クラス [LinkerPass](linker-pass.md) から継承されたメンバーに加えて、`Pass1` クラスには以下のメンバーが含まれます。
 
 ### <a name="constructors"></a>コンストラクター
 
-[パス1](#pass1)
+[Pass1](#pass1)
 
-## <a name="pass1"></a><a name="pass1"></a>パス1
+## <a name="pass1"></a><a name="pass1"></a> Pass1
 
 ```cpp
 Pass1(const RawEvent& event);
@@ -53,7 +53,7 @@ Pass1(const RawEvent& event);
 
 ### <a name="parameters"></a>パラメーター
 
-*イベント*\
-[PASS1](../event-table.md#pass1)イベント。
+*event*\
+[PASS1](../event-table.md#pass1) イベント。
 
 ::: moniker-end

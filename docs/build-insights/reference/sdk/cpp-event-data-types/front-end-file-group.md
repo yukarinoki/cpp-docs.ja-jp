@@ -1,6 +1,6 @@
 ---
-title: クラス
-description: クラスリファレンスを構築します。
+title: FrontEndFileGroup クラス
+description: C++ Build Insights SDK の FrontEndFileGroup クラスのリファレンスです。
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: d2eebb650e59e750e5ebde74914dca5f0ef4779d
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
-ms.translationtype: MT
+ms.openlocfilehash: 902b394f645030fed4eeb79bae79535e6d246a1f
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81324772"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92923230"
 ---
-# <a name="frontendfilegroup-class"></a>クラス
+# <a name="frontendfilegroup-class"></a>FrontEndFileGroup クラス
 
-::: moniker range="<=vs-2015"
+::: moniker range="<=msvc-140"
 
-C++ ビルド インサイト SDK は、Visual Studio 2017 以降と互換性があります。 これらのバージョンのドキュメントを参照するには、この記事の Visual Studio**バージョン**セレクター コントロールを Visual Studio 2017 または Visual Studio 2019 に設定します。 このページの目次の上部に表示されます。
+C++ Build Insights SDK は、Visual Studio 2017 以降と互換性があります。 これらのバージョンのドキュメントを表示するには、この記事の Visual Studio **Version** セレクター コントロールを Visual Studio 2017 または Visual Studio 2019 に設定します。 このページの目次の一番上にあります。
 
 ::: moniker-end
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 
-クラス`FrontEndFileGroup`は、[関数と一致イベント スタック](../functions/match-event-stack.md)と一致イベント[スタックInメンバー関数](../functions/match-event-stack-in-member-function.md)で使用されます。 [FRONT_END_FILE](../event-table.md#front-end-file)イベントのグループと一致させるために使用します。
+`FrontEndFileGroup` クラスは、[MatchEventStack](../functions/match-event-stack.md) および [MatchEventStackInMemberFunction](../functions/match-event-stack-in-member-function.md) 関数と共に使用されます。 [FRONT_END_FILE](../event-table.md#front-end-file) イベントのグループを照合するために使用します。
 
 ## <a name="syntax"></a>構文
 
@@ -39,13 +39,13 @@ public:
 
 ## <a name="members"></a>メンバー
 
-クラスには、継承されたメンバーが[、その\<イベント グループ\>のフロント エンドファイル](event-group.md)基本クラスから継承されたメンバーと共に`FrontEndFileGroup`、次のメンバーが含まれています。
+その基底クラス [EventGroup\<FrontEndFile\>](event-group.md) から継承されたメンバーに加えて、`FrontEndFileGroup` クラスには以下のメンバーが含まれます。
 
 ### <a name="constructors"></a>コンストラクター
 
-[フロントエンドファイルグループ](#front-end-file-group)
+[FrontEndFileGroup](#front-end-file-group)
 
-## <a name="frontendfilegroup"></a><a name="front-end-file-group"></a>フロントエンドファイルグループ
+## <a name="frontendfilegroup"></a><a name="front-end-file-group"></a> FrontEndFileGroup
 
 ```cpp
 FrontEndFileGroup(std::deque<FrontEndFile>&& group);
@@ -53,7 +53,7 @@ FrontEndFileGroup(std::deque<FrontEndFile>&& group);
 
 ### <a name="parameters"></a>パラメーター
 
-*グループ*\
-[FRONT_END_FILE](../event-table.md#front-end-file)イベントのグループ。
+*group*\
+[FRONT_END_FILE](../event-table.md#front-end-file) イベントのグループ。
 
 ::: moniker-end

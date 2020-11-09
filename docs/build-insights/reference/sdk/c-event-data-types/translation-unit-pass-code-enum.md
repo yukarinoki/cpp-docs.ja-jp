@@ -1,6 +1,6 @@
 ---
-title: 列挙TRANSLATION_UNIT_PASS_CODE
-description: C++ ビルド インサイト SDK TRANSLATION_UNIT_PASS_CODE列挙型参照。
+title: TRANSLATION_UNIT_PASS_CODE 列挙型
+description: C++ Build Insights SDK の TRANSLATION_UNIT_PASS_CODE 列挙型のリファレンス。
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,33 +9,33 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: b0162d7e53bb7ee7035b94a6b640f6db87cd8b8d
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
-ms.translationtype: MT
+ms.openlocfilehash: 31f3e16ce6d9aa8c3c9db6cf9c11069dc3ec22fe
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81325285"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92920919"
 ---
-# <a name="translation_unit_pass_code-enum"></a>列挙TRANSLATION_UNIT_PASS_CODE
+# <a name="translation_unit_pass_code-enum"></a>TRANSLATION_UNIT_PASS_CODE 列挙型
 
-::: moniker range="<=vs-2015"
+::: moniker range="<=msvc-140"
 
-C++ ビルド インサイト SDK は、Visual Studio 2017 以降と互換性があります。 これらのバージョンのドキュメントを参照するには、この記事の Visual Studio**バージョン**セレクター コントロールを Visual Studio 2017 または Visual Studio 2019 に設定します。 このページの目次の上部に表示されます。
+C++ Build Insights SDK は、Visual Studio 2017 以降と互換性があります。 これらのバージョンのドキュメントを表示するには、この記事の Visual Studio **Version** セレクター コントロールを Visual Studio 2017 または Visual Studio 2019 に設定します。 このページの目次の一番上にあります。
 
 ::: moniker-end
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 
-列挙`TRANSLATION_UNIT_PASS_CODE`型。
+`TRANSLATION_UNIT_PASS_CODE` 列挙型。
 
 ## <a name="members"></a>メンバー
 
-| 名前 | [値] | 説明 |
+| 名前 | 値 | 説明 |
 |--|--|--|
-| `TRANSLATION_UNIT_PASS_CODE_FRONT_END` | 0 (0x0000000) | ソース コードを解析し、中間言語に変換するフロントエンド パス。 |
-| `TRANSLATION_UNIT_PASS_CODE_BACK_END` | 1 (0x00000001) | 中間言語を最適化し、それをマシンコードに変換するバックエンドパス。 |
+| `TRANSLATION_UNIT_PASS_CODE_FRONT_END` | 0 (0x00000000) | フロントエンド パス。ソース コードの解析と中間言語への変換が行われます。 |
+| `TRANSLATION_UNIT_PASS_CODE_BACK_END` | 1 (0x00000001) | バックエンド パス。中間言語の最適化とマシン語コードへの変換が行われます。 |
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>注釈
 
-C SDK 関数で使用されます。
+C SDK 関数によって使用されます。
 
 ::: moniker-end

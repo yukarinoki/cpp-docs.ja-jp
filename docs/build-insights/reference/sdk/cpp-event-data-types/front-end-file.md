@@ -1,6 +1,6 @@
 ---
-title: クラス
-description: C++ ビルド インサイト SDK フロントエンドファイル クラスリファレンス。
+title: FrontEndFile クラス
+description: C++ Build Insights SDK の FrontEndFile クラスのリファレンスです。
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: c40137724279ea2fd615729db39f0ac5c907b79e
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
-ms.translationtype: MT
+ms.openlocfilehash: 7715a153df538eab94b8de5281a91d4f6b439ff9
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81324756"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92920659"
 ---
-# <a name="frontendfile-class"></a>クラス
+# <a name="frontendfile-class"></a>FrontEndFile クラス
 
-::: moniker range="<=vs-2015"
+::: moniker range="<=msvc-140"
 
-C++ ビルド インサイト SDK は、Visual Studio 2017 以降と互換性があります。 これらのバージョンのドキュメントを参照するには、この記事の Visual Studio**バージョン**セレクター コントロールを Visual Studio 2017 または Visual Studio 2019 に設定します。 このページの目次の上部に表示されます。
+C++ Build Insights SDK は、Visual Studio 2017 以降と互換性があります。 これらのバージョンのドキュメントを表示するには、この記事の Visual Studio **Version** セレクター コントロールを Visual Studio 2017 または Visual Studio 2019 に設定します。 このページの目次の一番上にあります。
 
 ::: moniker-end
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 
-クラス`FrontEndFile`[は、](../functions/match-event-in-member-function.md)[関数](../functions/match-event.md)で使用されます。 [MatchEventStack](../functions/match-event-stack.md) [MatchEventStackInMemberFunction](../functions/match-event-stack-in-member-function.md) [FRONT_END_FILE](../event-table.md#front-end-file)イベントに一致させるために使用します。
+`FrontEndFile` クラスは、[MatchEvent](../functions/match-event.md)、[MatchEventInMemberFunction](../functions/match-event-in-member-function.md)、[MatchEventStack](../functions/match-event-stack.md)、および [MatchEventStackInMemberFunction](../functions/match-event-stack-in-member-function.md) 関数と共に使用されます。 [FRONT_END_FILE](../event-table.md#front-end-file) イベントを照合するために使用します。
 
 ## <a name="syntax"></a>構文
 
@@ -41,17 +41,17 @@ public:
 
 ## <a name="members"></a>メンバー
 
-クラスには、[その Activity](activity.md)基本クラスから継承された`FrontEndFile`メンバーと共に、次のメンバーが含まれます。
+その基底クラス [Activity](activity.md) から継承されたメンバーに加えて、`FrontEndFile` クラスには以下のメンバーが含まれます。
 
 ### <a name="constructors"></a>コンストラクター
 
-[フロントエンドファイル](#front-end-file)
+[FrontEndFile](#front-end-file)
 
-### <a name="functions"></a>関数
+### <a name="functions"></a>機能
 
 [パス](#path)
 
-## <a name="frontendfile"></a><a name="front-end-file"></a>フロントエンドファイル
+## <a name="frontendfile"></a><a name="front-end-file"></a> FrontEndFile
 
 ```cpp
 FrontEndFile(const RawEvent& event);
@@ -59,10 +59,10 @@ FrontEndFile(const RawEvent& event);
 
 ### <a name="parameters"></a>パラメーター
 
-*イベント*\
-[FRONT_END_FILE](../event-table.md#front-end-file)イベント。
+*event*\
+[FRONT_END_FILE](../event-table.md#front-end-file) イベント。
 
-## <a name="path"></a><a name="path"></a>パス
+## <a name="path"></a><a name="path"></a> Path
 
 ```cpp
 const char* Path() const;
@@ -70,6 +70,6 @@ const char* Path() const;
 
 ### <a name="return-value"></a>戻り値
 
-ファイルへの絶対パスを UTF-8 でエンコードします。
+ファイルへの絶対パス。UTF-8 でエンコードされます。
 
 ::: moniker-end

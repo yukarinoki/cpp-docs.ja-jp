@@ -1,6 +1,6 @@
 ---
-title: トレースセッションを停止して分析する
-description: C++ ビルド インサイト SDK の停止と分析トレースセッション関数リファレンス。
+title: StopAndAnalyzeTracingSessionA
+description: C++ Build Insights SDK の StopAndAnalyzeTracingSessionA 関数のリファレンス。
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 51a979b68cd87c5e7fd07b28acec80c2d7b81cf6
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
-ms.translationtype: MT
+ms.openlocfilehash: fa5adfca2c5e4d3d4bd17abae4e78c2ac6464773
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81323734"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92922720"
 ---
-# <a name="stopandanalyzetracingsessiona"></a>トレースセッションを停止して分析する
+# <a name="stopandanalyzetracingsessiona"></a>StopAndAnalyzeTracingSessionA
 
-::: moniker range="<=vs-2015"
+::: moniker range="<=msvc-140"
 
-C++ ビルド インサイト SDK は、Visual Studio 2017 以降と互換性があります。 これらのバージョンのドキュメントを参照するには、この記事の Visual Studio**バージョン**セレクター コントロールを Visual Studio 2017 または Visual Studio 2019 に設定します。 このページの目次の上部に表示されます。
+C++ Build Insights SDK は、Visual Studio 2017 以降と互換性があります。 これらのバージョンのドキュメントを表示するには、この記事の Visual Studio **Version** セレクター コントロールを Visual Studio 2017 または Visual Studio 2019 に設定します。 このページの目次の一番上にあります。
 
 ::: moniker-end
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 
-この`StopAndAnalyzeTracingSessionA`関数は、進行中のトレース・セッションを停止し、結果のトレースを一時ファイルに保管します。 分析セッションは、その後、入力として一時ファイルを使用してすぐに開始されます。 この関数を呼び出す実行可能ファイルには、管理者権限が必要です。
+`StopAndAnalyzeTracingSessionA` 関数により、実行中のトレース セッションが停止されて、結果のトレースが一時ファイルに保存されます。 その後、その一時ファイルを入力として使用して、分析セッションが直ちに開始されます。 この関数を呼び出す実行可能ファイルには、管理者権限が必要です。
 
 ## <a name="syntax"></a>構文
 
@@ -38,17 +38,17 @@ enum RESULT_CODE StopAndAnalyzeTracingSessionA(
 
 ### <a name="parameters"></a>パラメーター
 
-*Sessionname*\
-停止するトレース セッションの名前。 [開始トレーシングセッション、開始トレーシングセッション](start-tracing-session.md)、または開始ト[レーシング](start-tracing-session-a.md)[セッションW](start-tracing-session-w.md)に渡されたものと同じセッション名を使用します。
+*sessionName*\
+停止するトレース セッションの名前。 [StartTracingSession](start-tracing-session.md)、[StartTracingSessionA](start-tracing-session-a.md)、[StartTracingSessionW](start-tracing-session-w.md) に渡したものと同じセッション名を使用します。
 
-*統計*\
-[TRACING_SESSION_STATISTICS](../other-types/tracing-session-statistics-struct.md)オブジェクトへのポインター。 `StopAndAnalyzeTracingSessionA`このオブジェクトにトレース コレクションの統計情報を書き込む前に、このオブジェクトを返します。
+*statistics*\
+[TRACING_SESSION_STATISTICS](../other-types/tracing-session-statistics-struct.md) オブジェクトへのポインター。 `StopAndAnalyzeTracingSessionA` によって、戻る前に、このオブジェクトのトレース コレクション統計情報が書き込まれます。
 
-*分析記述子*\
-[ANALYSIS_DESCRIPTOR](../other-types/analysis-descriptor-struct.md)オブジェクトへのポインター。 によって開始される分析セッションを構成するには、このオブジェクトを使用`StopAndAnalyzeTracingSessionA`します。
+*analysisDescriptor*\
+[ANALYSIS_DESCRIPTOR](../other-types/analysis-descriptor-struct.md) オブジェクトへのポインター。 `StopAndAnalyzeTracingSessionA` によって開始される分析セッションを構成するには、このオブジェクトを使用します。
 
 ### <a name="return-value"></a>戻り値
 
-[RESULT_CODE](../other-types/result-code-enum.md)列挙型からの結果コード。
+[RESULT_CODE](../other-types/result-code-enum.md) 列挙型の結果コード。
 
 ::: moniker-end

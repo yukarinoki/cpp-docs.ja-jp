@@ -1,6 +1,6 @@
 ---
 title: IRelogger クラス
-description: C++ ビルド インサイト SDK IRelogger クラス リファレンス。
+description: C++ Build Insights SDK の IRelogger クラスのリファレンス。
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 146377b2b44df43ed4b2f749efd9fb614a2a09c9
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
-ms.translationtype: MT
+ms.openlocfilehash: e504ece95529f7279650062145f3ac0914449c98
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81329155"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92922520"
 ---
 # <a name="irelogger-class"></a>IRelogger クラス
 
-::: moniker range="<=vs-2015"
+::: moniker range="<=msvc-140"
 
-C++ ビルド インサイト SDK は、Visual Studio 2017 以降と互換性があります。 これらのバージョンのドキュメントを参照するには、この記事の Visual Studio**バージョン**セレクター コントロールを Visual Studio 2017 または Visual Studio 2019 に設定します。 このページの目次の上部に表示されます。
+C++ Build Insights SDK は、Visual Studio 2017 以降と互換性があります。 これらのバージョンのドキュメントを表示するには、この記事の Visual Studio **Version** セレクター コントロールを Visual Studio 2017 または Visual Studio 2019 に設定します。 このページの目次の一番上にあります。
 
 ::: moniker-end
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 
-この`IRelogger`クラスは、Windows イベント トレース (ETW) トレースを再ログするためのインターフェイスを提供します。 これは、[関数](../functions/make-dynamic-relogger-group.md)と共に使用[されます](../functions/make-static-analyzer-group.md)。 リ`IRelogger`ロガーグループの一部にすることができる独自のリロガーを作成する基本クラスとして使用します。
+`IRelogger` クラスにより、Event Tracing for Windows (ETW) トレースの再ログ記録を行うためのインターフェイスが提供されます。 [MakeDynamicReloggerGroup](../functions/make-dynamic-relogger-group.md) 関数と [MakeStaticReloggerGroup](../functions/make-static-analyzer-group.md) 関数で使用されます。 リロガー グループの一部にできる独自のリロガーを作成するための基底クラスとしては、`IRelogger` を使用します。
 
 ## <a name="syntax"></a>構文
 
@@ -54,7 +54,7 @@ public:
 
 ## <a name="remarks"></a>解説
 
-オーバーライドされないすべての関数の既定の戻り値は`AnalysisControl::CONTINUE`です。 詳細については、「[分析コントロール](analysis-control-enum-class.md)」を参照してください。
+オーバーライドされていないすべての関数の既定の戻り値は `AnalysisControl::CONTINUE` です。 詳細については、[AnalysisControl](analysis-control-enum-class.md) に関する記事を参照してください。
 
 ## <a name="members"></a>メンバー
 
@@ -62,18 +62,18 @@ public:
 
 [~IRelogger](#irelogger-destructor)
 
-### <a name="functions"></a>関数
+### <a name="functions"></a>機能
 
-[オンビギンリロギング](#on-begin-relogging)\
-[オンビギンリロギングパス](#on-begin-relogging-pass)\
-[オンエンドリロギング](#on-end-relogging)\
-[オンエンドレロギングパス](#on-end-relogging-pass)\
-[オンシンプルイベント](#on-simple-event)\
-[オンスタートアクティビティ](#on-start-activity)\
-[オンストップアクティビティ](#on-stop-activity)\
-[オントレース情報](#on-trace-info)
+[OnBeginRelogging](#on-begin-relogging)\
+[OnBeginReloggingPass](#on-begin-relogging-pass)\
+[OnEndRelogging](#on-end-relogging)\
+[OnEndReloggingPass](#on-end-relogging-pass)\
+[OnSimpleEvent](#on-simple-event)\
+[OnStartActivity](#on-start-activity)\
+[OnStopActivity](#on-stop-activity)\
+[OnTraceInfo](#on-trace-info)
 
-## <a name="irelogger"></a><a name="irelogger-destructor"></a>~IRelogger
+## <a name="irelogger"></a><a name="irelogger-destructor"></a> ~IRelogger
 
 IRelogger クラスを破棄します。
 
@@ -81,9 +81,9 @@ IRelogger クラスを破棄します。
 virtual ~IRelogger();
 ```
 
-## <a name="onbeginrelogging"></a><a name="on-begin-relogging"></a>オンビギンリロギング
+## <a name="onbeginrelogging"></a><a name="on-begin-relogging"></a> OnBeginRelogging
 
-この関数は、再ロギングパスが開始される前に呼び出されます。
+この関数は、再ログ記録パスが開始される前に呼び出されます。
 
 ```cpp
 virtual AnalysisControl OnBeginRelogging();
@@ -91,11 +91,11 @@ virtual AnalysisControl OnBeginRelogging();
 
 ### <a name="return-value"></a>戻り値
 
-次に何が起こるかを記述する[分析コントロール](analysis-control-enum-class.md)コード。
+次に行う必要があることが記述されている [AnalysisControl](analysis-control-enum-class.md) コード。
 
-## <a name="onbeginreloggingpass"></a><a name="on-begin-relogging-pass"></a>オンビギンリロギングパス
+## <a name="onbeginreloggingpass"></a><a name="on-begin-relogging-pass"></a> OnBeginReloggingPass
 
-この関数は、再ロギングパスの先頭で呼び出されます。
+この関数は、再ログ記録パスの開始時に呼び出されます。
 
 ```cpp
 virtual AnalysisControl OnBeginReloggingPass();
@@ -103,11 +103,11 @@ virtual AnalysisControl OnBeginReloggingPass();
 
 ### <a name="return-value"></a>戻り値
 
-次に何が起こるかを記述する[分析コントロール](analysis-control-enum-class.md)コード。
+次に行う必要があることが記述されている [AnalysisControl](analysis-control-enum-class.md) コード。
 
-## <a name="onendrelogging"></a><a name="on-end-relogging"></a>オンエンドリロギング
+## <a name="onendrelogging"></a><a name="on-end-relogging"></a> OnEndRelogging
 
-この関数は、再ロギングパスが終了した後に呼び出されます。
+この関数は、再ログ記録パスが終了した後で呼び出されます。
 
 ```cpp
 virtual AnalysisControl OnEndRelogging();
@@ -115,11 +115,11 @@ virtual AnalysisControl OnEndRelogging();
 
 ### <a name="return-value"></a>戻り値
 
-次に何が起こるかを記述する[分析コントロール](analysis-control-enum-class.md)コード。
+次に行う必要があることが記述されている [AnalysisControl](analysis-control-enum-class.md) コード。
 
-## <a name="onendreloggingpass"></a><a name="on-end-relogging-pass"></a>オンエンドレロギングパス
+## <a name="onendreloggingpass"></a><a name="on-end-relogging-pass"></a> OnEndReloggingPass
 
-この関数は、再ロギングパスの最後に呼び出されます。
+この関数は、再ログ記録パスの終了時に呼び出されます。
 
 ```cpp
 virtual AnalysisControl OnEndReloggingPass();
@@ -127,26 +127,26 @@ virtual AnalysisControl OnEndReloggingPass();
 
 ### <a name="return-value"></a>戻り値
 
-次に何が起こるかを記述する[分析コントロール](analysis-control-enum-class.md)コード。
+次に行う必要があることが記述されている [AnalysisControl](analysis-control-enum-class.md) コード。
 
-## <a name="onsimpleevent"></a><a name="on-simple-event"></a>オンシンプルイベント
+## <a name="onsimpleevent"></a><a name="on-simple-event"></a> OnSimpleEvent
 
 ```cpp
 virtual AnalysisControl OnSimpleEvent(const EventStack& eventStack);
 ```
 
-この関数は、単純なイベントが処理されるときに呼び出されます。
+この関数は、簡易イベントが処理されるときに呼び出されます。
 
 ### <a name="parameters"></a>パラメーター
 
-*イベントスタック*\
-この単純なイベントのイベント スタック。 イベント スタックの詳細については、「[イベント](../event-table.md)」を参照してください。
+*eventStack*\
+この簡易イベントのイベント スタック。 イベント スタックの詳細については、[イベント](../event-table.md)に関するページを参照してください。
 
 ### <a name="return-value"></a>戻り値
 
-次に何が起こるかを記述する[分析コントロール](analysis-control-enum-class.md)コード。
+次に行う必要があることが記述されている [AnalysisControl](analysis-control-enum-class.md) コード。
 
-## <a name="onstartactivity"></a><a name="on-start-activity"></a>オンスタートアクティビティ
+## <a name="onstartactivity"></a><a name="on-start-activity"></a> OnStartActivity
 
 ```cpp
 virtual AnalysisControl OnStartActivity(const EventStack& eventStack);
@@ -156,14 +156,14 @@ virtual AnalysisControl OnStartActivity(const EventStack& eventStack);
 
 ### <a name="parameters"></a>パラメーター
 
-*イベントスタック*\
-このアクティビティ開始イベントのイベント スタック。 イベント スタックの詳細については、「[イベント](../event-table.md)」を参照してください。
+*eventStack*\
+このアクティビティ開始イベントのイベント スタック。 イベント スタックの詳細については、[イベント](../event-table.md)に関するページを参照してください。
 
 ### <a name="return-value"></a>戻り値
 
-次に何が起こるかを記述する[分析コントロール](analysis-control-enum-class.md)コード。
+次に行う必要があることが記述されている [AnalysisControl](analysis-control-enum-class.md) コード。
 
-## <a name="onstopactivity"></a><a name="on-stop-activity"></a>オンストップアクティビティ
+## <a name="onstopactivity"></a><a name="on-stop-activity"></a> OnStopActivity
 
 この関数は、アクティビティ停止イベントが処理されるときに呼び出されます。
 
@@ -173,28 +173,28 @@ virtual AnalysisControl OnStopActivity(const EventStack& eventStack);
 
 ### <a name="parameters"></a>パラメーター
 
-*イベントスタック*\
-このアクティビティ停止イベントのイベント スタック。 イベント スタックの詳細については、「[イベント](../event-table.md)」を参照してください。
+*eventStack*\
+このアクティビティ停止イベントのイベント スタック。 イベント スタックの詳細については、[イベント](../event-table.md)に関するページを参照してください。
 
 ### <a name="return-value"></a>戻り値
 
-次に何が起こるかを記述する[分析コントロール](analysis-control-enum-class.md)コード。
+次に行う必要があることが記述されている [AnalysisControl](analysis-control-enum-class.md) コード。
 
-## <a name="ontraceinfo"></a><a name="on-trace-info"></a>オントレース情報
+## <a name="ontraceinfo"></a><a name="on-trace-info"></a> OnTraceInfo
 
 ```cpp
 virtual AnalysisControl OnTraceInfo(const TraceInfo& traceInfo);
 ```
 
-この関数は、すべての分析または再ロギングパスの開始時に 1 回呼び出されます。
+この関数は、すべての分析パスまたは再ログ記録パスの開始時に 1 回呼び出されます。
 
 ### <a name="parameters"></a>パラメーター
 
-*トレース情報*\
-使用されるトレースに関する有用なプロパティを格納する[TraceInfo](../cpp-event-data-types/trace-info.md)オブジェクト。
+*traceInfo*\
+使用されているトレースに関する有用なプロパティが格納される [TraceInfo](../cpp-event-data-types/trace-info.md) オブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
-次に何が起こるかを記述する[分析コントロール](analysis-control-enum-class.md)コード。
+次に行う必要があることが記述されている [AnalysisControl](analysis-control-enum-class.md) コード。
 
 ::: moniker-end

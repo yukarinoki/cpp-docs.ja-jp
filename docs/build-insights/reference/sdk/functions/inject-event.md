@@ -1,6 +1,6 @@
 ---
-title: イベントを注入する
-description: C++ ビルド インサイト SDK インジェクトイベント関数リファレンス。
+title: InjectEvent
+description: C++ Build Insights SDK の InjectEvent 関数のリファレンス。
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: c82aad5923eff60e5c72ceccaa39aa136f942665
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
-ms.translationtype: MT
+ms.openlocfilehash: b4d85f17a6d553d9dffa727824e6d4de94518645
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81324038"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92922848"
 ---
-# <a name="injectevent"></a>イベントを注入する
+# <a name="injectevent"></a>InjectEvent
 
-::: moniker range="<=vs-2015"
+::: moniker range="<=msvc-140"
 
-C++ ビルド インサイト SDK は、Visual Studio 2017 以降と互換性があります。 これらのバージョンのドキュメントを参照するには、この記事の Visual Studio**バージョン**セレクター コントロールを Visual Studio 2017 または Visual Studio 2019 に設定します。 このページの目次の上部に表示されます。
+C++ Build Insights SDK は、Visual Studio 2017 以降と互換性があります。 これらのバージョンのドキュメントを表示するには、この記事の Visual Studio **Version** セレクター コントロールを Visual Studio 2017 または Visual Studio 2019 に設定します。 このページの目次の一番上にあります。
 
 ::: moniker-end
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 
-関数`InjectEvent`は[、IRelogger](../other-types/irelogger-class.md)インターフェイスを実装するリロガー内で呼び出されます。 再ロギング セッションの出力トレース ファイルに Windows イベント トレース (ETW) イベントを書き込むために使用されます。
+`InjectEvent` 関数は、[IRelogger](../other-types/irelogger-class.md) インターフェイスが実装されているリロガー内で呼び出されます。 再ログ記録セッションの出力トレース ファイルに Event Tracing for Windows (ETW) イベントを書き込むために使用されます。
 
 ## <a name="syntax"></a>構文
 
@@ -44,35 +44,35 @@ void InjectEvent(
 
 ### <a name="parameters"></a>パラメーター
 
-*セッションを再ログします。*\
-再ロギング セッションへのポインター。 再ロギング セッションは、インターフェイスを実装するリロガーに`IRelogger`提供されます。 詳細については[、IRelogger](../other-types/irelogger-class.md)を参照してください。
+*relogSession*\
+再ログ記録セッションへのポインター。 再ログ記録セッションは、`IRelogger` インターフェイスが実装されているリロガーに提供されます。 詳細については、[IRelogger](../other-types/irelogger-class.md) に関する記事を参照してください。
 
-*プロバイダ Id*\
-ETW イベントが再ログされる Windows (ETW) プロバイダー GUID のイベント トレース。
+*providerId*\
+ETW イベントが再ログ記録される Tracing for Windows (ETW) プロバイダー GUID。
 
-*イベント記述子*\
-再ログに記録される ETW イベントの ETW イベント記述子。
+*eventDescriptor*\
+再ログ記録される ETW イベントの ETW イベント記述子。
 
-*プロセスId*\
-再ログに記録される ETW イベントのプロセス識別子 (PID)。
+*processId*\
+再ログ記録される ETW イベントのプロセス識別子 (PID)。
 
-*Threadid*\
-再ログに記録される ETW イベントのスレッド識別子 (TID)。
+*threadId*\
+再ログ記録される ETW イベントのスレッド識別子 (TID)。
 
-*プロセッサインデックス*\
-再ログに記録される ETW イベントのプロセッサ インデックス。
+*processorIndex*\
+再ログ記録される ETW イベントのプロセッサ インデックス。
 
-*タイムスタンプ*\
-再ログに記録された ETW イベントのタイムスタンプ。
+*timestamp*\
+再ログ記録される ETW イベントのタイムスタンプ。
 
-*データ*\
-ログに記録された ETW イベントに含める必要があるデータへのポインター。
+*data*\
+再ログ記録される ETW イベントに含める必要があるデータへのポインター。
 
-*バイト数*\
-データが指すデータのサイズ (バイト*単位)。*
+*byteCount*\
+*data* によって示されるデータのサイズ (バイト単位)。
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>注釈
 
-*プロバイダの GUID*や*イベント記述子*などの ETW の概念の詳細については、 [ETW のドキュメントを参照してください](/windows/win32/etw/about-event-tracing)。 C++ ビルド インサイト SDK で再ロギング セッションを開始する方法の詳細については[、「Relog」](relog.md)を参照してください。
+" *プロバイダー GUID* " や " *イベント記述子* " などの ETW の概念の詳細については、[ETW のドキュメント](/windows/win32/etw/about-event-tracing)を参照してください。 C++ Build Insights SDK を使用して再ログ記録セッションを開始する方法の詳細については、「[Relog](relog.md)」を参照してください。
 
 ::: moniker-end

@@ -1,6 +1,6 @@
 ---
-title: クラス
-description: C++ ビルド インサイト SDK トレース情報 クラスリファレンス。
+title: TraceInfo クラス
+description: C++ Build Insights SDK の TraceInfo クラスのリファレンス。
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 75d53937e3999f5692dee0ecf419e0ce5f49a274
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
-ms.translationtype: MT
+ms.openlocfilehash: b772cc13981720c73238e56a561ca92144775cb4
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81324171"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92922916"
 ---
-# <a name="traceinfo-class"></a>クラス
+# <a name="traceinfo-class"></a>TraceInfo クラス
 
-::: moniker range="<=vs-2015"
+::: moniker range="<=msvc-140"
 
-C++ ビルド インサイト SDK は、Visual Studio 2017 以降と互換性があります。 これらのバージョンのドキュメントを参照するには、この記事の Visual Studio**バージョン**セレクター コントロールを Visual Studio 2017 または Visual Studio 2019 に設定します。 このページの目次の上部に表示されます。
+C++ Build Insights SDK は、Visual Studio 2017 以降と互換性があります。 これらのバージョンのドキュメントを表示するには、この記事の Visual Studio **Version** セレクター コントロールを Visual Studio 2017 または Visual Studio 2019 に設定します。 このページの目次の一番上にあります。
 
 ::: moniker-end
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 
-この`TraceInfo`クラスは、分析または再ログに記録されるトレースに関する有用なプロパティにアクセスするために使用されます。
+`TraceInfo` クラスは、分析または再ログ記録の対象のトレースに関する有用なプロパティにアクセスするために使用されます。
 
 ## <a name="syntax"></a>構文
 
@@ -47,25 +47,25 @@ public:
 
 ## <a name="remarks"></a>解説
 
-`StartTimestamp` from`StopTimestamp`を減算して、トレース全体で経過したティック数を取得します。 結果`TickFrequency`の値を時間単位に変換するために使用します。 ティックを時間に変換する例については、「 [EVENT_DATA](../c-event-data-types/event-data-struct.md)」 を参照してください。
+トレース全体で経過したティック数を得るには、`StopTimestamp` から `StartTimestamp` を減算します。 得られた結果を時間単位に変換するには `TickFrequency` を使用します。 ティック数を時間に変換する例については、[EVENT_DATA](../c-event-data-types/event-data-struct.md)に関する記事を参照してください。
 
-自分でティックを変換しない場合、`TraceInfo`クラスはナノ秒単位でトレース期間を返すメンバー関数を提供します。 標準の C++`chrono`ライブラリを使用して、この値を他の時間単位に変換します。
+ティック数を自分で変換したくない場合は、`TraceInfo` クラスで、トレース時間をナノ秒単位で返すメンバー関数が提供されています。 この値を他の時間単位に変換するには、C++ の標準 `chrono` ライブラリを使用します。
 
 ## <a name="members"></a>メンバー
 
 ### <a name="constructors"></a>コンストラクター
 
-[トレース情報](#trace-info)
+[TraceInfo](#trace-info)
 
-### <a name="functions"></a>関数
+### <a name="functions"></a>機能
 
-[期間](#duration)
-[論理プロセッサカウント](#logical-processor-count)
-[開始タイムスタンプ](#start-timestamp)
-[ストップタイムスタンプ](#stop-timestamp)
-[ティック周波数](#tick-frequency)
+[Duration](#duration)
+[LogicalProcessorCount](#logical-processor-count)
+[StartTimestamp](#start-timestamp)
+[StopTimestamp](#stop-timestamp)
+[TickFrequency](#tick-frequency)
 
-## <a name="duration"></a><a name="duration"></a>期間
+## <a name="duration"></a><a name="duration"></a> Duration
 
 ```cpp
 std::chrono::nanoseconds Duration() const;
@@ -73,9 +73,9 @@ std::chrono::nanoseconds Duration() const;
 
 ### <a name="return-value"></a>戻り値
 
-アクティビティの時間 (ナノ秒単位)。
+アクティビティの継続時間 (ナノ秒単位)。
 
-## <a name="logicalprocessorcount"></a><a name="logical-processor-count"></a>論理プロセッサ数
+## <a name="logicalprocessorcount"></a><a name="logical-processor-count"></a> LogicalProcessorCount
 
 ```cpp
 const unsigned long& LogicalProcessorCount() const;
@@ -85,7 +85,7 @@ const unsigned long& LogicalProcessorCount() const;
 
 トレースが収集されたコンピューター上の論理プロセッサの数。
 
-## <a name="starttimestamp"></a><a name="start-timestamp"></a>スタートタイムスタンプ
+## <a name="starttimestamp"></a><a name="start-timestamp"></a> StartTimestamp
 
 ```cpp
 const long long& StartTimestamp() const;
@@ -93,9 +93,9 @@ const long long& StartTimestamp() const;
 
 ### <a name="return-value"></a>戻り値
 
-トレースの開始時にキャプチャされたティック値。
+トレースが開始された時刻にキャプチャされたティック値。
 
-## <a name="stoptimestamp"></a><a name="stop-timestamp"></a>ストップタイムスタンプ
+## <a name="stoptimestamp"></a><a name="stop-timestamp"></a> StopTimestamp
 
 ```cpp
 const long long& StopTimestamp() const;
@@ -103,9 +103,9 @@ const long long& StopTimestamp() const;
 
 ### <a name="return-value"></a>戻り値
 
-トレースが停止された時点でキャプチャされたティック値。
+トレースが停止された時刻にキャプチャされたティック値。
 
-## <a name="tickfrequency"></a><a name="tick-frequency"></a>ティック周波数
+## <a name="tickfrequency"></a><a name="tick-frequency"></a> TickFrequency
 
 ```cpp
 const long long& TickFrequency() const;
@@ -113,9 +113,9 @@ const long long& TickFrequency() const;
 
 ### <a name="return-value"></a>戻り値
 
-ティック単位で測定された期間を評価するときに使用する 1 秒あたりのティック数。
+ティック単位で計測された期間を評価するときに使用する、1 秒あたりのティック数。
 
-## <a name="traceinfo"></a><a name="trace-info"></a>トレース情報
+## <a name="traceinfo"></a><a name="trace-info"></a> TraceInfo
 
 ```cpp
 TraceInfo(const TRACE_INFO_DATA& data);
@@ -123,7 +123,7 @@ TraceInfo(const TRACE_INFO_DATA& data);
 
 ### <a name="parameters"></a>パラメーター
 
-*データ*\
-トレースに関する情報を含むデータ。
+*data*\
+トレースに関する情報が格納されているデータ。
 
 ::: moniker-end

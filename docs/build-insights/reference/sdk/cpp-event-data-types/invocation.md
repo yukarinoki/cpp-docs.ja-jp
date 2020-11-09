@@ -1,6 +1,6 @@
 ---
-title: 呼び出しクラス
-description: C++ ビルド インサイト SDK 呼び出しクラスのリファレンス。
+title: Invocation クラス
+description: C++ Build Insights SDK の Invocation クラスのリファレンス。
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: fcb087d46ea445251b0108f811545a44c26f421e
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
-ms.translationtype: MT
+ms.openlocfilehash: dfd463c7b9ca72dc14ad74b3759fdd1e3730d5a9
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81324637"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92923137"
 ---
-# <a name="invocation-class"></a>呼び出しクラス
+# <a name="invocation-class"></a>Invocation クラス
 
-::: moniker range="<=vs-2015"
+::: moniker range="<=msvc-140"
 
-C++ ビルド インサイト SDK は、Visual Studio 2017 以降と互換性があります。 これらのバージョンのドキュメントを参照するには、この記事の Visual Studio**バージョン**セレクター コントロールを Visual Studio 2017 または Visual Studio 2019 に設定します。 このページの目次の上部に表示されます。
+C++ Build Insights SDK は、Visual Studio 2017 以降と互換性があります。 これらのバージョンのドキュメントを表示するには、この記事の Visual Studio **Version** セレクター コントロールを Visual Studio 2017 または Visual Studio 2019 に設定します。 このページの目次の一番上にあります。
 
 ::: moniker-end
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 
-クラス`Invocation`[は、](../functions/match-event-in-member-function.md)[関数](../functions/match-event.md)で使用されます。 [MatchEventStack](../functions/match-event-stack.md) [MatchEventStackInMemberFunction](../functions/match-event-stack-in-member-function.md) このイベントは[、コンパイラ](../event-table.md#compiler)ーまたは[リンカー](../event-table.md#linker) ・イベントと一致させるために使用します。
+`Invocation` クラスは、[MatchEvent](../functions/match-event.md)、[MatchEventInMemberFunction](../functions/match-event-in-member-function.md)、[MatchEventStack](../functions/match-event-stack.md)、および [MatchEventStackInMemberFunction](../functions/match-event-stack-in-member-function.md) 関数と共に使用されます。 [COMPILER](../event-table.md#compiler) または [LINKER](../event-table.md#linker) イベントを照合するために使用します。
 
 ## <a name="syntax"></a>構文
 
@@ -54,21 +54,21 @@ public:
 
 ## <a name="members"></a>メンバー
 
-クラスには、[その Activity](activity.md)基本クラスから継承された`Invocation`メンバーと共に、次のメンバーが含まれます。
+その基底クラス [Activity](activity.md) から継承されたメンバーに加えて、`Invocation` クラスには以下のメンバーが含まれます。
 
 ### <a name="constructors"></a>コンストラクター
 
 [[呼び出し]](#invocation)
 
-### <a name="functions"></a>関数
+### <a name="functions"></a>機能
 
-[ツールパス](#tool-path)
-[ツールバージョン](#tool-version)
-[ツールバージョン文字列](#tool-version-string)
-[タイプ](#type)
-[ワーキングディレクトリ](#working-directory)
+[ToolPath](#tool-path)
+[ToolVersion](#tool-version)
+[ToolVersionString](#tool-version-string)
+[Type](#type)
+[WorkingDirectory](#working-directory)
 
-## <a name="invocation"></a><a name="invocation"></a>呼び出し
+## <a name="invocation"></a><a name="invocation"></a> Invocation
 
 ```cpp
 Invocation(const RawEvent& event);
@@ -76,10 +76,10 @@ Invocation(const RawEvent& event);
 
 ### <a name="parameters"></a>パラメーター
 
-*イベント*\
-[コンパイラ](../event-table.md#compiler)ーまたは[リンカー](../event-table.md#linker) ・イベント。
+*event*\
+[COMPILER](../event-table.md#compiler) または [LINKER](../event-table.md#linker) イベント。
 
-## <a name="toolpath"></a><a name="tool-path"></a>ツールパス
+## <a name="toolpath"></a><a name="tool-path"></a> ToolPath
 
 ```cpp
 const wchar_t* ToolPath() const;
@@ -89,7 +89,7 @@ const wchar_t* ToolPath() const;
 
 呼び出されたツールへの絶対パス。
 
-## <a name="toolversion"></a><a name="tool-version"></a>ツールバージョン
+## <a name="toolversion"></a><a name="tool-version"></a> ToolVersion
 
 ```cpp
 const INVOCATION_VERSION_DATA& ToolVersion() const;
@@ -97,9 +97,9 @@ const INVOCATION_VERSION_DATA& ToolVersion() const;
 
 ### <a name="return-value"></a>戻り値
 
-[INVOCATION_VERSION_DATA](../c-event-data-types/invocation-version-data-struct.md)参照として呼び出されたツールのバージョン。
+[INVOCATION_VERSION_DATA](../c-event-data-types/invocation-version-data-struct.md) 参照としての、呼び出されたツールのバージョン。
 
-## <a name="toolversionstring"></a><a name="tool-version-string"></a>ツールバージョン文字列
+## <a name="toolversionstring"></a><a name="tool-version-string"></a> ToolVersionString
 
 ```cpp
 const char* ToolVersionString() const;
@@ -107,7 +107,7 @@ const char* ToolVersionString() const;
 
 ### <a name="return-value"></a>戻り値
 
-ANSI 文字列として呼び出されたツールのバージョン。
+ANSI 文字列としての、呼び出されたツールのバージョン。
 
 ## <a name="type"></a><a name="type"></a> の型
 
@@ -119,7 +119,7 @@ Type Type() const;
 
 呼び出されたツールを示すコード。
 
-## <a name="workingdirectory"></a><a name="working-directory"></a>ワーキングディレクトリ
+## <a name="workingdirectory"></a><a name="working-directory"></a> WorkingDirectory
 
 ```cpp
 const wchar_t* WorkingDirectory() const;

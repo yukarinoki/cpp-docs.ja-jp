@@ -1,6 +1,6 @@
 ---
 title: Activity クラス
-description: C++ ビルド インサイト SDK アクティビティ クラスのリファレンス。
+description: C++ Build Insights SDK の Activity クラスのリファレンス。
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 2ea04150aec9c0b2366d97e6e4c15de557a4f47c
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
-ms.translationtype: MT
+ms.openlocfilehash: ce7e4083411f1654064ca4628d10a767c7be1b7f
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81325244"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92923398"
 ---
 # <a name="activity-class"></a>Activity クラス
 
-::: moniker range="<=vs-2015"
+::: moniker range="<=msvc-140"
 
-C++ ビルド インサイト SDK は、Visual Studio 2017 以降と互換性があります。 これらのバージョンのドキュメントを参照するには、この記事の Visual Studio**バージョン**セレクター コントロールを Visual Studio 2017 または Visual Studio 2019 に設定します。 このページの目次の上部に表示されます。
+C++ Build Insights SDK は、Visual Studio 2017 以降と互換性があります。 これらのバージョンのドキュメントを表示するには、この記事の Visual Studio **Version** セレクター コントロールを Visual Studio 2017 または Visual Studio 2019 に設定します。 このページの目次の一番上にあります。
 
 ::: moniker-end
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 
-クラス`Activity`[は、](../functions/match-event-in-member-function.md)[関数](../functions/match-event.md)で使用されます。 [MatchEventStack](../functions/match-event-stack.md) [MatchEventStackInMemberFunction](../functions/match-event-stack-in-member-function.md) 任意のアクティビティ イベントに一致させるために使用します。 イベント[テーブル](../event-table.md)を参照して、クラスで一致できるすべてのイベント`Activity`を確認します。
+`Activity` クラスは、[MatchEvent](../functions/match-event.md)、[MatchEventInMemberFunction](../functions/match-event-in-member-function.md)、[MatchEventStack](../functions/match-event-stack.md)、および [MatchEventStackInMemberFunction](../functions/match-event-stack-in-member-function.md) 関数と共に使用されます。 任意のアクティビティと照合するために使用します。 `Activity` クラスで照合できるすべてのイベントを見るには、[イベント テーブル](../event-table.md)に関する記事を参照してください。
 
 ## <a name="syntax"></a>構文
 
@@ -54,33 +54,33 @@ public:
 
 ## <a name="remarks"></a>解説
 
-クラス内のいくつかのメンバー関数`Activity`は、ティック数を返します。 C++ ビルドインサイトは、ティックのソースとして Windows のパフォーマンス カウンターを使用します。 ティック数は、秒などの時間単位に変換するためにティック頻度と共に使用する必要があります。 Event`TickFrequency`基本クラスで使用できる[Event](event.md)メンバー関数は、ティックの頻度を取得するために呼び出されるかもしれません。 [EVENT_DATA](../c-event-data-types/event-data-struct.md#tick-conversion-example)ページには、ティックを時間単位に変換する例が表示されます。
+`Activity` クラスのいくつかのメンバー関数からは、ティック数が返されます。 C++ Build Insights では、ティックのソースとして Window のパフォーマンス カウンターが使用されます。 ティック数をティック周波数と共に使用して、秒などの時間単位に変換する必要があります。 [Event](event.md) 基底クラスで使用できる `TickFrequency` メンバー関数を呼び出して、ティック周波数を取得することができます。 [EVENT_DATA](../c-event-data-types/event-data-struct.md#tick-conversion-example) に関するページには、ティックを時間単位に変換する例が示されています。
 
-自分でティックを時間単位に変換しない場合、`Activity`クラスは時間の値をナノ秒単位で返すメンバー関数を提供します。 標準の C++`chrono`ライブラリを使用して、他の時間単位に変換します。
+ティック数を時間単位に自分で変換したくない場合は、`Activity` クラスに、時間の値をナノ秒単位で返すメンバー関数が用意されています。 それを他の時間単位に変換するには、C++ の標準 `chrono` ライブラリを使用します。
 
 ## <a name="members"></a>メンバー
 
-[Event](event.md)基本クラスから継承されたメンバーと共に`Activity`、クラスには次のメンバーが含まれます。
+基底クラス [Event](event.md) から継承されたメンバーに加えて、`Activity` クラスには以下のメンバーが含まれます。
 
-### <a name="constructor"></a>Constructor
+### <a name="constructor"></a>コンストラクター
 
 [アクティビティ](#activity)
 
-### <a name="functions"></a>関数
+### <a name="functions"></a>機能
 
-[CPUティック](#cpu-ticks)\
-[CPUタイム](#cpu-time)\
-[期間](#duration)\
-[排他的なCPUティック](#exclusive-cpu-ticks)\
-[排他 CPU タイム](#exclusive-cpu-time)\
-[エクスクルーシブ期間](#exclusive-duration)\
-[エクスクルーシブ・デュレーション・ティック](#exclusive-duration-ticks)\
-[エクスクルーシブウォールクロックタイム責任](#exclusive-wall-clock-time-responsibility)\
-[排他的なウォールクロックタイム責任ティック](#exclusive-wall-clock-time-responsibility-ticks)\
-[スタートタイムスタンプ](#start-timestamp)\
-[ストップタイムスタンプ](#stop-timestamp)\
-[ウォールクロックタイム責任](#wall-clock-time-responsibility)\
-[ウォールクロックタイム責任ティック](#wall-clock-time-responsibility-ticks)
+[CPUTicks](#cpu-ticks)\
+[CPUTime](#cpu-time)\
+[Duration](#duration)\
+[ExclusiveCPUTicks](#exclusive-cpu-ticks)\
+[ExclusiveCPUTime](#exclusive-cpu-time)\
+[ExclusiveDuration](#exclusive-duration)\
+[ExclusiveDurationTicks](#exclusive-duration-ticks)\
+[ExclusiveWallClockTimeResponsibility](#exclusive-wall-clock-time-responsibility)\
+[ExclusiveWallClockTimeResponsibilityTicks](#exclusive-wall-clock-time-responsibility-ticks)\
+[StartTimestamp](#start-timestamp)\
+[StopTimestamp](#stop-timestamp)\
+[WallClockTimeResponsibility](#wall-clock-time-responsibility)\
+[WallClockTimeResponsibilityTicks](#wall-clock-time-responsibility-ticks)
 
 ## <a name="activity"></a><a name="activity"></a> の利用状況
 
@@ -90,10 +90,10 @@ Activity(const RawEvent& event);
 
 ### <a name="parameters"></a>パラメーター
 
-*イベント*\
+*event*\
 任意のアクティビティ イベント。
 
-## <a name="cputicks"></a><a name="cpu-ticks"></a>CPUティック
+## <a name="cputicks"></a><a name="cpu-ticks"></a> CPUTicks
 
 ```cpp
 const long long& CPUTicks() const;
@@ -101,9 +101,9 @@ const long long& CPUTicks() const;
 
 ### <a name="return-value"></a>戻り値
 
-このアクティビティ中に発生した CPU ティックの数。 CPU ティックは、通常のティックとは異なります。 CPU ティックは、CPU がアクティビティ内のコードを実行している場合にのみカウントされます。 アクティビティに関連付けられたスレッドがスリープ状態の場合、CPU ティックはカウントされません。
+このアクティビティの間に発生した CPU ティックの数。 CPU ティックは、通常のティックとは異なります。 CPU ティックは、アクティビティ内のコードが CPU によって実行されている場合にのみカウントされます。 アクティビティに関連付けられているスレッドがスリープ状態のときには、CPU ティックはカウントされません。
 
-## <a name="cputime"></a><a name="cpu-time"></a>CPUタイム
+## <a name="cputime"></a><a name="cpu-time"></a> CPUTime
 
 ```cpp
 std::chrono::nanoseconds CPUTime()() const;
@@ -111,9 +111,9 @@ std::chrono::nanoseconds CPUTime()() const;
 
 ### <a name="return-value"></a>戻り値
 
-このアクティビティ内で CPU がコードを実行していた時間。 子アクティビティが別々のスレッドで実行される場合、この値はアクティビティの期間よりも長くなることがあります。 値はナノ秒単位で返されます。
+CPU がこのアクティビティ内でコードを実行していた時間の長さ。 子アクティビティが別のスレッドで実行される場合、この値はアクティビティの期間より長くなる可能性があります。 値はナノ秒単位で返されます。
 
-## <a name="duration"></a><a name="duration"></a>期間
+## <a name="duration"></a><a name="duration"></a> Duration
 
 ```cpp
 std::chrono::nanoseconds Duration() const;
@@ -121,9 +121,9 @@ std::chrono::nanoseconds Duration() const;
 
 ### <a name="return-value"></a>戻り値
 
-アクティビティの時間 (ナノ秒単位)。
+アクティビティの継続時間 (ナノ秒単位)。
 
-## <a name="exclusivecputicks"></a><a name="exclusive-cpu-ticks"></a>排他的なCPUティック
+## <a name="exclusivecputicks"></a><a name="exclusive-cpu-ticks"></a> ExclusiveCPUTicks
 
 ```cpp
 const long long& ExclusiveCPUTicks() const;
@@ -131,9 +131,9 @@ const long long& ExclusiveCPUTicks() const;
 
 ### <a name="return-value"></a>戻り値
 
-[CPUTicks](#cpu-ticks)と同じですが、子アクティビティで発生した CPU ティックは含まれません。
+[CPUTicks](#cpu-ticks) と同じですが、子アクティビティで発生した CPU ティック数は含まれません。
 
-## <a name="exclusivecputime"></a><a name="exclusive-cpu-time"></a>排他 CPU タイム
+## <a name="exclusivecputime"></a><a name="exclusive-cpu-time"></a> ExclusiveCPUTime
 
 ```cpp
 std::chrono::nanoseconds ExclusiveCPUTime() const;
@@ -141,9 +141,9 @@ std::chrono::nanoseconds ExclusiveCPUTime() const;
 
 ### <a name="return-value"></a>戻り値
 
-[CPUTime](#cpu-time)と同じですが、子アクティビティの CPU 時間は含まれません。
+子アクティビティの CPU 時間が含まれない点を除いて、[CPUTime](#cpu-time) と同じです。
 
-## <a name="exclusiveduration"></a><a name="exclusive-duration"></a>エクスクルーシブ期間
+## <a name="exclusiveduration"></a><a name="exclusive-duration"></a> ExclusiveDuration
 
 ```cpp
 std::chrono::nanoseconds ExclusiveDuration() const;
@@ -151,9 +151,9 @@ std::chrono::nanoseconds ExclusiveDuration() const;
 
 ### <a name="return-value"></a>戻り値
 
-アクティビティの期間 (子アクティビティに費やされた時間は含まない)
+アクティビティの継続時間 (ナノ秒単位)。子アクティビティで費やされた時間は含まれません。
 
-## <a name="exclusivedurationticks"></a><a name="exclusive-duration-ticks"></a>エクスクルーシブ・デュレーション・ティック
+## <a name="exclusivedurationticks"></a><a name="exclusive-duration-ticks"></a> ExclusiveDurationTicks
 
 ```cpp
 const long long& ExclusiveDurationTicks() const;
@@ -161,9 +161,9 @@ const long long& ExclusiveDurationTicks() const;
 
 ### <a name="return-value"></a>戻り値
 
-子アクティビティで発生したティックの数を除き、このアクティビティで発生したティックの数。
+このアクティビティで発生したティックの数。子アクティビティで発生したティックの数は除きます。
 
-## <a name="exclusivewallclocktimeresponsibility"></a><a name="exclusive-wall-clock-time-responsibility"></a>エクスクルーシブウォールクロックタイム責任
+## <a name="exclusivewallclocktimeresponsibility"></a><a name="exclusive-wall-clock-time-responsibility"></a> ExclusiveWallClockTimeResponsibility
 
 ```cpp
 std::chrono::nanoseconds ExclusiveWallClockTimeResponsibility() const;
@@ -171,9 +171,9 @@ std::chrono::nanoseconds ExclusiveWallClockTimeResponsibility() const;
 
 ### <a name="return-value"></a>戻り値
 
-[は、子](#wall-clock-time-responsibility)アクティビティのウォールクロックタイム責任と同じですが、ウォールクロック時間の責任は含まれていません。
+[WallClockTimeResponsibility](#wall-clock-time-responsibility) と同じですが、子アクティビティのウォール クロック時間責任は含まれません。
 
-## <a name="exclusivewallclocktimeresponsibilityticks"></a><a name="exclusive-wall-clock-time-responsibility-ticks"></a>排他的なウォールクロックタイム責任ティック
+## <a name="exclusivewallclocktimeresponsibilityticks"></a><a name="exclusive-wall-clock-time-responsibility-ticks"></a> ExclusiveWallClockTimeResponsibilityTicks
 
 ```cpp
 const long long& ExclusiveWallClockTimeResponsibilityTicks() const;
@@ -181,9 +181,9 @@ const long long& ExclusiveWallClockTimeResponsibilityTicks() const;
 
 ### <a name="return-value"></a>戻り値
 
-[ウォールクロックタイム責任ティックと](#wall-clock-time-responsibility-ticks)同じですが、子アクティビティのウォールクロック時間の責任ティックは含まれていません。
+[WallClockTimeResponsibilityTicks](#wall-clock-time-responsibility-ticks) と同じですが、子アクティビティのウォール クロック時間責任ティック数は含まれません。
 
-## <a name="starttimestamp"></a><a name="start-timestamp"></a>スタートタイムスタンプ
+## <a name="starttimestamp"></a><a name="start-timestamp"></a> StartTimestamp
 
 ```cpp
 const long long& StartTimestamp() const;
@@ -191,9 +191,9 @@ const long long& StartTimestamp() const;
 
 ### <a name="return-value"></a>戻り値
 
-アクティビティの開始時にキャプチャされたティック値。
+アクティビティが開始した時刻にキャプチャされたティック値。
 
-## <a name="stoptimestamp"></a><a name="stop-timestamp"></a>ストップタイムスタンプ
+## <a name="stoptimestamp"></a><a name="stop-timestamp"></a> StopTimestamp
 
 ```cpp
 const long long& StopTimestamp() const;
@@ -201,9 +201,9 @@ const long long& StopTimestamp() const;
 
 ### <a name="return-value"></a>戻り値
 
-アクティビティが停止した時点でキャプチャされたティック値。
+アクティビティが停止した時刻にキャプチャされたティック値。
 
-## <a name="wallclocktimeresponsibility"></a><a name="wall-clock-time-responsibility"></a>ウォールクロックタイム責任
+## <a name="wallclocktimeresponsibility"></a><a name="wall-clock-time-responsibility"></a> WallClockTimeResponsibility
 
 ```cpp
 std::chrono::nanoseconds WallClockTimeResponsibility() const;
@@ -211,9 +211,9 @@ std::chrono::nanoseconds WallClockTimeResponsibility() const;
 
 ### <a name="return-value"></a>戻り値
 
-この活動のウォールクロック時間の責任(ナノ秒単位)。 ウォールクロック時間責任の意味の詳細については、「[ウォールクロックタイムレニシアルティック」](#wall-clock-time-responsibility-ticks)を参照してください。
+このアクティビティのウォール クロック時間責任 (ナノ秒単位)。 ウォール クロック時間責任の詳細については、「[WallClockTimeResponsibilityTicks](#wall-clock-time-responsibility-ticks)」を参照してください。
 
-## <a name="wallclocktimeresponsibilityticks"></a><a name="wall-clock-time-responsibility-ticks"></a>ウォールクロックタイム責任ティック
+## <a name="wallclocktimeresponsibilityticks"></a><a name="wall-clock-time-responsibility-ticks"></a> WallClockTimeResponsibilityTicks
 
 ```cpp
 const long long& WallClockTimeResponsibilityTicks() const;
@@ -221,6 +221,6 @@ const long long& WallClockTimeResponsibilityTicks() const;
 
 ### <a name="return-value"></a>戻り値
 
-このアクティビティの全体的なウォール クロック時間への貢献度を表すティック数。 ウォールクロックの時間責任ティックは、通常のティックとは異なります。 ウォールクロック時間の責任ティックは、アクティビティ間の並列性を考慮に入れます。 2 つの並列アクティビティの時間は 50 ティックで、開始時間と停止時間は同じです。 この場合、両方とも 25 ティックのウォールクロック時間の責任が割り当てられます。
+全体的なウォール クロック時間に対するこのアクティビティの影響を表すティック数。 実時間の責任ティックは、通常のティックとは異なります。 実時間の責任ティックでは、アクティビティ間の並列処理が考慮されます。 2 つの並列アクティビティが 50 ティックの期間を持ち、開始時刻と終了時刻が同じであるとします。 この場合、両方に 25 ティックのウォール クロック時間責任が割り当てられます。
 
 ::: moniker-end

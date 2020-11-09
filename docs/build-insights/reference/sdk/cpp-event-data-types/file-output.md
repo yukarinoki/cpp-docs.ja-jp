@@ -1,6 +1,6 @@
 ---
-title: ファイル出力クラス
-description: C++ ビルド インサイト SDK ファイル出力クラスリファレンス。
+title: FileOutput クラス
+description: C++ Build Insights SDK の FileOutput クラスのリファレンス。
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 37823da8a4aaac0ce4094583b8aee8ac1eb04aaa
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
-ms.translationtype: MT
+ms.openlocfilehash: 65e23715d8ac47a8653215e8bd3ee7a43bbe80a3
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81324813"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92923246"
 ---
-# <a name="fileoutput-class"></a>ファイル出力クラス
+# <a name="fileoutput-class"></a>FileOutput クラス
 
-::: moniker range="<=vs-2015"
+::: moniker range="<=msvc-140"
 
-C++ ビルド インサイト SDK は、Visual Studio 2017 以降と互換性があります。 これらのバージョンのドキュメントを参照するには、この記事の Visual Studio**バージョン**セレクター コントロールを Visual Studio 2017 または Visual Studio 2019 に設定します。 このページの目次の上部に表示されます。
+C++ Build Insights SDK は、Visual Studio 2017 以降と互換性があります。 これらのバージョンのドキュメントを表示するには、この記事の Visual Studio **Version** セレクター コントロールを Visual Studio 2017 または Visual Studio 2019 に設定します。 このページの目次の一番上にあります。
 
 ::: moniker-end
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 
-クラス`FileOutput`[は、](../functions/match-event-in-member-function.md)[関数](../functions/match-event.md)で使用されます。 [MatchEventStack](../functions/match-event-stack.md) [MatchEventStackInMemberFunction](../functions/match-event-stack-in-member-function.md) このイベントは[、EXECUTABLE_IMAGE_OUTPUT](../event-table.md#executable-image-output)、 [EXP_OUTPUT](../event-table.md#exp-output)、 [IMP_LIB_OUTPUT](../event-table.md#imp-lib-output)、 [LIB_OUTPUT](../event-table.md#lib-output)、または イベントOBJ_OUTPUT照合[するために](../event-table.md#obj-output)使用します。
+`FileOutput` クラスは、[MatchEvent](../functions/match-event.md)、[MatchEventInMemberFunction](../functions/match-event-in-member-function.md)、[MatchEventStack](../functions/match-event-stack.md)、および [MatchEventStackInMemberFunction](../functions/match-event-stack-in-member-function.md) 関数と共に使用されます。 [EXECUTABLE_IMAGE_OUTPUT](../event-table.md#executable-image-output)、[EXP_OUTPUT](../event-table.md#exp-output)、[IMP_LIB_OUTPUT](../event-table.md#imp-lib-output)、[LIB_OUTPUT](../event-table.md#lib-output)、または [OBJ_OUTPUT](../event-table.md#obj-output) イベントを照合するために使用します。
 
 ## <a name="syntax"></a>構文
 
@@ -52,18 +52,18 @@ public:
 
 ## <a name="members"></a>メンバー
 
-[クラスには、SimpleEvent](simple-event.md)基本クラスから継承されたメンバーと`FileOutput`共に、次のメンバーが含まれます。
+その基底クラス [SimpleEvent](simple-event.md) から継承されたメンバーに加えて、`FileOutput` クラスには以下のメンバーが含まれます。
 
 ### <a name="constructors"></a>コンストラクター
 
-[ファイル出力](#file-output)
+[FileOutput](#file-output)
 
-### <a name="functions"></a>関数
+### <a name="functions"></a>機能
 
-[パス](#path)
-[の種類](#type)
+[Path](#path)
+[Type](#type)
 
-## <a name="fileoutput"></a><a name="file-output"></a>ファイル出力
+## <a name="fileoutput"></a><a name="file-output"></a> FileOutput
 
 ```cpp
 FileOutput(const RawEvent& event);
@@ -71,10 +71,10 @@ FileOutput(const RawEvent& event);
 
 ### <a name="parameters"></a>パラメーター
 
-*イベント*\
-[EXECUTABLE_IMAGE_OUTPUT](../event-table.md#executable-image-output)、 [EXP_OUTPUT](../event-table.md#exp-output)、 [IMP_LIB_OUTPUT](../event-table.md#imp-lib-output)、 [LIB_OUTPUT](../event-table.md#lib-output)、または[OBJ_OUTPUT](../event-table.md#obj-output)イベント。
+*event*\
+[EXECUTABLE_IMAGE_OUTPUT](../event-table.md#executable-image-output)、[EXP_OUTPUT](../event-table.md#exp-output)、[IMP_LIB_OUTPUT](../event-table.md#imp-lib-output)、[LIB_OUTPUT](../event-table.md#lib-output)、または [OBJ_OUTPUT](../event-table.md#obj-output) イベント。
 
-## <a name="path"></a><a name="path"></a>パス
+## <a name="path"></a><a name="path"></a> Path
 
 ```cpp
 const wchar_t Path() const;
@@ -92,6 +92,6 @@ Type Type() const;
 
 ### <a name="return-value"></a>戻り値
 
-出力ファイルの種類を記述するコード。
+出力ファイルの種類を表すコード。
 
 ::: moniker-end

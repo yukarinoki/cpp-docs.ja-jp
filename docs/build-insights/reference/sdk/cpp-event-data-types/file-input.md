@@ -1,6 +1,6 @@
 ---
-title: ファイル入力クラス
-description: C++ ビルド インサイト SDK ファイル入力クラスリファレンス。
+title: FileInput クラス
+description: C++ Build Insights SDK の FileInput クラスのリファレンス。
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 642236d3e67465ed38508cb24c8cd698ae880065
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
-ms.translationtype: MT
+ms.openlocfilehash: 6e12336c10347f00ea2663116f2f308658775e0d
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81324793"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92920685"
 ---
-# <a name="fileinput-class"></a>ファイル入力クラス
+# <a name="fileinput-class"></a>FileInput クラス
 
-::: moniker range="<=vs-2015"
+::: moniker range="<=msvc-140"
 
-C++ ビルド インサイト SDK は、Visual Studio 2017 以降と互換性があります。 これらのバージョンのドキュメントを参照するには、この記事の Visual Studio**バージョン**セレクター コントロールを Visual Studio 2017 または Visual Studio 2019 に設定します。 このページの目次の上部に表示されます。
+C++ Build Insights SDK は、Visual Studio 2017 以降と互換性があります。 これらのバージョンのドキュメントを表示するには、この記事の Visual Studio **Version** セレクター コントロールを Visual Studio 2017 または Visual Studio 2019 に設定します。 このページの目次の一番上にあります。
 
 ::: moniker-end
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 
-クラス`FileInput`[は、](../functions/match-event-in-member-function.md)[関数](../functions/match-event.md)で使用されます。 [MatchEventStack](../functions/match-event-stack.md) [MatchEventStackInMemberFunction](../functions/match-event-stack-in-member-function.md) [FILE_INPUT](../event-table.md#file-input)イベントに一致させるために使用します。
+`FileInput` クラスは、[MatchEvent](../functions/match-event.md)、[MatchEventInMemberFunction](../functions/match-event-in-member-function.md)、[MatchEventStack](../functions/match-event-stack.md)、および [MatchEventStackInMemberFunction](../functions/match-event-stack-in-member-function.md) 関数と共に使用されます。 [FILE_INPUT](../event-table.md#file-input) イベントを照合するために使用します。
 
 ## <a name="syntax"></a>構文
 
@@ -52,18 +52,18 @@ public:
 
 ## <a name="members"></a>メンバー
 
-[クラスには、SimpleEvent](simple-event.md)基本クラスから継承されたメンバーと`FileInput`共に、次のメンバーが含まれます。
+その基底クラス [SimpleEvent](simple-event.md) から継承されたメンバーに加えて、`FileInput` クラスには以下のメンバーが含まれます。
 
 ### <a name="constructors"></a>コンストラクター
 
-[ファイル入力](#file-input)
+[FileInput](#file-input)
 
-### <a name="functions"></a>関数
+### <a name="functions"></a>機能
 
-[パス](#path)
-[の種類](#type)
+[Path](#path)
+[Type](#type)
 
-## <a name="fileinput"></a><a name="file-input"></a>ファイル入力
+## <a name="fileinput"></a><a name="file-input"></a> FileInput
 
 ```cpp
 FileInput(const RawEvent& event);
@@ -71,10 +71,10 @@ FileInput(const RawEvent& event);
 
 ### <a name="parameters"></a>パラメーター
 
-*イベント*\
-[FILE_INPUT](../event-table.md#file-input)イベント。
+*event*\
+[FILE_INPUT](../event-table.md#file-input) イベントです。
 
-## <a name="path"></a><a name="path"></a>パス
+## <a name="path"></a><a name="path"></a> Path
 
 ```cpp
 const wchar_t Path() const;
@@ -92,6 +92,6 @@ Type Type() const;
 
 ### <a name="return-value"></a>戻り値
 
-入力ファイルの種類を記述するコード。
+入力ファイルの種類を表すコード。
 
 ::: moniker-end

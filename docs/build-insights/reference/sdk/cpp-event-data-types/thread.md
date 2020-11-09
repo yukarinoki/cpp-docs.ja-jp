@@ -1,6 +1,6 @@
 ---
 title: Thread クラス
-description: C++ ビルド インサイト SDK スレッド クラスのリファレンス。
+description: C++ Build Insights SDK の Thread クラスのリファレンス。
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 397083c63f451b2d3fb8dad529adf73855af8644
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
-ms.translationtype: MT
+ms.openlocfilehash: a483536281aaa87a169a40473fe3f0c4ad10bc96
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81324195"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92922948"
 ---
 # <a name="thread-class"></a>Thread クラス
 
-::: moniker range="<=vs-2015"
+::: moniker range="<=msvc-140"
 
-C++ ビルド インサイト SDK は、Visual Studio 2017 以降と互換性があります。 これらのバージョンのドキュメントを参照するには、この記事の Visual Studio**バージョン**セレクター コントロールを Visual Studio 2017 または Visual Studio 2019 に設定します。 このページの目次の上部に表示されます。
+C++ Build Insights SDK は、Visual Studio 2017 以降と互換性があります。 これらのバージョンのドキュメントを表示するには、この記事の Visual Studio **Version** セレクター コントロールを Visual Studio 2017 または Visual Studio 2019 に設定します。 このページの目次の一番上にあります。
 
 ::: moniker-end
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 
-クラス`Thread`[は、](../functions/match-event-in-member-function.md)[関数](../functions/match-event.md)で使用されます。 [MatchEventStack](../functions/match-event-stack.md) [MatchEventStackInMemberFunction](../functions/match-event-stack-in-member-function.md) この値は[、THREAD](../event-table.md#thread)イベントと一致させるために使用します。
+`Thread` クラスは、[MatchEvent](../functions/match-event.md)、[MatchEventInMemberFunction](../functions/match-event-in-member-function.md)、[MatchEventStack](../functions/match-event-stack.md)、および [MatchEventStackInMemberFunction](../functions/match-event-stack-in-member-function.md) 関数と共に使用されます。 [THREAD](../event-table.md#thread) イベントを照合するために使用します。
 
 ## <a name="syntax"></a>構文
 
@@ -39,13 +39,13 @@ public:
 
 ## <a name="members"></a>メンバー
 
-クラスには、[その Activity](activity.md)基本クラスから継承された`Thread`メンバーと共に、次のメンバーが含まれます。
+その基底クラス [Activity](activity.md) から継承されたメンバーに加えて、`Thread` クラスには以下のメンバーが含まれます。
 
 ### <a name="constructors"></a>コンストラクター
 
 [スレッド](#thread)
 
-## <a name="thread"></a><a name="thread"></a>スレッド
+## <a name="thread"></a><a name="thread"></a> Thread
 
 ```cpp
 Thread(const RawEvent& event);
@@ -53,7 +53,7 @@ Thread(const RawEvent& event);
 
 ### <a name="parameters"></a>パラメーター
 
-*イベント*\
-[THREAD](../event-table.md#thread)イベント。
+*event*\
+[THREAD](../event-table.md#thread) イベント。
 
 ::: moniker-end

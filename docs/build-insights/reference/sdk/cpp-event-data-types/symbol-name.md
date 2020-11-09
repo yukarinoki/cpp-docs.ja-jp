@@ -1,6 +1,6 @@
 ---
-title: シンボル名クラス
-description: C++ ビルド インサイト SDK シンボル名 クラスリファレンス。
+title: SymbolName クラス
+description: C++ Build Insights SDK の SymbolName クラスのリファレンスです。
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 1306fb43d6c2140a75b36c5f142532916cf26ae4
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
-ms.translationtype: MT
+ms.openlocfilehash: a749d95b3812df8b1cc0cd7d2da037e98467cefc
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81324353"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92920477"
 ---
-# <a name="symbolname-class"></a>シンボル名クラス
+# <a name="symbolname-class"></a>SymbolName クラス
 
-::: moniker range="<=vs-2015"
+::: moniker range="<=msvc-140"
 
-C++ ビルド インサイト SDK は、Visual Studio 2017 以降と互換性があります。 これらのバージョンのドキュメントを参照するには、この記事の Visual Studio**バージョン**セレクター コントロールを Visual Studio 2017 または Visual Studio 2019 に設定します。 このページの目次の上部に表示されます。
+C++ Build Insights SDK は、Visual Studio 2017 以降と互換性があります。 これらのバージョンのドキュメントを表示するには、この記事の Visual Studio **Version** セレクター コントロールを Visual Studio 2017 または Visual Studio 2019 に設定します。 このページの目次の一番上にあります。
 
 ::: moniker-end
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 
-クラス`SymbolName`[は、](../functions/match-event-in-member-function.md)[関数](../functions/match-event.md)で使用されます。 [MatchEventStack](../functions/match-event-stack.md) [MatchEventStackInMemberFunction](../functions/match-event-stack-in-member-function.md) [SYMBOL_NAME](../event-table.md#symbol-name)イベントに一致させるために使用します。
+`SymbolName` クラスは、[MatchEvent](../functions/match-event.md)、[MatchEventInMemberFunction](../functions/match-event-in-member-function.md)、[MatchEventStack](../functions/match-event-stack.md)、および [MatchEventStackInMemberFunction](../functions/match-event-stack-in-member-function.md) 関数と共に使用されます。 [SYMBOL_NAME](../event-table.md#symbol-name) イベントを照合するために使用します。
 
 ## <a name="syntax"></a>構文
 
@@ -42,18 +42,18 @@ public:
 
 ## <a name="members"></a>メンバー
 
-[クラスには、SimpleEvent](simple-event.md)基本クラスから継承されたメンバーと`SymbolName`共に、次のメンバーが含まれます。
+その基底クラス [SimpleEvent](simple-event.md) から継承されたメンバーに加えて、`SymbolName` クラスには以下のメンバーが含まれます。
 
 ### <a name="constructors"></a>コンストラクター
 
-[シンボル名](#symbol-name)
+[SymbolName](#symbol-name)
 
-### <a name="functions"></a>関数
+### <a name="functions"></a>機能
 
-[キー](#key)
-[名](#name)
+[Key](#key)
+[Name](#name)
 
-## <a name="key"></a><a name="key"></a>キー
+## <a name="key"></a><a name="key"></a> Key
 
 ```cpp
 const unsigned long long& Key() const;
@@ -61,9 +61,9 @@ const unsigned long long& Key() const;
 
 ### <a name="return-value"></a>戻り値
 
-このシンボルで表される型の数値識別子。 この識別子は、コンパイラのフロントエンド パス内で一意です。
+この記号によって表される型の数値識別子。 この識別子は、コンパイラのフロントエンド パス内で一意です。
 
-## <a name="name"></a><a name="name"></a>名前
+## <a name="name"></a><a name="name"></a> Name
 
 ```cpp
 const char* Name() const;
@@ -71,9 +71,9 @@ const char* Name() const;
 
 ### <a name="return-value"></a>戻り値
 
-シンボルで表される型の名前です。
+シンボルによって表される型の名前。UTF-8 でエンコードされます。
 
-## <a name="symbolname"></a><a name="symbol-name"></a>シンボル名
+## <a name="symbolname"></a><a name="symbol-name"></a> SymbolName
 
 ```cpp
 SymbolName(const RawEvent& event);
@@ -81,7 +81,7 @@ SymbolName(const RawEvent& event);
 
 ### <a name="parameters"></a>パラメーター
 
-*イベント*\
-[SYMBOL_NAME](../event-table.md#symbol-name)イベント。
+*event*\
+[SYMBOL_NAME](../event-table.md#symbol-name) イベント。
 
 ::: moniker-end

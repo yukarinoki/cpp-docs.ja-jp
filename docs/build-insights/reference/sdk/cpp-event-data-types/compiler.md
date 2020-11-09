@@ -1,6 +1,6 @@
 ---
-title: コンパイラ クラス
-description: C++ ビルド インサイト SDK コンパイラ クラスリファレンス。
+title: Compiler クラス
+description: C++ Build Insights SDK の Compiler クラスのリファレンスです。
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 9b0a2622c4bc0bc19d7222977fe24c060ee8709e
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
-ms.translationtype: MT
+ms.openlocfilehash: 52f8bb2ffc474cbf8e58552c77a4bb9fabc13c7e
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81325023"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92923319"
 ---
-# <a name="compiler-class"></a>コンパイラ クラス
+# <a name="compiler-class"></a>Compiler クラス
 
-::: moniker range="<=vs-2015"
+::: moniker range="<=msvc-140"
 
-C++ ビルド インサイト SDK は、Visual Studio 2017 以降と互換性があります。 これらのバージョンのドキュメントを参照するには、この記事の Visual Studio**バージョン**セレクター コントロールを Visual Studio 2017 または Visual Studio 2019 に設定します。 このページの目次の上部に表示されます。
+C++ Build Insights SDK は、Visual Studio 2017 以降と互換性があります。 これらのバージョンのドキュメントを表示するには、この記事の Visual Studio **Version** セレクター コントロールを Visual Studio 2017 または Visual Studio 2019 に設定します。 このページの目次の一番上にあります。
 
 ::: moniker-end
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 
-クラス`Compiler`[は、](../functions/match-event-in-member-function.md)[関数](../functions/match-event.md)で使用されます。 [MatchEventStack](../functions/match-event-stack.md) [MatchEventStackInMemberFunction](../functions/match-event-stack-in-member-function.md) この関数は[、COMPILER](../event-table.md#compiler)イベントと一致させるために使用します。
+`Compiler` クラスは、[MatchEvent](../functions/match-event.md)、[MatchEventInMemberFunction](../functions/match-event-in-member-function.md)、[MatchEventStack](../functions/match-event-stack.md)、および [MatchEventStackInMemberFunction](../functions/match-event-stack-in-member-function.md) 関数と共に使用されます。 [COMPILER](../event-table.md#compiler) イベントを照合するために使用します。
 
 ## <a name="syntax"></a>構文
 
@@ -39,13 +39,13 @@ public:
 
 ## <a name="members"></a>メンバー
 
-[クラスには、継承](invocation.md)されたメンバーが Invocation 基本クラス`Compiler`から継承されたメンバーと共に、次のメンバーが含まれます。
+その基底クラス [Invocation](invocation.md) から継承されたメンバーに加えて、`Compiler` クラスには以下のメンバーが含まれます。
 
 ### <a name="constructors"></a>コンストラクター
 
-[コンパイラ](#compiler)
+[Compiler](#compiler)
 
-## <a name="compiler"></a><a name="compiler"></a>コンパイラ
+## <a name="compiler"></a><a name="compiler"></a> Compiler
 
 ```cpp
 Compiler(const RawEvent& event);
@@ -53,7 +53,7 @@ Compiler(const RawEvent& event);
 
 ### <a name="parameters"></a>パラメーター
 
-*イベント*\
-[コンパイラ](../event-table.md#compiler)イベント。
+*event*\
+[COMPILER](../event-table.md#compiler) イベント。
 
 ::: moniker-end

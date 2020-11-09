@@ -1,6 +1,6 @@
 ---
-title: オプティフクラス
-description: C++ ビルド インサイト SDK OptICF クラスリファレンス。
+title: OptICF クラス
+description: C++ Build Insights SDK の OptICF クラスのリファレンス。
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: f63fea61f9defc216390fa377b2d1eeace01371b
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
-ms.translationtype: MT
+ms.openlocfilehash: b816b53e1054c4492320bdb71f2f0c7726907cf4
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81324476"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92920529"
 ---
-# <a name="opticf-class"></a>オプティフクラス
+# <a name="opticf-class"></a>OptICF クラス
 
-::: moniker range="<=vs-2015"
+::: moniker range="<=msvc-140"
 
-C++ ビルド インサイト SDK は、Visual Studio 2017 以降と互換性があります。 これらのバージョンのドキュメントを参照するには、この記事の Visual Studio**バージョン**セレクター コントロールを Visual Studio 2017 または Visual Studio 2019 に設定します。 このページの目次の上部に表示されます。
+C++ Build Insights SDK は、Visual Studio 2017 以降と互換性があります。 これらのバージョンのドキュメントを表示するには、この記事の Visual Studio **Version** セレクター コントロールを Visual Studio 2017 または Visual Studio 2019 に設定します。 このページの目次の一番上にあります。
 
 ::: moniker-end
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 
-クラス`OptICF`[は、](../functions/match-event-in-member-function.md)[関数](../functions/match-event.md)で使用されます。 [MatchEventStack](../functions/match-event-stack.md) [MatchEventStackInMemberFunction](../functions/match-event-stack-in-member-function.md) [OPT_ICF](../event-table.md#opt-icf)イベントに一致させるために使用します。
+`OptICF` クラスは、[MatchEvent](../functions/match-event.md)、[MatchEventInMemberFunction](../functions/match-event-in-member-function.md)、[MatchEventStack](../functions/match-event-stack.md)、および [MatchEventStackInMemberFunction](../functions/match-event-stack-in-member-function.md) 関数と共に使用されます。 [OPT_ICF](../event-table.md#opt-icf) イベントを照合するために使用します。
 
 ## <a name="syntax"></a>構文
 
@@ -39,13 +39,13 @@ public:
 
 ## <a name="members"></a>メンバー
 
-クラスには、[その Activity](activity.md)基本クラスから継承された`OptICF`メンバーと共に、次のメンバーが含まれます。
+その基底クラス [Activity](activity.md) から継承されたメンバーに加えて、`OptICF` クラスには以下のメンバーが含まれます。
 
 ### <a name="constructors"></a>コンストラクター
 
-[オプティフ](#opt-icf)
+[OptICF](#opt-icf)
 
-## <a name="opticf"></a><a name="opt-icf"></a>オプティフ
+## <a name="opticf"></a><a name="opt-icf"></a> OptICF
 
 ```cpp
 OptICF(const RawEvent& event);
@@ -53,7 +53,7 @@ OptICF(const RawEvent& event);
 
 ### <a name="parameters"></a>パラメーター
 
-*イベント*\
-[OPT_ICF](../event-table.md#opt-icf)イベント。
+*event*\
+[OPT_ICF](../event-table.md#opt-icf) イベント。
 
 ::: moniker-end

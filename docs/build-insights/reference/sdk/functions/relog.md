@@ -1,6 +1,6 @@
 ---
 title: Relog
-description: C++ ビルド インサイト SDK リログ関数リファレンス。
+description: C++ Build Insights SDK の Relog 関数のリファレンス。
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 28b290d2bf2880ce2f534fa1cd91750890e2fead
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
-ms.translationtype: MT
+ms.openlocfilehash: 628f60042a10cf80c0b077d28387ed75466e925b
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81323776"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92922752"
 ---
 # <a name="relog"></a>Relog
 
-::: moniker range="<=vs-2015"
+::: moniker range="<=msvc-140"
 
-C++ ビルド インサイト SDK は、Visual Studio 2017 以降と互換性があります。 これらのバージョンのドキュメントを参照するには、この記事の Visual Studio**バージョン**セレクター コントロールを Visual Studio 2017 または Visual Studio 2019 に設定します。 このページの目次の上部に表示されます。
+C++ Build Insights SDK は、Visual Studio 2017 以降と互換性があります。 これらのバージョンのドキュメントを表示するには、この記事の Visual Studio **Version** セレクター コントロールを Visual Studio 2017 または Visual Studio 2019 に設定します。 このページの目次の一番上にあります。
 
 ::: moniker-end
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 
-この`Relog`関数は、Windows イベント・トレース (ETW) トレースから MSVC イベントを読み取り、新しい変更された ETW トレースに書き込むために使用されます。
+`Relog` 関数は、Event Tracing for Windows (ETW) トレースから MSVC イベントを読み取り、それを新しい変更された ETW トレースに書き込むために使用されます。
 
 ## <a name="syntax"></a>構文
 
@@ -55,38 +55,38 @@ RESULT_CODE Relog(
 
 ### <a name="parameters"></a>パラメーター
 
-*グループメンバー*\
-このパラメーターは常に推定されます。
+*TAnalyzerGroupMembers*\
+このパラメーターは常に推測されます。
 
-*トレロガーグループメンバー*\
-このパラメーターは常に推定されます。
+*TReloggerGroupMembers*\
+このパラメーターは常に推測されます。
 
-*入力ログファイル*\
-イベントの読み取りを行う入力 ETW トレース。
+*inputLogFile*\
+イベントの読み取り元の入力 ETW トレース。
 
-*出力ログファイル*\
+*outputLogFile*\
 新しいイベントを書き込むファイル。
 
-*分析パスの数*\
-入力トレースで実行する解析パスの数。 トレースは、指定されたアナライザー グループを 1 回、分析パスごとに渡されます。
+*numberOfAnalysisPasses*\
+入力トレースに対して実行する分析パスの数。 トレースは、指定されたアナライザー グループを通して、分析パスごとに 1 回渡されます。
 
-*フラグ*\
-ログに記録されたトレースに保持するシステム ETW イベントを指定するビットマスク。 詳細については、「 [RELOG_RETENTION_SYSTEM_EVENT_FLAGS](../other-types/relog-retention-system-event-flags-constants.md)」を参照してください。
+*systemEventsRetentionFlags*\
+再ログ記録されたトレースに保持するシステム ETW イベントを指定するビットマスク。 詳細については、「[RELOG_RETENTION_SYSTEM_EVENT_FLAGS](../other-types/relog-retention-system-event-flags-constants.md)」を参照してください。
 
-*アナライザグループ*\
-再ロギング セッションの分析フェーズで使用されるアナライザー グループ。 [アナライザー グループ](make-static-analyzer-group.md)を作成するには、呼び出します。 [から](make-dynamic-analyzer-group.md)取得した動的アナライザー グループを使用するには、まずアドレスをに渡すことによって静的アナライザー グループ内にカプセル`MakeStaticAnalyzerGroup`化します。
+*analyzerGroup*\
+再ログ記録セッションの分析フェーズに使用されるアナライザー グループ。 アナライザー グループを作成するには、[MakeStaticAnalyzerGroup](make-static-analyzer-group.md) を呼び出します。 [MakeDynamicAnalyzerGroup](make-dynamic-analyzer-group.md) から取得された動的アナライザー グループを使用するには、最初に、そのアドレスを `MakeStaticAnalyzerGroup` に渡すことによって、静的なアナライザー グループ内にそれをカプセル化します。
 
-*リロガーグループ*\
-*outputLogFile*で指定されたトレース ファイルにイベントを再ログするリロガー グループ。 リ[ロガー グループ](make-static-relogger-group.md)を作成するには、呼び出します。 [MakeDynamicReloggerGroup](make-dynamic-relogger-group.md)から取得した動的リロガー グループを使用するには、まずアドレスを渡すことによって静的リロガー グループ内`MakeStaticReloggerGroup`にカプセル化します。
+*reloggerGroup*\
+*outputLogFile* で指定されているトレース ファイルにイベントを再ログ記録するリロガー グループ。 リロガー グループを作成するには、[MakeStaticReloggerGroup](make-static-relogger-group.md) を呼び出します。 [MakeDynamicAnalyzerGroup](make-dynamic-relogger-group.md) から取得された動的リロガー グループを使用するには、最初に、そのアドレスを `MakeStaticReloggerGroup` に渡すことによって、静的リロガー グループ内にそれをカプセル化します。
 
 ### <a name="return-value"></a>戻り値
 
-[RESULT_CODE](../other-types/result-code-enum.md)列挙型からの結果コード。
+[RESULT_CODE](../other-types/result-code-enum.md) 列挙型の結果コード。
 
 ### <a name="remark"></a>注記
 
-入力トレースはアナライザー グループ*番号OfAnalysisPasss*時間を通過します。 パスを再ロギングする場合、同様のオプションはありません。 トレースは、すべての分析パスが完了した後、リロガーグループを一度だけトラフ渡します。
+入力トレースは、アナライザー グループを通して *numberOfAnalysisPasses* 回渡されます。 再ログ記録パスには同様のオプションはありません。 トレースは、すべての分析パスの完了後に、リロガー グループを通して 1 回だけ渡されます。
 
-リロガー クラス内からの CPU サンプルのようなシステム イベントの再ロギングはサポートされていません。 出力トレースに保持するシステム イベントを決定するには、システムイベント*RetentionFlags*パラメーターを使用します。
+CPU サンプルなどのシステム イベントをリロガー クラス内から再ログ記録することはサポートされていません。 出力トレースに保持するシステム イベントを決定するには、 *systemEventsRetentionFlags* パラメーターを使用します。
 
 ::: moniker-end
