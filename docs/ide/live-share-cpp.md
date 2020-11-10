@@ -3,15 +3,15 @@ title: Visual Studio での Live Share for C++ による共同作業
 description: Visual Studio で Live Share for C++ を使用して、リアルタイムで共同作業とコードの共有を行います。
 ms.date: 05/24/2019
 ms.openlocfilehash: 60830ad6c6b98f644e1c3ddb2e78fbf7397ae919
-ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
+ms.sourcegitcommit: 59b7c18703d1ffd66827db0e2eeece490d3d8789
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/16/2020
+ms.lasthandoff: 10/23/2020
 ms.locfileid: "90684522"
 ---
 # <a name="collaborate-using-live-share-for-c"></a>Live Share for C++ を使用しての共同作業
 
-Visual Studio 2019 と Visual Studio Code では、**Live Share** を使用して C++ プロジェクトでリアルタイムに共同作業を行うことができます。 **Live Share** を使用すると、プロジェクトやその依存関係をインストールすることなく、別のユーザーがコードを編集したりデバッグすることができます。 編集が行われると、互いの編集を見ることができます。各編集には編集を行ったユーザーの名前がタグ付けされます。
+Visual Studio 2019 と Visual Studio Code では、 **Live Share** を使用して C++ プロジェクトでリアルタイムに共同作業を行うことができます。 **Live Share** を使用すると、プロジェクトやその依存関係をインストールすることなく、別のユーザーがコードを編集したりデバッグすることができます。 編集が行われると、互いの編集を見ることができます。各編集には編集を行ったユーザーの名前がタグ付けされます。
 
 ![C&#43;&#43; Live Share の編集](../ide/media/live-share-edit-cpp.png "C++ での Live Share の編集")
 
@@ -41,13 +41,13 @@ Visual studio で Live Share セッションを開始するには、右上の [�
 
 ![Live Share ボタンの小さなスクリーンショット。](../ide/media/live-share-button-cpp.png "Live Share ボタン")
 
-セッションを終了するには、**[共有]** ドロップダウンから **[End Collaboration Session]\(コラボレーション セッションの終了\)** を選択します。
+セッションを終了するには、 **[共有]** ドロップダウンから **[End Collaboration Session]\(コラボレーション セッションの終了\)** を選択します。
 
 ![[End Collaboration Session]\(コラボレーション セッションの終了\) オプションが強調表示されている [共有] ドロップダウン リストのスクリーンショット。](../ide/media/live-share-end-session-cpp.png "Live Share ボタン")
 
 ## <a name="for-more-information"></a>詳細情報
 
-Visual Studio での **Live Share** の詳細については、「[Visual Studio Live Share とは](/visualstudio/liveshare/)」を参照してください。 Visual Studio Code での Live Share の詳細については、「[Live Share](https://marketplace.visualstudio.com/items?itemName=ms-vsliveshare.vsliveshare)」を参照してください。
+Visual Studio での **Live Share** の詳細については、「 [Visual Studio Live Share とは](/visualstudio/liveshare/)」を参照してください。 Visual Studio Code での Live Share の詳細については、「[Live Share](https://marketplace.visualstudio.com/items?itemName=ms-vsliveshare.vsliveshare)」を参照してください。
 
 ## <a name="see-also"></a>参照
 
