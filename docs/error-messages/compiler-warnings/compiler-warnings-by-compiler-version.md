@@ -5,12 +5,12 @@ ms.date: 10/18/2020
 helpviewer_keywords:
 - warnings, by compiler version
 - cl.exe compiler, setting warning options
-ms.openlocfilehash: 5718642f6a7f714dd0a38ec34211ddc0be4e8fd2
-ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
+ms.openlocfilehash: 1fdc4f79a7ae3cd45b66cb312a9297754acfc964
+ms.sourcegitcommit: 1f85841f403e76d041c34a7c77089dab389960a2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "92924706"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94518818"
 ---
 # <a name="compiler-warnings-by-compiler-version"></a>コンパイラのバージョン別のコンパイラの警告
 
@@ -45,7 +45,7 @@ ms.locfileid: "92924706"
 | Visual Studio 2019 バージョン 16.4 | 19.24.28314.0 |
 | Visual Studio 2019 バージョン 16.5 | 19.25.28610.0 |
 | Visual Studio 2019 バージョン 16.6 | 19.26.28805.0 |
-| Visual Studio 2019 バージョン 16.7 | 19.26.29112.0 |
+| Visual Studio 2019 バージョン 16.7 | 19.27.29112.0 |
 
 オプションには、メジャー番号、メジャー番号、マイナー番号、メジャー番号、マイナー番号、およびビルド番号のみを指定でき **`/Wv`** ます。 コンパイラは、指定された数で始まるバージョンに一致するすべての警告を報告します。 指定された数を超えるバージョンのすべての警告を抑制します。 たとえば、 **`/Wv:17`** は、Visual Studio 2012 のいずれかのバージョン以前に発生した警告を報告し、Visual Studio 2013 (バージョン 18) 以降のコンパイラによって導入された警告を抑制します。 Visual Studio 2015 update 2 以降で導入された警告を非表示にするには、を使用し **`/Wv:19.00.23506`** ます。 Visual studio **`/Wv:19.11`** 2017 バージョン15.5 より前のバージョンの Visual studio で導入された警告をレポートするために使用します。ただし、Visual studio 2017 バージョン15.5 以降で導入された警告は表示されません。
 
@@ -768,7 +768,7 @@ ms.locfileid: "92924706"
 | C4997 | `'type': coclass does not implement a COM interface or pseudo-interface` |
 | C4998 | `EXPECTATION FAILED: description(number)` |
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 
 [C/c + + コンパイラおよびビルドツールのエラーと警告](../compiler-errors-1/c-cpp-build-errors.md) \
 [コンパイラの警告 C4000-C5999](compiler-warnings-c4000-c5999.md) \
