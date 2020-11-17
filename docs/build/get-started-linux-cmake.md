@@ -3,12 +3,12 @@ title: Visual Studio で C++ クロスプラットフォーム プロジェク�
 description: Linux と Windows の両方を対象とする C++ のオープンソース CMake プロジェクトを Visual Studio でセットアップ、コンパイル、デバッグする方法。
 ms.topic: tutorial
 ms.date: 01/08/2020
-ms.openlocfilehash: 3fdd9b1dfb5075f3a71f62bc4f1e2f3c646f9e6b
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: c420e0ee04e85d49ad752da085d38b2c5ff9d4fa
+ms.sourcegitcommit: d77159732a8e782b2a1b7abea552065f2b6f61c1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90040484"
+ms.lasthandoff: 11/04/2020
+ms.locfileid: "93344658"
 ---
 # <a name="tutorial-create-c-cross-platform-projects-in-visual-studio"></a>チュートリアル: Visual Studio で C++ クロスプラットフォーム プロジェクトを作成する
 
@@ -31,10 +31,10 @@ Visual Studio での C と C++ の開発は、Windows だけではなくなっ�
 
 * クロスプラットフォームの C++ 開発用に Linux マシンをセットアップする
   * Visual Studio に Linux の特定のディストリビューションは必要ありません。 OS は、物理マシン、VM、またはクラウドで実行できます。 Linux 用 Windows サブシステム (WSL) を使用することもできます。 ただし、このチュートリアルでは、グラフィカルな環境が必要です。 WSL は、主にコマンド ライン操作用であるため、ここでは推奨されません。
-  * Visual Studio には、Linux マシン上に次のツールが必要です。C++ コンパイラ、gdb、ssh、rsync、ninja、zip。 Debian ベースのシステムでは、次のコマンドを使用して、これらの依存関係をインストールできます。
+  * Visual Studio には、Linux マシン上に次のツールが必要です。C++ コンパイラ、gdb、ssh、rsync、make、zip。 Debian ベースのシステムでは、次のコマンドを使用して、これらの依存関係をインストールできます。
 
     ```cmd
-    sudo apt install -y openssh-server build-essential gdb rsync ninja-build zip
+    sudo apt install -y openssh-server build-essential gdb rsync make zip
     ```
 
   * Visual Studio には、サーバー モードが有効になっている最近のバージョンの CMake (少なくとも 3.8) が、Linux マシン上に必要です。 Microsoft が生成した CMake のユニバーサル ビルドを、任意の Linux ディストリビューションにインストールできます。 最新の機能を確実に利用するには、このビルドを使用することをお勧めします。 CMake のバイナリは、GitHub の [CMake リポジトリの Microsoft フォーク](https://github.com/Microsoft/CMake/releases)から入手できます。 そのページに移動し、Linux マシンのシステム アーキテクチャと一致するバージョンをダウンロードして、それを実行可能にします。
@@ -65,7 +65,7 @@ git clone https://github.com/bulletphysics/bullet3.git
 
     ![Visual Studio の [ファイル] > [開く] > [CMake] メニュー](media/cmake-open-cmake.png)
 
-    フォルダーを開くとすぐに、フォルダー構造が**ソリューション エクスプローラー**に表示されます。
+    フォルダーを開くとすぐに、フォルダー構造が **ソリューション エクスプローラー** に表示されます。
 
     ![Visual Studio のソリューション エクスプローラーのフォルダー ビュー](media/cmake-bullet3-solution-explorer.png)
 
@@ -85,7 +85,7 @@ CMake を使用しているフォルダーを開くと、Visual Studio で CMake
 
    この操作が完了すると、IntelliSense が構成されます。 プロジェクトをビルドし、アプリケーションをデバッグできます。 Visual Studio では、CMakeLists ファイルで指定されているターゲットに基づいて、ソリューションの論理ビューが表示されるようになりました。
 
-1. **ソリューション エクスプローラー**の **[ソリューションおよびフォルダー]** ボタンを使用して、CMake のターゲット ビューに切り替えます。
+1. **ソリューション エクスプローラー** の **[ソリューションおよびフォルダー]** ボタンを使用して、CMake のターゲット ビューに切り替えます。
 
    ![CMake のターゲット ビューを表示するためのソリューション エクスプローラーの [ソリューションおよびフォルダー] ボタン](media/cmake-bullet3-show-targets.png)
 
@@ -115,7 +115,7 @@ Visual Studio では、Windows 用の既定の **x64-Debug** 構成が作成さ�
 
 このステップでは、Bullet Physics ライブラリのデモを行うサンプル プログラムをデバッグします。
   
-1. **ソリューション エクスプローラー**で AppBasicExampleGui を選択して展開します。
+1. **ソリューション エクスプローラー** で AppBasicExampleGui を選択して展開します。
 
 1. `BasicExample.cpp` ファイルを開きます。
 
@@ -144,6 +144,8 @@ Visual Studio では、Windows 用の既定の **x64-Debug** 構成が作成さ�
 ## <a name="add-a-linux-configuration-and-connect-to-the-remote-machine"></a>Linux の構成を追加してリモート コンピューターに接続する
 
 1. Linux の構成を追加します。 **ソリューション エクスプローラー** ビューで CMakeSettings.json ファイルを右クリックし、 **[構成の追加]** を選択します。 前と同じ [構成を CMakeSettings に追加する] ダイアログが表示されます。 今度は **[Linux-Debug]** を選択してから、CMakeSettings.json ファイルを保存します (Ctrl + S)。
+
+1. **Visual Studio 2019 バージョン 16.6 以降** CMake 設定エディターの一番下までスクロールし、 **[詳細設定の表示]** 選択します。 **[CMake ジェネレーター]** として **[Unix Makefiles]\(Unix メイクファイル\)** を選択し、CMakeSettings.json ファイルを保存します (Ctrl + S)。
 
 1. 構成ドロップダウンで **[Linux-Debug]** を選択します。
 

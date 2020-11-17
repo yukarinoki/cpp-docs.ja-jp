@@ -3,12 +3,12 @@ title: Visual Studio で Linux MSBuild C++ プロジェクトを配置、実行�
 description: Visual Studio で MSBuild ベースの Linux C++ プロジェクト内からリモート ターゲット上のコードをコンパイル、実行、デバッグする方法について説明します。
 ms.date: 08/08/2020
 ms.assetid: f7084cdb-17b1-4960-b522-f84981bea879
-ms.openlocfilehash: a9feffbc86b50d510647776de6f1030f6986bef7
-ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
+ms.openlocfilehash: 7c038e1903fe029e04e8e9e9e41c11c7bff61ee2
+ms.sourcegitcommit: 12eb6a824dd7187a065d44fceca4c410f58e121e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "92921712"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "94334196"
 ---
 # <a name="deploy-run-and-debug-your-linux-msbuild-project"></a>Linux MSBuild プロジェクトのデプロイ、実行、デバッグ
 
@@ -81,7 +81,7 @@ Linux プロジェクトと対話してデバッグするには、いくつか�
 
    **F10** や **F11** などのコマンド キーを押すことで、現在の状態のアプリケーションと対話したり、変数を表示したり、コードをステップ実行したりできるようになりました。
 
-1. Linux コンソールを利用してアプリと対話する場合、 **[デバッグ]、[Linux コンソール]** の順に選びます。
+1. Linux コンソールを利用してアプリと対話する場合、**[デバッグ]、[Linux コンソール]** の順に選びます。
 
    ![[Linux Console] (Linux コンソール) メニュー](media/consolemenu.png)
 
@@ -99,6 +99,8 @@ Linux プロジェクトと対話してデバッグするには、いくつか�
 - **[追加のデバッガー コマンド]** エントリを使って、特定のデバッガー オプションを GDB に渡すことができます。  たとえば、SIGILL (無効な命令) シグナルを無視することができます。  **handle** コマンドを使用してこれを実現できます。上の図のように、以下を **[追加のデバッガー コマンド]** エントリに追加します。
 
    `handle SIGILL nostop noprint`
+   
+- プロジェクトの **[デバッグ]** プロパティ ページの **[GDB Path]\(GDB パス\)** 項目を使用して、Visual Studio によって使用される GDB へのパスを指定できます。 このプロパティは、Visual Studio 2019 バージョン 16.9 以降で使用できます。
 
 ## <a name="debug-with-attach-to-process"></a>[プロセスにアタッチ] を使用してデバッグする
 
@@ -127,7 +129,7 @@ ExePath="C:\temp\ConsoleApplication17\ConsoleApplication17\bin\x64\Debug\Console
 
 Visual Studio 2019 バージョン 16.1 では、MSBuild ベースの Linux プロジェクトとリモート Linux マシンをターゲットとする CMake プロジェクトの両方で、リモート ビルド マシンとリモート デバッグ マシンを分離できます。 たとえば、IoT シナリオをターゲットにするときに、.x64 でクロスコンパイルを行い、ARM デバイスに配置できます。
 
-既定では、リモート デバッグ マシンはリモート ビルド マシンと同じです ( **[構成プロパティ]**  >  **[全般]**  >  **[リモート ビルド マシン]** )。 新しいリモート デバッグ マシンを指定するには、 **ソリューション エクスプローラー** でプロジェクトを右クリックし、 **[構成プロパティ]** > **[デバッグ]** > **[リモート デバッグ マシン]** に移動します。  
+既定では、リモート デバッグ マシンはリモート ビルド マシンと同じです ( **[構成プロパティ]**  >  **[全般]**  >  **[リモート ビルド マシン]** )。 新しいリモート デバッグ マシンを指定するには、**ソリューション エクスプローラー** でプロジェクトを右クリックし、**[構成プロパティ]** > **[デバッグ]** > **[リモート デバッグ マシン]** に移動します。  
 
 ![Linux リモート デバッグ マシン](media/linux-remote-debug-machine.png)
 

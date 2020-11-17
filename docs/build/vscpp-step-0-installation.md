@@ -1,17 +1,17 @@
 ---
 title: Visual Studio に C および C++ サポートをインストールする
-description: Visual Studio の Visual C++ のためのサポートをインストールします
+description: Microsoft C/C++ および関連ワークロードをサポートする Visual Studio をインストールする方法について説明します。
 ms.custom: mvc
-ms.date: 04/02/2019
+ms.date: 11/05/2020
 ms.topic: tutorial
 ms.devlang: cpp
 ms.assetid: 45138d70-719d-42dc-90d7-1d0ca31a2f54
-ms.openlocfilehash: 6f547b7e50d39b073232e913e660bf3ab96789cb
-ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
+ms.openlocfilehash: 3f2d2ade54cb4db2cd692f044a5cd648600bc7f6
+ms.sourcegitcommit: 12eb6a824dd7187a065d44fceca4c410f58e121e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "92922128"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "94334183"
 ---
 # <a name="install-c-and-c-support-in-visual-studio"></a>Visual Studio に C および C++ サポートをインストールする
 
@@ -46,14 +46,14 @@ Visual Studio 2019 と以前のバージョンの Visual Studio を共存させ�
 
 ### <a name="step-2---download-visual-studio"></a>手順 2 - Visual Studio をダウンロードする
 
-次に、Visual Studio ブートストラップ ファイルをダウンロードします。 これを行うには、以下のボタンを選択し、必要な Visual Studio のエディションを選択して、 **[保存]** 、 **[フォルダーを開く]** の順に選択します。
+次に、Visual Studio ブートストラップ ファイルをダウンロードします。 これを行うには、次のボタンをクリックして、Visual Studio のダウンロードページに移動します。 使用する Visual Studio のエディションを選択し、 **[無料試用版]** または **[無料ダウンロード]** ボタンを選択します。
 
  > [!div class="button"]
  > [Visual Studio のダウンロード](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2019+rc)
 
 ### <a name="step-3---install-the-visual-studio-installer"></a>手順 3 - Visual Studio インストーラーをインストールする
 
-ブートストラップ ファイルを実行して、Visual Studio インストーラーをインストールします。 この新しい軽量インストーラーには、Visual Studio のインストールとカスタマイズの両方に必要なすべてのものが含まれています。
+ダウンロードしたブートストラップ ファイルを実行して、Visual Studio インストーラーをインストールします。 この新しい軽量インストーラーには、Visual Studio のインストールとカスタマイズの両方に必要なすべてのものが含まれています。
 
 1. **[ダウンロード]** フォルダーで、次のいずれかのファイルと一致する、または似ているブートストラップをダブルクリックします。
 
@@ -61,13 +61,13 @@ Visual Studio 2019 と以前のバージョンの Visual Studio を共存させ�
    - Visual Studio Professional の場合は **vs_professional.exe**
    - Visual Studio Enterprise の場合は **vs_enterprise.exe**
 
-   ユーザー アカウント制御の通知を受信する場合、 **[はい]** を選択します。
+   ユーザー アカウント制御の通知を受け取った場合は、 **[はい]** を選択して、ブートストラップの実行を許可します。
 
 1. Microsoft の[ライセンス条項](https://visualstudio.microsoft.com/license-terms/)と[プライバシーに関する声明](https://privacy.microsoft.com/privacystatement)の確認を求められます。 **[続行]** を選択します。
 
 ### <a name="step-4---choose-workloads"></a>手順 4 - ワークロードを選択する
 
-インストーラーのインストールが済んだら、それを使用して、必要な " *ワークロード* " (機能セット) を選択することにより、インストールをカスタマイズできます。 ここではその方法を説明します。
+インストーラーのインストールが済んだら、それを使用して、必要な "*ワークロード*" (機能セット) を選択することにより、インストールをカスタマイズできます。 ここではその方法を説明します。
 
 1. **[Visual Studio のインストール]** 画面で、必要なワークロードを見つけます。
 
@@ -143,15 +143,12 @@ Visual Studio 2017 では、必要な機能だけを簡単に選択してイン�
 
 ### <a name="download-and-install"></a>ダウンロードしてインストールする
 
-1. 最新の Windows 用 Visual Studio 2017 インストーラーをダウンロードします。
-
-   > [!div class="nextstepaction"]
-   > [Visual Studio 2017 のインストールに関するコミュニティ](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017)
+1. Windows 用の最新の Visual Studio 2017 インストーラーをダウンロードするには、Microsoft Visual Studio の[古いバージョンのダウンロード](https://www.visualstudio.com/vs/older-downloads/) ページに移動します。 **2017** のセクションを展開し、 **[ダウンロード]** ボタンを選択します。
 
    >[!Tip]
-   > このコミュニティ版は、個人の開発者、クラス学習、学術研究、オープン ソース開発向けです。 その他の用途には、[Visual Studio 2017 Professional](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017) または [Visual Studio 2017 Enterprise](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017) を使用してください。
+   > このコミュニティ版は、個人の開発者、クラス学習、学術研究、オープン ソース開発向けです。 その他の用途には、Visual Studio 2017 Professional または Visual Studio 2017 Enterprise を使用してください。
 
-1. ダウンロードしたインストーラー ファイルを見つけて実行します。 ブラウザーに表示される場合もあれば、ダウンロード フォルダーにある場合もあります。 インストーラーを実行するには管理者特権が必要です。 インストーラーがシステムを変更できるようにアクセス許可の付与を求める **[ユーザー アカウント制御]** ダイアログが表示される場合があります。 **[はい]** を選択します。 問題が発生する場合は、エクスプローラーでダウンロードしたファイルを見つけ、インストーラー アイコンを右クリックして、コンテキスト メニューから **[管理者として実行]** を選択します。
+1. ダウンロードしたインストーラー ファイルを見つけて実行します。 ダウンロードされたファイルは、ブラウザーに表示される場合もあれば、ダウンロード フォルダーにある場合もあります。 インストーラーを実行するには管理者特権が必要です。 インストーラーがシステムを変更できるようにアクセス許可の付与を求める **[ユーザー アカウント制御]** ダイアログが表示される場合があります。 **[はい]** を選択します。 問題が発生する場合は、エクスプローラーでダウンロードしたファイルを見つけ、インストーラー アイコンを右クリックして、コンテキスト メニューから **[管理者として実行]** を選択します。
 
    ![Visual Studio インストーラーをダウンロードしてインストールする](media/vscpp-concierge-run-installer.gif "Visual Studio インストーラーをダウンロードしてインストールする")
 
@@ -185,7 +182,7 @@ Visual Studio 2017 では、必要な機能だけを簡単に選択してイン�
 
 ## <a name="visual-studio-2015-installation"></a>Visual Studio 2015 のインストール
 
-Visual Studio 2015 をインストールするには、[以前のバージョンの Visual Studio のダウンロード](https://www.visualstudio.com/vs/older-downloads/) ページに移動してください。 セットアップ プログラムを実行し、 **カスタム インストール** で C++ コンポーネントを選択します。 Visual Studio 2015 の既存のインストールに C および C++ のサポートを追加するには、Windows の [スタート] ボタンをクリックし、「 **プログラムの追加と削除** 」と入力します。 結果の一覧からプログラムを開き、インストールされているプログラムの一覧で、Visual Studio 2015 のインストールを見つけます。 それをダブルクリックし、 **[変更]** を選択して、インストールする Visual C++ コンポーネントを選択します。
+Visual Studio 2015 をインストールするには、Microsoft Visual Studio の[古いバージョンのダウンロード](https://www.visualstudio.com/vs/older-downloads/) ページに移動します。 **2015** のセクションを展開し、 **[ダウンロード]** ボタンを選択します。 ダウンロードされたセットアップ プログラムを実行し、 **[カスタム インストール]** を選択してから、C++ コンポーネントを選択します。 Visual Studio 2015 の既存のインストールに C および C++ のサポートを追加するには、Windows の [スタート] ボタンをクリックし、「**プログラムの追加と削除**」と入力します。 結果の一覧からプログラムを開き、インストールされているプログラムの一覧で、Visual Studio 2015 のインストールを見つけます。 それをダブルクリックし、 **[変更]** を選択して、インストールする Visual C++ コンポーネントを選択します。
 
 一般に、Visual Studio 2015 コンパイラを使用してコードをコンパイルする必要がある場合でも、最新バージョンの Visual Studio を使用することを強くお勧めします。 詳細については、「[Visual Studio でネイティブ マルチ ターゲットを利用し、古いプロジェクトを作成する](../porting/use-native-multi-targeting.md)」を参照してください。
 

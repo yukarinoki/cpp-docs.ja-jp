@@ -1,18 +1,18 @@
 ---
 title: C++ 準拠の強化
-ms.date: 08/04/2020
 description: Visual Studio の Microsoft C++ は、C++20 言語標準との完全準拠に向かって進んでいます。
+ms.date: 11/10/2020
 ms.technology: cpp-language
-ms.openlocfilehash: fc88406a3d2e291d06e01c3e92261b8dfc624ced
-ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
+ms.openlocfilehash: ff4d75626b75c55e001601ef7005bc23be60869d
+ms.sourcegitcommit: 25f6d52eb9e5d84bd0218c46372db85572af81da
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "92921426"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94448491"
 ---
 # <a name="c-conformance-improvements-in-visual-studio"></a>Visual Studio の C++ 準拠の強化
 
-Microsoft C++ では、リリースごとに準拠強化とバグ修正を行っています。 この記事では、機能強化をメジャー リリースごと、バージョンごとに一覧で紹介します。 また、主要なバグ修正もバージョンごとに一覧で紹介します。 特定のバージョンで行われた変更に直接移動するには、 **この記事** の一覧を使用します。
+Microsoft C++ では、リリースごとに準拠強化とバグ修正を行っています。 この記事では、機能強化をメジャー リリースごと、バージョンごとに一覧で紹介します。 また、主要なバグ修正もバージョンごとに一覧で紹介します。 特定のバージョンで行われた変更に直接移動するには、**この記事** の一覧を使用します。
 
 ::: moniker range="msvc-160"
 
@@ -202,7 +202,7 @@ long j = static_cast<long>(i);
 
 ### <a name="syntax-checks-for-generic-lambdas"></a>汎用ラムダの構文チェック
 
-新しいラムダ プロセッサにより、 [`/std:c++latest`](../build/reference/std-specify-language-standard-version.md) で、または **`/experimental:newLambdaProcessor`** を使用する他のに似の言語モードで、汎用ラムダの一部の準拠モード構文チェックが有効になります。
+新しいラムダ プロセッサにより、[`/std:c++latest`](../build/reference/std-specify-language-standard-version.md) で、または **`/experimental:newLambdaProcessor`** を使用する他のに似の言語モードで、汎用ラムダの一部の準拠モード構文チェックが有効になります。
 
 Visual Studio 2017 の場合、このコードは警告なくコンパイルされますが、Visual Studio 2019 ではエラー C2760 `syntax error: unexpected token '\<id-expr>', expected 'id-expression'` が発生します。
 
@@ -230,7 +230,7 @@ void f() {
 
 ### <a name="designated-initialization"></a>初期化の指定
 
-[P0329R4](https://wg21.link/p0329r4) (C++20) " *初期化の指定* " により、集計初期化で `Type t { .member = expr }` 構文を使用して、特定のメンバーを選択できます。 **`/std:c++latest`** が必要です。
+[P0329R4](https://wg21.link/p0329r4) (C++20) "*初期化の指定*" により、集計初期化で `Type t { .member = expr }` 構文を使用して、特定のメンバーを選択できます。 **`/std:c++latest`** が必要です。
 
 ### <a name="new-and-updated-standard-library-functions-c20"></a>新規および更新された標準ライブラリ関数 (C++20)
 
@@ -341,7 +341,7 @@ std::equal(std::begin(a), std::end(a), std::begin(b), std::end(b));
 
 ### <a name="effect-of-defining-spaceship-operator-on--and-"></a>`==` と `!=` で宇宙船演算子を定義した場合の効果
 
-宇宙船演算子 ( **`<=>`** ) のみを定義しても、宇宙船演算子が **`= default`** ( [P1185R2](https://wg21.link/p1185r2)) とマークされていなければ、 **`==`** または **`!=`** を伴う式は書き換えられなくなります。 次の例は、Visual Studio 2019 RTW およびバージョン 16.1 ではコンパイルされますが、Visual Studio 2019 バージョン 16.2 では C2678 が生成されます。
+宇宙船演算子 ( **`<=>`** ) のみを定義しても、宇宙船演算子が **`= default`** ([P1185R2](https://wg21.link/p1185r2)) とマークされていなければ、 **`==`** または **`!=`** を伴う式は書き換えられなくなります。 次の例は、Visual Studio 2019 RTW およびバージョン 16.1 ではコンパイルされますが、Visual Studio 2019 バージョン 16.2 では C2678 が生成されます。
 
 ```cpp
 #include <compare>
@@ -502,7 +502,7 @@ namespace N {
 
 ### <a name="implicit-conversion-of-integral-constant-expressions-to-null-pointer"></a>整数定数式から Null ポインターへの暗黙的な変換
 
-MSVC コンパイラの準拠モード ( **`/permissive-`** ) において、 [CWG イシュー 903](https://wg21.link/cwg903) が実装されるようになりました。 このルールにより、整数定数式 (整数リテラル '0' を除く) を Null ポインター定数に暗黙的に変換することが許可されなくなります。 次の例では、準拠モードで C2440 が生成されます。
+MSVC コンパイラの準拠モード ( **`/permissive-`** ) において、[CWG イシュー 903](https://wg21.link/cwg903) が実装されるようになりました。 このルールにより、整数定数式 (整数リテラル '0' を除く) を Null ポインター定数に暗黙的に変換することが許可されなくなります。 次の例では、準拠モードで C2440 が生成されます。
 
 ```cpp
 int* f(bool* p) {
@@ -1064,9 +1064,9 @@ public class R {
 
 ## <a name="conformance-improvements-in-visual-studio-2019-version-167"></a><a name="improvements_167"></a> Visual Studio 2019 バージョン 16.7 の準拠の強化
 
-### <a name="definition-of-is-trivially-copyable"></a>" *普通にコピー可能である* " の定義
+### <a name="definition-of-is-trivially-copyable"></a>"*普通にコピー可能である*" の定義
 
-C++20 では、" *トリビアルにコピー可能である* " の定義が変更されました。 クラスに **`volatile`** 修飾型の非静的データ メンバーが含まれている場合、それにより、コンパイラによって生成されたコピーまたは移動コンストラクター、あるいはコピーまたは移動代入演算子は非トリビアルである、ということは意味されなくなりました。 この変更は、C++ 標準化委員会により障害レポートとしてさかのぼって適用されました。 MSVC では、 **`/std:c++14`** や **`/std:c++latest`** などの異なる言語モードでは、コンパイラの動作は変更されません。
+C++20 では、"*トリビアルにコピー可能である*" の定義が変更されました。 クラスに **`volatile`** 修飾型の非静的データ メンバーが含まれている場合、それにより、コンパイラによって生成されたコピーまたは移動コンストラクター、あるいはコピーまたは移動代入演算子は非トリビアルである、ということは意味されなくなりました。 この変更は、C++ 標準化委員会により障害レポートとしてさかのぼって適用されました。 MSVC では、 **`/std:c++14`** や **`/std:c++latest`** などの異なる言語モードでは、コンパイラの動作は変更されません。
 
 新しい動作の例を次に示します。
 
@@ -1119,7 +1119,7 @@ int main() {
 
 ### <a name="nullptr_t-is-only-convertible-to-bool-as-a-direct-initialization"></a>`nullptr_t` は、直接的な初期化として `bool` にのみ変換可能である
 
-C++11 では、 **`nullptr`** は " *直接変換* " として **`bool`** にのみ変換可能です。たとえば、中かっこで囲まれた初期化子リストを使用して **`bool`** を初期化するときなどです。 この制限は、MSVC では適用されませんでした。 現在の MSVC では、[`/permissive-`](../build/reference/permissive-standards-conformance.md) でルールが実装されています。 暗黙的な変換は、不正な形式として診断されるようになりました。 直接初期化 `bool b(nullptr)` が有効であるため、 **`bool`** へのコンテキスト変換は引き続き許可されます。
+C++11 では、 **`nullptr`** は "*直接変換*" として **`bool`** にのみ変換可能です。たとえば、中かっこで囲まれた初期化子リストを使用して **`bool`** を初期化するときなどです。 この制限は、MSVC では適用されませんでした。 現在の MSVC では、[`/permissive-`](../build/reference/permissive-standards-conformance.md) でルールが実装されています。 暗黙的な変換は、不正な形式として診断されるようになりました。 直接初期化 `bool b(nullptr)` が有効であるため、 **`bool`** へのコンテキスト変換は引き続き許可されます。
 
 ほとんどの場合、次の例に示すように、このエラーは **`nullptr`** を **`false`** に置き換えることによって解決できます。
 
@@ -1154,6 +1154,338 @@ void f() {
     B b2[1]; // OK: calls default ctor for each array element
 }
 ```
+
+## <a name="conformance-improvements-in-visual-studio-2019-version-168"></a><a name="improvements_168"></a> Visual Studio 2019 バージョン 16.8 の準拠の強化
+
+### <a name="class-rvalue-used-as-lvalue-extension"></a>"lvalue として使用されるクラス rvalue" 拡張機能
+
+MSVC には、クラスの rvalue を lvalue として使用できるようにする拡張機能があります。 この拡張機能を使用すると、クラスの rvalue の有効期間が延びることはなく、実行時に未定義の動作が発生する可能性があります。 これについて、標準の規則が適用されるようになり、 **`/permissive-`** でこの拡張機能は禁止されます。
+**`/permissive-`** をまだ使用できない場合は、 **`/we4238`** を使用して、拡張機能を明示的に無効にすることができます。 次に例を示します。
+
+```cpp
+// Compiling with /permissive- now gives:
+// error C2102: '&' requires l-value
+struct S {};
+
+S f();
+
+void g()
+{
+    auto p1 = &(f()); // The temporary returned by 'f' is destructed after this statement. So 'p1' points to an invalid object.
+
+    const auto &r = f(); // This extends the lifetime of the temporary returned by 'f'
+    auto p2 = &r; // 'p2' points to a valid object
+}
+```
+
+### <a name="explicit-specialization-in-non-namespace-scope-extension"></a>"名前空間ではないスコープでの明示的特殊化" 拡張機能
+
+MSVC には、名前空間ではないスコープでの明示的特殊化を許可する拡張機能がありました。 これは、CWG 727 の解決の後、標準の一部になっています。 ただし、動作の違いがあります。 標準に合わせてコンパイラの動作を調整しました。
+
+```cpp
+// Compiling with 'cl a.cpp b.cpp /permissive-' now gives:
+//   error LNK2005: "public: void __thiscall S::f<int>(int)" (??$f@H@S@@QAEXH@Z) already defined in a.obj
+// To fix the linker error,
+// 1. Mark the explicit specialization with 'inline' explicitly. Or,
+// 2. Move its definition to a source file.
+
+// common.h
+struct S {
+    template<typename T> void f(T);
+    template<> void f(int);
+};
+
+// This explicit specialization is implicitly inline in the default mode.
+template<> void S::f(int) {}
+
+// a.cpp
+#include "common.h"
+
+int main() {}
+
+// b.cpp
+#include "common.h"
+```
+
+### <a name="checking-for-abstract-class-types"></a>抽象クラス型のチェック
+
+C++20 標準では、関数パラメーターとしての抽象クラス型の使用がコンパイラによって検出されるプロセスが変更されました。 具体的には、これは SFINAE エラーではなくなりました。 以前は、関数テンプレートの特殊化に、型が抽象クラス型のインスタンスである関数パラメーターがあることが、コンパイラによって検出された場合、その特殊化は不適切な形式と見なされました。 それは、実行可能な関数のセットに追加されませんでした。 C++20 では、抽象クラス型のパラメーターのチェックは、関数が呼び出されるまで行われません。 これは、コンパイルに使用されるコードによってエラーが発生しないことを意味します。 次に例を示します。
+
+```cpp
+class Node {
+public:
+    int index() const;
+};
+
+class String : public Node {
+public:
+    virtual int size() const = 0;
+};
+
+class Identifier : public Node {
+public:
+    const String& string() const;
+};
+
+template<typename T>
+int compare(T x, T y)
+{
+    return x < y ? -1 : (x > y ? 1 : 0);
+}
+
+int compare(const Node& x, const Node& y)
+{
+    return compare(x.index(), y.index());
+}
+
+int f(const Identifier& x, const String& y)
+{
+    return compare(x.string(), y);
+}
+```
+
+これまでは、`compare` を呼び出すと、`T` が `String` であるテンプレート引数を使用して、関数テンプレート `compare` の特殊化が試みられます。 `String` が抽象クラスであるため、有効な特殊化を生成できません。 実行可能な唯一の候補は `compare(const Node&, const Node&)` でした。 しかし、C++20 では、抽象クラス型のチェックは、関数が呼び出されるまで行われません。 したがって、特殊化 `compare(String, String)` が実行可能な候補のセットに追加され、`const String&` から `String` への変換は、`const String&` から `const Node&` への変換より優れた変換シーケンスなので、それが最適な候補として選択されます。
+
+C++20 でこの例の場合に可能な修正の 1 つは、概念を使用することです。つまり、`compare` の定義を次のように変更します。
+
+```cpp
+template<typename T>
+int compare(T x, T y) requires !std::is_abstract_v<T>
+{
+    return x < y ? -1 : (x > y ? 1 : 0);
+}
+```
+
+または、C++ の概念を使用できない場合は、SFINAE にフォールバックすることができます。
+
+```cpp
+template<typename T, std::enable_if_t<!std::is_abstract_v<T>, int> = 0>
+int compare(T x, T y)
+{
+    return x < y ? -1 : (x > y ? 1 : 0);
+}
+```
+
+### <a name="support-for-p0960r3---allow-initializing-aggregates-from-a-parenthesized-list-of-values"></a>P0960R3 のサポート - かっこで囲まれた値のリストからの集計の初期化を許可する
+
+C++20 では、かっこで囲まれた初期化子リストを使用する集計の初期化のサポートが追加されています。 たとえば、C++20 では次のようなコードが有効です。
+
+```cpp
+struct S {
+    int i;
+    int j;
+};
+
+S s(1, 2);
+```
+
+この機能のほとんどは付加的なものです。つまり、以前はコンパイルされなかったコードが、コンパイルされるようになります。 ただし、`std::is_constructible` の動作が変更されます。 C++17 モードではこの **`static_assert`** は失敗しますが、C++20 モードでは成功します。
+
+`static_assert(std::is_constructible_v<S, int, int>, "Assertion failed!");`
+
+この型の特徴を使用してオーバーロードの解決を制御する場合、C++17 と C++20 で動作が変わる可能性があります。
+
+### <a name="overload-resolution-involving-function-templates"></a>関数テンプレートが関係するオーバーロードの解決
+
+以前は、コンパイルしてはならない一部のコードを **`/permissive-`** でコンパイルすることが、コンパイラによって許可されていました。 結果として、コンパイラにより、実行時の動作が変わってしまう間違った関数が呼び出されていました。
+
+```cpp
+int f(int);
+
+namespace N
+{
+    using ::f;
+    template<typename T>
+    T f(T);
+}
+
+template<typename T>
+void g(T&& t)
+{
+}
+
+void h()
+{
+    using namespace N;
+    g(f);
+}
+```
+
+`g` を呼び出すと、2 つの関数 `::f` と `N::f` を含むオーバーロード セットが使用されます。 `N::f` は関数テンプレートであるため、関数の引数はコンパイラによって "*非推定コンテキスト*" として処理される必要があります。 この場合、それはコンパイラでテンプレート パラメーター `T` の型を推定できないため、`g` の呼び出しが失敗しなければならないことを意味します。 残念ながら、コンパイラによって、`::f` が関数呼び出しに適していると既に判断された事実が破棄されていませんでした。 エラーを生成する代わりに、引数として `::f` を使用して `g` を呼び出すコードが、コンパイラによって生成されました。
+
+多くの場合、関数の引数として `::f` を使用するのはユーザーが意図することであるため、コードが **`/permissive-`** でコンパイルされる場合は、エラーの出力のみを行います。
+
+### <a name="migrating-from-await-to-c20-coroutines"></a>`/await` から C++20 のコルーチンへの移行
+
+**`/std:c++latest`** を使用すると、C++20 標準のコルーチンが既定でオンになります。 これらは、コルーチン TS および **`/await`** スイッチでのサポートとは異なります。 **`/await`** から標準のコルーチンに移行するには、ソースの変更が必要になる場合があります。
+
+#### <a name="non-standard-keywords"></a>標準以外のキーワード
+
+古い **`await`** キーワードと **`yield`** キーワードは、C++20 モードではサポートされていません。 代わりに、 **`co_await`** と **`co_yield`** をコードで使用する必要があります。 標準モードでは、コルーチンで `return` を使用することもできません。 コルーチン内のすべての **`return`** では、 **`co_return`** を使用する必要があります。
+
+```cpp
+// /await
+task f_legacy() {
+    ...
+    await g();
+    return n;
+}
+// /std:c++latest
+task f() {
+    ...
+    co_await g();
+    co_return n;
+}
+```
+
+#### <a name="types-of-initial_suspendfinal_suspend"></a>initial_suspend と final_suspend の型
+
+**`/await`** においては、promise initial 関数と suspend 関数を、 **`bool`** を返すように宣言することができます。 この動作は標準ではありません。 C++20 では、これらの関数は待機可能なクラス型を返す必要があります。通常、関数で以前に **`true`** を返していた場合はトリビアルで待機可能な `std::suspend_always` のいずれか、または **`false`** を返していた場合は `std::suspend_never` です。
+
+```cpp
+// /await
+struct promise_type_legacy {
+    bool initial_suspend() noexcept { return false; }
+    bool final_suspend() noexcept { return true; }
+    ...
+};
+
+// /std:c++latest
+struct promise_type {
+    auto initial_susepend() noexcept { return std::suspend_never{}; }
+    auto final_suspend() noexcept { return std::suspend_always{}; }
+    ...
+};
+```
+
+#### <a name="type-of-yield_value"></a>`yield_value` の型
+
+C++20 では、Promise `yield_value` 関数は待機可能を返す必要があります。 **`/await`** モードでは、`yield_value` 関数は **`void`** を返すことが許可されており、常に中断しました。 そのような関数は、`std::suspend_always` を返す関数に置き換えることができます。
+
+```cpp
+// /await
+struct promise_type_legacy {
+    ...
+    void yield_value(int x) { next = x; };
+};
+
+// /std:c++latest
+struct promise_type {
+    ...
+    auto yield_value(int x) { next = x; return std::suspend_always{}; }
+};
+```
+
+#### <a name="exception-handling-function"></a>例外処理関数
+
+**`/await`** を使用すると、例外処理関数のない Promise 型、または `std::exception_ptr` を受け取る `set_exception` という名前の例外処理関数のある Promise 型がサポートされます。 C++20 では、Promise 型には、引数を受け取らない `unhandled_exception` という名前の関数が必要です。 必要に応じて、`std::current_exception` から例外オブジェクトを取得できます。
+
+```cpp
+// /await
+struct promise_type_legacy {
+    void set_exception(std::exception_ptr e) { saved_exception = e; }
+    ...
+};
+// /std:c++latest
+struct promise_type {
+    void unhandled_exception() { saved_exception = std::current_exception(); }
+    ...
+};
+```
+
+#### <a name="deduced-return-types-of-coroutines-not-supported"></a>コルーチンの戻り値の型の推定はサポートされない
+
+C++20 では、 **`auto`** などのプレースホルダー型が含まれる戻り値の型を使用するコルーチンはサポートされていません。 コルーチンの戻り値の型は、明示的に宣言する必要があります。 **`/await`** では、これらの推定される型には常に実験的な型が含まれ、必要な型を定義するヘッダーを含める必要があります: `std::experimental::task<T>`、`std::experimental::generator<T>`、`std::experimental::async_stream<T>` のいずれか。
+
+```cpp
+// /await
+auto my_generator() {
+    ...
+    co_yield next;
+};
+
+// /std:c++latest
+#include <experimental/generator>
+std::experimental::generator<int> my_generator() {
+    ...
+    co_yield next;
+};
+```
+
+#### <a name="return-type-of-return_value"></a>`return_value` の戻り値の型
+
+Promise `return_value` 関数の戻り値の型は、 **`void`** である必要があります。 **`/await`** モードでは、戻り値の型は何でもかまわず、無視されます。 この診断は、`return_value` の戻り値が呼び出し元に返されると作成者が誤って想定している場合の、微妙なエラーを検出するのに役立ちます。
+
+```cpp
+// /await
+struct promise_type_legacy {
+    ...
+    int return_value(int x) { return x; } // incorrect, the return value of this function is unused and the value is lost.
+};
+
+// /std:c++latest
+struct promise_type {
+    ...
+    void return_value(int x) { value = x; }; // save return value
+};
+```
+
+#### <a name="return-object-conversion-behavior"></a>戻されるオブジェクトの変換動作
+
+コルーチンの宣言された戻り値の型が、Promise `get_return_object` 関数の戻り値の型と一致しない場合、`get_return_object` から戻されるオブジェクトは、コルーチンの戻り値の型に変換されます。 **`/await`** の場合、この変換は、コルーチンの本体が実行される可能性がまだない、早い段階で行われます。 **`/std:c++latest`** の場合、この変換は、値が呼び出し元に実際に戻されたときにのみ実行されます。 これにより、初期中断ポイントで中断していないコルーチンは、`get_return_object` によって返されるオブジェクトをコルーチン本体内で使用できます。
+
+#### <a name="coroutine-promise-parameters"></a>コルーチンの Promise のパラメーター
+
+C++20 では、コンパイラにより、コルーチンのパラメーター (存在する場合) を Promise 型のコンストラクターに渡すことが試みられます。 それが失敗した場合は、既定のコンストラクターで再試行されます。 **`/await`** モードでは、既定のコンストラクターのみが使用されました。 この変更により、Promise に複数のコンストラクターがある場合、またはコルーチンのパラメーターから Promise 型への変換がある場合に、動作の違いが生じる可能性があります。
+
+```cpp
+struct coro {
+    struct promise_type {
+        promise_type() { ... }
+        promise_type(int x) { ... }
+        ...
+    };
+};
+
+coro f1(int x);
+
+// Under /await the promise gets constructed using the default constructor.
+// Under /std:c++latest the promise gets constructed using the 1-argument constructor.
+f1(0);
+
+struct Object {
+template <typename T> operator T() { ... } // Converts to anything!
+};
+
+coro f2(Object o);
+
+// Under /await the promise gets constructed using the default constructor
+// Under /std:c++latest the promise gets copy- or move-constructed from the result of
+// Object::operator coro::promise_type().
+f2(Object{});
+```
+
+### <a name="permissive--and-c20-modules-are-on-by-default-under-stdclatest"></a>`/std:c++latest` では `/permissive-` と C++20 モジュールが既定でオンになる
+
+**`/std:c++latest`** を指定すると、C++20 モジュールのサポートが既定でオンになります。 この変更の詳細と、 **`module`** および **`import`** が条件付きでキーワードとして処理されるシナリオについては、「[Visual Studio 2019 バージョン 16.8 における MSVC での標準 C++20 モジュールのサポート](https://devblogs.microsoft.com/cppblog/standard-c20-modules-support-with-msvc-in-visual-studio-2019-version-16-8/)」を参照してください。
+
+モジュールをサポートする前提条件として、 **`/std:c++latest`** が指定されているときは、 **`permissive-`** が有効になるようになりました。 詳細については、[`/permissive-`](../build/reference/permissive-standards-conformance.md) をご覧ください。
+
+以前に **`/std:c++latest`** でコンパイルされていて、コンパイラの非準拠動作を必要とするコードの場合は、 **`permissive`** を指定することにより、コンパイラでの厳密準拠モードを無効にすることができます。 このコンパイラ オプションは、コマンド ライン引数リストで **`/std:c++latest`** の後に指定する必要があります。 ただし、モジュールの使用が検出された場合、 **`permissive`** はエラーになります。
+
+> エラー C1214: Modules conflict with non-standard behavior requested via '*option*' (モジュールは 'オプション' で要求された非標準動作と競合します)
+
+"*オプション*" の最も一般的な値は次のとおりです。
+
+| オプション | 説明 |
+|--|--|
+| **`/Zc:twoPhase-`** | 2 つのフェーズ名参照が C++20 モジュールには必要であり、 **`permissive-`** によって暗黙的に指定されます。 |
+| **`/Zc:hiddenFriend-`** | 標準の非表示フレンド名参照規則を有効にします。 C++20 モジュールに必要であり、 **`permissive-`** によって暗黙的に指定されます。 |
+| **`/Zc:preprocessor-`** | 準拠プリプロセッサは、C++20 ヘッダー ユニットの使用と作成のみに必要です。 名前付きモジュールには、このオプションは必要ありません。 |
+
+Visual Studio に付属している *`std.*`* モジュールはまだ標準化されていないため、それを使用するには [`/experimental:module`](../build/reference/experimental-module.md) オプションがやはり必要です。
+
+**`/experimental:module`** オプションを指定すると、 **`/Zc:twoPhase`** と **`/Zc:hiddenFriend`** も暗黙的に使用されます。 以前は、モジュールを使用してコンパイルされるコードは、モジュールだけが使用されている場合は、 **`/Zc:twoPhase-`** でコンパイルされることがありました。 この動作はサポートされなくなりました。
 
 ## <a name="bug-fixes-and-behavior-changes-in-visual-studio-2019"></a><a name="update_160"></a> Visual Studio 2019 のバグ修正と動作の変更
 
@@ -2419,7 +2751,7 @@ void f()
 
 ### <a name="default-arguments-arent-allowed-on-out-of-line-definitions-of-member-functions"></a>メンバー関数のアウトオブライン定義で既定の引数が許可されない
 
-テンプレート クラスのメンバー関数のアウトオブライン定義では、既定の引数が許可されません。 コンパイラでは、 **`/permissive`** では警告が発生し、 [`/permissive-`](../build/reference/permissive-standards-conformance.md) ではハード エラーが発生します。
+テンプレート クラスのメンバー関数のアウトオブライン定義では、既定の引数が許可されません。 コンパイラでは、 **`/permissive`** では警告が発生し、[`/permissive-`](../build/reference/permissive-standards-conformance.md) ではハード エラーが発生します。
 
 Visual Studio の以前のバージョンでは、形式が間違っている次のコードでランタイム クラッシュが発生する可能性がありました。 Visual Studio 2017 バージョン 15.3 では、警告 C5034: `'A\<T>::f': an out-of-line definition of a member of a class template cannot have default arguments` が発生します。
 
@@ -2440,7 +2772,7 @@ T A<T>::f(T t, bool b = false) // C5034
 
 ### <a name="use-of-offsetof-with-compound-member-designator"></a>複合メンバー指定子での `offsetof` の使用
 
-Visual Studio 2017 バージョン 15.3 では、 *m* が "複合メンバー指定子" である `offsetof(T, m)` を使用して、 **`/Wall`** オプションを指定してコンパイルすると、警告が発生します。 次のコードは形式が不適切であり、実行時にクラッシュが発生する可能性があります。 Visual Studio 2017 バージョン 15.3 では、警告 C4841: `non-standard extension used: compound member designator in offsetof` が発生します。
+Visual Studio 2017 バージョン 15.3 では、*m* が "複合メンバー指定子" である `offsetof(T, m)` を使用して、 **`/Wall`** オプションを指定してコンパイルすると、警告が発生します。 次のコードは形式が不適切であり、実行時にクラッシュが発生する可能性があります。 Visual Studio 2017 バージョン 15.3 では、警告 C4841: `non-standard extension used: compound member designator in offsetof` が発生します。
 
 ```cpp
 struct A {
@@ -2462,7 +2794,7 @@ constexpr auto off = offsetof(A, arr[2]);
 
 ### <a name="using-offsetof-with-static-data-member-or-member-function"></a>静的なデータ メンバーまたはメンバー関数での `offsetof` の使用
 
-Visual Studio 2017 バージョン 15.3 では、 *m* が静的なデータ メンバーまたはメンバー関数である `offsetof(T, m)` を使うと、エラーになります。 次のコードでは、エラー C4597: `undefined behavior: offsetof applied to member function 'example'` とエラー C4597: `undefined behavior: offsetof applied to static data member 'sample'` が生成されます。
+Visual Studio 2017 バージョン 15.3 では、*m* が静的なデータ メンバーまたはメンバー関数である `offsetof(T, m)` を使うと、エラーになります。 次のコードでは、エラー C4597: `undefined behavior: offsetof applied to member function 'example'` とエラー C4597: `undefined behavior: offsetof applied to static data member 'sample'` が生成されます。
 
 ```cpp
 #include <cstddef>
@@ -3357,11 +3689,11 @@ public:
 
 ### <a name="offsetof-with-constant-expressions"></a>定数式を含む `offsetof`
 
-[offsetof](../c-runtime-library/reference/offsetof-macro.md) は従来から [reinterpret_cast](../cpp/reinterpret-cast-operator.md) を必要とするマクロを使用して実装されています。 この用法は、定数式を必要とするコンテキストでは正しくありませんが、Microsoft C++ コンパイラではこれまで許可されていました。 標準ライブラリの一部としてリリースされている `offsetof` マクロはコンパイラ組み込み型 ( **__builtin_offsetof** ) が正しく使用されますが、多くのユーザーはマクロのトリックを使用して独自の `offsetof` を定義しています。
+[offsetof](../c-runtime-library/reference/offsetof-macro.md) は従来から [reinterpret_cast](../cpp/reinterpret-cast-operator.md) を必要とするマクロを使用して実装されています。 この用法は、定数式を必要とするコンテキストでは正しくありませんが、Microsoft C++ コンパイラではこれまで許可されていました。 標準ライブラリの一部としてリリースされている `offsetof` マクロはコンパイラ組み込み型 ( **__builtin_offsetof**) が正しく使用されますが、多くのユーザーはマクロのトリックを使用して独自の `offsetof` を定義しています。
 
 Visual Studio 2017 バージョン 15.8 では、コードが標準の C++ の動作に準拠するように、これらの **`reinterpret_cast`** 演算子が既定のモードで表示される領域がコンパイラにより制約されます。 [`/permissive-`](../build/reference/permissive-standards-conformance.md) の下では、制約がさらに厳しくなります。 定数式を必要とする場所で `offsetof` の結果を使用すると、警告 C4644 `usage of the macro-based offsetof pattern in constant expressions is non-standard; use offsetof defined in the C++ standard library instead` または C2975 `invalid template argument, expected compile-time constant expression` を発生させるコードが生成される場合があります。
 
-次のコードでは、 **`/default`** モードと **`/std:c++17`** モードでは C4644 が、 [`/permissive-`](../build/reference/permissive-standards-conformance.md) モードでは C2975 が発生します。
+次のコードでは、 **`/default`** モードと **`/std:c++17`** モードでは C4644 が、[`/permissive-`](../build/reference/permissive-standards-conformance.md) モードでは C2975 が発生します。
 
 ```cpp
 struct Data {

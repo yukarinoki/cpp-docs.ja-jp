@@ -1,31 +1,29 @@
 ---
-title: Visual C++ のヘルプおよびコミュニティ
-ms.date: 08/03/2020
+title: Microsoft C/C++ のヘルプとコミュニティ
+description: この記事では、Visual Studio および Microsoft C/C++ のコンパイラとツールについてのヘルプと情報に関するさまざまなリソースを示します。
+ms.date: 11/05/2020
 ms.technology: cpp-ide
 ms.assetid: 6bc23c18-fcd9-47bc-bff2-17537700be4a
-ms.openlocfilehash: 36bc8cc37d3e0018088f284ad00bbefe2eafd22a
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 9214d642e5c123778618c768b2f9b0c13611ab47
+ms.sourcegitcommit: 12eb6a824dd7187a065d44fceca4c410f58e121e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88839765"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "94334121"
 ---
-# <a name="visual-c-help-and-community"></a>Visual C++ のヘルプおよびコミュニティ
+# <a name="microsoft-cc-help-and-community"></a>Microsoft C/C++ のヘルプとコミュニティ
 
 ここでは、C++ コードの記述方法と Visual Studio 開発ツールの使用方法に関するヘルプと情報を得る方法について説明します。
 
 ## <a name="samples"></a>サンプル
 
-|Title|説明|
-|-----------|-----------------|
-|[開発者コード サンプル](/samples)|Microsoft およびコミュニティから提供されているダウンロード可能なサンプル コードが含まれています。|
+- [開発者コード サンプル](/samples): Microsoft およびコミュニティから提供されているダウンロード可能なサンプル コードが含まれています。
 
 ## <a name="product-documentation"></a>製品ドキュメント
 
-|Title|説明|
-|-----------|-----------------|
-|[Visual Studio での C++](visual-cpp-in-visual-studio.md)|Visual C++ のリファレンスと概念説明が含まれています。|
-|[Windows デベロッパー センター](https://developer.microsoft.com/windows/)|C++ および他の言語を使用して Windows 10 用アプリを開発する方法に関する情報が含まれています。 Windows デベロッパー センターの一部です。C++ コンテンツは、ドキュメントと言語リファレンスに関するノードに含まれています。|
+- [Visual Studio での C++](visual-cpp-in-visual-studio.md): Visual C++ のリファレンスと概念説明が含まれています。
+
+- [Windows デベロッパー センター](https://developer.microsoft.com/windows/): C++ および他の言語を使用して Windows 10 用アプリを開発する方法に関する情報が含まれています。
 
 ### <a name="online-and-offline-documentation"></a>オンラインおよびオフラインのドキュメント
 
@@ -33,13 +31,16 @@ Microsoft デベロッパー コンテンツをオンラインで見ることが
 
 コンテンツをダウンロードして、オフラインのヘルプ ビューアーでローカル表示することもできます。 オフラインのドキュメントは、関連コンテンツのまとまりであるブックごとに編成されます。ブックも、定期的に更新されます。 ダウンロード可能になった時点で必要なブックをダウンロードすることができます。 詳細については、[Microsoft ヘルプ ビューアー](/visualstudio/ide/microsoft-help-viewer)を参照してください。
 
-ドキュメントのセクションの多くは、PDF 形式でも提供されています。 これらのセクションの **PDF ダウンロード** リンクは、docs.microsoft.com のページ上にあります。
+ドキュメントのセクションの多くは、PDF 形式でも提供されています。 これらのセクションの目次の下には、docs.microsoft.com にある **PDF をダウンロードする** ためのリンクがあります。
 
-## <a name="related-articles"></a>関連トピック
+## <a name="related-sites"></a>関連サイト
 
-|Title|説明|
-|-----------|-----------------|
-|[C++ チーム ブログ](https://devblogs.microsoft.com/cppblog/)|Microsoft の C++ 製品チームの専門家によるさまざまなテーマの投稿が含まれています。|
-|[Channel 9](https://channel9.msdn.com/)|ビデオ インタビューや講義が含まれています。 C++ コンテンツを検索するには、Channel 9 ホーム ページの検索ボックスを使用します。|
-|[Visual Studio](https://visualstudio.microsoft.com/)|Visual Studio および関連する開発ツールに関する記事やニュースが含まれています。|
-|[Microsoft Docs の Q&A](/answers/topics/c%2B%2B.html) と Visual Studio C++ の [Developer Community](https://developercommunity.visualstudio.com/spaces/62/index.html)|Microsoft 公式のフォーラムです。C++ に関する質問を投稿し、その回答を Microsoft やコミュニティ内の専門家から得ることができます。|
+- [C++ チーム ブログ](https://devblogs.microsoft.com/cppblog/): Microsoft の C++ 製品チームの専門家によるさまざまなテーマの投稿が含まれています。
+
+- [Channel 9](https://channel9.msdn.com/): ビデオ インタビューや講義が含まれています。 C++ コンテンツを検索するには、Channel 9 ホーム ページの検索ボックスを使用します。
+
+- [Visual Studio Web サイト](https://visualstudio.microsoft.com/): Visual Studio および関連する開発ツールに関する記事やニュースが含まれています。 このサイトでは、Visual Studio のダウンロードと再頒布可能ファイルもホストされています。
+
+- [Microsoft Docs Q&A](/answers/topics/c%2B%2B.html): Microsoft 公式のフォーラムです。C++ と Visual Studio に関する質問を投稿し、その回答を Microsoft やコミュニティ内の専門家から得ることができます。
+
+- [Visual Studio C++ Developer Community](https://aka.ms/vsfeedback/browsecpp): C++ のコンパイラとツールまたは IDE の問題を報告したり、製品について提案したりするためのフォーラムです。 お気に入りのアイデアやバグ レポートに投票したり、新しいものを追加したりできます。 このサイトは、開発チームによって注視されています。
