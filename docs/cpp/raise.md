@@ -1,32 +1,33 @@
 ---
 title: __raise
-ms.date: 11/04/2016
+description: ネイティブイベント処理に Microsoft C++ extension キーワードを使用する方法につい `__raise` て説明します。
+ms.date: 11/20/2020
 f1_keywords:
 - __raise
 - __raise_cpp
 helpviewer_keywords:
 - __raise keyword [C++]
-ms.assetid: 6f1ae418-5f0f-48b6-9f6e-8ea7e66b239a
-ms.openlocfilehash: db6ba1693e4d3144b95530646b061e9cd7a58a5a
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: c9df602803062bc51b8c0cee13f17263cdc91786
+ms.sourcegitcommit: b02c61667ff7f38e7add266d0aabd8463f2dbfa1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87227128"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "95483149"
 ---
-# <a name="__raise"></a>__raise
+# <a name="__raise-keyword"></a>`__raise` キーワード
 
 イベントの呼び出しサイトを強調します。
 
-## <a name="syntax"></a>構文
+> [!NOTE]
+> ネイティブ C++ のイベント属性は、標準 C++ と互換性がありません。 準拠モードを指定するとコンパイルされません [`/permissive-`](../build/reference/permissive-standards-conformance.md) 。
 
-```
-__raise method-declarator;
-```
+## <a name="syntax"></a>Syntax
 
-## <a name="remarks"></a>解説
+> **`__raise`** *`method-declarator`* **`;`**
 
-マネージド コードからは、イベントが定義されたクラス内からのみイベントを発生させることができます。 詳細については、[イベント](../extensions/event-cpp-component-extensions.md)を参照してください。
+## <a name="remarks"></a>注釈
+
+マネージコードからイベントを発生させることができるのは、そのイベントが定義されているクラス内からだけです。 詳細については、[`event`](../extensions/event-cpp-component-extensions.md) をご覧ください。
 
 以外の **`__raise`** イベントを呼び出すと、キーワードによってエラーが生成されます。
 
@@ -61,6 +62,9 @@ int main() {
 
 ## <a name="see-also"></a>関連項目
 
-[キーワード](../cpp/keywords-cpp.md)<br/>
-[イベント処理](../cpp/event-handling.md)<br/>
-[ランタイム プラットフォームのコンポーネントの拡張機能](../extensions/component-extensions-for-runtime-platforms.md)
+[Keywords](../cpp/keywords-cpp.md)\
+[イベント処理](../cpp/event-handling.md)\
+[`__event`](../cpp/event.md)\
+[`__hook`](../cpp/hook.md)\
+[`__unhook`](../cpp/unhook.md)\
+[.NET および UWP 用のコンポーネント拡張](../extensions/component-extensions-for-runtime-platforms.md)
