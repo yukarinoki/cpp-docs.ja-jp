@@ -15,12 +15,12 @@ helpviewer_keywords:
 - run-time [C++], DLL startup sequence
 - DLLs [C++], startup sequence
 ms.assetid: e06f24ab-6ca5-44ef-9857-aed0c6f049f2
-ms.openlocfilehash: 2f2ffb13e6a80b144298bbf8cd76b5666a10b4dd
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 5af3efd733a5d682e33863b330b6a558e824c9b3
+ms.sourcegitcommit: 6284bca6549e7b4f199d4560c30df6c1278bd4a0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81335659"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95782980"
 ---
 # <a name="dlls-and-visual-c-run-time-library-behavior"></a>DLL と Visual C++ ランタイム ライブラリの動作
 
@@ -28,7 +28,7 @@ Visual Studio を使用してダイナミックリンク ライブラリ (DLL) �
 
 ## <a name="default-dll-entry-point-_dllmaincrtstartup"></a>既定の DLL エントリ ポイント _DllMainCRTStartup
 
-Windows では、すべての DLL にオプションのエントリ ポイント関数 (通常、`DllMain`) が含まれます。エントリ ポイント関数は、初期化と終了の両方で呼び出されます。 これによって、追加のリソースを必要に応じて、割り当て/解放する機会が与えられます。 Windows には、エントリ ポイント関数が呼び出される 4 つの状況 (プロセスのアタッチ、プロセス デタッチ、スレッド アタッチ、スレッド デタッチ) があります。 DLL がプロセス アドレス空間に読み込まれると、その DLL を使用するアプリケーションが読み込まれたとき、またはアプリケーションが実行時に DLL を要求したときに、オペレーティング システムによって DLL データのコピーが個別に作成されます。 これは*プロセスのアタッチ*と呼ばれます。 *スレッドのアタッチ*は、DLL が読み込まれるプロセスによって新しいスレッドが作成されるときに発生します。 *スレッドのデタッチ*はスレッドが終了するときに発生し、*プロセスのデタッチ*は DLL が不要になり、アプリケーションによって解放されるときに発生します。 オペレーティング システムは、これらの各イベントの DLL エントリ ポイントを個別に呼び出し、各イベントの種類に対して *reason* 引数を渡します。 たとえば、OS は `DLL_PROCESS_ATTACH` を *reason* 引数として送信し、プロセスのアタッチを通知します。
+Windows では、すべての DLL にオプションのエントリ ポイント関数 (通常、`DllMain`) が含まれます。エントリ ポイント関数は、初期化と終了の両方で呼び出されます。 これによって、追加のリソースを必要に応じて、割り当て/解放する機会が与えられます。 Windows には、エントリ ポイント関数が呼び出される 4 つの状況 (プロセスのアタッチ、プロセス デタッチ、スレッド アタッチ、スレッド デタッチ) があります。 DLL がプロセス アドレス空間に読み込まれると、その DLL を使用するアプリケーションが読み込まれたとき、またはアプリケーションが実行時に DLL を要求したときに、オペレーティング システムによって DLL データのコピーが個別に作成されます。 これは *プロセスのアタッチ* と呼ばれます。 *スレッドのアタッチ* は、DLL が読み込まれるプロセスによって新しいスレッドが作成されるときに発生します。 *スレッドのデタッチ* はスレッドが終了するときに発生し、*プロセスのデタッチ* は DLL が不要になり、アプリケーションによって解放されるときに発生します。 オペレーティング システムは、これらの各イベントの DLL エントリ ポイントを個別に呼び出し、各イベントの種類に対して *reason* 引数を渡します。 たとえば、OS は `DLL_PROCESS_ATTACH` を *reason* 引数として送信し、プロセスのアタッチを通知します。
 
 VCRuntime ライブラリには、既定の初期化および終了操作を処理するために `_DllMainCRTStartup` というエントリポイント関数が用意されています。 プロセスのアタッチでは、`_DllMainCRTStartup` 関数は、バッファー セキュリティ チェックを設定し、CRT とその他のライブラリを初期化し、ランタイム型情報を初期化し、静的および非ローカルのデータのコンストラクターを初期化して呼び出し、スレッドローカル ストレージを初期化し、アタッチごとに内部静的カウンターをインクリメントしてから、ユーザーまたはライブラリが提供する `DllMain` を呼び出します。 プロセスのデタッチでは、関数はこれらのステップを逆順で実行します。 `DllMain` を呼び出し、内部カウンターをデクリメントし、デストラクターを呼び出し、CRT 終了関数と登録済み `atexit` 関数を呼び出し、他のすべてのライブラリが終了したことを通知します。 アタッチカウンターが 0 になると、関数は `FALSE` を返して、DLL をアンロードできることを Windows に示します。 `_DllMainCRTStartup` 関数は、スレッドのアタッチとスレッドのデタッチ中にも呼び出されます。 このような場合、VCRuntime コードは追加の初期化も終了も行わず、`DllMain` を呼び出してメッセージを渡すだけです。 `DllMain` がプロセスのアタッチから `FALSE` を返した場合、通知は失敗し、`_DllMainCRTStartup` は `DllMain` を再度呼び出して `DLL_PROCESS_DETACH` を *reason* 引数として渡してから、終了処理の残りを実行します。
 
@@ -108,13 +108,13 @@ extern "C" BOOL WINAPI DllMain (
 
 標準 MFC DLL では、その `InitInstance` 関数で [TlsAlloc](/windows/win32/api/processthreadsapi/nf-processthreadsapi-tlsalloc) および [TlsGetValue](/windows/win32/api/processthreadsapi/nf-processthreadsapi-tlsgetvalue) を呼び出すことで、複数のスレッドを追跡できます。 これらの関数により、DLL がスレッド固有のデータを追跡できます。
 
-MFC に動的にリンクする標準 MFC DLL 内で MFC OLE、MFC データベース (または DAO)、または MFC ソケットのサポートを使用している場合は、それぞれデバッグ MFC 拡張 DLL の MFCO*version*D.dll、MFCD*version*D.dll、および MFCN*version*D.dll (*version* はバージョン番号) が自動的にリンクされます。 標準 MFC DLL の `CWinApp::InitInstance` で使用している DLL ごとに、次の定義済み初期化関数のいずれかを呼び出す必要があります。
+MFC に動的にリンクする標準 MFC DLL 内で MFC OLE、MFC データベース (または DAO)、または MFC ソケットのサポートを使用している場合は、それぞれデバッグ MFC 拡張 DLL の MFCO *version* D.dll、MFCD *version* D.dll、および MFCN *version* D.dll (*version* はバージョン番号) が自動的にリンクされます。 標準 MFC DLL の `CWinApp::InitInstance` で使用している DLL ごとに、次の定義済み初期化関数のいずれかを呼び出す必要があります。
 
 |MFC サポートの種類|呼び出す初期化関数|
 |-------------------------|-------------------------------------|
-|MFC OLE (MFCO*version*D.dll)|`AfxOleInitModule`|
-|MFC データベース (MFCD*version*D.dll)|`AfxDbInitModule`|
-|MFC ソケット (MFCN*version*D.dll)|`AfxNetInitModule`|
+|MFC OLE (MFCO *version* D.dll)|`AfxOleInitModule`|
+|MFC データベース (MFCD *version* D.dll)|`AfxDbInitModule`|
+|MFC ソケット (MFCN *version* D.dll)|`AfxNetInitModule`|
 
 <a name="initializing-extension-dlls"></a>
 
@@ -133,7 +133,7 @@ MFC 拡張 DLL には `CWinApp` 派生オブジェクトがないため (標準 
 #undef THIS_FILE
 static char THIS_FILE[] = __FILE__;
 #endif
-static AFX_EXTENSION_MODULE PROJNAMEDLL = { NULL, NULL };
+static AFX_EXTENSION_MODULE PROJNAMEDLL;
 
 extern "C" int APIENTRY
 DllMain(HINSTANCE hInstance, DWORD dwReason, LPVOID lpReserved)
