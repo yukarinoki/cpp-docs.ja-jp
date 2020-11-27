@@ -1,6 +1,7 @@
 ---
-title: コマンド ライン パラメーターの処理
-ms.date: 11/04/2016
+title: C のコマンド ライン処理のカスタマイズ
+description: ランタイムのスタートアップ コードで `main` 関数の引数と環境パラメーターの処理を抑制する方法。
+ms.date: 11/19/2020
 helpviewer_keywords:
 - _spawn functions
 - command line, processing
@@ -11,22 +12,24 @@ helpviewer_keywords:
 - command line, processing arguments
 - suppressing environment processing
 - _exec function
-ms.assetid: c20fa11d-b35b-4f3e-93b6-2cd5a1c3c993
-ms.openlocfilehash: 1abdb0c104755efc86543ac4773359078e855999
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fc306172491cd401caeecb3c87c0711f8b4ef911
+ms.sourcegitcommit: b02c61667ff7f38e7add266d0aabd8463f2dbfa1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62290691"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "95483296"
 ---
-# <a name="customizing-c-command-line-processing"></a>コマンド ライン パラメーターの処理
+# <a name="customizing-c-command-line-processing"></a>C のコマンド ライン処理のカスタマイズ
 
-プログラムがコマンド ラインの引数を受け取らない場合は、コマンド ライン処理を実行するライブラリ ルーチンの使用を制約することで、領域を節約できます。 このルーチンは、「[ワイルドカード引数の展開](../c-language/expanding-wildcard-arguments.md)」で説明されているように、 **_setargv** (ワイド文字環境では **_wsetargv**) と呼ばれます。 使用を抑制するには、**main** 関数を含むファイルの中に何も実行しないルーチンを定義し、 **_setargv** (ワイド文字環境の場合は **_wsetargv**) という名前を付けます。 これにより、 **_setargv** または **_wsetargv** の呼び出しが **_setargv** または **_wsetargv** の定義によって満たされるため、ライブラリ バージョンは読み込まれません。
+プログラムがコマンド ライン引数を受け取らない場合は、コマンド ライン処理ルーチンを抑制して領域を少し節約できます。 その使用を抑制するには、 *`noarg.obj`* ファイルを (`main`、`wmain` どちらの場合でも) **`/link`** コンパイラ オプションまたは **`LINK`** コマンド ラインに含めます。
 
-同様に、`envp` 引数を使用して環境テーブルにアクセスしない場合は、環境処理ルーチンである **_setenvp** (または **_wsetenvp**) の代わりに独自の空ルーチンを指定できます。
+同様に、 *`envp`* 引数を使用して環境のテーブルにアクセスしない場合は、内部の環境処理ルーチンを抑制できます。 その使用を抑制するには、 *`noenv.obj`* ファイルを (`main`、`wmain` どちらの場合でも) **`/link`** コンパイラ オプションまたは **`LINK`** コマンド ラインに含めます。
 
-プログラムが C ランタイム ライブラリ ルーチンの **_spawn** または **_exec** ファミリを呼び出す場合、起動元のプロセスから新しいプロセスに環境を渡すためにこのルーチンが使用されているので、環境処理ルーチンを抑制しないでください。
+ランタイムのスタートアップ リンカー オプションの詳細については、「[リンク オプション](../c-runtime-library/link-options.md)」を参照してください。
+
+プログラムによって、C ランタイム ライブラリの `spawn` または `exec` ファミリのルーチンが呼び出されることがあります。 その場合は、親プロセスから子プロセスに環境を渡すために環境処理ルーチンが使用されるため、抑制しないでください。
 
 ## <a name="see-also"></a>関連項目
 
-[main 関数とプログラム実行](../c-language/main-function-and-program-execution.md)
+[`main` 関数とプログラム実行](../c-language/main-function-and-program-execution.md)\
+[リンク オプション](../c-runtime-library/link-options.md)。
