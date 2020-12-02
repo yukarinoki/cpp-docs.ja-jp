@@ -1,6 +1,7 @@
 ---
-title: _mbsnbcat_s、_mbsnbcat_s_l
-ms.date: 4/2/2020
+title: '`_mbsnbcat_s`, `_mbsnbcat_s_l`'
+description: Microsoft Visual C++ `_mbsnbcat_s` 、および関数の API の `_mbsnbcat_s_l` 説明
+ms.date: 12/2/2020
 api_name:
 - _mbsnbcat_s_l
 - _mbsnbcat_s
@@ -38,16 +39,16 @@ helpviewer_keywords:
 - mbsnbcat_s_l function
 - tcsncat function
 ms.assetid: 2c9e9be7-d979-4a54-8ada-23428b6648a9
-ms.openlocfilehash: d731c94c879d0e4334dc3b57a19b94cc0378abaf
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: c7198d806d8ebe077b423ff2135b5bdcf66ffac6
+ms.sourcegitcommit: 9c45483572db4470fe5db5a7b596d5770303098c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82915645"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "96523115"
 ---
-# <a name="_mbsnbcat_s-_mbsnbcat_s_l"></a>_mbsnbcat_s、_mbsnbcat_s_l
+# <a name="_mbsnbcat_s-_mbsnbcat_s_l"></a>`_mbsnbcat_s`, `_mbsnbcat_s_l`
 
-マルチバイト文字の文字列に、別のマルチバイト文字の文字列の先頭の**n**バイトを追加します。 これらは、「[CRT のセキュリティ機能](../../c-runtime-library/security-features-in-the-crt.md)」の説明にあるとおり、セキュリティが強化されたバージョンの [_mbsnbcat、_mbsnbcat_l](mbsnbcat-mbsnbcat-l.md) です。
+マルチバイト文字の文字列に、別のマルチバイト文字の文字列の先頭の **n** バイトを追加します。 これらは、「 [CRT のセキュリティ機能](../../c-runtime-library/security-features-in-the-crt.md)」の説明にあるとおり[ `_mbsnbcat` `_mbsnbcat_l` 、](mbsnbcat-mbsnbcat-l.md)セキュリティが強化されたバージョンのです。
 
 > [!IMPORTANT]
 > この API は、Windows ランタイムで実行するアプリケーションでは使用できません。 詳細については、「[ユニバーサル Windows プラットフォーム アプリでサポートされていない CRT 関数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)」を参照してください。
@@ -85,19 +86,19 @@ errno_t _mbsnbcat_s_l(
 
 ### <a name="parameters"></a>パラメーター
 
-*dest*<br/>
+*`dest`*\
 NULL で終わるマルチバイト文字のコピー先文字列。
 
-*sizeInBytes*<br/>
-*Dest*バッファーのサイズ (バイト単位)。
+*`sizeInBytes`*\
+バッファーのサイズ *`dest`* (バイト単位)。
 
-*src*<br/>
+*`src`*\
 NULL で終わるマルチバイト文字のコピー元文字列。
 
-*count*<br/>
-*Src*から*dest*に追記するバイト数。
+*`count`*\
+からに追加するバイト数 *`src`* *`dest`* 。
 
-*locale*<br/>
+*`locale`*\
 使用するロケール。
 
 ## <a name="return-value"></a>戻り値
@@ -106,49 +107,49 @@ NULL で終わるマルチバイト文字のコピー元文字列。
 
 ### <a name="error-conditions"></a>エラー条件
 
-|**先**|*sizeInBytes*|*src*|戻り値|
+|**`dest`**|*`sizeInBytes`*|*`src`*|戻り値|
 |------------|-------------------|-----------|------------------|
-|**空白**|any|any|**EINVAL**|
-|Any|<= 0|any|**EINVAL**|
-|Any|any|**空白**|**EINVAL**|
+|**`NULL`**|any|any|**`EINVAL`**|
+|Any|<= 0|any|**`EINVAL`**|
+|Any|any|**`NULL`**|**`EINVAL`**|
 
-いずれかのエラー条件が発生すると、この関数は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」の説明にあるとおり無効なパラメーター エラーを生成します。 エラーが処理された場合、関数は**einval**を返し、 **errno**を**einval**に設定します。
+いずれかのエラー条件が発生すると、この関数は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」の説明にあるとおり無効なパラメーター エラーを生成します。 エラーが処理された場合、関数はを返し、 **`EINVAL`** **errno** をに設定し **`EINVAL`** ます。
 
 ## <a name="remarks"></a>解説
 
-**_Mbsnbcat_s**関数は、 *src*の*最大バイト数*である*dest*に追加します。 *Dest*の null 文字の直前にあるバイトが先頭バイトの場合、 *src*の初期バイトによって上書きされます。 それ以外の場合、 *src*の初期バイトは*dest*の終端の null 文字を上書きします。 *Count* bytes が追加される前に*src*に null バイトが含まれている場合、 **_mbsnbcat_s**は*src*から null 文字までのすべてのバイトを追加します。 *Count*が*src*の長さよりも大きい場合、 *src*の長さは*count*の代わりに使用されます。 結果の文字列は null 文字で終了します。 重なり合う文字列間でコピーした場合の動作は未定義です。
+関数は、 **`_mbsnbcat_s`** *`dest`* の先頭の最大バイトにを追加し *`count`* *`src`* ます。 の null 文字の直前にあるバイト *`dest`* が先頭バイトの場合、の初期バイトによって上書きされ *`src`* ます。 それ以外の場合、の最初のバイトは、 *`src`* の終端の null 文字を上書きし *`dest`* ます。 バイトを追加する前にに null バイトが含まれている場合 *`src`* *`count`* 、は **`_mbsnbcat_s`** null 文字までのすべてのバイトを追加し *`src`* ます。 *`count`* がの長さを超える場合 *`src`* 、の *`src`* 代わりにの長さが使用され *`count`* ます。 結果の文字列は null 文字で終了します。 重なり合う文字列間でコピーした場合の動作は未定義です。
 
-出力値は、ロケールの**LC_CTYPE**カテゴリの設定に影響されます。詳細について[は、「setlocale、_wsetlocale](setlocale-wsetlocale.md) 」を参照してください。 これらの関数のバージョンは同じですが、 **_l**サフィックスが付いていないバージョンが現在のロケールを使用し、 **_l**サフィックスが付いているものは、渡されたロケールパラメーターを代わりに使用する点が異なります。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
+出力値は、ロケールのカテゴリの設定によって影響を受けます **`LC_CTYPE`** 。詳細については [、「setlocale、_wsetlocale](setlocale-wsetlocale.md) 」を参照してください。 サフィックスが付いていないバージョンが現在のロケールを使用し、サフィックスが付いているバージョンが渡されたロケールパラメーターを代わりに使用する点を除いて、これらの関数のバージョンは同じです **`_l`** **`_l`** 。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
 
-C++ では、テンプレートのオーバーロードを利用すると、これらの関数の使用が簡素化されます。オーバーロードでは、バッファー長が自動的に推論されるのでサイズ引数を指定する必要がなくなるだけでなく、古くてセキュリティが万全ではない関数を新しくてセキュリティが強化された関数に自動的に置き換えることができます。 詳細については、「[セキュリティ保護されたテンプレート オーバーロード](../../c-runtime-library/secure-template-overloads.md)」を参照してください。
+C++ では、これらの関数の使用はテンプレートのオーバーロードによって簡略化されています。 オーバーロードでは、バッファー長を自動的に推論できるため、サイズ引数を指定する必要がなくなります。また、新しいより安全な関数を自動的に使用して、安全性の低い古い関数を置き換えることができます。 詳細については、「[セキュリティ保護されたテンプレート オーバーロード](../../c-runtime-library/secure-template-overloads.md)」を参照してください。
 
-これらの関数のデバッグライブラリバージョンは、最初にバッファーを0xFE で埋めます。 この動作を無効にするには、[_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md) を使用します。
+これらの関数のデバッグライブラリバージョンは、最初にバッファーを0xFE で埋めます。 この動作を無効にするには、を使用し [`_CrtSetDebugFillThreshold`](crtsetdebugfillthreshold.md) ます。
 
 既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
-|Tchar.h のルーチン|_UNICODE および _MBCS が未定義の場合|_MBCS が定義されている場合|_UNICODE が定義されている場合|
+|`Tchar.h` ルーチン|`_UNICODE``_MBCS`定義されていない|`_MBCS` れ|`_UNICODE` れ|
 |---------------------|--------------------------------------|--------------------|-----------------------|
-|**_tcsncat**|[strncat](strncat-strncat-l-wcsncat-wcsncat-l-mbsncat-mbsncat-l.md)|**_mbsnbcat_s**|[wcsncat](strncat-strncat-l-wcsncat-wcsncat-l-mbsncat-mbsncat-l.md)|
-|**_tcsncat_s_l**|**_strncat_s_l**|**_mbsnbcat_s_l**|**_wcsncat_s_l**|
+|**`_tcsncat_s`**|[strncat_s](strncat-s-strncat-s-l-wcsncat-s-wcsncat-s-l-mbsncat-s-mbsncat-s-l.md)|**`_mbsnbcat_s`**|[wcsncat_s](strncat-s-strncat-s-l-wcsncat-s-wcsncat-s-l-mbsncat-s-mbsncat-s-l.md)|
+|**`_tcsncat_s_l`**|**`_strncat_s_l`**|**`_mbsnbcat_s_l`**|**`_wcsncat_s_l`**|
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
-|**_mbsnbcat_s**|\<mbstring.h>|
-|**_mbsnbcat_s_l**|\<mbstring.h>|
+|**`_mbsnbcat_s`**|\<mbstring.h>|
+|**`_mbsnbcat_s_l`**|\<mbstring.h>|
 
 互換性について詳しくは、「 [Compatibility](../../c-runtime-library/compatibility.md)」をご覧ください。
 
 ## <a name="see-also"></a>関連項目
 
-[文字列操作](../../c-runtime-library/string-manipulation-crt.md)<br/>
-[_mbsnbcmp、_mbsnbcmp_l](mbsnbcmp-mbsnbcmp-l.md)<br/>
-[_strncnt、_wcsncnt、_mbsnbcnt、_mbsnbcnt_l、_mbsnccnt、_mbsnccnt_l](strncnt-wcsncnt-mbsnbcnt-mbsnbcnt-l-mbsnccnt-mbsnccnt-l.md)<br/>
-[_mbsnbcpy、_mbsnbcpy_l](mbsnbcpy-mbsnbcpy-l.md)<br/>
-[_mbsnbcpy_s、_mbsnbcpy_s_l](mbsnbcpy-s-mbsnbcpy-s-l.md)<br/>
-[_mbsnbset、_mbsnbset_l](mbsnbset-mbsnbset-l.md)<br/>
-[strncat、_strncat_l、wcsncat、_wcsncat_l、_mbsncat、_mbsncat_l](strncat-strncat-l-wcsncat-wcsncat-l-mbsncat-mbsncat-l.md)<br/>
-[strncat_s、_strncat_s_l、wcsncat_s、_wcsncat_s_l、_mbsncat_s、_mbsncat_s_l](strncat-s-strncat-s-l-wcsncat-s-wcsncat-s-l-mbsncat-s-mbsncat-s-l.md)<br/>
+[文字列操作](../../c-runtime-library/string-manipulation-crt.md)\
+[`_mbsnbcmp`, `_mbsnbcmp_l`](mbsnbcmp-mbsnbcmp-l.md)\
+[`_strncnt`, `_wcsncnt`, `_mbsnbcnt`, `_mbsnbcnt_l`, `_mbsnccnt`, `_mbsnccnt_l`](strncnt-wcsncnt-mbsnbcnt-mbsnbcnt-l-mbsnccnt-mbsnccnt-l.md)\
+[`_mbsnbcpy`, `_mbsnbcpy_l`](mbsnbcpy-mbsnbcpy-l.md)\
+[`_mbsnbcpy_s`, `_mbsnbcpy_s_l`](mbsnbcpy-s-mbsnbcpy-s-l.md)\
+[`_mbsnbset`, `_mbsnbset_l`](mbsnbset-mbsnbset-l.md)\
+[`strncat`, `_strncat_l`, `wcsncat`, `_wcsncat_l`, `_mbsncat`, `_mbsncat_l`](strncat-strncat-l-wcsncat-wcsncat-l-mbsncat-mbsncat-l.md)\
+[`strncat_s`, `_strncat_s_l`, `wcsncat_s`, `_wcsncat_s_l`, `_mbsncat_s`, `_mbsncat_s_l`](strncat-s-strncat-s-l-wcsncat-s-wcsncat-s-l-mbsncat-s-mbsncat-s-l.md)
