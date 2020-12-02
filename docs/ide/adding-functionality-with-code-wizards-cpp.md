@@ -5,11 +5,11 @@ helpviewer_keywords:
 - code wizards [C++]
 ms.assetid: 6afb7ef9-7056-423d-b244-91bb4236d1d7
 ms.openlocfilehash: 651eac8c630636455dd1ffa04fdd02b71fa3cf62
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.sourcegitcommit: 6284bca6549e7b4f199d4560c30df6c1278bd4a0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91509696"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96188914"
 ---
 # <a name="adding-functionality-with-code-wizards-c"></a>コード ウィザードを使用した機能の追加 (C++)
 
@@ -52,7 +52,7 @@ C++ コード ウィザードには、次の 3 つの場所からアクセスで
 
   - **イベントの追加** (コントロール クラスからのみ)
 
-- **ソリューション エクスプローラー**で、任意のフォルダーを右クリックして、ショートカット メニューから **[追加]** をクリックすると、新しいファイルまたは既存のファイル、その他のフォルダー、項目、クラス、リソース、Web 参照をプロジェクトに追加できます。
+- **ソリューション エクスプローラー** で、任意のフォルダーを右クリックして、ショートカット メニューから **[追加]** をクリックすると、新しいファイルまたは既存のファイル、その他のフォルダー、項目、クラス、リソース、Web 参照をプロジェクトに追加できます。
 
 - [クラス ビュー ウィンドウ](/visualstudio/ide/viewing-the-structure-of-code)から、適切なノードを右クリックして、ショートカット メニューから **[追加]** をクリックすると、関数、変数、クラス、プロパティ、メソッド、イベント、インターフェイス、接続ポイント、またはその他のコードをプロジェクトに追加できます。
 

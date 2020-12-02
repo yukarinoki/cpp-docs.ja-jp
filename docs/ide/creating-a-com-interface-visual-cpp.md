@@ -8,11 +8,11 @@ helpviewer_keywords:
 - properties [C++], adding to COM interfaces
 ms.assetid: 1be84d3c-6886-4d1e-8493-56c4d38a96d4
 ms.openlocfilehash: 6ad8d50049d34a711937f3d1f73157ce26f69808
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.sourcegitcommit: 6284bca6549e7b4f199d4560c30df6c1278bd4a0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91509686"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96188823"
 ---
 # <a name="create-a-com-interface"></a>COM インターフェイスを作成する
 
@@ -22,7 +22,7 @@ Visual Studio には、COM オブジェクトとオートメーション クラ�
 
 - [MFC プロジェクトへの ATL サポートの追加](../mfc/reference/adding-atl-support-to-your-mfc-project.md)
 
-  [MFC アプリケーション ウィザード](../mfc/reference/mfc-application-wizard.md)を使用して MFC プロジェクトを作成し、**MFC に ATL サポートを追加**コード ウィザードを実行した後で、MFC アプリケーションに ATL サポートを追加します。 このサポートは、MFC の実行可能ファイルまたは DLL プロジェクトに追加された単純な COM オブジェクトにのみ適用されます。 このような ATL オブジェクトには複数のインターフェイスが存在することがあります。
+  [MFC アプリケーション ウィザード](../mfc/reference/mfc-application-wizard.md)を使用して MFC プロジェクトを作成し、**MFC に ATL サポートを追加** コード ウィザードを実行した後で、MFC アプリケーションに ATL サポートを追加します。 このサポートは、MFC の実行可能ファイルまたは DLL プロジェクトに追加された単純な COM オブジェクトにのみ適用されます。 このような ATL オブジェクトには複数のインターフェイスが存在することがあります。
 
 - [MFC ActiveX コントロールの作成](../mfc/reference/creating-an-mfc-activex-control.md)
 
@@ -32,7 +32,7 @@ Visual Studio には、COM オブジェクトとオートメーション クラ�
 
   [ATL プロジェクト ウィザード](../atl/reference/atl-project-wizard.md)と [ATL コントロール ウィザード](../atl/reference/atl-control-wizard.md)の組み合わせを使用して、ATL ActiveX コントロールを作成します。
 
-  前述のとおり、ATL サポートを追加した MFC プロジェクトに ATL コントロールを追加することもできます。 さらに、**[クラスの追加]** ダイアログ ボックスで、**ATL コントロール**を選択し、ATL サポートを MFC プロジェクトに追加していない場合、Visual Studio で ATL サポートを MFC プロジェクトに追加することを確認するダイアログ ボックスが表示されます。
+  前述のとおり、ATL サポートを追加した MFC プロジェクトに ATL コントロールを追加することもできます。 さらに、**[クラスの追加]** ダイアログ ボックスで、**ATL コントロール** を選択し、ATL サポートを MFC プロジェクトに追加していない場合、Visual Studio で ATL サポートを MFC プロジェクトに追加することを確認するダイアログ ボックスが表示されます。
 
   このウィザードは、プロジェクト クラスに IDL ソースと COM マップを生成します。
 
@@ -83,6 +83,6 @@ ATL ベースと MFC ベースの COM オブジェクト クラスでは、イ�
 |ウィザード|プロジェクトの種類|
 |------------|------------------|
 |[プロパティ追加ウィザード](./adding-a-property-visual-cpp.md#names-add-property-wizard)|ATL をサポートする ATL プロジェクトまたは MFC プロジェクト。 プロパティを追加するインターフェイスを右クリックします。<br /><br />Visual C++ ではプロジェクトの種類が検出され、適宜、プロパティ追加ウィザードでオプションが変更されます。<br /><br />- [MFC アプリケーション ウィザード](../mfc/reference/mfc-application-wizard.md)を使用して作成されたプロジェクトのディスパッチ インターフェイスの場合、プロパティ追加ウィザードを起動すると、MFC に固有のオプションが提供されます。<br />- MFC ActiveX コントロール インターフェイスの場合、プロパティ追加ウィザードではストック メソッドとプロパティの一覧が提供されます。これをそのまま使用することも、ご利用のコントロール用にカスタマイズすることもできます。<br />- 他のすべてのインターフェイスの場合、プロパティ追加ウィザードではほとんどの状況で役立つオプションが提供されます。|
-|[メソッド追加ウィザード](./adding-a-method-visual-cpp.md#add-method-wizard)|ATL をサポートする ATL プロジェクトまたは MFC プロジェクト。 メソッドを追加するインターフェイスを右クリックします。<br /><br />Visual C++ ではプロジェクトの種類が検出され、適宜、メソッド追加ウィザードでオプションが変更されます。<br /><br />- [MFC アプリケーション ウィザード](../mfc/reference/mfc-application-wizard.md)を使用して作成されたプロジェクトのディスパッチ インターフェイスの場合、メソッド追加ウィザードを使用すると、MFC に固有のオプションが提供されます。<br />- MFC ActiveX コントロール インターフェイスの場合、メソッド追加ウィザードではストック メソッドとプロパティの一覧が提供されます。これをそのまま使用することも、ご利用のコントロール用にカスタマイズすることもできます。<br />- 他のすべてのインターフェイスの場合、**メソッド追加**ウィザードではほとんどの状況で役立つオプションが提供されます。|
+|[メソッド追加ウィザード](./adding-a-method-visual-cpp.md#add-method-wizard)|ATL をサポートする ATL プロジェクトまたは MFC プロジェクト。 メソッドを追加するインターフェイスを右クリックします。<br /><br />Visual C++ ではプロジェクトの種類が検出され、適宜、メソッド追加ウィザードでオプションが変更されます。<br /><br />- [MFC アプリケーション ウィザード](../mfc/reference/mfc-application-wizard.md)を使用して作成されたプロジェクトのディスパッチ インターフェイスの場合、メソッド追加ウィザードを使用すると、MFC に固有のオプションが提供されます。<br />- MFC ActiveX コントロール インターフェイスの場合、メソッド追加ウィザードではストック メソッドとプロパティの一覧が提供されます。これをそのまま使用することも、ご利用のコントロール用にカスタマイズすることもできます。<br />- 他のすべてのインターフェイスの場合、**メソッド追加** ウィザードではほとんどの状況で役立つオプションが提供されます。|
 
 また、COM コントロールに新しいインターフェイスを実装することもできます。 クラス ビューでオブジェクトのコントロール クラスを右クリックし、[[インターフェイスの実装]](./implementing-an-interface-visual-cpp.md#implement-interface-wizard) を選択します。

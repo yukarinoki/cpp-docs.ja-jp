@@ -10,11 +10,11 @@ helpviewer_keywords:
 - add class from ActiveX control wizard [C++]
 ms.assetid: 729fcb37-54b8-44d5-9b4e-50bb16e0eea4
 ms.openlocfilehash: d63f73e17e47f2cabb8f1a55c71325ec7068a2c8
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.sourcegitcommit: 6284bca6549e7b4f199d4560c30df6c1278bd4a0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91500367"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96188927"
 ---
 # <a name="add-a-class-from-an-activex-control"></a>ActiveX コントロールからクラスを追加する
 
@@ -30,7 +30,7 @@ ActiveX コントロールは、コンポーネント オブジェクト モデ�
 
 **ActiveX コントロールから MFC クラスを追加するには:**
 
-1. **ソリューション エクスプローラー**または[クラス ビュー](/visualstudio/ide/viewing-the-structure-of-code)のいずれかで、ActiveX コントロール クラスを追加するプロジェクト名を右クリックします。
+1. **ソリューション エクスプローラー** または [クラス ビュー](/visualstudio/ide/viewing-the-structure-of-code)のいずれかで、ActiveX コントロール クラスを追加するプロジェクト名を右クリックします。
 
 1. ショートカット メニューの **[追加]** を選択し、次に **[クラスの追加]** を選択します。
 

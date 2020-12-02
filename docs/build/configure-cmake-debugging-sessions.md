@@ -4,12 +4,12 @@ description: Visual Studio を使用して CMake デバッガー設定を構成�
 ms.date: 04/02/2020
 helpviewer_keywords:
 - CMake debugging
-ms.openlocfilehash: a790e26e5bf3980ffb81a3ba778577afacff95b4
-ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
+ms.openlocfilehash: 74be1f07b838cd77f4ee87f5e9d245410fe716de
+ms.sourcegitcommit: 432c24dde31c400437c4320e8432b1ddb232f844
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "92922232"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96440295"
 ---
 # <a name="configure-cmake-debugging-sessions"></a>CMake デバッグ セッションを構成する
 
@@ -43,7 +43,7 @@ CMake のネイティブ サポートは Visual Studio 2017 以降で利用で�
 
 ![ターゲット ビュー エントリ ポイント](media/cmake-targets-add-debug-configuration.png "ターゲット ビュー エントリ ポイント")
 
-- **ルートの CMakeLists.txt:** ルートの *CMakeLists.txt* を右クリックし、 **[Add Debug Configuration]\(デバッグ構成 の追加\)** を選んで **[デバッガーの選択]** ダイアログ ボックスを開きます。 このダイアログでは、" *すべての* " 種類のデバッグ構成を追加できますが、`projectTarget` プロパティを使用して、呼び出す CMake ターゲットを手動で指定する必要があります。
+- **ルートの CMakeLists.txt:** ルートの *CMakeLists.txt* を右クリックし、 **[Add Debug Configuration]\(デバッグ構成 の追加\)** を選んで **[デバッガーの選択]** ダイアログ ボックスを開きます。 このダイアログでは、"*すべての*" 種類のデバッグ構成を追加できますが、`projectTarget` プロパティを使用して、呼び出す CMake ターゲットを手動で指定する必要があります。
 
 ![[デバッガーの選択] ダイアログ ボックス](media/cmake-select-a-debugger.png "[デバッガーの選択] ダイアログ ボックス")
 
@@ -51,12 +51,11 @@ CMake のネイティブ サポートは Visual Studio 2017 以降で利用で�
 
 ## <a name="reference-keys-in-cmakesettingsjson"></a>CMakeSettings.json のキーを参照する
 
-*CMakeSettings.json* ファイル内の任意のキーを参照するには、 *launch.vs.json* 内でそのキーの先頭に `cmake.` を追加します。 次に示す簡単な *launch.vs.json* ファイルの例では、現在選択されている構成に対して、 *CMakeSettings.json* ファイル内の `remoteCopySources` キーの値を取得しています。
+*CMakeSettings.json* ファイル内の任意のキーを参照するには、*launch.vs.json* 内でそのキーの先頭に `cmake.` を追加します。 次に示す簡単な *launch.vs.json* ファイルの例では、現在選択されている構成に対して、*CMakeSettings.json* ファイル内の `remoteCopySources` キーの値を取得しています。
 
 ```json
 {
   "version": "0.2.1",
-  "defaults": {},
   "configurations": [
     {
       "type": "default",
@@ -69,7 +68,7 @@ CMake のネイティブ サポートは Visual Studio 2017 以降で利用で�
 }
 ```
 
-また、構文 `${env.VARIABLE_NAME}` を使用して、 *CMakeSettings.json* で定義されている **環境変数** を launch.vs.json で使用することもできます。 Visual Studio 2019 バージョン 16.4 以降では、 *CMakeSettings.json* で指定した環境を使用して、デバッグ ターゲットが自動的に起動されます。 環境変数は、 **null** に設定することで、設定解除できます。
+また、構文 `${env.VARIABLE_NAME}` を使用して、*CMakeSettings.json* で定義されている **環境変数** を launch.vs.json で使用することもできます。 Visual Studio 2019 バージョン 16.4 以降では、*CMakeSettings.json* で指定した環境を使用して、デバッグ ターゲットが自動的に起動されます。 環境変数は、**null** に設定することで、設定解除できます。
 
 ## <a name="launchvsjson-reference"></a>Launch.vs.json の参照
 
@@ -131,7 +130,7 @@ Visual Studio 2019 バージョン 16.6 では、リモート システムおよ
   - `targetMachine`:ファイルまたはディレクトリのコピー先のマシン。 **Ctrl + Space** キーを押して、接続マネージャーに格納されているすべてのリモート接続を一覧表示します。
   - `sourcePath`:`sourceMachine` 上のファイルまたはディレクトリの場所。
   - `targetPath`:`targetMachine` 上のファイルまたはディレクトリの場所。
-  - `deploymentType`:配置の種類の説明。 `LocalRemote` と `RemoteRemote` がサポートされています。 `LocalRemote` は、ローカル システムから、 *launch.vs.json* の `remoteMachineName` で指定されたリモート システムへのコピーを意味します。 `RemoteRemote` は、 *CMakeSettings.json* に指定されたリモート ビルド システムから、 *launch.vs.json* に指定された別のリモート システムへのコピーを意味します。
+  - `deploymentType`:配置の種類の説明。 `LocalRemote` と `RemoteRemote` がサポートされています。 `LocalRemote` は、ローカル システムから、*launch.vs.json* の `remoteMachineName` で指定されたリモート システムへのコピーを意味します。 `RemoteRemote` は、*CMakeSettings.json* に指定されたリモート ビルド システムから、*launch.vs.json* に指定された別のリモート システムへのコピーを意味します。
   - `executable`:配置されたファイルが実行可能ファイルであるかどうかを示します。
 
 ### <a name="execute-custom-gdb-commands"></a>カスタムの `gdb` コマンドを実行する
@@ -177,7 +176,7 @@ Visual Studio では、基になるデバッガーを直接操作するカスタ
       ]
   ```
 
-- `pipeArgs`:接続を構成するためにパイプ プログラムに渡されるコマンド ライン引数の配列。 パイプ プログラムは、Visual Studio と `gdb` の間で標準の入出力をリレーするために使用されます。 この配列の大部分は、CMake プロジェクトをデバッグするときに **カスタマイズする必要はありません** 。 リモート システムで`gdb` を起動する `${debuggerCommand}` コマンドは例外です。 これは、次の操作を行うように変更できます。
+- `pipeArgs`:接続を構成するためにパイプ プログラムに渡されるコマンド ライン引数の配列。 パイプ プログラムは、Visual Studio と `gdb` の間で標準の入出力をリレーするために使用されます。 この配列の大部分は、CMake プロジェクトをデバッグするときに **カスタマイズする必要はありません**。 リモート システムで`gdb` を起動する `${debuggerCommand}` コマンドは例外です。 これは、次の操作を行うように変更できます。
 
   - 環境変数 DISPLAY の値を Linux システムにエクスポートします。 次の例では、この値は `:1` です。
 
