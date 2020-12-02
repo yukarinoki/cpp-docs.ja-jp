@@ -1,8 +1,11 @@
 ---
 title: div、ldiv、lldiv
-ms.date: 04/05/2018
+description: Microsoft C ランタイムライブラリの div、ldiv、および lldiv 関数は、2つの整数値の商と剰余を計算します。
+ms.date: 11/21/2020
 api_name:
 - div
+- ldiv
+- lldiv
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -21,21 +24,22 @@ topic_type:
 - apiref
 f1_keywords:
 - div
+- ldiv
+- lldiv
 helpviewer_keywords:
 - div function
 - quotients, computing
 - quotients
 - dividing integers
 - remainder computing
-ms.assetid: 8ae80d97-54fd-499e-b14c-e30993b58119
-ms.openlocfilehash: e0c87ad44986363e871d68bccde757214f5e2c45
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: d87b2e3a84e389be8b14970a3aa611bb288cbec8
+ms.sourcegitcommit: 432c24dde31c400437c4320e8432b1ddb232f844
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91509885"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96440293"
 ---
-# <a name="div-ldiv-lldiv"></a>div、ldiv、lldiv
+# <a name="div-ldiv-lldiv"></a>`div`, `ldiv`, `lldiv`
 
 2 つの整数値の商と剰余を計算します。
 
@@ -69,27 +73,27 @@ lldiv_t div(
 
 ### <a name="parameters"></a>パラメーター
 
-*数値*<br/>
+*`numer`*\
 分子。
 
-*デ om*<br/>
+*`denom`*\
 分母。
 
 ## <a name="return-value"></a>戻り値
 
-型の引数を使用して呼び出された**div**は、 **`int`** 商と剰余で構成される**div_t**型の構造体を返します。 型の引数を持つ戻り値 **`long`** が **ldiv_t**であり、型の引数を持つ戻り値 **`long long`** が **lldiv_t**です。 **div_t**、 **ldiv_t**、および **lldiv_t** は、「」で定義されてい \<stdlib.h> ます。
+**`div`** 型の引数を使用して呼び出されたは **`int`** 、商と剰余を含む型の構造体を返し `div_t` ます。 型の引数を持つ戻り値はです **`long`** `ldiv_t` 。型の引数を持つ戻り値 **`long long`** はです `lldiv_t` 。 `div_t`、 `ldiv_t` 、および `lldiv_t` 型はで定義されてい \<stdlib.h> ます。
 
 ## <a name="remarks"></a>注釈
 
-**Div**関数は、*数値*を*デ om*によって除算し、商と剰余を計算します。 [Div_t](../../c-runtime-library/standard-types.md)構造体には、商、 **quot**、剰余 ( **rem**) が含まれています。商の符号は、数学的な商の符号と同じです。 この絶対値が最も大きい整数であり、商の絶対値よりも小さくなります。 分母が 0 の場合、プログラムはエラー メッセージにより終了します。
+**`div`** 関数は、 *`numer`* をで除算し、 *`denom`* 商と剰余を計算します。 構造体には、 [`div_t`](../../c-runtime-library/standard-types.md) 商、および剰余が含まれ `quot` `rem` ます。 商の符号は、数学的な商の符号と同じです。 この絶対値は、数学的な商の絶対値よりも小さい最大の整数です。 分母が 0 の場合、プログラムはエラー メッセージにより終了します。
 
-型または型の引数を受け取る **div** のオーバーロードは、 **`long`** **`long long`** C++ コードでのみ使用できます。 戻り値の[型 ldiv_t](../../c-runtime-library/standard-types.md)および[lldiv_t](../../c-runtime-library/standard-types.md)には、 **div_t**のメンバーと同じ意味を持つメンバー **quot**と**rem**が含まれています。
+**`div`** 型または型の引数を受け取るのオーバーロードは、 **`long`** **`long long`** C++ コードでのみ使用できます。 戻り値の型とには、のメンバーと [`ldiv_t`](../../c-runtime-library/standard-types.md) [`lldiv_t`](../../c-runtime-library/standard-types.md) `quot` 同じ意味を持つメンバーとが含まれ `rem` `div_t` ます。
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチンによって返される値|必須ヘッダー|
-|-------------|---------------------|
-|**div**、 **ldiv**、 **lldiv**|\<stdlib.h>|
+| ルーチンによって返される値 | 必須ヘッダー |
+|--|--|
+| **`div`**, **`ldiv`**, **`lldiv`** | \<stdlib.h> |
 
 互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
@@ -133,6 +137,5 @@ The quotient is 67, and the remainder is 5
 
 ## <a name="see-also"></a>関連項目
 
-[浮動小数点のサポート](../../c-runtime-library/floating-point-support.md)<br/>
-[ldiv、lldiv]()<br/>
-[imaxdiv](imaxdiv.md)<br/>
+[浮動小数点のサポート](../../c-runtime-library/floating-point-support.md)\
+[`imaxdiv`](imaxdiv.md)
