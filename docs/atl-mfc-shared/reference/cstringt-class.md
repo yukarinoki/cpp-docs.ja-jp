@@ -1,93 +1,57 @@
 ---
 title: '**`CStringT`** 講義'
 description: Microsoft ATL クラスの API リファレンス **`CStringT`**
-ms.date: 11/13/2020
+ms.date: 12/06/2020
 f1_keywords:
 - CStringT
-- ATLSTR/ATL::CStringT
-- ATLSTR/ATL::CStringT::CStringT
-- ATLSTR/ATL::CStringT::AllocSysString
-- ATLSTR/ATL::CStringT::AnsiToOem
-- ATLSTR/ATL::CStringT::AppendFormat
-- ATLSTR/ATL::CStringT::Collate
-- ATLSTR/ATL::CStringT::CollateNoCase
-- ATLSTR/ATL::CStringT::Compare
-- ATLSTR/ATL::CStringT::CompareNoCase
-- ATLSTR/ATL::CStringT::Delete
-- ATLSTR/ATL::CStringT::Find
-- ATLSTR/ATL::CStringT::FindOneOf
-- ATLSTR/ATL::CStringT::Format
-- ATLSTR/ATL::CStringT::FormatMessage
-- ATLSTR/ATL::CStringT::FormatMessageV
-- ATLSTR/ATL::CStringT::FormatV
-- ATLSTR/ATL::CStringT::GetEnvironmentVariable
-- ATLSTR/ATL::CStringT::Insert
-- ATLSTR/ATL::CStringT::Left
-- ATLSTR/ATL::CStringT::LoadString
-- ATLSTR/ATL::CStringT::MakeLower
-- ATLSTR/ATL::CStringT::MakeReverse
-- ATLSTR/ATL::CStringT::MakeUpper
-- ATLSTR/ATL::CStringT::Mid
-- ATLSTR/ATL::CStringT::OemToAnsi
-- ATLSTR/ATL::CStringT::Remove
-- ATLSTR/ATL::CStringT::Replace
-- ATLSTR/ATL::CStringT::ReverseFind
-- ATLSTR/ATL::CStringT::Right
-- ATLSTR/ATL::CStringT::SetSysString
-- ATLSTR/ATL::CStringT::SpanExcluding
-- ATLSTR/ATL::CStringT::SpanIncluding
-- ATLSTR/ATL::CStringT::Tokenize
-- ATLSTR/ATL::CStringT::Trim
-- ATLSTR/ATL::CStringT::TrimLeft
-- ATLSTR/ATL::CStringT::TrimRight
-- CSTRINGT/CStringT
-- CSTRINGT/CStringT::CStringT
-- CSTRINGT/CStringT::AllocSysString
-- CSTRINGT/CStringT::AnsiToOem
-- CSTRINGT/CStringT::AppendFormat
-- CSTRINGT/CStringT::Collate
-- CSTRINGT/CStringT::CollateNoCase
-- CSTRINGT/CStringT::Compare
-- CSTRINGT/CStringT::CompareNoCase
-- CSTRINGT/CStringT::Delete
-- CSTRINGT/CStringT::Find
-- CSTRINGT/CStringT::FindOneOf
-- CSTRINGT/CStringT::Format
-- CSTRINGT/CStringT::FormatMessage
-- CSTRINGT/CStringT::FormatMessageV
-- CSTRINGT/CStringT::FormatV
-- CSTRINGT/CStringT::GetEnvironmentVariable
-- CSTRINGT/CStringT::Insert
-- CSTRINGT/CStringT::Left
-- CSTRINGT/CStringT::LoadString
-- CSTRINGT/CStringT::MakeLower
-- CSTRINGT/CStringT::MakeReverse
-- CSTRINGT/CStringT::MakeUpper
-- CSTRINGT/CStringT::Mid
-- CSTRINGT/CStringT::OemToAnsi
-- CSTRINGT/CStringT::Remove
-- CSTRINGT/CStringT::Replace
-- CSTRINGT/CStringT::ReverseFind
-- CSTRINGT/CStringT::Right
-- CSTRINGT/CStringT::SetSysString
-- CSTRINGT/CStringT::SpanExcluding
-- CSTRINGT/CStringT::SpanIncluding
-- CSTRINGT/CStringT::Tokenize
-- CSTRINGT/CStringT::Trim
-- CSTRINGT/CStringT::TrimLeft
-- CSTRINGT/CStringT::TrimRight
+- CSTRINGT/ATL::CStringT
+- CSTRINGT/ATL::CStringT::CStringT
+- CSTRINGT/ATL::CStringT::AllocSysString
+- CSTRINGT/ATL::CStringT::AnsiToOem
+- CSTRINGT/ATL::CStringT::AppendFormat
+- CSTRINGT/ATL::CStringT::Collate
+- CSTRINGT/ATL::CStringT::CollateNoCase
+- CSTRINGT/ATL::CStringT::Compare
+- CSTRINGT/ATL::CStringT::CompareNoCase
+- CSTRINGT/ATL::CStringT::Delete
+- CSTRINGT/ATL::CStringT::Find
+- CSTRINGT/ATL::CStringT::FindOneOf
+- CSTRINGT/ATL::CStringT::Format
+- CSTRINGT/ATL::CStringT::FormatMessage
+- CSTRINGT/ATL::CStringT::FormatMessageV
+- CSTRINGT/ATL::CStringT::FormatV
+- CSTRINGT/ATL::CStringT::GetEnvironmentVariable
+- CSTRINGT/ATL::CStringT::Insert
+- CSTRINGT/ATL::CStringT::Left
+- CSTRINGT/ATL::CStringT::LoadString
+- CSTRINGT/ATL::CStringT::MakeLower
+- CSTRINGT/ATL::CStringT::MakeReverse
+- CSTRINGT/ATL::CStringT::MakeUpper
+- CSTRINGT/ATL::CStringT::Mid
+- CSTRINGT/ATL::CStringT::OemToAnsi
+- CSTRINGT/ATL::CStringT::Remove
+- CSTRINGT/ATL::CStringT::Replace
+- CSTRINGT/ATL::CStringT::ReverseFind
+- CSTRINGT/ATL::CStringT::Right
+- CSTRINGT/ATL::CStringT::SetSysString
+- CSTRINGT/ATL::CStringT::SpanExcluding
+- CSTRINGT/ATL::CStringT::SpanIncluding
+- CSTRINGT/ATL::CStringT::Tokenize
+- CSTRINGT/ATL::CStringT::Trim
+- CSTRINGT/ATL::CStringT::TrimLeft
+- CSTRINGT/ATL::CStringT::TrimRight
 helpviewer_keywords:
 - strings [C++], in ATL
 - shared classes, CStringT
 - CStringT class
-ms.openlocfilehash: 80ea59b5f50fc9f430aa588a37e73d4526e3fd94
-ms.sourcegitcommit: 07408df5f4b2cbf070d9bb4bb40d821bfd5d8a62
+ms.openlocfilehash: f9ec5c02aa1ed9377a38d30d9a4152af5e164d58
+ms.sourcegitcommit: 7b131db4ed39bddb4a456ebea402f47c5cbd69d3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94703512"
+ms.lasthandoff: 12/07/2020
+ms.locfileid: "96776545"
 ---
-# <a name="cstringt-class"></a>CStringT クラス
+# <a name="cstringt-class"></a>`CStringT` クラス
 
 このクラスは、 **`CStringT`** オブジェクトを表します。
 
@@ -134,14 +98,14 @@ class CStringT :
 
 ### <a name="public-constructors"></a>パブリック コンストラクター
 
-|名前|[説明]|
+|名前|説明|
 |----------|-----------------|
 |[`CStringT::CStringT`](#cstringt)|**`CStringT`** さまざまな方法でオブジェクトを構築します。|
 |[`CStringT::~CStringT`](#_dtorcstringt)|オブジェクトを破棄 **`CStringT`** します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
-|名前|[説明]|
+|名前|説明|
 |----------|-----------------|
 |[`CStringT::AllocSysString`](#allocsysstring)|`BSTR`データからを割り当て **`CStringT`** ます。|
 |[`CStringT::AnsiToOem`](#ansitooem)|ANSI 文字セットから OEM 文字セットへのインプレース変換を行います。|
@@ -180,7 +144,7 @@ class CStringT :
 
 ### <a name="operators"></a>演算子
 
-|名前|[説明]|
+|名前|説明|
 |-|-|
 |[`CStringT::operator =`](#operator_eq)|オブジェクトに新しい値を割り当て **`CStringT`** ます。|
 |[`CStringT::operator +`](#operator_add)|2つの文字列、または1つの文字と文字列を連結します。|
@@ -251,7 +215,7 @@ MFC ベースのアプリケーションでは、次の文字列型を使用で�
 
 で **`CStringT`** は、テンプレート引数を使用してサポートされる文字型 ( [wchar_t](../../c-runtime-library/standard-types.md) または [char](../../c-runtime-library/standard-types.md)) が定義されているため、メソッドパラメーターの型が複雑になることがあります。 この問題を簡単にするために、定義済みの型のセットがクラス全体で定義および使用され **`CStringT`** ます。 次の表に、さまざまな種類の一覧を示します。
 
-|名前|[説明]|
+|名前|説明|
 |----------|-----------------|
 |`XCHAR`|**`wchar_t`** **`char`** オブジェクトと同じ文字型の単一の文字 (または) **`CStringT`** 。|
 |`YCHAR`|オブジェクトとは逆の文字型を持つ単一の文字 ( **`wchar_t`** または **`char`** ) **`CStringT`** 。|
@@ -271,7 +235,7 @@ MFC ベースのアプリケーションでは、次の文字列型を使用で�
 
 ## <a name="requirements"></a>必要条件
 
-|Header|用途|
+|ヘッダー|用途|
 |------------|-------------|
 |cstringt|MFC 専用の文字列オブジェクト|
 |atlstr .h|非 MFC 文字列オブジェクト|
@@ -575,7 +539,7 @@ CStringT(const YCHAR* pch, int nLength, IAtlStringMgr* pStringMgr) :
 - **`CStringT`**( `const unsigned char*` `psz` ): へのポインターからを構築できます **`CStringT`** **`unsigned char`** 。
 
 > [!NOTE]
-> ANSI 文字列 ` _CSTRING_DISABLE_NARROW_WIDE_CONVERSION` と Unicode 文字列の間の暗黙的な文字列変換を無効にするマクロを定義します。 マクロは、変換をサポートするコンパイルコンストラクターから除外されます。
+> ANSI 文字列 `_CSTRING_DISABLE_NARROW_WIDE_CONVERSION` と Unicode 文字列の間の暗黙的な文字列変換を無効にするマクロを定義します。 マクロは、変換をサポートするコンパイルコンストラクターから除外されます。
 
 *`strSrc`* パラメーターに **`CStringT`** は、オブジェクトまたはオブジェクトを指定でき `CThisSimpleString` ます。 の場合は **`CStringT`** 、既定のインスタンス化 (、、または) のいずれかを使用します。 `CString` `CStringA` の場合は、 `CStringW` `CThisSimpleString` ポインターを使用し **`this`** ます。 `CThisSimpleString`[CSimpleStringT クラス](../../atl-mfc-shared/reference/csimplestringt-class.md)のインスタンスを宣言します。これは、クラスよりも機能が少ない、より小さな文字列クラスです **`CStringT`** 。
 
@@ -1642,8 +1606,6 @@ CStringT Tokenize(PCXSTR pszTokens, int& iStart) const;
 
 [!code-cpp[NVC_ATLMFC_Utilities#135](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_39.cpp)]
 
-### <a name="remarks"></a>注釈
-
 この例の出力は次のとおりです。
 
 ```Output
@@ -1687,8 +1649,6 @@ CStringT& Trim();
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_ATLMFC_Utilities#136](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_40.cpp)]
-
-### <a name="remarks"></a>注釈
 
 この例の出力は次のとおりです。
 
