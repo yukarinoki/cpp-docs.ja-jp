@@ -4,12 +4,12 @@ description: vcpkg は、Windows、Linux、および macOS でのオープン �
 ms.date: 07/06/2020
 ms.technology: cpp-ide
 ms.assetid: f50d459a-e18f-4b4e-814b-913e444cedd6
-ms.openlocfilehash: 7131f301a22b2834b04ef932f3cee426b04dc7e5
-ms.sourcegitcommit: 31a443c9998cf5cfbaff00fcf815b133f55b2426
+ms.openlocfilehash: ec908824c19099ad6eaa46a4d85c0187ef12b3fd
+ms.sourcegitcommit: 102bd6f7a878d85c8ceab8f28d0359f562850ea0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86373633"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96862556"
 ---
 # <a name="vcpkg-a-c-package-manager-for-windows-linux-and-macos"></a>vcpkg: Windows、Linux、および macOS 用の C++ パッケージ マネージャー
 
@@ -226,6 +226,8 @@ Vcpkg パッケージ マネージャーは、GitHub で定期的に更新され
 ## <a name="uninstall-vcpkg"></a>vcpkg をアンインストールする
 
 vcpkg をアンインストールするには、vcpkg ディレクトリを削除するだけです。 このディレクトリを削除すると、vcpkg ディストリビューションと、vcpkg によってインストールされたすべてのライブラリがアンインストールされます。
+
+ただし **`vcpkg integrate install`** を実行した場合は、フォルダーが削除される前に、 **`vcpkg integrate remove`** を実行して、統合がクリーンになっていることを確認する必要があります。
 
 ## <a name="send-feedback-about-vcpkg"></a>vcpkg のフィードバックを送信する
 

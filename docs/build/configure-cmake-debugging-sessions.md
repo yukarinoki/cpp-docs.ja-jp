@@ -1,15 +1,15 @@
 ---
 title: Visual Studio で CMake デバッグ セッションを構成する
 description: Visual Studio を使用して CMake デバッガー設定を構成する方法について説明します。
-ms.date: 04/02/2020
+ms.date: 12/07/2020
 helpviewer_keywords:
 - CMake debugging
-ms.openlocfilehash: 74be1f07b838cd77f4ee87f5e9d245410fe716de
-ms.sourcegitcommit: 432c24dde31c400437c4320e8432b1ddb232f844
+ms.openlocfilehash: b289acf8d0aa89cef1d2a72c988b41d99914f828
+ms.sourcegitcommit: 102bd6f7a878d85c8ceab8f28d0359f562850ea0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96440295"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96862569"
 ---
 # <a name="configure-cmake-debugging-sessions"></a>CMake デバッグ セッションを構成する
 
@@ -112,6 +112,8 @@ Visual Studio 2019 バージョン 16.6 では、リモート システムおよ
 #### <a name="additional-options-allowed-with-the-gdbserver-configuration-167-or-later"></a>`gdbserver` 構成で使用できるその他のオプション (16.7 以降)
 
 - `program`:既定値は `"${debugInfo.fullTargetPath}"` です。 デバッグするアプリケーションへの UNIX パス。 ビルドまたは配置場所のターゲット実行可能ファイルと異なる場合にのみ必須です。
+> [!TIP]
+> 配置は、ローカルのクロスコンパイル シナリオではまだサポートされていません。 Windows でクロスコンパイルを行う場合 (たとえば、Windows でクロスコンパイラを使用して Linux ARM 実行可能ファイルをビルドする場合)、デバッグする前に、リモート ARM コンピューターで `program` で指定された場所にバイナリを手動でコピーする必要があります。
 - `remoteMachineName`:既定値は `"${debugInfo.remoteMachineName}"` です。 デバッグするプログラムをホストするリモート システムの名前。 ビルド システムと異なる場合にのみ必須です。 [接続マネージャー](../linux/connect-to-your-remote-linux-computer.md)に既存のエントリがなければなりません。 **Ctrl + Space** キーを押して、すべての既存のリモート接続を一覧表示します。
 - `cwd`:既定値は `"${debugInfo.defaultWorkingDirectory}"` です。 `program` が実行されるリモート システム上のディレクトリへの完全な UNIX パス。 ディレクトリは存在している必要があります。
 - `gdbPath`:既定値は `${debugInfo.vsInstalledGdb}` です。 デバッグに使用される `gdb` の完全な Windows パス。 既定値は、C および C++ ワークロードを使用する Linux 開発でインストールされる `gdb` です。
