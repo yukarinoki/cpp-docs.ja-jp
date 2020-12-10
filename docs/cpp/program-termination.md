@@ -1,52 +1,44 @@
 ---
 title: C++ プログラムの終了
-description: C++ 言語プログラムの方法について説明し exit ます。
-ms.date: 01/15/2020
+description: C++ 言語プログラムを終了するための標準的な方法について説明します。
+ms.date: 12/07/2020
 helpviewer_keywords:
 - terminating execution
 - quitting applications
 - exiting applications
 - programs [C++], terminating
-ms.assetid: fa0ba9de-b5f1-4e7b-aa65-e7932068b48c
-no-loc:
-- exit
-- abort
-- return
-- main
-- atexit
-- void
-ms.openlocfilehash: fd0c7699ae032b5551f4fbc37eb3b7fa999a168f
-ms.sourcegitcommit: d9c94dcabd94537e304be0261b3263c2071b437b
+ms.openlocfilehash: 15d31d8d454f6ac90e012d35ef14e6d6e0a9e29a
+ms.sourcegitcommit: 754df5278f795f661d4eeb0d4cacc908aa630159
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91352922"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96933210"
 ---
 # <a name="c-program-termination"></a>C++ プログラムの終了
 
-C++ では、 exit 次の方法でプログラムを使用できます。
+C++ では、次の方法でプログラムを終了できます。
 
-- 関数を呼び出し [exit](../c-runtime-library/reference/exit-exit-exit.md) ます。
-- 関数を呼び出し [abort](../c-runtime-library/reference/abort.md) ます。
-- [return](return-statement-cpp.md)からステートメントを実行 `main` します。
+- 関数を呼び出し [`exit`](../c-runtime-library/reference/exit-exit-exit.md) ます。
+- 関数を呼び出し [`abort`](../c-runtime-library/reference/abort.md) ます。
+- [`return`](return-statement-cpp.md)からステートメントを実行 `main` します。
 
-## <a name="no-locexit-function"></a>exit 関数
+## <a name="exit-function"></a>`exit` 関数
 
-で宣言された関数は、 [exit](../c-runtime-library/reference/exit-exit-exit.md) \<stdlib.h> C++ プログラムを終了します。 の引数として指定 `exit` された値は、 return プログラムのコードまたはコードとしてオペレーティングシステムに渡され return exit ます。 慣例により、 return コードがゼロの場合は、プログラムが正常に完了したことを意味します。 で定義されている定数 EXIT_FAILURE と EXIT_SUCCESS を使用して、 \<stdlib.h> プログラムの成功または失敗を示すことができます。
+で宣言された関数は、 [`exit`](../c-runtime-library/reference/exit-exit-exit.md) \<stdlib.h> C++ プログラムを終了します。 に引数として指定 `exit` された値は、プログラムのリターンコードまたは終了コードとしてオペレーティングシステムに返されます。 慣例により、ゼロのリターン コードは、プログラムが正常に完了したことを意味します。 で定義されている定数とを使用して、 `EXIT_FAILURE` `EXIT_SUCCESS` \<stdlib.h> プログラムの成功または失敗を示すことができます。
 
-**`return`** 関数からステートメントを発行 `main` することは、値を `exit` 引数として関数を呼び出すことと同じです return 。
+**`return`** 関数からステートメントを発行 `main` することは、 `exit` 戻り値を引数として関数を呼び出すことと同じです。
 
-## <a name="no-locabort-function"></a>abort 関数
+## <a name="abort-function"></a>`abort` 関数
 
-関数は、 [abort](../c-runtime-library/reference/abort.md) 標準のインクルードファイルでも宣言されており、 \<stdlib.h> C++ プログラムを終了します。 との違いは、 `exit` `abort` `exit` C++ ランタイム終了処理を実行できることです (グローバルオブジェクトデストラクターは呼び出されます) が、では `abort` プログラムが直ちに終了します。 関数は、 `abort` 初期化されたグローバル静的オブジェクトの通常の破棄プロセスをバイパスします。 また、関数を使用して指定された特別な処理をバイパス [atexit](../c-runtime-library/reference/atexit.md) します。
+関数は、 [`abort`](../c-runtime-library/reference/abort.md) 標準のインクルードファイルでも宣言されており、 \<stdlib.h> C++ プログラムを終了します。 との違い `exit` は、で `abort` は `exit` C++ ランタイム終了処理を実行できます (グローバルオブジェクトデストラクターは呼び出されます) が、 `abort` プログラムはすぐに終了します。 関数は、 `abort` 初期化されたグローバル静的オブジェクトの通常の破棄プロセスをバイパスします。 また、関数を使用して指定された特別な処理をバイパス [`atexit`](../c-runtime-library/reference/atexit.md) します。
 
-## <a name="no-locatexit-function"></a>atexit 関数
+## <a name="atexit-function"></a>`atexit` 関数
 
-関数を使用して、 [atexit](../c-runtime-library/reference/atexit.md) プログラムの終了前に実行するアクションを指定します。 の呼び出し前に初期化されたグローバルな静的オブジェクト **atexit** は、処理関数を実行する前に破棄されません exit 。
+関数を使用して [`atexit`](../c-runtime-library/reference/atexit.md) 、プログラムが終了する前に実行するアクションを指定します。 の呼び出しの前に初期化されたグローバル静的オブジェクト `atexit` は、終了処理関数の実行前に破棄されませんでした。
 
-## <a name="no-locreturn-statement-in-no-locmain"></a>return ステートメント main
+## <a name="return-statement-in-main"></a>`return` ステートメント `main`
 
-[return](return-statement-cpp.md)からステートメントを発行 `main` することは、関数の呼び出しと機能的には同じです `exit` 。 次に例を示します。
+[`return`](return-statement-cpp.md)からステートメントを発行 `main` することは、関数の呼び出しと機能的には同じです `exit` 。 次の例を確認してください。
 
 ```cpp
 // return_statement.cpp
@@ -58,7 +50,7 @@ int main()
 }
 ```
 
-`exit`前の **`return`** 例のステートメントとステートメントは機能的には同じです。 ただし、C++ では、 return 値以外の型を持つ関数が必要です **`void`** return 。 ステートメントでは、 **`return`** return からの値を使用でき `main` ます。
+`exit`前の **`return`** 例のステートメントとステートメントは機能的には同じです。 通常、C++ では、以外の戻り値の型を持つ関数は **`void`** 値を返す必要があります。 `main`関数は例外であり、ステートメントなしで終了できます **`return`** 。 その場合は、呼び出しプロセスに実装固有の値を返します。 **`return`** ステートメントを使用すると、から戻り値を指定でき `main` ます。
 
 ## <a name="destruction-of-static-objects"></a>静的オブジェクトの破棄
 
@@ -108,7 +100,7 @@ int main() {
 
 ```cpp
 int main() {
-   ShowData sd1, sd2( "hello.dat" );
+   ShowData sd1( "CON" ), sd2( "hello.dat" );
 
    sd1.Disp( "hello to default device\n" );
    sd2.Disp( "hello to file hello.dat\n" );
@@ -117,4 +109,4 @@ int main() {
 
 ## <a name="see-also"></a>関連項目
 
-[main 関数とコマンドライン引数](main-function-command-line-args.md)
+[`main` 関数とコマンドライン引数](main-function-command-line-args.md)
