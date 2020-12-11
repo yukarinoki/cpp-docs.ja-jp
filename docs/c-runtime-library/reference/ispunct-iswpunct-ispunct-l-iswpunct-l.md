@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: ispunct、iswpunct、_ispunct_l、_iswpunct_l'
 title: ispunct、iswpunct、_ispunct_l、_iswpunct_l
 ms.date: 4/2/2020
 api_name:
@@ -39,12 +40,12 @@ helpviewer_keywords:
 - _iswpunct_l function
 - iswpunct_l function
 ms.assetid: 94403240-85c8-40a4-9c2b-e3e95c729c76
-ms.openlocfilehash: d0585e9a80919c63dd9aa650dc1544e95569bc8b
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 84de5978d85d87d8e4d83263652c0d4bf2ce1648
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82916676"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97162340"
 ---
 # <a name="ispunct-iswpunct-_ispunct_l-_iswpunct_l"></a>ispunct、iswpunct、_ispunct_l、_iswpunct_l
 
@@ -71,7 +72,7 @@ int _iswpunct_l(
 
 ### <a name="parameters"></a>パラメーター
 
-*40u-c*<br/>
+*c*<br/>
 テストする整数。
 
 *locale*<br/>
@@ -79,11 +80,11 @@ int _iswpunct_l(
 
 ## <a name="return-value"></a>戻り値
 
-これらの各ルーチンは、 *c*が区切り文字の特殊表現である場合は0以外の値を返します。 **ispunct**は、空白文字以外の印刷可能な文字または**isalnum**が0以外の文字に対して0以外の値を返します。 **iswpunct**は、空白ワイド文字でも、 **iswalnum**が0以外のワイド文字でもない、印刷可能なワイド文字に対して0以外の値を返します。 これらの各ルーチンは、 *c*がテスト条件を満たしていない場合は0を返します。
+これらの各ルーチンは、 *c* が区切り文字の特殊表現である場合は0以外の値を返します。 **ispunct** は、空白文字以外の印刷可能な文字または **isalnum** が0以外の文字に対して0以外の値を返します。 **iswpunct** は、空白ワイド文字でも、 **iswalnum** が0以外のワイド文字でもない、印刷可能なワイド文字に対して0以外の値を返します。 これらの各ルーチンは、 *c* がテスト条件を満たしていない場合は0を返します。
 
-**Ispunct**関数のテスト条件の結果は、ロケールの**LC_CTYPE**カテゴリの設定によって異なります。詳細について[は、「setlocale、_wsetlocale](setlocale-wsetlocale.md) 」を参照してください。 **_L**サフィックスが付いていないこれらの関数のバージョンは、ロケールに依存する動作に現在のロケールを使用します。**_l**サフィックスが付いているバージョンは、代わりに渡されたロケールを使用する点を除いて同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
+**Ispunct** 関数のテスト条件の結果は、ロケールの **LC_CTYPE** カテゴリの設定によって異なります。詳細について [は、「setlocale、_wsetlocale](setlocale-wsetlocale.md) 」を参照してください。 **_L** サフィックスが付いていないこれらの関数のバージョンは、ロケールに依存する動作に現在のロケールを使用します。**_l** サフィックスが付いているバージョンは、代わりに渡されたロケールを使用する点を除いて同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
 
-*C*が EOF でない場合、または 0 ~ 0xff の範囲内にある場合、 **ispunct**と **_ispunct_l**の動作は未定義です。 デバッグ CRT ライブラリが使用され、 *c*がこれらの値のいずれでもない場合、関数はアサーションを発生させます。
+*C* が EOF でない場合、または 0 ~ 0xff の範囲内にある場合、 **ispunct** と **_ispunct_l** の動作は未定義です。 デバッグ CRT ライブラリが使用され、 *c* がこれらの値のいずれでもない場合、関数はアサーションを発生させます。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -97,7 +98,7 @@ int _iswpunct_l(
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**ispunct**|\<ctype.h>|
 |**iswpunct**|\<ctype.h> または \<wchar.h>|
@@ -109,5 +110,5 @@ int _iswpunct_l(
 ## <a name="see-also"></a>関連項目
 
 [文字分類](../../c-runtime-library/character-classification.md)<br/>
-[国](../../c-runtime-library/locale.md)<br/>
-[is、isw 系ルーチン](../../c-runtime-library/is-isw-routines.md)<br/>
+[ロケール](../../c-runtime-library/locale.md)<br/>
+[is、isw ルーチン](../../c-runtime-library/is-isw-routines.md)<br/>

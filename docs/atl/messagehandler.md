@@ -1,20 +1,21 @@
 ---
+description: '詳細情報: MessageHandler'
 title: MessageHandler
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
 - MessageHandler function
 ms.assetid: 8a0acf97-1b0d-4226-91b9-75446634a03c
-ms.openlocfilehash: 65a8ce08e4f8606f168b101aa4daba23ef541051
-ms.sourcegitcommit: 2bc15c5b36372ab01fa21e9bcf718fa22705814f
+ms.openlocfilehash: d369b94721e57eb4adc704570bc09d1aae184fe1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82168671"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97159506"
 ---
 # <a name="messagehandler"></a>MessageHandler
 
-`MessageHandler`メッセージマップ内の MESSAGE_HANDLER マクロの2番目のパラメーターで識別される関数の名前を指定します。
+`MessageHandler` メッセージマップ内の MESSAGE_HANDLER マクロの2番目のパラメーターで識別される関数の名前を指定します。
 
 ## <a name="syntax"></a>構文
 
@@ -38,7 +39,7 @@ LRESULT MessageHandler(
 追加のメッセージ固有情報。
 
 *bHandled*<br/>
-が呼び出される前に`MessageHandler` 、メッセージマップによって*BHANDLED*が TRUE に設定されます。 が`MessageHandler`メッセージを完全に処理しない場合は、 *BHANDLED*を FALSE に設定して、メッセージにさらに処理が必要であることを示す必要があります。
+が呼び出される前に、メッセージマップによって *Bhandled* が TRUE に設定 `MessageHandler` されます。 `MessageHandler`がメッセージを完全に処理しない場合は、 *BHANDLED* を FALSE に設定して、メッセージにさらに処理が必要であることを示す必要があります。
 
 ## <a name="return-value"></a>戻り値
 

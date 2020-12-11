@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: _TRUNCATE'
 title: _TRUNCATE
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - TRUNCATE constant
 - _TRUNCATE constant
 ms.assetid: ad093dbf-1aa5-4bd2-9268-efc68afd8434
-ms.openlocfilehash: b472fceffa6284baaaf4dc1780ab54399fdd42c7
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: ea8a1517db8b270e03c5767838f3965cdea8b36f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75301679"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97162366"
 ---
 # <a name="_truncate"></a>_TRUNCATE
 
@@ -25,7 +26,7 @@ ms.locfileid: "75301679"
 #include <stdlib.h>
 ```
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
 `_TRUNCATE` が `count` パラメーターとして次の関数に渡されると、切り捨て動作が有効になります。
 
@@ -63,7 +64,7 @@ ms.locfileid: "75301679"
 
 [vsnprintf_s、_vsnprintf_s、_vsnprintf_s_l、_vsnwprintf_s、_vsnwprintf_s_l](../c-runtime-library/reference/vsnprintf-s-vsnprintf-s-vsnprintf-s-l-vsnwprintf-s-vsnwprintf-s-l.md)
 
-## <a name="example"></a>使用例
+## <a name="example"></a>例
 
 ```c
 // crt_truncate.c

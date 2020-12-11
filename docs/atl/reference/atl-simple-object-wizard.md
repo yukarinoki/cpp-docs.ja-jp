@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: ATL シンプルオブジェクトウィザード'
 title: ATL シンプル オブジェクト ウィザード
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - ATL projects, adding objects
 - ATL Simple Object Wizard
 ms.assetid: f7f85741-9aad-4543-a917-a29b996364da
-ms.openlocfilehash: 8bc611442e98e467a174ebd52ea3c540cf72975f
-ms.sourcegitcommit: d9c94dcabd94537e304be0261b3263c2071b437b
+ms.openlocfilehash: c19613e1b1b6bd746106ff57a87dcf0f7d3ad838
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91352688"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97158661"
 ---
 # <a name="atl-simple-object-wizard"></a>ATL シンプル オブジェクト ウィザード
 
@@ -37,7 +38,7 @@ Visual Studio 2008 以降、このウィザードによって生成された登�
 
 - **短い名前**
 
-   オブジェクトの省略名を設定します。 指定する名前によって、`Class` と `Coclass` の名前、**.cpp ファイル**と **.h ファイル**の名前、**インターフェイス**の名前、**種類**の名前、および **ProgID** が決まります (各フィールドを個別に変更しない限り)。
+   オブジェクトの省略名を設定します。 指定する名前によって、`Class` と `Coclass` の名前、**.cpp ファイル** と **.h ファイル** の名前、**インターフェイス** の名前、**種類** の名前、および **ProgID** が決まります (各フィールドを個別に変更しない限り)。
 
 - **.h ファイル**
 

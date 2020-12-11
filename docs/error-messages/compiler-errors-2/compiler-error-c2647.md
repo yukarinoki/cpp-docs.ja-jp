@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「コンパイラエラー C2647」を参照してください。
 title: コンパイラエラー C2647
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2647
 ms.assetid: 1034589e-bc3e-41a6-831f-2a1a4b8a2500
-ms.openlocfilehash: 9553c85efeedb4d3eee4bd40f9e3b86707fd7eb1
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: df434adde457ea9a3300291ec6fac2f49d806699
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74758386"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97160793"
 ---
 # <a name="compiler-error-c2647"></a>コンパイラエラー C2647
 
 ' operator ': ' type1 ' の ' type1 ' を逆参照することはできません
 
-メンバーへのポインター演算子 (`->*` または `.*`) の左オペランドを、右の演算子に関連する型に暗黙的に変換することはできません。
+Pointer-to-member 演算子 ( `->*` または) の左オペランド `.*` を、右演算子に関連する型に暗黙的に変換することはできません。
 
 次の例では、C2647 が生成されます。
 

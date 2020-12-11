@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: remove_const クラス'
 title: remove_const クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,14 +8,14 @@ helpviewer_keywords:
 - remove_const class
 - remove_const
 ms.assetid: feb76fb3-9228-41d6-80f6-2fbb04daec43
-ms.openlocfilehash: 0091c77d33e1fcd2be5b361680c9422210866be2
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 262c4ec34a0559afb7cf77849efce8fe577cf5b5
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68451353"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97159714"
 ---
-# <a name="removeconst-class"></a>remove_const クラス
+# <a name="remove_const-class"></a>remove_const クラス
 
 型から非 const 型を作成します。
 
@@ -35,9 +36,9 @@ using remove_const_t = typename remove_const<T>::type;
 *\T*\
 変更する型。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-*T*の形式`remove_const<T>` `T1` が`const T1`である場合、のインスタンスは変更された型を保持します。それ以外の場合は*t*です。
+`remove_const<T>`T の形式がである場合、のインスタンスは変更された型を保持 `T1`  `const T1` します。それ以外の場合は *t* です。
 
 ## <a name="example"></a>例
 
@@ -61,9 +62,9 @@ int main()
 remove_const_t<const int> == int
 ```
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-**ヘッダー:** \<type_traits>
+**ヘッダー:**\<type_traits>
 
 **名前空間:** std
 

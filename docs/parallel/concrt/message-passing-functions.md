@@ -1,23 +1,24 @@
 ---
+description: '詳細情報: メッセージパッシング関数'
 title: メッセージ パッシング関数
 ms.date: 11/04/2016
 helpviewer_keywords:
 - message passing functions
 ms.assetid: 42477c9e-a8a6-4dc4-a98e-93c6dc8c4dd0
-ms.openlocfilehash: 3709e7b5280b96b2b77ec850a06ed15d0e42a7e5
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 77e221f5d2116c1bfc2690d247161979af04ac06
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87194629"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97159857"
 ---
 # <a name="message-passing-functions"></a>メッセージ パッシング関数
 
 非同期エージェントライブラリには、コンポーネント間でメッセージを渡すための関数がいくつか用意されています。
 
-これらのメッセージパッシング関数は、さまざまなメッセージブロックの型と共に使用されます。 同時実行ランタイムによって定義されるメッセージブロック型の詳細については、「[非同期メッセージブロック](../../parallel/concrt/asynchronous-message-blocks.md)」を参照してください。
+これらのメッセージパッシング関数は、さまざまなメッセージブロックの型と共に使用されます。 同時実行ランタイムによって定義されるメッセージブロック型の詳細については、「 [非同期メッセージブロック](../../parallel/concrt/asynchronous-message-blocks.md)」を参照してください。
 
-## <a name="sections"></a><a name="top"></a>各項
+## <a name="sections"></a><a name="top"></a> 各項
 
 このトピックでは、次のメッセージパッシング関数について説明します。
 
@@ -27,7 +28,7 @@ ms.locfileid: "87194629"
 
 - [使用例](#examples)
 
-## <a name="send-and-asend"></a><a name="send"></a>send と asend
+## <a name="send-and-asend"></a><a name="send"></a> send と asend
 
 [Concurrency:: send](reference/concurrency-namespace-functions.md#send)関数は、指定されたターゲットにメッセージを同期的に送信します。 [concurrency:: asend](reference/concurrency-namespace-functions.md#asend)関数は、指定されたターゲットにメッセージを非同期的に送信します。 関数と関数はどちらも、 `send` `asend` 最終的にメッセージを受け入れるか拒否することをターゲットが示すまで待機します。
 
@@ -37,7 +38,7 @@ ms.locfileid: "87194629"
 
 [[上](#top)]
 
-## <a name="receive-and-try_receive"></a><a name="receive"></a>receive および try_receive
+## <a name="receive-and-try_receive"></a><a name="receive"></a> receive および try_receive
 
 [Concurrency:: receive](reference/concurrency-namespace-functions.md#receive)および[concurrency:: try_receive](reference/concurrency-namespace-functions.md#try_receive)関数は、指定されたソースからデータを読み取ります。 関数は、 `receive` データが使用可能になるまで待機しますが、 `try_receive` 関数はすぐに制御を戻します。
 
@@ -51,7 +52,7 @@ ms.locfileid: "87194629"
 
 - [非同期メッセージブロック](../../parallel/concrt/asynchronous-message-blocks.md)
 
-- [方法: さまざまなプロデューサー/コンシューマーパターンを実装する](../../parallel/concrt/how-to-implement-various-producer-consumer-patterns.md)
+- [方法: さまざまな Producer-Consumer パターンを実装する](../../parallel/concrt/how-to-implement-various-producer-consumer-patterns.md)
 
 - [方法: call クラスおよびトランスフォーマークラスに処理関数を提供する](../../parallel/concrt/how-to-provide-work-functions-to-the-call-and-transformer-classes.md)
 

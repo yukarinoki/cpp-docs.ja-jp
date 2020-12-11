@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: ATL DHTML コントロールの変更'
 title: ATL DHTML コントロールの変更
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,50 +7,50 @@ helpviewer_keywords:
 - DHTML controls
 - DHTML controls, modifying
 ms.assetid: c053f35f-8629-4600-9595-721f5956777a
-ms.openlocfilehash: e594360cc6752a60bf2e07a1fb1d02041604d959
-ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
+ms.openlocfilehash: 7ae9c102addd7a33341a8f16105a3581de10481e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66503005"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97159454"
 ---
 # <a name="modifying-the-atl-dhtml-control"></a>ATL DHTML コントロールの変更
 
-ATL コントロール ウィザードは、ビルドして、コントロールを実行し、プロジェクト ファイルで、メソッドを記述する方法と DHTML からディスパッチ メソッドを使用して、コントロールの C++ コードを呼び出す方法を確認できるように、スタート コードを提供します。 インターフェイスにディスパッチ メソッドを追加することができます。 次に、HTML リソースでメソッドを呼び出すことができます。
+ATL コントロールウィザードには、コントロールをビルドして実行できるようにするためのスタートコードが用意されています。これにより、メソッドがどのようにプロジェクトファイルに記述されているか、および DHTML がディスパッチメソッドを使用してコントロールの C++ コードを呼び出す方法を確認できます。 任意のディスパッチメソッドをインターフェイスに追加できます。 次に、HTML リソース内のメソッドを呼び出すことができます。
 
 ## <a name="to-modify-the-atl-dhtml-control"></a>ATL DHTML コントロールを変更するには
 
-1. **クラス ビュー**、コントロール プロジェクトを展開します。
+1. **クラスビュー** で、コントロールプロジェクトを展開します。
 
-   1 つのメソッドは"UI"で終わるインターフェイス`OnClick`します。 "UI"で終わらないインターフェイスには、すべてのメソッドはありません。
+   "UI" で終わるインターフェイスには、という1つのメソッドがあり `OnClick` ます。 "UI" で終了しないインターフェイスにはメソッドがありません。
 
-1. というメソッドを追加`MethodInvoked`"UI"で終わらないインターフェイス
+1. `MethodInvoked`"UI" で終了しないインターフェイスに、というメソッドを追加します。
 
-   このメソッドは、DHTML コントロールとやり取りするために使用するインターフェイスが、コンテナーの対話のコントロールのコンテナーで使用されるインターフェイスに追加されます。 コンテナーのみでは、このメソッドを呼び出すことができます。
+   このメソッドは、コントロールとの対話に DHTML で使用されるインターフェイスではなく、コンテナーとの対話のためにコントロールコンテナーで使用されるインターフェイスに追加されます。 このメソッドを呼び出すことができるのは、コンテナーだけです。
 
-1. .Cpp ファイルにスタブ メソッドを検索し、たとえば、メッセージ ボックスを表示するコードを追加します。
+1. .Cpp ファイルでスタブメソッドを見つけ、メッセージボックスを表示するコードを追加します。次に例を示します。
 
    [!code-cpp[NVC_ATL_COM#5](../atl/codesnippet/cpp/modifying-the-atl-dhtml-control_1.cpp)]
 
-1. という別のメソッドを追加`HelloHTML`、この時点で、のみ"UI"で終わるインターフェイスに追加します。 スタブとして作成された出力を検索`HelloHTML`.cpp でメソッド ファイルし、たとえば、メッセージ ボックスを表示するコードを追加します。
+1. という別のメソッドを追加し、今度は `HelloHTML` "UI" で終わるインターフェイスに追加します。 `HelloHTML`.Cpp ファイルでスタブメソッドを見つけ、メッセージボックスを表示するコードを追加します。次に例を示します。
 
    [!code-cpp[NVC_ATL_COM#6](../atl/codesnippet/cpp/modifying-the-atl-dhtml-control_2.cpp)]
 
-1. 3 番目のメソッドを追加`GoToURL`、"UI"で終わらないインターフェイス このメソッドを呼び出すことによって実装[IWebBrowser2::Navigate](/previous-versions//aa752133\(v=vs.85\))、次のようにします。
+1. `GoToURL`"UI" で終了しないインターフェイスに、3番目のメソッドを追加します。 次のように [IWebBrowser2:: Navigate](/previous-versions//aa752133\(v=vs.85\))を呼び出して、このメソッドを実装します。
 
    [!code-cpp[NVC_ATL_COM#7](../atl/codesnippet/cpp/modifying-the-atl-dhtml-control_3.cpp)]
 
-   使用することができます、`IWebBrowser2`メソッド ATL の .h ファイルでそのインターフェイスへのポインターを提供するためです。
+   メソッドを使用できます。これは、ATL によって、 `IWebBrowser2` .h ファイル内のそのインターフェイスへのポインターが提供されるためです。
 
-次に、作成したメソッドを呼び出す HTML リソースを変更します。 これらのメソッドを呼び出すための 3 つのボタンを追加します。
+次に、作成したメソッドを呼び出すように HTML リソースを変更します。 これらのメソッドを呼び出すには、3つのボタンを追加します。
 
 ## <a name="to-modify-the-html-resource"></a>HTML リソースを変更するには
 
-1. **ソリューション エクスプ ローラー**、HTML リソースを表示する .htm ファイルをダブルクリックします。
+1. **ソリューションエクスプローラー** で、.htm ファイルをダブルクリックして HTML リソースを表示します。
 
-   HTML、特に、外部の Windows ディスパッチ メソッドの呼び出しを確認します。 HTML の呼び出し、プロジェクトの`OnClick`メソッドとパラメーターは、コントロールの本体を示します (`theBody`) と色を割り当てる ("`red`")。 メソッドの呼び出しに続くテキストは、ボタンに表示されるラベルです。
+   HTML、特に外部の Windows ディスパッチメソッドの呼び出しを確認します。 HTML はプロジェクトの `OnClick` メソッドを呼び出し、パラメーターはコントロールの本体 ( `theBody` ) と割り当てる色 (" `red` ") を示します。 メソッド呼び出しの後に続くテキストは、ボタンに表示されるラベルです。
 
-1. もう 1 つ追加`OnClick`メソッド、色の変更のみです。 例:
+1. 別の `OnClick` メソッドを追加し、色だけを変更します。 次に例を示します。
 
     ```html
     <br>
@@ -57,9 +58,9 @@ ATL コントロール ウィザードは、ビルドして、コントロール
     <BUTTON onclick='window.external.OnClick(theBody, "white");'>Refresh</BUTTON>
     ```
 
-   このメソッドでは、ラベルのボタンを作成します。**更新**、ユーザーがコントロールを、元の白い背景に返されるクリックできます。
+   このメソッドは、[ **更新**] というラベルのボタンを作成します。このボタンをクリックすると、コントロールを元の白の背景に戻すことができます。
 
-1. 呼び出しを追加、`HelloHTML`メソッドを作成します。 例:
+1. 作成したメソッドに呼び出しを追加 `HelloHTML` します。 次に例を示します。
 
     ```html
     <br>
@@ -67,9 +68,9 @@ ATL コントロール ウィザードは、ビルドして、コントロール
     <BUTTON onclick='window.external.HelloHTML();'>HelloHTML</BUTTON>
     ```
 
-   このメソッドでは、ラベルのボタンを作成します。 **HelloHTML**、表示するユーザーがクリックできる、`HelloHTML`メッセージ ボックス。
+   このメソッドは、ユーザーがクリックしてメッセージボックスを表示できる、 **HelloHTML** というラベルが付いたボタンを作成し `HelloHTML` ます。
 
-今すぐビルドすることができますと[変更 DHTML コントロールのテスト](../atl/testing-the-modified-atl-dhtml-control.md)します。
+変更した [DHTML コントロール](../atl/testing-the-modified-atl-dhtml-control.md)をビルドしてテストできるようになりました。
 
 ## <a name="see-also"></a>関連項目
 

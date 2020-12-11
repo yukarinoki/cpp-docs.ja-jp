@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: 任意のクラス'
 title: 任意のクラス
 ms.date: 04/04/2019
 f1_keywords:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 - any/std::any::reset
 - any/std::any::swap
 - any/std::any::type
-ms.openlocfilehash: defec0f6ab8f59219afddcefc67ea93435347978
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 1ff32693e216657bdc9057a7dd7899d9bc479b02
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88844744"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97163419"
 ---
 # <a name="any-class"></a>任意のクラス
 
@@ -42,7 +43,7 @@ class any
 |-|-|
 |[いつ](#any)|`any` 型のオブジェクトを構築します。|
 
-### <a name="functions"></a>Functions
+### <a name="functions"></a>関数
 
 |名前|説明|
 |-|-|
@@ -52,7 +53,7 @@ class any
 |[スワップ](#swap)|2つのオブジェクトを交換します。|
 |[type](#type)|任意の型を返します。|
 
-### <a name="operators"></a>演算子
+### <a name="operators"></a>オペレーター
 
 |名前|説明|
 |-|-|

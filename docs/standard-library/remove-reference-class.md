@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: remove_reference クラス'
 title: remove_reference クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,14 +8,14 @@ helpviewer_keywords:
 - remove_reference class
 - remove_reference
 ms.assetid: 294e1965-3ae3-46ee-bc42-4fdf60c24717
-ms.openlocfilehash: f185994f943b2419a67fe86ce957751dc4031cbe
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: ccde3e2070e38ca06ca519b7c184fce7dcdbb90d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68451270"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97159623"
 ---
-# <a name="removereference-class"></a>remove_reference クラス
+# <a name="remove_reference-class"></a>remove_reference クラス
 
 型から非参照型を作成します。
 
@@ -33,9 +34,9 @@ using remove_reference_t = typename remove_reference<T>::type;
 *\T*\
 変更する型。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-*T*の形式`remove_reference<T>` `T1` が`T1&`である場合、のインスタンスは変更された型を保持します。それ以外の場合は*t*です。
+`remove_reference<T>`T の形式がである場合、のインスタンスは変更された型を保持 `T1`  `T1&` します。それ以外の場合は *t* です。
 
 ## <a name="example"></a>例
 
@@ -59,9 +60,9 @@ int main()
 remove_reference_t<int&> == int
 ```
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-**ヘッダー:** \<type_traits>
+**ヘッダー:**\<type_traits>
 
 **名前空間:** std
 

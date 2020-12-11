@@ -1,4 +1,5 @@
 ---
+description: コマンドルーティングの図を参照してください。
 title: コマンド ルーティングの図
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - command handling [MFC], routing commands
 - command routing [MFC], OnCmdMsg handler
 ms.assetid: 4b7b4741-565f-4878-b076-fd85c670f87f
-ms.openlocfilehash: d362cfe54a9b5a562237c7bb9632edae6e58228b
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 51c5182eb1fa2a8b9666e265526e9220a9f3d4a0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84622909"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97159961"
 ---
 # <a name="command-routing-illustration"></a>コマンド ルーティングの図
 

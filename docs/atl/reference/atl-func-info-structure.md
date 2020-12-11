@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: _ATL_FUNC_INFO 構造'
 title: _ATL_FUNC_INFO 構造体
 ms.date: 11/04/2016
 f1_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - _ATL_FUNC_INFO structure
 - ATL_FUNC_INFO structure
 ms.assetid: 441ebe2c-f971-47de-9f52-a258e8d6f88e
-ms.openlocfilehash: b1c740cf1a1ed344dbceb028bd1f39a87fc09363
-ms.sourcegitcommit: 2bc15c5b36372ab01fa21e9bcf718fa22705814f
+ms.openlocfilehash: 6368440347672524bb7d1e3aa3068ef91a2c6f09
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82168593"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97158856"
 ---
 # <a name="_atl_func_info-structure"></a>_ATL_FUNC_INFO 構造体
 
@@ -34,7 +35,7 @@ struct _ATL_FUNC_INFO {
 ## <a name="members"></a>メンバー
 
 `cc`<br/>
-呼び出し規則 この構造体を[IDispEventSimpleImpl](../../atl/reference/idispeventsimpleimpl-class.md)クラスで使用する場合は、このメンバーを CC_STDCALL する必要があります。 `CC_CDECL`は、 `CALLCONV` `_ATL_FUNC_INFO`構造体のフィールドの Windows CE でサポートされている唯一のオプションです。 その他の値はサポートされていないため、動作は定義されていません。
+呼び出し規則 この構造体を [IDispEventSimpleImpl](../../atl/reference/idispeventsimpleimpl-class.md) クラスで使用する場合は、このメンバーを CC_STDCALL する必要があります。 `CC_CDECL` は、 `CALLCONV` 構造体のフィールドの Windows CE でサポートされている唯一のオプションです `_ATL_FUNC_INFO` 。 その他の値はサポートされていないため、動作は定義されていません。
 
 `vtReturn`<br/>
 関数の戻り値のバリアント型。
@@ -55,11 +56,11 @@ IDL で定義されているディスパッチインターフェイスメソッ�
 
 [!code-cpp[NVC_ATL_Windowing#139](../../atl/codesnippet/cpp/atl-func-info-structure_1.idl)]
 
-構造体は次`_ATL_FUNC_INFO`のように定義します。
+構造体は次のように定義し `_ATL_FUNC_INFO` ます。
 
 [!code-cpp[NVC_ATL_Windowing#140](../../atl/codesnippet/cpp/atl-func-info-structure_2.h)]
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 ヘッダー: atlcom.h
 

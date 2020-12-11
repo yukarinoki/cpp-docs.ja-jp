@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: remove_pointer クラス'
 title: remove_pointer クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,14 +8,14 @@ helpviewer_keywords:
 - remove_pointer class
 - remove_pointer
 ms.assetid: 2cd4e417-32fb-4f53-bd16-4e8a98240832
-ms.openlocfilehash: 786a1cba5fc35014e33e3e19245271adefec1372
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 8739fcd197dc59f5163740d1290abd3faee1922a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68451256"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97159662"
 ---
-# <a name="removepointer-class"></a>remove_pointer クラス
+# <a name="remove_pointer-class"></a>remove_pointer クラス
 
 型へのポインターから型を作成します。
 
@@ -33,9 +34,9 @@ using remove_pointer_t = typename remove_pointer<T>::type;
 *\T*\
 変更する型。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-`remove_pointer<T>`のインスタンスは、 *t*が、 `T1*` `T1* const` `T1` 、、または`T1* const volatile`の形式である場合に、変更後の型を保持します。それ以外の場合は t です。 `T1* volatile`
+のインスタンスは `remove_pointer<T>` `T1` 、 *t* が、、、またはの形式である場合に、変更後の型を保持し `T1*` `T1* const` `T1* volatile` `T1* const volatile` ます。それ以外の場合は *t* です。
 
 ## <a name="example"></a>例
 
@@ -59,9 +60,9 @@ int main()
 remove_pointer_t<int *> == int
 ```
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-**ヘッダー:** \<type_traits>
+**ヘッダー:**\<type_traits>
 
 **名前空間:** std
 

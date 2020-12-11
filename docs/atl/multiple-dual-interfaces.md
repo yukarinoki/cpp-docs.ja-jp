@@ -1,5 +1,6 @@
 ---
-title: 複数のデュアル インターフェイス
+description: 詳細については、「複数のデュアルインターフェイス」を参照してください。
+title: 複数のデュアルインターフェイス
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -10,33 +11,33 @@ helpviewer_keywords:
 - IDispatchImpl class, multiple dual interfaces
 - COM_INTERFACE_ENTRY_IID macro
 ms.assetid: 7fea86e6-247f-4063-be6e-85588a9e3719
-ms.openlocfilehash: 2ed0e9e8c74e02917e852b8f95ebff1b048afaef
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d90c0176b3165cc0e5b976a29ec58b58fd3a7a56
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62261580"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97159416"
 ---
-# <a name="multiple-dual-interfaces"></a>複数のデュアル インターフェイス
+# <a name="multiple-dual-interfaces"></a>複数のデュアルインターフェイス
 
-デュアル インターフェイス (つまり、vtable とそのため、クラスを使用できるようにスクリプト言語と C++ での遅延バインディングの両方の柔軟性など) の利点を結合することが多重継承の手法を使用します。
+デュアルインターフェイスの利点 (つまり、vtable と遅延バインディングの両方の柔軟性) を組み合わせることで、複数の継承の手法でクラスをスクリプト言語と C++ で利用できるようにすることができます。
 
-1 つの COM オブジェクトに複数のデュアル インターフェイスを公開することはできますが、これは推奨されません。 複数のデュアル インターフェイスがある場合は、必要があります 1 つだけ`IDispatch`インターフェイスを公開します。 大文字と小文字であることを確認できる手法は、関数または増加のコードの複雑さの損失などのペナルティを実行します。 このアプローチを検討している開発者は、長所と短所について慎重に評価する必要があります。
+複数のデュアルインターフェイスを1つの COM オブジェクトで公開することもできますが、推奨されません。 複数のデュアルインターフェイスがある場合は、1つのインターフェイスのみを公開する必要があり `IDispatch` ます。 関数が失われたり、コードの複雑さが増したりするなど、この問題が発生する可能性を保証するために使用できる手法。 このアプローチを検討している開発者は、長所と短所を慎重に検討する必要があります。
 
-## <a name="exposing-a-single-idispatch-interface"></a>1 つの IDispatch インターフェイスを公開します。
+## <a name="exposing-a-single-idispatch-interface"></a>単一の IDispatch インターフェイスの公開
 
-2 つ以上の特殊化から派生することによって、単一のオブジェクトに対して複数のデュアル インターフェイスを公開することは`IDispatchImpl`します。 ただし、クエリを実行するクライアントを許可する場合、`IDispatch`インターフェイスを使用する必要が、 [COM_INTERFACE_ENTRY2](reference/com-interface-entry-macros.md#com_interface_entry2)マクロ (または[COM_INTERFACE_ENTRY_IID](reference/com-interface-entry-macros.md#com_interface_entry_iid))) を使用する基本クラスを指定する、実装`IDispatch`します。
+1つのオブジェクトで複数のデュアルインターフェイスを公開するには、の2つ以上の特殊化から派生させることができ `IDispatchImpl` ます。 ただし、クライアントがインターフェイスのクエリを実行できるようにする場合は、 `IDispatch` [COM_INTERFACE_ENTRY2](reference/com-interface-entry-macros.md#com_interface_entry2) マクロ (または [COM_INTERFACE_ENTRY_IID](reference/com-interface-entry-macros.md#com_interface_entry_iid))) を使用して、の実装に使用する基底クラスを指定する必要があり `IDispatch` ます。
 
 [!code-cpp[NVC_ATL_COM#23](../atl/codesnippet/cpp/multiple-dual-interfaces_1.h)]
 
-ため、1 つだけ`IDispatch`インターフェイスを公開すると、クライアントを通じてオブジェクトにアクセスできるのみ、`IDispatch`インターフェイスでは、メソッドまたはその他のインターフェイスでプロパティにアクセスできません。
+公開されるインターフェイスは1つだけなので、 `IDispatch` インターフェイスを介してオブジェクトにアクセスできるのは、 `IDispatch` 他のインターフェイスのメソッドまたはプロパティにはアクセスできません。
 
-## <a name="combining-multiple-dual-interfaces-into-a-single-implementation-of-idispatch"></a>複数のデュアル インターフェイスを IDispatch の単一の実装に組み合わせる
+## <a name="combining-multiple-dual-interfaces-into-a-single-implementation-of-idispatch"></a>複数のデュアルインターフェイスを1つの IDispatch の実装に結合する
 
-ATL はの単一の実装に複数のデュアル インターフェイスを結合するためのサポートを提供しない`IDispatch`します。 ただしは、個別の共用体を含むテンプレート クラスの作成など、インターフェイスに手動で結合する方法はいくつか既知`IDispatch`インターフェイスを実行する新しいオブジェクトを作成、`QueryInterface`関数、またはを使用して、入れ子になったオブジェクトを作成する typeinfo ベースの実装、`IDispatch`インターフェイス。
+ATL では、複数のデュアルインターフェイスをの1つの実装に組み合わせることはサポートされていません `IDispatch` 。 ただし、インターフェイスを手動で組み合わせる方法はいくつかあります。たとえば、個別のインターフェイスの共用体を含むテンプレートクラスを作成し `IDispatch` たり、関数を実行するための新しいオブジェクトを作成し `QueryInterface` たり、入れ子になったオブジェクトの typeinfo ベースの実装を使用してインターフェイスを作成したりすることが `IDispatch` できます。
 
-これらの方法では、潜在的な名前空間の競合、およびコードの複雑さと保守容易性に問題があります。 複数のデュアル インターフェイスを作成することは推奨されません。
+これらのアプローチには、潜在的な名前空間の競合や、コードの複雑さと保守性に関する問題があります。 複数のデュアルインターフェイスを作成することはお勧めしません。
 
 ## <a name="see-also"></a>関連項目
 
-[デュアル インターフェイスと ATL](../atl/dual-interfaces-and-atl.md)
+[デュアルインターフェイスと ATL](../atl/dual-interfaces-and-atl.md)

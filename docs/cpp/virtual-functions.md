@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「仮想関数」を参照してください。
 title: 仮想関数
 ms.date: 09/10/2019
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - derived classes [C++], virtual functions
 - virtual functions
 ms.assetid: b3e1ed88-2a90-4af8-960a-16f47deb3452
-ms.openlocfilehash: 4296d66af8f8bb9aed4946d6dc57871f447108d2
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: a8e253f8debd594b1918fdcb2aed75b559b07ca8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87231040"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97161340"
 ---
 # <a name="virtual-functions"></a>仮想関数
 
@@ -19,7 +20,7 @@ ms.locfileid: "87231040"
 
 仮想関数では、関数の呼び出しに使用する式に関係なく、オブジェクトに対して正しい関数が呼び出されます。
 
-基底クラスに、[仮想](../cpp/virtual-cpp.md)として宣言された関数が含まれていて、派生クラスが同じ関数を定義しているとします。 派生クラスからの関数は、基底クラスへのポインターまたは参照を使用して呼び出された場合でも、派生クラスのオブジェクトに対して呼び出されます。 次の例は、`PrintBalance` 関数と 2 つの派生クラスの実装を提供する基底クラスを示しています。
+基底クラスに、 [仮想](../cpp/virtual-cpp.md) として宣言された関数が含まれていて、派生クラスが同じ関数を定義しているとします。 派生クラスからの関数は、基底クラスへのポインターまたは参照を使用して呼び出された場合でも、派生クラスのオブジェクトに対して呼び出されます。 次の例は、`PrintBalance` 関数と 2 つの派生クラスの実装を提供する基底クラスを示しています。
 
 ```cpp
 // deriv_VirtualFunctions.cpp
@@ -144,7 +145,7 @@ Invoked by Derived
 
 キーワードは、 **`virtual`** 派生クラスでオーバーライドする関数を宣言するときに使用できますが、不要です。仮想関数のオーバーライドは常に virtual です。
 
-基底クラスの仮想関数は、*純粋指定子*を使用して宣言されていない限り、定義する必要があります。 (純粋仮想関数の詳細については、「[抽象クラス](../cpp/abstract-classes-cpp.md)」を参照してください)。
+基底クラスの仮想関数は、 *純粋指定子* を使用して宣言されていない限り、定義する必要があります。 (純粋仮想関数の詳細については、「 [抽象クラス](../cpp/abstract-classes-cpp.md)」を参照してください)。
 
 仮想関数呼び出し機構は、スコープ解決演算子 (`::`) を使用して、明示的に関数名を修飾することで抑制できます。 `Account` クラスに関連する前の例を考えます。 基底クラスの `PrintBalance` を呼び出すには、次のようなコードを使用します。
 

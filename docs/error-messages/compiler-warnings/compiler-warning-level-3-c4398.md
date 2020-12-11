@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: コンパイラの警告 (レベル 3) C4398'
 title: コンパイラの警告 (レベル 3) C4398
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4398
 ms.assetid: b6221432-9fed-4272-a547-a73f587904e6
-ms.openlocfilehash: 041bf9f6bfce17b16f301604bb8706be30095c13
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: ea88f81e44fe0520cd096e1904c49a306863496a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80198667"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97160429"
 ---
 # <a name="compiler-warning-level-3-c4398"></a>コンパイラの警告 (レベル 3) C4398
 
@@ -19,11 +20,11 @@ ms.locfileid: "80198667"
 
 ## <a name="remarks"></a>解説
 
-ネイティブ型で[__clrcall](../../cpp/clrcall.md)呼び出し規約を持つ仮想関数は、アプリケーションドメイン vtable ごとにを作成します。 このような変数は、複数のアプリケーションドメインで使用されている場合、正しく修正されない可能性があります。
+ネイティブ型で [__clrcall](../../cpp/clrcall.md) 呼び出し規約を持つ仮想関数は、アプリケーションドメイン vtable ごとにを作成します。 このような変数は、複数のアプリケーションドメインで使用されている場合、正しく修正されない可能性があります。
 
-この警告を解決するには、変数 `__declspec(appdomain)`に明示的にマークします。 Visual Studio 2017 より前のバージョンの Visual Studio では、 **/clr: pure**を指定してコンパイルすることで、この警告を解決できます。これにより、既定で appdomain ごとにグローバル変数が作成されます。 **/Clr: pure**コンパイラオプションは visual studio 2015 で非推奨とされており、visual studio 2017 ではサポートされていません。
+この警告は、変数を明示的にマークすることによって解決でき `__declspec(appdomain)` ます。 Visual Studio 2017 より前のバージョンの Visual Studio では、 **/clr: pure** を指定してコンパイルすることで、この警告を解決できます。これにより、既定で appdomain ごとにグローバル変数が作成されます。 **/Clr: pure** コンパイラオプションは visual studio 2015 で非推奨とされており、visual studio 2017 ではサポートされていません。
 
-詳細については、「 [appdomain](../../cpp/appdomain.md) 」および「[アプリケーションドメインとビジュアルC++ ](../../dotnet/application-domains-and-visual-cpp.md)」を参照してください。
+詳細については、「 [appdomain](../../cpp/appdomain.md) と [アプリケーションドメイン」および「Visual C++](../../dotnet/application-domains-and-visual-cpp.md)」を参照してください。
 
 ## <a name="example"></a>例
 

@@ -1,13 +1,14 @@
 ---
+description: 詳細については、「Microsoft 固有の修飾子」を参照してください。
 title: Microsoft 固有の修飾子
 ms.date: 08/16/2018
 ms.assetid: 22c7178c-f854-47fa-9de6-07d23fda58e1
-ms.openlocfilehash: 2f56220ba15027a522264b91366cab9cf0b65d21
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: dd82bf22da99e864a7b4898da1a99a12c3ad3de4
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91506542"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97161625"
 ---
 # <a name="microsoft-specific-modifiers"></a>Microsoft 固有の修飾子
 
@@ -25,7 +26,7 @@ ms.locfileid: "91506542"
 
 Microsoft 固有キーワードの多くは、宣言子を変更して派生型を作成する際に使用できます。 宣言子の詳細については、 [宣言子](./declarations-and-definitions-cpp.md)を参照してください。
 
-|Keyword|意味|派生型を作成するために使用しますか?|
+|Keyword|説明|派生型を作成するために使用しますか?|
 |-------------|-------------|---------------------------------|
 |[__based](based-grammar.md)|これに続く名前は、宣言に含まれている 32 ビット ベースへの 32 ビット オフセットを宣言します。|はい|
 |[__cdecl](cdecl.md)|これに続く名前は、C の命名規約と呼び出し規則を使用します。|はい|

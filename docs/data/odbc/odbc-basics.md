@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: ODBC の基礎'
 title: ODBC の基礎
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,22 +9,22 @@ helpviewer_keywords:
 - ODBC, about ODBC
 - ODBC, components
 ms.assetid: ec529702-0fb2-4754-b8de-d1efa8eca18f
-ms.openlocfilehash: 042b1ce6d12e4f4a2be57c0e2e8e01d9750f5357
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 94482abd046645e445ffae7f85f192514f4fff78
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80213214"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97161183"
 ---
 # <a name="odbc-basics"></a>ODBC の基礎
 
 このトピックでは、ODBC (Open Database Connectivity) の基礎について説明します。
 
-- [ODBC とデータベースクラスの連携](../../data/odbc/odbc-and-the-database-classes.md)
+- [ODBC とデータベース クラス](../../data/odbc/odbc-and-the-database-classes.md)
 
-- [ODBC ドライバーとダイナセットの連携](../../data/odbc/odbc-driver-requirements-for-dynasets.md)
+- [ダイナセットを使う場合の ODBC ドライバーの必要条件](../../data/odbc/odbc-driver-requirements-for-dynasets.md)
 
-- [アプリケーションと共に再配布する必要がある ODBC コンポーネント](../../data/odbc/redistributing-odbc-components-to-your-customers.md)
+- [ODBC の構成要素の配布](../../data/odbc/redistributing-odbc-components-to-your-customers.md)
 
 また、関連トピック「 [odbc: Odbc Cursor Library](../../data/odbc/odbc-the-odbc-cursor-library.md)」も参照してください。
 
@@ -41,7 +42,7 @@ ODBC の構成要素は、次のとおりです。
 
 - ODBC API
 
-   関数呼び出しのライブラリ、一連のエラーコード、および Dbms のデータにアクセスするための標準的な[SQL](../../data/odbc/sql.md)構文。
+   関数呼び出しのライブラリ、一連のエラーコード、および Dbms のデータにアクセスするための標準的な [SQL](../../data/odbc/sql.md) 構文。
 
 - ODBC ドライバー マネージャー
 
@@ -51,11 +52,11 @@ ODBC の構成要素は、次のとおりです。
 
    ODBC の関数の呼び出しを処理する DLL です。DBMS ごとにあります。 提供されているドライバーの一覧については、「 [ODBC ドライバーの一覧](../../data/odbc/odbc-driver-list.md)」を参照してください。
 
-- [ODBC カーソル ライブラリ](../../data/odbc/odbc-the-odbc-cursor-library.md)
+- [ODBC カーソルライブラリ](../../data/odbc/odbc-the-odbc-cursor-library.md)
 
    ODBC ドライバー マネージャーとドライバーの間でデータのスクロールを処理するダイナミック リンク ライブラリ (Odbccr32.dll) です。
 
-- [ODBC データ ソース アドミニストレーター](../../data/odbc/odbc-administrator.md)
+- [ODBC 管理者](../../data/odbc/odbc-administrator.md)
 
    アプリケーションからデータ ソースとして認識できるように DBMS を設定するツールです。
 
@@ -65,6 +66,6 @@ DBMS に直接アクセスせずに、各 DBMS 用の ODBC ドライバーを通
 
 Visual C++ のこのバージョンに含まれている ODBC ドライバー一覧、および他のドライバーを取得する方法については、「[ODBC ドライバーの一覧](../../data/odbc/odbc-driver-list.md)」を参照してください。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[ODBC (Open Database Connectivity)](../../data/odbc/open-database-connectivity-odbc.md)
+[Open Database Connectivity (ODBC)](../../data/odbc/open-database-connectivity-odbc.md)

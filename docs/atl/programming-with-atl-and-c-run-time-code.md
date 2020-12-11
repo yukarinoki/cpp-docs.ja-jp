@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「ATL および C Run-Time コードを使用したプログラミング」を参照してください。
 title: ATL および C ランタイム コードによるプログラミング
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,24 +8,24 @@ helpviewer_keywords:
 - _ATL_MIN_CRT macro
 - ATL, C Run-Time library (CRT)
 ms.assetid: 20f03b66-1eb7-4add-84a2-6047db0911eb
-ms.openlocfilehash: 0e44f2d944d64eb4eefc7bbd543eaaaa04c8a9de
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3a5074b17756f0c74159a6e7c051ada29de43eef
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62249666"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97159246"
 ---
 # <a name="programming-with-atl-and-c-run-time-code"></a>ATL および C ランタイム コードによるプログラミング
 
-このセクションでは、静的または動的のいずれかのリンクと C ランタイム ライブラリ (CRT) を使用する利点について説明します。
+ここでは、静的リンクまたは動的リンクを使用して、C Run-Time ライブラリ (CRT) を使用する利点について説明します。
 
 ## <a name="in-this-section"></a>このセクションの内容
 
-[CRT へのリンクに使用される方法の長所と短所](../atl/benefits-and-tradeoffs-of-the-method-used-to-link-to-the-crt.md)<br/>
-利点とトレードオフ CRT に静的にリンクまたは動的にリンクをまとめたものです。
+[CRT へのリンクに使用される方法の利点とトレードオフ](../atl/benefits-and-tradeoffs-of-the-method-used-to-link-to-the-crt.md)<br/>
+CRT への静的リンクまたは動的なリンクに関連する利点とトレードオフについてまとめます。
 
 [ATL プロジェクトで CRT にリンクする](../atl/linking-to-the-crt-in-your-atl-project.md)<br/>
-プロジェクトの設定と CRT にリンクするためのリンカー オプションについて説明しますCRT にリンクすると、プログラム イメージにどのように影響する方法についても説明します。
+CRT にリンクするためのプロジェクト設定とリンカーオプションについて説明します。また、CRT へのリンクがプログラムイメージに与える影響についても詳しく説明します。
 
 ## <a name="related-sections"></a>関連項目
 
@@ -32,10 +33,10 @@ ms.locfileid: "62249666"
 Active Template Library を使用してプログラミングする方法に関する概念説明のトピックへのリンクを提供します。
 
 [DLL と Visual C++ ランタイム ライブラリの動作](../build/run-time-library-behavior.md)<br/>
-VCRuntime と CRT のスタートアップ コードの動作について説明します。
+VCRuntime と CRT スタートアップコードのしくみについて詳しく説明します。
 
 [C ランタイム ライブラリ](../c-runtime-library/crt-library-features.md)<br/>
-C ランタイム ライブラリを構成するさまざまな .lib ファイルについて説明し、関連するコンパイラ オプションとプリプロセッサ ディレクティブを示します。
+C ランタイムライブラリを構成するさまざまな .lib ファイルについて説明し、関連するコンパイラオプションとプリプロセッサディレクティブの一覧を示します。
 
 ## <a name="see-also"></a>関連項目
 

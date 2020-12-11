@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「 &lt; random 関数」を参照してください。 &gt;
 title: '&lt;random&gt; 関数'
 ms.date: 09/04/2019
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 ms.assetid: 2ac9ec59-619b-4b85-a425-f729277c1bc8
 helpviewer_keywords:
 - std::generate_canonical
-ms.openlocfilehash: 3d94f607fc6b7bdf22d7f573f590b451dbaa718d
-ms.sourcegitcommit: 19016630f9d35f365e9ba249e0f3617515d7ca33
+ms.openlocfilehash: 39670fcd9b200a6bd56656bbfa07391fdd0d96be
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92274595"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97163341"
 ---
 # <a name="ltrandomgt-functions"></a>&lt;random&gt; 関数
 
@@ -36,8 +37,8 @@ RealType generate_canonical(Generator& Gen);
 乱数ジェネレータークラス。
 
 *世代*\
-型 *ジェネレーター*の乱数ジェネレーターのインスタンスへの参照。
+型 *ジェネレーター* の乱数ジェネレーターのインスタンスへの参照。
 
 ### <a name="remarks"></a>解説
 
-このテンプレート関数は `operator()` 、 *ジェネレーション* のを繰り返し呼び出し、返された値を、指定し `x` た数の仮数ビットがに収集されるまで、 *realtype* 型の浮動小数点値にパックし `x` ます。 指定された数値は、(0 以外である必要がある) *ビット* の小さい方で、 *realtype*の仮数部のビット数が完全ではありません。 最初の呼び出しで最下位のビットが提供されます。 `x` が返されます。
+このテンプレート関数は `operator()` 、 *ジェネレーション* のを繰り返し呼び出し、返された値を、指定し `x` た数の仮数ビットがに収集されるまで、 *realtype* 型の浮動小数点値にパックし `x` ます。 指定された数値は、(0 以外である必要がある) *ビット* の小さい方で、 *realtype* の仮数部のビット数が完全ではありません。 最初の呼び出しで最下位のビットが提供されます。 `x` が返されます。

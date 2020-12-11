@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「ATL Typedef」を参照してください。
 title: ATL Typedefs
 ms.date: 11/04/2016
 f1_keywords:
@@ -23,12 +24,12 @@ helpviewer_keywords:
 - typedefs
 - ATL, typedefs
 ms.assetid: 7dd05baa-3efb-4e3b-af23-793c610f4560
-ms.openlocfilehash: 10d11b2b6e78220c1c562d100ee7886026a94b22
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: cb243ef3d16689a1a0ddeb81d3de0bb4ec234a9c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88833869"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97158648"
 ---
 # <a name="atl-typedefs"></a>ATL Typedefs
 
@@ -67,7 +68,7 @@ typedef ATL::_ATL_BASE_MODULE70 _ATL_BASE_MODULE;
 
 ATL 7.0 モジュールクラスの一部であるクラスは、_ATL_BASE_MODULE 構造体から派生します。  ATL モジュールクラスの詳細については、「 [COM Modules クラス](../../atl/com-modules-classes.md)」を参照してください。
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 **ヘッダー:** atlcore .h
 
@@ -83,7 +84,7 @@ typedef ATL::_ATL_COM_MODULE70 _ATL_COM_MODULE;
 
 COM 機能を使用する ATL プロジェクトによって使用されます。 [_ATL_COM_MODULE70](../../atl/reference/atl-com-module70-structure.md)に基づいています。
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 **ヘッダー:** atlbase. h
 
@@ -95,7 +96,7 @@ _ATL_MODULE70 に基づく typedef として定義されます。
 typedef ATL::_ATL_MODULE70 _ATL_MODULE;
 ```
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 **項目**
 
@@ -115,7 +116,7 @@ typedef ATL::_ATL_WIN_MODULE70 _ATL_WIN_MODULE;
 
 ウィンドウ機能を使用する ATL プロジェクトによって使用されます。 [_ATL_WIN_MODULE70](../../atl/reference/atl-win-module70-structure.md)に基づいています。
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 **ヘッダー:** atlbase. h
 
@@ -127,7 +128,7 @@ typedef ATL::_ATL_WIN_MODULE70 _ATL_WIN_MODULE;
 typedef WORD ATL_URL_PORT;
 ```
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 **ヘッダー:** atlutil. h
 
@@ -139,7 +140,7 @@ typedef WORD ATL_URL_PORT;
 typedef CComQIPtr<IDispatch, &__uuidof(IDispatch)> CComDispatchDriver;
 ```
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 **ヘッダー:** atlbase. h
 
@@ -168,7 +169,7 @@ typedef CComMultiThreadModel CComGlobalsThreadModel;
 
 を使用 `CComGlobalsThreadModel` すると、特定のスレッドモデルクラスを指定できます。 使用されているスレッドモデルに関係なく、適切なメソッドが呼び出されます。
 
-に加え `CComGlobalsThreadModel` て、ATL には CComObjectThreadModel という名前が付いて **`typedef`** います。 [CComObjectThreadModel](#ccomobjectthreadmodel) によって参照されるクラスは、 **`typedef`** 次の表に示すように、使用されるスレッドモデルによって異なります。
+に加え `CComGlobalsThreadModel` て、ATL には CComObjectThreadModel という名前が付いて **`typedef`** います。 [](#ccomobjectthreadmodel) によって参照されるクラスは、 **`typedef`** 次の表に示すように、使用されるスレッドモデルによって異なります。
 
 |Typedef|単一スレッド|アパートメントスレッド|フリースレッド|
 |-------------|----------------------|-------------------------|--------------------|
@@ -179,7 +180,7 @@ S = `CComSingleThreadModel` ;M = `CComMultiThreadModel`
 
 `CComObjectThreadModel`単一のオブジェクトクラス内で使用します。 `CComGlobalsThreadModel`プログラムでグローバルに使用できるオブジェクトでを使用するか、複数のスレッド間でモジュールリソースを保護する必要がある場合は、を使用します。
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 **ヘッダー:** atlbase. h
 
@@ -208,7 +209,7 @@ typedef CComMultiThreadModel CComObjectThreadModel;
 
 を使用 `CComObjectThreadModel` すると、特定のスレッドモデルクラスを指定できます。 使用されているスレッドモデルに関係なく、適切なメソッドが呼び出されます。
 
-に加え `CComObjectThreadModel` て、ATL には CComGlobalsThreadModel という名前が付いて **`typedef`** います。 [CComGlobalsThreadModel](#ccomglobalsthreadmodel) によって参照されるクラスは、 **`typedef`** 次の表に示すように、使用されるスレッドモデルによって異なります。
+に加え `CComObjectThreadModel` て、ATL には CComGlobalsThreadModel という名前が付いて **`typedef`** います。 [](#ccomglobalsthreadmodel) によって参照されるクラスは、 **`typedef`** 次の表に示すように、使用されるスレッドモデルによって異なります。
 
 |Typedef|単一スレッド|アパートメントスレッド|フリースレッド|
 |-------------|----------------------|-------------------------|--------------------|
@@ -219,7 +220,7 @@ S = `CComSingleThreadModel` ;M = `CComMultiThreadModel`
 
 `CComObjectThreadModel`単一のオブジェクトクラス内で使用します。 `CComGlobalsThreadModel`プログラムでグローバルに使用できるオブジェクトでを使用するか、複数のスレッド間でモジュールリソースを保護する必要がある場合は、を使用します。
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 **ヘッダー:** atlbase. h
 
@@ -231,7 +232,7 @@ S = `CComSingleThreadModel` ;M = `CComMultiThreadModel`
 typedef CContainedWindowT<CWindow> CContainedWindow;
 ```
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 **ヘッダー:** atlwin. h
 
@@ -247,7 +248,7 @@ typedef CContainedWindowT<CWindow> CContainedWindow;
 typedef CPathT<CString> CPath;
 ```
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 **ヘッダー:** atlpath .h
 
@@ -259,7 +260,7 @@ typedef CPathT<CString> CPath;
 typedef CPathT<CStringA> CPathA;
 ```
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 **ヘッダー:** atlpath .h
 
@@ -271,7 +272,7 @@ typedef CPathT<CStringA> CPathA;
 typedef ATL::CPathT<CStringW> CPathW;
 ```
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 **ヘッダー:** atlpath .h
 
@@ -287,7 +288,7 @@ typedef ATL::CPathT<CStringW> CPathW;
 
 `CSimpleValArray` は、単純なデータ型を含む配列を作成および管理するために用意されています。 [CSimpleArray](../../atl/reference/csimplearray-class.md)の単純な #define です。
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 **ヘッダー:** atl. h
 
@@ -299,7 +300,7 @@ typedef ATL::CPathT<CStringW> CPathW;
 typedef const CUrl* LPCURL;
 ```
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 **ヘッダー:** atlutil. h
 
@@ -321,7 +322,7 @@ typedef const CUrl* LPCURL;
 
 現在のプロジェクトがマルチスレッド CRT を使用している場合、DefaultThreadTraits は CRTThreadTraits として定義されます。 それ以外の場合は、Win32ThreadTraits が使用されます。
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 **ヘッダー:** atlbase. h
 
@@ -333,7 +334,7 @@ typedef const CUrl* LPCURL;
 typedef CUrl* LPURL;
 ```
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 **ヘッダー:** atlutil. h
 
@@ -343,4 +344,4 @@ typedef CUrl* LPURL;
 [関数](../../atl/reference/atl-functions.md)<br/>
 [グローバル変数](../../atl/reference/atl-global-variables.md)<br/>
 [クラスと構造体](../../atl/reference/atl-classes.md)<br/>
-[[マクロ]](../../atl/reference/atl-macros.md)
+[マクロ](../../atl/reference/atl-macros.md)

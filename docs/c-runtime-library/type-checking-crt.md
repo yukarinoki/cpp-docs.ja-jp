@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: 型チェック (CRT)'
 title: 型チェック (CRT)
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - variable argument functions
 - type checking
 ms.assetid: 1ba7590b-d1c0-4636-b6a0-e231395abdad
-ms.openlocfilehash: bb5aecc2b47aa8e88666f42d8022395bf99fd85e
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: cf27847bf2aeef278fb4699cea5a0cf74a961086
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57747684"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97162354"
 ---
 # <a name="type-checking-crt"></a>型チェック (CRT)
 

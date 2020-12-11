@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: `noalias`'
 title: noalias
 ms.date: 07/07/2020
 f1_keywords:
@@ -7,18 +8,18 @@ helpviewer_keywords:
 - noalias __declspec keyword
 - __declspec keyword [C++], noalias
 ms.assetid: efafa8b0-7f39-4edc-a81e-d287ae882c9b
-ms.openlocfilehash: 70c1f4e8bfa426e858014a78febc424b473a89ae
-ms.sourcegitcommit: e17cc8a478b51739d67304d7d82422967b35f716
+ms.openlocfilehash: 56306404fc79ea851835ae5913bbdb0b297ba880
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86127866"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97161652"
 ---
 # `noalias`
 
 **Microsoft 固有の仕様**
 
-**`noalias`** は、関数呼び出しが表示されているグローバル状態を変更または参照せず、ポインターパラメーターによって*直接*ポイントされているメモリのみを変更することを意味します (第1レベルの間接参照)。
+**`noalias`** は、関数呼び出しが表示されているグローバル状態を変更または参照せず、ポインターパラメーターによって *直接* ポイントされているメモリのみを変更することを意味します (第1レベルの間接参照)。
 
 関数にという注釈が付けられている場合 **`noalias`** 、オプティマイザーでは、パラメーター自体だけでは、ポインターパラメーターの最初のレベルの間接参照のみが関数内で参照または変更されると想定できます。
 

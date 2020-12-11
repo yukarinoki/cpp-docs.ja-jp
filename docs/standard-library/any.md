@@ -1,22 +1,23 @@
 ---
+description: '詳細情報: &lt; 任意&gt;'
 title: '&lt;任意&gt;'
 ms.date: 04/04/2019
 f1_keywords:
 - <any>
 helpviewer_keywords:
 - <any>
-ms.openlocfilehash: 5039c1499e423af6eedbe26b0b20f57b316648b6
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 314bc96b8cd64d51b728b7a2303b90732b822deb
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88844731"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97163380"
 ---
 # <a name="ltanygt"></a>&lt;任意&gt;
 
 クラス、およびいくつかのサポート関数とクラスを定義します。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:**\<any>
 
@@ -24,7 +25,7 @@ ms.locfileid: "88844731"
 
 ## <a name="members"></a>メンバー
 
-### <a name="functions"></a>Functions
+### <a name="functions"></a>機能
 
 |名前|説明|
 |-|-|

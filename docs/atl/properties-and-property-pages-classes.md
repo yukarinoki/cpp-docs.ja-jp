@@ -1,5 +1,6 @@
 ---
-title: プロパティとプロパティ ページ クラス (ATL)
+description: 詳細については、「プロパティとプロパティページクラス」を参照してください。
+title: Properties および Property Pages クラス (ATL)
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -7,38 +8,38 @@ helpviewer_keywords:
 - properties [ATL], classes
 - properties [ATL]
 ms.assetid: 31616f98-69f8-48b2-8d58-b8e7d1c2b2d8
-ms.openlocfilehash: 05c3a67e278389bb2ab1b07e9d6cf63cbe347c63
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1fddb9626afcab908ae6f7ffb085c263b7a84af7
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62249627"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97159194"
 ---
-# <a name="properties-and-property-pages-classes"></a>プロパティとプロパティ ページ クラス
+# <a name="properties-and-property-pages-classes"></a>プロパティとプロパティページクラス
 
-次のクラスは、プロパティやプロパティ ページをサポートします。
+次のクラスは、プロパティおよびプロパティページをサポートしています。
 
-- [CComDispatchDriver](../atl/reference/atl-typedefs.md#ccomdispatchdriver)を取得またはオブジェクトのプロパティを設定、`IDispatch`ポインター。
+- [CComDispatchDriver](../atl/reference/atl-typedefs.md#ccomdispatchdriver) オブジェクトのプロパティをポインターで取得または設定 `IDispatch` します。
 
-- [CStockPropImpl](../atl/reference/cstockpropimpl-class.md) ATL でサポートされているストック プロパティを実装します。
+- [Cstockpropimpl](../atl/reference/cstockpropimpl-class.md) ATL でサポートされているストックプロパティを実装します。
 
-- [IPerPropertyBrowsingImpl](../atl/reference/iperpropertybrowsingimpl-class.md)オブジェクトのプロパティ ページの情報にアクセスします。
+- [Iperpropertybrowsingimpl](../atl/reference/iperpropertybrowsingimpl-class.md) オブジェクトのプロパティページ内の情報にアクセスします。
 
-- [IPersistPropertyBagImpl](../atl/reference/ipersistpropertybagimpl-class.md)クライアントが指定したプロパティ バッグ内のオブジェクトのプロパティを格納します。
+- [IPersistPropertyBagImpl](../atl/reference/ipersistpropertybagimpl-class.md) オブジェクトのプロパティを、クライアントが指定したプロパティバッグに格納します。
 
-- [IPropertyPageImpl](../atl/reference/ipropertypageimpl-class.md)プロパティ シート内の特定のプロパティ ページを管理します。
+- [IPropertyPageImpl](../atl/reference/ipropertypageimpl-class.md) プロパティシート内の特定のプロパティページを管理します。
 
-- [IPropertyPage2Impl](../atl/reference/ipropertypage2impl-class.md)と同様に`IPropertyPageImpl`、プロパティ ページで、特定のプロパティを選択するクライアントにもできます。
+- [IPropertyPage2Impl](../atl/reference/ipropertypage2impl-class.md) に似て `IPropertyPageImpl` いますが、クライアントはプロパティページで特定のプロパティを選択することもできます。
 
-- [ISpecifyPropertyPagesImpl](../atl/reference/ispecifypropertypagesimpl-class.md)オブジェクトによってサポートされるプロパティ ページの Clsid を取得します。
+- [ISpecifyPropertyPagesImpl](../atl/reference/ispecifypropertypagesimpl-class.md) オブジェクトでサポートされているプロパティページの Clsid を取得します。
 
-## <a name="related-articles"></a>関連トピック
+## <a name="related-articles"></a>関連記事
 
 [ATL チュートリアル](../atl/active-template-library-atl-tutorial.md)
 
-[ATL COM プロパティ ページ](../atl/atl-com-property-pages.md)
+[ATL COM プロパティページ](../atl/atl-com-property-pages.md)
 
 ## <a name="see-also"></a>関連項目
 
 [クラスの概要](../atl/atl-class-overview.md)<br/>
-[プロパティ マップに関するマクロ](../atl/reference/property-map-macros.md)
+[プロパティマップマクロ](../atl/reference/property-map-macros.md)

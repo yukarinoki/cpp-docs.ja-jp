@@ -1,77 +1,78 @@
 ---
+description: 詳細については、「ATL マクロ」を参照してください。
 title: ATL マクロ
 ms.date: 11/04/2016
 helpviewer_keywords:
 - ATL, macros
 - macros, ATL
 ms.assetid: 788bd803-e7dc-4dc5-9e8d-31649471415b
-ms.openlocfilehash: 2331f100f627dcd79ba2976b44da30474d93dd3a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 669e1b6b37d6181a633f396ab8a85598ef8cdc51
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62260884"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97158791"
 ---
 # <a name="atl-macros"></a>ATL マクロ
 
-カテゴリ別 ATL マクロを探すには、次のトピックを参照してください。
+カテゴリ別に ATL マクロを検索するには、次のトピックを参照してください。
 
-[集計とクラス ファクトリに関するマクロ](../../atl/reference/aggregation-and-class-factory-macros.md)<br/>
-クラス ファクトリの宣言および集計を制御するための方法を提供します。
+[集計およびクラスファクトリマクロ](../../atl/reference/aggregation-and-class-factory-macros.md)<br/>
+集計を制御し、クラスファクトリを宣言する方法を提供します。
 
-[カテゴリに関するマクロ](../../atl/reference/category-macros.md)<br/>
-カテゴリのマップを定義します。
+[カテゴリマクロ](../../atl/reference/category-macros.md)<br/>
+カテゴリマップを定義します。
 
-[COM マップに関するマクロ](../../atl/reference/com-map-macros.md)<br/>
-COM インターフェイス マップを定義します。
+[COM マップマクロ](../../atl/reference/com-map-macros.md)<br/>
+COM インターフェイスマップを定義します。
 
-[コンパイラ オプションに関するマクロ](../../atl/reference/compiler-options-macros.md)<br/>
+[コンパイラオプションのマクロ](../../atl/reference/compiler-options-macros.md)<br/>
 特定のコンパイラ機能を制御します。
 
-[複合コントロールに関するマクロ](../../atl/reference/composite-control-macros.md)<br/>
-イベント シンク マップとエントリを定義します。
+[複合コントロールマクロ](../../atl/reference/composite-control-macros.md)<br/>
+イベントシンクマップとエントリを定義します。
 
-[接続ポイントに関するマクロ](../../atl/reference/connection-point-macros.md)<br/>
-コネクション ポイントのマップとエントリを定義します。
+[接続ポイントのマクロ](../../atl/reference/connection-point-macros.md)<br/>
+接続ポイントマップとエントリを定義します。
 
-[デバッグとエラー報告に関するマクロ](../../atl/reference/debugging-and-error-reporting-macros.md)<br/>
-デバッグとトレースに役立つ機能を提供します。
+[デバッグとエラー報告のマクロ](../../atl/reference/debugging-and-error-reporting-macros.md)<br/>
+便利なデバッグ機能とトレース機能を提供します。
 
-[例外処理に関するマクロ](../../atl/reference/exception-handling-macros.md)<br/>
+[例外処理マクロ](../../atl/reference/exception-handling-macros.md)<br/>
 例外処理のサポートを提供します。
 
 [メッセージ マップ マクロ](../../atl/reference/message-map-macros-atl.md)<br/>
-メッセージ マップとエントリを定義します。
+メッセージマップとエントリを定義します。
 
-[オブジェクト マップに関するマクロ](../../atl/reference/object-map-macros.md)<br/>
-オブジェクト マップとエントリを定義します。
+[オブジェクトマップマクロ](../../atl/reference/object-map-macros.md)<br/>
+オブジェクトマップとエントリを定義します。
 
-[オブジェクトの状態に関するマクロ](../../atl/reference/object-status-macros.md)<br/>
-ActiveX コントロールに属しているフラグを設定します。
+[オブジェクトの状態マクロ](../../atl/reference/object-status-macros.md)<br/>
+ActiveX コントロールに属するフラグを設定します。
 
-[プロパティ マップに関するマクロ](../../atl/reference/property-map-macros.md)<br/>
-プロパティ マップとエントリを定義します。
+[プロパティマップマクロ](../../atl/reference/property-map-macros.md)<br/>
+プロパティマップとエントリを定義します。
 
-[レジストリ データ エクスチェンジに関するマクロ](../../atl/reference/registry-data-exchange-macros.md)<br/>
-レジストリ データの交換操作を実行します。
+[レジストリデータ交換マクロ](../../atl/reference/registry-data-exchange-macros.md)<br/>
+レジストリデータ交換操作を実行します。
 
-[レジストリに関するマクロ](../../atl/reference/registry-macros.md)<br/>
-便利な型のライブラリとレジストリの機能を定義します。
+[レジストリマクロ](../../atl/reference/registry-macros.md)<br/>
+便利なタイプライブラリとレジストリ機能を定義します。
 
-[サービス マップに関するマクロ](../../atl/reference/service-map-macros.md)<br/>
-サービス マップとエントリを定義します。
+[Service Map マクロ](../../atl/reference/service-map-macros.md)<br/>
+サービスマップとエントリを定義します。
 
-[スナップイン オブジェクトに関するマクロ](../../atl/reference/snap-in-object-macros.md)<br/>
-スナップインの拡張機能のサポートを提供します。
+[スナップインオブジェクトマクロ](../../atl/reference/snap-in-object-macros.md)<br/>
+スナップイン拡張機能のサポートを提供します。
 
-[文字列変換に関するマクロ](string-conversion-macros.md)<br/>
-文字列の変換機能を提供します。
+[文字列変換マクロ](string-conversion-macros.md)<br/>
+文字列変換機能を提供します。
 
-[Windows クラスに関するマクロ](../../atl/reference/window-class-macros.md)<br/>
-ウィンドウ クラスのユーティリティを定義します。
+[ウィンドウクラスマクロ](../../atl/reference/window-class-macros.md)<br/>
+ウィンドウクラスユーティリティを定義します。
 
-[Windows メッセージに関するマクロ](../../atl/reference/windows-messages-macros.md)<br/>
-ウィンドウ メッセージを転送します。
+[Windows メッセージのマクロ](../../atl/reference/windows-messages-macros.md)<br/>
+ウィンドウメッセージを転送します。
 
 ## <a name="see-also"></a>関連項目
 

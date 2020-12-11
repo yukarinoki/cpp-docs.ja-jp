@@ -1,16 +1,17 @@
 ---
+description: 詳細については、「制御の譲渡」を参照してください。
 title: 制御の移動
 ms.date: 11/04/2016
 helpviewer_keywords:
 - control flow, branching
 - control flow, transferring control
 ms.assetid: aa51e7f2-060f-4106-b0fe-331f04357423
-ms.openlocfilehash: ef437d0a691ceff72485be1ff9584052f540031a
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 263c30877100ec37768313fa64e7562a06096396
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87232184"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97161612"
 ---
 # <a name="transfers-of-control"></a>制御の移動
 
@@ -50,4 +51,4 @@ int main()
 
 前の例では、 **`goto`** ステートメントは、の初期化を超えて制御を転送しようとして `i` います。 ただし、`i` が宣言されていても初期化されていない場合、転送は有効になります。
 
-ステートメントを `total` `ch` 使用してブロックを終了すると、ステートメントの*ステートメント*として機能するブロックで宣言されたオブジェクトと **`while`** が破棄され **`break`** ます。
+ステートメントを `total` `ch` 使用してブロックを終了すると、ステートメントの *ステートメント* として機能するブロックで宣言されたオブジェクトと **`while`** が破棄され **`break`** ます。

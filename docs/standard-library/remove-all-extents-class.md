@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: remove_all_extents クラス'
 title: remove_all_extents クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,14 +8,14 @@ helpviewer_keywords:
 - remove_all_extents class
 - remove_all_extents
 ms.assetid: 548dc536-82e7-423a-b8c1-443d66d9632e
-ms.openlocfilehash: 0909da3f08cec62bcb915a65c353abdd33c96c9d
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: a6c798e1f128b10ef94061573c93c3bb9e3aa4f0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68451402"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97159727"
 ---
-# <a name="removeallextents-class"></a>remove_all_extents クラス
+# <a name="remove_all_extents-class"></a>remove_all_extents クラス
 
 配列型から非配列型を作成します。
 
@@ -33,9 +34,9 @@ using remove_all_extents_t = typename remove_all_extents<T>::type;
 *\T*\
 変更する型。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-の`remove_all_extents<T>`インスタンスは、すべての配列次元が削除された配列型*T*の要素型である修飾型を保持します。 *t*が配列型でない場合は*t*を保持します。
+のインスタンスは、 `remove_all_extents<T>` すべての配列次元が削除された配列型 *T* の要素型である修飾型を保持します。 *t* が配列型でない場合は *t* を保持します。
 
 ## <a name="example"></a>例
 
@@ -59,9 +60,9 @@ int main()
     }
 ```
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-**ヘッダー:** \<type_traits>
+**ヘッダー:**\<type_traits>
 
 **名前空間:** std
 

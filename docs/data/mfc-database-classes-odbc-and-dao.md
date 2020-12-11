@@ -1,34 +1,35 @@
 ---
+description: 詳細については、「MFC データベースクラス」を参照してください。
 title: MFC データベース クラス (ODBC と DAO)
 ms.date: 11/04/2016
 helpviewer_keywords:
 - ODBC, ODBC classes
 - MFC, database applications
 ms.assetid: 88aabe65-84e3-4122-b636-5d334a5fe570
-ms.openlocfilehash: 380000deef40cdfaf18bde4bf9e5cc626c518007
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: bcc1385e4bbd7968916fd344e504852efc9f421b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81336822"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97161196"
 ---
-# <a name="mfc-database-classes"></a>MFC データベース クラス
+# <a name="mfc-database-classes"></a>MFC データベースクラス
 
 > [!NOTE]
-> 新しいプロジェクトでは、SQL Server の ODBC ドライバ 13 (またはそれ以降) を使用して ODBC を使用することをお勧めします。 DAO はサポートされなくなりました。
+> Microsoft では、Microsoft ODBC Driver 13 (またはそれ以降) を使用して、新しいプロジェクトの SQL Server に ODBC を使用することをお勧めします。 DAO はサポートされなくなりました。
 
 詳細については、次のトピックを参照してください。
 
 - [Microsoft SQL Server のドライバー履歴](/sql/connect/connect-history)
 
-- [SQL Server 用 ODBC ドライバ 13.1 がリリースされました](https://blogs.technet.microsoft.com/dataplatforminsider/2016/08/03/odbc-driver-13-1-for-sql-server-released/)SQL Server 用の MICROSOFT ODBC ドライバー 13 を使用して、新しいアプリケーションを作成するか、新しい SQL Server 2016 の機能を利用する必要がある既存のアプリケーションを強化する必要があります。
+- [SQL Server リリース用 ODBC ドライバー 13.1](https://blogs.technet.microsoft.com/dataplatforminsider/2016/08/03/odbc-driver-13-1-for-sql-server-released/) 新しいアプリケーションを作成したり、2016の SQL Server 新機能を利用する必要がある既存のアプリケーションを拡張したりするには、Microsoft ODBC Driver 13 for SQL Server を使用する必要があります。
 
 - [ODBC と MFC](../data/odbc/odbc-and-mfc.md)
 
-- [ドキュメントとビューでのデータベース クラスの使用](../data/mfc-using-database-classes-with-documents-and-views.md)
+- [ドキュメントとビューでのデータベースクラスの使用](../data/mfc-using-database-classes-with-documents-and-views.md)
 
-- [ドキュメントとビューを使用しないデータベース クラスの使用](../data/mfc-using-database-classes-without-documents-and-views.md)
+- [ドキュメントとビューを使用しないデータベースクラスの使用](../data/mfc-using-database-classes-without-documents-and-views.md)
 
 ## <a name="see-also"></a>関連項目
 
-[データ アクセス プログラミング (MFC/ATL)](../data/data-access-programming-mfc-atl.md)
+[データアクセスプログラミング (MFC/ATL)](../data/data-access-programming-mfc-atl.md)

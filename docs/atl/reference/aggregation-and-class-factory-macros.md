@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「集計とクラスファクトリマクロ」を参照してください。
 title: 集計およびクラスファクトリマクロ
 ms.date: 08/12/2020
 f1_keywords:
@@ -72,12 +73,12 @@ helpviewer_keywords:
 - ATL::DECLARE_PROTECT_FINAL_CONSTRUCT
 - ATL::DECLARE_VIEW_STATUS
 ms.assetid: d99d379a-0eec-481f-8daa-252dac18f163
-ms.openlocfilehash: 5fdf330cfc69ea68720666eae5952be356cad314
-ms.sourcegitcommit: 50db6d0a0d640155c9347c1914bc8859efaadd90
+ms.openlocfilehash: 7aa62bfe8e87b9e7923dfe1de1f28b6acdba595e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88197337"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97158960"
 ---
 # <a name="aggregation-and-class-factory-macros"></a>集計およびクラスファクトリマクロ
 
@@ -98,7 +99,7 @@ ms.locfileid: "88197337"
 | [DECLARE_PROTECT_FINAL_CONSTRUCT](#declare_protect_final_construct) | 内部オブジェクトの構築時に外部オブジェクトが削除されないように保護します。 |
 | [DECLARE_VIEW_STATUS](#declare_view_status) | コンテナーに VIEWSTATUS フラグを指定します。 |
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** atlcom. h
 
@@ -152,7 +153,7 @@ public CComObjectRootEx<CComGlobalsThreadModel>
 
 `CComClassFactory`[IClassFactory](/windows/win32/api/unknwnbase/nn-unknwnbase-iclassfactory)インターフェイスを実装します。このインターフェイスには、特定の CLSID のオブジェクトを作成するためのメソッドが含まれています。また、新しいオブジェクトをより迅速に作成できるように、メモリ内のクラスファクトリをロックすることもできます。 `IClassFactory` は、システムレジストリに登録し、CLSID を割り当てるすべてのクラスに対して実装する必要があります。
 
-ATL オブジェクトは通常、 [CComCoClass](../../atl/reference/ccomcoclass-class.md)から派生することによってクラスファクトリを取得します。 このクラスには、 [DECLARE_CLASSFACTORY](#declare_classfactory) `CComClassFactory` 既定のクラスファクトリとして宣言するマクロ DECLARE_CLASSFACTORY が含まれています。 この既定値をオーバーライドするには、クラス定義で DECLARE_CLASSFACTORY*XXX* マクロのいずれかを指定します。 たとえば、 [DECLARE_CLASSFACTORY_EX](#declare_classfactory_ex) マクロはクラスファクトリに対して指定されたクラスを使用します。
+ATL オブジェクトは通常、 [CComCoClass](../../atl/reference/ccomcoclass-class.md)から派生することによってクラスファクトリを取得します。 このクラスには、 [](#declare_classfactory) `CComClassFactory` 既定のクラスファクトリとして宣言するマクロ DECLARE_CLASSFACTORY が含まれています。 この既定値をオーバーライドするには、クラス定義で DECLARE_CLASSFACTORY *XXX* マクロのいずれかを指定します。 たとえば、 [DECLARE_CLASSFACTORY_EX](#declare_classfactory_ex) マクロはクラスファクトリに対して指定されたクラスを使用します。
 
 [!code-cpp[NVC_ATL_COM#8](../../atl/codesnippet/cpp/aggregation-and-class-factory-macros_3.h)]
 
@@ -181,9 +182,9 @@ DECLARE_CLASSFACTORY_EX( cf )
 
 ### <a name="remarks"></a>解説
 
-*Cf*パラメーターは[CComClassFactory](../../atl/reference/ccomclassfactory-class.md)から派生し、メソッドをオーバーライドする必要があり `CreateInstance` ます。
+*Cf* パラメーターは [CComClassFactory](../../atl/reference/ccomclassfactory-class.md)から派生し、メソッドをオーバーライドする必要があり `CreateInstance` ます。
 
-[CComCoClass](../../atl/reference/ccomcoclass-class.md)には[DECLARE_CLASSFACTORY](#declare_classfactory) 、 `CComClassFactory` 既定のクラスファクトリとしてを指定する DECLARE_CLASSFACTORY マクロが含まれています。 ただし、オブジェクトのクラス定義に DECLARE_CLASSFACTORY_EX マクロを含めることにより、この既定値をオーバーライドします。
+[CComCoClass](../../atl/reference/ccomcoclass-class.md)には[](#declare_classfactory) 、 `CComClassFactory` 既定のクラスファクトリとしてを指定する DECLARE_CLASSFACTORY マクロが含まれています。 ただし、オブジェクトのクラス定義に DECLARE_CLASSFACTORY_EX マクロを含めることにより、この既定値をオーバーライドします。
 
 ### <a name="example"></a>例
 
@@ -244,7 +245,7 @@ ATL オブジェクトは通常、 [CComCoClass](../../atl/reference/ccomcoclass
 
 [!code-cpp[NVC_ATL_COM#3](../../atl/codesnippet/cpp/aggregation-and-class-factory-macros_5.h)]
 
-`CComClassFactory2` との両方 `CComClassFactory2Base` の *ライセンス*から派生します。 `CComClassFactory2Base`さらに、はから派生 `IClassFactory2` し **、 \< CComGlobalsThreadModel > CComObjectRootEx**します。
+`CComClassFactory2` との両方 `CComClassFactory2Base` の *ライセンス* から派生します。 `CComClassFactory2Base`さらに、はから派生 `IClassFactory2` し **、 \< CComGlobalsThreadModel > CComObjectRootEx** します。
 
 ## <a name="declare_classfactory_auto_thread"></a><a name="declare_classfactory_auto_thread"></a> DECLARE_CLASSFACTORY_AUTO_THREAD
 
@@ -326,7 +327,7 @@ class CComClassFactorySingleton : public CComClassFactory
 
 ### <a name="remarks"></a>解説
 
-ATL オブジェクトは通常、 [CComCoClass](../../atl/reference/ccomcoclass-class.md)から派生することによってクラスファクトリを取得します。 このクラスには、 [DECLARE_CLASSFACTORY](#declare_classfactory) `CComClassFactory` 既定のクラスファクトリとして宣言するマクロ DECLARE_CLASSFACTORY が含まれています。 を使用するには `CComClassFactorySingleton` 、オブジェクトのクラス定義で [DECLARE_CLASSFACTORY_SINGLETON](#declare_classfactory_singleton) マクロを指定します。 次に例を示します。
+ATL オブジェクトは通常、 [CComCoClass](../../atl/reference/ccomcoclass-class.md)から派生することによってクラスファクトリを取得します。 このクラスには、 [](#declare_classfactory) `CComClassFactory` 既定のクラスファクトリとして宣言するマクロ DECLARE_CLASSFACTORY が含まれています。 を使用するには `CComClassFactorySingleton` 、オブジェクトのクラス定義で [DECLARE_CLASSFACTORY_SINGLETON](#declare_classfactory_singleton) マクロを指定します。 次に例を示します。
 
 [!code-cpp[NVC_ATL_COM#10](../../atl/codesnippet/cpp/aggregation-and-class-factory-macros_7.h)]
 
@@ -390,7 +391,7 @@ DECLARE_ONLY_AGGREGATABLE( x )
 
 ## <a name="declare_poly_aggregatable"></a><a name="declare_poly_aggregatable"></a> DECLARE_POLY_AGGREGATABLE
 
-オブジェクトの作成時に**CComPolyObject \<** *x* **> **のインスタンスが作成されることを指定します。
+オブジェクトの作成時に **CComPolyObject \<** *x* **>** のインスタンスが作成されることを指定します。
 
 ```cpp
 DECLARE_POLY_AGGREGATABLE( x )
@@ -436,4 +437,4 @@ DECLARE_VIEW_STATUS( statusFlags )
 
 ## <a name="see-also"></a>関連項目
 
-[[マクロ]](../../atl/reference/atl-macros.md)
+[マクロ](../../atl/reference/atl-macros.md)

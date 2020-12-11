@@ -1,16 +1,17 @@
 ---
+description: '詳細については、「チュートリアル: アプリケーションへの CTaskDialog の追加」を参照してください。'
 title: 'チュートリアル: アプリケーションへの CTaskDialog の追加'
 ms.date: 04/25/2019
 helpviewer_keywords:
 - CTaskDialog, adding
 - walkthroughs [MFC], dialogs
 ms.assetid: 3a62abb8-2d86-4bec-bdb8-5784d5f9a9f8
-ms.openlocfilehash: 3a970df4911fed643045a1c6b59fcda1a853dbcf
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: f7462551af785b85156f3f0b0f83b2ff3ddbf4c7
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87222772"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97159896"
 ---
 # <a name="walkthrough-adding-a-ctaskdialog-to-an-application"></a>チュートリアル: アプリケーションへの CTaskDialog の追加
 
@@ -37,9 +38,9 @@ ms.locfileid: "87222772"
 
 ### <a name="to-replace-a-windows-message-box-with-a-ctaskdialog"></a>Windows メッセージ ボックスを CTaskDialog に置き換えるには
 
-1. **Mfc アプリケーションウィザード**を使用して、すべての既定の設定を含む mfc アプリケーションを作成します。 お使いのバージョンの Visual Studio のウィザードを開く方法については[、「チュートリアル: 新しい MFC シェルコントロールの使用](walkthrough-using-the-new-mfc-shell-controls.md)」を参照してください。
+1. **Mfc アプリケーションウィザード** を使用して、すべての既定の設定を含む mfc アプリケーションを作成します。 お使いのバージョンの Visual Studio のウィザードを開く方法については [、「チュートリアル: 新しい MFC シェルコントロールの使用](walkthrough-using-the-new-mfc-shell-controls.md) 」を参照してください。
 
-1. *MyProject*を呼び出します。
+1. *MyProject* を呼び出します。
 
 1. **ソリューション エクスプローラー** を使用して、MyProject.cpp ファイルを開きます。
 
@@ -94,7 +95,7 @@ ms.locfileid: "87222772"
 
 ### <a name="to-add-functionality-to-the-ctaskdialog"></a>CTaskDialog に機能を追加するには
 
-1. **[リソース ビュー]** 移動します。 **リソースビュー**が表示されない場合は、[**表示**] メニューから開くことができます。
+1. **[リソース ビュー]** 移動します。 **リソースビュー** が表示されない場合は、[**表示**] メニューから開くことができます。
 
 1. **[リソース ビュー]** を展開して、 **[ストリング テーブル]** フォルダーを選択します。 そのフォルダーを展開し、 **[ストリング テーブル]** エントリをダブルクリックします。
 
@@ -187,7 +188,7 @@ ms.locfileid: "87222772"
         TEMP_LINE2);
     ```
 
-アプリケーションをコンパイルして実行します。 2 つのタスク ダイアログ ボックスが表示されます。 最初のダイアログボックスは、 **CTaskDialog プロシージャに機能を追加するため**のです。2番目のダイアログボックスは、最後の手順からのものです。
+アプリケーションをコンパイルして実行します。 2 つのタスク ダイアログ ボックスが表示されます。 最初のダイアログボックスは、 **CTaskDialog プロシージャに機能を追加するため** のです。2番目のダイアログボックスは、最後の手順からのものです。
 
 これらの例では、で使用できるすべてのオプションについては説明しません `CTaskDialog` が、作業を開始するには役立ちます。 このクラスの詳細については、「 [CTaskDialog Class](../mfc/reference/ctaskdialog-class.md) 」を参照してください。
 

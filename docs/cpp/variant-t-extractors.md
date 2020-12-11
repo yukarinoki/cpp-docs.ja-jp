@@ -1,4 +1,5 @@
-﻿---
+---
+description: '詳細情報: _variant_t エクストラクター'
 title: _variant_t 抽出
 ms.date: 11/04/2016
 f1_keywords:
@@ -48,12 +49,12 @@ helpviewer_keywords:
 - operator BYTE
 - operator IUnknown
 ms.assetid: 33c1782f-045a-4673-9619-1d750efc83a9
-ms.openlocfilehash: a1b7c713b5d82ff54250b622f2d4afe17abac468
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 55a02fdf422388b0e44a9aad77e86f7a76e80e3b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87185607"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97161599"
 ---
 # <a name="_variant_t-extractors"></a>_variant_t 抽出
 
@@ -99,17 +100,17 @@ operator unsigned __int64() const;
 
 - **OPERATOR CY ()** オブジェクトを抽出 `CY` します。
 
-- **bool () 演算子**値を抽出 **`bool`** します。
+- **bool () 演算子** 値を抽出 **`bool`** します。
 
 - **演算子 DECIMAL ()** 値を抽出 `DECIMAL` します。
 
-- **BYTE () 演算子**値を抽出 `BYTE` します。
+- **BYTE () 演算子** 値を抽出 `BYTE` します。
 
 - **operator _bstr_t ()** オブジェクトにカプセル化された文字列を抽出し `_bstr_t` ます。
 
-- **Operator IDispatch \* ()** は、カプセル化されたからディスパッチインターフェイスポインターを抽出 `VARIANT` します。 `AddRef`は結果のポインターに対して呼び出されるため、を呼び出すと `Release` 解放されます。
+- **Operator IDispatch \* ()** は、カプセル化されたからディスパッチインターフェイスポインターを抽出 `VARIANT` します。 `AddRef` は結果のポインターに対して呼び出されるため、を呼び出すと `Release` 解放されます。
 
-- **Operator IUnknown \* ()** は、カプセル化されたから COM インターフェイスポインターを抽出 `VARIANT` します。 `AddRef`は結果のポインターに対して呼び出されるため、を呼び出すと `Release` 解放されます。
+- **Operator IUnknown \* ()** は、カプセル化されたから COM インターフェイスポインターを抽出 `VARIANT` します。 `AddRef` は結果のポインターに対して呼び出されるため、を呼び出すと `Release` 解放されます。
 
 **Microsoft 固有の仕様はここまで**
 

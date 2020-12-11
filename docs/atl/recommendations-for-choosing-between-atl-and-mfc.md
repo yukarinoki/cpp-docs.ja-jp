@@ -1,32 +1,33 @@
 ---
+description: '詳細情報: ATL と MFC の選択に関する推奨事項'
 title: ATL と MFC の選択に関する推奨事項
 ms.date: 11/04/2016
 helpviewer_keywords:
 - MFC, ATL support
 - ATL, vs. MFC
 ms.assetid: 269325bb-11a8-4330-ad2b-a14a2458679e
-ms.openlocfilehash: e4e51f81bbdc54ff09980acfba22037df77abac9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 506df04ebbd3bc9079e1d40cf14773d9d9a6bd1a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62261339"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97159155"
 ---
 # <a name="recommendations-for-choosing-between-atl-and-mfc"></a>ATL と MFC の選択に関する推奨事項
 
-コンポーネントおよびアプリケーションを開発する場合は、2 つの方法のことができます: ATL および MFC (Microsoft Foundation Class ライブラリ)。
+コンポーネントとアプリケーションを開発する場合は、ATL と MFC (Microsoft Foundation Class ライブラリ) の2つの方法から選択できます。
 
-## <a name="using-atl"></a>ATL を使用します。
+## <a name="using-atl"></a>ATL の使用
 
-ATL は、C++ では、COM コンポーネントを作成して、小さなフット プリントの管理の両方に高速で簡単な方法です。 ATL を使用すると、すべての MFC を自動的に提供する組み込みの機能を必要としない場合、コントロールを作成します。
+ATL は、C++ で COM コンポーネントを作成し、小さなフットプリントを維持するための高速で簡単な方法です。 MFC が自動的に提供するすべての組み込み機能を必要としない場合は、ATL を使用してコントロールを作成します。
 
-## <a name="using-mfc"></a>MFC を使用します。
+## <a name="using-mfc"></a>使用 (MFC を)
 
-MFC では、完全なアプリケーション、ActiveX コントロール、およびアクティブなドキュメントを作成できます。 場合、MFC でのコントロールが既に MFC での開発を続行したい場合があります。 新しいコントロールを作成する場合は、すべての MFC の組み込み機能を必要としない場合は、ATL を使用して検討してください。
+MFC では、完全なアプリケーション、ActiveX コントロール、およびアクティブなドキュメントを作成できます。 MFC を使用して既にコントロールを作成している場合は、MFC で開発を続行することもできます。 新しいコントロールを作成する場合は、MFC の組み込み機能のすべてが不要な場合は、ATL の使用を検討してください。
 
-## <a name="using-atl-in-an-mfc-project"></a>MFC プロジェクトで ATL を使用します。
+## <a name="using-atl-in-an-mfc-project"></a>MFC プロジェクトでの ATL の使用
 
-ウィザードを実行して既存の MFC プロジェクトで ATL を使用するためのサポートを追加することができます。 詳細については、次を参照してください。 [MFC プロジェクトへの ATL サポートの追加](../mfc/reference/adding-atl-support-to-your-mfc-project.md)します。
+ウィザードを実行して、既存の MFC プロジェクトで ATL を使用するためのサポートを追加できます。 詳細については、「 [MFC プロジェクトへの ATL サポートの追加](../mfc/reference/adding-atl-support-to-your-mfc-project.md)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 
