@@ -1,5 +1,6 @@
 ---
-title: _U_RECTクラス
+description: '詳細情報: _U_RECT クラス'
+title: _U_RECT クラス
 ms.date: 11/04/2016
 f1_keywords:
 - ATL::_U_RECT
@@ -9,16 +10,16 @@ helpviewer_keywords:
 - U_RECT class
 - _U_RECT class
 ms.assetid: 5f880a2d-09cf-4327-bf32-a3519c4dcd63
-ms.openlocfilehash: 8a4d5b2a770b3f0ecfe10be0fbad22a702aa0531
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: b3720107d1b64f930b4c64dff269de041d9b928c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81325809"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97157608"
 ---
-# <a name="_u_rect-class"></a>_U_RECTクラス
+# <a name="_u_rect-class"></a>_U_RECT クラス
 
-この引数アダプター クラスでは`RECT`、ポインターまたは参照をポインターの観点から実装された関数に渡すことができます。
+この引数アダプタークラスを使用すると、ポインター `RECT` または参照を、ポインターの観点から実装された関数に渡すことができます。
 
 > [!IMPORTANT]
 > このクラスとそのメンバーは、Windows ランタイムで実行されるアプリケーションでは使用できません。
@@ -35,33 +36,33 @@ class _U_RECT
 
 |名前|説明|
 |----------|-----------------|
-|[_U_RECT::_U_RECT](#_u_rect___u_rect)|コンストラクターです。|
+|[_U_RECT:: _U_RECT](#_u_rect___u_rect)|コンストラクターです。|
 
 ### <a name="public-data-members"></a>パブリック データ メンバー
 
 |名前|説明|
 |----------|-----------------|
-|[_U_RECT::m_lpRect](#_u_rect__m_lprect)|へのポインタです`RECT`。|
+|[_U_RECT:: m_lpRect](#_u_rect__m_lprect)|へのポインター `RECT` 。|
 
 ## <a name="remarks"></a>解説
 
-このクラスは、2 つのコンストラクター オーバーロードを定義 **&**`LPRECT`します。 最初のコンストラクターは、クラスの単一のデータ メンバー m_lpRectに参照引数のアドレス[を](#_u_rect__m_lprect)格納します。 ポインター コンストラクターの引数は、変換なしで直接格納されます。
+クラスは、2つのコンストラクターオーバーロードを定義します。1つは **RECT&** 引数を受け取り、もう1つは引数を受け取り `LPRECT` ます。 1つ目のコンストラクターは、クラスの単一のデータメンバーである [m_lpRect](#_u_rect__m_lprect)に参照引数のアドレスを格納します。 ポインターコンストラクターへの引数は、変換せずに直接格納されます。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-**ヘッダー:** atlwin.h
+**ヘッダー:** atlwin. h
 
-## <a name="_u_rectm_lprect"></a><a name="_u_rect__m_lprect"></a>_U_RECT::m_lpRect
+## <a name="_u_rectm_lprect"></a><a name="_u_rect__m_lprect"></a> _U_RECT:: m_lpRect
 
-クラスは、パブリック`LPRECT`データ メンバーとして、コンストラクターのいずれかに渡される値を保持します。
+クラスは、そのコンストラクターのいずれかに、パブリックデータメンバーとして渡された値を保持し `LPRECT` ます。
 
 ```
 LPRECT m_lpRect;
 ```
 
-## <a name="_u_rect_u_rect"></a><a name="_u_rect___u_rect"></a>_U_RECT::_U_RECT
+## <a name="_u_rect_u_rect"></a><a name="_u_rect___u_rect"></a> _U_RECT:: _U_RECT
 
-参照引数のアドレスは、クラスの単一のデータ メンバー [m_lpRect](#_u_rect__m_lprect)に格納されます。
+参照引数のアドレスは、クラスの単一のデータメンバーである [m_lpRect](#_u_rect__m_lprect)に格納されます。
 
 ```
 _U_RECT(RECT& rc);
@@ -70,15 +71,15 @@ _U_RECT(LPRECT lpRect);
 
 ### <a name="parameters"></a>パラメーター
 
-*Rc*<br/>
+*リターン*<br/>
 `RECT` 参照。
 
-*Lprect*<br/>
+*lpRect*<br/>
 `RECT`ポインター。
 
 ### <a name="remarks"></a>解説
 
-ポインター コンストラクターの引数は、変換なしで直接格納されます。
+ポインターコンストラクターへの引数は、変換せずに直接格納されます。
 
 ## <a name="see-also"></a>関連項目
 

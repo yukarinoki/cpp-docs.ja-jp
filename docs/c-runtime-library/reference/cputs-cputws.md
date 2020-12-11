@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: _cputs、_cputws'
 title: _cputs、_cputws
 ms.date: 4/2/2020
 api_name:
@@ -36,12 +37,12 @@ helpviewer_keywords:
 - console, sending strings to
 - cputws function
 ms.assetid: ec418484-0f8d-43ec-8d8b-198a556c659e
-ms.openlocfilehash: 469b39e4e08f13af8d8ac3e679ed55c7afb240d2
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 7a519064b2a4318b5064074fbe9a0f09a3708d01
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82917602"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97155918"
 ---
 # <a name="_cputs-_cputws"></a>_cputs、_cputws
 
@@ -63,18 +64,18 @@ int _cputws(
 
 ### <a name="parameters"></a>パラメーター
 
-*引数*<br/>
+*str*<br/>
 出力する文字列。
 
 ## <a name="return-value"></a>戻り値
 
-成功した場合、 **_cputs**は0を返します。 関数が失敗した場合は 0 以外の値を返します。
+成功した場合、 **_cputs** は0を返します。 関数が失敗した場合は 0 以外の値を返します。
 
 ## <a name="remarks"></a>解説
 
-**_Cputs**関数は、 *str*が指す null で終わる文字列をコンソールに直接書き込みます。 "復帰 - 改行" (CR-LF) の組み合わせは文字列に自動的に追加されません。
+**_Cputs** 関数は、 *str* が指す null で終わる文字列をコンソールに直接書き込みます。 "復帰 - 改行" (CR-LF) の組み合わせは文字列に自動的に追加されません。
 
-この関数は、そのパラメーターを検証します。 *Str*が**NULL**の場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、 **errno**は**EINVAL**に設定され、-1 が返されます。
+この関数は、そのパラメーターを検証します。 *Str* が **NULL** の場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、 **errno** は **EINVAL** に設定され、-1 が返されます。
 
 既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
@@ -86,7 +87,7 @@ int _cputws(
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|オプション ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|オプション ヘッダー|
 |-------------|---------------------|---------------------|
 |**_cputs**|\<conio.h>|\<errno.h>|
 |**_cputws**|\<conio.h>|\<errno.h>|

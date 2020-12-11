@@ -1,16 +1,17 @@
 ---
+description: 詳細については、CToolTipCtrl の使用に関するページをご覧ください。
 title: CToolTipCtrl の使い方
 ms.date: 11/04/2016
 helpviewer_keywords:
 - CToolTipCtrl class [MFC], creating tool tips
 - CToolTipCtrl class
 ms.assetid: 8fc58a04-4792-4223-a092-d349d11344da
-ms.openlocfilehash: 9a750a9927f5cf36cb0232b3ce1bac1720f7020f
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 7cc9dfc28435f77a74ac1fcac230332398ebfb5f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79442202"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97154592"
 ---
 # <a name="using-ctooltipctrl"></a>CToolTipCtrl の使い方
 
@@ -18,15 +19,15 @@ ms.locfileid: "79442202"
 
 ## <a name="what-do-you-want-to-know-more-about"></a>詳細については、次を参照してください。
 
-- [ツール ヒントの作成方法](../mfc/methods-of-creating-tool-tips.md)
+- [ツールヒントを作成する方法](../mfc/methods-of-creating-tool-tips.md)
 
-- [ツール ヒント コントロールの設定値](../mfc/settings-for-the-tool-tip-control.md)
+- [ツールヒントコントロールの設定](../mfc/settings-for-the-tool-tip-control.md)
 
-- [CToolTipCtrl を使用して CToolTipCtrl オブジェクトを作成および操作する方法](../mfc/using-ctooltipctrl-to-create-and-manipulate-a-ctooltipctrl-object.md)
+- [CToolTipCtrl を使用して CToolTipCtrl オブジェクトを作成および操作する](../mfc/using-ctooltipctrl-to-create-and-manipulate-a-ctooltipctrl-object.md)
 
-- [ツール ヒント コントロールの操作](../mfc/manipulating-the-tool-tip-control.md)
+- [ツールヒントコントロールの操作](../mfc/manipulating-the-tool-tip-control.md)
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [CToolBarCtrl の使い方](../mfc/using-ctoolbarctrl.md)<br/>
 [コントロール](../mfc/controls-mfc.md)

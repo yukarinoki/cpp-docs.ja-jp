@@ -1,23 +1,24 @@
 ---
-title: ATL プロジェクトで MFC サポート
+description: 詳細については、ATL プロジェクトでの MFC のサポートに関するページを参照してください。
+title: ATL プロジェクトでの MFC のサポート
 ms.date: 11/04/2016
 f1_keywords:
 - vc.atl.addmfc
 helpviewer_keywords:
 - ATL projects, MFC support
 ms.assetid: f90b4276-cb98-4c11-902c-9ebcfe6f954b
-ms.openlocfilehash: 0aece6805f1de987b0164f405e50b99fd706fef4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8614bfdd5320e0ecdf34cc96251fa8a20f2dede9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62275426"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97157920"
 ---
-# <a name="mfc-support-in-atl-projects"></a>ATL プロジェクトで MFC サポート
+# <a name="mfc-support-in-atl-projects"></a>ATL プロジェクトでの MFC のサポート
 
-選択した場合**サポート MFC** ATL プロジェクト ウィザードで、プロジェクトは、MFC アプリケーション オブジェクト (クラス) としてアプリケーションを宣言します。 プロジェクトが MFC ライブラリを初期化し、クラスをインスタンス化します (クラス*ProjName*) から派生する[CWinApp](../../mfc/reference/cwinapp-class.md)します。
+ATL プロジェクトウィザードで [サポート] [ **mfc** ] を選択した場合、プロジェクトは mfc アプリケーションオブジェクト (クラス) としてアプリケーションを宣言します。 プロジェクトは、MFC ライブラリを初期化し、 [CWinApp](../../mfc/reference/cwinapp-class.md)から派生したクラス (クラス *ProjName*) をインスタンス化します。
 
-このオプションは、属性なし ATL DLL プロジェクトにのみ使用できます。
+このオプションは、属性のない ATL DLL プロジェクトでのみ使用できます。
 
 ```
 class CProjNameApp : public CWinApp
@@ -48,10 +49,10 @@ int CProjNameApp::ExitInstance()
 }
 ```
 
-アプリケーションのオブジェクト クラスを表示することができ、その`InitInstance`と`ExitInstance`クラス ビュー内の関数。
+クラスビューでは、アプリケーションオブジェクトクラスとその `InitInstance` 関数と関数を表示でき `ExitInstance` ます。
 
 ## <a name="see-also"></a>関連項目
 
 [クラスの追加](../../ide/adding-a-class-visual-cpp.md)<br/>
 [ATL プロジェクトの作成](../../atl/reference/creating-an-atl-project.md)<br/>
-[ATL プロジェクトの既定の構成](../../atl/reference/default-atl-project-configurations.md)
+[既定の ATL プロジェクト構成](../../atl/reference/default-atl-project-configurations.md)

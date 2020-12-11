@@ -1,19 +1,20 @@
 ---
+description: 詳細については、IDispEventImpl の使用に関するページをご覧ください。
 title: IDispEventImpl の使用 (ATL)
 ms.date: 08/19/2019
 helpviewer_keywords:
 - IDispEventImpl class, using
 ms.assetid: 82d53b61-9d0d-45c5-aff9-2fafa468a9ca
-ms.openlocfilehash: 9684781ba99d96e2c58d450ee0ff892374e33aef
-ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
+ms.openlocfilehash: 4ddab52eeac3c409b32393e8b8b07a85019143c3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69630597"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97157179"
 ---
 # <a name="using-idispeventimpl"></a>IDispEventImpl の使用
 
-を使用`IDispEventImpl`してイベントを処理する場合は、次の操作を行う必要があります。
+を使用してイベントを処理する場合 `IDispEventImpl` は、次の操作を行う必要があります。
 
 - [IDispEventImpl](../atl/reference/idispeventimpl-class.md)からクラスを派生させます。
 
@@ -27,7 +28,7 @@ ms.locfileid: "69630597"
 
 ## <a name="example"></a>例
 
-次の例は、Word の`DocumentChange` **Application**オブジェクトによって発生するイベントを処理する方法を示しています。 このイベントは、 `ApplicationEvents`ディスパッチインターフェイスのメソッドとして定義されます。
+次の例は、 `DocumentChange` Word の **Application** オブジェクトによって発生するイベントを処理する方法を示しています。 このイベントは、ディスパッチインターフェイスのメソッドとして定義され `ApplicationEvents` ます。
 
 この例は、 [ATLEventHandling サンプル](../overview/visual-cpp-samples.md)からのものです。
 
@@ -47,7 +48,7 @@ methods:
 };
 ```
 
-この例で`#import`は、を使用して、Word のタイプライブラリから必要なヘッダーファイルを生成します。 他のバージョンの Word でこの例を使用する場合は、正しい mso dll ファイルを指定する必要があります。 たとえば、Office 2000 には mso9 が用意されており、OfficeXP には mso.dll が用意されています。 このコードは、 *.pch* (Visual Studio 2017 以前の*stdafx.h* ) から単純化されています。
+この例では、を使用して `#import` 、Word のタイプライブラリから必要なヘッダーファイルを生成します。 他のバージョンの Word でこの例を使用する場合は、正しい mso dll ファイルを指定する必要があります。 たとえば、Office 2000 では mso9.dll が提供され、OfficeXP は mso.dll を提供します。 このコードは、 *.pch* (Visual Studio 2017 以前の *stdafx.h* ) から単純化されています。
 
 [!code-cpp[NVC_ATL_EventHandlingSample#1](../atl/codesnippet/cpp/using-idispeventimpl_1.h)]
 

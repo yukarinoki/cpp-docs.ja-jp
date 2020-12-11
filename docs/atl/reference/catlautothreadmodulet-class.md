@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: CAtlAutoThreadModuleT クラス'
 title: CAtlAutoThreadModuleT クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlAutoThreadModuleT class
 ms.assetid: ae1667c6-3fb8-47bc-b35d-9ea5e9896d7f
-ms.openlocfilehash: 7308e3a51c531fbe942e2df326c03273eeb326e2
-ms.sourcegitcommit: 2bc15c5b36372ab01fa21e9bcf718fa22705814f
+ms.openlocfilehash: ad55c78488567c12477c427b99a527b8154ddd22
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82168724"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97158414"
 ---
 # <a name="catlautothreadmodulet-class"></a>CAtlAutoThreadModuleT クラス
 
@@ -37,7 +38,7 @@ class ATL_NO_VTABLE CAtlAutoThreadModuleT : public IAtlAutoThreadModule
 COM サーバーを実装するクラス。
 
 *ThreadAllocator*<br/>
-スレッド選択を管理するクラス。 既定値は[CComSimpleThreadAllocator](../../atl/reference/ccomsimplethreadallocator-class.md)です。
+スレッド選択を管理するクラス。 既定値は [CComSimpleThreadAllocator](../../atl/reference/ccomsimplethreadallocator-class.md)です。
 
 *dwWait*<br/>
 タイムアウト間隔をミリ秒単位で指定します。 既定値は無限です。これは、メソッドのタイムアウト間隔が経過しないことを意味します。
@@ -52,10 +53,10 @@ COM サーバーを実装するクラス。
 
 ## <a name="remarks"></a>解説
 
-[CAtlAutoThreadModule](../../atl/reference/catlautothreadmodule-class.md)クラスは、スレッド`CAtlAutoThreadModuleT`プールされたアパートメントモデルの COM サーバーを実装するためにから派生します。 互換性のために残されているクラス[CComAutoThreadModule](../../atl/reference/ccomautothreadmodule-class.md)を置き換えます。
+[CAtlAutoThreadModule](../../atl/reference/catlautothreadmodule-class.md)クラスは、 `CAtlAutoThreadModuleT` スレッドプールされたアパートメントモデルの COM サーバーを実装するためにから派生します。 互換性のために残されているクラス [CComAutoThreadModule](../../atl/reference/ccomautothreadmodule-class.md)を置き換えます。
 
 > [!NOTE]
-> このクラスは DLL では使用しないでください。既定の*Dwwait*値は無限であるため、dll がアンロードされるとデッドロックが発生します。
+> このクラスは DLL では使用しないでください。既定の *Dwwait* 値は無限であるため、dll がアンロードされるとデッドロックが発生します。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -63,11 +64,11 @@ COM サーバーを実装するクラス。
 
 `CAtlAutoThreadModuleT`
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** atlbase. h
 
-## <a name="catlautothreadmoduletgetdefaultthreads"></a><a name="getdefaultthreads"></a>CAtlAutoThreadModuleT::GetDefaultThreads
+## <a name="catlautothreadmoduletgetdefaultthreads"></a><a name="getdefaultthreads"></a> CAtlAutoThreadModuleT::GetDefaultThreads
 
 この静的関数は、プロセッサの数に基づいて、実行可能モジュールのスレッドの最大数を動的に計算して返します。
 

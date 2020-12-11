@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: IThreadPoolConfig インターフェイス'
 title: IThreadPoolConfig インターフェイス
 ms.date: 11/04/2016
 f1_keywords:
@@ -11,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - IThreadPoolConfig interface
 ms.assetid: 69e642bf-6925-46e6-9a37-cce52231b1cc
-ms.openlocfilehash: cba82055c292fc966dc2328773cce4aa64d45a64
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 143b456b08f7c5a14f99739cfe6bf424a3ee4baf
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88835429"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97158011"
 ---
 # <a name="ithreadpoolconfig-interface"></a>IThreadPoolConfig インターフェイス
 
@@ -47,7 +48,7 @@ __interface
 
 このインターフェイスは、 [CThreadPool](../../atl/reference/cthreadpool-class.md)によって実装されます。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** atlutil. h
 
@@ -106,9 +107,9 @@ STDMETHOD(SetSize)int nNumThreads);
 *nNumThreads*<br/>
 プール内の要求されたスレッド数。
 
-*Nnumthreads*が負の場合は、スレッドの合計数を取得するために、その絶対値にマシンのプロセッサ数を掛けた値が乗算されます。
+*Nnumthreads* が負の場合は、スレッドの合計数を取得するために、その絶対値にマシンのプロセッサ数を掛けた値が乗算されます。
 
-*Nnumthreads*が0の場合、ATLS_DEFAULT_THREADSPERPROC には、スレッドの合計数を取得するために、マシン内のプロセッサ数が乗算されます。
+*Nnumthreads* が0の場合、ATLS_DEFAULT_THREADSPERPROC には、スレッドの合計数を取得するために、マシン内のプロセッサ数が乗算されます。
 
 ### <a name="return-value"></a>戻り値
 

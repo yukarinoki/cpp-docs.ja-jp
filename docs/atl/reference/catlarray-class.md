@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: CAtlArray クラス'
 title: CAtlArray クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -25,12 +26,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlArray class
 ms.assetid: 0b503aa8-2357-40af-a326-6654bf1da098
-ms.openlocfilehash: c4a4cd509a5d3078c6587ba7b29179a68912a258
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 0ae3f5aef84cac64adba20ef438f5063abda098e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88833843"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97158427"
 ---
 # <a name="catlarray-class"></a>CAtlArray クラス
 
@@ -45,7 +46,7 @@ class CAtlArray
 
 ### <a name="parameters"></a>パラメーター
 
-*つまり*<br/>
+*E*<br/>
 配列に格納されるデータの型。
 
 *ETraits*<br/>
@@ -55,9 +56,9 @@ class CAtlArray
 
 ### <a name="methods"></a>メソッド
 
-|関数|説明|
+|機能|説明|
 |-|-|
-|[追加](#add)|要素を配列オブジェクトに追加するには、このメソッドを呼び出します。|
+|[[追加]](#add)|要素を配列オブジェクトに追加するには、このメソッドを呼び出します。|
 |[Append](#append)|ある配列の内容を別の配列の末尾に追加するには、このメソッドを呼び出します。|
 |[AssertValid](#assertvalid)|配列オブジェクトが有効であることを確認するには、このメソッドを呼び出します。|
 |[CAtlArray](#catlarray)|コンストラクターです。|
@@ -76,7 +77,7 @@ class CAtlArray
 |[SetAtGrow](#setatgrow)|配列オブジェクトの要素の値を設定するには、このメソッドを呼び出し、必要に応じて配列を展開します。|
 |[SetCount](#setcount)|配列オブジェクトのサイズを設定するには、このメソッドを呼び出します。|
 
-### <a name="operators"></a>演算子
+### <a name="operators"></a>オペレーター
 
 |演算子|説明|
 |-|-|
@@ -99,7 +100,7 @@ class CAtlArray
 
 詳細については、「 [ATL コレクションクラス](../../atl/atl-collection-classes.md)」を参照してください。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** atlcoll. h
 
@@ -333,7 +334,7 @@ void InsertArrayAt(size_t iStart, const CAtlArray<E, ETraits>* paNew);
 
 ### <a name="remarks"></a>解説
 
-配列*panew*の要素は、要素*iStart*から始まる配列オブジェクトにコピーされます。 既存の配列要素は、上書きされないように移動されます。
+配列 *panew* の要素は、要素から始まる配列オブジェクトにコピーされます。 既存の配列要素は、上書きされないように移動されます。
 
 デバッグビルドでは、 `CAtlArray` オブジェクトが有効でない場合、または *panew* ポインターが NULL または無効な場合に、そのオブジェクトが生成されます。
 
@@ -365,7 +366,7 @@ void InsertAt(size_t iElement, INARGTYPE element, size_t nCount = 1);
 
 ### <a name="remarks"></a>解説
 
-インデックス *Ielement*を開始位置として、配列に1つ以上の要素を挿入します。 既存の要素は、上書きされないように移動されます。
+インデックス *Ielement* を開始位置として、配列に1つ以上の要素を挿入します。 既存の要素は、上書きされないように移動されます。
 
 デバッグビルドでは、 `CAtlArray` オブジェクトが無効である場合、追加される要素の数が0の場合、または要素の組み合わせ数が大きすぎて配列に格納できない場合に、ATLASSERT が発生します。 リテールビルドでは、無効なパラメーターを渡すと、予測できない結果が発生する可能性があります。
 
@@ -541,7 +542,7 @@ void SetAtGrow(size_t iElement, INARGTYPE element);
 
 ### <a name="remarks"></a>解説
 
-インデックスが指す要素の値を置き換えます。 *Ielement*が配列の現在のサイズより大きい場合、 [CAtlArray:: setcount](#setcount)の呼び出しを使用して配列が自動的に増加します。 デバッグビルドでは、オブジェクトが有効でない場合に ATLASSERT が発生 `CAtlArray` します。 リテールビルドでは、無効なパラメーターが原因で予期しない結果が発生する可能性があります。
+インデックスが指す要素の値を置き換えます。 *Ielement* が配列の現在のサイズより大きい場合、 [CAtlArray:: setcount](#setcount)の呼び出しを使用して配列が自動的に増加します。 デバッグビルドでは、オブジェクトが有効でない場合に ATLASSERT が発生 `CAtlArray` します。 リテールビルドでは、無効なパラメーターが原因で予期しない結果が発生する可能性があります。
 
 ### <a name="example"></a>例
 

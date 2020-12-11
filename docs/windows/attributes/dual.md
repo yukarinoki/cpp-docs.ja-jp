@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: デュアル'
 title: dual (C++ COM 属性)
 ms.date: 10/02/2018
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - dual attribute
 ms.assetid: 5d4a9069-d819-42cd-ba56-bbcda17157d9
-ms.openlocfilehash: 4cc974bef46a403cbdc5b290f623acb06f40722f
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: d1e72bd787bc73042b4f4a180ea119712021edaf
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88845407"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97112025"
 ---
 # <a name="dual"></a>dual
 
@@ -25,7 +26,7 @@ ms.locfileid: "88845407"
 
 ## <a name="remarks"></a>解説
 
-**デュアル**C++ 属性がインターフェイスの前にあると、インターフェイスは生成された .idl ファイルのライブラリブロック内に配置されます。
+**デュアル** C++ 属性がインターフェイスの前にあると、インターフェイスは生成された .idl ファイルのライブラリブロック内に配置されます。
 
 ## <a name="example"></a>例
 
@@ -53,7 +54,7 @@ __interface IStatic : IDispatch
 [cpp_quote("#include file.h")];
 ```
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 | 属性コンテキスト | 値 |
 |-|-|

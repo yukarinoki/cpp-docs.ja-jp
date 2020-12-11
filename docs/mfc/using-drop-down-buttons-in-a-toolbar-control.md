@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「ツールバーコントロールでの Drop-Down ボタンの使用」を参照してください。
 title: ツール バー コントロールでのドロップダウン ボタンの使い方
 ms.date: 11/04/2016
 f1_keywords:
@@ -11,39 +12,39 @@ helpviewer_keywords:
 - TBSTYLE_EX_DRAWDDARROWS
 - TBN_DROPDOWN notification [MFC]
 ms.assetid: b859f758-d2f6-40d9-9c26-0ff61993b9b2
-ms.openlocfilehash: 0bc4df4c07ec4b8bc5b488925cbb140609302186
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: a37f39397f6b6f66bed1ad1d2fbd9530b55f3d7b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81365064"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97154462"
 ---
 # <a name="using-drop-down-buttons-in-a-toolbar-control"></a>ツール バー コントロールでのドロップダウン ボタンの使い方
 
-標準のプッシュ ボタンに加えて、ツール バーにはドロップダウン ボタンを使用することもできます。 ドロップダウン ボタンは通常、付属の下矢印の存在によって示されます。
+ツールバーには、標準のプッシュボタンに加えて、ドロップダウンボタンを含めることもできます。 ドロップダウンボタンは、通常、下向き矢印が付いていることによって示されます。
 
 > [!NOTE]
-> アタッチされた下向き矢印は、TBSTYLE_EX_DRAWDDARROWS拡張スタイルが設定されている場合にのみ表示されます。
+> 接続された下矢印は TBSTYLE_EX_DRAWDDARROWS 拡張スタイルが設定されている場合にのみ表示されます。
 
-ユーザーがこの矢印 (または矢印が存在しない場合はボタン自体) をクリックすると、TBN_DROPDOWN通知メッセージがツール バー コントロールの親に送信されます。 この通知を処理して、ポップアップ メニューを表示できます。は、インターネット エクスプローラの動作と同様です。
+ユーザーがこの矢印をクリックすると (またはボタン自体が矢印がない場合)、TBN_DROPDOWN 通知メッセージが toolbar コントロールの親に送信されます。 この通知を処理し、ポップアップメニューを表示することができます。Internet Explorer の動作に似ています。
 
-次の手順は、ポップアップ メニューを使用してドロップダウン ツール バー ボタンを実装する方法を示しています。
+次の手順は、ポップアップメニューを含むドロップダウンツールバーボタンを実装する方法を示しています。
 
-### <a name="to-implement-a-drop-down-button"></a>ドロップダウン ボタンを実装するには
+### <a name="to-implement-a-drop-down-button"></a>ドロップダウンボタンを実装するには
 
-1. オブジェクトを`CToolBarCtrl`作成したら、次のコードを使用してTBSTYLE_EX_DRAWDDARROWSスタイルを設定します。
+1. `CToolBarCtrl`オブジェクトが作成されたら、次のコードを使用して TBSTYLE_EX_DRAWDDARROWS スタイルを設定します。
 
    [!code-cpp[NVC_MFCControlLadenDialog#36](../mfc/codesnippet/cpp/using-drop-down-buttons-in-a-toolbar-control_1.cpp)]
 
-1. ドロップダウン ボタンに設定する新しいボタン[([挿入]](../mfc/reference/ctoolbarctrl-class.md#insertbutton)ボタンまたは[[ボタンの追加](../mfc/reference/ctoolbarctrl-class.md#addbuttons)] ) または既存の ([SetButtonInfo](../mfc/reference/ctoolbarctrl-class.md#setbuttoninfo)) ボタンにTBSTYLE_DROPDOWNスタイルを設定します。 次の例は、オブジェクト内の既存のボタンを`CToolBarCtrl`変更する方法を示しています。
+1. ドロップダウンボタンとなる新規 ([Insertbutton](../mfc/reference/ctoolbarctrl-class.md#insertbutton) または [addbuttons](../mfc/reference/ctoolbarctrl-class.md#addbuttons)) または既存の ([SetButtonInfo](../mfc/reference/ctoolbarctrl-class.md#setbuttoninfo)) ボタンの TBSTYLE_DROPDOWN スタイルを設定します。 次の例は、オブジェクトの既存のボタンを変更する方法を示してい `CToolBarCtrl` ます。
 
    [!code-cpp[NVC_MFCControlLadenDialog#37](../mfc/codesnippet/cpp/using-drop-down-buttons-in-a-toolbar-control_2.cpp)]
 
-1. ツール バー オブジェクトの親クラスにTBN_DROPDOWN ハンドラーを追加します。
+1. ツールバーオブジェクトの親クラスに TBN_DROPDOWN ハンドラーを追加します。
 
    [!code-cpp[NVC_MFCControlLadenDialog#38](../mfc/codesnippet/cpp/using-drop-down-buttons-in-a-toolbar-control_3.cpp)]
 
-1. 新しいハンドラで、適切なポップアップメニューを表示します。 次のコードは、1 つのメソッドを示しています。
+1. 新しいハンドラーで、適切なポップアップメニューを表示します。 次のコードは、1つのメソッドを示しています。
 
    [!code-cpp[NVC_MFCControlLadenDialog#39](../mfc/codesnippet/cpp/using-drop-down-buttons-in-a-toolbar-control_4.cpp)]
 

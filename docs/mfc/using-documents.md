@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: ドキュメントの使用'
 title: ドキュメントの使い方
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -14,45 +15,45 @@ helpviewer_keywords:
 - printing [MFC], documents
 - writing to files [MFC]
 ms.assetid: f390d6d8-d0e1-4497-9b6a-435f7ce0776c
-ms.openlocfilehash: fb35d1731912b2e322bc61621f7900e0d98e1e72
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 486604733808fb027d6dd0fbf81bb670c85313f8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62411592"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97154501"
 ---
 # <a name="using-documents"></a>ドキュメントの使い方
 
-ドキュメントとビュー、共に作業。
+共同作業、ドキュメントとビュー:
 
-- 含む、管理、およびアプリケーションに固有の表示[データ](../mfc/managing-data-with-document-data-variables.md)します。
+- アプリケーション固有の [データ](../mfc/managing-data-with-document-data-variables.md)を格納、管理、および表示します。
 
-- 構成されるインターフェイスを提供[ドキュメント データ変数](../mfc/managing-data-with-document-data-variables.md)データを操作します。
+- データを操作するための [ドキュメントデータ変数](../mfc/managing-data-with-document-data-variables.md) で構成されるインターフェイスを提供します。
 
-- 参加[ファイルを読み書き](../mfc/serializing-data-to-and-from-files.md)します。
+- ファイルの [書き込みと読み取り](../mfc/serializing-data-to-and-from-files.md)に参加します。
 
-- 参加[印刷](../mfc/role-of-the-view-in-printing.md)します。
+- [印刷](../mfc/role-of-the-view-in-printing.md)に参加します。
 
-- [処理](../mfc/handling-commands-in-the-document.md)のほとんどのアプリケーションのコマンドおよびメッセージ。
+- アプリケーションのほとんどのコマンドとメッセージを[処理](../mfc/handling-commands-in-the-document.md)します。
 
-ドキュメントは、データの管理に特に関連します。 通常、ドキュメント クラスのメンバー変数で、データを格納します。 ビューでは、これらの変数を使用して、表示用にデータをアクセスし、更新します。 ドキュメントの既定のシリアル化メカニズムでは、ファイルを送受信するデータの読み書きを管理します。 また、ドキュメントは、コマンド (ただし、WM_COMMAND 以外の Windows メッセージされません) を処理していることもできます。
+このドキュメントは、特にデータの管理に関連しています。 通常は、ドキュメントクラスのメンバー変数にデータを格納します。 ビューでは、これらの変数を使用して、表示と更新のためにデータにアクセスします。 ドキュメントの既定のシリアル化機構は、ファイルとの間でのデータの読み取りと書き込みを管理します。 ドキュメントでは、コマンドを処理することもできます (ただし、WM_COMMAND 以外の Windows メッセージは処理できません)。
 
-## <a name="what-do-you-want-to-know-more-about"></a>方法については、するして操作を行います
+## <a name="what-do-you-want-to-know-more-about"></a>詳細については、次を参照してください。
 
-- [CDocument からドキュメント クラスの派生](../mfc/deriving-a-document-class-from-cdocument.md)
+- [CDocument からのドキュメント クラスの派生](../mfc/deriving-a-document-class-from-cdocument.md)
 
-- [ドキュメント データ変数を使ったデータの管理](../mfc/managing-data-with-document-data-variables.md)
+- [ドキュメント データ変数を使ったデータ管理](../mfc/managing-data-with-document-data-variables.md)
 
-- [ファイルとデータをシリアル化します。](../mfc/serializing-data-to-and-from-files.md)
+- [データのファイルへのシリアル化](../mfc/serializing-data-to-and-from-files.md)
 
 - [シリアル化機構のバイパス](../mfc/bypassing-the-serialization-mechanism.md)
 
-- [ドキュメント内のコマンドの処理](../mfc/handling-commands-in-the-document.md)
+- [ドキュメントでのコマンドの処理](../mfc/handling-commands-in-the-document.md)
 
-- [でも実質的メンバー関数は、](../mfc/reference/cdocument-class.md#onnewdocument)
+- [OnNewDocument メンバー関数](../mfc/reference/cdocument-class.md#onnewdocument)
 
-- [DeleteContents メンバー関数は、](../mfc/reference/cdocument-class.md#deletecontents)
+- [DeleteContents メンバー関数](../mfc/reference/cdocument-class.md#deletecontents)
 
 ## <a name="see-also"></a>関連項目
 
-[ドキュメント/ビュー アーキテクチャ](../mfc/document-view-architecture.md)
+[ドキュメント/ビューアーキテクチャ](../mfc/document-view-architecture.md)

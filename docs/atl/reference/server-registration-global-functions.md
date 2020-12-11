@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「サーバー登録のグローバル関数」を参照してください。
 title: サーバー登録のグローバル関数
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,12 +9,12 @@ f1_keywords:
 - atlbase/ATL::AtlComModuleRevokeClassObjects
 - atlbase/ATL::AtlComModuleGetClassObject
 ms.assetid: c2f0a35d-857c-4538-a44d-c4ea0db63b06
-ms.openlocfilehash: 4a84c311e34f1bc37b2f51e2152b6fcf2e46e2a3
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 7841c162c2c7c0c93cd8edcd8fd6d78ae4bb2b1e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88835221"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97157738"
 ---
 # <a name="server-registration-global-functions"></a>サーバー登録のグローバル関数
 
@@ -30,7 +31,7 @@ ms.locfileid: "88835221"
 |[AtlComModuleRevokeClassObjects](#atlcommodulerevokeclassobjects)|この関数は、COM モジュールからクラスオブジェクトを取り消すために呼び出されます。|
 |[AtlComModuleGetClassObject](#atlcommodulegetclassobject)|この関数は、クラスオブジェクトを取得するために呼び出されます。|
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** atlbase. h
 
@@ -62,7 +63,7 @@ COM モジュールへのポインター。
 
 ### <a name="remarks"></a>解説
 
-`AtlComModuleRegisterServer` ATL によって自動生成されるオブジェクトマップをウォークし、マップ内の各オブジェクトを登録します。 *Pclsid*が NULL でない場合は、 *pclsid*によって参照されるオブジェクトのみが登録されます。それ以外の場合は、すべてのオブジェクトが登録されます。
+`AtlComModuleRegisterServer` ATL によって自動生成されるオブジェクトマップをウォークし、マップ内の各オブジェクトを登録します。 *Pclsid* が NULL でない場合は、 *pclsid* によって参照されるオブジェクトのみが登録されます。それ以外の場合は、すべてのオブジェクトが登録されます。
 
 この関数は、 [CAtlComModule:: RegisterServer](catlcommodule-class.md#registerserver)によって呼び出されます。
 
@@ -94,7 +95,7 @@ COM モジュールへのポインター。
 
 ### <a name="remarks"></a>解説
 
-`AtlComModuleUnregisterServer` ATL オブジェクトマップをウォークし、マップ内の各オブジェクトの登録を解除します。 *Pclsid*が NULL でない場合は、 *pclsid*によって参照されるオブジェクトのみが登録解除されます。それ以外の場合は、すべてのオブジェクトが登録解除されます。
+`AtlComModuleUnregisterServer` ATL オブジェクトマップをウォークし、マップ内の各オブジェクトの登録を解除します。 *Pclsid* が NULL でない場合は、 *pclsid* によって参照されるオブジェクトのみが登録解除されます。それ以外の場合は、すべてのオブジェクトが登録解除されます。
 
 この関数は、 [CAtlComModule:: UnregisterServer](catlcommodule-class.md#unregisterserver)によって呼び出されます。
 
@@ -173,7 +174,7 @@ COM モジュールへのポインター。
 要求されたインターフェイスの IID。
 
 *ppv*<br/>
-*Riid*によって識別されるインターフェイスポインターへのポインター。 オブジェクトがこのインターフェイスをサポートしていない場合、 *ppv* は NULL に設定されます。
+*Riid* によって識別されるインターフェイスポインターへのポインター。 オブジェクトがこのインターフェイスをサポートしていない場合、 *ppv* は NULL に設定されます。
 
 ### <a name="return-value"></a>戻り値
 

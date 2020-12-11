@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: CAdapt クラス'
 title: CAdapt クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - '& operator, address-of operator'
 - CAdapt class
 ms.assetid: 0bb695a5-72fe-43d1-8f39-7e4da6e34765
-ms.openlocfilehash: 2ea8fc8a26642abf593c7f4df3928ff90e66e2b3
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 6c6ec1c40d430c2de64defb5ea7394a47b1d7a6f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87230001"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97158505"
 ---
 # <a name="cadapt-class"></a>CAdapt クラス
 
@@ -63,17 +64,17 @@ class CAdapt
 
 `CAdapt` は、オブジェクトのアドレス以外の値を返すために、アドレス演算子 (`operator &`) を再定義するクラスをラップするときに使用される簡単なテンプレートです。 このようなクラスの例としては、ATL の `CComBSTR`、`CComPtr`、および `CComQIPtr` クラス、そしてコンパイラ COM サポート クラスである `_com_ptr_t` が含まれます。 これらのクラスはすべて、アドレス演算子を再定義して、いずれかのデータメンバー (の場合は BSTR) のアドレス `CComBSTR` と、他のクラスの場合はインターフェイスポインターを返します。
 
-`CAdapt`主な役割は、クラス*T*によって定義されたアドレス演算子を非表示にすることです。ただし、適用されるクラスの特性は維持されます。 `CAdapt`この役割を果たしには、パブリックメンバー、型*t*の[m_T](#m_t)を保持し、変換演算子、比較演算子、およびコピーコンストラクターを定義します。これにより、の特殊化 `CAdapt` を型*t*のオブジェクトとして扱うことができます。
+`CAdapt`主な役割は、クラス *T* によって定義されたアドレス演算子を非表示にすることです。ただし、適用されるクラスの特性は維持されます。 `CAdapt`この役割を果たしには、パブリックメンバー、型 *t* の [m_T](#m_t)を保持し、変換演算子、比較演算子、およびコピーコンストラクターを定義します。これにより、の特殊化 `CAdapt` を型 *t* のオブジェクトとして扱うことができます。
 
 アダプター クラス `CAdapt` は、いくつかの container-style クラスで、含まれるオブジェクトのアドレスを address-of 演算子を使用して取得できることが想定されているために、役立ちます。 address-of 演算子の再定義によって、この要件に混乱が生じ、通常はコンパイル エラーが発生し、"単に動作" することが想定されているクラスで、適合されていない型の使用が妨げられることがあります。 `CAdapt` では、こうした問題を回避するための手段が提供されています。
 
-通常 container-style クラスでは、`CAdapt`、`CComBSTR`、`CComPtr`、または `CComQIPtr` オブジェクトを保存する場合に `_com_ptr_t` を使用します。 これは、C++11 Standard のサポート前には C++ Standard Library コンテナーで最も一般的に必要とされていましたが、C++11 Standard Library コンテナーは `operator&()` をオーバーロードした型と共に自動的に動作します。 標準ライブラリは、 [std:: addressof](../../standard-library/memory-functions.md#addressof)を内部的に使用してオブジェクトの真のアドレスを取得することで、これを実現します。
+通常 container-style クラスでは、`CAdapt`、`CComBSTR`、`CComPtr`、または `CComQIPtr` オブジェクトを保存する場合に `_com_ptr_t` を使用します。 これは、C++11 Standard のサポート前には C++ Standard Library コンテナーで最も一般的に必要とされていましたが、C++11 Standard Library コンテナーは `operator&()` をオーバーロードした型と共に自動的に動作します。 標準ライブラリは、 [std:: addressof](../../standard-library/memory-functions.md#addressof) を内部的に使用してオブジェクトの真のアドレスを取得することで、これを実現します。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** atlcomcli. h
 
-## <a name="cadaptcadapt"></a><a name="cadapt"></a>CAdapt::CAdapt
+## <a name="cadaptcadapt"></a><a name="cadapt"></a> CAdapt::CAdapt
 
 コンストラクターを使用すると、アダプターオブジェクトを既定で構築したり、適合する型のオブジェクトからコピーしたり、別のアダプターオブジェクトからコピーしたりすることができます。
 
@@ -93,7 +94,7 @@ CAdapt(CAdapt<T>&& rSrCA) noexcept; // (Visual Studio 2017)
 *rSrCA*<br/>
 新しく構築されたアダプターオブジェクトに、包含データをコピー (または移動) する必要があるアダプターオブジェクト。
 
-## <a name="cadaptm_t"></a><a name="m_t"></a>CAdapt:: m_T
+## <a name="cadaptm_t"></a><a name="m_t"></a> CAdapt:: m_T
 
 適用されているデータを保持します。
 
@@ -103,11 +104,11 @@ T m_T;
 
 ### <a name="remarks"></a>解説
 
-この **`public`** データメンバーには、 [Operator const t&](#operator_const_t_amp)および[operator t&](#operator_t_amp)を使用して直接または間接的にアクセスできます。
+この **`public`** データメンバーには、 [Operator const t&](#operator_const_t_amp) および [operator t&](#operator_t_amp)を使用して直接または間接的にアクセスできます。
 
-## <a name="cadaptoperator-const-tamp"></a><a name="operator_const_t_amp"></a>CAdapt:: operator const T&amp;
+## <a name="cadaptoperator-const-tamp"></a><a name="operator_const_t_amp"></a> CAdapt:: operator const T&amp;
 
-**`const`** [M_T](#m_t)メンバーへの参照を返します。これにより、アダプターオブジェクトを*T*型のオブジェクトとして扱うことができます。
+**`const`** [M_T](#m_t)メンバーへの参照を返します。これにより、アダプターオブジェクトを *T* 型のオブジェクトとして扱うことができます。
 
 ```cpp
 operator const T&() const;
@@ -117,9 +118,9 @@ operator const T&() const;
 
 **`const`** への参照 `m_T` 。
 
-## <a name="cadaptoperator-tamp"></a><a name="operator_t_amp"></a>CAdapt:: operator T&amp;
+## <a name="cadaptoperator-tamp"></a><a name="operator_t_amp"></a> CAdapt:: operator T&amp;
 
-[M_T](#m_t)メンバーへの参照を返します。これにより、アダプターオブジェクトを*T*型のオブジェクトとして扱うことができます。
+[M_T](#m_t)メンバーへの参照を返します。これにより、アダプターオブジェクトを *T* 型のオブジェクトとして扱うことができます。
 
 ```cpp
 operator T&();
@@ -129,9 +130,9 @@ operator T&();
 
 `m_T` への参照です。
 
-## <a name="cadaptoperator-lt"></a><a name="operator_lt"></a>CAdapt:: operator&lt;
+## <a name="cadaptoperator-lt"></a><a name="operator_lt"></a> CAdapt:: operator &lt;
 
-適用された型のオブジェクトと[m_T](#m_t)を比較します。
+適用された型のオブジェクトと [m_T](#m_t)を比較します。
 
 ```cpp
 bool operator<(const T& rSrc) const;
@@ -144,11 +145,11 @@ bool operator<(const T& rSrc) const;
 
 ### <a name="return-value"></a>戻り値
 
-`m_T`と*rsrc*の比較結果。
+`m_T`と *rsrc* の比較結果。
 
-## <a name="cadaptoperator-"></a><a name="operator_eq"></a>CAdapt:: operator =
+## <a name="cadaptoperator-"></a><a name="operator_eq"></a> CAdapt:: operator =
 
-代入演算子は、引数*Rsrc*をデータメンバー [m_T](#m_t)に代入し、現在のアダプターオブジェクトを返します。
+代入演算子は、引数 *Rsrc* をデータメンバー [m_T](#m_t) に代入し、現在のアダプターオブジェクトを返します。
 
 ```cpp
 CAdapt& operator= (const T& rSrc);
@@ -168,9 +169,9 @@ CAdapt& operator= (CAdapt<T>&& rSrCA) noexcept; // (Visual Studio 2017)
 
 現在のオブジェクトへの参照。
 
-## <a name="cadaptoperator-"></a><a name="operator_eq_eq"></a>CAdapt:: operator = =
+## <a name="cadaptoperator-"></a><a name="operator_eq_eq"></a> CAdapt:: operator = =
 
-適用された型のオブジェクトと[m_T](#m_t)を比較します。
+適用された型のオブジェクトと [m_T](#m_t)を比較します。
 
 ```cpp
 bool operator== (const T& rSrc) const;
@@ -183,7 +184,7 @@ bool operator== (const T& rSrc) const;
 
 ### <a name="return-value"></a>戻り値
 
-*M_T*と*rsrc*の比較結果。
+*M_T* と *rsrc* の比較結果。
 
 ## <a name="see-also"></a>関連項目
 

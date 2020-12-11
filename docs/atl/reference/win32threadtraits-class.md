@@ -1,5 +1,6 @@
 ---
-title: クラス 32 スレッドトレイツ
+description: '詳細情報: Win32ThreadTraits クラス'
+title: Win32ThreadTraits クラス
 ms.date: 11/04/2016
 f1_keywords:
 - Win32ThreadTraits
@@ -10,14 +11,14 @@ helpviewer_keywords:
 - threading [ATL], creation functions
 - Win32ThreadTraits class
 ms.assetid: 50279c38-eae1-4301-9ea6-97ccea580f3e
-ms.openlocfilehash: 64f02293508894a70f36c29d5032c9ba8f250c38
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 6dc752c5e8d527f9329c7f4274243a8561dd6339
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81325792"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97157595"
 ---
-# <a name="win32threadtraits-class"></a>クラス 32 スレッドトレイツ
+# <a name="win32threadtraits-class"></a>Win32ThreadTraits クラス
 
 このクラスは、Windows スレッドの作成関数を提供します。 スレッドが CRT 関数を使用しない場合は、このクラスを使用します。
 
@@ -36,27 +37,27 @@ class Win32ThreadTraits
 
 |名前|説明|
 |----------|-----------------|
-|[を使用します。](#createthread)|(静的)CRT 関数を使用しないスレッドを作成します。|
+|[Win32ThreadTraits:: CreateThread](#createthread)|雑音CRT 関数を使用しないスレッドを作成するには、この関数を呼び出します。|
 
 ## <a name="remarks"></a>解説
 
-スレッドの特徴は、特定の種類のスレッドの作成関数を提供するクラスです。 作成関数には、Windows [CreateThread](/windows/win32/api/processthreadsapi/nf-processthreadsapi-createthread)関数と同じシグネチャとセマンティクスがあります。
+スレッド特性は、特定の種類のスレッドに対して作成関数を提供するクラスです。 作成関数には、Windows の [CreateThread](/windows/win32/api/processthreadsapi/nf-processthreadsapi-createthread) 関数と同じシグネチャとセマンティクスがあります。
 
-スレッドの特徴は、次のクラスで使用されます。
+スレッドの特徴は、次のクラスによって使用されます。
 
 - [CThreadPool](../../atl/reference/cthreadpool-class.md)
 
-- [を行う](../../atl/reference/cworkerthread-class.md)
+- [CWorkerThread](../../atl/reference/cworkerthread-class.md)
 
-スレッドが CRT 関数を使用する場合は、代わりに[CRTThreadTraits を使用します](../../atl/reference/crtthreadtraits-class.md)。
+スレッドが CRT 関数を使用する場合は、代わりに [CRTThreadTraits](../../atl/reference/crtthreadtraits-class.md) を使用します。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-**ヘッダー:** atlbase.h
+**ヘッダー:** atlbase. h
 
-## <a name="win32threadtraitscreatethread"></a><a name="createthread"></a>を使用します。
+## <a name="win32threadtraitscreatethread"></a><a name="createthread"></a> Win32ThreadTraits:: CreateThread
 
-CRT 関数を使用しないスレッドを作成します。
+CRT 関数を使用しないスレッドを作成するには、この関数を呼び出します。
 
 ```
 static HANDLE CreateThread(
@@ -73,30 +74,30 @@ static HANDLE CreateThread(
 *lpsa*<br/>
 新しいスレッドのセキュリティ属性。
 
-*サイズを変更します。*<br/>
-新しいスレッドのスタック サイズ。
+*dwStackSize*<br/>
+新しいスレッドのスタックサイズ。
 
-*を実行します。*<br/>
-新しいスレッドのスレッド プロシージャ。
+*pfnThreadProc*<br/>
+新しいスレッドのスレッドプロシージャ。
 
-*pvパラム*<br/>
-スレッド プロシージャに渡すパラメーター。
+*pvParam*<br/>
+スレッドプロシージャに渡されるパラメーター。
 
-*フラグを作成します。*<br/>
-作成フラグ (0 またはCREATE_SUSPENDED)。
+*Dwのフラグ*<br/>
+作成フラグ (0 または CREATE_SUSPENDED)。
 
-*をクリックします。*<br/>
-[アウト]成功した場合に、新しく作成されたスレッドのスレッド ID を受け取る DWORD 変数のアドレス。
+*pdwThreadId*<br/>
+入出力成功した場合は、新しく作成されたスレッドのスレッド ID を受け取る DWORD 変数のアドレス。
 
 ### <a name="return-value"></a>戻り値
 
-新しく作成されたスレッドへのハンドルを返すか、失敗した場合は NULL を返します。 拡張エラー情報を取得するには[、GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror)を呼び出します。
+新しく作成されたスレッドへのハンドル、または失敗した場合は NULL を返します。 エラーの詳細情報を取得するには、 [GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror) を呼び出してください。
 
 ### <a name="remarks"></a>解説
 
-この関数のパラメーターの詳細については[、CreateThread](/windows/win32/api/processthreadsapi/nf-processthreadsapi-createthread)を参照してください。
+この関数のパラメーターの詳細については、「 [CreateThread](/windows/win32/api/processthreadsapi/nf-processthreadsapi-createthread) 」を参照してください。
 
-この関数は`CreateThread`、スレッドを作成するために呼び出します。
+この関数 `CreateThread` は、を呼び出してスレッドを作成します。
 
 ## <a name="see-also"></a>関連項目
 

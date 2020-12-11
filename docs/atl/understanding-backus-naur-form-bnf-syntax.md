@@ -1,16 +1,17 @@
 ---
+description: '詳細情報: Backus-Naur フォーム (BNF) 構文について'
 title: ATL レジストラーと Backus-Naur form (BNF) 構文
 ms.date: 05/14/2019
 helpviewer_keywords:
 - BNF notation
 - Backus-Naur form (BNF) syntax
 ms.assetid: 994bbef0-9077-4aa8-bdfe-b7e830af9acc
-ms.openlocfilehash: 0f07a39863b586d524d060dc3df7117e2c930b3e
-ms.sourcegitcommit: 2bc15c5b36372ab01fa21e9bcf718fa22705814f
+ms.openlocfilehash: 7f392d442c4d43865faf9e788f8bf69288673398
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82168710"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97157348"
 ---
 # <a name="understanding-backus-naur-form-bnf-syntax"></a>Backus-Naur form (BNF) 構文を理解する
 
@@ -22,19 +23,19 @@ ATL レジストラーで使用されるスクリプトは、このトピック�
 |&#124;|OR|
 |X+|1 つ以上の X。|
 |\[X]|X は省略可能です。 省略可能な区切り記号は \[] で示されています。|
-|すべての**太字**テキスト|文字列リテラル。|
-|すべての*斜体*テキスト|文字列リテラルを作成する方法。|
+|すべての **太字** テキスト|文字列リテラル。|
+|すべての *斜体* テキスト|文字列リテラルを作成する方法。|
 
 上記の表に示されているように、レジストラー スクリプトでは文字列リテラルが使用されます。 これらの値は、スクリプトに表示する必要がある実際のテキストです。 次の表で、ATL レジストラー スクリプトで使用される文字列リテラルについて説明します。
 
-|リテラル文字列|アクション|
+|文字列リテラル|アクション|
 |--------------------|------------|
 |**ForceRemove**|次のキー (存在する場合) を完全に削除してから再作成します。|
 |**NoRemove**|登録解除時に次のキーを削除しません。|
 |**val**|`<Key Name>` が実際には名前付きの値であることを指定します。|
 |**削除**|登録時に次のキーを削除します。|
-|**2$s**|次の値が文字列 (REG_SZ) であることを指定します。|
-|**a**|次の値がダブルワード (REG_DWORD) であることを指定します。|
+|**s**|次の値が文字列 (REG_SZ) であることを指定します。|
+|**d**|次の値がダブルワード (REG_DWORD) であることを指定します。|
 |**m**|次の値が複数行文字列 (REG_MULTI_SZ) であることを指定します。|
 |**b**|次の値がバイナリ値 (REG_BINARY) であることを指定します。|
 
@@ -44,31 +45,31 @@ ATL レジストラー スクリプトで表記と文字列リテラルがどの
 
 ### <a name="syntax-example-1"></a>構文例 1
 
-> \<レジストリ式>:: = \<キー> を追加します
+> \<registry expression> ::= \<Add Key>
 
 `registry expression` が `Add Key` と等しいことを指定します。
 
 ### <a name="syntax-example-2"></a>構文例 2
 
-> \<レジストリ式>:: = \<キーの追加> |\<キー> の削除
+> \<registry expression> ::= \<Add Key> | \<Delete Key>
 
 `registry expression` が `Add Key` または `Delete Key` と等しいことを指定します。
 
 ### <a name="syntax-example-3"></a>構文例 3
 
-> \<キー名>:: = '\<英数字>+ '
+> \<Key Name> ::= '\<AlphaNumeric>+'
 
-が 1 `Key Name`つ以上の`AlphaNumeric`値と等価であることを指定します。
+が1つ以上の値と等価であることを指定し `Key Name` `AlphaNumeric` ます。
 
 ### <a name="syntax-example-4"></a>構文例 4
 
-> \<キーの追加>:: = [**ForceRemove** | **noremove** | **val**]\<キー名>
+> \<Add Key>:: = [**ForceRemove**  |  **noremove**  |  **val**]\<Key Name>
 
 `Add Key` が `Key Name` と等しく、文字列リテラル、`ForceRemove`、`NoRemove`、および `val` が省略可能であることを指定します。
 
 ### <a name="syntax-example-5"></a>構文例 5
 
-> \<英数字>:: = *NULL 以外の任意の文字、つまり ASCII 0*
+> \<AlphaNumeric> :: = *NULL 以外の任意の文字、つまり ASCII 0*
 
 `AlphaNumeric` が任意の NULL 以外の文字と等しいことを指定します。
 
@@ -90,4 +91,4 @@ val 'testhex' = d '&H55'
 
 ## <a name="see-also"></a>関連項目
 
-[Creating Registrar Scripts](../atl/creating-registrar-scripts.md)
+[レジストラースクリプトの作成](../atl/creating-registrar-scripts.md)

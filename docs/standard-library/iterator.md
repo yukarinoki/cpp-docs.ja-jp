@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: &lt; iterator&gt;'
 title: '&lt;iterator&gt;'
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,18 +8,18 @@ f1_keywords:
 helpviewer_keywords:
 - iterator header
 ms.assetid: c61a3962-f3ed-411a-b5a3-e8b3c2b500bd
-ms.openlocfilehash: 08e2051db70ee1891c7b60860c7ea0b423855be5
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 9c40d46c5cde45baa66c8173d2b6d8f0186d1bc9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88841923"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97112064"
 ---
 # <a name="ltiteratorgt"></a>&lt;iterator&gt;
 
 反復子のプリミティブ、定義済みの反復子とストリーム反復子、およびサポート テンプレートをいくつか定義します。 定義済み反復子には、挿入アダプターとリバース アダプターが含まれます。 挿入反復子アダプターのクラスには、フロント、バック、汎用の 3 つがあります。 これには、コンテナーのメンバー関数の反復子が提供する上書きセマンティクスではなく、挿入セマンティクスが用意されています。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:**\<iterator>
 
@@ -44,7 +45,7 @@ Visual Studio では、C++ 標準ライブラリの反復子に、チェック�
 
 ## <a name="members"></a>メンバー
 
-### <a name="functions"></a>Functions
+### <a name="functions"></a>機能
 
 |名前|説明|
 |-|-|
@@ -70,7 +71,7 @@ Visual Studio では、C++ 標準ライブラリの反復子に、チェック�
 |[rend](../standard-library/iterator-functions.md#rend)||
 |[size](../standard-library/iterator-functions.md#size)||
 
-### <a name="operators"></a>演算子
+### <a name="operators"></a>オペレーター
 
 |名前|説明|
 |-|-|
@@ -96,7 +97,7 @@ Visual Studio では、C++ 標準ライブラリの反復子に、チェック�
 |[insert_iterator](../standard-library/insert-iterator-class.md)|クラステンプレートは、出力反復子オブジェクトを記述します。 このメソッドは、要素を型のコンテナーに挿入します。このコンテナーは、 `Container` コンテナーと呼ばれる保護されたオブジェクトを介してアクセスし `pointer` ます。 また、というクラスの保護されたオブジェクトも格納し `iterator` `Container::iterator` `iter` ます。|
 |[istream_iterator](../standard-library/istream-iterator-class.md)|クラステンプレートは、入力反復子オブジェクトを表します。 このクラスは、入力ストリームからクラスのオブジェクトを抽出 `Ty` します。これには、へのポインター型の、格納されているオブジェクトを介してアクセス `basic_istream` \<**Elem**, **Tr**> します。|
 |[istreambuf_iterator](../standard-library/istreambuf-iterator-class.md)|クラステンプレートは、入力反復子オブジェクトを表します。 このクラスは、出力ストリームバッファーにクラスの要素を挿入します。このバッファーは、格納されている `Elem` オブジェクトを介して、型 `pointer` にアクセス `basic_streambuf` \<**Elem**, **Tr**> します。|
-|[反](../standard-library/iterator-struct.md)|クラステンプレートは、すべての反復子の基本型として使用されます。|
+|[iterator](../standard-library/iterator-struct.md)|クラステンプレートは、すべての反復子の基本型として使用されます。|
 |[iterator_traits](../standard-library/iterator-traits-struct.md)|同じ方法で参照できるように、別の反復子の型に関連付けられているクリティカルな型を指定するテンプレート ヘルパー クラス。|
 |[move_iterator](../standard-library/move-iterator-class.md)|`move_iterator` オブジェクトには、型 `RandomIterator` のランダム アクセス反復子が格納されています。 これは、逆参照された場合を除いて、ランダム アクセス反復子と同じように動作します。 `operator*` の結果は `value_type&&:` に暗黙的にキャストされ、`rvalue reference` が作成されます。|
 |[ostream_iterator](../standard-library/ostream-iterator-class.md)|クラステンプレートは、出力反復子オブジェクトを記述します。 クラスのオブジェクトを `Type` 出力ストリームに挿入します。このストリームは、格納されているオブジェクトを介して `pointer` にアクセス `basic_ostream` \<**Elem**, **Tr**> します。|

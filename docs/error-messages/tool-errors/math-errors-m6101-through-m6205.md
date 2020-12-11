@@ -1,17 +1,18 @@
 ---
+description: '詳細情報: 数値演算エラー (Mxxxx)'
 title: 数値演算エラー
 ms.date: 04/16/2019
 ms.assetid: bdf3dc2a-d993-4f53-b0f2-9604e4914127
-ms.openlocfilehash: 7d89a7b9f89342b973307f592e59d05cfe44f84f
-ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
+ms.openlocfilehash: 1f2abfb2a2dff877dab55e8645e8c9ccde80d646
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64856702"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97155307"
 ---
 # <a name="math-errors-mxxxx"></a>数値演算エラー (Mxxxx)
 
-このセクションでは、実行時の浮動小数点数値演算ライブラリによって生成されるエラーの参照です。 数値演算の実行時エラーと警告があるフォーム M*xxxx*ここで、 *xxxx*は 4 桁の番号です。
+このセクションでは、ランタイムの浮動小数点数値演算ライブラリによって生成されるエラーについて説明します。 数値演算ランタイムのエラーと警告の形式は M *xxxx* です。ここで、 *xxxx* は4桁の数字です。
 
 [!INCLUDE[error-boilerplate](../../error-messages/includes/error-boilerplate.md)]
 
@@ -30,5 +31,5 @@ ms.locfileid: "64856702"
 
 ## <a name="see-also"></a>関連項目
 
-[C/C++コンパイラとビルド ツールのエラーと警告](../compiler-errors-1/c-cpp-build-errors.md) \
-[数値演算と浮動小数点サポート](../../c-runtime-library/floating-point-support.md)
+[C/c + + コンパイラおよびビルドツールのエラーと警告](../compiler-errors-1/c-cpp-build-errors.md) \
+[数値演算と浮動小数点のサポート](../../c-runtime-library/floating-point-support.md)

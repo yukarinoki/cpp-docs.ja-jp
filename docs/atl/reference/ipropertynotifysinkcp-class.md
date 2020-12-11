@@ -1,5 +1,6 @@
 ---
-title: クラスを通知します。
+description: '詳細情報: IPropertyNotifySinkCP クラス'
+title: IPropertyNotifySinkCP クラス
 ms.date: 11/04/2016
 f1_keywords:
 - IPropertyNotifySinkCP
@@ -9,16 +10,16 @@ helpviewer_keywords:
 - sinks, notifying of changes
 - IPropertyNotifySinkCP class
 ms.assetid: 1b41445e-bc88-4fa6-bb62-d68aacec2bd5
-ms.openlocfilehash: c6d98bf5a6dfe5566839eb22bcd2bab2a9c28e4d
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 096a24a22634be23c7ede955c7ae49c3dd963f66
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81329611"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97158362"
 ---
-# <a name="ipropertynotifysinkcp-class"></a>クラスを通知します。
+# <a name="ipropertynotifysinkcp-class"></a>IPropertyNotifySinkCP クラス
 
-このクラスは、接続可能なオブジェクトの出力インターフェイスとして[IPropertyNotifySink](/windows/win32/api/ocidl/nn-ocidl-ipropertynotifysink)インターフェイスを公開します。
+このクラスは、接続可能なオブジェクトの送信インターフェイスとして [IPropertyNotifySink](/windows/win32/api/ocidl/nn-ocidl-ipropertynotifysink) インターフェイスを公開します。
 
 > [!IMPORTANT]
 > このクラスとそのメンバーは、Windows ランタイムで実行されるアプリケーションでは使用できません。
@@ -34,27 +35,27 @@ class IPropertyNotifySinkCP
 #### <a name="parameters"></a>パラメーター
 
 *T*<br/>
-から派生したクラス`IPropertyNotifySinkCP`。
+から派生したクラス `IPropertyNotifySinkCP` 。
 
 *CDV*<br/>
-コネクション ポイントとそのシンク間の接続を管理するクラス。 デフォルト値は、無制限の接続を許可する[CComDynamicUnkArray](../../atl/reference/ccomdynamicunkarray-class.md)です。 また、固定数の接続を指定する[CComUnkArray](../../atl/reference/ccomunkarray-class.md)を使用することもできます。
+コネクションポイントとシンクの間の接続を管理するクラス。 既定値は [CComDynamicUnkArray](../../atl/reference/ccomdynamicunkarray-class.md)で、無制限の接続を許可します。 固定数の接続を指定する [CComUnkArray](../../atl/reference/ccomunkarray-class.md)を使用することもできます。
 
 ## <a name="remarks"></a>解説
 
-`IPropertyNotifySinkCP`基本クラスを通じてすべてのメソッドを継承[します](../../atl/reference/iconnectionpointimpl-class.md)。
+`IPropertyNotifySinkCP` 基底クラス [IConnectionPointImpl](../../atl/reference/iconnectionpointimpl-class.md)を通じて、すべてのメソッドを継承します。
 
-インターフェイス[を](/windows/win32/api/ocidl/nn-ocidl-ipropertynotifysink)使用すると、シンク オブジェクトがプロパティの変更に関する通知を受け取ることができます。 クラス`IPropertyNotifySinkCP`は、接続可能なオブジェクトの発信インターフェイスとしてこのインターフェイスを公開します。 クライアントは、シンク上`IPropertyNotifySink`でメソッドを実装する必要があります。
+[IPropertyNotifySink](/windows/win32/api/ocidl/nn-ocidl-ipropertynotifysink)インターフェイスを使用すると、シンクオブジェクトはプロパティの変更に関する通知を受け取ることができます。 クラス `IPropertyNotifySinkCP` は、このインターフェイスを接続可能なオブジェクトの送信インターフェイスとして公開します。 クライアントは、シンクにメソッドを実装する必要があり `IPropertyNotifySink` ます。
 
-インターフェイスを表す`IPropertyNotifySinkCP`コネクション ポイントを作成する場合からクラスを派生`IPropertyNotifySink`させます。
+`IPropertyNotifySinkCP`インターフェイスを表すコネクションポイントを作成する場合は、からクラスを派生させ `IPropertyNotifySink` ます。
 
-ATL でのコネクション ポイントの使用の詳細については、[記事「接続ポイント](../../atl/atl-connection-points.md)」を参照してください。
+ATL での接続ポイントの使用方法の詳細については、「 [接続ポイント](../../atl/atl-connection-points.md)」を参照してください。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-**ヘッダー:** atlctl.h
+**ヘッダー:** atlctl. h
 
 ## <a name="see-also"></a>関連項目
 
-[クラス](../../atl/reference/iconnectionpointimpl-class.md)<br/>
-[クラスをコンテナーします。](../../atl/reference/iconnectionpointcontainerimpl-class.md)<br/>
+[IConnectionPointImpl クラス](../../atl/reference/iconnectionpointimpl-class.md)<br/>
+[IConnectionPointContainerImpl クラス](../../atl/reference/iconnectionpointcontainerimpl-class.md)<br/>
 [クラスの概要](../../atl/atl-class-overview.md)

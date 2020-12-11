@@ -1,15 +1,16 @@
 ---
+description: '詳細情報: Windows メッセージマクロ'
 title: Windows メッセージのマクロ
 ms.date: 11/04/2016
 f1_keywords:
 - atlbase/ATL::WM_FORWARDMSG
 ms.assetid: 63abd22c-372d-4148-bb04-c605950ae64f
-ms.openlocfilehash: b4cd3c2eea24449eb17050b147d9c59560d8358f
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: be5913c5eaa88ca0020a978f2b3f6686a6756715
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88834441"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97157582"
 ---
 # <a name="windows-messages-macros"></a>Windows メッセージのマクロ
 
@@ -19,7 +20,7 @@ ms.locfileid: "88834441"
 |-|-|
 |[WM_FORWARDMSG](#wm_forwardmsg)|ウィンドウによって受信されたメッセージを別のウィンドウに転送して処理する場合に使用します。|
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** atlbase. h
 
@@ -52,4 +53,4 @@ WM_FORWARDMSG を使用して、ウィンドウによって受信されたメッ
 
 ## <a name="see-also"></a>関連項目
 
-[[マクロ]](../../atl/reference/atl-macros.md)
+[マクロ](../../atl/reference/atl-macros.md)

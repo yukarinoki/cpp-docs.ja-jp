@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: プログラムによる印刷'
 title: プログラムによる印刷
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,18 +9,18 @@ helpviewer_keywords:
 - IPrint interface
 - printing [MFC]
 ms.assetid: 3db0945b-5e13-4be4-86a0-6aecdae565bd
-ms.openlocfilehash: eb8804610832f91f4b24487fddfe9c24a3799117
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: c97a3938a97970e1479add4f62b68250845ba7e1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64342091"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97154696"
 ---
 # <a name="programmatic-printing"></a>プログラムによる印刷
 
-OLE には、永続的なドキュメントを一意に識別するための手段が提供されている (`GetClassFile`) と、関連付けられているコードに読み込むには (`CoCreateInstance`、 `QueryInterface(IID_IPersistFile)`、 `QueryInterface(IID_IPersistStorage)`、 `IPersistFile::Load`、および`IPersistStorage::Load`)。 Active ドキュメント コンテインメントの (OLE 2.0 に付属していない既存の OLE デザインを使用して) ドキュメントの印刷をさらに有効にするにはベースの標準印刷インターフェイスが導入されています`IPrint`読み込むことができる任意のオブジェクトで利用可能、ドキュメントの種類の永続的な状態です。 アクティブなドキュメントの各ビューをサポートできます必要に応じて、`IPrint`これらの機能を提供するインターフェイス。
+OLE では、永続的なドキュメント () を一意に識別 `GetClassFile` し、関連付けられているコード (、、 `CoCreateInstance` `QueryInterface(IID_IPersistFile)` `QueryInterface(IID_IPersistStorage)` 、 `IPersistFile::Load` 、および `IPersistStorage::Load` ) に読み込むことができました。 ドキュメントの印刷をさらに有効にするには (OLE 2.0 に付属していない既存の OLE デザインを使用する)、ドキュメント `IPrint` の種類の永続的な状態を読み込むことができる基本標準の印刷インターフェイスであるが導入されています。 アクティブなドキュメントの各ビューでは、必要に応じて、 `IPrint` これらの機能を提供するインターフェイスをサポートできます。
 
-`IPrint`インターフェイスは次のように定義されます。
+`IPrint` インターフェイスは、次のように定義されます。
 
 ```
 interface IPrint : IUnknown
@@ -40,17 +41,17 @@ interface IPrint : IUnknown
     };
 ```
 
-クライアントとコンテナーを使用`IPrint::Print`にそのドキュメントが読み込まれる、印刷コントロール フラグ、ターゲット デバイス、印刷するページを指定すると、それ自体を印刷するドキュメントを指示して、追加オプション。 クライアントは、インターフェイスを介して印刷の継続も制御できます`IContinueCallback`(下記参照)。
+クライアントとコンテナーは、を使用し `IPrint::Print` て、ドキュメントが読み込まれた後、印刷コントロールフラグ、ターゲットデバイス、印刷するページ、および追加オプションを指定して、ドキュメントを印刷するように指示します。 クライアントは、インターフェイスを使用した印刷の継続を制御することもでき `IContinueCallback` ます (下記参照)。
 
-さらに、`IPrint::SetInitialPageNum`番号によって 1 つのページにシームレスに明らかに Office バインダーなどの active ドキュメント コンテナー向けの特典として、一連のドキュメントを印刷する機能をサポートします。 `IPrint::GetPageInfo` により開始を取得する呼び出し元を許可することで単純なページ割り当て情報を表示するページ番号が以前に渡される`SetInitialPageNum`(またはドキュメントの内部の既定の開始ページ番号) と、ドキュメント内のページ数。
+さらに、は、 `IPrint::SetInitialPageNum` ページにシームレスに番号を付けることによって一連のドキュメントを1つに印刷する機能をサポートしています。これは、Office バインダーのような active ドキュメントコンテナーの利点です。 `IPrint::GetPageInfo` 呼び出し元が、以前に渡された開始ページ番号 `SetInitialPageNum` (またはドキュメントの内部の既定の開始ページ番号) とドキュメント内のページ数を取得できるようにすることで、ページ割り当て情報を簡単に表示します。
 
-オブジェクトをサポートする`IPrint`オブジェクトの CLSID で格納されている"Printable"キーで、レジストリでマークされます。
+をサポートするオブジェクト `IPrint` は、オブジェクトの CLSID の下に格納されている "印刷可能な" キーを使用してレジストリでマークされます。
 
-HKEY_CLASSES_ROOT\CLSID\\{...}\Printable
+HKEY_CLASSES_ROOT\CLSID\\ {...}\ 印刷可能
 
-`IPrint` 同じオブジェクトをサポートしていますが、通常は実装されている`IPersistFile`または`IPersistStorage`します。 呼び出し元には、"Printable"キーのレジストリでクラスのいくつかの永続的な状態をプログラムにより印刷する機能に注意してください。 現時点では、「印刷可能な」のサポートを指定には少なくとも`IPrint`; 他のインターフェイスが定義されて、今後利用し、なります`QueryInterface`場所`IPrint`単にベース レベルのサポートを表します。
+`IPrint` 通常、は、またはをサポートする同じオブジェクトに実装され `IPersistFile` `IPersistStorage` ます。 呼び出し元は、レジストリで "印刷可能" キーを検索することによって、何らかのクラスの永続的な状態をプログラムで出力する機能を備えています。 現時点では、"印刷可能" は少なくとものサポートを示して `IPrint` います。他のインターフェイスは将来定義される可能性があります。これは、で `QueryInterface` `IPrint` サポートの基本レベルを表すだけで使用できます。
 
-印刷処理中には、クライアントまたは印刷の継続するかどうかを制御する印刷を開始したコンテナーをする可能性があります。 たとえば、コンテナーをできるだけ早く、印刷ジョブを終了する"停止 Print"コマンドをサポートできます。 印刷可能なオブジェクトのクライアントが、インターフェイスを使用して、小規模の通知シンク オブジェクトの実装時にこの機能をサポートする`IContinueCallback`:
+印刷処理中に、印刷を開始したクライアントまたはコンテナーで印刷を続行するかどうかを制御する必要がある場合があります。 たとえば、コンテナーは、印刷ジョブをできるだけ早く終了する必要がある "印刷の停止" コマンドをサポートする場合があります。 この機能をサポートするために、印刷可能なオブジェクトのクライアントは、インターフェイスを備えた小さい通知シンクオブジェクトを実装でき `IContinueCallback` ます。
 
 ```
 interface IContinueCallback : IUnknown
@@ -63,12 +64,12 @@ interface IContinueCallback : IUnknown
     };
 ```
 
-このインターフェイスは、Win32 API のさまざまな継続プロシージャの代わりとなる汎用継続コールバック関数として役立つ設計されています (など、`AbortProc`印刷用と`EnumMetafileProc`メタファイル列挙体の)。 そのためこのインターフェイスのデザインは、さまざまな時間のかかるプロセスに役立ちます。
+このインターフェイスは、Win32 API 内のさまざまな継続プロシージャの代わりに使用する、一般的な継続コールバック関数として使用できるように設計されています (たとえば、 `AbortProc` 印刷用の、 `EnumMetafileProc` for metafile 列挙型など)。 したがって、このインターフェイスの設計は、時間のかかるさまざまなプロセスで役に立ちます。
 
-ほとんどのジェネリックの場合、`IContinueCallback::FContinue`関数が時間のかかるプロセスのプロセスで定期的に呼び出されます。 シンク オブジェクトは、S_OK を操作を続行して、プロシージャをできるだけ早く停止する S_FALSE を返します。
+最も一般的なケースでは、 `IContinueCallback::FContinue` 関数は時間のかかるプロセスによって定期的に呼び出されます。 シンクオブジェクトは S_OK を返して操作を続行し、S_FALSE してできるだけ早くプロシージャを停止します。
 
-`FContinue`、、、のコンテキストでは使用されません`IPrint::Print`ではなく、使用して印刷`IContinueCallback::FContinuePrint`します。 任意の印刷オブジェクトを定期的に呼び出す必要があります`FContinuePrinting`印刷ページの数、印刷されるページの数と、クライアント ("ページなどのユーザーに表示することもできますが、印刷ステータスを記述するその他の文字列を渡す5 の 19 インチ)。
+`FContinue`ただし、のコンテキストでは使用されません。印刷ではを `IPrint::Print` 使用 `IContinueCallback::FContinuePrint` します。 印刷オブジェクトは、 `FContinuePrinting` 印刷されたページの数、印刷されるページの数、およびクライアントがユーザーに表示する印刷ステータスを示す追加文字列 (たとえば、"ページ 5/19") を定期的に呼び出す必要があります。
 
 ## <a name="see-also"></a>関連項目
 
-[Active ドキュメント コンテナー](../mfc/active-document-containers.md)
+[Active ドキュメントコンテナー](../mfc/active-document-containers.md)

@@ -1,26 +1,27 @@
 ---
-title: ウィンドウ (ATL) を使用します。
+description: 詳細については、「ウィンドウの使用」を参照してください。
+title: ウィンドウの使用 (ATL)
 ms.date: 11/04/2016
 helpviewer_keywords:
 - ATL, windows
 - CWindow class, about CWindow class
 - windows [C++], ATL
 ms.assetid: b3b9cc8e-4287-486b-b080-38852bc2943a
-ms.openlocfilehash: 3a1843bfedc30e7d3b47c2916af08c8b53aaa965
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: fb9f1e03a27ad8b637da30eacbd100daf920cdb4
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64342084"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97157281"
 ---
-# <a name="using-a-window"></a>ウィンドウを使用します。
+# <a name="using-a-window"></a>ウィンドウの使用
 
-クラス[CWindow](../atl/reference/cwindow-class.md)ウィンドウを使用することができます。 ウィンドウをアタッチした後、`CWindow`を呼び出して、オブジェクト`CWindow`ウィンドウを操作するメソッド。 `CWindow` 変換する HWND 演算子も含む、 `CWindow` HWND するオブジェクト。 そのために渡すことができます、`CWindow`ウィンドウのハンドルを必要とするすべての関数オブジェクト。 簡単に組み合わせることができます`CWindow`メソッドの呼び出しと、一時オブジェクトを作成せず、Win32 関数の呼び出し。
+[CWindow](../atl/reference/cwindow-class.md)クラスを使用すると、ウィンドウを使用できます。 ウィンドウをオブジェクトにアタッチすると `CWindow` 、そのウィンドウを操作するメソッドを呼び出すことができ `CWindow` ます。 `CWindow` には、オブジェクトを HWND に変換する HWND 演算子も含まれてい `CWindow` ます。 したがって、ウィンドウへのハンドルを必要とする任意の関数にオブジェクトを渡すことができ `CWindow` ます。 `CWindow`一時オブジェクトを作成せずに、メソッド呼び出しと Win32 関数呼び出しを簡単に混在させることができます。
 
-`CWindow`が 2 つだけのデータ メンバー (ウィンドウ ハンドルと既定のサイズ)、コードのオーバーヘッドを強制しません。 さらに、多くの`CWindow`メソッドは単に対応する Win32 API 関数をラップします。 使用して`CWindow`HWND のメンバーが自動的に Win32 関数に渡されます。
+`CWindow`には2つのデータメンバー (ウィンドウハンドルと既定のディメンション) しかないため、コードのオーバーヘッドは発生しません。 また、メソッドの多くは、 `CWindow` 対応する Win32 API 関数をラップするだけです。 を使用する `CWindow` と、HWND メンバーが Win32 関数に自動的に渡されます。
 
-使用するだけでなく`CWindow`クラスにデータやコードを追加してから派生できますも、直接します。 ATL 自体から 3 つのクラスを派生する`CWindow`:[CWindowImpl](../atl/implementing-a-window.md)、 [CDialogImpl](../atl/implementing-a-dialog-box.md)、および[CContainedWindowT](../atl/using-contained-windows.md)します。
+直接を使用するだけで `CWindow` なく、それから派生させて、データやコードをクラスに追加することもできます。 ATL 自体 `CWindow` は、 [CWindowImpl](../atl/implementing-a-window.md)、 [CDialogImpl](../atl/implementing-a-dialog-box.md)、および [CContainedWindowT](../atl/using-contained-windows.md)の3つのクラスを派生しています。
 
 ## <a name="see-also"></a>関連項目
 
-[ウィンドウ クラス](../atl/atl-window-classes.md)
+[ウィンドウクラス](../atl/atl-window-classes.md)

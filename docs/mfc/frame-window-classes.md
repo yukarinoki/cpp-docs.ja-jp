@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「Frame-Window クラス」を参照してください。
 title: フレーム ウィンドウ クラス
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - MDI [MFC], frame windows
 - classes [MFC], window
 ms.assetid: c27e43a7-8ad0-4759-b1b7-43f4725f4132
-ms.openlocfilehash: ffa5b966ee042120213896dc7ad9d81c048ef928
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 888fae71bef2dd2e30e10c645e78ab981a30c6af
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84625808"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97154956"
 ---
 # <a name="frame-window-classes"></a>フレーム ウィンドウ クラス
 
@@ -25,9 +26,9 @@ ms.locfileid: "84625808"
 
 ## <a name="frame-windows-in-sdi-and-mdi-applications"></a>SDI および MDI アプリケーションのフレームウィンドウ
 
-SDI アプリケーションの場合、クラス[CFrameWnd](reference/cframewnd-class.md)から派生したフレームウィンドウが1つあります。 このウィンドウは、メインフレームウィンドウとドキュメントフレームウィンドウの両方です。 MDI アプリケーションの場合、メインフレームウィンドウは[CMDIFrameWnd](reference/cmdiframewnd-class.md)クラスから派生し、mdi 子ウィンドウであるドキュメントフレームウィンドウは[CMDIChildWnd](reference/cmdichildwnd-class.md)クラスから派生します。
+SDI アプリケーションの場合、クラス [CFrameWnd](reference/cframewnd-class.md)から派生したフレームウィンドウが1つあります。 このウィンドウは、メインフレームウィンドウとドキュメントフレームウィンドウの両方です。 MDI アプリケーションの場合、メインフレームウィンドウは [CMDIFrameWnd](reference/cmdiframewnd-class.md)クラスから派生し、mdi 子ウィンドウであるドキュメントフレームウィンドウは [CMDIChildWnd](reference/cmdichildwnd-class.md)クラスから派生します。
 
-## <a name="use-the-frame-window-class-or-derive-from-it"></a>フレームウィンドウクラスを使用するか、またはそのクラスから派生します。
+## <a name="use-the-frame-window-class-or-derive-from-it"></a>Frame-Window クラスを使用するか、そのクラスから派生します。
 
 これらのクラスは、アプリケーションに必要なフレームウィンドウ機能のほとんどを提供します。 通常の状況では、既定で提供される動作と外観がニーズに合っています。 追加の機能が必要な場合は、これらのクラスから派生させます。
 
@@ -41,4 +42,4 @@ SDI アプリケーションの場合、クラス[CFrameWnd](reference/cframewnd
 
 ## <a name="see-also"></a>関連項目
 
-[フレーム ウィンドウ](frame-windows.md)
+[フレームウィンドウ](frame-windows.md)

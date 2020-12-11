@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: _cprintf_p、_cprintf_p_l、_cwprintf_p、_cwprintf_p_l'
 title: _cprintf_p、_cprintf_p_l、_cwprintf_p、_cwprintf_p_l
 ms.date: 11/04/2016
 api_name:
@@ -46,12 +47,12 @@ helpviewer_keywords:
 - tcprintf_p function
 - cprintf_p function
 ms.assetid: 1f82fd7d-13c8-4c4a-a3e4-db0df3873564
-ms.openlocfilehash: a02de28a61812147c192495c4794830f85567a10
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 63b02da66c3eb8856e735eb8445bd688fc1636aa
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70942645"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97155998"
 ---
 # <a name="_cprintf_p-_cprintf_p_l-_cwprintf_p-_cwprintf_p_l"></a>_cprintf_p、_cprintf_p_l、_cwprintf_p、_cwprintf_p_l
 
@@ -98,18 +99,18 @@ int _cwprintf_p_l(
 
 出力した文字数。エラーが発生した場合は負の値を返します。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-これらの関数は、 **_putch**関数と **_putwch**関数を使用して文字を出力することで、一連の文字および値を書式設定し、コンソールに直接出力します。 各*引数*(存在する場合) は、対応する書式指定に従って変換および出力さ*れます。* 形式は、 [printf_p](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)関数の*format*パラメーターと同じ形式と機能を持ちます。 **_Cprintf_p**と**cprintf_s**の違いは、 **_cprintf_p**は位置指定パラメーターをサポートしている点です。これにより、書式設定文字列で引数を使用する順序を指定できます。 詳細については、「[printf_p の位置指定パラメーター](../../c-runtime-library/printf-p-positional-parameters.md)」をご覧ください。
+これらの関数は、一連の文字および値を書式設定してコンソールに直接出力します。その際、 **_putch** 関数と **_putwch** 関数を使用して文字を出力します。 各 *引数*(存在する場合) は、対応する書式指定に従って変換および出力さ *れます。* 形式は、 [printf_p](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)関数の *format* パラメーターと同じ形式と機能を持ちます。 **_Cprintf_p** と **cprintf_s** の違いは、 **_cprintf_p** が位置指定パラメーターをサポートしていることです。これにより、書式設定文字列で引数が使用される順序を指定できます。 詳細については、「[printf_p の位置指定パラメーター](../../c-runtime-library/printf-p-positional-parameters.md)」を参照してください。
 
-**Fprintf_p**、 **printf_p**、および**sprintf_p**関数とは異なり、出力時に、 **_cprintf_p**と **_cwprintf_p**はどちらもラインフィード文字をキャリッジリターンラインフィード (cr-lf) の組み合わせに変換しません。 重要な違いは、 **_cwprintf_p**では、Windows NT で使用されている場合に Unicode 文字が表示されることです。 **_Cprintf_p**とは異なり、 **_cwprintf_p**は現在のコンソールのロケール設定を使用します。
+**Fprintf_p**、 **printf_p**、および **sprintf_p** 関数とは異なり、では、出力時にラインフィードの文字が復帰と改行 (cr-lf) の組み合わせに変換されることはあり **_cwprintf_p** **_cprintf_p** ません。 重要な違いは、 **_cwprintf_p** では、Windows NT で使用する場合に Unicode 文字が表示されるという点です。 **_Cprintf_p** とは異なり、 **_cwprintf_p** は現在のコンソールのロケール設定を使用します。
 
-**_L**サフィックスを持つこれらの関数のバージョンは、現在のロケールの代わりに渡されたロケールパラメーターを使用する点を除いて同じです。
+**_L** サフィックスを持つこれらの関数のバージョンは、現在のロケールの代わりに渡されたロケールパラメーターを使用する点を除いて同じです。
 
 > [!IMPORTANT]
 > *format* にユーザー定義の文字列を指定しないでください。
 
-また、 **_cprintf_s**や **_cwprintf_s**のように、これらは入力ポインターと書式指定文字列を検証します。 *Format*または*引数*が**NULL**の場合、または書式指定文字列に無効な書式指定文字が含まれている場合、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、これらの関数は無効なパラメーターハンドラーを呼び出します。 実行の継続が許可された場合、これらの関数は-1 を返し、 **errno**を**EINVAL**に設定します。
+また、 **_cprintf_s** や **_cwprintf_s** と同様に、入力ポインターと書式指定文字列を検証します。 *Format* または *引数* が **NULL** の場合、または書式指定文字列に無効な書式指定文字が含まれている場合、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、これらの関数は無効なパラメーターハンドラーを呼び出します。 実行の継続が許可された場合、これらの関数は-1 を返し、 **errno** を **EINVAL** に設定します。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -125,7 +126,7 @@ int _cwprintf_p_l(
 |**_cprintf_p**、 **_cprintf_p_l**|\<conio.h>|
 |**_cwprintf_p**、 **_cwprintf_p_l**|\<conio.h>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性について詳しくは、「 [Compatibility](../../c-runtime-library/compatibility.md)」をご覧ください。
 
 ## <a name="example"></a>例
 
@@ -167,5 +168,5 @@ int main( void )
 [_sprintf_p、_sprintf_p_l、_swprintf_p、_swprintf_p_l](sprintf-p-sprintf-p-l-swprintf-p-swprintf-p-l.md)<br/>
 [_vfprintf_p、_vfprintf_p_l、_vfwprintf_p、_vfwprintf_p_l](vfprintf-p-vfprintf-p-l-vfwprintf-p-vfwprintf-p-l.md)<br/>
 [_cprintf_s、_cprintf_s_l、_cwprintf_s、_cwprintf_s_l](cprintf-s-cprintf-s-l-cwprintf-s-cwprintf-s-l.md)<br/>
-[printf_p の位置指定パラメーター](../../c-runtime-library/printf-p-positional-parameters.md)<br/>
+[位置指定パラメーターの printf_p](../../c-runtime-library/printf-p-positional-parameters.md)<br/>
 [書式指定構文: printf 関数と wprintf 関数](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)<br/>

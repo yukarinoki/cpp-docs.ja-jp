@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: CD2DSolidColorBrush クラス'
 title: CD2DSolidColorBrush クラス
 ms.date: 03/27/2019
 f1_keywords:
@@ -26,16 +27,16 @@ helpviewer_keywords:
 - CD2DSolidColorBrush [MFC], m_colorSolid
 - CD2DSolidColorBrush [MFC], m_pSolidColorBrush
 ms.assetid: d4506637-acce-4f74-8a9b-f0a45571a735
-ms.openlocfilehash: d66a92e4801f7a13c62e2d83fdb94411d077ff53
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: 57df3732a3c4239af6d9121426aa272c6f58417d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81750261"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97154605"
 ---
 # <a name="cd2dsolidcolorbrush-class"></a>CD2DSolidColorBrush クラス
 
-ID2D1 ソリッドカラーブラシのラッパー。
+ID2D1SolidColorBrush のラッパー。
 
 ## <a name="syntax"></a>構文
 
@@ -49,59 +50,59 @@ class CD2DSolidColorBrush : public CD2DBrush;
 
 |名前|説明|
 |----------|-----------------|
-|[CD2Dソリッドカラーブラシ::CD2Dソリッドカラーブラシ](#cd2dsolidcolorbrush)|オーバーロードされます。 オブジェクトを作成します。|
-|[CD2Dソリッドカラーブラシ::~CD2Dソリッドカラーブラシ](#_dtorcd2dsolidcolorbrush)|デストラクターです。 D2D ソリッド ブラシ オブジェクトが破棄されるときに呼び出されます。|
+|[CD2DSolidColorBrush:: CD2DSolidColorBrush](#cd2dsolidcolorbrush)|オーバーロードされます。 CD2DSolidColorBrush オブジェクトを構築します。|
+|[CD2DSolidColorBrush:: ~ CD2DSolidColorBrush](#_dtorcd2dsolidcolorbrush)|デストラクターです。 D2D solid brush オブジェクトが破棄されるときに呼び出されます。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
 |名前|説明|
 |----------|-----------------|
-|[CD2Dソリッドカラーブラシ::アタッチ](#attach)|既存のリソース インターフェイスをオブジェクトにアタッチします。|
-|[CD2Dソリッドカラーブラシ::作成](#create)|CD2D ソリッドカラーブラシを作成します。 [(CD2D リソースをオーバーライドします::作成](../../mfc/reference/cd2dresource-class.md#create).)|
-|[CD2Dソリッドカラーブラシ::Dエストロイ](#destroy)|オブジェクトを破棄します。 [(CD2Dブラシ::Dエストロイ](../../mfc/reference/cd2dbrush-class.md#destroy)をオーバーライドします。|
-|[CD2Dソリッドカラーブラシ::Dエタッハ](#detach)|オブジェクトからリソース インターフェイスを切り離します。|
-|[CD2Dソリッドカラーブラシ::取得](#get)|インターフェイスを返します。|
-|[CD2Dソリッドカラーブラシ::ゲットカラー](#getcolor)|単色ブラシのカラーを取得します。|
-|[CD2Dソリッドカラーブラシ::セットカラー](#setcolor)|この単色ブラシの色を指定します。|
+|[CD2DSolidColorBrush:: Attach](#attach)|既存のリソースインターフェイスをオブジェクトにアタッチします。|
+|[CD2DSolidColorBrush:: Create](#create)|CD2DSolidColorBrush を作成します。 ( [CD2DResource:: Create](../../mfc/reference/cd2dresource-class.md#create)をオーバーライドします)。|
+|[CD2DSolidColorBrush::D estroy](#destroy)|CD2DSolidColorBrush オブジェクトを破棄します。 ( [CD2DBrush::D estroy](../../mfc/reference/cd2dbrush-class.md#destroy)をオーバーライドします。)|
+|[CD2DSolidColorBrush::D etach](#detach)|オブジェクトからリソースインターフェイスをデタッチします。|
+|[CD2DSolidColorBrush:: Get](#get)|ID2D1SolidColorBrush インターフェイスを返します。|
+|[CD2DSolidColorBrush:: GetColor](#getcolor)|純色ブラシの色を取得します。|
+|[CD2DSolidColorBrush:: SetColor](#setcolor)|この純色ブラシの色を指定します|
 
 ### <a name="public-operators"></a>パブリック演算子
 
 |名前|説明|
 |----------|-----------------|
-|[CD2Dソリッドカラーブラシ::オペレーターID2D1ソリッドカラーブラシ*](#operator_id2d1solidcolorbrush_star)|インターフェイスを返します。|
+|[CD2DSolidColorBrush:: operator ID2D1SolidColorBrush *](#operator_id2d1solidcolorbrush_star)|ID2D1SolidColorBrush インターフェイスを返します。|
 
 ### <a name="protected-data-members"></a>プロテクト データ メンバー
 
 |名前|説明|
 |----------|-----------------|
-|[CD2Dソリッドカラーブラシ::m_colorSolid](#m_colorsolid)|ブラシの純色。|
-|[CD2Dソリッドカラーブラシ::m_pSolidColorBrush](#m_psolidcolorbrush)|オブジェクトを ID2D1SolidColorBrush オブジェクトへのポインターを格納します。|
+|[CD2DSolidColorBrush:: m_colorSolid](#m_colorsolid)|ブラシの純色。|
+|[CD2DSolidColorBrush:: m_pSolidColorBrush](#m_psolidcolorbrush)|ID2D1SolidColorBrush オブジェクトへのポインターを格納します。|
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
 [CObject](../../mfc/reference/cobject-class.md)
 
-[リソース](../../mfc/reference/cd2dresource-class.md)
+[CD2DResource](../../mfc/reference/cd2dresource-class.md)
 
-[CD2Dブラシ](../../mfc/reference/cd2dbrush-class.md)
+[CD2DBrush](../../mfc/reference/cd2dbrush-class.md)
 
-[CD2Dソリッドカラーブラシ](../../mfc/reference/cd2dsolidcolorbrush-class.md)
+[CD2DSolidColorBrush](../../mfc/reference/cd2dsolidcolorbrush-class.md)
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-**ヘッダー:** afxrendertarget.h
+**ヘッダー:** afxrendertarget
 
-## <a name="cd2dsolidcolorbrushcd2dsolidcolorbrush"></a><a name="_dtorcd2dsolidcolorbrush"></a>CD2Dソリッドカラーブラシ::~CD2Dソリッドカラーブラシ
+## <a name="cd2dsolidcolorbrushcd2dsolidcolorbrush"></a><a name="_dtorcd2dsolidcolorbrush"></a> CD2DSolidColorBrush:: ~ CD2DSolidColorBrush
 
-デストラクターです。 D2D ソリッド ブラシ オブジェクトが破棄されるときに呼び出されます。
+デストラクターです。 D2D solid brush オブジェクトが破棄されるときに呼び出されます。
 
 ```
 virtual ~CD2DSolidColorBrush();
 ```
 
-## <a name="cd2dsolidcolorbrushattach"></a><a name="attach"></a>CD2Dソリッドカラーブラシ::アタッチ
+## <a name="cd2dsolidcolorbrushattach"></a><a name="attach"></a> CD2DSolidColorBrush:: Attach
 
-既存のリソース インターフェイスをオブジェクトにアタッチします。
+既存のリソースインターフェイスをオブジェクトにアタッチします。
 
 ```cpp
 void Attach(ID2D1SolidColorBrush* pResource);
@@ -109,12 +110,12 @@ void Attach(ID2D1SolidColorBrush* pResource);
 
 ### <a name="parameters"></a>パラメーター
 
-*リソース*<br/>
-既存のリソース インターフェイス。 NULL にすることはできません。
+*pResource*<br/>
+既存のリソースインターフェイス。 NULL にすることはできません
 
-## <a name="cd2dsolidcolorbrushcd2dsolidcolorbrush"></a><a name="cd2dsolidcolorbrush"></a>CD2Dソリッドカラーブラシ::CD2Dソリッドカラーブラシ
+## <a name="cd2dsolidcolorbrushcd2dsolidcolorbrush"></a><a name="cd2dsolidcolorbrush"></a> CD2DSolidColorBrush:: CD2DSolidColorBrush
 
-オブジェクトを作成します。
+CD2DSolidColorBrush オブジェクトを構築します。
 
 ```
 CD2DSolidColorBrush(
@@ -133,24 +134,24 @@ CD2DSolidColorBrush(
 
 ### <a name="parameters"></a>パラメーター
 
-*ターゲット*<br/>
-レンダー ターゲットへのポインター。
+*pParentTarget*<br/>
+レンダーターゲットへのポインター。
 
-*色*<br/>
-ブラシの色の赤、緑、青、アルファの値。
+*color*<br/>
+ブラシの色の赤、緑、青、およびアルファ値。
 
-*プロパティ*<br/>
+*pBrushProperties*<br/>
 ブラシの不透明度と変換へのポインター。
 
-*b自動破壊*<br/>
+*bAutoDestroy*<br/>
 オブジェクトが所有者 (pParentTarget) によって破棄されることを示します。
 
-*nアルファ*<br/>
+*nAlpha*<br/>
 ブラシの色の不透明度。
 
-## <a name="cd2dsolidcolorbrushcreate"></a><a name="create"></a>CD2Dソリッドカラーブラシ::作成
+## <a name="cd2dsolidcolorbrushcreate"></a><a name="create"></a> CD2DSolidColorBrush:: Create
 
-CD2D ソリッドカラーブラシを作成します。
+CD2DSolidColorBrush を作成します。
 
 ```
 virtual HRESULT Create(CRenderTarget* pRenderTarget);
@@ -158,24 +159,24 @@ virtual HRESULT Create(CRenderTarget* pRenderTarget);
 
 ### <a name="parameters"></a>パラメーター
 
-*ターゲットをレンダリングします。*<br/>
-レンダー ターゲットへのポインター。
+*pRenderTarget*<br/>
+レンダーターゲットへのポインター。
 
 ### <a name="return-value"></a>戻り値
 
-メソッドが成功した場合は、S_OK を返します。 それ以外の場合は、HRESULT エラー コードを返します。
+メソッドが成功した場合は、S_OK を返します。 それ以外の場合は、HRESULT エラーコードを返します。
 
-## <a name="cd2dsolidcolorbrushdestroy"></a><a name="destroy"></a>CD2Dソリッドカラーブラシ::Dエストロイ
+## <a name="cd2dsolidcolorbrushdestroy"></a><a name="destroy"></a> CD2DSolidColorBrush::D estroy
 
-オブジェクトを破棄します。
+CD2DSolidColorBrush オブジェクトを破棄します。
 
 ```
 virtual void Destroy();
 ```
 
-## <a name="cd2dsolidcolorbrushdetach"></a><a name="detach"></a>CD2Dソリッドカラーブラシ::Dエタッハ
+## <a name="cd2dsolidcolorbrushdetach"></a><a name="detach"></a> CD2DSolidColorBrush::D etach
 
-オブジェクトからリソース インターフェイスを切り離します。
+オブジェクトからリソースインターフェイスをデタッチします。
 
 ```
 ID2D1SolidColorBrush* Detach();
@@ -183,11 +184,11 @@ ID2D1SolidColorBrush* Detach();
 
 ### <a name="return-value"></a>戻り値
 
-デタッチされたリソース インターフェイスへのポインター。
+デタッチされたリソースインターフェイスへのポインター。
 
-## <a name="cd2dsolidcolorbrushget"></a><a name="get"></a>CD2Dソリッドカラーブラシ::取得
+## <a name="cd2dsolidcolorbrushget"></a><a name="get"></a> CD2DSolidColorBrush:: Get
 
-インターフェイスを返します。
+ID2D1SolidColorBrush インターフェイスを返します。
 
 ```
 ID2D1SolidColorBrush* Get();
@@ -195,11 +196,11 @@ ID2D1SolidColorBrush* Get();
 
 ### <a name="return-value"></a>戻り値
 
-ID2D1SolidColorBrush インターフェイスへのポインターまたは NULL オブジェクトがまだ初期化されていない場合。
+ID2D1SolidColorBrush インターフェイスへのポインター。オブジェクトがまだ初期化されていない場合は NULL。
 
-## <a name="cd2dsolidcolorbrushgetcolor"></a><a name="getcolor"></a>CD2Dソリッドカラーブラシ::ゲットカラー
+## <a name="cd2dsolidcolorbrushgetcolor"></a><a name="getcolor"></a> CD2DSolidColorBrush:: GetColor
 
-単色ブラシのカラーを取得します。
+純色ブラシの色を取得します。
 
 ```
 D2D1_COLOR_F GetColor() const;
@@ -209,7 +210,7 @@ D2D1_COLOR_F GetColor() const;
 
 この単色ブラシの色
 
-## <a name="cd2dsolidcolorbrushm_colorsolid"></a><a name="m_colorsolid"></a>CD2Dソリッドカラーブラシ::m_colorSolid
+## <a name="cd2dsolidcolorbrushm_colorsolid"></a><a name="m_colorsolid"></a> CD2DSolidColorBrush:: m_colorSolid
 
 ブラシの純色。
 
@@ -217,17 +218,17 @@ D2D1_COLOR_F GetColor() const;
 D2D1_COLOR_F m_colorSolid;
 ```
 
-## <a name="cd2dsolidcolorbrushm_psolidcolorbrush"></a><a name="m_psolidcolorbrush"></a>CD2Dソリッドカラーブラシ::m_pSolidColorBrush
+## <a name="cd2dsolidcolorbrushm_psolidcolorbrush"></a><a name="m_psolidcolorbrush"></a> CD2DSolidColorBrush:: m_pSolidColorBrush
 
-オブジェクトを ID2D1SolidColorBrush オブジェクトへのポインターを格納します。
+ID2D1SolidColorBrush オブジェクトへのポインターを格納します。
 
 ```
 ID2D1SolidColorBrush* m_pSolidColorBrush;
 ```
 
-## <a name="cd2dsolidcolorbrushoperator-id2d1solidcolorbrush"></a><a name="operator_id2d1solidcolorbrush_star"></a>CD2Dソリッドカラーブラシ::オペレーターID2D1ソリッドカラーブラシ*
+## <a name="cd2dsolidcolorbrushoperator-id2d1solidcolorbrush"></a><a name="operator_id2d1solidcolorbrush_star"></a> CD2DSolidColorBrush:: operator ID2D1SolidColorBrush *
 
-インターフェイスを返します。
+ID2D1SolidColorBrush インターフェイスを返します。
 
 ```
 operator ID2D1SolidColorBrush*();
@@ -235,11 +236,11 @@ operator ID2D1SolidColorBrush*();
 
 ### <a name="return-value"></a>戻り値
 
-ID2D1SolidColorBrush インターフェイスへのポインターまたは NULL オブジェクトがまだ初期化されていない場合。
+ID2D1SolidColorBrush インターフェイスへのポインター。オブジェクトがまだ初期化されていない場合は NULL。
 
-## <a name="cd2dsolidcolorbrushsetcolor"></a><a name="setcolor"></a>CD2Dソリッドカラーブラシ::セットカラー
+## <a name="cd2dsolidcolorbrushsetcolor"></a><a name="setcolor"></a> CD2DSolidColorBrush:: SetColor
 
-この単色ブラシの色を指定します。
+この純色ブラシの色を指定します
 
 ```cpp
 void SetColor(D2D1_COLOR_F color);
@@ -247,7 +248,7 @@ void SetColor(D2D1_COLOR_F color);
 
 ### <a name="parameters"></a>パラメーター
 
-*色*<br/>
+*color*<br/>
 この単色ブラシの色
 
 ## <a name="see-also"></a>関連項目

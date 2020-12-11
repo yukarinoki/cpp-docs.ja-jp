@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「IWorkerThreadClient インターフェイス」を参照してください。
 title: IWorkerThreadClient インターフェイス
 ms.date: 11/04/2016
 f1_keywords:
@@ -9,12 +10,12 @@ f1_keywords:
 helpviewer_keywords:
 - IWorkerThreadClient interface
 ms.assetid: 56f4a2f5-007e-4a33-9e20-05187629f715
-ms.openlocfilehash: aa72f090a006d6936339582a919b0faf5cab6b03
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: fb9113c9380453dad9f647fa2f5a2095ff12cea7
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88835351"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97157985"
 ---
 # <a name="iworkerthreadclient-interface"></a>IWorkerThreadClient インターフェイス
 
@@ -42,7 +43,7 @@ __interface IWorkerThreadClient
 
 ハンドルがシグナル状態になると、ワーカースレッドで実行する必要があるコードがある場合は、このインターフェイスを実装します。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** atlutil. h
 

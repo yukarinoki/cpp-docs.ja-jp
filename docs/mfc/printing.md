@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: 印刷'
 title: 印刷
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,18 +8,18 @@ helpviewer_keywords:
 - printing [MFC], from framework
 - printing [MFC]
 ms.assetid: be465e8d-b0c9-4fc5-9fa8-d10486064f76
-ms.openlocfilehash: 3d2ef494be66171cbcbf2b8b9e19c29c8bdc5c2f
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 0cb4455b2de27d7b609226099b00a37dc8175db6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84619801"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97154865"
 ---
 # <a name="printing"></a>印刷
 
 Microsoft Windows では、デバイスに依存しないディスプレイを実装しています。 MFC では、これは、 `OnDraw` ビュークラスのメンバー関数内の同じ描画呼び出しが、ディスプレイや、プリンターなどの他のデバイス上での描画を担当することを意味します。 印刷プレビューの場合、ターゲットデバイスは、シミュレートされたプリンター出力をディスプレイに出力します。
 
-## <a name="your-role-in-printing-vs-the-frameworks-role"></a><a name="_core_your_role_in_printing_vs.._the_framework.92.s_role"></a>印刷におけるロールとフレームワークのロール
+## <a name="your-role-in-printing-vs-the-frameworks-role"></a><a name="_core_your_role_in_printing_vs.._the_framework.92.s_role"></a> 印刷におけるロールとフレームワークのロール
 
 ビュークラスには、次の役割があります。
 
@@ -32,13 +33,13 @@ Microsoft Windows では、デバイスに依存しないディスプレイを�
 
 このフレームワークの役割は次のとおりです。
 
-- [**印刷**] ダイアログボックスを表示します。
+- [ **印刷** ] ダイアログボックスを表示します。
 
-- プリンターの[CDC](reference/cdc-class.md)オブジェクトを作成します。
+- プリンターの [CDC](reference/cdc-class.md) オブジェクトを作成します。
 
-- オブジェクトの[StartDoc](reference/cdc-class.md#startdoc)および[EndDoc](reference/cdc-class.md#enddoc)メンバー関数を呼び出し `CDC` ます。
+- オブジェクトの [StartDoc](reference/cdc-class.md#startdoc) および [EndDoc](reference/cdc-class.md#enddoc) メンバー関数を呼び出し `CDC` ます。
 
-- オブジェクトの[StartPage](reference/cdc-class.md#startpage)メンバー関数を繰り返し呼び出し `CDC` 、出力するページをビュークラスに通知し、オブジェクトの[EndPage](reference/cdc-class.md#endpage)メンバー関数を呼び出し `CDC` ます。
+- オブジェクトの [StartPage](reference/cdc-class.md#startpage) メンバー関数を繰り返し呼び出し `CDC` 、出力するページをビュークラスに通知し、オブジェクトの [EndPage](reference/cdc-class.md#endpage) メンバー関数を呼び出し `CDC` ます。
 
 - ビュー内のオーバーライド可能な関数を適切なタイミングで呼び出します。
 
@@ -46,9 +47,9 @@ Microsoft Windows では、デバイスに依存しないディスプレイを�
 
 ### <a name="what-do-you-want-to-know-more-about"></a>詳細については、次を参照してください。
 
-- [既定の印刷方法](how-default-printing-is-done.md)
+- [既定の印刷プロセス](how-default-printing-is-done.md)
 
-- [マルチページドキュメント](multipage-documents.md)
+- [マルチページ ドキュメント](multipage-documents.md)
 
 - [ヘッダーとフッター](headers-and-footers.md)
 
@@ -58,4 +59,4 @@ Microsoft Windows では、デバイスに依存しないディスプレイを�
 
 ## <a name="see-also"></a>関連項目
 
-[[印刷と印刷プレビュー]](printing-and-print-preview.md)
+[印刷と印刷プレビュー](printing-and-print-preview.md)

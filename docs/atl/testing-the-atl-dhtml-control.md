@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: ATL DHTML コントロールのテスト'
 title: ATL DHTML コントロールのテスト
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,34 +8,34 @@ helpviewer_keywords:
 - DHTML controls
 - DHTML controls, testing
 ms.assetid: 0e4b4358-80ce-4505-8b06-ef4f30b1d1f0
-ms.openlocfilehash: 510b24b383f6ae0489a1c54d701c632159140c2a
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: d9e82b609b4bb9346f3db983e9734fd732ec422f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64341785"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97157335"
 ---
 # <a name="testing-the-atl-dhtml-control"></a>ATL DHTML コントロールのテスト
 
-プロジェクトを作成した後は、ビルドし、サンプル コントロールをテストします。 これを行う前に使用して**クラス ビュー**と**ソリューション エクスプ ローラー**してプロジェクトを調べます。 プロジェクトの要素のより詳細に説明が記載されて[DHTML コントロール プロジェクトの要素の識別](../atl/identifying-the-elements-of-the-dhtml-control-project.md)します。
+プロジェクトを作成したら、サンプルコントロールをビルドしてテストできます。 この作業を行う前に、 **クラスビュー** と **ソリューションエクスプローラー** を使用してプロジェクトを確認してください。 プロジェクトの要素の詳細については、「 [DHTML コントロールプロジェクトの要素の識別](../atl/identifying-the-elements-of-the-dhtml-control-project.md)」を参照してください。
 
-## <a name="to-build-and-test-the-atl-dhtml-control"></a>ビルドと ATL DHTML コントロールのテスト
+## <a name="to-build-and-test-the-atl-dhtml-control"></a>ATL DHTML コントロールをビルドしてテストするには
 
-1. プロジェクトをビルドします。 **ビルド** メニューのをクリックして**ソリューションのビルド**します。
+1. プロジェクトをビルドします。 **[ビルド]** メニューの **[ソリューションのビルド]** をクリックします。
 
-1. ビルドが完了したときに開く**テスト コンテナー**します。 参照してください[テスト プロパティとテスト コンテナーでイベント](../mfc/testing-properties-and-events-with-test-container.md)にアクセスする方法については**テスト コンテナー**します。
+1. ビルドが完了したら、 **テストコンテナー** を開きます。 **テストコンテナー** にアクセスする方法の詳細については [、「テストコンテナーでのプロパティとイベントのテスト](../mfc/testing-properties-and-events-with-test-container.md)」を参照してください。
 
-1. **テスト コンテナー**から、**編集** メニューのをクリックして**新しいコントロールを挿入**します。
+1. **テストコンテナー** で、[**編集**] メニューの [**新しいコントロールの挿入**] をクリックします。
 
-1. **コントロールの挿入** ダイアログ ボックスで、リスト ボックスから、コントロールを選択します。 ただし、その名前は、ATL コントロール ウィザードで指定した短い名前に基づきます。 **[OK]** をクリックします。
+1. [ **コントロールの挿入** ] ダイアログボックスで、リストボックスからコントロールを選択します。 ATL コントロールウィザードで指定した短い名前に基づいて名前が指定されていることに注意してください。 **[OK]** をクリックします。
 
-1. コントロールを確認します。 スクロール バーがあることに注意してください。 スクロール バーをアクティブ化するのにコントロールのサイズを変更するのにには、コントロールのハンドルを使用します。
+1. コントロールを確認します。 スクロールバーが表示されていることに注意してください。 コントロールのハンドルを使用して、スクロールバーをアクティブにするようにコントロールのサイズを変更します。
 
-1. コントロールのボタンをテストします。 背景色は、ボタンの色に変更します。
+1. コントロールのボタンをテストします。 背景色は、ボタンによって示される色に変わります。
 
-1. 閉じる**テスト コンテナー**します。
+1. **テストコンテナー** を閉じます。
 
-次に、 [DHTML コントロールの変更](../atl/modifying-the-atl-dhtml-control.md)します。
+次に、 [DHTML コントロールを変更](../atl/modifying-the-atl-dhtml-control.md)してみます。
 
 ## <a name="see-also"></a>関連項目
 

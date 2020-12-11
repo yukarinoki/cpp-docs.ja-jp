@@ -1,19 +1,20 @@
 ---
-title: 労働者の原型
+description: '詳細情報: Worker 原型'
+title: ワーカーの原型クラス
 ms.date: 11/04/2016
 helpviewer_keywords:
 - Worker archetype
 ms.assetid: 834145cd-09d3-4149-bc99-620e1871cbfb
-ms.openlocfilehash: c9ed9b30b94a8debe133bc213c12063750bfb15a
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: 8cb8c2b281bbdc074bb700b77a856f4d26c26cf6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81747345"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97157569"
 ---
-# <a name="worker-archetype"></a>労働者の原型
+# <a name="worker-archetype"></a>ワーカーの原型クラス
 
-*ワーカー*の原型に準拠するクラスは、スレッド プールにキューに置かれた作業項目を処理するコードを提供します。
+*ワーカー* の原型物に準拠するクラスは、スレッドプールでキューに置かれた作業項目を処理するコードを提供します。
 
 **実装**
 
@@ -21,15 +22,15 @@ ms.locfileid: "81747345"
 
 |Method|説明|
 |------------|-----------------|
-|[Initialize](#initialize)|要求が[Execute](#execute)に渡される前にワーカー オブジェクトを初期化するために呼び出されます。|
+|[初期化する](#initialize)|要求が [Execute](#execute)に渡される前にワーカーオブジェクトを初期化するために呼び出されます。|
 |[実行](#execute)|作業項目を処理するために呼び出されます。|
-|[Terminate](#terminate)|すべての要求が[Execute](#execute)に渡された後にワーカー オブジェクトを初期化解除するために呼び出されます。|
+|[Terminate](#terminate)|すべての要求が [実行](#execute)されると、ワーカーオブジェクトを初期化解除するために呼び出されます。|
 
 |Typedef|説明|
 |-------------|-----------------|
-|[要求タイプ](#requesttype)|ワーカー クラスで処理できる作業項目の種類の typedef。|
+|[RequestType](#requesttype)|ワーカークラスで処理できる作業項目の種類の typedef。|
 
-一般的な*ワーカー*クラスは次のようになります。
+一般的な *ワーカー* クラスは次のようになります。
 
 [!code-cpp[NVC_ATL_Utilities#137](../../atl/codesnippet/cpp/worker-archetype_1.cpp)]
 
@@ -39,22 +40,22 @@ ms.locfileid: "81747345"
 
 |クラス|説明|
 |-----------|-----------------|
-|[国家無福祉士](../../atl/reference/cnonstatelessworker-class.md)|スレッド プールから要求を受信し、要求ごとに作成および破棄されるワーカー オブジェクトに渡します。|
+|[CNonStatelessWorker](../../atl/reference/cnonstatelessworker-class.md)|スレッドプールから要求を受信し、要求ごとに作成および破棄されたワーカーオブジェクトに渡します。|
 
 **用途**
 
-これらのテンプレート パラメータは、クラスがこの原型に準拠することを想定しています。
+これらのテンプレートパラメーターは、クラスがこの原型に準拠していることを想定しています。
 
-|パラメーター名|使用元|
+|パラメーター名|使用者|
 |--------------------|-------------|
 |*ワーカー*|[CThreadPool](../../atl/reference/cthreadpool-class.md)|
-|*ワーカー*|[国家無福祉士](../../atl/reference/cnonstatelessworker-class.md)|
+|*ワーカー*|[CNonStatelessWorker](../../atl/reference/cnonstatelessworker-class.md)|
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
-**ヘッダー:** atlutil.h
+**ヘッダー:** atlutil. h
 
-## <a name="workerarchetypeexecute"></a><a name="execute"></a>労働者のアーキタイプ::実行
+## <a name="workerarchetypeexecute"></a><a name="execute"></a> WorkerArchetype:: Execute
 
 作業項目を処理するために呼び出されます。
 
@@ -68,17 +69,17 @@ void Execute(
 #### <a name="parameters"></a>パラメーター
 
 *request*<br/>
-処理する作業項目。 作業項目の種類は と同じです`RequestType`。
+処理される作業項目。 作業項目の種類はと同じです `RequestType` 。
 
-*を使用する*<br/>
-ワーカー クラスによって認識されるカスタム パラメーター。 また、と`WorkerArchetype::Initialize``Terminate`に渡されます。
+*pvWorkerParam*<br/>
+ワーカークラスによって認識されるカスタムパラメーター。 また、とにも渡さ `WorkerArchetype::Initialize` `Terminate` れます。
 
-*オーバーラップ*<br/>
-作業項目がキューに入っているキューを作成するために使用される[OVERLAPPED](/windows/win32/api/minwinbase/ns-minwinbase-overlapped)構造体へのポインター。
+*pOverlapped*<br/>
+作業項目がキューに格納されたキューを作成するために使用される、 [オーバーラップ](/windows/win32/api/minwinbase/ns-minwinbase-overlapped) された構造体へのポインター。
 
-## <a name="workerarchetypeinitialize"></a><a name="initialize"></a>ワーカーアーキタイプ::初期化
+## <a name="workerarchetypeinitialize"></a><a name="initialize"></a> WorkerArchetype:: Initialize
 
-要求が に渡される前にワーカー オブジェクトを`WorkerArchetype::Execute`初期化するために呼び出されます。
+要求がに渡される前にワーカーオブジェクトを初期化するために呼び出され `WorkerArchetype::Execute` ます。
 
 ```
 BOOL Initialize(void* pvParam) throw();
@@ -86,16 +87,16 @@ BOOL Initialize(void* pvParam) throw();
 
 #### <a name="parameters"></a>パラメーター
 
-*pvパラム*<br/>
-ワーカー クラスによって認識されるカスタム パラメーター。 また、と`WorkerArchetype::Terminate``WorkerArchetype::Execute`に渡されます。
+*pvParam*<br/>
+ワーカークラスによって認識されるカスタムパラメーター。 また、とにも渡さ `WorkerArchetype::Terminate` `WorkerArchetype::Execute` れます。
 
 ### <a name="return-value"></a>戻り値
 
-成功時に TRUE を返し、失敗した場合は FALSE を返します。
+成功した場合は TRUE、失敗した場合は FALSE を返します。
 
-## <a name="workerarchetyperequesttype"></a><a name="requesttype"></a>ワーカーアーキタイプ::要求タイプ
+## <a name="workerarchetyperequesttype"></a><a name="requesttype"></a> WorkerArchetype:: RequestType
 
-ワーカー クラスで処理できる作業項目の種類の typedef。
+ワーカークラスで処理できる作業項目の種類の typedef。
 
 ```
 typedef MyRequestType RequestType;
@@ -103,11 +104,11 @@ typedef MyRequestType RequestType;
 
 ### <a name="remarks"></a>解説
 
-この型は、最初のパラメーターとして使用する`WorkerArchetype::Execute`必要があり、ULONG_PTRとの間でキャストできる必要があります。
+この型は、の最初のパラメーターとして使用する必要があり、 `WorkerArchetype::Execute` ULONG_PTR との間でキャストできる必要があります。
 
-## <a name="workerarchetypeterminate"></a><a name="terminate"></a>ワーカーアーキタイプ::終了
+## <a name="workerarchetypeterminate"></a><a name="terminate"></a> WorkerArchetype:: Terminate
 
-すべての要求が に渡された後にワーカー オブジェクトを初期化`WorkerArchetype::Execute`解除するために呼び出されます。
+すべての要求がに渡された後にワーカーオブジェクトを初期化解除するために呼び出され `WorkerArchetype::Execute` ます。
 
 ```cpp
 void Terminate(void* pvParam) throw();
@@ -115,8 +116,8 @@ void Terminate(void* pvParam) throw();
 
 #### <a name="parameters"></a>パラメーター
 
-*pvパラム*<br/>
-ワーカー クラスによって認識されるカスタム パラメーター。 また、と`WorkerArchetype::Initialize``WorkerArchetype::Execute`に渡されます。
+*pvParam*<br/>
+ワーカークラスによって認識されるカスタムパラメーター。 また、とにも渡さ `WorkerArchetype::Initialize` `WorkerArchetype::Execute` れます。
 
 ## <a name="see-also"></a>関連項目
 

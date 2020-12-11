@@ -1,19 +1,20 @@
 ---
+description: 詳細については、「NMAKE のエラーと警告 (Uxxxx)」を参照してください。
 title: NMAKE のエラーと警告
 ms.date: 04/16/2019
 f1_keywords:
 - nmake
 ms.assetid: 9dbe2e12-88ca-4df4-b935-17756112bb79
-ms.openlocfilehash: 230389215525871578cad1a1a676995588bdd5ca
-ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
+ms.openlocfilehash: b3e79f13832b2861be31c6229f48aa1282500a96
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64856978"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97155151"
 ---
 # <a name="nmake-errors-and-warnings-uxxxx"></a>NMAKE のエラーと警告 (Uxxxx)
 
-このセクションでは、エラーへの参照と、NMAKE によって生成される警告は、ツールをビルドします。 NMAKE エラーと警告があるフォーム U*xxxx*ここで、 *xxxx*は 4 桁の番号です。
+このセクションでは、NMAKE ビルドツールによって生成されるエラーと警告について説明します。 NMAKE のエラーと警告の形式は U *xxxx* です。ここで、 *xxxx* は4桁の数字です。
 
 [!INCLUDE[error-boilerplate](../../error-messages/includes/error-boilerplate.md)]
 
@@ -62,5 +63,5 @@ ms.locfileid: "64856978"
 
 ## <a name="see-also"></a>関連項目
 
-[C/C++コンパイラとビルド ツールのエラーと警告](../compiler-errors-1/c-cpp-build-errors.md) \
+[C/c + + コンパイラおよびビルドツールのエラーと警告](../compiler-errors-1/c-cpp-build-errors.md) \
 [NMAKE リファレンス](../../build/reference/nmake-reference.md)

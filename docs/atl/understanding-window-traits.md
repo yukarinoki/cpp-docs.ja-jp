@@ -1,41 +1,42 @@
 ---
+description: '詳細情報: ウィンドウの特徴について'
 title: ATL ウィンドウの特徴
 ms.date: 11/04/2016
 helpviewer_keywords:
 - window traits
 ms.assetid: c90cf850-9e91-49da-9cf3-ad4efb30347d
-ms.openlocfilehash: 29549e54051405fc3dd4d5d7ae70a382ad7a62ea
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a42ef66afe09e0e528f05419799dce48c43b1bbf
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62196184"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97157296"
 ---
-# <a name="understanding-window-traits"></a>ウィンドウの特徴を理解します。
+# <a name="understanding-window-traits"></a>ウィンドウの特徴について
 
-ウィンドウの特性クラスは、ATL ウィンドウ オブジェクトを作成するために使用するスタイルを標準化するための単純なメソッドを提供します。 ウィンドウの特徴は、テンプレート パラメーターとして受け入れられます[CWindowImpl](../atl/reference/cwindowimpl-class.md)と既定のクラス レベルでのウィンドウ スタイルを指定するための手段として他の ATL ウィンドウ クラス。
+ウィンドウの特徴クラスは、ATL ウィンドウオブジェクトの作成に使用されるスタイルを標準化するための簡単な方法を提供します。 ウィンドウの特徴は、クラスレベルで既定のウィンドウスタイルを指定する方法として、 [CWindowImpl](../atl/reference/cwindowimpl-class.md) および他の ATL ウィンドウクラスによってテンプレートパラメーターとして受け入れられます。
 
-ウィンドウのインスタンスの作成者がへの呼び出しで明示的にスタイルを指定しない場合[作成](../atl/reference/cwindowimpl-class.md#create)、特性クラスを使用して、適切なスタイルを使用して、ウィンドウが作成されます。 でも、特定のスタイルに設定されているウィンドウ クラスのすべてのインスタンスの他のスタイルを許容しつつ、インスタンスごとの単位で設定を確保できます。
+ウィンドウインスタンスの作成者が [Create](../atl/reference/cwindowimpl-class.md#create)の呼び出しで明示的にスタイルを提供していない場合は、特徴クラスを使用して、ウィンドウが引き続き正しいスタイルで作成されていることを確認できます。 特定のスタイルがそのウィンドウクラスのすべてのインスタンスに対して設定されていることを確認しながら、インスタンスごとに他のスタイルを設定することもできます。
 
-## <a name="atl-window-traits-templates"></a>ATL ウィンドウの特徴のテンプレート
+## <a name="atl-window-traits-templates"></a>ATL ウィンドウの特徴テンプレート
 
-ATL には、テンプレート パラメーターを使用して、コンパイル時に既定のスタイルを設定するための 2 つのウィンドウの特徴テンプレートが用意されています。
+ATL には、コンパイル時にテンプレートパラメーターを使用して既定のスタイルを設定できる2つのウィンドウの特徴特性テンプレートが用意されています。
 
 |クラス|説明|
 |-----------|-----------------|
-|[CWinTraits](../atl/reference/cwintraits-class.md)|既定の呼び出しでその他のスタイルが指定されていない場合にのみ使用されるウィンドウのスタイルを指定する場合に、このテンプレートを使用して`Create`します。 コンパイル時にスタイルの設定より優先の実行時に提供するスタイル。|
-|[CWinTraitsOR](../atl/reference/cwintraitsor-class.md)|ウィンドウ クラスの常に設定する必要があるスタイルを指定する場合に、このクラスを使用します。 実行時に提供されているスタイルは、ビットごとの OR 演算子を使用して、コンパイル時に設定するスタイルを使用して結合されます。|
+|[CWinTraits](../atl/reference/cwintraits-class.md)|このテンプレートは、の呼び出しで他のスタイルが指定されていない場合にのみ使用される既定のウィンドウスタイルを提供するときに使用し `Create` ます。 実行時に指定されるスタイルは、コンパイル時に設定されるスタイルよりも優先されます。|
+|[CWinTraitsOR](../atl/reference/cwintraitsor-class.md)|ウィンドウクラスに常に設定する必要があるスタイルを指定する場合は、このクラスを使用します。 実行時に提供されるスタイルは、コンパイル時にビットごとの OR 演算子を使用して設定されたスタイルと組み合わされます。|
 
-ATL には、多数の定義済みの特殊化のこれらのテンプレートだけでなく、`CWinTraits`ウィンドウ スタイルの組み合わせを一般的に使用されるテンプレート。 参照してください、 [CWinTraits](../atl/reference/cwintraits-class.md)完全な詳細についてはドキュメントを参照します。
+これらのテンプレートに加えて、ATL には、 `CWinTraits` 一般的に使用されるウィンドウスタイルの組み合わせ用のテンプレートの定義済みの特殊化が多数用意されています。 詳細については、 [CWinTraits](../atl/reference/cwintraits-class.md) のリファレンスドキュメントを参照してください。
 
-## <a name="custom-window-traits"></a>カスタムのウィンドウの特徴
+## <a name="custom-window-traits"></a>カスタムウィンドウの特徴
 
-可能性は低い状況では ATL で提供されているテンプレートの 1 つは特化は不十分なため、独自の特性クラスを作成する必要があるだけ 2 つの静的関数を実装するクラスを作成する必要があります:`GetWndStyle`と`GetWndStyleEx`:
+ATL によって提供されるテンプレートの1つを特殊化するだけでは不十分で、独自の特徴クラスを作成する必要がある場合、との2つの静的関数を実装するクラスを作成する必要があります。 `GetWndStyle` `GetWndStyleEx`
 
 [!code-cpp[NVC_ATL_Windowing#68](../atl/codesnippet/cpp/understanding-window-traits_1.h)]
 
-これらの各関数に渡されるスタイル値を使用して、新しいスタイルの値を生成する実行時。 静的関数に渡されるスタイル値がスタイルの引数として渡されたものする場合は、ウィンドウの特性クラスは、ATL ウィンドウ クラスのテンプレート引数として使用されている、[作成](../atl/reference/cwindowimpl-class.md#create)です。
+これらの各関数には、実行時に、新しいスタイル値を生成するために使用できるスタイル値がいくつか渡されます。 ウィンドウの特徴クラスが ATL ウィンドウクラスのテンプレート引数として使用されている場合、これらの静的関数に渡されたスタイル値は、 [作成](../atl/reference/cwindowimpl-class.md#create)するスタイル引数として渡されたものになります。
 
 ## <a name="see-also"></a>関連項目
 
-[ウィンドウ クラス](../atl/atl-window-classes.md)
+[ウィンドウクラス](../atl/atl-window-classes.md)

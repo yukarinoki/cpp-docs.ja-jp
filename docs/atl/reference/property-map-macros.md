@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「プロパティマップマクロ」を参照してください。
 title: プロパティマップマクロ
 ms.date: 11/04/2016
 f1_keywords:
@@ -11,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - property maps
 ms.assetid: 128bc742-2b98-4b97-a243-684dbb83db77
-ms.openlocfilehash: 5e14c3cb82b9b7527ed8af42e181581097218360
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: b2fc7f96c42d7f9d3f116f13c9864ce857e32743
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88834662"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97157803"
 ---
 # <a name="property-map-macros"></a>プロパティマップマクロ
 
@@ -31,7 +32,7 @@ ms.locfileid: "88834662"
 |[PROP_PAGE](#prop_page)|プロパティページの CLSID をプロパティマップに入力します。|
 |[END_PROP_MAP](#end_prop_map)|ATL プロパティマップの終了をマークします。|
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** atlcom. h
 
@@ -206,4 +207,4 @@ ATL プロジェクトウィザードを使用してオブジェクトを作成�
 
 ## <a name="see-also"></a>関連項目
 
-[[マクロ]](../../atl/reference/atl-macros.md)
+[マクロ](../../atl/reference/atl-macros.md)
