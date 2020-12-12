@@ -1,17 +1,18 @@
 ---
+description: 詳細については、「BSCMAKE のエラーと警告 (BKxxxx)」を参照してください。
 title: BSCMAKE のエラーと警告
 ms.date: 04/16/2019
 ms.assetid: 3767baa6-e639-472e-99fd-7543fd945cd3
-ms.openlocfilehash: e6abc334d9ecf5df54d200ab242c91a7035ab226
-ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
+ms.openlocfilehash: 8273782f82102c81cf7f7dd5e93b7e1ec6d1703e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64856366"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97237908"
 ---
 # <a name="bscmake-errors-and-warnings-bkxxxx"></a>BSCMAKE のエラーと警告 (BKxxxx)
 
-このセクションでは、エラーへの参照と、BSCMAKE によって生成される警告は、ツールをビルドします。 BSCMAKE エラーと警告があるフォーム BK*xxxx*ここで、 *xxxx*は 4 桁の番号です。
+このセクションでは、BSCMAKE ビルドツールによって生成されるエラーと警告について説明します。 BSCMAKE のエラーと警告の形式は、BK *xxxx* です。ここで、 *xxxx* は4桁の数字です。
 
 [!INCLUDE[error-boilerplate](../../error-messages/includes/error-boilerplate.md)]
 
@@ -36,9 +37,9 @@ ms.locfileid: "64856366"
 
 [BSCMAKE の警告 BK4502](bscmake-warning-bk4502.md) \
 [BSCMAKE の警告 BK4503](bscmake-warning-bk4503.md) \
-[BSCMAKE の警告 BK4504](bscmake-warning-bk4504.md)
+[BSCMAKE 警告 BK4504](bscmake-warning-bk4504.md)
 
 ## <a name="see-also"></a>関連項目
 
-[C/C++コンパイラとビルド ツールのエラーと警告](../compiler-errors-1/c-cpp-build-errors.md) \
+[C/c + + コンパイラおよびビルドツールのエラーと警告](../compiler-errors-1/c-cpp-build-errors.md) \
 [BSCMake リファレンス](../../build/reference/bscmake-reference.md)

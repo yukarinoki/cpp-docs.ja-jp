@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「リソースコンパイラの致命的なエラー RW1022」を参照してください。
 title: リソース コンパイラの致命的なエラー RW1022
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - RW1022
 ms.assetid: 6747c8a9-9c9b-4422-b414-0645d22092d0
-ms.openlocfilehash: 896eac8bcc59ef84dc1437fba00c42c6c9304bed
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 8c0ec5b4ca6f0d7ef910ded10736034858722b0a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80172751"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97237232"
 ---
 # <a name="resource-compiler-fatal-error-rw1022"></a>リソース コンパイラの致命的なエラー RW1022
 
-**ファイル書き込み中の i/o エラー**
+**ファイル書き込み I/O エラー**
 
 リソース コンパイラは、ファイルに書き込めませんでした。
 

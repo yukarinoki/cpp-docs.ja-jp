@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「CObject からのクラスの派生」を参照してください。
 title: CObject からのクラスの派生
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - CObject class [MFC], deriving serializable classes
 - CObject class [MFC], deriving from
 ms.assetid: 5ea4ea41-08b5-4bd8-b247-c5de8c152a27
-ms.openlocfilehash: f4c01538877d8517cf3394d9e0108ce3a9df2900
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: c6c2ea75354d783b234bc3f7cac7a08dac4f05da
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84621937"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97240703"
 ---
 # <a name="deriving-a-class-from-cobject"></a>CObject からのクラスの派生
 
@@ -40,7 +41,7 @@ ms.locfileid: "84621937"
 
 次の表に、シリアル化と実行時の情報をサポートするために使用されるマクロ間の関係を示します。
 
-### <a name="macros-used-for-serialization-and-run-time-information"></a>シリアル化と実行時の情報に使用されるマクロ
+### <a name="macros-used-for-serialization-and-run-time-information"></a>シリアル化と Run-Time 情報に使用するマクロ
 
 |使用するマクロ|CObject:: IsKindOf|CRuntimeClass::<br /><br /> CreateObject|CArchive:: operator>><br /><br /> CArchive:: operator<<|
 |----------------|-----------------------|--------------------------------------|-------------------------------------------------------|
@@ -57,7 +58,7 @@ ms.locfileid: "84621937"
 
    [!code-cpp[NVC_MFCCObjectSample#1](codesnippet/cpp/deriving-a-class-from-cobject_1.h)]
 
-ただし、通常は、の一部のメンバー関数をオーバーライドし `CObject` て、新しいクラスの詳細を処理することもできます。 たとえば、通常、の関数をオーバーライドし `Dump` `CObject` て、クラスの内容のデバッグ出力を提供する場合があります。 をオーバーライドする方法の詳細につい `Dump` ては、「[オブジェクトダンプのカスタマイズ](/previous-versions/visualstudio/visual-studio-2010/sc15kz85(v=vs.100))」を参照してください。 また、の関数をオーバーライドして、 `AssertValid` `CObject` クラスオブジェクトのデータメンバーの一貫性を検証するためのカスタマイズされたテストを行うこともできます。 オーバーライドする方法の詳細につい `AssertValid` ては、「 [MFC ASSERT_VALID」および「CObject:: AssertValid](reference/diagnostic-services.md#assert_valid)」を参照してください。
+ただし、通常は、の一部のメンバー関数をオーバーライドし `CObject` て、新しいクラスの詳細を処理することもできます。 たとえば、通常、の関数をオーバーライドし `Dump` `CObject` て、クラスの内容のデバッグ出力を提供する場合があります。 をオーバーライドする方法の詳細につい `Dump` ては、「 [オブジェクトダンプのカスタマイズ](/previous-versions/visualstudio/visual-studio-2010/sc15kz85(v=vs.100))」を参照してください。 また、の関数をオーバーライドして、 `AssertValid` `CObject` クラスオブジェクトのデータメンバーの一貫性を検証するためのカスタマイズされたテストを行うこともできます。 オーバーライドする方法の詳細につい `AssertValid` ては、「 [MFC ASSERT_VALID」および「CObject:: AssertValid](reference/diagnostic-services.md#assert_valid)」を参照してください。
 
 [機能のレベルを指定](specifying-levels-of-functionality.md)する記事では、ランタイムクラス情報、動的オブジェクトの作成、シリアル化など、他のレベルの機能を指定する方法について説明します。
 

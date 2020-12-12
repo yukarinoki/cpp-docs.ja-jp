@@ -1,4 +1,5 @@
 ---
+description: '詳細については、「MFC ActiveX コントロール: イベント」を参照してください。'
 title: 'MFC ActiveX コントロール : イベント'
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - events [MFC], ActiveX controls
 - OLE events [MFC]
 ms.assetid: e1e57e0c-206b-4923-a0b5-682c26564f74
-ms.openlocfilehash: 129b805379fa68cb4f50ee1f8e3ac7d1b725d9ec
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 8a360931287432e9f0ee0fc55e7e5120bcbd390f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84622323"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97240690"
 ---
 # <a name="mfc-activex-controls-events"></a>MFC ActiveX コントロール : イベント
 
@@ -26,7 +27,7 @@ ActiveX コントロールは、イベントを使用して、コントロール
 
 イベントは、メッセージとも呼ばれます。
 
-MFC では、stock と custom の2種類のイベントがサポートされています。 Stock イベントは[、クラスが](reference/colecontrol-class.md)自動的に処理するイベントです。 Stock イベントの完全な一覧については、「 [MFC ActiveX コントロール: ストックイベントの追加](mfc-activex-controls-adding-stock-events-to-an-activex-control.md)」を参照してください。 カスタムイベントを使用すると、そのコントロールに固有のアクションが発生したときにコンテナーに通知する機能を制御できます。 一部の例は、特定のウィンドウメッセージのコントロールまたは受信の内部状態の変化です。
+MFC では、stock と custom の2種類のイベントがサポートされています。 Stock イベントは [、クラスが](reference/colecontrol-class.md) 自動的に処理するイベントです。 Stock イベントの完全な一覧については、「 [MFC ActiveX コントロール: ストックイベントの追加](mfc-activex-controls-adding-stock-events-to-an-activex-control.md)」を参照してください。 カスタムイベントを使用すると、そのコントロールに固有のアクションが発生したときにコンテナーに通知する機能を制御できます。 一部の例は、特定のウィンドウメッセージのコントロールまたは受信の内部状態の変化です。
 
 コントロールがイベントを適切に起動するには、コントロールクラスが、関連イベントが発生したときに呼び出されるメンバー関数にコントロールの各イベントをマップする必要があります。 このマッピング機構 (イベントマップと呼ばれます) は、イベントに関する情報を一元化し、Visual Studio がコントロールのイベントに簡単にアクセスして操作できるようにします。 このイベントマップは、ヘッダー () にある次のマクロによって宣言されます。H) を実行します。
 
@@ -45,7 +46,7 @@ MFC ActiveX コントロールウィザードを使用してプロジェクト�
 
 - [MFC ActiveX コントロール: ストックイベントの追加](mfc-activex-controls-adding-stock-events-to-an-activex-control.md)
 
-- [MFC ActiveX コントロール : カスタム イベントの追加](mfc-activex-controls-adding-custom-events.md)
+- [MFC ActiveX コントロール: カスタムイベントの追加](mfc-activex-controls-adding-custom-events.md)
 
 ## <a name="see-also"></a>関連項目
 

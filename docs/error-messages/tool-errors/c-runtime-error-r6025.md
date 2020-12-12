@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「C ランタイムエラー R6025」を参照してください。
 title: C ランタイム エラー R6025
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - R6025
 ms.assetid: afa06d98-9c36-445b-b3e7-b6409bc8e779
-ms.openlocfilehash: 6e184ba24ad535697a727276a980fd082625e082
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 7bf3213d81e144f14f6eeb25f108f497267ec4d2
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87218053"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97237570"
 ---
 # <a name="c-runtime-error-r6025"></a>C ランタイム エラー R6025
 
@@ -22,8 +23,8 @@ ms.locfileid: "87218053"
 >
 > このエラーを解決するには、次の手順を試してみます。
 >
-> - **コントロールパネル**の [**アプリと機能**] ページまたは [**プログラムと機能**] ページを使用して、プログラムを修復または再インストールします。
-> - ソフトウェアの更新については、**コントロールパネル**の**Windows Update**を確認してください。
+> - **コントロールパネル** の [**アプリと機能**] ページまたは [**プログラムと機能**] ページを使用して、プログラムを修復または再インストールします。
+> - ソフトウェアの更新については、**コントロールパネル** の **Windows Update** を確認してください。
 > - アプリの更新バージョンを確認します。 問題が解決しない場合は、アプリの製造元にお問い合わせください。
 
 **プログラマ向けの情報**

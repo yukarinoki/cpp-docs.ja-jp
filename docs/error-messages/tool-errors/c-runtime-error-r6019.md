@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「C ランタイムエラー R6019」を参照してください。
 title: C ランタイム エラー R6019
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - R6019
 ms.assetid: 8129923e-7db2-40ee-9602-def9365f8d28
-ms.openlocfilehash: b647825b7e856be9dc51a5a652be87a4cc6d0e23
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 190b836d5c0823b3644e4ff49812b5de05f421e8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80197263"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97237635"
 ---
 # <a name="c-runtime-error-r6019"></a>C ランタイム エラー R6019
 
@@ -23,8 +24,8 @@ ms.locfileid: "80197263"
 > このエラーを解決するには、次の手順を試してみます。
 >
 > - プログラムを管理者として実行します。
-> - **コントロールパネル**の **[アプリと機能]** ページまたは **[プログラムと機能]** ページを使用して、プログラムを修復または再インストールします。
-> - ソフトウェアの更新については、**コントロールパネル**の**Windows Update**を確認してください。
+> - **コントロールパネル** の [**アプリと機能**] ページまたは [**プログラムと機能**] ページを使用して、プログラムを修復または再インストールします。
+> - ソフトウェアの更新については、**コントロールパネル** の **Windows Update** を確認してください。
 > - アプリの更新バージョンを確認します。 問題が解決しない場合は、アプリの製造元にお問い合わせください。
 
 **プログラマ向けの情報**

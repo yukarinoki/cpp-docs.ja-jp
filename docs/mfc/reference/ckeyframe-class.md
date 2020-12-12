@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: CKeyFrame フレームクラス'
 title: CKeyFrame クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -26,12 +27,12 @@ helpviewer_keywords:
 - CKeyFrame [MFC], m_pExistingKeyFrame
 - CKeyFrame [MFC], m_pTransition
 ms.assetid: d050a562-20f6-4c65-8ce5-ccb3aef1a20e
-ms.openlocfilehash: f535503338a82c7cc70455ae6a08cdab0f13c624
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: ec6aa45484965afbf0c636a1eed26a3d4a63e426
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81372292"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97236881"
 ---
 # <a name="ckeyframe-class"></a>CKeyFrame クラス
 
@@ -49,44 +50,44 @@ class CKeyFrame : public CBaseKeyFrame;
 
 |名前|説明|
 |----------|-----------------|
-|[キーフレーム::Cキーフレーム](#ckeyframe)|オーバーロードされます。 他のキーフレームに依存するキーフレームを作成します。|
+|[CKeyFrame フレーム:: CKeyFrame フレーム](#ckeyframe)|オーバーロードされます。 他のキーフレームに依存するキーフレームを構築します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
 |名前|説明|
 |----------|-----------------|
-|[Cキーフレーム::ストーリーボードに追加](#addtostoryboard)|ストーリーボードにキーフレームを追加します。 [(CBaseKeyFrame をオーバーライドします。:AddTo ストーリーボード](../../mfc/reference/cbasekeyframe-class.md#addtostoryboard).)|
-|[遷移後にストーリーボードを追加します。](#addtostoryboardaftertransition)|トランジション後にストーリーボードにキーフレームを追加します。|
-|[Cキーフレーム::アドオンストーリーボードアットオフセット](#addtostoryboardatoffset)|キーフレームをストーリーボードにオフセット位置に追加します。|
-|[Cキーフレーム::既存のキーフレームを取得します。](#getexistingkeyframe)|このキーフレームが依存するキーフレームへのポインターを返します。|
-|[キーフレーム::ゲットオフセット](#getoffset)|他のキーフレームからのオフセットを返します。|
-|[キーフレーム::ゲットトランジション](#gettransition)|このキーフレームが依存するトランジションへのポインターを返します。|
+|[CKeyFrame フレーム:: AddToStoryboard](#addtostoryboard)|ストーリーボードにキーフレームを追加します。 ( [Cbasekeyframe フレーム:: AddToStoryboard](../../mfc/reference/cbasekeyframe-class.md#addtostoryboard)をオーバーライドします)。|
+|[CKeyFrame フレーム:: AddToStoryboardAfterTransition](#addtostoryboardaftertransition)|遷移後に、ストーリーボードにキーフレームを追加します。|
+|[CKeyFrame フレーム:: AddToStoryboardAtOffset](#addtostoryboardatoffset)|オフセットでストーリーボードにキーフレームを追加します。|
+|[CKeyFrame フレーム:: GetExistingKeyframe フレーム](#getexistingkeyframe)|このキーフレームが依存するキーフレームへのポインターを返します。|
+|[CKeyFrame フレーム:: GetOffset](#getoffset)|他のキーフレームからのオフセットを返します。|
+|[CKeyFrame フレーム:: GetTransition](#gettransition)|このキーフレームが依存する遷移へのポインターを返します。|
 
 ### <a name="protected-data-members"></a>プロテクト データ メンバー
 
 |名前|説明|
 |----------|-----------------|
-|[キーフレーム::m_offset](#m_offset)|m_pExistingKeyFrameに格納されているキーフレームからのこのキーフレームのオフセットを指定します。|
-|[キーフレーム::m_pExistingKeyFrame](#m_pexistingkeyframe)|既存の keframe へのポインターを格納します。 このキーフレームは、既存のキーフレームにm_offsetを付けてストーリーボードに追加されます。|
-|[キーフレーム::m_pTransition](#m_ptransition)|このキーフレームで開始されるトランジションへのポインターを格納します。|
+|[CKeyFrame フレーム:: m_offset](#m_offset)|M_pExistingKeyFrame に格納されているキーフレームから、このキーフレームのオフセットを指定します。|
+|[CKeyFrame フレーム:: m_pExistingKeyFrame](#m_pexistingkeyframe)|既存の keframe へのポインターを格納します。 このキーフレームは、既存のキーフレームに m_offset を持つストーリーボードに追加されます。|
+|[CKeyFrame フレーム:: m_pTransition](#m_ptransition)|このキーフレームから開始する transtion へのポインターを格納します。|
 
 ## <a name="remarks"></a>解説
 
-このクラスは、アニメーション キーフレームを実装します。 キーフレームは、ストーリーボード内の時間を表し、トランジションの開始時間と終了時間を指定するために使用できます。 キーフレームは、他のキーフレームに基づいて、そのキーフレームからのオフセット (秒単位) を持つ場合もあれば、遷移に基づいて、このトランジションが終了する瞬間を表している場合もあります。
+このクラスは、アニメーションのキーフレームを実装します。 キーフレームは、ストーリーボード内の特定の時点を表し、遷移の開始時刻と終了時刻を指定するために使用できます。 キーフレームは、他のキーフレームに基づいていて、そこからのオフセット (秒単位) があるか、または遷移に基づいており、この遷移が終了した時点を表している可能性があります。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
 [CObject](../../mfc/reference/cobject-class.md)
 
-[キーフレーム](../../mfc/reference/cbasekeyframe-class.md)
+[CBaseKeyFrame](../../mfc/reference/cbasekeyframe-class.md)
 
-[キーフレーム](../../mfc/reference/ckeyframe-class.md)
+[CKeyFrame](../../mfc/reference/ckeyframe-class.md)
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** afxanimationcontroller.h
 
-## <a name="ckeyframeaddtostoryboard"></a><a name="addtostoryboard"></a>Cキーフレーム::ストーリーボードに追加
+## <a name="ckeyframeaddtostoryboard"></a><a name="addtostoryboard"></a> CKeyFrame フレーム:: AddToStoryboard
 
 ストーリーボードにキーフレームを追加します。
 
@@ -98,23 +99,23 @@ virtual BOOL AddToStoryboard(
 
 ### <a name="parameters"></a>パラメーター
 
-*ストーリーボード*<br/>
+*pStoryboard*<br/>
 ストーリーボードへのポインター。
 
-*追加*<br/>
-キーフレームを追加するか、再帰的にトランジションするかを指定します。
+*bDeepAdd*<br/>
+キーフレームまたは遷移を再帰的に追加するかどうかを指定します。
 
 ### <a name="return-value"></a>戻り値
 
-TRUE (キーフレームが正常に追加された場合)。
+キーフレームが正常に追加された場合は TRUE。
 
 ### <a name="remarks"></a>解説
 
-このメソッドは、ストーリーボードにキーフレームを追加します。 他のキーフレームまたはトランジションに依存し、bDeepAdd が TRUE の場合、このメソッドは再帰的に追加しようとします。
+このメソッドは、ストーリーボードにキーフレームを追加します。 他のキーフレームまたは遷移に依存し、bDeepAdd が TRUE の場合、このメソッドは再帰的に追加しようとします。
 
-## <a name="ckeyframeaddtostoryboardaftertransition"></a><a name="addtostoryboardaftertransition"></a>遷移後にストーリーボードを追加します。
+## <a name="ckeyframeaddtostoryboardaftertransition"></a><a name="addtostoryboardaftertransition"></a> CKeyFrame フレーム:: AddToStoryboardAfterTransition
 
-トランジション後にストーリーボードにキーフレームを追加します。
+遷移後に、ストーリーボードにキーフレームを追加します。
 
 ```
 BOOL AddToStoryboardAfterTransition(
@@ -124,23 +125,23 @@ BOOL AddToStoryboardAfterTransition(
 
 ### <a name="parameters"></a>パラメーター
 
-*ストーリーボード*<br/>
+*pStoryboard*<br/>
 ストーリーボードへのポインター。
 
-*追加*<br/>
+*bDeepAdd*<br/>
 遷移を再帰的に追加するかどうかを指定します。
 
 ### <a name="return-value"></a>戻り値
 
-TRUE (キーフレームが正常に追加された場合)。
+キーフレームが正常に追加された場合は TRUE。
 
 ### <a name="remarks"></a>解説
 
-この関数は、フレームワークによって呼び出され、遷移後にストーリーボードにキーフレームを追加します。
+この関数は、遷移後に、ストーリーボードにキーフレームを追加するためにフレームワークによって呼び出されます。
 
-## <a name="ckeyframeaddtostoryboardatoffset"></a><a name="addtostoryboardatoffset"></a>Cキーフレーム::アドオンストーリーボードアットオフセット
+## <a name="ckeyframeaddtostoryboardatoffset"></a><a name="addtostoryboardatoffset"></a> CKeyFrame フレーム:: AddToStoryboardAtOffset
 
-キーフレームをストーリーボードにオフセット位置に追加します。
+オフセットでストーリーボードにキーフレームを追加します。
 
 ```
 virtual BOOL AddToStoryboardAtOffset(
@@ -150,23 +151,23 @@ virtual BOOL AddToStoryboardAtOffset(
 
 ### <a name="parameters"></a>パラメーター
 
-*ストーリーボード*<br/>
+*pStoryboard*<br/>
 ストーリーボードへのポインター。
 
-*追加*<br/>
-このキーフレームを再帰的に依存するキーフレームを追加するかどうかを指定します。
+*bDeepAdd*<br/>
+キーフレームを追加するかどうかを指定します。このキーフレームは再帰的に依存します。
 
 ### <a name="return-value"></a>戻り値
 
-TRUE (キーフレームが正常に追加された場合)。
+キーフレームが正常に追加された場合は TRUE。
 
 ### <a name="remarks"></a>解説
 
-この関数は、オフセット時にストーリーボードにキーフレームを追加するために、フレームワークによって呼び出されます。
+この関数は、オフセットでストーリーボードにキーフレームを追加するためにフレームワークによって呼び出されます。
 
-## <a name="ckeyframeckeyframe"></a><a name="ckeyframe"></a>キーフレーム::Cキーフレーム
+## <a name="ckeyframeckeyframe"></a><a name="ckeyframe"></a> CKeyFrame フレーム:: CKeyFrame フレーム
 
-トランジションに依存するキーフレームを作成します。
+遷移に依存するキーフレームを構築します。
 
 ```
 CKeyFrame(CBaseTransition* pTransition);
@@ -178,20 +179,20 @@ CKeyFrame(
 
 ### <a name="parameters"></a>パラメーター
 
-*移行*<br/>
+*pTransition*<br/>
 遷移へのポインター。
 
-*pキーフレーム*<br/>
+*pKeyframe*<br/>
 キーフレームへのポインター。
 
 *offset*<br/>
-pKeyframe で指定されたキーフレームからのオフセット (秒単位)。
+PKeyframe フレームによって指定されたキーフレームからのオフセット (秒単位)。
 
 ### <a name="remarks"></a>解説
 
-構築されたキーフレームは、指定されたトランジションが終了したときにストーリーボード内の瞬間を表します。
+構築されたキーフレームは、指定された遷移が終了したときにストーリーボード内の特定の時点を表します。
 
-## <a name="ckeyframegetexistingkeyframe"></a><a name="getexistingkeyframe"></a>Cキーフレーム::既存のキーフレームを取得します。
+## <a name="ckeyframegetexistingkeyframe"></a><a name="getexistingkeyframe"></a> CKeyFrame フレーム:: GetExistingKeyframe フレーム
 
 このキーフレームが依存するキーフレームへのポインターを返します。
 
@@ -201,13 +202,13 @@ CBaseKeyFrame* GetExistingKeyframe();
 
 ### <a name="return-value"></a>戻り値
 
-キーフレームへの有効なポインター、またはこのキーフレームが他のキーフレームに依存しない場合は NULL。
+キーフレームへの有効なポインター。このキーフレームが他のキーフレームに依存しない場合は NULL。
 
 ### <a name="remarks"></a>解説
 
-このキーフレームが依存するキーフレームのアクセサーです。
+これは、このキーフレームが依存するキーフレームのアクセサーです。
 
-## <a name="ckeyframegetoffset"></a><a name="getoffset"></a>キーフレーム::ゲットオフセット
+## <a name="ckeyframegetoffset"></a><a name="getoffset"></a> CKeyFrame フレーム:: GetOffset
 
 他のキーフレームからのオフセットを返します。
 
@@ -217,15 +218,15 @@ UI_ANIMATION_SECONDS GetOffset();
 
 ### <a name="return-value"></a>戻り値
 
-他のキーフレームからのオフセット (秒単位)。
+他のキーフレームからの秒単位のオフセット。
 
 ### <a name="remarks"></a>解説
 
-このメソッドは、他のキーフレームからのオフセットを秒単位で決定するために呼び出す必要があります。
+このメソッドは、他のキーフレームからのオフセット (秒単位) を決定するために呼び出す必要があります。
 
-## <a name="ckeyframegettransition"></a><a name="gettransition"></a>キーフレーム::ゲットトランジション
+## <a name="ckeyframegettransition"></a><a name="gettransition"></a> CKeyFrame フレーム:: GetTransition
 
-このキーフレームが依存するトランジションへのポインターを返します。
+このキーフレームが依存する遷移へのポインターを返します。
 
 ```
 CBaseTransition* GetTransition();
@@ -233,31 +234,31 @@ CBaseTransition* GetTransition();
 
 ### <a name="return-value"></a>戻り値
 
-トランジションへの有効なポインター、またはこのキーフレームがトランジションに依存しない場合は NULL。
+遷移する有効なポインター。このキーフレームが遷移に依存しない場合は NULL。
 
 ### <a name="remarks"></a>解説
 
-これは、このキーフレームが依存するトランジションのアクセサーです。
+これは、このキーフレームが依存する遷移のアクセサーです。
 
-## <a name="ckeyframem_offset"></a><a name="m_offset"></a>キーフレーム::m_offset
+## <a name="ckeyframem_offset"></a><a name="m_offset"></a> CKeyFrame フレーム:: m_offset
 
-m_pExistingKeyFrameに格納されているキーフレームからのこのキーフレームのオフセットを指定します。
+M_pExistingKeyFrame に格納されているキーフレームから、このキーフレームのオフセットを指定します。
 
 ```
 UI_ANIMATION_SECONDS m_offset;
 ```
 
-## <a name="ckeyframem_pexistingkeyframe"></a><a name="m_pexistingkeyframe"></a>キーフレーム::m_pExistingKeyFrame
+## <a name="ckeyframem_pexistingkeyframe"></a><a name="m_pexistingkeyframe"></a> CKeyFrame フレーム:: m_pExistingKeyFrame
 
-既存の keframe へのポインターを格納します。 このキーフレームは、既存のキーフレームにm_offsetを付けてストーリーボードに追加されます。
+既存の keframe へのポインターを格納します。 このキーフレームは、既存のキーフレームに m_offset を持つストーリーボードに追加されます。
 
 ```
 CBaseKeyFrame* m_pExistingKeyFrame;
 ```
 
-## <a name="ckeyframem_ptransition"></a><a name="m_ptransition"></a>キーフレーム::m_pTransition
+## <a name="ckeyframem_ptransition"></a><a name="m_ptransition"></a> CKeyFrame フレーム:: m_pTransition
 
-このキーフレームで開始されるトランジションへのポインターを格納します。
+このキーフレームから開始する transtion へのポインターを格納します。
 
 ```
 CBaseTransition* m_pTransition;

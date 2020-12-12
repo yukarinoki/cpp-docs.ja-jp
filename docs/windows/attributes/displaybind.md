@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: displaybind'
 title: displaybind (C++ COM 属性)
 ms.date: 10/02/2018
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - displaybind attribute
 ms.assetid: b3d70396-78e4-43d9-9583-16ddb8c9bb1f
-ms.openlocfilehash: e5c870aefbc73893b5bf14edec384a93fe0b057b
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 98411ec7f07c3145216c536db3e1c19ef7043429
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88841663"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97236322"
 ---
 # <a name="displaybind"></a>displaybind
 
@@ -25,13 +26,13 @@ ms.locfileid: "88841663"
 
 ## <a name="remarks"></a>解説
 
-**Displaybind** C++ 属性には[displaybind](/windows/win32/Midl/displaybind) MIDL 属性と同じ機能があります。
+**Displaybind** C++ 属性には [displaybind](/windows/win32/Midl/displaybind) MIDL 属性と同じ機能があります。
 
 ## <a name="example"></a>例
 
-**Displaybind**の使用例については、[バインド](bindable.md)可能なの例を参照してください。
+**Displaybind** の使用例については、[バインド](bindable.md)可能なの例を参照してください。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 | 属性コンテキスト | 値 |
 |-|-|

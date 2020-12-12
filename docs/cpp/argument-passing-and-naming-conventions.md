@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「引数の引き渡しと名前付け規則」を参照してください。
 title: 引数の渡し規則と名前付け規則
 ms.date: 12/17/2018
 helpviewer_keywords:
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - passing arguments [C++], conventions
 - conventions [C++], argument names
 ms.assetid: de468979-eab8-4158-90c5-c198932f93b9
-ms.openlocfilehash: 32f32ceb56267dc39b58b8eed1b30af697ca6d74
-ms.sourcegitcommit: d5a7ea8e462f555fbb3852d6fe5112521fef3133
+ms.openlocfilehash: bd51187fcc65dfce6c473c784c85c6afcae0bcf3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/30/2020
-ms.locfileid: "96324177"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97239832"
 ---
 # <a name="argument-passing-and-naming-conventions"></a>引数の渡し規則と名前付け規則
 
@@ -39,7 +40,7 @@ X64 プラットフォームを対象とするコードの既定の呼び出し�
 
 次の呼び出し規約は Visual C/C++ コンパイラでサポートされます。
 
-|キーワード|スタック クリーンアップ|パラメーター渡し|
+|Keyword|スタック クリーンアップ|パラメーター渡し|
 |-------------|-------------------|-----------------------|
 |[__cdecl](../cpp/cdecl.md)|Caller|パラメーターをスタックに逆の順序で (右から左に) プッシュする|
 |[__clrcall](../cpp/clrcall.md)|該当なし|CLR 式スタックに順に (左から右に) パラメーターを読み込む|

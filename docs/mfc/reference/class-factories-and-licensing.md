@@ -1,15 +1,16 @@
 ---
+description: 詳細については、クラスファクトリとライセンスに関するページを参照してください。
 title: クラス ファクトリとライセンス
 ms.date: 11/04/2016
 helpviewer_keywords:
 - class factories [MFC], and licensing
 ms.assetid: 53c4856a-4062-46db-9f69-dd4339f746b3
-ms.openlocfilehash: 939d7156a9bd7bf0778d2ab4a40acb2afe10cf6e
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 7470a5828df358a28db5a30832f98314e09a133e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88845927"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97236842"
 ---
 # <a name="class-factories-and-licensing"></a>クラス ファクトリとライセンス
 
@@ -50,7 +51,7 @@ DECLARE_OLECREATE_EX(class_name)
 
 [!code-cpp[NVC_MFCAxCtl#14](../../mfc/reference/codesnippet/cpp/class-factories-and-licensing_1.h)]
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
   **ヘッダー** afxctl.h
 
@@ -90,7 +91,7 @@ IMPLEMENT_OLECREATE_EX(
 
 このマクロは、DECLARE_OLECREATE_EX マクロ、BEGIN_OLEFACTORY および END_OLEFACTORY マクロを使用するコントロールクラスの実装ファイルに記述されている必要があります。 外部名は、他のアプリケーションに公開されている OLE コントロールの識別子です。 コンテナーはこの名前を使用して、このコントロールクラスのオブジェクトを要求します。
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
   **ヘッダー** afxctl.h
 
@@ -111,7 +112,7 @@ BEGIN_OLEFACTORY(class_name)
 
 クラスファクトリライセンス関数の宣言は、BEGIN_OLEFACTORY の直後に開始する必要があります。
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
   **ヘッダー** afxctl.h
 
@@ -128,7 +129,7 @@ END_OLEFACTORY(class_name)
 *class_name*<br/>
 クラスファクトリを持つコントロールクラスの名前。
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
   **ヘッダー** afxctl.h
 
@@ -156,19 +157,19 @@ BOOL AFXAPI AfxVerifyLicFile(
 は、ライセンスファイルの先頭で見つかったシーケンスと一致する必要があるバイトシーケンスを指します。
 
 *cch*<br/>
-*PszLicFileContents*の文字数。
+*PszLicFileContents* の文字数。
 
 ### <a name="return-value"></a>戻り値
 
-ライセンスファイルが存在し、 *pszLicFileContents*の文字シーケンスで始まる場合は0以外の。それ以外の場合は0です。
+ライセンスファイルが存在し、 *pszLicFileContents* の文字シーケンスで始まる場合は0以外の。それ以外の場合は0です。
 
 ### <a name="remarks"></a>解説
 
-*Cch*が-1 の場合、この関数は次を使用します。
+*Cch* が-1 の場合、この関数は次を使用します。
 
 [!code-cpp[NVC_MFC_Utilities#36](../../mfc/codesnippet/cpp/class-factories-and-licensing_2.cpp)]
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
   **ヘッダー** afxctl.h
 

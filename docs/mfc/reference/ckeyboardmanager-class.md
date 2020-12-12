@@ -1,4 +1,5 @@
 ---
+description: 詳細については、C/Manager クラス
 title: Cのマネージャークラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -30,12 +31,12 @@ helpviewer_keywords:
 - CKeyboardManager [MFC], TranslateCharToUpper
 - CKeyboardManager [MFC], UpdateAccelTable
 ms.assetid: 4809ece6-89df-4479-8b53-9bf476ee107b
-ms.openlocfilehash: e67bbb18b6a87edfaa4bc4c410ec28eb613ed51d
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 9296c1d81cc2d915fe8ba84bfeedb64ae546fdd5
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88841494"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97236894"
 ---
 # <a name="ckeyboardmanager-class"></a>Cのマネージャークラス
 
@@ -89,7 +90,7 @@ class CKeyboardManager : public CObject
 
 [CKeyboardManager](../../mfc/reference/ckeyboardmanager-class.md)
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** afxkeyboardmanager
 
@@ -136,7 +137,7 @@ static BOOL FindDefaultAccelerator(
 *uiCmd*<br/>
 からコマンド ID。
 
-*引数*<br/>
+*str*<br/>
 入出力オブジェクトへの参照 `CString` 。
 
 *pWndFrame*<br/>
@@ -185,7 +186,7 @@ static BOOL __stdcall IsKeyHandled(
 
 ### <a name="remarks"></a>解説
 
-入力パラメーターは、 *pWndFrame*でショートカットキーが処理されるかどうかを判断*するために*、アクセスキーと*fVirt*の両方のアクセラレータテーブルのエントリと一致する必要があります。
+入力パラメーターは、 *pWndFrame* でショートカットキーが処理されるかどうかを判断 *するために*、アクセスキーと *fVirt* の両方のアクセラレータテーブルのエントリと一致する必要があります。
 
 ## <a name="ckeyboardmanageriskeyprintable"></a><a name="iskeyprintable"></a> CIsKeyPrintable Manager::
 
@@ -248,7 +249,7 @@ BOOL LoadState(
 
 ### <a name="remarks"></a>解説
 
-*Lpszprofilename*パラメーターが NULL の場合、このメソッドは、データの既定のレジストリの場所を確認し `CKeyboardManager` ます。 既定のレジストリの場所は、 [CWinAppEx クラス](../../mfc/reference/cwinappex-class.md)によって指定されます。 データは、前に [CSaveState manager::](#savestate)メソッドを使用して書き込む必要があります。
+*Lpszprofilename* パラメーターが NULL の場合、このメソッドは、データの既定のレジストリの場所を確認し `CKeyboardManager` ます。 既定のレジストリの場所は、 [CWinAppEx クラス](../../mfc/reference/cwinappex-class.md)によって指定されます。 データは、前に [CSaveState manager::](#savestate)メソッドを使用して書き込む必要があります。
 
 既定のウィンドウを指定しない場合は、アプリケーションのメインフレームウィンドウが使用されます。
 
@@ -288,7 +289,7 @@ BOOL SaveState(
 
 ### <a name="remarks"></a>解説
 
-*Lpszprofilename*パラメーターが NULL の場合、このメソッドは、 `CKeyboardManager` [CWinAppEx クラス](../../mfc/reference/cwinappex-class.md)によって指定された既定の場所に状態を書き込みます。 場所を指定する場合は、後で [CLoadState manager::](#loadstate)メソッドを使用してデータを読み込むことができます。
+*Lpszprofilename* パラメーターが NULL の場合、このメソッドは、 `CKeyboardManager` [CWinAppEx クラス](../../mfc/reference/cwinappex-class.md)によって指定された既定の場所に状態を書き込みます。 場所を指定する場合は、後で [CLoadState manager::](#loadstate)メソッドを使用してデータを読み込むことができます。
 
 既定のウィンドウを指定しない場合は、メインフレームウィンドウが既定のウィンドウとして使用されます。
 
@@ -378,7 +379,7 @@ BOOL UpdateAccelTable(
 ## <a name="see-also"></a>関連項目
 
 [階層図](../../mfc/hierarchy-chart.md)<br/>
-[クラス](../../mfc/reference/mfc-classes.md)<br/>
+[Classes](../../mfc/reference/mfc-classes.md)<br/>
 [CWinAppEx クラス](../../mfc/reference/cwinappex-class.md)<br/>
 [CWinAppEx:: Init# manager](../../mfc/reference/cwinappex-class.md#initkeyboardmanager)<br/>
 [キーボードとマウスのカスタマイズ](../../mfc/keyboard-and-mouse-customization.md)

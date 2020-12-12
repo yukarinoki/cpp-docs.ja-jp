@@ -1,5 +1,6 @@
 ---
-title: コメント (C++)
+description: '詳細情報: コメント (C++)'
+title: C++ コメント
 ms.date: 11/04/2016
 helpviewer_keywords:
 - code comments, C++
@@ -7,16 +8,16 @@ helpviewer_keywords:
 - comments, C++ code
 - white space, C++ comments
 ms.assetid: 6fcb906c-c264-4083-84bc-373800b2e514
-ms.openlocfilehash: 3326ad7d0b5118182a5d582061fd0c103986f232
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: b3bbcafe1f18c791fc5935161b6cdbfae0bf03cf
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80189755"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97239793"
 ---
-# <a name="comments-c"></a>コメント (C++)
+# <a name="comments-c"></a>C++ コメント
 
-コメントは、コンパイラは無視しますが、プログラマにとって便利なテキストです。 コメントは、通常、後で参照できるようにコードに注釈を付けるために使用されます。 コンパイラは、それらを空白文字として処理します。 テストでコメントを使用して、特定のコード行を非アクティブにすることができます。ただし、`#if`の /`#endif` プリプロセッサディレクティブは、コメントを含むコードを囲むことはできますが、コメントを入れ子にすることはできないため、このように機能が向上します。
+コメントは、コンパイラは無視しますが、プログラマにとって便利なテキストです。 コメントは、通常、後で参照できるようにコードに注釈を付けるために使用されます。 コンパイラは、それらを空白文字として処理します。 テストでコメントを使用して、特定のコード行を非アクティブにすることができます。ただし、 `#if` / `#endif` プリプロセッサディレクティブは、コメントを含むコードを囲むことはできますが、コメントを入れ子にすることはできないため、このように機能が向上します。
 
 C++ のコメントは、次のいずれかの方法で記述されます。
 
@@ -26,6 +27,6 @@ C++ のコメントは、次のいずれかの方法で記述されます。
 
 コメント文字 (`/*`、`*/`、および `//`) は、文字定数、文字列リテラル、またはコメント内で特別な意味を持ちません。 したがって、最初の構文を使用したコメントを入れ子にすることはできません。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[構文規則](../cpp/lexical-conventions.md)
+[字句表記規則](../cpp/lexical-conventions.md)

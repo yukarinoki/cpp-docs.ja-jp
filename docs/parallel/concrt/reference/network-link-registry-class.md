@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: network_link_registry クラス'
 title: network_link_registry クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -12,12 +13,12 @@ f1_keywords:
 helpviewer_keywords:
 - network_link_registry class
 ms.assetid: 3e7b4097-09f1-4252-964e-b15b8f7f7fc6
-ms.openlocfilehash: 18fabd0e741c144201f299271cdd01eb9ac55fac
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: d14ec5758b399d46d5a5f04200b9422b030305f8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87222681"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97236595"
 ---
 # <a name="network_link_registry-class"></a>network_link_registry クラス
 
@@ -64,13 +65,13 @@ class network_link_registry;
 
 `network_link_registry`
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** agents.h
 
 **名前空間:** concurrency
 
-## <a name="add"></a><a name="add"></a>アドイン
+## <a name="add"></a><a name="add"></a> アドイン
 
 派生クラスでオーバーライドされると、オブジェクトへのリンクを追加し `network_link_registry` ます。
 
@@ -83,7 +84,7 @@ virtual void add(_EType _Link) = 0;
 *_Link*<br/>
 追加するブロックへのポインター。
 
-## <a name="begin"></a><a name="begin"></a>初め
+## <a name="begin"></a><a name="begin"></a> begin
 
 派生クラスでオーバーライドされた場合、オブジェクト内の最初の要素を指す反復子を返し `network_link_registry` ます。
 
@@ -99,7 +100,7 @@ virtual iterator begin() = 0;
 
 反復子の終了状態は、リンクによって示され `NULL` ます。
 
-## <a name="contains"></a><a name="contains"></a>は
+## <a name="contains"></a><a name="contains"></a> は
 
 派生クラスでオーバーライドされると、 `network_link_registry` 指定したブロックのオブジェクトを検索します。
 
@@ -116,7 +117,7 @@ virtual bool contains(_EType _Link) = 0;
 
 **`true`** ブロックが見つかった場合は **`false`** 。それ以外の場合は。
 
-## <a name="count"></a><a name="count"></a>数
+## <a name="count"></a><a name="count"></a> 数
 
 派生クラスでオーバーライドされた場合、オブジェクト内の項目の数を返し `network_link_registry` ます。
 
@@ -128,7 +129,7 @@ virtual size_t count() = 0;
 
 `network_link_registry` オブジェクト内の項目の数。
 
-## <a name="remove"></a><a name="remove"></a>から
+## <a name="remove"></a><a name="remove"></a> から
 
 派生クラスでオーバーライドされると、指定したブロックをオブジェクトから削除し `network_link_registry` ます。
 

@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: CLinkCtrl クラス'
 title: CLinkCtrl クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -34,12 +35,12 @@ helpviewer_keywords:
 - CLinkCtrl [MFC], SetItemState
 - CLinkCtrl [MFC], SetItemUrl
 ms.assetid: d1cd876a-ecca-42db-8ac4-9cd327df0cd4
-ms.openlocfilehash: 80548015ff9f24127280ee94421c8fbda7a647ea
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: a9a106d7511757fac0abfd19194081729a7d4977
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88561415"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97236759"
 ---
 # <a name="clinkctrl-class"></a>CLinkCtrl クラス
 
@@ -95,7 +96,7 @@ class CLinkCtrl : public CWnd
 
 `CLinkCtrl`
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** afxcmn.h
 
@@ -150,7 +151,7 @@ virtual BOOL Create(DWORD dwStyle,
 
 オブジェクトを構築するには、 `CLinkCtrl` 2 つの手順を実行します。 まず、コンストラクターを呼び出し、次に `Create` を呼び出します。これにより、リンクコントロールが作成され、オブジェクトにアタッチさ `CLinkCtrl` れます。 拡張 windows スタイルをコントロールで使用する場合は、ではなく [CLinkCtrl:: CreateEx](#createex) を呼び出し `Create` ます。
 
-2番目の形式の `Create` メソッドは非推奨とされます。 *Lpszlinkmarkup*パラメーターを指定する最初のフォームを使用します。
+2番目の形式の `Create` メソッドは非推奨とされます。 *Lpszlinkmarkup* パラメーターを指定する最初のフォームを使用します。
 
 ### <a name="example"></a>例
 
@@ -190,7 +191,7 @@ virtual BOOL CreateEx(DWORD  dwExStyle,
 表示するようにマークされたテキストを含む、0で終わる文字列へのポインター。 詳細については、「 [SysLink コントロールの概要](/windows/win32/Controls/syslink-overview)」の「マークアップとリンクアクセス」を参照してください。
 
 *dwExStyle*<br/>
-リンクコントロールの拡張スタイルを指定します。 拡張 Windows スタイルの一覧については、Windows SDK の[CreateWindowEx](/windows/win32/api/winuser/nf-winuser-createwindowexw)の*dwexstyle*パラメーターを参照してください。
+リンクコントロールの拡張スタイルを指定します。 拡張 Windows スタイルの一覧については、Windows SDK の [CreateWindowEx](/windows/win32/api/winuser/nf-winuser-createwindowexw)の *dwexstyle* パラメーターを参照してください。
 
 *dwStyle*<br/>
 リンクコントロールのスタイルを指定します。 コントロールスタイルの任意の組み合わせを適用します。 詳細については、「Windows SDK の [コモンコントロールスタイル](/windows/win32/Controls/common-control-styles) 」を参照してください。
@@ -212,7 +213,7 @@ virtual BOOL CreateEx(DWORD  dwExStyle,
 
 `CreateEx`拡張 Windows スタイル定数を適用するには、 [Create](#create)の代わりにを使用します。
 
-2番目の形式の `CreateEx` メソッドは非推奨とされます。 *Lpszlinkmarkup*パラメーターを指定する最初のフォームを使用します。
+2番目の形式の `CreateEx` メソッドは非推奨とされます。 *Lpszlinkmarkup* パラメーターを指定する最初のフォームを使用します。
 
 ## <a name="clinkctrlgetidealheight"></a><a name="getidealheight"></a> CLinkCtrl:: GetIdealHeight
 
@@ -246,7 +247,7 @@ int GetIdealSize(
 からリンクの最大幅 (ピクセル単位)。
 
 *pSize*\
-入出力Windows の [サイズ](/windows/win32/api/windef/ns-windef-size) 構造体へのポインター。 このメソッドから制御が戻るときに、構造体の *cy* メンバーには、 `SIZE` *cxmaxwidth*によって指定されたリンクテキストの幅に対する理想的なリンクテキストの高さが含まれます。 構造体の *cx* メンバーには、実際に必要なリンクテキストの幅が含まれています。
+入出力Windows の [サイズ](/windows/win32/api/windef/ns-windef-size) 構造体へのポインター。 このメソッドから制御が戻るときに、構造体の *cy* メンバーには、 `SIZE` *cxmaxwidth* によって指定されたリンクテキストの幅に対する理想的なリンクテキストの高さが含まれます。 構造体の *cx* メンバーには、実際に必要なリンクテキストの幅が含まれています。
 
 ### <a name="return-value"></a>戻り値
 
@@ -306,7 +307,7 @@ BOOL GetItemID(
 指定した項目の ID を格納している null で終わる文字列。
 
 *cchID*<br/>
-*Szid*バッファーのサイズ (文字数)。
+*Szid* バッファーのサイズ (文字数)。
 
 ### <a name="return-value"></a>戻り値
 
@@ -376,7 +377,7 @@ BOOL GetItemUrl(
 指定した項目によって表される URL を格納している null で終わる文字列。
 
 *cchUrl*<br/>
-*Szurl*バッファーのサイズ (文字数)。
+*Szurl* バッファーのサイズ (文字数)。
 
 ### <a name="return-value"></a>戻り値
 
