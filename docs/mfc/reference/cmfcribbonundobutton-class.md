@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: CMFCRibbonUndoButton クラス'
 title: CMFCRibbonUndoButton クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -16,16 +17,16 @@ helpviewer_keywords:
 - CMFCRibbonUndoButton [MFC], GetActionNumber
 - CMFCRibbonUndoButton [MFC], HasMenu
 ms.assetid: 5c42adf7-871d-4239-901e-47ae7fb816fc
-ms.openlocfilehash: 15cf93d39057f0e235779d47cf24d920d80a807d
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: 8bfc02b61160a5f11a6913736c5dc784c4d00ce4
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81753494"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97264935"
 ---
 # <a name="cmfcribbonundobutton-class"></a>CMFCRibbonUndoButton クラス
 
-クラス`CMFCRibbonUndoButton`は、最新のユーザー コマンドを含むドロップダウン リスト ボタンを実装します。 ユーザーは、ドロップダウン リストから最新のコマンドを 1 つ以上選択して、やり直しまたは元に戻すことができます。
+クラスには、 `CMFCRibbonUndoButton` 最新のユーザーコマンドを含むドロップダウンリストボタンが実装されています。 ユーザーは、ドロップダウンリストから、最新のコマンドを1つ以上選択して、再実行または元に戻すことができます。
 
 ## <a name="syntax"></a>構文
 
@@ -39,24 +40,24 @@ class CMFCRibbonUndoButton : public CMFCRibbonGallery
 
 |名前|説明|
 |----------|-----------------|
-|[ボタンを押す](#cmfcribbonundobutton)|指定したコマンド`CMFCRibbonUndoButton`ID、テキスト ラベル、および親オブジェクトのイメージ リストのイメージを使用して、新しいオブジェクトを構築します。|
+|[CMFCRibbonUndoButton::CMFCRibbonUndoButton](#cmfcribbonundobutton)|指定した `CMFCRibbonUndoButton` コマンド ID、テキストラベル、および親オブジェクトのイメージリストのイメージを使用して、新しいオブジェクトを構築します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
 |名前|説明|
 |----------|-----------------|
-|[ボタンを押す:アクションを追加します。](#addundoaction)|アクションのリストに新しいアクションを追加します。|
-|[ボタン::クリーンアップ元に戻すリスト](#cleanupundolist)|アクション リスト (ドロップダウン リスト) をクリアします。|
-|[ボタンを押します。](#getactionnumber)|ユーザーがドロップダウン リストから選択した項目の数を決定します。|
-|[ボタンを押す](#hasmenu)|オブジェクトにメニューが含まれているかどうかを示します。|
+|[CMFCRibbonUndoButton::AddUndoAction](#addundoaction)|アクションの一覧に新しいアクションを追加します。|
+|[CMFCRibbonUndoButton:: CleanUpUndoList](#cleanupundolist)|ドロップダウンリストのアクションリストをクリアします。|
+|[CMFCRibbonUndoButton:: GetActionNumber](#getactionnumber)|ユーザーがドロップダウンリストから選択した項目の数を確認します。|
+|[CMFCRibbonUndoButton:: HasMenu](#hasmenu)|オブジェクトにメニューが含まれているかどうかを示します。|
 
 ## <a name="remarks"></a>解説
 
-クラス`CMFCRibbonUndoButton`は、スタックを使用してドロップダウン リストを表します。
+クラスは、 `CMFCRibbonUndoButton` スタックを使用してドロップダウンリストを表します。
 
 ## <a name="example"></a>例
 
-クラスのオブジェクトを構築し、アクションの`CMFCRibbonUndoButton`リストに新しいアクションを追加する方法を次の例に示します。 このコード スニペットは、[リボン ガジェットのサンプル](../../overview/visual-cpp-samples.md)の一部です。
+次の例は、クラスのオブジェクトを構築 `CMFCRibbonUndoButton` し、アクションの一覧に新しいアクションを追加する方法を示しています。 このコードスニペットは、リボンの [ガジェットサンプル](../../overview/visual-cpp-samples.md)に含まれています。
 
 [!code-cpp[NVC_MFC_RibbonGadgets#2](../../mfc/reference/codesnippet/cpp/cmfcribbonundobutton-class_1.cpp)]
 
@@ -72,13 +73,13 @@ class CMFCRibbonUndoButton : public CMFCRibbonGallery
 
 [CMFCRibbonUndoButton](../../mfc/reference/cmfcribbonundobutton-class.md)
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-**ヘッダー:** afxribbonundobutton.h
+**ヘッダー:** afxribbonundobutton
 
-## <a name="cmfcribbonundobuttonaddundoaction"></a><a name="addundoaction"></a>ボタンを押す:アクションを追加します。
+## <a name="cmfcribbonundobuttonaddundoaction"></a><a name="addundoaction"></a> CMFCRibbonUndoButton::AddUndoAction
 
-アクションのリストに新しいアクションを追加します。
+アクションの一覧に新しいアクションを追加します。
 
 ```cpp
 void AddUndoAction(LPCTSTR lpszLabel);
@@ -86,20 +87,20 @@ void AddUndoAction(LPCTSTR lpszLabel);
 
 ### <a name="parameters"></a>パラメーター
 
-*ラベル*<br/>
-[in]ドロップダウン リストに表示されるアクション ラベル。
+*lpszLabel*<br/>
+からドロップダウンリストに表示されるアクションラベル。
 
-## <a name="cmfcribbonundobuttoncleanupundolist"></a><a name="cleanupundolist"></a>ボタン::クリーンアップ元に戻すリスト
+## <a name="cmfcribbonundobuttoncleanupundolist"></a><a name="cleanupundolist"></a> CMFCRibbonUndoButton:: CleanUpUndoList
 
-アクション リスト (ドロップダウン リスト) をクリアします。
+ドロップダウンリストのアクションリストをクリアします。
 
 ```cpp
 void CleanUpUndoList();
 ```
 
-## <a name="cmfcribbonundobuttoncmfcribbonundobutton"></a><a name="cmfcribbonundobutton"></a>ボタンを押す
+## <a name="cmfcribbonundobuttoncmfcribbonundobutton"></a><a name="cmfcribbonundobutton"></a> CMFCRibbonUndoButton::CMFCRibbonUndoButton
 
-指定したコマンド`CMFCRibbonUndoButton`ID、テキスト ラベル、および親オブジェクトのイメージ リストのイメージを使用して、新しいオブジェクトを構築します。
+指定した `CMFCRibbonUndoButton` コマンド ID、テキストラベル、および親オブジェクトのイメージリストのイメージを使用して、新しいオブジェクトを構築します。
 
 ```
 CMFCRibbonUndoButton(
@@ -117,23 +118,23 @@ CMFCRibbonUndoButton(
 ### <a name="parameters"></a>パラメーター
 
 *nID*<br/>
-[in]コマンド ID を指定します。
+からコマンド識別子を指定します。
 
 *lpszText*<br/>
-[in]ボタンのテキスト ラベルを指定します。
+からボタンのテキストラベルを指定します。
 
-*を使用します。*<br/>
-[in]ボタンの小さいイメージの親オブジェクトのイメージ リスト内の 0 から始まるインデックス。
+*nSmallImageIndex*<br/>
+からボタンの小さい画像の親オブジェクトのイメージリストの0から始まるインデックス。
 
-*インデックスを作成します。*<br/>
-[in]ボタンの大きいイメージの親オブジェクトのイメージ リスト内の 0 から始まるインデックス。
+*nLargeImageIndex*<br/>
+からボタンの大きな画像の親オブジェクトのイメージリストの0から始まるインデックス。
 
-*Hicon*<br/>
-[in]ボタンのイメージとして使用できるアイコンへのハンドル。
+*hIcon*<br/>
+からボタンのイメージとして使用できるアイコンを示すハンドル。
 
-## <a name="cmfcribbonundobuttongetactionnumber"></a><a name="getactionnumber"></a>ボタンを押します。
+## <a name="cmfcribbonundobuttongetactionnumber"></a><a name="getactionnumber"></a> CMFCRibbonUndoButton:: GetActionNumber
 
-ユーザーがドロップダウン リストから選択した項目の数を決定します。
+ユーザーがドロップダウンリストから選択した項目の数を確認します。
 
 ```
 int GetActionNumber() const;
@@ -143,7 +144,7 @@ int GetActionNumber() const;
 
 ユーザーが選択した項目の数。
 
-## <a name="cmfcribbonundobuttonhasmenu"></a><a name="hasmenu"></a>ボタンを押す
+## <a name="cmfcribbonundobuttonhasmenu"></a><a name="hasmenu"></a> CMFCRibbonUndoButton:: HasMenu
 
 オブジェクトにメニューが含まれているかどうかを示します。
 
@@ -159,7 +160,7 @@ virtual BOOL HasMenu() const;
 
 ## <a name="see-also"></a>関連項目
 
-[階層グラフ](../../mfc/hierarchy-chart.md)<br/>
-[クラス](../../mfc/reference/mfc-classes.md)<br/>
-[クラス](../../mfc/reference/cmfcribbongallery-class.md)<br/>
+[階層図](../../mfc/hierarchy-chart.md)<br/>
+[Classes](../../mfc/reference/mfc-classes.md)<br/>
+[CMFCRibbonGallery クラス](../../mfc/reference/cmfcribbongallery-class.md)<br/>
 [CMFCRibbonButton クラス](../../mfc/reference/cmfcribbonbutton-class.md)

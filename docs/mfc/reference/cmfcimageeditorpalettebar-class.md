@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: Cmfcimageeditorパレットバークラス'
 title: Cmfcimageeditorパレットバークラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - CMFCImageEditorPaletteBar [MFC], GetRowHeight
 - CMFCImageEditorPaletteBar [MFC], IsButtonExtraSizeAvailable
 ms.assetid: 3fb7ba8e-f254-4d56-b913-9941b4ed8138
-ms.openlocfilehash: 007fa94269a6a42bf076d2d75a18860896503aa1
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 19d023776c66559e8d639eb71ebc266f992af4c8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88831165"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97265364"
 ---
 # <a name="cmfcimageeditorpalettebar-class"></a>Cmfcimageeditorパレットバークラス
 
@@ -60,7 +61,7 @@ class CMFCImageEditorPaletteBar : public CMFCToolBar
 
 [Cmfcimageeditorパレットバー](../../mfc/reference/cmfcimageeditorpalettebar-class.md)
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** afximageeditordialog
 
@@ -91,5 +92,5 @@ virtual BOOL IsButtonExtraSizeAvailable() const;
 ## <a name="see-also"></a>関連項目
 
 [階層図](../../mfc/hierarchy-chart.md)<br/>
-[クラス](../../mfc/reference/mfc-classes.md)<br/>
+[Classes](../../mfc/reference/mfc-classes.md)<br/>
 [CMFCImageEditorDialog クラス](../../mfc/reference/cmfcimageeditordialog-class.md)

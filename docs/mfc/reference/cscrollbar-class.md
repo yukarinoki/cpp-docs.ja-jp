@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: CScrollBar クラス'
 title: CScrollBar クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -30,12 +31,12 @@ helpviewer_keywords:
 - CScrollBar [MFC], SetScrollRange
 - CScrollBar [MFC], ShowScrollBar
 ms.assetid: f3735ca5-73ea-46dc-918b-4d824c9fe47f
-ms.openlocfilehash: 1ab25ad26357abe9091d273637f3ae9f77457342
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: a557fe490b2cdce81d5639f9ce15fd6462442029
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87230481"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97264740"
 ---
 # <a name="cscrollbar-class"></a>CScrollBar クラス
 
@@ -83,7 +84,7 @@ class CScrollBar : public CWnd
 
 オブジェクトにメモリを割り当てる場合は、デストラクターをオーバーライドして `CScrollBar` `CScrollBar` 割り当てを破棄します。
 
-の使用に関する関連情報について `CScrollBar` は、「[コントロール](../../mfc/controls-mfc.md)」を参照してください。
+の使用に関する関連情報について `CScrollBar` は、「 [コントロール](../../mfc/controls-mfc.md)」を参照してください。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -95,11 +96,11 @@ class CScrollBar : public CWnd
 
 `CScrollBar`
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** afxwin.h
 
-## <a name="cscrollbarcreate"></a><a name="create"></a>CScrollBar:: Create
+## <a name="cscrollbarcreate"></a><a name="create"></a> CScrollBar:: Create
 
 Windows のスクロールバーを作成し、オブジェクトにアタッチし `CScrollBar` ます。
 
@@ -114,7 +115,7 @@ virtual BOOL Create(
 ### <a name="parameters"></a>パラメーター
 
 *dwStyle*<br/>
-スクロールバーのスタイルを指定します。 スクロールバー[スタイル](../../mfc/reference/styles-used-by-mfc.md#scroll-bar-styles)の任意の組み合わせをスクロールバーに適用します。
+スクロールバーのスタイルを指定します。 スクロールバー [スタイル](../../mfc/reference/styles-used-by-mfc.md#scroll-bar-styles) の任意の組み合わせをスクロールバーに適用します。
 
 *rect*<br/>
 スクロールバーのサイズと位置を指定します。 には、 `RECT` 構造体またはオブジェクトを指定でき `CRect` ます。
@@ -133,7 +134,7 @@ virtual BOOL Create(
 
 オブジェクトを構築するには、 `CScrollBar` 2 つの手順を実行します。 最初に、オブジェクトを構築するコンストラクターを呼び出し `CScrollBar` ます。次に、を呼び出します。 `Create` これにより、関連付けられた Windows スクロールバーが作成および初期化され、オブジェクトにアタッチされ `CScrollBar` ます。
 
-次の[ウィンドウスタイル](../../mfc/reference/styles-used-by-mfc.md#window-styles)をスクロールバーに適用します。
+次の [ウィンドウスタイル](../../mfc/reference/styles-used-by-mfc.md#window-styles) をスクロールバーに適用します。
 
 - 常に WS_CHILD
 
@@ -147,7 +148,7 @@ virtual BOOL Create(
 
 [!code-cpp[NVC_MFC_CScrollBar#1](../../mfc/reference/codesnippet/cpp/cscrollbar-class_1.cpp)]
 
-## <a name="cscrollbarcscrollbar"></a><a name="cscrollbar"></a>CScrollBar:: CScrollBar
+## <a name="cscrollbarcscrollbar"></a><a name="cscrollbar"></a> CScrollBar:: CScrollBar
 
 `CScrollBar` オブジェクトを構築します。
 
@@ -163,7 +164,7 @@ CScrollBar();
 
 [!code-cpp[NVC_MFC_CScrollBar#2](../../mfc/reference/codesnippet/cpp/cscrollbar-class_2.h)]
 
-## <a name="cscrollbarenablescrollbar"></a><a name="enablescrollbar"></a>CScrollBar:: EnableScrollBar
+## <a name="cscrollbarenablescrollbar"></a><a name="enablescrollbar"></a> CScrollBar:: EnableScrollBar
 
 スクロール バーの矢印の一方または両方を有効または無効にします。
 
@@ -192,7 +193,7 @@ BOOL EnableScrollBar(UINT nArrowFlags = ESB_ENABLE_BOTH);
 
   [Cscrollbar:: SetScrollRange](#setscrollrange)の例を参照してください。
 
-## <a name="cscrollbargetscrollbarinfo"></a><a name="getscrollbarinfo"></a>CScrollBar:: GetScrollBarInfo
+## <a name="cscrollbargetscrollbarinfo"></a><a name="getscrollbarinfo"></a> CScrollBar:: GetScrollBarInfo
 
 `SCROLLBARINFO` 構造体がスクロール バーについて保持している情報を取得します。
 
@@ -211,9 +212,9 @@ BOOL GetScrollBarInfo(PSCROLLBARINFO pScrollInfo) const;
 
 ### <a name="remarks"></a>解説
 
-このメンバー関数は、Windows SDK で説明されているように、 [SBM_SCROLLBARINFO](/windows/win32/Controls/sbm-getscrollbarinfo)メッセージの機能をエミュレートします。
+このメンバー関数は、Windows SDK で説明されているように、 [SBM_SCROLLBARINFO](/windows/win32/Controls/sbm-getscrollbarinfo) メッセージの機能をエミュレートします。
 
-## <a name="cscrollbargetscrollinfo"></a><a name="getscrollinfo"></a>CScrollBar:: GetScrollInfo
+## <a name="cscrollbargetscrollinfo"></a><a name="getscrollinfo"></a> CScrollBar:: GetScrollInfo
 
 `SCROLLINFO` 構造体がスクロール バーについて保持している情報を取得します。
 
@@ -237,17 +238,17 @@ BOOL GetScrollInfo(
 
 ### <a name="remarks"></a>解説
 
-`GetScrollInfo`アプリケーションで32ビットのスクロール位置を使用できるようにします。
+`GetScrollInfo` アプリケーションで32ビットのスクロール位置を使用できるようにします。
 
 [SCROLLINFO](/windows/win32/api/winuser/ns-winuser-scrollinfo)構造体には、スクロールバーの最小値と最大値、ページサイズ、スクロールボックスの位置 (つまみ) などの情報が含まれています。 `SCROLLINFO`構造体の既定値の変更の詳細については、Windows SDK の構造に関するトピックを参照してください。
 
-スクロールバーの位置を示す MFC Windows メッセージハンドラー ([CWnd:: OnHScroll] と [ [cwnd:: OnVScroll](../../mfc/reference/cwnd-class.md#onvscroll)]) では、位置データの16ビットのみが提供されます。 `GetScrollInfo`と `SetScrollInfo` は、32ビットのスクロールバーの位置データを提供します。 したがって、アプリケーションは、 `GetScrollInfo` またはのいずれかを処理中にを呼び出して、 `CWnd::OnHScroll` `CWnd::OnVScroll` 32 ビットのスクロールバーの位置データを取得できます。
+スクロールバーの位置を示す MFC Windows メッセージハンドラー ([CWnd:: OnHScroll] と [ [cwnd:: OnVScroll](../../mfc/reference/cwnd-class.md#onvscroll)]) では、位置データの16ビットのみが提供されます。 `GetScrollInfo` と `SetScrollInfo` は、32ビットのスクロールバーの位置データを提供します。 したがって、アプリケーションは、 `GetScrollInfo` またはのいずれかを処理中にを呼び出して、 `CWnd::OnHScroll` `CWnd::OnVScroll` 32 ビットのスクロールバーの位置データを取得できます。
 
 ### <a name="example"></a>例
 
   [CWnd:: OnHScroll](../../mfc/reference/cwnd-class.md#onhscroll)の例を参照してください。
 
-## <a name="cscrollbargetscrolllimit"></a><a name="getscrolllimit"></a>CScrollBar:: GetScrollLimit
+## <a name="cscrollbargetscrolllimit"></a><a name="getscrolllimit"></a> CScrollBar:: GetScrollLimit
 
 スクロールバーのスクロールの最大位置を取得します。
 
@@ -263,7 +264,7 @@ int GetScrollLimit();
 
   [CWnd:: OnHScroll](../../mfc/reference/cwnd-class.md#onhscroll)の例を参照してください。
 
-## <a name="cscrollbargetscrollpos"></a><a name="getscrollpos"></a>CScrollBar:: GetScrollPos
+## <a name="cscrollbargetscrollpos"></a><a name="getscrollpos"></a> CScrollBar:: GetScrollPos
 
 スクロール ボックスの現在位置を取得します。
 
@@ -283,9 +284,9 @@ int GetScrollPos() const;
 
   [CWnd:: OnHScroll](../../mfc/reference/cwnd-class.md#onhscroll)の例を参照してください。
 
-## <a name="cscrollbargetscrollrange"></a><a name="getscrollrange"></a>CScrollBar:: GetScrollRange
+## <a name="cscrollbargetscrollrange"></a><a name="getscrollrange"></a> CScrollBar:: GetScrollRange
 
-指定されたスクロールバーの現在の最小および最大のスクロールバーの位置を、 *Lpminpos*および*lpminpos*によって指定された場所にコピーします。
+指定されたスクロールバーの現在の最小および最大のスクロールバーの位置を、 *Lpminpos* および *lpminpos* によって指定された場所にコピーします。
 
 ```cpp
 void GetScrollRange(
@@ -309,7 +310,7 @@ void GetScrollRange(
 
   [CWnd:: OnHScroll](../../mfc/reference/cwnd-class.md#onhscroll)の例を参照してください。
 
-## <a name="cscrollbarsetscrollinfo"></a><a name="setscrollinfo"></a>CScrollBar:: SetScrollInfo
+## <a name="cscrollbarsetscrollinfo"></a><a name="setscrollinfo"></a> CScrollBar:: SetScrollInfo
 
 `SCROLLINFO`構造体がスクロールバーに関して保持する情報を設定します。
 
@@ -325,7 +326,7 @@ BOOL SetScrollInfo(
 [SCROLLINFO](/windows/win32/api/winuser/ns-winuser-scrollinfo)構造体へのポインター。
 
 *より描画*<br/>
-新しい情報を反映するためにスクロールバーを再描画するかどうかを指定します。 [表示*描画*] が TRUE の場合、スクロールバーが再描画されます。 FALSE の場合は、再描画されません。 既定では、スクロールバーが再描画されます。
+新しい情報を反映するためにスクロールバーを再描画するかどうかを指定します。 [表示 *描画* ] が TRUE の場合、スクロールバーが再描画されます。 FALSE の場合は、再描画されません。 既定では、スクロールバーが再描画されます。
 
 ### <a name="return-value"></a>戻り値
 
@@ -335,15 +336,15 @@ BOOL SetScrollInfo(
 
 `SCROLLINFO`フラグの値を含む、構造体のパラメーターに必要な値を指定する必要があります。
 
-構造体には、スクロール `SCROLLINFO` バーの最小値と最大値、ページサイズ、スクロールボックスの位置 (つまみ) などの情報が含まれます。 構造の既定値の変更の詳細については、Windows SDK の[SCROLLINFO](/windows/win32/api/winuser/ns-winuser-scrollinfo) structure のトピックを参照してください。
+構造体には、スクロール `SCROLLINFO` バーの最小値と最大値、ページサイズ、スクロールボックスの位置 (つまみ) などの情報が含まれます。 構造の既定値の変更の詳細については、Windows SDK の [SCROLLINFO](/windows/win32/api/winuser/ns-winuser-scrollinfo) structure のトピックを参照してください。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_MFC_CScrollBar#3](../../mfc/reference/codesnippet/cpp/cscrollbar-class_3.cpp)]
 
-## <a name="cscrollbarsetscrollpos"></a><a name="setscrollpos"></a>CScrollBar:: SetScrollPos
+## <a name="cscrollbarsetscrollpos"></a><a name="setscrollpos"></a> CScrollBar:: SetScrollPos
 
-スクロールボックスの現在位置を*nPos*で指定した位置に設定し、指定した場合は、新しい位置を反映するようにスクロールバーを再描画します。
+スクロールボックスの現在位置を *nPos* で指定した位置に設定し、指定した場合は、新しい位置を反映するようにスクロールバーを再描画します。
 
 ```
 int SetScrollPos(
@@ -357,7 +358,7 @@ int SetScrollPos(
 スクロールボックスの新しい位置を指定します。 スクロール範囲内である必要があります。
 
 *より描画*<br/>
-新しい位置を反映するためにスクロールバーを再描画するかどうかを指定します。 [表示*描画*] が TRUE の場合、スクロールバーが再描画されます。 FALSE の場合は、再描画されません。 既定では、スクロールバーが再描画されます。
+新しい位置を反映するためにスクロールバーを再描画するかどうかを指定します。 [表示 *描画* ] が TRUE の場合、スクロールバーが再描画されます。 FALSE の場合は、再描画されません。 既定では、スクロールバーが再描画されます。
 
 ### <a name="return-value"></a>戻り値
 
@@ -365,13 +366,13 @@ int SetScrollPos(
 
 ### <a name="remarks"></a>解説
 
-スクロールバーが短い間隔で2回再描画されないようにするために、別の関数の後続の呼び出しによってスクロールバーが再描画されるときは常に、値を*FALSE に設定*します。
+スクロールバーが短い間隔で2回再描画されないようにするために、別の関数の後続の呼び出しによってスクロールバーが再描画されるときは常に、値を *FALSE に設定* します。
 
 ### <a name="example"></a>例
 
   [Cscrollbar:: SetScrollRange](#setscrollrange)の例を参照してください。
 
-## <a name="cscrollbarsetscrollrange"></a><a name="setscrollrange"></a>CScrollBar:: SetScrollRange
+## <a name="cscrollbarsetscrollrange"></a><a name="setscrollrange"></a> CScrollBar:: SetScrollRange
 
 指定されたスクロール バーの最小位置と最大位置の値を設定します。
 
@@ -391,23 +392,23 @@ void SetScrollRange(
 スクロール位置の最大値を指定します。
 
 *より描画*<br/>
-変更を反映するためにスクロールバーを再描画するかどうかを指定します。 [表示*描画*] が TRUE の場合、スクロールバーは再描画されます。FALSE の場合、再描画されません。 既定では再描画されます。
+変更を反映するためにスクロールバーを再描画するかどうかを指定します。 [表示 *描画* ] が TRUE の場合、スクロールバーは再描画されます。FALSE の場合、再描画されません。 既定では再描画されます。
 
 ### <a name="remarks"></a>解説
 
-標準スクロールバーを非表示にするには、 *Nminpos*と*nminpos*を0に設定します。
+標準スクロールバーを非表示にするには、 *Nminpos* と *nminpos* を0に設定します。
 
 スクロールバーの通知メッセージの処理中にスクロールバーを非表示にするために、この関数を呼び出さないでください。
 
-の呼び出しが `SetScrollRange` メンバー関数の呼び出しの直後に続く場合は `SetScrollPos` 、*をに*設定し `SetScrollPos` て、スクロールバーが2回再描画されないようにします。
+の呼び出しが `SetScrollRange` メンバー関数の呼び出しの直後に続く場合は `SetScrollPos` 、 *をに* 設定し `SetScrollPos` て、スクロールバーが2回再描画されないようにします。
 
-*Nminpos*によって指定された値と*nminpos*の違いは、32767を超えることはできません。 スクロールバーコントロールの既定の範囲は空です ( *Nminpos*と*nminpos*の両方が0です)。
+*Nminpos* によって指定された値と *nminpos* の違いは、32767を超えることはできません。 スクロールバーコントロールの既定の範囲は空です ( *Nminpos* と *nminpos* の両方が0です)。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_MFC_CScrollBar#4](../../mfc/reference/codesnippet/cpp/cscrollbar-class_4.cpp)]
 
-## <a name="cscrollbarshowscrollbar"></a><a name="showscrollbar"></a>CScrollBar:: ShowScrollBar
+## <a name="cscrollbarshowscrollbar"></a><a name="showscrollbar"></a> CScrollBar:: ShowScrollBar
 
 スクロールバーの表示と非表示を切り替えます。
 

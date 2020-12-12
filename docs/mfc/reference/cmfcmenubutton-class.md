@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: CMFCMenuButton クラス'
 title: CMFCMenuButton クラス
 ms.date: 07/15/2019
 f1_keywords:
@@ -24,12 +25,12 @@ helpviewer_keywords:
 - CMFCMenuButton [MFC], m_nMenuResult
 - CMFCMenuButton [MFC], m_bDefaultClick
 ms.assetid: 53d3d459-1e5a-47c5-8b7f-2e61f6af5187
-ms.openlocfilehash: 2f8ef341d7f460ed6b0ec23cb8a490842eb67cbc
-ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
+ms.openlocfilehash: 954a9239f7a4912e29dd031ecacfeb2e06c6d8be
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90743270"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97265130"
 ---
 # <a name="cmfcmenubutton-class"></a>CMFCMenuButton クラス
 
@@ -67,7 +68,7 @@ class CMFCMenuButton : public CMFCButton
 |[CMFCMenuButton:: m_nMenuResult](#m_nmenuresult)|ポップアップメニューからユーザーが選択した項目を示す識別子。|
 |[CMFCMenuButton:: m_bDefaultClick](#m_bdefaultclick)| 既定の (ボタンテキスト/イメージの) 処理を許可します。|
 
-## <a name="remarks"></a>注釈
+## <a name="remarks"></a>解説
 
 クラスは、 `CMFCMenuButton` [CButton クラス](../../mfc/reference/cbutton-class.md)から派生する[cmfcbutton クラス](../../mfc/reference/cmfcbutton-class.md)から派生します。 そのため、を使用する場合と `CMFCMenuButton` 同じ方法でをコード内で使用でき `CButton` ます。
 
@@ -94,7 +95,7 @@ class CMFCMenuButton : public CMFCButton
 
 [CMFCMenuButton](../../mfc/reference/cmfcmenubutton-class.md)
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** afxmenubutton
 
@@ -114,7 +115,7 @@ CMFCMenuButton();
 BOOL m_bOSMenu;
 ```
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 `m_bOSMenu`が TRUE の場合、フレームワークはこのオブジェクトの継承されたメソッドを呼び出し `TrackPopupMenu` ます。 それ以外の場合、フレームワークは [CContextMenuManager:: TrackPopupMenu](../../mfc/reference/ccontextmenumanager-class.md#trackpopupmenu)を呼び出します。
 
@@ -126,7 +127,7 @@ BOOL m_bOSMenu;
 BOOL m_bRightArrow;
 ```
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 ユーザーがメニューボタンを押すと、アプリケーションにポップアップメニューが表示されます。 フレームワークによって、ボタンの下または右にポップアップメニューが表示されます。 このボタンには、ポップアップメニューが表示される場所を示す小さな矢印もあります。 `m_bRightArrow`が TRUE の場合、フレームワークはボタンの右側にポップアップメニューを表示します。 それ以外の場合は、ボタンの下にポップアップメニューが表示されます。
 
@@ -138,7 +139,7 @@ BOOL m_bRightArrow;
 BOOL m_bStayPressed;
 ```
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 `m_bStayPressed`メンバーが FALSE の場合、[使用] ボタンをクリックしたときにメニューボタンが押されなくなります。 この場合、フレームワークにはポップアップメニューのみが表示されます。
 
@@ -152,7 +153,7 @@ BOOL m_bStayPressed;
 HMENU m_hMenu;
 ```
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 フレームワークでは、ユーザーがメニューボタンをクリックしたときに、このメンバー変数によって示されるメニューが表示されます。
 
@@ -164,7 +165,7 @@ HMENU m_hMenu;
 int m_nMenuResult;
 ```
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 このメンバー変数の値は、ユーザーが選択を行わずにメニューをキャンセルした場合、またはエラーが発生した場合は0になります。
 
@@ -176,7 +177,7 @@ int m_nMenuResult;
 BOOL  m_bDefaultClick;
 ```
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 M_bDefaultClick を false に設定すると、ボタンの任意の場所をクリックすると、ボタンがメニューを表示します。
 
@@ -197,7 +198,7 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 
 メッセージが変換され、ディスパッチされない場合は0以外の。メッセージが変換されず、ディスパッチする必要がある場合は0。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 ## <a name="cmfcmenubuttonsizetocontent"></a><a name="sizetocontent"></a> CMFCMenuButton:: SizeToContent
 
@@ -216,7 +217,7 @@ virtual CSize SizeToContent(BOOL bCalcOnly = FALSE);
 
 ボタンの新しいサイズを指定する [CSize](../../atl-mfc-shared/reference/csize-class.md) オブジェクト。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 この関数を呼び出し、 *Bcalconly* TRUE の場合、 `SizeToContent` はボタンの新しいサイズのみを計算します。
 
@@ -225,5 +226,5 @@ virtual CSize SizeToContent(BOOL bCalcOnly = FALSE);
 ## <a name="see-also"></a>関連項目
 
 [階層図](../../mfc/hierarchy-chart.md)<br/>
-[クラス](../../mfc/reference/mfc-classes.md)<br/>
+[Classes](../../mfc/reference/mfc-classes.md)<br/>
 [CMFCButton クラス](../../mfc/reference/cmfcbutton-class.md)

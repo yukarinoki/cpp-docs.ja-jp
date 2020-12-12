@@ -1,4 +1,5 @@
 ---
+description: '詳細について: CMFCImagePaintArea:: IMAGE_EDIT_MODE 列挙型'
 title: CMFCImagePaintArea::IMAGE_EDIT_MODE 列挙体
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - IMAGE_EDIT_MODE Enumeration method [MFC]
 ms.assetid: e51db66a-fa1c-4766-9dac-a25b595f871a
-ms.openlocfilehash: 37c877cc8562a9479535d9c6132e49e7c9b7e82f
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: f28880d108be8fb4f2b14ede1a3cbd3c7dac9f2e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88831139"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97265325"
 ---
 # <a name="cmfcimagepaintareaimage_edit_mode-enumeration"></a>CMFCImagePaintArea::IMAGE_EDIT_MODE 列挙体
 
@@ -48,7 +49,7 @@ enum IMAGE_EDIT_MODE
 
 IMAGE_EDIT_MODE_COLOR 描画モードを使用してイメージから色を選択すると、フレームワークによって現在の描画モードが IMAGE_EDIT_MODE_PEN に設定されます。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** afximagepaintarea
 
@@ -56,6 +57,6 @@ IMAGE_EDIT_MODE_COLOR 描画モードを使用してイメージから色を選�
 
 [マクロとグローバル](../../mfc/reference/mfc-macros-and-globals.md)<br/>
 [階層図](../../mfc/hierarchy-chart.md)<br/>
-[クラス](../../mfc/reference/mfc-classes.md)<br/>
+[Classes](../../mfc/reference/mfc-classes.md)<br/>
 [CMFCImagePaintArea クラス](../../mfc/reference/cmfcimagepaintarea-class.md)<br/>
 [CMFCImageEditorDialog クラス](../../mfc/reference/cmfcimageeditordialog-class.md)

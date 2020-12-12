@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: CPageSetupDialog クラス'
 title: CPageSetupDialog クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -30,12 +31,12 @@ helpviewer_keywords:
 - CPageSetupDialog [MFC], PreDrawPage
 - CPageSetupDialog [MFC], m_psd
 ms.assetid: 049c0ac8-f254-4854-9414-7a8271d1447a
-ms.openlocfilehash: 280d75c3bcacd673107fd32ecaa39953b06a77c8
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 862e8c1edff04ba58efe13f471ffeee71c11ede5
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87214075"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97264909"
 ---
 # <a name="cpagesetupdialog-class"></a>CPageSetupDialog クラス
 
@@ -82,7 +83,7 @@ class CPageSetupDialog : public CCommonDialog
 
 オブジェクトを使用するには、 `CPageSetupDialog` 最初にコンストラクターを使用してオブジェクトを作成し `CPageSetupDialog` ます。 ダイアログボックスを構築したら、データメンバーの任意の値を設定または変更して、 `m_psd` ダイアログボックスのコントロールの値を初期化できます。 [M_psd](#m_psd)構造体は PAGESETUPDLG 型です。
 
-ダイアログボックスコントロールを初期化した後、 `DoModal` メンバー関数を呼び出してダイアログボックスを表示し、ユーザーが印刷オプションを選択できるようにします。 `DoModal`ユーザーが [OK] (IDOK) または [キャンセル] (IDCANCEL) ボタンを選択したかどうかを返します。
+ダイアログボックスコントロールを初期化した後、 `DoModal` メンバー関数を呼び出してダイアログボックスを表示し、ユーザーが印刷オプションを選択できるようにします。 `DoModal` ユーザーが [OK] (IDOK) または [キャンセル] (IDCANCEL) ボタンを選択したかどうかを返します。
 
 が `DoModal` IDOK を返す場合は、のいくつかの `CPageSetupDialog` メンバー関数を使用するか、データメンバーにアクセスし `m_psd` て、ユーザーが入力した情報を取得することができます。
 
@@ -103,11 +104,11 @@ class CPageSetupDialog : public CCommonDialog
 
 `CPageSetupDialog`
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** afxdlgs
 
-## <a name="cpagesetupdialogcpagesetupdialog"></a><a name="cpagesetupdialog"></a>CPageSetupDialog::CPageSetupDialog
+## <a name="cpagesetupdialogcpagesetupdialog"></a><a name="cpagesetupdialog"></a> CPageSetupDialog::CPageSetupDialog
 
 オブジェクトを構築するには、この関数を呼び出し `CPageSetupDialog` ます。
 
@@ -142,7 +143,7 @@ CPageSetupDialog(
 
 - PSD_DISABLEORIENTATION ページの向きのダイアログコントロールを無効にします。
 
-- PSD_RETURNDEFAULT `CPageSetupDialog` によって、はダイアログボックスを表示せずに、システムの既定のプリンターに対して初期化された[DEVMODE](/windows/win32/api/wingdi/ns-wingdi-devmodea)および[DEVNAMES](/windows/win32/api/commdlg/ns-commdlg-devnames)構造体を返します。 との両方が NULL であることを前提 `hDevNames` としてい `hDevMode` ます。それ以外の場合、関数はエラーを返します。 システムの既定のプリンターが古いプリンタードライバー (Windows バージョン3.0 より前) でサポートされている場合は、のみが返されます。 `hDevNames` `hDevMode` is NULL です。
+- PSD_RETURNDEFAULT `CPageSetupDialog` によって、はダイアログボックスを表示せずに、システムの既定のプリンターに対して初期化された [DEVMODE](/windows/win32/api/wingdi/ns-wingdi-devmodea) および [DEVNAMES](/windows/win32/api/commdlg/ns-commdlg-devnames) 構造体を返します。 との両方が NULL であることを前提 `hDevNames` としてい `hDevMode` ます。それ以外の場合、関数はエラーを返します。 システムの既定のプリンターが古いプリンタードライバー (Windows バージョン3.0 より前) でサポートされている場合は、のみが返されます。 `hDevNames` `hDevMode` is NULL です。
 
 - 用紙選択コントロールを PSD_DISABLEPAPER 無効にします。
 
@@ -163,13 +164,13 @@ CPageSetupDialog(
 
 ### <a name="remarks"></a>解説
 
-ダイアログボックスを表示するには、 [DoModal](../../mfc/reference/cdialog-class.md#domodal)関数を使用します。
+ダイアログボックスを表示するには、 [DoModal](../../mfc/reference/cdialog-class.md#domodal) 関数を使用します。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_MFCDocView#94](../../mfc/codesnippet/cpp/cpagesetupdialog-class_1.cpp)]
 
-## <a name="cpagesetupdialogcreateprinterdc"></a><a name="createprinterdc"></a>CPageSetupDialog:: Createプリンター Dc
+## <a name="cpagesetupdialogcreateprinterdc"></a><a name="createprinterdc"></a> CPageSetupDialog:: Createプリンター Dc
 
 [DEVMODE](/windows/win32/api/wingdi/ns-wingdi-devmodea)および[DEVNAMES](/windows/win32/api/commdlg/ns-commdlg-devnames)構造体からプリンターデバイスコンテキストを作成します。
 
@@ -181,7 +182,7 @@ HDC CreatePrinterDC();
 
 新しく作成されたプリンターデバイスコンテキスト (DC) を処理します。
 
-## <a name="cpagesetupdialogdomodal"></a><a name="domodal"></a>CPageSetupDialog::D oModal
+## <a name="cpagesetupdialogdomodal"></a><a name="domodal"></a> CPageSetupDialog::D oModal
 
 この関数を呼び出すと、[Windows コモン OLE ページ設定] ダイアログボックスが表示され、印刷の余白、用紙のサイズと向き、宛先のプリンターなどのさまざまな印刷設定オプションをユーザーが選択できます。
 
@@ -191,7 +192,7 @@ virtual INT_PTR DoModal();
 
 ### <a name="return-value"></a>戻り値
 
-IDOK または IDCANCEL。 IDCANCEL が返された場合は、Windows の[Commdlgextendederror](/windows/win32/api/commdlg/nf-commdlg-commdlgextendederror)関数を呼び出して、エラーが発生したかどうかを確認します。
+IDOK または IDCANCEL。 IDCANCEL が返された場合は、Windows の [Commdlgextendederror](/windows/win32/api/commdlg/nf-commdlg-commdlgextendederror) 関数を呼び出して、エラーが発生したかどうかを確認します。
 
 IDOK と IDCANCEL は、ユーザーが [OK] または [キャンセル] ボタンを選択したかどうかを示す定数です。
 
@@ -209,7 +210,7 @@ IDOK と IDCANCEL は、ユーザーが [OK] または [キャンセル] ボタ�
 
   [CPageSetupDialog:: CPageSetupDialog](#cpagesetupdialog)の例を参照してください。
 
-## <a name="cpagesetupdialoggetdevicename"></a><a name="getdevicename"></a>CPageSetupDialog:: GetDeviceName
+## <a name="cpagesetupdialoggetdevicename"></a><a name="getdevicename"></a> CPageSetupDialog:: GetDeviceName
 
 `DoModal`現在選択されているプリンターの名前を取得するには、の後にこの関数を呼び出します。
 
@@ -221,7 +222,7 @@ CString GetDeviceName() const;
 
 オブジェクトによって使用されるデバイス名 `CPageSetupDialog` 。
 
-## <a name="cpagesetupdialoggetdevmode"></a><a name="getdevmode"></a>CPageSetupDialog:: GetDevMode
+## <a name="cpagesetupdialoggetdevmode"></a><a name="getdevmode"></a> CPageSetupDialog:: GetDevMode
 
 を呼び出した後 `DoModal` に、この関数を呼び出して、オブジェクトのプリンターデバイスコンテキストに関する情報を取得し `CPageSetupDialog` ます。
 
@@ -231,11 +232,11 @@ LPDEVMODE GetDevMode() const;
 
 ### <a name="return-value"></a>戻り値
 
-[DEVMODE](/windows/win32/api/wingdi/ns-wingdi-devmodea)データ構造体。これには、印刷ドライバーのデバイスの初期化と環境に関する情報が含まれます。 この構造体によって取得されるメモリは、Windows [globalunlock](/windows/win32/api/winbase/nf-winbase-globalunlock)関数を使用してロック解除する必要があります。これについては、Windows SDK を参照してください。
+[DEVMODE](/windows/win32/api/wingdi/ns-wingdi-devmodea)データ構造体。これには、印刷ドライバーのデバイスの初期化と環境に関する情報が含まれます。 この構造体によって取得されるメモリは、Windows [globalunlock](/windows/win32/api/winbase/nf-winbase-globalunlock) 関数を使用してロック解除する必要があります。これについては、Windows SDK を参照してください。
 
-## <a name="cpagesetupdialoggetdrivername"></a><a name="getdrivername"></a>CPageSetupDialog:: GetDriverName ドライバー
+## <a name="cpagesetupdialoggetdrivername"></a><a name="getdrivername"></a> CPageSetupDialog:: GetDriverName ドライバー
 
-システム定義のプリンターデバイスドライバーの名前を取得するには、 [DoModal](../../mfc/reference/cprintdialog-class.md#domodal)を呼び出した後にこの関数を呼び出します。
+システム定義のプリンターデバイスドライバーの名前を取得するには、 [DoModal](../../mfc/reference/cprintdialog-class.md#domodal) を呼び出した後にこの関数を呼び出します。
 
 ```
 CString GetDriverName() const;
@@ -249,7 +250,7 @@ CString GetDriverName() const;
 
 `CString` `GetDriverName` `lpszDriverName` [CDC:: createdc](../../mfc/reference/cdc-class.md#createdc)への呼び出しで、によって返されるオブジェクトへのポインターを、の値として使用します。
 
-## <a name="cpagesetupdialoggetmargins"></a><a name="getmargins"></a>CPageSetupDialog:: GetMargins
+## <a name="cpagesetupdialoggetmargins"></a><a name="getmargins"></a> CPageSetupDialog:: GetMargins
 
 を呼び出した後に、 `DoModal` プリンターデバイスドライバーの余白を取得するために、この関数を呼び出します。
 
@@ -262,12 +263,12 @@ void GetMargins(
 ### <a name="parameters"></a>パラメーター
 
 *lpRectMargins*<br/>
-現在選択されているプリンターの印刷余白を (1/1000 インチまたは 1/100 mm で) 記述する[RECT](/windows/win32/api/windef/ns-windef-rect)構造体または[CRect](../../atl-mfc-shared/reference/crect-class.md)オブジェクトへのポインター。 この四角形に関心がない場合は、このパラメーターに NULL を渡します。
+現在選択されているプリンターの印刷余白を (1/1000 インチまたは 1/100 mm で) 記述する [RECT](/windows/win32/api/windef/ns-windef-rect) 構造体または [CRect](../../atl-mfc-shared/reference/crect-class.md) オブジェクトへのポインター。 この四角形に関心がない場合は、このパラメーターに NULL を渡します。
 
 *lpRectMinMargins*<br/>
 `RECT` `CRect` 現在選択されているプリンターの最小印刷余白を (1/1000 インチまたは 1/100 mm で) 記述する構造体またはオブジェクトへのポインター。 この四角形に関心がない場合は、このパラメーターに NULL を渡します。
 
-## <a name="cpagesetupdialoggetpapersize"></a><a name="getpapersize"></a>CPageSetupDialog:: GetPaperSize
+## <a name="cpagesetupdialoggetpapersize"></a><a name="getpapersize"></a> CPageSetupDialog:: GetPaperSize
 
 印刷用に選択した用紙のサイズを取得します。
 
@@ -277,9 +278,9 @@ CSize GetPaperSize() const;
 
 ### <a name="return-value"></a>戻り値
 
-印刷用に選択された用紙のサイズ (1/1000 インチまたは 1/100 mm) を含む[CSize](../../atl-mfc-shared/reference/csize-class.md)オブジェクト。
+印刷用に選択された用紙のサイズ (1/1000 インチまたは 1/100 mm) を含む [CSize](../../atl-mfc-shared/reference/csize-class.md) オブジェクト。
 
-## <a name="cpagesetupdialoggetportname"></a><a name="getportname"></a>CPageSetupDialog::GetPortName
+## <a name="cpagesetupdialoggetportname"></a><a name="getportname"></a> CPageSetupDialog::GetPortName
 
 を呼び出した後 `DoModal` に、現在選択されているプリンターポートの名前を取得するために、この関数を呼び出します。
 
@@ -291,7 +292,7 @@ CString GetPortName() const;
 
 現在選択されているプリンターポートの名前。
 
-## <a name="cpagesetupdialogm_psd"></a><a name="m_psd"></a>CPageSetupDialog:: m_psd
+## <a name="cpagesetupdialogm_psd"></a><a name="m_psd"></a> CPageSetupDialog:: m_psd
 
 PAGESETUPDLG 型の構造体。このメンバーには、ダイアログオブジェクトの特性が格納されています。
 
@@ -309,7 +310,7 @@ PAGESETUPDLG m_psd;
 
 [CPageSetupDialog:: CPageSetupDialog](#cpagesetupdialog)の例を参照してください。
 
-## <a name="cpagesetupdialogondrawpage"></a><a name="ondrawpage"></a>CPageSetupDialog::OnDrawPage
+## <a name="cpagesetupdialogondrawpage"></a><a name="ondrawpage"></a> CPageSetupDialog::OnDrawPage
 
 印刷されたページの画面イメージを描画するために、フレームワークによって呼び出されます。
 
@@ -341,7 +342,7 @@ virtual UINT OnDrawPage(
 - リターンアドレス表現の WM_PSD_YAFULLPAGERECT 領域。 この領域は、サンプルページ領域の端まで拡張されます。
 
 *lpRect*<br/>
-描画領域の座標を格納している、 [CRect](../../atl-mfc-shared/reference/crect-class.md)オブジェクトまたは[RECT](/windows/win32/api/windef/ns-windef-rect)オブジェクトへのポインター。
+描画領域の座標を格納している、 [CRect](../../atl-mfc-shared/reference/crect-class.md) オブジェクトまたは [RECT](/windows/win32/api/windef/ns-windef-rect) オブジェクトへのポインター。
 
 ### <a name="return-value"></a>戻り値
 
@@ -351,13 +352,13 @@ virtual UINT OnDrawPage(
 
 このイメージは、[共通の OLE ページ設定] ダイアログボックスの一部として表示されます。 既定の実装は、テキストページのイメージを描画します。
 
-イメージの特定の領域またはイメージ全体の描画をカスタマイズするには、この関数をオーバーライドします。 これを行うには、 **`switch`** ステートメントと **`case`** *n メッセージ*の値をチェックするステートメントを使用します。 たとえば、ページイメージの内容の表示をカスタマイズするには、次のコード例を使用します。
+イメージの特定の領域またはイメージ全体の描画をカスタマイズするには、この関数をオーバーライドします。 これを行うには、 **`switch`** ステートメントと **`case`** *n メッセージ* の値をチェックするステートメントを使用します。 たとえば、ページイメージの内容の表示をカスタマイズするには、次のコード例を使用します。
 
 [!code-cpp[NVC_MFCDocView#96](../../mfc/codesnippet/cpp/cpagesetupdialog-class_3.cpp)]
 
-*N メッセージ*のすべてのケースを処理する必要がないことに注意してください。 イメージの1つのコンポーネント、イメージの複数の要素、または領域全体を処理するように選択できます。
+*N メッセージ* のすべてのケースを処理する必要がないことに注意してください。 イメージの1つのコンポーネント、イメージの複数の要素、または領域全体を処理するように選択できます。
 
-## <a name="cpagesetupdialogpredrawpage"></a><a name="predrawpage"></a>CPageSetupDialog::P reDrawPage
+## <a name="cpagesetupdialogpredrawpage"></a><a name="predrawpage"></a> CPageSetupDialog::P reDrawPage
 
 印刷されたページの画面イメージを描画する前に、フレームワークによって呼び出されます。
 
@@ -371,7 +372,7 @@ virtual UINT PreDrawPage(
 ### <a name="parameters"></a>パラメーター
 
 *wPaper*<br/>
-用紙サイズを示す値を指定します。 この値には、 [DEVMODE](/windows/win32/api/wingdi/ns-wingdi-devmodea)構造体の説明に示されている**DMPAPER_** の値のいずれかを指定できます。
+用紙サイズを示す値を指定します。 この値には、 [DEVMODE](/windows/win32/api/wingdi/ns-wingdi-devmodea)構造体の説明に示されている **DMPAPER_** の値のいずれかを指定できます。
 
 *wFlags*<br/>
 用紙または封筒の向き、およびプリンターがドットマトリックスまたは HPPCL (ヒューレットパッカード Printer Control Language) デバイスであるかどうかを示します。 このパラメーターには、次のいずれかの値を指定できます。
