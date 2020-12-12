@@ -1,16 +1,17 @@
 ---
+description: '詳細については、「MFC ActiveX コントロール: カスタムメソッドの追加」を参照してください。'
 title: 'MFC ActiveX コントロール : カスタム メソッドの追加'
 ms.date: 09/12/2018
 helpviewer_keywords:
 - MFC ActiveX controls [MFC], methods
 - PtInCircle custom method [MFC]
 ms.assetid: 8f8dc344-44a0-4021-8db5-4cdd3d700e18
-ms.openlocfilehash: e32a1c372d89fc4ade414b20a0f77fa162807250
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: a7ac7ad1f1635976b3190c84b02b40bf73551e70
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84626157"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97202952"
 ---
 # <a name="mfc-activex-controls-adding-custom-methods"></a>MFC ActiveX コントロール : カスタム メソッドの追加
 
@@ -21,7 +22,7 @@ ms.locfileid: "84626157"
 
 ActiveX コントロールユーザーは、コントロール固有のアクションを実行するために、いつでもカスタムメソッドを呼び出すことができます。 カスタムメソッドのディスパッチマップエントリの形式は DISP_FUNCTION です。
 
-## <a name="adding-a-custom-method-with-the-add-method-wizard"></a><a name="_core_adding_a_custom_method_with_classwizard"></a>メソッドの追加ウィザードを使用したカスタムメソッドの追加
+## <a name="adding-a-custom-method-with-the-add-method-wizard"></a><a name="_core_adding_a_custom_method_with_classwizard"></a> メソッドの追加ウィザードを使用したカスタムメソッドの追加
 
 次の手順では、ActiveX コントロールのスケルトンコードにカスタムメソッド PtInCircle を追加する方法を示します。 PtInCircle は、コントロールに渡された座標が円の内側と外側のどちらにあるかを判断します。 これと同じ手順を使用して、他のカスタムメソッドを追加することもできます。 PtInCircle メソッドの名前とパラメーターには、カスタムメソッド名とそのパラメーターを置き換えます。
 
@@ -36,23 +37,23 @@ ActiveX コントロールユーザーは、コントロール固有のアクシ
 
 1. コントロールのインターフェイス ノード (ライブラリ ノードの 2 番目のノード) を右クリックし、ショートカット メニューを開きます。
 
-1. ショートカットメニューの [**追加**] をクリックし、[**メソッドの追加**] をクリックします。
+1. ショートカットメニューの [ **追加** ] をクリックし、[ **メソッドの追加**] をクリックします。
 
    メソッドの追加ウィザードが開きます。
 
-1. [**メソッド名**] ボックスに「 *PtInCircle*」と入力します。
+1. [ **メソッド名** ] ボックスに「 *PtInCircle*」と入力します。
 
-1. [**内部名**] ボックスに、メソッドの内部関数の名前を入力するか、既定値 (この場合は*PtInCircle*) を使用します。
+1. [ **内部名** ] ボックスに、メソッドの内部関数の名前を入力するか、既定値 (この場合は *PtInCircle*) を使用します。
 
-1. [**戻り値の型**] ボックスで、メソッドの戻り値の型として [ **VARIANT_BOOL** ] をクリックします。
+1. [ **戻り値の型** ] ボックスで、メソッドの戻り値の型として [ **VARIANT_BOOL** ] をクリックします。
 
-1. パラメーターの**型**と**パラメーター名**のコントロールを使用して、 *xcoord* (型*OLE_XPOS_PIXELS*) という名前のパラメーターを追加します。
+1. パラメーターの **型** と **パラメーター名** のコントロールを使用して、 *xcoord* (型 *OLE_XPOS_PIXELS*) という名前のパラメーターを追加します。
 
-1. パラメーターの**型**と**パラメーター名**のコントロールを使用して、 *ycoord* (型*OLE_YPOS_PIXELS*) という名前のパラメーターを追加します。
+1. パラメーターの **型** と **パラメーター名** のコントロールを使用して、 *ycoord* (型 *OLE_YPOS_PIXELS*) という名前のパラメーターを追加します。
 
 1. **[完了]** をクリックします。
 
-## <a name="add-method-wizard-changes-for-custom-methods"></a><a name="_core_classwizard_changes_for_custom_methods"></a>カスタムメソッドのメソッドの追加ウィザードの変更
+## <a name="add-method-wizard-changes-for-custom-methods"></a><a name="_core_classwizard_changes_for_custom_methods"></a> カスタムメソッドのメソッドの追加ウィザードの変更
 
 カスタムメソッドを追加すると、メソッドの追加ウィザードによって、コントロールクラスヘッダー () が変更されます。H) と実装 (.CPP) ファイル。 次の行は、コントロールクラスヘッダー () のディスパッチマップ宣言に追加されます。H) ファイル:
 
@@ -70,7 +71,7 @@ ActiveX コントロールユーザーは、コントロール固有のアクシ
 
 [!code-cpp[NVC_MFC_AxUI#20](codesnippet/cpp/mfc-activex-controls-adding-custom-methods_3.cpp)]
 
-DISP_FUNCTION マクロは、メソッドを `PtInCircle` コントロールのハンドラー関数にマップし、 `PtInCircle` **VARIANT_BOOL**する戻り値の型を宣言し、に渡される**VTS_XPOS_PIXELS**と**VTS_YPOSPIXELS**型の2つのパラメーターを宣言し `PtInCircle` ます。
+DISP_FUNCTION マクロは、メソッドを `PtInCircle` コントロールのハンドラー関数にマップし、 `PtInCircle` **VARIANT_BOOL** する戻り値の型を宣言し、に渡される **VTS_XPOS_PIXELS** と **VTS_YPOSPIXELS** 型の2つのパラメーターを宣言し `PtInCircle` ます。
 
 最後に、メソッドの追加ウィザードによって、スタブ関数が `CSampleCtrl::PtInCircle` コントロールの実装の下部 () に追加されます。CPP) ファイル。 が `PtInCircle` 前述のように機能するには、次のように変更する必要があります。
 

@@ -1,4 +1,5 @@
 ---
+description: 詳細については、次を参照してください:/DELAYLOAD (遅延読み込みのインポート)
 title: /DELAYLOAD (遅延読み込みのインポート)
 ms.date: 11/04/2016
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - /DELAYLOAD linker option
 - delayed loading of DLLs, /DELAYLOAD option
 ms.assetid: 39ea0f1e-5c01-450f-9c75-2d9761ff9b28
-ms.openlocfilehash: e92b470b7b5e76b39371f333cbbda150e7f6e8c7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9f6a91a102b66a16896d51b960d44273a7935d79
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62273359"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97201496"
 ---
 # <a name="delayload-delay-load-import"></a>/DELAYLOAD (遅延読み込みのインポート)
 
@@ -26,19 +27,19 @@ ms.locfileid: "62273359"
 *dllname*<br/>
 遅延読み込みする DLL の名前。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-/DELAYLOAD オプションを指定すると、`dllname` で指定された DLL は、その DLL 内の関数に対するプログラムの最初の呼び出しが行われたときのみ読み込まれます。 詳細については、次を参照してください。[リンカーによる dll の Delay-Loaded](linker-support-for-delay-loaded-dlls.md)します。 このオプションは、選択した DLL を指定するのに必要なだけ繰り返して使用できます。 プログラムを Delayimp.lib にリンクする場合は、Delayimp.lib を使用する必要があります。または、独自の遅延読み込みヘルパー関数を実装することもできます。
+/DELAYLOAD オプションを指定すると、`dllname` で指定された DLL は、その DLL 内の関数に対するプログラムの最初の呼び出しが行われたときのみ読み込まれます。 詳細については、「 [Delay-Loaded dll のリンカーサポート](linker-support-for-delay-loaded-dlls.md)」を参照してください。 このオプションは、選択した DLL を指定するのに必要なだけ繰り返して使用できます。 プログラムを Delayimp.lib にリンクする場合は、Delayimp.lib を使用する必要があります。または、独自の遅延読み込みヘルパー関数を実装することもできます。
 
-[/Delay](delay-delay-load-import-settings.md)オプションは、バインドと読み込みの遅延読み込み dll はごとのオプションを指定します。
+[/DELAY](delay-delay-load-import-settings.md)オプションは、遅延読み込みされた各 DLL のバインドオプションと読み込みオプションを指定します。
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのリンカー オプションを設定するには
 
-1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。 [Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)します。
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、[Visual Studio での C++ コンパイラとビルド プロパティの設定](../working-with-project-properties.md)に関するページを参照してください。
 
-1. **リンカー**フォルダーを選択、**入力**プロパティ ページ。
+1. [ **リンカー** ] フォルダーで、[ **入力** ] プロパティページを選択します。
 
-1. 変更、 **Dll の遅延読み込み**プロパティ。
+1. " **Dll の遅延読み込み** " プロパティを変更します。
 
 ### <a name="to-set-this-linker-option-programmatically"></a>このリンカーをコードから設定するには
 

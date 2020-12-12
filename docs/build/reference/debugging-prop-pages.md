@@ -1,5 +1,6 @@
 ---
-title: C++プロパティページのデバッグ
+description: 詳細については、「C++ デバッグのプロパティページ」を参照してください。
+title: C++ デバッグのプロパティページ
 ms.date: 07/24/2019
 ms.topic: article
 ms.assetid: 78115a6b-3799-4515-814e-8566b5bdc55d
@@ -35,20 +36,20 @@ f1_keywords:
 - VC.Project.IVCWebSvcDebugPageObject.HttpUrl
 - VC.Project.IVCWebSvcDebugPageObject.DebuggerType
 - VC.Project.IVCWebSvcDebugPageObject.SQLDebugging
-ms.openlocfilehash: c2190c4406e165cfec1915234b688c598f228777
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 16a7fec317485dd20a430baab9a413586f913fa3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80169709"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97201743"
 ---
-# <a name="c-debugging-property-pages"></a>C++プロパティページのデバッグ
+# <a name="c-debugging-property-pages"></a>C++ デバッグのプロパティページ
 
-これらのプロパティページは、 **Project** プロジェクト ** > のプロパティ > ** **構成プロパティ** の **デバッグ** >  の下にあります。 ドロップダウンコントロールでデバッガーの種類を選択します。 コードのデバッグC++の詳細については、「[チュートリアル: C++ Visual Studio を使用してコードをデバッグする方法](/visualstudio/debugger/getting-started-with-the-debugger-cpp)」および「[ネイティブコードのデバッグ](/visualstudio/debugger/debugging-native-code)」を参照してください。
+これらのプロパティページは、[**プロジェクト** のプロパティ] [  >    >  **構成プロパティ**] [デバッグ] の下にあり  >  ます。 ドロップダウンコントロールでデバッガーの種類を選択します。 C++ コードのデバッグの詳細については、「 [チュートリアル: Visual Studio を使用して c++ コードをデバッグする方法](/visualstudio/debugger/getting-started-with-the-debugger-cpp) 」および「 [ネイティブコードのデバッグ](/visualstudio/debugger/debugging-native-code)」を参照してください。
 
 ## <a name="local-windows-debugger-property-page"></a>[ローカル Windows デバッガー] プロパティページ
 
-### <a name="command"></a>command
+### <a name="command"></a>コマンド
 
 実行するデバッグ コマンドです。
 
@@ -70,12 +71,12 @@ ms.locfileid: "80169709"
 
 **Choices**
 
-- **ネイティブのみ**-ネイティブのみ
-- **マネージのみ**-マネージドのみ
+- **ネイティブのみ** -ネイティブのみ
+- **マネージのみ** -マネージドのみ
 - **Mixed** -mixed
-- **自動**-自動
-- **スクリプト**-スクリプト
-- **GPU のみ (C++ amp)** -gpu のみ (C++ amp)
+- **自動** -自動
+- **スクリプト** -スクリプト
+- **Gpu のみ (C++ AMP)** -gpu のみ (C++ AMP)
 
 ### <a name="environment"></a>環境
 
@@ -91,8 +92,8 @@ GPU デバッガーが中断する頻度を設定します。
 
 **Choices**
 
-- ワープごとに 1**回中断**-ワープごとに1回中断
-- **すべてのスレッド (cpu の動作など) の中断**-すべてのスレッドで中断 (cpu の動作など)
+- ワープごとに 1 **回中断**-ワープごとに1回中断
+- **すべてのスレッド (cpu の動作など) の中断** -すべてのスレッドで中断 (cpu の動作など)
 
 ### <a name="merge-environment"></a>マージ環境
 
@@ -104,11 +105,11 @@ SQL デバッガーをアタッチします。
 
 ### <a name="amp-default-accelerator"></a>AMP の既定のアクセラレータ
 
-AMP C++の既定のアクセラレータの選択をオーバーライドします。 マネージコードをデバッグする場合、プロパティは適用されません。
+C++ AMP の既定のアクセラレータ選択をオーバーライドします。 マネージコードをデバッグする場合、プロパティは適用されません。
 
 ## <a name="remote-windows-debugger-property-page"></a>[リモート Windows デバッガー] プロパティページ
 
-リモートデバッグの詳細については、「 [Visual Studio C++での Visual プロジェクトのリモートデバッグ](/visualstudio/debugger/remote-debugging-cpp)」を参照してください。
+リモートデバッグの詳細については、「 [Visual Studio での Visual C++ プロジェクトのリモートデバッグ](/visualstudio/debugger/remote-debugging-cpp)」を参照してください。
 
 ### <a name="remote-command"></a>リモート コマンド
 
@@ -132,8 +133,8 @@ AMP C++の既定のアクセラレータの選択をオーバーライドしま�
 
 **Choices**
 
-- **Windows 認証を使用したリモート**- [windows 認証](/windows-server/security/windows-authentication/windows-authentication-overview)を使用したリモート。
-- **認証なしのリモート**-認証なし。
+- **Windows 認証を使用したリモート** - [windows 認証](/windows-server/security/windows-authentication/windows-authentication-overview)を使用したリモート。
+- **認証なしのリモート** -認証なし。
 
 ### <a name="debugger-type"></a>[デバッガーのタイプ]
 
@@ -141,12 +142,12 @@ AMP C++の既定のアクセラレータの選択をオーバーライドしま�
 
 **Choices**
 
-- **ネイティブのみ**-ネイティブのみ
-- **マネージのみ**-マネージドのみ
+- **ネイティブのみ** -ネイティブのみ
+- **マネージのみ** -マネージドのみ
 - **Mixed** -mixed
-- **自動**-自動
-- **スクリプト**-スクリプト
-- **GPU のみ (C++ amp)** -gpu のみ (C++ amp)
+- **自動** -自動
+- **スクリプト** -スクリプト
+- **Gpu のみ (C++ AMP)** -gpu のみ (C++ AMP)
 
 ### <a name="environment"></a>環境
 
@@ -162,8 +163,8 @@ GPU デバッガーが中断する頻度を設定します。
 
 **Choices**
 
-- ワープごとに 1**回中断**-ワープごとに1回中断
-- **すべてのスレッド (cpu の動作など) の中断**-すべてのスレッドで中断 (cpu の動作など)
+- ワープごとに 1 **回中断**-ワープごとに1回中断
+- **すべてのスレッド (cpu の動作など) の中断** -すべてのスレッドで中断 (cpu の動作など)
 
 ### <a name="attach"></a>Attach
 
@@ -187,7 +188,7 @@ SQL デバッガーをアタッチします。
 
 ### <a name="amp-default-accelerator"></a>AMP の既定のアクセラレータ
 
-AMP C++の既定のアクセラレータの選択をオーバーライドします。 マネージコードをデバッグする場合、プロパティは適用されません。
+C++ AMP の既定のアクセラレータ選択をオーバーライドします。 マネージコードをデバッグする場合、プロパティは適用されません。
 
 ## <a name="web-browser-debugger-property-page"></a>[Web ブラウザーデバッガー] プロパティページ
 
@@ -201,11 +202,11 @@ AMP C++の既定のアクセラレータの選択をオーバーライドしま�
 
 **Choices**
 
-- **ネイティブのみ**-ネイティブのみ
-- **マネージのみ**-マネージドのみ
+- **ネイティブのみ** -ネイティブのみ
+- **マネージのみ** -マネージドのみ
 - **Mixed** -mixed
-- **自動**-自動
-- **スクリプト**-スクリプト
+- **自動** -自動
+- **スクリプト** -スクリプト
 
 ## <a name="web-service-debugger-property-page"></a>[Web サービスデバッガー] プロパティページ
 
@@ -219,11 +220,11 @@ AMP C++の既定のアクセラレータの選択をオーバーライドしま�
 
 **Choices**
 
-- **ネイティブのみ**-ネイティブのみ
-- **マネージのみ**-マネージドのみ
+- **ネイティブのみ** -ネイティブのみ
+- **マネージのみ** -マネージドのみ
 - **Mixed** -mixed
-- **自動**-自動
-- **スクリプト**-スクリプト
+- **自動** -自動
+- **スクリプト** -スクリプト
 
 ### <a name="sql-debugging"></a>SQL デバッグ
 

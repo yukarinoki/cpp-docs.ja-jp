@@ -1,4 +1,5 @@
 ---
+description: '詳細については、「MFC ActiveX コントロール: ActiveX コントロールへのストックイベントの追加」を参照してください。'
 title: 'MFC ActiveX コントロール : ActiveX コントロールへのストック イベントの追加'
 ms.date: 11/04/2016
 f1_keywords:
@@ -42,12 +43,12 @@ helpviewer_keywords:
 - EVENT_STOCK_READYSTATECHANGE event
 - EVENT_STOCK_KEYPRESS event
 ms.assetid: 3eeadc67-4b3d-4444-8caa-53054073988a
-ms.openlocfilehash: e63e63b914b9db64139b9b81a2c749a78ac4a58f
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: e5b99ca2cd8675ab133f56d0e815abe0829867eb
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91503852"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97202900"
 ---
 # <a name="mfc-activex-controls-adding-stock-events-to-an-activex-control"></a>MFC ActiveX コントロール : ActiveX コントロールへのストック イベントの追加
 
@@ -59,7 +60,7 @@ Stock イベントは [、クラスに](reference/colecontrol-class.md)よって
 
 ### <a name="stock-events"></a>株式イベント
 
-|Event|関数の起動|コメント|
+|Event|関数の起動|説明|
 |-----------|---------------------|--------------|
 |Click|**void 焼討 Click ()**|コントロールがマウスをキャプチャしたときに、 **Buttonup** (左、中央、または右) のメッセージを受信したときに、コントロール上でボタンが解放されたときに発生します。 このイベントの前に、stock MouseDown イベントと MouseUp イベントが発生します。<br /><br /> イベントマップエントリ: **EVENT_STOCK_CLICK ()**|
 |DblClick|**void 焼討 Dblclick ()**|Click に似ていますが、 **BUTTONDBLCLK** メッセージを受信したときに発生しました。<br /><br /> イベントマップエントリ: **EVENT_STOCK_DBLCLICK ()**|

@@ -1,4 +1,5 @@
 ---
+description: 詳細情報:/IGNOREIDL (Don&#39;t の属性を MIDL に処理する)
 title: /IGNOREIDL (Don&#39;t が MIDL に属性を処理する)
 ms.date: 11/04/2016
 f1_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - -IGNOREIDL linker option
 - /IGNOREIDL linker option
 ms.assetid: 29514098-6a1c-4317-af2f-1dc268972780
-ms.openlocfilehash: eac6209e0c34562254117d6ab9db5f47545037ea
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: c68b3ec2f9bd5607ef523667bcddc68b22d3c34c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91506888"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97199819"
 ---
 # <a name="ignoreidl-don39t-process-attributes-into-midl"></a>/IGNOREIDL (Don&#39;t が MIDL に属性を処理する)
 
@@ -22,7 +23,7 @@ ms.locfileid: "91506888"
 /IGNOREIDL
 ```
 
-## <a name="remarks"></a>注釈
+## <a name="remarks"></a>解説
 
 /IGNOREIDL オプションは、ソースコード内の [idl 属性](../../windows/attributes/idl-attributes.md) を .idl ファイルに処理しないように指定します。
 

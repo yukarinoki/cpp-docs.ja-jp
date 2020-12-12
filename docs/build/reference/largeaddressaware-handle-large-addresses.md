@@ -1,4 +1,5 @@
 ---
+description: 詳細については、次を参照してください:/LARGEADDRESSAWARE (サイズの大きいアドレスを処理)
 title: /LARGEADDRESSAWARE (大きいアドレスの処理)
 ms.date: 11/04/2016
 f1_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - -LARGEADDRESSAWARE linker option
 - /LARGEADDRESSAWARE linker option
 ms.assetid: a29756c8-e893-47a9-9750-1f0d25359385
-ms.openlocfilehash: 81a560ebf083e2f93d9bb514fc401186291d7f41
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 72b2ba20b2ea2b91ecd234497c433bcdd9e9ee42
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62269554"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97199572"
 ---
 # <a name="largeaddressaware-handle-large-addresses"></a>/LARGEADDRESSAWARE (大きいアドレスの処理)
 
@@ -22,21 +23,21 @@ ms.locfileid: "62269554"
 /LARGEADDRESSAWARE[:NO]
 ```
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-/LARGEADDRESSAWARE オプションは、アプリケーションが、2 ギガバイトを超えるアドレスを処理できることをリンカーに指示します。 64 ビットのコンパイラでは、このオプションは既定で有効にします。 32 ビットのコンパイラでは、リンカーのコマンドラインで/LARGEADDRESSAWARE が指定されない場合/LARGEADDRESSAWARE:NO が有効にします。
+/LARGEADDRESSAWARE オプションは、アプリケーションが 2 gb を超えるアドレスを処理できることをリンカーに指示します。 64ビットコンパイラでは、このオプションは既定で有効になっています。 32ビットコンパイラでは、リンカー行で/LARGEADDRESSAWARE が指定されていない場合、/LARGEADDRESSAWARE: NO が有効になります。
 
-アプリケーションの/LARGEADDRESSAWARE、DUMPBIN は関連付け[/HEADERS](headers.md)それに対応する情報が表示されます。
+アプリケーションが/LARGEADDRESSAWARE とリンクされている場合、その効果についての情報が [表示され](headers.md) ます。
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのリンカー オプションを設定するには
 
-1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。 [Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)します。
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、[Visual Studio での C++ コンパイラとビルド プロパティの設定](../working-with-project-properties.md)に関するページを参照してください。
 
-1. をクリックして、**リンカー**フォルダー。
+1. **[リンカー]** フォルダーをクリックします。
 
-1. をクリックして、**システム**プロパティ ページ。
+1. [ **システム** ] プロパティページをクリックします。
 
-1. 変更、**大きいサイズのアドレスを有効にする**プロパティ。
+1. [ **Large Addresses を有効にする** ] プロパティを変更します。
 
 ### <a name="to-set-this-linker-option-programmatically"></a>このリンカーをコードから設定するには
 

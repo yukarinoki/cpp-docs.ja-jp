@@ -1,5 +1,6 @@
 ---
-title: '> を含める &lt;C++ (ドキュメントコメント)'
+description: '詳細情報: &lt; include&gt;'
+title: '&lt;> を含める (C++ ドキュメントコメント)'
 ms.date: 11/04/2016
 f1_keywords:
 - <include>
@@ -7,16 +8,16 @@ helpviewer_keywords:
 - include C++ XML tag
 - <include> C++ XML tag
 ms.assetid: 392a3e61-0371-4617-8362-446650876ce3
-ms.openlocfilehash: e1d6a26f28069cfb4a1c74bd591d63bc89352774
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 577281b293fcca9b9b0b9491dd239240d435f32c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79439509"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97199780"
 ---
 # <a name="ltincludegt"></a>&lt;include&gt;
 
-\<include> タグを使用して、ソース コード内の型とメンバーを記述する別のファイル内のコメントを参照することができます。 これは文書化のコメントをソース コード ファイル内に直接配置する方法の代替です。  たとえば、\<include> を使用し、チームまたは会社全体で使用する標準の "定型" コメントを挿入できます。
+\<include> タグを使用すると、ソース コード内の型とメンバーを記述する別のファイル内のコメントを参照することができます。 これは文書化のコメントをソース コード ファイル内に直接配置する方法の代替です。  たとえば、を使用して、 \<include> チームまたは会社全体で使用される標準の "定型" コメントを挿入できます。
 
 ## <a name="syntax"></a>構文
 
@@ -38,15 +39,15 @@ ms.locfileid: "79439509"
 *id*<br/>
 コメントの前に配置するタグの ID。  名前は、一重引用符または二重引用符で囲みます。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
-\<include> タグは XML XPath 構文を使用します。 \<include> の使用をカスタマイズする方法については、XPath に関するドキュメントを参照してください。
+\<include> タグは XML XPath 構文を使用します。 を使用してをカスタマイズする方法については、XPath のドキュメントを参照してください \<include> 。
 
-コンパイル時に [/doc](doc-process-documentation-comments-c-cpp.md) を指定して、ドキュメント コメントをファイルに出力します。
+ドキュメントコメントをファイルに処理するために、 [/doc](doc-process-documentation-comments-c-cpp.md) を使用してコンパイルします。
 
 ## <a name="example"></a>例
 
-これは、複数ファイルの例です。 \<include> を使用する最初のファイルには、次のドキュメント コメントが含まれています。
+これは、複数ファイルの例です。 を使用する最初のファイルには、 \<include> 次のドキュメントのコメントが含まれています。
 
 ```cpp
 // xml_include_tag.cpp
@@ -109,6 +110,6 @@ The summary for this other type.
 </doc>
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [XML に関するドキュメント](xml-documentation-visual-cpp.md)

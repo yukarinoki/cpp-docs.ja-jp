@@ -1,20 +1,21 @@
 ---
+description: '詳細については、「方法: 完了したタスクを選択する」を参照してください。'
 title: '方法: 完了したタスクから選択する'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - selecting among completed tasks [Concurrency Runtime]
 - completed tasks, selecting among [Concurrency Runtime]
 ms.assetid: c8ccc160-043f-4599-847b-32ed270bb257
-ms.openlocfilehash: fd9940dad0cd2f202bdc734a81a7eb37cd79420c
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: a23092e4572188898f5e544f25406febc63d0c06
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87226725"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97197337"
 ---
 # <a name="how-to-select-among-completed-tasks"></a>方法: 完了したタスクから選択する
 
-この例では、 [concurrency:: choice](../../parallel/concrt/reference/choice-class.md)クラスおよび[concurrency:: join](../../parallel/concrt/reference/join-class.md)クラスを使用して、検索アルゴリズムを完了するための最初のタスクを選択する方法を示します。
+この例では、 [concurrency:: choice](../../parallel/concrt/reference/choice-class.md) クラスおよび [concurrency:: join](../../parallel/concrt/reference/join-class.md) クラスを使用して、検索アルゴリズムを完了するための最初のタスクを選択する方法を示します。
 
 ## <a name="example"></a>例
 
@@ -28,9 +29,9 @@ ms.locfileid: "87226725"
 
 1. 指定された ID または給与に該当しない従業員。
 
-最初の2つのケースでは、この例では、 [concurrency:: single_assignment](../../parallel/concrt/reference/single-assignment-class.md)オブジェクトを使用して識別子を保持し、もう1つのオブジェクトを使用して `single_assignment` 給与を保持します。 この例は、3 番目の事例に対して `join` オブジェクトを使用します。 `join` オブジェクトは、2 つの別の `single_assignment` オブジェクトで構成されます。1 つは、指定された ID を持つ従業員がいない事例に使用し、もう 1 つは指定された給与に該当する従業員がいない事例に使用します。 `join` オブジェクトは、その各メンバーがメッセージを受信したときにメッセージを送信します。 この例では、`join` オブジェクトは、指定された ID または給与に該当する従業員がいない場合にメッセージを送信します。
+最初の2つのケースでは、この例では、 [concurrency:: single_assignment](../../parallel/concrt/reference/single-assignment-class.md) オブジェクトを使用して識別子を保持し、もう1つのオブジェクトを使用して `single_assignment` 給与を保持します。 この例は、3 番目の事例に対して `join` オブジェクトを使用します。 `join` オブジェクトは、2 つの別の `single_assignment` オブジェクトで構成されます。1 つは、指定された ID を持つ従業員がいない事例に使用し、もう 1 つは指定された給与に該当する従業員がいない事例に使用します。 `join` オブジェクトは、その各メンバーがメッセージを受信したときにメッセージを送信します。 この例では、`join` オブジェクトは、指定された ID または給与に該当する従業員がいない場合にメッセージを送信します。
 
-この例では、 [concurrency:: structured_task_group](../../parallel/concrt/reference/structured-task-group-class.md)オブジェクトを使用して、両方の検索アルゴリズムを並列で実行します。 各検索タスクが、指定された従業員が存在するかどうかを示す値を `single_assignment` オブジェクトの 1 つに書き込みます。 この例では、 [concurrency:: receive](reference/concurrency-namespace-functions.md#receive)関数を使用して、メッセージを含む最初のバッファーのインデックスと、 **`switch`** 結果を出力するブロックを取得します。
+この例では、 [concurrency:: structured_task_group](../../parallel/concrt/reference/structured-task-group-class.md) オブジェクトを使用して、両方の検索アルゴリズムを並列で実行します。 各検索タスクが、指定された従業員が存在するかどうかを示す値を `single_assignment` オブジェクトの 1 つに書き込みます。 この例では、 [concurrency:: receive](reference/concurrency-namespace-functions.md#receive) 関数を使用して、メッセージを含む最初のバッファーのインデックスと、 **`switch`** 結果を出力するブロックを取得します。
 
 [!code-cpp[concrt-find-employee#1](../../parallel/concrt/codesnippet/cpp/how-to-select-among-completed-tasks_1.cpp)]
 
@@ -43,7 +44,7 @@ Employee with id 61935 has salary 29905.00.
 No employee has id 899 or salary 31223.00.
 ```
 
-この例では、 [concurrency:: make_choice](reference/concurrency-namespace-functions.md#make_choice)ヘルパー関数を使用して `choice` オブジェクトを作成し、 [concurrency:: make_join](reference/concurrency-namespace-functions.md#make_join)ヘルパー関数を使用してオブジェクトを作成し `join` ます。
+この例では、 [concurrency:: make_choice](reference/concurrency-namespace-functions.md#make_choice) ヘルパー関数を使用して `choice` オブジェクトを作成し、 [concurrency:: make_join](reference/concurrency-namespace-functions.md#make_join) ヘルパー関数を使用してオブジェクトを作成し `join` ます。
 
 ## <a name="compiling-the-code"></a>コードのコンパイル
 

@@ -1,4 +1,5 @@
 ---
+description: '詳細については、「方法: 呼び出しクラスおよびトランスフォーマークラスに処理関数を提供する」を参照してください。'
 title: '方法: call クラスおよび transformer クラスに処理関数を提供する'
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - using the transformer class [Concurrency Runtime]
 - using the call class [Concurrency Runtime]
 ms.assetid: df715ce4-8507-41ca-b204-636d11707a73
-ms.openlocfilehash: b629d0e0e11388e212c56b8e1f6bea290368c884
-ms.sourcegitcommit: 94893973211d0b254c8bcdcf0779997dcc136b0c
+ms.openlocfilehash: 05def4dcc8357e73a8606fbc4ce741eebb647d37
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/28/2020
-ms.locfileid: "91414348"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97197362"
 ---
 # <a name="how-to-provide-work-functions-to-the-call-and-transformer-classes"></a>方法: call クラスおよび transformer クラスに処理関数を提供する
 
@@ -47,7 +48,7 @@ ms.locfileid: "91414348"
 
 [!code-cpp[concrt-call-method#1](../../parallel/concrt/codesnippet/cpp/how-to-provide-work-functions-to-the-call-and-transformer-classes_3.cpp)]
 
-`bind1st`次の例に示すように、関数の結果を[std:: function](../../standard-library/function-class.md)オブジェクトに割り当てるか、キーワードを使用することもでき **`auto`** ます。
+`bind1st`次の例に示すように、関数の結果を [std:: function](../../standard-library/function-class.md)オブジェクトに割り当てるか、キーワードを使用することもでき **`auto`** ます。
 
 [!code-cpp[concrt-call-method#2](../../parallel/concrt/codesnippet/cpp/how-to-provide-work-functions-to-the-call-and-transformer-classes_4.cpp)]
 

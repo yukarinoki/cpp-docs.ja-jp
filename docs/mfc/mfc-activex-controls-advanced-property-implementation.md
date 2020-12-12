@@ -1,4 +1,5 @@
 ---
+description: '詳細については、「MFC ActiveX コントロール: 高度なプロパティの実装」を参照してください。'
 title: 'MFC ActiveX コントロール : 高度なプロパティの実装'
 ms.date: 09/12/2018
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - properties [MFC], ActiveX controls
 - MFC ActiveX controls [MFC], properties
 ms.assetid: ec2e6759-5a8e-41d8-a275-99af8ff6f32e
-ms.openlocfilehash: 017959c5809d324af6ab13247fd093a6df280dab
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 3cdd4353348d4c233b71dd25d2950adaac2ef06f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91502210"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97202835"
 ---
 # <a name="mfc-activex-controls-advanced-property-implementation"></a>MFC ActiveX コントロール : 高度なプロパティの実装
 
@@ -24,7 +25,7 @@ ms.locfileid: "91502210"
 
 - [プロパティからエラーコードを返す](#_core_returning_error_codes_from_a_property)
 
-## <a name="read-only-and-write-only-properties"></a><a name="_core_read2donly_and_write2donly_properties"></a> 読み取り専用プロパティと書き込み専用プロパティ
+## <a name="read-only-and-write-only-properties"></a><a name="_core_read2donly_and_write2donly_properties"></a> Read-Only と Write-Only のプロパティ
 
 プロパティの追加ウィザードを使用すると、コントロールの読み取り専用または書き込み専用のプロパティをすばやく簡単に実装できます。
 
@@ -58,7 +59,7 @@ ms.locfileid: "91502210"
 
 [!code-cpp[NVC_MFC_AxUI#29](codesnippet/cpp/mfc-activex-controls-advanced-property-implementation_1.cpp)]
 
-このコードサンプル `SetNotSupported` では、 `m_bReadOnlyMode` データメンバーが **TRUE**の場合、が呼び出されます。 **FALSE**の場合、プロパティは新しい値に設定されます。
+このコードサンプル `SetNotSupported` では、 `m_bReadOnlyMode` データメンバーが **TRUE** の場合、が呼び出されます。 **FALSE** の場合、プロパティは新しい値に設定されます。
 
 ## <a name="returning-error-codes-from-a-property"></a><a name="_core_returning_error_codes_from_a_property"></a> プロパティからエラーコードを返す
 

@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「」を参照してください。リンカー入力としての Lib ファイル
 title: リンカー入力としての .lib ファイル
 ms.date: 11/04/2016
 f1_keywords:
@@ -14,34 +15,34 @@ helpviewer_keywords:
 - defaults [C++], libraries
 - .lib files
 ms.assetid: dc5d2b1c-2487-41fa-aa71-ad1e0647958b
-ms.openlocfilehash: 02f719b3101b04ad6b219bf882a50a994061af0c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f4a3b6c6487947772fb72135fb26f67857f0937e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62293642"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97201262"
 ---
 # <a name="lib-files-as-linker-input"></a>リンカー入力としての .lib ファイル
 
-リンクを受け入れる形式の標準ライブラリと COFF インポート ライブラリ、どちらも通常は拡張子が付いています。 lib します。 標準ライブラリでは、オブジェクトが含まれており、LIB ツールによって作成されます。 インポート ライブラリは、他のプログラムのエクスポートについての情報が含まれてし、エクスポートを含むプログラムをビルドするとき、またはライブラリをリンクするか作成します。 LIB を使用して、標準的な作成またはライブラリをインポートする方法の詳細については、次を参照してください。 [LIB リファレンス](lib-reference.md)します。 リンクを使用して、インポート ライブラリを作成する方法の詳細については、次を参照してください。、 [/DLL](dll-build-a-dll.md)オプション。
+リンクは COFF 標準ライブラリと COFF インポートライブラリを受け入れます。どちらも、通常拡張子 .lib を持ちます。 標準ライブラリにはオブジェクトが含まれており、LIB ツールによって作成されます。 インポートライブラリには、他のプログラムのエクスポートに関する情報が含まれており、エクスポートを含むプログラムまたは LIB ツールでビルドするときにリンクによって作成されます。 LIB を使用して標準ライブラリまたはインポートライブラリを作成する方法の詳細については、「 [Lib リファレンス](lib-reference.md)」を参照してください。 リンクを使用してインポートライブラリを作成する方法の詳細については、「 [/dll](dll-build-a-dll.md) オプション」を参照してください。
 
-ライブラリは、ファイル名の引数または既定のライブラリのいずれかとしてリンクに指定されます。 リンクでは、外部参照を解決して、コマンドラインで指定されたライブラリを最初に検索し、ライブラリがで指定された既定の[/DEFAULTLIB](defaultlib-specify-default-library.md)オプションで、既定のライブラリという名前の .obj ファイル内とします。 パスを指定するには、ライブラリ名を持つ、リンクはそのディレクトリでライブラリを検索します。 パスが指定されていない場合、リンクはリンクを実行しているディレクトリにし、その後、LIB 環境変数で指定されたディレクトリで検索します。
+ファイル名引数または既定のライブラリのいずれかとしてリンクするライブラリが指定されています。 リンクを使用すると、コマンドラインで指定されたライブラリ、 [/DEFAULTLIB](defaultlib-specify-default-library.md) オプションで指定された既定のライブラリ、および .obj ファイル内の既定のライブラリで検索することで、外部参照を解決できます。 パスがライブラリ名と共に指定されている場合、リンクはそのディレクトリ内のライブラリを検索します。 パスが指定されていない場合は、リンクが実行されているディレクトリと、LIB 環境変数で指定されたディレクトリで、リンクが最初に表示されます。
 
-## <a name="to-add-lib-files-as-linker-input-in-the-development-environment"></a>開発環境でリンカー入力としての .lib ファイルを追加するには
+## <a name="to-add-lib-files-as-linker-input-in-the-development-environment"></a>開発環境で .lib ファイルをリンカー入力として追加するには
 
-1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。 [Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)します。
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、[Visual Studio での C++ コンパイラとビルド プロパティの設定](../working-with-project-properties.md)に関するページを参照してください。
 
-1. 選択、**入力**プロパティ ページで、**リンカー**フォルダー。
+1. [**リンカー** ] フォルダーの [**入力**] プロパティページをクリックします。
 
-1. 変更、**追加の依存関係**.lib ファイルを追加するプロパティ。
+1. .Lib ファイルを追加するには、[ **追加の依存関係** プロパティを変更します。
 
-## <a name="to-programmatically-add-lib-files-as-linker-input"></a>リンカー入力としての .lib ファイルをプログラムで追加するには
+## <a name="to-programmatically-add-lib-files-as-linker-input"></a>プログラムによって .lib ファイルをリンカー入力として追加するには
 
-- 参照してください[AdditionalDependencies](/dotnet/api/microsoft.visualstudio.vcprojectengine.vclinkertool.additionaldependencies)します。
+- 「 [Additionaldependencies](/dotnet/api/microsoft.visualstudio.vcprojectengine.vclinkertool.additionaldependencies)」を参照してください。
 
 ## <a name="example"></a>例
 
-次の例では、ビルドし、.lib ファイルを使用する方法を示します。 .Lib ファイルを最初に、ビルドするには。
+次のサンプルは、.lib ファイルをビルドして使用する方法を示しています。 まず、.lib ファイルをビルドします。
 
 ```cpp
 // lib_link_input_1.cpp
@@ -51,7 +52,7 @@ __declspec(dllexport) int Test() {
 }
 ```
 
-作成した .lib ファイルを使用してこのサンプルをコンパイルします。
+次に、先ほど作成した .lib ファイルを使用して、このサンプルをコンパイルします。
 
 ```cpp
 // lib_link_input_2.cpp
@@ -69,5 +70,5 @@ int main() {
 
 ## <a name="see-also"></a>関連項目
 
-[LINK の入力ファイル](link-input-files.md)<br/>
+[リンク入力ファイル](link-input-files.md)<br/>
 [MSVC リンカー オプション](linker-options.md)

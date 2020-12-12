@@ -1,22 +1,23 @@
 ---
+description: 詳細については、「」を参照してください。リンカー入力としての Exe ファイル
 title: リンカー入力としての .exe ファイル
 ms.date: 11/04/2016
 helpviewer_keywords:
 - executable files, as linker output
 - .exe files
 ms.assetid: 73714c30-6f03-4e72-881e-090e5240ba93
-ms.openlocfilehash: 855847067fb726816a1b23ac8e54afc0b9d7927f
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: e9ed95ce14eabfef445c0ddcb0994cfa5311f658
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64342841"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97201275"
 ---
 # <a name="exe-files-as-linker-input"></a>リンカー入力としての .exe ファイル
 
-[MS-DOS スタブ ファイル名](stub-ms-dos-stub-file-name.md)(/stub) オプションの MS-DOS で実行される .exe ファイルの名前を指定します。 リンクは有効な MS-DOS プログラムであることを確認する指定されたファイルを調べます。
+Ms-dos [スタブファイル名](stub-ms-dos-stub-file-name.md) (/スタブ) オプションは、ms-dos で実行される .exe ファイルの名前を指定します。 リンクは、指定されたファイルが有効な MS-DOS プログラムであることを確認します。
 
 ## <a name="see-also"></a>関連項目
 
-[LINK の入力ファイル](link-input-files.md)<br/>
+[リンク入力ファイル](link-input-files.md)<br/>
 [MSVC リンカー オプション](linker-options.md)

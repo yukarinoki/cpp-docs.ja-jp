@@ -1,24 +1,25 @@
 ---
+description: 詳細については、「」を参照してください。リンカー入力としての Pdb ファイル
 title: リンカー入力としての .pdb ファイル
 ms.date: 11/04/2016
 helpviewer_keywords:
 - .pdb files, as linker input
 - PDB files, as linker input
 ms.assetid: c1071478-2369-4b03-9df8-71761cf82f3b
-ms.openlocfilehash: 365f2955f5bc9e8082221a070af454c820c665f1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 713d42e7e95b5d1e7e3b1f9be21203b75569cdbe
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62273288"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97201158"
 ---
 # <a name="pdb-files-as-linker-input"></a>リンカー入力としての .pdb ファイル
 
-/Zi オプションを使用してコンパイルされた (.obj) ファイルがプログラム データベース (PDB) の名前を含むオブジェクトです。 リンカーは、オブジェクトの PDB ファイル名を指定しません。リンクは、必要な場合、PDB の検索に埋め込まれている名を使用します。 これをライブラリに含まれるデバッグ可能なオブジェクトにも当てはまりますデバッグ可能なライブラリの PDB は、リンカー、ライブラリと共に使用できるである必要があります。
+/Zi オプションを使用してコンパイルされたオブジェクト (.obj) ファイルには、プログラムデータベース (PDB) の名前が含まれています。 リンカーに対してオブジェクトの PDB ファイル名を指定することはできません。リンクでは、必要に応じて、埋め込み名を使用して PDB を検索します。 これは、ライブラリに含まれるデバッグ可能なオブジェクトにも適用されます。デバッグ可能なライブラリの PDB は、ライブラリと共にリンカーで使用できる必要があります。
 
-リンクは、.exe ファイルまたは .dll ファイルのデバッグ情報を保持するためにも、PDB を使用します。 プログラムの PDB は、出力ファイルと、入力ファイルの両方をプログラムを再構築時に、リンクが pdb ファイルを更新ためです。
+また、PDB を使用して、.exe ファイルまたは .dll ファイルのデバッグ情報を保持します。 プログラムの PDB は、プログラムのリビルド時にリンクによって PDB が更新されるため、出力ファイルと入力ファイルの両方になります。
 
 ## <a name="see-also"></a>関連項目
 
-[LINK の入力ファイル](link-input-files.md)<br/>
+[リンク入力ファイル](link-input-files.md)<br/>
 [MSVC リンカー オプション](linker-options.md)

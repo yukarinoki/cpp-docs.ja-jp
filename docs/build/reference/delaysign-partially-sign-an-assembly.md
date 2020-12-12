@@ -1,4 +1,5 @@
 ---
+description: 詳細情報:/DELAYSIGN (アセンブリの部分署名)
 title: /DELAYSIGN (アセンブリの部分署名)
 ms.date: 11/04/2016
 f1_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - DELAYSIGN linker option
 - -DELAYSIGN linker option
 ms.assetid: 15244d30-3ecb-492f-a408-ffe81f38de20
-ms.openlocfilehash: 65585b856627ad9fda5a8f8bfad6ad81fef0f81c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 40eeaef958b6a188fd4739fcdc0f5ef5123b220a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62293837"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97201483"
 ---
 # <a name="delaysign-partially-sign-an-assembly"></a>/DELAYSIGN (アセンブリの部分署名)
 
@@ -24,22 +25,22 @@ ms.locfileid: "62293837"
 
 ## <a name="arguments"></a>引数
 
-**違います**<br/>
-アセンブリが部分的に署名されていないことを指定します。
+**NO**<br/>
+アセンブリを部分署名しないことを指定します。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-使用 **/DELAYSIGN**公開キーをアセンブリに配置する場合。 既定値は **/delaysign:no です**します。
+公開キーをアセンブリに配置するだけの場合は、 **/DELAYSIGN** を使用します。 既定値は **/DELAYSIGN: NO** です。
 
-**/DELAYSIGN**オプションも何も起こりません併用しない限り、 [/KEYFILE](keyfile-specify-key-or-key-pair-to-sign-an-assembly.md)または[/KEYCONTAINER](keycontainer-specify-a-key-container-to-sign-an-assembly.md)します。
+**/DELAYSIGN** オプションは、 [/Keyfile](keyfile-specify-key-or-key-pair-to-sign-an-assembly.md)または [/KEYCONTAINER](keycontainer-specify-a-key-container-to-sign-an-assembly.md)と共に使用しない限り、効果はありません。
 
-アセンブリに完全に署名するように指定すると、コンパイラはマニフェスト (アセンブリ メタデータ) を含むファイルをハッシュし、秘密キーでそのハッシュに署名します。 結果として得られるデジタル署名は、マニフェストを含むファイルに格納されます。 アセンブリが遅延署名されたときに、リンカーはいないコンピューティングし、署名を後で追加できるように、署名が予約領域をファイルに保存します。
+アセンブリに完全に署名するように指定すると、コンパイラはマニフェスト (アセンブリ メタデータ) を含むファイルをハッシュし、秘密キーでそのハッシュに署名します。 結果として得られるデジタル署名は、マニフェストを含むファイルに格納されます。 アセンブリが遅延署名されている場合、リンカーは署名を計算して保存しませんが、後で署名を追加できるようにファイルに領域を確保します。
 
-たとえばを使用して **/DELAYSIGN**と、テスト時に、アセンブリをグローバル キャッシュに格納できます。 テスト後に、アセンブリに秘密キーを配置することで、アセンブリを完全署名できます。
+たとえば、 **/DELAYSIGN** を使用すると、テスト担当者はアセンブリをグローバルキャッシュに配置できます。 テスト後に、アセンブリに秘密キーを配置することで、アセンブリに完全署名できます。
 
-参照してください[厳密な名前のアセンブリ (アセンブリ署名) (C +/cli CLI)](../../dotnet/strong-name-assemblies-assembly-signing-cpp-cli.md)と[Delay Signing an Assembly](/dotnet/framework/app-domains/delay-sign-assembly)アセンブリへの署名の詳細についてはします。
+アセンブリに署名する方法の詳細については、「 [厳密な名前のアセンブリ (アセンブリ署名) (C++/cli](../../dotnet/strong-name-assemblies-assembly-signing-cpp-cli.md) )」および「アセンブリへの [遅延署名](/dotnet/framework/app-domains/delay-sign-assembly) 」を参照してください。
 
-アセンブリの生成に影響するその他のリンカー オプションがあります。
+アセンブリの生成に影響を与える他のリンカーオプションは次のとおりです。
 
 - [/ASSEMBLYDEBUG](assemblydebug-add-debuggableattribute.md)
 
@@ -53,13 +54,13 @@ ms.locfileid: "62293837"
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのリンカー オプションを設定するには
 
-1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。 [Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)します。
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、[Visual Studio での C++ コンパイラとビルド プロパティの設定](../working-with-project-properties.md)に関するページを参照してください。
 
-1. をクリックして、**リンカー**フォルダー。
+1. **[リンカー]** フォルダーをクリックします。
 
 1. **[コマンド ライン]** プロパティ ページをクリックします。
 
-1. オプションを入力、**追加オプション**ボックス。
+1. [ **追加オプション** ] ボックスにオプションを入力します。
 
 ### <a name="to-set-this-linker-option-programmatically"></a>このリンカーをコードから設定するには
 

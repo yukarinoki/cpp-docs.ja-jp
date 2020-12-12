@@ -1,28 +1,29 @@
 ---
+description: 詳細については、独自のヘルパー関数の開発に関するページを参照してください。
 title: 独自のヘルパー関数の作成
 ms.date: 11/04/2016
 helpviewer_keywords:
 - helper functions
 ms.assetid: a845429d-68b1-4e14-aa88-f3f5343bd490
-ms.openlocfilehash: 73b4a8180345dd6f7dc26f4243f6e63eda80e4af
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: da536d13da9a596c5667c3fa84311b73e66d71ac
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62293798"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97201457"
 ---
 # <a name="developing-your-own-helper-function"></a>独自のヘルパー関数の作成
 
-独自のバージョンの DLL またはインポートの名前に基づく特定の処理を実行するルーチンを提供することがあります。 これを行う 2 つの方法がある: に基づいて指定されたコード、コーディング、独自またはだけで説明した通知フックを使用して、指定されたバージョンをフックします。
+独自のバージョンのルーチンを提供して、DLL またはインポートの名前に基づいて特定の処理を行うことができます。 これを行う方法は2つあります。独自にコーディングする方法、指定したコードに基づいて記述する方法、または前に説明した通知フックを使用して指定されたバージョンをフックする方法です。
 
-## <a name="code-your-own"></a>独自のコードします。
+## <a name="code-your-own"></a>独自のコードを作成する
 
-これは、機能は、新しいをガイドラインとして指定されたコードを使用することができます基本的にため非常に単純です。 もちろん、呼び出し元の規則に従う必要があり、適切な関数ポインターを返す必要があります、リンカーによって生成されたサンクに返された場合。 1 回、コードにほとんど何でも呼び出しを満たすためか、呼び出しから取得するために実行できます。
+これは、指定されたコードを新しいもののガイドラインとして基本的に使用できるため、非常に簡単です。 もちろん、呼び出し規約に従う必要があり、リンカーによって生成されたサンクに戻る場合は、適切な関数ポインターを返す必要があります。 コード内では、呼び出しを満たすために、または呼び出しを取得するために、必要な操作をほとんど行うことができます。
 
-## <a name="use-the-start-processing-notification-hook"></a>通知フックの処理開始を使用します。
+## <a name="use-the-start-processing-notification-hook"></a>処理開始通知フックを使用する
 
-単に通知 dliStartProcessing で既定のヘルパーと同じ値を受信する通知のユーザーが指定したフック関数への新しいポインターを提供する最も簡単なことが考えられます。 その時点では、フック関数を実質的に新しいヘルパー関数と正常に返された既定のヘルパーには既定のヘルパーのそれ以降のすべての処理をバイパスします。
+通常は、notification dliStartProcessing の既定のヘルパーと同じ値を受け取るユーザー指定の通知フック関数への新しいポインターを提供するのが最も簡単です。 その時点で、フック関数は実質的に新しいヘルパー関数になります。既定のヘルパーに正常に戻ると、既定のヘルパーでの後続の処理がすべてバイパスされるためです。
 
 ## <a name="see-also"></a>関連項目
 
-[リンカーによる DLL の遅延読み込み](linker-support-for-delay-loaded-dlls.md)
+[リンカーによる Delay-Loaded Dll のサポート](linker-support-for-delay-loaded-dlls.md)

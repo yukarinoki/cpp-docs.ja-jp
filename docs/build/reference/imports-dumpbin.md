@@ -1,4 +1,5 @@
 ---
+description: 詳細情報:/IMPORTS (DUMPBIN)
 title: /IMPORTS (DUMPBIN)
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - /IMPORTS dumpbin option
 - -IMPORTS dumpbin option
 ms.assetid: 6a296216-2b1b-40f8-8736-cd4553a22456
-ms.openlocfilehash: c8b0f88b38eb657fe4d3916ef0df13972e985cbe
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 86c428280bbca3a4957f7d7a0a640482607547de
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62291841"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97199793"
 ---
 # <a name="imports-dumpbin"></a>/IMPORTS (DUMPBIN)
 
@@ -21,19 +22,19 @@ ms.locfileid: "62291841"
 /IMPORTS[:file]
 ```
 
-このオプションは、Dll の一覧を表示します (どちらも静的にリンクされていると[遅延読み込み](linker-support-for-delay-loaded-dlls.md)) からこれらの各 Dll を実行可能ファイルまたは DLL を個別にインポートされるすべてインポートします。
+このオプションを選択 [すると、](linker-support-for-delay-loaded-dlls.md)実行可能ファイルまたは dll にインポートされる dll の一覧と、これらの各 dll からのすべての個別のインポートが表示されます。
 
-省略可能な`file`仕様では、のみ、その DLL のインポートが表示されることを指定できます。 例:
+省略可能な `file` 指定を使用すると、その DLL のみのインポートが表示されるように指定できます。 次に例を示します。
 
 ```
 dumpbin /IMPORTS:msvcrt.dll
 ```
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-このオプションによって表示される出力は、 [/exports](dash-exports.md)出力します。
+このオプションによって表示される出力は、 [/エクスポート](dash-exports.md) 出力に似ています。
 
-のみ、 [/HEADERS](headers.md) DUMPBIN オプションがで生成されたファイルで使用できる、 [/GL](gl-whole-program-optimization.md)コンパイラ オプション。
+[/GL](gl-whole-program-optimization.md) コンパイラ オプションで生成したファイルで使用できるのは、[/HEADERS](headers.md) DUMPBIN オプションだけです。
 
 ## <a name="see-also"></a>関連項目
 

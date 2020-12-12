@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: is_unsigned クラス'
 title: is_unsigned クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,14 +8,14 @@ helpviewer_keywords:
 - is_unsigned class
 - is_unsigned
 ms.assetid: ba5bec3d-796b-4e54-8595-a3941ec6a8dc
-ms.openlocfilehash: 3da9f71543815b507307f2cf4969e8f19c79e8c5
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 2ad1aff24d578c2073aa649fb78b73d28ab1a6cc
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68458886"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97197206"
 ---
-# <a name="isunsigned-class"></a>is_unsigned クラス
+# <a name="is_unsigned-class"></a>is_unsigned クラス
 
 型が符号なし整数かどうかを調べます。
 
@@ -27,12 +28,12 @@ struct is_unsigned;
 
 ### <a name="parameters"></a>パラメーター
 
-*~* \
+*~*\
 照会する型。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-型*Ty*が符号なし整数型または`cv-qualified`符号なし整数型である場合、型述語のインスタンスは true を保持します。それ以外の場合は、false を保持します。
+型 *Ty* が符号なし整数型または符号なし整数型である場合、型述語のインスタンスは true を保持し `cv-qualified` ます。それ以外の場合は、false を保持します。
 
 ## <a name="example"></a>例
 
@@ -69,9 +70,9 @@ is_unsigned<unsigned int> == true
 is_unsigned<float> == false
 ```
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-**ヘッダー:** \<type_traits>
+**ヘッダー:**\<type_traits>
 
 **名前空間:** std
 

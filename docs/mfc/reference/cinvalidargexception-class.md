@@ -1,5 +1,6 @@
 ---
-title: クラスを無効にします。
+description: '詳細情報: CInvalidArgException クラス'
+title: CInvalidArgException クラス
 ms.date: 11/04/2016
 f1_keywords:
 - CInvalidArgException
@@ -8,14 +9,14 @@ f1_keywords:
 helpviewer_keywords:
 - CInvalidArgException [MFC], CInvalidArgException
 ms.assetid: e43d7c67-1157-47f8-817a-804083e8186e
-ms.openlocfilehash: b28b6e84043b85a8117694a67ff5fff13e7c786b
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: f68642747a81d1c45a8246f4f25abfb8b79c81d8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81372375"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97202796"
 ---
-# <a name="cinvalidargexception-class"></a>クラスを無効にします。
+# <a name="cinvalidargexception-class"></a>CInvalidArgException クラス
 
 このクラスは、無効な引数の例外状態を表します。
 
@@ -31,13 +32,13 @@ class CInvalidArgException : public CSimpleException
 
 |名前|説明|
 |----------|-----------------|
-|[例外を返します。](#cinvalidargexception)|コンストラクターです。|
+|[CInvalidArgException:: CInvalidArgException](#cinvalidargexception)|コンストラクターです。|
 
 ## <a name="remarks"></a>解説
 
-オブジェクト`CInvalidArgException`が無効な引数例外条件を表しています。
+`CInvalidArgException`オブジェクトが無効な引数の例外条件を表しています。
 
-例外処理の詳細については[、「CException クラス](../../mfc/reference/cexception-class.md)」および[「例外処理 (MFC)」](../../mfc/exception-handling-in-mfc.md)を参照してください。
+例外処理の詳細については、「 [CException クラス](../../mfc/reference/cexception-class.md) 」トピックと「 [例外処理 (MFC)](../../mfc/exception-handling-in-mfc.md)」を参照してください。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -49,11 +50,11 @@ class CInvalidArgException : public CSimpleException
 
 `CInvalidArgException`
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-**ヘッダー:** afx.h
+**ヘッダー:** afx
 
-## <a name="cinvalidargexceptioncinvalidargexception"></a><a name="cinvalidargexception"></a>例外を返します。
+## <a name="cinvalidargexceptioncinvalidargexception"></a><a name="cinvalidargexception"></a> CInvalidArgException:: CInvalidArgException
 
 コンストラクターです。
 
@@ -63,9 +64,9 @@ CInvalidArgException();
 
 ### <a name="remarks"></a>解説
 
-このコンストラクターを直接使用しないでください。グローバル関数を呼び出**します**。
+このコンストラクターを直接使用しないでください。グローバル関数 **AfxThrowInvalidArgException** を呼び出します。
 
 ## <a name="see-also"></a>関連項目
 
-[階層グラフ](../../mfc/hierarchy-chart.md)<br/>
-[クラス](../../mfc/reference/csimpleexception-class.md)
+[階層図](../../mfc/hierarchy-chart.md)<br/>
+[CSimpleException クラス](../../mfc/reference/csimpleexception-class.md)
