@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「AsyncStatusInternal 列挙型」を参照してください。
 title: AsyncStatusInternal 列挙型
 ms.date: 11/04/2016
 ms.topic: reference
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - AsyncStatusInternal enumeration
 ms.assetid: b783923f-3f1c-4487-9384-be572cbc62d7
-ms.openlocfilehash: 0eadd1e3a287feecd36b00b231b42c31218352c1
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 3227699a0e7b8933dc5839e65fb3489328d3b1f5
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80214150"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97175795"
 ---
 # <a name="asyncstatusinternal-enumeration"></a>AsyncStatusInternal 列挙型
 
@@ -26,7 +27,7 @@ enum AsyncStatusInternal;
 
 ## <a name="remarks"></a>解説
 
-非同期操作の状態と `Windows::Foundation::AsyncStatus` 列挙体の内部列挙間のマッピングを指定します。
+非同期操作の状態と列挙体の内部列挙間のマッピングを指定し `Windows::Foundation::AsyncStatus` ます。
 
 ## <a name="members"></a>メンバー
 
@@ -45,12 +46,12 @@ enum AsyncStatusInternal;
 `_Error`<br/>
 `::Windows::Foundation::AsyncStatus::Error` と同じ意味です。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** async .h
 
 **名前空間:** Microsoft:: WRL::D etails
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[Microsoft::WRL::Details 名前空間](microsoft-wrl-details-namespace.md)
+[Microsoft:: WRL::D etails 名前空間](microsoft-wrl-details-namespace.md)

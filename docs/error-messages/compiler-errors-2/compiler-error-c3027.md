@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「コンパイラエラー C3027」を参照してください。
 title: コンパイラ エラー C3027
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3027
 ms.assetid: 6562a5c2-2f28-4b36-91ca-2a64c0f0501a
-ms.openlocfilehash: 6551a667ba65d860e77c2c372b74abda8b705bb8
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: bf58cc6913c39919e8a9d5906e9cb81d9acce721
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74741782"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97174248"
 ---
 # <a name="compiler-error-c3027"></a>コンパイラ エラー C3027
 
@@ -19,7 +20,7 @@ ms.locfileid: "74741782"
 
 演算またはポインター式を必要とする句に、別の種類の式が渡されました。
 
-## <a name="example"></a>使用例
+## <a name="example"></a>例
 
 次の例では C3027 が生成されます。
 

@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: 型の特徴のコンパイラサポート (C++/CLI および C++/CX)'
 title: 型の特徴のコンパイラ サポート (C++/CLI および C++/CX)
 ms.date: 10/12/2018
 ms.topic: reference
@@ -61,12 +62,12 @@ helpviewer_keywords:
 - __is_simple_value_class keyword [C++]
 - __has_trivial_constructor keyword [C++]
 ms.assetid: cd440630-0394-48c0-a16b-1580b6ef5844
-ms.openlocfilehash: 16c79e05c6ba6f50a3e6c0d6dd5f48963be40fa8
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: ec9efe1305a844779b4848cbae155d2946488d11
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87219782"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97176926"
 ---
 # <a name="compiler-support-for-type-traits-ccli-and-ccx"></a>型の特徴のコンパイラ サポート (C++/CLI および C++/CX)
 
@@ -82,7 +83,7 @@ Microsoft C++ コンパイラでは、C++/CLI と C++/CX の拡張機能に対�
 
 (次の一覧のコード例は、C++/CLI のみで記述されています。 ただし、特に明記されていない限り、対応する型の特徴は C++/CX でもサポートされています。 "プラットフォーム型" という用語は、Windows Runtime の型または共通言語ランタイムの型を示します。)
 
-- `__has_assign(` *type* `)`
+- `__has_assign(`*型*`)`
 
    **`true`** プラットフォームまたはネイティブ型にコピー代入演算子がある場合は、を返します。
 
@@ -96,7 +97,7 @@ Microsoft C++ コンパイラでは、C++/CLI と C++/CX の拡張機能に対�
     }
     ```
 
-- `__has_copy(` *type* `)`
+- `__has_copy(`*型*`)`
 
    **`true`** プラットフォームまたはネイティブ型にコピーコンストラクターがある場合は、を返します。
 
@@ -110,9 +111,9 @@ Microsoft C++ コンパイラでは、C++/CLI と C++/CX の拡張機能に対�
     }
     ```
 
-- `__has_finalizer(` *type* `)`
+- `__has_finalizer(`*型*`)`
 
-   (C++/CX ではサポートされていません)。**`true`** CLR 型にファイナライザーがある場合は、を返します。 詳細については、「[方法: クラスと構造体を定義および使用する (C++/cli)」の「デストラクターとファイナライザー](../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers) 」を参照してください。
+   (C++/CX ではサポートされていません)。 **`true`** CLR 型にファイナライザーがある場合は、を返します。 詳細については、「 [方法: クラスと構造体を定義および使用する (C++/cli)」の「デストラクターとファイナライザー](../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers) 」を参照してください。
 
     ```cpp
     using namespace System;
@@ -127,7 +128,7 @@ Microsoft C++ コンパイラでは、C++/CLI と C++/CX の拡張機能に対�
     }
     ```
 
-- `__has_nothrow_assign(` *type* `)`
+- `__has_nothrow_assign(`*型*`)`
 
    **`true`** コピー代入演算子に空の例外指定がある場合は、を返します。
 
@@ -143,7 +144,7 @@ Microsoft C++ コンパイラでは、C++/CLI と C++/CX の拡張機能に対�
     }
     ```
 
-- `__has_nothrow_constructor(` *type* `)`
+- `__has_nothrow_constructor(`*型*`)`
 
    **`true`** 既定のコンストラクターに空の例外指定がある場合は、を返します。
 
@@ -159,7 +160,7 @@ Microsoft C++ コンパイラでは、C++/CLI と C++/CX の拡張機能に対�
     }
     ```
 
-- `__has_nothrow_copy(` *type* `)`
+- `__has_nothrow_copy(`*型*`)`
 
    **`true`** コピーコンストラクターに空の例外指定がある場合は、を返します。
 
@@ -175,7 +176,7 @@ Microsoft C++ コンパイラでは、C++/CLI と C++/CX の拡張機能に対�
     }
     ```
 
-- `__has_trivial_assign(` *type* `)`
+- `__has_trivial_assign(`*型*`)`
 
    **`true`** 型に自明なコンパイラで生成された代入演算子がある場合は、を返します。
 
@@ -189,7 +190,7 @@ Microsoft C++ コンパイラでは、C++/CLI と C++/CX の拡張機能に対�
     }
     ```
 
-- `__has_trivial_constructor(` *type* `)`
+- `__has_trivial_constructor(`*型*`)`
 
    **`true`** 型に自明なコンパイラで生成されたコンストラクターがある場合は、を返します。
 
@@ -203,7 +204,7 @@ Microsoft C++ コンパイラでは、C++/CLI と C++/CX の拡張機能に対�
     }
     ```
 
-- `__has_trivial_copy(` *type* `)`
+- `__has_trivial_copy(`*型*`)`
 
    **`true`** 型に自明なコンパイラで生成されたコピーコンストラクターがある場合は、を返します。
 
@@ -217,7 +218,7 @@ Microsoft C++ コンパイラでは、C++/CLI と C++/CX の拡張機能に対�
     }
     ```
 
-- `__has_trivial_destructor(` *type* `)`
+- `__has_trivial_destructor(`*型*`)`
 
    **`true`** 型に自明なコンパイラで生成されたデストラクターがある場合は、を返します。
 
@@ -232,7 +233,7 @@ Microsoft C++ コンパイラでは、C++/CLI と C++/CX の拡張機能に対�
     }
     ```
 
-- `__has_user_destructor(` *type* `)`
+- `__has_user_destructor(`*型*`)`
 
    **`true`** プラットフォームまたはネイティブ型にユーザーが宣言したデストラクターがある場合は、を返します。
 
@@ -249,7 +250,7 @@ Microsoft C++ コンパイラでは、C++/CLI と C++/CX の拡張機能に対�
     }
     ```
 
-- `__has_virtual_destructor(` *type* `)`
+- `__has_virtual_destructor(`*型*`)`
 
    **`true`** 型に仮想デストラクターがある場合は、を返します。
 
@@ -268,7 +269,7 @@ Microsoft C++ コンパイラでは、C++/CLI と C++/CX の拡張機能に対�
     }
     ```
 
-- `__is_abstract(` *type* `)`
+- `__is_abstract(`*型*`)`
 
    **`true`** 型が抽象型である場合はを返します。 ネイティブ抽象型の詳細については、「[抽象クラス](../cpp/abstract-classes-cpp.md)」を参照してください。
 
@@ -291,7 +292,7 @@ Microsoft C++ コンパイラでは、C++/CLI と C++/CX の拡張機能に対�
 
    **`true`** 最初の型が2番目の型の基本クラスであり、両方の型が同じである場合は、を返します。
 
-   `__is_base_of` はプラットフォーム型でも機能します。 たとえば、 **`true`** 最初の型が[インターフェイスクラス](interface-class-cpp-component-extensions.md)で、2番目の型がインターフェイスを実装している場合は、が返されます。
+   `__is_base_of` はプラットフォーム型でも機能します。 たとえば、 **`true`** 最初の型が [インターフェイスクラス](interface-class-cpp-component-extensions.md) で、2番目の型がインターフェイスを実装している場合は、が返されます。
 
     ```cpp
     // is_base_of.cpp
@@ -308,7 +309,7 @@ Microsoft C++ コンパイラでは、C++/CLI と C++/CX の拡張機能に対�
     }
     ```
 
-- `__is_class(` *type* `)`
+- `__is_class(`*型*`)`
 
    **`true`** 型がネイティブクラスまたは構造体である場合は、を返します。
 
@@ -340,7 +341,7 @@ Microsoft C++ コンパイラでは、C++/CLI と C++/CX の拡張機能に対�
     }
     ```
 
-- `__is_delegate(` *type* `)`
+- `__is_delegate(`*型*`)`
 
    **`true`** がデリゲートである場合は、を返し `type` ます。 デリゲートの詳細については、「[delegate (C++/CLI and C++/CX)](delegate-cpp-component-extensions.md)」を参照してください。
 
@@ -351,7 +352,7 @@ Microsoft C++ コンパイラでは、C++/CLI と C++/CX の拡張機能に対�
     }
     ```
 
-- `__is_empty(` *type* `)`
+- `__is_empty(`*型*`)`
 
    **`true`** 型にインスタンスデータメンバーがない場合は、を返します。
 
@@ -367,7 +368,7 @@ Microsoft C++ コンパイラでは、C++/CLI と C++/CX の拡張機能に対�
     }
     ```
 
-- `__is_enum(` *type* `)`
+- `__is_enum(`*型*`)`
 
    **`true`** 型がネイティブ列挙型である場合はを返します。
 
@@ -389,7 +390,7 @@ Microsoft C++ コンパイラでは、C++/CLI と C++/CX の拡張機能に対�
     }
     ```
 
-- `__is_interface_class(` *type* `)`
+- `__is_interface_class(`*型*`)`
 
    **`true`** プラットフォームインターフェイスが渡された場合は、を返します。 詳細については、「[インターフェイス クラス](interface-class-cpp-component-extensions.md)」を参照してください。
 
@@ -403,7 +404,7 @@ Microsoft C++ コンパイラでは、C++/CLI と C++/CX の拡張機能に対�
     }
     ```
 
-- `__is_pod(` *type* `)`
+- `__is_pod(`*型*`)`
 
    **`true`** 型がコンストラクターのないクラスまたは共用体、プライベートまたは保護された非静的メンバー、基底クラス、および仮想関数がない場合は、を返します。 POD 型の詳細については、C++ 標準のセクション 8.5.1/1、9/4、3.9/10 を参照してください。
 
@@ -419,7 +420,7 @@ Microsoft C++ コンパイラでは、C++/CLI と C++/CX の拡張機能に対�
     }
     ```
 
-- `__is_polymorphic(` *type* `)`
+- `__is_polymorphic(`*型*`)`
 
    **`true`** ネイティブ型に仮想関数がある場合は、を返します。
 
@@ -435,7 +436,7 @@ Microsoft C++ コンパイラでは、C++/CLI と C++/CX の拡張機能に対�
     }
     ```
 
-- `__is_ref_array(` *type* `)`
+- `__is_ref_array(`*型*`)`
 
    **`true`** プラットフォーム配列が渡された場合は、を返します。 詳細については、「[配列](arrays-cpp-component-extensions.md)」を参照してください。
 
@@ -447,7 +448,7 @@ Microsoft C++ コンパイラでは、C++/CLI と C++/CX の拡張機能に対�
     }
     ```
 
-- `__is_ref_class(` *type* `)`
+- `__is_ref_class(`*型*`)`
 
    **`true`** 参照クラスが渡された場合は、を返します。 ユーザー定義の参照型の詳細については、[クラスと構造体](classes-and-structs-cpp-component-extensions.md)に関する記事を参照してください。
 
@@ -460,7 +461,7 @@ Microsoft C++ コンパイラでは、C++/CLI と C++/CX の拡張機能に対�
     }
     ```
 
-- `__is_sealed(` *type* `)`
+- `__is_sealed(`*型*`)`
 
    **`true`** Sealed とマークされたプラットフォームまたはネイティブ型が渡された場合は、を返します。 詳細については、「[sealed](sealed-cpp-component-extensions.md)」を参照してください。
 
@@ -471,7 +472,7 @@ Microsoft C++ コンパイラでは、C++/CLI と C++/CX の拡張機能に対�
     }
     ```
 
-- `__is_simple_value_class(` *type* `)`
+- `__is_simple_value_class(`*型*`)`
 
    **`true`** ガベージコレクションヒープへの参照を含まない値型が渡された場合は、を返します。 ユーザー定義の値型の詳細については、[クラスと構造体](classes-and-structs-cpp-component-extensions.md)に関する記事を参照してください。
 
@@ -489,7 +490,7 @@ Microsoft C++ コンパイラでは、C++/CLI と C++/CX の拡張機能に対�
     }
     ```
 
-- `__is_union(` *type* `)`
+- `__is_union(`*型*`)`
 
    **`true`** 型が共用体の場合はを返します。
 
@@ -506,7 +507,7 @@ Microsoft C++ コンパイラでは、C++/CLI と C++/CX の拡張機能に対�
     }
     ```
 
-- `__is_value_class(` *type* `)`
+- `__is_value_class(`*型*`)`
 
    **`true`** 値型が渡された場合はを返します。 ユーザー定義の値型の詳細については、[クラスと構造体](classes-and-structs-cpp-component-extensions.md)に関する記事を参照してください。
 
@@ -522,9 +523,9 @@ Microsoft C++ コンパイラでは、C++/CLI と C++/CX の拡張機能に対�
 
 ### <a name="remarks"></a>解説
 
-`__has_finalizer(`*型*の `)` 特徴はサポートされていません。このプラットフォームではファイナライザーがサポートされていません。
+`__has_finalizer(`*型* の `)` 特徴はサポートされていません。このプラットフォームではファイナライザーがサポートされていません。
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 コンパイラ オプション: `/ZW`
 
@@ -534,7 +535,7 @@ Microsoft C++ コンパイラでは、C++/CLI と C++/CX の拡張機能に対�
 
 (この機能のプラットフォーム固有の解説はありません。)
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 コンパイラ オプション: `/clr`
 

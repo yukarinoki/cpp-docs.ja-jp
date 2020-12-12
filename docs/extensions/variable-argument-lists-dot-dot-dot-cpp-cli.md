@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: 可変個引数リスト (...)(C++/CLI)'
 title: 可変個引数リスト (...) (C++/CLI)
 ms.date: 10/12/2018
 ms.topic: reference
@@ -6,19 +7,19 @@ helpviewer_keywords:
 - variable argument lists
 - parameter arrays
 ms.assetid: db1a27f4-02a8-4318-8690-1f2893f52b38
-ms.openlocfilehash: 8ea4d71bf9a22fc96c794a92ba43bed6548cf5d1
-ms.sourcegitcommit: 89d9e1cb08fa872483d1cde98bc2a7c870e505e9
+ms.openlocfilehash: fec05a2ce397a0991a4bfd0a5aeb6a8b16d986ef
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "82032305"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97176848"
 ---
 # <a name="variable-argument-lists--ccli"></a>可変個引数リスト (...) (C++/CLI)
 
 この例では、C++/CLI で `...` 構文を使って可変個の引数を持つ関数を実装する方法を示します。
 
 > [!NOTE]
-> これは C++/CLI に関するトピックです。 ISO 標準 C++ での 使用については、`...`[後置式](../cpp/postfix-expressions.md)の[省略記号と可変](../cpp/ellipses-and-variadic-templates.md)テンプレート、省略記号と既定の引数を参照してください。
+> これは C++/CLI に関するトピックです。 ISO 標準 C++ でのの使用の詳細については `...` 、[後置式](../cpp/postfix-expressions.md)の「[省略記号と可変個引数のテンプレート](../cpp/ellipses-and-variadic-templates.md)」および「省略記号と既定の引数」を参照してください。
 
 `...` を使用するパラメーターは、パラメーター リストの最後のパラメーターにする必要があります。
 

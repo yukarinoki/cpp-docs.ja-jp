@@ -1,4 +1,5 @@
 ---
+description: 詳細については、.NET および UWP 用のコンポーネント拡張に関するページを参照してください。
 title: .NET および UWP 用のコンポーネントの拡張機能
 ms.date: 10/12/2018
 ms.topic: overview
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - keywords [C++]
 - Managed Extensions for C++, replacement syntax
 ms.assetid: 1e400ee6-3ac9-4910-a608-9d3d5993e423
-ms.openlocfilehash: 887fa14153e728735937604d531782a9ae7535bb
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 5ba82479db4229db5f6b962955641f75e3b42e00
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91509714"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97176913"
 ---
 # <a name="component-extensions-for-net-and-uwp"></a>.NET および UWP 用のコンポーネントの拡張機能
 

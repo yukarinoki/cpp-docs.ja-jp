@@ -1,15 +1,16 @@
 ---
+description: '詳細については、「方法: デリゲートを定義および使用する (C++/CLI)」を参照してください。'
 title: '方法: デリゲートを定義および使用する (C++/CLI)'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - delegates
 ms.assetid: 1cdf3420-89c1-47c0-b796-aa984020e0f8
-ms.openlocfilehash: 495ceea6afb222d13953b3a25b7a1c836b299de6
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 4229af2015db3a9a77722e9e4cc24b80aa05a49b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87216402"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97175756"
 ---
 # <a name="how-to-define-and-use-delegates-ccli"></a>方法: デリゲートを定義および使用する (C++/CLI)
 
@@ -263,7 +264,7 @@ hello
 
 バインドされていないデリゲートを使用して、デリゲートが呼び出されたときに呼び出す関数を持つ型のインスタンスを渡すことができます。
 
-バインドされていないデリゲートは[、for each](../dotnet/for-each-in.md)をキーワードで使用してコレクション内のオブジェクトを反復処理し、各インスタンスでメンバー関数を呼び出す必要がある場合に特に便利です。
+バインドされていないデリゲートは [、for each](../dotnet/for-each-in.md) をキーワードで使用してコレクション内のオブジェクトを反復処理し、各インスタンスでメンバー関数を呼び出す必要がある場合に特に便利です。
 
 バインドされたデリゲートとバインドされていないデリゲートを宣言、インスタンス化、および呼び出す方法を次に示します。
 
@@ -351,7 +352,7 @@ int main() {
 7
 ```
 
-次のサンプルでは、バインドされていないデリゲートと[の for each](../dotnet/for-each-in.md)をキーワードで使用して、コレクション内のオブジェクトを反復処理し、各インスタンスでメンバー関数を呼び出す方法を示します。
+次のサンプルでは、バインドされていないデリゲートと [の for each](../dotnet/for-each-in.md) をキーワードで使用して、コレクション内のオブジェクトを反復処理し、各インスタンスでメンバー関数を呼び出す方法を示します。
 
 ```cpp
 // unbound_delegates_2.cpp

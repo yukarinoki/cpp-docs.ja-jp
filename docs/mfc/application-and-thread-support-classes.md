@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「アプリケーションとスレッドのサポートクラス」を参照してください。
 title: アプリケーションおよびスレッド サポート クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - synchronization classes [MFC], multithreading
 - application support classes [MFC]
 ms.assetid: 3c1d14fd-c35c-48f1-86ce-1e0f9a32c36d
-ms.openlocfilehash: 7e64cc50a121f457b7e32e0ed549db2fa9950843
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 89ab6e324a777c272dcbcfabc746c03cb6731589
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84619448"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97176744"
 ---
 # <a name="application-and-thread-support-classes"></a>アプリケーションおよびスレッド サポート クラス
 
@@ -24,7 +25,7 @@ ms.locfileid: "84619448"
 
 MFC (Microsoft Foundation Class) ライブラリでは、アプリケーション内での複数のスレッドの実行がサポートされています。 すべてのアプリケーションには、少なくとも1つのスレッドが必要です。オブジェクトによって使用されるスレッド `CWinApp` は、このプライマリスレッドです。
 
-`CWinThread`オペレーティングシステムのスレッド処理機能の一部をカプセル化します。 複数のスレッドを簡単に使用できるようにするために、MFC には、Win32 同期オブジェクトに C++ インターフェイスを提供する同期オブジェクトクラスも用意されています。
+`CWinThread` オペレーティングシステムのスレッド処理機能の一部をカプセル化します。 複数のスレッドを簡単に使用できるようにするために、MFC には、Win32 同期オブジェクトに C++ インターフェイスを提供する同期オブジェクトクラスも用意されています。
 
 ## <a name="application-and-thread-classes"></a>アプリケーションクラスとスレッドクラス
 

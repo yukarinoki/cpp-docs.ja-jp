@@ -1,4 +1,5 @@
 ---
+description: '詳細については、Platform::D etails:: Heapを Trackinglevel 列挙体を参照してください。'
 title: Platform::Details::HeapAllocationTrackingLevel 列挙型
 ms.date: 12/30/2016
 ms.topic: reference
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::Details::HeapAllocationTrackingLevel Enumeration
 ms.assetid: dc341bc0-b47b-4eb2-9445-fbaf788e7b1a
-ms.openlocfilehash: 2f79d823771410cc3d32a9f758442f2c98656419
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1aecd6646b37a0bc876e6e32c5c4940f8047ae89
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62388204"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97175925"
 ---
 # <a name="platformdetailsheapallocationtrackinglevel-enumeration"></a>Platform::Details::HeapAllocationTrackingLevel 列挙型
 
@@ -24,7 +25,7 @@ ms.locfileid: "62388204"
 enumm class HeapAllocationTrackingLevel;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 この列挙型は、ブラウザーで検査できるため、この列挙型は完全を期すためだけに提供されています。
 
@@ -32,12 +33,12 @@ enumm class HeapAllocationTrackingLevel;
 
 `Platform`
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
-**メタデータ:** platform.winmd
+**メタデータ:** platform. winmd
 
 **名前空間:** Platform::Details
 
 ## <a name="see-also"></a>関連項目
 
-[プラットフォーム Namespace](platform-namespace-c-cx.md)
+[Platform 名前空間](platform-namespace-c-cx.md)

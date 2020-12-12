@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「コンパイラエラー C2378」を参照してください。
 title: コンパイラ エラー C2378
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2378
 ms.assetid: 507a91c6-ca72-48df-b3a4-2cf931c86806
-ms.openlocfilehash: c72a46bbc5778bf95ddc49426f97df0320b22a30
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 2a608cf2aa031da26356ec1b2643fc033ff9ddf5
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87218235"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97174729"
 ---
 # <a name="compiler-error-c2378"></a>コンパイラ エラー C2378
 

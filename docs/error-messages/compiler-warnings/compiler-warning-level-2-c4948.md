@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: コンパイラの警告 (レベル 2) C4948'
 title: コンパイラの警告 (レベル 2) C4948
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,17 +7,17 @@ f1_keywords:
 helpviewer_keywords:
 - C4948
 ms.assetid: d006cb17-754a-4c70-ba7f-c3200e2cd8fa
-ms.openlocfilehash: f5d701a621e0ac1439ef718ab2f8679dc46e5ea6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e99ee3989f536aa48d601561e0e6dd610f63958c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62402386"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97173429"
 ---
 # <a name="compiler-warning-level-2-c4948"></a>コンパイラの警告 (レベル 2) C4948
 
-'accessor' の戻り値の型が、対応する setter の最後のパラメーターの型と一致しません
+' accessor ' の戻り値の型が、対応する setter の最後のパラメーターの型と一致しません
 
-どのようなデータ型が取得されると、インデックス付きプロパティの設定の不一致が見つかりました。
+コンパイラは、インデックス付きプロパティに対して取得および設定されるデータ型が一致しないことを検出しました。
 
-C4948 は古い形式のコンパイラ オプションを使用して到達のみ **/clr:oldSyntax**します。
+C4948 は、互換性のために残されているコンパイラオプション **/clr: oldSyntax** を使用してのみ到達可能です。

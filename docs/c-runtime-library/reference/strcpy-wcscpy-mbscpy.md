@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「strcpy、wcscpy、_mbscpy」を参照してください。
 title: strcpy、wcscpy、_mbscpy
 ms.date: 4/2/2020
 api_name:
@@ -43,19 +44,19 @@ helpviewer_keywords:
 - _ftcscpy function
 - _mbscpy function
 ms.assetid: f97a4f81-e9ee-4f15-888a-0fa5d7094c5a
-ms.openlocfilehash: cb63dfc9ee817458393b7b544d04683b0d17918e
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 8417fa8cf473552dcc509272a2ce660b4be7a68d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82915265"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97176185"
 ---
 # <a name="strcpy-wcscpy-_mbscpy"></a>strcpy、wcscpy、_mbscpy
 
 文字列をコピーします。 これらの関数にはセキュリティが強化されたバージョンがあります。「[strcpy_s、wcscpy_s、_mbscpy_s](strcpy-s-wcscpy-s-mbscpy-s.md)」をご覧ください。
 
 > [!IMPORTANT]
-> **_mbscpy**は、Windows ランタイムで実行されるアプリケーションでは使用できません。 詳細については、「[ユニバーサル Windows プラットフォーム アプリでサポートされていない CRT 関数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)」を参照してください。
+> **_mbscpy** は、Windows ランタイムで実行されるアプリケーションでは使用できません。 詳細については、「[ユニバーサル Windows プラットフォーム アプリでサポートされていない CRT 関数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)」を参照してください。
 
 ## <a name="syntax"></a>構文
 
@@ -103,12 +104,12 @@ NULL で終わる元の文字列。
 
 ## <a name="remarks"></a>解説
 
-**Strcpy**関数は、 *strsource*(終端の null 文字を含む) を*strsource*によって指定された場所にコピーします。 コピー元とコピー先の文字列が重なり合っている場合、 **strcpy**の動作は未定義です。
+**Strcpy** 関数は、 *strsource*(終端の null 文字を含む) を *strsource* によって指定された場所にコピーします。 コピー元とコピー先の文字列が重なり合っている場合、 **strcpy** の動作は未定義です。
 
 > [!IMPORTANT]
-> **Strcpy**は、 *strdestination*をコピーする前に、 *strdestination*に十分な領域があるかどうかをチェックしないため、バッファーオーバーランの可能性があります。 したがって、代わりに [strcpy_s](strcpy-s-wcscpy-s-mbscpy-s.md) の使用をお勧めします。
+> **Strcpy** は、 *strdestination* をコピーする前に、 *strdestination* に十分な領域があるかどうかをチェックしないため、バッファーオーバーランの可能性があります。 したがって、代わりに [strcpy_s](strcpy-s-wcscpy-s-mbscpy-s.md) の使用をお勧めします。
 
-**wcscpy**と **_mbscpy**はそれぞれ、 **strcpy**のワイド文字バージョンとマルチバイト文字バージョンです。 **Wcscpy**の引数と戻り値はワイド文字列です。これらの **_mbscpy**はマルチバイト文字列です。 それ以外では、これらの関数の動作は同じです。
+**wcscpy** と **_mbscpy** はそれぞれ、 **strcpy** のワイド文字バージョンとマルチバイト文字バージョンです。 **Wcscpy** の引数と戻り値はワイド文字列です。これらの **_mbscpy** はマルチバイト文字列です。 それ以外では、これらの関数の動作は同じです。
 
 C++ では、これらの関数にテンプレートのオーバーロードがあります。このオーバーロードは、これらの関数に対応するセキュリティで保護された新しい関数を呼び出します。 詳細については、「[セキュリティ保護されたテンプレート オーバーロード](../../c-runtime-library/secure-template-overloads.md)」を参照してください。
 
@@ -122,7 +123,7 @@ C++ では、これらの関数にテンプレートのオーバーロードが�
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**strcpy**|\<string.h>|
 |**wcscpy**|\<string.h> または \<wchar.h>|

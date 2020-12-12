@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: Platform:: Collections:: VectorViewIterator クラス'
 title: Platform::Collections::VectorViewIterator クラス
 ms.date: 03/27/2019
 ms.topic: reference
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - VectorViewIterator Class
 ms.assetid: be3aa1ae-e6ba-4a06-8d6b-86d8128026f7
-ms.openlocfilehash: 3fed25b975eefe33f9eb7014ca91a52ba419c936
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: f10d6c31e60c4f8deac2ba924ec5f9de6faec30c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87211568"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97176133"
 ---
 # <a name="platformcollectionsvectorviewiterator-class"></a>Platform::Collections::VectorViewIterator クラス
 
@@ -74,13 +75,13 @@ VectorViewIterator テンプレート クラスの型名。
 
 `VectorViewIterator`
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 **ヘッダー:** collection.h
 
 **名前空間:** Platform::Collections
 
-## <a name="vectorviewiteratoroperator-gt-operator"></a><a name="operator-arrow"></a>VectorViewIterator:: operator- &gt; 演算子
+## <a name="vectorviewiteratoroperator-gt-operator"></a><a name="operator-arrow"></a> VectorViewIterator:: operator- &gt; 演算子
 
 現在の VectorViewIterator により参照される要素のアドレスを取得します。
 
@@ -96,7 +97,7 @@ Detail::ArrowProxy<T> operator->() const;
 
 戻り値の型は、この演算子の実装に必要な、指定されていない内部型です。
 
-## <a name="vectorviewiteratoroperator---operator"></a><a name="operator-decrement"></a>VectorViewIterator:: operator--演算子
+## <a name="vectorviewiteratoroperator---operator"></a><a name="operator-decrement"></a> VectorViewIterator:: operator--演算子
 
 現在の VectorViewIterator をデクリメントします。
 
@@ -117,7 +118,7 @@ VectorViewIterator operator--(int);
 
 2 番目の構文は、現在の VectorViewIterator の後置デクリメントを実行します。 **`int`** 2 番目の構文の型は、実際の整数オペランドではなく、デクリメント後の演算を示します。
 
-## <a name="vectorviewiteratoroperator-operator"></a><a name="operator-dereference"></a>VectorViewIterator:: operator \* 演算子
+## <a name="vectorviewiteratoroperator-operator"></a><a name="operator-dereference"></a> VectorViewIterator:: operator \* 演算子
 
 現在の VectorViewIterator により指定された要素への参照を取得します。
 
@@ -131,7 +132,7 @@ reference operator*() const;
 
 現在の VectorViewIterator により指定された要素。
 
-## <a name="vectorviewiteratoroperator-operator"></a><a name="operator-equality"></a>VectorViewIterator:: operator = = 演算子
+## <a name="vectorviewiteratoroperator-operator"></a><a name="operator-equality"></a> VectorViewIterator:: operator = = 演算子
 
 現在の VectorViewIterator が、指定された VectorViewIterator と等しいかどうかを示します。
 
@@ -148,9 +149,9 @@ bool operator==(const VectorViewIterator& other) const;
 
 ### <a name="return-value"></a>戻り値
 
-**`true`** 現在の `VectorViewIterator` が*他の*と等しい場合は。それ以外の場合は **`false`** 。
+**`true`** 現在の `VectorViewIterator` が *他の* と等しい場合は。それ以外の場合は **`false`** 。
 
-## <a name="vectorviewiteratoroperatorgt-operator"></a><a name="operator-greater-than"></a>VectorViewIterator:: operator &gt; 演算子
+## <a name="vectorviewiteratoroperatorgt-operator"></a><a name="operator-greater-than"></a> VectorViewIterator:: operator &gt; 演算子
 
 現在の VectorViewIterator が、指定された VectorViewIterator より大きいかどうかを示します。
 
@@ -168,9 +169,9 @@ bool operator>(const VectorViewIterator& other) const;
 
 ### <a name="return-value"></a>戻り値
 
-**`true`** 現在の VectorViewIterator が*other*より大きい場合は。それ以外の場合は **`false`** 。
+**`true`** 現在の VectorViewIterator が *other* より大きい場合は。それ以外の場合は **`false`** 。
 
-## <a name="vectorviewiteratoroperatorgt-operator"></a><a name="operator-greater-than-or-equals"></a>VectorViewIterator:: operator &gt; = 演算子
+## <a name="vectorviewiteratoroperatorgt-operator"></a><a name="operator-greater-than-or-equals"></a> VectorViewIterator:: operator &gt; = 演算子
 
 現在の `VectorViewIterator` が、指定したと等しいかそれより大きいかどうかを示し `VectorViewIterator` ます。
 
@@ -188,9 +189,9 @@ bool operator>=(const VectorViewIterator& other) const;
 
 ### <a name="return-value"></a>戻り値
 
-**`true`** 現在の `VectorViewIterator` が*他の*より大きいか等しい場合は。それ以外の場合は **`false`** 。
+**`true`** 現在の `VectorViewIterator` が *他の* より大きいか等しい場合は。それ以外の場合は **`false`** 。
 
-## <a name="vectorviewiteratoroperator-operator"></a><a name="operator-increment"></a>VectorViewIterator:: operator + + 演算子
+## <a name="vectorviewiteratoroperator-operator"></a><a name="operator-increment"></a> VectorViewIterator:: operator + + 演算子
 
 現在の VectorViewIterator をインクリメントします。
 
@@ -212,7 +213,7 @@ VectorViewIterator operator++(int);
 
 2 番目の構文は、現在の VectorViewIterator の後置インクリメントを実行します。 **`int`** 2 番目の構文の型は、実際の整数オペランドではなく、後置インクリメント演算を示します。
 
-## <a name="vectorviewiteratoroperator-operator"></a><a name="operator-inequality"></a>VectorViewIterator:: operator! = 演算子
+## <a name="vectorviewiteratoroperator-operator"></a><a name="operator-inequality"></a> VectorViewIterator:: operator! = 演算子
 
 現在の VectorViewIterator が、指定された VectorViewIterator と等しくないかどうかを示します。
 
@@ -229,9 +230,9 @@ bool operator!=(const VectorViewIterator& other) const;
 
 ### <a name="return-value"></a>戻り値
 
-**`true`** 現在の `VectorViewIterator` が*他の*と等しくない場合は。それ以外の場合は **`false`** 。
+**`true`** 現在の `VectorViewIterator` が *他の* と等しくない場合は。それ以外の場合は **`false`** 。
 
-## <a name="vectorviewiteratoroperatorlt-operator"></a><a name="operator-less-than"></a>VectorViewIterator:: operator &lt; 演算子
+## <a name="vectorviewiteratoroperatorlt-operator"></a><a name="operator-less-than"></a> VectorViewIterator:: operator &lt; 演算子
 
 現在の VectorIterator が、指定された VectorIterator より小さいかどうかを示します。
 
@@ -248,9 +249,9 @@ bool operator<(const VectorViewIterator& other) const;
 
 ### <a name="return-value"></a>戻り値
 
-**`true`** 現在の `VectorIterator` が*他の*値より小さい場合は。それ以外の場合は **`false`** 。
+**`true`** 現在の `VectorIterator` が *他の* 値より小さい場合は。それ以外の場合は **`false`** 。
 
-## <a name="vectorviewiteratoroperatorlt-operator"></a><a name="operator-less-than-or-equals"></a>VectorViewIterator:: operator &lt; = 演算子
+## <a name="vectorviewiteratoroperatorlt-operator"></a><a name="operator-less-than-or-equals"></a> VectorViewIterator:: operator &lt; = 演算子
 
 現在のが、指定したの値以下かどうかを示し `VectorIterator` `VectorIterator` ます。
 
@@ -268,9 +269,9 @@ bool operator<=(const VectorViewIterator& other) const;
 
 ### <a name="return-value"></a>戻り値
 
-**`true`** 現在の `VectorIterator` が*他の*の値以下である場合は。それ以外の場合は **`false`** 。
+**`true`** 現在の `VectorIterator` が *他の* の値以下である場合は。それ以外の場合は **`false`** 。
 
-## <a name="vectorviewiteratoroperator--operator"></a><a name="operator-minus"></a>VectorViewIterator:: operator-演算子
+## <a name="vectorviewiteratoroperator--operator"></a><a name="operator-minus"></a> VectorViewIterator:: operator-演算子
 
 現在の反復子から指定した数の要素を減算して新しい反復子を生成するか、現在の反復子から指定した反復子を減算して反復子間の要素数を生成します。
 
@@ -295,7 +296,7 @@ difference_type operator-(const VectorViewIterator& other) const;
 
 最初の演算子構文は、現在の VectorViewIterator より `n` 要素少ない VectorViewIterator オブジェクトを返します。 2 番目の演算子構文は、現在の VectorViewIterator と `other` VectorViewIterator の間の要素の数を返します。
 
-## <a name="vectorviewiteratoroperator-operator"></a><a name="operator-plus-equals"></a>VectorViewIterator:: operator + = 演算子
+## <a name="vectorviewiteratoroperator-operator"></a><a name="operator-plus-equals"></a> VectorViewIterator:: operator + = 演算子
 
 指定された転置数だけ現在の VectorViewIterator をインクリメントします。
 
@@ -314,7 +315,7 @@ VectorViewIterator& operator+=(difference_type n);
 
 更新された VectorViewIterator。
 
-## <a name="vectorviewiteratoroperator-operator"></a><a name="operator-plus"></a>VectorViewIterator:: operator + 演算子
+## <a name="vectorviewiteratoroperator-operator"></a><a name="operator-plus"></a> VectorViewIterator:: operator + 演算子
 
 指定された VectorViewIterator から指定された転置にある要素を参照する VectorViewIterator を返します。
 
@@ -347,7 +348,7 @@ inline VectorViewIterator<T> operator+
 
 2 番目の構文では、`i` パラメーターの先頭から指定された転置にある要素を参照する VectorViewIterator。
 
-## <a name="vectorviewiteratoroperator--operator"></a><a name="operator-minus-assign"></a>VectorViewIterator:: operator-= 演算子
+## <a name="vectorviewiteratoroperator--operator"></a><a name="operator-minus-assign"></a> VectorViewIterator:: operator-= 演算子
 
 指定されたディスプレイスメントだけ現在の VectorIterator をデクリメントします。
 
@@ -366,7 +367,7 @@ VectorViewIterator& operator-=(difference_type n);
 
 更新された VectorIterator。
 
-## <a name="vectorviewiteratoroperator"></a><a name="operator-at"></a>VectorViewIterator:: operator\[\]
+## <a name="vectorviewiteratoroperator"></a><a name="operator-at"></a> VectorViewIterator:: operator\[\]
 
 現在の VectorViewIterator から指定数だけ転置された要素への参照を取得します。
 
@@ -385,7 +386,7 @@ reference operator[](difference_type n) const;
 
 現在の VectorViewIterator から `n` 要素だけ転置された要素。
 
-## <a name="vectorviewiteratorvectorviewiterator-constructor"></a><a name="ctor"></a>VectorViewIterator:: VectorViewIterator コンストラクター
+## <a name="vectorviewiteratorvectorviewiterator-constructor"></a><a name="ctor"></a> VectorViewIterator:: VectorViewIterator コンストラクター
 
 VectorViewIterator クラスの新しいインスタンスを初期化します。
 
@@ -402,7 +403,7 @@ explicit VectorViewIterator(
 
 ### <a name="parameters"></a>パラメーター
 
-*画像*<br/>
+*v*<br/>
 IVectorView \<T> オブジェクトです。
 
 ### <a name="remarks"></a>解説

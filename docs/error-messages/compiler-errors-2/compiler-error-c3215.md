@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「コンパイラエラー C3215」を参照してください。
 title: コンパイラ エラー C3215
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3215
 ms.assetid: d0d16007-8885-42e0-b086-2d3a61f348c5
-ms.openlocfilehash: 59d9eb0c28269e95b906042126cc3a9f25bba635
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 1291f480e4f01502db4232585f7e7786fd637072
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74751912"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97173741"
 ---
 # <a name="compiler-error-c3215"></a>コンパイラ エラー C3215
 
@@ -33,7 +34,7 @@ where T : A,A
 ref class C {};   // C3215
 ```
 
-解決方法:
+考えられる解決策:
 
 ```cpp
 // C3215b.cpp

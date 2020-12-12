@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「コンパイラエラー C2753」を参照してください。
 title: コンパイラエラー C2753
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2753
 ms.assetid: 92bfeeac-524a-4a8e-9a4f-fb8269055826
-ms.openlocfilehash: ea2901c998ac1a44ad142779e7ce48bfffff66c2
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: d7888086f81f26092d41be440f75ef60400229ee
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80202154"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97174404"
 ---
 # <a name="compiler-error-c2753"></a>コンパイラエラー C2753
 

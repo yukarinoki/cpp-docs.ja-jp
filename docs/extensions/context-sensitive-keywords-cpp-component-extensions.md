@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: Context-Sensitive キーワード (C++/CLI および C++/CX)'
 title: 状況依存キーワード (C++/CLI および C++/CX)
 ms.date: 10/12/2018
 ms.topic: reference
@@ -7,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - context-sensitive keywords
 ms.assetid: e33da089-f434-44e9-8cce-4668d05a8939
-ms.openlocfilehash: 82bf4c3f0deed788b7b1e50f1d8d82e63dc27f6f
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 7c005b1a6149f010b9729db5459fa3951bc50521
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87219743"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97176861"
 ---
 # <a name="context-sensitive-keywords--ccli-and-ccx"></a>状況依存キーワード (C++/CLI および C++/CX)
 
-*状況依存キーワード*は、特定のコンテキストでのみ認識される言語要素です。 特定のコンテキスト以外では、状況依存のキーワードをユーザー定義の記号として使用することができます。
+*状況依存キーワード* は、特定のコンテキストでのみ認識される言語要素です。 特定のコンテキスト以外では、状況依存のキーワードをユーザー定義の記号として使用することができます。
 
 ## <a name="all-runtimes"></a>すべてのランタイム
 
@@ -38,7 +39,7 @@ ms.locfileid: "87219743"
 
 - `internal`
 
-- [リテラル](literal-cpp-component-extensions.md)
+- [literal](literal-cpp-component-extensions.md)
 
 - [override](override-cpp-component-extensions.md)
 
@@ -56,7 +57,7 @@ ms.locfileid: "87219743"
 
 (この機能のプラットフォーム固有の解説はありません。)
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 コンパイラ オプション: `/ZW`
 
@@ -66,7 +67,7 @@ ms.locfileid: "87219743"
 
 (この機能のプラットフォーム固有の解説はありません。)
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 コンパイラ オプション: `/clr`
 

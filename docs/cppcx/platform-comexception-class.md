@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: Platform:: COMException クラス'
 title: Platform::COMException クラス
 ms.date: 12/30/2016
 ms.topic: reference
@@ -9,12 +10,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::COMException Class
 ms.assetid: 44fda4e5-574f-4d12-ab5f-4ff3f277448d
-ms.openlocfilehash: 1d0d36ec16303d6bdaa5f2344cd5d48fba03c8bf
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 71f6c3fa6d29a884627f2bf5aae07fbc0349ec9b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79444292"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97176120"
 ---
 # <a name="platformcomexception-class"></a>Platform::COMException クラス
 
@@ -42,7 +43,7 @@ COMException には次の種類のメンバーもあります。
 
 COMException クラスは、 [Platform::Object Class](../cppcx/platform-object-class.md)から Equals()、Finalize()、GetHashCode()、GetType()、MemberwiseClose()、および ToString() メソッドを継承します。
 
-**Properties**
+**プロパティ**
 
 COMException クラスには、次のプロパティがあります。
 
@@ -55,7 +56,7 @@ COMException クラスには、次のプロパティがあります。
 
 次の定義済みの例外は COMException から派生します。 これらは、その名前、コンストラクターの名前、および基になる HRESULT 値だけが COMException とは異なります。
 
-|Name|基になる HRESULT|説明|
+|名前|基になる HRESULT|説明|
 |----------|------------------------|-----------------|
 |COMException|*ユーザー定義の hresult*|COM メソッドの呼び出しから認識されない HRESULT が返されるとスローされます。|
 |AccessDeniedException|E_ACCESSDENIED|リソースや機能へのアクセスが拒否されるとスローされます。|
@@ -79,9 +80,9 @@ COMException クラスには、次のプロパティがあります。
 
 **名前空間:** Platform
 
-**メタデータ:** platform.winmd
+**メタデータ:** platform. winmd
 
-## <a name="ctor"></a>COMException:: COMException コンストラクター
+## <a name="comexceptioncomexception-constructor"></a><a name="ctor"></a> COMException:: COMException コンストラクター
 
 COMException クラスの新しいインスタンスを初期化します。
 
@@ -96,7 +97,7 @@ COMException( int hresult )
 *hresult*<br/>
 例外で表されるエラー HRESULT。
 
-## <a name="hresult"></a>COMException:: HResult プロパティ
+## <a name="comexceptionhresult-property"></a><a name="hresult"></a> COMException:: HResult プロパティ
 
 例外に対応する HRESULT。
 
@@ -107,15 +108,15 @@ public:
     property int HResult { int get();}
 ```
 
-## <a name="property-value"></a>プロパティの値
+## <a name="property-value"></a>プロパティ値
 
 エラーを指定する HRESULT 値。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 HRESULT 値を解釈する方法の詳細については、「 [COM エラーコードの構造](/windows/win32/com/structure-of-com-error-codes)」を参照してください。
 
-## <a name="message"></a>COMException:: Message プロパティ
+## <a name="comexceptionmessage-property"></a><a name="message"></a> COMException:: Message プロパティ
 
 例外を説明するメッセージ。
 
@@ -125,10 +126,10 @@ HRESULT 値を解釈する方法の詳細については、「 [COM エラーコ
 public:property String^ Message {    String^ get();}
 ```
 
-### <a name="property-value"></a>プロパティの値
+### <a name="property-value"></a>プロパティ値
 
 例外の説明。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [プラットフォーム名前空間](../cppcx/platform-namespace-c-cx.md)

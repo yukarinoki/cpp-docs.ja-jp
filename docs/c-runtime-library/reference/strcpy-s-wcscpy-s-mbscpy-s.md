@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: strcpy_s、wcscpy_s、_mbscpy_s、_mbscpy_s_l'
 title: strcpy_s、wcscpy_s、_mbscpy_s、_mbscpy_s_l
 ms.date: 5/28/2020
 api_name:
@@ -45,19 +46,19 @@ helpviewer_keywords:
 - tcscpy_s function
 - wcscpy_s function
 ms.assetid: 611326f3-7929-4a5d-a465-a4683af3b053
-ms.openlocfilehash: b2957490dbf045b9a3258a72b6bda0aaf1a38c0f
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: a20f16971ccc7d1f85fe92c5d2d14386e7e55022
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87229299"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97176198"
 ---
 # <a name="strcpy_s-wcscpy_s-_mbscpy_s-_mbscpy_s_l"></a>strcpy_s、wcscpy_s、_mbscpy_s、_mbscpy_s_l
 
 文字列をコピーします。 これらのバージョンの [strcpy、wcscpy、_mbscpy](strcpy-wcscpy-mbscpy.md) は、「[CRT のセキュリティ機能](../../c-runtime-library/security-features-in-the-crt.md)」の説明にあるとおり、セキュリティが強化されました。
 
 > [!IMPORTANT]
-> **_mbscpy_s**と **_mbscpy_s_l**は、Windows ランタイムで実行されるアプリケーションでは使用できません。 詳細については、「[ユニバーサル Windows プラットフォーム アプリでサポートされていない CRT 関数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)」を参照してください。
+> **_mbscpy_s** と **_mbscpy_s_l** は、Windows ランタイムで実行されるアプリケーションでは使用できません。 詳細については、「[ユニバーサル Windows プラットフォーム アプリでサポートされていない CRT 関数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)」を参照してください。
 
 ## <a name="syntax"></a>構文
 
@@ -116,7 +117,7 @@ errno_t _mbscpy_s_l(
 追加先の文字列バッファーの場所。
 
 *dest_size*<br/>
-ナロー関数とマルチバイト関数の場合は、ターゲット文字列バッファーのサイズ **`char`** (単位)、 **`wchar_t`** ワイド関数の場合は単位です。 この値は、0より大きく、 **RSIZE_MAX**以上である必要があります。 このサイズのアカウントで、文字列の後に続くが使用されていることを確認し `NULL` ます。
+ナロー関数とマルチバイト関数の場合は、ターゲット文字列バッファーのサイズ **`char`** (単位)、 **`wchar_t`** ワイド関数の場合は単位です。 この値は、0より大きく、 **RSIZE_MAX** 以上である必要があります。 このサイズのアカウントで、文字列の後に続くが使用されていることを確認し `NULL` ます。
 
 *src*<br/>
 null で終わる元の文字列バッファー。
@@ -130,7 +131,7 @@ null で終わる元の文字列バッファー。
 
 ### <a name="error-conditions"></a>エラー条件
 
-|*先*|*dest_size*|*src*|戻り値|*Dest*の内容|
+|*先*|*dest_size*|*src*|戻り値|*Dest* の内容|
 |----------------------|------------------------|-----------------|------------------|----------------------------------|
 |**NULL**|any|any|**EINVAL**|変更されない|
 |any|any|**NULL**|**EINVAL**|*dest*[0] が0に設定される|
@@ -138,11 +139,11 @@ null で終わる元の文字列バッファー。
 
 ## <a name="remarks"></a>解説
 
-**Strcpy_s**関数は、 *src*のアドレス (終端の null 文字を含む) の内容を*dest*によって指定された場所にコピーします。 コピー先の文字列には、コピー元の文字列とその終端の NULL 文字を保持できるサイズが必要です。 コピー元とコピー先の文字列が重なり合っている場合、 **strcpy_s**の動作は定義されていません。
+**Strcpy_s** 関数は、 *src* のアドレス (終端の null 文字を含む) の内容を *dest* によって指定された場所にコピーします。 コピー先の文字列には、コピー元の文字列とその終端の NULL 文字を保持できるサイズが必要です。 コピー元とコピー先の文字列が重なり合っている場合、 **strcpy_s** の動作は定義されていません。
 
-**wcscpy_s**は**strcpy_s**のワイド文字バージョンで、 **_mbscpy_s**はマルチバイト文字のバージョンです。 **Wcscpy_s**の引数はワイド文字列です。これらの **_mbscpy_s**と **_mbscpy_s_l**はマルチバイト文字列です。 それ以外では、これらの関数の動作は同じです。 **_mbscpy_s_l**は、現在のロケールの代わりに渡されたロケールパラメーターを使用する点を除いて、 **_mbscpy_s**と同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
+**wcscpy_s** は **strcpy_s** のワイド文字バージョンで、 **_mbscpy_s** はマルチバイト文字のバージョンです。 **Wcscpy_s** の引数はワイド文字列です。これらの **_mbscpy_s** と **_mbscpy_s_l** はマルチバイト文字列です。 それ以外では、これらの関数の動作は同じです。 **_mbscpy_s_l** は、現在のロケールの代わりに渡されたロケールパラメーターを使用する点を除いて、 **_mbscpy_s** と同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
 
-*Dest*または*src*が null ポインターの場合、または対象の文字列サイズ*dest_size*が小さすぎる場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、 *dest*または*src*が null ポインターの場合、これらの関数は**einval**を返し、 **errno**を**einval**に設定します。これにより、 **ERANGE**が返され、対象の文字列が小さすぎる場合に**errno**が**ERANGE**に設定されます。
+*Dest* または *src* が null ポインターの場合、または対象の文字列サイズ *dest_size* が小さすぎる場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、 *dest* または *src* が null ポインターの場合、これらの関数は **einval** を返し、 **errno** を **einval** に設定します。これにより、 **ERANGE** が返され、対象の文字列が小さすぎる場合に **errno** が **ERANGE** に設定されます。
 
 正常に実行されると、コピー先の文字列は常に NULL で終わります。
 

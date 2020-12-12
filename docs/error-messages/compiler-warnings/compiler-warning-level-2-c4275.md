@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: コンパイラの警告 (レベル 2) C4275'
 title: コンパイラの警告 (レベル 2) C4275
 ms.date: 02/08/2019
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4275
 ms.assetid: 18de967a-0a44-4dbc-a2e8-fc4c067ba909
-ms.openlocfilehash: ad12c1c27006a57c8339e9dad82e4d8e1a239a6e
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 0dd212d7439b73c28a5426574b72ff8150abe93c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80161998"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97173650"
 ---
 # <a name="compiler-warning-level-2-c4275"></a>コンパイラの警告 (レベル 2) C4275
 
@@ -33,7 +34,7 @@ ms.locfileid: "80161998"
 
 仮想関数を持つクラスを定義する DLL を定義することで、クラスのエクスポートを避けることができます。また、を呼び出して、型のオブジェクトをインスタンス化および削除することもできます。  その後、型に対して仮想関数を呼び出すことができます。
 
-標準ライブラリの型から派生C++し、デバッグリリース (/MTd) をコンパイルし、コンパイラのエラーメッセージが `_Container_base`を参照する場合は、Visual で C4275 を無視できます。 **/MTd** C++
+C++ 標準ライブラリの型から派生し、デバッグリリース (**/MTd**) をコンパイルし、コンパイラのエラーメッセージが参照する場合は、Visual C++ で C4275 を無視でき `_Container_base` ます。
 
 ```cpp
 // C4275.cpp

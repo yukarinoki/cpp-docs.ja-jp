@@ -1,4 +1,5 @@
 ---
+description: 詳細については、strcspn、wcscspn、_mbscspn、_mbscspn_l に関するページを参照してください。
 title: strcspn、wcscspn、_mbscspn、_mbscspn_l
 ms.date: 4/2/2020
 api_name:
@@ -45,19 +46,19 @@ helpviewer_keywords:
 - mbscspn function
 - _tcscspn function
 ms.assetid: f73f51dd-b533-4e46-ba29-d05c553708a6
-ms.openlocfilehash: 8fb3e0fe7590dac9fc3ce107b3c1b2a5800c867b
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: a453d14541bb6e74b63d869c4d9dcc5d6d4f49e2
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82915249"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97176159"
 ---
 # <a name="strcspn-wcscspn-_mbscspn-_mbscspn_l"></a>strcspn、wcscspn、_mbscspn、_mbscspn_l
 
 文字列の中で、文字セットに含まれる文字が最初に見つかった位置のインデックスを返します。
 
 > [!IMPORTANT]
-> **_mbschr**と **_mbschr_l**は、Windows ランタイムで実行されるアプリケーションでは使用できません。 詳細については、「[ユニバーサル Windows プラットフォーム アプリでサポートされていない CRT 関数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)」を参照してください。
+> **_mbschr** と **_mbschr_l** は、Windows ランタイムで実行されるアプリケーションでは使用できません。 詳細については、「[ユニバーサル Windows プラットフォーム アプリでサポートされていない CRT 関数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)」を参照してください。
 
 ## <a name="syntax"></a>構文
 
@@ -83,7 +84,7 @@ size_t _mbscspn_l(
 
 ### <a name="parameters"></a>パラメーター
 
-*引数*<br/>
+*str*<br/>
 NULL で終わる検索対象の文字列。
 
 *strCharSet*<br/>
@@ -94,15 +95,15 @@ NULL で終わる文字セット。
 
 ## <a name="return-value"></a>戻り値
 
-これらの関数は、 *Strcharset*内の*str*の最初の文字のインデックスを返します。 *Str*内の文字が*strcharset*に含まれていない場合、戻り値は*str*の長さになります。
+これらの関数は、 *Strcharset* 内の *str* の最初の文字のインデックスを返します。 *Str* 内の文字が *strcharset* に含まれていない場合、戻り値は *str* の長さになります。
 
 エラーを示す戻り値は予約されていません。
 
 ## <a name="remarks"></a>解説
 
-**wcscspn**と **_mbscspn**は、 **strcspn**のワイド文字バージョンとマルチバイト文字バージョンです。 **Wcscspn**の引数はワイド文字列です。これらの **_mbscspn**はマルチバイト文字列です。
+**wcscspn** と **_mbscspn** は、 **strcspn** のワイド文字バージョンとマルチバイト文字バージョンです。 **Wcscspn** の引数はワイド文字列です。これらの **_mbscspn** はマルチバイト文字列です。
 
-**_mbscspn**は、そのパラメーターを検証します。 *Str*または*strcharset*のいずれかが null ポインターの場合、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、この関数は0を返し、 **errno**を**EINVAL**に設定します。 **strcspn**と**wcscspn**では、パラメーターは検証されません。 それ以外では、これらの関数の動作は同じです。
+**_mbscspn** は、そのパラメーターを検証します。 *Str* または *strcharset* のいずれかが null ポインターの場合、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、この関数は0を返し、 **errno** を **EINVAL** に設定します。 **strcspn** と **wcscspn** では、パラメーターは検証されません。 それ以外では、これらの関数の動作は同じです。
 
 出力値は、ロケールの **LC_CTYPE** カテゴリの設定に影響されます。詳細については、「[setlocale](setlocale-wsetlocale.md)」を参照してください。 **_l** サフィックスが付いていないこれらの関数のバージョンでは、このロケールに依存する動作に現在のロケールを使用します。**_l** サフィックスが付いているバージョンは、渡されたロケール パラメーターを代わりに使用する点を除いて同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
 
@@ -117,7 +118,7 @@ NULL で終わる文字セット。
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**strcspn**|\<string.h>|
 |**wcscspn**|\<string.h> または \<wchar.h>|
@@ -162,8 +163,8 @@ strcspn( "", "" ) = 0
 ## <a name="see-also"></a>関連項目
 
 [文字列操作](../../c-runtime-library/string-manipulation-crt.md)<br/>
-[国](../../c-runtime-library/locale.md)<br/>
-[マルチバイト文字のシーケンスの解釈](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[ロケール](../../c-runtime-library/locale.md)<br/>
+[Multibyte-Character シーケンスの解釈](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [strncat、_strncat_l、wcsncat、_wcsncat_l、_mbsncat、_mbsncat_l](strncat-strncat-l-wcsncat-wcsncat-l-mbsncat-mbsncat-l.md)<br/>
 [strncmp、wcsncmp、_mbsncmp、_mbsncmp_l](strncmp-wcsncmp-mbsncmp-mbsncmp-l.md)<br/>
 [strncpy、_strncpy_l、wcsncpy、_wcsncpy_l、_mbsncpy、_mbsncpy_l](strncpy-strncpy-l-wcsncpy-wcsncpy-l-mbsncpy-mbsncpy-l.md)<br/>
