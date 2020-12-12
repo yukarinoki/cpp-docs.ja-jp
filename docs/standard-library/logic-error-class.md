@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: logic_error クラス'
 title: logic_error クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - logic_error class
 ms.assetid: b290d73d-94e1-4288-af86-2bb5d71f677a
-ms.openlocfilehash: b94f7f4c2482f0317e37c6f4bf3618b91a175147
-ms.sourcegitcommit: f2a135d69a2a8ef1777da60c53d58fe06980c997
+ms.openlocfilehash: b4b592d268a29a1bf1c095beb79904789d695e64
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87521188"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97277714"
 ---
 # <a name="logic_error-class"></a>logic_error クラス
 
@@ -29,7 +30,7 @@ public:
 };
 ```
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 によって返される値 `what()` は、のコピーです `message.data()` 。 詳細については、[`what`](../standard-library/exception-class.md) および [`data`](../standard-library/basic-string-class.md#data) を参照してください。
 
@@ -60,7 +61,7 @@ Caught: logic error
 Type: class std::logic_error
 ```
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:**\<stdexcept>
 

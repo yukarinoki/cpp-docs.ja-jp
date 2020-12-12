@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: logical_not 構造体'
 title: logical_not 構造体
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,14 +8,14 @@ helpviewer_keywords:
 - logical_not class
 - logical_not struct
 ms.assetid: 892db678-31da-4540-974b-17b05efc0849
-ms.openlocfilehash: 731b99faed6515268b93ec3a1a43c96796e49dd3
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: dc89a5a764d9f3182609b47c5f05eb8b3e167cec
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68246477"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97277688"
 ---
-# <a name="logicalnot-struct"></a>logical_not 構造体
+# <a name="logical_not-struct"></a>logical_not 構造体
 
 引数に対して論理否定演算 (`operator!`) を実行する定義済みの関数オブジェクト。
 
@@ -39,11 +40,11 @@ struct logical_not<void>
 
 ### <a name="parameters"></a>パラメーター
 
-*型*\
+*各種*\
 指定または推論された型のオペランドを受け取る `operator!` をサポートする任意の型。
 
-*左*\
-論理否定演算のオペランド。 特化されていないテンプレートは、型の左辺値参照引数を受け取る*型*します。 特殊化されたテンプレートはの完全転送を左辺値と右辺値参照引数の型を推論する*型*します。
+*左側*\
+論理否定演算のオペランド。 非特殊テンプレートは、type *型* の左辺値参照引数を受け取ります。 特殊化されたテンプレートは、推論された型の *型* の左辺値および右辺値参照引数の完全転送を行います。
 
 ## <a name="return-value"></a>戻り値
 

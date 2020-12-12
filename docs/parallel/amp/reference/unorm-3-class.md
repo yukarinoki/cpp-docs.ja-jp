@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: unorm_3 クラス'
 title: unorm_3 クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -72,12 +73,12 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::unorm_3::get_yz
 - amp_short_vectors/Concurrency::graphics::unorm_3::rbg
 ms.assetid: ea4e7a17-5256-464c-af28-8b01962564c0
-ms.openlocfilehash: efca9b51f44a9eb64e6e9d89cc156ab0b2df5ae5
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: b62b05487a90e273851b5c5eb7f045132353be37
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77126189"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97278000"
 ---
 # <a name="unorm_3-class"></a>unorm_3 クラス
 
@@ -93,100 +94,100 @@ class unorm_3;
 
 ### <a name="public-typedefs"></a>パブリック typedef
 
-|Name|説明|
+|名前|説明|
 |----------|-----------------|
 |`value_type`||
 
 ### <a name="public-constructors"></a>パブリック コンストラクター
 
-|Name|説明|
+|名前|説明|
 |----------|-----------------|
 |[unorm_3 コンストラクター](#ctor)|オーバーロードされます。 既定のコンストラクター。すべての要素を 0 で初期化します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
-|Name|説明|
+|名前|説明|
 |----------|-----------------|
-|unorm_3::get_x||
+|unorm_3:: get_x||
 |unorm_3:: get_xy||
-|unorm_3::get_xyz||
-|unorm_3::get_xz||
-|unorm_3::get_xzy||
-|unorm_3::get_y||
-|unorm_3::get_yx||
-|unorm_3::get_yxz||
-|unorm_3::get_yz||
+|unorm_3:: get_xyz||
+|unorm_3:: get_xz||
+|unorm_3:: get_xzy||
+|unorm_3:: get_y||
+|unorm_3:: get_yx||
+|unorm_3:: get_yxz||
+|unorm_3:: get_yz||
 |unorm_3:: get_yzx||
-|unorm_3::get_z||
-|unorm_3::get_zx||
-|unorm_3::get_zxy||
-|unorm_3::get_zy||
-|unorm_3::get_zyx||
-|Unorm_3::ref_b||
-|Unorm_3::ref_g||
+|unorm_3:: get_z||
+|unorm_3:: get_zx||
+|unorm_3:: get_zxy||
+|unorm_3:: get_zy||
+|unorm_3:: get_zyx||
+|Unorm_3:: ref_b||
+|Unorm_3:: ref_g||
 |Unorm_3:: ref_r||
 |Unorm_3:: ref_x||
 |Unorm_3:: ref_y||
 |Unorm_3:: ref_z||
-|unorm_3::set_x||
-|unorm_3::set_xy||
-|unorm_3::set_xyz||
-|unorm_3::set_xz||
-|unorm_3::set_xzy||
-|unorm_3::set_y||
-|unorm_3::set_yx||
-|unorm_3::set_yxz||
-|unorm_3::set_yz||
-|unorm_3::set_yzx||
-|unorm_3::set_z||
-|unorm_3::set_zx||
-|unorm_3::set_zxy||
-|unorm_3::set_zy||
+|unorm_3:: set_x||
+|unorm_3:: set_xy||
+|unorm_3:: set_xyz||
+|unorm_3:: set_xz||
+|unorm_3:: set_xzy||
+|unorm_3:: set_y||
+|unorm_3:: set_yx||
+|unorm_3:: set_yxz||
+|unorm_3:: set_yz||
+|unorm_3:: set_yzx||
+|unorm_3:: set_z||
+|unorm_3:: set_zx||
+|unorm_3:: set_zxy||
+|unorm_3:: set_zy||
 |unorm_3:: set_zyx||
 
 ### <a name="public-operators"></a>パブリック演算子
 
-|Name|説明|
+|名前|説明|
 |----------|-----------------|
-|unorm_3::operator--||
-|unorm_3::operator*=||
-|unorm_3::operator/=||
+|unorm_3:: operator--||
+|unorm_3:: operator * =||
+|unorm_3:: operator/=||
 |unorm_3:: operator + +||
-|unorm_3::operator+=||
-|unorm_3::operator=||
-|unorm_3::operator-=||
+|unorm_3:: operator + =||
+|unorm_3:: operator =||
+|unorm_3:: operator-=||
 
 ### <a name="public-constants"></a>パブリック定数
 
-|Name|説明|
+|名前|説明|
 |----------|-----------------|
 |[サイズ定数](#unorm_3__size)||
 
 ### <a name="public-data-members"></a>パブリック データ メンバー
 
-|Name|説明|
+|名前|説明|
 |----------|-----------------|
-|unorm_3::b||
-|unorm_3::bg||
-|unorm_3::bgr||
-|unorm_3::br||
-|unorm_3::brg||
-|unorm_3::g||
-|unorm_3::gb||
-|unorm_3::gbr||
+|unorm_3:: b||
+|unorm_3:: bg||
+|unorm_3:: bgr||
+|unorm_3:: br||
+|unorm_3:: brg||
+|unorm_3:: g||
+|unorm_3:: gb||
+|unorm_3:: gbr||
 |unorm_3:: gr||
 |unorm_3:: grb||
-|unorm_3::r||
-|unorm_3::rb||
-|unorm_3::rbg||
-|unorm_3::rg||
-|unorm_3::rgb||
+|unorm_3:: r||
+|unorm_3:: rb||
+|unorm_3:: rbg||
+|unorm_3:: rg||
+|unorm_3:: rgb||
 |unorm_3:: x||
 |unorm_3:: xy||
-|unorm_3::xyz||
+|unorm_3:: xyz||
 |unorm_3:: xz||
 |unorm_3:: xzy||
-|unorm_3::y||
+|unorm_3:: y||
 |unorm_3:: yx||
 |unorm_3:: yxz||
 |unorm_3:: yz||
@@ -201,13 +202,13 @@ class unorm_3;
 
 `unorm_3`
 
-## <a name="requirements"></a>［要件］
+## <a name="requirements"></a>要件
 
 **ヘッダー:** amp_short_vectors
 
 **名前空間:** Concurrency:: graphics
 
-## <a name="ctor"></a>unorm_3
+## <a name="unorm_3"></a><a name="ctor"></a> unorm_3
 
 既定のコンストラクター。すべての要素を 0 で初期化します。
 
@@ -277,12 +278,12 @@ explicit inline unorm_3(
 *_Other*<br/>
 の初期化に使用されるオブジェクト。
 
-## <a name="unorm_3__size"></a>幅
+## <a name="size"></a><a name="unorm_3__size"></a> 幅
 
 ```cpp
 static const int size = 3;
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [Concurrency::graphics 名前空間](concurrency-graphics-namespace.md)

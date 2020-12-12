@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: istream_iterator クラス'
 title: istream_iterator クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - std::istream_iterator [C++], istream_type
 - std::istream_iterator [C++], traits_type
 ms.assetid: fb52a8cd-7f71-48d1-b73e-4b064e2a8d16
-ms.openlocfilehash: 4ab1c6188a076b46f08b9ea171a8a945cbe1fc70
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 7247e96c68f1adcc145519fc1cca6b3401302854
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87215674"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97277909"
 ---
 # <a name="istream_iterator-class"></a>istream_iterator クラス
 
@@ -72,13 +73,13 @@ null 以外の格納されたポインターを使用して istream_iterator ク
 |[演算子->](#op_arrow)|メンバーの値 (存在する場合) を返します。|
 |[+ + 演算子](#op_add_add)|入力ストリームからインクリメントされたオブジェクトを抽出するか、オブジェクトをインクリメントする前にオブジェクトをコピーして、そのコピーを返します。|
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:**\<iterator>
 
 **名前空間:** std
 
-## <a name="istream_iteratorchar_type"></a><a name="char_type"></a>istream_iterator:: char_type
+## <a name="istream_iteratorchar_type"></a><a name="char_type"></a> istream_iterator:: char_type
 
 `istream_iterator` の文字型を提供する型。
 
@@ -126,7 +127,7 @@ int main( )
 }
 ```
 
-## <a name="istream_iteratoristream_iterator"></a><a name="istream_iterator"></a>istream_iterator:: istream_iterator
+## <a name="istream_iteratoristream_iterator"></a><a name="istream_iterator"></a> istream_iterator:: istream_iterator
 
 既定の `istream_iterator` または読み取り元の反復子のストリーム型に初期化される `istream_iterator` として、ストリームの終わり反復子を構築します。
 
@@ -143,7 +144,7 @@ istream_iterator(istream_type& _Istr);
 
 ### <a name="remarks"></a>解説
 
-最初のコンストラクターは、null ポインターを使用して入力ストリーム ポインターを初期化し、ストリームの終わり反復子を作成します。 2番目のコンストラクターは、 *&_Istr*を使用して入力ストリームポインターを初期化した後、型のオブジェクトの抽出と格納を試み `Type` ます。
+最初のコンストラクターは、null ポインターを使用して入力ストリーム ポインターを初期化し、ストリームの終わり反復子を作成します。 2番目のコンストラクターは、 *&_Istr* を使用して入力ストリームポインターを初期化した後、型のオブジェクトの抽出と格納を試み `Type` ます。
 
 ストリームの終わり反復子は、`istream_iterator` がストリームの終わりに達しているかどうかのテストに使用できます。
 
@@ -181,7 +182,7 @@ int main( )
 }
 ```
 
-## <a name="istream_iteratoristream_type"></a><a name="istream_type"></a>istream_iterator:: istream_type
+## <a name="istream_iteratoristream_type"></a><a name="istream_type"></a> istream_iterator:: istream_type
 
 `istream_iterator` のストリーム型を提供する型。
 
@@ -197,7 +198,7 @@ typedef basic_istream<CharType, Traits> istream_type;
 
 `istream_type` を宣言して使用する方法の例については、[istream_iterator](#istream_iterator) に関するセクションを参照してください。
 
-## <a name="istream_iteratoroperator"></a><a name="op_star"></a>istream_iterator:: operator *
+## <a name="istream_iteratoroperator"></a><a name="op_star"></a> istream_iterator:: operator *
 
 逆参照演算子は、`Type` で指定された `istream_iterator` 型の格納されたオブジェクトを返します。
 
@@ -241,7 +242,7 @@ int main( )
 }
 ```
 
-## <a name="istream_iteratoroperator-gt"></a><a name="op_arrow"></a>istream_iterator:: operator-&gt;
+## <a name="istream_iteratoroperator-gt"></a><a name="op_arrow"></a> istream_iterator:: operator-&gt;
 
 メンバーの値 (存在する場合) を返します。
 
@@ -291,7 +292,7 @@ int main( )
 }
 ```
 
-## <a name="istream_iteratoroperator"></a><a name="op_add_add"></a>istream_iterator:: operator + +
+## <a name="istream_iteratoroperator"></a><a name="op_add_add"></a> istream_iterator:: operator + +
 
 入力ストリームからインクリメントされたオブジェクトを抽出するか、オブジェクトをインクリメントする前にオブジェクトをコピーして、そのコピーを返します。
 
@@ -337,7 +338,7 @@ int main( )
 }
 ```
 
-## <a name="istream_iteratortraits_type"></a><a name="traits_type"></a>istream_iterator:: traits_type
+## <a name="istream_iteratortraits_type"></a><a name="traits_type"></a> istream_iterator:: traits_type
 
 `istream_iterator` の文字特性型を提供する型。
 

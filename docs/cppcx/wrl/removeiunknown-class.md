@@ -1,16 +1,17 @@
 ---
+description: 詳細については、「RemoveIUnknown クラス」を参照してください。
 title: RemoveIUnknown クラス
 ms.date: 10/03/2018
 ms.topic: reference
 f1_keywords:
 - client/Microsoft::WRL::Details::RemoveIUnknown
 ms.assetid: 998e711a-7d1a-44c6-a016-e6167aa40863
-ms.openlocfilehash: cfcdefbb8d7cd12d2ebf99710f595fdd2fc16f76
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 0ef00ee9859a27252550aaeec6fb9b4f9ef2d5b8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80213617"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97278728"
 ---
 # <a name="removeiunknown-class"></a>RemoveIUnknown クラス
 
@@ -33,17 +34,17 @@ class RemoveIUnknown : public T;
 
 ## <a name="remarks"></a>解説
 
-`IUnknown`ベースの型と等価な型を作成しますが、非仮想 `QueryInterface`、`AddRef`、および `Release` のメンバー関数があります。
+は、ベースの型に相当する型を作成し `IUnknown` ますが、非仮想 `QueryInterface` の、 `AddRef` 、および `Release` メンバー関数を持ちます。
 
-既定では、COM メソッドは、仮想 `QueryInterface`、`AddRef`、および `Release` メソッドを提供します。 ただし、`ComPtr` では、仮想メソッドのオーバーヘッドを必要としません。 `RemoveIUnknown` は、プライベート、非仮想 `QueryInterface`、`AddRef`、および `Release` の各メソッドを提供することによって、オーバーヘッドを解消します。
+既定では、COM メソッドは、仮想メソッド、メソッド、およびメソッドを提供し `QueryInterface` `AddRef` `Release` ます。 ただし、では、 `ComPtr` 仮想メソッドのオーバーヘッドを必要としません。 `RemoveIUnknown` プライベート、非仮想、、、およびの各メソッドを提供することによって、オーバーヘッドを回避し `QueryInterface` `AddRef` `Release` ます。
 
 ## <a name="members"></a>メンバー
 
 ### <a name="public-typedefs"></a>パブリック typedef
 
-|Name|説明|
+|名前|説明|
 |----------|-----------------|
-|`ReturnType`|テンプレートパラメーター *T*と等価であるが、非仮想 `IUnknown` メンバーを持つ型のシノニム。|
+|`ReturnType`|テンプレートパラメーター *T* と等価で、非仮想メンバーを持つ型のシノニム `IUnknown` 。|
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -51,12 +52,12 @@ class RemoveIUnknown : public T;
 
 `RemoveIUnknown`
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** client.h
 
 **名前空間:** Microsoft:: WRL::D etails
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[Microsoft::WRL::Details 名前空間](microsoft-wrl-details-namespace.md)
+[Microsoft:: WRL::D etails 名前空間](microsoft-wrl-details-namespace.md)

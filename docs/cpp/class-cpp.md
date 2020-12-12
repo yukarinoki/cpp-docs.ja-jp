@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: クラス (C++)'
 title: class (C++)
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - class types [C++], class statements
 - class keyword [C++]
 ms.assetid: dd23c09f-6598-4069-8bff-69c7f2518b9f
-ms.openlocfilehash: 1dfa0b5e2dd65567b965be756ff171a3df75370a
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 2b1e984f3facd4d2d212979a1dcf6be2eee3b3a9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91499824"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97278741"
 ---
 # <a name="class-c"></a>class (C++)
 
@@ -40,7 +41,7 @@ class [ms-decl-spec] [tag [: base-list ]]
 *ms の宣言*<br/>
 ストレージ クラスの指定 (省略可能)。 詳細については、 [__declspec](../cpp/declspec.md) キーワードを参照してください。
 
-*番号*<br/>
+*タグ*<br/>
 クラスに渡す型名。 タグは、クラスのスコープ内で予約語になります。 タグは省略できます。 省略した場合、匿名クラスが定義されます。 詳細については、「 [匿名クラス型](../cpp/anonymous-class-types.md)」を参照してください。
 
 *base-list*<br/>
@@ -52,7 +53,7 @@ class [ms-decl-spec] [tag [: base-list ]]
 *declarators*<br/>
 クラス型の 1 つ以上のインスタンスの名前を指定する宣言子リスト。 クラスのすべてのデータメンバーがである場合は、宣言子に初期化子リストを含めることができ **`public`** ます。 これは、クラスよりもデータメンバーが既定である構造体では一般的です **`public`** 。 詳細については、「 [宣言子の概要](./declarations-and-definitions-cpp.md) 」を参照してください。
 
-## <a name="remarks"></a>注釈
+## <a name="remarks"></a>解説
 
 一般的なクラスの詳細については、次のトピックのいずれかを参照してください。
 

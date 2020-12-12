@@ -1,4 +1,5 @@
 ---
+description: '詳細については、「レコードフィールドエクスチェンジ: ウィザードコードの操作」を参照してください。'
 title: 'レコード フィールド エクスチェンジ: ウィザード コードの操作'
 ms.date: 05/09/2019
 helpviewer_keywords:
@@ -15,24 +16,24 @@ helpviewer_keywords:
 - overriding, DoFieldExchange
 - m_nFields data member, initializing
 ms.assetid: f00d882a-ff1b-4a75-9717-98d8762bb237
-ms.openlocfilehash: 8e42fc9da672ca4ef97e775776935650ab7f545a
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: c6b44c7c5e3ec09e02e70ad5dd0fecfa434cc0a0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81367112"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97278715"
 ---
 # <a name="record-field-exchange-working-with-the-wizard-code"></a>レコード フィールド エクスチェンジ: ウィザード コードの操作
 
 > [!NOTE]
 > MFC ODBC コンシューマー ウィザードは、Visual Studio 2019 以降はご利用いただけなくなります。 引き続き、コンシューマーを手動で作成することはできます。
 
-このトピックでは、RFX をサポートするために MFC アプリケーション ウィザードと (「[Adding an MFC ODBC Consumer](../../mfc/reference/adding-an-mfc-odbc-consumer.md)」 (MFC ODBC コンシューマーの追加) で説明した) **クラスの追加**で記述されるコードについて、およびこれらのコードを変更する方法について説明します。
+このトピックでは、RFX をサポートするために MFC アプリケーション ウィザードと (「[Adding an MFC ODBC Consumer](../../mfc/reference/adding-an-mfc-odbc-consumer.md)」 (MFC ODBC コンシューマーの追加) で説明した) **クラスの追加** で記述されるコードについて、およびこれらのコードを変更する方法について説明します。
 
 > [!NOTE]
-> このトピックの内容は、バルク行フェッチが実装されていない `CRecordset` から派生したクラスを対象にしています。 バルク行フェッチを使用している場合は、バルク レコード フィールド エクスチェンジ (Bulk RFX) が実装されます。 Bulk RFX は、RFX に似ています。 この違いについては、「[レコードセット : レコードの一括フェッチ (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)」を参照してください。
+> このトピックの内容は、バルク行フェッチが実装されていない `CRecordset` から派生したクラスを対象にしています。 バルク行フェッチを使用している場合は、バルク レコード フィールド エクスチェンジ (Bulk RFX) が実装されます。 Bulk RFX は、RFX に似ています。 違いを理解するには、「レコード [セット: レコードを一括フェッチする (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)」を参照してください。
 
-MFC アプリケーション ウィザードまたは**クラスの追加**を使用してレコードセット クラスを作成すると、ウィザードで選択したデータ ソース、テーブル、列に基づいて、ウィザードによって RFX に関連する次の要素が自動的に記述されます。
+MFC アプリケーション ウィザードまたは **クラスの追加** を使用してレコードセット クラスを作成すると、ウィザードで選択したデータ ソース、テーブル、列に基づいて、ウィザードによって RFX に関連する次の要素が自動的に記述されます。
 
 - レコードセット クラスでのレコードセット フィールド データ メンバーの宣言
 
@@ -102,7 +103,7 @@ void CSections::DoFieldExchange(CFieldExchange* pFX)
 
 - `pFX` ポインターを使用した `CFieldExchange::SetFieldType` への呼び出し。 この呼び出しによって、`DoFieldExchange` の末尾までのすべての RFX 関数呼び出し、または次の `SetFieldType` への呼び出しが出力列であることが指定されます。 詳細については、「[CFieldExchange::SetFieldType](../../mfc/reference/cfieldexchange-class.md#setfieldtype)」を参照してください。
 
-- グローバル関数 `RFX_Text` への複数の呼び出し (フィールド データ メンバーごとに 1 つ、この例ではすべて `CString` 変数)。 これらの呼び出しでは、データ ソースの列名とフィールド データ メンバー間のリレーションシップが指定されます。 RFX 関数では、実際のデータ転送が行われます。 クラス ライブラリによって、一般的なすべてのデータ型の RFX 関数が提供されます。 RFX 関数の詳細については、「[レコード フィールド エクスチェンジ : RFX 関数の使用](../../data/odbc/record-field-exchange-using-the-rfx-functions.md)」を参照してください。
+- グローバル関数 `RFX_Text` への複数の呼び出し (フィールド データ メンバーごとに 1 つ、この例ではすべて `CString` 変数)。 これらの呼び出しでは、データ ソースの列名とフィールド データ メンバー間のリレーションシップが指定されます。 RFX 関数では、実際のデータ転送が行われます。 クラス ライブラリによって、一般的なすべてのデータ型の RFX 関数が提供されます。 RFX 関数の詳細については、「 [レコードフィールドエクスチェンジ: Rfx 関数の使用](../../data/odbc/record-field-exchange-using-the-rfx-functions.md)」を参照してください。
 
     > [!NOTE]
     >  結果セットの列の順序は、`DoFieldExchange` での RFX 関数の呼び出しの順序と一致している必要があります。
@@ -143,4 +144,4 @@ m_nFields += 3;
 
 ## <a name="see-also"></a>関連項目
 
-[レコード フィールド エクスチェンジ (RFX)](../../data/odbc/record-field-exchange-rfx.md)
+[レコードフィールドエクスチェンジ (RFX)](../../data/odbc/record-field-exchange-rfx.md)

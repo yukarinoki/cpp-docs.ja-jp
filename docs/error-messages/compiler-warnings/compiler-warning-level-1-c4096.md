@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: コンパイラの警告 (レベル 1) C4096'
 title: コンパイラの警告 (レベル 1) C4096
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4096
 ms.assetid: abf3cca2-2f21-45d8-b025-6b513b00681e
-ms.openlocfilehash: 4f5a45339673b57f946f206e1eaff0d23ec6fee9
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 2d787a2de5974b16fb962c17530532480d993fd6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80163937"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97278039"
 ---
 # <a name="compiler-warning-level-1-c4096"></a>コンパイラの警告 (レベル 1) C4096
 
@@ -19,7 +20,7 @@ ms.locfileid: "80163937"
 
 COM インターフェイスとして指定したインターフェイス定義は COM インターフェイスとして定義されていないため、IDL ファイルには出力されません。
 
-インターフェイスが COM インターフェイスであることを示すリスト属性については、「[インターフェイス属性](../../windows/attributes/interface-attributes.md)」を参照してください。
+インターフェイスが COM インターフェイスであることを示すリスト属性については、「 [インターフェイス属性](../../windows/attributes/interface-attributes.md) 」を参照してください。
 
 次の例では、C4096 が生成されます。
 

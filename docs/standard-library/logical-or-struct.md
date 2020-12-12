@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: logical_or 構造体'
 title: logical_or 構造体
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,14 +8,14 @@ helpviewer_keywords:
 - logical_or class
 - logical_or struct
 ms.assetid: ec8143f8-5755-4e7b-8025-507fb6bf6911
-ms.openlocfilehash: ec3637c1d5a2d0d916aec012783cecd37a179468
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 7b6578bb3405b2428724554d520ffe784b885a40
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68246448"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97277675"
 ---
-# <a name="logicalor-struct"></a>logical_or 構造体
+# <a name="logical_or-struct"></a>logical_or 構造体
 
 引数に対して論理和演算 (`operator||`) を実行する定義済みの関数オブジェクト。
 
@@ -42,17 +43,17 @@ struct logical_or<void>
 *型*、 *T*、 *U*\
 指定または推論された型のオペランドを受け取る `operator||` をサポートする任意の型。
 
-*左*\
-論理和演算の左オペランド。 特化されていないテンプレートは、型の左辺値参照引数を受け取る*型*します。 特殊化されたテンプレートはの完全転送を左辺値と右辺値参照引数の型を推論する*T*します。
+*左側*\
+論理和演算の左オペランド。 非特殊テンプレートは、type *型* の左辺値参照引数を受け取ります。 特殊化されたテンプレートは、推論された型 *T* の左辺値および右辺値参照引数の完全転送を行います。
 
 *そうです*\
-論理和演算の右オペランド。 特化されていないテンプレートは、型の左辺値参照引数を受け取る*型*します。 特殊化されたテンプレートはの完全転送を左辺値と右辺値参照引数の型を推論する*U*します。
+論理和演算の右オペランド。 非特殊テンプレートは、type *型* の左辺値参照引数を受け取ります。 特殊化されたテンプレートは、推論された型 *U* の左辺値および右辺値参照引数の完全転送を行います。
 
 ## <a name="return-value"></a>戻り値
 
 `Left || Right` の結果。 特殊化されたテンプレートは、結果の完全転送を行います。結果には `operator||` によって返された型が含まれます。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 ユーザー定義型の場合、オペランドの評価のショートサーキットはありません。 どちらの引数も `operator||` によって評価されます。
 

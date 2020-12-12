@@ -1,19 +1,20 @@
 ---
+description: 詳細については、「 &lt; istream 演算子」を参照してください。 &gt;
 title: '&lt;istream&gt; 演算子'
 ms.date: 11/04/2016
 f1_keywords:
 - istream/std::operator&gt;&gt;
 ms.assetid: 7174da41-f301-4a34-b631-0ab918b188d2
-ms.openlocfilehash: 3b9521fde1b5a03389bfc1ad3e35fa407d9d6ac0
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 68bf59480af68248533f55ef32de4525a4d900d5
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81363040"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97277883"
 ---
 # <a name="ltistreamgt-operators"></a>&lt;istream&gt; 演算子
 
-## <a name="operatorgtgt"></a><a name="op_gt_gt"></a>演算子&gt;&gt;
+## <a name="operatorgtgt"></a><a name="op_gt_gt"></a> operator&gt;&gt;
 
 ストリームから文字と文字列を抽出します。
 
@@ -56,16 +57,16 @@ basic_istream<Elem, Tr>& operator>>(
 
 ### <a name="parameters"></a>パラメーター
 
-*Ch*\
+*ハーフ*\
 単一の文字。
 
-*イストル*\
+*Istr*\
 ストリーム。
 
-*Str*\
+*引数*\
 文字列。
 
-*ヴァル*\
+*val*\
 型。
 
 ### <a name="return-value"></a>戻り値
@@ -84,9 +85,9 @@ basic_istream<Elem, Tr>& operator>>(
     basic_istream<Elem, Tr>& Istr, Elem* str);
 ```
 
-要素まで`N - 1`抽出し *、str*から始まる配列に格納します。 `Istr.`[幅](../standard-library/ios-base-class.md#width)がゼロより大きい場合 *、N*は`Istr.width`;それ以外の場合は、宣言できる最大の配列の`Elem`サイズです。 関数は、抽出された要素`Elem()`が格納した後に常に値を格納します。 抽出は、ファイルの終わり、値`Elem(0)`を持つ文字 (抽出されない文字)、または[ws](../standard-library/istream-functions.md#ws)によって破棄される要素 (抽出されない要素) で、早い段階で停止します。 関数が要素を抽出しない場合は、`Istr.`[`setstate`](../standard-library/basic-ios-class.md#setstate)`(failbit)`を呼び出します。 いずれにしても`Istr.width(0)`*、Istr*を呼び出して返します。
+は、最大の要素を抽出 `N - 1` し、 *str* から始まる配列に格納します。 `Istr.` [Width](../standard-library/ios-base-class.md#width)が0より大きい場合、 *N* はです。それ以外の場合は、 `Istr.width` 宣言できるの最大配列のサイズです `Elem` 。 関数は、格納する抽出された要素の後に常に値を格納 `Elem()` します。 抽出は、ファイルの終わり、値 (抽出されて `Elem(0)` いない)、または [ws](../standard-library/istream-functions.md#ws)によって破棄される任意の要素 (抽出されていない) に対して早期に停止します。 関数が要素を抽出しなかった場合は、を呼び出し `Istr.` [`setstate`](../standard-library/basic-ios-class.md#setstate) `(failbit)` ます。 いずれの場合も、を呼び出し、 `Istr.width(0)` *istr* を返します。
 
-**セキュリティに関する注意事項**入力ストリームから抽出される null で終わる文字列は、宛先 buffer *str*のサイズを超えてはなりません。 詳しくは、「 [バッファー オーバーランの回避](/windows/win32/SecBP/avoiding-buffer-overruns)」をご覧ください。
+**セキュリティ** に関する注意入力ストリームから抽出される null で終わる文字列は、コピー先のバッファー *str* のサイズを超えないようにする必要があります。 詳しくは、「 [バッファー オーバーランの回避](/windows/win32/SecBP/avoiding-buffer-overruns)」をご覧ください。
 
 関数テンプレート:
 
@@ -96,7 +97,7 @@ basic_istream<Elem, Tr>& operator>>(
     basic_istream<Elem, Tr>& Istr, Elem& Ch);
 ```
 
-要素を抽出し、可能であれば Ch*に格納*します。 それ以外の場合`is.`[`setstate`](../standard-library/basic-ios-class.md#setstate)`(failbit)`は、 を呼び出します。 いずれにしても *、Istr*が返されます。
+可能な場合は要素を抽出し、 *Ch* に格納します。 それ以外の場合は、を呼び出し `is.` [`setstate`](../standard-library/basic-ios-class.md#setstate) `(failbit)` ます。 どのような場合でも、 *Istr* が返されます。
 
 関数テンプレート:
 
@@ -147,7 +148,7 @@ basic_istream<Elem, Tr>& operator>>(
     Type& val);
 ```
 
-を`Istr >> val`返します (および、プロセス内の`Istr`右辺値参照を左辺値に変換します)。
+を返し `Istr >> val` ます (右辺値参照を `Istr` プロセス内の左辺値に変換します)。
 
 ### <a name="example"></a>例
 
@@ -170,4 +171,4 @@ int main( )
 
 ## <a name="see-also"></a>関連項目
 
-[\<i流>](../standard-library/istream.md)
+[\<istream>](../standard-library/istream.md)
