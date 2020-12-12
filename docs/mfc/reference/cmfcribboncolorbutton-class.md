@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: CMFCRibbonColorButton クラス'
 title: CMFCRibbonColorButton クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -40,12 +41,12 @@ helpviewer_keywords:
 - CMFCRibbonColorButton [MFC], SetPalette
 - CMFCRibbonColorButton [MFC], UpdateColor
 ms.assetid: 6b4b4ee3-8cc0-41b4-a4eb-93e8847008e1
-ms.openlocfilehash: 528b883d75889589c7021f462324dd9dcb71be25
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: a350339559febdc9346dcf8b342d274d00bab391
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81754848"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97293717"
 ---
 # <a name="cmfcribboncolorbutton-class"></a>CMFCRibbonColorButton クラス
 
@@ -69,20 +70,20 @@ class CMFCRibbonColorButton : public CMFCRibbonGallery
 
 |名前|説明|
 |----------|-----------------|
-|[カラーボタン::グループの追加](#addcolorsgroup)|色のグループを通常の色領域に追加します。|
-|[カラーボタン::自動ボタンを有効にする](#enableautomaticbutton)|**[自動]** ボタンを有効にするかどうかを指定します。|
-|[カラーボタンを使用します。](#enableotherbutton)|**[その他]** ボタンを有効にします。|
+|[CMFCRibbonColorButton:: AddColorsGroup](#addcolorsgroup)|色のグループを通常の色領域に追加します。|
+|[CMFCRibbonColorButton:: Enable自動ボタン](#enableautomaticbutton)|**[自動]** ボタンを有効にするかどうかを指定します。|
+|[CMFCRibbonColorButton:: EnableOtherButton](#enableotherbutton)|**[その他]** ボタンを有効にします。|
 |[CMFCRibbonColorButton::GetAutomaticColor](#getautomaticcolor)||
-|[カラーボタンをクリックします。](#getcolor)|現在選ばれている色を返します。|
-|[カラーボタン::カラーボックスサイズ](#getcolorboxsize)|カラー バーに表示される色要素のサイズを返します。|
+|[CMFCRibbonColorButton:: GetColor](#getcolor)|現在選ばれている色を返します。|
+|[CMFCRibbonColorButton:: GetColorBoxSize](#getcolorboxsize)|カラー バーに表示される色要素のサイズを返します。|
 |[CMFCRibbonColorButton::GetColumns](#getcolumns)||
-|[カラーボタン::ハイライトされた色](#gethighlightedcolor)|ポップアップ カラー パレットで現在選ばれている要素の色を返します。|
-|[カラーボタン::すべてのカラーグループを削除します。](#removeallcolorgroups)|通常の色領域からすべての色グループを削除します。|
-|[カラーボタン::セットカラー](#setcolor)|通常の色領域から色を選びます。|
-|[カラーボタン::セットカラーボックスサイズ](#setcolorboxsize)|カラー バーに表示されるすべての色要素のサイズを設定します。|
+|[CMFCRibbonColorButton:: GetHighlightedColor](#gethighlightedcolor)|ポップアップ カラー パレットで現在選ばれている要素の色を返します。|
+|[CMFCRibbonColorButton:: RemoveAllColorGroups](#removeallcolorgroups)|通常の色領域からすべての色グループを削除します。|
+|[CMFCRibbonColorButton:: SetColor](#setcolor)|通常の色領域から色を選びます。|
+|[CMFCRibbonColorButton:: SetColorBoxSize](#setcolorboxsize)|カラー バーに表示されるすべての色要素のサイズを設定します。|
 |[CMFCRibbonColorButton::SetColorName](#setcolorname)||
 |[CMFCRibbonColorButton::SetColumns](#setcolumns)||
-|[カラーボタン::ドキュメントカラーの設定](#setdocumentcolors)|ドキュメントの色領域に表示する RGB 値の一覧を指定します。|
+|[CMFCRibbonColorButton:: SetDocumentColors](#setdocumentcolors)|ドキュメントの色領域に表示する RGB 値の一覧を指定します。|
 |[CMFCRibbonColorButton::SetPalette](#setpalette)||
 |[CMFCRibbonColorButton::UpdateColor](#updatecolor)||
 
@@ -108,11 +109,11 @@ class CMFCRibbonColorButton : public CMFCRibbonGallery
 
 [CMFCRibbonColorButton](../../mfc/reference/cmfcribboncolorbutton-class.md)
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** afxribboncolorbutton.h
 
-## <a name="cmfcribboncolorbuttonaddcolorsgroup"></a><a name="addcolorsgroup"></a>カラーボタン::グループの追加
+## <a name="cmfcribboncolorbuttonaddcolorsgroup"></a><a name="addcolorsgroup"></a> CMFCRibbonColorButton:: AddColorsGroup
 
 色のグループを通常の色領域に追加します。
 
@@ -125,20 +126,20 @@ void AddColorsGroup(
 
 ### <a name="parameters"></a>パラメーター
 
-*名前を指定します。*<br/>
-[in]グループ名。
+*lpszName*<br/>
+からグループ名。
 
-*lst カラー*<br/>
-[in]色のリスト。
+*lstColors*<br/>
+から色の一覧。
 
-*隣接列*<br/>
-[in]グループ内でのカラーアイテムの表示方法を制御します。 TRUE の場合、カラー項目は垂直方向の間隔なしで描画されます。 FALSE の場合、カラー項目は垂直方向の間隔で描画されます。
+*bContiguousColumns*<br/>
+からグループ内の色項目の表示方法を制御します。 TRUE の場合、カラー項目は垂直方向の間隔なしで描画されます。 FALSE の場合、カラー項目は垂直方向の間隔で描画されます。
 
 ### <a name="remarks"></a>解説
 
-この関数を使用して、色のポップアップに複数の色のグループを表示します。 色をグループで表示する方法を制御できます。
+この関数を使用すると、カラーポップアップに複数の色のグループが表示されるようになります。 グループ内の色の表示方法を制御できます。
 
-## <a name="cmfcribboncolorbuttoncmfcribboncolorbutton"></a><a name="cmfcribboncolorbutton"></a>カラーボタン::CMFCリボンカラーボタン
+## <a name="cmfcribboncolorbuttoncmfcribboncolorbutton"></a><a name="cmfcribboncolorbutton"></a> CMFCRibbonColorButton:: CMFCRibbonColorButton
 
 `CMFCRibbonColorButton` オブジェクトを構築します。
 
@@ -163,28 +164,28 @@ CMFCRibbonColorButton(
 ### <a name="parameters"></a>パラメーター
 
 *nID*<br/>
-[in]ユーザーがボタンをクリックしたときに実行するコマンドのコマンド ID を指定します。
+からユーザーがボタンをクリックしたときに実行されるコマンドのコマンド ID を指定します。
 
 *lpszText*<br/>
-[in]ボタンに表示するテキストを指定します。
+からボタンに表示するテキストを指定します。
 
-*を使用します。*<br/>
-[in]ボタンに表示される小さいイメージの 0 から始まるインデックス。
+*nSmallImageIndex*<br/>
+からボタンに表示する小さいイメージの0から始まるインデックス。
 
-*色*<br/>
-[in]ボタンの色 (既定は黒)。
+*color*<br/>
+からボタンの色 (既定では黒)。
 
-*ボタンルック*<br/>
-[in]TRUE の場合、ボタンは単純な四角形として描画されます。
+*bSimpleButtonLook*<br/>
+からTRUE の場合、ボタンは単純な四角形として描画されます。
 
-*インデックスを作成します。*<br/>
-[in]ボタンに表示される大きなイメージの 0 から始まるインデックス。
+*nLargeImageIndex*<br/>
+からボタンに表示される大きいイメージの0から始まるインデックス。
 
 ### <a name="return-value"></a>戻り値
 
 ### <a name="remarks"></a>解説
 
-## <a name="cmfcribboncolorbuttonenableautomaticbutton"></a><a name="enableautomaticbutton"></a>カラーボタン::自動ボタンを有効にする
+## <a name="cmfcribboncolorbuttonenableautomaticbutton"></a><a name="enableautomaticbutton"></a> CMFCRibbonColorButton:: Enable自動ボタン
 
 **[自動]** ボタンを有効にするかどうかを指定します。
 
@@ -200,25 +201,25 @@ void EnableAutomaticButton(
 
 ### <a name="parameters"></a>パラメーター
 
-*ラベル*<br/>
-[in]**[自動]** ボタンのラベル。
+*lpszLabel*<br/>
+から **自動** ボタンのラベル。
 
-*カラー自動*<br/>
-[in]**[自動**] ボタンの既定の色を指定する RGB 値。
+*colorAutomatic*<br/>
+から **自動** ボタンの既定の色を指定する RGB 値。
 
-*b 有効にする*<br/>
-[in]**[自動**] ボタンが有効になっている場合は TRUE。無効になっている場合は FALSE。
+*bEnable*<br/>
+から[ **自動** ] ボタンが有効な場合は TRUE。無効になっている場合は FALSE。
 
 *lpszToolTip*<br/>
-[in]**[自動]** ボタンのツールチップ。
+から **自動** ボタンのツールヒント。
 
-*オントップ*<br/>
-[in]**[自動**] ボタンを上部、カラー パレットの前に表示するかどうかを指定します。
+*bOnTop*<br/>
+から **自動** ボタンが一番上にあり、カラーパレットの前にあるかどうかを指定します。
 
-*ボーダーを描く*<br/>
-[in]TRUE を指定すると、アプリケーションは、リボンの色のボタンのカラー バーの周囲に境界線を描画します。 カラーバーには、現在選択されている色が表示されます。 アプリケーションが境界線を描画しない場合は FALSE
+*bDrawBorder*<br/>
+からアプリケーションがリボンの色ボタンのカラーバーの周りに境界線を描画する場合は TRUE。 カラーバー現在選択されている色を表示します。 アプリケーションが境界線を描画しない場合は FALSE
 
-## <a name="cmfcribboncolorbuttonenableotherbutton"></a><a name="enableotherbutton"></a>カラーボタンを使用します。
+## <a name="cmfcribboncolorbuttonenableotherbutton"></a><a name="enableotherbutton"></a> CMFCRibbonColorButton:: EnableOtherButton
 
 **[その他]** ボタンを有効にします。
 
@@ -230,17 +231,17 @@ void EnableOtherButton(
 
 ### <a name="parameters"></a>パラメーター
 
-*ラベル*<br/>
+*lpszLabel*<br/>
 ボタンのラベル。
 
 *lpszToolTip*<br/>
-**[その他**] ボタンのツールヒント テキスト。
+[ **その他** ] ボタンのツールヒントテキスト。
 
 ### <a name="remarks"></a>解説
 
-**[その他]** ボタンは、色のグループの下に表示されるボタンです。 ユーザーが [**その他**] ボタンをクリックすると、色のダイアログが表示されます。
+**もう1つ** のボタンは、色のグループの下に表示されるボタンです。 ユーザーが [ **その他** ] ボタンをクリックすると、色のダイアログが表示されます。
 
-## <a name="cmfcribboncolorbuttongetautomaticcolor"></a><a name="getautomaticcolor"></a>カラーボタンを取得します。
+## <a name="cmfcribboncolorbuttongetautomaticcolor"></a><a name="getautomaticcolor"></a> CMFCRibbonColorButton:: Get自動カラー
 
 現在の自動ボタンの色を取得します。
 
@@ -254,9 +255,9 @@ COLORREF GetAutomaticColor() const;
 
 ### <a name="remarks"></a>解説
 
-自動ボタンの色は、メソッドに渡`colorAutomatic`されるパラメータによって設定`CMFCRibbonColorButton::EnableAutomaticButton`されます。
+自動ボタンの色は、 `colorAutomatic` メソッドに渡されるパラメーターによって設定され `CMFCRibbonColorButton::EnableAutomaticButton` ます。
 
-## <a name="cmfcribboncolorbuttongetcolor"></a><a name="getcolor"></a>カラーボタンをクリックします。
+## <a name="cmfcribboncolorbuttongetcolor"></a><a name="getcolor"></a> CMFCRibbonColorButton:: GetColor
 
 現在選ばれている色を返します。
 
@@ -268,7 +269,7 @@ COLORREF GetColor() const;
 
 ボタンをクリックして選択した色。
 
-## <a name="cmfcribboncolorbuttongetcolorboxsize"></a><a name="getcolorboxsize"></a>カラーボタン::カラーボックスサイズ
+## <a name="cmfcribboncolorbuttongetcolorboxsize"></a><a name="getcolorboxsize"></a> CMFCRibbonColorButton:: GetColorBoxSize
 
 カラー バーに表示される色要素のサイズを返します。
 
@@ -278,11 +279,11 @@ CSize GetColorBoxSize() const;
 
 ### <a name="return-value"></a>戻り値
 
-ドロップダウン カラー パレットのカラー ボタンのサイズ。
+ドロップダウンカラーパレットの色ボタンのサイズ。
 
-## <a name="cmfcribboncolorbuttongetcolumns"></a><a name="getcolumns"></a>カラーボタン::列を取得します。
+## <a name="cmfcribboncolorbuttongetcolumns"></a><a name="getcolumns"></a> CMFCRibbonColorButton:: GetColumns
 
-リボンの色のボタンのギャラリー表示の行の項目数を取得します。
+リボンのカラーボタンのギャラリー表示の行にある項目の数を取得します。
 
 ```
 int GetColumns() const;
@@ -294,9 +295,9 @@ int GetColumns() const;
 
 ### <a name="remarks"></a>解説
 
-## <a name="cmfcribboncolorbuttongethighlightedcolor"></a><a name="gethighlightedcolor"></a>カラーボタン::ハイライトされた色
+## <a name="cmfcribboncolorbuttongethighlightedcolor"></a><a name="gethighlightedcolor"></a> CMFCRibbonColorButton:: GetHighlightedColor
 
-ポップアップ カラー パレットで現在選択されている要素の色を返します。
+ポップアップカラーパレットで現在選択されている要素の色を返します。
 
 ```
 COLORREF GetHighlightedColor() const;
@@ -304,9 +305,9 @@ COLORREF GetHighlightedColor() const;
 
 ### <a name="return-value"></a>戻り値
 
-ポップアップ カラー パレットで現在選択されている要素の色。
+ポップアップカラーパレットで現在選択されている要素の色。
 
-## <a name="cmfcribboncolorbuttonremoveallcolorgroups"></a><a name="removeallcolorgroups"></a>カラーボタン::すべてのカラーグループを削除します。
+## <a name="cmfcribboncolorbuttonremoveallcolorgroups"></a><a name="removeallcolorgroups"></a> CMFCRibbonColorButton:: RemoveAllColorGroups
 
 通常の色領域からすべての色グループを削除します。
 
@@ -314,7 +315,7 @@ COLORREF GetHighlightedColor() const;
 void RemoveAllColorGroups();
 ```
 
-## <a name="cmfcribboncolorbuttonsetcolor"></a><a name="setcolor"></a>カラーボタン::セットカラー
+## <a name="cmfcribboncolorbuttonsetcolor"></a><a name="setcolor"></a> CMFCRibbonColorButton:: SetColor
 
 通常の色領域から色を選びます。
 
@@ -324,10 +325,10 @@ void SetColor(COLORREF color);
 
 ### <a name="parameters"></a>パラメーター
 
-*色*<br/>
-[in]設定する色。
+*color*<br/>
+から設定する色。
 
-## <a name="cmfcribboncolorbuttonsetcolorboxsize"></a><a name="setcolorboxsize"></a>カラーボタン::セットカラーボックスサイズ
+## <a name="cmfcribboncolorbuttonsetcolorboxsize"></a><a name="setcolorboxsize"></a> CMFCRibbonColorButton:: SetColorBoxSize
 
 カラー バーに表示されるすべての色要素のサイズを設定します。
 
@@ -338,9 +339,9 @@ void SetColorBoxSize(CSize sizeBox);
 ### <a name="parameters"></a>パラメーター
 
 *サイズボックス*<br/>
-[in]カラー パレットのカラー ボタンの新しいサイズ。
+からカラーパレットの色ボタンの新しいサイズ。
 
-## <a name="cmfcribboncolorbuttonsetcolorname"></a><a name="setcolorname"></a>カラーボタン::カラー名を設定します。
+## <a name="cmfcribboncolorbuttonsetcolorname"></a><a name="setcolorname"></a> CMFCRibbonColorButton:: SetColorName
 
 指定した色の新しい名前を設定します。
 
@@ -352,19 +353,19 @@ static void __stdcall SetColorName(
 
 ### <a name="parameters"></a>パラメーター
 
-*色*<br/>
-[in]カラーの RGB 値。
+*color*<br/>
+から色の RGB 値。
 
 *strName*<br/>
-[in]指定した色の新しい名前。
+から指定した色の新しい名前。
 
 ### <a name="remarks"></a>解説
 
-このメソッドは`CMFCColorBar::SetColorName`、アプリケーション内のすべての`CMFCColorBar`オブジェクトで指定された色の名前を変更するためです。
+`CMFCColorBar::SetColorName`このメソッドはを呼び出すため、このメソッドは、アプリケーション内のすべてのオブジェクトの指定された色の名前を変更し `CMFCColorBar` ます。
 
-## <a name="cmfcribboncolorbuttonsetcolumns"></a><a name="setcolumns"></a>カラーボタン::列の設定
+## <a name="cmfcribboncolorbuttonsetcolumns"></a><a name="setcolumns"></a> CMFCRibbonColorButton:: SetColumns
 
-ユーザーの色選択プロセス中にユーザーに表示される色の表に表示される列の数を設定します。
+ユーザーのカラー選択プロセス中にユーザーに表示される色の表に表示される列の数を設定します。
 
 ```cpp
 void SetColumns(int nColumns);
@@ -373,11 +374,11 @@ void SetColumns(int nColumns);
 ### <a name="parameters"></a>パラメーター
 
 *nColumns*<br/>
-[in]各行に表示する色アイコンの数。
+から各行に表示するカラーアイコンの数。
 
 ### <a name="remarks"></a>解説
 
-## <a name="cmfcribboncolorbuttonsetdocumentcolors"></a><a name="setdocumentcolors"></a>カラーボタン::ドキュメントカラーの設定
+## <a name="cmfcribboncolorbuttonsetdocumentcolors"></a><a name="setdocumentcolors"></a> CMFCRibbonColorButton:: SetDocumentColors
 
 ドキュメントの色領域に表示する RGB 値の一覧を指定します。
 
@@ -389,15 +390,15 @@ void SetDocumentColors(
 
 ### <a name="parameters"></a>パラメーター
 
-*ラベル*<br/>
-[in]ドキュメントの色と共に表示されるテキスト。
+*lpszLabel*<br/>
+からドキュメントの色と共に表示されるテキスト。
 
-*lst カラー*<br/>
-[in]RGB 値のリストへの参照。
+*lstColors*<br/>
+からRGB 値のリストへの参照。
 
-## <a name="cmfcribboncolorbuttonsetpalette"></a><a name="setpalette"></a>カラーボタン::セットパレット
+## <a name="cmfcribboncolorbuttonsetpalette"></a><a name="setpalette"></a> CMFCRibbonColorButton:: SetPalette
 
-カラー ボタンが表示するカラー テーブルに表示する標準色を指定します。
+カラーボタンに表示される色テーブルに表示する標準の色を指定します。
 
 ```cpp
 void SetPalette(CPalette* pPalette);
@@ -405,14 +406,14 @@ void SetPalette(CPalette* pPalette);
 
 ### <a name="parameters"></a>パラメーター
 
-*をクリックします。*<br/>
-[in]カラー パレットへのポインター。
+*pPalette*<br/>
+からカラーパレットへのポインター。
 
 ### <a name="remarks"></a>解説
 
-## <a name="cmfcribboncolorbuttonupdatecolor"></a><a name="updatecolor"></a>カラーボタン::更新色
+## <a name="cmfcribboncolorbuttonupdatecolor"></a><a name="updatecolor"></a> CMFCRibbonColorButton:: UpdateColor
 
-ユーザーがカラー ボタンをクリックしたときに表示されるカラー テーブルから色を選択したときに、フレームワークによって呼び出されます。
+ユーザーが色のボタンをクリックしたときに表示されるカラーテーブルから色を選択すると、フレームワークによって呼び出されます。
 
 ```cpp
 void UpdateColor(COLORREF color);
@@ -420,15 +421,15 @@ void UpdateColor(COLORREF color);
 
 ### <a name="parameters"></a>パラメーター
 
-*色*<br/>
-[in]ユーザーが選択した色。
+*color*<br/>
+からユーザーが選択した色。
 
 ### <a name="remarks"></a>解説
 
-この`CMFCRibbonColorButton::UpdateColor`メソッドは、現在選択されているボタンの色を変更し、BN_CLICKED標準通知をWM_COMMANDメッセージを送信して親に通知します。 選択した色を取得するには[、CMFC リボンカラー ボタン::GetColor](#getcolor)メソッドを使用します。
+メソッドは、 `CMFCRibbonColorButton::UpdateColor` 現在選択されているボタンの色を変更し、BN_CLICKED 標準通知を含む WM_COMMAND メッセージを送信することによってその親に通知します。 [CMFCRibbonColorButton:: GetColor](#getcolor)メソッドを使用して、選択した色を取得します。
 
 ## <a name="see-also"></a>関連項目
 
-[階層グラフ](../../mfc/hierarchy-chart.md)<br/>
-[クラス](../../mfc/reference/mfc-classes.md)<br/>
-[クラス](../../mfc/reference/cmfcribbongallery-class.md)
+[階層図](../../mfc/hierarchy-chart.md)<br/>
+[Classes](../../mfc/reference/mfc-classes.md)<br/>
+[CMFCRibbonGallery クラス](../../mfc/reference/cmfcribbongallery-class.md)

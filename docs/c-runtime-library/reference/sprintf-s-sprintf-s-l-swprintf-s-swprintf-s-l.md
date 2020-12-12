@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: sprintf_s、_sprintf_s_l、swprintf_s、_swprintf_s_l'
 title: sprintf_s、_sprintf_s_l、swprintf_s、_swprintf_s_l
 ms.date: 11/04/2016
 api_name:
@@ -44,12 +45,12 @@ helpviewer_keywords:
 - _sprintf_s_l function
 - formatted text [C++]
 ms.assetid: 424f0a29-22ef-40e8-b565-969f5f57782f
-ms.openlocfilehash: 006b0f84494466b5c23a8c86f586774b66839b03
-ms.sourcegitcommit: 43cee7a0d41a062661229043c2f7cbc6ace17fa3
+ms.openlocfilehash: 4d5114367daf8061315d296816799c5707c0323c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92008835"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97292261"
 ---
 # <a name="sprintf_s-_sprintf_s_l-swprintf_s-_swprintf_s_l"></a>sprintf_s、_sprintf_s_l、swprintf_s、_swprintf_s_l
 
@@ -119,19 +120,19 @@ int swprintf_s(
 
 ## <a name="return-value"></a>戻り値
 
-書き込まれた文字数。エラーが発生した場合は-1。 *バッファー*または*形式*が null ポインターの場合は、 **sprintf_s**して**swprintf_s**を返し、 **errno**を**EINVAL**に設定します。
+書き込まれた文字数。エラーが発生した場合は-1。 *バッファー* または *形式* が null ポインターの場合は、 **sprintf_s** して **swprintf_s** を返し、 **errno** を **EINVAL** に設定します。
 
-**sprintf_s** は、 *バッファー*に格納されているバイト数を返します。終端の null 文字はカウントされません。 **swprintf_s** は、 *バッファー*に格納されているワイド文字数を返します。終端の null ワイド文字はカウントされません。
+**sprintf_s** は、 *バッファー* に格納されているバイト数を返します。終端の null 文字はカウントされません。 **swprintf_s** は、 *バッファー* に格納されているワイド文字数を返します。終端の null ワイド文字はカウントされません。
 
 ## <a name="remarks"></a>解説
 
-**Sprintf_s**関数は、一連の文字と値の書式を設定し、*バッファー*に格納します。 各*引数*(存在する場合) は、対応する書式指定に従って変換および出力さ*れます。* 形式は通常の文字で構成され、 [printf](printf-printf-l-wprintf-wprintf-l.md)の*format*引数と同じ形式と機能を持ちます。 最後に書き込まれる文字の後に NULL 文字が追加されます。 重なり合う文字列間でコピーした場合の動作は未定義です。
+**Sprintf_s** 関数は、一連の文字と値の書式を設定し、*バッファー* に格納します。 各 *引数*(存在する場合) は、対応する書式指定に従って変換および出力さ *れます。* 形式は通常の文字で構成され、 [printf](printf-printf-l-wprintf-wprintf-l.md)の *format* 引数と同じ形式と機能を持ちます。 最後に書き込まれる文字の後に NULL 文字が追加されます。 重なり合う文字列間でコピーした場合の動作は未定義です。
 
-**Sprintf_s**と[sprintf](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)の主な違いの1つは、 **sprintf_s**によって書式文字列が有効な書式設定文字であるかどうかを確認するのに対し、 [sprintf](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)では書式文字列またはバッファーが**NULL**ポインターであるかどうかのみをチェックするためです。 いずれかのチェックが失敗した場合、「 [Parameter Validation](../../c-runtime-library/parameter-validation.md)」に説明されているように、無効なパラメーター ハンドラーが呼び出されます。 実行の継続が許可された場合、この関数は-1 を返し、 **errno** を **EINVAL**に設定します。
+**Sprintf_s** と [sprintf](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)の主な違いの1つは、 **sprintf_s** によって書式文字列が有効な書式設定文字であるかどうかを確認するのに対し、 [sprintf](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)では書式文字列またはバッファーが **NULL** ポインターであるかどうかのみをチェックするためです。 いずれかのチェックが失敗した場合、「 [Parameter Validation](../../c-runtime-library/parameter-validation.md)」に説明されているように、無効なパラメーター ハンドラーが呼び出されます。 実行の継続が許可された場合、この関数は-1 を返し、 **errno** を **EINVAL** に設定します。
 
-**Sprintf_s**と[sprintf](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)のもう1つの主な違いは、 **sprintf_s**では、出力バッファーのサイズを文字数で指定する長さのパラメーターを受け取ることです。 バッファーが、終端の null を含め、書式設定されたテキストに対して小さすぎる場合は、 *バッファー [0*] に null 文字を配置することでバッファーが空の文字列に設定され、無効なパラメーターハンドラーが呼び出されます。 **_Snprintf**とは異なり、 **sprintf_s**では、バッファーサイズがゼロでない限り、バッファーは null で終わることが保証されます。
+**Sprintf_s** と [sprintf](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)のもう1つの主な違いは、 **sprintf_s** では、出力バッファーのサイズを文字数で指定する長さのパラメーターを受け取ることです。 バッファーが、終端の null を含め、書式設定されたテキストに対して小さすぎる場合は、 *バッファー [0*] に null 文字を配置することでバッファーが空の文字列に設定され、無効なパラメーターハンドラーが呼び出されます。 **_Snprintf** とは異なり、 **sprintf_s** では、バッファーサイズがゼロでない限り、バッファーは null で終わることが保証されます。
 
-**swprintf_s** は **sprintf_s**のワイド文字バージョンです。 **swprintf_s** するポインター引数はワイド文字列です。 **Swprintf_s**でのエンコードエラーの検出は、 **sprintf_s**とは異なる場合があります。 **_L**サフィックスを持つこれらの関数のバージョンは、現在のスレッドロケールの代わりに渡されたロケールパラメーターを使用する点を除いて同じです。
+**swprintf_s** は **sprintf_s** のワイド文字バージョンです。 **swprintf_s** するポインター引数はワイド文字列です。 **Swprintf_s** でのエンコードエラーの検出は、 **sprintf_s** とは異なる場合があります。 **_L** サフィックスを持つこれらの関数のバージョンは、現在のスレッドロケールの代わりに渡されたロケールパラメーターを使用する点を除いて同じです。
 
 C++ では、これらの関数の使用はテンプレートのオーバーロードによって簡素化されます。オーバーロードでは、バッファー長を自動的に推論できる (サイズの引数を指定する必要がなくなる) だけでなく、古くてセキュリティが万全ではない関数を新しく安全な関数に自動的に置き換えることができます。 詳細については、「[セキュリティ保護されたテンプレート オーバーロード](../../c-runtime-library/secure-template-overloads.md)」を参照してください。
 

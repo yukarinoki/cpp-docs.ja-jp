@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: CMFCDropDownFrame クラス'
 title: CMFCDropDownFrame クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -16,12 +17,12 @@ helpviewer_keywords:
 - CMFCDropDownFrame [MFC], RecalcLayout
 - CMFCDropDownFrame [MFC], SetAutoDestroy
 ms.assetid: 09ff81a9-de00-43ec-9df9-b626f7728c4b
-ms.openlocfilehash: 62bab0fbde364406f35edb959abb6e55a9125504
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 9ab5cbaf600fe7970bdff229b43d34fd04c8fbb9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88840740"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97294042"
 ---
 # <a name="cmfcdropdownframe-class"></a>CMFCDropDownFrame クラス
 
@@ -80,7 +81,7 @@ class CMFCDropDownFrame : public CMiniFrameWnd
 
 [CMFCDropDownFrame](../../mfc/reference/cmfcdropdownframe-class.md)
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** afxdropdowntoolbar.h
 
@@ -184,11 +185,11 @@ void SetAutoDestroy(BOOL bAutoDestroy = TRUE);
 
 ### <a name="remarks"></a>解説
 
-*Bautodestroy*が TRUE の場合、デストラクターは、 `CMFCDropDownFrame` 関連付けられているドロップダウンツールバーウィンドウを破棄します。 既定値は TRUE です。
+*Bautodestroy* が TRUE の場合、デストラクターは、 `CMFCDropDownFrame` 関連付けられているドロップダウンツールバーウィンドウを破棄します。 既定値は TRUE です。
 
 ## <a name="see-also"></a>関連項目
 
 [階層図](../../mfc/hierarchy-chart.md)<br/>
-[クラス](../../mfc/reference/mfc-classes.md)<br/>
+[Classes](../../mfc/reference/mfc-classes.md)<br/>
 [CMFCDropDownToolBar クラス](../../mfc/reference/cmfcdropdowntoolbar-class.md)<br/>
 [CMFCDropDownToolbarButton クラス](../../mfc/reference/cmfcdropdowntoolbarbutton-class.md)

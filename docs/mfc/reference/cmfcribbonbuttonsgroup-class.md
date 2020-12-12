@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: CMFCRibbonButtonsGroup クラス'
 title: CMFCRibbonButtonsGroup クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -30,16 +31,16 @@ helpviewer_keywords:
 - CMFCRibbonButtonsGroup [MFC], SetImages
 - CMFCRibbonButtonsGroup [MFC], SetParentCategory
 ms.assetid: b993d93e-fc1a-472f-a87f-1d7b7b499845
-ms.openlocfilehash: d690e8bf306234e7b742a4c6a0917e5430d92d10
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: 0b86ce6ff21bd36daaac9d68ce511ae395141170
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81754106"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97293831"
 ---
 # <a name="cmfcribbonbuttonsgroup-class"></a>CMFCRibbonButtonsGroup クラス
 
-この`CMFCRibbonButtonsGroup`クラスでは、リボン ボタンのセットをグループに整理できます。 グループ内のすべてのボタンは互いに隣接して水平に並べられ、1 つの枠で囲まれます。
+`CMFCRibbonButtonsGroup`クラスを使用すると、一連のリボンボタンをグループにまとめることができます。 グループ内のすべてのボタンは互いに隣接して水平に並べられ、1 つの枠で囲まれます。
 
 ## <a name="syntax"></a>構文
 
@@ -59,25 +60,25 @@ class CMFCRibbonButtonsGroup : public CMFCRibbonBaseElement
 
 |名前|説明|
 |----------|-----------------|
-|[グループ:ボタンの追加](#addbutton)|ボタンをグループに追加します。|
-|[グループ:ボタンの追加](#addbuttons)|ボタンのリストをグループに追加します。|
-|[グループをクリックします。](#getbutton)|指定したインデックス位置にあるボタンへのポインターを返します。|
-|[グループを取得します。](#getcount)|グループ内のボタンの数を返します。|
-|[CMFCRibbonButtonsGroup::GetImageSize](#getimagesize)|リボン グループ内の通常のイメージのイメージ サイズを返します (オーバーライド[します](../../mfc/reference/cmfcribbonbaseelement-class.md#getimagesize)。|
-|[CMFCRibbonButtonsGroup::GetRegularSize](#getregularsize)|リボン要素の標準サイズを返します ([オーバーライド](../../mfc/reference/cmfcribbonbaseelement-class.md#getregularsize)します。|
-|[CMFCRibbonButtonsGroup::HasImages](#hasimages)|オブジェクトにツールバー`CMFCRibbonButtonsGroup`イメージが含まれているかどうかを報告します。|
-|[CMFCRibbonButtonsGroup::OnDrawImage](#ondrawimage)|ボタンが標準であるか、強調表示されているか、または無効であるかに応じて、指定したボタンに適したイメージを描画します。|
-|[CMFCRibbonButtonsGroup::RemoveAll](#removeall)|オブジェクトからすべてのボタンを`CMFCRibbonButtonsGroup`削除します。|
-|[グループ::セットイメージズ](#setimages)|グループにイメージを割り当てます。|
-|[CMFCRibbonButtonsGroup::SetParentCategory](#setparentcategory)|オブジェクトの親`CMFCRibbonCategory`とその中のすべてのボタンを設定します (オーバーライドします。 [CMFCRibbonBaseElement::SetParentCategory](../../mfc/reference/cmfcribbonbaseelement-class.md#setparentcategory) `CMFCRibbonButtonsGroup`|
+|[CMFCRibbonButtonsGroup:: AddButton](#addbutton)|グループにボタンを追加します。|
+|[CMFCRibbonButtonsGroup:: AddButtons](#addbuttons)|グループにボタンの一覧を追加します。|
+|[CMFCRibbonButtonsGroup:: GetButton](#getbutton)|指定したインデックス位置にあるボタンへのポインターを返します。|
+|[CMFCRibbonButtonsGroup:: GetCount](#getcount)|グループ内のボタンの数を返します。|
+|[CMFCRibbonButtonsGroup::GetImageSize](#getimagesize)|リボングループ内の通常のイメージのイメージサイズを返します ( [CMFCRibbonBaseElement:: GetImageSize](../../mfc/reference/cmfcribbonbaseelement-class.md#getimagesize)をオーバーライドします)。|
+|[CMFCRibbonButtonsGroup::GetRegularSize](#getregularsize)|リボン要素の標準サイズを返します ( [CMFCRibbonBaseElement:: GetRegularSize](../../mfc/reference/cmfcribbonbaseelement-class.md#getregularsize)をオーバーライドします)。|
+|[CMFCRibbonButtonsGroup::HasImages](#hasimages)|`CMFCRibbonButtonsGroup`オブジェクトにツールバー画像が含まれているかどうかを報告します。|
+|[CMFCRibbonButtonsGroup::OnDrawImage](#ondrawimage)|ボタンが通常、強調表示、または無効になっているかどうかに応じて、指定したボタンの適切なイメージを描画します。|
+|[CMFCRibbonButtonsGroup::RemoveAll](#removeall)|オブジェクトからすべてのボタンを削除 `CMFCRibbonButtonsGroup` します。|
+|[CMFCRibbonButtonsGroup:: SetImages](#setimages)|グループにイメージを割り当てます。|
+|[CMFCRibbonButtonsGroup::SetParentCategory](#setparentcategory)|`CMFCRibbonCategory`オブジェクトの親 `CMFCRibbonButtonsGroup` とその中のすべてのボタンを設定します ( [CMFCRibbonBaseElement:: setparentcategory](../../mfc/reference/cmfcribbonbaseelement-class.md#setparentcategory)をオーバーライドします)。|
 
 ## <a name="remarks"></a>解説
 
-グループは[CMFCBaseRibbonElement から](../../mfc/reference/cmfcribbonbaseelement-class.md)派生し、単一のエンティティとして操作できます。 グループは、任意のパネルまたはポップアップメニューに配置できます。
+このグループは、 [Cmfcbaseribbonelement](../../mfc/reference/cmfcribbonbaseelement-class.md) から派生し、単一のエンティティとして操作できます。 グループは、任意のパネルまたはポップアップメニューに配置できます。
 
 ## <a name="example"></a>例
 
-`CMFCRibbonButtonsGroup` クラスのさまざまなメソッドの使用方法を次の例に示します。 この例では、オブジェクトの`CMFCRibbonButtonsGroup`作成方法、リボン ボタンのグループにイメージを割り当て、リボン ボタンのグループにボタンを追加する方法を示します。 このコード スニペットは、「 [クライアント サンプルの描画](../../overview/visual-cpp-samples.md)」の一部です。
+`CMFCRibbonButtonsGroup` クラスのさまざまなメソッドの使用方法を次の例に示します。 この例では、オブジェクトを構築し `CMFCRibbonButtonsGroup` 、リボンのボタンのグループにイメージを割り当て、リボンのボタンのグループにボタンを追加する方法を示します。 このコード スニペットは、「 [クライアント サンプルの描画](../../overview/visual-cpp-samples.md)」の一部です。
 
 [!code-cpp[NVC_MFC_DrawClient#2](../../mfc/reference/codesnippet/cpp/cmfcribbonbuttonsgroup-class_1.cpp)]
 
@@ -89,13 +90,13 @@ class CMFCRibbonButtonsGroup : public CMFCRibbonBaseElement
 
 [CMFCRibbonButtonsGroup](../../mfc/reference/cmfcribbonbuttonsgroup-class.md)
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-**ヘッダー:** afxリボンボタングループ.h
+**ヘッダー:** afxribbonbuttonsgroup
 
-## <a name="cmfcribbonbuttonsgroupaddbutton"></a><a name="addbutton"></a>グループ:ボタンの追加
+## <a name="cmfcribbonbuttonsgroupaddbutton"></a><a name="addbutton"></a> CMFCRibbonButtonsGroup:: AddButton
 
-ボタンをグループに追加します。
+グループにボタンを追加します。
 
 ```cpp
 void AddButton(CMFCRibbonBaseElement* pButton);
@@ -103,12 +104,12 @@ void AddButton(CMFCRibbonBaseElement* pButton);
 
 ### <a name="parameters"></a>パラメーター
 
-*ボタン*<br/>
-[in]追加するボタンへのポインター。
+*pButton*<br/>
+から追加するボタンへのポインター。
 
-## <a name="cmfcribbonbuttonsgroupaddbuttons"></a><a name="addbuttons"></a>グループ:ボタンの追加
+## <a name="cmfcribbonbuttonsgroupaddbuttons"></a><a name="addbuttons"></a> CMFCRibbonButtonsGroup:: AddButtons
 
-ボタンのリストをグループに追加します。
+グループにボタンの一覧を追加します。
 
 ```cpp
 void AddButtons(
@@ -117,10 +118,10 @@ void AddButtons(
 
 ### <a name="parameters"></a>パラメーター
 
-*ボタン*<br/>
-[in]追加するボタンへのポインターのリスト。
+*lstButtons*<br/>
+から追加するボタンへのポインターのリスト。
 
-## <a name="cmfcribbonbuttonsgroupcmfcribbonbuttonsgroup"></a><a name="cmfcribbonbuttonsgroup"></a>グループ::CMFCリボンボタングループ
+## <a name="cmfcribbonbuttonsgroupcmfcribbonbuttonsgroup"></a><a name="cmfcribbonbuttonsgroup"></a> CMFCRibbonButtonsGroup:: CMFCRibbonButtonsGroup
 
 `CMFCRibbonButtonsGroup` オブジェクトを構築します。
 
@@ -131,14 +132,14 @@ CMFCRibbonButtonsGroup(CMFCRibbonBaseElement* pButton);
 
 ### <a name="parameters"></a>パラメーター
 
-*ボタン*<br/>
-[in]新しく作成`CMFCRibbonButtonsGroup`したオブジェクトに追加するボタンを指定します。
+*pButton*<br/>
+から新しく作成されたオブジェクトに追加するボタンを指定し `CMFCRibbonButtonsGroup` ます。
 
 ### <a name="return-value"></a>戻り値
 
 ### <a name="remarks"></a>解説
 
-## <a name="cmfcribbonbuttonsgroupgetbutton"></a><a name="getbutton"></a>グループをクリックします。
+## <a name="cmfcribbonbuttonsgroupgetbutton"></a><a name="getbutton"></a> CMFCRibbonButtonsGroup:: GetButton
 
 指定したインデックス位置にあるボタンへのポインターを返します。
 
@@ -148,16 +149,16 @@ CMFCRibbonBaseElement* GetButton(int i) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*私*<br/>
-[in]返すボタンの 0 から始まるインデックス。
+*i*<br/>
+から返されるボタンの0から始まるインデックス。
 
 ### <a name="return-value"></a>戻り値
 
-指定したインデックス位置にあるボタンへのポインター。 指定したインデックスが範囲外の場合は NULL です。
+指定したインデックス位置にあるボタンへのポインター。 指定されたインデックスが範囲外の場合は NULL です。
 
 ### <a name="remarks"></a>解説
 
-## <a name="cmfcribbonbuttonsgroupgetcount"></a><a name="getcount"></a>グループを取得します。
+## <a name="cmfcribbonbuttonsgroupgetcount"></a><a name="getcount"></a> CMFCRibbonButtonsGroup:: GetCount
 
 グループ内のボタンの数を返します。
 
@@ -169,9 +170,9 @@ int GetCount() const;
 
 グループ内のボタンの数。
 
-## <a name="cmfcribbonbuttonsgroupgetimagesize"></a><a name="getimagesize"></a>グループ::イメージサイズ
+## <a name="cmfcribbonbuttonsgroupgetimagesize"></a><a name="getimagesize"></a> CMFCRibbonButtonsGroup:: GetImageSize
 
-保護された`CMFCToolBarImages`メンバ`m_Images`のソース イメージ サイズを取得します。
+保護されたメンバーのソースイメージのサイズを取得し `CMFCToolBarImages` `m_Images` ます。
 
 ```
 const CSize GetImageSize() const;
@@ -179,13 +180,13 @@ const CSize GetImageSize() const;
 
 ### <a name="return-value"></a>戻り値
 
-ツール バー イメージのソース イメージ サイズ (存在する場合)`CSize`を返します。
+ツールバーイメージ (存在する場合) のソースイメージサイズを返し `CSize` ます。それ以外の場合は0を返します。
 
 ### <a name="remarks"></a>解説
 
-## <a name="cmfcribbonbuttonsgroupgetregularsize"></a><a name="getregularsize"></a>グループ::ゲットレギュラーサイズ
+## <a name="cmfcribbonbuttonsgroupgetregularsize"></a><a name="getregularsize"></a> CMFCRibbonButtonsGroup:: GetRegularSize
 
-リボン グループ要素の最大サイズを取得します。
+リボングループ要素の最大サイズを取得します。
 
 ```
 virtual CSize GetRegularSize(CDC* pDC);
@@ -194,15 +195,15 @@ virtual CSize GetRegularSize(CDC* pDC);
 ### <a name="parameters"></a>パラメーター
 
 *pDC*<br/>
-[in]リボン グループのデバイス コンテキストへのポインター。
+からリボングループのデバイスコンテキストへのポインター。
 
 ### <a name="return-value"></a>戻り値
 
 ### <a name="remarks"></a>解説
 
-## <a name="cmfcribbonbuttonsgrouphasimages"></a><a name="hasimages"></a>グループ::HasImages
+## <a name="cmfcribbonbuttonsgrouphasimages"></a><a name="hasimages"></a> CMFCRibbonButtonsGroup:: HasImages
 
-オブジェクトにツールバー`CMFCRibbonButtonsGroup`イメージが含まれているかどうかを報告します。
+`CMFCRibbonButtonsGroup`オブジェクトにツールバー画像が含まれているかどうかを報告します。
 
 ```
 BOOL HasImages() const;
@@ -210,13 +211,13 @@ BOOL HasImages() const;
 
 ### <a name="return-value"></a>戻り値
 
-保護された`CMFCToolBarImages`メンバー`m_Images`にイメージが含まれている場合は TRUE を返し、含まれていない場合は FALSE を返します。
+保護された `CMFCToolBarImages` メンバーに `m_Images` 画像が含まれている場合は TRUE、そうでない場合は FALSE を返します。
 
 ### <a name="remarks"></a>解説
 
-## <a name="cmfcribbonbuttonsgroupondrawimage"></a><a name="ondrawimage"></a>グループ::アドオン
+## <a name="cmfcribbonbuttonsgroupondrawimage"></a><a name="ondrawimage"></a> CMFCRibbonButtonsGroup:: OnDrawImage
 
-ボタンが標準であるか、強調表示されているか、または無効であるかに応じて、指定したボタンに適したイメージを描画します。
+ボタンが通常、強調表示、または無効になっているかどうかに応じて、指定したボタンの適切なイメージを描画します。
 
 ```
 virtual void OnDrawImage(
@@ -229,22 +230,22 @@ virtual void OnDrawImage(
 ### <a name="parameters"></a>パラメーター
 
 *pDC*<br/>
-[in]`CMFCRibbonButtonsGroup`オブジェクトのデバイス コンテキストへのポインター。
+からオブジェクトのデバイスコンテキストへのポインター `CMFCRibbonButtonsGroup` 。
 
-*レクトイメージ*<br/>
-[in]イメージを描画する四角形。
+*rectImage*<br/>
+からイメージを描画する四角形。
 
-*ボタン*<br/>
-[in]イメージを描画するボタン。
+*pButton*<br/>
+からイメージを描画するボタン。
 
-*インデックスを使用します。*<br/>
-[in]ボタンに描画するイメージのインデックス (通常のボタン、ハイライトされたボタン、または無効になっている 3 つのイメージ配列のいずれか)。
+*nImageIndex*<br/>
+からボタン上に描画するイメージのインデックス (通常、強調表示、または無効になっているボタンの3つのイメージ配列のいずれか)。
 
 ### <a name="remarks"></a>解説
 
-## <a name="cmfcribbonbuttonsgroupremoveall"></a><a name="removeall"></a>グループ::すべて削除
+## <a name="cmfcribbonbuttonsgroupremoveall"></a><a name="removeall"></a> CMFCRibbonButtonsGroup:: RemoveAll
 
-オブジェクトからすべてのボタンを`CMFCRibbonButtonsGroup`削除します。
+オブジェクトからすべてのボタンを削除 `CMFCRibbonButtonsGroup` します。
 
 ```cpp
 void RemoveAll();
@@ -252,9 +253,9 @@ void RemoveAll();
 
 ### <a name="remarks"></a>解説
 
-## <a name="cmfcribbonbuttonsgroupsetimages"></a><a name="setimages"></a>グループ::セットイメージズ
+## <a name="cmfcribbonbuttonsgroupsetimages"></a><a name="setimages"></a> CMFCRibbonButtonsGroup:: SetImages
 
-リボン ボタンのグループにイメージを割り当てます。
+リボンのボタンのグループにイメージを割り当てます。
 
 ```cpp
 void SetImages(
@@ -265,25 +266,25 @@ void SetImages(
 
 ### <a name="parameters"></a>パラメーター
 
-*pイメージズ*<br/>
-[in]通常の画像。
+*pImages*<br/>
+から通常の画像。
 
-*イメージズ*<br/>
-[in]ホット画像。
+*pHotImages*<br/>
+からホットイメージ。
 
-*を無効にします。*<br/>
-[in]無効な画像。
+*pDisabledImages*<br/>
+から無効なイメージ。
 
 ### <a name="remarks"></a>解説
 
-グループ`SetImages`にボタンを追加する前に電話をかけます。 画像の数は、グループに追加するボタンの数以上でなければなりません。
+`SetImages`グループにボタンを追加する前に、を呼び出します。 イメージの数は、グループに追加するボタンの数以上でなければなりません。
 
 > [!NOTE]
-> ホットイメージは、ユーザーがボタンの上に置いたときに表示される画像です。 無効にされたイメージとは、ボタンが無効になっているときに表示されるイメージです。
+> ホットイメージは、ユーザーがボタンの上にマウスを置いたときに表示されるイメージです。 無効な画像は、ボタンが無効になっているときに表示される画像です。
 
-## <a name="cmfcribbonbuttonsgroupsetparentcategory"></a><a name="setparentcategory"></a>グループ::親カテゴリを設定します。
+## <a name="cmfcribbonbuttonsgroupsetparentcategory"></a><a name="setparentcategory"></a> CMFCRibbonButtonsGroup:: SetParentCategory
 
-`CMFCRibbonButtonsGroup`オブジェクトの親`CMFCRibbonCategory`と、その中のすべてのボタンを設定します。
+`CMFCRibbonCategory`オブジェクトの親 `CMFCRibbonButtonsGroup` とその中のすべてのボタンを設定します。
 
 ```
 virtual void SetParentCategory(CMFCRibbonCategory* pCategory);
@@ -291,12 +292,12 @@ virtual void SetParentCategory(CMFCRibbonCategory* pCategory);
 
 ### <a name="parameters"></a>パラメーター
 
-*カテゴリ*<br/>
-[in]設定する親カテゴリへのポインター (リボン コントロールのタブ付きグループはカテゴリと呼ばれます)。
+*pCategory*<br/>
+から設定する親カテゴリへのポインター (リボンコントロールのタブ付きグループはカテゴリと呼ばれます)。
 
 ### <a name="remarks"></a>解説
 
 ## <a name="see-also"></a>関連項目
 
-[階層グラフ](../../mfc/hierarchy-chart.md)<br/>
+[階層図](../../mfc/hierarchy-chart.md)<br/>
 [クラス](../../mfc/reference/mfc-classes.md)

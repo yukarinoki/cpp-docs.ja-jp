@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: _splitpath、_wsplitpath'
 title: _splitpath、_wsplitpath
 ms.date: 4/2/2020
 api_name:
@@ -39,12 +40,12 @@ helpviewer_keywords:
 - path names
 - _tsplitpath function
 ms.assetid: 32bd76b5-1385-4ee8-a64c-abcb541cd2e4
-ms.openlocfilehash: 1d24565a912d74060e60024dcfd90b8018cae32d
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: d270cf15c00c42f350dafe0cd45dddbb2f6594c2
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82920280"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97292313"
 ---
 # <a name="_splitpath-_wsplitpath"></a>_splitpath、_wsplitpath
 
@@ -75,20 +76,20 @@ void _wsplitpath(
 完全パス。
 
 *駆動*<br/>
-ドライブ文字、コロン (**:**) の順に並べます。 ドライブ文字が不要な場合は、このパラメーターに**NULL**を渡すことができます。
+ドライブ文字、コロン (**:**) の順に並べます。 ドライブ文字が不要な場合は、このパラメーターに **NULL** を渡すことができます。
 
 *dir*<br/>
-末尾のスラッシュを含むディレクトリ パス。 スラッシュ ( **/** )、円記号 ( **\\** )、またはその両方を使用できます。 ディレクトリパスが不要な場合は、このパラメーターに**NULL**を渡すことができます。
+末尾のスラッシュを含むディレクトリ パス。 スラッシュ ( **/** )、円記号 ( **\\** )、またはその両方を使用できます。 ディレクトリパスが不要な場合は、このパラメーターに **NULL** を渡すことができます。
 
-*氏名*<br/>
-基本ファイル名 (拡張子なし)。 ファイル名が不要な場合は、このパラメーターに**NULL**を渡すことができます。
+*fname*<br/>
+基本ファイル名 (拡張子なし)。 ファイル名が不要な場合は、このパラメーターに **NULL** を渡すことができます。
 
 *ext*<br/>
-先頭のピリオド (**.**) を含むファイル名の拡張子。 ファイル名の拡張子が不要な場合は、このパラメーターに**NULL**を渡すことができます。
+先頭のピリオド (**.**) を含むファイル名の拡張子。 ファイル名の拡張子が不要な場合は、このパラメーターに **NULL** を渡すことができます。
 
 ## <a name="remarks"></a>解説
 
-**_Splitpath**関数は、パスを4つのコンポーネントに分割します。 **_splitpath**は、現在使用されているマルチバイトコードページに従ってマルチバイト文字シーケンスを認識し、マルチバイト文字列の引数を適切な方法で自動的に処理します。 **_wsplitpath**は **_splitpath**のワイド文字バージョンです。**_wsplitpath**する引数はワイド文字列です。 それ以外では、これらの関数の動作は同じです。
+**_Splitpath** 関数は、パスを4つのコンポーネントに分割します。 **_splitpath** は、現在使用されているマルチバイトコードページに従ってマルチバイト文字シーケンスを認識し、マルチバイト文字列の引数を適切な方法で自動的に処理します。 **_wsplitpath** は **_splitpath** のワイド文字バージョンです。 **_wsplitpath** する引数はワイド文字列です。 それ以外では、これらの関数の動作は同じです。
 
 **セキュリティに関するメモ** これらの関数は、バッファー オーバーランが原因で発生する潜在的な脅威の影響を受けます。 バッファー オーバーランは、システムを攻撃するときによく使用される方法であり、その結果、認められていない権限が昇格されます。 詳しくは、「 [バッファー オーバーランの回避](/windows/win32/SecBP/avoiding-buffer-overruns)」をご覧ください。 これらの関数のセキュリティを強化したバージョンを使用できます。「 [_splitpath_s、_wsplitpath_s」を](splitpath-s-wsplitpath-s.md)参照してください。
 
@@ -113,15 +114,15 @@ void _wsplitpath(
 |**_MAX_FNAME**|256|
 |**_MAX_EXT**|256|
 
-完全なパスにコンポーネント (たとえばファイル名) が含まれていない場合、 **_splitpath**は、対応するバッファーに空の文字列を割り当てます。
+完全なパスにコンポーネント (たとえばファイル名) が含まれていない場合、 **_splitpath** は、対応するバッファーに空の文字列を割り当てます。
 
-不要な*パス*以外のパラメーターの **_splitpath**に**NULL**を渡すことができます。
+不要な *パス* 以外のパラメーターの **_splitpath** に **NULL** を渡すことができます。
 
-*Path*が**NULL**の場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、 **errno**は**einval**に設定され、関数は**einval**を返します。
+*Path* が **NULL** の場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、 **errno** は **einval** に設定され、関数は **einval** を返します。
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**_splitpath**|\<stdlib.h>|
 |**_wsplitpath**|\<stdlib.h> または \<wchar.h>|
@@ -134,7 +135,7 @@ void _wsplitpath(
 
 ## <a name="see-also"></a>関連項目
 
-[ファイル処理](../../c-runtime-library/file-handling.md)<br/>
+[ファイルの処理](../../c-runtime-library/file-handling.md)<br/>
 [_fullpath、_wfullpath](fullpath-wfullpath.md)<br/>
 [_getmbcp](getmbcp.md)<br/>
 [_makepath、_wmakepath](makepath-wmakepath.md)<br/>

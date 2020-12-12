@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: CMFCRibbonBaseElement クラス'
 title: CMFCRibbonBaseElement クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -232,12 +233,12 @@ helpviewer_keywords:
 - CMFCRibbonBaseElement [MFC], OnProcessKey
 - CMFCRibbonBaseElement [MFC], OnSetFocus
 ms.assetid: 419ea91b-5062-44cc-b0a3-f87d29566f62
-ms.openlocfilehash: 18f158bd9e984c750769742c43c4dd3b65e5e731
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 9b6902c6f52b40b044c90d99835364f8c4f5a59f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88836635"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97293873"
 ---
 # <a name="cmfcribbonbaseelement-class"></a>CMFCRibbonBaseElement クラス
 
@@ -405,7 +406,7 @@ class CMFCRibbonBaseElement : public CObject
 
 [CMFCRibbonBaseElement](../../mfc/reference/cmfcribbonbaseelement-class.md)
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** afxbaseribbonelement.h
 
@@ -612,7 +613,7 @@ virtual CMFCRibbonBaseElement* Find(const CMFCRibbonBaseElement* pElement);
 
 ### <a name="return-value"></a>戻り値
 
-*Pelement*が現在のオブジェクトを指している場合は、リボン要素へのポインター。それ以外の場合は NULL。
+*Pelement* が現在のオブジェクトを指している場合は、リボン要素へのポインター。それ以外の場合は NULL。
 
 ### <a name="remarks"></a>解説
 
@@ -2155,7 +2156,7 @@ virtual void SetText(LPCTSTR lpszText);
 
 ### <a name="remarks"></a>解説
 
-リボン要素の keytip を設定するには、改行エスケープシーケンスの後に、 *lpszText*に keytip 文字を追加します。
+リボン要素の keytip を設定するには、改行エスケープシーケンスの後に、 *lpszText* に keytip 文字を追加します。
 
 ### <a name="example"></a>例
 

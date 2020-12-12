@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: isspace、iswspace、_isspace_l、_iswspace_l'
 title: isspace、iswspace、_isspace_l、_iswspace_l
 ms.date: 4/2/2020
 api_name:
@@ -40,12 +41,12 @@ helpviewer_keywords:
 - _istspace function
 - istspace function
 ms.assetid: b851e0c0-36bb-4dac-a1a3-533540939035
-ms.openlocfilehash: 3e03d97f2e6ca82671c74f551ab8c23a11af63c2
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: b55c8000bde9197d81919d663de1c6f52517596f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82916613"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97292599"
 ---
 # <a name="isspace-iswspace-_isspace_l-_iswspace_l"></a>isspace、iswspace、_isspace_l、_iswspace_l
 
@@ -72,7 +73,7 @@ int _iswspace_l(
 
 ### <a name="parameters"></a>パラメーター
 
-*40u-c*<br/>
+*c*<br/>
 テストする整数。
 
 *locale*<br/>
@@ -80,11 +81,11 @@ int _iswspace_l(
 
 ## <a name="return-value"></a>戻り値
 
-これらの各ルーチンは、 *c*が空白文字の特殊表現である場合は0以外の値を返します。 *c*が空白文字 (0x09 または 0x20) の場合、 **isspace**は0以外の値を返します。 **Isspace**関数のテスト条件の結果は、ロケールの**LC_CTYPE**カテゴリの設定によって異なります。詳細について[は、「setlocale、_wsetlocale](setlocale-wsetlocale.md) 」を参照してください。 **_L**サフィックスが付いていないこれらの関数のバージョンは、ロケールに依存する動作に現在のロケールを使用します。**_l**サフィックスが付いているバージョンは、代わりに渡されたロケールを使用する点を除いて同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
+これらの各ルーチンは、 *c* が空白文字の特殊表現である場合は0以外の値を返します。 *c* が空白文字 (0x09 または 0x20) の場合、 **isspace** は0以外の値を返します。 **Isspace** 関数のテスト条件の結果は、ロケールの **LC_CTYPE** カテゴリの設定によって異なります。詳細について [は、「setlocale、_wsetlocale](setlocale-wsetlocale.md) 」を参照してください。 **_L** サフィックスが付いていないこれらの関数のバージョンは、ロケールに依存する動作に現在のロケールを使用します。**_l** サフィックスが付いているバージョンは、代わりに渡されたロケールを使用する点を除いて同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
 
-*c*が標準の空白文字に対応するワイド文字である場合、 **iswspace**は0以外の値を返します。
+*c* が標準の空白文字に対応するワイド文字である場合、 **iswspace** は0以外の値を返します。
 
-*C*が EOF でない場合、または 0 ~ 0xff の範囲内にある場合、 **isspace**と **_isspace_l**の動作は未定義です。 デバッグ CRT ライブラリが使用され、 *c*がこれらの値のいずれでもない場合、関数はアサーションを発生させます。
+*C* が EOF でない場合、または 0 ~ 0xff の範囲内にある場合、 **isspace** と **_isspace_l** の動作は未定義です。 デバッグ CRT ライブラリが使用され、 *c* がこれらの値のいずれでもない場合、関数はアサーションを発生させます。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -98,7 +99,7 @@ int _iswspace_l(
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**isspace**|\<ctype.h>|
 |**iswspace**|\<ctype.h> または \<wchar.h>|
@@ -110,5 +111,5 @@ int _iswspace_l(
 ## <a name="see-also"></a>関連項目
 
 [文字分類](../../c-runtime-library/character-classification.md)<br/>
-[国](../../c-runtime-library/locale.md)<br/>
-[is、isw 系ルーチン](../../c-runtime-library/is-isw-routines.md)<br/>
+[ロケール](../../c-runtime-library/locale.md)<br/>
+[is、isw ルーチン](../../c-runtime-library/is-isw-routines.md)<br/>

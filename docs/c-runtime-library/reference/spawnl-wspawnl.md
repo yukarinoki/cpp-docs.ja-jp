@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: _spawnl、_wspawnl'
 title: _spawnl、_wspawnl
 ms.date: 11/04/2016
 api_name:
@@ -33,12 +34,12 @@ helpviewer_keywords:
 - wspawnl function
 - process creation
 ms.assetid: dd4584c9-7173-4fc5-b93a-6e7d3c2316d7
-ms.openlocfilehash: 4b51faae4ba6f371f712e4c39374ae9717c90bed
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 1e4550578334c994647bd8a244063c572cfd5616
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88834376"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97292547"
 ---
 # <a name="_spawnl-_wspawnl"></a>_spawnl、_wspawnl
 
@@ -77,11 +78,11 @@ intptr_t _wspawnl(
 実行されるファイルのパス。
 
 *arg0*、 *arg1*、... *argn*<br/>
-引数へのポインターのリスト。 *Arg0*引数は通常、 *cmdname*へのポインターです。 引数 *arg1* ~ *argn* は、新しい引数リストを形成する文字列へのポインターです。 *Argn*の後に、引数リストの末尾を示す**NULL**ポインターが必要です。
+引数へのポインターのリスト。 *Arg0* 引数は通常、 *cmdname* へのポインターです。 引数 *arg1* ~ *argn* は、新しい引数リストを形成する文字列へのポインターです。 *Argn* の後に、引数リストの末尾を示す **NULL** ポインターが必要です。
 
 ## <a name="return-value"></a>戻り値
 
-同期 **_spawnl**または **_wspawnl** (*モード*用に指定された **_P_WAIT** ) からの戻り値は、新しいプロセスの終了ステータスです。 非同期 **_spawnl**または **_wspawnl** (*モード*で指定された **_P_NOWAIT**または **_P_NOWAITO** ) からの戻り値がプロセスハンドルです。 プロセスが正常に終了した場合、終了ステータスは 0 です。 生成されたプロセスが明示的に0以外の引数で **終了** ルーチンを呼び出す場合は、終了ステータスを0以外の値に設定できます。 新しいプロセスが明示的に終了ステータスを正の値に設定しなかった場合、正の値の終了ステータスは中止または割り込みによる異常終了を示します。 戻り値-1 はエラーを示します (新しいプロセスは開始されません)。 この場合、 **errno** は次のいずれかの値に設定されます。
+同期 **_spawnl** または **_wspawnl** (*モード* 用に指定された **_P_WAIT** ) からの戻り値は、新しいプロセスの終了ステータスです。 非同期 **_spawnl** または **_wspawnl** (*モード* で指定された **_P_NOWAIT** または **_P_NOWAITO** ) からの戻り値がプロセスハンドルです。 プロセスが正常に終了した場合、終了ステータスは 0 です。 生成されたプロセスが明示的に0以外の引数で **終了** ルーチンを呼び出す場合は、終了ステータスを0以外の値に設定できます。 新しいプロセスが明示的に終了ステータスを正の値に設定しなかった場合、正の値の終了ステータスは中止または割り込みによる異常終了を示します。 戻り値-1 はエラーを示します (新しいプロセスは開始されません)。 この場合、 **errno** は次のいずれかの値に設定されます。
 
 | 値 | 説明 |
 |--|--|
@@ -93,7 +94,7 @@ intptr_t _wspawnl(
 
 リターン コードの詳細については、「[_doserrno、errno、_sys_errlist、および _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」を参照してください。
 
-これらの関数では、パラメーターの検証が行われます。 *Cmdname*または*arg0*が空の文字列または null ポインターの場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、これらの関数は **errno** を **EINVAL**に設定し、-1 を返します。 新しいプロセスは起動されません。
+これらの関数では、パラメーターの検証が行われます。 *Cmdname* または *arg0* が空の文字列または null ポインターの場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、これらの関数は **errno** を **EINVAL** に設定し、-1 を返します。 新しいプロセスは起動されません。
 
 ## <a name="remarks"></a>解説
 

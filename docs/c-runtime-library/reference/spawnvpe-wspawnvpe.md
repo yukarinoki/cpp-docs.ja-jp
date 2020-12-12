@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: _spawnvpe、_wspawnvpe'
 title: _spawnvpe、_wspawnvpe
 ms.date: 4/2/2020
 api_name:
@@ -36,12 +37,12 @@ helpviewer_keywords:
 - process creation
 - spawnvpe function
 ms.assetid: 3db6394e-a955-4837-97a1-fab1db1e6092
-ms.openlocfilehash: c35e693624676cf588c6b85334fadc7c7915b2a7
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 4c96d3356bd0212b6acf44fbe2e7d382b06545ca
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88831321"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97292391"
 ---
 # <a name="_spawnvpe-_wspawnvpe"></a>_spawnvpe、_wspawnvpe
 
@@ -83,7 +84,7 @@ intptr_t _wspawnvpe(
 
 ## <a name="return-value"></a>戻り値
 
-同期 **_spawnvpe**または **_wspawnvpe** (*モード*用に指定された **_P_WAIT** ) からの戻り値は、新しいプロセスの終了ステータスです。 非同期 **_spawnvpe**または **_wspawnvpe** (*モード*で指定された **_P_NOWAIT**または **_P_NOWAITO** ) からの戻り値がプロセスハンドルです。 プロセスが正常に終了した場合、終了ステータスは 0 です。 生成されたプロセスが明示的に0以外の引数で **終了** ルーチンを呼び出す場合は、終了ステータスを0以外の値に設定できます。 新しいプロセスが明示的に終了ステータスを正の値に設定しなかった場合、正の値の終了ステータスは中止または割り込みによる異常終了を示します。 戻り値-1 はエラーを示します (新しいプロセスは開始されません)。 この場合、 **errno** は次のいずれかの値に設定されます。
+同期 **_spawnvpe** または **_wspawnvpe** (*モード* 用に指定された **_P_WAIT** ) からの戻り値は、新しいプロセスの終了ステータスです。 非同期 **_spawnvpe** または **_wspawnvpe** (*モード* で指定された **_P_NOWAIT** または **_P_NOWAITO** ) からの戻り値がプロセスハンドルです。 プロセスが正常に終了した場合、終了ステータスは 0 です。 生成されたプロセスが明示的に0以外の引数で **終了** ルーチンを呼び出す場合は、終了ステータスを0以外の値に設定できます。 新しいプロセスが明示的に終了ステータスを正の値に設定しなかった場合、正の値の終了ステータスは中止または割り込みによる異常終了を示します。 戻り値-1 はエラーを示します (新しいプロセスは開始されません)。 この場合、 **errno** は次のいずれかの値に設定されます。
 
 | 値 | 説明 |
 |-|-|
@@ -99,7 +100,7 @@ intptr_t _wspawnvpe(
 
 これらの関数は、新しいプロセスを作成して実行し、コマンド ライン引数へポインターの配列を、および環境の設定へポインターの配列を渡します。 これらの関数は、 **PATH** 環境変数を使用して、実行するファイルを検索します。
 
-これらの関数では、パラメーターの検証が行われます。 *Cmdname*または*argv*が null ポインターの場合、または*argv*が null ポインターを指している場合、または*argv*[0] が空の文字列の場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、これらの関数は **errno** を **EINVAL**に設定し、-1 を返します。 新しいプロセスは起動されません。
+これらの関数では、パラメーターの検証が行われます。 *Cmdname* または *argv* が null ポインターの場合、または *argv* が null ポインターを指している場合、または *argv*[0] が空の文字列の場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、これらの関数は **errno** を **EINVAL** に設定し、-1 を返します。 新しいプロセスは起動されません。
 
 既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
