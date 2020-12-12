@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「InterfaceList 構造体」を参照してください。
 title: InterfaceList 構造体
 ms.date: 10/03/2018
 ms.topic: reference
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - InterfaceList structure
 ms.assetid: 6ec3228d-eb3e-4b7e-aef1-7dcf17bdf61a
-ms.openlocfilehash: 7fd06f71bc4d8097366dc0e87d7ff92c5a12a790
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 660ae5137b7ff41129ce3866f0d289045f7dee9c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80213864"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97124580"
 ---
 # <a name="interfacelist-structure"></a>InterfaceList 構造体
 
@@ -41,21 +42,21 @@ struct InterfaceList;
 
 ### <a name="public-typedefs"></a>パブリック typedef
 
-|Name|説明|
+|名前|説明|
 |----------|-----------------|
-|`FirstT`|テンプレートパラメーター *T*のシノニム。|
-|`RestT`|テンプレートパラメーター *U*のシノニム。|
+|`FirstT`|テンプレートパラメーター *T* のシノニム。|
+|`RestT`|テンプレートパラメーター *U* のシノニム。|
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
 `InterfaceList`
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **Header:** を実装します。
 
 **名前空間:** Microsoft:: WRL::D etails
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[Microsoft::WRL::Details 名前空間](microsoft-wrl-details-namespace.md)
+[Microsoft:: WRL::D etails 名前空間](microsoft-wrl-details-namespace.md)

@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: `__asm`'
 title: __asm
 ms.date: 10/09/2018
 f1_keywords:
@@ -9,18 +10,18 @@ helpviewer_keywords:
 - __asm keyword [C++], vs. asm blocks
 - __asm keyword [C++]
 ms.assetid: 77ff3bc9-a492-4b5e-85e1-fa4e414e79cd
-ms.openlocfilehash: 14a40bef5b2edba76fc130604414c45eee589bcd
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 5fa4e64bdb9ae4fc01e6e379de3e8a6771959e80
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87193004"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97118057"
 ---
 # `__asm`
 
 **Microsoft 固有の仕様**
 
-キーワードは、 **`__asm`** インラインアセンブラーを呼び出し、C または C++ のステートメントが有効であればどこにでも表示できます。 これは、単独では使用できません。 アセンブリ命令、中かっこで囲まれた命令グループ、または少なくとも空の中かっこの後で指定する必要があります。 ここでの "ブロック" という用語は、 **`__asm`** 中かっこで囲まれているかどうかにかかわらず、命令または命令のグループを指します。
+キーワードは、 **`__asm`** インラインアセンブラーを呼び出し、C または C++ のステートメントが有効であればどこにでも表示できます。 これは、単独では使用できません。 アセンブリ命令、中かっこで囲まれた命令グループ、または少なくとも空の中かっこの後で指定する必要があります。 " **`__asm`** ブロック" という用語は、ここでは、中かっこに囲まれているかどうかを問わず、命令または命令のグループを示します。
 
 > [!NOTE]
 > 標準 C++ キーワードの Visual C++ サポート **`asm`** は、コンパイラがキーワードでエラーを生成しないという事実に限定されています。 ただし、 **`asm`** ブロックは意味のあるコードを生成しません。 **`__asm`** の代わりにを使用 **`asm`** します。
@@ -47,11 +48,11 @@ Visual Studio 2005 より前の手順
 __asm int 3
 ```
 
-**/clr**を指定してコンパイルした場合、ネイティブコードが生成されませんでした。コンパイラは命令を CLR break 命令に変換しました。
+**/clr** を指定してコンパイルした場合、ネイティブコードが生成されませんでした。コンパイラは命令を CLR break 命令に変換しました。
 
 `__asm int 3` により現在は、関数のネイティブ コードが生成されるようになりました。 関数によってコード内のブレークポイントが発生するようにし、その関数を MSIL にコンパイルする場合は、 [__debugbreak](../../intrinsics/debugbreak.md)を使用します。
 
-以前のバージョンとの互換性を維持するために、 **`_asm`** **`__asm`** コンパイラオプションの [ [ \( 言語拡張を無効にする](../../build/reference/za-ze-disable-language-extensions.md)] が指定されていない限り、はのシノニムになります。
+以前のバージョンとの互換性を維持するために、 **`_asm`** **`__asm`** コンパイラオプションの [ [ \( 言語拡張を無効にする](../../build/reference/za-ze-disable-language-extensions.md) ] が指定されていない限り、はのシノニムになります。
 
 ## <a name="example"></a>例
 
@@ -65,7 +66,7 @@ __asm {
 }
 ```
 
-または、 **`__asm`** 各アセンブリ命令の前にを配置することもできます。
+または、各アセンブリ命令の前に **`__asm`** を置くことができます。
 
 ```cpp
 __asm mov al, 2

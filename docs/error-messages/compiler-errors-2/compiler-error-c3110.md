@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「コンパイラエラー C3110」を参照してください。
 title: コンパイラエラー C3110
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3110
 ms.assetid: 821dc71f-896e-4b2d-af0e-aa9932934b7b
-ms.openlocfilehash: 9eb3e54b8bd9b296ad9cd7e0b6ea2943c74d1dff
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 1e402941ea88a34c48f58df56a365f74c819a8e3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91498492"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97116055"
 ---
 # <a name="compiler-error-c3110"></a>コンパイラエラー C3110
 
@@ -23,7 +24,7 @@ ms.locfileid: "91498492"
 
 - [dispinterface](../../windows/attributes/dispinterface.md)
 
-- [dual](../../windows/attributes/dual.md)
+- [×](../../windows/attributes/dual.md)
 
 - [object](../../windows/attributes/object-cpp.md)
 

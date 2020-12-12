@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: DATE 型'
 title: 日付型
 ms.date: 11/04/2016
 f1_keywords:
@@ -11,18 +12,18 @@ helpviewer_keywords:
 - MFC, date and time
 - hour values representation
 ms.assetid: 695853ed-b614-4575-b793-b8c287372038
-ms.openlocfilehash: 5a6c1e1cca5b2cb978d6af4208377db1a2926357
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 6a0fd8f02abe5fd3ecb3695fd2715bfb3a573028
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91502184"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97167020"
 ---
 # <a name="date-type"></a>日付型
 
 日付型は、8バイトの浮動小数点数を使用して実装されます。 Days は、30年12月1899、午前0時 (時) の0から始まる整数値で表されます。 時間の値は、数値の小数部分の絶対値で表されます。 次の表は、いくつかの日付と、その日付型に相当する数値を示しています。
 
-|日付と時刻|[表記]|
+|日付と時刻|表現|
 |-------------------|--------------------|
 |1899年12月30日午前0時|0.00|
 |1年1月1900日午前0時|2.00|
@@ -41,7 +42,7 @@ DATE date 型およびクラスは、日付 `COleDateTime` と時刻を従来の
 
 - 日付タイムラインは、0未満の日付値 (1899 年12月30日より前) に対して不連続になります。 これは、日付値の整数部分は符号付きとして扱われ、小数部分は符号なしとして扱われるためです。 つまり、日付値の整数部分は正または負のどちらかになりますが、日付値の小数部は常に論理日付全体に追加されます。 次の表は、いくつかの例を示しています。
 
-|日付と時刻|[表記]|
+|日付と時刻|表現|
 |-------------------|--------------------|
 |27 1899 年12月27日午前0時|-3.00|
 |午後12時1899、正午|-2.50|
@@ -66,5 +67,5 @@ DATE date 型およびクラスは、日付 `COleDateTime` と時刻を従来の
 
 ## <a name="see-also"></a>関連項目
 
-[日時](../atl-mfc-shared/date-and-time.md)<br/>
+[日付と時刻](../atl-mfc-shared/date-and-time.md)<br/>
 [COleDateTime クラス](../atl-mfc-shared/reference/coledatetime-class.md)

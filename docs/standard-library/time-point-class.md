@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: time_point クラス'
 title: time_point クラス
 ms.date: 03/27/2019
 f1_keywords:
@@ -10,12 +11,12 @@ f1_keywords:
 ms.assetid: 18be1e52-57b9-489a-8a9b-f58894f0aaad
 helpviewer_keywords:
 - std::chrono [C++], time_point
-ms.openlocfilehash: e1de674d4a13ba465100923bffe6cba76e61ab4a
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: f9818c6ec3817608864fac0108d73666a0ef3bf9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81368028"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97167280"
 ---
 # <a name="time_point-class"></a>time_point クラス
 
@@ -58,16 +59,16 @@ class time_point;
 
 |名前|説明|
 |----------|-----------------|
-|[time_point::演算子+=](#op_add_eq)|指定した値を格納された期間に加算します。|
+|[time_point:: operator + =](#op_add_eq)|指定した値を格納された期間に加算します。|
 |[time_point::operator-=](#operator-_eq)|指定した値を格納された期間から減算します。|
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-**ヘッダー:**\<クロノ>
+**ヘッダー:**\<chrono>
 
 **名前空間:** std::chrono
 
-## <a name="time_pointmax"></a><a name="max"></a>time_point::最大
+## <a name="time_pointmax"></a><a name="max"></a> time_point:: max
 
 `time_point::ref` 型の値の上限の境界を返す静的メソッドです。
 
@@ -79,7 +80,7 @@ static constexpr time_point max();
 
 実際には、`time_point(duration::max())` を返します。
 
-## <a name="time_pointmin"></a><a name="min"></a>time_point::分
+## <a name="time_pointmin"></a><a name="min"></a> time_point:: min
 
 `time_point::ref` 型の値の下限の境界を返す静的メソッドです。
 
@@ -91,7 +92,7 @@ static constexpr time_point min();
 
 実際には、`time_point(duration::min())` を返します。
 
-## <a name="time_pointoperator"></a><a name="op_add_eq"></a>time_point::演算子+=
+## <a name="time_pointoperator"></a><a name="op_add_eq"></a> time_point:: operator + =
 
 指定した値を格納された [duration](../standard-library/duration-class.md) 値に加算します。
 
@@ -101,14 +102,14 @@ time_point& operator+=(const duration& Dur);
 
 ### <a name="parameters"></a>パラメーター
 
-*長調*\
+*期間*\
 `duration` オブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
 加算が実行された後の `time_point` オブジェクト。
 
-## <a name="time_pointoperator-"></a><a name="operator-_eq"></a>time_point::演算子-=
+## <a name="time_pointoperator-"></a><a name="operator-_eq"></a> time_point:: operator-=
 
 指定された値を格納された [duration](../standard-library/duration-class.md) 値から減算します。
 
@@ -118,14 +119,14 @@ time_point& operator-=(const duration& Dur);
 
 ### <a name="parameters"></a>パラメーター
 
-*長調*\
+*期間*\
 `duration` オブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
 減算が実行された後の `time_point` オブジェクト。
 
-## <a name="time_pointtime_point-constructor"></a><a name="time_point"></a>time_point::time_pointコンストラクタ
+## <a name="time_pointtime_point-constructor"></a><a name="time_point"></a> time_point:: time_point コンストラクター
 
 `time_point` オブジェクトを構築します。
 
@@ -140,21 +141,21 @@ constexpr time_point(const time_point<clock, Duration2>& Tp);
 
 ### <a name="parameters"></a>パラメーター
 
-*長調*\
+*期間*\
 [duration](../standard-library/duration-class.md) オブジェクト。
 
-*Tp*\
+*シン*\
 `time_point` オブジェクト。
 
 ### <a name="remarks"></a>解説
 
 最初のコンストラクターは、格納されている `duration` 値が [duration::zero](../standard-library/duration-class.md#zero) と等しいオブジェクトを構築します。
 
-2 番目のコンストラクターは、保存された duration 値が*Dur*に等しいオブジェクトを構築します。 true`is_convertible<Duration2, duration>`を持たない限り、2 番目のコンストラクターはオーバーロードの解決に参加しません。 詳しくは、「[<type_traits>](../standard-library/type-traits.md)」をご覧ください。
+2番目のコンストラクターは、格納された duration 値が *期間* に等しいオブジェクトを構築します。 が `is_convertible<Duration2, duration>` true を保持しない限り、2番目のコンストラクターはオーバーロードの解決に関与しません。 詳しくは、「[<type_traits>](../standard-library/type-traits.md)」をご覧ください。
 
 3 番目のコンストラクターは、`duration` を使用してその `Tp.time_since_epoch()` 値を初期化します。
 
-## <a name="time_pointtime_since_epoch"></a><a name="time_since_epoch"></a>time_point::time_since_epoch
+## <a name="time_pointtime_since_epoch"></a><a name="time_since_epoch"></a> time_point:: time_since_epoch
 
 格納されている [duration](../standard-library/duration-class.md) 値を取得します。
 
@@ -164,5 +165,5 @@ constexpr duration time_since_epoch() const;
 
 ## <a name="see-also"></a>関連項目
 
-[ヘッダー ファイル リファレンス](../standard-library/cpp-standard-library-header-files.md)\
-[\<クロノ>](../standard-library/chrono.md)
+[ヘッダーファイルのリファレンス](../standard-library/cpp-standard-library-header-files.md)\
+[\<chrono>](../standard-library/chrono.md)

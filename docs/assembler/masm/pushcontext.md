@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「PUSHCONTEXT」を参照してください。
 title: PUSHCONTEXT
 ms.date: 12/06/2019
 f1_keywords:
@@ -6,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - PUSHCONTEXT directive
 ms.assetid: 18e528ee-df6c-4ce6-8823-b35b40f757fd
-ms.openlocfilehash: 991cdd41e8bd180b210e949839eec091438a83e7
-ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
+ms.openlocfilehash: 29e0b99820181c749128fa451e8cdc59405460e9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75318606"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97125854"
 ---
 # <a name="pushcontext"></a>PUSHCONTEXT
 
-現在の*コンテキスト*の一部またはすべてを保存します。セグメントレジスタでは、基数値、リスティングおよび cref フラグ、またはプロセッサ/コプロセッサ値が想定されます。 *コンテキスト*は、(32 ビット masm のみ)、**基数**、**リスティング**、 **CPU** (32 ビット Masm のみ)、または**すべて**を**想定**できます。
+現在の *コンテキスト* の一部またはすべてを保存します。セグメントレジスタでは、基数値、リスティングおよび cref フラグ、またはプロセッサ/コプロセッサ値が想定されます。 *コンテキスト* は、(32 ビット masm のみ)、**基数**、**リスティング**、 **CPU** (32 ビット Masm のみ)、または **すべて** を **想定** できます。
 
 ## <a name="syntax"></a>構文
 

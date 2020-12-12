@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: time_put_byname クラス'
 title: time_put_byname クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - time_put_byname class
 ms.assetid: e08c2348-64d2-4ace-98b1-1496e14c7b1a
-ms.openlocfilehash: 4471c0df352a4d40d863ac36f0245cf8194f588c
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: b519b28b7af8f5b54f9150d1d84f68cd6695bc49
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72685467"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97167254"
 ---
 # <a name="time_put_byname-class"></a>time_put_byname クラス
 
-派生クラステンプレートは、型 `time_put` \< CharType, OutputIterator > のロケールファセットとして使用できるオブジェクトを表します。
+派生クラステンプレートは、型のロケールファセットとして使用できるオブジェクトを表し `time_put` \< CharType, OutputIterator > ます。
 
 ## <a name="syntax"></a>構文
 
@@ -40,22 +41,22 @@ protected:
 
 ### <a name="parameters"></a>パラメーター
 
-*@No__t_1*
+*_Locname*\
 ロケール名。
 
-*Refs \ (_c)*
+*_Refs*\
 最初の参照数。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-その動作は、[名前付き](../standard-library/locale-class.md#name)ロケール*名*によって決まります。 各コンストラクターは、 [time_put](../standard-library/time-put-class.md#time_put) \<CharType, OutputIterator > (`_Refs`) を使用して、その基本オブジェクトを初期化します。
+その動作は、 *_Locname*[名前付き](../standard-library/locale-class.md#name)ロケールによって決まります。 各コンストラクターは、 [time_put](../standard-library/time-put-class.md#time_put)() を使用して、その基本オブジェクトを初期化 \<CharType, OutputIterator> `_Refs` します。
 
-## <a name="requirements"></a>［要件］
+## <a name="requirements"></a>要件
 
-**ヘッダー:** \<locale>
+**ヘッダー:**\<locale>
 
 **名前空間:** std
 
 ## <a name="see-also"></a>関連項目
 
-[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[C++ 標準ライブラリのスレッドセーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)

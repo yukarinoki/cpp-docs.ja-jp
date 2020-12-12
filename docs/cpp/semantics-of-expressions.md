@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「式のセマンティクス」を参照してください。
 title: 式のセマンティクス
 ms.date: 11/19/2018
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - expression evaluation
 - expression evaluation, about expression evaluation
 ms.assetid: 4a792154-533b-48b9-8709-31bfc170f0a7
-ms.openlocfilehash: 43bcd98e0dbf14dada2643c0b731d3f6bae863e6
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: f5e038d8ea6de55463a60d7b21104c2e71accec1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87223604"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97116991"
 ---
 # <a name="semantics-of-expressions"></a>式のセマンティクス
 
@@ -20,7 +21,7 @@ ms.locfileid: "87223604"
 
 ## <a name="order-of-evaluation"></a>評価の順序
 
-次の例を考えてみましょう。
+次の例について考えます。
 
 ```cpp
 // Order_of_Evaluation.cpp
@@ -63,14 +64,14 @@ int main()
 
 ## <a name="notation-in-expressions"></a>式の表記
 
-C++ 言語では、オペランドを指定するときに、特定の互換性を指定します。 型のオペランドを必要とする演算子に対して許容されるオペランドの型を次の表に示し*ます。*
+C++ 言語では、オペランドを指定するときに、特定の互換性を指定します。 型のオペランドを必要とする演算子に対して許容されるオペランドの型を次の表に示し *ます。*
 
 ### <a name="operand-types-acceptable-to-operators"></a>演算子に適切なオペランドの型
 
 |想定される型|許可される型|
 |-------------------|-------------------|
-|*type*|**`const`***型*<br /> **`volatile`***型*<br /> *type*&<br /> **`const`***型*&<br /> **`volatile`***型*&<br /> `volatile const` *type*<br /> `volatile const`*型*&|
-|*type* \*|*type* \*<br /> **`const`***型*\*<br /> **`volatile`***型*\*<br /> `volatile const` *type* \*|
+|*type*|**`const`***型*<br /> **`volatile`***型*<br /> *type*&<br /> **`const`***型*&<br /> **`volatile`***型*&<br /> `volatile const`*型*<br /> `volatile const`*型*&|
+|*型*\*|*型*\*<br /> **`const`***型*\*<br /> **`volatile`***型*\*<br /> `volatile const`*型*\*|
 |**`const`***型*|*type*<br /> **`const`***型*<br />**`const`***型*&|
 |**`volatile`***型*|*type*<br /> **`volatile`***型*<br /> **`volatile`***型*&|
 

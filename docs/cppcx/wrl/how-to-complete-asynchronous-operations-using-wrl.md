@@ -1,38 +1,39 @@
 ---
+description: '詳細については、「方法: WRL を使用して非同期操作を完了する」を参照してください。'
 title: '方法: WRL を使用して非同期操作を完了する'
 ms.date: 11/04/2016
 ms.topic: reference
 ms.assetid: 02173eae-731b-49bc-b412-f1f69388b99d
-ms.openlocfilehash: 8e7e52342cf73a56c6c33d4d1f998f446d632ddd
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: f8c929d737f113d995b5d171896517b3d94a6aa4
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80213942"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97124593"
 ---
 # <a name="how-to-complete-asynchronous-operations-using-wrl"></a>方法: WRL を使用して非同期操作を完了する
 
-このドキュメントでは、Windows ランタイムC++テンプレートライブラリ (wrl) を使用して非同期操作を開始し、操作の完了時に作業を実行する方法について説明します。
+このドキュメントでは、Windows ランタイム C++ テンプレートライブラリ (WRL) を使用して非同期操作を開始し、操作の完了時に処理を実行する方法について説明します。
 
-このドキュメントでは、2 つの例を示します。 最初の例では、非同期タイマーを開始し、そのタイマーが期限切れになるのを待機します。 この例では、タイマー オブジェクトを作成するときに、非同期アクションを指定します。 2 番目の例では、バックグラウンド ワーカー スレッドを実行します。 この例では、`IAsyncInfo` インターフェイスを返す Windows ランタイムメソッドを使用する方法を示します。 [コールバック](callback-function-wrl.md)関数は、非同期操作の結果を処理するイベントハンドラーを指定できるようにするため、両方の例の重要な部分です。
+このドキュメントでは、2 つの例を示します。 最初の例では、非同期タイマーを開始し、そのタイマーが期限切れになるのを待機します。 この例では、タイマー オブジェクトを作成するときに、非同期アクションを指定します。 2 番目の例では、バックグラウンド ワーカー スレッドを実行します。 この例では、インターフェイスを返す Windows ランタイムメソッドを使用する方法を示し `IAsyncInfo` ます。 [コールバック](callback-function-wrl.md)関数は、非同期操作の結果を処理するイベントハンドラーを指定できるようにするため、両方の例の重要な部分です。
 
-コンポーネントのインスタンスを作成してプロパティ値を取得する、より基本的な例については、「[方法: Windows ランタイムコンポーネントをアクティブ化して使用](how-to-activate-and-use-a-windows-runtime-component-using-wrl.md)する」を参照してください。
+コンポーネントのインスタンスを作成してプロパティ値を取得する、より基本的な例については、「 [方法: Windows ランタイムコンポーネントをアクティブ化して使用](how-to-activate-and-use-a-windows-runtime-component-using-wrl.md)する」を参照してください。
 
 > [!TIP]
-> これらの例では、コールバックを定義するためにラムダ式を使用します。 関数オブジェクト (ファンクター)、関数ポインター、または[std:: function](../../standard-library/function-class.md)オブジェクトを使用することもできます。 C++ラムダ式の詳細については、「[ラムダ式](../../cpp/lambda-expressions-in-cpp.md)」を参照してください。
+> これらの例では、コールバックを定義するためにラムダ式を使用します。 関数オブジェクト (ファンクター)、関数ポインター、または [std:: function](../../standard-library/function-class.md) オブジェクトを使用することもできます。 C++ のラムダ式の詳細については、「 [ラムダ式](../../cpp/lambda-expressions-in-cpp.md)」を参照してください。
 
 ## <a name="example-working-with-a-timer"></a>例: タイマーを使用した作業
 
 以下の手順では、非同期タイマーを開始し、そのタイマーが期限切れになるのを待機します。 完全な例を次に示します。
 
 > [!WARNING]
-> 通常は、ユニバーサル Windows プラットフォーム (UWP C++ ) アプリで Windows ランタイムテンプレートライブラリを使用しますが、この例ではコンソールアプリを使用して説明します。 `wprintf_s` などの関数は、UWP アプリからは使用できません。 UWP アプリで使用できる型と関数の詳細については、「[ユニバーサル Windows プラットフォームアプリでサポートされない CRT 関数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)」および「 [Uwp アプリの Win32 および COM](/uwp/win32-and-com/win32-and-com-for-uwp-apps)」を参照してください。
+> 通常は、ユニバーサル Windows プラットフォーム (UWP) アプリで Windows ランタイム C++ テンプレートライブラリを使用しますが、この例ではコンソールアプリを使用して説明します。 などの関数 `wprintf_s` は、UWP アプリからは使用できません。 UWP アプリで使用できる型と関数の詳細については、「 [ユニバーサル Windows プラットフォームアプリでサポートされない CRT 関数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) 」および「 [Uwp アプリの Win32 および COM](/uwp/win32-and-com/win32-and-com-for-uwp-apps)」を参照してください。
 
-1. 必要な Windows ランタイム、Windows ランタイムC++テンプレートライブラリ、またはC++標準ライブラリのヘッダーを含めます (`#include`)。
+1. 必須の `#include` Windows ランタイム、Windows ランタイム C++ テンプレートライブラリ、または C++ 標準ライブラリのヘッダーを含めます。
 
    [!code-cpp[wrl-consume-async#2](../codesnippet/CPP/how-to-complete-asynchronous-operations-using-wrl_1.cpp)]
 
-   `Windows.System.Threading.h` は、非同期タイマーを使用するために必要な型を宣言します。
+   `Windows.System.Threading.h` 非同期タイマーを使用するために必要な型を宣言します。
 
    コードを読みやすくするために、.cpp ファイルでは `using namespace` ディレクティブを使用することをお勧めします。
 
@@ -44,9 +45,9 @@ ms.locfileid: "80213942"
 
    [!code-cpp[wrl-consume-async#4](../codesnippet/CPP/how-to-complete-asynchronous-operations-using-wrl_3.cpp)]
 
-   Windows ランタイムは、完全修飾名を使用して型を識別します。 `RuntimeClass_Windows_System_Threading_ThreadPoolTimer` パラメーターは、Windows ランタイムによって提供される文字列であり、必要なランタイムクラス名が含まれています。
+   Windows ランタイムは、完全修飾名を使用して型を識別します。 パラメーターは、 `RuntimeClass_Windows_System_Threading_ThreadPoolTimer` Windows ランタイムによって提供される文字列であり、必要なランタイムクラス名が含まれています。
 
-4. タイマーコールバックをメインアプリに同期する[イベント](event-class-wrl.md)オブジェクトを作成します。
+4. タイマーコールバックをメインアプリに同期する [イベント](event-class-wrl.md) オブジェクトを作成します。
 
    [!code-cpp[wrl-consume-async#5](../codesnippet/CPP/how-to-complete-asynchronous-operations-using-wrl_4.cpp)]
 
@@ -67,7 +68,7 @@ ms.locfileid: "80213942"
 
 ### <a name="compiling-the-code"></a>コードのコンパイル
 
-コードをコンパイルするには、コードをコピーし、Visual Studio プロジェクトに貼り付けるか、`wrl-consume-async.cpp` という名前のファイルに貼り付けてから、Visual Studio のコマンドプロンプトウィンドウで次のコマンドを実行します。
+コードをコンパイルするには、コードをコピーし、Visual Studio プロジェクトに貼り付けるか、という名前のファイルに貼り付けて `wrl-consume-async.cpp` から、Visual studio のコマンドプロンプトウィンドウで次のコマンドを実行します。
 
 `cl.exe wrl-consume-async.cpp runtimeobject.lib`
 
@@ -78,7 +79,7 @@ ms.locfileid: "80213942"
 > [!TIP]
 > この例では、`ABI::Windows::Foundation::IAsyncAction` インターフェイスを使用して作業する方法を示します。 `IAsyncInfo`、`IAsyncAction`、`IAsyncActionWithProgress`、`IAsyncOperation`、および `IAsyncOperationWithProgress` を実装するすべてのインターフェイスに、このパターンを追加できます。
 
-1. 必要な Windows ランタイム、Windows ランタイムC++テンプレートライブラリ、またはC++標準ライブラリのヘッダーを含めます (`#include`)。
+1. 必須の `#include` Windows ランタイム、Windows ランタイム C++ テンプレートライブラリ、または C++ 標準ライブラリのヘッダーを含めます。
 
    [!code-cpp[wrl-consume-asyncOp#2](../codesnippet/CPP/how-to-complete-asynchronous-operations-using-wrl_8.cpp)]
 
@@ -94,7 +95,7 @@ ms.locfileid: "80213942"
 
    [!code-cpp[wrl-consume-asyncOp#4](../codesnippet/CPP/how-to-complete-asynchronous-operations-using-wrl_10.cpp)]
 
-4. ワーカースレッドの完了をメインアプリに同期する[イベント](event-class-wrl.md)オブジェクトを作成します。
+4. ワーカースレッドの完了をメインアプリに同期する [イベント](event-class-wrl.md) オブジェクトを作成します。
 
    [!code-cpp[wrl-consume-asyncOp#5](../codesnippet/CPP/how-to-complete-asynchronous-operations-using-wrl_11.cpp)]
 
@@ -117,10 +118,10 @@ ms.locfileid: "80213942"
 
 ### <a name="compiling-the-code"></a>コードのコンパイル
 
-コードをコンパイルするには、コードをコピーし、Visual Studio プロジェクトに貼り付けるか、`wrl-consume-asyncOp.cpp` という名前のファイルに貼り付けてから、 **Visual studio のコマンドプロンプト**ウィンドウで次のコマンドを実行します。
+コードをコンパイルするには、コードをコピーし、Visual Studio プロジェクトに貼り付けるか、という名前のファイルに貼り付けて `wrl-consume-asyncOp.cpp` から、 **visual Studio のコマンドプロンプト** ウィンドウで次のコマンドを実行します。
 
 `cl.exe wrl-consume-asyncOp.cpp runtimeobject.lib`
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [Windows ランタイム C++ テンプレート ライブラリ (WRL)](windows-runtime-cpp-template-library-wrl.md)

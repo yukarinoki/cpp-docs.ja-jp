@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: #using ディレクティブ (C++/CLI)'
 title: '#using ディレクティブ (C++/CLI)'
 ms.date: 08/29/2019
 f1_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - LIBPATH environment variable
 - preprocessor, directives
 ms.assetid: 870b15e5-f361-40a8-ba1c-c57d75c8809a
-ms.openlocfilehash: 0245eb15219585421be83def0258415ab4b573b6
-ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
+ms.openlocfilehash: 5903e3b5af4cd6ee40e0b087d52d1bd0115b1c6f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90684262"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97167527"
 ---
 # <a name="using-directive-ccli"></a>#using ディレクティブ (C++/CLI)
 
@@ -35,13 +36,13 @@ Microsoft 中間言語 (MSIL) *`.dll`* 、 *`.exe`* 、、 *`.netmodule`* また
 `#using <MyComponent.dll>`
 
 **`as_friend`**\
-*ファイル*内のすべての型がアクセス可能であることを指定します。 詳細については、「 [フレンドアセンブリ (C++)](../dotnet/friend-assemblies-cpp.md)」を参照してください。
+*ファイル* 内のすべての型がアクセス可能であることを指定します。 詳細については、「 [フレンドアセンブリ (C++)](../dotnet/friend-assemblies-cpp.md)」を参照してください。
 
-## <a name="remarks"></a>注釈
+## <a name="remarks"></a>解説
 
 *ファイル* は、マネージデータとマネージコンストラクト用にインポートする Microsoft 中間言語 (MSIL) ファイルにすることができます。 DLL にアセンブリマニフェストが含まれている場合は、マニフェストで参照されるすべての Dll がインポートされます。 作成中のアセンブリによって、メタデータ内の *ファイル* がアセンブリ参照として一覧表示されます。
 
-*ファイル*にアセンブリが含まれていない (*ファイル*がモジュールである) 場合、現在の (アセンブリ) アプリケーションのモジュールからの型情報を使用しないことが考えられます。 [/Assemblymodule](../build/reference/assemblymodule-add-a-msil-module-to-the-assembly.md)を使用して、モジュールがアセンブリの一部であることを示すことができます。 その場合、アセンブリを参照するすべてのアプリケーションで、そのモジュール内の型を使用できます。
+*ファイル* にアセンブリが含まれていない (*ファイル* がモジュールである) 場合、現在の (アセンブリ) アプリケーションのモジュールからの型情報を使用しないことが考えられます。 [/Assemblymodule](../build/reference/assemblymodule-add-a-msil-module-to-the-assembly.md)を使用して、モジュールがアセンブリの一部であることを示すことができます。 その場合、アセンブリを参照するすべてのアプリケーションで、そのモジュール内の型を使用できます。
 
 使用する代わりに、 **`#using`** [/fu](../build/reference/fu-name-forced-hash-using-file.md) コンパイラオプションを使用することもできます。
 
@@ -93,7 +94,7 @@ public:
 };
 ```
 
-次の例では、コンパイラは、 *using_assembly_A.dll*の参照に関するエラーを報告しません。これは、プログラムが *using_assembly_A .cpp*で定義されている型を使用しないためです。
+次の例では、コンパイラは、 *using_assembly_A.dll* の参照に関するエラーを報告しません。これは、プログラムが *using_assembly_A .cpp* で定義されている型を使用しないためです。
 
 ```cpp
 // using_assembly_C.cpp

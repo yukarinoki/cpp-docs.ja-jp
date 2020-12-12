@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: _mm_cvtss_si64x'
 title: _mm_cvtss_si64x
 ms.date: 09/02/2019
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - cvtss2si intrinsic
 - _mm_cvtss_si64x intrinsic
 ms.assetid: c279aff2-ee29-4271-8829-3ec691bf7718
-ms.openlocfilehash: bc6e33da5ac7b25727f6e24c3af6e6a926b29847
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 5b62b373305899920d5206b16c19f9b557f30bba
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87230507"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97167696"
 ---
 # <a name="_mm_cvtss_si64x"></a>_mm_cvtss_si64x
 
@@ -31,13 +32,13 @@ __int64 _mm_cvtss_si64x(
 ### <a name="parameters"></a>パラメーター
 
 *数値*\
-から**`__m128`** 浮動小数点値を格納している構造体。
+から **`__m128`** 浮動小数点値を格納している構造体。
 
 ## <a name="return-value"></a>戻り値
 
 1番目の浮動小数点値を整数に変換した結果の64ビット整数。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 |Intrinsic|アーキテクチャ|
 |---------------|------------------|

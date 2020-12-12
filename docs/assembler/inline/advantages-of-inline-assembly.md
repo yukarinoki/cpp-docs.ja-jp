@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「インラインアセンブリの利点」を参照してください。
 title: インライン アセンブラーの長所
 ms.date: 08/30/2018
 helpviewer_keywords:
@@ -6,18 +7,18 @@ helpviewer_keywords:
 - inline assembly [C++], about inline assembly
 - inline assembly [C++], using
 ms.assetid: 94364d97-faa7-4bdf-8473-570956986c51
-ms.openlocfilehash: 7e634f78eca753487cf122ac95df55828bb64625
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 066824a4ad63641f33712219dd8364b0edf7259b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80169657"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97118070"
 ---
 # <a name="advantages-of-inline-assembly"></a>インライン アセンブラーの長所
 
 **Microsoft 固有の仕様**
 
-インライン アセンブラーは別のアセンブリとリンクの手順を必要としないので、別のアセンブラーより便利です。 インライン アセンブラー コードでは、スコープ内にある C 変数や関数名を使用できるので、プログラムの C コードと簡単に統合できます。 アセンブリコードは、C またC++はステートメントとインラインで混在させることができるため、c またC++はでは煩雑で、不可能なタスクを実行できます。
+インライン アセンブラーは別のアセンブリとリンクの手順を必要としないので、別のアセンブラーより便利です。 インライン アセンブラー コードでは、スコープ内にある C 変数や関数名を使用できるので、プログラムの C コードと簡単に統合できます。 アセンブリコードは C または C++ のステートメントを使用してインラインで混在させることができるため、C または C++ では煩雑または不可能なタスクを実行できます。
 
 インラインアセンブリの使用方法は次のとおりです。
 
@@ -33,6 +34,6 @@ ms.locfileid: "80169657"
 
 **Microsoft 固有の仕様はここまで**
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[インライン アセンブラー](../../assembler/inline/inline-assembler.md)<br/>
+[インラインアセンブラー](../../assembler/inline/inline-assembler.md)<br/>

@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: Assembly-Language のコメント'
 title: アセンブリ言語のコメント
 ms.date: 08/30/2018
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - macros [C++], assembly language
 - __asm keyword [C++], instructions
 ms.assetid: 0dc10850-77f5-426e-9dab-185ea28e06e4
-ms.openlocfilehash: 2e993bd48c7ec801abd440676c80a5bd8f7b42ec
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 704f5275afe5cb5629b2e7667fe9107417512198
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87192731"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97118005"
 ---
 # <a name="assembly-language-comments"></a>アセンブリ言語のコメント
 

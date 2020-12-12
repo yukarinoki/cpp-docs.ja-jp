@@ -1,53 +1,54 @@
 ---
-title: CStringT による文字列クラスをエクスポートします。
+description: 詳細については、「CStringT を使用した文字列クラスのエクスポート」をご覧ください。
+title: CStringT を使用した文字列クラスのエクスポート
 ms.date: 11/04/2016
 helpviewer_keywords:
 - CStringT class, exporting strings
 ms.assetid: bdfc441e-8d2a-461c-9885-46178066c09f
-ms.openlocfilehash: a4ee73d2ae5cfb7bf9834fb23eed8470b7d29445
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8876ea04f1252e4f5861a950b04dabcd99d6a804
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62252741"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97166994"
 ---
-# <a name="exporting-string-classes-using-cstringt"></a>CStringT による文字列クラスをエクスポートします。
+# <a name="exporting-string-classes-using-cstringt"></a>CStringT を使用した文字列クラスのエクスポート
 
-派生した MFC 開発者まで、`CString`独自の文字列クラスを専門とします。 Microsoft Visual C .net (MFC 8.0)、 [CString](../atl-mfc-shared/using-cstring.md)クラスは、という名前のテンプレート クラスによって置き換えられました[CStringT](../atl-mfc-shared/reference/cstringt-class.md)します。 これには、いくつかの利点が用意されています。
+以前は、MFC 開発者は、から派生し、 `CString` 独自の文字列クラスを特殊化していました。 Microsoft Visual C++ .NET (MFC 8.0) では、 [CString](../atl-mfc-shared/using-cstring.md) クラスが [CStringT](../atl-mfc-shared/reference/cstringt-class.md)と呼ばれるテンプレートクラスに置き換えられました。 これにはいくつかの利点があります。
 
-- MFC が許可されている`CString`ATL で使用されるクラスは、大規模な MFC のスタティック ライブラリまたは DLL にリンクせずプロジェクトします。
+- これにより、MFC `CString` クラスを ATL プロジェクトで使用できるようになりました。これにより、より大きな mfc スタティックライブラリまたは DLL がリンクされることはありません。
 
-- 新しい`CStringT`カスタマイズするテンプレート クラスは、 `CString` C++ 標準ライブラリでテンプレートのような文字特性を指定するテンプレート パラメーターを使用して動作します。
+- 新しいテンプレートクラスを使用すると、 `CStringT` `CString` C++ 標準ライブラリのテンプレートと同様に、文字の特徴を指定するテンプレートパラメーターを使用して動作をカスタマイズできます。
 
-- DLL を使用してから、独自の文字列クラスをエクスポートする`CStringT`、コンパイラが自動的にエクスポート、`CString`基本クラス。 `CString`テンプレート クラス自体は、コンパイラが認識しない限りには、使用すると、コンパイラでインスタンス化を`CString`DLL からインポートされます。 リンカーは乗算定義のエラーのシンボルが発生したことがあります Visual C 6.0 から Visual C .NET にプロジェクトを移行した場合`CString`の競合により、 `CString` DLL と、ローカルでインスタンス化されたバージョンからインポートします。 これを行う適切な方法を以下に示します。
+- を使用して DLL から独自の文字列クラスをエクスポートすると、コンパイラによって `CStringT` 基本クラスも自動的にエクスポートされ `CString` ます。 `CString`はそれ自体がテンプレートクラスであるため、コンパイラが DLL からインポートしたことを認識しない限り、コンパイラによってインスタンス化される可能性があり `CString` ます。 Visual C++ 6.0 から Visual C++ .NET にプロジェクトを移行した場合、 `CString` DLL およびローカルでインスタンス化されたバージョンからインポートされたの競合が原因で、乗算されたのリンカーシンボルエラーが発生することがあり `CString` ます。 これを行うための適切な方法を以下に示します。
 
-次のシナリオには、重複して定義されたクラスのシンボル エラーを生成するために、リンカーが発生します。 エクスポートすることを前提としています、 `CString`-派生クラス (`CMyString`) MFC 拡張 DLL から。
+次のシナリオでは、定義された多重クラスのシンボルエラーがリンカーによって生成されます。 `CString`派生クラス ( `CMyString` ) を MFC 拡張 DLL からエクスポートするとします。
 
 [!code-cpp[NVC_MFC_DLL#6](../atl-mfc-shared/codesnippet/cpp/exporting-string-classes-using-cstringt_1.cpp)]
 
-コンシューマー コードの組み合わせを使用して`CString`と`CMyString`します。 プリコンパイル済みヘッダー、およびいくつかの使用状況の"MyString.h"が含まれていない`CString`が`CMyString`表示します。
+コンシューマーコードは、との組み合わせを使用し `CString` `CMyString` ます。 "MyString" がプリコンパイル済みヘッダーに含まれておらず、の一部の使用方法が表示されてい `CString` ません `CMyString` 。
 
-使用することを前提としています、`CString`と`CMyString`Source1.cpp および Source2.cpp、別のソース ファイル内のクラス。 Source1.cpp でを使用して`CMyString`と #include MyString.h します。 Source2.cpp でを使用して`CString`、そうでない #include MyString.h します。 この場合、リンカーは不満の`CStringT`複数回定義されています。 これが原因で`CString`をエクスポートする DLL からインポートした両方のされる`CMyString`、を通じてコンパイラによってローカルでインスタンス化し、`CStringT`テンプレート。
+`CString`クラスとクラスを別々の `CMyString` ソースファイル (Source1 と Source2) で使用するとします。 Source1 では、とを使用して MyString を #include します。 `CMyString` Source2 では、を使用します `CString` が、MyString は #include ません。 この場合、リンカーは乗算が定義されていることを通知 `CStringT` します。 これは、を `CString` エクスポートする DLL からインポートしたもの `CMyString` と、テンプレートを使用してコンパイラによってローカルでインスタンス化されたものの両方があることによって発生し `CStringT` ます。
 
-この問題を解決するには、次の操作を行います。
+この問題を解決するには、次の手順を実行します。
 
-エクスポート`CStringA`と`CStringW`(および必要な基本クラス) MFC90 から。DLL です。 MFC を含むプロジェクトが MFC DLL エクスポートを使用して常に`CStringA`と`CStringW`以前の MFC 実装のようにします。
+`CStringA`と `CStringW` (および必要な基本クラス) を MFC90.DLL からエクスポートします。 MFC を含むプロジェクトは、 `CStringA` 以前の mfc の実装のように、およびでエクスポートされた MFC DLL を常に使用し `CStringW` ます。
 
-使用して、エクスポート可能な派生クラスを作成し、`CStringT`テンプレートとして`CStringT_Exported`たとえば以下に示します。
+次に示すように、テンプレートを使用してエクスポート可能な派生クラスを作成し `CStringT` `CStringT_Exported` ます。次に例を示します。
 
 [!code-cpp[NVC_MFC_DLL#7](../atl-mfc-shared/codesnippet/cpp/exporting-string-classes-using-cstringt_2.cpp)]
 
-AfxStr.h で置き換える前`CString`、 `CStringA`、および`CStringW`typedef として次のとおりです。
+AfxStr で、前 `CString` の、 `CStringA` 、および `CStringW` typedef を次のように置き換えます。
 
 [!code-cpp[NVC_MFC_DLL#8](../atl-mfc-shared/codesnippet/cpp/exporting-string-classes-using-cstringt_3.cpp)]
 
-これにはいくつかの注意事項があります。
+いくつかの注意点があります。
 
-- エクスポートする必要がありますいない`CStringT`自体をエクスポートする特殊な ATL 専用のプロジェクトが生じるため`CStringT`クラス。
+- これによって、 `CStringT` ATL 専用プロジェクトによって特殊なクラスがエクスポートされるため、エクスポートしないでください `CStringT` 。
 
-- クラスから派生した、エクスポートを使用して`CStringT`再実装することを最小限に抑えます`CStringT`機能します。 追加のコードをコンス トラクターの転送に限定されます、`CStringT`基本クラス。
+- からエクスポート可能な派生クラスを使用すると、 `CStringT` 機能を再実装する必要が最小限に抑えら `CStringT` れます。 追加のコードは、コンストラクターを基底クラスに転送する場合にのみ制限され `CStringT` ます。
 
-- `CString`、 `CStringA`、および`CStringW`のみマークされている必要があります`__declspec(dllexport/dllimport)`DLL を共有するときに、MFC で構築しています。 エクスポートこれらのクラスをマークする場合は、MFC のスタティック ライブラリとリンク、いない必要があります。それ以外の場合、内部使用`CString`、`CStringA`と`CStringW`ユーザー Dll をマークする内部`CString`もエクスポートします。
+- `CString`、 `CStringA` 、およびは、 `CStringW` `__declspec(dllexport/dllimport)` MFC 共有 DLL を使用してビルドする場合にのみマークする必要があります。 MFC スタティックライブラリとリンクする場合は、これらのクラスをエクスポート済みとしてマークしないでください。そうしないと、ユーザー Dll 内で、、およびを内部で使用して `CString` `CStringA` も、エクスポート済みとし `CStringW` てマークされ `CString` ます。
 
 ## <a name="related-topics"></a>関連トピック
 

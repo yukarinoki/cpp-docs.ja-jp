@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: インターフェイスクラス (C++/CLI および C++/CX)'
 title: interface class (C++/CLI および C++/CX)
 ms.date: 10/12/2018
 ms.topic: reference
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - interface class keyword
 - interface struct keyword
 ms.assetid: 3ccea701-f50b-4da7-ad6b-f0ee1203e2b9
-ms.openlocfilehash: 8a637332110fa18a7a5803d7512c643e29d66eab
-ms.sourcegitcommit: 68ae6f9ea17f32734b32bb06ffeec12d8d33f0fe
+ms.openlocfilehash: 8d6fd1eda0ddaaf6ab995e09ad1d84f78fcc91be
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87807746"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97119021"
 ---
 # <a name="interface-class--ccli-and-ccx"></a>interface class (C++/CLI および C++/CX)
 
@@ -42,7 +43,7 @@ interface_access interface struct name : inherit_access base_interface {};
 *base_interface*<br/>
 (省略可能) インターフェイス *name* の基底インターフェイス。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 **interface struct** は **interface class** と同等です。
 
@@ -52,7 +53,7 @@ interface_access interface struct name : inherit_access base_interface {};
 
 インターフェイスから派生するクラスまたは構造体は、インターフェイスのすべてのメンバーを実装する必要があります。 インターフェイス *name* の実装時に、`base_interface` の一覧のインターフェイスも実装する必要があります。
 
-詳細については次を参照してください:
+詳細については、次を参照してください。
 
 - [インターフェイス静的コンストラクター](../dotnet/how-to-define-an-interface-static-constructor-cpp-cli.md)
 
@@ -66,25 +67,25 @@ interface_access interface struct name : inherit_access base_interface {};
 
 ## <a name="windows-runtime"></a>Windows ランタイム
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 (この言語機能には Windows ランタイムのみに適用される特記事項がありません。)
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 コンパイラ オプション: `/ZW`
 
 ## <a name="common-language-runtime"></a>共通言語ランタイム
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 (この言語機能には共通言語ランタイムのみに適用される特記事項がありません。)
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 コンパイラ オプション: `/clr`
 
-### <a name="examples"></a>使用例
+### <a name="examples"></a>例
 
 次のコード例では、インターフェイスで clock 関数の動作を定義する方法を示します。
 

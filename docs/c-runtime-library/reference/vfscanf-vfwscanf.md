@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「vfscanf、vfwscanf」を参照してください。
 title: vfscanf、vfwscanf
 ms.date: 11/04/2016
 api_name:
@@ -24,12 +25,12 @@ f1_keywords:
 - _vftscanf
 - vfscanf
 ms.assetid: c06450ef-03f1-4d24-a8ac-d2dd98847918
-ms.openlocfilehash: 72591c9fa91855745f45f3f77c88dd0ed5b001a0
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: c087451d7b5a11b8c7cb6af63c9e009971ee87a4
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70945520"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97120593"
 ---
 # <a name="vfscanf-vfwscanf"></a>vfscanf、vfwscanf
 
@@ -63,15 +64,15 @@ int vfwscanf(
 
 ## <a name="return-value"></a>戻り値
 
-これらの関数は、正常に変換および代入されたフィールドの数を返します。読み込まれただけで代入されなかったフィールドは戻り値には含まれません。 戻り値が 0 の場合は、代入されたフィールドがなかったことを示します。 エラーが発生した場合、または最初の変換の前にファイルストリームの末尾に到達した場合、 **vfscanf**と**vfwscanf**の戻り値は**EOF**になります。
+これらの関数は、正常に変換および代入されたフィールドの数を返します。読み込まれただけで代入されなかったフィールドは戻り値には含まれません。 戻り値が 0 の場合は、代入されたフィールドがなかったことを示します。 エラーが発生した場合、または最初の変換の前にファイルストリームの末尾に到達した場合、 **vfscanf** と **vfwscanf** の戻り値は **EOF** になります。
 
-これらの関数では、パラメーターの検証が行われます。 *Stream*または*format*が null ポインターの場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、これらの関数は**EOF**を返し、 **errno**を**EINVAL**に設定します。
+これらの関数では、パラメーターの検証が行われます。 *Stream* または *format* が null ポインターの場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、これらの関数は **EOF** を返し、 **errno** を **EINVAL** に設定します。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-**Vfscanf**関数は、*ストリーム*の現在位置から、 *arglist*引数リストによって指定された位置にデータを読み取ります。 リストの各引数は、*形式*の型指定子に対応する型の変数へのポインターである必要があります。 *format*は、入力フィールドの解釈を制御し、 **scanf**の*format*引数と同じ形式と機能を持ちます。*形式*の説明については、「 [scanf](scanf-scanf-l-wscanf-wscanf-l.md) 」を参照してください。
+**Vfscanf** 関数は、*ストリーム* の現在位置から、 *arglist* 引数リストによって指定された位置にデータを読み取ります。 リストの各引数は、 *形式* の型指定子に対応する型の変数へのポインターである必要があります。 *format* は、入力フィールドの解釈を制御し、 **scanf** の *format* 引数と同じ形式と機能を持ちます。*形式* の説明については、「 [scanf](scanf-scanf-l-wscanf-wscanf-l.md) 」を参照してください。
 
-**vfwscanf**は、ワイド文字バージョンの**vfscanf**です。**vfwscanf**の format 引数は、ワイド文字列です。 ストリームが ANSI モードで開かれている場合、これらの関数の動作は同じになります。 **vfscanf**は、UNICODE ストリームからの入力をサポートしていません。
+**vfwscanf** は、ワイド文字バージョンの **vfscanf** です。 **vfwscanf** の format 引数は、ワイド文字列です。 ストリームが ANSI モードで開かれている場合、これらの関数の動作は同じになります。 **vfscanf** は、UNICODE ストリームからの入力をサポートしていません。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -79,16 +80,16 @@ int vfwscanf(
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_vftscanf**|**vfscanf**|**vfscanf**|**vfwscanf**|
 
-詳細については、「[Format Specification Fields: scanf and wscanf Functions](../../c-runtime-library/format-specification-fields-scanf-and-wscanf-functions.md)」(scanf 関数と wscanf 関数の書式指定フィールド) をご覧ください。
+詳細については、「[scanf 関数と wscanf 関数の書式指定フィールド](../../c-runtime-library/format-specification-fields-scanf-and-wscanf-functions.md)」を参照してください。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-|関数|必須ヘッダー|
+|機能|必須ヘッダー|
 |--------------|---------------------|
 |**vfscanf**|\<stdio.h>|
 |**vfwscanf**|\<stdio.h> または \<wchar.h>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
 ## <a name="example"></a>例
 

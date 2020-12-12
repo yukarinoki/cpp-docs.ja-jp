@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: timed_mutex クラス'
 title: timed_mutex クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - std::timed_mutex [C++], try_lock_for
 - std::timed_mutex [C++], try_lock_until
 - std::timed_mutex [C++], unlock
-ms.openlocfilehash: 3329c46f0760a13693507de18a09b974b6b646e2
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: af701a8f1f3777fb7f760c3eed561bd3dae5f21f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87212099"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97167228"
 ---
 # <a name="timed_mutex-class"></a>timed_mutex クラス
 
-*Timed mutex 型*を表します。 この型のオブジェクトは、プログラム内での時間制限ブロックを使った相互排他を強制するのに使用されます。
+*Timed mutex 型* を表します。 この型のオブジェクトは、プログラム内での時間制限ブロックを使った相互排他を強制するのに使用されます。
 
 ## <a name="syntax"></a>構文
 
@@ -54,13 +55,13 @@ class timed_mutex;
 |[try_lock_until](#try_lock_until)|指定した時刻まで `mutex` の所有権の取得を試みます。|
 |[ロック](#unlock)|`mutex` の所有権を解放します。|
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:**\<mutex>
 
 **名前空間:** std
 
-## <a name="timed_mutexlock"></a><a name="lock"></a>timed_mutex:: lock
+## <a name="timed_mutexlock"></a><a name="lock"></a> timed_mutex:: lock
 
 呼び出しスレッドが `mutex` の所有権を取得するまでそのスレッドをブロックします。
 
@@ -72,7 +73,7 @@ void lock();
 
 呼び出しスレッドが既に `mutex` を所有している場合の動作は未定義です。
 
-## <a name="timed_mutextimed_mutex-constructor"></a><a name="timed_mutex"></a>timed_mutex:: timed_mutex コンストラクター
+## <a name="timed_mutextimed_mutex-constructor"></a><a name="timed_mutex"></a> timed_mutex:: timed_mutex コンストラクター
 
 ロックされていない `timed_mutex` オブジェクトを構築します。
 
@@ -80,7 +81,7 @@ void lock();
 timed_mutex();
 ```
 
-## <a name="timed_mutextimed_mutex-destructor"></a><a name="dtortimed_mutex_destructor"></a>timed_mutex:: ~ timed_mutex デストラクター
+## <a name="timed_mutextimed_mutex-destructor"></a><a name="dtortimed_mutex_destructor"></a> timed_mutex:: ~ timed_mutex デストラクター
 
 `mutex` オブジェクトによって使用されるすべてのリソースを解放します。
 
@@ -92,7 +93,7 @@ timed_mutex();
 
 デストラクターの実行時にオブジェクトがロックされる場合の動作は未定義です。
 
-## <a name="timed_mutextry_lock"></a><a name="try_lock"></a>timed_mutex:: try_lock
+## <a name="timed_mutextry_lock"></a><a name="try_lock"></a> timed_mutex:: try_lock
 
 ブロックせずに `mutex` の所有権を取得しようとします。
 
@@ -108,7 +109,7 @@ bool try_lock();
 
 呼び出しスレッドが既に `mutex` を所有している場合の動作は未定義です。
 
-## <a name="timed_mutextry_lock_for"></a><a name="try_lock_for"></a>timed_mutex:: try_lock_for
+## <a name="timed_mutextry_lock_for"></a><a name="try_lock_for"></a> timed_mutex:: try_lock_for
 
 ブロックせずに `mutex` の所有権を取得しようとします。
 
@@ -130,7 +131,7 @@ bool try_lock_for(const chrono::duration<Rep, Period>& Rel_time);
 
 呼び出しスレッドが既に `mutex` を所有している場合の動作は未定義です。
 
-## <a name="timed_mutextry_lock_until"></a><a name="try_lock_until"></a>timed_mutex:: try_lock_until
+## <a name="timed_mutextry_lock_until"></a><a name="try_lock_until"></a> timed_mutex:: try_lock_until
 
 ブロックせずに `mutex` の所有権を取得しようとします。
 
@@ -154,7 +155,7 @@ bool try_lock_until(const xtime* Abs_time);
 
 呼び出しスレッドが既に `mutex` を所有している場合の動作は未定義です。
 
-## <a name="timed_mutexunlock"></a><a name="unlock"></a>timed_mutex:: unlock
+## <a name="timed_mutexunlock"></a><a name="unlock"></a> timed_mutex:: unlock
 
 `mutex` の所有権を解放します。
 

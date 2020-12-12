@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: _heapadd'
 title: _heapadd
 ms.date: 11/04/2016
 api_name:
@@ -24,12 +25,12 @@ helpviewer_keywords:
 - heaps, adding memory
 - heapadd function
 ms.assetid: 4d691fe2-2763-49f4-afb1-62738b7cd3ff
-ms.openlocfilehash: c5eeb66ff0e6fb05063ec395e12cd97106ad724d
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 0270f84de2c543e37f089418b833011c2d83230d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81351329"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97120683"
 ---
 # <a name="_heapadd"></a>_heapadd
 
@@ -52,7 +53,7 @@ int _heapadd(
 *memblock*<br/>
 ヒープ メモリへのポインター。
 
-*サイズ*<br/>
+*size*<br/>
 追加するメモリのサイズ (バイト単位)。
 
 ## <a name="return-value"></a>戻り値
@@ -67,7 +68,7 @@ Visual C++ のバージョン 4.0 以降では、新しいデバッグ機能を�
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|オプション ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|オプション ヘッダー|
 |-------------|---------------------|---------------------|
 |`_heapadd`|\<malloc.h>|\<errno.h>|
 
@@ -75,8 +76,8 @@ Visual C++ のバージョン 4.0 以降では、新しいデバッグ機能を�
 
 ## <a name="see-also"></a>関連項目
 
-[メモリ割り当て](../c-runtime-library/memory-allocation.md)<br/>
-[無料](../c-runtime-library/reference/free.md)<br/>
+[メモリの割り当て](../c-runtime-library/memory-allocation.md)<br/>
+[free](../c-runtime-library/reference/free.md)<br/>
 [_heapchk](../c-runtime-library/reference/heapchk.md)<br/>
 [_heapmin](../c-runtime-library/reference/heapmin.md)<br/>
 [_heapset](../c-runtime-library/heapset.md)<br/>

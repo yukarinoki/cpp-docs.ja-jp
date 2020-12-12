@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: InterfaceTraits 構造体'
 title: InterfaceTraits 構造体
 ms.date: 10/03/2018
 ms.topic: reference
@@ -19,12 +20,12 @@ helpviewer_keywords:
 - Microsoft::WRL::Details::InterfaceTraits::IidCount constant
 - Microsoft::WRL::Details::InterfaceTraits::Verify method
 ms.assetid: ede0c284-19a7-4892-9738-ff3da4923d0a
-ms.openlocfilehash: c08c6e8bbcc16120dd44da69a2933fc3ec42f387
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 8dfa540119b0a120ea7b8d9365a0e8b8203939b1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87216571"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97124528"
 ---
 # <a name="interfacetraits-structure"></a>InterfaceTraits 構造体
 
@@ -61,7 +62,7 @@ struct __declspec(novtable) InterfaceTraits<Nil>;
 
 ## <a name="members"></a>メンバー
 
-### <a name="public-typedefs"></a><a name="public-typedefs"></a>パブリック Typedef
+### <a name="public-typedefs"></a><a name="public-typedefs"></a> パブリック Typedef
 
 名前   | 説明
 ------ | ------------------------------------------
@@ -87,13 +88,13 @@ struct __declspec(novtable) InterfaceTraits<Nil>;
 
 `InterfaceTraits`
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **Header:** を実装します。
 
 **名前空間:** Microsoft:: WRL::D etails
 
-## <a name="interfacetraitscancastto"></a><a name="cancastto"></a>InterfaceTraits:: CanCastTo
+## <a name="interfacetraitscancastto"></a><a name="cancastto"></a> InterfaceTraits:: CanCastTo
 
 は WRL インフラストラクチャをサポートします。独自に作成したコードから直接使用するためのものではありません。
 
@@ -115,19 +116,19 @@ static __forceinline bool CanCastTo(
 のインターフェイス ID `Base` 。
 
 *ppv*<br/>
-この操作が成功した場合、 *ppv*はによって指定されたインターフェイスをポイントし `Base` ます。 それ以外の場合、 *ppv*はに設定され **`nullptr`** ます。
+この操作が成功した場合、 *ppv* はによって指定されたインターフェイスをポイントし `Base` ます。 それ以外の場合、 *ppv* はに設定され **`nullptr`** ます。
 
 ### <a name="return-value"></a>戻り値
 
-**`true`** この操作が成功し、 *ptr*がへのポインターにキャストされている場合は `Base` 。それ以外の場合は **`false`** 。
+**`true`** この操作が成功し、 *ptr* がへのポインターにキャストされている場合は `Base` 。それ以外の場合は **`false`** 。
 
 ### <a name="remarks"></a>解説
 
 指定したポインターをへのポインターにキャストできるかどうかを示し `Base` ます。
 
-の詳細については `Base` 、「[パブリック typedef](#public-typedefs) 」セクションを参照してください。
+の詳細については `Base` 、「 [パブリック typedef](#public-typedefs) 」セクションを参照してください。
 
-## <a name="interfacetraitscasttobase"></a><a name="casttobase"></a>InterfaceTraits:: CastToBase
+## <a name="interfacetraitscasttobase"></a><a name="casttobase"></a> InterfaceTraits:: CastToBase
 
 は WRL インフラストラクチャをサポートします。独自に作成したコードから直接使用するためのものではありません。
 
@@ -141,10 +142,10 @@ static __forceinline Base* CastToBase(
 ### <a name="parameters"></a>パラメーター
 
 *T*<br/>
-パラメーター *ptr*の型。
+パラメーター *ptr* の型。
 
 *ptr*<br/>
-型*T*へのポインター。
+型 *T* へのポインター。
 
 ### <a name="return-value"></a>戻り値
 
@@ -154,9 +155,9 @@ static __forceinline Base* CastToBase(
 
 指定したポインターをへのポインターにキャストし `Base` ます。
 
-の詳細については `Base` 、「[パブリック typedef](#public-typedefs) 」セクションを参照してください。
+の詳細については `Base` 、「 [パブリック typedef](#public-typedefs) 」セクションを参照してください。
 
-## <a name="interfacetraitscasttounknown"></a><a name="casttounknown"></a>InterfaceTraits:: CastToUnknown
+## <a name="interfacetraitscasttounknown"></a><a name="casttounknown"></a> InterfaceTraits:: CastToUnknown
 
 は WRL インフラストラクチャをサポートします。独自に作成したコードから直接使用するためのものではありません。
 
@@ -170,10 +171,10 @@ static __forceinline IUnknown* CastToUnknown(
 ### <a name="parameters"></a>パラメーター
 
 *T*<br/>
-パラメーター *ptr*の型。
+パラメーター *ptr* の型。
 
 *ptr*<br/>
-*T*型へのポインター。
+*T* 型へのポインター。
 
 ### <a name="return-value"></a>戻り値
 
@@ -183,9 +184,9 @@ static __forceinline IUnknown* CastToUnknown(
 
 指定したポインターをへのポインターにキャストし `IUnknown` ます。
 
-の詳細については `Base` 、「[パブリック typedef](#public-typedefs) 」セクションを参照してください。
+の詳細については `Base` 、「 [パブリック typedef](#public-typedefs) 」セクションを参照してください。
 
-## <a name="interfacetraitsfillarraywithiid"></a><a name="fillarraywithiid"></a>InterfaceTraits:: FillArrayWithIid
+## <a name="interfacetraitsfillarraywithiid"></a><a name="fillarraywithiid"></a> InterfaceTraits:: FillArrayWithIid
 
 は WRL インフラストラクチャをサポートします。独自に作成したコードから直接使用するためのものではありません。
 
@@ -210,9 +211,9 @@ __forceinline static void FillArrayWithIid(
 
 この API の名前とは対照的に、1つの配列要素のみが変更されます。配列全体ではありません。
 
-の詳細については `Base` 、「[パブリック typedef](#public-typedefs) 」セクションを参照してください。
+の詳細については `Base` 、「 [パブリック typedef](#public-typedefs) 」セクションを参照してください。
 
-## <a name="interfacetraitsiidcount"></a><a name="iidcount"></a>InterfaceTraits:: IidCount
+## <a name="interfacetraitsiidcount"></a><a name="iidcount"></a> InterfaceTraits:: IidCount
 
 は WRL インフラストラクチャをサポートします。独自に作成したコードから直接使用するためのものではありません。
 
@@ -224,7 +225,7 @@ static const unsigned long IidCount = 1;
 
 現在のオブジェクトに関連付けられているインターフェイス Id の数を保持し `InterfaceTraits` ます。
 
-## <a name="interfacetraitsverify"></a><a name="verify"></a>InterfaceTraits:: Verify
+## <a name="interfacetraitsverify"></a><a name="verify"></a> InterfaceTraits:: Verify
 
 は WRL インフラストラクチャをサポートします。独自に作成したコードから直接使用するためのものではありません。
 
@@ -236,4 +237,4 @@ __forceinline static void Verify();
 
 が適切に派生していることを確認 `Base` します。
 
-の詳細については `Base` 、「[パブリック typedef](#public-typedefs) 」セクションを参照してください。
+の詳細については `Base` 、「 [パブリック typedef](#public-typedefs) 」セクションを参照してください。

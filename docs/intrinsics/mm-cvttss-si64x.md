@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: _mm_cvttss_si64x'
 title: _mm_cvttss_si64x
 ms.date: 09/02/2019
 f1_keywords:
@@ -7,18 +8,18 @@ helpviewer_keywords:
 - _mm_cvttss_si64x intrinsic
 - cvttss2si instruction
 ms.assetid: f9a3fd07-5bd8-4758-8744-6315c082cf87
-ms.openlocfilehash: 6d920a5c59cacb23c7fb155c7ac8e813a9b0e8d0
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: a4af7b726d0f15099586bc94348ab4ba7ebf5b8e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87217988"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97167631"
 ---
 # <a name="_mm_cvttss_si64x"></a>_mm_cvttss_si64x
 
 **Microsoft 固有の仕様**
 
-切り捨ての単精度浮動小数点数を64ビット整数 () 命令に変換した x64 拡張バージョンを出力し `cvttss2si` ます。
+切り捨てを使用した変換の x64 拡張バージョンを出力し Single-Precision Floating-Point Number を64ビット整数 () 命令に変換し `cvttss2si` ます。
 
 ## <a name="syntax"></a>構文
 
@@ -31,13 +32,13 @@ __int64 _mm_cvttss_si64x(
 ### <a name="parameters"></a>パラメーター
 
 *数値*\
-から**`__m128`** 単精度浮動小数点値を含む構造体。
+から **`__m128`** 単精度浮動小数点値を含む構造体。
 
 ## <a name="return-value"></a>戻り値
 
 最初の浮動小数点値を64ビット整数に変換した結果。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 |Intrinsic|アーキテクチャ|
 |---------------|------------------|

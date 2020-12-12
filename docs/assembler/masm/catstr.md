@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「CATSTR」を参照してください。
 title: CATSTR
 ms.date: 12/17/2019
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - CATSTR directive
 ms.assetid: ae893190-8247-4435-a74e-de2f00db052f
-ms.openlocfilehash: ca2cee09f0fd109028178c4fbbc88ac15f859675
-ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
+ms.openlocfilehash: 5737e2c46cca2a883521d0828eeaf3c2a99a9dce
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75315187"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97120979"
 ---
 # <a name="catstr"></a>CATSTR
 
@@ -19,11 +20,11 @@ ms.locfileid: "75315187"
 
 ## <a name="syntax"></a>構文
 
-> *name* **catstr** ⟦*textitem1* ⟦ __,__ *textitem2* ...⟧⟧
+> *name* **catstr** ⟦*textitem1* ⟦__,__ *textitem2* ...⟧⟧
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
-各テキスト項目には、リテラル文字列、 **%** の前にある定数、またはマクロ関数によって返される文字列を指定できます。 **Catstr**は、 [TEXTEQU](textequ.md)のシノニムです。
+各テキスト項目には、リテラル文字列、の後に続く定数、 **%** またはマクロ関数によって返される文字列を指定できます。 **Catstr** は、 [TEXTEQU](textequ.md)のシノニムです。
 
 ## <a name="see-also"></a>関連項目
 
