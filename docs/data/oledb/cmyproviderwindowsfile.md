@@ -1,4 +1,5 @@
 ---
+description: CCustomWindowsFile の詳細情報
 title: CCustomWindowsFile
 ms.date: 10/22/2018
 f1_keywords:
@@ -9,16 +10,16 @@ helpviewer_keywords:
 - OLE DB providers, wizard-generated files
 - CCustomWindowsFile class
 ms.assetid: 0e9e72ac-1e1e-445f-a7ac-690c20031f9d
-ms.openlocfilehash: 103a1ce5568c6137994056e574ce8eec04511d8f
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: c0df2840b68a350f9d65102fdf0a962681edefd9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80079741"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97170400"
 ---
 # <a name="ccustomwindowsfile"></a>CCustomWindowsFile
 
-ウィザードによって、1行のデータを含むクラスが作成されます。この場合、`CCustomWindowsFile`と呼ばれます。 次の `CCustomWindowsFile` のコードはウィザードで生成され、`WIN32_FIND_DATA` 構造を使用してディレクトリ内のすべてのファイルを一覧表示します。 `CCustomWindowsFile` は `WIN32_FIND_DATA` 構造から継承されます。
+ウィザードによって、1行のデータを含むクラスが作成されます。この場合は、と呼ばれ `CCustomWindowsFile` ます。 の次のコード `CCustomWindowsFile` は、ウィザードで生成され、構造体を使用してディレクトリ内のすべてのファイルを一覧表示し `WIN32_FIND_DATA` ます。 `CCustomWindowsFile` 構造体から継承し `WIN32_FIND_DATA` ます。
 
 ```cpp
 /////////////////////////////////////////////////////////////////////
@@ -38,9 +39,9 @@ END_PROVIDER_COLUMN_MAP()
 };
 ```
 
-`CCustomWindowsFile` は、プロバイダーの行セット内の列を説明するマップも持っているため、[ユーザーレコードクラス](../../data/oledb/user-record.md)と呼ばれます。 プロバイダー列マップには、PROVIDER_COLUMN_ENTRY マクロを使用して、行セットの各フィールドに1つのエントリが含まれています。 マクロは、列名、序数、および構造エントリへのオフセットを指定します。 上のコードのプロバイダー列エントリには、`WIN32_FIND_DATA` 構造体へのオフセットが含まれています。 コンシューマーが `IRowset::GetData`を呼び出すと、データは1つの連続するバッファーで転送されます。 このマップでは、ポインター演算を実行するのではなく、データメンバーを指定することができます。
+`CCustomWindowsFile` は、プロバイダーの行セット内の列を説明するマップも持っているため、 [ユーザーレコードクラス](../../data/oledb/user-record.md) と呼ばれます。 プロバイダー列マップには、PROVIDER_COLUMN_ENTRY マクロを使用して、行セットの各フィールドに1つのエントリが含まれています。 マクロは、列名、序数、および構造エントリへのオフセットを指定します。 上のコードのプロバイダー列エントリには、構造体へのオフセットが含まれて `WIN32_FIND_DATA` います。 コンシューマーがを呼び出すと `IRowset::GetData` 、データは1つの連続するバッファーで転送されます。 このマップでは、ポインター演算を実行するのではなく、データメンバーを指定することができます。
 
-`CCustomRowset` クラスには、`Execute` メソッドも含まれています。 `Execute` は、実際にはネイティブソースからのデータを読み取ります。 次のコードは、ウィザードで生成された `Execute` メソッドを示しています。 関数は、Win32 の `FindFirstFile` Api と `FindNextFile` Api を使用してディレクトリ内のファイルに関する情報を取得し、`CCustomWindowsFile` クラスのインスタンスに配置します。
+クラスには `CCustomRowset` 、メソッドも含まれてい `Execute` ます。 `Execute` は、実際にはネイティブソースからのデータを読み取るものです。 次のコードは、ウィザードで生成されたメソッドを示して `Execute` います。 関数は、Win32 と api を使用して `FindFirstFile` `FindNextFile` ディレクトリ内のファイルに関する情報を取得し、クラスのインスタンスに配置し `CCustomWindowsFile` ます。
 
 ```cpp
 /////////////////////////////////////////////////////////////////////
@@ -73,10 +74,10 @@ HRESULT Execute(DBPARAMS * pParams, LONG* pcRowsAffected)
 }
 ```
 
-検索するディレクトリは `m_strCommandText`によって表示されます。これには、command オブジェクトの `ICommandText` インターフェイスによって表されるテキストが含まれます。 ディレクトリが指定されていない場合は、現在のディレクトリが使用されます。
+検索するディレクトリはによって示されます。これには、 `m_strCommandText` コマンドオブジェクトのインターフェイスによって表されるテキストが含まれ `ICommandText` ます。 ディレクトリが指定されていない場合は、現在のディレクトリが使用されます。
 
-メソッドは、(行に対応する) 各ファイルに対して1つのエントリを作成し、`m_rgRowData` データメンバーに格納します。 `CRowsetImpl` クラスは、`m_rgRowData` データメンバーを定義します。 この配列内のデータはテーブル全体に表示され、テンプレート全体で使用されます。
+メソッドは、(行に対応する) 各ファイルに対して1つのエントリを作成し、データメンバーに格納し `m_rgRowData` ます。 クラスは、 `CRowsetImpl` データメンバーを定義し `m_rgRowData` ます。 この配列内のデータはテーブル全体に表示され、テンプレート全体で使用されます。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[プロバイダー ウィザードで生成されたファイル](../../data/oledb/provider-wizard-generated-files.md)<br/>
+[プロバイダー Wizard-Generated ファイル](../../data/oledb/provider-wizard-generated-files.md)<br/>

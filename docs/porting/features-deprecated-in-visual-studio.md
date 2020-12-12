@@ -1,14 +1,15 @@
 ---
+description: '詳細情報: Visual Studio 2019 で非推奨とされた C++ 機能'
 title: Visual Studio 2019 で非推奨となった C++ の機能
 ms.date: 07/30/2019
 helpviewer_keywords:
 - Features deprecated in Visual Studio 2019
-ms.openlocfilehash: ff73c3b3b989ae9e94ab3896889d988e7b9f4941
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: a8ecf886bdd8d2a759e99a3a9bc9366fae6e9e12
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80160347"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97172103"
 ---
 # <a name="c-features-deprecated-in-visual-studio-2019"></a>Visual Studio 2019 で非推奨となった C++ の機能
 

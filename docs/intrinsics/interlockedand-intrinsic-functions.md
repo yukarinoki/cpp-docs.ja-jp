@@ -1,5 +1,6 @@
 ---
-title: _InterlockedAnd 組み込み関数
+description: 詳細については、_InterlockedAnd 組み込み関数」を参照してください。
+title: 組み込み関数の _InterlockedAnd
 ms.date: 09/02/2019
 f1_keywords:
 - _InterlockedAnd_rel
@@ -56,14 +57,14 @@ helpviewer_keywords:
 - _InterlockedAnd8 intrinsic
 - _InterlockedAnd_HLEAcquire intrinsic
 ms.assetid: ad271dc3-42cd-47d0-9f65-30d5cfeb66fc
-ms.openlocfilehash: e22b463a5229de4745f71aaa0240374a5c057508
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: f5e00b997eced482a8adc8881e9a1b6a3231bb72
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70217775"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97168255"
 ---
-# <a name="_interlockedand-intrinsic-functions"></a>_InterlockedAnd 組み込み関数
+# <a name="_interlockedand-intrinsic-functions"></a>組み込み関数の _InterlockedAnd
 
 **Microsoft 固有の仕様**
 
@@ -172,7 +173,7 @@ __int64 _InterlockedAnd64_rel(
 
 ### <a name="parameters"></a>パラメーター
 
-*value*\
+*数値*\
 [入力、出力]結果によって置き換えられる最初のオペランドへのポインター。
 
 *隠す*\
@@ -182,21 +183,21 @@ __int64 _InterlockedAnd64_rel(
 
 最初のオペランドの元の値。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-|組み込み|アーキテクチャ|Header|
+|Intrinsic|アーキテクチャ|ヘッダー|
 |---------------|------------------|------------|
-|`_InterlockedAnd`、 `_InterlockedAnd8`、 `_InterlockedAnd16`|x86、ARM、x64、ARM64|\<intrin.h>|
+|`_InterlockedAnd`, `_InterlockedAnd8`, `_InterlockedAnd16`|x86、ARM、x64、ARM64|\<intrin.h>|
 |`_InterlockedAnd64`|ARM、x64、ARM64|\<intrin.h>|
 |`_InterlockedAnd_acq`, `_InterlockedAnd_nf`, `_InterlockedAnd_rel`, `_InterlockedAnd8_acq`, `_InterlockedAnd8_nf`, `_InterlockedAnd8_rel`, `_InterlockedAnd16_acq`, `_InterlockedAnd16_nf`, `_InterlockedAnd16_rel`, `_InterlockedAnd64_acq`, `_InterlockedAnd64_nf`, `_InterlockedAnd64_rel`|ARM、ARM64|\<intrin.h>|
-|`_InterlockedAnd_np`, `_InterlockedAnd8_np`, `_InterlockedAnd16_np`, `_InterlockedAnd64_np`|x64|\<intrin.h>|
+|`_InterlockedAnd_np`, `_InterlockedAnd8_np`, `_InterlockedAnd16_np`, `_InterlockedAnd64_np`|X64|\<intrin.h>|
 |`_InterlockedAnd_HLEAcquire`, `_InterlockedAnd_HLERelease`, `_InterlockedAnd64_HLEAcquire`, `_InterlockedAnd64_HLERelease`|x86、x64|\<immintrin.h>|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 各関数の名前に含まれる数値は、引数のビット サイズを示しています。
 
-ARM および ARM64 プラットフォームでは、クリティカルセクションの`_acq`開始`_rel`時や終了時などの取得と解放のセマンティクスのために、およびサフィックスの付いた組み込みを使用します。 `_nf` ("フェンスなし") サフィックスの付いた組み込みはメモリ バリアとしては機能しません。
+ARM および ARM64 プラットフォームでは、 `_acq` `_rel` クリティカルセクションの開始時や終了時などの取得と解放のセマンティクスのために、およびサフィックスの付いた組み込みを使用します。 `_nf` ("フェンスなし") サフィックスの付いた組み込みはメモリ バリアとしては機能しません。
 
 組み込みに `_np` ("プリフェッチなし") サフィックスが付いていると、コンパイラによってプリフェッチ操作が挿入される可能性がなくなります。
 
@@ -231,4 +232,4 @@ int main()
 ## <a name="see-also"></a>関連項目
 
 [コンパイラの組み込み](../intrinsics/compiler-intrinsics.md)\
-[x86 コンパイラとの競合](../build/x64-software-conventions.md#conflicts-with-the-x86-compiler)
+[X86 コンパイラとの競合](../build/x64-software-conventions.md#conflicts-with-the-x86-compiler)

@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「コレクションのすべてのメンバーへのアクセス」を参照してください。
 title: コレクションの全メンバーへのアクセス
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 - ', '
 - ', '
 ms.assetid: 7bbae518-062e-4393-81f9-b22abd2e5f59
-ms.openlocfilehash: cc058e6e4bf0058adb13f83e7ea071ebb4570ec4
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 0207c082f17cf1a02da1829d5e04ea3eccae3b40
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87214179"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97169581"
 ---
 # <a name="accessing-all-members-of-a-collection"></a>コレクションの全メンバーへのアクセス
 
@@ -34,7 +35,7 @@ MFC の配列コレクション クラスでは、テンプレート クラス�
 
 - [マップの反復処理](#_core_to_iterate_a_map)
 
-### <a name="to-iterate-an-array"></a><a name="_core_to_iterate_an_array"></a>配列を反復処理するには
+### <a name="to-iterate-an-array"></a><a name="_core_to_iterate_an_array"></a> 配列を反復処理するには
 
 1. 連続したインデックス番号を使用して、 `GetAt` メンバー関数を呼び出します。
 
@@ -48,7 +49,7 @@ MFC の配列コレクション クラスでは、テンプレート クラス�
 
    この演算子は **`const`** 、バージョンと非バージョンの両方に存在し **`const`** ます。 **`const`** 配列に対して呼び出されるバージョンは、 **`const`** 代入ステートメントの右側にのみ表示されます。
 
-### <a name="to-iterate-a-list"></a><a name="_core_to_iterate_a_list"></a>リストを反復処理するには
+### <a name="to-iterate-a-list"></a><a name="_core_to_iterate_a_list"></a> リストを反復処理するには
 
 1. リスト内の項目を順に処理するには、 `GetHeadPosition` メンバー関数と `GetNext` メンバー関数を使用します。
 
@@ -56,7 +57,7 @@ MFC の配列コレクション クラスでは、テンプレート クラス�
 
    この例では、型付きポインター リストを使用して、 `CPerson` オブジェクトへのポインターを格納します。 リストの宣言は、「 [配列を反復処理するには](#_core_to_iterate_an_array) 」の配列に対する宣言に似ていますが、 `CObList`クラスから派生しています。 `GetNext` は `CPerson` オブジェクトへのポインターを返します。
 
-### <a name="to-iterate-a-map"></a><a name="_core_to_iterate_a_map"></a>マップを反復処理するには
+### <a name="to-iterate-a-map"></a><a name="_core_to_iterate_a_map"></a> マップを反復処理するには
 
 1. `GetStartPosition` を使用してマップの先頭位置に移動し、 `GetNextAssoc` を使用して、次のキーと値をマップから順次取得します。次に例を示します。
 

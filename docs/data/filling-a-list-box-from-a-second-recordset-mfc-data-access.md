@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: 2 番目のレコードセットからのリストボックスの塗りつぶし (MFC データアクセス)'
 title: セカンド レコードセットを利用してリスト ボックスを表示する方法 (MFC データ アクセス)
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - combo boxes [C++], filling from second recordset
 - CListCtrl class, filling from second recordset
 ms.assetid: 360c0834-da6b-4dc0-bcea-80e9acd611f0
-ms.openlocfilehash: 8664e98c6668568918cc0e6504a38119d2e71428
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: b912511512b42e15e98a35836758ba37bf4cb989
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81336921"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97170907"
 ---
 # <a name="filling-a-list-box-from-a-second-recordset--mfc-data-access"></a>セカンド レコードセットを利用してリスト ボックスを表示する方法 (MFC データ アクセス)
 
@@ -28,13 +29,13 @@ ms.locfileid: "81336921"
 
 #### <a name="to-fill-a-combo-box-or-list-box-from-a-second-recordset"></a>セカンド レコードセットからコンボ ボックスまたはリスト ボックスの値を設定するには
 
-1. レコードセット オブジェクトを作成します ([CRecordset](../mfc/reference/crecordset-class.md).
+1. レコードセットオブジェクト ([CRecordset](../mfc/reference/crecordset-class.md)) を作成します。
 
-1. コンボ ボックス コントロールの[CComboBox](../mfc/reference/ccombobox-class.md)オブジェクトへのポインターを取得します。
+1. コンボボックスコントロールの [CComboBox](../mfc/reference/ccombobox-class.md) オブジェクトへのポインターを取得します。
 
 1. コンボ ボックスの以前の内容をすべて空にします。
 
-1. コンボ ボックスに追加する現在のレコードから各文字列の[CComboBox::AddString](../mfc/reference/ccombobox-class.md#addstring)を呼び出して、レコードセット内のすべてのレコードを移動します。
+1. レコードセット内のすべてのレコードを移動し、コンボボックスに追加する現在のレコードの各文字列に対して、 [CComboBox:: AddString](../mfc/reference/ccombobox-class.md#addstring) を呼び出します。
 
 1. コンボ ボックスの選択内容を初期化します。
 
@@ -70,5 +71,5 @@ void CSectionForm::OnInitialUpdate()
 
 ## <a name="see-also"></a>関連項目
 
-[レコード ビュー (MFC データ アクセス)](../data/record-views-mfc-data-access.md)<br/>
-[ODBC ドライバ一覧](../data/odbc/odbc-driver-list.md)
+[レコードビュー (MFC データアクセス)](../data/record-views-mfc-data-access.md)<br/>
+[ODBC ドライバーの一覧](../data/odbc/odbc-driver-list.md)

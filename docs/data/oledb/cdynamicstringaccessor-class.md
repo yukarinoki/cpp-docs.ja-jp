@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: CDynamicStringAccessor クラス'
 title: CDynamicStringAccessor クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - GetString method
 - SetString method
 ms.assetid: 138dc4de-c7c3-478c-863e-431e48249027
-ms.openlocfilehash: 891c80a7c21fd046fba393b494ed6d84f731db6f
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 89ad306242c5fa0a01b0f14673382fade8df128c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91498668"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97170712"
 ---
 # <a name="cdynamicstringaccessor-class"></a>CDynamicStringAccessor クラス
 
@@ -43,7 +44,7 @@ class CDynamicStringAccessorT : public CDynamicAccessor
 |[GetString](#getstring)|指定された列データを文字列として取得します。|
 |[SetString](#setstring)|指定された列データを文字列として設定します。|
 
-## <a name="remarks"></a>注釈
+## <a name="remarks"></a>解説
 
 [CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md)は、プロバイダーによって報告されたネイティブ形式のデータを要求しますが、は、 `CDynamicStringAccessor` データストアからアクセスされるすべてのデータを文字列データとして取得するようにプロバイダーに要求します。 これは、データストアの内容の表示や印刷など、データストアの値の計算を必要としない単純なタスクに特に便利です。
 
@@ -81,7 +82,7 @@ BaseType* GetString(const WCHAR* pColumnName) const throw();
 
 指定した列から取得した文字列値へのポインター。 値の型は `BaseType` で、_UNICODE が定義されているかどうかによって、 **CHAR** または **WCHAR** になります。 指定された列が見つからない場合は NULL を返します。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 2番目のオーバーライド形式では、列名が ANSI 文字列として取得されます。 3番目のオーバーライド形式では、列名が Unicode 文字列として取得されます。
 
@@ -117,7 +118,7 @@ HRESULT SetString(const WCHAR* pColumnName,
 
 指定された列を設定する文字列値へのポインター。 値の型は `BaseType` で、_UNICODE が定義されているかどうかによって、 **CHAR** または **WCHAR** になります。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 2番目のオーバーライド形式では、列名が ANSI 文字列として取得され、3番目のオーバーライド形式では列名が Unicode 文字列として取得されます。
 

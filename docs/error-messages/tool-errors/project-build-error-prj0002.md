@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「プロジェクトビルドエラー PRJ0002」を参照してください。
 title: プロジェクト ビルド エラー PRJ0002
 ms.date: 08/27/2018
 f1_keywords:
@@ -6,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - PRJ0002
 ms.assetid: 1c820b1f-9a24-4681-80ed-4fcbfd7caa00
-ms.openlocfilehash: 30680f5b26f3be5e7f9b48d18e82fca42ed65493
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: b9f3d06a71183902c92102f12f665decdbf35a9d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80192940"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97119422"
 ---
 # <a name="project-build-error-prj0002"></a>プロジェクト ビルド エラー PRJ0002
 
 > '*コマンドライン*' からエラー結果が返されました。
 
-コマンド*ライン*は、 **[プロパティページ]** ダイアログボックスのユーザー入力から作成されたもので、エラーコードを返しましたが、**出力**ウィンドウに情報が表示されません。
+コマンド *ライン* は、[ **プロパティページ** ] ダイアログボックスのユーザー入力から作成されたもので、エラーコードを返しましたが、 **出力** ウィンドウに情報が表示されません。
 
 このエラーの解決策は、エラーが生成されたツールによって異なります。 MIDL の場合、/o (リダイレクト出力) が定義されていると、どのような問題が発生したかがわかります。
 

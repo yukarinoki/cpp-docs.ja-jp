@@ -1,16 +1,17 @@
 ---
+description: '詳細情報: プロパティ (C++/CLI および C++/CX)'
 title: property (C++/CLI および C++/CX)
 ms.date: 10/12/2018
 ms.topic: reference
 helpviewer_keywords:
 - property keyword [C++]
 ms.assetid: cc79d2b2-f013-4d81-8252-eece97a18704
-ms.openlocfilehash: fbec97a5bd30bb9bb76459ef2f7b0956ae6a264f
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: bc3a4e7bd55d82244195a4d9ecf0072a6c513b72
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87225138"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97173000"
 ---
 # <a name="property--ccli-and-ccx"></a>property (C++/CLI および C++/CX)
 
@@ -85,7 +86,7 @@ set アクセサーまたは get アクセサーのプロパティ メソッド�
 
 詳細については、「[プロパティ (C++/CX)](../cppcx/properties-c-cx.md)」を参照してください。
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 コンパイラ オプション: `/ZW`
 
@@ -160,7 +161,7 @@ get メソッドと set メソッドのアクセシビリティが異なって�
 
 **`property`** は、状況依存のキーワードです。  詳細については、「[状況依存キーワード](context-sensitive-keywords-cpp-component-extensions.md)」を参照してください。
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 コンパイラ オプション: `/clr`
 

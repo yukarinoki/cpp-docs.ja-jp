@@ -1,4 +1,5 @@
 ---
+description: 詳細については、ヘッダーコントロールのヘッダー項目に関するページを参照してください。
 title: ヘッダー コントロールのヘッダー項目
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - CHeaderCtrl class [MFC], header items in
 - controls [MFC], header
 ms.assetid: ac79ef1f-a671-4ab2-93e9-b1aa016a48bf
-ms.openlocfilehash: a70d1d9225d2ac8ef2f7ed3ad9f603a64a937bc7
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 4b91ef1395d814b89ff12234b0aa8f2d674512ab
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84620098"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97172857"
 ---
 # <a name="header-items-in-a-header-control"></a>ヘッダー コントロールのヘッダー項目
 
@@ -28,7 +29,7 @@ ms.locfileid: "84620098"
 
 - [ヘッダー項目に対してドラッグアンドドロップのサポートを提供する](providing-drag-and-drop-support-for-header-items.md)
 
-- [ヘッダーコントロールでのイメージリストの使用](using-image-lists-with-header-controls.md)
+- [ヘッダー コントロールでのイメージ リストの使用](using-image-lists-with-header-controls.md)
 
 ## <a name="see-also"></a>関連項目
 

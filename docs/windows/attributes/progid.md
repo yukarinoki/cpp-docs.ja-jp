@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: progid'
 title: progid (C++ COM 属性)
 ms.date: 10/02/2018
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - progid attribute
 ms.assetid: afcf559c-e432-481f-aa9a-bd3bb72c02a8
-ms.openlocfilehash: 136c651ec92c78339c2f701804a6a409523dd30f
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: ed829d1ec20ae06fae8604e35ccc260013f59e3d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88839999"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97114937"
 ---
 # <a name="progid"></a>progid
 
@@ -32,7 +33,7 @@ Progid には、COM/ActiveX オブジェクトを識別するために使用さ�
 
 ## <a name="remarks"></a>解説
 
-`progid`C++ 属性を使用すると、COM オブジェクトの ProgID を指定できます。 ProgID は、name1. *name2.* という形式になります。 ProgID の *バージョン* を指定しない場合、既定のバージョンは1になります。 *Name1*を指定しない場合、既定の名前は*classname. classname*になります。 を指定せずにを指定した場合 `progid` `vi_progid` 、 *name1* はから取得され、 `vi_progid` (次の連続番号) バージョンが追加されます。
+`progid`C++ 属性を使用すると、COM オブジェクトの ProgID を指定できます。 ProgID は、name1. *name2.* という形式になります。 ProgID の *バージョン* を指定しない場合、既定のバージョンは1になります。 *Name1* を指定しない場合、既定の名前は *classname. classname* になります。 を指定せずにを指定した場合 `progid` `vi_progid` 、 *name1* はから取得され、 `vi_progid` (次の連続番号) バージョンが追加されます。
 
 を使用する属性ブロックで `progid` もが使用されていない場合、コンパイラはレジストリを調べて、指定されたのが `uuid` 存在するかどうかを確認します `uuid` `progid` 。 `progid`が指定されていない場合は、バージョン (コクラスを作成する場合は、コクラスの名前) がを生成するために使用され `progid` ます。
 
@@ -46,7 +47,7 @@ ATL を使用するプロジェクト内でこの属性を使用すると、属�
 
 の使用例については、「 [コクラス](coclass.md) 」の例を参照してください `progid` 。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 | 属性コンテキスト | 値 |
 |-|-|

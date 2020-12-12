@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「tuple_size クラス」を参照してください。
 title: tuple_size クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - std::tuple_size
 ms.assetid: 73852fc5-eb68-41f1-8379-465cedc2314a
-ms.openlocfilehash: 361545bee020d6c3624d1d45743abcb9c2b4ac85
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: e825acc02e27a8d0c1ae29e5bfcf4ac1e0a708b8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72688850"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97168879"
 ---
 # <a name="tuple_size-class"></a>tuple_size クラス
 
@@ -60,29 +61,29 @@ template <class T> inline constexpr size_t tuple_size_v = tuple_size<T>::value;
 
 ### <a name="parameters"></a>パラメーター
 
-*タプル*の \
+*タプル*\
 タプルの型。
 
-*Elem* \
+*Elem*\
 配列要素の型。
 
-@No__t_1*サイズ*
+*サイズ*\
 配列のサイズ。
 
-*T1* \
+*T1*\
 ペアの最初のメンバーの型。
 
-*T2* \
+*T2*\
 ペアの 2 番目のメンバーの型。
 
-*型*\
+*な*\
 タプル要素の型。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-クラステンプレートには、タプル型の*タプル*の範囲を値として持つ整数定数式であるメンバー `value` があります。
+クラステンプレートには、 `value` タプル型の *タプル* の範囲を値として持つ整数定数式であるメンバーがあります。
 
-配列のテンプレート特殊化には、*値が配列のサイズである*整数定数式である `value` メンバーが含まれています。
+配列のテンプレート特殊化には、 `value` 値が *サイズ* である整数定数式であるメンバーが含まれています。これは配列のサイズです。
 
 ペアのテンプレート特殊化には、2 を値として持つ整数定数式であるメンバー `value` が含まれます。
 
@@ -115,9 +116,9 @@ int main()
 4
 ```
 
-## <a name="requirements"></a>［要件］
+## <a name="requirements"></a>要件
 
-**ヘッダー:** \<tuple>
+**ヘッダー:**\<tuple>
 
 **ヘッダー:** \<array> (配列の特殊化用)
 

@@ -1,4 +1,5 @@
 ---
+description: 詳細については、C乗数 Eresults クラスに関するページを参照してください。
 title: CMultipleResults クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,16 +9,16 @@ f1_keywords:
 helpviewer_keywords:
 - CMultipleResults class
 ms.assetid: 6ce5bbb9-b551-483c-988a-e6aee9135a19
-ms.openlocfilehash: 88bc956c3a08c6dddbd7d26a18cfc10f778cabcf
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: f1bfe21c9a4613e550c9acae6741e3b0ae47fda6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80211830"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97170517"
 ---
 # <a name="cmultipleresults-class"></a>CMultipleResults クラス
 
-コマンドで複数の結果セットを処理する場合は、`CCommand` テンプレート引数*Tmultiple*に `CMultipleResults` を使用します。
+コマンドで複数の結果セットを処理する場合は、 `CMultipleResults` `CCommand` テンプレート引数 *tmultiple* にを使用します。
 
 ## <a name="syntax"></a>構文
 
@@ -27,13 +28,13 @@ class CMultipleResults
 
 ## <a name="remarks"></a>解説
 
-複数の結果セットを処理するには、 [CCommand](../../data/oledb/ccommand-class.md)がこのクラスを継承する必要があります。
+複数の結果セットを処理するには、 [CCommand](../../data/oledb/ccommand-class.md) がこのクラスを継承する必要があります。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** atldbcli.h
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[OLE DB コンシューマー テンプレートに関するページ](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
-[OLE DB コンシューマー テンプレート リファレンス](../../data/oledb/ole-db-consumer-templates-reference.md)
+[OLE DB コンシューマー テンプレート](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[OLE DB コンシューマーテンプレートリファレンス](../../data/oledb/ole-db-consumer-templates-reference.md)

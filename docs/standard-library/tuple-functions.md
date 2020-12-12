@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: &lt; タプル &gt; 関数'
 title: '&lt;tuple&gt; 関数'
 ms.date: 11/04/2016
 f1_keywords:
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - std::get [C++]
 - std::make_tuple [C++]
 - std::tie [C++]
-ms.openlocfilehash: 46c386ecffb8fbbf7c07d40b334afd91d261ebcf
-ms.sourcegitcommit: 19016630f9d35f365e9ba249e0f3617515d7ca33
+ms.openlocfilehash: cf58cab5f222594a935156cf7e7f2e886639da2b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92274519"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97168957"
 ---
 # <a name="lttuplegt-functions"></a>&lt;tuple&gt; 関数
 
@@ -30,7 +31,7 @@ template <class F, class Tuple> constexpr decltype(auto) apply(F&& f, Tuple&& t)
 
 ### <a name="remarks"></a>解説
 
-組*t*を使用して関数*F*を呼び出します。
+組 *t* を使用して関数 *F* を呼び出します。
 
 ## <a name="forward_as_tuple"></a><a name="forward"></a> forward_as_tuple
 
@@ -41,7 +42,7 @@ template <class... TTypes>
 
 ### <a name="return-value"></a>戻り値
 
-`tuple<TTypes&&...>(std::forward<TTypes>(t)...)` を返します。
+`tuple<TTypes&&...>(std::forward<TTypes>(t)...)` が返されます。
 
 ### <a name="remarks"></a>解説
 
@@ -95,7 +96,7 @@ template <class T, class... Types>
 
 ### <a name="remarks"></a>解説
 
-このテンプレート関数は、インデックス *インデックス*またはオブジェクト内の *T* 型の値への参照を返し `tuple` ます。
+このテンプレート関数は、インデックス *インデックス* またはオブジェクト内の *T* 型の値への参照を返し `tuple` ます。
 
 タプルに含まれる型 T の要素の数が 1 より大きいか小さい場合、 `get<T>(Tuple)` を呼び出すと、コンパイラ エラーが生成されます。
 

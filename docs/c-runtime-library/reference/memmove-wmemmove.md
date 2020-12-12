@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「memmove、wmemmove」を参照してください。
 title: memmove、wmemmove
 ms.date: 11/04/2016
 api_name:
@@ -28,12 +29,12 @@ helpviewer_keywords:
 - wmemmove function
 - memmove function
 ms.assetid: 3a906114-9cf3-40d7-bd99-ee452004f218
-ms.openlocfilehash: bca0badb13dbbc754b6546f62cdd865eacd14fbc
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 15dee8eab2a1b7eedd3891d8673647a711c0e499
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70951773"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97171388"
 ---
 # <a name="memmove-wmemmove"></a>memmove、wmemmove
 
@@ -56,7 +57,7 @@ wchar_t *wmemmove(
 
 ### <a name="parameters"></a>パラメーター
 
-*dest*<br/>
+*先*<br/>
 コピー先のオブジェクト。
 
 *src*<br/>
@@ -67,15 +68,15 @@ wchar_t *wmemmove(
 
 ## <a name="return-value"></a>戻り値
 
-*Dest*の値。
+*Dest* の値。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-*カウント*バイト (**memmove**) または文字 (**wmemmove**) を*src*から*dest*にコピーします。 コピー元とコピー先の領域の一部が重なり合っている場合、どちらの関数も、重なり合っている領域のコピー元のバイトをコピーした後で上書きします。
+*カウント* バイト (**memmove**) または文字 (**wmemmove**) を *src* から *dest* にコピーします。 コピー元とコピー先の領域の一部が重なり合っている場合、どちらの関数も、重なり合っている領域のコピー元のバイトをコピーした後で上書きします。
 
 **セキュリティに関するメモ** コピー先のバッファーのサイズがソース バッファー以上であることをご確認ください。 詳しくは、「 [バッファー オーバーランの回避](/windows/win32/SecBP/avoiding-buffer-overruns)」をご覧ください。
 
-**Memmove**関数と**wmemmove**関数は、次の例のように、関数を非推奨にするために、include ステートメントの前に定数 **_CRT_SECURE_DEPRECATE_MEMORY**が定義されている場合にのみ非推奨となります。
+**Memmove** 関数と **wmemmove** 関数は、次の例のように、関数を非推奨にするために、include ステートメントの前に定数 **_CRT_SECURE_DEPRECATE_MEMORY** が定義されている場合にのみ非推奨となります。
 
 ```C
 #define _CRT_SECURE_DEPRECATE_MEMORY
@@ -96,7 +97,7 @@ wchar_t *wmemmove(
 |**memmove**|\<string.h>|
 |**wmemmove**|\<wchar.h>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
 ## <a name="example"></a>例
 

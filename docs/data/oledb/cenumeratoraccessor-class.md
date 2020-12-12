@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: CEnumeratorAccessor クラス'
 title: CEnumeratorAccessor クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -35,12 +36,12 @@ helpviewer_keywords:
 - m_szName
 - m_szParseName
 ms.assetid: 21e8e7ea-3511-4afe-b33f-d520f4ff82bb
-ms.openlocfilehash: 0b4baa4671a013699e51a9ab28c002a680dfcd61
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: f37de34c508487f3ee54f47db1b0a64df8a97b25
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88838140"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97170569"
 ---
 # <a name="cenumeratoraccessor-class"></a>CEnumeratorAccessor クラス
 
@@ -84,7 +85,7 @@ VARIANT_BOOL m_bIsParent;
 
 ### <a name="remarks"></a>解説
 
-詳細については、 *OLE DB プログラマーリファレンス*の「 [Isourcesrowset を:: getsourcesrowset](/previous-versions/windows/desktop/ms711200(v=vs.85)) 」を参照してください。
+詳細については、 *OLE DB プログラマーリファレンス* の「 [Isourcesrowset を:: getsourcesrowset](/previous-versions/windows/desktop/ms711200(v=vs.85)) 」を参照してください。
 
 ## <a name="cenumeratoraccessorm_ntype"></a><a name="ntype"></a> CEnumeratorAccessor:: m_nType
 
@@ -98,7 +99,7 @@ USHORT m_nType;
 
 ### <a name="remarks"></a>解説
 
-詳細については、 *OLE DB プログラマーリファレンス*の「 [Isourcesrowset を:: getsourcesrowset](/previous-versions/windows/desktop/ms711200(v=vs.85)) 」を参照してください。
+詳細については、 *OLE DB プログラマーリファレンス* の「 [Isourcesrowset を:: getsourcesrowset](/previous-versions/windows/desktop/ms711200(v=vs.85)) 」を参照してください。
 
 ## <a name="cenumeratoraccessorm_szdescription"></a><a name="szdescription"></a> CEnumeratorAccessor:: m_szDescription
 
@@ -112,7 +113,7 @@ WCHAR m_szDescription[129];
 
 ### <a name="remarks"></a>解説
 
-詳細については、 *OLE DB プログラマーリファレンス*の「 [Isourcesrowset を:: getsourcesrowset](/previous-versions/windows/desktop/ms711200(v=vs.85)) 」を参照してください。
+詳細については、 *OLE DB プログラマーリファレンス* の「 [Isourcesrowset を:: getsourcesrowset](/previous-versions/windows/desktop/ms711200(v=vs.85)) 」を参照してください。
 
 ## <a name="cenumeratoraccessorm_szname"></a><a name="szname"></a> CEnumeratorAccessor:: m_szName
 
@@ -126,7 +127,7 @@ WCHAR m_szName[129];
 
 ### <a name="remarks"></a>解説
 
-詳細については、 *OLE DB プログラマーリファレンス*の「 [Isourcesrowset を:: getsourcesrowset](/previous-versions/windows/desktop/ms711200(v=vs.85)) 」を参照してください。
+詳細については、 *OLE DB プログラマーリファレンス* の「 [Isourcesrowset を:: getsourcesrowset](/previous-versions/windows/desktop/ms711200(v=vs.85)) 」を参照してください。
 
 ## <a name="cenumeratoraccessorm_szparsename"></a><a name="szparsename"></a> CEnumeratorAccessor:: m_szParseName
 
@@ -140,7 +141,7 @@ WCHAR m_szParseName[129];
 
 ### <a name="remarks"></a>解説
 
-詳細については、 *OLE DB プログラマーリファレンス*の「 [Isourcesrowset を:: getsourcesrowset](/previous-versions/windows/desktop/ms711200(v=vs.85)) 」を参照してください。
+詳細については、 *OLE DB プログラマーリファレンス* の「 [Isourcesrowset を:: getsourcesrowset](/previous-versions/windows/desktop/ms711200(v=vs.85)) 」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

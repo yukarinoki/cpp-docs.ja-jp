@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: _memicmp、_memicmp_l'
 title: _memicmp、_memicmp_l
 ms.date: 4/2/2020
 api_name:
@@ -33,12 +34,12 @@ helpviewer_keywords:
 - memicmp_l function
 - _memicmp_l function
 ms.assetid: 0a6eb945-4077-4f84-935d-1aaebe8db8cb
-ms.openlocfilehash: 365b57dc300da5686895d66fa642e3870612c2ed
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 261c7b64cc7da58c201515697addc587c575a9ba
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82915397"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97171414"
 ---
 # <a name="_memicmp-_memicmp_l"></a>_memicmp、_memicmp_l
 
@@ -80,24 +81,24 @@ int _memicmp_l(
 
 |戻り値|buf1 と buf2 の最初の count バイトの関係|
 |------------------|--------------------------------------------------------|
-|< 0|*buffer1*未満*buffer2*。|
-|0|*buffer1*は*buffer2*と同じです。|
-|> 0|*buffer1*が*buffer2*を超えています。|
+|< 0|*buffer1* 未満 *buffer2*。|
+|0|*buffer1* は *buffer2* と同じです。|
+|> 0|*buffer1* が *buffer2* を超えています。|
 |**_NLSCMPERROR**|エラーが発生しました。|
 
 ## <a name="remarks"></a>解説
 
-**_Memicmp**関数は、2つのバッファーの最初の*カウント*文字*buffer1*と*buffer2* byte をバイト単位で比較します。 比較では、大文字と小文字を区別しません。
+**_Memicmp** 関数は、2つのバッファーの最初の *カウント* 文字 *buffer1* と *buffer2* byte をバイト単位で比較します。 比較では、大文字と小文字を区別しません。
 
-*Buffer1*または*buffer2*のいずれかが null ポインターの場合、この関数は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーを呼び出します。 実行の継続が許可された場合、関数は **_NLSCMPERROR**を返し、 **errno**を**EINVAL**に設定します。
+*Buffer1* または *buffer2* のいずれかが null ポインターの場合、この関数は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーを呼び出します。 実行の継続が許可された場合、関数は **_NLSCMPERROR** を返し、 **errno** を **EINVAL** に設定します。
 
-**_memicmp**は、ロケールに依存する動作に現在のロケールを使用します。**_memicmp_l**は、渡されたロケールを代わりに使用する点を除いて同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
+**_memicmp** は、ロケールに依存する動作に現在のロケールを使用します。 **_memicmp_l** は、渡されたロケールを代わりに使用する点を除いて同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
 
 既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**_memicmp**|\<memory.h> または \<string.h>|
 |**_memicmp_l**|\<memory.h> または \<string.h>|

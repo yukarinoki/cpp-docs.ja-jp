@@ -1,4 +1,5 @@
 ---
+description: 詳細については、CCustomSource (CustomDS .h) に関するページを参照してください。
 title: CCustomSource (CustomDS.H)
 ms.date: 10/22/2018
 f1_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - CMyProviderSource class in MyProviderDS.H
 - CCustomSource class in CustomDS.H
 ms.assetid: c143d48e-59c8-4f67-9141-3aab51859b92
-ms.openlocfilehash: 8e92c30e8d62ade095167880917ad70da8e59b36
-ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
+ms.openlocfilehash: 6fbb9fe0676521b01caa3bba5f5bb2be03d0fe6f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90742919"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97170439"
 ---
 # <a name="ccustomsource-customdsh"></a>CCustomSource (CustomDS .h)
 
@@ -153,7 +154,7 @@ struct UPROPINFO
 
 独自のプロパティセットを定義する場合は、追加の BEGIN_PROPSET_MAP/END_PROPSET_MAP の組み合わせを作成することによって追加できます。 プロパティセットの GUID を定義し、独自のプロパティを定義します。 プロバイダー固有のプロパティがある場合は、既存のプロパティを使用するのではなく、新しいプロパティセットに追加します。 これにより、OLE DB の新しいバージョンでの問題を回避できます。
 
-## <a name="user-defined-property-sets"></a>ユーザー定義のプロパティセット
+## <a name="user-defined-property-sets"></a>プロパティセットの User-Defined
 
 Visual C++ は、ユーザー定義のプロパティセットをサポートします。 またはをオーバーライドする必要はありません `GetProperties` `GetPropertyInfo` 。 代わりに、テンプレートによって、ユーザー定義のプロパティセットが検出され、適切なオブジェクトに追加されます。
 
@@ -167,4 +168,4 @@ END_PROPERTY_SET_EX(DBPROPSET_MYPROPSET)
 
 ## <a name="see-also"></a>関連項目
 
-[プロバイダーウィザードで生成されたファイル](../../data/oledb/provider-wizard-generated-files.md)<br/>
+[プロバイダー Wizard-Generated ファイル](../../data/oledb/provider-wizard-generated-files.md)<br/>

@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: &lt; タプル&gt;'
 title: '&lt;tuple&gt;'
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - tuple header
 ms.assetid: e4ef5c2d-318b-44f6-8bce-fce4ecd796a3
-ms.openlocfilehash: b1eeba2fced21f5a38799db7fc4af259e03bc266
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 7c9f55866cc723aa6f7414b6a633a3cfbebd625a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88841845"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97168840"
 ---
 # <a name="lttuplegt"></a>&lt;tuple&gt;
 
 さまざまな型のオブジェクトを保持するインスタンスを持つテンプレート `tuple` を定義します。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:**\<tuple>
 
@@ -34,14 +35,14 @@ ms.locfileid: "88841845"
 |[tuple_size クラス](../standard-library/tuple-size-class-tuple.md)|`tuple` の要素数をラップします。|
 |[uses_allocator](../standard-library/uses-allocator-structure.md)||
 
-### <a name="objects"></a>オブジェクト
+### <a name="objects"></a>Objects
 
 |名前|説明|
 |-|-|
 |[tuple_element_t](../standard-library/tuple-functions.md#tuple_element_t)||
 |[tuple_size_v](../standard-library/tuple-functions.md#tuple_size_v)||
 
-### <a name="operators"></a>演算子
+### <a name="operators"></a>オペレーター
 
 |名前|説明|
 |-|-|
@@ -52,7 +53,7 @@ ms.locfileid: "88841845"
 |[>演算子 ](../standard-library/tuple-operators.md#op_gt)|オブジェクトの比較 `tuple` (より大きい)。|
 |[operator>=](../standard-library/tuple-operators.md#op_gt_eq)|オブジェクトの比較 `tuple` (以上)。|
 
-### <a name="functions"></a>Functions
+### <a name="functions"></a>関数
 
 |名前|説明|
 |-|-|

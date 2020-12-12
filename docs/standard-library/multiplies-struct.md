@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「乗算構造体」を参照してください
 title: multiplies 構造体
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - multiplies class
 - multiplies struct
 ms.assetid: ec85e8af-70ad-44ad-90f0-d961a5847864
-ms.openlocfilehash: 3bccaf2a5e6594652a1179b357cdbbee2d2436b3
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 552f36d2060ca9ad6141438a45a128e84b705630
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68240583"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97114989"
 ---
 # <a name="multiplies-struct"></a>multiplies 構造体
 
@@ -42,11 +43,11 @@ struct multiplies<void>
 *型*、 *T*、 *U*\
 指定または推論された型のオペランドを受け取る二項 `operator*` をサポートする型。
 
-*左*\
-乗算演算の左オペランド。 特化されていないテンプレートは、型の左辺値参照引数を受け取る*型*します。 特殊化されたテンプレートはの完全転送を左辺値と右辺値参照引数の型を推論する*T*します。
+*左側*\
+乗算演算の左オペランド。 非特殊テンプレートは、type *型* の左辺値参照引数を受け取ります。 特殊化されたテンプレートは、推論された型 *T* の左辺値および右辺値参照引数の完全転送を行います。
 
 *そうです*\
-乗算演算の右オペランド。 特化されていないテンプレートは、型の左辺値参照引数を受け取る*型*します。 特殊化されたテンプレートはの完全転送を左辺値と右辺値参照引数の型を推論する*U*します。
+乗算演算の右オペランド。 非特殊テンプレートは、type *型* の左辺値参照引数を受け取ります。 特殊化されたテンプレートは、推論された型 *U* の左辺値および右辺値参照引数の完全転送を行います。
 
 ## <a name="return-value"></a>戻り値
 

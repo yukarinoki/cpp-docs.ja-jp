@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: sscanf、_sscanf_l、swscanf、_swscanf_l'
 title: sscanf、_sscanf_l、swscanf、_swscanf_l
 ms.date: 08/29/2019
 api_name:
@@ -43,12 +44,12 @@ helpviewer_keywords:
 - sscanf_l function
 - stscanf_l function
 ms.assetid: c2dcf0d2-9798-499f-a4a8-06f7e2b9a80c
-ms.openlocfilehash: e3b453166278fff4c3230cb51895c487319e33d9
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: f5681e1f8e122c6f24151ae5e8d37186d8bd066e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70958232"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97171271"
 ---
 # <a name="sscanf-_sscanf_l-swscanf-_swscanf_l"></a>sscanf、_sscanf_l、swscanf、_swscanf_l
 
@@ -83,11 +84,11 @@ int _swscanf_l(
 
 ### <a name="parameters"></a>パラメーター
 
-*バッファー*<br/>
+*格納*<br/>
 格納されるデータ。
 
 *format*<br/>
-書式指定文字列。 詳細については、「 [printf 関数と wprintf 関数の書式指定フィールド](../../c-runtime-library/format-specification-fields-scanf-and-wscanf-functions.md)」を参照してください。
+書式指定文字列。 詳細については、[書式の指定](../../c-runtime-library/format-specification-fields-scanf-and-wscanf-functions.md)に関する記事をご覧ください。
 
 *argument*<br/>
 省略可能な引数。
@@ -97,40 +98,40 @@ int _swscanf_l(
 
 ## <a name="return-value"></a>戻り値
 
-これらの関数は、正常に変換および代入されたフィールドの数を返します。読み込まれただけで代入されなかったフィールドは戻り値には含まれません。 戻り値が 0 の場合は、代入されたフィールドがなかったことを示します。 エラーの場合、または最初の変換の前に文字列の末尾に到達した場合、戻り値は**EOF**になります。
+これらの関数は、正常に変換および代入されたフィールドの数を返します。読み込まれただけで代入されなかったフィールドは戻り値には含まれません。 戻り値が 0 の場合は、代入されたフィールドがなかったことを示します。 エラーの場合、または最初の変換の前に文字列の末尾に到達した場合、戻り値は **EOF** になります。
 
-*Buffer*または*format*が**NULL**ポインターの場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、これらの関数は-1 を返し、 **errno**を**EINVAL**に設定します。
+*Buffer* または *format* が **NULL** ポインターの場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、これらの関数は-1 を返し、 **errno** を **EINVAL** に設定します。
 
-エラー コードの詳細については、「[_doserrno、errno、_sys_errlist、_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」をご覧ください。
+これらと他のエラー コードの詳細については、「[_doserrno、errno、_sys_errlist、および _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」を参照してください。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-**Sscanf**関数は、各*引数*によって指定された場所に*バッファー*からデータを読み取ります。 すべての*引数*は、*形式*の型指定子に対応する型を持つ変数へのポインターである必要があります。 *Format*引数は、入力フィールドの解釈を制御し、 **scanf**関数の*format*引数と同じ形式と機能を持ちます。 重なり合う文字列間でコピーした場合の動作は未定義です。
+**Sscanf** 関数は、各 *引数* によって指定された場所に *バッファー* からデータを読み取ります。 すべての *引数* は、 *形式* の型指定子に対応する型を持つ変数へのポインターである必要があります。 *Format* 引数は、入力フィールドの解釈を制御し、 **scanf** 関数の *format* 引数と同じ形式と機能を持ちます。 重なり合う文字列間でコピーした場合の動作は未定義です。
 
-Scanf 関数の型フィールド文字の詳細については、「scanf 関数の[型フィールド文字](../scanf-type-field-characters.md)」を参照してください。 Scanf 書式指定フィールドの詳細については、「[書式指定フィールド](../format-specification-fields-scanf-and-wscanf-functions.md)」を参照してください。
+Scanf 関数の型フィールド文字の詳細については、「scanf 関数の [型フィールド文字](../scanf-type-field-characters.md)」を参照してください。 Scanf 書式指定フィールドの詳細については、「 [書式指定フィールド](../format-specification-fields-scanf-and-wscanf-functions.md)」を参照してください。
 
 > [!IMPORTANT]
-> **Sscanf**を使用して文字列を読み取るときは、常に **% s**形式の幅を指定してください (たとえば、 **"% s"** ではなく **"% 32s"** )。そうしないと、正しくフォーマットされていない入力によってバッファーオーバーランが発生する可能性があります。
+> **Sscanf** を使用して文字列を読み取るときは、常に **% s** 形式の幅を指定してください (たとえば、 **"% s"** ではなく **"% 32s"** )。そうしないと、正しくフォーマットされていない入力によってバッファーオーバーランが発生する可能性があります。
 
-**swscanf**は**sscanf**のワイド文字バージョンです。**swscanf**の引数はワイド文字列です。 **sscanf**では、マルチバイトの16進文字は処理されません。 **swscanf**は、Unicode の全角16進数または "互換ゾーン" の文字を処理しません。 それ以外の場合、 **swscanf**と**sscanf**は同じように動作します。
+**swscanf** は **sscanf** のワイド文字バージョンです。 **swscanf** の引数はワイド文字列です。 **sscanf** では、マルチバイトの16進文字は処理されません。 **swscanf** は、Unicode の全角16進数または "互換ゾーン" の文字を処理しません。 それ以外の場合、 **swscanf** と **sscanf** は同じように動作します。
 
-**_L**サフィックスを持つこれらの関数のバージョンは、現在のスレッドロケールの代わりに渡されたロケールパラメーターを使用する点を除いて同じです。
+**_L** サフィックスを持つこれらの関数のバージョンは、現在のスレッドロケールの代わりに渡されたロケールパラメーターを使用する点を除いて同じです。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
 |TCHAR.H のルーチン|_UNICODE および _MBCS が未定義の場合|_MBCS が定義されている場合|_UNICODE が定義されている場合|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**stscanf**|**sscanf**|**sscanf**|**swscanf**|
-|**stscanf_l (_d)**|**_sscanf_l**|**_sscanf_l**|**_swscanf_l**|
+|**_stscanf**|**sscanf**|**sscanf**|**swscanf**|
+|**_stscanf_l**|**_sscanf_l**|**_sscanf_l**|**_swscanf_l**|
 
 ## <a name="requirements"></a>必要条件
 
 |ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**sscanf**、 **_sscanf_l**|\<stdio.h>|
-|**swscanf**、 **swscanf_l**|\<stdio.h> または \<wchar.h>|
+|**swscanf**、 **_swscanf_l**|\<stdio.h> または \<wchar.h>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
 ## <a name="example"></a>例
 
@@ -178,5 +179,5 @@ Real:     = 15.000000
 [ストリーム入出力](../../c-runtime-library/stream-i-o.md)<br/>
 [fscanf、_fscanf_l、fwscanf、_fwscanf_l](fscanf-fscanf-l-fwscanf-fwscanf-l.md)<br/>
 [scanf、_scanf_l、wscanf、_wscanf_l](scanf-scanf-l-wscanf-wscanf-l.md)<br/>
-[sprintf、_sprintf_l、swprintf、_swprintf_l、\__swprintf_l](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)<br/>
+[sprintf、_sprintf_l、swprintf、_swprintf_l、 \_ _swprintf_l](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)<br/>
 [snprintf、_snprintf、_snprintf_l、_snwprintf、_snwprintf_l](snprintf-snprintf-snprintf-l-snwprintf-snwprintf-l.md)<br/>

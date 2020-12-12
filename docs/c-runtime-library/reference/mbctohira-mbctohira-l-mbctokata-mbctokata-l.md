@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: _mbctohira、_mbctohira_l、_mbctokata、_mbctokata_l'
 title: _mbctohira、_mbctohira_l、_mbctokata、_mbctokata_l
 ms.date: 4/2/2020
 api_name:
@@ -46,12 +47,12 @@ helpviewer_keywords:
 - _mbctohira function
 - mbctokata function
 ms.assetid: f949afd7-44d4-4f08-ac8f-1fef2c915a1c
-ms.openlocfilehash: b5af94932fc90e6bcaee584e16f3056ee36dab51
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: aca32a81f1a7c74241be5d4574307a39731b1b6a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82914379"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97171492"
 ---
 # <a name="_mbctohira-_mbctohira_l-_mbctokata-_mbctokata_l"></a>_mbctohira、_mbctohira_l、_mbctokata、_mbctokata_l
 
@@ -81,7 +82,7 @@ unsigned int _mbctokata_l(
 
 ### <a name="parameters"></a>パラメーター
 
-*40u-c*<br/>
+*c*<br/>
 変換するマルチバイト文字。
 
 *locale*<br/>
@@ -89,26 +90,26 @@ unsigned int _mbctokata_l(
 
 ## <a name="return-value"></a>戻り値
 
-これらの関数は、可能であれば、変換された文字*c*を返します。 それ以外の場合は、文字*c*を変更せずに返します。
+これらの関数は、可能であれば、変換された文字 *c* を返します。 それ以外の場合は、文字 *c* を変更せずに返します。
 
 ## <a name="remarks"></a>解説
 
-**_Mbctohira**関数と **_mbctokata**関数は*c*文字をテストし、可能であれば、次の変換のいずれか1つを適用します。
+**_Mbctohira** 関数と **_mbctokata** 関数は *c* 文字をテストし、可能であれば、次の変換のいずれか1つを適用します。
 
 |ルーチン|変換|
 |--------------|--------------|
 |**_mbctohira**、 **_mbctohira_l**|マルチバイトのカタカナをマルチバイトのひらがなに変換します。|
 |**_mbctokata**、 **_mbctokata_l**|マルチバイトのひらがなをマルチバイトのカタカナに変換します。|
 
-出力値は、ロケールの **LC_CTYPE** カテゴリの設定に影響されます。詳細については、「[setlocale](setlocale-wsetlocale.md)」を参照してください。 これらの関数のバージョンは同じですが、 **_l**サフィックスが付いていないバージョンでは、このロケールに依存する動作に現在のロケールを使用し、 **_l**サフィックスが付いているものは、渡されたロケールパラメーターを代わりに使用する点が異なります。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
+出力値は、ロケールの **LC_CTYPE** カテゴリの設定に影響されます。詳細については、「[setlocale](setlocale-wsetlocale.md)」を参照してください。 これらの関数のバージョンは同じですが、 **_l** サフィックスが付いていないバージョンでは、このロケールに依存する動作に現在のロケールを使用し、 **_l** サフィックスが付いているものは、渡されたロケールパラメーターを代わりに使用する点が異なります。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
 
-以前のバージョンでは、 **_mbctohira**に**jtohira**という名前が付けられ、 **_mbctokata**に**jtokata**という名前が付けられていました。 新しいコードには、新しい名前を使用してください。
+以前のバージョンでは、 **_mbctohira** に **jtohira** という名前が付けられ、 **_mbctokata** に **jtokata** という名前が付けられていました。 新しいコードには、新しい名前を使用してください。
 
 既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**_mbctohira**|\<mbstring.h>|
 |**_mbctohira_l**|\<mbstring.h>|

@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: _RTC_SetErrorType'
 title: _RTC_SetErrorType
 ms.date: 11/04/2016
 api_name:
@@ -26,12 +27,12 @@ helpviewer_keywords:
 - RTC_SetErrorType function
 - _RTC_SetErrorType function
 ms.assetid: f5f99be7-d357-4b11-b8f5-ddd3428f2b06
-ms.openlocfilehash: 6c1eff5920931aa3b72bf3dbc6232c371828b16a
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 8b0b28eaf97a27dbfcf4dcb414c9a17f03df7f9e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70948920"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97168697"
 ---
 # <a name="_rtc_seterrortype"></a>_RTC_SetErrorType
 
@@ -49,22 +50,22 @@ int _RTC_SetErrorType(
 ### <a name="parameters"></a>パラメーター
 
 *errnum*<br/>
-0 から [_RTC_NumErrors](rtc-numerrors.md) によって戻される値より 1 少ない値までの範囲の数値。
+0 から [_RTC_NumErrors](rtc-numerrors.md)によって戻される値より 1 少ない値までの範囲の数値。
 
 *ErrType*<br/>
-この *errnum*に割り当てる値。 たとえば、 **_CRT_ERROR**を使用できます。 **_CrtDbgReport**をエラーハンドラーとして使用している場合、 *Errtype*には[_CrtSetReportMode](crtsetreportmode.md)で定義されているシンボルの1つのみを指定できます。 独自のエラー ハンドラー ([_RTC_SetErrorFunc](rtc-seterrorfunc.md)) がある場合、 *errnum*の数だけ *ErrType*を指定できます。
+この *errnum* に割り当てる値。 たとえば、 **_CRT_ERROR** を使用できます。 **_CrtDbgReport** をエラーハンドラーとして使用している場合、 *errtype* には [_CrtSetReportMode](crtsetreportmode.md)で定義されているシンボルの1つのみを指定できます。 独自のエラー ハンドラー ([_RTC_SetErrorFunc](rtc-seterrorfunc.md)) がある場合、 *errnum* の数だけ *ErrType* を指定できます。
 
-**_CrtSetReportMode**の*errtype*には特別な意味があります (_s)このエラーは無視されます。
+_RTC_ERRTYPE_IGNORE の *Errtype* は、 **_CrtSetReportMode** に特別な意味を持ちます。このエラーは無視されます。
 
 ## <a name="return-value"></a>戻り値
 
-エラーの種類の*種類*の以前の値。
+エラーの種類の *種類* の以前の値。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-既定では、すべてのエラーは *_CRT_ERROR* に対応する **ErrType**= 1 に設定されます。 既定のエラーの種類 ( **_CRT_ERROR** など) について詳しくは、[_CrtDbgReport](crtdbgreport-crtdbgreportw.md) をご覧ください。
+既定では、すべてのエラーは *_CRT_ERROR* に対応する **ErrType**= 1 に設定されます。 既定のエラーの種類 ( **_CRT_ERROR** など) について詳しくは、 [_CrtDbgReport](crtdbgreport-crtdbgreportw.md)をご覧ください。
 
-この関数を呼び出すには、まず、実行時エラー チェックの初期化関数の 1 つを呼び出す必要があります。「[Using Run-Time Checks without the C Run-Time Library (C ランタイム ライブラリなしのランタイム チェックの使用)](/visualstudio/debugger/using-run-time-checks-without-the-c-run-time-library)」をご覧ください
+この関数を呼び出すには、まず、実行時エラー チェックの初期化関数の 1 つを呼び出す必要があります。「 [C ランタイム ライブラリなしのランタイム チェックの使用方法](/visualstudio/debugger/using-run-time-checks-without-the-c-run-time-library)」をご覧ください。
 
 ## <a name="requirements"></a>必要条件
 
@@ -72,7 +73,7 @@ int _RTC_SetErrorType(
 |-------------|---------------------|
 |**_RTC_SetErrorType**|\<rtcapi.h>|
 
-詳細については、「[互換性](../../c-runtime-library/compatibility.md)」をご覧ください。
+詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
 ## <a name="libraries"></a>ライブラリ
 

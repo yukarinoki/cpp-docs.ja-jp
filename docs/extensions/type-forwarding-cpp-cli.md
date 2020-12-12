@@ -1,20 +1,21 @@
 ---
+description: 詳細については、「型の転送 (C++/CLI)」を参照してください。
 title: 型の転送 (C++/CLI)
 ms.date: 10/12/2018
 ms.topic: reference
 helpviewer_keywords:
 - type forwarding, C++
 ms.assetid: ae730b69-0c27-41cc-84e1-3132783866ea
-ms.openlocfilehash: 0803ecc2ffb2da2748b1ef063481aa2571f27f50
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 360ca624103c8021c17300f897b1091c13e898a3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80171932"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97172883"
 ---
 # <a name="type-forwarding-ccli"></a>型の転送 (C++/CLI)
 
-*型を転送する*ことで、アセンブリ A を使用するクライアントの再コンパイルなしで、アセンブリ (アセンブリ A) の型を別のアセンブリ (アセンブリ B) に移動できます。
+*型を転送する* ことで、アセンブリ A を使用するクライアントの再コンパイルなしで、アセンブリ (アセンブリ A) の型を別のアセンブリ (アセンブリ B) に移動できます。
 
 ## <a name="windows-runtime"></a>Windows ランタイム
 
@@ -88,6 +89,6 @@ Windows ランタイムでは、この機能はサポートされていません
 
 5. クライアント アプリケーションの再コンパイルなしで、A.dll を使用します。
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 コンパイラ オプション: `/clr`

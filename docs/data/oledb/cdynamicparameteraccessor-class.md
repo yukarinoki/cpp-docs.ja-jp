@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: CDynamicParameterAccessor クラス'
 title: CDynamicParameterAccessor クラス
 ms.date: 02/14/2018
 f1_keywords:
@@ -90,12 +91,12 @@ helpviewer_keywords:
 - SetParamStatus method
 - SetParamString method
 ms.assetid: 5f22626e-e80d-491f-8b3b-cedc50331960
-ms.openlocfilehash: 4596f5181dd197b16786ee4d4d16cf06721b13b6
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 5470ced8b4479124f0db3878fe2562a658547f9f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91498652"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97170777"
 ---
 # <a name="cdynamicparameteraccessor-class"></a>CDynamicParameterAccessor クラス
 
@@ -131,7 +132,7 @@ class CDynamicParameterAccessor : public CDynamicAccessor
 |[SetParamStatus](#setparamstatus)|バッファーに格納され、指定されたパラメーターのステータスを設定します。|
 |[SetParamString](#setparamstring)|バッファーに格納され、指定されたパラメーターの文字列データを設定します。|
 
-## <a name="remarks"></a>注釈
+## <a name="remarks"></a>解説
 
 コンシューマーがこのクラスを使用するには、プロバイダーで `ICommandWithParameters` がサポートされている必要があります。
 
@@ -161,7 +162,7 @@ BLOB データを処理する方法を指定します。 既定値は DBBLOBHAND
 *nBlobSize*<br/>
 BLOB の最大サイズ (バイト単位)。この値に対する列データは、BLOB として扱われます。 既定値は8000です。 詳細については、「 [CDynamicAccessor:: SetBlobSizeLimit](./cdynamicaccessor-class.md#setblobsizelimit) 」を参照してください。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 BLOB 処理の詳細については、 [CDynamicAccessor:: CDynamicAccessor](./cdynamicaccessor-class.md#cdynamicaccessor) コンストラクターを参照してください。
 
@@ -271,7 +272,7 @@ DBLENGTH* GetParamLength(DBORDINAL nParam) const throw();
 *pLength*<br/>
 入出力指定されたパラメーターの長さ (バイト単位) を格納している変数へのポインター。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 最初のオーバーライドは、成功した場合はを返し、失敗した場合はを返し **`true`** **`false`** ます。 2番目のオーバーライドは、パラメーターの長さを格納しているメモリを指します。
 
@@ -313,9 +314,9 @@ DBSTATUS* GetParamStatus(DBORDINAL nParam) const throw();
 からパラメーターの数 (1 からのオフセット)。 パラメーター0は戻り値用に予約されています。 パラメーター番号は、SQL またはストアドプロシージャの呼び出しの順序に基づいてパラメーターのインデックスを指定します。 例については、「 [Setparam](#setparam) 」を参照してください。
 
 *pStatus*<br/>
-入出力指定されたパラメーターの DBSTATUS status を格納している変数へのポインター。 DBSTATUS 値の詳細については、 *OLE DB プログラマーリファレンス*の「 [Status](/previous-versions/windows/desktop/ms722617(v=vs.85)) 」を参照するか、DBSTATUS の「」を検索してください。
+入出力指定されたパラメーターの DBSTATUS status を格納している変数へのポインター。 DBSTATUS 値の詳細については、 *OLE DB プログラマーリファレンス* の「 [Status](/previous-versions/windows/desktop/ms722617(v=vs.85)) 」を参照するか、DBSTATUS の「」を検索してください。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 最初のオーバーライドは、成功した場合はを返し、失敗した場合はを返し **`true`** **`false`** ます。 2番目のオーバーライドは、指定されたパラメーターの状態を格納しているメモリを指します。
 
@@ -357,11 +358,11 @@ bool GetParamString(DBORDINAL nParam,
 *pMaxLen*<br/>
 入出力 *Pbuffer* によってポイントされるバッファーのサイズへのポインター (終端の NULL を含む文字数)。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 **`true`** 成功した場合、または失敗した場合はを返し **`false`** ます。
 
-*Pbuffer*が NULL の場合、このメソッドは、 *pbuffer*が指すメモリ内の必要なバッファーサイズを設定し、 **`true`** データをコピーせずにを返します。
+*Pbuffer* が NULL の場合、このメソッドは、 *pbuffer* が指すメモリ内の必要なバッファーサイズを設定し、 **`true`** データをコピーせずにを返します。
 
 バッファーの *Pbuffer* が文字列全体を格納するのに十分な大きさでない場合、このメソッドは失敗します。
 
@@ -425,7 +426,7 @@ bool SetParam(TCHAR* pParamName,
 からバッファーに書き込まれるデータを格納しているメモリへのポインター。
 
 *status*<br/>
-からDBSTATUS 列の状態です。 DBSTATUS 値の詳細については、 *OLE DB プログラマーリファレンス*の「 [Status](/previous-versions/windows/desktop/ms722617(v=vs.85)) 」を参照するか、DBSTATUS の「」を検索してください。
+からDBSTATUS 列の状態です。 DBSTATUS 値の詳細については、 *OLE DB プログラマーリファレンス* の「 [Status](/previous-versions/windows/desktop/ms722617(v=vs.85)) 」を参照するか、DBSTATUS の「」を検索してください。
 
 ### <a name="return-value"></a>戻り値
 
@@ -452,7 +453,7 @@ bool SetParamLength(DBORDINAL nParam,
 *length*<br/>
 から指定されたパラメーターの長さ (バイト単位)。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 **`true`** 成功した場合、または失敗した場合はを返し **`false`** ます。
 
@@ -473,9 +474,9 @@ bool SetParamStatus(DBORDINAL nParam,
 からパラメーターの数 (1 からのオフセット)。 パラメーター0は戻り値用に予約されています。 パラメーター番号は、SQL またはストアドプロシージャの呼び出しの順序に基づいてパラメーターのインデックスを指定します。 例については、「 [Setparam](#setparam) 」を参照してください。
 
 *status*<br/>
-から指定されたパラメーターの DBSTATUS の状態。 DBSTATUS 値の詳細については、 *OLE DB プログラマーリファレンス*の「 [Status](/previous-versions/windows/desktop/ms722617(v=vs.85)) 」を参照するか、DBSTATUS の「」を検索してください。
+から指定されたパラメーターの DBSTATUS の状態。 DBSTATUS 値の詳細については、 *OLE DB プログラマーリファレンス* の「 [Status](/previous-versions/windows/desktop/ms722617(v=vs.85)) 」を参照するか、DBSTATUS の「」を検索してください。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 **`true`** 成功した場合、または失敗した場合はを返し **`false`** ます。
 
@@ -502,13 +503,13 @@ bool SetParamString(DBORDINAL nParam,
 から指定されたパラメーターの ANSI (**CHAR**) または Unicode (**WCHAR**) 文字列データへのポインター。 「DBSTATUS in oledb」を参照してください。
 
 *status*<br/>
-から指定されたパラメーターの DBSTATUS の状態。 DBSTATUS 値の詳細については、 *OLE DB プログラマーリファレンス*の「 [Status](/previous-versions/windows/desktop/ms722617(v=vs.85)) 」を参照するか、DBSTATUS の「」を検索してください。
+から指定されたパラメーターの DBSTATUS の状態。 DBSTATUS 値の詳細については、 *OLE DB プログラマーリファレンス* の「 [Status](/previous-versions/windows/desktop/ms722617(v=vs.85)) 」を参照するか、DBSTATUS の「」を検索してください。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 **`true`** 成功した場合、または失敗した場合はを返し **`false`** ます。
 
-`SetParamString` は、 *pstring*に指定された最大サイズを超える文字列を設定しようとすると失敗します。
+`SetParamString` は、 *pstring* に指定された最大サイズを超える文字列を設定しようとすると失敗します。
 
 `SetParamString`バッファーに文字列パラメーターデータを設定するには、を使用します。 バッファーに文字列以外のパラメーターデータを設定するには、 [Setparam](#setparam) を使用します。
 

@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: call クラス'
 title: call クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -13,12 +14,12 @@ f1_keywords:
 helpviewer_keywords:
 - call class
 ms.assetid: 1521970a-1e9c-4b0c-a681-d18e40976f49
-ms.openlocfilehash: d3dc730e19aaadfed171816e92837ba2766883cb
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: d1d489063d7eb301bbfdb923f6b2f3c351d01f5f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87213880"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97172220"
 ---
 # <a name="call-class"></a>call クラス
 
@@ -60,7 +61,7 @@ class call : public target_block<multi_link_registry<ISource<T>>>;
 
 ## <a name="remarks"></a>解説
 
-詳細については、「[非同期メッセージブロック](../../../parallel/concrt/asynchronous-message-blocks.md)」を参照してください。
+詳細については、「 [非同期メッセージブロック](../../../parallel/concrt/asynchronous-message-blocks.md)」を参照してください。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -70,13 +71,13 @@ class call : public target_block<multi_link_registry<ISource<T>>>;
 
 `call`
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** agents.h
 
 **名前空間:** concurrency
 
-## <a name="call"></a><a name="ctor"></a>発信
+## <a name="call"></a><a name="ctor"></a> 発信
 
 `call` メッセージング ブロックを構築します。
 
@@ -129,7 +130,7 @@ call(
 
 この型は、提供された `filter_method` `bool (T const &)` メッセージを `call` 受け入れるかどうかを判断するために、このメッセージングブロックによって呼び出される、シグネチャを持つファンクタです。
 
-## <a name="call"></a><a name="dtor"></a>~ 呼び出し
+## <a name="call"></a><a name="dtor"></a> ~ 呼び出し
 
 `call`メッセージングブロックを破棄します。
 
@@ -137,7 +138,7 @@ call(
 ~call();
 ```
 
-## <a name="process_input_messages"></a><a name="process_input_messages"></a>process_input_messages
+## <a name="process_input_messages"></a><a name="process_input_messages"></a> process_input_messages
 
 入力メッセージに対して call 関数を実行します。
 
@@ -150,7 +151,7 @@ virtual void process_input_messages(_Inout_ message<T>* _PMessage);
 *_PMessage*<br/>
 処理するメッセージへのポインター。
 
-## <a name="process_message"></a><a name="process_message"></a>process_message
+## <a name="process_message"></a><a name="process_message"></a> process_message
 
 このメッセージングブロックで受け入れられたメッセージを処理 `call` します。
 
@@ -163,7 +164,7 @@ virtual void process_message(_Inout_ message<T>* _PMessage);
 *_PMessage*<br/>
 処理するメッセージへのポインター。
 
-## <a name="propagate_message"></a><a name="propagate_message"></a>propagate_message
+## <a name="propagate_message"></a><a name="propagate_message"></a> propagate_message
 
 `ISource`ブロックからこのメッセージングブロックに非同期的にメッセージを渡し `call` ます。 これは、 `propagate` ソースブロックによって呼び出されたときに、メソッドによって呼び出されます。
 
@@ -183,9 +184,9 @@ virtual message_status propagate_message(
 
 ### <a name="return-value"></a>戻り値
 
-対象がメッセージに対して実行することを決定した[message_status](concurrency-namespace-enums.md)を示します。
+対象がメッセージに対して実行することを決定した [message_status](concurrency-namespace-enums.md) を示します。
 
-## <a name="send_message"></a><a name="send_message"></a>send_message
+## <a name="send_message"></a><a name="send_message"></a> send_message
 
 `ISource`ブロックからこのメッセージングブロックにメッセージを同期的に渡し `call` ます。 これは、 `send` ソースブロックによって呼び出されたときに、メソッドによって呼び出されます。
 
@@ -205,9 +206,9 @@ virtual message_status send_message(
 
 ### <a name="return-value"></a>戻り値
 
-対象がメッセージに対して実行することを決定した[message_status](concurrency-namespace-enums.md)を示します。
+対象がメッセージに対して実行することを決定した [message_status](concurrency-namespace-enums.md) を示します。
 
-## <a name="supports_anonymous_source"></a><a name="supports_anonymous_source"></a>supports_anonymous_source
+## <a name="supports_anonymous_source"></a><a name="supports_anonymous_source"></a> supports_anonymous_source
 
 このブロックがリンクされて `supports_anonymous_source` いないソースによって提供されるメッセージを受け入れることができることを示すために、メソッドをオーバーライドします。
 

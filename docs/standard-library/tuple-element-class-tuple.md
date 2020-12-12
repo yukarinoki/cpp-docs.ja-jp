@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: tuple_element クラス'
 title: tuple_element クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - std::tuple_element
 ms.assetid: 4c51a6c1-ce81-462f-8c6c-291d69f2b77c
-ms.openlocfilehash: be9d9fe56d35e96e4179eb511edccd475a369f32
-ms.sourcegitcommit: 43cee7a0d41a062661229043c2f7cbc6ace17fa3
+ms.openlocfilehash: dea9f883c2ae8d0a071f894405059ddb5f2090af
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92008287"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97168970"
 ---
 # <a name="tuple_element-class"></a>tuple_element クラス
 
@@ -76,7 +77,7 @@ template <class T1, class T2>
 
 ## <a name="remarks"></a>解説
 
-クラステンプレートには、 `tuple_element` `type` タプル型の*タプル*のインデックス*インデックス*にある型のシノニムである、入れ子になった typedef があります。
+クラステンプレートには、 `tuple_element` `type` タプル型の *タプル* のインデックス *インデックス* にある型のシノニムである、入れ子になった typedef があります。
 
 Typedef `tuple_element_t` は `tuple_element<Index, Tuple>::type` の便利なエイリアスです。
 
@@ -172,7 +173,7 @@ int main() {
 0 1.333
 ```
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:**\<tuple>
 

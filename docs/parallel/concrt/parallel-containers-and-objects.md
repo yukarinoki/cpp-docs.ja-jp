@@ -1,4 +1,5 @@
 ---
+description: '詳細: 並列コンテナーと並列オブジェクト'
 title: 並列コンテナーと並列オブジェクト
 ms.date: 03/27/2019
 helpviewer_keywords:
@@ -6,20 +7,20 @@ helpviewer_keywords:
 - parallel containers
 - concurrent containers
 ms.assetid: 90ab715c-29cd-48eb-8e76-528619aab466
-ms.openlocfilehash: 7387173378e79a4707008a11846eab19d7ae4341
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 2d0b6b491fbe41ea74ad0e6c138cb270558f6e73
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88831789"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97172441"
 ---
 # <a name="parallel-containers-and-objects"></a>並列コンテナーと並列オブジェクト
 
 並列パターンライブラリ (PPL) には、要素へのスレッドセーフなアクセスを提供するいくつかのコンテナーとオブジェクトが含まれています。
 
-*同時実行コンテナー*は、最も重要な操作への同時実行セーフアクセスを提供します。 ここでは、同時実行セーフとは、ポインターまたは反復子が常に有効であることを意味します。 これは、要素の初期化、または特定のトラバーサルの順序の保証ではありません。 これらのコンテナーの機能は、C++ 標準ライブラリに用意されているものと似ています。 たとえば、 [concurrency:: concurrent_vector](../../parallel/concrt/reference/concurrent-vector-class.md) クラスは [std:: vector](../../standard-library/vector-class.md) クラスに似ていますが、 `concurrent_vector` クラスを使用すると、要素を並行して追加することができます。 同時実行コンテナーは、同じコンテナーに対する読み取りと書き込みの両方のアクセスを必要とする並列コードがある場合に使用します。
+*同時実行コンテナー* は、最も重要な操作への同時実行セーフアクセスを提供します。 ここでは、同時実行セーフとは、ポインターまたは反復子が常に有効であることを意味します。 これは、要素の初期化、または特定のトラバーサルの順序の保証ではありません。 これらのコンテナーの機能は、C++ 標準ライブラリに用意されているものと似ています。 たとえば、 [concurrency:: concurrent_vector](../../parallel/concrt/reference/concurrent-vector-class.md) クラスは [std:: vector](../../standard-library/vector-class.md) クラスに似ていますが、 `concurrent_vector` クラスを使用すると、要素を並行して追加することができます。 同時実行コンテナーは、同じコンテナーに対する読み取りと書き込みの両方のアクセスを必要とする並列コードがある場合に使用します。
 
-*同時実行オブジェクト*は、コンポーネント間で同時に共有されます。 同時実行オブジェクトの状態を並行して計算するプロセスでは、同じ状態を直列に計算する別のプロセスと同じ結果が生成されます。 [Concurrency:: 組み合わせ](../../parallel/concrt/reference/combinable-class.md)可能クラスは、同時実行オブジェクト型の一例です。 `combinable`クラスを使用すると、計算を並列に実行し、その計算を最終結果に結合できます。 ミューテックスなどの同期メカニズムを使用して共有変数またはリソースへのアクセスを同期する場合は、同時実行オブジェクトを使用します。
+*同時実行オブジェクト* は、コンポーネント間で同時に共有されます。 同時実行オブジェクトの状態を並行して計算するプロセスでは、同じ状態を直列に計算する別のプロセスと同じ結果が生成されます。 [Concurrency:: 組み合わせ](../../parallel/concrt/reference/combinable-class.md)可能クラスは、同時実行オブジェクト型の一例です。 `combinable`クラスを使用すると、計算を並列に実行し、その計算を最終結果に結合できます。 ミューテックスなどの同期メカニズムを使用して共有変数またはリソースへのアクセスを同期する場合は、同時実行オブジェクトを使用します。
 
 ## <a name="sections"></a><a name="top"></a> 各項
 
@@ -87,7 +88,7 @@ ms.locfileid: "88831789"
 
 - ランタイムは、 `concurrent_vector` 型に対して特殊化されたバージョンを定義していません **`bool`** 。
 
-### <a name="concurrency-safe-operations"></a><a name="vector-safety"></a> 同時実行セーフな操作
+### <a name="concurrency-safe-operations"></a><a name="vector-safety"></a> Concurrency-Safe の操作
 
 オブジェクトのサイズの増加や拡大、またはオブジェクトの要素へのアクセスを行うすべてのメソッド `concurrent_vector` `concurrent_vector` は、同時実行セーフです。 ここでは、同時実行セーフとは、ポインターまたは反復子が常に有効であることを意味します。 これは、要素の初期化、または特定のトラバーサルの順序の保証ではありません。 この規則の例外は `resize` メソッドです。
 
@@ -176,7 +177,7 @@ Vector 要素のデータ型は、 `T` 次の要件を満たしている必要�
 
 - クラスは、 `concurrent_queue` メソッドの代わりに [unsafe_size](reference/concurrent-queue-class.md#unsafe_size) メソッドを提供し `size` ます。 `unsafe_size`メソッドは同時実行セーフではありません。
 
-### <a name="concurrency-safe-operations"></a><a name="queue-safety"></a> 同時実行セーフな操作
+### <a name="concurrency-safe-operations"></a><a name="queue-safety"></a> Concurrency-Safe の操作
 
 オブジェクトに対してエンキューまたはデキューを行うすべて `concurrent_queue` のメソッドは、同時実行セーフです。 ここでは、同時実行セーフとは、ポインターまたは反復子が常に有効であることを意味します。 これは、要素の初期化、または特定のトラバーサルの順序の保証ではありません。
 
@@ -254,7 +255,7 @@ Vector 要素のデータ型は、 `T` 次の要件を満たしている必要�
 
 デッドロックを回避するために、 `concurrent_unordered_map` メモリアロケーター、ハッシュ関数、またはその他のユーザー定義コードを呼び出すときにロックを保持する方法はありません。 また、ハッシュ関数が同じ値に対して同じキーを常に評価する必要があります。 最適なハッシュ関数は、ハッシュコード空間全体でキーを均等に分散します。
 
-### <a name="concurrency-safe-operations"></a><a name="map-safety"></a> 同時実行セーフな操作
+### <a name="concurrency-safe-operations"></a><a name="map-safety"></a> Concurrency-Safe の操作
 
 クラスは、 `concurrent_unordered_map` 同時実行セーフな挿入および要素アクセス操作を可能にします。 挿入操作では、既存のポインターまたは反復子は無効になりません。 反復子アクセスおよび走査操作も同時実行セーフです。 ここでは、同時実行セーフとは、ポインターまたは反復子が常に有効であることを意味します。 これは、要素の初期化、または特定のトラバーサルの順序の保証ではありません。 次の表は、同時実行セーフである一般的に使用さ `concurrent_unordered_map` れるメソッドと演算子を示しています。
 

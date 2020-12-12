@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: MFC デスクトップアプリケーション'
 title: MFC デスクトップ アプリケーション
 ms.date: 07/28/2019
 f1_keywords:
@@ -8,16 +9,16 @@ helpviewer_keywords:
 - class libraries, MFC
 - MFC, about MFC
 ms.assetid: 7101cb18-a681-495c-8f2b-069ad20c72f7
-ms.openlocfilehash: 3811fdcf278129ee72872ea489b42f8389957761
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: ac89ecfc603593a4328876bae061657fba26fed1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81359341"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97172792"
 ---
 # <a name="mfc-desktop-applications"></a>MFC デスクトップ アプリケーション
 
-Microsoft Foundation Class (MFC) ライブラリは、Win32 お呼びCOM API の多くにオブジェクト指向のラッパーを提供します。 かなりシンプルなデスクトップ アプリケーションの作成にも使用できますが、複数のコントロールを使用する複雑なユーザー インターフェイスを開発する必要がある場合に最も役立ちます。 MFC を使用すると、Office スタイルのユーザー インターフェイスを持つアプリケーションを作成できます。 Windows プラットフォーム自体のドキュメントについては[、Windows のドキュメントを参照してください](/windows/index)。 MFC を使用しない C++ で Windows アプリケーションをビルドする方法については、「 [Win32 API を使用してデスクトップ Windows アプリをビルドする](/windows/win32/index)」を参照してください。
+Microsoft Foundation Class (MFC) ライブラリは、Win32 お呼びCOM API の多くにオブジェクト指向のラッパーを提供します。 かなりシンプルなデスクトップ アプリケーションの作成にも使用できますが、複数のコントロールを使用する複雑なユーザー インターフェイスを開発する必要がある場合に最も役立ちます。 MFC を使用すると、Office スタイルのユーザー インターフェイスを持つアプリケーションを作成できます。 Windows プラットフォーム自体に関するドキュメントについては、 [windows のドキュメント](/windows/index)を参照してください。 MFC を使用しない C++ での Windows アプリケーションのビルドの詳細については、「 [Win32 API を使用したデスクトップ windows アプリの構築](/windows/win32/index)」を参照してください。
 
 『MFC リファレンス』では、Microsoft Foundation Class ライブラリ を構成するクラス、グローバル関数、グローバル変数、マクロについて説明しています。
 
@@ -37,7 +38,7 @@ Microsoft Foundation Class (MFC) ライブラリは、Win32 お呼びCOM API の
 [概念](mfc-concepts.md)<br/>
 MFC のトピックの概念に関する記事です。
 
-[階層グラフ](hierarchy-chart.md)<br/>
+[階層図](hierarchy-chart.md)<br/>
 クラス ライブラリのクラスの関係がわかりやすく図で示されています。
 
 [クラスの概要](class-library-overview.md)<br/>
@@ -52,7 +53,7 @@ MFC 開発チームの執筆によるクラス ライブラリに関する技術
 [MFC のカスタマイズ](customization-for-mfc.md)<br/>
 MFC アプリケーションをカスタマイズするためのヒントを示します。
 
-[クラス](reference/mfc-classes.md)<br/>
+[Classes](reference/mfc-classes.md)<br/>
 MFC クラスへのリンクおよび MFC クラスのヘッダー ファイル情報が用意されています。
 
 [内部クラス](reference/internal-classes.md)<br/>
@@ -61,10 +62,10 @@ MFC での内部使用。 完全を期すために、このセクションでは
 [マクロとグローバル](reference/mfc-macros-and-globals.md)<br/>
 MFC ライブラリのマクロおよびグローバル関数へのリンクを提供します。
 
-[構造体、スタイル、コールバック関数とメッセージ マップ](reference/structures-styles-callbacks-and-message-maps.md)<br/>
+[構造体、スタイル、コールバック、およびメッセージマップ](reference/structures-styles-callbacks-and-message-maps.md)<br/>
 MFC ライブラリで使用する構造体、スタイル、コールバック関数、およびメッセージ マップへのリンクを提供します。
 
-[MFC ウィザードとダイアログ ボックス](reference/mfc-wizards-and-dialog-boxes.md)<br/>
+[MFC ウィザードとダイアログボックス](reference/mfc-wizards-and-dialog-boxes.md)<br/>
 Visual Studio の MFC アプリケーションを作成するための機能のガイドです。
 
 [リソース ファイルの操作](../windows/working-with-resource-files.md)<br/>
@@ -72,13 +73,13 @@ Visual Studio の MFC アプリケーションを作成するための機能の�
 
 ## <a name="related-sections"></a>関連項目
 
-[階層グラフのカテゴリ](hierarchy-chart-categories.md)<br/>
+[階層図のカテゴリ](hierarchy-chart-categories.md)<br/>
 カテゴリ別の MFC 階層図を示します。
 
 [ATL/MFC 共有クラス](../atl-mfc-shared/atl-mfc-shared-classes.md)<br/>
 MFC と ATL で共有されるクラスへのリンクを提供します。
 
-[MFC サンプル](../overview/visual-cpp-samples.md#mfc-samples)<br/>
+[MFC のサンプル](../overview/visual-cpp-samples.md#mfc-samples)<br/>
 MFC の使い方を示すサンプルへのリンクを提供します。
 
 [Visual C++ ライブラリ リファレンス](../standard-library/cpp-standard-library-reference.md)<br/>

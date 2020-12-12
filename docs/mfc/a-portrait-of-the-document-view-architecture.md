@@ -1,5 +1,6 @@
 ---
-title: ドキュメント/ビューアーキテクチャの全体像
+description: '詳細情報: ドキュメント/ビューアーキテクチャの全体像'
+title: Document-View アーキテクチャの全体像
 ms.date: 11/04/2016
 helpviewer_keywords:
 - documents [MFC], views
@@ -14,12 +15,12 @@ helpviewer_keywords:
 - document/view architecture [MFC], about document/view architecture
 - views [MFC], accessing document data from
 ms.assetid: 4e7f65dc-b166-45d8-bcd5-9bb0d399b946
-ms.openlocfilehash: 8c7bb4add1ebce62147f0bd5403f693cbec87e91
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: e4f8fc636349aaa12ee4481c7f6223c343b6d406
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87214192"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97169633"
 ---
 # <a name="a-portrait-of-the-documentview-architecture"></a>ドキュメント/ビュー アーキテクチャの全体像
 
@@ -27,9 +28,9 @@ ms.locfileid: "87214192"
 
 ## <a name="gaining-access-to-document-data-from-the-view"></a>ビューからドキュメントデータへのアクセスを取得する
 
-ビューはドキュメントのデータにアクセスします。 [Getdocument](reference/cview-class.md#getdocument)関数は、ドキュメントへのポインターを返すか、ビュークラスを **`friend`** ドキュメントクラスの C++ にします。 その後、ビューはデータへのアクセスを使用してデータを取得し、描画や操作を行う準備ができたときにデータを取得します。
+ビューはドキュメントのデータにアクセスします。 [Getdocument](reference/cview-class.md#getdocument) 関数は、ドキュメントへのポインターを返すか、ビュークラスを **`friend`** ドキュメントクラスの C++ にします。 その後、ビューはデータへのアクセスを使用してデータを取得し、描画や操作を行う準備ができたときにデータを取得します。
 
-たとえば、ビューの[OnDraw](reference/cview-class.md#ondraw)メンバー関数から、ビューはを使用して `GetDocument` ドキュメントポインターを取得します。 次に、そのポインターを使用して `CString` 、ドキュメント内のデータメンバーにアクセスします。 このビューでは、文字列が関数に渡され `TextOut` ます。 この例のコードを確認するには、「[ビューでの描画](drawing-in-a-view.md)」を参照してください。
+たとえば、ビューの [OnDraw](reference/cview-class.md#ondraw) メンバー関数から、ビューはを使用して `GetDocument` ドキュメントポインターを取得します。 次に、そのポインターを使用して `CString` 、ドキュメント内のデータメンバーにアクセスします。 このビューでは、文字列が関数に渡され `TextOut` ます。 この例のコードを確認するには、「 [ビューでの描画](drawing-in-a-view.md)」を参照してください。
 
 ## <a name="user-input-to-the-view"></a>ビューへのユーザー入力
 
@@ -37,7 +38,7 @@ ms.locfileid: "87214192"
 
 ## <a name="updating-multiple-views-of-the-same-document"></a>同じドキュメントの複数のビューを更新する
 
-テキストエディターの分割ウィンドウなど、同じドキュメントの複数のビューを持つアプリケーションでは、最初に新しいデータがドキュメントに渡されます。 次に、ドキュメントの[UpdateAllViews](reference/cdocument-class.md#updateallviews)メンバー関数を呼び出します。これは、新しいデータを反映して、ドキュメントのすべてのビューを更新するように指示します。 これにより、ビューが同期されます。
+テキストエディターの分割ウィンドウなど、同じドキュメントの複数のビューを持つアプリケーションでは、最初に新しいデータがドキュメントに渡されます。 次に、ドキュメントの [UpdateAllViews](reference/cdocument-class.md#updateallviews) メンバー関数を呼び出します。これは、新しいデータを反映して、ドキュメントのすべてのビューを更新するように指示します。 これにより、ビューが同期されます。
 
 ### <a name="what-do-you-want-to-know-more-about"></a>詳細については、次を参照してください。
 

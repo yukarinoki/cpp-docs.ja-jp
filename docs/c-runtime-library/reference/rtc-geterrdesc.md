@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: _RTC_GetErrDesc'
 title: _RTC_GetErrDesc
 ms.date: 11/04/2016
 api_name:
@@ -26,12 +27,12 @@ helpviewer_keywords:
 - _RTC_GetErrDesc function
 - RTC_GetErrDesc function
 ms.assetid: 7994ec2b-5488-4fd4-806d-a166c9a9f927
-ms.openlocfilehash: 7174e9242b77a904df817886df4f8c763e3e0b2c
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 5e9beccec5e13d6c2c00e3edaefec695a8e16737
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70949054"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97168723"
 ---
 # <a name="_rtc_geterrdesc"></a>_RTC_GetErrDesc
 
@@ -48,11 +49,11 @@ const char * _RTC_GetErrDesc(
 ### <a name="parameters"></a>パラメーター
 
 *errnum*<br/>
-0 から **_RTC_NumErrors**によって戻される値より 1 少ない値までの範囲の数値。
+0 から **_RTC_NumErrors** によって戻される値より 1 少ない値までの範囲の数値。
 
 ## <a name="return-value"></a>戻り値
 
-実行時エラー チェック システムによって検出されたエラーの 1 つの種類に関する簡単な説明が含まれている文字列。 エラーが 0[未満である](rtc-numerrors.md)か、または _RTC_GetErrDesc によって返された値以上である場合、は**NULL**を返します。
+実行時エラー チェック システムによって検出されたエラーの 1 つの種類に関する簡単な説明が含まれている文字列。 エラーが0未満であるか、 [_RTC_NumErrors](rtc-numerrors.md)によって返された値以上の場合、 **_RTC_GetErrDesc** は **NULL** を返します。
 
 ## <a name="requirements"></a>必要条件
 
@@ -60,7 +61,7 @@ const char * _RTC_GetErrDesc(
 |-------------|---------------------|
 |**_RTC_GetErrDesc**|\<rtcapi.h>|
 
-詳細については、「[互換性](../../c-runtime-library/compatibility.md)」をご覧ください。
+詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
 ## <a name="libraries"></a>ライブラリ
 

@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: インラインアセンブリを使用した関数の作成'
 title: インライン アセンブリでの関数の記述
 ms.date: 08/30/2018
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - assembler [C++], writing functions
 - __asm keyword [C++], in functions
 ms.assetid: b5df8a04-fdc7-4622-8c9e-e4b618927497
-ms.openlocfilehash: 3ce42147693f0c4c180076c627ef88c182745186
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 94a1e03842620982e74818dbf2f1bd492a2a4738
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87191002"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97121804"
 ---
 # <a name="writing-functions-with-inline-assembly"></a>インライン アセンブリでの関数の記述
 
@@ -42,7 +43,7 @@ _TEXT   ENDS
         END
 ```
 
-別のアセンブラー用に記述されているため、この関数には別のソースファイルと、アセンブリとリンクの手順が必要です。 通常、C および C++ の関数の引数はスタックで渡されるので、このバージョンの関数は、 `power2` スタック上の位置によって引数にアクセスします。 (MASM およびその他のアセンブラーで使用できる**モデル**ディレクティブは、stack 引数とローカルスタック変数に名前でアクセスできることに注意してください)。
+別のアセンブラー用に記述されているため、この関数には別のソースファイルと、アセンブリとリンクの手順が必要です。 通常、C および C++ の関数の引数はスタックで渡されるので、このバージョンの関数は、 `power2` スタック上の位置によって引数にアクセスします。 (MASM およびその他のアセンブラーで使用できる **モデル** ディレクティブは、stack 引数とローカルスタック変数に名前でアクセスできることに注意してください)。
 
 ## <a name="example"></a>例
 

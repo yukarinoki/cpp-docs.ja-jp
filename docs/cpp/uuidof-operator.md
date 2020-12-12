@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: `__uuidof` 演算子'
 title: __uuidof 演算子
 ms.date: 10/10/2018
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - __uuidof keyword [C++]
 - __LIBID_ keyword [C++]
 ms.assetid: badfe709-809b-4b66-ad48-ee35039d25c6
-ms.openlocfilehash: f7564270408d14f58d1528c1f41c0afd2dbe219c
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: e6c14ac6f00b5e6314e1e4d844aea479fa714984
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87226972"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97116718"
 ---
 # <a name="__uuidof-operator"></a>`__uuidof` 演算子
 
@@ -29,9 +30,9 @@ ms.locfileid: "87226972"
 
 ## <a name="remarks"></a>解説
 
-*式*には、型名、ポインター、参照、またはその型の配列、これらの型に特化したテンプレート、またはこれらの型の変数を指定できます。 引数は、アタッチされた GUID を見つけるためにコンパイラが使用できる限り有効です。
+*式* には、型名、ポインター、参照、またはその型の配列、これらの型に特化したテンプレート、またはこれらの型の変数を指定できます。 引数は、アタッチされた GUID を見つけるためにコンパイラが使用できる限り有効です。
 
-この組み込みの特別なケースとして、引数として**0**または NULL が指定されている場合があります。 この場合、 **`__uuidof`** はゼロで構成された GUID を返します。
+この組み込みの特別なケースとして、引数として **0** または NULL が指定されている場合があります。 この場合、 **`__uuidof`** はゼロで構成された GUID を返します。
 
 このキーワードを使用すると、次のものにアタッチされている GUID を抽出できます。
 

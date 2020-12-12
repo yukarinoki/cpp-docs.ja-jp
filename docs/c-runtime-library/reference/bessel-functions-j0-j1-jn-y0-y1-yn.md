@@ -1,4 +1,5 @@
 ---
+description: '詳細については、「ベッセル関数: _j0、_j1、_jn、_y0、_y1、_yn」を参照してください。'
 title: 'Bessel 系関数: _j0、_j1、_jn、_y0、_y1、_yn'
 ms.date: 4/2/2020
 api_name:
@@ -48,12 +49,12 @@ helpviewer_keywords:
 - _y1 function
 - _yn function
 ms.assetid: a21a8bf1-df9d-4ba0-a8c2-e7ef71921d96
-ms.openlocfilehash: ef914d542d058898cf9b16478fd40ef4b0725674
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 8ada869b615e26d004e10ccc3355e83c9772888f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82913473"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97171869"
 ---
 # <a name="bessel-functions-_j0-_j1-_jn-_y0-_y1-_yn"></a>Bessel 系関数: _j0、_j1、_jn、_y0、_y1、_yn
 
@@ -94,17 +95,17 @@ Bessel 系関数の整数順序。
 
 ## <a name="return-value"></a>戻り値
 
-これらの各ルーチンは、値が*x*のベッセル関数を返します。 **_Y0**、 **_y1**、または **_yn**関数で*x*が負の値に設定されている場合、ルーチンは**errno**を**EDOM**に設定し、 **_DOMAIN**エラーメッセージを**stderr**に出力して **_HUGE_VAL**を返します。 **_Matherr**を使用すると、エラー処理を変更できます。
+これらの各ルーチンは、値が *x* のベッセル関数を返します。 **_Y0**、 **_y1**、または **_yn** 関数で *x* が負の値に設定されている場合、ルーチンは **errno** を **EDOM** に設定し、 **_DOMAIN** エラーメッセージを **stderr** に出力して **_HUGE_VAL** を返します。 **_Matherr** を使用すると、エラー処理を変更できます。
 
 ## <a name="remarks"></a>解説
 
-**_J0**、 **_j1**、および **_jn**ルーチンは、最初の種類のベッセル関数 (orders 0、1、n) を返します。
+**_J0**、 **_j1**、および **_jn** ルーチンは、最初の種類のベッセル関数 (orders 0、1、n) を返します。
 
 |入力|SEH 例外|Matherr 例外|
 |-----------|-------------------|-----------------------|
 |± **QNAN**、 **IND**|**無効です**|**_DOMAIN**|
 
-**_Y0**、 **_y1**、および **_yn**ルーチンでは、2番目の種類のベッセル関数 (orders 0、1、および n) が返されます。
+**_Y0**、 **_y1**、および **_yn** ルーチンでは、2番目の種類のベッセル関数 (orders 0、1、および n) が返されます。
 
 |入力|SEH 例外|Matherr 例外|
 |-----------|-------------------|-----------------------|
@@ -116,9 +117,9 @@ Bessel 系関数の整数順序。
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
-|**_j0**、 **_j1**、 **_jn**、 **_y0**、 **_y1**、 **_yn**|\<cmath> (C++), \<math.h> (C, C++)|
+|**_j0**、 **_j1**、 **_jn**、 **_y0**、 **_y1**、 **_yn**|\<cmath> (C++)、 \<math.h> (C、C++)|
 
 互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
@@ -165,5 +166,5 @@ Bessel functions for x = 2.387000:
 
 ## <a name="see-also"></a>関連項目
 
-[浮動小数点サポート](../../c-runtime-library/floating-point-support.md)<br/>
+[浮動小数点のサポート](../../c-runtime-library/floating-point-support.md)<br/>
 [_matherr](matherr.md)<br/>

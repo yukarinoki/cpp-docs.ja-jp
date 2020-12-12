@@ -1,16 +1,17 @@
 ---
+description: '詳細については、「方法: Alloc と Free を使用してメモリパフォーマンスを向上させる」を参照してください。'
 title: '方法: Alloc および Free を使用してメモリ パフォーマンスを改善する'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - Alloc and Free, using [Concurrency Runtime]
 - Using Alloc and Free [Concurrency Runtime]
 ms.assetid: e1fab9e8-a97d-4104-bead-e95958db79f9
-ms.openlocfilehash: e5e5207fe435e73df60b757d4f595aacbb70fe72
-ms.sourcegitcommit: 94893973211d0b254c8bcdcf0779997dcc136b0c
+ms.openlocfilehash: ab9a7bb9ad067bd7a5650b9e66d1708f08ffc183
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/28/2020
-ms.locfileid: "91414023"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97172571"
 ---
 # <a name="how-to-use-alloc-and-free-to-improve-memory-performance"></a>方法: Alloc および Free を使用してメモリ パフォーマンスを改善する
 

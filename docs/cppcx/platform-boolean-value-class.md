@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: Platform:: Boolean 値クラス'
 title: Platform::Boolean 値クラス
 ms.date: 12/30/2016
 ms.topic: reference
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::Boolean Struct
 ms.assetid: 8518a1db-7139-4187-9c7a-1ae3943373f2
-ms.openlocfilehash: 9297c0062a3c64a4e830e083b515aef41416e527
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: d108a8a158f8caaaeada3f8c0d6ab7aefa045cd8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87230962"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97171024"
 ---
 # <a name="platformboolean-value-class"></a>Platform::Boolean 値クラス
 
@@ -28,7 +29,7 @@ public value struct Boolean
 
 ブール値には、 [Platform::Object Class](../cppcx/platform-object-class.md)から派生した Equals()、GetHashCode()、ToString() メソッドと、 [Platform::Type Class](../cppcx/platform-type-class.md)から派生した GetTypeCode() メソッドがあります。
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 **サポートされている最低限のクライアント:** Windows 8
 

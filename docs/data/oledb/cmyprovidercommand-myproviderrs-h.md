@@ -1,4 +1,5 @@
 ---
+description: 詳細については、CCustomCommand (CustomRS .H) に関するページを参照してください。
 title: CCustomCommand (CustomRS.H)
 ms.date: 10/22/2018
 f1_keywords:
@@ -9,16 +10,16 @@ helpviewer_keywords:
 - CMyProviderCommand class in MyProviderRS.H
 - CCustomCommand class in CustomRS.H
 ms.assetid: b30b956e-cc91-4cf5-9fe6-f8b1ce9cc2a5
-ms.openlocfilehash: afa8571173117a23962eb84f6fa5b4cf2c3c46e7
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 35b0e1a1628920a85343a52ce4a003302468884b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80211758"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97170504"
 ---
 # <a name="ccustomcommand-customrsh"></a>CCustomCommand (CustomRS.H)
 
-`CCustomCommand` クラスは、プロバイダーコマンドオブジェクトの実装です。 `IAccessor`、`ICommandText`、および `ICommandProperties` インターフェイスの実装を提供します。 `IAccessor` インターフェイスは、行セットのインターフェイスと同じです。 Command オブジェクトは、アクセサーを使用してパラメーターのバインドを指定します。 行セットオブジェクトでは、出力列のバインドを指定するために使用されます。 `ICommandText` インターフェイスは、コマンドを自由に指定するのに便利な方法です。 この例では、後でカスタムコードを追加するときに `ICommandText` インターフェイスを使用します。また、`ICommand::Execute` メソッドもオーバーライドします。 `ICommandProperties` インターフェイスは、コマンドおよび行セットオブジェクトのすべてのプロパティを処理します。
+クラスは、 `CCustomCommand` プロバイダーコマンドオブジェクトの実装です。 、、およびの各インターフェイスの実装を提供し `IAccessor` `ICommandText` `ICommandProperties` ます。 この `IAccessor` インターフェイスは、行セット内のインターフェイスと同じです。 Command オブジェクトは、アクセサーを使用してパラメーターのバインドを指定します。 行セットオブジェクトでは、出力列のバインドを指定するために使用されます。 インターフェイスは、 `ICommandText` コマンドを指定するための便利な方法です。 この例では、 `ICommandText` 後でカスタムコードを追加するときにインターフェイスを使用します。メソッドもオーバーライドし `ICommand::Execute` ます。 インターフェイスは、 `ICommandProperties` コマンドおよび行セットオブジェクトのすべてのプロパティを処理します。
 
 ```cpp
 // CCustomCommand
@@ -33,12 +34,12 @@ class ATL_NO_VTABLE CCustomCommand :
    public IColumnsInfoImpl<CCustomCommand>
 ```
 
-`IAccessor` インターフェイスは、コマンドおよび行セットで使用されるすべてのバインドを管理します。 コンシューマーは、`DBBINDING` 構造体の配列を使用して `IAccessor::CreateAccessor` を呼び出します。 各 `DBBINDING` 構造体には、列のバインドを処理する方法 (型や長さなど) に関する情報が含まれています。 プロバイダーは、構造体を受け取り、データの転送方法と変換が必要かどうかを決定します。 コマンドオブジェクトでは、コマンド内の任意のパラメーターを処理するために、`IAccessor` インターフェイスが使用されます。
+インターフェイスは、 `IAccessor` コマンドおよび行セットで使用されるすべてのバインドを管理します。 コンシューマーは、 `IAccessor::CreateAccessor` 構造体の配列を使用してを呼び出し `DBBINDING` ます。 各 `DBBINDING` 構造体には、列のバインドを処理する方法 (型や長さなど) に関する情報が含まれています。 プロバイダーは、構造体を受け取り、データの転送方法と変換が必要かどうかを決定します。 コマンド `IAccessor` オブジェクトでは、インターフェイスを使用して、コマンド内の任意のパラメーターを処理します。
 
-Command オブジェクトは、`IColumnsInfo`の実装も提供します。 OLE DB には `IColumnsInfo` インターフェイスが必要です。 インターフェイスを使用すると、コンシューマーはコマンドからパラメーターに関する情報を取得できます。 行セットオブジェクトは、`IColumnsInfo` インターフェイスを使用して、出力列に関する情報をプロバイダーに返します。
+Command オブジェクトは、の実装も提供 `IColumnsInfo` します。 OLE DB にはインターフェイスが必要です `IColumnsInfo` 。 インターフェイスを使用すると、コンシューマーはコマンドからパラメーターに関する情報を取得できます。 行セットオブジェクトは、インターフェイスを使用して、 `IColumnsInfo` 出力列に関する情報をプロバイダーに返します。
 
-プロバイダーには、`IObjectWithSite`と呼ばれるインターフェイスも含まれています。 `IObjectWithSite` インターフェイスは ATL 2.0 で実装されており、実装者はそれ自体に関する情報をその子に渡すことができます。 Command オブジェクトは、`IObjectWithSite` 情報を使用して、生成されたすべての行セットオブジェクトを作成したユーザーについて通知します。
+プロバイダーには、というインターフェイスも含まれてい `IObjectWithSite` ます。 `IObjectWithSite`インターフェイスは ATL 2.0 で実装されており、実装者が自身に関する情報をその子に渡すことができます。 Command オブジェクトは、情報を使用して、生成された `IObjectWithSite` すべての行セットオブジェクトを作成したユーザーについて通知します。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[プロバイダー ウィザードで生成されたファイル](../../data/oledb/provider-wizard-generated-files.md)
+[プロバイダー Wizard-Generated ファイル](../../data/oledb/provider-wizard-generated-files.md)

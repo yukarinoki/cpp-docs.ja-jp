@@ -1,19 +1,20 @@
-﻿---
+---
+description: '詳細については、次を参照してください: steady_clock 構造体'
 title: steady_clock 構造体
 ms.date: 05/22/2018
 f1_keywords:
 - chrono/std::chrono::steady_clock
 ms.assetid: 970d12ec-fc80-4391-a2f7-b57b2aec668d
-ms.openlocfilehash: d21d5c2ed7ed667333007f3bd12d13f47b868380
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 066a98f4eba6670e640e9fcc9b79eb017859a3d2
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87217403"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97169074"
 ---
 # <a name="steady_clock-struct"></a>steady_clock 構造体
 
-*定常*クロックを表します。
+*定常* クロックを表します。
 
 ## <a name="syntax"></a>構文
 
@@ -25,9 +26,9 @@ struct steady_clock;
 
 Windows では、 `steady_clock` 関数をラップし `QueryPerformanceCounter` ます。
 
-`now` の最初の呼び出しによって返される値が、常に `now` の以降の呼び出しによって返される値以下である場合、クロックは*単調*になります。 *単調*で、クロックのティック間の時間が一定のクロックは*安定しています*。
+`now` の最初の呼び出しによって返される値が、常に `now` の以降の呼び出しによって返される値以下である場合、クロックは *単調* になります。 *単調* で、クロックのティック間の時間が一定のクロックは *安定しています*。
 
-`high_resolution_clock`はの typedef です `steady_clock` 。
+`high_resolution_clock` はの typedef です `steady_clock` 。
 
 ### <a name="public-typedefs"></a>パブリック typedef
 
@@ -48,9 +49,9 @@ Windows では、 `steady_clock` 関数をラップし `QueryPerformanceCounter`
 
 |名前|説明|
 |----------|-----------------|
-|`steady_clock::is_steady`|**`true`** を保持します。 `steady_clock` は*安定*しています。|
+|`steady_clock::is_steady`|**`true`** を保持します。 `steady_clock` は *安定* しています。|
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:**\<chrono>
 

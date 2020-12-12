@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: CNoAccessor クラス'
 title: CNoAccessor クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,16 +9,16 @@ f1_keywords:
 helpviewer_keywords:
 - CNoAccessor class
 ms.assetid: eb669ae5-0a56-49a3-9646-c4ae6239da31
-ms.openlocfilehash: c82d756690c6c2a719cb03f458c471aa44e3d5b5
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 624c72c841280ec56bacf0edd29efeb4b1005988
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80211732"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97170387"
 ---
 # <a name="cnoaccessor-class"></a>CNoAccessor クラス
 
-は、アクセサークラスの引数を必要とする `CCommand` や `CTable`などのテンプレートクラスのテンプレート引数 (`TAccessor`) として使用できます。
+は、 `TAccessor` `CCommand` アクセサークラスの引数を必要とするやなどのテンプレートクラスのテンプレート引数 () として使用でき `CTable` ます。
 
 ## <a name="syntax"></a>構文
 
@@ -27,39 +28,39 @@ class CNoAccessor
 
 ## <a name="remarks"></a>解説
 
-クラスでパラメーターまたは出力列がサポートされないようにする場合は、テンプレート引数として `CNoAccessor` を使用します。
+`CNoAccessor`クラスがパラメーターまたは出力列をサポートしないようにする場合は、テンプレート引数としてを使用します。
 
-`CNoAccessor` は、次のスタブメソッドを実装します。これらはそれぞれ、他のアクセサークラスのメソッドに対応します。
+`CNoAccessor` では、次のスタブメソッドが実装されています。これらはそれぞれ、他のアクセサークラスのメソッドに対応しています。
 
-- `BindColumns`-列をアクセサーにバインドします。
+- `BindColumns` -列をアクセサーにバインドします。
 
-- `BindParameters`-作成されたパラメーターを列にバインドします。
+- `BindParameters` -作成されたパラメーターを列にバインドします。
 
-- `Bind`-バインドを作成します。
+- `Bind` -バインドを作成します。
 
-- `Close`-アクセサーを閉じます。
+- `Close` -アクセサーを閉じます。
 
-- `ReleaseAccessors`-クラスによって作成されたアクセサーを解放します。
+- `ReleaseAccessors` -クラスによって作成されたアクセサーを解放します。
 
-- `FreeRecordMemory`-解放する必要がある現在のレコード内のすべての列を解放します。
+- `FreeRecordMemory` -解放する必要がある現在のレコード内のすべての列を解放します。
 
-- `GetColumnInfo`-開かれた行セットから列情報を取得します。
+- `GetColumnInfo` -開かれた行セットから列情報を取得します。
 
-- `GetNumAccessors`-クラスによって作成されたアクセサーの数を取得します。
+- `GetNumAccessors` -クラスによって作成されたアクセサーの数を取得します。
 
-- `IsAutoAccessor`-移動操作中にアクセサーに対してデータが自動的に取得される場合に true を返します。
+- `IsAutoAccessor` -移動操作中にアクセサーに対してデータが自動的に取得される場合は true を返します。
 
-- `GetHAccessor`-指定されたアクセサーのアクセサーハンドルを取得します。
+- `GetHAccessor` -指定されたアクセサーのアクセサーハンドルを取得します。
 
-- `GetBuffer`-ブックマークバッファーへのポインターを取得します。
+- `GetBuffer` -ブックマークバッファーへのポインターを取得します。
 
-- `NoBindOnNullRowset`-空の行セットでのデータバインディングを防止します。
+- `NoBindOnNullRowset` -空の行セットでのデータバインディングを防止します。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** atldbcli.h
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[OLE DB コンシューマー テンプレートに関するページ](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
-[OLE DB コンシューマー テンプレート リファレンス](../../data/oledb/ole-db-consumer-templates-reference.md)
+[OLE DB コンシューマー テンプレート](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[OLE DB コンシューマーテンプレートリファレンス](../../data/oledb/ole-db-consumer-templates-reference.md)

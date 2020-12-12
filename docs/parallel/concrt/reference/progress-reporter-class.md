@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: progress_reporter クラス'
 title: progress_reporter クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -9,12 +10,12 @@ f1_keywords:
 helpviewer_keywords:
 - progress_reporter class
 ms.assetid: b836efab-2d05-4649-b6fa-d15236f1f813
-ms.openlocfilehash: bd8f50a8c9829ff9de3e2412b89aa4de88d90db6
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: 40ae3dba0c804381478d8c32da4425b20a9825d9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77138768"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97169360"
 ---
 # <a name="progress_reporter-class"></a>progress_reporter クラス
 
@@ -36,17 +37,17 @@ progress_reporter クラスによって報告される進行状況の各通知�
 
 ### <a name="public-constructors"></a>パブリック コンストラクター
 
-|Name|説明|
+|名前|説明|
 |----------|-----------------|
 |[progress_reporter](#ctor)||
 
 ### <a name="public-methods"></a>パブリック メソッド
 
-|Name|説明|
+|名前|説明|
 |----------|-----------------|
-|[ポート](#report)|progress reporter クラスのバインド先となる非同期アクションまたは非同期操作に、進行状況レポートを送信します。|
+|[report (レポート)](#report)|progress reporter クラスのバインド先となる非同期アクションまたは非同期操作に、進行状況レポートを送信します。|
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
 この種類は、Windows ランタイムアプリでのみ使用できます。
 
@@ -60,13 +61,13 @@ progress_reporter クラスによって報告される進行状況の各通知�
 
 **名前空間:** concurrency
 
-## <a name="ctor"></a>progress_reporter
+## <a name="progress_reporter"></a><a name="ctor"></a> progress_reporter
 
 ```cpp
 progress_reporter();
 ```
 
-## <a name="report"></a>ポート
+## <a name="report"></a><a name="report"></a> ポート
 
 progress reporter クラスのバインド先となる非同期アクションまたは非同期操作に、進行状況レポートを送信します。
 
@@ -79,6 +80,6 @@ void report(const _ProgressType& val) const;
 *val*<br/>
 進行状況を示す通知によって報告されるペイロード。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[コンカレンシー名前空間](concurrency-namespace.md)
+[concurrency 名前空間](concurrency-namespace.md)

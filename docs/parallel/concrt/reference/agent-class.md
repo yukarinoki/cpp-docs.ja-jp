@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: エージェントクラス'
 title: agent クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -17,12 +18,12 @@ f1_keywords:
 helpviewer_keywords:
 - agent class
 ms.assetid: 1b09e3d2-5e37-4966-b016-907ef1512456
-ms.openlocfilehash: f1d98cdc6237f182e0240a85f2fdce3410232195
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 74be31ad13eab6a026a11dbcc2b20719e98ee868
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87213893"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97172272"
 ---
 # <a name="agent-class"></a>agent クラス
 
@@ -51,7 +52,7 @@ class agent;
 |[start](#start)|エージェントを `agent_created` 状態から状態に移動 `agent_runnable` し、実行するようにスケジュールします。|
 |[status](#status)|エージェントからの状態情報の同期ソース。|
 |[status_port](#status_port)|エージェントからの状態情報の非同期ソース。|
-|[待機](#wait)|エージェントのタスクが完了するまで待機します。|
+|[wait](#wait)|エージェントのタスクが完了するまで待機します。|
 |[wait_for_all](#wait_for_all)|指定されたすべてのエージェントのタスクが完了するまで待機します。|
 |[wait_for_one](#wait_for_one)|指定されたいずれかのエージェントがタスクを完了するまで待機します。|
 
@@ -60,23 +61,23 @@ class agent;
 |名前|説明|
 |----------|-----------------|
 |[完了](#done)|エージェントを状態に移動し `agent_done` 、エージェントが完了したことを示します。|
-|[実行](#run)|エージェントのメインタスクを表します。 `run`は、派生クラスでオーバーライドされる必要があります。また、エージェントが開始された後にエージェントが実行する処理を指定します。|
+|[実行](#run)|エージェントのメインタスクを表します。 `run` は、派生クラスでオーバーライドされる必要があります。また、エージェントが開始された後にエージェントが実行する処理を指定します。|
 
 ## <a name="remarks"></a>解説
 
-詳細については、「[非同期エージェント](../../../parallel/concrt/asynchronous-agents.md)」を参照してください。
+詳細については、「 [非同期エージェント](../../../parallel/concrt/asynchronous-agents.md)」を参照してください。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
 `agent`
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** agents.h
 
 **名前空間:** concurrency
 
-## <a name="agent"></a><a name="ctor"></a>・
+## <a name="agent"></a><a name="ctor"></a> ・
 
 エージェントを構築します。
 
@@ -100,7 +101,7 @@ agent(ScheduleGroup& _PGroup);
 
 `_PScheduler` または `_PGroup` パラメーターを指定しない場合、ランタイムは既定のスケジューラを使用しています。
 
-## <a name="agent"></a><a name="dtor"></a>~ エージェント
+## <a name="agent"></a><a name="dtor"></a> ~ エージェント
 
 エージェントを破棄します。
 
@@ -112,7 +113,7 @@ virtual ~agent();
 
 ターミナル状態 (または) に含まれていないエージェントを破棄すると、エラーになり `agent_done` `agent_canceled` ます。 これは、クラスを継承するクラスのデストラクターでエージェントがターミナル状態になるのを待機することで回避できます `agent` 。
 
-## <a name="cancel"></a><a name="cancel"></a>キャンセル
+## <a name="cancel"></a><a name="cancel"></a> キャンセル
 
 エージェントをまたはの状態 `agent_created` から `agent_runnable` 状態に移動 `agent_canceled` します。
 
@@ -124,7 +125,7 @@ bool cancel();
 
 **`true`** エージェントがキャンセルされた場合は、それ以外の場合は **`false`** 。 エージェントが既に実行を開始しているか、既に完了している場合、エージェントを取り消すことはできません。
 
-## <a name="done"></a><a name="done"></a>完成です
+## <a name="done"></a><a name="done"></a> 完成です
 
 エージェントを状態に移動し `agent_done` 、エージェントが完了したことを示します。
 
@@ -140,9 +141,9 @@ bool done();
 
 `run`エージェントの実行が完了したことがわかっている場合は、メソッドの最後にこのメソッドを呼び出す必要があります。
 
-## <a name="run"></a><a name="run"></a>実行
+## <a name="run"></a><a name="run"></a> 実行
 
-エージェントのメインタスクを表します。 `run`は、派生クラスでオーバーライドされる必要があります。また、エージェントが開始された後にエージェントが実行する処理を指定します。
+エージェントのメインタスクを表します。 `run` は、派生クラスでオーバーライドされる必要があります。また、エージェントが開始された後にエージェントが実行する処理を指定します。
 
 ```cpp
 virtual void run() = 0;
@@ -152,7 +153,7 @@ virtual void run() = 0;
 
 このメソッドが呼び出される直前に、エージェントの状態が "右" に変更され `agent_started` ます。 メソッドは、 `done` を返す前に、適切な状態のエージェントでを呼び出す必要があり、例外をスローしない可能性があります。
 
-## <a name="start"></a><a name="start"></a>着手
+## <a name="start"></a><a name="start"></a> 着手
 
 エージェントを `agent_created` 状態から状態に移動 `agent_runnable` し、実行するようにスケジュールします。
 
@@ -164,7 +165,7 @@ bool start();
 
 **`true`** エージェントが正常に開始された場合は、それ以外の場合は **`false`** です。 取り消されたエージェントを開始できません。
 
-## <a name="status"></a><a name="status"></a>オンライン
+## <a name="status"></a><a name="status"></a> オンライン
 
 エージェントからの状態情報の同期ソース。
 
@@ -176,7 +177,7 @@ agent_status status();
 
 エージェントの現在の状態を返します。 返された状態は、返された直後に変更される可能性があることに注意してください。
 
-## <a name="status_port"></a><a name="status_port"></a>status_port
+## <a name="status_port"></a><a name="status_port"></a> status_port
 
 エージェントからの状態情報の非同期ソース。
 
@@ -188,7 +189,7 @@ ISource<agent_status>* status_port();
 
 エージェントの現在の状態に関するメッセージを送信できるメッセージソースを返します。
 
-## <a name="wait"></a><a name="wait"></a>待機
+## <a name="wait"></a><a name="wait"></a> 待機
 
 エージェントのタスクが完了するまで待機します。
 
@@ -214,9 +215,9 @@ static agent_status __cdecl wait(
 
 エージェントタスクは、エージェントが状態または状態を入力したときに完了し `agent_canceled` `agent_done` ます。
 
-パラメーターに `_Timeout` 定数以外の値が指定されている場合、 `COOPERATIVE_TIMEOUT_INFINITE` エージェントがそのタスクを完了する前に指定した時間が経過すると、例外[operation_timed_out](operation-timed-out-class.md)がスローされます。
+パラメーターに `_Timeout` 定数以外の値が指定されている場合、 `COOPERATIVE_TIMEOUT_INFINITE` エージェントがそのタスクを完了する前に指定した時間が経過すると、例外 [operation_timed_out](operation-timed-out-class.md) がスローされます。
 
-## <a name="wait_for_all"></a><a name="wait_for_all"></a>wait_for_all
+## <a name="wait_for_all"></a><a name="wait_for_all"></a> wait_for_all
 
 指定されたすべてのエージェントのタスクが完了するまで待機します。
 
@@ -246,9 +247,9 @@ static void __cdecl wait_for_all(
 
 エージェントタスクは、エージェントが状態または状態を入力したときに完了し `agent_canceled` `agent_done` ます。
 
-パラメーターに `_Timeout` 定数以外の値が指定されている場合、 `COOPERATIVE_TIMEOUT_INFINITE` エージェントがそのタスクを完了する前に指定した時間が経過すると、例外[operation_timed_out](operation-timed-out-class.md)がスローされます。
+パラメーターに `_Timeout` 定数以外の値が指定されている場合、 `COOPERATIVE_TIMEOUT_INFINITE` エージェントがそのタスクを完了する前に指定した時間が経過すると、例外 [operation_timed_out](operation-timed-out-class.md) がスローされます。
 
-## <a name="wait_for_one"></a><a name="wait_for_one"></a>wait_for_one
+## <a name="wait_for_one"></a><a name="wait_for_one"></a> wait_for_one
 
 指定されたいずれかのエージェントがタスクを完了するまで待機します。
 
@@ -282,7 +283,7 @@ static void __cdecl wait_for_one(
 
 エージェントタスクは、エージェントが状態または状態を入力したときに完了し `agent_canceled` `agent_done` ます。
 
-パラメーターに `_Timeout` 定数以外の値が指定されている場合、 `COOPERATIVE_TIMEOUT_INFINITE` エージェントがそのタスクを完了する前に指定した時間が経過すると、例外[operation_timed_out](operation-timed-out-class.md)がスローされます。
+パラメーターに `_Timeout` 定数以外の値が指定されている場合、 `COOPERATIVE_TIMEOUT_INFINITE` エージェントがそのタスクを完了する前に指定した時間が経過すると、例外 [operation_timed_out](operation-timed-out-class.md) がスローされます。
 
 ## <a name="see-also"></a>関連項目
 

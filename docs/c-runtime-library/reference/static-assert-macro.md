@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: _STATIC_ASSERT マクロ'
 title: _STATIC_ASSERT マクロ
 ms.date: 11/04/2016
 api_location:
@@ -21,16 +22,16 @@ f1_keywords:
 helpviewer_keywords:
 - _STATIC_ASSERT macro
 ms.assetid: 89b0350c-2c2f-4be6-9786-8b1f0780a5da
-ms.openlocfilehash: 78544424b727797158109fa3000ee2ebf8066cf7
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: bbdb615cccfb245868d4c282acf86c9228ea574b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87229325"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97171200"
 ---
 # <a name="_static_assert-macro"></a>_STATIC_ASSERT マクロ
 
-コンパイル時に式を評価し、結果が**FALSE**の場合にエラーを生成します。
+コンパイル時に式を評価し、結果が **FALSE** の場合にエラーを生成します。
 
 ## <a name="syntax"></a>構文
 
@@ -47,11 +48,11 @@ _STATIC_ASSERT(
 
 ## <a name="remarks"></a>解説
 
-このマクロは[_ASSERT と _ASSERTE マクロ](assert-asserte-assert-expr-macros.md)に似ていますが、 *booleanExpression*は実行時ではなくコンパイル時に評価される点が異なります。 *BooleanExpression*が**FALSE** (0) に評価される場合、[コンパイラエラー C2466](../../error-messages/compiler-errors-1/compiler-error-c2466.md)が生成されます。
+このマクロは [_ASSERT と _ASSERTE マクロ](assert-asserte-assert-expr-macros.md)に似ていますが、 *booleanExpression* は実行時ではなくコンパイル時に評価される点が異なります。 *BooleanExpression* が **FALSE** (0) に評価される場合、[コンパイラエラー C2466](../../error-messages/compiler-errors-1/compiler-error-c2466.md)が生成されます。
 
 ## <a name="example"></a>例
 
-この例では、 [sizeof](../../c-language/sizeof-operator-c.md) **`int`** a が2バイト以上であり、 [sizeof](../../c-language/sizeof-operator-c.md) a が1バイトであるかどうかを確認し **`long`** ます。 が1バイトを超えるため、プログラムはコンパイルされず、[コンパイラエラー C2466](../../error-messages/compiler-errors-1/compiler-error-c2466.md)が生成され **`long`** ます。
+この例では、 [sizeof](../../c-language/sizeof-operator-c.md) **`int`** a が2バイト以上であり、 [sizeof](../../c-language/sizeof-operator-c.md) a が1バイトであるかどうかを確認し **`long`** ます。 が1バイトを超えるため、プログラムはコンパイルされず、 [コンパイラエラー C2466](../../error-messages/compiler-errors-1/compiler-error-c2466.md) が生成され **`long`** ます。
 
 ```C
 // crt__static_assert.c
@@ -71,7 +72,7 @@ int main()
 }
 ```
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 |マクロ|必須ヘッダー|
 |-----------|---------------------|

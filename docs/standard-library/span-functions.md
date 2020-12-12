@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: &lt; span &gt; 関数'
 title: '&lt;スパン &gt; 関数'
 ms.date: 05/28/2020
 f1_keywords:
@@ -7,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - std::span [C++], as_writable_bytes
 - std::as_bytes [C++]
-ms.openlocfilehash: f51c99d2f2a051a07cefcb985fdb46340fefb3ee
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 09d712d6dfffee2aa24e0e8cecca4031a27923f5
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87217442"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97169191"
 ---
 # <a name="ltspangt-functions"></a>&lt;スパン &gt; 関数
 
-ヘッダーには、 \<span> **span**オブジェクトを操作する次の非メンバー関数が含まれています。
+ヘッダーには、 \<span> **span** オブジェクトを操作する次の非メンバー関数が含まれています。
 
 | **非メンバー関数** | **説明** |
 |-|-|

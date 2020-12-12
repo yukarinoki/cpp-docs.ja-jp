@@ -1,16 +1,17 @@
 ---
+description: '詳細情報: DAO クラス'
 title: DAO クラス
 ms.date: 09/17/2019
 helpviewer_keywords:
 - database classes [MFC], DAO
 - DAO [MFC], classes
 ms.assetid: b15d0cd6-328b-4288-9c19-d037a795db57
-ms.openlocfilehash: 51abd29ef4de5d70f4a5b2b6b14b53510e7876a1
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: bf30a4d985947ca435c53391ce9529caf9ec2c81
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84615926"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97169412"
 ---
 # <a name="dao-classes"></a>DAO クラス
 
@@ -50,16 +51,16 @@ DAO データベース クラスで使われる DAO レコード フィールド
 ## <a name="related-classes"></a>関連クラス
 
 [CLongBinary](reference/clongbinary-class.md)<br/>
-ビットマップなどのバイナリラージオブジェクト (BLOB) のストレージへのハンドルをカプセル化します。 `CLongBinary`オブジェクトは、データベーステーブルに格納されている大規模なデータオブジェクトを管理するために使用されます。
+ビットマップなどのバイナリラージオブジェクト (BLOB) のストレージへのハンドルをカプセル化します。 `CLongBinary` オブジェクトは、データベーステーブルに格納されている大規模なデータオブジェクトを管理するために使用されます。
 
 [COleCurrency](reference/colecurrency-class.md)<br/>
-OLE オートメーション型**CURRENCY**のラッパー (固定小数点演算型)。小数点の前に15桁、の後に4桁の数値が含まれます。
+OLE オートメーション型 **CURRENCY** のラッパー (固定小数点演算型)。小数点の前に15桁、の後に4桁の数値が含まれます。
 
 [COleDateTime](../atl-mfc-shared/reference/coledatetime-class.md)<br/>
-OLE オートメーション型の**日付**のラッパー。 日付と時刻の値を表します。
+OLE オートメーション型の **日付** のラッパー。 日付と時刻の値を表します。
 
 [COleVariant](reference/colevariant-class.md)<br/>
-OLE オートメーション型**バリアント**のラッパー。 **バリアント型**のデータは、さまざまな形式で格納できます。
+OLE オートメーション型 **バリアント** のラッパー。 **バリアント型** のデータは、さまざまな形式で格納できます。
 
 ## <a name="see-also"></a>関連項目
 

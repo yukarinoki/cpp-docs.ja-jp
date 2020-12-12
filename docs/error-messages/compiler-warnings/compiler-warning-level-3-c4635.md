@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: コンパイラの警告 (レベル 3) C4635'
 title: コンパイラの警告 (レベル 3) C4635
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4635
 ms.assetid: b2ba90de-c093-4a76-8076-b65878467574
-ms.openlocfilehash: fd3bf6c1b14c6dae8e2fa95a54e2d4fbc4f295c5
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: e885c501e4f10719618bb552c153dc13a481332d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74991851"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97168333"
 ---
 # <a name="compiler-warning-level-3-c4635"></a>コンパイラの警告 (レベル 3) C4635
 
@@ -35,4 +36,4 @@ public ref class Test {};
 
 このサンプルの次の出力に注意してください: **'member' の終了タグが開始タグ 'summary' と一致しません。**
 
-このサンプルの問題は、\<summary > の終了タグの形式が適切ではなく、コンパイラが \<の概要 > 終了タグとして認識していないことです。  \<のメンバー > タグは、すべての/doc コンパイルでコンパイラによって .xdc ファイルに埋め込まれます。  ここでの問題は、終了タグ \</メンバー > が、コンパイラが処理した前の開始タグ (\<概要 > と一致しないことです。
+このサンプルの問題は、の終了タグの \<summary> 形式が適切ではなく、コンパイラが終了タグとして認識していないことです \<summary> 。  この \<member> タグは、すべての/doc コンパイルでコンパイラによって .xdc ファイルに埋め込まれます。  ここでの問題は、終了タグが、 \</member> コンパイラによって処理された前の開始タグ () と一致しないことです \<summary> 。

@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: タブコントロールの操作'
 title: タブ コントロールの使い方
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,16 +7,16 @@ helpviewer_keywords:
 - tab controls [MFC], working with
 - tab controls [MFC], using
 ms.assetid: 819488e3-4944-44b7-9483-195edb8e0aed
-ms.openlocfilehash: 1ff4d57f9968f79a964a57b26fc79d68245c1a3e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7e84f636019fa3b63c3e19b23ac639486c5f2353
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62399513"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97172611"
 ---
 # <a name="working-with-a-tab-control"></a>タブ コントロールの使い方
 
-タブ コントロールを使用する最も簡単な方法 ([CTabCtrl](../mfc/reference/ctabctrl-class.md)) ダイアログ エディターのダイアログ テンプレート リソースを追加することです。 単独で、タブ コントロールを使用することもできます。 MFC 呼び出し`InitCommonControls`できます。 主なタスクは次のとおりです。
+タブコントロール ([CTabCtrl](../mfc/reference/ctabctrl-class.md)) を使用する最も簡単な方法は、ダイアログエディターを使用してそれをダイアログテンプレートリソースに追加することです。 また、タブコントロールを単独で使用することもできます。 MFC を呼び出し `InitCommonControls` ます。 主なタスクは次のとおりです。
 
 - [タブ コントロールの作成](../mfc/creating-the-tab-control.md)
 
@@ -23,7 +24,7 @@ ms.locfileid: "62399513"
 
 - [タブ コントロールの通知メッセージの処理](../mfc/processing-tab-control-notification-messages.md)
 
-親ビューまたはダイアログ クラスでは、タブ コントロール オブジェクトが埋め込まれている場合、コントロールは、親が破棄されるときに破棄されます。
+Tab コントロールオブジェクトが親ビューまたはダイアログクラスに埋め込まれている場合、親が破棄されるとコントロールが破棄されます。
 
 ## <a name="see-also"></a>関連項目
 

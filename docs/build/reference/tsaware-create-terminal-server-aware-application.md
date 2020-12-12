@@ -1,4 +1,5 @@
 ---
+description: 詳細情報:/TSAWARE (ターミナルサーバー対応アプリケーションの作成)
 title: /TSAWARE (ターミナル サーバーに対応したアプリケーションの作成)
 ms.date: 11/04/2016
 f1_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - -TSAWARE linker option
 - TSAWARE linker option
 ms.assetid: fe1c1846-de5b-4839-b562-93fbfe36cd29
-ms.openlocfilehash: c2ec12b0b5fbe241d75acc4bb0d87837371a293e
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 6086bdcdf4aa41f116491a602286a0c8410bd61d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88845732"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97171973"
 ---
 # <a name="tsaware-create-terminal-server-aware-application"></a>/TSAWARE (ターミナル サーバーに対応したアプリケーションの作成)
 
@@ -48,7 +49,7 @@ ms.locfileid: "88845732"
 
 1. [ **システム** ] プロパティページをクリックします。
 
-1. **ターミナルサーバー**のプロパティを変更します。
+1. **ターミナルサーバー** のプロパティを変更します。
 
 ### <a name="to-set-this-linker-option-programmatically"></a>このリンカーをコードから設定するには
 
@@ -58,5 +59,5 @@ ms.locfileid: "88845732"
 
 [MSVC リンカーのリファレンス](linking.md)<br/>
 [MSVC リンカー オプション](linker-options.md)<br/>
-[ユーザー固有の情報の格納](/windows/win32/TermServ/storing-user-specific-information)<br/>
+[User-Specific 情報の格納](/windows/win32/TermServ/storing-user-specific-information)<br/>
 [ターミナルサービス環境でのレガシアプリケーション](/previous-versions/aa382957(v=vs.85))

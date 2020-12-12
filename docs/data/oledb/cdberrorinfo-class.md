@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: CDBErrorInfo クラス'
 title: CDBErrorInfo クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -38,12 +39,12 @@ helpviewer_keywords:
 - GetErrorParameters method
 - GetErrorRecords method
 ms.assetid: 9a5c18a2-ee3e-40f5-ab4c-581288d7f737
-ms.openlocfilehash: d8fa41b3a06acb8f28334658f2494295593b99be
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: fe57963e5964403c6b17b6b41dc7ae5f77063f50
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91502515"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97170855"
 ---
 # <a name="cdberrorinfo-class"></a>CDBErrorInfo クラス
 
@@ -72,7 +73,7 @@ class CDBErrorInfo
 |[GetErrorParameters](#geterrorparameters)|[Ierrorrecords:: GetErrorParameters](/previous-versions/windows/desktop/ms715793(v=vs.85))を呼び出して、エラーパラメーターを返します。|
 |[GetErrorRecords](#geterrorrecords)|指定したオブジェクトのエラーレコードを取得します。|
 
-## <a name="remarks"></a>注釈
+## <a name="remarks"></a>解説
 
 このインターフェイスは、1つまたは複数のエラーレコードをユーザーに返します。 エラーレコードの数を取得するには、最初に [CDBErrorInfo:: GetErrorRecords](#geterrorrecords) を呼び出します。 次に、いずれかのアクセス関数 ( [CDBErrorInfo:: GetAllErrorInfo](#getallerrorinfo)など) を呼び出して、各レコードのエラー情報を取得します。
 
@@ -116,15 +117,15 @@ HRESULT GetAllErrorInfo(ULONG ulRecordNum,
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合は S_OK。 他の戻り値については、 *OLE DB プログラマーリファレンス*の「 [Ierrorrecords:: GetErrorInfo](/previous-versions/windows/desktop/ms711230(v=vs.85)) 」を参照してください。
+成功した場合は S_OK。 他の戻り値については、 *OLE DB プログラマーリファレンス* の「 [Ierrorrecords:: GetErrorInfo](/previous-versions/windows/desktop/ms711230(v=vs.85)) 」を参照してください。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
-*Pbstrdescription*の出力値は、を呼び出すことによって内部的に取得されます `IErrorInfo::GetDescription` 。これは、ロケールがサポートされていない場合、または次の両方の条件に該当する場合に、値を NULL に設定します。
+*Pbstrdescription* の出力値は、を呼び出すことによって内部的に取得されます `IErrorInfo::GetDescription` 。これは、ロケールがサポートされていない場合、または次の両方の条件に該当する場合に、値を NULL に設定します。
 
-1. *lcid*の値が米国英語および
+1. *lcid* の値が米国英語および
 
-1. *lcid*の値が、GetUserDefaultLCID によって返された値と等しくありません。
+1. *lcid* の値が、GetUserDefaultLCID によって返された値と等しくありません。
 
 ## <a name="cdberrorinfogetbasicerrorinfo"></a><a name="getbasicerrorinfo"></a> CDBErrorInfo:: GetBasicErrorInfo
 
@@ -139,7 +140,7 @@ HRESULT GetBasicErrorInfo(ULONG ulRecordNum,
 
 #### <a name="parameters"></a>パラメーター
 
-*OLE DB プログラマーリファレンス*の「 [Ierrorrecords:: getbasicerrorinfo](/previous-versions/windows/desktop/ms723907(v=vs.85)) 」を参照してください。
+*OLE DB プログラマーリファレンス* の「 [Ierrorrecords:: getbasicerrorinfo](/previous-versions/windows/desktop/ms723907(v=vs.85)) 」を参照してください。
 
 ### <a name="return-value"></a>戻り値
 
@@ -158,7 +159,7 @@ HRESULT GetCustomErrorObject(ULONG ulRecordNum,
 
 #### <a name="parameters"></a>パラメーター
 
-*OLE DB プログラマーリファレンス*の「 [Ierrorrecords:: GetCustomErrorObject](/previous-versions/windows/desktop/ms725417(v=vs.85)) 」を参照してください。
+*OLE DB プログラマーリファレンス* の「 [Ierrorrecords:: GetCustomErrorObject](/previous-versions/windows/desktop/ms725417(v=vs.85)) 」を参照してください。
 
 ### <a name="return-value"></a>戻り値
 
@@ -177,7 +178,7 @@ HRESULT GetErrorInfo(ULONG ulRecordNum,
 
 #### <a name="parameters"></a>パラメーター
 
-*OLE DB プログラマーリファレンス*の「 [Ierrorrecords:: GetErrorInfo](/previous-versions/windows/desktop/ms711230(v=vs.85)) 」を参照してください。
+*OLE DB プログラマーリファレンス* の「 [Ierrorrecords:: GetErrorInfo](/previous-versions/windows/desktop/ms711230(v=vs.85)) 」を参照してください。
 
 ### <a name="return-value"></a>戻り値
 
@@ -196,7 +197,7 @@ HRESULT GetErrorParameters(ULONG ulRecordNum,
 
 #### <a name="parameters"></a>パラメーター
 
-*OLE DB プログラマーリファレンス*の「 [Ierrorrecords:: GetErrorParameters](/previous-versions/windows/desktop/ms715793(v=vs.85)) 」を参照してください。
+*OLE DB プログラマーリファレンス* の「 [Ierrorrecords:: GetErrorParameters](/previous-versions/windows/desktop/ms715793(v=vs.85)) 」を参照してください。
 
 ### <a name="return-value"></a>戻り値
 
@@ -231,7 +232,7 @@ HRESULT GetErrorRecords(ULONG* pcRecords) throw();
 
 標準の HRESULT です。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 エラー情報を取得するインターフェイスを確認する場合は、関数の最初の形式を使用します。 それ以外の場合は、2番目の形式を使用します。
 

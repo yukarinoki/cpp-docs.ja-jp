@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: CManualAccessor クラス'
 title: CManualAccessor クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -30,12 +31,12 @@ helpviewer_keywords:
 - CreateAccessor method
 - CreateParameterAccessor method
 ms.assetid: a0088074-7135-465c-b228-69097a50b8cc
-ms.openlocfilehash: 24938812ea254fe0150cbabf58dd72bf45ebd0a1
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 3d625a9a02431445cc1505c6a3f7e9673a04201d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91504099"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97170556"
 ---
 # <a name="cmanualaccessor-class"></a>CManualAccessor クラス
 
@@ -62,7 +63,7 @@ class CManualAccessor : public CAccessorBase
 |[CreateAccessor](#createaccessor)|列バインド構造にメモリを割り当て、列データメンバーを初期化します。|
 |[CreateParameterAccessor](#createparameteraccessor)|パラメーターバインド構造体にメモリを割り当て、パラメーターデータメンバーを初期化します。|
 
-## <a name="remarks"></a>注釈
+## <a name="remarks"></a>解説
 
 を使用 `CManualAccessor` すると、実行時の関数呼び出しによってパラメーターと出力列のバインドを指定できます。
 
@@ -82,7 +83,7 @@ void AddBindEntry(DBORDINAL nOrdinal,
 
 #### <a name="parameters"></a>パラメーター
 
-*OLE DB プログラマーリファレンス*の「 [DBBINDING](/previous-versions/windows/desktop/ms716845(v=vs.85)) 」を参照してください。
+*OLE DB プログラマーリファレンス* の「 [DBBINDING](/previous-versions/windows/desktop/ms716845(v=vs.85)) 」を参照してください。
 
 *nOrdinal*<br/>
 から列番号。
@@ -102,7 +103,7 @@ void AddBindEntry(DBORDINAL nOrdinal,
 *pStatus*<br/>
 から必要に応じて、列の状態にバインドする変数へのポインター。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 この関数を使用するには、最初に [Createaccessor](#createaccessor)を呼び出す必要があります。 に指定された列数よりも多くのエントリを追加することはできません `CreateAccessor` 。
 
@@ -123,7 +124,7 @@ void AddParameterEntry(DBORDINAL nOrdinal,
 
 #### <a name="parameters"></a>パラメーター
 
-*OLE DB プログラマーリファレンス*の「 [DBBINDING](/previous-versions/windows/desktop/ms716845(v=vs.85)) 」を参照してください。
+*OLE DB プログラマーリファレンス* の「 [DBBINDING](/previous-versions/windows/desktop/ms716845(v=vs.85)) 」を参照してください。
 
 *nOrdinal*<br/>
 からパラメーター番号。
@@ -146,7 +147,7 @@ void AddParameterEntry(DBORDINAL nOrdinal,
 *eParamIO*<br/>
 からバインドが関連付けられているパラメーターが入力、入力、出力、または出力パラメーターであるかどうかを指定します。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 この関数を使用するには、最初に [Createparameteraccessor](#createparameteraccessor)を呼び出す必要があります。
 
@@ -177,7 +178,7 @@ HRESULT CreateAccessor(int nBindEntries,
 
 標準の HRESULT 値の1つ。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 関数を呼び出す前に、この関数を呼び出し `CManualAccessor::AddBindEntry` ます。
 
@@ -208,7 +209,7 @@ HRESULT CreateParameterAccessor(int nBindEntries,
 
 標準の HRESULT 値の1つ。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 [Addparameterentry](#addparameterentry)を呼び出す前に、この関数を呼び出す必要があります。
 

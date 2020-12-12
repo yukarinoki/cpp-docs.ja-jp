@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: @CatStr'
 title: '@CatStr'
 ms.date: 12/17/2019
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - '@CatStr symbol'
 ms.assetid: 01fcc590-1ec2-42f6-b868-ed0433297c26
-ms.openlocfilehash: d244cb678c082515713d83716f8752000f9ccdea
-ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
+ms.openlocfilehash: d6b2f43cb4a0a72ee986e346230e7de2e0f1714d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75316461"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97121681"
 ---
 # <a name="catstr"></a>\@CatStr
 
@@ -19,9 +20,9 @@ ms.locfileid: "75316461"
 
 ## <a name="syntax"></a>構文
 
-> **\@catstr (** *string1* ⟦ __,__ *string2*...⟧ **)**
+> **\@ Catstr (** *string1* ⟦__,__ *string2*...⟧ **)**
 
 ## <a name="see-also"></a>関連項目
 
-[シンボルのリファレンス](symbols-reference.md)\
+[シンボルリファレンス](symbols-reference.md)\
 [MASM BNF 文法](masm-bnf-grammar.md)

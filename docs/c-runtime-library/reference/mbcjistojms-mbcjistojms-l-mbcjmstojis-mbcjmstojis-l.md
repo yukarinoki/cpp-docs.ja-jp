@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: _mbcjistojms、_mbcjistojms_l、_mbcjmstojis、_mbcjmstojis_l'
 title: _mbcjistojms、_mbcjistojms_l、_mbcjmstojis、_mbcjmstojis_l
 ms.date: 4/2/2020
 api_name:
@@ -46,12 +47,12 @@ helpviewer_keywords:
 - mbcjmstojis_l function
 - mbcjistojms_l function
 ms.assetid: dece5127-b337-40a4-aa10-53320a2c9432
-ms.openlocfilehash: fc4df04274c33fa14af0762dc62f20ed09f23cd9
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 6c7d19ce59c381d4f4a60fb2d1ddbed41fe43ba3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82918434"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97171518"
 ---
 # <a name="_mbcjistojms-_mbcjistojms_l-_mbcjmstojis-_mbcjmstojis_l"></a>_mbcjistojms、_mbcjistojms_l、_mbcjmstojis、_mbcjmstojis_l
 
@@ -81,7 +82,7 @@ unsigned int _mbcjmstojis_l(
 
 ### <a name="parameters"></a>パラメーター
 
-*40u-c*<br/>
+*c*<br/>
 変換する文字。
 
 *locale*<br/>
@@ -93,21 +94,21 @@ unsigned int _mbcjmstojis_l(
 
 ## <a name="remarks"></a>解説
 
-**_Mbcjistojms**関数は、日本工業規格 (JIS) 文字を Microsoft の漢字 (シフト JIS) 文字に変換します。 この文字は、先行バイトと後続バイトの範囲が 0x21-0x7E の場合にのみ変換されます。 先行バイトまたは評価バイトがこの範囲外の場合、 **errno**は**EILSEQ**に設定されます。 このエラー コードと他のエラーコードの詳細については、「[errno、_doserrno、_sys_errlist、および _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」を参照してください。
+**_Mbcjistojms** 関数は、日本工業規格 (JIS) 文字を Microsoft の漢字 (シフト JIS) 文字に変換します。 この文字は、先行バイトと後続バイトの範囲が 0x21-0x7E の場合にのみ変換されます。 先行バイトまたは評価バイトがこの範囲外の場合、 **errno** は **EILSEQ** に設定されます。 このエラー コードと他のエラーコードの詳細については、「[errno、_doserrno、_sys_errlist、および _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」を参照してください。
 
-**_Mbcjmstojis**関数は、シフト jis 文字を jis 文字に変換します。 文字は、先行バイトが 0x81 ~ 0x9F または 0xE0-0xFC の範囲にあり、後続バイトが 0x40 ~ 0x7E または 0x80-0xFC の範囲内にある場合にのみ変換されます。 その範囲の一部のコード ポイントには割り当てられた文字がないため、変換できないことに注意してください。
+**_Mbcjmstojis** 関数は、シフト jis 文字を jis 文字に変換します。 文字は、先行バイトが 0x81 ~ 0x9F または 0xE0-0xFC の範囲にあり、後続バイトが 0x40 ~ 0x7E または 0x80-0xFC の範囲内にある場合にのみ変換されます。 その範囲の一部のコード ポイントには割り当てられた文字がないため、変換できないことに注意してください。
 
-値*c*は、変換対象の文字の先行バイトを表し、下位の8ビットが後続バイトを表す16ビット値である必要があります。
+値 *c* は、変換対象の文字の先行バイトを表し、下位の8ビットが後続バイトを表す16ビット値である必要があります。
 
 出力値は、ロケールの **LC_CTYPE** カテゴリの設定に影響されます。詳細については、「[setlocale](setlocale-wsetlocale.md)」を参照してください。 **_l** サフィックスが付いていないこれらの関数のバージョンでは、このロケールに依存する動作に現在のロケールを使用します。**_l** サフィックスが付いているバージョンは、渡されたロケール パラメーターを代わりに使用する点を除いて同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
 
-以前のバージョンでは、 **_mbcjistojms**と **_mbcjmstojis**はそれぞれ**jistojms**と**jmstojis**と呼ばれていました。 代わりに、 **_mbcjistojms**、 **_mbcjistojms_l**、 **_mbcjmstojis** 、および **_mbcjmstojis_l**を使用する必要があります。
+以前のバージョンでは、 **_mbcjistojms** と **_mbcjmstojis** はそれぞれ **jistojms** と **jmstojis** と呼ばれていました。 代わりに、 **_mbcjistojms**、 **_mbcjistojms_l**、 **_mbcjmstojis** 、および **_mbcjmstojis_l** を使用する必要があります。
 
 既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**_mbcjistojms**|\<mbstring.h>|
 |**_mbcjistojms_l**|\<mbstring.h>|

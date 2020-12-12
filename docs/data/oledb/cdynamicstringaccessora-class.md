@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: CDynamicStringAccessorA クラス'
 title: CDynamicStringAccessorA クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - CDynamicStringAccessorA class
 ms.assetid: ed0d9821-a655-41f1-a902-43c3042ac49c
-ms.openlocfilehash: 3a0da9c779230fc1bf58bfa1d685623f844012c7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 45a4d10c8a50c4009151fa90e51172405047a21a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62231039"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97170725"
 ---
 # <a name="cdynamicstringaccessora-class"></a>CDynamicStringAccessorA クラス
 
-データベース スキーマ (構造体の基になる) の知識があるない場合にデータ ソースにアクセスすることができます。
+では、データベーススキーマ (基になる構造) に関する知識がない場合に、データソースにアクセスできます。
 
 ## <a name="syntax"></a>構文
 
@@ -23,20 +24,20 @@ ms.locfileid: "62231039"
 typedef CDynamicStringAccessorT<CHAR, DBTYPE_STR> CDynamicStringAccessorA;
 ```
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-プロバイダーが、文字列データとしてデータ ストアからすべてのデータをフェッチすることを要求するには両方が`CDynamicStringAccessor`要求 ANSI 文字列データ。
+両方とも、データストアからアクセスされるすべてのデータを文字列データとして取得するようにプロバイダーに要求しますが、 `CDynamicStringAccessor` ANSI 文字列データを要求します。
 
-`CDynamicStringAccessorA` 継承`GetString`と`SetString`から`CDynamicStringAccessor`します。 これらのメソッドを使用すると、`CDynamicStringAccessorA`オブジェクト、`BaseType`は**CHAR**します。
+`CDynamicStringAccessorA``GetString`とを `SetString` 継承 `CDynamicStringAccessor` します。 オブジェクトでこれらのメソッドを使用する場合 `CDynamicStringAccessorA` 、 `BaseType` は **CHAR** です。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-**ヘッダー**: atldbcli.h
+**ヘッダー**: atldbcli. h
 
 ## <a name="see-also"></a>関連項目
 
 [OLE DB コンシューマー テンプレート](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
-[OLE DB コンシューマー テンプレート リファレンス](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
+[OLE DB コンシューマーテンプレートリファレンス](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
 [CAccessor クラス](../../data/oledb/caccessor-class.md)<br/>
 [CDynamicParameterAccessor クラス](../../data/oledb/cdynamicparameteraccessor-class.md)<br/>
 [CManualAccessor クラス](../../data/oledb/cmanualaccessor-class.md)<br/>

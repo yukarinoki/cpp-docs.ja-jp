@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: auto_partitioner クラス'
 title: auto_partitioner クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - auto_partitioner class
 ms.assetid: 7cc08e5d-20b4-47a4-b4b5-c214a78f5a9e
-ms.openlocfilehash: 4d1d8f19069412240de8e9d69cdcfb34618f2796
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: d8e099c7a3132ce89f81df65d7e18a5c6c673697
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77142867"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97172259"
 ---
 # <a name="auto_partitioner-class"></a>auto_partitioner クラス
 
@@ -29,7 +30,7 @@ class auto_partitioner;
 
 ### <a name="public-constructors"></a>パブリック コンストラクター
 
-|Name|説明|
+|名前|説明|
 |----------|-----------------|
 |[auto_partitioner](#ctor)|`auto_partitioner` オブジェクトを構築します。|
 |[~ auto_partitioner デストラクター](#dtor)|`auto_partitioner` オブジェクトを破棄します。|
@@ -44,7 +45,7 @@ class auto_partitioner;
 
 **名前空間:** concurrency
 
-## <a name="dtor"></a>~ auto_partitioner
+## <a name="auto_partitioner"></a><a name="dtor"></a> ~ auto_partitioner
 
 `auto_partitioner` オブジェクトを破棄します。
 
@@ -52,7 +53,7 @@ class auto_partitioner;
 ~auto_partitioner();
 ```
 
-## <a name="ctor"></a>auto_partitioner
+## <a name="auto_partitioner"></a><a name="ctor"></a> auto_partitioner
 
 `auto_partitioner` オブジェクトを構築します。
 
@@ -60,6 +61,6 @@ class auto_partitioner;
 auto_partitioner();
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[コンカレンシー名前空間](concurrency-namespace.md)
+[concurrency 名前空間](concurrency-namespace.md)

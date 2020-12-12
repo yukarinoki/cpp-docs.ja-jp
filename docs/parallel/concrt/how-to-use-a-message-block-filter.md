@@ -1,24 +1,25 @@
 ---
+description: '詳細については、「方法: メッセージブロックフィルターを使用する」を参照してください。'
 title: '方法: メッセージ ブロック フィルターを使用する'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - message-block filters, using [Concurrency Runtime]
 - using message-block filters [Concurrency Runtime]
 ms.assetid: db6b99fb-288d-4477-96dc-b9751772ebb2
-ms.openlocfilehash: ac58ef2240d2ea6ba34b334106c08595e70b02e8
-ms.sourcegitcommit: 43cee7a0d41a062661229043c2f7cbc6ace17fa3
+ms.openlocfilehash: 3c07aa7f12ed952d5256ba8fc7f53b619edefb7e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92008640"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97172591"
 ---
 # <a name="how-to-use-a-message-block-filter"></a>方法: メッセージ ブロック フィルターを使用する
 
 ここでは、フィルター関数を使用して、非同期メッセージ ブロックでメッセージの受け入れや拒否がメッセージ ペイロードに基づいて行われるようにする方法について説明します。
 
-[Concurrency:: unbounded_buffer](reference/unbounded-buffer-class.md)、 [concurrency:: call](../../parallel/concrt/reference/call-class.md)、 [concurrency:: トランスフォーマー](../../parallel/concrt/reference/transformer-class.md)などのメッセージブロックオブジェクトを作成する場合、メッセージブロックがメッセージを受け入れるか拒否するかを決定する*フィルター関数*を指定できます。 フィルター関数は、メッセージ ブロックが特定の値のみを受信するようにする便利な方法です。
+[Concurrency:: unbounded_buffer](reference/unbounded-buffer-class.md)、 [concurrency:: call](../../parallel/concrt/reference/call-class.md)、 [concurrency:: トランスフォーマー](../../parallel/concrt/reference/transformer-class.md)などのメッセージブロックオブジェクトを作成する場合、メッセージブロックがメッセージを受け入れるか拒否するかを決定する *フィルター関数* を指定できます。 フィルター関数は、メッセージ ブロックが特定の値のみを受信するようにする便利な方法です。
 
-フィルター関数は、メッセージブロックを接続してデータ *フローネットワーク*を形成できるため、重要です。 データ フロー ネットワークでは、メッセージ ブロックが特定の基準を満たすメッセージのみを処理することによってデータのフローを制御します。 このモデルと制御フロー モデルを比較してください。制御フロー モデルでは、条件付きステートメントやループなどの制御構造体を使用してデータのフローが調整されます。
+フィルター関数は、メッセージブロックを接続してデータ *フローネットワーク* を形成できるため、重要です。 データ フロー ネットワークでは、メッセージ ブロックが特定の基準を満たすメッセージのみを処理することによってデータのフローを制御します。 このモデルと制御フロー モデルを比較してください。制御フロー モデルでは、条件付きステートメントやループなどの制御構造体を使用してデータのフローが調整されます。
 
 ここでは、メッセージ フィルターの基本的な使用例を示します。 メッセージフィルターとデータフローモデルを使用してメッセージブロックを接続するその他の例については、「 [チュートリアル: データフローエージェントの作成](../../parallel/concrt/walkthrough-creating-a-dataflow-agent.md) 」および「 [チュートリアル: Image-Processing ネットワークの作成](../../parallel/concrt/walkthrough-creating-an-image-processing-network.md)」を参照してください。
 

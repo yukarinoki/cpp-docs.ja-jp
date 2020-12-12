@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「memset、wmemset」を参照してください。
 title: memset、wmemset
 ms.date: 11/04/2016
 api_name:
@@ -29,12 +30,12 @@ helpviewer_keywords:
 - wmemset function
 - memset function
 ms.assetid: e7ceb01b-df69-49c2-b294-a39358ad4699
-ms.openlocfilehash: 6e1db021da70f0af7b045e2a3100dbaaa81e5a50
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 547cbbcab4966291ab540b6e57f68d4057995ff8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70951750"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97171349"
 ---
 # <a name="memset-wmemset"></a>memset、wmemset
 
@@ -57,7 +58,7 @@ wchar_t *wmemset(
 
 ### <a name="parameters"></a>パラメーター
 
-*dest*<br/>
+*先*<br/>
 ターゲットへのポインター。
 
 *c*<br/>
@@ -68,13 +69,13 @@ wchar_t *wmemset(
 
 ## <a name="return-value"></a>戻り値
 
-*Dest*の値。
+*Dest* の値。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-*Dest*の最初の*カウント*文字を*c*文字に設定します。
+*Dest* の最初の *カウント* 文字を *c* 文字に設定します。
 
-**セキュリティ**に関する注意コピー先のバッファーには、少なくとも*カウント*文字のための十分な空き領域があることを確認してください。 詳しくは、「 [バッファー オーバーランの回避](/windows/win32/SecBP/avoiding-buffer-overruns)」をご覧ください。
+**セキュリティ** に関する注意コピー先のバッファーには、少なくとも *カウント* 文字のための十分な空き領域があることを確認してください。 詳しくは、「 [バッファー オーバーランの回避](/windows/win32/SecBP/avoiding-buffer-overruns)」をご覧ください。
 
 ## <a name="requirements"></a>必要条件
 
@@ -83,7 +84,7 @@ wchar_t *wmemset(
 |**memset**|\<memory.h> または \<string.h>|
 |**wmemset**|\<wchar.h>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
 ## <a name="libraries"></a>ライブラリ
 
@@ -110,7 +111,7 @@ int main( void )
 }
 ```
 
-### <a name="output"></a>Output
+### <a name="output"></a>出力
 
 ```Output
 Before: This is a test of the memset function
@@ -138,7 +139,7 @@ int main( void )
 }
 ```
 
-### <a name="output"></a>Output
+### <a name="output"></a>出力
 
 ```Output
 Before: This is a test of the wmemset function

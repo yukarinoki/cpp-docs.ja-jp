@@ -1,4 +1,5 @@
 ---
+description: '詳細: tuple クラス'
 title: タプル クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - tuple class
 ms.assetid: c38749be-ae4d-41f3-98ea-6aa3250de9a3
-ms.openlocfilehash: 04fd3ec6ce3363d118174025823279a80dd00f0b
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 9beb3f263fa516d7d4096c404c135deffde6fc31
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87215544"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97169023"
 ---
 # <a name="tuple-class"></a>タプル クラス
 
@@ -116,7 +117,7 @@ The tuples in the vector are
 ( 3, 0.033, three ).
 ```
 
-## <a name="operator"></a><a name="op_eq"></a>operator =
+## <a name="operator"></a><a name="op_eq"></a> operator =
 
 `tuple` オブジェクトを割り当てます。
 
@@ -145,7 +146,7 @@ N 番目のコピーされたタプル要素の型。
 
 ### <a name="remarks"></a>解説
 
-最初の2つのメンバー演算子は、の要素をの対応する*要素に代入*し **`*this`** ます。 3番目のメンバー演算子は、 `right.first` のインデックス0位置にある要素に、インデックス1の要素にを割り当て **`*this`** `right.second` ます。 3つのすべてのメンバー演算子は **`*this`** 、を返します。
+最初の2つのメンバー演算子は、の要素をの対応する *要素に代入* し **`*this`** ます。 3番目のメンバー演算子は、 `right.first` のインデックス0位置にある要素に、インデックス1の要素にを割り当て **`*this`** `right.second` ます。 3つのすべてのメンバー演算子は **`*this`** 、を返します。
 
 残りのメンバー演算子はそれ以前のコンストラクターと似ていますが、[Rvalue 参照宣言子: &&](../cpp/rvalue-reference-declarator-amp-amp.md) を使用します。
 
@@ -198,7 +199,7 @@ int main()
 x 4
 ```
 
-## <a name="swap"></a><a name="tuple_swap"></a>フォト
+## <a name="swap"></a><a name="tuple_swap"></a> フォト
 
 2 つのタプルの要素を交換します。
 
@@ -210,16 +211,16 @@ template <class... Types>
 ### <a name="parameters"></a>パラメーター
 
 *左側*\
-要素が組*right*の要素と交換される組。
+要素が組 *right* の要素と交換される組。
 
 *そうです*\
-要素が*左*の組の要素と交換される組。
+要素が *左* の組の要素と交換される組。
 
 ### <a name="remarks"></a>解説
 
 この関数は、`left.swap(right)` を実行します。
 
-## <a name="tuple"></a><a name="tuple"></a>タプル
+## <a name="tuple"></a><a name="tuple"></a> タプル
 
 `tuple` オブジェクトを構築します。
 
@@ -258,7 +259,7 @@ N 番目のコピーされたタプル要素の型。
 
 2 番目のコンス トラクターは、引数 `P1`、`P2`...`PN` に基づいて構築されるコピーを要素とするオブジェクトを構築します。これらの `Pi` は、インデックス `i - 1` で要素を初期化します。
 
-3番目と4番目のコンストラクターは、*右*の対応する要素から構築されたコピーを要素として持つオブジェクトを構築します。
+3番目と4番目のコンストラクターは、 *右* の対応する要素から構築されたコピーを要素として持つオブジェクトを構築します。
 
 5 番目のコンストラクターは、インデックス 0 の要素が `right.first` から構築されたコピーで、インデックス 1 の要素が `right.second` から構築されたコピーであるオブジェクトを構築します。
 

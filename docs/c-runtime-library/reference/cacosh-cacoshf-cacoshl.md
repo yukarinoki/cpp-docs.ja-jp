@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「cacosh、cacoshf、cacoshl」を参照してください。
 title: cacosh、cacoshf、cacoshl
 ms.date: 11/04/2016
 api_name:
@@ -33,16 +34,16 @@ helpviewer_keywords:
 - cacoshf function
 - cacoshl function
 ms.assetid: 83fd05eb-3587-4741-9be6-589a830a1703
-ms.openlocfilehash: 05ba0b37540e9f1b2dbb4d255e0fa033b54762d1
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: c822a63021d68c7b07768b19c55be344f258e195
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70943400"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97171570"
 ---
 # <a name="cacosh-cacoshf-cacoshl"></a>cacosh、cacoshf、cacoshl
 
-実軸に沿って値が 1 未満の範囲で分岐線法を使用して、複素数の逆双曲線コサインを返します。 をクリックします。
+実軸に沿って値が 1 未満の範囲で分岐線法を使用して、複素数の逆双曲線コサインを返します。 .
 
 ## <a name="syntax"></a>構文
 
@@ -71,23 +72,23 @@ _Lcomplex cacoshl(
 
 ## <a name="return-value"></a>戻り値
 
-*Z*の逆双曲線余弦 (ラジアン)。 結果は、実数軸に対しては無制限で負ではなく、虚数軸に沿って区間 [-iπ, + iπ] になります。
+*Z* の逆双曲線余弦 (ラジアン)。 結果は、実数軸に対しては無制限で負ではなく、虚数軸に沿って区間 [-iπ, + iπ] になります。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-でC++はオーバーロードが可能であるため、 **_Fcomplex**と **_Lcomplex**の値を受け取って返す**cacosh**のオーバーロードを呼び出すことができます。 C プログラムでは、 **cacosh** **は常に値を**取得して返します。
+C++ ではオーバーロードが可能であるため、 **_Fcomplex** と **_Lcomplex** 値を取得して返す、 **cacosh** のオーバーロードを呼び出すことができます。 C プログラムでは、 **cacosh** は常に **_Dcomplex** 値を取得して返します。
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチン|C ヘッダー|C++ ヘッダー|
+|ルーチンによって返される値|C ヘッダー|C++ ヘッダー|
 |-------------|--------------|------------------|
-|**cacosh**、 **cacoshf**、 **cacoshl**|\<complex.h>|\<ccomplex>|
+|**cacosh**、               **cacoshf**、 **cacoshl**|\<complex.h>|\<ccomplex>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性について詳しくは、「 [Compatibility](../../c-runtime-library/compatibility.md)」をご覧ください。
 
 ## <a name="see-also"></a>関連項目
 
-[関数リファレンス (アルファベット順)](crt-alphabetical-function-reference.md)<br/>
+[アルファベット順の関数リファレンス](crt-alphabetical-function-reference.md)<br/>
 [catanh、catanhf、catanhl](catanh-catanhf-catanhl.md)<br/>
 [ctanh、ctanhf、ctanhl](ctanh-ctanhf-ctanhl.md)<br/>
 [catan、catanf、catanl](catan-catanf-catanl.md)<br/>

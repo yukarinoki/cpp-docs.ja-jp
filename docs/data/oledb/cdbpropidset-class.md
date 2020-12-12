@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: CDBPropIDSet クラス'
 title: CDBPropIDSet クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -31,12 +32,12 @@ helpviewer_keywords:
 - operator=, property sets
 - SetGUID method
 ms.assetid: 52bb806c-9581-494d-9af7-50d8a4834805
-ms.openlocfilehash: 4de218188326dad434c5b0d355a3a15d39bb576c
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 6f0c3ea19daeef2b262f6ac1ad76599160baf266
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91502502"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97170829"
 ---
 # <a name="cdbpropidset-class"></a>CDBPropIDSet クラス
 
@@ -68,7 +69,7 @@ class CDBPropIDSet : public tagDBPROPIDSET
 |-|-|
 |[operator =](#op_equal)|あるプロパティ ID の内容を別のプロパティ ID に設定します。|
 
-## <a name="remarks"></a>注釈
+## <a name="remarks"></a>解説
 
 OLE DB コンシューマー `DBPROPIDSET` は、構造体を使用して、コンシューマーがプロパティ情報を取得するプロパティ id の配列を渡します。 1つの [Dbpropidset](/previous-versions/windows/desktop/ms717981(v=vs.85)) 構造体で識別されるプロパティは、1つのプロパティセットに属します。
 
@@ -124,7 +125,7 @@ void SetGUID(const GUID& guid) throw();
 *guid*<br/>
 から `guidPropertySet` [Dbpropidset](/previous-versions/windows/desktop/ms717981(v=vs.85)) 構造体のフィールドを設定するために使用される GUID です。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 このフィールドは、 [コンストラクター](#cdbpropidset) でも設定できます。 このクラスの既定のコンストラクターを使用する場合は、この関数を呼び出します。
 

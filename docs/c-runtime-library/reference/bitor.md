@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「bitor」を参照してください。
 title: bitor
 ms.date: 11/04/2016
 api_location:
@@ -23,12 +24,12 @@ f1_keywords:
 helpviewer_keywords:
 - bitor function
 ms.assetid: 3c0a3711-9c74-41f2-b400-2f7797da30d1
-ms.openlocfilehash: bcd7639fd4959c95b198e080ae3c7d4fbd3234b8
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 1af6251b34108d0191a2f938ecd4173f2ec540c6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80171230"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97171804"
 ---
 # <a name="bitor"></a>bitor
 
@@ -71,6 +72,6 @@ int main( )
 3
 ```
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-**ヘッダー:** \<iso646 >
+**ヘッダー:**\<iso646.h>

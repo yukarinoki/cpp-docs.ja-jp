@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: clearerr_s'
 title: clearerr_s
 ms.date: 4/2/2020
 api_name:
@@ -28,12 +29,12 @@ helpviewer_keywords:
 - resetting stream error indicator
 - clearerr_s function
 ms.assetid: b74d014d-b7a8-494a-a330-e5ffd5614772
-ms.openlocfilehash: 3e300562a52029fe835ebd4fe34e9a7ef247a76a
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: cbc9ac5122b5754b43f6fb93c4301afd6e449568
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82917209"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97171531"
 ---
 # <a name="clearerr_s"></a>clearerr_s
 
@@ -50,23 +51,23 @@ errno_t clearerr_s(
 ### <a name="parameters"></a>パラメーター
 
 *一連*<br/>
-**ファイル**構造へのポインター
+**ファイル** 構造へのポインター
 
 ## <a name="return-value"></a>戻り値
 
-成功した場合は0。*Stream*が**NULL**の場合は、 **EINVAL** 。
+成功した場合は0。*Stream* が **NULL** の場合は、 **EINVAL** 。
 
 ## <a name="remarks"></a>解説
 
-**Clearerr_s**関数は、*ストリーム*のエラーインジケーターとファイルの終端インジケーターをリセットします。 エラーインジケーターは自動的にクリアされません。指定されたストリームのエラーインジケーターが設定されると、そのストリームに対する操作は、 **clearerr_s**、 **clearerr**、 [fseek](fseek-fseeki64.md)、 **fsetpos**、または[rewind](rewind.md)が呼び出されるまでエラー値を返し続けます。
+**Clearerr_s** 関数は、*ストリーム* のエラーインジケーターとファイルの終端インジケーターをリセットします。 エラーインジケーターは自動的にクリアされません。指定されたストリームのエラーインジケーターが設定されると、そのストリームに対する操作は、 **clearerr_s**、 **clearerr**、 [fseek](fseek-fseeki64.md)、 **fsetpos**、または [rewind](rewind.md) が呼び出されるまでエラー値を返し続けます。
 
-*Stream*が**NULL**の場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、この関数は**errno**を**einval**に設定し、 **einval**を返します。
+*Stream* が **NULL** の場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、この関数は **errno** を **einval** に設定し、 **einval** を返します。
 
 既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**clearerr_s**|\<stdio.h>|
 

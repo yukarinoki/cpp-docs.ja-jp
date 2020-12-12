@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: memmove_s、wmemmove_s'
 title: memmove_s、wmemmove_s
 ms.date: 4/2/2020
 api_name:
@@ -30,12 +31,12 @@ helpviewer_keywords:
 - wmemmove_s function
 - memmove_s function
 ms.assetid: a17619e4-1307-4bb0-98c6-77f8c68dab2d
-ms.openlocfilehash: 04f920543c4f6a3d433e6426a96d617a3608a270
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: faa68f073949c9c1bcd3d96bb48472484adc312c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82914092"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97171401"
 ---
 # <a name="memmove_s-wmemmove_s"></a>memmove_s、wmemmove_s
 
@@ -60,7 +61,7 @@ errno_t wmemmove_s(
 
 ### <a name="parameters"></a>パラメーター
 
-*dest*<br/>
+*先*<br/>
 コピー先のオブジェクト。
 
 *numberOfElements*<br/>
@@ -78,23 +79,23 @@ errno_t wmemmove_s(
 
 ### <a name="error-conditions"></a>エラー条件
 
-|*dest*|*numberOfElements*|*src*|戻り値|*Dest*の内容|
+|*先*|*numberOfElements*|*src*|戻り値|*Dest* の内容|
 |------------|------------------------|-----------|------------------|------------------------|
-|**空白**|any|any|**EINVAL**|変更されない|
-|any|any|**空白**|**EINVAL**|変更されない|
+|**NULL**|any|any|**EINVAL**|変更されない|
+|any|any|**NULL**|**EINVAL**|変更されない|
 |any|< *数*|any|**ERANGE**|変更されない|
 
 ## <a name="remarks"></a>解説
 
-*Src*から*dest*に文字*のバイト数*をコピーします。 コピー元とコピー先の領域の一部が重複している場合、 **memmove_s**によって、重複する領域の元のソースバイトが上書きされる前にコピーされます。
+*Src* から *dest* に文字 *のバイト数* をコピーします。 コピー元とコピー先の領域の一部が重複している場合、 **memmove_s** によって、重複する領域の元のソースバイトが上書きされる前にコピーされます。
 
-*Dest*または*src*が null ポインターの場合、またはコピー先の文字列が小さすぎる場合、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、これらの関数は無効なパラメーターハンドラーを呼び出します。 実行の継続が許可された場合、これらの関数は**einval**を返し、 **errno**を**einval**に設定します。
+*Dest* または *src* が null ポインターの場合、またはコピー先の文字列が小さすぎる場合、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、これらの関数は無効なパラメーターハンドラーを呼び出します。 実行の継続が許可された場合、これらの関数は **einval** を返し、 **errno** を **einval** に設定します。
 
 既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**memmove_s**|\<string.h>|
 |**wmemmove_s**|\<wchar.h>|

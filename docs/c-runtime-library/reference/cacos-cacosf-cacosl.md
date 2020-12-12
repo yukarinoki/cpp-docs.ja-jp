@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「cacos、cacosf、cacosl」を参照してください。
 title: cacos、cacosf、cacosl
 ms.date: 11/04/2016
 api_name:
@@ -33,12 +34,12 @@ helpviewer_keywords:
 - cacosf function
 - cacosl function
 ms.assetid: 78118c00-0a07-49c1-8a13-4bf19ce3aea8
-ms.openlocfilehash: 5b0751703b9b9cdcdb50e265a6b5d3c929d89ae1
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 5d7a4fcc10da68d170d0cf3b2d9cce0d486b4318
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70939394"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97171597"
 ---
 # <a name="cacos-cacosf-cacosl"></a>cacos、cacosf、cacosl
 
@@ -64,23 +65,23 @@ _Lcomplex cacos( _Lcomplex z );  // C++ only
 
 ## <a name="return-value"></a>戻り値
 
-*Z*のアークコサイン (ラジアン)。 結果は、虚軸方向には無制限で、実軸方向には [0, π] の区間内になります。 *Z*が間隔 [-1, + 1] の外側にある場合は、ドメインエラーが発生します。
+*Z* のアークコサイン (ラジアン)。 結果は、虚軸方向には無制限で、実軸方向には [0, π] の区間内になります。 *Z* が間隔 [-1, + 1] の外側にある場合は、ドメインエラーが発生します。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-でC++はオーバーロードが可能であるため、 **_Fcomplex**と **_Lcomplex**の値を受け取って返す**cacos**のオーバーロードを呼び出すことができます。 C プログラムでは、 **cacos** **は常に値を**取得して返します。
+C++ ではオーバーロードが可能であるため、 **_Fcomplex** と **_Lcomplex** 値を取得して返す、 **cacos** のオーバーロードを呼び出すことができます。 C プログラムでは、 **cacos** は常に **_Dcomplex** 値を取得して返します。
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチン|C ヘッダー|C++ ヘッダー|
+|ルーチンによって返される値|C ヘッダー|C++ ヘッダー|
 |-------------|--------------|------------------|
-|**cacos**、 **cacosf**、 **cacosl**|\<complex.h>|\<ccomplex>|
+|**cacos**、               **cacosf**、 **cacosl**|\<complex.h>|\<ccomplex>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性について詳しくは、「 [Compatibility](../../c-runtime-library/compatibility.md)」をご覧ください。
 
 ## <a name="see-also"></a>関連項目
 
-[関数リファレンス (アルファベット順)](crt-alphabetical-function-reference.md)<br/>
+[アルファベット順の関数リファレンス](crt-alphabetical-function-reference.md)<br/>
 [catanh、catanhf、catanhl](catanh-catanhf-catanhl.md)<br/>
 [ctanh、ctanhf、ctanhl](ctanh-ctanhf-ctanhl.md)<br/>
 [catan、catanf、catanl](catan-catanf-catanl.md)<br/>

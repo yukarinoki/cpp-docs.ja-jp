@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: &lt; valarray&gt;'
 title: '&lt;valarray&gt;'
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - valarray header
 ms.assetid: 30835415-21c1-4801-8f24-6bbef7dd8ecd
-ms.openlocfilehash: 9d2f3097637b3708c16f3048a34dd32b7f6fd80b
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 7cc902a60a68f9cb667530dac76812d4a8e082be
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88840142"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97168775"
 ---
 # <a name="ltvalarraygt"></a>&lt;valarray&gt;
 
 クラステンプレート valarray および多数のサポートクラステンプレートと関数を定義します。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:**\<valarray>
 
@@ -32,7 +33,7 @@ ms.locfileid: "88840142"
 
 ## <a name="members"></a>メンバー
 
-### <a name="functions"></a>Functions
+### <a name="functions"></a>機能
 
 |名前|説明|
 |-|-|
@@ -56,7 +57,7 @@ ms.locfileid: "88840142"
 |[タンジェント](../standard-library/valarray-functions.md#tan)|入力 valarray の要素を演算し、入力 valarray の要素のタンジェントと等しい要素を持つ valarray を返します。|
 |[tanh](../standard-library/valarray-functions.md#tanh)|入力 valarray の要素を演算し、入力 valarray の要素のハイパーボリック タンジェントと等しい要素を持つ valarray を返します。|
 
-### <a name="operators"></a>演算子
+### <a name="operators"></a>オペレーター
 
 |名前|説明|
 |-|-|

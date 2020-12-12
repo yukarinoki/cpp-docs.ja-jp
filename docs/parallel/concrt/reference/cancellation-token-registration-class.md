@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: cancellation_token_registration クラス'
 title: cancellation_token_registration クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - cancellation_token_registration class
 ms.assetid: 823d63f4-7233-4d65-8976-6152ccf12d0e
-ms.openlocfilehash: 9342841e207c93b66521c2fc742c1b1114682f78
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: 1901e5132a9bad6849b1b00a6be63caf9afc9170
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77142238"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97172142"
 ---
 # <a name="cancellation_token_registration-class"></a>cancellation_token_registration クラス
 
@@ -29,18 +30,18 @@ class cancellation_token_registration;
 
 ### <a name="public-constructors"></a>パブリック コンストラクター
 
-|Name|説明|
+|名前|説明|
 |----------|-----------------|
 |[cancellation_token_registration](#ctor)||
 |[~ cancellation_token_registration デストラクター](#dtor)||
 
 ### <a name="public-operators"></a>パブリック演算子
 
-|Name|説明|
+|名前|説明|
 |----------|-----------------|
-|[operator!=](#operator_neq)||
-|[operator=](#operator_eq)||
-|[operator==](#operator_eq_eq)||
+|[operator! =](#operator_neq)||
+|[operator =](#operator_eq)||
+|[operator = =](#operator_eq_eq)||
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -52,13 +53,13 @@ class cancellation_token_registration;
 
 **名前空間:** concurrency
 
-## <a name="dtor"></a>~ cancellation_token_registration
+## <a name="cancellation_token_registration"></a><a name="dtor"></a> ~ cancellation_token_registration
 
 ```cpp
 ~cancellation_token_registration();
 ```
 
-## <a name="ctor"></a>cancellation_token_registration
+## <a name="cancellation_token_registration"></a><a name="ctor"></a> cancellation_token_registration
 
 ```cpp
 cancellation_token_registration();
@@ -71,9 +72,9 @@ cancellation_token_registration(cancellation_token_registration&& _Src);
 ### <a name="parameters"></a>パラメーター
 
 *_Src*<br/>
-コピーまたは移動する `cancellation_token_registration`。
+`cancellation_token_registration`コピーまたは移動する。
 
-## <a name="operator_neq"></a>operator! =
+## <a name="operator"></a><a name="operator_neq"></a> operator! =
 
 ```cpp
 bool operator!= (const cancellation_token_registration& _Rhs) const;
@@ -86,7 +87,7 @@ bool operator!= (const cancellation_token_registration& _Rhs) const;
 
 ### <a name="return-value"></a>戻り値
 
-## <a name="operator_eq"></a>operator =
+## <a name="operator"></a><a name="operator_eq"></a> operator =
 
 ```cpp
 cancellation_token_registration& operator= (const cancellation_token_registration& _Src);
@@ -97,11 +98,11 @@ cancellation_token_registration& operator= (cancellation_token_registration&& _S
 ### <a name="parameters"></a>パラメーター
 
 *_Src*<br/>
-割り当てる `cancellation_token_registration`。
+`cancellation_token_registration`割り当てる。
 
 ### <a name="return-value"></a>戻り値
 
-## <a name="operator_eq_eq"></a>operator = =
+## <a name="operator"></a><a name="operator_eq_eq"></a> operator = =
 
 ```cpp
 bool operator== (const cancellation_token_registration& _Rhs) const;
@@ -114,6 +115,6 @@ bool operator== (const cancellation_token_registration& _Rhs) const;
 
 ### <a name="return-value"></a>戻り値
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[コンカレンシー名前空間](concurrency-namespace.md)
+[concurrency 名前空間](concurrency-namespace.md)

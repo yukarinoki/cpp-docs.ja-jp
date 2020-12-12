@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「参照演算子の追跡 (C++/CLI および C++/CX)」を参照してください。
 title: 参照演算子の追跡 (C++/CLI および C++/CX)
 ms.date: 10/12/2018
 ms.topic: reference
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - tracking references
 - '% tracking reference [C++]'
 ms.assetid: 142a7269-ab69-4b54-a6d7-833bef06228f
-ms.openlocfilehash: 93f56580f35ffc1f6e517905467c3deb92922f5f
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 05f61ad3e84bdef322062c93b35285ad37ba222f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87218014"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97172961"
 ---
 # <a name="tracking-reference-operator-ccli-and-ccx"></a>参照演算子の追跡 (C++/CLI および C++/CX)
 

@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: _cabs'
 title: _cabs
 ms.date: 4/2/2020
 api_name:
@@ -29,12 +30,12 @@ helpviewer_keywords:
 - _cabs function
 - calculating absolute values
 ms.assetid: fea292ee-1a39-4a0a-b416-4a189346ff26
-ms.openlocfilehash: 6e769d2caf65ef3c084bcb6add701f78b03a1b17
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 362121ab160e46ec0922b193ccedf77d5bf99468
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82913349"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97171635"
 ---
 # <a name="_cabs"></a>_cabs
 
@@ -50,22 +51,22 @@ double _cabs(
 
 ### <a name="parameters"></a>パラメーター
 
-*方向*<br/>
+*z*<br/>
 複素数。
 
 ## <a name="return-value"></a>戻り値
 
-**_cabs**は、成功した場合、引数の絶対値を返します。 オーバーフローの場合、 **_cabs**は**HUGE_VAL**を返し、 **errno**を**ERANGE**に設定します。 エラー処理は [_matherr](matherr.md) で変更できます。
+**_cabs** は、成功した場合、引数の絶対値を返します。 オーバーフローの場合、 **_cabs** は **HUGE_VAL** を返し、 **errno** を **ERANGE** に設定します。 エラー処理は [_matherr](matherr.md) で変更できます。
 
 ## <a name="remarks"></a>解説
 
-**_Cabs**関数は、複素数の絶対値を計算します。この値は[_complex](../../c-runtime-library/standard-types.md)型の構造体である必要があります。 構造体*z*は、実際のコンポーネント*x*と虚数成分*y*で構成されています。 **_Cabs**を呼び出すと、式`sqrt( z.x * z.x + z.y * z.y )`の値と等価の値が生成されます。
+**_Cabs** 関数は、複素数の絶対値を計算します。この値は [_complex](../../c-runtime-library/standard-types.md)型の構造体である必要があります。 構造体 *z* は、実際のコンポーネント *x* と虚数成分 *y* で構成されています。 **_Cabs** を呼び出すと、式の値と等価の値が生成さ `sqrt( z.x * z.x + z.y * z.y )` れます。
 
 既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**_cabs**|\<math.h>|
 
@@ -98,6 +99,6 @@ The absolute value of 3.000000 + 4.000000i is 5.000000
 
 ## <a name="see-also"></a>関連項目
 
-[浮動小数点サポート](../../c-runtime-library/floating-point-support.md)<br/>
+[浮動小数点のサポート](../../c-runtime-library/floating-point-support.md)<br/>
 [abs、labs、llabs、_abs64](abs-labs-llabs-abs64.md)<br/>
 [fabs、fabsf、fabsl](fabs-fabsf-fabsl.md)

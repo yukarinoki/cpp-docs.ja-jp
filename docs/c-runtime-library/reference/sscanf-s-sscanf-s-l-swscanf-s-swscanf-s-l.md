@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: sscanf_s、_sscanf_s_l、swscanf_s、_swscanf_s_l'
 title: sscanf_s、_sscanf_s_l、swscanf_s、_swscanf_s_l
 ms.date: 11/04/2016
 api_name:
@@ -44,12 +45,12 @@ helpviewer_keywords:
 - strings [C++], reading
 - _sscanf_s_l function
 ms.assetid: 956e65c8-00a5-43e8-a2f2-0f547ac9e56c
-ms.openlocfilehash: e92fc2544b6b137c64c388bed9013a6fdd5d3252
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 3f61292932ea6b77b4694588726094d78b8405cd
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87229351"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97171310"
 ---
 # <a name="sscanf_s-_sscanf_s_l-swscanf_s-_swscanf_s_l"></a>sscanf_s、_sscanf_s_l、swscanf_s、_swscanf_s_l
 
@@ -98,15 +99,15 @@ int _swscanf_s_l(
 
 ## <a name="return-value"></a>戻り値
 
-これらの関数は、正常に変換および代入されたフィールドの数を返します。読み込まれただけで代入されなかったフィールドは戻り値には含まれません。 戻り値が 0 の場合は、代入されたフィールドがなかったことを示します。 エラーの場合、または最初の変換の前に文字列の末尾に到達した場合、戻り値は**EOF**になります。
+これらの関数は、正常に変換および代入されたフィールドの数を返します。読み込まれただけで代入されなかったフィールドは戻り値には含まれません。 戻り値が 0 の場合は、代入されたフィールドがなかったことを示します。 エラーの場合、または最初の変換の前に文字列の末尾に到達した場合、戻り値は **EOF** になります。
 
-*Buffer*または*format*が**NULL**ポインターの場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、これらの関数は-1 を返し、 **errno**を**EINVAL**に設定します。
+*Buffer* または *format* が **NULL** ポインターの場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、これらの関数は-1 を返し、 **errno** を **EINVAL** に設定します。
 
 エラー コードの詳細については、「[errno、_doserrno、_sys_errlist、および _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」を参照してください。
 
 ## <a name="remarks"></a>解説
 
-**Sscanf_s**関数は、各*引数*によって指定された場所に*バッファー*からデータを読み取ります。 書式指定文字列の後の引数は、*形式*の型指定子に対応する型を持つ変数へのポインターを指定します。 安全性の低いバージョン[sscanf](sscanf-sscanf-l-swscanf-swscanf-l.md)とは異なり、 **[]** で囲まれている型フィールド文字**c**、 **c**、 **s**、 **s**、または文字列コントロールセットを使用する場合は、バッファーサイズのパラメーターが必要です。 バッファー サイズ (文字単位) は、バッファー サイズが必要な各バッファーの後に追加パラメーターとして指定する必要があります。 たとえば、文字列を読み込む場合、その文字列のバッファー サイズは次のように渡されます。
+**Sscanf_s** 関数は、各 *引数* によって指定された場所に *バッファー* からデータを読み取ります。 書式指定文字列の後の引数は、 *形式* の型指定子に対応する型を持つ変数へのポインターを指定します。 安全性の低いバージョン [sscanf](sscanf-sscanf-l-swscanf-swscanf-l.md)とは異なり、 **[]** で囲まれている型フィールド文字 **c**、 **c**、 **s**、 **s**、または文字列コントロールセットを使用する場合は、バッファーサイズのパラメーターが必要です。 バッファー サイズ (文字単位) は、バッファー サイズが必要な各バッファーの後に追加パラメーターとして指定する必要があります。 たとえば、文字列を読み込む場合、その文字列のバッファー サイズは次のように渡されます。
 
 ```C
 wchar_t ws[10];
@@ -132,13 +133,13 @@ sscanf_s(input, "%4c", &c, (unsigned)_countof(c)); // not null terminated
 詳細については、「[scanf_s、_scanf_s_l、wscanf_s、_wscanf_s_l](scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md)」と「[scanf 関数の型フィールド文字](../../c-runtime-library/scanf-type-field-characters.md)」を参照してください。
 
 > [!NOTE]
-> Size パラメーターの型は **`unsigned`** であり、 **size_t**ではありません。 64ビットターゲットをコンパイルする場合は、静的なキャストを使用して **_countof**または **`sizeof`** 結果を正しいサイズに変換します。
+> Size パラメーターの型は **`unsigned`** であり、 **size_t** ではありません。 64ビットターゲットをコンパイルする場合は、静的なキャストを使用して **_countof** または **`sizeof`** 結果を正しいサイズに変換します。
 
-*Format*引数は、入力フィールドの解釈を制御し、 **scanf_s**関数の*format*引数と同じ形式と機能を持ちます。 重なり合う文字列間でコピーした場合の動作は未定義です。
+*Format* 引数は、入力フィールドの解釈を制御し、 **scanf_s** 関数の *format* 引数と同じ形式と機能を持ちます。 重なり合う文字列間でコピーした場合の動作は未定義です。
 
-**swscanf_s**は**sscanf_s**のワイド文字バージョンです。**swscanf_s**する引数はワイド文字列です。 **sscanf_s**では、マルチバイトの16進文字は処理されません。 **swscanf_s**では、Unicode の全角16進数または "互換ゾーン" の文字は処理されません。 それ以外の場合、 **swscanf_s**と**sscanf_s**は同じように動作します。
+**swscanf_s** は **sscanf_s** のワイド文字バージョンです。 **swscanf_s** する引数はワイド文字列です。 **sscanf_s** では、マルチバイトの16進文字は処理されません。 **swscanf_s** では、Unicode の全角16進数または "互換ゾーン" の文字は処理されません。 それ以外の場合、 **swscanf_s** と **sscanf_s** は同じように動作します。
 
-**_L**サフィックスを持つこれらの関数のバージョンは、現在のスレッドロケールの代わりに渡されたロケールパラメーターを使用する点を除いて同じです。
+**_L** サフィックスを持つこれらの関数のバージョンは、現在のスレッドロケールの代わりに渡されたロケールパラメーターを使用する点を除いて同じです。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 

@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: &lt; stdexcept&gt;'
 title: '&lt;stdexcept&gt;'
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - stdexcept header
 ms.assetid: 495c10b1-1e60-4514-9f8f-7fda11a2f522
-ms.openlocfilehash: d4028d57a6e8898f85a37d9731e7e8d4cda19a2f
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 07ab90442630c6dfb5a96604ba7c0cb6b214f605
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68453717"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97169087"
 ---
 # <a name="ltstdexceptgt"></a>&lt;stdexcept&gt;
 
@@ -49,5 +50,5 @@ ms.locfileid: "68453717"
 
 ## <a name="see-also"></a>関連項目
 
-[ヘッダー ファイル リファレンス](../standard-library/cpp-standard-library-header-files.md)\
-[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[ヘッダーファイルのリファレンス](../standard-library/cpp-standard-library-header-files.md)\
+[C++ 標準ライブラリのスレッドセーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)

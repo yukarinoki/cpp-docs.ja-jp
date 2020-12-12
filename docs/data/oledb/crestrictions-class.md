@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: CRestrictions クラス'
 title: CRestrictions クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - CRestrictions class
 - Open method
 ms.assetid: 0aaa2364-641c-4318-b110-7446aada4b4f
-ms.openlocfilehash: a380f1ba00dcc444099f186071b7d55c9db71291
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 28eee2ea8d7e3b28edaab745c48426c878cc2f2d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88844965"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97170283"
 ---
 # <a name="crestrictions-class"></a>CRestrictions クラス
 
@@ -43,7 +44,7 @@ class CRestrictions :
 *pguid*<br/>
 スキーマの GUID へのポインター。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** atldbsch
 
@@ -82,7 +83,7 @@ HRESULT Open(const CSession& session,
 からスキーマ行セットの制限を指定します。
 
 *bBind*<br/>
-から列マップを自動的にバインドするかどうかを指定します。 既定値はです **`true`** 。これにより、列マップが自動的にバインドされます。 *Bbind*をに設定すると、 **`false`** 手動でバインドできるように、列マップが自動的にバインドされなくなります。 (手動バインドは OLAP ユーザーにとって特に重要です)。
+から列マップを自動的にバインドするかどうかを指定します。 既定値はです **`true`** 。これにより、列マップが自動的にバインドされます。 *Bbind* をに設定すると、 **`false`** 手動でバインドできるように、列マップが自動的にバインドされなくなります。 (手動バインドは OLAP ユーザーにとって特に重要です)。
 
 ### <a name="return-value"></a>戻り値
 

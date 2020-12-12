@@ -1,4 +1,5 @@
 ---
+description: '詳細については、「_variant_t:: Attach」を参照してください。'
 title: _variant_t::Attach
 ms.date: 11/04/2016
 f1_keywords:
@@ -9,18 +10,18 @@ helpviewer_keywords:
 - VARIANT object [C++], attach
 - VARIANT object
 ms.assetid: 2f02bd08-2306-4477-aa88-d2a5dee2b859
-ms.openlocfilehash: d0822dfc730cbbb64f8364e6fa8fe8bc7207f9f9
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: de13b1e8138eb24971e52165ee84fc92d97ca3d9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81750745"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97116653"
 ---
 # <a name="_variant_tattach"></a>_variant_t::Attach
 
-**マイクロソフト固有**
+**Microsoft 固有の仕様**
 
-_variant_t オブジェクト`VARIANT`にオブジェクトを **_variant_t**アタッチします。
+オブジェクトを `VARIANT` **_variant_t** オブジェクトにアタッチします。
 
 ## <a name="syntax"></a>構文
 
@@ -31,13 +32,13 @@ void Attach(VARIANT& varSrc);
 #### <a name="parameters"></a>パラメーター
 
 *varSrc*<br/>
-この`VARIANT`**_variant_t**オブジェクトにアタッチされるオブジェクト。
+`VARIANT`この **_variant_t** オブジェクトにアタッチされるオブジェクト。
 
 ## <a name="remarks"></a>解説
 
-の所有権を`VARIANT`カプセル化して取得します。 このメンバー関数は、既存のカプセル`VARIANT`化 を解放してから`VARIANT`、指定された`VARTYPE`をコピーし、_variant_t**デストラクター**によってのみリソースを解放できるように、VT_EMPTY に設定します。
+をカプセル化することで、の所有権を取得 `VARIANT` します。 このメンバー関数は、カプセル化された既存のをすべて解放し、 `VARIANT` 指定されたをコピーし、 `VARIANT` を VT_EMPTY に設定して、その `VARTYPE` リソースが **_variant_t** デストラクターによってのみ解放されるようにします。
 
-**エンド マイクロソフト 固有**
+**Microsoft 固有の仕様はここまで**
 
 ## <a name="see-also"></a>関連項目
 

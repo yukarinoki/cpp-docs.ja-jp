@@ -1,30 +1,31 @@
 ---
+description: 詳細については、「ヘッダーコントロールの操作」を参照してください。
 title: ヘッダー コントロールの操作
 ms.date: 11/04/2016
 helpviewer_keywords:
 - header controls [MFC], working with
 - header controls
 ms.assetid: af3afb5c-bf97-451b-8fee-3adcb8257210
-ms.openlocfilehash: db8f9d40bad116d7873bfd8ea9682c711d44e91f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cccd8b8296e27b0bbab3058d38fbacc068caeb1b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62399526"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97172636"
 ---
 # <a name="working-with-a-header-control"></a>ヘッダー コントロールの操作
 
-ヘッダー コントロールを使用する簡単な方法 ([CHeaderCtrl](../mfc/reference/cheaderctrl-class.md)) と共にリスト コントロールを参照してください[使い方](../mfc/using-clistctrl.md)ここのトピックで後述します。 ヘッダー コントロールを単独で使用することもできます。 MFC 呼び出し`InitCommonControls`できます。 主なタスクは次のとおりです。
+ヘッダーコントロールを簡単に使用する方法 ([CHeaderCtrl](../mfc/reference/cheaderctrl-class.md)) は、リストコントロールと組み合わせて使用できます。このトピックファミリの後の「 [CListCtrl の使用」を](../mfc/using-clistctrl.md) 参照してください。 ヘッダーコントロールを単独で使用することもできます。 MFC を呼び出し `InitCommonControls` ます。 主なタスクは次のとおりです。
 
 - [ヘッダー コントロールの作成](../mfc/creating-the-header-control.md)
 
 - [ヘッダー コントロールへの項目の追加](../mfc/adding-items-to-the-header-control.md)
 
-- [ヘッダー コントロール項目の並べ替え](../mfc/ordering-items-in-the-header-control.md)
+- [ヘッダー コントロールの項目の並べ替え](../mfc/ordering-items-in-the-header-control.md)
 
 - [ヘッダー コントロール通知の処理](../mfc/processing-header-control-notifications.md)
 
-親ビューまたはダイアログ クラスでは、ヘッダー コントロール オブジェクトが埋め込まれている場合、コントロールは、親が破棄されるときに破棄されます。
+ヘッダーコントロールオブジェクトが親ビューまたはダイアログクラスに埋め込まれている場合、親が破棄されるとコントロールが破棄されます。
 
 ## <a name="see-also"></a>関連項目
 

@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: CEnumerator クラス'
 title: CEnumerator クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -22,12 +23,12 @@ helpviewer_keywords:
 - GetMoniker method
 - Open method
 ms.assetid: 25805f1b-26e3-402f-af83-1b5fe5ddebf7
-ms.openlocfilehash: dfc358c06179d50cbf6442863fd2ed2c533cd00a
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 1d66afad29bd9fd785f5bc4e75a72605232af41c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91498532"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97170647"
 ---
 # <a name="cenumerator-class"></a>CEnumerator クラス
 
@@ -54,7 +55,7 @@ class CEnumerator :
 |[GetMoniker](#getmoniker)|`IMoniker`現在のレコードのインターフェイスを取得します。|
 |[[ファイル]](#open)|列挙子を開きます。|
 
-## <a name="remarks"></a>注釈
+## <a name="remarks"></a>解説
 
 `ISourcesRowset`このクラスから間接的にデータを取得できます。
 
@@ -77,7 +78,7 @@ bool Find(TCHAR* szSearchName) throw();
 
 **`true`** 名前が見つかった場合は。 それ以外の場合は **`false`** 。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 この名前は、 `SOURCES_NAME` [isourcesrowset を](/previous-versions/windows/desktop/ms715969(v=vs.85)) インターフェイスのメンバーにマップされます。
 
