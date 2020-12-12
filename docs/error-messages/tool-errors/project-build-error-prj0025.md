@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「プロジェクトビルドエラー PRJ0025」を参照してください。
 title: プロジェクト ビルド エラー PRJ0025
 ms.date: 08/27/2018
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - PRJ0025
 ms.assetid: 57725c78-bc63-44f3-9667-2969b2d7c41d
-ms.openlocfilehash: 30445a3abc2a6ad05c983448f57ed5b93df6e61f
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 9d7c17b9dcf8b37d14285cfd05bc92a8598f9b19
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80192355"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97291390"
 ---
 # <a name="project-build-error-prj0025"></a>プロジェクト ビルド エラー PRJ0025
 
@@ -23,4 +24,4 @@ ms.locfileid: "80192355"
 
 このエラーを解決するには、ビルドルールまたはビルドイベントの内容を更新して ANSI を使用するか、コンピューターにコードページをインストールして、システムの既定値として設定します。
 
-カスタムビルドステップとビルドイベントの詳細については、「[カスタムビルドステップとビルドイベント](../../build/understanding-custom-build-steps-and-build-events.md)について」を参照してください。
+カスタムビルドステップとビルドイベントの詳細については、「 [カスタムビルドステップとビルドイベント](../../build/understanding-custom-build-steps-and-build-events.md)について」を参照してください。

@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: &lt; csignal&gt;'
 title: '&lt;csignal&gt;'
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - csignal header
 ms.assetid: d18bcf82-a89a-476c-a6bf-726af956f7c0
-ms.openlocfilehash: fcad9c1b5ec20a7a10afc40884ece8ae8abec184
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 77006bb83b7181dd2778d50b76e690df5216d664
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80076672"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97233280"
 ---
 # <a name="ltcsignalgt"></a>&lt;csignal&gt;
 
-は、C 標準ライブラリヘッダー \<signal .h > をインクルードし、関連する名前を `std` 名前空間に追加します。 このヘッダーをインクルードすると、標準 C ライブラリ ヘッダーの外部リンケージで宣言された名前が、`std` 名前空間でも宣言されます。
+C 標準ライブラリヘッダーをインクルード \<signal.h> し、関連する名前を名前空間に追加し `std` ます。 このヘッダーをインクルードすると、標準 C ライブラリ ヘッダーの外部リンケージで宣言された名前が、`std` 名前空間でも宣言されます。
 
 ## <a name="syntax"></a>構文
 
@@ -50,8 +51,8 @@ signal-handler* signal(int sig, signal-handler* func);
 int raise(int sig);
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[ヘッダー ファイル リファレンス](../standard-library/cpp-standard-library-header-files.md)\
+[ヘッダーファイルのリファレンス](../standard-library/cpp-standard-library-header-files.md)\
 [C++ 標準ライブラリの概要](../standard-library/cpp-standard-library-overview.md)\
-[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[C++ 標準ライブラリのスレッドセーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)

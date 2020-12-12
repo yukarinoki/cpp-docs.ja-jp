@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「ctime」を参照してください。 &lt;&gt;
 title: '&lt;ctime&gt;'
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - ctime header
 ms.assetid: c1f7d4a4-4bfe-4e35-92cb-f63dbd3c39a8
-ms.openlocfilehash: 2b3f31ba48ca831b2d2d8cd460b60549c4debe83
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 68b165c2abeee91b9880e91f8cf67750e7a2a5e1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80076626"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97233150"
 ---
 # <a name="ltctimegt"></a>&lt;ctime&gt;
 
-標準 C ライブラリ ヘッダー \<time.h> をインクルードし、関連する名前を `std` 名前空間に追加します。
+標準 C ライブラリヘッダーをインクルード \<time.h> し、関連する名前を名前空間に追加し `std` ます。
 
 ## <a name="syntax"></a>構文
 
@@ -64,8 +65,8 @@ struct tm* localtime(const time_t* timer);
 size_t strftime(char* s, size_t maxsize, const char* format, const struct tm* timeptr);
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[ヘッダー ファイル リファレンス](../standard-library/cpp-standard-library-header-files.md)\
+[ヘッダーファイルのリファレンス](../standard-library/cpp-standard-library-header-files.md)\
 [C++ 標準ライブラリの概要](../standard-library/cpp-standard-library-overview.md)\
-[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[C++ 標準ライブラリのスレッドセーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)

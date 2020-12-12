@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: ctype クラス'
 title: ctype クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -36,12 +37,12 @@ helpviewer_keywords:
 - std::ctype [C++], toupper
 - std::ctype [C++], widen
 ms.assetid: 3627154c-49d9-47b5-b28f-5bbedee38e3b
-ms.openlocfilehash: a0e3aad99c335f1a907189ee84e55a38e41b62e1
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 9ef23707aa08e0fb3ad7edcff07bd2c6a4ae3814
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87222512"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97233085"
 ---
 # <a name="ctype-class"></a>ctype クラス
 
@@ -71,9 +72,9 @@ C++ 標準ライブラリは、このクラステンプレートの次の2つの
 
 クラステンプレートのその他の特殊化 `ctype<CharType>` :
 
-- 式を使用して、 *chartype*型の値*ch*を型の値に変換 **`char`** `(char)ch` します。
+- 式を使用して、 *chartype* 型の値 *ch* を型の値に変換 **`char`** `(char)ch` します。
 
-- 型の値*バイト*を **`char`** 式を使用して*chartype*型の値に変換 `CharType(byte)` します。
+- 型の値 *バイト* を **`char`** 式を使用して *chartype* 型の値に変換 `CharType(byte)` します。
 
 その他のすべての操作は **`char`** 、明示的な特殊化と同じように、値に対して実行され `ctype<char>` ます。
 
@@ -108,13 +109,13 @@ C++ 標準ライブラリは、このクラステンプレートの次の2つの
 |[toupper](#toupper)|文字または文字の範囲を大文字に変換します。|
 |[widen](#widen)|ネイティブ文字セットの型の文字を、 **`char`** `CharType` ロケールで使用される型の対応する文字に変換します。|
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:**\<locale>
 
 **名前空間:** std
 
-## <a name="ctypechar_type"></a><a name="char_type"></a>ctype:: char_type
+## <a name="ctypechar_type"></a><a name="char_type"></a> ctype:: char_type
 
 ロケールによって使用される文字を表す型。
 
@@ -130,7 +131,7 @@ typedef CharType char_type;
 
 戻り値として `char_type` を使用する例については、メンバー関数 [widen](#widen) をご覧ください。
 
-## <a name="ctypectype"></a><a name="ctype"></a>ctype:: ctype
+## <a name="ctypectype"></a><a name="ctype"></a> ctype:: ctype
 
 文字のロケール ファセットとして機能する ctype クラスのオブジェクトのコンストラクター。
 
@@ -145,19 +146,19 @@ explicit ctype(size_t _Refs = 0);
 
 ### <a name="remarks"></a>解説
 
-*_Refs*パラメーターに指定できる値とその意味は次のとおりです。
+*_Refs* パラメーターに指定できる値とその意味は次のとおりです。
 
 - 0: オブジェクトの有効期間はそれが含まれるロケールによって管理されます。
 
 - 1: オブジェクトの有効期間を手動で管理する必要があります。
 
-- \>1: これらの値は定義されていません。
+- \> 1: これらの値は定義されていません。
 
 デストラクターが保護されているため、利用できる直接的な例はありません。
 
 コンストラクターは、 `locale::facet` **locale::**[facet](../standard-library/locale-class.md#facet_class)() を使用して、その基本オブジェクトを初期化し `_Refs` ます。
 
-## <a name="ctypedo_is"></a><a name="do_is"></a>ctype::d o_is
+## <a name="ctypedo_is"></a><a name="do_is"></a> ctype::d o_is
 
 1 つの文字が特定の属性を持つかどうかをテストしたり、範囲内の各文字の属性を分類して配列に格納したりするために呼び出される仮想関数。
 
@@ -203,7 +204,7 @@ virtual const CharType *do_is(
 
 [is](#is) の例 (`do_is` を呼び出す) を参照してください。
 
-## <a name="ctypedo_narrow"></a><a name="do_narrow"></a>ctype::d o_narrow
+## <a name="ctypedo_narrow"></a><a name="do_narrow"></a> ctype::d o_narrow
 
 `CharType`ロケールによって使用される型の文字を、ネイティブ文字セットの型の対応する文字に変換するために呼び出される仮想関数 **`char`** 。
 
@@ -238,7 +239,7 @@ virtual const CharType* do_narrow(
 
 ### <a name="return-value"></a>戻り値
 
-最初のプロテクトメンバー関数は、型のパラメーター文字に対応する char 型のネイティブ文字を返し `CharType` ます。対応するが定義されていない場合は*default*を返します。
+最初のプロテクトメンバー関数は、型のパラメーター文字に対応する char 型のネイティブ文字を返し `CharType` ます。対応するが定義されていない場合は *default* を返します。
 
 保護されている 2 番目のメンバー関数は、型 `CharType` の文字から変換されたネイティブ文字の宛先範囲を示すポインターを返します。
 
@@ -250,7 +251,7 @@ virtual const CharType* do_narrow(
 
 [narrow](#narrow) の例 (`do_narrow` を呼び出す) を参照してください。
 
-## <a name="ctypedo_scan_is"></a><a name="do_scan_is"></a>ctype::d o_scan_is
+## <a name="ctypedo_scan_is"></a><a name="do_scan_is"></a> ctype::d o_scan_is
 
 指定されたマスクに一致する範囲内の最初の文字を検索するために呼び出される仮想関数。
 
@@ -274,7 +275,7 @@ virtual const CharType *do_scan_is(
 
 ### <a name="return-value"></a>戻り値
 
-指定されたマスクに一致する範囲内の最初の文字を示すポインター。 このような値が存在しない場合、関数は*last*を返します。
+指定されたマスクに一致する範囲内の最初の文字を示すポインター。 このような値が存在しない場合、関数は *last* を返します。
 
 ### <a name="remarks"></a>解説
 
@@ -284,7 +285,7 @@ virtual const CharType *do_scan_is(
 
 [scan_is](#scan_is) の例 (`do_scan_is` を呼び出す) を参照してください。
 
-## <a name="ctypedo_scan_not"></a><a name="do_scan_not"></a>ctype::d o_scan_not
+## <a name="ctypedo_scan_not"></a><a name="do_scan_not"></a> ctype::d o_scan_not
 
 指定されたマスクに一致しない範囲内の最初の文字を検索するために呼び出される仮想関数。
 
@@ -308,7 +309,7 @@ virtual const CharType *do_scan_not(
 
 ### <a name="return-value"></a>戻り値
 
-指定されたマスクに一致しない範囲内の最初の文字を示すポインター。 このような値が存在しない場合、関数は*last*を返します。
+指定されたマスクに一致しない範囲内の最初の文字を示すポインター。 このような値が存在しない場合、関数は *last* を返します。
 
 ### <a name="remarks"></a>解説
 
@@ -318,7 +319,7 @@ virtual const CharType *do_scan_not(
 
 [scan_not](#scan_not) の例 (`do_scan_not` を呼び出す) を参照してください。
 
-## <a name="ctypedo_tolower"></a><a name="do_tolower"></a>ctype::d o_tolower
+## <a name="ctypedo_tolower"></a><a name="do_tolower"></a> ctype::d o_tolower
 
 文字または文字の範囲を小文字に変換するために呼び出される仮想関数。
 
@@ -343,7 +344,7 @@ virtual const CharType *do_tolower(
 
 ### <a name="return-value"></a>戻り値
 
-最初のプロテクトメンバー関数は、パラメーター *ch*の小文字形式を返します。 小文字の形式が存在しない場合は、 *ch*が返されます。 2番目のプロテクトメンバー関数は、 *last*を返します。
+最初のプロテクトメンバー関数は、パラメーター *ch* の小文字形式を返します。 小文字の形式が存在しない場合は、 *ch* が返されます。 2番目のプロテクトメンバー関数は、 *last* を返します。
 
 ### <a name="remarks"></a>解説
 
@@ -353,7 +354,7 @@ virtual const CharType *do_tolower(
 
 [tolower](#tolower) の例 (`do_tolower` を呼び出す) を参照してください。
 
-## <a name="ctypedo_toupper"></a><a name="do_toupper"></a>ctype::d o_toupper
+## <a name="ctypedo_toupper"></a><a name="do_toupper"></a> ctype::d o_toupper
 
 文字または文字の範囲を大文字に変換するために呼び出される仮想関数。
 
@@ -378,7 +379,7 @@ virtual const CharType *do_toupper(
 
 ### <a name="return-value"></a>戻り値
 
-最初のプロテクトメンバー関数は、パラメーター *ch*の大文字形式を返します。 大文字の形式が存在しない場合は、 *ch*を返します。 2番目のプロテクトメンバー関数は、 *last*を返します。
+最初のプロテクトメンバー関数は、パラメーター *ch* の大文字形式を返します。 大文字の形式が存在しない場合は、 *ch* を返します。 2番目のプロテクトメンバー関数は、 *last* を返します。
 
 ### <a name="remarks"></a>解説
 
@@ -388,7 +389,7 @@ virtual const CharType *do_toupper(
 
 [toupper](#toupper) の例 (`do_toupper` を呼び出す) を参照してください。
 
-## <a name="ctypedo_widen"></a><a name="do_widen"></a>ctype::d o_widen
+## <a name="ctypedo_widen"></a><a name="do_widen"></a> ctype::d o_widen
 
 ネイティブ文字セットの型の文字を、 **`char`** `CharType` ロケールで使用される型の対応する文字に変換するために呼び出される仮想関数。
 
@@ -429,7 +430,7 @@ virtual const char *do_widen(
 
 [widen](#widen) の例 (`do_widen` を呼び出す) を参照してください。
 
-## <a name="ctypeis"></a><a name="is"></a>ctype:: is
+## <a name="ctypeis"></a><a name="is"></a> ctype:: is
 
 1 つの文字が特定の属性を持つかどうかをテストするか、範囲内の各文字の属性を分類して配列に格納します。
 
@@ -508,7 +509,7 @@ int main() {
 }
 ```
 
-## <a name="ctypenarrow"></a><a name="narrow"></a>ctype:: ナロー
+## <a name="ctypenarrow"></a><a name="narrow"></a> ctype:: ナロー
 
 `CharType`ロケールによって使用される型の文字を、ネイティブ文字セット内の型の対応する文字に変換 **`char`** します。
 
@@ -575,7 +576,7 @@ int main( )
 Xhello everyone
 ```
 
-## <a name="ctypescan_is"></a><a name="scan_is"></a>ctype:: scan_is
+## <a name="ctypescan_is"></a><a name="scan_is"></a> ctype:: scan_is
 
 指定されたマスクに一致する範囲内の最初の文字を検索します。
 
@@ -599,7 +600,7 @@ const CharType *scan_is(
 
 ### <a name="return-value"></a>戻り値
 
-指定されたマスクに一致する範囲内の最初の文字を示すポインター。 このような値が存在しない場合、関数は*last*を返します。
+指定されたマスクに一致する範囲内の最初の文字を示すポインター。 このような値が存在しない場合、関数は *last* を返します。
 
 ### <a name="remarks"></a>解説
 
@@ -631,7 +632,7 @@ int main( )
 The first punctuation is "," at position: 5
 ```
 
-## <a name="ctypescan_not"></a><a name="scan_not"></a>ctype:: scan_not
+## <a name="ctypescan_not"></a><a name="scan_not"></a> ctype:: scan_not
 
 指定されたマスクに一致しない範囲内の最初の文字を検索します。
 
@@ -655,7 +656,7 @@ const CharType *scan_not(
 
 ### <a name="return-value"></a>戻り値
 
-指定されたマスクに一致しない範囲内の最初の文字を示すポインター。 このような値が存在しない場合、関数は*last*を返します。
+指定されたマスクに一致しない範囲内の最初の文字を示すポインター。 このような値が存在しない場合、関数は *last* を返します。
 
 ### <a name="remarks"></a>解説
 
@@ -687,7 +688,7 @@ int main( )
 First nonalpha character is "," at position: 5
 ```
 
-## <a name="ctypetolower"></a><a name="tolower"></a>ctype:: tolower
+## <a name="ctypetolower"></a><a name="tolower"></a> ctype:: tolower
 
 文字または文字の範囲を小文字に変換します。
 
@@ -710,9 +711,9 @@ const CharType *tolower(CharType* first, const CharType* last) const;
 
 ### <a name="return-value"></a>戻り値
 
-1つ目のメンバー関数は、小文字形式のパラメーター *ch*を返します。 小文字の形式が存在しない場合は、 *ch*が返されます。
+1つ目のメンバー関数は、小文字形式のパラメーター *ch* を返します。 小文字の形式が存在しない場合は、 *ch* が返されます。
 
-2番目のメンバー関数は、 *last*を返します。
+2番目のメンバー関数は、 *last* を返します。
 
 ### <a name="remarks"></a>解説
 
@@ -743,7 +744,7 @@ int main( )
 The lowercase string is: hello, my name is john
 ```
 
-## <a name="ctypetoupper"></a><a name="toupper"></a>ctype:: toupper
+## <a name="ctypetoupper"></a><a name="toupper"></a> ctype:: toupper
 
 文字または文字の範囲を大文字に変換します。
 
@@ -765,9 +766,9 @@ const CharType *toupper(CharType* first, const CharType* last) const;
 
 ### <a name="return-value"></a>戻り値
 
-1つ目のメンバー関数は、大文字の形式のパラメーター *ch*を返します。 大文字の形式が存在しない場合は、 *ch*を返します。
+1つ目のメンバー関数は、大文字の形式のパラメーター *ch* を返します。 大文字の形式が存在しない場合は、 *ch* を返します。
 
-2番目のメンバー関数は、 *last*を返します。
+2番目のメンバー関数は、 *last* を返します。
 
 ### <a name="remarks"></a>解説
 
@@ -798,7 +799,7 @@ int main( )
 The uppercase string is: HELLO, MY NAME IS JOHN
 ```
 
-## <a name="ctypewiden"></a><a name="widen"></a>ctype:: 広げ
+## <a name="ctypewiden"></a><a name="widen"></a> ctype:: 広げ
 
 ネイティブ文字セットの型の文字を、 **`char`** `CharType` ロケールで使用される型の対応する文字に変換します。
 

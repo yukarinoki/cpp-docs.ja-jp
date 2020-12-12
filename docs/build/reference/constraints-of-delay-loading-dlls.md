@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「Dll の遅延読み込みの制約」を参照してください。
 title: DLL の遅延読み込みの制約
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - delayed loading of DLLs, constraints
 - DLLs [C++], constraints
 ms.assetid: 0097ff65-550f-4a4e-8ac3-39bf6404f926
-ms.openlocfilehash: be5e5eb360f80e0b2ea9682f38f6787044cd3c63
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 45f54ca57b57bc689752a8aa80f4c03bbe096817
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69493068"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97197011"
 ---
 # <a name="constraints-of-delay-loading-dlls"></a>DLL の遅延読み込みの制約
 
@@ -23,7 +24,7 @@ ms.locfileid: "69493068"
 
 - 転送されたエントリポイントの[バインド](binding-imports.md)はサポートされていません。
 
-- 遅延読み込み DLL のエントリ ポイントでプロセスごとに初期化が起こる場合、DLL の遅延読み込みでプロセスの動作が同じにならない可能性があります。 その他のケースには、 [__declspec (thread)](../../cpp/thread.md)を使用して宣言された静的 TLS (スレッドローカルストレージ) があり`LoadLibrary`ます。これは、を介して DLL が読み込まれるときに処理されません。 `TlsAlloc`、`TlsFree`、`TlsGetValue`、および `TlsSetValue` を使用した動的 TLS は、静的または遅延読み込み DLL で引き続き利用可能です。
+- 遅延読み込み DLL のエントリ ポイントでプロセスごとに初期化が起こる場合、DLL の遅延読み込みでプロセスの動作が同じにならない可能性があります。 その他のケースには、 [__declspec (thread)](../../cpp/thread.md)を使用して宣言された静的 TLS (スレッドローカルストレージ) があります。これは、を介して DLL が読み込まれるときに処理されません `LoadLibrary` 。 `TlsAlloc`、`TlsFree`、`TlsGetValue`、および `TlsSetValue` を使用した動的 TLS は、静的または遅延読み込み DLL で引き続き利用可能です。
 
 - 静的 (グローバル) 関数ポインターは、関数への最初の呼び出しの後に、インポートされた関数について再初期化する必要があります。 これは、関数ポインターを最初に使用するときにはサンクをポイントするからです。
 
@@ -33,7 +34,7 @@ ms.locfileid: "69493068"
 
 ## <a name="see-also"></a>関連項目
 
-[リンカーによる DLL の遅延読み込み](linker-support-for-delay-loaded-dlls.md)<br/>
+[リンカーによる Delay-Loaded Dll のサポート](linker-support-for-delay-loaded-dlls.md)<br/>
 [LoadLibrary 関数](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibraryw)<br/>
 [GetModuleHandle 関数](/windows/win32/api/libloaderapi/nf-libloaderapi-getmodulehandlew)<br/>
 [GetProcAddress 関数](/windows/win32/api/libloaderapi/nf-libloaderapi-getprocaddress)<br/>
