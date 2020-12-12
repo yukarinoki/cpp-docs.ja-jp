@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: _heapmin'
 title: _heapmin
 ms.date: 4/2/2020
 api_name:
@@ -32,12 +33,12 @@ helpviewer_keywords:
 - _heapmin function
 - heapmin function
 ms.assetid: c0bccdf6-2d14-4d7b-a7ff-d6a17bdb410f
-ms.openlocfilehash: 9a98dfffc784d05a93f65a51a5250c31fe1dd596
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 06ec2d7b0269927d8d67c9fe7431f2f550728aae
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82920108"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97296447"
 ---
 # <a name="_heapmin"></a>_heapmin
 
@@ -51,19 +52,19 @@ int _heapmin( void );
 
 ## <a name="return-value"></a>戻り値
 
-成功した場合、 **_heapmin**は0を返します。それ以外の場合、この関数は-1 を返し、 **errno**をに**設定します。**
+成功した場合、 **_heapmin** は0を返します。それ以外の場合、この関数は-1 を返し、 **errno** をに **設定します。**
 
 このリターン コードとその他のリターン コードの詳細については、「 [_doserrno、errno、_sys_errlist、および _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」を参照してください。
 
 ## <a name="remarks"></a>解説
 
-**_Heapmin**関数は、使用されていないヒープメモリをオペレーティングシステムに解放することにより、ヒープを最小化します。 オペレーティングシステムが **_heapmin**(Windows 98 など) をサポートしていない場合、この関数は-1 を返し、 **errno**をに**設定します。**
+**_Heapmin** 関数は、使用されていないヒープメモリをオペレーティングシステムに解放することにより、ヒープを最小化します。 オペレーティングシステムが **_heapmin**(Windows 98 など) をサポートしていない場合、この関数は-1 を返し、 **errno** をに **設定します。**
 
 既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|オプション ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|オプション ヘッダー|
 |-------------|---------------------|---------------------|
 |**_heapmin**|\<malloc.h>|\<errno.h>|
 
@@ -72,7 +73,7 @@ int _heapmin( void );
 ## <a name="see-also"></a>関連項目
 
 [メモリの割り当て](../../c-runtime-library/memory-allocation.md)<br/>
-[空け](free.md)<br/>
+[free](free.md)<br/>
 [_heapadd](../../c-runtime-library/heapadd.md)<br/>
 [_heapchk](heapchk.md)<br/>
 [_heapset](../../c-runtime-library/heapset.md)<br/>

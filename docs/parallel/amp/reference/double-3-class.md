@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: double_3 クラス'
 title: double_3 クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -72,12 +73,12 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::double_3::rbg
 - amp_short_vectors/Concurrency::graphics::double_3::get_yxz
 ms.assetid: baeb3ff0-2862-4c81-857e-b1a4c085be25
-ms.openlocfilehash: 981b3026e1efb6c3b4e06457a0eb1f986cdcaafa
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: ddda1c0e1d28a97f7e5fd5662a414a5c2d40909f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77126696"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97297110"
 ---
 # <a name="double_3-class"></a>double_3 クラス
 
@@ -93,122 +94,122 @@ class double_3;
 
 ### <a name="public-typedefs"></a>パブリック typedef
 
-|Name|説明|
+|名前|説明|
 |----------|-----------------|
 |value_type||
 
 ### <a name="public-constructors"></a>パブリック コンストラクター
 
-|Name|説明|
+|名前|説明|
 |----------|-----------------|
 |[double_3 コンストラクター](#ctor)|オーバーロードされます。 既定のコンストラクター。すべての要素を 0 で初期化します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
-|Name|説明|
+|名前|説明|
 |----------|-----------------|
-|double_3::get_x||
-|double_3::get_xy||
-|double_3::get_xyz||
-|double_3::get_xz||
-|double_3::get_xzy||
-|double_3::get_y||
-|double_3::get_yx||
-|double_3::get_yxz||
-|double_3::get_yz||
-|double_3::get_yzx||
-|double_3::get_z||
-|double_3::get_zx||
-|double_3::get_zxy||
-|double_3::get_zy||
-|double_3::get_zyx||
-|double_3::ref_b||
-|double_3::ref_g||
-|double_3::ref_r||
-|double_3::ref_x||
-|double_3::ref_y||
-|double_3::ref_z||
-|double_3::set_x||
-|double_3::set_xy||
-|double_3::set_xyz||
-|double_3::set_xz||
-|double_3::set_xzy||
-|double_3::set_y||
-|double_3::set_yx||
-|double_3::set_yxz||
-|double_3::set_yz||
-|double_3::set_yzx||
-|double_3::set_z||
-|double_3::set_zx||
-|double_3::set_zxy||
-|double_3::set_zy||
-|double_3::set_zyx||
+|double_3:: get_x||
+|double_3:: get_xy||
+|double_3:: get_xyz||
+|double_3:: get_xz||
+|double_3:: get_xzy||
+|double_3:: get_y||
+|double_3:: get_yx||
+|double_3:: get_yxz||
+|double_3:: get_yz||
+|double_3:: get_yzx||
+|double_3:: get_z||
+|double_3:: get_zx||
+|double_3:: get_zxy||
+|double_3:: get_zy||
+|double_3:: get_zyx||
+|double_3:: ref_b||
+|double_3:: ref_g||
+|double_3:: ref_r||
+|double_3:: ref_x||
+|double_3:: ref_y||
+|double_3:: ref_z||
+|double_3:: set_x||
+|double_3:: set_xy||
+|double_3:: set_xyz||
+|double_3:: set_xz||
+|double_3:: set_xzy||
+|double_3:: set_y||
+|double_3:: set_yx||
+|double_3:: set_yxz||
+|double_3:: set_yz||
+|double_3:: set_yzx||
+|double_3:: set_z||
+|double_3:: set_zx||
+|double_3:: set_zxy||
+|double_3:: set_zy||
+|double_3:: set_zyx||
 
 ### <a name="public-operators"></a>パブリック演算子
 
-|Name|説明|
+|名前|説明|
 |----------|-----------------|
-|double_3::operator-||
-|double_3::operator--||
-|double_3::operator*=||
-|double_3::operator/=||
-|double_3::operator++||
-|double_3::operator+=||
-|double_3::operator=||
-|double_3::operator-=||
+|double_3:: operator-||
+|double_3:: operator--||
+|double_3:: operator * =||
+|double_3:: operator/=||
+|double_3:: operator + +||
+|double_3:: operator + =||
+|double_3:: operator =||
+|double_3:: operator-=||
 
 ### <a name="public-constants"></a>パブリック定数
 
-|Name|説明|
+|名前|説明|
 |----------|-----------------|
 |[サイズ定数](#double_3__size)||
 
 ### <a name="public-data-members"></a>パブリック データ メンバー
 
-|Name|説明|
+|名前|説明|
 |----------|-----------------|
-|double_3::b||
-|double_3::bg||
-|double_3::bgr||
-|double_3::br||
-|double_3::brg||
-|double_3::g||
-|double_3::gb||
-|double_3::gbr||
-|double_3::gr||
-|double_3::grb||
-|double_3::r||
-|double_3::rb||
-|double_3::rbg||
-|double_3::rg||
-|double_3::rgb||
-|double_3::x||
-|double_3::xy||
-|double_3::xyz||
-|double_3::xz||
-|double_3::xzy||
-|double_3::y||
-|double_3::yx||
-|double_3::yxz||
-|double_3::yz||
-|double_3::yzx||
-|double_3::z||
-|double_3::zx||
-|double_3::zxy||
-|double_3::zy||
-|double_3::zyx||
+|double_3:: b||
+|double_3:: bg||
+|double_3:: bgr||
+|double_3:: br||
+|double_3:: brg||
+|double_3:: g||
+|double_3:: gb||
+|double_3:: gbr||
+|double_3:: gr||
+|double_3:: grb||
+|double_3:: r||
+|double_3:: rb||
+|double_3:: rbg||
+|double_3:: rg||
+|double_3:: rgb||
+|double_3:: x||
+|double_3:: xy||
+|double_3:: xyz||
+|double_3:: xz||
+|double_3:: xzy||
+|double_3:: y||
+|double_3:: yx||
+|double_3:: yxz||
+|double_3:: yz||
+|double_3:: yzx||
+|double_3:: z||
+|double_3:: zx||
+|double_3:: zxy||
+|double_3:: zy||
+|double_3:: zyx||
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
 `double_3`
 
-## <a name="requirements"></a>［要件］
+## <a name="requirements"></a>要件
 
 **ヘッダー:** amp_short_vectors
 
 **名前空間:** Concurrency:: graphics
 
-## <a name="ctor"></a>double_3
+## <a name="double_3"></a><a name="ctor"></a> double_3
 
 既定のコンストラクター。すべての要素を 0 で初期化します。
 
@@ -268,12 +269,12 @@ explicit inline double_3(
 *_Other*<br/>
 の初期化に使用されるオブジェクト。
 
-## <a name="double_3__size"></a>幅
+## <a name="size"></a><a name="double_3__size"></a> 幅
 
 ```cpp
 static const int size = 3;
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [Concurrency::graphics 名前空間](concurrency-graphics-namespace.md)

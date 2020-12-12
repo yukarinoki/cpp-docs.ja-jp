@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: CBookmark クラス'
 title: CBookmark クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -66,12 +67,12 @@ helpviewer_keywords:
 - operator =, bookmarks
 - operator=, bookmarks
 ms.assetid: bc942f95-6f93-41d9-bb6e-bcdae4ae0b7a
-ms.openlocfilehash: 4013e40c364593676ebb099804304ffb2adb42c1
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 7c138776e282c287eb7e7e09b93196ac0792f7ee
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88838478"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97295069"
 ---
 # <a name="cbookmark-class"></a>CBookmark クラス
 
@@ -90,9 +91,9 @@ class CBookmark< 0 > : public CBookmarkBase
 ### <a name="parameters"></a>パラメーター
 
 *nSize*<br/>
-ブックマークバッファーのサイズ (バイト単位)。 *NSize*が0の場合、ブックマークバッファーは実行時に動的に作成されます。
+ブックマークバッファーのサイズ (バイト単位)。 *NSize* が0の場合、ブックマークバッファーは実行時に動的に作成されます。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** atldbcli.h
 
@@ -107,7 +108,7 @@ class CBookmark< 0 > : public CBookmarkBase
 |[GetSize](#getsize)|バッファーのサイズ (バイト単位) を取得します。|
 |[SetBookmark](#setbookmark)|ブックマーク値を設定します。|
 
-### <a name="operators"></a>演算子
+### <a name="operators"></a>オペレーター
 
 | 名前 | 説明 |
 |-|-|
@@ -135,7 +136,7 @@ CBookmark(DBLENGTH nSize);
 
 ### <a name="remarks"></a>解説
 
-最初の関数は、バッファーを NULL に設定し、バッファーサイズを0に設定します。 2番目の関数は、バッファーサイズを *nSize*に、バッファーを *nSize* バイトのバイト配列に設定します。
+最初の関数は、バッファーを NULL に設定し、バッファーサイズを0に設定します。 2番目の関数は、バッファーサイズを *nSize* に、バッファーを *nSize* バイトのバイト配列に設定します。
 
 > [!NOTE]
 > この関数は、でのみ使用でき `CBookmark<0>` ます。
@@ -170,7 +171,7 @@ virtual DBLENGTH GetSize() const throw();
 
 ## <a name="cbookmarksetbookmark"></a><a name="setbookmark"></a> CBookmark:: SetBookmark
 
-*Pbuffer*によって参照されるブックマーク値をバッファーにコピー `CBookmark` し、バッファーサイズを*nSize*に設定します。
+*Pbuffer* によって参照されるブックマーク値をバッファーにコピー `CBookmark` し、バッファーサイズを *nSize* に設定します。
 
 ### <a name="syntax"></a>構文
 

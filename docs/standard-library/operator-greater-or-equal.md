@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: 演算子&gt;='
 title: operator&gt;=
 ms.date: 11/04/2016
 f1_keywords:
@@ -13,19 +14,19 @@ helpviewer_keywords:
 - operator >=
 - operator>=
 ms.assetid: 14fbebf5-8b75-4afa-a51b-3112d31c07cf
-ms.openlocfilehash: 08c73602d87cbfc31364148d9565071da7b732c4
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 1821647ebb281020cef1798cf056fbf816aa855c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72687360"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97297071"
 ---
 # <a name="operatorgt"></a>operator&gt;=
 
 > [!NOTE]
-> このトピックは、 C++ C++標準ライブラリで使用されているコンテナーの非機能例として、Microsoft ドキュメントに記載されています。 詳細については、「[C++ Standard Library Containers (C++ 標準ライブラリ コンテナ―)](../standard-library/stl-containers.md)」をご覧ください。
+> このトピックは、C++ 標準ライブラリで使用されるコンテナーの非機能例として、Microsoft C++ ドキュメントに記載されています。 詳細については、「[C++ 標準ライブラリ コンテナー](../standard-library/stl-containers.md)」を参照してください。
 
-Overloads **operator > =** クラステンプレート[コンテナー](../standard-library/sample-container-class.md)の2つのオブジェクトを比較します。
+Overloads **operator>=** クラステンプレート [コンテナー](../standard-library/sample-container-class.md)の2つのオブジェクトを比較します。
 
 ## <a name="syntax"></a>構文
 
@@ -38,7 +39,7 @@ bool operator>=(
 
 ## <a name="return-value"></a>戻り値
 
-`!(left < right)`を返します。
+`!(left < right)` が返されます。
 
 ## <a name="see-also"></a>関連項目
 

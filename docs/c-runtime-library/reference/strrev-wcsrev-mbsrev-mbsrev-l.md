@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: _strrev、_wcsrev、_mbsrev、_mbsrev_l'
 title: _strrev、_wcsrev、_mbsrev、_mbsrev_l
 ms.date: 4/2/2020
 api_name:
@@ -53,19 +54,19 @@ helpviewer_keywords:
 - tcsrev function
 - _tcsrev function
 ms.assetid: 87863e89-4fa0-421c-af48-25d8516fe72f
-ms.openlocfilehash: d0f03f84045d6fc036e6c8111da7b8484f2b8622
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: c3e1e0483220daca9182f6ee8a312dfc6589caf3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82911154"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97296174"
 ---
 # <a name="_strrev-_wcsrev-_mbsrev-_mbsrev_l"></a>_strrev、_wcsrev、_mbsrev、_mbsrev_l
 
 文字列の文字を反転させます。
 
 > [!IMPORTANT]
-> **_mbsrev**と **_mbsrev_l**は、Windows ランタイムで実行されるアプリケーションでは使用できません。 詳細については、「[ユニバーサル Windows プラットフォーム アプリでサポートされていない CRT 関数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)」を参照してください。
+> **_mbsrev** と **_mbsrev_l** は、Windows ランタイムで実行されるアプリケーションでは使用できません。 詳細については、「[ユニバーサル Windows プラットフォーム アプリでサポートされていない CRT 関数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)」を参照してください。
 
 ## <a name="syntax"></a>構文
 
@@ -87,7 +88,7 @@ unsigned char *_mbsrev_l(
 
 ### <a name="parameters"></a>パラメーター
 
-*引数*<br/>
+*str*<br/>
 NULL で終わる反転対象の文字列。
 
 *locale*<br/>
@@ -99,11 +100,11 @@ NULL で終わる反転対象の文字列。
 
 ## <a name="remarks"></a>解説
 
-**_Strrev**関数は、 *str*の文字の順序を逆にします。 終端の NULL 文字はそのまま保持されます。 **_wcsrev**と **_mbsrev**は **_strrev**のワイド文字バージョンとマルチバイト文字バージョンです。 **_Wcsrev**の引数と戻り値はワイド文字列です。これらの **_mbsrev**はマルチバイト文字列です。 **_Mbsrev**の場合、 *str*の各マルチバイト文字のバイトの順序は変更されません。 それ以外では、これらの関数の動作は同じです。
+**_Strrev** 関数は、 *str* の文字の順序を逆にします。 終端の NULL 文字はそのまま保持されます。 **_wcsrev** と **_mbsrev** は **_strrev** のワイド文字バージョンとマルチバイト文字バージョンです。 **_Wcsrev** の引数と戻り値はワイド文字列です。これらの **_mbsrev** はマルチバイト文字列です。 **_Mbsrev** の場合、 *str* の各マルチバイト文字のバイトの順序は変更されません。 それ以外では、これらの関数の動作は同じです。
 
-**_mbsrev**は、そのパラメーターを検証します。 *String1*または*string2*が null ポインターの場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、 **_mbsrev**は**NULL**を返し、 **errno**を**EINVAL**に設定します。 **_strrev**と **_wcsrev**では、パラメーターは検証されません。
+**_mbsrev** は、そのパラメーターを検証します。 *String1* または *string2* が null ポインターの場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、 **_mbsrev** は **NULL** を返し、 **errno** を **EINVAL** に設定します。 **_strrev** と **_wcsrev** では、パラメーターは検証されません。
 
-出力値は、ロケールの**LC_CTYPE**カテゴリの設定に影響されます。詳細について[は、「setlocale、_wsetlocale](setlocale-wsetlocale.md) 」を参照してください。 これらの関数のバージョンは同じですが、 **_l**サフィックスが付いていないバージョンが現在のロケールを使用し、 **_l**サフィックスが付いているものは、渡されたロケールパラメーターを代わりに使用する点が異なります。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
+出力値は、ロケールの **LC_CTYPE** カテゴリの設定に影響されます。詳細について [は、「setlocale、_wsetlocale](setlocale-wsetlocale.md) 」を参照してください。 これらの関数のバージョンは同じですが、 **_l** サフィックスが付いていないバージョンが現在のロケールを使用し、 **_l** サフィックスが付いているものは、渡されたロケールパラメーターを代わりに使用する点が異なります。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
 
 > [!IMPORTANT]
 > これらの関数は、バッファー オーバーランの脅威に対して脆弱な場合があります。 バッファー オーバーランは、認められていない特権の昇格の原因となるため、システムの攻撃に使用される可能性があります。 詳しくは、「 [バッファー オーバーランの回避](/windows/win32/SecBP/avoiding-buffer-overruns)」をご覧ください。
@@ -119,7 +120,7 @@ NULL で終わる反転対象の文字列。
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**_strrev**|\<string.h>|
 |**_wcsrev**|\<string.h> または \<wchar.h>|
@@ -160,7 +161,7 @@ The string "Able was I ere I saw Elba" is a palindrome
 ## <a name="see-also"></a>関連項目
 
 [文字列操作](../../c-runtime-library/string-manipulation-crt.md)<br/>
-[国](../../c-runtime-library/locale.md)<br/>
-[マルチバイト文字のシーケンスの解釈](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[ロケール](../../c-runtime-library/locale.md)<br/>
+[Multibyte-Character シーケンスの解釈](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [strcpy、wcscpy、_mbscpy](strcpy-wcscpy-mbscpy.md)<br/>
 [_strset、_strset_l、_wcsset、_wcsset_l、_mbsset、_mbsset_l](strset-strset-l-wcsset-wcsset-l-mbsset-mbsset-l.md)<br/>

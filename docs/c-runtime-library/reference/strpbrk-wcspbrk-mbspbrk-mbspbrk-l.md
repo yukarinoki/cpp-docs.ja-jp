@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: strpbrk、wcspbrk、_mbspbrk、_mbspbrk_l'
 title: strpbrk、wcspbrk、_mbspbrk、_mbspbrk_l
 ms.date: 4/2/2020
 api_name:
@@ -50,12 +51,12 @@ helpviewer_keywords:
 - _mbspbrk function
 - mbspbrk_l function
 ms.assetid: 80b504f7-a167-4dde-97ad-4ae3000dc810
-ms.openlocfilehash: fbde746cba02605be7fa42e941a30bfa02d0561a
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 2dd5da437ef0b6f9f319f3ba7a9543f7922bfd9c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87231313"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97296252"
 ---
 # <a name="strpbrk-wcspbrk-_mbspbrk-_mbspbrk_l"></a>strpbrk、wcspbrk、_mbspbrk、_mbspbrk_l
 
@@ -122,7 +123,7 @@ const unsigned char *_mbspbrk_l(
 
 ### <a name="parameters"></a>パラメーター
 
-*引数*<br/>
+*str*<br/>
 NULL で終わる検索対象の文字列。
 
 *strCharSet*<br/>
@@ -133,21 +134,21 @@ NULL で終わる文字セット。
 
 ## <a name="return-value"></a>戻り値
 
-*Str*で*strcharset*から文字が最初に出現する位置へのポインターを返すか、2つの文字列引数に共通の文字がない場合は NULL ポインターを返します。
+*Str* で *strcharset* から文字が最初に出現する位置へのポインターを返すか、2つの文字列引数に共通の文字がない場合は NULL ポインターを返します。
 
 ## <a name="remarks"></a>解説
 
-関数は、 `strpbrk` *strcharset*の文字セットに属する*str*内の文字が最初に出現する位置を指すポインターを返します。 検索には、終端の NULL 文字は含まれません。
+関数は、 `strpbrk` *strcharset* の文字セットに属する *str* 内の文字が最初に出現する位置を指すポインターを返します。 検索には、終端の NULL 文字は含まれません。
 
 `wcspbrk` 関数と `_mbspbrk` 関数は、 `strpbrk`関数のワイド文字バージョンとマルチバイト文字バージョンです。 `wcspbrk` 関数の引数と戻り値はワイド文字列で、`_mbspbrk` 関数の引数と戻り値はマルチバイト文字列です。
 
-`_mbspbrk` はそのパラメーターを検証します。 *Str*または*STRCHARSET*が NULL の場合、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、は NULL を返し、を `_mbspbrk` `errno` EINVAL に設定します。 `strpbrk` および `wcspbrk` は、パラメーターを検証しません。 それ以外では、これらの関数の動作は同じです。
+`_mbspbrk` はそのパラメーターを検証します。 *Str* または *STRCHARSET* が NULL の場合、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、は NULL を返し、を `_mbspbrk` `errno` EINVAL に設定します。 `strpbrk` および `wcspbrk` は、パラメーターを検証しません。 それ以外では、これらの関数の動作は同じです。
 
 `_mbspbrk` と `_mbscspn` は似ていますが、`_mbspbrk` は [size_t](../../c-runtime-library/standard-types.md) 型の値ではなくポインターを返す点が異なります。
 
 C では、これらの関数は **`const`** 最初の引数のポインターを受け取ります。 C++ では、2 つのオーバーロードを使用できます。 へのポインターを受け取るオーバーロードでは、 **`const`** へのポインターが返されます。非へのポインターを受け取るバージョンでは、以外のへのポインターが **`const`** **`const`** 返され **`const`** ます。 マクロ _CRT_CONST_CORRECT_OVERLOADS は、 **`const`** **`const`** これらの関数のバージョンと非バージョンの両方を使用できる場合に定義されます。 **`const`** 両方の C++ オーバーロードに対して非動作が必要な場合は、シンボル _CONST_RETURN を定義します。
 
-出力値は、ロケールの LC_CTYPE カテゴリの設定に影響されます。詳細については、「 [setlocale](setlocale-wsetlocale.md)」を参照してください。 **_L**サフィックスが付いていないこれらの関数のバージョンは、このロケールに依存する動作に現在のロケールを使用します。**_l**サフィックスが付いているバージョンは、渡されたロケールパラメーターを代わりに使用する点を除いて同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
+出力値は、ロケールの LC_CTYPE カテゴリの設定に影響されます。詳細については、「 [setlocale](setlocale-wsetlocale.md)」を参照してください。 **_L** サフィックスが付いていないこれらの関数のバージョンは、このロケールに依存する動作に現在のロケールを使用します。**_l** サフィックスが付いているバージョンは、渡されたロケールパラメーターを代わりに使用する点を除いて同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
 
 既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
@@ -206,7 +207,7 @@ int main( void )
 
 [文字列操作](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [ロケール](../../c-runtime-library/locale.md)<br/>
-[マルチバイト文字のシーケンスの解釈](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[Multibyte-Character シーケンスの解釈](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [strcspn、wcscspn、_mbscspn、_mbscspn_l](strcspn-wcscspn-mbscspn-mbscspn-l.md)<br/>
 [strchr、wcschr、_mbschr、_mbschr_l](strchr-wcschr-mbschr-mbschr-l.md)<br/>
 [strrchr、wcsrchr、_mbsrchr、_mbsrchr_l](strrchr-wcsrchr-mbsrchr-mbsrchr-l.md)<br/>
