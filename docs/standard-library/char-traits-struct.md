@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: char_traits 構造体'
 title: char_traits 構造体
 ms.date: 05/07/2019
 f1_keywords:
@@ -27,12 +28,12 @@ helpviewer_keywords:
 - char_traits struct
 - char_traits class
 ms.assetid: 568e59f0-4521-4207-9223-9dcf6a16d620
-ms.openlocfilehash: 834572e96d9d8c19ae5d75a57dfa6c0053ae0ec5
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: a42aa29f2400d4610974530de04699daa32b7f1d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87222603"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97325236"
 ---
 # <a name="char_traits-struct"></a>char_traits 構造体
 
@@ -52,7 +53,7 @@ struct char_traits;
 
 ## <a name="remarks"></a>解説
 
-テンプレート構造体は、型のさまざまな文字の特徴を記述し `CharType` ます。 クラステンプレート[basic_string](../standard-library/basic-string-class.md)と、 [basic_ios](../standard-library/basic-ios-class.md)を含むいくつかの iostream クラステンプレートだけでなく、この情報を使用して型の要素を操作し `CharType` ます。 このような要素型では、明示的な構築や破棄を要求できません。 既定のコンストラクター、コピー コンストラクター、および代入演算子を、必要なセマンティクスと共に指定する必要があります。 ビットごとのコピーは、代入と同じ効果を持つ必要があります。 char_traits 構造体のメンバー関数は、いずれも例外をスローしません。
+テンプレート構造体は、型のさまざまな文字の特徴を記述し `CharType` ます。 クラステンプレート [basic_string](../standard-library/basic-string-class.md) と、 [basic_ios](../standard-library/basic-ios-class.md)を含むいくつかの iostream クラステンプレートだけでなく、この情報を使用して型の要素を操作し `CharType` ます。 このような要素型では、明示的な構築や破棄を要求できません。 既定のコンストラクター、コピー コンストラクター、および代入演算子を、必要なセマンティクスと共に指定する必要があります。 ビットごとのコピーは、代入と同じ効果を持つ必要があります。 char_traits 構造体のメンバー関数は、いずれも例外をスローしません。
 
 ### <a name="typedefs"></a>Typedefs
 
@@ -70,7 +71,7 @@ struct char_traits;
 |-|-|
 |[assign](#assign)|1 つの文字の値を別の文字に割り当てます。|
 |[対照](#compare)|指定した文字数まで 2 つの文字列を比較します。|
-|[copy](#copy)|1 つの文字列から別の文字列に指定した数の文字をコピーします。 非推奨。 代わりに [char_traits::_Copy_s](#copy_s) を使用してください。|
+|[copy](#copy)|1 つの文字列から別の文字列に指定した数の文字をコピーします。 非推奨になりました。 代わりに [char_traits::_Copy_s](#copy_s) を使用してください。|
 |[_Copy_s](#copy_s)|1 つの文字列から別の文字列に指定した数の文字をコピーします。|
 |[eof](#eof)|ファイルの終端 (EOF) 文字を返します。|
 |[eq](#eq)|2 つの `char_type` 文字が等しいかどうかをテストします。|
@@ -78,19 +79,19 @@ struct char_traits;
 |[find](#find)|文字の範囲内で指定した文字が最初に出現する位置を検索します。|
 |[length](#length)|文字列の長さを返します。|
 |[lt](#lt)|1 つの文字が別の文字よりも小さいかどうかをテストします。|
-|[move](#move)|シーケンス内の文字を、指定された文字数だけ、重複が生じる可能性のある別のシーケンスにコピーします。 非推奨。 代わりに [char_traits::_Move_s](#move_s) を使用してください。|
+|[move](#move)|シーケンス内の文字を、指定された文字数だけ、重複が生じる可能性のある別のシーケンスにコピーします。 非推奨になりました。 代わりに [char_traits::_Move_s](#move_s) を使用してください。|
 |[_Move_s](#move_s)|シーケンス内の文字を、指定された文字数だけ、重複が生じる可能性のある別のシーケンスにコピーします。|
 |[not_eof](#not_eof)|文字がファイルの終端 (EOF) 文字であるかどうかをテストします。|
 |[to_char_type](#to_char_type)|`int_type` の文字を `char_type` の対応する文字に変換し、その結果を返します。|
 |[to_int_type](#to_int_type)|`char_type` の文字を `int_type` の対応する文字に変換し、その結果を返します。|
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:**\<string>
 
 **名前空間:** std
 
-## <a name="char_traitsassign"></a><a name="assign"></a>char_traits:: assign
+## <a name="char_traitsassign"></a><a name="assign"></a> char_traits:: assign
 
 別の文字値または文字列内の要素の範囲に 1 つの文字値を割り当てます。
 
@@ -118,7 +119,7 @@ static char_type *assign(char_type* strTo,
 
 ### <a name="return-value"></a>戻り値
 
-2番目のメンバー関数は、最初の *_Num*要素に *_CharFrom*の値が割り当てられている文字列へのポインターを返します。
+2番目のメンバー関数は、最初の *_Num* 要素に *_CharFrom* の値が割り当てられている文字列へのポインターを返します。
 
 ### <a name="example"></a>例
 
@@ -161,7 +162,7 @@ The target string s1 is: abcd-1234-abcd
 The result1 = assign ( s1 , 4 , 'f' ) is: ffff-1234-abcd
 ```
 
-## <a name="char_traitschar_type"></a><a name="char_type"></a>char_traits:: char_type
+## <a name="char_traitschar_type"></a><a name="char_type"></a> char_traits:: char_type
 
 文字の型。
 
@@ -177,7 +178,7 @@ typedef CharType char_type;
 
 `char_type` の宣言方法や使用方法の例については、[copy](#copy) の例を参照してください。
 
-## <a name="char_traitscompare"></a><a name="compare"></a>char_traits:: compare
+## <a name="char_traitscompare"></a><a name="compare"></a> char_traits:: compare
 
 指定した文字数まで 2 つの文字列を比較します。
 
@@ -241,7 +242,7 @@ int main() {
 }
 ```
 
-## <a name="char_traitscopy"></a><a name="copy"></a>char_traits:: コピー
+## <a name="char_traitscopy"></a><a name="copy"></a> char_traits:: コピー
 
 1 つの文字列から別の文字列に指定した数の文字をコピーします。
 
@@ -303,7 +304,7 @@ The destination string is: ABCD-1234
 The result1 = copy ( s1 , s2 , 4 ) is: ABCD-1234-abcd
 ```
 
-## <a name="char_traits_copy_s"></a><a name="copy_s"></a>char_traits:: _Copy_s
+## <a name="char_traits_copy_s"></a><a name="copy_s"></a> char_traits:: _Copy_s
 
 1 つの文字列から別の文字列に指定した数の文字をコピーします。
 
@@ -321,7 +322,7 @@ static char_type *_Copy_s(
 コピーされた文字のシーケンスの受信ターゲットとなる文字列または文字配列。
 
 *dest_size*\
-*Dest*のサイズ。 がの場合 `char_type` **`char`** 、このサイズはバイト単位です。 がの場合 `char_type` **`wchar_t`** 、このサイズは単語単位です。
+*Dest* のサイズ。 がの場合 `char_type` **`char`** 、このサイズはバイト単位です。 がの場合 `char_type` **`wchar_t`** 、このサイズは単語単位です。
 
 *_From*\
 コピーされるソース文字列または文字配列。
@@ -368,7 +369,7 @@ The destination string is: ABCD-1234
 The result1 = _Copy_s(s1, char_traits<char>::length(s1), s2, 4) is: ABCD-1234-abcd
 ```
 
-## <a name="char_traitseof"></a><a name="eof"></a>char_traits:: eof
+## <a name="char_traitseof"></a><a name="eof"></a> char_traits:: eof
 
 ファイルの終端 (EOF) 文字を返します。
 
@@ -419,7 +420,7 @@ The eof marker for char_traits<char> is: -1
 The eof marker for char_traits<wchar_t> is: 65535
 ```
 
-## <a name="char_traitseq"></a><a name="eq"></a>char_traits:: eq
+## <a name="char_traitseq"></a><a name="eq"></a> char_traits:: eq
 
 2 つの `char_type` 文字が等しいかどうかをテストします。
 
@@ -479,7 +480,7 @@ The character ch1 is not equal to the character ch2.
 The character ch1 is equal to the character ch3.
 ```
 
-## <a name="char_traitseq_int_type"></a><a name="eq_int_type"></a>char_traits:: eq_int_type
+## <a name="char_traitseq_int_type"></a><a name="eq_int_type"></a> char_traits:: eq_int_type
 
 `int_type` として表される 2 つの文字が等しいかどうかをテストします。
 
@@ -564,7 +565,7 @@ The int_type representation of character ch1
 is equal to the int_type representation of ch3.
 ```
 
-## <a name="char_traitsfind"></a><a name="find"></a>char_traits:: find
+## <a name="char_traitsfind"></a><a name="find"></a> char_traits:: find
 
 文字の範囲内で指定した文字が最初に出現する位置を検索します。
 
@@ -631,7 +632,7 @@ of the character 'd' is: d-1234-abcd
 The result2 of the search is NULL.
 ```
 
-## <a name="char_traitsint_type"></a><a name="int_type"></a>char_traits:: int_type
+## <a name="char_traitsint_type"></a><a name="int_type"></a> char_traits:: int_type
 
 `char_type` 型の文字、またはファイルの終端 (EOF) 文字を表すことができる整数型。
 
@@ -647,7 +648,7 @@ typedef long int_type;
 
 `int_type` の宣言方法や使用方法の例については、[eq_int_type](#eq_int_type) の例を参照してください。
 
-## <a name="char_traitslength"></a><a name="length"></a>char_traits:: length
+## <a name="char_traitslength"></a><a name="length"></a> char_traits:: length
 
 文字列の長さを返します。
 
@@ -690,7 +691,7 @@ The C-string str1 is: Hello
 The length of C-string str1 is: 5.
 ```
 
-## <a name="char_traitslt"></a><a name="lt"></a>char_traits:: lt
+## <a name="char_traitslt"></a><a name="lt"></a> char_traits:: lt
 
 1 つの文字が別の文字よりも小さいかどうかをテストします。
 
@@ -749,7 +750,7 @@ The character ch1 is less than the character ch2.
 The character ch3 is not less than the character ch2.
 ```
 
-## <a name="char_traitsmove"></a><a name="move"></a>char_traits:: 移動
+## <a name="char_traitsmove"></a><a name="move"></a> char_traits:: 移動
 
 シーケンス内の文字を、指定された文字数だけ、重複が生じる可能性のある別のシーケンスにコピーします。
 
@@ -826,7 +827,7 @@ The source/destination string sToFrom2 is: abcd-1234-ABCD
 The result2 = move ( sToFrom2 , findc , 8 ) is: cd-1234-4-ABCD
 ```
 
-## <a name="char_traits_move_s"></a><a name="move_s"></a>char_traits:: _Move_s
+## <a name="char_traits_move_s"></a><a name="move_s"></a> char_traits:: _Move_s
 
 シーケンス内の文字を、指定された文字数だけ、重複が生じる可能性のある別のシーケンスにコピーします。
 
@@ -844,7 +845,7 @@ static char_type *_Move_s(
 コピーされた文字のシーケンスの受信ターゲットとなる文字列または文字配列の先頭にある要素。
 
 *dest_size*\
-*Dest*のサイズ。 がの場合は `char_type` **`char`** 、バイト単位です。 がの場合 `char_type` **`wchar_t`** 、これは単語単位です。
+*Dest* のサイズ。 がの場合は `char_type` **`char`** 、バイト単位です。 がの場合 `char_type` **`wchar_t`** 、これは単語単位です。
 
 *_From*\
 コピーされるソース文字列または文字配列の先頭にある要素。
@@ -854,7 +855,7 @@ static char_type *_Move_s(
 
 ### <a name="return-value"></a>戻り値
 
-コピーされた文字のシーケンスを受け取る対象の文字列または文字配列にコピーされた最初*の要素の*位置。
+コピーされた文字のシーケンスを受け取る対象の文字列または文字配列にコピーされた最初 *の要素の* 位置。
 
 ### <a name="remarks"></a>解説
 
@@ -906,7 +907,7 @@ The source/destination string sToFrom2 is: abcd-1234-ABCD
 The result2 = _Move_s(sToFrom2, char_traits<char>::length(sToFrom2), findc, 8) is: cd-1234-4-ABCD
 ```
 
-## <a name="char_traitsnot_eof"></a><a name="not_eof"></a>char_traits:: not_eof
+## <a name="char_traitsnot_eof"></a><a name="not_eof"></a> char_traits:: not_eof
 
 文字がファイルの終端 (EOF) 文字であるかどうかをテストします。
 
@@ -978,7 +979,7 @@ The eofTest1 returns: 120, which is the character: x.
 The eofTest2 indicates int2 is an EOF character.
 ```
 
-## <a name="char_traitsoff_type"></a><a name="off_type"></a>char_traits:: off_type
+## <a name="char_traitsoff_type"></a><a name="off_type"></a> char_traits:: off_type
 
 ストリーム内の位置間のオフセットを表すことのできる整数型。
 
@@ -990,7 +991,7 @@ typedef streamoff off_type;
 
 型は、さまざまなストリーム位置決め操作に関連するオフセット バイト数を格納できるオブジェクトを記述する、符号付き整数です。 通常は、[streamoff](../standard-library/ios-typedefs.md#streamoff) のシノニムですが、基本的にその型と同じプロパティを持っています。
 
-## <a name="char_traitspos_type"></a><a name="pos_type"></a>char_traits::p os_type
+## <a name="char_traitspos_type"></a><a name="pos_type"></a> char_traits::p os_type
 
 ストリーム内の位置を表すことのできる整数型。
 
@@ -1002,7 +1003,7 @@ typedef streampos pos_type;
 
 この型は、ストリーム内の任意のファイル位置インジケーターを復元するために必要なすべての情報を格納できるオブジェクトを表します。 通常は、[streampos](../standard-library/ios-typedefs.md#streampos) のシノニムですが、どのような場合も基本的にその型と同じプロパティを持っています。
 
-## <a name="char_traitsstate_type"></a><a name="state_type"></a>char_traits:: state_type
+## <a name="char_traitsstate_type"></a><a name="state_type"></a> char_traits:: state_type
 
 ストリーム内のマルチバイト文字の変換状態を表す型。
 
@@ -1014,7 +1015,7 @@ typedef implementation-defined state_type;
 
 この型は、変換状態を表すことができるオブジェクトを表します。 通常は、`mbstate_t` のシノニムですが、どのような場合も基本的にその型と同じプロパティを持っています。
 
-## <a name="char_traitsto_char_type"></a><a name="to_char_type"></a>char_traits:: to_char_type
+## <a name="char_traitsto_char_type"></a><a name="to_char_type"></a> char_traits:: to_char_type
 
 `int_type` の文字を `char_type` の対応する文字に変換し、その結果を返します。
 
@@ -1031,7 +1032,7 @@ static char_type to_char_type(const int_type& _Ch);
 
 `int_type` 文字に対応する `char_type` 文字。
 
-このように表すことができない *_Ch*の値は、指定されていない結果を生成します。
+このように表すことができない *_Ch* の値は、指定されていない結果を生成します。
 
 ### <a name="remarks"></a>解説
 
@@ -1120,7 +1121,7 @@ The recovered char_type of ch1 is equal to the original ch1.
 The recovered char_type of ch2 is equal to the original ch2.
 ```
 
-## <a name="char_traitsto_int_type"></a><a name="to_int_type"></a>char_traits:: to_int_type
+## <a name="char_traitsto_int_type"></a><a name="to_int_type"></a> char_traits:: to_int_type
 
 `char_type` の文字を `int_type` の対応する文字に変換し、その結果を返します。
 

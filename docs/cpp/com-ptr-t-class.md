@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: _com_ptr_t クラス'
 title: _com_ptr_t クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - _com_ptr_t class
 ms.assetid: 3753a8a0-03d4-4cfd-8a9a-74872ea53971
-ms.openlocfilehash: 2c299ea4a5aaabba847c85500a6023d7b112d492
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: a68b522806cec14baffe7857c71ac171ed0407f9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88838504"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97295615"
 ---
 # <a name="_com_ptr_t-class"></a>_com_ptr_t クラス
 
 **Microsoft 固有の仕様**
 
-**_Com_ptr_t**オブジェクトは、com インターフェイスポインターをカプセル化し、"スマート" ポインターと呼ばれます。 このテンプレートクラスは `IUnknown` 、メンバー関数 (、、および) への関数呼び出しによって、リソースの割り当てと割り当て解除を管理し `QueryInterface` `AddRef` `Release` ます。
+**_Com_ptr_t** オブジェクトは、com インターフェイスポインターをカプセル化し、"スマート" ポインターと呼ばれます。 このテンプレートクラスは `IUnknown` 、メンバー関数 (、、および) への関数呼び出しによって、リソースの割り当てと割り当て解除を管理し `QueryInterface` `AddRef` `Release` ます。
 
 スマート ポインターは通常、_COM_SMARTPTR_TYPEDEF マクロによって提供される typedef 定義で参照されます。 このマクロは、インターフェイス名と IID を受け取り、インターフェイスの名前とのサフィックスを持つ **_com_ptr_t** の特殊化を宣言し `Ptr` ます。 次に例を示します。
 
@@ -25,7 +26,7 @@ ms.locfileid: "88838504"
 _COM_SMARTPTR_TYPEDEF(IMyInterface, __uuidof(IMyInterface));
 ```
 
-**_com_ptr_t**特殊化を宣言 `IMyInterfacePtr` します。
+**_com_ptr_t** 特殊化を宣言 `IMyInterfacePtr` します。
 
 このテンプレートクラスのメンバーではなく、一連の [関数テンプレート](../cpp/relational-function-templates.md)は、比較演算子の右側にあるスマートポインターとの比較をサポートしています。
 
@@ -33,7 +34,7 @@ _COM_SMARTPTR_TYPEDEF(IMyInterface, __uuidof(IMyInterface));
 
 | 名前 | 説明 |
 |-|-|
-|[_com_ptr_t](../cpp/com-ptr-t-com-ptr-t.md)|**_Com_ptr_t**オブジェクトを構築します。|
+|[_com_ptr_t](../cpp/com-ptr-t-com-ptr-t.md)|**_Com_ptr_t** オブジェクトを構築します。|
 
 ### <a name="low-level-operations"></a>低水準操作
 
@@ -48,7 +49,7 @@ _COM_SMARTPTR_TYPEDEF(IMyInterface, __uuidof(IMyInterface));
 |[QueryInterface](../cpp/com-ptr-t-queryinterface.md)|`QueryInterface` `IUnknown` カプセル化されたインターフェイスポインターでのメンバー関数を呼び出します。|
 |[リリース](../cpp/com-ptr-t-release.md)|`Release` `IUnknown` カプセル化されたインターフェイスポインターでのメンバー関数を呼び出します。|
 
-### <a name="operators"></a>演算子
+### <a name="operators"></a>オペレーター
 
 | 名前 | 説明 |
 |-|-|
@@ -58,7 +59,7 @@ _COM_SMARTPTR_TYPEDEF(IMyInterface, __uuidof(IMyInterface));
 
 **Microsoft 固有の仕様はここまで**
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:**\<comip.h>
 

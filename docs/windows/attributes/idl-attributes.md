@@ -1,4 +1,5 @@
 ---
+description: IDL 属性に関する詳細情報
 title: IDL 属性 (C++ COM)
 ms.date: 10/02/2018
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - IDL files [C++], attributes
 - .idl files [C++]
 ms.assetid: 04c596f4-c97b-4952-8053-316678b1d0b6
-ms.openlocfilehash: 8cceae2f1c4880b72f1ffc30070d6aa6bf8e3a51
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 1db49b6c68d0dd4e4f4c6c5dcfb148cafc39159d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87211971"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97275465"
 ---
 # <a name="idl-attributes"></a>IDL 属性
 
@@ -27,7 +28,7 @@ ms.locfileid: "87211971"
 
 [COM 属性](com-attributes.md)で使用しない場合、IDL 属性を使用してインターフェイスを定義できます。 ソースコードをコンパイルするときに、生成された .idl ファイルを定義するために属性が使用されます。 ATL プロジェクトで COM 属性と共に使用すると、などの一部の IDL 属性によって `coclass` コードがプロジェクトに挿入されます。
 
-[Idl_quote](idl-quote.md)では、Visual C++ の現在のバージョンでサポートされていない MIDL コンストラクトを使用できます。 この属性や[importlib](importlib.md)などの他の属性は、現在の Visual Studio C++ プロジェクトで既存の .idl ファイルを使用するの[に役立ちます](includelib-cpp.md)。
+[Idl_quote](idl-quote.md)では、Visual C++ の現在のバージョンでサポートされていない MIDL コンストラクトを使用できます。 この属性や [importlib](importlib.md) などの他の属性は、現在の Visual Studio C++ プロジェクトで既存の .idl ファイルを使用するの [に役立ちます](includelib-cpp.md) 。
 
 |属性|説明|
 |---------------|-----------------|
@@ -36,18 +37,18 @@ ms.locfileid: "87211971"
 |[async_uuid](async-uuid.md)|COM インターフェイスの同期バージョンと非同期バージョンの両方を定義するように MIDL コンパイラに指示する UUID を指定します。|
 |[bindable](bindable.md)|プロパティがデータ バインディングをサポートすることを示します。|
 |[call_as](call-as.md)|リモート処理不可能関数をリモート関数にマップできるようにします。|
-|[case](case-cpp.md)|共用体の[switch_type](switch-type.md)属性と共に使用されます。|
+|[case](case-cpp.md)|共用体の [switch_type](switch-type.md) 属性と共に使用されます。|
 |[coclass](coclass.md)|クラス定義をコクラスとして .idl ファイルに配置します。|
 |[control](control.md)|ユーザー定義型がコントロールであることを指定します。|
 |[cpp_quote](cpp-quote.md)|指定した文字列を、引用符ではなく、生成されたヘッダーファイルに出力します。|
 |[defaultbind](defaultbind.md)|オブジェクトを最もよく表す、1つのバインド可能なプロパティを示します。|
 |[defaultcollelem](defaultcollelem.md)|Visual Basic コードの最適化に使用します。|
 |[既定](defaultvalue.md)|型指定された省略可能なパラメーターの既定値を指定できます。|
-|[既定値](default-cpp.md)|コクラス内で定義されるカスタムまたはディスパッチ インターフェイスが既定のプログラミング インターフェイスを表すことを示します。|
+|[default](default-cpp.md)|コクラス内で定義されるカスタムまたはディスパッチ インターフェイスが既定のプログラミング インターフェイスを表すことを示します。|
 |[defaultvtable](defaultvtable.md)|コントロールの既定の vtable インターフェイスとしてインターフェイスを定義します。|
 |[dispinterface](dispinterface.md)|ディスパッチ インターフェイスとしてインターフェイスを .idl ファイルに配置します。|
 |[displaybind](displaybind.md)|バインド可能としてユーザーに表示される必要があるプロパティを示します。|
-|[dual](dual.md)|インターフェイスを .idl ファイルにデュアルインターフェイスとして配置します。|
+|[×](dual.md)|インターフェイスを .idl ファイルにデュアルインターフェイスとして配置します。|
 |[キー](entry.md)|DLL 内のエントリポイントを識別することによって、モジュール内のエクスポートされた関数または定数を指定します。|
 |[first_is](first-is.md)|転送される最初の配列要素のインデックスを指定します。|
 |[helpcontext](helpcontext.md)|ヘルプファイル内のこの要素に関する情報をユーザーが表示できるようにするコンテキスト ID を指定します。|
@@ -69,7 +70,7 @@ ms.locfileid: "87211971"
 |[last_is](last-is.md)|転送する最後の配列要素のインデックスを指定します。|
 |[lcid](lcid.md)|関数にロケール識別子を渡すことができます。|
 |[length_is](length-is.md)|転送する配列要素の数を指定します。|
-|[licensed](licensed.md)|適用されるコクラスがライセンスされ、を使用してインスタンス化される必要があることを示し `IClassFactory2` ます。|
+|[ライセンス](licensed.md)|適用されるコクラスがライセンスされ、を使用してインスタンス化される必要があることを示し `IClassFactory2` ます。|
 |[地元の](local-cpp.md)|インターフェイスヘッダーで使用するときに、MIDL コンパイラをヘッダージェネレーターとして使用できるようにします。 個々の関数で使用する場合は、スタブが生成されないローカルプロシージャを指定します。|
 |[max_is](max-is.md)|有効な配列インデックスの最大値を指定します。|
 |[第](module-cpp.md)|.idl ファイルのライブラリ ブロックを定義します。|
@@ -81,7 +82,7 @@ ms.locfileid: "87211971"
 |[object](object-cpp.md)|カスタムインターフェイスを識別します。カスタム属性と同義です。|
 |[odl](odl.md)|オブジェクト記述言語 (ODL) インターフェイスとしてインターフェイスを識別します。|
 |[oleautomation](oleautomation.md)|インターフェイスがオートメーションと互換性があることを示します。|
-|[optional](optional-cpp.md)|メンバー関数の省略可能なパラメーターを指定します。|
+|[省略可能](optional-cpp.md)|メンバー関数の省略可能なパラメーターを指定します。|
 |[out](out-cpp.md)|呼び出されたプロシージャから呼び出したプロシージャ (サーバーからクライアント) に返されるポインター パラメーターを示します。|
 |[pointer_default](pointer-default.md)|パラメーターリストに表示されるトップレベルのポインターを除く、すべてのポインターの既定のポインター属性を指定します。|
 |[unmanaged](pragma.md)|指定された文字列を、引用符ではなく、生成された .idl ファイルに出力します。|

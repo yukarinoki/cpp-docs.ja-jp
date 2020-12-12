@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: コンパイラの警告 (レベル 3) C4839'
 title: コンパイラの警告 (レベル 3) C4839
 ms.date: 09/13/2018
 f1_keywords:
@@ -6,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - C4839
 ms.assetid: f4f99066-9258-4330-81a8-f4a75a1d95ee
-ms.openlocfilehash: 2c238dc16359583bf55f7590d2ce7c0363d66df7
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: a8ae0d3e3c74c62d05163edd981679e5390fb184
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80198576"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97332073"
 ---
 # <a name="compiler-warning-level-3-c4839"></a>コンパイラの警告 (レベル 3) C4839
 
 > 可変個引数関数の引数としてのクラス '*type*' の非標準の使用
 
-`printf` などの可変個引数関数に渡されるクラスまたは構造体は、普通にコピー可能である必要があります。 このようなオブジェクトを渡すときには、コンパイラは単にビットごとのコピーを作成し、コンストラクターまたはデストラクターを呼び出しません。
+などの可変個引数関数に渡されるクラスまたは構造体は `printf` 、普通にコピー可能である必要があります。 このようなオブジェクトを渡すときには、コンパイラは単にビットごとのコピーを作成し、コンストラクターまたはデストラクターを呼び出しません。
 
 この警告は、Visual Studio 2017 以降で使用できます。
 
@@ -51,7 +52,7 @@ int main()
     printf("%i\n", i.load());
 ```
 
-`CStringW`を使用して作成および管理された文字列の場合は、指定された `operator LPCWSTR()` を使用して、`CStringW` オブジェクトを書式指定文字列によって予期される C ポインターにキャストする必要があります。
+`CStringW` を使用して構築および管理される文字列の場合、指定されている `operator LPCWSTR()` を使用して、書式設定文字列によって予期されている C ポインターに `CStringW` オブジェクトをキャストする必要があります。
 
 ```cpp
     CStringW str1;

@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「char_traits &lt; wchar_t 構造体」を参照してください。 &gt;
 title: char_traits&lt;wchar_t&gt; 構造体
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - char_traits<wchar_t> class
 ms.assetid: 31f34072-04d6-4871-88fe-48e17d473484
-ms.openlocfilehash: 3b2504dbb124ccca7f9b27619585abb2b5795f92
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 0276f4b50cb0039d0bec49b1b3eb2a0b3b2463aa
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87219171"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97325223"
 ---
 # <a name="char_traitsltwchar_tgt-struct"></a>char_traits&lt;wchar_t&gt; 構造体
 
-テンプレート構造体を特殊化したクラスは、型の要素に** \<CharType> char_traits** **`wchar_t`** ます。
+テンプレート構造体を特殊化したクラスは、型の要素に **\<CharType> char_traits** **`wchar_t`** ます。
 
 ## <a name="syntax"></a>構文
 
@@ -29,7 +30,7 @@ struct char_traits<wchar_t>;
 
 特殊化により、構造体は、この型のオブジェクトを操作するライブラリ関数を利用でき **`wchar_t`** ます。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:**\<string>
 

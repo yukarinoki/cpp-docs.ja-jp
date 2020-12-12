@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: ファイル属性定数'
 title: ファイル属性定数
 ms.date: 11/04/2016
 f1_keywords:
@@ -25,12 +26,12 @@ helpviewer_keywords:
 - _A_HIDDEN constant
 - _A_RDONLY constant
 ms.assetid: 8dc8ccb9-99f5-446b-876c-7ebecc2f764f
-ms.openlocfilehash: 271459c33cdcc1110222871bdca06d3f04edb497
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: 8b57549b4a21cc5d699f933009c575b3f3fca81d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57750885"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97306366"
 ---
 # <a name="file-attribute-constants"></a>ファイル属性定数
 
@@ -51,7 +52,7 @@ ms.locfileid: "57750885"
 |`_A_ARCH`| アーカイブ。 BACKUP コマンドによってファイルが変更またはクリアされるたびに設定されます。 値: 0x20|
 |`_A_HIDDEN`| 隠しファイル。 /AH オプションを使用しない限り、通常 DIR コマンドで見ることはできません。 この属性を持つファイルのほかに通常のファイルに関する情報を返します。 値: 0x02|
 |`_A_NORMAL`| 標準。 制限なしにファイルの読み取りや書き込みができます。 値: 0x00|
-|`_A_RDONLY`| 読み取り専用。 書き込み用にファイルを開くことや、同じ名前を持つファイルを作成することはできません。 値: 0x01|
+|`_A_RDONLY`| 読み取り専用です。 書き込み用にファイルを開くことや、同じ名前を持つファイルを作成することはできません。 値: 0x01|
 |`_A_SUBDIR`| サブディレクトリ。 値: 0x10|
 |`_A_SYSTEM`| システム ファイル。 /AS オプションを使用しない限り、通常 DIR コマンドで見ることはできません。 値: 0x04|
 

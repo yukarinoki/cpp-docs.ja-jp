@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「複数のドキュメントの種類、ビュー、フレームウィンドウ」を参照してください。
 title: 複数のドキュメント タイプ、ビュー、フレーム ウィンドウ
 ms.date: 11/19/2018
 helpviewer_keywords:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 - multiple frame windows [MFC]
 - splitter windows [MFC], static
 ms.assetid: c6b9e4e0-7c9c-45f1-a804-aeac39c9a128
-ms.openlocfilehash: 873903aadc1596fbc56f9a0b0b98dbc5a948113d
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 05af9f0a86210804f7f83d82d9c18ddb80e47a4e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84619966"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97275595"
 ---
 # <a name="multiple-document-types-views-and-frame-windows"></a>複数のドキュメント タイプ、ビュー、フレーム ウィンドウ
 
@@ -36,7 +37,7 @@ ms.locfileid: "84619966"
 
 - [分割ウィンドウ](#_core_splitter_windows)
 
-## <a name="multiple-document-types"></a><a name="_core_multiple_document_types"></a>複数のドキュメントの種類
+## <a name="multiple-document-types"></a><a name="_core_multiple_document_types"></a> 複数のドキュメントの種類
 
 MFC のアプリケーション ウィザードで作成されるドキュメント クラスは 1 つですが、 場合によっては、複数のドキュメント タイプのサポートが必要になることがあります。 たとえば、アプリケーションでワークシート ドキュメントとグラフ ドキュメントが必要になる可能性があります。 各ドキュメント タイプは、独自のドキュメント クラスと、おそらくは独自のビュー クラスで表されます。 ユーザーが [ファイル] メニューの [新規作成] を選択すると、サポートされているドキュメント タイプの一覧がダイアログ ボックスに表示されます。 その後、ユーザーが選択したタイプのドキュメントが作成されます。 ドキュメント タイプはそれぞれ、自身のドキュメント テンプレート オブジェクトで管理されます。
 
@@ -44,7 +45,7 @@ MFC のアプリケーション ウィザードで作成されるドキュメン
 
 追加したドキュメント クラスをフレームワークに認識させるには、アプリケーション クラスでオーバーライドした [InitInstance](reference/cwinapp-class.md#adddoctemplate) に、 [AddDocTemplate](reference/cwinapp-class.md#initinstance) への呼び出しをもう 1 つ追加します。 詳細については、 [ドキュメント テンプレート](document-templates-and-the-document-view-creation-process.md)に関するページを参照してください。
 
-## <a name="multiple-views"></a><a name="_core_multiple_views"></a>複数のビュー
+## <a name="multiple-views"></a><a name="_core_multiple_views"></a> 複数のビュー
 
 多くのドキュメントに必要なビューは 1 つだけですが、1 つのドキュメントに対して複数のビューをサポートすることもできます。 複数のビューを実装できるように、ドキュメント オブジェクトにはそのビューのリストが保持されます。また、ビューを追加および削除するためのメンバー関数のほか、ドキュメントのデータが変更されたときに複数のビューが認識できるようにするための [UpdateAllViews](reference/cdocument-class.md#updateallviews) メンバー関数も用意されています。
 
@@ -71,11 +72,11 @@ MFC は、1 つのドキュメントに対して複数のビューを必要と�
 
 `UpdateAllViews`の詳細については、 [MFC リファレンス](reference/cview-class.md) の *CView* に関するトピックと、 [SCRIBBLE サンプル](../overview/visual-cpp-samples.md)を参照してください。
 
-## <a name="multiple-frame-windows"></a><a name="_core_multiple_frame_windows"></a>複数のフレームウィンドウ
+## <a name="multiple-frame-windows"></a><a name="_core_multiple_frame_windows"></a> 複数のフレームウィンドウ
 
 MDI アプリケーション用の [ウィンドウ] メニューの [新規ウィンドウ] を使うと、同じのドキュメントに 2 番目のフレーム ウィンドウを作成できます。 詳細については、「マルチ ビューによるユーザー インターフェイス」の図の最初のモデルを参照してください。
 
-## <a name="splitter-windows"></a><a name="_core_splitter_windows"></a>分割ウィンドウ
+## <a name="splitter-windows"></a><a name="_core_splitter_windows"></a> 分割ウィンドウ
 
 分割ウィンドウでは、ウィンドウを 2 つ以上のスクロール可能なペインに分割できます。 ウィンドウ フレームのスクロール バーの横にある分割コントロール ("分割ボックス") を使用すると、ペインの相対的なサイズを調整できます。 各ペインは、同じドキュメントのビューです。 "動的な" 分割ウィンドウでは、「マルチ ビューによるユーザー インターフェイス」の図の b 部分のように、どのビューも同じクラスに属します。 "静的な" 分割ウィンドウでは、各ビューのクラスが異なっていてもかまいません。 どちらの分割ウィンドウも、 [CSplitterWnd](reference/csplitterwnd-class.md)クラスでサポートされています。
 

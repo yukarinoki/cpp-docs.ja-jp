@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: コンパイラの警告 (レベル 4) C4800'
 title: コンパイラの警告 (レベル 4) C4800
 ms.date: 03/14/2019
 f1_keywords:
@@ -6,22 +7,22 @@ f1_keywords:
 helpviewer_keywords:
 - C4800
 ms.assetid: 4f409799-a250-45ed-bb5f-657691b0d9f7
-ms.openlocfilehash: bcc98b9bb24f77e39a31332b8fbe2f7dcc5a7638
-ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
+ms.openlocfilehash: bb46807e6225d4b73b589f8b1b95ea777f69d5b2
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "92924611"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97332116"
 ---
 # <a name="compiler-warning-level-4-c4800"></a>コンパイラの警告 (レベル 4) C4800
 
 ::: moniker range=">= msvc-160"
 Visual Studio 2019 以降: 
-> ' *Type* ' から bool への暗黙的な変換です。 考えられる情報の損失
+> '*Type*' から bool への暗黙的な変換です。 考えられる情報の損失
 ::: moniker-end
 
 C4800 は、Visual Studio 2015 以前のレベル3の警告です。
-> ' *type* ': ブール値 ' true ' または ' false ' に強制的に値を指定します (パフォーマンス警告)
+> '*type*': ブール値 ' true ' または ' false ' に強制的に値を指定します (パフォーマンス警告)
 
 この警告は、値が暗黙的に型に変換されるときに生成され **`bool`** ます。 通常、このメッセージは、変数 **`int`** に **`bool`** **`int`** 値とが含まれ、 **`true`** **`false`** 型として再宣言できる変数に変数を割り当てることによって発生し **`bool`** ます。 型を使用するように式を書き直すことができない場合は、式 **`bool`** に "" を追加し `!=0` ます。これにより、式の型が指定され **`bool`** ます。 式を型にキャストし **`bool`** ても、警告は無効になりません。これは仕様です。
 
