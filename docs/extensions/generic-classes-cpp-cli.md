@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「ジェネリッククラス (C++/CLI)」を参照してください。
 title: ジェネリック クラス (C++/CLI)
 ms.date: 11/04/2016
 ms.topic: reference
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - generic classes
 - generics [C++], declaring generic classes
 ms.assetid: 0beb99e1-1ec4-4fee-9836-ce9657d67a3a
-ms.openlocfilehash: fd287d8e9fe08ccd42436569eafee3f6935700e2
-ms.sourcegitcommit: 94893973211d0b254c8bcdcf0779997dcc136b0c
+ms.openlocfilehash: 6b27f5220ab45fb62858bca2cec9ba0e46e9ec0a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/28/2020
-ms.locfileid: "91414127"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97301764"
 ---
 # <a name="generic-classes-ccli"></a>ジェネリック クラス (C++/CLI)
 
@@ -41,7 +42,7 @@ class-body
 (省略可能) 追加の宣言情報。 属性と属性クラスについては、「属性」を参照してください。
 
 *class-key*<br/>
-**`class`** または**`typename`**
+**`class`** または **`typename`**
 
 *type-parameter-identifier(s)*。型パラメーターの名前を指定する識別子のコンマ区切りの一覧。
 

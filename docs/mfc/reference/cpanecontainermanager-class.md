@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: CPaneContainerManager クラス'
 title: CPaneContainerManager クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -106,17 +107,17 @@ helpviewer_keywords:
 - CPaneContainerManager [MFC], SetResizeMode
 - CPaneContainerManager [MFC], StoreRecentDockSiteInfo
 ms.assetid: 3d974c15-a62f-4648-bb5b-cc31ab7950af
-ms.openlocfilehash: 6b4c406360158795b9c9554bfd70e7d41875be13
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: a9f01fece7417e6945b2eb8f56e95b3941c27386
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81753638"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97301530"
 ---
 # <a name="cpanecontainermanager-class"></a>CPaneContainerManager クラス
 
-この`CPaneContainerManager`クラスは、現在のドッキング レイアウトの格納と表示を管理します。
-詳細については、Visual Studio のインストールの**\\VC\\atlmfc\\src mfc**フォルダーにあるソース コードを参照してください。
+クラスは、 `CPaneContainerManager` 現在のドッキングレイアウトの格納と表示を管理します。
+詳細については、Visual Studio のインストールの **VC \\ atlmfc \\ src \\ mfc** フォルダーにあるソースコードを参照してください。
 
 ## <a name="syntax"></a>構文
 
@@ -130,66 +131,66 @@ class CPaneContainerManager : public CObject
 
 |名前|説明|
 |----------|-----------------|
-|[ウィンドウコンテナー マネージャー::ペインの追加](#addpane)||
-|[次の操作を行います。](#addpanecontainermanager)||
-|[ウィンドウコンテナー マネージャー::ペインコンテナマネージャーをドッキング可能なペイン](#addpanecontainermanagertodockablepane)||
-|[ウィンドウコンテナー マネージャー::ペインを追加します。](#addpanestolist)||
-|[ウィンドウコンテナー マネージャー::ペインを追加します。](#addpanetolist)||
-|[コンテナマネージャー::ペインを最近ペインに追加します。](#addpanetorecentpanecontainer)||
-|[コンテナマネージャー::カルクレクト](#calcrects)||
-|[ウィンドウコンテナマネージャー::缶詰添付](#canbeattached)||
-|[ウィンドウコンテナー マネージャー::チェック アンドムーブアンド非有効なペイン](#checkandremovenonvalidpane)||
-|[ウィンドウコンテナー マネージャー::チェックフォーミニフレームアンドキャプション](#checkforminiframeandcaption)||
-|[ウィンドウコンテナー マネージャー:作成](#create)||
-|[前に挿入:D](#doesallowdyninsertbefore)||
-|[フロー:Dコンテナマネージャー:フローティングペインを含む](#doescontainfloatingpane)||
-|[CPane コンテナマネージャー::グリッパーを有効にします。](#enablegrippers)||
-|[コンテナマネージャー::ペインコンテナを検索します。](#findpanecontainer)||
-|[ウィンドウコンテナー マネージャー::タブ付きペインを検索します。](#findtabbedpane)||
-|[を使用します。](#getavailablespace)||
-|[マネージャー::既定のペインディバイダーを取得します。](#getdefaultpanedivider)||
-|[ウィンドウコンテナー マネージャー::取得ドックサイトフレームオーニング](#getdocksiteframewnd)||
-|[をクリックします。](#getfirstpane)||
-|[ウィンドウコンテナー マネージャー::最初に表示されるペイン](#getfirstvisiblepane)||
-|[をクリックします。](#getminmaxoffset)||
-|[ウィンドウコンテナー マネージャー::取得ミンサイズ](#getminsize)||
-|[をクリックします。](#getnodecount)||
-|[をクリックします。](#getpanecontainerrtc)||
-|[ウィンドウコンテナー マネージャー::ペインカウント](#getpanecount)||
-|[を使用します。](#gettotalrefcount)||
-|[をクリックします。](#getvisiblepanecount)||
-|[ウィンドウコンテナー マネージャー::ウィンドウレクトを取得します。](#getwindowrect)||
-|[ウィンドウコンテナー マネージャー::すべて非表示](#hideall)||
-|[ウィンドウコンテナー マネージャー::挿入ペイン](#insertpane)||
-|[ウィンドウコンテナー マネージャー::Is 自動非表示モード](#isautohidemode)||
-|[コンテナマネージャー::空です](#isempty)||
-|[ウィンドウコンテナー マネージャー::イスルートペインコンテナを表示](#isrootpanecontainervisible)||
-|[ウィンドウコンテナー マネージャー::通知ペインディバイダー](#notifypanedivider)||
-|[ウィンドウコンテナー マネージャー:オンペインディバイダームーブ](#onpanedividermove)||
-|[ウィンドウコンテナー マネージャー::オンショー ウィンドウ](#onshowpane)||
-|[を:P](#panefrompoint)||
-|[コンテナマネージャー::コンテナーの解放](#releaseemptypanecontainers)||
-|[CPane コンテナマネージャー::すべてのペインとペインディバイダーの削除](#removeallpanesandpanedividers)||
-|[ウィンドウコンテナー マネージャー::非有効なペインの削除](#removenonvalidpanes)||
-|[ウィンドウコンテナー マネージャー::ペインディバイダーの削除](#removepanedivider)||
-|[ウィンドウコンテナー マネージャー:ペインからウィンドウを削除します。](#removepanefrompanecontainer)||
-|[ウィンドウス コンテナ マネージャー::ペインの置換](#replacepane)||
-|[ウィンドウコンテナー マネージャー::サイズ変更ウィンドウコンテナー](#resizepanecontainers)||
-|[をシリアル化します。](#serialize)|アーカイブに対して、このオブジェクトの読み取りまたは書き込みを行います。 ( [CObject::Serialize](../../mfc/reference/cobject-class.md#serialize)をオーバーライドします)。|
-|[ペインコンテナマネージャー::デフォルトペインディバイダーフォーペイン](#setdefaultpanedividerforpanes)||
-|[マネージャー::セットペインコンテナRTC](#setpanecontainerrtc)||
-|[ウィンドウズコンテナマネージャー::サイズ変更モードを設定します。](#setresizemode)||
-|[ウィンドウズコンテナマネージャー::ストア最近ドックサイト情報](#storerecentdocksiteinfo)||
+|[CPaneContainerManager:: AddPane](#addpane)||
+|[CPaneContainerManager:: AddPaneContainerManager](#addpanecontainermanager)||
+|[CPaneContainerManager:: AddPaneContainerManagerToDockablePane](#addpanecontainermanagertodockablepane)||
+|[CPaneContainerManager:: AddPanesToList](#addpanestolist)||
+|[CPaneContainerManager:: AddPaneToList](#addpanetolist)||
+|[CPaneContainerManager:: AddPaneToRecentPaneContainer](#addpanetorecentpanecontainer)||
+|[CPaneContainerManager:: CalcRects](#calcrects)||
+|[CPaneContainerManager:: CanBeAttached](#canbeattached)||
+|[CPaneContainerManager:: CheckAndRemoveNonValidPane](#checkandremovenonvalidpane)||
+|[CPaneContainerManager:: CheckForMiniFrameAndCaption](#checkforminiframeandcaption)||
+|[CPaneContainerManager:: Create](#create)||
+|[CPaneContainerManager::D oesAllowDynInsertBefore](#doesallowdyninsertbefore)||
+|[CPaneContainerManager::D oesContainFloatingPane](#doescontainfloatingpane)||
+|[CPaneContainerManager:: EnableGrippers](#enablegrippers)||
+|[CPaneContainerManager:: FindPaneContainer](#findpanecontainer)||
+|[CPaneContainerManager:: FindTabbedPane](#findtabbedpane)||
+|[CPaneContainerManager:: GetAvailableSpace](#getavailablespace)||
+|[CPaneContainerManager:: GetDefaultPaneDivider](#getdefaultpanedivider)||
+|[CPaneContainerManager:: GetDockSiteFrameWnd](#getdocksiteframewnd)||
+|[CPaneContainerManager:: GetFirstPane](#getfirstpane)||
+|[CPaneContainerManager:: GetFirstVisiblePane](#getfirstvisiblepane)||
+|[CPaneContainerManager:: GetMinMaxOffset](#getminmaxoffset)||
+|[CPaneContainerManager:: GetMinSize](#getminsize)||
+|[CPaneContainerManager:: GetNodeCount](#getnodecount)||
+|[CPaneContainerManager:: GetPaneContainerRTC](#getpanecontainerrtc)||
+|[CPaneContainerManager:: GetPaneCount](#getpanecount)||
+|[CPaneContainerManager:: GetTotalRefCount](#gettotalrefcount)||
+|[CPaneContainerManager:: GetVisiblePaneCount](#getvisiblepanecount)||
+|[CPaneContainerManager:: GetWindowRect](#getwindowrect)||
+|[CPaneContainerManager:: HideAll](#hideall)||
+|[CPaneContainerManager:: InsertPane](#insertpane)||
+|[CPaneContainerManager:: IsAutoHideMode](#isautohidemode)||
+|[CPaneContainerManager:: IsEmpty](#isempty)||
+|[CPaneContainerManager:: IsRootPaneContainerVisible](#isrootpanecontainervisible)||
+|[CPaneContainerManager:: NotifyPaneDivider](#notifypanedivider)||
+|[CPaneContainerManager:: OnPaneDividerMove](#onpanedividermove)||
+|[CPaneContainerManager:: OnShowPane](#onshowpane)||
+|[CPaneContainerManager::P aneFromPoint](#panefrompoint)||
+|[CPaneContainerManager:: ReleaseEmptyPaneContainers](#releaseemptypanecontainers)||
+|[CPaneContainerManager:: RemoveAllPanesAndPaneDividers](#removeallpanesandpanedividers)||
+|[CPaneContainerManager:: RemoveNonValidPanes](#removenonvalidpanes)||
+|[CPaneContainerManager:: RemovePaneDivider](#removepanedivider)||
+|[CPaneContainerManager:: RemovePaneFromPaneContainer](#removepanefrompanecontainer)||
+|[CPaneContainerManager:: ReplacePane](#replacepane)||
+|[CPaneContainerManager:: ResizePaneContainers](#resizepanecontainers)||
+|[CPaneContainerManager:: Serialize](#serialize)|アーカイブに対して、このオブジェクトの読み取りまたは書き込みを行います。 ( [CObject::Serialize](../../mfc/reference/cobject-class.md#serialize)をオーバーライドします)。|
+|[CPaneContainerManager:: SetDefaultPaneDividerForPanes](#setdefaultpanedividerforpanes)||
+|[CPaneContainerManager:: SetPaneContainerRTC](#setpanecontainerrtc)||
+|[CPaneContainerManager:: SetResizeMode](#setresizemode)||
+|[CPaneContainerManager:: StoreRecentDockSiteInfo](#storerecentdocksiteinfo)||
 
 ### <a name="remarks"></a>解説
 
-フレームワークは、オブジェクトの`CPaneContainerManager`インスタンスを自動的に作成し[、CPaneDivider クラス オブジェクトまたは CMultiPaneFrameWnd](../../mfc/reference/cpanedivider-class.md) [クラス](../../mfc/reference/cmultipaneframewnd-class.md)オブジェクトに埋め込みます。
+フレームワークは、オブジェクトのインスタンスを自動的に作成 `CPaneContainerManager` し、それらを [Cpanedivider クラス](../../mfc/reference/cpanedivider-class.md) オブジェクトまたは [CMultiPaneFrameWnd クラス](../../mfc/reference/cmultipaneframewnd-class.md) オブジェクトに埋め込みます。
 
-クラス`CPaneContainerManager`は[、CPaneContainer](../../mfc/reference/cpanecontainer-class.md)オブジェクトから構築されたバイナリ ツリーのルートへのポインターを格納します。
+クラスは、 `CPaneContainerManager` [Cpanecontainer](../../mfc/reference/cpanecontainer-class.md) オブジェクトから構築されたバイナリツリーのルートへのポインターを格納します。
 
 ## <a name="example"></a>例
 
-オブジェクトへの参照を取得する方法を次の例に`CPaneContainerManager`示します。 このコード スニペットは、ペイン サイズの[設定のサンプル](../../overview/visual-cpp-samples.md)の一部です。
+次の例は、オブジェクトへの参照を取得する方法を示して `CPaneContainerManager` います。 このコードスニペットは、 [Set Pane Size サンプル](../../overview/visual-cpp-samples.md)に含まれています。
 
 [!code-cpp[NVC_MFC_SetPaneSize#5](../../mfc/reference/codesnippet/cpp/cpanecontainermanager-class_1.cpp)]
 
@@ -199,11 +200,11 @@ class CPaneContainerManager : public CObject
 
 [CPaneContainerManager](../../mfc/reference/cpanecontainermanager-class.md)
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-**ヘッダー:** afxpane コンテナマネージャー.h
+**ヘッダー:** afxpanecontainermanager
 
-## <a name="cpanecontainermanageraddpane"></a><a name="addpane"></a>ウィンドウコンテナー マネージャー::ペインの追加
+## <a name="cpanecontainermanageraddpane"></a><a name="addpane"></a> CPaneContainerManager:: AddPane
 
 ```
 virtual void AddPane(CDockablePane* pControlBarToAdd);
@@ -211,11 +212,11 @@ virtual void AddPane(CDockablePane* pControlBarToAdd);
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*コントロールバーを追加します。*<br/>
+から *pControlBarToAdd*<br/>
 
 ### <a name="remarks"></a>解説
 
-## <a name="cpanecontainermanageraddpanecontainermanager"></a><a name="addpanecontainermanager"></a>次の操作を行います。
+## <a name="cpanecontainermanageraddpanecontainermanager"></a><a name="addpanecontainermanager"></a> CPaneContainerManager:: AddPaneContainerManager
 
 ```
 virtual BOOL AddPaneContainerManager(
@@ -231,17 +232,17 @@ virtual BOOL AddPaneContainerManager(
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*srcマネージャー*<br/>
-[in]*ボターエッジ*<br/>
-[in]*コントロール バー*<br/>
-[in]*dw配置*<br/>
-[in]*bコピー*<br/>
+から *Srcmanager*<br/>
+から *Bouteredge*<br/>
+から *pTargetControlBar*<br/>
+から *dwAlignment*<br/>
+から *Bcopy*<br/>
 
 ### <a name="return-value"></a>戻り値
 
 ### <a name="remarks"></a>解説
 
-## <a name="cpanecontainermanageraddpanecontainermanagertodockablepane"></a><a name="addpanecontainermanagertodockablepane"></a>ウィンドウコンテナー マネージャー::ペインコンテナマネージャーをドッキング可能なペイン
+## <a name="cpanecontainermanageraddpanecontainermanagertodockablepane"></a><a name="addpanecontainermanagertodockablepane"></a> CPaneContainerManager:: AddPaneContainerManagerToDockablePane
 
 ```
 virtual BOOL AddPaneContainerManagerToDockablePane(
@@ -251,14 +252,14 @@ virtual BOOL AddPaneContainerManagerToDockablePane(
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*コントロール バー*<br/>
-[in]*srcマネージャー*<br/>
+から *pTargetControlBar*<br/>
+から *Srcmanager*<br/>
 
 ### <a name="return-value"></a>戻り値
 
 ### <a name="remarks"></a>解説
 
-## <a name="cpanecontainermanageraddpanestolist"></a><a name="addpanestolist"></a>ウィンドウコンテナー マネージャー::ペインを追加します。
+## <a name="cpanecontainermanageraddpanestolist"></a><a name="addpanestolist"></a> CPaneContainerManager:: AddPanesToList
 
 ```cpp
 void AddPanesToList(
@@ -268,12 +269,12 @@ void AddPanesToList(
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*コントロールバー*<br/>
-[in]*プルストスライダー*<br/>
+から *Plstcontrolbars*<br/>
+から *Plstsliders*<br/>
 
 ### <a name="remarks"></a>解説
 
-## <a name="cpanecontainermanageraddpanetolist"></a><a name="addpanetolist"></a>ウィンドウコンテナー マネージャー::ペインを追加します。
+## <a name="cpanecontainermanageraddpanetolist"></a><a name="addpanetolist"></a> CPaneContainerManager:: AddPaneToList
 
 ```cpp
 void AddPaneToList(CDockablePane* pControlBarToAdd);
@@ -281,11 +282,11 @@ void AddPaneToList(CDockablePane* pControlBarToAdd);
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*コントロールバーを追加します。*<br/>
+から *pControlBarToAdd*<br/>
 
 ### <a name="remarks"></a>解説
 
-## <a name="cpanecontainermanageraddpanetorecentpanecontainer"></a><a name="addpanetorecentpanecontainer"></a>コンテナマネージャー::ペインを最近ペインに追加します。
+## <a name="cpanecontainermanageraddpanetorecentpanecontainer"></a><a name="addpanetorecentpanecontainer"></a> CPaneContainerManager:: AddPaneToRecentPaneContainer
 
 ```
 virtual CDockablePane* AddPaneToRecentPaneContainer(
@@ -295,14 +296,14 @@ virtual CDockablePane* AddPaneToRecentPaneContainer(
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*追加*<br/>
-[in]*コンテナ*<br/>
+から *pBarToAdd*<br/>
+から *Precentcontainer*<br/>
 
 ### <a name="return-value"></a>戻り値
 
 ### <a name="remarks"></a>解説
 
-## <a name="cpanecontainermanagercalcrects"></a><a name="calcrects"></a>コンテナマネージャー::カルクレクト
+## <a name="cpanecontainermanagercalcrects"></a><a name="calcrects"></a> CPaneContainerManager:: CalcRects
 
 ```cpp
 void CalcRects(
@@ -317,17 +318,17 @@ void CalcRects(
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*レクトオリジナル*<br/>
-[in]*挿入された直下*<br/>
-[in]*レクトスライダー*<br/>
-[in]*dwスライダースタイル*<br/>
-[in]*dw配置*<br/>
-[in]*サイズミンオリジナル*<br/>
-[in]*サイズMin挿入*<br/>
+から *rectOriginal*<br/>
+から *rectInserted*<br/>
+から *rectSlider*<br/>
+から *dwSliderStyle*<br/>
+から *dwAlignment*<br/>
+から *sizeMinOriginal*<br/>
+から *sizeMinInserted*<br/>
 
 ### <a name="remarks"></a>解説
 
-## <a name="cpanecontainermanagercanbeattached"></a><a name="canbeattached"></a>ウィンドウコンテナマネージャー::缶詰添付
+## <a name="cpanecontainermanagercanbeattached"></a><a name="canbeattached"></a> CPaneContainerManager:: CanBeAttached
 
 ```
 virtual BOOL CanBeAttached() const;
@@ -337,7 +338,7 @@ virtual BOOL CanBeAttached() const;
 
 ### <a name="remarks"></a>解説
 
-## <a name="cpanecontainermanagercheckandremovenonvalidpane"></a><a name="checkandremovenonvalidpane"></a>ウィンドウコンテナー マネージャー::チェック アンドムーブアンド非有効なペイン
+## <a name="cpanecontainermanagercheckandremovenonvalidpane"></a><a name="checkandremovenonvalidpane"></a> CPaneContainerManager:: CheckAndRemoveNonValidPane
 
 ```
 BOOL CheckAndRemoveNonValidPane(CWnd* pWnd);
@@ -345,13 +346,13 @@ BOOL CheckAndRemoveNonValidPane(CWnd* pWnd);
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*pWnd*<br/>
+から *pWnd*<br/>
 
 ### <a name="return-value"></a>戻り値
 
 ### <a name="remarks"></a>解説
 
-## <a name="cpanecontainermanagercheckforminiframeandcaption"></a><a name="checkforminiframeandcaption"></a>ウィンドウコンテナー マネージャー::チェックフォーミニフレームアンドキャプション
+## <a name="cpanecontainermanagercheckforminiframeandcaption"></a><a name="checkforminiframeandcaption"></a> CPaneContainerManager:: CheckForMiniFrameAndCaption
 
 ```
 virtual BOOL CheckForMiniFrameAndCaption(
@@ -361,14 +362,14 @@ virtual BOOL CheckForMiniFrameAndCaption(
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*ポイント*<br/>
-[in]*コントロール バー*<br/>
+から *ポイント*<br/>
+から *ppTargetControlBar*<br/>
 
 ### <a name="return-value"></a>戻り値
 
 ### <a name="remarks"></a>解説
 
-## <a name="cpanecontainermanagercreate"></a><a name="create"></a>ウィンドウコンテナー マネージャー:作成
+## <a name="cpanecontainermanagercreate"></a><a name="create"></a> CPaneContainerManager:: Create
 
 ```
 virtual BOOL Create(
@@ -379,15 +380,15 @@ virtual BOOL Create(
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*親子*<br/>
-[in]*の初期設定*<br/>
-[in]*コンテナRTC*<br/>
+から *pParentWnd*<br/>
+から *Pdefaultslider*<br/>
+から *Pa Errtc*<br/>
 
 ### <a name="return-value"></a>戻り値
 
 ### <a name="remarks"></a>解説
 
-## <a name="cpanecontainermanagerdoesallowdyninsertbefore"></a><a name="doesallowdyninsertbefore"></a>前に挿入:D
+## <a name="cpanecontainermanagerdoesallowdyninsertbefore"></a><a name="doesallowdyninsertbefore"></a> CPaneContainerManager::D oesAllowDynInsertBefore
 
 ```
 virtual BOOL DoesAllowDynInsertBefore() const;
@@ -397,7 +398,7 @@ virtual BOOL DoesAllowDynInsertBefore() const;
 
 ### <a name="remarks"></a>解説
 
-## <a name="cpanecontainermanagerdoescontainfloatingpane"></a><a name="doescontainfloatingpane"></a>フロー:Dコンテナマネージャー:フローティングペインを含む
+## <a name="cpanecontainermanagerdoescontainfloatingpane"></a><a name="doescontainfloatingpane"></a> CPaneContainerManager::D oesContainFloatingPane
 
 ```
 virtual BOOL DoesContainFloatingPane();
@@ -407,7 +408,7 @@ virtual BOOL DoesContainFloatingPane();
 
 ### <a name="remarks"></a>解説
 
-## <a name="cpanecontainermanagerenablegrippers"></a><a name="enablegrippers"></a>CPane コンテナマネージャー::グリッパーを有効にします。
+## <a name="cpanecontainermanagerenablegrippers"></a><a name="enablegrippers"></a> CPaneContainerManager:: EnableGrippers
 
 ```
 virtual void EnableGrippers(BOOL bEnable);
@@ -415,11 +416,11 @@ virtual void EnableGrippers(BOOL bEnable);
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*b 有効にする*<br/>
+から *Benable*<br/>
 
 ### <a name="remarks"></a>解説
 
-## <a name="cpanecontainermanagerfindpanecontainer"></a><a name="findpanecontainer"></a>コンテナマネージャー::ペインコンテナを検索します。
+## <a name="cpanecontainermanagerfindpanecontainer"></a><a name="findpanecontainer"></a> CPaneContainerManager:: FindPaneContainer
 
 ```
 virtual CPaneContainer* FindPaneContainer(
@@ -429,14 +430,14 @@ virtual CPaneContainer* FindPaneContainer(
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*pバー*<br/>
-[in]*バー*<br/>
+から *Pbar*<br/>
+から *bLeftBar*<br/>
 
 ### <a name="return-value"></a>戻り値
 
 ### <a name="remarks"></a>解説
 
-## <a name="cpanecontainermanagerfindtabbedpane"></a><a name="findtabbedpane"></a>ウィンドウコンテナー マネージャー::タブ付きペインを検索します。
+## <a name="cpanecontainermanagerfindtabbedpane"></a><a name="findtabbedpane"></a> CPaneContainerManager:: FindTabbedPane
 
 ```
 CDockablePane* FindTabbedPane(UINT nID);
@@ -444,13 +445,13 @@ CDockablePane* FindTabbedPane(UINT nID);
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*nID*<br/>
+から *nID*<br/>
 
 ### <a name="return-value"></a>戻り値
 
 ### <a name="remarks"></a>解説
 
-## <a name="cpanecontainermanagergetavailablespace"></a><a name="getavailablespace"></a>を使用します。
+## <a name="cpanecontainermanagergetavailablespace"></a><a name="getavailablespace"></a> CPaneContainerManager:: GetAvailableSpace
 
 ```
 virtual void GetAvailableSpace(CRect& rect) const;
@@ -458,11 +459,11 @@ virtual void GetAvailableSpace(CRect& rect) const;
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*レクト*<br/>
+から *rect*<br/>
 
 ### <a name="remarks"></a>解説
 
-## <a name="cpanecontainermanagergetdefaultpanedivider"></a><a name="getdefaultpanedivider"></a>マネージャー::既定のペインディバイダーを取得します。
+## <a name="cpanecontainermanagergetdefaultpanedivider"></a><a name="getdefaultpanedivider"></a> CPaneContainerManager:: GetDefaultPaneDivider
 
 ```
 CPaneDivider* GetDefaultPaneDivider() const;
@@ -472,7 +473,7 @@ CPaneDivider* GetDefaultPaneDivider() const;
 
 ### <a name="remarks"></a>解説
 
-## <a name="cpanecontainermanagergetdocksiteframewnd"></a><a name="getdocksiteframewnd"></a>ウィンドウコンテナー マネージャー::取得ドックサイトフレームオーニング
+## <a name="cpanecontainermanagergetdocksiteframewnd"></a><a name="getdocksiteframewnd"></a> CPaneContainerManager:: GetDockSiteFrameWnd
 
 ```
 virtual CWnd* GetDockSiteFrameWnd();
@@ -482,7 +483,7 @@ virtual CWnd* GetDockSiteFrameWnd();
 
 ### <a name="remarks"></a>解説
 
-## <a name="cpanecontainermanagergetfirstpane"></a><a name="getfirstpane"></a>をクリックします。
+## <a name="cpanecontainermanagergetfirstpane"></a><a name="getfirstpane"></a> CPaneContainerManager:: GetFirstPane
 
 ```
 virtual CBasePane* GetFirstPane() const;
@@ -492,7 +493,7 @@ virtual CBasePane* GetFirstPane() const;
 
 ### <a name="remarks"></a>解説
 
-## <a name="cpanecontainermanagergetfirstvisiblepane"></a><a name="getfirstvisiblepane"></a>ウィンドウコンテナー マネージャー::最初に表示されるペイン
+## <a name="cpanecontainermanagergetfirstvisiblepane"></a><a name="getfirstvisiblepane"></a> CPaneContainerManager:: GetFirstVisiblePane
 
 ```
 virtual CWnd* GetFirstVisiblePane() const;
@@ -502,7 +503,7 @@ virtual CWnd* GetFirstVisiblePane() const;
 
 ### <a name="remarks"></a>解説
 
-## <a name="cpanecontainermanagergetminmaxoffset"></a><a name="getminmaxoffset"></a>をクリックします。
+## <a name="cpanecontainermanagergetminmaxoffset"></a><a name="getminmaxoffset"></a> CPaneContainerManager:: GetMinMaxOffset
 
 ```
 virtual void GetMinMaxOffset(
@@ -514,14 +515,14 @@ virtual void GetMinMaxOffset(
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*スライダー*<br/>
-[in]*nMinオフセット*<br/>
-[in]*最大オフセット*<br/>
-[in]*nステップ*<br/>
+から *Pslider*<br/>
+から *Nminoffset*<br/>
+から *Nmaxoffset*<br/>
+から *Nstep*<br/>
 
 ### <a name="remarks"></a>解説
 
-## <a name="cpanecontainermanagergetminsize"></a><a name="getminsize"></a>ウィンドウコンテナー マネージャー::取得ミンサイズ
+## <a name="cpanecontainermanagergetminsize"></a><a name="getminsize"></a> CPaneContainerManager:: GetMinSize
 
 ```
 virtual void GetMinSize(CSize& size);
@@ -529,11 +530,11 @@ virtual void GetMinSize(CSize& size);
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*サイズ*<br/>
+から *サイズ*<br/>
 
 ### <a name="remarks"></a>解説
 
-## <a name="cpanecontainermanagergetnodecount"></a><a name="getnodecount"></a>をクリックします。
+## <a name="cpanecontainermanagergetnodecount"></a><a name="getnodecount"></a> CPaneContainerManager:: GetNodeCount
 
 ```
 int GetNodeCount() const;
@@ -543,7 +544,7 @@ int GetNodeCount() const;
 
 ### <a name="remarks"></a>解説
 
-## <a name="cpanecontainermanagergetpanecontainerrtc"></a><a name="getpanecontainerrtc"></a>をクリックします。
+## <a name="cpanecontainermanagergetpanecontainerrtc"></a><a name="getpanecontainerrtc"></a> CPaneContainerManager:: GetPaneContainerRTC
 
 ```
 CRuntimeClass* GetPaneContainerRTC() const;
@@ -553,7 +554,7 @@ CRuntimeClass* GetPaneContainerRTC() const;
 
 ### <a name="remarks"></a>解説
 
-## <a name="cpanecontainermanagergetpanecount"></a><a name="getpanecount"></a>ウィンドウコンテナー マネージャー::ペインカウント
+## <a name="cpanecontainermanagergetpanecount"></a><a name="getpanecount"></a> CPaneContainerManager:: GetPaneCount
 
 ```
 int GetPaneCount() const;
@@ -563,7 +564,7 @@ int GetPaneCount() const;
 
 ### <a name="remarks"></a>解説
 
-## <a name="cpanecontainermanagergettotalrefcount"></a><a name="gettotalrefcount"></a>を使用します。
+## <a name="cpanecontainermanagergettotalrefcount"></a><a name="gettotalrefcount"></a> CPaneContainerManager:: GetTotalRefCount
 
 ```
 int GetTotalRefCount() const;
@@ -573,7 +574,7 @@ int GetTotalRefCount() const;
 
 ### <a name="remarks"></a>解説
 
-## <a name="cpanecontainermanagergetvisiblepanecount"></a><a name="getvisiblepanecount"></a>をクリックします。
+## <a name="cpanecontainermanagergetvisiblepanecount"></a><a name="getvisiblepanecount"></a> CPaneContainerManager:: GetVisiblePaneCount
 
 ```
 virtual int GetVisiblePaneCount() const;
@@ -583,7 +584,7 @@ virtual int GetVisiblePaneCount() const;
 
 ### <a name="remarks"></a>解説
 
-## <a name="cpanecontainermanagergetwindowrect"></a><a name="getwindowrect"></a>ウィンドウコンテナー マネージャー::ウィンドウレクトを取得します。
+## <a name="cpanecontainermanagergetwindowrect"></a><a name="getwindowrect"></a> CPaneContainerManager:: GetWindowRect
 
 ```
 virtual void GetWindowRect(CRect& rect) const;
@@ -591,11 +592,11 @@ virtual void GetWindowRect(CRect& rect) const;
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*レクト*<br/>
+から *rect*<br/>
 
 ### <a name="remarks"></a>解説
 
-## <a name="cpanecontainermanagerhideall"></a><a name="hideall"></a>ウィンドウコンテナー マネージャー::すべて非表示
+## <a name="cpanecontainermanagerhideall"></a><a name="hideall"></a> CPaneContainerManager:: HideAll
 
 ```
 virtual void HideAll();
@@ -603,7 +604,7 @@ virtual void HideAll();
 
 ### <a name="remarks"></a>解説
 
-## <a name="cpanecontainermanagerinsertpane"></a><a name="insertpane"></a>ウィンドウコンテナー マネージャー::挿入ペイン
+## <a name="cpanecontainermanagerinsertpane"></a><a name="insertpane"></a> CPaneContainerManager:: InsertPane
 
 ```
 virtual BOOL InsertPane(
@@ -616,17 +617,17 @@ virtual BOOL InsertPane(
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*挿入するコントロール バー*<br/>
-[in]*コントロール バー*<br/>
-[in]*dw配置*<br/>
-[in]*lpRect*<br/>
-[in]*ドックメソッド*<br/>
+から *pControlBarToInsert*<br/>
+から *pTargetControlBar*<br/>
+から *dwAlignment*<br/>
+から *lpRect*<br/>
+から *dockMethod*<br/>
 
 ### <a name="return-value"></a>戻り値
 
 ### <a name="remarks"></a>解説
 
-## <a name="cpanecontainermanagerisautohidemode"></a><a name="isautohidemode"></a>ウィンドウコンテナー マネージャー::Is 自動非表示モード
+## <a name="cpanecontainermanagerisautohidemode"></a><a name="isautohidemode"></a> CPaneContainerManager:: IsAutoHideMode
 
 ```
 BOOL IsAutoHideMode() const;
@@ -636,7 +637,7 @@ BOOL IsAutoHideMode() const;
 
 ### <a name="remarks"></a>解説
 
-## <a name="cpanecontainermanagerisempty"></a><a name="isempty"></a>コンテナマネージャー::空です
+## <a name="cpanecontainermanagerisempty"></a><a name="isempty"></a> CPaneContainerManager:: IsEmpty
 
 ```
 BOOL IsEmpty() const;
@@ -646,7 +647,7 @@ BOOL IsEmpty() const;
 
 ### <a name="remarks"></a>解説
 
-## <a name="cpanecontainermanagerisrootpanecontainervisible"></a><a name="isrootpanecontainervisible"></a>ウィンドウコンテナー マネージャー::イスルートペインコンテナを表示
+## <a name="cpanecontainermanagerisrootpanecontainervisible"></a><a name="isrootpanecontainervisible"></a> CPaneContainerManager:: IsRootPaneContainerVisible
 
 ```
 virtual BOOL IsRootPaneContainerVisible() const;
@@ -656,7 +657,7 @@ virtual BOOL IsRootPaneContainerVisible() const;
 
 ### <a name="remarks"></a>解説
 
-## <a name="cpanecontainermanagernotifypanedivider"></a><a name="notifypanedivider"></a>ウィンドウコンテナー マネージャー::通知ペインディバイダー
+## <a name="cpanecontainermanagernotifypanedivider"></a><a name="notifypanedivider"></a> CPaneContainerManager:: NotifyPaneDivider
 
 ```cpp
 void NotifyPaneDivider();
@@ -664,7 +665,7 @@ void NotifyPaneDivider();
 
 ### <a name="remarks"></a>解説
 
-## <a name="cpanecontainermanageronpanedividermove"></a><a name="onpanedividermove"></a>ウィンドウコンテナー マネージャー:オンペインディバイダームーブ
+## <a name="cpanecontainermanageronpanedividermove"></a><a name="onpanedividermove"></a> CPaneContainerManager:: OnPaneDividerMove
 
 ```
 virtual int OnPaneDividerMove(
@@ -676,16 +677,16 @@ virtual int OnPaneDividerMove(
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*スライダー*<br/>
-[in]*uフラグ*<br/>
-[in]*オフセット*<br/>
-[in]*hdwp*<br/>
+から *Pslider*<br/>
+から *Uflags*<br/>
+から *Noffset*<br/>
+から *hdwp*<br/>
 
 ### <a name="return-value"></a>戻り値
 
 ### <a name="remarks"></a>解説
 
-## <a name="cpanecontainermanageronshowpane"></a><a name="onshowpane"></a>ウィンドウコンテナー マネージャー::オンショー ウィンドウ
+## <a name="cpanecontainermanageronshowpane"></a><a name="onshowpane"></a> CPaneContainerManager:: OnShowPane
 
 ```
 virtual BOOL OnShowPane(
@@ -695,14 +696,14 @@ virtual BOOL OnShowPane(
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*pバー*<br/>
-[in]*bショー*<br/>
+から *Pbar*<br/>
+から *bShow*<br/>
 
 ### <a name="return-value"></a>戻り値
 
 ### <a name="remarks"></a>解説
 
-## <a name="cpanecontainermanagerpanefrompoint"></a><a name="panefrompoint"></a>を:P
+## <a name="cpanecontainermanagerpanefrompoint"></a><a name="panefrompoint"></a> CPaneContainerManager::P aneFromPoint
 
 ```
 virtual CDockablePane* PaneFromPoint(
@@ -715,17 +716,17 @@ virtual CDockablePane* PaneFromPoint(
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*ポイント*<br/>
-[in]*n感度*<br/>
-[in]*をクリックします。*<br/>
-[in]*ビスタタブエリア*<br/>
-[in]*bキャプション*<br/>
+から *ポイント*<br/>
+から *Nsensitivity*<br/>
+から *bExactBar*<br/>
+から *Bistabarea*<br/>
+から *Bcaption*<br/>
 
 ### <a name="return-value"></a>戻り値
 
 ### <a name="remarks"></a>解説
 
-## <a name="cpanecontainermanagerreleaseemptypanecontainers"></a><a name="releaseemptypanecontainers"></a>コンテナマネージャー::コンテナーの解放
+## <a name="cpanecontainermanagerreleaseemptypanecontainers"></a><a name="releaseemptypanecontainers"></a> CPaneContainerManager:: ReleaseEmptyPaneContainers
 
 ```cpp
 void ReleaseEmptyPaneContainers();
@@ -733,7 +734,7 @@ void ReleaseEmptyPaneContainers();
 
 ### <a name="remarks"></a>解説
 
-## <a name="cpanecontainermanagerremoveallpanesandpanedividers"></a><a name="removeallpanesandpanedividers"></a>CPane コンテナマネージャー::すべてのペインとペインディバイダーの削除
+## <a name="cpanecontainermanagerremoveallpanesandpanedividers"></a><a name="removeallpanesandpanedividers"></a> CPaneContainerManager:: RemoveAllPanesAndPaneDividers
 
 ```cpp
 void RemoveAllPanesAndPaneDividers();
@@ -741,7 +742,7 @@ void RemoveAllPanesAndPaneDividers();
 
 ### <a name="remarks"></a>解説
 
-## <a name="cpanecontainermanagerremovenonvalidpanes"></a><a name="removenonvalidpanes"></a>ウィンドウコンテナー マネージャー::非有効なペインの削除
+## <a name="cpanecontainermanagerremovenonvalidpanes"></a><a name="removenonvalidpanes"></a> CPaneContainerManager:: RemoveNonValidPanes
 
 ```cpp
 void RemoveNonValidPanes();
@@ -749,7 +750,7 @@ void RemoveNonValidPanes();
 
 ### <a name="remarks"></a>解説
 
-## <a name="cpanecontainermanagerremovepanedivider"></a><a name="removepanedivider"></a>ウィンドウコンテナー マネージャー::ペインディバイダーの削除
+## <a name="cpanecontainermanagerremovepanedivider"></a><a name="removepanedivider"></a> CPaneContainerManager:: RemovePaneDivider
 
 ```
 virtual void RemovePaneDivider(CPaneDivider* pSlider);
@@ -757,11 +758,11 @@ virtual void RemovePaneDivider(CPaneDivider* pSlider);
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*スライダー*<br/>
+から *Pslider*<br/>
 
 ### <a name="remarks"></a>解説
 
-## <a name="cpanecontainermanagerremovepanefrompanecontainer"></a><a name="removepanefrompanecontainer"></a>ウィンドウコンテナー マネージャー:ペインからウィンドウを削除します。
+## <a name="cpanecontainermanagerremovepanefrompanecontainer"></a><a name="removepanefrompanecontainer"></a> CPaneContainerManager:: RemovePaneFromPaneContainer
 
 ```
 virtual BOOL RemovePaneFromPaneContainer(CDockablePane* pControlBar);
@@ -769,13 +770,13 @@ virtual BOOL RemovePaneFromPaneContainer(CDockablePane* pControlBar);
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*コントロールバー*<br/>
+から *pControlBar*<br/>
 
 ### <a name="return-value"></a>戻り値
 
 ### <a name="remarks"></a>解説
 
-## <a name="cpanecontainermanagerreplacepane"></a><a name="replacepane"></a>ウィンドウス コンテナ マネージャー::ペインの置換
+## <a name="cpanecontainermanagerreplacepane"></a><a name="replacepane"></a> CPaneContainerManager:: ReplacePane
 
 ```
 virtual BOOL ReplacePane(
@@ -785,14 +786,14 @@ virtual BOOL ReplacePane(
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*をクリックします。*<br/>
-[in]*新しい*<br/>
+から *Pbarold*<br/>
+から *Pbarnew*<br/>
 
 ### <a name="return-value"></a>戻り値
 
 ### <a name="remarks"></a>解説
 
-## <a name="cpanecontainermanagerresizepanecontainers"></a><a name="resizepanecontainers"></a>ウィンドウコンテナー マネージャー::サイズ変更ウィンドウコンテナー
+## <a name="cpanecontainermanagerresizepanecontainers"></a><a name="resizepanecontainers"></a> CPaneContainerManager:: ResizePaneContainers
 
 ```
 virtual void ResizePaneContainers(
@@ -808,15 +809,15 @@ virtual void ResizePaneContainers(
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*nサイド*<br/>
-[in]*展開する*<br/>
-[in]*オフセット*<br/>
-[in]*hdwp*<br/>
-[in]*レクト*<br/>
+から *Nside*<br/>
+から *Bexpand*<br/>
+から *Noffset*<br/>
+から *hdwp*<br/>
+から *rect*<br/>
 
 ### <a name="remarks"></a>解説
 
-## <a name="cpanecontainermanagerserialize"></a><a name="serialize"></a>をシリアル化します。
+## <a name="cpanecontainermanagerserialize"></a><a name="serialize"></a> CPaneContainerManager:: Serialize
 
 ```cpp
 void Serialize(CArchive& ar);
@@ -824,11 +825,11 @@ void Serialize(CArchive& ar);
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*ar*<br/>
+から *ar*<br/>
 
 ### <a name="remarks"></a>解説
 
-## <a name="cpanecontainermanagersetdefaultpanedividerforpanes"></a><a name="setdefaultpanedividerforpanes"></a>ペインコンテナマネージャー::デフォルトペインディバイダーフォーペイン
+## <a name="cpanecontainermanagersetdefaultpanedividerforpanes"></a><a name="setdefaultpanedividerforpanes"></a> CPaneContainerManager:: SetDefaultPaneDividerForPanes
 
 ```cpp
 void SetDefaultPaneDividerForPanes(CPaneDivider* pSlider);
@@ -836,11 +837,11 @@ void SetDefaultPaneDividerForPanes(CPaneDivider* pSlider);
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*スライダー*<br/>
+から *Pslider*<br/>
 
 ### <a name="remarks"></a>解説
 
-## <a name="cpanecontainermanagersetpanecontainerrtc"></a><a name="setpanecontainerrtc"></a>マネージャー::セットペインコンテナRTC
+## <a name="cpanecontainermanagersetpanecontainerrtc"></a><a name="setpanecontainerrtc"></a> CPaneContainerManager:: SetPaneContainerRTC
 
 ```cpp
 void SetPaneContainerRTC(CRuntimeClass* pContainerRTC);
@@ -848,11 +849,11 @@ void SetPaneContainerRTC(CRuntimeClass* pContainerRTC);
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*コンテナRTC*<br/>
+から *Pa Errtc*<br/>
 
 ### <a name="remarks"></a>解説
 
-## <a name="cpanecontainermanagersetresizemode"></a><a name="setresizemode"></a>ウィンドウズコンテナマネージャー::サイズ変更モードを設定します。
+## <a name="cpanecontainermanagersetresizemode"></a><a name="setresizemode"></a> CPaneContainerManager:: SetResizeMode
 
 ```
 virtual void SetResizeMode(BOOL bResize);
@@ -860,11 +861,11 @@ virtual void SetResizeMode(BOOL bResize);
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*サイズを変更する*<br/>
+から *サイズ* の変更<br/>
 
 ### <a name="remarks"></a>解説
 
-## <a name="cpanecontainermanagerstorerecentdocksiteinfo"></a><a name="storerecentdocksiteinfo"></a>ウィンドウズコンテナマネージャー::ストア最近ドックサイト情報
+## <a name="cpanecontainermanagerstorerecentdocksiteinfo"></a><a name="storerecentdocksiteinfo"></a> CPaneContainerManager:: StoreRecentDockSiteInfo
 
 ```
 virtual void StoreRecentDockSiteInfo(CDockablePane* pBar);
@@ -872,14 +873,14 @@ virtual void StoreRecentDockSiteInfo(CDockablePane* pBar);
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*pバー*<br/>
+から *Pbar*<br/>
 
 ### <a name="remarks"></a>解説
 
 ## <a name="see-also"></a>関連項目
 
-[階層グラフ](../../mfc/hierarchy-chart.md)<br/>
-[クラス](../../mfc/reference/mfc-classes.md)<br/>
-[Cオブジェクトクラス](../../mfc/reference/cobject-class.md)<br/>
+[階層図](../../mfc/hierarchy-chart.md)<br/>
+[Classes](../../mfc/reference/mfc-classes.md)<br/>
+[CObject クラス](../../mfc/reference/cobject-class.md)<br/>
 [CPaneContainer クラス](../../mfc/reference/cpanecontainer-class.md)<br/>
-[Cペインディバイダークラス](../../mfc/reference/cpanedivider-class.md)
+[CPaneDivider クラス](../../mfc/reference/cpanedivider-class.md)

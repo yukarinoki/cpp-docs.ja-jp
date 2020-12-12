@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: MFC ActiveX コントロールの作成'
 title: MFC ActiveX コントロールの作成
 ms.date: 08/19/2019
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - MFC ActiveX controls [MFC], creating
 - ActiveX controls [MFC], creating
 ms.assetid: 8bd5a93c-d04d-414e-bb28-163fdc1c0dd5
-ms.openlocfilehash: 19e9ca6f985423bb01a8dea38988c5dcf7285683
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 4b35187ffa3e5e4a11d293d4fe202c6e04213664
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91505971"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97301257"
 ---
 # <a name="creating-an-mfc-activex-control"></a>MFC ActiveX コントロールの作成
 
@@ -34,7 +35,7 @@ MFC activex コントロールを作成する最も簡単な方法は、 [Mfc Ac
 
 1. **[完了]** をクリックしてウィザードを閉じ、新しいプロジェクトを開発環境で開きます。
 
-プロジェクトを作成した後、 **ソリューションエクスプローラー**で作成されたファイルを表示できます。 ウィザードでプロジェクト用に作成されるファイルの詳細については、プロジェクトが生成する ReadMe.txt ファイルを参照してください。 ファイルの種類の詳細については、「[Visual Studio の C++ プロジェクトに対して作成されるファイルの種類](../../build/reference/file-types-created-for-visual-cpp-projects.md)」を参照してください。
+プロジェクトを作成した後、 **ソリューションエクスプローラー** で作成されたファイルを表示できます。 ウィザードでプロジェクト用に作成されるファイルの詳細については、プロジェクトが生成する ReadMe.txt ファイルを参照してください。 ファイルの種類の詳細については、「[Visual Studio の C++ プロジェクトに対して作成されるファイルの種類](../../build/reference/file-types-created-for-visual-cpp-projects.md)」を参照してください。
 
 プロジェクトを作成したら、コードウィザードを使用して、 [関数](../../ide/adding-a-member-function-visual-cpp.md#add-member-function-wizard)、 [変数](../../ide/adding-a-member-variable-visual-cpp.md#add-member-variable-wizard)、 [イベント](../../ide/adding-an-event-visual-cpp.md#add-event-wizard)、 [プロパティ](../../ide/adding-a-property-visual-cpp.md#names-add-property-wizard)、および [メソッド](../../ide/adding-a-method-visual-cpp.md#add-method-wizard)を追加できます。 ActiveX コントロールのカスタマイズの詳細については、「 [MFC Activex コントロール](../../mfc/mfc-activex-controls.md)」を参照してください。
 

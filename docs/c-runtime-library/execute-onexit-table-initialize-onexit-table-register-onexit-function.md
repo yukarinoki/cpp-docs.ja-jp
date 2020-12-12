@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「_execute_onexit_table、_initialize_onexit_table、_register_onexit_function」を参照してください。
 title: _execute_onexit_table、_initialize_onexit_table、_register_onexit_function
 ms.date: 4/2/2020
 api_name:
@@ -27,12 +28,12 @@ helpviewer_keywords:
 - _initialize_onexit_table function
 - _register_onexit_function function
 ms.assetid: ad9e4149-d4ad-4fdf-aaaf-cf786fcb4473
-ms.openlocfilehash: 051961f049109b4fa6a2881e442e621036cb279c
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 5bd0449c4b353c6a417e145f864b07794ae40ca3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82913829"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97300074"
 ---
 # <a name="_execute_onexit_table-_initialize_onexit_table-_register_onexit_function"></a>_execute_onexit_table、_initialize_onexit_table、_register_onexit_function
 
@@ -69,7 +70,7 @@ int _execute_onexit_table(
 
 ## <a name="remarks"></a>解説
 
-これらの関数は、C ランタイムをサポートするために使用されるインフラストラクチャ実装の詳細であり、ご使用のコードから直接呼び出してはなりません。 C ランタイムは、 *onexit 関数テーブル*を使用して、 `atexit` `at_quick_exit`、、および`_onexit`への呼び出しによって登録される関数のシーケンスを表します。 onexit 関数テーブルのデータ構造は、C ランタイムの不透明な実装の詳細であり、データ メンバーの順番と意味は変わる場合があります。 それらを外部コードによって確認してはなりません。
+これらの関数は、C ランタイムをサポートするために使用されるインフラストラクチャ実装の詳細であり、ご使用のコードから直接呼び出してはなりません。 C ランタイムは、 *onexit 関数テーブル* を使用して、、、およびへの呼び出しによって登録される関数のシーケンスを表し `atexit` `at_quick_exit` `_onexit` ます。 onexit 関数テーブルのデータ構造は、C ランタイムの不透明な実装の詳細であり、データ メンバーの順番と意味は変わる場合があります。 それらを外部コードによって確認してはなりません。
 
 `_initialize_onexit_table` 関数は、onexit 関数テーブルをその初期値に初期化します。  この関数は、onexit 関数テーブルを `_register_onexit_function` または `_execute_onexit_table` に渡す前に呼び出す必要があります。
 
@@ -81,11 +82,11 @@ int _execute_onexit_table(
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |`_initialize_onexit_table function`, `_register_onexit_function`, `_execute_onexit_table`|C、C++: \<process.h>|
 
-、 `_initialize_onexit_table` `_register_onexit_function`、および`_execute_onexit_table`の各関数は、Microsoft 固有の関数です。 互換性の詳細については、「[互換性](../c-runtime-library/compatibility.md)」を参照してください。
+`_initialize_onexit_table`、 `_register_onexit_function` 、およびの `_execute_onexit_table` 各関数は、Microsoft 固有の関数です。 互換性の詳細については、「[互換性](../c-runtime-library/compatibility.md)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

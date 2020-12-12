@@ -1,4 +1,5 @@
-﻿---
+---
+description: '詳細情報: 非推奨のプラグマ'
 title: 非推奨のプラグマ
 ms.date: 08/29/2019
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - deprecated pragma
 - pragmas, deprecated
 ms.assetid: 9c046f12-7875-499a-8d5d-12f8642fed2d
-ms.openlocfilehash: 52d9deb4ad68dacc99fab9d12bc9eb21bc0d360e
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: b3f7e8bf17e98f6e6f57511f3c0c9a94a9388bf1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87231612"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97300776"
 ---
 # <a name="deprecated-pragma"></a>非推奨のプラグマ
 
@@ -27,13 +28,13 @@ ms.locfileid: "87231612"
 
 ## <a name="remarks"></a>解説
 
-コンパイラは、プラグマによって指定された識別子を検出すると **`deprecated`** 、コンパイラの警告[C4995](../error-messages/compiler-warnings/compiler-warning-level-3-c4995.md)を発行します。
+コンパイラは、プラグマによって指定された識別子を検出すると **`deprecated`** 、コンパイラの警告 [C4995](../error-messages/compiler-warnings/compiler-warning-level-3-c4995.md)を発行します。
 
 マクロ名の使用を避けることができます。 マクロ名を引用符で囲んで配置します。そうしないと、マクロ展開が発生します。
 
 **`deprecated`** プラグマはすべての一致する識別子に対して機能し、署名は考慮されないため、オーバーロードされた関数の特定のバージョンを非推奨するのに最適な方法ではありません。 スコープ内にある一致する関数名は、警告をトリガーします。
 
-可能であれば、プラグマではなく C++ 14 属性を使用することをお勧めし `[[deprecated]]` **`deprecated`** ます。 Microsoft 固有の[__declspec (非推奨)](../cpp/deprecated-cpp.md)宣言修飾子も、多くの場合、プラグマよりも適してい **`deprecated`** ます。 `[[deprecated]]`属性と修飾子を使用すると、オーバーロードされた `__declspec(deprecated)` 関数の特定の形式に非推奨の状態を指定できます。 診断警告は、属性または修飾子が適用される特定のオーバーロードされた関数への参照にのみ表示されます。
+可能であれば、プラグマではなく C++ 14 属性を使用することをお勧めし `[[deprecated]]` **`deprecated`** ます。 Microsoft 固有の [__declspec (非推奨)](../cpp/deprecated-cpp.md) 宣言修飾子も、多くの場合、プラグマよりも適してい **`deprecated`** ます。 `[[deprecated]]`属性と修飾子を使用すると、オーバーロードされた `__declspec(deprecated)` 関数の特定の形式に非推奨の状態を指定できます。 診断警告は、属性または修飾子が適用される特定のオーバーロードされた関数への参照にのみ表示されます。
 
 ## <a name="example"></a>例
 

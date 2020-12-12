@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: _vcprintf、_vcprintf_l、_vcwprintf、_vcwprintf_l'
 title: _vcprintf、_vcprintf_l、_vcwprintf、_vcwprintf_l
 ms.date: 11/04/2016
 api_name:
@@ -46,12 +47,12 @@ helpviewer_keywords:
 - vtcprintf function
 - formatted text [C++]
 ms.assetid: 4ef8d237-6200-4b66-8731-8c57e5624bb1
-ms.openlocfilehash: 2f2aa3dafc730b060e84558dfa03de5328e52893
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 84bc79f113d13882811368aaf8918a936dab7f3a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70945632"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97299203"
 ---
 # <a name="_vcprintf-_vcprintf_l-_vcwprintf-_vcwprintf_l"></a>_vcprintf、_vcprintf_l、_vcwprintf、_vcwprintf_l
 
@@ -94,17 +95,17 @@ int _vcwprintf_l(
 *locale*<br/>
 使用するロケール。
 
-詳細については、「 [printf 関数と wprintf 関数の書式指定フィールド](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)」を参照してください。
+詳細については、[書式の指定](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)に関する記事をご覧ください。
 
 ## <a name="return-value"></a>戻り値
 
-書き込まれた文字数。出力エラーが発生した場合は負の値を返します。 *Format*が null ポインターの場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、 **errno**は**EINVAL**に設定され、-1 が返されます。
+書き込まれた文字数。出力エラーが発生した場合は負の値を返します。 *Format* が null ポインターの場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、 **errno** は **EINVAL** に設定され、-1 が返されます。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-これらの各関数は、引数リストへのポインターを使用して、指定されたデータを書式化してコンソールに書き込みます。 **_vcwprintf**は、 **(vcprintf)** のワイド文字バージョンです。 引数としてワイド文字列を使用します。
+これらの各関数は、引数リストへのポインターを使用して、指定されたデータを書式化してコンソールに書き込みます。 **_vcwprintf** は **_vcprintf** のワイド文字バージョンです。 引数としてワイド文字列を使用します。
 
-**_L**サフィックスを持つこれらの関数のバージョンは、現在のロケールの代わりに渡されたロケールパラメーターを使用する点を除いて同じです。
+**_L** サフィックスを持つこれらの関数のバージョンは、現在のロケールの代わりに渡されたロケールパラメーターを使用する点を除いて同じです。
 
 > [!IMPORTANT]
 > *format* にユーザー定義の文字列を指定しないでください。 詳しくは、「 [バッファー オーバーランの回避](/windows/win32/SecBP/avoiding-buffer-overruns)」をご覧ください。
@@ -120,12 +121,12 @@ int _vcwprintf_l(
 
 |ルーチンによって返される値|必須ヘッダー|省略可能なヘッダー|
 |-------------|---------------------|----------------------|
-|**vcprintf**、 **vcprintf_l** (_s)|\<conio.h> および \<stdarg.h>|\<varargs.h>*|
-|**_vcwprintf**、 **vcwprintf_l**|\<conio.h> または \<wchar.h>、および \<stdarg.h>|\<varargs.h>*|
+|**_vcprintf**、 **_vcprintf_l**|\<conio.h> および \<stdarg.h>|\<varargs.h>*|
+|**_vcwprintf**、 **_vcwprintf_l**|\<conio.h> または \<wchar.h> 、 \<stdarg.h>|\<varargs.h>*|
 
 \* UNIX V との互換性用。
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
 ## <a name="example"></a>例
 
@@ -162,9 +163,9 @@ int main()
 ## <a name="see-also"></a>関連項目
 
 [ストリーム入出力](../../c-runtime-library/stream-i-o.md)<br/>
-[vprintf 系関数](../../c-runtime-library/vprintf-functions.md)<br/>
+[vprintf 関数](../../c-runtime-library/vprintf-functions.md)<br/>
 [_cprintf、_cprintf_l、_cwprintf、_cwprintf_l](cprintf-cprintf-l-cwprintf-cwprintf-l.md)<br/>
 [fprintf、_fprintf_l、fwprintf、_fwprintf_l](fprintf-fprintf-l-fwprintf-fwprintf-l.md)<br/>
 [printf、_printf_l、wprintf、_wprintf_l](printf-printf-l-wprintf-wprintf-l.md)<br/>
-[sprintf、_sprintf_l、swprintf、_swprintf_l、\__swprintf_l](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)<br/>
+[sprintf、_sprintf_l、swprintf、_swprintf_l、 \_ _swprintf_l](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)<br/>
 [va_arg、va_copy、va_end、va_start](va-arg-va-copy-va-end-va-start.md)<br/>

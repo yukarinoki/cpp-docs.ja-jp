@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: Make 関数'
 title: Make 関数
 ms.date: 11/04/2016
 ms.topic: reference
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - Make function
 ms.assetid: 66704143-df99-4a95-904d-ed99607e1034
-ms.openlocfilehash: 0f2e81e3cd757214805817af2a355a93c1cfd096
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: bb83c6c163440f911bc625a8646d1758442b25f6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87220471"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97298904"
 ---
 # <a name="make-function"></a>Make 関数
 
@@ -197,7 +198,7 @@ ComPtr<T> Make();
 *arg1*<br/>
 指定されたランタイムクラスに渡される引数1。
 
-*引数*<br/>
+*arg2*<br/>
 指定されたランタイムクラスに渡される引数2。
 
 *arg3*<br/>
@@ -227,9 +228,9 @@ ComPtr<T> Make();
 
 ## <a name="remarks"></a>解説
 
-「[方法: Wrl コンポーネントを直接インスタンス化](how-to-instantiate-wrl-components-directly.md)する」を参照して、この関数と[Microsoft:: wrl::D Etails:: makeandinitialize](makeandinitialize-function.md)の違いを確認します。例については、「」を参照してください。
+「 [方法: Wrl コンポーネントを直接インスタンス化](how-to-instantiate-wrl-components-directly.md) する」を参照して、この関数と [Microsoft:: wrl::D Etails:: makeandinitialize](makeandinitialize-function.md)の違いを確認します。例については、「」を参照してください。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **Header:** を実装します。
 

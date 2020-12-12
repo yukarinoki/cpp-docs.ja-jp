@@ -1,4 +1,5 @@
 ---
+description: 詳しくは、「プロパティ (C++)」をご覧ください。
 title: property (C++)
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - property __declspec keyword
 - __declspec keyword [C++], property
 ms.assetid: f3b850ba-bf48-4df7-a1d6-8259d97309ce
-ms.openlocfilehash: 03f71739698fd20a01fd72567ce5b9babc176327
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: ed996ecadd16837af1e28b71bbedd9b4e3c1abaa
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80179303"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97299164"
 ---
 # <a name="property-c"></a>property (C++)
 
@@ -30,7 +31,7 @@ ms.locfileid: "80179303"
 
 ## <a name="remarks"></a>解説
 
-コンパイラが、メンバー選択演算子 (" **.** " または " **->** ") の右側でこの属性を使用して宣言されたデータメンバーを認識すると、その式が左辺値または右辺値のいずれであるかに応じて、操作を `get` または `put` 関数に変換します。 "`+=`" などのより複雑なコンテキストでは、`get` と `put`の両方を実行することで書き直しが実行されます。
+コンパイラは、メンバー選択演算子 ("**.**" または "") の右側でこの属性を使用して宣言されたデータメンバーを認識すると **->** 、 `get` その `put` ような式が左辺値または右辺値のいずれであるかに応じて、演算をまたは関数に変換します。 "" などのより複雑なコンテキストで `+=` は、との両方を実行して書き直しが実行され `get` `put` ます。
 
 この属性は、クラスまたは構造体の定義の空の配列の宣言でも使用できます。 次に例を示します。
 
@@ -66,7 +67,7 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [__declspec](../cpp/declspec.md)<br/>
 [キーワード](../cpp/keywords-cpp.md)

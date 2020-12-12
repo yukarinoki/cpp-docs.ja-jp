@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: protected (C++)'
 title: protected (C++)
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - protected keyword [C++], member access
 - protected keyword [C++]
 ms.assetid: 863d299f-fc0d-45d5-a1a7-bd24b7778a93
-ms.openlocfilehash: 25b25447737a075bcf4f02f1c3049c996fb4c678
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 17b74db6ae257e757253c12fdfeb4fa9bac2a3db
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87227167"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97299112"
 ---
 # <a name="protected-c"></a>protected (C++)
 
@@ -26,7 +27,7 @@ protected base-class
 
 ## <a name="remarks"></a>解説
 
-キーワードは、 **`protected`** 次のアクセス指定子 ( *member-list* **`public`** または **`private`** )、またはクラス定義の末尾まで、メンバーリスト内のクラスメンバーへのアクセスを指定します。 として宣言されたクラスメンバーは **`protected`** 、次の方法でのみ使用できます。
+キーワードは、 **`protected`** 次のアクセス指定子 (  **`public`** または **`private`** )、またはクラス定義の末尾まで、メンバーリスト内のクラスメンバーへのアクセスを指定します。 として宣言されたクラスメンバーは **`protected`** 、次の方法でのみ使用できます。
 
 - これらのメンバーを最初に宣言したクラスのメンバー関数。
 
@@ -42,11 +43,11 @@ protected base-class
 
 としても宣言されているプロテクトメンバー **`static`** は、派生クラスのフレンド関数またはメンバー関数からアクセスできます。 として宣言されていないプロテクトメンバーは、派生クラス **`static`** へのポインター、参照、または派生クラスのオブジェクトによってのみ、派生クラスのフレンドおよびメンバー関数にアクセスできます。
 
-関連情報については、「 [friend](../cpp/friend-cpp.md)」、「 [public](../cpp/public-cpp.md)」、「 [Private](../cpp/private-cpp.md)」、および「[クラスメンバーへのアクセスの制御](member-access-control-cpp.md)」のメンバーアクセステーブルを参照してください。
+関連情報については、「 [friend](../cpp/friend-cpp.md)」、「 [public](../cpp/public-cpp.md)」、「 [Private](../cpp/private-cpp.md)」、および「 [クラスメンバーへのアクセスの制御](member-access-control-cpp.md)」のメンバーアクセステーブルを参照してください。
 
 ## <a name="clr-specific"></a>/clr 固有
 
-CLR 型では、C++ アクセス指定子キーワード ( **`public`** 、 **`private`** 、および) は、 **`protected`** アセンブリに関して型およびメソッドの可視性に影響を与える可能性があります。 詳細については、「[メンバー Access Control](member-access-control-cpp.md)」を参照してください。
+CLR 型では、C++ アクセス指定子キーワード ( **`public`** 、 **`private`** 、および) は、 **`protected`** アセンブリに関して型およびメソッドの可視性に影響を与える可能性があります。 詳細については、「 [メンバー Access Control](member-access-control-cpp.md)」を参照してください。
 
 > [!NOTE]
 > [/LN](../build/reference/ln-create-msil-module.md)でコンパイルされたファイルは、この動作の影響を受けません。 この場合、すべてのマネージド クラス (パブリックかプライベート) が表示されます。

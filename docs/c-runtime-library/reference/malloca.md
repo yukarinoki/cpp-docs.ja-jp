@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: _malloca'
 title: _malloca
 ms.date: 11/04/2016
 api_name:
@@ -26,12 +27,12 @@ helpviewer_keywords:
 - malloca function
 - _malloca function
 ms.assetid: 293992df-cfca-4bc9-b313-0a733a6bb936
-ms.openlocfilehash: 64bed4dac2bbaeb60c7b04a600af38f455caf08d
-ms.sourcegitcommit: 43cee7a0d41a062661229043c2f7cbc6ace17fa3
+ms.openlocfilehash: 8357bc15ba432a0adb390494882ee4b63adf70f9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92008266"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97299801"
 ---
 # <a name="_malloca"></a>_malloca
 
@@ -52,13 +53,13 @@ void *_malloca(
 
 ## <a name="return-value"></a>戻り値
 
-**_Malloca**ルーチンは、 **`void`** 割り当てられた領域へのポインターを返します。これは、オブジェクトのすべての型を格納するために適切にアラインメントされていることが保証されています。 *Size*が0の場合、 **_malloca**によって長さ0の項目が割り当てられ、その項目への有効なポインターが返されます。
+**_Malloca** ルーチンは、 **`void`** 割り当てられた領域へのポインターを返します。これは、オブジェクトのすべての型を格納するために適切にアラインメントされていることが保証されています。 *Size* が0の場合、 **_malloca** によって長さ0の項目が割り当てられ、その項目への有効なポインターが返されます。
 
-*Size*が **_ALLOCA_S_THRESHOLD**より大きい場合、 **_malloca**はヒープに割り当てを試み、スペースを割り当てることができない場合は null ポインターを返します。 *Size*が **_ALLOCA_S_THRESHOLD**以下の場合、 **_malloca**はスタックに割り当てを試行し、領域を割り当てることができない場合はスタックオーバーフロー例外が生成されます。 スタックオーバーフロー例外は C++ 例外ではありません。構造化された例外です。 C++ 例外処理を使用する代わりに、 [構造化例外処理](../../cpp/structured-exception-handling-c-cpp.md) (SEH) を使用してこの例外をキャッチする必要があります。
+*Size* が **_ALLOCA_S_THRESHOLD** より大きい場合、 **_malloca** はヒープに割り当てを試み、スペースを割り当てることができない場合は null ポインターを返します。 *Size* が **_ALLOCA_S_THRESHOLD** 以下の場合、 **_malloca** はスタックに割り当てを試行し、領域を割り当てることができない場合はスタックオーバーフロー例外が生成されます。 スタックオーバーフロー例外は C++ 例外ではありません。構造化された例外です。 C++ 例外処理を使用する代わりに、 [構造化例外処理](../../cpp/structured-exception-handling-c-cpp.md) (SEH) を使用してこの例外をキャッチする必要があります。
 
 ## <a name="remarks"></a>解説
 
-要求が **_ALLOCA_S_THRESHOLD**によって指定されたバイト数を超えた場合、 **_malloca**はプログラムスタックまたはヒープから*サイズ*バイトを割り当てます。 **_Malloca**と **_alloca**の違いは、サイズにかかわらず、 **_alloca**は常にスタックに割り当てられるという点です。 メモリを解放して割り当てられるように**解放**するための呼び出しが不要であるか許可されていない **_alloca**とは異なり、 **_malloca**では、メモリを解放するために[_freea](freea.md)を使用する必要があります。 デバッグモードでは、 **_malloca** は常にヒープからメモリを割り当てます。
+要求が **_ALLOCA_S_THRESHOLD** によって指定されたバイト数を超えた場合、 **_malloca** はプログラムスタックまたはヒープから *サイズ* バイトを割り当てます。 **_Malloca** と **_alloca** の違いは、サイズにかかわらず、 **_alloca** は常にスタックに割り当てられるという点です。 メモリを解放して割り当てられるように **解放** するための呼び出しが不要であるか許可されていない **_alloca** とは異なり、 **_malloca** では、メモリを解放するために [_freea](freea.md)を使用する必要があります。 デバッグモードでは、 **_malloca** は常にヒープからメモリを割り当てます。
 
 例外ハンドラー (EH) で **_malloca** を明示的に呼び出すには制限があります。 x86 クラスのプロセッサで動作する EH ルーチンは、自身のメモリ フレーム内で処理されるため、外側の関数のスタック ポインターが示す現在位置を基にしたメモリ領域ではタスクを実行しません。 最も一般的な実装には、Windows NT 構造化例外処理 (SEH) や C++ catch 句の式などがあります。 したがって、次のいずれかのシナリオで明示的に **_malloca** を呼び出すと、呼び出し元の EH ルーチンに戻るときにプログラムエラーが発生します。
 

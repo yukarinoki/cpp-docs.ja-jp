@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「Windows の操作 (C++/CLI)」を参照してください。
 title: Windows の操作 (C++/CLI)
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -43,12 +44,12 @@ helpviewer_keywords:
 - registry, writing to
 - Visual C++, writing to Windows Registry
 ms.assetid: b9a75cb4-0589-4d5b-92cb-5e8be42b4ac0
-ms.openlocfilehash: 3c4ef2a69c25313ff444e0fabaea6eef2feeeee2
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 95fff25cb5c921272972e343dd3a85d53f909c52
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91501661"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97298722"
 ---
 # <a name="windows-operations-ccli"></a>Windows の操作 (C++/CLI)
 
@@ -140,7 +141,7 @@ int main( )
 }
 ```
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 <xref:Microsoft.Win32.Registry> クラスは、<xref:Microsoft.Win32.RegistryKey> の静的インスタンスの単なるコンテナーです。 各インスタンスは、ルート レジストリ ノードを表します。 インスタンスは、<xref:Microsoft.Win32.Registry.ClassesRoot>、<xref:Microsoft.Win32.Registry.CurrentConfig>、<xref:Microsoft.Win32.Registry.CurrentUser>、<xref:Microsoft.Win32.Registry.LocalMachine>、および <xref:Microsoft.Win32.Registry.Users> です。
 
@@ -501,9 +502,9 @@ int main()
 }
 ```
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
-この .NET Framework を使用する <xref:Microsoft.Win32.Registry> と、 <xref:Microsoft.Win32.RegistryKey> 名前空間で定義されているクラスとクラスを使用してレジストリにアクセスでき <xref:Microsoft.Win32> ます。 **Registry**クラスは、クラスの静的インスタンスのコンテナーです <xref:Microsoft.Win32.RegistryKey> 。 各インスタンスは、ルート レジストリ ノードを表します。 インスタンスは、<xref:Microsoft.Win32.Registry.ClassesRoot>、<xref:Microsoft.Win32.Registry.CurrentConfig>、<xref:Microsoft.Win32.Registry.CurrentUser>、<xref:Microsoft.Win32.Registry.LocalMachine>、および <xref:Microsoft.Win32.Registry.Users> です。
+この .NET Framework を使用する <xref:Microsoft.Win32.Registry> と、 <xref:Microsoft.Win32.RegistryKey> 名前空間で定義されているクラスとクラスを使用してレジストリにアクセスでき <xref:Microsoft.Win32> ます。 **Registry** クラスは、クラスの静的インスタンスのコンテナーです <xref:Microsoft.Win32.RegistryKey> 。 各インスタンスは、ルート レジストリ ノードを表します。 インスタンスは、<xref:Microsoft.Win32.Registry.ClassesRoot>、<xref:Microsoft.Win32.Registry.CurrentConfig>、<xref:Microsoft.Win32.Registry.CurrentUser>、<xref:Microsoft.Win32.Registry.LocalMachine>、および <xref:Microsoft.Win32.Registry.Users> です。
 
 ## <a name="related-sections"></a>関連項目
 

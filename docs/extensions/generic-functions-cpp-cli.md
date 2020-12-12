@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「ジェネリック関数 (C++/CLI)」を参照してください。
 title: ジェネリック関数 (C++/CLI)
 ms.date: 10/12/2018
 ms.topic: reference
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - methods [C++], generic
 - generic functions
 ms.assetid: 8e409364-58f9-4360-b486-e7d555e0c218
-ms.openlocfilehash: 3d648a23176786985a7ca1e22165c7c5a695e601
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: cd2c5390499e6858824fae7a3368afe6de8c6c56
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87216012"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97301738"
 ---
 # <a name="generic-functions-ccli"></a>ジェネリック関数 (C++/CLI)
 
@@ -32,7 +33,7 @@ ms.locfileid: "87216012"
 
 Windows ランタイムでは、この機能はサポートされていません。
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 コンパイラ オプション: `/ZW`
 
@@ -85,7 +86,7 @@ return-type identifier<type-parameter identifier(s)>
 
 呼び出されると、ジェネリック型パラメーターは、実際の型に置換されます。 テンプレート関数の呼び出しに似た構文を使用して、実際の型を山かっこで囲んで明示的に指定できます。 型パラメーターなしで呼び出すと、コンパイラは、関数呼び出しで提供されたパラメーターから実際の型を推測しようとします。 使用しているパラメーターから目的の型引数を推測できない場合、コンパイラはエラーを報告します。
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 コンパイラ オプション: `/clr`
 

@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: malloc'
 title: malloc
 ms.date: 4/2/2020
 api_name:
@@ -27,12 +28,12 @@ helpviewer_keywords:
 - malloc function
 - memory allocation
 ms.assetid: 144fcee2-be34-4a03-bb7e-ed6d4b99eea0
-ms.openlocfilehash: a093dbdbc4849b1c2f3d86e85a5e2b25a7b988e2
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 8026cf24ee49999026c58787b83b2c8c0a238a2e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88836661"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97299788"
 ---
 # <a name="malloc"></a>malloc
 
@@ -53,15 +54,15 @@ void *malloc(
 
 ## <a name="return-value"></a>戻り値
 
-**malloc** は、割り当てられた領域への void ポインターを返します。または、使用可能なメモリが不足している場合は **NULL** を返します。 以外の型へのポインターを返すには、 **`void`** 戻り値に型キャストを使用します。 戻り値が指すストレージ領域は、オブジェクトのアラインメント要件が基本的なアラインメントの要件以下である限り、どの型のオブジェクトを格納する場合でも、適切なアラインメントが保証されます  (Visual C++ では、基本的なアラインメントとして **`double`** 、または8バイトのアラインメントが必要です。 64ビットプラットフォームを対象とするコードでは、16バイトです)。 [_Aligned_malloc](aligned-malloc.md) を使用して、より大きなアラインメント要件を持つオブジェクトのストレージを割り当てます。たとえば、SSE 型 [__m128](../../cpp/m128.md) や **`__m256`** 、n を使用して宣言された型 ( `__declspec(align( n ))` **n** は8より大きい) などです。 *Size*が0の場合、 **malloc**はヒープに長さが0のアイテムを割り当て、そのアイテムへの有効なポインターを返します。 要求されたメモリの量が少ない場合でも、 **malloc**からの戻り値を常に確認してください。
+**malloc** は、割り当てられた領域への void ポインターを返します。または、使用可能なメモリが不足している場合は **NULL** を返します。 以外の型へのポインターを返すには、 **`void`** 戻り値に型キャストを使用します。 戻り値が指すストレージ領域は、オブジェクトのアラインメント要件が基本的なアラインメントの要件以下である限り、どの型のオブジェクトを格納する場合でも、適切なアラインメントが保証されます  (Visual C++ では、基本的なアラインメントとして **`double`** 、または8バイトのアラインメントが必要です。 64ビットプラットフォームを対象とするコードでは、16バイトです)。 [_Aligned_malloc](aligned-malloc.md) を使用して、より大きなアラインメント要件を持つオブジェクトのストレージを割り当てます。たとえば、SSE 型 [__m128](../../cpp/m128.md) や **`__m256`** 、n を使用して宣言された型 ( `__declspec(align( n ))` **n** は8より大きい) などです。 *Size* が0の場合、 **malloc** はヒープに長さが0のアイテムを割り当て、そのアイテムへの有効なポインターを返します。 要求されたメモリの量が少ない場合でも、 **malloc** からの戻り値を常に確認してください。
 
 ## <a name="remarks"></a>解説
 
-**Malloc**関数は、*サイズ*が少なくともバイトのメモリブロックを割り当てます。 アラインメントとメンテナンスの情報に必要な領域により、ブロックの *サイズ* がバイトを超えている可能性があります。
+**Malloc** 関数は、*サイズ* が少なくともバイトのメモリブロックを割り当てます。 アラインメントとメンテナンスの情報に必要な領域により、ブロックの *サイズ* がバイトを超えている可能性があります。
 
-メモリ割り当てが失敗した場合、または要求されたメモリの量が **_HEAP_MAXREQ**を超えた場合、 **malloc**は**errno**を**ENOMEM**に設定します。 このエラー コードと他のエラーコードの詳細については、「[errno、_doserrno、_sys_errlist、および _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」を参照してください。
+メモリ割り当てが失敗した場合、または要求されたメモリの量が **_HEAP_MAXREQ** を超えた場合、 **malloc** は **errno** を **ENOMEM** に設定します。 このエラー コードと他のエラーコードの詳細については、「[errno、_doserrno、_sys_errlist、および _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」を参照してください。
 
-スタートアップコードは **malloc** を使用して、 **_environ**、 *envp*、および *argv* 変数のストレージを割り当てます。 次の関数とそれに対応するワイド文字も **malloc**を呼び出します。
+スタートアップコードは **malloc** を使用して、 **_environ**、 *envp*、および *argv* 変数のストレージを割り当てます。 次の関数とそれに対応するワイド文字も **malloc** を呼び出します。
 
 :::row:::
    :::column span="":::
@@ -173,6 +174,6 @@ Memory freed
 
 [メモリの割り当て](../../c-runtime-library/memory-allocation.md)<br/>
 [calloc](calloc.md)<br/>
-[空け](free.md)<br/>
+[free](free.md)<br/>
 [realloc](realloc.md)<br/>
 [_aligned_malloc](aligned-malloc.md)<br/>

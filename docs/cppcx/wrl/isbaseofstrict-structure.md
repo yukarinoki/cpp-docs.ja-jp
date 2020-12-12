@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: IsBaseOfStrict 構造体'
 title: IsBaseOfStrict 構造体
 ms.date: 10/03/2018
 ms.topic: reference
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - Microsoft::WRL::Details::IsBaseOfStrict structure
 - Microsoft::WRL::Details::IsBaseOfStrict::value constant
 ms.assetid: 6fed7366-c8d4-4991-b4fb-43ed93f8e1bf
-ms.openlocfilehash: 11acb4c7162a17ff763a574c27c186061ae476a7
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: bcdab9c4b6b5a2ab108b59d3127c08b53589e16a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87211529"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97298956"
 ---
 # <a name="isbaseofstrict-structure"></a>IsBaseOfStrict 構造体
 
@@ -56,13 +57,13 @@ struct IsBaseOfStrict<Base, Base>;
 
 `IsBaseOfStrict`
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** 内部 .h
 
 **名前空間:** Microsoft:: WRL::D etails
 
-## <a name="isbaseofstrictvalue"></a><a name="value"></a>IsBaseOfStrict:: value
+## <a name="isbaseofstrictvalue"></a><a name="value"></a> IsBaseOfStrict:: value
 
 は WRL インフラストラクチャをサポートします。独自に作成したコードから直接使用するためのものではありません。
 

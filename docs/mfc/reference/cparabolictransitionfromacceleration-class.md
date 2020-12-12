@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: CParabolicTransitionFromAcceleration クラス'
 title: CParabolicTransitionFromAcceleration クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -16,12 +17,12 @@ helpviewer_keywords:
 - CParabolicTransitionFromAcceleration [MFC], m_dblFinalValue
 - CParabolicTransitionFromAcceleration [MFC], m_dblFinalVelocity
 ms.assetid: 1e59b86f-358b-4da0-a4fd-8eaf5e85e00f
-ms.openlocfilehash: 0aa5831e2262602ee46bd69031e5927a86b978e1
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 037c2ff8391b655c556339547966b14ee094fee0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81364089"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97301491"
 ---
 # <a name="cparabolictransitionfromacceleration-class"></a>CParabolicTransitionFromAcceleration クラス
 
@@ -39,41 +40,41 @@ class CParabolicTransitionFromAcceleration : public CBaseTransition;
 
 |名前|説明|
 |----------|-----------------|
-|[加速から切り離す遷移::加速からのCPar同化トランジション](#cparabolictransitionfromacceleration)|放物線加速遷移を構築し、指定したパラメータで初期化します。|
+|[CParabolicTransitionFromAcceleration:: CParabolicTransitionFromAcceleration](#cparabolictransitionfromacceleration)|双方向加速度遷移を構築し、指定されたパラメーターを使用して初期化します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
 |名前|説明|
 |----------|-----------------|
-|[加速から切り離す::作成](#create)|カプセル化された遷移 COM オブジェクトを作成する遷移ライブラリを呼び出します。 [(CBase トランジションをオーバーライドします。:作成](../../mfc/reference/cbasetransition-class.md#create).)|
+|[CParabolicTransitionFromAcceleration:: Create](#create)|遷移ライブラリを呼び出して、カプセル化された遷移 COM オブジェクトを作成します。 ( [Cbasetransition:: Create](../../mfc/reference/cbasetransition-class.md#create)をオーバーライドします)。|
 
 ### <a name="public-data-members"></a>パブリック データ メンバー
 
 |名前|説明|
 |----------|-----------------|
-|[加速から切り離す::m_dblAcceleration](#m_dblacceleration)|トランジション中のアニメーション変数の加速度。|
-|[加速から切り離 m_dblFinalValueす](#m_dblfinalvalue)|トランジションの終了時のアニメーション変数の値。|
-|[加速から切り離す::m_dblFinalVelocity](#m_dblfinalvelocity)|トランジションの最後のアニメーション変数の速度。|
+|[CParabolicTransitionFromAcceleration:: m_dblAcceleration](#m_dblacceleration)|遷移中のアニメーション変数のアクセラレーション。|
+|[CParabolicTransitionFromAcceleration:: m_dblFinalValue](#m_dblfinalvalue)|遷移の終了時のアニメーション変数の値。|
+|[CParabolicTransitionFromAcceleration:: m_dblFinalVelocity](#m_dblfinalvelocity)|遷移の終了時のアニメーション変数の速度。|
 
 ## <a name="remarks"></a>解説
 
-放物線加速の遷移中に、アニメーション変数の値が初期値から指定された速度で終わる最終値に変化します。 加速の速度を指定することで、変数が最終的な値に達する速さを制御できます。 すべてのトランジションは自動的にクリアされるため、演算子 new を使用して割り当てることをお勧めします。 カプセル化された IUIAnimationTransition COM オブジェクトは、それまでは NULL になるまで CAnimationController::AnimateGroup によって作成されます。 この COM オブジェクトの作成後にメンバー変数を変更しても、何も影響しません。
+双方向加速遷移中、アニメーション変数の値は初期値から、指定されたベロシティで終わる最終的な値に変わります。 高速化率を指定することによって、変数が最終的な値に到達する速度を制御できます。 すべての遷移は自動的にクリアされるため、operator new を使用して割り当てることをお勧めします。 カプセル化された IuiAnimateGroup 遷移 COM オブジェクトは、次に NULL になるまで、CAnimationController:: によって作成されます。 この COM オブジェクトの作成後にメンバー変数を変更しても効果はありません。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
 [CObject](../../mfc/reference/cobject-class.md)
 
-[Cベーストランジション](../../mfc/reference/cbasetransition-class.md)
+[CBaseTransition](../../mfc/reference/cbasetransition-class.md)
 
-[加速から切り離す](../../mfc/reference/cparabolictransitionfromacceleration-class.md)
+[CParabolicTransitionFromAcceleration](../../mfc/reference/cparabolictransitionfromacceleration-class.md)
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** afxanimationcontroller.h
 
-## <a name="cparabolictransitionfromaccelerationcparabolictransitionfromacceleration"></a><a name="cparabolictransitionfromacceleration"></a>加速から切り離す遷移::加速からのCPar同化トランジション
+## <a name="cparabolictransitionfromaccelerationcparabolictransitionfromacceleration"></a><a name="cparabolictransitionfromacceleration"></a> CParabolicTransitionFromAcceleration:: CParabolicTransitionFromAcceleration
 
-放物線加速遷移を構築し、指定したパラメータで初期化します。
+双方向加速度遷移を構築し、指定されたパラメーターを使用して初期化します。
 
 ```
 CParabolicTransitionFromAcceleration(
@@ -84,18 +85,18 @@ CParabolicTransitionFromAcceleration(
 
 ### <a name="parameters"></a>パラメーター
 
-*最終価値*<br/>
-トランジションの終了時のアニメーション変数の値。
+*dblFinalValue*<br/>
+遷移の終了時のアニメーション変数の値。
 
-*dbl最終速度*<br/>
-トランジションの最後のアニメーション変数の速度。
+*dblFinalVelocity*<br/>
+遷移の終了時のアニメーション変数の速度。
 
-*dblアクセラレーション*<br/>
-トランジション中のアニメーション変数の加速度。
+*dblAcceleration*<br/>
+遷移中のアニメーション変数のアクセラレーション。
 
-## <a name="cparabolictransitionfromaccelerationcreate"></a><a name="create"></a>加速から切り離す::作成
+## <a name="cparabolictransitionfromaccelerationcreate"></a><a name="create"></a> CParabolicTransitionFromAcceleration:: Create
 
-カプセル化された遷移 COM オブジェクトを作成する遷移ライブラリを呼び出します。
+遷移ライブラリを呼び出して、カプセル化された遷移 COM オブジェクトを作成します。
 
 ```
 virtual BOOL Create(
@@ -105,32 +106,32 @@ virtual BOOL Create(
 
 ### <a name="parameters"></a>パラメーター
 
-*pライブラリ*<br/>
-標準遷移の作成を担当する遷移ライブラリへのポインター。
+*pLibrary*<br/>
+遷移ライブラリへのポインター。これは、標準遷移の作成を担当します。
 
 ### <a name="return-value"></a>戻り値
 
-遷移が正常に作成された場合は TRUE。それ以外の場合は FALSE。
+移行が正常に作成された場合は TRUE。それ以外の場合は FALSE。
 
-## <a name="cparabolictransitionfromaccelerationm_dblacceleration"></a><a name="m_dblacceleration"></a>加速から切り離す::m_dblAcceleration
+## <a name="cparabolictransitionfromaccelerationm_dblacceleration"></a><a name="m_dblacceleration"></a> CParabolicTransitionFromAcceleration:: m_dblAcceleration
 
-トランジション中のアニメーション変数の加速度。
+遷移中のアニメーション変数のアクセラレーション。
 
 ```
 DOUBLE m_dblAcceleration;
 ```
 
-## <a name="cparabolictransitionfromaccelerationm_dblfinalvalue"></a><a name="m_dblfinalvalue"></a>加速から切り離 m_dblFinalValueす
+## <a name="cparabolictransitionfromaccelerationm_dblfinalvalue"></a><a name="m_dblfinalvalue"></a> CParabolicTransitionFromAcceleration:: m_dblFinalValue
 
-トランジションの終了時のアニメーション変数の値。
+遷移の終了時のアニメーション変数の値。
 
 ```
 DOUBLE m_dblFinalValue;
 ```
 
-## <a name="cparabolictransitionfromaccelerationm_dblfinalvelocity"></a><a name="m_dblfinalvelocity"></a>加速から切り離す::m_dblFinalVelocity
+## <a name="cparabolictransitionfromaccelerationm_dblfinalvelocity"></a><a name="m_dblfinalvelocity"></a> CParabolicTransitionFromAcceleration:: m_dblFinalVelocity
 
-トランジションの最後のアニメーション変数の速度。
+遷移の終了時のアニメーション変数の速度。
 
 ```
 DOUBLE m_dblFinalVelocity;

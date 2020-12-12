@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: CProgressCtrl クラス'
 title: CProgressCtrl クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -42,12 +43,12 @@ helpviewer_keywords:
 - CProgressCtrl [MFC], SetStep
 - CProgressCtrl [MFC], StepIt
 ms.assetid: 222630f4-1598-4026-8198-51649b1192ab
-ms.openlocfilehash: eda19ca2b94978201806e60d2ae8399e00e13f1f
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: f5bd1bcae041d6bd61b715275b232fc5536cba2f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88561519"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97301413"
 ---
 # <a name="cprogressctrl-class"></a>CProgressCtrl クラス
 
@@ -107,7 +108,7 @@ class CProgressCtrl : public CWnd
 
 `CProgressCtrl`
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** afxcmn.h
 
@@ -149,7 +150,7 @@ virtual BOOL Create(
 - PBS_SMOOTH は、進行状況バーコントロールに徐々に滑らかな塗りつぶしを表示します。 このフラグが設定されていない場合、コントロールはブロックで塗りつぶされます。
 
 *rect*<br/>
-プログレスバーコントロールのサイズと位置を指定します。 これは、 [CRect](../../atl-mfc-shared/reference/crect-class.md) オブジェクトまたは [RECT](/windows/win32/api/windef/ns-windef-rect) 構造体のいずれかになります。 コントロールは子ウィンドウである必要があるため、指定された座標は *pParentWnd*のクライアント領域に対して相対的になります。
+プログレスバーコントロールのサイズと位置を指定します。 これは、 [CRect](../../atl-mfc-shared/reference/crect-class.md) オブジェクトまたは [RECT](/windows/win32/api/windef/ns-windef-rect) 構造体のいずれかになります。 コントロールは子ウィンドウである必要があるため、指定された座標は *pParentWnd* のクライアント領域に対して相対的になります。
 
 *pParentWnd*<br/>
 プログレスバーコントロールの親ウィンドウ (通常は) を指定し `CDialog` ます。 NULL にすることはできません。
@@ -185,13 +186,13 @@ virtual BOOL CreateEx(
 ### <a name="parameters"></a>パラメーター
 
 *dwExStyle*<br/>
-作成するコントロールの拡張スタイルを指定します。 拡張 Windows スタイルの一覧については、Windows SDK の[CreateWindowEx](/windows/win32/api/winuser/nf-winuser-createwindowexw)の*dwexstyle*パラメーターを参照してください。
+作成するコントロールの拡張スタイルを指定します。 拡張 Windows スタイルの一覧については、Windows SDK の [CreateWindowEx](/windows/win32/api/winuser/nf-winuser-createwindowexw)の *dwexstyle* パラメーターを参照してください。
 
 *dwStyle*<br/>
 プログレスバーコントロールのスタイルを指定します。 Windows SDK の [CreateWindow](/windows/win32/api/winuser/nf-winuser-createwindoww) で説明されているウィンドウスタイルの任意の組み合わせを適用します。
 
 *rect*<br/>
-*PParentWnd*のクライアント座標で、作成されるウィンドウのサイズと位置を記述する[RECT](/windows/win32/api/windef/ns-windef-rect)構造体への参照。
+*PParentWnd* のクライアント座標で、作成されるウィンドウのサイズと位置を記述する [RECT](/windows/win32/api/windef/ns-windef-rect)構造体への参照。
 
 *pParentWnd*<br/>
 コントロールの親であるウィンドウへのポインター。
@@ -205,7 +206,7 @@ virtual BOOL CreateEx(
 
 ### <a name="remarks"></a>解説
 
-`CreateEx`Windows 拡張スタイルの先頭**WS_EX_** によって指定された拡張 windows スタイルを適用するには、[[作成](#create)] ではなくを使用します。
+`CreateEx`Windows 拡張スタイルの先頭 **WS_EX_** によって指定された拡張 windows スタイルを適用するには、[[作成](#create)] ではなくを使用します。
 
 ## <a name="cprogressctrlgetbarcolor"></a><a name="getbarcolor"></a> CProgressCtrl:: GetBarColor
 
@@ -279,7 +280,7 @@ void GetRange(
 
 ### <a name="remarks"></a>解説
 
-この関数は、上限と上限の値をそれぞれ *Nlower* と *nlower*によって参照される整数にコピーします。
+この関数は、上限と上限の値をそれぞれ *Nlower* と *nlower* によって参照される整数にコピーします。
 
 ### <a name="example"></a>例
 
@@ -468,7 +469,7 @@ BOOL SetMarquee(
 
 ## <a name="cprogressctrlsetpos"></a><a name="setpos"></a> CProgressCtrl:: SetPos
 
-*NPos*によって指定された進行状況バーコントロールの現在位置を設定し、新しい位置を反映するようにバーを再描画します。
+*NPos* によって指定された進行状況バーコントロールの現在位置を設定し、新しい位置を反映するようにバーを再描画します。
 
 ```
 int SetPos(int nPos);

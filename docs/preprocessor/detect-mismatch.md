@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: detect_mismatch プラグマ'
 title: detect_mismatch プラグマ
 ms.date: 08/29/2019
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - pragmas, detect_mismatch
 - detect_mismatch pragma
 ms.assetid: ddb13ac9-0e2f-40ce-be69-7e44c04f5a12
-ms.openlocfilehash: 6e247b3f251bce47710a3380fb295597314a3bd8
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: e57ffac731409fb14b61d35f780ee19094108655
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70222395"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97300737"
 ---
 # <a name="detect_mismatch-pragma"></a>detect_mismatch プラグマ
 
@@ -23,11 +24,11 @@ ms.locfileid: "70222395"
 
 > **#pragma detect_mismatch (** "*name*" **,** "*value*" **)**
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-プロジェクトをリンクするときに、プロジェクトに同じ*名前*の2つのオブジェクトが含まれており、それぞれの*値*が異なる場合、リンカーは[LNK2038](../error-messages/tool-errors/linker-tools-error-lnk2038.md)エラーをスローします。 整合性のないオブジェクト ファイルのリンクを防止するには、このプラグマを使用します。
+プロジェクトをリンクするときに、プロジェクトに同じ *名前* の2つのオブジェクトが含まれており、それぞれの *値* が異なる場合、リンカーは [LNK2038](../error-messages/tool-errors/linker-tools-error-lnk2038.md)エラーをスローします。 整合性のないオブジェクト ファイルのリンクを防止するには、このプラグマを使用します。
 
-*名前*と*値*の両方が文字列リテラルであり、エスケープ文字と連結に関して文字列リテラルの規則に従います。 大文字と小文字が区別され、コンマ、等号、引用符、または**null**文字を含めることはできません。
+*名前* と *値* の両方が文字列リテラルであり、エスケープ文字と連結に関して文字列リテラルの規則に従います。 大文字と小文字が区別され、コンマ、等号、引用符、または **null** 文字を含めることはできません。
 
 ## <a name="example"></a>例
 
@@ -49,4 +50,4 @@ int main ()
 
 ## <a name="see-also"></a>関連項目
 
-[プラグマディレクティブと __ プラグマキーワード](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+[プラグマ ディレクティブと __pragma キーワード](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

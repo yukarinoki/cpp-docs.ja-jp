@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: _exec、_wexec 関数'
 title: _exec、_wexec 系関数
 ms.date: 11/04/2016
 api_location:
@@ -56,12 +57,12 @@ helpviewer_keywords:
 - _exec function
 - _texecvpe function
 ms.assetid: a261df93-206a-4fdc-b8ac-66aa7db83bc6
-ms.openlocfilehash: ecfcf88b09a4383fc050e9737a0ffe7203f9a050
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 0a28c7bdc192e2e72c751e953987509c07611934
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88839726"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97300100"
 ---
 # <a name="_exec-_wexec-functions"></a>_exec、_wexec 系関数
 
@@ -128,7 +129,7 @@ ms.locfileid: "88839726"
 
 `_execv`、`_execve`、`_execvp`、および `_execvpe` の各呼び出しは、新しいプロセスのパラメーターの数が変化する場合に便利です。 パラメーターへのポインターは、配列 `argv` として渡されます。 通常の場合、パラメーター `argv`[0] は `cmdname` へのポインターです。 パラメーター `argv`[1] ～ `argv`[`n`] は、新しいパラメーター リストを構成する文字列を指します。 パラメーター リストの終端を示すために、パラメーター `argv`[`n`+1] は **NULL** ポインターである必要があります。
 
-`_exec` 呼び出しを作成するときに開いたファイルは、新しいプロセスでも開いたままです。 `_execl`、`_execlp`、`_execv`、および `_execvp` の各呼び出しでは、新しいプロセスが呼び出しプロセスの環境を継承します。 `_execle`、`_execlpe`、`_execve`、および `_execvpe` の各呼び出しでは、`envp` パラメーターを使用して環境設定のリストを渡すことで、新しいプロセスの環境を変更できます。 `envp` は文字ポインターの配列であり、最後の要素以外の各要素は、環境変数を定義する null で終わる文字列を指します。 通常、このような文字列の形式は `NAME`=`value` であり、`NAME` は環境変数名、`value` はその変数に設定する文字列の値です。 ( `value` は二重引用符で囲まれていないことに注意してください)。配列の最後の要素は `envp` **NULL**にする必要があります。 `envp` 自身が **NULL** である場合、新しいプロセスは呼び出しプロセスの環境設定を継承します。
+`_exec` 呼び出しを作成するときに開いたファイルは、新しいプロセスでも開いたままです。 `_execl`、`_execlp`、`_execv`、および `_execvp` の各呼び出しでは、新しいプロセスが呼び出しプロセスの環境を継承します。 `_execle`、`_execlpe`、`_execve`、および `_execvpe` の各呼び出しでは、`envp` パラメーターを使用して環境設定のリストを渡すことで、新しいプロセスの環境を変更できます。 `envp` は文字ポインターの配列であり、最後の要素以外の各要素は、環境変数を定義する null で終わる文字列を指します。 通常、このような文字列の形式は `NAME`=`value` であり、`NAME` は環境変数名、`value` はその変数に設定する文字列の値です。 ( `value` は二重引用符で囲まれていないことに注意してください)。配列の最後の要素は `envp` **NULL** にする必要があります。 `envp` 自身が **NULL** である場合、新しいプロセスは呼び出しプロセスの環境設定を継承します。
 
 `_exec` 系関数で実行されるプログラムは、常に、プログラムの .exe ファイル ヘッダーの maximum allocation フィールドが既定値 0xFFFFH であるかのように、メモリに読み込まれます。
 
@@ -242,7 +243,7 @@ int main( int ac, char* av[] )
 }
 ```
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** process.h
 

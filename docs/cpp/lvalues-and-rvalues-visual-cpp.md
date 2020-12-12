@@ -1,28 +1,29 @@
 ---
+description: '詳細情報: Lvalues と右辺値 (C++)'
 title: '値のカテゴリ: 左辺値と右辺値 (C++)'
 ms.date: 05/07/2019
 helpviewer_keywords:
 - R-values [C++]
 - L-values [C++]
 ms.assetid: a8843344-cccc-40be-b701-b71f7b5cdcaf
-ms.openlocfilehash: b4b3ba5fdbc11ec97870b0f06fd1aabd3b57f5ca
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: b92ddc3aad62f1eaf7af6a6bc113c1a0fdd70769
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87225970"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97299242"
 ---
 # <a name="lvalues-and-rvalues-c"></a>左辺値と右辺値 (C++)
 
-すべての C++ 式には型があり、*値カテゴリ*に属しています。 値のカテゴリは、式の評価中に一時オブジェクトを作成、コピー、および移動するときに、コンパイラが従う必要のある規則の基礎となります。
+すべての C++ 式には型があり、 *値カテゴリ* に属しています。 値のカテゴリは、式の評価中に一時オブジェクトを作成、コピー、および移動するときに、コンパイラが従う必要のある規則の基礎となります。
 
 C++ 17 標準では、式の値のカテゴリは次のように定義されています。
 
-- *Glvalue*は、オブジェクト、ビットフィールド、または関数の id を評価する式です。
-- *Prvalue*は、オブジェクトまたはビットフィールドを初期化する評価を持つ式です。または、演算子のオペランドの値を、表示されるコンテキストによって指定されたとおりに計算します。
-- *Xvalue*は、リソースを再利用できるオブジェクトまたはビットフィールドを示す glvalue です (通常は、有効期間が終了しているため)。 例: 右辺値参照 (8.3.2) を含む特定の種類の式では、戻り値の型が右辺値参照または右辺値参照型へのキャストである関数の呼び出しなど、xvalues が生成されます。
-- *左辺*値は、xvalue ではない glvalue です。
-- *右辺*値は、prvalue または xvalue です。
+- *Glvalue* は、オブジェクト、ビットフィールド、または関数の id を評価する式です。
+- *Prvalue* は、オブジェクトまたはビットフィールドを初期化する評価を持つ式です。または、演算子のオペランドの値を、表示されるコンテキストによって指定されたとおりに計算します。
+- *Xvalue* は、リソースを再利用できるオブジェクトまたはビットフィールドを示す glvalue です (通常は、有効期間が終了しているため)。 例: 右辺値参照 (8.3.2) を含む特定の種類の式では、戻り値の型が右辺値参照または右辺値参照型へのキャストである関数の呼び出しなど、xvalues が生成されます。
+- *左辺* 値は、xvalue ではない glvalue です。
+- *右辺* 値は、prvalue または xvalue です。
 
 次の図は、カテゴリ間の関係を示しています。
 
@@ -66,7 +67,7 @@ int main()
 > [!NOTE]
 > このトピックの例では、演算子がオーバーロードしていないときの、正しい方法使用と正しくない使用方法を説明します。 演算子をオーバーロードすることにより、`j * 4` のような式を左辺値にできます。
 
-*左辺*値と*右辺*値は、オブジェクト参照を参照するときによく使用されます。 参照の詳細については、「[左辺値参照宣言](../cpp/lvalue-reference-declarator-amp.md)子: &」および「[右辺値参照宣言子:  &&](../cpp/rvalue-reference-declarator-amp-amp.md)」を参照してください。
+*左辺* 値と *右辺* 値は、オブジェクト参照を参照するときによく使用されます。 参照の詳細については、「 [左辺値参照宣言 ](../cpp/lvalue-reference-declarator-amp.md) 子: &」および「 [右辺値参照宣言子:  &&](../cpp/rvalue-reference-declarator-amp-amp.md)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

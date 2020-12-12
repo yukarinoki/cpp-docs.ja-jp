@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: CPtrArray クラス'
 title: CPtrArray クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -42,12 +43,12 @@ helpviewer_keywords:
 - CPtrArray [MFC], SetAtGrow
 - CPtrArray [MFC], SetSize
 ms.assetid: c23b87a3-bf84-49d6-a66b-61e999d0938a
-ms.openlocfilehash: 5db9f69348e96fffc1aa6fdc88134d777eb5406d
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 7cde7f76d604562c1161ccc577feea1e43b2076e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87226855"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97301348"
 ---
 # <a name="cptrarray-class"></a>CPtrArray クラス
 
@@ -105,7 +106,7 @@ class CPtrArray : public CObject
 
 ## <a name="remarks"></a>解説
 
-`CPtrArray`には、実行時の型へのアクセスとオブジェクトへのダンプをサポートする IMPLEMENT_DYNAMIC マクロが組み込まれて `CDumpContext` います。 個々のポインター配列要素のダンプが必要な場合は、ダンプコンテキストの深さを1以上に設定する必要があります。
+`CPtrArray` には、実行時の型へのアクセスとオブジェクトへのダンプをサポートする IMPLEMENT_DYNAMIC マクロが組み込まれて `CDumpContext` います。 個々のポインター配列要素のダンプが必要な場合は、ダンプコンテキストの深さを1以上に設定する必要があります。
 
 > [!NOTE]
 > 配列を使用する前に、`SetSize` を使用してそのサイズを設定し、メモリを割り当てます。 `SetSize` を使用しない場合、配列に要素を追加すると、配列の再割り当てとコピーが頻繁に発生します。 頻繁な再割り当てとコピーは非効率であり、メモリが断片化される可能性があります。
@@ -114,7 +115,7 @@ class CPtrArray : public CObject
 
 ポインター配列が削除された場合、またはその要素が削除された場合、ポインターだけが削除されます。参照先のエンティティは削除されません。
 
-の使用方法の詳細については `CPtrArray` 、「[コレクション](../../mfc/collections.md)」を参照してください。
+の使用方法の詳細については `CPtrArray` 、「 [コレクション](../../mfc/collections.md)」を参照してください。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -122,7 +123,7 @@ class CPtrArray : public CObject
 
 `CPtrArray`
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** afxcoll.h
 

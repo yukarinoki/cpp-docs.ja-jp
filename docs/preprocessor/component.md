@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: component プラグマ'
 title: component プラグマ
 ms.date: 08/29/2019
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - component pragma
 - pragmas, component
 ms.assetid: 7b66355e-3201-4c14-8190-f4a2a81a604a
-ms.openlocfilehash: 73b308fdc426be9b403b808d4e638b4f5c1e9149
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: 2eeb70701c490e0f797dfbd6da7ac11030283073
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90040731"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97300802"
 ---
 # <a name="component-pragma"></a>component プラグマ
 
@@ -25,7 +26,7 @@ ms.locfileid: "90040731"
 > **#pragma コンポーネント (minrebuild、** { **on** \| **off** } **)** \
 > **#pragma コンポーネント (mintypeinfo、** { **on** \| **off** } **)**
 
-## <a name="remarks"></a>注釈
+## <a name="remarks"></a>解説
 
 ### <a name="browser"></a>Browser
 
@@ -42,7 +43,7 @@ on または off を使用して、このプラグマ以降のブラウザー情
 > [!NOTE]
 > このプラグマを使用してブラウザー情報の収集をオンにするには、 [最初に参照情報を有効にする必要があり](../build/reference/building-browse-information-files-overview.md)ます。
 
-**References**オプションは、 *name*引数と共に使用することも、指定せずに使用することもできます。 *名前*を指定せずに**参照**を使用すると、参照の収集がオンまたはオフになります (ただし、その他の参照情報は引き続き収集されます)。 次に例を示します。
+**References** オプションは、 *name* 引数と共に使用することも、指定せずに使用することもできます。 *名前* を指定せずに **参照** を使用すると、参照の収集がオンまたはオフになります (ただし、その他の参照情報は引き続き収集されます)。 次に例を示します。
 
 ```cpp
 #pragma component(browser, off, references)
@@ -50,19 +51,19 @@ on または off を使用して、このプラグマ以降のブラウザー情
 
 このプラグマは、コンパイラによる参照情報の収集を停止します。
 
-*Name*と**off**の**参照**を使用すると、[参照情報] ウィンドウに*名前*への参照が表示されなくなります。 この構文を使用して必要のない名前と型を無視することで、ブラウザー情報ファイルのサイズを縮小できます。 次に例を示します。
+*Name* と **off** の **参照** を使用すると、[参照情報] ウィンドウに *名前* への参照が表示されなくなります。 この構文を使用して必要のない名前と型を無視することで、ブラウザー情報ファイルのサイズを縮小できます。 次に例を示します。
 
 ```cpp
 #pragma component(browser, off, references, DWORD)
 ```
 
-その時点以降の DWORD への参照を無視します。 **On**のを使用して、DWORD への参照の収集をオンにすることができます。
+その時点以降の DWORD への参照を無視します。 **On** のを使用して、DWORD への参照の収集をオンにすることができます。
 
 ```cpp
 #pragma component(browser, on, references, DWORD)
 ```
 
-これは、 *名前*への参照の収集を再開する唯一の方法です。無効にした *名前* は、明示的に有効にする必要があります。
+これは、 *名前* への参照の収集を再開する唯一の方法です。無効にした *名前* は、明示的に有効にする必要があります。
 
 プリプロセッサによって *名前* が拡張されないようにするには (NULL を0に拡張するなど)、次のように引用符で囲みます。
 
@@ -84,6 +85,6 @@ LINK : warning LNK4018: too many type indexes in PDB "filename", discarding subs
 
 詳細については、「 [/Gm (簡易リビルドを有効にする)](../build/reference/gm-enable-minimal-rebuild.md)  コンパイラオプション」を参照してください。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [プラグマ ディレクティブと __pragma キーワード](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
