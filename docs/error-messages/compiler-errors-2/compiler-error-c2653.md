@@ -1,31 +1,32 @@
 ---
-title: コンパイラ エラー C2653
+description: 詳細については、「コンパイラエラー C2653」を参照してください。
+title: コンパイラエラー C2653
 ms.date: 11/30/2017
 f1_keywords:
 - C2653
 helpviewer_keywords:
 - C2653
 ms.assetid: 3f49e731-affd-43a0-a8d0-181db7650bc3
-ms.openlocfilehash: 2882764e1c0a84634c500d920f327fbebc4b19a9
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: f3be7ade8a6dcfc6aa8c5a83cc8a055fc230789d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65447945"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97286151"
 ---
-# <a name="compiler-error-c2653"></a>コンパイラ エラー C2653
+# <a name="compiler-error-c2653"></a>コンパイラエラー C2653
 
-> '*識別子*': クラスまたは名前空間名ではありません
+> '*identifier*': クラスまたは名前空間の名前ではありません
 
-言語の構文では、クラス、構造体、共用体、またはここに名前空間名が必要です。
+言語の構文では、クラス、構造体、共用体、または名前空間の名前が必要です。
 
-このエラーは、クラス、構造体、共用体、またはスコープ演算子の前に名前空間として宣言されていない名前を使用するときに発生することができます。 この問題を解決するには、名前を宣言またはされる前に、名前を宣言するヘッダーが含まれます。
+このエラーは、スコープ演算子の前にクラス、構造体、共用体、または名前空間として宣言されていない名前を使用した場合に発生する可能性があります。 この問題を解決するには、名前を宣言するか、名前を宣言するヘッダーを使用する前に含めます。
 
-C2653 を定義しようとする場合も、*複合名前空間*、1 つまたは複数のスコープの入れ子になった名前空間名を含む名前空間。 C++17 の前に定義が C++ では許可されません。 名前空間を合成します。 複合の名前空間を指定すると、Visual Studio 2015 Update 3 以降はサポートされて、 [/std:c++latest](../../build/reference/std-specify-language-standard-version.md)コンパイラ オプション。 Visual Studio 2017 バージョン 15.5 以降では、コンパイラは複合名前空間の定義をサポートときに、 [/std:c++17](../../build/reference/std-specify-language-standard-version.md)オプションを指定します。
+C2653 は、 *複合名前* 空間を定義しようとした場合にも可能です。これは、1つまたは複数のスコープで入れ子になった名前空間の名前を含む名前空間です。 C++ 17 より前の C++ では、複合名前空間の定義は許可されていません。 Visual Studio 2015 Update 3 以降では、 [/std: c + + latest](../../build/reference/std-specify-language-standard-version.md) コンパイラオプションを指定すると、複合名前空間がサポートされます。 Visual Studio 2017 バージョン15.5 以降では、 [/std: c++ 17](../../build/reference/std-specify-language-standard-version.md) オプションが指定されている場合、コンパイラは複合名前空間の定義をサポートします。
 
-## <a name="examples"></a>使用例
+## <a name="examples"></a>例
 
-このサンプルでは、スコープ名の使用が宣言されていないために、C2653 が生成されます。 コンパイラでは、クラス、構造体、共用体、またはスコープ演算子 (::) の前に名前空間の名前が必要です。
+このサンプルでは、スコープ名が使用されているが宣言されていないため、C2653 が生成されます。 コンパイラは、スコープ演算子 (::) の前に、クラス、構造体、共用体、または名前空間の名前を指定する必要があります。
 
 ```cpp
 // C2653.cpp
@@ -38,7 +39,7 @@ void xx::func1(int m) {}   // C2653, xx is not declared
 void yy::func1(int m) {}   // OK
 ```
 
-C++ 17 または以降の標準コンパイルされていないコードで入れ子になった名前空間は、入れ子の各レベルで、明示的な名前空間宣言を使用する必要があります。
+C++ 17 以降の標準用にコンパイルされていないコードでは、入れ子になった名前空間で、入れ子のレベルごとに明示的な名前空間宣言を使用する必要があります。
 
 ```cpp
 // C2653b.cpp

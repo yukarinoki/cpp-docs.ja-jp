@@ -1,4 +1,5 @@
 ---
+description: '詳細については、「方法: バイト配列へのポインターを取得する」を参照してください。'
 title: '方法 : バイト配列へのポインターを取得する'
 ms.custom: get-started-article
 ms.date: 11/04/2016
@@ -6,16 +7,16 @@ helpviewer_keywords:
 - pointers, to Byte array
 - Byte arrays
 ms.assetid: aea18073-3341-47f4-9f0e-04e03327037e
-ms.openlocfilehash: 5c0fc61f2876c652be6f25bf1627822537892dc9
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: d76aa9040be5b908edac3a87ae6f0698f6d6a5dc
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "79545217"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97286385"
 ---
 # <a name="how-to-obtain-a-pointer-to-byte-array"></a>方法 : バイト配列へのポインターを取得する
 
-最初の要素のアドレスを取得してポインターに割り当てることによって、<xref:System.Byte> 配列内の配列ブロックへのポインターを取得できます。
+配列内の配列ブロックへのポインターを取得する <xref:System.Byte> には、最初の要素のアドレスを取得し、それをポインターに割り当てます。
 
 ## <a name="example"></a>例
 
@@ -32,6 +33,6 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [C++ Interop (暗黙の PInvoke) の使用](../dotnet/using-cpp-interop-implicit-pinvoke.md)

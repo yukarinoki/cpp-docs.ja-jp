@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「プロバイダーによるブックマークのサポート」を参照してください。
 title: プロバイダーのブックマーク サポート
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - IRowsetLocate class
 - OLE DB providers, bookmark support
 ms.assetid: 1b14ccff-4f76-462e-96ab-1aada815c377
-ms.openlocfilehash: 240cb4da03d6c8c1958b7a86e78171aca2dc30e9
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 0a2225f44d9d094f52e97b88eb58c6942906edf6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87216454"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97286658"
 ---
 # <a name="provider-support-for-bookmarks"></a>プロバイダーのブックマーク サポート
 
@@ -40,7 +41,7 @@ class CCustomRowset : public CRowsetImpl< CCustomRowset,
           IRowsetLocateImpl<CCustomRowset, IRowsetLocate>>
 ```
 
-4番目、5番目、および6番目のパラメーターがすべて追加されます。 この例では、4番目と5番目のパラメーターに既定値を使用しますが、6番目のパラメーターとしてを指定し `IRowsetLocateImpl` ます。 `IRowsetLocateImpl`は、2つのテンプレートパラメーターを受け取る OLE DB テンプレートクラスです。これらは、インターフェイスをクラスにフックします `IRowsetLocate` `CCustomRowset` 。 ほとんどのインターフェイスを追加するには、この手順をスキップし、次のインターフェイスに移動します。 `IRowsetLocate` `IRowsetScroll` インターフェイスとインターフェイスだけをこの方法で処理する必要があります。
+4番目、5番目、および6番目のパラメーターがすべて追加されます。 この例では、4番目と5番目のパラメーターに既定値を使用しますが、6番目のパラメーターとしてを指定し `IRowsetLocateImpl` ます。 `IRowsetLocateImpl` は、2つのテンプレートパラメーターを受け取る OLE DB テンプレートクラスです。これらは、インターフェイスをクラスにフックします `IRowsetLocate` `CCustomRowset` 。 ほとんどのインターフェイスを追加するには、この手順をスキップし、次のインターフェイスに移動します。 `IRowsetLocate` `IRowsetScroll` インターフェイスとインターフェイスだけをこの方法で処理する必要があります。
 
 次に、がインターフェイスを `CCustomRowset` 呼び出すようにに指示する必要があり `QueryInterface` `IRowsetLocate` ます。 `COM_INTERFACE_ENTRY(IRowsetLocate)`マップに線を追加します。 次のコードに示すように、のインターフェイスマップ `CCustomRowset` が表示されます。
 
@@ -78,7 +79,7 @@ class CTextData
 };
 ```
 
-次に、次のように、 `GetColumnInfo` *カスタム*の RS .cpp ファイルに関数を実装します。
+次に、次のように、 `GetColumnInfo` *カスタム* の RS .cpp ファイルに関数を実装します。
 
 ```cpp
 ////////////////////////////////////////////////////////////////////
@@ -148,11 +149,11 @@ ATLCOLUMNINFO* CAgentMan::GetColumnInfo(RUpdateRowset* pThis, ULONG* pcCols)
 }
 ```
 
-`GetColumnInfo`は、というプロパティが設定されているかどうかを最初に確認し `DBPROP_IRowsetLocate` ます。 OLE DB には、行セットオブジェクトの外部にあるオプションの各インターフェイスのプロパティがあります。 これらのオプションのインターフェイスのいずれかをコンシューマーが使用する場合は、プロパティを true に設定します。 プロバイダーは、このプロパティを確認し、それに基づいて特別な操作を行うことができます。
+`GetColumnInfo` は、というプロパティが設定されているかどうかを最初に確認し `DBPROP_IRowsetLocate` ます。 OLE DB には、行セットオブジェクトの外部にあるオプションの各インターフェイスのプロパティがあります。 これらのオプションのインターフェイスのいずれかをコンシューマーが使用する場合は、プロパティを true に設定します。 プロバイダーは、このプロパティを確認し、それに基づいて特別な操作を行うことができます。
 
 実装では、command オブジェクトへのポインターを使用してプロパティを取得します。 ポインターは、 `pThis` 行セットまたはコマンドクラスを表します。 ここではテンプレートを使用するため、をポインターとして渡す **`void`** か、コードをコンパイルしないようにする必要があります。
 
-列情報を格納する静的配列を指定します。 コンシューマーがブックマーク列を必要としない場合、配列内のエントリは無駄になります。 この配列は動的に割り当てることができますが、正しく破棄されるようにする必要があります。 この例では、マクロ ADD_COLUMN_ENTRY と ADD_COLUMN_ENTRY_EX を定義して使用し、情報を配列に挿入します。 *カスタム*RS にマクロを追加できます。H ファイルを次のコードに示します。
+列情報を格納する静的配列を指定します。 コンシューマーがブックマーク列を必要としない場合、配列内のエントリは無駄になります。 この配列は動的に割り当てることができますが、正しく破棄されるようにする必要があります。 この例では、マクロ ADD_COLUMN_ENTRY と ADD_COLUMN_ENTRY_EX を定義して使用し、情報を配列に挿入します。 *カスタム* RS にマクロを追加できます。H ファイルを次のコードに示します。
 
 ```cpp
 ////////////////////////////////////////////////////////////////////////

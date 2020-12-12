@@ -1,4 +1,5 @@
 ---
+description: 詳細については、リソースプーリングとサービスの OLE DB に関するページを参照してください。
 title: OLE DB リソース プールとサービス
 ms.date: 10/29/2018
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - OLE DB services [OLE DB]
 - OLE DB providers, resource pooling
 ms.assetid: 360c36e2-25ae-4caf-8ee7-d4a6b6898f68
-ms.openlocfilehash: 67eeffff2bf165a5ccbdbaa546ad5b9ca9a57914
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 1a66a6a616ed67e70fb10fa1bf43dac634051325
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80210029"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97286788"
 ---
 # <a name="ole-db-resource-pooling-and-services"></a>OLE DB リソース プールとサービス
 
@@ -28,6 +29,6 @@ OLE DB プーリング、または任意の OLE DB サービスで適切に機�
 
 最後に、自動トランザクション参加は、プールが発生するのと同じレベルで実装されていない限り、通常は動作しません。 自動トランザクション登録をサポートするプロバイダーは、DBPROP_INIT_OLEDBSERVICES プロパティを公開し、DBPROPVAL_OS_TXNENLISTMENT が選択解除されている場合に参加を無効にすることで、この参加リストの無効化をサポートする必要があります。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [高度なプロバイダー手法](../../data/oledb/advanced-provider-techniques.md)

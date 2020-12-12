@@ -1,4 +1,5 @@
 ---
+description: 詳細については、OLE DB 準拠テストを渡す
 title: OLE DB 準拠合致テスト
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - conformance testing [OLE DB]
 - OLE DB providers, testing
 ms.assetid: d1a4f147-2edd-476c-b452-0e6a0ac09891
-ms.openlocfilehash: eda4dccda147ddd4776bb56e649f539a7550abd1
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: d2a5b788b3a118293800b02a9383fbde9845cfa5
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80209782"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97286724"
 ---
 # <a name="passing-ole-db-conformance-tests"></a>OLE DB 準拠合致テスト
 
@@ -21,14 +22,14 @@ ms.locfileid: "80209782"
 
 ## <a name="running-the-conformance-tests"></a>準拠テストの実行
 
-Visual C++ 6.0 では、OLE DB プロバイダーテンプレートに、値とプロパティを確認できるようにするフック関数がいくつか追加されました。 これらの関数のほとんどは、準拠テストへの応答として追加されました。
+Visual C++ 6.0 では、OLE DB プロバイダーテンプレートに、値とプロパティを確認できるようにするフック関数がいくつか追加されています。 これらの関数のほとんどは、準拠テストへの応答として追加されました。
 
 > [!NOTE]
 > OLE DB 準拠テストに渡すには、プロバイダーに対していくつかの検証関数を追加する必要があります。
 
-このプロバイダーには、2つの検証ルーチンが必要です。 最初のルーチンである `CRowsetImpl::ValidateCommandID`は、行セットクラスの一部です。 プロバイダーテンプレートによって行セットが作成されるときに呼び出されます。 このサンプルでは、このルーチンを使用して、インデックスがサポートされていないことをコンシューマーに通知します。 最初の呼び出しは `CRowsetImpl::ValidateCommandID` します (プロバイダーは、[ブックマークをサポート](../../data/oledb/provider-support-for-bookmarks.md)する `CCustomRowset` ためにインターフェイスマップに追加された `_RowsetBaseClass` typedef を使用します。そのため、テンプレート引数の長い行を入力する必要はありません)。 次に、インデックスパラメーターが NULL でない場合に DB_E_NOINDEX を返します (これは、コンシューマーが私のためにインデックスを使用することを示します)。 コマンド Id の詳細については、OLE DB の仕様を参照して `IOpenRowset::OpenRowset`を検索してください。
+このプロバイダーには、2つの検証ルーチンが必要です。 最初のルーチンは、 `CRowsetImpl::ValidateCommandID` 行セットクラスの一部です。 プロバイダーテンプレートによって行セットが作成されるときに呼び出されます。 このサンプルでは、このルーチンを使用して、インデックスがサポートされていないことをコンシューマーに通知します。 最初の呼び出しはです `CRowsetImpl::ValidateCommandID` (プロバイダーは `_RowsetBaseClass` ブックマークをサポートするためにのインターフェイスマップに追加された typedef を使用し `CCustomRowset` ます。そのため、テンプレート引数の長い行を入力する必要はありません)。 [](../../data/oledb/provider-support-for-bookmarks.md) 次に、インデックスパラメーターが NULL でない場合に DB_E_NOINDEX を返します (これは、コンシューマーが私のためにインデックスを使用することを示します)。 コマンド Id の詳細については、OLE DB の仕様を参照してください `IOpenRowset::OpenRowset` 。
 
-次のコードは、`ValidateCommandID` 検証ルーチンです。
+次のコードは、 `ValidateCommandID` 検証ルーチンです。
 
 ```cpp
 /////////////////////////////////////////////////////////////////////
@@ -48,12 +49,12 @@ HRESULT ValidateCommandID(DBID* pTableID, DBID* pIndexID)
 }
 ```
 
-プロバイダーテンプレートは、ユーザーが DBPROPSET_ROWSET グループのプロパティを変更するたびに、`OnPropertyChanged` メソッドを呼び出します。 他のグループのプロパティを処理する場合は、適切なオブジェクトに追加します (つまり、DBPROPSET_SESSION によって `CCustomSession` クラスにチェックインされます)。
+プロバイダーテンプレートは、 `OnPropertyChanged` ユーザーが DBPROPSET_ROWSET グループのプロパティを変更するたびにメソッドを呼び出します。 他のグループのプロパティを処理する場合は、適切なオブジェクトに追加します (つまり、DBPROPSET_SESSION によってクラスにチェックインされ `CCustomSession` ます)。
 
-このコードは、まず、プロパティが別のにリンクされているかどうかを確認します。 プロパティがチェーンされている場合は、DBPROP_BOOKMARKS プロパティを `True`に設定します。 OLE DB 仕様の付録 C には、プロパティに関する情報が含まれています。 また、この情報は、プロパティが別のプロパティにチェーンされているかどうかも示します。
+このコードは、まず、プロパティが別のにリンクされているかどうかを確認します。 プロパティがチェーンされている場合は、DBPROP_BOOKMARKS プロパティがに設定され `True` ます。 OLE DB 仕様の付録 C には、プロパティに関する情報が含まれています。 また、この情報は、プロパティが別のプロパティにチェーンされているかどうかも示します。
 
-`IsValidValue` ルーチンをコードに追加することもできます。 テンプレートは、プロパティを設定しようとしたときに `IsValidValue` を呼び出します。 プロパティ値を設定するときに追加の処理が必要な場合は、このメソッドをオーバーライドします。 これらのメソッドのいずれかをプロパティセットごとに設定できます。
+また、ルーチンをコードに追加することもでき `IsValidValue` ます。 テンプレートは、 `IsValidValue` プロパティを設定しようとしたときにを呼び出します。 プロパティ値を設定するときに追加の処理が必要な場合は、このメソッドをオーバーライドします。 これらのメソッドのいずれかをプロパティセットごとに設定できます。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [高度なプロバイダー手法](../../data/oledb/advanced-provider-techniques.md)

@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「CMFCBaseVisualManager クラス」を参照してください。
 title: CMFCBaseVisualManager クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -28,12 +29,12 @@ helpviewer_keywords:
 - CMFCBaseVisualManager [MFC], CleanUpThemes
 - CMFCBaseVisualManager [MFC], UpdateSystemColors
 ms.assetid: d56f3afc-cdea-4de1-825a-a08999c571e0
-ms.openlocfilehash: 79a3c0945fdd0df04e9ee52d7bad97dc0847fa91
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 14727eea4bcefdc7b7de53f19f188d7cb9c528c1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88834298"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97284981"
 ---
 # <a name="cmfcbasevisualmanager-class"></a>CMFCBaseVisualManager クラス
 
@@ -90,7 +91,7 @@ class CMFCBaseVisualManager: public CObject
 
 [CMFCBaseVisualManager](../../mfc/reference/cmfcbasevisualmanager-class.md)
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** afxvisualmanager
 
@@ -104,7 +105,7 @@ void CleanUpThemes();
 
 ### <a name="remarks"></a>解説
 
-内部使用のみ。
+内部使用専用です。
 
 ## <a name="cmfcbasevisualmanagercmfcbasevisualmanager"></a><a name="cmfcbasevisualmanager"></a> CMFCBaseVisualManager:: CMFCBaseVisualManager
 
@@ -158,7 +159,7 @@ Theme API が有効な場合は TRUE。それ以外の場合は FALSE。
 
 ### <a name="remarks"></a>解説
 
-*NState*の値は、次のチェックボックスのスタイルに対応しています。
+*NState* の値は、次のチェックボックスのスタイルに対応しています。
 
 |nState|チェックボックスのスタイル|
 |------------|---------------------|
@@ -258,7 +259,7 @@ virtual BOOL DrawPushButton(
 から描画する [Cmfcbutton クラス](../../mfc/reference/cmfcbutton-class.md) オブジェクトへのポインター。
 
 *uiState*<br/>
-から無効. 状態は *Pbutton*から取得されます。
+から無効. 状態は *Pbutton* から取得されます。
 
 ### <a name="return-value"></a>戻り値
 
@@ -410,7 +411,7 @@ void UpdateSystemColors();
 
 ### <a name="remarks"></a>解説
 
-内部使用のみ。
+内部使用専用です。
 
 ## <a name="see-also"></a>関連項目
 

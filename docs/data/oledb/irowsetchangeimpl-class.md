@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: IRowsetChangeImpl クラス'
 title: IRowsetChangeImpl クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -31,12 +32,12 @@ helpviewer_keywords:
 - SetData method
 - FlushData method
 ms.assetid: 1e9fee15-ed9e-4387-af8f-215569beca6c
-ms.openlocfilehash: 66e7b758752a46fffff177323fe83eecc0b2fa55
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 6536b589cdf936b653d87941fb717e96ff88422c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88832780"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97287230"
 ---
 # <a name="irowsetchangeimpl-class"></a>IRowsetChangeImpl クラス
 
@@ -71,7 +72,7 @@ class ATL_NO_VTABLE IRowsetChangeImpl : public BaseInterface
 *MapClass*<br/>
 プロバイダーによって保持されているすべての行ハンドルのストレージユニット。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** atldb.h
 
@@ -104,9 +105,9 @@ OLE DB テンプレートの実装では、すべての基本メソッド (、�
 
 - [更新可能なプロバイダーの作成](../../data/oledb/creating-an-updatable-provider.md)
 
-- *OLE DB プログラマーリファレンス*の第6章
+- *OLE DB プログラマーリファレンス* の第6章
 
-- また、UpdatePV サンプルでのクラスの使用方法についても説明し `RUpdateRowset` ます。 [UpdatePV](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Provider/UPDATEPV)
+- また、UpdatePV サンプルでのクラスの使用方法についても説明し `RUpdateRowset` ます。 [](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Provider/UPDATEPV)
 
 ## <a name="irowsetchangeimpldeleterows"></a><a name="deleterows"></a> IRowsetChangeImpl::D eleteRows
 
@@ -123,7 +124,7 @@ STDMETHOD (DeleteRows )(HCHAPTER /* hReserved */,
 
 #### <a name="parameters"></a>パラメーター
 
-*OLE DB プログラマーリファレンス*の「 [IRowsetChange::D eleterows](/previous-versions/windows/desktop/ms724362(v=vs.85)) 」を参照してください。
+*OLE DB プログラマーリファレンス* の「 [IRowsetChange::D eleterows](/previous-versions/windows/desktop/ms724362(v=vs.85)) 」を参照してください。
 
 ## <a name="irowsetchangeimplinsertrow"></a><a name="insertrow"></a> IRowsetChangeImpl:: InsertRow
 
@@ -140,7 +141,7 @@ STDMETHOD (InsertRow )(HCHAPTER /* hReserved */,
 
 #### <a name="parameters"></a>パラメーター
 
-*OLE DB プログラマーリファレンス*の「 [IRowsetChange:: InsertRow](/previous-versions/windows/desktop/ms716921(v=vs.85)) 」を参照してください。
+*OLE DB プログラマーリファレンス* の「 [IRowsetChange:: InsertRow](/previous-versions/windows/desktop/ms716921(v=vs.85)) 」を参照してください。
 
 ## <a name="irowsetchangeimplsetdata"></a><a name="setdata"></a> IRowsetChangeImpl:: SetData
 
@@ -156,7 +157,7 @@ STDMETHOD (SetData )(HROW hRow,
 
 #### <a name="parameters"></a>パラメーター
 
-*OLE DB プログラマーリファレンス*の「 [IRowsetChange:: SetData](/previous-versions/windows/desktop/ms721232(v=vs.85)) 」を参照してください。
+*OLE DB プログラマーリファレンス* の「 [IRowsetChange:: SetData](/previous-versions/windows/desktop/ms721232(v=vs.85)) 」を参照してください。
 
 ## <a name="irowsetchangeimplflushdata"></a><a name="flushdata"></a> IRowsetChangeImpl:: FlushData
 

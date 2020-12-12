@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: IDBInitializeImpl クラス'
 title: IDBInitializeImpl クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -38,12 +39,12 @@ helpviewer_keywords:
 - m_dwStatus
 - m_pCUtlPropInfo
 ms.assetid: e4182f81-0443-44f5-a0d3-e7e075d6f883
-ms.openlocfilehash: aff02e812d2806201a08164aeb4a8ef290550725
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 6b37998c78c3e88921318654653995ff356ba18a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88845537"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97287321"
 ---
 # <a name="idbinitializeimpl-class"></a>IDBInitializeImpl クラス
 
@@ -61,7 +62,7 @@ class ATL_NO_VTABLE IDBInitializeImpl : public IDBInitialize
 *T*<br/>
 から派生したクラス `IDBInitializeImpl` 。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** atldb.h
 
@@ -77,7 +78,7 @@ class ATL_NO_VTABLE IDBInitializeImpl : public IDBInitialize
 
 | 名前 | 説明 |
 |-|-|
-|[化](#initialize)|プロバイダーを起動します。|
+|[初期化する](#initialize)|プロバイダーを起動します。|
 |[解除](#uninitialize)|プロバイダーを停止します。|
 
 ### <a name="data-members"></a>データ メンバー
@@ -117,7 +118,7 @@ STDMETHOD(Initialize)(void);
 
 ### <a name="remarks"></a>解説
 
-*OLE DB プログラマーリファレンス*の「 [IDBInitialize:: Initialize](/previous-versions/windows/desktop/ms718026(v=vs.85)) 」を参照してください。
+*OLE DB プログラマーリファレンス* の「 [IDBInitialize:: Initialize](/previous-versions/windows/desktop/ms718026(v=vs.85)) 」を参照してください。
 
 ## <a name="idbinitializeimpluninitialize"></a><a name="uninitialize"></a> IDBInitializeImpl:: 初期化解除
 
@@ -131,7 +132,7 @@ STDMETHOD(Uninitialize)(void);
 
 ### <a name="remarks"></a>解説
 
-*OLE DB プログラマーのリファレンス*にある「 [IDBInitialize:: の初期化](/previous-versions/windows/desktop/ms719648(v=vs.85))を解除する」を参照してください。
+*OLE DB プログラマーのリファレンス* にある「 [IDBInitialize:: の初期化](/previous-versions/windows/desktop/ms719648(v=vs.85))を解除する」を参照してください。
 
 ## <a name="idbinitializeimplm_dwstatus"></a><a name="dwstatus"></a> IDBInitializeImpl:: m_dwStatus
 

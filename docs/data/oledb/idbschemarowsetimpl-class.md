@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: IDBSchemaRowsetImpl クラス'
 title: IDBSchemaRowsetImpl クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -36,12 +37,12 @@ helpviewer_keywords:
 - GetRowset method
 - GetSchemas method
 ms.assetid: bd7bf0d7-a1c6-4afa-88e3-cfdbdf560703
-ms.openlocfilehash: d78aa23469cc0fa94498f93e9a6975e0a7c827e9
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 392f74793f363c203b740b14b00b605d8256bef5
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91509040"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97287282"
 ---
 # <a name="idbschemarowsetimpl-class"></a>IDBSchemaRowsetImpl クラス
 
@@ -59,7 +60,7 @@ class ATL_NO_VTABLE IDBSchemaRowsetImpl : public IDBSchemaRowset
 *SessionClass*<br/>
 `IDBSchemaRowsetImpl` が継承されるクラス。 通常、このクラスは、ユーザーのセッション クラスです。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** atldb.h
 
@@ -80,17 +81,17 @@ class ATL_NO_VTABLE IDBSchemaRowsetImpl : public IDBSchemaRowset
 |[GetRowset](#getrowset)|スキーマ行セットを返します。|
 |[GetSchemas](#getschemas)|[IDBSchemaRowsetImpl::GetRowset](#getrowset)でアクセスできるスキーマ行セットの一覧を返します。|
 
-## <a name="remarks"></a>注釈
+## <a name="remarks"></a>解説
 
 このクラスは、 [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686(v=vs.85)) インターフェイスと、テンプレート化された作成関数 [CreateSchemaRowset](#createschemarowset)を実装します。
 
-OLE DB はスキーマ行セットを使用して、プロバイダーのデータに関するデータを返します。 このようなデータは、多くの場合、"メタデータ" と呼ばれます。 既定では、プロバイダーは常に、、およびをサポートしている必要があり `DBSCHEMA_TABLES` `DBSCHEMA_COLUMNS` ます。詳細に `DBSCHEMA_PROVIDER_TYPES` ついては*OLE DB プログラマーリファレンス*の[IDBSchemaRowset](/previous-versions/windows/desktop/ms713686(v=vs.85))を参照してください。 スキーマ行セットはスキーマ マップで指定します。 スキーマ マップ エントリの詳細については、「 [SCHEMA_ENTRY](./macros-for-ole-db-provider-templates.md#schema_entry)」を参照してください。
+OLE DB はスキーマ行セットを使用して、プロバイダーのデータに関するデータを返します。 このようなデータは、多くの場合、"メタデータ" と呼ばれます。 既定では、プロバイダーは常に、、およびをサポートしている必要があり `DBSCHEMA_TABLES` `DBSCHEMA_COLUMNS` ます。詳細に `DBSCHEMA_PROVIDER_TYPES` ついては *OLE DB プログラマーリファレンス* の [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686(v=vs.85))を参照してください。 スキーマ行セットはスキーマ マップで指定します。 スキーマ マップ エントリの詳細については、「 [SCHEMA_ENTRY](./macros-for-ole-db-provider-templates.md#schema_entry)」を参照してください。
 
 ATL オブジェクト ウィザードの OLE DB プロバイダー ウィザードでは、プロジェクトのスキーマ行セットのコードが自動的に生成されます (既定では、ウィザードは、前述の必須のスキーマ行セットをサポートしています)。ATL オブジェクトウィザードを使用してコンシューマーを作成する場合、ウィザードはスキーマ行セットを使用して、適切なデータをプロバイダーにバインドします。 正しいメタデータを提供するようにスキーマ行セットを実装していないと、正しいデータがバインドされません。
 
 プロバイダーでスキーマ行セットをサポートする方法については、「 [スキーマ行セットのサポート](../../data/oledb/supporting-schema-rowsets.md)」を参照してください。
 
-スキーマ行セットの詳細については、 [OLE DB プログラマーズ リファレンス](/previous-versions/windows/desktop/ms712921(v=vs.85)) の *スキーマ行セット*に関するセクションを参照してください。
+スキーマ行セットの詳細については、 [OLE DB プログラマーズ リファレンス](/previous-versions/windows/desktop/ms712921(v=vs.85)) の *スキーマ行セット* に関するセクションを参照してください。
 
 ## <a name="idbschemarowsetimplcheckrestrictions"></a><a name="checkrestrictions"></a> IDBSchemaRowsetImpl:: CheckRestrictions 制限事項
 
@@ -112,15 +113,15 @@ HRESULT CheckRestrictions(REFGUID rguidSchema,
 [入力] コンシューマーがスキーマ行セットに渡した制限の数。
 
 *rgRestrictions*<br/>
-[入力] 設定する制限値の長さ *cRestrictions* の配列。 詳細については、「 [Setrestrictions 制限](#setrestrictions)」の*rgRestrictions*パラメーターの説明を参照してください。
+[入力] 設定する制限値の長さ *cRestrictions* の配列。 詳細については、「 [Setrestrictions 制限](#setrestrictions)」の *rgRestrictions* パラメーターの説明を参照してください。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 `CheckRestrictions` を使用して、スキーマ行セットに対して制限の妥当性をチェックします。 `DBSCHEMA_TABLES`、、 `DBSCHEMA_COLUMNS` およびスキーマ行セットの制限をチェックし `DBSCHEMA_PROVIDER_TYPES` ます。 このメソッドを呼び出して、コンシューマーのへの呼び出しが正しいかどうかを判断し `IDBSchemaRowset::GetRowset` ます。 上記以外のスキーマ行セットをサポートする場合は、このタスクを実行する独自の関数を作成する必要があります。
 
 `CheckRestrictions` コンシューマーが、プロバイダーがサポートしている適切な制限と適切な制限の種類 (文字列の VT_BSTR など) を使用して [Getrowset](#getrowset) を呼び出しているかどうかを判断します。 また、正しい制限数がサポートされているかどうかも判断します。 `CheckRestrictions` は、既定で [SetRestrictions](#setrestrictions) 呼び出しを通じて、任意の行セットについてプロバイダーがサポートしている制限の種類を確認します。 次に、コンシューマーが呼び出した制限とプロバイダーがサポートしている制限を比較することで、処理は成功または失敗します。
 
-スキーマ行セットの詳細については、Windows SDK の*OLE DB プログラマーリファレンス*の「 [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686(v=vs.85)) 」を参照してください。
+スキーマ行セットの詳細については、Windows SDK の *OLE DB プログラマーリファレンス* の「 [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686(v=vs.85)) 」を参照してください。
 
 ## <a name="idbschemarowsetimplcreateschemarowset"></a><a name="createschemarowset"></a> IDBSchemaRowsetImpl:: CreateSchemaRowset
 
@@ -149,7 +150,7 @@ HRESULT CreateSchemaRowset(IUnknown *pUnkOuter,
 [入力] スキーマ行セットに適用する制限の数。
 
 *rgRestrictions*<br/>
-[入力] 行セットに適用する `cRestrictions`**VARIANT**の配列。
+[入力] 行セットに適用する `cRestrictions`**VARIANT** の配列。
 
 *riid*<br/>
 から出力の [QueryInterface](../../atl/queryinterface.md) のインターフェイス `IUnknown` 。
@@ -161,16 +162,16 @@ HRESULT CreateSchemaRowset(IUnknown *pUnkOuter,
 [入力] 設定するプロパティを指定する [DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85)) 構造体の配列。
 
 *ppRowset*<br/>
-入出力 `IUnknown` *Riid*によって要求された出力。 これ `IUnknown` は、スキーマ行セットオブジェクトのインターフェイスです。
+入出力 `IUnknown` *Riid* によって要求された出力。 これ `IUnknown` は、スキーマ行セットオブジェクトのインターフェイスです。
 
 *pSchemaRowset*<br/>
-[出力] スキーマ行セット クラスのインスタンスへのポインター。 通常、このパラメーターは使用されません。使用できるのは、スキーマ行セットを COM オブジェクトに渡す前に、その行セットで多くの作業を実行する必要があるときです。 *PSchemaRowset*の有効期間は*ppRowset*によって制限されます。
+[出力] スキーマ行セット クラスのインスタンスへのポインター。 通常、このパラメーターは使用されません。使用できるのは、スキーマ行セットを COM オブジェクトに渡す前に、その行セットで多くの作業を実行する必要があるときです。 *PSchemaRowset* の有効期間は *ppRowset* によって制限されます。
 
 ### <a name="return-value"></a>戻り値
 
 標準の HRESULT 値。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 この関数は、あらゆる種類のスキーマ行セットに対する汎用作成関数を実装します。 通常、この関数は、ユーザーからは呼び出されません。 これはスキーマ マップの実装によって呼び出されます。
 
@@ -195,9 +196,9 @@ void SetRestrictions(ULONG cRestrictions,
 [入力] 制限をフェッチするスキーマ行セットの GUID の配列。 配列の各要素は、1 つのスキーマ行セットの GUID ( `DBSCHEMA_TABLES`など) を保持します。
 
 *rgRestrictions*<br/>
-[入力] 設定する制限値の長さ *cRestrictions* の配列。 各要素は、GUID によって識別されるスキーマ行セットの制限に対応します。 スキーマ行セットがプロバイダーによってサポートされていない場合、その要素は 0 に設定されます。 それ以外の場合、 **ULONG** 値は、そのスキーマ行セットでサポートされている制限を表すビット マスクを保持します。 特定のスキーマ行セットに対応する制限の詳細については、Windows SDK の*OLE DB プログラマーリファレンス*[のスキーマ](/previous-versions/windows/desktop/ms713686(v=vs.85))行セット guid の表を参照してください。
+[入力] 設定する制限値の長さ *cRestrictions* の配列。 各要素は、GUID によって識別されるスキーマ行セットの制限に対応します。 スキーマ行セットがプロバイダーによってサポートされていない場合、その要素は 0 に設定されます。 それ以外の場合、 **ULONG** 値は、そのスキーマ行セットでサポートされている制限を表すビット マスクを保持します。 特定のスキーマ行セットに対応する制限の詳細については、Windows SDK の *OLE DB プログラマーリファレンス*[のスキーマ](/previous-versions/windows/desktop/ms713686(v=vs.85))行セット guid の表を参照してください。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 `IDBSchemaRowset`オブジェクトは、 `SetRestrictions` 特定のスキーマ行セットでサポートする制限を判断するためにを呼び出します ( [getschemas](#getschemas)によってアップキャストされたポインターによって呼び出されます)。 制限により、コンシューマーは一致する行だけをフェッチできます (たとえば、テーブル "MyTable" 内のすべての列を検索します)。 制限は省略可能であり、制限がサポートされていない場合 (既定)、常にすべてのデータが返されます。
 
@@ -207,7 +208,7 @@ void SetRestrictions(ULONG cRestrictions,
 
 スキーマ行セットをサポートするプロバイダーの例については、 [UpdatePV](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Provider/UPDATEPV) サンプルを参照してください。
 
-スキーマ行セットの詳細については、Windows SDK の*OLE DB プログラマーリファレンス*の「 [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686(v=vs.85)) 」を参照してください。
+スキーマ行セットの詳細については、Windows SDK の *OLE DB プログラマーリファレンス* の「 [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686(v=vs.85)) 」を参照してください。
 
 ## <a name="idbschemarowsetimplgetrowset"></a><a name="getrowset"></a> IDBSchemaRowsetImpl:: GetRowset
 
@@ -238,7 +239,7 @@ STDMETHOD (GetRowset)(IUnknown *pUnkOuter,
 [入力] 行セットに適用する制限の数。
 
 *rgRestrictions*<br/>
-[入力] 制限を表す `cRestrictions`**VARIANT**の配列。
+[入力] 制限を表す `cRestrictions`**VARIANT** の配列。
 
 *riid*<br/>
 [入力] 新しく作成されたスキーマ行セットに対して要求する IID。
@@ -252,7 +253,7 @@ STDMETHOD (GetRowset)(IUnknown *pUnkOuter,
 *ppRowset*<br/>
 [出力] 新しく作成されたスキーマ行セットに対して要求するインターフェイスへのポインター。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 このメソッドを使用するには、ユーザーはセッション クラスにスキーマ マップを持っている必要があります。 スキーママップ情報を使用して、 `GetRowset` *rguidschema* パラメーターがいずれかのマップエントリ guid と等しい場合は、指定された行セットオブジェクトを作成します。 マップ エントリについては、「 [SCHEMA_ENTRY](./macros-for-ole-db-provider-templates.md#schema_entry) 」を参照してください。
 
@@ -279,9 +280,9 @@ STDMETHOD (GetSchema s )(ULONG * pcSchemas,
 [出力] スキーマ行セット GUID の配列へのポインターが格納される GUID の配列へのポインター。
 
 *prgRest*<br/>
-[出力] 制限配列が格納される **ULONG**の配列へのポインター。
+[出力] 制限配列が格納される **ULONG** の配列へのポインター。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 このメソッドは、プロバイダーによってサポートされるすべてのスキーマ行セットの配列を返します。 Windows SDK の「 [IDBSchemaRowset:: GetSchemas](/previous-versions/windows/desktop/ms719605(v=vs.85)) 」を参照してください。
 

@@ -1,4 +1,5 @@
 ---
+description: 詳細については、OLE DB コンシューマーテンプレートのマクロとグローバル関数に関するページを参照してください。
 title: OLE DB コンシューマー テンプレート用マクロおよびグローバル関数
 ms.date: 02/11/2019
 f1_keywords:
@@ -99,12 +100,12 @@ helpviewer_keywords:
 - END_PARAM_MAP macro
 - SET_PARAM_TYPE macro
 ms.assetid: 8765eb7b-32dd-407c-bacf-8890ef959837
-ms.openlocfilehash: 60f642366589bb13b15665331a81d440322eb13f
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: fb6e126483690e43ceaf3814f6c288ecfdc69da1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91504033"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97287074"
 ---
 # <a name="macros-and-global-functions-for-ole-db-consumer-templates"></a>OLE DB コンシューマー テンプレート用マクロおよびグローバル関数
 
@@ -140,15 +141,15 @@ OLE DB コンシューマーテンプレートには、次のマクロとグロ�
 |[BLOB_NAME_STATUS](#blob_name_status)|BLOB データ列の状態を報告します。|
 |[BOOKMARK_ENTRY](#bookmark_entry)|行セットのブックマークエントリを表します。 ブックマークエントリは、特殊な種類の列エントリです。|
 |[COLUMN_ENTRY](#column_entry)|データベース内の特定の列へのバインドを表します。|
-|[COLUMN_ENTRY_EX](#column_entry_ex)|データベース内の特定の列へのバインドを表します。 *型*、*長さ*、*有効桁数*、*小数点以下桁数*、および*状態*のパラメーターをサポートします。|
-|[COLUMN_ENTRY_LENGTH](#column_entry_length)|データベース内の特定の列へのバインドを表します。 *長さ*の変数をサポートします。|
+|[COLUMN_ENTRY_EX](#column_entry_ex)|データベース内の特定の列へのバインドを表します。 *型*、*長さ*、*有効桁数*、*小数点以下桁数*、および *状態* のパラメーターをサポートします。|
+|[COLUMN_ENTRY_LENGTH](#column_entry_length)|データベース内の特定の列へのバインドを表します。 *長さ* の変数をサポートします。|
 |[COLUMN_ENTRY_LENGTH_STATUS](#column_entry_length_status)|データベース内の特定の列へのバインドを表します。 は、 *ステータス* と *長さ* のパラメーターをサポートしています。|
-|[COLUMN_ENTRY_PS](#column_entry_ps)|データベース内の特定の列へのバインドを表します。 *有効桁数*と*小数点以下*桁数のパラメーターをサポートします。|
-|[COLUMN_ENTRY_PS_LENGTH](#column_entry_ps_length)|データベース内の特定の列へのバインドを表します。 *長さ*の変数、*有効桁数*、および*小数点以下桁数*のパラメーターをサポートします。|
+|[COLUMN_ENTRY_PS](#column_entry_ps)|データベース内の特定の列へのバインドを表します。 *有効桁数* と *小数点以下* 桁数のパラメーターをサポートします。|
+|[COLUMN_ENTRY_PS_LENGTH](#column_entry_ps_length)|データベース内の特定の列へのバインドを表します。 *長さ* の変数、*有効桁数*、および *小数点以下桁数* のパラメーターをサポートします。|
 |[COLUMN_ENTRY_PS_LENGTH_STATUS](#column_entry_ps_length_status)|データベース内の特定の列へのバインドを表します。 では、 *状態* と *長さ* の変数、 *有効桁数* 、および *小数点以下桁数* のパラメーターがサポートされます。|
 |[COLUMN_ENTRY_PS_STATUS](#column_entry_ps_status)|データベース内の特定の列へのバインドを表します。 では、 *状態* 変数、 *有効桁数* 、および *小数点以下桁数* のパラメーターがサポートされます。|
-|[COLUMN_ENTRY_STATUS](#column_entry_status)|データベース内の特定の列へのバインドを表します。 *Status*変数をサポートします。|
-|[COLUMN_ENTRY_TYPE](#column_entry_type)|データベース内の特定の列へのバインドを表します。 *型*パラメーターをサポートします。|
+|[COLUMN_ENTRY_STATUS](#column_entry_status)|データベース内の特定の列へのバインドを表します。 *Status* 変数をサポートします。|
+|[COLUMN_ENTRY_TYPE](#column_entry_type)|データベース内の特定の列へのバインドを表します。 *型* パラメーターをサポートします。|
 |[COLUMN_ENTRY_TYPE_SIZE](#column_entry_type_size)|データベース内の特定の列へのバインドを表します。 では、 *型* パラメーターと *サイズ* パラメーターがサポートされています。|
 |[COLUMN_NAME](#column_name)|名前を指定して、データベース内の特定の列へのバインドを表します。|
 |[COLUMN_NAME_EX](#column_name_ex)|名前を指定して、データベース内の特定の列へのバインドを表します。 では、データ型、サイズ、有効桁数、小数点以下桁数、列の長さ、および列の状態の指定をサポートしています。|
@@ -195,9 +196,9 @@ inline void AtlTraceErrorRecords(HRESULT hrErr = S_OK);
 *hErr*<br/>
 からOLE DB コンシューマーテンプレートメンバー関数によって返される HRESULT。
 
-#### <a name="remarks"></a>注釈
+#### <a name="remarks"></a>解説
 
-*HErr*が S_OK ない場合、 `AtlTraceErrorRecords` OLE DB エラーレコード情報をダンプデバイス ([出力] ウィンドウの [**デバッグ**] タブまたはファイル) にダンプします。 プロバイダーから取得されるエラーレコード情報には、行番号、ソース、説明、ヘルプファイル、コンテキスト、および各エラーレコードエントリの GUID が含まれます。 `AtlTraceErrorRecords` デバッグビルドでのみこの情報をダンプします。 リリースビルドでは、空のスタブは最適化されています。詳細については、「 [CDBErrorInfo クラス](../../data/oledb/cdberrorinfo-class.md)」を参照してください。
+*HErr* が S_OK ない場合、 `AtlTraceErrorRecords` OLE DB エラーレコード情報をダンプデバイス ([出力] ウィンドウの [**デバッグ**] タブまたはファイル) にダンプします。 プロバイダーから取得されるエラーレコード情報には、行番号、ソース、説明、ヘルプファイル、コンテキスト、および各エラーレコードエントリの GUID が含まれます。 `AtlTraceErrorRecords` デバッグビルドでのみこの情報をダンプします。 リリースビルドでは、空のスタブは最適化されています。詳細については、「 [CDBErrorInfo クラス](../../data/oledb/cdberrorinfo-class.md)」を参照してください。
 
 ### <a name="begin_accessor"></a><a name="begin_accessor"></a> BEGIN_ACCESSOR
 
@@ -217,7 +218,7 @@ BEGIN_ACCESSOR(num, bAuto)
 *bAuto*<br/>
 からこのアクセサーが自動アクセサーまたは手動アクセサーのどちらであるかを指定します。 の場合 **`true`** 、アクセサーは auto です。の場合 **`false`** 、アクセサーは手動です。 自動アクセサーは、移動操作でデータがフェッチされることを意味します。
 
-#### <a name="remarks"></a>注釈
+#### <a name="remarks"></a>解説
 
 行セットに複数のアクセサーがある場合は、BEGIN_ACCESSOR_MAP を指定し、個々のアクセサーに対して BEGIN_ACCESSOR マクロを使用する必要があります。 BEGIN_ACCESSOR マクロは、END_ACCESSOR マクロを使用して完了します。 BEGIN_ACCESSOR_MAP マクロは、END_ACCESSOR_MAP マクロを使用して完了します。
 
@@ -243,7 +244,7 @@ BEGIN_ACCESSOR_MAP(x, num)
 *num*<br/>
 [入力] このアクセサー マップのアクセサーの数。
 
-#### <a name="remarks"></a>注釈
+#### <a name="remarks"></a>解説
 
 行セットに複数のアクセサーがある場合は、先頭に BEGIN_ACCESSOR_MAP を指定し、個々のアクセサーに対して BEGIN_ACCESSOR マクロを使用する必要があります。 BEGIN_ACCESSOR マクロは、END_ACCESSOR マクロを使用して完了します。 アクセサーマップは、END_ACCESSOR_MAP マクロを使用して完了します。
 
@@ -345,7 +346,7 @@ BEGIN_COLUMN_MAP(x)
 *x*<br/>
 [入力] `CAccessor`から派生したユーザー レコード クラスの名前。
 
-#### <a name="remarks"></a>注釈
+#### <a name="remarks"></a>解説
 
 このマクロは、行セットに対してアクセサーが 1 つしか必要ない場合に使用します。 1 つの行セットに対して複数のアクセサーが必要な場合は、 [BEGIN_ACCESSOR_MAP](#begin_accessor_map)を使用します。
 
@@ -678,7 +679,7 @@ COLUMN_ENTRY(nOrdinal, data)
 
 #### <a name="parameters"></a>パラメーター
 
-*OLE DB プログラマーリファレンス*の「 [DBBINDING](/previous-versions/windows/desktop/ms716845(v=vs.85)) 」を参照してください。
+*OLE DB プログラマーリファレンス* の「 [DBBINDING](/previous-versions/windows/desktop/ms716845(v=vs.85)) 」を参照してください。
 
 *nOrdinal*<br/>
 から列番号。
@@ -686,7 +687,7 @@ COLUMN_ENTRY(nOrdinal, data)
 *data*<br/>
 からユーザーレコード内の対応するデータメンバー。
 
-#### <a name="remarks"></a>注釈
+#### <a name="remarks"></a>解説
 
 COLUMN_ENTRY マクロは、次の場所で使用されます。
 
@@ -712,7 +713,7 @@ COLUMN_ENTRY_EX(nOrdinal, wType, nLength, nPrecision, nScale, data, length, stat
 
 #### <a name="parameters"></a>パラメーター
 
-*OLE DB プログラマーリファレンス*の「 [DBBINDING](/previous-versions/windows/desktop/ms716845(v=vs.85)) 」を参照してください。
+*OLE DB プログラマーリファレンス* の「 [DBBINDING](/previous-versions/windows/desktop/ms716845(v=vs.85)) 」を参照してください。
 
 *nOrdinal*<br/>
 から列番号。
@@ -738,7 +739,7 @@ COLUMN_ENTRY_EX(nOrdinal, wType, nLength, nPrecision, nScale, data, length, stat
 *status*<br/>
 から列の状態にバインドされる変数。
 
-#### <a name="remarks"></a>注釈
+#### <a name="remarks"></a>解説
 
 COLUMN_ENTRY_EX マクロは、次の場所で使用されます。
 
@@ -764,7 +765,7 @@ COLUMN_ENTRY_LENGTH(nOrdinal, data, length)
 
 #### <a name="parameters"></a>パラメーター
 
-*OLE DB プログラマーリファレンス*の「 [DBBINDING](/previous-versions/windows/desktop/ms716845(v=vs.85)) 」を参照してください。
+*OLE DB プログラマーリファレンス* の「 [DBBINDING](/previous-versions/windows/desktop/ms716845(v=vs.85)) 」を参照してください。
 
 *nOrdinal*<br/>
 から1から始まる列番号。 ブックマークは列0に対応します。
@@ -775,7 +776,7 @@ COLUMN_ENTRY_LENGTH(nOrdinal, data, length)
 *length*<br/>
 から列の長さにバインドされる変数。
 
-#### <a name="remarks"></a>注釈
+#### <a name="remarks"></a>解説
 
 このマクロは、 *長さ* の変数をサポートします。 これは次の場所で使用されます。
 
@@ -797,7 +798,7 @@ COLUMN_ENTRY_LENGTH_STATUS(nOrdinal, data, length, status)
 
 #### <a name="parameters"></a>パラメーター
 
-*OLE DB プログラマーリファレンス*の「 [DBBINDING](/previous-versions/windows/desktop/ms716845(v=vs.85)) 」を参照してください。
+*OLE DB プログラマーリファレンス* の「 [DBBINDING](/previous-versions/windows/desktop/ms716845(v=vs.85)) 」を参照してください。
 
 *nOrdinal*<br/>
 から列番号。
@@ -811,7 +812,7 @@ COLUMN_ENTRY_LENGTH_STATUS(nOrdinal, data, length, status)
 *status*<br/>
 から列の状態にバインドされる変数。
 
-#### <a name="remarks"></a>注釈
+#### <a name="remarks"></a>解説
 
 このマクロは、長さと状態の変数をサポートする場合に使用します。 これは次の場所で使用されます。
 
@@ -833,7 +834,7 @@ COLUMN_ENTRY_PS(nOrdinal, nPrecision, nScale, data)
 
 #### <a name="parameters"></a>パラメーター
 
-*OLE DB プログラマーリファレンス*の「 [DBBINDING](/previous-versions/windows/desktop/ms716845(v=vs.85)) 」を参照してください。
+*OLE DB プログラマーリファレンス* の「 [DBBINDING](/previous-versions/windows/desktop/ms716845(v=vs.85)) 」を参照してください。
 
 *nOrdinal*<br/>
 から列番号。
@@ -847,7 +848,7 @@ COLUMN_ENTRY_PS(nOrdinal, nPrecision, nScale, data)
 *data*<br/>
 からユーザーレコード内の対応するデータメンバー。
 
-#### <a name="remarks"></a>注釈
+#### <a name="remarks"></a>解説
 
 バインドする列の有効桁数と小数点以下桁数を指定できます。 これは次の場所で使用されます。
 
@@ -869,7 +870,7 @@ COLUMN_ENTRY_PS_LENGTH(nOrdinal, nPrecision, nScale, data, length)
 
 #### <a name="parameters"></a>パラメーター
 
-*OLE DB プログラマーリファレンス*の「 [DBBINDING](/previous-versions/windows/desktop/ms716845(v=vs.85)) 」を参照してください。
+*OLE DB プログラマーリファレンス* の「 [DBBINDING](/previous-versions/windows/desktop/ms716845(v=vs.85)) 」を参照してください。
 
 *nOrdinal*<br/>
 から1から始まる列番号。 ブックマークは列0に対応します。
@@ -886,7 +887,7 @@ COLUMN_ENTRY_PS_LENGTH(nOrdinal, nPrecision, nScale, data, length)
 *length*<br/>
 から列の長さにバインドされる変数。
 
-#### <a name="remarks"></a>注釈
+#### <a name="remarks"></a>解説
 
 バインドする列の有効桁数と小数点以下桁数を指定できます。 このマクロは、 *長さ* の変数をサポートします。 これは次の場所で使用されます。
 
@@ -908,7 +909,7 @@ COLUMN_ENTRY_PS_LENGTH_STATUS(nOrdinal, nPrecision, nScale, data, length, status
 
 #### <a name="parameters"></a>パラメーター
 
-*OLE DB プログラマーリファレンス*の「 [DBBINDING](/previous-versions/windows/desktop/ms716845(v=vs.85)) 」を参照してください。
+*OLE DB プログラマーリファレンス* の「 [DBBINDING](/previous-versions/windows/desktop/ms716845(v=vs.85)) 」を参照してください。
 
 *nOrdinal*<br/>
 から列番号。
@@ -928,7 +929,7 @@ COLUMN_ENTRY_PS_LENGTH_STATUS(nOrdinal, nPrecision, nScale, data, length, status
 *status*<br/>
 から列の状態にバインドされる変数。
 
-#### <a name="remarks"></a>注釈
+#### <a name="remarks"></a>解説
 
 バインドする列の有効桁数と小数点以下桁数を指定できます。 このマクロは、長さと状態の変数をサポートする場合に使用します。 これは次の場所で使用されます。
 
@@ -950,7 +951,7 @@ COLUMN_ENTRY_PS_STATUS(nOrdinal, nPrecision, nScale, data, status)
 
 #### <a name="parameters"></a>パラメーター
 
-*OLE DB プログラマーリファレンス*の「 [DBBINDING](/previous-versions/windows/desktop/ms716845(v=vs.85)) 」を参照してください。
+*OLE DB プログラマーリファレンス* の「 [DBBINDING](/previous-versions/windows/desktop/ms716845(v=vs.85)) 」を参照してください。
 
 *nOrdinal*<br/>
 から列番号。
@@ -967,7 +968,7 @@ COLUMN_ENTRY_PS_STATUS(nOrdinal, nPrecision, nScale, data, status)
 *status*<br/>
 から列の状態にバインドされる変数。
 
-#### <a name="remarks"></a>注釈
+#### <a name="remarks"></a>解説
 
 バインドする列の有効桁数と小数点以下桁数を指定できます。 このマクロは、 *status* 変数をサポートしています。 これは次の場所で使用されます。
 
@@ -989,7 +990,7 @@ COLUMN_ENTRY_STATUS(nOrdinal, data, status)
 
 #### <a name="parameters"></a>パラメーター
 
-*OLE DB プログラマーリファレンス*の「 [DBBINDING](/previous-versions/windows/desktop/ms716845(v=vs.85)) 」を参照してください。
+*OLE DB プログラマーリファレンス* の「 [DBBINDING](/previous-versions/windows/desktop/ms716845(v=vs.85)) 」を参照してください。
 
 *nOrdinal*<br/>
 から列番号。
@@ -1000,7 +1001,7 @@ COLUMN_ENTRY_STATUS(nOrdinal, data, status)
 *status*<br/>
 から列の状態にバインドされる変数。
 
-#### <a name="remarks"></a>注釈
+#### <a name="remarks"></a>解説
 
 このマクロは、 *status* 変数をサポートしています。 これは次の場所で使用されます。
 
@@ -1012,7 +1013,7 @@ COLUMN_ENTRY_STATUS(nOrdinal, data, status)
 
 ### <a name="column_entry_type"></a><a name="column_entry_type"></a> COLUMN_ENTRY_TYPE
 
-データベース内の特定の列へのバインドを表します。 *型*パラメーターをサポートします。
+データベース内の特定の列へのバインドを表します。 *型* パラメーターをサポートします。
 
 #### <a name="syntax"></a>構文
 
@@ -1031,7 +1032,7 @@ COLUMN_ENTRY_TYPE (nOrdinal, wType, data)
 *data*<br/>
 からユーザーレコード内の対応するデータメンバー。
 
-#### <a name="remarks"></a>注釈
+#### <a name="remarks"></a>解説
 
 このマクロは、データ型を指定する手段を提供する [COLUMN_ENTRY](#column_entry) マクロの特殊なバリアントです。
 
@@ -1059,7 +1060,7 @@ COLUMN_ENTRY_TYPE_SIZE(nOrdinal, wType, nLength, data)
 *data*<br/>
 からユーザーレコード内の対応するデータメンバー。
 
-#### <a name="remarks"></a>注釈
+#### <a name="remarks"></a>解説
 
 このマクロは、データサイズと型を指定する手段を提供する、 [COLUMN_ENTRY](#column_entry) マクロの特殊なバリアントです。
 
@@ -1081,7 +1082,7 @@ COLUMN_NAME(pszName, data)
 *data*<br/>
 からユーザーレコード内の対応するデータメンバー。
 
-#### <a name="remarks"></a>注釈
+#### <a name="remarks"></a>解説
 
 COLUMN_NAME_ * マクロは、 [COLUMN_ENTRY](#column_entry)と同じ場所で使用されます。
 
@@ -1127,7 +1128,7 @@ COLUMN_NAME_EX(pszName, wType, nLength, nPrecision, nScale, data, length, status
 *status*<br/>
 から列の状態にバインドされる変数。
 
-#### <a name="remarks"></a>注釈
+#### <a name="remarks"></a>解説
 
 COLUMN_NAME_ * マクロを使用する場所の詳細については、「 [COLUMN_NAME](#column_name) 」を参照してください。
 
@@ -1152,7 +1153,7 @@ COLUMN_NAME_LENGTH(pszName, data, length)
 *length*<br/>
 から列の長さにバインドされる変数。
 
-#### <a name="remarks"></a>注釈
+#### <a name="remarks"></a>解説
 
 COLUMN_NAME_ * マクロを使用する場所の詳細については、「 [COLUMN_NAME](#column_name) 」を参照してください。
 
@@ -1180,7 +1181,7 @@ COLUMN_NAME_LENGTH_STATUS(pszName, data, length, status )
 *status*<br/>
 から列の状態にバインドされる変数。
 
-#### <a name="remarks"></a>注釈
+#### <a name="remarks"></a>解説
 
 COLUMN_NAME_ * マクロを使用する場所の詳細については、「 [COLUMN_NAME](#column_name) 」を参照してください。
 
@@ -1208,7 +1209,7 @@ COLUMN_NAME_PS(pszName, nPrecision, nScale, data )
 *data*<br/>
 からユーザーレコード内の対応するデータメンバー。
 
-#### <a name="remarks"></a>注釈
+#### <a name="remarks"></a>解説
 
 COLUMN_NAME_ * マクロを使用する場所の詳細については、「 [COLUMN_NAME](#column_name) 」を参照してください。
 
@@ -1239,7 +1240,7 @@ COLUMN_NAME_PS_LENGTH(pszName, nPrecision, nScale, data, length )
 *length*<br/>
 から列の長さにバインドされる変数。
 
-#### <a name="remarks"></a>注釈
+#### <a name="remarks"></a>解説
 
 COLUMN_NAME_ * マクロを使用する場所の詳細については、「 [COLUMN_NAME](#column_name) 」を参照してください。
 
@@ -1273,7 +1274,7 @@ COLUMN_NAME_PS_LENGTH_STATUS(pszName, nPrecision, nScale, data, length, status )
 *status*<br/>
 から列の状態にバインドされる変数。
 
-#### <a name="remarks"></a>注釈
+#### <a name="remarks"></a>解説
 
 COLUMN_NAME_ * マクロを使用する場所の詳細については、「 [COLUMN_NAME](#column_name) 」を参照してください。
 
@@ -1304,7 +1305,7 @@ COLUMN_NAME_PS_STATUS(pszName, nPrecision, nScale, data, status )
 *status*<br/>
 から列の状態にバインドされる変数。
 
-#### <a name="remarks"></a>注釈
+#### <a name="remarks"></a>解説
 
 COLUMN_NAME_ * マクロを使用する場所の詳細については、「 [COLUMN_NAME](#column_name) 」を参照してください。
 
@@ -1329,7 +1330,7 @@ COLUMN_NAME_STATUS(pszName, data, status )
 *status*<br/>
 から列の状態にバインドされる変数。
 
-#### <a name="remarks"></a>注釈
+#### <a name="remarks"></a>解説
 
 COLUMN_NAME_ * マクロを使用する場所の詳細については、「 [COLUMN_NAME](#column_name) 」を参照してください。
 
@@ -1354,7 +1355,7 @@ COLUMN_NAME_TYPE(pszName, wType, data)
 *data*<br/>
 からユーザーレコード内の対応するデータメンバー。
 
-#### <a name="remarks"></a>注釈
+#### <a name="remarks"></a>解説
 
 COLUMN_NAME_ * マクロを使用する場所の詳細については、「 [COLUMN_NAME](#column_name) 」を参照してください。
 
@@ -1385,7 +1386,7 @@ COLUMN_NAME_TYPE_PS(pszName, wType, nPrecision, nScale, data)
 *data*<br/>
 からユーザーレコード内の対応するデータメンバー。
 
-#### <a name="remarks"></a>注釈
+#### <a name="remarks"></a>解説
 
 COLUMN_NAME_ * マクロを使用する場所の詳細については、「 [COLUMN_NAME](#column_name) 」を参照してください。
 
@@ -1413,7 +1414,7 @@ COLUMN_NAME_TYPE_SIZE(pszName, wType, nLength, data)
 *data*<br/>
 からユーザーレコード内の対応するデータメンバー。
 
-#### <a name="remarks"></a>注釈
+#### <a name="remarks"></a>解説
 
 COLUMN_NAME_ * マクロを使用する場所の詳細については、「 [COLUMN_NAME](#column_name) 」を参照してください。
 
@@ -1441,7 +1442,7 @@ COLUMN_NAME_TYPE_STATUS(pszName, wType, status, data)
 *data*<br/>
 からユーザーレコード内の対応するデータメンバー。
 
-#### <a name="remarks"></a>注釈
+#### <a name="remarks"></a>解説
 
 COLUMN_NAME_ * マクロを使用する場所の詳細については、「 [COLUMN_NAME](#column_name) 」を参照してください。
 
@@ -1484,7 +1485,7 @@ DEFINE_COMMAND(x, szCommand)
 *szCommand*<br/>
 から [CCommand](../../data/oledb/ccommand-class.md)を使用するときに行セットを作成するために使用されるコマンド文字列。
 
-#### <a name="remarks"></a>注釈
+#### <a name="remarks"></a>解説
 
 [CCommand:: Open](./ccommand-class.md#open)メソッドでコマンドテキストを指定しない場合、指定したコマンド文字列が既定値として使用されます。
 
@@ -1512,7 +1513,7 @@ DEFINE_COMMAND_EX(x, wszCommand)
 *wszCommand*<br/>
 から [CCommand](../../data/oledb/ccommand-class.md)を使用するときに行セットを作成するために使用されるコマンド文字列。
 
-#### <a name="remarks"></a>注釈
+#### <a name="remarks"></a>解説
 
 [CCommand:: Open](./ccommand-class.md#open)メソッドでコマンドテキストを指定しない場合、指定したコマンド文字列が既定値として使用されます。
 
@@ -1537,7 +1538,7 @@ BEGIN_PARAM_MAP(x)
 *x*<br/>
 [入力] ユーザー レコード クラスの名前。
 
-#### <a name="remarks"></a>注釈
+#### <a name="remarks"></a>解説
 
 パラメーターは [コマンド](/previous-versions/windows/desktop/ms724608(v=vs.85))によって使用されます。
 
@@ -1574,9 +1575,9 @@ SET_PARAM_TYPE(type)
 *type*<br/>
 [入力] 設定するパラメーターの種類。
 
-#### <a name="remarks"></a>注釈
+#### <a name="remarks"></a>解説
 
-プロバイダーは、基になるデータ ソースによってサポートされているパラメーター入出力タイプだけをサポートします。 型は1つ以上の値の組み合わせです `DBPARAMIO` ( *OLE DB プログラマーリファレンス*の「 [DBBINDING 構造体](/previous-versions/windows/desktop/ms716845(v=vs.85))」を参照してください)。
+プロバイダーは、基になるデータ ソースによってサポートされているパラメーター入出力タイプだけをサポートします。 型は1つ以上の値の組み合わせです `DBPARAMIO` ( *OLE DB プログラマーリファレンス* の「 [DBBINDING 構造体](/previous-versions/windows/desktop/ms716845(v=vs.85))」を参照してください)。
 
 - `DBPARAMIO_NOTPARAM` アクセサーにはパラメーターがありません。 通常、 `eParamIO` 行アクセサーでは、この値をに設定して、パラメーターが無視されることをユーザーに通知します。
 
@@ -1628,7 +1629,7 @@ END_COLUMN_MAP()
 };
 ```
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** atldbcli.h
 

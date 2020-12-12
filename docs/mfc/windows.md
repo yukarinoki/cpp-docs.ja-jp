@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: Windows'
 title: Windows
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,62 +8,62 @@ helpviewer_keywords:
 - MFC, windows
 - window objects [MFC], MFC Framework
 ms.assetid: dd92bf34-842e-40fe-8aea-3028b55314d5
-ms.openlocfilehash: ee5e6fef58b9ddfa2172b9024d414bdb03e93283
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c38dd8224fbd518fb0ebb2407ec4d03a43d90c63
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62338000"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97284929"
 ---
 # <a name="windows"></a>Windows
 
-この一連のトピックでは、ウィンドウ オブジェクトの MFC フレームワークについて説明します。 クラスから派生するすべての MFC windows [CWnd](../mfc/reference/cwnd-class.md)(フレーム ウィンドウ、ビュー、ダイアログ ボックスに、コントロールなど)。
+この記事ファミリでは、MFC フレームワークのウィンドウオブジェクトについて説明します。 すべての MFC ウィンドウは、フレームウィンドウ、ビュー、ダイアログボックス、コントロールなどのクラス [CWnd](../mfc/reference/cwnd-class.md)から派生します。
 
-記事の最初のグループについて説明します[ウィンドウ オブジェクト](../mfc/window-objects.md)一般にします。 C++ ウィンドウ オブジェクト、詳細については、このグループを参照してくださいカプセル化の方法、 `HWND`、および使用する方法に子ウィンドウなどの独自のウィンドウを作成するときにします。
+最初の記事のグループでは、一般的な [ウィンドウオブジェクト](../mfc/window-objects.md) について説明します。 C++ ウィンドウオブジェクトの一般的な情報、をカプセル化する方法、 `HWND` および子ウィンドウなど、独自のウィンドウを作成するときにそれらを使用する方法については、このグループを参照してください。
 
-記事の 2 番目のグループ[フレーム ウィンドウ](../mfc/frame-windows.md)-コンテンツの周囲にフレームを配置する windows-具体的には。 MFC フレームワークがフレーム ウィンドウおよびコントロール バーやビューなどのフレームの内容を管理する方法については、このグループを参照してください。
+2番目の記事では、フレーム [ウィンドウ](../mfc/frame-windows.md)(コンテンツの周囲にフレームを配置するウィンドウ) について説明します。 コントロールバーとビューを含む、フレームウィンドウとそのフレームの内容を MFC フレームワークで管理する方法の詳細については、このグループを参照してください。
 
-## <a name="what-do-you-want-to-know-more-about"></a>方法については、するして操作を行います
+## <a name="what-do-you-want-to-know-more-about"></a>詳細については、次を参照してください。
 
-*ウィンドウ オブジェクトの概要に関するトピック*
+*ウィンドウオブジェクトに関する一般的なトピック*
 
 - [ウィンドウ オブジェクト](../mfc/window-objects.md)
 
-- [C++ 関係ウィンドウ オブジェクトと HWND](../mfc/relationship-between-a-cpp-window-object-and-an-hwnd.md)
+- [C++ ウィンドウオブジェクトと HWND ハンドルの関係](../mfc/relationship-between-a-cpp-window-object-and-an-hwnd.md)
 
-- [ウィンドウ クラスの派生](../mfc/derived-window-classes.md)
+- [派生ウィンドウクラス](../mfc/derived-window-classes.md)
 
-- [ウィンドウ オブジェクトの作成](../mfc/creating-windows.md)
+- [作成 (ウィンドウオブジェクトを)](../mfc/creating-windows.md)
 
-- [ウィンドウ オブジェクトの破棄](../mfc/destroying-window-objects.md)
+- [破棄 (ウィンドウオブジェクトを)](../mfc/destroying-window-objects.md)
 
-- [ウィンドウ「クラス」の登録](../mfc/registering-window-classes.md)
+- [ウィンドウ "classes" を登録しています](../mfc/registering-window-classes.md)
 
 - [ウィンドウ オブジェクトの操作](../mfc/working-with-window-objects.md)
 
-- [デバイス コンテキスト](../mfc/device-contexts.md): 描画の Windows デバイスに依存するオブジェクト
+- [デバイスコンテキスト](../mfc/device-contexts.md): Windows がデバイスに依存しないようにするオブジェクト
 
-- [グラフィック オブジェクト](../mfc/graphic-objects.md): ペン、ブラシ、フォント、ビットマップ、パレット、リージョン
+- [グラフィックオブジェクト](../mfc/graphic-objects.md): ペン、ブラシ、フォント、ビットマップ、パレット、領域
 
-*フレーム ウィンドウのトピック*
+*フレームウィンドウのトピック*
 
-- [フレーム ウィンドウ](../mfc/frame-windows.md): ウィンドウ オブジェクトのフレームを提供します。
+- [フレームウィンドウ](../mfc/frame-windows.md): フレームを提供するウィンドウオブジェクト
 
-- [フレーム ウィンドウとビュー](../mfc/frame-windows.md)
+- [フレームウィンドウとビュー](../mfc/frame-windows.md)
 
 - [フレーム ウィンドウ クラス](../mfc/frame-window-classes.md)
 
-- [フレーム ウィンドウ スタイル](../mfc/frame-window-styles-cpp.md)
+- [フレームウィンドウスタイル](../mfc/frame-window-styles-cpp.md)
 
-- [MFC で作成したウィンドウのスタイルを変更します。](../mfc/changing-the-styles-of-a-window-created-by-mfc.md)
+- [MFC で作成したウィンドウのスタイル変更](../mfc/changing-the-styles-of-a-window-created-by-mfc.md)
 
-- [フレーム ウィンドウ](../mfc/what-frame-windows-do.md)
+- [フレーム ウィンドウの機能](../mfc/what-frame-windows-do.md)
 
 - [フレーム ウィンドウの使用](../mfc/using-frame-windows.md)
 
-- [MD/子ウィンドウ ([クイック ウォッチ] ウィンドウ) の管理](../mfc/managing-mdi-child-windows.md)
+- [MD/子ウィンドウの管理 (MDICLIENT ウィンドウ)](../mfc/managing-mdi-child-windows.md)
 
-- [メニューのコントロール バー、およびアクセラレータの管理](../mfc/managing-menus-control-bars-and-accelerators.md)
+- [メニュー、コントロール バー、およびアクセラレータの管理](../mfc/managing-menus-control-bars-and-accelerators.md)
 
 - [CFrameWnd](../mfc/reference/cframewnd-class.md)
 
@@ -70,44 +71,44 @@ ms.locfileid: "62338000"
 
 - [CMDIChildWnd](../mfc/reference/cmdichildwnd-class.md)
 
-- [ビューの使い方](../mfc/using-views.md)
+- [ビューの使用](../mfc/using-views.md)
 
-- [複数のドキュメント タイプ、ビュー、およびフレーム Windows (分割ウィンドウ)](../mfc/multiple-document-types-views-and-frame-windows.md)
+- [複数のドキュメントタイプ、ビュー、フレームウィンドウ (分割ウィンドウ)](../mfc/multiple-document-types-views-and-frame-windows.md)
 
-- [メッセージ (マップおよびハンドラー関数)](../mfc/messages.md)
+- [Messages (maps および handler 関数)](../mfc/messages.md)
 
-*作成し、Windows の破棄*
+*ウィンドウの作成と破棄*
 
-- [一般的なウィンドウ作成順序](../mfc/general-window-creation-sequence.md)
+- [全般ウィンドウ作成順序](../mfc/general-window-creation-sequence.md)
 
-- [ウィンドウ オブジェクトを破棄します。](../mfc/destroying-window-objects.md)
+- [ウィンドウオブジェクトの破棄](../mfc/destroying-window-objects.md)
 
-- [ドキュメント フレーム ウィンドウを作成します。](../mfc/creating-document-frame-windows.md)
+- [ドキュメントフレームウィンドウを作成する](../mfc/creating-document-frame-windows.md)
 
-- [フレーム ウィンドウを破棄します。](../mfc/destroying-frame-windows.md)
+- [フレームウィンドウの破棄](../mfc/destroying-frame-windows.md)
 
-*Windows のスプリッターを作成します。*
+*分割ウィンドウの作成*
 
-- [分割ウィンドウを作成します。](../mfc/multiple-document-types-views-and-frame-windows.md)
+- [分割ウィンドウの作成](../mfc/multiple-document-types-views-and-frame-windows.md)
 
-*Windows の子と、現在のビューを管理します。*
+*子ウィンドウと現在のビューの管理*
 
-- [MDI 子ウィンドウを管理します。](../mfc/managing-mdi-child-windows.md)
+- [MDI 子ウィンドウの管理](../mfc/managing-mdi-child-windows.md)
 
-- [現在のビューを管理します。](../mfc/managing-the-current-view.md)
+- [現在のビューを管理する](../mfc/managing-the-current-view.md)
 
-- [メニューのコントロール バー、およびアクセラレータを管理します。](../mfc/managing-menus-control-bars-and-accelerators.md)
+- [メニュー、コントロールバー、およびアクセラレータの管理](../mfc/managing-menus-control-bars-and-accelerators.md)
 
-*デバイス コンテキストおよびウィンドウ スタイルを使用します。*
+*デバイスコンテキストとウィンドウスタイルを操作する*
 
-- [デバイス コンテキストでペンやその他のグラフィック オブジェクトを使用します。](../mfc/graphic-objects.md)
+- [デバイスコンテキストでペンとその他のグラフィックオブジェクトを使用する](../mfc/graphic-objects.md)
 
-- [MFC で作成したウィンドウのスタイルを変更します。](../mfc/changing-the-styles-of-a-window-created-by-mfc.md)
+- [MFC によって作成されたウィンドウのスタイルを変更する](../mfc/changing-the-styles-of-a-window-created-by-mfc.md)
 
 ## <a name="see-also"></a>関連項目
 
-[ユーザー インターフェイス要素](../mfc/user-interface-elements-mfc.md)<br/>
-[ダイアログ ボックス](../mfc/dialog-boxes.md)<br/>
-[ツールバー](../mfc/toolbars.md)<br/>
-[ステータス バー](../mfc/status-bars.md)<br/>
-[ダイアログ バー](../mfc/dialog-bars.md)
+[ユーザーインターフェイス要素](../mfc/user-interface-elements-mfc.md)<br/>
+[ダイアログボックス](../mfc/dialog-boxes.md)<br/>
+[[ツール バー]](../mfc/toolbars.md)<br/>
+[ステータスバー](../mfc/status-bars.md)<br/>
+[ダイアログバー](../mfc/dialog-bars.md)

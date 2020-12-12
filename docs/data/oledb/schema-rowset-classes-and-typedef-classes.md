@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「スキーマ行セットクラスと Typedef クラス」を参照してください。
 title: スキーマ行セット クラスと Typedef クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -548,12 +549,12 @@ helpviewer_keywords:
 - TABLE_NAME
 - TABLE_SCHEMA
 ms.assetid: 4bd881b3-26ca-4bdb-9226-d67560864f29
-ms.openlocfilehash: 104f7a92cdb472fc889d44cff20982e51b955014
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 5b51404642dbb6d9ad6c2236e7693137b4a949c0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91509490"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97286567"
 ---
 # <a name="schema-rowset-classes-and-typedef-classes"></a>スキーマ行セット クラスと Typedef クラス
 
@@ -602,13 +603,13 @@ Typedef クラスを使用して、スキーマ行セットをインスタンス
 
 Typedef クラスを呼び出して、 `CAssertions` そのパラメータークラスを実装し `CAssertionInfo` ます。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 Typedef クラスの使用の詳細については [、「スキーマ行セットクラスと Typedef クラス](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) 」を参照してください。
 
 このクラスは、特定のユーザーが所有する、カタログで定義されているアサーションを識別します。
 
-次の表に、のクラスデータメンバー `CAssertionInfo` とそれに対応する OLE DB 列を示します。 スキーマと列の詳細については、 *OLE DB プログラマーリファレンス*の「[アサーション行セット](/previous-versions/windows/desktop/ms719776(v=vs.85))」を参照してください。
+次の表に、のクラスデータメンバー `CAssertionInfo` とそれに対応する OLE DB 列を示します。 スキーマと列の詳細については、 *OLE DB プログラマーリファレンス* の「[アサーション行セット](/previous-versions/windows/desktop/ms719776(v=vs.85))」を参照してください。
 
 |データ メンバー|OLE DB の列|
 |------------------|--------------------|
@@ -623,13 +624,13 @@ Typedef クラスの使用の詳細については [、「スキーマ行セッ�
 
 Typedef クラスを呼び出して、 `CCatalogs` そのパラメータークラスを実装し `CCatalogInfo` ます。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 Typedef クラスの使用の詳細については [、「スキーマ行セットクラスと Typedef クラス](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) 」を参照してください。
 
 このクラスは、DBMS からアクセスできるカタログに関連付けられている物理属性を識別します。
 
-次の表に、クラスのデータメンバーとそれに対応する OLE DB 列を示します。 スキーマと列の詳細については、 *OLE DB プログラマーリファレンス*の「[カタログ行セット](/previous-versions/windows/desktop/ms721241(v=vs.85))」を参照してください。
+次の表に、クラスのデータメンバーとそれに対応する OLE DB 列を示します。 スキーマと列の詳細については、 *OLE DB プログラマーリファレンス* の「[カタログ行セット](/previous-versions/windows/desktop/ms721241(v=vs.85))」を参照してください。
 
 |データ メンバー|OLE DB の列|
 |------------------|--------------------|
@@ -640,13 +641,13 @@ Typedef クラスの使用の詳細については [、「スキーマ行セッ�
 
 Typedef クラスを呼び出して、 `CCharacterSets` そのパラメータークラスを実装し `CCharacterSetInfo` ます。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 Typedef クラスの使用の詳細については [、「スキーマ行セットクラスと Typedef クラス](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) 」を参照してください。
 
 このクラスは、特定のユーザーがアクセスできる、カタログで定義されている文字セットを識別します。
 
-次の表に、クラスのデータメンバーとそれに対応する OLE DB 列を示します。 スキーマと列の詳細については、 *OLE DB プログラマーリファレンス*の「 [CHARACTER_SETS 行セット](/previous-versions/windows/desktop/ms722638(v=vs.85))」を参照してください。
+次の表に、クラスのデータメンバーとそれに対応する OLE DB 列を示します。 スキーマと列の詳細については、 *OLE DB プログラマーリファレンス* の「 [CHARACTER_SETS 行セット](/previous-versions/windows/desktop/ms722638(v=vs.85))」を参照してください。
 
 |データ メンバー|OLE DB の列|
 |------------------|--------------------|
@@ -663,13 +664,13 @@ Typedef クラスの使用の詳細については [、「スキーマ行セッ�
 
 Typedef クラスを呼び出して、 `CCheckConstraints` そのパラメータークラスを実装し `CCheckConstraintInfo` ます。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 Typedef クラスの使用の詳細については [、「スキーマ行セットクラスと Typedef クラス](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) 」を参照してください。
 
 このクラスは、特定のユーザーによって所有されている、カタログで定義されている check 制約を識別します。 Check 制約では、テーブル内の1つ以上の列で許容されるデータ値または形式を指定します。
 
-次の表に、クラスのデータメンバーとそれに対応する OLE DB 列を示します。 スキーマと列の詳細については、 *OLE DB プログラマーリファレンス*の「 [CHECK_CONSTRAINTS 行セット](/previous-versions/windows/desktop/ms712845(v=vs.85))」を参照してください。
+次の表に、クラスのデータメンバーとそれに対応する OLE DB 列を示します。 スキーマと列の詳細については、 *OLE DB プログラマーリファレンス* の「 [CHECK_CONSTRAINTS 行セット](/previous-versions/windows/desktop/ms712845(v=vs.85))」を参照してください。
 
 |データ メンバー|OLE DB の列|
 |------------------|--------------------|
@@ -683,13 +684,13 @@ Typedef クラスの使用の詳細については [、「スキーマ行セッ�
 
 Typedef クラスを呼び出して、 `CCollations` そのパラメータークラスを実装し `CCollationInfo` ます。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 Typedef クラスの使用の詳細については [、「スキーマ行セットクラスと Typedef クラス](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) 」を参照してください。
 
 このクラスは、特定のユーザーがアクセスできる、カタログで定義されている文字の照合順序を識別します。
 
-次の表に、クラスのデータメンバーとそれに対応する OLE DB 列を示します。 スキーマと列の詳細については、 *OLE DB プログラマーリファレンス*の「[照合順序の行セット](/previous-versions/windows/desktop/ms715783(v=vs.85))」を参照してください。
+次の表に、クラスのデータメンバーとそれに対応する OLE DB 列を示します。 スキーマと列の詳細については、 *OLE DB プログラマーリファレンス* の「[照合順序の行セット](/previous-versions/windows/desktop/ms715783(v=vs.85))」を参照してください。
 
 |データ メンバー|OLE DB の列|
 |------------------|--------------------|
@@ -705,13 +706,13 @@ Typedef クラスの使用の詳細については [、「スキーマ行セッ�
 
 Typedef クラスを呼び出して、 `CColumnDomainUsage` そのパラメータークラスを実装し `CColumnDomainUsageInfo` ます。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 Typedef クラスの使用の詳細については [、「スキーマ行セットクラスと Typedef クラス](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) 」を参照してください。
 
 このクラスは、カタログで定義されている、カタログで定義され、特定のユーザーによって所有されているドメインに依存している列を識別します。
 
-次の表に、クラスのデータメンバーとそれに対応する OLE DB 列を示します。 スキーマと列の詳細については、 *OLE DB プログラマーリファレンス*の「 [COLUMN_DOMAIN_USAGE 行セット](/previous-versions/windows/desktop/ms711240(v=vs.85))」を参照してください。
+次の表に、クラスのデータメンバーとそれに対応する OLE DB 列を示します。 スキーマと列の詳細については、 *OLE DB プログラマーリファレンス* の「 [COLUMN_DOMAIN_USAGE 行セット](/previous-versions/windows/desktop/ms711240(v=vs.85))」を参照してください。
 
 |データ メンバー|OLE DB の列|
 |------------------|--------------------|
@@ -729,13 +730,13 @@ Typedef クラスの使用の詳細については [、「スキーマ行セッ�
 
 Typedef クラスを呼び出して、 `CColumnPrivileges` そのパラメータークラスを実装し `CColumnPrivilegeInfo` ます。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 Typedef クラスの使用の詳細については [、「スキーマ行セットクラスと Typedef クラス](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) 」を参照してください。
 
 このクラスは、カタログで定義されている、特定のユーザーによって使用または付与されるテーブルの列に対する権限を識別します。
 
-次の表に、クラスのデータメンバーとそれに対応する OLE DB 列を示します。 スキーマと列の詳細については、 *OLE DB プログラマーリファレンス*の「 [COLUMN_PRIVILEGES 行セット](/previous-versions/windows/desktop/ms715800(v=vs.85))」を参照してください。
+次の表に、クラスのデータメンバーとそれに対応する OLE DB 列を示します。 スキーマと列の詳細については、 *OLE DB プログラマーリファレンス* の「 [COLUMN_PRIVILEGES 行セット](/previous-versions/windows/desktop/ms715800(v=vs.85))」を参照してください。
 
 |データ メンバー|OLE DB の列|
 |------------------|--------------------|
@@ -754,13 +755,13 @@ Typedef クラスの使用の詳細については [、「スキーマ行セッ�
 
 Typedef クラスを呼び出して、 `CColumns` そのパラメータークラスを実装し `CColumnsInfo` ます。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 Typedef クラスの使用の詳細については [、「スキーマ行セットクラスと Typedef クラス](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) 」を参照してください。
 
 このクラスは、特定のユーザーがアクセスできる、カタログに定義されているテーブルの列を識別します。
 
-次の表に、クラスのデータメンバーとそれに対応する OLE DB 列を示します。 スキーマと列の詳細については、 *OLE DB プログラマーリファレンス*の「 [columns Rowset](/previous-versions/windows/desktop/ms723052(v=vs.85)) 」を参照してください。
+次の表に、クラスのデータメンバーとそれに対応する OLE DB 列を示します。 スキーマと列の詳細については、 *OLE DB プログラマーリファレンス* の「 [columns Rowset](/previous-versions/windows/desktop/ms723052(v=vs.85)) 」を参照してください。
 
 |データ メンバー|OLE DB の列|
 |------------------|--------------------|
@@ -797,13 +798,13 @@ Typedef クラスの使用の詳細については [、「スキーマ行セッ�
 
 Typedef クラスを呼び出して、 `CConstraintColumnUsage` そのパラメータークラスを実装し `CConstraintColumnUsageInfo` ます。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 Typedef クラスの使用の詳細については [、「スキーマ行セットクラスと Typedef クラス](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) 」を参照してください。
 
 このクラスは、参照制約、unique 制約、check 制約、およびアサーションによって使用される列を識別します。この列は、カタログで定義され、特定のユーザーによって所有されます。
 
-次の表に、クラスのデータメンバーとそれに対応する OLE DB 列を示します。 スキーマと列の詳細については、 *OLE DB プログラマーリファレンス*の「 [CONSTRAINT_COLUMN_USAGE 行セット](/previous-versions/windows/desktop/ms724522(v=vs.85))」を参照してください。
+次の表に、クラスのデータメンバーとそれに対応する OLE DB 列を示します。 スキーマと列の詳細については、 *OLE DB プログラマーリファレンス* の「 [CONSTRAINT_COLUMN_USAGE 行セット](/previous-versions/windows/desktop/ms724522(v=vs.85))」を参照してください。
 
 |データ メンバー|OLE DB の列|
 |------------------|--------------------|
@@ -821,13 +822,13 @@ Typedef クラスの使用の詳細については [、「スキーマ行セッ�
 
 Typedef クラスを呼び出して、 `CConstraintTableUsage` そのパラメータークラスを実装し `CConstraintTableUsageInfo` ます。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 Typedef クラスの使用の詳細については [、「スキーマ行セットクラスと Typedef クラス](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) 」を参照してください。
 
 このクラスは、参照制約、unique 制約、check 制約、およびアサーションによって使用されるテーブルを識別します。このテーブルは、カタログで定義され、特定のユーザーによって所有されます。
 
-次の表に、クラスのデータメンバーとそれに対応する OLE DB 列を示します。 スキーマと列の詳細については、 *OLE DB プログラマーリファレンス*の「 [CONSTRAINT_TABLE_USAGE 行セット](/previous-versions/windows/desktop/ms724522(v=vs.85))」を参照してください。
+次の表に、クラスのデータメンバーとそれに対応する OLE DB 列を示します。 スキーマと列の詳細については、 *OLE DB プログラマーリファレンス* の「 [CONSTRAINT_TABLE_USAGE 行セット](/previous-versions/windows/desktop/ms724522(v=vs.85))」を参照してください。
 
 |データ メンバー|OLE DB の列|
 |------------------|--------------------|
@@ -842,13 +843,13 @@ Typedef クラスの使用の詳細については [、「スキーマ行セッ�
 
 Typedef クラスを呼び出して、 `CForeignKeys` そのパラメータークラスを実装し `CForeignKeysInfo` ます。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 Typedef クラスの使用の詳細については [、「スキーマ行セットクラスと Typedef クラス](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) 」を参照してください。
 
 このクラスは、指定されたユーザーによってカタログで定義された外部キー列を識別します。
 
-次の表に、クラスのデータメンバーとそれに対応する OLE DB 列を示します。 スキーマと列の詳細については、 *OLE DB プログラマーリファレンス*の「 [FOREIGN_KEYS 行セット](/previous-versions/windows/desktop/ms711276(v=vs.85))」を参照してください。
+次の表に、クラスのデータメンバーとそれに対応する OLE DB 列を示します。 スキーマと列の詳細については、 *OLE DB プログラマーリファレンス* の「 [FOREIGN_KEYS 行セット](/previous-versions/windows/desktop/ms711276(v=vs.85))」を参照してください。
 
 |データ メンバー|OLE DB の列|
 |------------------|--------------------|
@@ -872,13 +873,13 @@ Typedef クラスの使用の詳細については [、「スキーマ行セッ�
 
 Typedef クラスを呼び出して、 `CIndexes` そのパラメータークラスを実装し `CIndexInfo` ます。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 Typedef クラスの使用の詳細については [、「スキーマ行セットクラスと Typedef クラス](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) 」を参照してください。
 
 このクラスは、特定のユーザーが所有する、カタログで定義されているインデックスを識別します。
 
-次の表に、クラスのデータメンバーとそれに対応する OLE DB 列を示します。 スキーマと列の詳細については、 *OLE DB プログラマーリファレンス*の「[インデックス行セット](/previous-versions/windows/desktop/ms709712(v=vs.85))」を参照してください。
+次の表に、クラスのデータメンバーとそれに対応する OLE DB 列を示します。 スキーマと列の詳細については、 *OLE DB プログラマーリファレンス* の「[インデックス行セット](/previous-versions/windows/desktop/ms709712(v=vs.85))」を参照してください。
 
 |データ メンバー|OLE DB の列|
 |------------------|--------------------|
@@ -911,13 +912,13 @@ Typedef クラスの使用の詳細については [、「スキーマ行セッ�
 
 Typedef クラスを呼び出して、 `CKeyColumns` そのパラメータークラスを実装し `CKeyColumnInfo` ます。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 Typedef クラスの使用の詳細については [、「スキーマ行セットクラスと Typedef クラス](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) 」を参照してください。
 
 このクラスは、特定のユーザーによってキーとして制約されている、カタログで定義されている列を識別します。
 
-次の表に、クラスのデータメンバーとそれに対応する OLE DB 列を示します。 スキーマと列の詳細については、 *OLE DB プログラマーリファレンス*の「 [KEY_COLUMN_USAGE 行セット](/previous-versions/windows/desktop/ms712990(v=vs.85))」を参照してください。
+次の表に、クラスのデータメンバーとそれに対応する OLE DB 列を示します。 スキーマと列の詳細については、 *OLE DB プログラマーリファレンス* の「 [KEY_COLUMN_USAGE 行セット](/previous-versions/windows/desktop/ms712990(v=vs.85))」を参照してください。
 
 |データ メンバー|OLE DB の列|
 |------------------|--------------------|
@@ -936,13 +937,13 @@ Typedef クラスの使用の詳細については [、「スキーマ行セッ�
 
 Typedef クラスを呼び出して、 `CPrimaryKeys` そのパラメータークラスを実装し `CPrimaryKeyInfo` ます。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 Typedef クラスの使用の詳細については [、「スキーマ行セットクラスと Typedef クラス](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) 」を参照してください。
 
 このクラスは、指定されたユーザーによってカタログで定義された主キー列を識別します。
 
-次の表に、クラスのデータメンバーとそれに対応する OLE DB 列を示します。 スキーマと列の詳細については、 *OLE DB プログラマーリファレンス*の「 [PRIMARY_KEYS 行セット](/previous-versions/windows/desktop/ms714362(v=vs.85))」を参照してください。
+次の表に、クラスのデータメンバーとそれに対応する OLE DB 列を示します。 スキーマと列の詳細については、 *OLE DB プログラマーリファレンス* の「 [PRIMARY_KEYS 行セット](/previous-versions/windows/desktop/ms714362(v=vs.85))」を参照してください。
 
 |データ メンバー|OLE DB の列|
 |------------------|--------------------|
@@ -958,13 +959,13 @@ Typedef クラスの使用の詳細については [、「スキーマ行セッ�
 
 Typedef クラスを呼び出して、 `CProcedureColumns` そのパラメータークラスを実装し `CProcedureColumnInfo` ます。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 Typedef クラスの使用の詳細については [、「スキーマ行セットクラスと Typedef クラス](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) 」を参照してください。
 
 このクラスは、プロシージャによって返される行セットの列に関する情報を返します。
 
-次の表に、クラスのデータメンバーとそれに対応する OLE DB 列を示します。 スキーマと列の詳細については、 *OLE DB プログラマーリファレンス*の「 [PROCEDURE_COLUMNS 行セット](/previous-versions/windows/desktop/ms723092(v=vs.85))」を参照してください。
+次の表に、クラスのデータメンバーとそれに対応する OLE DB 列を示します。 スキーマと列の詳細については、 *OLE DB プログラマーリファレンス* の「 [PROCEDURE_COLUMNS 行セット](/previous-versions/windows/desktop/ms723092(v=vs.85))」を参照してください。
 
 |データ メンバー|OLE DB の列|
 |------------------|--------------------|
@@ -989,13 +990,13 @@ Typedef クラスの使用の詳細については [、「スキーマ行セッ�
 
 Typedef クラスを呼び出して、 `CProcedureParameters` そのパラメータークラスを実装し `CProcedureParamInfo` ます。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 Typedef クラスの使用の詳細については [、「スキーマ行セットクラスと Typedef クラス](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) 」を参照してください。
 
 このクラスは、プロシージャのパラメーターとリターンコードに関する情報を返します。
 
-次の表に、クラスのデータメンバーとそれに対応する OLE DB 列を示します。 スキーマと列の詳細については、 *OLE DB プログラマーリファレンス*の「 [PROCEDURE_PARAMETERS 行セット](/previous-versions/windows/desktop/ms713623(v=vs.85))」を参照してください。
+次の表に、クラスのデータメンバーとそれに対応する OLE DB 列を示します。 スキーマと列の詳細については、 *OLE DB プログラマーリファレンス* の「 [PROCEDURE_PARAMETERS 行セット](/previous-versions/windows/desktop/ms713623(v=vs.85))」を参照してください。
 
 |データ メンバー|OLE DB の列|
 |------------------|--------------------|
@@ -1019,13 +1020,13 @@ Typedef クラスの使用の詳細については [、「スキーマ行セッ�
 
 Typedef クラスを呼び出して、 `CProcedures` そのパラメータークラスを実装し `CProcedureInfo` ます。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 Typedef クラスの使用の詳細については [、「スキーマ行セットクラスと Typedef クラス](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) 」を参照してください。
 
 このクラスは、特定のユーザーが所有する、カタログで定義されているプロシージャを識別します。
 
-次の表に、クラスのデータメンバーとそれに対応する OLE DB 列を示します。 スキーマと列の詳細については、 *OLE DB プログラマーリファレンス*の「[プロシージャ行セット](/previous-versions/windows/desktop/ms724021(v=vs.85))」を参照してください。
+次の表に、クラスのデータメンバーとそれに対応する OLE DB 列を示します。 スキーマと列の詳細については、 *OLE DB プログラマーリファレンス* の「[プロシージャ行セット](/previous-versions/windows/desktop/ms724021(v=vs.85))」を参照してください。
 
 |データ メンバー|OLE DB の列|
 |------------------|--------------------|
@@ -1040,13 +1041,13 @@ Typedef クラスの使用の詳細については [、「スキーマ行セッ�
 
 Typedef クラスを呼び出して、 `CProviderTypes` そのパラメータークラスを実装し `CProviderInfo` ます。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 Typedef クラスの使用の詳細については [、「スキーマ行セットクラスと Typedef クラス](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) 」を参照してください。
 
 このクラスは、データプロバイダーでサポートされている (基本) データ型を識別します。
 
-次の表に、クラスのデータメンバーとそれに対応する OLE DB 列を示します。 スキーマと列の詳細については、 *OLE DB プログラマーリファレンス*の「 [PROVIDER_TYPES 行セット](/previous-versions/windows/desktop/ms709785(v=vs.85))」を参照してください。
+次の表に、クラスのデータメンバーとそれに対応する OLE DB 列を示します。 スキーマと列の詳細については、 *OLE DB プログラマーリファレンス* の「 [PROVIDER_TYPES 行セット](/previous-versions/windows/desktop/ms709785(v=vs.85))」を参照してください。
 
 |データ メンバー|OLE DB の列|
 |------------------|--------------------|
@@ -1058,7 +1059,7 @@ Typedef クラスの使用の詳細については [、「スキーマ行セッ�
 |m_szCreateParams|CREATE_PARAMS|
 |m_bIsNullable|IS_NULLABLE|
 |m_bCaseSensitive|CASE_SENSITIVE|
-|m_nSearchable|SEARCHABLE|
+|m_nSearchable|検索可能|
 |m_bUnsignedAttribute|UNSIGNED_ATTRIBUTE|
 |m_bFixedPrecScale|FIXED_PREC_SCALE|
 |m_bAutoUniqueValue|AUTO_UNIQUE_VALUE|
@@ -1075,13 +1076,13 @@ Typedef クラスの使用の詳細については [、「スキーマ行セッ�
 
 Typedef クラスを呼び出して、 `CReferentialConstraints` そのパラメータークラスを実装し `CReferentialConstraintInfo` ます。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 Typedef クラスの使用の詳細については [、「スキーマ行セットクラスと Typedef クラス](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) 」を参照してください。
 
 このクラスは、特定のユーザーが所有する、カタログで定義されている参照制約を識別します。
 
-次の表に、クラスのデータメンバーとそれに対応する OLE DB 列を示します。 スキーマと列の詳細については、 *OLE DB プログラマーリファレンス*の「 [REFERENTIAL_CONSTRAINTS 行セット](/previous-versions/windows/desktop/ms719737(v=vs.85))」を参照してください。
+次の表に、クラスのデータメンバーとそれに対応する OLE DB 列を示します。 スキーマと列の詳細については、 *OLE DB プログラマーリファレンス* の「 [REFERENTIAL_CONSTRAINTS 行セット](/previous-versions/windows/desktop/ms719737(v=vs.85))」を参照してください。
 
 |データ メンバー|OLE DB の列|
 |------------------|--------------------|
@@ -1100,13 +1101,13 @@ Typedef クラスの使用の詳細については [、「スキーマ行セッ�
 
 Typedef クラスを呼び出して、 `CSchemata` そのパラメータークラスを実装し `CSchemataInfo` ます。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 Typedef クラスの使用の詳細については [、「スキーマ行セットクラスと Typedef クラス](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) 」を参照してください。
 
 このクラスは、特定のユーザーが所有するスキーマを識別します。
 
-次の表に、クラスのデータメンバーとそれに対応する OLE DB 列を示します。 スキーマと列の詳細については、 *OLE DB プログラマーリファレンス*の「[スキーマ Rowset](/previous-versions/windows/desktop/ms716887(v=vs.85)) 」を参照してください。
+次の表に、クラスのデータメンバーとそれに対応する OLE DB 列を示します。 スキーマと列の詳細については、 *OLE DB プログラマーリファレンス* の「[スキーマ Rowset](/previous-versions/windows/desktop/ms716887(v=vs.85)) 」を参照してください。
 
 |データ メンバー|OLE DB の列|
 |------------------|--------------------|
@@ -1121,13 +1122,13 @@ Typedef クラスの使用の詳細については [、「スキーマ行セッ�
 
 Typedef クラスを呼び出して、 `CSQLLanguages` そのパラメータークラスを実装し `CSQLLanguageInfo` ます。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 Typedef クラスの使用の詳細については [、「スキーマ行セットクラスと Typedef クラス](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) 」を参照してください。
 
 このクラスは、カタログで定義されている SQL 実装処理データでサポートされる準拠レベル、オプション、および言語を識別します。
 
-次の表に、クラスのデータメンバーとそれに対応する OLE DB 列を示します。 スキーマと列の詳細については、 *OLE DB プログラマーリファレンス*の「 [SQL_LANGUAGES 行セット](/previous-versions/windows/desktop/ms714374(v=vs.85))」を参照してください。
+次の表に、クラスのデータメンバーとそれに対応する OLE DB 列を示します。 スキーマと列の詳細については、 *OLE DB プログラマーリファレンス* の「 [SQL_LANGUAGES 行セット](/previous-versions/windows/desktop/ms714374(v=vs.85))」を参照してください。
 
 |データ メンバー|OLE DB の列|
 |------------------|--------------------|
@@ -1143,13 +1144,13 @@ Typedef クラスの使用の詳細については [、「スキーマ行セッ�
 
 Typedef クラスを呼び出して、 `CStatistics` そのパラメータークラスを実装し `CStatisticInfo` ます。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 Typedef クラスの使用の詳細については [、「スキーマ行セットクラスと Typedef クラス](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) 」を参照してください。
 
 このクラスは、特定のユーザーが所有する、カタログで定義されている統計を識別します。
 
-次の表に、クラスのデータメンバーとそれに対応する OLE DB 列を示します。 スキーマと列の詳細については、 *OLE DB プログラマーリファレンス*の「[統計行セット](/previous-versions/windows/desktop/ms715957(v=vs.85))」を参照してください。
+次の表に、クラスのデータメンバーとそれに対応する OLE DB 列を示します。 スキーマと列の詳細については、 *OLE DB プログラマーリファレンス* の「[統計行セット](/previous-versions/windows/desktop/ms715957(v=vs.85))」を参照してください。
 
 |データ メンバー|OLE DB の列|
 |------------------|--------------------|
@@ -1162,13 +1163,13 @@ Typedef クラスの使用の詳細については [、「スキーマ行セッ�
 
 Typedef クラスを呼び出して、 `CTableConstraints` そのパラメータークラスを実装し `CTableConstraintInfo` ます。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 Typedef クラスの使用の詳細については [、「スキーマ行セットクラスと Typedef クラス](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) 」を参照してください。
 
 このクラスは、特定のユーザーによって所有されている、カタログで定義されているテーブル制約を識別します。
 
-次の表に、クラスのデータメンバーとそれに対応する OLE DB 列を示します。 スキーマと列の詳細については、 *OLE DB プログラマーリファレンス*の「 [TABLE_CONSTRAINTS 行セット](/previous-versions/windows/desktop/ms715921(v=vs.85))」を参照してください。
+次の表に、クラスのデータメンバーとそれに対応する OLE DB 列を示します。 スキーマと列の詳細については、 *OLE DB プログラマーリファレンス* の「 [TABLE_CONSTRAINTS 行セット](/previous-versions/windows/desktop/ms715921(v=vs.85))」を参照してください。
 
 |データ メンバー|OLE DB の列|
 |------------------|--------------------|
@@ -1187,13 +1188,13 @@ Typedef クラスの使用の詳細については [、「スキーマ行セッ�
 
 Typedef クラスを呼び出して、 `CTablePrivileges` そのパラメータークラスを実装し `CTablePrivilegeInfo` ます。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 Typedef クラスの使用の詳細については [、「スキーマ行セットクラスと Typedef クラス](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) 」を参照してください。
 
 このクラスは、特定のユーザーがアクセスできる、カタログで定義されているテーブルを識別します。
 
-次の表に、クラスのデータメンバーとそれに対応する OLE DB 列を示します。 スキーマと列の詳細については、 *OLE DB プログラマーリファレンス*の「 [TABLE_PRIVILEGES 行セット](/previous-versions/windows/desktop/ms725428(v=vs.85))」を参照してください。
+次の表に、クラスのデータメンバーとそれに対応する OLE DB 列を示します。 スキーマと列の詳細については、 *OLE DB プログラマーリファレンス* の「 [TABLE_PRIVILEGES 行セット](/previous-versions/windows/desktop/ms725428(v=vs.85))」を参照してください。
 
 |データ メンバー|OLE DB の列|
 |------------------|--------------------|
@@ -1209,13 +1210,13 @@ Typedef クラスの使用の詳細については [、「スキーマ行セッ�
 
 Typedef クラスを呼び出して、 `CTables` そのパラメータークラスを実装し `CTableInfo` ます。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 Typedef クラスの使用の詳細については [、「スキーマ行セットクラスと Typedef クラス](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) 」を参照してください。
 
 このクラスは、カタログで定義されている、特定のユーザーによって使用または付与されるテーブルに対する権限を識別します。
 
-次の表に、クラスのデータメンバーとそれに対応する OLE DB 列を示します。 スキーマと列の詳細については、 *OLE DB プログラマーリファレンス*の「[テーブル行セット](/previous-versions/windows/desktop/ms716980(v=vs.85))」を参照してください。
+次の表に、クラスのデータメンバーとそれに対応する OLE DB 列を示します。 スキーマと列の詳細については、 *OLE DB プログラマーリファレンス* の「[テーブル行セット](/previous-versions/windows/desktop/ms716980(v=vs.85))」を参照してください。
 
 |データ メンバー|OLE DB の列|
 |------------------|--------------------|
@@ -1230,13 +1231,13 @@ Typedef クラスの使用の詳細については [、「スキーマ行セッ�
 
 Typedef クラスを呼び出して、 `CTranslations` そのパラメータークラスを実装し `CTranslationInfo` ます。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 Typedef クラスの使用の詳細については [、「スキーマ行セットクラスと Typedef クラス](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) 」を参照してください。
 
 このクラスは、特定のユーザーがアクセスできる、カタログで定義されている文字変換を識別します。
 
-次の表に、クラスのデータメンバーとそれに対応する OLE DB 列を示します。 スキーマと列の詳細については、 *OLE DB プログラマーリファレンス*の「[翻訳行セット](/previous-versions/windows/desktop/ms725365(v=vs.85))」を参照してください。
+次の表に、クラスのデータメンバーとそれに対応する OLE DB 列を示します。 スキーマと列の詳細については、 *OLE DB プログラマーリファレンス* の「[翻訳行セット](/previous-versions/windows/desktop/ms725365(v=vs.85))」を参照してください。
 
 |データ メンバー|OLE DB の列|
 |------------------|--------------------|
@@ -1254,13 +1255,13 @@ Typedef クラスの使用の詳細については [、「スキーマ行セッ�
 
 Typedef クラスを呼び出して、 `CUsagePrivileges` そのパラメータークラスを実装し `CUsagePrivilegeInfo` ます。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 Typedef クラスの使用の詳細については [、「スキーマ行セットクラスと Typedef クラス](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) 」を参照してください。
 
 このクラスは、特定のユーザーによって使用または許可される、カタログで定義されているオブジェクトの使用権限を識別します。
 
-次の表に、クラスのデータメンバーとそれに対応する OLE DB 列を示します。 スキーマと列の詳細については、 *OLE DB プログラマーリファレンス*の「 [USAGE_PRIVILEGES 行セット](/previous-versions/windows/desktop/ms722743(v=vs.85))」を参照してください。
+次の表に、クラスのデータメンバーとそれに対応する OLE DB 列を示します。 スキーマと列の詳細については、 *OLE DB プログラマーリファレンス* の「 [USAGE_PRIVILEGES 行セット](/previous-versions/windows/desktop/ms722743(v=vs.85))」を参照してください。
 
 |データ メンバー|OLE DB の列|
 |------------------|--------------------|
@@ -1277,13 +1278,13 @@ Typedef クラスの使用の詳細については [、「スキーマ行セッ�
 
 Typedef クラスを呼び出して、 `CViewColumnUsage` そのパラメータークラスを実装し `CViewColumnInfo` ます。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 Typedef クラスの使用の詳細については [、「スキーマ行セットクラスと Typedef クラス](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) 」を参照してください。
 
 このクラスは、カタログで定義され、特定のユーザーによって所有されている、表示されているテーブルが依存している列を識別します。
 
-次の表に、クラスのデータメンバーとそれに対応する OLE DB 列を示します。 スキーマと列の詳細については、 *OLE DB プログラマーリファレンス*の「 [VIEW_COLUMN_USAGE 行セット](/previous-versions/windows/desktop/ms714896(v=vs.85))」を参照してください。
+次の表に、クラスのデータメンバーとそれに対応する OLE DB 列を示します。 スキーマと列の詳細については、 *OLE DB プログラマーリファレンス* の「 [VIEW_COLUMN_USAGE 行セット](/previous-versions/windows/desktop/ms714896(v=vs.85))」を参照してください。
 
 |データ メンバー|OLE DB の列|
 |------------------|--------------------|
@@ -1301,13 +1302,13 @@ Typedef クラスの使用の詳細については [、「スキーマ行セッ�
 
 Typedef クラスを呼び出して、 `CViews` そのパラメータークラスを実装し `CViewInfo` ます。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 Typedef クラスの使用の詳細については [、「スキーマ行セットクラスと Typedef クラス](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) 」を参照してください。
 
 このクラスは、カタログで定義され、特定のユーザーによって所有されている、表示されているテーブルが依存しているテーブルを識別します。
 
-次の表に、クラスのデータメンバーとそれに対応する OLE DB 列を示します。 スキーマと列の詳細については、 *OLE DB プログラマーリファレンス*の「[ビュー行セット](/previous-versions/windows/desktop/ms723122(v=vs.85))」を参照してください。
+次の表に、クラスのデータメンバーとそれに対応する OLE DB 列を示します。 スキーマと列の詳細については、 *OLE DB プログラマーリファレンス* の「[ビュー行セット](/previous-versions/windows/desktop/ms723122(v=vs.85))」を参照してください。
 
 |データ メンバー|OLE DB の列|
 |------------------|--------------------|
@@ -1323,13 +1324,13 @@ Typedef クラスの使用の詳細については [、「スキーマ行セッ�
 
 Typedef クラスを呼び出して、 `CViewTableUsage` そのパラメータークラスを実装し `CViewTableInfo` ます。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 Typedef クラスの使用の詳細については [、「スキーマ行セットクラスと Typedef クラス](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) 」を参照してください。
 
 このクラスは、特定のユーザーがアクセスできる、カタログで定義された、表示されているテーブルを識別します。
 
-次の表に、クラスのデータメンバーとそれに対応する OLE DB 列を示します。 スキーマと列の詳細については、 *OLE DB プログラマーリファレンス*の「 [VIEW_TABLE_USAGE 行セット](/previous-versions/windows/desktop/ms719727(v=vs.85))」を参照してください。
+次の表に、クラスのデータメンバーとそれに対応する OLE DB 列を示します。 スキーマと列の詳細については、 *OLE DB プログラマーリファレンス* の「 [VIEW_TABLE_USAGE 行セット](/previous-versions/windows/desktop/ms719727(v=vs.85))」を参照してください。
 
 |データ メンバー|OLE DB の列|
 |------------------|--------------------|
@@ -1340,7 +1341,7 @@ Typedef クラスの使用の詳細については [、「スキーマ行セッ�
 |m_szTableSchema|TABLE_SCHEMA|
 |m_szTableName|TABLE_NAME|
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** atldbsch
 

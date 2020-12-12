@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: list クラス'
 title: list クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -98,12 +99,12 @@ helpviewer_keywords:
 - std::list [C++], swap
 - std::list [C++], unique
 ms.assetid: d3707f4a-10fd-444f-b856-f9ca2077c1cd
-ms.openlocfilehash: ec53e2a907cd38b262ec305d10ae63ad746f29b5
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 9d73c1c61cb7e630ea936685aeaab20f778340ed
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88833336"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97284838"
 ---
 # <a name="list-class"></a>list クラス
 
@@ -152,14 +153,14 @@ C++ 標準ライブラリの標準ヘッダーをインクルードして、 \<l
 |[const_reference](#const_reference)|**`const`** 読み取りと操作の実行のためにリストに格納されている要素への参照を提供する型 **`const`** 。|
 |[const_reverse_iterator](#const_reverse_iterator)|リスト内の任意の要素を読み取ることができる双方向反復子を提供する型 **`const`** 。|
 |[difference_type](#difference_type)|同じリスト内の要素を参照する 2 反復子の違いを提供する型。|
-|[反](#iterator)|リスト内の任意の要素の読み取りまたは変更ができる双方向反復子を提供する型。|
+|[iterator](#iterator)|リスト内の任意の要素の読み取りまたは変更ができる双方向反復子を提供する型。|
 |[pointer](#pointer)|リスト内の要素へのポインターを提供する型。|
 |[reference](#reference)|**`const`** 読み取りと操作の実行のためにリストに格納されている要素への参照を提供する型 **`const`** 。|
 |[reverse_iterator](#reverse_iterator)|逆順のリスト内の 1 つの要素の読み取りまたは変更ができる双方向反復子を提供する型。|
 |[size_type](#size_type)|リスト内の要素の数をカウントする型。|
 |[value_type](#value_type)|リスト内に格納されているデータ型を表す型。|
 
-### <a name="functions"></a>Functions
+### <a name="functions"></a>関数
 
 |名前|説明|
 |-|-|
@@ -198,13 +199,13 @@ C++ 標準ライブラリの標準ヘッダーをインクルードして、 \<l
 |[スワップ](#swap)|2 つのリストの要素を交換します。|
 |[unique](#unique)|隣接する重複要素、または他のいずれかの二項述語の条件を満たす、隣接する要素をリストから削除します。|
 
-### <a name="operators"></a>演算子
+### <a name="operators"></a>オペレーター
 
 |名前|説明|
 |-|-|
 |[operator =](#op_eq)|別のリストのコピーでリストの要素を置き換えます。|
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー**: \<list>
 
@@ -218,7 +219,7 @@ typedef Allocator allocator_type;
 
 ### <a name="remarks"></a>解説
 
-`allocator_type` は、テンプレートパラメーター *アロケーター*のシノニムです。
+`allocator_type` は、テンプレートパラメーター *アロケーター* のシノニムです。
 
 ### <a name="example"></a>例
 
@@ -363,7 +364,7 @@ The last integer of c1 is 11
 The next-to-last integer of c1 is 10
 ```
 
-## <a name="begin"></a><a name="begin"></a> 初め
+## <a name="begin"></a><a name="begin"></a> begin
 
 リスト内の最初の要素を指す反復子を返します。
 
@@ -910,7 +911,7 @@ int main( )
 The list is not empty.
 ```
 
-## <a name="end"></a><a name="end"></a> 終わり
+## <a name="end"></a><a name="end"></a> end
 
 リスト内の最後の要素の次の位置を指す反復子を返します。
 
@@ -1307,13 +1308,13 @@ list(InputIterator First, InputIterator Last, const Allocator& Al);
 
 最初の2つのコンストラクターは、空の初期リストを指定します。2番目のコンストラクターは、使用するアロケーターの型 (*Al*) を指定します。
 
-3番目のコンストラクターは、クラスの既定値の要素の指定された*数 (数*) の繰り返しを指定し `Type` ます。
+3番目のコンストラクターは、クラスの既定値の要素の指定された *数 (数*) の繰り返しを指定し `Type` ます。
 
-4番目と5番目のコンストラクターは、値*Val*の (*Count*) 要素の繰り返しを指定します。
+4番目と5番目のコンストラクターは、値 *Val* の (*Count*) 要素の繰り返しを指定します。
 
-6番目のコンストラクターは、リストの *右側*のコピーを指定します。
+6番目のコンストラクターは、リストの *右側* のコピーを指定します。
 
-7番目のコンストラクターは、リストを *右*に移動します。
+7番目のコンストラクターは、リストを *右* に移動します。
 
 8 番目のコンストラクターは、initializer_list を使用して要素を指定します。
 
@@ -2128,9 +2129,9 @@ void resize(size_type _Newsize, Type val);
 
 ### <a name="remarks"></a>解説
 
-リストのサイズが要求されたサイズより小さい場合は、要求されたサイズになるまで要素がリストに追加され *_Newsize*ます。
+リストのサイズが要求されたサイズより小さい場合は、要求されたサイズになるまで要素がリストに追加され *_Newsize* ます。
 
-リストのサイズが要求されたサイズよりも大きい場合、リストが *_Newsize*サイズになるまで、リストの末尾に近い要素が削除されます。
+リストのサイズが要求されたサイズよりも大きい場合、リストが *_Newsize* サイズになるまで、リストの末尾に近い要素が削除されます。
 
 リストの現在のサイズが要求されたサイズと同じ場合は、何も実行されません。
 
@@ -2395,7 +2396,7 @@ void splice(const_iterator Where, list<Type, Allocator>&& Source, const_iterator
 
 メンバー関数の2番目のペアは、 *Iter* によって参照される要素を、 *Where* で参照されるターゲットリスト内の位置の前に挿入し、ソースリストから *Iter* を削除します。 (`Where == Iter || Where == ++Iter` の場合は、何も変わりません)。
 
-メンバー関数の3番目のペアは、[,) によって指定された範囲を、 `First` `Last` ターゲットリスト内の要素の前に挿入します。 *ここ* で、は Where で参照し、ソースリストからその要素の範囲を削除します。 (の場合、範囲には、が `&Source == this` `[First, Last)` 指す要素を含める *ことは*できません)。
+メンバー関数の3番目のペアは、[,) によって指定された範囲を、 `First` `Last` ターゲットリスト内の要素の前に挿入します。 *ここ* で、は Where で参照し、ソースリストからその要素の範囲を削除します。 (の場合、範囲には、が `&Source == this` `[First, Last)` 指す要素を含める *ことは* できません)。
 
 範囲指定されたスプライスで `N` 個の要素が挿入され、さらに `&Source != this` の場合、クラス [iterator](../standard-library/forward-list-class.md#iterator) のオブジェクトは `N` 回インクリメントされます。
 
@@ -2489,10 +2490,10 @@ friend void swap(list<Type, Allocator>& left, list<Type, Allocator>& right)
 ### <a name="parameters"></a>パラメーター
 
 *そうです*\
-交換する要素を提供する *リスト。または、リスト内*の要素と交換される要素を含むリスト。
+交換する要素を提供する *リスト。または、リスト内* の要素と交換される要素を含むリスト。
 
 *左側*\
-リスト *右側*の要素と交換される要素を含むリスト。
+リスト *右側* の要素と交換される要素を含むリスト。
 
 ### <a name="example"></a>例
 
@@ -2564,7 +2565,7 @@ void unique(BinaryPredicate pred);
 
 1 つ目のメンバー関数は、その直前の要素に一致するすべての要素を削除します。
 
-2番目のメンバー関数は、前の要素と比較したときに、述語関数 *pred* を満たすすべての要素を削除します。 \<functional>引数*pred*のヘッダーで宣言されている任意のバイナリ関数オブジェクトを使用することも、独自の関数オブジェクトを作成することもできます。
+2番目のメンバー関数は、前の要素と比較したときに、述語関数 *pred* を満たすすべての要素を削除します。 \<functional>引数 *pred* のヘッダーで宣言されている任意のバイナリ関数オブジェクトを使用することも、独自の関数オブジェクトを作成することもできます。
 
 ### <a name="example"></a>例
 

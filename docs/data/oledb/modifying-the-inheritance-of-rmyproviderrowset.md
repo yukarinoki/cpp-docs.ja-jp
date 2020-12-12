@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: RCustomRowset の継承の変更'
 title: RCustomRowset の継承の変更
 ms.date: 10/26/2018
 helpviewer_keywords:
@@ -6,18 +7,18 @@ helpviewer_keywords:
 - inheritance [C++]
 - RCustomRowset
 ms.assetid: 33089c90-98a4-43e7-8e67-d4bb137e267e
-ms.openlocfilehash: d22c6902667ec84abe7bd85ffbffd1f5c5c57f2a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c54533122083c526ad12ac6514efa3ad9ba47cf5
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62395574"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97287009"
 ---
 # <a name="modifying-the-inheritance-of-rcustomrowset"></a>RCustomRowset の継承の変更
 
-追加する、`IRowsetLocate`インターフェイスの単純な読み取り専用プロバイダーの例の継承を変更する`CCustomRowset`します。 最初に、`CCustomRowset`継承`CRowsetImpl`します。 継承するように変更する必要がある`CRowsetBaseImpl`します。
+`IRowsetLocate`単純な読み取り専用プロバイダーの例にインターフェイスを追加するには、の継承を変更し `CCustomRowset` ます。 最初は、 `CCustomRowset` から継承 `CRowsetImpl` します。 を継承するように変更する必要があり `CRowsetBaseImpl` ます。
 
-これを行うには、新しいクラスを作成`CCustomRowsetImpl`の*カスタム*RS.h:
+これを行うには、 `CCustomRowsetImpl` *カスタム* の RS. h で新しいクラスを作成します。
 
 ```cpp
 ////////////////////////////////////////////////////////////////////////
@@ -31,7 +32,7 @@ class CMyRowsetImpl:
 };
 ```
 
-これで、COM インターフェイス マップを編集*カスタム*RS.h するようになります。
+次のように、 *カスタム* の RS で COM インターフェイスマップを編集します。
 
 ```cpp
 BEGIN_COM_MAP(CMyRowsetImpl)
@@ -40,18 +41,18 @@ BEGIN_COM_MAP(CMyRowsetImpl)
 END_COM_MAP()
 ```
 
-このコードに指示する COM インターフェイス マップを作成します`CMyRowsetImpl`を呼び出す`QueryInterface`両方に対して、`IRowset`と`IRowsetLocate`インターフェイス。 その他の行セットの実装のすべてを取得するクラスをマップのリンク、`CMyRowsetImpl`クラスを`CRowsetBaseImpl`OLE DB テンプレートで定義されているクラスは、map の COM マップをスキャンする OLE DB テンプレートに伝える COM_INTERFACE_ENTRY_CHAIN マクロを使用します。`CRowsetBaseImpl`への応答を`QueryInterface`呼び出します。
+このコードは、 `CMyRowsetImpl` `QueryInterface` インターフェイスとインターフェイスの両方に対してを呼び出すように指示する COM インターフェイスマップを作成し `IRowset` `IRowsetLocate` ます。 このマップでは、他の行セットクラスのすべての実装を取得するために、 `CMyRowsetImpl` クラスを `CRowsetBaseImpl` OLE DB テンプレートによって定義されているクラスにリンクします。このマップでは、 `CRowsetBaseImpl` 呼び出しに応答して、で COM マップをスキャンするように OLE DB テンプレートに指示する COM_INTERFACE_ENTRY_CHAIN マクロを使用します。 `QueryInterface`
 
-最後に、リンク`CCustomRowset`に`CMyRowsetBaseImpl`を変更して`CCustomRowset`から継承する`CMyRowsetImpl`、次のようにします。
+最後に、次のようにをに変更して、を継承するようにリンクし `CCustomRowset` `CMyRowsetBaseImpl` `CCustomRowset` `CMyRowsetImpl` ます。
 
 ```cpp
 class CCustomRowset : public CMyRowsetImpl<CCustomRowset, CCustomWindowsFile, CCustomCommand>
 ```
 
-`CCustomRowset` 使用できるように、`IRowsetLocate`行セット クラスの実装の残りの部分を活用しながらインターフェイス。
+`CCustomRowset` では、 `IRowsetLocate` 行セットクラスの残りの実装を利用しながら、インターフェイスを使用できるようになりました。
 
-これは、ときに[コンシューマーに返される列を動的に決定](../../data/oledb/dynamically-determining-columns-returned-to-the-consumer.md)します。
+この処理が完了すると、 [コンシューマーに返される列を動的に特定](../../data/oledb/dynamically-determining-columns-returned-to-the-consumer.md)できます。
 
 ## <a name="see-also"></a>関連項目
 
-[単純な読み取り専用プロバイダーの機能の拡張](../../data/oledb/enhancing-the-simple-read-only-provider.md)<br/>
+[単純な Read-Only プロバイダーの拡張](../../data/oledb/enhancing-the-simple-read-only-provider.md)<br/>

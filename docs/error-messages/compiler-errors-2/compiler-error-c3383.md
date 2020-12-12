@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「コンパイラエラー C3383」を参照してください。
 title: コンパイラ エラー C3383
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3383
 ms.assetid: ceb7f725-f417-4dc3-8496-0f413bb76687
-ms.openlocfilehash: ceae17689cbcb9585fb3722580042187ff64a6ee
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: fb5baf99c6738db1296cf4fb0a509c63d570ad78
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74755630"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97285592"
 ---
 # <a name="compiler-error-c3383"></a>コンパイラ エラー C3383
 
@@ -25,7 +26,7 @@ ms.locfileid: "74755630"
 
 - [Visual C++ の 64 ビットへの移行に関する一般的な問題](../../build/common-visual-cpp-64-bit-migration-issues.md)
 
-## <a name="example"></a>使用例
+## <a name="example"></a>例
 
 次の例では C3383 が生成されます。
 

@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: IRowsetLocateImpl クラス'
 title: IRowsetLocateImpl クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -32,12 +33,12 @@ helpviewer_keywords:
 - Hash method
 - m_rgbookmarks
 ms.assetid: a8aa3149-7ce8-4976-a680-2da193fd3234
-ms.openlocfilehash: a45b7ef1a31c3ecf34b15ee35bce48559465a905
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 5d723fbc1ff85ce2c5b50bb5eff53ba3771751fc
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88840311"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97287061"
 ---
 # <a name="irowsetlocateimpl-class"></a>IRowsetLocateImpl クラス
 
@@ -84,7 +85,7 @@ class ATL_NO_VTABLE IRowsetLocateImpl : public IRowsetImpl<
 *BookmarkMapClass*<br/>
 ブックマークによって保持されているすべての行ハンドルのストレージ単位。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー**: atldb.h
 
@@ -113,7 +114,7 @@ class ATL_NO_VTABLE IRowsetLocateImpl : public IRowsetImpl<
 
 行セット内の OLE DB ブックマークをサポートするには、行セットがこのクラスから継承されるようにします。
 
-ブックマークサポートの実装の詳細については、プラットフォーム SDK の*OLE DB プログラマーリファレンス*の*Visual C++ プログラマーガイド*[でブックマーク](/previous-versions/windows/desktop/ms709728(v=vs.85))[のプロバイダーサポート](../../data/oledb/provider-support-for-bookmarks.md)を参照してください。
+ブックマークサポートの実装の詳細については、プラットフォーム SDK の *OLE DB プログラマーリファレンス* の *Visual C++ プログラマーガイド*[でブックマーク](/previous-versions/windows/desktop/ms709728(v=vs.85))[のプロバイダーサポート](../../data/oledb/provider-support-for-bookmarks.md)を参照してください。
 
 ## <a name="irowsetlocateimplcompare"></a><a name="compare"></a> IRowsetLocateImpl:: Compare
 
@@ -132,7 +133,7 @@ STDMETHOD (Compare )(HCHAPTER /* hReserved */,
 
 #### <a name="parameters"></a>パラメーター
 
-*OLE DB プログラマーリファレンス*の「 [IRowsetLocate:: Compare](/previous-versions/windows/desktop/ms709539(v=vs.85)) 」を参照してください。
+*OLE DB プログラマーリファレンス* の「 [IRowsetLocate:: Compare](/previous-versions/windows/desktop/ms709539(v=vs.85)) 」を参照してください。
 
 ### <a name="remarks"></a>解説
 
@@ -167,7 +168,7 @@ STDMETHOD (GetRowsAt )(HWATCHREGION /* hReserved1 */,
 
 #### <a name="parameters"></a>パラメーター
 
-*OLE DB プログラマーリファレンス*の「 [IRowsetLocate:: getrowsat](/previous-versions/windows/desktop/ms723031(v=vs.85)) 」を参照してください。
+*OLE DB プログラマーリファレンス* の「 [IRowsetLocate:: getrowsat](/previous-versions/windows/desktop/ms723031(v=vs.85)) 」を参照してください。
 
 ### <a name="remarks"></a>解説
 
@@ -193,9 +194,9 @@ STDMETHOD (GetRowsByBookmark )(HCHAPTER /* hReserved */,
 #### <a name="parameters"></a>パラメーター
 
 *hReserved*<br/>
-から[IRowsetLocate:: GetRowsByBookmark](/previous-versions/windows/desktop/ms725420(v=vs.85))の*hchapter*パラメーターに対応します。
+から [IRowsetLocate:: GetRowsByBookmark](/previous-versions/windows/desktop/ms725420(v=vs.85))の *hchapter* パラメーターに対応します。
 
-その他のパラメーターについては、 *OLE DB プログラマーリファレンス*の「 [IRowsetLocate:: GetRowsByBookmark](/previous-versions/windows/desktop/ms725420(v=vs.85)) 」を参照してください。
+その他のパラメーターについては、 *OLE DB プログラマーリファレンス* の「 [IRowsetLocate:: GetRowsByBookmark](/previous-versions/windows/desktop/ms725420(v=vs.85)) 」を参照してください。
 
 ### <a name="remarks"></a>解説
 
@@ -219,9 +220,9 @@ STDMETHOD (Hash )(HCHAPTER /* hReserved */,
 #### <a name="parameters"></a>パラメーター
 
 *hReserved*<br/>
-から[IRowsetLocate:: Hash](/previous-versions/windows/desktop/ms709697(v=vs.85))の*hchapter*パラメーターに対応します。
+から [IRowsetLocate:: Hash](/previous-versions/windows/desktop/ms709697(v=vs.85))の *hchapter* パラメーターに対応します。
 
-その他のパラメーターについては、 *OLE DB プログラマーリファレンス*の「 [IRowsetLocate:: Hash](/previous-versions/windows/desktop/ms709697(v=vs.85)) 」を参照してください。
+その他のパラメーターについては、 *OLE DB プログラマーリファレンス* の「 [IRowsetLocate:: Hash](/previous-versions/windows/desktop/ms709697(v=vs.85)) 」を参照してください。
 
 ## <a name="irowsetlocateimplm_rgbookmarks"></a><a name="rgbookmarks"></a> IRowsetLocateImpl:: m_rgBookmarks
 

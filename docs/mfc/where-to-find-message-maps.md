@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「メッセージマップの検索場所」を参照してください。
 title: メッセージ マップの所在
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,28 +8,28 @@ helpviewer_keywords:
 - message classes [MFC], finding
 - message-map macros
 ms.assetid: bf59fbc8-b222-42d3-b5d3-0a79aa3cb923
-ms.openlocfilehash: eec0ae43546e3cc0c08e3178c4808e21fa48686a
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 4796d358dd3be5455b22e348fbcc9236d1404ce8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81360163"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97284968"
 ---
 # <a name="where-to-find-message-maps"></a>メッセージ マップの所在
 
-アプリケーション ウィザードを使用して新しいスケルトン アプリケーションを作成すると、アプリケーション ウィザードによって作成されるコマンド ターゲット クラスごとにメッセージ マップが書き込まれます。 これには、派生アプリケーション、ドキュメント、ビュー、およびフレーム ウィンドウクラスが含まれます。 これらのメッセージ マップの中には、特定のメッセージや定義済みコマンドに対してアプリケーション ウィザードによって提供されるエントリが既に含まれています。
+アプリケーションウィザードを使用して新しいスケルトンアプリケーションを作成する場合、アプリケーションウィザードでは、作成したコマンドターゲットクラスごとにメッセージマップが書き込まれます。 これには、派生アプリケーション、ドキュメント、ビュー、フレームウィンドウの各クラスが含まれます。 これらのメッセージマップの中には、特定のメッセージと定義済みコマンドに対してアプリケーションウィザードによって指定されたエントリが既に存在しているものと、追加するハンドラーのプレースホルダーだけが含まれているものがあります。
 
-クラスのメッセージ マップは.クラスの CPP ファイル。 アプリケーション ウィザードで作成される基本的なメッセージ マップを使用して、[クラス ウィザード](reference/mfc-class-wizard.md)を使用して、各クラスで処理するメッセージとコマンドのエントリを追加します。 一部のエントリを追加すると、一般的なメッセージ マップは次のようになります。
+クラスのメッセージマップは、にあります。クラスの CPP ファイル。 アプリケーションウィザードによって作成される基本的なメッセージマップを操作するには、 [クラスウィザード](reference/mfc-class-wizard.md) を使用して、各クラスが処理するメッセージとコマンドのエントリを追加します。 いくつかのエントリを追加すると、一般的なメッセージマップは次のようになります。
 
 [!code-cpp[NVC_MFCMessageHandling#1](../mfc/codesnippet/cpp/where-to-find-message-maps_1.cpp)]
 
-メッセージ マップは、マクロのコレクションで構成されます。 [BEGIN_MESSAGE_MAP](reference/message-map-macros-mfc.md#begin_message_map)と[END_MESSAGE_MAP](reference/message-map-macros-mfc.md#end_message_map)の 2 つのマクロは、メッセージ マップを囲みます。 などの`ON_COMMAND`他のマクロは、メッセージ マップの内容を入力します。
+メッセージマップは、マクロのコレクションで構成されます。 2つのマクロ ( [BEGIN_MESSAGE_MAP](reference/message-map-macros-mfc.md#begin_message_map) と [END_MESSAGE_MAP](reference/message-map-macros-mfc.md#end_message_map)) は、メッセージマップをかっこで囲みます。 などの他のマクロは、 `ON_COMMAND` メッセージマップの内容を入力します。
 
 > [!NOTE]
-> メッセージ マップ マクロの後にセミコロンは付かっていません。
+> メッセージマップマクロの後にセミコロンがありません。
 
-クラスの追加ウィザードを使用して新しいクラスを作成すると、クラスのメッセージ マップが表示されます。 または、ソース コード エディターを使用してメッセージ マップを手動で作成することもできます。
+クラスの追加ウィザードを使用して新しいクラスを作成すると、クラスのメッセージマップが提供されます。 または、ソースコードエディターを使用して、手動でメッセージマップを作成することもできます。
 
 ## <a name="see-also"></a>関連項目
 
-[フレームワークのメッセージ マップ検索方法](../mfc/how-the-framework-searches-message-maps.md)
+[フレームワークがメッセージマップを検索する方法](../mfc/how-the-framework-searches-message-maps.md)

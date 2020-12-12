@@ -1,5 +1,6 @@
 ---
-title: '方法: ネイティブ C++ クラスから Windows フォーム イベントをシンクします。'
+description: '詳細については、「方法: ネイティブ C++ クラスからイベントを Windows フォームシンクする」を参照してください。'
+title: '方法: ネイティブ C++ クラスから Windows フォーム イベントをシンクする'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,36 +9,36 @@ helpviewer_keywords:
 - event handling, .NET/native interop
 - event handling, Windows Forms in C++
 ms.assetid: 6e30ddee-d058-4c8d-9956-2a43d86f19d5
-ms.openlocfilehash: d02bcea4efce03c8fb11650d344468236737cfbd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 223590849f114bfe02b030a0639f160b8fc1c321
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62387267"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97286359"
 ---
-# <a name="how-to-sink-windows-forms-events-from-native-c-classes"></a>方法: ネイティブ C++ クラスから Windows フォーム イベントをシンクします。
+# <a name="how-to-sink-windows-forms-events-from-native-c-classes"></a>方法: ネイティブ C++ クラスから Windows フォーム イベントをシンクする
 
-Windows フォーム コントロールまたは MFC のマクロのマップ形式の他のフォームから発生した管理対象のイベントからのコールバックを受信するネイティブの C++ クラスを有効にすることができます。 ビューとダイアログ ボックスでイベントをシンクは、コントロールに対して同じタスクの実行に似ています。
+ネイティブ C++ クラスを有効にすると、Windows フォームコントロールまたはその他の形式で発生したマネージイベントから、MFC マクロマップ形式を使用してコールバックを受け取ることができます。 ビューおよびダイアログでのシンクイベントは、コントロールに対して同じタスクを実行することと似ています。
 
-これを行うには、する必要があります。
+そのためには、次の手順を実行する必要があります。
 
-- アタッチする`OnClick`イベント ハンドラーを使用してコントロールを[MAKE_DELEGATE](../mfc/reference/delegate-and-interface-maps.md#make_delegate)します。
+- `OnClick` [MAKE_DELEGATE](../mfc/reference/delegate-and-interface-maps.md#make_delegate)を使用して、コントロールにイベントハンドラーをアタッチします。
 
-- 使用してデリゲート マップ作成[BEGIN_DELEGATE_MAP](../mfc/reference/delegate-and-interface-maps.md#begin_delegate_map)、 [END_DELEGATE_MAP](../mfc/reference/delegate-and-interface-maps.md#end_delegate_map)、および[EVENT_DELEGATE_ENTRY](../mfc/reference/delegate-and-interface-maps.md#event_delegate_entry)します。
+- [BEGIN_DELEGATE_MAP](../mfc/reference/delegate-and-interface-maps.md#begin_delegate_map)、 [END_DELEGATE_MAP](../mfc/reference/delegate-and-interface-maps.md#end_delegate_map)、および[EVENT_DELEGATE_ENTRY](../mfc/reference/delegate-and-interface-maps.md#event_delegate_entry)を使用して、デリゲートマップを作成します。
 
-このサンプルで行った作業を続行する[方法。Windows フォームで DDX/DDV データ バインディング](../dotnet/how-to-do-ddx-ddv-data-binding-with-windows-forms.md)します。
+このサンプルでは、 [「方法: Windows フォームで DDX/DDV データバインディングを実行](../dotnet/how-to-do-ddx-ddv-data-binding-with-windows-forms.md)する」で行った作業を続行します。
 
-次に、MFC コントロールは関連付けます (`m_MyControl`) と呼ばれる管理対象のイベント ハンドラー デリゲートを使用して`OnClick`、管理対象の<xref:System.Windows.Forms.Control.Click>イベント。
+次に、MFC コントロール ( `m_MyControl` ) と、 `OnClick` マネージイベントに対して呼び出されるマネージイベントハンドラーデリゲートを関連付けます <xref:System.Windows.Forms.Control.Click> 。
 
-### <a name="to-attach-the-onclick-event-handler"></a>OnClick イベント ハンドラーをアタッチするには。
+### <a name="to-attach-the-onclick-event-handler"></a>OnClick イベントハンドラーをアタッチするには、次のようにします。
 
-1. BOOL CMFC01Dlg::OnInitDialog の実装には、次のコードを追加します。
+1. BOOL CMFC01Dlg:: OnInitDialog の実装に次のコードを追加します。
 
     ```
     m_MyControl.GetControl()->button1->Click += MAKE_DELEGATE( System::EventHandler, OnClick );
     ```
 
-1. CMFC01Dlg クラスの宣言のパブリック セクションに次のコードを追加します。 パブリック CDialog します。
+1. CMFC01Dlg: public CDialog クラスの宣言のパブリックセクションに、次のコードを追加します。
 
     ```
     // delegate map
@@ -48,7 +49,7 @@ Windows フォーム コントロールまたは MFC のマクロのマップ形
     void OnClick( System::Object^ sender, System::EventArgs^ e );
     ```
 
-1. 実装を最後に、追加`OnClick`CMFC01Dlg.cpp に。
+1. 最後に、の実装を CMFC01Dlg に追加します。 `OnClick`
 
     ```
     void CMFC01Dlg::OnClick(System::Object^ sender, System::EventArgs^ e)

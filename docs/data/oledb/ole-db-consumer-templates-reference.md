@@ -1,15 +1,16 @@
 ---
+description: 詳細については、OLE DB コンシューマーテンプレートリファレンスを参照してください。
 title: OLE DB コンシューマー テンプレート リファレンス
 ms.date: 11/04/2016
 helpviewer_keywords:
 - OLE DB consumer templates, classes
 ms.assetid: cfc7f698-1a0e-4a09-a4d3-ccb99e6654fe
-ms.openlocfilehash: 13805ab1dc2c2b4792fd05c9140006c610b42f75
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: e904237a7fbdef84c5f7f902ba352301a608b544
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80210107"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97286957"
 ---
 # <a name="ole-db-consumer-templates-reference"></a>OLE DB コンシューマー テンプレート リファレンス
 
@@ -21,16 +22,16 @@ OLE DB コンシューマーテンプレートには、次のクラスが含ま�
 データソースとの接続を管理します。 これは、クライアントを作成するのに便利なクラスです。これは、必要なオブジェクト (データソースとセッション) と、データソースに接続するときに必要な作業の一部をカプセル化するためです。
 
 [CDataSource](../../data/oledb/cdatasource-class.md)<br/>
-データソースへのプロバイダーによる接続を表す、OLE DB のデータソースオブジェクトに対応します。 `CSession` オブジェクトによって表される1つ以上のデータベースセッションは、1つの接続で実行できます。
+データソースへのプロバイダーによる接続を表す、OLE DB のデータソースオブジェクトに対応します。 オブジェクトによって表される1つ以上のデータベースセッションは、 `CSession` 1 つの接続で実行できます。
 
 [CEnumerator](../../data/oledb/cenumerator-class.md)<br/>
 使用可能なデータソースに関する行セット情報を取得する OLE DB 列挙子オブジェクトに対応します。
 
 [CEnumeratorAccessor](../../data/oledb/cenumeratoraccessor-class.md)<br/>
-`CEnumerator` によって使用され、列挙子行セットからデータにアクセスします。 この行セットは、現在の列挙子から参照できるデータソースと列挙子で構成されます。
+によって、 `CEnumerator` 列挙子行セットからデータにアクセスするために使用されます。 この行セットは、現在の列挙子から参照できるデータソースと列挙子で構成されます。
 
 [CSession](../../data/oledb/csession-class.md)<br/>
-単一データベースアクセスセッションを表します。 1つ以上のセッションを各 `CDataSource` オブジェクトに関連付けることができます。
+単一データベースアクセスセッションを表します。 1つ以上のセッションを各オブジェクトに関連付けることができ `CDataSource` ます。
 
 ## <a name="accessor-classes"></a>アクセサークラス
 
@@ -44,16 +45,16 @@ OLE DB コンシューマーテンプレートには、次のクラスが含ま�
 行セットの列情報に基づいて実行時に作成できるアクセサー。 データソースの構造がわからない場合は、このクラスを使用してデータを取得します。
 
 [CDynamicParameterAccessor](../../data/oledb/cdynamicparameteraccessor-class.md)<br/>
-コマンドの種類が不明な場合に使用できるアクセサー。 プロバイダーがインターフェイスをサポートしている場合は、`ICommandWithParameters` インターフェイスを呼び出すことによってパラメーター情報を取得します。
+コマンドの種類が不明な場合に使用できるアクセサー。 プロバイダーがインターフェイスをサポートしている場合は、インターフェイスを呼び出すことによってパラメーター情報を取得し `ICommandWithParameters` ます。
 
 [CDynamicStringAccessor](../../data/oledb/cdynamicstringaccessor-class.md)<br/>
 では、データベースの基になる構造に関する知識がない場合に、データソースにアクセスできます。
 
 [CDynamicStringAccessorA](../../data/oledb/cdynamicstringaccessora-class.md)<br/>
-`CDynamicStringAccessor` に似ていますが、このクラスは、データストアからアクセスされるデータを ANSI 文字列データとして要求する点が異なります。
+と似て `CDynamicStringAccessor` いますが、このクラスは、データストアからアクセスされるデータを ANSI 文字列データとして要求する点が異なります。
 
 [CDynamicStringAccessorW](../../data/oledb/cdynamicstringaccessorw-class.md)<br/>
-`CDynamicStringAccessor` に似ていますが、このクラスは、データストアからアクセスされるデータを UNICODE 文字列データとして要求する点が異なります。
+に似 `CDynamicStringAccessor` ていますが、このクラスは、データストアからアクセスされるデータを UNICODE 文字列データとして要求する点が異なります。
 
 [CManualAccessor](../../data/oledb/cmanualaccessor-class.md)<br/>
 列とコマンドパラメーターの両方を処理するメソッドを持つアクセサー。 このクラスでは、プロバイダーが型を変換できる限り、任意のデータ型を使用できます。
@@ -62,7 +63,7 @@ OLE DB コンシューマーテンプレートには、次のクラスが含ま�
 クラスがパラメーターまたは出力列をサポートしないようにする場合は、テンプレート引数としてを使用できます。
 
 [CXMLAccessor](../../data/oledb/cxmlaccessor-class.md)<br/>
-`CDynamicStringAccessor` に似ていますが、このクラスは、データストアからアクセスされるすべてのデータを XML 形式の (タグ付けされた) データとして変換する点が異なります。
+に似 `CDynamicStringAccessor` ていますが、このクラスは、データストアからアクセスされるすべてのデータを XML 形式の (タグ付けされた) データとして変換する点が異なります。
 
 ## <a name="rowset-classes"></a>行セットクラス
 
@@ -85,31 +86,31 @@ OLE DB コンシューマーテンプレートには、次のクラスが含ま�
 行セットデータを操作、設定、および取得するために使用します。
 
 [CStreamRowset](../../data/oledb/cstreamrowset-class.md)<br/>
-行セットではなく `ISequentialStream` オブジェクトを返します。次に、`Read` メソッドを使用して XML 形式でデータを取得します。 (SQL Server 2000 では書式設定が行われます。この機能は SQL Server 2000 でのみ機能することに注意してください)。
+は、 `ISequentialStream` 行セットではなくオブジェクトを返します。その後、メソッドを使用して `Read` XML 形式でデータを取得します。 (SQL Server 2000 では書式設定が行われます。この機能は SQL Server 2000 でのみ機能することに注意してください)。
 
 [IRowsetNotifyImpl](../../data/oledb/irowsetnotifyimpl-class.md)<br/>
-`IRowsetNotify`のダミーの実装を提供し、`OnFieldChange`、`OnRowChange`、および `OnRowsetChange`の `IRowsetNotify` メソッドに対して空の関数を使用します。
+のダミーの実装を提供し `IRowsetNotify` `IRowsetNotify` ます。メソッド、、およびの空の関数を使用し `OnFieldChange` `OnRowChange` `OnRowsetChange` ます。
 
-[スキーマ行セット クラスと Typedef クラス](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)
+[スキーマ行セットクラスと Typedef クラス](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)
 
 OLE DB テンプレートには、OLE DB スキーマ行セットに対応する一連のクラスが用意されています。
 
 ## <a name="command-classes"></a>コマンドクラス
 
 [CCommand](../../data/oledb/ccommand-class.md)<br/>
-パラメーターベースの OLE DB コマンドを設定して実行するために使用します。 単純な行セットを開くだけの場合は、代わりに `CTable` を使用します。
+パラメーターベースの OLE DB コマンドを設定して実行するために使用します。 単純な行セットを開くだけの場合は、代わりにを使用 `CTable` します。
 
 [CMultipleResults](../../data/oledb/cmultipleresults-class.md)<br/>
-コマンドで複数の結果セットを処理する場合に、`CCommand` テンプレートのテンプレート引数として使用されます。
+`CCommand`コマンドで複数の結果セットを処理する場合に、テンプレートのテンプレート引数として使用されます。
 
 [CNoAccessor](../../data/oledb/cnoaccessor-class.md)<br/>
-アクセサークラスの引数を受け取る `CCommand` や `CTable`など、テンプレートクラスのテンプレート引数として使用されます。 クラスでパラメーターまたは出力列がサポートされないようにする場合は、`CNoAccessor` を使用します。
+アクセサークラスの引数を受け取るやなど、テンプレートクラスのテンプレート引数として使用され `CCommand` `CTable` ます。 `CNoAccessor`クラスでパラメーターまたは出力列がサポートされないようにする場合は、を使用します。
 
 [CNoMultipleResults](../../data/oledb/cnomultipleresults-class.md)<br/>
-コマンドで1つの行セットを処理する場合に、`CCommand` テンプレートのテンプレート引数として使用されます。 テンプレート引数の既定値は `CNoMultipleResults` です。
+`CCommand`コマンドで1つの行セットを処理する場合に、テンプレートのテンプレート引数として使用されます。 `CNoMultipleResults` は、テンプレート引数の既定値です。
 
 [CNoRowset](../../data/oledb/cnorowset-class.md)<br/>
-コマンドまたはテーブルが行セットを返さない場合、`CCommand` または `CTable` のテンプレート引数として使用されます。
+のテンプレート引数として使用され `CCommand` `CTable` ます。コマンドまたはテーブルが行セットを返さない場合は、を使用します。
 
 [CTable](../../data/oledb/ctable-class.md)<br/>
 パラメーターを使用せずに単純な行セットにアクセスするために使用します。
@@ -132,7 +133,7 @@ OLE DB テンプレートには、OLE DB スキーマ行セットに対応する
 [CDBErrorInfo](../../data/oledb/cdberrorinfo-class.md)<br/>
 OLE DB エラー情報を取得するために使用します。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[OLE DB プロバイダー テンプレート リファレンス](../../data/oledb/ole-db-provider-templates-reference.md)<br/>
+[OLE DB プロバイダーテンプレートのリファレンス](../../data/oledb/ole-db-provider-templates-reference.md)<br/>
 [OLE DB テンプレート](../../data/oledb/ole-db-templates.md)

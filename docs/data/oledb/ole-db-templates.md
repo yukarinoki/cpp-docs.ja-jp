@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: OLE DB テンプレート'
 title: OLE DB テンプレート
 ms.date: 05/09/2019
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - OLE DB templates
 ms.assetid: 73918f6f-1fd7-4fa2-a0ff-7f9d792fce7e
-ms.openlocfilehash: d3b709bbebdf040ac818d2d2d44576cf49aafdd4
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 2a1680f541e9d8f8fb35da22670e72b3a87a1db0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91500904"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97286775"
 ---
 # <a name="ole-db-templates"></a>OLE DB テンプレート
 
@@ -45,7 +46,7 @@ OLE DB プロバイダー テンプレートに関する概念が記載されて
 [OLE DB コンシューマーの作成](../../data/oledb/creating-an-ole-db-consumer.md)<br/>
 OLE DB テンプレート コンシューマーの作成に関する説明が記載されています。
 
-[単純な読み取り専用プロバイダーの作成](../../data/oledb/creating-a-simple-read-only-provider.md)<br/>
+[単純な Read-Only プロバイダーの作成](../../data/oledb/creating-a-simple-read-only-provider.md)<br/>
 文字列のペアを読み取るシンプルな読み取り専用プロバイダーの作成に関する説明が記載されています。
 
 [更新可能なプロバイダーの作成](../../data/oledb/creating-an-updatable-provider.md)<br/>

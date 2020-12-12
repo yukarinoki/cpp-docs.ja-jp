@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: ISessionPropertiesImpl クラス'
 title: ISessionPropertiesImpl クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - GetProperties method
 - SetProperties method
 ms.assetid: ca0ba254-c7dc-4c52-abec-cf895a0c6a63
-ms.openlocfilehash: d664f32226498326ffb092f1d3248fbdbf614d50
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 6b20331de5419de868d6739a010eb5df1548a94e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91509764"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97287035"
 ---
 # <a name="isessionpropertiesimpl-class"></a>ISessionPropertiesImpl クラス
 
@@ -38,9 +39,9 @@ class ATL_NO_VTABLE ISessionPropertiesImpl :
 から派生したクラス `ISessionPropertiesImpl` 。
 
 *PropClass*<br/>
-既定で *T*に設定されているユーザー定義可能なプロパティクラス。
+既定で *T* に設定されているユーザー定義可能なプロパティクラス。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** atldb.h
 
@@ -53,7 +54,7 @@ class ATL_NO_VTABLE ISessionPropertiesImpl :
 |[GetProperties](#getproperties)|セッションで現在設定されているセッションプロパティグループのプロパティの一覧を返します。|
 |[SetProperties](#setproperties)|セッションプロパティグループのプロパティを設定します。|
 
-## <a name="remarks"></a>注釈
+## <a name="remarks"></a>解説
 
 セッションの必須のインターフェイスです。 このクラスは、 [プロパティセットマップ](./macros-for-ole-db-provider-templates.md#begin_propset_map)によって定義された静的関数を呼び出すことによって、セッションプロパティを実装します。 プロパティセットマップは、セッションクラスで指定する必要があります。
 
@@ -72,7 +73,7 @@ STDMETHOD(GetProperties)(ULONG cPropertyIDSets,
 
 #### <a name="parameters"></a>パラメーター
 
-*OLE DB プログラマーリファレンス*の[Isessionproperties:: GetProperties](/previous-versions/windows/desktop/ms723643(v=vs.85))を参照してください。
+*OLE DB プログラマーリファレンス* の [Isessionproperties:: GetProperties](/previous-versions/windows/desktop/ms723643(v=vs.85))を参照してください。
 
 ## <a name="isessionpropertiesimplsetproperties"></a><a name="setproperties"></a> ISessionPropertiesImpl:: SetProperties
 
@@ -87,7 +88,7 @@ STDMETHOD(SetProperties)(ULONG cPropertySets,
 
 #### <a name="parameters"></a>パラメーター
 
-*OLE DB プログラマーリファレンス*の[Isessionproperties:: SetProperties](/previous-versions/windows/desktop/ms714405(v=vs.85))を参照してください。
+*OLE DB プログラマーリファレンス* の [Isessionproperties:: SetProperties](/previous-versions/windows/desktop/ms714405(v=vs.85))を参照してください。
 
 ## <a name="see-also"></a>関連項目
 
