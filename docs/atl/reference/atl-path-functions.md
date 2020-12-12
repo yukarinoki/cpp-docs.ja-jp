@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「ATL Path 関数」を参照してください。
 title: ATL パス関数
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -41,12 +42,12 @@ f1_keywords:
 - ATLPATH/ATL::ATLPath::StripToRoot
 - ATLPATH/ATL::ATLPath::UnquoteSpaces
 ms.assetid: d1ec2b8d-7ec7-43ea-90dd-0a740d2a742b
-ms.openlocfilehash: e9e8af5a902a51d9a3ee4956a60ad162196f659c
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 7244494c6be2819b3cd4142f5d1404ea356fdc30
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88833999"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97165304"
 ---
 # <a name="atl-path-functions"></a>ATL パス関数
 
@@ -107,7 +108,7 @@ ATL には、 [Cpatht](cpatht-class.md)の形式でパスを操作するため�
 |[ATLPath::StripToRoot](#striptoroot)|[Pathtoroot](/windows/win32/api/shlwapi/nf-shlwapi-pathstriptorootw)用のオーバーロードされたラッパーです。|
 |[ATLPath::UnquoteSpaces](#unquotespaces)|この関数は、 [PathUnquoteSpaces](/windows/win32/api/shlwapi/nf-shlwapi-pathunquotespacesw)のオーバーロードされたラッパーです。|
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** atlpath .h
 

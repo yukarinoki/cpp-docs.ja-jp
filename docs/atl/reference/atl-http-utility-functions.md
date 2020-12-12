@@ -1,19 +1,20 @@
 ---
+description: 詳細については、「ATL HTTP ユーティリティ関数」を参照してください。
 title: ATL HTTP ユーティリティ関数
 ms.date: 11/04/2016
 ms.assetid: 4db57ef2-31fa-4696-bbeb-79a9035033ed
-ms.openlocfilehash: d2e30f940ded0bf355000cd42ff46a67662b54f5
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: fb8cc8789db45095f969dd9513dcf70a9bd0d05c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88833986"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97165369"
 ---
 # <a name="atl-http-utility-functions"></a>ATL HTTP ユーティリティ関数
 
 これらの関数は、Url の操作をサポートします。
 
-|関数|説明|
+|機能|説明|
 |-|-|
 |[AtlCanonicalizeUrl](#atlcanonicalizeurl)|Canonicalizes は、安全でない文字やスペースをエスケープシーケンスに変換するなど、URL を指定します。|
 |[AtlCombineUrl](#atlcombineurl)|ベース URL と相対 URL を結合して、1つの正規の URL にします。|
@@ -24,7 +25,7 @@ ms.locfileid: "88833986"
 |[RGBToHtml](#rgbtohtml)|[COLORREF](/windows/win32/gdi/colorref)値をその色の値に対応する HTML テキストに変換します。|
 |[SystemTimeToHttpDate](#systemtimetohttpdate)|システム時刻を HTTP ヘッダーで使用できる形式の文字列に変換します。|
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** atlutil. h
 
@@ -49,7 +50,7 @@ inline BOOL AtlCanonicalizeUrl(
 正規化された URL を受信するために、呼び出し元が割り当てたバッファー。
 
 *pdwMaxLength*<br/>
-*Szcanonicalized*された長さの文字数を格納している変数へのポインター。 関数が成功した場合、変数はバッファーに書き込まれた文字数 (終端の null 文字を含む) を受け取ります。 関数が失敗した場合、変数は、終端の null 文字の領域を含む、バッファーの必要な長さをバイト単位で受け取ります。
+*Szcanonicalized* された長さの文字数を格納している変数へのポインター。 関数が成功した場合、変数はバッファーに書き込まれた文字数 (終端の null 文字を含む) を受け取ります。 関数が失敗した場合、変数は、終端の null 文字の領域を含む、バッファーの必要な長さをバイト単位で受け取ります。
 
 *dwFlags*<br/>
 この関数の動作を制御するフラグ ATL_URL ます。
@@ -101,7 +102,7 @@ inline BOOL AtlCombineUrl(
 正規化された URL を受信するために、呼び出し元が割り当てたバッファー。
 
 *pdwMaxLength*<br/>
-*Szbuffer*の長さを文字数で格納している変数へのポインター。 関数が成功した場合、変数はバッファーに書き込まれた文字数 (終端の null 文字を含む) を受け取ります。 関数が失敗した場合、変数は、終端の null 文字の領域を含む、バッファーの必要な長さをバイト単位で受け取ります。
+*Szbuffer* の長さを文字数で格納している変数へのポインター。 関数が成功した場合、変数はバッファーに書き込まれた文字数 (終端の null 文字を含む) を受け取ります。 関数が失敗した場合、変数は、終端の null 文字の領域を含む、バッファーの必要な長さをバイト単位で受け取ります。
 
 *dwFlags*<br/>
 この関数の動作を制御するフラグ。 「 [AtlCanonicalizeUrl](#atlcanonicalizeurl)」を参照してください。
@@ -146,7 +147,7 @@ inline BOOL AtlEscapeUrl(
 DWORD 変数へのポインター。 関数が成功した場合、 *pdwStrLen* は、バッファーに書き込まれた文字数 (終端の null 文字を含む) を受け取ります。 関数が失敗した場合、変数は、終端の null 文字の領域を含む、バッファーの必要な長さをバイト単位で受け取ります。 このメソッドのワイド文字バージョンを使用する場合、 *pdwStrLen* は、バイト数ではなく、必要な文字数を受け取ります。
 
 *dwMaxLength*<br/>
-バッファー *Lpszstringout*のサイズ。
+バッファー *Lpszstringout* のサイズ。
 
 *dwFlags*<br/>
 この関数の動作を制御するフラグ ATL_URL ます。 使用可能な値については、 [ATLCanonicalizeUrl](#atlcanonicalizeurl) を参照してください。
@@ -223,7 +224,7 @@ inline BOOL AtlUnescapeUrl(
 DWORD 変数へのポインター。 関数が成功した場合、変数はバッファーに書き込まれた文字数 (終端の null 文字を含む) を受け取ります。 関数が失敗した場合、変数は、終端の null 文字の領域を含む、バッファーの必要な長さをバイト単位で受け取ります。
 
 *dwMaxLength*<br/>
-バッファー *Lpszstringout*のサイズ。
+バッファー *Lpszstringout* のサイズ。
 
 ### <a name="return-value"></a>戻り値
 
@@ -275,7 +276,7 @@ inline void SystemTimeToHttpDate(
 
 ### <a name="parameters"></a>パラメーター
 
-*&*<br/>
+*st*<br/>
 HTTP 書式指定文字列として取得されるシステム時刻。
 
 *strTime*<br/>

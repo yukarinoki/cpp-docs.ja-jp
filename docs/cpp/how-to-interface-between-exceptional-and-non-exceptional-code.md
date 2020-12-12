@@ -1,25 +1,26 @@
-﻿---
+---
+description: '詳細については、「方法: 例外的なコードと非例外的なコードの間のインターフェイス」を参照してください。'
 title: '方法: 例外的なコードと非例外的なコードの間のインターフェイス'
 ms.custom: how-to
 ms.date: 11/19/2019
 ms.topic: conceptual
 ms.assetid: fd5bb4af-5665-46a1-a321-614b48d4061e
-ms.openlocfilehash: 88dacda9b20f351eb67dde24a8335bdcbba27dd3
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 34a0966d496e5e22099de051a74f3458d1cc05d0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87187700"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97114027"
 ---
 # <a name="how-to-interface-between-exceptional-and-non-exceptional-code"></a>方法: 例外的なコードと非例外的なコードの間のインターフェイス
 
 ここでは、C++ モジュールで一貫した例外処理を実装する方法と、例外の境界でエラー コードとの間でそれらの例外を変換する方法を説明します。
 
-C++ モジュールは、例外を使用しないコード (非例外コード) とのやり取りが必要な場合があります。 このようなインターフェイスは、*例外の境界*と呼ばれます。 たとえば、C++ プログラム中で Win32 関数 `CreateFile` を呼び出すことが必要な場合があります。 `CreateFile` は例外をスローせず、`GetLastError` 関数で取得できるエラー コードを設定します。 作成する C++ プログラムが重要である場合、一貫した例外ベースのエラー処理ポリシーを適用するのが一般的です。 また、非例外コードとやり取りするというだけの理由から例外の使用をあきらめたり、例外ベースのエラー ポリシーと非例外ベースのエラー ポリシーを C++ モジュールで混在させないことが一般的です。
+C++ モジュールは、例外を使用しないコード (非例外コード) とのやり取りが必要な場合があります。 このようなインターフェイスは、 *例外の境界* と呼ばれます。 たとえば、C++ プログラム中で Win32 関数 `CreateFile` を呼び出すことが必要な場合があります。 `CreateFile` は例外をスローせず、`GetLastError` 関数で取得できるエラー コードを設定します。 作成する C++ プログラムが重要である場合、一貫した例外ベースのエラー処理ポリシーを適用するのが一般的です。 また、非例外コードとやり取りするというだけの理由から例外の使用をあきらめたり、例外ベースのエラー ポリシーと非例外ベースのエラー ポリシーを C++ モジュールで混在させないことが一般的です。
 
 ## <a name="calling-non-exceptional-functions-from-c"></a>C++ からの例外的でない関数の呼び出し
 
-C++ から非例外関数を呼び出す場合、すべてのエラーを検出して例外をスローする C ++ 関数でその関数をラップします。 そのようなラッパー関数を設計するときは、まず提供する例外保証の種類 (no-throw、strong、basic) を決定します。 次に、例外がスローされるときにすべてのリソース (たとえばファイル ハンドル) が正しく解放されるように関数を設計します。 通常は、スマート ポインターなどのリソース マネージャー使用してリソースを所有することになります。 設計上の考慮事項の詳細については、「[方法: 例外の安全性を](how-to-design-for-exception-safety.md)確保する」を参照してください。
+C++ から非例外関数を呼び出す場合、すべてのエラーを検出して例外をスローする C ++ 関数でその関数をラップします。 そのようなラッパー関数を設計するときは、まず提供する例外保証の種類 (no-throw、strong、basic) を決定します。 次に、例外がスローされるときにすべてのリソース (たとえばファイル ハンドル) が正しく解放されるように関数を設計します。 通常は、スマート ポインターなどのリソース マネージャー使用してリソースを所有することになります。 設計上の考慮事項の詳細については、「 [方法: 例外の安全性を](how-to-design-for-exception-safety.md)確保する」を参照してください。
 
 ### <a name="example"></a>例
 
@@ -237,4 +238,4 @@ bool DiffFiles3(const string& file1, const string& file2)
 ## <a name="see-also"></a>関連項目
 
 [例外とエラー処理に関する最新の C++ のベストプラクティス](errors-and-exception-handling-modern-cpp.md)<br/>
-[方法: 例外の安全性を設計する](how-to-design-for-exception-safety.md)<br/>
+「[方法: 例外の安全性の設計](how-to-design-for-exception-safety.md)<br/>

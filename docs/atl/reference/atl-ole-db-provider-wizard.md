@@ -1,15 +1,16 @@
 ---
+description: '詳細情報: ATL OLE DB プロバイダーウィザード'
 title: ATL OLE DB プロバイダー ウィザード
 ms.date: 05/09/2019
 helpviewer_keywords:
 - ATL projects, adding ATL OLE DB providers
 ms.assetid: cf91ba78-01d1-4d12-b673-e95d96bfbebe
-ms.openlocfilehash: 43b8ed4507b004f1e78bc1b9dda64c44ff56e1d7
-ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
+ms.openlocfilehash: 068670205c45c559e8b312d633d715f51a78190d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "92921140"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97165343"
 ---
 # <a name="atl-ole-db-provider-wizard"></a>ATL OLE DB プロバイダー ウィザード
 
@@ -21,7 +22,7 @@ ms.locfileid: "92921140"
 
 ::: moniker range="<=msvc-150"
 
-## <a name="remarks"></a>注釈
+## <a name="remarks"></a>解説
 
 Visual Studio 2008 以降、このウィザードによって生成された登録スクリプトでは、その COM コンポーネントが **HKEY_LOCAL_MACHINE** ではなく **HKEY_CURRENT_USER** 下に登録されます。 この動作を変更するには、ATL ウィザードの **[すべてのユーザーについてコンポーネントを登録]** オプションを設定します。
 
@@ -45,7 +46,7 @@ Visual Studio 2008 以降、このウィザードによって生成された登�
 
    ProgID (プログラム識別子) は、アプリケーションで GUID の代わりに使用できるテキスト文字列です。 ProgID 名の形式は *Projectname.Coclassname* です。
 
-- **バージョン**
+- **Version**
 
    プロバイダーのバージョン番号です。 既定値は 1 です。
 
@@ -87,6 +88,6 @@ Visual Studio 2008 以降、このウィザードによって生成された登�
 
 ::: moniker-end
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 
 [ATL OLE DB プロバイダー](../../atl/reference/adding-an-atl-ole-db-provider.md)

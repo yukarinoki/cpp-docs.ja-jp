@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: PROC'
 title: PROC
 ms.date: 12/06/2019
 f1_keywords:
@@ -6,35 +7,35 @@ f1_keywords:
 helpviewer_keywords:
 - PROC directive
 ms.assetid: ee5bb6b6-fa15-4d73-b0cf-e650178539a9
-ms.openlocfilehash: 85d9a1e82eebcd83cb0f12f5ca751ec9415af18d
-ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
+ms.openlocfilehash: fe811ed1723dc1a41014720d97b6f21ab596c2e4
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75318671"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97126036"
 ---
 # <a name="proc"></a>PROC
 
-*Label*と呼ばれるプロシージャブロックの開始と終了をマークします。 ブロック内のステートメントは、 **CALL**命令または[INVOKE](invoke.md)ディレクティブを使用して呼び出すことができます。
+*Label* と呼ばれるプロシージャブロックの開始と終了をマークします。 ブロック内のステートメントは、 **CALL** 命令または [INVOKE](invoke.md) ディレクティブを使用して呼び出すことができます。
 
 ## <a name="syntax"></a>構文
 
-> *label* **PROC** ⟦*distance*⟧⟦*language-type*⟧⟦ **PUBLIC** | **PRIVATE** | **EXPORT** ⟧⟦ __\<__ *prologu氏 g* __>__ ⟧⟦**は** *reglist*⟧⟦ __、__ *parameter* ⟦ __:__ *tag*⟧...⟧\
-> ⟦**FRAME** ⟦ __:__ *ehandler-address*⟧⟧ \
-> *ステートメント*の\
-> *ラベル*の**endp**
+> *label* **PROC** ⟦*distance*⟧⟦*language-type*⟧⟦ **PUBLIC**  |  **PRIVATE**  |  **EXPORT** ⟧⟦ __\<__*prologuearg*__>__ ⟧⟦**は** *reglist*⟧⟦__、__ *parameter* ⟦__:__*tag*⟧...⟧\
+> ⟦**FRAME** ⟦__:__*ehandler-address*⟧⟧ \
+> *命令*\
+> *ラベル* の **endp**
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
 ⟦*Distance*⟧と⟦*language type*⟧引数は、32ビット MASM でのみ有効です。
 
-⟦**FRAME** ⟦ __:__ *ehandler-address*⟧⟧は ml64.exe でのみ有効であり、MASM は .xdata 内の関数テーブルエントリを生成し、関数の構造化例外処理のアンワインド動作を実行します。
+⟦**FRAME** ⟦__:__*ehandler-address*⟧⟧は ml64.exe でのみ有効であり、MASM は .xdata 内の関数テーブルエントリを生成し、関数の構造化例外処理アンワインドの動作を返します。
 
-**FRAME**属性を使用する場合は、の後にを指定する必要があり[ます。ENDPROLOG](dot-endprolog.md)ディレクティブ。
+**FRAME** 属性を使用する場合は、の後にを指定する必要があり [ます。ENDPROLOG](dot-endprolog.md)ディレクティブ。
 
-Ml64.exe の使用方法の詳細については、「 [MASM for x64 (ml64.exe)](masm-for-x64-ml64-exe.md) 」を参照してください。
+ml64.exe の使用の詳細については、「 [MASM for x64 (ml64.exe)](masm-for-x64-ml64-exe.md) 」を参照してください。
 
-## <a name="example"></a>使用例
+## <a name="example"></a>例
 
 ```asm
 ; ml64 ex1.asm /link /entry:Example1 /SUBSYSTEM:CONSOLE

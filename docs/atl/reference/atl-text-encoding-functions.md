@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「ATL テキストエンコーディング関数」を参照してください。
 title: ATL テキストエンコーディング関数
 ms.date: 11/04/2016
 f1_keywords:
@@ -25,18 +26,18 @@ f1_keywords:
 - atlenc/ATL::UUEncode
 - atlenc/ATL::UUEncodeGetRequiredLength
 ms.assetid: 2ae1648b-2b87-4112-92aa-0069fcfd23da
-ms.openlocfilehash: 330a73e0d41bf384a799635d5f2e6f09f7e3dd03
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 1cc0848fed5832d0d91752c4c52d1e7310df0932
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88833856"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97165252"
 ---
 # <a name="atl-text-encoding-functions"></a>ATL テキストエンコーディング関数
 
 これらの関数は、テキストのエンコードとデコードをサポートします。
 
-|関数|説明|
+|機能|説明|
 |-|-|
 |[AtlGetHexValue](#atlgethexvalue)|16 進数の数値を取得します。|
 |[AtlGetVersion](#atlgetversion)|使用している ATL ライブラリのバージョンを取得するには、この関数を呼び出します。  |
@@ -62,7 +63,7 @@ ms.locfileid: "88833856"
 |[UUEncode](#uuencode)|データを uuencode します。 |
 |[UUEncodeGetRequiredLength](#uuencodegetrequiredlength)|指定したサイズのデータからエンコードされた文字列を格納できるバッファーのサイズを、文字数で取得します。|
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** atlenc
 
@@ -106,7 +107,7 @@ ATLAPI_(DWORD) AtlGetVersion(void* pReserved);
 
 [!code-cpp[NVC_ATL_Utilities#95](../../atl/codesnippet/cpp/atl-text-encoding-functions_1.cpp)]
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 **ヘッダー:** atlbase. h
 
@@ -128,13 +129,13 @@ inline BOOL AtlHexDecode(
 デコードされるデータを格納している文字列。
 
 *nSrcLen*<br/>
-*Psrcdata*の長さ (文字数)。
+*Psrcdata* の長さ (文字数)。
 
 *pbDest*<br/>
 デコードされたデータを受信するために、呼び出し元が割り当てたバッファー。
 
 *pnDestLen*<br/>
-Pdest の長さ (バイト単位) を格納し*pbDest*ている変数へのポインター。 関数が成功した場合、変数はバッファーに書き込まれたバイト数を受け取ります。 関数が失敗した場合、変数はバッファーの必要な長さ (バイト単位) を受け取ります。
+Pdest の長さ (バイト単位) を格納している変数へのポインター。 関数が成功した場合、変数はバッファーに書き込まれたバイト数を受け取ります。 関数が失敗した場合、変数はバッファーの必要な長さ (バイト単位) を受け取ります。
 
 ### <a name="return-value"></a>戻り値
 
@@ -181,7 +182,7 @@ int * pnDestLen) throw();
 エンコードされたデータを受信するために、呼び出し元が割り当てたバッファー。
 
 *pnDestLen*<br/>
-*Szdest*の長さ (文字数) を格納している変数へのポインター。 関数が成功した場合、変数はバッファーに書き込まれた文字数を受け取ります。 関数が失敗した場合、変数はバッファーの文字数で必要な長さを受け取ります。
+*Szdest* の長さ (文字数) を格納している変数へのポインター。 関数が成功した場合、変数はバッファーに書き込まれた文字数を受け取ります。 関数が失敗した場合、変数はバッファーの文字数で必要な長さを受け取ります。
 
 ### <a name="return-value"></a>戻り値
 
@@ -206,7 +207,7 @@ inline int AtlHexEncodeGetRequiredLength(int nSrcLen) throw();
 
 ### <a name="return-value"></a>戻り値
 
-*NSrcLen*バイトのエンコードされたデータを保持できるバッファーに必要な文字数。
+*NSrcLen* バイトのエンコードされたデータを保持できるバッファーに必要な文字数。
 
 ## <a name="atlhexvalue"></a><a name="atlhexvalue"></a> AtlHexValue
 
@@ -257,7 +258,7 @@ Unicode 文字列の長さ (文字数)。
 
 ### <a name="remarks"></a>解説
 
-変換された文字列に必要なバッファーのサイズを確認するには、この関数を呼び出して、 *szdest* と *ndest*に0を渡します。
+変換された文字列に必要なバッファーのサイズを確認するには、この関数を呼び出して、 *szdest* と *ndest* に0を渡します。
 
 ## <a name="bencode"></a><a name="bencode"></a> BEncode
 
@@ -284,7 +285,7 @@ inline BOOL BEncode(
 エンコードされたデータを受信するために、呼び出し元が割り当てたバッファー。
 
 *pnDestLen*<br/>
-*Szdest*の長さ (文字数) を格納している変数へのポインター。 関数が成功した場合、変数はバッファーに書き込まれた文字数を受け取ります。 関数が失敗した場合、変数はバッファーの文字数で必要な長さを受け取ります。
+*Szdest* の長さ (文字数) を格納している変数へのポインター。 関数が成功した場合、変数はバッファーに書き込まれた文字数を受け取ります。 関数が失敗した場合、変数はバッファーの文字数で必要な長さを受け取ります。
 
 *pszCharSet*<br/>
 変換に使用する文字セット。
@@ -315,7 +316,7 @@ inline int BEncodeGetRequiredLength(int nSrcLen, int nCharsetLen) throw();
 
 ### <a name="return-value"></a>戻り値
 
-*NSrcLen*バイトのエンコードされたデータを保持できるバッファーに必要な文字数。
+*NSrcLen* バイトのエンコードされたデータを保持できるバッファーに必要な文字数。
 
 ### <a name="remarks"></a>解説
 
@@ -433,7 +434,7 @@ inline BOOL QEncode(
 エンコードされたデータを受信するために、呼び出し元が割り当てたバッファー。
 
 *pnDestLen*<br/>
-*Szdest*の長さ (文字数) を格納している変数へのポインター。 関数が成功した場合、変数はバッファーに書き込まれた文字数を受け取ります。 関数が失敗した場合、変数はバッファーの文字数で必要な長さを受け取ります。
+*Szdest* の長さ (文字数) を格納している変数へのポインター。 関数が成功した場合、変数はバッファーに書き込まれた文字数を受け取ります。 関数が失敗した場合、変数はバッファーの文字数で必要な長さを受け取ります。
 
 *pszCharSet*<br/>
 変換に使用する文字セット。
@@ -467,7 +468,7 @@ inline int QEncodeGetRequiredLength(int nSrcLen, int nCharsetLen) throw();
 
 ### <a name="return-value"></a>戻り値
 
-*NSrcLen*バイトのエンコードされたデータを保持できるバッファーに必要な文字数。
+*NSrcLen* バイトのエンコードされたデータを保持できるバッファーに必要な文字数。
 
 ### <a name="remarks"></a>解説
 
@@ -492,13 +493,13 @@ inline BOOL QPDecode(
 からデコードされるデータを格納しているバッファー。
 
 *nSrcLen*<br/>
-から *Pbsrcdata*の長さ (バイト単位)。
+から *Pbsrcdata* の長さ (バイト単位)。
 
 *szDest*<br/>
 入出力デコードされたデータを受信するために、呼び出し元が割り当てたバッファー。
 
 *pnDestLen*<br/>
-入出力 *Szdest*の長さ (バイト単位) を格納している変数へのポインター。 関数が成功した場合、変数はバッファーに書き込まれたバイト数を受け取ります。 関数が失敗した場合、変数はバッファーの必要な長さ (バイト単位) を受け取ります。
+入出力 *Szdest* の長さ (バイト単位) を格納している変数へのポインター。 関数が成功した場合、変数はバッファーに書き込まれたバイト数を受け取ります。 関数が失敗した場合、変数はバッファーの必要な長さ (バイト単位) を受け取ります。
 
 *dwFlags*<br/>
 から変換の実行方法を記述する ATLSMTP_QPENCODE フラグ。
@@ -557,7 +558,7 @@ inline BOOL QPEncode(
 エンコードされたデータを受信するために、呼び出し元が割り当てたバッファー。
 
 *pnDestLen*<br/>
-*Szdest*の長さ (文字数) を格納している変数へのポインター。 関数が成功した場合、変数はバッファーに書き込まれた文字数を受け取ります。 関数が失敗した場合、変数はバッファーの文字数で必要な長さを受け取ります。
+*Szdest* の長さ (文字数) を格納している変数へのポインター。 関数が成功した場合、変数はバッファーに書き込まれた文字数を受け取ります。 関数が失敗した場合、変数はバッファーの文字数で必要な長さを受け取ります。
 
 *dwFlags*<br/>
 変換の実行方法を記述する ATLSMTP_QPENCODE フラグ。
@@ -591,7 +592,7 @@ inline int QPEncodeGetRequiredLength(int nSrcLen) throw ();
 
 ### <a name="return-value"></a>戻り値
 
-*NSrcLen*バイトのエンコードされたデータを保持できるバッファーに必要な文字数。
+*NSrcLen* バイトのエンコードされたデータを保持できるバッファーに必要な文字数。
 
 ### <a name="remarks"></a>解説
 
@@ -615,13 +616,13 @@ inline BOOL UUDecode(
 デコードされるデータを格納している文字列。
 
 *nSrcLen*<br/>
-*Pbsrcdata*の長さ (バイト単位)。
+*Pbsrcdata* の長さ (バイト単位)。
 
 *pbDest*<br/>
 デコードされたデータを受信するために、呼び出し元が割り当てたバッファー。
 
 *pnDestLen*<br/>
-Pdest の長さ (バイト単位) を格納し*pbDest*ている変数へのポインター。 関数が成功した場合、変数はバッファーに書き込まれたバイト数を受け取ります。 関数が失敗した場合、変数はバッファーの必要な長さ (バイト単位) を受け取ります。
+Pdest の長さ (バイト単位) を格納している変数へのポインター。 関数が成功した場合、変数はバッファーに書き込まれたバイト数を受け取ります。 関数が失敗した場合、変数はバッファーの必要な長さ (バイト単位) を受け取ります。
 
 ### <a name="return-value"></a>戻り値
 
@@ -678,10 +679,10 @@ inline BOOL UUEncode(
 エンコードされたデータを受信するために、呼び出し元が割り当てたバッファー。
 
 *pnDestLen*<br/>
-*Szdest*の長さ (文字数) を格納している変数へのポインター。 関数が成功した場合、変数はバッファーに書き込まれた文字数を受け取ります。 関数が失敗した場合、変数はバッファーの文字数で必要な長さを受け取ります。
+*Szdest* の長さ (文字数) を格納している変数へのポインター。 関数が成功した場合、変数はバッファーに書き込まれた文字数を受け取ります。 関数が失敗した場合、変数はバッファーの文字数で必要な長さを受け取ります。
 
 *lpszFile*<br/>
-ATLSMTP_UUENCODE_HEADER が *dwFlags*に指定されている場合に、ヘッダーに追加されるファイル。
+ATLSMTP_UUENCODE_HEADER が *dwFlags* に指定されている場合に、ヘッダーに追加されるファイル。
 
 *dwFlags*<br/>
 この関数の動作を制御するフラグ。
@@ -715,7 +716,7 @@ inline int UUEncodeGetRequiredLength(int nSrcLen) throw ();
 
 ### <a name="return-value"></a>戻り値
 
-*NSrcLen*バイトのエンコードされたデータを保持できるバッファーに必要な文字数。
+*NSrcLen* バイトのエンコードされたデータを保持できるバッファーに必要な文字数。
 
 ### <a name="remarks"></a>解説
 

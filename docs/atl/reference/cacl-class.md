@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: CAcl クラス'
 title: CAcl クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -22,12 +23,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAcl class
 ms.assetid: 20bcb9af-dc1c-4737-b923-3864776680d6
-ms.openlocfilehash: 3beef0fc6a75a952956f032d3e0e4cbe4faed86b
-ms.sourcegitcommit: 2bc15c5b36372ab01fa21e9bcf718fa22705814f
+ms.openlocfilehash: 60c498336f1bfb5358dd8e5b2eb771456a84ce17
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82168450"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97165070"
 ---
 # <a name="cacl-class"></a>CAcl クラス
 
@@ -64,27 +65,27 @@ class CAcl
 |名前|説明|
 |----------|-----------------|
 |[CAcl:: GetAceCount](#getacecount)|アクセス制御エントリ (ACE: access control entry) オブジェクトの数を返します。|
-|[CAcl:: GetAclEntries](#getaclentries)|`CAcl`オブジェクトからアクセス制御リスト (ACL) エントリを取得します。|
-|[CAcl:: GetAclEntry](#getaclentry)|`CAcl`オブジェクトのエントリに関するすべての情報を取得します。|
+|[CAcl:: GetAclEntries](#getaclentries)|オブジェクトからアクセス制御リスト (ACL) エントリを取得し `CAcl` ます。|
+|[CAcl:: GetAclEntry](#getaclentry)|オブジェクトのエントリに関するすべての情報を取得し `CAcl` ます。|
 |[CAcl:: GetLength](#getlength)|ACL の長さを返します。|
 |[CAcl:: GetPACL](#getpacl)|PACL (ACL へのポインター) を返します。|
-|[CAcl:: IsEmpty](#isempty)|オブジェクトの`CAcl`エントリをテストします。|
-|[CAcl:: IsNull](#isnull)|`CAcl`オブジェクトの状態を返します。|
-|[CAcl:: RemoveAce](#removeace)|`CAcl`オブジェクトから特定の ACE (アクセス制御エントリ) を削除します。|
-|[CAcl:: RemoveAces](#removeaces)|指定したに適用さ`CAcl` `CSid`れるすべての ace (アクセス制御エントリ) をから削除します。|
-|[CAcl:: SetEmpty](#setempty)|オブジェクトを`CAcl`空としてマークします。|
-|[CAcl:: SetNull](#setnull)|オブジェクトを`CAcl` NULL としてマークします。|
+|[CAcl:: IsEmpty](#isempty)|オブジェクトの `CAcl` エントリをテストします。|
+|[CAcl:: IsNull](#isnull)|オブジェクトの状態を返し `CAcl` ます。|
+|[CAcl:: RemoveAce](#removeace)|オブジェクトから特定の ACE (アクセス制御エントリ) を削除 `CAcl` します。|
+|[CAcl:: RemoveAces](#removeaces)|指定したに適用されるすべての Ace (アクセス制御エントリ) をから削除し `CAcl` `CSid` ます。|
+|[CAcl:: SetEmpty](#setempty)|オブジェクトを `CAcl` 空としてマークします。|
+|[CAcl:: SetNull](#setnull)|オブジェクトを `CAcl` NULL としてマークします。|
 
 ### <a name="public-operators"></a>パブリック演算子
 
 |名前|説明|
 |----------|-----------------|
-|[CAcl:: operator const ACL *](#operator_const_acl__star)|オブジェクトを`CAcl` `ACL`構造体にキャストします。|
+|[CAcl:: operator const ACL *](#operator_const_acl__star)|オブジェクトを `CAcl` `ACL` 構造体にキャストします。|
 |[CAcl:: operator =](#operator_eq)|代入演算子。|
 
 ## <a name="remarks"></a>解説
 
-`ACL`構造体は、ACL (アクセス制御リスト) のヘッダーです。 ACL には、0個以上の[ace](/windows/win32/SecAuthZ/access-control-entries) (アクセス制御エントリ) の連続したリストが含まれます。 ACL 内の個々の Ace には、0 ~ *n-1*の番号が付けられます。ここで、 *n*は acl の ace の数です。 ACL を編集する場合、アプリケーションは、そのインデックスによって ACL 内のアクセス制御エントリ (ACE) を参照します。
+`ACL`構造体は、ACL (アクセス制御リスト) のヘッダーです。 ACL には、0個以上の [ace](/windows/win32/SecAuthZ/access-control-entries) (アクセス制御エントリ) の連続したリストが含まれます。 ACL 内の個々の Ace には、0 ~ *n-1* の番号が付けられます。ここで、 *n* は acl の ace の数です。 ACL を編集する場合、アプリケーションは、そのインデックスによって ACL 内のアクセス制御エントリ (ACE) を参照します。
 
 次の2つの ACL の種類があります。
 
@@ -96,15 +97,15 @@ class CAcl
 
 また、オブジェクトには、システム管理者によって制御されるシステム ACL の形式で、システムレベルのセキュリティ情報を関連付けることもできます。 システム ACL を使用すると、システム管理者は、オブジェクトへのアクセスの試行を監査できます。
 
-詳細については、Windows SDK の[ACL](/windows/win32/SecAuthZ/access-control-lists)の説明を参照してください。
+詳細については、Windows SDK の [ACL](/windows/win32/SecAuthZ/access-control-lists) の説明を参照してください。
 
 Windows のアクセス制御モデルの概要については、Windows SDK の「 [Access Control](/windows/win32/SecAuthZ/access-control) 」を参照してください。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** atlsecurity .h
 
-## <a name="caclcaccessmaskarray"></a><a name="caccessmaskarray"></a>CAcl:: CAccessMaskArray
+## <a name="caclcaccessmaskarray"></a><a name="caccessmaskarray"></a> CAcl:: CAccessMaskArray
 
 ACCESS_MASK オブジェクトの配列。
 
@@ -116,7 +117,7 @@ typedef CAtlArray<ACCESS_MASK> CAccessMaskArray;
 
 この typedef は、アクセス制御エントリ (Ace) で使用されるアクセス権を格納するために使用できる配列型を指定します。
 
-## <a name="caclcaceflagarray"></a><a name="caceflagarray"></a>CAcl:: CAceFlagArray
+## <a name="caclcaceflagarray"></a><a name="caceflagarray"></a> CAcl:: CAceFlagArray
 
 バイト配列。
 
@@ -126,9 +127,9 @@ typedef CAtlArray<BYTE> CAceFlagArray;
 
 ### <a name="remarks"></a>解説
 
-この typedef は、アクセス制御エントリ (ACE: access control entry) の型固有のコントロールフラグを定義するために使用される配列型を指定します。 使用可能なフラグの完全な一覧については、 [ACE_HEADER](/windows/win32/api/winnt/ns-winnt-ace_header)定義を参照してください。
+この typedef は、アクセス制御エントリ (ACE: access control entry) の型固有のコントロールフラグを定義するために使用される配列型を指定します。 使用可能なフラグの完全な一覧については、 [ACE_HEADER](/windows/win32/api/winnt/ns-winnt-ace_header) 定義を参照してください。
 
-## <a name="caclcacetypearray"></a><a name="cacetypearray"></a>CAcl:: CAceTypeArray
+## <a name="caclcacetypearray"></a><a name="cacetypearray"></a> CAcl:: CAceTypeArray
 
 バイト配列。
 
@@ -138,9 +139,9 @@ typedef CAtlArray<BYTE> CAceTypeArray;
 
 ### <a name="remarks"></a>解説
 
-この typedef は、ACCESS_ALLOWED_ACE_TYPE や ACCESS_DENIED_ACE_TYPE など、アクセス制御エントリ (ACE) オブジェクトの性質を定義するために使用される配列型を指定します。 使用可能な型の完全な一覧については、 [ACE_HEADER](/windows/win32/api/winnt/ns-winnt-ace_header)定義を参照してください。
+この typedef は、ACCESS_ALLOWED_ACE_TYPE や ACCESS_DENIED_ACE_TYPE など、アクセス制御エントリ (ACE) オブジェクトの性質を定義するために使用される配列型を指定します。 使用可能な型の完全な一覧については、 [ACE_HEADER](/windows/win32/api/winnt/ns-winnt-ace_header) 定義を参照してください。
 
-## <a name="caclcacl"></a><a name="cacl"></a>CAcl:: CAcl
+## <a name="caclcacl"></a><a name="cacl"></a> CAcl:: CAcl
 
 コンストラクターです。
 
@@ -156,9 +157,9 @@ CAcl(const CAcl& rhs) throw(...);
 
 ### <a name="remarks"></a>解説
 
-オブジェクト`CAcl`は、必要に応じて、既存`CAcl`のオブジェクトを使用して作成できます。
+オブジェクトは、 `CAcl` 必要に応じて、既存のオブジェクトを使用して作成でき `CAcl` ます。
 
-## <a name="caclcacl"></a><a name="dtor"></a>CAcl:: ~ CAcl
+## <a name="caclcacl"></a><a name="dtor"></a> CAcl:: ~ CAcl
 
 デストラクターです。
 
@@ -170,7 +171,7 @@ virtual ~CAcl() throw();
 
 デストラクターは、オブジェクトによって取得されたすべてのリソースを解放します。
 
-## <a name="caclgetacecount"></a><a name="getacecount"></a>CAcl:: GetAceCount
+## <a name="caclgetacecount"></a><a name="getacecount"></a> CAcl:: GetAceCount
 
 アクセス制御エントリ (ACE: access control entry) オブジェクトの数を返します。
 
@@ -180,11 +181,11 @@ virtual UINT GetAceCount() const throw() = 0;
 
 ### <a name="return-value"></a>戻り値
 
-`CAcl`オブジェクト内の ACE エントリの数を返します。
+オブジェクト内の ACE エントリの数を返し `CAcl` ます。
 
-## <a name="caclgetaclentries"></a><a name="getaclentries"></a>CAcl:: GetAclEntries
+## <a name="caclgetaclentries"></a><a name="getaclentries"></a> CAcl:: GetAclEntries
 
-`CAcl`オブジェクトからアクセス制御リスト (ACL) エントリを取得します。
+オブジェクトからアクセス制御リスト (ACL) エントリを取得し `CAcl` ます。
 
 ```cpp
 void GetAclEntries(
@@ -210,13 +211,13 @@ ACE フラグ。
 
 ### <a name="remarks"></a>解説
 
-このメソッドは、 `CAcl`オブジェクトに格納されているすべての ACE オブジェクトの詳細を配列パラメーターに格納します。 特定の配列の詳細が不要な場合は、NULL を使用します。
+このメソッドは、オブジェクトに格納されているすべての ACE オブジェクトの詳細を配列パラメーターに格納し `CAcl` ます。 特定の配列の詳細が不要な場合は、NULL を使用します。
 
-各配列の内容は互いに対応しています。つまり、配列の`CAccessMaskArray`最初の要素は`CSidArray`配列の最初の要素に対応します。
+各配列の内容は互いに対応しています。つまり、配列の最初の要素は `CAccessMaskArray` 配列の最初の要素に対応 `CSidArray` します。
 
 ACE の種類とフラグの詳細については、「 [ACE_HEADER](/windows/win32/api/winnt/ns-winnt-ace_header) 」を参照してください。
 
-## <a name="caclgetaclentry"></a><a name="getaclentry"></a>CAcl:: GetAclEntry
+## <a name="caclgetaclentry"></a><a name="getaclentry"></a> CAcl:: GetAclEntry
 
 アクセス制御リスト (ACL: access control list) のエントリに関するすべての情報を取得します。
 
@@ -237,7 +238,7 @@ void GetAclEntry(
 取得する ACL エントリのインデックス。
 
 *pSid*<br/>
-ACL エントリが適用される[CSid](../../atl/reference/csid-class.md)オブジェクト。
+ACL エントリが適用される [CSid](../../atl/reference/csid-class.md) オブジェクト。
 
 *pMask*<br/>
 アクセスを許可または拒否するためのアクセス許可を指定するマスク。
@@ -249,7 +250,7 @@ ACE 型。
 ACE フラグ。
 
 *pObjectType*<br/>
-オブジェクトの種類。 ACE にオブジェクト型が指定されていない場合、または ACE がオブジェクト ACE でない場合は、GUID_NULL に設定されます。
+オブジェクトの型。 ACE にオブジェクト型が指定されていない場合、または ACE がオブジェクト ACE でない場合は、GUID_NULL に設定されます。
 
 *pInheritedObjectType*<br/>
 継承されたオブジェクト型。 継承されたオブジェクト型が ACE に指定されていない場合、または ACE がオブジェクト ACE でない場合は、GUID_NULL に設定されます。
@@ -260,7 +261,7 @@ ACE フラグ。
 
 ACE の種類とフラグの詳細については、「 [ACE_HEADER](/windows/win32/api/winnt/ns-winnt-ace_header) 」を参照してください。
 
-## <a name="caclgetlength"></a><a name="getlength"></a>CAcl:: GetLength
+## <a name="caclgetlength"></a><a name="getlength"></a> CAcl:: GetLength
 
 アクセス制御リスト (ACL) の長さを返します。
 
@@ -270,9 +271,9 @@ UINT GetLength() const throw();
 
 ### <a name="return-value"></a>戻り値
 
-`ACL`構造体を保持するために必要なバイト単位の長さを返します。
+構造体を保持するために必要なバイト単位の長さを返し `ACL` ます。
 
-## <a name="caclgetpacl"></a><a name="getpacl"></a>CAcl:: GetPACL
+## <a name="caclgetpacl"></a><a name="getpacl"></a> CAcl:: GetPACL
 
 アクセス制御リスト (ACL) へのポインターを返します。
 
@@ -282,11 +283,11 @@ const ACL* GetPACL() const throw(...);
 
 ### <a name="return-value"></a>戻り値
 
-構造体への`ACL`ポインターを返します。
+構造体へのポインターを返し `ACL` ます。
 
-## <a name="caclisempty"></a><a name="isempty"></a>CAcl:: IsEmpty
+## <a name="caclisempty"></a><a name="isempty"></a> CAcl:: IsEmpty
 
-オブジェクトの`CAcl`エントリをテストします。
+オブジェクトの `CAcl` エントリをテストします。
 
 ```cpp
 bool IsEmpty() const throw();
@@ -294,11 +295,11 @@ bool IsEmpty() const throw();
 
 ### <a name="remarks"></a>解説
 
-`CAcl`オブジェクトが NULL ではなく、エントリが含まれていない場合は TRUE を返します。 オブジェクトが NULL で`CAcl`あるか、またはエントリが少なくとも1つ含まれている場合は、FALSE を返します。
+`CAcl`オブジェクトが NULL ではなく、エントリが含まれていない場合は TRUE を返します。 `CAcl`オブジェクトが NULL であるか、またはエントリが少なくとも1つ含まれている場合は、FALSE を返します。
 
-## <a name="caclisnull"></a><a name="isnull"></a>CAcl:: IsNull
+## <a name="caclisnull"></a><a name="isnull"></a> CAcl:: IsNull
 
-`CAcl`オブジェクトの状態を返します。
+オブジェクトの状態を返し `CAcl` ます。
 
 ```cpp
 bool IsNull() const throw();
@@ -308,9 +309,9 @@ bool IsNull() const throw();
 
 `CAcl`オブジェクトが NULL の場合は TRUE、それ以外の場合は FALSE を返します。
 
-## <a name="cacloperator-const-acl-"></a><a name="operator_const_acl__star"></a>CAcl:: operator const ACL *
+## <a name="cacloperator-const-acl-"></a><a name="operator_const_acl__star"></a> CAcl:: operator const ACL *
 
-オブジェクトを`CAcl` `ACL` (アクセス制御リスト) 構造体にキャストします。
+オブジェクトを `CAcl` `ACL` (アクセス制御リスト) 構造体にキャストします。
 
 ```cpp
 operator const ACL *() const throw(...);
@@ -318,9 +319,9 @@ operator const ACL *() const throw(...);
 
 ### <a name="remarks"></a>解説
 
-`ACL`構造体のアドレスを返します。
+構造体のアドレスを返し `ACL` ます。
 
-## <a name="cacloperator-"></a><a name="operator_eq"></a>CAcl:: operator =
+## <a name="cacloperator-"></a><a name="operator_eq"></a> CAcl:: operator =
 
 代入演算子。
 
@@ -335,11 +336,11 @@ CAcl& operator= (const CAcl& rhs) throw(...);
 
 ### <a name="return-value"></a>戻り値
 
-更新さ`CAcl`れたオブジェクトへの参照を返します。
+更新されたオブジェクトへの参照を返し `CAcl` ます。
 
-## <a name="caclremoveace"></a><a name="removeace"></a>CAcl:: RemoveAce
+## <a name="caclremoveace"></a><a name="removeace"></a> CAcl:: RemoveAce
 
-`CAcl`オブジェクトから特定の ACE (アクセス制御エントリ) を削除します。
+オブジェクトから特定の ACE (アクセス制御エントリ) を削除 `CAcl` します。
 
 ```cpp
 void RemoveAce(UINT nIndex) throw();
@@ -354,9 +355,9 @@ void RemoveAce(UINT nIndex) throw();
 
 このメソッドは、 [CAtlArray:: RemoveAt](../../atl/reference/catlarray-class.md#removeat)から派生しています。
 
-## <a name="caclremoveaces"></a><a name="removeaces"></a>CAcl:: RemoveAces
+## <a name="caclremoveaces"></a><a name="removeaces"></a> CAcl:: RemoveAces
 
-指定したに適用さ`CAcl` `CSid`れる alls ace (アクセス制御エントリ) をから削除します。
+指定したに適用される alls Ace (アクセス制御エントリ) をから削除し `CAcl` `CSid` ます。
 
 ```cpp
 bool RemoveAces(const CSid& rSid) throw(...)
@@ -367,9 +368,9 @@ bool RemoveAces(const CSid& rSid) throw(...)
 *rSid*<br/>
 `CSid` オブジェクトへの参照です。
 
-## <a name="caclsetempty"></a><a name="setempty"></a>CAcl:: SetEmpty
+## <a name="caclsetempty"></a><a name="setempty"></a> CAcl:: SetEmpty
 
-オブジェクトを`CAcl`空としてマークします。
+オブジェクトを `CAcl` 空としてマークします。
 
 ```cpp
 void SetEmpty() throw();
@@ -377,11 +378,11 @@ void SetEmpty() throw();
 
 ### <a name="remarks"></a>解説
 
-は`CAcl` 、empty または NULL に設定できます。この2つの状態は個別です。
+は、 `CAcl` empty または NULL に設定できます。この2つの状態は個別です。
 
-## <a name="caclsetnull"></a><a name="setnull"></a>CAcl:: SetNull
+## <a name="caclsetnull"></a><a name="setnull"></a> CAcl:: SetNull
 
-オブジェクトを`CAcl` NULL としてマークします。
+オブジェクトを `CAcl` NULL としてマークします。
 
 ```cpp
 void SetNull() throw();
@@ -389,7 +390,7 @@ void SetNull() throw();
 
 ### <a name="remarks"></a>解説
 
-は`CAcl` 、empty または NULL に設定できます。この2つの状態は個別です。
+は、 `CAcl` empty または NULL に設定できます。この2つの状態は個別です。
 
 ## <a name="see-also"></a>関連項目
 

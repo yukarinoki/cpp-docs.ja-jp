@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: CA2AEX クラス'
 title: CA2AEX クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -10,12 +11,12 @@ f1_keywords:
 helpviewer_keywords:
 - CA2AEX class
 ms.assetid: 57dc65df-d9cf-4a84-99d3-6e031dde3664
-ms.openlocfilehash: dfd8967d21005d83b38eeae36cfc147051d7beaf
-ms.sourcegitcommit: 2bc15c5b36372ab01fa21e9bcf718fa22705814f
+ms.openlocfilehash: 408e04760d6b614fd344b3cab1b34f22678db315
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82168528"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97165109"
 ---
 # <a name="ca2aex-class"></a>CA2AEX クラス
 
@@ -62,9 +63,9 @@ class CA2AEX
 
 追加機能が必要な場合を除き、独自のコードで CA2TEX、CT2AEX、または CA2A を使用してください。
 
-このクラスには、変換の結果を格納するために使用される固定サイズの静的バッファーが含まれています。 結果が大きすぎて静的バッファーに格納できない場合、クラスは**malloc**を使用してメモリを割り当て、オブジェクトがスコープ外に出るとメモリを解放します。 これにより、以前のバージョンの ATL で使用されていたテキスト変換マクロとは異なり、このクラスはループ内で安全に使用でき、スタックをオーバーフローすることはありません。
+このクラスには、変換の結果を格納するために使用される固定サイズの静的バッファーが含まれています。 結果が大きすぎて静的バッファーに格納できない場合、クラスは **malloc** を使用してメモリを割り当て、オブジェクトがスコープ外に出るとメモリを解放します。 これにより、以前のバージョンの ATL で使用されていたテキスト変換マクロとは異なり、このクラスはループ内で安全に使用でき、スタックをオーバーフローすることはありません。
 
-クラスがヒープにメモリを割り当てようとして失敗した場合は`AtlThrow` 、E_OUTOFMEMORY の引数を指定してを呼び出します。
+クラスがヒープにメモリを割り当てようとして失敗した場合は、 `AtlThrow` E_OUTOFMEMORY の引数を指定してを呼び出します。
 
 既定では、ATL の変換クラスとマクロは、現在のスレッドの ANSI コードページを使用して変換を行います。
 
@@ -82,13 +83,13 @@ class CA2AEX
 
 ## <a name="example"></a>例
 
-これらの文字列変換マクロの使用例については、「 [ATL および MFC の文字列変換マクロ](string-conversion-macros.md)」を参照してください。
+これらの文字列変換マクロの使用例については、「 [ATL および MFC の文字列変換マクロ](string-conversion-macros.md) 」を参照してください。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** atlconv. h
 
-## <a name="ca2aexca2aex"></a><a name="ca2aex"></a>CA2AEX::CA2AEX
+## <a name="ca2aexca2aex"></a><a name="ca2aex"></a> CA2AEX::CA2AEX
 
 コンストラクターです。
 
@@ -109,7 +110,7 @@ CA2AEX(LPCSTR psz) throw(...);
 
 変換に必要なバッファーを作成します。
 
-## <a name="ca2aexca2aex"></a><a name="dtor"></a>CA2AEX:: ~ CA2AEX
+## <a name="ca2aexca2aex"></a><a name="dtor"></a> CA2AEX:: ~ CA2AEX
 
 デストラクターです。
 
@@ -121,7 +122,7 @@ CA2AEX(LPCSTR psz) throw(...);
 
 割り当てられたバッファーを解放します。
 
-## <a name="ca2aexm_psz"></a><a name="m_psz"></a>CA2AEX:: m_psz
+## <a name="ca2aexm_psz"></a><a name="m_psz"></a> CA2AEX:: m_psz
 
 ソース文字列を格納するデータメンバー。
 
@@ -129,7 +130,7 @@ CA2AEX(LPCSTR psz) throw(...);
 LPSTR m_psz;
 ```
 
-## <a name="ca2aexm_szbuffer"></a><a name="m_szbuffer"></a>CA2AEX:: m_szBuffer
+## <a name="ca2aexm_szbuffer"></a><a name="m_szbuffer"></a> CA2AEX:: m_szBuffer
 
 変換された文字列を格納するために使用する静的バッファー。
 
@@ -137,7 +138,7 @@ LPSTR m_psz;
 char m_szBuffer[ t_nBufferLength];
 ```
 
-## <a name="ca2aexoperator-lpstr"></a><a name="operator_lpstr"></a>CA2AEX:: operator LPSTR
+## <a name="ca2aexoperator-lpstr"></a><a name="operator_lpstr"></a> CA2AEX:: operator LPSTR
 
 変換演算子。
 
