@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「cliext 名前空間」を参照してください。
 title: cliext 名前空間
 ms.date: 11/04/2016
 ms.topic: reference
@@ -10,17 +11,17 @@ helpviewer_keywords:
 - namespaces [C++], STL/CLR
 - cliext namespace
 ms.assetid: 75a0c1f8-6e21-46d5-adaf-899845c15b38
-ms.openlocfilehash: 9b74bfa66045d4c44f7715d25b28c675f79a667f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 170a85a199a89b5ad647cfd0d2e830912b307c82
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62209218"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97282511"
 ---
 # <a name="cliext-namespace"></a>cliext 名前空間
 
-`cliext`名前空間には、STL/CLR ライブラリのすべての型が含まれています。 これらすべての型、および STL/CLR の種類の詳細へのリンクの一覧は、次を参照してください。 [STL/CLR ライブラリ リファレンス](../dotnet/stl-clr-library-reference.md)します。
+名前空間には、 `cliext` STL/CLR ライブラリのすべての型が含まれています。 これらのすべての型の一覧と、STL/CLR 型の詳細情報へのリンクについては、「 [stl/Clr ライブラリリファレンス](../dotnet/stl-clr-library-reference.md)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 
-[STL/CLR ライブラリ リファレンス](../dotnet/stl-clr-library-reference.md)
+[STL/CLR ライブラリリファレンス](../dotnet/stl-clr-library-reference.md)

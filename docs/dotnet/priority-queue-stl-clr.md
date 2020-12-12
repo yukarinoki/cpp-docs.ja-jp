@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「priority_queue (STL/CLR)」を参照してください。
 title: priority_queue (STL/CLR)
 ms.date: 11/04/2016
 ms.topic: reference
@@ -51,12 +52,12 @@ helpviewer_keywords:
 - value_compare member [STL/CLR]
 - value_type member [STL/CLR]
 ms.assetid: 4d0000d3-68ff-4c4b-8157-7060540136f5
-ms.openlocfilehash: fd87c39db279fb70d5c5b5f20e583251dc519755
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 666efbc634ae962836fce4fa12ca762ab7085d92
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91502396"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97282498"
 ---
 # <a name="priority_queue-stlclr"></a>priority_queue (STL/CLR)
 
@@ -83,7 +84,7 @@ template<typename Value,
 *コンテナー*<br/>
 基になるコンテナーの型。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:**\<cliext/queue>
 
@@ -131,7 +132,7 @@ template<typename Value,
 |<xref:System.ICloneable>|オブジェクトを複製します。|
 |I優先キュー\<Value, Container>|汎用コンテナーアダプターを維持します。|
 
-## <a name="remarks"></a>注釈
+## <a name="remarks"></a>解説
 
 オブジェクトは、 `Container` 要素を格納し、必要に応じて拡張する、基になるコンテナー (型) によって制御されるシーケンスのストレージを割り当て、解放し `Value` ます。 シーケンスはヒープとして保持され、優先順位の高い要素 (最上位要素) はすぐにアクセス可能で、リムーバブルになります。 オブジェクトは、新しい要素をプッシュするためのアクセスを制限し、優先順位キューを実装して、優先順位の高い要素だけをポップします。
 
@@ -176,7 +177,7 @@ void assign(priority_queue<Value, Container>% right);
 *そうです*<br/>
 挿入するコンテナーアダプター。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 このメンバー関数は、 `right.get_container()` 基になるコンテナーにを割り当てます。 キューの内容全体を変更するには、これを使用します。
 
@@ -590,9 +591,9 @@ priority_queue <Value, Container>% operator=(priority_queue <Value, Container>% 
 *そうです*<br/>
 コピーするコンテナーアダプター。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
-メンバー演算子は、オブジェクトに *right* をコピーし、を返し **`*this`** ます。 このメソッドを使用して、被制御シーケンスを *右側*の被制御シーケンスのコピーで置き換えます。
+メンバー演算子は、オブジェクトに *right* をコピーし、を返し **`*this`** ます。 このメソッドを使用して、被制御シーケンスを *右側* の被制御シーケンスのコピーで置き換えます。
 
 ### <a name="example"></a>例
 
@@ -716,7 +717,7 @@ template<typename InIt>
 *そうです*<br/>
 挿入するオブジェクトまたは範囲。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 コンストラクター:
 
@@ -728,7 +729,7 @@ template<typename InIt>
 
 `priority_queue(priority_queue<Value, Container>% right);`
 
-順序述語を使用して、のコピーであるラップされたコンテナーを作成し `right.get_container()` `right.value_comp()` ます。 このメソッドを使用して、キューオブジェクト *権限*によって制御されるシーケンスのコピーである最初の被制御シーケンスを、同じ順序述語を使用して指定します。
+順序述語を使用して、のコピーであるラップされたコンテナーを作成し `right.get_container()` `right.value_comp()` ます。 このメソッドを使用して、キューオブジェクト *権限* によって制御されるシーケンスのコピーである最初の被制御シーケンスを、同じ順序述語を使用して指定します。
 
 コンストラクター:
 
@@ -740,13 +741,13 @@ template<typename InIt>
 
 `explicit priority_queue(value_compare^ pred);`
 
-順序述語 *pred*を使用して、空のラップされたコンテナーを作成します。 このメソッドを使用して、指定された順序述語を使用して、空の初期被制御シーケンスを指定します。
+順序述語 *pred* を使用して、空のラップされたコンテナーを作成します。 このメソッドを使用して、指定された順序述語を使用して、空の初期被制御シーケンスを指定します。
 
 コンストラクター:
 
 `priority_queue(value_compare^ pred, container_type cont);`
 
-順序述語 *pred*を使用して、空のラップされたコンテナーを作成します。次に、指定された順序述語を使用して、 *既存のコンテナー* からの初期被制御シーケンスを指定するために、のすべての要素をプッシュします。
+順序述語 *pred* を使用して、空のラップされたコンテナーを作成します。次に、指定された順序述語を使用して、 *既存のコンテナー* からの初期被制御シーケンスを指定するために、のすべての要素をプッシュします。
 
 コンストラクター:
 
@@ -758,13 +759,13 @@ template<typename InIt>
 
 `template<typename InIt> priority_queue(InIt first, InIt last, value_compare^ pred);`
 
-順序述語 *pred*を使用して、空のラップされたコンテナーを作成し、シーケンス [,) をプッシュし `first` `last` ます。 指定された順序述語を使用して、指定された seqeuence の最初の被制御シーケンスを指定します。
+順序述語 *pred* を使用して、空のラップされたコンテナーを作成し、シーケンス [,) をプッシュし `first` `last` ます。 指定された順序述語を使用して、指定された seqeuence の最初の被制御シーケンスを指定します。
 
 コンストラクター:
 
 `template<typename InIt> priority_queue(InIt first, InIt last, value_compare^ pred, container_type% cont);`
 
-順序述語 *pred*を使用して、空のラップされたコンテナーを作成し、 *継続* のすべての要素とシーケンス [,) をプッシュし `first` `last` ます。 このメソッドを使用して、指定された順序述語を使用して、既存のコンテナーと指定された seqeuence の最初の被制御シーケンスを指定します。
+順序述語 *pred* を使用して、空のラップされたコンテナーを作成し、 *継続* のすべての要素とシーケンス [,) をプッシュし `first` `last` ます。 このメソッドを使用して、指定された順序述語を使用して、既存のコンテナーと指定された seqeuence の最初の被制御シーケンスを指定します。
 
 ### <a name="example"></a>例
 
@@ -1335,7 +1336,7 @@ typedef Value value_type;
 
 ### <a name="remarks"></a>解説
 
-この型は、テンプレートパラメーター *値*のシノニムです。
+この型は、テンプレートパラメーター *値* のシノニムです。
 
 ### <a name="example"></a>例
 

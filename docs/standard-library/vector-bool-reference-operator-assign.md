@@ -1,4 +1,5 @@
 ---
+description: '詳細については、「vector &lt; bool &gt; :: reference:: operator =」を参照してください。'
 title: vector&lt;bool&gt;::reference::operator=
 ms.date: 11/04/2016
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - = operator, with specific C++ Standard Library objects
 - reference::operator=
 ms.assetid: eed20d81-36b9-40b2-a3b6-340ed0bb4f34
-ms.openlocfilehash: 738f86bd6163a827b43d78f29c6e3a7124400fb7
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: eb6efe7d0e5d59d1135430a3dc8b544dcee3678f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68452163"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97280366"
 ---
 # <a name="vectorltboolgtreferenceoperator"></a>vector&lt;bool&gt;::reference::operator=
 
@@ -95,7 +96,7 @@ int main()
 }
 ```
 
-## <a name="output"></a>Output
+## <a name="output"></a>出力
 
 ```Output
 The vector is: true false false true true
@@ -110,13 +111,13 @@ The original value of the 2nd element still stored in a bool: false
 The original value of the 3rd element still stored in a bool: false
 ```
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-**ヘッダー:** \<vector>
+**ヘッダー:**\<vector>
 
 **名前空間:** std
 
 ## <a name="see-also"></a>関連項目
 
-[vector\<bool>::reference クラス](../standard-library/vector-bool-reference-class.md)\
-[C++ 標準ライブラリ リファレンス](../standard-library/cpp-standard-library-reference.md)
+[vector \<bool> :: Reference クラス](../standard-library/vector-bool-reference-class.md)\
+[C++ 標準ライブラリリファレンス](../standard-library/cpp-standard-library-reference.md)

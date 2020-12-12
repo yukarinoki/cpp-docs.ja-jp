@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: vector &lt; bool &gt; :: reference クラス'
 title: vector&lt;bool&gt;::reference クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - vector<bool> reference class
 ms.assetid: f27854f9-0ef0-4e7e-ad2e-cd53b6cb3334
-ms.openlocfilehash: 3dde17522c05a05bda04c338682b4b3f9920a972
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 4e9e4700f8af269f02f038c37d55460bae3a2a96
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87228103"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97280483"
 ---
 # <a name="vectorltboolgtreference-class"></a>vector&lt;bool&gt;::reference クラス
 
-クラスは、 `vector<bool>::reference` をシミュレートする[vector \<bool> クラス](../standard-library/vector-bool-class.md)によって提供されるプロキシクラスです `bool&` 。
+クラスは、 `vector<bool>::reference` をシミュレートする [vector \<bool> クラス](../standard-library/vector-bool-class.md) によって提供されるプロキシクラスです `bool&` 。
 
 ## <a name="remarks"></a>解説
 
@@ -36,9 +37,9 @@ bool& refb = vb[1];   // conversion error - do not use
 |[bool 演算子](../standard-library/vector-bool-reference-operator-bool.md)|からへの暗黙の型変換を提供 `vector<bool>::reference` **`bool`** します。|
 |[operator =](../standard-library/vector-bool-reference-operator-assign.md)|ブール値をビットに割り当てます。または参照先の要素が保持している値をビットに割り当てます。|
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-**ヘッダー**:\<vector>
+**ヘッダー**: \<vector>
 
 **名前空間:** std
 

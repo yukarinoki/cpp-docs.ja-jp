@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: &lt; ostream &gt; 関数'
 title: '&lt;ostream&gt; 関数'
 ms.date: 11/04/2016
 f1_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - std::endl [C++]
 - std::ends [C++]
 - std::flush [C++]
-ms.openlocfilehash: 4db966797202b16911aa67b6fda7c81785d98166
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: fb99b713db4c29fe42b45858588181536aec4f5e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88842638"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97280522"
 ---
 # <a name="ltostreamgt-functions"></a>&lt;ostream&gt; 関数
 
@@ -44,18 +45,18 @@ basic_ostream<Elem, Tr>& endl(
 要素型。
 
 *Ostr*\
-**Basic_ostream**型のオブジェクト。
+**Basic_ostream** 型のオブジェクト。
 
 *Tr*\
 文字の特徴 (traits)。
 
 ### <a name="return-value"></a>戻り値
 
-**Basic_ostream**型のオブジェクト。
+**Basic_ostream** 型のオブジェクト。
 
 ### <a name="remarks"></a>解説
 
-マニピュレーターは*Ostr*を呼び出します。[put](../standard-library/basic-ostream-class.md#put)(*ostr*.[widen](../standard-library/basic-ios-class.md#widen)(' \n ')) を拡大し、 *ostr*を呼び出します。[フラッシュ](../standard-library/basic-ostream-class.md#flush)。 *Ostr*が返されます。
+マニピュレーターは *Ostr* を呼び出します。[put](../standard-library/basic-ostream-class.md#put)(*ostr*.[](../standard-library/basic-ios-class.md#widen)(' \n ')) を拡大し、 *ostr* を呼び出します。[フラッシュ](../standard-library/basic-ostream-class.md#flush)。 *Ostr* が返されます。
 
 ### <a name="example"></a>例
 
@@ -102,7 +103,7 @@ basic_ostream<Elem, Tr>& ends(
 
 ### <a name="remarks"></a>解説
 
-マニピュレーターは *Ostr*を呼び出します。[put](../standard-library/basic-ostream-class.md#put)(*Elem*(' \ 0 '))。 *Ostr*が返されます。
+マニピュレーターは *Ostr* を呼び出します。[put](../standard-library/basic-ostream-class.md#put)(*Elem*(' \ 0 '))。 *Ostr* が返されます。
 
 ### <a name="example"></a>例
 
@@ -151,7 +152,7 @@ basic_ostream<Elem, Tr>& flush(
 
 ### <a name="remarks"></a>解説
 
-マニピュレーターは *Ostr*を呼び出します。[フラッシュ](../standard-library/basic-ostream-class.md#flush)。 *Ostr*が返されます。
+マニピュレーターは *Ostr* を呼び出します。[フラッシュ](../standard-library/basic-ostream-class.md#flush)。 *Ostr* が返されます。
 
 ### <a name="example"></a>例
 

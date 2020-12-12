@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「コンパイラエラー C2978」を参照してください。
 title: コンパイラ エラー C2978
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,20 +7,20 @@ f1_keywords:
 helpviewer_keywords:
 - C2978
 ms.assetid: 5e7bee82-e266-4ccd-ad2e-ee89606ec5bf
-ms.openlocfilehash: 3996e8e8d40ca24bf54fdf5bbbfde90f3d609c9d
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 7f39b6d7b01790bd8865c4e176ff8ed865756edb
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74751556"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97281822"
 ---
 # <a name="compiler-error-c2978"></a>コンパイラ エラー C2978
 
 構文エラー: 'keyword1' または 'keyword2' が必要ですが、型 'keyword3' が見つかりました。非型パラメーターはジェネリックではサポートされていません
 
-ジェネリック クラスの宣言が正しくありません。 詳細については、「[ジェネリック](../../extensions/generics-cpp-component-extensions.md)」を参照してください。
+ジェネリック クラスの宣言が正しくありません。 詳細については、「 [ジェネリック](../../extensions/generics-cpp-component-extensions.md)」を参照してください。
 
-## <a name="example"></a>使用例
+## <a name="example"></a>例
 
 次の例では C2978 が生成されます。
 

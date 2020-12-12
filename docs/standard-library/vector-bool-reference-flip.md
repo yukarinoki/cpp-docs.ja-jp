@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: vector &lt; bool &gt; :: reference:: flip'
 title: vector&lt;bool&gt;::reference::flip
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - reference::flip method
 ms.assetid: ef940365-cbe4-4a87-a3e2-1f3cfa357e29
-ms.openlocfilehash: 1743df7773d577e53f054fa4e403cf0d00da8ce7
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: fc07fada718e440d6e2ae76c75e7e5b24c6644d7
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68452175"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97280418"
 ---
 # <a name="vectorltboolgtreferenceflip"></a>vector&lt;bool&gt;::reference::flip
 
-参照先の [vector\<bool>](../standard-library/vector-bool-class.md) 要素のブール値を反転します。
+参照される[vector \<bool> ](../standard-library/vector-bool-class.md)要素のブール値を反転させます。
 
 ## <a name="syntax"></a>構文
 
@@ -55,7 +56,7 @@ int main()
 }
 ```
 
-## <a name="output"></a>Output
+## <a name="output"></a>出力
 
 ```Output
 The vector is:
@@ -64,13 +65,13 @@ The vector with first element flipped is:
     false false false true true
 ```
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-**ヘッダー:** \<vector>
+**ヘッダー:**\<vector>
 
 **名前空間:** std
 
 ## <a name="see-also"></a>関連項目
 
-[vector\<bool>::reference クラス](../standard-library/vector-bool-reference-class.md)\
-[C++ 標準ライブラリ リファレンス](../standard-library/cpp-standard-library-reference.md)
+[vector \<bool> :: Reference クラス](../standard-library/vector-bool-reference-class.md)\
+[C++ 標準ライブラリリファレンス](../standard-library/cpp-standard-library-reference.md)

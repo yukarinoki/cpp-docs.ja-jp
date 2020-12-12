@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: call_in_appdomain 関数'
 title: call_in_appdomain 関数
 ms.date: 11/04/2016
 ms.topic: reference
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - call_in_appdomain function
 ms.assetid: 9a1a5026-b76b-4cae-a3d4-29badeb9db9c
-ms.openlocfilehash: 567b6d8fe9412e58f21de9a1031ec54c4bc01cdc
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: ece4929e2b99b09f3c9148b50c609ec1b5596b3c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87230897"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97282576"
 ---
 # <a name="call_in_appdomain-function"></a>call_in_appdomain 関数
 
@@ -116,8 +117,8 @@ default appdomain id = 1
 appDomain1 id = 2
 ```
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー ファイル** \<msclr\appdomain.h>
 
-**名前空間**msclr
+**名前空間** msclr
