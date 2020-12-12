@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: CStreamRowset クラス'
 title: CStreamRowset クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -26,12 +27,12 @@ helpviewer_keywords:
 - CStreamRowset class, constructor
 - Close method
 ms.assetid: a106e953-a38a-464e-8ea5-28963d9e4811
-ms.openlocfilehash: 304dfe0e026a9fbba899c1ef17c06cf1baf1529b
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 278f85b36a2b4ec1c3d6b3c2bd5ecc5b47c5ef73
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88841052"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97287815"
 ---
 # <a name="cstreamrowset-class"></a>CStreamRowset クラス
 
@@ -49,7 +50,7 @@ class CStreamRowset
 *TAccessor*<br/>
 アクセサークラス。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** atldbcli.h
 

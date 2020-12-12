@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: _searchenv_s、_wsearchenv_s'
 title: _searchenv_s、_wsearchenv_s
 ms.date: 4/2/2020
 api_name:
@@ -42,12 +43,12 @@ helpviewer_keywords:
 - _searchenv_s function
 - environment paths
 ms.assetid: 47f9fc29-250e-4c09-b52e-9e9f0ef395ca
-ms.openlocfilehash: 5dd21013c8910ba07e2d23606af49bc80458dbc6
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: c618840c904bb03eb2f04b9931c7fe7999a278a4
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82918992"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97288959"
 ---
 # <a name="_searchenv_s-_wsearchenv_s"></a>_searchenv_s、_wsearchenv_s
 
@@ -87,7 +88,7 @@ errno_t _wsearchenv_s(
 
 ### <a name="parameters"></a>パラメーター
 
-*/db*<br/>
+*filename*<br/>
 検索するファイルの名前。
 
 *varname*<br/>
@@ -97,33 +98,33 @@ errno_t _wsearchenv_s(
 完全パスを格納するバッファー。
 
 *numberOfElements*<br/>
-*パス名*バッファーのサイズ。
+*パス名* バッファーのサイズ。
 
 ## <a name="return-value"></a>戻り値
 
 正常終了した場合は 0 を返します。失敗した場合はエラー コードを返します。
 
-*Filename*が空の文字列の場合、戻り値は**ENOENT**です。
+*Filename* が空の文字列の場合、戻り値は **ENOENT** です。
 
 ### <a name="error-conditions"></a>エラー条件
 
-|*/db*|*varname*|*パス名*|*numberOfElements*|戻り値|*パス名*の内容|
+|*filename*|*varname*|*パス名*|*numberOfElements*|戻り値|*パス名* の内容|
 |----------------|---------------|----------------|------------------------|------------------|----------------------------|
-|any|any|**空白**|any|**EINVAL**|該当なし|
-|**空白**|any|any|any|**EINVAL**|変更されない|
+|any|any|**NULL**|any|**EINVAL**|該当なし|
+|**NULL**|any|any|any|**EINVAL**|変更されない|
 |any|any|any|<= 0|**EINVAL**|変更されない|
 
-上記のいずれかのエラー条件が発生すると、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように無効なパラメーター ハンドラ―が呼び出されます。 実行の継続が許可された場合、これらの関数は**errno**を**einval**に設定し、 **einval**を返します。
+上記のいずれかのエラー条件が発生すると、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように無効なパラメーター ハンドラ―が呼び出されます。 実行の継続が許可された場合、これらの関数は **errno** を **einval** に設定し、 **einval** を返します。
 
 ## <a name="remarks"></a>解説
 
-**_Searchenv_s**ルーチンは、指定されたドメインでターゲットファイルを検索します。 *Varname*変数には、 **PATH**、 **LIB**、 **INCLUDE**などのディレクトリパスのリストを指定する任意の環境変数またはユーザー定義変数を指定できます。 **_Searchenv_s**では大文字と小文字が区別されるため、 *varname*は環境変数の場合と一致している必要があります。 *Varname*がプロセスの環境で定義されている環境変数の名前と一致しない場合、この関数は0を返し、 *pathname*変数は変更されません。
+**_Searchenv_s** ルーチンは、指定されたドメインでターゲットファイルを検索します。 *Varname* 変数には、 **PATH**、 **LIB**、 **INCLUDE** などのディレクトリパスのリストを指定する任意の環境変数またはユーザー定義変数を指定できます。 **_Searchenv_s** では大文字と小文字が区別されるため、 *varname* は環境変数の場合と一致している必要があります。 *Varname* がプロセスの環境で定義されている環境変数の名前と一致しない場合、この関数は0を返し、 *pathname* 変数は変更されません。
 
-このルーチンは最初に現在の作業ディレクトリでファイルを検索します。 ファイルが見つからなかった場合、環境変数で指定されている次のディレクトリを検索します。 ターゲットファイルがこれらのディレクトリのいずれかにある場合は、新しく作成されたパスが*pathname*にコピーされます。 *Filename*ファイルが見つからない場合、 *pathname*には null で終わる空の文字列が含まれます。
+このルーチンは最初に現在の作業ディレクトリでファイルを検索します。 ファイルが見つからなかった場合、環境変数で指定されている次のディレクトリを検索します。 ターゲットファイルがこれらのディレクトリのいずれかにある場合は、新しく作成されたパスが *pathname* にコピーされます。 *Filename* ファイルが見つからない場合、 *pathname* には null で終わる空の文字列が含まれます。
 
-作成されたパス名の完全な長さを格納するには、*パス*名バッファーは少なくとも **_MAX_PATH**文字である必要があります。 そうしないと、 **_searchenv_s**によって*パス名*バッファーがオーバーランし、予期しない動作が発生する可能性があります。
+作成されたパス名の完全な長さを格納するには、 *パス* 名バッファーは少なくとも **_MAX_PATH** 文字である必要があります。 そうしないと、 **_searchenv_s** によって *パス名* バッファーがオーバーランし、予期しない動作が発生する可能性があります。
 
-**_wsearchenv_s**は **_searchenv_s**のワイド文字バージョンです。**_wsearchenv_s**する引数はワイド文字列です。 **_wsearchenv_s**と **_searchenv_s**は同じように動作します。
+**_wsearchenv_s** は **_searchenv_s** のワイド文字バージョンです。 **_wsearchenv_s** する引数はワイド文字列です。 **_wsearchenv_s** と **_searchenv_s** は同じように動作します。
 
 C++ では、これらの関数の使用はテンプレートのオーバーロードによって簡素化されます。オーバーロードでは、バッファー長を自動的に推論できる (サイズの引数を指定する必要がなくなる) だけでなく、古くてセキュリティが万全ではない関数を新しく安全な関数に自動的に置き換えることができます。 詳細については、「[セキュリティ保護されたテンプレート オーバーロード](../../c-runtime-library/secure-template-overloads.md)」を参照してください。
 
@@ -137,7 +138,7 @@ C++ では、これらの関数の使用はテンプレートのオーバーロ�
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**_searchenv_s**|\<stdlib.h>|
 |**_wsearchenv_s**|\<stdlib.h> または \<wchar.h>|
@@ -182,7 +183,7 @@ C:\Program Files\Microsoft Visual Studio 2010\VC\BIN\CL.EXE
 
 ## <a name="see-also"></a>関連項目
 
-[ディレクトリ制御](../../c-runtime-library/directory-control.md)<br/>
+[ディレクトリコントロール](../../c-runtime-library/directory-control.md)<br/>
 [_searchenv、_wsearchenv](searchenv-wsearchenv.md)<br/>
 [getenv、 _wgetenv](getenv-wgetenv.md)<br/>
 [_putenv、_wputenv](putenv-wputenv.md)<br/>

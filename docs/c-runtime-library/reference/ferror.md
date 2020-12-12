@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: ferror'
 title: ferror
 ms.date: 4/2/2020
 api_name:
@@ -28,12 +29,12 @@ helpviewer_keywords:
 - streams, testing for errors
 - errors [C++], testing for stream
 ms.assetid: 528a34bc-f2aa-4c3f-b89a-5b148e6864f7
-ms.openlocfilehash: 8a5e0bfac2069ed016253de4276e772ea7912605
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: cc4034b1099bb4deed55f363b4a024371ad84e48
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82920149"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97289466"
 ---
 # <a name="ferror"></a>ferror
 
@@ -54,19 +55,19 @@ int ferror(
 
 ## <a name="return-value"></a>戻り値
 
-*ストリーム*でエラーが発生しなかった場合、 **ferror**は0を返します。 それ以外の場合は、0 以外の値を返します。 Stream が**NULL**の場合、 **ferror**は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーを呼び出します。 実行の継続が許可された場合、この関数は**errno**を**EINVAL**に設定し、0を返します。
+*ストリーム* でエラーが発生しなかった場合、 **ferror** は0を返します。 それ以外の場合は、0 以外の値を返します。 Stream が **NULL** の場合、 **ferror** は、「 [パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーを呼び出します。 実行の継続が許可された場合、この関数は **errno** を **EINVAL** に設定し、0を返します。
 
 エラー コードの詳細については、「[_doserrno、errno、_sys_errlist、および _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」を参照してください。
 
 ## <a name="remarks"></a>解説
 
-**Ferror**ルーチン (関数とマクロの両方として実装されます) は、*ストリーム*に関連付けられているファイルに対して読み取りまたは書き込みエラーが発生したかどうかをテストします。 エラーが発生した場合、ストリームが閉じられるか巻き戻されるか、またはそのストリームに対して**clearerr**が呼び出されるまで、ストリームのエラーインジケーターが設定されたままになります。
+**Ferror** ルーチン (関数とマクロの両方として実装されます) は、*ストリーム* に関連付けられているファイルに対して読み取りまたは書き込みエラーが発生したかどうかをテストします。 エラーが発生した場合、ストリームが閉じられるか巻き戻されるか、またはそのストリームに対して **clearerr** が呼び出されるまで、ストリームのエラーインジケーターが設定されたままになります。
 
 既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-|関数|必須ヘッダー|
+|機能|必須ヘッダー|
 |--------------|---------------------|
 |**ferror**|\<stdio.h>|
 

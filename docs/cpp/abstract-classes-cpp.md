@@ -1,4 +1,5 @@
-﻿---
+---
+description: '詳細情報: 抽象クラス (C++)'
 title: 抽象クラス (C++)
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,16 +8,16 @@ helpviewer_keywords:
 - abstract classes [C++]
 - derived classes [C++], abstract classes [C++]
 ms.assetid: f0c5975b-39de-4d68-9640-6ce57f4632e6
-ms.openlocfilehash: 2ea9d3765f65434cb738c2b7c53f9499bba24545
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: bb1c42ce7930128e72c88afaca90da7aaac0bde5
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80181695"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97288413"
 ---
 # <a name="abstract-classes-c"></a>抽象クラス (C++)
 
-抽象クラスは一般的な概念を表現したもので、このクラスからより具体的なクラスを派生するために使用できます。抽象クラス型のオブジェクトは作成できませんが、抽象クラス型へのポインターと参照は使用できます。
+抽象クラスは一般的な概念を表現したもので、このクラスからより具体的なクラスを派生するために使用できます。 抽象クラス型のオブジェクトは作成できませんが、抽象クラス型へのポインターと参照は使用できます。
 
 純粋仮想関数を 1 つでも含むクラスは抽象クラスと見なされます。 抽象クラスから派生したクラスは純粋仮想関数を実装する必要があります。つまり派生クラスも抽象クラスです。
 
@@ -86,6 +87,6 @@ int main() {
 > [!NOTE]
 > 前の例では、純粋仮想関数 `base::~base` は、`derived::~derived` から暗黙的に呼び出されます。 完全修飾メンバー関数名を使用して純粋仮想関数を明示的に呼び出すこともできます。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [継承](../cpp/inheritance-cpp.md)

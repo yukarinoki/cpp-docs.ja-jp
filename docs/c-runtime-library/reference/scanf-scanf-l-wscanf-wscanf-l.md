@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「scanf、_scanf_l、wscanf、_wscanf_l」を参照してください。
 title: scanf、_scanf_l、wscanf、_wscanf_l
 ms.date: 10/21/2019
 api_name:
@@ -43,19 +44,19 @@ helpviewer_keywords:
 - wscanf_l function
 - _wscanf_l function
 ms.assetid: 73eac607-117f-4be4-9ff0-4afd9cf3c848
-ms.openlocfilehash: 62f97c901bc7e6dc34a2db6ad80193cc4aaa986a
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 4f87ae7caf2dbc197834864bc43a04be48f5c466
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87231352"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97289037"
 ---
 # <a name="scanf-_scanf_l-wscanf-_wscanf_l"></a>scanf、_scanf_l、wscanf、_wscanf_l
 
 標準入力ストリームから書式付きデータを読み取ります。 これらの関数のセキュリティを強化したバージョンを使用できます。「[scanf_s、_scanf_s_l、wscanf_s、_wscanf_s_l](scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md)」をご覧ください。
 
 > [!NOTE]
-> Visual Studio 2015 では `printf` 、 `scanf` 関数のとファミリはとして宣言され **`inline`** 、との各ヘッダーに移動されました `<stdio.h>` `<conio.h>` 。 古いコードを移行する場合、これらの関数との接続に*LNK2019*が表示されることがあります。 詳細については、「 [Visual C++ change history 2003-2015](../../porting/visual-cpp-change-history-2003-2015.md#stdio_and_conio)」を参照してください。
+> Visual Studio 2015 では `printf` 、 `scanf` 関数のとファミリはとして宣言され **`inline`** 、との各ヘッダーに移動されました `<stdio.h>` `<conio.h>` 。 古いコードを移行する場合、これらの関数との接続に *LNK2019* が表示されることがあります。 詳細については、「 [Visual C++ change history 2003-2015](../../porting/visual-cpp-change-history-2003-2015.md#stdio_and_conio)」を参照してください。
 
 ## <a name="syntax"></a>構文
 
@@ -95,20 +96,20 @@ int _wscanf_l(
 
 正常に変換され、代入されたフィールドの数を返します。この数には、読み取られても代入されなかったフィールドは含まれません。 戻り値が 0 の場合は、代入されたフィールドがなかったことを示します。
 
-*Format*が**NULL**ポインターの場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、これらの関数は**EOF**を返し、 **errno**を**EINVAL**に設定します。
+*Format* が **NULL** ポインターの場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、これらの関数は **EOF** を返し、 **errno** を **EINVAL** に設定します。
 
 これらと他のエラー コードの詳細については、「[_doserrno、errno、_sys_errlist、および _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」を参照してください。
 
 ## <a name="remarks"></a>解説
 
-**Scanf**関数は、標準入力ストリーム**stdin**からデータを読み取り、*引数*で指定された場所にデータを書き込みます。 各*引数*は、*形式*の型指定子に対応する型の変数へのポインターである必要があります。 重なり合う文字列間でコピーした場合の動作は未定義です。
+**Scanf** 関数は、標準入力ストリーム **stdin** からデータを読み取り、*引数* で指定された場所にデータを書き込みます。 各 *引数* は、 *形式* の型指定子に対応する型の変数へのポインターである必要があります。 重なり合う文字列間でコピーした場合の動作は未定義です。
 
 > [!IMPORTANT]
-> **Scanf**の文字列を読み取るときは、常に **% s**形式の幅を指定してください (たとえば、 **"% s"** ではなく **"% 32s"** )。そうしないと、正しくフォーマットされていない入力によってバッファーオーバーランが発生する可能性があります。 代わりに、[scanf_s、_scanf_s_l、wscanf_s、_wscanf_s_l](scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md) または [fgets](fgets-fgetws.md) を使用することをご検討ください。
+> **Scanf** の文字列を読み取るときは、常に **% s** 形式の幅を指定してください (たとえば、 **"% s"** ではなく **"% 32s"** )。そうしないと、正しくフォーマットされていない入力によってバッファーオーバーランが発生する可能性があります。 代わりに、[scanf_s、_scanf_s_l、wscanf_s、_wscanf_s_l](scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md) または [fgets](fgets-fgetws.md) を使用することをご検討ください。
 
-**wscanf**は、 **scanf**のワイド文字バージョンです。**wscanf**の*format*引数は、ワイド文字列です。 ストリームが ANSI モードで開かれている場合、 **wscanf**と**scanf**は同じように動作します。 現在、 **scanf**では UNICODE ストリームからの入力はサポートされていません。
+**wscanf** は、 **scanf** のワイド文字バージョンです。**wscanf** の *format* 引数は、ワイド文字列です。 ストリームが ANSI モードで開かれている場合、 **wscanf** と **scanf** は同じように動作します。 現在、 **scanf** では UNICODE ストリームからの入力はサポートされていません。
 
-**_L**サフィックスを持つこれらの関数のバージョンは、現在のスレッドロケールの代わりに渡されたロケールパラメーターを使用する点を除いて同じです。
+**_L** サフィックスを持つこれらの関数のバージョンは、現在のスレッドロケールの代わりに渡されたロケールパラメーターを使用する点を除いて同じです。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -126,7 +127,7 @@ int _wscanf_l(
 |**scanf**、 **_scanf_l**|\<stdio.h>|
 |**wscanf**、 **_wscanf_l**|\<stdio.h> または \<wchar.h>|
 
-コンソールは、ユニバーサル Windows プラットフォーム (UWP) アプリではサポートされていません。 コンソール、 **stdin**、 **stdout**、および**stderr**に関連付けられている標準ストリームハンドルは、C ランタイム関数が UWP アプリで使用できるようになる前にリダイレクトする必要があります。 互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+コンソールは、ユニバーサル Windows プラットフォーム (UWP) アプリではサポートされていません。 コンソール、 **stdin**、 **stdout**、および **stderr** に関連付けられている標準ストリームハンドルは、C ランタイム関数が UWP アプリで使用できるようになる前にリダイレクトする必要があります。 互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
 ## <a name="example"></a>例
 

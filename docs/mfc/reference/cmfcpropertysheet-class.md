@@ -1,5 +1,6 @@
 ---
-title: CMFCPropertySheet クラス
+description: '詳細情報: CMFCPropertySheet クラス'
+title: CMFCPropertySheet プロパティクラス
 ms.date: 11/19/2018
 f1_keywords:
 - CMFCPropertySheet
@@ -40,14 +41,14 @@ helpviewer_keywords:
 - CMFCPropertySheet [MFC], SetIconsList
 - CMFCPropertySheet [MFC], SetLook
 ms.assetid: 01d93573-9698-440f-a6a4-5bebbee879dc
-ms.openlocfilehash: 9b1bb2ce9a957b9cd9f7add983b4da7a228d7a1d
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: 6dd621e02074bf247f59b20e19024f06734f7fa2
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81750063"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97289921"
 ---
-# <a name="cmfcpropertysheet-class"></a>CMFCPropertySheet クラス
+# <a name="cmfcpropertysheet-class"></a>CMFCPropertySheet プロパティクラス
 
 `CMFCPropertySheet` クラスは、各プロパティ ページがページ タブ、ツール バー ボタン、ツリー コントロールのノード、またはリスト項目で示されるプロパティ シートをサポートします。
 
@@ -78,13 +79,13 @@ class CMFCPropertySheet : public CPropertySheet
 |[CMFCPropertySheet::GetLook](#getlook)|現在のプロパティ シートの外観を指定する列挙値を取得します。|
 |[CMFCPropertySheet::GetNavBarWidth](#getnavbarwidth)|ナビゲーション バーの幅をピクセル単位で取得します。|
 |[CMFCPropertySheet::GetTab](#gettab)|現在のプロパティ シート コントロールをサポートする内部タブ コントロール オブジェクトを取得します。|
-|`CMFCPropertySheet::GetThisClass`|このクラス型に関連付けられている[CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)オブジェクトへのポインターを取得するために、フレームワークによって使用されます。|
+|`CMFCPropertySheet::GetThisClass`|このクラス型に関連付けられている [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) オブジェクトへのポインターを取得するために、フレームワークによって使用されます。|
 |[CMFCPropertySheet::InitNavigationControl](#initnavigationcontrol)|現在のプロパティ シート コントロールの外観を初期化します。|
 |[CMFCPropertySheet::OnActivatePage](#onactivatepage)|プロパティ ページが有効になったときにフレームワークによって呼び出されます。|
 |[CMFCPropertySheet::OnDrawPageHeader](#ondrawpageheader)|カスタム プロパティ ページのヘッダーを描画するためにフレームワークによって呼び出されます。|
-|`CMFCPropertySheet::OnInitDialog`|[WM_INITDIALOG](/windows/win32/dlgbox/wm-initdialog)メッセージを処理します。 (C プロパティ シートをオーバーライドします[。::OnInitDialog](../../mfc/reference/cpropertysheet-class.md#oninitdialog).)|
+|`CMFCPropertySheet::OnInitDialog`|[WM_INITDIALOG](/windows/win32/dlgbox/wm-initdialog)メッセージを処理します。 ( [CPropertySheet:: OnInitDialog](../../mfc/reference/cpropertysheet-class.md#oninitdialog)をオーバーライドします。)|
 |[CMFCPropertySheet::OnRemoveTreePage](#onremovetreepage)|ツリー コントロールからプロパティ ページを削除するためにフレームワークによって呼び出されます。|
-|`CMFCPropertySheet::PreTranslateMessage`|ウィンドウ メッセージが変換メッセージおよびディスパッチ メッセージの Windows 関数にディスパッチされる前に、ウィンドウ[メッセージを](/windows/win32/api/winuser/nf-winuser-dispatchmessage)[変換](/windows/win32/api/winuser/nf-winuser-translatemessage)します。 ( `CPropertySheet::PreTranslateMessage`をオーバーライドします)。|
+|`CMFCPropertySheet::PreTranslateMessage`|[TranslateMessage](/windows/win32/api/winuser/nf-winuser-translatemessage)および[DispatchMessage](/windows/win32/api/winuser/nf-winuser-dispatchmessage)の Windows 関数にディスパッチされる前に、ウィンドウメッセージを変換します。 ( `CPropertySheet::PreTranslateMessage`をオーバーライドします)。|
 |[CMFCPropertySheet::RemoveCategory](#removecategory)|ツリー コントロールからノードを削除します。|
 |[CMFCPropertySheet::RemovePage](#removepage)|プロパティ シートからプロパティ ページを削除します。|
 |[CMFCPropertySheet::SetIconsList](#seticonslist)|Outlook ウィンドウのナビゲーション コントロールで使用されるイメージの一覧を指定します。|
@@ -98,13 +99,13 @@ class CMFCPropertySheet : public CPropertySheet
 
 1. `CMFCPropertySheet` クラスから派生クラスを作成し、名前 (CMyPropertySheet など) を付けます。
 
-1. 各プロパティ ページの[CMFC プロパティ ページ](../../mfc/reference/cmfcpropertypage-class.md)オブジェクトを構築します。
+1. プロパティページごとに [Cmfcpropertypage](../../mfc/reference/cmfcpropertypage-class.md) オブジェクトを構築します。
 
-1. コンストラクターで[メソッド](#setlook)を呼び出します。 このメソッドのパラメーターで、プロパティ ページの表示方法として、プロパティ シートの上部または左側のタブ、Microsoft OneNote プロパティ シート スタイルのタブ、Microsoft Outlook ツール バー コントロールのボタン、ツリー コントロールのノード、プロパティ シートの左側の項目リストのいずれかを指定します。
+1. CMyPropertySheet コンストラクターで [Cmfcpropertysheet:: SetLook](#setlook) メソッドを呼び出します。 このメソッドのパラメーターで、プロパティ ページの表示方法として、プロパティ シートの上部または左側のタブ、Microsoft OneNote プロパティ シート スタイルのタブ、Microsoft Outlook ツール バー コントロールのボタン、ツリー コントロールのノード、プロパティ シートの左側の項目リストのいずれかを指定します。
 
-1. Outlook ツール バーのスタイルでプロパティ シートを作成する場合は[、CMFCPropertySheet::SetIconsList](#seticonslist)メソッドを呼び出して、プロパティ ページとイメージ リストを関連付けます。
+1. Microsoft Outlook ツールバーのスタイルでプロパティシートを作成する場合は、 [cmfcpropertysheet](#seticonslist) プロパティページを使用して、イメージリストをプロパティページと関連付けることができます。
 
-1. 各プロパティ ページの[メソッド](#addpage)を呼び出します。
+1. 各プロパティページに対して [Cmfcpropertysheet::](#addpage) メソッドを呼び出します。
 
 1. `CMFCPropertySheet` コントロールを作成し、その `DoModal` メソッドを呼び出します。
 
@@ -114,7 +115,7 @@ class CMFCPropertySheet : public CPropertySheet
 
 ![CMFCPropertySheet カラー コントロール](../../mfc/reference/media/cmfcpropertysheet_color.png "CMFCPropertySheet カラー コントロール")
 
-次の図は、[クラス](../../mfc/reference/cmfcpropertygridctrl-class.md)オブジェクトを含むプロパティ シートを示しています。 このオブジェクトは、標準のコモン コントロール スタイルのプロパティ シートです。
+次の図は、 [Cmfcpropertygridctrl クラス](../../mfc/reference/cmfcpropertygridctrl-class.md) オブジェクトを含むプロパティシートを示しています。 このオブジェクトは、標準のコモン コントロール スタイルのプロパティ シートです。
 
 ![CMFCPropertySheet リストおよびプロパティ コントロール](../../mfc/reference/media/cmfcpropertysheet_list.png "CMFCPropertySheet リストおよびプロパティ コントロール")
 
@@ -134,11 +135,11 @@ class CMFCPropertySheet : public CPropertySheet
 
 [CMFCPropertySheet](../../mfc/reference/cmfcpropertysheet-class.md)
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-**ヘッダー:** afx プロパティシート.h
+**ヘッダー:** afxpropertysheet
 
-## <a name="cmfcpropertysheetaddpage"></a><a name="addpage"></a>プロパティシート::ページの追加
+## <a name="cmfcpropertysheetaddpage"></a><a name="addpage"></a> CMFCPropertySheet プロパティ:: AddPage
 
 プロパティ シートにページを追加します。
 
@@ -148,16 +149,16 @@ void AddPage(CPropertyPage* pPage);
 
 ### <a name="parameters"></a>パラメーター
 
-*ページ*<br/>
-[in]ページ オブジェクトへのポインター。 このパラメーターは NULL にはできません。
+*pPage*<br/>
+からページオブジェクトへのポインター。 このパラメーターは NULL にはできません。
 
 ### <a name="remarks"></a>解説
 
-このメソッドは、指定されたプロパティ ページをプロパティ シートの右端のタブとして追加します。 したがって、このメソッドを使用して、ページを左から右の順序で追加します。
+このメソッドは、プロパティシートの右端のタブとして、指定されたプロパティページを追加します。 したがって、このメソッドを使用して、ページを左から右へ順に追加します。
 
-プロパティ シートが Microsoft Outlook のスタイルの場合、フレームワークはプロパティ シートの左側にナビゲーション ボタンの一覧を表示します。 このメソッドは、プロパティ ページを追加した後、対応するボタンをリストに追加します。 プロパティ ページを表示するには、対応するボタンをクリックします。 プロパティ シートのスタイルの詳細については[、「CMFC プロパティ シート::SetLook](#setlook)」を参照してください。
+プロパティシートが Microsoft Outlook のスタイルになっている場合、フレームワークは、プロパティシートの左側にナビゲーションボタンの一覧を表示します。 このメソッドによってプロパティページが追加されると、対応するボタンが一覧に追加されます。 プロパティページを表示するには、対応するボタンをクリックします。 プロパティシートのスタイルの詳細については、「 [cmfcpropertysheet:: SetLook](#setlook)」を参照してください。
 
-## <a name="cmfcpropertysheetaddpagetotree"></a><a name="addpagetotree"></a>プロパティ シート::ページを追加します。
+## <a name="cmfcpropertysheetaddpagetotree"></a><a name="addpagetotree"></a> CMFCPropertySheet:: AddPageToTree
 
 ツリー コントロールに新しいプロパティ ページを追加します。
 
@@ -171,23 +172,23 @@ void AddPageToTree(
 
 ### <a name="parameters"></a>パラメーター
 
-*カテゴリ*<br/>
-[in]親ツリー ノードへのポインター、または指定したページを最上位ノードに関連付ける場合は NULL。 このポインター[を取得](#addtreecategory)するには、メソッドを呼び出します。
+*pCategory*<br/>
+から親ツリーノードへのポインター。指定したページをトップレベルノードに関連付ける場合は NULL。 このポインターを取得するには、 [Cmfcpropertysheet::](#addtreecategory) メソッドを呼び出します。
 
-*ページ*<br/>
-[in]プロパティ ページ オブジェクトへのポインター。
+*pPage*<br/>
+からプロパティページオブジェクトへのポインター。
 
-*ニコンナム*<br/>
-[in]アイコンの 0 から始まるインデックス、またはアイコンが使用されていない場合は -1。 ページが選択されていない場合、ツリー コントロールのプロパティ ページの横にアイコンが表示されます。 既定値は -1 です。
+*nIconNum*<br/>
+からアイコンの0から始まるインデックス番号。アイコンが使用されていない場合は-1。 ページが選択されていない場合、ツリーコントロールのプロパティページの横にアイコンが表示されます。 既定値は -1 です。
 
-*ヌセアイコンヌ*<br/>
-[in]アイコンの 0 から始まるインデックス、またはアイコンが使用されていない場合は -1。 ページが選択されると、ツリー コントロールのプロパティ ページの横にアイコンが表示されます。 既定値は -1 です。
+*nSelIconNum*<br/>
+からアイコンの0から始まるインデックス番号。アイコンが使用されていない場合は-1。 ページが選択されると、ツリーコントロールのプロパティページの横にアイコンが表示されます。 既定値は -1 です。
 
 ### <a name="remarks"></a>解説
 
-このメソッドは、プロパティ ページをツリー コントロールのリーフとして追加します。 プロパティ ページを追加するには、オブジェクト`CMFCPropertySheet`を作成し、*ルック*パラメーターを に設定して`CMFCPropertySheet::PropSheetLook_Tree`[CMFCPropertySheet::SetLook](#setlook)メソッドを呼び出し、このメソッドを使用してプロパティ ページを追加します。
+このメソッドは、プロパティページをツリーコントロールのリーフとして追加します。 プロパティページを追加するには、オブジェクトを作成し `CMFCPropertySheet` 、 *look* パラメーターをに設定して [Cmfcpropertysheet: setlook](#setlook)メソッドを呼び出した `CMFCPropertySheet::PropSheetLook_Tree` 後、このメソッドを使用してプロパティページを追加します。
 
-## <a name="cmfcpropertysheetaddtreecategory"></a><a name="addtreecategory"></a>プロパティシート::ツリーカテゴリの追加
+## <a name="cmfcpropertysheetaddtreecategory"></a><a name="addtreecategory"></a> CMFCPropertySheet プロパティ:: AddTreeCategory
 
 ツリー コントロールに新しいノードを追加します。
 
@@ -201,29 +202,29 @@ CMFCPropertySheetCategoryInfo* AddTreeCategory(
 
 ### <a name="parameters"></a>パラメーター
 
-*ラベル*<br/>
-[in]ノードの名前。
+*lpszLabel*<br/>
+からノードの名前。
 
-*ニコンナム*<br/>
-[in]アイコンの 0 から始まるインデックス、またはアイコンが使用されていない場合は -1。 ページが選択されていない場合、ツリー コントロールのプロパティ ページの横にアイコンが表示されます。 既定値は -1 です。
+*nIconNum*<br/>
+からアイコンの0から始まるインデックス番号。アイコンが使用されていない場合は-1。 ページが選択されていない場合、ツリーコントロールのプロパティページの横にアイコンが表示されます。 既定値は -1 です。
 
-*アイコンの数*<br/>
-[in]アイコンの 0 から始まるインデックス、またはアイコンが使用されていない場合は -1。 ページが選択されると、ツリー コントロールのプロパティ ページの横にアイコンが表示されます。 既定値は -1 です。
+*nSelectedIconNum*<br/>
+からアイコンの0から始まるインデックス番号。アイコンが使用されていない場合は-1。 ページが選択されると、ツリーコントロールのプロパティページの横にアイコンが表示されます。 既定値は -1 です。
 
-*カテゴリ*<br/>
-[in]親ツリー ノードへのポインター、または指定したページを最上位ノードに関連付ける場合は NULL。 このパラメーターを[設定します](#addtreecategory)。
+*pParentCategory*<br/>
+から親ツリーノードへのポインター。指定したページをトップレベルノードに関連付ける場合は NULL。 このパラメーターは、 [Cmfcpropertysheet::](#addtreecategory) メソッドで設定します。
 
 ### <a name="return-value"></a>戻り値
 
-ツリー コントロール内の新しいノードへのポインター。
+ツリーコントロール内の新しいノードへのポインター。
 
 ### <a name="remarks"></a>解説
 
-このメソッドは、カテゴリとも呼ばれる新しいノードをツリー コントロールに追加するために使います。 ノードを追加するには、オブジェクトを`CMFCPropertySheet`作成し、*ルック*パラメーターを に設定して`CMFCPropertySheet::PropSheetLook_Tree`[CMFCPropertySheet::SetLook](#setlook)メソッドを呼び出し、このメソッドを使用してノードを追加します。
+このメソッドを使用して、ツリーコントロールに新しいノード (カテゴリとも呼ばれます) を追加します。 ノードを追加するには、オブジェクトを作成し `CMFCPropertySheet` 、 *look* パラメーターをに設定して [Cmfcpropertysheet: setlook](#setlook)メソッドを呼び出した `CMFCPropertySheet::PropSheetLook_Tree` 後、このメソッドを使用してノードを追加します。
 
-このメソッドの戻り値は、次の呼び出しで[使用](#addpagetotree)[します。](#addtreecategory)
+このメソッドの戻り値は、次に [cmfcpropertysheet:: AddPageToTree](#addpagetotree) および [Cmfcpropertysheet::](#addtreecategory)を呼び出すときに使用します。
 
-## <a name="cmfcpropertysheetcmfcpropertysheet"></a><a name="cmfcpropertysheet"></a>プロパティシート::CMFC プロパティ シート
+## <a name="cmfcpropertysheetcmfcpropertysheet"></a><a name="cmfcpropertysheet"></a> CMFCPropertySheet プロパティ:: CMFCPropertySheet プロパティ
 
 `CMFCPropertySheet` オブジェクトを構築します。
 
@@ -241,23 +242,23 @@ CMFCPropertySheet(
 
 ### <a name="parameters"></a>パラメーター
 
-*キャプション*<br/>
-[in]プロパティ シートのキャプションを含む文字列。 Nll は指定できません。
+*pszCaption*<br/>
+からプロパティシートのキャプションを格納している文字列。 Nll は指定できません。
 
-*nIDキャプション*<br/>
-[in]プロパティ シートのキャプションを含むリソース ID。
+*nIDCaption*<br/>
+からプロパティシートのキャプションを格納しているリソース ID。
 
 *pParentWnd*<br/>
-[in]プロパティ シートの親ウィンドウへのポインター。 既定値は NULL です。
+からプロパティシートの親ウィンドウへのポインター。親ウィンドウがアプリケーションのメインウィンドウである場合は NULL。 既定値は NULL です。
 
-*ページを選択します。*<br/>
-[in]最上位のプロパティ ページの 0 から始まるインデックス。 既定値は 0 です。
+*iSelectPage*<br/>
+から最上位のプロパティページの0から始まるインデックス。 既定値は 0 です。
 
 ### <a name="remarks"></a>解説
 
-詳細については[、CPropertySheet::CPropertySheet](../../mfc/reference/cpropertysheet-class.md#cpropertysheet)コンストラクターのパラメーターを参照してください。
+詳細については、 [CPropertySheet:: CPropertySheet](../../mfc/reference/cpropertysheet-class.md#cpropertysheet) コンストラクターのパラメーターを参照してください。
 
-## <a name="cmfcpropertysheetenablepageheader"></a><a name="enablepageheader"></a>プロパティ シート::ページ ヘッダーを有効にします。
+## <a name="cmfcpropertysheetenablepageheader"></a><a name="enablepageheader"></a> CMFCPropertySheet:: EnablePageHeader
 
 カスタム ヘッダーを描画する領域を各ページの上部に確保します。
 
@@ -267,14 +268,14 @@ void EnablePageHeader(int nHeaderHeight);
 
 ### <a name="parameters"></a>パラメーター
 
-*ヘッダーの高さ*<br/>
-[in]ヘッダーの高さ (ピクセル単位)。
+*nHeaderHeight*<br/>
+からヘッダーの高さ (ピクセル単位)。
 
 ### <a name="remarks"></a>解説
 
-*パラメーターの*値を使用してカスタム ヘッダーを描画するには、[メソッド](#ondrawpageheader)をオーバーライドします。
+*Nheaderheight* パラメーターの値を使用してカスタムヘッダーを描画するには、 [Cmfcpropertysheet::](#ondrawpageheader)メソッドをオーバーライドします。
 
-## <a name="cmfcpropertysheetgetheaderheight"></a><a name="getheaderheight"></a>プロパティシート::ゲットヘッダーの高さ
+## <a name="cmfcpropertysheetgetheaderheight"></a><a name="getheaderheight"></a> CMFCPropertySheet プロパティ:: GetHeaderHeight
 
 現在のヘッダーの高さを取得します。
 
@@ -288,9 +289,9 @@ int GetHeaderHeight() const;
 
 ### <a name="remarks"></a>解説
 
-このメソッド[を](#enablepageheader)呼び出す前に、メソッドを呼び出します。
+このメソッドを呼び出す前に、 [Cmfcpropertysheet:: enablepageheader](#enablepageheader) 呼び出してください。
 
-## <a name="cmfcpropertysheetgetlook"></a><a name="getlook"></a>プロパティシート::ゲットルック
+## <a name="cmfcpropertysheetgetlook"></a><a name="getlook"></a> CMFCPropertySheet プロパティ:: GetLook
 
 現在のプロパティ シートの外観を指定する列挙値を取得します。
 
@@ -300,9 +301,9 @@ PropSheetLook GetLook() const;
 
 ### <a name="return-value"></a>戻り値
 
-プロパティ シートの外観を指定する列挙値の 1 つ。 指定できる値の一覧については[、CMFC プロパティ シート](#setlook)の「解説」セクションの列挙テーブルを参照してください。
+プロパティシートの外観を指定する列挙値の1つ。 使用可能な値の一覧については、「 [Cmfcpropertysheet プロパティ:: SetLook](#setlook)」の「解説」の列挙テーブルを参照してください。
 
-## <a name="cmfcpropertysheetgetnavbarwidth"></a><a name="getnavbarwidth"></a>プロパティシート::取得ナブバー幅
+## <a name="cmfcpropertysheetgetnavbarwidth"></a><a name="getnavbarwidth"></a> CMFCPropertySheet プロパティ:: Getナビゲーションバーの幅
 
 ナビゲーション バーの幅を取得します。
 
@@ -314,7 +315,7 @@ int GetNavBarWidth() const;
 
 軸スクロール バーの幅 (ピクセル単位)。
 
-## <a name="cmfcpropertysheetgettab"></a><a name="gettab"></a>プロパティシート::ゲットタブ
+## <a name="cmfcpropertysheetgettab"></a><a name="gettab"></a> CMFCPropertySheet プロパティ:: GetTab
 
 現在のプロパティ シート コントロールをサポートする内部タブ コントロール オブジェクトを取得します。
 
@@ -324,17 +325,17 @@ CMFCTabCtrl& GetTab() const;
 
 ### <a name="return-value"></a>戻り値
 
-内部タブ コントロール オブジェクト。
+内部タブコントロールオブジェクト。
 
 ### <a name="remarks"></a>解説
 
-プロパティ シートは、ツリー コントロール、ナビゲーション ボタンの一覧、タブ付きページのセットなど、さまざまなスタイルで表示されるように設定できます。
+プロパティシートは、ツリーコントロール、ナビゲーションボタンの一覧、タブ付きページのセットなど、さまざまなスタイルで表示されるように設定できます。
 
-このメソッドを呼び出す前に、プロパティ シート コントロールの外観を設定する[CMFCPropertySheet::SetLook](#setlook)メソッドを呼び出します。 次に、[内部](#initnavigationcontrol)タブ コントロール オブジェクトを初期化するメソッドを呼び出します。 このメソッドは、タブ コントロール オブジェクトを取得し、そのオブジェクトを使用してプロパティ シートのタブを操作するために使います。
+このメソッドを呼び出す前に、 [cmfcpropertysheet: SetLook](#setlook) メソッドを呼び出して、プロパティシートコントロールの外観を設定します。 次に、 [Cmfcpropertysheet:: InitNavigationControl](#initnavigationcontrol) メソッドを呼び出して、内部タブコントロールオブジェクトを初期化します。 このメソッドを使用して、タブコントロールオブジェクトを取得し、そのオブジェクトを使用してプロパティシートのタブを操作します。
 
-このメソッドは、プロパティ シート コントロールが Microsoft OneNote のスタイルに表示されるように設定されていない場合、デバッグ モードでアサートします。
+このメソッドは、プロパティシートコントロールが Microsoft OneNote のスタイルで表示されるように設定されていない場合に、デバッグモードでアサートします。
 
-## <a name="cmfcpropertysheetinitnavigationcontrol"></a><a name="initnavigationcontrol"></a>プロパティシート::イニトナビゲーションコントロール
+## <a name="cmfcpropertysheetinitnavigationcontrol"></a><a name="initnavigationcontrol"></a> CMFCPropertySheet:: InitNavigationControl
 
 現在のプロパティ シート コントロールの外観を初期化します。
 
@@ -344,13 +345,13 @@ virtual CWnd* InitNavigationControl();
 
 ### <a name="return-value"></a>戻り値
 
-プロパティ シート コントロールのウィンドウへのポインター。
+プロパティシートコントロールのウィンドウへのポインター。
 
 ### <a name="remarks"></a>解説
 
-プロパティ シート コントロールは、タブ付きページ、ツリー コントロール、ナビゲーション ボタンの一覧など、さまざまな形式で表示できます。 プロパティ シート コントロールの外観を指定するには[、CMFCPropertySheet::SetLook](#setlook)メソッドを使用します。
+プロパティシートコントロールは、一連のタブ付きページ、ツリーコントロール、またはナビゲーションボタンの一覧など、さまざまな形式で表示できます。 プロパティシートコントロールの外観を指定するには、 [cmfcpropertysheet:: SetLook](#setlook) メソッドを使用します。
 
-## <a name="cmfcpropertysheetonactivatepage"></a><a name="onactivatepage"></a>プロパティシート::オンアクティブページ
+## <a name="cmfcpropertysheetonactivatepage"></a><a name="onactivatepage"></a> CMFCPropertySheet プロパティ:: On[アクティブ] ページ
 
 プロパティ ページが有効になったときにフレームワークによって呼び出されます。
 
@@ -360,16 +361,16 @@ virtual void OnActivatePage(CPropertyPage* pPage);
 
 ### <a name="parameters"></a>パラメーター
 
-*ページ*<br/>
-[in]有効なプロパティ ページを表すプロパティ ページ オブジェクトへのポインター。
+*pPage*<br/>
+からEnabled プロパティページを表すプロパティページオブジェクトへのポインター。
 
 ### <a name="remarks"></a>解説
 
-既定では、このメソッドは、有効なプロパティ ページが表示されるようにします。 現在のプロパティ シートのスタイルに Outlook ペインが含まれている場合、このメソッドは対応する Outlook ボタンをチェック済みの状態に設定します。
+既定では、このメソッドによって、有効なプロパティページが表示されるようになります。 現在のプロパティシートのスタイルに Microsoft Outlook のウィンドウが含まれている場合、このメソッドは対応する Outlook ボタンをチェックされた状態に設定します。
 
-## <a name="cmfcpropertysheetondrawpageheader"></a><a name="ondrawpageheader"></a>プロパティシート::ページヘッダー
+## <a name="cmfcpropertysheetondrawpageheader"></a><a name="ondrawpageheader"></a> CMFCPropertySheet プロパティ:: OnDrawPageHeader
 
-カスタム プロパティ ページのヘッダーを描画するために、フレームワークによって呼び出されます。
+カスタムプロパティページのヘッダーを描画するためにフレームワークによって呼び出されます。
 
 ```
 virtual void OnDrawPageHeader(
@@ -381,19 +382,19 @@ virtual void OnDrawPageHeader(
 ### <a name="parameters"></a>パラメーター
 
 *pDC*<br/>
-[in]デバイス コンテキストへのポインター。
+からデバイスコンテキストへのポインター。
 
-*nページ*<br/>
-[in]0 から始まるプロパティ ページ番号。
+*nPage*<br/>
+から0から始まるプロパティページ番号。
 
-*ヘッダーを修正する*<br/>
-[in]ヘッダーの描画先を指定する外接する四角形。
+*rectHeader*<br/>
+からヘッダーの描画位置を指定する外接する四角形。
 
 ### <a name="remarks"></a>解説
 
-既定では、このメソッドは何も実行しません。 このメソッドをオーバーライドする場合は、フレームワークがこのメソッドを呼び出す前に[、CMFCPropertySheet::EnablePageHeader](#enablepageheader)メソッドを呼び出します。
+既定では、このメソッドは何も実行しません。 このメソッドをオーバーライドする場合は、フレームワークがこのメソッドを呼び出す前に、 [Cmfcpropertysheet プロパティ:: enablepageheader](#enablepageheader) 呼び出します。
 
-## <a name="cmfcpropertysheetonremovetreepage"></a><a name="onremovetreepage"></a>プロパティ シート::オンムースツリーページ
+## <a name="cmfcpropertysheetonremovetreepage"></a><a name="onremovetreepage"></a> CMFCPropertySheet プロパティ:: OnRemoveTreePage
 
 ツリー コントロールからプロパティ ページを削除するためにフレームワークによって呼び出されます。
 
@@ -403,14 +404,14 @@ virtual BOOL OnRemoveTreePage(CPropertyPage* pPage);
 
 ### <a name="parameters"></a>パラメーター
 
-*ページ*<br/>
-[in]削除するプロパティ ページを表すプロパティ ページ オブジェクトへのポインター。
+*pPage*<br/>
+から削除するプロパティページを表すプロパティページオブジェクトへのポインター。
 
 ### <a name="return-value"></a>戻り値
 
 このメソッドが成功した場合は TRUE。それ以外の場合は FALSE。
 
-## <a name="cmfcpropertysheetremovecategory"></a><a name="removecategory"></a>プロパティシート::カテゴリの削除
+## <a name="cmfcpropertysheetremovecategory"></a><a name="removecategory"></a> CMFCPropertySheet プロパティ:: RemoveCategory
 
 ツリー コントロールからノードを削除します。
 
@@ -420,14 +421,14 @@ void RemoveCategory(CMFCPropertySheetCategoryInfo* pCategory);
 
 ### <a name="parameters"></a>パラメーター
 
-*カテゴリ*<br/>
-[in]削除するカテゴリ (ノード) へのポインター。
+*pCategory*<br/>
+から削除するカテゴリ (ノード) へのポインター。
 
 ### <a name="remarks"></a>解説
 
-このメソッドは、ツリー コントロールからノード (カテゴリとも呼ばれます) を削除するために使います。 ツリー コントロールにノードを追加するには[、CMFCPropertySheet::AddTreeCategory](#addtreecategory)メソッドを使用します。
+このメソッドを使用して、ツリーコントロールからノード (カテゴリとも呼ばれます) を削除します。 [Cmfcpropertysheet::](#addtreecategory)メソッドを使用して、ノードをツリーコントロールに追加します。
 
-## <a name="cmfcpropertysheetremovepage"></a><a name="removepage"></a>プロパティシート::ページの削除
+## <a name="cmfcpropertysheetremovepage"></a><a name="removepage"></a> CMFCPropertySheet プロパティ:: RemovePage
 
 プロパティ シートからプロパティ ページを削除します。
 
@@ -438,17 +439,17 @@ void RemovePage(int nPage);
 
 ### <a name="parameters"></a>パラメーター
 
-*ページ*<br/>
-[in]削除するプロパティ ページを表すプロパティ ページ オブジェクトへのポインター。 Nll は指定できません。
+*pPage*<br/>
+から削除するプロパティページを表すプロパティページオブジェクトへのポインター。 Nll は指定できません。
 
-*nページ*<br/>
-[in]削除するページの 0 から始まるインデックス。
+*nPage*<br/>
+から削除するページの0から始まるインデックス。
 
 ### <a name="remarks"></a>解説
 
-このメソッドは、指定されたプロパティ ページを削除し、関連付けられているウィンドウを破棄します。 *pPage*パラメーターが指定するプロパティ ページ オブジェクトは[、CMFC プロパティ シート](../../mfc/reference/cmfcpropertysheet-class.md)ウィンドウが閉じるまで破棄されません。
+このメソッドは、指定されたプロパティページを削除し、関連付けられているウィンドウを破棄します。 *PPage* パラメーターで指定されるプロパティページオブジェクトは、 [cmfcpropertysheet](../../mfc/reference/cmfcpropertysheet-class.md)ウィンドウが閉じられるまで破棄されません。
 
-## <a name="cmfcpropertysheetseticonslist"></a><a name="seticonslist"></a>プロパティシート::セットアイコンリスト
+## <a name="cmfcpropertysheetseticonslist"></a><a name="seticonslist"></a> CMFCPropertySheet:: SetIconsList
 
 Outlook ウィンドウのナビゲーション コントロールで使用されるイメージの一覧を指定します。
 
@@ -462,29 +463,29 @@ void SetIconsList(HIMAGELIST hIcons);
 
 ### <a name="parameters"></a>パラメーター
 
-*を返します。*<br/>
-[in]イメージ リストのリソース ID。
+*Uiimagの登録 Stresid*<br/>
+からイメージリストのリソース ID。
 
-*Cx*<br/>
-[in]イメージ リスト内のアイコンの幅 (ピクセル単位)。
+*シリーズ*<br/>
+からイメージリストのアイコンの幅 (ピクセル単位)。
 
-*clr透明*<br/>
-[in]透明なイメージの色。 この色であるイメージの部分は透明になります。 デフォルト値はカラー マゼンタ RGB(255,0,255)です。
+*clrTransparent*<br/>
+から透明な画像の色。 この色の画像の部分は透明になります。 既定値は、色マゼンタ、RGB (255、0255) です。
 
 *hIcons*<br/>
-[in]既存のイメージ リストへのハンドル。
+から既存のイメージリストを処理するハンドル。
 
 ### <a name="return-value"></a>戻り値
 
-最初のメソッドオーバーロード構文では、このメソッドが成功した場合は TRUE。それ以外の場合は FALSE。
+最初のメソッドオーバーロード構文では、このメソッドが成功した場合は TRUE になります。それ以外の場合は FALSE。
 
 ### <a name="remarks"></a>解説
 
-プロパティ シートが Microsoft Outlook のスタイルの場合、フレームワークは、プロパティ シートの左側に、Outlook ペイン コントロールと呼ばれるナビゲーション ボタンの一覧を表示します。 このメソッドは、Outlook ペイン コントロールで使用するイメージ リストを設定するために使います。
+プロパティシートが Microsoft Outlook のスタイルになっている場合、プロパティシートの左側に、Outlook ペインコントロールと呼ばれるナビゲーションボタンの一覧が表示されます。 このメソッドを使用して、Outlook ウィンドウコントロールによって使用されるイメージリストを設定します。
 
-このメソッドをサポートするメソッドの詳細については[、「CImageList::作成](../../mfc/reference/cimagelist-class.md#create)と[CImageList::Add](../../mfc/reference/cimagelist-class.md#add)」を参照してください。 プロパティ シートのスタイルを設定する方法の詳細については[、「CMFC プロパティ シート::SetLook](#setlook)」を参照してください。
+このメソッドをサポートするメソッドの詳細については、「 [cimagelist:: Create](../../mfc/reference/cimagelist-class.md#create) 」と「 [Cimagelist:: Add](../../mfc/reference/cimagelist-class.md#add)」を参照してください。 プロパティシートのスタイルを設定する方法の詳細については、「 [cmfcpropertysheet:: SetLook](#setlook)」を参照してください。
 
-## <a name="cmfcpropertysheetsetlook"></a><a name="setlook"></a>プロパティシート::セットルック
+## <a name="cmfcpropertysheetsetlook"></a><a name="setlook"></a> CMFCPropertySheet プロパティ:: SetLook
 
 プロパティ シートの外観を指定します。
 
@@ -497,28 +498,28 @@ void SetLook(
 ### <a name="parameters"></a>パラメーター
 
 *ほら*<br/>
-[in]プロパティ シートの外観を指定する列挙値の 1 つ。 プロパティ シートの既定のスタイルは`CMFCPropertySheet::PropSheetLook_Tabs`です。 詳細については、このトピックの「解説」の表を参照してください。
+からプロパティシートの外観を指定する列挙値の1つ。 プロパティシートの既定のスタイルは `CMFCPropertySheet::PropSheetLook_Tabs` です。 詳細については、このトピックの「解説」の表を参照してください。
 
-*ナブコントロール幅*<br/>
-[in]ナビゲーション コントロールの幅 (ピクセル単位)。 既定値は 100 です。
+*nNavControlWidth*<br/>
+からナビゲーションコントロールの幅 (ピクセル単位)。 既定値は 100 です。
 
 ### <a name="remarks"></a>解説
 
-既定以外のスタイルでプロパティ シートを表示するには、プロパティ シート ウィンドウを作成する前に、このメソッドを呼び出します。
+既定以外のスタイルでプロパティシートを表示するには、プロパティシートウィンドウを作成する前にこのメソッドを呼び出します。
 
-次の表は *、look*パラメーターで指定できる列挙値の一覧です。
+次の表に、 *look* パラメーターで指定できる列挙値の一覧を示します。
 
 |値|説明|
 |-----------|-----------------|
-|`CMFCPropertySheet::PropSheetLook_Tabs`|(デフォルト)各プロパティ ページのタブを表示します。 タブはプロパティ シートの上部に表示され、1 行に収まるよりも多くのタブがある場合は積み重ねられます。|
-|`CMFCPropertySheet::PropSheetLook_OutlookBar`|ナビゲーション ボタンの一覧を、Outlook バーのスタイルで、プロパティ シートの左側に表示します。 リストの各ボタンは、プロパティ ページに対応しています。 リストの表示領域に収まるボタン数より多くのボタンがある場合、フレームワークはスクロール矢印を表示します。|
-|`CMFCPropertySheet::PropSheetLook_Tree`|プロパティ シートの左側にツリー コントロールを表示します。 ツリー コントロールの親ノードまたは子ノードは、それぞれプロパティ ページに対応します。 ツリー コントロールの表示領域に収まる数を超えるノードがある場合、フレームワークはスクロール矢印を表示します。|
-|`CMFCPropertySheet::PropSheetLook_OneNoteTabs`|各プロパティ ページのスタイルで、タブを表示します。 フレームワークは、プロパティ シートの上部にタブを表示し、1 行に収まるタブ数よりも多い場合はスクロール矢印を表示します。|
-|`CMFCPropertySheet::PropSheetLook_List`|プロパティ シートの左側にリストを表示します。 各リスト項目は、プロパティ ページに対応します。 リストの表示領域に収まるよりも多くのリスト項目がある場合、フレームワークはスクロール矢印を表示します。|
+|`CMFCPropertySheet::PropSheetLook_Tabs`|標準各プロパティページのタブを表示します。 タブは、プロパティシートの上部に表示され、1つの行に収まりきらないタブがある場合は積み重ねられます。|
+|`CMFCPropertySheet::PropSheetLook_OutlookBar`|プロパティシートの左側にある、Microsoft Outlook バーのスタイルで、ナビゲーションボタンの一覧を表示します。 リスト内の各ボタンは、プロパティページに対応しています。 リストに表示されている領域に収まりきらないボタンが他にある場合、フレームワークはスクロール矢印を表示します。|
+|`CMFCPropertySheet::PropSheetLook_Tree`|プロパティシートの左側にツリーコントロールを表示します。 ツリーコントロールの各親ノードまたは子ノードは、プロパティページに対応しています。 ツリーコントロールの表示領域に収まりきらないノードがある場合、フレームワークはスクロール矢印を表示します。|
+|`CMFCPropertySheet::PropSheetLook_OneNoteTabs`|各プロパティページについて、Microsoft OneNote のスタイルでタブを表示します。 フレームワークでは、プロパティシートの上部にタブが表示され、1行に収まりきらないタブがある場合はスクロール矢印が表示されます。|
+|`CMFCPropertySheet::PropSheetLook_List`|プロパティシートの左側に一覧が表示されます。 各リスト項目は、プロパティページに対応しています。 リストの表示領域に表示される項目よりも多くのリスト項目がある場合、フレームワークはスクロール矢印を表示します。|
 
 ## <a name="see-also"></a>関連項目
 
-[階層グラフ](../../mfc/hierarchy-chart.md)<br/>
-[クラス](../../mfc/reference/mfc-classes.md)<br/>
+[階層図](../../mfc/hierarchy-chart.md)<br/>
+[Classes](../../mfc/reference/mfc-classes.md)<br/>
 [CMFCPropertyPage クラス](../../mfc/reference/cmfcpropertypage-class.md)<br/>
-[クラス](../../mfc/reference/cmfcoutlookbar-class.md)
+[CMFCOutlookBar クラス](../../mfc/reference/cmfcoutlookbar-class.md)

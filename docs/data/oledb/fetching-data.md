@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: データのフェッチ'
 title: データのフェッチ
 ms.date: 10/19/2018
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - fetching
 - OLE DB consumer templates [C++], fetching data
 ms.assetid: b07f747f-9855-4f27-a03d-b1d5b10fa284
-ms.openlocfilehash: 919eb059f5d3f29d491bf7a6598b0c77163bd783
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 4d98a3d804688447f8f7073d20371a098b2bfa11
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87184645"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97287529"
 ---
 # <a name="fetching-data"></a>データのフェッチ
 
@@ -20,9 +21,9 @@ ms.locfileid: "87184645"
 
 ## <a name="to-fetch-data"></a>データをフェッチするには
 
-1. 適切な**open**コマンドを使用して、行セットを開きます。
+1. 適切な **open** コマンドを使用して、行セットを開きます。
 
-1. を使用している場合は `CManualAccessor` 、出力列をバインドします (まだ作成していない場合)。 次の例は、 [DBViewer](https://github.com/Microsoft/VCSamples/tree/master/VC2008Samples/ATL/OLEDB/Consumer/dbviewer)サンプルから抜粋したものです。 列をバインドするには、を呼び出し、 `GetColumnInfo` 次の例に示すように、バインディングを使用してアクセサーを作成します。
+1. を使用している場合は `CManualAccessor` 、出力列をバインドします (まだ作成していない場合)。 次の例は、 [DBViewer](https://github.com/Microsoft/VCSamples/tree/master/VC2008Samples/ATL/OLEDB/Consumer/dbviewer) サンプルから抜粋したものです。 列をバインドするには、を呼び出し、 `GetColumnInfo` 次の例に示すように、バインディングを使用してアクセサーを作成します。
 
     ```cpp
     // From the DBViewer Sample CDBTreeView::OnQueryEdit

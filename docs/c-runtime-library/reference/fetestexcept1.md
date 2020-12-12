@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「fetestexcept」を参照してください。
 title: fetestexcept
 ms.date: 04/05/2018
 api_name:
@@ -25,12 +26,12 @@ f1_keywords:
 helpviewer_keywords:
 - fetestexept function
 ms.assetid: ca4dc43f-5573-440d-bc19-ead7571b13dc
-ms.openlocfilehash: e70ae1b74420b8186cccd8fc8a817423df618adf
-ms.sourcegitcommit: ba4180a2d79d7e391f2f705797505d4aedbc2a5e
+ms.openlocfilehash: 8a62ae33f2965916bd16e2e854555bf22d87a0cd
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/03/2020
-ms.locfileid: "76972155"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97289388"
 ---
 # <a name="fetestexcept"></a>fetestexcept
 
@@ -53,9 +54,9 @@ int fetestexcept(
 
 成功時には、現在設定されている例外状態フラグに対応する浮動小数点例外処理マクロのビット演算 OR を含むビットマスクを返します。 例外が設定されていない場合は、0 を返します。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
-fetestexcept 関数は、浮動小数点演算で発生した例外を確認するために使用します。 *Removed*パラメーターを使用して、テストする例外状態フラグを指定します。 **Fetestexcept**関数は、 *removed*内の \<fenv.h> > で定義されている次の例外マクロを使用し、戻り値を返します。
+fetestexcept 関数は、浮動小数点演算で発生した例外を確認するために使用します。 *Removed* パラメーターを使用して、テストする例外状態フラグを指定します。 **Fetestexcept** 関数は、removed ので定義されている次の例外マクロ \<fenv.h> と戻り値を使用します。
 
 |例外処理マクロ|説明|
 |---------------------|-----------------|
@@ -66,13 +67,13 @@ fetestexcept 関数は、浮動小数点演算で発生した例外を確認す�
 |FE_UNDERFLOW|前の浮動小数点演算結果は小さすぎて最大有効桁数で表現できませんでした。|
 |FE_ALL_EXCEPT|すべてのサポートされる浮動小数点例外のビット演算 OR。|
 
-指定された*removed*引数は、0、サポートされている浮動小数点例外マクロの1つ、または2つ以上のマクロのビットごとの or の場合があります。 他の*removed*引数値の効果は未定義です。
+指定された *removed* 引数は、0、サポートされている浮動小数点例外マクロの1つ、または2つ以上のマクロのビットごとの or の場合があります。 他の *removed* 引数値の効果は未定義です。
 
 この関数を使用するには、呼び出しの前に `#pragma fenv_access(on)` ディレクティブを使用してアクセスを妨げる可能性のある浮動小数点の最適化をオフにする必要があります。 詳細については、「 [fenv_access](../../preprocessor/fenv-access.md)」を参照してください。
 
 ## <a name="requirements"></a>要件
 
-|関数|C ヘッダー|C++ ヘッダー|
+|機能|C ヘッダー|C++ ヘッダー|
 |--------------|--------------|------------------|
 |**fetestexcept**|\<fenv.h>|\<cfenv>|
 
@@ -80,6 +81,6 @@ fetestexcept 関数は、浮動小数点演算で発生した例外を確認す�
 
 ## <a name="see-also"></a>関連項目
 
-[関数リファレンス (アルファベット順)](crt-alphabetical-function-reference.md)<br/>
+[アルファベット順の関数リファレンス](crt-alphabetical-function-reference.md)<br/>
 [feclearexcept](feclearexcept1.md)<br/>
 [feraiseexcept](feraiseexcept.md)<br/>

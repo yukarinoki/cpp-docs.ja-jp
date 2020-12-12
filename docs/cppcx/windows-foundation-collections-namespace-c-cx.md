@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: Windows:: Foundation:: Collections 名前空間 (C++/CX)'
 title: Windows::Foundation::Collections 名前空間 (C++/CX)
 ms.date: 12/30/2016
 f1_keywords:
@@ -6,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - Windows::Foundation::Collections Namespace (C++/CX)
 ms.assetid: 04bd3543-e30f-4fd2-95ee-272a3fcd0158
-ms.openlocfilehash: 9a8118886f4556343f2e4a494fdbea6d240d1c77
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 74086268215c83f1cf4bd9bca8b60923bfcc6725
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62404612"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97288010"
 ---
 # <a name="windowsfoundationcollections-namespace-ccx"></a>Windows::Foundation::Collections 名前空間 (C++/CX)
 
-C++/CX では、Vector、VectorView、マップ、および MapView コレクション クラスを使用して単純化する関数を持つ:foundation 名前空間を補足します。
+C++/CX は、Vector、VectorView、Map、および MapView コレクションクラスの使用を簡略化する関数を使用して、Windows:: Foundation:: Collections 名前空間を補完します。
 
 ## <a name="syntax"></a>構文
 
@@ -37,8 +38,8 @@ namespace Windows {
 |[end 関数](../cppcx/end-function.md)|コレクションの末尾を越えて指す反復子を返します。|
 |[to_vector 関数](../cppcx/to-vector-function.md)|コレクションを std::vector として返します。|
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 **ヘッダー:** collection.h
 
-**名前空間:**:Foundation
+**名前空間:** Windows::Foundation::Collections

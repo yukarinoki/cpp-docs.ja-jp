@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: CMFCRibbonBar クラス'
 title: CMFCRibbonBar クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -188,12 +189,12 @@ helpviewer_keywords:
 - CMFCRibbonBar [MFC], ToggleMimimizeState
 - CMFCRibbonBar [MFC], TranslateChar
 ms.assetid: a65d06fa-1a28-4cc0-8971-bc9d7c9198fe
-ms.openlocfilehash: 26f130206a84c81120dce090ce65971f01a2dade
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 3a572a3615703abfda99b5ff61796175adfa4484
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88836648"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97289713"
 ---
 # <a name="cmfcribbonbar-class"></a>CMFCRibbonBar クラス
 
@@ -335,7 +336,7 @@ Microsoft は、Microsoft Office 2007 のリリースと同時に Office Fluent 
 
 [CMFCRibbonBar](../../mfc/reference/cmfcribbonbar-class.md)
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー :** afxribbonbar.h
 
@@ -354,7 +355,7 @@ BOOL ActivateContextCategory(UINT uiContextID);
 
 ### <a name="return-value"></a>戻り値
 
-*Uicontextid*を持つコンテキストカテゴリが見つかり、アクティブ化されている場合は TRUE。それ以外の場合は FALSE。
+*Uicontextid* を持つコンテキストカテゴリが見つかり、アクティブ化されている場合は TRUE。それ以外の場合は FALSE。
 
 ## <a name="cmfcribbonbaraddcategory"></a><a name="addcategory"></a> CMFCRibbonBar:: AddCategory
 
@@ -402,7 +403,7 @@ CMFCRibbonCategory* AddCategory(
 
 ### <a name="remarks"></a>解説
 
-*PRTI*パラメーターが NULL でない場合、新しいリボンカテゴリはランタイムクラスを使用して動的に作成されます。
+*PRTI* パラメーターが NULL でない場合、新しいリボンカテゴリはランタイムクラスを使用して動的に作成されます。
 
 ### <a name="example"></a>例
 
@@ -747,7 +748,7 @@ void EnableKeyTips(BOOL bEnable = TRUE);
 
 ## <a name="cmfcribbonbarenableprintpreview"></a><a name="enableprintpreview"></a> CMFCRibbonBar:: EnablePrintPreview
 
-**印刷プレビュー**機能を有効または無効にします。
+**印刷プレビュー** 機能を有効または無効にします。
 
 ```cpp
 void EnablePrintPreview(BOOL bEnable = TRUE);
@@ -760,7 +761,7 @@ void EnablePrintPreview(BOOL bEnable = TRUE);
 
 ### <a name="remarks"></a>解説
 
-*Benable*が FALSE で印刷プレビューカテゴリが存在する場合は、削除されます。
+*Benable* が FALSE で印刷プレビューカテゴリが存在する場合は、削除されます。
 
 既定では、 **印刷プレビュー** 機能が有効になっています。
 
@@ -784,7 +785,7 @@ void EnableToolTips(
 
 ### <a name="remarks"></a>解説
 
-*Benable*パラメーターは、マウスをリボン要素の上に置いたときにツールヒントを表示するかどうかを決定します。 *BEnableDescr*パラメーターは、ツールヒントのテキストと共に追加の説明テキストを表示するかどうかを決定します。
+*Benable* パラメーターは、マウスをリボン要素の上に置いたときにツールヒントを表示するかどうかを決定します。 *BEnableDescr* パラメーターは、ツールヒントのテキストと共に追加の説明テキストを表示するかどうかを決定します。
 
 ## <a name="cmfcribbonbarfindbydata"></a><a name="findbydata"></a> CMFCRibbonBar:: FindByData
 
@@ -975,7 +976,7 @@ int GetCategoryIndex(CMFCRibbonCategory* pCategory) const;
 
 ### <a name="return-value"></a>戻り値
 
-*Pcategory*によって指定されたリボンカテゴリの0から始まるインデックス。または、リボンカテゴリが見つからない場合は-1 になります。
+*Pcategory* によって指定されたリボンカテゴリの0から始まるインデックス。または、リボンカテゴリが見つからない場合は-1 になります。
 
 ## <a name="cmfcribbonbargetcontextname"></a><a name="getcontextname"></a> CMFCRibbonBar:: GetContextName
 
@@ -1320,7 +1321,7 @@ virtual CMFCRibbonBaseElement* HitTest(
 
 ### <a name="remarks"></a>解説
 
-*BCheckActiveCategory*パラメーターが TRUE の場合を除き、リボンパネルにポイントがあるキャプションはテストされません。
+*BCheckActiveCategory* パラメーターが TRUE の場合を除き、リボンパネルにポイントがあるキャプションはテストされません。
 
 ## <a name="cmfcribbonbariskeytipenabled"></a><a name="iskeytipenabled"></a> CMFCRibbonBar:: Iskey Enabled
 
@@ -1352,7 +1353,7 @@ virtual BOOL IsMainRibbonBar() const;
 
 ## <a name="cmfcribbonbarisprintpreviewenabled"></a><a name="isprintpreviewenabled"></a> CMFCRibbonBar:: IsPrintPreviewEnabled
 
-**印刷プレビュー**機能が有効かどうかを示します。
+**印刷プレビュー** 機能が有効かどうかを示します。
 
 ```
 BOOL IsPrintPreviewEnabled() const;
@@ -1360,7 +1361,7 @@ BOOL IsPrintPreviewEnabled() const;
 
 ### <a name="return-value"></a>戻り値
 
-**印刷プレビュー**機能が有効な場合は TRUE。それ以外の場合は FALSE。
+**印刷プレビュー** 機能が有効な場合は TRUE。それ以外の場合は FALSE。
 
 ## <a name="cmfcribbonbarisqatempty"></a><a name="isqatempty"></a> CMFCRibbonBar:: IsQATEmpty
 
@@ -1743,7 +1744,7 @@ BOOL SetActiveCategory(
 
 メインのリボンカテゴリをアクティブカテゴリにすることはできません。
 
-*Pcategory*によって指定されたカテゴリが表示されない場合は、アクティブなカテゴリとして設定することはできません。
+*Pcategory* によって指定されたカテゴリが表示されない場合は、アクティブなカテゴリとして設定することはできません。
 
 ## <a name="cmfcribbonbarsetactivemdichild"></a><a name="setactivemdichild"></a> CMFCRibbonBar:: SetActiveMDIChild
 
@@ -1896,7 +1897,7 @@ void SetQuickAccessDefaultState(const CMFCRibbonQuickAccessToolBarDefaultState& 
 
 ### <a name="parameters"></a>パラメーター
 
-*状態*<br/>
+*state*<br/>
 からクイックアクセスツールバーの既定の状態。
 
 ### <a name="remarks"></a>解説
@@ -2075,10 +2076,10 @@ virtual BOOL LoadFromResource(
 リボンバー情報を含む XML 文字列のリソース ID を指定します。
 
 *lpszResType*<br/>
-*UiXMLResID*にあるリソースの種類を指定します。
+*UiXMLResID* にあるリソースの種類を指定します。
 
 *hInstance*<br/>
-実行可能ファイルにリソースが含まれているモジュールへのハンドル。 *HInstance*が NULL の場合、システムは、現在のプロセスの作成に使用されたモジュールからリソースを読み込みます。
+実行可能ファイルにリソースが含まれているモジュールへのハンドル。 *HInstance* が NULL の場合、システムは、現在のプロセスの作成に使用されたモジュールからリソースを読み込みます。
 
 *lpszXMLResID*<br/>
 リソース ID (文字列形式) をリボンバー情報と共に指定します。
@@ -2150,7 +2151,7 @@ TRUE リボンのレイアウトを再計算します。それ以外の場合は
 ## <a name="see-also"></a>関連項目
 
 [階層図](../../mfc/hierarchy-chart.md)<br/>
-[クラス](../../mfc/reference/mfc-classes.md)<br/>
+[Classes](../../mfc/reference/mfc-classes.md)<br/>
 [CPane クラス](../../mfc/reference/cpane-class.md)<br/>
 [CMFCRibbonCategory クラス](../../mfc/reference/cmfcribboncategory-class.md)<br/>
 [CMFCRibbonPanel クラス](../../mfc/reference/cmfcribbonpanel-class.md)<br/>

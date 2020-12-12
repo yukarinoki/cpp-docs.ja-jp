@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「組み込み関数」を参照してください。
 title: 組み込み関数
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -10,16 +11,16 @@ f1_keywords:
 - _Nullterm_length_
 - _Inexpressible_
 ms.assetid: adf29f8c-89fd-4a5e-9804-35ac83e1c457
-ms.openlocfilehash: d1a7bae43a6fcd875f2e713695969f0d88b0dfe5
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 6d193052520203e3716e72f8c60031ab55f63c6d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91504171"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97288595"
 ---
 # <a name="intrinsic-functions"></a>組み込み関数
 
-SAL の式は、C/c + + 式にすることができます。これは、副作用のない式 (+ +、--,、関数の呼び出しすべてにこのコンテキストで副作用があることを示します)。  ただし、SAL には、関数に似たオブジェクトや、SAL 式で使用できる予約済みのシンボルがいくつか用意されています。 これらは *組み込み関数*と呼ばれます。
+SAL の式は、C/c + + 式にすることができます。これは、副作用のない式 (+ +、--,、関数の呼び出しすべてにこのコンテキストで副作用があることを示します)。  ただし、SAL には、関数に似たオブジェクトや、SAL 式で使用できる予約済みのシンボルがいくつか用意されています。 これらは *組み込み関数* と呼ばれます。
 
 ## <a name="general-purpose"></a>General Purpose
 

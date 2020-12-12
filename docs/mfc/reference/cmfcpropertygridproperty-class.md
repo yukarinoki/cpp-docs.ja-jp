@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: CMFCPropertyGridProperty クラス'
 title: CMFCPropertyGridProperty クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -166,12 +167,12 @@ helpviewer_keywords:
 - CMFCPropertyGridProperty [MFC], m_strFormatLong
 - CMFCPropertyGridProperty [MFC], m_strFormatShort
 ms.assetid: 36f3fabe-0efe-468b-8a0b-5a7956db38a2
-ms.openlocfilehash: cabff68a356bfa2d91d7c8db9c806e8a9f013705
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: 7893d58933f9f13744a42b14fd6fa7c47bec56c2
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88562663"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97289908"
 ---
 # <a name="cmfcpropertygridproperty-class"></a>CMFCPropertyGridProperty クラス
 
@@ -269,7 +270,7 @@ class CMFCPropertyGridProperty : public CObject
 
 ### <a name="protected-methods"></a>プロテクト メソッド
 
-|Name|説明|
+|名前|説明|
 |----------|-----------------|
 |[CMFCPropertyGridProperty:: CreateCombo](#createcombo)|コンボボックスをプロパティに追加するために、フレームワークによって呼び出されます。|
 |[CMFCPropertyGridProperty:: HasButton](#hasbutton)|プロパティにボタンが格納されているかどうかを示します。|
@@ -282,7 +283,7 @@ class CMFCPropertyGridProperty : public CObject
 
 ### <a name="data-members"></a>データ メンバー
 
-|Name|説明|
+|名前|説明|
 |----------|-----------------|
 |[CMFCPropertyGridProperty::m_strFormatDouble](#m_strformatdouble)|Double 型の値の書式文字列。|
 |[CMFCPropertyGridProperty::m_strFormatFloat](#m_strformatfloat)|Float 型の値の書式設定文字列。|
@@ -307,7 +308,7 @@ class CMFCPropertyGridProperty : public CObject
 
 [CMFCPropertyGridProperty](../../mfc/reference/cmfcpropertygridproperty-class.md)
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** afxpropertygridctrl
 
@@ -394,7 +395,7 @@ virtual void AdjustInPlaceEditRect(
 
 ### <a name="remarks"></a>解説
 
-プロパティの [値] 領域は、テキストボックスと、場合によってはスピンボタンコントロールなどの *オプションボタン*で構成されます。 このメソッドは、テキストボックスとオプションボタンのサイズを計算し、指定されたパラメーターの値を返します。
+プロパティの [値] 領域は、テキストボックスと、場合によってはスピンボタンコントロールなどの *オプションボタン* で構成されます。 このメソッドは、テキストボックスとオプションボタンのサイズを計算し、指定されたパラメーターの値を返します。
 
 ## <a name="cmfcpropertygridpropertyallowedit"></a><a name="allowedit"></a> CMFCPropertyGridProperty:: AllowEdit
 
@@ -434,7 +435,7 @@ CMFCPropertyGridProperty(
 ### <a name="parameters"></a>パラメーター
 
 *strGroupName*<br/>
-からグループ名。 *グループ*は、プロパティグリッドコントロールの関連プロパティのコレクションです。 コントロールが階層的に表示されている場合は、グループの上の行にカテゴリタイトルとして *グループ名* が表示されます。
+からグループ名。 *グループ* は、プロパティグリッドコントロールの関連プロパティのコレクションです。 コントロールが階層的に表示されている場合は、グループの上の行にカテゴリタイトルとして *グループ名* が表示されます。
 
 *dwData*<br/>
 から整数や、プロパティに関連付けられている他のデータへのポインターなど、アプリケーション固有のデータ。 既定値は 0 です。
@@ -510,9 +511,9 @@ virtual CWnd* CreateInPlaceEdit(
 
 ### <a name="remarks"></a>解説
 
-このメソッドは、 [Cmfcpropertygridproperty](../../mfc/reference/cmfcpropertygridproperty-class.md)クラスのコンストラクターで指定されている*varvalue*、 *lpszeditmask*、 *Lpszeditmask*、および*lpszeditmask*の各パラメーターの値を使用します。 既定では、このメソッドは *Varvalue* バリアント型をサポートしています。 これには、VT_BSTR、VT_R4、VT_R8、VT_UI1、VT_I2、VT_INT、VT_UINT、VT_I4、VT_UI2、VT_UI4、VT_BOOL が含まれます。
+このメソッドは、 [Cmfcpropertygridproperty](../../mfc/reference/cmfcpropertygridproperty-class.md)クラスのコンストラクターで指定されている *varvalue*、 *lpszeditmask*、 *Lpszeditmask*、および *lpszeditmask* の各パラメーターの値を使用します。 既定では、このメソッドは *Varvalue* バリアント型をサポートしています。 これには、VT_BSTR、VT_R4、VT_R8、VT_UI1、VT_I2、VT_INT、VT_UINT、VT_I4、VT_UI2、VT_UI4、VT_BOOL が含まれます。
 
-このメソッドは、1つ以上の*Lpszeditmask*パラメーター、 *lpszeditmask*パラメーター、または*lpszeditmask*パラメーターが指定されている場合に、 [CMFCMaskedEdit](../../mfc/reference/cmfcmaskededit-class.md)コントロールを作成します。それ以外の場合は、 [CEdit](../../mfc/reference/cedit-class.md)コントロールを作成します。
+このメソッドは、1つ以上の *Lpszeditmask* パラメーター、 *lpszeditmask* パラメーター、または *lpszeditmask* パラメーターが指定されている場合に、 [CMFCMaskedEdit](../../mfc/reference/cmfcmaskededit-class.md)コントロールを作成します。それ以外の場合は、 [CEdit](../../mfc/reference/cedit-class.md)コントロールを作成します。
 
 ## <a name="cmfcpropertygridpropertycreatespincontrol"></a><a name="createspincontrol"></a> CMFCPropertyGridProperty:: Creatをコントロールします。
 
@@ -576,7 +577,7 @@ void EnableSpinControl(
 
 プロパティが編集されようとすると、フレームワークによってスピンボタンコントロールが自動的に作成されます。
 
-[Cmfcpropertygridproperty:: cmfcpropertygridproperty](#cmfcpropertygridproperty)コンストラクターの*varvalue*パラメーターによって指定されるプロパティの型は、サポートされている variant 型である必要があります。 それ以外の場合、このメソッドはデバッグモードでアサートします。 サポートされている種類には、VT_INT、VT_UINT、VT_I2、VT_I4、VT_UI2、および VT_UI4 があります。
+[Cmfcpropertygridproperty:: cmfcpropertygridproperty](#cmfcpropertygridproperty)コンストラクターの *varvalue* パラメーターによって指定されるプロパティの型は、サポートされている variant 型である必要があります。 それ以外の場合、このメソッドはデバッグモードでアサートします。 サポートされている種類には、VT_INT、VT_UINT、VT_I2、VT_I4、VT_UI2、および VT_UI4 があります。
 
 ## <a name="cmfcpropertygridpropertyexpand"></a><a name="expand"></a> CMFCPropertyGridProperty:: Expand
 
@@ -800,7 +801,7 @@ CMFCPropertyGridProperty* GetSubItem(int nIndex) const;
 
 このプロパティの子項目であるプロパティオブジェクトへのポインター。
 
-- または -
+または
 
 リテールモードでは、 *nIndex* パラメーターが無効な場合は NULL になります。 デバッグモードでは、このメソッドはをアサートします。
 
@@ -975,7 +976,7 @@ BOOL IsGroup() const;
 
 ### <a name="remarks"></a>解説
 
-*グループ*は、プロパティグリッドコントロールの関連プロパティのコレクションです。 コントロールが階層的に表示されている場合は、グループの上の行にカテゴリタイトルとして *グループ名* が表示されます。
+*グループ* は、プロパティグリッドコントロールの関連プロパティのコレクションです。 コントロールが階層的に表示されている場合は、グループの上の行にカテゴリタイトルとして *グループ名* が表示されます。
 
 ## <a name="cmfcpropertygridpropertyisinplaceediting"></a><a name="isinplaceediting"></a> CMFCPropertyGridProperty:: IsInPlaceEditing
 
@@ -1710,5 +1711,5 @@ void Show(
 ## <a name="see-also"></a>関連項目
 
 [階層図](../../mfc/hierarchy-chart.md)<br/>
-[クラス](../../mfc/reference/mfc-classes.md)<br/>
+[Classes](../../mfc/reference/mfc-classes.md)<br/>
 [CMFCPropertyGridCtrl クラス](../../mfc/reference/cmfcpropertygridctrl-class.md)

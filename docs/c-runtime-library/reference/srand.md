@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: srand'
 title: srand
 ms.date: 4/2/2020
 api_name:
@@ -34,16 +35,16 @@ helpviewer_keywords:
 - pseudorandom numbers
 - starting points, setting random
 - starting points
-ms.openlocfilehash: 3f6f97ad9a3bd0d7e4e88ad1797d369f012bbe5e
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: bea91841b549fae09faa4345767fc22cf4d6208e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82913592"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97292171"
 ---
 # <a name="srand"></a>srand
 
-**Rand**関数によって使用される擬似乱数ジェネレーターの開始シード値を設定します。
+**Rand** 関数によって使用される擬似乱数ジェネレーターの開始シード値を設定します。
 
 ## <a name="syntax"></a>構文
 
@@ -60,13 +61,13 @@ void srand(
 
 ## <a name="remarks"></a>解説
 
-**Srand**関数は、現在のスレッドで一連の擬似乱数を生成するための開始点を設定します。 ジェネレーターを再初期化して同じ結果シーケンスを作成するには、 **srand**関数を呼び出し、同じ*シード*引数を再度使用します。 *シード*のその他の値は、擬似乱数シーケンスの異なる開始位置にジェネレーターを設定します。 **rand**は、生成される擬似乱数を取得します。 **Srand**の呼び出しの前に**rand**を呼び出すと、*シード*が1として渡された**srand**を呼び出す場合と同じシーケンスが生成されます。
+**Srand** 関数は、現在のスレッドで一連の擬似乱数を生成するための開始点を設定します。 ジェネレーターを再初期化して同じ結果シーケンスを作成するには、 **srand** 関数を呼び出し、同じ *シード* 引数を再度使用します。 *シード* のその他の値は、擬似乱数シーケンスの異なる開始位置にジェネレーターを設定します。 **rand** は、生成される擬似乱数を取得します。 **Srand** の呼び出しの前に **rand** を呼び出すと、*シード* が1として渡された **srand** を呼び出す場合と同じシーケンスが生成されます。
 
 既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**srand**|\<stdlib.h>|
 
@@ -78,5 +79,5 @@ void srand(
 
 ## <a name="see-also"></a>関連項目
 
-[浮動小数点サポート](../../c-runtime-library/floating-point-support.md)<br/>
+[浮動小数点のサポート](../../c-runtime-library/floating-point-support.md)<br/>
 [rand](rand.md)<br/>

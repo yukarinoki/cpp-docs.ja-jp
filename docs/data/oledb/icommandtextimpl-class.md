@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: ICommandTextImpl クラス'
 title: ICommandTextImpl クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -22,12 +23,12 @@ helpviewer_keywords:
 - m_strCommandText
 - SetCommandText method
 ms.assetid: 9c2715cc-1e55-4468-8327-85341617ed46
-ms.openlocfilehash: 7d31933b162a74db31bdd3c65dc68e396a3896c4
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 4b48b9f8f2ee535a648681064cc6b1083c76e489
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91501723"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97287373"
 ---
 # <a name="icommandtextimpl-class"></a>ICommandTextImpl クラス
 
@@ -46,7 +47,7 @@ class ATL_NO_VTABLE ICommandTextImpl
 *T*<br/>
 から派生したコマンドクラス `ICommandTextImpl` 。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** altdb .h
 
@@ -65,7 +66,7 @@ class ATL_NO_VTABLE ICommandTextImpl
 |-|-|
 |[m_strCommandText](#strcommandtext)|コマンドテキストを格納します。|
 
-## <a name="remarks"></a>注釈
+## <a name="remarks"></a>解説
 
 コマンドの必須のインターフェイスです。
 
@@ -82,7 +83,7 @@ STDMETHOD(GetCommandText)(GUID * pguidDialect,
 
 #### <a name="parameters"></a>パラメーター
 
-*OLE DB プログラマーリファレンス*の「 [ICommandText:: getcommandtext](/previous-versions/windows/desktop/ms709825(v=vs.85)) 」を参照してください。 既定では、 *Pguiddialect* パラメーターは無視されます。
+*OLE DB プログラマーリファレンス* の「 [ICommandText:: getcommandtext](/previous-versions/windows/desktop/ms709825(v=vs.85)) 」を参照してください。 既定では、 *Pguiddialect* パラメーターは無視されます。
 
 ## <a name="icommandtextimplsetcommandtext"></a><a name="setcommandtext"></a> ICommandTextImpl:: SetCommandText
 
@@ -97,7 +98,7 @@ STDMETHOD(SetCommandText)(REFGUID rguidDialect,
 
 #### <a name="parameters"></a>パラメーター
 
-*OLE DB プログラマーリファレンス*の「 [ICommandText:: setcommandtext](/previous-versions/windows/desktop/ms709757(v=vs.85)) 」を参照してください。
+*OLE DB プログラマーリファレンス* の「 [ICommandText:: setcommandtext](/previous-versions/windows/desktop/ms709757(v=vs.85)) 」を参照してください。
 
 ## <a name="icommandtextimplm_strcommandtext"></a><a name="strcommandtext"></a> ICommandTextImpl:: m_strCommandText
 

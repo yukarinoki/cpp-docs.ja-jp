@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「CObject コレクション内のすべてのオブジェクトの削除」を参照してください。
 title: CObject コレクションの全オブジェクトの削除
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -10,18 +11,18 @@ helpviewer_keywords:
 - objects in CObject collections
 - collection classes [MFC], shared objects
 ms.assetid: 81d2c1d5-a0a5-46e1-8ab9-82b45cf7afd2
-ms.openlocfilehash: 5aac324b6af50db019c2a4b55b26a612cc081894
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 674253d06925bdf29e5606692a73911878f6c393
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87225073"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97291013"
 ---
 # <a name="deleting-all-objects-in-a-cobject-collection"></a>CObject コレクションの全オブジェクトの削除
 
 この記事では、コレクションオブジェクト自体を削除せずに、コレクション内のすべてのオブジェクトを削除する方法について説明します。
 
-のコレクション (またはから派生したオブジェクト) 内のすべてのオブジェクトを削除するには、 `CObject` `CObject` 「[コレクションのすべてのメンバーにアクセス](accessing-all-members-of-a-collection.md)する」の記事で説明されているイテレーション手法のいずれかを使用して、各オブジェクトを順に削除します。
+のコレクション (またはから派生したオブジェクト) 内のすべてのオブジェクトを削除するには、 `CObject` `CObject` 「 [コレクションのすべてのメンバーにアクセス](accessing-all-members-of-a-collection.md) する」の記事で説明されているイテレーション手法のいずれかを使用して、各オブジェクトを順に削除します。
 
 > [!CAUTION]
 > コレクション内のオブジェクトは共有できます。 つまり、コレクションはオブジェクトへのポインターを保持しますが、プログラムの他の部分が同じオブジェクトへのポインターを持つ場合もあります。 オブジェクトを削除しないように注意する必要があります。この場合、すべての部分がオブジェクトの使用を終了するまで、そのオブジェクトが共有されます。
@@ -34,7 +35,7 @@ ms.locfileid: "87225073"
 
 - [マップ](#_core_to_delete_all_elements_in_a_map)
 
-#### <a name="to-delete-all-objects-in-a-list-of-pointers-to-cobject"></a><a name="_core_to_delete_all_objects_in_a_list_of_pointers_to_cobject"></a>CObject へのポインターのリストに含まれるすべてのオブジェクトを削除するには
+#### <a name="to-delete-all-objects-in-a-list-of-pointers-to-cobject"></a><a name="_core_to_delete_all_objects_in_a_list_of_pointers_to_cobject"></a> CObject へのポインターのリストに含まれるすべてのオブジェクトを削除するには
 
 1. およびを使用し `GetHeadPosition` `GetNext` て、リストを反復処理します。
 
@@ -50,7 +51,7 @@ ms.locfileid: "87225073"
 
 要素のオブジェクトを削除し、要素自体を削除することの違いに注意してください。 リストから要素を削除すると、そのリストのオブジェクトへの参照だけが削除されます。 オブジェクトはまだメモリに存在します。 オブジェクトを削除すると、そのオブジェクトは存在しなくなり、メモリが解放されます。 そのため、要素のオブジェクトが削除された直後に要素を削除し、リストが存在しないオブジェクトにアクセスしようとしないようにすることが重要です。
 
-#### <a name="to-delete-all-elements-in-an-array"></a><a name="_core_to_delete_all_elements_in_an_array"></a>配列内のすべての要素を削除するには
+#### <a name="to-delete-all-elements-in-an-array"></a><a name="_core_to_delete_all_elements_in_an_array"></a> 配列内のすべての要素を削除するには
 
 1. `GetSize`および整数のインデックス値を使用して、配列を反復処理します。
 
@@ -64,7 +65,7 @@ ms.locfileid: "87225073"
 
 上記のリストの例と同様に、を呼び出して、 `RemoveAll` 配列内のすべての要素を削除することも、個々の要素を削除することもでき `RemoveAt` ます。
 
-#### <a name="to-delete-all-elements-in-a-map"></a><a name="_core_to_delete_all_elements_in_a_map"></a>マップ内のすべての要素を削除するには
+#### <a name="to-delete-all-elements-in-a-map"></a><a name="_core_to_delete_all_elements_in_a_map"></a> マップ内のすべての要素を削除するには
 
 1. およびを使用し `GetStartPosition` `GetNextAssoc` て、配列を反復処理します。
 

@@ -1,27 +1,28 @@
 ---
+description: 詳細については、「リストコントロールでの作業領域の実装」を参照してください。
 title: リスト コントロールの作業領域の実装
 ms.date: 11/04/2016
 helpviewer_keywords:
 - list controls [MFC], working areas
 - working areas in list control [MFC]
 ms.assetid: fbbb356b-3359-4348-8603-f1cb114cadde
-ms.openlocfilehash: abbf9dd823e13fab252b7af8f32338b0d801079b
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 04eb935531dff0ac1ee240dec8690bd7ce1378a2
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84626381"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97290077"
 ---
 # <a name="implementing-working-areas-in-list-controls"></a>リスト コントロールの作業領域の実装
 
-既定では、リストコントロールはすべての項目を標準のグリッド形式で整列します。 ただし、リスト項目を四角形のグループに配置する別の方法 (作業領域) がサポートされています。 作業領域を実装するリストコントロールのイメージについては、「Windows SDK でのリストビューコントロールの使用」を参照してください。
+既定では、リストコントロールはすべての項目を標準のグリッド形式で整列します。 ただし、リスト項目を四角形のグループに配置する別の方法 (作業領域) がサポートされています。 作業領域を実装するリストコントロールのイメージについては、「Windows SDK での List-View コントロールの使用」を参照してください。
 
 > [!NOTE]
 > 作業領域は、リストコントロールがアイコンまたは小さいアイコンモードの場合にのみ表示されます。 ただし、ビューをレポートモードまたはリストモードに切り替えた場合、現在の作業領域は維持されます。
 
 作業領域を使用すると、アイテムの左側、上部、または右側に空の境界線を表示したり、通常とは異なり、水平スクロールバーが表示されるようにすることができます。 もう1つの一般的な使用方法は、アイテムを移動または削除できる複数の作業領域を作成することです。 この方法では、異なる意味を持つ領域を1つのビューで作成できます。 ユーザーは、別の領域に項目を配置することで、項目を分類できます。 この例として、読み取り/書き込みファイルの領域があり、読み取り専用ファイル用の別の領域を持つファイルシステムのビューがあります。 ファイル項目が読み取り専用領域に移動された場合、その項目は自動的に読み取り専用になります。 読み取り専用領域から読み取り/書き込み領域にファイルを移動すると、ファイルの読み取り/書き込みが実行されます。
 
-`CListCtrl`には、リストコントロール内の作業領域を作成および管理するためのメンバー関数がいくつか用意されています。 [Getworking areas](reference/clistctrl-class.md#getworkareas)と[setworking areas](reference/clistctrl-class.md#setworkareas) `CRect` は `RECT` 、リストコントロールの現在実装されている作業領域を格納するオブジェクト (または構造体) の配列を取得して設定します。 さらに、 [Getnumberofworking areas](reference/clistctrl-class.md#getnumberofworkareas)は、リストコントロールの現在の作業領域の数を取得します (既定ではゼロ)。
+`CListCtrl` には、リストコントロール内の作業領域を作成および管理するためのメンバー関数がいくつか用意されています。 [Getworking areas](reference/clistctrl-class.md#getworkareas) と [setworking areas](reference/clistctrl-class.md#setworkareas) `CRect` は `RECT` 、リストコントロールの現在実装されている作業領域を格納するオブジェクト (または構造体) の配列を取得して設定します。 さらに、 [Getnumberofworking areas](reference/clistctrl-class.md#getnumberofworkareas) は、リストコントロールの現在の作業領域の数を取得します (既定ではゼロ)。
 
 ## <a name="items-and-working-areas"></a>項目と作業領域
 
@@ -40,4 +41,4 @@ ms.locfileid: "84626381"
 ## <a name="see-also"></a>関連項目
 
 [CListCtrl の使い方](using-clistctrl.md)<br/>
-[制限](controls-mfc.md)
+[コントロール](controls-mfc.md)

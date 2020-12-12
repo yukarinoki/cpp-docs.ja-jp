@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: strcat、wcscat、_mbscat'
 title: strcat、wcscat、_mbscat
 ms.date: 11/04/2016
 api_name:
@@ -43,19 +44,19 @@ helpviewer_keywords:
 - appending strings
 - wcscat function
 ms.assetid: c89c4ef1-817a-44ff-a229-fe22d06ba78a
-ms.openlocfilehash: 973c54c18e941b29526cb3e9b1cadb98f6582c4a
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 12ec6f6e0e9f940ef72d0aec742137843238c534
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70958273"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97292157"
 ---
 # <a name="strcat-wcscat-_mbscat"></a>strcat、wcscat、_mbscat
 
 文字列を追加します。 これらの関数にはセキュリティが強化されたバージョンがあります、「[strcat_s、wcscat_s、_mbscat_s](strcat-s-wcscat-s-mbscat-s.md)」をご覧ください。
 
 > [!IMPORTANT]
-> **_mbscat_s**は、Windows ランタイムで実行されるアプリケーションでは使用できません。 詳細については、「[ユニバーサル Windows プラットフォーム アプリでサポートされていない CRT 関数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)」を参照してください。
+> **_mbscat_s** は、Windows ランタイムで実行されるアプリケーションでは使用できません。 詳細については、「[ユニバーサル Windows プラットフォーム アプリでサポートされていない CRT 関数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)」を参照してください。
 
 ## <a name="syntax"></a>構文
 
@@ -101,16 +102,16 @@ NULL で終わる元の文字列。
 
 これらの各関数は、変換先文字列 (*strdestination*) を返します。 エラーを示す戻り値は予約されていません。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-**Strcat**関数は、 *Strsource*を*strsource*に追加し、結果の文字列を null 文字で終了します。 *Strsource*の最初の文字は、 *strsource*の終端の null 文字を上書きします。 コピー元とコピー先の文字列が重なり合っている場合、 **strcat**の動作は未定義です。
+**Strcat** 関数は、 *Strsource* を *strsource* に追加し、結果の文字列を null 文字で終了します。 *Strsource* の最初の文字は、 *strsource* の終端の null 文字を上書きします。 コピー元とコピー先の文字列が重なり合っている場合、 **strcat** の動作は未定義です。
 
 > [!IMPORTANT]
-> **Strcat**は*strdestination*を追加する前に、 *strdestination*に十分な領域があるかどうかを確認しないため、バッファーオーバーランの可能性があります。 代わりに [strncat](strncat-strncat-l-wcsncat-wcsncat-l-mbsncat-mbsncat-l.md) の使用を検討してください。
+> **Strcat** は *strdestination* を追加する前に、 *strdestination* に十分な領域があるかどうかを確認しないため、バッファーオーバーランの可能性があります。 代わりに [strncat](strncat-strncat-l-wcsncat-wcsncat-l-mbsncat-mbsncat-l.md) の使用を検討してください。
 
-**wcscat**と **_mbscat**は、 **strcat**のワイド文字バージョンとマルチバイト文字バージョンです。 **Wcscat**の引数と戻り値はワイド文字列です。これらの **_mbscat**はマルチバイト文字列です。 それ以外では、これらの関数の動作は同じです。
+**wcscat** と **_mbscat** は、 **strcat** のワイド文字バージョンとマルチバイト文字バージョンです。 **Wcscat** の引数と戻り値はワイド文字列です。これらの **_mbscat** はマルチバイト文字列です。 それ以外では、これらの関数の動作は同じです。
 
-C++ では、これらの関数にテンプレートのオーバーロードがあります。このオーバーロードは、これらの関数に対応するセキュリティで保護された新しい関数を呼び出します。 詳細については、「 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)」を参照してください。
+C++ では、これらの関数にテンプレートのオーバーロードがあります。このオーバーロードは、これらの関数に対応するセキュリティで保護された新しい関数を呼び出します。 詳細については、「[セキュリティ保護されたテンプレート オーバーロード](../../c-runtime-library/secure-template-overloads.md)」を参照してください。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -126,7 +127,7 @@ C++ では、これらの関数にテンプレートのオーバーロードが�
 |**wcscat**|\<string.h> または \<wchar.h>|
 |**_mbscat**|\<mbstring.h>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
 ## <a name="example"></a>例
 

@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「コンパイラエラー C3800」を参照してください。
 title: コンパイラ エラー C3800
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,17 +7,17 @@ f1_keywords:
 helpviewer_keywords:
 - C3800
 ms.assetid: c653240a-b6db-4437-8d65-fa58f0e6fcf4
-ms.openlocfilehash: a33ecaa2ef8d366230e81b53334318caf4c6cd8c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 65951ae0ce565c7e3f3b9a34f7710fbd790dc47c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62400111"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97291611"
 ---
 # <a name="compiler-error-c3800"></a>コンパイラ エラー C3800
 
-'declaration': プロパティとイベントを混在させることはできません
+' 宣言 ': プロパティとイベントを混在させることはできません
 
-構成要素は、プロパティとイベントの両方を宣言することはできません。
+プロパティとイベントの両方になるコンストラクトを宣言することはできません。
 
-C3800 は古い形式のコンパイラ オプションを使用して到達のみ **/clr:oldSyntax**します。
+C3800 は、互換性のために残されているコンパイラオプション **/clr: oldSyntax** を使用してのみ到達可能です。

@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: iterator_traits 構造体'
 title: iterator_traits 構造体
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - iterator_traits struct
 - iterator_traits class
 ms.assetid: 8b92c2c5-f658-402f-8ca1-e7ae301b8514
-ms.openlocfilehash: 924ca5ae1d32753bbe315252d942425712962639
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: ac97b84ff7bcedc00f2b069ce05f734ac65618ee
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72689451"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97289681"
 ---
 # <a name="iterator_traits-struct"></a>iterator_traits 構造体
 
@@ -31,23 +32,23 @@ struct iterator_traits {
    };
 ```
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 テンプレート構造体はメンバーの型を定義します。
 
-- `iterator_category`: `Iterator::iterator_category` のシノニム。
+- `iterator_category`: のシノニム `Iterator::iterator_category` 。
 
-- `value_type`: `Iterator::value_type` のシノニム。
+- `value_type`: のシノニム `Iterator::value_type` 。
 
-- `difference_type`: `Iterator::difference_type` のシノニム。
+- `difference_type`: のシノニム `Iterator::difference_type` 。
 
-- `distance_type`: `Iterator::difference_type.` のシノニム
+- `distance_type`: のシノニム `Iterator::difference_type.`
 
-- `pointer`: `Iterator::pointer` のシノニム。
+- `pointer`: のシノニム `Iterator::pointer` 。
 
-- `reference`: `Iterator::reference` のシノニム。
+- `reference`: のシノニム `Iterator::reference` 。
 
-部分的特殊化は **、型** <strong>\*</strong>型または**const 型** <strong>\*</strong>のオブジェクトポインターに関連付けられている重要な型を特定します。
+部分的特殊化は、 **type 型** <strong>\*</strong> または **const 型** のオブジェクトポインターに関連付けられている重要な型を特定し <strong>\*</strong> ます。
 
 この実装では、部分的特殊化を利用しないいくつかのテンプレート関数を利用することもできます。
 
@@ -116,14 +117,14 @@ struct std::bidirectional_iterator_tag
 */
 ```
 
-## <a name="requirements"></a>［要件］
+## <a name="requirements"></a>要件
 
-**ヘッダー:** \<iterator>
+**ヘッダー:**\<iterator>
 
 **名前空間:** std
 
 ## <a name="see-also"></a>関連項目
 
 [\<iterator>](../standard-library/iterator.md)\
-[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
-[C++ 標準ライブラリ リファレンス](../standard-library/cpp-standard-library-reference.md)
+[C++ 標準ライブラリのスレッドセーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[C++ 標準ライブラリリファレンス](../standard-library/cpp-standard-library-reference.md)

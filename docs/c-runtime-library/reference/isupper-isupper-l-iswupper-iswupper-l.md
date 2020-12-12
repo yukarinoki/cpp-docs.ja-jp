@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: isupper、_isupper_l、iswupper、_iswupper_l'
 title: isupper、_isupper_l、iswupper、_iswupper_l
 ms.date: 4/2/2020
 api_name:
@@ -40,12 +41,12 @@ helpviewer_keywords:
 - _iswupper_l function
 - isupper function
 ms.assetid: da2bcc9f-241c-48c0-9a0e-ad273827e16a
-ms.openlocfilehash: 49aab47a72e7065cbd90935a431f59ec74b562ac
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: d9af298cd1577473cac0db1ab6eda0be895d0c1b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82910401"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97289141"
 ---
 # <a name="isupper-_isupper_l-iswupper-_iswupper_l"></a>isupper、_isupper_l、iswupper、_iswupper_l
 
@@ -72,7 +73,7 @@ int _iwsupper_l(
 
 ### <a name="parameters"></a>パラメーター
 
-*40u-c*<br/>
+*c*<br/>
 テストする整数。
 
 *locale*<br/>
@@ -80,18 +81,18 @@ int _iwsupper_l(
 
 ## <a name="return-value"></a>戻り値
 
-これらの各ルーチンは、 *c*が特殊文字の特殊表現である場合は0以外の値を返します。 *c*が大文字 (a-z) の場合、 **isupper**は0以外の値を返します。 **iswupper**は、 *c*が大文字に対応するワイド文字である場合、または*c*が、 **iswcntrl**、 **iswdigit**、 **iswpunct**、または**iswspace**のいずれも0以外のワイド文字の実装定義セットの1つである場合、0以外の値を返します。 これらの各ルーチンは、 *c*がテスト条件を満たしていない場合は0を返します。
+これらの各ルーチンは、 *c* が特殊文字の特殊表現である場合は0以外の値を返します。 *c* が大文字 (a-z) の場合、 **isupper** は0以外の値を返します。 **iswupper** は、 *c* が大文字に対応するワイド文字である場合、または *c* が、 **iswcntrl**、 **iswdigit**、 **iswpunct**、または **iswspace** のいずれも0以外のワイド文字の実装定義セットの1つである場合、0以外の値を返します。 これらの各ルーチンは、 *c* がテスト条件を満たしていない場合は0を返します。
 
-**_L**サフィックスを持つこれらの関数のバージョンでは、ロケールに依存する動作に現在のロケールではなく渡されたロケールが使用されます。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
+**_L** サフィックスを持つこれらの関数のバージョンでは、ロケールに依存する動作に現在のロケールではなく渡されたロケールが使用されます。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
 
-*C*が EOF でない場合、または 0 ~ 0xff の範囲内にある場合、 **isupper**と **_isupper_l**の動作は未定義です。 デバッグ CRT ライブラリが使用され、 *c*がこれらの値のいずれでもない場合、関数はアサーションを発生させます。
+*C* が EOF でない場合、または 0 ~ 0xff の範囲内にある場合、 **isupper** と **_isupper_l** の動作は未定義です。 デバッグ CRT ライブラリが使用され、 *c* がこれらの値のいずれでもない場合、関数はアサーションを発生させます。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
 |TCHAR.H のルーチン|_UNICODE および _MBCS が未定義の場合|_MBCS が定義されている場合|_UNICODE が定義されている場合|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_istupper**|**isupper**|[_ismbcupper](ismbclower-ismbclower-l-ismbcupper-ismbcupper-l.md)|**iswupper**|
-|**_istupper_l**|**_isupper_l**|[_ismbclower、_ismbclower_l、_ismbcupper、 _ismbcupper_l](ismbclower-ismbclower-l-ismbcupper-ismbcupper-l.md)|**_iswupper_l**|
+|**_istupper_l**|**_isupper_l**|[_ismbclower、_ismbclower_l、_ismbcupper、_ismbcupper_l](ismbclower-ismbclower-l-ismbcupper-ismbcupper-l.md)|**_iswupper_l**|
 
 ## <a name="remarks"></a>解説
 
@@ -99,7 +100,7 @@ int _iwsupper_l(
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**isupper**|\<ctype.h>|
 |**_isupper_l**|\<ctype.h>|
@@ -111,5 +112,5 @@ int _iwsupper_l(
 ## <a name="see-also"></a>関連項目
 
 [文字分類](../../c-runtime-library/character-classification.md)<br/>
-[国](../../c-runtime-library/locale.md)<br/>
-[is、isw 系ルーチン](../../c-runtime-library/is-isw-routines.md)<br/>
+[ロケール](../../c-runtime-library/locale.md)<br/>
+[is、isw ルーチン](../../c-runtime-library/is-isw-routines.md)<br/>

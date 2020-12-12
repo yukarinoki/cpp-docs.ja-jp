@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: アクティブインスタンス関数'
 title: ActivateInstance 関数
 ms.date: 11/04/2016
 ms.topic: reference
@@ -8,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - ActivateInstance function
 ms.assetid: 8cfd1dd9-5fda-4cc2-acf8-d40e783b3875
-ms.openlocfilehash: d1109e769352d412df8348822e05b66063159ee8
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 03d7b67810ee2ab287072546b098f81f43687233
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80214228"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97287854"
 ---
 # <a name="activateinstance-function"></a>ActivateInstance 関数
 
@@ -35,21 +36,21 @@ inline HRESULT ActivateInstance(
 アクティブにする型。
 
 *activatableClassId*<br/>
-パラメーター *T*を定義するクラス ID の名前。
+パラメーター *T* を定義するクラス ID の名前。
 
-*インスタンス (instance)*<br/>
-この操作が完了したときに、 *T*のインスタンスへの参照。
+*instance*<br/>
+この操作が完了したときに、 *T* のインスタンスへの参照。
 
 ## <a name="return-value"></a>戻り値
 
 成功した場合は S_OK。それ以外の場合は、エラーの原因を示すエラー HRESULT。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** client.h
 
 **名前空間:** Windows:: Foundation
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[Windows::Foundation 名前空間](windows-foundation-namespace.md)
+[Windows:: Foundation 名前空間](windows-foundation-namespace.md)

@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: Exception クラス'
 title: 例外クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,16 +9,16 @@ helpviewer_keywords:
 - exception handling [MFC], exception classes
 - MFC, exceptions
 ms.assetid: 1a2caf12-b3e9-4189-86d2-bf7a595bf025
-ms.openlocfilehash: 907b34b12ffdaa70c4377a1012a66662fbba12d0
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: c07bd93a0abf95dc7d5f46c710faaad2dcad08c0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84619518"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97290766"
 ---
 # <a name="exception-classes"></a>例外クラス
 
-クラスライブラリは、クラスに基づく例外処理機構を提供し `CException` ます。 アプリケーションフレームワークは、コード内で例外を使用します。また、自分で使用することもできます。 詳細については、「[例外](exception-handling-in-mfc.md)」を参照してください。 から独自の例外の種類を派生させることができ `CException` ます。
+クラスライブラリは、クラスに基づく例外処理機構を提供し `CException` ます。 アプリケーションフレームワークは、コード内で例外を使用します。また、自分で使用することもできます。 詳細については、「 [例外](exception-handling-in-mfc.md)」を参照してください。 から独自の例外の種類を派生させることができ `CException` ます。
 
 MFC には、例外クラスが用意されています。このクラスは、独自の例外だけでなく、サポートするすべての例外の例外クラスを派生させることができます。
 

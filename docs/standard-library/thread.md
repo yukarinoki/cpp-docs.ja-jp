@@ -1,15 +1,16 @@
 ---
+description: '詳細情報: &lt; thread&gt;'
 title: '&lt;thread&gt;'
 ms.date: 11/04/2016
 f1_keywords:
 - <thread>
 ms.assetid: 0c858405-4efb-449d-bf76-70d3693c9234
-ms.openlocfilehash: 251a423829a048e3d67b0bcf83107f52c3fdafca
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 3387d96772f1ed3322ce79b744e17b6bf494140d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87232847"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97289622"
 ---
 # <a name="ltthreadgt"></a>&lt;thread&gt;
 
@@ -24,7 +25,7 @@ ms.locfileid: "87232847"
 ## <a name="remarks"></a>解説
 
 > [!NOTE]
-> **/Clr**を使用してコンパイルされたコードでは、このヘッダーはブロックされます。
+> **/Clr** を使用してコンパイルされたコードでは、このヘッダーはブロックされます。
 
 マクロは、 `__STDCPP_THREADS__` このヘッダーでスレッドがサポートされていることを示す0以外の値として定義されます。
 
@@ -32,19 +33,19 @@ ms.locfileid: "87232847"
 
 ### <a name="public-classes"></a>パブリック クラス
 
-|名前|[説明]|
+|名前|説明|
 |----------|-----------------|
 |[thread クラス](../standard-library/thread-class.md)|アプリケーションの実行スレッドを観察および管理するために使用されるオブジェクトを定義します。|
 
 ### <a name="public-structures"></a>パブリック構造体
 
-|名前|[説明]|
+|名前|説明|
 |----------|-----------------|
-|[hash 構造体 (C++ 標準ライブラリ)](../standard-library/hash-structure-stl.md)|によって一意に決定される値を返すメンバー関数を定義 `thread::id` します。 このメンバー関数は、 [hash](../standard-library/hash-class.md)型の値 `thread::id` をインデックス値の分布にマッピングするのに適したハッシュ関数を定義します。|
+|[hash 構造体 (C++ 標準ライブラリ)](../standard-library/hash-structure-stl.md)|によって一意に決定される値を返すメンバー関数を定義 `thread::id` します。 このメンバー関数は、 [](../standard-library/hash-class.md)型の値 `thread::id` をインデックス値の分布にマッピングするのに適したハッシュ関数を定義します。|
 
 ### <a name="public-functions"></a>パブリック関数
 
-|名前|[説明]|
+|名前|説明|
 |----------|-----------------|
 |[get_id](../standard-library/thread-functions.md#get_id)|現在の実行スレッドを一意に識別します。|
 |[sleep_for](../standard-library/thread-functions.md#sleep_for)|呼び出し元のスレッドをブロックします。|
@@ -54,7 +55,7 @@ ms.locfileid: "87232847"
 
 ### <a name="public-operators"></a>パブリック演算子
 
-|名前|[説明]|
+|名前|説明|
 |----------|-----------------|
 |[operator>= 演算子](../standard-library/thread-operators.md#op_gt_eq)|一方の `thread::id` オブジェクトの値が、もう一方のオブジェクトの値以上かどうかを判断します。|
 |[operator> 演算子](../standard-library/thread-operators.md#op_gt)|一方の `thread::id` オブジェクトの値が、もう一方のオブジェクトの値より大きいかどうかを判断します。|

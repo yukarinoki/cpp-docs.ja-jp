@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: ICommandImpl クラス'
 title: ICommandImpl クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -51,12 +52,12 @@ helpviewer_keywords:
 - m_bCancelWhenExecuting
 - m_bIsExecuting
 ms.assetid: ef285fef-0d66-45e6-a762-b03357098e3b
-ms.openlocfilehash: 2f2d3938d63e5e67fc501d52d269c06f6b144ac8
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 62066d689e51a8ca8a71bb8120199c05ed2811d3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91501832"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97287386"
 ---
 # <a name="icommandimpl-class"></a>ICommandImpl クラス
 
@@ -77,7 +78,7 @@ class ATL_NO_VTABLE ICommandImpl : public CommandBase
 *CommandBase*<br/>
 コマンドインターフェイス。 既定値は、`ICommand` です。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** atldb.h
 
@@ -102,7 +103,7 @@ class ATL_NO_VTABLE ICommandImpl : public CommandBase
 |[m_bCancelWhenExecuting](#bcancelwhenexecuting)|実行時にコマンドをキャンセルするかどうかを示します。|
 |[m_bIsExecuting](#bisexecuting)|コマンドが現在実行されているかどうかを示します。|
 
-## <a name="remarks"></a>注釈
+## <a name="remarks"></a>解説
 
 Command オブジェクトの必須のインターフェイスです。
 
@@ -118,7 +119,7 @@ STDMETHOD(Cancel)();
 
 ### <a name="remarks"></a>解説
 
-*OLE DB プログラマーリファレンス*の「 [ICommand:: Cancel](/previous-versions/windows/desktop/ms714402(v=vs.85)) 」を参照してください。
+*OLE DB プログラマーリファレンス* の「 [ICommand:: Cancel](/previous-versions/windows/desktop/ms714402(v=vs.85)) 」を参照してください。
 
 ## <a name="icommandimplcancelexecution"></a><a name="cancelexecution"></a> ICommandImpl:: CancelExecution
 
@@ -167,17 +168,17 @@ HRESULT CreateRowset(IUnknown* pUnkOuter,
 [入力/出力]の *ppRowset* に対応 `ICommand::Execute` します。
 
 *pRowsetObj*<br/>
-入出力行セットオブジェクトへのポインター。 通常、このパラメーターは使用されませんが、COM オブジェクトに渡す前に行セットに対してより多くの作業を実行する必要がある場合に使用できます。 *PRowsetObj*の有効期間は*ppRowset*によって制限されます。
+入出力行セットオブジェクトへのポインター。 通常、このパラメーターは使用されませんが、COM オブジェクトに渡す前に行セットに対してより多くの作業を実行する必要がある場合に使用できます。 *PRowsetObj* の有効期間は *ppRowset* によって制限されます。
 
 ### <a name="return-value"></a>戻り値
 
 標準の HRESULT 値。 `ICommand::Execute`一般的な値の一覧については、「」を参照してください。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 複数の行セットを作成する場合、または異なる行セットを作成するための独自の条件を指定する場合は、内からへの異なる呼び出しを配置し `CreateRowset` `Execute` ます。
 
-*OLE DB プログラマーリファレンス*の「 [ICommand:: Execute](/previous-versions/windows/desktop/ms718095(v=vs.85)) 」を参照してください。
+*OLE DB プログラマーリファレンス* の「 [ICommand:: Execute](/previous-versions/windows/desktop/ms718095(v=vs.85)) 」を参照してください。
 
 ## <a name="icommandimplexecute"></a><a name="execute"></a> ICommandImpl:: Execute
 
@@ -195,9 +196,9 @@ HRESULT Execute(IUnknown* pUnkOuter,
 
 #### <a name="parameters"></a>パラメーター
 
-*OLE DB プログラマーリファレンス*の「 [ICommand:: Execute](/previous-versions/windows/desktop/ms718095(v=vs.85)) 」を参照してください。
+*OLE DB プログラマーリファレンス* の「 [ICommand:: Execute](/previous-versions/windows/desktop/ms718095(v=vs.85)) 」を参照してください。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 要求される送信インターフェイスは、この関数によって作成される行セットオブジェクトから取得されたインターフェイスになります。
 
@@ -216,9 +217,9 @@ STDMETHOD (GetDBSession) (REFIID riid,
 
 #### <a name="parameters"></a>パラメーター
 
-*OLE DB プログラマーリファレンス*の「 [ICommand:: getdbsession](/previous-versions/windows/desktop/ms719622(v=vs.85)) 」を参照してください。
+*OLE DB プログラマーリファレンス* の「 [ICommand:: getdbsession](/previous-versions/windows/desktop/ms719622(v=vs.85)) 」を参照してください。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 セッションからプロパティを取得する場合に便利です。
 

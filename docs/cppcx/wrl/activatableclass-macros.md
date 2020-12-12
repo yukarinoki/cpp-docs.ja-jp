@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: ActivatableClass マクロ'
 title: ActivatableClass マクロ
 ms.date: 11/04/2016
 ms.topic: reference
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - ActivatableClass
 - ActivatableClassWithFactoryEx
 ms.assetid: 9bd64709-ec2c-4678-8c96-ea5982622bdd
-ms.openlocfilehash: 7bc3d789d6c0d304aa170d59dff23a97a67061d7
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 2b59101373de72ca88338750bb7fe9169376ac65
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80214278"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97287945"
 ---
 # <a name="activatableclass-macros"></a>ActivatableClass マクロ
 
@@ -54,14 +55,14 @@ ActivatableClassWithFactoryEx(
 
 ## <a name="remarks"></a>解説
 
-`#undef` ディレクティブを使用して `__WRL_WINRT_STRICT__` マクロ定義が削除されるようにしない限り、これらのマクロは従来の COM では使用しないでください。
+`#undef`マクロ定義が削除されるようにディレクティブを使用する場合を除き、これらのマクロは従来の COM では使用しないでください `__WRL_WINRT_STRICT__` 。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** resource.h
 
 **名前空間:** Microsoft::WRL
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [Module クラス](module-class.md)

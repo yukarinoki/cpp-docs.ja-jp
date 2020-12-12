@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「C++ 標準ライブラリのスレッドセーフ」を参照してください。
 title: C++ 標準ライブラリ内のスレッド セーフ
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,16 +7,16 @@ helpviewer_keywords:
 - C++ Standard Library, thread safety
 - thread safety, C++ Standard Library
 ms.assetid: 9351c8fb-4539-4728-b0e9-226e2ac4284b
-ms.openlocfilehash: 4ac029a119a77fa87c6cd004fece9c4e6b382026
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: ff5d8960b2fc8a79acbfb4fc1d0be508865714e9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68460062"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97289635"
 ---
 # <a name="thread-safety-in-the-c-standard-library"></a>C++ 標準ライブラリ内のスレッド セーフ
 
-次のスレッド セーフの規則は C++ 標準ライブラリのすべてのクラスに適用されます。これには、次に示すように `shared_ptr` が含まれます。  以下に示すような標準の iostream オブジェクトや、[\<atomic>](../standard-library/atomic.md) 内の型のようなマルチスレッド専用の型などでは、より強い保証が用意されています。
+次のスレッド セーフの規則は C++ 標準ライブラリのすべてのクラスに適用されます。これには、次に示すように `shared_ptr` が含まれます。  より強力な保証が提供されることがあります。たとえば、次に示すような標準の iostream オブジェクトや、のようなマルチスレッド専用の型などがあり [\<atomic>](../standard-library/atomic.md) ます。
 
 オブジェクトは、複数のスレッドからの読み取りに対してスレッド セーフです。 たとえば、オブジェクト A が指定された場合、スレッド 1 とスレッド 2 から A の同時読み取りを安全に行うことができます。
 
@@ -23,7 +24,7 @@ ms.locfileid: "68460062"
 
 ある型の 1 つのインスタンスに対して読み取りや書き込みを行うのが安全です。これは、別のスレッドが同じ型の別のインスタンスに対して読み取りまたは書き込みを行っている場合でもそうです。 たとえば、同じ型のオブジェクト A と B が指定されている場合、A がスレッド 1 で書き込まれ、B がスレッド 2 で読み取られている場合は安全です。
 
-## <a name="sharedptr"></a>shared_ptr
+## <a name="shared_ptr"></a>shared_ptr
 
 複数のスレッドで異なる [shared_ptr](../standard-library/shared-ptr-class.md) オブジェクト (所有権を共有するコピーである場合も含めて) に対する読み取りと書き込みを同時に行うことができます。
 

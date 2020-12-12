@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: CMFCPropertyGridCtrl クラス'
 title: CMFCPropertyGridCtrl クラス
 ms.date: 11/19/2018
 f1_keywords:
@@ -150,12 +151,12 @@ helpviewer_keywords:
 - CMFCPropertyGridCtrl [MFC], OnSelectCombo
 - CMFCPropertyGridCtrl [MFC], ValidateItemData
 ms.assetid: 95877cae-2311-4a2a-9031-0c8c3cf0a5f9
-ms.openlocfilehash: c20ab10ac95ab6788f34367a9d68cdc9eae685b5
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: 26b7a16a0a890f669323dc514c863e81dd066c9b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88562676"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97290051"
 ---
 # <a name="cmfcpropertygridctrl-class"></a>CMFCPropertyGridCtrl クラス
 
@@ -253,7 +254,7 @@ class CMFCPropertyGridCtrl : public CWnd
 
 ### <a name="protected-methods"></a>プロテクト メソッド
 
-|Name|説明|
+|名前|説明|
 |----------|-----------------|
 |[CMFCPropertyGridCtrl:: AdjustLayout](#adjustlayout)|プロパティグリッドコントロールとそのプロパティを再描画します。|
 |[CMFCPropertyGridCtrl:: CompareProps](#compareprops)|プロパティを並べ替えるために、プロパティグリッドコントロールによって呼び出されます。|
@@ -315,7 +316,7 @@ class CMFCPropertyGridCtrl : public CWnd
 
 [CMFCPropertyGridCtrl](../../mfc/reference/cmfcpropertygridctrl-class.md)
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** afxpropertygridctrl
 
@@ -329,7 +330,7 @@ virtual HRESULT accSelect(
 
 ### <a name="parameters"></a>パラメーター
 
-から*flagsselect*場合<br/>
+から *flagsselect* 場合<br/>
 から *varChild*<br/>
 
 ### <a name="return-value"></a>戻り値
@@ -436,9 +437,9 @@ virtual int CompareProps(
 
 |戻り値|説明|
 |------------------|-----------------|
-|< 0|*PProp1*パラメーターの名前が*pProp2*パラメーターの名前よりも小さいです。|
-|0|*PProp1*パラメーターの名前は、 *pProp2*パラメーターの名前と同じです。|
-|> 0|*PProp1*オブジェクトの名前が*pProp2*パラメーターの名前を超えています。|
+|< 0|*PProp1* パラメーターの名前が *pProp2* パラメーターの名前よりも小さいです。|
+|0|*PProp1* パラメーターの名前は、 *pProp2* パラメーターの名前と同じです。|
+|> 0|*PProp1* オブジェクトの名前が *pProp2* パラメーターの名前を超えています。|
 
 ### <a name="remarks"></a>解説
 
@@ -462,7 +463,7 @@ virtual BOOL Create(
 から [ウィンドウスタイル](../../mfc/reference/styles-used-by-mfc.md#window-styles)のビットごとの組み合わせ (または)。
 
 *rect*<br/>
-からウィンドウのサイズと位置を、 *pParentWnd*のクライアント座標で指定する外接する四角形。
+からウィンドウのサイズと位置を、 *pParentWnd* のクライアント座標で指定する外接する四角形。
 
 *pParentWnd*<br/>
 から親ウィンドウへのポインター。 NULL にすることはできません。
@@ -582,10 +583,10 @@ void EnableHeaderCtrl(
 からヘッダーコントロールを有効にする場合は TRUE。ヘッダーコントロールを無効にする場合は FALSE。 既定値は TRUE です。
 
 *Lpszl 列*<br/>
-からヘッダーコントロールの左の列のタイトル。 既定値は **Property**です。
+からヘッダーコントロールの左の列のタイトル。 既定値は **Property** です。
 
 *Lpszall 列*<br/>
-からヘッダーコントロールの右側の列のタイトル。 既定値は **value**です。
+からヘッダーコントロールの右側の列のタイトル。 既定値は **value** です。
 
 ## <a name="cmfcpropertygridctrlendedititem"></a><a name="endedititem"></a> CMFCPropertyGridCtrl:: EndEditItem
 
@@ -1064,13 +1065,13 @@ CMFCPropertyGridProperty* HitTest(
 
 ### <a name="return-value"></a>戻り値
 
-*Bpropsonly*パラメーターが TRUE で、指定されたポイントがプロパティ領域内にある場合、戻り値は対応するプロパティオブジェクトへのポインターになります。 また、指定されたポイントを含む特定の領域に対して、 *pnarea* パラメーターが設定されます。 それ以外の場合、戻り値は NULL で、 *Pnarea* パラメーターは変更されません。
+*Bpropsonly* パラメーターが TRUE で、指定されたポイントがプロパティ領域内にある場合、戻り値は対応するプロパティオブジェクトへのポインターになります。 また、指定されたポイントを含む特定の領域に対して、 *pnarea* パラメーターが設定されます。 それ以外の場合、戻り値は NULL で、 *Pnarea* パラメーターは変更されません。
 
-*Bpropsonly*パラメーターが FALSE の場合、戻り値は常に NULL になります。 ただし、指定されたポイントが説明領域にある場合、 *pnarea* パラメーターはに設定され `CMFCPropertyGridProperty::ClickDescription` ます。
+*Bpropsonly* パラメーターが FALSE の場合、戻り値は常に NULL になります。 ただし、指定されたポイントが説明領域にある場合、 *pnarea* パラメーターはに設定され `CMFCPropertyGridProperty::ClickDescription` ます。
 
 ### <a name="remarks"></a>解説
 
-[用語] *プロパティ領域* は、プロパティグリッドコントロール項目の [名前]、[値]、[展開ボックス] のいずれかの領域を参照します。 *説明領域*は、プロパティグリッドコントロールの下部にあるゾーンです。 プロパティグリッドコントロール項目をクリックすると、[説明] 領域に、対応するプロパティの説明が表示されます。
+[用語] *プロパティ領域* は、プロパティグリッドコントロール項目の [名前]、[値]、[展開ボックス] のいずれかの領域を参照します。 *説明領域* は、プロパティグリッドコントロールの下部にあるゾーンです。 プロパティグリッドコントロール項目をクリックすると、[説明] 領域に、対応するプロパティの説明が表示されます。
 
 このメソッドは、 *Pnarea* パラメーターが指す変数の値を設定します。 次の表に、使用可能な値と対応する領域を示します。
 
@@ -1157,7 +1158,7 @@ BOOL IsGroupNameFullWidth() const;
 
 ### <a name="remarks"></a>解説
 
-*グループ*は、プロパティグリッドコントロールの関連プロパティのコレクションです。 コントロールが階層的に表示されている場合は、グループの上の行にカテゴリタイトルとして *グループ名* が表示されます。
+*グループ* は、プロパティグリッドコントロールの関連プロパティのコレクションです。 コントロールが階層的に表示されている場合は、グループの上の行にカテゴリタイトルとして *グループ名* が表示されます。
 
 ## <a name="cmfcpropertygridctrlisheaderctrl"></a><a name="isheaderctrl"></a> CMFCPropertyGridCtrl:: IsHeaderCtrl
 
@@ -1558,7 +1559,7 @@ void SetListDelimiter(TCHAR c);
 
 ### <a name="parameters"></a>パラメーター
 
-*40u-c*<br/>
+*c*<br/>
 から区切り記号として機能する文字。
 
 ### <a name="remarks"></a>解説
@@ -1642,4 +1643,4 @@ virtual BOOL ValidateItemData(CMFCPropertyGridProperty* pProp);
 ## <a name="see-also"></a>関連項目
 
 [階層図](../../mfc/hierarchy-chart.md)<br/>
-[クラス](../../mfc/reference/mfc-classes.md)
+[Classes](../../mfc/reference/mfc-classes.md)

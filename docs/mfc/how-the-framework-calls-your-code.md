@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「フレームワークによるコードの呼び出し方法」を参照してください。
 title: フレームワークと記述したコードとの関係
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - application-specific events [MFC]
 - command routing [MFC], MFC
 ms.assetid: 39e68189-a580-40d0-9e35-bf5cd24a8ecf
-ms.openlocfilehash: 318ca9558d705ca483d41867a1fe2ad46c36666f
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: eebc431d8ba4d0edf7eddfe113d6f6559087be70
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84622605"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97290376"
 ---
 # <a name="how-the-framework-calls-your-code"></a>フレームワークと記述したコードとの関係
 
@@ -29,7 +30,7 @@ ms.locfileid: "84622605"
 
 関連トピックでは、フレームワークがアプリケーションを初期化して実行し、アプリケーションの終了に応じてクリーンアップする際の動作について説明します。 また、記述するコードがどこに配置されているかを理解することもできます。
 
-詳細については、「[クラス CWinApp: アプリケーションクラス](cwinapp-the-application-class.md)と[ドキュメントテンプレート」と「ドキュメント/ビューの作成プロセス](document-templates-and-the-document-view-creation-process.md)」を参照してください。
+詳細については、「 [クラス CWinApp: アプリケーションクラス](cwinapp-the-application-class.md) と [ドキュメントテンプレート」と「ドキュメント/ビューの作成プロセス](document-templates-and-the-document-view-creation-process.md)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

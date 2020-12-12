@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「アイドルループ処理」を参照してください。
 title: アイドリング ループ処理
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -16,35 +17,35 @@ helpviewer_keywords:
 - processing [MFC]
 - background processing [MFC]
 ms.assetid: 5c7c46c1-6107-4304-895f-480983bb1e44
-ms.openlocfilehash: 74ca89d91cf4e60b09a063551b526f177caed161
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 8972a2bafe5c9d35af2a5f4452082a7ca82f28dc
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84624515"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97290155"
 ---
 # <a name="idle-loop-processing"></a>アイドリング ループ処理
 
-多くのアプリケーションは、時間のかかる処理をバックグラウンドで実行します。 パフォーマンスに関する考慮事項は、このような作業にマルチスレッドを使用することがあります。 スレッドには追加の開発オーバーヘッドが伴います。そのため、MFC が[OnIdle](reference/cwinthread-class.md#onidle)関数で実行するアイドル時間の作業のような単純なタスクには推奨されません。 この記事では、アイドル処理に焦点を当てています。 マルチスレッドの詳細については、[マルチスレッドのトピック](../parallel/multithreading-support-for-older-code-visual-cpp.md)を参照してください。
+多くのアプリケーションは、時間のかかる処理をバックグラウンドで実行します。 パフォーマンスに関する考慮事項は、このような作業にマルチスレッドを使用することがあります。 スレッドには追加の開発オーバーヘッドが伴います。そのため、MFC が [OnIdle](reference/cwinthread-class.md#onidle) 関数で実行するアイドル時間の作業のような単純なタスクには推奨されません。 この記事では、アイドル処理に焦点を当てています。 マルチスレッドの詳細については、 [マルチスレッドのトピック](../parallel/multithreading-support-for-older-code-visual-cpp.md)を参照してください。
 
-バックグラウンド処理の中には、ユーザーがアプリケーションと対話できない間隔で適切に実行されるものもあります。 Microsoft Windows オペレーティングシステム用に開発されたアプリケーションでは、長いプロセスを多数の小さなフラグメントに分割することによって、アプリケーションでアイドル時の処理を実行できます。 各フラグメントの処理後、アプリケーションは[PeekMessage](/windows/win32/api/winuser/nf-winuser-peekmessagew)ループを使用して Windows に実行制御を戻します。
+バックグラウンド処理の中には、ユーザーがアプリケーションと対話できない間隔で適切に実行されるものもあります。 Microsoft Windows オペレーティングシステム用に開発されたアプリケーションでは、長いプロセスを多数の小さなフラグメントに分割することによって、アプリケーションでアイドル時の処理を実行できます。 各フラグメントの処理後、アプリケーションは [PeekMessage](/windows/win32/api/winuser/nf-winuser-peekmessagew) ループを使用して Windows に実行制御を戻します。
 
 この記事では、アプリケーションでアイドル処理を実行する2つの方法について説明します。
 
-- MFC のメインメッセージループで**PeekMessage**を使用します。
+- MFC のメインメッセージループで **PeekMessage** を使用します。
 
-- アプリケーションの他の場所に別の**PeekMessage**ループを埋め込みます。
+- アプリケーションの他の場所に別の **PeekMessage** ループを埋め込みます。
 
-## <a name="peekmessage-in-the-mfc-message-loop"></a><a name="_core_peekmessage_in_the_mfc_message_loop"></a>MFC メッセージループの PeekMessage
+## <a name="peekmessage-in-the-mfc-message-loop"></a><a name="_core_peekmessage_in_the_mfc_message_loop"></a> MFC メッセージループの PeekMessage
 
 MFC を使用して開発されたアプリケーションでは、クラスのメインメッセージループに、 `CWinThread` [PeekMessage](/windows/win32/api/winuser/nf-winuser-peekmessagew) Win32 API を呼び出すメッセージループが含まれています。 このループでは、 `OnIdle` メッセージ間のメンバー関数も呼び出され `CWinThread` ます。 アプリケーションでは、関数をオーバーライドすることによって、このアイドル時間でメッセージを処理でき `OnIdle` ます。
 
 > [!NOTE]
 > `Run`、 `OnIdle` 、およびその他の特定のメンバー関数は、クラスではなくクラスのメンバーになりました `CWinThread` `CWinApp` 。 `CWinApp` は、`CWinThread` から派生しています。
 
-アイドル処理の実行の詳細については、 *MFC リファレンス*の「 [OnIdle](reference/cwinthread-class.md#onidle) 」を参照してください。
+アイドル処理の実行の詳細については、 *MFC リファレンス* の「 [OnIdle](reference/cwinthread-class.md#onidle) 」を参照してください。
 
-## <a name="peekmessage-elsewhere-in-your-application"></a><a name="_core_peekmessage_elsewhere_in_your_application"></a>アプリケーション内の他の場所に PeekMessage
+## <a name="peekmessage-elsewhere-in-your-application"></a><a name="_core_peekmessage_elsewhere_in_your_application"></a> アプリケーション内の他の場所に PeekMessage
 
 アプリケーションでアイドル処理を実行するもう1つの方法として、関数のいずれかにメッセージループを埋め込む方法があります。 このメッセージループは、 [CWinThread:: Run](reference/cwinthread-class.md#run)で検出された MFC のメインメッセージループとよく似ています。 つまり、MFC を使用して開発されたアプリケーションのこのようなループは、メインメッセージループと同じ機能の多くを実行する必要があります。 次のコードフラグメントは、MFC と互換性のあるメッセージループを記述する方法を示しています。
 

@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: CMFCRibbonApplicationButton クラス'
 title: CMFCRibbonApplicationButton クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - CMFCRibbonApplicationButton [MFC], CMFCRibbonApplicationButton
 - CMFCRibbonApplicationButton [MFC], SetImage
 ms.assetid: beb81757-fabd-4641-9130-876ba8505b78
-ms.openlocfilehash: b28d075c5fcc4313e1a62ae731b3fad8ef4d8a12
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: 391274c7540e7e52a19c20e17a09b25f37badcd6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81749931"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97289804"
 ---
 # <a name="cmfcribbonapplicationbutton-class"></a>CMFCRibbonApplicationButton クラス
 
@@ -33,19 +34,19 @@ class CMFCRibbonApplicationButton : public CMFCRibbonButton
 
 |名前|説明|
 |----------|-----------------|
-|[アプリケーション ボタン::CMFCリボン アプリケーション ボタン](#cmfcribbonapplicationbutton)|`CMFCRibbonApplicationButton` オブジェクトを構築して初期化します。|
+|[CMFCRibbonApplicationButton:: CMFCRibbonApplicationButton](#cmfcribbonapplicationbutton)|`CMFCRibbonApplicationButton` オブジェクトを構築して初期化します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
 |名前|説明|
 |----------|-----------------|
 |`CMFCRibbonApplicationButton::CreateObject`|このクラス型の動的インスタンスを作成するために、フレームワークで使用されます。|
-|`CMFCRibbonApplicationButton::GetThisClass`|このクラス型に関連付けられている[CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)オブジェクトへのポインターを取得するために、フレームワークによって使用されます。|
-|[アプリケーションボタン::セットイメージ](#setimage)|リボン アプリケーション ボタンにイメージを割り当てます。|
+|`CMFCRibbonApplicationButton::GetThisClass`|このクラス型に関連付けられている [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) オブジェクトへのポインターを取得するために、フレームワークによって使用されます。|
+|[CMFCRibbonApplicationButton:: SetImage](#setimage)|リボンアプリケーションボタンにイメージを割り当てます。|
 
 ## <a name="example"></a>例
 
-`CMFCRibbonApplicationButton` クラスのさまざまなメソッドの使用方法を次の例に示します。 この例では、アプリケーション ボタンにイメージを割り当てる方法と、そのツールヒントを設定する方法を示します。 このコード スニペットは、「 [クライアント サンプルの描画](../../overview/visual-cpp-samples.md)」の一部です。
+`CMFCRibbonApplicationButton` クラスのさまざまなメソッドの使用方法を次の例に示します。 この例では、イメージをアプリケーションボタンに割り当てる方法と、そのツールヒントを設定する方法を示します。 このコード スニペットは、「 [クライアント サンプルの描画](../../overview/visual-cpp-samples.md)」の一部です。
 
 [!code-cpp[NVC_MFC_DrawClient#4](../../mfc/reference/codesnippet/cpp/cmfcribbonapplicationbutton-class_1.h)]
 [!code-cpp[NVC_MFC_DrawClient#5](../../mfc/reference/codesnippet/cpp/cmfcribbonapplicationbutton-class_2.cpp)]
@@ -60,13 +61,13 @@ class CMFCRibbonApplicationButton : public CMFCRibbonButton
 
 [CMFCRibbonApplicationButton](../../mfc/reference/cmfcribbonapplicationbutton-class.md)
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-**ヘッダー:** afxRibbonBar.h
+**ヘッダー:** afxribbonbar.h
 
-## <a name="cmfcribbonapplicationbuttoncmfcribbonapplicationbutton"></a><a name="cmfcribbonapplicationbutton"></a>アプリケーション ボタン::CMFCリボン アプリケーション ボタン
+## <a name="cmfcribbonapplicationbuttoncmfcribbonapplicationbutton"></a><a name="cmfcribbonapplicationbutton"></a> CMFCRibbonApplicationButton:: CMFCRibbonApplicationButton
 
-[オブジェクトを](../../mfc/reference/cmfcribbonapplicationbutton-class.md)構築して初期化します。
+[CMFCRibbonApplicationButton](../../mfc/reference/cmfcribbonapplicationbutton-class.md)オブジェクトを構築し、初期化します。
 
 ```
 CMFCRibbonApplicationButton();
@@ -76,19 +77,19 @@ CMFCRibbonApplicationButton(HBITMAP hBmp);
 
 ### <a name="parameters"></a>パラメーター
 
-*をクリックします。*<br/>
-アプリケーション ボタンに表示するイメージのリソース ID。
+*uiBmpResID*<br/>
+アプリケーションボタンに表示するイメージのリソース ID。
 
 *hBmp*<br/>
-アプリケーション ボタンに表示するビットマップへのハンドル。
+アプリケーションボタンに表示するビットマップを処理するハンドル。
 
 ### <a name="remarks"></a>解説
 
-リボン アプリケーション ボタンは、アプリケーション ウィンドウの左上隅にある特別なボタンです。 ユーザーがこのボタンをクリックすると、通常は **[開く**]、[**保存**]、[**終了**] などの一般的な**ファイル**コマンドを含むメニューが開きます。
+リボンアプリケーションボタンは、アプリケーションウィンドウの左上隅にある特別なボタンです。 ユーザーがこのボタンをクリックすると、[**開く**]、[**保存**]、[**終了**] など、一般的な **ファイル** コマンドを含むメニューが表示されます。
 
-## <a name="cmfcribbonapplicationbuttonsetimage"></a><a name="setimage"></a>アプリケーションボタン::セットイメージ
+## <a name="cmfcribbonapplicationbuttonsetimage"></a><a name="setimage"></a> CMFCRibbonApplicationButton:: SetImage
 
-アプリケーション ボタンにイメージを割り当てます。
+アプリケーションボタンにイメージを割り当てます。
 
 ```cpp
 void SetImage(UINT uiBmpResID);
@@ -97,18 +98,18 @@ void SetImage(HBITMAP hBmp);
 
 ### <a name="parameters"></a>パラメーター
 
-*をクリックします。*<br/>
-[in]アプリケーション ボタンに表示するイメージのリソース ID。
+*uiBmpResID*<br/>
+からアプリケーションボタンに表示するイメージのリソース ID。
 
 *hBmp*<br/>
-[in]アプリケーション ボタンに表示するビットマップへのハンドル。
+からアプリケーションボタンに表示するビットマップを処理するハンドル。
 
 ### <a name="remarks"></a>解説
 
-このメソッドは、ボタンを作成した後で、リボン アプリケーション ボタンに新しいイメージを割り当てる場合に使用します。 アプリケーション ボタンは、アプリケーション ウィンドウの左上隅にあります。
+このメソッドを使用すると、ボタンを作成した後、リボンアプリケーションのボタンに新しいイメージを割り当てることができます。 アプリケーションボタンは、アプリケーションウィンドウの左上隅にあります。
 
 ## <a name="see-also"></a>関連項目
 
-[階層グラフ](../../mfc/hierarchy-chart.md)<br/>
-[クラス](../../mfc/reference/mfc-classes.md)<br/>
+[階層図](../../mfc/hierarchy-chart.md)<br/>
+[Classes](../../mfc/reference/mfc-classes.md)<br/>
 [CMFCRibbonButton クラス](../../mfc/reference/cmfcribbonbutton-class.md)

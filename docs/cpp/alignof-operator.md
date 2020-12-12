@@ -1,4 +1,5 @@
 ---
+description: '詳細について: alignof 演算子'
 title: alignof 演算子
 ms.date: 12/17/2018
 f1_keywords:
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - alignof [C++]
 - types [C++], alignment requirements
 ms.assetid: acb1eed7-6398-40bd-b0c5-684ceb64afbc
-ms.openlocfilehash: 6a2046774674858211ae89abb9b4cfc7b09c0a6d
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: b7e053b932ed631d8b03dc1b89f6857905740e5a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87227635"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97288307"
 ---
 # <a name="alignof-operator"></a>alignof 演算子
 
@@ -34,7 +35,7 @@ alignof( type )
 
 次に例を示します。
 
-| 正規表現 | 値 |
+| Expression | 値 |
 |--|--|
 | **`alignof( char )`** | 1 |
 | **`alignof( short )`** | 2 |
@@ -78,7 +79,7 @@ S* p = (S*)aligned_malloc(n * sizeof(S), alignof(S));
 
 - [/Zp (構造体メンバーのアラインメント)](../build/reference/zp-struct-member-alignment.md)
 
-- [構造体のアラインメントの例](../build/x64-software-conventions.md#examples-of-structure-alignment)(x64 固有)
+- [構造体のアラインメントの例](../build/x64-software-conventions.md#examples-of-structure-alignment) (x64 固有)
 
 x86 と x64 用のコード内の配置の違いの詳細については、
 

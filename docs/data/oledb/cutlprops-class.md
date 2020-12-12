@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: CUtlProps クラス'
 title: CUtlProps クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -29,12 +30,12 @@ helpviewer_keywords:
 - OnPropertyChanged method
 - SetPropValue method
 ms.assetid: bb525178-765c-4e23-a110-c0fd70c05437
-ms.openlocfilehash: 1e9e636824ff67ee93587637c0e098e625229c06
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 535da4b2dd7d3214633a1e76c04be1e4627b965a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91509094"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97287750"
 ---
 # <a name="cutlprops-class"></a>CUtlProps クラス
 
@@ -52,7 +53,7 @@ class ATL_NO_VTABLE CUtlProps : public CUtlPropsBase
 *T*<br/>
 を格納しているクラス `BEGIN_PROPSET_MAP` 。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** atldb.h
 
@@ -68,7 +69,7 @@ class ATL_NO_VTABLE CUtlProps : public CUtlPropsBase
 |[OnPropertyChanged](#onpropertychanged)|プロパティを設定した後に、チェーンプロパティを処理するために呼び出されます。|
 |[SetPropValue](#setpropvalue)|プロパティセット内のプロパティを設定します。|
 
-## <a name="remarks"></a>注釈
+## <a name="remarks"></a>解説
 
 このクラスのほとんどは実装の詳細です。
 
@@ -126,7 +127,7 @@ virtual HRESULT CUtlPropsBase::IsValidValue(ULONG /* iCurSet */,
 
 標準の HRESULT です。 既定の戻り値は S_OK です。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 プロパティの設定に使用しようとしている値に対して実行する検証ルーチンがある場合は、この関数をオーバーライドする必要があります。 たとえば、パスワードテーブルに対して DBPROP_AUTH_PASSWORD を検証して、有効な値を判断することができます。
 
@@ -143,9 +144,9 @@ virtual HRESULT CUtlPropsBase::OnInterfaceRequested(REFIID riid);
 #### <a name="parameters"></a>パラメーター
 
 *riid*<br/>
-から要求されたインターフェイスの IID。 詳細については、 *riid* `ICommand::Execute` *OLE DB プログラマーのリファレンス*( *MDAC SDK*) にある、の riid パラメーターの説明を参照してください。
+から要求されたインターフェイスの IID。 詳細については、  `ICommand::Execute` *OLE DB プログラマーのリファレンス*( *MDAC SDK*) にある、の riid パラメーターの説明を参照してください。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 `OnInterfaceRequested` コンシューマーがオブジェクト作成インターフェイス (、、、など) のいずれかでメソッドを呼び出したときに、オプションのインターフェイスのコンシューマー要求を処理 `IDBCreateSession` `IDBCreateCommand` `IOpenRowset` `ICommand` します。 これは、要求されたインターフェイスに対応する OLE DB プロパティを設定します。 たとえば、コンシューマーから要求された場合、は `IID_IRowsetLocate` `OnInterfaceRequested` インターフェイスを設定し `DBPROP_IRowsetLocate` ます。 これにより、行セットの作成時に適切な状態が維持されます。
 
@@ -188,7 +189,7 @@ virtual HRESULT OnPropertyChanged(ULONG /* iCurSet */,
 
 標準の HRESULT です。 既定の戻り値は S_OK です。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 値が別のプロパティの値に依存するブックマークや更新などの連結されたプロパティを処理する場合は、この関数をオーバーライドする必要があります。
 

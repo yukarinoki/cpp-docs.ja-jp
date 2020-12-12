@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: align (C++)'
 title: align (C++)
 ms.date: 12/17/2018
 f1_keywords:
@@ -7,16 +8,16 @@ helpviewer_keywords:
 - align __declspec keyword
 - __declspec keyword [C++], align
 ms.assetid: 9cb63f58-658b-4425-ac47-af8eabfc5878
-ms.openlocfilehash: 0a1212f1c78f49029f82be5a2f5d82ea1788b6e0
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 2794c94e5ef56063ea0b5621838a8e33cfdca5c1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87227661"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97288308"
 ---
 # <a name="align-c"></a>align (C++)
 
-Visual Studio 2015 以降では、C++ 11 の標準指定子を使用して、 **`alignas`** アラインメントを制御します。 詳細については、「[アラインメント](../cpp/alignment-cpp-declarations.md)」を参照してください。
+Visual Studio 2015 以降では、C++ 11 の標準指定子を使用して、 **`alignas`** アラインメントを制御します。 詳細については、「 [アラインメント](../cpp/alignment-cpp-declarations.md)」を参照してください。
 
 **Microsoft 固有の仕様**
 
@@ -30,7 +31,7 @@ Visual Studio 2015 以降では、C++ 11 の標準指定子を使用して、 **
 
 最新のプロセッサ命令を使用するアプリケーションの記述では、いくつかの新しい制約や問題があります。 多くの新しい命令では、16バイト境界にアラインされたデータが必要です。 また、頻繁に使用されるデータをプロセッサのキャッシュラインサイズに合わせて配置すると、キャッシュのパフォーマンスが向上します。 たとえば、サイズが32バイト未満の構造体を定義する場合は、その構造体型のオブジェクトが効率的にキャッシュされるように32バイトのアラインメントが必要になることがあります。
 
-\#アラインメント値を指定します。 有効なエントリは、1 ～ 8192 (バイト) の 2 の整数乗 (2、4、8、16、32、64 など) です。 `declarator`は、固定されたものとして宣言しているデータです。
+\# アラインメント値を指定します。 有効なエントリは、1 ～ 8192 (バイト) の 2 の整数乗 (2、4、8、16、32、64 など) です。 `declarator` は、固定されたものとして宣言しているデータです。
 
 型のアラインメント要件である型の値を返す方法について `size_t` は、「」を参照してください [`alignof`](../cpp/alignof-operator.md) 。 64ビットプロセッサを対象とする場合に、整列されていないポインターを宣言する方法については、「」を参照してください [`__unaligned`](../cpp/unaligned.md) 。
 
@@ -70,17 +71,17 @@ __declspec(align(32)) struct Str1{
 
 詳細については、次を参照してください。
 
-- [`align`例](#vclrfalignexamples)
+- [`align` 例](#vclrfalignexamples)
 
-- [定義 (新しい型を)`__declspec(align(#))`](#vclrf_declspecaligntypedef)
+- [定義 (新しい型を) `__declspec(align(#))`](#vclrf_declspecaligntypedef)
 
 - [スレッド ローカル ストレージのデータのアライン](#vclrfthreadlocalstorageallocation)
 
 - [`align`データパッキングのしくみ](#vclrfhowalignworkswithdatapacking)
 
-- [構造体のアラインメントの例](../build/x64-software-conventions.md#examples-of-structure-alignment)(x64 固有)
+- [構造体のアラインメントの例](../build/x64-software-conventions.md#examples-of-structure-alignment) (x64 固有)
 
-## <a name="align-examples"></a><a name="vclrfalignexamples"></a>整列の例
+## <a name="align-examples"></a><a name="vclrfalignexamples"></a> 整列の例
 
 次の例では、`__declspec(align(#))` がデータ構造体のサイズとアラインメントにどのような影響を与えるかを示します。 この例では、次の定義を前提とします。
 
@@ -117,7 +118,7 @@ struct S3 {
 };
 ```
 
-次の例では、`a` で自然なアラインメントが行われる (この場合は 4 バイトにアラインされる) ことに注意してください。 ただし、`S1` は 32 バイトでアラインする必要があります。 28バイトのパディングが続く `a` ため、は `s1` オフセット32から開始します。 `S4`は、のアラインメント要件を継承し `S1` ます。これは、構造体のアラインメント要件の最大値であるためです。 `sizeof(struct S4)` は 64 を返します。
+次の例では、`a` で自然なアラインメントが行われる (この場合は 4 バイトにアラインされる) ことに注意してください。 ただし、`S1` は 32 バイトでアラインする必要があります。 28バイトのパディングが続く `a` ため、は `s1` オフセット32から開始します。 `S4` は、のアラインメント要件を継承し `S1` ます。これは、構造体のアラインメント要件の最大値であるためです。 `sizeof(struct S4)` は 64 を返します。
 
 ```cpp
 struct S4 {
@@ -169,9 +170,9 @@ void fn() {
 }
 ```
 
-メモリがヒープ上に割り当てられる場合のアラインメントは、どの割り当て関数が呼び出されるかによって異なります。  たとえば、`malloc` を使用する場合、結果はオペランドのサイズによって決まります。 *Arg* >が8の場合、返されるメモリは8バイトでアラインされます。 *Arg* < 8 の場合、返されるメモリのアラインメントは、最初の2の累乗で、 *arg*より小さい値になります。 たとえば、を使用すると、 `malloc(7)` アラインメントは4バイトになります。
+メモリがヒープ上に割り当てられる場合のアラインメントは、どの割り当て関数が呼び出されるかによって異なります。  たとえば、`malloc` を使用する場合、結果はオペランドのサイズによって決まります。 *Arg* >が8の場合、返されるメモリは8バイトでアラインされます。 *Arg* < 8 の場合、返されるメモリのアラインメントは、最初の2の累乗で、 *arg* より小さい値になります。 たとえば、を使用すると、 `malloc(7)` アラインメントは4バイトになります。
 
-## <a name="defining-new-types-with-__declspecalign"></a><a name="vclrf_declspecaligntypedef"></a>定義 (新しい型を)`__declspec(align(#))`
+## <a name="defining-new-types-with-__declspecalign"></a><a name="vclrf_declspecaligntypedef"></a> 定義 (新しい型を) `__declspec(align(#))`
 
 型のアラインメントを定義できます。
 
@@ -184,7 +185,7 @@ typedef __declspec(align(32)) struct aType bType;
 
 現在、 `aType` と `bType` は同じサイズ (8 バイト) ですが、型の変数 `bType` は32バイトでアラインされています。
 
-## <a name="aligning-data-in-thread-local-storage"></a><a name="vclrfthreadlocalstorageallocation"></a>スレッドローカルストレージでのデータの整列
+## <a name="aligning-data-in-thread-local-storage"></a><a name="vclrfthreadlocalstorageallocation"></a> スレッドローカルストレージでのデータの整列
 
 `__declspec(thread)` 属性を使用して作成され、イメージ内の TLS セクションに配置された静的なスレッド ローカル ストレージ (TLS: Thread-Local Storage) は、通常の静的データとまったく同じようにアラインメントされます。 TLS データを作成するために、オペレーティング システムは、TLS セクションのサイズのメモリを割り当て、TLS セクションのアラインメント属性に従います。
 

@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: 例外: 例外の内容の調査'
 title: '例外処理 : 例外の内容の調査'
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - try-catch exception handling [MFC], exception contents
 - throwing exceptions [MFC], exception contents
 ms.assetid: dfda4782-b969-4f60-b867-cc204ea7f33a
-ms.openlocfilehash: 7500db2a29f9d4ccef37b9265f5f2968c2d07993
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: aef28d79bd6cad1d810700015930b14b5fdedddc
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87217949"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97290623"
 ---
 # <a name="exceptions-examining-exception-contents"></a>例外処理 : 例外の内容の調査
 
@@ -26,7 +27,7 @@ ms.locfileid: "87217949"
 
 [!code-cpp[NVC_MFCExceptions#13](codesnippet/cpp/exceptions-examining-exception-contents_1.cpp)]
 
-詳細については、「例外[: 例外の解放」](exceptions-freeing-objects-in-exceptions.md)と「例外」を参照してください。例外の[キャッチと削除](exceptions-catching-and-deleting-exceptions.md)。
+詳細については、「例外 [: 例外の解放」](exceptions-freeing-objects-in-exceptions.md) と「例外」を参照してください。例外の [キャッチと削除](exceptions-catching-and-deleting-exceptions.md)。
 
 ## <a name="see-also"></a>関連項目
 

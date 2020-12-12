@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: feupdateenv'
 title: feupdateenv
 ms.date: 04/05/2018
 api_name:
@@ -22,12 +23,12 @@ f1_keywords:
 helpviewer_keywords:
 - feupdateenv function
 ms.assetid: 3d170042-dfd5-4e4f-a55f-038cf2296cc9
-ms.openlocfilehash: 8f40cab42e4a89b1fc5a100587b11b0e2aeeb55c
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 4e3fe47c6a03138f2bc82679eb5fc8e938678a17
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70940989"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97289336"
 ---
 # <a name="feupdateenv"></a>feupdateenv
 
@@ -44,25 +45,25 @@ int feupdateenv(
 ### <a name="parameters"></a>パラメーター
 
 *ペン v*<br/>
-[Fegetenv](fegetenv1.md)または[feholdexcept](feholdexcept2.md)の呼び出しによって設定された浮動小数点環境を含む**fenv_t**オブジェクトへのポインター。 また、FE_DFL_ENV マクロを使用して、既定のスタートアップ浮動小数点環境を指定することもできます。
+[Fegetenv](fegetenv1.md)または [feholdexcept](feholdexcept2.md)の呼び出しによって設定された浮動小数点環境を含む **fenv_t** オブジェクトへのポインター。 また、FE_DFL_ENV マクロを使用して、既定のスタートアップ浮動小数点環境を指定することもできます。
 
 ## <a name="return-value"></a>戻り値
 
 すべてのアクションが正常に完了した場合は、0 を返します。 それ以外の場合は、0 以外の値を返します。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-**Feupdateenv**関数は、複数のアクションを実行します。 まず、現在発生している浮動小数点例外状態フラグを自動ストレージに格納します。 次に、 **fenv_t**が指すオブジェクトに格納されている値から現在の浮動小数点環境を設定*します。* **FE_DFL_ENV**が*ない場合、または有効*な**fenv_t**オブジェクトを指していない場合、後続の動作は未定義になります。 最後に、 **feupdateenv**はローカルに格納された浮動小数点例外を発生させます。
+**Feupdateenv** 関数は、複数のアクションを実行します。 まず、現在発生している浮動小数点例外状態フラグを自動ストレージに格納します。 次に、現在の浮動小数点環境を、記憶が指す **fenv_t** オブジェクトに格納されている値から設定 *します。* 参照 *v* が **FE_DFL_ENV** ない場合、または有効な **fenv_t** オブジェクトを指していない場合、後続の動作は定義されません。 最後に、 **feupdateenv** はローカルに格納された浮動小数点例外を発生させます。
 
 この関数を使用するには、呼び出しの前に `#pragma fenv_access(on)` ディレクティブを使用してアクセスを妨げる可能性のある浮動小数点の最適化をオフにする必要があります。 詳細については、「 [fenv_access](../../preprocessor/fenv-access.md)」を参照してください。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-|関数|C ヘッダー|C++ ヘッダー|
+|機能|C ヘッダー|C++ ヘッダー|
 |--------------|--------------|------------------|
 |**feupdateenv**|\<fenv.h>|\<cfenv>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

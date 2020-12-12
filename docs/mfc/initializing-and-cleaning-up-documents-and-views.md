@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: ドキュメントとビューの初期化とクリーンアップ'
 title: ドキュメントとビューの初期化と後処理
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - document objects [MFC], life cycle of
 - initializing views [MFC]
 ms.assetid: 95d6f09b-a047-4079-856a-ae7d0548e9d2
-ms.openlocfilehash: c5beed5618d4fa991160ad1688a5a686aeaa842f
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 023f81e46d67237d64836e843205c45558728b31
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84626365"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97290064"
 ---
 # <a name="initializing-and-cleaning-up-documents-and-views"></a>ドキュメントとビューの初期化と後処理
 
@@ -27,17 +28,17 @@ ms.locfileid: "84626365"
 - フレームワークはドキュメントとビューを閉じるとクリーンアップされます。これらのドキュメントとビューのメンバー関数内から、ヒープに割り当てられたメモリの割り当てを解除する必要があります。
 
 > [!NOTE]
-> クラスの[InitInstance](reference/cwinapp-class.md#initinstance)メンバー関数をオーバーライドする場合は、アプリケーション全体の初期化を行うことをお勧め `CWinApp` します。また、アプリケーション全体のクリーンアップは、 `CWinApp` メンバー関数[exitinstance](reference/cwinapp-class.md#exitinstance)のオーバーライドで実行することをお勧めします。
+> クラスの [InitInstance](reference/cwinapp-class.md#initinstance) メンバー関数をオーバーライドする場合は、アプリケーション全体の初期化を行うことをお勧め `CWinApp` します。また、アプリケーション全体のクリーンアップは、 `CWinApp` メンバー関数 [exitinstance](reference/cwinapp-class.md#exitinstance)のオーバーライドで実行することをお勧めします。
 
 MDI アプリケーションのドキュメント (およびそのフレームウィンドウとビューまたはビュー) のライフサイクルは次のとおりです。
 
 1. 動的作成中に、ドキュメントコンストラクターが呼び出されます。
 
-1. 新しいドキュメントごとに、ドキュメントの[OnNewDocument](reference/cdocument-class.md#onnewdocument)または[onopendocument](reference/cdocument-class.md#onopendocument)が呼び出されます。
+1. 新しいドキュメントごとに、ドキュメントの [OnNewDocument](reference/cdocument-class.md#onnewdocument) または [onopendocument](reference/cdocument-class.md#onopendocument) が呼び出されます。
 
 1. ユーザーは、その有効期間全体にわたってドキュメントを操作します。 通常、これは、ユーザーがビューを介してドキュメントデータを操作し、データを選択して編集すると発生します。 ビューは、ストレージの変更と他のビューの更新をドキュメントに渡します。 この期間中は、ドキュメントとビューの両方でコマンドが処理される可能性があります。
 
-1. フレームワークは、 [DeleteContents](reference/cdocument-class.md#deletecontents)を呼び出して、ドキュメントに固有のデータを削除します。
+1. フレームワークは、 [DeleteContents](reference/cdocument-class.md#deletecontents) を呼び出して、ドキュメントに固有のデータを削除します。
 
 1. ドキュメントのデストラクターが呼び出されます。
 
@@ -47,7 +48,7 @@ SDI アプリケーションでは、ドキュメントが最初に作成され�
 
 - [ドキュメントとビューの初期化](initializing-documents-and-views.md)
 
-- [ドキュメントとビューの後処理](cleaning-up-documents-and-views.md)
+- [ドキュメントとビューのクリーンアップ](cleaning-up-documents-and-views.md)
 
 ## <a name="see-also"></a>関連項目
 

@@ -1,20 +1,21 @@
 ---
+description: '詳細情報: 匿名クラス型'
 title: 匿名クラス型
 ms.date: 11/04/2016
 helpviewer_keywords:
 - class types [C++], anonymous
 - anonymous class types
 ms.assetid: 9ba667b2-8c2a-4c29-82a6-fa120b9233c8
-ms.openlocfilehash: 77f0a5517cee5e4baeacbbdcae47bdeea2853a97
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 91cc86602e4f9ead4d9da272e9cca4299be18e5c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87216636"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97288220"
 ---
 # <a name="anonymous-class-types"></a>匿名クラス型
 
-クラスは匿名にすることができます。つまり、*識別子*なしで宣言できます。 これは、 **`typedef`** 次に示すように、クラス名を名前に置き換える場合に便利です。
+クラスは匿名にすることができます。つまり、 *識別子* なしで宣言できます。 これは、 **`typedef`** 次に示すように、クラス名を名前に置き換える場合に便利です。
 
 ```cpp
 typedef struct
@@ -49,7 +50,7 @@ PTValue ptv;
 int i = ptv.iValue;
 ```
 
-匿名クラスには、特定の制限が適用されます  (匿名共用体の詳細については、「[共用体](../cpp/unions.md)」を参照してください)。匿名クラス:
+匿名クラスには、特定の制限が適用されます  (匿名共用体の詳細については、「 [共用体](../cpp/unions.md)」を参照してください)。匿名クラス:
 
 - コンストラクターやデストラクターを持つことはできません。
 

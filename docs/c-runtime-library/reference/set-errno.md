@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: _set_errno'
 title: _set_errno
 ms.date: 4/2/2020
 api_name:
@@ -29,16 +30,16 @@ helpviewer_keywords:
 - set_errno function
 - _set_errno function
 ms.assetid: d338914a-1894-4cf3-ae45-f2c4eb26590b
-ms.openlocfilehash: e889f8e2dabfffbcc69ff796fb21570b66b57fb0
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: f609e26468728d88346ef7b43faa2209ef9c77e7
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82913055"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97288855"
 ---
 # <a name="_set_errno"></a>_set_errno
 
-**Errno**グローバル変数の値を設定します。
+**Errno** グローバル変数の値を設定します。
 
 ## <a name="syntax"></a>構文
 
@@ -49,7 +50,7 @@ errno_t _set_errno( int error_value );
 ### <a name="parameters"></a>パラメーター
 
 *error_value*<br/>
-**Errno**の新しい値。
+**Errno** の新しい値。
 
 ## <a name="return-value"></a>戻り値
 
@@ -81,7 +82,7 @@ Oops: Illegal byte sequence
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|オプション ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|オプション ヘッダー|
 |-------------|---------------------|---------------------|
 |**_set_errno**|\<stdlib.h>|\<errno.h>|
 
@@ -90,4 +91,4 @@ Oops: Illegal byte sequence
 ## <a name="see-also"></a>関連項目
 
 [_get_errno](get-errno.md)<br/>
-[errno、_doserrno、_sys_errlist、_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)<br/>
+[errno、_doserrno、_sys_errlist、および _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)<br/>

@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: _fflush_nolock'
 title: _fflush_nolock
 ms.date: 4/2/2020
 api_name:
@@ -30,12 +31,12 @@ helpviewer_keywords:
 - streams, flushing
 - flushing
 ms.assetid: 5e33c4a1-b10c-4001-ad01-210757919291
-ms.openlocfilehash: 63d456288e978c79b4e0f4e67f9a4b2318bf0417
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 77b2db1c26a5121b74a8c3b92c50ac41af153802
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82920118"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97289284"
 ---
 # <a name="_fflush_nolock"></a>_fflush_nolock
 
@@ -60,13 +61,13 @@ int _fflush_nolock(
 
 ## <a name="remarks"></a>解説
 
-この関数は、 **fflush**の非ロックバージョンです。 他のスレッドによる干渉から保護されない点を除いて、 **fflush**と同じです。 他のスレッドをロックするオーバーヘッドが発生しないため、処理が速くなる場合があります。 この関数は、シングルスレッド アプリケーション、呼び出し元のスコープで既にスレッド分離を処理している場合などのスレッドセーフなコンテキストでのみご使用ください。
+この関数は、 **fflush** の非ロックバージョンです。 他のスレッドによる干渉から保護されない点を除いて、 **fflush** と同じです。 他のスレッドをロックするオーバーヘッドが発生しないため、処理が速くなる場合があります。 この関数は、シングルスレッド アプリケーション、呼び出し元のスコープで既にスレッド分離を処理している場合などのスレッドセーフなコンテキストでのみご使用ください。
 
 既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-|関数|必須ヘッダー|
+|機能|必須ヘッダー|
 |--------------|---------------------|
 |**_fflush_nolock**|\<stdio.h>|
 
