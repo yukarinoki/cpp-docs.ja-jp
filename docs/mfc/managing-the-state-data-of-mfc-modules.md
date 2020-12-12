@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「MFC モジュールの状態データの管理」を参照してください。
 title: MFC モジュールの状態データの管理
 ms.date: 11/19/2018
 helpviewer_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - multiple modules [MFC]
 - module state restored [MFC]
 ms.assetid: 81889c11-0101-4a66-ab3c-f81cf199e1bb
-ms.openlocfilehash: 64888b8ab53ebd80f328e1efe79df6256f30f9b6
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: e991e73b40f49f3be4630c26957c827aa6f1bf0b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84622572"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97228028"
 ---
 # <a name="managing-the-state-data-of-mfc-modules"></a>MFC モジュールの状態データの管理
 

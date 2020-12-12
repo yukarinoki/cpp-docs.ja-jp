@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: CConnectionPoint クラス'
 title: CConnectionPoint クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -24,12 +25,12 @@ helpviewer_keywords:
 - CConnectionPoint [MFC], OnAdvise
 - CConnectionPoint [MFC], QuerySinkInterface
 ms.assetid: f0f23a1e-5e8c-41a9-aa6c-1a4793b28e8f
-ms.openlocfilehash: f428ec597e0e4a56788fae2455eff80b286fda39
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 62525428d8f9bf5303f379140837d75e53cbb387
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87183085"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97227846"
 ---
 # <a name="cconnectionpoint-class"></a>CConnectionPoint クラス
 
@@ -57,7 +58,7 @@ class CConnectionPoint : public CCmdTarget
 |[CConnectionPoint:: GetContainer](#getcontainer)|接続マップを所有するコントロールのコンテナーを取得します。|
 |[CConnectionPoint:: GetIID](#getiid)|コネクションポイントのインターフェイス ID を取得します。|
 |[CConnectionPoint:: GetMaxConnections](#getmaxconnections)|コントロールでサポートされているコネクションポイントの最大数を取得します。|
-|[CConnectionPoint::GetNextConnection](#getnextconnection)|*Pos*の接続要素へのポインターを取得します。|
+|[CConnectionPoint::GetNextConnection](#getnextconnection)|*Pos* の接続要素へのポインターを取得します。|
 |[CConnectionPoint::GetStartPosition](#getstartposition)|呼び出しに渡すことができる位置の値を返すことによって、マップの反復処理を開始し `GetNextConnection` ます。|
 |[CConnectionPoint:: OnAdvise](#onadvise)|接続を確立または中断するときに、フレームワークによって呼び出されます。|
 |[CConnectionPoint:: QuerySinkInterface](#querysinkinterface)|要求されたシンクインターフェイスへのポインターを取得します。|
@@ -88,7 +89,7 @@ BEGIN_CONNECTION_PART および END_CONNECTION_PART マクロは、 `XSampleConn
 
 この例では、接続ポイントの現在の接続のセットを、の呼び出しによって取得し `SampleConnPt` `CConnectionPoint::GetConnections` ます。 次に、接続を反復処理し、 `ISampleSink::SinkFunc` アクティブなすべての接続に対してを呼び出します。
 
-の使用方法の詳細については `CConnectionPoint` 、「[接続ポイント](../../mfc/connection-points.md)」を参照してください。
+の使用方法の詳細については `CConnectionPoint` 、「 [接続ポイント](../../mfc/connection-points.md)」を参照してください。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -98,11 +99,11 @@ BEGIN_CONNECTION_PART および END_CONNECTION_PART マクロは、 `XSampleConn
 
 `CConnectionPoint`
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー :** afxdisp.h
 
-## <a name="cconnectionpointcconnectionpoint"></a><a name="cconnectionpoint"></a>CConnectionPoint::CConnectionPoint
+## <a name="cconnectionpointcconnectionpoint"></a><a name="cconnectionpoint"></a> CConnectionPoint::CConnectionPoint
 
 `CConnectionPoint` オブジェクトを構築します。
 
@@ -110,7 +111,7 @@ BEGIN_CONNECTION_PART および END_CONNECTION_PART マクロは、 `XSampleConn
 CConnectionPoint();
 ```
 
-## <a name="cconnectionpointgetconnections"></a><a name="getconnections"></a>CConnectionPoint:: GetConnections
+## <a name="cconnectionpointgetconnections"></a><a name="getconnections"></a> CConnectionPoint:: GetConnections
 
 コネクションポイントのすべてのアクティブな接続を取得するには、この関数を呼び出します。
 
@@ -122,7 +123,7 @@ const CPtrArray* GetConnections();
 
 アクティブな接続 (シンク) の配列へのポインター。 配列内の一部のポインターが NULL になる場合があります。 この配列内の NULL 以外の各ポインターは、キャスト演算子を使用して、シンクインターフェイスへのポインターに安全に変換できます。
 
-## <a name="cconnectionpointgetcontainer"></a><a name="getcontainer"></a>CConnectionPoint:: GetContainer
+## <a name="cconnectionpointgetcontainer"></a><a name="getcontainer"></a> CConnectionPoint:: GetContainer
 
 コネクションポイントのを取得するために、フレームワークによって呼び出され `IConnectionPointContainer` ます。
 
@@ -138,7 +139,7 @@ virtual LPCONNECTIONPOINTCONTAINER GetContainer();
 
 この関数は、通常、BEGIN_CONNECTION_PART マクロによって実装されます。
 
-## <a name="cconnectionpointgetiid"></a><a name="getiid"></a>CConnectionPoint:: GetIID
+## <a name="cconnectionpointgetiid"></a><a name="getiid"></a> CConnectionPoint:: GetIID
 
 コネクションポイントのインターフェイス ID を取得するために、フレームワークによって呼び出されます。
 
@@ -154,7 +155,7 @@ virtual REFIID GetIID() = 0;
 
 この接続ポイントのインターフェイス ID を返すには、この関数をオーバーライドします。
 
-## <a name="cconnectionpointgetmaxconnections"></a><a name="getmaxconnections"></a>CConnectionPoint:: GetMaxConnections
+## <a name="cconnectionpointgetmaxconnections"></a><a name="getmaxconnections"></a> CConnectionPoint:: GetMaxConnections
 
 コネクションポイントでサポートされている接続の最大数を取得するために、フレームワークによって呼び出されます。
 
@@ -172,9 +173,9 @@ virtual int GetMaxConnections();
 
 コントロールに接続できるシンクの数を制限する場合は、この関数をオーバーライドします。
 
-## <a name="cconnectionpointgetnextconnection"></a><a name="getnextconnection"></a>CConnectionPoint::GetNextConnection
+## <a name="cconnectionpointgetnextconnection"></a><a name="getnextconnection"></a> CConnectionPoint::GetNextConnection
 
-*Pos*の接続要素へのポインターを取得します。
+*Pos* の接続要素へのポインターを取得します。
 
 ```
 LPUNKNOWN GetNextConnection(POSITION& pos) const;
@@ -182,12 +183,12 @@ LPUNKNOWN GetNextConnection(POSITION& pos) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*po*<br/>
-前の `GetNextConnection` 呼び出しまたは[GetStartPosition](#getstartposition)呼び出しによって返される位置の値への参照を指定します。
+*pos*<br/>
+前の `GetNextConnection` 呼び出しまたは [GetStartPosition](#getstartposition) 呼び出しによって返される位置の値への参照を指定します。
 
 ### <a name="return-value"></a>戻り値
 
-*Pos*によって指定された接続要素へのポインター、または NULL。
+*Pos* によって指定された接続要素へのポインター、または NULL。
 
 ### <a name="remarks"></a>解説
 
@@ -197,7 +198,7 @@ LPUNKNOWN GetNextConnection(POSITION& pos) const;
 
 [!code-cpp[NVC_MFCConnectionPoints#4](../../mfc/codesnippet/cpp/cconnectionpoint-class_3.cpp)]
 
-## <a name="cconnectionpointgetstartposition"></a><a name="getstartposition"></a>CConnectionPoint::GetStartPosition
+## <a name="cconnectionpointgetstartposition"></a><a name="getstartposition"></a> CConnectionPoint::GetStartPosition
 
 [GetNextConnection](#getnextconnection)呼び出しに渡すことができる位置の値を返すことによって、マップの反復処理を開始します。
 
@@ -217,7 +218,7 @@ POSITION GetStartPosition() const;
 
   [CConnectionPoint:: GetNextConnection](#getnextconnection)の例を参照してください。
 
-## <a name="cconnectionpointonadvise"></a><a name="onadvise"></a>CConnectionPoint:: OnAdvise
+## <a name="cconnectionpointonadvise"></a><a name="onadvise"></a> CConnectionPoint:: OnAdvise
 
 接続が確立または切断されているときに、フレームワークによって呼び出されます。
 
@@ -236,7 +237,7 @@ virtual void OnAdvise(BOOL bAdvise);
 
 シンクが接続ポイントに接続または切断したときに通知する場合は、この関数をオーバーライドします。
 
-## <a name="cconnectionpointquerysinkinterface"></a><a name="querysinkinterface"></a>CConnectionPoint:: QuerySinkInterface
+## <a name="cconnectionpointquerysinkinterface"></a><a name="querysinkinterface"></a> CConnectionPoint:: QuerySinkInterface
 
 要求されたシンクインターフェイスへのポインターを取得します。
 
@@ -252,7 +253,7 @@ virtual HRESULT QuerySinkInterface(
 要求されているシンクインターフェイスの識別子。
 
 *ppInterface*<br/>
-*PUnkSink*によって識別されるインターフェイスポインターへのポインター。 オブジェクトがこのインターフェイスをサポートしていない場合、 \* *PPINTERFACE*は NULL に設定されます。
+*PUnkSink* によって識別されるインターフェイスポインターへのポインター。 オブジェクトがこのインターフェイスをサポートしていない場合、 \* *PPINTERFACE* は NULL に設定されます。
 
 ### <a name="return-value"></a>戻り値
 

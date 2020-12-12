@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「ファイル i/o クラス」を参照してください。
 title: ファイル i/o クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 - stream classes [MFC]
 - memory file classes [MFC]
 ms.assetid: 92821c3f-d9e1-47f6-98c9-3b632d86e811
-ms.openlocfilehash: 2fcf4dfc1388df0df2bc25928ec8541486c6bb2d
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: b2a0404864cd63ea3992ebada643b15531bcfc3e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84615668"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97228015"
 ---
 # <a name="file-io-classes"></a>ファイル I/O クラス
 
 これらのクラスは、従来のディスクファイル、メモリ内ファイル、アクティブなストリーム、および Windows ソケットに対するインターフェイスを提供します。 から派生したすべてのクラスを `CFile` オブジェクトと共に使用して、 `CArchive` シリアル化を実行できます。
 
-`CArchive` `CFile` 独自の入出力処理を作成する場合は、特に、次のクラスを使用します。 通常、これらのクラスから派生する必要はありません。 アプリケーションフレームワークを使用する場合、ドキュメントの関数をオーバーライドしてドキュメントの内容を**File**シリアル化する方法の**Open** **Save** `CArchive` `Serialize` 詳細を指定する限り、[ファイル] メニューの [開く] および [保存] コマンドの既定の実装では、(クラスを使用して) ファイル i/o が処理されます。 ファイルクラスとシリアル化の詳細については、「 [MFC のファイル](files-in-mfc.md)と[シリアル化](serialization-in-mfc.md)」を参照してください。
+`CArchive` `CFile` 独自の入出力処理を作成する場合は、特に、次のクラスを使用します。 通常、これらのクラスから派生する必要はありません。 アプリケーションフレームワークを使用する場合、ドキュメントの関数をオーバーライドしてドキュメントの内容をシリアル化する方法の  `CArchive` `Serialize` 詳細を指定する限り、[ファイル] メニューの [開く] および [保存] コマンドの既定の実装では、(クラスを使用して) ファイル i/o が処理されます。 ファイルクラスとシリアル化の詳細については、「 [MFC のファイル](files-in-mfc.md) と [シリアル化](serialization-in-mfc.md)」を参照してください。
 
 [CFile](reference/cfile-class.md)<br/>
 バイナリディスクファイルへのファイルインターフェイスを提供します。

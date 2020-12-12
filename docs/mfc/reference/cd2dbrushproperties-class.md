@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: CD2DBrushProperties クラス'
 title: CD2DBrushProperties クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - CD2DBrushProperties [MFC], CD2DBrushProperties
 - CD2DBrushProperties [MFC], CommonInit
 ms.assetid: c77d717f-0a16-4d74-b2ce-0ae1766ed6f9
-ms.openlocfilehash: 2db720fd09c62f8b86baecea9229d946f3892333
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: d16d08041b5096c8a5ad188201c6a06e21681849
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81754185"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97227560"
 ---
 # <a name="cd2dbrushproperties-class"></a>CD2DBrushProperties クラス
 
@@ -33,13 +34,13 @@ class CD2DBrushProperties : public D2D1_BRUSH_PROPERTIES;
 
 |名前|説明|
 |----------|-----------------|
-|[プロパティ::CD2Dブラシプロパティ](#cd2dbrushproperties)|オーバーロードされます。 構造体を`CD2D_BRUSH_PROPERTIES`作成します。|
+|[CD2DBrushProperties:: CD2DBrushProperties](#cd2dbrushproperties)|オーバーロードされます。 構造体を作成します。 `CD2D_BRUSH_PROPERTIES`|
 
 ### <a name="protected-methods"></a>プロテクト メソッド
 
 |名前|説明|
 |----------|-----------------|
-|[プロパティ::コモンイニト](#commoninit)|オブジェクトを初期化します。|
+|[CD2DBrushProperties:: CommonInit](#commoninit)|オブジェクトを初期化します。|
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -47,13 +48,13 @@ class CD2DBrushProperties : public D2D1_BRUSH_PROPERTIES;
 
 `CD2DBrushProperties`
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-**ヘッダー:** afxrendertarget.h
+**ヘッダー:** afxrendertarget
 
-## <a name="cd2dbrushpropertiescd2dbrushproperties"></a><a name="cd2dbrushproperties"></a>プロパティ::CD2Dブラシプロパティ
+## <a name="cd2dbrushpropertiescd2dbrushproperties"></a><a name="cd2dbrushproperties"></a> CD2DBrushProperties:: CD2DBrushProperties
 
-CD2D_BRUSH_PROPERTIES構造を作成します。
+CD2D_BRUSH_PROPERTIES 構造体を作成します。
 
 ```
 CD2DBrushProperties();
@@ -70,9 +71,9 @@ CD2DBrushProperties(
 ブラシの基本不透明度。 既定値は 1.0 です。
 
 *_transform*<br/>
-ブラシに適用する変換
+ブラシに適用する変換。
 
-## <a name="cd2dbrushpropertiescommoninit"></a><a name="commoninit"></a>プロパティ::コモンイニト
+## <a name="cd2dbrushpropertiescommoninit"></a><a name="commoninit"></a> CD2DBrushProperties:: CommonInit
 
 オブジェクトを初期化します。
 

@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: COleControlModule クラス'
 title: COleControlModule クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - COleControlModule class [MFC]
 - control modules [MFC]
 ms.assetid: 0721724d-d4af-4eda-ad34-5a2b27810dd4
-ms.openlocfilehash: f6d486c7bacb897d70d85414ac3d0bd0d13e447b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f88296b7c0e897f82227343b31ca2f639902256e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62310397"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97227482"
 ---
 # <a name="colecontrolmodule-class"></a>COleControlModule クラス
 
@@ -26,11 +27,11 @@ OLE コントロール モジュール オブジェクトを派生するため�
 class COleControlModule : public CWinApp
 ```
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-このクラスは、コントロール、モジュールを初期化するためのメンバー関数を提供します。 Microsoft Foundation classes を使用する各 OLE コントロール モジュールがから派生した 1 つのオブジェクトを含めることができますのみ`COleControlModule`します。 その他の C++ のグローバル オブジェクトが作成されるときに、このオブジェクトが構築されます。 派生宣言`COleControlModule`グローバル レベルのオブジェクト。
+このクラスには、コントロールモジュールを初期化するためのメンバー関数が用意されています。 Microsoft Foundation クラスを使用する各 OLE コントロールモジュールには、から派生したオブジェクトを1つだけ含めることができ `COleControlModule` ます。 このオブジェクトは、他の C++ グローバルオブジェクトが構築されるときに構築されます。 派生 `COleControlModule` オブジェクトをグローバルレベルで宣言します。
 
-使用しての詳細については、`COleControlModule`クラスを参照してください、 [CWinApp](../../mfc/reference/cwinapp-class.md)クラスと、アーティクル[ActiveX コントロール](../../mfc/mfc-activex-controls.md)します。
+クラスの使用方法の詳細については、 `COleControlModule` 「 [CWinApp](../../mfc/reference/cwinapp-class.md) クラス」と「 [ActiveX コントロール](../../mfc/mfc-activex-controls.md)」を参照してください。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -44,11 +45,11 @@ class COleControlModule : public CWinApp
 
 `COleControlModule`
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** afxctl.h
 
 ## <a name="see-also"></a>関連項目
 
-[MFC サンプル TESTHELP](../../overview/visual-cpp-samples.md)<br/>
+[MFC のサンプル TESTHELP](../../overview/visual-cpp-samples.md)<br/>
 [階層図](../../mfc/hierarchy-chart.md)

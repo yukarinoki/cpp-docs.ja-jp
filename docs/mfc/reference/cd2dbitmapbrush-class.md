@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: CD2DBitmapBrush クラス'
 title: CD2DBitmapBrush クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -42,16 +43,16 @@ helpviewer_keywords:
 - CD2DBitmapBrush [MFC], m_pBitmapBrush
 - CD2DBitmapBrush [MFC], m_pBitmapBrushProperties
 ms.assetid: 46ebbe34-66e0-44c8-af1d-d129e851de5e
-ms.openlocfilehash: 8d0804c094204bc0e8ab420e20c8b6a6a35dc70a
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: a9d4c1955b1318ecb273482cd49025090bf97d3d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81754293"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97227586"
 ---
 # <a name="cd2dbitmapbrush-class"></a>CD2DBitmapBrush クラス
 
-ID2D1 ビットマップ ブラシのラッパー。
+ID2D1BitmapBrush のラッパー。
 
 ## <a name="syntax"></a>構文
 
@@ -65,72 +66,72 @@ class CD2DBitmapBrush : public CD2DBrush;
 
 |名前|説明|
 |----------|-----------------|
-|[CD2D ビットマップブラシ::CD2D ビットマップブラシ](#cd2dbitmapbrush)|オーバーロードされます。 ファイルから CD2DBitmapBrush オブジェクトを構築します。|
-|[CD2D ビットマップブラシ:~CD2D ビットマップブラシ](#dtor)|デストラクターです。 D2D ビットマップ ブラシ オブジェクトが破棄されるときに呼び出されます。|
+|[CD2DBitmapBrush:: CD2DBitmapBrush](#cd2dbitmapbrush)|オーバーロードされます。 ファイルから CD2DBitmapBrush オブジェクトを構築します。|
+|[CD2DBitmapBrush:: ~ CD2DBitmapBrush](#dtor)|デストラクターです。 D2D bitmap brush オブジェクトが破棄されるときに呼び出されます。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
 |名前|説明|
 |----------|-----------------|
-|[CD2Dビットマップブラシ::アタッチ](#attach)|既存のリソース インターフェイスをオブジェクトにアタッチします。|
-|[CD2Dビットマップブラシ::作成](#create)|CD2D ビットマップブラシを作成します。 [(CD2D リソースをオーバーライドします::作成](../../mfc/reference/cd2dresource-class.md#create).)|
-|[CD2Dビットマップブラシ::Dエストロイ](#destroy)|オブジェクトを破棄します。 [(CD2Dブラシ::Dエストロイ](../../mfc/reference/cd2dbrush-class.md#destroy)をオーバーライドします。|
-|[CD2Dビットマップブラシ::Dエタッハ](#detach)|オブジェクトからリソース インターフェイスを切り離します。|
-|[CD2Dビットマップブラシ::取得](#get)|インターフェイスを返します。|
-|[ビットマップブラシを取得します。](#getbitmap)|このブラシが描画に使用するビットマップ ソースを取得します。|
-|[を使用します。](#getextendmodex)|ブラシがビットマップを越えて伸びる領域を水平方向に並べて表示するメソッドを取得します。|
-|[CD2Dビットマップブラシ::GetExtendModeY](#getextendmodey)|ブラシがビットマップを越えて伸びる領域を垂直方向に並べて表示するメソッドを取得します。|
-|[CD2Dビットマップブラシ::補間モードを取得します。](#getinterpolationmode)|ブラシ ビットマップの拡大縮小または回転時に使用される補間方法を取得します。|
-|[CD2D ビットマップブラシ::ビットマップを設定します。](#setbitmap)|このブラシが描画に使用するビットマップ ソースを指定します。|
-|[を使用します。](#setextendmodex)|ブラシがビットマップを越えて伸びる領域を水平に並べて表示する方法を指定します。|
-|[CD2Dビットマップブラシ::セットエクステンドモード](#setextendmodey)|ブラシがビットマップを越えて伸びる領域を垂直方向に並べて表示する方法を指定します。|
-|[CD2Dビットマップブラシ::補間モードの設定](#setinterpolationmode)|ブラシ ビットマップの拡大/縮小または回転時に使用する補間モードを指定します。|
+|[CD2DBitmapBrush:: Attach](#attach)|既存のリソースインターフェイスをオブジェクトにアタッチします。|
+|[CD2DBitmapBrush:: Create](#create)|CD2DBitmapBrush を作成します。 ( [CD2DResource:: Create](../../mfc/reference/cd2dresource-class.md#create)をオーバーライドします)。|
+|[CD2DBitmapBrush::D estroy](#destroy)|CD2DBitmapBrush オブジェクトを破棄します。 ( [CD2DBrush::D estroy](../../mfc/reference/cd2dbrush-class.md#destroy)をオーバーライドします。)|
+|[CD2DBitmapBrush::D etach](#detach)|オブジェクトからリソースインターフェイスをデタッチします。|
+|[CD2DBitmapBrush:: Get](#get)|ID2D1BitmapBrush インターフェイスを返します。|
+|[CD2DBitmapBrush:: GetBitmap](#getbitmap)|このブラシが描画に使用するビットマップソースを取得します。|
+|[CD2DBitmapBrush:: GetExtendModeX](#getextendmodex)|ブラシがビットマップの後ろにある領域を水平方向に並べて配置する方法を取得します。|
+|[CD2DBitmapBrush:: GetExtendModeY](#getextendmodey)|ビットマップの外側を拡張する領域をブラシが垂直方向にタイルする方法を取得します。|
+|[CD2DBitmapBrush:: GetInterpolationMode](#getinterpolationmode)|ブラシビットマップが拡大縮小または回転したときに使用される補間方式を取得します。|
+|[CD2DBitmapBrush:: SetBitmap](#setbitmap)|このブラシが描画に使用するビットマップソースを指定します|
+|[CD2DBitmapBrush:: SetExtendModeX](#setextendmodex)|ブラシがビットマップの後に拡張する領域を水平方向にタイルする方法を指定します。|
+|[CD2DBitmapBrush:: SetExtendModeY](#setextendmodey)|ビットマップの外側を拡張する領域をブラシが垂直方向にタイルする方法を指定します。|
+|[CD2DBitmapBrush:: SetInterpolationMode](#setinterpolationmode)|ブラシビットマップをスケールまたは回転するときに使用する補間モードを指定します|
 
 ### <a name="protected-methods"></a>プロテクト メソッド
 
 |名前|説明|
 |----------|-----------------|
-|[CD2Dビットマップブラシ::コモンイニト](#commoninit)|オブジェクトを初期化します。|
+|[CD2DBitmapBrush:: CommonInit](#commoninit)|オブジェクトを初期化します。|
 
 ### <a name="public-operators"></a>パブリック演算子
 
 |名前|説明|
 |----------|-----------------|
-|[CD2D ビットマップブラシ::演算子 ID2D1ビットマップブラシ*](#operator_id2d1bitmapbrush_star)|インターフェイスを返します。|
+|[CD2DBitmapBrush:: operator ID2D1BitmapBrush *](#operator_id2d1bitmapbrush_star)|ID2D1BitmapBrush インターフェイスを返します。|
 
 ### <a name="protected-data-members"></a>プロテクト データ メンバー
 
 |名前|説明|
 |----------|-----------------|
-|[CD2Dビットマップブラシ::m_pBitmap](#m_pbitmap)|CD2DBitmap オブジェクトへのポインターを格納します。|
-|[CD2Dビットマップブラシ::m_pBitmapBrush](#m_pbitmapbrush)|オブジェクトを指すポインターを格納します。|
-|[CD2Dビットマップブラシ::m_pBitmapBrushProperties](#m_pbitmapbrushproperties)|ビットマップ ブラシのプロパティ。|
+|[CD2DBitmapBrush:: m_pBitmap](#m_pbitmap)|CD2DBitmap オブジェクトへのポインターを格納します。|
+|[CD2DBitmapBrush:: m_pBitmapBrush](#m_pbitmapbrush)|ID2D1BitmapBrush オブジェクトへのポインターを格納します。|
+|[CD2DBitmapBrush:: m_pBitmapBrushProperties](#m_pbitmapbrushproperties)|ビットマップブラシのプロパティ。|
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
 [CObject](../../mfc/reference/cobject-class.md)
 
-[リソース](../../mfc/reference/cd2dresource-class.md)
+[CD2DResource](../../mfc/reference/cd2dresource-class.md)
 
-[CD2Dブラシ](../../mfc/reference/cd2dbrush-class.md)
+[CD2DBrush](../../mfc/reference/cd2dbrush-class.md)
 
 `CD2DBitmapBrush`
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-**ヘッダー:** afxrendertarget.h
+**ヘッダー:** afxrendertarget
 
-## <a name="cd2dbitmapbrushcd2dbitmapbrush"></a><a name="dtor"></a>CD2D ビットマップブラシ:~CD2D ビットマップブラシ
+## <a name="cd2dbitmapbrushcd2dbitmapbrush"></a><a name="dtor"></a> CD2DBitmapBrush:: ~ CD2DBitmapBrush
 
-デストラクターです。 D2D ビットマップ ブラシ オブジェクトが破棄されるときに呼び出されます。
+デストラクターです。 D2D bitmap brush オブジェクトが破棄されるときに呼び出されます。
 
 ```
 virtual ~CD2DBitmapBrush();
 ```
 
-## <a name="cd2dbitmapbrushattach"></a><a name="attach"></a>CD2Dビットマップブラシ::アタッチ
+## <a name="cd2dbitmapbrushattach"></a><a name="attach"></a> CD2DBitmapBrush:: Attach
 
-既存のリソース インターフェイスをオブジェクトにアタッチします。
+既存のリソースインターフェイスをオブジェクトにアタッチします。
 
 ```cpp
 void Attach(ID2D1BitmapBrush* pResource);
@@ -138,12 +139,12 @@ void Attach(ID2D1BitmapBrush* pResource);
 
 ### <a name="parameters"></a>パラメーター
 
-*リソース*<br/>
-既存のリソース インターフェイス。 NULL にすることはできません。
+*pResource*<br/>
+既存のリソースインターフェイス。 NULL にすることはできません
 
-## <a name="cd2dbitmapbrushcd2dbitmapbrush"></a><a name="cd2dbitmapbrush"></a>CD2D ビットマップブラシ::CD2D ビットマップブラシ
+## <a name="cd2dbitmapbrushcd2dbitmapbrush"></a><a name="cd2dbitmapbrush"></a> CD2DBitmapBrush:: CD2DBitmapBrush
 
-オブジェクトを構築します。
+CD2DBitmapBrush オブジェクトを構築します。
 
 ```
 CD2DBitmapBrush(
@@ -172,31 +173,31 @@ CD2DBitmapBrush(
 
 ### <a name="parameters"></a>パラメーター
 
-*ターゲット*<br/>
-レンダー ターゲットへのポインター。
+*pParentTarget*<br/>
+レンダーターゲットへのポインター。
 
-*プロパティ*<br/>
-ビットマップ ブラシの拡張モードと補間モードへのポインター。
+*pBitmapBrushProperties*<br/>
+ビットマップブラシの拡張モードと補間モードへのポインター。
 
-*プロパティ*<br/>
+*pBrushProperties*<br/>
 ブラシの不透明度と変換へのポインター。
 
-*b自動破壊*<br/>
+*bAutoDestroy*<br/>
 オブジェクトが所有者 (pParentTarget) によって破棄されることを示します。
 
-*UIResID*<br/>
+*uiResID*<br/>
 リソースのリソース ID 番号。
 
-*lpsz タイプ*<br/>
+*lpszType*<br/>
 リソースの種類を含む null で終わる文字列へのポインター。
 
-*サイズ最も大きな*<br/>
-ビットマップのコピー先のサイズ。
+*sizeDest*<br/>
+ビットマップのターゲットサイズ。
 
-*パス*<br/>
-ファイル名を含む null で終わる文字列へのポインター。
+*lpszImagePath*<br/>
+ファイルの名前を含む null で終わる文字列へのポインター。
 
-## <a name="cd2dbitmapbrushcommoninit"></a><a name="commoninit"></a>CD2Dビットマップブラシ::コモンイニト
+## <a name="cd2dbitmapbrushcommoninit"></a><a name="commoninit"></a> CD2DBitmapBrush:: CommonInit
 
 オブジェクトを初期化します。
 
@@ -206,12 +207,12 @@ void CommonInit(D2D1_BITMAP_BRUSH_PROPERTIES* pBitmapBrushProperties);
 
 ### <a name="parameters"></a>パラメーター
 
-*プロパティ*<br/>
-ビットマップ ブラシのプロパティへのポインター。
+*pBitmapBrushProperties*<br/>
+ビットマップブラシのプロパティへのポインター。
 
-## <a name="cd2dbitmapbrushcreate"></a><a name="create"></a>CD2Dビットマップブラシ::作成
+## <a name="cd2dbitmapbrushcreate"></a><a name="create"></a> CD2DBitmapBrush:: Create
 
-CD2D ビットマップブラシを作成します。
+CD2DBitmapBrush を作成します。
 
 ```
 virtual HRESULT Create(CRenderTarget* pRenderTarget);
@@ -219,24 +220,24 @@ virtual HRESULT Create(CRenderTarget* pRenderTarget);
 
 ### <a name="parameters"></a>パラメーター
 
-*ターゲットをレンダリングします。*<br/>
-レンダー ターゲットへのポインター。
+*pRenderTarget*<br/>
+レンダーターゲットへのポインター。
 
 ### <a name="return-value"></a>戻り値
 
-メソッドが成功した場合は、S_OK を返します。 それ以外の場合は、HRESULT エラー コードを返します。
+メソッドが成功した場合は、S_OK を返します。 それ以外の場合は、HRESULT エラーコードを返します。
 
-## <a name="cd2dbitmapbrushdestroy"></a><a name="destroy"></a>CD2Dビットマップブラシ::Dエストロイ
+## <a name="cd2dbitmapbrushdestroy"></a><a name="destroy"></a> CD2DBitmapBrush::D estroy
 
-オブジェクトを破棄します。
+CD2DBitmapBrush オブジェクトを破棄します。
 
 ```
 virtual void Destroy();
 ```
 
-## <a name="cd2dbitmapbrushdetach"></a><a name="detach"></a>CD2Dビットマップブラシ::Dエタッハ
+## <a name="cd2dbitmapbrushdetach"></a><a name="detach"></a> CD2DBitmapBrush::D etach
 
-オブジェクトからリソース インターフェイスを切り離します。
+オブジェクトからリソースインターフェイスをデタッチします。
 
 ```
 ID2D1BitmapBrush* Detach();
@@ -244,11 +245,11 @@ ID2D1BitmapBrush* Detach();
 
 ### <a name="return-value"></a>戻り値
 
-デタッチされたリソース インターフェイスへのポインター。
+デタッチされたリソースインターフェイスへのポインター。
 
-## <a name="cd2dbitmapbrushget"></a><a name="get"></a>CD2Dビットマップブラシ::取得
+## <a name="cd2dbitmapbrushget"></a><a name="get"></a> CD2DBitmapBrush:: Get
 
-インターフェイスを返します。
+ID2D1BitmapBrush インターフェイスを返します。
 
 ```
 ID2D1BitmapBrush* Get();
@@ -256,11 +257,11 @@ ID2D1BitmapBrush* Get();
 
 ### <a name="return-value"></a>戻り値
 
-ID2D1BitmapBrush インターフェイスへのポインターまたは NULL オブジェクトがまだ初期化されていない場合。
+ID2D1BitmapBrush インターフェイスへのポインター。オブジェクトがまだ初期化されていない場合は NULL。
 
-## <a name="cd2dbitmapbrushgetbitmap"></a><a name="getbitmap"></a>ビットマップブラシを取得します。
+## <a name="cd2dbitmapbrushgetbitmap"></a><a name="getbitmap"></a> CD2DBitmapBrush:: GetBitmap
 
-このブラシが描画に使用するビットマップ ソースを取得します。
+このブラシが描画に使用するビットマップソースを取得します。
 
 ```
 CD2DBitmap* GetBitmap();
@@ -268,11 +269,11 @@ CD2DBitmap* GetBitmap();
 
 ### <a name="return-value"></a>戻り値
 
-CD2DBitmap オブジェクトへのポインターまたは NULL オブジェクトがまだ初期化されていない場合。
+CD2DBitmap オブジェクトへのポインター。オブジェクトがまだ初期化されていない場合は NULL。
 
-## <a name="cd2dbitmapbrushgetextendmodex"></a><a name="getextendmodex"></a>を使用します。
+## <a name="cd2dbitmapbrushgetextendmodex"></a><a name="getextendmodex"></a> CD2DBitmapBrush:: GetExtendModeX
 
-ブラシがビットマップを越えて伸びる領域を水平方向に並べて表示するメソッドを取得します。
+ブラシがビットマップの後ろにある領域を水平方向に並べて配置する方法を取得します。
 
 ```
 D2D1_EXTEND_MODE GetExtendModeX() const;
@@ -280,11 +281,11 @@ D2D1_EXTEND_MODE GetExtendModeX() const;
 
 ### <a name="return-value"></a>戻り値
 
-ビットマップを越えて伸びる領域をブラシで水平に並べて表示する方法を指定する値
+ビットマップの前に拡張する領域をブラシで水平方向にタイルする方法を指定する値。
 
-## <a name="cd2dbitmapbrushgetextendmodey"></a><a name="getextendmodey"></a>CD2Dビットマップブラシ::GetExtendModeY
+## <a name="cd2dbitmapbrushgetextendmodey"></a><a name="getextendmodey"></a> CD2DBitmapBrush:: GetExtendModeY
 
-ブラシがビットマップを越えて伸びる領域を垂直方向に並べて表示するメソッドを取得します。
+ビットマップの外側を拡張する領域をブラシが垂直方向にタイルする方法を取得します。
 
 ```
 D2D1_EXTEND_MODE GetExtendModeY() const;
@@ -292,11 +293,11 @@ D2D1_EXTEND_MODE GetExtendModeY() const;
 
 ### <a name="return-value"></a>戻り値
 
-ビットマップを越えて伸びる領域をブラシで上下に並べて表示する方法を指定する値
+ビットマップの外側を拡張する領域をブラシが垂直方向にタイルする方法を指定する値。
 
-## <a name="cd2dbitmapbrushgetinterpolationmode"></a><a name="getinterpolationmode"></a>CD2Dビットマップブラシ::補間モードを取得します。
+## <a name="cd2dbitmapbrushgetinterpolationmode"></a><a name="getinterpolationmode"></a> CD2DBitmapBrush:: GetInterpolationMode
 
-ブラシ ビットマップの拡大縮小または回転時に使用される補間方法を取得します。
+ブラシビットマップが拡大縮小または回転したときに使用される補間方式を取得します。
 
 ```
 D2D1_BITMAP_INTERPOLATION_MODE GetInterpolationMode() const;
@@ -304,9 +305,9 @@ D2D1_BITMAP_INTERPOLATION_MODE GetInterpolationMode() const;
 
 ### <a name="return-value"></a>戻り値
 
-ブラシ ビットマップの拡大縮小または回転時に使用する補間方法
+ブラシビットマップのスケールまたは回転時に使用される補間方式
 
-## <a name="cd2dbitmapbrushm_pbitmap"></a><a name="m_pbitmap"></a>CD2Dビットマップブラシ::m_pBitmap
+## <a name="cd2dbitmapbrushm_pbitmap"></a><a name="m_pbitmap"></a> CD2DBitmapBrush:: m_pBitmap
 
 CD2DBitmap オブジェクトへのポインターを格納します。
 
@@ -314,25 +315,25 @@ CD2DBitmap オブジェクトへのポインターを格納します。
 CD2DBitmap* m_pBitmap;
 ```
 
-## <a name="cd2dbitmapbrushm_pbitmapbrush"></a><a name="m_pbitmapbrush"></a>CD2Dビットマップブラシ::m_pBitmapBrush
+## <a name="cd2dbitmapbrushm_pbitmapbrush"></a><a name="m_pbitmapbrush"></a> CD2DBitmapBrush:: m_pBitmapBrush
 
-オブジェクトを指すポインターを格納します。
+ID2D1BitmapBrush オブジェクトへのポインターを格納します。
 
 ```
 ID2D1BitmapBrush* m_pBitmapBrush;
 ```
 
-## <a name="cd2dbitmapbrushm_pbitmapbrushproperties"></a><a name="m_pbitmapbrushproperties"></a>CD2Dビットマップブラシ::m_pBitmapBrushProperties
+## <a name="cd2dbitmapbrushm_pbitmapbrushproperties"></a><a name="m_pbitmapbrushproperties"></a> CD2DBitmapBrush:: m_pBitmapBrushProperties
 
-ビットマップ ブラシのプロパティ。
+ビットマップブラシのプロパティ。
 
 ```
 D2D1_BITMAP_BRUSH_PROPERTIES* m_pBitmapBrushProperties;
 ```
 
-## <a name="cd2dbitmapbrushoperator-id2d1bitmapbrush"></a><a name="operator_id2d1bitmapbrush_star"></a>CD2D ビットマップブラシ::演算子 ID2D1ビットマップブラシ*
+## <a name="cd2dbitmapbrushoperator-id2d1bitmapbrush"></a><a name="operator_id2d1bitmapbrush_star"></a> CD2DBitmapBrush:: operator ID2D1BitmapBrush *
 
-インターフェイスを返します。
+ID2D1BitmapBrush インターフェイスを返します。
 
 ```
 operator ID2D1BitmapBrush*();
@@ -340,11 +341,11 @@ operator ID2D1BitmapBrush*();
 
 ### <a name="return-value"></a>戻り値
 
-ID2D1BitmapBrush インターフェイスへのポインターまたは NULL オブジェクトがまだ初期化されていない場合。
+ID2D1BitmapBrush インターフェイスへのポインター。オブジェクトがまだ初期化されていない場合は NULL。
 
-## <a name="cd2dbitmapbrushsetbitmap"></a><a name="setbitmap"></a>CD2D ビットマップブラシ::ビットマップを設定します。
+## <a name="cd2dbitmapbrushsetbitmap"></a><a name="setbitmap"></a> CD2DBitmapBrush:: SetBitmap
 
-このブラシが描画に使用するビットマップ ソースを指定します。
+このブラシが描画に使用するビットマップソースを指定します
 
 ```cpp
 void SetBitmap(CD2DBitmap* pBitmap);
@@ -352,12 +353,12 @@ void SetBitmap(CD2DBitmap* pBitmap);
 
 ### <a name="parameters"></a>パラメーター
 
-*ビットマップ*<br/>
-ブラシで使用されるビットマップ ソース
+*pBitmap*<br/>
+ブラシによって使用されるビットマップソース
 
-## <a name="cd2dbitmapbrushsetextendmodex"></a><a name="setextendmodex"></a>を使用します。
+## <a name="cd2dbitmapbrushsetextendmodex"></a><a name="setextendmodex"></a> CD2DBitmapBrush:: SetExtendModeX
 
-ブラシがビットマップを越えて伸びる領域を水平に並べて表示する方法を指定します。
+ブラシがビットマップの後に拡張する領域を水平方向にタイルする方法を指定します。
 
 ```cpp
 void SetExtendModeX(D2D1_EXTEND_MODE extendModeX);
@@ -365,12 +366,12 @@ void SetExtendModeX(D2D1_EXTEND_MODE extendModeX);
 
 ### <a name="parameters"></a>パラメーター
 
-*拡張モードX*<br/>
-ビットマップを越えて伸びる領域をブラシで水平に並べて表示する方法を指定する値
+*extendModeX*<br/>
+ビットマップの前に拡張する領域をブラシで水平方向にタイルする方法を指定する値。
 
-## <a name="cd2dbitmapbrushsetextendmodey"></a><a name="setextendmodey"></a>CD2Dビットマップブラシ::セットエクステンドモード
+## <a name="cd2dbitmapbrushsetextendmodey"></a><a name="setextendmodey"></a> CD2DBitmapBrush:: SetExtendModeY
 
-ブラシがビットマップを越えて伸びる領域を垂直方向に並べて表示する方法を指定します。
+ビットマップの外側を拡張する領域をブラシが垂直方向にタイルする方法を指定します。
 
 ```cpp
 void SetExtendModeY(D2D1_EXTEND_MODE extendModeY);
@@ -378,12 +379,12 @@ void SetExtendModeY(D2D1_EXTEND_MODE extendModeY);
 
 ### <a name="parameters"></a>パラメーター
 
-*拡張モード*<br/>
-ビットマップを越えて伸びる領域をブラシで上下に並べて表示する方法を指定する値
+*extendModeY*<br/>
+ビットマップの外側を拡張する領域をブラシが垂直方向にタイルする方法を指定する値。
 
-## <a name="cd2dbitmapbrushsetinterpolationmode"></a><a name="setinterpolationmode"></a>CD2Dビットマップブラシ::補間モードの設定
+## <a name="cd2dbitmapbrushsetinterpolationmode"></a><a name="setinterpolationmode"></a> CD2DBitmapBrush:: SetInterpolationMode
 
-ブラシ ビットマップの拡大/縮小または回転時に使用する補間モードを指定します。
+ブラシビットマップをスケールまたは回転するときに使用する補間モードを指定します
 
 ```cpp
 void SetInterpolationMode(D2D1_BITMAP_INTERPOLATION_MODE interpolationMode);
@@ -391,8 +392,8 @@ void SetInterpolationMode(D2D1_BITMAP_INTERPOLATION_MODE interpolationMode);
 
 ### <a name="parameters"></a>パラメーター
 
-*補間モード*<br/>
-ブラシ ビットマップの拡大縮小または回転時に使用する補間モード
+*interpolationMode*<br/>
+ブラシビットマップのスケールまたは回転時に使用される補間モード
 
 ## <a name="see-also"></a>関連項目
 

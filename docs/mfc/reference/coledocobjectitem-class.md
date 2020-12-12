@@ -1,5 +1,6 @@
 ---
-title: クラス
+description: '詳細情報: COleDocObjectItem クラス'
+title: COleDocObjectItem クラス
 ms.date: 11/04/2016
 f1_keywords:
 - COleDocObjectItem
@@ -24,14 +25,14 @@ helpviewer_keywords:
 - COleDocObjectItem [MFC], QueryCommand
 - COleDocObjectItem [MFC], Release
 ms.assetid: d150d306-8fd3-4831-b06d-afbe71d8fc9b
-ms.openlocfilehash: a696226185dd99b9e277e74d92cbe15c95cc900a
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: e483c614f8bc7558a827c51889bbffa7da7419b8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81375049"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97227222"
 ---
-# <a name="coledocobjectitem-class"></a>クラス
+# <a name="coledocobjectitem-class"></a>COleDocObjectItem クラス
 
 Active ドキュメント コンテインメントを実装します。
 
@@ -47,36 +48,36 @@ class COleDocObjectItem : public COleClientItem
 
 |名前|説明|
 |----------|-----------------|
-|[オブジェクトアイテムを選択します。](#coledocobjectitem)|項目を`COleDocObject`構築します。|
+|[COleDocObjectItem:: COleDocObjectItem](#coledocobjectitem)|項目を構築 `COleDocObject` します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
 |名前|説明|
 |----------|-----------------|
-|[オブジェクトアイテム::Do 既定の印刷](#dodefaultprinting)|既定のプリンター設定を使用して、コンテナー アプリケーションのドキュメントを印刷します。|
-|[オブジェクト::コマンド](#execcommand)|ユーザーが指定したコマンドを実行します。|
-|[オブジェクトアイテム::アクティブビュー](#getactiveview)|ドキュメントのアクティブ なビューを取得します。|
-|[オブジェクト::ページ数](#getpagecount)|コンテナー アプリケーションのドキュメント内のページ数を取得します。|
-|[印刷の準備を開始します。](#onprepareprinting)|コンテナー アプリケーションのドキュメントを印刷用に準備します。|
-|[オブジェクト::オンプリント](#onprint)|コンテナー アプリケーションのドキュメントを印刷します。|
-|[オブジェクト::クエリコマンド](#querycommand)|ユーザー インターフェイスのイベントによって生成された 1 つ以上のコマンドの状態を調べるためにクエリを実行します。|
-|[オブジェクト::リリース](#release)|OLE リンク アイテムへの接続を解放し、開いている場合は閉じます。 クライアント アイテムを破棄しません。|
+|[COleDocObjectItem::D oDefaultPrinting](#dodefaultprinting)|既定のプリンター設定を使用して、コンテナーアプリケーションのドキュメントを印刷します。|
+|[COleDocObjectItem:: ExecCommand](#execcommand)|ユーザーによって指定されたコマンドを実行します。|
+|[COleDocObjectItem:: GetActiveView](#getactiveview)|ドキュメントのアクティブなビューを取得します。|
+|[COleDocObjectItem:: GetPageCount](#getpagecount)|コンテナーアプリケーションのドキュメント内のページ数を取得します。|
+|[COleDocObjectItem:: OnPreparePrinting](#onprepareprinting)|コンテナーアプリケーションのドキュメントの印刷を準備します。|
+|[COleDocObjectItem:: OnPrint](#onprint)|コンテナーアプリケーションのドキュメントを印刷します。|
+|[COleDocObjectItem:: QueryCommand](#querycommand)|ユーザー インターフェイスのイベントによって生成された 1 つ以上のコマンドの状態を調べるためにクエリを実行します。|
+|[COleDocObjectItem:: Release](#release)|OLE リンクアイテムへの接続を解放し、開いている場合は閉じます。 は、クライアント項目を破棄しません。|
 
 ## <a name="remarks"></a>解説
 
-MFC では、Active ドキュメントは、通常の埋め込みで編集できる通常の埋め込みと同様に処理されます。
+MFC では、アクティブなドキュメントは通常の埋め込み先編集可能な埋め込みと同様に処理されますが、次の点が異なります。
 
-- 派生`COleDocument`クラスは、現在埋め込まれている項目のリストを保持します。ただし、これらの項目は-derived 項目である`COleDocObjectItem`可能性があります。
+- `COleDocument`派生クラスは、現在埋め込まれている項目のリストを保持しますが、これらの項目は派生した項目である場合もあり `COleDocObjectItem` ます。
 
-- アクティブドキュメントがアクティブな場合、インプレースアクティブの場合、ビューのクライアント領域全体が占有されます。
+- アクティブなドキュメントがアクティブな場合は、ビューのクライアント領域全体がアクティブな状態で表示されます。
 
-- Active ドキュメント コンテナは、[**ヘルプ**] メニューをフル コントロールで管理します。
+- アクティブなドキュメントコンテナーには、[ **ヘルプ** ] メニューのフルコントロールがあります。
 
-- **[ヘルプ**] メニューには、Active ドキュメント コンテナーとサーバーの両方のメニュー項目が含まれています。
+- [ **ヘルプ** ] メニューには、アクティブなドキュメントコンテナーとサーバーの両方のメニュー項目が表示されます。
 
-Active ドキュメント コンテナは **[ヘルプ**] メニューを所有するため、サーバーの**ヘルプ**メニュー メッセージをサーバーに転送する役割を担います。 この統合は によって`COleDocObjectItem`処理されます。
+アクティブなドキュメントコンテナーは [ **ヘルプ** ] メニューを所有しているので、サーバーの **ヘルプ** メニューメッセージをサーバーに転送する役割があります。 この統合は、によって処理され `COleDocObjectItem` ます。
 
-メニューの結合とアクティブ ドキュメントのアクティブ化の詳細については、「[アクティブ ドキュメントコンテインメント](../../mfc/active-document-containment.md)の概要 」を参照してください。
+メニューのマージとアクティブドキュメントのアクティブ化の詳細については、「 [Active ドキュメントコンテインメント](../../mfc/active-document-containment.md)の概要」を参照してください。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -90,13 +91,13 @@ Active ドキュメント コンテナは **[ヘルプ**] メニューを所有�
 
 `COleDocObjectItem`
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-**ヘッダー:** afxole.h
+**ヘッダー:** afxole
 
-## <a name="coledocobjectitemcoledocobjectitem"></a><a name="coledocobjectitem"></a>オブジェクトアイテムを選択します。
+## <a name="coledocobjectitemcoledocobjectitem"></a><a name="coledocobjectitem"></a> COleDocObjectItem:: COleDocObjectItem
 
-オブジェクトを初期化するには、このメンバー`COleDocObjectItem`関数を呼び出します。
+オブジェクトを初期化するには、このメンバー関数を呼び出し `COleDocObjectItem` ます。
 
 ```
 COleDocObjectItem(COleDocument* pContainerDoc = NULL);
@@ -104,12 +105,12 @@ COleDocObjectItem(COleDocument* pContainerDoc = NULL);
 
 ### <a name="parameters"></a>パラメーター
 
-*をクリックします。*<br/>
-アクティブなドキュメント`COleDocument`コンテナーとして機能するオブジェクトへのポインター。 IMPLEMENT_SERIALIZEを有効にするには、このパラメーターを NULL にする必要があります。 通常、OLE アイテムは NULL 以外のドキュメント ポインタで構成されます。
+*pContainerDoc*<br/>
+`COleDocument`アクティブなドキュメントコンテナーとして機能するオブジェクトへのポインター。 IMPLEMENT_SERIALIZE を有効にするには、このパラメーターを NULL にする必要があります。 通常、OLE 項目は NULL 以外のドキュメントポインターを使用して構築されます。
 
-## <a name="coledocobjectitemdodefaultprinting"></a><a name="dodefaultprinting"></a>オブジェクトアイテム::Do 既定の印刷
+## <a name="coledocobjectitemdodefaultprinting"></a><a name="dodefaultprinting"></a> COleDocObjectItem::D oDefaultPrinting
 
-既定の設定を使用して、フレームワークによってドキュメントに呼び出されます。
+フレームワークによって、既定の設定を使用してドキュメントに対して呼び出されます。
 
 ```
 static HRESULT DoDefaultPrinting(
@@ -119,15 +120,15 @@ static HRESULT DoDefaultPrinting(
 
 ### <a name="parameters"></a>パラメーター
 
-*呼び出し元*<br/>
-印刷コマンドを送信している[CView](../../mfc/reference/cview-class.md)オブジェクトへのポインター。
+*pCaller*<br/>
+Print コマンドを送信する [CView](../../mfc/reference/cview-class.md) オブジェクトへのポインター。
 
-*Pinfo*<br/>
-印刷するジョブを記述する[CPrintInfo](../../mfc/reference/cprintinfo-structure.md)オブジェクトへのポインター。
+*pInfo*<br/>
+印刷するジョブを記述する [CPrintInfo](../../mfc/reference/cprintinfo-structure.md) オブジェクトへのポインター。
 
-## <a name="coledocobjectitemexeccommand"></a><a name="execcommand"></a>オブジェクト::コマンド
+## <a name="coledocobjectitemexeccommand"></a><a name="execcommand"></a> COleDocObjectItem:: ExecCommand
 
-ユーザーが指定したコマンドを実行するには、このメンバー関数を呼び出します。
+このメンバー関数を呼び出して、ユーザーによって指定されたコマンドを実行します。
 
 ```
 HRESULT ExecCommand(
@@ -138,37 +139,37 @@ HRESULT ExecCommand(
 
 ### <a name="parameters"></a>パラメーター
 
-*をクリックします。*<br/>
-実行するコマンドの識別子。 によって識別されるグループに*含まれる*必要があります。
+*nCmdID*<br/>
+実行するコマンドの識別子。 *Pguidcmdgroup* によって識別されるグループに存在する必要があります。
 
-*をクリックします。*<br/>
-コマンド実行オプションを指定します。 デフォルトでは、ユーザーにプロンプトを表示せずにコマンドを実行するように設定されます。 値のリストについては[、OLECMDEXECOPT](/windows/win32/api/docobj/ne-docobj-olecmdexecopt)を参照してください。
+*nCmdExecOpt*<br/>
+コマンド実行オプションを指定します。 既定では、ユーザーにプロンプトを表示せずにコマンドを実行するように設定します。 値の一覧については、「 [OLECMDEXECOPT](/windows/win32/api/docobj/ne-docobj-olecmdexecopt) 」を参照してください。
 
-*グループ化*<br/>
-コマンド グループを表す一意の識別子です。 既定では、標準グループを指定する NULL。 *nCmdID*で渡されるコマンドは、グループに属している必要があります。
+*pguidCmdGroup*<br/>
+コマンドグループの一意識別子。 既定では、NULL は標準のグループを指定します。 *Ncmdid* で渡されるコマンドは、グループに属している必要があります。
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合はS_OKを返します。それ以外の場合は、次のいずれかのエラー コードを返します。
+成功した場合は S_OK を返します。それ以外の場合は、次のいずれかのエラーコードが返されます。
 
-|[値]|説明|
+|値|説明|
 |-----------|-----------------|
 |E_UNEXPECTED|Unexpected error occurred. (予期しないエラーが発生しました。)|
 |E_FAIL|エラーが発生しました。|
-|E_NOTIMPL|MFC 自体がコマンドの変換とディスパッチを試みることを示します。|
-|OLECMDERR_E_UNKNOWNGROUP|*pguidCmdGroup*は NULL 以外ですが、認識されたコマンド グループを指定しません。|
-|OLECMDERR_E_NOTSUPPORTED|*nCmdID*は、グループ pGroup の有効なコマンドとして認識されません。|
-|OLECMDERR_DISABLED|*nCmdID*で識別されたコマンドは無効になっており、実行できません。|
-|OLECMDERR_NOHELP|呼び出し元は*nCmdID*で識別されたコマンドに関するヘルプを求めましたが、ヘルプがありません。|
-|OLECMDERR_CANCELLED|ユーザーは実行をキャンセルしました。|
+|E_NOTIMPL|MFC 自体がコマンドの変換とディスパッチを試みる必要があることを示します。|
+|OLECMDERR_E_UNKNOWNGROUP|*Pguidcmdgroup* は NULL 以外ですが、認識されているコマンドグループを指定していません。|
+|OLECMDERR_E_NOTSUPPORTED|*Ncmdid* は、グループ pgroup の有効なコマンドとして認識されません。|
+|OLECMDERR_DISABLED|*Ncmdid* で識別されたコマンドは無効になっているため、実行できません。|
+|OLECMDERR_NOHELP|呼び出し元は *Ncmdid* で識別されたコマンドに関するヘルプを要求しましたが、ヘルプはありません。|
+|OLECMDERR_CANCELLED|ユーザーが実行を取り消しました。|
 
 ### <a name="remarks"></a>解説
 
-*pguidCmdGroup*と*nCmdID*パラメーターを一緒に呼び出すコマンドを一意に識別します。 *nCmdExecOpt*パラメーターは、実行する正確なアクションを指定します。
+*Pguidcmdgroup* と *ncmdid* パラメーターを一緒に実行すると、呼び出すコマンドが一意に識別されます。 *Ncmdexecopt* パラメーターは、実行する正確なアクションを指定します。
 
-## <a name="coledocobjectitemgetactiveview"></a><a name="getactiveview"></a>オブジェクトアイテム::アクティブビュー
+## <a name="coledocobjectitemgetactiveview"></a><a name="getactiveview"></a> COleDocObjectItem:: GetActiveView
 
-現在アクティブなビューの`IOleDocumentView`インターフェイスへのポインターを取得します。
+現在アクティブなビューのインターフェイスへのポインターを取得するには、このメンバー関数を呼び出し `IOleDocumentView` ます。
 
 ```
 LPOLEDOCUMENTVIEW GetActiveView() const;
@@ -176,15 +177,15 @@ LPOLEDOCUMENTVIEW GetActiveView() const;
 
 ### <a name="return-value"></a>戻り値
 
-現在アクティブなビューの[インターフェイス](/windows/win32/api/docobj/nn-docobj-ioledocumentview)へのポインター。 現在のビューがない場合は、NULL を返します。
+現在アクティブなビューの [IOleDocumentView](/windows/win32/api/docobj/nn-docobj-ioledocumentview) インターフェイスへのポインター。 現在のビューがない場合は、NULL を返します。
 
 ### <a name="remarks"></a>解説
 
-返された`IOleDocumentView`ポインターの参照カウントは、この関数から返される前にインクリメントされません。
+返されたポインターの参照カウント `IOleDocumentView` は、この関数によって返される前にインクリメントされません。
 
-## <a name="coledocobjectitemgetpagecount"></a><a name="getpagecount"></a>オブジェクト::ページ数
+## <a name="coledocobjectitemgetpagecount"></a><a name="getpagecount"></a> COleDocObjectItem:: GetPageCount
 
-ドキュメント内のページ数を取得します。
+ドキュメント内のページ数を取得するには、このメンバー関数を呼び出します。
 
 ```
 BOOL GetPageCount(
@@ -194,19 +195,19 @@ BOOL GetPageCount(
 
 ### <a name="parameters"></a>パラメーター
 
-*ページ*<br/>
-ドキュメントの最初のページの番号へのポインター。 呼び出し元がこの番号を必要としないことを示す NULL を指定できます。
+*[pnFirstPage]*<br/>
+ドキュメントの最初のページの番号へのポインター。 NULL にすることができます。これは、呼び出し元がこの番号を必要としないことを示します。
 
-*pc ページ*<br/>
-ドキュメント内のページの合計数へのポインター。 呼び出し元がこの番号を必要としないことを示す NULL を指定できます。
+*pcPages*<br/>
+ドキュメント内のページの合計数へのポインター。 NULL にすることができます。これは、呼び出し元がこの番号を必要としないことを示します。
 
 ### <a name="return-value"></a>戻り値
 
 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。
 
-## <a name="coledocobjectitemonprepareprinting"></a><a name="onprepareprinting"></a>印刷の準備を開始します。
+## <a name="coledocobjectitemonprepareprinting"></a><a name="onprepareprinting"></a> COleDocObjectItem:: OnPreparePrinting
 
-このメンバー関数は、ドキュメントを印刷用に準備するために、フレームワークによって呼び出されます。
+このメンバー関数は、印刷用のドキュメントを準備するためにフレームワークによって呼び出されます。
 
 ```
 static BOOL OnPreparePrinting(
@@ -217,20 +218,20 @@ static BOOL OnPreparePrinting(
 
 ### <a name="parameters"></a>パラメーター
 
-*呼び出し元*<br/>
-印刷コマンドを送信している[CView](../../mfc/reference/cview-class.md)オブジェクトへのポインター。
+*pCaller*<br/>
+Print コマンドを送信する [CView](../../mfc/reference/cview-class.md) オブジェクトへのポインター。
 
-*Pinfo*<br/>
-印刷するジョブを記述する[CPrintInfo](../../mfc/reference/cprintinfo-structure.md)オブジェクトへのポインター。
+*pInfo*<br/>
+印刷するジョブを記述する [CPrintInfo](../../mfc/reference/cprintinfo-structure.md) オブジェクトへのポインター。
 
-*すべてを印刷する*<br/>
-文書全体を印刷するかどうかを指定します。
+*bPrintAll*<br/>
+ドキュメント全体を印刷するかどうかを指定します。
 
 ### <a name="return-value"></a>戻り値
 
 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。
 
-## <a name="coledocobjectitemonprint"></a><a name="onprint"></a>オブジェクト::オンプリント
+## <a name="coledocobjectitemonprint"></a><a name="onprint"></a> COleDocObjectItem:: OnPrint
 
 このメンバー関数は、ドキュメントを印刷するためにフレームワークによって呼び出されます。
 
@@ -243,16 +244,16 @@ static void OnPrint(
 
 ### <a name="parameters"></a>パラメーター
 
-*呼び出し元*<br/>
-印刷コマンドを送信している CView オブジェクトへのポインター。
+*pCaller*<br/>
+Print コマンドを送信する CView オブジェクトへのポインター。
 
-*Pinfo*<br/>
-印刷するジョブを記述する[CPrintInfo](../../mfc/reference/cprintinfo-structure.md)オブジェクトへのポインター。
+*pInfo*<br/>
+印刷するジョブを記述する [CPrintInfo](../../mfc/reference/cprintinfo-structure.md) オブジェクトへのポインター。
 
-*すべてを印刷する*<br/>
-文書全体を印刷するかどうかを指定します。
+*bPrintAll*<br/>
+ドキュメント全体を印刷するかどうかを指定します。
 
-## <a name="coledocobjectitemquerycommand"></a><a name="querycommand"></a>オブジェクト::クエリコマンド
+## <a name="coledocobjectitemquerycommand"></a><a name="querycommand"></a> COleDocObjectItem:: QueryCommand
 
 ユーザー インターフェイスのイベントによって生成された 1 つ以上のコマンドの状態を調べるためにクエリを実行します。
 
@@ -266,29 +267,29 @@ HRESULT QueryCommand(
 
 ### <a name="parameters"></a>パラメーター
 
-*をクリックします。*<br/>
-照会されるコマンドの識別子。
+*nCmdID*<br/>
+クエリ対象のコマンドの識別子。
 
-*ステータス*<br/>
-クエリの結果として返されるフラグへのポインター。 使用可能な値の一覧については、 [OLECMDF](/windows/win32/api/docobj/ne-docobj-olecmdf)を参照してください。
+*pdwStatus*<br/>
+クエリの結果として返されるフラグへのポインター。 使用可能な値の一覧については、「 [OLECMDF](/windows/win32/api/docobj/ne-docobj-olecmdf)」を参照してください。
 
-*をクリックします。*<br/>
-単一のコマンドの名前と状態情報を返す[OLECMDTEXT](/windows/win32/api/docobj/ns-docobj-olecmdtext)構造体へのポインター。 呼び出し元がこの情報を必要としないことを示すには、NULL を指定できます。
+*pCmdText*<br/>
+1つのコマンドの名前と状態の情報を返す [OLECMDTEXT](/windows/win32/api/docobj/ns-docobj-olecmdtext) 構造体へのポインター。 NULL にすると、呼び出し元がこの情報を必要としないことを示すことができます。
 
-*グループ化*<br/>
-コマンド グループを表す一意の識別子です。標準グループを指定するには NULL を指定できます。
+*pguidCmdGroup*<br/>
+コマンドグループの一意識別子。標準のグループを指定する場合は NULL を指定できます。
 
 ### <a name="return-value"></a>戻り値
 
-戻り値の完全な一覧については、Windows SDK の[「IOleCommandTarget::クエリステータス](/windows/win32/api/docobj/nf-docobj-iolecommandtarget-querystatus)」を参照してください。
+戻り値の完全な一覧については、Windows SDK の「 [IOleCommandTarget:: QueryStatus](/windows/win32/api/docobj/nf-docobj-iolecommandtarget-querystatus) 」を参照してください。
 
 ### <a name="remarks"></a>解説
 
-このメンバー関数は、Windows SDK で説明されているように、[メソッド](/windows/win32/api/docobj/nf-docobj-iolecommandtarget-querystatus)の機能をエミュレートします。
+このメンバー関数は、Windows SDK で説明されているように、 [IOleCommandTarget:: QueryStatus](/windows/win32/api/docobj/nf-docobj-iolecommandtarget-querystatus) メソッドの機能をエミュレートします。
 
-## <a name="coledocobjectitemrelease"></a><a name="release"></a>オブジェクト::リリース
+## <a name="coledocobjectitemrelease"></a><a name="release"></a> COleDocObjectItem:: Release
 
-OLE リンク アイテムへの接続を解放し、開いている場合は閉じます。 クライアント アイテムを破棄しません。
+OLE リンクアイテムへの接続を解放し、開いている場合は閉じます。 は、クライアント項目を破棄しません。
 
 ```
 virtual void Release(OLECLOSE dwCloseOption = OLECLOSE_NOSAVE);
@@ -296,17 +297,17 @@ virtual void Release(OLECLOSE dwCloseOption = OLECLOSE_NOSAVE);
 
 ### <a name="parameters"></a>パラメーター
 
-*をクリックします。*<br/>
-OLE アイテムが読み込まれた状態に戻ったときに、どのような状況で OLE アイテムが保存されるのかを指定するフラグ。 使用できる値の一覧については[、「COleClientItem::Close」を参照してください](../../mfc/reference/coleclientitem-class.md#close)。
+*dwCloseOption*<br/>
+OLE 項目が読み込まれた状態に戻ったときに、どのような状況で OLE 項目を保存するかを指定するフラグ。 使用可能な値の一覧については、「 [COleClientItem:: Close](../../mfc/reference/coleclientitem-class.md#close)」を参照してください。
 
 ### <a name="remarks"></a>解説
 
-クライアント アイテムを破棄しません。
+は、クライアント項目を破棄しません。
 
 ## <a name="see-also"></a>関連項目
 
 [MFC サンプル MFCBIND](../../overview/visual-cpp-samples.md)<br/>
-[クラス](../../mfc/reference/coleclientitem-class.md)<br/>
-[階層グラフ](../../mfc/hierarchy-chart.md)<br/>
-[クラス](../../mfc/reference/coleclientitem-class.md)<br/>
+[COleClientItem クラス](../../mfc/reference/coleclientitem-class.md)<br/>
+[階層図](../../mfc/hierarchy-chart.md)<br/>
+[COleClientItem クラス](../../mfc/reference/coleclientitem-class.md)<br/>
 [CDocObjectServerItem クラス](../../mfc/reference/cdocobjectserveritem-class.md)

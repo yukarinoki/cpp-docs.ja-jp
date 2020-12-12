@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: wctrans'
 title: wctrans
 ms.date: 11/04/2016
 api_name:
@@ -27,12 +28,12 @@ helpviewer_keywords:
 - characters, converting
 - wctrans function
 ms.assetid: 215404bf-6d60-489c-9ae9-880e6b586162
-ms.openlocfilehash: a75de3b699d0eb5ec6117d0f627e6a8ba34dbc62
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 59efe03f5851525d38c5ebd93520367338a97a79
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70944886"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97229653"
 ---
 # <a name="wctrans"></a>wctrans
 
@@ -53,26 +54,26 @@ wctrans_t wctrans(
 
 ## <a name="return-value"></a>戻り値
 
-現在のロケールの**LC_CTYPE**カテゴリで、プロパティ文字列*プロパティ*と一致する名前を持つマッピングが定義されていない場合、この関数は0を返します。 それ以外の場合、[towctrans](towctrans.md) への後続の呼び出しに対する 2 番目の引数として使用するのに適した 0 以外の値を返します。
+現在のロケールの **LC_CTYPE** カテゴリに、プロパティ文字列 *プロパティ* と一致する名前を持つマッピングが定義されていない場合、この関数は0を返します。 それ以外の場合、[towctrans](towctrans.md) への後続の呼び出しに対する 2 番目の引数として使用するのに適した 0 以外の値を返します。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 この関数では、文字コードの 1 つのセットから別のセットへのマッピングを指定します。
 
 次の呼び出しのペアの動作はすべてのロケールで同じですが、"C" ロケールであっても追加のマッピングを定義できます。
 
-|関数|同等なもの|
+|機能|同等なもの|
 |--------------|-------------|
 |tolower (c)|towctrans (c、wctrans ("towlower"))|
 |towupper (c)|towctrans (c、wctrans ("toupper"))|
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**wctrans**|\<wctype.h>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
 ## <a name="example"></a>例
 

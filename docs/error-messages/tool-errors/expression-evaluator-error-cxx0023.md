@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「式エバリュエーターエラー CXX0023」を参照してください。
 title: 式エバリュエーター エラー CXX0023
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - CXX0023
 - CAN0023
 ms.assetid: 2de27692-dfb5-433f-82b3-80f118756eec
-ms.openlocfilehash: a4fc5c7e1afa1cefab6205ad9e6ade8378abb964
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 3c4f1237643174380474c8664d8ebf703fc83b13
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80195787"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97228093"
 ---
 # <a name="expression-evaluator-error-cxx0023"></a>式エバリュエーター エラー CXX0023
 

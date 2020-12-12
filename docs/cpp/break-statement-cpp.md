@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: break ステートメント (C++)'
 title: break ステートメント (C++)
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - break keyword [C++]
 ms.assetid: 63739928-8985-4b05-93ce-016322e6da3d
-ms.openlocfilehash: 30ca602ecc65099adff7300f730c500a31fe0ed5
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 13efaf55307f7f1d7decaf7cd0039c84b3141fc9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87227609"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97229575"
 ---
 # <a name="break-statement-c"></a>break ステートメント (C++)
 
@@ -25,7 +26,7 @@ break;
 
 ## <a name="remarks"></a>解説
 
-ステートメントは、 **`break`** 条件付き[スイッチ](../cpp/switch-statement-cpp.md)ステートメントと、 [do](../cpp/do-while-statement-cpp.md)、 [for](../cpp/for-statement-cpp.md)、および[while](../cpp/while-statement-cpp.md)ループステートメントと共に使用します。
+ステートメントは、 **`break`** 条件付き [スイッチ](../cpp/switch-statement-cpp.md) ステートメントと、 [do](../cpp/do-while-statement-cpp.md)、 [for](../cpp/for-statement-cpp.md)、および [while](../cpp/while-statement-cpp.md) ループステートメントと共に使用します。
 
 ステートメントでは、ステートメントに **`switch`** **`break`** よってプログラムがステートメントの外部で次のステートメントを実行し **`switch`** ます。 ステートメントを使用しない **`break`** 場合、句を含め、一致するラベルからステートメントの最後までのすべてのステートメント **`case`** **`switch`** **`default`** が実行されます。
 

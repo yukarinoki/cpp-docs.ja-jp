@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: is_null_pointer クラス'
 title: is_null_pointer クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - is_null_pointer
 ms.assetid: f3b3601b-f162-4803-a6e9-dabf5c3876cc
-ms.openlocfilehash: b306753146a51bde842b55e4f36d3c1afa82591d
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 91a8b6a27668af72d7641ce1fe36dafc119f5aa7
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68455845"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97230667"
 ---
-# <a name="isnullpointer-class"></a>is_null_pointer クラス
+# <a name="is_null_pointer-class"></a>is_null_pointer クラス
 
 型が std::nullptr_t であるかどうかをテストします。
 
@@ -29,13 +30,13 @@ struct is_null_pointer;
 *\T*\
 照会する型。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-型が`std::nullptr_t` *T*の場合、型の述語のインスタンスは true を保持します。それ以外の場合は、false を保持します。
+型が *T* の場合、型の述語のインスタンスは true `std::nullptr_t` を保持します。それ以外の場合は、false を保持します。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-**ヘッダー:** \<type_traits>
+**ヘッダー:**\<type_traits>
 
 **名前空間:** std
 

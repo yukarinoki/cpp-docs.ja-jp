@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: _bstr_t クラス'
 title: _bstr_t クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,18 +9,18 @@ helpviewer_keywords:
 - _bstr_t class
 - BSTR object [C++], COM encapsulation
 ms.assetid: 58841fef-fe21-4a84-aab9-780262b5201f
-ms.openlocfilehash: f521681da10eeda3b8024b0865d5164021296353
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 562b8eb871ddcd63e7df70c84e61e80a5bf934b5
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88838712"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97229406"
 ---
 # <a name="_bstr_t-class"></a>_bstr_t クラス
 
 **Microsoft 固有の仕様**
 
-`_bstr_t`オブジェクトは、 [BSTR データ型](/previous-versions/windows/desktop/automat/bstr)をカプセル化します。 クラスは、およびなどの api への関数呼び出しによってリソースの割り当てと解放を管理し `SysAllocString` `SysFreeString` `BSTR` ます。 **_Bstr_t**クラスは、過剰なオーバーヘッドを避けるために参照カウントを使用します。
+`_bstr_t`オブジェクトは、 [BSTR データ型](/previous-versions/windows/desktop/automat/bstr)をカプセル化します。 クラスは、およびなどの api への関数呼び出しによってリソースの割り当てと解放を管理し `SysAllocString` `SysFreeString` `BSTR` ます。 **_Bstr_t** クラスは、過剰なオーバーヘッドを避けるために参照カウントを使用します。
 
 ### <a name="construction"></a>建設
 
@@ -29,7 +30,7 @@ ms.locfileid: "88838712"
 
 ### <a name="operations"></a>操作
 
-| 関数 | 説明 |
+| 機能 | 説明 |
 |--|--|
 | [Assign](../cpp/bstr-t-assign.md) | `BSTR` を `BSTR` でラップされた `_bstr_t` にコピーします。 |
 | [[アタッチ]](../cpp/bstr-t-attach.md) | `_bstr_t` ラッパーを `BSTR` にリンクします。 |
@@ -39,7 +40,7 @@ ms.locfileid: "88838712"
 | [GetBSTR](../cpp/bstr-t-getbstr.md) | `BSTR` でラップされた `_bstr_t` の先頭を指します。 |
 | [length](../cpp/bstr-t-length.md) | `_bstr_t` の文字数を返します。 |
 
-### <a name="operators"></a>演算子
+### <a name="operators"></a>オペレーター
 
 | 演算子 | 説明 |
 |--|--|
@@ -52,7 +53,7 @@ ms.locfileid: "88838712"
 
 **Microsoft 固有の仕様はここまで**
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:**\<comutil.h>
 

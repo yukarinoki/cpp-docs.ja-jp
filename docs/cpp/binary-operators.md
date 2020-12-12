@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「二項演算子」を参照してください。
 title: 二項演算子
 ms.date: 06/14/2018
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - operators [C++], binary
 - binary operators [C++]
 ms.assetid: c0e7fbff-bc87-4708-8333-504ac09ee83e
-ms.openlocfilehash: f44217b68f6700603218c6f4f3e846075b7e7d55
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: cfb897a3df7cdb3d76f7af82f694e1cf09284cc7
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87229130"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97229601"
 ---
 # <a name="binary-operators"></a>二項演算子
 
@@ -22,8 +23,8 @@ ms.locfileid: "87229130"
 |演算子|名前|
 |--------------|----------|
 |**,**|コンマ|
-|**!=**|非等値|
-|**%**|Modulus|
+|**!=**|不等式|
+|**%**|剰余|
 |**%=**|剰余/代入|
 |**&**|ビット演算子 AND|
 |**&&**|論理積|
@@ -58,13 +59,13 @@ ms.locfileid: "87229130"
 
 > *ret-型* **`operator`***op* **(** *arg* **)**
 
-ここで、 *ret 型*は戻り値の型、 *op*は前の表に示した演算子の1つであり、 *arg*は任意の型の引数です。
+ここで、 *ret 型* は戻り値の型、 *op* は前の表に示した演算子の1つであり、 *arg* は任意の型の引数です。
 
 二項演算子関数をグローバル関数として宣言するには、次の形式で宣言する必要があります。
 
 > *ret-型* **`operator`***op* **(** _arg1_**、** _arg2_ **)**
 
-ここで、 *ret 型*と*op*は、メンバー演算子関数について説明されているように、 *arg1*と*arg2*は引数です。 少なくとも 1 つの引数がクラス型である必要があります。
+ここで、 *ret 型* と *op* は、メンバー演算子関数について説明されているように、 *arg1* と *arg2* は引数です。 少なくとも 1 つの引数がクラス型である必要があります。
 
 > [!NOTE]
 > 二項演算子の戻り値の型に制限はありません。ただし、ほとんどのユーザー定義の二項演算子は、クラス型かクラス型への参照を返します。

@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: _ismbbpunct、_ismbbpunct_l'
 title: _ismbbpunct、_ismbbpunct_l
 ms.date: 4/2/2020
 api_name:
@@ -34,12 +35,12 @@ helpviewer_keywords:
 - ismbbpunct_l function
 - _ismbbpunct_l function
 ms.assetid: 1976c9d3-7d1a-415f-ac52-2715c7bb56eb
-ms.openlocfilehash: bee75f971f6e185b4081ba123e6aef5e1865a14e
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: a476bae27cf97a43b0a78146c81cb59293f406a8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82918654"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97229692"
 ---
 # <a name="_ismbbpunct-_ismbbpunct_l"></a>_ismbbpunct、_ismbbpunct_l
 
@@ -59,7 +60,7 @@ int _ismbbpunct_l(
 
 ### <a name="parameters"></a>パラメーター
 
-*40u-c*<br/>
+*c*<br/>
 テストする整数。
 
 *locale*<br/>
@@ -67,7 +68,7 @@ int _ismbbpunct_l(
 
 ## <a name="return-value"></a>戻り値
 
-整数*c*が非 ASCII の区切り記号の場合、 **_ismbbpunct**は0以外の値を返します。 **_ismbbpunct**は、ロケールに依存する任意の文字設定に現在のロケールを使用します。 **_ismbbpunct_l**は、渡されたロケールを使用する点を除いて同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
+整数 *c* が非 ASCII の区切り記号の場合、 **_ismbbpunct** は0以外の値を返します。 **_ismbbpunct** は、ロケールに依存する任意の文字設定に現在のロケールを使用します。 **_ismbbpunct_l** は、渡されたロケールを使用する点を除いて同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
 
 ## <a name="remarks"></a>解説
 
@@ -75,7 +76,7 @@ int _ismbbpunct_l(
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**_ismbbpunct**|\<mbctype.h>|
 |**_ismbbpunct_l**|\<mbctype.h>|

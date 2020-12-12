@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: COleCurrency クラス'
 title: COleCurrency クラス
 ms.date: 08/29/2019
 f1_keywords:
@@ -22,12 +23,12 @@ helpviewer_keywords:
 - COleCurrency [MFC], m_cur
 - COleCurrency [MFC], m_status
 ms.assetid: 3a36e345-303f-46fb-a57c-858274378a8d
-ms.openlocfilehash: ced4554701cef5fd6f790b9e37f4c1b41746b1ad
-ms.sourcegitcommit: 13f42c339fb7af935e3a93ac80e350d5e784c9f1
+ms.openlocfilehash: 4a877d455de3f4254711a752bc422bb1cbdcd8c8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/31/2020
-ms.locfileid: "87470967"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97227391"
 ---
 # <a name="colecurrency-class"></a>COleCurrency クラス
 
@@ -66,8 +67,8 @@ class COleCurrency
 |[operator + =、-=](#operator_plus_minus_eq)|このオブジェクトの値を加算および減算し `COleCurrency` `COleCurrency` ます。|
 |[演算子 */](#operator_star)|`COleCurrency`整数値で値をスケーリングします。|
 |[operator * =、/=](#operator_star_div_eq)|この `COleCurrency` 値を整数値でスケーリングします。|
-|[ <<演算子](#operator_stream)|値を `COleCurrency` `CArchive` またはに出力 `CDumpContext` します。|
-|[ >>演算子](#operator_stream)|`COleCurrency`からオブジェクトを入力 `CArchive` します。|
+|[ <<演算子 ](#operator_stream)|値を `COleCurrency` `CArchive` またはに出力 `CDumpContext` します。|
+|[ >>演算子 ](#operator_stream)|`COleCurrency`からオブジェクトを入力 `CArchive` します。|
 |[演算子の通貨](#operator_currency)|値を `COleCurrency` 通貨に変換します。|
 |[operator = =、<、<= など](#colecurrency_relational_operators)|2つ `COleCurrency` の値を比較します。|
 
@@ -78,23 +79,23 @@ class COleCurrency
 |[COleCurrency:: m_cur](#m_cur)|このオブジェクトの基になる通貨を格納 `COleCurrency` します。|
 |[COleCurrency:: m_status](#m_status)|このオブジェクトの状態を格納 `COleCurrency` します。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-`COleCurrency`に基底クラスがありません。
+`COleCurrency` に基底クラスがありません。
 
 通貨は、1万によってスケーリングされた8バイトの2の補数整数値として実装されます。 これは、15 桁の整数部と 4 桁の小数部を持つ固定小数点数として表現されます。 通貨データ型は、金額を含む計算や、精度が重要な固定小数点計算に非常に便利です。 OLE オートメーションのデータ型に使用できる型の1つです `VARIANT` 。
 
-`COleCurrency`は、この固定小数点型の基本的な算術演算も実装します。 サポートされている操作は、固定小数点数の計算中に発生する丸め誤差を制御するために選択されています。
+`COleCurrency` は、この固定小数点型の基本的な算術演算も実装します。 サポートされている操作は、固定小数点数の計算中に発生する丸め誤差を制御するために選択されています。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
 `COleCurrency`
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー :** afxdisp.h
 
-## <a name="colecurrencycolecurrency"></a><a name="colecurrency"></a>COleCurrency:: COleCurrency
+## <a name="colecurrencycolecurrency"></a><a name="colecurrency"></a> COleCurrency:: COleCurrency
 
 `COleCurrency` オブジェクトを構築します。
 
@@ -120,15 +121,15 @@ COleCurrency(
 *varSrc*<br/>
 `VARIANT` `COleVariant` 通貨値 (VT_CY) に変換して新しいオブジェクトにコピーする既存のデータ構造 (オブジェクトなど) `COleCurrency` 。
 
-*nunits*、 *nFractionalUnits*は、新しいオブジェクトにコピーされる値の単位と小数部 (1/10000) を示し `COleCurrency` ます。
+*nunits*、 *nFractionalUnits* は、新しいオブジェクトにコピーされる値の単位と小数部 (1/10000) を示し `COleCurrency` ます。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 これらのすべてのコンストラクターは `COleCurrency` 、指定された値に初期化された新しいオブジェクトを作成します。 これらの各コンストラクターの簡単な説明を次に示します。 特に明記されていない限り、新しい項目の状態 `COleCurrency` は "有効" に設定されます。
 
 - COleCurrency () は、 `COleCurrency` 0 (ゼロ) に初期化されたオブジェクトを構築します。
 
-- COleCurrency ( `cySrc` ) は、 `COleCurrency` [通貨](/windows/win32/api/wtypes/ns-wtypes-cy-r1)値からオブジェクトを構築します。
+- COleCurrency ( `cySrc` ) は、 `COleCurrency` [通貨](/windows/win32/api/wtypes/ns-wtypes-cy-r1) 値からオブジェクトを構築します。
 
 - COleCurrency ( `curSrc` ) は、 `COleCurrency` 既存のオブジェクトからオブジェクトを構築 `COleCurrency` します。 新しいオブジェクトは、ソースオブジェクトと同じ状態になります。
 
@@ -144,7 +145,7 @@ COleCurrency(
 
 [!code-cpp[NVC_MFCOleContainer#10](../../mfc/codesnippet/cpp/colecurrency-class_1.cpp)]
 
-## <a name="colecurrencyformat"></a><a name="format"></a>COleCurrency:: Format
+## <a name="colecurrencyformat"></a><a name="format"></a> COleCurrency:: Format
 
 通貨値の書式設定された表現を作成するには、このメンバー関数を呼び出します。
 
@@ -166,7 +167,7 @@ CString Format(DWORD  dwFlags = 0, LCID  lcid = LANG_USER_DEFAULT) const;
 
 `CString`書式設定された通貨値を格納している。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 この値は、ローカル言語仕様 (ロケール Id) を使用して書式設定されます。 返される値に通貨記号は含まれません。 このオブジェクトの状態 `COleCurrency` が null の場合、戻り値は空の文字列になります。 状態が無効である場合は、文字列リソース IDS_INVALID_CURRENCY によって返される文字列が指定されます。
 
@@ -174,7 +175,7 @@ CString Format(DWORD  dwFlags = 0, LCID  lcid = LANG_USER_DEFAULT) const;
 
 [!code-cpp[NVC_MFCOleContainer#11](../../mfc/codesnippet/cpp/colecurrency-class_2.cpp)]
 
-## <a name="colecurrencygetstatus"></a><a name="getstatus"></a>COleCurrency:: GetStatus
+## <a name="colecurrencygetstatus"></a><a name="getstatus"></a> COleCurrency:: GetStatus
 
 指定したオブジェクトの状態 (有効性) を取得するには、このメンバー関数を呼び出し `COleCurrency` ます。
 
@@ -186,7 +187,7 @@ CurrencyStatus GetStatus() const;
 
 この値の状態を返し `COleCurrency` ます。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 戻り値は、クラス内で定義されている列挙型によって定義され `CurrencyStatus` `COleCurrency` ます。
 
@@ -200,11 +201,11 @@ enum CurrencyStatus {
 
 これらの状態値の簡単な説明については、次の一覧を参照してください。
 
-- `COleCurrency::valid`このオブジェクトが有効であることを示し `COleCurrency` ます。
+- `COleCurrency::valid` このオブジェクトが有効であることを示し `COleCurrency` ます。
 
-- `COleCurrency::invalid`このオブジェクトが無効であることを示します。つまり `COleCurrency` 、値が正しくない可能性があります。
+- `COleCurrency::invalid` このオブジェクトが無効であることを示します。つまり `COleCurrency` 、値が正しくない可能性があります。
 
-- `COleCurrency::null`このオブジェクトが null であること、つまり `COleCurrency` 、このオブジェクトに値が指定されていないことを示します。 (これは、C++ NULL ではなく、"値がない" というデータベースの意味では "null" です)。
+- `COleCurrency::null` このオブジェクトが null であること、つまり `COleCurrency` 、このオブジェクトに値が指定されていないことを示します。 (これは、C++ NULL ではなく、"値がない" というデータベースの意味では "null" です)。
 
 オブジェクトの状態 `COleCurrency` は、次の場合には無効です。
 
@@ -214,7 +215,7 @@ enum CurrencyStatus {
 
 - 無効な値がこのオブジェクトに割り当てられた場合は。
 
-- このオブジェクトの状態が[SetStatus](#setstatus)を使用して明示的に無効に設定された場合は。
+- このオブジェクトの状態が [SetStatus](#setstatus)を使用して明示的に無効に設定された場合は。
 
 状態が無効に設定されている可能性のある操作の詳細については、次のメンバー関数を参照してください。
 
@@ -234,18 +235,18 @@ enum CurrencyStatus {
 
 [!code-cpp[NVC_MFCOleContainer#12](../../mfc/codesnippet/cpp/colecurrency-class_3.cpp)]
 
-## <a name="colecurrencym_cur"></a><a name="m_cur"></a>COleCurrency:: m_cur
+## <a name="colecurrencym_cur"></a><a name="m_cur"></a> COleCurrency:: m_cur
 
-このオブジェクトの基になる[通貨](/windows/win32/api/wtypes/ns-wtypes-cy-r1)構造 `COleCurrency` 。
+このオブジェクトの基になる [通貨](/windows/win32/api/wtypes/ns-wtypes-cy-r1) 構造 `COleCurrency` 。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 > [!CAUTION]
 > `CURRENCY`この関数によって返されるポインターによってアクセスされる構造体の値を変更すると、このオブジェクトの値が変更され `COleCurrency` ます。 このオブジェクトの状態は変更されません `COleCurrency` 。
 
 詳細については、Windows SDK の「 [CURRENCY](/windows/win32/api/wtypes/ns-wtypes-cy-r1) 」エントリを参照してください。
 
-## <a name="colecurrencym_status"></a><a name="m_status"></a>COleCurrency:: m_status
+## <a name="colecurrencym_status"></a><a name="m_status"></a> COleCurrency:: m_status
 
 このデータメンバーの型は列挙型であり `CurrencyStatus` 、クラス内で定義されてい `COleCurrency` ます。
 
@@ -257,15 +258,15 @@ enum CurrencyStatus{
 };
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 これらの状態値の簡単な説明については、次の一覧を参照してください。
 
-- `COleCurrency::valid`このオブジェクトが有効であることを示し `COleCurrency` ます。
+- `COleCurrency::valid` このオブジェクトが有効であることを示し `COleCurrency` ます。
 
-- `COleCurrency::invalid`このオブジェクトが無効であることを示します。つまり `COleCurrency` 、値が正しくない可能性があります。
+- `COleCurrency::invalid` このオブジェクトが無効であることを示します。つまり `COleCurrency` 、値が正しくない可能性があります。
 
-- `COleCurrency::null`このオブジェクトが null であること、つまり `COleCurrency` 、このオブジェクトに値が指定されていないことを示します。 (これは、C++ NULL ではなく、"値がない" というデータベースの意味では "null" です)。
+- `COleCurrency::null` このオブジェクトが null であること、つまり `COleCurrency` 、このオブジェクトに値が指定されていないことを示します。 (これは、C++ NULL ではなく、"値がない" というデータベースの意味では "null" です)。
 
 オブジェクトの状態 `COleCurrency` は、次の場合には無効です。
 
@@ -275,7 +276,7 @@ enum CurrencyStatus{
 
 - 無効な値がこのオブジェクトに割り当てられた場合は。
 
-- このオブジェクトの状態が[SetStatus](#setstatus)を使用して明示的に無効に設定された場合は。
+- このオブジェクトの状態が [SetStatus](#setstatus)を使用して明示的に無効に設定された場合は。
 
 状態が無効に設定されている可能性のある操作の詳細については、次のメンバー関数を参照してください。
 
@@ -292,9 +293,9 @@ enum CurrencyStatus{
 - [operator * =、/=](#operator_star_div_eq)
 
 > [!CAUTION]
-> このデータメンバーは、高度なプログラミングの状況を対象としています。 インラインメンバー関数[GetStatus](#getstatus)および[SetStatus](#setstatus)を使用する必要があります。 `SetStatus`このデータメンバーを明示的に設定する方法については、「」を参照してください。
+> このデータメンバーは、高度なプログラミングの状況を対象としています。 インラインメンバー関数 [GetStatus](#getstatus) および [SetStatus](#setstatus)を使用する必要があります。 `SetStatus`このデータメンバーを明示的に設定する方法については、「」を参照してください。
 
-## <a name="colecurrencyoperator-"></a><a name="operator_eq"></a>COleCurrency:: operator =
+## <a name="colecurrencyoperator-"></a><a name="operator_eq"></a> COleCurrency:: operator =
 
 これらのオーバーロードされた代入演算子は、source currency 値をこのオブジェクトにコピー `COleCurrency` します。
 
@@ -304,7 +305,7 @@ const COleCurrency& operator=(const COleCurrency& curSrc);
 const COleCurrency& operator=(const VARIANT& varSrc);
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 各演算子の簡単な説明を次に示します。
 
@@ -312,7 +313,7 @@ const COleCurrency& operator=(const VARIANT& varSrc);
 
 - **operator = (** `curSrc` **)** オペランドの値と状態。既存の `COleCurrency` オブジェクトは、このオブジェクトにコピーされ `COleCurrency` ます。
 
-- **operator = (** *varsrc* **)**`VARIANT`値 (または[COleVariant](../../mfc/reference/colevariant-class.md)オブジェクト) から currency () への変換 `VT_CY` が成功すると、変換後の値がこのオブジェクトにコピーされ、 `COleCurrency` その状態が有効に設定されます。 変換が成功しなかった場合、オブジェクトの値 `COleCurrency` は0に設定され、その状態は無効になります。
+- **operator = (** *varsrc* **)**`VARIANT`値 (または [COleVariant](../../mfc/reference/colevariant-class.md)オブジェクト) から currency () への変換 `VT_CY` が成功すると、変換後の値がこのオブジェクトにコピーされ、 `COleCurrency` その状態が有効に設定されます。 変換が成功しなかった場合、オブジェクトの値 `COleCurrency` は0に設定され、その状態は無効になります。
 
 詳細については、Windows SDK の「 [CURRENCY](/windows/win32/api/wtypes/ns-wtypes-cy-r1) 」と「 [VARIANT](/windows/win32/api/oaidl/ns-oaidl-variant) 」のエントリを参照してください。
 
@@ -320,7 +321,7 @@ const COleCurrency& operator=(const VARIANT& varSrc);
 
 [!code-cpp[NVC_MFCOleContainer#15](../../mfc/codesnippet/cpp/colecurrency-class_4.cpp)]
 
-## <a name="colecurrencyoperator---"></a><a name="operator_plus_minus"></a>COleCurrency:: operator +、-
+## <a name="colecurrencyoperator---"></a><a name="operator_plus_minus"></a> COleCurrency:: operator +、-
 
 これらの演算子を使用すると、2つの値の加算と減算を行ったり、値の符号を変更したりすることができ `COleCurrency` `COleCurrency` ます。
 
@@ -330,7 +331,7 @@ COleCurrency operator-(const COleCurrency& cur) const;
 COleCurrency operator-() const;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 オペランドのいずれかが null の場合、結果の値の状態 `COleCurrency` は null になります。
 
@@ -338,13 +339,13 @@ COleCurrency operator-() const;
 
 オペランドが無効で、もう一方が null でない場合、結果の値の状態 `COleCurrency` は無効になります。
 
-有効、無効、および null 状態の値の詳細については、 [m_status](#m_status)メンバー変数を参照してください。
+有効、無効、および null 状態の値の詳細については、 [m_status](#m_status) メンバー変数を参照してください。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_MFCOleContainer#16](../../mfc/codesnippet/cpp/colecurrency-class_5.cpp)]
 
-## <a name="colecurrencyoperator---"></a><a name="operator_plus_minus_eq"></a>COleCurrency:: operator + =、-=
+## <a name="colecurrencyoperator---"></a><a name="operator_plus_minus_eq"></a> COleCurrency:: operator + =、-=
 
 このオブジェクトとの間で値の加算と減算を行うことができ `COleCurrency` `COleCurrency` ます。
 
@@ -353,7 +354,7 @@ const COleCurrency& operator+=(const COleCurrency& cur);
 const COleCurrency& operator-=(const COleCurrency& cur);
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 オペランドのいずれかが null の場合、このオブジェクトの状態 `COleCurrency` は null に設定されます。
 
@@ -361,13 +362,13 @@ const COleCurrency& operator-=(const COleCurrency& cur);
 
 オペランドのいずれかが無効で、もう一方が null でない場合、このオブジェクトの状態 `COleCurrency` は無効に設定されます。
 
-有効、無効、および null 状態の値の詳細については、 [m_status](#m_status)メンバー変数を参照してください。
+有効、無効、および null 状態の値の詳細については、 [m_status](#m_status) メンバー変数を参照してください。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_MFCOleContainer#17](../../mfc/codesnippet/cpp/colecurrency-class_6.cpp)]
 
-## <a name="colecurrencyoperator--and-"></a><a name="operator_star"></a>COleCurrency:: operator \* および/
+## <a name="colecurrencyoperator--and-"></a><a name="operator_star"></a> COleCurrency:: operator \* および/
 
 `COleCurrency`整数値で値をスケーリングできます。
 
@@ -376,7 +377,7 @@ COleCurrency operator*(long nOperand) const;
 COleCurrency operator/(long nOperand) const;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 `COleCurrency`オペランドが null の場合、結果の値の状態 `COleCurrency` は null になります。
 
@@ -384,13 +385,13 @@ COleCurrency operator/(long nOperand) const;
 
 `COleCurrency`オペランドが無効な場合、結果の値の状態 `COleCurrency` は無効になります。
 
-有効、無効、および null 状態の値の詳細については、 [m_status](#m_status)メンバー変数を参照してください。
+有効、無効、および null 状態の値の詳細については、 [m_status](#m_status) メンバー変数を参照してください。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_MFCOleContainer#18](../../mfc/codesnippet/cpp/colecurrency-class_7.cpp)]
 
-## <a name="colecurrencyoperator--"></a><a name="operator_star_div_eq"></a>COleCurrency:: operator \* =、/=
+## <a name="colecurrencyoperator--"></a><a name="operator_star_div_eq"></a> COleCurrency:: operator \* =、/=
 
 この `COleCurrency` 値を整数値でスケーリングできます。
 
@@ -399,7 +400,7 @@ const COleCurrency& operator*=(long nOperand);
 const COleCurrency& operator/=(long nOperand);
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 `COleCurrency`オペランドが null の場合、このオブジェクトの状態 `COleCurrency` は null に設定されます。
 
@@ -407,7 +408,7 @@ const COleCurrency& operator/=(long nOperand);
 
 `COleCurrency`オペランドが無効な場合、このオブジェクトの状態 `COleCurrency` は無効に設定されます。
 
-有効、無効、および null 状態の値の詳細については、 [m_status](#m_status)メンバー変数を参照してください。
+有効、無効、および null 状態の値の詳細については、 [m_status](#m_status) メンバー変数を参照してください。
 
 ### <a name="example"></a>例
 
@@ -431,11 +432,11 @@ friend CArchive& operator>>(
     COleCurrency& curSrc);
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 抽出 ( **>>** ) 演算子は、アーカイブからの読み込みをサポートしています。
 
-## <a name="colecurrencyoperator-currency"></a><a name="operator_currency"></a>COleCurrency:: operator CURRENCY
+## <a name="colecurrencyoperator-currency"></a><a name="operator_currency"></a> COleCurrency:: operator CURRENCY
 
 `CURRENCY`このオブジェクトから値がコピーされる構造体を返し `COleCurrency` ます。
 
@@ -443,9 +444,9 @@ friend CArchive& operator>>(
 operator CURRENCY() const;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-## <a name="colecurrencyparsecurrency"></a><a name="parsecurrency"></a>COleCurrency::P Arセキュリティー
+## <a name="colecurrencyparsecurrency"></a><a name="parsecurrency"></a> COleCurrency::P Arセキュリティー
 
 文字列を解析して通貨値を読み取るには、このメンバー関数を呼び出します。
 
@@ -476,23 +477,23 @@ throw(COleException*);
 
 文字列が通貨値に正常に変換された場合は0以外の値。それ以外の場合は0。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 ソース文字列内の数値以外の文字の意味には、ローカル言語仕様 (ロケール Id) が使用されます。
 
-ロケール ID の値の詳細については、「[複数の言語のサポート](/previous-versions/windows/desktop/automat/supporting-multiple-national-languages)」を参照してください。
+ロケール ID の値の詳細については、「 [複数の言語のサポート](/previous-versions/windows/desktop/automat/supporting-multiple-national-languages)」を参照してください。
 
 文字列が通貨値に正常に変換された場合、このオブジェクトの値 `COleCurrency` はその値に設定され、その状態が有効になります。
 
 文字列を通貨値に変換できなかった場合、または数値のオーバーフローがあった場合、このオブジェクトの状態 `COleCurrency` は無効になります。
 
-メモリ割り当てエラーのために文字列の変換に失敗した場合、この関数は[CMemoryException](../../mfc/reference/cmemoryexception-class.md)をスローします。 その他のエラー状態では、この関数は[COleException](../../mfc/reference/coleexception-class.md)をスローします。
+メモリ割り当てエラーのために文字列の変換に失敗した場合、この関数は [CMemoryException](../../mfc/reference/cmemoryexception-class.md)をスローします。 その他のエラー状態では、この関数は [COleException](../../mfc/reference/coleexception-class.md)をスローします。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_MFCOleContainer#13](../../mfc/codesnippet/cpp/colecurrency-class_9.cpp)]
 
-## <a name="colecurrency-relational-operators"></a><a name="colecurrency_relational_operators"></a>COleCurrency 関係演算子
+## <a name="colecurrency-relational-operators"></a><a name="colecurrency_relational_operators"></a> COleCurrency 関係演算子
 
 2つの通貨値を比較して、条件が true の場合は0以外の値を返します。それ以外の場合は0です。
 
@@ -505,7 +506,7 @@ BOOL operator<=(const COleCurrency& cur) const;
 BOOL operator>=(const COleCurrency& cur) const;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 > [!NOTE]
 > 順序付け操作 ( **<** 、、) の戻り **\<=**, **>** 値 **>=** は、いずれかのオペランドの状態が null または無効である場合は未定義です。 等値演算子 ( `==` , `!=` ) は、オペランドの状態を考慮します。
@@ -514,7 +515,7 @@ BOOL operator>=(const COleCurrency& cur) const;
 
 [!code-cpp[NVC_MFCOleContainer#20](../../mfc/codesnippet/cpp/colecurrency-class_10.cpp)]
 
-## <a name="colecurrencysetcurrency"></a><a name="setcurrency"></a>COleCurrency:: SetCurrency
+## <a name="colecurrencysetcurrency"></a><a name="setcurrency"></a> COleCurrency:: SetCurrency
 
 このメンバー関数を呼び出して、このオブジェクトの単位と小数部を設定し `COleCurrency` ます。
 
@@ -526,9 +527,9 @@ void SetCurrency(
 
 ### <a name="parameters"></a>パラメーター
 
-*nunits*、 *nFractionalUnits*は、このオブジェクトにコピーされる値の単位と小数部 (1/10000) を示し `COleCurrency` ます。
+*nunits*、 *nFractionalUnits* は、このオブジェクトにコピーされる値の単位と小数部 (1/10000) を示し `COleCurrency` ます。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 小数部分の絶対値が1万より大きい場合は、次の例の3番目の例に示すように、適切な調整が単位に対して行われます。
 
@@ -538,7 +539,7 @@ void SetCurrency(
 
 [!code-cpp[NVC_MFCOleContainer#14](../../mfc/codesnippet/cpp/colecurrency-class_11.cpp)]
 
-## <a name="colecurrencysetstatus"></a><a name="setstatus"></a>COleCurrency:: SetStatus
+## <a name="colecurrencysetstatus"></a><a name="setstatus"></a> COleCurrency:: SetStatus
 
 このメンバー関数を呼び出して、このオブジェクトの状態 (有効性) を設定し `COleCurrency` ます。
 
@@ -551,9 +552,9 @@ void SetStatus(CurrencyStatus  status  );
 *status*<br/>
 このオブジェクトの新しい状態 `COleCurrency` 。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-*Status*パラメーターの値は、クラス内で定義されている列挙型によって定義され `CurrencyStatus` `COleCurrency` ます。
+*Status* パラメーターの値は、クラス内で定義されている列挙型によって定義され `CurrencyStatus` `COleCurrency` ます。
 
 ```
 enum CurrencyStatus {
@@ -565,14 +566,14 @@ enum CurrencyStatus {
 
 これらの状態値の簡単な説明については、次の一覧を参照してください。
 
-- `COleCurrency::valid`このオブジェクトが有効であることを示し `COleCurrency` ます。
+- `COleCurrency::valid` このオブジェクトが有効であることを示し `COleCurrency` ます。
 
-- `COleCurrency::invalid`このオブジェクトが無効であることを示します。つまり `COleCurrency` 、値が正しくない可能性があります。
+- `COleCurrency::invalid` このオブジェクトが無効であることを示します。つまり `COleCurrency` 、値が正しくない可能性があります。
 
-- `COleCurrency::null`このオブジェクトが null であること、つまり `COleCurrency` 、このオブジェクトに値が指定されていないことを示します。 (これは、C++ NULL ではなく、"値がない" というデータベースの意味では "null" です)。
+- `COleCurrency::null` このオブジェクトが null であること、つまり `COleCurrency` 、このオブジェクトに値が指定されていないことを示します。 (これは、C++ NULL ではなく、"値がない" というデータベースの意味では "null" です)。
 
 > [!CAUTION]
-> この関数は、高度なプログラミングの状況に適しています。 この関数は、このオブジェクトのデータを変更しません。 この値は、通常、状態を null または無効に設定するために使用されます。 代入演算子 ( [operator =](#operator_eq)) と[setcurrency](#setcurrency)では、ソース値に基づいてオブジェクトの状態がに設定されることに注意してください。
+> この関数は、高度なプログラミングの状況に適しています。 この関数は、このオブジェクトのデータを変更しません。 この値は、通常、状態を null または無効に設定するために使用されます。 代入演算子 ( [operator =](#operator_eq)) と [setcurrency](#setcurrency) では、ソース値に基づいてオブジェクトの状態がに設定されることに注意してください。
 
 ## <a name="see-also"></a>関連項目
 
