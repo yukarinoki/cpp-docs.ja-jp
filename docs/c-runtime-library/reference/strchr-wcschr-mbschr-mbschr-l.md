@@ -1,4 +1,5 @@
 ---
+description: 詳細については、strchr、wc/r、_mbschr、_mbschr_l を参照してください。
 title: strchr、wcschr、_mbschr、_mbschr_l
 ms.date: 4/2/2020
 api_name:
@@ -47,12 +48,12 @@ helpviewer_keywords:
 - tcschr function
 - mbschr_l function
 ms.assetid: 2639905d-e983-43b7-b885-abef32cfac43
-ms.openlocfilehash: a7cea0b2c640b7cb87d7097cea7bdf94a73abfb8
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 8971022e529a03199a890d769843fd77ec44c5af
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87229312"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97306223"
 ---
 # <a name="strchr-wcschr-_mbschr-_mbschr_l"></a>strchr、wcschr、_mbschr、_mbschr_l
 
@@ -119,10 +120,10 @@ const unsigned char *_mbschr_l(
 
 ### <a name="parameters"></a>パラメーター
 
-*引数*<br/>
+*str*<br/>
 NULL で終わる元の文字列。
 
-*40u-c*<br/>
+*c*<br/>
 検索する文字。
 
 *locale*<br/>
@@ -130,11 +131,11 @@ NULL で終わる元の文字列。
 
 ## <a name="return-value"></a>戻り値
 
-これらの各関数は、 *str*で*c*が最初に出現する位置へのポインターを返すか、 *c*が見つからない場合は NULL を返します。
+これらの各関数は、 *str* で *c* が最初に出現する位置へのポインターを返すか、 *c* が見つからない場合は NULL を返します。
 
 ## <a name="remarks"></a>解説
 
-関数は、 `strchr` *str*で*c*が最初に出現する位置を検索します。 *c*が見つからない場合は NULL を返します。 検索対象には終端の null 文字が含まれます。
+関数は、 `strchr` *str* で *c* が最初に出現する位置を検索します。 *c* が見つからない場合は NULL を返します。 検索対象には終端の null 文字が含まれます。
 
 `wcschr` 関数、`_mbschr` 関数、および `_mbschr_l` 関数は、`strchr` 関数のワイド文字バージョンとマルチバイト文字バージョンです。 `wcschr` 関数の引数と戻り値はワイド文字列で、`_mbschr` 関数の引数と戻り値はマルチバイト文字列です。 `_mbschr` はマルチバイト文字シーケンスを認識します。 また、文字列が null ポインターの場合、`_mbschr` は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーター ハンドラーを呼び出します。 実行の継続が許可された場合、は NULL を返し、を `_mbschr` `errno` EINVAL に設定します。 `strchr` および `wcschr` は、パラメーターを検証しません。 それ以外では、これらの関数の動作は同じです。
 
@@ -222,7 +223,7 @@ Result:   last r found at position 30
 
 [文字列操作](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [ロケール](../../c-runtime-library/locale.md)<br/>
-[マルチバイト文字のシーケンスの解釈](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[Multibyte-Character シーケンスの解釈](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [strcspn、wcscspn、_mbscspn、_mbscspn_l](strcspn-wcscspn-mbscspn-mbscspn-l.md)<br/>
 [strncat、_strncat_l、wcsncat、_wcsncat_l、_mbsncat、_mbsncat_l](strncat-strncat-l-wcsncat-wcsncat-l-mbsncat-mbsncat-l.md)<br/>
 [strncmp、wcsncmp、_mbsncmp、_mbsncmp_l](strncmp-wcsncmp-mbsncmp-mbsncmp-l.md)<br/>

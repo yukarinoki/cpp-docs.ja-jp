@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: codecvt_utf8_utf16'
 title: codecvt_utf8_utf16
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - codecvt_utf8_utf16 class
 ms.assetid: 4c12c881-5dba-4e39-b338-0b9caff5af29
-ms.openlocfilehash: 879ebe6a75d76a84ef4250b95c41e02eccba5517
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: e80cdaa01ef77b9ce28a773eb4e05056220718a7
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68458646"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97325076"
 ---
-# <a name="codecvtutf8utf16"></a>codecvt_utf8_utf16
+# <a name="codecvt_utf8_utf16"></a>codecvt_utf8_utf16
 
-UTF-16 としてエンコードされたワイド文字と、UTF-8 としてエンコードされたバイト ストリームを変換する[ロケール](../standard-library/locale-class.md) ファセットを表します。
+UTF-16 としてエンコードされたワイド文字と UTF-8 としてエンコードされたバイトストリームを変換する [ロケール](../standard-library/locale-class.md) ファセットを表します。
 
 ```cpp
 template<class Elem, unsigned long Maxcode = 0x10ffff, codecvt_mode Mode = (codecvt_mode)0>
@@ -33,12 +34,12 @@ class codecvt_utf8_utf16 : public _STD codecvt<Elem, char, StateType>
 *Mode*\
 ロケール ファセットの構成情報。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 このバイト ストリームはバイナリ ファイルまたはテキスト ファイルに書き込むことができます。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-ヘッダー: \<codecvt >
+ヘッダー: \<codecvt>
 
 名前空間: std

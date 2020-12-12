@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「static_cast 演算子」を参照してください。
 title: static_cast 演算子
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - static_cast keyword [C++]
 ms.assetid: 1f7c0c1c-b288-476c-89d6-0e2ceda5c293
-ms.openlocfilehash: 8551d41417647ee4f759e2547e2c1909c59d78cd
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 7d76b4e21adea6561d7d6822871631c242aaf9c0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87213204"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97317962"
 ---
 # <a name="static_cast-operator"></a>static_cast 演算子
 
-式に存在する型のみに基づいて、*式*を*型 id*の型に変換します。
+式に存在する型のみに基づいて、 *式* を *型 id* の型に変換します。
 
 ## <a name="syntax"></a>構文
 
@@ -101,9 +102,9 @@ void f() {
 
 式は、演算子によって void 型に明示的に変換でき **`static_cast`** ます。 コピー先の void 型には **`const`** 、、、または属性をオプションで含めることができ **`volatile`** **`__unaligned`** ます。
 
-**`static_cast`** 演算子は **`const`** 、、 **`volatile`** 、または属性をキャストできません **`__unaligned`** 。 これらの属性を削除する方法については、「 [Const_cast 演算子](../cpp/const-cast-operator.md)」を参照してください。
+**`static_cast`** 演算子は **`const`** 、、 **`volatile`** 、または属性をキャストできません **`__unaligned`** 。 これらの属性を削除する方法については、「 [Const_cast 演算子](../cpp/const-cast-operator.md) 」を参照してください。
 
-**C++/CLI:** 再配置ガベージコレクターの上ではチェックされないキャストを実行する危険性があるため、を使用するのは、適切に動作することがわかっ **`static_cast`** ている場合にのみ、パフォーマンスクリティカルなコードにする必要があります。 をリリースモードで使用する必要がある場合は **`static_cast`** 、デバッグビルドの[safe_cast](../extensions/safe-cast-cpp-component-extensions.md)に置き換えて、成功したことを確認します。
+**C++/CLI:** 再配置ガベージコレクターの上ではチェックされないキャストを実行する危険性があるため、を使用するのは、適切に動作することがわかっ **`static_cast`** ている場合にのみ、パフォーマンスクリティカルなコードにする必要があります。 をリリースモードで使用する必要がある場合は **`static_cast`** 、デバッグビルドの [safe_cast](../extensions/safe-cast-cpp-component-extensions.md) に置き換えて、成功したことを確認します。
 
 ## <a name="see-also"></a>関連項目
 

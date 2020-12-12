@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: _ismbbkalnum、_ismbbkalnum_l'
 title: _ismbbkalnum、_ismbbkalnum_l
 ms.date: 4/2/2020
 api_name:
@@ -34,12 +35,12 @@ helpviewer_keywords:
 - _ismbbkalnum function
 - ismbbkalnum function
 ms.assetid: e1d70e7b-29d0-469c-9d93-442b99de22ac
-ms.openlocfilehash: 25ce3420ec3fb92701c4ed7cd596c2103c33ac54
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: c9f18a80882b9f0bc703b0fbf5caace9746a486e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82909519"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97306314"
 ---
 # <a name="_ismbbkalnum-_ismbbkalnum_l"></a>_ismbbkalnum、_ismbbkalnum_l
 
@@ -59,7 +60,7 @@ int _ismbbkalnum_l(
 
 ### <a name="parameters"></a>パラメーター
 
-*40u-c*<br/>
+*c*<br/>
 テストする整数。
 
 *locale*<br/>
@@ -67,7 +68,7 @@ int _ismbbkalnum_l(
 
 ## <a name="return-value"></a>戻り値
 
-整数*c*が区切り記号以外の非 ASCII テキストの記号の場合、 **_ismbbkalnum**は0以外の値を返します。それ以外の場合は0を返します。 **_ismbbkalnum**は、ロケールに依存する文字情報に現在のロケールを使用します。 **_ismbbkalnum_l**は、ロケールをパラメーターとして受け取る点を除いて、 **_ismbbkalnum**と同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
+整数 *c* が区切り記号以外の非 ASCII テキストの記号の場合、 **_ismbbkalnum** は0以外の値を返します。それ以外の場合は0を返します。 **_ismbbkalnum** は、ロケールに依存する文字情報に現在のロケールを使用します。 **_ismbbkalnum_l** は、ロケールをパラメーターとして受け取る点を除いて、 **_ismbbkalnum** と同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
 
 ## <a name="remarks"></a>解説
 
@@ -75,7 +76,7 @@ int _ismbbkalnum_l(
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**_ismbbkalnum**|\<mbctype.h>|
 |**_ismbbkalnum_l**|\<mbctype.h>|

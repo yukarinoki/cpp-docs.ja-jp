@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: &lt; ciso646&gt;'
 title: '&lt;ciso646&gt;'
 ms.date: 07/11/2019
 f1_keywords:
@@ -7,32 +8,32 @@ f1_keywords:
 helpviewer_keywords:
 - ciso646 header
 ms.assetid: 9d570924-d299-4225-9a58-8c4c820f5903
-ms.openlocfilehash: 2690178fc2194d6c22c50cd579385d762f4a91d7
-ms.sourcegitcommit: 0867d648e0955ebad7260b5fbebfd6cd4d58f3c7
+ms.openlocfilehash: 556b3d882cb6465db829eefc735215069d79a5c5
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68341091"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97325128"
 ---
 # <a name="ltciso646gt"></a>&lt;ciso646&gt;
 
-C 標準ライブラリヘッダー \<iso646 > をインクルードし、関連`std`する名前を名前空間に追加します。
+C 標準ライブラリヘッダーをインクルード \<iso646.h> し、関連する名前を名前空間に追加し `std` ます。
 
 > [!NOTE]
-> この互換性ヘッダーではのキーワードでC++ある名前が定義されているため、これを含めても効果はありません。 Iso646 \<> ヘッダーは、でC++は非推奨とされます。 Ciso646 \<> ヘッダーは、draft c++ 20 standard では削除されています。
+> この互換性ヘッダーでは、C++ のキーワードである名前が定義されているので、これを含めても効果はありません。 \<iso646.h>ヘッダーは C++ では非推奨とされます。 この \<ciso646> ヘッダーは、c++ 20 のドラフト標準では削除されています。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-**ヘッダー:** \<ciso646 >
+**ヘッダー:**\<ciso646>
 
 **名前空間:** std
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-このヘッダーをインクルードすると、C 標準ライブラリヘッダーの外部リンケージを使用して宣言され`std`た名前が、名前空間で宣言されます。
+このヘッダーをインクルードすると、C 標準ライブラリヘッダーの外部リンケージを使用して宣言された名前が、名前空間で宣言され `std` ます。
 
 ## <a name="see-also"></a>関連項目
 
 [ヘッダーファイルのリファレンス](cpp-standard-library-header-files.md)\
-[C++標準ライブラリの概要](cpp-standard-library-overview.md)\
-[C++標準ライブラリのスレッドセーフ](thread-safety-in-the-cpp-standard-library.md)
+[C++ 標準ライブラリの概要](cpp-standard-library-overview.md)\
+[C++ 標準ライブラリのスレッドセーフ](thread-safety-in-the-cpp-standard-library.md)

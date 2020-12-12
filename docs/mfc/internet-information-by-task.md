@@ -1,15 +1,16 @@
 ---
+description: '詳細情報: タスク別のインターネット情報'
 title: タスク別のインターネット情報
 ms.date: 09/12/2018
 helpviewer_keywords:
 - MFC, Internet applications
 ms.assetid: da078bf5-53c3-4167-b1ef-509b5a544ad9
-ms.openlocfilehash: ba359aaba2129af3ab4af9543a46b8810cf4fb6e
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 1f0b1651198518b195e4a53f2b4d9d24cf39e686
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84615605"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97338357"
 ---
 # <a name="internet-information-by-task"></a>タスク別のインターネット情報
 
@@ -26,7 +27,7 @@ ms.locfileid: "84615605"
 
 ## <a name="what-do-you-want-to-do"></a>どうしたいんですか
 
-### <a name="activex-controls-documents-and-asynchronous-moniker-tasks"></a><a name="_core_activex_controls.2c_.documents_and_asynchronous_moniker_tasks"></a>ActiveX コントロール、ドキュメント、および非同期モニカータスク
+### <a name="activex-controls-documents-and-asynchronous-moniker-tasks"></a><a name="_core_activex_controls.2c_.documents_and_asynchronous_moniker_tasks"></a> ActiveX コントロール、ドキュメント、および非同期モニカータスク
 
 - [非同期モニカーの詳細](asynchronous-monikers-on-the-internet.md)
 
@@ -34,7 +35,7 @@ ms.locfileid: "84615605"
 
 - [ActiveX コントロールの最適化](mfc-activex-controls-optimization.md)
 
-### <a name="wininet-tasks"></a><a name="_core_wininet_tasks"></a>WinInet タスク
+### <a name="wininet-tasks"></a><a name="_core_wininet_tasks"></a> WinInet タスク
 
 - [WinInet、Win32 API インターネットアクセス用の機能について説明します。](wininet-basics.md)
 

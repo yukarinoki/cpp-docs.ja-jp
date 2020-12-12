@@ -1,4 +1,5 @@
 ---
+description: 詳細情報:/PROFILE (パフォーマンスツールプロファイラー)
 title: /PROFILE (パフォーマンス ツール プロファイラー)
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - -PROFILE linker option
 - /PROFILE linker option
 ms.assetid: e676baa1-5063-47a3-a357-ba0d1f0d1699
-ms.openlocfilehash: 07952c979fd66291b1744521d83e4556f010d297
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: fb9310bb782a4b321113155f01db2228e3a46e15
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91500787"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97225792"
 ---
 # <a name="profile-performance-tools-profiler"></a>/PROFILE (パフォーマンス ツール プロファイラー)
 
@@ -50,7 +51,7 @@ ms.locfileid: "91500787"
 
 1. **[詳細]** プロパティ ページを選択します。
 
-1. **プロファイル**プロパティを変更します。
+1. **プロファイル** プロパティを変更します。
 
 ### <a name="to-set-this-linker-option-programmatically"></a>このリンカーをコードから設定するには
 
@@ -58,7 +59,7 @@ ms.locfileid: "91500787"
 
 ### <a name="to-set-this-linker-option-within-visual-studio-cmake-project"></a>Visual Studio の CMake プロジェクト内でこのリンカーオプションを設定するには
 
-**Cmake** プロジェクトには **プロパティページ**がありません。リンカーオプションを設定するには、CMakeLists.txt を web します。
+**Cmake** プロジェクトには **プロパティページ** がありません。リンカーオプションを設定するには、CMakeLists.txt を web します。
 
 1. プロジェクトのルートディレクトリにある CMakeLists.txt を開きます。
 

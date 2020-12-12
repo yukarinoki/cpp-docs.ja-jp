@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: _ismbbalnum、_ismbbalnum_l'
 title: _ismbbalnum、_ismbbalnum_l
 ms.date: 4/2/2020
 api_name:
@@ -34,12 +35,12 @@ helpviewer_keywords:
 - ismbbalnum_l function
 - _ismbbalnum function
 ms.assetid: 8025de50-a871-49fd-9ae6-f437b47aa987
-ms.openlocfilehash: abbc664170c274929875ef2e4b7af70bc5812a94
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: e4caf523d788cba4466d3d21beb6470d80b9aefd
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82917553"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97306333"
 ---
 # <a name="_ismbbalnum-_ismbbalnum_l"></a>_ismbbalnum、_ismbbalnum_l
 
@@ -58,7 +59,7 @@ int _ismbbalnum_l(
 
 ### <a name="parameters"></a>パラメーター
 
-*40u-c*<br/>
+*c*<br/>
 テストする整数。
 
 *locale*<br/>
@@ -66,13 +67,13 @@ int _ismbbalnum_l(
 
 ## <a name="return-value"></a>戻り値
 
-次の式の場合、 **_ismbbalnum**は0以外の値を返します。
+次の式の場合、 **_ismbbalnum** は0以外の値を返します。
 
 `isalnum(c) || _ismbbkalnum(c)`
 
-*c*の場合は0以外の。それ以外の場合は0。
+*c* の場合は0以外の。それ以外の場合は0。
 
-**_L**サフィックスが付いたこの関数のバージョンは、ロケールに依存する動作に現在のロケールではなく渡されたロケールを使用する点を除いて同じです。
+**_L** サフィックスが付いたこの関数のバージョンは、ロケールに依存する動作に現在のロケールではなく渡されたロケールを使用する点を除いて同じです。
 
 ## <a name="remarks"></a>解説
 
@@ -80,7 +81,7 @@ int _ismbbalnum_l(
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**_ismbbalnum**|\<mbctype.h>|
 |**_ismbbalnum_l**|\<mbctype.h>|

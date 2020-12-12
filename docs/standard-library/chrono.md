@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: &lt; chrono&gt;'
 title: '&lt;chrono&gt;'
 ms.date: 05/07/2019
 f1_keywords:
@@ -10,12 +11,12 @@ f1_keywords:
 - chrono/std::chrono::milliseconds
 - chrono/std::chrono::microseconds
 ms.assetid: 844de749-f306-482e-89bc-6f53c99c8324
-ms.openlocfilehash: b74c25e9c26d5767426576633e0999ae3ca44954
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: a59ad0d88a1d9266e61a8ef49e7cf9184da803b3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88840649"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97325142"
 ---
 # <a name="ltchronogt"></a>&lt;chrono&gt;
 
@@ -23,7 +24,7 @@ ms.locfileid: "88840649"
 
 Visual Studio 2015 以降、の実装は、 `steady_clock` 安定性および単調性の C++ 標準要件を満たすように変更されています。 現在、`steady_clock` は QueryPerformanceCounter() に基づき、`high_resolution_clock` は `steady_clock` の typedef です。 その結果、Microsoft C++ コンパイラでは、 `steady_clock::time_point` の typedef になりました。 `chrono::time_point<steady_clock>` ただし、この規則は、必ずしも他の実装の場合と同じではありません。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:**\<chrono>
 
@@ -46,17 +47,17 @@ Visual Studio 2015 以降、の実装は、 `steady_clock` 安定性および単
 |[duration_values 構造体](../standard-library/duration-values-structure.md)|`duration` テンプレート パラメーター `Rep` に特定の値を指定します。|
 |[high_resolution_clock 構造体](../standard-library/high-resolution-clock-struct.md)||
 |[steady_clock 構造体](../standard-library/steady-clock-struct.md)|`steady` クロックを表します。|
-|[system_clock 構造体](../standard-library/system-clock-structure.md)|システムのリアルタイム クロックに基づく*クロックの型*を表します。|
+|[system_clock 構造体](../standard-library/system-clock-structure.md)|システムのリアルタイム クロックに基づく *クロックの型* を表します。|
 |[treat_as_floating_point 構造体](../standard-library/treat-as-floating-point-structure.md)|型を浮動小数点型として扱うことができるかどうかを指定します。|
 
-### <a name="functions"></a>Functions
+### <a name="functions"></a>関数
 
 |名前|説明|
 |-|-|
 |[duration_cast](../standard-library/chrono-functions.md#duration_cast)|`duration` オブジェクトを指定した型にキャストします。|
 |[time_point_cast](../standard-library/chrono-functions.md#time_point_cast)|`time_point` オブジェクトを指定した型にキャストします。|
 
-### <a name="operators"></a>演算子
+### <a name="operators"></a>オペレーター
 
 |名前|説明|
 |-|-|

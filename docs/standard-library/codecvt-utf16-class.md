@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: codecvt_utf16'
 title: codecvt_utf16
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - codecvt_utf16 class
 ms.assetid: a9897f98-f84d-4db6-90ad-858b2727570c
-ms.openlocfilehash: 73177985727f4da5cf3ca4eb9e3cc3fb5976f76d
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 264324d0f827e8999b065205010874ebf62ca501
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80215281"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97325089"
 ---
 # <a name="codecvt_utf16"></a>codecvt_utf16
 
-UCS-2 または UCS-4 としてエンコードされたワイド文字と、UTF-16LE または UTF-16BE としてエンコードされたバイト ストリームを変換する[ロケール](../standard-library/locale-class.md) ファセットを表します。
+UCS-2 または UCS 4 としてエンコードされたワイド文字と、16LE または UTF-16 としてエンコードされたバイトストリームを変換する [ロケール](../standard-library/locale-class.md) ファセットを表します。
 
 ```cpp
 template<class Elem, unsigned long Maxcode = 0x10ffff, codecvt_mode Mode = (codecvt_mode)0>
@@ -30,7 +31,7 @@ class codecvt_utf16 : public std::codecvt<Elem, char, StateType>
 *Maxcode*\
 ロケール ファセットの文字の最大数。
 
-*モード*\
+*Mode*\
 ロケール ファセットの構成情報。
 
 ## <a name="remarks"></a>解説
@@ -39,8 +40,8 @@ class codecvt_utf16 : public std::codecvt<Elem, char, StateType>
 
 このバイト ストリームはバイナリ ファイルに書き込む必要があります。テキスト ファイルに書き込むと、破損する場合があります。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-ヘッダー: \<codecvt >
+ヘッダー: \<codecvt>
 
 名前空間: std

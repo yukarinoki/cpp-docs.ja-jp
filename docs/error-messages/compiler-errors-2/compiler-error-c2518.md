@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「コンパイラエラー C2518」を参照してください。
 title: コンパイラ エラー C2518
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2518
 ms.assetid: a7895b47-da90-4851-ac97-18e81479595a
-ms.openlocfilehash: 315edc3124b4cdd425ce9d7581167366d3831512
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 1ebc270cd3544dc50d051677faeeec8e8e6bd979
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87214647"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97212728"
 ---
 # <a name="compiler-error-c2518"></a>コンパイラ エラー C2518
 

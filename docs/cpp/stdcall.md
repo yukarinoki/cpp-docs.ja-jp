@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: __stdcall'
 title: __stdcall
 ms.date: 10/10/2018
 f1_keywords:
@@ -8,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - __stdcall keyword [C++]
 ms.assetid: e212594b-1827-4d07-9527-7d412b300df8
-ms.openlocfilehash: 85d1b29fddece741aa94364bb6edfdf3b973faaf
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 86ed4604eeb33c31f79ceac57b28f7f4655e78f3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87213178"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97317936"
 ---
 # <a name="__stdcall"></a>__stdcall
 
@@ -76,5 +77,5 @@ typedef BOOL (__stdcall *funcname_ptr)(void * arg1, const char * arg2, DWORD fla
 
 ## <a name="see-also"></a>関連項目
 
-[引数の引き渡し規則と名前付け規則](../cpp/argument-passing-and-naming-conventions.md)<br/>
+[引数の渡し規則と名前付け規則](../cpp/argument-passing-and-naming-conventions.md)<br/>
 [キーワード](../cpp/keywords-cpp.md)

@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: _AddressOfReturnAddress'
 title: _AddressOfReturnAddress
 ms.date: 09/02/2019
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - _AddressOfReturnAddress intrinsic
 - AddressOfReturnAddress intrinsic
 ms.assetid: c7e10b8c-445e-4236-a602-e2d90200f70a
-ms.openlocfilehash: d705029c30fdbc117c4c6e96923691e43e072e23
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 1a79ccbe7ddc2865d8225a62cd0d294f0bc66b4a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70221078"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97331933"
 ---
 # <a name="_addressofreturnaddress"></a>_AddressOfReturnAddress
 
@@ -29,15 +30,15 @@ void * _AddressOfReturnAddress();
 
 ## <a name="requirements"></a>必要条件
 
-|組み込み|アーキテクチャ|
+|Intrinsic|アーキテクチャ|
 |---------------|------------------|
 |`_AddressOfReturnAddress`|x86、x64、ARM、ARM64|
 
-**ヘッダーファイル**\<>
+**ヘッダー ファイル** \<intrin.h>
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-[/clr](../build/reference/clr-common-language-runtime-compilation.md) でコンパイルされたプログラムで `_AddressOfReturnAddress` を使用する場合、 `_AddressOfReturnAddress`呼び出しを含む関数はネイティブ関数としてコンパイルされます。 を含む`_AddressOfReturnAddress`関数へのマネージ呼び出しとしてコンパイルさ`_AddressOfReturnAddress`れた関数が、予期したとおりに動作しないことがあります。
+`_AddressOfReturnAddress` [/Clr](../build/reference/clr-common-language-runtime-compilation.md)でコンパイルされたプログラムでを使用する場合、呼び出しを含む関数 `_AddressOfReturnAddress` はネイティブ関数としてコンパイルされます。 を含む関数へのマネージ呼び出しとしてコンパイルされた関数 `_AddressOfReturnAddress` `_AddressOfReturnAddress` が、予期したとおりに動作しないことがあります。
 
 このルーチンは、組み込みとしてのみ使用できます。
 
