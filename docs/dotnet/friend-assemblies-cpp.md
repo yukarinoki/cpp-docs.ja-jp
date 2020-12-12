@@ -1,19 +1,20 @@
 ---
+description: '詳細情報: フレンドアセンブリ (C++)'
 title: フレンド アセンブリ (C++)
 ms.date: 11/04/2016
 helpviewer_keywords:
 - friend assemblies, Visual C++
 ms.assetid: 8d55fee0-b7c2-4fbe-a23b-dfe424dc71cd
-ms.openlocfilehash: a42caaf07f6ec0c71f63d6a0df8a79fff6f737e6
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 3f5a7dcd8833d6d396acfff5f42f6c1709327b2f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87221446"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97252130"
 ---
 # <a name="friend-assemblies-c"></a>フレンド アセンブリ (C++)
 
-適用可能なランタイムの場合、*フレンドアセンブリ*言語機能を使用すると、アセンブリコンポーネント内の名前空間スコープまたはグローバルスコープにある型が、1つ以上のクライアントアセンブリまたは netmodule にアクセスできるようになります。
+適用可能なランタイムの場合、 *フレンドアセンブリ* 言語機能を使用すると、アセンブリコンポーネント内の名前空間スコープまたはグローバルスコープにある型が、1つ以上のクライアントアセンブリまたは netmodule にアクセスできるようになります。
 
 ## <a name="all-runtimes"></a>すべてのランタイム
 
@@ -27,7 +28,7 @@ ms.locfileid: "87221446"
 
 (Windows ランタイムでは、この言語機能はサポートされていません。)
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 コンパイラ オプション: **/ZW**
 
@@ -47,11 +48,11 @@ ms.locfileid: "87221446"
 
 アセンブリ内のすべての型へのアクセスは、明示的に許可する必要があります。  たとえば、アセンブリ c がアセンブリ B を参照し、アセンブリ B がアセンブリ A 内のすべての型にアクセスできる場合、アセンブリ C はアセンブリ A 内のすべての型にアクセスできません。
 
-署名方法 (Microsoft C++ コンパイラを使用してビルドされるアセンブリ) に署名する方法については、「厳密な名前のアセンブリ[(アセンブリ署名) (C++/cli](../dotnet/strong-name-assemblies-assembly-signing-cpp-cli.md))」を参照してください。
+署名方法 (Microsoft C++ コンパイラを使用してビルドされるアセンブリ) に署名する方法については、「厳密な名前のアセンブリ [(アセンブリ署名) (C++/cli](../dotnet/strong-name-assemblies-assembly-signing-cpp-cli.md))」を参照してください。
 
 Friend アセンブリ機能を使用する代わりに、を使用して <xref:System.Security.Permissions.StrongNameIdentityPermission> 個々の型へのアクセスを制限することもできます。
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 コンパイラ オプション: **/clr**
 
@@ -94,7 +95,7 @@ Class1::Test_Public
 
 次のコード例では、コンポーネントを定義していますが、コンポーネント内の型にアクセスできるクライアントアセンブリを指定していません。
 
-コンポーネントが **/opt: noref**を使用してリンクされていることに注意してください。 これにより、属性が存在する場合には不要な、コンポーネントのメタデータでプライベート型が生成され `InternalsVisibleTo` ます。 詳細については、「[/OPT (最適化)](../build/reference/opt-optimizations.md)」を参照してください。
+コンポーネントが **/opt: noref** を使用してリンクされていることに注意してください。 これにより、属性が存在する場合には不要な、コンポーネントのメタデータでプライベート型が生成され `InternalsVisibleTo` ます。 詳細については、「[/OPT (最適化)](../build/reference/opt-optimizations.md)」を参照してください。
 
 ```cpp
 // friend_assemblies_3.cpp

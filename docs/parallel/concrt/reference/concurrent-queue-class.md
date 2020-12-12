@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: concurrent_queue クラス'
 title: concurrent_queue クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -16,12 +17,12 @@ f1_keywords:
 helpviewer_keywords:
 - concurrent_queue class
 ms.assetid: c2218996-d0ea-40e9-b002-e9a15b085f51
-ms.openlocfilehash: a117a040adbf7f3aa316c346489bd2731d6c2402
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: c7ac9686b03073016b509ce8e2bddaa664c3141f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87230351"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97250609"
 ---
 # <a name="concurrent_queue-class"></a>concurrent_queue クラス
 
@@ -79,19 +80,19 @@ class concurrent_queue: public ::Concurrency::details::_Concurrent_queue_base_v4
 
 ## <a name="remarks"></a>解説
 
-詳細については、「[並列コンテナーとオブジェクト](../../../parallel/concrt/parallel-containers-and-objects.md)」を参照してください。
+詳細については、「 [並列コンテナーとオブジェクト](../../../parallel/concrt/parallel-containers-and-objects.md)」を参照してください。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
 `concurrent_queue`
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** concurrent_queue
 
 **名前空間:** concurrency
 
-## <a name="clear"></a><a name="clear"></a>クリア
+## <a name="clear"></a><a name="clear"></a> クリア
 
 同時実行キューをクリアし、現在エンキューされている要素を破棄します。 このメソッドはコンカレンシー セーフではありません。
 
@@ -99,7 +100,7 @@ class concurrent_queue: public ::Concurrency::details::_Concurrent_queue_base_v4
 void clear();
 ```
 
-## <a name="concurrent_queue"></a><a name="ctor"></a>concurrent_queue
+## <a name="concurrent_queue"></a><a name="ctor"></a> concurrent_queue
 
 同時実行キューを構築します。
 
@@ -149,7 +150,7 @@ concurrent_queue(_InputIterator _Begin,
 
 4番目のコンストラクターは、反復子の範囲 [,) によって指定された値を指定し `_Begin` `_End` ます。
 
-## <a name="concurrent_queue"></a><a name="dtor"></a>~ concurrent_queue
+## <a name="concurrent_queue"></a><a name="dtor"></a> ~ concurrent_queue
 
 同時実行キューを破棄します。
 
@@ -157,7 +158,7 @@ concurrent_queue(_InputIterator _Begin,
 ~concurrent_queue();
 ```
 
-## <a name="empty"></a><a name="empty"></a>指定
+## <a name="empty"></a><a name="empty"></a> 指定
 
 このメソッドが呼び出された時点で同時実行キューが空かどうかをテストします。 このメソッドはコンカレンシー セーフです。
 
@@ -173,7 +174,7 @@ bool empty() const;
 
 このメソッドは、メソッド、、およびメソッドの呼び出しに関して同時実行セーフであるのに対し `push` `try_pop` `empty` 、呼び出し元スレッドによって検査されたときに返される値が正しくない可能性があります。
 
-## <a name="get_allocator"></a><a name="get_allocator"></a>get_allocator
+## <a name="get_allocator"></a><a name="get_allocator"></a> get_allocator
 
 同時実行キューの構築に使用されるアロケーターのコピーを返します。 このメソッドはコンカレンシー セーフです。
 
@@ -185,7 +186,7 @@ allocator_type get_allocator() const;
 
 同時実行キューを構築するために使用されるアロケーターのコピー。
 
-## <a name="push"></a><a name="push"></a>押し付け
+## <a name="push"></a><a name="push"></a> 押し付け
 
 同時実行キューの末尾に項目をエンキューします。 このメソッドはコンカレンシー セーフです。
 
@@ -202,9 +203,9 @@ void push(T&& _Src);
 
 ### <a name="remarks"></a>解説
 
-`push`は、メソッド、、およびの呼び出しに関して、同時実行セーフです `push` `try_pop` `empty` 。
+`push` は、メソッド、、およびの呼び出しに関して、同時実行セーフです `push` `try_pop` `empty` 。
 
-## <a name="try_pop"></a><a name="try_pop"></a>try_pop
+## <a name="try_pop"></a><a name="try_pop"></a> try_pop
 
 デキューが使用可能な場合は、キューから項目を取得します。 このメソッドはコンカレンシー セーフです。
 
@@ -225,9 +226,9 @@ bool try_pop(T& _Dest);
 
 項目が正常にデキューされた場合、パラメーターは `_Dest` デキューされた値を受け取り、キューに保持されていた元の値は破棄され、この関数はを返し **`true`** ます。 デキューする項目がない場合、この関数はブロックせずにを返し、 **`false`** パラメーターの内容 `_Dest` は未定義になります。
 
-`try_pop`は、メソッド、、およびの呼び出しに関して、同時実行セーフです `push` `try_pop` `empty` 。
+`try_pop` は、メソッド、、およびの呼び出しに関して、同時実行セーフです `push` `try_pop` `empty` 。
 
-## <a name="unsafe_begin"></a><a name="unsafe_begin"></a>unsafe_begin
+## <a name="unsafe_begin"></a><a name="unsafe_begin"></a> unsafe_begin
 
 `iterator`同時実行キューの先頭に、型または型の反復子 `const_iterator` を返します。 このメソッドはコンカレンシー セーフではありません。
 
@@ -245,7 +246,7 @@ const_iterator unsafe_begin() const;
 
 クラスの反復子は、主にデバッグを目的としていますが、 `concurrent_queue` これらは低速であり、イテレーションは他のキュー操作に対して同時実行セーフではありません。
 
-## <a name="unsafe_end"></a><a name="unsafe_end"></a>unsafe_end
+## <a name="unsafe_end"></a><a name="unsafe_end"></a> unsafe_end
 
 `iterator`同時実行キューの末尾に、型または型の反復子 `const_iterator` を返します。 このメソッドはコンカレンシー セーフではありません。
 
@@ -263,7 +264,7 @@ const_iterator unsafe_end() const;
 
 クラスの反復子は、主にデバッグを目的としていますが、 `concurrent_queue` これらは低速であり、イテレーションは他のキュー操作に対して同時実行セーフではありません。
 
-## <a name="unsafe_size"></a><a name="unsafe_size"></a>unsafe_size
+## <a name="unsafe_size"></a><a name="unsafe_size"></a> unsafe_size
 
 キュー内の項目の数を返します。 このメソッドはコンカレンシー セーフではありません。
 
@@ -277,7 +278,7 @@ size_type unsafe_size() const;
 
 ### <a name="remarks"></a>解説
 
-`unsafe_size`は同時実行セーフではなく、メソッド、、およびの呼び出しで同時に呼び出された場合、正しくない結果が生成される可能性があり `push` `try_pop` `empty` ます。
+`unsafe_size` は同時実行セーフではなく、メソッド、、およびの呼び出しで同時に呼び出された場合、正しくない結果が生成される可能性があり `push` `try_pop` `empty` ます。
 
 ## <a name="see-also"></a>関連項目
 

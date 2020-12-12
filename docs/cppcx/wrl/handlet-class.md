@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「クラスの使用」を参照してください。
 title: HandleT クラス
 ms.date: 10/03/2018
 ms.topic: reference
@@ -27,12 +28,12 @@ helpviewer_keywords:
 - Microsoft::WRL::Wrappers::HandleT::operator= operator
 - Microsoft::WRL::Wrappers::HandleT::~HandleT, destructor
 ms.assetid: 3822b32a-a426-4d94-a54d-919d4df60ee2
-ms.openlocfilehash: 661d3cb92b20fc929a9bae3cad7bb55740e5e096
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 608433193729e3d9be5b9490c469bf0b04d3531c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87213009"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97250011"
 ---
 # <a name="handlet-class"></a>HandleT クラス
 
@@ -48,7 +49,7 @@ class HandleT;
 ### <a name="parameters"></a>パラメーター
 
 *HandleTraits*<br/>
-ハンドルの共通特性を定義する[handletraits](handletraits-structure.md)構造体のインスタンス。
+ハンドルの共通特性を定義する [handletraits](handletraits-structure.md) 構造体のインスタンス。
 
 ## <a name="members"></a>メンバー
 
@@ -97,13 +98,13 @@ class HandleT;
 
 `HandleT`
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** corewrappers .h
 
 **名前空間:** Microsoft:: WRL:: Wrapper
 
-## <a name="handlethandlet"></a><a name="tilde-handlet"></a>ハンドラーの Let:: ~ の実行
+## <a name="handlethandlet"></a><a name="tilde-handlet"></a> ハンドラーの Let:: ~ の実行
 
 クラスのインスタンスを初期化解除 `HandleT` します。
 
@@ -111,7 +112,7 @@ class HandleT;
 ~HandleT();
 ```
 
-## <a name="handletattach"></a><a name="attach"></a>実行の許可:: Attach
+## <a name="handletattach"></a><a name="attach"></a> 実行の許可:: Attach
 
 指定したハンドルを現在の `HandleT` オブジェクトに関連付けます。
 
@@ -126,7 +127,7 @@ void Attach(
 *h*<br/>
 ハンドル。
 
-## <a name="handletclose"></a><a name="close"></a>実行の許可:: 閉じる
+## <a name="handletclose"></a><a name="close"></a> 実行の許可:: 閉じる
 
 現在の `HandleT` オブジェクトを閉じます。
 
@@ -140,7 +141,7 @@ void Close();
 
 ハンドルが正常に終了しない場合は、呼び出し元のスレッドで例外が発生します。
 
-## <a name="handletdetach"></a><a name="detach"></a>使用方法::D etach
+## <a name="handletdetach"></a><a name="detach"></a> 使用方法::D etach
 
 基になるハンドルから現在のオブジェクトの関連付けを解除 `HandleT` します。
 
@@ -156,7 +157,7 @@ typename HandleTraits::Type Detach();
 
 この操作が完了すると、現在のは `HandleT` 無効な状態に設定されます。
 
-## <a name="handletget"></a><a name="get"></a>Get-help Let:: Get
+## <a name="handletget"></a><a name="get"></a> Get-help Let:: Get
 
 基になるハンドルの値を取得します。
 
@@ -168,7 +169,7 @@ typename HandleTraits::Type Get() const;
 
 ハンドル。
 
-## <a name="handlethandle_"></a><a name="handle"></a>使用方法:: handle_
+## <a name="handlethandle_"></a><a name="handle"></a> 使用方法:: handle_
 
 オブジェクトによって表されるハンドルを格納し `HandleT` ます。
 
@@ -176,7 +177,7 @@ typename HandleTraits::Type Get() const;
 typename HandleTraits::Type handle_;
 ```
 
-## <a name="handlethandlet"></a><a name="handlet"></a>ハンドラー Let:: ハンドラー Let
+## <a name="handlethandlet"></a><a name="handlet"></a> ハンドラー Let:: ハンドラー Let
 
 `HandleT` クラスの新しいインスタンスを初期化します。
 
@@ -198,9 +199,9 @@ HandleT(
 
 ### <a name="remarks"></a>解説
 
-最初のコンストラクターは、 `HandleT` オブジェクトに対する有効なハンドルではないオブジェクトを初期化します。 2番目のコンストラクターは、 `HandleT` パラメーター *h*から新しいオブジェクトを作成します。
+最初のコンストラクターは、 `HandleT` オブジェクトに対する有効なハンドルではないオブジェクトを初期化します。 2番目のコンストラクターは、 `HandleT` パラメーター *h* から新しいオブジェクトを作成します。
 
-## <a name="handletinternalclose"></a><a name="internalclose"></a>ハンドラー Let:: InternalClose
+## <a name="handletinternalclose"></a><a name="internalclose"></a> ハンドラー Let:: InternalClose
 
 現在の `HandleT` オブジェクトを閉じます。
 
@@ -214,9 +215,9 @@ virtual bool InternalClose();
 
 ### <a name="remarks"></a>解説
 
-`InternalClose()`が **`protected`** です。
+`InternalClose()` が **`protected`** です。
 
-## <a name="handletisvalid"></a><a name="isvalid"></a>Let let:: IsValid
+## <a name="handletisvalid"></a><a name="isvalid"></a> Let let:: IsValid
 
 現在のオブジェクトがハンドルを表しているかどうかを示し `HandleT` ます。
 
@@ -228,7 +229,7 @@ bool IsValid() const;
 
 **`true`** が `HandleT` ハンドルを表す場合は。それ以外の場合は **`false`** 。
 
-## <a name="handletoperator"></a><a name="operator-assign"></a>Let let:: operator =
+## <a name="handletoperator"></a><a name="operator-assign"></a> Let let:: operator =
 
 指定したオブジェクトの値 `HandleT` を現在のオブジェクトに移動し `HandleT` ます。
 
@@ -249,4 +250,4 @@ HandleT& operator=(
 
 ### <a name="remarks"></a>解説
 
-この操作では、 `HandleT` parameter *h*によって指定されたオブジェクトを無効にします。
+この操作では、 `HandleT` parameter *h* によって指定されたオブジェクトを無効にします。

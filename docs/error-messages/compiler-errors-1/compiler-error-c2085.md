@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「コンパイラエラー C2085」を参照してください。
 title: コンパイラエラー C2085
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2085
 ms.assetid: 0a86785c-8e6f-481b-8c7b-412220c1950d
-ms.openlocfilehash: 7dbf7266a6330a1fdb46d7f2df90e7684f026d9a
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: 2cd828c9a18c06c5794bef01ba861f702af2e096
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75301965"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97252117"
 ---
 # <a name="compiler-error-c2085"></a>コンパイラエラー C2085
 
@@ -27,7 +28,7 @@ void func1( void )
 int main( void ) {}   // C2085
 ```
 
-解決方法:
+考えられる解決策:
 
 ```c
 // C2085b.c
@@ -35,4 +36,4 @@ void func1( void );
 int main( void ) {}
 ```
 
-セミコロンが欠落している場合、`func1()` はプロトタイプではなく関数定義のように見えます。そのため、`func1()`内で `main` が定義されており、識別子 `main`のエラー C2085 が生成されます。
+セミコロンがない場合、 `func1()` はプロトタイプではなく関数定義のように見え `main` ます。したがって、は内で定義され `func1()` 、識別子のエラー C2085 を生成し `main` ます。

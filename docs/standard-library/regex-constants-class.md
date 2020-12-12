@@ -1,4 +1,5 @@
 ---
+description: 詳細については、regex_constants 名前空間」を参照してください。
 title: regex_constants クラス
 ms.date: 09/10/2018
 f1_keywords:
@@ -82,12 +83,12 @@ helpviewer_keywords:
 - std::regex_constants [C++], optimize
 - std::regex_constants [C++], collate
 ms.assetid: 4a69c0ba-c46d-46e4-bd29-6f4efb805f26
-ms.openlocfilehash: 422d29f16220ae2c2db93c9f84410316bf08f5e7
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: d33f9d45023453281714e5585ab6ab33ee1f7857
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88845056"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97250518"
 ---
 # <a name="regex_constants-namespace"></a>regex_constants 名前空間
 
@@ -113,7 +114,7 @@ namespace regex_constants {
 |[match_flag_type](#match_flag_type)|正規表現照合オプションのフラグ。|
 |[syntax_option_type](#syntax_option_type)|構文オプションを選択するためのフラグ。|
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:**\<regex>
 

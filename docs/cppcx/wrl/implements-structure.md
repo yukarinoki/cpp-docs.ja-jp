@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: Implements 構造体'
 title: Implements 構造体
 ms.date: 10/03/2018
 ms.topic: reference
@@ -15,16 +16,16 @@ helpviewer_keywords:
 - Microsoft::WRL::Implements::FillArrayWithIid method
 - Microsoft::WRL::Implements::IidCount method
 ms.assetid: 29b13e90-34d4-4a0b-babd-5187c9eb0c36
-ms.openlocfilehash: 223f37d7cabbd0b8cd238582773c05d7b9eaabf6
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: b438e012b23e34b08956c969ffe604878d3065fe
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81371404"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97249829"
 ---
 # <a name="implements-structure"></a>Implements 構造体
 
-指定した`QueryInterface`インターフェイス`GetIid`を実装し、そのインターフェイスを対象にします。
+`QueryInterface`指定し `GetIid` たインターフェイスに対しておよびを実装します。
 
 ## <a name="syntax"></a>構文
 
@@ -101,19 +102,19 @@ struct __declspec(novtable) Implements<
 7 番目のインターフェイス ID です  (省略可能)
 
 *I8*<br/>
-8 番目のインターフェイス ID。 (省略可能)
+8番目のインターフェイス ID。 (省略可能)
 
 *I9*<br/>
 9 番目のインターフェイス ID です  (省略可能)
 
-*フラグ*<br/>
-クラスの構成フラグ。 構造体で指定されている 1[つ以上](runtimeclasstype-enumeration.md)の[列挙型の列挙](runtimeclassflags-structure.md)体。
+*flags*<br/>
+クラスの構成フラグ。 [RuntimeClassFlags](runtimeclassflags-structure.md)構造体で指定された1つ以上の[RuntimeClassType](runtimeclasstype-enumeration.md)列挙体。
 
 ## <a name="remarks"></a>解説
 
-指定したインターフェイスのリストから派生し、 および のヘルパー `QueryInterface` `GetIid`テンプレートを実装します。
+指定されたインターフェイスのリストから派生し、およびのヘルパーテンプレートを実装し `QueryInterface` `GetIid` ます。
 
-I9*までの各* *I0*インターフェイス パラメータ`IUnknown`は`IInspectable`、 、または[ChainInterfaces](chaininterfaces-structure.md)テンプレートから派生する必要があります。 *flags*パラメーターは、サポートが 生成`IUnknown`される`IInspectable`かどうかを決定します。
+各 *I0* *I9* interface パラメーターは `IUnknown` 、、 `IInspectable` 、または [ChainInterfaces](chaininterfaces-structure.md) テンプレートから派生する必要があります。 *Flags* パラメーターは、またはに対してサポートを生成するかどうかを決定し `IUnknown` `IInspectable` ます。
 
 ## <a name="members"></a>メンバー
 
@@ -127,15 +128,15 @@ I9*までの各* *I0*インターフェイス パラメータ`IUnknown`は`IInsp
 
 | 名前                                              | 説明                                                                                                   |
 | ------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- |
-| [実装::CanCastTo](#cancastto)               | 指定したインターフェイスへのポインターを取得します。                                                                    |
-| [実装::キャストが不明](#casttounknown)       | 基になる`IUnknown`インターフェイスへのポインターを取得します。                                                        |
-| [実装::フィルアレイウィズIid](#fillarraywithiid) | 現在のゼロ番目のテンプレート パラメーターで指定されたインターフェイス ID を、指定した配列要素に挿入します。 |
+| [Implements:: CanCastTo](#cancastto)               | 指定したインターフェイスへのポインターを取得します。                                                                    |
+| [Implements:: CastToUnknown](#casttounknown)       | 基になるインターフェイスへのポインターを取得し `IUnknown` ます。                                                        |
+| [Implements:: FillArrayWithIid](#fillarraywithiid) | 現在の取り出し template パラメーターによって指定されたインターフェイス ID を、指定された配列要素に挿入します。 |
 
-### <a name="protected-constants"></a>保護定数
+### <a name="protected-constants"></a>プロテクト定数
 
 | 名前                              | 説明                                    |
 | --------------------------------- | ---------------------------------------------- |
-| [実装::Iidカウント](#iidcount) | 実装されたインターフェイス ID の数を保持します。 |
+| [Implements:: IidCount](#iidcount) | 実装されているインターフェイス Id の数を保持します。 |
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -151,13 +152,13 @@ I9*までの各* *I0*インターフェイス パラメータ`IUnknown`は`IInsp
 
 `Implements`
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-**ヘッダー:** 実装.h
+**Header:** を実装します。
 
 **名前空間:** Microsoft::WRL
 
-## <a name="implementscancastto"></a><a name="cancastto"></a>実装::CanCastTo
+## <a name="implementscancastto"></a><a name="cancastto"></a> Implements:: CanCastTo
 
 指定したインターフェイスへのポインターを取得します。
 
@@ -173,20 +174,20 @@ __forceinline HRESULT CanCastTo(
 *riid*<br/>
 インターフェイス ID への参照。
 
-*Ppv*<br/>
-正常に実行された場合は、 *riid*で指定されたインターフェイスへのポインター。
+*ppv*<br/>
+成功した場合は、 *riid* によって指定されたインターフェイスへのポインター。
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合はS_OK。それ以外の場合は、エラーを示す HRESULT (E_NOINTERFACEなど) を返します。
+成功した場合は S_OK。それ以外の場合は、E_NOINTERFACE などのエラーを示す HRESULT。
 
 ### <a name="remarks"></a>解説
 
-これは、クエリ インターフェイス操作を実行する内部ヘルパー関数です。
+これは、QueryInterface 操作を実行する内部ヘルパー関数です。
 
-## <a name="implementscasttounknown"></a><a name="casttounknown"></a>実装::キャストが不明
+## <a name="implementscasttounknown"></a><a name="casttounknown"></a> Implements:: CastToUnknown
 
-基になる`IUnknown`インターフェイスへのポインターを取得します。
+基になるインターフェイスへのポインターを取得し `IUnknown` ます。
 
 ```cpp
 __forceinline IUnknown* CastToUnknown();
@@ -194,15 +195,15 @@ __forceinline IUnknown* CastToUnknown();
 
 ### <a name="return-value"></a>戻り値
 
-この操作は常に成功し、`IUnknown`ポインターを返します。
+この操作は常に成功し、ポインターを返し `IUnknown` ます。
 
 ### <a name="remarks"></a>解説
 
 内部ヘルパー関数。
 
-## <a name="implementsfillarraywithiid"></a><a name="fillarraywithiid"></a>実装::フィルアレイウィズIid
+## <a name="implementsfillarraywithiid"></a><a name="fillarraywithiid"></a> Implements:: FillArrayWithIid
 
-現在のゼロ番目のテンプレート パラメーターで指定されたインターフェイス ID を、指定した配列要素に挿入します。
+現在の取り出し template パラメーターによって指定されたインターフェイス ID を、指定された配列要素に挿入します。
 
 ```cpp
 __forceinline static void FillArrayWithIid(
@@ -213,19 +214,19 @@ __forceinline static void FillArrayWithIid(
 
 ### <a name="parameters"></a>パラメーター
 
-*index*<br/>
-この操作の開始配列要素を示す 0 から始まるインデックス。 この操作が完了すると、*インデックス*は 1 ずつ増加します。
+*インデックス*<br/>
+この操作の開始配列要素を示す0から始まるインデックス。 この操作が完了すると、 *インデックス* は1ずつインクリメントされます。
 
-*Iid*<br/>
-型の配列 IID。
+*iid が*<br/>
+IID 型の配列。
 
 ### <a name="remarks"></a>解説
 
 内部ヘルパー関数。
 
-## <a name="implementsiidcount"></a><a name="iidcount"></a>実装::Iidカウント
+## <a name="implementsiidcount"></a><a name="iidcount"></a> Implements:: IidCount
 
-実装されたインターフェイス ID の数を保持します。
+実装されているインターフェイス Id の数を保持します。
 
 ```cpp
 static const unsigned long IidCount;

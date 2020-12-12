@@ -1,4 +1,5 @@
-﻿---
+---
+description: 詳細については、「reinterpret_cast 演算子」を参照してください。
 title: reinterpret_cast 演算子
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - reinterpret_cast keyword [C++]
 ms.assetid: eb3283c7-7f88-467e-affd-407d37b46d6c
-ms.openlocfilehash: 33da7427adeb0a0cade2a369664d7fbd34790681
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 71b7067321c5af1e81311f7ce036c735c96193d2
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87233601"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97252442"
 ---
 # <a name="reinterpret_cast-operator"></a>reinterpret_cast 演算子
 
@@ -31,7 +32,7 @@ reinterpret_cast < type-id > ( expression )
 
 の結果は、 **`reinterpret_cast`** 元の型にキャストバックする以外は安全に使用できません。 その他の使用方法は、最高でも非ポータブルです。
 
-**`reinterpret_cast`** 演算子は **`const`** 、、 **`volatile`** 、または属性をキャストできません **`__unaligned`** 。 これらの属性を削除する方法については、「 [Const_cast 演算子](../cpp/const-cast-operator.md)」を参照してください。
+**`reinterpret_cast`** 演算子は **`const`** 、、 **`volatile`** 、または属性をキャストできません **`__unaligned`** 。 これらの属性を削除する方法については、「 [Const_cast 演算子](../cpp/const-cast-operator.md) 」を参照してください。
 
 演算子は、 **`reinterpret_cast`** null ポインター値を変換先の型の null ポインター値に変換します。
 

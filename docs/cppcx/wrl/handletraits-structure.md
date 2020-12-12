@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「HANDLETraits 構造体」を参照してください。
 title: HANDLETraits 構造体
 ms.date: 09/27/2018
 ms.topic: reference
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - Microsoft::WRL::Wrappers::HandleTraits::HANDLETraits::Close method
 - Microsoft::WRL::Wrappers::HandleTraits::HANDLETraits::GetInvalidValue method
 ms.assetid: 22963e88-d857-4624-9182-7c986daff722
-ms.openlocfilehash: c04e53789fd737b12ca10ef2c279a05fb43f5925
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: c3eef03c724b1ba868ba67ed251acdb310d8b66f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87212996"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97250024"
 ---
 # <a name="handletraits-structure"></a>HANDLETraits 構造体
 
@@ -47,13 +48,13 @@ struct HANDLETraits;
 
 `HANDLETraits`
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** corewrappers .h
 
 **名前空間:** Microsoft:: WRL:: Wrapper:: HandleTraits
 
-## <a name="handletraitsclose"></a><a name="close"></a>HANDLETraits:: Close
+## <a name="handletraitsclose"></a><a name="close"></a> HANDLETraits:: Close
 
 指定されたハンドルを閉じます。
 
@@ -70,9 +71,9 @@ inline static bool Close(
 
 ### <a name="return-value"></a>戻り値
 
-**`true`***ハンドルが*正常に閉じられた場合は。それ以外の場合は **`false`** 。
+**`true`***ハンドルが* 正常に閉じられた場合は。それ以外の場合は **`false`** 。
 
-## <a name="handletraitsgetinvalidvalue"></a><a name="getinvalidvalue"></a>HANDLETraits:: GetInvalidValue
+## <a name="handletraitsgetinvalidvalue"></a><a name="getinvalidvalue"></a> HANDLETraits:: GetInvalidValue
 
 は無効なハンドルを表します。
 

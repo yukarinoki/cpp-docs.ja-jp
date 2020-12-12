@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: コンパイラの警告 (レベル 4) C4463'
 title: コンパイラの警告 (レベル 4) C4463
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - C4463
 ms.assetid: a07ae70c-db4e-472b-8b58-9137d9997323
-ms.openlocfilehash: acc7957493942a9c0e19ce098b74ed0b5d75a12d
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: fe4ea13c50e16bf5b72f5753fa989970db3cadde
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87214361"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97251324"
 ---
 # <a name="compiler-warning-level-4-c4463"></a>コンパイラの警告 (レベル 4) C4463
 
-> 超え*low_value*から*high_value*までの値のみを保持できるビットフィールドへの*値*の代入
+> 超え *low_value* から *high_value* までの値のみを保持できるビットフィールドへの *値* の代入
 
-割り当てられた*値*が、ビットフィールドに保持できる値の範囲外です。 符号付きビットフィールド型は、符号に上位ビットを使用します。そのため、 *n*がビットフィールドサイズの場合、符号付きビットフィールドの範囲は-2<sup>n-1</sup> ~ 2<sup>n-1</sup>-1 になります。一方、符号なしビットフィールドの範囲は 0 ~ 2<sup>n-1</sup>です。
+割り当てられた *値* が、ビットフィールドに保持できる値の範囲外です。 符号付きビットフィールド型は、符号に上位ビットを使用します。そのため、 *n* がビットフィールドサイズの場合、符号付きビットフィールドの範囲は-2 <sup>n-1</sup> ~ 2 <sup>n-1</sup>-1 になります。一方、符号なしビットフィールドの範囲は 0 ~ 2 <sup>n-1</sup>です。
 
 ## <a name="example"></a>例
 
