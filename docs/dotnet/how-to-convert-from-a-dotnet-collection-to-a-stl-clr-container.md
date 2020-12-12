@@ -1,20 +1,21 @@
 ---
+description: '詳細については、「方法: .NET コレクションを STL/CLR コンテナーに変換する」を参照してください。'
 title: '方法: .NET コレクションを STL/CLR コンテナーに変換する'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - STL/CLR, converting from .NET collections
 - STL/CLR Containers [STL/CLR]
 ms.assetid: bb927c48-78e8-4150-bd0b-787c651f4a87
-ms.openlocfilehash: 4993571d479924edc71a277887a8bd95fc4fd463
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: ba3e4ce6b9d7bd1c5da373c6eb545eb8167942b6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91506441"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97268393"
 ---
 # <a name="how-to-convert-from-a-net-collection-to-a-stlclr-container"></a>方法: .NET コレクションを STL/CLR コンテナーに変換する
 
-このトピックでは、.NET コレクションを同等の STL/CLR コンテナーに変換する方法について説明します。 例として、.NET を <xref:System.Collections.Generic.List%601> stl/clr[ベクター](../dotnet/vector-stl-clr.md)に変換する方法と、.net を stl/clr マップに変換する方法について説明し <xref:System.Collections.Generic.Dictionary%602> ますが、この手順はすべてのコレクションとコンテナーに似ています。 [map](../dotnet/map-stl-clr.md)
+このトピックでは、.NET コレクションを同等の STL/CLR コンテナーに変換する方法について説明します。 例として、.NET を <xref:System.Collections.Generic.List%601> stl/clr[ベクター](../dotnet/vector-stl-clr.md)に変換する方法と、.net を stl/clr マップに変換する方法について説明し <xref:System.Collections.Generic.Dictionary%602> ますが、この手順はすべてのコレクションとコンテナーに似ています。 [](../dotnet/map-stl-clr.md)
 
 ### <a name="to-create-a-container-from-a-collection"></a>コレクションからコンテナーを作成するには
 

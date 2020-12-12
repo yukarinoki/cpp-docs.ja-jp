@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: _RTC_SetErrorFunc'
 title: _RTC_SetErrorFunc
 ms.date: 11/04/2016
 api_name:
@@ -25,16 +26,16 @@ helpviewer_keywords:
 - RTC_SetErrorFunc function
 - _RTC_SetErrorFunc function
 ms.assetid: b2292722-0d83-4092-83df-3d5b19880666
-ms.openlocfilehash: 6b173dd9af9fe11146341468c44a0abc10ce90bc
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 454fd54e0960e8ce52c94b4e4a1e0a93ea99d3eb
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70949012"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97268939"
 ---
 # <a name="_rtc_seterrorfunc"></a>_RTC_SetErrorFunc
 
-実行時エラー チェック (RTC) を報告するためのハンドラーとして関数を指定します。 この関数は非推奨とされます。代わりに **_RTC_SetErrorFuncW**を使用してください。
+実行時エラー チェック (RTC) を報告するためのハンドラーとして関数を指定します。 この関数は非推奨とされます。代わりに **_RTC_SetErrorFuncW** を使用してください。
 
 ## <a name="syntax"></a>構文
 
@@ -46,16 +47,16 @@ _RTC_error_fn _RTC_SetErrorFunc(
 
 ### <a name="parameters"></a>パラメーター
 
-*関数*<br/>
+*function*<br/>
 実行時エラー チェックを処理する関数のアドレス。
 
 ## <a name="return-value"></a>戻り値
 
-以前に定義されたエラーの関数。 以前に定義された関数がない場合、は**NULL**を返します。
+以前に定義されたエラーの関数。 以前に定義された関数がない場合、は **NULL** を返します。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-この関数は使用しないでください。代わりに、 **_RTC_SetErrorFuncW**を使用してください。 これは下位互換性のためだけに残されています。
+この関数は使用しないでください。代わりに、 **_RTC_SetErrorFuncW** を使用します。 これは下位互換性のためだけに残されています。
 
 ## <a name="requirements"></a>必要条件
 
@@ -63,7 +64,7 @@ _RTC_error_fn _RTC_SetErrorFunc(
 |-------------|---------------------|
 |**_RTC_SetErrorFunc**|\<rtcapi.h>|
 
-詳細については、「[互換性](../../c-runtime-library/compatibility.md)」をご覧ください。
+詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
 ## <a name="libraries"></a>ライブラリ
 

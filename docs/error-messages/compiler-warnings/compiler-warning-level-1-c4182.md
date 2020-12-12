@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: コンパイラの警告 (レベル 1) C4182'
 title: コンパイラの警告 (レベル 1) C4182
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - C4182
 ms.assetid: 8970f3c6-e2dd-407e-b2ec-964360eb8b43
-ms.openlocfilehash: a438373b7fda04a6e8d1f76e2ef38208c3e557a8
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 975d3ceea5e2b7504fda5c7d33e88b52cda9e572
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80175949"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97266703"
 ---
 # <a name="compiler-warning-level-1-c4182"></a>コンパイラの警告 (レベル 1) C4182
 
-入れ子のレベルを含める \#は ' number ' ディープです。無限再帰の可能性があります
+\#含める入れ子のレベルは ' number ' です。無限再帰の可能性があります
 
 コンパイラがヒープ上の領域を使い切りました。入れ子になっているインクルード ファイルの数が原因です。 インクルード ファイルは、別のインクルード ファイルに含められると入れ子になります。
 

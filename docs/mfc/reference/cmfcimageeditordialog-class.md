@@ -1,5 +1,6 @@
 ---
-title: クラスをイメージします。
+description: '詳細情報: CMFCImageEditorDialog クラス'
+title: CMFCImageEditorDialog クラス
 ms.date: 11/19/2018
 f1_keywords:
 - CMFCImageEditorDialog
@@ -8,16 +9,16 @@ f1_keywords:
 helpviewer_keywords:
 - CMFCImageEditorDialog [MFC], CMFCImageEditorDialog
 ms.assetid: 6a7d08f3-1ec2-4062-9b79-a0c2776b58d1
-ms.openlocfilehash: 23c2a919428689fe107b82041bd87b758ede2bc9
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 6c25cf4a1a8d0cc5852049a06c3a140cbb00a118
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81367467"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97265390"
 ---
-# <a name="cmfcimageeditordialog-class"></a>クラスをイメージします。
+# <a name="cmfcimageeditordialog-class"></a>CMFCImageEditorDialog クラス
 
-この`CMFCImageEditorDialog`クラスはイメージ エディター ダイアログ ボックスをサポートします。
+クラスは、[ `CMFCImageEditorDialog` イメージエディター] ダイアログボックスをサポートしています。
 
 ## <a name="syntax"></a>構文
 
@@ -31,25 +32,25 @@ class CMFCImageEditorDialog : public CDialogEx
 
 |名前|説明|
 |----------|-----------------|
-|[ダイアログ ボックス::CMFC イメージ エディター ダイアログ](#cmfcimageeditordialog)|`CMFCImageEditorDialog` オブジェクトを構築します。|
+|[CMFCImageEditorDialog:: CMFCImageEditorDialog](#cmfcimageeditordialog)|`CMFCImageEditorDialog` オブジェクトを構築します。|
 
 ## <a name="remarks"></a>解説
 
-この`CMFCImageEditorDialog`クラスには、次のダイアログ ボックスが用意されています。
+クラスには、次のよう `CMFCImageEditorDialog` なダイアログボックスが用意されています。
 
-- イメージ内の個々のピクセルを変更するために使用する画像領域。
+- 画像内の個々のピクセルを変更するために使用する画像領域。
 
-- 描画領域のピクセルを変更するための描画ツール。
+- 画像領域のピクセルを変更するための描画ツール。
 
-- 描画ツールで使用される色を指定するカラー パレット。
+- 描画ツールで使用される色を指定するためのカラーパレット。
 
 - 編集の効果を表示するプレビュー領域。
 
-次の図は、イメージ エディターダイアログ ボックスを示しています。
+次の図は、[イメージエディター] ダイアログボックスを示しています。
 
 ![[CMFCImageEditorDialog] ダイアログ ボックス](../../mfc/reference/media/imageedit.png "[CMFCImageEditorDialog] ダイアログ ボックス")
 
-`CMFCImageEditorDialog`オブジェクトを使用する 1 つの方法は、`CBitmap`編集するイメージを渡す方法です。 画像編集領域のサイズが制限され、論理ピクセル サイズが領域に合わせて調整されるため、大きな画像を作成しないでください。 モーダル`DoModal`ダイアログ ボックスを開始するには、メソッドを呼び出します。
+オブジェクトを使用する方法の1つとし `CMFCImageEditorDialog` て、編集対象のイメージを渡すことができ `CBitmap` ます。 イメージの編集領域のサイズは制限されており、その領域に合わせて論理ピクセルサイズが調整されるため、大きなイメージは作成しないでください。 `DoModal`モーダルダイアログボックスを開始するには、メソッドを呼び出します。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -65,11 +66,11 @@ class CMFCImageEditorDialog : public CDialogEx
 
 [CMFCImageEditorDialog](../../mfc/reference/cmfcimageeditordialog-class.md)
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-**ヘッダー:** afximage エディターダイアログ.h
+**ヘッダー:** afximageeditordialog
 
-## <a name="cmfcimageeditordialogcmfcimageeditordialog"></a><a name="cmfcimageeditordialog"></a>ダイアログ ボックス::CMFC イメージ エディター ダイアログ
+## <a name="cmfcimageeditordialogcmfcimageeditordialog"></a><a name="cmfcimageeditordialog"></a> CMFCImageEditorDialog:: CMFCImageEditorDialog
 
 `CMFCImageEditorDialog` オブジェクトを構築します。
 
@@ -82,30 +83,30 @@ CMFCImageEditorDialog(
 
 ### <a name="parameters"></a>パラメーター
 
-*ビットマップ*<br/>
+*pBitmap*<br/>
 イメージへのポインター。
 
-*親*<br/>
-現在のイメージ エディター ダイアログ ボックスの親ウィンドウへのポインター。
+*pParent*<br/>
+[現在のイメージエディター] ダイアログボックスの親ウィンドウへのポインター。
 
-*ピクセル数*<br/>
-単一ピクセルの色を表すために使用されるビット数(色深度とも呼ばれます)。  *nBitsPixel*パラメーターが -1 の場合、色深度は*pBitmap*パラメーターで指定されたイメージから派生します。 既定値は -1 です。
+*nBitsPixel*<br/>
+1つのピクセルの色を表すために使用されるビット数。色深度とも呼ばれます。  *NBitsPixel* パラメーターが-1 の場合、色深度は *pbitmap* パラメーターによって指定されたイメージから派生します。 既定値は -1 です。
 
 ### <a name="return-value"></a>戻り値
 
-イメージを変更するには、イメージ ポインターをコンストラクターに`CMFCImageEditorDialog`渡します。 次に、`DoModal`モーダル ダイアログ ボックスを開くメソッドを呼び出します。 メソッドが`DoModal`返されるときに、ビットマップには新しいイメージが含まれます。
+イメージを変更するには、イメージポインターをコンストラクターに渡し `CMFCImageEditorDialog` ます。 次に、メソッドを呼び出して `DoModal` モーダルダイアログボックスを開きます。 メソッドから制御が戻ったときに `DoModal` 、ビットマップに新しいイメージが格納されます。
 
 ### <a name="remarks"></a>解説
 
 ### <a name="example"></a>例
 
-クラスのオブジェクトを構築する方法を次の例に`CMFCImageEditorDialog`示します。 この例は、[新しいコントロールのサンプル](../../overview/visual-cpp-samples.md)の一部です。
+クラスのオブジェクトを構築する方法を次の例に示し `CMFCImageEditorDialog` ます。 この例は、「 [新しいコントロールのサンプル](../../overview/visual-cpp-samples.md)」の一部です。
 
 [!code-cpp[NVC_MFC_NewControls#8](../../mfc/reference/codesnippet/cpp/cmfcimageeditordialog-class_1.cpp)]
 [!code-cpp[NVC_MFC_NewControls#40](../../mfc/reference/codesnippet/cpp/cmfcimageeditordialog-class_2.cpp)]
 
 ## <a name="see-also"></a>関連項目
 
-[階層グラフ](../../mfc/hierarchy-chart.md)<br/>
-[クラス](../../mfc/reference/mfc-classes.md)<br/>
-[クラス](../../mfc/reference/cmfctoolbar-class.md)
+[階層図](../../mfc/hierarchy-chart.md)<br/>
+[Classes](../../mfc/reference/mfc-classes.md)<br/>
+[CMFCToolBar クラス](../../mfc/reference/cmfctoolbar-class.md)

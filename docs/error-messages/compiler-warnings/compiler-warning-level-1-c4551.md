@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: コンパイラの警告 (レベル 1) C4551'
 title: コンパイラの警告 (レベル 1) C4551
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4551
 ms.assetid: 458b59bd-e2d7-425f-9ba6-268ff200424f
-ms.openlocfilehash: 2f2a47ea318bb0a27495d195c61f410d9cc711fc
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 74a0f773f304c4ed4ce2da53a393a858f316c80b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80186154"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97265949"
 ---
 # <a name="compiler-warning-level-1-c4551"></a>コンパイラの警告 (レベル 1) C4551
 

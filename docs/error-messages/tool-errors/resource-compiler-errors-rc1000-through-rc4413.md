@@ -1,17 +1,18 @@
 ---
+description: 詳細については、「リソースコンパイラのエラーと警告 (RCxxxx, RWxxxx)」を参照してください。
 title: リソース コンパイラのエラーと警告
 ms.date: 04/17/2019
 ms.assetid: 0819f955-0561-491d-af3d-2453f4e2d035
-ms.openlocfilehash: dec141723e911c09fc63d7868a2783fb399e6fc3
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 328a64cfba23ef4904f9591c90168fab3a1b08ca
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69509959"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97265754"
 ---
 # <a name="resource-compiler-errors-and-warnings-rcxxxx-rwxxxx"></a>リソース コンパイラのエラーと警告 (RCxxxx、RWxxxx)
 
-このセクションでは、リソースコンパイラによって生成されるエラーについて説明します。 リソースコンパイラのエラーと警告の形式は RC*xxxx*または RW*xxxx*です。ここで、 *xxxx*は4桁の数字です。
+このセクションでは、リソースコンパイラによって生成されるエラーについて説明します。 リソースコンパイラのエラーと警告の形式は RC *xxxx* または RW *xxxx* です。ここで、 *xxxx* は4桁の数字です。
 
 [!INCLUDE[error-boilerplate](../../error-messages/includes/error-boilerplate.md)]
 
@@ -99,5 +100,5 @@ ms.locfileid: "69509959"
 
 ## <a name="see-also"></a>関連項目
 
-[C/C++コンパイラおよびビルドツールのエラーと警告](../compiler-errors-1/c-cpp-build-errors.md)
+[C/c + + コンパイラおよびビルドツールのエラーと警告](../compiler-errors-1/c-cpp-build-errors.md) 
 [リソースコンパイラ](/windows/win32/menurc/resource-compiler)

@@ -1,5 +1,6 @@
 ---
-title: '/Zc: sizeddealloc (グローバル サイズ割り当て解除関数の有効化)'
+description: '詳細情報:/Zc: sizedDealloc (グローバルサイズの割り当て解除関数の有効化)'
+title: '/Zc: sizedDealloc (グローバルサイズ割り当て解除関数の有効化)'
 ms.date: 03/06/2018
 f1_keywords:
 - sizedDealloc
@@ -11,45 +12,45 @@ helpviewer_keywords:
 - /Zc compiler options (C++)
 - Zc compiler options (C++)
 ms.assetid: 3a73ace0-4d36-420a-b699-0ca6fc0dd134
-ms.openlocfilehash: dc381058c6a2ef84542be1d3cdd00c410aa51c2f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4e40355dc3c61f725ca9996dc4c91c0604866fe4
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62315483"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97269069"
 ---
-# <a name="zcsizeddealloc-enable-global-sized-deallocation-functions"></a>/Zc: sizeddealloc (グローバル サイズ割り当て解除関数の有効化)
+# <a name="zcsizeddealloc-enable-global-sized-deallocation-functions"></a>/Zc: sizedDealloc (グローバルサイズ割り当て解除関数の有効化)
 
-**/Zc: sizeddealloc**コンパイラ オプションを優先的に呼び出すグローバル コンパイラに指示`operator delete`または`operator delete[]`を型の 2 番目のパラメーターを持つ関数`size_t`オブジェクトのサイズが使用可能な場合。 これらの関数を使用して、可能性があります、`size_t`デアロケーターのパフォーマンスを最適化するパラメーター。
+**/Zc: sizedDealloc** コンパイラオプションは、 `operator delete` `operator delete[]` `size_t` オブジェクトのサイズが使用可能な場合に型の2番目のパラメーターを持つグローバルまたは関数を優先的に呼び出すようにコンパイラに指示します。 これらの関数は、パラメーターを使用して `size_t` デアロケーターのパフォーマンスを最適化することができます。
 
 ## <a name="syntax"></a>構文
 
-> **/Zc:sizedDealloc**[**-**]
+> **/Zc: sizedDealloc**[ **-** ]
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-C++ 11 標準で静的メンバー関数を定義することがあります`operator delete`と`operator delete[]`秒かかる`size_t`パラメーター。 通常と組み合わせて使用されます[演算子 new](../../cpp/new-operator-cpp.md)より効率的なアロケーターとオブジェクトのデアロケーターを実装する関数。 ただし、c++ 11 では、グローバル スコープで割り当て解除関数の同等のセットは定義しませんでした。 C++ 11、グローバル割り当て解除関数の型の 2 番目のパラメーターを持つで`size_t`配置 delete 関数と見なされます。 必要があります明示的に呼び出すことがサイズの引数を渡すことによって。
+C++ 11 標準では、静的メンバー関数を定義 `operator delete` し、 `operator delete[]` 2 番目のパラメーターを受け取ることができ `size_t` ます。 通常、これらは、オブジェクトのより効率的なアロケーターと deallocators を実装するために、 [operator new](../../cpp/new-operator-cpp.md) 関数と組み合わせて使用されます。 ただし、C++ 11 では、グローバルスコープで同じ割り当て解除関数のセットが定義されていませんでした。 C++ 11 では、型の2番目のパラメーターを持つグローバルな割り当て解除関数 `size_t` は、配置削除関数と見なされます。 これらは、サイズ引数を渡すことによって明示的に呼び出す必要があります。
 
-標準の c++ 14 では、コンパイラの動作を変更します。 グローバル定義するときに`operator delete`と`operator delete[]`型の 2 番目のパラメーターを受け取る`size_t`メンバーのスコープのバージョンが呼び出されないと、オブジェクトのサイズが使用可能なときに、これらの関数を呼び出す、コンパイラが優先されます。 コンパイラでは、サイズ引数が暗黙的に渡します。 1 つの引数のバージョンには、コンパイラは、割り当てが解除されないオブジェクトのサイズを判断できない場合は呼び出されます。 それ以外の場合を呼び出す、deallocation 関数のバージョンを選択するため、通常のルールが引き続き適用されます。 スコープ解決演算子を付けることによって、グローバル関数への呼び出しを明示的に指定することがあります (`::`) の割り当て解除関数の呼び出しにします。
+C++ 14 標準では、コンパイラの動作が変更されます。 グローバルなを定義し、 `operator delete` `operator delete[]` 型の2番目のパラメーターを受け取ると `size_t` 、コンパイラは、メンバースコープのバージョンが呼び出されず、オブジェクトのサイズが使用可能になったときに、これらの関数を呼び出すことを推奨します。 コンパイラは、サイズ引数を暗黙的に渡します。 1つの引数のバージョンは、割り当てが解除されているオブジェクトのサイズをコンパイラが判断できない場合に呼び出されます。 それ以外の場合は、通常、を呼び出すために使用する解放関数のバージョンを選択するための規則が適用されます。 グローバル関数の呼び出しは、スコープ解決演算子 ( `::` ) を解放関数呼び出しに付加することによって明示的に指定できます。
 
-既定では、Visual Studio 2015 以降では、Visual C は、この c++ 14 標準動作を実装します。 設定してこの明示的に指定することがあります、 **/zc: sizeddealloc**コンパイラ オプション。 これは表します可能性がある重大な変更。 使用して、 **/Zc:sizedDealloc-** 、コードが型の 2 番目のパラメーターを使用する配置 delete 演算子を定義する際に、古い動作を保持するオプション`size_t`します。 既定の Visual Studio ライブラリの実装を型の 2 番目のパラメーターを持つグローバル割り当て解除関数の`size_t`1 つのパラメーターのバージョンを呼び出します。 コードがのみ 1 つのパラメーターのグローバルを指定する場合は、delete 演算子と演算子の delete、グローバル サイズ割り当て解除関数の既定のライブラリの実装は、グローバル関数を呼び出します。
+既定では、Visual Studio 2015 以降の Visual C++ は、この C++ 14 標準動作を実装します。 これを明示的に指定するには、 **/zc: sizedDealloc** コンパイラオプションを設定します。 これは、互換性に影響する可能性のある変更を表します。 以前の動作を保持するには、 **/zc: sizedDealloc-** オプションを使用します。たとえば、コードで型の2番目のパラメーターを使用する配置削除演算子を定義する場合など `size_t` です。 型の2番目のパラメーターを持つグローバル解放関数の既定の Visual Studio ライブラリ実装では、 `size_t` 単一のパラメーターバージョンが呼び出されます。 コードで単一パラメーターのグローバル演算子 delete と operator delete [] のみを指定した場合、グローバルサイズ解放関数の既定のライブラリ実装では、グローバル関数が呼び出されます。
 
-**/Zc: sizeddealloc**コンパイラ オプションが既定でオンです。 [/Permissive -](permissive-standards-conformance.md)オプションには影響しません **/zc: sizeddealloc**します。
+**/Zc: sizedDealloc** コンパイラオプションは、既定でオンになっています。 [/Permissive-](permissive-standards-conformance.md)オプションは、 **/Zc: sizedDealloc** には影響しません。
 
 Visual C++ の準拠に関する問題について詳しくは、「 [Nonstandard Behavior](../../cpp/nonstandard-behavior.md)」をご覧ください。
 
-## <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境において、このコンパイラ オプションを設定する方法
+## <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのコンパイラ オプションを設定するには
 
-1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。 [Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)します。
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、[Visual Studio での C++ コンパイラとビルド プロパティの設定](../working-with-project-properties.md)に関するページを参照してください。
 
-1. **構成**ドロップダウン メニューで、**すべて構成**します。
+1. [ **構成** ] ドロップダウンメニューから、[ **すべての構成**] を選択します。
 
-1. 選択、**構成プロパティ** > **C/C++** > **コマンドライン**プロパティ ページ。
+1. [**構成プロパティ**] [  >  **C/c + +**  >  **コマンドライン**] プロパティページを選択します。
 
-1. 変更、**追加オプション**含めるプロパティを **/zc: sizeddealloc**または **/Zc:sizedDealloc-** 選び、 **OK**します。
+1. **/Zc: sizeddealloc** または **/Zc: sizeddealloc** が含まれるように "**追加オプション**" プロパティを変更し、[ **OK]** を選択します。
 
 ## <a name="see-also"></a>関連項目
 
 [MSVC コンパイラ オプション](compiler-options.md)<br/>
-[MSVC コンパイラ コマンド ラインの構文](compiler-command-line-syntax.md)<br/>
+[MSVC Compiler Command-Line 構文](compiler-command-line-syntax.md)<br/>
 [/Zc (準拠)](zc-conformance.md)<br/>

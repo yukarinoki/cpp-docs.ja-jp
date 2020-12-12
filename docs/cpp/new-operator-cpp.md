@@ -1,15 +1,16 @@
 ---
+description: '詳細情報: new 演算子 (C++)'
 title: new 演算子 (C++)
 ms.date: 11/04/2016
 helpviewer_keywords:
 - new keyword [C++]
 ms.assetid: 69fee812-1c28-4882-8fda-d1ad17860004
-ms.openlocfilehash: 0c3ed59262ec5ad061572d23c1166b2153cb16ca
-ms.sourcegitcommit: 43cee7a0d41a062661229043c2f7cbc6ace17fa3
+ms.openlocfilehash: 5bfc6fdc59348defc87d26dae1056ae80dab3ec5
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92008574"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97268627"
 ---
 # <a name="new-operator-c"></a>new 演算子 (C++)
 
@@ -42,7 +43,7 @@ char (*pchar)[10] = new char[dim][10];
 delete [] pchar;
 ```
 
-*型名*には **`const`** 、、 **`volatile`** 、クラス宣言、または列挙宣言を含めることはできません。 したがって、次の式は無効です。
+*型名* には **`const`** 、、 **`volatile`** 、クラス宣言、または列挙宣言を含めることはできません。 したがって、次の式は無効です。
 
 ```cpp
 volatile char *vch = new volatile char[20];
@@ -57,7 +58,7 @@ int (**p) () = new (int (*[7]) ());
 delete *p;
 ```
 
-**`new`** 引数を追加せずに演算子を使用し、 [/Gx](../build/reference/gx-enable-exception-handling.md)、 [/Eha](../build/reference/eh-exception-handling-model.md)、または[/ehs](../build/reference/eh-exception-handling-model.md)オプションを指定してコンパイルすると、コンパイラは、 **`delete`** コンストラクターが例外をスローした場合に operator を呼び出すためのコードを生成します。
+**`new`** 引数を追加せずに演算子を使用し、 [/Gx](../build/reference/gx-enable-exception-handling.md)、 [/Eha](../build/reference/eh-exception-handling-model.md)、または [/ehs](../build/reference/eh-exception-handling-model.md)オプションを指定してコンパイルすると、コンパイラは、 **`delete`** コンストラクターが例外をスローした場合に operator を呼び出すためのコードを生成します。
 
 次の一覧では、の文法要素について説明し **`new`** ます。
 
@@ -228,18 +229,18 @@ int main()
 
 - オブジェクトを初期化します。 初期化が完了すると、割り当てられたストレージをオブジェクトにするための十分な情報が得られます。
 
-- *新しい型名*または*型名*から派生したポインター型のオブジェクトへのポインターを返します。 プログラムでは、このポインターを使用して新しく割り当てられたオブジェクトにアクセスします。
+- *新しい型名* または *型名* から派生したポインター型のオブジェクトへのポインターを返します。 プログラムでは、このポインターを使用して新しく割り当てられたオブジェクトにアクセスします。
 
-**`new`** 演算子は、function**演算子 new**を呼び出します。 任意の型の配列、型、型、または型ではないオブジェクトの場合、 **`class`** **`struct`** **`union`** グローバル関数 **:: operator new**が呼び出されてストレージが割り当てられます。 クラス型のオブジェクトは、クラスごとに独自の **operator new** static メンバー関数を定義できます。
+**`new`** 演算子は、function **演算子 new** を呼び出します。 任意の型の配列、型、型、または型ではないオブジェクトの場合、 **`class`** **`struct`** **`union`** グローバル関数 **:: operator new** が呼び出されてストレージが割り当てられます。 クラス型のオブジェクトは、クラスごとに独自の **operator new** static メンバー関数を定義できます。
 
-コンパイラは、型 type **`new`** のオブジェクトを割り当てる演算子を検出**type**すると、 `type` **:: operator new (sizeof (** )) の呼び出しを発行します。 `type` **) )** または、ユーザー定義の**operator new**が定義されていない場合は **:: operator new (sizeof (** `type` **))** を呼び出します。 このため、 **`new`** 演算子はオブジェクトに対して適切な量のメモリを割り当てることができます。
+コンパイラは、型 type **`new`** のオブジェクトを割り当てる演算子を検出すると、 `type` **:: operator new (sizeof (** )) の呼び出しを発行します。 `type` または、ユーザー定義の **operator new** が定義されていない場合は **:: operator new (sizeof (** `type` **))** を呼び出します。 このため、 **`new`** 演算子はオブジェクトに対して適切な量のメモリを割り当てることができます。
 
 > [!NOTE]
-> **Operator new**の引数は型 `size_t` です。 この型は、、、、、、、、、およびで定義されてい \<direct.h> \<malloc.h> \<memory.h> \<search.h> \<stddef.h> \<stdio.h> \<stdlib.h> \<string.h> \<time.h> ます。
+> **Operator new** の引数は型 `size_t` です。 この型は、、、、、、、、、およびで定義されてい \<direct.h> \<malloc.h> \<memory.h> \<search.h> \<stddef.h> \<stdio.h> \<stdlib.h> \<string.h> \<time.h> ます。
 
-文法のオプションでは、 *配置* を指定できます (「 [New 演算子](../cpp/new-operator-cpp.md)の文法」を参照してください)。 *Placement*パラメーターは、 **operator new**のユーザー定義の実装に対してのみ使用できます。これにより、追加の情報を**operator new**に渡すことができます。 などの *配置* フィールドを持つ式 `T *TObject = new ( 0x0040 ) T;` は、 `T *TObject = T::operator new( sizeof( T ), 0x0040 );` クラス T にメンバー演算子 new がある場合はに変換され、それ以外の場合はに変換され `T *TObject = ::operator new( sizeof( T ), 0x0040 );` ます。
+文法のオプションでは、 *配置* を指定できます (「 [New 演算子](../cpp/new-operator-cpp.md)の文法」を参照してください)。 *Placement* パラメーターは、 **operator new** のユーザー定義の実装に対してのみ使用できます。これにより、追加の情報を **operator new** に渡すことができます。 などの *配置* フィールドを持つ式 `T *TObject = new ( 0x0040 ) T;` は、 `T *TObject = T::operator new( sizeof( T ), 0x0040 );` クラス T にメンバー演算子 new がある場合はに変換され、それ以外の場合はに変換され `T *TObject = ::operator new( sizeof( T ), 0x0040 );` ます。
 
-*配置*フィールドの本来の目的は、ハードウェアに依存するオブジェクトをユーザーが指定したアドレスに割り当てることができるようにすることでした。
+*配置* フィールドの本来の目的は、ハードウェアに依存するオブジェクトをユーザーが指定したアドレスに割り当てることができるようにすることでした。
 
 > [!NOTE]
 > 前の例では *配置* フィールドに1つの引数のみを示していますが、この方法では **演算子** に渡すことができる余分な引数の数に制限はありません。

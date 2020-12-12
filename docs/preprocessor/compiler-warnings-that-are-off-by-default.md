@@ -1,16 +1,17 @@
 ---
+description: '詳細情報: 既定でオフになっているコンパイラの警告'
 title: 既定で無効になっているコンパイラ警告
 ms.date: 08/29/2019
 helpviewer_keywords:
 - warnings, compiler
 - cl.exe compiler, setting options
 ms.assetid: 69809cfb-a38a-4035-b154-283a61938df8
-ms.openlocfilehash: 3727777c6abd3ae5ba19f147e2b6fbe559251813
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 5bc482d12026bb8358d773be6a0c8b32cc2317fc
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88836610"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97269381"
 ---
 # <a name="compiler-warnings-that-are-off-by-default"></a>既定で無効になっているコンパイラ警告
 
@@ -32,15 +33,15 @@ ms.locfileid: "88836610"
 
    `/Wall` は既定では無効のすべての警告を有効にします。 このオプションを使用する場合は、 [/wd](../build/reference/compiler-option-warning-level.md) オプションを使用して個々の警告をオフにすることができます。
 
-- [/w*Lnnnn*](../build/reference/compiler-option-warning-level.md)
+- [/w *Lnnnn*](../build/reference/compiler-option-warning-level.md)
 
-   このオプションを選択すると、レベル*L*で警告*nnnn*が有効になります。
+   このオプションを選択すると、レベル *L* で警告 *nnnn* が有効になります。
 
 ## <a name="warnings-that-are-off-by-default"></a>既定でオフになっている警告
 
 Visual Studio 2015 以降のバージョンでは、次の警告が既定で無効になっています。
 
-|警告|メッセージ|
+|警告|Message|
 |-|-|
 |[C4061](../error-messages/compiler-warnings/compiler-warning-level-4-c4061.md) (レベル 4)|列挙型 '*enumeration*' のスイッチ内の列挙子 '*identifier*' は、case ラベルによって明示的に処理されていません|
 |[C4062](../error-messages/compiler-warnings/compiler-warning-level-4-c4062.md) (レベル 4)|列挙型 '*enumeration*' のスイッチ内の列挙子 '*identifier*' は処理されません|
@@ -50,7 +51,7 @@ Visual Studio 2015 以降のバージョンでは、次の警告が既定で無�
 |[C4254](../error-messages/compiler-warnings/compiler-warning-level-4-c4254.md) (レベル 4)|'*operator*': ' type1 *' から '**type1*' への変換です。データが失われる可能性があります。|
 |[C4255](../error-messages/compiler-warnings/compiler-warning-level-4-c4255.md) (レベル 4)|'*function*': 関数プロトタイプが指定されていません: ' () ' を ' (void) ' に変換しています|
 |[C4263](../error-messages/compiler-warnings/compiler-warning-level-4-c4263.md) (レベル 4)|'*function*': メンバー関数は、基底クラスの仮想メンバー関数をオーバーライドしません|
-|[C4264](../error-messages/compiler-warnings/compiler-warning-level-1-c4264.md) (レベル 1)|'*virtual_function*': 基底*クラス ' class*' からの仮想メンバー関数に使用できるオーバーライドはありません。関数は非表示です|
+|[C4264](../error-messages/compiler-warnings/compiler-warning-level-1-c4264.md) (レベル 1)|'*virtual_function*': 基底 *クラス ' class*' からの仮想メンバー関数に使用できるオーバーライドはありません。関数は非表示です|
 |[C4265](../error-messages/compiler-warnings/compiler-warning-level-3-c4265.md) (レベル 3)|'*class*': クラスは仮想関数を含んでいますが、デストラクターは仮想ではありません|
 |[C4266](../error-messages/compiler-warnings/compiler-warning-level-4-c4266.md) (レベル 4)|'*function*': ベース '*type*' から仮想メンバー関数に使用できるオーバーライドはありません。関数は非表示です|
 |[C4287](../error-messages/compiler-warnings/compiler-warning-level-3-c4287.md) (レベル 3)|'*operator*': 符号なしまたは負の定数が一致しません。|
@@ -88,10 +89,10 @@ Visual Studio 2015 以降のバージョンでは、次の警告が既定で無�
 |C4583 (レベル 4)|'*type*': デストラクターは暗黙的に呼び出されません|
 |C4587 (レベル 1)|'*anonymous_structure*': 動作変更: コンストラクターは暗黙的に呼び出されなくなりました|
 |C4588 (レベル 1)|'*anonymous_structure*': 動作変更: デストラクターは暗黙的に呼び出されなくなりました|
-|[C4596](../error-messages/compiler-warnings/c4596.md) (レベル 4)|'*identifier*': メンバー宣言<sup>14.3</sup> <sup>Perm</sup>内の修飾名が無効です|
-|C4598 (レベル1およびレベル 3)|' #include "*header*" ': プリコンパイル済みヘッダーのヘッダー番号*ヘッダー番号*が、その位置<sup>14.3</sup>の現在のコンパイルと一致しません|
-|C4599 (レベル 3)|'*option* *path*': コマンドライン引数の数値*がプリコン*パイル済みヘッダー <sup>14.3</sup>と一致しません|
-|C4605 (レベル 1)|現在のコマンドラインで '/d*macro*' が指定されましたが、プリコンパイル済みヘッダーがビルドされたときに指定されませんでした|
+|[C4596](../error-messages/compiler-warnings/c4596.md) (レベル 4)|'*identifier*': メンバー宣言 <sup>14.3</sup> <sup>Perm</sup>内の修飾名が無効です|
+|C4598 (レベル1およびレベル 3)|' #include "*header*" ': プリコンパイル済みヘッダーのヘッダー番号 *ヘッダー番号* が、その位置 <sup>14.3</sup>の現在のコンパイルと一致しません|
+|C4599 (レベル 3)|'*option* *path*': コマンドライン引数の数値 *がプリコン* パイル済みヘッダー <sup>14.3</sup>と一致しません|
+|C4605 (レベル 1)|現在のコマンドラインで '/d *macro*' が指定されましたが、プリコンパイル済みヘッダーがビルドされたときに指定されませんでした|
 |[C4608](../error-messages/compiler-warnings/compiler-warning-level-3-c4608.md) (レベル 3)|'*union_member*' は、初期化子リスト '*union_member* <sup>' の</sup>別の共用体メンバーによって既に初期化されています。|
 |[C4619](../error-messages/compiler-warnings/compiler-warning-level-3-c4619.md) (レベル 3)|#pragma 警告: 警告番号 '*number*' がありません|
 |[C4623](../error-messages/compiler-warnings/compiler-warning-level-4-c4623.md) (レベル 4)|'derived class': 基底クラスの既定コンストラクターにアクセスできないため、既定のコンストラクターは生成できませんでした。|
@@ -113,7 +114,7 @@ Visual Studio 2015 以降のバージョンでは、次の警告が既定で無�
 |C4767 (レベル 4)|セクション名 '*symbol*' が8文字を超えているため、リンカーによって切り捨てられます|
 |C4768 (レベル 3)|リンケージ指定の前の __declspec 属性は無視されます|
 |C4774 (レベル 4)|'*string*': 引数 *番号* に必要な書式文字列が文字列リテラルではありません|
-|C4777 (レベル 4)|'*function*': 書式文字列 '*string*' には型 ' type1 ' の引数が必要ですが、可変個引数引数の*数値*には*型 '**type1*' が含まれています|
+|C4777 (レベル 4)|'*function*': 書式文字列 '*string*' には型 ' type1 ' の引数が必要ですが、可変個引数引数の *数値* には *型 '**type1*' が含まれています|
 |C4786 (レベル 3)|'*symbol*': オブジェクト名がデバッグ情報の '*number*' 文字に切り詰められました|
 | [C4800](../error-messages/compiler-warnings/compiler-warning-level-3-c4800.md) (レベル 4) | '*Type*' から bool への暗黙的な変換です。 考えられる情報損失 <sup>16.0</sup> |
 |[C4820](../error-messages/compiler-warnings/compiler-warning-level-4-c4820.md) (レベル 4)|コンストラクト '*member_name*' の後に '*bytes*' バイトのパディングが追加されました|
@@ -142,12 +143,12 @@ Visual Studio 2015 以降のバージョンでは、次の警告が既定で無�
 |C5029 (レベル 4)|非標準の拡張機能が使用されています: C++ のアラインメント属性は変数、データメンバー、タグの種類にのみ適用されます|
 |C5031 (レベル 4)|#pragma 警告 (pop): 不一致の可能性があります。ポップアップの警告状態が別のファイル<sup>14.1</sup>にプッシュされました|
 |C5032 (レベル 4)|検出された #pragma 警告 (プッシュ) に対応する #pragma 警告 (pop) <sup>14.1</sup>がありません|
-|C5034|組み込みの '*組み込み*' を使用すると、関数の*名前*がゲストコード<sup>15.3</sup>としてコンパイルされます。|
-|C5035|機能 '*feature*' を使用すると *、* 関数の名前がゲストコード<sup>15.3</sup>としてコンパイルされます|
+|C5034|組み込みの '*組み込み*' を使用すると、関数の *名前* がゲストコード <sup>15.3</sup>としてコンパイルされます。|
+|C5035|機能 '*feature*' を使用すると *、* 関数の名前がゲストコード <sup>15.3</sup>としてコンパイルされます|
 |C5036 (レベル 1)|/hybrid: x86arm64 ' type1 *' から '**type1*' <sup>15.3</sup>を使用してコンパイルするときの varargs 関数ポインター変換|
 |[C5038](../error-messages/compiler-warnings/c5038.md) (レベル 4)|データメンバー '*member1*' はデータメンバー '*member2*' <sup>15.3</sup>の後に初期化されます|
 |C5039 (レベル 4)|'*function*':-ehc で extern c 関数に渡される可能性のあるスロー関数へのポインターまたは参照です。 この関数が例外をスローした場合、未定義の動作が発生する可能性があります。 <sup>15.5</sup>|
-|C5042 (レベル 3)|'*function*': 標準 C++ では、ブロックスコープの関数宣言を ' inline ' として指定することはできません。' inline ' 指定子<sup>15.5</sup>の削除|
+|C5042 (レベル 3)|'*function*': 標準 C++ では、ブロックスコープの関数宣言を ' inline ' として指定することはできません。' inline ' 指定子 <sup>15.5</sup>の削除|
 |[C5045](../error-messages/compiler-warnings/c5045.md)|/Qspectre スイッチが指定されている場合、コンパイラはメモリ負荷の Spectre 軽減策を挿入します。 <sup>15.7</sup>|
 
 <sup>14.1</sup> Visual Studio 2015 Update 1 以降では、この警告を利用できます。
@@ -163,16 +164,16 @@ Visual Studio 2015 以降のバージョンでは、次の警告が既定で無�
 
 これらの警告は、Visual Studio 2015 より前のバージョンのコンパイラでは既定でオフになっていました。
 
-|警告|メッセージ|
+|警告|Message|
 |-|-|
 |[C4302](../error-messages/compiler-warnings/compiler-warning-level-2-c4302.md) (レベル 2)|'*conversion*': ' type1 *' から '**type1*' への切り捨て|
 |[C4311](../error-messages/compiler-warnings/compiler-warning-level-1-c4311.md) (レベル 1)|'*variable*': ポインターが '*type*' から '*type*' に切り捨てられる|
-|[C4312](../error-messages/compiler-warnings/compiler-warning-level-1-c4312.md) (レベル 1)|'*operation*': ' type1 ' からより大きいサイズ*の '**type1*' への変換です。|
-|[C4319](../error-messages/compiler-warnings/compiler-warning-level-1-c4319.md) (レベル 1)|'*operator*': ' type1 ' をより大きいサイズ*の '**type1*' に拡張することはできません。|
+|[C4312](../error-messages/compiler-warnings/compiler-warning-level-1-c4312.md) (レベル 1)|'*operation*': ' type1 ' からより大きいサイズ *の '**type1*' への変換です。|
+|[C4319](../error-messages/compiler-warnings/compiler-warning-level-1-c4319.md) (レベル 1)|'*operator*': ' type1 ' をより大きいサイズ *の '**type1*' に拡張することはできません。|
 
 この警告は、Visual Studio 2012 より前のバージョンのコンパイラでは既定で無効になっていました。
 
-|警告|メッセージ|
+|警告|Message|
 |-|-|
 |[C4431](../error-messages/compiler-warnings/compiler-warning-level-4-c4431.md) (レベル 4)|型指定子がありません - int と仮定しました。 メモ: C は、現在 int を既定値としてサポートしていません|
 

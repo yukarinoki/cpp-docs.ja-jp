@@ -1,5 +1,6 @@
 ---
-title: '方法: Windows フォームの呼び出しのプロパティとメソッドの制御'
+description: '詳細については、「方法: Windows フォームコントロールのプロパティとメソッドを呼び出す」を参照してください。'
+title: '方法: Windows フォーム コントロールのプロパティとメソッドを呼び出す'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -10,30 +11,30 @@ helpviewer_keywords:
 - calling properties
 - Windows Forms controls [C++], properties
 ms.assetid: 6e647d8a-fdaa-4aa1-b3fe-04f15cff8eb3
-ms.openlocfilehash: 61b565839b3f3c24670819fdcf2dde558e3461ac
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a797084a28eefec27699814a09c8521da7460bc7
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62152814"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97268406"
 ---
-# <a name="how-to-call-properties-and-methods-of-the-windows-forms-control"></a>方法: Windows フォームの呼び出しのプロパティとメソッドの制御
+# <a name="how-to-call-properties-and-methods-of-the-windows-forms-control"></a>方法: Windows フォーム コントロールのプロパティとメソッドを呼び出す
 
-[CWinFormsView::GetControl](../mfc/reference/cwinformsview-class.md#getcontrol)へのポインターを返します<xref:System.Windows.Forms.Control?displayProperty=fullName>へのポインターではない`WindowsControlLibrary1::UserControl1`、ユーザー コントロールの型のメンバーを追加で、初期化することをお勧め[IView::OnInitialUpdate](../mfc/reference/iview-interface.md#oninitialupdate). メソッドとプロパティを使用してを呼び出すことができますので`m_ViewControl`します。
+[CWinFormsView:: GetControl](../mfc/reference/cwinformsview-class.md#getcontrol)はへのポインターを返すため、へ <xref:System.Windows.Forms.Control?displayProperty=fullName> のポインターではなく、 `WindowsControlLibrary1::UserControl1` ユーザーコントロール型のメンバーを追加して、 [IView:: OnInitialUpdate](../mfc/reference/iview-interface.md#oninitialupdate)で初期化することをお勧めします。 を使用してメソッドとプロパティを呼び出すことができるようになりました `m_ViewControl` 。
 
-このトピックでは、完了していた前提としています。[方法。ユーザー コントロールおよびホストを作成 ダイアログ ボックスで](../dotnet/how-to-create-the-user-control-and-host-in-a-dialog-box.md)と[方法。ユーザー コントロールおよびホスト MDI ビューを作成する](../dotnet/how-to-create-the-user-control-and-host-mdi-view.md)します。
+このトピックでは、「 [方法: ダイアログボックスにユーザーコントロールとホストを作成](../dotnet/how-to-create-the-user-control-and-host-in-a-dialog-box.md) する」および「 [方法: ユーザーコントロールを作成して MDI ビューをホスト](../dotnet/how-to-create-the-user-control-and-host-mdi-view.md)する」を既に完了していることを前提としています。
 
 ### <a name="to-create-the-mfc-host-application"></a>MFC ホスト アプリケーションを作成するには
 
-1. 作成した MFC アプリケーションを開く[方法。ユーザー コントロールおよびホスト MDI ビューを作成する](../dotnet/how-to-create-the-user-control-and-host-mdi-view.md)します。
+1. [「方法: ユーザーコントロールを作成し、MDI ビューをホスト](../dotnet/how-to-create-the-user-control-and-host-mdi-view.md)する」で作成した MFC アプリケーションを開きます。
 
-1. オーバーライドのパブリック セクションに次の行を追加、`CMFC02View`クラス MFC02View.h で宣言します。
+1. MFC02View のクラス宣言のパブリックオーバーライドセクションに、次の行を追加 `CMFC02View` します。
 
    `gcroot<WindowsFormsControlLibrary1::UserControl1 ^> m_ViewControl;`
 
-1. フィルターと並べ替え順序の上書きを追加します。
+1. OnInitialupdate の上書きを追加します。
 
-   表示、**プロパティ**ウィンドウ (F4)。 **クラス ビュー** (CTRL + SHIFT + C)、CMFC02View クラスを選択します。 **プロパティ**ウィンドウで、上書きのアイコンを選択します。 フィルターと並べ替え順序を一覧の下にスクロールします。 ドロップダウン リストからをクリックして\<追加 >。 MFC02View.cpp で。 OnInitialUpdate 関数の本体は、次のようにすることを確認します。
+   [ **プロパティ** ] ウィンドウ (F4) を表示します。 **クラスビュー** (CTRL + SHIFT + C) で、[CMFC02View クラス] を選択します。 [ **プロパティ** ] ウィンドウで、[上書き] のアイコンを選択します。 OnInitialUpdate に一覧を表示します。 ドロップダウンリストをクリックし、を選択し \<Add> ます。 MFC02View にあります。 OnInitialUpdate 関数の本体が次のようになっていることを確認します。
 
     ```
     CWinFormsView::OnInitialUpdate();
@@ -45,9 +46,9 @@ ms.locfileid: "62152814"
 
    **[ビルド]** メニューの **[ソリューションのビルド]** をクリックします。
 
-   **デバッグ** メニューのをクリックして**デバッグなしで開始**します。
+   [ **デバッグ** ] メニューの [ **デバッグなしで開始**] をクリックします。
 
-   テキスト ボックスが現在初期化されていることに注意してください。
+   テキストボックスが初期化されていることに注意してください。
 
 ## <a name="see-also"></a>関連項目
 

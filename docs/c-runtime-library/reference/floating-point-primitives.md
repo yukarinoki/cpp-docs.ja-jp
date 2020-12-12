@@ -1,4 +1,5 @@
-﻿---
+---
+description: 詳細については、「浮動小数点プリミティブ」を参照してください。
 title: 浮動小数点プリミティブ
 ms.date: 4/2/2020
 api_name:
@@ -157,12 +158,12 @@ helpviewer_keywords:
 - _dsin
 - _ldsin
 - _fdsin
-ms.openlocfilehash: e28c873206d8f050dbde2afc9ebfe3540b6642ff
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 05422620a4da907820ed86a61d4e8dc16b37d3f5
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87218685"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97268965"
 ---
 # <a name="floating-point-primitives"></a>浮動小数点プリミティブ
 
@@ -187,7 +188,7 @@ short __cdecl _fdclass(float x);
 
 ### <a name="remarks"></a>解説
 
-これらの浮動小数点プリミティブは、CRT マクロの C バージョンを実装して、浮動小数点型を[分類](fpclassify.md)します。 引数*x*の分類は、次のいずれかの定数として返されます。
+これらの浮動小数点プリミティブは、CRT マクロの C バージョンを実装して、浮動小数点型を [分類](fpclassify.md) します。 引数 *x* の分類は、次のいずれかの定数として返されます。
 
 |値|説明|
 |-----------|-----------------|
@@ -197,7 +198,7 @@ short __cdecl _fdclass(float x);
 | **FP_SUBNORMAL** | 正または負の subnormal (非正規化) 値 |
 | **FP_ZERO** | 正または負の 0 値 |
 
-詳細については、Microsoft 固有の[_fpclass、_fpclassf](fpclass-fpclassf.md)関数を使用できます。 移植性を確保するには、 [fpclassify](fpclassify.md)マクロまたは関数を使用します。
+詳細については、Microsoft 固有の [_fpclass、_fpclassf](fpclass-fpclassf.md) 関数を使用できます。 移植性を確保するには、 [fpclassify](fpclassify.md) マクロまたは関数を使用します。
 
 ## <a name="_dsign-_ldsign-_fdsign"></a>_dsign、_ldsign、_fdsign
 
@@ -216,7 +217,7 @@ int __cdecl _fdsign(float x);
 
 ### <a name="remarks"></a>解説
 
-これらの浮動小数点プリミティブは、CRT で[signbit](signbit.md)マクロまたは関数を実装します。 符号ビットが引数*x*の有効桁 (仮数) に設定されている場合、0以外の値を返します。符号ビットが設定されていない場合は0を返します。
+これらの浮動小数点プリミティブは、CRT で [signbit](signbit.md) マクロまたは関数を実装します。 符号ビットが引数 *x* の有効桁 (仮数) に設定されている場合、0以外の値を返します。符号ビットが設定されていない場合は0を返します。
 
 ## <a name="_dpcomp-_ldpcomp-_fdpcomp"></a>_dpcomp、_ldpcomp、_fdpcomp
 
@@ -235,15 +236,15 @@ int __cdecl _fdpcomp(float x, float y);
 
 ### <a name="remarks"></a>解説
 
-これらの浮動小数点プリミティブは、 *x*と*y*の2つの引数を受け取り、それらの順序の関係を示す値を返します。これらの定数のビットごとの or として表現されます。
+これらの浮動小数点プリミティブは、 *x* と *y* の2つの引数を受け取り、それらの順序の関係を示す値を返します。これらの定数のビットごとの or として表現されます。
 
 | 値 | 説明 |
 |------------|-----------------|
-| **_FP_LT** | *x*は*y*より小さいと見なすことができます |
-| **_FP_EQ** | *x*は*y*と同じであると見なすことができます。 |
-| **_FP_GT** | *x*は*y*より大きいと見なすことができます |
+| **_FP_LT** | *x* は *y* より小さいと見なすことができます |
+| **_FP_EQ** | *x* は *y* と同じであると見なすことができます。 |
+| **_FP_GT** | *x* は *y* より大きいと見なすことができます |
 
-これらのプリミティブは、CRT で[isgreater、isgreaterequal、isgreater、islessequal、isgreater](floating-point-ordering.md)のマクロと関数を実装します。
+これらのプリミティブは、CRT で [isgreater、isgreaterequal、isgreater、islessequal、isgreater](floating-point-ordering.md) のマクロと関数を実装します。
 
 ## <a name="_dtest-_ldtest-_fdtest"></a>_dtest、_ldtest、_fdtest
 
@@ -257,12 +258,12 @@ short __cdecl _fdtest(float* px);
 
 ### <a name="parameters"></a>パラメーター
 
-*ピクセル*<br/>
+*px*<br/>
 浮動小数点引数へのポインター。
 
 ### <a name="remarks"></a>解説
 
-これらの浮動小数点プリミティブは、CRT 関数の C++ バージョンを実装して、浮動小数点型を[分類](fpclassify.md)します。 引数*x*が評価され、次の定数の1つとして、math. h で定義された分類が返されます。
+これらの浮動小数点プリミティブは、CRT 関数の C++ バージョンを実装して、浮動小数点型を [分類](fpclassify.md) します。 引数 *x* が評価され、次の定数の1つとして、math. h で定義された分類が返されます。
 
 |値|説明|
 |-----------|-----------------|
@@ -272,7 +273,7 @@ short __cdecl _fdtest(float* px);
 | **FP_SUBNORMAL** | 正または負の subnormal (非正規化) 値 |
 | **FP_ZERO** | 正または負の 0 値 |
 
-詳細については、Microsoft 固有の[_fpclass、_fpclassf](fpclass-fpclassf.md)関数を使用できます。 移植性を確保するには、 [fpclassify](fpclassify.md)関数を使用します。
+詳細については、Microsoft 固有の [_fpclass、_fpclassf](fpclass-fpclassf.md) 関数を使用できます。 移植性を確保するには、 [fpclassify](fpclassify.md) 関数を使用します。
 
 ## <a name="_d_int-_ld_int-_fd_int"></a>_d_int、_ld_int、_fd_int
 
@@ -286,7 +287,7 @@ short __cdecl _fd_int(float* px, short exp);
 
 ### <a name="parameters"></a>パラメーター
 
-*ピクセル*<br/>
+*px*<br/>
 浮動小数点引数へのポインター。
 
 *exp*<br/>
@@ -294,7 +295,7 @@ short __cdecl _fd_int(float* px, short exp);
 
 ### <a name="remarks"></a>解説
 
-これらの浮動小数点プリミティブは、浮動小数点値*px*と指数値*exp*へのポインターを取得し、可能であれば、浮動小数点値の小数部を指定された指数より下に削除します。 返される値は、入力値が NaN または無限大の場合は、その入力値を*px*で**分類**した結果であり、それ以外の場合は*px*の出力値で返されます。
+これらの浮動小数点プリミティブは、浮動小数点値 *px* と指数値 *exp* へのポインターを取得し、可能であれば、浮動小数点値の小数部を指定された指数より下に削除します。 返される値は、入力値が NaN または無限大の場合は、その入力値を *px* で **分類** した結果であり、それ以外の場合は *px* の出力値で返されます。
 
 ## <a name="_dscale-_ldscale-_fdscale"></a>_dscale、_ldscale、_fdscale
 
@@ -308,7 +309,7 @@ short __cdecl _fdscale(float* px, long exp);
 
 ### <a name="parameters"></a>パラメーター
 
-*ピクセル*<br/>
+*px*<br/>
 浮動小数点引数へのポインター。
 
 *exp*<br/>
@@ -316,7 +317,7 @@ short __cdecl _fdscale(float* px, long exp);
 
 ### <a name="remarks"></a>解説
 
-これらの浮動小数点プリミティブは、浮動小数点値*px*と指数値*exp*へのポインターを取得し、可能であれば、値を 2<sup>*exp*</sup>で*px*でスケーリングします。 返される値は、入力値が NaN または無限大の場合は、その入力値を*px*で**分類**した結果であり、それ以外の場合は*px*の出力値で返されます。 移植性を確保するには、 [ldexp、ldexp、および ldexp](ldexp.md)関数を優先します。
+これらの浮動小数点プリミティブは、浮動小数点値 *px* と指数値 *exp* へのポインターを取得し、可能であれば、値を 2 <sup>*exp*</sup>で *px* でスケーリングします。 返される値は、入力値が NaN または無限大の場合は、その入力値を *px* で **分類** した結果であり、それ以外の場合は *px* の出力値で返されます。 移植性を確保するには、 [ldexp、ldexp、および ldexp](ldexp.md) 関数を優先します。
 
 ## <a name="_dunscale-_ldunscale-_fdunscale"></a>_dunscale、_ldunscale、_fdunscale
 
@@ -333,12 +334,12 @@ short __cdecl _fdunscale(short* pexp, float* px);
 *pexp*<br/>
 整数型の指数へのポインター。
 
-*ピクセル*<br/>
+*px*<br/>
 浮動小数点引数へのポインター。
 
 ### <a name="remarks"></a>解説
 
-これらの浮動小数点プリミティブは、可能であれば、 *px*によって示される浮動小数点値を、有効桁 (仮数) と指数に分割します。 有効桁は、絶対値が0.5 以上かつ1.0 未満になるようにスケーリングされます。 指数は値*n*です。元の浮動小数点値は、スケールされた有効桁 times 2<sup>*n*</sup>と等しくなります。 この整数指数*n*は、 *pexp*が指す位置に格納されます。 返される値は、入力値が NaN または無限大の場合は、その入力値を*px*で**分類**した結果であり、それ以外の場合は出力値で返されます。 移植性を確保するには、 [frexp、frexpf、frexpf](frexp.md)関数を優先します。
+これらの浮動小数点プリミティブは、可能であれば、 *px* によって示される浮動小数点値を、有効桁 (仮数) と指数に分割します。 有効桁は、絶対値が0.5 以上かつ1.0 未満になるようにスケーリングされます。 指数は値 *n* です。元の浮動小数点値は、スケールされた有効桁 times 2 <sup>*n*</sup>と等しくなります。 この整数指数 *n* は、 *pexp* が指す位置に格納されます。 返される値は、入力値が NaN または無限大の場合は、その入力値を *px* で **分類** した結果であり、それ以外の場合は出力値で返されます。 移植性を確保するには、 [frexp、frexpf、frexpf](frexp.md) 関数を優先します。
 
 ## <a name="_dexp-_ldexp-_fdexp"></a>_dexp、_ldexp、_fdexp
 
@@ -355,7 +356,7 @@ short __cdecl _fdexp(float* px, float y, long exp);
 *y*<br/>
 浮動小数点関数の引数。
 
-*ピクセル*<br/>
+*px*<br/>
 浮動小数点引数へのポインター。
 
 *exp*<br/>
@@ -363,7 +364,7 @@ short __cdecl _fdexp(float* px, float y, long exp);
 
 ### <a name="remarks"></a>解説
 
-これらの浮動小数点プリミティブは、 *px*が*y* * 2<sup>*exp*</sup>に等しい位置に浮動小数点値を構築します。 返される値は、値が NaN または無限の場合は*y*の入力値を、それ以外の場合は出力値を*px*で**分類**した結果です。 移植性を確保するには、 [ldexp、ldexp、および ldexp](ldexp.md)関数を優先します。
+これらの浮動小数点プリミティブは、 *px* が *y* * 2 <sup>*exp*</sup>に等しい位置に浮動小数点値を構築します。 返される値は、値が NaN または無限の場合は *y* の入力値を、それ以外の場合は出力値を *px* で **分類** した結果です。 移植性を確保するには、 [ldexp、ldexp、および ldexp](ldexp.md) 関数を優先します。
 
 ## <a name="_dnorm-_fdnorm"></a>_dnorm、_fdnorm
 
@@ -381,7 +382,7 @@ short __cdecl _fdnorm(unsigned short* ps);
 
 ### <a name="remarks"></a>解説
 
-これらの浮動小数点プリミティブは、アンダーフロー浮動小数点値の小数部を正規化し、一致するように*特性*(バイアスを持つ指数) を調整します。 この値は **`unsigned short`** `_double_val` 、punning で宣言された、 `_ldouble_val` 、または `_float_val` 型の配列に変換された浮動小数点型のビットごとの表現として渡されます。 戻り値は、入力された浮動小数点値が NaN または無限大の場合はその値を、それ以外の場合は出力値に対して、 **fpclassify**の結果になります。
+これらの浮動小数点プリミティブは、アンダーフロー浮動小数点値の小数部を正規化し、一致するように *特性*(バイアスを持つ指数) を調整します。 この値は **`unsigned short`** `_double_val` 、punning で宣言された、 `_ldouble_val` 、または `_float_val` 型の配列に変換された浮動小数点型のビットごとの表現として渡されます。 戻り値は、入力された浮動小数点値が NaN または無限大の場合はその値を、それ以外の場合は出力値に対して、 **fpclassify** の結果になります。
 
 ## <a name="_dpoly-_ldpoly-_fdpoly"></a>_dpoly、_ldpoly、_fdpoly
 
@@ -406,7 +407,7 @@ float __cdecl _fdpoly(float x, _float const* table, int n);
 
 ### <a name="remarks"></a>解説
 
-これらの浮動小数点プリミティブは、係数が*テーブル*内の対応する定数値によって表される、順序*n*の多項式の*x*の評価を返します。 たとえば、*テーブル* \[ 0] = 3.0、*テーブル* \[ 1] = 4.0、*テーブル* \[ 2] = 5.0、および*n* = 2 の場合、これは多項式 5.0 x<sup>2</sup> + 4.0 x + 3.0 を表します。 この多項式が2.0 の*x*に対して評価された場合、結果は31.0 になります。 これらの関数は、内部的には使用されません。
+これらの浮動小数点プリミティブは、係数が *テーブル* 内の対応する定数値によって表される、順序 *n* の多項式の *x* の評価を返します。 たとえば、*テーブル* \[ 0] = 3.0、*テーブル* \[ 1] = 4.0、*テーブル* \[ 2] = 5.0、および *n* = 2 の場合、これは多項式 5.0 x <sup>2</sup> + 4.0 x + 3.0 を表します。 この多項式が2.0 の *x* に対して評価された場合、結果は31.0 になります。 これらの関数は、内部的には使用されません。
 
 ## <a name="_dlog-_dlog-_dlog"></a>_dlog、_dlog、_dlog
 
@@ -424,11 +425,11 @@ float __cdecl _fdlog(float x, int base_flag);
 浮動小数点関数の引数。
 
 *base_flag*<br/>
-使用するベースを制御するフラグです。0の場合は*0、base* 10 の場合は0以外の値に設定されます。
+使用するベースを制御するフラグです。0の場合は *0、base* 10 の場合は0以外の値に設定されます。
 
 ### <a name="remarks"></a>解説
 
-これらの浮動小数点プリミティブは、 *x*、ln (*x*)、またはログ<sub>*e*</sub>(*x*) の自然対数を返します ( *base_flag*が0の場合)。 *Base_flag*が0以外の場合は、ログの底が10の*x*、またはログ<sub>10</sub>(*x*) が返されます。 これらの関数は、内部的には使用されません。 移植性のために、関数[log、logf、logf、log10、log10f、および log10l](log-logf-log10-log10f.md)を優先します。
+これらの浮動小数点プリミティブは、 *x*、ln (*x*)、またはログ <sub>*e*</sub>(*x*) の自然対数を返します ( *base_flag* が0の場合)。 *Base_flag* が0以外の場合は、ログの底が10の *x*、またはログ <sub>10</sub>(*x*) が返されます。 これらの関数は、内部的には使用されません。 移植性のために、関数 [log、logf、logf、log10、log10f、および log10l](log-logf-log10-log10f.md)を優先します。
 
 ## <a name="_dsin-_ldsin-_fdsin"></a>_dsin、_ldsin、_fdsin
 
@@ -450,9 +451,9 @@ float __cdecl _fdsin(float x, unsigned int quadrant);
 
 ### <a name="remarks"></a>解説
 
-これらの浮動小数点プリミティブは、*クアドラント*剰余4によって*x*オフセットのサインを返します。 実質的には、これらは、各*クアドラント*が0、1、2、または3の場合、 *x*の正弦、コサイン、-正弦、および-余弦を返します。 これらの関数は、内部的には使用されません。 移植性のために、 [sin、sinf、sinf](sin-sinf-sinl.md)、 [cos、cosf、cosf](cos-cosf-cosl.md)の各関数を優先します。
+これらの浮動小数点プリミティブは、*クアドラント* 剰余4によって *x* オフセットのサインを返します。 実質的には、これらは、各 *クアドラント* が0、1、2、または3の場合、 *x* の正弦、コサイン、-正弦、および-余弦を返します。 これらの関数は、内部的には使用されません。 移植性のために、 [sin、sinf、sinf](sin-sinf-sinl.md)、 [cos、cosf、cosf](cos-cosf-cosl.md) の各関数を優先します。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 ヘッダー: \<math.h>
 

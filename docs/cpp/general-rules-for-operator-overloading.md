@@ -1,19 +1,20 @@
 ---
+description: '詳細情報: 演算子のオーバーロードに関する一般的な規則'
 title: 演算子のオーバーロードに関する一般的な規則
 ms.date: 11/04/2016
 helpviewer_keywords:
 - operator overloading [C++], rules
 ms.assetid: eb2b3754-35f7-4832-b1da-c502893dc0c7
-ms.openlocfilehash: da0bf04435118c819fc29efd3082d8d312e43006
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 224bc6fb8de566519ef848471905d1ed76a020db
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87213399"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97268731"
 ---
 # <a name="general-rules-for-operator-overloading"></a>演算子のオーバーロードに関する一般的な規則
 
-次の規則は、オーバーロードした演算子の実装のされ方を抑制します。 ただし、 [new](../cpp/new-operator-cpp.md)演算子と[delete](../cpp/delete-operator-cpp.md)演算子には適用されませんが、個別に説明されています。
+次の規則は、オーバーロードした演算子の実装のされ方を抑制します。 ただし、 [new](../cpp/new-operator-cpp.md) 演算子と [delete](../cpp/delete-operator-cpp.md) 演算子には適用されませんが、個別に説明されています。
 
 - **.** などの新しい演算子を定義することはできません。
 
@@ -40,7 +41,7 @@ ms.locfileid: "87213399"
 
    前のコード サンプルは、メンバー関数として小なり演算子を宣言します。ただし、加算演算子はフレンド アクセスを持つグローバル関数として宣言されます。 複数の実装を特定の演算子に対して提供できることに注意してください。 前の加算演算子の場合は、可換を容易にするため、2 種類の実装が用意されています。 これは、をに、をに追加する演算子が `Point` `Point` **`int`** `Point` 実装される可能性があるのと同じです。
 
-- 演算子は、組み込み型との一般的な使用方法によって指定されるオペランドの優先順位、グループ、および数に従います。 したがって、"型のオブジェクトに2と3を加算する" という概念を表す方法はありません `Point` 。 *x*座標に2を加算し、3を*y*座標に追加することを想定しています。
+- 演算子は、組み込み型との一般的な使用方法によって指定されるオペランドの優先順位、グループ、および数に従います。 したがって、"型のオブジェクトに2と3を加算する" という概念を表す方法はありません `Point` 。 *x* 座標に2を加算し、3を *y* 座標に追加することを想定しています。
 
 - メンバー関数として宣言された単項演算子は引数を受け取りません。グローバル関数として宣言された場合は、引数を 1 つ受け取ります。
 

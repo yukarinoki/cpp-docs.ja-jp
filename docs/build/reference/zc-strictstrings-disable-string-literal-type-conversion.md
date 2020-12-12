@@ -1,4 +1,5 @@
 ---
+description: 詳細については、次を参照してください。 `/Zc:strictStrings` (文字列リテラル型の変換を無効にする)
 title: /Zc:strictStrings (文字列リテラル型の変換の無効化)
 ms.date: 03/06/2018
 f1_keywords:
@@ -11,14 +12,14 @@ helpviewer_keywords:
 - /Zc compiler options (C++)
 - Zc compiler options (C++)
 ms.assetid: b7eb3f3b-82c1-48a2-8e63-66bad7397b46
-ms.openlocfilehash: df880ed64fa472ff55eb5ee0d17caacf56228ab6
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 38c0ac2fe69acd81762fbf26797eece659ee63a3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87211893"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97269056"
 ---
-# <a name="zcstrictstrings-disable-string-literal-type-conversion"></a>`/Zc:strictStrings`(文字列リテラル型の変換を無効にします)
+# <a name="zcstrictstrings-disable-string-literal-type-conversion"></a>`/Zc:strictStrings` (文字列リテラル型の変換を無効にします)
 
 指定した場合、コンパイラは、 **`const`** 文字列リテラルを使用して初期化されたポインターに対して厳密修飾準拠を必要とします。
 
@@ -58,7 +59,7 @@ int main() {
 を使用して文字列ポインターを宣言する場合、 **`auto`** コンパイラは正しい **`const`** ポインター型宣言を作成します。 ポインターの内容を変更しようとすると、 **`const`** コンパイラによってエラーとして報告されます。
 
 > [!NOTE]
-> Visual Studio 2013 の C++ 標準ライブラリでは、 **`/Zc:strictStrings`** デバッグビルドのコンパイラオプションはサポートされていません。 ビルド出力に複数の[C2665](../../error-messages/compiler-errors-2/compiler-error-c2665.md)エラーが表示される場合は、これが原因である可能性があります。
+> Visual Studio 2013 の C++ 標準ライブラリでは、 **`/Zc:strictStrings`** デバッグビルドのコンパイラオプションはサポートされていません。 ビルド出力に複数の [C2665](../../error-messages/compiler-errors-2/compiler-error-c2665.md) エラーが表示される場合は、これが原因である可能性があります。
 
 Visual C++ の準拠に関する問題について詳しくは、「 [Nonstandard Behavior](../../cpp/nonstandard-behavior.md)」をご覧ください。
 
@@ -68,8 +69,8 @@ Visual C++ の準拠に関する問題について詳しくは、「 [Nonstandar
 
 1. [**構成プロパティ**] [  >  **C/c + +**  >  **コマンドライン**] プロパティページを選択します。
 
-1. を含めるように "**追加オプション**" プロパティを変更し、[ **`/Zc:strictStrings`** **OK]** を選択します。
+1. を含めるように " **追加オプション** " プロパティを変更し、[ **`/Zc:strictStrings`** **OK]** を選択します。
 
 ## <a name="see-also"></a>関連項目
 
-[`/Zc`互換性](zc-conformance.md)<br/>
+[`/Zc` 互換性](zc-conformance.md)<br/>

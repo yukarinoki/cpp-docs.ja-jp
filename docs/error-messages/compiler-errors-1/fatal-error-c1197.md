@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: 致命的なエラー C1197'
 title: 致命的なエラー C1197
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,22 +7,22 @@ f1_keywords:
 helpviewer_keywords:
 - C1197
 ms.assetid: 22b801b7-e792-41f6-a461-973c03c69f25
-ms.openlocfilehash: 7f698262c73f0b311a92a8940107b552430919bb
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: c61cbd71fa8f17dc787fd9ee5eabd0f073aafb39
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74747242"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97268172"
 ---
 # <a name="fatal-error-c1197"></a>致命的なエラー C1197
 
-プログラムが既に ' mscorlib. dll_2 ' を参照しているため、' mscorlib. dll_1 ' を参照できません
+' mscorlib.dll_1 ' を参照できません。プログラムは ' mscorlib.dll_2 ' を既に参照しています。
 
 コンパイラは、共通言語ランタイムのバージョンと一致します。  ただし、以前のバージョンから共通言語ランタイムファイルのバージョンを参照しようとしました。
 
-このエラーを解決するには、コンパイルしているビジュアルC++のバージョンに付属している共通言語ランタイムのバージョンからのファイルのみを参照します。
+このエラーを解決するには、コンパイルするバージョンの Visual C++ に付属している共通言語ランタイムのバージョンのファイルのみを参照します。
 
-## <a name="example"></a>使用例
+## <a name="example"></a>例
 
 次の例では、C1197 が生成されます。
 

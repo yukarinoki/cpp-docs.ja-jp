@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: CSimpleRow クラス'
 title: CSimpleRow クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -34,12 +35,12 @@ helpviewer_keywords:
 - m_dwRef
 - m_iRowset
 ms.assetid: 06d9621d-60cc-4508-8b0c-528d1b1a809b
-ms.openlocfilehash: c0d7ea0966b9a582e4a6969573458bca2e8a0fea
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 7390a8d82e8996c81761065541eebbbccae510ad
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91507227"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97268419"
 ---
 # <a name="csimplerow-class"></a>CSimpleRow クラス
 
@@ -73,9 +74,9 @@ class CSimpleRow
 |[m_dwRef](#dwref)|既存の行ハンドルに対する参照カウント。|
 |[m_iRowset](#irowset)|カーソルを表す行セットへのインデックス。|
 
-## <a name="remarks"></a>注釈
+## <a name="remarks"></a>解説
 
-行ハンドルは、論理的には結果行の一意のタグです。 `IRowsetImpl``CSimpleRow` [IRowsetImpl:: GetNextRows](./irowsetimpl-class.md#getnextrows)で要求されたすべての行に対して新しいを作成します。 `CSimpleRow` は、の既定のテンプレート引数であるため、行ハンドルの独自の実装に置き換えることもでき `IRowsetImpl` ます。 このクラスを置き換える唯一の要件は、置換クラスに **LONG**型の1つのパラメーターを受け取るコンストラクターを提供させることです。
+行ハンドルは、論理的には結果行の一意のタグです。 `IRowsetImpl``CSimpleRow` [IRowsetImpl:: GetNextRows](./irowsetimpl-class.md#getnextrows)で要求されたすべての行に対して新しいを作成します。 `CSimpleRow` は、の既定のテンプレート引数であるため、行ハンドルの独自の実装に置き換えることもでき `IRowsetImpl` ます。 このクラスを置き換える唯一の要件は、置換クラスに **LONG** 型の1つのパラメーターを受け取るコンストラクターを提供させることです。
 
 ## <a name="csimplerowaddrefrow"></a><a name="addrefrow"></a> CSimpleRow:: AddRefRow
 
@@ -104,7 +105,7 @@ HRESULT Compare(CSimpleRow* pRow);
 
 ### <a name="return-value"></a>戻り値
 
-2つの行が同じ行インスタンスであるか S_FALSE であることを示す HRESULT 値 (通常は S_OK)。2つの行が異なることを示します。 その他の可能性のある戻り値については、 *OLE DB プログラマーリファレンス*の「 [IRowsetIdentity:: IsSameRow](/previous-versions/windows/desktop/ms719629(v=vs.85)) 」を参照してください。
+2つの行が同じ行インスタンスであるか S_FALSE であることを示す HRESULT 値 (通常は S_OK)。2つの行が異なることを示します。 その他の可能性のある戻り値については、 *OLE DB プログラマーリファレンス* の「 [IRowsetIdentity:: IsSameRow](/previous-versions/windows/desktop/ms719629(v=vs.85)) 」を参照してください。
 
 ## <a name="csimplerowcsimplerow"></a><a name="csimplerow"></a> CSimpleRow:: CSimpleRow
 
@@ -121,9 +122,9 @@ CSimpleRow(DBCOUNTITEM iRowsetCur);
 *iRowsetCur*<br/>
 から現在の行セットへのインデックス。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
-[M_iRowset](#irowset)を*iRowsetCur*に設定します。
+[M_iRowset](#irowset)を *iRowsetCur* に設定します。
 
 ## <a name="csimplerowreleaserow"></a><a name="releaserow"></a> CSimpleRow:: ReleaseRow
 
