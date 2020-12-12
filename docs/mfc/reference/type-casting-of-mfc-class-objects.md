@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: MFC クラスオブジェクトの型キャスト'
 title: MFC クラス オブジェクトの型キャスト
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - casting types [MFC]
 - macros [MFC], casting pointers
 ms.assetid: e138465e-c35f-4e84-b788-bd200ccf2f0e
-ms.openlocfilehash: e3702ced83021e42ac6bf71a78efc51fa07b8be9
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: bec49afc0050aa32c6e5436e5efca9b0dab30709
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88840493"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97218672"
 ---
 # <a name="type-casting-of-mfc-class-objects"></a>MFC クラス オブジェクトの型キャスト
 
@@ -42,7 +43,7 @@ DYNAMIC_DOWNCAST(class, pointer)
 クラスの名前。
 
 *pointer*<br/>
-型 *クラス*のオブジェクトへのポインターにキャストするポインター。
+型 *クラス* のオブジェクトへのポインターにキャストするポインター。
 
 ### <a name="remarks"></a>解説
 
@@ -52,7 +53,7 @@ DYNAMIC_DOWNCAST(class, pointer)
 
 ## <a name="static_downcast"></a><a name="static_downcast"></a> STATIC_DOWNCAST
 
-*Pobject*を*class_name*オブジェクトへのポインターにキャストします。
+*Pobject* を *class_name* オブジェクトへのポインターにキャストします。
 
 ```
 STATIC_DOWNCAST(class_name, pobject)
@@ -64,13 +65,13 @@ STATIC_DOWNCAST(class_name, pobject)
 キャスト先のクラスの名前。
 
 *pobject*<br/>
-*Class_name*オブジェクトへのポインターにキャストするポインター。
+*Class_name* オブジェクトへのポインターにキャストするポインター。
 
 ### <a name="remarks"></a>解説
 
-*pobject* は、NULL であるか、または *class_name*から直接、または間接的に派生したクラスのオブジェクトを指している必要があります。 _DEBUG プリプロセッサシンボルが定義されたアプリケーションのビルドでは、マクロは、 *pobject* が NULL でない場合、または *class_name* パラメーターで指定されたクラスの "種類" ではないオブジェクトを指している場合にアサートします (「 [CObject:: IsKindOf](../../mfc/reference/cobject-class.md#iskindof)」を参照)。 **_DEBUG**以外のビルドでは、マクロは型チェックを行わずにキャストを実行します。
+*pobject* は、NULL であるか、または *class_name* から直接、または間接的に派生したクラスのオブジェクトを指している必要があります。 _DEBUG プリプロセッサシンボルが定義されたアプリケーションのビルドでは、マクロは、 *pobject* が NULL でない場合、または *class_name* パラメーターで指定されたクラスの "種類" ではないオブジェクトを指している場合にアサートします (「 [CObject:: IsKindOf](../../mfc/reference/cobject-class.md#iskindof)」を参照)。 **_DEBUG** 以外のビルドでは、マクロは型チェックを行わずにキャストを実行します。
 
-*Class_name*パラメーターで指定するクラスはから派生する必要があり、 `CObject` 「 [cobject クラス: cobject からのクラスの派生](../../mfc/deriving-a-class-from-cobject.md)」で説明されているように、DECLARE_DYNAMIC と IMPLEMENT_DYNAMIC、DECLARE_DYNCREATE と IMPLEMENT_DYNCREATE、または DECLARE_SERIAL マクロと IMPLEMENT_SERIAL マクロを使用する必要があります。
+*Class_name* パラメーターで指定するクラスはから派生する必要があり、 `CObject` 「 [cobject クラス: cobject からのクラスの派生](../../mfc/deriving-a-class-from-cobject.md)」で説明されているように、DECLARE_DYNAMIC と IMPLEMENT_DYNAMIC、DECLARE_DYNCREATE と IMPLEMENT_DYNCREATE、または DECLARE_SERIAL マクロと IMPLEMENT_SERIAL マクロを使用する必要があります。
 
 たとえば、 `CMyDoc` `pMyDoc` 次の式を使用するには、ポインターをと呼ばれるポインターにキャストし `CDocument` ます。
 

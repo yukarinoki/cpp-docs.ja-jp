@@ -1,4 +1,5 @@
 ---
+description: '詳細: バリアント型パラメーター型の定数'
 title: Variant パラメーター型の定数
 ms.date: 11/04/2016
 f1_keywords:
@@ -35,53 +36,53 @@ helpviewer_keywords:
 - VTS_OPTEXCLUSIVE constant [MFC]
 - VTS_YSIZE_PIXELS constant [MFC]
 ms.assetid: de99c7a9-7aae-4dc4-b723-40c6380543ab
-ms.openlocfilehash: f73c72830216679f8a91d0037d48c1e1b8e400c3
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 5bc3dcc8a0a888b21b88700db99b05c0f12a4c5e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81372864"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97218499"
 ---
 # <a name="variant-parameter-type-constants"></a>Variant パラメーター型の定数
 
-このトピックでは、Microsoft Foundation クラス ライブラリの OLE コントロール クラスで使用するように設計されたバリアント パラメーター型を示す新しい定数を示します。
+このトピックでは、Microsoft Foundation Class ライブラリの OLE コントロールクラスで使用するように設計されたバリアント型パラメーターの型を示す新しい定数を示します。
 
 クラス定数の一覧を次に示します。
 
-## <a name="variant-data-constants"></a><a name="_mfc_variant_data_constants"></a>バリアント データ定数
+## <a name="variant-data-constants"></a><a name="_mfc_variant_data_constants"></a> バリアントデータ定数
 
-- VTS_COLOR RGB カラー値を表すために使用される 32 ビット整数。
+- RGB カラー値を表すために使用される32ビット整数を VTS_COLOR します。
 
-- VTS_FONT OLE フォント`IFontDisp`オブジェクトのインターフェイスへのポインター。
+- `IFontDisp`OLE フォントオブジェクトのインターフェイスへのポインターを VTS_FONT します。
 
-- VTS_HANDLE ウィンドウ ハンドルの値です。
+- Windows ハンドル値を VTS_HANDLE します。
 
-- VTS_PICTURE OLE ピクチャ`IPictureDisp`オブジェクトのインターフェイスへのポインター。
+- `IPictureDisp`OLE ピクチャオブジェクトのインターフェイスへのポインターを VTS_PICTURE します。
 
-- VTS_OPTEXCLUSIVEラジオ ボタンなどのコントロールのグループで使用するコントロールに使用される 16 ビット値。 この型は、グループ内の 1 つのコントロールに TRUE 値がある場合、他のコントロールはすべて FALSE にする必要があることをコンテナーに指示します。
+- オプションボタンなど、コントロールのグループで使用することを意図したコントロールに使用される16ビット値 VTS_OPTEXCLUSIVE ます。 この型は、グループ内の1つのコントロールに真の値がある場合は、それ以外はすべて FALSE であることをコンテナーに指示します。
 
-- VTS_TRISTATE チェック ボックスなど、3 つの値 (選択済み、選択解除、使用不可) のいずれかを持つことができるプロパティに使用される 16 ビット符号付き整数。
+- 有効な3つの値のいずれかを持つことができるプロパティに使用される16ビット符号付き整数を VTS_TRISTATE します (選択、クリア、使用不可)。たとえば、チェックボックスなどです。
 
-- VTS_XPOS_HIMETRIC HIMETRIC 単位で x 軸に沿った位置を表すために使用される 32 ビット符号なし整数。
+- HIMETRIC 単位の x 軸に沿った位置を表すために使用される32ビット符号なし整数 VTS_XPOS_HIMETRIC ます。
 
-- VTS_YPOS_HIMETRIC HIMETRIC 単位で y 軸に沿った位置を表すために使用される 32 ビット符号なし整数。
+- HIMETRIC 単位の y 軸に沿った位置を表すために使用される32ビット符号なし整数 VTS_YPOS_HIMETRIC ます。
 
-- VTS_XPOS_PIXELS x 軸に沿った位置をピクセル単位で表すために使用される 32 ビット符号なし整数。
+- X 軸に沿った位置をピクセル単位で表すために使用される32ビット符号なし整数 VTS_XPOS_PIXELS ます。
 
-- VTS_YPOS_PIXELS y 軸に沿った位置をピクセル単位で表すために使用される 32 ビット符号なし整数。
+- Y 軸に沿った位置をピクセル単位で表すために使用される32ビット符号なし整数を VTS_YPOS_PIXELS します。
 
-- VTS_XSIZE_PIXELS画面オブジェクトの幅をピクセル単位で表すために使用される 32 ビット符号なし整数。
+- 画面オブジェクトの幅をピクセル単位で表すために使用される32ビット符号なし整数を VTS_XSIZE_PIXELS します。
 
-- VTS_YSIZE_PIXELS画面オブジェクトの高さをピクセル単位で表すために使用される 32 ビット符号なし整数。
+- 画面オブジェクトの高さをピクセル単位で表すために使用される32ビット符号なし整数を VTS_YSIZE_PIXELS します。
 
-- VTS_XSIZE_HIMETRIC HIMETRIC 単位で画面オブジェクトの幅を表すために使用される 32 ビット符号なし整数。
+- HIMETRIC 単位での画面オブジェクトの幅を表すために使用される32ビット符号なし整数 VTS_XSIZE_HIMETRIC ます。
 
-- VTS_YSIZE_HIMETRIC HIMETRIC 単位で画面オブジェクトの高さを表すために使用される 32 ビット符号なし整数。
+- HIMETRIC 単位での画面オブジェクトの高さを表すために使用される32ビット符号なし整数 VTS_YSIZE_HIMETRIC ます。
 
     > [!NOTE]
-    >  すべてのバリアント型に対して、バリアント型のデータ定数へのポインターを提供するVTS_FONTとVTS_PICTUREを除く、追加のバリアント定数が定義されています。 これらの定数は、VTS_P`constantname`の規則を使用して名前が付けられます。 たとえば、VTS_PCOLORはVTS_COLOR定数へのポインターです。
+    >  Variant データ定数へのポインターを提供する VTS_FONT および VTS_PICTURE を除き、すべてのバリアント型に対して追加のバリアント定数が定義されています。 これらの定数には、VTS_P 規約を使用して名前が付けられ `constantname` ます。 たとえば、VTS_PCOLOR は VTS_COLOR 定数へのポインターです。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー :** afxdisp.h
 

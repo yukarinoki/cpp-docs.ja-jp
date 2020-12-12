@@ -1,15 +1,16 @@
 ---
+description: 詳細については、「ツールバーコントロールスタイル」を参照してください。
 title: ツール バー コントロールのスタイル
 ms.date: 11/04/2016
 helpviewer_keywords:
 - ToolBar control styles [MFC]
 ms.assetid: 0f717eb9-fa32-4263-b852-809238863feb
-ms.openlocfilehash: eab4dbde68fcebdb0afd0d058b4678c464874c81
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: b044f353ddbdc4ccc9d5050ea14307386b7c2a15
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88837126"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97218720"
 ---
 # <a name="toolbar-control-styles"></a>ツール バー コントロールのスタイル
 
@@ -48,7 +49,7 @@ ms.locfileid: "88837126"
 
 各状態のボタンの外観は、ビジュアルマネージャーによって決定されます。 詳細については、「 [視覚化マネージャー](../../mfc/visualization-manager.md) 」を参照してください。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** afxtoolbarbutton
 

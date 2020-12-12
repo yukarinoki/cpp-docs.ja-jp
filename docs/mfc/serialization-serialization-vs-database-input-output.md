@@ -1,5 +1,6 @@
 ---
-title: シリアル化:シリアル化とデータベースの入出力
+description: '詳細については、「シリアル化: シリアル化とデータベースの入力/出力」を参照してください。'
+title: 'シリアル化: シリアル化とデータベース Input-Output'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - database applications [MFC], file I/O vs. serialization
@@ -7,20 +8,20 @@ helpviewer_keywords:
 - I/O [MFC], vs. serialization
 - databases [MFC], input/output handling
 ms.assetid: f1d23d77-4761-4a52-a7ea-54fc92d347ea
-ms.openlocfilehash: c4f44f1ac291b2d068ca0525543938331d6e07d6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d2c2c8aa9597e23ac3e6caefcb2adb8b31dc3e93
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62308146"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97217511"
 ---
-# <a name="serialization-serialization-vs-database-inputoutput"></a>シリアル化:シリアル化とデータベースの入力/出力
+# <a name="serialization-serialization-vs-database-inputoutput"></a>シリアル化 : シリアル化とデータベースの入出力
 
-この記事では、入力/出力 (I/O) ファイル ベースのおよびその他の I/O の手法が適切な場合に、ドキュメント オブジェクトとシリアル化を使用する場合について説明します: アプリケーションを読み取ってデータベース アプリケーションと同様に、トランザクションごとにデータを書き込むためです。 シリアル化を使用しない場合もしないファイルを開く、保存、保存コマンドとして。 取り上げるトピックは次のとおりです。
+この記事では、ファイルベースの入出力 (i/o) でドキュメントオブジェクトとシリアル化を使用するタイミングについて説明します。また、アプリケーションでは、データベースアプリケーションと同様に、トランザクションごとにデータの読み取りと書き込みを行うため、どのような場合にも必要になります。 シリアル化を使用しない場合は、ファイルを開いて保存し、コマンドとして保存する必要もありません。 取り上げるトピックは次のとおりです。
 
-- [入力/出力の処理の推奨事項](../mfc/recommendations-for-handling-input-output.md)
+- [入力/出力の処理に関する推奨事項](../mfc/recommendations-for-handling-input-output.md)
 
-- [データベース アプリケーションの [ファイル] メニューの処理](../mfc/file-menu-in-an-mfc-database-application.md)
+- [データベースアプリケーションの [ファイル] メニューの処理](../mfc/file-menu-in-an-mfc-database-application.md)
 
 ## <a name="see-also"></a>関連項目
 
