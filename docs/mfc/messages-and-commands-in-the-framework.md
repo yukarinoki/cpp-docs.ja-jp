@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「フレームワークのメッセージとコマンド」を参照してください。
 title: フレームワークのメッセージとコマンド
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - events [MFC], event-driven programming
 - message-driven programming [MFC]
 ms.assetid: d799ed8c-6a9f-4f05-be5d-29cb5bc6d185
-ms.openlocfilehash: db529e2a22b45de3c6f6a659874bbaa941187217
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 48612304ca46fa43c8336c7a9f582f9e8460f00d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84624292"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97203121"
 ---
 # <a name="messages-and-commands-in-the-framework"></a>フレームワークのメッセージとコマンド
 
@@ -22,9 +23,9 @@ Microsoft Windows 用に記述されたアプリケーションは "メッセー
 
 - [Messages (メッセージ)](messages.md)
 
-- [メッセージハンドラー](message-handlers.md)
+- [メッセージ ハンドラー](message-handlers.md)
 
-- [メッセージカテゴリ](message-categories.md)
+- [メッセージの種類](message-categories.md)
 
 - [Windows メッセージとコントロール通知メッセージ](message-categories.md)
 
@@ -34,8 +35,8 @@ Microsoft Windows 用に記述されたアプリケーションは "メッセー
 
 - [ユーザー インターフェイス オブジェクトとコマンド ID](user-interface-objects-and-command-ids.md)
 
-- [コマンドターゲット](command-targets.md)
+- [コマンド ターゲット](command-targets.md)
 
 ## <a name="see-also"></a>関連項目
 
-[メッセージの処理とマップ](message-handling-and-mapping.md)
+[メッセージの処理とマッピング](message-handling-and-mapping.md)

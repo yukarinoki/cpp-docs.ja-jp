@@ -1,16 +1,17 @@
 ---
+description: '詳細については、「MFC ActiveX コントロール: アンビエントプロパティへのアクセス」を参照してください。'
 title: 'MFC ActiveX コントロール : アンビエント プロパティへのアクセス'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - MFC ActiveX controls [MFC], accessing ambient properties
 - properties [MFC], accessing ambient
 ms.assetid: fdc9db29-e6b0-45d2-a879-8bd60e2058a7
-ms.openlocfilehash: e5c78c9943f8baeadcc1198ee8c96f2023ac0215
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 6b553c73873a6f96cab3ab55b576a51045c06609
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84625445"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97203069"
 ---
 # <a name="mfc-activex-controls-accessing-ambient-properties"></a>MFC ActiveX コントロール : アンビエント プロパティへのアクセス
 
@@ -20,9 +21,9 @@ ms.locfileid: "84625445"
 
 アンビエントプロパティにアクセスするには、 [COleControl:: GetAmbientProperty](reference/colecontrol-class.md#getambientproperty)を呼び出します。 この関数は、アンビエントプロパティのディスパッチ ID を最初のパラメーターとして受け取ります (ファイル OLECTL)。H は、アンビエントプロパティの標準セットのディスパッチ Id を定義します。
 
-関数のパラメーターは、 `GetAmbientProperty` ディスパッチ ID、想定されるプロパティの型を示すバリアントタグ、および値が返される必要があるメモリへのポインターです。 このポインターが参照するデータの型は、バリアントタグによって異なります。 この関数は、コンテナーがプロパティをサポートしている場合は**TRUE**を返し、それ以外の場合は**FALSE**を返します。
+関数のパラメーターは、 `GetAmbientProperty` ディスパッチ ID、想定されるプロパティの型を示すバリアントタグ、および値が返される必要があるメモリへのポインターです。 このポインターが参照するデータの型は、バリアントタグによって異なります。 この関数は、コンテナーがプロパティをサポートしている場合は **TRUE** を返し、それ以外の場合は **FALSE** を返します。
 
-次のコード例では、"モード" というアンビエントプロパティの値を取得します。 プロパティがコンテナーでサポートされていない場合、既定値の**TRUE**が想定されます。
+次のコード例では、"モード" というアンビエントプロパティの値を取得します。 プロパティがコンテナーでサポートされていない場合、既定値の **TRUE** が想定されます。
 
 [!code-cpp[NVC_MFC_AxUI#30](codesnippet/cpp/mfc-activex-controls-accessing-ambient-properties_1.cpp)]
 

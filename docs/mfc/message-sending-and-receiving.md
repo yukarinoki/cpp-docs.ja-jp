@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「メッセージの送信と受信」を参照してください。
 title: メッセージの送信と受信
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - MFC, messages
 - messages [MFC], sending
 ms.assetid: 9ce189cb-b259-4c3b-b6f2-9cfbed18b98b
-ms.openlocfilehash: 4da2fce68c1b6fd3827bc8b5d2a40dea5e5f117c
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 3a61346c51ce035f6fd5a53b8c329ef81154b089
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84626172"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97203212"
 ---
 # <a name="message-sending-and-receiving"></a>メッセージの送信と受信
 
@@ -26,11 +27,11 @@ ms.locfileid: "84626172"
 
 次に、プロセスの受信部分を検討します。
 
-メッセージの最初の受信者は、ウィンドウオブジェクトである必要があります。 Windows メッセージは通常、そのウィンドウオブジェクトによって直接処理されます。 コマンドメッセージは、通常、アプリケーションのメインフレームウィンドウで生成され、コマンド[ルーティング](command-routing.md)に記述されているコマンドターゲットチェーンにルーティングされます。
+メッセージの最初の受信者は、ウィンドウオブジェクトである必要があります。 Windows メッセージは通常、そのウィンドウオブジェクトによって直接処理されます。 コマンドメッセージは、通常、アプリケーションのメインフレームウィンドウで生成され、コマンド [ルーティング](command-routing.md)に記述されているコマンドターゲットチェーンにルーティングされます。
 
 メッセージまたはコマンドを受け取ることができる各オブジェクトには、メッセージまたはコマンドとそのハンドラー名を組み合わせた独自のメッセージマップがあります。
 
-コマンドターゲットオブジェクトがメッセージまたはコマンドを受け取ると、メッセージマップで一致が検索されます。 メッセージのハンドラーが見つかった場合は、ハンドラーを呼び出します。 メッセージマップの検索方法の詳細については、「[フレームワークがメッセージマップを検索する方法](how-the-framework-searches-message-maps.md)」を参照してください。 フレームワークの図[コマンド](user-interface-objects-and-command-ids.md)をもう一度参照してください。
+コマンドターゲットオブジェクトがメッセージまたはコマンドを受け取ると、メッセージマップで一致が検索されます。 メッセージのハンドラーが見つかった場合は、ハンドラーを呼び出します。 メッセージマップの検索方法の詳細については、「 [フレームワークがメッセージマップを検索する方法](how-the-framework-searches-message-maps.md)」を参照してください。 フレームワークの図 [コマンド](user-interface-objects-and-command-ids.md)をもう一度参照してください。
 
 ## <a name="see-also"></a>関連項目
 

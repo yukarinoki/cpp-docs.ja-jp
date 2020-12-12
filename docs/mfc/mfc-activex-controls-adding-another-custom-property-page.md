@@ -1,4 +1,5 @@
 ---
+description: '詳細については、「MFC ActiveX コントロール: 別のカスタムプロパティページの追加」を参照してください。'
 title: 'MFC ActiveX コントロール : カスタム プロパティ ページの追加'
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - ActiveX controls [MFC], property pages
 - MFC ActiveX controls [MFC], property pages
 ms.assetid: fcf7e119-9f29-41a9-908d-e9b1607e08af
-ms.openlocfilehash: a749c5d8d676ac85c3c2085eb041328aff599ab8
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 3802a32ed86536850e3a15ae9ce4bb53feb1ff1c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91508880"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97203030"
 ---
 # <a name="mfc-activex-controls-adding-another-custom-property-page"></a>MFC ActiveX コントロール : カスタム プロパティ ページの追加
 
@@ -37,13 +38,13 @@ ActiveX コントロールでのプロパティページの使用の詳細につ
 
 1. リソースビューを右クリックしてショートカットメニューを開き、[ **リソースの追加**] をクリックします。
 
-1. **ダイアログ**ノードを展開し、[ **IDD_OLE_PROPPAGE_SMALL**] を選択します。
+1. **ダイアログ** ノードを展開し、[ **IDD_OLE_PROPPAGE_SMALL**] を選択します。
 
 1. [ **新規** ] をクリックして、リソースをプロジェクトに追加します。
 
 1. [新しいプロパティページ] テンプレートを選択して、[ **プロパティ** ] ウィンドウ ( **リソースビュー**) を更新します。
 
-1. **ID**プロパティの新しい値を入力します。 この例では、 **IDD_PROPPAGE_NEWPAGE**を使用します。
+1. **ID** プロパティの新しい値を入力します。 この例では、 **IDD_PROPPAGE_NEWPAGE** を使用します。
 
 1. ツール バーの **[Save]\(保存\)** をクリックします。
 
@@ -57,7 +58,7 @@ ActiveX コントロールでのプロパティページの使用の詳細につ
 
    [クラスの [追加](../ide/adding-a-class-visual-cpp.md#add-class-dialog-box) ] ダイアログボックスが表示されます。
 
-1. **MFC クラス**テンプレートをダブルクリックします。
+1. **MFC クラス** テンプレートをダブルクリックします。
 
 1. [MFC クラスウィザード](reference/mfc-add-class-wizard.md)の [**クラス名**] ボックスに、新しいダイアログクラスの名前を入力します。 (この例では、 `CAddtlPropPage` )。
 
@@ -89,7 +90,7 @@ BEGIN_PROPPAGEIDS マクロ (プロパティページ数) の2番目のパラメ
 
 1. 文字列テーブルの末尾にある空白行を選択し、文字列のテキスト (キャプション) を入力します。たとえば、「追加のプロパティページ」と入力します。
 
-   [**キャプション**] ボックスと [ **ID** ]**ボックスが表示**されます。 [ **キャプション** ] ボックスには、入力した文字列が表示されます。
+   [**キャプション**] ボックスと [ **ID** ]**ボックスが表示** されます。 [ **キャプション** ] ボックスには、入力した文字列が表示されます。
 
 1. [ **Id** ] ボックスで、文字列の id を選択または入力します。 完了したら Enter キーを押します。
 
