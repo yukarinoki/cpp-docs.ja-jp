@@ -1,5 +1,6 @@
 ---
-title: 閉じる
+description: '詳細情報: close'
+title: close
 ms.date: 12/16/2019
 api_name:
 - close
@@ -23,15 +24,15 @@ f1_keywords:
 helpviewer_keywords:
 - close function
 ms.assetid: c79689f4-9c86-4a4a-a256-d22e3498f55d
-ms.openlocfilehash: 1d3c02e3e2e015d0560b9ca70243f35c9f4a0888
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: 3b9ad6716616dd50be50e106499b1e8d96ab4760
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75301224"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97304624"
 ---
-# <a name="close"></a>閉じる
+# <a name="close"></a>close
 
-Microsoft 実装の POSIX 関数名 `close` は、 [_close](close.md)関数の非推奨のエイリアスです。 既定では、[コンパイラの警告 (レベル 3) C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md)が生成されます。 名前は、実装固有の名前の標準 C 規則に従っていないため、非推奨とされます。 ただし、関数は引き続きサポートされます。
+Microsoft 実装の POSIX 関数名 `close` は、 [_close](close.md) 関数の非推奨のエイリアスです。 既定では、 [コンパイラの警告 (レベル 3) C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md)が生成されます。 名前は、実装固有の名前の標準 C 規則に従っていないため、非推奨とされます。 ただし、関数は引き続きサポートされます。
 
-代わりに[_close](close.md)を使用することをお勧めします。 または、この関数名を引き続き使用して、警告を無効にすることもできます。 詳細については、「警告と[POSIX の関数名](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#posix-function-names)を[無効にする](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#turn-off-the-warning)」を参照してください。
+代わりに [_close](close.md) を使用することをお勧めします。 または、この関数名を引き続き使用して、警告を無効にすることもできます。 詳細については、「警告と[POSIX の関数名](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#posix-function-names)を[無効にする](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#turn-off-the-warning)」を参照してください。

@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: _get_fmode'
 title: _get_fmode
 ms.date: 4/2/2020
 api_name:
@@ -29,12 +30,12 @@ helpviewer_keywords:
 - file translation [C++], default mode
 - get_fmode function
 ms.assetid: 22ea70e2-b9b5-422d-b514-64f4beaea45c
-ms.openlocfilehash: 3e59e608f83874088b64d316c04053b94d8fbfdd
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 56716b7e8c12c5a3de79098a8227be31148ae386
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82909870"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97303649"
 ---
 # <a name="_get_fmode"></a>_get_fmode
 
@@ -51,11 +52,11 @@ errno_t _get_fmode(
 ### <a name="parameters"></a>パラメーター
 
 *pmode*<br/>
-現在の既定のモード ( **_O_TEXT**または **_O_BINARY**に格納される整数へのポインター。
+現在の既定のモード ( **_O_TEXT** または **_O_BINARY** に格納される整数へのポインター。
 
 ## <a name="return-value"></a>戻り値
 
-正常終了した場合は 0 を返します。失敗した場合はエラー コードを返します。 *Pmode*が**NULL**の場合、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、 **errno**は**einval**に設定され、関数は**einval**を返します。
+正常終了した場合は 0 を返します。失敗した場合はエラー コードを返します。 *Pmode* が **NULL** の場合、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、 **errno** は **einval** に設定され、関数は **einval** を返します。
 
 ## <a name="remarks"></a>解説
 
@@ -65,7 +66,7 @@ errno_t _get_fmode(
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|オプション ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|オプション ヘッダー|
 |-------------|---------------------|---------------------|
 |**_get_fmode**|\<stdlib.h>|\<fcntl.h>|
 

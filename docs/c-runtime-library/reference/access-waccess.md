@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: _access、_waccess'
 title: _access、_waccess
 ms.date: 4/2/2020
 api_name:
@@ -37,12 +38,12 @@ helpviewer_keywords:
 - _waccess function
 - taccess function
 ms.assetid: ba34f745-85c3-49e5-a7d4-3590bd249dd3
-ms.openlocfilehash: fdada7f02115f44aa6a7e3c5e9bdfdf5e65f8b2f
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: d8cb62050482f29be0bef2b8433a65c2730de2fe
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88846590"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97303740"
 ---
 # <a name="_access-_waccess"></a>_access、_waccess
 
@@ -83,7 +84,7 @@ int _waccess(
 
 ## <a name="remarks"></a>解説
 
-ファイルと共に使用する場合、 **_access** 関数は、指定されたファイルまたはディレクトリが存在し、 *モード*の値によって指定された属性を持っているかどうかを判断します。 ディレクトリと共に使用する場合、 **_access** は指定したディレクトリが存在するかどうかのみを判断します。Windows 2000 以降のオペレーティングシステムでは、すべてのディレクトリに読み取りと書き込みのアクセス権があります。
+ファイルと共に使用する場合、 **_access** 関数は、指定されたファイルまたはディレクトリが存在し、 *モード* の値によって指定された属性を持っているかどうかを判断します。 ディレクトリと共に使用する場合、 **_access** は指定したディレクトリが存在するかどうかのみを判断します。Windows 2000 以降のオペレーティングシステムでは、すべてのディレクトリに読み取りと書き込みのアクセス権があります。
 
 |*モード* 値|ファイル チェックの目的|
 |------------------|---------------------|
@@ -94,9 +95,9 @@ int _waccess(
 
 この関数は、ファイルとディレクトリが読み取り専用かどうかだけを確認し、ファイルシステムのセキュリティ設定は確認しません。 そのためには、アクセス トークンが必要です。 ファイルシステムのセキュリティの詳細については、「[アクセス トークン](/windows/win32/SecAuthZ/access-tokens)」を参照してください。 ATL クラスはこの機能を提供するために存在します。「[CAccessToken クラス](../../atl/reference/caccesstoken-class.md)」を参照してください。
 
-**_waccess**は **_access**のワイド文字バージョンです。**_waccess**の*パス*引数は、ワイド文字列です。 **_waccess** と **_access** は同じように動作します。
+**_waccess** は **_access** のワイド文字バージョンです。**_waccess** の *パス* 引数は、ワイド文字列です。 **_waccess** と **_access** は同じように動作します。
 
-この関数は、パラメーターを検証します。 *Path*が NULL であるか、*モード*で有効なモードが指定されていない場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、この関数は `errno` を `EINVAL` に設定し、-1 を返します。
+この関数は、パラメーターを検証します。 *Path* が NULL であるか、*モード* で有効なモードが指定されていない場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、この関数は `errno` を `EINVAL` に設定し、-1 を返します。
 
 既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 

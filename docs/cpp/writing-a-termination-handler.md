@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「終了ハンドラーの記述」を参照してください。
 title: 終了ハンドラーの記述
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - exception handling [C++], termination handlers
 - try-catch keyword [C++], termination handlers
 ms.assetid: 52aa1f8f-f8dd-44b8-be94-5e2fc88d44fb
-ms.openlocfilehash: 8a243281e0d984a42cd4b4d9f249d867812d8bca
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: a203cab7d61be66c5fe919aefe1895aa0928c5d9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80187311"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97302986"
 ---
 # <a name="writing-a-termination-handler"></a>終了ハンドラーの記述
 
@@ -26,14 +27,14 @@ ms.locfileid: "80187311"
 
 ## <a name="what-do-you-want-to-know-more-about"></a>さらに詳しくは次のトピックをクリックしてください
 
-- [Try-finally ステートメント](../cpp/try-finally-statement.md)
+- [try-finally ステートメント](../cpp/try-finally-statement.md)
 
-- [リソースのクリーンアップ](../cpp/cleaning-up-resources.md)
+- [リソースの後処理](../cpp/cleaning-up-resources.md)
 
-- [例外処理のアクションのタイミング](../cpp/timing-of-exception-handling-a-summary.md)
+- [例外処理でのアクションのタイミング](../cpp/timing-of-exception-handling-a-summary.md)
 
-- [終了ハンドラーに関する制限事項](../cpp/restrictions-on-termination-handlers.md)
+- [終了ハンドラーに関する制約](../cpp/restrictions-on-termination-handlers.md)
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[構造化例外処理 (C/C++)](../cpp/structured-exception-handling-c-cpp.md)
+[Structured Exception Handling (C/C++)](../cpp/structured-exception-handling-c-cpp.md)

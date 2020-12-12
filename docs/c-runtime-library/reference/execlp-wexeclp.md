@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: _execlp、_wexeclp'
 title: _execlp、_wexeclp
 ms.date: 11/04/2016
 api_name:
@@ -30,12 +31,12 @@ helpviewer_keywords:
 - _wexeclp function
 - wexeclp function
 ms.assetid: 7b179163-4bcd-4d6a-8baf-68f886791928
-ms.openlocfilehash: 6ae1805dd00428aee0acca4bcb3ee221bce1d271
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: c1ef70975f5488c66928bb26e7eac4f4dcf3b0ed
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70937182"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97304832"
 ---
 # <a name="_execlp-_wexeclp"></a>_execlp、_wexeclp
 
@@ -66,14 +67,14 @@ intptr_t _wexeclp(
 *cmdname*<br/>
 実行するファイルのパス。
 
-*arg0*、...*argn*<br/>
+*arg0*、... *argn*<br/>
 パラメーターへのポインターのリスト。
 
 ## <a name="return-value"></a>戻り値
 
-成功した場合、これらの関数が呼び出しプロセスに戻ることはありません。 戻り値-1 はエラーを示します。この場合、 **errno**グローバル変数が設定されます。
+成功した場合、これらの関数が呼び出しプロセスに戻ることはありません。 戻り値-1 はエラーを示します。この場合、 **errno** グローバル変数が設定されます。
 
-|**errno**値|説明|
+|**errno** 値|説明|
 |-------------------|-----------------|
 |**E2BIG**|引数と環境設定には、32 KB を超える領域が必要です。|
 |**EACCES**|指定されたファイルでロック違反または共有違反が発生しています。|
@@ -85,20 +86,20 @@ intptr_t _wexeclp(
 
 リターン コードの詳細については、「[_doserrno、errno、_sys_errlist、および _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」を参照してください。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-これらの各関数は新しいプロセスを読み込んで実行し、各コマンドライン引数を個別のパラメーターとして渡し、 **PATH**環境変数を使用して実行するファイルを検索します。
+これらの各関数は新しいプロセスを読み込んで実行し、各コマンドライン引数を個別のパラメーターとして渡し、 **PATH** 環境変数を使用して実行するファイルを検索します。
 
-これら**の関数は**、パラメーターを検証します。 *Cmdname*または*arg0*が null ポインターまたは空の文字列の場合、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、これらの関数は無効なパラメーターハンドラーを呼び出します。 実行の継続が許可された場合、これらの関数は**errno**を**EINVAL**に設定し、-1 を返します。 新しいプロセスは開始されません。
+**_Execlp** 関数は、パラメーターを検証します。 *Cmdname* または *arg0* が null ポインターまたは空の文字列の場合、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、これらの関数は無効なパラメーターハンドラーを呼び出します。 実行の継続が許可された場合、これらの関数は **errno** を **EINVAL** に設定し、-1 を返します。 新しいプロセスは開始されません。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-|関数|必須ヘッダー|オプション ヘッダー|
+|機能|必須ヘッダー|オプション ヘッダー|
 |--------------|---------------------|---------------------|
 |**_execlp**|\<process.h>|\<errno.h>|
 |**_wexeclp**|\<process.h> または \<wchar.h>|\<errno.h>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性について詳しくは、「 [Compatibility](../../c-runtime-library/compatibility.md)」をご覧ください。
 
 ## <a name="example"></a>例
 
@@ -106,11 +107,11 @@ intptr_t _wexeclp(
 
 ## <a name="see-also"></a>関連項目
 
-[プロセス制御と環境制御](../../c-runtime-library/process-and-environment-control.md)<br/>
-[_exec、_wexec 系関数](../../c-runtime-library/exec-wexec-functions.md)<br/>
-[abort](abort.md)<br/>
+[プロセスと環境の制御](../../c-runtime-library/process-and-environment-control.md)<br/>
+[_exec, _wexec 関数](../../c-runtime-library/exec-wexec-functions.md)<br/>
+[取り消し](abort.md)<br/>
 [atexit](atexit.md)<br/>
-[exit、_Exit、_exit](exit-exit-exit.md)<br/>
+[終了、_Exit、_exit](exit-exit-exit.md)<br/>
 [_onexit、_onexit_m](onexit-onexit-m.md)<br/>
-[_spawn 系関数と _wspawn 系関数](../../c-runtime-library/spawn-wspawn-functions.md)<br/>
+[_spawn, _wspawn 関数](../../c-runtime-library/spawn-wspawn-functions.md)<br/>
 [system、_wsystem](system-wsystem.md)<br/>

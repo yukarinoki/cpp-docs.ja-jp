@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: _aligned_msize'
 title: _aligned_msize
 ms.date: 4/2/2020
 api_name:
@@ -28,12 +29,12 @@ helpviewer_keywords:
 - aligned_msize function
 - _aligned_msize function
 ms.assetid: 10995edc-2110-4212-9ca9-5e0220a464f4
-ms.openlocfilehash: 1037c63af17a844959bc72e42da2c33267b43004
-ms.sourcegitcommit: 94893973211d0b254c8bcdcf0779997dcc136b0c
+ms.openlocfilehash: 6b3b7df960cdbf687a1ea51fa98da216ddfed068
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/28/2020
-ms.locfileid: "91414036"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97303701"
 ---
 # <a name="_aligned_msize"></a>_aligned_msize
 
@@ -66,11 +67,11 @@ size_t _aligned_msize(
 
 ## <a name="remarks"></a>解説
 
-**_Aligned_msize**関数は、 [_aligned_malloc](aligned-malloc.md)または[_aligned_realloc](aligned-realloc.md)の呼び出しによって割り当てられたメモリブロックのサイズ (バイト単位) を返します。 *アラインメント*値と*オフセット*値は、ブロックを割り当てた関数に渡された値と同じである必要があります。
+**_Aligned_msize** 関数は、 [_aligned_malloc](aligned-malloc.md)または [_aligned_realloc](aligned-realloc.md)の呼び出しによって割り当てられたメモリブロックのサイズ (バイト単位) を返します。 *アラインメント* 値と *オフセット* 値は、ブロックを割り当てた関数に渡された値と同じである必要があります。
 
 アプリケーションが C ランタイムライブラリのデバッグバージョンにリンクされている場合、 **_aligned_msize** は [_aligned_msize_dbg](aligned-msize-dbg.md)に解決されます。 デバッグ プロセス中のヒープの管理方法の詳細については、「[CRT デバッグ ヒープ](/visualstudio/debugger/crt-debug-heap-details)」を参照してください。
 
-この関数は、そのパラメーターを検証します。 *Memblock*が null ポインターであるか、または*アラインメント*が2の累乗ではない場合、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、 **_aligned_msize**は無効なパラメーターハンドラーを呼び出します。 エラーが処理された場合、関数は **errno** を **EINVAL** に設定し、-1 を返します。
+この関数は、そのパラメーターを検証します。 *Memblock* が null ポインターであるか、または *アラインメント* が2の累乗ではない場合、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、 **_aligned_msize** は無効なパラメーターハンドラーを呼び出します。 エラーが処理された場合、関数は **errno** を **EINVAL** に設定し、-1 を返します。
 
 既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 

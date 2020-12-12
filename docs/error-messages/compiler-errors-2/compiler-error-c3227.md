@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「コンパイラエラー C3227」を参照してください。
 title: コンパイラ エラー C3227
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3227
 ms.assetid: 7939c23a-96c8-43c2-89e9-f217d132d155
-ms.openlocfilehash: 460000531dba77e42379199f276c9e2e02f43a9b
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 26d66bf3e0c3bc3a6f391d66608f3e6790b2d11d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74743420"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97304143"
 ---
 # <a name="compiler-error-c3227"></a>コンパイラ エラー C3227
 
@@ -21,7 +22,7 @@ ms.locfileid: "74743420"
 
 ジェネリックではなくテンプレートを使用してこのエラーを解決することも、複数のメソッドのいずれかを使用して型のインスタンスを作成することもできます。
 
-## <a name="example"></a>使用例
+## <a name="example"></a>例
 
 次の例では、C3227 が生成されます。
 

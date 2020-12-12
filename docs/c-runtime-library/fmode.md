@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: _fmode'
 title: _fmode
 ms.date: 11/04/2016
 f1_keywords:
@@ -9,14 +10,14 @@ helpviewer_keywords:
 - fmode function
 - _fmode function
 ms.assetid: ac6df9eb-e5cc-4c54-aff3-373c21983118
-ms.openlocfilehash: a41d665eab50203fc3bb176f8bb1bbc30737e844
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: c4e7932369a2ad63b5498078e46cd5610b679ee0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57741933"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97303891"
 ---
-# <a name="fmode"></a>_fmode
+# <a name="_fmode"></a>_fmode
 
 `_fmode` 変数では、テキストまたはバイナリの変換のための既定のファイル変換モードを設定します。 このグローバル変数は非推奨とされました。セキュリティを強化したバージョンである [_get_fmode](../c-runtime-library/reference/get-fmode.md) および [_set_fmode](../c-runtime-library/reference/set-fmode.md) を、グローバル変数の代わりに使用する必要があります。 これは、Stdlib.h で次のように宣言されています。
 
@@ -32,7 +33,7 @@ extern int _fmode;
 
 `_fmode` の値は、次の 3 つの方法で変更できます。
 
-- Binmode.obj とリンクします。これにより、`_fmode` の初期設定が `_O_BINARY` に変更され、その結果 `stdin`、`stdout`、および `stderr` を除くすべてのファイルがバイナリ モードで開かれるようになります。
+- Binmode .obj にリンクします。これにより、の初期設定が `_fmode` に変更 `_O_BINARY` され、、、およびを除くすべてのファイル `stdin` `stdout` `stderr` がバイナリモードで開かれます。
 
 - `_get_fmode` または `_set_fmode` を呼び出して、`_fmode` グローバル変数を取得または設定します。
 

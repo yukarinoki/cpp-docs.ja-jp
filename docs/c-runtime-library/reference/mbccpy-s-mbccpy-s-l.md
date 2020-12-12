@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: _mbccpy_s、_mbccpy_s_l'
 title: _mbccpy_s、_mbccpy_s_l
 ms.date: 4/2/2020
 api_name:
@@ -38,12 +39,12 @@ helpviewer_keywords:
 - _tccpy_s_l function
 - _mbccpy_s_l function
 ms.assetid: b6e965fa-53c1-4ec3-85ef-a1c4b4f2b2da
-ms.openlocfilehash: 85db4e478b070823bb14028018d918e0f3cabbd7
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 6764c100fb52b025db2d8f79a72c7c6420a64bee
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82920320"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97303532"
 ---
 # <a name="_mbccpy_s-_mbccpy_s_l"></a>_mbccpy_s、_mbccpy_s_l
 
@@ -85,14 +86,14 @@ errno_t _mbccpy_s_l(
 
 ### <a name="parameters"></a>パラメーター
 
-*dest*<br/>
+*先*<br/>
 コピー先。
 
 *buffSizeInBytes*<br/>
 コピー先のバッファーのサイズ。
 
 *pCopied*<br/>
-コピーされたバイト数が格納されます (正常終了した場合は 1 または 2)。 数値が気にならない場合は、 **NULL**を渡します。
+コピーされたバイト数が格納されます (正常終了した場合は 1 または 2)。 数値が気にならない場合は、 **NULL** を渡します。
 
 *src*<br/>
 コピーするマルチバイト文字。
@@ -102,26 +103,26 @@ errno_t _mbccpy_s_l(
 
 ## <a name="return-value"></a>戻り値
 
-正常終了した場合は 0 を返します。失敗した場合はエラー コードを返します。 *Src*または*dest*が**NULL**の場合、または**buffSizeinBytes**バイト以上が*Dest*にコピーされる場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、関数は**einval**を返し、 **errno**は**einval**に設定されます。
+正常終了した場合は 0 を返します。失敗した場合はエラー コードを返します。 *Src* または *dest* が **NULL** の場合、または **buffSizeinBytes** バイト以上が *Dest* にコピーされる場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、関数は **einval** を返し、 **errno** は **einval** に設定されます。
 
 ## <a name="remarks"></a>解説
 
-**_Mbccpy_s**関数は、 *src*から*dest*に1つのマルチバイト文字をコピーします。 [_Ismbblead](ismbblead-ismbblead-l.md)への暗黙的な呼び出しによって、 *src*がマルチバイト文字の先行バイトを指していない場合、 *src*が指す1バイトがコピーされます。 *Src*が先行バイトを指していても、次のバイトが0であるため無効である場合、0は*dest*にコピーされ、 **errno**は**EILSEQ**に設定され、関数は**EILSEQ**を返します。
+**_Mbccpy_s** 関数は、 *src* から *dest* に1つのマルチバイト文字をコピーします。 [_Ismbblead](ismbblead-ismbblead-l.md)への暗黙的な呼び出しによって、 *src* がマルチバイト文字の先行バイトを指していない場合、 *src* が指す1バイトがコピーされます。 *Src* が先行バイトを指していても、次のバイトが0であるため無効である場合、0は *dest* にコピーされ、 **errno** は **EILSEQ** に設定され、関数は **EILSEQ** を返します。
 
-**_mbccpy_s**は null 終端文字を追加しません。ただし、 *src*が null 文字を指している場合、その null は*dest*にコピーされます (これは通常の1バイトのコピーにすぎません)。
+**_mbccpy_s** は null 終端文字を追加しません。ただし、 *src* が null 文字を指している場合、その null は *dest* にコピーされます (これは通常の1バイトのコピーにすぎません)。
 
-「 *Pcopied* 」の値には、コピーされたバイト数が格納されます。 操作が正常に終了した場合は、1 と 2 のどちらかの値となります。 **NULL**が渡された場合、このパラメーターは無視されます。
+「 *Pcopied* 」の値には、コピーされたバイト数が格納されます。 操作が正常に終了した場合は、1 と 2 のどちらかの値となります。 **NULL** が渡された場合、このパラメーターは無視されます。
 
-|*src*|*dest*にコピー済み|*pCopied*|戻り値|
+|*src*|*dest* にコピー済み|*pCopied*|戻り値|
 |-----------|----------------------|---------------|------------------|
 |先行バイト以外|先行バイト以外|1|0|
 |0|0|1|0|
 |後続が 0 以外の先行バイト|後続が 0 以外の先行バイト|2|0|
 |後続が 0 以外の先行バイト|0|1|**EILSEQ**|
 
-2 行目は、単に 1 行目の特殊なケースです。 また、このテーブルでは*buffSizeInBytes* >= *pcopied*が想定されていることに注意してください。
+2 行目は、単に 1 行目の特殊なケースです。 また、このテーブルでは *buffSizeInBytes*  >=  *pcopied* が想定されていることに注意してください。
 
-**_mbccpy_s**は、ロケールに依存する動作に現在のロケールを使用します。 **_mbccpy_s_l**は **_mbccpy_s**と同じですが、 **_mbccpy_s_l**はロケールに依存する動作に渡されたロケールを使用する点が異なります。
+**_mbccpy_s** は、ロケールに依存する動作に現在のロケールを使用します。 **_mbccpy_s_l** は **_mbccpy_s** と同じですが、 **_mbccpy_s_l** はロケールに依存する動作に渡されたロケールを使用する点が異なります。
 
 C++ では、テンプレートのオーバーロードによってこれらの関数を簡単に使用できます。オーバーロードでは、バッファー長を自動的に推論できるため、サイズ引数を指定する必要がなくなります。 詳細については、「[セキュリティ保護されたテンプレート オーバーロード](../../c-runtime-library/secure-template-overloads.md)」を参照してください。
 
@@ -135,7 +136,7 @@ C++ では、テンプレートのオーバーロードによってこれらの�
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**_mbccpy_s**|\<mbstring.h>|
 |**_mbccpy_s_l**|\<mbstring.h>|
@@ -144,6 +145,6 @@ C++ では、テンプレートのオーバーロードによってこれらの�
 
 ## <a name="see-also"></a>関連項目
 
-[国](../../c-runtime-library/locale.md)<br/>
-[マルチバイト文字のシーケンスの解釈](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[ロケール](../../c-runtime-library/locale.md)<br/>
+[Multibyte-Character シーケンスの解釈](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [_mbclen、mblen、_mblen_l](mbclen-mblen-mblen-l.md)<br/>

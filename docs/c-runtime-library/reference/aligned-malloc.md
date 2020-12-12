@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: _aligned_malloc'
 title: _aligned_malloc
 ms.date: 4/2/2020
 api_name:
@@ -28,12 +29,12 @@ helpviewer_keywords:
 - aligned_malloc function
 - _aligned_malloc function
 ms.assetid: fb788d40-ee94-4039-aa4d-97d73dab1ca0
-ms.openlocfilehash: 3caf2e8a3160c5533dfdb5bb387b373daf16b6e7
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 39160835ec73593a030fbccd68b00afc7ec4a56c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82912922"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97303779"
 ---
 # <a name="_aligned_malloc"></a>_aligned_malloc
 
@@ -58,23 +59,23 @@ void * _aligned_malloc(
 
 ## <a name="return-value"></a>戻り値
 
-割り当てられたメモリブロックへのポインター。操作が失敗した場合は NULL。 ポインターは、*アラインメント*の倍数です。
+割り当てられたメモリブロックへのポインター。操作が失敗した場合は NULL。 ポインターは、 *アラインメント* の倍数です。
 
 ## <a name="remarks"></a>解説
 
-**_aligned_malloc**は[malloc](malloc.md)に基づいています。
+**_aligned_malloc** は [malloc](malloc.md)に基づいています。
 
-**_aligned_malloc**はと`__declspec(noalias)` `__declspec(restrict)`マークされます。つまり、関数は、グローバル変数を変更せず、返されるポインターがエイリアス化されていないことを保証します。 詳細については、「[noalias](../../cpp/noalias.md)」、および「[restrict](../../cpp/restrict.md)」を参照してください。
+**_aligned_malloc** はとマークされ `__declspec(noalias)` `__declspec(restrict)` ます。つまり、関数は、グローバル変数を変更せず、返されるポインターがエイリアス化されていないことを保証します。 詳細については、「[noalias](../../cpp/noalias.md)」、および「[restrict](../../cpp/restrict.md)」を参照してください。
 
-この関数は、メモリ割り当てが失敗するか、要求されたサイズが `errno` より大きかった場合に、`ENOMEM` を `_HEAP_MAXREQ` に設定します。 `errno` に関する詳細については、「[errno、_doserrno、_sys_errlist、および _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」を参照してください。 また、 **_aligned_malloc**パラメーターを検証します。 *Alignment*が2の累乗でない場合、または*size*が0の場合、この関数は「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーを呼び出します。 実行の継続が許可された場合、この関数は`errno` NULL `EINVAL`を返し、をに設定します。
+この関数は、メモリ割り当てが失敗するか、要求されたサイズが `errno` より大きかった場合に、`ENOMEM` を `_HEAP_MAXREQ` に設定します。 `errno` に関する詳細については、「[errno、_doserrno、_sys_errlist、および _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」を参照してください。 また、 **_aligned_malloc** パラメーターを検証します。 *Alignment* が2の累乗でない場合、または *size* が0の場合、この関数は「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーを呼び出します。 実行の継続が許可された場合、この関数は NULL を返し、 `errno` をに設定 `EINVAL` します。
 
-[_Aligned_free](aligned-free.md)を使用して、 **_aligned_malloc**と`_aligned_offset_malloc`の両方で取得したメモリの割り当てを解除します。 を使用`free`しないでください。これは、適切に調整されたメモリを再利用することはできず、バグの診断が困難になる可能性があります。
+[_Aligned_free](aligned-free.md)を使用して、 **_aligned_malloc** との両方で取得したメモリの割り当てを解除し `_aligned_offset_malloc` ます。 を使用しない `free` でください。これは、適切に調整されたメモリを再利用することはできず、バグの診断が困難になる可能性があります。
 
 既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**_aligned_malloc**|\<malloc.h>|
 

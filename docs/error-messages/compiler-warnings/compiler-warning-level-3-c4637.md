@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: コンパイラの警告 (レベル 3) C4637'
 title: コンパイラの警告 (レベル 3) C4637
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - C4637
 ms.assetid: 5fd347c1-2de9-408f-9136-1bf1ff273622
-ms.openlocfilehash: 28362e186f2cb841f4abb67175984bcd8b4f0cf7
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: 90a9a43ea30b35dabf18f3c300c14f8436bae4a1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74991791"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97303893"
 ---
 # <a name="compiler-warning-level-3-c4637"></a>コンパイラの警告 (レベル 3) C4637
 
-XML ドキュメントコメントのターゲット: \<> タグを破棄します。  理由
+XML ドキュメントコメントのターゲット: タグが破棄されました \<include> 。  reason
 
-\<の構文に[>](../../build/reference/include-visual-cpp.md)タグが正しくありませんでした。
+タグの構文 [\<include>](../../build/reference/include-visual-cpp.md) が正しくありません。
 
 次の例では C4637 警告が生成されます。
 

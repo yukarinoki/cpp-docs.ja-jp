@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: atol、_atol_l、_wtol、_wtol_l'
 title: atol、_atol_l、_wtol、_wtol_l
 ms.date: 4/2/2020
 api_name:
@@ -51,12 +52,12 @@ helpviewer_keywords:
 - wtol function
 - _wtol function
 ms.assetid: cedfc21c-2d64-4e9c-bd04-bdf60b12db46
-ms.openlocfilehash: ffb318a53b34e1d69e533b05f80e942c945e1af7
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 99830a76d3392af71cf3f55992a4207dc3b6ce18
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87218729"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97303688"
 ---
 # <a name="atol-_atol_l-_wtol-_wtol_l"></a>atol、_atol_l、_wtol、_wtol_l
 
@@ -83,7 +84,7 @@ long _wtol_l(
 
 ### <a name="parameters"></a>パラメーター
 
-*引数*<br/>
+*str*<br/>
 変換対象の文字列。
 
 *locale*<br/>
@@ -91,9 +92,9 @@ long _wtol_l(
 
 ## <a name="return-value"></a>戻り値
 
-各関数は、 **`long`** 入力文字を数値として解釈することによって生成される値を返します。 入力をその型の値に変換できない場合、戻り値は**atol**の0L になります。
+各関数は、 **`long`** 入力文字を数値として解釈することによって生成される値を返します。 入力をその型の値に変換できない場合、戻り値は **atol** の0L になります。
 
-大きな正の整数値によるオーバーフローの場合、 **atol**は**LONG_MAX**を返します。大きな負の整数値によるオーバーフローの場合、 **LONG_MIN**が返されます。 範囲外のすべての場合、 **errno**は**ERANGE**に設定されます。 渡されたパラメーターが**NULL**の場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、これらの関数は**errno**を**EINVAL**に設定し、0を返します。
+大きな正の整数値によるオーバーフローの場合、 **atol** は **LONG_MAX** を返します。大きな負の整数値によるオーバーフローの場合、 **LONG_MIN** が返されます。 範囲外のすべての場合、 **errno** は **ERANGE** に設定されます。 渡されたパラメーターが **NULL** の場合は、「 [パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、これらの関数は **errno** を **EINVAL** に設定し、0を返します。
 
 ## <a name="remarks"></a>解説
 
@@ -101,15 +102,15 @@ long _wtol_l(
 
 入力文字列は、指定された型の数値として解釈できる文字シーケンスです。 関数は、数値の一部として認識できない文字に最初に遭遇した時点で入力文字列の読み取りを停止します。 この文字は、文字列を終了する null 文字 ('\0' または L'\0') である場合があります。
 
-**Atol**の*str*引数の形式は次のとおりです。
+**Atol** の *str* 引数の形式は次のとおりです。
 
 > [*空白*][*sign*][*数字*]]
 
-*空白*はスペースまたはタブ文字で構成され、無視されます。*sign*は正符号 (+) またはマイナス記号 (-) です。と*数字*は、1桁以上の数字です。
+*空白* はスペースまたはタブ文字で構成され、無視されます。*sign* は正符号 (+) またはマイナス記号 (-) です。と *数字* は、1桁以上の数字です。
 
-**_wtol**は**atol**と同じですが、ワイド文字列を受け取る点が異なります。
+**_wtol** は **atol** と同じですが、ワイド文字列を受け取る点が異なります。
 
-**_L**サフィックスを持つこれらの関数のバージョンは、現在のロケールの代わりに渡されたロケールパラメーターを使用する点を除いて同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
+**_L** サフィックスを持つこれらの関数のバージョンは、現在のロケールの代わりに渡されたロケールパラメーターを使用する点を除いて同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
 
 既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
@@ -120,7 +121,7 @@ long _wtol_l(
 |**_tstol**|**atol**|**atol**|**_wtol**|
 |**_ttol**|**atol**|**atol**|**_wtol**|
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 |ルーチン|必須ヘッダー|
 |--------------|---------------------|
@@ -129,7 +130,7 @@ long _wtol_l(
 
 ## <a name="example"></a>例
 
-このプログラムは、 **atol**関数を使用して、文字列として格納されている数値を数値に変換する方法を示しています。
+このプログラムは、 **atol** 関数を使用して、文字列として格納されている数値を数値に変換する方法を示しています。
 
 ```C
 // crt_atol.c

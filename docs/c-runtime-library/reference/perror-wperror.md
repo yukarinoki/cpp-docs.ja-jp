@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「_wperror」を参照してください。
 title: perror、_wperror
 ms.date: 4/2/2020
 api_name:
@@ -35,12 +36,12 @@ helpviewer_keywords:
 - _wperror function
 - perror function
 ms.assetid: 34fce792-16fd-4673-9849-cd88b54b6cd5
-ms.openlocfilehash: 64b9abe6313cc13e1e20f8f66ba486cdeb3e4892
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: e63108ac90170d460ee8a2c86e1db773343c1911
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82919330"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97304689"
 ---
 # <a name="perror-_wperror"></a>perror、_wperror
 
@@ -64,7 +65,7 @@ void _wperror(
 
 ## <a name="remarks"></a>解説
 
-エラーメッセージは、 **stderr**関数によって stderr に出力**されます**。 **_wperror**は **_perror**のワイド文字バージョンです。**_wperror**の*メッセージ*引数は、ワイド文字列です。 **_wperror**と **_perror**は同じように動作します。
+エラーメッセージは、 **stderr** 関数によって stderr に出力 **されます**。 **_wperror** は **_perror** のワイド文字バージョンです。**_wperror** の *メッセージ* 引数は、ワイド文字列です。 **_wperror** と **_perror** は同じように動作します。
 
 既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
@@ -74,17 +75,17 @@ void _wperror(
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tperror**|**perror**|**perror**|**_wperror**|
 
-*メッセージ*は最初に出力され、その後にコロン、次にエラーを生成した最後のライブラリの呼び出しのシステムエラーメッセージ、最後に改行文字が出力されます。 *Message*が null ポインターまたは null 文字列へのポインターである場合、システムエラーメッセージのみ**が出力さ**れます。
+*メッセージ* は最初に出力され、その後にコロン、次にエラーを生成した最後のライブラリの呼び出しのシステムエラーメッセージ、最後に改行文字が出力されます。 *Message* が null ポインターまたは null 文字列へのポインターである場合、システムエラーメッセージのみ **が出力さ** れます。
 
-エラー番号は、変数 [errno](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) (ERRNO.H で定義) に格納されます。 システム エラー メッセージは、エラー番号順のメッセージの配列である変数 [_sys_errlist](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) を使用してアクセスできます。 このエラーメッセージは、 **_sys_errlist**のインデックスとして**errno**値を使用し**て出力さ**れます。 変数[_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)の値は、 **_sys_errlist**配列内の要素の最大数として定義されます。
+エラー番号は、変数 [errno](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) (ERRNO.H で定義) に格納されます。 システム エラー メッセージは、エラー番号順のメッセージの配列である変数 [_sys_errlist](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) を使用してアクセスできます。 このエラーメッセージは、 **_sys_errlist** のインデックスとして **errno** 値を使用し **て出力さ** れます。 変数 [_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) の値は、 **_sys_errlist** 配列内の要素の最大数として定義されます。
 
-正確な結果を得るには、ライブラリルーチンからエラーが返された直後に、エラーメッセージ**を呼び出します**。 それ以外の場合、後続の呼び出しで**errno**値が上書きされる可能性があります。
+正確な結果を得るには、ライブラリルーチンからエラーが返された直後に、エラーメッセージ **を呼び出します** 。 それ以外の場合、後続の呼び出しで **errno** 値が上書きされる可能性があります。
 
-Windows オペレーティングシステムでは **、errno に列挙値が**表示されます。H は使用されていません。 これらの値は、UNIX オペレーティング システムで使用するために予約されたものです。 Windows オペレーティングシステムで使用される**errno**値の一覧については[、「_doserrno、errno、_sys_errlist、および _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) 」を参照してください。 は、これらのプラットフォームで使用されていない**errno**値に対して空の文字列**を出力し**ます。
+Windows オペレーティングシステムでは **、errno に列挙値が** 表示されます。H は使用されていません。 これらの値は、UNIX オペレーティング システムで使用するために予約されたものです。 Windows オペレーティングシステムで使用される **errno** 値の一覧については [、「_doserrno、errno、_sys_errlist、および _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) 」を参照してください。 は、これらのプラットフォームで使用されていない **errno** 値に対して空の文字列 **を出力し** ます。
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**perror**|\<stdio.h> または \<stdlib.h>|
 |**_wperror**|\<stdio.h> または \<wchar.h>|
@@ -148,4 +149,4 @@ _strerror says open failed: No such file or directory
 [プロセスと環境の制御](../../c-runtime-library/process-and-environment-control.md)<br/>
 [clearerr](clearerr.md)<br/>
 [ferror](ferror.md)<br/>
-[strerror、_strerror、_wcserror、 \__wcserror](strerror-strerror-wcserror-wcserror.md)<br/>
+[strerror、_strerror、_wcserror、 \_ _wcserror](strerror-strerror-wcserror-wcserror.md)<br/>
