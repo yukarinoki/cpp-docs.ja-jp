@@ -1,5 +1,6 @@
 ---
-title: クラス
+description: '詳細情報: COleStreamFile クラス'
+title: COleStreamFile クラス
 ms.date: 11/04/2016
 f1_keywords:
 - COleStreamFile
@@ -20,14 +21,14 @@ helpviewer_keywords:
 - COleStreamFile [MFC], GetStream
 - COleStreamFile [MFC], OpenStream
 ms.assetid: e4f93698-e17c-4a18-a7c0-4b4df8eb4d93
-ms.openlocfilehash: 202f8381361881ce3b8b62f81da5bfb81a1f952d
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: b856dc5b408c43f61a11f7c68035587bc16bbeaa
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81753759"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97226637"
 ---
-# <a name="colestreamfile-class"></a>クラス
+# <a name="colestreamfile-class"></a>COleStreamFile クラス
 
 OLE の構造化記憶の一部として、複合ファイルのデータ ストリーム (`IStream`) を表します。
 
@@ -43,28 +44,28 @@ class COleStreamFile : public CFile
 
 |名前|説明|
 |----------|-----------------|
-|[ファイルをストリームします。](#colestreamfile)|`COleStreamFile` オブジェクトを構築します。|
+|[COleStreamFile::COleStreamFile](#colestreamfile)|`COleStreamFile` オブジェクトを構築します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
 |名前|説明|
 |----------|-----------------|
-|[ファイルを添付します。](#attach)|ストリームをオブジェクトに関連付けます。|
-|[ファイル::メモリストリームを作成します。](#creatememorystream)|グローバル メモリからストリームを作成し、オブジェクトに関連付けます。|
-|[ファイルを作成します。](#createstream)|ストリームを作成し、オブジェクトに関連付けます。|
-|[コレストリームファイル::Dエタッハ](#detach)|オブジェクトからストリームの関連付けを解除します。|
-|[ファイルを取得します。](#getstream)|現在のストリームを返します。|
-|[ファイルを開く](#openstream)|ストリームを安全に開き、オブジェクトに関連付けます。|
+|[COleStreamFile:: Attach](#attach)|ストリームをオブジェクトに関連付けます。|
+|[COleStreamFile::CreateMemoryStream](#creatememorystream)|グローバルメモリからストリームを作成し、オブジェクトに関連付けます。|
+|[COleStreamFile:: CreateStream](#createstream)|ストリームを作成し、オブジェクトに関連付けます。|
+|[COleStreamFile::D etach](#detach)|オブジェクトからストリームの関連付けを解除します。|
+|[COleStreamFile:: System.resources.resourcemanager.getstream](#getstream)|現在のストリームを返します。|
+|[COleStreamFile:: OpenStream](#openstream)|安全にストリームを開き、オブジェクトに関連付けます。|
 
 ## <a name="remarks"></a>解説
 
-オブジェクト`IStorage`は、ストリームを開いたり作成したりするには、そのストリームがメモリ ストリームでない限り、あらかじめ存在している必要があります。
+オブジェクトは、 `IStorage` メモリストリームでない限り、ストリームを開く、または作成する前に存在している必要があります。
 
-`COleStreamFile`オブジェクトは[CFile](../../mfc/reference/cfile-class.md)オブジェクトとまったく同じように操作されます。
+`COleStreamFile` オブジェクトは、 [CFile](../../mfc/reference/cfile-class.md) オブジェクトとまったく同じように操作されます。
 
-ストリームとストレージの操作の詳細については、「[コンテナー: 複合ファイル](../../mfc/containers-compound-files.md)」を参照してください。
+ストリームおよびストレージの操作の詳細については、「 [コンテナー: 複合ファイル](../../mfc/containers-compound-files.md).」を参照してください。
 
-詳細については、Windows SDK の[IStream](/windows/win32/api/objidl/nn-objidl-istream)と[IStorage](/windows/win32/api/objidl/nn-objidl-istorage)を参照してください。
+詳細については、Windows SDK の「 [IStream](/windows/win32/api/objidl/nn-objidl-istream) と [IStorage](/windows/win32/api/objidl/nn-objidl-istorage) 」を参照してください。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -74,13 +75,13 @@ class COleStreamFile : public CFile
 
 `COleStreamFile`
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-**ヘッダー:** afxole.h
+**ヘッダー:** afxole
 
-## <a name="colestreamfileattach"></a><a name="attach"></a>ファイルを添付します。
+## <a name="colestreamfileattach"></a><a name="attach"></a> COleStreamFile:: Attach
 
-指定された OLE ストリームをオブジェクト`COleStreamFile`に関連付けます。
+指定された OLE ストリームを `COleStreamFile` オブジェクトに関連付けます。
 
 ```cpp
 void Attach(LPSTREAM lpStream);
@@ -89,15 +90,15 @@ void Attach(LPSTREAM lpStream);
 ### <a name="parameters"></a>パラメーター
 
 *lpStream*<br/>
-オブジェクトに関連付ける`IStream`OLE ストリーム ( ) へのポイント。 Nll は指定できません。
+オブジェクトに関連付けられる OLE ストリーム () をポイントし `IStream` ます。 Nll は指定できません。
 
 ### <a name="remarks"></a>解説
 
-オブジェクトは、OLE ストリームに関連付けられていない必要があります。
+オブジェクトは、OLE ストリームに既に関連付けられていないことが必要です。
 
-詳細については、Windows SDK の[「IStream」](/windows/win32/api/objidl/nn-objidl-istream)を参照してください。
+詳細については、Windows SDK の「 [IStream](/windows/win32/api/objidl/nn-objidl-istream) 」を参照してください。
 
-## <a name="colestreamfilecolestreamfile"></a><a name="colestreamfile"></a>ファイルをストリームします。
+## <a name="colestreamfilecolestreamfile"></a><a name="colestreamfile"></a> COleStreamFile::COleStreamFile
 
 `COleStreamFile` オブジェクトを作成します。
 
@@ -108,17 +109,17 @@ COleStreamFile(LPSTREAM lpStream = NULL);
 ### <a name="parameters"></a>パラメーター
 
 *lpStream*<br/>
-オブジェクトに関連付ける OLE ストリームへのポインター。
+オブジェクトに関連付けられる OLE ストリームへのポインター。
 
 ### <a name="remarks"></a>解説
 
-*lpStream*が NULL の場合、オブジェクトは OLE ストリームに関連付けされません。
+*Lpstream* が NULL の場合、オブジェクトは ole ストリームに関連付けられません。それ以外の場合は、オブジェクトが、指定された ole ストリームに関連付けられます。
 
-詳細については、Windows SDK の[「IStream」](/windows/win32/api/objidl/nn-objidl-istream)を参照してください。
+詳細については、Windows SDK の「 [IStream](/windows/win32/api/objidl/nn-objidl-istream) 」を参照してください。
 
-## <a name="colestreamfilecreatememorystream"></a><a name="creatememorystream"></a>ファイル::メモリストリームを作成します。
+## <a name="colestreamfilecreatememorystream"></a><a name="creatememorystream"></a> COleStreamFile::CreateMemoryStream
 
-グローバルな共有メモリから新しいストリームを安全に作成します。
+グローバルな共有メモリから新しいストリームを安全に作成します。障害が通常の予期される条件になります。
 
 ```
 BOOL CreateMemoryStream(CFileException* pError = NULL);
@@ -127,21 +128,21 @@ BOOL CreateMemoryStream(CFileException* pError = NULL);
 ### <a name="parameters"></a>パラメーター
 
 *pError*<br/>
-作成操作の完了状態を示す[CFileException](../../mfc/reference/cfileexception-class.md)オブジェクトまたは NULL を指します。 ストリームの作成を試みることによって生成される可能性のある例外をモニターする場合は、このパラメーターを指定します。
+作成操作の完了ステータスを示す [CFileException](../../mfc/reference/cfileexception-class.md) オブジェクトまたは NULL を指します。 ストリームを作成しようとして生成される可能性のある例外を監視する場合は、このパラメーターを指定します。
 
 ### <a name="return-value"></a>戻り値
 
-ストリームが正常に作成された場合は 0 以外の値を返します。それ以外の場合は 0。
+ストリームが正常に作成された場合は0以外の。それ以外の場合は0です。
 
 ### <a name="remarks"></a>解説
 
-メモリは OLE サブシステムによって割り当てられます。
+メモリは、OLE サブシステムによって割り当てられます。
 
-詳細については、Windows SDK[の「グローバルな作成](/windows/win32/api/combaseapi/nf-combaseapi-createstreamonhglobal)」を参照してください。
+詳細については、Windows SDK の「 [Createstreamonhglobal](/windows/win32/api/combaseapi/nf-combaseapi-createstreamonhglobal) 」を参照してください。
 
-## <a name="colestreamfilecreatestream"></a><a name="createstream"></a>ファイルを作成します。
+## <a name="colestreamfilecreatestream"></a><a name="createstream"></a> COleStreamFile:: CreateStream
 
-正常な予期される状態である場合、指定されたストレージ オブジェクトに新しいストリームを安全に作成します。
+指定されたストレージオブジェクトに新しいストリームを安全に作成します。エラーは通常の予期される条件です。
 
 ```
 BOOL CreateStream(
@@ -153,29 +154,29 @@ BOOL CreateStream(
 
 ### <a name="parameters"></a>パラメーター
 
-*lp ストレージ*<br/>
-作成するストリームを含む OLE ストレージ オブジェクトへのポイント。 Nll は指定できません。
+*lpStorage*<br/>
+作成するストリームが格納されている OLE ストレージオブジェクトを指します。 Nll は指定できません。
 
-*名前を変更します。*<br/>
-作成するストリームの名前。 Nll は指定できません。
+*lpszStreamName*<br/>
+作成されるストリームの名前。 Nll は指定できません。
 
-*フラグを開く*<br/>
-ストリームを開くときに使用するアクセス モード。 排他モード、読み取り/書き込みモード、作成モードがデフォルトで使用されます。 使用可能なモードの完全な一覧については[、「CFile::CFile」](../../mfc/reference/cfile-class.md#cfile)を参照してください。
+*Noペンフラグ*<br/>
+ストリームを開くときに使用するアクセスモード。 既定では、排他、読み取り/書き込み、および作成の各モードが使用されます。 使用可能なモードの完全な一覧については、「 [cfile:: cfile](../../mfc/reference/cfile-class.md#cfile)」を参照してください。
 
 *pError*<br/>
-[オブジェクトまたは](../../mfc/reference/cfileexception-class.md)NULL を指します。 ストリームの作成を試みることによって生成される可能性のある例外をモニターする場合は、このパラメーターを指定します。
+[CFileException](../../mfc/reference/cfileexception-class.md)オブジェクトまたは NULL を指します。 ストリームを作成しようとして生成される可能性のある例外を監視する場合は、このパラメーターを指定します。
 
 ### <a name="return-value"></a>戻り値
 
-ストリームが正常に作成された場合は 0 以外の値を返します。それ以外の場合は 0。
+ストリームが正常に作成された場合は0以外の。それ以外の場合は0です。
 
 ### <a name="remarks"></a>解説
 
-開けに失敗し *、pError*が NULL でない場合、ファイル例外がスローされます。
+Open が *失敗し、エラーが NULL* でない場合、ファイル例外がスローされます。
 
-詳細については、Windows SDK[の「IStorage::CreateStream」](/windows/win32/api/objidl/nf-objidl-istorage-createstream)を参照してください。
+詳細については、Windows SDK の「 [IStorage:: CreateStream](/windows/win32/api/objidl/nf-objidl-istorage-createstream) 」を参照してください。
 
-## <a name="colestreamfiledetach"></a><a name="detach"></a>コレストリームファイル::Dエタッハ
+## <a name="colestreamfiledetach"></a><a name="detach"></a> COleStreamFile::D etach
 
 ストリームを閉じずに、オブジェクトからストリームの関連付けを解除します。
 
@@ -185,17 +186,17 @@ LPSTREAM Detach();
 
 ### <a name="return-value"></a>戻り値
 
-オブジェクトに関連付けられたストリーム`IStream`( ) へのポインター。
+`IStream`オブジェクトに関連付けられたストリーム () へのポインター。
 
 ### <a name="remarks"></a>解説
 
-プログラムが終了する前に、ストリームを他の方法で閉じる必要があります。
+ストリームは、プログラムが終了する前に、他の方法で閉じる必要があります。
 
-詳細については、Windows SDK の[「IStream」](/windows/win32/api/objidl/nn-objidl-istream)を参照してください。
+詳細については、Windows SDK の「 [IStream](/windows/win32/api/objidl/nn-objidl-istream) 」を参照してください。
 
-## <a name="colestreamfilegetstream"></a><a name="getstream"></a>ファイルを取得します。
+## <a name="colestreamfilegetstream"></a><a name="getstream"></a> COleStreamFile:: System.resources.resourcemanager.getstream
 
-現在のストリームへのポインターを返します。
+現在のストリームへのポインターを返すには、この関数を呼び出します。
 
 ```
 IStream* GetStream() const;
@@ -203,9 +204,9 @@ IStream* GetStream() const;
 
 ### <a name="return-value"></a>戻り値
 
-現在のストリーム インターフェイス ( [IStream](/windows/win32/api/objidl/nn-objidl-istream)) へのポインター。
+現在のストリームインターフェイス ( [IStream](/windows/win32/api/objidl/nn-objidl-istream)) へのポインター。
 
-## <a name="colestreamfileopenstream"></a><a name="openstream"></a>ファイルを開く
+## <a name="colestreamfileopenstream"></a><a name="openstream"></a> COleStreamFile:: OpenStream
 
 既存のストリームを開きます。
 
@@ -219,29 +220,29 @@ BOOL OpenStream(
 
 ### <a name="parameters"></a>パラメーター
 
-*lp ストレージ*<br/>
-開くストリームを含む OLE ストレージ オブジェクトへのポイント。 Nll は指定できません。
+*lpStorage*<br/>
+開くストリームが格納されている OLE ストレージオブジェクトを指します。 Nll は指定できません。
 
-*名前を変更します。*<br/>
+*lpszStreamName*<br/>
 開くストリームの名前。 Nll は指定できません。
 
-*フラグを開く*<br/>
-ストリームを開くときに使用するアクセス モード。 排他モードと読み取り/書き込みモードは、既定で使用されます。 使用可能なモードの完全な一覧については[、「CFile::CFile」](../../mfc/reference/cfile-class.md#cfile)を参照してください。
+*Noペンフラグ*<br/>
+ストリームを開くときに使用するアクセスモード。 既定では、排他モードと読み取り/書き込みモードが使用されます。 使用可能なモードの完全な一覧については、「 [cfile:: cfile](../../mfc/reference/cfile-class.md#cfile)」を参照してください。
 
 *pError*<br/>
-[オブジェクトまたは](../../mfc/reference/cfileexception-class.md)NULL を指します。 ストリームを開こうとして生成される例外をモニターする場合は、このパラメーターを指定します。
+[CFileException](../../mfc/reference/cfileexception-class.md)オブジェクトまたは NULL を指します。 ストリームを開こうとして生成される可能性のある例外を監視する場合は、このパラメーターを指定します。
 
 ### <a name="return-value"></a>戻り値
 
-ストリームが正常に開かれた場合は 0 以外。それ以外の場合は 0。
+ストリームが正常に開かれた場合は0以外の。それ以外の場合は0です。
 
 ### <a name="remarks"></a>解説
 
-開けに失敗し *、pError*が NULL でない場合、ファイル例外がスローされます。
+Open が *失敗し、エラーが NULL* でない場合、ファイル例外がスローされます。
 
-詳細については、Windows SDK[の「IStorage::OpenStream」](/windows/win32/api/objidl/nf-objidl-istorage-openstream)を参照してください。
+詳細については、Windows SDK の「 [IStorage:: OpenStream](/windows/win32/api/objidl/nf-objidl-istorage-openstream) 」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 
 [CFile クラス](../../mfc/reference/cfile-class.md)<br/>
-[階層グラフ](../../mfc/hierarchy-chart.md)
+[階層図](../../mfc/hierarchy-chart.md)

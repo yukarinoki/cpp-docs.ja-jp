@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: COlePropertyPage クラス'
 title: COlePropertyPage クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -38,12 +39,12 @@ helpviewer_keywords:
 - COlePropertyPage [MFC], SetModifiedFlag
 - COlePropertyPage [MFC], SetPageName
 ms.assetid: e9972872-8e6b-4550-905e-d36a274d64dc
-ms.openlocfilehash: 872ade08438e54098da730012f98cdd906483887
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: 56d5696e16a347bab5ed154faf9038c6add446dd
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81753795"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97226728"
 ---
 # <a name="colepropertypage-class"></a>COlePropertyPage クラス
 
@@ -61,35 +62,35 @@ class AFX_NOVTABLE COlePropertyPage : public CDialog
 
 |名前|説明|
 |----------|-----------------|
-|[プロパティページ::プロパティページ](#colepropertypage)|`COlePropertyPage` オブジェクトを構築します。|
+|[COlePropertyPage:: COlePropertyPage](#colepropertypage)|`COlePropertyPage` オブジェクトを構築します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
 |名前|説明|
 |----------|-----------------|
-|[プロパティページ::コントロールステータスを取得します。](#getcontrolstatus)|ユーザーがコントロールの値を変更したかどうかを示します。|
-|[プロパティページ::オブジェクト配列を取得します。](#getobjectarray)|プロパティ ページで編集されているオブジェクトの配列を返します。|
-|[プロパティページページ::ページサイトを取得します。](#getpagesite)|プロパティ ページの`IPropertyPageSite`インターフェイスへのポインターを返します。|
-|[プロパティページ::無視適用](#ignoreapply)|[適用] ボタンを有効にしていないコントロールを決定します。|
-|[プロパティページ::変更されました](#ismodified)|ユーザーがプロパティ ページを変更したかどうかを示します。|
-|[プロパティページ::オンエディットプロパティ](#oneditproperty)|ユーザーがプロパティを編集するときに、フレームワークによって呼び出されます。|
-|[プロパティページ::ヘルプ](#onhelp)|ユーザーがヘルプを呼び出すときに、フレームワークによって呼び出されます。|
-|[プロパティページ::オンイニトダイアログ](#oninitdialog)|プロパティ ページが初期化されるときに、フレームワークによって呼び出されます。|
-|[プロパティページ::オンオブジェクト変更](#onobjectschanged)|新しいプロパティを持つ別の OLE コントロールが選択されたときに、フレームワークによって呼び出されます。|
-|[ページページページ::オンセットページサイト](#onsetpagesite)|プロパティ フレームがページのサイトを提供するときに、フレームワークによって呼び出されます。|
-|[プロパティページ::コントロールステータスを設定します。](#setcontrolstatus)|ユーザーがコントロールの値を変更したかどうかを示すフラグを設定します。|
-|[プロパティページ::リソースを設定します。](#setdialogresource)|プロパティ ページのダイアログ リソースを設定します。|
-|[プロパティページ::ヘルプインフォ](#sethelpinfo)|プロパティ ページの簡単なヘルプ テキスト、ヘルプ ファイルの名前、およびヘルプ コンテキストを設定します。|
-|[プロパティページ::セット修正フラグ](#setmodifiedflag)|ユーザーがプロパティ ページを変更したかどうかを示すフラグを設定します。|
-|[ページ名を設定します。](#setpagename)|プロパティ ページの名前 (キャプション) を設定します。|
+|[COlePropertyPage:: GetControlStatus](#getcontrolstatus)|ユーザーがコントロールの値を変更したかどうかを示します。|
+|[COlePropertyPage:: GetObjectArray](#getobjectarray)|プロパティページによって編集されているオブジェクトの配列を返します。|
+|[COlePropertyPage:: Get Ite](#getpagesite)|プロパティページのインターフェイスへのポインターを返し `IPropertyPageSite` ます。|
+|[COlePropertyPage:: IgnoreApply](#ignoreapply)|[適用] ボタンを有効にしないコントロールを決定します。|
+|[COlePropertyPage:: IsModified](#ismodified)|ユーザーがプロパティページを変更したかどうかを示します。|
+|[COlePropertyPage:: OnEditProperty](#oneditproperty)|ユーザーがプロパティを編集するときに、フレームワークによって呼び出されます。|
+|[COlePropertyPage:: OnHelp](#onhelp)|ユーザーがヘルプを呼び出したときにフレームワークによって呼び出されます。|
+|[COlePropertyPage:: OnInitDialog](#oninitdialog)|プロパティページが初期化されるときにフレームワークによって呼び出されます。|
+|[COlePropertyPage:: On が変更されました](#onobjectschanged)|新しいプロパティを持つ別の OLE コントロールが選択されたときに、フレームワークによって呼び出されます。|
+|[COlePropertyPage:: OnSetPageSite](#onsetpagesite)|プロパティフレームがページのサイトを提供するときに、フレームワークによって呼び出されます。|
+|[COlePropertyPage:: SetControlStatus](#setcontrolstatus)|ユーザーがコントロールの値を変更したかどうかを示すフラグを設定します。|
+|[COlePropertyPage:: Setのリソース](#setdialogresource)|プロパティページのダイアログリソースを設定します。|
+|[COlePropertyPage:: SetHelpInfo](#sethelpinfo)|プロパティページの簡単なヘルプテキスト、ヘルプファイルの名前、およびヘルプコンテキストを設定します。|
+|[COlePropertyPage:: SetModifiedFlag](#setmodifiedflag)|ユーザーがプロパティページを変更したかどうかを示すフラグを設定します。|
+|[COlePropertyPage:: SetPageName](#setpagename)|プロパティページの名前 (キャプション) を設定します。|
 
 ## <a name="remarks"></a>解説
 
-たとえば、プロパティ ページには、ユーザーがコントロールの caption プロパティを表示および変更できる編集コントロールが含まれる場合があります。
+たとえば、プロパティページには、ユーザーがコントロールのキャプションプロパティを表示および変更できるようにするエディットコントロールを含めることができます。
 
-各カスタム コントロール プロパティまたはストック コントロール プロパティには、コントロールのユーザーが現在のプロパティ値を表示し、必要に応じてその値を変更できるようにするダイアログ コントロールを設定できます。
+各カスタムまたはストックコントロールのプロパティには、コントロールのユーザーが現在のプロパティ値を表示し、必要に応じてその値を変更できるダイアログコントロールを含めることができます。
 
-の詳細`COlePropertyPage`については、「 [ActiveX コントロール : プロパティ ページ](../../mfc/mfc-activex-controls-property-pages.md)」を参照してください。
+の使用方法の詳細については `COlePropertyPage` 、「 [ActiveX コントロール: プロパティページ](../../mfc/mfc-activex-controls-property-pages.md)」を参照してください。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -103,11 +104,11 @@ class AFX_NOVTABLE COlePropertyPage : public CDialog
 
 `COlePropertyPage`
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** afxctl.h
 
-## <a name="colepropertypagecolepropertypage"></a><a name="colepropertypage"></a>プロパティページ::プロパティページ
+## <a name="colepropertypagecolepropertypage"></a><a name="colepropertypage"></a> COlePropertyPage:: COlePropertyPage
 
 `COlePropertyPage` オブジェクトを構築します。
 
@@ -120,18 +121,18 @@ COlePropertyPage(
 ### <a name="parameters"></a>パラメーター
 
 *idDlg*<br/>
-ダイアログ テンプレートのリソース ID。
+ダイアログテンプレートのリソース ID。
 
-*idキャプション*<br/>
-プロパティ ページのキャプションのリソース ID。
+*idCaption*<br/>
+プロパティページのキャプションのリソース ID。
 
 ### <a name="remarks"></a>解説
 
-`COlePropertyPage`のサブクラスを実装する場合、サブクラスのコンストラクターは`COlePropertyPage`、プロパティ ページの基になるダイアログ テンプレート リソースとそのキャプションを含む文字列リソースを識別するために、コンストラクターを使用する必要があります。
+のサブクラスを実装する場合 `COlePropertyPage` 、サブクラスのコンストラクターは、コンストラクターを使用して、 `COlePropertyPage` プロパティページの基になるダイアログテンプレートリソースと、キャプションを含む文字列リソースを識別する必要があります。
 
-## <a name="colepropertypagegetcontrolstatus"></a><a name="getcontrolstatus"></a>プロパティページ::コントロールステータスを取得します。
+## <a name="colepropertypagegetcontrolstatus"></a><a name="getcontrolstatus"></a> COlePropertyPage:: GetControlStatus
 
-指定したリソース ID を使用して、プロパティ ページ コントロールの値を変更したかどうかを確認します。
+ユーザーが、指定されたリソース ID を使用してプロパティページコントロールの値を変更したかどうかを判断します。
 
 ```
 BOOL GetControlStatus(UINT nID);
@@ -140,15 +141,15 @@ BOOL GetControlStatus(UINT nID);
 ### <a name="parameters"></a>パラメーター
 
 *nID*<br/>
-プロパティ ページ コントロールのリソース ID。
+プロパティページコントロールのリソース ID。
 
 ### <a name="return-value"></a>戻り値
 
-コントロール値が変更されている場合は TRUE。それ以外の場合は FALSE。
+コントロールの値が変更された場合は TRUE。それ以外の場合は FALSE。
 
-## <a name="colepropertypagegetobjectarray"></a><a name="getobjectarray"></a>プロパティページ::オブジェクト配列を取得します。
+## <a name="colepropertypagegetobjectarray"></a><a name="getobjectarray"></a> COlePropertyPage:: GetObjectArray
 
-プロパティ ページで編集されているオブジェクトの配列を返します。
+プロパティページによって編集されているオブジェクトの配列を返します。
 
 ```
 LPDISPATCH* GetObjectArray(ULONG* pnObjects);
@@ -156,20 +157,20 @@ LPDISPATCH* GetObjectArray(ULONG* pnObjects);
 
 ### <a name="parameters"></a>パラメーター
 
-*オブジェクト*<br/>
+*pnObjects*<br/>
 ページによって編集されているオブジェクトの数を受け取る符号なし長整数へのポインター。
 
 ### <a name="return-value"></a>戻り値
 
-プロパティ ページの各`IDispatch`コントロールのプロパティにアクセスするために使用されるポインターの配列へのポインター。 呼び出し元は、これらのインターフェイス ポインターを解放できません。
+ポインターの配列へのポインター `IDispatch` 。プロパティページ上の各コントロールのプロパティにアクセスするために使用されます。 呼び出し元は、これらのインターフェイスポインターを解放しないでください。
 
 ### <a name="remarks"></a>解説
 
-各プロパティ ページ オブジェクトは、ページによって編集される`IDispatch`オブジェクトのインターフェイスへのポインターの配列を保持します。 この関数は、その配列内の要素の数に *、その pnObjects*引数を設定し、配列の最初の要素へのポインターを返します。
+各プロパティページオブジェクト `IDispatch` は、ページによって編集されているオブジェクトのインターフェイスへのポインターの配列を保持します。 この関数は、その *Pnobjects* 引数をその配列内の要素数に設定し、配列の最初の要素へのポインターを返します。
 
-## <a name="colepropertypagegetpagesite"></a><a name="getpagesite"></a>プロパティページページ::ページサイトを取得します。
+## <a name="colepropertypagegetpagesite"></a><a name="getpagesite"></a> COlePropertyPage:: Get Ite
 
-プロパティ ページの`IPropertyPageSite`インターフェイスへのポインターを取得します。
+プロパティページのインターフェイスへのポインターを取得し `IPropertyPageSite` ます。
 
 ```
 LPPROPERTYPAGESITE GetPageSite();
@@ -177,15 +178,15 @@ LPPROPERTYPAGESITE GetPageSite();
 
 ### <a name="return-value"></a>戻り値
 
-プロパティ ページの`IPropertyPageSite`インターフェイスへのポインター。
+プロパティページのインターフェイスへのポインター `IPropertyPageSite` 。
 
 ### <a name="remarks"></a>解説
 
-コントロールとコンテナーが連携して、ユーザーがコントロールのプロパティを参照および編集できるようにします。 このコントロールにはプロパティ ページが用意されており、各プロパティ ページは OLE オブジェクトであり、ユーザーは関連するプロパティセットを編集できます。 コンテナーには、プロパティ ページを表示するプロパティ フレームが用意されています。 各ページに対して、プロパティ フレームは、インターフェイスをサポートする`IPropertyPageSite`ページ サイトを提供します。
+コントロールとコンテナーを連携させることにより、ユーザーがコントロールのプロパティを参照および編集できるようにします。 コントロールには、プロパティページが用意されています。各ページは、ユーザーが関連する一連のプロパティを編集するための OLE オブジェクトです。 コンテナーには、プロパティページを表示するプロパティフレームが用意されています。 各ページについて、プロパティフレームには、インターフェイスをサポートするページサイトが用意されてい `IPropertyPageSite` ます。
 
-## <a name="colepropertypageignoreapply"></a><a name="ignoreapply"></a>プロパティページ::無視適用
+## <a name="colepropertypageignoreapply"></a><a name="ignoreapply"></a> COlePropertyPage:: IgnoreApply
 
-[適用] ボタンを有効にしていないコントロールを決定します。
+[適用] ボタンを有効にしないコントロールを決定します。
 
 ```cpp
 void IgnoreApply(UINT nID);
@@ -198,11 +199,11 @@ void IgnoreApply(UINT nID);
 
 ### <a name="remarks"></a>解説
 
-プロパティ ページの [適用] ボタンは、プロパティ ページ コントロールの値が変更された場合にのみ有効になります。 この関数を使用して、値が変更されたときに [適用] ボタンを有効にしないコントロールを指定します。
+プロパティページの [適用] ボタンは、プロパティページコントロールの値が変更された場合にのみ有効になります。 値が変更されたときに [適用] ボタンが有効にならないようにするコントロールを指定するには、この関数を使用します。
 
-## <a name="colepropertypageismodified"></a><a name="ismodified"></a>プロパティページ::変更されました
+## <a name="colepropertypageismodified"></a><a name="ismodified"></a> COlePropertyPage:: IsModified
 
-ユーザーがプロパティ ページの値を変更したかどうかを判断します。
+ユーザーがプロパティページの値を変更したかどうかを判断します。
 
 ```
 BOOL IsModified();
@@ -210,11 +211,11 @@ BOOL IsModified();
 
 ### <a name="return-value"></a>戻り値
 
-プロパティ ページが変更されている場合は TRUE。
+プロパティページが変更されている場合は TRUE。
 
-## <a name="colepropertypageoneditproperty"></a><a name="oneditproperty"></a>プロパティページ::オンエディットプロパティ
+## <a name="colepropertypageoneditproperty"></a><a name="oneditproperty"></a> COlePropertyPage:: OnEditProperty
 
-フレームワークは、特定のプロパティを編集するときにこの関数を呼び出します。
+フレームワークは、特定のプロパティを編集するときに、この関数を呼び出します。
 
 ```
 virtual BOOL OnEditProperty(DISPID dispid);
@@ -222,20 +223,20 @@ virtual BOOL OnEditProperty(DISPID dispid);
 
 ### <a name="parameters"></a>パラメーター
 
-*Dispid*<br/>
+*dispid*<br/>
 編集中のプロパティのディスパッチ ID。
 
 ### <a name="return-value"></a>戻り値
 
-既定の実装では FALSE が返されます。 この関数のオーバーライドは TRUE を返す必要があります。
+既定の実装では、FALSE が返されます。 この関数をオーバーライドすると、TRUE が返されます。
 
 ### <a name="remarks"></a>解説
 
-このコントロールをオーバーライドして、フォーカスをページ上の適切なコントロールに設定できます。 既定の実装では何も行われなくて、FALSE が返されます。
+これをオーバーライドして、ページ上の適切なコントロールにフォーカスを設定することができます。 既定の実装では、何も実行されず、FALSE が返されます。
 
-## <a name="colepropertypageonhelp"></a><a name="onhelp"></a>プロパティページ::ヘルプ
+## <a name="colepropertypageonhelp"></a><a name="onhelp"></a> COlePropertyPage:: OnHelp
 
-ユーザーがオンライン ヘルプを要求すると、フレームワークはこの関数を呼び出します。
+フレームワークは、ユーザーがオンラインヘルプを要求したときに、この関数を呼び出します。
 
 ```
 virtual BOOL OnHelp(LPCTSTR lpszHelpDir);
@@ -243,20 +244,20 @@ virtual BOOL OnHelp(LPCTSTR lpszHelpDir);
 
 ### <a name="parameters"></a>パラメーター
 
-*を使用します。*<br/>
-プロパティ ページのヘルプ ファイルを含むディレクトリ。
+*lpszHelpDir*<br/>
+プロパティページのヘルプファイルが格納されているディレクトリ。
 
 ### <a name="return-value"></a>戻り値
 
-既定の実装では FALSE が返されます。
+既定の実装では、FALSE が返されます。
 
 ### <a name="remarks"></a>解説
 
-ユーザーがヘルプにアクセスするときにプロパティ ページで特別な操作を実行する必要がある場合は、このプロパティをオーバーライドします。 既定の実装では何も実行されず、False が返され、WinHelp を呼び出すフレームワークに指示されます。
+ユーザーがヘルプにアクセスしたときに、プロパティページで特別なアクションを実行する必要がある場合はオーバーライドします。 既定の実装では何も行われず、FALSE が返されます。これは、WinHelp を呼び出すようにフレームワークに指示します。
 
-## <a name="colepropertypageoninitdialog"></a><a name="oninitdialog"></a>プロパティページ::オンイニトダイアログ
+## <a name="colepropertypageoninitdialog"></a><a name="oninitdialog"></a> COlePropertyPage:: OnInitDialog
 
-フレームワークは、プロパティ ページのダイアログが初期化されるときに、この関数を呼び出します。
+フレームワークは、プロパティページのダイアログが初期化されるときに、この関数を呼び出します。
 
 ```
 virtual BOOL OnInitDialog();
@@ -264,13 +265,13 @@ virtual BOOL OnInitDialog();
 
 ### <a name="return-value"></a>戻り値
 
-既定の実装では FALSE が返されます。
+既定の実装では、FALSE が返されます。
 
 ### <a name="remarks"></a>解説
 
-ダイアログの初期化時に特別なアクションが必要な場合は、このオプションをオーバーライドします。 既定の実装は`CDialog::OnInitDialog`、FALSE を呼び出して返します。
+ダイアログの初期化時に特別な操作が必要な場合はオーバーライドします。 既定の実装は `CDialog::OnInitDialog` を呼び出し、FALSE を返します。
 
-## <a name="colepropertypageonobjectschanged"></a><a name="onobjectschanged"></a>プロパティページ::オンオブジェクト変更
+## <a name="colepropertypageonobjectschanged"></a><a name="onobjectschanged"></a> COlePropertyPage:: On が変更されました
 
 新しいプロパティを持つ別の OLE コントロールが選択されたときに、フレームワークによって呼び出されます。
 
@@ -280,13 +281,13 @@ virtual void OnObjectsChanged();
 
 ### <a name="remarks"></a>解説
 
-開発環境で OLE コントロールのプロパティを表示する場合、モードレス ダイアログ ボックスを使用してプロパティ ページが表示されます。 別のコントロールを選択した場合は、新しいプロパティ セットに対して、異なるプロパティ ページのセットを表示する必要があります。 フレームワークは、この関数を呼び出して、プロパティ ページに変更を通知します。
+開発環境で OLE コントロールのプロパティを表示するときに、モードレスダイアログボックスを使用してプロパティページを表示します。 別のコントロールが選択されている場合は、プロパティの新しいセットに対して異なる一連のプロパティページを表示する必要があります。 フレームワークは、この関数を呼び出して、変更のプロパティページに通知します。
 
-このアクションの通知を受け取り、特別なアクションを実行するには、この関数をオーバーライドします。
+このアクションの通知を受信し、特別なアクションを実行するには、この関数をオーバーライドします。
 
-## <a name="colepropertypageonsetpagesite"></a><a name="onsetpagesite"></a>ページページページ::オンセットページサイト
+## <a name="colepropertypageonsetpagesite"></a><a name="onsetpagesite"></a> COlePropertyPage:: OnSetPageSite
 
-プロパティ フレームがプロパティ ページのページ サイトを提供するときに、フレームワークはこの関数を呼び出します。
+プロパティフレームにプロパティページのページサイトが用意されている場合、フレームワークはこの関数を呼び出します。
 
 ```
 virtual void OnSetPageSite();
@@ -294,11 +295,11 @@ virtual void OnSetPageSite();
 
 ### <a name="remarks"></a>解説
 
-既定の実装では、ページのキャプションを読み込み、ダイアログ リソースからページのサイズを決定しようとします。 プロパティ ページに追加のアクションが必要な場合は、この関数をオーバーライドします。オーバーライドは、基本クラスの実装を呼び出す必要があります。
+既定の実装は、ページのキャプションを読み込み、ダイアログリソースからページのサイズを決定しようとします。 プロパティページで追加のアクションが必要な場合は、この関数をオーバーライドします。オーバーライドでは、基本クラスの実装を呼び出す必要があります。
 
-## <a name="colepropertypagesetcontrolstatus"></a><a name="setcontrolstatus"></a>プロパティページ::コントロールステータスを設定します。
+## <a name="colepropertypagesetcontrolstatus"></a><a name="setcontrolstatus"></a> COlePropertyPage:: SetControlStatus
 
-プロパティ ページ コントロールの状態を変更します。
+プロパティページコントロールの状態を変更します。
 
 ```
 BOOL SetControlStatus(
@@ -309,10 +310,10 @@ BOOL SetControlStatus(
 ### <a name="parameters"></a>パラメーター
 
 *nID*<br/>
-プロパティ ページ コントロールの ID を格納します。
+プロパティページコントロールの ID を格納します。
 
-*bダーティ*<br/>
-プロパティ ページのフィールドが変更されたかどうかを指定します。 フィールドが変更されている場合は TRUE に設定し、変更されていない場合は FALSE に設定します。
+*bDirty*<br/>
+プロパティページのフィールドが変更されたかどうかを示します。 フィールドが変更されている場合は TRUE に、変更されていない場合は FALSE に設定します。
 
 ### <a name="return-value"></a>戻り値
 
@@ -320,11 +321,11 @@ BOOL SetControlStatus(
 
 ### <a name="remarks"></a>解説
 
-プロパティ ページが閉じているか、[適用] ボタンが選択されているときにプロパティ ページ コントロールの状態がダーティである場合、コントロールのプロパティは適切な値で更新されます。
+プロパティページが閉じているとき、または [適用] ボタンを選択したときにプロパティページコントロールの状態がダーティの場合は、適切な値でコントロールのプロパティが更新されます。
 
-## <a name="colepropertypagesetdialogresource"></a><a name="setdialogresource"></a>プロパティページ::リソースを設定します。
+## <a name="colepropertypagesetdialogresource"></a><a name="setdialogresource"></a> COlePropertyPage:: Setのリソース
 
-プロパティ ページのダイアログ リソースを設定します。
+プロパティページのダイアログリソースを設定します。
 
 ```cpp
 void SetDialogResource(HGLOBAL hDialog);
@@ -332,12 +333,12 @@ void SetDialogResource(HGLOBAL hDialog);
 
 ### <a name="parameters"></a>パラメーター
 
-*hダイアログ*<br/>
-プロパティ ページのダイアログ リソースへのハンドル。
+*hDialog*<br/>
+プロパティページのダイアログリソースへのハンドル。
 
-## <a name="colepropertypagesethelpinfo"></a><a name="sethelpinfo"></a>プロパティページ::ヘルプインフォ
+## <a name="colepropertypagesethelpinfo"></a><a name="sethelpinfo"></a> COlePropertyPage:: SetHelpInfo
 
-プロパティ ページのツールヒント情報、ヘルプ ファイル名、およびヘルプ コンテキストを指定します。
+プロパティページのツールヒント情報、ヘルプファイル名、およびヘルプコンテキストを指定します。
 
 ```cpp
 void SetHelpInfo(
@@ -348,18 +349,18 @@ void SetHelpInfo(
 
 ### <a name="parameters"></a>パラメーター
 
-*文字列*<br/>
-ステータス バーまたはその他の場所に表示する簡単なヘルプ情報を含む文字列。
+*lpszDocString*<br/>
+ステータスバーまたはその他の場所に表示するための簡単なヘルプ情報を格納している文字列。
 
-*ファイル*<br/>
-プロパティ ページのヘルプ ファイルの名前。
+*lpszHelpFile*<br/>
+プロパティページのヘルプファイルの名前。
 
-*コンテキスト*<br/>
-プロパティ ページのヘルプ コンテキスト。
+*dwHelpContext*<br/>
+プロパティページのヘルプコンテキスト。
 
-## <a name="colepropertypagesetmodifiedflag"></a><a name="setmodifiedflag"></a>プロパティページ::セット修正フラグ
+## <a name="colepropertypagesetmodifiedflag"></a><a name="setmodifiedflag"></a> COlePropertyPage:: SetModifiedFlag
 
-ユーザーがプロパティ ページを変更したかどうかを示します。
+ユーザーがプロパティページを変更したかどうかを示します。
 
 ```cpp
 void SetModifiedFlag(BOOL bModified = TRUE);
@@ -368,11 +369,11 @@ void SetModifiedFlag(BOOL bModified = TRUE);
 ### <a name="parameters"></a>パラメーター
 
 *bModified*<br/>
-プロパティ ページの変更済みフラグの新しい値を指定します。
+プロパティページの変更後のフラグの新しい値を指定します。
 
-## <a name="colepropertypagesetpagename"></a><a name="setpagename"></a>ページ名を設定します。
+## <a name="colepropertypagesetpagename"></a><a name="setpagename"></a> COlePropertyPage:: SetPageName
 
-プロパティ フレームが通常ページのタブに表示されるプロパティ ページの名前を設定します。
+プロパティページの名前を設定します。プロパティフレームは通常、ページのタブに表示されます。
 
 ```cpp
 void SetPageName(LPCTSTR lpszPageName);
@@ -380,13 +381,13 @@ void SetPageName(LPCTSTR lpszPageName);
 
 ### <a name="parameters"></a>パラメーター
 
-*ページ名*<br/>
-プロパティ ページの名前を含む文字列へのポインター。
+*lpszPageName*<br/>
+プロパティページの名前を含む文字列へのポインター。
 
 ## <a name="see-also"></a>関連項目
 
-[MFC サンプル CIRC3](../../overview/visual-cpp-samples.md)<br/>
-[MFC サンプル テストヘルプ](../../overview/visual-cpp-samples.md)<br/>
-[クラス](../../mfc/reference/cdialog-class.md)<br/>
-[階層グラフ](../../mfc/hierarchy-chart.md)<br/>
-[クラス](../../mfc/reference/cdialog-class.md)
+[MFC のサンプル CIRC3](../../overview/visual-cpp-samples.md)<br/>
+[MFC のサンプル TESTHELP](../../overview/visual-cpp-samples.md)<br/>
+[CDialog クラス](../../mfc/reference/cdialog-class.md)<br/>
+[階層図](../../mfc/hierarchy-chart.md)<br/>
+[CDialog クラス](../../mfc/reference/cdialog-class.md)

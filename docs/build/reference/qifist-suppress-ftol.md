@@ -1,4 +1,5 @@
 ---
+description: 詳細情報:/QIfist (非表示 _ftol)
 title: /QIfist (_ftol を呼び出さない)
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - -QIfist compiler option [C++]
 - /QIfist compiler option [C++]
 ms.assetid: 1afd32a5-f658-4b66-85f4-e0ce4cb955bd
-ms.openlocfilehash: 5d6e12a1003ea125b0da4bfef580d8096e97553a
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 79e9242d66b532f558307d05b222b2fd8cfd43ab
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81336098"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97225649"
 ---
 # <a name="qifist-suppress-_ftol"></a>/QIfist (_ftol を呼び出さない)
 
@@ -28,9 +29,9 @@ ms.locfileid: "81336098"
 ## <a name="remarks"></a>解説
 
 > [!NOTE]
-> **/QIfist**は x86 を対象とするコンパイラでのみ使用できます。このコンパイラ オプションは、x64 または ARM を対象とするコンパイラでは使用できません。
+> **/QIfist** は、x86 を対象とするコンパイラでのみ使用できます。このコンパイラオプションは、x64 orARM を対象とするコンパイラでは使用できません。
 
-`_ftol` 関数では、浮動小数点型から整数型への変換に加えて、浮動小数点制御ワードのビット 10 と 11 を設定して、FPU (Floating-Point Unit) の丸めモードをゼロ (切り捨て) にします。 したがって、浮動小数点型から整数型への変換は、ANSI C 規格どおりに行われ、小数部分を破棄することが保証されます。 **/QIfist**を使用する場合、この保証は適用されなくなります。 丸めモードは、Intel 社のリファレンス マニュアルに示されたとおり、次の 4 とおりのうちのいずれかになります。
+`_ftol` 関数では、浮動小数点型から整数型への変換に加えて、浮動小数点制御ワードのビット 10 と 11 を設定して、FPU (Floating-Point Unit) の丸めモードをゼロ (切り捨て) にします。 したがって、浮動小数点型から整数型への変換は、ANSI C 規格どおりに行われ、小数部分を破棄することが保証されます。 **/QIfist** を使用する場合、この保証は適用されなくなります。 丸めモードは、Intel 社のリファレンス マニュアルに示されたとおり、次の 4 とおりのうちのいずれかになります。
 
 - 一番近い値に丸める (中間の場合は偶数)。
 
@@ -40,14 +41,14 @@ ms.locfileid: "81336098"
 
 - ゼロに丸める。
 
-[_control87、_controlfp、_control87_2 \_](../../c-runtime-library/reference/control87-controlfp-control87-2.md) C ランタイム関数を使用して、FPU の丸め動作を変更できます。 FPU の既定の丸めモードでは、一番近い値に丸められます。 **/QIfist**を使用すると、アプリケーションのパフォーマンスを向上させることができますが、リスクがないわけではありません。 実稼働環境で **/QIfist**でビルドされたコードに依存する前に、丸めモードに敏感な部分を十分にテストする必要があります。
+[_Control87、_controlfp、 \_ _control87_2](../../c-runtime-library/reference/control87-controlfp-control87-2.md) C Run-Time 関数を使用すると、FPU の丸め動作を変更できます。 FPU の既定の丸めモードでは、一番近い値に丸められます。 **/QIfist** を使用すると、アプリケーションのパフォーマンスを向上させることができますが、リスクはありません。 運用環境で **/QIfist** を使用して構築されたコードに依存する前に、丸めモードに敏感なコード部分を十分にテストする必要があります。
 
-[/arch (x86)](arch-x86.md)と **/QIfist**は同じコンパイルで使用できません。
+[/arch (x86)](arch-x86.md) と **/QIfist** は、同じコンパイル単位では使用できません。
 
 > [!NOTE]
-> **/QIfist**は、丸めビットが浮動小数点から浮動小数点への丸め (計算のたびに発生する) にも影響するため、既定では有効ではありません。 **/QIfist**は、浮動小数点数の小数部分を切り捨てる動作にコードが依存している場合は使用しないでください。 不明な場合は **、/QIfist**を使用しないでください。
+> **/QIfist** は既定では有効になっていません。丸め処理のビットは浮動小数点から浮動小数点値への丸め処理 (すべての計算の後に発生します) にも影響するため、C スタイル (0 方向) の丸めのフラグを設定すると、浮動小数点の計算が異なる場合があります。 **/QIfist** は、浮動小数点数の小数部分を切り捨てることが予想される動作にコードが依存している場合は使用しないでください。 わからない場合は、 **/QIfist** を使用しないでください。
 
-**/QIfist**オプションは、Visual Studio 2005 以降では使用されなくなりました。 浮動小数点型から整数型への変換処理の速度が飛躍的に向上しました。 非推奨のコンパイラ オプションの一覧については、「[カテゴリ別に一覧表示されるコンパイラ オプション](compiler-options-listed-by-category.md)」の「**廃止されたコンパイラ オプションと削除された**コンパイラ オプション」を参照してください。
+**/QIfist** オプションは、Visual Studio 2005 以降では非推奨とされます。 浮動小数点型から整数型への変換処理の速度が飛躍的に向上しました。 非推奨のコンパイラオプションの一覧については、「[カテゴリ別に一覧表示さ](compiler-options-listed-by-category.md)れたコンパイラオプションの **非推奨のコンパイラオプション**」を参照してください。
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのコンパイラ オプションを設定するには
 
@@ -57,14 +58,14 @@ ms.locfileid: "81336098"
 
 1. **[コマンド ライン]** プロパティ ページをクリックします。
 
-1. [追加のオプション] **** ボックスにコンパイラ オプションを入力します。
+1. [追加のオプション]  ボックスにコンパイラ オプションを入力します。
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>このコンパイラ オプションをコードから設定するには
 
-- 「<xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>」を参照してください。
+- 以下を参照してください。<xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>
 
 ## <a name="see-also"></a>関連項目
 
-[/Q オプション (低水準の操作)](q-options-low-level-operations.md)<br/>
+[/Q オプション (低レベルの操作)](q-options-low-level-operations.md)<br/>
 [MSVC コンパイラ オプション](compiler-options.md)<br/>
-[MSVC コンパイラ コマンド ラインの構文](compiler-command-line-syntax.md)
+[MSVC Compiler Command-Line 構文](compiler-command-line-syntax.md)

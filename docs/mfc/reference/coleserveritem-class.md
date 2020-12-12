@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: COleServerItem クラス'
 title: COleServerItem クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -74,12 +75,12 @@ helpviewer_keywords:
 - COleServerItem [MFC], OnShow
 - COleServerItem [MFC], m_sizeExtent
 ms.assetid: 80256df6-3888-4256-944b-787d4b2e6b0d
-ms.openlocfilehash: 6131dceb314edff9f8208865e374cac349c7f1ce
-ms.sourcegitcommit: 13f42c339fb7af935e3a93ac80e350d5e784c9f1
+ms.openlocfilehash: 30f99e6ee62406b47a493781586d8ed8b11a60b3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/31/2020
-ms.locfileid: "87470980"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97226650"
 ---
 # <a name="coleserveritem-class"></a>COleServerItem クラス
 
@@ -147,13 +148,13 @@ class COleServerItem : public CDocItem
 |----------|-----------------|
 |[COleServerItem:: m_sizeExtent](#m_sizeextent)|OLE 項目がどの程度表示されるかをサーバーに通知します。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 リンクアイテムは、サーバードキュメントの一部またはすべてを表すことができます。 埋め込みアイテムは、常にサーバードキュメント全体を表します。
 
 クラスは、 `COleServerItem` 通常はコンテナーアプリケーションからの要求に応答して、OLE システムダイナミックリンクライブラリ (dll) によって呼び出される、オーバーライド可能な複数のメンバー関数を定義します。 これらのメンバー関数を使用すると、コンテナーアプリケーションはさまざまな方法で項目を間接的に操作できます。たとえば、表示、動詞の実行、さまざまな形式でのデータの取得などです。
 
-を使用するには `COleServerItem` 、クラスを派生させ、 [OnDraw](#ondraw)および[Serialize](../../mfc/reference/cobject-class.md#serialize)メンバー関数を実装します。 関数は、 `OnDraw` 項目のメタファイル表現を提供し、コンテナーアプリケーションが複合ドキュメントを開いたときに表示されるようにします。 `Serialize`の関数は、 `CObject` 項目のネイティブ表現を提供し、サーバーアプリケーションとコンテナーアプリケーションの間で埋め込み項目を転送できるようにします。 [OnGetExtent](#ongetextent)は、項目のサイズをコンテナーに提供し、コンテナーが項目のサイズを変更できるようにします。
+を使用するには `COleServerItem` 、クラスを派生させ、 [OnDraw](#ondraw) および [Serialize](../../mfc/reference/cobject-class.md#serialize) メンバー関数を実装します。 関数は、 `OnDraw` 項目のメタファイル表現を提供し、コンテナーアプリケーションが複合ドキュメントを開いたときに表示されるようにします。 `Serialize`の関数は、 `CObject` 項目のネイティブ表現を提供し、サーバーアプリケーションとコンテナーアプリケーションの間で埋め込み項目を転送できるようにします。 [OnGetExtent](#ongetextent) は、項目のサイズをコンテナーに提供し、コンテナーが項目のサイズを変更できるようにします。
 
 サーバーと関連トピックの詳細については、記事「[コンテナー: 高度な機能](../../mfc/containers-advanced-features.md)」の「サーバー [: サーバーの実装](../../mfc/servers-implementing-a-server.md)」および「コンテナー/サーバーアプリケーションの作成」を参照してください。
 
@@ -167,11 +168,11 @@ class COleServerItem : public CDocItem
 
 `COleServerItem`
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** afxole
 
-## <a name="coleserveritemaddotherclipboarddata"></a><a name="addotherclipboarddata"></a>COleServerItem:: AddOtherClipboardData
+## <a name="coleserveritemaddotherclipboarddata"></a><a name="addotherclipboarddata"></a> COleServerItem:: AddOtherClipboardData
 
 この関数を呼び出して、指定したオブジェクトの OLE 項目のプレゼンテーション形式と変換形式を配置し `COleDataSource` ます。
 
@@ -184,11 +185,11 @@ void AddOtherClipboardData(COleDataSource* pDataSource);
 *pDataSource*<br/>
 データを配置するオブジェクトへのポインター `COleDataSource` 。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-アイテムのプレゼンテーション形式 (メタファイル画像) を提供するには、 [OnDraw](#ondraw)メンバー関数を実装している必要があります。 他の変換形式をサポートするには、 [Getdatasource](#getdatasource)から返された[COleDataSource](../../mfc/reference/coledatasource-class.md)オブジェクトを使用して登録し、サポートする形式のデータを提供するように[OnRenderData](#onrenderdata)メンバー関数をオーバーライドします。
+アイテムのプレゼンテーション形式 (メタファイル画像) を提供するには、 [OnDraw](#ondraw) メンバー関数を実装している必要があります。 他の変換形式をサポートするには、 [Getdatasource](#getdatasource)から返された[COleDataSource](../../mfc/reference/coledatasource-class.md)オブジェクトを使用して登録し、サポートする形式のデータを提供するように[OnRenderData](#onrenderdata)メンバー関数をオーバーライドします。
 
-## <a name="coleserveritemcoleserveritem"></a><a name="coleserveritem"></a>COleServerItem:: COleServerItem
+## <a name="coleserveritemcoleserveritem"></a><a name="coleserveritem"></a> COleServerItem:: COleServerItem
 
 オブジェクトを構築 `COleServerItem` し、それをサーバードキュメントのドキュメント項目のコレクションに追加します。
 
@@ -206,7 +207,7 @@ COleServerItem(
 *bAutoDelete*<br/>
 オブジェクトへのリンクが解放されたときにオブジェクトを削除できるかどうかを示すフラグです。 `COleServerItem`オブジェクトがドキュメントのデータの重要な部分であり、削除する必要がある場合は、この値を FALSE に設定します。 オブジェクトが、フレームワークによって削除できるドキュメントのデータ内の範囲を識別するために使用される二次的な構造体である場合は、これを TRUE に設定します。
 
-## <a name="coleserveritemcopytoclipboard"></a><a name="copytoclipboard"></a>COleServerItem:: CopyToClipboard
+## <a name="coleserveritemcopytoclipboard"></a><a name="copytoclipboard"></a> COleServerItem:: CopyToClipboard
 
 OLE 項目をクリップボードにコピーするには、この関数を呼び出します。
 
@@ -219,11 +220,11 @@ void CopyToClipboard(BOOL bIncludeLink = FALSE);
 *bIncludeLink*<br/>
 リンクデータをクリップボードにコピーする必要がある場合は、TRUE に設定します。 サーバーアプリケーションがリンクをサポートしていない場合は、FALSE に設定します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-関数は、 [OnGetClipboardData](#ongetclipboarddata)メンバー関数を使用して、サポートされている形式で OLE 項目のデータを含む[COleDataSource](../../mfc/reference/coledatasource-class.md)オブジェクトを作成します。 次に、関数は、 `COleDataSource` [COleDataSource:: setclipboard](../../mfc/reference/coledatasource-class.md#setclipboard)関数を使用してクリップボードにオブジェクトを配置します。 オブジェクトには、 `COleDataSource` アイテムのネイティブデータとその表現が CF_METAFILEPICT 形式で含まれています。また、サポートするように選択した変換形式のデータも含まれています。 このメンバー関数が機能するには、[シリアル化](../../mfc/reference/cobject-class.md#serialize)と[OnDraw](#ondraw)を実装している必要があります。
+関数は、 [OnGetClipboardData](#ongetclipboarddata) メンバー関数を使用して、サポートされている形式で OLE 項目のデータを含む [COleDataSource](../../mfc/reference/coledatasource-class.md) オブジェクトを作成します。 次に、関数は、 `COleDataSource` [COleDataSource:: setclipboard](../../mfc/reference/coledatasource-class.md#setclipboard) 関数を使用してクリップボードにオブジェクトを配置します。 オブジェクトには、 `COleDataSource` アイテムのネイティブデータとその表現が CF_METAFILEPICT 形式で含まれています。また、サポートするように選択した変換形式のデータも含まれています。 このメンバー関数が機能するには、 [シリアル化](../../mfc/reference/cobject-class.md#serialize) と [OnDraw](#ondraw) を実装している必要があります。
 
-## <a name="coleserveritemdodragdrop"></a><a name="dodragdrop"></a>COleServerItem::D oDragDrop
+## <a name="coleserveritemdodragdrop"></a><a name="dodragdrop"></a> COleServerItem::D oDragDrop
 
 `DoDragDrop`メンバー関数を呼び出して、ドラッグアンドドロップ操作を実行します。
 
@@ -242,7 +243,7 @@ DROPEFFECT DoDragDrop(
 クライアント領域を基準とした、画面上の項目の四角形 (ピクセル単位)。
 
 *ptOffset*<br/>
-ドラッグ時のマウス位置の*lpItemRect*からのオフセット。
+ドラッグ時のマウス位置の *lpItemRect* からのオフセット。
 
 *bIncludeLink*<br/>
 リンクデータをクリップボードにコピーする必要がある場合は、TRUE に設定します。 アプリケーションがリンクをサポートしていない場合は、FALSE に設定します。
@@ -257,11 +258,11 @@ DROPEFFECT DoDragDrop(
 
 DROPEFFECT 列挙子の値。 DROPEFFECT_MOVE 場合は、元のデータを削除する必要があります。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-ドラッグアンドドロップ操作はすぐには開始されません。 マウスカーソルが、 *lpRectStartDrag*で指定された四角形から離れるか、指定されたミリ秒数が経過するまで待機します。 *LpRectStartDrag*が NULL の場合は、マウスカーソルが1ピクセルを移動するとドラッグが開始されるように、既定の四角形が使用されます。
+ドラッグアンドドロップ操作はすぐには開始されません。 マウスカーソルが、 *lpRectStartDrag* で指定された四角形から離れるか、指定されたミリ秒数が経過するまで待機します。 *LpRectStartDrag* が NULL の場合は、マウスカーソルが1ピクセルを移動するとドラッグが開始されるように、既定の四角形が使用されます。
 
-遅延時間は、レジストリキーの設定によって指定されます。 遅延時間を変更するには、 [cwinapp:: WriteProfileString](../../mfc/reference/cwinapp-class.md#writeprofilestring)または[Cwinapp:: writeprofilestring](../../mfc/reference/cwinapp-class.md#writeprofileint)を呼び出します。 遅延時間を指定しない場合は、既定値の200ミリ秒が使用されます。 ドラッグの遅延時間は次のように格納されます。
+遅延時間は、レジストリキーの設定によって指定されます。 遅延時間を変更するには、 [cwinapp:: WriteProfileString](../../mfc/reference/cwinapp-class.md#writeprofilestring) または [Cwinapp:: writeprofilestring](../../mfc/reference/cwinapp-class.md#writeprofileint)を呼び出します。 遅延時間を指定しない場合は、既定値の200ミリ秒が使用されます。 ドラッグの遅延時間は次のように格納されます。
 
 - Windows NT のドラッグ遅延時間は HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\NT\CurrentVersion\IniFileMapping\win.ini \Windows\DragDelay. に格納されます
 
@@ -269,9 +270,9 @@ DROPEFFECT 列挙子の値。 DROPEFFECT_MOVE 場合は、元のデータを削�
 
 - Windows 95/98 のドラッグ遅延時間は、WIN.INI のキャッシュされたバージョンに格納されます。
 
-ドラッグ遅延情報をレジストリまたはに格納する方法の詳細については、「」を参照してください。INI ファイルの「Windows SDK の[Writeprofilestring](/windows/win32/api/winbase/nf-winbase-writeprofilestringw) 」を参照してください。
+ドラッグ遅延情報をレジストリまたはに格納する方法の詳細については、「」を参照してください。INI ファイルの「Windows SDK の [Writeprofilestring](/windows/win32/api/winbase/nf-winbase-writeprofilestringw) 」を参照してください。
 
-## <a name="coleserveritemgetclipboarddata"></a><a name="getclipboarddata"></a>COleServerItem:: GetClipboardData
+## <a name="coleserveritemgetclipboarddata"></a><a name="getclipboarddata"></a> COleServerItem:: GetClipboardData
 
 [Copytoclipboard](#copytoclipboard)を呼び出した場合に、クリップボードにコピーされるすべてのデータを、指定された[COleDataSource](../../mfc/reference/coledatasource-class.md)オブジェクトに格納するには、この関数を呼び出します ( [system.windows.dragdrop.dodragdrop](#dodragdrop)を呼び出した場合も同じデータが転送されます)。
 
@@ -297,15 +298,15 @@ void GetClipboardData(
 *lpSize*<br/>
 オブジェクトのサイズ (ピクセル単位)。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-この関数は、 [Getembedsourcedata](#getembedsourcedata)メンバー関数を呼び出して OLE アイテムのネイティブデータを取得し、 [AddOtherClipboardData](#addotherclipboarddata)メンバー関数を呼び出して、プレゼンテーション形式とサポートされている変換形式を取得します。 *Bincludelink*が TRUE の場合、この関数は、項目のリンクデータを取得するために[GetLinkSourceData](#getlinksourcedata)も呼び出します。
+この関数は、 [Getembedsourcedata](#getembedsourcedata) メンバー関数を呼び出して OLE アイテムのネイティブデータを取得し、 [AddOtherClipboardData](#addotherclipboarddata) メンバー関数を呼び出して、プレゼンテーション形式とサポートされている変換形式を取得します。 *Bincludelink* が TRUE の場合、この関数は、項目のリンクデータを取得するために [GetLinkSourceData](#getlinksourcedata)も呼び出します。
 
 `COleDataSource`によって指定された形式の前または後に、オブジェクトに書式を配置する場合は、この関数をオーバーライド `CopyToClipboard` します。
 
-## <a name="coleserveritemgetdatasource"></a><a name="getdatasource"></a>COleServerItem:: GetDataSource
+## <a name="coleserveritemgetdatasource"></a><a name="getdatasource"></a> COleServerItem:: GetDataSource
 
-サーバーアプリケーションがサポートする変換形式を格納するために使用される[COleDataSource](../../mfc/reference/coledatasource-class.md)オブジェクトを取得するには、この関数を呼び出します。
+サーバーアプリケーションがサポートする変換形式を格納するために使用される [COleDataSource](../../mfc/reference/coledatasource-class.md) オブジェクトを取得するには、この関数を呼び出します。
 
 ```
 COleDataSource* GetDataSource();
@@ -315,11 +316,11 @@ COleDataSource* GetDataSource();
 
 `COleDataSource`変換形式を格納するために使用するオブジェクトへのポインター。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 サーバーアプリケーションでデータ転送操作中にさまざまな形式のデータを提供する場合は、 `COleDataSource` この関数によって返されるオブジェクトにそれらの形式を登録します。 たとえば、クリップボードまたはドラッグアンドドロップ操作用の OLE 項目の CF_TEXT 表現を指定する場合は、この関数が返すオブジェクトに書式を登録 `COleDataSource` し、そのメンバー関数をオーバーライドして `OnRenderXxxData` データを提供します。
 
-## <a name="coleserveritemgetdocument"></a><a name="getdocument"></a>COleServerItem:: GetDocument
+## <a name="coleserveritemgetdocument"></a><a name="getdocument"></a> COleServerItem:: GetDocument
 
 項目が含まれているドキュメントへのポインターを取得するには、この関数を呼び出します。
 
@@ -331,11 +332,11 @@ COleServerDoc* GetDocument() const;
 
 項目を格納しているドキュメントへのポインター。項目がドキュメントの一部でない場合は NULL。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 これにより、引数としてコンストラクターに渡されたサーバードキュメントにアクセスできるように `COleServerItem` なります。
 
-## <a name="coleserveritemgetembedsourcedata"></a><a name="getembedsourcedata"></a>COleServerItem:: GetEmbedSourceData
+## <a name="coleserveritemgetembedsourcedata"></a><a name="getembedsourcedata"></a> COleServerItem:: GetEmbedSourceData
 
 OLE 項目の CF_EMBEDSOURCE データを取得するには、この関数を呼び出します。
 
@@ -346,9 +347,9 @@ void GetEmbedSourceData(LPSTGMEDIUM lpStgMedium);
 ### <a name="parameters"></a>パラメーター
 
 *lpStgMedium*<br/>
-OLE 項目の CF_EMBEDSOURCE データを受け取る[STGMEDIUM](/windows/win32/api/objidl/ns-objidl-ustgmedium-r1)構造体へのポインター。
+OLE 項目の CF_EMBEDSOURCE データを受け取る [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-ustgmedium-r1) 構造体へのポインター。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 この形式は、項目のネイティブデータを含みます。 この関数が正常に機能するためには、メンバー関数が実装されている必要があり `Serialize` ます。
 
@@ -356,7 +357,7 @@ OLE 項目の CF_EMBEDSOURCE データを受け取る[STGMEDIUM](/windows/win32/
 
 詳細については、Windows SDK の「 [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-ustgmedium-r1) 」を参照してください。
 
-## <a name="coleserveritemgetitemname"></a><a name="getitemname"></a>COleServerItem:: GetItemName
+## <a name="coleserveritemgetitemname"></a><a name="getitemname"></a> COleServerItem:: GetItemName
 
 項目の名前を取得するには、この関数を呼び出します。
 
@@ -366,13 +367,13 @@ const CString& GetItemName() const;
 
 ### <a name="return-value"></a>戻り値
 
-アイテムの名前。
+項目の名前。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 通常は、リンクされたアイテムに対してのみこの関数を呼び出します。
 
-## <a name="coleserveritemgetlinksourcedata"></a><a name="getlinksourcedata"></a>COleServerItem:: GetLinkSourceData
+## <a name="coleserveritemgetlinksourcedata"></a><a name="getlinksourcedata"></a> COleServerItem:: GetLinkSourceData
 
 OLE 項目の CF_LINKSOURCE データを取得するには、この関数を呼び出します。
 
@@ -383,13 +384,13 @@ BOOL GetLinkSourceData(LPSTGMEDIUM lpStgMedium);
 ### <a name="parameters"></a>パラメーター
 
 *lpStgMedium*<br/>
-OLE 項目の CF_LINKSOURCE データを受け取る[STGMEDIUM](/windows/win32/api/objidl/ns-objidl-ustgmedium-r1)構造体へのポインター。
+OLE 項目の CF_LINKSOURCE データを受け取る [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-ustgmedium-r1) 構造体へのポインター。
 
 ### <a name="return-value"></a>戻り値
 
 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 この形式には、OLE 項目の種類を記述する CLSID と、OLE 項目を含むドキュメントを検索するために必要な情報が含まれます。
 
@@ -397,7 +398,7 @@ OLE 項目の CF_LINKSOURCE データを受け取る[STGMEDIUM](/windows/win32/a
 
 詳細については、Windows SDK の「 [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-ustgmedium-r1) 」を参照してください。
 
-## <a name="coleserveritemgetobjectdescriptordata"></a><a name="getobjectdescriptordata"></a>COleServerItem:: Getobject記述子データ
+## <a name="coleserveritemgetobjectdescriptordata"></a><a name="getobjectdescriptordata"></a> COleServerItem:: Getobject記述子データ
 
 OLE 項目の CF_OBJECTDESCRIPTOR データを取得するには、この関数を呼び出します。
 
@@ -417,15 +418,15 @@ OLE 項目の左上隅からのマウスクリックのオフセット。 NULL �
 OLE 項目のサイズ。 NULL にすることができます。
 
 *lpStgMedium*<br/>
-OLE 項目の CF_OBJECTDESCRIPTOR データを受け取る[STGMEDIUM](/windows/win32/api/objidl/ns-objidl-ustgmedium-r1)構造体へのポインター。
+OLE 項目の CF_OBJECTDESCRIPTOR データを受け取る [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-ustgmedium-r1) 構造体へのポインター。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-情報は、 `STGMEDIUM` *lpStgMedium*によって示される構造体にコピーされます。 この形式には、[特殊な貼り付け] ダイアログに必要な情報が含まれています。
+情報は、 `STGMEDIUM` *lpStgMedium* によって示される構造体にコピーされます。 この形式には、[特殊な貼り付け] ダイアログに必要な情報が含まれています。
 
 詳細については、Windows SDK の「 [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-ustgmedium-r1) 」を参照してください。
 
-## <a name="coleserveritemisconnected"></a><a name="isconnected"></a>COleServerItem:: IsConnected
+## <a name="coleserveritemisconnected"></a><a name="isconnected"></a> COleServerItem:: IsConnected
 
 OLE 項目が接続されているかどうかを確認するには、この関数を呼び出します。
 
@@ -437,11 +438,11 @@ BOOL IsConnected() const;
 
 項目が接続されている場合は0以外の。それ以外の場合は0です。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 1つ以上のコンテナーが項目を参照している場合、OLE 項目は接続されていると見なされます。 参照カウントが0より大きいか、または埋め込みアイテムである場合、アイテムは接続されます。
 
-## <a name="coleserveritemislinkeditem"></a><a name="islinkeditem"></a>COleServerItem:: IsLinkedItem
+## <a name="coleserveritemislinkeditem"></a><a name="islinkeditem"></a> COleServerItem:: IsLinkedItem
 
 OLE 項目がリンクされた項目であるかどうかを確認するには、この関数を呼び出します。
 
@@ -453,13 +454,13 @@ BOOL IsLinkedItem() const;
 
 項目がリンクされた項目の場合は0以外の。それ以外の場合は0です。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 項目が有効で、ドキュメントの埋め込み項目の一覧に返されない場合は、項目がリンクされます。 リンクアイテムは、コンテナーに接続されている場合もあれば、接続されていない場合もあります。
 
-リンクされた項目と埋め込み項目の両方に同じクラスを使用するのが一般的です。 `IsLinkedItem`リンクされた項目の動作を埋め込み項目とは異なる方法で行うことができます。ただし、コードは多くの場合に共通です。
+リンクされた項目と埋め込み項目の両方に同じクラスを使用するのが一般的です。 `IsLinkedItem` リンクされた項目の動作を埋め込み項目とは異なる方法で行うことができます。ただし、コードは多くの場合に共通です。
 
-## <a name="coleserveritemm_sizeextent"></a><a name="m_sizeextent"></a>COleServerItem:: m_sizeExtent
+## <a name="coleserveritemm_sizeextent"></a><a name="m_sizeextent"></a> COleServerItem:: m_sizeExtent
 
 このメンバーは、コンテナードキュメントに表示されるオブジェクトの量をサーバーに通知します。
 
@@ -467,11 +468,11 @@ BOOL IsLinkedItem() const;
 CSize m_sizeExtent;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 [OnSetExtent](#onsetextent)の既定の実装では、このメンバーが設定されます。
 
-## <a name="coleserveritemnotifychanged"></a><a name="notifychanged"></a>COleServerItem:: NotifyChanged
+## <a name="coleserveritemnotifychanged"></a><a name="notifychanged"></a> COleServerItem:: NotifyChanged
 
 リンク項目が変更された後に、この関数を呼び出します。
 
@@ -492,11 +493,11 @@ OLE 項目のどの側面が変更されたかを示す DVASPECT 列挙の値。
 
 - DVASPECT_DOCPRINT 項目は、[ファイル] メニューの [印刷] コマンドを使用して印刷されたかのように表されます。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-コンテナー項目が自動リンクを使用してドキュメントにリンクされている場合、その項目は変更内容を反映して更新されます。 Microsoft Foundation Class ライブラリを使用して記述されたコンテナーアプリケーションでは、 [COleClientItem:: OnChange](../../mfc/reference/coleclientitem-class.md#onchange)が応答として呼び出されます。
+コンテナー項目が自動リンクを使用してドキュメントにリンクされている場合、その項目は変更内容を反映して更新されます。 Microsoft Foundation Class ライブラリを使用して記述されたコンテナーアプリケーションでは、 [COleClientItem:: OnChange](../../mfc/reference/coleclientitem-class.md#onchange) が応答として呼び出されます。
 
-## <a name="coleserveritemondoverb"></a><a name="ondoverb"></a>COleServerItem:: OnDoVerb
+## <a name="coleserveritemondoverb"></a><a name="ondoverb"></a> COleServerItem:: OnDoVerb
 
 指定された動詞を実行するためにフレームワークによって呼び出されます。
 
@@ -509,7 +510,7 @@ virtual void OnDoVerb(LONG iVerb);
 *iVerb*<br/>
 実行する動詞を指定します。 次のいずれかを指定できます。
 
-|値|意味|Symbol|
+|値|説明|Symbol|
 |-----------|-------------|------------|
 |0|主動詞|OLEIVERB_PRIMARY|
 |1|2番目の動詞|(なし)|
@@ -519,15 +520,15 @@ virtual void OnDoVerb(LONG iVerb);
 
 -1 の値は、通常、別の動詞のエイリアスです。 開いている編集がサポートされていない場合、-2 は-1 と同じ効果があります。 その他の値については、Windows SDK の「 [IOleObject::D oVerb](/windows/win32/api/oleidl/nf-oleidl-ioleobject-doverb) 」を参照してください。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-コンテナーアプリケーションが Microsoft Foundation Class ライブラリで記述されている場合、対応するオブジェクトの[COleClientItem:: Activate](../../mfc/reference/coleclientitem-class.md#activate)メンバー関数が呼び出されると、この関数が呼び出され `COleClientItem` ます。 既定の実装は、主動詞または OLEIVERB_SHOW が指定されている場合は[Onshow](#onshow)メンバー関数を呼び出し、セカンダリ動詞または OLEIVERB_OPEN が指定されている場合は[OnOpen](#onopen) 、OLEIVERB_HIDE が指定されている場合は[onshow](#onhide)を呼び出します。 `OnShow` *Iverb*が上に示した動詞の1つではない場合、既定の実装はを呼び出します。
+コンテナーアプリケーションが Microsoft Foundation Class ライブラリで記述されている場合、対応するオブジェクトの [COleClientItem:: Activate](../../mfc/reference/coleclientitem-class.md#activate) メンバー関数が呼び出されると、この関数が呼び出され `COleClientItem` ます。 既定の実装は、主動詞または OLEIVERB_SHOW が指定されている場合は [Onshow](#onshow) メンバー関数を呼び出し、セカンダリ動詞または OLEIVERB_OPEN が指定されている場合は [OnOpen](#onopen) 、OLEIVERB_HIDE が指定されている場合は [onshow](#onhide) を呼び出します。 `OnShow` *Iverb* が上に示した動詞の1つではない場合、既定の実装はを呼び出します。
 
 プライマリ動詞が項目を表示しない場合は、この関数をオーバーライドします。 たとえば、項目がサウンド記録であり、その主動詞が再生されている場合、項目を再生するためにサーバーアプリケーションを表示する必要はありません。
 
 詳細については、Windows SDK の「 [IOleObject::D oVerb](/windows/win32/api/oleidl/nf-oleidl-ioleobject-doverb) 」を参照してください。
 
-## <a name="coleserveritemondraw"></a><a name="ondraw"></a>COleServerItem:: OnDraw
+## <a name="coleserveritemondraw"></a><a name="ondraw"></a> COleServerItem:: OnDraw
 
 OLE 項目をメタファイルにレンダリングするために、フレームワークによって呼び出されます。
 
@@ -540,7 +541,7 @@ virtual BOOL OnDraw(
 ### <a name="parameters"></a>パラメーター
 
 *pDC*<br/>
-項目を描画する[CDC](../../mfc/reference/cdc-class.md)オブジェクトへのポインター。 属性関数を呼び出すことができるように、表示コンテキストは属性の表示コンテキストに自動的に接続されます。
+項目を描画する [CDC](../../mfc/reference/cdc-class.md) オブジェクトへのポインター。 属性関数を呼び出すことができるように、表示コンテキストは属性の表示コンテキストに自動的に接続されます。
 
 *rSize*<br/>
 メタファイルの描画に使用するサイズ (HIMETRIC 単位)。
@@ -549,11 +550,11 @@ virtual BOOL OnDraw(
 
 項目が正常に描画された場合は0以外の。それ以外の場合は0です。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 OLE 項目のメタファイル表現は、コンテナーアプリケーションで項目を表示するために使用されます。 コンテナーアプリケーションが Microsoft Foundation Class ライブラリで書き込まれた場合、メタファイルは、対応する[COleClientItem](../../mfc/reference/coleclientitem-class.md)オブジェクトの[Draw](../../mfc/reference/coleclientitem-class.md#draw)メンバー関数によって使用されます。 既定の実装はありません。 指定したデバイスコンテキストに項目を描画するには、この関数をオーバーライドする必要があります。
 
-## <a name="coleserveritemondrawex"></a><a name="ondrawex"></a>COleServerItem:: OnDrawEx
+## <a name="coleserveritemondrawex"></a><a name="ondrawex"></a> COleServerItem:: OnDrawEx
 
 すべての描画のためにフレームワークによって呼び出されます。
 
@@ -567,7 +568,7 @@ virtual BOOL OnDrawEx(
 ### <a name="parameters"></a>パラメーター
 
 *pDC*<br/>
-項目を描画する[CDC](../../mfc/reference/cdc-class.md)オブジェクトへのポインター。 DC は属性 DC に自動的に接続されるので、属性関数を呼び出すことができます。ただし、これにより、メタファイルのデバイス固有の状態が作成されます。
+項目を描画する [CDC](../../mfc/reference/cdc-class.md) オブジェクトへのポインター。 DC は属性 DC に自動的に接続されるので、属性関数を呼び出すことができます。ただし、これにより、メタファイルのデバイス固有の状態が作成されます。
 
 *nDrawAspect*<br/>
 DVASPECT 列挙子の値。 このパラメーターには次の値を指定できます。
@@ -587,13 +588,13 @@ HIMETRIC 単位の項目のサイズ。
 
 項目が正常に描画された場合は0以外の。それ以外の場合は0です。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 `OnDraw`DVASPECT が DVASPECT_CONTENT に等しい場合、既定の実装はを呼び出します。それ以外の場合は、失敗します。
 
 DVASPECT_ICON や DVASPECT_THUMBNAIL など、DVASPECT_CONTENT 以外の側面のプレゼンテーションデータを提供するには、この関数をオーバーライドします。
 
-## <a name="coleserveritemongetclipboarddata"></a><a name="ongetclipboarddata"></a>COleServerItem:: OnGetClipboardData
+## <a name="coleserveritemongetclipboarddata"></a><a name="ongetclipboarddata"></a> COleServerItem:: OnGetClipboardData
 
 `COleDataSource` [Copytoclipboard](#copytoclipboard)メンバー関数の呼び出しによってクリップボードに配置されるすべてのデータを格納するオブジェクトを取得するために、フレームワークによって呼び出されます。
 
@@ -617,13 +618,13 @@ virtual COleDataSource* OnGetClipboardData(
 
 ### <a name="return-value"></a>戻り値
 
-クリップボードデータを格納している[COleDataSource](../../mfc/reference/coledatasource-class.md)オブジェクトへのポインター。
+クリップボードデータを格納している [COleDataSource](../../mfc/reference/coledatasource-class.md) オブジェクトへのポインター。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 この関数の既定の実装では、 [GetClipboardData](#getclipboarddata)を呼び出します。
 
-## <a name="coleserveritemongetextent"></a><a name="ongetextent"></a>COleServerItem:: OnGetExtent
+## <a name="coleserveritemongetextent"></a><a name="ongetextent"></a> COleServerItem:: OnGetExtent
 
 OLE 項目のサイズ (HIMETRIC 単位) を取得するためにフレームワークによって呼び出されます。
 
@@ -653,11 +654,11 @@ virtual BOOL OnGetExtent(
 
 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-コンテナーアプリケーションが Microsoft Foundation Class ライブラリで記述されている場合、対応するオブジェクトの[Getextent](../../mfc/reference/coleclientitem-class.md#getextent)メンバー関数が呼び出されると、この関数が呼び出され `COleClientItem` ます。 既定の実装では、何も行われません。 自分で実装する必要があります。 OLE 項目のサイズの要求を処理するときに特殊な処理を実行する場合は、この関数をオーバーライドします。
+コンテナーアプリケーションが Microsoft Foundation Class ライブラリで記述されている場合、対応するオブジェクトの [Getextent](../../mfc/reference/coleclientitem-class.md#getextent) メンバー関数が呼び出されると、この関数が呼び出され `COleClientItem` ます。 既定の実装では、何も行われません。 自分で実装する必要があります。 OLE 項目のサイズの要求を処理するときに特殊な処理を実行する場合は、この関数をオーバーライドします。
 
-## <a name="coleserveritemonhide"></a><a name="onhide"></a>COleServerItem:: OnHide
+## <a name="coleserveritemonhide"></a><a name="onhide"></a> COleServerItem:: OnHide
 
 OLE 項目を非表示にするためにフレームワークによって呼び出されます。
 
@@ -665,13 +666,13 @@ OLE 項目を非表示にするためにフレームワークによって呼び�
 virtual void OnHide();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 既定の呼び出し `COleServerDoc::OnShowDocument( FALSE )` 。 また、この関数は、OLE 項目が非表示になっていることをコンテナーに通知します。 OLE 項目を非表示にするときに特別な処理を実行する場合は、この関数をオーバーライドします。
 
-## <a name="coleserveritemoninitfromdata"></a><a name="oninitfromdata"></a>COleServerItem:: OnInitFromData
+## <a name="coleserveritemoninitfromdata"></a><a name="oninitfromdata"></a> COleServerItem:: OnInitFromData
 
-*Pdataobject*の内容を使用して OLE 項目を初期化するために、フレームワークによって呼び出されます。
+*Pdataobject* の内容を使用して OLE 項目を初期化するために、フレームワークによって呼び出されます。
 
 ```
 virtual BOOL OnInitFromData(
@@ -691,13 +692,13 @@ OLE 項目を初期化するためのさまざまな形式のデータを格納�
 
 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-*Bcreation*が TRUE の場合、コンテナーが現在の選択内容に基づいて Insert New オブジェクトを実装すると、この関数が呼び出されます。 選択したデータは、新しい OLE 項目を作成するときに使用されます。 たとえば、スプレッドシートプログラムでセルの範囲を選択し、[新しいオブジェクトの挿入] を使用して、選択した範囲の値に基づいてグラフを作成する場合などです。 既定の実装では、何も行われません。 *Pdataobject*によって提供される形式から許容される形式を選択し、提供されたデータに基づいて OLE 項目を初期化するには、この関数をオーバーライドします。 これは高度なオーバーライド可能です。
+*Bcreation* が TRUE の場合、コンテナーが現在の選択内容に基づいて Insert New オブジェクトを実装すると、この関数が呼び出されます。 選択したデータは、新しい OLE 項目を作成するときに使用されます。 たとえば、スプレッドシートプログラムでセルの範囲を選択し、[新しいオブジェクトの挿入] を使用して、選択した範囲の値に基づいてグラフを作成する場合などです。 既定の実装では、何も行われません。 *Pdataobject* によって提供される形式から許容される形式を選択し、提供されたデータに基づいて OLE 項目を初期化するには、この関数をオーバーライドします。 これは高度なオーバーライド可能です。
 
 詳細については、Windows SDK の「 [IOleObject:: InitFromData](/windows/win32/api/oleidl/nf-oleidl-ioleobject-initfromdata) 」を参照してください。
 
-## <a name="coleserveritemonopen"></a><a name="onopen"></a>COleServerItem:: OnOpen
+## <a name="coleserveritemonopen"></a><a name="onopen"></a> COleServerItem:: OnOpen
 
 OLE 項目を配置ではなく、サーバーアプリケーションの別のインスタンスに表示するために、フレームワークによって呼び出されます。
 
@@ -705,7 +706,7 @@ OLE 項目を配置ではなく、サーバーアプリケーションの別の�
 virtual void OnOpen();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 既定の実装は、OLE 項目を含むドキュメントを表示する最初のフレームウィンドウをアクティブにします。アプリケーションがミニサーバーの場合は、既定の実装によってメインウィンドウが表示されます。 また、この関数は、OLE 項目が開かれたことをコンテナーに通知します。
 
@@ -713,7 +714,7 @@ OLE 項目を開くときに特別な処理を実行する場合は、この関�
 
 詳細については、Windows SDK の「 [IOleClientSite:: OnShowWindow](/windows/win32/api/oleidl/nf-oleidl-ioleclientsite-onshowwindow) 」を参照してください。
 
-## <a name="coleserveritemonqueryupdateitems"></a><a name="onqueryupdateitems"></a>COleServerItem:: OnQueryUpdateItems
+## <a name="coleserveritemonqueryupdateitems"></a><a name="onqueryupdateitems"></a> COleServerItem:: OnQueryUpdateItems
 
 現在のサーバードキュメント内のリンクされた項目が古いかどうかを判断するために、フレームワークによって呼び出されます。
 
@@ -725,11 +726,11 @@ virtual BOOL OnQueryUpdateItems();
 
 ドキュメントに更新が必要な項目が含まれている場合は0以外の。すべての項目が最新の場合は0。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 ソースドキュメントが変更されていても、ドキュメントの変更を反映するようにリンクアイテムが更新されていない場合、アイテムは最新ではありません。
 
-## <a name="coleserveritemonrenderdata"></a><a name="onrenderdata"></a>COleServerItem:: OnRenderData
+## <a name="coleserveritemonrenderdata"></a><a name="onrenderdata"></a> COleServerItem:: OnRenderData
 
 指定された形式でデータを取得するためにフレームワークによって呼び出されます。
 
@@ -742,26 +743,26 @@ virtual BOOL OnRenderData(
 ### <a name="parameters"></a>パラメーター
 
 *lpFormatEtc*<br/>
-情報が要求される形式を指定する[FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc)構造体を指します。
+情報が要求される形式を指定する [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) 構造体を指します。
 
 *lpStgMedium*<br/>
-データが返される[STGMEDIUM](/windows/win32/api/objidl/ns-objidl-ustgmedium-r1)構造体を指します。
+データが返される [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-ustgmedium-r1) 構造体を指します。
 
 ### <a name="return-value"></a>戻り値
 
 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-指定された形式は、 `COleDataSource` 遅延レンダリングのために[DelayRenderData](../../mfc/reference/coledatasource-class.md#delayrenderdata)または[DelayRenderFileData](../../mfc/reference/coledatasource-class.md#delayrenderfiledata)メンバー関数を使用してオブジェクトに以前に配置されています。 指定されたストレージメディアがファイルまたはメモリのいずれかである場合、この関数の既定の実装は、 [OnRenderFileData](#onrenderfiledata)または[OnRenderGlobalData](#onrenderglobaldata)をそれぞれ呼び出します。 これらの形式のいずれも指定しない場合、既定の実装は0を返し、何も行いません。
+指定された形式は、 `COleDataSource` 遅延レンダリングのために [DelayRenderData](../../mfc/reference/coledatasource-class.md#delayrenderdata) または [DelayRenderFileData](../../mfc/reference/coledatasource-class.md#delayrenderfiledata) メンバー関数を使用してオブジェクトに以前に配置されています。 指定されたストレージメディアがファイルまたはメモリのいずれかである場合、この関数の既定の実装は、 [OnRenderFileData](#onrenderfiledata) または [OnRenderGlobalData](#onrenderglobaldata)をそれぞれ呼び出します。 これらの形式のいずれも指定しない場合、既定の実装は0を返し、何も行いません。
 
-*LpStgMedium* ->  *tymed*が TYMED_NULL 場合は、STGMEDIUM によって指定されたの割り当てと入力が *>lpFormatEtc tymed*によって行う必要があります。 TYMED_NULL ない場合は、データを格納する STGMEDIUM を設定する必要があります。
+*LpStgMedium* ->  *tymed* が TYMED_NULL 場合は、STGMEDIUM によって指定されたの割り当てと入力が *>lpFormatEtc tymed* によって行う必要があります。 TYMED_NULL ない場合は、データを格納する STGMEDIUM を設定する必要があります。
 
 これは高度なオーバーライド可能です。 要求された形式とメディアにデータを提供するには、この関数をオーバーライドします。 データによっては、この関数の他のバージョンの1つをオーバーライドすることが必要になる場合があります。 データが小さく、サイズが固定されている場合は、をオーバーライド `OnRenderGlobalData` します。 データがファイル内にある場合、またはサイズが可変の場合は、をオーバーライド `OnRenderFileData` します。
 
-詳細については、Windows SDK の「 [IDataObject:: GetData](/windows/win32/api/objidl/nf-objidl-idataobject-getdata)、 [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-ustgmedium-r1)、 [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc)、および[tymed](/windows/win32/api/objidl/ne-objidl-tymed) 」を参照してください。
+詳細については、Windows SDK の「 [IDataObject:: GetData](/windows/win32/api/objidl/nf-objidl-idataobject-getdata)、 [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-ustgmedium-r1)、 [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc)、および [tymed](/windows/win32/api/objidl/ne-objidl-tymed) 」を参照してください。
 
-## <a name="coleserveritemonrenderfiledata"></a><a name="onrenderfiledata"></a>COleServerItem:: OnRenderFileData
+## <a name="coleserveritemonrenderfiledata"></a><a name="onrenderfiledata"></a> COleServerItem:: OnRenderFileData
 
 ストレージメディアがファイルの場合に、指定された形式でデータを取得するためにフレームワークによって呼び出されます。
 
@@ -774,7 +775,7 @@ virtual BOOL OnRenderFileData(
 ### <a name="parameters"></a>パラメーター
 
 *lpFormatEtc*<br/>
-情報が要求される形式を指定する[FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc)構造体を指します。
+情報が要求される形式を指定する [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) 構造体を指します。
 
 *pFile*<br/>
 `CFile`データを表示するオブジェクトを指します。
@@ -783,15 +784,15 @@ virtual BOOL OnRenderFileData(
 
 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-指定された形式は、 `COleDataSource` 遅延レンダリングのために[DelayRenderData](../../mfc/reference/coledatasource-class.md#delayrenderdata)メンバー関数を使用してオブジェクトに既に配置されています。 この関数の既定の実装では、単に FALSE が返されます。
+指定された形式は、 `COleDataSource` 遅延レンダリングのために [DelayRenderData](../../mfc/reference/coledatasource-class.md#delayrenderdata) メンバー関数を使用してオブジェクトに既に配置されています。 この関数の既定の実装では、単に FALSE が返されます。
 
 これは高度なオーバーライド可能です。 要求された形式とメディアにデータを提供するには、この関数をオーバーライドします。 データによっては、この関数の他のバージョンの1つをオーバーライドすることが必要になる場合があります。 複数の記憶域メディアを処理する場合は、 [OnRenderData](#onrenderdata)を上書きします。 データがファイル内にある場合、またはサイズが可変の場合は、 [OnRenderFileData](#onrenderfiledata)をオーバーライドします。
 
 詳細については、Windows SDK の「 [IDataObject:: GetData](/windows/win32/api/objidl/nf-objidl-idataobject-getdata) 」と「 [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) 」を参照してください。
 
-## <a name="coleserveritemonrenderglobaldata"></a><a name="onrenderglobaldata"></a>COleServerItem:: OnRenderGlobalData
+## <a name="coleserveritemonrenderglobaldata"></a><a name="onrenderglobaldata"></a> COleServerItem:: OnRenderGlobalData
 
 指定されたストレージメディアがグローバルメモリである場合に、指定された形式でデータを取得するためにフレームワークによって呼び出されます。
 
@@ -804,7 +805,7 @@ virtual BOOL OnRenderGlobalData(
 ### <a name="parameters"></a>パラメーター
 
 *lpFormatEtc*<br/>
-情報が要求される形式を指定する[FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc)構造体を指します。
+情報が要求される形式を指定する [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) 構造体を指します。
 
 *phGlobal*<br/>
 データが返されるグローバルメモリへのハンドルを指します。 メモリが割り当てられていない場合は、このパラメーターを NULL にすることができます。
@@ -813,17 +814,17 @@ virtual BOOL OnRenderGlobalData(
 
 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-指定された形式は、 `COleDataSource` 遅延レンダリングのために[DelayRenderData](../../mfc/reference/coledatasource-class.md#delayrenderdata)メンバー関数を使用してオブジェクトに既に配置されています。 この関数の既定の実装では、単に FALSE が返されます。
+指定された形式は、 `COleDataSource` 遅延レンダリングのために [DelayRenderData](../../mfc/reference/coledatasource-class.md#delayrenderdata) メンバー関数を使用してオブジェクトに既に配置されています。 この関数の既定の実装では、単に FALSE が返されます。
 
-*Phglobal*が NULL の場合、新しい HGLOBAL が割り当てられ、 *phglobal*で返される必要があります。 それ以外の場合は、 *Phglobal*によって指定された HGLOBAL にデータを格納する必要があります。 HGLOBAL に配置されるデータの量は、メモリブロックの現在のサイズを超えることはできません。 また、ブロックをより大きなサイズに再割り当てすることはできません。
+*Phglobal* が NULL の場合、新しい HGLOBAL が割り当てられ、 *phglobal* で返される必要があります。 それ以外の場合は、 *Phglobal* によって指定された HGLOBAL にデータを格納する必要があります。 HGLOBAL に配置されるデータの量は、メモリブロックの現在のサイズを超えることはできません。 また、ブロックをより大きなサイズに再割り当てすることはできません。
 
 これは高度なオーバーライド可能です。 要求された形式とメディアにデータを提供するには、この関数をオーバーライドします。 データによっては、この関数の他のバージョンの1つをオーバーライドすることが必要になる場合があります。 複数の記憶域メディアを処理する場合は、 [OnRenderData](#onrenderdata)を上書きします。 データがファイル内にある場合、またはサイズが可変の場合は、 [OnRenderFileData](#onrenderfiledata)をオーバーライドします。
 
 詳細については、Windows SDK の「 [IDataObject:: GetData](/windows/win32/api/objidl/nf-objidl-idataobject-getdata) 」と「 [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) 」を参照してください。
 
-## <a name="coleserveritemonsetcolorscheme"></a><a name="onsetcolorscheme"></a>COleServerItem:: OnSetColorScheme
+## <a name="coleserveritemonsetcolorscheme"></a><a name="onsetcolorscheme"></a> COleServerItem:: OnSetColorScheme
 
 OLE 項目の編集時に使用するカラーパレットを指定するために、フレームワークによって呼び出されます。
 
@@ -834,19 +835,19 @@ virtual BOOL OnSetColorScheme(const LOGPALETTE* lpLogPalette);
 ### <a name="parameters"></a>パラメーター
 
 *lpLogPalette*<br/>
-Windows [Logpalette](/windows/win32/api/wingdi/ns-wingdi-logpalette)構造体へのポインター。
+Windows [Logpalette](/windows/win32/api/wingdi/ns-wingdi-logpalette) 構造体へのポインター。
 
 ### <a name="return-value"></a>戻り値
 
 カラーパレットが使用されている場合は0以外の。それ以外の場合は0です。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-Microsoft Foundation Class ライブラリを使用してコンテナーアプリケーションを作成した場合、対応するオブジェクトの[IOleObject:: SetColorScheme](/windows/win32/api/oleidl/nf-oleidl-ioleobject-setcolorscheme)関数が呼び出されると、この関数が呼び出され `COleClientItem` ます。 既定の実装では、FALSE が返されます。 推奨されるパレットを使用する場合は、この関数をオーバーライドします。 サーバーアプリケーションは、推奨されるパレットを使用する必要はありません。
+Microsoft Foundation Class ライブラリを使用してコンテナーアプリケーションを作成した場合、対応するオブジェクトの [IOleObject:: SetColorScheme](/windows/win32/api/oleidl/nf-oleidl-ioleobject-setcolorscheme) 関数が呼び出されると、この関数が呼び出され `COleClientItem` ます。 既定の実装では、FALSE が返されます。 推奨されるパレットを使用する場合は、この関数をオーバーライドします。 サーバーアプリケーションは、推奨されるパレットを使用する必要はありません。
 
 詳細については、Windows SDK の「 [IOleObject:: SetColorScheme](/windows/win32/api/oleidl/nf-oleidl-ioleobject-setcolorscheme) 」を参照してください。
 
-## <a name="coleserveritemonsetdata"></a><a name="onsetdata"></a>COleServerItem:: OnSetData
+## <a name="coleserveritemonsetdata"></a><a name="onsetdata"></a> COleServerItem:: OnSetData
 
 OLE 項目のデータを指定されたデータに置き換えるために、フレームワークによって呼び出されます。
 
@@ -860,27 +861,27 @@ virtual BOOL OnSetData(
 ### <a name="parameters"></a>パラメーター
 
 *lpFormatEtc*<br/>
-データの形式を指定する[FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc)構造体へのポインター。
+データの形式を指定する [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) 構造体へのポインター。
 
 *lpStgMedium*<br/>
-データが存在する[STGMEDIUM](/windows/win32/api/objidl/ns-objidl-ustgmedium-r1)構造体へのポインター。
+データが存在する [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-ustgmedium-r1) 構造体へのポインター。
 
 *bRelease*<br/>
-関数呼び出しの完了後にストレージメディアの所有権を持つユーザーを示します。 呼び出し元は、ストレージメディアの代わりに割り当てられたリソースを解放する担当者を決定します。 呼び出し元は、 *Brelease*を設定することによってこれを行います。 *Brelease*が0以外の場合、サーバー項目は所有権を取得し、使用が終了したときにそのメディアを解放します。 *Brelease*が0の場合、呼び出し元は所有権を保持し、サーバー項目は呼び出しの間だけストレージメディアを使用できます。
+関数呼び出しの完了後にストレージメディアの所有権を持つユーザーを示します。 呼び出し元は、ストレージメディアの代わりに割り当てられたリソースを解放する担当者を決定します。 呼び出し元は、 *Brelease* を設定することによってこれを行います。 *Brelease* が0以外の場合、サーバー項目は所有権を取得し、使用が終了したときにそのメディアを解放します。 *Brelease* が0の場合、呼び出し元は所有権を保持し、サーバー項目は呼び出しの間だけストレージメディアを使用できます。
 
 ### <a name="return-value"></a>戻り値
 
 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-サーバー項目は、データが正常に取得されるまで、データの所有権を取得しません。 つまり、0が返された場合、所有権は取得されません。 データソースが所有権を取得すると、 [ReleaseStgMedium](/windows/win32/api/ole2/nf-ole2-releasestgmedium)関数を呼び出すことによってストレージメディアが解放されます。
+サーバー項目は、データが正常に取得されるまで、データの所有権を取得しません。 つまり、0が返された場合、所有権は取得されません。 データソースが所有権を取得すると、 [ReleaseStgMedium](/windows/win32/api/ole2/nf-ole2-releasestgmedium) 関数を呼び出すことによってストレージメディアが解放されます。
 
 既定の実装では、何も行われません。 OLE 項目のデータを指定したデータに置き換えるには、この関数をオーバーライドします。 これは高度なオーバーライド可能です。
 
-詳細については、Windows SDK の「 [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-ustgmedium-r1)、 [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc)、および[ReleaseStgMedium](/windows/win32/api/ole2/nf-ole2-releasestgmedium) 」を参照してください。
+詳細については、Windows SDK の「 [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-ustgmedium-r1)、 [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc)、および [ReleaseStgMedium](/windows/win32/api/ole2/nf-ole2-releasestgmedium) 」を参照してください。
 
-## <a name="coleserveritemonsetextent"></a><a name="onsetextent"></a>COleServerItem:: OnSetExtent
+## <a name="coleserveritemonsetextent"></a><a name="onsetextent"></a> COleServerItem:: OnSetExtent
 
 フレームワークによって呼び出され、コンテナードキュメント内の使用可能な領域を OLE 項目に通知します。
 
@@ -904,17 +905,17 @@ virtual BOOL OnSetExtent(
 - DVASPECT_DOCPRINT 項目は、[ファイル] メニューの [印刷] コマンドを使用して印刷されたかのように表されます。
 
 *size*<br/>
-OLE 項目の新しいサイズを指定する[CSize](../../atl-mfc-shared/reference/csize-class.md)構造体。
+OLE 項目の新しいサイズを指定する [CSize](../../atl-mfc-shared/reference/csize-class.md) 構造体。
 
 ### <a name="return-value"></a>戻り値
 
 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-コンテナーアプリケーションが Microsoft Foundation Class ライブラリで記述されている場合、対応するオブジェクトの[Setextent](../../mfc/reference/coleclientitem-class.md#setextent)メンバー関数が呼び出されると、この関数が呼び出され `COleClientItem` ます。 既定の実装は、 *Ndrawaspect*が DVASPECT_CONTENT 場合に、 [m_sizeExtent](#m_sizeextent)メンバーを指定されたサイズに設定します。それ以外の場合は0を返します。 項目のサイズを変更するときに特別な処理を実行するには、この関数をオーバーライドします。
+コンテナーアプリケーションが Microsoft Foundation Class ライブラリで記述されている場合、対応するオブジェクトの [Setextent](../../mfc/reference/coleclientitem-class.md#setextent) メンバー関数が呼び出されると、この関数が呼び出され `COleClientItem` ます。 既定の実装は、 *Ndrawaspect* が DVASPECT_CONTENT 場合に、 [m_sizeExtent](#m_sizeextent)メンバーを指定されたサイズに設定します。それ以外の場合は0を返します。 項目のサイズを変更するときに特別な処理を実行するには、この関数をオーバーライドします。
 
-## <a name="coleserveritemonshow"></a><a name="onshow"></a>COleServerItem:: OnShow
+## <a name="coleserveritemonshow"></a><a name="onshow"></a> COleServerItem:: OnShow
 
 OLE 項目を適切に表示するようにサーバーアプリケーションに指示するために、フレームワークによって呼び出されます。
 
@@ -922,13 +923,13 @@ OLE 項目を適切に表示するようにサーバーアプリケーション�
 virtual void OnShow();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 通常、この関数は、コンテナーアプリケーションのユーザーが項目を作成したり、項目を表示する必要がある編集などの動詞を実行したりするときに呼び出されます。 既定の実装では、インプレースアクティブ化が試行されます。 これが失敗した場合、関数は、メンバー関数を呼び出して、 `OnOpen` OLE 項目を別のウィンドウに表示します。
 
 OLE 項目が表示されるときに特別な処理を実行する場合は、この関数をオーバーライドします。
 
-## <a name="coleserveritemonupdate"></a><a name="onupdate"></a>COleServerItem:: OnUpdate
+## <a name="coleserveritemonupdate"></a><a name="onupdate"></a> COleServerItem:: OnUpdate
 
 項目が変更されたときにフレームワークによって呼び出されます。
 
@@ -962,11 +963,11 @@ DVASPECT 列挙子の値。 このパラメーターには、次のいずれか�
 
 - DVASPECT_DOCPRINT 項目は、[ファイル] メニューの [印刷] コマンドを使用して印刷されたかのように表されます。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 既定の実装では、ヒントまたは送信者に関係なく、 [Notifychanged](#notifychanged)が呼び出されます。
 
-## <a name="coleserveritemonupdateitems"></a><a name="onupdateitems"></a>COleServerItem:: OnUpdateItems
+## <a name="coleserveritemonupdateitems"></a><a name="onupdateitems"></a> COleServerItem:: OnUpdateItems
 
 サーバードキュメント内のすべての項目を更新するために、フレームワークによって呼び出されます。
 
@@ -974,11 +975,11 @@ DVASPECT 列挙子の値。 このパラメーターには、次のいずれか�
 virtual void OnUpdateItems();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-既定の実装は、ドキュメント内のすべてのオブジェクトに対して[UpdateLink](../../mfc/reference/coleclientitem-class.md#updatelink)を呼び出し `COleClientItem` ます。
+既定の実装は、ドキュメント内のすべてのオブジェクトに対して [UpdateLink](../../mfc/reference/coleclientitem-class.md#updatelink) を呼び出し `COleClientItem` ます。
 
-## <a name="coleserveritemsetitemname"></a><a name="setitemname"></a>COleServerItem:: SetItemName
+## <a name="coleserveritemsetitemname"></a><a name="setitemname"></a> COleServerItem:: SetItemName
 
 リンク項目を作成してその名前を設定するときに、この関数を呼び出します。
 
@@ -991,7 +992,7 @@ void SetItemName(LPCTSTR lpszItemName);
 *lpszItemName*<br/>
 項目の新しい名前へのポインター。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 名前は、ドキュメント内で一意である必要があります。 サーバーアプリケーションがリンクされた項目を編集するために呼び出されると、アプリケーションはこの名前を使用して項目を検索します。 埋め込みアイテムに対しては、この関数を呼び出す必要はありません。
 

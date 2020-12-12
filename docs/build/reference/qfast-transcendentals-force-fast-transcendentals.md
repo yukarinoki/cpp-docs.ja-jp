@@ -1,4 +1,5 @@
 ---
+description: 詳細については、次を参照してください:/Qfast_transcendentals (Force Fast 超越関数)
 title: /Qfast_transcendentals (超越関数高速化の強制)
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,16 +8,16 @@ helpviewer_keywords:
 - /Qfast_transcendentals
 - Force Fast Transcendentals
 ms.assetid: 4de24bd1-38e6-49d4-9a05-04c9937d24ac
-ms.openlocfilehash: 383a915721d627367ca2ca035957df947996bbe2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7701925aa7df33107b0829ade1c0c711eda14c08
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62319318"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97225662"
 ---
-# <a name="qfasttranscendentals-force-fast-transcendentals"></a>/Qfast_transcendentals (超越関数高速化の強制)
+# <a name="qfast_transcendentals-force-fast-transcendentals"></a>/Qfast_transcendentals (超越関数高速化の強制)
 
-超越関数のインライン コードを生成します。
+超越 functions のインラインコードを生成します。
 
 ## <a name="syntax"></a>構文
 
@@ -24,21 +25,21 @@ ms.locfileid: "62319318"
 /Qfast_transcendentals
 ```
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-このコンパイラ オプションでは、実行速度を向上させるために、インライン コードに変換する超越関数を強制します。 このオプションとペアになっている場合にのみ有効 **/fp: 除く**または **/fp: 正確な**します。 超越関数のインライン コードを生成する 既定の動作では既に **/fp:fast**します。
+このコンパイラオプションを使用すると、超越関数がインラインコードに変換され、実行速度が向上します。 このオプションは、 **/fp: except** または **/fp: 精密** と組み合わせた場合にのみ効果があります。 超越 functions のインラインコードの生成は、既に **/fp: fast** での既定の動作です。
 
-このオプションは互換性がありません **/fp: 厳密な**します。 参照してください[/fp (浮動小数点の動作の指定)](fp-specify-floating-point-behavior.md)浮動小数点コンパイラ オプションの詳細についてはします。
+このオプションは、 **/fp: strict** と互換性がありません。 浮動小数点コンパイラオプションの詳細については、「 [/fp (Floating-Point 動作の指定)](fp-specify-floating-point-behavior.md) 」を参照してください。
 
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境において、このコンパイラ オプションを設定する方法
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのコンパイラ オプションを設定するには
 
-1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。 [Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)します。
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、[Visual Studio での C++ コンパイラとビルド プロパティの設定](../working-with-project-properties.md)に関するページを参照してください。
 
 1. **[C/C++]** フォルダーをクリックします。
 
 1. **[コマンド ライン]** プロパティ ページをクリックします。
 
-1. **[追加のオプション]** ボックスにコンパイラ オプションを入力します。
+1. [追加のオプション]  ボックスにコンパイラ オプションを入力します。
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>このコンパイラ オプションをコードから設定するには
 
@@ -46,6 +47,6 @@ ms.locfileid: "62319318"
 
 ## <a name="see-also"></a>関連項目
 
-[/Q オプション (低水準の操作)](q-options-low-level-operations.md)<br/>
+[/Q オプション (低レベルの操作)](q-options-low-level-operations.md)<br/>
 [MSVC コンパイラ オプション](compiler-options.md)<br/>
-[MSVC コンパイラ コマンド ラインの構文](compiler-command-line-syntax.md)
+[MSVC Compiler Command-Line 構文](compiler-command-line-syntax.md)
