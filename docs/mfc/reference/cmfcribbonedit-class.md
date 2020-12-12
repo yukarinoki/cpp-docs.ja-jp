@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: CMFCRibbonEdit クラス'
 title: CMFCRibbonEdit クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -73,16 +74,16 @@ helpviewer_keywords:
 - CMFCRibbonEdit [MFC], SetTextAlign
 - CMFCRibbonEdit [MFC], SetWidth
 ms.assetid: 9b85f1f2-446b-454e-9af9-104fdad8a897
-ms.openlocfilehash: ab621a05f9b658eee9babb14e257680fa95e0f96
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 83920c9779af10861e32ce964e91af767a3d9e96
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81375176"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97193103"
 ---
 # <a name="cmfcribbonedit-class"></a>CMFCRibbonEdit クラス
 
-リボン バーにあるエディット コントロールを実装します。
+リボンバーに配置されるエディットコントロールを実装します。
 
 ## <a name="syntax"></a>構文
 
@@ -96,61 +97,61 @@ class CMFCRibbonEdit : public CMFCRibbonButton
 
 |名前|説明|
 |----------|-----------------|
-|[を編集します。](#cmfcribbonedit)|`CMFCRibbonEdit` オブジェクトを構築します。|
+|[CMFCRibbonEdit::CMFCRibbonEdit](#cmfcribbonedit)|`CMFCRibbonEdit` オブジェクトを構築します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
 |名前|説明|
 |----------|-----------------|
-|[CMFCリボン編集::缶詰ストレッチ](#canbestretched)|コントロールの高さがリボン行`CMFCRibbonEdit`の高さに合うかどうかを示します。|
-|[を編集します。](#cmfcribbonedit)|`CMFCRibbonEdit` オブジェクトを構築します。|
-|[コMFCリボン編集::コピー元](#copyfrom)|指定した`CMFCRibbonEdit`オブジェクトの状態を現在`CMFCRibbonEdit`のオブジェクトにコピーします。|
-|[編集::編集](#createedit)|オブジェクトの新しいテキスト ボックス`CMFCRibbonEdit`を作成します。|
-|[:DエストロイCtrl](#destroyctrl)|`CMFCRibbonEdit` オブジェクトを破棄します。|
-|[:Dリスト](#dropdownlist)|リスト ボックスをドロップダウンします。|
-|[をクリックします。](#enablespinbuttons)|テキスト ボックスのスピン ボタンの範囲を有効にして設定します。|
-|[をクリックします。](#getcompactsize)|オブジェクトのコンパクト サイズを`CFMCRibbonEdit`取得します。|
-|[テキストを編集します。](#getedittext)|テキスト ボックス内のテキストを取得します。|
-|[を編集します。](#getintermediatesize)|オブジェクトの中間サイズを`CMFCRibbonEdit`取得します。|
-|[編集::テキスト整列](#gettextalign)|テキスト ボックス内のテキストの配置を取得します。|
-|[を編集します。](#getwidth)|コントロールの幅 (ピクセル単位) を`CMFCRibbonEdit`取得します。|
-|[をクリックします。](#hascompactmode)|コントロールの表示サイズを`CMFCRibbonEdit`コンパクトにできるかどうかを示します。|
-|[をクリックします。](#hasfocus)|コントロールに`CMFCRIbbonEdit`フォーカスがあるかどうかを示します。|
-|[を編集します。](#haslargemode)|コントロールの表示サイズが`CMFCRibbonEdit`大きくなるかどうかを示します。|
-|[CMFCリボン編集::ハススピンボタン](#hasspinbuttons)|テキスト ボックスにスピン ボタンがあるかどうかを示します。|
-|[CMFCリボン編集::ハイライト](#ishighlighted)|コントロールが`CMFCRibbonEdit`強調表示されているかどうかを示します。|
-|[コントロールの後に編集します。](#onafterchangerect)|コントロールの表示四角形のサイズが変更されたときに、フレームワークによって`CMFCRibbonEdit`呼び出されます。|
-|[をクリックします。](#ondraw)|コントロールを描画するために、フレームワークによって`CMFCRibbonEdit`呼び出されます。|
-|[をクリックします。](#ondrawlabelandimage)|コントロールのラベルとイメージを描画するために、フレームワークによって呼`CMFCRibbonEdit`び出されます。|
-|[をクリックします。](#ondrawonlist)|コマンド リスト ボックスにコントロール`CMFCRibbonEdit`を描画するために、フレームワークによって呼び出されます。|
-|[を有効にする](#onenable)|コントロールを有効または無効にするために、フレームワークによって`CMFCRibbonEdit`呼び出されます。|
-|[CMFCリボン編集::オンハイライト](#onhighlight)|ポインターがコントロールの境界に入るか、またはコントロールの境界から離れたとき`CMFCRibbonEdit`に、フレームワークによって呼び出されます。|
-|[キーの編集::オンキー](#onkey)|ユーザーがキーヒントを押し、コントロールにフォーカスがあるときに`CMFCRibbonEdit`、フレームワークによって呼び出されます。|
-|[コントロールメニュー::オンルボタンダウン](#onlbuttondown)|ユーザーがコントロールの左マウス`CMFCRibbonEdit`ボタンを押したときにコントロールを更新するために、フレームワークによって呼び出されます。|
-|[コントロールの上](#onlbuttonup)|ユーザーがマウスの左ボタンを離したときに、フレームワークによって呼び出されます。|
-|[コントロールの編集::オントレル変更](#onrtlchanged)|レイアウトの方向が変更されたときにコントロール`CMFCRibbonEdit`を更新するために、フレームワークによって呼び出されます。|
-|[CMFCリボン編集::オンショー](#onshow)|コントロールを表示または非表示にするために、フレームワークによって`CMFCRibbonEdit`呼び出されます。|
-|[再描画](#redraw)|コントロールの表示を`CMFCRibbonEdit`更新します。|
-|[をクリックします。](#setaccdata)|オブジェクトのアクセシビリティ データを`CMFCRibbonEdit`設定します。|
-|[テキストを編集します。](#setedittext)|テキスト ボックス内のテキストを設定します。|
-|[編集::テキスト整列の設定](#settextalign)|テキスト ボックスのテキストの配置を設定します。|
-|[コントロールの幅を変更します。](#setwidth)|コントロールのテキスト ボックスの幅を`CMFCRibbonEdit`設定します。|
+|[CMFCRibbonEdit:: CanBeStretched](#canbestretched)|コントロールの高さ `CMFCRibbonEdit` をリボン行の高さに垂直方向に拡大できるかどうかを示します。|
+|[CMFCRibbonEdit::CMFCRibbonEdit](#cmfcribbonedit)|`CMFCRibbonEdit` オブジェクトを構築します。|
+|[CMFCRibbonEdit:: CopyFrom](#copyfrom)|指定したオブジェクトの状態 `CMFCRibbonEdit` を現在のオブジェクトにコピーし `CMFCRibbonEdit` ます。|
+|[CMFCRibbonEdit:: CreateEdit](#createedit)|オブジェクトの新しいテキストボックスを作成し `CMFCRibbonEdit` ます。|
+|[CMFCRibbonEdit::D estroyCtrl](#destroyctrl)|`CMFCRibbonEdit` オブジェクトを破棄します。|
+|[CMFCRibbonEdit::D ropDownList](#dropdownlist)|リストボックスを下にドロップします。|
+|[CMFCRibbonEdit:: Enabl Inbuttons](#enablespinbuttons)|テキストボックスのスピンボタンの範囲を有効にして設定します。|
+|[CMFCRibbonEdit:: GetCompactSize](#getcompactsize)|オブジェクトのコンパクトなサイズを取得し `CFMCRibbonEdit` ます。|
+|[CMFCRibbonEdit::GetEditText](#getedittext)|テキストボックス内のテキストを取得します。|
+|[CMFCRibbonEdit:: GetIntermediateSize](#getintermediatesize)|オブジェクトの中間サイズを取得し `CMFCRibbonEdit` ます。|
+|[CMFCRibbonEdit:: GetTextAlign](#gettextalign)|テキストボックス内のテキストの配置を取得します。|
+|[CMFCRibbonEdit:: GetWidth](#getwidth)|コントロールの幅 (ピクセル単位) を取得し `CMFCRibbonEdit` ます。|
+|[CMFCRibbonEdit::HasCompactMode](#hascompactmode)|コントロールの表示サイズをコンパクトにできるかどうかを示し `CMFCRibbonEdit` ます。|
+|[CMFCRibbonEdit:: HasFocus](#hasfocus)|コントロールにフォーカスがあるかどうかを示し `CMFCRIbbonEdit` ます。|
+|[CMFCRibbonEdit::HasLargeMode](#haslargemode)|コントロールの表示サイズが大きくなる可能性があるかどうかを示し `CMFCRibbonEdit` ます。|
+|[CMFCRibbonEdit::HasSpinButtons](#hasspinbuttons)|テキストボックスにスピンボタンがあるかどうかを示します。|
+|[CMFCRibbonEdit::IsHighlighted](#ishighlighted)|コントロールが強調表示されているかどうかを示し `CMFCRibbonEdit` ます。|
+|[CMFCRibbonEdit::OnAfterChangeRect](#onafterchangerect)|コントロールの表示四角形の大きさが変更されたときにフレームワークによって呼び出され `CMFCRibbonEdit` ます。|
+|[CMFCRibbonEdit:: OnDraw](#ondraw)|コントロールを描画するためにフレームワークによって呼び出され `CMFCRibbonEdit` ます。|
+|[CMFCRibbonEdit::OnDrawLabelAndImage](#ondrawlabelandimage)|コントロールのラベルとイメージを描画するためにフレームワークによって呼び出され `CMFCRibbonEdit` ます。|
+|[CMFCRibbonEdit::OnDrawOnList](#ondrawonlist)|コマンドリストボックスにコントロールを描画するために、フレームワークによって呼び出され `CMFCRibbonEdit` ます。|
+|[CMFCRibbonEdit:: OnEnable](#onenable)|コントロールを有効または無効にするためにフレームワークによって呼び出され `CMFCRibbonEdit` ます。|
+|[CMFCRibbonEdit:: OnHighlight 表示](#onhighlight)|ポインターがコントロールの境界内を出入りするときに、フレームワークによって呼び出され `CMFCRibbonEdit` ます。|
+|[CMFCRibbonEdit::OnKey](#onkey)|ユーザーが keytip を押し、コントロールにフォーカスがあるときにフレームワークによって呼び出され `CMFCRibbonEdit` ます。|
+|[CMFCRibbonEdit::OnLButtonDown](#onlbuttondown)|`CMFCRibbonEdit`ユーザーがコントロール上でマウスの左ボタンを押したときにコントロールを更新するために、フレームワークによって呼び出されます。|
+|[CMFCRibbonEdit::OnLButtonUp](#onlbuttonup)|ユーザーがマウスの左ボタンを離したときにフレームワークによって呼び出されます。|
+|[CMFCRibbonEdit:: OnRTLChanged](#onrtlchanged)|レイアウトの方向が変更されたときにコントロールを更新するために、フレームワークによって呼び出され `CMFCRibbonEdit` ます。|
+|[CMFCRibbonEdit:: OnShow](#onshow)|コントロールを表示または非表示にするためにフレームワークによって呼び出され `CMFCRibbonEdit` ます。|
+|[CMFCRibbonEdit:: 再描画](#redraw)|コントロールの表示を更新 `CMFCRibbonEdit` します。|
+|[CMFCRibbonEdit:: Setのデータ](#setaccdata)|オブジェクトのアクセシビリティデータを設定し `CMFCRibbonEdit` ます。|
+|[CMFCRibbonEdit::SetEditText](#setedittext)|テキストボックス内のテキストを設定します。|
+|[CMFCRibbonEdit:: SetTextAlign](#settextalign)|テキストボックスのテキストの配置を設定します。|
+|[CMFCRibbonEdit:: SetWidth](#setwidth)|コントロールのテキストボックスの幅を設定し `CMFCRibbonEdit` ます。|
 
 ## <a name="remarks"></a>解説
 
 ## <a name="example"></a>例
 
-`CMFCRibbonEdit`オブジェクトの作成方法、編集コントロールの横にスピン ボタンを表示する方法、およびエディット コントロールのテキストを設定する方法を次の例に示します。 このコード スニペットは、 [MS Office 2007 デモ サンプル](../../overview/visual-cpp-samples.md)の一部です。
+次の例では、オブジェクトを構築し `CMFCRibbonEdit` 、エディットコントロールの横にスピンボタンを表示し、エディットコントロールのテキストを設定する方法を示します。 このコードスニペットは、 [MS Office 2007 Demo サンプル](../../overview/visual-cpp-samples.md)に含まれています。
 
 [!code-cpp[NVC_MFC_MSOffice2007Demo#7](../../mfc/reference/codesnippet/cpp/cmfcribbonedit-class_1.cpp)]
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-**ヘッダー:** afxRibbonEdit.h
+**ヘッダー:** afxRibbonEdit
 
-## <a name="cmfcribboneditcanbestretched"></a><a name="canbestretched"></a>CMFCリボン編集::缶詰ストレッチ
+## <a name="cmfcribboneditcanbestretched"></a><a name="canbestretched"></a> CMFCRibbonEdit:: CanBeStretched
 
-[コントロールの](../../mfc/reference/cmfcribbonedit-class.md)高さをリボン行の高さに垂直方向に上げることができるかどうかを示します。
+[CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md)コントロールの高さをリボン行の高さに垂直方向に拡大できるかどうかを示します。
 
 ```cpp
 virtual BOOL CanBeStretched();
@@ -162,9 +163,9 @@ virtual BOOL CanBeStretched();
 
 ### <a name="remarks"></a>解説
 
-## <a name="cmfcribboneditcmfcribbonedit"></a><a name="cmfcribbonedit"></a>を編集します。
+## <a name="cmfcribboneditcmfcribbonedit"></a><a name="cmfcribbonedit"></a> CMFCRibbonEdit::CMFCRibbonEdit
 
-オブジェクトを構築[します](../../mfc/reference/cmfcribbonedit-class.md)。
+[CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md)オブジェクトを構築します。
 
 ```cpp
 CMFCRibbonEdit(
@@ -179,24 +180,24 @@ CMFCRibbonEdit();
 ### <a name="parameters"></a>パラメーター
 
 *nID*<br/>
-[in]コントロールの`CMFCRibbonEdit`コマンド ID。
+からコントロールのコマンド ID `CMFCRibbonEdit` 。
 
-*n幅*<br/>
-[in]`CMFCRibbonEdit`コントロールのテキスト ボックスの幅 (ピクセル単位)。
+*nWidth*<br/>
+からコントロールのテキストボックスの幅 (ピクセル単位) `CMFCRibbonEdit` 。
 
-*ラベル*<br/>
-[in]コントロールの`CMFCRibbonEdit`ラベル。
+*lpszLabel*<br/>
+からコントロールのラベル `CMFCRibbonEdit` 。
 
-*nイメージ*<br/>
-[in]コントロールに使用する小さいイメージの`CMFCRibbonEdit`インデックス。 小さいイメージのコレクションは、親リボン カテゴリによって管理されます。
+*nImage*<br/>
+からコントロールに使用する小さいイメージのインデックス `CMFCRibbonEdit` 。 小さい画像のコレクションは、親のリボンカテゴリによって維持されます。
 
 ### <a name="remarks"></a>解説
 
-コントロール`CMFCRibbonEdit`は大きなイメージを使用しません。
+この `CMFCRibbonEdit` コントロールでは、大きなイメージは使用されません。
 
-## <a name="cmfcribboneditcopyfrom"></a><a name="copyfrom"></a>コMFCリボン編集::コピー元
+## <a name="cmfcribboneditcopyfrom"></a><a name="copyfrom"></a> CMFCRibbonEdit:: CopyFrom
 
-指定した[CMFC リボンエディット](../../mfc/reference/cmfcribbonedit-class.md)オブジェクトの状態を現在の[CMFC リボンエディット](../../mfc/reference/cmfcribbonedit-class.md)オブジェクトにコピーします。
+指定した [CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md) オブジェクトの状態を現在の [CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md) オブジェクトにコピーします。
 
 ```cpp
 virtual void CopyFrom(const CMFCRibbonBaseElement& src);
@@ -205,15 +206,15 @@ virtual void CopyFrom(const CMFCRibbonBaseElement& src);
 ### <a name="parameters"></a>パラメーター
 
 *src*<br/>
-[in]ソース`CMFCRibbonEdit`オブジェクト。
+からソース `CMFCRibbonEdit` オブジェクト。
 
 ### <a name="remarks"></a>解説
 
-*src*パラメータは型`CMFCRibbonEdit`でなければなりません。
+*Src* パラメーターの型はである必要があり `CMFCRibbonEdit` ます。
 
-## <a name="cmfcribboneditcreateedit"></a><a name="createedit"></a>編集::編集
+## <a name="cmfcribboneditcreateedit"></a><a name="createedit"></a> CMFCRibbonEdit:: CreateEdit
 
-オブジェクトの新しいテキスト ボックス[を作成します](../../mfc/reference/cmfcribbonedit-class.md)。
+[CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md)オブジェクトの新しいテキストボックスを作成します。
 
 ```cpp
 virtual CMFCRibbonRichEditCtrl* CreateEdit(
@@ -223,35 +224,35 @@ virtual CMFCRibbonRichEditCtrl* CreateEdit(
 
 ### <a name="parameters"></a>パラメーター
 
-*親の子*<br/>
-[in]`CMFCRibbonEdit`オブジェクトの親ウィンドウへのポインター。
+*pWndParent*<br/>
+からオブジェクトの親ウィンドウへのポインター `CMFCRibbonEdit` 。
 
-*ドウエディットスタイル*<br/>
-[in]テキスト ボックスのスタイルを指定します。 「解説」に記載されているウィンドウ スタイルと、Windows SDK で説明されている[エディット コントロール スタイル](/windows/win32/Controls/edit-control-styles)を組み合わせることができます。
+*dwEditStyle*<br/>
+からテキストボックスのスタイルを指定します。 「解説」に記載されているウィンドウスタイルと、Windows SDK で説明されている [編集コントロールスタイル](/windows/win32/Controls/edit-control-styles) を組み合わせることができます。
 
 ### <a name="return-value"></a>戻り値
 
-メソッドが正常に終了した場合は、新しいテキスト ボックスへのポインター。それ以外の場合は NULL。
+メソッドが正常に終了した場合は、新しいテキストボックスへのポインター。それ以外の場合は NULL。
 
 ### <a name="remarks"></a>解説
 
-カスタム テキスト ボックスを作成するには、派生クラスでこのメソッドをオーバーライドします。
+カスタムテキストボックスを作成するには、派生クラスでこのメソッドをオーバーライドします。
 
-次の[ウィンドウ スタイル](../../mfc/reference/styles-used-by-mfc.md#window-styles)をテキスト ボックスに適用できます。
+テキストボックスには、次の [ウィンドウスタイル](../../mfc/reference/styles-used-by-mfc.md#window-styles) を適用できます。
 
-- **Ws_child**
+- **WS_CHILD**
 
-- **Ws_visible**
+- **WS_VISIBLE**
 
 - **WS_DISABLED**
 
-- **Ws_group**
+- **WS_GROUP**
 
 - **WS_TABSTOP**
 
-## <a name="cmfcribboneditdestroyctrl"></a><a name="destroyctrl"></a>:DエストロイCtrl
+## <a name="cmfcribboneditdestroyctrl"></a><a name="destroyctrl"></a> CMFCRibbonEdit::D estroyCtrl
 
-[オブジェクトを](../../mfc/reference/cmfcribbonedit-class.md)破棄します。
+[CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md)オブジェクトを破棄します。
 
 ```cpp
 virtual void DestroyCtrl();
@@ -259,9 +260,9 @@ virtual void DestroyCtrl();
 
 ### <a name="remarks"></a>解説
 
-## <a name="cmfcribboneditdropdownlist"></a><a name="dropdownlist"></a>:Dリスト
+## <a name="cmfcribboneditdropdownlist"></a><a name="dropdownlist"></a> CMFCRibbonEdit::D ropDownList
 
-リスト ボックスをドロップダウンします。
+リストボックスを下にドロップします。
 
 ```cpp
 virtual void DropDownList();
@@ -269,11 +270,11 @@ virtual void DropDownList();
 
 ### <a name="remarks"></a>解説
 
-既定では、このメソッドは何も実行しません。 リスト ボックスをドロップダウンするには、このメソッドをオーバーライドします。
+既定では、このメソッドは何も行いません。 リストボックスをドロップダウンするには、このメソッドをオーバーライドします。
 
-## <a name="cmfcribboneditenablespinbuttons"></a><a name="enablespinbuttons"></a>をクリックします。
+## <a name="cmfcribboneditenablespinbuttons"></a><a name="enablespinbuttons"></a> CMFCRibbonEdit:: Enabl Inbuttons
 
-テキスト ボックスのスピン ボタンの範囲を有効にして設定します。
+テキストボックスのスピンボタンの範囲を有効にして設定します。
 
 ```cpp
 void EnableSpinButtons(
@@ -283,19 +284,19 @@ void EnableSpinButtons(
 
 ### <a name="parameters"></a>パラメーター
 
-*nMin*<br/>
-[in]スピン ボタンの最小値。
+*N1 日*<br/>
+からスピンボタンの最小値。
 
-*nMax*<br/>
-[in]スピン ボタンの最大値。
+*N1 日*<br/>
+からスピンボタンの最大値。
 
 ### <a name="remarks"></a>解説
 
-スピン ボタンは上下の矢印を表示し、ユーザーが固定された値のセットを移動できるようにします。
+スピンボタンを使用すると、上下の矢印が表示され、ユーザーは固定された値のセット内を移動できます。
 
-## <a name="cmfcribboneditgetcompactsize"></a><a name="getcompactsize"></a>をクリックします。
+## <a name="cmfcribboneditgetcompactsize"></a><a name="getcompactsize"></a> CMFCRibbonEdit:: GetCompactSize
 
-オブジェクトのコンパクト サイズを取得[します](../../mfc/reference/cmfcribbonedit-class.md)。
+[CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md)オブジェクトのコンパクトサイズを取得します。
 
 ```cpp
 virtual CSize GetCompactSize(CDC* pDC);
@@ -304,17 +305,17 @@ virtual CSize GetCompactSize(CDC* pDC);
 ### <a name="parameters"></a>パラメーター
 
 *pDC*<br/>
-[in]`CMFCRibbonEdit`オブジェクトのデバイス コンテキストへのポインター。
+からオブジェクトのデバイスコンテキストへのポインター `CMFCRibbonEdit` 。
 
 ### <a name="return-value"></a>戻り値
 
-`CMFCRibbonEdit`オブジェクトのコンパクト サイズ。
+オブジェクトのコンパクトサイズ `CMFCRibbonEdit` 。
 
 ### <a name="remarks"></a>解説
 
-## <a name="cmfcribboneditgetedittext"></a><a name="getedittext"></a>テキストを編集します。
+## <a name="cmfcribboneditgetedittext"></a><a name="getedittext"></a> CMFCRibbonEdit::GetEditText
 
-テキスト ボックス内のテキストを取得します。
+テキストボックス内のテキストを取得します。
 
 ```cpp
 CString GetEditText() const;
@@ -322,13 +323,13 @@ CString GetEditText() const;
 
 ### <a name="return-value"></a>戻り値
 
-テキスト ボックス内のテキスト。
+テキストボックス内のテキスト。
 
 ### <a name="remarks"></a>解説
 
-## <a name="cmfcribboneditgetintermediatesize"></a><a name="getintermediatesize"></a>を編集します。
+## <a name="cmfcribboneditgetintermediatesize"></a><a name="getintermediatesize"></a> CMFCRibbonEdit:: GetIntermediateSize
 
-オブジェクトの中間サイズ[を](../../mfc/reference/cmfcribbonedit-class.md)取得します。
+[CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md)オブジェクトの中間サイズを取得します。
 
 ```cpp
 virtual CSize GetIntermediateSize(CDC* pDC);
@@ -337,17 +338,17 @@ virtual CSize GetIntermediateSize(CDC* pDC);
 ### <a name="parameters"></a>パラメーター
 
 *pDC*<br/>
-[in]`CMFCRibbonEdit`オブジェクトのデバイス コンテキストへのポインター。
+からオブジェクトのデバイスコンテキストへのポインター `CMFCRibbonEdit` 。
 
 ### <a name="return-value"></a>戻り値
 
-`CMFCRibbonEdit`オブジェクトの中間サイズ。
+オブジェクトの中間サイズ `CMFCRibbonEdit` 。
 
 ### <a name="remarks"></a>解説
 
-## <a name="cmfcribboneditgettextalign"></a><a name="gettextalign"></a>編集::テキスト整列
+## <a name="cmfcribboneditgettextalign"></a><a name="gettextalign"></a> CMFCRibbonEdit:: GetTextAlign
 
-テキスト ボックス内のテキストの配置を取得します。
+テキストボックス内のテキストの配置を取得します。
 
 ```cpp
 int GetTextAlign() const;
@@ -355,23 +356,23 @@ int GetTextAlign() const;
 
 ### <a name="return-value"></a>戻り値
 
-テキストの配置列挙値。 可能な値については、「解説」を参照してください。
+テキストの配置の列挙値。 使用可能な値については、「解説」を参照してください。
 
 ### <a name="remarks"></a>解説
 
-戻り値は、次のエディット コントロール スタイルのいずれかです。
+返される値は、次のいずれかの編集コントロールスタイルです。
 
-- 左揃えの**ES_LEFT**
+- 左揃えの **ES_LEFT**
 
-- 中心の配置の**ES_CENTER**
+- 中央揃えの **ES_CENTER**
 
-- 右揃えのための**ES_RIGHT**
+- 右揃えの **ES_RIGHT**
 
-これらのスタイルの詳細については、「コントロール[スタイルの編集](/windows/win32/Controls/edit-control-styles)」を参照してください。
+これらのスタイルの詳細については、「 [コントロールスタイルの編集](/windows/win32/Controls/edit-control-styles)」を参照してください。
 
-## <a name="cmfcribboneditgetwidth"></a><a name="getwidth"></a>を編集します。
+## <a name="cmfcribboneditgetwidth"></a><a name="getwidth"></a> CMFCRibbonEdit:: GetWidth
 
-[コントロールの](../../mfc/reference/cmfcribbonedit-class.md)幅をピクセル単位で取得します。
+[CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md)コントロールの幅 (ピクセル単位) を取得します。
 
 ```cpp
 int GetWidth(BOOL bInFloatyMode = FALSE) const;
@@ -379,18 +380,18 @@ int GetWidth(BOOL bInFloatyMode = FALSE) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*ブインフローティモード*<br/>
-[in]コントロールが`CMFCRibbonEdit`フローティング モードの場合は TRUE。それ以外の場合は FALSE。
+*bInFloatyMode*<br/>
+から `CMFCRibbonEdit` コントロールが浮動モードの場合は TRUE、それ以外の場合は FALSE。
 
 ### <a name="return-value"></a>戻り値
 
-`CMFCRibbonEdit`コントロールの幅 (ピクセル単位)。
+コントロールの幅 (ピクセル単位) `CMFCRibbonEdit` 。
 
 ### <a name="remarks"></a>解説
 
-## <a name="cmfcribbonedithascompactmode"></a><a name="hascompactmode"></a>をクリックします。
+## <a name="cmfcribbonedithascompactmode"></a><a name="hascompactmode"></a> CMFCRibbonEdit::HasCompactMode
 
-[コントロールの](../../mfc/reference/cmfcribbonedit-class.md)表示サイズをコンパクトにできるかどうかを示します。
+[CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md)コントロールの表示サイズをコンパクトにできるかどうかを示します。
 
 ```cpp
 virtual BOOL HasCompactMode() const;
@@ -402,11 +403,11 @@ virtual BOOL HasCompactMode() const;
 
 ### <a name="remarks"></a>解説
 
-既定では、このメソッドは常に TRUE を返します。 表示サイズをコンパクトにできるかどうかを示すには、このメソッドをオーバーライドします。
+既定では、このメソッドは常に TRUE を返します。 このメソッドをオーバーライドして、表示サイズをコンパクトにできるかどうかを示します。
 
-## <a name="cmfcribbonedithasfocus"></a><a name="hasfocus"></a>をクリックします。
+## <a name="cmfcribbonedithasfocus"></a><a name="hasfocus"></a> CMFCRibbonEdit:: HasFocus
 
-[コントロールに](../../mfc/reference/cmfcribbonedit-class.md)フォーカスがあるかどうかを示します。
+[CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md)コントロールにフォーカスがあるかどうかを示します。
 
 ```cpp
 virtual BOOL HasFocus() const;
@@ -414,13 +415,13 @@ virtual BOOL HasFocus() const;
 
 ### <a name="return-value"></a>戻り値
 
-コントロールに`CMFCRibbonEdit`フォーカスがある場合は TRUE。それ以外の場合は FALSE。
+コントロールにフォーカスがある場合は TRUE `CMFCRibbonEdit` 。それ以外の場合は FALSE。
 
 ### <a name="remarks"></a>解説
 
-## <a name="cmfcribbonedithaslargemode"></a><a name="haslargemode"></a>を編集します。
+## <a name="cmfcribbonedithaslargemode"></a><a name="haslargemode"></a> CMFCRibbonEdit::HasLargeMode
 
-[コントロールの](../../mfc/reference/cmfcribbonedit-class.md)表示サイズが大きくなるかどうかを示します。
+[CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md)コントロールの表示サイズが大きくなる可能性があるかどうかを示します。
 
 ```cpp
 virtual BOOL HasLargeMode() const;
@@ -432,11 +433,11 @@ virtual BOOL HasLargeMode() const;
 
 ### <a name="remarks"></a>解説
 
-既定では、このメソッドは常に FALSE を返します。 表示サイズが大きくなるかどうかを示すには、このメソッドをオーバーライドします。
+既定では、このメソッドは常に FALSE を返します。 このメソッドをオーバーライドして、表示サイズが大きい可能性があるかどうかを示します。
 
-## <a name="cmfcribbonedithasspinbuttons"></a><a name="hasspinbuttons"></a>CMFCリボン編集::ハススピンボタン
+## <a name="cmfcribbonedithasspinbuttons"></a><a name="hasspinbuttons"></a> CMFCRibbonEdit::HasSpinButtons
 
-テキスト ボックスにスピン ボタンがあるかどうかを示します。
+テキストボックスにスピンボタンがあるかどうかを示します。
 
 ```cpp
 virtual BOOL HasSpinButtons() const;
@@ -444,13 +445,13 @@ virtual BOOL HasSpinButtons() const;
 
 ### <a name="return-value"></a>戻り値
 
-テキスト ボックスにスピン ボタンがある場合は TRUE。それ以外の場合は FALSE。
+テキストボックスにスピンボタンがある場合は TRUE。それ以外の場合は FALSE。
 
 ### <a name="remarks"></a>解説
 
-## <a name="cmfcribboneditishighlighted"></a><a name="ishighlighted"></a>CMFCリボン編集::ハイライト
+## <a name="cmfcribboneditishighlighted"></a><a name="ishighlighted"></a> CMFCRibbonEdit::IsHighlighted
 
-[コントロールが](../../mfc/reference/cmfcribbonedit-class.md)強調表示されているかどうかを示します。
+[CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md)コントロールが強調表示されているかどうかを示します。
 
 ```cpp
 virtual BOOL IsHighlighted() const;
@@ -458,13 +459,13 @@ virtual BOOL IsHighlighted() const;
 
 ### <a name="return-value"></a>戻り値
 
-コントロールが`CMFCRibbonEdit`強調表示されている場合は TRUE。それ以外の場合は FALSE。
+コントロールが強調表示されている場合は TRUE。それ以外の場合は `CMFCRibbonEdit` FALSE。
 
 ### <a name="remarks"></a>解説
 
-## <a name="cmfcribboneditonafterchangerect"></a><a name="onafterchangerect"></a>コントロールの後に編集します。
+## <a name="cmfcribboneditonafterchangerect"></a><a name="onafterchangerect"></a> CMFCRibbonEdit::OnAfterChangeRect
 
-[コントロールの変更を表示](../../mfc/reference/cmfcribbonedit-class.md)する四角形のサイズをフレームワークによって呼び出します。
+[CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md)コントロールの表示四角形の大きさが変更されたときにフレームワークによって呼び出されます。
 
 ```cpp
 virtual void OnAfterChangeRect(CDC* pDC);
@@ -473,13 +474,13 @@ virtual void OnAfterChangeRect(CDC* pDC);
 ### <a name="parameters"></a>パラメーター
 
 *pDC*<br/>
-[in]`CMFCRibbonEdit`コントロールのデバイス コンテキストへのポインター。
+からコントロールのデバイスコンテキストへのポインター `CMFCRibbonEdit` 。
 
 ### <a name="remarks"></a>解説
 
-## <a name="cmfcribboneditondraw"></a><a name="ondraw"></a>をクリックします。
+## <a name="cmfcribboneditondraw"></a><a name="ondraw"></a> CMFCRibbonEdit:: OnDraw
 
-コントロールを描画するためにフレームワークによって呼び出[されます](../../mfc/reference/cmfcribbonedit-class.md)。
+[CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md)コントロールを描画するためにフレームワークによって呼び出されます。
 
 ```cpp
 virtual void OnDraw(CDC* pDC);
@@ -488,13 +489,13 @@ virtual void OnDraw(CDC* pDC);
 ### <a name="parameters"></a>パラメーター
 
 *pDC*<br/>
-[in]`CMFCRibbonEdit`コントロールのデバイス コンテキストへのポインター。
+からコントロールのデバイスコンテキストへのポインター `CMFCRibbonEdit` 。
 
 ### <a name="remarks"></a>解説
 
-## <a name="cmfcribboneditondrawlabelandimage"></a><a name="ondrawlabelandimage"></a>をクリックします。
+## <a name="cmfcribboneditondrawlabelandimage"></a><a name="ondrawlabelandimage"></a> CMFCRibbonEdit::OnDrawLabelAndImage
 
-コントロールのラベルとイメージを描画するために、フレームワークによって呼び出[されます](../../mfc/reference/cmfcribbonedit-class.md)。
+[CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md)コントロールのラベルとイメージを描画するために、フレームワークによって呼び出されます。
 
 ```cpp
 virtual void OnDrawLabelAndImage(CDC* pDC);
@@ -503,13 +504,13 @@ virtual void OnDrawLabelAndImage(CDC* pDC);
 ### <a name="parameters"></a>パラメーター
 
 *pDC*<br/>
-[in]`CMFCRibbonEdit`コントロールのデバイス コンテキストへのポインター。
+からコントロールのデバイスコンテキストへのポインター `CMFCRibbonEdit` 。
 
 ### <a name="remarks"></a>解説
 
-## <a name="cmfcribboneditondrawonlist"></a><a name="ondrawonlist"></a>をクリックします。
+## <a name="cmfcribboneditondrawonlist"></a><a name="ondrawonlist"></a> CMFCRibbonEdit::OnDrawOnList
 
-[CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md)コントロールをコマンド リスト ボックスに描画するために、フレームワークによって呼び出されます。
+コマンドリストボックスに [CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md) コントロールを描画するために、フレームワークによって呼び出されます。
 
 ```cpp
 virtual void OnDrawOnList(
@@ -524,30 +525,30 @@ virtual void OnDrawOnList(
 ### <a name="parameters"></a>パラメーター
 
 *pDC*<br/>
-[in]`CMFCRibbonEdit`コントロールのデバイス コンテキストへのポインター。
+からコントロールのデバイスコンテキストへのポインター `CMFCRibbonEdit` 。
 
-*str テキスト*<br/>
-[in]表示テキスト[](../../mfc/reference/cmfcribbonedit-class.md "クラス")。
+*strText*<br/>
+から表示テキスト [](../../mfc/reference/cmfcribbonedit-class.md "cmfcribbonedit クラス") 。
 
-*オフセット*<br/>
-[in]リスト ボックスの左側から表示テキストまでの距離 (ピクセル単位)。
+*nTextOffset*<br/>
+からリストボックスの左側から表示テキストまでの距離 (ピクセル単位)。
 
-*Rect*<br/>
-[in]`CMFCRibbonEdit`コントロールの表示四角形。
+*rect*<br/>
+からコントロールの表示四角形 `CMFCRibbonEdit` 。
 
 *bIsSelected*<br/>
-[in]このパラメーターは使用されません。
+からこのパラメーターは使用されません。
 
-*b強調表示*<br/>
-[in]このパラメーターは使用されません。
+*bHighlighted 表示*<br/>
+からこのパラメーターは使用されません。
 
 ### <a name="remarks"></a>解説
 
-コマンド リスト ボックスには、クイック アクセス ツールバーをカスタマイズするためのリボン コントロールが表示されます。
+[コマンド] ボックスの一覧には、ユーザーがクイックアクセスツールバーをカスタマイズできるようにするためのリボンコントロールが表示されます。
 
-## <a name="cmfcribboneditonenable"></a><a name="onenable"></a>を有効にする
+## <a name="cmfcribboneditonenable"></a><a name="onenable"></a> CMFCRibbonEdit:: OnEnable
 
-を有効または無効にするフレームワークによって呼び出されます[、 CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md)コントロール。
+[CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md)コントロールを有効または無効にするためにフレームワークによって呼び出されます。
 
 ```cpp
 virtual void OnEnable(BOOL bEnable);
@@ -555,14 +556,14 @@ virtual void OnEnable(BOOL bEnable);
 
 ### <a name="parameters"></a>パラメーター
 
-*b 有効にする*<br/>
-[in]コントロールを有効にする場合は TRUE。FALSE を指定すると、コントロールが無効になります。
+*bEnable*<br/>
+からコントロールを有効にする場合は TRUE。コントロールを無効にする場合は FALSE。
 
 ### <a name="remarks"></a>解説
 
-## <a name="cmfcribboneditonhighlight"></a><a name="onhighlight"></a>CMFCリボン編集::オンハイライト
+## <a name="cmfcribboneditonhighlight"></a><a name="onhighlight"></a> CMFCRibbonEdit:: OnHighlight 表示
 
-ポインターが[CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md)コントロールの境界に入るか、または離れたときに、フレームワークによって呼び出されます。
+ポインターが [CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md) コントロールの境界内に出入りするときに、フレームワークによって呼び出されます。
 
 ```cpp
 virtual void OnHighlight(BOOL bHighlight);
@@ -570,14 +571,14 @@ virtual void OnHighlight(BOOL bHighlight);
 
 ### <a name="parameters"></a>パラメーター
 
-*bハイライト*<br/>
-[in]ポインターが`CMFCRibbonEdit`コントロールの境界内にある場合は TRUE。それ以外の場合は FALSE。
+*bHighlight 表示*<br/>
+からポインターがコントロールの境界内にある場合は TRUE。それ以外の場合は `CMFCRibbonEdit` FALSE。
 
 ### <a name="remarks"></a>解説
 
-## <a name="cmfcribboneditonkey"></a><a name="onkey"></a>キーの編集::オンキー
+## <a name="cmfcribboneditonkey"></a><a name="onkey"></a> CMFCRibbonEdit::OnKey
 
-ユーザーがキーヒントを押し[、CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md)コントロールにフォーカスがあるときに、フレームワークによって呼び出されます。
+ユーザーが keytip を押し、 [CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md) コントロールにフォーカスがあるときにフレームワークによって呼び出されます。
 
 ```cpp
 virtual BOOL OnKey(BOOL bIsMenuKey);
@@ -585,8 +586,8 @@ virtual BOOL OnKey(BOOL bIsMenuKey);
 
 ### <a name="parameters"></a>パラメーター
 
-*メニューキー*<br/>
-[in]キーヒントにポップアップ メニューが表示される場合は TRUE。それ以外の場合は FALSE。
+*bIsMenuKey*<br/>
+からKeytip にポップアップメニューが表示される場合は TRUE。それ以外の場合は FALSE。
 
 ### <a name="return-value"></a>戻り値
 
@@ -594,9 +595,9 @@ virtual BOOL OnKey(BOOL bIsMenuKey);
 
 ### <a name="remarks"></a>解説
 
-## <a name="cmfcribboneditonlbuttondown"></a><a name="onlbuttondown"></a>コントロールメニュー::オンルボタンダウン
+## <a name="cmfcribboneditonlbuttondown"></a><a name="onlbuttondown"></a> CMFCRibbonEdit::OnLButtonDown
 
-ユーザーがコントロールのマウスの左ボタンを押したときに[CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md)コントロールを更新するために、フレームワークによって呼び出されます。
+ユーザーがコントロール上でマウスの左ボタンを押したときに [CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md) コントロールを更新するために、フレームワークによって呼び出されます。
 
 ```cpp
 virtual void OnLButtonDown(CPoint point);
@@ -604,14 +605,14 @@ virtual void OnLButtonDown(CPoint point);
 
 ### <a name="parameters"></a>パラメーター
 
-*ポイント*<br/>
-[in]このパラメーターは使用されません。
+*視点*<br/>
+からこのパラメーターは使用されません。
 
 ### <a name="remarks"></a>解説
 
-## <a name="cmfcribboneditonlbuttonup"></a><a name="onlbuttonup"></a>コントロールの上
+## <a name="cmfcribboneditonlbuttonup"></a><a name="onlbuttonup"></a> CMFCRibbonEdit::OnLButtonUp
 
-ユーザーがマウスの左ボタンを離したときに、フレームワークによって呼び出されます。
+ユーザーがマウスの左ボタンを離したときにフレームワークによって呼び出されます。
 
 ```cpp
 virtual void OnLButtonUp(CPoint point);
@@ -619,14 +620,14 @@ virtual void OnLButtonUp(CPoint point);
 
 ### <a name="parameters"></a>パラメーター
 
-*ポイント*<br/>
-[in]このパラメーターは使用されません。
+*視点*<br/>
+からこのパラメーターは使用されません。
 
 ### <a name="remarks"></a>解説
 
-## <a name="cmfcribboneditonrtlchanged"></a><a name="onrtlchanged"></a>コントロールの編集::オントレル変更
+## <a name="cmfcribboneditonrtlchanged"></a><a name="onrtlchanged"></a> CMFCRibbonEdit:: OnRTLChanged
 
-レイアウトの方向が変更されたときに[CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md)コントロールを更新するために、フレームワークによって呼び出されます。
+レイアウトの方向が変更されたときに [CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md) コントロールを更新するために、フレームワークによって呼び出されます。
 
 ```cpp
 virtual void OnRTLChanged(BOOL bIsRTL);
@@ -634,14 +635,14 @@ virtual void OnRTLChanged(BOOL bIsRTL);
 
 ### <a name="parameters"></a>パラメーター
 
-*ビストルトル*<br/>
-[in]レイアウトが右から左に表示される場合は TRUE。レイアウトが左から右の場合は FALSE。
+*bIsRTL*<br/>
+からレイアウトが右から左の場合は TRUE。レイアウトが左から右への場合は FALSE。
 
 ### <a name="remarks"></a>解説
 
-## <a name="cmfcribboneditonshow"></a><a name="onshow"></a>CMFCリボン編集::オンショー
+## <a name="cmfcribboneditonshow"></a><a name="onshow"></a> CMFCRibbonEdit:: OnShow
 
-コントロールを表示または非表示にするフレームワークによって呼び出[されます](../../mfc/reference/cmfcribbonedit-class.md)。
+[CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md)コントロールを表示または非表示にするためにフレームワークによって呼び出されます。
 
 ```cpp
 virtual void OnShow(BOOL bShow);
@@ -649,14 +650,14 @@ virtual void OnShow(BOOL bShow);
 
 ### <a name="parameters"></a>パラメーター
 
-*bショー*<br/>
-[in]コントロールを表示する場合は TRUE。FALSE を指定すると、コントロールが非表示になります。
+*bShow*<br/>
+からコントロールを表示する場合は TRUE。コントロールを非表示にする場合は FALSE。
 
 ### <a name="remarks"></a>解説
 
-## <a name="cmfcribboneditredraw"></a><a name="redraw"></a>再描画
+## <a name="cmfcribboneditredraw"></a><a name="redraw"></a> CMFCRibbonEdit:: 再描画
 
-[コントロールの](../../mfc/reference/cmfcribbonedit-class.md)表示を更新します。
+[CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md)コントロールの表示を更新します。
 
 ```cpp
 virtual void Redraw();
@@ -664,11 +665,11 @@ virtual void Redraw();
 
 ### <a name="remarks"></a>解説
 
-このメソッドは、RDW_INVALIDATE、RDW_ERASE、および`CMFCRibbonEdit`RDW_UPDATENOWフラグを設定して[CWnd::RedrawWindow](/windows/win32/api/winuser/nf-winuser-redrawwindow)を間接的に呼び出すことによって、オブジェクトの表示四角形を再描画します。
+このメソッド `CMFCRibbonEdit` は、RDW_INVALIDATE、RDW_ERASE、および RDW_UPDATENOW フラグが設定された状態で [CWnd:: RedrawWindow](/windows/win32/api/winuser/nf-winuser-redrawwindow) を間接的に呼び出すことによって、オブジェクトの表示四角形を再描画します。
 
-## <a name="cmfcribboneditsetaccdata"></a><a name="setaccdata"></a>をクリックします。
+## <a name="cmfcribboneditsetaccdata"></a><a name="setaccdata"></a> CMFCRibbonEdit:: Setのデータ
 
-オブジェクトのアクセシビリティ データ[を](../../mfc/reference/cmfcribbonedit-class.md)設定します。
+[CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md)オブジェクトのアクセシビリティデータを設定します。
 
 ```cpp
 virtual BOOL SetACCData(
@@ -678,11 +679,11 @@ virtual BOOL SetACCData(
 
 ### <a name="parameters"></a>パラメーター
 
-*親*<br/>
-`CMFCRibbonEdit`オブジェクトの親ウィンドウへのポインター。
+*pParent*<br/>
+オブジェクトの親ウィンドウへのポインター `CMFCRibbonEdit` 。
 
-*データ*<br/>
-`CMFCRibbonEdit`オブジェクトのアクセシビリティ データ。
+*data*<br/>
+オブジェクトのアクセシビリティデータ `CMFCRibbonEdit` 。
 
 ### <a name="return-value"></a>戻り値
 
@@ -690,9 +691,9 @@ virtual BOOL SetACCData(
 
 ### <a name="remarks"></a>解説
 
-## <a name="cmfcribboneditsetedittext"></a><a name="setedittext"></a>テキストを編集します。
+## <a name="cmfcribboneditsetedittext"></a><a name="setedittext"></a> CMFCRibbonEdit::SetEditText
 
-テキスト ボックス内のテキストを設定します。
+テキストボックス内のテキストを設定します。
 
 ```cpp
 void SetEditText(CString strText);
@@ -700,12 +701,12 @@ void SetEditText(CString strText);
 
 ### <a name="parameters"></a>パラメーター
 
-*str テキスト*<br/>
-[in]テキスト ボックスのテキスト。
+*strText*<br/>
+からテキストボックスのテキスト。
 
-## <a name="cmfcribboneditsettextalign"></a><a name="settextalign"></a>編集::テキスト整列の設定
+## <a name="cmfcribboneditsettextalign"></a><a name="settextalign"></a> CMFCRibbonEdit:: SetTextAlign
 
-テキスト ボックスのテキストの配置を設定します。
+テキストボックスのテキストの配置を設定します。
 
 ```cpp
 void SetTextAlign(int nAlign);
@@ -713,24 +714,24 @@ void SetTextAlign(int nAlign);
 
 ### <a name="parameters"></a>パラメーター
 
-*nAlign*<br/>
-[in]テキストの配置列挙値。 可能な値については、「解説」を参照してください。
+*n Align*<br/>
+からテキストの配置の列挙値。 使用可能な値については、「解説」を参照してください。
 
 ### <a name="remarks"></a>解説
 
-パラメータ*nAlign*は、次のいずれかのエディット コントロール スタイルです。
+パラメーター *n align* は、次のいずれかの編集コントロールスタイルです。
 
-- 左揃えのES_LEFT
+- 左揃えの ES_LEFT
 
-- 中心の配置のES_CENTER
+- 中央揃えの ES_CENTER
 
-- 右揃えのためのES_RIGHT
+- 右揃えの ES_RIGHT
 
-これらのスタイルの詳細については、「コントロール[スタイルの編集](/windows/win32/Controls/edit-control-styles)」を参照してください。
+これらのスタイルの詳細については、「 [コントロールスタイルの編集](/windows/win32/Controls/edit-control-styles)」を参照してください。
 
-## <a name="cmfcribboneditsetwidth"></a><a name="setwidth"></a>コントロールの幅を変更します。
+## <a name="cmfcribboneditsetwidth"></a><a name="setwidth"></a> CMFCRibbonEdit:: SetWidth
 
-コントロールのテキスト ボックスの幅[を](../../mfc/reference/cmfcribbonedit-class.md)設定します。
+[CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md)コントロールのテキストボックスの幅を設定します。
 
 ```cpp
 void SetWidth(
@@ -740,19 +741,19 @@ void SetWidth(
 
 ### <a name="parameters"></a>パラメーター
 
-*n幅*<br/>
-[in]テキスト ボックスの幅 (ピクセル単位)。
+*nWidth*<br/>
+からテキストボックスの幅 (ピクセル単位)。
 
-*ブインフローティモード*<br/>
-フローティング モードの幅を設定する場合は TRUE。通常モードの幅を設定するには FALSE。
+*bInFloatyMode*<br/>
+フローティングモードの幅を設定する場合は TRUE。標準モードの幅を設定する場合は FALSE。
 
 ### <a name="remarks"></a>解説
 
-コントロール`CMFCRibbonEdit`の表示モードに応じて、フローティング モードと通常モードの 2 つの幅があります。
+`CMFCRibbonEdit`コントロールには、表示モード (フローティングモードと通常モード) に応じて2つの幅があります。
 
 ## <a name="see-also"></a>関連項目
 
-[階層グラフ](../../mfc/hierarchy-chart.md)<br/>
-[クラス](../../mfc/reference/mfc-classes.md)<br/>
+[階層図](../../mfc/hierarchy-chart.md)<br/>
+[Classes](../../mfc/reference/mfc-classes.md)<br/>
 [CMFCRibbonButton クラス](../../mfc/reference/cmfcribbonbutton-class.md)<br/>
-[クラス](../../mfc/reference/cmfcribbonbar-class.md)
+[CMFCRibbonBar クラス](../../mfc/reference/cmfcribbonbar-class.md)

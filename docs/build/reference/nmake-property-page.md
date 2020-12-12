@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: NMake プロパティページ'
 title: NMake プロパティ ページ (Windows C++)| Microsoft Docs
 ms.date: 11/04/2016
 f1_keywords:
@@ -9,24 +10,24 @@ f1_keywords:
 helpviewer_keywords:
 - NMake property page
 ms.assetid: bd20cb52-9f1d-4240-b4fc-4f43205ac94b
-ms.openlocfilehash: c0dbe537635fe6698f814f3d8456f0caa9c8c796
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 58256ad8542e7d411769efb661970f9c41797ec3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62320605"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97196803"
 ---
 # <a name="nmake-property-page"></a>NMake プロパティ ページ
 
-**[NMake]** プロパティ ページでは、NMake プロジェクトのビルド設定を指定できます。 (NMAKE の Microsoft による実装は、[ように](https://wikipedia.org/wiki/Make_(software)))。
+**[NMake]** プロパティ ページでは、NMake プロジェクトのビルド設定を指定できます。 (NMAKE は Microsoft による [Make](https://wikipedia.org/wiki/Make_(software))の実装です)。
 
-NMake プロジェクトの詳細については、「[Creating a Makefile Project](creating-a-makefile-project.md)」 (メイクファイル プロジェクトの作成) を参照してください。 Windows 以外のメイクファイル プロジェクトでは、次を参照してください[メイクファイル プロジェクトのプロパティ (Linux c)](../../linux/prop-pages/makefile-linux.md)、[一般的なプロジェクト プロパティ (Android c メイクファイル)](/visualstudio/cross-platform/general-makefile-android-prop-page)または[NMake のプロパティ (Android c)](/visualstudio/cross-platform/nmake-android-prop-page).
+NMake プロジェクトの詳細については、「[Creating a Makefile Project](creating-a-makefile-project.md)」 (メイクファイル プロジェクトの作成) を参照してください。 Windows 以外のメイクファイルプロジェクトについては、「 [メイクファイルプロジェクトのプロパティ (Linux C++)](../../linux/prop-pages/makefile-linux.md)」、「 [一般的なプロジェクトのプロパティ (Android c++ メイクファイル)](/visualstudio/cross-platform/general-makefile-android-prop-page) 」、または「 [NMake のプロパティ (android c++)](/visualstudio/cross-platform/nmake-android-prop-page)」を参照してください。
 
 **[NMake]** プロパティ ページには、以下のプロパティがあります。
 
 ## <a name="uielement-list"></a>UIElement の一覧
 
-- **ビルド コマンド ライン**
+- **ビルドコマンドライン**
 
    **[ビルド]** が **[ビルド]** メニューでクリックされたときに実行されるコマンドを指定します。
 
@@ -34,7 +35,7 @@ NMake プロジェクトの詳細については、「[Creating a Makefile Proje
 
    **[すべてリビルド]** が **[ビルド]** メニューでクリックされたときに実行されるコマンドを指定します。
 
-- **クリーン コマンド ライン**
+- **クリーンコマンドライン**
 
    **[クリーン]** が **[ビルド]** メニューでクリックされたときに実行されるコマンドを指定します。
 
@@ -62,14 +63,14 @@ NMake プロジェクトの詳細については、「[Creating a Makefile Proje
 
    .NET Framework で自動的に処理されるアセンブリを指定します。
 
-- **その他のオプション**
+- **Additional Options (追加オプション)**
 
    C++ ファイルを解析するときに使用する IntelliSense に対する追加のコンパイラ スイッチを指定します。
 
-アクセスする方法については、 **NMake**プロパティ ページを参照してください[Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)します。
+[ **NMake** ] プロパティページにアクセスする方法の詳細については、「 [Visual Studio での C++ コンパイラとビルドプロパティの設定](../working-with-project-properties.md)」を参照してください。
 
 このプロジェクトのメンバーにプログラムを使ってアクセスする方法については、「<xref:Microsoft.VisualStudio.VCProjectEngine.VCNMakeTool>」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 
-[C++ プロジェクト プロパティ ページの参照](property-pages-visual-cpp.md)<br>
+[C++ プロジェクトのプロパティ ページのリファレンス](property-pages-visual-cpp.md)<br>

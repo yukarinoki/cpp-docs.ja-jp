@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: scoped_allocator_adaptor クラス'
 title: scoped_allocator_adaptor クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -23,12 +24,12 @@ helpviewer_keywords:
 - std::scoped_allocator_adaptor::outer_allocator
 - std::scoped_allocator_adaptor::select_on_container_copy_construction
 ms.assetid: 0d9b06a1-9a4a-4669-9470-8805cae48e89
-ms.openlocfilehash: b08cf1858cb0f9bf4dc6201edc2502d48754ff77
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 95e216743e99df96aa096435e11b86b36247fe9f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81373395"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97197180"
 ---
 # <a name="scoped_allocator_adaptor-class"></a>scoped_allocator_adaptor クラス
 
@@ -43,13 +44,13 @@ class scoped_allocator_adaptor;
 
 ## <a name="remarks"></a>解説
 
-クラス テンプレートは、1 つ以上のアロケーターの入れ子をカプセル化します。 このような各クラスは、`outer_allocator_type` 型の最も外側のアロケーターである `Outer` のシノニムを持ちます。これは、`scoped_allocator_adaptor` オブジェクトのパブリック ベースです。 `Outer` はコンテナーで使用されるメモリの割り当てに使用されます。 このアロケーター基本オブジェクトへの参照を取得するには、`outer_allocator` を呼び出します。
+クラステンプレートは、1つまたは複数のアロケーターの入れ子をカプセル化します。 このような各クラスは、`outer_allocator_type` 型の最も外側のアロケーターである `Outer` のシノニムを持ちます。これは、`scoped_allocator_adaptor` オブジェクトのパブリック ベースです。 `Outer` はコンテナーで使用されるメモリの割り当てに使用されます。 このアロケーター基本オブジェクトへの参照を取得するには、`outer_allocator` を呼び出します。
 
 入れ子の残りの部分には `inner_allocator_type` 型が含まれます。 内部のアロケーターを使用して、コンテナー内の要素にメモリを割り当てます。 格納されているこの型のオブジェクトへの参照を取得するには、`inner_allocator` を呼び出します。 `Inner...` が空ではない場合、`inner_allocator_type` は型 `scoped_allocator_adaptor<Inner...>` を持ち、`inner_allocator` はメンバー オブジェクトを指定します。 それ以外の場合、`inner_allocator_type` は型 `scoped_allocator_adaptor<Outer>` を持ち、`inner_allocator` はオブジェクト全体を指定します。
 
 入れ子は、必要に応じて、最も内側のカプセル化されたアロケーターをレプリケートする任意の深さがあるかのように動作します。
 
-このクラス テンプレートの動作を記述する際に、表示可能なインターフェイスの一部ではないいくつかの概念。 *最も外側のアロケーター*は、コンストラクトのすべての呼び出しを仲介し、メソッドを破棄します。 再帰関数 `OUTERMOST(X)` で効率的に定義されます。ここで `OUTERMOST(X)` は、次のいずれかです。
+表示されるインターフェイスの一部ではないいくつかの概念は、このクラステンプレートの動作を説明するのに役立ちます。 *最も外側のアロケーター* は、コンストラクトのすべての呼び出しを仲介し、メソッドを破棄します。 再帰関数 `OUTERMOST(X)` で効率的に定義されます。ここで `OUTERMOST(X)` は、次のいずれかです。
 
 - `X.outer_allocator()` が整形式である場合、`OUTERMOST(X)` は `OUTERMOST(X.outer_allocator())` です。
 
@@ -90,16 +91,16 @@ class scoped_allocator_adaptor;
 
 |名前|説明|
 |----------|-----------------|
-|[scoped_allocator_adaptor::構造体の再バインド](#rebind_struct)|`scoped_allocator_adaptor\<Other, Inner...>` のシノニムとして `Outer::rebind\<Other>::other` 型を定義します。|
+|[scoped_allocator_adaptor:: Struct 構造体](#rebind_struct)|`scoped_allocator_adaptor\<Other, Inner...>` のシノニムとして `Outer::rebind\<Other>::other` 型を定義します。|
 
 ### <a name="methods"></a>メソッド
 
 |名前|説明|
 |----------|-----------------|
-|[割り当てる](#allocate)|`Outer` アロケーターを使用してメモリを割り当てます。|
+|[割当て](#allocate)|`Outer` アロケーターを使用してメモリを割り当てます。|
 |[構築](#construct)|オブジェクトを構築します。|
-|[解放](#deallocate)|外側のアロケーターを使用してオブジェクトの割り当てを解除します。|
-|[破壊](#destroy)|指定したオブジェクトを破棄します。|
+|[配置](#deallocate)|外側のアロケーターを使用してオブジェクトの割り当てを解除します。|
+|[倒す](#destroy)|指定したオブジェクトを破棄します。|
 |[inner_allocator](#inner_allocator)|`inner_allocator_type` 型の格納されているオブジェクトへの参照を取得します。|
 |[max_size](#max_size)|外側のアロケーターが割り当てることができるオブジェクトの最大数を指定します。|
 |[outer_allocator](#outer_allocator)|`outer_allocator_type` 型の格納されているオブジェクトへの参照を取得します。|
@@ -109,17 +110,17 @@ class scoped_allocator_adaptor;
 
 |演算子|説明|
 |-|-|
-|[演算子=](#op_as)||
-|[演算子==](#op_eq_eq)||
-|[演算子!=](#op_noeq)||
+|[operator =](#op_as)||
+|[operator = =](#op_eq_eq)||
+|[operator! =](#op_noeq)||
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-**ヘッダー:** \<scoped_allocator>
+**ヘッダー:**\<scoped_allocator>
 
 **名前空間:** std
 
-## <a name="scoped_allocator_adaptorallocate"></a><a name="allocate"></a>scoped_allocator_adaptor:割り当て
+## <a name="scoped_allocator_adaptorallocate"></a><a name="allocate"></a> scoped_allocator_adaptor:: allocate
 
 `Outer` アロケーターを使用してメモリを割り当てます。
 
@@ -129,17 +130,17 @@ pointer allocate(size_type count);pointer allocate(size_type count, const_void_p
 
 ### <a name="parameters"></a>パラメーター
 
-*カウント*\
+*数*\
 十分な記憶域を割り当てる要素の数。
 
-*ヒント*\
+*int*\
 要求の前に割り当てられたオブジェクトのアドレスを見つけることによって、アロケーター オブジェクトを支援できるポインター。
 
 ### <a name="return-value"></a>戻り値
 
 最初のメンバー関数は `Outer_traits::allocate(outer_allocator(), count)` を返します。 2 番目のメンバー関数は `Outer_traits::allocate(outer_allocator(), count, hint)` を返します。
 
-## <a name="scoped_allocator_adaptorconstruct"></a><a name="construct"></a>scoped_allocator_adaptor::コンストラクト
+## <a name="scoped_allocator_adaptorconstruct"></a><a name="construct"></a> scoped_allocator_adaptor:: construct
 
 オブジェクトを構築します。
 
@@ -168,16 +169,16 @@ void construct(pair<Ty1, Ty2>* ptr, pair<Uy1, Uy2>&& right);
 
 ### <a name="parameters"></a>パラメーター
 
-*Ptr*\
+*ポインター*\
 オブジェクトが構築されるメモリの場所へのポインター。
 
-*Args*\
+*value*\
 引数リスト。
 
 *まずは*\
 ペアの最初の型のオブジェクト。
 
-*2 番目*\
+*second*\
 ペアの 2 番目の型のオブジェクト。
 
 *そうです*\
@@ -185,7 +186,7 @@ void construct(pair<Ty1, Ty2>* ptr, pair<Uy1, Uy2>&& right);
 
 ### <a name="remarks"></a>解説
 
-最初のメソッドは、 を`Outermost_traits::construct(OUTERMOST(*this), ptr, xargs...)``xargs...`呼び出すことによって*ptr*でオブジェクトを構築します。
+最初のメソッドは、を呼び出して、オブジェクトを *ptr* に構築し `Outermost_traits::construct(OUTERMOST(*this), ptr, xargs...)` `xargs...` ます。は次のいずれかです。
 
 - `uses_allocator<Ty, inner_allocator_type>` が false を保持する場合、`xargs...` は `args...` です。
 
@@ -193,7 +194,7 @@ void construct(pair<Ty1, Ty2>* ptr, pair<Uy1, Uy2>&& right);
 
 - `uses_allocator<Ty, inner_allocator_type>` が true を保持し、`is_constructible<Ty, args..., inner_allocator()>` が true を保持する場合、`xargs...` は `args..., inner_allocator()` です。
 
-2 番目のメソッドは、 を呼び出`Outermost_traits::construct(OUTERMOST(*this), &ptr->first, xargs...)`すことによって*ptr*でペア オブジェクトを構築します`Outermost_traits::construct(OUTERMOST(*this), &ptr->second, xargs...)``xargs...``second...`。 `xargs...` `first...`
+2番目のメソッドは、を呼び出すことによって、 *ptr* にペアオブジェクトを構築します。この場合、 `Outermost_traits::construct(OUTERMOST(*this), &ptr->first, xargs...)` `xargs...` は上のリストのように変更され、は `first...` 上のリストのように `Outermost_traits::construct(OUTERMOST(*this), &ptr->second, xargs...)` `xargs...` 変更され `second...` ます。
 
 3 番目のメソッドの動作は `this->construct(ptr, piecewise_construct, tuple<>, tuple<>)` と同じです。
 
@@ -203,7 +204,7 @@ void construct(pair<Ty1, Ty2>* ptr, pair<Uy1, Uy2>&& right);
 
 6 番目のメソッドの動作は `this->construct(ptr, piecewise_construct, forward_as_tuple(std::forward<Uy1>(right.first), forward_as_tuple(std::forward<Uy2>(right.second))` と同じです。
 
-## <a name="scoped_allocator_adaptordeallocate"></a><a name="deallocate"></a>scoped_allocator_adaptor::d割り当て
+## <a name="scoped_allocator_adaptordeallocate"></a><a name="deallocate"></a> scoped_allocator_adaptor::d eallocate
 
 外側のアロケーターを使用してオブジェクトの割り当てを解除します。
 
@@ -213,13 +214,13 @@ void deallocate(pointer ptr, size_type count);
 
 ### <a name="parameters"></a>パラメーター
 
-*Ptr*\
+*ポインター*\
 割り当てを解除されるオブジェクトの開始位置へのポインター。
 
-*カウント*\
+*数*\
 割り当てを解除するオブジェクトの数。
 
-## <a name="scoped_allocator_adaptordestroy"></a><a name="destroy"></a>scoped_allocator_adaptor::dエストロイ
+## <a name="scoped_allocator_adaptordestroy"></a><a name="destroy"></a> scoped_allocator_adaptor::d estroy
 
 指定したオブジェクトを破棄します。
 
@@ -230,14 +231,14 @@ void destroy(Ty* ptr)
 
 ### <a name="parameters"></a>パラメーター
 
-*Ptr*\
+*ポインター*\
 破棄するオブジェクトへのポインター。
 
 ### <a name="return-value"></a>戻り値
 
 `Outermost_traits::destroy(OUTERMOST(*this), ptr)`
 
-## <a name="scoped_allocator_adaptorinner_allocator"></a><a name="inner_allocator"></a>scoped_allocator_adaptor::inner_allocator
+## <a name="scoped_allocator_adaptorinner_allocator"></a><a name="inner_allocator"></a> scoped_allocator_adaptor:: inner_allocator
 
 `inner_allocator_type` 型の格納されているオブジェクトへの参照を取得します。
 
@@ -250,7 +251,7 @@ const inner_allocator_type& inner_allocator() const noexcept;
 
 `inner_allocator_type` 型の格納されているオブジェクトへの参照。
 
-## <a name="scoped_allocator_adaptormax_size"></a><a name="max_size"></a>scoped_allocator_adaptor::max_size
+## <a name="scoped_allocator_adaptormax_size"></a><a name="max_size"></a> scoped_allocator_adaptor:: max_size
 
 外側のアロケーターが割り当てることができるオブジェクトの最大数を指定します。
 
@@ -262,14 +263,14 @@ size_type max_size();
 
 `Outer_traits::max_size(outer_allocator())`
 
-## <a name="a-nameop_as--scoped_allocator_adaptoroperator"></a><a name="op_as">scoped_allocator_adaptor::演算子=
+## <a name="a-nameop_as--scoped_allocator_adaptoroperator"></a><a name="op_as">  scoped_allocator_adaptor:: operator =
 
 ```cpp
 scoped_allocator_adaptor& operator=(const scoped_allocator_adaptor&) = default;
 scoped_allocator_adaptor& operator=(scoped_allocator_adaptor&&) = default;
 ```
 
-## <a name="a-nameop_eq_eq--scoped_allocator_adaptoroperator"></a><a name="op_eq_eq">scoped_allocator_adaptor::演算子==
+## <a name="a-nameop_eq_eq--scoped_allocator_adaptoroperator"></a><a name="op_eq_eq">  scoped_allocator_adaptor:: operator = =
 
 ```cpp
 template <class OuterA1, class OuterA2, class... InnerAllocs>
@@ -277,7 +278,7 @@ bool operator==(const scoped_allocator_adaptor<OuterA1, InnerAllocs...>& a,
 const scoped_allocator_adaptor<OuterA2, InnerAllocs...>& b) noexcept;
 ```
 
-## <a name="a-nameop_noeq--scoped_allocator_adaptoroperator"></a><a name="op_noeq">scoped_allocator_adaptor::演算子!=
+## <a name="a-nameop_noeq--scoped_allocator_adaptoroperator"></a><a name="op_noeq">  scoped_allocator_adaptor:: operator! =
 
 ```cpp
 template <class OuterA1, class OuterA2, class... InnerAllocs>
@@ -285,7 +286,7 @@ bool operator!=(const scoped_allocator_adaptor<OuterA1, InnerAllocs...>& a,
 const scoped_allocator_adaptor<OuterA2, InnerAllocs...>& b) noexcept;
 ```
 
-## <a name="scoped_allocator_adaptorouter_allocator"></a><a name="outer_allocator"></a>scoped_allocator_adaptor::outer_allocator
+## <a name="scoped_allocator_adaptorouter_allocator"></a><a name="outer_allocator"></a> scoped_allocator_adaptor:: outer_allocator
 
 `outer_allocator_type` 型の格納されているオブジェクトへの参照を取得します。
 
@@ -298,15 +299,15 @@ const outer_allocator_type& outer_allocator() const noexcept;
 
 `outer_allocator_type` 型の格納されているオブジェクトへの参照。
 
-## <a name="scoped_allocator_adaptorrebind-struct"></a><a name="rebind_struct"></a>scoped_allocator_adaptor::構造体の再バインド
+## <a name="scoped_allocator_adaptorrebind-struct"></a><a name="rebind_struct"></a> scoped_allocator_adaptor:: Struct 構造体
 
 `scoped_allocator_adaptor\<Other, Inner...>` のシノニムとして `Outer::rebind\<Other>::other` 型を定義します。
 
-構造体の再バインド { typedef Other_traits::他の>Other_allocを再バインド\<> Other_alloc scoped_allocator_adaptor\<します。
+構造体の再バインド {typedef Other_traits:: 再バインド \<Other> Other_alloc; typedef scoped_allocator_adaptor \<Other_alloc, Inner...> Other;};
 
-## <a name="scoped_allocator_adaptorscoped_allocator_adaptor-constructor"></a><a name="scoped_allocator_adaptor"></a>scoped_allocator_adaptor::scoped_allocator_adaptorコンストラクタ
+## <a name="scoped_allocator_adaptorscoped_allocator_adaptor-constructor"></a><a name="scoped_allocator_adaptor"></a> scoped_allocator_adaptor:: scoped_allocator_adaptor コンストラクター
 
-`scoped_allocator_adaptor` オブジェクトを構築します。 また、デストラクターが含まれています。
+`scoped_allocator_adaptor` オブジェクトを構築します。 には、デストラクターも含まれています。
 
 ```cpp
 scoped_allocator_adaptor();
@@ -330,17 +331,17 @@ scoped_allocator_adaptor(Outer2&& al,
 *そうです*\
 既存の `scoped_allocator_adaptor`。
 
-*アル*\
+*ウムアルクラ*\
 外側のアロケーターとして使用する既存のアロケーター。
 
-*残り*\
+*休息*\
 内側のアロケーターとして使用するアロケーターのリスト。
 
 ### <a name="remarks"></a>解説
 
-1 番目のコンストラクターは、格納されているアロケーター オブジェクトを既定で構築します。 次の 3 つのコンストラクターのそれぞれは、*右*の対応するオブジェクトから、格納されたアロケーター オブジェクトを構築します。 最後のコンストラクターは、引数リストの対応する引数から、格納されているアロケーター オブジェクトを構築します。
+1 番目のコンストラクターは、格納されているアロケーター オブジェクトを既定で構築します。 次の3つの各コンストラクターは、対応するオブジェクトから、格納されているアロケーターオブジェクトを *右側* に構築します。 最後のコンストラクターは、引数リストの対応する引数から、格納されているアロケーター オブジェクトを構築します。
 
-## <a name="scoped_allocator_adaptorselect_on_container_copy_construction"></a><a name="select_on_container_copy_construction"></a>scoped_allocator_adaptor::select_on_container_copy_construction
+## <a name="scoped_allocator_adaptorselect_on_container_copy_construction"></a><a name="select_on_container_copy_construction"></a> scoped_allocator_adaptor:: select_on_container_copy_construction
 
 対応するアロケーターごとに `select_on_container_copy_construction` を呼び出すことによって、格納されている各アロケーター オブジェクトが初期化された新しい `scoped_allocator_adaptor` オブジェクトを作成します。
 
@@ -350,7 +351,7 @@ scoped_allocator_adaptor select_on_container_copy_construction();
 
 ### <a name="return-value"></a>戻り値
 
-このメソッドは、実質的に `scoped_allocator_adaptor(Outer_traits::select_on_container_copy_construction(*this), inner_allocator().select_on_container_copy_construction())` を返します。 結果は、新しい`scoped_allocator_adaptor`オブジェクトであり、それぞれの格納されたアロケーター オブジェクト`al.select_on_container_copy_construction()`が、対応するアロケーター *al*を呼び出して初期化されます。
+このメソッドは、実質的に `scoped_allocator_adaptor(Outer_traits::select_on_container_copy_construction(*this), inner_allocator().select_on_container_copy_construction())` を返します。 結果は、 `scoped_allocator_adaptor` `al.select_on_container_copy_construction()` 対応するアロケーター *al* のを呼び出すことによって、格納されている各アロケーターオブジェクトが初期化された新しいオブジェクトになります。
 
 ## <a name="see-also"></a>関連項目
 

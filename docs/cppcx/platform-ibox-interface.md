@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: Platform:: IBox インターフェイス'
 title: Platform::IBox インターフェイス
 ms.date: 12/30/2016
 ms.topic: reference
@@ -6,12 +7,12 @@ f1_keywords:
 - VCCORLIB/Namespace not found::Platform
 - VCCORLIB/Namespace not found::Platform::Value
 ms.assetid: 774df45d-f8a7-45a3-ae24-eecc3c681040
-ms.openlocfilehash: 24e70ad646e2673869b135e8cc7657910b9b499c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: abd1b9107fe1d472135f2b2addc7fa4b0f88ecfd
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62383296"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97195178"
 ---
 # <a name="platformibox-interface"></a>Platform::IBox インターフェイス
 
@@ -29,23 +30,23 @@ interface class IBox
 *T*<br/>
 ボックス化された値の型。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-`IBox<T>` インターフェイスは、「 [値クラスと構造体 (C++/CX)](../cppcx/value-classes-and-structs-c-cx.md)」で説明されているように、主に内部的に使用され、null 許容値型を表します。 インターフェイスは、 `Object^`型のパラメーターを受け取る C++ のメソッドに渡される値の型をボックス化するためにも使用されます。 入力パラメーターは `IBox<SomeValueType>`として明示的に宣言できます。 例については、次を参照してください。[ボックス化](../cppcx/boxing-c-cx.md)します。
+`IBox<T>` インターフェイスは、「 [値クラスと構造体 (C++/CX)](../cppcx/value-classes-and-structs-c-cx.md)」で説明されているように、主に内部的に使用され、null 許容値型を表します。 インターフェイスは、 `Object^`型のパラメーターを受け取る C++ のメソッドに渡される値の型をボックス化するためにも使用されます。 入力パラメーターは `IBox<SomeValueType>`として明示的に宣言できます。 例については、「 [ボックス](../cppcx/boxing-c-cx.md)化」を参照してください。
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 ### <a name="members"></a>メンバー
 
 `Platform::IBox` インターフェイスは [Platform::IValueType](../cppcx/platform-ivaluetype-interface.md) インターフェイスから継承されます。 `IBox` には、次に示すメンバーがあります。
 
-**Properties**
+**プロパティ**
 
-|メソッド|説明|
+|Method|説明|
 |------------|-----------------|
-|[[値]](#value)|以前にこの `IBox` インスタンスに格納されていたことがあり、ボックス化が解除されている値を返します。|
+|[Value](#value)|以前にこの `IBox` インスタンスに格納されていたことがあり、ボックス化が解除されている値を返します。|
 
-## <a name="value"></a> Ibox::value プロパティ
+## <a name="iboxvalue-property"></a><a name="value"></a> IBox:: Value プロパティ
 
 このオブジェクトに元から格納されていた値を返します。
 
@@ -64,9 +65,9 @@ property T Value {T get();}
 
 このオブジェクトに元から格納されていた値を返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-例については、次を参照してください。[ボックス化](../cppcx/boxing-c-cx.md)します。
+例については、「 [ボックス](../cppcx/boxing-c-cx.md)化」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

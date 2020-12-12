@@ -1,25 +1,26 @@
 ---
+description: '詳細情報: 省略記号と可変個引数のテンプレート'
 title: 省略記号と可変個引数のテンプレート
 ms.date: 11/04/2016
 ms.assetid: f20967d9-c967-4fd2-b902-2bb1d5ed87e3
-ms.openlocfilehash: e916dac40355f4397ef4846c0edf568c60b7d3dd
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 37cb2e02f818cc5d4db8954a348fc749a477b7d4
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87221628"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97195465"
 ---
 # <a name="ellipsis-and-variadic-templates"></a>省略記号と可変個引数のテンプレート
 
 ここでは、C++ の可変個引数テンプレートを使用して省略記号 (`...`) を指定する方法を示します。 省略記号は、C および C++ で多くの用途に使用されてきました。 たとえば、関数の可変個引数リストなどです。 C ランタイム ライブラリの `printf()` 関数は、最も一般的な例の 1 つです。
 
-*可変個引数テンプレート*は、任意の数の引数をサポートするクラスまたは関数テンプレートです。 この機構はクラス テンプレートと関数テンプレートの両方に適用でき、それによって広範なタイプ セーフと非自明の機能や柔軟性が提供されるため、C++ ライブラリの開発者に特に役立ちます。
+*可変個引数テンプレート* は、任意の数の引数をサポートするクラスまたは関数テンプレートです。 この機構はクラス テンプレートと関数テンプレートの両方に適用でき、それによって広範なタイプ セーフと非自明の機能や柔軟性が提供されるため、C++ ライブラリの開発者に特に役立ちます。
 
 ## <a name="syntax"></a>構文
 
-可変個引数テンプレートでは、省略記号が 2 とおりの方法で使用されます。 パラメーター名の左側には、パラメーター*パック*が示されます。パラメーター名の右側には、パラメーターパックが個別の名前で展開されます。
+可変個引数テンプレートでは、省略記号が 2 とおりの方法で使用されます。 パラメーター名の左側には、パラメーター *パック* が示されます。パラメーター名の右側には、パラメーターパックが個別の名前で展開されます。
 
-*可変個引数テンプレートクラス*定義の構文の基本的な例を次に示します。
+*可変個引数テンプレートクラス* 定義の構文の基本的な例を次に示します。
 
 ```cpp
 template<typename... Arguments> class classname;
@@ -39,7 +40,7 @@ template<typename ... Arguments> class classname;
 
 この記事では、最初の例に示されている規則が使用されていることに注意してください (省略記号はに関連付けられてい **`typename`** ます)。
 
-前の例では、*引数*はパラメーターパックです。 `classname` クラスには、次の例のように、可変個の引数を指定できます。
+前の例では、 *引数* はパラメーターパックです。 `classname` クラスには、次の例のように、可変個の引数を指定できます。
 
 ```cpp
 template<typename... Arguments> class vtclass;
@@ -56,13 +57,13 @@ vtclass<long, std::vector<int>, std::string> vtinstance4;
 template <typename First, typename... Rest> class classname;
 ```
 
-*可変個引数 template 関数*の構文の基本的な例を次に示します。
+*可変個引数 template 関数* の構文の基本的な例を次に示します。
 
 ```cpp
 template <typename... Arguments> returntype functionname(Arguments... args);
 ```
 
-次のセクション「**可変個引数テンプレートについ**て」で説明しているように、*引数*parameter pack が使用できるように展開されます。
+次のセクション「**可変個引数テンプレートについ** て」で説明しているように、*引数* parameter pack が使用できるように展開されます。
 
 可変個引数テンプレート関数の構文は、他の形式を使用することもできます。いくつかの例を次に示します。
 

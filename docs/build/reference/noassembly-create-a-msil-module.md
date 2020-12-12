@@ -1,4 +1,5 @@
 ---
+description: 詳細情報:/NOASSEMBLY (MSIL モジュールの作成)
 title: /NOASSEMBLY (MSIL モジュールの作成)
 ms.date: 11/04/2016
 f1_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - NOASSEMBLY linker option
 - assemblies [C++], not creating an assembly
 ms.assetid: 3cea4e70-f451-4395-a626-1930b1b127fe
-ms.openlocfilehash: 3350aa10dc7ae3b6f584394c01644c1af2abd2b4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5eb63abf4d38b97f96a9f08ebb629bda1a89482d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62320553"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97196725"
 ---
 # <a name="noassembly-create-a-msil-module"></a>/NOASSEMBLY (MSIL モジュールの作成)
 
@@ -24,13 +25,13 @@ ms.locfileid: "62320553"
 /NOASSEMBLY
 ```
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-/NOASSEMBLY オプションを使用すると、リンカーは、.NET Framework アセンブリなしの現在の出力ファイルのイメージを作成します。 アセンブリ マニフェストのない MSIL 出力ファイルには、モジュールは呼び出されます。
+/NOASSEMBLY オプションは、.NET Framework アセンブリなしで現在の出力ファイルのイメージを作成するようにリンカーを設定します。 アセンブリマニフェストのない MSIL 出力ファイルは、モジュールと呼ばれます。
 
-既定では、アセンブリが作成されます。 使用することも、 [/LN (MSIL モジュールの作成)](ln-create-msil-module.md)コンパイラ オプション、モジュールを作成します。
+既定では、アセンブリが作成されます。 また、 [/LN (MSIL モジュールの作成)](ln-create-msil-module.md) コンパイラオプションを使用してモジュールを作成することもできます。
 
-アセンブリの生成に影響するその他のリンカー オプションがあります。
+アセンブリの生成に影響を与える他のリンカーオプションは次のとおりです。
 
 - [/ASSEMBLYDEBUG](assemblydebug-add-debuggableattribute.md)
 
@@ -48,13 +49,13 @@ ms.locfileid: "62320553"
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのリンカー オプションを設定するには
 
-1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。 [Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)します。
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、[Visual Studio での C++ コンパイラとビルド プロパティの設定](../working-with-project-properties.md)に関するページを参照してください。
 
-1. をクリックして、**リンカー**フォルダー。
+1. **[リンカー]** フォルダーをクリックします。
 
-1. をクリックして、**詳細**プロパティ ページ。
+1. [ **詳細設定** ] プロパティページをクリックします。
 
-1. 変更、**アセンブリの生成を無効にする**プロパティ。
+1. [ **アセンブリ生成をオフにする** ] プロパティを変更します。
 
 ### <a name="to-set-this-linker-option-programmatically"></a>このリンカーをコードから設定するには
 

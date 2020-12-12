@@ -1,16 +1,17 @@
 ---
+description: 詳細については、「 &lt; scoped_allocator 演算子」を参照してください。 &gt;
 title: '&lt;scoped_allocator&gt; 演算子'
 ms.date: 11/04/2016
 f1_keywords:
 - scoped_allocator/std::operator!=
 - scoped_allocator/std::operator==
 ms.assetid: 4dfe0805-cc6e-479f-887f-a1c164f73837
-ms.openlocfilehash: 907772069c192b3ef75c7366e079b1da1dd36f8d
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 2f32a42ded9c73cbc2608f3e39f3566deee20e83
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88846252"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97197140"
 ---
 # <a name="ltscoped_allocatorgt-operators"></a>&lt;scoped_allocator&gt; 演算子
 

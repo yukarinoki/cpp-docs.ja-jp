@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: CD2DPointF クラス'
 title: CD2DPointF クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - CD2DPointF [MFC], CD2DPointF
 ms.assetid: 30f72083-1c8a-4f50-adb2-72dbbe3522d4
-ms.openlocfilehash: 5d66c31289f9e17df99df4681cff1d5cf6a0ec86
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 0f63aa35acb33504c96316b67ecc4f885f4f0247
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81369160"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97193358"
 ---
 # <a name="cd2dpointf-class"></a>CD2DPointF クラス
 
@@ -31,13 +32,13 @@ class CD2DPointF : public D2D1_POINT_2F;
 
 |名前|説明|
 |----------|-----------------|
-|[CD2Dポイントフ::CD2Dポイントフ](#cd2dpointf)|オーバーロードされます。 オブジェクトから`D2D1_POINT_2F`オブジェクト`CD2DPointF`を構築します。|
+|[CD2DPointF:: CD2DPointF](#cd2dpointf)|オーバーロードされます。 オブジェクト `CD2DPointF` からオブジェクトを構築 `D2D1_POINT_2F` します。|
 
 ### <a name="public-operators"></a>パブリック演算子
 
 |名前|説明|
 |----------|-----------------|
-|[CD2DPointF::オペレーターCポイント](#operator_cpoint)|オブジェクトに`CD2DPointF``CPoint`変換します。|
+|[CD2DPointF:: operator CPoint](#operator_cpoint)|`CD2DPointF`をオブジェクトに変換 `CPoint` します。|
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -45,11 +46,11 @@ class CD2DPointF : public D2D1_POINT_2F;
 
 `CD2DPointF`
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-**ヘッダー:** afxrendertarget.h
+**ヘッダー:** afxrendertarget
 
-## <a name="cd2dpointfcd2dpointf"></a><a name="cd2dpointf"></a>CD2Dポイントフ::CD2Dポイントフ
+## <a name="cd2dpointfcd2dpointf"></a><a name="cd2dpointf"></a> CD2DPointF:: CD2DPointF
 
 CPoint オブジェクトから CD2DPointF オブジェクトを構築します。
 
@@ -62,16 +63,16 @@ CD2DPointF(FLOAT fX = 0., FLOAT fY = 0.);
 
 ### <a name="parameters"></a>パラメーター
 
-*Pt*<br/>
-ソース ポイント
+*pt*<br/>
+ソースポイント
 
-*Fx*<br/>
+*fX*<br/>
 ソース X
 
-*年度*<br/>
+*会計*<br/>
 ソース Y
 
-## <a name="cd2dpointfoperator-cpoint"></a><a name="operator_cpoint"></a>CD2DPointF::オペレーターCポイント
+## <a name="cd2dpointfoperator-cpoint"></a><a name="operator_cpoint"></a> CD2DPointF:: operator CPoint
 
 CD2DPointF を CPoint オブジェクトに変換します。
 
@@ -81,7 +82,7 @@ operator CPoint();
 
 ### <a name="return-value"></a>戻り値
 
-D2D 点の現在の値。
+D2D point の現在の値。
 
 ## <a name="see-also"></a>関連項目
 

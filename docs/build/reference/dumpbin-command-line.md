@@ -1,15 +1,16 @@
 ---
+description: '詳細情報: DUMPBIN コマンドライン'
 title: DUMPBIN コマンド ライン
 ms.date: 11/04/2016
 helpviewer_keywords:
 - DUMPBIN program, command line
 ms.assetid: e6ad17d3-965d-41aa-9dfd-75bb073718d4
-ms.openlocfilehash: 4f663a74fd57f52aa559270d61df4a130cf7e86f
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 96b4216307201613c82a4671b9eb10bddab18e90
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79440062"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97192682"
 ---
 # <a name="dumpbin-command-line"></a>DUMPBIN コマンド ライン
 
@@ -23,9 +24,9 @@ DUMPBIN [options] files...
 
 オプションを指定せずに、ファイルで DUMPBIN を実行すると、DUMPBIN によって概要出力が表示されます。
 
-その他のコマンドライン入力を使用せずにコマンド `dumpbin` を入力すると、DUMPBIN はそのオプションを要約する usage ステートメントを表示します。
+他のコマンドライン入力を使用せずにコマンドを入力すると `dumpbin` 、DUMPBIN には、そのオプションを要約する usage ステートメントが表示されます。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[追加の MSVC ビルド ツール](c-cpp-build-tools.md)<br/>
+[その他の MSVC ビルドツール](c-cpp-build-tools.md)<br/>
 [DUMPBIN リファレンス](dumpbin-reference.md)

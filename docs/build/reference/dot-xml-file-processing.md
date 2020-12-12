@@ -1,15 +1,16 @@
 ---
+description: 詳細については、「」を参照してください。Xml ファイルの処理
 title: .Xml ファイルの処理
 ms.date: 11/04/2016
 helpviewer_keywords:
 - XML documentation, processing XML file
 ms.assetid: e70fdeae-80ac-4872-ab24-771c5635cfbf
-ms.openlocfilehash: 1a0d231a066209307041681232cc3410210d4d02
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ded4551adcc4bec4aef27fe38f47470065ea9ef4
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62293564"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97192695"
 ---
 # <a name="xml-file-processing"></a>.Xml ファイルの処理
 
@@ -46,19 +47,19 @@ ms.locfileid: "62293564"
 
   - ELEMENT_TYPE_BYREF は、修飾される型に続けて '\@' と表されます。
 
-  - ELEMENT_TYPE_PINNED は、修飾される型に続けて '^' と表されます。 MSVC コンパイラを使用して、この生成されません。
+  - ELEMENT_TYPE_PINNED は、修飾される型に続けて '^' と表されます。 MSVC コンパイラはこれを生成しません。
 
-  - ELEMENT_TYPE_CMOD_REQ は、修飾される型に続けて "&#124;" と修飾子クラスの完全修飾名で表されます。 MSVC コンパイラを使用して、この生成されません。
+  - ELEMENT_TYPE_CMOD_REQ は、修飾される型に続けて "&#124;" と修飾子クラスの完全修飾名で表されます。 MSVC コンパイラはこれを生成しません。
 
   - ELEMENT_TYPE_CMOD_OPT は、修飾される型に続けて "!" と修飾子クラスの完全修飾名で表されます。
 
   - ELEMENT_TYPE_SZARRAY は、配列の要素型に続けて "[]" と表されます。
 
-  - ELEMENT_TYPE_GENERICARRAY は、配列の要素型に続けて "[?]" と表されます。 MSVC コンパイラを使用して、この生成されません。
+  - ELEMENT_TYPE_GENERICARRAY は、配列の要素型に続けて "[?]" と表されます。 MSVC コンパイラはこれを生成しません。
 
   - ELEMENT_TYPE_ARRAY は、[*lowerbound*:`size`,*lowerbound*:`size`] の形式で表されます。ここで、コンマの個数はランク -1 個であり、各次元の下限とサイズは明らかな場合は、10 進数で表されます。 下限またはサイズの指定がない場合は省略されます。 特定の次元で下限およびサイズが省略されている場合は、':' も省略されます。 たとえば、ある 2 次元配列の下限が 1 で、サイズの指定がない場合は、[1:,1:] と表されます。
 
-  - ELEMENT_TYPE_FNPTR は、"=FUNC:`type`(*signature*)" と表されます。ここで、`type` は戻り値の型であり、*signature* はメソッドの引数です。 引数がない場合、かっこは省略されます。 MSVC コンパイラを使用して、この生成されません。
+  - ELEMENT_TYPE_FNPTR は、"=FUNC:`type`(*signature*)" と表されます。ここで、`type` は戻り値の型であり、*signature* はメソッドの引数です。 引数がない場合、かっこは省略されます。 MSVC コンパイラはこれを生成しません。
 
   次に示すシグネチャ コンポーネントは、オーバーロードされるメソッドの区別には使用されることがないため、表されません。
 
@@ -70,7 +71,7 @@ ms.locfileid: "62293564"
 
 - 変換演算子の場合のみ、上記のエンコードと同様に、メソッドの戻り値が "~" としてエンコードされ、それに続けて戻り値の型が表されます。
 
-- ジェネリック型では、型の名前の後に、バックチック、ジェネリック型パラメーターの数を示す数値が順に続きます。  例えば以下のようにします。
+- ジェネリック型では、型の名前の後に、バックチック、ジェネリック型パラメーターの数を示す数値が順に続きます。  たとえば、次のように入力します。
 
     ```xml
     <member name="T:MyClass`2">

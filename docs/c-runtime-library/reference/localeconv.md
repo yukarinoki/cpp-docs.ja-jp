@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: localeconv'
 title: localeconv
 ms.date: 4/2/2020
 api_name:
@@ -28,12 +29,12 @@ helpviewer_keywords:
 - localeconv function
 - locales, getting information on
 ms.assetid: 7ecdb1f2-88f5-4037-a0e7-c754ab003660
-ms.openlocfilehash: c4e1820ac412a0447c5059ecc92375275f7b2701
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 488a6e9dbc913f1102be3a53685dc68b38fb833b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87218638"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97195672"
 ---
 # <a name="localeconv"></a>localeconv
 
@@ -47,11 +48,11 @@ struct lconv *localeconv( void );
 
 ## <a name="return-value"></a>戻り値
 
-**localeconv**型の埋め込まれたオブジェクトへのポインターを返します、 [struct lconv](../../c-runtime-library/standard-types.md)です。 オブジェクトに含まれる値は、スレッドローカルストレージのロケール設定からコピーされ、その後**localeconv**への呼び出しによって上書きされる可能性があります。 このオブジェクトの値を変更しても、ロケールの設定は変更されません。 **LC_ALL**、 **LC_MONETARY**、または**LC_NUMERIC**の*カテゴリ*値を持つ[setlocale](setlocale-wsetlocale.md)を呼び出すと、構造体の内容が上書きされます。
+**localeconv** 型の埋め込まれたオブジェクトへのポインターを返します、 [struct lconv](../../c-runtime-library/standard-types.md)です。 オブジェクトに含まれる値は、スレッドローカルストレージのロケール設定からコピーされ、その後 **localeconv** への呼び出しによって上書きされる可能性があります。 このオブジェクトの値を変更しても、ロケールの設定は変更されません。 **LC_ALL**、 **LC_MONETARY**、または **LC_NUMERIC** の *カテゴリ* 値を持つ [setlocale](setlocale-wsetlocale.md)を呼び出すと、構造体の内容が上書きされます。
 
 ## <a name="remarks"></a>解説
 
-**Localeconv**関数は、現在のロケールの数値書式設定に関する詳細情報を取得します。 この情報は、**lconv** 型の構造体で格納されます。 **lconv** 構造体は、LOCALE.H で定義され、次のメンバーが含まれます。
+**Localeconv** 関数は、現在のロケールの数値書式設定に関する詳細情報を取得します。 この情報は、**lconv** 型の構造体で格納されます。 **lconv** 構造体は、LOCALE.H で定義され、次のメンバーが含まれます。
 
 |フィールド|意味|
 |-|-|
@@ -74,11 +75,11 @@ n_sep_by_space|書式化された負の通貨数量の値と通貨記号をス�
 p_sign_posn|書式化された負でない通貨数量での正符号の位置。
 n_sign_posn|書式化された負の通貨数量での正符号の位置。
 
-指定されている場合を除き、とのバージョンを持つ**lconv**構造体のメンバー `char *` は、 `wchar_t *` 文字列へのポインターです。 **""** (の場合は**L ""** ) のいずれか **`wchar_t`** <strong>\*</strong> がゼロの長さであるか、現在のロケールでサポートされていません。 **Decimal_point**と **_W_decimal_point**は常にサポートされ、長さは0以外であることに注意してください。
+指定されている場合を除き、とのバージョンを持つ **lconv** 構造体のメンバー `char *` は、 `wchar_t *` 文字列へのポインターです。 **""** (の場合は **L ""** ) のいずれか **`wchar_t`** <strong>\*</strong> がゼロの長さであるか、現在のロケールでサポートされていません。 **Decimal_point** と **_W_decimal_point** は常にサポートされ、長さは0以外であることに注意してください。
 
 **`char`** 構造体のメンバーは、文字ではなく、小さい負以外の数値です。 そのいずれかが **CHAR_MAX** に相当する場合は、現在のロケールではサポートされていません。
 
-**Grouping**と**mon_grouping**の値は、次の規則に従って解釈されます。
+**Grouping** と **mon_grouping** の値は、次の規則に従って解釈されます。
 
 - **CHAR_MAX** -これ以上グループ化を実行しません。
 

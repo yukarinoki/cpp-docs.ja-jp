@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「Platform::D etails Namespace」を参照してください。
 title: Platform::Details 名前空間
 ms.date: 12/30/2016
 ms.topic: reference
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::Details Namespace
 ms.assetid: e13c1f93-c823-4f0f-a3ee-2429bfd184db
-ms.openlocfilehash: 05677a08b7c63ddbe2196da946d62c00004d8942
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 693dea2aa366868fe6a118baf5c57ac58b338cf8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62387644"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97195373"
 ---
 # <a name="platformdetails-namespace"></a>Platform::Details 名前空間
 
@@ -30,31 +31,31 @@ namespace Platform {
 
 この名前空間は内部使用のためのものですが、ブラウザーでこの名前空間の次のメンバーを表示できます。
 
-|名前|コメント|
+|名前|注記|
 |----------|------------|
-|Console|クラス。 単体テストの出力を表示します。|
+|コンソール|クラス。 単体テストの出力を表示します。|
 |_GUID|構造体|
-|Heap|クラス|
+|ヒープ|クラス|
 |HeapAllocationTrackingLevel|列挙|
-|HeapEntryHandler|Delegate|
-|IActivationFactory|Interface|
-|IAgileObject|Interface|
-|IClassFactory|Interface|
-|IEquatable|Interface|
+|HeapEntryHandler|代理人|
+|IActivationFactory|インターフェイス|
+|IAgileObject|インターフェイス|
+|IClassFactory|インターフェイス|
+|IEquatable|インターフェイス|
 |IPrintable|インターフェイス|
-|IWeakReference|Interface|
-|IWeakReferenceSource|Interface|
+|IWeakReference|インターフェイス|
+|IWeakReferenceSource|インターフェイス|
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
 `Platform`
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
-**メタデータ:** platform.winmd
+**メタデータ:** platform. winmd
 
 **名前空間:** Platform::Details
 
 ## <a name="see-also"></a>関連項目
 
-[プラットフォーム Namespace](platform-namespace-c-cx.md)
+[Platform 名前空間](platform-namespace-c-cx.md)

@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: or_eq'
 title: or_eq
 ms.date: 11/04/2016
 api_location:
@@ -23,12 +24,12 @@ f1_keywords:
 helpviewer_keywords:
 - or_eq function
 ms.assetid: 1eb92464-ed58-40d8-a30e-f0a6aa2f4318
-ms.openlocfilehash: 3c651cb75fa7628918bc8b5ebbcd4b31f9b583df
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 94181c0f233da3c80023149e19082dadd0aeb211
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80170164"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97195581"
 ---
 # <a name="or_eq"></a>or_eq
 
@@ -71,6 +72,6 @@ int main( )
 3
 ```
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-**ヘッダー:** \<iso646 >
+**ヘッダー:**\<iso646.h>

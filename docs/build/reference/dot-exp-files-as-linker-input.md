@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「」を参照してください。リンカー入力としての Exp ファイル
 title: リンカー入力としての .exp ファイル
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -11,18 +12,18 @@ helpviewer_keywords:
 - .exp files [C++]
 - EXP files
 ms.assetid: 399f5636-0a4d-462e-b500-5f5b9ae5ad22
-ms.openlocfilehash: 0f2f5c22752d6d938700228fc208c21b8f32cc7b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 03104d6b4265484e54373484b6c9bbdabf0e1afc
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62293668"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97192812"
 ---
 # <a name="exp-files-as-linker-input"></a>リンカー入力としての .exp ファイル
 
-エクスポート (.exp) ファイルには、エクスポートされた関数とデータ項目に関する情報が含まれます。 LIB、インポート ライブラリを作成する場合も、.exp ファイルを作成します。 .Exp ファイルにエクスポートし、直接または間接的に別のプログラムからインポートするプログラムをリンクするときに使用します。 .Exp ファイルとリンクする場合のリンクが LIB 既に作成されている 1 つと想定しているため、インポート ライブラリを生成してされません。 .Exp ファイルとライブラリのインポートに関する詳細については、次を参照してください。[ライブラリのインポートとエクスポート ファイル](working-with-import-libraries-and-export-files.md)します。
+エクスポート (.exp) ファイルには、エクスポートされた関数とデータ項目に関する情報が含まれています。 LIB によってインポートライブラリが作成されると、.exp ファイルも作成されます。 ファイルを直接または間接的に別のプログラムからエクスポートしてインポートするプログラムをリンクする場合は、.exp ファイルを使用します。 .Exp ファイルとリンクする場合は、LIB で既に作成されているものと見なされるため、インポートライブラリは作成されません。 .Exp ファイルとインポートライブラリの詳細については、「 [インポートライブラリの操作」および「ファイルのエクスポート](working-with-import-libraries-and-export-files.md)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 
-[LINK の入力ファイル](link-input-files.md)<br/>
+[リンク入力ファイル](link-input-files.md)<br/>
 [MSVC リンカー オプション](linker-options.md)

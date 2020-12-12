@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: DUMPBIN リファレンス'
 title: DUMPBIN リファレンス
 ms.date: 11/04/2016
 f1_keywords:
@@ -10,26 +11,26 @@ helpviewer_keywords:
 - COFF files, displaying information about
 - binary file dumper
 ms.assetid: 4bc06822-5330-44b4-8a3f-6180dfd41dfb
-ms.openlocfilehash: 6ad421b0c90ad55126f69a899503d6a73184979f
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8a931c20b3942a527cd457a6309c6f848a44cbfd
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81320534"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97192643"
 ---
 # <a name="dumpbin-reference"></a>DUMPBIN リファレンス
 
-マイクロソフト COFF バイナリ ファイル ダンプ (ダンプビン.EXE) は、共通オブジェクト ファイル形式 (COFF) バイナリ ファイルに関する情報を表示します。 DUMPBIN を使用して、COFF オブジェクト ファイル、COFF オブジェクトの標準ライブラリ、実行可能ファイル、およびダイナミック リンク ライブラリ (DLL) を調べることができます。
+Microsoft COFF バイナリファイルダンパー (DUMPBIN.EXE) では、COFF (Common Object File Format) バイナリファイルに関する情報が表示されます。 DUMPBIN を使用して、coff オブジェクトファイル、COFF オブジェクトの標準ライブラリ、実行可能ファイル、およびダイナミックリンクライブラリ (Dll) を調べることができます。
 
 > [!NOTE]
-> このツールは、Visual Studio コマンド プロンプトからのみ開始できます。 システム コマンド プロンプトやエクスプローラーからは開始できません。
+> このツールは、Visual Studio コマンドプロンプトからのみ開始できます。 システム コマンド プロンプトやエクスプローラーからは開始できません。
 
 [/GL](gl-whole-program-optimization.md) コンパイラ オプションで生成したファイルで使用できるのは、[/HEADERS](headers.md) DUMPBIN オプションだけです。
 
-- [ダンプビン コマンド ライン](dumpbin-command-line.md)
+- [DUMPBIN コマンド ライン](dumpbin-command-line.md)
 
-- [ダンプビン・オプション](dumpbin-options.md)
+- [DUMPBIN オプション](dumpbin-options.md)
 
 ## <a name="see-also"></a>関連項目
 
-[その他の MSVC ビルド ツール](c-cpp-build-tools.md)
+[その他の MSVC ビルドツール](c-cpp-build-tools.md)

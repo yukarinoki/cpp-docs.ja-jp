@@ -1,22 +1,23 @@
 ---
+description: 詳細については、「」を参照してください。リンカー入力としての Ilk ファイル
 title: リンカー入力としての .ilk ファイル
 ms.date: 11/04/2016
 helpviewer_keywords:
 - ILK files
 - .ilk files
 ms.assetid: 7324c104-9e5d-423d-b268-b59f92607bf2
-ms.openlocfilehash: 252c1cd6e17346954fce7ebf16134246da76ba57
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0aaa5fac19cedb8d94fc6dc9ab03a0f23fa0e49b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62293850"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97192734"
 ---
 # <a name="ilk-files-as-linker-input"></a>リンカー入力としての .ilk ファイル
 
-段階的にリンクする場合、リンクは、最初のインクリメンタル リンク中に作成された .ilk 状態ファイルを更新します。 このファイルが .exe ファイルまたは .dll ファイルとして同じ基本名と拡張子 .ilk が。 以降のインクリメンタル リンク時に、リンクは .ilk ファイルを更新します。 .Ilk ファイルが見つからない場合、リンクがフル リンクを実行し、新しい .ilk ファイルを作成します。 .Ilk ファイルが使用できない場合は、リンクはノンインクリメンタルのリンクを実行します。 詳細については、インクリメンタル リンクは、次を参照してください。、[インクリメンタル リンクを行う (/incremental)](incremental-link-incrementally.md)オプション。
+インクリメンタルリンクを行うと、最初の増分リンクの間に作成した .ilk ステータスファイルが更新されます。 このファイルの基本名は .exe ファイルまたは .dll ファイルと同じで、拡張子は .ilk です。 後続のインクリメンタルリンクの間に、リンクによって .ilk ファイルが更新されます。 .Ilk ファイルが見つからない場合、LINK はフルリンクを実行し、新しい .ilk ファイルを作成します。 .Ilk ファイルが使用できない場合、リンクはインクリメンタルリンクを実行します。 インクリメンタルリンクの詳細については、「 [インクリメンタル (/INCREMENTAL)](incremental-link-incrementally.md) オプションのリンク」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 
-[LINK の入力ファイル](link-input-files.md)<br/>
+[リンク入力ファイル](link-input-files.md)<br/>
 [MSVC リンカー オプション](linker-options.md)
