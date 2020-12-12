@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: 展開方法の選択'
 title: 配置方法の選択
 ms.date: 03/14/2019
 helpviewer_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - static linking [C++]
 - libraries [C++], application deployment issues
 ms.assetid: fd8eb956-f4a0-4ffb-b401-328c73e66986
-ms.openlocfilehash: 633b76458fdc24ef9ba551d8209c5c99720df37e
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 9b1ae942ff189bf9073059a55a195860bd3efc26
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81377403"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97327175"
 ---
 # <a name="choosing-a-deployment-method"></a>配置方法の選択
 
@@ -34,15 +35,15 @@ Visual Studio インストーラーでは、Visual C++ ライブラリが %windi
 
 ご利用の配置に、再頒布用にライセンスされた任意のバージョンの Visual C++ ライブラリを再頒布できます。 配置する方法は 3 つあります。
 
-- 再頒布可能パッケージを使用した集中配置。Visual C++ ライブラリが共有 DLL として %windir%\system32\\ にインストールされます  (このフォルダにインストールするには管理者権限が必要です)。対象のコンピュータにアプリケーションをインストールする前に、再頒布可能パッケージを実行するスクリプトまたはセットアップ プログラムを作成できます。 再頒布可能パッケージは、x86 プラットフォーム、x64 プラットフォーム、および ARM プラットフォーム (VCRedist_x86.exe、VCRedist_x64.exe、または VCRedist_arm.exe) で使用できます。 Visual Studio では、これらのパッケージは %ProgramFiles(x86)%\Microsoft Visual Studio `version`\VC\Redist\\`locale ID`\\ に含まれています。 [Microsoft ダウンロード センター](https://www.microsoft.com/download)からダウンロードすることもできます  (ダウンロード センターの検索ボックスを使用して、ご利用のアプリケーションと一致する "Visual C++ 再頒布可能パッケージ *Visual Studio バージョンと更新プログラム*" を検索します。 たとえば、Visual Studio 2015 更新プログラム 3 を使用してアプリケーションをビルドした場合は、「Visual C++ 再頒布可能パッケージ 2015 更新プログラム 3」を検索します。再頒布可能パッケージの使用方法については、「[チュートリアル: Visual C++ 再頒布可能パッケージを使用した Visual C++ アプリケーションの配置](deploying-visual-cpp-application-by-using-the-vcpp-redistributable-package.md)」を参照してください。
+- 再頒布可能パッケージを使用した集中配置。Visual C++ ライブラリが共有 DLL として %windir%\system32\\ にインストールされます  (このフォルダーにインストールするには、管理者権限が必要です)。ターゲットコンピューターにアプリケーションをインストールする前に、再頒布可能パッケージを実行するスクリプトまたはセットアッププログラムを作成できます。 再頒布可能パッケージは、x86 プラットフォーム、x64 プラットフォーム、および ARM プラットフォーム (VCRedist_x86.exe、VCRedist_x64.exe、または VCRedist_arm.exe) で使用できます。 Visual Studio では、これらのパッケージは %ProgramFiles(x86)%\Microsoft Visual Studio `version`\VC\Redist\\`locale ID`\\ に含まれています。 [Microsoft ダウンロード センター](https://www.microsoft.com/download)からダウンロードすることもできます  (ダウンロード センターの検索ボックスを使用して、ご利用のアプリケーションと一致する "Visual C++ 再頒布可能パッケージ *Visual Studio バージョンと更新プログラム*" を検索します。 たとえば、Visual Studio 2015 update 3 を使用してアプリケーションをビルドした場合は、"Visual C++ 再頒布可能パッケージ 2015 update 3" を検索します)。再頒布可能パッケージの使用方法の詳細については、「 [チュートリアル: Visual C++ 再頒布可能パッケージを使用した Visual C++ アプリケーションの配置](deploying-visual-cpp-application-by-using-the-vcpp-redistributable-package.md)」を参照してください。
 
-- マージ モジュールを使用した集中配置。各マージ モジュールによって特定の Visual C++ ライブラリが共有 DLL として %windir%\system32\\ にインストールされます  (このフォルダにインストールするには管理者権限が必要です)。マージ モジュールは、アプリケーションの .msi インストーラ ファイルの一部になります。 Visual C++ の再頒布可能なマージ モジュールは、Visual Studio の \Program Files (x86)\Common Files\Merge Modules\\ に含まれています。 詳細については、「[マージ モジュールを使用した再配布](redistributing-components-by-using-merge-modules.md)」を参照してください。
+- マージ モジュールを使用した集中配置。各マージ モジュールによって特定の Visual C++ ライブラリが共有 DLL として %windir%\system32\\ にインストールされます  (このフォルダーにインストールするには管理者権限が必要です)。マージモジュールは、アプリケーションの .msi インストーラーファイルの一部になります。 Visual C++ の再頒布可能なマージ モジュールは、Visual Studio の \Program Files (x86)\Common Files\Merge Modules\\ に含まれています。 詳細については、「[マージ モジュールを使用した再配布](redistributing-components-by-using-merge-modules.md)」を参照してください。
 
 - ローカル配置。Visual Studio インストール (通常は \Program Files (x86)\Microsoft Visual Studio `version`\VC\Redist\\`platform`\\`library`\) から特定の Visual C++ DLL をコピーし、ターゲット コンピューターで、アプリケーションの実行可能ファイルと同じフォルダーにインストールします。 この配置方法を使用すると、管理者権限を持たないユーザーによるインストール、またはネットワーク共有から実行できるアプリケーションに対するインストールが可能です。
 
 再頒布可能なマージ モジュールが使用されている配置で、管理者権限を持たないユーザーがインストールを実行すると、Visual C++ DLL はインストールされず、アプリケーションは実行されません。 また、ユーザー単位でのインストールを許可するマージ モジュールでビルドされたアプリケーション インストーラーでは、システムのすべてのユーザーに影響を及ぼす共有の場所にライブラリがインストールされます。 ローカル配置を使用すると、必要な Visual C++ DLL を特定のユーザーのアプリケーションのディレクトリに、他のユーザーに影響を与えることなくインストールできます。管理者権限も不要ですが、 これによりサービス性に問題が発生する可能性があるため、Visual C++ の再頒布可能 DLL のローカル配置はお勧めしません。
 
-Visual C++ ライブラリの配置が不適切だと、そのライブラリに依存するアプリケーションの実行時に実行時エラーが発生する可能性があります。 オペレーティング システムは、アプリケーションを読み込むときに、 [LoadLibraryEx](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibraryexw)で説明されている検索順序を使用します。
+Visual C++ ライブラリの配置が不適切だと、そのライブラリに依存するアプリケーションの実行時に実行時エラーが発生する可能性があります。 オペレーティングシステムは、アプリケーションを読み込むときに、 [LoadLibraryEx](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibraryexw)に記述されている検索順序を使用します。
 
 ## <a name="dynamic-linking-is-better-than-static-linking"></a>動的リンクを静的リンクに優先させる
 
@@ -51,5 +52,5 @@ Visual C++ ライブラリを再配布する場合、静的リンクは使用し
 ## <a name="see-also"></a>関連項目
 
 [デスクトップ アプリケーションの配置](deploying-native-desktop-applications-visual-cpp.md)<br>
-[クリックワンスのセキュリティと配置](/visualstudio/deployment/clickonce-security-and-deployment)<br>
-[展開の例](deployment-examples.md)
+[ClickOnce のセキュリティと配置](/visualstudio/deployment/clickonce-security-and-deployment)<br>
+[デプロイの例](deployment-examples.md)

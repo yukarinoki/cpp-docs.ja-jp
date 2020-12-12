@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「MFC でのダイアログボックスの操作」を参照してください。
 title: MFC でのダイアログ ボックスの操作
 ms.date: 09/27/2019
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - MFC dialog boxes [MFC], life cycle
 - life cycle of dialog boxes [MFC]
 ms.assetid: e16fd78e-238d-4f31-8c9d-8564f3953bd9
-ms.openlocfilehash: d365be21ef19a6779df649e9368fdc0cda4851df
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 5e88d34ab26f8abd24923aacafa02c3c62ec7f06
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84621449"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97327788"
 ---
 # <a name="working-with-dialog-boxes-in-mfc"></a>MFC でのダイアログ ボックスの操作
 
@@ -25,9 +26,9 @@ ms.locfileid: "84621449"
 
 ## <a name="what-do-you-want-to-know-more-about"></a>詳細については、次を参照してください。
 
-- [ダイアログボックスの作成と表示](creating-and-displaying-dialog-boxes.md)
+- [ダイアログ ボックスの作成と表示](creating-and-displaying-dialog-boxes.md)
 
-- [モーダルダイアログボックスの作成](creating-modal-dialog-boxes.md)
+- [モーダル ダイアログ ボックスの作成](creating-modal-dialog-boxes.md)
 
 - [モードレス ダイアログ ボックスの作成](creating-modeless-dialog-boxes.md)
 
@@ -35,15 +36,15 @@ ms.locfileid: "84621449"
 
 - [ダイアログボックスの背景色の設定](setting-the-dialog-boxs-background-color.md)
 
-- [ダイアログボックスの初期化](initializing-the-dialog-box.md)
+- [ダイアログ ボックスの初期化](initializing-the-dialog-box.md)
 
-- [ダイアログボックスでの Windows メッセージの処理](handling-windows-messages-in-your-dialog-box.md)
+- [ダイアログ ボックスでの Windows メッセージの処理](handling-windows-messages-in-your-dialog-box.md)
 
-- [ダイアログオブジェクトからのデータの取得](retrieving-data-from-the-dialog-object.md)
+- [ダイアログ オブジェクトからのデータの取得](retrieving-data-from-the-dialog-object.md)
 
-- [ダイアログボックスを閉じる](closing-the-dialog-box.md)
+- [ダイアログ ボックスのクローズ](closing-the-dialog-box.md)
 
-- [ダイアログボックスの破棄](destroying-the-dialog-box.md)
+- [ダイアログ ボックスの破棄](destroying-the-dialog-box.md)
 
 - [ダイアログデータエクスチェンジ (DDX) と検証 (DDV)](dialog-data-exchange-and-validation.md)
 

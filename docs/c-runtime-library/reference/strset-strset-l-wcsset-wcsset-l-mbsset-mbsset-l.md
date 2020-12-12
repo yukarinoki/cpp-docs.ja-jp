@@ -1,4 +1,5 @@
 ---
+description: 詳細については、_strset、_strset_l、_wcsset、_wcsset_l、_mbsset、_mbsset_l を参照してください。
 title: _strset、_strset_l、_wcsset、_wcsset_l、_mbsset、_mbsset_l
 ms.date: 4/2/2020
 api_name:
@@ -67,19 +68,19 @@ helpviewer_keywords:
 - fstrset function
 - _tcsset_l function
 ms.assetid: c42ded42-2ed9-4f06-a0a9-247ba305473a
-ms.openlocfilehash: 99cf969714115effcfd7f8f82b2247556d5dd110
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 4f8c3e0d9f6cb9cdb372ad5eac9a0f5d2c6d8cd8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87234004"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97329169"
 ---
 # <a name="_strset-_strset_l-_wcsset-_wcsset_l-_mbsset-_mbsset_l"></a>_strset、_strset_l、_wcsset、_wcsset_l、_mbsset、_mbsset_l
 
 文字列の文字をある文字に設定します。 これらの関数にはセキュリティが強化されたバージョンがあります。「[_strset_s、_strset_s_l、_wcsset_s、_wcsset_s_l、_mbsset_s、_mbsset_s_l](strset-s-strset-s-l-wcsset-s-wcsset-s-l-mbsset-s-mbsset-s-l.md)」を参照してください。
 
 > [!IMPORTANT]
-> **_mbsset**と **_mbsset_l**は、Windows ランタイムで実行されるアプリケーションでは使用できません。 詳細については、「[ユニバーサル Windows プラットフォーム アプリでサポートされていない CRT 関数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)」を参照してください。
+> **_mbsset** と **_mbsset_l** は、Windows ランタイムで実行されるアプリケーションでは使用できません。 詳細については、「[ユニバーサル Windows プラットフォーム アプリでサポートされていない CRT 関数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)」を参照してください。
 
 ## <a name="syntax"></a>構文
 
@@ -115,10 +116,10 @@ unsigned char *_mbsset_l(
 
 ### <a name="parameters"></a>パラメーター
 
-*引数*<br/>
+*str*<br/>
 NULL で終わる、設定される文字列。
 
-*40u-c*<br/>
+*c*<br/>
 文字設定。
 
 *locale*<br/>
@@ -130,11 +131,11 @@ NULL で終わる、設定される文字列。
 
 ## <a name="remarks"></a>解説
 
-**_Strset**関数は、 *str*のすべての文字 (終端の null 文字を除く) を*c*に変換し、をに変換 **`char`** します。 **_wcsset**と **_mbsset_l**は **_strset**のワイド文字バージョンとマルチバイト文字バージョンであり、引数と戻り値のデータ型はそれに応じて異なります。 それ以外では、これらの関数の動作は同じです。
+**_Strset** 関数は、 *str* のすべての文字 (終端の null 文字を除く) を *c* に変換し、をに変換 **`char`** します。 **_wcsset** と **_mbsset_l** は **_strset** のワイド文字バージョンとマルチバイト文字バージョンであり、引数と戻り値のデータ型はそれに応じて異なります。 それ以外では、これらの関数の動作は同じです。
 
-**_mbsset**は、そのパラメーターを検証します。 *Str*が null ポインターの場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、 **_mbsset**は**NULL**を返し、 **errno**を**EINVAL**に設定します。 **_strset**と **_wcsset**では、パラメーターは検証されません。
+**_mbsset** は、そのパラメーターを検証します。 *Str* が null ポインターの場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、 **_mbsset** は **NULL** を返し、 **errno** を **EINVAL** に設定します。 **_strset** と **_wcsset** では、パラメーターは検証されません。
 
-出力値は、ロケールの**LC_CTYPE**カテゴリの設定に影響されます。詳細について[は、「setlocale、_wsetlocale](setlocale-wsetlocale.md) 」を参照してください。 これらの関数のバージョンは同じですが、 **_l**サフィックスが付いていないバージョンが現在のロケールを使用し、 **_l**サフィックスが付いているものは、渡されたロケールパラメーターを代わりに使用する点が異なります。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
+出力値は、ロケールの **LC_CTYPE** カテゴリの設定に影響されます。詳細について [は、「setlocale、_wsetlocale](setlocale-wsetlocale.md) 」を参照してください。 これらの関数のバージョンは同じですが、 **_l** サフィックスが付いていないバージョンが現在のロケールを使用し、 **_l** サフィックスが付いているものは、渡されたロケールパラメーターを代わりに使用する点が異なります。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
 
 > [!IMPORTANT]
 > これらの関数は、バッファー オーバーランの脅威に対して脆弱な場合があります。 バッファー オーバーランは、認められていない特権の昇格の原因となるため、システムの攻撃に使用される可能性があります。 詳しくは、「 [バッファー オーバーランの回避](/windows/win32/SecBP/avoiding-buffer-overruns)」をご覧ください。
@@ -188,7 +189,7 @@ After:  *******************************
 
 [文字列操作](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [ロケール](../../c-runtime-library/locale.md)<br/>
-[マルチバイト文字のシーケンスの解釈](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[Multibyte-Character シーケンスの解釈](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [_mbsnbset、_mbsnbset_l](mbsnbset-mbsnbset-l.md)<br/>
 [memset、wmemset](memset-wmemset.md)<br/>
 [strcat、wcscat、_mbscat](strcat-wcscat-mbscat.md)<br/>

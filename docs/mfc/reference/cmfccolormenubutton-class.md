@@ -1,5 +1,6 @@
 ---
-title: クラス
+description: '詳細情報: CMFCColorMenuButton クラス'
+title: CMFCColorMenuButton クラス
 ms.date: 11/04/2016
 f1_keywords:
 - CMFCColorMenuButton
@@ -44,16 +45,16 @@ helpviewer_keywords:
 - CMFCColorMenuButton [MFC], OnDraw
 - CMFCColorMenuButton [MFC], OnDrawOnCustomizeList
 ms.assetid: 42685704-e994-4f7b-9553-62283c27b754
-ms.openlocfilehash: 9c895573c626a890facfef689fce4b516aff5115
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: 4ba0934e872adc4e4b33c2ae5700ecb0fc46e6d8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81752521"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97327676"
 ---
-# <a name="cmfccolormenubutton-class"></a>クラス
+# <a name="cmfccolormenubutton-class"></a>CMFCColorMenuButton クラス
 
-この`CMFCColorMenuButton`クラスは、メニュー コマンドまたはツール バー ボタンをサポートし、カラー ピッカー ダイアログ ボックスを開始します。
+クラスは、 `CMFCColorMenuButton` カラーピッカーダイアログボックスを起動するメニューコマンドまたはツールバーボタンをサポートしています。
 
 ## <a name="syntax"></a>構文
 
@@ -67,45 +68,45 @@ class CMFCColorMenuButton : public CMFCToolBarMenuButton
 
 |名前|説明|
 |----------|-----------------|
-|[ボタン::CMFCカラーメニューボタン](#cmfccolormenubutton)|`CMFCColorMenuButton` オブジェクトを構築します。|
+|[CMFCColorMenuButton:: CMFCColorMenuButton](#cmfccolormenubutton)|`CMFCColorMenuButton` オブジェクトを構築します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
 |名前|説明|
 |----------|-----------------|
-|[CMFCカラーメニューボタン::自動ボタンを有効にする](#enableautomaticbutton)|通常のカラー ボタンの上に配置されている "自動" ボタンを有効または無効にします。 (標準システムの自動ボタンには**自動**とラベルが付いています。|
-|[コントロール::ドキュメントの色を有効にします。](#enabledocumentcolors)|システム カラーではなく、ドキュメント固有の色の表示を有効にします。|
-|[ボタンをクリックします。](#enableotherbutton)|通常のカラー ボタンの下に配置されている "その他" ボタンを有効または無効にします。 (標準システムの「その他」ボタンには、**その他の色**のラベルが付いています。|
-|[CMFCカラーメニューボタン::イネーブルティアオフ](#enabletearoff)|カラー ペインを引き裂く機能を有効にします。|
-|[コントロール:自動カラーを取得します。](#getautomaticcolor)|現在の自動色を取得します。|
-|[メニューボタン::ゲットカラー](#getcolor)|現在のボタンの色を取得します。|
-|[ボタン::取得カラーバイコマンドイド](#getcolorbycmdid)|指定したコマンド ID に対応する色を取得します。|
-|[ボタン:オンチェンジペアレント](#onchangeparentwnd)|親ウィンドウが変更されたときに、フレームワークによって呼び出されます。|
-|[ボタン::カラーダイアログ](#opencolordialog)|色選択ダイアログ ボックスを開きます。|
-|[メニューボタン::セットカラー](#setcolor)|現在のカラー ボタンの色を設定します。|
-|[ボタン::セットカラーバイコマンドイド](#setcolorbycmdid)|指定したカラー メニュー ボタンの色を設定します。|
-|[ボタン::セットカラー名](#setcolorname)|指定した色の新しい名前を設定します。|
-|[メニューボタン::列番号の設定](#setcolumnsnumber)|オブジェクトによって表示される列数を`CMFCColorBar`設定します。|
+|[CMFCColorMenuButton:: Enable自動ボタン](#enableautomaticbutton)|通常の色のボタンの上にある [自動] ボタンを有効または無効にします。 ([標準システム] 自動ボタンは [ **自動**] というラベルが付いています)。|
+|[CMFCColorMenuButton:: EnableDocumentColors](#enabledocumentcolors)|システムカラーではなく、ドキュメント固有の色の表示を有効にします。|
+|[CMFCColorMenuButton:: EnableOtherButton](#enableotherbutton)|通常の色のボタンの下に配置される "その他" ボタンを有効または無効にします。 (標準システムの [その他] ボタンには、 **より多くの色** が付けられています)。|
+|[CMFCColorMenuButton:: EnableTearOff](#enabletearoff)|色ペインを無効にする機能を有効にします。|
+|[CMFCColorMenuButton:: Get自動カラー](#getautomaticcolor)|現在の自動色を取得します。|
+|[CMFCColorMenuButton:: GetColor](#getcolor)|現在のボタンの色を取得します。|
+|[CMFCColorMenuButton:: GetColorByCmdID](#getcolorbycmdid)|指定したコマンド ID に対応する色を取得します。|
+|[CMFCColorMenuButton:: OnChangeParentWnd](#onchangeparentwnd)|親ウィンドウが変更されたときにフレームワークによって呼び出されます。|
+|[CMFCColorMenuButton:: OpenColorDialog](#opencolordialog)|色の選択ダイアログボックスを開きます。|
+|[CMFCColorMenuButton:: SetColor](#setcolor)|現在の色のボタンの色を設定します。|
+|[CMFCColorMenuButton:: SetColorByCmdID](#setcolorbycmdid)|指定したカラーメニューボタンの色を設定します。|
+|[CMFCColorMenuButton:: SetColorName](#setcolorname)|指定した色の新しい名前を設定します。|
+|[CMFCColorMenuButton:: SetColumnsNumber](#setcolumnsnumber)|オブジェクトによって表示される列の数を設定し `CMFCColorBar` ます。|
 
 ### <a name="protected-methods"></a>プロテクト メソッド
 
 |名前|説明|
 |----------|-----------------|
-|[ボタン::コピーから](#copyfrom)|現在のボタンに別のツール バー ボタンをコピーします。|
-|[ボタン::ポップアップメニューを作成します。](#createpopupmenu)|カラー ピッカー ダイアログ ボックスを作成します。|
-|[ボタン::IsEmptyメニューを許可](#isemptymenuallowed)|空のメニューがサポートされているかどうかを示します。|
-|[メニューボタン::ドロー](#ondraw)|ボタンにイメージを表示するために、フレームワークによって呼び出されます。|
-|[メニューボタン::オンドローオンカスタマイザ](#ondrawoncustomizelist)|ツール バーのカスタマイズ`CMFCColorMenuButton`ダイアログ ボックスの一覧にオブジェクトが表示される前に、フレームワークによって呼び出されます。|
+|[CMFCColorMenuButton:: CopyFrom](#copyfrom)|別のツールバーボタンを現在のボタンにコピーします。|
+|[CMFCColorMenuButton:: CreatePopupMenu](#createpopupmenu)|カラーピッカーダイアログボックスを作成します。|
+|[CMFCColorMenuButton:: IsEmptyMenuAllowed](#isemptymenuallowed)|空のメニューがサポートされているかどうかを示します。|
+|[CMFCColorMenuButton:: OnDraw](#ondraw)|ボタン上にイメージを表示するためにフレームワークによって呼び出されます。|
+|[CMFCColorMenuButton:: OnDrawOnCustomizeList](#ondrawoncustomizelist)|`CMFCColorMenuButton`ツールバーのカスタマイズダイアログボックスの一覧にオブジェクトが表示される前に、フレームワークによって呼び出されます。|
 
 ## <a name="remarks"></a>解説
 
-元のメニュー コマンドまたはツール バー ボタン`CMFCColorMenuButton`をオブジェクトに置`CMFCColorMenuButton`き換えるには、オブジェクトを作成し、適切な[CMFCColorBar クラス](../../mfc/reference/cmfccolorbar-class.md)スタイルを設定し、`ReplaceButton`[クラスの](../../mfc/reference/cmfctoolbar-class.md)メソッドを呼び出します。 ツール バーをカスタマイズする場合は、メソッドを呼び出[します](../../mfc/reference/cmfctoolbarscustomizedialog-class.md#replacebutton)。
+元のメニューコマンドまたはツールバーボタンをオブジェクトに置き換えるには、 `CMFCColorMenuButton` オブジェクトを作成し `CMFCColorMenuButton` 、適切な [cmfccolorbar クラス](../../mfc/reference/cmfccolorbar-class.md) スタイルを設定して、 `ReplaceButton` [cmfctoolbar クラス](../../mfc/reference/cmfctoolbar-class.md) クラスのメソッドを呼び出します。 ツールバーをカスタマイズする場合は、 [Cmfctoolbarscustomizedialog:: ReplaceButton](../../mfc/reference/cmfctoolbarscustomizedialog-class.md#replacebutton) メソッドを呼び出します。
 
-カラー ピッカー ダイアログ ボックスは、イベント ハンドラーの処理中に作成[されます](#createpopupmenu)。 イベント ハンドラーは、親フレームにWM_COMMAND メッセージを通知します。 オブジェクト`CMFCColorMenuButton`は、元のメニュー コマンドまたはツールバー ボタンに割り当てられているコントロール ID を送信します。
+[カラーピッカー] ダイアログボックスは、 [Cmfccolormenubutton:: CreatePopupMenu](#createpopupmenu) イベントハンドラーの処理中に作成されます。 イベントハンドラーは、WM_COMMAND メッセージを親フレームに通知します。 オブジェクトは、 `CMFCColorMenuButton` 元のメニューコマンドまたはツールバーボタンに割り当てられているコントロール ID を送信します。
 
 ## <a name="example"></a>例
 
-クラスのさまざまなメソッドを使用して、カラー メニュー ボタンを作成および構成する方法を`CMFCColorMenuButton`次の例に示します。 この例では、まず`CPalette`オブジェクトを作成し、次に`CMFCColorMenuButton`クラスのオブジェクトを構築するために使用します。 その`CMFCColorMenuButton`後、オブジェクトの自動ボタンやその他のボタンを有効にし、その色と列数を設定して、オブジェクトを構成します。 このコードは[、ワード パッドのサンプル](../../overview/visual-cpp-samples.md)の一部です。
+クラスのさまざまなメソッドを使用してカラーメニューボタンを作成および構成する方法を次の例に示し `CMFCColorMenuButton` ます。 この例では、 `CPalette` オブジェクトが最初に作成されてから、クラスのオブジェクトを構築するために使用され `CMFCColorMenuButton` ます。 その `CMFCColorMenuButton` 後、オブジェクトは自動およびその他のボタンを有効にし、その色と列の数を設定することによって構成されます。 このコードは、 [Word パッドサンプル](../../overview/visual-cpp-samples.md)の一部です。
 
 [!code-cpp[NVC_MFC_WordPad#5](../../mfc/reference/codesnippet/cpp/cmfccolormenubutton-class_1.h)]
 [!code-cpp[NVC_MFC_WordPad#6](../../mfc/reference/codesnippet/cpp/cmfccolormenubutton-class_2.cpp)]
@@ -120,11 +121,11 @@ class CMFCColorMenuButton : public CMFCToolBarMenuButton
 
 [CMFCColorMenuButton](../../mfc/reference/cmfccolormenubutton-class.md)
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-**ヘッダー:** afxcolorメニューボタン.h
+**ヘッダー:** afxcolormenubutton
 
-## <a name="cmfccolormenubuttoncmfccolormenubutton"></a><a name="cmfccolormenubutton"></a>ボタン::CMFCカラーメニューボタン
+## <a name="cmfccolormenubuttoncmfccolormenubutton"></a><a name="cmfccolormenubutton"></a> CMFCColorMenuButton:: CMFCColorMenuButton
 
 `CMFCColorMenuButton` オブジェクトを構築します。
 
@@ -139,26 +140,26 @@ CMFCColorMenuButton(
 
 ### <a name="parameters"></a>パラメーター
 
-*UICmdID*<br/>
-[in]ボタン コマンド ID。
+*uiCmdID*<br/>
+からボタンコマンド ID。
 
 *lpszText*<br/>
-[in]ボタンのテキスト。
+からボタンのテキスト。
 
-*をクリックします。*<br/>
-[in]ボタンのカラー パレットへのポインター。
+*pPalette*<br/>
+からボタンのカラーパレットへのポインター。
 
 ### <a name="return-value"></a>戻り値
 
 ### <a name="remarks"></a>解説
 
-最初のコンストラクターは、既定のコンストラクターです。 オブジェクトの現在の色と自動色は黒(RGB(0, 0, 0)) に初期化されます。
+最初のコンストラクターは、既定のコンストラクターです。 オブジェクトの現在の色と自動色は黒 (RGB (0, 0, 0)) に初期化されます。
 
-2 番目のコンストラクターは、指定したコマンド ID に対応する色にボタンを初期化します。
+2番目のコンストラクターは、ボタンを、指定したコマンド ID に対応する色に初期化します。
 
-## <a name="cmfccolormenubuttoncopyfrom"></a><a name="copyfrom"></a>ボタン::コピーから
+## <a name="cmfccolormenubuttoncopyfrom"></a><a name="copyfrom"></a> CMFCColorMenuButton:: CopyFrom
 
-派生[オブジェクト](../../mfc/reference/cmfctoolbarmenubutton-class.md)を別のクラスにコピーします。
+1つの [Cmfctoolbarmenubutton クラス](../../mfc/reference/cmfctoolbarmenubutton-class.md)派生オブジェクトを別のオブジェクトにコピーします。
 
 ```
 virtual void CopyFrom(const CMFCToolBarButton& src);
@@ -167,15 +168,15 @@ virtual void CopyFrom(const CMFCToolBarButton& src);
 ### <a name="parameters"></a>パラメーター
 
 *src*<br/>
-[in]コピーするソースボタン。
+からコピーするソースボタン。
 
 ### <a name="remarks"></a>解説
 
-オブジェクトから派生したオブジェクトをコピーするには、このメソッド`CMFCColorMenuButton`をオーバーライドします。
+オブジェクトから派生したオブジェクトをコピーするには、このメソッドをオーバーライドし `CMFCColorMenuButton` ます。
 
-## <a name="cmfccolormenubuttoncreatepopupmenu"></a><a name="createpopupmenu"></a>ボタン::ポップアップメニューを作成します。
+## <a name="cmfccolormenubuttoncreatepopupmenu"></a><a name="createpopupmenu"></a> CMFCColorMenuButton:: CreatePopupMenu
 
-カラー ピッカー ダイアログ ボックスを作成します。
+カラーピッカーダイアログボックスを作成します。
 
 ```
 virtual CMFCPopupMenu* CreatePopupMenu();
@@ -183,15 +184,15 @@ virtual CMFCPopupMenu* CreatePopupMenu();
 
 ### <a name="return-value"></a>戻り値
 
-カラー ピッカー ダイアログ ボックスを表すオブジェクト。
+カラーピッカーダイアログボックスを表すオブジェクト。
 
 ### <a name="remarks"></a>解説
 
-このメソッドは、ユーザーがカラー メニュー ボタンを押したときに、フレームワークによって呼び出されます。
+このメソッドは、ユーザーがカラーメニューボタンを押したときにフレームワークによって呼び出されます。
 
-## <a name="cmfccolormenubuttonenableautomaticbutton"></a><a name="enableautomaticbutton"></a>CMFCカラーメニューボタン::自動ボタンを有効にする
+## <a name="cmfccolormenubuttonenableautomaticbutton"></a><a name="enableautomaticbutton"></a> CMFCColorMenuButton:: Enable自動ボタン
 
-通常のカラー ボタンの上に配置されている "自動" ボタンを有効または無効にします。 (標準システムの自動ボタンには**自動**とラベルが付いています。
+通常の色のボタンの上にある [自動] ボタンを有効または無効にします。 ([標準システム] 自動ボタンは [ **自動**] というラベルが付いています)。
 
 ```cpp
 void EnableAutomaticButton(
@@ -202,22 +203,22 @@ void EnableAutomaticButton(
 
 ### <a name="parameters"></a>パラメーター
 
-*ラベル*<br/>
-[in]ボタンが自動表示されたときに表示されるボタン テキストを指定します。
+*lpszLabel*<br/>
+からボタンが自動になったときに表示されるボタンテキストを指定します。
 
-*カラー自動*<br/>
-[in]新しい自動色を指定します。
+*colorAutomatic*<br/>
+から新しい自動色を指定します。
 
-*b 有効にする*<br/>
-[in]ボタンが自動かどうかを指定します。
+*bEnable*<br/>
+からボタンが自動であるかどうかを指定します。
 
 ### <a name="remarks"></a>解説
 
-自動ボタンは、現在の既定の色を適用します。
+[自動] ボタンをクリックすると、現在の既定の色が適用されます。
 
-## <a name="cmfccolormenubuttonenabledocumentcolors"></a><a name="enabledocumentcolors"></a>コントロール::ドキュメントの色を有効にします。
+## <a name="cmfccolormenubuttonenabledocumentcolors"></a><a name="enabledocumentcolors"></a> CMFCColorMenuButton:: EnableDocumentColors
 
-システム カラーではなく、ドキュメント固有の色の表示を有効にします。
+システムカラーではなく、ドキュメント固有の色の表示を有効にします。
 
 ```cpp
 void EnableDocumentColors(
@@ -227,19 +228,19 @@ void EnableDocumentColors(
 
 ### <a name="parameters"></a>パラメーター
 
-*ラベル*<br/>
-[in]ボタンテキストを指定します。
+*lpszLabel*<br/>
+からボタンのテキストを指定します。
 
-*b 有効にする*<br/>
-[in]ドキュメント固有の色を表示する場合は TRUE、システム カラーを表示するには FALSE を指定します。
+*bEnable*<br/>
+からドキュメント固有の色を表示する場合は TRUE。システムの色を表示する場合は FALSE。
 
 ### <a name="remarks"></a>解説
 
-ユーザーがカラー メニュー ボタンをクリックしたときに、現在のドキュメントの色またはシステム パレットの色を表示するには、このメソッドを使用します。
+ユーザーがカラーメニューボタンをクリックしたときに、現在のドキュメントの色またはシステムパレットの色を表示するには、このメソッドを使用します。
 
-## <a name="cmfccolormenubuttonenableotherbutton"></a><a name="enableotherbutton"></a>ボタンをクリックします。
+## <a name="cmfccolormenubuttonenableotherbutton"></a><a name="enableotherbutton"></a> CMFCColorMenuButton:: EnableOtherButton
 
-通常のカラー ボタンの下に配置されている "その他" ボタンを有効または無効にします。 (標準システムの「その他」ボタンには、**その他の色**のラベルが付いています。
+通常の色のボタンの下に配置される "その他" ボタンを有効または無効にします。 (標準システムの [その他] ボタンには、 **より多くの色** が付けられています)。
 
 ```cpp
 void EnableOtherButton(
@@ -250,20 +251,20 @@ void EnableOtherButton(
 
 ### <a name="parameters"></a>パラメーター
 
-*ラベル*<br/>
-[in]ボタンテキストを指定します。
+*lpszLabel*<br/>
+からボタンのテキストを指定します。
 
-*アルトカラードグルグ*<br/>
-[in]`CMFCColorDialog`ダイアログ ボックスを表示するには TRUE を指定し、標準のシステム カラー ダイアログ ボックスを表示するには FALSE を指定します。
+*Tcolordlg*<br/>
+からダイアログボックスを表示する場合は TRUE を、 `CMFCColorDialog` 標準のシステムカラーダイアログボックスを表示する場合は FALSE を指定します。
 
-*b 有効にする*<br/>
-[in]TRUE を指定すると、"その他" ボタンが表示されます。それ以外の場合は FALSE。 デフォルトは TRUE です。
+*bEnable*<br/>
+から[その他] ボタンを表示するには TRUE を指定します。それ以外の場合は FALSE。 既定値は TRUE です。
 
 ### <a name="remarks"></a>解説
 
-## <a name="cmfccolormenubuttonenabletearoff"></a><a name="enabletearoff"></a>CMFCカラーメニューボタン::イネーブルティアオフ
+## <a name="cmfccolormenubuttonenabletearoff"></a><a name="enabletearoff"></a> CMFCColorMenuButton:: EnableTearOff
 
-カラー ペインを引き裂く機能を有効にします。
+色ペインを無効にする機能を有効にします。
 
 ```cpp
 void EnableTearOff(
@@ -274,20 +275,20 @@ void EnableTearOff(
 
 ### <a name="parameters"></a>パラメーター
 
-*Uiid*<br/>
-[in]ティアオフ ペインの ID を指定します。
+*uiID*<br/>
+からティアオフペインの ID を指定します。
 
-*列数*<br/>
-[in]ティアオフ状態の間に、垂直にドッキングされたカラー ペイン内の列数を指定します。
+*nVertDockColumns*<br/>
+からティアオフ状態のときに、垂直方向にドッキングされた色ウィンドウ内の列の数を指定します。
 
-*オーズドックロウズ*<br/>
-[in]ティアオフ状態の間に、水平にドッキングされたカラー ペインの行数を指定します。
+*nHorzDockRows*<br/>
+からティアオフ状態のときに、水平方向にドッキングされた色ウィンドウの行数を指定します。
 
 ### <a name="remarks"></a>解説
 
-ボタンが押されたときにポップアップするカラー ペインの "ティアオフ" 機能を`CMFCColorMenuButton`有効にします。
+このメソッドを呼び出して、ボタンが押されたときにポップアップ表示されるカラーペインの "ティアオフ" 機能を有効にし `CMFCColorMenuButton` ます。
 
-## <a name="cmfccolormenubuttongetautomaticcolor"></a><a name="getautomaticcolor"></a>コントロール:自動カラーを取得します。
+## <a name="cmfccolormenubuttongetautomaticcolor"></a><a name="getautomaticcolor"></a> CMFCColorMenuButton:: Get自動カラー
 
 現在の自動色を取得します。
 
@@ -297,13 +298,13 @@ COLORREF GetAutomaticColor() const;
 
 ### <a name="return-value"></a>戻り値
 
-現在の自動色を表す RGB カラー値。
+現在の自動カラーを表す RGB カラー値。
 
 ### <a name="remarks"></a>解説
 
-このメソッドを呼び出して[、CMFCColorMenuButton::有効自動ボタン](#enableautomaticbutton)によって設定された自動色を取得します。
+[Cmfccolormenubutton:: enable自動ボタン](#enableautomaticbutton)によって設定された自動色を取得するには、このメソッドを呼び出します。
 
-## <a name="cmfccolormenubuttongetcolor"></a><a name="getcolor"></a>メニューボタン::ゲットカラー
+## <a name="cmfccolormenubuttongetcolor"></a><a name="getcolor"></a> CMFCColorMenuButton:: GetColor
 
 現在のボタンの色を取得します。
 
@@ -317,7 +318,7 @@ COLORREF GetColor() const;
 
 ### <a name="remarks"></a>解説
 
-## <a name="cmfccolormenubuttongetcolorbycmdid"></a><a name="getcolorbycmdid"></a>ボタン::取得カラーバイコマンドイド
+## <a name="cmfccolormenubuttongetcolorbycmdid"></a><a name="getcolorbycmdid"></a> CMFCColorMenuButton:: GetColorByCmdID
 
 指定したコマンド ID に対応する色を取得します。
 
@@ -327,8 +328,8 @@ static COLORREF GetColorByCmdID(UINT uiCmdID);
 
 ### <a name="parameters"></a>パラメーター
 
-*UICmdID*<br/>
-[in]コマンド ID。
+*uiCmdID*<br/>
+からコマンド ID。
 
 ### <a name="return-value"></a>戻り値
 
@@ -336,9 +337,9 @@ static COLORREF GetColorByCmdID(UINT uiCmdID);
 
 ### <a name="remarks"></a>解説
 
-このメソッドは、アプリケーションに複数のカラー ボタンがある場合に使用します。 ユーザーがカラー ボタンをクリックすると、ボタンはWM_COMMANDメッセージのコマンド ID を親に送信します。 この`GetColorByCmdID`メソッドは、コマンド ID を使用して、対応する色を取得します。
+アプリケーションに複数のカラーボタンがある場合に、この方法を使用します。 ユーザーが色のボタンをクリックすると、WM_COMMAND メッセージのコマンド ID が親に送信されます。 メソッドは、 `GetColorByCmdID` コマンド ID を使用して対応する色を取得します。
 
-## <a name="cmfccolormenubuttonisemptymenuallowed"></a><a name="isemptymenuallowed"></a>ボタン::IsEmptyメニューを許可
+## <a name="cmfccolormenubuttonisemptymenuallowed"></a><a name="isemptymenuallowed"></a> CMFCColorMenuButton:: IsEmptyMenuAllowed
 
 空のメニューがサポートされているかどうかを示します。
 
@@ -348,15 +349,15 @@ virtual BOOL IsEmptyMenuAllowed() const;
 
 ### <a name="return-value"></a>戻り値
 
-空のメニューが許可されている場合は 0 以外の値を指定します。それ以外の場合は、ゼロ。
+空のメニューが許可される場合は0以外の。それ以外の場合は0。
 
 ### <a name="remarks"></a>解説
 
-空のメニューは、デフォルトでサポートされています。 派生クラスでこの動作を変更するには、このメソッドをオーバーライドします。
+既定では、空のメニューがサポートされています。 派生クラスのこの動作を変更するには、このメソッドをオーバーライドします。
 
-## <a name="cmfccolormenubuttononchangeparentwnd"></a><a name="onchangeparentwnd"></a>ボタン:オンチェンジペアレント
+## <a name="cmfccolormenubuttononchangeparentwnd"></a><a name="onchangeparentwnd"></a> CMFCColorMenuButton:: OnChangeParentWnd
 
-親ウィンドウが変更されたときに、フレームワークによって呼び出されます。
+親ウィンドウが変更されたときにフレームワークによって呼び出されます。
 
 ```
 virtual void OnChangeParentWnd(CWnd* pWndParent);
@@ -364,14 +365,14 @@ virtual void OnChangeParentWnd(CWnd* pWndParent);
 
 ### <a name="parameters"></a>パラメーター
 
-*親の子*<br/>
-[in]新しい親ウィンドウへのポインター。
+*pWndParent*<br/>
+から新しい親ウィンドウへのポインター。
 
 ### <a name="remarks"></a>解説
 
-## <a name="cmfccolormenubuttonondraw"></a><a name="ondraw"></a>メニューボタン::ドロー
+## <a name="cmfccolormenubuttonondraw"></a><a name="ondraw"></a> CMFCColorMenuButton:: OnDraw
 
-ボタンにイメージを表示するために、フレームワークによって呼び出されます。
+ボタン上にイメージを表示するためにフレームワークによって呼び出されます。
 
 ```
 virtual void OnDraw(
@@ -388,34 +389,34 @@ virtual void OnDraw(
 ### <a name="parameters"></a>パラメーター
 
 *pDC*<br/>
-[in]デバイス コンテキストへのポインター。
+からデバイスコンテキストへのポインター。
 
-*Rect*<br/>
-[in]再描画する領域に境界を設定する四角形。
+*rect*<br/>
+から再描画される領域の境界となる四角形。
 
-*pイメージズ*<br/>
-[in]ツール バー イメージの一覧へのポイント。
+*pImages*<br/>
+からツールバーイメージのリストをポイントします。
 
 *bHorz*<br/>
-[in]ツール バーが水平ドッキング状態であることを指定する場合は TRUE。それ以外の場合は FALSE。 デフォルトは TRUE です。
+からツールバーが水平方向にドッキングされた状態であることを指定する場合は TRUE。それ以外の場合は FALSE。 既定値は TRUE です。
 
-*モードをカスタマイズする*<br/>
-[in]アプリケーションがカスタマイズ モードであることを指定する場合は TRUE。それ以外の場合は FALSE。 デフォルトは FALSE です。
+*Bカスタマイズの Emode*<br/>
+からアプリケーションがカスタマイズモードであることを指定する場合は TRUE。それ以外の場合は FALSE。 既定値は FALSE です。
 
-*bハイライト*<br/>
-[in]ボタンが強調表示されることを指定する場合は TRUE。それ以外の場合は FALSE。 デフォルトは FALSE です。
+*bHighlight 表示*<br/>
+からボタンが強調表示されるように指定する場合は TRUE。それ以外の場合は FALSE。 既定値は FALSE です。
 
-*ボーダーを描く*<br/>
-[in]ボタンの境界線を表示する場合は TRUE。それ以外の場合は FALSE。 デフォルトは TRUE です。
+*bDrawBorder*<br/>
+からボタンの境界線が表示されるように指定する場合は TRUE。それ以外の場合は FALSE。 既定値は TRUE です。
 
-*ボタン*<br/>
-[in]無効なボタンが淡色表示 (淡色表示) であることを指定する場合は TRUE。それ以外の場合は FALSE。 デフォルトは TRUE です。
+*bGrayDisabledButtons*<br/>
+から無効のボタンを淡色表示 (淡色表示) するように指定する場合は TRUE。それ以外の場合は FALSE。 既定値は TRUE です。
 
 ### <a name="remarks"></a>解説
 
-## <a name="cmfccolormenubuttonondrawoncustomizelist"></a><a name="ondrawoncustomizelist"></a>メニューボタン::オンドローオンカスタマイザ
+## <a name="cmfccolormenubuttonondrawoncustomizelist"></a><a name="ondrawoncustomizelist"></a> CMFCColorMenuButton:: OnDrawOnCustomizeList
 
-ツール バーのカスタマイズ`CMFCColorMenuButton`ダイアログ ボックスの一覧にオブジェクトが表示される前に、フレームワークによって呼び出されます。
+`CMFCColorMenuButton`ツールバーのカスタマイズダイアログボックスの一覧にオブジェクトが表示される前に、フレームワークによって呼び出されます。
 
 ```
 virtual int OnDrawOnCustomizeList(
@@ -427,13 +428,13 @@ virtual int OnDrawOnCustomizeList(
 ### <a name="parameters"></a>パラメーター
 
 *pDC*<br/>
-[in]デバイス コンテキストへのポインター。
+からデバイスコンテキストへのポインター。
 
-*Rect*<br/>
-[in]描画するボタンに境界を設定する四角形。
+*rect*<br/>
+から描画するボタンの境界となる四角形。
 
-*b選択済み*<br/>
-[in]TRUE は、ボタンが選択状態であることを指定します。それ以外の場合は FALSE。
+*選択された bSelected*<br/>
+からTRUE は、ボタンが選択された状態であることを示します。それ以外の場合は FALSE。
 
 ### <a name="return-value"></a>戻り値
 
@@ -441,11 +442,11 @@ virtual int OnDrawOnCustomizeList(
 
 ### <a name="remarks"></a>解説
 
-このメソッドは、ツール バーのカスタマイズ`CMFCColorMenuButton`プロセス中にオブジェクトがリスト ボックスに表示されるときに、フレームワークによって呼び出されます。
+このメソッドは、 `CMFCColorMenuButton` ツールバーのカスタマイズプロセス中にオブジェクトがリストボックスに表示されるときに、フレームワークによって呼び出されます。
 
-## <a name="cmfccolormenubuttonopencolordialog"></a><a name="opencolordialog"></a>ボタン::カラーダイアログ
+## <a name="cmfccolormenubuttonopencolordialog"></a><a name="opencolordialog"></a> CMFCColorMenuButton:: OpenColorDialog
 
-色選択ダイアログ ボックスを開きます。
+色の選択ダイアログボックスを開きます。
 
 ```
 virtual BOOL OpenColorDialog(
@@ -455,23 +456,23 @@ virtual BOOL OpenColorDialog(
 
 ### <a name="parameters"></a>パラメーター
 
-*カラーデフォルト*<br/>
-[in]色ダイアログ ボックスで選択されている既定の色。
+*colorDefault*<br/>
+から色のダイアログボックスで選択されている既定の色。
 
-*カラーレス*<br/>
-[アウト]ユーザーが色ダイアログ ボックスから選択した色を返します。
+*colorRes*<br/>
+入出力色のダイアログボックスからユーザーが選択した色を返します。
 
 ### <a name="return-value"></a>戻り値
 
-ユーザーが新しい色を選択した場合は 0 以外の値を指定します。それ以外の場合は、ゼロ。
+ユーザーが新しい色を選択した場合は0以外の。それ以外の場合は0。
 
 ### <a name="remarks"></a>解説
 
-メニュー ボタンがクリックされたら、このメソッドを呼び出して、色のダイアログ ボックスを開きます。 戻り値が 0 以外の場合、ユーザーが選択した色は*colorRes*パラメーターに格納されます。 標準の色のダイアログ ボックスと[[CMFCColorDialog](#enableotherbutton) [クラス](../../mfc/reference/cmfccolordialog-class.md)] ダイアログ ボックスを切り替えるには、メソッドを使用します。
+メニューボタンをクリックしたときに、このメソッドを呼び出して、色のダイアログボックスを開きます。 戻り値が0以外の場合は、ユーザーが選択した色が *Colorres* パラメーターに格納されます。 [Cmfccolormenubutton:: EnableOtherButton](#enableotherbutton)メソッドを使用して、標準の色のダイアログボックスと [ [CMFCColorDialog クラス](../../mfc/reference/cmfccolordialog-class.md)] ダイアログボックスを切り替えます。
 
-## <a name="cmfccolormenubuttonsetcolor"></a><a name="setcolor"></a>メニューボタン::セットカラー
+## <a name="cmfccolormenubuttonsetcolor"></a><a name="setcolor"></a> CMFCColorMenuButton:: SetColor
 
-現在のカラー ボタンの色を設定します。
+現在の色のボタンの色を設定します。
 
 ```
 virtual void SetColor(
@@ -481,19 +482,19 @@ virtual void SetColor(
 
 ### <a name="parameters"></a>パラメーター
 
-*Clr*<br/>
-[in]RGB カラー値。
+<bpt id="p1">*</bpt>clr<ept id="p1">*</ept><br/>
+からRGB カラー値。
 
-*通知する*<br/>
-[in]関連付けられたメニュー ボタンまたはツール バー ボタンに*clr*パラメーターの色を適用する場合は TRUE。それ以外の場合は FALSE。
+*bNotify*<br/>
+から関連するメニューボタンまたはツールバーボタンに *clr* パラメーターの色を適用する場合は TRUE。それ以外の場合は FALSE。
 
 ### <a name="remarks"></a>解説
 
-現在の色のボタンの色を変更します。 *bNotify*パラメーターが 0 以外の場合、関連付けられているポップアップ メニューまたはツール バーの対応するボタンの色が *、clr*パラメーターで指定された色に変更されます。
+現在の色のボタンの色を変更するには、このメソッドを呼び出します。 *Bnotify* パラメーターが0以外の場合は、関連するポップアップメニューまたはツールバーの対応するボタンの色が、 *clr* パラメーターで指定された色に変更されます。
 
-## <a name="cmfccolormenubuttonsetcolorbycmdid"></a><a name="setcolorbycmdid"></a>ボタン::セットカラーバイコマンドイド
+## <a name="cmfccolormenubuttonsetcolorbycmdid"></a><a name="setcolorbycmdid"></a> CMFCColorMenuButton:: SetColorByCmdID
 
-指定したカラー メニュー ボタンの色を設定します。
+指定したカラーメニューボタンの色を設定します。
 
 ```
 static void SetColorByCmdID(
@@ -503,13 +504,13 @@ static void SetColorByCmdID(
 
 ### <a name="parameters"></a>パラメーター
 
-*UICmdID*<br/>
-[in]カラー メニュー ボタンのリソース ID。
+*uiCmdID*<br/>
+からカラーメニューボタンのリソース ID。
 
-*色*<br/>
-[in]RGB カラー値。
+*color*<br/>
+からRGB カラー値。
 
-## <a name="cmfccolormenubuttonsetcolorname"></a><a name="setcolorname"></a>ボタン::セットカラー名
+## <a name="cmfccolormenubuttonsetcolorname"></a><a name="setcolorname"></a> CMFCColorMenuButton:: SetColorName
 
 指定した色の新しい名前を設定します。
 
@@ -521,17 +522,17 @@ static void SetColorName(
 
 ### <a name="parameters"></a>パラメーター
 
-*色*<br/>
-[in]名前が変更された色の RGB 値。
+*color*<br/>
+から名前が変更された色の RGB 値。
 
 *strName*<br/>
-[in]色の新しい名前。
+から色の新しい名前。
 
 ### <a name="remarks"></a>解説
 
-## <a name="cmfccolormenubuttonsetcolumnsnumber"></a><a name="setcolumnsnumber"></a>メニューボタン::列番号の設定
+## <a name="cmfccolormenubuttonsetcolumnsnumber"></a><a name="setcolumnsnumber"></a> CMFCColorMenuButton:: SetColumnsNumber
 
-カラー選択コントロール[(CMFCColorBar](../../mfc/reference/cmfccolorbar-class.md)オブジェクト) に表示する列の数を設定します。
+色の選択コントロール ( [Cmfccolorbar](../../mfc/reference/cmfccolorbar-class.md) オブジェクト) に表示する列の数を設定します。
 
 ```cpp
 void SetColumnsNumber(int nColumns);
@@ -540,15 +541,15 @@ void SetColumnsNumber(int nColumns);
 ### <a name="parameters"></a>パラメーター
 
 *nColumns*<br/>
-[in]表示する列の数。
+から表示する列の数。
 
 ### <a name="remarks"></a>解説
 
 ## <a name="see-also"></a>関連項目
 
-[階層グラフ](../../mfc/hierarchy-chart.md)<br/>
-[クラス](../../mfc/reference/mfc-classes.md)<br/>
+[階層図](../../mfc/hierarchy-chart.md)<br/>
+[Classes](../../mfc/reference/mfc-classes.md)<br/>
 [CMFCColorBar クラス](../../mfc/reference/cmfccolorbar-class.md)<br/>
-[クラス](../../mfc/reference/cmfctoolbar-class.md)<br/>
-[クラスをカスタマイズします。](../../mfc/reference/cmfctoolbarscustomizedialog-class.md)<br/>
-[クラス](../../mfc/reference/cmfccolorbutton-class.md)
+[CMFCToolBar クラス](../../mfc/reference/cmfctoolbar-class.md)<br/>
+[CMFCToolBarsCustomizeDialog クラス](../../mfc/reference/cmfctoolbarscustomizedialog-class.md)<br/>
+[CMFCColorButton クラス](../../mfc/reference/cmfccolorbutton-class.md)

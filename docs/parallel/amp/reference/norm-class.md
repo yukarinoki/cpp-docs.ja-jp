@@ -1,16 +1,17 @@
 ---
+description: '詳細情報: 基準クラス'
 title: norm クラス
 ms.date: 11/04/2016
 f1_keywords:
 - AMP_SHORT_VECTORS/norm
 - AMP_SHORT_VECTORS/Concurrency::graphics::norm Constructor
 ms.assetid: 73002f3d-c25e-4119-bcd3-4c46c9b6abf1
-ms.openlocfilehash: b5740f33dea6aad79770f77f179803023432248a
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 29e376e5e42212c87ae244c7a606a38d6a07ddf1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79447530"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97327651"
 ---
 # <a name="norm-class"></a>norm クラス
 
@@ -26,23 +27,23 @@ class norm;
 
 ### <a name="public-constructors"></a>パブリック コンストラクター
 
-|Name|説明|
+|名前|説明|
 |----------|-----------------|
 |[標準コンストラクター](#ctor)|オーバーロードされます。 既定のコンストラクターです。 を 0.0 f に初期化します。|
 
 ### <a name="public-operators"></a>パブリック演算子
 
-|Name|説明|
+|名前|説明|
 |----------|-----------------|
 |基準:: operator-||
-|norm::operator--||
+|基準:: operator--||
 |基準:: operator float|変換演算子。 標準数を浮動小数点値に変換します。|
-|norm::operator*=||
-|norm::operator/=||
+|基準:: operator * =||
+|基準:: operator/=||
 |基準:: operator + +||
-|norm::operator+=||
-|norm::operator=||
-|norm::operator-=||
+|基準:: operator + =||
+|基準:: operator =||
+|基準:: operator-=||
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -54,7 +55,7 @@ class norm;
 
 **名前空間:** Concurrency:: graphics
 
-## <a name="ctor"></a>満た
+## <a name="norm"></a><a name="ctor"></a> 満た
 
 既定のコンストラクターです。 を 0.0 f に初期化します。
 
@@ -96,6 +97,6 @@ norm(
 *_Other*<br/>
 の初期化に使用されるオブジェクト。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [Concurrency::graphics 名前空間](concurrency-graphics-namespace.md)

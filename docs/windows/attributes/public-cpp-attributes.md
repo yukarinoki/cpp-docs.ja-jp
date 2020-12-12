@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: public (C++ 属性)'
 title: public (C++ 属性) (C++ COM 属性)
 ms.date: 10/02/2018
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - public attribute
 ms.assetid: c42e1fd5-6cb1-48fe-8a03-95f2a2e0137c
-ms.openlocfilehash: 6a19a9a2718ad5f0e7ac59c71e9b4df6a7e92dd2
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: ee6fb641dc122c7d31c25d3433e2a427710ef40a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88836908"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97329656"
 ---
 # <a name="public-c-attributes"></a>public (C++ 属性)
 
@@ -45,7 +46,7 @@ __interface IFireTabCtrl : IDispatch
 };
 ```
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 | 属性コンテキスト | 値 |
 |-|-|

@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: switch_is'
 title: switch_is (C++ COM 属性)
 ms.date: 10/02/2018
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - switch_is attribute
 ms.assetid: f1fffe5d-12d2-4e0f-8803-ccb715177d2d
-ms.openlocfilehash: b017ba6dd2bbdfab7bfb5fa2dbf19e613e14772b
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 88489a9722e79da6629dfc2b39bfbe7f6ab39932
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88840541"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97329561"
 ---
 # <a name="switch_is"></a>switch_is
 
@@ -29,9 +30,9 @@ ms.locfileid: "88840541"
 
 ## <a name="example"></a>例
 
-**Switch_is**の使用例については、[大文字と小文字](case-cpp.md)の例を参照してください。
+**Switch_is** の使用例については、[大文字と小文字](case-cpp.md)の例を参照してください。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 | 属性コンテキスト | 値 |
 |-|-|

@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: コンパイラの警告 (レベル 1) C4935'
 title: コンパイラの警告 (レベル 1) C4935
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4935
 ms.assetid: a36c56d3-571a-44dd-bb0f-bcc6b020e134
-ms.openlocfilehash: 839b86ef736f1150e3e0e23d8404f169f9f0d5ce
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a5673c66a9f0d93cc4f7026e8ca0e56c89be0faf
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62406250"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97328057"
 ---
 # <a name="compiler-warning-level-1-c4935"></a>コンパイラの警告 (レベル 1) C4935
 
@@ -19,4 +20,4 @@ ms.locfileid: "62406250"
 
 型のアセンブリ表示設定が変更されました。 コンパイラは、最後に見つかった指定子を使用します。 たとえば、事前宣言のアセンブリ表示設定は、クラス定義のアセンブリ表示設定とは異なる場合があります。
 
-C4935 が古い形式のコンパイラ オプションを使用して到達のみ **/clr:oldSyntax**します。
+C4935 は、互換性のために残されているコンパイラオプション **/clr: oldSyntax** を使用してのみ到達可能です。

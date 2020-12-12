@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: 通知'
 title: tell
 ms.date: 12/16/2019
 api_name:
@@ -23,15 +24,15 @@ f1_keywords:
 helpviewer_keywords:
 - tell function
 ms.assetid: 3a92a40d-f472-4545-a493-f57c340ee798
-ms.openlocfilehash: 18d793ad5fc26cd5f8a4906c160db7c7d25c0607
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: 991dc999d144e772131b401d0c16f7b660f2edbc
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75300353"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97326224"
 ---
 # <a name="tell"></a>tell
 
-Microsoft 固有の関数名 `tell` は、 [_tell](tell-telli64.md)関数の非推奨のエイリアスです。 既定では、[コンパイラの警告 (レベル 3) C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md)が生成されます。 名前は、実装固有の名前の標準 C 規則に従っていないため、非推奨とされます。 ただし、関数は引き続きサポートされます。
+Microsoft 固有の関数名 `tell` は、 [_tell](tell-telli64.md) 関数の非推奨のエイリアスです。 既定では、 [コンパイラの警告 (レベル 3) C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md)が生成されます。 名前は、実装固有の名前の標準 C 規則に従っていないため、非推奨とされます。 ただし、関数は引き続きサポートされます。
 
-代わりに[_tell](tell-telli64.md)を使用することをお勧めします。 または、この関数名を引き続き使用して、警告を無効にすることもできます。 詳細については、「警告と[POSIX の関数名](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#posix-function-names)を[無効にする](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#turn-off-the-warning)」を参照してください。
+代わりに [_tell](tell-telli64.md) を使用することをお勧めします。 または、この関数名を引き続き使用して、警告を無効にすることもできます。 詳細については、「警告と[POSIX の関数名](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#posix-function-names)を[無効にする](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#turn-off-the-warning)」を参照してください。

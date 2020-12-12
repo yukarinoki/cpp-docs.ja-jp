@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「コンパイラエラー C3856」を参照してください。
 title: コンパイラ エラー C3856
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3856
 ms.assetid: 242d9322-c325-4f20-be58-b2be6da56d60
-ms.openlocfilehash: 6079eb0a2b453c3eef159ed8a0d8536a0ad667b0
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: f15dbb4029a8eb0c8571e11dda71b3352a834117
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74754837"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97328126"
 ---
 # <a name="compiler-error-c3856"></a>コンパイラ エラー C3856
 
@@ -36,7 +37,7 @@ template <class T2>  // extra template parameter list in definition
 struct S<T>::S1{};
 ```
 
-解決方法:
+考えられる解決策:
 
 ```cpp
 // C3856b.cpp
@@ -70,7 +71,7 @@ generic <class V>
 ref struct GS<T>::GS2 {};   // C3856
 ```
 
-解決方法:
+考えられる解決策:
 
 ```cpp
 // C3856d.cpp

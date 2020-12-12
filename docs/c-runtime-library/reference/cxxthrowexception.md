@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: _CxxThrowException'
 title: _CxxThrowException
 ms.date: 11/04/2016
 api_name:
@@ -25,12 +26,12 @@ helpviewer_keywords:
 - _CxxThrowException function
 - CxxThrowException function
 ms.assetid: 0b90bef5-b7d2-46e0-88e2-59e531e01a4d
-ms.openlocfilehash: a5b614d25502ddd5a58aedcf2ec843b2b1ab9d47
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: df4b1b30ba70ebf34bdb3cb4ae1c51a210f95a07
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70942032"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97327035"
 ---
 # <a name="_cxxthrowexception"></a>_CxxThrowException
 
@@ -53,14 +54,14 @@ extern "C" void __stdcall _CxxThrowException(
 *pThrowInfo*<br/>
 例外の処理に必要な情報。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 このメソッドは、コンパイラで例外処理に使用されるコンパイラ専用ファイルに含まれています。 このメソッドはコードから直接呼び出さないでください。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-**電源**.Cpp をスローする
+**ソース:** Throw.cpp
 
 ## <a name="see-also"></a>関連項目
 
-[関数リファレンス (アルファベット順)](crt-alphabetical-function-reference.md)<br/>
+[アルファベット順の関数リファレンス](crt-alphabetical-function-reference.md)<br/>

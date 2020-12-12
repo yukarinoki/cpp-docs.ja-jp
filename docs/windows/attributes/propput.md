@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: propput'
 title: propput (C++ COM 属性)
 ms.date: 10/02/2018
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - propput attribute
 ms.assetid: 1f84dda9-9cce-4e16-aaf0-b2c5219827f2
-ms.openlocfilehash: 11f216dd183f3977aee9af90c6579d01cad45fdf
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: f7b33996c4575de6b94fc3127c33a88c6f791aed
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88839947"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97327388"
 ---
 # <a name="propput"></a>propput
 
@@ -29,9 +30,9 @@ ms.locfileid: "88839947"
 
 ## <a name="example"></a>例
 
-**Propput**の使用例については、[バインド](bindable.md)可能なの例を参照してください。
+**Propput** の使用例については、[バインド](bindable.md)可能なの例を参照してください。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 | 属性コンテキスト | 値 |
 |-|-|

@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: _swab'
 title: _swab
 ms.date: 4/2/2020
 api_name:
@@ -31,12 +32,12 @@ helpviewer_keywords:
 - swab function
 - bytes, swapping
 ms.assetid: 017142f2-050c-4f6a-8b49-6b094f58ec94
-ms.openlocfilehash: 7353081fab92fcc3324a214688be28a4f651b05f
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 178189ede5330d467e8ec263a4558bb55108f354
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82912409"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97326253"
 ---
 # <a name="_swab"></a>_swab
 
@@ -57,7 +58,7 @@ void _swab(
 *src*<br/>
 コピーおよび交換されるデータ。
 
-*dest*<br/>
+*先*<br/>
 交換したデータの格納場所。
 
 *n*<br/>
@@ -65,19 +66,19 @@ void _swab(
 
 ## <a name="return-value"></a>戻り値
 
-**Swab**関数は値を返しません。 関数は、 *src*ポインターまたは*dest*ポインターが null であるか、 *n*が0未満の場合に**errno**を**EINVAL**に設定し、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーを呼び出します。
+**Swab** 関数は値を返しません。 関数は、 *src* ポインターまたは *dest* ポインターが null であるか、 *n* が0未満の場合に **errno** を **EINVAL** に設定し、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーを呼び出します。
 
 リターン コードの詳細については、「[_doserrno、errno、_sys_errlist、および _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」を参照してください。
 
 ## <a name="remarks"></a>解説
 
-*N*が偶数の場合、 **_swab**関数は*src*から*n*バイトをコピーし、隣接するバイトの各ペアをスワップして、結果を*dest*に格納します。 *N*が奇数の場合は、 **_swab** *src*の最初の*n*-1 バイトをコピーしてスワップします。最後のバイトはコピーされません。 **_Swab**関数は、通常、別のバイト順を使用するマシンに転送するためにバイナリデータを準備するために使用されます。
+*N* が偶数の場合、 **_swab** 関数は *src* から *n* バイトをコピーし、隣接するバイトの各ペアをスワップして、結果を *dest* に格納します。 *N* が奇数の場合は、 **_swab** *src* の最初の *n*-1 バイトをコピーしてスワップします。最後のバイトはコピーされません。 **_Swab** 関数は、通常、別のバイト順を使用するマシンに転送するためにバイナリデータを準備するために使用されます。
 
 既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**_swab**|C: \<stdlib.h> C++: \<cstdlib> または \<stdlib.h>|
 

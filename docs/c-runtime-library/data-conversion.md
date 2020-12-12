@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「データ変換」を参照してください。
 title: データ変換
 ms.date: 03/21/2018
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - data conversion routines [C++]
 - converting data
 ms.assetid: b15b5268-7467-49f1-bf95-5299b598f94c
-ms.openlocfilehash: 94e6a8182e12ecd74f9d2cd5dddaa84a1e3eb847
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 4ce9a7e04ed8d7e561e256929b8b8625e34d2620
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87218768"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97327049"
 ---
 # <a name="data-conversion"></a>データ変換
 
@@ -20,13 +21,13 @@ ms.locfileid: "87218768"
 
 ## <a name="data-conversion-routines"></a>データ変換ルーチン
 
-|ルーチンによって返される値|用途|
+|ルーチンによって返される値|使用|
 |-------------|---------|
 |[絶対](../c-runtime-library/reference/abs-labs-llabs-abs64.md)|整数の絶対値を求める|
-|[atof、_atof_l](../c-runtime-library/reference/atof-atof-l-wtof-wtof-l.md)|文字列をに変換する**`float`**|
-|[atoi、_atoi_l](../c-runtime-library/reference/atoi-atoi-l-wtoi-wtoi-l.md)|文字列をに変換する**`int`**|
+|[atof、_atof_l](../c-runtime-library/reference/atof-atof-l-wtof-wtof-l.md)|文字列をに変換する **`float`**|
+|[atoi、_atoi_l](../c-runtime-library/reference/atoi-atoi-l-wtoi-wtoi-l.md)|文字列をに変換する **`int`**|
 |[_atoi64、_atoi64_l](../c-runtime-library/reference/atoi64-atoi64-l-wtoi64-wtoi64-l.md)|文字列をまたはに変換します。 **`__int64`****`long long`**|
-|[atol、_atol_l](../c-runtime-library/reference/atol-atol-l-wtol-wtol-l.md)|文字列をに変換する**`long`**|
+|[atol、_atol_l](../c-runtime-library/reference/atol-atol-l-wtol-wtol-l.md)|文字列をに変換する **`long`**|
 |[c16rtomb、c32rtomb](../c-runtime-library/reference/c16rtomb-c32rtomb1.md)|UTF-16 または UTF-32 文字を同等のマルチバイト文字に変換する|
 |[_ecvt](../c-runtime-library/reference/ecvt.md)、[_ecvt_s](../c-runtime-library/reference/ecvt-s.md)|**`double`** 指定された長さの文字列に変換する|
 |[_fcvt](../c-runtime-library/reference/fcvt.md)、[_fcvt_s](../c-runtime-library/reference/fcvt-s.md)|**`double`** 小数点の後に指定された桁数で文字列に変換します|
@@ -43,7 +44,7 @@ ms.locfileid: "87218768"
 |[mbrtoc16、mbrtoc32](../c-runtime-library/reference/mbrtoc16-mbrtoc323.md)|マルチバイト文字を同等の UTF-16 または UTF-32 文字に変換する|
 |[mbstowcs、_mbstowcs_l](../c-runtime-library/reference/mbstowcs-mbstowcs-l.md)、[mbstowcs_s、_mbstowcs_s_l](../c-runtime-library/reference/mbstowcs-s-mbstowcs-s-l.md)|マルチバイト文字のシーケンスを、対応するワイド文字のシーケンスに変換|
 |[mbtowc、_mbtowc_l](../c-runtime-library/reference/mbtowc-mbtowc-l.md)|マルチバイト文字を対応するワイド文字に変換|
-|[strtod、_strtod_l、wcstod、_wcstod_l](../c-runtime-library/reference/strtod-strtod-l-wcstod-wcstod-l.md)|文字列をに変換する**`double`**|
+|[strtod、_strtod_l、wcstod、_wcstod_l](../c-runtime-library/reference/strtod-strtod-l-wcstod-wcstod-l.md)|文字列をに変換する **`double`**|
 |[strtol、wcstol、_strtol_l、_wcstol_l](../c-runtime-library/reference/strtol-wcstol-strtol-l-wcstol-l.md)|文字列を整数に変換する **`long`**|
 |[strtoul、_strtoul_l、wcstoul、_wcstoul_l](../c-runtime-library/reference/strtoul-strtoul-l-wcstoul-wcstoul-l.md)|文字列を整数に変換する **`unsigned long`**|
 |[strxfrm、wcsxfrm、_strxfrm_l、_wcsxfrm_l](../c-runtime-library/reference/strxfrm-wcsxfrm-strxfrm-l-wcsxfrm-l.md)|ロケール固有の情報に基づいて、文字列を照合形式に変換します。|
@@ -54,10 +55,10 @@ ms.locfileid: "87218768"
 |[toupper、_toupper、towupper、_toupper_l、_towupper_l](../c-runtime-library/reference/toupper-toupper-towupper-toupper-l-towupper-l.md)|文字を無条件に大文字に変換する|
 |[wcstombs、_wcstombs_l](../c-runtime-library/reference/wcstombs-wcstombs-l.md)、[wcstombs_s、_wcstombs_s_l](../c-runtime-library/reference/wcstombs-s-wcstombs-s-l.md)|ワイド文字のシーケンスを、対応するマルチバイト文字のシーケンスに変換する|
 |[wctomb、_wctomb_l](../c-runtime-library/reference/wctomb-wctomb-l.md)、[wctomb_s、_wctomb_s_l](../c-runtime-library/reference/wctomb-s-wctomb-s-l.md)|ワイド文字を対応するマルチバイト文字に変換する|
-|[_wtof、_wtof_l](../c-runtime-library/reference/atof-atof-l-wtof-wtof-l.md)|ワイド文字列をに変換します。**`double`**|
-|[_wtoi、_wtoi_l](../c-runtime-library/reference/atoi-atoi-l-wtoi-wtoi-l.md)|ワイド文字列をに変換する**`int`**|
+|[_wtof、_wtof_l](../c-runtime-library/reference/atof-atof-l-wtof-wtof-l.md)|ワイド文字列をに変換します。 **`double`**|
+|[_wtoi、_wtoi_l](../c-runtime-library/reference/atoi-atoi-l-wtoi-wtoi-l.md)|ワイド文字列をに変換する **`int`**|
 |[_wtoi64、_wtoi64_l](../c-runtime-library/reference/atoi64-atoi64-l-wtoi64-wtoi64-l.md)|ワイド文字の文字列をまたはに変換します。 **`__int64`****`long long`**|
-|[_wtol、_wtol_l](../c-runtime-library/reference/atol-atol-l-wtol-wtol-l.md)|ワイド文字列をに変換する**`long`**|
+|[_wtol、_wtol_l](../c-runtime-library/reference/atol-atol-l-wtol-wtol-l.md)|ワイド文字列をに変換する **`long`**|
 
 ## <a name="see-also"></a>関連項目
 

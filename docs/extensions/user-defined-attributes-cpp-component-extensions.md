@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: User-Defined 属性 (C++/CLI および C++/CX)'
 title: ユーザー定義属性 (C++/CLI および C++/CX)
 ms.date: 10/12/2018
 ms.topic: reference
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - metadata, extending
 - custom attributes, extending metadata
 ms.assetid: 98b29048-a3ea-4698-8441-f149cdaec9fb
-ms.openlocfilehash: aed36ac7fed7eb1f16f8648f7bcd7efb37f43a75
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 2fab2cc1317522b43cd4bddbb56ae174907607d7
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80171893"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97327899"
 ---
 # <a name="user-defined-attributes--ccli-and-ccx"></a>ユーザー定義属性 (C++/CLI および C++/CX)
 
@@ -21,7 +22,7 @@ C++/CLI とC++/CX では、インターフェイス、クラス、構造体、�
 
 C++/CX 属性は、プロパティに適用できますが、コンストラクターまたはメソッドには適用できません。
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 コンパイラ オプション: `/ZW`
 
@@ -33,13 +34,13 @@ C++/CX 属性は、プロパティに適用できますが、コンストラク�
 
 詳細については、次を参照してください。
 
-- [属性の対象](attribute-targets-cpp-component-extensions.md)
+- [属性ターゲット](attribute-targets-cpp-component-extensions.md)
 
 - [属性パラメーターの型](attribute-parameter-types-cpp-component-extensions.md)
 
 Visual C++ でのアセンブリへの署名については、「[厳密名アセンブリ (アセンブリ署名) (C++/CLI)](../dotnet/strong-name-assemblies-assembly-signing-cpp-cli.md)」を参照してください。
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 コンパイラ オプション: `/clr`
 
@@ -173,7 +174,7 @@ public:
 public ref class SomeClass {};
 ```
 
-ランタイムでは、カスタム属性クラスのパブリック部分がシリアル化可能である必要があります。  カスタム属性を作成する場合、カスタム属性の名前付き引数はコンパイル時の定数に限定されます  (メタデータのクラスのレイアウトに追加される一連のビットと考えてください)。
+ランタイムでは、カスタム属性クラスのパブリック部分がシリアル化可能である必要があります。  カスタム属性を作成する場合、カスタム属性の名前付き引数はコンパイル時の定数に限定されます   (メタデータのクラスのレイアウトに追加される一連のビットと考えてください)。
 
 ```cpp
 // extending_metadata_f.cpp
@@ -192,6 +193,6 @@ ref struct A : Attribute {
 ref struct B {};
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[.NET および UWP でのコンポーネント拡張](component-extensions-for-runtime-platforms.md)
+[.NET および UWP 用のコンポーネントの拡張機能](component-extensions-for-runtime-platforms.md)

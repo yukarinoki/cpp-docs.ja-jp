@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: CDataConnection クラス'
 title: CDataConnection クラス
 ms.date: 03/27/2019
 f1_keywords:
@@ -61,12 +62,12 @@ helpviewer_keywords:
 - operator CSession*
 - CSession* operator
 ms.assetid: 77432d85-4e20-49ec-a0b0-142137828471
-ms.openlocfilehash: c456f4bf5891f550fcd9523fa376333d66e079a6
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 7cdcb681c40d1ef4e93baee5dc4e4395e6ea9c5e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91509105"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97328801"
 ---
 # <a name="cdataconnection-class"></a>CDataConnection クラス
 
@@ -104,7 +105,7 @@ class CDataConnection
 |[operator CSession&](#op_csession_amp)|格納されているオブジェクトへの参照を返し `CSession` ます。|
 |[演算子 CSession*](#op_csession_star)|格納されているオブジェクトへのポインターを返し `CSession` ます。|
 
-## <a name="remarks"></a>注釈
+## <a name="remarks"></a>解説
 
 `CDataConnection` は、クライアントを作成するのに便利なクラスです。これは、必要なオブジェクト (データソースとセッション) と、データソースに接続するときに必要な作業の一部をカプセル化するためです。
 
@@ -131,7 +132,7 @@ CDataConnection(const CDataConnection &ds);
 *ds*<br/>
 から既存のデータ接続への参照。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 最初のオーバーライドでは、 `CDataConnection` 既定の設定を使用して新しいオブジェクトを作成します。
 
@@ -186,7 +187,7 @@ HRESULT OpenNewSession(CSession & session) throw();
 *セッション*<br/>
 [入力/出力]新しいセッションオブジェクトへの参照。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 新しいセッションでは、現在の接続オブジェクトに含まれているデータソースオブジェクトを親として使用し、データソースと同じすべての情報にアクセスできます。
 

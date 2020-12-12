@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「関数」を参照してください。
 title: to 系関数
 ms.date: 11/04/2016
 api_location:
@@ -23,12 +24,12 @@ helpviewer_keywords:
 - case, converting
 - characters, converting
 ms.assetid: f636a4c6-8c9f-4be2-baac-064f9dbae300
-ms.openlocfilehash: a54f20d6ae4dead5ba7c606fd28d456e96ff31d6
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 4e2e8993bfe3ecc85071ab53bcd38c38c9da3370
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88836079"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97326868"
 ---
 # <a name="to-functions"></a>to 系関数
 
@@ -66,7 +67,7 @@ ms.locfileid: "88836079"
 
 - ロケールに依存しない、高速バージョンの `tolower` および **toupper** です。
 
-- **Isascii (** `c` **)** と**isupper (** `c` **)** または**islower (** `c` **)** のいずれかが0以外の場合にのみ使用できます。
+- **Isascii (** `c` **)** と **isupper (** `c` **)** または **islower (** `c` **)** のいずれかが0以外の場合にのみ使用できます。
 
 - `c` が変換可能な適切な大文字または小文字の ASCII 文字でない場合、結果は未定義です。
 

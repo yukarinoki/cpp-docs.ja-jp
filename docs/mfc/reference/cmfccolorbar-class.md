@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: CMFCColorBar クラス'
 title: CMFCColorBar クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -74,12 +75,12 @@ helpviewer_keywords:
 - CMFCColorBar [MFC], SetPropList
 - CMFCColorBar [MFC], ShowCommandMessageString
 ms.assetid: 4756ee40-25a5-4cee-af7f-acab7993d1c7
-ms.openlocfilehash: ca28f8a07938e787fcf2d91d714c9dc82092194f
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: 5a2935c71a5579dddb2133f2ac6589a6bd447ef6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88561038"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97327714"
 ---
 # <a name="cmfccolorbar-class"></a>CMFCColorBar クラス
 
@@ -95,7 +96,7 @@ class CMFCColorBar : public CMFCPopupMenuBar
 
 ### <a name="protected-constructors"></a>プロテクト コンストラクター
 
-|Name|説明|
+|名前|説明|
 |----------|-----------------|
 |[CMFCColorBar:: CMFCColorBar](#cmfccolorbar)|`CMFCColorBar` オブジェクトを構築します。|
 
@@ -110,7 +111,7 @@ class CMFCColorBar : public CMFCPopupMenuBar
 |[CMFCColorBar:: EnableOtherButton](#enableotherbutton)|ユーザーがより多くの色を選択できるダイアログボックスの表示を有効または無効にします。|
 |[CMFCColorBar:: GetColor](#getcolor)|現在選択されている色を取得します。|
 |[CMFCColorBar:: GetCommandID](#getcommandid)|現在のカラーバーコントロールのコマンド ID を取得します。|
-|[CMFCColorBar:: GetHighlightedColor](#gethighlightedcolor)|カラーボタンにフォーカスがあることを示す色を取得します。つまり、ボタンが *ホット*になります。|
+|[CMFCColorBar:: GetHighlightedColor](#gethighlightedcolor)|カラーボタンにフォーカスがあることを示す色を取得します。つまり、ボタンが *ホット* になります。|
 |[CMFCColorBar:: GetHorzMargin](#gethorzmargin)|水平方向の余白を取得します。これは、左または右の色のセルとクライアント領域の境界の間のスペースです。|
 |[CMFCColorBar:: GetVertMargin](#getvertmargin)|垂直方向の余白を取得します。これは、上または下の色のセルとクライアント領域の境界の間のスペースです。|
 |[CMFCColorBar:: IsTearOff](#istearoff)|現在のカラーバーがドッキング可能かどうかを示します。|
@@ -123,7 +124,7 @@ class CMFCColorBar : public CMFCPopupMenuBar
 
 ### <a name="protected-methods"></a>プロテクト メソッド
 
-|Name|説明|
+|名前|説明|
 |----------|-----------------|
 |[CMFCColorBar:: AdjustLocations](#adjustlocations)|カラーバーコントロールのカラーボタンの位置を調整します。|
 |[CMFCColorBar:: AllowChangeTextLabels](#allowchangetextlabels)|カラーボタンのテキストラベルを変更できるかどうかを示します。|
@@ -131,7 +132,7 @@ class CMFCColorBar : public CMFCPopupMenuBar
 |[CMFCColorBar:: CalcSize](#calcsize)|レイアウトの計算プロセスの一部として、フレームワークによって呼び出されます。|
 |[CMFCColorBar:: CreatePalette](#createpalette)|指定した色の配列の色でパレットを初期化します。|
 |[CMFCColorBar:: GetColorGridSize](#getcolorgridsize)|カラーバーコントロールのグリッド内の行と列の数を計算します。|
-|[CMFCColorBar:: GetExtraHeight](#getextraheight)|**他の**ボタン、ドキュメントの色など、その他のユーザーインターフェイス要素を表示するために現在のカラーバーが必要とする追加の高さを計算します。|
+|[CMFCColorBar:: GetExtraHeight](#getextraheight)|**他の** ボタン、ドキュメントの色など、その他のユーザーインターフェイス要素を表示するために現在のカラーバーが必要とする追加の高さを計算します。|
 |[CMFCColorBar:: InitColors](#initcolors)|指定したパレットまたはシステムの既定のパレットの色を使用して、色の配列を初期化します。|
 |[CMFCColorBar:: OnKey](#onkey)|ユーザーがキーボードボタンを押したときにフレームワークによって呼び出されます。|
 |[CMFCColorBar:: OnSendCommand](#onsendcommand)|Popup コントロールの階層を閉じるために、フレームワークによって呼び出されます。|
@@ -144,7 +145,7 @@ class CMFCColorBar : public CMFCPopupMenuBar
 
 ### <a name="protected-data-members"></a>プロテクト データ メンバー
 
-|Name|説明|
+|名前|説明|
 |----------|-----------------|
 |`m_bInternal`|マウスイベントを処理するかどうかを決定するブール値フィールド。 通常、このフィールドが TRUE でカスタマイズモードが FALSE の場合、マウスイベントが処理されます。|
 |`m_bIsEnabled`|コントロールが有効かどうかを示すブール値。|
@@ -170,9 +171,9 @@ class CMFCColorBar : public CMFCPopupMenuBar
 |`m_pParentBtn`|現在のボタンの親である [Cmfccolorbutton](../../mfc/reference/cmfccolorbutton-class.md) オブジェクトへのポインター。 この値は、カラーボタンがツールバーコントロールの階層内にある場合、またはカラープロパティグリッドコントロールにある場合に重要です。|
 |`m_pParentRibbonBtn`|リボン上にあり、現在のボタンの親ボタンである [CMFCRibbonColorButton](../../mfc/reference/cmfcribboncolorbutton-class.md) オブジェクトへのポインター。 この値は、カラーボタンがツールバーコントロールの階層内にある場合、またはカラープロパティグリッドコントロールにある場合に重要です。|
 |`m_pWndPropList`|[Cmfcpropertygridctrl](../../mfc/reference/cmfcpropertygridctrl-class.md)オブジェクトへのポインター。|
-|`m_strAutoColor`|**自動**ボタンに表示されるテキストである[CString](../../atl-mfc-shared/reference/cstringt-class.md) 。 詳細については、「 [Cmfccolorbar:: Enable自動ボタン](#enableautomaticbutton)」を参照してください。|
+|`m_strAutoColor`|**自動** ボタンに表示されるテキストである [CString](../../atl-mfc-shared/reference/cstringt-class.md) 。 詳細については、「 [Cmfccolorbar:: Enable自動ボタン](#enableautomaticbutton)」を参照してください。|
 |`m_strDocColors`|[ドキュメントの色] ボタンに表示されるテキストである [CString](../../atl-mfc-shared/reference/cstringt-class.md) 。 詳細については、「 [Cmfccolorbar:: SetDocumentColors](#setdocumentcolors)」を参照してください。|
-|`m_strOtherColor`|*他の*ボタンに表示されるテキストである[CString](../../atl-mfc-shared/reference/cstringt-class.md) 。 詳細については、「 [Cmfccolorbar:: EnableOtherButton](#enableotherbutton)」を参照してください。|
+|`m_strOtherColor`|*他の* ボタンに表示されるテキストである [CString](../../atl-mfc-shared/reference/cstringt-class.md) 。 詳細については、「 [Cmfccolorbar:: EnableOtherButton](#enableotherbutton)」を参照してください。|
 
 ## <a name="remarks"></a>解説
 
@@ -227,7 +228,7 @@ class CMFCColorBar : public CMFCPopupMenuBar
 
 [CMFCColorBar](../../mfc/reference/cmfccolorbar-class.md)
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** afxcolorbar
 
@@ -344,7 +345,7 @@ CMFCColorBar(
 *lpszOtherColor*<br/>
 から *他* のボタンのテキストラベル。より多くの色の選択肢を表示するか、NULL を表示します。
 
-[その他] ボタンの標準ラベルは **より多くの色**です....
+[その他] ボタンの標準ラベルは **より多くの色** です....
 
 *lpszDocColors*<br/>
 から[ドキュメントの色] ボタンのテキストラベル。 ドキュメントの色パレットには、ドキュメントが現在使用しているすべての色が表示されます。
@@ -528,7 +529,7 @@ void EnableAutomaticButton(
 
 ### <a name="remarks"></a>解説
 
-*Lpszlabel*パラメーターが NULL の場合、または*BENABLE*パラメーターが FALSE の場合、[自動] ボタンのテキストラベルは削除されます。
+*Lpszlabel* パラメーターが NULL の場合、または *BENABLE* パラメーターが FALSE の場合、[自動] ボタンのテキストラベルは削除されます。
 
 ## <a name="cmfccolorbarenableotherbutton"></a><a name="enableotherbutton"></a> CMFCColorBar:: EnableOtherButton
 
@@ -546,7 +547,7 @@ void EnableOtherButton(
 *lpszLabel*<br/>
 から *他* のボタンのテキストラベル。より多くの色の選択肢を表示するか、NULL を表示します。
 
-このボタンの標準ラベルは **より多くの色**です....
+このボタンの標準ラベルは **より多くの色** です....
 
 *Tcolordlg*<br/>
 から[ [CMFCColorDialog](../../mfc/reference/cmfccolordialog-class.md) ] ダイアログボックスを表示する場合は TRUE。FALSE を選択すると、標準の [CColorDialog](../../mfc/reference/ccolordialog-class.md) ダイアログボックスが表示されます。 既定値は TRUE です。
@@ -581,7 +582,7 @@ CSize GetColorGridSize(BOOL bVertDock) const;
 
 ### <a name="return-value"></a>戻り値
 
-[CSize](../../atl-mfc-shared/reference/csize-class.md) `cx` 列の数を格納し、そのコンポーネントに行の数を格納している、CSize オブジェクト `cy` 。
+[](../../atl-mfc-shared/reference/csize-class.md) `cx` 列の数を格納し、そのコンポーネントに行の数を格納している、CSize オブジェクト `cy` 。
 
 ## <a name="cmfccolorbargetcommandid"></a><a name="getcommandid"></a> CMFCColorBar:: GetCommandID
 
@@ -601,7 +602,7 @@ UINT GetCommandID() const;
 
 ## <a name="cmfccolorbargetextraheight"></a><a name="getextraheight"></a> CMFCColorBar:: GetExtraHeight
 
-**他の**ボタンやドキュメントの色など、その他のユーザーインターフェイス要素を表示するために現在のカラーバーが必要とする追加の高さを計算します。
+**他の** ボタンやドキュメントの色など、その他のユーザーインターフェイス要素を表示するために現在のカラーバーが必要とする追加の高さを計算します。
 
 ```
 int GetExtraHeight(int nNumColumns) const;
@@ -618,7 +619,7 @@ int GetExtraHeight(int nNumColumns) const;
 
 ## <a name="cmfccolorbargethighlightedcolor"></a><a name="gethighlightedcolor"></a> CMFCColorBar:: GetHighlightedColor
 
-カラーボタンにフォーカスがあることを示す色を取得します。つまり、ボタンが *ホット*になります。
+カラーボタンにフォーカスがあることを示す色を取得します。つまり、ボタンが *ホット* になります。
 
 ```
 COLORREF GetHighlightedColor() const;

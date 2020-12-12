@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: short_vector 構造'
 title: short_vector 構造体
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,16 +7,16 @@ f1_keywords:
 - AMP_SHORT_VECTORS/short_vector
 - AMP_SHORT_VECTORS/Concurrency::graphics::short_vector::short_vector Constructor
 ms.assetid: e4f50b8f-1150-437d-b58c-79c5fb883708
-ms.openlocfilehash: fc2864477da80885b18dabb08b9ccbee30f31387
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 54879df686210606c99a1ae5b9ccc7a31f7fca25
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81374749"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97327604"
 ---
 # <a name="short_vector-structure"></a>short_vector 構造体
 
-short_vectorは、一般的に短いベクトルをプログラミングするのに役立つメタプログラミング定義を提供します。
+short_vector には、短いベクターを一般的にプログラミングするのに役立つメタプログラミング定義が用意されています。
 
 ## <a name="syntax"></a>構文
 
@@ -99,13 +100,13 @@ struct short_vector<double, 4>;
 
 `short_vector`
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-**ヘッダー:** amp_short_vectors.h
+**ヘッダー:** amp_short_vectors
 
-**名前空間:** 同時実行::グラフィックス
+**名前空間:** Concurrency:: graphics
 
-## <a name="short_vectorshort_vector-constructor"></a><a name="ctor"></a>short_vector::short_vectorコンストラクタ
+## <a name="short_vectorshort_vector-constructor"></a><a name="ctor"></a> short_vector:: short_vector コンストラクター
 
 ```cpp
 short_vector();

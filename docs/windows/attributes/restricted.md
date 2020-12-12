@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: 制限付き'
 title: restricted (C++ COM 属性)
 ms.date: 10/03/2018
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - restricted attribute
 ms.assetid: 504a96be-b904-4269-8be1-920feba201b4
-ms.openlocfilehash: a1f543c4d8edac751195d37414c030dfe2df94fa
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 8c0dc33d1ae7cff3625f1a938cac05c7ac72f474
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88846356"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97329625"
 ---
 # <a name="restricted"></a>restricted
 
@@ -61,7 +62,7 @@ class c : public a, public b
 };
 ```
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 | 属性コンテキスト | 値 |
 |-|-|

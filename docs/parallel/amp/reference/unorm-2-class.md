@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: unorm_2 クラス'
 title: unorm_2 クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -28,12 +29,12 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::unnorm_2::g
 - amp_short_vectors/Concurrency::graphics::unnorm_2::operator++
 ms.assetid: 62e88ea7-e29f-4f62-95ce-61a1f39f5e34
-ms.openlocfilehash: 325a1532a079c8eff9c8dcdc5410dcbfe58fb914
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: 1a91c1c203466f6ece535d45d5c2c828c8150dbd
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77126203"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97326377"
 ---
 # <a name="unorm_2-class"></a>unorm_2 クラス
 
@@ -49,59 +50,59 @@ class unorm_2;
 
 ### <a name="public-typedefs"></a>パブリック typedef
 
-|Name|説明|
+|名前|説明|
 |----------|-----------------|
 |`value_type`||
 
 ### <a name="public-constructors"></a>パブリック コンストラクター
 
-|Name|説明|
+|名前|説明|
 |----------|-----------------|
 |[unorm_2 コンストラクター](#ctor)|オーバーロードされます。 既定のコンストラクター。すべての要素を 0 で初期化します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
-|Name|説明|
+|名前|説明|
 |----------|-----------------|
-|unorm_2::get_x||
-|unorm_2::get_xy||
-|unorm_2::get_y||
-|unorm_2::get_yx||
-|unorm_2::ref_g||
-|unorm_2::ref_r||
-|unorm_2::ref_x||
-|unorm_2::ref_y||
-|unorm_2::set_x||
-|unorm_2::set_xy||
-|unorm_2::set_y||
-|unorm_2::set_yx||
+|unorm_2:: get_x||
+|unorm_2:: get_xy||
+|unorm_2:: get_y||
+|unorm_2:: get_yx||
+|unorm_2:: ref_g||
+|unorm_2:: ref_r||
+|unorm_2:: ref_x||
+|unorm_2:: ref_y||
+|unorm_2:: set_x||
+|unorm_2:: set_xy||
+|unorm_2:: set_y||
+|unorm_2:: set_yx||
 
 ### <a name="public-operators"></a>パブリック演算子
 
-|Name|説明|
+|名前|説明|
 |----------|-----------------|
-|unorm_2::operator--||
-|unorm_2::operator*=||
-|unorm_2::operator/=||
+|unorm_2:: operator--||
+|unorm_2:: operator * =||
+|unorm_2:: operator/=||
 |unorm_2:: operator + +||
-|unorm_2::operator+=||
-|unorm_2::operator=||
-|unorm_2::operator-=||
+|unorm_2:: operator + =||
+|unorm_2:: operator =||
+|unorm_2:: operator-=||
 
 ### <a name="public-constants"></a>パブリック定数
 
-|Name|説明|
+|名前|説明|
 |----------|-----------------|
 |unorm_2::size 定数||
 
 ### <a name="public-data-members"></a>パブリック データ メンバー
 
-|Name|説明|
+|名前|説明|
 |----------|-----------------|
-|unorm_2::g||
+|unorm_2:: g||
 |unorm_2:: gr||
-|unorm_2::r||
-|unorm_2::rg||
+|unorm_2:: r||
+|unorm_2:: rg||
 |unorm_2:: x||
 |unorm_2:: xy||
 |unorm_2:: y||
@@ -111,13 +112,13 @@ class unorm_2;
 
 `unorm_2`
 
-## <a name="requirements"></a>［要件］
+## <a name="requirements"></a>要件
 
 **ヘッダー:** amp_short_vectors
 
 **名前空間:** Concurrency:: graphics
 
-## <a name="ctor"></a>unorm_2
+## <a name="unorm_2"></a><a name="ctor"></a> unorm_2
 
 既定のコンストラクター。すべての要素を 0 で初期化します。
 
@@ -182,12 +183,12 @@ explicit inline unorm_2(
 *_Other*<br/>
 の初期化に使用されるオブジェクト。
 
-## <a name="unorm_2__size"></a>幅
+## <a name="size"></a><a name="unorm_2__size"></a> 幅
 
 ```cpp
 static const int size = 2;
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [Concurrency::graphics 名前空間](concurrency-graphics-namespace.md)

@@ -1,15 +1,16 @@
 ---
+description: '詳細情報: 出力ファイルストリームのメンバー関数'
 title: 出力ファイル ストリームのメンバー関数
 ms.date: 11/04/2016
 helpviewer_keywords:
 - output streams [C++], member functions
 ms.assetid: 38aaf710-8035-4a34-a0c4-123a5327f28a
-ms.openlocfilehash: f20ed4e238d23211a6eeec4a3091daeb4d02a9b3
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: f2e9bde7bcac8ebccc668c68f222b495b53e0889
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87217676"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97327567"
 ---
 # <a name="output-file-stream-member-functions"></a>出力ファイル ストリームのメンバー関数
 
@@ -104,9 +105,9 @@ int main( )
 
 |機能|戻り値|
 |--------------|------------------|
-|[問題あり](basic-ios-class.md#bad)|**`true`** 回復不可能なエラーがある場合は、を返します。|
+|[不良](basic-ios-class.md#bad)|**`true`** 回復不可能なエラーがある場合は、を返します。|
 |[オーバー](basic-ios-class.md#fail)|回復不可能なエラー、または **`true`** 変換エラーなどの "予期される" 条件が存在する場合、またはファイルが見つからない場合は、を返します。 多くの場合、処理は、ゼロ引数を指定してを呼び出した後に再開でき `clear` ます。|
-|[よし](basic-ios-class.md#good)|**`true`** エラー状態 (回復不可能またはそれ以外) が存在せず、ファイルの終わりフラグが設定されていない場合は、を返します。|
+|[good](basic-ios-class.md#good)|**`true`** エラー状態 (回復不可能またはそれ以外) が存在せず、ファイルの終わりフラグが設定されていない場合は、を返します。|
 |[eof](basic-ios-class.md#eof)|**`true`** ファイルの終わりの条件でを返します。|
 |[オフ](basic-ios-class.md#clear)|内部エラー状態を設定します。 既定の引数を指定して呼び出すと、すべてのエラー ビットがクリアされます。|
 |rdstate(基本-ios-クラス md # rdstate)|現在のエラー状態を返します。|

@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: last_is'
 title: last_is (C++ COM 属性)
 ms.date: 10/02/2018
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - last_is attribute
 ms.assetid: 9e045ac0-fa38-4249-af55-67bde5d0a58c
-ms.openlocfilehash: ad82a5a9688dfbc6c5eb59883be00e8dc39e1942
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 41f436d1cd4317385d702d8763d69e6df7d07849
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88840883"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97327536"
 ---
 # <a name="last_is"></a>last_is
 
@@ -36,7 +37,7 @@ ms.locfileid: "88840883"
 
 配列のセクションを指定する方法の例については、「 [first_is](first-is.md) 」を参照してください。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 | 属性コンテキスト | 値 |
 |-|-|

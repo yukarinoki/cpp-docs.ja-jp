@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: v1_enum'
 title: v1_enum (C++ COM 属性)
 ms.date: 10/02/2018
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - v1_enum attribute
 ms.assetid: 2fe92d92-81b9-4a1c-b6ce-437d0eb770ca
-ms.openlocfilehash: 6529a32b0bfe2de09191e9cced8f6bd98e7ffdcc
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: c096ec78971e8980b68572c7f0bbb4510d03d3d1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88832985"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97327201"
 ---
 # <a name="v1_enum"></a>v1_enum
 
@@ -29,7 +30,7 @@ ms.locfileid: "88832985"
 
 ## <a name="example"></a>例
 
-次のコードは、 **v1_enum**の使用方法を示しています。
+次のコードは、 **v1_enum** の使用方法を示しています。
 
 ```cpp
 // cpp_attr_ref_v1_enum.cpp
@@ -42,7 +43,7 @@ enum eList {
 };
 ```
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 | 属性コンテキスト | 値 |
 |-|-|

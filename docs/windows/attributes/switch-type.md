@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: switch_type'
 title: switch_type (C++ COM 属性)
 ms.date: 10/02/2018
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - switch_type attribute
 ms.assetid: e24544dc-b3bc-48ae-b249-f967db49271e
-ms.openlocfilehash: 0c39aa442c9d4eaf3a482e411cda762fe0cc34b3
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: e291524d00afff89aa17634307426ef62cd40f4b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88838530"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97327265"
 ---
 # <a name="switch_type"></a>switch_type
 
@@ -55,9 +56,9 @@ struct SizedValue2 {
 
 ## <a name="example"></a>例
 
-**Switch_type**の使用例については、[大文字と小文字](case-cpp.md)の例を参照してください。
+**Switch_type** の使用例については、[大文字と小文字](case-cpp.md)の例を参照してください。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 | 属性コンテキスト | 値 |
 |-|-|

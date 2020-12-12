@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「CMFCCmdUsageCount クラス」を参照してください。
 title: CMFCCmdUsageCount クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -20,12 +21,12 @@ helpviewer_keywords:
 - CMFCCmdUsageCount [MFC], Serialize
 - CMFCCmdUsageCount [MFC], SetOptions
 ms.assetid: 9c33b783-37c0-43ea-9f31-3c75e246c841
-ms.openlocfilehash: 95dca548856510cd8b06914932cc46435c28399d
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 40d09e96672cafb022baab98787fe10b1258048b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88834278"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97327722"
 ---
 # <a name="cmfccmdusagecount-class"></a>CMFCCmdUsageCount クラス
 
@@ -79,7 +80,7 @@ class CMFCCmdUsageCount : public CObject
 
 [CMFCCmdUsageCount](../../mfc/reference/cmfccmdusagecount-class.md)
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** afxcmdusagecount
 
@@ -221,12 +222,12 @@ static BOOL __stdcall SetOptions(
 
 ### <a name="remarks"></a>解説
 
-このメソッドは、共有 `CMFCCmdUsageCount` クラスのデータ `m_nStartCount` メンバー `m_nMinUsagePercentage` と *Nstartcount* と *nstartcount 割合*をそれぞれ設定します。 `m_nStartCount` は、 [Cmfccmdusagecount:: HasEnoughInformation](#hasenoughinformation) メソッドによって使用され、このオブジェクトによって追跡データの最小量が収集されたかどうかを判断します。 `m_nMinUsagePercentage` は、指定されたコマンドが頻繁に使用されるかどうかを判断するために、 [Cmfccmdusagecount:: Isfreqeunに](#isfreqeuntlyusedcmd) 使用される cmd メソッドによって使用されます。
+このメソッドは、共有 `CMFCCmdUsageCount` クラスのデータ `m_nStartCount` メンバー `m_nMinUsagePercentage` と *Nstartcount* と *nstartcount 割合* をそれぞれ設定します。 `m_nStartCount` は、 [Cmfccmdusagecount:: HasEnoughInformation](#hasenoughinformation) メソッドによって使用され、このオブジェクトによって追跡データの最小量が収集されたかどうかを判断します。 `m_nMinUsagePercentage` は、指定されたコマンドが頻繁に使用されるかどうかを判断するために、 [Cmfccmdusagecount:: Isfreqeunに](#isfreqeuntlyusedcmd) 使用される cmd メソッドによって使用されます。
 
 デバッグビルドでは、 *Nminの値* が100以上の場合、このメソッドはアサーションエラーを生成します。
 
 ## <a name="see-also"></a>関連項目
 
 [階層図](../../mfc/hierarchy-chart.md)<br/>
-[クラス](../../mfc/reference/mfc-classes.md)<br/>
+[Classes](../../mfc/reference/mfc-classes.md)<br/>
 [CMFCToolBar クラス](../../mfc/reference/cmfctoolbar-class.md)

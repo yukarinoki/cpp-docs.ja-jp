@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: コンパイラの警告 (レベル 2) C4146'
 title: コンパイラの警告 (レベル 2) C4146
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4146
 ms.assetid: d6c31ab1-3120-40d5-8d80-32b5f7046e32
-ms.openlocfilehash: b945853a3d32f91c821d6fa174371df39bf183b3
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 85aebd34ed83ef14e306f7512689ccdfba713eec
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87218157"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97326505"
 ---
 # <a name="compiler-warning-level-2-c4146"></a>コンパイラの警告 (レベル 2) C4146
 
@@ -21,7 +22,7 @@ ms.locfileid: "87218157"
 
 これは事実上、プログラマが最小の整数値 (-2147483648) を表す場合に発生します。 式は2つの段階で処理されるため、この値を-2147483648 として書き込むことはできません。
 
-1. 数値2147483648が評価されます。 この値は最大整数値2147483647を超えているため、2147483648の型は[int](../../c-language/integer-types.md)ではなくに **`unsigned int`** なります。
+1. 数値2147483648が評価されます。 この値は最大整数値2147483647を超えているため、2147483648の型は [int](../../c-language/integer-types.md)ではなくに **`unsigned int`** なります。
 
 1. 単項マイナスは、符号なしの結果を使用して値に適用されます。これは2147483648にもなります。
 

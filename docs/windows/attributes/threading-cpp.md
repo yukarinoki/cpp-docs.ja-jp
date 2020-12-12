@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: スレッド処理 (C++)'
 title: スレッド処理 (C++ COM 属性)
 ms.date: 10/02/2018
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - threading attribute
 ms.assetid: 9b558cd6-fbf0-4602-aed5-31c068550ce3
-ms.openlocfilehash: 6f83dca442b6508207a4123fa918fc5078bdf664
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: e46a3720280fe7ee7b9debae98e3270825e8db40
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88840818"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97327246"
 ---
 # <a name="threading-c"></a>threading (C++)
 
@@ -42,17 +43,17 @@ Optional次のいずれかのスレッドモデル:
 
 ## <a name="remarks"></a>Remarks
 
-**スレッド**化 C++ 属性は、生成された .idl ファイルには表示されませんが、COM オブジェクトの実装で使用されます。
+**スレッド** 化 C++ 属性は、生成された .idl ファイルには表示されませんが、COM オブジェクトの実装で使用されます。
 
 ATL プロジェクトでは、 [coclass](coclass.md) 属性も存在する場合、 *モデル* で指定されたスレッドモデルは、属性によって挿入される [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md) クラスにテンプレートパラメーターとして渡され `coclass` ます。
 
-**スレッド**属性は、 [event_source](event-source.md)へのアクセスも保護します。
+**スレッド** 属性は、 [event_source](event-source.md)へのアクセスも保護します。
 
 ## <a name="example"></a>例
 
-**スレッド処理**の使用例については、[ライセンス](licensed.md)の例を参照してください。
+**スレッド処理** の使用例については、[ライセンス](licensed.md)の例を参照してください。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 | 属性コンテキスト | 値 |
 |-|-|

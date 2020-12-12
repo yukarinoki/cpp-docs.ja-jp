@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「期間の短縮、_difftime32、_difftime64
 title: difftime、_difftime32、_difftime64
 ms.date: 4/2/2020
 api_name:
@@ -38,12 +39,12 @@ helpviewer_keywords:
 - _difftime64 function
 - difftime32 function
 ms.assetid: 4cc0ac2b-fc7b-42c0-8283-8c9d10c566d0
-ms.openlocfilehash: e8d9ed3e33935c8e6c788380c02b9ae179dd06e8
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 3f2c4f713f5e4dd667bd4e0a557170e9d23e6700
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82914777"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97327021"
 ---
 # <a name="difftime-_difftime32-_difftime64"></a>difftime、_difftime32、_difftime64
 
@@ -67,23 +68,23 @@ double _difftime64( __time64_t timeEnd, __time64_t timeStart );
 
 ## <a name="return-value"></a>戻り値
 
-[**時間**] を指定すると、 *Timestart*から*timestart*までの経過時間を秒単位で返します。 返される値は、倍精度浮動小数点数です。 戻り値が 0 の場合は、エラーを示します。
+[**時間**] を指定すると、 *Timestart* から *timestart* までの経過時間を秒単位で返します。 返される値は、倍精度浮動小数点数です。 戻り値が 0 の場合は、エラーを示します。
 
 ## <a name="remarks"></a>解説
 
-**Diffgram**関数は、指定された2つの Time 値*Timestart*と*timestart*の差を計算します。
+**Diffgram** 関数は、指定された2つの Time 値 *Timestart* と *timestart* の差を計算します。
 
-指定された時刻値は、 **time_t**の範囲内に収まる必要があります。 **time_t**は64ビット値です。 したがって、範囲の終わりは、2038 年 1 月 18 日 23 時 59 分 59 秒 (UTC) から、3000 年 12 月 31 日 23 時 59 分 59 秒に拡張されました。 **Time_t**の範囲の下限は、1970年1月1日午前0時になります。
+指定された時刻値は、 **time_t** の範囲内に収まる必要があります。 **time_t** は64ビット値です。 したがって、範囲の終わりは、2038 年 1 月 18 日 23 時 59 分 59 秒 (UTC) から、3000 年 12 月 31 日 23 時 59 分 59 秒に拡張されました。 **Time_t** の範囲の下限は、1970年1月1日午前0時になります。
 
-**diffgram**は、 **_USE_32BIT_TIME_T**が定義されているかどうかに応じて **_difftime32**または **_difftime64**のいずれかに評価されるインライン関数です。 _difftime32 と _difftime64 を直接使って、特定のサイズの時刻型の使用を強制できます。
+**diffgram** は、 **_USE_32BIT_TIME_T** が定義されているかどうかに応じて **_difftime32** または **_difftime64** のいずれかに評価されるインライン関数です。 _difftime32 と _difftime64 を直接使って、特定のサイズの時刻型の使用を強制できます。
 
-これらの関数では、パラメーターの検証が行われます。 どちらかのパラメーターが 0 または負の場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているとおり、無効パラメーター ハンドラーが呼び出されます。 実行の継続が許可された場合、これらの関数は0を返し、 **errno**を**EINVAL**に設定します。
+これらの関数では、パラメーターの検証が行われます。 どちらかのパラメーターが 0 または負の場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているとおり、無効パラメーター ハンドラーが呼び出されます。 実行の継続が許可された場合、これらの関数は0を返し、 **errno** を **EINVAL** に設定します。
 
 既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**difftime**|\<time.h>|
 |**_difftime32**|\<time.h>|
@@ -149,6 +150,6 @@ Program takes      3 seconds.
 
 ## <a name="see-also"></a>関連項目
 
-[浮動小数点サポート](../../c-runtime-library/floating-point-support.md)<br/>
+[浮動小数点のサポート](../../c-runtime-library/floating-point-support.md)<br/>
 [時間管理](../../c-runtime-library/time-management.md)<br/>
 [time、_time32、_time64](time-time32-time64.md)<br/>

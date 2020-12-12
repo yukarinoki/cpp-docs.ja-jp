@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: terminate (CRT)'
 title: terminate (CRT)
 ms.date: 4/2/2020
 api_name:
@@ -27,16 +28,16 @@ helpviewer_keywords:
 - terminate function
 - exception handling, termination
 ms.assetid: 90e67402-08e9-4b2a-962c-66a8afd3ccb4
-ms.openlocfilehash: 1ec4e27096dd6b5fea089e21c95022542d7adc82
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 8370c1f1aff54b5286ad4472b053275e3468a8d2
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82912221"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97326169"
 ---
 # <a name="terminate-crt"></a>terminate (CRT)
 
-**Set_terminate**を使用して、 [abort](abort.md)または指定した関数を呼び出します。
+**Set_terminate** を使用して、 [abort](abort.md)または指定した関数を呼び出します。
 
 ## <a name="syntax"></a>構文
 
@@ -46,7 +47,7 @@ void terminate( void );
 
 ## <a name="remarks"></a>解説
 
-**Terminate**関数は、C++ 例外処理で使用され、次の場合に呼び出されます。
+**Terminate** 関数は、C++ 例外処理で使用され、次の場合に呼び出されます。
 
 - スローされた C++ 例外と一致する catch ハンドラーが見つからない。
 
@@ -54,13 +55,13 @@ void terminate( void );
 
 - 例外をスローした後でスタックが破損した。
 
-**terminate**呼び出しは、既定で[中止](abort.md)されます。 独自の終了関数を記述し、関数の名前を引数として**set_terminate**を呼び出すことによって、この既定値を変更できます。 **terminate**は、 **set_terminate**の引数として渡された最後の関数を呼び出します。 詳細については、「[Unhandled C++ Exceptions](../../cpp/unhandled-cpp-exceptions.md)」(ハンドルされない C++ 例外) を参照してください。
+**terminate** 呼び出しは、既定で [中止](abort.md) されます。 独自の終了関数を記述し、関数の名前を引数として **set_terminate** を呼び出すことによって、この既定値を変更できます。 **terminate** は、 **set_terminate** の引数として渡された最後の関数を呼び出します。 詳細については、「[Unhandled C++ Exceptions](../../cpp/unhandled-cpp-exceptions.md)」(ハンドルされない C++ 例外) を参照してください。
 
 既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**解約**|\<eh.h>|
 

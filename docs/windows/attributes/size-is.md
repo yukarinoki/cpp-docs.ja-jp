@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: size_is'
 title: size_is (C++ COM 属性)
 ms.date: 10/02/2018
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - size_is attribute
 ms.assetid: 70192d09-f6c5-4d52-b3fe-303f8cb10aa5
-ms.openlocfilehash: dd0ec8622dfffdf9a0578c86d75d313042cc3c01
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: f61124dc286de1c8893f093454c921b4d6e46037
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88841767"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97329607"
 ---
 # <a name="size_is"></a>size_is
 
@@ -36,7 +37,7 @@ ms.locfileid: "88841767"
 
 配列のセクションを指定する方法の例については、 [first_is](first-is.md) の例を参照してください。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 | 属性コンテキスト | 値 |
 |-|-|

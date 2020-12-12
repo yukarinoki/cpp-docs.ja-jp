@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「time、_time32、_time64」を参照してください。
 title: time、_time32、_time64
 ms.date: 11/06/2018
 api_name:
@@ -36,12 +37,12 @@ helpviewer_keywords:
 - system time
 - time64 function
 ms.assetid: 280e00f2-2b93-4ece-94cd-e048484c6cc7
-ms.openlocfilehash: 02dc7f250fe26d9ed7abfd89ca9a4c2163312e6d
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 8602e485c15b11b8f4e740ceead382aa88f8f5f7
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70946087"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97326155"
 ---
 # <a name="time-_time32-_time64"></a>time、_time32、_time64
 
@@ -64,19 +65,19 @@ __time64_t _time64( __time64_t *destTime );
 
 1970年1月1日午前0時以降の経過時間を秒単位で返します。エラーの場合は-1 を返します。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-**時刻**関数は、システムクロックに従って、世界協定時刻 (UTC) の午前0時 (00:00:00 1970) からの経過秒数を返します。 戻り値は、 *Desttime*によって指定された場所に格納されます。 このパラメーターは**NULL**にすることができます。この場合、戻り値は格納されません。
+**時刻** 関数は、システムクロックに従って、世界協定時刻 (UTC) の午前0時 (00:00:00 1970) からの経過秒数を返します。 戻り値は、 *Desttime* によって指定された場所に格納されます。 このパラメーターは **NULL** にすることができます。この場合、戻り値は格納されません。
 
-**time**は **_time64**のラッパーであり、既定では **__time64_t**に**相当します**。 以前の32ビットの**time_t**として**time_t**を解釈するようにコンパイラに強制する必要がある場合は、 **_USE_32BIT_TIME_T**を定義できます。 ただし、これは勧められていません。2038 年 1 月 18 日以降、64 ビット プラットフォームでは、このマクロをアプリケーションで使用することはできなくなり、エラーの原因となるためです。
+**time** は **_time64** のラッパーであり、既定では **__time64_t** と同じ **time_t** です。 以前の32ビット **time_t** として **time_t** を解釈するようにコンパイラに強制する必要がある場合は **_USE_32BIT_TIME_T** を定義できます。 ただし、これは勧められていません。2038 年 1 月 18 日以降、64 ビット プラットフォームでは、このマクロをアプリケーションで使用することはできなくなり、エラーの原因となるためです。
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチン|必須の C ヘッダー|必須の C++ ヘッダー|
+|ルーチンによって返される値|必須の C ヘッダー|必須の C++ ヘッダー|
 |-------|------|---------------------|
-|**time**  **、\_time32**、 **time64 \_**|\<time.h>|\<ctime > また\<は time .h >|
+|**time**、 **\_ time32**、 **\_ time64**|\<time.h>|\<ctime> または \<time.h>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
 ## <a name="example"></a>例
 

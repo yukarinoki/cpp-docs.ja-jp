@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「コンパイラエラー C2061」を参照してください。
 title: コンパイラエラー C2061
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2061
 ms.assetid: b0e61c0c-a205-4820-b9aa-301d6c6fe6eb
-ms.openlocfilehash: 1e1b13960c84d4e03c6316c451c690f8b5a6236e
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: e857f4c4de90fadecdd7b7062306391b4222bcf4
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87212866"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97328725"
 ---
 # <a name="compiler-error-c2061"></a>コンパイラエラー C2061
 
@@ -21,7 +22,7 @@ ms.locfileid: "87212866"
 
 初期化子は、かっこで囲むことができます。 この問題を回避するには、宣言子をかっこで囲むか、をに設定し **`typedef`** ます。
 
-このエラーは、コンパイラがクラステンプレート引数として式を検出した場合にも発生する可能性があります。型であることをコンパイラに通知するには、 [typename](../../cpp/typename.md)を使用します。
+このエラーは、コンパイラがクラステンプレート引数として式を検出した場合にも発生する可能性があります。型であることをコンパイラに通知するには、 [typename](../../cpp/typename.md) を使用します。
 
 次の例では、C2061 が生成されます。
 
@@ -34,7 +35,7 @@ template < A a >   // C2061
 class c{};
 ```
 
-C2061 は、インスタンス名を[typeid](../../extensions/typeid-cpp-component-extensions.md)に渡すと発生する可能性があります。
+C2061 は、インスタンス名を [typeid](../../extensions/typeid-cpp-component-extensions.md)に渡すと発生する可能性があります。
 
 ```cpp
 // C2061b.cpp

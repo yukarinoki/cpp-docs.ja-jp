@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: uidefault'
 title: uidefault (C++ COM 属性)
 ms.date: 10/02/2018
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - uidefault attribute
 ms.assetid: 200de0e0-2e34-40a2-bae4-8d485a62264d
-ms.openlocfilehash: 70f54c9d3e6aaa46aef08d109e8682989e382120
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: a173679ebdecf31b475fb276741a5ac217cab410
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88843067"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97329531"
 ---
 # <a name="uidefault"></a>uidefault
 
@@ -29,7 +30,7 @@ ms.locfileid: "88843067"
 
 ## <a name="example"></a>例
 
-次のコードは、 **uidefault**のサンプルを示しています。
+次のコードは、 **uidefault** のサンプルを示しています。
 
 ```cpp
 // cpp_attr_ref_uidefault.cpp
@@ -48,7 +49,7 @@ __interface ICustom{
 };
 ```
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 | 属性コンテキスト | 値 |
 |-|-|

@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: CMFCColorButton クラス'
 title: CMFCColorButton クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -44,12 +45,12 @@ helpviewer_keywords:
 - CMFCColorButton [MFC], UpdateColor
 - CMFCColorButton [MFC], m_bEnabledInCustomizeMode
 ms.assetid: 9fdf34ae-4cc5-4c5e-9d89-1c50e8a73699
-ms.openlocfilehash: 7abe37969799d7fcd78d525a5ec1c6faa9d876ee
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: b3f3e40f1e52c1a387563fde2aa1027046d557f3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88560999"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97327700"
 ---
 # <a name="cmfccolorbutton-class"></a>CMFCColorButton クラス
 
@@ -74,7 +75,7 @@ class CMFCColorButton : public CMFCButton
 |名前|説明|
 |----------|-----------------|
 |[CMFCColorButton:: Enable自動ボタン](#enableautomaticbutton)|通常の色のボタンの上にある [自動] ボタンを有効または無効にします。 ([標準システム] 自動ボタンは [ **自動**] というラベルが付いています)。|
-|[CMFCColorButton:: EnableOtherButton](#enableotherbutton)|通常の色のボタンの下に配置される "その他" ボタンを有効または無効にします。 (標準システムの [その他] ボタンには、 **より多くの色**が付けられています)。|
+|[CMFCColorButton:: EnableOtherButton](#enableotherbutton)|通常の色のボタンの下に配置される "その他" ボタンを有効または無効にします。 (標準システムの [その他] ボタンには、 **より多くの色** が付けられています)。|
 |[CMFCColorButton:: Get自動カラー](#getautomaticcolor)|現在の自動色を取得します。|
 |[CMFCColorButton:: GetColor](#getcolor)|ボタンの色を取得します。|
 |[CMFCColorButton:: SetColor](#setcolor)|ボタンの色を設定します。|
@@ -86,7 +87,7 @@ class CMFCColorButton : public CMFCButton
 
 ### <a name="protected-methods"></a>プロテクト メソッド
 
-|Name|説明|
+|名前|説明|
 |----------|-----------------|
 |[CMFCColorButton:: Isdrawxp テーマ](#isdrawxptheme)|現在の色のボタンを Windows XP の視覚スタイルで表示するかどうかを示します。|
 |[CMFCColorButton:: OnDraw](#ondraw)|ボタンのイメージを表示するためにフレームワークによって呼び出されます。|
@@ -98,7 +99,7 @@ class CMFCColorButton : public CMFCButton
 
 ### <a name="data-members"></a>データ メンバー
 
-|Name|説明|
+|名前|説明|
 |----------|-----------------|
 |`m_bAltColorDlg`|ブール値。 TRUE の場合、[*その他*] ボタンがクリックされたときに [ [CMFCColorDialog](../../mfc/reference/cmfccolordialog-class.md) color] ダイアログボックスが表示されます。 FALSE の場合は、[システムカラー] ダイアログボックスが表示されます。 既定値は TRUE です。 詳細については、「 [Cmfccolorbutton:: EnableOtherButton](#enableotherbutton)」を参照してください。|
 |`m_bAutoSetFocus`|ブール値。 TRUE の場合、フレームワークはメニューが表示されるときにカラーメニューにフォーカスを設定します。 FALSE の場合はフォーカスを変更しません。 既定値は TRUE です。|
@@ -116,9 +117,9 @@ class CMFCColorButton : public CMFCButton
 
 ## <a name="remarks"></a>解説
 
-既定では、 `CMFCColorButton` クラスは [カラーピッカー] ダイアログボックスを開くプッシュボタンとして動作します。 [カラーピッカー] ダイアログボックスには、小さいカラーボタンの配列と、カスタムカラーピッカーを表示する "その他" のボタンが含まれています。 (標準システムの [その他] ボタンには、 **より多くの色**が付けられています)。ユーザーが新しい色を選択すると、オブジェクトにはその `CMFCColorButton` 変更が反映され、選択した色が表示されます。
+既定では、 `CMFCColorButton` クラスは [カラーピッカー] ダイアログボックスを開くプッシュボタンとして動作します。 [カラーピッカー] ダイアログボックスには、小さいカラーボタンの配列と、カスタムカラーピッカーを表示する "その他" のボタンが含まれています。 (標準システムの [その他] ボタンには、 **より多くの色** が付けられています)。ユーザーが新しい色を選択すると、オブジェクトにはその `CMFCColorButton` 変更が反映され、選択した色が表示されます。
 
-色ボタンコントロールを作成するには、コード内で直接作成するか、 **ClassWizard** ツールとダイアログボックステンプレートを使用します。 カラーボタンコントロールを直接作成する場合は、 `CMFCColorButton` アプリケーションに変数を追加し、オブジェクトのコンストラクターとメソッドを呼び出し `Create` `CMFCColorButton` ます。 **ClassWizard**を使用する場合は、 `CButton` アプリケーションに変数を追加し、変数の型をからに変更し `CButton` `CMFCColorButton` ます。
+色ボタンコントロールを作成するには、コード内で直接作成するか、 **ClassWizard** ツールとダイアログボックステンプレートを使用します。 カラーボタンコントロールを直接作成する場合は、 `CMFCColorButton` アプリケーションに変数を追加し、オブジェクトのコンストラクターとメソッドを呼び出し `Create` `CMFCColorButton` ます。 **ClassWizard** を使用する場合は、 `CButton` アプリケーションに変数を追加し、変数の型をからに変更し `CButton` `CMFCColorButton` ます。
 
 フレームワークがイベントハンドラーを呼び出すと、[カラーピッカー] ダイアログボックス ( [Cmfccolorbar クラス](../../mfc/reference/cmfccolorbar-class.md)) が[Cmfccolorbar:: OnShowColorPopup](#onshowcolorpopup)メソッドによって表示されます。 `OnLButtonDown` [Cmfccolorbutton:: OnShowColorPopup](#onshowcolorpopup)メソッドをオーバーライドして、独自の色の選択をサポートすることができます。
 
@@ -131,7 +132,7 @@ class CMFCColorButton : public CMFCButton
 [!code-cpp[NVC_MFC_StatusBarDemo#10](../../mfc/reference/codesnippet/cpp/cmfccolorbutton-class_1.h)]
 [!code-cpp[NVC_MFC_StatusBarDemo#11](../../mfc/reference/codesnippet/cpp/cmfccolorbutton-class_2.cpp)]
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** afxcolorbutton
 
@@ -474,7 +475,7 @@ virtual void UpdateColor(COLORREF color);
 ## <a name="see-also"></a>関連項目
 
 [階層図](../../mfc/hierarchy-chart.md)<br/>
-[クラス](../../mfc/reference/mfc-classes.md)<br/>
+[Classes](../../mfc/reference/mfc-classes.md)<br/>
 [CMFCButton クラス](../../mfc/reference/cmfcbutton-class.md)<br/>
 [CMFCColorBar クラス](../../mfc/reference/cmfccolorbar-class.md)<br/>
 [CMFCColorButton:: OnShowColorPopup](#onshowcolorpopup)<br/>

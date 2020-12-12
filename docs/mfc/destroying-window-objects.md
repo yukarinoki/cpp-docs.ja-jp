@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: ウィンドウオブジェクトの破棄'
 title: ウィンドウ オブジェクトの破棄
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - window objects [MFC], destroying
 - window objects [MFC], removing
 ms.assetid: 3241fea0-c614-4a25-957d-20f21bd5fd0c
-ms.openlocfilehash: 22b483c1005931b229453ae229935c0e716ab726
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: c2837ba6b9f568d7f6ab0175ae3ad99c31ccdc7e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84621863"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97327814"
 ---
 # <a name="destroying-window-objects"></a>ウィンドウ オブジェクトの破棄
 
@@ -22,7 +23,7 @@ ms.locfileid: "84621863"
 
 - [ウィンドウの破棄順序](window-destruction-sequence.md)
 
-- [ウィンドウメモリの割り当てと割り当て解除](allocating-and-deallocating-window-memory.md)
+- [ウィンドウ メモリの割り当てと解放](allocating-and-deallocating-window-memory.md)
 
 - [CWnd と HWND の分離](detaching-a-cwnd-from-its-hwnd.md)
 
@@ -32,4 +33,4 @@ ms.locfileid: "84621863"
 
 ## <a name="see-also"></a>関連項目
 
-[ウィンドウ オブジェクト](window-objects.md)
+[ウィンドウオブジェクト](window-objects.md)

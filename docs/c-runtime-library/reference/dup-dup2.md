@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: _dup、_dup2'
 title: _dup、_dup2
 ms.date: 4/2/2020
 api_name:
@@ -34,12 +35,12 @@ helpviewer_keywords:
 - dup2 function
 - _dup function
 ms.assetid: 4d07e92c-0d76-4832-a770-dfec0e7a0cfa
-ms.openlocfilehash: 6c635930fdbc8da550a2a32ea614e150fbeb08a8
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: e9801cc11b6d7a8d4250f61780c5c9b23dd3e1ac
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82915210"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97327007"
 ---
 # <a name="_dup-_dup2"></a>_dup、_dup2
 
@@ -62,15 +63,15 @@ int _dup2( int fd1, int fd2 );
 
 ## <a name="return-value"></a>戻り値
 
-**_dup**は新しいファイル記述子を返します。 成功を示すには **_dup2** 0 を返します。 エラーが発生した場合、各関数は-1 を返し、ファイル記述子が無効で**ある場合は** **errno**に、ファイル記述子が使用できない場合は**EMFILE**に設定します。 ファイル記述子が無効な場合、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、関数によって無効なパラメーター ハンドラーも開始されます。
+**_dup** は新しいファイル記述子を返します。 成功を示すには **_dup2** 0 を返します。 エラーが発生した場合、各関数は-1 を返し、ファイル記述子が無効で **ある場合は** **errno** に、ファイル記述子が使用できない場合は **EMFILE** に設定します。 ファイル記述子が無効な場合、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、関数によって無効なパラメーター ハンドラーも開始されます。
 
 リターン コードの詳細については、「[_doserrno、errno、_sys_errlist、および _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」を参照してください。
 
 ## <a name="remarks"></a>解説
 
-**_Dup**関数と **_dup2**関数は、2番目のファイル記述子を現在開いているファイルに関連付けます。 これらの関数を使用すると、 **stdout**などの定義済みのファイル記述子を別のファイルに関連付けることができます。 ファイル操作はいずれかのファイル記述子を使用して実行できます。 新しい記述子の作成によって、ファイルに対するアクセス権の種類が影響を受けることはありません。 **_dup**は、指定されたファイルに対して次に使用できるファイル記述子を返します。 **_dup2**は、 *fd2*が*fd1*と同じファイルを参照するように強制します。 呼び出し時に*fd2*が開いているファイルに関連付けられている場合、そのファイルは閉じています。
+**_Dup** 関数と **_dup2** 関数は、2番目のファイル記述子を現在開いているファイルに関連付けます。 これらの関数を使用すると、 **stdout** などの定義済みのファイル記述子を別のファイルに関連付けることができます。 ファイル操作はいずれかのファイル記述子を使用して実行できます。 新しい記述子の作成によって、ファイルに対するアクセス権の種類が影響を受けることはありません。 **_dup** は、指定されたファイルに対して次に使用できるファイル記述子を返します。 **_dup2** は、 *fd2* が *fd1* と同じファイルを参照するように強制します。 呼び出し時に *fd2* が開いているファイルに関連付けられている場合、そのファイルは閉じています。
 
-**_Dup**と **_dup2**はどちらもファイル記述子をパラメーターとして受け取ります。 これらの関数のいずれ`FILE *`かにストリーム () を渡すには、 [_fileno](fileno.md)を使用します。 **Fileno**ルーチンは、指定されたストリームに現在関連付けられているファイル記述子を返します。 次の例は、 **stderr**にとし`FILE *`て定義されている stderr をファイル記述子と関連付ける方法を示しています。
+**_Dup** と **_dup2** はどちらもファイル記述子をパラメーターとして受け取ります。 `FILE *`これらの関数のいずれかにストリーム () を渡すには、 [_fileno](fileno.md)を使用します。 **Fileno** ルーチンは、指定されたストリームに現在関連付けられているファイル記述子を返します。 次の例は、stderr にとして定義されている **stderr** をファイル記述子と関連付ける方法を示して `FILE *` います。
 
 ```C
 int cstderr = _dup( _fileno( stderr ));
@@ -80,12 +81,12 @@ int cstderr = _dup( _fileno( stderr ));
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**_dup**|\<io.h>|
 |**_dup2**|\<io.h>|
 
-コンソールは、ユニバーサル Windows プラットフォーム (UWP) アプリではサポートされていません。 コンソール、 **stdin**、 **stdout**、および**stderr**に関連付けられている標準ストリームハンドルは、C ランタイム関数が UWP アプリで使用できるようになる前にリダイレクトする必要があります。 互換性について詳しくは、「 [Compatibility](../../c-runtime-library/compatibility.md)」をご覧ください。
+コンソールは、ユニバーサル Windows プラットフォーム (UWP) アプリではサポートされていません。 コンソール、 **stdin**、 **stdout**、および **stderr** に関連付けられている標準ストリームハンドルは、C ランタイム関数が UWP アプリで使用できるようになる前にリダイレクトする必要があります。 互換性について詳しくは、「 [Compatibility](../../c-runtime-library/compatibility.md)」をご覧ください。
 
 ## <a name="example"></a>例
 
@@ -150,7 +151,7 @@ This goes to file 'data'
 
 ## <a name="see-also"></a>関連項目
 
-[下位入出力](../../c-runtime-library/low-level-i-o.md)<br/>
+[低レベル i/o](../../c-runtime-library/low-level-i-o.md)<br/>
 [_close](close.md)<br/>
 [_creat、_wcreat](creat-wcreat.md)<br/>
 [_open、_wopen](open-wopen.md)<br/>

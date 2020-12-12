@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「コンパイラエラー C2065」を参照してください。
 title: コンパイラエラー C2065
 ms.date: 08/19/2019
 f1_keywords:
@@ -6,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2065
 ms.assetid: 78093376-acb7-45f5-9323-5ed7e0aab1dc
-ms.openlocfilehash: 68817498d6f29ef5982b72a2fee4e64a4423ccde
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: a686276aa093e1f2011212d5999d43c76062487f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87214816"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97328559"
 ---
 # <a name="compiler-error-c2065"></a>コンパイラエラー C2065
 
 > '*identifier*': 宣言のない識別子です。
 
-コンパイラは、識別子の宣言を見つけることができません。 このエラーには多くの原因が考えられます。 C2065 の最も一般的な原因として、識別子が宣言されていない、識別子のスペルが間違っている、識別子が宣言されているヘッダーがファイルに含まれていない、識別子にスコープ修飾子がない、などがあり `cout` `std::cout` ます。 C++ での宣言の詳細については、「[宣言と定義 (c++)](../../cpp/declarations-and-definitions-cpp.md)」を参照してください。
+コンパイラは、識別子の宣言を見つけることができません。 このエラーには多くの原因が考えられます。 C2065 の最も一般的な原因として、識別子が宣言されていない、識別子のスペルが間違っている、識別子が宣言されているヘッダーがファイルに含まれていない、識別子にスコープ修飾子がない、などがあり `cout` `std::cout` ます。 C++ での宣言の詳細については、「 [宣言と定義 (c++)](../../cpp/declarations-and-definitions-cpp.md)」を参照してください。
 
 ここでは、一般的な問題と解決方法について詳しく説明します。
 
@@ -73,7 +74,7 @@ int main() {
 
 ## <a name="example-precompiled-header-isnt-first"></a>例: プリコンパイル済みヘッダーが最初ではない
 
-このエラーは、プリコンパイル済みヘッダーファイルの #include の前に、#include、#define、#pragma などのプリプロセッサディレクティブを配置した場合に発生する可能性があります。 ソースファイルがプリコンパイル済みヘッダーファイルを使用する場合 (つまり、 **/yu**コンパイラオプションを使用してコンパイルされた場合)、プリコンパイル済みヘッダーファイルの前にあるすべてのプリプロセッサディレクティブは無視されます。
+このエラーは、プリコンパイル済みヘッダーファイルの #include の前に、#include、#define、#pragma などのプリプロセッサディレクティブを配置した場合に発生する可能性があります。 ソースファイルがプリコンパイル済みヘッダーファイルを使用する場合 (つまり、 **/yu** コンパイラオプションを使用してコンパイルされた場合)、プリコンパイル済みヘッダーファイルの前にあるすべてのプリプロセッサディレクティブは無視されます。
 
 この例は、とがヘッダーで定義されているため、コンパイルに失敗します。これは、 `cout` `endl` \<iostream> プリコンパイル済みヘッダーファイルの前に含まれているため無視されます。 この例をビルドするには、3つのファイルをすべて作成し、stdafx.h をコンパイルしてから C2065_pch .cpp をコンパイルします。
 
@@ -155,7 +156,7 @@ int main() {
 
 ## <a name="example-use-iterator-outside-for-loop-scope"></a>例: for ループスコープの外側で反復子を使用する
 
-このエラーは、ループで反復子変数を宣言 **`for`** した後、ループのスコープ外でその反復子変数を使用しようとした場合に発生する可能性があり **`for`** ます。 コンパイラは、既定で[/zc: forScope](../../build/reference/zc-forscope-force-conformance-in-for-loop-scope.md)コンパイラオプションを有効にします。 詳細については、「[デバッグ反復子のサポート](../../standard-library/debug-iterator-support.md)」を参照してください。
+このエラーは、ループで反復子変数を宣言 **`for`** した後、ループのスコープ外でその反復子変数を使用しようとした場合に発生する可能性があり **`for`** ます。 コンパイラは、既定で [/zc: forScope](../../build/reference/zc-forscope-force-conformance-in-for-loop-scope.md) コンパイラオプションを有効にします。 詳細については、「 [デバッグ反復子のサポート](../../standard-library/debug-iterator-support.md) 」を参照してください。
 
 ```cpp
 // C2065_iter.cpp
@@ -205,7 +206,7 @@ int main() {
 
 ## <a name="example-ccli-type-deduction-failure"></a>例: C++/CLI 型推論の失敗
 
-このエラーは、目的の型引数が使用されているパラメーターから推測できない場合に、ジェネリック関数を呼び出すと発生する可能性があります。 詳細については、「[ジェネリック関数 (C++/cli)](../../extensions/generic-functions-cpp-cli.md)」を参照してください。
+このエラーは、目的の型引数が使用されているパラメーターから推測できない場合に、ジェネリック関数を呼び出すと発生する可能性があります。 詳細については、「 [ジェネリック関数 (C++/cli)](../../extensions/generic-functions-cpp-cli.md)」を参照してください。
 
 ```cpp
 // C2065_b.cpp

@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: 時間管理'
 title: 時間管理
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - date functions
 - time functions
 ms.assetid: 93599220-c011-45d5-978f-12182abfdd2f
-ms.openlocfilehash: 096207465b1be2eba70e95cff2c226924fc91bd7
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: c8a5b65c66ab89506149c92bd32999be3503c700
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87213451"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97326909"
 ---
 # <a name="time-management"></a>時間管理
 
@@ -22,10 +23,10 @@ ms.locfileid: "87213451"
 
 ### <a name="time-routines"></a>時間のルーチン
 
-|機能|用途|
+|機能|使用|
 |--------------|---------|
 |[asctime、_wasctime](../c-runtime-library/reference/asctime-wasctime.md)、[asctime_s、_wasctime_s](../c-runtime-library/reference/asctime-s-wasctime-s.md)|時刻を **struct tm** 型から文字列に変換します。 これらの関数のうち、 **_s** サフィックスの付いているバージョンがより安全です。|
-|[clock](../c-runtime-library/reference/clock.md)|プロセスの実際の経過時間を返します。|
+|[クロック](../c-runtime-library/reference/clock.md)|プロセスの実際の経過時間を返します。|
 |[ctime、_ctime32、_ctime64、_wctime、_wctime32、_wctime64](../c-runtime-library/reference/ctime-ctime32-ctime64-wctime-wctime32-wctime64.md)、[_ctime_s、_ctime32_s、_ctime64_s、_wctime_s、_wctime32_s、_wctime64_s](../c-runtime-library/reference/ctime-s-ctime32-s-ctime64-s-wctime-s-wctime32-s-wctime64-s.md)|時刻を **time_t** 型、**__time32_t** 型、または **__time64_t** 型から文字列に変換します。 これらの関数のうち、 **_s** サフィックスの付いているバージョンがより安全です。|
 |[difftime、_difftime32、_difftime64](../c-runtime-library/reference/difftime-difftime32-difftime64.md)|2 つの時刻の差を計算します。|
 |[_ftime, _ftime32, _ftime64](../c-runtime-library/reference/ftime-ftime32-ftime64.md)、[_ftime_s, _ftime32_s, _ftime64_s](../c-runtime-library/reference/ftime-s-ftime32-s-ftime64-s.md)|**struct _timeb** 型または **struct __timeb64** これらの関数のうち、**_s** サフィックスの付いているバージョンがより安全です。|
@@ -45,7 +46,7 @@ ms.locfileid: "87213451"
 > Microsoft C/C++ バージョン 7.0 を除くすべてのバージョンの Microsoft C/C++ と、すべてのバージョンの Visual C++ で、時刻の関数は、現在の時刻を 1970 年 1 月 1 日の午前 0 時から経過した秒数として返します。 Microsoft C/C++ バージョン 7.0 では、**time** は、現在の時刻を 1899 年 12 月 31 日の午前 0 時から経過した秒数として返していました。
 
 > [!NOTE]
-> Visual Studio 2005 より前のバージョンの Visual C++ と Microsoft C/c + + では、 **time_t**は (32 ビット) であったため、 **`long int`** 2038 年1月19日の3:14:07 年1月19日以降の日付には使用できませんでした。 現在、既定で **time_t** は **__time64_t** と同じです。ただし、**_USE_32BIT_TIME_T** を定義すると、**time_t** は **__time32_t** に変更され、多くの時刻関数は強制的に 32 ビットの **time_t** を取得するバージョンを呼び出すことになります。 詳細については、「 [基本データ型](../c-runtime-library/standard-types.md) 」のほか、それぞれの時間の関数に関するドキュメントのコメントを参照してください。
+> Visual Studio 2005 より前のバージョンの Visual C++ と Microsoft C/c + + では、 **time_t** は (32 ビット) であったため、 **`long int`** 2038 年1月19日の3:14:07 年1月19日以降の日付には使用できませんでした。 現在、既定で **time_t** は **__time64_t** と同じです。ただし、**_USE_32BIT_TIME_T** を定義すると、**time_t** は **__time32_t** に変更され、多くの時刻関数は強制的に 32 ビットの **time_t** を取得するバージョンを呼び出すことになります。 詳細については、「 [基本データ型](../c-runtime-library/standard-types.md) 」のほか、それぞれの時間の関数に関するドキュメントのコメントを参照してください。
 
 ## <a name="see-also"></a>関連項目
 

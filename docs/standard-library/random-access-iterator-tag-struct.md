@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: random_access_iterator_tag 構造体'
 title: random_access_iterator_tag 構造体
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,16 +8,16 @@ helpviewer_keywords:
 - random_access_iterator_tag class
 - random_access_iterator_tag struct
 ms.assetid: 59f5b741-c5b4-459c-ad0a-3b67cddeea23
-ms.openlocfilehash: edbd7ad33b2487060840ec690b363d7b934fec27
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 0186f451d5fbd98b8eebcd30fe469e75577954d0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68458307"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97327548"
 ---
-# <a name="randomaccessiteratortag-struct"></a>random_access_iterator_tag 構造体
+# <a name="random_access_iterator_tag-struct"></a>random_access_iterator_tag 構造体
 
-ランダムアクセス反復子を表す関数の`iterator_category`戻り値の型を提供するクラス。
+`iterator_category`ランダムアクセス反復子を表す関数の戻り値の型を提供するクラス。
 
 ## <a name="syntax"></a>構文
 
@@ -24,11 +25,11 @@ ms.locfileid: "68458307"
 struct random_access_iterator_tag    : public bidirectional_iterator_tag {};
 ```
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-カテゴリ タグ クラスはアルゴリズムの選択にコンパイル タグとして使用されます。 テンプレート関数は、コンパイル時に最も効率的なアルゴリズムを利用できるように、その反復子引数の最も具体的なカテゴリを見つける必要があります。 `Iterator` 型の反復子ごとに、反復子の動作を表す最も具体的なカテゴリ タグとして `iterator_traits`< `Iterator`>  **::iterator_category** を定義する必要があります。
+カテゴリ タグ クラスがアルゴリズムの選択にコンパイル タグとして使用されます。 テンプレート関数は、コンパイル時に最も効率的なアルゴリズムを利用できるように、その反復子引数の最も具体的なカテゴリを見つける必要があります。 型 `Iterator` の反復子ごとに、反復子の動作を表す最も具体的なカテゴリ タグとして `iterator_traits`< `Iterator`> **::iterator_category** を定義する必要があります。
 
-この型は、がランダムアクセス反復子として`Iter`使用できるオブジェクトを表す場合に、**反復子**\< **Iter**>  **:: iterator_category**と同じです。
+この型は、が \< **Iter**> ランダムアクセス反復子として使用できるオブジェクトを表す場合に、iterator **:: iterator_category** と同じです `Iter` 。
 
 ## <a name="example"></a>例
 
@@ -79,7 +80,7 @@ int main( )
 }
 ```
 
-## <a name="sample-output"></a>出力例
+## <a name="sample-output"></a>サンプル出力
 
 次の出力は x86 のものです。
 
@@ -96,14 +97,14 @@ The iterators are not the same.
 0012FF3B
 ```
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-**ヘッダー:** \<iterator>
+**ヘッダー:**\<iterator>
 
 **名前空間:** std
 
 ## <a name="see-also"></a>関連項目
 
 [bidirectional_iterator_tag 構造体](../standard-library/bidirectional-iterator-tag-struct.md)\
-[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
-[C++ 標準ライブラリ リファレンス](../standard-library/cpp-standard-library-reference.md)
+[C++ 標準ライブラリのスレッドセーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[C++ 標準ライブラリリファレンス](../standard-library/cpp-standard-library-reference.md)

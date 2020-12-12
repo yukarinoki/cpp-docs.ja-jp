@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: tmpfile_s'
 title: tmpfile_s
 ms.date: 4/2/2020
 api_name:
@@ -28,12 +29,12 @@ helpviewer_keywords:
 - tmpfile_s function
 - temporary files, creating
 ms.assetid: 50879c69-215e-425a-a2a3-8b5467121eae
-ms.openlocfilehash: 48c599887a8a903d52c7dcd46b98046119c9d3ad
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 1b5830375644cdcdd3d0c400d00735319b3af671
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82919929"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97326141"
 ---
 # <a name="tmpfile_s"></a>tmpfile_s
 
@@ -60,23 +61,23 @@ errno_t tmpfile_s(
 
 |*pFilePtr*|**戻り値**|*Pfileptr* **の内容**  |
 |----------------|----------------------|---------------------------------|
-|**空白**|**EINVAL**|変更されない|
+|**NULL**|**EINVAL**|変更されない|
 
-上記のパラメーターの検証エラーが発生した場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」に説明されているとおり、無効なパラメーター ハンドラーが呼び出されます。 実行の継続が許可された場合、 **errno**は**einval**に設定され、戻り値は**einval**になります。
+上記のパラメーターの検証エラーが発生した場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」に説明されているとおり、無効なパラメーター ハンドラーが呼び出されます。 実行の継続が許可された場合、 **errno** は **einval** に設定され、戻り値は **einval** になります。
 
 ## <a name="remarks"></a>解説
 
-**Tmpfile_s**関数は、一時ファイルを作成し、そのストリームへのポインターを*pfileptr*引数に格納します。 一時ファイルはルート ディレクトリに作成されます。 ルート ディレクトリ以外のディレクトリに一時ファイルを作成するには、[tmpnam_s](tmpnam-s-wtmpnam-s.md) または [tempnam](tempnam-wtempnam-tmpnam-wtmpnam.md) を [fopen](fopen-wfopen.md) と共に使用します。
+**Tmpfile_s** 関数は、一時ファイルを作成し、そのストリームへのポインターを *pfileptr* 引数に格納します。 一時ファイルはルート ディレクトリに作成されます。 ルート ディレクトリ以外のディレクトリに一時ファイルを作成するには、[tmpnam_s](tmpnam-s-wtmpnam-s.md) または [tempnam](tempnam-wtempnam-tmpnam-wtmpnam.md) を [fopen](fopen-wfopen.md) と共に使用します。
 
-ファイルを開くことができない場合、 **tmpfile_s**は*pfileptr*パラメーターに**NULL**を書き込みます。 この一時ファイルは、ファイルが閉じられたとき、プログラムが正常に終了したとき、または **_rmtmp**が呼び出されたときに、現在の作業ディレクトリが変更されていないという前提で自動的に削除されます。 一時ファイルは、 **w + b** (バイナリ読み取り/書き込み) モードで開かれます。
+ファイルを開くことができない場合、 **tmpfile_s** は *pfileptr* パラメーターに **NULL** を書き込みます。 この一時ファイルは、ファイルが閉じられたとき、プログラムが正常に終了したとき、または **_rmtmp** が呼び出されたときに、現在の作業ディレクトリが変更されていないという前提で自動的に削除されます。 一時ファイルは、 **w + b** (バイナリ読み取り/書き込み) モードで開かれます。
 
-**TMP_MAX_S**を超えて試行した場合、エラーが発生することがあります (「STDIO」を参照してください)。H) **tmpfile_s**を使用してを呼び出します。
+**TMP_MAX_S** を超えて試行した場合、エラーが発生することがあります (「STDIO」を参照してください)。H) **tmpfile_s** を使用してを呼び出します。
 
 既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**tmpfile_s**|\<stdio.h>|
 

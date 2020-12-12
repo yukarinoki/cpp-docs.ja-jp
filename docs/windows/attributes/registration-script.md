@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: registration_script'
 title: registration_script (C++ COM 属性)
 ms.date: 10/02/2018
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - registration_script attribute
 ms.assetid: 786f8072-9187-4163-a979-7a604dd4c888
-ms.openlocfilehash: 8a57f0b3d0925d1e1096a31734fa4c9d666c5743
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 3722a799818c8ad76d710e4c570bc5fdd6b2e10c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88846083"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97327338"
 ---
 # <a name="registration_script"></a>registration_script
 
@@ -30,7 +31,7 @@ ms.locfileid: "88846083"
 
 ## <a name="remarks"></a>解説
 
-**Registration_script** C++ 属性は、*スクリプト*によって指定されたカスタム登録スクリプトを実行します。 この属性が指定されていない場合は、標準の .rgs ファイル (コンポーネントを登録するための情報を含む) が使用されます。 .Rgs ファイルの詳細については、「 [ATL レジストリコンポーネント (レジストラー)](../../atl/atl-registry-component-registrar.md)」を参照してください。
+**Registration_script** C++ 属性は、*スクリプト* によって指定されたカスタム登録スクリプトを実行します。 この属性が指定されていない場合は、標準の .rgs ファイル (コンポーネントを登録するための情報を含む) が使用されます。 .Rgs ファイルの詳細については、「 [ATL レジストリコンポーネント (レジストラー)](../../atl/atl-registry-component-registrar.md)」を参照してください。
 
 この属性を使用するには、 [coclass](coclass.md)、 [progid](progid.md)、または [vi_progid](vi-progid.md) 属性 (または、これらのいずれかを意味する別の属性) も同じ要素に適用する必要があります。
 
@@ -57,7 +58,7 @@ __interface IFace {};
 class CMyClass:public IFace {};
 ```
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 | 属性コンテキスト | 値 |
 |-|-|

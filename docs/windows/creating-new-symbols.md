@@ -1,4 +1,5 @@
 ---
+description: '詳細については、「方法: シンボルを作成する (C++)」を参照してください。'
 title: '方法: シンボルを作成する (C++)'
 ms.date: 02/14/2019
 f1_keywords:
@@ -19,12 +20,12 @@ helpviewer_keywords:
 - View Use button
 - resource editors [C++], resource symbols
 ms.assetid: 35168d31-3af6-4ecd-9362-3707d47b53f3
-ms.openlocfilehash: 008d2ab420034e628251c08222bf2e9f723deab1
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 961c186796e239471507b83dc301186d05004800
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91504507"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97329471"
 ---
 # <a name="how-to-create-symbols-c"></a>方法: シンボルを作成する (C++)
 
@@ -65,14 +66,14 @@ ms.locfileid: "91504507"
 
 ## <a name="to-view-resource-symbols"></a>リソース シンボルを表示するには
 
-[リソースビュー](how-to-create-a-resource-script-file.md#create-resources)で、 *.rc*ファイルを右クリックし、[リソース**シンボル] を選択し**て、[リソースシンボル **] ダイアログボックス**にリソースシンボルテーブルを表示します。
+[リソースビュー](how-to-create-a-resource-script-file.md#create-resources)で、 *.rc* ファイルを右クリックし、[リソース **シンボル] を選択し** て、[リソースシンボル **] ダイアログボックス** にリソースシンボルテーブルを表示します。
 
 > [!NOTE]
 > 定義済みのシンボルを表示するには、[読み取り専用の **シンボルを表示** する] チェックボックスをオンにします。
 
 ### <a name="to-open-the-resource-editor-for-a-given-symbol"></a>指定されたシンボルのリソースエディターを開くには
 
-**リソースシンボル**のシンボルを参照するときは、特定のシンボルの使用方法に関する詳細情報が必要になることがあります。 [ **使用状況の表示** ] ボタンを使用すると、この情報を簡単に取得できます。
+**リソースシンボル** のシンボルを参照するときは、特定のシンボルの使用方法に関する詳細情報が必要になることがあります。 [ **使用状況の表示** ] ボタンを使用すると、この情報を簡単に取得できます。
 
 1. [ **リソースシンボル** ] ダイアログボックスの [ **名前** ] ボックスで、シンボルを選択します。
 
@@ -82,7 +83,7 @@ ms.locfileid: "91504507"
 
    リソースが適切なエディターに表示されます。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 Win32
 

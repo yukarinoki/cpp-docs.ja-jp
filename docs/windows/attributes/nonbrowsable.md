@@ -1,4 +1,5 @@
 ---
+description: '詳細について: 非ブラウズ'
 title: 非ブラウズ (C++ COM 属性)
 ms.date: 10/02/2018
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - nonbrowsable attribute
 ms.assetid: e71a98e7-4b65-454a-9829-342b9f2a84be
-ms.openlocfilehash: 561622cc30573ace606eccb6aa7b5f2dfd188dfe
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 943458ff989a3f00d2ce33a4f5681a8bd29a76ca
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88836105"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97329765"
 ---
 # <a name="nonbrowsable"></a>nonbrowsable
 
@@ -25,7 +26,7 @@ ms.locfileid: "88836105"
 
 ## <a name="remarks"></a>解説
 
-**非**参照可能な C++ 属性には、[非ブラウズ](/windows/win32/Midl/nonbrowsable)可能な MIDL 属性と同じ機能があります。
+**非** 参照可能な C++ 属性には、[非ブラウズ](/windows/win32/Midl/nonbrowsable)可能な MIDL 属性と同じ機能があります。
 
 ## <a name="example"></a>例
 
@@ -43,7 +44,7 @@ __interface IMyI
 };
 ```
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 | 属性コンテキスト | 値 |
 |-|-|

@@ -1,16 +1,17 @@
 ---
+description: 詳細については、「Typedef、Enum、Union、および Struct 属性」を参照してください。
 title: Typedef、Enum、Union、および Struct 属性 (C++ COM)
 ms.date: 10/02/2018
 helpviewer_keywords:
 - union attributes
 - attributes [C++/CLI], reference topics
 ms.assetid: f8a4fe94-dc02-4aed-bc31-3e500d42f4c7
-ms.openlocfilehash: 5e9eccd5e4464e92757d6dd78dd0f5187372ea3e
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 9f72f5ff45709287d31aa4da05b2569a0b37baff
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87222109"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97327240"
 ---
 # <a name="typedef-enum-union-and-struct-attributes"></a>Typedef、Enum、Union、および Struct 型の属性
 
@@ -20,7 +21,7 @@ ms.locfileid: "87222109"
 
 |属性|説明|
 |---------------|-----------------|
-|[case](case-cpp.md)|で[switch_type](switch-type.md)属性と共に使用 **`union`** します。|
+|[case](case-cpp.md)|で [switch_type](switch-type.md) 属性と共に使用 **`union`** します。|
 |[ショー](custom-cpp.md)|では、独自の属性を定義できます。|
 |[輸出](export.md)|データ構造を .idl ファイルに配置します。|
 |[first_is](first-is.md)|転送される最初の配列要素のインデックスを指定します。|
@@ -82,7 +83,7 @@ ms.locfileid: "87222109"
 |[db_param](db-param.md)|指定されたメンバー変数を入力パラメーターまたは出力パラメーターに関連付けて、その変数を区切ります。|
 |[db_source](db-source.md)|データソースへの接続を作成します。|
 |[db_table](db-table.md)|OLE DB テーブルを開きます。|
-|[既定値](default-cpp.md)|コクラス内で定義されるカスタムまたはディスパッチ インターフェイスが既定のプログラミング インターフェイスを表すことを示します。|
+|[default](default-cpp.md)|コクラス内で定義されるカスタムまたはディスパッチ インターフェイスが既定のプログラミング インターフェイスを表すことを示します。|
 |[defaultvtable](defaultvtable.md)|コントロールの既定の vtable インターフェイスとしてインターフェイスを定義します。|
 |[event_receiver](event-receiver.md)|イベントレシーバーを作成します。|
 |[event_source](event-source.md)|イベント ソースを作成します。|

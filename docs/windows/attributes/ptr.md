@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「ptr」を参照してください。
 title: ptr (C++ COM 属性)
 ms.date: 10/02/2018
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - ptr attribute
 ms.assetid: 95eaea57-a5be-45f6-a612-ba2c9bc4645a
-ms.openlocfilehash: c01fe93d8c4092b3a4754b0c70ff161d66dfe49f
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 0e1a08ec51cbb2e6ca5dc469fb359da775141a2b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88839869"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97327363"
 ---
 # <a name="ptr"></a>ptr
 
@@ -29,9 +30,9 @@ ms.locfileid: "88839869"
 
 ## <a name="example"></a>例
 
-**Ptr**の使用例については、 [defaultvalue](defaultvalue.md)の例を参照してください。
+**Ptr** の使用例については、 [defaultvalue](defaultvalue.md)の例を参照してください。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 | 属性コンテキスト | 値 |
 |-|-|

@@ -1,15 +1,16 @@
 ---
+description: '詳細については、「チュートリアル: Visual C++ 再頒布可能パッケージを使用した Visual C++ アプリケーションの配置」を参照してください。'
 title: 再頒布可能パッケージ (C++) を使用してアプリを配置する
 ms.date: 04/23/2019
 helpviewer_keywords:
 - walkthrough, deploying a Visual C++ application by using the redistributable package
 ms.assetid: e59becbf-b8c6-4c8e-bab3-b69cc1ed3e5e
-ms.openlocfilehash: d2bd0794a67cf70b9da0499e3d2cafa553531fe1
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: d14de3bf7400af9580570f783dc16ed4082bf1b4
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81370256"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97327103"
 ---
 # <a name="walkthrough-deploying-a-visual-c-application-by-using-the-visual-c-redistributable-package"></a>チュートリアル: Visual C++ 再頒布可能パッケージを使用した Visual C++ アプリケーションの配置
 
@@ -54,7 +55,7 @@ ms.locfileid: "81370256"
 
       - 自分の MFC アプリケーション (.exe ファイル)。
 
-      - vcredist_x86.exe。 Visual Studio 2015 では、このファイルは *%VCINSTALLDIR%redist\\1033\\*にあります。 Visual Studio 2017 および Visual Studio 2019 では、このファイルは *%VCToolsRedistDir%* にあります。 また、[マイクロソフトから最新のサポートされている再ディスト ファイルをダウンロード](https://support.microsoft.com/help/2977003/the-latest-supported-visual-c-downloads)することもできます。
+      - vcredist_x86.exe。 Visual Studio 2015 では、このファイルは *% VCINSTALLDIR% redist \\ 1033 \\* にあります。 Visual Studio 2017 および Visual Studio 2019 では、このファイルは *% VCToolsRedistDir%* にあります。 [サポートされている最新の再頒布可能ファイルを Microsoft からダウンロード](https://support.microsoft.com/help/2977003/the-latest-supported-visual-c-downloads)することもできます。
 
       - 前の手順で作成した、setup.bat ファイル。
 
@@ -72,7 +73,7 @@ ms.locfileid: "81370256"
 
    1. **[自己展開指示ファイルの保存]** ページで、**[自己展開指示 (SED) ファイルを保存する]** を選択し、**[次へ]** を選択します。
 
-   1. **[パッケージの作成]** ページで、**[次へ]** を選択します。 **[完了]** をクリックします。
+   1. **[パッケージの作成]** ページで、**[次へ]** を選択します。 **[完了]** を選択します。
 
 1. Visual C++ ライブラリを持たない他のコンピューターで、自己展開型のセットアップ ファイルをテストします。
 
@@ -83,8 +84,8 @@ ms.locfileid: "81370256"
       自己展開型のセットアップ ファイルにより、手順 2. で指定したフォルダーに格納されている MFC アプリケーションがインストールされます。 Visual C++ 再頒布可能パッケージのインストーラーは自己展開型のセットアップ ファイルに含まれているため、アプリケーションが正常に実行されます。
 
       > [!IMPORTANT]
-      > _platform_\\インストールされているランタイムのバージョンを確認するには、インストーラーは、レジストリ キー_version_\\\\\\ \\HKLM\\\\ソフトウェア\\を確認\\します。 インストーラーがインストールしようとしているバージョンよりも現在インストールされているバージョンが新しい場合、インストーラーは古いバージョンをインストールせずに成功を返し、追加のエントリをコントロール パネルのインストールされているプログラム ページに残したままにします。
+      > インストーラーは、インストールされているランタイムのバージョンを確認するために、レジストリキー \\ HKLM \\ SOFTWARE \\ Microsoft \\ VisualStudio \\ _version_ \\ VC runtime \\ \\ _platform_ \\ version を確認します。 インストーラーがインストールしようとしているバージョンよりも現在インストールされているバージョンが新しい場合、インストーラーは古いバージョンをインストールせずに成功を返し、追加のエントリをコントロール パネルのインストールされているプログラム ページに残したままにします。
 
 ## <a name="see-also"></a>関連項目
 
-[展開の例](deployment-examples.md)<br/>
+[デプロイの例](deployment-examples.md)<br/>

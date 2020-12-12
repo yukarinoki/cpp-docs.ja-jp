@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: オプション (C++)'
 title: 省略可能 (C++ COM 属性)
 ms.date: 10/02/2018
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - optional attribute
 ms.assetid: 86656a66-8e11-4589-8e30-9b0f34eeed03
-ms.openlocfilehash: 31e2dbac988cdbac8aca2d01a70177825d764a5b
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 70ae49854a496aad35edc87bdd1ac5facb899448
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88842170"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97329732"
 ---
 # <a name="optional-c"></a>optional (C++)
 
@@ -25,7 +26,7 @@ ms.locfileid: "88842170"
 
 ## <a name="remarks"></a>解説
 
-**省略可能**な C++ 属性には、[省略可能](/windows/win32/Midl/optional)な MIDL 属性と同じ機能があります。
+**省略可能** な C++ 属性には、[省略可能](/windows/win32/Midl/optional)な MIDL 属性と同じ機能があります。
 
 ## <a name="example"></a>例
 
@@ -44,7 +45,7 @@ __interface IFireTabCtrl : IDispatch
 };
 ```
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 | 属性コンテキスト | 値 |
 |-|-|

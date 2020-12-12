@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: rdx'
 title: rdx (C++ COM 属性)
 ms.date: 10/02/2018
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - rdx attribute
 ms.assetid: ff8e4312-c1ad-4934-bdaa-86f54409651e
-ms.openlocfilehash: f61eaf535102c8885e828176434acf221dfe2457
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 7d31e33bcc1883bfb787b21ec8f5c1f8bed60208
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88836882"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97329640"
 ---
 # <a name="rdx"></a>rdx
 
@@ -40,7 +41,7 @@ Optional設定する値フィールドを指定します。 この名前の値�
 
 この属性は、 [コクラス](coclass.md)、 [progid](progid.md)、または [vi_progid](vi-progid.md) 属性、またはこれらの属性のいずれかを意味するその他の属性と組み合わせて使用できます。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 | 属性コンテキスト | 値 |
 |-|-|

@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: リファレンス (C++ AMP)'
 title: リファレンス (C++ AMP)
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C++ Accelerated Massive Parallelism, reference
 ms.assetid: 372a8aed-8a53-48c9-996f-9c3cf09c9fa8
-ms.openlocfilehash: ff7c2b0894a2fa3de7674a72bc93dd3f781398b9
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: 043522d7524078c3c7fec956021fdd7a86347169
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77126410"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97327635"
 ---
 # <a name="reference-c-amp"></a>リファレンス (C++ AMP)
 
@@ -22,7 +23,7 @@ ms.locfileid: "77126410"
 
 ## <a name="in-this-section"></a>このセクションの内容
 
-[コンカレンシー名前空間 (C++ AMP)](concurrency-namespace-cpp-amp.md)<br/>
+[Concurrency 名前空間 (C++ AMP)](concurrency-namespace-cpp-amp.md)<br/>
 データ並列ハードウェアでの C++ コードの高速化を有効にするクラスと関数を提供します。
 
 [Concurrency::direct3d 名前空間](concurrency-direct3d-namespace.md)<br/>
@@ -34,7 +35,7 @@ D3D の相互運用性をサポートする関数を提供します。 AMP コ�
 [Concurrency::graphics 名前空間](concurrency-graphics-namespace.md)<br/>
 グラフィックス プログラミング用に設計された型と関数を提供します。
 
-[Concurrency::precise_math 名前空間](concurrency-precise-math-namespace.md)<br/>
+[Concurrency: recise_math 名前空間の:p](concurrency-precise-math-namespace.md)<br/>
 `precise_math` 名前空間の関数は C99 に準拠しています。 各関数の単精度バージョンと倍精度のバージョンの両方が含まれます。 単精度関数を含む、これらの関数ではアクセラレータでの倍精度の拡張サポートが必要です。
 
 ## <a name="related-sections"></a>関連項目

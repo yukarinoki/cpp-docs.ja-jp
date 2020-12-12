@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: &lt; キュー&gt;'
 title: '&lt;queue&gt;'
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - queue header
 ms.assetid: 24fcf350-eb0e-48cf-9fef-978be1aeda1f
-ms.openlocfilehash: a41d34b45264472a5c8c88ca0619e78444dd8aec
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: f219cf3f457ed43eb2d9ca1658244a40ceacb265
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88832595"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97327591"
 ---
 # <a name="ltqueuegt"></a>&lt;queue&gt;
 
 クラステンプレート priority_queue とキュー、およびいくつかのサポートテンプレートを定義します。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:**\<queue>
 
@@ -28,7 +29,7 @@ ms.locfileid: "88832595"
 
 ## <a name="members"></a>メンバー
 
-### <a name="operators"></a>演算子
+### <a name="operators"></a>オペレーター
 
 |名前|説明|
 |-|-|

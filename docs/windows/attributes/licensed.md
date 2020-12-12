@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: ライセンス'
 title: ライセンス済み (C++ COM 属性)
 ms.date: 10/02/2018
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - licensed attribute
 ms.assetid: 09cf3b4a-d3f2-43e3-9180-d420333b23bf
-ms.openlocfilehash: 07a2b68517721ac4244fc1952e4fe3c5f2fbb153
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 348180412c1e8b19994cf5ef3e9bedb4115bfbda
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88832491"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97327525"
 ---
 # <a name="licensed"></a>licensed
 
@@ -25,7 +26,7 @@ ms.locfileid: "88832491"
 
 ## <a name="remarks"></a>解説
 
-**ライセンス**された C++ 属性には、[ライセンス](/windows/win32/Midl/licensed)された MIDL 属性と同じ機能があります。
+**ライセンス** された C++ 属性には、[ライセンス](/windows/win32/Midl/licensed)された MIDL 属性と同じ機能があります。
 
 ## <a name="example"></a>例
 
@@ -48,7 +49,7 @@ public:
 [module(name="MyLibrary", version="1.0", helpstring="My Library Block")];
 ```
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 | 属性コンテキスト | 値 |
 |-|-|

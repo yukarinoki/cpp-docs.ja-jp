@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: データバッファーへのポインターの取得 (C++/CX)'
 title: データ バッファーへのポインターの取得 (C++/CX)
 ms.date: 11/19/2018
 ms.assetid: db4f9370-dd95-4896-b5b8-4b202284f579
-ms.openlocfilehash: 0b5163dd111adfe5c745a1ad3bbcdc06a675c52c
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: d4fc883d7a7d0bae5d72c6aabd42446c74162c42
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87185542"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97328932"
 ---
 # <a name="obtaining-pointers-to-data-buffers-ccx"></a>データ バッファーへのポインターの取得 (C++/CX)
 

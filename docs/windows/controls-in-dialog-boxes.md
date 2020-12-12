@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: ダイアログボックスコントロール (C++)'
 title: ダイアログボックスコントロール (C++) |Microsoft Docs
 ms.date: 02/15/2019
 f1_keywords:
@@ -13,16 +14,16 @@ helpviewer_keywords:
 - dialog box controls [C++], custom (user) controls
 - Dialog Editor [C++], custom controls
 ms.assetid: e216c4f9-2fd4-429d-889a-8ebce7bad177
-ms.openlocfilehash: 449e60e968916f7741422ca2766375ad29afd062
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: e68547ebd550797d4ad195c6bef4c3f2a71e769e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91505707"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97327149"
 ---
 # <a name="dialog-box-controls-c"></a>ダイアログボックスコントロール (C++)
 
-コントロールをダイアログボックスに追加するには、[[ツールボックス] ウィンドウ](/visualstudio/ide/reference/toolbox)の [**ダイアログエディター** ] タブを使用します。このタブでは、必要なコントロールを選択してダイアログボックスにドラッグできます。 既定では、[ **ツールボックス** ] ウィンドウは [自動的に隠す] に設定されています。 **ダイアログエディター**が開いているときに、ソリューションの左余白にタブとして表示されます。 ただし、ウィンドウの右上隅にある [**自動的に隠す**] ボタンを選択して、**ツールボックス**ウィンドウを位置にピン留めすることができます。 このウィンドウの動作を制御する方法の詳細については、「 [ウィンドウ管理](/visualstudio/ide/customizing-window-layouts-in-visual-studio)」を参照してください。
+コントロールをダイアログボックスに追加するには、[[ツールボックス] ウィンドウ](/visualstudio/ide/reference/toolbox)の [**ダイアログエディター** ] タブを使用します。このタブでは、必要なコントロールを選択してダイアログボックスにドラッグできます。 既定では、[ **ツールボックス** ] ウィンドウは [自動的に隠す] に設定されています。 **ダイアログエディター** が開いているときに、ソリューションの左余白にタブとして表示されます。 ただし、ウィンドウの右上隅にある [**自動的に隠す**] ボタンを選択して、**ツールボックス** ウィンドウを位置にピン留めすることができます。 このウィンドウの動作を制御する方法の詳細については、「 [ウィンドウ管理](/visualstudio/ide/customizing-window-layouts-in-visual-studio)」を参照してください。
 
 ダイアログボックスにコントロールを追加したり、既存のコントロールの位置を変更したり、ダイアログボックスから別のダイアログボックスにコントロールを移動したりする最も簡単な方法は、ドラッグアンドドロップを使用する方法です。 コントロールの位置は、ダイアログボックスにドロップされるまで点線で囲まれています。 ドラッグアンドドロップメソッドを使用してコントロールをダイアログボックスに追加すると、コントロールには、そのコントロールの種類に適した標準の高さが与えられます。
 
@@ -30,7 +31,7 @@ ms.locfileid: "91505707"
 
 ダイアログボックスにコントロールを追加したら、[ [プロパティ] ウィンドウ](/visualstudio/ide/reference/properties-window)でキャプションなどのプロパティを変更できます。 複数のコントロールを選択し、それらのプロパティをすべて一度に変更することもできます。
 
-**ダイアログエディター**の詳細については、「[コントロールを追加、編集、または削除](adding-editing-or-deleting-controls.md)する方法」、「[レイアウトコントロール](../windows/arrangement-of-controls-on-dialog-boxes.md)」、および「[コントロールのアクセスと値の定義](../windows/defining-mnemonics-access-keys.md)」を参照してください。
+**ダイアログエディター** の詳細については、「[コントロールを追加、編集、または削除](adding-editing-or-deleting-controls.md)する方法」、「[レイアウトコントロール](../windows/arrangement-of-controls-on-dialog-boxes.md)」、および「[コントロールのアクセスと値の定義](../windows/defining-mnemonics-access-keys.md)」を参照してください。
 
 コントロールとダイアログの詳細については、「 [コントロールクラス](../mfc/control-classes.md)」、「 [ダイアログボックスのクラス](../mfc/dialog-box-classes.md)」、および「 [スクロールバーのスタイル](../mfc/reference/styles-used-by-mfc.md#scroll-bar-styles)」を参照してください。
 
@@ -53,7 +54,7 @@ ms.locfileid: "91505707"
 > [!NOTE]
 > MFC での **richedit 1.0** コントロールの使用方法の詳細については、「mfc での [richedit 1.0 コントロールの使用](./adding-editing-or-deleting-controls.md) 」および「 [リッチエディットコントロールの例](../mfc/rich-edit-control-examples.md)」を参照してください。
 
-**ツールボックス**で使用できる[Windows コモンコントロール](../mfc/controls-mfc.md)は、次のような機能を提供します。
+**ツールボックス** で使用できる [Windows コモンコントロール](../mfc/controls-mfc.md)は、次のような機能を提供します。
 
 |コントロール名|既定のイベント|
 |---|---|
@@ -95,7 +96,7 @@ ms.locfileid: "91505707"
 
 - 拡張スタイルを設定しています。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 Win32
 

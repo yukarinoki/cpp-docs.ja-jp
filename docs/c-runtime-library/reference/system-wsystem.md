@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「system, _wsystem」を参照してください。
 title: system、_wsystem
 ms.date: 4/2/2020
 api_name:
@@ -35,12 +36,12 @@ helpviewer_keywords:
 - commands, executing
 - command interpreter
 ms.assetid: 7d3df2b6-f742-49ce-bf52-012b0aee3df5
-ms.openlocfilehash: 15e4637d709fdf4600ecb4c66c7d4a75c4fa07eb
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 3fb2045b932347669a756be1c8bc2f87694bd50d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88844978"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97326240"
 ---
 # <a name="system-_wsystem"></a>system、_wsystem
 
@@ -67,7 +68,7 @@ int _wsystem(
 
 ## <a name="return-value"></a>戻り値
 
-*Command*が**NULL**でコマンドインタープリターが見つかった場合、は0以外の値を返します。 コマンドインタープリターが見つからない場合、は0を返し、 **errno** を **ENOENT**に設定します。 *Command*が**NULL**でない場合、 **system**はコマンドインタープリターによって返された値を返します。 コマンド インタープリターから値 0 が返された場合にのみ、値 0 を返します。 戻り値-1 はエラーを示し、 **errno** は次のいずれかの値に設定されます。
+*Command* が **NULL** でコマンドインタープリターが見つかった場合、は0以外の値を返します。 コマンドインタープリターが見つからない場合、は0を返し、 **errno** を **ENOENT** に設定します。 *Command* が **NULL** でない場合、 **system** はコマンドインタープリターによって返された値を返します。 コマンド インタープリターから値 0 が返された場合にのみ、値 0 を返します。 戻り値-1 はエラーを示し、 **errno** は次のいずれかの値に設定されます。
 
 | 値 | 説明 |
 |-|-|
@@ -80,11 +81,11 @@ int _wsystem(
 
 ## <a name="remarks"></a>解説
 
-**System**関数は、コマンドインタープリターに*コマンド*を渡します。このコマンドは、オペレーティングシステムコマンドとして文字列を実行します。 **システム** では、 **COMSPEC** および **PATH** 環境変数を使用して、コマンドインタープリターファイル CMD.exe を検索します。 *Command*が**NULL**の場合、関数は、コマンドインタープリターが存在するかどうかをチェックします。
+**System** 関数は、コマンドインタープリターに *コマンド* を渡します。このコマンドは、オペレーティングシステムコマンドとして文字列を実行します。 **システム** では、 **COMSPEC** および **PATH** 環境変数を使用して、コマンドインタープリターファイル CMD.exe を検索します。 *Command* が **NULL** の場合、関数は、コマンドインタープリターが存在するかどうかをチェックします。
 
-**システム**を呼び出す前に、 [fflush](fflush.md)または[_flushall](flushall.md)を使用して明示的にフラッシュするか、ストリームを閉じる必要があります。
+**システム** を呼び出す前に、 [fflush](fflush.md)または [_flushall](flushall.md)を使用して明示的にフラッシュするか、ストリームを閉じる必要があります。
 
-**_wsystem**は**システム**のワイド文字バージョンです。**_wsystem**の*コマンド*引数は、ワイド文字列です。 それ以外では、これらの関数の動作は同じです。
+**_wsystem** は **システム** のワイド文字バージョンです。**_wsystem** の *コマンド* 引数は、ワイド文字列です。 それ以外では、これらの関数の動作は同じです。
 
 既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 

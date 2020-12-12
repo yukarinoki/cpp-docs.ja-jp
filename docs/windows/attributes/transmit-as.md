@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: transmit_as'
 title: transmit_as (C++ COM 属性)
 ms.date: 10/02/2018
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - transmit_as attribute
 ms.assetid: 53d0b8ab-5b06-423e-83eb-3d01a10424b2
-ms.openlocfilehash: 9483bfd7ca95aa1121beb56aac8a286c25fa17cb
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 5f626612257decaf8c7ac6253e3a586b9753deeb
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88840805"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97329534"
 ---
 # <a name="transmit_as"></a>transmit_as
 
@@ -64,7 +65,7 @@ struct _TREE_NODE_TYPE * right;
 [transmit_as(TREE_XMIT_TYPE)] typedef TREE_NODE_TYPE * TREE_TYPE;
 ```
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 | 属性コンテキスト | 値 |
 |-|-|

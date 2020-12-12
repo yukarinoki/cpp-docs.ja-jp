@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: 次を参照してください。'
 title: 方法 getlasterror (C++ COM 属性)
 ms.date: 10/02/2018
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - usesgetlasterror attribute
 ms.assetid: d149e33d-35a7-46cb-9137-ae6883d86122
-ms.openlocfilehash: e3d3c292554350d85296971a9bd3620909ef47c7
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: f43ae005e2f888f4318900cbde58f449011bd15e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88831633"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97329511"
 ---
 # <a name="usesgetlasterror"></a>usesgetlasterror
 
@@ -29,9 +30,9 @@ Has **getlasterror** C++ 属性に [は、すべて](/windows/win32/Midl/usesget
 
 ## <a name="example"></a>例
 
-使用方法の例については、 [idl_module](idl-module.md)の例を**参照してください。**
+使用方法の例については、 [idl_module](idl-module.md)の例を **参照してください。**
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 | 属性コンテキスト | 値 |
 |-|-|

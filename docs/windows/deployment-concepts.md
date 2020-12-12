@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: 展開の概念'
 title: 配置の概念
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - deploying applications [C++], about deploying applications
 - libraries [C++], application deployment issues
 ms.assetid: ebd7f246-ab54-40e8-87fa-dac02c0047b3
-ms.openlocfilehash: ac3565b4ec465ec60672d2238fbe81b71613a6c1
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: 441e067a541f375029cdb55321a8ad75d1f03c67
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65449047"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97329424"
 ---
 # <a name="deployment-concepts"></a>配置の概念
 
@@ -21,7 +22,7 @@ ms.locfileid: "65449047"
 
 ## <a name="windows-installer-deployment-in-c"></a>C++ での Windows インストーラーの配置
 
-Visual StudioC++プロジェクトは通常、展開を従来の Windows インストーラーのセットアップを使用します。 Windows インストーラーの配置を準備するには、setup.exe ファイルにアプリケーションをパッケージ化し、インストーラー パッケージ (.msi) と共に、そのファイルを配布します。 その後、ユーザーは setup.exe を実行して、アプリケーションをインストールします。
+Visual Studio C++ プロジェクトでは、通常、配置に従来の Windows インストーラーセットアップを使用します。 Windows インストーラーの配置を準備するには、setup.exe ファイルにアプリケーションをパッケージ化し、インストーラー パッケージ (.msi) と共に、そのファイルを配布します。 その後、ユーザーは setup.exe を実行して、アプリケーションをインストールします。
 
 アプリケーションをパッケージ化するには、セットアップ プロジェクトをソリューションに追加します。これにより、ユーザーに配布するセットアップおよびインストーラー パッケージ ファイルがビルド時に作成されます。 詳細については、「[配置方法の選択](choosing-a-deployment-method.md)」を参照してください。
 
@@ -35,17 +36,17 @@ Visual C++ ライブラリは Dll としてパッケージ化され、C/C++ ア�
 
 パッケージ化と再配布の詳細については、次のトピックを参照してください。
 
-- [再配布する DLL の決定](determining-which-dlls-to-redistribute.md)。
+- 再[配布する dll を決定](determining-which-dlls-to-redistribute.md)します。
 
-- [配置方法の選択](choosing-a-deployment-method.md)。
+- [デプロイ方法を選択](choosing-a-deployment-method.md)します。
 
-- [ユニバーサル CRT の配置](universal-crt-deployment.md)。
+- [ユニバーサル CRT デプロイ](universal-crt-deployment.md)。
 
 配置例とトラブルシューティングに関する推奨事項については、以下を参照してください。
 
-- [配置例](deployment-examples.md)。
+- [デプロイの例](deployment-examples.md)。
 
-- [C/C++ 分離アプリケーションおよび side-by-side アセンブリのトラブルシューティング](../build/troubleshooting-c-cpp-isolated-applications-and-side-by-side-assemblies.md)。
+- [C/c + + 分離アプリケーションと Side-by-side アセンブリのトラブルシューティング](../build/troubleshooting-c-cpp-isolated-applications-and-side-by-side-assemblies.md)。
 
 ## <a name="see-also"></a>関連項目
 

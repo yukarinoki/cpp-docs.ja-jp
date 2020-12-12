@@ -1,4 +1,5 @@
 ---
+description: 詳細については、casin、casin、casinl に関するページを参照してください。
 title: casin、casinf、casinl
 ms.date: 11/04/2016
 api_name:
@@ -33,12 +34,12 @@ helpviewer_keywords:
 - casinf function
 - casinl function
 ms.assetid: b75d1455-7b1e-43b0-bd46-c530be190be9
-ms.openlocfilehash: e3ae944c9808fd0fc6e8d1ffbd02da2a69454cc6
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 222e1b99bcc366b3d3d6656bd438d69f670f75eb
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70943392"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97326338"
 ---
 # <a name="casin-casinf-casinl"></a>casin、casinf、casinl
 
@@ -71,23 +72,23 @@ _Lcomplex casinl(
 
 ## <a name="return-value"></a>戻り値
 
-*Z*のアークサイン (ラジアン)。 結果は、虚数軸に沿って、実際の軸に沿って [-π/2, + π/2] の間隔で無制限になります。
+*Z* のアークサイン (ラジアン)。 結果は、虚数軸に沿って、実際の軸に沿って [-π/2, + π/2] の間隔で無制限になります。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-でC++はオーバーロードが可能であるため、 **_Fcomplex**と **_Lcomplex**の値を受け取って返す**casin**のオーバーロードを呼び出すことができます。 C プログラムでは、 **casin**は常にを受け取り **、戻り値を**返します。
+C++ ではオーバーロードが可能であるため、 **_Fcomplex** と **_Lcomplex** の値を受け取って返す、 **casin** のオーバーロードを呼び出すことができます。 C プログラムでは、 **casin** は常にを受け取り、 **_Dcomplex** 値を返します。
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチン|C ヘッダー|C++ ヘッダー|
+|ルーチンによって返される値|C ヘッダー|C++ ヘッダー|
 |-------------|--------------|------------------|
-|**casin**、 **casin**、 **casinl**|\<complex.h>|\<ccomplex>|
+|**casin**、               **casin**、 **casinl**|\<complex.h>|\<ccomplex>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性について詳しくは、「 [Compatibility](../../c-runtime-library/compatibility.md)」をご覧ください。
 
 ## <a name="see-also"></a>関連項目
 
-[関数リファレンス (アルファベット順)](crt-alphabetical-function-reference.md)<br/>
+[アルファベット順の関数リファレンス](crt-alphabetical-function-reference.md)<br/>
 [catanh、catanhf、catanhl](catanh-catanhf-catanhl.md)<br/>
 [ctanh、ctanhf、ctanhl](ctanh-ctanhf-ctanhl.md)<br/>
 [catan、catanf、catanl](catan-catanf-catanl.md)<br/>
