@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: CD2DLinearGradientBrush クラス'
 title: CD2DLinearGradientBrush クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -30,16 +31,16 @@ helpviewer_keywords:
 - CD2DLinearGradientBrush [MFC], m_LinearGradientBrushProperties
 - CD2DLinearGradientBrush [MFC], m_pLinearGradientBrush
 ms.assetid: d4be9ff9-0ea8-45e6-9b8d-f3bc5673cbac
-ms.openlocfilehash: d87cdae5c24eae391be8db2fcdd04f91d592e427
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: b133abe796e609a44d1ebe35a6e6e969c8ee2a68
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81753159"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97180332"
 ---
 # <a name="cd2dlineargradientbrush-class"></a>CD2DLinearGradientBrush クラス
 
-ID2D1線形グラデーションブラシのラッパー。
+ID2D1LinearGradientBrush のラッパー。
 
 ## <a name="syntax"></a>構文
 
@@ -53,63 +54,63 @@ class CD2DLinearGradientBrush : public CD2DGradientBrush;
 
 |名前|説明|
 |----------|-----------------|
-|[CD2Dリニアグラディエントグラデーションブラシ::CD2Dリニアグラデーションブラシ](#cd2dlineargradientbrush)|オブジェクトを構築します。|
-|[CD2Dリニアグラディエントグラデーションブラシ:~CD2Dリニアグラデーションブラシ](#_dtorcd2dlineargradientbrush)|デストラクターです。 D2D 線形グラデーション ブラシ オブジェクトが破棄されるときに呼び出されます。|
+|[CD2DLinearGradientBrush:: CD2DLinearGradientBrush](#cd2dlineargradientbrush)|CD2DLinearGradientBrush オブジェクトを構築します。|
+|[CD2DLinearGradientBrush:: ~ CD2DLinearGradientBrush](#_dtorcd2dlineargradientbrush)|デストラクターです。 D2D 線状グラデーションブラシオブジェクトが破棄されるときに呼び出されます。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
 |名前|説明|
 |----------|-----------------|
-|[CD2Dリニアグラデーションブラシ::アタッチ](#attach)|既存のリソース インターフェイスをオブジェクトにアタッチします。|
-|[CD2Dリニアグラディエントグラデーションブラシ::作成](#create)|CD2D 線形グラデーションブラシを作成します。 [(CD2D リソースをオーバーライドします::作成](../../mfc/reference/cd2dresource-class.md#create).)|
-|[CD2Dリニアグラディエントグラデーションブラシ::Dエストロイ](#destroy)|オブジェクトを破棄します。 [(CD2Dグラデーションブラシ::Dエストロイ](../../mfc/reference/cd2dgradientbrush-class.md#destroy)をオーバーライドします。|
-|[CD2Dリニアグラディエントグラデーションブラシ::Dエタッハ](#detach)|オブジェクトからリソース インターフェイスを切り離します。|
-|[CD2Dリニアグラディエントグラデーションブラシ::取得](#get)|インターフェイスを返します。|
-|[CD2Dリニアグラディエントグラデーションブラシ::ゲットエンドポイント](#getendpoint)|線形グラデーションの終了座標を取得します。|
-|[CD2Dリニアグラディエントブラシ::ゲットスタートポイント](#getstartpoint)|線形グラデーションの開始座標を取得します。|
-|[CD2Dリニアグラディエントグラデーションブラシ::セットエンドポイント](#setendpoint)|ブラシの座標空間の線形グラデーションの終了座標を設定します。|
-|[CD2Dリニアグラディエントブラシ::セットスタートポイント](#setstartpoint)|ブラシの座標空間の線形グラデーションの開始座標を設定します。|
+|[CD2DLinearGradientBrush:: Attach](#attach)|既存のリソースインターフェイスをオブジェクトにアタッチします。|
+|[CD2DLinearGradientBrush:: Create](#create)|CD2DLinearGradientBrush を作成します。 ( [CD2DResource:: Create](../../mfc/reference/cd2dresource-class.md#create)をオーバーライドします)。|
+|[CD2DLinearGradientBrush::D estroy](#destroy)|CD2DLinearGradientBrush オブジェクトを破棄します。 ( [CD2DGradientBrush::D estroy](../../mfc/reference/cd2dgradientbrush-class.md#destroy)をオーバーライドします。)|
+|[CD2DLinearGradientBrush::D etach](#detach)|オブジェクトからリソースインターフェイスをデタッチします。|
+|[CD2DLinearGradientBrush:: Get](#get)|ID2D1LinearGradientBrush インターフェイスを返します。|
+|[CD2DLinearGradientBrush:: GetEndPoint](#getendpoint)|線状グラデーションの終了座標を取得します。|
+|[CD2DLinearGradientBrush:: GetStartPoint](#getstartpoint)|線状グラデーションの開始座標を取得します。|
+|[CD2DLinearGradientBrush:: SetEndPoint](#setendpoint)|ブラシの座標空間における線状グラデーションの終了座標を設定します。|
+|[CD2DLinearGradientBrush:: SetStartPoint](#setstartpoint)|ブラシの座標空間における線状グラデーションの開始座標を設定します。|
 
 ### <a name="public-operators"></a>パブリック演算子
 
 |名前|説明|
 |----------|-----------------|
-|[CD2Dリニアグラディエントブラシ::演算子ID2D1線形グラデーションブラシ*](#operator_id2d1lineargradientbrush_star)|インターフェイスを返します。|
+|[CD2DLinearGradientBrush:: operator ID2D1LinearGradientBrush *](#operator_id2d1lineargradientbrush_star)|ID2D1LinearGradientBrush インターフェイスを返します。|
 
 ### <a name="protected-data-members"></a>プロテクト データ メンバー
 
 |名前|説明|
 |----------|-----------------|
-|[CD2Dリニアグラディエントグラデーションブラシ::m_LinearGradientBrushProperties](#m_lineargradientbrushproperties)|グラデーションの開始点と終了点。|
-|[CD2Dリニアグラディエントグラデーションブラシ::m_pLinearGradientBrush](#m_plineargradientbrush)|ID2D1線形グラデーションブラシへのポインター。|
+|[CD2DLinearGradientBrush:: m_LinearGradientBrushProperties](#m_lineargradientbrushproperties)|グラデーションの始点と終点。|
+|[CD2DLinearGradientBrush:: m_pLinearGradientBrush](#m_plineargradientbrush)|ID2D1LinearGradientBrush へのポインター。|
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
 [CObject](../../mfc/reference/cobject-class.md)
 
-[リソース](../../mfc/reference/cd2dresource-class.md)
+[CD2DResource](../../mfc/reference/cd2dresource-class.md)
 
-[CD2Dブラシ](../../mfc/reference/cd2dbrush-class.md)
+[CD2DBrush](../../mfc/reference/cd2dbrush-class.md)
 
-[グラデーションブラシ](../../mfc/reference/cd2dgradientbrush-class.md)
+[CD2DGradientBrush](../../mfc/reference/cd2dgradientbrush-class.md)
 
 `CD2DLinearGradientBrush`
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-**ヘッダー:** afxrendertarget.h
+**ヘッダー:** afxrendertarget
 
-## <a name="cd2dlineargradientbrushcd2dlineargradientbrush"></a><a name="_dtorcd2dlineargradientbrush"></a>CD2Dリニアグラディエントグラデーションブラシ:~CD2Dリニアグラデーションブラシ
+## <a name="cd2dlineargradientbrushcd2dlineargradientbrush"></a><a name="_dtorcd2dlineargradientbrush"></a> CD2DLinearGradientBrush:: ~ CD2DLinearGradientBrush
 
-デストラクターです。 D2D 線形グラデーション ブラシ オブジェクトが破棄されるときに呼び出されます。
+デストラクターです。 D2D 線状グラデーションブラシオブジェクトが破棄されるときに呼び出されます。
 
 ```
 virtual ~CD2DLinearGradientBrush();
 ```
 
-## <a name="cd2dlineargradientbrushattach"></a><a name="attach"></a>CD2Dリニアグラデーションブラシ::アタッチ
+## <a name="cd2dlineargradientbrushattach"></a><a name="attach"></a> CD2DLinearGradientBrush:: Attach
 
-既存のリソース インターフェイスをオブジェクトにアタッチします。
+既存のリソースインターフェイスをオブジェクトにアタッチします。
 
 ```cpp
 void Attach(ID2D1LinearGradientBrush* pResource);
@@ -117,12 +118,12 @@ void Attach(ID2D1LinearGradientBrush* pResource);
 
 ### <a name="parameters"></a>パラメーター
 
-*リソース*<br/>
-既存のリソース インターフェイス。 NULL にすることはできません。
+*pResource*<br/>
+既存のリソースインターフェイス。 NULL にすることはできません
 
-## <a name="cd2dlineargradientbrushcd2dlineargradientbrush"></a><a name="cd2dlineargradientbrush"></a>CD2Dリニアグラディエントグラデーションブラシ::CD2Dリニアグラデーションブラシ
+## <a name="cd2dlineargradientbrushcd2dlineargradientbrush"></a><a name="cd2dlineargradientbrush"></a> CD2DLinearGradientBrush:: CD2DLinearGradientBrush
 
-オブジェクトを構築します。
+CD2DLinearGradientBrush オブジェクトを構築します。
 
 ```
 CD2DLinearGradientBrush(
@@ -138,33 +139,33 @@ CD2DLinearGradientBrush(
 
 ### <a name="parameters"></a>パラメーター
 
-*ターゲット*<br/>
-レンダー ターゲットへのポインター。
+*pParentTarget*<br/>
+レンダーターゲットへのポインター。
 
-*グラデーションストップ*<br/>
-D2D1_GRADIENT_STOP構造体の配列へのポインター。
+*gradientStops*<br/>
+D2D1_GRADIENT_STOP 構造体の配列へのポインター。
 
-*グラデーションストップカウント*<br/>
-gradientStops 配列内のグラデーションの終了位置の数を指定する 1 以上の値。
+*gradientStopsCount*<br/>
+GradientStops 配列内のグラデーションの分岐点の数を指定する1以上の値。
 
-*線形グラデーションブラシプロパティ*<br/>
-グラデーションの開始点と終了点。
+*LinearGradientBrushProperties*<br/>
+グラデーションの始点と終点。
 
-*カラー補間ガンマ*<br/>
-グラデーションの分岐点間の色補間を行うスペース。
+*colorInterpolationGamma*<br/>
+グラデーションの分岐点の間の色補間が実行される領域。
 
-*拡張モード*<br/>
-[0,1] 正規化された範囲外のグラデーションの動作。
+*extendMode*<br/>
+[0, 1] の正規化された範囲外のグラデーションの動作。
 
-*プロパティ*<br/>
+*pBrushProperties*<br/>
 ブラシの不透明度と変換へのポインター。
 
-*b自動破壊*<br/>
+*bAutoDestroy*<br/>
 オブジェクトが所有者 (pParentTarget) によって破棄されることを示します。
 
-## <a name="cd2dlineargradientbrushcreate"></a><a name="create"></a>CD2Dリニアグラディエントグラデーションブラシ::作成
+## <a name="cd2dlineargradientbrushcreate"></a><a name="create"></a> CD2DLinearGradientBrush:: Create
 
-CD2D 線形グラデーションブラシを作成します。
+CD2DLinearGradientBrush を作成します。
 
 ```
 virtual HRESULT Create(CRenderTarget* pRenderTarget);
@@ -172,24 +173,24 @@ virtual HRESULT Create(CRenderTarget* pRenderTarget);
 
 ### <a name="parameters"></a>パラメーター
 
-*ターゲットをレンダリングします。*<br/>
-レンダー ターゲットへのポインター。
+*pRenderTarget*<br/>
+レンダーターゲットへのポインター。
 
 ### <a name="return-value"></a>戻り値
 
-メソッドが成功した場合は、S_OK を返します。 それ以外の場合は、HRESULT エラー コードを返します。
+メソッドが成功した場合は、S_OK を返します。 それ以外の場合は、HRESULT エラーコードを返します。
 
-## <a name="cd2dlineargradientbrushdestroy"></a><a name="destroy"></a>CD2Dリニアグラディエントグラデーションブラシ::Dエストロイ
+## <a name="cd2dlineargradientbrushdestroy"></a><a name="destroy"></a> CD2DLinearGradientBrush::D estroy
 
-オブジェクトを破棄します。
+CD2DLinearGradientBrush オブジェクトを破棄します。
 
 ```
 virtual void Destroy();
 ```
 
-## <a name="cd2dlineargradientbrushdetach"></a><a name="detach"></a>CD2Dリニアグラディエントグラデーションブラシ::Dエタッハ
+## <a name="cd2dlineargradientbrushdetach"></a><a name="detach"></a> CD2DLinearGradientBrush::D etach
 
-オブジェクトからリソース インターフェイスを切り離します。
+オブジェクトからリソースインターフェイスをデタッチします。
 
 ```
 ID2D1LinearGradientBrush* Detach();
@@ -197,11 +198,11 @@ ID2D1LinearGradientBrush* Detach();
 
 ### <a name="return-value"></a>戻り値
 
-デタッチされたリソース インターフェイスへのポインター。
+デタッチされたリソースインターフェイスへのポインター。
 
-## <a name="cd2dlineargradientbrushget"></a><a name="get"></a>CD2Dリニアグラディエントグラデーションブラシ::取得
+## <a name="cd2dlineargradientbrushget"></a><a name="get"></a> CD2DLinearGradientBrush:: Get
 
-インターフェイスを返します。
+ID2D1LinearGradientBrush インターフェイスを返します。
 
 ```
 ID2D1LinearGradientBrush* Get();
@@ -209,11 +210,11 @@ ID2D1LinearGradientBrush* Get();
 
 ### <a name="return-value"></a>戻り値
 
-ID2D1LinearGradientBrush インターフェイスへのポインターまたは NULL オブジェクトがまだ初期化されていない場合。
+ID2D1LinearGradientBrush インターフェイスへのポインター。オブジェクトがまだ初期化されていない場合は NULL。
 
-## <a name="cd2dlineargradientbrushgetendpoint"></a><a name="getendpoint"></a>CD2Dリニアグラディエントグラデーションブラシ::ゲットエンドポイント
+## <a name="cd2dlineargradientbrushgetendpoint"></a><a name="getendpoint"></a> CD2DLinearGradientBrush:: GetEndPoint
 
-線形グラデーションの終了座標を取得します。
+線状グラデーションの終了座標を取得します。
 
 ```
 CD2DPointF GetEndPoint() const;
@@ -221,11 +222,11 @@ CD2DPointF GetEndPoint() const;
 
 ### <a name="return-value"></a>戻り値
 
-ブラシの座標空間における線形グラデーションの終了 2 次元座標
+ブラシの座標空間における線状グラデーションの終点の2次元座標。
 
-## <a name="cd2dlineargradientbrushgetstartpoint"></a><a name="getstartpoint"></a>CD2Dリニアグラディエントブラシ::ゲットスタートポイント
+## <a name="cd2dlineargradientbrushgetstartpoint"></a><a name="getstartpoint"></a> CD2DLinearGradientBrush:: GetStartPoint
 
-線形グラデーションの開始座標を取得します。
+線状グラデーションの開始座標を取得します。
 
 ```
 CD2DPointF GetStartPoint() const;
@@ -233,27 +234,27 @@ CD2DPointF GetStartPoint() const;
 
 ### <a name="return-value"></a>戻り値
 
-ブラシの座標空間における線形グラデーションの開始 2 次元座標
+ブラシの座標空間における線形グラデーションの開始2次元座標。
 
-## <a name="cd2dlineargradientbrushm_lineargradientbrushproperties"></a><a name="m_lineargradientbrushproperties"></a>CD2Dリニアグラディエントグラデーションブラシ::m_LinearGradientBrushProperties
+## <a name="cd2dlineargradientbrushm_lineargradientbrushproperties"></a><a name="m_lineargradientbrushproperties"></a> CD2DLinearGradientBrush:: m_LinearGradientBrushProperties
 
-グラデーションの開始点と終了点。
+グラデーションの始点と終点。
 
 ```
 D2D1_LINEAR_GRADIENT_BRUSH_PROPERTIES m_LinearGradientBrushProperties;
 ```
 
-## <a name="cd2dlineargradientbrushm_plineargradientbrush"></a><a name="m_plineargradientbrush"></a>CD2Dリニアグラディエントグラデーションブラシ::m_pLinearGradientBrush
+## <a name="cd2dlineargradientbrushm_plineargradientbrush"></a><a name="m_plineargradientbrush"></a> CD2DLinearGradientBrush:: m_pLinearGradientBrush
 
-ID2D1線形グラデーションブラシへのポインター。
+ID2D1LinearGradientBrush へのポインター。
 
 ```
 ID2D1LinearGradientBrush* m_pLinearGradientBrush;
 ```
 
-## <a name="cd2dlineargradientbrushoperator-id2d1lineargradientbrush"></a><a name="operator_id2d1lineargradientbrush_star"></a>CD2Dリニアグラディエントブラシ::演算子ID2D1線形グラデーションブラシ*
+## <a name="cd2dlineargradientbrushoperator-id2d1lineargradientbrush"></a><a name="operator_id2d1lineargradientbrush_star"></a> CD2DLinearGradientBrush:: operator ID2D1LinearGradientBrush *
 
-インターフェイスを返します。
+ID2D1LinearGradientBrush インターフェイスを返します。
 
 ```
 operator ID2D1LinearGradientBrush*();
@@ -261,11 +262,11 @@ operator ID2D1LinearGradientBrush*();
 
 ### <a name="return-value"></a>戻り値
 
-ID2D1LinearGradientBrush インターフェイスへのポインターまたは NULL オブジェクトがまだ初期化されていない場合。
+ID2D1LinearGradientBrush インターフェイスへのポインター。オブジェクトがまだ初期化されていない場合は NULL。
 
-## <a name="cd2dlineargradientbrushsetendpoint"></a><a name="setendpoint"></a>CD2Dリニアグラディエントグラデーションブラシ::セットエンドポイント
+## <a name="cd2dlineargradientbrushsetendpoint"></a><a name="setendpoint"></a> CD2DLinearGradientBrush:: SetEndPoint
 
-ブラシの座標空間の線形グラデーションの終了座標を設定します。
+ブラシの座標空間における線状グラデーションの終了座標を設定します。
 
 ```cpp
 void SetEndPoint(CD2DPointF point);
@@ -273,12 +274,12 @@ void SetEndPoint(CD2DPointF point);
 
 ### <a name="parameters"></a>パラメーター
 
-*ポイント*<br/>
-ブラシの座標空間における線形グラデーションの終了 2 次元座標
+*視点*<br/>
+ブラシの座標空間における線状グラデーションの終点の2次元座標。
 
-## <a name="cd2dlineargradientbrushsetstartpoint"></a><a name="setstartpoint"></a>CD2Dリニアグラディエントブラシ::セットスタートポイント
+## <a name="cd2dlineargradientbrushsetstartpoint"></a><a name="setstartpoint"></a> CD2DLinearGradientBrush:: SetStartPoint
 
-ブラシの座標空間の線形グラデーションの開始座標を設定します。
+ブラシの座標空間における線状グラデーションの開始座標を設定します。
 
 ```cpp
 void SetStartPoint(CD2DPointF point);
@@ -286,8 +287,8 @@ void SetStartPoint(CD2DPointF point);
 
 ### <a name="parameters"></a>パラメーター
 
-*ポイント*<br/>
-ブラシの座標空間における線形グラデーションの開始 2 次元座標
+*視点*<br/>
+ブラシの座標空間における線形グラデーションの開始2次元座標。
 
 ## <a name="see-also"></a>関連項目
 

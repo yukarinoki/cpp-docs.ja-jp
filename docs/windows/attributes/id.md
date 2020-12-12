@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: id'
 title: id (C++ COM 属性)
 ms.date: 10/02/2018
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - id attribute
 ms.assetid: a48d2c99-c5d2-4f46-bf96-5ac88dcb5d0c
-ms.openlocfilehash: f67bf21fbe0040884cba4a54ed8d2a230cb20cd6
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 04f7144e1c6f8b6655b0b6be23e0ffa4f22dc27c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88830554"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97180202"
 ---
 # <a name="id"></a>id
 
@@ -34,9 +35,9 @@ ms.locfileid: "88830554"
 
 ## <a name="example"></a>例
 
-**Id**の使用方法の例については、[バインド](bindable.md)可能なの例を参照してください。
+**Id** の使用方法の例については、[バインド](bindable.md)可能なの例を参照してください。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 | 属性コンテキスト | 値 |
 |-|-|

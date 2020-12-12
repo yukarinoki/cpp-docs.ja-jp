@@ -1,4 +1,5 @@
 ---
+description: 詳細情報:/ALL
 title: /ALL
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - -ALL dumpbin option
 - ALL dumpbin option
 ms.assetid: aa7eb74a-33ba-4d77-8620-3d7ea8b19952
-ms.openlocfilehash: 4b02a13be70963d8c2dcf934cf2c750daf8052a9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 175d4ea7fb7bf4895c304846e6064be5e24bec67
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62273184"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97179682"
 ---
 # <a name="all"></a>/ALL
 
@@ -21,11 +22,11 @@ ms.locfileid: "62273184"
 /ALL
 ```
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-このオプションは、逆アセンブリ コード以外のすべての利用可能な情報を表示します。 使用[/DISASM](disasm.md)を逆アセンブルを表示します。 使用することができます[/RAWDATA](rawdata.md): なし/すべてにファイルの生のバイナリの詳細を省略します。
+このオプションでは、コードの逆アセンブリ以外のすべての使用可能な情報が表示されます。 [/Disasm](disasm.md)を使用して逆アセンブリを表示します。 [/RAWDATA](rawdata.md): NONE を/all と共に使用して、ファイルの生のバイナリの詳細を省略できます。
 
-のみ、 [/HEADERS](headers.md) DUMPBIN オプションがで生成されたファイルで使用できる、 [/GL](gl-whole-program-optimization.md)コンパイラ オプション。
+[/GL](gl-whole-program-optimization.md) コンパイラ オプションで生成したファイルで使用できるのは、[/HEADERS](headers.md) DUMPBIN オプションだけです。
 
 ## <a name="see-also"></a>関連項目
 

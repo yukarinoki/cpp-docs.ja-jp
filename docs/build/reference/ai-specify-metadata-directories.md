@@ -1,4 +1,5 @@
 ---
+description: :/AI (メタデータディレクトリの指定) の詳細情報
 title: /AI (メタデータ ディレクトリの指定)
 ms.date: 11/04/2016
 f1_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - AI compiler option [C++]
 - -AI compiler option [C++]
 ms.assetid: fb9c1846-504c-4a3b-bb39-c8696de32f6f
-ms.openlocfilehash: 3633cfe34a4f9c627f84cf401cb559f02f8c8229
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e30711b1da2d41204bf56520d56dd5101f3168b2
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62273223"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97179747"
 ---
 # <a name="ai-specify-metadata-directories"></a>/AI (メタデータ ディレクトリの指定)
 
@@ -24,24 +25,24 @@ ms.locfileid: "62273223"
 
 ## <a name="syntax"></a>構文
 
-> **/AI**_directory_
+> **/Ai**_ディレクトリ_
 
 ## <a name="arguments"></a>引数
 
-*directory*<br/>
+*名簿*<br/>
 コンパイラが検索するディレクトリまたはパス。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-1 つだけのディレクトリを渡すことができます、 **/AI**呼び出し。 いずれかを指定 **/AI**コンパイラで検索するパスごとにオプション。 コンパイラ検索パスに C:\Project\Meta と C:\Common\Meta の両方を追加する例では、`#using`ディレクティブを追加`/AI"C:\Project\Meta" /AI"C:\Common\Meta"`コンパイラのコマンドラインを各ディレクトリを追加または、**に関する追加の #using ディレクトリの using**Visual Studio のプロパティです。
+**/Ai** 呼び出しに渡すことができるディレクトリは1つだけです。 コンパイラが検索するパスごとに1つの **/ai** オプションを指定します。 たとえば、コンパイラの検索パスに2つのディレクティブを追加するに `#using` `/AI"C:\Project\Meta" /AI"C:\Common\Meta"` は、コンパイラのコマンドラインにを追加するか、Visual Studio の [ **追加の #using ディレクトリ** ] プロパティに各ディレクトリを追加します。
 
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境において、このコンパイラ オプションを設定する方法
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのコンパイラ オプションを設定するには
 
-1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。 [Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)します。
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、[Visual Studio での C++ コンパイラとビルド プロパティの設定](../working-with-project-properties.md)に関するページを参照してください。
 
-1. 選択、**構成プロパティ** > **C/C++** > **全般**プロパティ ページ。
+1. **[構成プロパティ]**  >  **[C/C++]**  >  **[全般]** プロパティ ページを選択します。
 
-1. 変更、**に関する追加の #using ディレクトリの using**プロパティ。
+1. [ **追加の #using ディレクトリ** のプロパティを変更します。
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>このコンパイラ オプションをコードから設定するには
 
@@ -50,5 +51,5 @@ ms.locfileid: "62273223"
 ## <a name="see-also"></a>関連項目
 
 [MSVC コンパイラ オプション](compiler-options.md)<br/>
-[MSVC コンパイラ コマンド ラインの構文](compiler-command-line-syntax.md)<br/>
+[MSVC Compiler Command-Line 構文](compiler-command-line-syntax.md)<br/>
 [#using ディレクティブ](../../preprocessor/hash-using-directive-cpp.md)

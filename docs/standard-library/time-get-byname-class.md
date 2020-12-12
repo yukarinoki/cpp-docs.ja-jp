@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: time_get_byname クラス'
 title: time_get_byname クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - time_get_byname class
 ms.assetid: 6e54153e-da40-4bb9-a942-1a6ce57b30c9
-ms.openlocfilehash: 040d140fa4250ad33e20d1c2724b6f563e865e6b
-ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
+ms.openlocfilehash: 056681782d0e8edcc3d99ccf2b414b2b93db9986
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90742659"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97180280"
 ---
 # <a name="time_get_byname-class"></a>time_get_byname クラス
 
@@ -46,9 +47,9 @@ protected:
 *_Refs*\
 最初の参照数。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-その動作は、 *_Locname*名前付きロケールによって決まります。 各コンストラクターは、 [time_get](../standard-library/time-get-class.md#time_get)() を使用して、その基本オブジェクトを初期化 \<CharType, InputIterator> `_Refs` します。
+その動作は、 *_Locname* 名前付きロケールによって決まります。 各コンストラクターは、 [time_get](../standard-library/time-get-class.md#time_get)() を使用して、その基本オブジェクトを初期化 \<CharType, InputIterator> `_Refs` します。
 
 **ヘッダー:**\<locale>
 

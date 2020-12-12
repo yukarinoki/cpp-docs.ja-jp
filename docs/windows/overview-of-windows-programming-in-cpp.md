@@ -1,13 +1,14 @@
 ---
+description: 詳細については、「C++ での Windows プログラミングの概要」を参照してください。
 title: C++ でプログラミングする Windows の概要
 ms.date: 09/17/2019
 ms.assetid: efc691d7-21f3-47ae-ae56-cab999ccf59d
-ms.openlocfilehash: 0aa667168f88f48458ae3a9b3541d4944f7530cc
-ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
+ms.openlocfilehash: 812fef686208f5f9d4f1c23cd5eb9b2cb8b227bf
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86404988"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97180111"
 ---
 # <a name="overview-of-windows-programming-in-c"></a>C++ でプログラミングする Windows の概要
 
@@ -21,7 +22,7 @@ C++ コンソールアプリケーションは、コンソールウィンドウ�
 
 ## <a name="native-desktop-client-applications"></a>ネイティブデスクトップクライアントアプリケーション
 
-*ネイティブデスクトップクライアントアプリケーション*は、元のネイティブ[Windows C Api またはコンポーネントオブジェクトモデル (COM) api](/windows/win32/apiindex/windows-api-list)を使用してオペレーティングシステムにアクセスする、C または C++ のウィンドウアプリケーションです。 これらの Api 自体は、主に C で記述されています。ネイティブデスクトップアプリを作成する方法は複数あります。オペレーティングシステムイベントを処理する C スタイルのメッセージループを使用して、Win32 Api を直接使用してプログラミングすることができます。 または、Win32 をラップする軽いオブジェクト指向の C++ ライブラリである*Microsoft Foundation Classes* (MFC) を使用してプログラミングすることもできます。 どちらの方法も、ユニバーサル Windows プラットフォーム (UWP) と比較して "現代" とは見なされませんが、どちらも完全にサポートされており、今日の世界で何百万ものコードが実行されています。 ウィンドウで実行される Win32 アプリケーションでは、開発者が Windows プロシージャ関数内で Windows メッセージを明示的に操作する必要があります。 名前にかかわらず、Win32 アプリケーションは、32ビット (x86) または64ビット (x64) のバイナリとしてコンパイルできます。 Visual Studio IDE では、x86 と Win32 という用語は同義です。
+*ネイティブデスクトップクライアントアプリケーション* は、元のネイティブ [Windows C Api またはコンポーネントオブジェクトモデル (COM) api](/windows/win32/apiindex/windows-api-list)を使用してオペレーティングシステムにアクセスする、C または C++ のウィンドウアプリケーションです。 これらの Api 自体は、主に C で記述されています。ネイティブデスクトップアプリを作成する方法は複数あります。オペレーティングシステムイベントを処理する C スタイルのメッセージループを使用して、Win32 Api を直接使用してプログラミングすることができます。 または、Win32 をラップする軽いオブジェクト指向の C++ ライブラリである *Microsoft Foundation Classes* (MFC) を使用してプログラミングすることもできます。 どちらの方法も、ユニバーサル Windows プラットフォーム (UWP) と比較して "現代" とは見なされませんが、どちらも完全にサポートされており、今日の世界で何百万ものコードが実行されています。 ウィンドウで実行される Win32 アプリケーションでは、開発者が Windows プロシージャ関数内で Windows メッセージを明示的に操作する必要があります。 名前にかかわらず、Win32 アプリケーションは、32ビット (x86) または64ビット (x64) のバイナリとしてコンパイルできます。 Visual Studio IDE では、x86 と Win32 という用語は同義です。
 
 従来の Windows C++ プログラミングの概要については、 [Win32 および c++ の概要に関する](/windows/win32/LearnWin32/learn-to-program-for-windows)チュートリアルを参照してください。 Win32 について理解を深めた後は、 [MFC デスクトップアプリケーション](../mfc/mfc-desktop-applications.md)について簡単に学習できます。 洗練されたグラフィックスを使用する従来の C++ デスクトップアプリケーションの例については、「 [Hilo: Windows 用 C++ アプリケーションの開発](/previous-versions/msdn10/ff708696(v=msdn.10))」を参照してください。
 
@@ -43,7 +44,7 @@ C++ のパワーと効率を .NET プログラミングと組み合わせるこ�
 
 ## <a name="universal-windows-platform-apps"></a>ユニバーサル Windows プラットフォーム アプリ
 
-ユニバーサル Windows プラットフォーム (UWP) は、最新の Windows API です。 UWP アプリは、任意の Windows 10 デバイスで実行され、ユーザーインターフェイスに XAML を使用し、完全にタッチ対応になっています。 UWP の詳細については、「[ユニバーサル Windows プラットフォーム (uwp) アプリとは](/windows/uwp/get-started/whats-a-uwp)」[を参照](/windows/uwp/get-started/universal-application-platform-guide)してください。
+ユニバーサル Windows プラットフォーム (UWP) は、最新の Windows API です。 UWP アプリは、任意の Windows 10 デバイスで実行され、ユーザーインターフェイスに XAML を使用し、完全にタッチ対応になっています。 UWP の詳細については、「 [ユニバーサル Windows プラットフォーム (uwp) アプリとは](/windows/uwp/get-started/whats-a-uwp) 」 [を参照](/windows/uwp/get-started/universal-application-platform-guide)してください。
 
 UWP の元の C++ サポートは、(1) C++/CX、構文拡張を持つ C++ の言語、または (2) 標準の C++ および COM に基づく、(2) Windows ランタイム Library (WRL) で作成されました。 C++/CX と WRL は両方ともサポートされています。 新しいプロジェクトでは、 [c++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)をお勧めします。これは、完全に標準 c++ をベースとし、より高速なパフォーマンスを提供します。
 
@@ -67,7 +68,7 @@ DirectX ゲームは、PC または Xbox で実行できます。 詳細につ�
 
 ## <a name="windows-services"></a>Windows サービス
 
-Windows*サービス*は、ユーザーの操作をほとんどまたはまったく行わずにバックグラウンドで実行できるプログラムです。 これらのプログラムは、UNIX システムでは*デーモン*と呼ばれています。 詳細については、「 [サービス](/windows/win32/services/services)」を参照してください。
+Windows *サービス* は、ユーザーの操作をほとんどまたはまったく行わずにバックグラウンドで実行できるプログラムです。 これらのプログラムは、UNIX システムでは *デーモン* と呼ばれています。 詳細については、「 [サービス](/windows/win32/services/services)」を参照してください。
 
 ## <a name="sdks-libraries-and-header-files"></a>Sdk、ライブラリ、およびヘッダーファイル
 
@@ -87,7 +88,7 @@ Microsoft ライブラリには次のものが含まれます。
 
 Windows プログラミングの多くのシナリオでは、Windows SDK も必要になります。これには、Windows オペレーティング システム コンポーネントへのアクセスを可能にするためのヘッダー ファイルが含まれています。 既定では、Visual Studio によって、Windows SDK が C++ デスクトップワークロードのコンポーネントとしてインストールされます。これにより、ユニバーサル Windows アプリの開発が可能になります。 UWP アプリを開発するには、Windows SDK の Windows 10 バージョンが必要です。 詳細については、「 [Windows 10 SDK](https://dev.windows.com/downloads/windows-10-sdk)」を参照してください。 (以前のバージョンの Windows 用 Windows Sdk の詳細については、「 [Windows SDK archive](https://developer.microsoft.com/windows/downloads/sdk-archive)」を参照してください)。
 
-**Program Files (x86) \Windows kit**は、インストールした Windows SDK のすべてのバージョンの既定の場所です。
+**Program Files (x86) \Windows kit** は、インストールした Windows SDK のすべてのバージョンの既定の場所です。
 
 Xbox や Azure など、他のプラットフォームには、インストールを要する独自の SDK があります。 詳細については、DirectX デベロッパー センターおよび Azure デベロッパー センターを参照してください。
 
@@ -101,11 +102,11 @@ Visual Studio には、ネイティブ コード用の強力なデバッガー�
 |-----------|-----------------|
 |[チュートリアル: 標準 C++ プログラムの作成](walkthrough-creating-a-standard-cpp-program-cpp.md)| Windows コンソールアプリケーションを作成します。|
 |[チュートリアル: Windows デスクトップ アプリケーション (C++) の作成](walkthrough-creating-windows-desktop-applications-cpp.md)|ネイティブ Windows デスクトップアプリケーションを作成します。|
-|[Windows デスクトップウィザード](windows-desktop-wizard.md)|ウィザードを使用して、新しい Windows プロジェクトを作成します。|
+|[Windows デスクトップ ウィザード](windows-desktop-wizard.md)|ウィザードを使用して、新しい Windows プロジェクトを作成します。|
 |[Active Template Library (ATL)](../atl/atl-com-desktop-components.md)|C++ で COM コンポーネントを作成するには、ATL ライブラリを使用します。|
 |[Microsoft Foundation Classes (MFC)](../mfc/mfc-desktop-applications.md)|MFC を使用して、ダイアログとコントロールを含む大規模または小さい Windows アプリケーションを作成する|
 |[ATL および MFC 共有クラス](../atl-mfc-shared/atl-mfc-shared-classes.md)|ATL や MFC で共有されている CString などのクラスを使用します。|
-|[[データ アクセス]](../data/data-access-in-cpp.md)| OLE DB と ODBC|
+|[データ アクセス](../data/data-access-in-cpp.md)| OLE DB と ODBC|
 |[テキストと文字列](../text/text-and-strings-in-visual-cpp.md)|Windows でのさまざまな文字列型。|
 |[DirectX を使用してゲームを作成するためのリソース](resources-for-creating-a-game-using-directx.md)
 |[方法: windows デスクトップアプリケーションで Windows 10 SDK を使用する](how-to-use-the-windows-10-sdk-in-a-windows-desktop-application.md)|Windows SDK|

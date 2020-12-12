@@ -1,4 +1,5 @@
 ---
+description: 詳細情報:/cetcompat (中央のシャドウスタックと互換性あり)
 title: /Cetcompat (中央のシャドウスタックと互換性あり)
 ms.date: 09/01/2020
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - /CETCOMPAT linker option
 - /CETCOMPAT
-ms.openlocfilehash: 7de7c2007c29769cb3ac8f89d07de8b00bf44c26
-ms.sourcegitcommit: e58918c45316d799c1952ca7797a85adbcd0c472
+ms.openlocfilehash: 923272a3b3829d0b00f22d2f8c9474f02b7306d0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "89281829"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97179279"
 ---
 # <a name="cetcompat-cet-shadow-stack-compatible"></a>/Cetcompat (中央のシャドウスタックと互換性あり)
 
@@ -41,7 +42,7 @@ Visual Studio 2019 バージョン16.7 以降:
 
 1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、「[プロジェクトのプロパティの操作](../working-with-project-properties.md)」を参照してください。
 
-1. [**構成プロパティ**]  >  **リンカー**の  >  **[詳細設定**] プロパティページを選択します。
+1. [**構成プロパティ**]  >  **リンカー** の  >  **[詳細設定**] プロパティページを選択します。
 
 1. [中央値の **シャドウスタック互換** ] プロパティを選択します。
 
@@ -51,7 +52,7 @@ Visual Studio 2019 バージョン16.7 以降:
 
 1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、「[プロジェクトのプロパティの操作](../working-with-project-properties.md)」を参照してください。
 
-1. [**構成プロパティ**] [  >  **リンカー**  >  **コマンドライン**] プロパティページを選択します。
+1. **[構成プロパティ]**  >  **[リンカー]**  >  **[コマンド ライン]** プロパティ ページを選択します。
 
 1. [ **追加オプション]** の [コントロールの追加] で、バイナリを " *`/CETCOMPAT`* バイナリシャドウスタック互換" としてマークするか、 *`/CETCOMPAT:NO`* 互換性なしとして明示的にマークするには、を追加します。
 
@@ -61,4 +62,4 @@ Visual Studio 2019 バージョン16.7 以降:
 
 ## <a name="see-also"></a>関連項目
 
-[リンカーオプション](linker-options.md)
+[リンカーのオプション](linker-options.md)

@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「MFC 定義済みシンボル」を参照してください。
 title: MFC の定義済みシンボル
 ms.date: 02/14/2019
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - databases [C++], MFC programming model
 - Windows programming MFC symbols [C++]
 ms.assetid: c1e689c4-45d7-40a3-8ee9-f47676cc3bbb
-ms.openlocfilehash: 376b25b457ae0bb9ebc473d997b91c7acfd7316e
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: a55cc0d3e572da7321d992715257e444bbe1d261
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88846304"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97180085"
 ---
 # <a name="mfc-predefined-symbols"></a>MFC の定義済みシンボル
 
@@ -439,7 +440,7 @@ MFC プロジェクトには、windows をサポートするいくつかのヘ�
 
 これらのシンボルは、MFC サポートファイルの一部でもありますが、標準の Windows アプリケーションの関数とアクションをサポートしています。 これらのシンボルはメニューと共に使用されます。
 
-**メニューエディター**でメニューを操作しているときに、これらのシンボルは、コモンメニューコマンドに関連付けられている**プロパティ**ウィンドウに表示されます。 たとえば、アプリケーションに [**終了**] コマンドを含む [**ファイル**] メニューがある場合、そのコマンドは `ID_APP_EXIT` [プロパティウィンドウ](/visualstudio/ide/reference/properties-window)内のシンボルに関連付けられます。
+**メニューエディター** でメニューを操作しているときに、これらのシンボルは、コモンメニューコマンドに関連付けられている **プロパティ** ウィンドウに表示されます。 たとえば、アプリケーションに [**終了**] コマンドを含む [**ファイル**] メニューがある場合、そのコマンドは `ID_APP_EXIT` [プロパティウィンドウ](/visualstudio/ide/reference/properties-window)内のシンボルに関連付けられます。
 
 :::row:::
    :::column span="":::
@@ -554,7 +555,7 @@ MFC プロジェクトには、windows をサポートするいくつかのヘ�
    :::column-end:::
 :::row-end:::
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 MFC
 
