@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「デリゲートとインターフェイスマップマクロ」を参照してください。
 title: デリゲートとインターフェイスマップマクロ (MFC)
 ms.date: 03/30/2017
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - event map macros [MFC]
 - interface map macros [MFC]
 ms.assetid: 3840e642-ff7d-4bdc-998b-c7d8fc50890e
-ms.openlocfilehash: 01f5cbfb1f751823d218761410bc9091b73cb0a3
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 222625514fa0d6d1d683a6ee4098812298f7ed72
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88837451"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97220150"
 ---
 # <a name="delegate-and-interface-map-macros"></a>デリゲートとインターフェイス マップ マクロ
 
@@ -47,7 +48,7 @@ BEGIN_DELEGATE_MAP(  CLASS );
 
 このマクロは、デリゲートマップを構成するデリゲートエントリのリストの先頭をマークします。 このマクロを使用する方法の例については、「 [EVENT_DELEGATE_ENTRY](#event_delegate_entry)」を参照してください。
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 **ヘッダー:** msclr\ event. h
 
@@ -67,7 +68,7 @@ BEGIN_INTERFACE_MAP( theClass, baseClass )
 定義するインターフェイス マップが含まれるクラス
 
 *baseClass*<br/>
-*クラス*の派生元のクラス。
+*クラス* の派生元のクラス。
 
 ### <a name="remarks"></a>解説
 
@@ -75,7 +76,7 @@ BEGIN_INTERFACE_MAP( theClass, baseClass )
 
 インターフェイスマップの詳細については、「 [テクニカルノート 38](../tn038-mfc-ole-iunknown-implementation.md)」を参照してください。
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 **ヘッダー:** afxwin.h
 
@@ -102,7 +103,7 @@ delegate void CommandHandler(  UINT^ cmdID  );
 
 Windows フォームの使用方法の詳細については、「 [MFC での Windows フォームユーザーコントロールの使用](../../dotnet/using-a-windows-form-user-control-in-mfc.md)」を参照してください。
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 **ヘッダー:** afxwinforms (アセンブリ atlmfc\lib\mfcmifc80.dll で定義)
 
@@ -130,7 +131,7 @@ delegate void CommandUIHandler(  unsigned int cmdID, ICommandUI^ cmdUI);
 
 Windows フォームの使用方法の詳細については、「 [MFC での Windows フォームユーザーコントロールの使用](../../dotnet/using-a-windows-form-user-control-in-mfc.md)」を参照してください。
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 **ヘッダー:** afxwinforms (アセンブリ atlmfc\lib\mfcmifc80.dll で定義)
 
@@ -148,7 +149,7 @@ END_DELEGATE_MAP();
 
 このマクロは、デリゲートマップを構成するデリゲートエントリのリストの末尾をマークします。 このマクロを使用する方法の例については、「 [EVENT_DELEGATE_ENTRY](#event_delegate_entry)」を参照してください。
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 **ヘッダー:** msclr\ event. h
 
@@ -166,7 +167,7 @@ END_INTERFACE_MAP( )
 
 インターフェイスマップの詳細については、「 [テクニカルノート 38](../tn038-mfc-ole-iunknown-implementation.md)」を参照してください。
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 **ヘッダー:** afxwin.h
 
@@ -205,7 +206,7 @@ BEGIN_DELEGATE_MAP(CMyView)
 END_DELEGATE_MAP()
 ```
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 **ヘッダー:** msclr\ event. h
 
@@ -230,11 +231,11 @@ INTERFACE_PART( theClass, iid, localClass)
 
 ### <a name="remarks"></a>解説
 
-これにより、 *クラス* および *localclass*によって示されるクラスのメンバーに IID をマップできます。
+これにより、 *クラス* および *localclass* によって示されるクラスのメンバーに IID をマップできます。
 
 インターフェイスマップの詳細については、「 [テクニカルノート 38](../tn038-mfc-ole-iunknown-implementation.md)」を参照してください。
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 **ヘッダー:** afxwin.h
 
@@ -258,7 +259,7 @@ MAKE_DELEGATE( DELEGATE,  MEMBER) ;
 
 ### <a name="remarks"></a>解説
 
-このマクロは、name*メンバー*の*デリゲート*と型のマネージイベントハンドラーデリゲートを作成します。 マネージイベントハンドラーデリゲートを使用すると、ネイティブクラスでマネージイベントを処理できます。
+このマクロは、name *メンバー* の *デリゲート* と型のマネージイベントハンドラーデリゲートを作成します。 マネージイベントハンドラーデリゲートを使用すると、ネイティブクラスでマネージイベントを処理できます。
 
 ### <a name="example"></a>例
 
@@ -274,7 +275,7 @@ void CMyView::OnInitialUpdate()
 }
 ```
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 **ヘッダー:** msclr\ event. h
 

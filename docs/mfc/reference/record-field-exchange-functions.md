@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「レコードフィールドエクスチェンジ関数」を参照してください。
 title: レコード フィールド エクスチェンジ (RFX) 関数
 ms.date: 09/17/2019
 f1_keywords:
@@ -45,12 +46,12 @@ helpviewer_keywords:
 - RFX (record field exchange), data exchange functions [MFC]
 - RFX (record field exchange)
 ms.assetid: 6e4c5c1c-acb7-4c18-bf51-bf7959a696cd
-ms.openlocfilehash: 9bb1b7bcbce16bba8029fcfbbeea7552b1d4a0ba
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 2ba3a83bdda21f91913d7eda435a845b0977e8a9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88843600"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97218954"
 ---
 # <a name="record-field-exchange-functions"></a>レコード フィールド エクスチェンジ (RFX) 関数
 
@@ -141,7 +142,7 @@ void RFX_Binary(
 指定されたデータメンバーに格納されている値 (転送される値)。 レコードセットからデータソースへの転送では、 [CByteArray](cbytearray-class.md)型の値が、指定されたデータメンバーから取得されます。 データソースからレコードセットへの転送では、値は指定されたデータメンバーに格納されます。
 
 *nMaxLength*<br/>
-転送される文字列または配列の許容最大長。 *Nmaxlength*の既定値は255です。 有効な値は 1 ~ INT_MAX です。 フレームワークによって、データ用にこの容量の領域が割り当てられます。 最適なパフォーマンスを得るには、予想される最大のデータ項目に対応できる大きさの値を渡します。
+転送される文字列または配列の許容最大長。 *Nmaxlength* の既定値は255です。 有効な値は 1 ~ INT_MAX です。 フレームワークによって、データ用にこの容量の領域が割り当てられます。 最適なパフォーマンスを得るには、予想される最大のデータ項目に対応できる大きさの値を渡します。
 
 ### <a name="remarks"></a>解説
 
@@ -151,7 +152,7 @@ void RFX_Binary(
 
 「 [RFX_Text](#rfx_text)」を参照してください。
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 **ヘッダー:** afxdb.h
 
@@ -183,7 +184,7 @@ void RFX_Bool(
 
 「 [RFX_Text](#rfx_text)」を参照してください。
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 **ヘッダー:** afxdb.h
 
@@ -215,7 +216,7 @@ void RFX_Byte(
 
 「 [RFX_Text](#rfx_text)」を参照してください。
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 **ヘッダー:** afxdb.h
 
@@ -265,13 +266,13 @@ void RFX_Date(
 
 「 [RFX_Text](#rfx_text)」を参照してください。
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 **ヘッダー:** afxdb.h
 
 ## <a name="rfx_double"></a><a name="rfx_double"></a> RFX_Double
 
-オブジェクト**double float**のフィールドデータメンバー `CRecordset` と、ODBC 型 SQL_DOUBLE のデータソースのレコードの列との間で、double float データを転送します。
+オブジェクトのフィールドデータメンバー `CRecordset` と、ODBC 型 SQL_DOUBLE のデータソースのレコードの列との間で、double float データを転送します。
 
 ### <a name="syntax"></a>構文
 
@@ -297,7 +298,7 @@ void RFX_Double(
 
 「 [RFX_Text](#rfx_text)」を参照してください。
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 **ヘッダー:** afxdb.h
 
@@ -329,7 +330,7 @@ void RFX_Int(
 
 「 [RFX_Text](#rfx_text)」を参照してください。
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 **ヘッダー:** afxdb.h
 
@@ -362,7 +363,7 @@ value );
 
 「 [RFX_Text](#rfx_text)」を参照してください。
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 **ヘッダー:** afxdb.h
 
@@ -394,7 +395,7 @@ void RFX_LongBinary(
 
 「 [RFX_Text](#rfx_text)」を参照してください。
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 **ヘッダー:** afxdb.h
 
@@ -426,7 +427,7 @@ void RFX_Single(
 
 「 [RFX_Text](#rfx_text)」を参照してください。
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 **ヘッダー:** afxdb.h
 
@@ -458,13 +459,13 @@ void RFX_Text(
 指定されたデータメンバーに格納されている値 (転送される値)。 レコードセットからデータソースへの転送では、型の値 `CString` が指定されたデータメンバーから取得されます。 データソースからレコードセットへの転送では、値は指定されたデータメンバーに格納されます。
 
 *nMaxLength*<br/>
-転送される文字列または配列の許容最大長。 *Nmaxlength*の既定値は255です。 有効な値は 1 ~ INT_MAX) です。 フレームワークによって、データ用にこの容量の領域が割り当てられます。 最適なパフォーマンスを得るには、予想される最大のデータ項目に対応できる大きさの値を渡します。
+転送される文字列または配列の許容最大長。 *Nmaxlength* の既定値は255です。 有効な値は 1 ~ INT_MAX) です。 フレームワークによって、データ用にこの容量の領域が割り当てられます。 最適なパフォーマンスを得るには、予想される最大のデータ項目に対応できる大きさの値を渡します。
 
 *nColumnType*<br/>
-主にパラメーターに使用されます。 パラメーターのデータ型を示す整数。 この型は、 **SQL_XXX**形式の ODBC データ型です。
+主にパラメーターに使用されます。 パラメーターのデータ型を示す整数。 この型は、 **SQL_XXX** 形式の ODBC データ型です。
 
 *nScale*<br/>
-ODBC の種類 SQL_DECIMAL または SQL_NUMERIC の値の小数点以下桁数を指定します。 *Nscale* は、パラメーター値を設定する場合にのみ使用できます。 詳細については、 *ODBC SDK プログラマーズリファレンス*の付録 D のトピック「有効桁数、小数点以下桁数、長さ、および表示サイズ」を参照してください。
+ODBC の種類 SQL_DECIMAL または SQL_NUMERIC の値の小数点以下桁数を指定します。 *Nscale* は、パラメーター値を設定する場合にのみ使用できます。 詳細については、 *ODBC SDK プログラマーズリファレンス* の付録 D のトピック「有効桁数、小数点以下桁数、長さ、および表示サイズ」を参照してください。
 
 ### <a name="remarks"></a>解説
 
@@ -492,7 +493,7 @@ void CCustomer::DoFieldExchange(CFieldExchange* pFX)
 }
 ```
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 **ヘッダー:** afxdb.h
 
@@ -523,16 +524,16 @@ void RFX_Binary_Bulk(
 バイト値の配列へのポインター。 この配列には、データソースからレコードセットに転送されるデータが格納されます。
 
 *prgLengths*<br/>
-長整数の配列へのポインター。 この配列は、 *prgByteVals*が指す配列の各値の長さをバイト単位で格納します。 対応するデータ項目に Null 値が含まれている場合は、SQL_NULL_DATA 値が格納されることに注意してください。 詳細については、 `SQLBindCol` *Odbc SDK プログラマーズリファレンス*の odbc API 関数に関する説明を参照してください。
+長整数の配列へのポインター。 この配列は、 *prgByteVals* が指す配列の各値の長さをバイト単位で格納します。 対応するデータ項目に Null 値が含まれている場合は、SQL_NULL_DATA 値が格納されることに注意してください。 詳細については、 `SQLBindCol` *Odbc SDK プログラマーズリファレンス* の odbc API 関数に関する説明を参照してください。
 
 *nMaxLength*<br/>
-*PrgByteVals*が指す配列に格納されている値の許容最大長。 データが切り捨てられないようにするには、予想される最も大きなデータ項目に対応できる大きさの値を渡します。
+*PrgByteVals* が指す配列に格納されている値の許容最大長。 データが切り捨てられないようにするには、予想される最も大きなデータ項目に対応できる大きさの値を渡します。
 
 ### <a name="remarks"></a>解説
 
 データソース列には、SQL_BINARY、SQL_VARBINARY、または SQL_LONGVARBINARY の ODBC 型を使用できます。 レコードセットでは、BYTE へのポインター型のフィールドデータメンバーを定義する必要があります。
 
-*PrgByteVals*と*prgLengths*を NULL に初期化すると、そのポインターが指す配列は、行セットのサイズと同じサイズで自動的に割り当てられます。
+*PrgByteVals* と *prgLengths* を NULL に初期化すると、そのポインターが指す配列は、行セットのサイズと同じサイズで自動的に割り当てられます。
 
 > [!NOTE]
 > バルクレコードフィールドエクスチェンジは、データソースからレコードセットオブジェクトにデータを転送するだけです。 レコードセットを更新できるようにするには、ODBC API 関数を使用する必要があり `SQLSetPos` ます。
@@ -543,7 +544,7 @@ void RFX_Binary_Bulk(
 
 「 [RFX_Text_Bulk](#rfx_text_bulk)」を参照してください。
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 **ヘッダー:** afxdb.h
 
@@ -573,13 +574,13 @@ void RFX_Bool_Bulk(
 ブール値の配列へのポインター。 この配列には、データソースからレコードセットに転送されるデータが格納されます。
 
 *prgLengths*<br/>
-長整数の配列へのポインター。 この配列は、 *prgBoolVals*が指す配列の各値の長さをバイト単位で格納します。 対応するデータ項目に Null 値が含まれている場合は、SQL_NULL_DATA 値が格納されることに注意してください。 詳細については、 `SQLBindCol` *Odbc SDK プログラマーズリファレンス*の odbc API 関数に関する説明を参照してください。
+長整数の配列へのポインター。 この配列は、 *prgBoolVals* が指す配列の各値の長さをバイト単位で格納します。 対応するデータ項目に Null 値が含まれている場合は、SQL_NULL_DATA 値が格納されることに注意してください。 詳細については、 `SQLBindCol` *Odbc SDK プログラマーズリファレンス* の odbc API 関数に関する説明を参照してください。
 
 ### <a name="remarks"></a>解説
 
 データソース列には SQL_BIT の ODBC 型が必要です。 レコードセットでは、BOOL へのポインター型のフィールドデータメンバーを定義する必要があります。
 
-*PrgBoolVals*と*prgLengths*を NULL に初期化すると、そのポインターが指す配列は、行セットのサイズと同じサイズで自動的に割り当てられます。
+*PrgBoolVals* と *prgLengths* を NULL に初期化すると、そのポインターが指す配列は、行セットのサイズと同じサイズで自動的に割り当てられます。
 
 > [!NOTE]
 > バルクレコードフィールドエクスチェンジは、データソースからレコードセットオブジェクトにデータを転送するだけです。 レコードセットを更新できるようにするには、ODBC API 関数を使用する必要があり `SQLSetPos` ます。
@@ -590,7 +591,7 @@ void RFX_Bool_Bulk(
 
 「 [RFX_Text_Bulk](#rfx_text_bulk)」を参照してください。
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 **ヘッダー:** afxdb.h
 
@@ -620,13 +621,13 @@ void RFX_Byte_Bulk(
 バイト値の配列へのポインター。 この配列には、データソースからレコードセットに転送されるデータが格納されます。
 
 *prgLengths*<br/>
-長整数の配列へのポインター。 この配列は、 *prgByteVals*が指す配列の各値の長さをバイト単位で格納します。 対応するデータ項目に Null 値が含まれている場合は、SQL_NULL_DATA 値が格納されることに注意してください。 詳細については、 `SQLBindCol` *Odbc SDK プログラマーズリファレンス*の odbc API 関数に関する説明を参照してください。
+長整数の配列へのポインター。 この配列は、 *prgByteVals* が指す配列の各値の長さをバイト単位で格納します。 対応するデータ項目に Null 値が含まれている場合は、SQL_NULL_DATA 値が格納されることに注意してください。 詳細については、 `SQLBindCol` *Odbc SDK プログラマーズリファレンス* の odbc API 関数に関する説明を参照してください。
 
 ### <a name="remarks"></a>解説
 
 データソース列には SQL_TINYINT の ODBC 型が必要です。 レコードセットでは、BYTE へのポインター型のフィールドデータメンバーを定義する必要があります。
 
-*PrgByteVals*と*prgLengths*を NULL に初期化すると、そのポインターが指す配列は、行セットのサイズと同じサイズで自動的に割り当てられます。
+*PrgByteVals* と *prgLengths* を NULL に初期化すると、そのポインターが指す配列は、行セットのサイズと同じサイズで自動的に割り当てられます。
 
 > [!NOTE]
 > バルクレコードフィールドエクスチェンジは、データソースからレコードセットオブジェクトにデータを転送するだけです。 レコードセットを更新できるようにするには、ODBC API 関数を使用する必要があり `SQLSetPos` ます。
@@ -637,7 +638,7 @@ void RFX_Byte_Bulk(
 
 「 [RFX_Text_Bulk](#rfx_text_bulk)」を参照してください。
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 **ヘッダー:** afxdb.h
 
@@ -664,16 +665,16 @@ void RFX_Date_Bulk(
 データ列の名前。
 
 *prgTSVals*<br/>
-TIMESTAMP_STRUCT 値の配列へのポインター。 この配列には、データソースからレコードセットに転送されるデータが格納されます。 TIMESTAMP_STRUCT データ型の詳細については、 *ODBC SDK プログラマーズリファレンス*の付録 D の「C データ型」を参照してください。
+TIMESTAMP_STRUCT 値の配列へのポインター。 この配列には、データソースからレコードセットに転送されるデータが格納されます。 TIMESTAMP_STRUCT データ型の詳細については、 *ODBC SDK プログラマーズリファレンス* の付録 D の「C データ型」を参照してください。
 
 *prgLengths*<br/>
-長整数の配列へのポインター。 この配列は、 *prgTSVals*が指す配列の各値の長さをバイト単位で格納します。 対応するデータ項目に Null 値が含まれている場合は、SQL_NULL_DATA 値が格納されることに注意してください。 詳細については、 `SQLBindCol` *Odbc SDK プログラマーズリファレンス*の odbc API 関数に関する説明を参照してください。
+長整数の配列へのポインター。 この配列は、 *prgTSVals* が指す配列の各値の長さをバイト単位で格納します。 対応するデータ項目に Null 値が含まれている場合は、SQL_NULL_DATA 値が格納されることに注意してください。 詳細については、 `SQLBindCol` *Odbc SDK プログラマーズリファレンス* の odbc API 関数に関する説明を参照してください。
 
 ### <a name="remarks"></a>解説
 
 データソース列には、SQL_DATE、SQL_TIME、または SQL_TIMESTAMP の ODBC 型を使用できます。 レコードセットは、TIMESTAMP_STRUCT へのポインター型のフィールドデータメンバーを定義する必要があります。
 
-*PrgTSVals*と*prgLengths*を NULL に初期化すると、そのポインターが指す配列は、行セットのサイズと同じサイズで自動的に割り当てられます。
+*PrgTSVals* と *prgLengths* を NULL に初期化すると、そのポインターが指す配列は、行セットのサイズと同じサイズで自動的に割り当てられます。
 
 > [!NOTE]
 > バルクレコードフィールドエクスチェンジは、データソースからレコードセットオブジェクトにデータを転送するだけです。 レコードセットを更新できるようにするには、ODBC API 関数を使用する必要があり `SQLSetPos` ます。
@@ -684,7 +685,7 @@ TIMESTAMP_STRUCT 値の配列へのポインター。 この配列には、デ�
 
 「 [RFX_Text_Bulk](#rfx_text_bulk)」を参照してください。
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 **ヘッダー:** afxdb.h
 
@@ -714,13 +715,13 @@ void RFX_Double_Bulk(
 値の配列へのポインター **`double`** 。 この配列には、データソースからレコードセットに転送されるデータが格納されます。
 
 *prgLengths*<br/>
-長整数の配列へのポインター。 この配列は、 *prgDblVals*が指す配列の各値の長さをバイト単位で格納します。 対応するデータ項目に Null 値が含まれている場合は、SQL_NULL_DATA 値が格納されることに注意してください。 詳細については、 `SQLBindCol` *Odbc SDK プログラマーズリファレンス*の odbc API 関数に関する説明を参照してください。
+長整数の配列へのポインター。 この配列は、 *prgDblVals* が指す配列の各値の長さをバイト単位で格納します。 対応するデータ項目に Null 値が含まれている場合は、SQL_NULL_DATA 値が格納されることに注意してください。 詳細については、 `SQLBindCol` *Odbc SDK プログラマーズリファレンス* の odbc API 関数に関する説明を参照してください。
 
 ### <a name="remarks"></a>解説
 
 データソース列には SQL_DOUBLE の ODBC 型が必要です。 レコードセットでは、へのポインター型のフィールドデータメンバーを定義する必要があり **`double`** ます。
 
-*PrgDblVals*と*prgLengths*を NULL に初期化すると、そのポインターが指す配列は、行セットのサイズと同じサイズで自動的に割り当てられます。
+*PrgDblVals* と *prgLengths* を NULL に初期化すると、そのポインターが指す配列は、行セットのサイズと同じサイズで自動的に割り当てられます。
 
 > [!NOTE]
 > バルクレコードフィールドエクスチェンジは、データソースからレコードセットオブジェクトにデータを転送するだけです。 レコードセットを更新できるようにするには、ODBC API 関数を使用する必要があり `SQLSetPos` ます。
@@ -731,7 +732,7 @@ void RFX_Double_Bulk(
 
 「 [RFX_Text_Bulk](#rfx_text_bulk)」を参照してください。
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 **ヘッダー:** afxdb.h
 
@@ -763,7 +764,7 @@ void RFX_Int(
 
 「 [RFX_Text](#rfx_text)」を参照してください。
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 **ヘッダー:** afxdb.h
 
@@ -793,13 +794,13 @@ void RFX_Long_Bulk(
 長整数の配列へのポインター。 この配列には、データソースからレコードセットに転送されるデータが格納されます。
 
 *prgLengths*<br/>
-長整数の配列へのポインター。 この配列は、 *prgLongVals*が指す配列の各値の長さをバイト単位で格納します。 対応するデータ項目に Null 値が含まれている場合は、SQL_NULL_DATA 値が格納されることに注意してください。 詳細については、 `SQLBindCol` *Odbc SDK プログラマーズリファレンス*の odbc API 関数に関する説明を参照してください。
+長整数の配列へのポインター。 この配列は、 *prgLongVals* が指す配列の各値の長さをバイト単位で格納します。 対応するデータ項目に Null 値が含まれている場合は、SQL_NULL_DATA 値が格納されることに注意してください。 詳細については、 `SQLBindCol` *Odbc SDK プログラマーズリファレンス* の odbc API 関数に関する説明を参照してください。
 
 ### <a name="remarks"></a>解説
 
 データソース列には SQL_INTEGER の ODBC 型が必要です。 レコードセットでは、へのポインター型のフィールドデータメンバーを定義する必要があり **`long`** ます。
 
-*PrgLongVals*と*prgLengths*を NULL に初期化すると、そのポインターが指す配列は、行セットのサイズと同じサイズで自動的に割り当てられます。
+*PrgLongVals* と *prgLengths* を NULL に初期化すると、そのポインターが指す配列は、行セットのサイズと同じサイズで自動的に割り当てられます。
 
 > [!NOTE]
 > バルクレコードフィールドエクスチェンジは、データソースからレコードセットオブジェクトにデータを転送するだけです。 レコードセットを更新できるようにするには、ODBC API 関数を使用する必要があり `SQLSetPos` ます。
@@ -810,7 +811,7 @@ void RFX_Long_Bulk(
 
 「 [RFX_Text_Bulk](#rfx_text_bulk)」を参照してください。
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 **ヘッダー:** afxdb.h
 
@@ -840,13 +841,13 @@ void RFX_Single_Bulk(
 値の配列へのポインター **`float`** 。 この配列には、データソースからレコードセットに転送されるデータが格納されます。
 
 *prgLengths*<br/>
-長整数の配列へのポインター。 この配列は、 *prgFltVals*が指す配列の各値の長さをバイト単位で格納します。 対応するデータ項目に Null 値が含まれている場合は、SQL_NULL_DATA 値が格納されることに注意してください。 詳細については、 `SQLBindCol` *Odbc SDK プログラマーズリファレンス*の odbc API 関数に関する説明を参照してください。
+長整数の配列へのポインター。 この配列は、 *prgFltVals* が指す配列の各値の長さをバイト単位で格納します。 対応するデータ項目に Null 値が含まれている場合は、SQL_NULL_DATA 値が格納されることに注意してください。 詳細については、 `SQLBindCol` *Odbc SDK プログラマーズリファレンス* の odbc API 関数に関する説明を参照してください。
 
 ### <a name="remarks"></a>解説
 
 データソース列には SQL_REAL の ODBC 型が必要です。 レコードセットでは、へのポインター型のフィールドデータメンバーを定義する必要があり **`float`** ます。
 
-*PrgFltVals*と*prgLengths*を NULL に初期化すると、そのポインターが指す配列は、行セットのサイズと同じサイズで自動的に割り当てられます。
+*PrgFltVals* と *prgLengths* を NULL に初期化すると、そのポインターが指す配列は、行セットのサイズと同じサイズで自動的に割り当てられます。
 
 > [!NOTE]
 > バルクレコードフィールドエクスチェンジは、データソースからレコードセットオブジェクトにデータを転送するだけです。 レコードセットを更新できるようにするには、ODBC API 関数を使用する必要があり `SQLSetPos` ます。
@@ -857,7 +858,7 @@ void RFX_Single_Bulk(
 
 「 [RFX_Text_Bulk](#rfx_text_bulk)」を参照してください。
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 **ヘッダー:** afxdb.h
 
@@ -888,16 +889,16 @@ void RFX_Text_Bulk(
 LPSTR 値の配列へのポインター。 この配列には、データソースからレコードセットに転送されるデータが格納されます。 ODBC の現在のバージョンでは、これらの値を Unicode にすることはできません。
 
 *prgLengths*<br/>
-長整数の配列へのポインター。 この配列は、 *prgStrVals*が指す配列の各値の長さをバイト単位で格納します。 この長さは、null 終了文字を除外します。 対応するデータ項目に Null 値が含まれている場合は、SQL_NULL_DATA 値が格納されることに注意してください。 詳細については、 `SQLBindCol` *Odbc SDK プログラマーズリファレンス*の odbc API 関数に関する説明を参照してください。
+長整数の配列へのポインター。 この配列は、 *prgStrVals* が指す配列の各値の長さをバイト単位で格納します。 この長さは、null 終了文字を除外します。 対応するデータ項目に Null 値が含まれている場合は、SQL_NULL_DATA 値が格納されることに注意してください。 詳細については、 `SQLBindCol` *Odbc SDK プログラマーズリファレンス* の odbc API 関数に関する説明を参照してください。
 
 *nMaxLength*<br/>
-*PrgStrVals*が指す配列に格納されている値の許容最大長 (null 終了文字を含む)。 データが切り捨てられないようにするには、予想される最も大きなデータ項目に対応できる大きさの値を渡します。
+*PrgStrVals* が指す配列に格納されている値の許容最大長 (null 終了文字を含む)。 データが切り捨てられないようにするには、予想される最も大きなデータ項目に対応できる大きさの値を渡します。
 
 ### <a name="remarks"></a>解説
 
 データソース列には、SQL_LONGVARCHAR、SQL_CHAR、SQL_VARCHAR、SQL_DECIMAL、または SQL_NUMERIC の ODBC 型を使用できます。 レコードセットでは、型 LPSTR のフィールドデータメンバーを定義する必要があります。
 
-*PrgStrVals*と*prgLengths*を NULL に初期化すると、そのポインターが指す配列は、行セットのサイズと同じサイズで自動的に割り当てられます。
+*PrgStrVals* と *prgLengths* を NULL に初期化すると、そのポインターが指す配列は、行セットのサイズと同じサイズで自動的に割り当てられます。
 
 > [!NOTE]
 > バルクレコードフィールドエクスチェンジは、データソースからレコードセットオブジェクトにデータを転送するだけです。 レコードセットを更新できるようにするには、ODBC API 関数を使用する必要があり `SQLSetPos` ます。
@@ -923,7 +924,7 @@ void CMultiCustomer::DoBulkFieldExchange(CFieldExchange* pFX)
 }
 ```
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 **ヘッダー:** afxdb.h
 
@@ -970,7 +971,7 @@ void AFXAPI DFX_Binary(
 
 「 [DFX_Text](#dfx_text)」を参照してください。
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 **ヘッダー:** afxdao
 
@@ -1013,7 +1014,7 @@ void AFXAPI DFX_Bool(
 
 「 [DFX_Text](#dfx_text)」を参照してください。
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 **ヘッダー:** afxdao
 
@@ -1056,7 +1057,7 @@ void AFXAPI DFX_Byte(
 
 「 [DFX_Text](#dfx_text)」を参照してください。
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 **ヘッダー:** afxdao
 
@@ -1099,7 +1100,7 @@ void AFXAPI DFX_Currency(
 
 「 [DFX_Text](#dfx_text)」を参照してください。
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 **ヘッダー:** afxdao
 
@@ -1145,13 +1146,13 @@ void AFXAPI DFX_DateTime(
 
 「 [DFX_Text](#dfx_text)」を参照してください。
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 **ヘッダー:** afxdao
 
 ## <a name="dfx_double"></a><a name="dfx_double"></a> DFX_Double
 
-[CDaoRecordset](cdaorecordset-class.md)オブジェクトのフィールドデータメンバーとデータソース上のレコードの列との間で、 **double float 型**のデータを転送します。
+[CDaoRecordset](cdaorecordset-class.md)オブジェクトのフィールドデータメンバーとデータソース上のレコードの列との間で、 **double float 型** のデータを転送します。
 
 ### <a name="syntax"></a>構文
 
@@ -1188,7 +1189,7 @@ void AFXAPI DFX_Double(
 
 「 [DFX_Text](#dfx_text)」を参照してください。
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 **ヘッダー:** afxdao
 
@@ -1231,7 +1232,7 @@ void AFXAPI DFX_Long(
 
 「 [DFX_Text](#dfx_text)」を参照してください。
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 **ヘッダー:** afxdao
 
@@ -1278,7 +1279,7 @@ void AFXAPI DFX_LongBinary(
 
 「 [DFX_Text](#dfx_text)」を参照してください。
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 **ヘッダー:** afxdao
 
@@ -1324,7 +1325,7 @@ void AFXAPI DFX_Short(
 
 「 [DFX_Text](#dfx_text)」を参照してください。
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 **ヘッダー:** afxdao
 
@@ -1367,7 +1368,7 @@ void AFXAPI DFX_Single(
 
 「 [DFX_Text](#dfx_text)」を参照してください。
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 **ヘッダー:** afxdao
 
@@ -1430,7 +1431,7 @@ void CCustSet::DoFieldExchange(CDaoFieldExchange* pFX)
 }
 ```
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 **ヘッダー:** afxdao
 

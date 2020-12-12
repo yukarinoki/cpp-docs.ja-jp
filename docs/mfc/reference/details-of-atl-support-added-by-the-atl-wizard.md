@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: atl ウィザードによって追加された ATL サポートの詳細'
 title: ATL ウィザードで追加した ATL サポートの詳細
 ms.date: 08/20/2019
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - MFC, ATL support
 - ATL, MFC projects
 ms.assetid: aa66bad0-008f-4886-94c1-2a0a0d04bce4
-ms.openlocfilehash: aeac01ce58deb429f14058c06524dff53abde060
-ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
+ms.openlocfilehash: 2ae574ac2c4d56e1522fa8c794c18b6f9b6635ce
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "92924437"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97220137"
 ---
 # <a name="details-of-atl-support-added-by-the-atl-wizard"></a>ATL ウィザードで追加した ATL サポートの詳細
 
@@ -38,7 +39,7 @@ ms.locfileid: "92924437"
 
 MFC DLL プロジェクトに ATL サポートを追加すると、いくつかの相違点が表示されます。 `DLLRegisterServer` `DLLUnregisterServer` DLL を登録および登録解除するためのおよび関数にコードが追加されました。 コードは [DllCanUnloadNow](../../atl/reference/catldllmodulet-class.md#dllcanunloadnow) と [DllGetClassObject](../../atl/reference/catldllmodulet-class.md#dllgetclassobject)にも追加されます。
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 
 [MFC プロジェクトでの ATL のサポート](../../mfc/reference/adding-atl-support-to-your-mfc-project.md)<br/>
 [コード ウィザードを使用した機能の追加](../../ide/adding-functionality-with-code-wizards-cpp.md)<br/>

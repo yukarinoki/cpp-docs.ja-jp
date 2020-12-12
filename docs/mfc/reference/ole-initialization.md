@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: OLE の初期化'
 title: OLE の初期化
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - OLE initialization
 ms.assetid: aa8a54a7-24c3-4344-b2c6-dbcf6084fa31
-ms.openlocfilehash: 13c267df492ab86606e893df4c13e5510e6e546a
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 0efed4fefe62b720852905b6eed44501d4369efa
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88843691"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97218993"
 ---
 # <a name="ole-initialization"></a>OLE の初期化
 
@@ -39,7 +40,7 @@ void AfxEnableControlContainer( );
 
 OLE コントロール (現在は ActiveX コントロールと呼ばれます) の詳細については、「 [Activex コントロールのトピック](../mfc-activex-controls.md)」を参照してください。
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 **ヘッダー :** afxdisp.h
 
@@ -64,12 +65,12 @@ MFC アプリケーションに対する OLE サポートを初期化するに�
 - [の imessagefilter.prefiltermessage](/windows/win32/api/objidl/nn-objidl-imessagefilter)インターフェイスを実装して、メッセージフィルターオブジェクトを作成します。 このメッセージフィルターには、 [AfxOleGetMessageFilter](application-control.md#afxolegetmessagefilter)の呼び出しを使用してアクセスできます。
 
 > [!NOTE]
-> **AfxOleInit**が MFC DLL から呼び出された場合、呼び出しは失敗します。 この関数は DLL から呼び出された場合、呼び出し元アプリケーションによって OLE システムが既に初期化されていることを想定するため、失敗が生じます。
+> **AfxOleInit** が MFC DLL から呼び出された場合、呼び出しは失敗します。 この関数は DLL から呼び出された場合、呼び出し元アプリケーションによって OLE システムが既に初期化されていることを想定するため、失敗が生じます。
 
 > [!NOTE]
 > MFC アプリケーションは、シングルスレッド アパートメント (STA) として初期化する必要があります。 オーバーライドで [CoInitializeEx](/windows/win32/api/combaseapi/nf-combaseapi-coinitializeex) を呼び出した場合は `InitInstance` 、COINIT_MULTITHREADED ではなく COINIT_APARTMENTTHREADED を指定します。
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 **ヘッダー :** afxdisp.h
 

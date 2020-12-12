@@ -1,13 +1,14 @@
 ---
+description: 詳細については、「DHTML 編集コマンドマップ」を参照してください。
 title: DHTML 編集コマンド マップ
 ms.date: 11/04/2016
 ms.assetid: c1b49876-039e-4a26-bb24-ea98ccf254a1
-ms.openlocfilehash: f4bbfb500e8de9594bbaa334b4e227caeaa845da
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: da50d9b58e5294622da0685450e01ad0acabad3f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88837412"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97220111"
 ---
 # <a name="dhtml-editing-command-maps"></a>DHTML 編集コマンド マップ
 
@@ -48,7 +49,7 @@ DECLARE_DHTMLEDITING_CMDMAP(className)
 
 [HTMLEdit サンプル](../../overview/visual-cpp-samples.md)を参照してください。
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
   **ヘッダー** afxhtml. h
 
@@ -71,7 +72,7 @@ DHTML 編集コマンドマップを格納しているクラスの名前。 こ�
 
 クラスの実装 (.cpp) ファイルに BEGIN_DHTMLEDITING_CMDMAP マクロを配置した後、クラスがマップするコマンド (たとえば、ID_EDIT_CUT から IDM_CUT) に対してマクロを [DHTMLEDITING_CMD_ENTRY](#dhtmlediting_cmd_entry) します。 [END_DHTMLEDITING_CMDMAP](#end_dhtmlediting_cmdmap)マクロを使用して、イベントマップの終了をマークします。
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
   **ヘッダー** afxhtml. h
 
@@ -91,7 +92,7 @@ END_DHTMLEDITING_CMDMAP()
 
 [HTMLEdit サンプル](../../overview/visual-cpp-samples.md)を参照してください。
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
   **ヘッダー** afxhtml. h
 
@@ -109,13 +110,13 @@ DHTMLEDITING_CMD_ENTRY(cmdID,  dhtmlcmdID)
 コマンド ID (ID_EDIT_COPY など)。
 
 *dhtmlcmdID*<br/>
-*CmdID*マップ (IDM_COPY など) の対象となる HTML 編集コマンド。
+*CmdID* マップ (IDM_COPY など) の対象となる HTML 編集コマンド。
 
 ### <a name="example"></a>例
 
 [HTMLEdit サンプル](../../overview/visual-cpp-samples.md)を参照してください。
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
   **ヘッダー** afxhtml. h
 
@@ -133,7 +134,7 @@ DHTMLEDITING_CMD_ENTRY_FUNC(cmdID, dhtmlcmdID,  member_func_name)
 コマンド ID (ID_EDIT_COPY など)。
 
 *dhtmlcmdID*<br/>
-*CmdID*マップ (IDM_COPY など) の対象となる HTML 編集コマンド。
+*CmdID* マップ (IDM_COPY など) の対象となる HTML 編集コマンド。
 
 *member_func_name*<br/>
 コマンドのマップ先となるメッセージハンドラー関数の名前。
@@ -142,7 +143,7 @@ DHTMLEDITING_CMD_ENTRY_FUNC(cmdID, dhtmlcmdID,  member_func_name)
 
 [HTMLEdit サンプル](../../overview/visual-cpp-samples.md)を参照してください。
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
   **ヘッダー** afxhtml. h
 
@@ -160,7 +161,7 @@ DHTMLEDITING_CMD_ENTRY_TYPE(cmdID  ,   dhtmlcmdID  ,    elemType)
 コマンド ID (ID_EDIT_COPY など)。
 
 *dhtmlcmdID*<br/>
-*CmdID*マップ (IDM_COPY など) の対象となる HTML 編集コマンド。
+*CmdID* マップ (IDM_COPY など) の対象となる HTML 編集コマンド。
 
 *型の種類*<br/>
 ユーザーインターフェイス要素の型。AFX_UI_ELEMTYPE_NORMAL、AFX_UI_ELEMTYPE_CHECKBOX、または AFX_UI_ELEMTYPE_RADIO のいずれか。
@@ -169,7 +170,7 @@ DHTMLEDITING_CMD_ENTRY_TYPE(cmdID  ,   dhtmlcmdID  ,    elemType)
 
 [HTMLEdit サンプル](../../overview/visual-cpp-samples.md)を参照してください。
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
   **ヘッダー** afxhtml. h
 
@@ -187,7 +188,7 @@ DHTMLEDITING_CMD_ENTRY_FUNC_TYPE(cmdID, dhtmlcmdID, member_func_name,  elemType)
 コマンド ID (ID_EDIT_COPY など)。
 
 *dhtmlcmdID*<br/>
-*CmdID*マップ (IDM_COPY など) の対象となる HTML 編集コマンド。
+*CmdID* マップ (IDM_COPY など) の対象となる HTML 編集コマンド。
 
 *member_func_name*<br/>
 コマンドのマップ先となるメッセージハンドラー関数の名前。
@@ -199,7 +200,7 @@ DHTMLEDITING_CMD_ENTRY_FUNC_TYPE(cmdID, dhtmlcmdID, member_func_name,  elemType)
 
 [HTMLEdit サンプル](../../overview/visual-cpp-samples.md)を参照してください。
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
   **ヘッダー** afxhtml. h
 
