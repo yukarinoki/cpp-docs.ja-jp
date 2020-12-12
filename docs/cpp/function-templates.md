@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: 関数テンプレート'
 title: 関数テンプレート
 ms.date: 07/15/2019
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - templates, function
 - function templates, about function templates
 ms.assetid: 59b56a4b-0689-4161-9c07-25021562e2a7
-ms.openlocfilehash: 44fb8691c296892377686310fbd9b4d9adcd0f80
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: f64041e2fdd8b9acc30a4f71e445d9f73bb7db37
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87232288"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97341387"
 ---
 # <a name="function-templates"></a>関数テンプレート
 
@@ -30,7 +31,7 @@ int main() {
 
 このコードは、引数の値を入れ替える関数のファミリを定義します。 このテンプレートから、 **`int`** **`long`** 型と型、およびユーザー定義型を交換する関数を生成できます。 `MySwap` は、クラスのコピー コンストラクターと代入演算子が正しく定義されていれば、クラスの入れ替えも実行します。
 
-また、関数テンプレートを使用すると、コンパイル時に*a*と*b*のパラメーターの型がコンパイラに認識されるため、異なる型のオブジェクトを交換できなくなります。
+また、関数テンプレートを使用すると、コンパイル時に *a* と *b* のパラメーターの型がコンパイラに認識されるため、異なる型のオブジェクトを交換できなくなります。
 
 template 宣言されていない関数も、void ポインターを使用してこの関数を実行できますが、テンプレート バージョンはタイプ セーフです。 次の呼び出しがあるとします。
 

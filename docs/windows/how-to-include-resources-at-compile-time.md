@@ -1,4 +1,5 @@
 ---
+description: '詳細については、「方法: コンパイル時にリソースを含める (C++)」を参照してください。'
 title: '方法: コンパイル時にリソースを含める (C++)'
 ms.date: 02/14/2019
 f1_keywords:
@@ -23,12 +24,12 @@ helpviewer_keywords:
 - symbols [C++], finding
 - resources [C++], searching for symbols
 ms.assetid: 357e93c2-0a29-42f9-806f-882f688b8924
-ms.openlocfilehash: 5ac4cba4e8ad8a08fa1010758c5a343501d3af2c
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 18c391351c3a97a8adbbd79691f9c0e3ec07abae
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91504414"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97329353"
 ---
 # <a name="how-to-include-resources-at-compile-time-c"></a>方法: コンパイル時にリソースを含める (C++)
 
@@ -46,7 +47,7 @@ ms.locfileid: "91504414"
 
 ## <a name="resource-includes"></a>リソースインクルード
 
-コンパイル時に他のファイルのリソースをプロジェクトに追加するには、[**リソースインクルード**] ダイアログボックスの [**コンパイル時**に使用するディレクティブ] ボックスにリソースを一覧表示します。 [ **リソースインクルード** ] ダイアログボックスを使用すると、プロジェクトの .rc ファイルおよびすべての [シンボル](../windows/symbols-resource-identifiers.md) にすべてのリソースを格納するための、プロジェクト環境の通常の作業配置を変更 `Resource.h` できます。
+コンパイル時に他のファイルのリソースをプロジェクトに追加するには、[**リソースインクルード**] ダイアログボックスの [**コンパイル時** に使用するディレクティブ] ボックスにリソースを一覧表示します。 [ **リソースインクルード** ] ダイアログボックスを使用すると、プロジェクトの .rc ファイルおよびすべての [シンボル](../windows/symbols-resource-identifiers.md) にすべてのリソースを格納するための、プロジェクト環境の通常の作業配置を変更 `Resource.h` できます。
 
 開始するには、[ **リソースのインクルード** ] ダイアログボックスを開きます。 [リソースビュー](how-to-create-a-resource-script-file.md#create-resources)で .rc ファイルを右クリックし、[ **リソースインクルード** ] を選択して、次のプロパティを確認します。
 
@@ -63,9 +64,9 @@ ms.locfileid: "91504414"
 
 ### <a name="to-include-resources-in-your-project-at-compile-time"></a>コンパイル時にリソースをインクルードするには
 
-1. 一意のファイル名を持つリソース スクリプト ファイルにリソースを配置します。 *Projectname. .rc*を使用しないでください。これは、メインのリソーススクリプトファイルで使用されるファイルの名前であるためです。
+1. 一意のファイル名を持つリソース スクリプト ファイルにリソースを配置します。 *Projectname. .rc* を使用しないでください。これは、メインのリソーススクリプトファイルで使用されるファイルの名前であるためです。
 
-1. [リソースビュー](how-to-create-a-resource-script-file.md#create-resources)で *.rc*ファイルを右クリックし、[**リソースのインクルード**] を選択します。
+1. [リソースビュー](how-to-create-a-resource-script-file.md#create-resources)で *.rc* ファイルを右クリックし、[**リソースのインクルード**] を選択します。
 
 1. [ **コンパイル時のディレクティブ** ] ボックスで、 [#include](../preprocessor/hash-include-directive-c-cpp.md) コンパイラディレクティブを追加して、開発環境のメインリソースファイルに新しいリソースファイルを含めます。
 
@@ -73,16 +74,16 @@ ms.locfileid: "91504414"
 
 ### <a name="to-specify-include-directories-for-a-specific-resource-rc-file"></a>特定のリソース (.rc) ファイルのインクルードディレクトリを指定するには
 
-1. **ソリューションエクスプローラー**で *.rc*ファイルを右クリックし、[**プロパティ**] を選択します。
+1. **ソリューションエクスプローラー** で *.rc* ファイルを右クリックし、[**プロパティ**] を選択します。
 
 1. 左ペインで [ **リソース** ] ノードを選択し、[追加のインクルード **ディレクトリ** ] プロパティに追加のインクルードディレクトリを指定します。
 
 ### <a name="to-find-symbols-in-resources"></a>リソース内のシンボルを検索するには
 
-1. メニューにアクセス**Edit**して、[  >  [シンボルの検索](/visualstudio/ide/go-to)] を編集します。
+1. メニューにアクセスして、[  >  [シンボルの検索](/visualstudio/ide/go-to)] を編集します。
 
    > [!TIP]
-   > 検索で[正規表現](/visualstudio/ide/using-regular-expressions-in-visual-studio)を使用するには、[**シンボル**の検索] ではなく [**編集**] メニューの [フォルダーを選択して[検索](/visualstudio/ide/reference/find-command)] を選択します。 [[検索] ダイアログボックス](/visualstudio/ide/finding-and-replacing-text)の [**使用: 正規表現**] チェックボックスをオンにし、[**検索する文字列**] ボックスで、ドロップダウンリストから標準の検索式を選択します。 この一覧から式を選択すると、[検索する文字列] ボックスの検索テキストとして置き換え **ら** れます。
+   > 検索で [正規表現](/visualstudio/ide/using-regular-expressions-in-visual-studio)を使用するには、[**シンボル** の検索] ではなく [**編集**] メニューの [フォルダーを選択して [検索](/visualstudio/ide/reference/find-command)] を選択します。 [[検索] ダイアログボックス](/visualstudio/ide/finding-and-replacing-text)の [**使用: 正規表現**] チェックボックスをオンにし、[**検索する文字列**] ボックスで、ドロップダウンリストから標準の検索式を選択します。 この一覧から式を選択すると、[検索する文字列] ボックスの検索テキストとして置き換え **ら** れます。
 
 1. [ **検索** する文字列] ボックスで、ドロップダウンリストから以前の検索文字列を選択するか、検索するアクセラレータキーを入力します (例:) `ID_ACCEL1` 。
 
@@ -91,7 +92,7 @@ ms.locfileid: "91504414"
 > [!NOTE]
 > 文字列リソース、アクセラレータ リソース、またはバイナリ リソース内のシンボルは検索できません。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 Win32
 

@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: リソース識別子 (シンボル) (C++)'
 title: リソース識別子 (シンボル) (C++)
 ms.date: 02/14/2019
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - symbols [C++], editing
 - resource editors [C++], resource symbols
 ms.assetid: 8fccc09a-0237-4a65-b9c4-57d60c59e324
-ms.openlocfilehash: 1a01c127c69bb54209ecc059394eb85ef0ca4eeb
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 1299bb366ba380972d0027dc7285f6ac14dffe37
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91509620"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97247086"
 ---
 # <a name="resource-identifiers-symbols-c"></a>リソース識別子 (シンボル) (C++)
 
@@ -42,7 +43,7 @@ IDC_EDITNAME = 5100
 > [!NOTE]
 > リソースやリソース オブジェクトを 1 つの .rc ファイルから別のファイルにコピーする際、Visual C++ は、転送されるリソースのシンボル値、またはシンボル名と値を変更する可能性があります。これは、既存のファイルのシンボル名や値との競合を回避するためです。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 Win32
 

@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: CMFCRibbonGalleryMenuButton クラス'
 title: CMFCRibbonGalleryMenuButton クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -18,17 +19,17 @@ helpviewer_keywords:
 - CMFCRibbonGalleryMenuButton [MFC], HasButton
 - CMFCRibbonGalleryMenuButton [MFC], IsEmptyMenuAllowed
 ms.assetid: 4d459d9b-8b1a-4371-92f6-dc4ce6cc42c8
-ms.openlocfilehash: 305393def3b176b052b1db89c66c1e755f528ee6
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: ee527178ba90b968b1968ae0c06dbd8629d8d1e9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81375144"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97321853"
 ---
 # <a name="cmfcribbongallerymenubutton-class"></a>CMFCRibbonGalleryMenuButton クラス
 
 リボン ギャラリーを含むリボン メニュー ボタンを実装します。
-詳細については、Visual Studio のインストールの**\\VC\\atlmfc\\src mfc**フォルダーにあるソース コードを参照してください。
+詳細については、Visual Studio のインストールの **VC \\ atlmfc \\ src \\ mfc** フォルダーにあるソースコードを参照してください。
 
 ## <a name="syntax"></a>構文
 
@@ -48,11 +49,11 @@ class CMFCRibbonGalleryMenuButton : public CMFCToolBarMenuButton
 
 |名前|説明|
 |----------|-----------------|
-|[CMFCRibbonGalleryMenuButton::CopyFrom](#copyfrom)|([オーバーライドメニューボタン::コピー元](../../mfc/reference/cmfctoolbarmenubutton-class.md#copyfrom).)|
-|[CMFCRibbonGalleryMenuButton::CreatePopupMenu](#createpopupmenu)|(オーバーライドメニュー[ボタン::ポップアップメニューを作成](../../mfc/reference/cmfctoolbarmenubutton-class.md#createpopupmenu)します。|
+|[CMFCRibbonGalleryMenuButton::CopyFrom](#copyfrom)|( [Cmfctoolbarmenubutton:: CopyFrom を](../../mfc/reference/cmfctoolbarmenubutton-class.md#copyfrom)オーバーライドします)。|
+|[CMFCRibbonGalleryMenuButton::CreatePopupMenu](#createpopupmenu)|( [Cmfctoolbarmenubutton:: CreatePopupMenu](../../mfc/reference/cmfctoolbarmenubutton-class.md#createpopupmenu)をオーバーライドします)。|
 |[CMFCRibbonGalleryMenuButton::GetPalette](#getpalette)||
 |[CMFCRibbonGalleryMenuButton::HasButton](#hasbutton)|( `CMFCToolBarMenuButton::HasButton`をオーバーライドします)。|
-|[CMFCRibbonGalleryMenuButton::IsEmptyMenuAllowed](#isemptymenuallowed)|(オーバーライドメニュー[ボタン::IsEmptyメニューを許可します](../../mfc/reference/cmfctoolbarmenubutton-class.md#isemptymenuallowed)。|
+|[CMFCRibbonGalleryMenuButton::IsEmptyMenuAllowed](#isemptymenuallowed)|( [Cmfctoolbarmenubutton:: IsEmptyMenuAllowed](../../mfc/reference/cmfctoolbarmenubutton-class.md#isemptymenuallowed)をオーバーライドします)。|
 
 ### <a name="remarks"></a>解説
 
@@ -88,16 +89,16 @@ BOOL CMainFrame::OnShowPopupMenu (CMFCPopupMenu* pMenuPopup)
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
-[Cobject](../../mfc/reference/cobject-class.md)\
-└&nbsp;[CMFCツールバーボタン](../../mfc/reference/cmfctoolbarbutton-class.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;└&nbsp;[CMFCツールバーメニューボタン](../../mfc/reference/cmfctoolbarmenubutton-class.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└&nbsp;[CMFCリボンギャラリーメニューボタン](../../mfc/reference/cmfcribbongallerymenubutton-class.md)
+[CObject](../../mfc/reference/cobject-class.md)\
+└ &nbsp; [CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;└ &nbsp; [Cmfctoolbarmenubutton](../../mfc/reference/cmfctoolbarmenubutton-class.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└ &nbsp; [CMFCRibbonGalleryMenuButton](../../mfc/reference/cmfcribbongallerymenubutton-class.md)
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-**ヘッダー:** afxリボンパレットギャラリー.h
+**ヘッダー:** afxribbonpalettegallery.h
 
-## <a name="cmfcribbongallerymenubuttoncopyfrom"></a><a name="copyfrom"></a>メニューボタン::コピーフロイン
+## <a name="cmfcribbongallerymenubuttoncopyfrom"></a><a name="copyfrom"></a> CMFCRibbonGalleryMenuButton:: CopyFrom
 
 ```
 virtual void CopyFrom(const CMFCToolBarButton& src);
@@ -105,13 +106,13 @@ virtual void CopyFrom(const CMFCToolBarButton& src);
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*src*<br/>
+から *src*<br/>
 
 ### <a name="remarks"></a>解説
 
-## <a name="cmfcribbongallerymenubuttoncmfcribbongallerymenubutton"></a><a name="cmfcribbongallerymenubutton"></a>メニューボタン::CMFCリボンギャラリーメニューボタン
+## <a name="cmfcribbongallerymenubuttoncmfcribbongallerymenubutton"></a><a name="cmfcribbongallerymenubutton"></a> CMFCRibbonGalleryMenuButton::CMFCRibbonGalleryMenuButton
 
-[オブジェクトを](../../mfc/reference/cmfcribbongallerymenubutton-class.md)構築し、初期化します。
+[CMFCRibbonGalleryMenuButton](../../mfc/reference/cmfcribbongallerymenubutton-class.md)オブジェクトを構築し、初期化します。
 
 ```
 CMFCRibbonGalleryMenuButton(
@@ -130,35 +131,35 @@ CMFCRibbonGalleryMenuButton(
 
 ### <a name="parameters"></a>パラメーター
 
-*Uiid*<br/>
-ボタンのコマンド ID。 これは、ユーザーがこのボタンをクリックしたときにWM_COMMANDメッセージで送信される値です。
+*uiID*<br/>
+ボタンのコマンド ID。 これは、ユーザーがこのボタンをクリックしたときに WM_COMMAND メッセージに送信される値です。
 
-*iイメージ*<br/>
-ギャラリー メニュー ボタンで表示するイメージのインデックス。 イメージは *、imagesパレット*パラメーターに格納されます。
+*iImage*<br/>
+ギャラリーメニューボタンと共に表示するイメージのインデックス。 イメージは、 *imagesPalette* パラメーターに格納されます。
 
 *lpszText*<br/>
-メニュー ボタンに表示するテキスト。
+メニューボタンに表示するテキスト。
 
-*画像パレット*<br/>
-ギャラリーに表示するイメージの一覧を含みます。
+*imagesPalette*<br/>
+ギャラリーに表示するイメージの一覧が含まれています。
 
-*をクリックします。*<br/>
-ギャラリーに表示するイメージのイメージ リストのリソース ID。
+*uiImagesPaletteResID*<br/>
+ギャラリーに表示するイメージのイメージリストのリソース ID。
 
-*イメージ*<br/>
-ギャラリーに表示するイメージの幅をピクセル単位で指定します。
+*Cxパレットイメージ*<br/>
+ギャラリーに表示するイメージの幅 (ピクセル単位) を指定します。
 
 ### <a name="remarks"></a>解説
 
-ギャラリーメニューボタンは、矢印が付いたポップアップメニューとして表示されます。 ユーザーがこのボタンをクリックすると、イメージのギャラリーが表示されます。
+ギャラリーメニューボタンは、矢印を持つポップアップメニューとして表示されます。 ユーザーがこのボタンをクリックすると、イメージのギャラリーが表示されます。
 
 ### <a name="example"></a>例
 
-クラスのコンストラクターを使用する方法を次の例に`CMFCRibbonGalleryMenuButton`示します。 このコード スニペットは、 [MS Office 2007 デモ サンプル](../../overview/visual-cpp-samples.md)の一部です。
+クラスのコンストラクターを使用する方法を次の例に示し `CMFCRibbonGalleryMenuButton` ます。 このコードスニペットは、 [MS Office 2007 Demo サンプル](../../overview/visual-cpp-samples.md)に含まれています。
 
 [!code-cpp[NVC_MFC_MSOffice2007Demo#8](../../mfc/reference/codesnippet/cpp/cmfcribbongallerymenubutton-class_1.cpp)]
 
-## <a name="cmfcribbongallerymenubuttoncreatepopupmenu"></a><a name="createpopupmenu"></a>メニューボタン::ポップアップメニュー
+## <a name="cmfcribbongallerymenubuttoncreatepopupmenu"></a><a name="createpopupmenu"></a> CMFCRibbonGalleryMenuButton:: CreatePopupMenu
 
 ```
 virtual CMFCPopupMenu* CreatePopupMenu();
@@ -168,7 +169,7 @@ virtual CMFCPopupMenu* CreatePopupMenu();
 
 ### <a name="remarks"></a>解説
 
-## <a name="cmfcribbongallerymenubuttongetpalette"></a><a name="getpalette"></a>メニューボタン::パレットを取得します。
+## <a name="cmfcribbongallerymenubuttongetpalette"></a><a name="getpalette"></a> CMFCRibbonGalleryMenuButton:: GetPalette
 
 ```
 CMFCRibbonGallery& GetPalette();
@@ -178,7 +179,7 @@ CMFCRibbonGallery& GetPalette();
 
 ### <a name="remarks"></a>解説
 
-## <a name="cmfcribbongallerymenubuttonhasbutton"></a><a name="hasbutton"></a>メニューボタン::ハズボタン
+## <a name="cmfcribbongallerymenubuttonhasbutton"></a><a name="hasbutton"></a> CMFCRibbonGalleryMenuButton:: HasButton
 
 ```
 virtual BOOL HasButton() const;
@@ -188,7 +189,7 @@ virtual BOOL HasButton() const;
 
 ### <a name="remarks"></a>解説
 
-## <a name="cmfcribbongallerymenubuttonisemptymenuallowed"></a><a name="isemptymenuallowed"></a>メニューボタン::IsEmptyメニューを許可
+## <a name="cmfcribbongallerymenubuttonisemptymenuallowed"></a><a name="isemptymenuallowed"></a> CMFCRibbonGalleryMenuButton:: IsEmptyMenuAllowed
 
 ```
 virtual BOOL IsEmptyMenuAllowed() const;
@@ -200,7 +201,7 @@ virtual BOOL IsEmptyMenuAllowed() const;
 
 ## <a name="see-also"></a>関連項目
 
-[階層グラフ](../../mfc/hierarchy-chart.md)<br/>
-[クラス](../../mfc/reference/mfc-classes.md)<br/>
+[階層図](../../mfc/hierarchy-chart.md)<br/>
+[Classes](../../mfc/reference/mfc-classes.md)<br/>
 [CMFCToolBarMenuButton クラス](../../mfc/reference/cmfctoolbarmenubutton-class.md)<br/>
-[クラス](../../mfc/reference/cmfcribbongallery-class.md)
+[CMFCRibbonGallery クラス](../../mfc/reference/cmfcribbongallery-class.md)

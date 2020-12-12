@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: basic_filebuf クラス'
 title: basic_filebuf クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -40,16 +41,16 @@ helpviewer_keywords:
 - std::basic_filebuf [C++], uflow
 - std::basic_filebuf [C++], underflow
 ms.assetid: 3196ba5c-bf38-41bd-9a95-70323ddfca1a
-ms.openlocfilehash: 7dc244cde3d77ad99add1c35716779a55eac9263
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: fedda394d2b10d07cda0580197f6763453455c4a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87219314"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97335785"
 ---
 # <a name="basic_filebuf-class"></a>basic_filebuf クラス
 
-型*Char_T*の要素の転送を制御するストリームバッファーを記述します。このストリームバッファーは、文字の特徴がクラス*Tr*によって決定され、外部ファイルに格納されている要素のシーケンスとの間で送受信されます。
+型 *Char_T* の要素の転送を制御するストリームバッファーを記述します。このストリームバッファーは、文字の特徴がクラス *Tr* によって決定され、外部ファイルに格納されている要素のシーケンスとの間で送受信されます。
 
 ## <a name="syntax"></a>構文
 
@@ -68,10 +69,10 @@ class basic_filebuf : public basic_streambuf<Char_T, Tr>
 
 ## <a name="remarks"></a>解説
 
-クラステンプレートは、 *Char_T*型の要素の転送を制御するストリームバッファーを記述します。このストリームバッファーは、文字の特徴がクラス*Tr*によって決定され、外部ファイルに格納されている要素のシーケンスとの間で送受信されます。
+クラステンプレートは、 *Char_T* 型の要素の転送を制御するストリームバッファーを記述します。このストリームバッファーは、文字の特徴がクラス *Tr* によって決定され、外部ファイルに格納されている要素のシーケンスとの間で送受信されます。
 
 > [!NOTE]
-> 型のオブジェクト `basic_filebuf` は、 __ \* __ `char_type` 型パラメーター *Char_T*によって指定されたに関係なく、char 型の内部バッファーを使用して作成されます。 つまり、Unicode 文字列 (文字を含む **`wchar_t`** ) は、 **`char`** 内部バッファーに書き込まれる前に、(文字を含む) ANSI 文字列に変換されます。 Unicode 文字列をバッファーに格納するには、型の新しいバッファーを作成 **`wchar_t`** し、メソッドを使用して設定し [`basic_streambuf::pubsetbuf`](../standard-library/basic-streambuf-class.md#pubsetbuf) `()` ます。 この動作を示す例については、以降のセクションを参照してください。
+> 型のオブジェクト `basic_filebuf` は、 __\*__ `char_type` 型パラメーター *Char_T* によって指定されたに関係なく、char 型の内部バッファーを使用して作成されます。 つまり、Unicode 文字列 (文字を含む **`wchar_t`** ) は、 **`char`** 内部バッファーに書き込まれる前に、(文字を含む) ANSI 文字列に変換されます。 Unicode 文字列をバッファーに格納するには、型の新しいバッファーを作成 **`wchar_t`** し、メソッドを使用して設定し [`basic_streambuf::pubsetbuf`](../standard-library/basic-streambuf-class.md#pubsetbuf) `()` ます。 この動作を示す例については、以降のセクションを参照してください。
 
 クラスのオブジェクトは、 `basic_filebuf<Char_T, Tr>` ファイルポインターを格納します。これは、 `FILE` 開いているファイルに関連付けられているストリームを制御するオブジェクトを指定します。 さらに、プロテクト メンバー関数である [overflow](#overflow) と [underflow](#underflow) で使用される 2 つのファイル変換ファセットへのポインターも格納します。 詳細については、「[`basic_filebuf::open`](#open)」を参照してください。
 
@@ -214,7 +215,7 @@ Hex Dump of wwHello.txt - note that output is wchar_t chars:
 
 |メンバー関数|説明|
 |-|-|
-|[ok](#close)|ファイルを閉じます。|
+|[close](#close)|ファイルを閉じます。|
 |[is_open](#is_open)|ファイルが開いているかどうかを示します。|
 |[open](#open)|ファイルを開きます。|
 |[超え](#overflow)|いっぱいのバッファーに新しい文字が挿入されたときに呼び出すことができる、プロテクト仮想関数。|
@@ -227,13 +228,13 @@ Hex Dump of wwHello.txt - note that output is wchar_t chars:
 |[uflow](../standard-library/basic-streambuf-class.md#uflow)|入力ストリームから現在の要素を抽出するプロテクト仮想関数。|
 |[アンダー](#underflow)|入力ストリームから現在の要素を抽出するプロテクト仮想関数。|
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:**\<fstream>
 
 **名前空間:** std
 
-## <a name="basic_filebufbasic_filebuf"></a><a name="basic_filebuf"></a>basic_filebuf:: basic_filebuf
+## <a name="basic_filebufbasic_filebuf"></a><a name="basic_filebuf"></a> basic_filebuf:: basic_filebuf
 
 `basic_filebuf` 型のオブジェクトを構築します。
 
@@ -247,9 +248,9 @@ basic_filebuf(basic_filebuf&& right);
 
 最初のコンストラクターは、入力バッファーと出力バッファーを制御するすべてのポインターに Null ポインターを格納します。 また、ファイル ポインターにも Null ポインターを格納します。
 
-2番目のコンストラクターは、右辺値参照として扱われる*right*の内容を使用してオブジェクトを初期化します。
+2番目のコンストラクターは、右辺値参照として扱われる *right* の内容を使用してオブジェクトを初期化します。
 
-## <a name="basic_filebufchar_type"></a><a name="char_type"></a>basic_filebuf:: char_type
+## <a name="basic_filebufchar_type"></a><a name="char_type"></a> basic_filebuf:: char_type
 
 型名を `Char_T` テンプレート パラメーターに関連付けます。
 
@@ -257,7 +258,7 @@ basic_filebuf(basic_filebuf&& right);
 typedef Char_T char_type;
 ```
 
-## <a name="basic_filebufclose"></a><a name="close"></a>basic_filebuf:: close
+## <a name="basic_filebufclose"></a><a name="close"></a> basic_filebuf:: close
 
 ファイルを閉じます。
 
@@ -324,7 +325,7 @@ s
 1
 ```
 
-## <a name="basic_filebufint_type"></a><a name="int_type"></a>basic_filebuf:: int_type
+## <a name="basic_filebufint_type"></a><a name="int_type"></a> basic_filebuf:: int_type
 
 スコープ内のこの型を、スコープ内の `basic_filebuf` 同じ名前の型と同じにし `Tr` ます。
 
@@ -332,7 +333,7 @@ s
 typedef typename traits_type::int_type int_type;
 ```
 
-## <a name="basic_filebufis_open"></a><a name="is_open"></a>basic_filebuf:: is_open
+## <a name="basic_filebufis_open"></a><a name="is_open"></a> basic_filebuf:: is_open
 
 ファイルが開いているかどうかを示します。
 
@@ -368,7 +369,7 @@ false
 true
 ```
 
-## <a name="basic_filebufoff_type"></a><a name="off_type"></a>basic_filebuf:: off_type
+## <a name="basic_filebufoff_type"></a><a name="off_type"></a> basic_filebuf:: off_type
 
 スコープ内のこの型を、スコープ内の `basic_filebuf` 同じ名前の型と同じにし `Tr` ます。
 
@@ -376,7 +377,7 @@ true
 typedef typename traits_type::off_type off_type;
 ```
 
-## <a name="basic_filebufopen"></a><a name="open"></a>basic_filebuf:: open
+## <a name="basic_filebufopen"></a><a name="open"></a> basic_filebuf:: open
 
 ファイルを開きます。
 
@@ -409,7 +410,7 @@ basic_filebuf<Char_T, Tr> *open(
 の列挙体の1つ [`ios_base::openmode`](../standard-library/ios-base-class.md#openmode) 。
 
 *protection*\
-既定のファイルを開く保護。 _fsopen の*shflag*パラメーターに相当します。 [_wfsopen](../c-runtime-library/reference/fsopen-wfsopen.md)。
+既定のファイルを開く保護。 _fsopen の *shflag* パラメーターに相当します。 [_wfsopen](../c-runtime-library/reference/fsopen-wfsopen.md)。
 
 ### <a name="return-value"></a>戻り値
 
@@ -420,11 +421,11 @@ basic_filebuf<Char_T, Tr> *open(
 この関数は、を使用し `FILE *` `basic_filebuf` てを呼び出した場合と同じようにを返し [`fopen/wfopen`](../c-runtime-library/reference/fopen-wfopen.md) `(filename, strmode)` ます。 `strmode`次のものから決定され `mode & ~(` [`ate`](../standard-library/ios-base-class.md#openmode) `|` [`binary`](../standard-library/ios-base-class.md#openmode) `)` ます。
 
 - `ios_base::in``"r"`(読み取り用に既存のファイルを開く) になります。
-- [ios_base:: out](../standard-library/ios-base-class.md#fmtflags)また `ios_base::out | ios_base::trunc` は `"w"` になります (既存のファイルを切り捨てるか、書き込み用に作成します)。
+- [ios_base:: out](../standard-library/ios-base-class.md#fmtflags) また `ios_base::out | ios_base::trunc` は `"w"` になります (既存のファイルを切り捨てるか、書き込み用に作成します)。
 - `ios_base::out | app``"a"`はになります (すべての書き込みを追加するために既存のファイルを開きます)。
 - `ios_base::in | ios_base::out``"r+"`(読み取りと書き込み用に既存のファイルを開く) になります。
 - `ios_base::in | ios_base::out | ios_base::trunc``"w+"`はになります (既存のファイルを切り捨てるか、読み取りと書き込みのために作成します)。
-- `ios_base::in | ios_base::out | ios_base::app`が `"a+"` になります (読み取り用に既存のファイルを開き、すべての書き込みを追加します)。
+- `ios_base::in | ios_base::out | ios_base::app` が `"a+"` になります (読み取り用に既存のファイルを開き、すべての書き込みを追加します)。
 
 `mode & ios_base::binary`が0以外の場合、関数はをに追加して、 `b` テキストストリームでは `strmode` なくバイナリストリームを開きます。
 `mode & ios_base::ate`が0以外で、ファイルが正常に開かれた場合は、ストリーム内の現在の位置がファイルの末尾に配置されます。 失敗した場合、ファイルは閉じられます。
@@ -437,7 +438,7 @@ basic_filebuf<Char_T, Tr> *open(
 
 [`basic_filebuf::close`](#close)の使用例については、「」を参照してください `open` 。
 
-## <a name="basic_filebufoperator"></a><a name="op_eq"></a>basic_filebuf:: operator =
+## <a name="basic_filebufoperator"></a><a name="op_eq"></a> basic_filebuf:: operator =
 
 このストリーム バッファー オブジェクトの内容を割り当てます。 これは、右辺値を使用してコピーを残さない、移動代入です。
 
@@ -452,13 +453,13 @@ basic_filebuf& operator=(basic_filebuf&& right);
 
 ### <a name="return-value"></a>戻り値
 
-__* This__を返します。
+__* This__ を返します。
 
 ### <a name="remarks"></a>解説
 
-メンバー演算子は、右辺値参照として扱われる*right*の内容を使用して、オブジェクトの内容を置き換えます。 詳細については、「[右辺値参照宣言子:  &&](../cpp/rvalue-reference-declarator-amp-amp.md)」を参照してください。
+メンバー演算子は、右辺値参照として扱われる *right* の内容を使用して、オブジェクトの内容を置き換えます。 詳細については、「 [右辺値参照宣言子:  &&](../cpp/rvalue-reference-declarator-amp-amp.md)」を参照してください。
 
-## <a name="basic_filebufoverflow"></a><a name="overflow"></a>basic_filebuf:: overflow
+## <a name="basic_filebufoverflow"></a><a name="overflow"></a> basic_filebuf:: overflow
 
 いっぱいのバッファーに新しい文字が挿入されたときに呼び出されます。
 
@@ -483,9 +484,9 @@ virtual int_type overflow(int_type _Meta = traits_type::eof);
 
 - 新しい記憶域または追加の記憶域を出力バッファーに割り当てることで、書き込み位置を使用可能にすることができます。
 
-- 必要に応じ `ch` て、ファイル変換ファセットを使用してを呼び出すことで、出力バッファー内の保留中の出力を変換でき `fac` `fac.out` ます。 `ch` *Char*型の生成された各要素は、 `fp` フォームの連続する呼び出しの場合と同様に、ファイルポインターによって指定された関連するストリームに書き込まれ `fputc(ch, fp)` ます。 任意の変換または書き込みに失敗した場合、関数は失敗します。
+- 必要に応じ `ch` て、ファイル変換ファセットを使用してを呼び出すことで、出力バッファー内の保留中の出力を変換でき `fac` `fac.out` ます。 `ch` *Char* 型の生成された各要素は、 `fp` フォームの連続する呼び出しの場合と同様に、ファイルポインターによって指定された関連するストリームに書き込まれ `fputc(ch, fp)` ます。 任意の変換または書き込みに失敗した場合、関数は失敗します。
 
-## <a name="basic_filebufpbackfail"></a><a name="pbackfail"></a>basic_filebuf::p backfail
+## <a name="basic_filebufpbackfail"></a><a name="pbackfail"></a> basic_filebuf::p backfail
 
 要素を入力ストリームに戻そうと試み、その要素を現在の要素に (ネクスト ポインターによって指されるように) します。
 
@@ -512,7 +513,7 @@ virtual int_type pbackfail(int_type _Meta = traits_type::eof);
 
 - 関数が要素を入力ストリームにプッシュバックできる場合は、 `ungetc` 型の要素に対してを呼び出すなどして、この処理を実行でき **`char`** ます。
 
-## <a name="basic_filebufpos_type"></a><a name="pos_type"></a>basic_filebuf::p os_type
+## <a name="basic_filebufpos_type"></a><a name="pos_type"></a> basic_filebuf::p os_type
 
 スコープ内のこの型を、スコープ内の `basic_filebuf` 同じ名前の型と同じにし `Tr` ます。
 
@@ -520,7 +521,7 @@ virtual int_type pbackfail(int_type _Meta = traits_type::eof);
 typedef typename traits_type::pos_type pos_type;
 ```
 
-## <a name="basic_filebufseekoff"></a><a name="seekoff"></a>basic_filebuf:: seekoff
+## <a name="basic_filebufseekoff"></a><a name="seekoff"></a> basic_filebuf:: seekoff
 
 制御されているストリームの現在の位置を変更しようと試みます。
 
@@ -534,7 +535,7 @@ virtual pos_type seekoff(
 ### <a name="parameters"></a>パラメーター
 
 *_Off*\
-*_Way*を基準にしてシークする位置。
+*_Way* を基準にしてシークする位置。
 
 *_Way*\
 オフセット演算の開始位置。 有効値については、「[seekdir](../standard-library/ios-base-class.md#seekdir)」を参照してください。
@@ -554,7 +555,7 @@ virtual pos_type seekoff(
 
 ファイルポインター `fp` が null ポインターの場合、関数は失敗します。 それ以外の場合は、を呼び出してストリームの位置を変更しようと `fseek(fp, _Off, _Way)` します。 関数が成功し、結果として得られる位置がを `fposn` 呼び出すことによって判断できる場合 `fgetpos(fp, &fposn)` 、関数は成功します。 関数が成功した場合は、を含む型の値を返し `pos_type` `fposn` ます。 それ以外の場合は、無効なストリームの位置が返されます。
 
-## <a name="basic_filebufseekpos"></a><a name="seekpos"></a>basic_filebuf:: seekpos
+## <a name="basic_filebufseekpos"></a><a name="seekpos"></a> basic_filebuf:: seekpos
 
 制御されているストリームの現在の位置を変更しようと試みます。
 
@@ -584,7 +585,7 @@ virtual pos_type seekpos(
 
 ワイド ストリームの場合、ストリームが開いてから、または `streampos` への最後の呼び出し以降に挿入が発生した場合、関数は [overflow](#overflow) を呼び出します。 また、必要に応じて、ファイル変換ファセットを使用してを呼び出すことにより、初期の変換状態を復元するために必要なシーケンスを挿入し `fac` `fac.unshift` ます。 型の生成された各要素 `byte` **`char`** は、 `fp` フォームの連続する呼び出しの場合と同様に、ファイルポインターによって指定された関連するストリームに書き込まれ `fputc(byte, fp)` ます。 またはの書き込みに失敗した場合 `fac.unshift` 、関数は成功しません。
 
-## <a name="basic_filebufsetbuf"></a><a name="setbuf"></a>basic_filebuf:: setbuf
+## <a name="basic_filebufsetbuf"></a><a name="setbuf"></a> basic_filebuf:: setbuf
 
 各派生ストリーム バッファーに固有の操作を実行します。
 
@@ -608,9 +609,9 @@ virtual basic_streambuf<Char_T, Tr> *setbuf(
 
 ### <a name="remarks"></a>解説
 
-`setbuf`を呼び出すと、 `setvbuf( fp, (char*) _Buffer, _IOFBF, count * sizeof( Char_T))` `count` *_Buffer*で始まる要素の配列がストリームのバッファーとして提供されます。 その関数がゼロ以外の値を返す場合、関数は Null ポインターを返します。 それ以外の場合は、 **`this`** signal success に戻ります。
+`setbuf` を呼び出すと、 `setvbuf( fp, (char*) _Buffer, _IOFBF, count * sizeof( Char_T))` `count` *_Buffer* で始まる要素の配列がストリームのバッファーとして提供されます。 その関数がゼロ以外の値を返す場合、関数は Null ポインターを返します。 それ以外の場合は、 **`this`** signal success に戻ります。
 
-## <a name="basic_filebufswap"></a><a name="swap"></a>basic_filebuf:: swap
+## <a name="basic_filebufswap"></a><a name="swap"></a> basic_filebuf:: swap
 
 この `basic_filebuf` の内容を、指定された `basic_filebuf` の内容と交換します。
 
@@ -623,7 +624,7 @@ void swap(basic_filebuf& right);
 *そうです*\
 別のへの左辺値参照 `basic_filebuf` 。
 
-## <a name="basic_filebufsync"></a><a name="sync"></a>basic_filebuf:: sync
+## <a name="basic_filebufsync"></a><a name="sync"></a> basic_filebuf:: sync
 
 制御されているストリームと、関連付けられている外部ストリームとを同期しようと試みます。
 
@@ -633,9 +634,9 @@ virtual int sync();
 
 ### <a name="return-value"></a>戻り値
 
-ファイルポインターが null ポインターの場合は0を返し `fp` ます。 それ以外の場合は、を呼び出しても[オーバーフロー](#overflow)が発生し、 `fflush(fp)` 保留中の出力がストリームにフラッシュされた場合にのみ、0を返します。
+ファイルポインターが null ポインターの場合は0を返し `fp` ます。 それ以外の場合は、を呼び出しても [オーバーフロー](#overflow) が発生し、 `fflush(fp)` 保留中の出力がストリームにフラッシュされた場合にのみ、0を返します。
 
-## <a name="basic_filebuftraits_type"></a><a name="traits_type"></a>basic_filebuf:: traits_type
+## <a name="basic_filebuftraits_type"></a><a name="traits_type"></a> basic_filebuf:: traits_type
 
 型名を `Tr` テンプレート パラメーターに関連付けます。
 
@@ -643,7 +644,7 @@ virtual int sync();
 typedef Tr traits_type;
 ```
 
-## <a name="basic_filebufunderflow"></a><a name="underflow"></a>basic_filebuf:: アンダーフロー
+## <a name="basic_filebufunderflow"></a><a name="underflow"></a> basic_filebuf:: アンダーフロー
 
 入力ストリームから現在の要素を抽出します。
 

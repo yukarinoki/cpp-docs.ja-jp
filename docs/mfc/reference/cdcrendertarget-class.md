@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: CDCRenderTarget クラス'
 title: CDCRenderTarget クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -20,16 +21,16 @@ helpviewer_keywords:
 - CDCRenderTarget [MFC], GetDCRenderTarget
 - CDCRenderTarget [MFC], m_pDCRenderTarget
 ms.assetid: aa8059c9-08e6-49e4-9b8c-00fa54077a61
-ms.openlocfilehash: 8c07962c017d160cb3ce5841a75f1ae8a8761641
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: 3959321bbd6274c821b1f02be5962b23ec9dbc95
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81753386"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97185324"
 ---
 # <a name="cdcrendertarget-class"></a>CDCRenderTarget クラス
 
-ID2D1DCRenderターゲットのラッパー。
+ID2D1DCRenderTarget のラッパー。
 
 ## <a name="syntax"></a>構文
 
@@ -43,45 +44,45 @@ class CDCRenderTarget : public CRenderTarget;
 
 |名前|説明|
 |----------|-----------------|
-|[ターゲットを指定します。](#cdcrendertarget)|オブジェクトを構築します。|
+|[CDCRenderTarget:: CDCRenderTarget](#cdcrendertarget)|CDCRenderTarget オブジェクトを構築します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
 |名前|説明|
 |----------|-----------------|
-|[をクリックします。](#attach)|既存のレンダー ターゲット インターフェイスをオブジェクトにアタッチします。|
-|[を選択します。](#binddc)|描画コマンドを発行するデバイス コンテキストにレンダー ターゲットをバインドします。|
-|[を選択します。](#create)|を作成します。|
-|[CDCレンダーターゲット::Dエタッハ](#detach)|オブジェクトからレンダー ターゲット インターフェイスをデタッチします。|
-|[をクリックします。](#getdcrendertarget)|インターフェイスを返します。|
+|[CDCRenderTarget:: Attach](#attach)|既存のレンダーターゲットインターフェイスをオブジェクトにアタッチします。|
+|[CDCRenderTarget:: BindDC](#binddc)|描画コマンドを発行するデバイスコンテキストにレンダーターゲットをバインドします。|
+|[CDCRenderTarget:: Create](#create)|CDCRenderTarget を作成します。|
+|[CDCRenderTarget::D etach。](#detach)|オブジェクトからレンダーターゲットインターフェイスをデタッチします|
+|[CDCRenderTarget:: GetDCRenderTarget](#getdcrendertarget)|ID2D1DCRenderTarget インターフェイスを返します。|
 
 ### <a name="public-operators"></a>パブリック演算子
 
 |名前|説明|
 |----------|-----------------|
-|[を選択します。](#operator_id2d1dcrendertarget_star)|インターフェイスを返します。|
+|[CDCRenderTarget:: operator ID2D1DCRenderTarget *](#operator_id2d1dcrendertarget_star)|ID2D1DCRenderTarget インターフェイスを返します。|
 
 ### <a name="protected-data-members"></a>プロテクト データ メンバー
 
 |名前|説明|
 |----------|-----------------|
-|[m_pDCRenderTarget](#m_pdcrendertarget)|オブジェクトへのポインター。|
+|[CDCRenderTarget:: m_pDCRenderTarget](#m_pdcrendertarget)|ID2D1DCRenderTarget オブジェクトへのポインター。|
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
 [CObject](../../mfc/reference/cobject-class.md)
 
-[クレンダターゲット](../../mfc/reference/crendertarget-class.md)
+[CRenderTarget](../../mfc/reference/crendertarget-class.md)
 
-[ターゲット](../../mfc/reference/cdcrendertarget-class.md)
+[CDCRenderTarget](../../mfc/reference/cdcrendertarget-class.md)
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-**ヘッダー:** afxrendertarget.h
+**ヘッダー:** afxrendertarget
 
-## <a name="cdcrendertargetattach"></a><a name="attach"></a>をクリックします。
+## <a name="cdcrendertargetattach"></a><a name="attach"></a> CDCRenderTarget:: Attach
 
-既存のレンダー ターゲット インターフェイスをオブジェクトにアタッチします。
+既存のレンダーターゲットインターフェイスをオブジェクトにアタッチします。
 
 ```cpp
 void Attach(ID2D1DCRenderTarget* pTarget);
@@ -89,12 +90,12 @@ void Attach(ID2D1DCRenderTarget* pTarget);
 
 ### <a name="parameters"></a>パラメーター
 
-*pターゲット*<br/>
-既存のレンダー ターゲット インターフェイス。 NULL にすることはできません。
+*pTarget*<br/>
+既存のレンダーターゲットインターフェイス。 NULL にすることはできません
 
-## <a name="cdcrendertargetbinddc"></a><a name="binddc"></a>を選択します。
+## <a name="cdcrendertargetbinddc"></a><a name="binddc"></a> CDCRenderTarget:: BindDC
 
-描画コマンドを発行するデバイス コンテキストにレンダー ターゲットをバインドします。
+描画コマンドを発行するデバイスコンテキストにレンダーターゲットをバインドします。
 
 ```
 BOOL BindDC(
@@ -104,27 +105,27 @@ BOOL BindDC(
 
 ### <a name="parameters"></a>パラメーター
 
-*Dc*<br/>
-レンダー ターゲットが描画コマンドを発行するデバイス コンテキスト
+*dc*<br/>
+レンダーターゲットが描画コマンドを発行するデバイスコンテキスト
 
-*Rect*<br/>
-レンダー ターゲットがバインドされているデバイス コンテキスト (HDC) へのハンドルのサイズ
+*rect*<br/>
+レンダーターゲットがバインドされているデバイスコンテキスト (HDC) へのハンドルのサイズ
 
 ### <a name="return-value"></a>戻り値
 
-メソッドが成功すると、TRUE が返されます。 それ以外の場合は FALSE を返します。
+メソッドが成功した場合、TRUE を返します。 それ以外の場合は FALSE を返します。
 
-## <a name="cdcrendertargetcdcrendertarget"></a><a name="cdcrendertarget"></a>ターゲットを指定します。
+## <a name="cdcrendertargetcdcrendertarget"></a><a name="cdcrendertarget"></a> CDCRenderTarget:: CDCRenderTarget
 
-オブジェクトを構築します。
+CDCRenderTarget オブジェクトを構築します。
 
 ```
 CDCRenderTarget();
 ```
 
-## <a name="cdcrendertargetcreate"></a><a name="create"></a>を選択します。
+## <a name="cdcrendertargetcreate"></a><a name="create"></a> CDCRenderTarget:: Create
 
-を作成します。
+CDCRenderTarget を作成します。
 
 ```
 BOOL Create(const D2D1_RENDER_TARGET_PROPERTIES& props);
@@ -132,16 +133,16 @@ BOOL Create(const D2D1_RENDER_TARGET_PROPERTIES& props);
 
 ### <a name="parameters"></a>パラメーター
 
-*小道具*<br/>
-レンダリング モード、ピクセル形式、リモート処理オプション、DPI 情報、およびハードウェア レンダリングに必要な最小 DirectX サポート。
+*props*<br/>
+レンダリングモード、ピクセル形式、リモート処理オプション、DPI 情報、およびハードウェアレンダリングに必要な最小限の DirectX サポート。
 
 ### <a name="return-value"></a>戻り値
 
-メソッドが成功すると、TRUE が返されます。 それ以外の場合は FALSE を返します。
+メソッドが成功した場合、TRUE を返します。 それ以外の場合は FALSE を返します。
 
-## <a name="cdcrendertargetdetach"></a><a name="detach"></a>CDCレンダーターゲット::Dエタッハ
+## <a name="cdcrendertargetdetach"></a><a name="detach"></a> CDCRenderTarget::D etach。
 
-オブジェクトからレンダー ターゲット インターフェイスをデタッチします。
+オブジェクトからレンダーターゲットインターフェイスをデタッチします
 
 ```
 ID2D1DCRenderTarget* Detach();
@@ -149,11 +150,11 @@ ID2D1DCRenderTarget* Detach();
 
 ### <a name="return-value"></a>戻り値
 
-デタッチされたレンダー ターゲット インターフェイスへのポインター。
+デタッチされたレンダーターゲットインターフェイスへのポインター。
 
-## <a name="cdcrendertargetgetdcrendertarget"></a><a name="getdcrendertarget"></a>をクリックします。
+## <a name="cdcrendertargetgetdcrendertarget"></a><a name="getdcrendertarget"></a> CDCRenderTarget:: GetDCRenderTarget
 
-インターフェイスを返します。
+ID2D1DCRenderTarget インターフェイスを返します。
 
 ```
 ID2D1DCRenderTarget* GetDCRenderTarget();
@@ -161,19 +162,19 @@ ID2D1DCRenderTarget* GetDCRenderTarget();
 
 ### <a name="return-value"></a>戻り値
 
-ID2D1DCRenderTarget インターフェイスへのポインターまたは NULL オブジェクトがまだ初期化されていない場合。
+ID2D1DCRenderTarget インターフェイスへのポインター。オブジェクトがまだ初期化されていない場合は NULL。
 
-## <a name="cdcrendertargetm_pdcrendertarget"></a><a name="m_pdcrendertarget"></a>m_pDCRenderTarget
+## <a name="cdcrendertargetm_pdcrendertarget"></a><a name="m_pdcrendertarget"></a> CDCRenderTarget:: m_pDCRenderTarget
 
-オブジェクトへのポインター。
+ID2D1DCRenderTarget オブジェクトへのポインター。
 
 ```
 ID2D1DCRenderTarget* m_pDCRenderTarget;
 ```
 
-## <a name="cdcrendertargetoperator-id2d1dcrendertarget"></a><a name="operator_id2d1dcrendertarget_star"></a>を選択します。
+## <a name="cdcrendertargetoperator-id2d1dcrendertarget"></a><a name="operator_id2d1dcrendertarget_star"></a> CDCRenderTarget:: operator ID2D1DCRenderTarget *
 
-インターフェイスを返します。
+ID2D1DCRenderTarget インターフェイスを返します。
 
 ```
 operator ID2D1DCRenderTarget*();
@@ -181,7 +182,7 @@ operator ID2D1DCRenderTarget*();
 
 ### <a name="return-value"></a>戻り値
 
-ID2D1DCRenderTarget インターフェイスへのポインターまたは NULL オブジェクトがまだ初期化されていない場合。
+ID2D1DCRenderTarget インターフェイスへのポインター。オブジェクトがまだ初期化されていない場合は NULL。
 
 ## <a name="see-also"></a>関連項目
 

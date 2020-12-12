@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: CDragListBox クラス'
 title: CDragListBox クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -20,12 +21,12 @@ helpviewer_keywords:
 - CDragListBox [MFC], Dropped
 - CDragListBox [MFC], ItemFromPt
 ms.assetid: fee20b42-60ae-4aa9-83f9-5a3d9b96e33b
-ms.openlocfilehash: b260d3a88fc8c3f2d341005c1e47cfd9ab668e1e
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 0dfa61503bd9c1aa3017d37b873a8948f61e68e2
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91500352"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97184766"
 ---
 # <a name="cdraglistbox-class"></a>CDragListBox クラス
 
@@ -56,7 +57,7 @@ class CDragListBox : public CListBox
 |[CDragListBox::D ropped](#dropped)|項目が削除された後に、フレームワークによって呼び出されます。|
 |[CDragListBox:: ItemFromPt](#itemfrompt)|ドラッグされている項目の座標を返します。|
 
-## <a name="remarks"></a>注釈
+## <a name="remarks"></a>解説
 
 この機能を備えたリストボックスを使用すると、ユーザーが最も役に立つ方法でリスト内の項目を並べ替えることができます。 既定では、リストボックスはリスト内の新しい場所に項目を移動します。 ただし、 `CDragListBox` オブジェクトを移動するのではなく、項目をコピーするようにカスタマイズすることもできます。
 
@@ -78,7 +79,7 @@ class CDragListBox : public CListBox
 
 `CDragListBox`
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** afxcmn.h
 
@@ -99,7 +100,7 @@ virtual BOOL BeginDrag(CPoint pt);
 
 ドラッグが許可されている場合は0以外。それ以外の場合は0。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 ドラッグ操作が開始されたときの動作を制御する場合は、この関数をオーバーライドします。 既定の実装はマウスをキャプチャし、ユーザーがマウスの左ボタンまたは右ボタンをクリックするか ESC キーを押すと、ドラッグ操作はキャンセルされます。
 
@@ -116,7 +117,7 @@ virtual void CancelDrag(CPoint pt);
 *pt*<br/>
 ドラッグされている項目の座標を格納している [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) オブジェクト。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 リストボックスコントロールの特別な処理を処理するには、この関数をオーバーライドします。
 
@@ -151,7 +152,7 @@ virtual UINT Dragging(CPoint pt);
 
 - DL_STOPCURSOR は、現在のドロップ先が許容されないことを示します。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 既定の動作では DL_MOVECURSOR が返されます。 追加の機能を提供する場合は、この関数をオーバーライドします。
 
@@ -168,7 +169,7 @@ virtual void DrawInsert(int nItem);
 *nItem*<br/>
 挿入ポイントの0から始まるインデックス。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 値を-1 にすると、挿入ガイドがクリアされます。 挿入ガイドの外観または動作を変更するには、この関数をオーバーライドします。
 
@@ -190,13 +191,13 @@ virtual void Dropped(
 *pt*<br/>
 ドロップサイトの座標を格納している [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) オブジェクト。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 既定の動作では、リストボックスの項目とそのデータが新しい場所にコピーされ、元の項目が削除されます。 リストボックス項目のコピーをリスト内の他の場所にドラッグできるようにするなど、既定の動作をカスタマイズするには、この関数をオーバーライドします。
 
 ## <a name="cdraglistboxitemfrompt"></a><a name="itemfrompt"></a> CDragListBox:: ItemFromPt
 
-この関数を呼び出して、 *pt*にあるリストボックス項目の0から始まるインデックスを取得します。
+この関数を呼び出して、 *pt* にあるリストボックス項目の0から始まるインデックスを取得します。
 
 ```
 int ItemFromPt(

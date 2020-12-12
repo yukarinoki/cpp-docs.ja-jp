@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: _crtDbgFlag'
 title: _crtDbgFlag
 ms.date: 11/04/2016
 f1_keywords:
@@ -13,14 +14,14 @@ helpviewer_keywords:
 - enable memory allocation tracking flag
 - memory, tracking on the debug heap
 ms.assetid: 9e7adb47-8ab9-4e19-81d5-e2f237979973
-ms.openlocfilehash: a967b436d53acab6d76fa36fdf9b13c7c24d49c3
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: ef3c72b89ea9e5e557a567af9a9c52c8e85370ce
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57746983"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97246758"
 ---
-# <a name="crtdbgflag"></a>_crtDbgFlag
+# <a name="_crtdbgflag"></a>_crtDbgFlag
 
 **_crtDbgFlag** フラグは、ヒープのデバッグ バージョンでのメモリ割り当てがどのように追跡、検証、報告、およびダンプされるかを制御する 5 つのビット フィールドで構成されます。 このフラグのビット フィールドは、[_CrtSetDbgFlag](../c-runtime-library/reference/crtsetdbgflag.md) 関数を使用して設定されます。 このフラグとそのビット フィールドは、Crtdbg.h で宣言されます。 このフラグは、[_DEBUG](../c-runtime-library/debug.md) フラグがアプリケーションで定義されている場合にのみ使用できます。
 
@@ -28,4 +29,4 @@ ms.locfileid: "57746983"
 
 ## <a name="see-also"></a>関連項目
 
-[コントロール フラグ](../c-runtime-library/control-flags.md)
+[制御フラグ](../c-runtime-library/control-flags.md)

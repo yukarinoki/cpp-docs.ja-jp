@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: _CIsin'
 title: _CIsin
 ms.date: 4/2/2020
 api_name:
@@ -25,12 +26,12 @@ helpviewer_keywords:
 - _CIsin intrinsic
 - CIsin intrinsic
 ms.assetid: f215f39a-2341-4f1c-ba8e-cb522451ceb2
-ms.openlocfilehash: b7c3ba2c771d7659a7ca0ba2e64ade9068c2b390
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: e033d2f296deb1f0a650a7a39571d50068843c6c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82917355"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97246956"
 ---
 # <a name="_cisin"></a>_CIsin
 
@@ -50,11 +51,11 @@ void __cdecl _CIsin();
 
 既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](global-state.md)」を参照してください。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **プラットフォーム:** x86
 
 ## <a name="see-also"></a>関連項目
 
-[関数リファレンス (アルファベット順)](../c-runtime-library/reference/crt-alphabetical-function-reference.md)<br/>
+[アルファベット順の関数リファレンス](../c-runtime-library/reference/crt-alphabetical-function-reference.md)<br/>
 [sin、sinf、sinl](../c-runtime-library/reference/sin-sinf-sinl.md)<br/>

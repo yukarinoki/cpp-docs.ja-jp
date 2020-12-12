@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: CDialogEx クラス'
 title: CDialogEx クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - CDialogEx [MFC], SetBackgroundColor
 - CDialogEx [MFC], SetBackgroundImage
 ms.assetid: a6ed3b1f-aef8-4b66-ac78-2160faf63c13
-ms.openlocfilehash: 717e560035d42957c16168097577d0c8c589e3c7
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: 27ec0011935871d472734cae6f0d62b402382727
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81753353"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97185246"
 ---
 # <a name="cdialogex-class"></a>CDialogEx クラス
 
@@ -49,9 +50,9 @@ class CDialogEx : public CDialog
 
 `CDialogEx` クラスを使用するには、ダイアログ ボックス クラスを `CDialogEx` クラスではなく `CDialog` クラスから派生させます。
 
-ダイアログ ボックス イメージは、リソース ファイルに格納されます。 フレームワークは、リソース ファイルから読み込まれたイメージを自動的に削除します。 プログラムで現在の背景イメージを削除するには[、CDialogEx::SetBackgroundImage](#setbackgroundimage)メソッドを呼`OnDestroy`び出すか、イベント ハンドラーを実装します。 [メソッドを](#setbackgroundimage)呼び出すときは、イメージ ハンドルとしてパラメーターを`HBITMAP`渡します。 `CDialogEx` オブジェクトがイメージの所有権を取得し、`m_bAutoDestroyBmp` フラグが `TRUE` である場合は、そのイメージを削除します。
+ダイアログ ボックス イメージは、リソース ファイルに格納されます。 フレームワークは、リソース ファイルから読み込まれたイメージを自動的に削除します。 現在の背景イメージをプログラムで削除するには、 [CDialogEx:: SetBackgroundImage](#setbackgroundimage) メソッドを呼び出すか、イベントハンドラーを実装し `OnDestroy` ます。 [CDialogEx:: SetBackgroundImage](#setbackgroundimage)メソッドを呼び出す場合は、 `HBITMAP` イメージハンドルとしてパラメーターを渡します。 `CDialogEx` オブジェクトがイメージの所有権を取得し、`m_bAutoDestroyBmp` フラグが `TRUE` である場合は、そのイメージを削除します。
 
-オブジェクト`CDialogEx`は[、クラス](../../mfc/reference/cmfcpopupmenu-class.md)オブジェクトの親にすることができます。 [クラス](../../mfc/reference/cmfcpopupmenu-class.md)オブジェクトは、クラスオブジェクトが`CDialogEx::SetActiveMenu`開いたときにメソッド[を](../../mfc/reference/cmfcpopupmenu-class.md)呼び出します。 その後、`CDialogEx`オブジェクトは[、CMFCPopupMenu クラス オブジェクト](../../mfc/reference/cmfcpopupmenu-class.md)が閉じられるまで、メニュー イベントを処理します。
+オブジェクトは、 `CDialogEx` [CMFCPopupMenu クラス](../../mfc/reference/cmfcpopupmenu-class.md) オブジェクトの親にすることができます。 [CMFCPopupMenu クラス](../../mfc/reference/cmfcpopupmenu-class.md)オブジェクトは、 `CDialogEx::SetActiveMenu` [CMFCPopupMenu クラス](../../mfc/reference/cmfcpopupmenu-class.md)オブジェクトが開いたときにメソッドを呼び出します。 その後、 `CDialogEx` オブジェクトは、 [CMFCPopupMenu クラス](../../mfc/reference/cmfcpopupmenu-class.md) オブジェクトが閉じられるまで、すべてのメニューイベントを処理します。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -65,11 +66,11 @@ class CDialogEx : public CDialog
 
 [CDialogEx](../../mfc/reference/cdialogex-class.md)
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-**ヘッダー:** afxdialogex.h
+**ヘッダー:** afxdialogex
 
-## <a name="cdialogexcdialogex"></a><a name="cdialogex"></a>::CDialogEx
+## <a name="cdialogexcdialogex"></a><a name="cdialogex"></a> CDialogEx:: CDialogEx
 
 `CDialogEx` オブジェクトを構築します。
 
@@ -85,23 +86,23 @@ CDialogEx(
 
 ### <a name="parameters"></a>パラメーター
 
-*テンプレート*<br/>
-[in]ダイアログ ボックス テンプレートのリソース ID。
+*nIDTemplate*<br/>
+からダイアログボックステンプレートのリソース ID。
 
-*テンプレート名*<br/>
-[in]ダイアログ ボックス テンプレートのリソース名。
+*lpszTemplateName*<br/>
+からダイアログボックステンプレートのリソース名。
 
-*親*<br/>
-[in]親ウィンドウへのポインター。 既定値は NULL です。
+*pParent*<br/>
+から親ウィンドウへのポインター。 既定値は NULL です。
 
 *pParentWnd*<br/>
-[in]親ウィンドウへのポインター。 既定値は NULL です。
+から親ウィンドウへのポインター。 既定値は NULL です。
 
 ### <a name="return-value"></a>戻り値
 
 ### <a name="remarks"></a>解説
 
-## <a name="cdialogexsetbackgroundcolor"></a><a name="setbackgroundcolor"></a>::設定された背景色
+## <a name="cdialogexsetbackgroundcolor"></a><a name="setbackgroundcolor"></a> CDialogEx:: SetBackgroundColor
 
 ダイアログ ボックスの背景色を設定します。
 
@@ -113,15 +114,15 @@ void SetBackgroundColor(
 
 ### <a name="parameters"></a>パラメーター
 
-*色*<br/>
-[in]RGB カラー値。
+*color*<br/>
+からRGB カラー値。
 
-*brepaint*<br/>
-[in]直ちに画面を更新する場合は TRUE。それ以外の場合は FALSE。 既定値は TRUE です。
+*塗装*<br/>
+から画面をすぐに更新する場合は TRUE。それ以外の場合は FALSE。 既定値は TRUE です。
 
 ### <a name="remarks"></a>解説
 
-## <a name="cdialogexsetbackgroundimage"></a><a name="setbackgroundimage"></a>を設定します。
+## <a name="cdialogexsetbackgroundimage"></a><a name="setbackgroundimage"></a> CDialogEx:: SetBackgroundImage
 
 ダイアログ ボックスの背景イメージを設定します。
 
@@ -140,32 +141,32 @@ BOOL SetBackgroundImage(
 
 ### <a name="parameters"></a>パラメーター
 
-*hビットマップ*<br/>
-[in]背景イメージへのハンドル。
+*hBitmap*<br/>
+から背景イメージを処理するハンドル。
 
-*をクリックします。*<br/>
-[in]背景イメージのリソース ID。
+*uiBmpResId*<br/>
+から背景イメージのリソース ID。
 
 *location*<br/>
-[in]イメージの場所`CDialogEx::BackgroundLocation`を指定する値の 1 つ。 有効な値には、BACKGR_TILE、BACKGR_TOPLEFT、BACKGR_TOPRIGHT、BACKGR_BOTTOMLEFT、およびBACKGR_BOTTOMRIGHTが含まれます。 既定値は BACKGR_TILE です。
+から `CDialogEx::BackgroundLocation` イメージの場所を指定する値の1つ。 有効な値には、BACKGR_TILE、BACKGR_TOPLEFT、BACKGR_TOPRIGHT、BACKGR_BOTTOMLEFT、および BACKGR_BOTTOMRIGHT があります。 既定値は BACKGR_TILE です。
 
-*b自動破壊*<br/>
-[in]背景イメージを自動的に破棄する場合は TRUE。それ以外の場合は FALSE。
+*bAutoDestroy*<br/>
+から背景イメージを自動的に破棄する場合は TRUE。それ以外の場合は FALSE。
 
-*brepaint*<br/>
-[in]ダイアログ ボックスをすぐに再描画する場合は TRUE。それ以外の場合は FALSE。
+*塗装*<br/>
+からダイアログボックスをすぐに再描画する場合は TRUE。それ以外の場合は FALSE。
 
 ### <a name="return-value"></a>戻り値
 
-2 番目のメソッドオーバーロード構文では、メソッドが成功した場合は TRUE。それ以外の場合は FALSE。
+2番目のメソッドオーバーロード構文では、メソッドが成功した場合は TRUE になります。それ以外の場合は FALSE。
 
 ### <a name="remarks"></a>解説
 
-指定したイメージは、ダイアログ ボックスのクライアント領域に合わせて伸長されません。
+指定したイメージは、ダイアログボックスのクライアント領域に合わせるために拡張されていません。
 
 ## <a name="see-also"></a>関連項目
 
-[階層グラフ](../../mfc/hierarchy-chart.md)<br/>
-[クラス](../../mfc/reference/mfc-classes.md)<br/>
+[階層図](../../mfc/hierarchy-chart.md)<br/>
+[Classes](../../mfc/reference/mfc-classes.md)<br/>
 [CMFCPopupMenu クラス](../../mfc/reference/cmfcpopupmenu-class.md)<br/>
 [CContextMenuManager クラス](../../mfc/reference/ccontextmenumanager-class.md)

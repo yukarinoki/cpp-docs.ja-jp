@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「リンカツール Error LNK1188」を参照してください。
 title: リンカ ツール エラー LNK1188
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - LNK1188
 ms.assetid: 4af574b0-5b41-4580-9a37-52a634add995
-ms.openlocfilehash: b18a93c7434ee3d66f42829f373bd916a65369bd
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 1bd826c3734d8079b370712ae829a0d0fb1abded
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80195176"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97321840"
 ---
 # <a name="linker-tools-error-lnk1188"></a>リンカ ツール エラー LNK1188
 

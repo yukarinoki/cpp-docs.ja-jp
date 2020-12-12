@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: CDHtmlDialog クラス'
 title: CDHtmlDialog クラス
 ms.date: 03/27/2019
 f1_keywords:
@@ -116,12 +117,12 @@ helpviewer_keywords:
 - CDHtmlDialog [MFC], m_strCurrentUrl
 - CDHtmlDialog [MFC], m_szHtmlResID
 ms.assetid: 3f941c85-87e1-4f0f-9cc5-ffee8498b312
-ms.openlocfilehash: 9cc01c94357d7aac7fa6fa98127628a60746e1e8
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: aa99d10b0d0ff6920f839d7588d80f489b971384
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88842885"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97185285"
 ---
 # <a name="cdhtmldialog-class"></a>CDHtmlDialog クラス
 
@@ -232,7 +233,7 @@ class CDHtmlDialog : public CDialog, public CDHtmlEventSink
 
 `CDHtmlDialog`
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** afxdhtml
 
@@ -605,7 +606,7 @@ STDMETHOD(FilterDataObject)(
 ### <a name="parameters"></a>パラメーター
 
 *pDO*<br/>
-Windows SDK の「 [IDocHostUIHandler:: FilterDataObject](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753254\(v=vs.85\))の*pDO* 」を参照してください。
+Windows SDK の「 [IDocHostUIHandler:: FilterDataObject](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753254\(v=vs.85\))の *pDO* 」を参照してください。
 
 *ppDORet*<br/>
 Windows SDK の「 *ppDORet* 」を参照してください `IDocHostUIHandler::FilterDataObject` 。
@@ -703,7 +704,7 @@ HRESULT GetDHtmlDocument(IHTMLDocument2 **pphtmlDoc);
 
 ### <a name="parameters"></a>パラメーター
 
-* \* \* pphtmlDoc* HTML ドキュメントへのポインターへのポインター。
+*\* \* pphtmlDoc* HTML ドキュメントへのポインターへのポインター。
 
 ### <a name="return-value"></a>戻り値
 
@@ -722,7 +723,7 @@ STDMETHOD(GetDropTarget)(
 ### <a name="parameters"></a>パラメーター
 
 *pDropTarget*<br/>
-Windows SDK の「 [IDocHostUIHandler:: GetDropTarget](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753255\(v=vs.85\))の*pdroptarget* 」を参照してください。
+Windows SDK の「 [IDocHostUIHandler:: GetDropTarget](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753255\(v=vs.85\))の *pdroptarget* 」を参照してください。
 
 *ppDropTarget*<br/>
 Windows SDK の「 *Ppdroptarget* 」を参照してください `IDocHostUIHandler::GetDropTarget` 。
@@ -737,7 +738,7 @@ E_NOTIMPL を返します。
 
 ## <a name="cdhtmldialoggetelement"></a><a name="getelement"></a> CDHtmlDialog:: GetElement
 
-*Szelementid*によって指定された HTML 要素のインターフェイスを返します。
+*Szelementid* によって指定された HTML 要素のインターフェイスを返します。
 
 ```
 HRESULT GetElement(
@@ -759,7 +760,7 @@ HTML 要素の ID。
 `IDispatch`要求された要素または要素のコレクションへのポインター。
 
 *pbCollection*<br/>
-*Ppdisp*によって表されるオブジェクトが、1つの要素または要素のコレクションであるかどうかを示すブール値。
+*Ppdisp* によって表されるオブジェクトが、1つの要素または要素のコレクションであるかどうかを示すブール値。
 
 *pphtmlElement*<br/>
 `IHTMLElement`要求された要素へのポインター。
@@ -776,7 +777,7 @@ HTML 要素の ID。
 
 ## <a name="cdhtmldialoggetelementhtml"></a><a name="getelementhtml"></a> CDHtmlDialog:: GetElementHtml
 
-`innerHTML` *Szelementid*によって識別される HTML 要素のプロパティを取得します。
+`innerHTML` *Szelementid* によって識別される HTML 要素のプロパティを取得します。
 
 ```
 BSTR GetElementHtml(LPCTSTR szElementId);
@@ -789,11 +790,11 @@ HTML 要素の ID。
 
 ### <a name="return-value"></a>戻り値
 
-`innerHTML` *Szelementid*によって識別される HTML 要素のプロパティ、または要素が見つからなかった場合は NULL。
+`innerHTML` *Szelementid* によって識別される HTML 要素のプロパティ、または要素が見つからなかった場合は NULL。
 
 ## <a name="cdhtmldialoggetelementinterface"></a><a name="getelementinterface"></a> CDHtmlDialog:: GetElementInterface
 
-*Szelementid*によって識別される HTML 要素から、要求されたインターフェイスポインターを取得します。
+*Szelementid* によって識別される HTML 要素から、要求されたインターフェイスポインターを取得します。
 
 ```
 template <class Q> HRESULT GetElementInterface(
@@ -827,7 +828,7 @@ HTML 要素の ID。
 
 ## <a name="cdhtmldialoggetelementproperty"></a><a name="getelementproperty"></a> CDHtmlDialog:: GetElementProperty
 
-*Szelementid*によって識別される HTML 要素から*dispId*によって識別されるプロパティの値を取得します。
+*Szelementid* によって識別される HTML 要素から *dispId* によって識別されるプロパティの値を取得します。
 
 ```
 VARIANT GetElementProperty(
@@ -849,7 +850,7 @@ HTML 要素の ID。
 
 ## <a name="cdhtmldialoggetelementtext"></a><a name="getelementtext"></a> CDHtmlDialog:: GetElementText
 
-`innerText` *Szelementid*によって識別される HTML 要素のプロパティを取得します。
+`innerText` *Szelementid* によって識別される HTML 要素のプロパティを取得します。
 
 ```
 BSTR GetElementText(LPCTSTR szElementId);
@@ -862,7 +863,7 @@ HTML 要素の ID。
 
 ### <a name="return-value"></a>戻り値
 
-`innerText` *Szelementid*によって識別される HTML 要素のプロパティ、またはプロパティまたは要素が見つからなかった場合は NULL。
+`innerText` *Szelementid* によって識別される HTML 要素のプロパティ、またはプロパティまたは要素が見つからなかった場合は NULL。
 
 ## <a name="cdhtmldialoggetevent"></a><a name="getevent"></a> CDHtmlDialog:: GetEvent
 
@@ -896,7 +897,7 @@ STDMETHOD(GetExternal)(IDispatch** ppDispatch);
 ### <a name="parameters"></a>パラメーター
 
 *ppDispatch*<br/>
-Windows SDK の「 [IDocHostUIHandler:: GetExternal](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753256\(v=vs.85\))での*ppdispatch* 」を参照してください。
+Windows SDK の「 [IDocHostUIHandler:: GetExternal](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753256\(v=vs.85\))での *ppdispatch* 」を参照してください。
 
 ### <a name="return-value"></a>戻り値
 
@@ -940,7 +941,7 @@ STDMETHOD(GetOptionKeyPath)(
 ### <a name="parameters"></a>パラメーター
 
 *pchKey*<br/>
-Windows SDK の「 [IDocHostUIHandler:: GetOptionKeyPath](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753258\(v=vs.85\))の*pchkey* 」を参照してください。
+Windows SDK の「 [IDocHostUIHandler:: GetOptionKeyPath](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753258\(v=vs.85\))の *pchkey* 」を参照してください。
 
 *dw*<br/>
 Windows SDK の「 *dw* in」を参照してください `IDocHostUIHandler::GetOptionKeyPath` 。
@@ -1012,7 +1013,7 @@ BOOL m_bUseHtmlTitle;
 
 ### <a name="remarks"></a>解説
 
-**M**_ **busehtmltitle**が TRUE の場合、ダイアログキャプションは HTML ドキュメントのタイトルと同じに設定されます。それ以外の場合は、ダイアログリソースのキャプションが使用されます。
+**M** _ **busehtmltitle** が TRUE の場合、ダイアログキャプションは HTML ドキュメントのタイトルと同じに設定されます。それ以外の場合は、ダイアログリソースのキャプションが使用されます。
 
 ## <a name="cdhtmldialogm_nhtmlresid"></a><a name="m_nhtmlresid"></a> CDHtmlDialog:: m_nHtmlResID
 
@@ -1064,7 +1065,7 @@ LPTSTR m_szHtmlResID;
 
 ## <a name="cdhtmldialognavigate"></a><a name="navigate"></a> CDHtmlDialog:: Navigate
 
-*Lpszurl*で指定された url で識別されるリソースに移動します。
+*Lpszurl* で指定された url で識別されるリソースに移動します。
 
 ```cpp
 void Navigate(
@@ -1226,7 +1227,7 @@ STDMETHOD(ResizeBorder)(
 ### <a name="parameters"></a>パラメーター
 
 *prcBorder*<br/>
-Windows SDK の「 [IDocHostUIHandler:: ResizeBorder](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753263\(v=vs.85\))の*prcborder* 」を参照してください。
+Windows SDK の「 [IDocHostUIHandler:: ResizeBorder](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753263\(v=vs.85\))の *prcborder* 」を参照してください。
 
 *pUIWindow*<br/>
 Windows SDK の「 *Puiwindow* 」を参照してください `IDocHostUIHandler::ResizeBorder` 。
@@ -1460,7 +1461,7 @@ STDMETHOD(TranslateAccelerator)(
 ### <a name="parameters"></a>パラメーター
 
 *lpMsg*<br/>
-Windows SDK の「 [IDocHostUIHandler:: TranslateAccelerator](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753266\(v=vs.85\))の*lpmsg* 」を参照してください。
+Windows SDK の「 [IDocHostUIHandler:: TranslateAccelerator](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753266\(v=vs.85\))の *lpmsg* 」を参照してください。
 
 *pguidCmdGroup*<br/>
 Windows SDK の「 *Pguidcmdgroup* 」を参照してください `IDocHostUIHandler::TranslateAccelerator` 。

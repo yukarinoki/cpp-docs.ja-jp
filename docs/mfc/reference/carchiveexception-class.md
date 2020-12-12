@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: Cアーカイブ例外クラス'
 title: Cアーカイブ例外クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - CArchiveException [MFC], m_cause
 - CArchiveException [MFC], m_strFileName
 ms.assetid: da31a127-e86c-41d1-b0b6-bed0865b1b49
-ms.openlocfilehash: 68f64cfd7dc96da04fcc0945a6b996eab4101487
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: ce8355583e0a7a3fd8a382873a0e4b2a1ea91b83
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87231885"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97185402"
 ---
 # <a name="carchiveexception-class"></a>Cアーカイブ例外クラス
 
@@ -48,7 +49,7 @@ class CArchiveException : public CException
 
 クラスには、 `CArchiveException` 例外の原因を示すパブリックデータメンバーが含まれています。
 
-`CArchiveException`オブジェクトは、 [CArchive](../../mfc/reference/carchive-class.md)メンバー関数内で構築およびスローされます。 これらのオブジェクトには、 **CATCH**式のスコープ内でアクセスできます。 原因コードは、オペレーティングシステムに依存しません。 例外処理の詳細については、「[例外処理 (MFC)](../../mfc/exception-handling-in-mfc.md)」を参照してください。
+`CArchiveException` オブジェクトは、 [CArchive](../../mfc/reference/carchive-class.md) メンバー関数内で構築およびスローされます。 これらのオブジェクトには、 **CATCH** 式のスコープ内でアクセスできます。 原因コードは、オペレーティングシステムに依存しません。 例外処理の詳細については、「 [例外処理 (MFC)](../../mfc/exception-handling-in-mfc.md)」を参照してください。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -58,13 +59,13 @@ class CArchiveException : public CException
 
 `CArchiveException`
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** afx
 
-## <a name="carchiveexceptioncarchiveexception"></a><a name="carchiveexception"></a>Cアーカイブ例外:: Cアーカイブ例外
+## <a name="carchiveexceptioncarchiveexception"></a><a name="carchiveexception"></a> Cアーカイブ例外:: Cアーカイブ例外
 
-オブジェクトの `CArchiveException` *原因*の値を格納して、オブジェクトを構築します。
+オブジェクトの `CArchiveException` *原因* の値を格納して、オブジェクトを構築します。
 
 ```
 CArchiveException(
@@ -74,8 +75,8 @@ CArchiveException(
 
 ### <a name="parameters"></a>パラメーター
 
-*こと*<br/>
-例外の理由を示す列挙型変数。 列挙子の一覧については、「 [m_cause](#m_cause)データメンバー」を参照してください。
+*cause*<br/>
+例外の理由を示す列挙型変数。 列挙子の一覧については、「 [m_cause](#m_cause) データメンバー」を参照してください。
 
 *Lpszアーカイブ*<br/>
 例外を発生させたオブジェクトの名前を含む文字列を指し `CArchive` ます。
@@ -86,7 +87,7 @@ CArchiveException(
 
 このコンストラクターを直接使用しないでください。代わりに、グローバル関数を呼び出し `AfxThrowArchiveException` ます。
 
-## <a name="carchiveexceptionm_cause"></a><a name="m_cause"></a>Cアーカイブ例外:: m_cause
+## <a name="carchiveexceptionm_cause"></a><a name="m_cause"></a> Cアーカイブ例外:: m_cause
 
 例外の原因を指定します。
 
@@ -98,29 +99,29 @@ int m_cause;
 
 このデータメンバーは、型のパブリック変数です **`int`** 。 この値は列挙型によって定義され `CArchiveException` ます。 列挙子とその意味は次のとおりです。
 
-- `CArchiveException::none`エラーは発生しませんでした。
+- `CArchiveException::none` エラーは発生しませんでした。
 
-- `CArchiveException::genericException`指定されていないエラー。
+- `CArchiveException::genericException` 指定されていないエラー。
 
-- `CArchiveException::readOnly`読み込み用に開いているアーカイブに書き込もうとしました。
+- `CArchiveException::readOnly` 読み込み用に開いているアーカイブに書き込もうとしました。
 
-- `CArchiveException::endOfFile`オブジェクトの読み取り中にファイルの終わりに達しました。
+- `CArchiveException::endOfFile` オブジェクトの読み取り中にファイルの終わりに達しました。
 
-- `CArchiveException::writeOnly`保存用に開いているアーカイブから読み取ろうとしました。
+- `CArchiveException::writeOnly` 保存用に開いているアーカイブから読み取ろうとしました。
 
-- `CArchiveException::badIndex`ファイル形式が無効です。
+- `CArchiveException::badIndex` ファイル形式が無効です。
 
-- `CArchiveException::badClass`オブジェクトを間違った型のオブジェクトに読み取ろうとしました。
+- `CArchiveException::badClass` オブジェクトを間違った型のオブジェクトに読み取ろうとしました。
 
-- `CArchiveException::badSchema`異なるバージョンのクラスを使用してオブジェクトを読み取ろうとしました。
+- `CArchiveException::badSchema` 異なるバージョンのクラスを使用してオブジェクトを読み取ろうとしました。
 
     > [!NOTE]
     >  これらの `CArchiveException` 原因列挙子は、`CFileException` 原因列挙子とは異なります。
 
     > [!NOTE]
-    > `CArchiveException::generic` は非推奨とされます。 代わりに `genericException` を使用してください **ジェネリック**がアプリケーションで使用されていて、/clr でビルドされている場合、解読が容易ではない構文エラーが発生します。
+    > `CArchiveException::generic` は非推奨とされます。 代わりに、`genericException` を使用してください。 **ジェネリック** がアプリケーションで使用されていて、/clr でビルドされている場合、解読が容易ではない構文エラーが発生します。
 
-## <a name="carchiveexceptionm_strfilename"></a><a name="m_strfilename"></a>Cアーカイブ例外:: m_strFileName
+## <a name="carchiveexceptionm_strfilename"></a><a name="m_strfilename"></a> Cアーカイブ例外:: m_strFileName
 
 この例外条件のファイルの名前を指定します。
 

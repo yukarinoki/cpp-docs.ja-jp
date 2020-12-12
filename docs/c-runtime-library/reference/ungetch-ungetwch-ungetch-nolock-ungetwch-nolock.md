@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: _ungetch、_ungetwch、_ungetch_nolock、_ungetwch_nolock'
 title: _ungetch、_ungetwch、_ungetch_nolock、_ungetwch_nolock
 ms.date: 4/2/2020
 api_name:
@@ -51,12 +52,12 @@ helpviewer_keywords:
 - ungetwch_nolock function
 - _ungetwch function
 ms.assetid: 70ae71c6-228c-4883-a57d-de6d5f873825
-ms.openlocfilehash: 2a7b3b2a71b633eac64ad5ebc5203d70f31626ed
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: d7491f80f5c8a619d6382f5811c0ff2fccc00125
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82909302"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97341400"
 ---
 # <a name="_ungetch-_ungetwch-_ungetch_nolock-_ungetwch_nolock"></a>_ungetch、_ungetwch、_ungetch_nolock、_ungetwch_nolock
 
@@ -84,16 +85,16 @@ wint_t _ungetwch_nolock(
 
 ### <a name="parameters"></a>パラメーター
 
-*40u-c*<br/>
+*c*<br/>
 プッシュする文字。
 
 ## <a name="return-value"></a>戻り値
 
-成功した場合、どちらの関数も文字*c*を返します。 エラーが発生した場合、 **_ungetch**は**EOF**の値を返し、 **_ungetwch**は**WEOF**を返します。
+成功した場合、どちらの関数も文字 *c* を返します。 エラーが発生した場合、 **_ungetch** は **EOF** の値を返し、 **_ungetwch** は **WEOF** を返します。
 
 ## <a name="remarks"></a>解説
 
-これらの関数は、文字*c*をコンソールにプッシュして、 *c*を **_getch**または **_getche** (または **_getwch**または **_getwche**) が読み取る次の文字にします。 **_ungetch**と **_ungetwch**は、次の読み取りの前に複数回呼び出された場合に失敗します。 *C*引数を**EOF** (または**WEOF**) にすることはできません。
+これらの関数は、文字 *c* をコンソールにプッシュして、 *c* を **_getch** または **_getche** (または **_getwch** または **_getwche**) が読み取る次の文字にします。 **_ungetch** と **_ungetwch** は、次の読み取りの前に複数回呼び出された場合に失敗します。 *C* 引数を **EOF** (または **WEOF**) にすることはできません。
 
 **_nolock** サフィックスが付いているバージョンは同じものですが、他のスレッドによる干渉から保護されない点が異なります。 他のスレッドをロックアウトするオーバーヘッドが発生しないため、処理が速くなる場合があります。 これらの関数は、シングルスレッド アプリケーション、呼び出し元のスコープで既にスレッド分離を処理している場合などのスレッドセーフなコンテキストでのみ使用してください。
 
@@ -108,7 +109,7 @@ wint_t _ungetwch_nolock(
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**_ungetch**、 **_ungetch_nolock**|\<conio.h>|
 |**_ungetwch**、 **_ungetwch_nolock**|\<conio.h> または \<wchar.h>|

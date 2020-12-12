@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: _CIfmod'
 title: _CIfmod
 ms.date: 4/2/2020
 api_name:
@@ -25,12 +26,12 @@ helpviewer_keywords:
 - CIfmod intrinsic
 - _CIfmod intrinsic
 ms.assetid: 7c050653-7ec6-4810-b3a7-7a0057ea65ed
-ms.openlocfilehash: bcfbabd260e17ac788ca3a3b83301b5f35be07eb
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: db5ebb6178b468d9f131c374c8ef128a90664d17
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82917451"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97246982"
 ---
 # <a name="_cifmod"></a>_CIfmod
 
@@ -50,11 +51,11 @@ void __cdecl _CIfmod();
 
 既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](global-state.md)」を参照してください。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **プラットフォーム:** x86
 
 ## <a name="see-also"></a>関連項目
 
-[関数リファレンス (アルファベット順)](../c-runtime-library/reference/crt-alphabetical-function-reference.md)<br/>
+[アルファベット順の関数リファレンス](../c-runtime-library/reference/crt-alphabetical-function-reference.md)<br/>
 [fmod、fmodf](../c-runtime-library/reference/fmod-fmodf.md)

@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: _get_dstbias'
 title: _get_dstbias
 ms.date: 4/2/2020
 api_name:
@@ -33,12 +34,12 @@ helpviewer_keywords:
 - get_dstbias function
 - _get_dstbias function
 ms.assetid: e751358c-1ecc-411b-ae2c-81b2ec54ea45
-ms.openlocfilehash: 845310928ec4707afe15bccc7ff5b979e7da69b6
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 00c5cef0e7c1e5e79cbcc2ce37a13e3f56d27029
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82919364"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97341452"
 ---
 # <a name="_get_dstbias"></a>_get_dstbias
 
@@ -52,26 +53,26 @@ error_t _get_dstbias( int* seconds );
 
 ### <a name="parameters"></a>パラメーター
 
-*待ち時間*<br/>
+*seconds*<br/>
 夏時間のオフセット (秒単位)。
 
 ## <a name="return-value"></a>戻り値
 
-成功した場合は0、エラーが発生した場合は**errno**値。
+成功した場合は0、エラーが発生した場合は **errno** 値。
 
 ## <a name="remarks"></a>解説
 
-**_Get_dstbias**関数は、夏時間の秒数を整数として取得します。 夏時間が適用されている場合、既定のオフセットは 3,600 秒であり、これは 1 時間の秒数です (ただし、一部の地域は 2 時間のオフセットを実施しています)。
+**_Get_dstbias** 関数は、夏時間の秒数を整数として取得します。 夏時間が適用されている場合、既定のオフセットは 3,600 秒であり、これは 1 時間の秒数です (ただし、一部の地域は 2 時間のオフセットを実施しています)。
 
-*Seconds*が**NULL**の場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、この関数は**errno**を**einval**に設定し、 **einval**を返します。
+*Seconds* が **NULL** の場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、この関数は **errno** を **einval** に設定し、 **einval** を返します。
 
-マクロ **_dstbias**または非推奨の関数 **__dstbias**の代わりに、この関数を使用することをお勧めします。
+マクロ **_dstbias** または非推奨の関数 **__dstbias** の代わりに、この関数を使用することをお勧めします。
 
 既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**_get_dstbias**|\<time.h>|
 
@@ -80,7 +81,7 @@ error_t _get_dstbias( int* seconds );
 ## <a name="see-also"></a>関連項目
 
 [時間管理](../../c-runtime-library/time-management.md)<br/>
-[errno、_doserrno、_sys_errlist、_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)<br/>
+[errno、_doserrno、_sys_errlist、および _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)<br/>
 [_get_daylight](get-daylight.md)<br/>
 [_get_timezone](get-timezone.md)<br/>
 [_get_tzname](get-tzname.md)<br/>

@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: _RTC_SetErrorFuncW'
 title: _RTC_SetErrorFuncW
 ms.date: 11/04/2016
 api_name:
@@ -28,12 +29,12 @@ helpviewer_keywords:
 - _RTC_SetErrorFuncW function
 - RTC_error_fnW typedef
 ms.assetid: b3e0d71f-1bd3-4c37-9ede-2f638eb3c81a
-ms.openlocfilehash: 0d45e5c857e917ca23b62482c64a06314565226e
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: e1f92b791f986c7881f0c65a22c24432c03160e5
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70948962"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97341426"
 ---
 # <a name="_rtc_seterrorfuncw"></a>_RTC_SetErrorFuncW
 
@@ -49,20 +50,20 @@ _RTC_error_fnW _RTC_SetErrorFuncW(
 
 ### <a name="parameters"></a>パラメーター
 
-*関数*<br/>
+*function*<br/>
 実行時エラー チェックを処理する関数のアドレス。
 
 ## <a name="return-value"></a>戻り値
 
-以前に定義されたエラー関数。以前に定義された関数がない場合は**NULL**です。
+以前に定義されたエラー関数。以前に定義された関数がない場合は **NULL** です。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-新しいコードでは、 **_RTC_SetErrorFuncW**のみを使用します。 **_RTC_SetErrorFunc**は、旧バージョンとの互換性のためにライブラリにのみ含まれています。
+新しいコードでは、 **_RTC_SetErrorFuncW** のみを使用します。 **_RTC_SetErrorFunc** は、旧バージョンとの互換性のためにライブラリにのみ含まれています。
 
-**_RTC_SetErrorFuncW**コールバックは、リンク先のコンポーネントにのみ適用されますが、グローバルには適用されません。
+**_RTC_SetErrorFuncW** コールバックは、リンク先のコンポーネントにのみ適用されますが、グローバルには適用されません。
 
-**_RTC_SetErrorFuncW**に渡すアドレスが、有効なエラー処理関数のアドレスであることを確認します。
+**_RTC_SetErrorFuncW** に渡すアドレスが、有効なエラー処理関数のアドレスであることを確認してください。
 
 [_RTC_SetErrorType](rtc-seterrortype.md)を使用して1の型にエラーが割り当てられている場合、エラー処理関数は呼び出されません。
 
@@ -80,15 +81,15 @@ typedef int (__cdecl * _RTC_error_fnW)(
     ... );
 ```
 
-それぞれの文字について以下に説明します。
+ここで、
 
 *errorType*<br/>
 [_RTC_SetErrorType](rtc-seterrortype.md)で指定したエラーの種類。
 
-*ファイル名*<br/>
+*filename*<br/>
 障害が発生したソース ファイル。または、使用できるデバッグ情報がない場合は null。
 
-*行番号*<br/>
+*linenumber*<br/>
 障害が発生した *ファイル名* 内の行番号。または、使用できるデバッグ情報がない場合は 0。
 
 *moduleName*<br/>
@@ -105,7 +106,7 @@ typedef int (__cdecl * _RTC_error_fnW)(
 |-------------|---------------------|
 |**_RTC_SetErrorFuncW**|\<rtcapi.h>|
 
-詳細については、「[互換性](../../c-runtime-library/compatibility.md)」をご覧ください。
+詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
 ## <a name="libraries"></a>ライブラリ
 

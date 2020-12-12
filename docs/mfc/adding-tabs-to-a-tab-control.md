@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: タブコントロールへのタブの追加'
 title: タブ コントロールへのタブの追加
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - CTabCtrl class [MFC], adding tabs
 - tabs [MFC], adding to CTabCtrl class [MFC]
 ms.assetid: 7f3d9340-e3c7-4c71-9912-be57534ecc78
-ms.openlocfilehash: 89132e94396b51bee4a111b963c67d029f3dd9df
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: ca25edf349fb11271d4e355241f4724d11bc4ac0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84616533"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97185467"
 ---
 # <a name="adding-tabs-to-a-tab-control"></a>タブ コントロールへのタブの追加
 
@@ -26,9 +27,9 @@ ms.locfileid: "84616533"
 
 1. 追加のタブ項目について、手順 1. と手順 2. を繰り返します。
 
-詳細については、「Windows SDK での[タブコントロールの作成](/windows/win32/Controls/tab-controls)」を参照してください。
+詳細については、「Windows SDK での [タブコントロールの作成](/windows/win32/Controls/tab-controls) 」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 
 [CTabCtrl の使い方](using-ctabctrl.md)<br/>
-[制限](controls-mfc.md)
+[コントロール](controls-mfc.md)

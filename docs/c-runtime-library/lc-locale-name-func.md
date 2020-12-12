@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: ___lc_locale_name_func'
 title: ___lc_locale_name_func
 ms.date: 4/2/2020
 api_name:
@@ -22,12 +23,12 @@ f1_keywords:
 helpviewer_keywords:
 - ___lc_locale_name_func
 ms.assetid: ef858308-872e-43de-95e0-9b1b4084343e
-ms.openlocfilehash: c48041c6c01e22c7771c0b5449de2cc8df1a2df0
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 3431318608516fda908cd3c8ab9562c5044d20ae
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82912970"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97246553"
 ---
 # <a name="___lc_locale_name_func"></a>___lc_locale_name_func
 
@@ -53,7 +54,7 @@ wchar_t** ___lc_locale_name_func(void);
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |`___lc_locale_name_func`|crt\src\setlocal.h|
 

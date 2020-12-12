@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「Unicode のサポート」を参照してください。
 title: Unicode のサポート
 ms.date: 01/09/2018
 helpviewer_keywords:
@@ -9,16 +10,16 @@ helpviewer_keywords:
 - character sets [C++], Unicode
 - localization [C++], character sets
 - Unicode [C++], installing support
-ms.openlocfilehash: 90c07874b61656a8bec0f9ef373f2ee8f339e994
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 3226f488afc8d9899777ac0b717dd012fec2cc3d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87215375"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97335759"
 ---
 # <a name="support-for-unicode"></a>Unicode のサポート
 
-Unicode は、1バイトでは表現できない文字セットを含む、すべての文字セットをサポートするための仕様です。  国際市場向けにプログラミングしている場合は、Unicode または[マルチバイト文字セット](../text/support-for-multibyte-character-sets-mbcss.md)(MBCS) のいずれかを使用することをお勧めします。 または、スイッチを変更することによってビルドできるようにプログラムをコーディングします。
+Unicode は、1バイトでは表現できない文字セットを含む、すべての文字セットをサポートするための仕様です。  国際市場向けにプログラミングしている場合は、Unicode または [マルチバイト文字セット](../text/support-for-multibyte-character-sets-mbcss.md) (MBCS) のいずれかを使用することをお勧めします。 または、スイッチを変更することによってビルドできるようにプログラムをコーディングします。
 
 ワイド文字は、2 バイトの多言語文字コードです。 世界中の最新のコンピューティングで使用されているほとんどすべての文字 (技術記号や特殊な公開文字を含む) を含む、数十の文字が、Unicode 仕様に従って、UTF-16 を使用してエンコードされた1つのワイド文字として表すことができます。 1つのワイド文字では表現できない文字は、unicode サロゲートペア機能を使用して、Unicode ペアで表すことができます。 一般的に使用されるほとんどすべての文字は、1つの16ビットワイド文字で UTF-16 で表されるため、ワイド文字を使用すると、国際文字セットを使用したプログラミングが簡単になります。 16LE (リトルエンディアン用) を使用してエンコードされたワイド文字は、Windows のネイティブ文字形式です。
 
@@ -33,12 +34,12 @@ MFC フレームワークは Unicode に完全に対応しており、MFC では
 |移植性のないデータ型|置き換えに使うマクロ|
 |-----------------------------|----------------------------|
 |**`char`**, **`wchar_t`**|`_TCHAR`|
-|**`char*`**、 `LPSTR` (Win32 データ型)、`LPWSTR`|`LPTSTR`|
-|`const char*`、 `LPCSTR` (Win32 データ型)、`LPCWSTR`|`LPCTSTR`|
+|**`char*`**、 `LPSTR` (Win32 データ型)、 `LPWSTR`|`LPTSTR`|
+|`const char*`、 `LPCSTR` (Win32 データ型)、 `LPCWSTR`|`LPCTSTR`|
 
 クラス `CString` は `_TCHAR` 、をベースとして使用し、簡単に変換できるようにコンストラクターと演算子を提供します。 Unicode の文字列操作のほとんどは、操作の基本単位が 8 ビット バイトではなく 16 ビット文字であることを除き、Windows の ANSI 文字セットの操作に使用するのと同じロジックを使用して記述できます。 マルチバイト文字セットの操作と異なり、1 つの Unicode 文字を 2 つの個別のバイトのように扱う必要はなく、また、そのような処理は適切ではありません。 ただし、ワイド文字のサロゲートペアによって表される1文字の可能性に対処する必要があります。 一般に、文字列の長さが、含まれている文字数と同じであることを前提としたコードは記述しないでください。
 
-## <a name="what-do-you-want-to-do"></a>目的に合ったトピックをクリックしてください
+## <a name="what-do-you-want-to-do"></a>実行する操作
 
 - [MFC Unicode とマルチバイト文字セット (MBCS) のサポートを使用する](../atl-mfc-shared/unicode-and-multibyte-character-set-mbcs-support.md)
 

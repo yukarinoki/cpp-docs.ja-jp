@@ -1,4 +1,5 @@
 ---
+description: 詳細については、マルチバイト文字セット (MBCSs) のサポートに関するページを参照してください。
 title: マルチバイト文字セット (MBCS) のサポート
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - multibyte characters [C++]
 - MBCS [C++]
 ms.assetid: b498733c-a1e1-45e3-8f26-d6da3cb5f2dd
-ms.openlocfilehash: 0b43168ec4331e99dea7e939b097674cc880804e
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8ab6af7aa77942b39785faf68ea6a530867abff8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81375764"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97335770"
 ---
 # <a name="support-for-multibyte-character-sets-mbcss"></a>マルチバイト文字セット (MBCS) のサポート
 
@@ -28,36 +29,36 @@ MBCS では、1 バイトまたは 2 バイトのいずれかで文字がエン�
 
 MBCS のプログラミングでは、次の点について考慮する必要があります。
 
-環境内の MBCS 文字は、ファイル名やディレクトリ名などの文字列に含めることができます。
+Mbcs 文字環境の mbcs 文字は、ファイル名やディレクトリ名などの文字列で使用できます。
 
 ### <a name="editing-operations"></a>編集操作
 
-MBCS アプリケーションでの編集操作は、バイトではなく文字に対して行う必要があります。 キャレットは文字を分割しないようにする必要があり、**右矢印**キーは右に 1 文字移動する必要があります。 **削除**は文字を削除する必要があります。**元に戻す**必要がありますを挿入します。
+MBCS アプリケーションでの編集操作は、バイトではなく文字に対して行う必要があります。 キャレットは文字を分割しないでください。 **右方向** キーは、1文字右に移動します。 **Delete** は文字を削除する必要があります。 **元に戻す** には再挿入が必要です。
 
-### <a name="string-handling"></a>文字列操作
+### <a name="string-handling"></a>文字列の処理
 
 MBCS を使うアプリケーションでは、文字列操作で特殊な問題が出てきます。 1 つの文字列の中に 1 バイト幅の文字と 2 バイト幅の文字が混在しているため、先頭バイトがあるかどうかを必ず確認する必要があります。
 
 ### <a name="run-time-library-support"></a>ランタイム ライブラリのサポート
 
-C のランタイム ライブラリおよび MFC は、1 バイト文字、MBCS、および Unicode でのプログラミングをそれぞれサポートしています。 1 バイト文字列は、ランタイム関数`str`のファミリで処理され、MBCS 文字列は対応する`_mbs`関数で処理され、Unicode 文字列は対応`wcs`する関数で処理されます。 MFC クラスのメンバー関数では、状況に応じて、通常の `str` ファミリの関数、MBCS の関数、または Unicode の関数に割り当てる移植性の高いランタイム関数を使用しています。
+C のランタイム ライブラリおよび MFC は、1 バイト文字、MBCS、および Unicode でのプログラミングをそれぞれサポートしています。 1バイトの文字列は、 `str` 実行時関数のファミリで処理され、MBCS 文字列は対応する関数で処理され、 `_mbs` Unicode 文字列は対応する関数で処理され `wcs` ます。 MFC クラスのメンバー関数では、状況に応じて、通常の `str` ファミリの関数、MBCS の関数、または Unicode の関数に割り当てる移植性の高いランタイム関数を使用しています。
 
 ### <a name="mbcsunicode-portability"></a>MBCS と Unicode の移植性
 
-tchar.h ヘッダー ファイルを使用すると、同じソースからシングルバイト、MBCS、および Unicode アプリケーションをビルドできます。 Tchar.h は、_tcs*を付けたマクロ*を`str`定義`_mbs`し、`wcs`適切な 、 、または 関数にマップします。 MBCS でビルドするには、シンボル `_MBCS` を定義します。 Unicode をビルドするには、`_UNICODE`記号 を定義します。 MFC アプリケーションでは、既定で `_UNICODE` が定義されています。 詳細については、 [tchar.h の汎用テキスト マッピングを](../text/generic-text-mappings-in-tchar-h.md)参照してください。
+Tchar.h ヘッダーファイルを使用すると、同じソースから1バイト、MBCS、Unicode の各アプリケーションを作成できます。 Tchar.h は、 *_tcs* で始まるマクロを定義します。このマクロ `str` は、、 `_mbs` 、またはの各関数に適切にマップさ `wcs` れます。 MBCS でビルドするには、シンボル `_MBCS` を定義します。 Unicode を作成するには、シンボルを定義し `_UNICODE` ます。 MFC アプリケーションでは、既定で `_UNICODE` が定義されています。 詳細については、「 [tchar. h の汎用テキストマップ](../text/generic-text-mappings-in-tchar-h.md)」を参照してください。
 
 > [!NOTE]
-> と の`_UNICODE``_MBCS`両方を定義する場合、動作は定義されません。
+> との両方を定義する場合、動作は定義され `_UNICODE` てい `_MBCS` ません。
 
 Mbctype.h ヘッダー ファイルおよび Mbstring.h ヘッダー ファイルでは、MBCS 固有の関数とマクロが定義されています。この関数とマクロは状況に応じて必要になります。 たとえば `_ismbblead` は、文字列の特定のバイトが先行バイトかどうかを示します。
 
-国際移植性を高めるには[、Unicode](../text/support-for-unicode.md)またはマルチバイト文字セット (MBCD) を使用してプログラムをコーディングします。
+国際的な移植性を得るには、 [Unicode](../text/support-for-unicode.md) またはマルチバイト文字セット (mbcss) を使用してプログラムをコーディングします。
 
-## <a name="what-do-you-want-to-do"></a>目的に合ったトピックをクリックしてください
+## <a name="what-do-you-want-to-do"></a>実行する操作
 
 - [国際化対応について](../text/international-enabling.md)
 
-- [プログラムでユニコードと MBCS の両方を有効にする](../text/internationalization-strategies.md)
+- [プログラムで Unicode と MBCS の両方を有効にする](../text/internationalization-strategies.md)
 
 - [MBCS のプログラミングについて](../text/mbcs-programming-tips.md)
 

@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「コンパイラエラー C3400」を参照してください。
 title: コンパイラ エラー C3400
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3400
 ms.assetid: d44169a8-73b6-4766-b406-b3a6c93f2a4d
-ms.openlocfilehash: cb4b9d03e10155383f2c58cca07253ae69c2c69a
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: d2ed88232f88c49f72c868e7b378aa0d6ef30ac3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74737505"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97321956"
 ---
 # <a name="compiler-error-c3400"></a>コンパイラ エラー C3400
 
@@ -21,7 +22,7 @@ ms.locfileid: "74737505"
 
 詳細については、「[Constraints on Generic Type Parameters (C++/CLI) (ジェネリック型パラメーターの (C++/CLI))](../../extensions/constraints-on-generic-type-parameters-cpp-cli.md)」を参照してください。
 
-## <a name="example"></a>使用例
+## <a name="example"></a>例
 
 次の例では C3400 が生成されます。
 

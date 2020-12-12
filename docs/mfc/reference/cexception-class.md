@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: CException クラス'
 title: CException クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - CException [MFC], Delete
 - CException [MFC], ReportError
 ms.assetid: cfacf14d-bfe4-4666-a5c7-38b800512920
-ms.openlocfilehash: e27802e05c832d28d848d9eb1235d6ef5980b306
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 39d3266817ee1be20acde0b01c7c5d1aa90313cb
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88841559"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97184661"
 ---
 # <a name="cexception-class"></a>CException クラス
 
@@ -80,7 +81,7 @@ class AFX_NOVTABLE CException : public CObject
 
 `CException`
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** afx
 
@@ -115,7 +116,7 @@ void Delete();
 
 オブジェクトを構築するときにオブジェクトを削除するかどうかを指定できます。 詳細については、「 [CException:: CException](#cexception)」を参照してください。
 
-は `Delete` 、C++ 機構を使用している場合にのみ呼び出す必要があり **`try`** -  **`catch`** ます。 MFC マクロを使用している場合、Try と**CATCH**を**実行**すると、これらのマクロは自動的にこの関数を呼び出します。
+は `Delete` 、C++ 機構を使用している場合にのみ呼び出す必要があり **`try`** -  **`catch`** ます。 MFC マクロを使用している場合、Try と **CATCH** を **実行** すると、これらのマクロは自動的にこの関数を呼び出します。
 
 ### <a name="example"></a>例
 

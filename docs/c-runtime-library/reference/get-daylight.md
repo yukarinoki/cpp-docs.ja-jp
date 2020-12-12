@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: _get_daylight'
 title: _get_daylight
 ms.date: 4/2/2020
 api_name:
@@ -31,12 +32,12 @@ helpviewer_keywords:
 - daylight saving time offset
 - _get_daylight function
 ms.assetid: f85a6ba3-e187-4ca7-aed7-ffc694c8ac4c
-ms.openlocfilehash: 226242c5dd6c3c204d2449bd14ee7dee4f5fe7b5
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: dcb4ffb80ea79d89cad84617d4c8e4dceb1735c2
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82919397"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97341478"
 ---
 # <a name="_get_daylight"></a>_get_daylight
 
@@ -55,21 +56,21 @@ error_t _get_daylight( int* hours );
 
 ## <a name="return-value"></a>戻り値
 
-成功した場合は0、エラーが発生した場合は**errno**値。
+成功した場合は0、エラーが発生した場合は **errno** 値。
 
 ## <a name="remarks"></a>解説
 
-**_Get_daylight**関数は、夏時間の時間数を整数として取得します。 夏時間が有効な場合、既定のオフセットは 1 時間です (ただし、一部の地域は 2 時間のオフセットを実施しています)。
+**_Get_daylight** 関数は、夏時間の時間数を整数として取得します。 夏時間が有効な場合、既定のオフセットは 1 時間です (ただし、一部の地域は 2 時間のオフセットを実施しています)。
 
-*Hours*が**NULL**の場合、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、この関数は**errno**を**einval**に設定し、 **einval**を返します。
+*Hours* が **NULL** の場合、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、この関数は **errno** を **einval** に設定し、 **einval** を返します。
 
-マクロ **_daylight**または非推奨の関数 **__daylight**の代わりに、この関数を使用することをお勧めします。
+マクロ **_daylight** または非推奨の関数 **__daylight** の代わりに、この関数を使用することをお勧めします。
 
 既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**_get_daylight**|\<time.h>|
 
@@ -78,7 +79,7 @@ error_t _get_daylight( int* hours );
 ## <a name="see-also"></a>関連項目
 
 [時間管理](../../c-runtime-library/time-management.md)<br/>
-[errno、_doserrno、_sys_errlist、_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)<br/>
+[errno、_doserrno、_sys_errlist、および _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)<br/>
 [_get_dstbias](get-dstbias.md)<br/>
 [_get_timezone](get-timezone.md)<br/>
 [_get_tzname](get-tzname.md)<br/>
