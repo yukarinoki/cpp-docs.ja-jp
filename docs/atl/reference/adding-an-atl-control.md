@@ -1,16 +1,17 @@
 ---
+description: 詳細については、「ATL コントロールの追加」を参照してください。
 title: ATL コントロールの追加
 ms.date: 11/04/2016
 helpviewer_keywords:
 - ATL projects, adding controls
 - controls [ATL], adding to projects
 ms.assetid: 10223e7e-fdb7-4163-80c6-44aeafa8e6ce
-ms.openlocfilehash: fac1efeb3d373a8324828a8b10f0570f253f6103
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 91fe393a1e93deb2173ac95a42b7ab9cca339535
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91499297"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97165707"
 ---
 # <a name="adding-an-atl-control"></a>ATL コントロールの追加
 
@@ -18,13 +19,13 @@ ms.locfileid: "91499297"
 
 ## <a name="to-add-an-atl-control-to-your-project"></a>ATL コントロールをプロジェクトに追加するには
 
-1. **ソリューションエクスプローラー**または[クラスビュー](/visualstudio/ide/viewing-the-structure-of-code)で、ATL simple オブジェクトを追加するプロジェクトの名前を右クリックします。
+1. **ソリューションエクスプローラー** または [クラスビュー](/visualstudio/ide/viewing-the-structure-of-code)で、ATL simple オブジェクトを追加するプロジェクトの名前を右クリックします。
 
 1. ショートカットメニューの [ **追加** ] をクリックし、[ **クラスの追加**] をクリックします。
 
 1. [ [クラスの追加](../../ide/adding-a-class-visual-cpp.md#add-class-dialog-box) ] ダイアログボックスの [テンプレート] ペインで、[ **atl コントロール**] をクリックし、[ **追加** ] をクリックして [atl コントロールウィザード](../../atl/reference/atl-control-wizard.md)を表示します。
 
-**ATL コントロールウィザード**を使用すると、次の3種類のコントロールのいずれかを作成できます。
+**ATL コントロールウィザード** を使用すると、次の3種類のコントロールのいずれかを作成できます。
 
 - 標準コントロール
 

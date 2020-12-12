@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: CWndClassInfo クラス'
 title: CWndClassInfo クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -15,12 +16,12 @@ f1_keywords:
 helpviewer_keywords:
 - CWndClassInfo class
 ms.assetid: c36fe7e1-75f1-4cf5-a06f-9f59c43fe6fb
-ms.openlocfilehash: c1b516f6e92f98d660f7757870a3e634dcef4518
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 7a857812fa35743fbab0968fb94095bf8fdcabcf
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88835507"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97140024"
 ---
 # <a name="cwndclassinfo-class"></a>CWndClassInfo クラス
 
@@ -75,7 +76,7 @@ class CWndClassInfo
 
 ATL で windows を使用する方法の詳細については、「 [Atl ウィンドウクラス](../../atl/atl-window-classes.md)」を参照してください。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** atlwin. h
 
@@ -186,7 +187,7 @@ ATOM Register(WNDPROC* pProc);
 
 [DECLARE_WND_CLASS](window-class-macros.md#declare_wnd_class) ( [CWindowImpl](../../atl/reference/cwindowimpl-class.md)の既定値) または[DECLARE_WND_CLASS_EX](window-class-macros.md#declare_wnd_class_ex)マクロを指定した場合は、によって `Register` 新しいウィンドウクラスが登録されます。 この場合、 *Pproc* パラメーターは使用されません。
 
-[DECLARE_WND_SUPERCLASS](window-class-macros.md#declare_wnd_superclass)マクロを指定した場合、は、 `Register` 既存のクラスに基づいているが別のウィンドウプロシージャを使用するウィンドウクラスである、スーパークラスを登録します。 既存のウィンドウクラスのウィンドウプロシージャが *Pproc*に返されます。
+[DECLARE_WND_SUPERCLASS](window-class-macros.md#declare_wnd_superclass)マクロを指定した場合、は、 `Register` 既存のクラスに基づいているが別のウィンドウプロシージャを使用するウィンドウクラスである、スーパークラスを登録します。 既存のウィンドウクラスのウィンドウプロシージャが *Pproc* に返されます。
 
 ## <a name="see-also"></a>関連項目
 

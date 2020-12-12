@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: CWindowImpl クラス'
 title: CWindowImpl クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -18,12 +19,12 @@ helpviewer_keywords:
 - CWindowImpl class
 - subclassing windows, ATL
 ms.assetid: 02eefd45-a0a6-4d1b-99f6-dbf627e2cc2f
-ms.openlocfilehash: 56b503dfcfbe4fae215f61081446bd3a5070af3c
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: c0736f0c963016fe5f65982c90903bfdce7c382e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88835533"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97140115"
 ---
 # <a name="cwindowimpl-class"></a>CWindowImpl クラス
 
@@ -48,7 +49,7 @@ class ATL_NO_VTABLE CWindowImpl : public CWindowImplBaseT<TBase, TWinTraits>
 クラスの基底クラス。 既定では、基本クラスは [CWindow](../../atl/reference/cwindow-class.md)です。
 
 *TWinTraits*<br/>
-ウィンドウのスタイルを定義する [特徴クラス](../../atl/understanding-window-traits.md) 。 既定では、 `CControlWinTraits`です。
+ウィンドウのスタイルを定義する [特徴クラス](../../atl/understanding-window-traits.md) 。 既定値は、`CControlWinTraits` です。
 
 ## <a name="members"></a>メンバー
 
@@ -102,7 +103,7 @@ class ATL_NO_VTABLE CWindowImpl : public CWindowImplBaseT<TBase, TWinTraits>
 
 基本クラスのデストラクター (~) では、 `CWindowImplRoot` オブジェクトが破棄される前にウィンドウが失われることが保証されます。
 
-`CWindowImpl`から派生します。これは、から派生 `CWindowImplBaseT` `CWindowImplRoot` し、CMessageMap から派生し `TBase` ます。 [CMessageMap](../../atl/reference/cmessagemap-class.md)
+`CWindowImpl`から派生します。これは、から派生 `CWindowImplBaseT` `CWindowImplRoot` し、CMessageMap から派生し `TBase` ます。 [](../../atl/reference/cmessagemap-class.md)
 
 |詳細情報|解決方法については、|
 |--------------------------------|---------|
@@ -122,7 +123,7 @@ class ATL_NO_VTABLE CWindowImpl : public CWindowImplBaseT<TBase, TWinTraits>
 
 `CWindowImpl`
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** atlwin. h
 
@@ -159,7 +160,7 @@ HWND Create(
 から拡張ウィンドウスタイル。 この値は、ウィンドウの特徴クラスによって提供されるスタイルと組み合わされます。 既定値は、特徴クラスにスタイルに対する完全な制御を与えます。 使用可能な値の一覧については、Windows SDK の「 [CreateWindowEx](/windows/win32/api/winuser/nf-winuser-createwindowexw) 」を参照してください。
 
 *MenuOrID*<br/>
-から子ウィンドウの場合は、ウィンドウ識別子。 トップレベルウィンドウの場合は、ウィンドウのメニューハンドル。 既定値は **0u**です。
+から子ウィンドウの場合は、ウィンドウ識別子。 トップレベルウィンドウの場合は、ウィンドウのメニューハンドル。 既定値は **0u** です。
 
 *lpCreateParam*<br/>
 からウィンドウ作成データへのポインター。 詳細については、 [CreateWindowEx](/windows/win32/api/winuser/nf-winuser-createwindowexw)の最後のパラメーターの説明を参照してください。
@@ -299,7 +300,7 @@ virtual void OnFinalMessage(HWND hWnd);
 
 ## <a name="cwindowimplsubclasswindow"></a><a name="subclasswindow"></a> CWindowImpl:: SubclassWindow
 
-*HWnd*によって識別されるウィンドウをサブクラス化し、オブジェクトにアタッチし `CWindowImpl` ます。
+*HWnd* によって識別されるウィンドウをサブクラス化し、オブジェクトにアタッチし `CWindowImpl` ます。
 
 ```
 BOOL SubclassWindow(HWND hWnd);

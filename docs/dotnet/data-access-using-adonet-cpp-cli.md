@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: ADO.NET を使用したデータアクセス (C++/CLI)'
 title: ADO.NET によるデータ アクセス (C++/CLI)
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -22,12 +23,12 @@ helpviewer_keywords:
 - SAFEARRAY, marshaling
 - ADO.NET [C++], marshaling SAFEARRAY types
 ms.assetid: b0cd987d-1ea7-4f76-ba01-cbd52503d06d
-ms.openlocfilehash: 3f3980c98890382e77d9d89db2944bebf7b12319
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 93af8a8a2dc4ebc8d9fe6073b9f3a70f4868bee8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87211061"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97124268"
 ---
 # <a name="data-access-using-adonet-ccli"></a>ADO.NET によるデータ アクセス (C++/CLI)
 
@@ -35,15 +36,15 @@ ADO.NET は、データアクセス用の .NET Framework API であり、以前�
 
 ADO.NET は、共通言語ランタイム (CLR) で実行されます。 そのため、ADO.NET と対話するアプリケーションでも、CLR を対象とする必要があります。 ただし、これは、ネイティブアプリケーションが ADO.NET を使用できないことを意味するわけではありません。 これらの例では、ネイティブコードから ADO.NET データベースを操作する方法を示します。
 
-## <a name="marshal-ansi-strings-for-adonet"></a><a name="marshal_ansi"></a>ADO.NET の ANSI 文字列のマーシャリング
+## <a name="marshal-ansi-strings-for-adonet"></a><a name="marshal_ansi"></a> ADO.NET の ANSI 文字列のマーシャリング
 
 ネイティブ文字列 () をデータベースに追加する方法 `char *` と、を <xref:System.String?displayProperty=fullName> データベースからネイティブ文字列にマーシャリングする方法について説明します。
 
 ### <a name="example"></a>例
 
-この例では、ADO.NET オブジェクトと対話するためにクラス DatabaseClass が作成され <xref:System.Data.DataTable> ます。 このクラスは、ネイティブ C++ (またはと比較) であることに注意し **`class`** て **`ref class`** **`value class`** ください。 これは、ネイティブコードからこのクラスを使用する必要があり、マネージ型をネイティブコードで使用できないために必要です。 このクラスは、クラス宣言の前にあるディレクティブによって示されているように、CLR を対象としてコンパイルされ `#pragma managed` ます。 このディレクティブの詳細については、「[マネージ、アンマネージ](../preprocessor/managed-unmanaged.md)」を参照してください。
+この例では、ADO.NET オブジェクトと対話するためにクラス DatabaseClass が作成され <xref:System.Data.DataTable> ます。 このクラスは、ネイティブ C++ (またはと比較) であることに注意し **`class`** て **`ref class`** **`value class`** ください。 これは、ネイティブコードからこのクラスを使用する必要があり、マネージ型をネイティブコードで使用できないために必要です。 このクラスは、クラス宣言の前にあるディレクティブによって示されているように、CLR を対象としてコンパイルされ `#pragma managed` ます。 このディレクティブの詳細については、「 [マネージ、アンマネージ](../preprocessor/managed-unmanaged.md)」を参照してください。
 
-DatabaseClass クラスのプライベートメンバーであるを確認 `gcroot<DataTable ^> table` します。 ネイティブ型にはマネージ型を含めることができないため、 `gcroot` キーワードが必要です。 の詳細につい `gcroot` ては、「[方法: ネイティブ型のハンドルを宣言](../dotnet/how-to-declare-handles-in-native-types.md)する」を参照してください。
+DatabaseClass クラスのプライベートメンバーであるを確認 `gcroot<DataTable ^> table` します。 ネイティブ型にはマネージ型を含めることができないため、 `gcroot` キーワードが必要です。 の詳細につい `gcroot` ては、「 [方法: ネイティブ型のハンドルを宣言](../dotnet/how-to-declare-handles-in-native-types.md)する」を参照してください。
 
 この例の残りのコードは、前のディレクティブで示されているように、ネイティブ C++ コードです `#pragma unmanaged` `main` 。 この例では、DatabaseClass の新しいインスタンスを作成し、そのメソッドを呼び出してテーブルを作成し、テーブルにいくつかの行を設定します。 ネイティブ C++ 文字列は、データベース列 StringCol の値として渡されることに注意してください。 DatabaseClass の内部では、これらの文字列は、名前空間にあるマーシャリング機能を使用して、マネージ文字列にマーシャリングされ <xref:System.Runtime.InteropServices?displayProperty=fullName> ます。 具体的には、メソッドを使用してを <xref:System.Runtime.InteropServices.Marshal.PtrToStringAnsi%2A> にマーシャリングし、メソッドを使用してを `char *` <xref:System.String> <xref:System.Runtime.InteropServices.Marshal.StringToHGlobalAnsi%2A> にマーシャリングし <xref:System.String> `char *` ます。
 
@@ -161,15 +162,15 @@ StringCol: This is string 2.
     cl /clr /FU System.dll /FU System.Data.dll /FU System.Xml.dll adonet_marshal_string_native.cpp
     ```
 
-## <a name="marshal-bstr-strings-for-adonet"></a><a name="marshal_bstr"></a>ADO.NET の BSTR 文字列のマーシャリング
+## <a name="marshal-bstr-strings-for-adonet"></a><a name="marshal_bstr"></a> ADO.NET の BSTR 文字列のマーシャリング
 
 データベースに COM 文字列 () を追加する方法と、を `BSTR` データベースからにマーシャリングする方法を示し <xref:System.String?displayProperty=fullName> `BSTR` ます。
 
 ### <a name="example"></a>例
 
-この例では、ADO.NET オブジェクトと対話するためにクラス DatabaseClass が作成され <xref:System.Data.DataTable> ます。 このクラスは、ネイティブ C++ (またはと比較) であることに注意し **`class`** て **`ref class`** **`value class`** ください。 これは、ネイティブコードからこのクラスを使用する必要があり、マネージ型をネイティブコードで使用できないために必要です。 このクラスは、クラス宣言の前にあるディレクティブによって示されているように、CLR を対象としてコンパイルされ `#pragma managed` ます。 このディレクティブの詳細については、「[マネージ、アンマネージ](../preprocessor/managed-unmanaged.md)」を参照してください。
+この例では、ADO.NET オブジェクトと対話するためにクラス DatabaseClass が作成され <xref:System.Data.DataTable> ます。 このクラスは、ネイティブ C++ (またはと比較) であることに注意し **`class`** て **`ref class`** **`value class`** ください。 これは、ネイティブコードからこのクラスを使用する必要があり、マネージ型をネイティブコードで使用できないために必要です。 このクラスは、クラス宣言の前にあるディレクティブによって示されているように、CLR を対象としてコンパイルされ `#pragma managed` ます。 このディレクティブの詳細については、「 [マネージ、アンマネージ](../preprocessor/managed-unmanaged.md)」を参照してください。
 
-DatabaseClass クラスのプライベートメンバーであるを確認 `gcroot<DataTable ^> table` します。 ネイティブ型にはマネージ型を含めることができないため、 `gcroot` キーワードが必要です。 の詳細につい `gcroot` ては、「[方法: ネイティブ型のハンドルを宣言](../dotnet/how-to-declare-handles-in-native-types.md)する」を参照してください。
+DatabaseClass クラスのプライベートメンバーであるを確認 `gcroot<DataTable ^> table` します。 ネイティブ型にはマネージ型を含めることができないため、 `gcroot` キーワードが必要です。 の詳細につい `gcroot` ては、「 [方法: ネイティブ型のハンドルを宣言](../dotnet/how-to-declare-handles-in-native-types.md)する」を参照してください。
 
 この例の残りのコードは、前のディレクティブで示されているように、ネイティブ C++ コードです `#pragma unmanaged` `main` 。 この例では、DatabaseClass の新しいインスタンスを作成し、そのメソッドを呼び出してテーブルを作成し、テーブルにいくつかの行を設定します。 COM 文字列は、データベース列 StringCol の値として渡されることに注意してください。 DatabaseClass の内部では、これらの文字列は、名前空間にあるマーシャリング機能を使用して、マネージ文字列にマーシャリングされ <xref:System.Runtime.InteropServices?displayProperty=fullName> ます。 具体的には、メソッドを使用してを <xref:System.Runtime.InteropServices.Marshal.PtrToStringBSTR%2A> にマーシャリングし、メソッドを使用してを `BSTR` <xref:System.String> <xref:System.Runtime.InteropServices.Marshal.StringToBSTR%2A> にマーシャリングし <xref:System.String> `BSTR` ます。
 
@@ -295,15 +296,15 @@ StringCol: This is string 2.
     cl /clr /FU System.dll /FU System.Data.dll /FU System.Xml.dll adonet_marshal_string_native.cpp
     ```
 
-## <a name="marshal-unicode-strings-for-adonet"></a><a name="marshal_unicode"></a>ADO.NET の Unicode 文字列のマーシャリング
+## <a name="marshal-unicode-strings-for-adonet"></a><a name="marshal_unicode"></a> ADO.NET の Unicode 文字列のマーシャリング
 
 ネイティブ Unicode 文字列 () をデータベースに追加する方法 `wchar_t *` と、を <xref:System.String?displayProperty=fullName> データベースからネイティブ unicode 文字列にマーシャリングする方法について説明します。
 
 ### <a name="example"></a>例
 
-この例では、ADO.NET オブジェクトと対話するためにクラス DatabaseClass が作成され <xref:System.Data.DataTable> ます。 このクラスは、ネイティブ C++ (またはと比較) であることに注意し **`class`** て **`ref class`** **`value class`** ください。 これは、ネイティブコードからこのクラスを使用する必要があり、マネージ型をネイティブコードで使用できないために必要です。 このクラスは、クラス宣言の前にあるディレクティブによって示されているように、CLR を対象としてコンパイルされ `#pragma managed` ます。 このディレクティブの詳細については、「[マネージ、アンマネージ](../preprocessor/managed-unmanaged.md)」を参照してください。
+この例では、ADO.NET オブジェクトと対話するためにクラス DatabaseClass が作成され <xref:System.Data.DataTable> ます。 このクラスは、ネイティブ C++ (またはと比較) であることに注意し **`class`** て **`ref class`** **`value class`** ください。 これは、ネイティブコードからこのクラスを使用する必要があり、マネージ型をネイティブコードで使用できないために必要です。 このクラスは、クラス宣言の前にあるディレクティブによって示されているように、CLR を対象としてコンパイルされ `#pragma managed` ます。 このディレクティブの詳細については、「 [マネージ、アンマネージ](../preprocessor/managed-unmanaged.md)」を参照してください。
 
-DatabaseClass クラスのプライベートメンバーであるを確認 `gcroot<DataTable ^> table` します。 ネイティブ型にはマネージ型を含めることができないため、 `gcroot` キーワードが必要です。 の詳細につい `gcroot` ては、「[方法: ネイティブ型のハンドルを宣言](../dotnet/how-to-declare-handles-in-native-types.md)する」を参照してください。
+DatabaseClass クラスのプライベートメンバーであるを確認 `gcroot<DataTable ^> table` します。 ネイティブ型にはマネージ型を含めることができないため、 `gcroot` キーワードが必要です。 の詳細につい `gcroot` ては、「 [方法: ネイティブ型のハンドルを宣言](../dotnet/how-to-declare-handles-in-native-types.md)する」を参照してください。
 
 この例の残りのコードは、前のディレクティブで示されているように、ネイティブ C++ コードです `#pragma unmanaged` `main` 。 この例では、DatabaseClass の新しいインスタンスを作成し、そのメソッドを呼び出してテーブルを作成し、テーブルにいくつかの行を設定します。 Unicode C++ 文字列は、データベース列 StringCol の値として渡されることに注意してください。 DatabaseClass の内部では、これらの文字列は、名前空間にあるマーシャリング機能を使用して、マネージ文字列にマーシャリングされ <xref:System.Runtime.InteropServices?displayProperty=fullName> ます。 具体的には、メソッドを使用してを <xref:System.Runtime.InteropServices.Marshal.PtrToStringUni%2A> にマーシャリングし、メソッドを使用してを `wchar_t *` <xref:System.String> <xref:System.Runtime.InteropServices.Marshal.StringToHGlobalUni%2A> にマーシャリングし <xref:System.String> `wchar_t *` ます。
 
@@ -421,15 +422,15 @@ StringCol: This is string 2.
     cl /clr /FU System.dll /FU System.Data.dll /FU System.Xml.dll adonet_marshal_string_wide.cpp
     ```
 
-## <a name="marshal-a-variant-for-adonet"></a><a name="marshal_variant"></a>ADO.NET の VARIANT をマーシャリングする
+## <a name="marshal-a-variant-for-adonet"></a><a name="marshal_variant"></a> ADO.NET の VARIANT をマーシャリングする
 
 データベースにネイティブを追加する方法と、を `VARIANT` データベースからネイティブにマーシャリングする方法について説明し <xref:System.Object?displayProperty=fullName> `VARIANT` ます。
 
 ### <a name="example"></a>例
 
-この例では、ADO.NET オブジェクトと対話するためにクラス DatabaseClass が作成され <xref:System.Data.DataTable> ます。 このクラスは、ネイティブ C++ (またはと比較) であることに注意し **`class`** て **`ref class`** **`value class`** ください。 これは、ネイティブコードからこのクラスを使用する必要があり、マネージ型をネイティブコードで使用できないために必要です。 このクラスは、クラス宣言の前にあるディレクティブによって示されているように、CLR を対象としてコンパイルされ `#pragma managed` ます。 このディレクティブの詳細については、「[マネージ、アンマネージ](../preprocessor/managed-unmanaged.md)」を参照してください。
+この例では、ADO.NET オブジェクトと対話するためにクラス DatabaseClass が作成され <xref:System.Data.DataTable> ます。 このクラスは、ネイティブ C++ (またはと比較) であることに注意し **`class`** て **`ref class`** **`value class`** ください。 これは、ネイティブコードからこのクラスを使用する必要があり、マネージ型をネイティブコードで使用できないために必要です。 このクラスは、クラス宣言の前にあるディレクティブによって示されているように、CLR を対象としてコンパイルされ `#pragma managed` ます。 このディレクティブの詳細については、「 [マネージ、アンマネージ](../preprocessor/managed-unmanaged.md)」を参照してください。
 
-DatabaseClass クラスのプライベートメンバーであるを確認 `gcroot<DataTable ^> table` します。 ネイティブ型にはマネージ型を含めることができないため、 `gcroot` キーワードが必要です。 の詳細につい `gcroot` ては、「[方法: ネイティブ型のハンドルを宣言](../dotnet/how-to-declare-handles-in-native-types.md)する」を参照してください。
+DatabaseClass クラスのプライベートメンバーであるを確認 `gcroot<DataTable ^> table` します。 ネイティブ型にはマネージ型を含めることができないため、 `gcroot` キーワードが必要です。 の詳細につい `gcroot` ては、「 [方法: ネイティブ型のハンドルを宣言](../dotnet/how-to-declare-handles-in-native-types.md)する」を参照してください。
 
 この例の残りのコードは、前のディレクティブで示されているように、ネイティブ C++ コードです `#pragma unmanaged` `main` 。 この例では、DatabaseClass の新しいインスタンスを作成し、そのメソッドを呼び出してテーブルを作成し、テーブルにいくつかの行を設定します。 ネイティブ `VARIANT` 型は、データベース列 ObjectCol の値として渡されることに注意してください。 DatabaseClass の内部では、これらの `VARIANT` 型は、名前空間にあるマーシャリング機能を使用して、マネージオブジェクトにマーシャリングされ <xref:System.Runtime.InteropServices?displayProperty=fullName> ます。 具体的には、メソッドを使用してをにマーシャリングし、メソッドを使用してをに <xref:System.Runtime.InteropServices.Marshal.GetObjectForNativeVariant%2A> `VARIANT` マーシャリングし <xref:System.Object> <xref:System.Runtime.InteropServices.Marshal.GetNativeVariantForObject%2A> <xref:System.Object> `VARIANT` ます。
 
@@ -562,15 +563,15 @@ ObjectCol: 42
     cl /clr /FU System.dll /FU System.Data.dll /FU System.Xml.dll adonet_marshal_variant.cpp
     ```
 
-## <a name="marshal-a-safearray-for-adonet"></a><a name="marshal_safearray"></a>ADO.NET の SAFEARRAY をマーシャリングする
+## <a name="marshal-a-safearray-for-adonet"></a><a name="marshal_safearray"></a> ADO.NET の SAFEARRAY をマーシャリングする
 
 データベースにネイティブを追加する方法 `SAFEARRAY` と、マネージ配列をデータベースからネイティブにマーシャリングする方法について説明し `SAFEARRAY` ます。
 
 ### <a name="example"></a>例
 
-この例では、ADO.NET オブジェクトと対話するためにクラス DatabaseClass が作成され <xref:System.Data.DataTable> ます。 このクラスは、ネイティブ C++ (またはと比較) であることに注意し **`class`** て **`ref class`** **`value class`** ください。 これは、ネイティブコードからこのクラスを使用する必要があり、マネージ型をネイティブコードで使用できないために必要です。 このクラスは、クラス宣言の前にあるディレクティブによって示されているように、CLR を対象としてコンパイルされ `#pragma managed` ます。 このディレクティブの詳細については、「[マネージ、アンマネージ](../preprocessor/managed-unmanaged.md)」を参照してください。
+この例では、ADO.NET オブジェクトと対話するためにクラス DatabaseClass が作成され <xref:System.Data.DataTable> ます。 このクラスは、ネイティブ C++ (またはと比較) であることに注意し **`class`** て **`ref class`** **`value class`** ください。 これは、ネイティブコードからこのクラスを使用する必要があり、マネージ型をネイティブコードで使用できないために必要です。 このクラスは、クラス宣言の前にあるディレクティブによって示されているように、CLR を対象としてコンパイルされ `#pragma managed` ます。 このディレクティブの詳細については、「 [マネージ、アンマネージ](../preprocessor/managed-unmanaged.md)」を参照してください。
 
-DatabaseClass クラスのプライベートメンバーであるを確認 `gcroot<DataTable ^> table` します。 ネイティブ型にはマネージ型を含めることができないため、 `gcroot` キーワードが必要です。 の詳細につい `gcroot` ては、「[方法: ネイティブ型のハンドルを宣言](../dotnet/how-to-declare-handles-in-native-types.md)する」を参照してください。
+DatabaseClass クラスのプライベートメンバーであるを確認 `gcroot<DataTable ^> table` します。 ネイティブ型にはマネージ型を含めることができないため、 `gcroot` キーワードが必要です。 の詳細につい `gcroot` ては、「 [方法: ネイティブ型のハンドルを宣言](../dotnet/how-to-declare-handles-in-native-types.md)する」を参照してください。
 
 この例の残りのコードは、前のディレクティブで示されているように、ネイティブ C++ コードです `#pragma unmanaged` `main` 。 この例では、DatabaseClass の新しいインスタンスを作成し、そのメソッドを呼び出してテーブルを作成し、テーブルにいくつかの行を設定します。 ネイティブ `SAFEARRAY` 型は、データベース列 ArrayIntsCol の値として渡されることに注意してください。 DatabaseClass の内部では、これらの `SAFEARRAY` 型は、名前空間にあるマーシャリング機能を使用して、マネージオブジェクトにマーシャリングされ <xref:System.Runtime.InteropServices?displayProperty=fullName> ます。 具体的には、メソッドは、 <xref:System.Runtime.InteropServices.Marshal.Copy%2A> を整数のマネージ配列にマーシャリングするために使用され `SAFEARRAY` ます。また、メソッドを使用して、 <xref:System.Runtime.InteropServices.Marshal.Copy%2A> 整数のマネージ配列をにマーシャリングし `SAFEARRAY` ます。
 
@@ -715,7 +716,7 @@ int main()
     cl /clr /FU System.dll /FU System.Data.dll /FU System.Xml.dll adonet_marshal_safearray.cpp
     ```
 
-## <a name="net-framework-security"></a>.NET Framework のセキュリティ
+## <a name="net-framework-security"></a>.NET Framework セキュリティ
 
 ADO.NET に関連するセキュリティの問題の詳細については、「 [ADO.NET アプリケーション](/dotnet/framework/data/adonet/securing-ado-net-applications)のセキュリティ保護」を参照してください。
 

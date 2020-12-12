@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「ATL ダイアログボックスの追加」を参照してください。
 title: ATL ダイアログ ボックスの追加
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - MFC dialog boxes, ATL dialogs
 - dialog boxes, ATL
 ms.assetid: 152a378f-7b24-4f66-aeba-c740973f03a6
-ms.openlocfilehash: 71290cf0763ac6594985acc4cb11562efe7028e6
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 9d4abcafd5e12c6b8cffd636bf28a9e79f96e5ce
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91499374"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97165720"
 ---
 # <a name="adding-an-atl-dialog-box"></a>ATL ダイアログ ボックスの追加
 

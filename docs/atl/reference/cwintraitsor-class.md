@@ -1,5 +1,6 @@
 ---
-title: クウィントレイトソークラス
+description: '詳細情報: CWinTraitsOR クラス'
+title: CWinTraitsOR クラス
 ms.date: 11/04/2016
 f1_keywords:
 - CWinTraitsOR
@@ -10,16 +11,16 @@ helpviewer_keywords:
 - CWinTraitsOR class
 - window styles, default values for ATL
 ms.assetid: 1eb7b1e8-a9bd-411b-a30a-35a8a10af989
-ms.openlocfilehash: 825f79190c6f68cd1372154e4e02f430f545aa48
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 1d0a7ff8a78ebbdc416bdace2a1ea1f0199c292f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81330282"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97140063"
 ---
-# <a name="cwintraitsor-class"></a>クウィントレイトソークラス
+# <a name="cwintraitsor-class"></a>CWinTraitsOR クラス
 
-このクラスは、ウィンドウ オブジェクトの作成時に使用するスタイルを標準化するためのメソッドを提供します。
+このクラスは、ウィンドウオブジェクトの作成時に使用されるスタイルを標準化するためのメソッドを提供します。
 
 > [!IMPORTANT]
 > このクラスとそのメンバーは、Windows ランタイムで実行されるアプリケーションでは使用できません。
@@ -36,10 +37,10 @@ class CWinTraitsOR
 #### <a name="parameters"></a>パラメーター
 
 *t_dwStyle*<br/>
-既定のウィンドウ スタイル。
+既定のウィンドウスタイル。
 
 *t_dwExStyle*<br/>
-既定の拡張ウィンドウ スタイル。
+既定の拡張ウィンドウスタイル。
 
 ## <a name="members"></a>メンバー
 
@@ -47,24 +48,24 @@ class CWinTraitsOR
 
 |名前|説明|
 |----------|-----------------|
-|[クウィントクレストレーター::ゲットンデックススタイル](#getwndexstyle)|オブジェクトの拡張スタイルを`CWinTraitsOR`取得します。|
-|[クウィントレイトソー::ゲットンスタイル](#getwndstyle)|オブジェクトの標準スタイルを`CWinTraitsOR`取得します。|
+|[CWinTraitsOR::GetWndExStyle](#getwndexstyle)|オブジェクトの拡張スタイルを取得し `CWinTraitsOR` ます。|
+|[CWinTraitsOR::GetWndStyle](#getwndstyle)|オブジェクトの標準スタイルを取得し `CWinTraitsOR` ます。|
 
 ## <a name="remarks"></a>解説
 
-この[ウィンドウの特徴クラスは](../../atl/understanding-window-traits.md)、ATL ウィンドウ オブジェクトの作成に使用されるスタイルを標準化するための簡単なメソッドを提供します。 このクラスの特殊化を[CWindowImpl](../../atl/reference/cwindowimpl-class.md)または ATL の別のウィンドウ クラスのテンプレート パラメーターとして使用して、そのウィンドウ クラスのインスタンスに使用する標準スタイルと拡張スタイルの最小セットを指定します。
+この [ウィンドウの特徴](../../atl/understanding-window-traits.md) クラスは、ATL ウィンドウオブジェクトの作成に使用されるスタイルを標準化するための簡単な方法を提供します。 このクラスの特殊化を、そのウィンドウクラスのインスタンスに使用される標準スタイルと拡張スタイルの最小セットを指定するために、このクラスのテンプレートパラメーターとして、その他の [ATL または](../../atl/reference/cwindowimpl-class.md) ATL のウィンドウクラスに使用します。
 
-[CWindowImpl::Create](../../atl/reference/cwindowimpl-class.md#create)の呼び出しでインスタンスごとに設定する他のスタイルを許可しながら、ウィンドウ クラスのすべてのインスタンスに特定のスタイルを確実に設定する場合は、このテンプレートの特殊化を使用します。
+特定のスタイルがウィンドウクラスのすべてのインスタンスに対して設定されていることを確認し、 [CWindowImpl:: Create](../../atl/reference/cwindowimpl-class.md#create)の呼び出しでインスタンスごとに他のスタイルを設定することを許可する場合は、このテンプレートの特殊化を使用します。
 
-呼び出しで他のスタイルが指定されていない場合にのみ使用される既定のウィンドウ スタイルを提供する`CWindowImpl::Create`場合は、代わりに[CWinTraits を](../../atl/reference/cwintraits-class.md)使用します。
+の呼び出しで他のスタイルが指定されていない場合にのみ使用される既定のウィンドウスタイルを指定するには `CWindowImpl::Create` 、代わりに [CWinTraits](../../atl/reference/cwintraits-class.md) を使用します。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-**ヘッダー:** atlwin.h
+**ヘッダー:** atlwin. h
 
-## <a name="cwintraitsorgetwndstyle"></a><a name="getwndstyle"></a>クウィントレイトソー::ゲットンスタイル
+## <a name="cwintraitsorgetwndstyle"></a><a name="getwndstyle"></a> CWinTraitsOR::GetWndStyle
 
-`CWinTraits`オブジェクトの標準スタイルと、 で指定された既定のスタイルの組み合わせを取得します ( 論理 OR 演算子を使用して ) *t_dwStyle。*
+オブジェクトの標準スタイル `CWinTraits` と *t_dwStyle* によって指定された既定のスタイルの組み合わせ (論理 OR 演算子を使用) を取得するには、この関数を呼び出します。
 
 ```
 static DWORD GetWndStyle(DWORD dwStyle);
@@ -72,16 +73,16 @@ static DWORD GetWndStyle(DWORD dwStyle);
 
 ### <a name="parameters"></a>パラメーター
 
-*Dwstyle*<br/>
-ウィンドウの作成に使用するスタイル。
+*dwStyle*<br/>
+ウィンドウの作成に使用されるスタイル。
 
 ### <a name="return-value"></a>戻り値
 
-*dwStyle*で渡されるスタイルと、論理 OR 演算子を使用`t_dwStyle`して で指定された既定のスタイルの組み合わせ。
+*DwStyle* で渡されるスタイルと、によって指定された既定値の組み合わせ。 `t_dwStyle` 論理 OR 演算子を使用します。
 
-## <a name="cwintraitsorgetwndexstyle"></a><a name="getwndexstyle"></a>クウィントクレストレーター::ゲットンデックススタイル
+## <a name="cwintraitsorgetwndexstyle"></a><a name="getwndexstyle"></a> CWinTraitsOR::GetWndExStyle
 
-オブジェクトの拡張スタイルとで指定された既定のスタイル`CWinTraits`の組み合わせを取得します ( 論理 OR 演算子を`t_dwStyle`使用して) を取得します。
+オブジェクトの拡張スタイル `CWinTraits` とで指定された既定のスタイルの組み合わせ (論理 OR 演算子を使用) を取得するには、この関数を呼び出し `t_dwStyle` ます。
 
 ```
 static DWORD GetWndExStyle(DWORD dwExStyle);
@@ -89,12 +90,12 @@ static DWORD GetWndExStyle(DWORD dwExStyle);
 
 ### <a name="parameters"></a>パラメーター
 
-*ドウェエクススタイル*<br/>
+*dwExStyle*<br/>
 ウィンドウの作成に使用される拡張スタイル。
 
 ### <a name="return-value"></a>戻り値
 
-*dwExStyle*で渡される拡張スタイルと、論理 OR 演算子を`t_dwExStyle`使用して 指定されたデフォルトのスタイルの組み合わせ
+*Dwexstyle* で渡される拡張スタイルと、によって指定された既定のスタイルの組み合わせ `t_dwExStyle` (論理 OR 演算子を使用)
 
 ## <a name="see-also"></a>関連項目
 
