@@ -1,5 +1,6 @@
 ---
-title: クラス
+description: '詳細情報: CComModule クラス'
+title: CComModule クラス
 ms.date: 08/19/2019
 f1_keywords:
 - CComModule
@@ -31,16 +32,16 @@ helpviewer_keywords:
 - CComModule class
 - DLL modules [C++], ATL
 ms.assetid: f5face2c-8fd8-40e6-9ec3-54ab74701769
-ms.openlocfilehash: 5e30f847ff99a80ab19b880728472a339fd4cbe5
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: dd0ec6c6aa7d68374a90830b10815a9cbdd54aeb
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81747934"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97152023"
 ---
-# <a name="ccommodule-class"></a>クラス
+# <a name="ccommodule-class"></a>CComModule クラス
 
-ATL 7.0 では`CComModule`、非推奨になりました:[詳細については、ATL モジュール クラス](../../atl/atl-module-classes.md)を参照してください。
+ATL 7.0 では、 `CComModule` が非推奨とされます。詳細については、「 [Atl モジュールクラス](../../atl/atl-module-classes.md) 」を参照してください。
 
 > [!IMPORTANT]
 > このクラスとそのメンバーは、Windows ランタイムで実行されるアプリケーションでは使用できません。
@@ -57,73 +58,73 @@ class CComModule : public _ATL_MODULE
 
 |名前|説明|
 |----------|-----------------|
-|[クラスオブジェクト](#getclassobject)|指定した CLSID のオブジェクトを作成します。 DLL の場合のみ。|
-|[インスタンスを取得します。](#getmoduleinstance)|`m_hInst` が返されます。|
-|[を使用します。](#getresourceinstance)|`m_hInstResource` が返されます。|
-|[インスタンスを取得します。](#gettypelibinstance)|`m_hInstTypeLib` が返されます。|
-|[ココムモジュール:イニト](#init)|データ メンバーを初期化します。|
-|[クラスヘルパーを登録します。](#registerclasshelper)|システム レジストリにオブジェクトの標準クラス登録を入力します。|
-|[クラスオブジェクトを登録します。](#registerclassobjects)|クラス オブジェクトを登録します。 EXE の場合のみ。|
-|[をクリックします。](#registerserver)|オブジェクト マップ内の各オブジェクトのシステム レジストリを更新します。|
-|[を使用します。](#registertypelib)|タイプ ライブラリを登録します。|
-|[クラスオブジェクトを取り消す](#revokeclassobjects)|クラス オブジェクトを取り消します。 EXE の場合のみ。|
-|[CComモジュール:用語](#term)|データ メンバーを解放します。|
-|[クラスヘルパーを登録解除します。](#unregisterclasshelper)|システム レジストリからオブジェクトの標準クラス登録を削除します。|
-|[サーバーを登録解除します。](#unregisterserver)|オブジェクト マップ内の各オブジェクトの登録を解除します。|
-|[クラスを更新します。](#updateregistryclass)|オブジェクトの標準クラス登録を登録または登録解除します。|
-|[リソースからレジストリを更新します。](#updateregistryfromresourced)|オブジェクトを登録または登録解除するために、指定したリソースに含まれるスクリプトを実行します。|
-|[リソースからレジストリを更新します。](#updateregistryfromresources)|ATL レジストリ コンポーネントに静的にリンクします。 オブジェクトを登録または登録解除するために、指定したリソースに含まれるスクリプトを実行します。|
+|[CComModule:: GetClassObject](#getclassobject)|指定された CLSID のオブジェクトを作成します。 Dll の場合のみ。|
+|[CComModule:: GetModuleInstance](#getmoduleinstance)|`m_hInst` が返されます。|
+|[CComModule:: GetResourceInstance](#getresourceinstance)|`m_hInstResource` が返されます。|
+|[CComModule:: GetTypeLibInstance](#gettypelibinstance)|`m_hInstTypeLib` が返されます。|
+|[CComModule:: Init](#init)|データメンバーを初期化します。|
+|[CComModule:: RegisterClassHelper](#registerclasshelper)|オブジェクトの標準クラスの登録をシステムレジストリに入力します。|
+|[CComModule:: RegisterClassObjects](#registerclassobjects)|クラスオブジェクトを登録します。 Exe の場合のみ。|
+|[CComModule:: RegisterServer](#registerserver)|オブジェクトマップ内の各オブジェクトのシステムレジストリを更新します。|
+|[CComModule:: RegisterTypeLib](#registertypelib)|タイプ ライブラリを登録します。|
+|[CComModule:: RevokeClassObjects](#revokeclassobjects)|クラスオブジェクトを取り消します。 Exe の場合のみ。|
+|[CComModule:: Term](#term)|データメンバーを解放します。|
+|[CComModule:: UnregisterClassHelper](#unregisterclasshelper)|オブジェクトの標準クラスの登録をシステムレジストリから削除します。|
+|[CComModule:: UnregisterServer](#unregisterserver)|オブジェクトマップ内の各オブジェクトの登録を解除します。|
+|[CComModule:: UpdateRegistryClass](#updateregistryclass)|オブジェクトの標準クラスの登録を登録または登録解除します。|
+|[CComModule:: UpdateRegistryFromResourceD](#updateregistryfromresourced)|指定したリソースに含まれているスクリプトを実行して、オブジェクトの登録または登録解除を行います。|
+|[CComModule:: UpdateRegistryFromResourceS](#updateregistryfromresources)|ATL レジストリコンポーネントに静的にリンクします。 指定したリソースに含まれているスクリプトを実行して、オブジェクトの登録または登録解除を行います。|
 
 ### <a name="public-data-members"></a>パブリック データ メンバー
 
 |名前|説明|
 |----------|-----------------|
-|[ココムモジュール:m_csObjMap](#m_csobjmap)|オブジェクト マップ情報への同期アクセスを保証します。|
-|[コムモジュール:m_csTypeInfoHolder](#m_cstypeinfoholder)|タイプ ライブラリ情報への同期アクセスを保証します。|
-|[コムモジュール::m_csWindowCreate](#m_cswindowcreate)|ウィンドウの作成時に使用されるウィンドウ クラス情報と静的データへの同期アクセスを保証します。|
-|[ココムモジュール::m_hInst](#m_hinst)|モジュール インスタンスへのハンドルを格納します。|
-|[ココムモジュール:m_hInstResource](#m_hinstresource)|既定では、モジュール インスタンスへのハンドルが含まれます。|
-|[ココムモジュール:m_hInstTypeLib](#m_hinsttypelib)|既定では、モジュール インスタンスへのハンドルが含まれます。|
-|[ココムモジュール:m_pObjMap](#m_pobjmap)|モジュール インスタンスによって維持されるオブジェクト マップへのポイント。|
+|[CComModule:: m_csObjMap](#m_csobjmap)|オブジェクトマップ情報への同期アクセスを保証します。|
+|[CComModule:: m_csTypeInfoHolder](#m_cstypeinfoholder)|タイプライブラリ情報への同期アクセスを保証します。|
+|[CComModule:: m_csWindowCreate](#m_cswindowcreate)|ウィンドウの作成時に使用されるウィンドウクラス情報と静的データへの同期アクセスを保証します。|
+|[CComModule:: m_hInst](#m_hinst)|モジュールインスタンスへのハンドルを格納します。|
+|[CComModule:: m_hInstResource](#m_hinstresource)|既定では、にはモジュールインスタンスへのハンドルが格納されます。|
+|[CComModule:: m_hInstTypeLib](#m_hinsttypelib)|既定では、にはモジュールインスタンスへのハンドルが格納されます。|
+|[CComModule:: m_pObjMap](#m_pobjmap)|モジュールインスタンスによって管理されるオブジェクトマップを指します。|
 
 ## <a name="remarks"></a>解説
 
 > [!NOTE]
-> このクラスは非推奨となっており、ATL コード生成ウィザードでは[、CAtlAutoThreadModule](../../atl/reference/catlautothreadmodule-class.md)および[CAtlModule](../../atl/reference/catlmodule-class.md)派生クラスが使用されるようになりました。 詳細については[、「ATL モジュール クラス](../../atl/atl-module-classes.md)」を参照してください。 以下の情報は、ATL の古いリリースで作成されたアプリケーションで使用するためのものです。 `CComModule`は、後方機能の ATL の一部です。
+> このクラスは非推奨とされており、ATL コード生成ウィザードでは、 [CAtlAutoThreadModule](../../atl/reference/catlautothreadmodule-class.md) および [CAtlModule](../../atl/reference/catlmodule-class.md) 派生クラスが使用されるようになりました。 詳細については、「 [ATL モジュールクラス](../../atl/atl-module-classes.md) 」を参照してください。 次の情報は、ATL の旧リリースで作成されたアプリケーションで使用されます。 `CComModule` は、後方の機能のために ATL の一部になっています。
 
-`CComModule`は、クライアントがモジュールのコンポーネントにアクセスできるように、COM サーバー モジュールを実装します。 `CComModule`DLL (インプロセス) モジュールと EXE (ローカル) モジュールの両方をサポートします。
+`CComModule` COM サーバーモジュールを実装して、クライアントがモジュールのコンポーネントにアクセスできるようにします。 `CComModule` では、DLL (インプロセス) モジュールと EXE (ローカル) モジュールの両方がサポートされています。
 
-インスタンス`CComModule`は、オブジェクト マップを使用して、クラス オブジェクト定義のセットを維持します。 このオブジェクト マップは構造体の配列として実装`_ATL_OBJMAP_ENTRY`され、次の情報が含まれています。
+インスタンスは、オブジェクトマップを使用して、 `CComModule` クラスオブジェクト定義のセットを保持します。 このオブジェクトマップは、構造体の配列として実装され `_ATL_OBJMAP_ENTRY` 、次の情報が含まれています。
 
-- システム レジストリでオブジェクトの説明を入力および削除する。
+- システムレジストリにオブジェクトの説明を入力および削除します。
 
-- クラス ファクトリを通じてオブジェクトをインスタンス化する。
+- クラスファクトリを使用したオブジェクトのインスタンス化。
 
-- クライアントとコンポーネント内のルート オブジェクトとの間の通信を確立します。
+- クライアントと、コンポーネント内のルートオブジェクトとの間の通信を確立します。
 
-- クラス オブジェクトの有効期間管理を実行する。
+- クラスオブジェクトの有効期間の管理を実行しています。
 
-ATL COM AppWizard を実行すると、ウィザードによって、`_Module`のグローバル インスタンス`CComModule`または派生クラスが自動的に生成されます。 ATL プロジェクト ウィザードの詳細については、ATL[プロジェクトの作成に関する記事を](../../atl/reference/creating-an-atl-project.md)参照してください。
+ATL COM AppWizard を実行すると、ウィザードによって `_Module` 、のグローバルインスタンス、 `CComModule` またはそれから派生したクラスが自動的に生成されます。 ATL プロジェクトウィザードの詳細については、「 [Atl プロジェクトの作成](../../atl/reference/creating-an-atl-project.md)」を参照してください。
 
-ATL`CComModule`には、Exes および Windows サービス用のアパートメント モデル モジュールを実装する[CComAutoThreadModule](../../atl/reference/ccomautothreadmodule-class.md)も用意されています。 複数のアパートメントに`CComAutoThreadModule`オブジェクトを作成する場合からモジュールを派生します。
+に加えて `CComModule` 、ATL には、exe および Windows サービス用のアパートメントモデルモジュールを実装する [CComAutoThreadModule](../../atl/reference/ccomautothreadmodule-class.md)が用意されています。 `CComAutoThreadModule`複数のアパートメントでオブジェクトを作成する場合は、からモジュールを派生させます。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
 [_ATL_MODULE](atl-typedefs.md#_atl_module)
 
-[カトルモジュール](../../atl/reference/catlmodule-class.md)
+[CAtlModule](../../atl/reference/catlmodule-class.md)
 
-[カトルモジュール](../../atl/reference/catlmodulet-class.md)
+[CAtlModuleT](../../atl/reference/catlmodulet-class.md)
 
 `CComModule`
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-**ヘッダー:** atlbase.h
+**ヘッダー:** atlbase. h
 
-## <a name="ccommodulegetclassobject"></a><a name="getclassobject"></a>クラスオブジェクト
+## <a name="ccommodulegetclassobject"></a><a name="getclassobject"></a> CComModule:: GetClassObject
 
-ATL 7.0 では`CComModule`、廃止されました:[詳細については、ATL モジュール クラス](../../atl/atl-module-classes.md)を参照してください。
+ATL 7.0 の場合、 `CComModule` は廃止されています。詳細については、「 [Atl モジュールクラス](../../atl/atl-module-classes.md) 」を参照してください。
 
 ```
 HRESULT GetClassObject(
@@ -135,13 +136,13 @@ HRESULT GetClassObject(
 ### <a name="parameters"></a>パラメーター
 
 *rclsid*<br/>
-[in]作成するオブジェクトの CLSID。
+から作成するオブジェクトの CLSID。
 
 *riid*<br/>
-[in]要求されたインターフェイスの IID。
+から要求されたインターフェイスの IID。
 
-*Ppv*<br/>
-[アウト]*riid*によって識別されるインターフェイス ポインターへのポインター。 オブジェクトがこのインターフェイスをサポートしていない場合 *、ppv*は NULL に設定されます。
+*ppv*<br/>
+入出力 *Riid* によって識別されるインターフェイスポインターへのポインター。 オブジェクトがこのインターフェイスをサポートしていない場合、 *ppv* は NULL に設定されます。
 
 ### <a name="return-value"></a>戻り値
 
@@ -149,13 +150,13 @@ HRESULT GetClassObject(
 
 ### <a name="remarks"></a>解説
 
-指定した CLSID のオブジェクトを作成し、このオブジェクトへのインターフェイス ポインターを取得します。
+指定した CLSID のオブジェクトを作成し、このオブジェクトへのインターフェイスポインターを取得します。
 
-`GetClassObject`は DLL でのみ使用できます。
+`GetClassObject` は、Dll でのみ使用できます。
 
-## <a name="ccommodulegetmoduleinstance"></a><a name="getmoduleinstance"></a>インスタンスを取得します。
+## <a name="ccommodulegetmoduleinstance"></a><a name="getmoduleinstance"></a> CComModule:: GetModuleInstance
 
-ATL 7.0 では`CComModule`、廃止されました:[詳細については、ATL モジュール クラス](../../atl/atl-module-classes.md)を参照してください。
+ATL 7.0 の場合、 `CComModule` は廃止されています。詳細については、「 [Atl モジュールクラス](../../atl/atl-module-classes.md) 」を参照してください。
 
 ```
 HINSTANCE GetModuleInstance() throw();
@@ -167,11 +168,11 @@ HINSTANCE GetModuleInstance() throw();
 
 ### <a name="remarks"></a>解説
 
-[m_hInst](#m_hinst)データ メンバーを返します。
+[M_hInst](#m_hinst)データメンバーを返します。
 
-## <a name="ccommodulegetresourceinstance"></a><a name="getresourceinstance"></a>を使用します。
+## <a name="ccommodulegetresourceinstance"></a><a name="getresourceinstance"></a> CComModule:: GetResourceInstance
 
-ATL 7.0 では`CComModule`、廃止されました:[詳細については、ATL モジュール クラス](../../atl/atl-module-classes.md)を参照してください。
+ATL 7.0 の場合、 `CComModule` は廃止されています。詳細については、「 [Atl モジュールクラス](../../atl/atl-module-classes.md) 」を参照してください。
 
 ```
 HINSTANCE GetResourceInstance() throw();
@@ -179,15 +180,15 @@ HINSTANCE GetResourceInstance() throw();
 
 ### <a name="return-value"></a>戻り値
 
-インスタンス。
+HINSTANCE。
 
 ### <a name="remarks"></a>解説
 
-[m_hInstResource](#m_hinstresource)データ メンバーを返します。
+[M_hInstResource](#m_hinstresource)データメンバーを返します。
 
-## <a name="ccommodulegettypelibinstance"></a><a name="gettypelibinstance"></a>インスタンスを取得します。
+## <a name="ccommodulegettypelibinstance"></a><a name="gettypelibinstance"></a> CComModule:: GetTypeLibInstance
 
-ATL 7.0 では`CComModule`、廃止されました:[詳細については、ATL モジュール クラス](../../atl/atl-module-classes.md)を参照してください。
+ATL 7.0 の場合、 `CComModule` は廃止されています。詳細については、「 [Atl モジュールクラス](../../atl/atl-module-classes.md) 」を参照してください。
 
 ```
 HINSTANCE GetTypeLibInstance() const throw();
@@ -195,15 +196,15 @@ HINSTANCE GetTypeLibInstance() const throw();
 
 ### <a name="return-value"></a>戻り値
 
-インスタンス。
+HINSTANCE。
 
 ### <a name="remarks"></a>解説
 
-[m_hInstTypeLib](#m_hinsttypelib)データ メンバーを返します。
+[M_hInstTypeLib](#m_hinsttypelib)データメンバーを返します。
 
-## <a name="ccommoduleinit"></a><a name="init"></a>ココムモジュール:イニト
+## <a name="ccommoduleinit"></a><a name="init"></a> CComModule:: Init
 
-ATL 7.0 では`CComModule`、廃止されました:[詳細については、ATL モジュール クラス](../../atl/atl-module-classes.md)を参照してください。
+ATL 7.0 の場合、 `CComModule` は廃止されています。詳細については、「 [Atl モジュールクラス](../../atl/atl-module-classes.md) 」を参照してください。
 
 ```
 HRESULT Init(
@@ -214,14 +215,14 @@ HRESULT Init(
 
 ### <a name="parameters"></a>パラメーター
 
-*P*<br/>
-[in]オブジェクト マップ エントリの配列へのポインター。
+*p*<br/>
+からオブジェクトマップエントリの配列へのポインター。
 
-*H*<br/>
-[in]HINSTANCE は`DLLMain`または`WinMain`に渡されます。
+*h*<br/>
+からまたはに渡される HINSTANCE `DLLMain` `WinMain` 。
 
-*プリビッド*<br/>
-[in]プロジェクトに関連付けられているタイプ ライブラリの LIBID へのポインター。
+*plibid*<br/>
+からプロジェクトに関連付けられているタイプライブラリの LIBID へのポインター。
 
 ### <a name="return-value"></a>戻り値
 
@@ -229,11 +230,11 @@ HRESULT Init(
 
 ### <a name="remarks"></a>解説
 
-すべてのデータ メンバーを初期化します。
+すべてのデータメンバーを初期化します。
 
-## <a name="ccommodulem_csobjmap"></a><a name="m_csobjmap"></a>ココムモジュール:m_csObjMap
+## <a name="ccommodulem_csobjmap"></a><a name="m_csobjmap"></a> CComModule:: m_csObjMap
 
-ATL 7.0 では`CComModule`、廃止されました:[詳細については、ATL モジュール クラス](../../atl/atl-module-classes.md)を参照してください。
+ATL 7.0 の場合、 `CComModule` は廃止されています。詳細については、「 [Atl モジュールクラス](../../atl/atl-module-classes.md) 」を参照してください。
 
 ```
 CRITICAL_SECTION m_csObjMap;
@@ -241,11 +242,11 @@ CRITICAL_SECTION m_csObjMap;
 
 ### <a name="remarks"></a>解説
 
-オブジェクト マップへの同期アクセスを保証します。
+オブジェクトマップへの同期アクセスを保証します。
 
-## <a name="ccommodulem_cstypeinfoholder"></a><a name="m_cstypeinfoholder"></a>コムモジュール:m_csTypeInfoHolder
+## <a name="ccommodulem_cstypeinfoholder"></a><a name="m_cstypeinfoholder"></a> CComModule:: m_csTypeInfoHolder
 
-ATL 7.0 では`CComModule`、廃止されました:[詳細については、ATL モジュール クラス](../../atl/atl-module-classes.md)を参照してください。
+ATL 7.0 の場合、 `CComModule` は廃止されています。詳細については、「 [Atl モジュールクラス](../../atl/atl-module-classes.md) 」を参照してください。
 
 ```
 CRITICAL_SECTION m_csTypeInfoHolder;
@@ -253,11 +254,11 @@ CRITICAL_SECTION m_csTypeInfoHolder;
 
 ### <a name="remarks"></a>解説
 
-タイプ ライブラリへの同期アクセスを保証します。
+タイプライブラリへの同期アクセスを保証します。
 
-## <a name="ccommodulem_cswindowcreate"></a><a name="m_cswindowcreate"></a>コムモジュール::m_csWindowCreate
+## <a name="ccommodulem_cswindowcreate"></a><a name="m_cswindowcreate"></a> CComModule:: m_csWindowCreate
 
-ATL 7.0 では`CComModule`、廃止されました:[詳細については、ATL モジュール クラス](../../atl/atl-module-classes.md)を参照してください。
+ATL 7.0 の場合、 `CComModule` は廃止されています。詳細については、「 [Atl モジュールクラス](../../atl/atl-module-classes.md) 」を参照してください。
 
 ```
 CRITICAL_SECTION m_csWindowCreate;
@@ -265,11 +266,11 @@ CRITICAL_SECTION m_csWindowCreate;
 
 ### <a name="remarks"></a>解説
 
-ウィンドウの作成時に使用されるウィンドウ クラス情報と静的データへの同期アクセスを保証します。
+ウィンドウクラスの情報と、ウィンドウの作成時に使用される静的データへの同期アクセスを保証します。
 
-## <a name="ccommodulem_hinst"></a><a name="m_hinst"></a>ココムモジュール::m_hInst
+## <a name="ccommodulem_hinst"></a><a name="m_hinst"></a> CComModule:: m_hInst
 
-ATL 7.0 では`CComModule`、廃止されました:[詳細については、ATL モジュール クラス](../../atl/atl-module-classes.md)を参照してください。
+ATL 7.0 の場合、 `CComModule` は廃止されています。詳細については、「 [Atl モジュールクラス](../../atl/atl-module-classes.md) 」を参照してください。
 
 ```
 HINSTANCE m_hInst;
@@ -277,13 +278,13 @@ HINSTANCE m_hInst;
 
 ### <a name="remarks"></a>解説
 
-モジュール インスタンスへのハンドルを格納します。
+モジュールインスタンスへのハンドルを格納します。
 
-[Init](#init)メソッドは`m_hInst`、 または`WinMain`に`DLLMain`渡されたハンドルに設定します。
+[Init](#init)メソッドは、 `m_hInst` またはに渡されるハンドルにを設定し `DLLMain` `WinMain` ます。
 
-## <a name="ccommodulem_hinstresource"></a><a name="m_hinstresource"></a>ココムモジュール:m_hInstResource
+## <a name="ccommodulem_hinstresource"></a><a name="m_hinstresource"></a> CComModule:: m_hInstResource
 
-ATL 7.0 では`CComModule`、廃止されました:[詳細については、ATL モジュール クラス](../../atl/atl-module-classes.md)を参照してください。
+ATL 7.0 の場合、 `CComModule` は廃止されています。詳細については、「 [Atl モジュールクラス](../../atl/atl-module-classes.md) 」を参照してください。
 
 ```
 HINSTANCE m_hInstResource;
@@ -291,15 +292,15 @@ HINSTANCE m_hInstResource;
 
 ### <a name="remarks"></a>解説
 
-既定では、モジュール インスタンスへのハンドルが含まれます。
+既定では、にはモジュールインスタンスへのハンドルが格納されます。
 
-[Init](#init)メソッドは`m_hInstResource`、 または`WinMain`に`DLLMain`渡されたハンドルに設定します。 リソースのハンドルを明示的`m_hInstResource`に設定できます。
+[Init](#init)メソッドは、 `m_hInstResource` またはに渡されるハンドルにを設定し `DLLMain` `WinMain` ます。 明示的にリソースをハンドルするように設定でき `m_hInstResource` ます。
 
-メソッドは[、](#getresourceinstance)に`m_hInstResource`格納されているハンドルを返します。
+[Getresourceinstance](#getresourceinstance)メソッドは、に格納されているハンドルを返し `m_hInstResource` ます。
 
-## <a name="ccommodulem_hinsttypelib"></a><a name="m_hinsttypelib"></a>ココムモジュール:m_hInstTypeLib
+## <a name="ccommodulem_hinsttypelib"></a><a name="m_hinsttypelib"></a> CComModule:: m_hInstTypeLib
 
-ATL 7.0 では`CComModule`、廃止されました:[詳細については、ATL モジュール クラス](../../atl/atl-module-classes.md)を参照してください。
+ATL 7.0 の場合、 `CComModule` は廃止されています。詳細については、「 [Atl モジュールクラス](../../atl/atl-module-classes.md) 」を参照してください。
 
 ```
 HINSTANCE m_hInstTypeLib;
@@ -307,15 +308,15 @@ HINSTANCE m_hInstTypeLib;
 
 ### <a name="remarks"></a>解説
 
-既定では、モジュール インスタンスへのハンドルが含まれます。
+既定では、にはモジュールインスタンスへのハンドルが格納されます。
 
-[Init](#init)メソッドは`m_hInstTypeLib`、 または`WinMain`に`DLLMain`渡されたハンドルに設定します。 タイプ ライブラリのハンドル`m_hInstTypeLib`に明示的に設定できます。
+[Init](#init)メソッドは、 `m_hInstTypeLib` またはに渡されるハンドルにを設定し `DLLMain` `WinMain` ます。 を明示的に `m_hInstTypeLib` タイプライブラリへのハンドルに設定できます。
 
-メソッドは[、](#gettypelibinstance)に`m_hInstTypeLib`格納されているハンドルを返します。
+[GetTypeLibInstance](#gettypelibinstance)メソッドは、に格納されているハンドルを返し `m_hInstTypeLib` ます。
 
-## <a name="ccommodulem_pobjmap"></a><a name="m_pobjmap"></a>ココムモジュール:m_pObjMap
+## <a name="ccommodulem_pobjmap"></a><a name="m_pobjmap"></a> CComModule:: m_pObjMap
 
-ATL 7.0 では`CComModule`、廃止されました:[詳細については、ATL モジュール クラス](../../atl/atl-module-classes.md)を参照してください。
+ATL 7.0 の場合、 `CComModule` は廃止されています。詳細については、「 [Atl モジュールクラス](../../atl/atl-module-classes.md) 」を参照してください。
 
 ```
 _ATL_OBJMAP_ENTRY* m_pObjMap;
@@ -323,11 +324,11 @@ _ATL_OBJMAP_ENTRY* m_pObjMap;
 
 ### <a name="remarks"></a>解説
 
-モジュール インスタンスによって維持されるオブジェクト マップへのポイント。
+モジュールインスタンスによって管理されるオブジェクトマップを指します。
 
-## <a name="ccommoduleregisterclasshelper"></a><a name="registerclasshelper"></a>クラスヘルパーを登録します。
+## <a name="ccommoduleregisterclasshelper"></a><a name="registerclasshelper"></a> CComModule:: RegisterClassHelper
 
-ATL 7.0 では`CComModule`、廃止されました:[詳細については、ATL モジュール クラス](../../atl/atl-module-classes.md)を参照してください。
+ATL 7.0 の場合、 `CComModule` は廃止されています。詳細については、「 [Atl モジュールクラス](../../atl/atl-module-classes.md) 」を参照してください。
 
 ```
 ATL_DEPRECATED HRESULT RegisterClassHelper(
@@ -340,20 +341,20 @@ ATL_DEPRECATED HRESULT RegisterClassHelper(
 
 ### <a name="parameters"></a>パラメーター
 
-*Clsid*<br/>
-[in]登録するオブジェクトの CLSID。
+*clsid*<br/>
+から登録するオブジェクトの CLSID。
 
-*をクリックします。*<br/>
-[in]オブジェクトに関連付けられている ProgID。
+*lpszProgID*<br/>
+からオブジェクトに関連付けられている ProgID。
 
-*プシズベリドプログID*<br/>
-[in]オブジェクトに関連付けられているバージョンに依存しない ProgID。
+*lpszVerIndProgID*<br/>
+からオブジェクトに関連付けられているバージョンに依存しない ProgID。
 
-*nデスクジド*<br/>
-[in]オブジェクトの説明の文字列リソースの識別子。
+*nDescID*<br/>
+からオブジェクトの説明の文字列リソースの識別子。
 
 *dwFlags*<br/>
-[in]レジストリに入力するスレッド モデルを指定します。 指定できる値は、THREADFLAGS_APARTMENT、THREADFLAGS_BOTH、または AUTPRXFLAG です。
+からレジストリに入力するスレッド処理モデルを指定します。 指定できる値は、THREADFLAGS_APARTMENT、THREADFLAGS_BOTH、または AUTPRXFLAG です。
 
 ### <a name="return-value"></a>戻り値
 
@@ -361,13 +362,13 @@ ATL_DEPRECATED HRESULT RegisterClassHelper(
 
 ### <a name="remarks"></a>解説
 
-システム レジストリにオブジェクトの標準クラス登録を入力します。
+オブジェクトの標準クラスの登録をシステムレジストリに入力します。
 
-メソッド[を](#updateregistryclass)呼び出`RegisterClassHelper`します。
+[UpdateRegistryClass](#updateregistryclass)メソッドはを呼び出し `RegisterClassHelper` ます。
 
-## <a name="ccommoduleregisterclassobjects"></a><a name="registerclassobjects"></a>クラスオブジェクトを登録します。
+## <a name="ccommoduleregisterclassobjects"></a><a name="registerclassobjects"></a> CComModule:: RegisterClassObjects
 
-ATL 7.0 では`CComModule`、廃止されました:[詳細については、ATL モジュール クラス](../../atl/atl-module-classes.md)を参照してください。
+ATL 7.0 の場合、 `CComModule` は廃止されています。詳細については、「 [Atl モジュールクラス](../../atl/atl-module-classes.md) 」を参照してください。
 
 ```
 HRESULT RegisterClassObjects(DWORD dwClsContext, DWORD dwFlags) throw();
@@ -375,11 +376,11 @@ HRESULT RegisterClassObjects(DWORD dwClsContext, DWORD dwFlags) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*コンテキスト*<br/>
-[in]クラス オブジェクトを実行するコンテキストを指定します。 指定できる値は、CLSCTX_INPROC_SERVER、CLSCTX_INPROC_HANDLER、またはCLSCTX_LOCAL_SERVERです。 これらの値の説明については、Windows SDK[の CLSCTX](/windows/win32/api/wtypesbase/ne-wtypesbase-clsctx)を参照してください。
+*dwClsContext*<br/>
+からクラスオブジェクトを実行するコンテキストを指定します。 指定できる値は、CLSCTX_INPROC_SERVER、CLSCTX_INPROC_HANDLER、または CLSCTX_LOCAL_SERVER です。 これらの値の詳細については、Windows SDK の「 [Clsctx](/windows/win32/api/wtypesbase/ne-wtypesbase-clsctx) 」を参照してください。
 
 *dwFlags*<br/>
-[in]クラス オブジェクトへの接続の種類を決定します。 指定できる値は、REGCLS_SINGLEUSE、REGCLS_MULTIPLEUSE、またはREGCLS_MULTI_SEPARATEです。 これらの値の説明については、Windows SDK[の REGCLS](/windows/win32/api/combaseapi/ne-combaseapi-regcls)を参照してください。
+からクラスオブジェクトへの接続の種類を決定します。 指定できる値は、REGCLS_SINGLEUSE、REGCLS_MULTIPLEUSE、または REGCLS_MULTI_SEPARATE です。 これらの値の詳細については、Windows SDK の「 [Regcls](/windows/win32/api/combaseapi/ne-combaseapi-regcls) 」を参照してください。
 
 ### <a name="return-value"></a>戻り値
 
@@ -387,11 +388,11 @@ HRESULT RegisterClassObjects(DWORD dwClsContext, DWORD dwFlags) throw();
 
 ### <a name="remarks"></a>解説
 
-EXE クラス オブジェクトを OLE に登録して、他のアプリケーションが接続できるようにします。 このメソッドは、EXE でのみ使用できます。
+他のアプリケーションが接続できるように、EXE クラスのオブジェクトを OLE に登録します。 このメソッドは、Exe でのみ使用できます。
 
-## <a name="ccommoduleregisterserver"></a><a name="registerserver"></a>をクリックします。
+## <a name="ccommoduleregisterserver"></a><a name="registerserver"></a> CComModule:: RegisterServer
 
-ATL 7.0 では`CComModule`、廃止されました:[詳細については、ATL モジュール クラス](../../atl/atl-module-classes.md)を参照してください。
+ATL 7.0 の場合、 `CComModule` は廃止されています。詳細については、「 [Atl モジュールクラス](../../atl/atl-module-classes.md) 」を参照してください。
 
 ```
 HRESULT RegisterServer(
@@ -401,11 +402,11 @@ HRESULT RegisterServer(
 
 ### <a name="parameters"></a>パラメーター
 
-*を行う*<br/>
-[in]タイプ ライブラリを登録するかどうかを示します。 既定値は FALSE です。
+*bRegTypeLib*<br/>
+からタイプライブラリを登録するかどうかを示します。 既定値は FALSE です。
 
 *pCLSID*<br/>
-[in]登録するオブジェクトの CLSID へのポイント。 NULL (既定値) の場合、オブジェクト マップ内のすべてのオブジェクトが登録されます。
+から登録するオブジェクトの CLSID を指します。 NULL (既定値) の場合、オブジェクトマップ内のすべてのオブジェクトが登録されます。
 
 ### <a name="return-value"></a>戻り値
 
@@ -413,17 +414,17 @@ HRESULT RegisterServer(
 
 ### <a name="remarks"></a>解説
 
-*pCLSID*パラメーターに応じて、単一のクラス オブジェクトまたはオブジェクト マップ内のすべてのオブジェクトのシステム レジストリを更新します。
+*Pclsid* パラメーターに応じて、によって、単一のクラスオブジェクトまたはオブジェクトマップ内のすべてのオブジェクトのシステムレジストリが更新されます。
 
-*bRegTypeLib*が TRUE の場合、タイプ ライブラリ情報も更新されます。
+*Bregtypelib* が TRUE の場合は、タイプライブラリ情報も更新されます。
 
-オブジェクト マップにエントリを追加する方法については[、OBJECT_ENTRY_AUTO](object-map-macros.md#object_entry_auto)を参照してください。
+オブジェクトマップにエントリを追加する方法については、「 [OBJECT_ENTRY_AUTO](object-map-macros.md#object_entry_auto) 」を参照してください。
 
-`RegisterServer`は、DLL`DLLRegisterServer`の場合は自動的に呼`WinMain`び出されるか、EXE`/RegServer`がコマンド ライン オプションを使用して実行されます。
+`RegisterServer` は、DLL に対して、 `DLLRegisterServer` または `WinMain` コマンドラインオプションを指定して実行される EXE によって、によって自動的に呼び出され `/RegServer` ます。
 
-## <a name="ccommoduleregistertypelib"></a><a name="registertypelib"></a>を使用します。
+## <a name="ccommoduleregistertypelib"></a><a name="registertypelib"></a> CComModule:: RegisterTypeLib
 
-ATL 7.0 では`CComModule`、廃止されました:[詳細については、ATL モジュール クラス](../../atl/atl-module-classes.md)を参照してください。
+ATL 7.0 の場合、 `CComModule` は廃止されています。詳細については、「 [Atl モジュールクラス](../../atl/atl-module-classes.md) 」を参照してください。
 
 ```
 HRESULT RegisterTypeLib() throw();
@@ -432,8 +433,8 @@ HRESULT RegisterTypeLib(LPCTSTR lpszIndex) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*インデックスを使用します。*<br/>
-[in]形式`"\\N"`の文字列は、TYPELIB`N`リソースの整数インデックスです。
+*lpszIndex*<br/>
+から形式の文字列 `"\\N"` 。ここで、 `N` は TYPELIB リソースの整数インデックスです。
 
 ### <a name="return-value"></a>戻り値
 
@@ -441,13 +442,13 @@ HRESULT RegisterTypeLib(LPCTSTR lpszIndex) throw();
 
 ### <a name="remarks"></a>解説
 
-タイプ ライブラリに関する情報をシステム レジストリに追加します。
+タイプライブラリに関する情報をシステムレジストリに追加します。
 
-モジュール インスタンスに複数のタイプ ライブラリが含まれている場合は、このメソッドの 2 番目のバージョンを使用して、使用するタイプ ライブラリを指定します。
+モジュールインスタンスに複数のタイプライブラリが含まれている場合は、このメソッドの2番目のバージョンを使用して、使用するタイプライブラリを指定します。
 
-## <a name="ccommodulerevokeclassobjects"></a><a name="revokeclassobjects"></a>クラスオブジェクトを取り消す
+## <a name="ccommodulerevokeclassobjects"></a><a name="revokeclassobjects"></a> CComModule:: RevokeClassObjects
 
-ATL 7.0 では`CComModule`、廃止されました:[詳細については、ATL モジュール クラス](../../atl/atl-module-classes.md)を参照してください。
+ATL 7.0 の場合、 `CComModule` は廃止されています。詳細については、「 [Atl モジュールクラス](../../atl/atl-module-classes.md) 」を参照してください。
 
 ```
 HRESULT RevokeClassObjects() throw();
@@ -459,11 +460,11 @@ HRESULT RevokeClassObjects() throw();
 
 ### <a name="remarks"></a>解説
 
-クラス オブジェクトを削除します。 このメソッドは、EXE でのみ使用できます。
+クラスオブジェクトを削除します。 このメソッドは、Exe でのみ使用できます。
 
-## <a name="ccommoduleterm"></a><a name="term"></a>CComモジュール:用語
+## <a name="ccommoduleterm"></a><a name="term"></a> CComModule:: Term
 
-ATL 7.0 では`CComModule`、廃止されました:[詳細については、ATL モジュール クラス](../../atl/atl-module-classes.md)を参照してください。
+ATL 7.0 の場合、 `CComModule` は廃止されています。詳細については、「 [Atl モジュールクラス](../../atl/atl-module-classes.md) 」を参照してください。
 
 ```cpp
 void Term() throw();
@@ -471,11 +472,11 @@ void Term() throw();
 
 ### <a name="remarks"></a>解説
 
-すべてのデータ メンバーを解放します。
+すべてのデータメンバーを解放します。
 
-## <a name="ccommoduleunregisterclasshelper"></a><a name="unregisterclasshelper"></a>クラスヘルパーを登録解除します。
+## <a name="ccommoduleunregisterclasshelper"></a><a name="unregisterclasshelper"></a> CComModule:: UnregisterClassHelper
 
-ATL 7.0 では`CComModule`、廃止されました:[詳細については、ATL モジュール クラス](../../atl/atl-module-classes.md)を参照してください。
+ATL 7.0 の場合、 `CComModule` は廃止されています。詳細については、「 [Atl モジュールクラス](../../atl/atl-module-classes.md) 」を参照してください。
 
 ```
 ATL_DEPRECATED HRESULT UnregisterClassHelper(
@@ -486,14 +487,14 @@ ATL_DEPRECATED HRESULT UnregisterClassHelper(
 
 ### <a name="parameters"></a>パラメーター
 
-*Clsid*<br/>
-[in]登録解除するオブジェクトの CLSID。
+*clsid*<br/>
+から登録を解除するオブジェクトの CLSID。
 
-*をクリックします。*<br/>
-[in]オブジェクトに関連付けられている ProgID。
+*lpszProgID*<br/>
+からオブジェクトに関連付けられている ProgID。
 
-*プシズベリドプログID*<br/>
-[in]オブジェクトに関連付けられているバージョンに依存しない ProgID。
+*lpszVerIndProgID*<br/>
+からオブジェクトに関連付けられているバージョンに依存しない ProgID。
 
 ### <a name="return-value"></a>戻り値
 
@@ -501,13 +502,13 @@ ATL_DEPRECATED HRESULT UnregisterClassHelper(
 
 ### <a name="remarks"></a>解説
 
-システム レジストリからオブジェクトの標準クラス登録を削除します。
+オブジェクトの標準クラスの登録をシステムレジストリから削除します。
 
-メソッド[を](#updateregistryclass)呼び出`UnregisterClassHelper`します。
+[UpdateRegistryClass](#updateregistryclass)メソッドはを呼び出し `UnregisterClassHelper` ます。
 
-## <a name="ccommoduleunregisterserver"></a><a name="unregisterserver"></a>サーバーを登録解除します。
+## <a name="ccommoduleunregisterserver"></a><a name="unregisterserver"></a> CComModule:: UnregisterServer
 
-ATL 7.0 では`CComModule`、廃止されました:[詳細については、ATL モジュール クラス](../../atl/atl-module-classes.md)を参照してください。
+ATL 7.0 の場合、 `CComModule` は廃止されています。詳細については、「 [Atl モジュールクラス](../../atl/atl-module-classes.md) 」を参照してください。
 
 ```
 HRESULT UnregisterServer(const CLSID* pCLSID = NULL) throw ();
@@ -516,11 +517,11 @@ inline HRESULT UnregisterServer(BOOL bUnRegTypeLib, const CLSID* pCLSID = NULL) 
 
 ### <a name="parameters"></a>パラメーター
 
-*をクリックします。*<br/>
-TRUE の場合、タイプ ライブラリも登録解除されます。
+*bUnRegTypeLib*<br/>
+TRUE の場合、タイプライブラリも登録解除されます。
 
 *pCLSID*<br/>
-登録解除するオブジェクトの CLSID へのポイント。 NULL (既定値) の場合、オブジェクト マップ内のすべてのオブジェクトの登録が解除されます。
+登録を解除するオブジェクトの CLSID を指します。 NULL (既定値) の場合、オブジェクトマップ内のすべてのオブジェクトの登録が解除されます。
 
 ### <a name="return-value"></a>戻り値
 
@@ -528,15 +529,15 @@ TRUE の場合、タイプ ライブラリも登録解除されます。
 
 ### <a name="remarks"></a>解説
 
-*pCLSID*パラメーターに応じて、単一のクラス・オブジェクトまたはオブジェクト・マップ内のすべてのオブジェクトの登録を解除します。
+*Pclsid* パラメーターに応じて、は、単一のクラスオブジェクトまたはオブジェクトマップ内のすべてのオブジェクトの登録を解除します。
 
-`UnregisterServer`は、DLL`DLLUnregisterServer`の場合は自動的に呼`WinMain`び出されるか、EXE`/UnregServer`がコマンド ライン オプションを使用して実行されます。
+`UnregisterServer` は、DLL に対して、 `DLLUnregisterServer` または `WinMain` コマンドラインオプションを指定して実行される EXE によって、によって自動的に呼び出され `/UnregServer` ます。
 
-オブジェクト マップにエントリを追加する方法については[、OBJECT_ENTRY_AUTO](object-map-macros.md#object_entry_auto)を参照してください。
+オブジェクトマップにエントリを追加する方法については、「 [OBJECT_ENTRY_AUTO](object-map-macros.md#object_entry_auto) 」を参照してください。
 
-## <a name="ccommoduleupdateregistryclass"></a><a name="updateregistryclass"></a>クラスを更新します。
+## <a name="ccommoduleupdateregistryclass"></a><a name="updateregistryclass"></a> CComModule:: UpdateRegistryClass
 
-ATL 7.0 では`CComModule`、廃止されました:[詳細については、ATL モジュール クラス](../../atl/atl-module-classes.md)を参照してください。
+ATL 7.0 の場合、 `CComModule` は廃止されています。詳細については、「 [Atl モジュールクラス](../../atl/atl-module-classes.md) 」を参照してください。
 
 ```
 ATL_DEPRECATED HRESULT UpdateRegistryClass(
@@ -558,26 +559,26 @@ ATL_DEPRECATED HRESULT UpdateRegistryClass(
 
 ### <a name="parameters"></a>パラメーター
 
-*Clsid*<br/>
+*clsid*<br/>
 登録または登録解除するオブジェクトの CLSID。
 
-*をクリックします。*<br/>
+*lpszProgID*<br/>
 オブジェクトに関連付けられている ProgID。
 
-*プシズベリドプログID*<br/>
+*lpszVerIndProgID*<br/>
 オブジェクトに関連付けられているバージョンに依存しない ProgID。
 
-*nデスクジド*<br/>
+*nDescID*<br/>
 オブジェクトの説明の文字列リソースの識別子。
 
 *szDesc*<br/>
-オブジェクトの説明を含む文字列。
+オブジェクトの説明を表す文字列です。
 
 *dwFlags*<br/>
-レジストリに入力するスレッド モデルを指定します。 指定できる値は、THREADFLAGS_APARTMENT、THREADFLAGS_BOTH、または AUTPRXFLAG です。
+レジストリに入力するスレッド処理モデルを指定します。 指定できる値は、THREADFLAGS_APARTMENT、THREADFLAGS_BOTH、または AUTPRXFLAG です。
 
-*b登録*<br/>
-オブジェクトを登録するかどうかを示します。
+*bRegister*<br/>
+オブジェクトを登録する必要があるかどうかを示します。
 
 ### <a name="return-value"></a>戻り値
 
@@ -585,17 +586,17 @@ ATL_DEPRECATED HRESULT UpdateRegistryClass(
 
 ### <a name="remarks"></a>解説
 
-*bRegister*が TRUE の場合、このメソッドは、システム レジストリにオブジェクトの標準クラス登録を入力します。
+*Bregister* が TRUE の場合、このメソッドはオブジェクトの標準クラスの登録をシステムレジストリに入力します。
 
-*bRegister*が FALSE の場合、オブジェクトの登録を削除します。
+*Bregister* が FALSE の場合は、オブジェクトの登録が削除されます。
 
-*bRegister*の値に応じて`UpdateRegistryClass`、[レジスタクラスヘルパー](#registerclasshelper)または[登録解除クラスヘルパー](#unregisterclasshelper)を呼び出します。
+*Bregister* の値に応じて、 `UpdateRegistryClass` は [RegisterClassHelper](#registerclasshelper)または [UnregisterClassHelper](#unregisterclasshelper)のいずれかを呼び出します。
 
-[DECLARE_REGISTRY](registry-macros.md#declare_registry)マクロを指定すると、`UpdateRegistryClass`オブジェクト マップが処理されるときに自動的に呼び出されます。
+[DECLARE_REGISTRY](registry-macros.md#declare_registry)マクロを指定することにより、 `UpdateRegistryClass` オブジェクトマップが処理されるときにが自動的に呼び出されます。
 
-## <a name="ccommoduleupdateregistryfromresourced"></a><a name="updateregistryfromresourced"></a>リソースからレジストリを更新します。
+## <a name="ccommoduleupdateregistryfromresourced"></a><a name="updateregistryfromresourced"></a> CComModule:: UpdateRegistryFromResourceD
 
-ATL 7.0 では`CComModule`、廃止されました:[詳細については、ATL モジュール クラス](../../atl/atl-module-classes.md)を参照してください。
+ATL 7.0 の場合、 `CComModule` は廃止されています。詳細については、「 [Atl モジュールクラス](../../atl/atl-module-classes.md) 」を参照してください。
 
 ```
 virtual HRESULT UpdateRegistryFromResourceD(
@@ -612,16 +613,16 @@ virtual HRESULT UpdateRegistryFromResourceD(
 ### <a name="parameters"></a>パラメーター
 
 *lpszRes*<br/>
-[in]リソース名。
+からリソース名。
 
 *nResID*<br/>
-[in]リソース ID。
+からリソース ID。
 
-*b登録*<br/>
-[in]オブジェクトを登録するかどうかを示します。
+*bRegister*<br/>
+からオブジェクトを登録する必要があるかどうかを示します。
 
-*エントリ*<br/>
-[in]スクリプトの置き換え可能パラメーターに関連付けられた値を格納する置換マップへのポインター。 ATL は`%MODULE%`自動的に を使用します。 追加の置き換え可能パラメータを使用する方法については、「解説」を参照してください。 それ以外の場合は、NULL の既定値を使用します。
+*pMapEntries*<br/>
+からスクリプトの置き換え可能パラメーターに関連付けられた値を格納する置換マップへのポインター。 ATL はを自動的に使用 `%MODULE%` します。 追加の置き換え可能パラメーターを使用するには、詳細について「解説」を参照してください。 それ以外の場合は、NULL の既定値を使用します。
 
 ### <a name="return-value"></a>戻り値
 
@@ -629,23 +630,23 @@ virtual HRESULT UpdateRegistryFromResourceD(
 
 ### <a name="remarks"></a>解説
 
-*lpszRes*または*nResID*で指定されたリソースに含まれるスクリプトを実行します。
+*Lpszres* または *nResID* によって指定されたリソースに含まれるスクリプトを実行します。
 
-*bRegister*が TRUE の場合、このメソッドはオブジェクトをシステム レジストリに登録します。それ以外の場合は、オブジェクトの登録を解除します。
+*Bregister* が TRUE の場合、このメソッドはオブジェクトをシステムレジストリに登録します。それ以外の場合は、オブジェクトの登録を解除します。
 
-[DECLARE_REGISTRY_RESOURCE](registry-macros.md#declare_registry_resource)または[DECLARE_REGISTRY_RESOURCEID](registry-macros.md#declare_registry_resourceid)マクロを指定すると、`UpdateRegistryFromResourceD`オブジェクト マップの処理時に自動的に呼び出されます。
-
-> [!NOTE]
-> 実行時に置換値を置き換える場合は、DECLARE_REGISTRY_RESOURCEまたはマクロDECLARE_REGISTRY_RESOURCEID指定しないでください。 代わりに、構造体の`_ATL_REGMAP_ENTRIES`配列を作成し、各エントリには、実行時にプレースホルダーを置き換える値と組み合わせた変数のプレースホルダーが含まれています。 次に`UpdateRegistryFromResourceD`*、pMapEntries*パラメーターの配列を渡して 呼び出します。 これにより、構造体内のすべての置換値が`_ATL_REGMAP_ENTRIES`レジストラーの置換マップに追加されます。
+[DECLARE_REGISTRY_RESOURCE](registry-macros.md#declare_registry_resource)または[DECLARE_REGISTRY_RESOURCEID](registry-macros.md#declare_registry_resourceid)マクロを指定することにより、 `UpdateRegistryFromResourceD` オブジェクトマップが処理されるときにが自動的に呼び出されます。
 
 > [!NOTE]
-> ATL レジストリ コンポーネント (レジストラー) に静的にリンクするには、「[リソースリソースからレジストリを静的にリンク](#updateregistryfromresources)する」を参照してください。
+> 実行時に置換値を置き換えるには、DECLARE_REGISTRY_RESOURCE または DECLARE_REGISTRY_RESOURCEID マクロを指定しないでください。 代わりに、構造体の配列を作成し `_ATL_REGMAP_ENTRIES` ます。各エントリには、実行時にプレースホルダーを置き換える値と組み合わせた変数プレースホルダーが含まれています。 次に `UpdateRegistryFromResourceD` 、を呼び出し、 *Pmapentries* パラメーターの配列を渡します。 これにより、構造体のすべての置換値が `_ATL_REGMAP_ENTRIES` レジストラーの置換マップに追加されます。
 
-置き換え可能なパラメータとスクリプトの詳細については[、「ATL レジストリ コンポーネント (レジストラー)」](../../atl/atl-registry-component-registrar.md)を参照してください。
+> [!NOTE]
+> ATL レジストリコンポーネント (レジストラー) に静的にリンクするには、「 [UpdateRegistryFromResourceS](#updateregistryfromresources)」を参照してください。
 
-## <a name="ccommoduleupdateregistryfromresources"></a><a name="updateregistryfromresources"></a>リソースからレジストリを更新します。
+置換可能なパラメーターとスクリプトの詳細については、「 [ATL レジストリコンポーネント (レジストラー)](../../atl/atl-registry-component-registrar.md)」を参照してください。
 
-ATL 7.0 では`CComModule`、廃止されました:[詳細については、ATL モジュール クラス](../../atl/atl-module-classes.md)を参照してください。
+## <a name="ccommoduleupdateregistryfromresources"></a><a name="updateregistryfromresources"></a> CComModule:: UpdateRegistryFromResourceS
+
+ATL 7.0 の場合、 `CComModule` は廃止されています。詳細については、「 [Atl モジュールクラス](../../atl/atl-module-classes.md) 」を参照してください。
 
 ```
 virtual HRESULT UpdateRegistryFromResourceS(
@@ -662,16 +663,16 @@ virtual HRESULT UpdateRegistryFromResourceS(
 ### <a name="parameters"></a>パラメーター
 
 *lpszRes*<br/>
-[in]リソース名。
+からリソース名。
 
 *nResID*<br/>
-[in]リソース ID。
+からリソース ID。
 
-*b登録*<br/>
-[in]リソース スクリプトを登録するかどうかを示します。
+*bRegister*<br/>
+からリソーススクリプトを登録する必要があるかどうかを示します。
 
-*エントリ*<br/>
-[in]スクリプトの置き換え可能パラメーターに関連付けられた値を格納する置換マップへのポインター。 ATL は`%MODULE%`自動的に を使用します。 追加の置き換え可能パラメータを使用する方法については、「解説」を参照してください。 それ以外の場合は、NULL の既定値を使用します。
+*pMapEntries*<br/>
+からスクリプトの置き換え可能パラメーターに関連付けられた値を格納する置換マップへのポインター。 ATL はを自動的に使用 `%MODULE%` します。 追加の置き換え可能パラメーターを使用するには、詳細について「解説」を参照してください。 それ以外の場合は、NULL の既定値を使用します。
 
 ### <a name="return-value"></a>戻り値
 
@@ -679,14 +680,14 @@ virtual HRESULT UpdateRegistryFromResourceS(
 
 ### <a name="remarks"></a>解説
 
-ATL レジストリ コンポーネント (`UpdateRegistryFromResourceS`レジストラー) への静的リンクを作成する以外は[、UpdateRegistryFromResourceD](#updateregistryfromresourced)と同様です。
+[UpdateRegistryFromResourceD](#updateregistryfromresourced)と同様に `UpdateRegistryFromResourceS` 、ATL レジストリコンポーネント (レジストラー) への静的リンクを作成します。
 
-`UpdateRegistryFromResourceS`オブジェクト マップが処理されると、*オブジェクト*マップが処理されるときに自動的に`#define _ATL_STATIC_REGISTRY`呼び出されます ( visual Studio 2017 以前のバージョンでは *、stdafx.h)* に追加します。
+`UpdateRegistryFromResourceS` は、オブジェクトマップが処理されると自動的に呼び出されます `#define _ATL_STATIC_REGISTRY` *。* これは、Visual Studio 2017 以前のバージョンである *stdafx.h* に追加した場合に実行されます。
 
 > [!NOTE]
-> 実行時に置換値を置き換える場合は[、DECLARE_REGISTRY_RESOURCE](registry-macros.md#declare_registry_resource)または[DECLARE_REGISTRY_RESOURCEIDマクロを](registry-macros.md#declare_registry_resourceid)指定しないでください。 代わりに、構造体の`_ATL_REGMAP_ENTRIES`配列を作成し、各エントリには、実行時にプレースホルダーを置き換える値と組み合わせた変数のプレースホルダーが含まれています。 次に`UpdateRegistryFromResourceS`*、pMapEntries*パラメーターの配列を渡して 呼び出します。 これにより、構造体内のすべての置換値が`_ATL_REGMAP_ENTRIES`レジストラーの置換マップに追加されます。
+> 実行時に置換値を置き換えるには、 [DECLARE_REGISTRY_RESOURCE](registry-macros.md#declare_registry_resource) または [DECLARE_REGISTRY_RESOURCEID](registry-macros.md#declare_registry_resourceid) マクロを指定しないでください。 代わりに、構造体の配列を作成し `_ATL_REGMAP_ENTRIES` ます。各エントリには、実行時にプレースホルダーを置き換える値と組み合わせた変数プレースホルダーが含まれています。 次に `UpdateRegistryFromResourceS` 、を呼び出し、 *Pmapentries* パラメーターの配列を渡します。 これにより、構造体のすべての置換値が `_ATL_REGMAP_ENTRIES` レジストラーの置換マップに追加されます。
 
-置き換え可能なパラメータとスクリプトの詳細については[、「ATL レジストリ コンポーネント (レジストラー)」](../../atl/atl-registry-component-registrar.md)を参照してください。
+置換可能なパラメーターとスクリプトの詳細については、「 [ATL レジストリコンポーネント (レジストラー)](../../atl/atl-registry-component-registrar.md)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

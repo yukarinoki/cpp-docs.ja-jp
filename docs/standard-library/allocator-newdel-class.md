@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: allocator_newdel クラス'
 title: allocator_newdel クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -9,16 +10,16 @@ helpviewer_keywords:
 - stdext::allocators [C++], allocator_newdel
 - stdext::allocator_newdel
 ms.assetid: 62666cd2-3afe-49f7-9dd1-9bbbb154da98
-ms.openlocfilehash: 30e0f7902a8af435b46aaedf0b38661b7a6604a8
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: 0f514e64258ef0c1e7a4226a55a661216df9b3d5
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88562598"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97163575"
 ---
 # <a name="allocator_newdel-class"></a>allocator_newdel クラス
 
-**Operator delete**を使用してメモリブロックの割り当てを解除し、メモリブロックを割り当てる**新しい演算子**を使用するアロケーターを実装します。
+**Operator delete** を使用してメモリブロックの割り当てを解除し、メモリブロックを割り当てる **新しい演算子** を使用するアロケーターを実装します。
 
 ## <a name="syntax"></a>構文
 
@@ -34,9 +35,9 @@ class allocator_newdel;
 
 ## <a name="remarks"></a>解説
 
-[ALLOCATOR_DECL](allocators-functions.md#allocator_decl)マクロは、次のステートメントでこのクラスを*name*パラメーターとして渡します。`ALLOCATOR_DECL(CACHE_FREELIST stdext::allocators::max_none), SYNC_DEFAULT, allocator_newdel);`
+[ALLOCATOR_DECL](allocators-functions.md#allocator_decl)マクロは、次のステートメントでこのクラスを *name* パラメーターとして渡します。`ALLOCATOR_DECL(CACHE_FREELIST stdext::allocators::max_none), SYNC_DEFAULT, allocator_newdel);`
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:**\<allocators>
 

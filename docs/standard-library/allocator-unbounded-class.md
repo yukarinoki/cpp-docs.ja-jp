@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: allocator_unbounded クラス'
 title: allocator_unbounded クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - allocator_unbounded class
 ms.assetid: facbaea1-b320-4d99-96da-039b2642f352
-ms.openlocfilehash: d9d82dd29ab86654020e13b39a8c9588ee0732e8
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: 6d046aa08ddd366c7e7009d1d93c36a365d98170
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88561545"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97163549"
 ---
 # <a name="allocator_unbounded-class"></a>allocator_unbounded クラス
 
-[Max_unbounded](max-unbounded-class.md)によって管理される長さの[cache_freelist](cache-freelist-class.md)型のキャッシュ*を使用して、型の*オブジェクトのストレージ割り当てと解放を管理するオブジェクトを記述します。
+[Max_unbounded](max-unbounded-class.md)によって管理される長さの [cache_freelist](cache-freelist-class.md)型のキャッシュ *を使用して、型の* オブジェクトのストレージ割り当てと解放を管理するオブジェクトを記述します。
 
 ## <a name="syntax"></a>構文
 
@@ -32,9 +33,9 @@ class allocator_unbounded;
 
 ## <a name="remarks"></a>解説
 
-[ALLOCATOR_DECL](allocators-functions.md#allocator_decl)マクロは、次のステートメントでこのクラスを*name*パラメーターとして渡します。`ALLOCATOR_DECL(CACHE_FREELIST(stdext::allocators::max_unbounded), SYNC_DEFAULT, allocator_unbounded);`
+[ALLOCATOR_DECL](allocators-functions.md#allocator_decl)マクロは、次のステートメントでこのクラスを *name* パラメーターとして渡します。`ALLOCATOR_DECL(CACHE_FREELIST(stdext::allocators::max_unbounded), SYNC_DEFAULT, allocator_unbounded);`
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:**\<allocators>
 

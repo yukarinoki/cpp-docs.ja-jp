@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: &lt; アロケーター&gt;'
 title: '&lt;allocators&gt;'
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - allocators header
 ms.assetid: 4393a607-4df8-4278-bbb2-c8ec52e60b83
-ms.openlocfilehash: 69c086515230fd5a9aaa039ef02b7995842fa260
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 38183f58d9b919464a6cdbc31c6f75c539a9461b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87204886"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97163484"
 ---
 # <a name="ltallocatorsgt"></a>&lt;allocators&gt;
 
@@ -24,7 +25,7 @@ ms.locfileid: "87204886"
 ```
 
 > [!NOTE]
-> \<allocators>は、Visual Studio 2019 バージョン16.3 以降では非推奨とされます。
+> \<allocators> は、Visual Studio 2019 バージョン16.3 以降では非推奨とされます。
 
 ## <a name="remarks"></a>解説
 
@@ -45,7 +46,7 @@ template<class Type>
 class allocator;
 ```
 
-ここでテンプレート引数 `Type` は、アロケーター インスタンスによって管理されている型です。 C++ 標準ライブラリには、で定義されている既定のアロケータークラステンプレート[アロケーター](allocator-class.md)が用意されて [\<memory>](memory.md) います。 ヘッダーには \<allocators> 、次のアロケーターが用意されています。
+ここでテンプレート引数 `Type` は、アロケーター インスタンスによって管理されている型です。 C++ 標準ライブラリには、で定義されている既定のアロケータークラステンプレート [アロケーター](allocator-class.md)が用意されて [\<memory>](memory.md) います。 ヘッダーには \<allocators> 、次のアロケーターが用意されています。
 
 - [allocator_newdel](allocator-newdel-class.md)
 
@@ -84,7 +85,7 @@ _Lst1 は、`allocator_chunklist` と [sync_per_thread](sync-per-thread-class.md
 
 テンプレートがインスタンス化されたときに使用された std:: size_t 引数の値を再バインドできないコンパイラでは、キャッシュのメンバー関数に渡される _Sz 引数の値が割り当てられ、割り当てが解除されるとは限りません。
 
-\<allocators>には、次のキャッシュテンプレートが用意されています。
+\<allocators> には、次のキャッシュテンプレートが用意されています。
 
 - [cache_freelist](cache-freelist-class.md)
 
@@ -92,7 +93,7 @@ _Lst1 は、`allocator_chunklist` と [sync_per_thread](sync-per-thread-class.md
 
 - [cache_chunklist](cache-chunklist-class.md)
 
-フィルターは、別のブロックアロケーターを使用してメンバー関数を実装するブロックアロケーターです。このアロケーターは、テンプレート引数として渡されます。 フィルターの最も一般的な形式は同期フィルターです。これは、別のブロック アロケーターのインスタンスのメンバー関数へのアクセスを制御するために同期ポリシーを適用します。 \<allocators>には、次の同期フィルターが用意されています。
+フィルターは、別のブロックアロケーターを使用してメンバー関数を実装するブロックアロケーターです。このアロケーターは、テンプレート引数として渡されます。 フィルターの最も一般的な形式は同期フィルターです。これは、別のブロック アロケーターのインスタンスのメンバー関数へのアクセスを制御するために同期ポリシーを適用します。 \<allocators> には、次の同期フィルターが用意されています。
 
 - [sync_none](sync-none-class.md)
 
@@ -102,7 +103,7 @@ _Lst1 は、`allocator_chunklist` と [sync_per_thread](sync-per-thread-class.md
 
 - [sync_shared](sync-shared-class.md)
 
-\<allocators>また、には、複数のブロックアロケーターインスタンスを保持し、コンパイル時ではなく実行時に割り当てまたは割り当て解除に使用するインスタンスを決定するフィルター [rts_alloc](rts-alloc-class.md)も用意されています。 再バインドをコンパイルできないコンパイラと一緒に使用します。
+\<allocators> また、には、複数のブロックアロケーターインスタンスを保持し、コンパイル時ではなく実行時に割り当てまたは割り当て解除に使用するインスタンスを決定するフィルター [rts_alloc](rts-alloc-class.md)も用意されています。 再バインドをコンパイルできないコンパイラと一緒に使用します。
 
 同期ポリシーは、アロケーター インスタンスが複数のスレッドからの割り当てと割り当て解除の同時要求を処理する方法を決定します。 最も単純なポリシーは、すべての要求を基になるキャッシュ オブジェクトに直接渡し、同期の管理をユーザーに任せることです。 より複雑なポリシーは、ミューテックスを使用して、基になるキャッシュ オブジェクトへのアクセスをシリアル化することができます。
 
@@ -110,7 +111,7 @@ _Lst1 は、`allocator_chunklist` と [sync_per_thread](sync-per-thread-class.md
 
 キャッシュテンプレートは、 `cache_freelist` 最大クラスの引数を受け取ります。これにより、フリーリストに格納される要素の最大数が決定されます。
 
-\<allocators>次の最大クラスを提供します。
+\<allocators> 次の最大クラスを提供します。
 
 - [max_none](max-none-class.md)
 
@@ -132,7 +133,7 @@ _Lst1 は、`allocator_chunklist` と [sync_per_thread](sync-per-thread-class.md
 
 ### <a name="operators"></a>オペレーター
 
-|演算子|Description|
+|演算子|説明|
 |-|-|
 |[operator! = ( \<allocators> )](allocators-operators.md#op_neq)|指定したクラスのアロケーター オブジェクト間の非等値をテストします。|
 |[operator = = ( \<allocators> )](allocators-operators.md#op_eq_eq)|指定したクラスのアロケーター オブジェクト間の等値をテストします。|
@@ -144,7 +145,7 @@ _Lst1 は、`allocator_chunklist` と [sync_per_thread](sync-per-thread-class.md
 |[allocator_base](allocator-base-class.md)|同期フィルターからユーザー定義のアロケーターを作成するために必要な、基底クラスと共通の関数を定義します。|
 |[allocator_chunklist](allocator-chunklist-class.md)|[cache_chunklist](cache-chunklist-class.md) 型のキャッシュを使用して、オブジェクトに対してストレージの割り当てと解放を管理するオブジェクトを記述します。|
 |[allocator_fixed_size](allocator-fixed-size-class.md)|[cache_freelist](cache-freelist-class.md) 型のキャッシュと [max_fixed_size](max-fixed-size-class.md) で管理されている長さを使用して、型 `Type` のオブジェクトに対し、ストレージの割り当てと解放を管理するオブジェクトを記述します。|
-|[allocator_newdel](allocator-newdel-class.md)|**Operator delete**を使用してメモリブロックの割り当てを解除し、メモリブロックを割り当てる**新しい演算子**を使用するアロケーターを実装します。|
+|[allocator_newdel](allocator-newdel-class.md)|**Operator delete** を使用してメモリブロックの割り当てを解除し、メモリブロックを割り当てる **新しい演算子** を使用するアロケーターを実装します。|
 |[allocator_suballoc](allocator-suballoc-class.md)|[cache_suballoc](cache-suballoc-class.md) 型のキャッシュを使用して、`Type` 型のオブジェクトに対し、ストレージの割り当てと解放を管理するオブジェクトを記述します。|
 |[allocator_unbounded](allocator-unbounded-class.md)|[cache_freelist](cache-freelist-class.md) 型のキャッシュと [max_unbounded](max-unbounded-class.md) で管理されている長さを使用して、型 `Type` のオブジェクトに対し、ストレージの割り当てと解放を管理するオブジェクトを記述します。|
 |[allocator_variable_size](allocator-variable-size-class.md)|[cache_freelist](cache-freelist-class.md) 型のキャッシュと [max_variable_size](max-variable-size-class.md) で管理されている長さを使用して、型 `Type` のオブジェクトに対し、ストレージの割り当てと解放を管理するオブジェクトを記述します。|
@@ -156,13 +157,13 @@ _Lst1 は、`allocator_chunklist` と [sync_per_thread](sync-per-thread-class.md
 |[max_none](max-none-class.md)|[freelist](freelist-class.md) オブジェクトを最長値ゼロまでに制限する最大クラス オブジェクトを記述します。|
 |[max_unbounded](max-unbounded-class.md)|[freelist](freelist-class.md) オブジェクトの最長値を制限しない最大クラス オブジェクトを記述します。|
 |[max_variable_size](max-variable-size-class.md)|割り当てたメモリ ブロックの数にほぼ比例した最長値までに [freelist](freelist-class.md) オブジェクトを制御する、最大クラス オブジェクトを記述します。|
-|[rts_alloc](rts-alloc-class.md)|Rts_alloc クラステンプレートは、キャッシュインスタンスの配列を保持し、コンパイル時ではなく実行時に割り当てと割り当て解除に使用するインスタンスを決定する[フィルター](allocators-header.md)を記述します。|
+|[rts_alloc](rts-alloc-class.md)|Rts_alloc クラステンプレートは、キャッシュインスタンスの配列を保持し、コンパイル時ではなく実行時に割り当てと割り当て解除に使用するインスタンスを決定する [フィルター](allocators-header.md) を記述します。|
 |[sync_none](sync-none-class.md)|同期を提供しない同期フィルターを記述します。|
 |[sync_per_container](sync-per-container-class.md)|アロケーター オブジェクトごとに個別のキャッシュ オブジェクトを提供する同期フィルターを記述します。|
 |[sync_per_thread](sync-per-thread-class.md)|スレッドごとに個別のキャッシュ オブジェクトを提供する同期フィルターを記述します。|
 |[sync_shared](sync-shared-class.md)|すべてのアロケーターによって共有されているキャッシュ オブジェクトへのアクセスを制御するためにミューテックスを使用する同期フィルターを表します。|
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:**\<allocators>
 

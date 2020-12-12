@@ -1,15 +1,16 @@
 ---
+description: '詳細情報: CMFCStandardColorsPropertyPage クラス'
 title: CMFCStandardColorsPropertyPage クラス
 ms.date: 11/04/2016
 helpviewer_keywords:
 - CMFCStandardColorsPropertyPage class [MFC]
 ms.assetid: b84b7cfb-bb24-4c65-804a-5b642cb64400
-ms.openlocfilehash: c57715171816e83cd1e04872d88b452b51b39388
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: cffce34642bd4df40ceda3156fe846e60db4b3a6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88843951"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97164095"
 ---
 # <a name="cmfcstandardcolorspropertypage-class"></a>CMFCStandardColorsPropertyPage クラス
 
@@ -54,13 +55,13 @@ class CMFCStandardColorsPropertyPage : public CPropertyPage
 
 [CMFCStandardColorsPropertyPage](../../mfc/reference/cmfcstandardcolorspropertypage-class.md)
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** afxstandardcolorspropertypage
 
 ## <a name="see-also"></a>関連項目
 
 [階層図](../../mfc/hierarchy-chart.md)<br/>
-[クラス](../../mfc/reference/mfc-classes.md)<br/>
+[Classes](../../mfc/reference/mfc-classes.md)<br/>
 [CMFCColorDialog クラス](../../mfc/reference/cmfccolordialog-class.md)<br/>
 [CMFCCustomColorsPropertyPage クラス](../../mfc/reference/cmfccustomcolorspropertypage-class.md)

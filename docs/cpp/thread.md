@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: thread'
 title: スレッド (thread)
 ms.date: 05/07/2019
 f1_keywords:
@@ -9,18 +10,18 @@ helpviewer_keywords:
 - TLS (thread local storage), compiler implementation
 - __declspec keyword [C++], thread
 ms.assetid: 667f2a77-6d1f-4b41-bee8-05e67324fab8
-ms.openlocfilehash: 13e6d45642c08a97c06d7099b83e632501267310
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 7b83686b6641585e7e7af334a6127c71a9171610
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87225814"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97164706"
 ---
 # <a name="thread"></a>スレッド (thread)
 
 **Microsoft 固有の仕様**
 
-**`thread`** 拡張ストレージクラス修飾子は、スレッドローカル変数を宣言するために使用されます。 C++ 11 以降の移植可能なものについては、移植可能なコードには[thread_local](../cpp/storage-classes-cpp.md#thread_local)ストレージクラス指定子を使用します。 Windows で **`thread_local`** は、が実装されて **`__declspec(thread)`** います。
+**`thread`** 拡張ストレージクラス修飾子は、スレッドローカル変数を宣言するために使用されます。 C++ 11 以降の移植可能なものについては、移植可能なコードには [thread_local](../cpp/storage-classes-cpp.md#thread_local) ストレージクラス指定子を使用します。 Windows で **`thread_local`** は、が実装されて **`__declspec(thread)`** います。
 
 ## <a name="syntax"></a>構文
 
@@ -28,9 +29,9 @@ ms.locfileid: "87225814"
 
 ## <a name="remarks"></a>解説
 
-スレッド ローカル ストレージ (TLS) は、特定のマルチスレッド プロセスの各スレッドが、スレッド固有のデータを格納するための場所を割り当てる機能です。 標準のマルチスレッド プログラムでは、データは特定のプロセスのすべてのスレッド間で共有されますが、スレッド ローカル ストレージはスレッドごとのデータを割り当てるための機能です。 スレッドの詳細については、「[マルチスレッド](../parallel/multithreading-support-for-older-code-visual-cpp.md)」を参照してください。
+スレッド ローカル ストレージ (TLS) は、特定のマルチスレッド プロセスの各スレッドが、スレッド固有のデータを格納するための場所を割り当てる機能です。 標準のマルチスレッド プログラムでは、データは特定のプロセスのすべてのスレッド間で共有されますが、スレッド ローカル ストレージはスレッドごとのデータを割り当てるための機能です。 スレッドの詳細については、「 [マルチスレッド](../parallel/multithreading-support-for-older-code-visual-cpp.md)」を参照してください。
 
-スレッドローカル変数の宣言では、[拡張属性構文](../cpp/declspec.md)とキーワードを使用してキーワードを指定する必要があり **`__declspec`** **`thread`** ます。 たとえば、次に示すコードは、整数型のスレッド ローカル変数を宣言して特定の値に初期化します。
+スレッドローカル変数の宣言では、 [拡張属性構文](../cpp/declspec.md) とキーワードを使用してキーワードを指定する必要があり **`__declspec`** **`thread`** ます。 たとえば、次に示すコードは、整数型のスレッド ローカル変数を宣言して特定の値に初期化します。
 
 ```cpp
 __declspec( thread ) int tls_i = 1;

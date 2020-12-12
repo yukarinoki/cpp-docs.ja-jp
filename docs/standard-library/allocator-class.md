@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: アロケータークラス'
 title: allocator クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -34,12 +35,12 @@ helpviewer_keywords:
 - std::allocator [C++], max_size
 - std::allocator [C++], rebind
 ms.assetid: 3fd58076-56cc-43bb-ad58-b4b7c9c6b410
-ms.openlocfilehash: 4857de0b77d69a0d256da2200e5f4d0eb9d51c51
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: f1f54aae3191d261d549e69e942974fc46a670f2
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88844822"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97163627"
 ---
 # <a name="allocator-class"></a>allocator クラス
 
@@ -85,7 +86,7 @@ class allocator
 
 |名前|説明|
 |-|-|
-|[allocator](#allocator)|`allocator` オブジェクトを作成するために使用するコンストラクター。|
+|[アロケーター](#allocator)|`allocator` オブジェクトを作成するために使用するコンストラクター。|
 
 ### <a name="typedefs"></a>Typedefs
 
@@ -99,7 +100,7 @@ class allocator
 |[size_type](#size_type)|型のオブジェクトが割り当てることができる任意のシーケンスの長さを表すことができる符号なし整数型 `allocator` 。|
 |[value_type](#value_type)|アロケーターによって管理される型。|
 
-### <a name="functions"></a>Functions
+### <a name="functions"></a>関数
 
 |名前|説明|
 |-|-|
@@ -111,7 +112,7 @@ class allocator
 |[max_size](#max_size)|空きメモリがすべて使用される前に `allocator` クラスによって割り当てることのできる、型 `Type` の要素の数を返します。|
 |[rebind](#rebind)|1 つの型のオブジェクトのアロケーターを使用して別の型のオブジェクトのストレージの割り当てを可能にする構造体。|
 
-### <a name="operators"></a>演算子
+### <a name="operators"></a>オペレーター
 
 |名前|説明|
 |-|-|
@@ -137,7 +138,7 @@ const_pointer address(const_reference val) const;
 
 #### <a name="remarks"></a>解説
 
-このメンバー関数は、割り当てられた要素に対してポインターが受け取る必要のある形式で、 *val*のアドレスを返します。
+このメンバー関数は、割り当てられた要素に対してポインターが受け取る必要のある形式で、 *val* のアドレスを返します。
 
 #### <a name="example"></a>例
 
@@ -537,7 +538,7 @@ void deallocate(pointer ptr, size_type count);
 
 #### <a name="remarks"></a>解説
 
-このメンバー関数は、を `Type` 呼び出すことによって、 *ptr*で始まる型の count オブジェクトの配列のストレージを解放し `operator delete(ptr)` ます。 ポインター *ptr*は、 ** \* この**と等しいかどうかを比較し、同じサイズと型の配列オブジェクトを割り当てるアロケーターオブジェクトの[割り当て](#allocate)を呼び出すことによって、前に返されている必要があります。 `deallocate` は例外をスローしません。
+このメンバー関数は、を `Type` 呼び出すことによって、 *ptr* で始まる型の count オブジェクトの配列のストレージを解放し `operator delete(ptr)` ます。 ポインター *ptr* は、 **\* この** と等しいかどうかを比較し、同じサイズと型の配列オブジェクトを割り当てるアロケーターオブジェクトの [割り当て](#allocate)を呼び出すことによって、前に返されている必要があります。 `deallocate` は例外をスローしません。
 
 #### <a name="example"></a>例
 
@@ -558,7 +559,7 @@ void destroy(pointer ptr);
 
 #### <a name="remarks"></a>解説
 
-このメンバー関数は、デストラクターを呼び出すことによって、 *ptr*によって指定されたオブジェクトを破棄し `ptr->Type::~Type` ます。
+このメンバー関数は、デストラクターを呼び出すことによって、 *ptr* によって指定されたオブジェクトを破棄し `ptr->Type::~Type` ます。
 
 #### <a name="example"></a>例
 
@@ -812,7 +813,7 @@ typedef value_type *pointer;
 
 #### <a name="remarks"></a>解説
 
-ポインター型は、 `ptr` 式** \* ptr**を通じて、型のオブジェクトが割り当てることができる任意のオブジェクトを指定できるオブジェクトを表し `allocator` ます。
+ポインター型は、 `ptr` 式 **\* ptr** を通じて、型のオブジェクトが割り当てることができる任意のオブジェクトを指定できるオブジェクトを表し `allocator` ます。
 
 #### <a name="example"></a>例
 

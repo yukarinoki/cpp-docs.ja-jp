@@ -1,4 +1,5 @@
 ---
+description: 詳細については、Reference-Type 関数の戻り値
 title: Reference-Type Function Returns (参照型関数の戻り値)
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - data types [C++], function return types
 - functions [C++], return types
 ms.assetid: 5b73be1d-2dc7-41df-ab0a-adcba36f2ad1
-ms.openlocfilehash: b2997348a3234302655187af25c9c4644c95e48e
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 7624f8b3c481c86db367c2ff68e696c56370e586
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87233627"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97135410"
 ---
 # <a name="reference-type-function-returns"></a>Reference-Type Function Returns (参照型関数の戻り値)
 
@@ -23,9 +24,9 @@ ms.locfileid: "87233627"
 
 - 関数が戻るとき、参照先オブジェクトはスコープ外に出ません。
 
-大きなオブジェクトを参照によって関数*に*渡す方が効率的な場合があるのと同様に、関数*から*大きなオブジェクトを参照渡しで返す方が効率的な場合もあります。 参照戻しプロトコルを使用すると、オブジェクトを返す前に一時的な場所にコピーする必要がなくなります。
+大きなオブジェクトを参照によって関数 *に* 渡す方が効率的な場合があるのと同様に、関数 *から* 大きなオブジェクトを参照渡しで返す方が効率的な場合もあります。 参照戻しプロトコルを使用すると、オブジェクトを返す前に一時的な場所にコピーする必要がなくなります。
 
-参照戻り値の型は、関数を左辺値に評価する必要がある場合にも役立ちます。 ほとんどのオーバーロードされた演算子 (特に代入演算子) は、このカテゴリに分類されます。 オーバーロードされた演算子は、オーバーロードされた[演算子](../cpp/operator-overloading.md)で扱われます。
+参照戻り値の型は、関数を左辺値に評価する必要がある場合にも役立ちます。 ほとんどのオーバーロードされた演算子 (特に代入演算子) は、このカテゴリに分類されます。 オーバーロードされた演算子は、オーバーロードされた [演算子](../cpp/operator-overloading.md)で扱われます。
 
 ## <a name="example"></a>例
 

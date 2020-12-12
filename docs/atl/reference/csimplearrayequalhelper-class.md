@@ -1,5 +1,6 @@
 ---
-title: クラスを配列します。
+description: '詳細情報: CSimpleArrayEqualHelper クラス'
+title: CSimpleArrayEqualHelper クラス
 ms.date: 11/04/2016
 f1_keywords:
 - CSimpleArrayEqualHelper
@@ -8,16 +9,16 @@ f1_keywords:
 helpviewer_keywords:
 - CSimpleArrayEqualHelper class
 ms.assetid: a2b55d89-78c9-42ef-842c-5304c6d20ad6
-ms.openlocfilehash: 386b005777b3e31dd74916a41bc5af2ab82df210
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: e1a5fd3eea5fd6ef7563febc662c5a7a1bc639c5
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81330880"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97140765"
 ---
-# <a name="csimplearrayequalhelper-class"></a>クラスを配列します。
+# <a name="csimplearrayequalhelper-class"></a>CSimpleArrayEqualHelper クラス
 
-このクラスは、クラスのヘルパー[です](../../atl/reference/csimplearray-class.md)。
+このクラスは、 [CSimpleArray](../../atl/reference/csimplearray-class.md) クラスのヘルパーです。
 
 ## <a name="syntax"></a>構文
 
@@ -37,19 +38,19 @@ class CSimpleArrayEqualHelper
 
 |名前|説明|
 |----------|-----------------|
-|[を指定します。](#isequal)|(静的)2`CSimpleArray`つのオブジェクト要素が等しいかテストします。|
+|[CSimpleArrayEqualHelper:: IsEqual](#isequal)|雑音2つ `CSimpleArray` のオブジェクト要素が等しいかどうかをテストします。|
 
 ## <a name="remarks"></a>解説
 
-この特徴クラスはクラスの`CSimpleArray`補足です。 オブジェクトに格納されている 2 つの要素を比較`CSimpleArray`するメソッドを提供します。 デフォルトでは、要素は**operator=()** を使用して比較されますが、配列に独自の等価演算子を持たない複合データ型が含まれている場合は、このクラスをオーバーライドする必要があります。
+この特徴クラスは、クラスを補完するものです `CSimpleArray` 。 オブジェクトに格納されている2つの要素を比較するためのメソッドを提供 `CSimpleArray` します。 既定では、要素は **operator = ()** を使用して比較されますが、独自の等値演算子を持たない複合データ型が配列に含まれている場合は、このクラスをオーバーライドする必要があります。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-**ヘッダー:** atlsimpcoll.h
+**ヘッダー:** atl. h
 
-## <a name="csimplearrayequalhelperisequal"></a><a name="isequal"></a>を指定します。
+## <a name="csimplearrayequalhelperisequal"></a><a name="isequal"></a> CSimpleArrayEqualHelper:: IsEqual
 
-2`CSimpleArray`つのオブジェクト要素が等しいかテストします。
+2つ `CSimpleArray` のオブジェクト要素が等しいかどうかをテストします。
 
 ```
 static bool IsEqual(
@@ -59,7 +60,7 @@ static bool IsEqual(
 
 ### <a name="parameters"></a>パラメーター
 
-*T1*<br/>
+*t1*<br/>
 T 型のオブジェクト。
 
 *t2*<br/>
@@ -67,10 +68,10 @@ T 型のオブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
-要素が等しい場合は true、そうでない場合は false を返します。
+要素が等しい場合は true、それ以外の場合は false を返します。
 
 ## <a name="see-also"></a>関連項目
 
-[クラス](../../atl/reference/csimplearray-class.md)<br/>
-[クラスを返します。](../../atl/reference/csimplearrayequalhelperfalse-class.md)<br/>
+[CSimpleArray クラス](../../atl/reference/csimplearray-class.md)<br/>
+[CSimpleArrayEqualHelperFalse クラス](../../atl/reference/csimplearrayequalhelperfalse-class.md)<br/>
 [クラスの概要](../../atl/atl-class-overview.md)

@@ -1,45 +1,46 @@
 ---
-title: DHTML から C++ コードを呼び出す
+description: 詳細については、「DHTML からの C++ コードの呼び出し」を参照してください。
+title: 呼び出し (DHTML から C++ コードを)
 ms.date: 11/04/2016
 helpviewer_keywords:
 - DHTML, calling C++ code from
 ms.assetid: 37329acd-4c22-40ca-a85a-b7480748f75f
-ms.openlocfilehash: fb63f8671770f57972a4c789d983bdf9658d5ecb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d880b0e9cb2f0b9d5228df7da4fc96fceeb87943
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62251735"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97148487"
 ---
-# <a name="calling-c-code-from-dhtml"></a>DHTML から C++ コードを呼び出す
+# <a name="calling-c-code-from-dhtml"></a>呼び出し (DHTML から C++ コードを)
 
-DHTML コントロールは、テスト コンテナーまたは Internet Explorer などのコンテナーでホストできます。 参照してください[テスト プロパティとテスト コンテナーでイベント](../mfc/testing-properties-and-events-with-test-container.md)テスト コンテナーにアクセスする方法についてはします。
+DHTML コントロールは、テストコンテナーや Internet Explorer などのコンテナーでホストできます。 テストコンテナーにアクセスする方法の詳細については [、「テストコンテナーでのプロパティとイベントのテスト](../mfc/testing-properties-and-events-with-test-container.md) 」を参照してください。
 
-コントロールをホストするコンテナーは、通常の制御のインターフェイスを使用して、コントロールと通信します。 DHTML、C++ コードと HTML のリソースと通信するには、"UI"で終わるディスパッチ インターフェイスを使用します。 [ATL DHTML コントロールの変更](../atl/modifying-the-atl-dhtml-control.md)、これらの異なるインターフェイスによって呼び出されるメソッドの追加方法を練習することができます。
+コントロールをホストしているコンテナーは、通常のコントロールインターフェイスを使用してコントロールと通信します。 DHTML は、"UI" で終わるディスパッチインターフェイスを使用して、C++ コードと HTML リソースと通信します。 [ATL DHTML コントロールを変更](../atl/modifying-the-atl-dhtml-control.md)する場合は、これらの異なるインターフェイスによって呼び出されるメソッドを追加することをお勧めします。
 
-DHTML から C++ コードの呼び出しの例を参照する[DHTML コントロール作成](../atl/creating-an-atl-dhtml-control.md)ATL コントロール ウィザードを使用して、HTML ファイルとヘッダー ファイル内のコードを確認します。
+DHTML から C++ コードを呼び出す例を確認するには、ATL コントロールウィザードを使用して [dhtml コントロールを作成](../atl/creating-an-atl-dhtml-control.md) し、ヘッダーファイルと HTML ファイル内のコードを確認します。
 
-## <a name="declaring-webbrowser-methods-in-the-header-file"></a>ヘッダー ファイル内の WebBrowser メソッドを宣言します。
+## <a name="declaring-webbrowser-methods-in-the-header-file"></a>ヘッダーファイルでの WebBrowser メソッドの宣言
 
-DHTML UI から C++ のメソッドを呼び出すには、コントロールの UI のインターフェイスにメソッドを追加する必要があります。 たとえば、ATL コントロール ウィザードによって作成されたヘッダー ファイルには、C++ メソッドが含まれます。 `OnClick`、ウィザードで生成されたコントロールの UI インターフェイスのメンバーであります。
+DHTML UI から C++ メソッドを呼び出すには、コントロールの UI インターフェイスにメソッドを追加する必要があります。 たとえば、ATL コントロールウィザードによって作成されたヘッダーファイルには、ウィザードで生成された `OnClick` コントロールの UI インターフェイスのメンバーである C++ メソッドが含まれています。
 
-調べる`OnClick`コントロールの .h ファイルには。
+`OnClick`コントロールの .h ファイルを調べます。
 
 [!code-cpp[NVC_ATL_COM#4](../atl/codesnippet/cpp/calling-cpp-code-from-dhtml_1.h)]
 
-最初のパラメーターでは、 *pdispBody*、本体オブジェクトのディスパッチ インターフェイスへのポインターです。 2 番目のパラメーターでは、 *varColor*コントロールに適用する色を識別します。
+最初のパラメーターである *Pdispbody* は、body オブジェクトのディスパッチインターフェイスへのポインターです。 2番目のパラメーター *Varcolor* は、コントロールに適用する色を示します。
 
-## <a name="calling-c-code-in-the-html-file"></a>HTML ファイルでの C++ コードを呼び出す
+## <a name="calling-c-code-in-the-html-file"></a>HTML ファイルでの C++ コードの呼び出し
 
-ヘッダー ファイル内の WebBrowser メソッドを宣言した後は、HTML ファイルからメソッドを呼び出すことができます。 ATL コントロール ウィザードが次の 3 つの Windows ディスパッチ メソッドに挿入される HTML ファイルでの通知: 次の 3 つ`OnClick`コントロールの背景色を変更するメッセージをディスパッチするメソッド。
+ヘッダーファイルで WebBrowser メソッドを宣言したら、HTML ファイルからメソッドを呼び出すことができます。 HTML ファイルで、ATL コントロールウィザードによって、3つの Windows ディスパッチメソッドが挿入されていることに注意してください。 `OnClick` コントロールの背景色を変更するためにメッセージをディスパッチする3つのメソッドです。
 
-HTML ファイル内のメソッドのいずれかを確認します。
+HTML ファイル内のいずれかのメソッドを確認します。
 
 `<BUTTON onclick='window.external.OnClick(theBody, "red");'>Red</BUTTON>`
 
-ウィンドウの外部メソッドでは、上の HTML コードで`OnClick`、button タグの一部としてと呼びます。 メソッドには 2 つのパラメーター: `theBody`、HTML ドキュメントの本文を参照して`"red"`ボタンがクリックされたときに、コントロールの背景色が赤に変更されることを示します。 `Red`ボタンのラベルは、次のタグ。
+上記の HTML コードでは、ウィンドウの外部メソッドは、 `OnClick` ボタンタグの一部として呼び出されます。 メソッドには、2つのパラメーター ( `theBody` HTML ドキュメントの本文を参照する) と `"red"` 、ボタンがクリックされたときにコントロールの背景色が赤に変更されることを示すという2つのパラメーターがあります。 次のタグは、 `Red` ボタンのラベルです。
 
-参照してください[ATL DHTML コントロールの変更](../atl/modifying-the-atl-dhtml-control.md)詳細については、独自のメソッドを提供します。 参照してください[DHTML コントロール プロジェクトの要素の識別](../atl/identifying-the-elements-of-the-dhtml-control-project.md)HTML ファイルの詳細についてはします。
+独自のメソッドの提供の詳細については [、「ATL DHTML コントロールの変更](../atl/modifying-the-atl-dhtml-control.md) 」を参照してください。 HTML ファイルの詳細については、「 [DHTML コントロールプロジェクトの要素の識別](../atl/identifying-the-elements-of-the-dhtml-control-project.md) 」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

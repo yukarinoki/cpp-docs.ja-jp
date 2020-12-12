@@ -1,4 +1,5 @@
 ---
+description: 詳細については、Low-Level i/o に関するページを参照してください。
 title: 下位入出力
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - file handles [C++]
 - file handles [C++], I/O functions
 ms.assetid: 53e11bdd-6720-481c-8b2b-3a3a569ed534
-ms.openlocfilehash: acf07682e9045800bb04aa4c9d6abc5ae4376280
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 88e159e9f85cd4f893616d3aef935417f5abde52
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79443105"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97164979"
 ---
 # <a name="low-level-io"></a>下位入出力
 
@@ -25,13 +26,13 @@ ms.locfileid: "79443105"
 |------------|---------------------|
 |**stdin**|0|
 |**stdout**|1|
-|**stderr**|2|
+|**標準**|2|
 
 低レベル入出力ルーチンでは、エラー発生時に [errno](../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) グローバル変数が設定されます。 ファイルの終端を示すインジケーター (**EOF**) などの STDIO.H で定義された定数が、お使いのプログラムで必要な場合に限り、低レベル関数を使用する際に STDIO.H をインクルードする必要があります。
 
 ## <a name="low-level-io-functions"></a>低レベル入出力関数
 
-|関数|用途|
+|機能|使用|
 |--------------|---------|
 |[_close](../c-runtime-library/reference/close.md)|ファイルを閉じる|
 |[_commit](../c-runtime-library/reference/commit.md)|ファイルをディスクにフラッシュする|
@@ -42,15 +43,15 @@ ms.locfileid: "79443105"
 |[_lseek、_lseeki64](../c-runtime-library/reference/lseek-lseeki64.md)|ファイル ポインターの位置を指定された場所に変更する|
 |[_open、_wopen](../c-runtime-library/reference/open-wopen.md)|ファイルを開く|
 |[_read](../c-runtime-library/reference/read.md)|ファイルからデータを読み取る|
-|[_sopen, _wsopen](../c-runtime-library/reference/sopen-wsopen.md), [_sopen_s, _wsopen_s](../c-runtime-library/reference/sopen-s-wsopen-s.md)|ファイル共有のためにファイルを開く|
+|[_sopen、_wsopen](../c-runtime-library/reference/sopen-wsopen.md)、[_sopen_s、_wsopen_s](../c-runtime-library/reference/sopen-s-wsopen-s.md)|ファイル共有のためにファイルを開く|
 |[_tell、_telli64](../c-runtime-library/reference/tell-telli64.md)|現在のファイル ポインターの位置を取得する|
-|[_umask](../c-runtime-library/reference/umask.md), [_umask_s](../c-runtime-library/reference/umask-s.md)|ファイル アクセス許可マスクを設定する|
+|[_umask](../c-runtime-library/reference/umask.md)、[_umask_s](../c-runtime-library/reference/umask-s.md)|ファイル アクセス許可マスクを設定する|
 |[_write](../c-runtime-library/reference/write.md)|ファイルにデータを書き込む|
 
 **_dup** と **_dup2** は通常、事前定義済みのファイル記述子を別のファイルと関連付けるために使用します。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[入出力](../c-runtime-library/input-and-output.md)<br/>
+[入力と出力](../c-runtime-library/input-and-output.md)<br/>
 [カテゴリ別ユニバーサル C ランタイム ルーチン](../c-runtime-library/run-time-routines-by-category.md)<br/>
-[システム コール](../c-runtime-library/system-calls.md)<br/>
+[システムコール](../c-runtime-library/system-calls.md)<br/>

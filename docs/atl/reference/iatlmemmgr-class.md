@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: IAtlMemMgr クラス'
 title: IAtlMemMgr クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - memory, managing
 - memory, memory manager
 ms.assetid: 18b2c569-25fe-4464-bdb6-3b1abef7154a
-ms.openlocfilehash: b23d8f582c53114ea1434e250e8e5e64b642f733
-ms.sourcegitcommit: d9c94dcabd94537e304be0261b3263c2071b437b
+ms.openlocfilehash: 31f25c5fdb6a4e443bf011aac29620be8a4f13f4
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91353013"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97139751"
 ---
 # <a name="iatlmemmgr-class"></a>IAtlMemMgr クラス
 
@@ -52,7 +53,7 @@ __interface __declspec(uuid("654F7EF5-CFDF-4df9-A450-6C6A13C622C0")) IAtlMemMgr
 
 [!code-cpp[NVC_ATL_Utilities#94](../../atl/codesnippet/cpp/iatlmemmgr-class_1.cpp)]
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** atlmem. h
 
@@ -91,7 +92,7 @@ void Free(void* p) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*irtran-p*<br/>
+*p*<br/>
 このメモリ マネージャーによって以前に割り当てられたメモリへのポインター。
 
 ### <a name="remarks"></a>解説
@@ -112,7 +113,7 @@ size_t GetSize(void* p) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*irtran-p*<br/>
+*p*<br/>
 このメモリ マネージャーによって以前に割り当てられたメモリへのポインター。
 
 ### <a name="return-value"></a>戻り値
@@ -133,7 +134,7 @@ void* Reallocate(void* p, size_t nBytes) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*irtran-p*<br/>
+*p*<br/>
 このメモリ マネージャーによって以前に割り当てられたメモリへのポインター。
 
 *nBytes*<br/>
@@ -758,7 +759,7 @@ virtual HRESULT STDMETHODCALLTYPE SetAmbientDispatch(IDispatch* pDispatch) = 0;
 
 ## <a name="iaxwinhostwindowattachcontrol"></a><a name="attachcontrol"></a> IAxWinHostWindow:: AttachControl
 
-*HWnd*で識別されるウィンドウを使用して、既存の (および以前に初期化された) コントロールをホストオブジェクトにアタッチします。
+*HWnd* で識別されるウィンドウを使用して、既存の (および以前に初期化された) コントロールをホストオブジェクトにアタッチします。
 
 ```
 STDMETHOD(AttachControl)(IUnknown* pUnkControl, HWND hWnd);
@@ -778,7 +779,7 @@ STDMETHOD(AttachControl)(IUnknown* pUnkControl, HWND hWnd);
 
 ## <a name="iaxwinhostwindowcreatecontrol"></a><a name="createcontrol"></a> IAxWinHostWindow::CreateControl
 
-コントロールを作成して初期化し、 *hWnd*で識別されるウィンドウでホストします。
+コントロールを作成して初期化し、 *hWnd* で識別されるウィンドウでホストします。
 
 ```
 STDMETHOD(CreateControl)(

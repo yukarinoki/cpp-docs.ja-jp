@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: _fpclass、_fpclassf'
 title: _fpclass、_fpclassf
 ms.date: 4/2/2020
 api_name:
@@ -35,12 +36,12 @@ helpviewer_keywords:
 - _fpclass function
 - _fpclassf function
 ms.assetid: 2774872d-3543-446f-bc72-db85f8b95a6b
-ms.openlocfilehash: a6591d9348739d27831785a05f4a602aacdd4d0c
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: bd7a2aa02a3431ff41c4d9695efca1f959ece24f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82914848"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97164914"
 ---
 # <a name="_fpclass-_fpclassf"></a>_fpclass、_fpclassf
 
@@ -65,7 +66,7 @@ int _fpclassf(
 
 ## <a name="return-value"></a>戻り値
 
-**_Fpclass**関数と **_fpclassf**関数は、引数*x*の浮動小数点分類を示す整数値を返します。 分類には、\<float.h> で定義された次のいずれかの値が含まれる場合があります。
+**_Fpclass** 関数と **_fpclassf** 関数は、引数 *x* の浮動小数点分類を示す整数値を返します。 分類には、で定義されている次のいずれかの値を指定でき \<float.h> ます。
 
 |値|説明|
 |-----------|-----------------|
@@ -82,13 +83,13 @@ int _fpclassf(
 
 ## <a name="remarks"></a>解説
 
-**_Fpclass**関数と **_fpclassf**関数は、Microsoft 固有の関数です。 [fpclassify](fpclassify.md) によく似ていますが、引数に関するより詳細な情報を返します。 **_Fpclassf**関数は、x64 プラットフォーム用にコンパイルされた場合にのみ使用できます。
+**_Fpclass** 関数と **_fpclassf** 関数は、Microsoft 固有の関数です。 [fpclassify](fpclassify.md) によく似ていますが、引数に関するより詳細な情報を返します。 **_Fpclassf** 関数は、x64 プラットフォーム用にコンパイルされた場合にのみ使用できます。
 
 既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-|関数|必須ヘッダー|
+|機能|必須ヘッダー|
 |--------------|---------------------|
 |**_fpclass**、 **_fpclassf**|\<float.h>|
 
@@ -96,6 +97,6 @@ int _fpclassf(
 
 ## <a name="see-also"></a>関連項目
 
-[浮動小数点サポート](../../c-runtime-library/floating-point-support.md)<br/>
+[浮動小数点のサポート](../../c-runtime-library/floating-point-support.md)<br/>
 [isnan、_isnan、_isnanf](isnan-isnan-isnanf.md)<br/>
 [fpclassify](fpclassify.md)<br/>

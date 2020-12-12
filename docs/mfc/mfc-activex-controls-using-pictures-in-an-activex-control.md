@@ -1,4 +1,5 @@
 ---
+description: '詳細については、「MFC ActiveX コントロール: ActiveX コントロールでのピクチャの使用」を参照してください。'
 title: 'MFC ActiveX コントロール : ActiveX コントロールにおけるピクチャの使用'
 ms.date: 11/04/2016
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - OnResetState method [MFC]
 - CLSID_CPicturePropPage [MFC]
 ms.assetid: 2e49735c-21b9-4442-bb3d-c82ef258eec9
-ms.openlocfilehash: 9eb204dd240ae17421a20b7cddeff56c9a22c19b
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 9c9989be7503eb449b969fbbf37d92f26c165131
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84618075"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97133082"
 ---
 # <a name="mfc-activex-controls-using-pictures-in-an-activex-control"></a>MFC ActiveX コントロール : ActiveX コントロールにおけるピクチャの使用
 
@@ -39,7 +40,7 @@ ActiveX コントロール クラスには、コントロール内に Picture �
 
    このクラスは、画像オブジェクトへのアクセスを容易にするほか、カスタム Picture プロパティで表示されるアイテム用の機能を提供します。
 
-- Get/Set 関数を使用して実装される **LPPICTUREDISP**型のプロパティのサポート。
+- Get/Set 関数を使用して実装される **LPPICTUREDISP** 型のプロパティのサポート。
 
    クラス ビューを使うと、Picture 型をサポートするカスタム プロパティを簡単に追加できます。 クラス ビューを使用して ActiveX コントロールのプロパティを追加する方法について詳しくは、「 [MFC ActiveX コントロール: プロパティ](mfc-activex-controls-properties.md)」をご覧ください。
 
@@ -47,7 +48,7 @@ ActiveX コントロール クラスには、コントロール内に Picture �
 
    このプロパティ ページは、ActiveX コントロールで使用できる一連のストック プロパティ ページの 1 つです。 ActiveX コントロールのプロパティ ページについて詳しくは、「 [MFC ActiveX コントロール: ストック プロパティ ページの使用](mfc-activex-controls-using-stock-property-pages.md)」をご覧ください。
 
-## <a name="implementing-a-custom-picture-property-in-your-activex-control"></a><a name="_core_implementing_a_custom_picture_property_in_your_activex_control"></a>ActiveX コントロールでのカスタム Picture プロパティの実装
+## <a name="implementing-a-custom-picture-property-in-your-activex-control"></a><a name="_core_implementing_a_custom_picture_property_in_your_activex_control"></a> ActiveX コントロールでのカスタム Picture プロパティの実装
 
 このセクションで説明する手順を完了すると、ユーザーが選択した画像をコントロールで表示できるようになります。 ユーザーは、現在の画像を表示しているプロパティ ページを使用して、表示される画像を変更できます。そのページにある [参照] ボタンを使うと、ユーザーは別の画像を選べます。
 
@@ -77,7 +78,7 @@ ActiveX コントロール クラスには、コントロール内に Picture �
 
 [!code-cpp[NVC_MFC_AxPic#3](codesnippet/cpp/mfc-activex-controls-using-pictures-in-an-activex-control_3.h)]
 
-データメンバー *m_pic*に名前を指定する必要はありません。どのような名前でもかまいません。
+データメンバー *m_pic* に名前を指定する必要はありません。どのような名前でもかまいません。
 
 次に、Picture 型をサポートするカスタム プロパティを追加します。
 
@@ -116,9 +117,9 @@ ActiveX コントロール クラスには、コントロール内に Picture �
 > [!NOTE]
 > コントロールのクラス名と関数名は、上記の例とは異なる場合があります。
 
-### <a name="modifications-to-your-control-project"></a><a name="_core_modifications_to_your_control_project"></a>コントロールプロジェクトの変更
+### <a name="modifications-to-your-control-project"></a><a name="_core_modifications_to_your_control_project"></a> コントロールプロジェクトの変更
 
-コントロール プロジェクトに必要なコードを追加した後、ActiveX コントロールの描画に影響するいくつかの関数を変更する必要があります。 変更する必要がある関数は、 `OnResetState`関数、 `OnDraw`関数、カスタム Picture プロパティの Get/Set 関数で、これらはコントロール実装ファイル内にあります。 (この例では、コントロールクラスが呼び出され `CSampleCtrl` 、 `CPictureHolder` データメンバーが*m_pic*という名前で、カスタム picture プロパティ名がであることに注意して `ControlPicture` ください)。
+コントロール プロジェクトに必要なコードを追加した後、ActiveX コントロールの描画に影響するいくつかの関数を変更する必要があります。 変更する必要がある関数は、 `OnResetState`関数、 `OnDraw`関数、カスタム Picture プロパティの Get/Set 関数で、これらはコントロール実装ファイル内にあります。 (この例では、コントロールクラスが呼び出され `CSampleCtrl` 、 `CPictureHolder` データメンバーが *m_pic* という名前で、カスタム picture プロパティ名がであることに注意して `ControlPicture` ください)。
 
 コントロールの `OnResetState` 関数で、 `COleControl::OnResetState`への呼び出しの後にオプションの行を次のように追加します。
 
@@ -151,4 +152,4 @@ ActiveX コントロール クラスには、コントロール内に Picture �
 
 [MFC ActiveX コントロール](mfc-activex-controls.md)<br/>
 [MFC ActiveX コントロール: フォントの使用](mfc-activex-controls-using-fonts.md)<br/>
-[MFC ActiveX コントロール: プロパティ ページ](mfc-activex-controls-property-pages.md)
+[MFC ActiveX コントロール: プロパティページ](mfc-activex-controls-property-pages.md)

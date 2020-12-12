@@ -1,13 +1,14 @@
 ---
+description: 詳細については、「ATL ユーティリティリファレンス」を参照してください。
 title: ATL ユーティリティのリファレンス
 ms.date: 11/04/2016
 ms.assetid: dd8a2888-34f4-461e-9bf4-834218f9b95b
-ms.openlocfilehash: f9e59a2c67d391995d94d77f526613534acb48de
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 8545881c5cd48aaff1bb25448ba443829128dc41
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88831876"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97148578"
 ---
 # <a name="atl-utilities-reference"></a>ATL ユーティリティのリファレンス
 
@@ -40,7 +41,7 @@ ATL には、 [Cpatht](../atl/reference/cpatht-class.md) および [CUrl](../atl
 |--|--|
 | [ATL_URL_SCHEME](../atl/reference/atl-url-scheme-enum.md) | この列挙体のメンバーは、 [CUrl](../atl/reference/curl-class.md)によって認識されるスキームの定数を提供します。 |
 
-## <a name="functions"></a>Functions
+## <a name="functions"></a>関数
 
 | &emsp; | &emsp; |
 |--|--|

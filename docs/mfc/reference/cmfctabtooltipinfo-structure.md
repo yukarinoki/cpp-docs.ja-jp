@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: CMFCTabToolTipInfo 構造体'
 title: CMFCTabToolTipInfo 構造体
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - CMFCTabToolTipInfo struct
 ms.assetid: 9c3b3fb9-1497-4d59-932b-0da9348dd5e2
-ms.openlocfilehash: a507d1e69b3524074e50fde0e87fc5ebb6e5ca03
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: ce9e9f4fdbcf367921e7f0559a4d04e66f4303dc
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81367340"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97164069"
 ---
 # <a name="cmfctabtooltipinfo-structure"></a>CMFCTabToolTipInfo 構造体
 
-この構造体は、ユーザーがマウスを移動している MDI タブに関する情報を提供します。
+この構造体は、ユーザーがマウスポインターを置いている MDI タブに関する情報を提供します。
 
 ## <a name="syntax"></a>構文
 
@@ -29,17 +30,17 @@ struct CMFCTabToolTipInfo
 
 |名前|説明|
 |----------|-----------------|
-|[ヒント::m_nTabIndex](#m_ntabindex)|タブ コントロールのインデックスを指定します。|
-|[ヒント::m_pTabWnd](#m_ptabwnd)|タブ コントロールへのポインター。|
-|[ヒント::m_strText](#m_strtext)|ツールヒントのテキスト。|
+|[CMFCTabToolTipInfo:: m_nTabIndex](#m_ntabindex)|タブコントロールのインデックスを指定します。|
+|[CMFCTabToolTipInfo:: m_pTabWnd](#m_ptabwnd)|タブコントロールへのポインター。|
+|[CMFCTabToolTipInfo:: m_strText](#m_strtext)|ツールヒントのテキスト。|
 
 ## <a name="remarks"></a>解説
 
-`CMFCTabToolTipInfo`構造体へのポインターは、AFX_WM_ON_GET_TAB_TOOLTIP メッセージのパラメーターとして渡されます。 このメッセージは、MDI タブが有効で、ユーザーがタブ コントロールの上にマウス を移動すると生成されます。
+構造体へのポインター `CMFCTabToolTipInfo` は、AFX_WM_ON_GET_TAB_TOOLTIP メッセージのパラメーターとして渡されます。 このメッセージは、MDI タブが有効になっていて、ユーザーがタブコントロールの上にマウスを置いたときに生成されます。
 
 ## <a name="example"></a>例
 
-次の例は`CMFCTabToolTipInfo`[、MDITabsDemo のサンプル](../../overview/visual-cpp-samples.md)で使用される方法を示しています: MFC タブ付き MDI アプリケーション 。
+次の例 `CMFCTabToolTipInfo` では、を [Mditabsdemo サンプル: MFC タブ付き MDI アプリケーション](../../overview/visual-cpp-samples.md)で使用する方法を示します。
 
 [!code-cpp[NVC_MFC_MDITabsDemo#2](../../mfc/reference/codesnippet/cpp/cmfctabtooltipinfo-structure_1.cpp)]
 
@@ -47,13 +48,13 @@ struct CMFCTabToolTipInfo
 
 [CMFCTabToolTipInfo](../../mfc/reference/cmfctabtooltipinfo-structure.md)
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** afxbasetabctrl.h
 
-## <a name="cmfctabtooltipinfom_ntabindex"></a><a name="m_ntabindex"></a>ヒント::m_nTabIndex
+## <a name="cmfctabtooltipinfom_ntabindex"></a><a name="m_ntabindex"></a> CMFCTabToolTipInfo:: m_nTabIndex
 
-タブ コントロールのインデックスを指定します。
+タブコントロールのインデックスを指定します。
 
 ```
 int m_nTabIndex;
@@ -61,17 +62,17 @@ int m_nTabIndex;
 
 ### <a name="remarks"></a>解説
 
-ユーザーがホバーしているタブのインデックス。
+ユーザーがカーソルを置いているタブのインデックス。
 
 ### <a name="example"></a>例
 
-次の例は`m_nTabIndex`[、MDITabsDemo のサンプル](../../overview/visual-cpp-samples.md)で使用される方法を示しています: MFC タブ付き MDI アプリケーション 。
+次の例 `m_nTabIndex` では、を [Mditabsdemo サンプル: MFC タブ付き MDI アプリケーション](../../overview/visual-cpp-samples.md)で使用する方法を示します。
 
 [!code-cpp[NVC_MFC_MDITabsDemo#2](../../mfc/reference/codesnippet/cpp/cmfctabtooltipinfo-structure_1.cpp)]
 
-## <a name="cmfctabtooltipinfom_ptabwnd"></a><a name="m_ptabwnd"></a>ヒント::m_pTabWnd
+## <a name="cmfctabtooltipinfom_ptabwnd"></a><a name="m_ptabwnd"></a> CMFCTabToolTipInfo:: m_pTabWnd
 
-タブ コントロールへのポインター。
+タブコントロールへのポインター。
 
 ```
 CMFCBaseTabCtrl* m_pTabWnd;
@@ -79,11 +80,11 @@ CMFCBaseTabCtrl* m_pTabWnd;
 
 ### <a name="example"></a>例
 
-次の例は`m_pTabWnd`[、MDITabsDemo のサンプル](../../overview/visual-cpp-samples.md)で使用される方法を示しています: MFC タブ付き MDI アプリケーション 。
+次の例 `m_pTabWnd` では、を [Mditabsdemo サンプル: MFC タブ付き MDI アプリケーション](../../overview/visual-cpp-samples.md)で使用する方法を示します。
 
 [!code-cpp[NVC_MFC_MDITabsDemo#2](../../mfc/reference/codesnippet/cpp/cmfctabtooltipinfo-structure_1.cpp)]
 
-## <a name="cmfctabtooltipinfom_strtext"></a><a name="m_strtext"></a>ヒント::m_strText
+## <a name="cmfctabtooltipinfom_strtext"></a><a name="m_strtext"></a> CMFCTabToolTipInfo:: m_strText
 
 ツールヒントのテキスト。
 
@@ -97,11 +98,11 @@ CString m_strText;
 
 ### <a name="example"></a>例
 
-次の例は`m_strText`[、MDITabsDemo のサンプル](../../overview/visual-cpp-samples.md)で使用される方法を示しています: MFC タブ付き MDI アプリケーション 。
+次の例 `m_strText` では、を [Mditabsdemo サンプル: MFC タブ付き MDI アプリケーション](../../overview/visual-cpp-samples.md)で使用する方法を示します。
 
 [!code-cpp[NVC_MFC_MDITabsDemo#2](../../mfc/reference/codesnippet/cpp/cmfctabtooltipinfo-structure_1.cpp)]
 
 ## <a name="see-also"></a>関連項目
 
-[階層グラフ](../../mfc/hierarchy-chart.md)<br/>
+[階層図](../../mfc/hierarchy-chart.md)<br/>
 [クラス](../../mfc/reference/mfc-classes.md)

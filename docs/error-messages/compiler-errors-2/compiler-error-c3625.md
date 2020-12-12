@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「コンパイラエラー C3625」を参照してください。
 title: コンパイラ エラー C3625
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3625
 ms.assetid: fdf49f21-d6b1-42f4-9eec-23b04ae8b4aa
-ms.openlocfilehash: 83b6756c75f90380024a8f31df62290bed1f7738
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: ee28175eac35e05ca2a4620dffa84cf995e053a7
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74761908"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97144496"
 ---
 # <a name="compiler-error-c3625"></a>コンパイラ エラー C3625
 
@@ -19,7 +20,7 @@ ms.locfileid: "74761908"
 
 マネージド クラスまたは WinRT クラスからネイティブ クラスを継承できません。 詳細については、「[クラスと構造体](../../extensions/classes-and-structs-cpp-component-extensions.md)」を参照してください。
 
-## <a name="example"></a>使用例
+## <a name="example"></a>例
 
 次の例では警告 C3625 が生成されます。
 

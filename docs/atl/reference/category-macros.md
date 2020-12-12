@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: カテゴリマクロ'
 title: カテゴリマクロ
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 - atlcom/ATL::IMPLEMENTED_CATEGORY
 - atlcom/ATL::REQUIRED_CATEGORY
 ms.assetid: 223578cb-6180-4787-a8d8-ba3787a5d3ee
-ms.openlocfilehash: 0db32c9550cd76fbc8e1f6776b8ecf4cceffebd7
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 31cbef36ca02fb990ba8935915837074d7dd4116
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88833895"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97165083"
 ---
 # <a name="category-macros"></a>カテゴリマクロ
 
@@ -25,7 +26,7 @@ ms.locfileid: "88833895"
 |[IMPLEMENTED_CATEGORY](#implemented_category)|COM オブジェクトによって実装されるカテゴリを示します。|
 |[REQUIRED_CATEGORY](#required_category)|COM オブジェクトによってコンテナーに必要なカテゴリを示します。|
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** atlcom. h
 
@@ -82,7 +83,7 @@ IMPLEMENTED_CATEGORY(catID)
 ### <a name="parameters"></a>パラメーター
 
 *catID*<br/>
-から実装されているカテゴリのグローバル一意識別子 (GUID) を保持する CATID 定数または変数。 *CatID*のアドレスが取得され、マップに追加されます。 ストックカテゴリの選択については、次の表を参照してください。
+から実装されているカテゴリのグローバル一意識別子 (GUID) を保持する CATID 定数または変数。 *CatID* のアドレスが取得され、マップに追加されます。 ストックカテゴリの選択については、次の表を参照してください。
 
 ### <a name="remarks"></a>解説
 
@@ -102,7 +103,7 @@ IMPLEMENTED_CATEGORY(catID)
 |単純データ バインディング|CATID_PropertyNotifyControl|{157083E1-2368-11cf-87B9-00AA006C8166}|
 |高度なデータバインディング|CATID_VBDataBound|{157083E2-2368-11cf-87B9-00AA006C8166}|
 |ウィンドウなしのコントロール|CATID_WindowlessObject|{1D06B600-3AE3-11cf-87B9-00AA006C8166}|
-|インターネット対応オブジェクト|サンプル一覧については、「Windows SDK の [インターネット対応オブジェクト](/windows/win32/com/internet-aware-objects) 」を参照してください。||
+|Internet-Aware オブジェクト|サンプル一覧については、「Windows SDK の [インターネット対応オブジェクト](/windows/win32/com/internet-aware-objects) 」を参照してください。||
 
 ### <a name="example"></a>例
 
@@ -119,7 +120,7 @@ REQUIRED_CATEGORY( catID )
 ### <a name="parameters"></a>パラメーター
 
 *catID*<br/>
-から必須カテゴリのグローバル一意識別子 (GUID) を保持する CATID 定数または変数。 *CatID*のアドレスが取得され、マップに追加されます。 ストックカテゴリの選択については、次の表を参照してください。
+から必須カテゴリのグローバル一意識別子 (GUID) を保持する CATID 定数または変数。 *CatID* のアドレスが取得され、マップに追加されます。 ストックカテゴリの選択については、次の表を参照してください。
 
 ### <a name="remarks"></a>解説
 
@@ -139,7 +140,7 @@ REQUIRED_CATEGORY( catID )
 |単純データ バインディング|CATID_PropertyNotifyControl|{157083E1-2368-11cf-87B9-00AA006C8166}|
 |高度なデータバインディング|CATID_VBDataBound|{157083E2-2368-11cf-87B9-00AA006C8166}|
 |ウィンドウなしのコントロール|CATID_WindowlessObject|{1D06B600-3AE3-11cf-87B9-00AA006C8166}|
-|インターネット対応オブジェクト|サンプル一覧については、「Windows SDK の [インターネット対応オブジェクト](/windows/win32/com/internet-aware-objects) 」を参照してください。||
+|Internet-Aware オブジェクト|サンプル一覧については、「Windows SDK の [インターネット対応オブジェクト](/windows/win32/com/internet-aware-objects) 」を参照してください。||
 
 ### <a name="example"></a>例
 
@@ -147,4 +148,4 @@ REQUIRED_CATEGORY( catID )
 
 ## <a name="see-also"></a>関連項目
 
-[[マクロ]](../../atl/reference/atl-macros.md)
+[マクロ](../../atl/reference/atl-macros.md)

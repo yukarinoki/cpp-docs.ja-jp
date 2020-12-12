@@ -1,17 +1,18 @@
-﻿---
+---
+description: 詳細については、「C++ での例外とスタックアンワインド」を参照してください。
 title: C++ での例外とスタック アンワインド
 ms.date: 11/19/2019
 ms.assetid: a1a57eae-5fc5-4c49-824f-3ce2eb8129ed
-ms.openlocfilehash: e0dadc90f85caeea359fca4ed0b45868ea77177e
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 4f9c5faff4dafcae41831eb4b24345134912b073
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87221563"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97164784"
 ---
 # <a name="exceptions-and-stack-unwinding-in-c"></a>C++ での例外とスタック アンワインド
 
-C++ 例外の機能では、制御は throw ステートメントから、スローされる型を処理できる最初の catch ステートメントに移動します。 Catch ステートメントに到達すると、throw ステートメントと catch ステートメントの間のスコープ内にあるすべての自動変数は、*スタックアンワインド*と呼ばれるプロセスで破棄されます。 スタック アンワインドでは、次のように実行されます。
+C++ 例外の機能では、制御は throw ステートメントから、スローされる型を処理できる最初の catch ステートメントに移動します。 Catch ステートメントに到達すると、throw ステートメントと catch ステートメントの間のスコープ内にあるすべての自動変数は、 *スタックアンワインド* と呼ばれるプロセスで破棄されます。 スタック アンワインドでは、次のように実行されます。
 
 1. 制御は、 **`try`** 通常の順次実行によってステートメントに到達します。 ブロック内の保護されたセクション **`try`** が実行されます。
 

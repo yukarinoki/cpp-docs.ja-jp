@@ -1,5 +1,6 @@
 ---
-title: クラスを指定します。
+description: '詳細情報: CSimpleMapEqualHelper クラス'
+title: CSimpleMapEqualHelper クラス
 ms.date: 11/04/2016
 f1_keywords:
 - CSimpleMapEqualHelper
@@ -9,16 +10,16 @@ f1_keywords:
 helpviewer_keywords:
 - CSimpleMapEqualHelper class
 ms.assetid: 9bb2968a-d609-405c-8272-ff3b42df6164
-ms.openlocfilehash: d137a35a517ea93139f036f6e9a7a8de06d518a7
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 2b8ff742bf24b6c6c4354cef652e3fc697ffb1d9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81330750"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97140609"
 ---
-# <a name="csimplemapequalhelper-class"></a>クラスを指定します。
+# <a name="csimplemapequalhelper-class"></a>CSimpleMapEqualHelper クラス
 
-このクラスは[、CSimpleMap](../../atl/reference/csimplemap-class.md)クラスのヘルパーです。
+このクラスは、 [CSimpleMap](../../atl/reference/csimplemap-class.md) クラスのヘルパーです。
 
 ## <a name="syntax"></a>構文
 
@@ -29,11 +30,11 @@ class CSimpleMapEqualHelper
 
 #### <a name="parameters"></a>パラメーター
 
-*Tkey*<br/>
+*TKey*<br/>
 キー要素。
 
 *TVal*<br/>
-値要素。
+Value 要素。
 
 ## <a name="members"></a>メンバー
 
@@ -41,20 +42,20 @@ class CSimpleMapEqualHelper
 
 |名前|説明|
 |----------|-----------------|
-|[を指定します。](#isequalkey)|(静的)2 つのキーが等しいかテストします。|
-|[を指定します。](#isequalvalue)|(静的)2 つの値が等しいかテストします。|
+|[CSimpleMapEqualHelper::IsEqualKey](#isequalkey)|雑音2つのキーが等しいかどうかをテストします。|
+|[CSimpleMapEqualHelper::IsEqualValue](#isequalvalue)|雑音2つの値が等しいかどうかをテストします。|
 
 ## <a name="remarks"></a>解説
 
-この特徴クラスはクラスの`CSimpleMap`補足です。 2 つの`CSimpleMap`オブジェクト要素 (具体的にはキーコンポーネントと値コンポーネント) を比較して等しい値を比較するメソッドを提供します。 デフォルトでは、キーと値は**operator==()** を使用して比較されますが、マップに独自の等価演算子を持たない複合データ型が含まれている場合、このクラスをオーバーライドして追加の必要な機能を提供できます。
+この特徴クラスは、クラスを補完するものです `CSimpleMap` 。 2つの `CSimpleMap` オブジェクト要素 (具体的にはキーと値のコンポーネント) を比較して等しいかどうかを比較するメソッドを提供します。 既定では、キーと値は **operator = = ()** を使用して比較されますが、独自の等値演算子を持たない複合データ型がマップに含まれている場合は、このクラスをオーバーライドして追加の必要な機能を提供することができます。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-**ヘッダー:** atlsimpcoll.h
+**ヘッダー:** atl. h
 
-## <a name="csimplemapequalhelperisequalkey"></a><a name="isequalkey"></a>を指定します。
+## <a name="csimplemapequalhelperisequalkey"></a><a name="isequalkey"></a> CSimpleMapEqualHelper::IsEqualKey
 
-2 つのキーが等しいかテストします。
+2つのキーが等しいかどうかをテストします。
 
 ```
 static bool IsEqualKey(const TKey& k1, const TKey& k2);
@@ -66,15 +67,15 @@ static bool IsEqualKey(const TKey& k1, const TKey& k2);
 最初のキー。
 
 *k2*<br/>
-2 番目のキー。
+2番目のキー。
 
 ### <a name="return-value"></a>戻り値
 
 キーが等しい場合は true、それ以外の場合は false を返します。
 
-## <a name="csimplemapequalhelperisequalvalue"></a><a name="isequalvalue"></a>を指定します。
+## <a name="csimplemapequalhelperisequalvalue"></a><a name="isequalvalue"></a> CSimpleMapEqualHelper::IsEqualValue
 
-2 つの値が等しいかテストします。
+2つの値が等しいかどうかをテストします。
 
 ```
 static bool IsEqualValue(const TVal& v1, const TVal& v2);
@@ -94,5 +95,5 @@ static bool IsEqualValue(const TVal& v1, const TVal& v2);
 
 ## <a name="see-also"></a>関連項目
 
-[クラスを指定します。](../../atl/reference/csimplemapequalhelperfalse-class.md)<br/>
+[CSimpleMapEqualHelperFalse クラス](../../atl/reference/csimplemapequalhelperfalse-class.md)<br/>
 [クラスの概要](../../atl/atl-class-overview.md)

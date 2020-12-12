@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「デバッグとエラー報告のマクロ」を参照してください。
 title: デバッグとエラー報告のマクロ
 ms.date: 05/06/2019
 f1_keywords:
@@ -11,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - macros, error reporting
 ms.assetid: 4da9b87f-ec5c-4a32-ab93-637780909b9d
-ms.openlocfilehash: 6b969cfb841a9a95d695eacc0a25f9dd378379ac
-ms.sourcegitcommit: ced5ff1431ffbd25b20d106901955532723bd188
+ms.openlocfilehash: 573c3f341ff9f9df58337b75e1080dde960d232c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92135542"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97139946"
 ---
 # <a name="debugging-and-error-reporting-macros"></a>デバッグとエラー報告のマクロ
 
@@ -94,7 +95,7 @@ ATLASSERT(booleanExpression);
 
 デバッグビルドでは、ATLASSERT は *booleanExpression* を評価し、結果が false の場合にデバッグレポートを生成します。
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 **ヘッダー:** atldef. h
 
@@ -131,7 +132,7 @@ ATLENSURE と ATLASSERT の違いは、ATLENSURE はリリースビルドだけ�
 
 [!code-cpp[NVC_ATL_Utilities#108](../../atl/codesnippet/cpp/debugging-and-error-reporting-macros_1.cpp)]
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 **ヘッダー:** afx
 
@@ -156,7 +157,7 @@ ATLTRACENOTIMPL(funcname);
 
 [!code-cpp[NVC_ATL_Utilities#127](../../atl/codesnippet/cpp/debugging-and-error-reporting-macros_2.cpp)]
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 **ヘッダー:** atltrace .h
 
@@ -222,7 +223,7 @@ ATLTRACE2(
 
 短い形式の ATLTRACE2 は、デバッガーの出力ウィンドウに文字列を書き込みます。 2番目の形式の ATLTRACE2 は、デバッガーの出力ウィンドウにも出力を書き込みますが、ATL/MFC トレースツールの設定の対象となります (「 [Atltracetool Sample](../../overview/visual-cpp-samples.md)」を参照してください)。 たとえば、 *level* を4に設定し、ATL/MFC トレースツールをレベル0に設定した場合、メッセージは表示されません。 *level* には、0、1、2、3、または4を指定できます。 既定値は0で、最も重大な問題だけが報告されます。
 
-*Category*パラメーターは、設定するトレースフラグを一覧表示します。 これらのフラグは、レポートを作成するメソッドの種類に対応しています。 次の表は、 *category* パラメーターに使用できる有効なトレースフラグを示しています。
+*Category* パラメーターは、設定するトレースフラグを一覧表示します。 これらのフラグは、レポートを作成するメソッドの種類に対応しています。 次の表は、 *category* パラメーターに使用できる有効なトレースフラグを示しています。
 
 ### <a name="atl-trace-flags"></a>ATL トレースフラグ
 

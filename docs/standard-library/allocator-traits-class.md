@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: allocator_traits クラス'
 title: allocator_traits クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -40,16 +41,16 @@ helpviewer_keywords:
 - std::allocator_traits [C++], destroy
 - std::allocator_traits [C++], max_size
 - std::allocator_traits [C++], select_on_container_copy_construction
-ms.openlocfilehash: 8ab46ebf85531af052bc19bc5f0088f0f564793b
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: d60658c5f8cf6217dff7a846f0e5cbae42e6a565
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88844809"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97163562"
 ---
 # <a name="allocator_traits-class"></a>allocator_traits クラス
 
-クラステンプレートは、 *アロケーター型*を補足するオブジェクトを表します。 アロケーターの型は、割り当てられた記憶域を管理するために使用されるアロケーター オブジェクトを記述する任意の型です。 具体的には、任意のアロケーターの型 `Alloc` に対し、`allocator_traits<Alloc>` を使用してアロケーター対応のコンテナーが必要とするすべての情報を決定することができます。 詳細については、既定の「[allocator クラス](allocator-class.md)」を参照してください。
+クラステンプレートは、 *アロケーター型* を補足するオブジェクトを表します。 アロケーターの型は、割り当てられた記憶域を管理するために使用されるアロケーター オブジェクトを記述する任意の型です。 具体的には、任意のアロケーターの型 `Alloc` に対し、`allocator_traits<Alloc>` を使用してアロケーター対応のコンテナーが必要とするすべての情報を決定することができます。 詳細については、既定の「[allocator クラス](allocator-class.md)」を参照してください。
 
 ## <a name="syntax"></a>構文
 
@@ -223,7 +224,7 @@ static Alloc select_on_container_copy_construction(const Alloc& al);
 
 #### <a name="return-value"></a>戻り値
 
-このメソッド `al.select_on_container_copy_construction()` は、その型が整形式である場合はを返します。それ以外の場合は *al*を返します。
+このメソッド `al.select_on_container_copy_construction()` は、その型が整形式である場合はを返します。それ以外の場合は *al* を返します。
 
 #### <a name="remarks"></a>解説
 

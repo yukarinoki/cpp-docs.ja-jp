@@ -1,4 +1,5 @@
 ---
+description: 詳細について:/MANIFESTUAC (UAC 情報をマニフェストに埋め込む)
 title: /MANIFESTUAC (UAC 情報をマニフェストに組み込む)
 ms.date: 06/12/2020
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - MANIFESTUAC linker option
 - -MANIFESTUAC linker option
 ms.assetid: 2d243c39-fa13-493c-b56f-d0d972a1603a
-ms.openlocfilehash: 96719c6f6f5359afb03b967524b1f65db6dc664a
-ms.sourcegitcommit: 8645408c7929558b8162f781776d0908d790a41c
+ms.openlocfilehash: 165f543dab087ca32c91002811d99b9048fa392b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85334930"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97137892"
 ---
 # <a name="manifestuac-embeds-uac-information-in-manifest"></a>/MANIFESTUAC (UAC 情報をマニフェストに組み込む)
 
@@ -43,13 +44,13 @@ ms.locfileid: "85334930"
 *`fragment`*<br/>
 およびの値を格納している文字列 *`level`* *`uiAccess`* 。 必要に応じて、二重引用符で囲むこともできます。 詳細については、「[解説](#remarks)」を参照してください。
 
-## <a name="remarks"></a>注釈
+## <a name="remarks"></a>解説
 
 コマンドラインで複数のオプションを指定すると **`/MANIFESTUAC`** 、最後に入力したものが優先されます。
 
 の選択肢は次のとおりです **`/MANIFESTUAC:`** _`level`_ 。
 
-- **`level='asInvoker'`**: アプリケーションは、それを開始したプロセスと同じアクセス許可レベルで実行されます。 [**管理者として実行**] を選択すると、アプリケーションをより高いアクセス許可レベルに昇格させることができます。
+- **`level='asInvoker'`**: アプリケーションは、それを開始したプロセスと同じアクセス許可レベルで実行されます。 [ **管理者として実行**] を選択すると、アプリケーションをより高いアクセス許可レベルに昇格させることができます。
 
 - **`level='highestAvailable'`**: アプリケーションは、可能な限り高いアクセス許可レベルで実行されます。 アプリケーションを起動するユーザーが Administrators グループのメンバーである場合、このオプションはと同じ **`level='requireAdministrator'`** です。 利用可能な最も高いアクセス許可レベルが、開始プロセスのレベルよりも高い場合は、資格情報の入力が求められます。
 
@@ -69,7 +70,7 @@ ms.locfileid: "85334930"
 
 1. [**構成プロパティ**] [  >  **リンカー**  >  **マニフェストファイル**] プロパティページを選択します。
 
-1. **ユーザーアカウント制御 (uac)**、 **uac 実行レベル**、および**uac バイパスの UI 保護**プロパティを変更します。
+1. **ユーザーアカウント制御 (uac)**、 **uac 実行レベル**、および **uac バイパスの UI 保護** プロパティを変更します。
 
 ### <a name="to-set-this-linker-option-programmatically"></a>このリンカーをコードから設定するには
 

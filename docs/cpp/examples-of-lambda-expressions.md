@@ -1,21 +1,22 @@
-﻿---
+---
+description: '詳細情報: ラムダ式の例'
 title: ラムダ式の例
 ms.date: 05/07/2019
 helpviewer_keywords:
 - lambda expressions [C++], examples
 ms.assetid: 52506b15-0771-4190-a966-2f302049ca86
-ms.openlocfilehash: 585e76119b0e848e322c88ad0149ebb42c6b5b1d
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 91c29bd1cd49045d51421d76bd46b3c121cfca3f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87221602"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97164807"
 ---
 # <a name="examples-of-lambda-expressions"></a>ラムダ式の例
 
-この記事では、プログラムでラムダ式を使用する方法を示します。 ラムダ式の概要については、「[ラムダ式](../cpp/lambda-expressions-in-cpp.md)」を参照してください。 ラムダ式の構造の詳細については、「[ラムダ式の構文](../cpp/lambda-expression-syntax.md)」を参照してください。
+この記事では、プログラムでラムダ式を使用する方法を示します。 ラムダ式の概要については、「 [ラムダ式](../cpp/lambda-expressions-in-cpp.md)」を参照してください。 ラムダ式の構造の詳細については、「 [ラムダ式の構文](../cpp/lambda-expression-syntax.md)」を参照してください。
 
-## <a name="declaring-lambda-expressions"></a><a name="declaringLambdaExpressions"></a>ラムダ式の宣言
+## <a name="declaring-lambda-expressions"></a><a name="declaringLambdaExpressions"></a> ラムダ式の宣言
 
 ### <a name="example-1"></a>例 1
 
@@ -99,7 +100,7 @@ int main()
 
 [[この記事の中](#top)]
 
-## <a name="calling-lambda-expressions"></a><a name="callingLambdaExpressions"></a>ラムダ式の呼び出し
+## <a name="calling-lambda-expressions"></a><a name="callingLambdaExpressions"></a> ラムダ式の呼び出し
 
 次のコード スニペットに示しているように、ラムダ式は直接呼び出すことができます。 2番目のスニペットは、ラムダを、などの C++ 標準ライブラリアルゴリズムに引数として渡す方法を示して `find_if` います。
 
@@ -179,7 +180,7 @@ The first even number in the list is 42.
 
 [[この記事の中](#top)]
 
-## <a name="nesting-lambda-expressions"></a><a name="nestingLambdaExpressions"></a>ラムダ式の入れ子
+## <a name="nesting-lambda-expressions"></a><a name="nestingLambdaExpressions"></a> ラムダ式の入れ子
 
 ### <a name="example"></a>例
 
@@ -217,11 +218,11 @@ int main()
 
 [[この記事の中](#top)]
 
-## <a name="higher-order-lambda-functions"></a><a name="higherOrderLambdaExpressions"></a>高階ラムダ関数
+## <a name="higher-order-lambda-functions"></a><a name="higherOrderLambdaExpressions"></a> ラムダ関数の Higher-Order
 
 ### <a name="example"></a>例
 
-多くのプログラミング言語では、高階関数の概念がサポートさ*れています。* 高階関数は、引数として別のラムダ式を受け取るか、ラムダ式を返すラムダ式です。 クラスを使用して、 [`function`](../standard-library/function-class.md) C++ ラムダ式が高階関数のように動作できるようにすることができます。 この例は、`function` オブジェクトを返すラムダ式と、`function` オブジェクトを引数として受け取るラムダ式を示しています。
+多くのプログラミング言語では、高階関数の概念がサポートさ *れています。* 高階関数は、引数として別のラムダ式を受け取るか、ラムダ式を返すラムダ式です。 クラスを使用して、 [`function`](../standard-library/function-class.md) C++ ラムダ式が高階関数のように動作できるようにすることができます。 この例は、`function` オブジェクトを返すラムダ式と、`function` オブジェクトを引数として受け取るラムダ式を示しています。
 
 ### <a name="code"></a>コード
 
@@ -266,12 +267,12 @@ int main()
 
 [[この記事の中](#top)]
 
-## <a name="using-a-lambda-expression-in-a-function"></a><a name="methodLambdaExpressions"></a>関数でのラムダ式の使用
+## <a name="using-a-lambda-expression-in-a-function"></a><a name="methodLambdaExpressions"></a> 関数でのラムダ式の使用
 
 ### <a name="example"></a>例
 
 関数の本体でラムダ式を使用できます。 ラムダ式は、外側の関数がアクセスできる任意の関数またはデータ メンバーにアクセスできます。 ポインターを明示的または暗黙的にキャプチャして、 **`this`** 外側のクラスの関数とデータメンバーにアクセスできるようにすることができます。
-**Visual Studio 2017 バージョン15.3 以降**(で使用可能 [`/std:c++17`](../build/reference/std-specify-language-standard-version.md) ): **`this`** 元の `[*this]` オブジェクトがスコープ外になった後にコードが実行される可能性がある非同期操作または並列操作でラムダを使用する場合は、値によってキャプチャします。
+**Visual Studio 2017 バージョン15.3 以降** (で使用可能 [`/std:c++17`](../build/reference/std-specify-language-standard-version.md) ): **`this`** 元の `[*this]` オブジェクトがスコープ外になった後にコードが実行される可能性がある非同期操作または並列操作でラムダを使用する場合は、値によってキャプチャします。
 
 **`this`** 次に示すように、関数でポインターを明示的に使用することができます。
 
@@ -359,7 +360,7 @@ int main()
 
 [[この記事の中](#top)]
 
-## <a name="using-lambda-expressions-with-templates"></a><a name="templateLambdaExpressions"></a>テンプレートでのラムダ式の使用
+## <a name="using-lambda-expressions-with-templates"></a><a name="templateLambdaExpressions"></a> テンプレートでのラムダ式の使用
 
 ### <a name="example"></a>例
 
@@ -419,11 +420,11 @@ After negate_all():
 
 ### <a name="remarks"></a>解説
 
-C++ テンプレートの詳細については、「[テンプレート](../cpp/templates-cpp.md)」を参照してください。
+C++ テンプレートの詳細については、「 [テンプレート](../cpp/templates-cpp.md)」を参照してください。
 
 [[この記事の中](#top)]
 
-## <a name="handling-exceptions"></a><a name="ehLambdaExpressions"></a>例外の処理
+## <a name="handling-exceptions"></a><a name="ehLambdaExpressions"></a> 例外の処理
 
 ### <a name="example"></a>例
 
@@ -475,11 +476,11 @@ Caught 'invalid vector<T> subscript'.
 
 ### <a name="remarks"></a>解説
 
-例外処理の詳細については、「[例外処理](../cpp/exception-handling-in-visual-cpp.md)」を参照してください。
+例外処理の詳細については、「 [例外処理](../cpp/exception-handling-in-visual-cpp.md)」を参照してください。
 
 [[この記事の中](#top)]
 
-## <a name="using-lambda-expressions-with-managed-types-ccli"></a><a name="managedLambdaExpressions"></a>マネージ型でのラムダ式の使用 (C++/CLI)
+## <a name="using-lambda-expressions-with-managed-types-ccli"></a><a name="managedLambdaExpressions"></a> マネージ型でのラムダ式の使用 (C++/CLI)
 
 ### <a name="example"></a>例
 
@@ -524,7 +525,7 @@ Hello!
 [ラムダ式](../cpp/lambda-expressions-in-cpp.md)<br/>
 [ラムダ式の構文](../cpp/lambda-expression-syntax.md)<br/>
 [`auto`](../cpp/auto-cpp.md)<br/>
-[`function`講義](../standard-library/function-class.md)<br/>
+[`function` 講義](../standard-library/function-class.md)<br/>
 [`find_if`](../standard-library/algorithm-functions.md#find_if)<br/>
 [`<algorithm>`](../standard-library/algorithm.md)<br/>
 [関数呼び出し](../cpp/function-call-cpp.md)<br/>

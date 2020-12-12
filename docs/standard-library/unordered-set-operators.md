@@ -1,16 +1,17 @@
 ---
+description: 詳細については、「 &lt; unordered_set 演算子」を参照してください。 &gt;
 title: '&lt;unordered_set&gt; operators'
 ms.date: 11/04/2016
 f1_keywords:
 - unordered_set/std::operator!=
 - unordered_set/std::operator==
 ms.assetid: 8653eea6-12f2-4dd7-aa2f-db38a71599a0
-ms.openlocfilehash: 7780b5dd031d6babc13bc202c948c3e8233f7170
-ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
+ms.openlocfilehash: 6404ea9348dedea1e8ecdd4eefbca6b7c1b8158f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90741945"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97153734"
 ---
 # <a name="ltunordered_setgt-operators"></a>&lt;unordered_set&gt; operators
 
@@ -34,7 +35,7 @@ bool operator!=(const unordered_set <Key, Hash, Pred, Allocator>& left, const un
 
 **`true`** unordered_sets が等しくない場合は。 **`false`** 等しい場合は。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 unordered_set オブジェクト間の比較は、要素を任意の順序で格納することによる影響を受けません。 同じ数の要素が存在しており、一方のコンテナー内の要素がもう一方のコンテナー内の要素の並べ替えである場合、2 つの unordered_set は等しくなります。 それ以外の場合は等しくありません。
 
@@ -102,7 +103,7 @@ bool operator==(const unordered_set <Key, Hash, Pred, Allocator>& left, const un
 
 **`true`** unordered_sets が等しい場合は。 **`false`** 等しくない場合。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 unordered_set オブジェクト間の比較は、要素を任意の順序で格納することによる影響を受けません。 同じ数の要素が存在しており、一方のコンテナー内の要素がもう一方のコンテナー内の要素の並べ替えである場合、2 つの unordered_set は等しくなります。 それ以外の場合は等しくありません。
 
@@ -168,7 +169,7 @@ bool operator!=(const unordered_multiset <Key, Hash, Pred, Allocator>& left, con
 
 **`true`** unordered_multisets が等しくない場合は。 **`false`** 等しい場合は。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 unordered_multiset オブジェクト間の比較は、要素を任意の順序で格納することによる影響を受けません。 同じ数の要素が存在しており、一方のコンテナー内の要素がもう一方のコンテナー内の要素の並べ替えである場合、2 つの unordered_multisets は等しくなります。 それ以外の場合は等しくありません。
 
@@ -237,7 +238,7 @@ bool operator==(const unordered_multiset <Key, Hash, Pred, Allocator>& left, con
 
 **`true`** unordered_multisets が等しい場合は。 **`false`** 等しくない場合。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 unordered_multiset オブジェクト間の比較は、要素を任意の順序で格納することによる影響を受けません。 同じ数の要素が存在しており、一方のコンテナー内の要素がもう一方のコンテナー内の要素の並べ替えである場合、2 つの unordered_multisets は等しくなります。 それ以外の場合は等しくありません。
 

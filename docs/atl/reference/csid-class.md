@@ -1,4 +1,5 @@
 ---
+description: '詳細: CSid クラス'
 title: CSid クラス
 ms.date: 03/27/2019
 f1_keywords:
@@ -21,12 +22,12 @@ f1_keywords:
 helpviewer_keywords:
 - CSid class
 ms.assetid: be58b7ca-5958-49c3-a833-ca341aaaf753
-ms.openlocfilehash: b6787c0e3f075935f19d51aa73bbd66da9cc0fcb
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: b0f5553f14d31a43c0cc581ef43b518fa612616d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88835598"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97140804"
 ---
 # <a name="csid-class"></a>CSid クラス
 
@@ -73,7 +74,7 @@ class CSid
 |[CSid:: Sid](#sid)|ID 文字列を返します。|
 |[CSid:: SidNameUse](#sidnameuse)|オブジェクトの状態の説明を返し `CSid` ます。|
 
-### <a name="operators"></a>演算子
+### <a name="operators"></a>オペレーター
 
 |名前|説明|
 |-|-|
@@ -99,7 +100,7 @@ class CSid
 
 Windows のアクセス制御モデルの概要については、Windows SDK の「 [Access Control](/windows/win32/SecAuthZ/access-control) 」を参照してください。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** atlsecurity .h
 
@@ -166,7 +167,7 @@ Subauthority の数。
 
 ### <a name="remarks"></a>解説
 
-コンストラクターは、オブジェクトを初期化し `CSid` 、内部データメンバーを *Sidtypeinvalid*に設定するか、既存 `CSid` の、 `SID` 、または既存のアカウントから設定をコピーします。
+コンストラクターは、オブジェクトを初期化し `CSid` 、内部データメンバーを *Sidtypeinvalid* に設定するか、既存 `CSid` の、 `SID` 、または既存のアカウントから設定をコピーします。
 
 初期化に失敗した場合、コンストラクターは [CAtlException クラス](../../atl/reference/catlexception-class.md)をスローします。
 
@@ -299,7 +300,7 @@ NSubAuthority によって参照される subauthority を返し *ます。* Sub
 
 ### <a name="remarks"></a>解説
 
-*NSubAuthority*パラメーターは、メソッドが返す subauthority array 要素を識別するインデックス値を指定します。 メソッドは、この値に対して検証テストを実行しません。 アプリケーションは、 [CSid:: GetSubAuthorityCount](#getsubauthoritycount) を呼び出して、許容される値の範囲を見つけることができます。
+*NSubAuthority* パラメーターは、メソッドが返す subauthority array 要素を識別するインデックス値を指定します。 メソッドは、この値に対して検証テストを実行しません。 アプリケーションは、 [CSid:: GetSubAuthorityCount](#getsubauthoritycount) を呼び出して、許容される値の範囲を見つけることができます。
 
 > [!NOTE]
 > デバッグビルドでは、 `CSid` オブジェクトが有効でない場合、関数によってアサートが発生します。
@@ -452,7 +453,7 @@ bool operator<(
 
 ### <a name="return-value"></a>戻り値
 
-*Lhs*が*rhs*未満の場合は TRUE、それ以外の場合は FALSE。
+*Lhs* が *rhs* 未満の場合は TRUE、それ以外の場合は FALSE。
 
 ## <a name="csidoperator-lt"></a><a name="operator_lt__eq"></a> CSid:: operator &lt;=
 
@@ -474,7 +475,7 @@ bool operator<=(
 
 ### <a name="return-value"></a>戻り値
 
-*Lhs*が*rhs*以下の場合は TRUE、それ以外の場合は FALSE。
+*Lhs* が *rhs* 以下の場合は TRUE、それ以外の場合は FALSE。
 
 ## <a name="csidoperator-gt"></a><a name="operator_gt"></a> CSid:: operator &gt;
 
@@ -496,7 +497,7 @@ bool operator>(
 
 ### <a name="return-value"></a>戻り値
 
-*Lhs*が*rhs*より大きい場合は TRUE、それ以外の場合は FALSE。
+*Lhs* が *rhs* より大きい場合は TRUE、それ以外の場合は FALSE。
 
 ## <a name="csidoperator-gt"></a><a name="operator_gt__eq"></a> CSid:: operator &gt;=
 
@@ -518,7 +519,7 @@ bool operator>=(
 
 ### <a name="return-value"></a>戻り値
 
-*Lhs*が*rhs*以上の場合は TRUE、それ以外の場合は FALSE。
+*Lhs* が *rhs* 以上の場合は TRUE、それ以外の場合は FALSE。
 
 ## <a name="csidoperator-const-sid-"></a><a name="operator_const_sid__star"></a> CSid:: operator const SID \*
 
@@ -577,4 +578,4 @@ SID_NAME_USE SidNameUse() const throw();
 [セキュリティのサンプル](../../overview/visual-cpp-samples.md)<br/>
 [クラスの概要](../../atl/atl-class-overview.md)<br/>
 [セキュリティグローバル関数](../../atl/reference/security-global-functions.md)<br/>
-[演算子](../../atl/reference/atl-operators.md)
+[オペレーター](../../atl/reference/atl-operators.md)
