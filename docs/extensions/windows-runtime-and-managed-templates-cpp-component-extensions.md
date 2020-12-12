@@ -1,16 +1,17 @@
 ---
+description: 詳細については、「Windows ランタイムとマネージテンプレート (C++/CLI および C++/CX)」を参照してください。
 title: Windows ランタイムおよびマネージド テンプレート (C++/CLI および C++/CX)
 ms.date: 10/12/2018
 ms.topic: reference
 helpviewer_keywords:
 - templates, with CLR types
 ms.assetid: cf59d16b-5514-448b-9a95-e0b4fcb616a6
-ms.openlocfilehash: 5765370e611e5822b3b2d156d2eee5d21e5b453d
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 75b39c58bc42c23da313525f125dc98abdb0866b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81376304"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97274035"
 ---
 # <a name="windows-runtime-and-managed-templates-ccli-and-ccx"></a>Windows ランタイムおよびマネージド テンプレート (C++/CLI および C++/CX)
 
@@ -26,7 +27,7 @@ ms.locfileid: "81376304"
 
 (この言語機能には Windows ランタイムのみに適用される特記事項がありません。)
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 コンパイラ オプション: `/ZW`
 
@@ -34,7 +35,7 @@ ms.locfileid: "81376304"
 
 マネージド型からのクラス テンプレートの作成には、次のコード例で説明するいくつかの制限があります。
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 コンパイラ オプション: `/clr`
 
@@ -132,4 +133,4 @@ class A <int> {};
 
 ## <a name="see-also"></a>関連項目
 
-[NET および UWP 用のコンポーネント拡張機能](component-extensions-for-runtime-platforms.md)
+[.NET および UWP 用のコンポーネントの拡張機能](component-extensions-for-runtime-platforms.md)

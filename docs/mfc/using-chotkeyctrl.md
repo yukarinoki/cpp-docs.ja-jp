@@ -1,4 +1,5 @@
 ---
+description: 詳細については、CHotKeyCtrl の使用に関するページをご覧ください。
 title: CHotKeyCtrl の使い方
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - CHotKeyCtrl class [MFC], using
 - hot key controls
 ms.assetid: 9b207117-d848-4224-8888-c3d197bb0c95
-ms.openlocfilehash: e2002d96a1eba913e260fa92281f730355a83ca5
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 7f17063a4fb3732a9b121e2b93f5d55e51d5654a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79447244"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97271682"
 ---
 # <a name="using-chotkeyctrl"></a>CHotKeyCtrl の使い方
 
@@ -21,14 +22,14 @@ ms.locfileid: "79447244"
 
 ## <a name="what-do-you-want-to-know-more-about"></a>詳細については、次を参照してください。
 
-- [ホット キー コントロールの使い方](../mfc/using-a-hot-key-control.md)
+- [ホットキーコントロールの使用](../mfc/using-a-hot-key-control.md)
 
-- [ホット キーの設定](../mfc/setting-a-hot-key.md)
+- [ホットキーの設定](../mfc/setting-a-hot-key.md)
 
-- [グローバル ホット キー](../mfc/global-hot-keys.md)
+- [グローバルホットキー](../mfc/global-hot-keys.md)
 
-- [スレッド固有のホット キー](../mfc/thread-specific-hot-keys.md)
+- [スレッド固有のホットキー](../mfc/thread-specific-hot-keys.md)
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [コントロール](../mfc/controls-mfc.md)

@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: ベースポインター (C++)'
 title: ベース ポインター (C++)
 ms.date: 10/09/2018
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - based pointers
 - pointers, based
 ms.assetid: 1e5f2e96-c52e-4738-8e14-87278681205e
-ms.openlocfilehash: a76fe56e0e6bd0501bbc3e23e138cb2e75055c73
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 40f6a081081eebdff87a9682818de3f89a44b982
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87229143"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97273502"
 ---
 # <a name="based-pointers-c"></a>ベース ポインター (C++)
 
@@ -46,11 +47,11 @@ struct llist_t {
 ポインター `vpBuffer` には、プログラムの後の段階で割り当てられるメモリ アドレスが代入されます。 リンク リストは `vpBuffer` の値を基準として再配置されます。
 
 > [!NOTE]
-> ポインターを含む識別子の永続化は、[メモリマップトファイル](/windows/win32/Memory/file-mapping)を使用して行うこともできます。
+> ポインターを含む識別子の永続化は、 [メモリマップトファイル](/windows/win32/Memory/file-mapping)を使用して行うこともできます。
 
 based ポインターを逆参照する場合、ベースは、明示的に指定されているか、または宣言によって暗黙的に認識されている必要があります。
 
-以前のバージョンとの互換性 **_based**を維持するために、 **`__based`** コンパイラオプションの [ [ \( 言語拡張を無効にする](../build/reference/za-ze-disable-language-extensions.md)] が指定されていない場合、_based はのシノニムになります。
+以前のバージョンとの互換性を維持するために、 **`__based`** コンパイラオプションの [ [ \( 言語拡張を無効にする](../build/reference/za-ze-disable-language-extensions.md)] が指定されていない場合、_based はのシノニムになります。
 
 ## <a name="example"></a>例
 

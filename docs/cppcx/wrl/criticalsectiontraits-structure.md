@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: CriticalSectionTraits 構造体'
 title: CriticalSectionTraits 構造体
 ms.date: 09/26/2018
 ms.topic: reference
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - Microsoft::WRL::Wrappers::HandleTraits::CriticalSectionTraits::GetInvalidValue method
 - Microsoft::WRL::Wrappers::HandleTraits::CriticalSectionTraits::Unlock method
 ms.assetid: c515a1b5-4eb0-40bc-9035-c4d9352c9de7
-ms.openlocfilehash: 3573cad21734a97629cbc12b76d73b99024cbc2f
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 20e4b7dd47acf6f632c888c9bfdedeb3f4e60270
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87220510"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97272943"
 ---
 # <a name="criticalsectiontraits-structure"></a>CriticalSectionTraits 構造体
 
@@ -47,13 +48,13 @@ struct CriticalSectionTraits;
 
 `CriticalSectionTraits`
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** corewrappers .h
 
 **名前空間:** Microsoft:: WRL:: Wrapper:: HandleTraits
 
-## <a name="criticalsectiontraitsgetinvalidvalue"></a><a name="getinvalidvalue"></a>CriticalSectionTraits:: GetInvalidValue
+## <a name="criticalsectiontraitsgetinvalidvalue"></a><a name="getinvalidvalue"></a> CriticalSectionTraits:: GetInvalidValue
 
 テンプレート `CriticalSection` が常に無効になるようにテンプレートを特殊化します。
 
@@ -69,7 +70,7 @@ inline static Type GetInvalidValue();
 
 `Type`修飾子は、として定義され `typedef CRITICAL_SECTION* Type;` ます。
 
-## <a name="criticalsectiontraitsunlock"></a><a name="unlock"></a>CriticalSectionTraits:: Unlock
+## <a name="criticalsectiontraitsunlock"></a><a name="unlock"></a> CriticalSectionTraits:: Unlock
 
 `CriticalSection`指定されたクリティカルセクションオブジェクトの所有権の解放をサポートするようにテンプレートを特殊化します。
 
@@ -81,7 +82,7 @@ inline static void Unlock(
 
 ### <a name="parameters"></a>パラメーター
 
-*同時*<br/>
+*cs*<br/>
 クリティカルセクションオブジェクトへのポインター。
 
 ### <a name="remarks"></a>解説

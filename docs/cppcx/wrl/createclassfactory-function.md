@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: CreateClassFactory 関数'
 title: CreateClassFactory 関数
 ms.date: 11/04/2016
 ms.topic: reference
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - CreateClassFactory function
 ms.assetid: 772d5d1b-8872-4745-81ca-521a39564713
-ms.openlocfilehash: 0467a9a1341e29a61a3b32d999769b01385f641f
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 99565ee732843f57426f10375ffabc7680ef3c62
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80214059"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97273060"
 ---
 # <a name="createclassfactory-function"></a>CreateClassFactory 関数
 
@@ -33,10 +34,10 @@ inline HRESULT STDMETHODCALLTYPE CreateClassFactory(
 ### <a name="parameters"></a>パラメーター
 
 *flags*<br/>
-1つ以上の[RuntimeClassType](runtimeclasstype-enumeration.md)列挙値の組み合わせ。
+1つ以上の [RuntimeClassType](runtimeclasstype-enumeration.md) 列挙値の組み合わせ。
 
-*entry*<br/>
-パラメーター *riid*に関する初期化および登録情報を格納する[CreatorMap](creatormap-structure.md)へのポインター。
+*キー*<br/>
+パラメーター *riid* に関する初期化および登録情報を格納する [CreatorMap](creatormap-structure.md)へのポインター。
 
 *riid*<br/>
 インターフェイス ID への参照。
@@ -50,14 +51,14 @@ inline HRESULT STDMETHODCALLTYPE CreateClassFactory(
 
 ## <a name="remarks"></a>解説
 
-テンプレートパラメーター*ファクトリ*がインターフェイス `IClassFactory`から派生していない場合、assert エラーが生成されます。
+テンプレートパラメーター *ファクトリ* がインターフェイスから派生していない場合、アサートエラーが生成され `IClassFactory` ます。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** resource.h
 
 **名前空間:** Microsoft::WRL
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[Microsoft::WRL::Wrappers::Details 名前空間](microsoft-wrl-wrappers-details-namespace.md)
+[Microsoft:: WRL:: Wrapper::D etails 名前空間](microsoft-wrl-wrappers-details-namespace.md)

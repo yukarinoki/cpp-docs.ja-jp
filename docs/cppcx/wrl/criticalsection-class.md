@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: CriticalSection クラス'
 title: CriticalSection クラス
 ms.date: 09/24/2018
 ms.topic: reference
@@ -19,12 +20,12 @@ helpviewer_keywords:
 - Microsoft::WRL::Wrappers::CriticalSection::CriticalSection, constructor
 - Microsoft::WRL::Wrappers::CriticalSection::TryLock method
 ms.assetid: f2e0a024-71a3-4f6b-99ea-d93a4a608ac4
-ms.openlocfilehash: b95e512f89ee1ff32ca9f1bea51bce643d185a2e
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: e570dfaef8fcf16084792d205fc3e322cf8be908
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87220523"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97273034"
 ---
 # <a name="criticalsection-class"></a>CriticalSection クラス
 
@@ -63,13 +64,13 @@ class CriticalSection;
 
 `CriticalSection`
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** corewrappers .h
 
 **名前空間:** Microsoft:: WRL:: Wrapper
 
-## <a name="criticalsectioncriticalsection"></a><a name="tilde-criticalsection"></a>CriticalSection:: ~ CriticalSection
+## <a name="criticalsectioncriticalsection"></a><a name="tilde-criticalsection"></a> CriticalSection:: ~ CriticalSection
 
 現在のオブジェクトを初期化して破棄し `CriticalSection` ます。
 
@@ -77,7 +78,7 @@ class CriticalSection;
 WRL_NOTHROW ~CriticalSection();
 ```
 
-## <a name="criticalsectioncriticalsection"></a><a name="criticalsection"></a>CriticalSection:: CriticalSection
+## <a name="criticalsectioncriticalsection"></a><a name="criticalsection"></a> CriticalSection:: CriticalSection
 
 Mutex オブジェクトに似た同期オブジェクトを初期化しますが、1つのプロセスのスレッドだけが使用できます。
 
@@ -96,7 +97,7 @@ explicit CriticalSection(
 
 クリティカルセクションと spincounts の詳細については、 `InitializeCriticalSectionAndSpinCount` `Synchronization` Windows API ドキュメントの「」セクションの関数を参照してください。
 
-## <a name="criticalsectioncs_"></a><a name="cs"></a>CriticalSection:: cs_
+## <a name="criticalsectioncs_"></a><a name="cs"></a> CriticalSection:: cs_
 
 クリティカルセクションのデータメンバーを宣言します。
 
@@ -108,7 +109,7 @@ CRITICAL_SECTION cs_;
 
 このデータメンバーは保護されています。
 
-## <a name="criticalsectionisvalid"></a><a name="isvalid"></a>CriticalSection:: IsValid
+## <a name="criticalsectionisvalid"></a><a name="isvalid"></a> CriticalSection:: IsValid
 
 現在のクリティカルセクションが有効かどうかを示します。
 
@@ -120,7 +121,7 @@ bool IsValid() const;
 
 既定では、は常にを返し **`true`** ます。
 
-## <a name="criticalsectionlock"></a><a name="lock"></a>CriticalSection:: Lock
+## <a name="criticalsectionlock"></a><a name="lock"></a> CriticalSection:: Lock
 
 指定したクリティカルセクションオブジェクトの所有権を待機します。 関数は、呼び出し元のスレッドに所有権が付与されると、を返します。
 
@@ -134,7 +135,7 @@ SyncLock Lock();
 
 ### <a name="parameters"></a>パラメーター
 
-*同時*<br/>
+*cs*<br/>
 ユーザーが指定したクリティカルセクションオブジェクト。
 
 ### <a name="return-value"></a>戻り値
@@ -145,7 +146,7 @@ SyncLock Lock();
 
 最初の `Lock` 関数は、現在のクリティカルセクションオブジェクトに影響します。 2番目の関数は、 `Lock` ユーザーが指定したクリティカルセクションに影響します。
 
-## <a name="criticalsectiontrylock"></a><a name="trylock"></a>CriticalSection:: TryLock
+## <a name="criticalsectiontrylock"></a><a name="trylock"></a> CriticalSection:: TryLock
 
 ブロックせずにクリティカルセクションを入力しようとします。 呼び出しが成功すると、呼び出し元のスレッドはクリティカルセクションの所有権を取得します。
 
@@ -159,7 +160,7 @@ static SyncLock TryLock(
 
 ### <a name="parameters"></a>パラメーター
 
-*同時*<br/>
+*cs*<br/>
 ユーザーが指定したクリティカルセクションオブジェクト。
 
 ### <a name="return-value"></a>戻り値

@@ -1,4 +1,5 @@
 ---
+description: 詳細については、次を参照してください:/ZW (Windows ランタイムのコンパイル)
 title: /ZW (Windows ランタイムのコンパイル)
 ms.date: 04/08/2019
 f1_keywords:
@@ -11,18 +12,18 @@ helpviewer_keywords:
 - -ZW
 - Windows Runtime compiler option
 ms.assetid: 0fe362b0-9526-498b-96e0-00d7a965a248
-ms.openlocfilehash: 0808f66c4d4c4e99b3038ea18a1f71f4ebaca89a
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
-ms.translationtype: HT
+ms.openlocfilehash: b2c39cdfb3f1d22d12c8d07b1e844c550a7a0e3a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65446179"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97273918"
 ---
 # <a name="zw-windows-runtime-compilation"></a>/ZW (Windows ランタイムのコンパイル)
 
-ソース Microsoft をサポートするためにコードをコンパイルC++コンポーネント拡張C++/CX ユニバーサル Windows プラットフォーム (UWP) アプリを作成します。
+Microsoft C++ コンポーネント拡張機能をサポートするためのソースコードをコンパイルして、ユニバーサル Windows プラットフォーム (UWP) アプリを作成します。
 
-使用すると **/ZW**をコンパイルするには、常に指定 **/EHsc**もします。
+**/ZW** を使用してコンパイルする場合は、必ず **/ehsc** を指定します。
 
 ## <a name="syntax"></a>構文
 
@@ -34,23 +35,23 @@ ms.locfileid: "65446179"
 ## <a name="arguments"></a>引数
 
 **nostdlib**<br/>
-Platform.winmd、Windows.Foundation.winmd、および他の既定の Windows メタデータ (.winmd) ファイルがコンパイルで自動に含まれていないことを示します。 代わりに、使用する必要があります、 [/FU (Name Forced #using ファイルの using)](fu-name-forced-hash-using-file.md) Windows メタデータ ファイルを明示的に指定するコンパイラ オプション。
+Platform.winmd、Windows.Foundation.winmd、および他の既定の Windows メタデータ (.winmd) ファイルがコンパイルで自動に含まれていないことを示します。 代わりに、Windows メタデータファイルを明示的に指定するには、 [/fu (Forced #using File)](fu-name-forced-hash-using-file.md) コンパイラオプションを使用する必要があります。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-指定した場合、 **/ZW**オプション、コンパイラは、これらの機能をサポートしています。
+**/ZW** オプションを指定すると、コンパイラは次の機能をサポートします。
 
-- 必要なメタデータ ファイル、名前空間、データ型、および Windows ランタイムで実行するアプリを必要とする関数。
+- アプリが Windows ランタイムで実行するために必要なメタデータファイル、名前空間、データ型、および関数。
 
-- 自動で Windows ランタイム オブジェクトの参照カウントと自動参照カウントがゼロになったときに、オブジェクトの破棄します。
+- 自動参照-Windows ランタイムオブジェクトの数をカウントし、オブジェクトの参照カウントがゼロになるとオブジェクトを自動的に破棄します。
 
-Incremental linker を使用して、.obj ファイルに含まれる Windows メタデータをサポートしていないため、 **/ZW**オプション、非推奨とされる[/Gm (簡易リビルドの有効)](gm-enable-minimal-rebuild.md)オプションはと互換性がない **/ZW**します。
+インクリメンタルリンカーでは、 **/ZW** オプションを使用して .obj ファイルに含まれる Windows メタデータはサポートされていないため、非推奨の [/Gm (簡易リビルドの有効化)](gm-enable-minimal-rebuild.md) オプションは **/ZW** と互換性がありません。
 
-詳細については、次を参照してください。 [Visual c 言語リファレンス](../../cppcx/visual-c-language-reference-c-cx.md)します。
+詳細については、「 [Visual C++ 言語リファレンス](../../cppcx/visual-c-language-reference-c-cx.md)」を参照してください。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 ## <a name="see-also"></a>関連項目
 
 [MSVC コンパイラ オプション](compiler-options.md)<br/>
-[MSVC コンパイラ コマンド ラインの構文](compiler-command-line-syntax.md)
+[MSVC Compiler Command-Line 構文](compiler-command-line-syntax.md)

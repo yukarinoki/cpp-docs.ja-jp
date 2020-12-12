@@ -1,16 +1,17 @@
 ---
+description: 詳細については、CToolBarCtrl の使用に関するページをご覧ください。
 title: CToolBarCtrl の使い方
 ms.date: 11/04/2016
 helpviewer_keywords:
 - CToolBarCtrl class [MFC]
 - toolbar controls [MFC], creating
 ms.assetid: 13cf3753-135b-4a3e-a850-ed30177fcf9d
-ms.openlocfilehash: a82a763ca357feccbe5b61d4f85d6038563c1c11
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 4d2d72ab6368c66e76648cd7ff00771bde4f5a60
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79442239"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97271552"
 ---
 # <a name="using-ctoolbarctrl"></a>CToolBarCtrl の使い方
 
@@ -18,18 +19,18 @@ ms.locfileid: "79442239"
 
 ## <a name="what-do-you-want-to-know-more-about"></a>詳細については、次を参照してください。
 
-- [ツール バーの作成方法](../mfc/methods-of-creating-a-toolbar.md)
+- [ツールバーの作成方法](../mfc/methods-of-creating-a-toolbar.md)
 
-- [ツール バー コントロールの設定値](../mfc/settings-for-the-toolbar-control.md)
+- [ツールバーコントロールの設定](../mfc/settings-for-the-toolbar-control.md)
 
 - [CToolBarCtrl オブジェクトの作成](../mfc/creating-a-ctoolbarctrl-object.md)
 
-- [ツール バー コントロールでのイメージ リストの使い方](../mfc/using-image-lists-in-a-toolbar-control.md)
+- [ツールバーコントロールでのイメージリストの使用](../mfc/using-image-lists-in-a-toolbar-control.md)
 
-- [ツール バー コントロールでのドロップダウン ボタンの使い方](../mfc/using-drop-down-buttons-in-a-toolbar-control.md)
+- [ツールバーコントロールでの Drop-Down ボタンの使用](../mfc/using-drop-down-buttons-in-a-toolbar-control.md)
 
-- [ツール バー コントロールの外観のカスタマイズ](../mfc/customizing-the-appearance-of-a-toolbar-control.md)
+- [ツールバーコントロールの外観のカスタマイズ](../mfc/customizing-the-appearance-of-a-toolbar-control.md)
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [コントロール](../mfc/controls-mfc.md)

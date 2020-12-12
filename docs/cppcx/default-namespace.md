@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: 既定の名前空間'
 title: 既定の名前空間
 ms.date: 12/30/2016
 ms.assetid: 4712e9dc-57ba-43cc-811e-022e1dae4de8
-ms.openlocfilehash: 5696730bcef08ad11be4a2b689e95eb3c13e11eb
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 46fa1e6162d0d9ffe25a47bfec88d8461f366828
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88845706"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97273320"
 ---
 # <a name="default-namespace"></a>既定の名前空間
 
@@ -46,7 +47,7 @@ namespace default;
 |`uint64`|64 ビット符号なし整数。|
 |`uint8`|8 ビット符号なし数値。|
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 **ヘッダー:** vccorlib.h
 

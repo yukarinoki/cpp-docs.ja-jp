@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「EnableIf 構造体」を参照してください。
 title: EnableIf 構造体
 ms.date: 10/03/2018
 ms.topic: reference
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - EnableIf structure
 ms.assetid: 7825b283-e6b2-4f39-a4b9-c03bcd431b8e
-ms.openlocfilehash: f43166920f3582ab681b67d2c89563dcf78ff0f1
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 098dd5fdc7e37a7754d7124eba3e146575c127be
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87220497"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97272852"
 ---
 # <a name="enableif-structure"></a>EnableIf 構造体
 
@@ -46,13 +47,13 @@ struct EnableIf<true, T>;
 
 |名前|説明|
 |----------|-----------------|
-|`type`|テンプレートパラメーター *b*がと評価 **`true`** された場合、部分的特殊化はデータメンバー `type` を型として定義し `T` ます。|
+|`type`|テンプレートパラメーター *b* がと評価 **`true`** された場合、部分的特殊化はデータメンバー `type` を型として定義し `T` ます。|
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
 `EnableIf`
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** 内部 .h
 

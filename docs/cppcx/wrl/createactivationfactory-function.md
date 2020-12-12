@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: CreateActivationFactory 関数'
 title: CreateActivationFactory 関数
 ms.date: 11/04/2016
 ms.topic: reference
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - CreateActivationFactory function
 ms.assetid: a1a53e04-6757-4faf-a4c8-ecf06e43b959
-ms.openlocfilehash: ab03b15a968c6aba3fa6df8c975fb98e873f8e23
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 25f2181a00bb018361b05ea6570ebbadc6f7a975
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80214072"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97273108"
 ---
 # <a name="createactivationfactory-function"></a>CreateActivationFactory 関数
 
@@ -31,10 +32,10 @@ template<typename Factory>
 ### <a name="parameters"></a>パラメーター
 
 *flags*<br/>
-1つ以上の[RuntimeClassType](runtimeclasstype-enumeration.md)列挙値の組み合わせ。
+1つ以上の [RuntimeClassType](runtimeclasstype-enumeration.md) 列挙値の組み合わせ。
 
-*entry*<br/>
-パラメーター *riid*に関する初期化および登録情報を格納する[CreatorMap](creatormap-structure.md)へのポインター。
+*キー*<br/>
+パラメーター *riid* に関する初期化および登録情報を格納する [CreatorMap](creatormap-structure.md)へのポインター。
 
 *riid*<br/>
 インターフェイス ID への参照。
@@ -48,14 +49,14 @@ template<typename Factory>
 
 ## <a name="remarks"></a>解説
 
-テンプレートパラメーター*ファクトリ*がインターフェイス `IActivationFactory`から派生していない場合、assert エラーが生成されます。
+テンプレートパラメーター *ファクトリ* がインターフェイスから派生していない場合、アサートエラーが生成され `IActivationFactory` ます。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** resource.h
 
 **名前空間:** Microsoft::WRL
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[Microsoft::WRL::Wrappers::Details 名前空間](microsoft-wrl-wrappers-details-namespace.md)
+[Microsoft:: WRL:: Wrapper::D etails 名前空間](microsoft-wrl-wrappers-details-namespace.md)

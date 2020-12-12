@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: _fwrite_nolock'
 title: _fwrite_nolock
 ms.date: 4/2/2020
 api_name:
@@ -29,12 +30,12 @@ helpviewer_keywords:
 - streams, writing data to
 - _fwrite_nolock function
 ms.assetid: 2b4ec6ce-742e-4615-8407-44a0a18ec1d7
-ms.openlocfilehash: 6856dd2af0536deacfbef6b02c7cdf38d41f9c04
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 6b80933756c930403cbba464fb4921266b0d618f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82919431"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97273736"
 ---
 # <a name="_fwrite_nolock"></a>_fwrite_nolock
 
@@ -71,13 +72,13 @@ size_t _fwrite_nolock(
 
 ## <a name="remarks"></a>解説
 
-この関数は、 **fwrite**のロックされていないバージョンです。 他のスレッドによる干渉から保護されない点を除いて、 **fwrite**と同じです。 他のスレッドをロックするオーバーヘッドが発生しないため、処理が速くなる場合があります。 この関数は、シングルスレッド アプリケーション、呼び出し元のスコープで既にスレッド分離を処理している場合などのスレッドセーフなコンテキストでのみご使用ください。
+この関数は、 **fwrite** のロックされていないバージョンです。 他のスレッドによる干渉から保護されない点を除いて、 **fwrite** と同じです。 他のスレッドをロックするオーバーヘッドが発生しないため、処理が速くなる場合があります。 この関数は、シングルスレッド アプリケーション、呼び出し元のスコープで既にスレッド分離を処理している場合などのスレッドセーフなコンテキストでのみご使用ください。
 
 既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-|関数|必須ヘッダー|
+|機能|必須ヘッダー|
 |--------------|---------------------|
 |**_fwrite_nolock**|\<stdio.h>|
 

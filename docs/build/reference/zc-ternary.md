@@ -1,4 +1,5 @@
-﻿---
+---
+description: '詳細情報: `/Zc:ternary` (条件演算子規則の適用)'
 title: /Zc:ternary (条件演算子ルールの強制)
 ms.date: 09/12/2019
 f1_keywords:
@@ -7,14 +8,14 @@ helpviewer_keywords:
 - /Zc:ternary
 - Zc:ternary
 - -Zc:ternary
-ms.openlocfilehash: 04bd0c49528d86ddd4d1e6c77804cf64278db188
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: ea1cf57aa1633e08095dfd01964a2255cb0b3c70
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87211880"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97271318"
 ---
-# <a name="zcternary-enforce-conditional-operator-rules"></a>`/Zc:ternary`(条件演算子の規則を適用します)
+# <a name="zcternary-enforce-conditional-operator-rules"></a>`/Zc:ternary` (条件演算子の規則を適用します)
 
 条件演算子式の2番目と3番目のオペランドの型および const または volatile (cv) 修飾子に対して、C++ 標準規則の適用を有効にします。
 
@@ -24,7 +25,7 @@ ms.locfileid: "87211880"
 
 ## <a name="remarks"></a>解説
 
-Visual Studio 2017 以降では、コンパイラは C++ 標準の*条件演算子*() の動作をサポートしてい **`?:`** ます。 これは、*三項演算子*とも呼ばれます。 C++ 標準では、3つの条件のうちの1つを満たす必要があります。オペランドは同じ型であるか、 **`const`** または **`volatile`** 修飾 (cv 修飾) である必要があります。または、1つのオペランドだけを同じ型に明確に変換できる必要があります。 または、一方または両方のオペランドが throw 式である必要があります。 Visual Studio 2017 バージョン15.5 より前のバージョンでは、コンパイラは標準であいまいと見なされる変換を許可していました。
+Visual Studio 2017 以降では、コンパイラは C++ 標準の *条件演算子* () の動作をサポートしてい **`?:`** ます。 これは、 *三項演算子* とも呼ばれます。 C++ 標準では、3つの条件のうちの1つを満たす必要があります。オペランドは同じ型であるか、 **`const`** または **`volatile`** 修飾 (cv 修飾) である必要があります。または、1つのオペランドだけを同じ型に明確に変換できる必要があります。 または、一方または両方のオペランドが throw 式である必要があります。 Visual Studio 2017 バージョン15.5 より前のバージョンでは、コンパイラは標準であいまいと見なされる変換を許可していました。
 
 このオプションを指定すると、 **`/Zc:ternary`** コンパイラは標準に準拠します。 一致する型の規則を満たしていないコードと、2番目と3番目のオペランドの cv 修飾子を拒否します。
 
@@ -157,8 +158,8 @@ Visual C++ の準拠に関する問題について詳しくは、「 [Nonstandar
 
 1. [**構成プロパティ**] [  >  **C/c + +**  >  **コマンドライン**] プロパティページを選択します。
 
-1. またはを含むように "**追加オプション**" プロパティを変更し、[ **`/Zc:ternary`** **`/Zc:ternary-`** **OK]** をクリックします。
+1. またはを含むように " **追加オプション** " プロパティを変更し、[ **`/Zc:ternary`** **`/Zc:ternary-`** **OK]** をクリックします。
 
 ## <a name="see-also"></a>関連項目
 
-[`/Zc`互換性](zc-conformance.md)
+[`/Zc` 互換性](zc-conformance.md)

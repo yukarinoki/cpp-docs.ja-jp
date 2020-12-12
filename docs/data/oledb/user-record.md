@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: ユーザーレコード'
 title: ユーザー レコード
 ms.date: 05/09/2019
 helpviewer_keywords:
@@ -8,19 +9,19 @@ helpviewer_keywords:
 - user records, described
 - rowsets, user record
 ms.assetid: 9c0d2864-2738-4f62-a750-1016d9c3523f
-ms.openlocfilehash: 4a8fb6c9eeee3736501a04a095bdd763de16de7d
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: f858660800391eff45cb88115f8fb09afa26a77f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80079003"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97272501"
 ---
 # <a name="user-record"></a>ユーザー レコード
 
 > [!NOTE]
 > ATL OLE DB プロバイダー ウィザードは、Visual Studio 2019 以降では使用できません。
 
-ユーザー レコードでは、行セットの列データを表すコードとデータ構造が提供されます。 ユーザー レコードはコンパイル時または実行時に作成できます。 **ATL OLE DB プロバイダー ウィザード**を使用してプロバイダーを作成する場合、ウィザードによって次のような既定のユーザー レコードが作成されます (プロバイダー名の [短い名前] に「*MyProvider*」を指定した場合)。
+ユーザー レコードでは、行セットの列データを表すコードとデータ構造が提供されます。 ユーザー レコードはコンパイル時または実行時に作成できます。 **ATL OLE DB プロバイダー ウィザード** を使用してプロバイダーを作成する場合、ウィザードによって次のような既定のユーザー レコードが作成されます (プロバイダー名の [短い名前] に「*MyProvider*」を指定した場合)。
 
 ```cpp
 class CWindowsFile:
@@ -69,6 +70,6 @@ PROVIDER_COLUMN_MAP マクロを使用すると、`GetColumnInfo` 関数を簡�
 
 ユーザー レコードの `GetColumnInfo` をオーバーライドする方法の詳細な例については、「[コンシューマーに返される列の動的な判断](../../data/oledb/dynamically-determining-columns-returned-to-the-consumer.md)」を参照してください。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[OLE DB プロバイダー テンプレートのアーキテクチャ](../../data/oledb/ole-db-provider-template-architecture.md)<br/>
+[OLE DB プロバイダーテンプレートのアーキテクチャ](../../data/oledb/ole-db-provider-template-architecture.md)<br/>

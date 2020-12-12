@@ -1,4 +1,5 @@
 ---
+description: '詳細については、「明示的な型変換演算子: ()」を参照してください。'
 title: '明示的な型変換演算子: ()'
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - data type conversion [C++], explicit
 - type conversion [C++], explicit conversions
 ms.assetid: 54272006-5ffb-45ed-8283-27152ab97529
-ms.openlocfilehash: c168653a82b4d4c5023de1f76a1e6269625c74d8
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: cb2a1ff742b71edf2f298512a55ab37dd3d37f77
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81354858"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97273385"
 ---
 # <a name="explicit-type-conversion-operator-"></a>明示的な型変換演算子: ()
 
@@ -27,13 +28,13 @@ simple-type-name ( expression-list )
 
 ## <a name="remarks"></a>解説
 
-*単純型名の*後にかっこで囲まれた*式リスト*が続く場合、指定した式を使用して、指定した型のオブジェクトを構築します。 次の例は、int 型への明示的な型変換を示しています。
+*単純型名* の後に、かっこで囲まれた *式リスト* が指定された式を使用して、指定された型のオブジェクトを構築します。 次の例は、int 型への明示的な型変換を示しています。
 
 ```cpp
 int i = int( d );
 ```
 
-クラスの例を次`Point`に示します。
+クラスの例を次に示し `Point` ます。
 
 ## <a name="example"></a>例
 
@@ -116,12 +117,12 @@ struct Point
 Point pt = Point( 3, 10 );
 ```
 
-前の例では、関数スタイルの変換を使用して、2 つの値 ( *x*と*y*の 1 つ )`Point`をユーザー定義型に変換する方法を示します。
+前の例では、関数形式の変換を使用して、2つの値 ( *x* の値と *y* の値) をユーザー定義型に変換する方法を示して `Point` います。
 
 > [!CAUTION]
 > 明示的な型変換は C++ コンパイラの組み込みの型チェックをオーバーライドするため、慎重に使用してください。
 
-[キャスト](../cpp/cast-operator-parens.md)表記は、*単純型名*(ポインター型や参照型など) を持たない型への変換に使用する必要があります。 *単純型名*で表現できる型への変換は、どちらの形式でも記述できます。
+*単純型名*(ポインター型や参照型など) を持たない型への変換には、[キャスト](../cpp/cast-operator-parens.md)表記を使用する必要があります。 *単純型名* で表現できる型への変換は、どちらの形式でも記述できます。
 
 キャスト内の型定義は無効です。
 

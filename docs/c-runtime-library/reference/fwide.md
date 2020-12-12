@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: fwide'
 title: fwide
 ms.date: 11/04/2016
 api_name:
@@ -23,12 +24,12 @@ f1_keywords:
 helpviewer_keywords:
 - fwide function
 ms.assetid: a4641f5b-d74f-4946-95d5-53a64610d28d
-ms.openlocfilehash: 652aee03bfb5504a51d74efb326cc7a3d7c28649
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 5cc49bb92421ac8899df9850c110a519d32b1d1a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80171204"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97273749"
 ---
 # <a name="fwide"></a>fwide
 
@@ -46,23 +47,23 @@ int fwide(
 ### <a name="parameters"></a>パラメーター
 
 *一連*<br/>
-**ファイル**構造へのポインター (無視)。
+**ファイル** 構造へのポインター (無視)。
 
 *mode*<br/>
-ストリームの新しい幅: ワイド文字の場合は正、バイトの場合は負、変更しない場合は 0 にします (この値は無視されます)。
+ストリームの新しい幅: ワイド文字の場合は正、バイトの場合は負、変更しない場合は 0 にします  (この値は無視されます)。
 
 ## <a name="return-value"></a>戻り値
 
-現在、この関数は、*モード*を返すだけです。
+現在、この関数は、 *モード* を返すだけです。
 
 ## <a name="remarks"></a>解説
 
 この関数の現在のバージョンは、標準に準拠していません。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-|Function|必須ヘッダー|
+|機能|必須ヘッダー|
 |--------------|---------------------|
 |**fwide**|\<wchar.h>|
 
-詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。

@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: 単純な行セットの走査'
 title: 単純な行セットの走査
 ms.date: 10/19/2018
 helpviewer_keywords:
@@ -8,16 +9,16 @@ helpviewer_keywords:
 - OLE DB consumers [C++], database attributes
 - accessors [C++], rowsets
 ms.assetid: b45acf16-4029-429d-ab8d-b7fba98b9740
-ms.openlocfilehash: a6b2ebf918f42e274c372d1dda1e277f7fd49cd5
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: f2e0c1f9647e168d8de2a10eaea6425bf9ad5a88
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80209470"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97272631"
 ---
 # <a name="traversing-a-simple-rowset"></a>単純な行セットの走査
 
-次の例では、コマンドを含まない迅速で簡単なデータベースアクセスを示します。 ATL プロジェクトの次のコンシューマーコードは、Microsoft OLE DB Provider for ODBC を使用して、Microsoft Access データベースの*アーティスト*と呼ばれるテーブルからレコードを取得します。 このコードは、`CArtists`ユーザーレコードクラスに基づくアクセサーを持つ[CTable](../../data/oledb/ctable-class.md) table オブジェクトを作成します。 接続が開かれ、接続でセッションが開かれて、セッションでテーブルが開かれます。
+次の例では、コマンドを含まない迅速で簡単なデータベースアクセスを示します。 ATL プロジェクトの次のコンシューマーコードは、Microsoft OLE DB Provider for ODBC を使用して、Microsoft Access データベースの *アーティスト* と呼ばれるテーブルからレコードを取得します。 このコードは、ユーザーレコードクラスに基づくアクセサーを持つ [CTable](../../data/oledb/ctable-class.md) table オブジェクトを作成し `CArtists` ます。 接続が開かれ、接続でセッションが開かれて、セッションでテーブルが開かれます。
 
 ```cpp
 #include <atldbcli.h>
@@ -54,7 +55,7 @@ int main()
 }
 ```
 
-ユーザーレコード `CArtists`は、次の例のようになります。
+ユーザーレコードは、次の `CArtists` 例のようになります。
 
 ```cpp
 class CArtists
@@ -74,6 +75,6 @@ END_COLUMN_MAP()
 };
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[OLE DB コンシューマー テンプレートの操作](../../data/oledb/working-with-ole-db-consumer-templates.md)
+[OLE DB コンシューマーテンプレートの使用](../../data/oledb/working-with-ole-db-consumer-templates.md)

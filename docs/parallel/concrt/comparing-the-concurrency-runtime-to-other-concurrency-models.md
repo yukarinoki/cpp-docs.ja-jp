@@ -1,15 +1,16 @@
 ---
+description: 詳細については、「同時実行ランタイムと他の同時実行モデルとの比較」を参照してください。
 title: コンカレンシー ランタイムとその他のコンカレンシー モデルの比較
 ms.date: 11/04/2016
 helpviewer_keywords:
 - Concurrency Runtime, compared to other models
 ms.assetid: d8b9a1f4-f15f-43c3-a5b4-c0991edf9c86
-ms.openlocfilehash: 5bc6691f6d0b166bb3084091ee6af70474937568
-ms.sourcegitcommit: 19016630f9d35f365e9ba249e0f3617515d7ca33
+ms.openlocfilehash: 3259d24d4eb3d5b4af9731b97c343d4dd01ea6e5
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92274700"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97271480"
 ---
 # <a name="comparing-the-concurrency-runtime-to-other-concurrency-models"></a>コンカレンシー ランタイムとその他のコンカレンシー モデルの比較
 
@@ -81,7 +82,7 @@ Windows 7 および Windows Server 2008 R2 では、オペレーティング シ
 
 [[上](#top)]
 
-## <a name="comparing-the-concurrency-runtime-to-openmp"></a><a name="openmp"></a> コンカレンシー ランタイムと OpenMP の比較
+## <a name="comparing-the-concurrency-runtime-to-openmp"></a><a name="openmp"></a> 同時実行ランタイムと OpenMP の比較
 
 コンカレンシー ランタイムでは、さまざまなプログラミング モデルを使用できます。 これらのモデルは、他のライブラリのモデルと重複する場合や、他のライブラリのモデルを補完する場合があります。 このセクションでは、コンカレンシー ランタイムと [OpenMP](../../parallel/concrt/comparing-the-concurrency-runtime-to-other-concurrency-models.md#openmp)を比較します。
 

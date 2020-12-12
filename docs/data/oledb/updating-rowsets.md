@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: 行セットの更新'
 title: 更新 (行セットを)
 ms.date: 05/09/2019
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - updating rowsets
 - rowsets
 ms.assetid: 39588758-5c72-4254-a10d-cc2b1f473357
-ms.openlocfilehash: 134ab73428b7535bb34094b7d5b1952fd61a3d69
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 3e5fcd374e446670df586c27e6b6e89d5da30da6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91509436"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97272527"
 ---
 # <a name="updating-rowsets"></a>更新 (行セットを)
 
@@ -31,7 +32,7 @@ ms.locfileid: "91509436"
 > [!NOTE]
 > ATL OLE DB コンシューマー ウィザードは、Visual Studio 2019 以降では使用できません。 ただし、この機能を手動で追加することは可能です。 詳細については、「[ウィザードを使用しないコンシューマーの作成](creating-a-consumer-without-using-a-wizard.md)」をご覧ください。
 
-**ATL OLE DB コンシューマーウィザード**を使用してコンシューマーを作成する場合、[**変更**]、[**挿入**]、および [**削除**] の3つのチェックボックスのうち1つ以上を選択すると、更新操作をサポートできます。 これらのオプションを選択すると、ウィザードによってコードが適宜変更され、選んだ変更の種類がサポートされます。 ただし、ウィザードを使用しない場合、更新をサポートするには次の行セット プロパティを `VARIANT_TRUE` に設定する必要があります。
+**ATL OLE DB コンシューマーウィザード** を使用してコンシューマーを作成する場合、[**変更**]、[**挿入**]、および [**削除**] の3つのチェックボックスのうち1つ以上を選択すると、更新操作をサポートできます。 これらのオプションを選択すると、ウィザードによってコードが適宜変更され、選んだ変更の種類がサポートされます。 ただし、ウィザードを使用しない場合、更新をサポートするには次の行セット プロパティを `VARIANT_TRUE` に設定する必要があります。
 
 - `DBPROPVAL_UP_CHANGE` では、行のデータ値を変更できます。
 

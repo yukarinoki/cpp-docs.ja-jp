@@ -1,4 +1,5 @@
 ---
+description: '詳細: SafeInt クラス'
 title: SafeInt クラス
 ms.date: 10/22/2018
 ms.topic: reference
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - SafeInt class
 - SafeInt class, constructor
 ms.assetid: 27a8f087-2511-46f9-8d76-2aeb66ca272f
-ms.openlocfilehash: d61ce20a8644ca64d37c0eca605d52fb308c0863
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: b5ee9147347f2c01ff05fd93b8b22ea3ce30ee37
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88560962"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97271331"
 ---
 # <a name="safeint-class"></a>SafeInt クラス
 
@@ -229,7 +230,7 @@ Int x = flag ? (int) SafeInt<unsigned int>(y) : -1;
 
 `SafeInt`
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** SafeInt. hpp
 > [!NOTE]

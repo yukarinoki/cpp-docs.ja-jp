@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「コンパイラエラー C3230」を参照してください。
 title: コンパイラ エラー C3230
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3230
 ms.assetid: 5ec53f25-59f6-4801-81e7-7b68bf04994d
-ms.openlocfilehash: 69ea279ac5e11c03f366711484ba0c250fc50225
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: dfd14d11b18c7398ef5881ebe8935e0cf6c302cc
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74743316"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97272410"
 ---
 # <a name="compiler-error-c3230"></a>コンパイラ エラー C3230
 

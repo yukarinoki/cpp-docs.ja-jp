@@ -1,4 +1,5 @@
 ---
+description: 詳細については、CAnimateCtrl の使用に関するページをご覧ください。
 title: CAnimateCtrl の使い方
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - controls [MFC], animation
 - CAnimateCtrl class [MFC], about CAnimateCtrl class [MFC]
 ms.assetid: 696c0805-bef0-4e2e-a9e7-b37b9215b7f0
-ms.openlocfilehash: 79c1a0111317514ef6fd68acd0c6a2ebdccc3ba4
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: bb13d23f45b3a19516a688fd9e9857f750196d56
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79447106"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97271786"
 ---
 # <a name="using-canimatectrl"></a>CAnimateCtrl の使い方
 
@@ -23,10 +24,10 @@ AVI クリップが表示されている間、スレッドは実行を続けて�
 
 ## <a name="what-do-you-want-to-know-more-about"></a>詳細については、次を参照してください。
 
-- [アニメーション コントロールの使い方](../mfc/using-an-animation-control.md)
+- [アニメーションコントロールの使用](../mfc/using-an-animation-control.md)
 
-- [アニメーション コントロールによる通知の送信](../mfc/notifications-sent-by-animation-controls.md)
+- [アニメーションコントロールによって送信された通知](../mfc/notifications-sent-by-animation-controls.md)
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [コントロール](../mfc/controls-mfc.md)

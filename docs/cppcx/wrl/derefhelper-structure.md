@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: DerefHelper 構造体'
 title: DerefHelper 構造体
 ms.date: 10/03/2018
 ms.topic: reference
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - DerefHelper structure
 ms.assetid: 86ded58b-c3ee-4a4f-bb86-4f67b895d427
-ms.openlocfilehash: 43453d3162de697fa1cfcf0581953c91bbe3934f
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 8605e3923d8d3099a080be22f9d8e70ee9187ef9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80214046"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97272917"
 ---
 # <a name="derefhelper-structure"></a>DerefHelper 構造体
 
@@ -35,28 +36,28 @@ struct DerefHelper<T*>;
 
 ## <a name="remarks"></a>解説
 
-`T*` テンプレートパラメーターへの逆参照ポインターを表します。
+テンプレートパラメーターへの逆参照ポインターを表し `T*` ます。
 
-**DerefHelper**は、などの式で使用されます。 `ComPtr<Details::DerefHelper<ProgressTraits::Arg1Type>::DerefType> operationInterface;`です。
+**DerefHelper** は、などの式で使用され `ComPtr<Details::DerefHelper<ProgressTraits::Arg1Type>::DerefType> operationInterface;` ます。
 
 ## <a name="members"></a>メンバー
 
 ### <a name="public-typedefs"></a>パブリック typedef
 
-|Name|説明|
+|名前|説明|
 |----------|-----------------|
-|`DerefType`|逆参照するテンプレートパラメーターの識別子 `T*`。|
+|`DerefType`|逆参照するテンプレートパラメーターの識別子 `T*` 。|
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
 `DerefHelper`
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** async .h
 
 **名前空間:** Microsoft:: WRL::D etails
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[Microsoft::WRL::Details 名前空間](microsoft-wrl-details-namespace.md)
+[Microsoft:: WRL::D etails 名前空間](microsoft-wrl-details-namespace.md)

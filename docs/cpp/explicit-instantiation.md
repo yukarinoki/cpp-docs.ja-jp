@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: 明示的なインスタンス化'
 title: 明示的なインスタンス化
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - explicit instantiation
 - instantiation, explicit
 ms.assetid: 8b0d4e32-45a6-49d5-8041-1ebdd674410e
-ms.openlocfilehash: 4b1808791110c4eed237d18436897dac59170206
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: c3d6587490215627a867b7e20d49a50a089940da
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87232301"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97273476"
 ---
 # <a name="explicit-instantiation"></a>明示的なインスタンス化
 
@@ -31,7 +32,7 @@ template class MyStack<int, 6>;
 template MyStack<int, 6>::MyStack( void );
 ```
 
-関数[テンプレートのインスタンス化](../cpp/function-template-instantiation.md)の例に示すように、特定の型引数を使用して関数テンプレートを明示的にインスタンス化できます。
+関数 [テンプレートのインスタンス化](../cpp/function-template-instantiation.md)の例に示すように、特定の型引数を使用して関数テンプレートを明示的にインスタンス化できます。
 
 キーワードを使用すると、 **`extern`** メンバーの自動インスタンス化を防ぐことができます。 次に例を示します。
 
