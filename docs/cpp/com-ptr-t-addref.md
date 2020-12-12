@@ -1,4 +1,5 @@
 ---
+description: '詳細については、「_com_ptr_t:: AddRef」を参照してください。'
 title: _com_ptr_t::AddRef
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - AddRef method [C++], interface pointers
 ms.assetid: c104dac3-aad3-40bb-a298-75c6cd0e63a2
-ms.openlocfilehash: 4dcf643357c9b368d4b2ea3bc51e6567acf45a44
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: 0979245662a94596307b1a63af918d0ce67c7b6f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81745095"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97295693"
 ---
 # <a name="_com_ptr_taddref"></a>_com_ptr_t::AddRef
 
-**マイクロソフト固有**
+**Microsoft 固有の仕様**
 
-カプセル化`AddRef`されたインターフェイス`IUnknown`ポインターのメンバー関数を呼び出します。
+`AddRef` `IUnknown` カプセル化されたインターフェイスポインターでのメンバー関数を呼び出します。
 
 ## <a name="syntax"></a>構文
 
@@ -27,9 +28,9 @@ void AddRef( );
 
 ## <a name="remarks"></a>解説
 
-カプセル`IUnknown::AddRef`化されたインターフェイス ポインターを呼び出`E_POINTER`し、ポインターが NULL の場合はエラーを発生させます。
+`IUnknown::AddRef`カプセル化されたインターフェイスポインターでを呼び出し、 `E_POINTER` ポインターが NULL の場合はエラーを発生させます。
 
-**エンド マイクロソフト 固有**
+**Microsoft 固有の仕様はここまで**
 
 ## <a name="see-also"></a>関連項目
 

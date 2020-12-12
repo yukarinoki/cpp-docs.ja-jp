@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: コンパイラの警告 (レベル 1) C4167'
 title: コンパイラの警告 (レベル 1) C4167
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4167
 ms.assetid: 74a420bd-9371-4167-b1ee-74dd8680f97b
-ms.openlocfilehash: 99d60bc08a077ae1637b80eac6775c8fa2571a1e
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 8d0b08ea4d97c6e85f5e07ce4844abdae7afafbd
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80163599"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97266989"
 ---
 # <a name="compiler-warning-level-1-c4167"></a>コンパイラの警告 (レベル 1) C4167
 
@@ -19,7 +20,7 @@ function : 組み込み関数としてのみ使用可能です
 
 **#pragma function** が、組み込み形式で使用する必要がある関数に対して従来の呼び出しを使用するよう、コンパイラを強制しようとしています。 このプラグマは無視されます。
 
-この警告を回避するには、 **#pragma function**を削除します。
+この警告を回避するには、 **#pragma function** を削除します。
 
 ## <a name="example"></a>例
 

@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: コンパイラの警告 (レベル 1) C4572'
 title: コンパイラの警告 (レベル 1) C4572
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - C4572
 ms.assetid: 482dee5a-29bd-4fc3-b769-9dfd4cd2a964
-ms.openlocfilehash: 4a1931032f6d1f8db0679dd782ff2f0ce7ff428c
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: ab447bc7ef5d702599b1583ae94ac0fa94d29a14
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80162206"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97332230"
 ---
 # <a name="compiler-warning-level-1-c4572"></a>コンパイラの警告 (レベル 1) C4572
 
 [ParamArray] 属性は/clr で非推奨とされます。 '... ' を使用してください。その代わりに
 
-可変個引数リストを指定するための古いスタイルが使用されました。 CLR に対してコンパイルする場合は、<xref:System.ParamArrayAttribute>の代わりに省略記号構文を使用します。 詳細については、「[可変個引数リスト (..C++.) (/cli)](../../extensions/variable-argument-lists-dot-dot-dot-cpp-cli.md)」を参照してください。
+可変個引数リストを指定するための古いスタイルが使用されました。 CLR に対してコンパイルする場合は、の代わりに省略記号構文を使用し <xref:System.ParamArrayAttribute> ます。 詳細については、「 [可変個引数リスト (...) (C++/cli)](../../extensions/variable-argument-lists-dot-dot-dot-cpp-cli.md)」を参照してください。
 
 ## <a name="example"></a>例
 

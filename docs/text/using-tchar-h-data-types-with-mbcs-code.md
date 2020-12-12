@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「TCHAR を使用する」を参照してください。_MBCS コードを使用した H データ型
 title: _MBCS コードでの TCHAR.H データ型の使用
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - TCHAR.H data types, mapping
 - mappings [C++], TCHAR.H
 ms.assetid: 298583c5-22c3-40f6-920e-9ec96d42abd8
-ms.openlocfilehash: dd43c29d77c3351e8f597b474c4756ad3d45ef2b
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 4672ba210e0df0af1a4f4ee106d31cc978bdf2fc
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87215362"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97306587"
 ---
 # <a name="using-tcharh-data-types-with-_mbcs-code"></a>_MBCS コードでの TCHAR.H データ型の使用
 
@@ -61,7 +62,7 @@ ms.locfileid: "87215362"
     #define _tcschr _mbschr
     ```
 
-   この方法を使用する場合は、文字列の引数と文字列の戻り値に適切なデータ型を使用するように注意する必要があります。 適切に型を一致させるために型キャストを使用できます。または、汎用テキストのデータ型である `_TXCHAR` を使用できます。 `_TXCHAR`SBCS コードの型にマップさ **`char`** れますが、MBCS コードでは型にマップさ **`unsigned char`** れます。 汎用テキストマクロの詳細については、「*ランタイムライブラリリファレンス*」の「[汎用テキストマップ](../c-runtime-library/generic-text-mappings.md)」を参照してください。
+   この方法を使用する場合は、文字列の引数と文字列の戻り値に適切なデータ型を使用するように注意する必要があります。 適切に型を一致させるために型キャストを使用できます。または、汎用テキストのデータ型である `_TXCHAR` を使用できます。 `_TXCHAR` SBCS コードの型にマップさ **`char`** れますが、MBCS コードでは型にマップさ **`unsigned char`** れます。 汎用テキストマクロの詳細については、「*ランタイムライブラリリファレンス*」の「[汎用テキストマップ](../c-runtime-library/generic-text-mappings.md)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

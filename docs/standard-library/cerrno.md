@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: &lt; cerrno&gt;'
 title: '&lt;cerrno&gt;'
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - cerrno header
 ms.assetid: c618f95c-ad4b-4a6f-825b-8727322ec77a
-ms.openlocfilehash: 1186a1e3c58c34de53f7a9835eaf9fd188593301
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 07f853f132c6ee3eed83fe67c9e451138f0ab301
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68455506"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97325303"
 ---
 # <a name="ltcerrnogt"></a>&lt;cerrno&gt;
 
-C 標準ライブラリヘッダー \<errno をインクルードし、関連`std`する名前を名前空間に追加し > ます。 このヘッダーをインクルードすると、C 標準ライブラリヘッダーの外部リンケージを使用して宣言され`std`た名前が、名前空間で宣言されます。
+C 標準ライブラリヘッダーをインクルード \<errno.h> し、関連する名前を名前空間に追加し `std` ます。 このヘッダーをインクルードすると、C 標準ライブラリヘッダーの外部リンケージを使用して宣言された名前が、名前空間で宣言され `std` ます。
 
 ## <a name="syntax"></a>構文
 
@@ -23,7 +24,7 @@ C 標準ライブラリヘッダー \<errno をインクルードし、関連`st
 #include <cerrno>
 ```
 
-## <a name="macros"></a>[マクロ]
+## <a name="macros"></a>マクロ
 
 ```cpp
 #define errno
@@ -107,12 +108,12 @@ C 標準ライブラリヘッダー \<errno をインクルードし、関連`st
 #define EXDEV
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 ここでのマクロは、POSIX 標準で定義されています。
 
 ## <a name="see-also"></a>関連項目
 
-[ヘッダー ファイル リファレンス](../standard-library/cpp-standard-library-header-files.md)\
+[ヘッダーファイルのリファレンス](../standard-library/cpp-standard-library-header-files.md)\
 [C++ 標準ライブラリの概要](../standard-library/cpp-standard-library-overview.md)\
-[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[C++ 標準ライブラリのスレッドセーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)

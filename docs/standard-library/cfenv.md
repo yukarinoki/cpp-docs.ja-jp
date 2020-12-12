@@ -1,17 +1,18 @@
 ---
+description: 詳細については、「cfenv」を参照してください。 &lt;&gt;
 title: '&lt;cfenv&gt;'
 ms.date: 11/04/2016
 ms.assetid: 6a17ad51-2182-4e91-8108-65997382acd3
-ms.openlocfilehash: b1ae987d49c95b781cb255a4d7e3a9a04ab6043a
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: e01a74b9df3431ed257cb015260d0775320a88ae
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68449871"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97325290"
 ---
 # <a name="ltcfenvgt"></a>&lt;cfenv&gt;
 
-標準 C ライブラリ ヘッダー \<fenv.h> をインクルードし、関連する名前を `std` 名前空間に追加します。
+標準 C ライブラリヘッダーをインクルード \<fenv.h> し、関連する名前を名前空間に追加し `std` ます。
 
 ## <a name="syntax"></a>構文
 
@@ -19,7 +20,7 @@ ms.locfileid: "68449871"
 #include <cfenv>
 ```
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 このヘッダーをインクルードすると、標準 C ライブラリ ヘッダーの外部リンケージで宣言された名前が、`std` 名前空間でも宣言されます。
 
@@ -62,6 +63,6 @@ int feupdateenv(const fenv_t* penv);
 
 ## <a name="see-also"></a>関連項目
 
-[ヘッダー ファイル リファレンス](../standard-library/cpp-standard-library-header-files.md)\
+[ヘッダーファイルのリファレンス](../standard-library/cpp-standard-library-header-files.md)\
 [C++ 標準ライブラリの概要](../standard-library/cpp-standard-library-overview.md)\
-[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[C++ 標準ライブラリのスレッドセーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)

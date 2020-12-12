@@ -1,4 +1,5 @@
 ---
+description: '詳細: Module クラス'
 title: Module クラス
 ms.date: 10/18/2018
 ms.topic: reference
@@ -43,12 +44,12 @@ helpviewer_keywords:
 - Microsoft::WRL::Module::UnregisterObjects method
 - Microsoft::WRL::Module::UnregisterWinRTObject method
 ms.assetid: dd67e3b8-c2e1-4f53-8c0f-565a140ba649
-ms.openlocfilehash: f7930247c979c111a7f4798e35ebe7aa95209f37
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 00063bca4d35ca2d7eab09ad9d03d57dcdc85593
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87225749"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97186390"
 ---
 # <a name="module-class"></a>Module クラス
 
@@ -70,13 +71,13 @@ class Module<OutOfProc> : public Module<InProc>;
 ### <a name="parameters"></a>パラメーター
 
 *合成*<br/>
-1つ以上の[ModuleType](moduletype-enumeration.md)列挙値の組み合わせ。
+1つ以上の [ModuleType](moduletype-enumeration.md) 列挙値の組み合わせ。
 
 ## <a name="members"></a>メンバー
 
 ### <a name="protected-classes"></a>プロテクトクラス
 
-名前                                                                                | [説明]
+名前                                                                                | 説明
 ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------
 [Module:: GenericReleaseNotifier](module-genericreleasenotifier-class.md) | 現在のモジュールの最後のオブジェクトが解放されたときに、イベントハンドラーを呼び出します。 イベントハンドラーは、ラムダ、ファンクタ、またはポインターから関数によって指定されます。
 [Module:: MethodReleaseNotifier](module-methodreleasenotifier-class.md)   | 現在のモジュールの最後のオブジェクトが解放されたときに、イベントハンドラーを呼び出します。 イベントハンドラーは、オブジェクトおよびそのポインターからメソッドへのメンバーによって指定されます。
@@ -84,19 +85,19 @@ class Module<OutOfProc> : public Module<InProc>;
 
 ### <a name="public-constructors"></a>パブリック コンストラクター
 
-名前                             | [説明]
+名前                             | 説明
 -------------------------------- | -----------------------------------------------------------
 [Module:: ~ Module](#tilde-module) | クラスの現在のインスタンスを初期化解除 `Module` します。
 
 ### <a name="protected-constructors"></a>プロテクト コンストラクター
 
-名前                      | [説明]
+名前                      | 説明
 ------------------------- | ---------------------------------------------------
 [Module:: Module](#module) | `Module` クラスの新しいインスタンスを初期化します。
 
 ### <a name="public-methods"></a>パブリック メソッド
 
-名前                                                    | [説明]
+名前                                                    | 説明
 ------------------------------------------------------- | --------------------------------------------------------------------------------------------------
 [Module:: Create](#create)                               | モジュールのインスタンスを作成します。
 [モジュール::D ecrementObjectCount](#decrementobjectcount)   | モジュールによって追跡されるオブジェクトの数をデクリメントします。
@@ -115,20 +116,20 @@ class Module<OutOfProc> : public Module<InProc>;
 
 ### <a name="protected-methods"></a>プロテクト メソッド
 
-名前                      | [説明]
+名前                      | 説明
 ------------------------- | --------------------------------
 [Module:: Create](#create) | モジュールのインスタンスを作成します。
 
 ### <a name="protected-data-members"></a>プロテクト データ メンバー
 
-名前                                         | [説明]
+名前                                         | 説明
 -------------------------------------------- | --------------------------------------------------------------------------------------------------------
 [Module:: objectCount_](#objectcount)         | [Make](make-function.md)関数で作成されたクラスの数を追跡します。
 [Module:: releaseNotifier_](#releasenotifier) | オブジェクトへのポインターを保持 `ReleaseNotifier` します。
 
-### <a name="macros"></a>[マクロ]
+### <a name="macros"></a>マクロ
 
-名前                                                                   | [説明]
+名前                                                                   | 説明
 ---------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 [ActivatableClass](activatableclass-macros.md)              | 指定したクラスのインスタンスを作成できるファクトリを含む内部キャッシュを作成します。 このマクロは、既定のファクトリおよびグループ ID パラメーターを指定します。
 [ActivatableClassWithFactory](activatableclass-macros.md)   | 指定したクラスのインスタンスを作成できるファクトリを含む内部キャッシュを作成します。 このマクロを使用すると、特定のファクトリパラメーターを指定できます。
@@ -142,13 +143,13 @@ class Module<OutOfProc> : public Module<InProc>;
 
 `Module`
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** resource.h
 
 **名前空間:** Microsoft::WRL
 
-## <a name="modulemodule"></a><a name="tilde-module"></a>Module:: ~ Module
+## <a name="modulemodule"></a><a name="tilde-module"></a> Module:: ~ Module
 
 クラスの現在のインスタンスを初期化解除 `Module` します。
 
@@ -156,7 +157,7 @@ class Module<OutOfProc> : public Module<InProc>;
 virtual ~Module();
 ```
 
-## <a name="modulecreate"></a><a name="create"></a>Module:: Create
+## <a name="modulecreate"></a><a name="create"></a> Module:: Create
 
 モジュールのインスタンスを作成します。
 
@@ -182,16 +183,16 @@ WRL_NOTHROW static Module& Create(
 モジュールの最後のインスタンスオブジェクトが解放されたときに呼び出されます。
 
 *object*<br/>
-*オブジェクト*と*メソッド*のパラメーターは、組み合わせて使用されます。 モジュール内の最後のインスタンスオブジェクトが解放されたときに、最後のインスタンスオブジェクトを指します。
+*オブジェクト* と *メソッド* のパラメーターは、組み合わせて使用されます。 モジュール内の最後のインスタンスオブジェクトが解放されたときに、最後のインスタンスオブジェクトを指します。
 
 *method*<br/>
-*オブジェクト*と*メソッド*のパラメーターは、組み合わせて使用されます。 モジュール内の最後のインスタンスオブジェクトが解放されたときに、最後のインスタンスオブジェクトのメソッドをポイントします。
+*オブジェクト* と *メソッド* のパラメーターは、組み合わせて使用されます。 モジュール内の最後のインスタンスオブジェクトが解放されたときに、最後のインスタンスオブジェクトのメソッドをポイントします。
 
 ### <a name="return-value"></a>戻り値
 
 モジュールへの参照。
 
-## <a name="moduledecrementobjectcount"></a><a name="decrementobjectcount"></a>モジュール::D ecrementObjectCount
+## <a name="moduledecrementobjectcount"></a><a name="decrementobjectcount"></a> モジュール::D ecrementObjectCount
 
 モジュールによって追跡されるオブジェクトの数をデクリメントします。
 
@@ -203,7 +204,7 @@ virtual long DecrementObjectCount();
 
 デクリメント操作の前のカウント。
 
-## <a name="modulegetactivationfactory"></a><a name="getactivationfactory"></a>Module:: GetActivationFactory
+## <a name="modulegetactivationfactory"></a><a name="getactivationfactory"></a> Module:: GetActivationFactory
 
 モジュールのアクティベーションファクトリを取得します。
 
@@ -223,14 +224,14 @@ WRL_NOTHROW HRESULT GetActivationFactory(
 *ppIFactory*<br/>
 指定されたランタイムクラスの IActivationFactory。
 
-*Server*<br/>
+*serverName*<br/>
 現在のモジュールのクラスファクトリのサブセットの名前。 [ActivatableClassWithFactoryEx](activatableclass-macros.md)マクロで使用するサーバー名を指定するか、を指定して **`nullptr`** 既定のサーバー名を取得します。
 
 ### <a name="return-value"></a>戻り値
 
 成功した場合は S_OK。それ以外の場合は、GetActivationFactory によって返される HRESULT です。
 
-## <a name="modulegetclassobject"></a><a name="getclassobject"></a>Module:: GetClassObject
+## <a name="modulegetclassobject"></a><a name="getclassobject"></a> Module:: GetClassObject
 
 クラスファクトリのキャッシュをキューを取得します。
 
@@ -254,7 +255,7 @@ HRESULT GetClassObject(
 *ppv*<br/>
 返されたオブジェクトへのポインター。
 
-*Server*<br/>
+*serverName*<br/>
 、、またはのいずれかのマクロで指定されたサーバー名 `ActivatableClassWithFactory` `ActivatableClassWithFactoryEx` `ActivatableClass` **`nullptr`** 。既定のサーバー名を取得する場合は。
 
 ### <a name="return-value"></a>戻り値
@@ -263,7 +264,7 @@ HRESULT GetClassObject(
 
 このメソッドは、Windows ランタイムではなく、COM に対してのみ使用してください。 このメソッドは `IClassFactory` 、メソッドのみを公開します。
 
-## <a name="modulegetmodule"></a><a name="getmodule"></a>Module:: GetModule
+## <a name="modulegetmodule"></a><a name="getmodule"></a> Module:: GetModule
 
 モジュールのインスタンスを作成します。
 
@@ -276,7 +277,7 @@ WRL_NOTHROW static Module& GetModule();
 
 モジュールへの参照。
 
-## <a name="modulegetobjectcount"></a><a name="getobjectcount"></a>Module:: GetObjectCount
+## <a name="modulegetobjectcount"></a><a name="getobjectcount"></a> Module:: GetObjectCount
 
 このモジュールによって管理されるオブジェクトの数を取得します。
 
@@ -288,7 +289,7 @@ virtual long GetObjectCount() const;
 
 このモジュールによって管理されているオブジェクトの現在の数。
 
-## <a name="moduleincrementobjectcount"></a><a name="incrementobjectcount"></a>Module:: IncrementObjectCount
+## <a name="moduleincrementobjectcount"></a><a name="incrementobjectcount"></a> Module:: IncrementObjectCount
 
 モジュールによって追跡されるオブジェクトの数をインクリメントします。
 
@@ -300,7 +301,7 @@ virtual long IncrementObjectCount();
 
 インクリメント操作の前のカウント。
 
-## <a name="modulemodule"></a><a name="module"></a>Module:: Module
+## <a name="modulemodule"></a><a name="module"></a> Module:: Module
 
 `Module` クラスの新しいインスタンスを初期化します。
 
@@ -310,9 +311,9 @@ Module();
 
 ### <a name="remarks"></a>解説
 
-このコンストラクターは保護されているため、キーワードを使用して呼び出すことはできません **`new`** 。 代わりに、 [module:: getmodule](#getmodule)または[Module:: Create](#create)を呼び出します。
+このコンストラクターは保護されているため、キーワードを使用して呼び出すことはできません **`new`** 。 代わりに、 [module:: getmodule](#getmodule) または [Module:: Create](#create)を呼び出します。
 
-## <a name="moduleobjectcount_"></a><a name="objectcount"></a>Module:: objectCount_
+## <a name="moduleobjectcount_"></a><a name="objectcount"></a> Module:: objectCount_
 
 [Make](make-function.md)関数で作成されたクラスの数を追跡します。
 
@@ -320,7 +321,7 @@ Module();
 volatile long objectCount_;
 ```
 
-## <a name="moduleregistercomobject"></a><a name="registercomobject"></a>Module:: RegisterCOMObject
+## <a name="moduleregistercomobject"></a><a name="registercomobject"></a> Module:: RegisterCOMObject
 
 他のアプリケーションが接続できるように、1つまたは複数の COM オブジェクトを登録します。
 
@@ -335,7 +336,7 @@ WRL_NOTHROW virtual HRESULT RegisterCOMObject(
 
 ### <a name="parameters"></a>パラメーター
 
-*Server*<br/>
+*serverName*<br/>
 サーバーの完全修飾名。
 
 *clsid*<br/>
@@ -358,9 +359,9 @@ If successfu; S_OKそれ以外の場合は、CO_E_OBJISREG などの HRESULT で
 
 COM オブジェクトは、CLSCTX 列挙の CLSCTX_LOCAL_SERVER 列挙子に登録されます。
 
-登録されたオブジェクトへの接続の種類は、現在の*comflag*テンプレートパラメーターと、regcls 列挙の REGCLS_SUSPENDED 列挙子の組み合わせによって指定されます。
+登録されたオブジェクトへの接続の種類は、現在の *comflag* テンプレートパラメーターと、regcls 列挙の REGCLS_SUSPENDED 列挙子の組み合わせによって指定されます。
 
-## <a name="moduleregisterobjects"></a><a name="registerobjects"></a>Module:: RegisterObjects
+## <a name="moduleregisterobjects"></a><a name="registerobjects"></a> Module:: RegisterObjects
 
 他のアプリケーションが接続できるように、COM オブジェクトまたは Windows ランタイムオブジェクトを登録します。
 
@@ -375,14 +376,14 @@ HRESULT RegisterObjects(
 *第*<br/>
 COM オブジェクトまたは Windows ランタイムオブジェクトの配列。
 
-*Server*<br/>
+*serverName*<br/>
 オブジェクトを作成したサーバーの名前。
 
 ### <a name="return-value"></a>戻り値
 
 成功した場合は S_OK。それ以外の場合は、操作が失敗した理由を示す HRESULT。
 
-## <a name="moduleregisterwinrtobject"></a><a name="registerwinrtobject"></a>Module:: RegisterWinRTObject
+## <a name="moduleregisterwinrtobject"></a><a name="registerwinrtobject"></a> Module:: RegisterWinRTObject
 
 他のアプリケーションが接続できるように、1つまたは複数の Windows ランタイムオブジェクトを登録します。
 
@@ -395,7 +396,7 @@ HRESULT RegisterWinRTObject(const wchar_t* serverName,
 
 ### <a name="parameters"></a>パラメーター
 
-*Server*<br/>
+*serverName*<br/>
 この操作によって影響を受けるオブジェクトのサブセットを指定する名前。
 
 *activatableClassIds*<br/>
@@ -411,7 +412,7 @@ HRESULT RegisterWinRTObject(const wchar_t* serverName,
 
 成功した場合は S_OK。それ以外の場合は、CO_E_OBJISREG など、操作が失敗した理由を示すエラー HRESULT が表示されます。
 
-## <a name="modulereleasenotifier_"></a><a name="releasenotifier"></a>Module:: releaseNotifier_
+## <a name="modulereleasenotifier_"></a><a name="releasenotifier"></a> Module:: releaseNotifier_
 
 オブジェクトへのポインターを保持 `ReleaseNotifier` します。
 
@@ -419,7 +420,7 @@ HRESULT RegisterWinRTObject(const wchar_t* serverName,
 ReleaseNotifier *releaseNotifier_;
 ```
 
-## <a name="moduleterminate"></a><a name="terminate"></a>Module:: Terminate
+## <a name="moduleterminate"></a><a name="terminate"></a> Module:: Terminate
 
 モジュールによってインスタンス化されたすべてのファクトリをシャットダウンさせます。
 
@@ -431,7 +432,7 @@ void Terminate();
 
 キャッシュ内のファクトリを解放します。
 
-## <a name="moduleunregistercomobject"></a><a name="unregistercomobject"></a>Module:: UnregisterCOMObject
+## <a name="moduleunregistercomobject"></a><a name="unregistercomobject"></a> Module:: UnregisterCOMObject
 
 1つ以上の COM オブジェクトの登録を解除します。これにより、他のアプリケーションが接続できなくなります。
 
@@ -444,11 +445,11 @@ virtual HRESULT UnregisterCOMObject(
 
 ### <a name="parameters"></a>パラメーター
 
-*Server*<br/>
+*serverName*<br/>
 未使用
 
 *cookies*<br/>
-登録を解除するクラスオブジェクトを識別する値へのポインターの配列。 配列は、 [RegisterCOMObject](#registercomobject)メソッドによって作成されました。
+登録を解除するクラスオブジェクトを識別する値へのポインターの配列。 配列は、 [RegisterCOMObject](#registercomobject) メソッドによって作成されました。
 
 *count*<br/>
 登録を解除するクラスの数。
@@ -457,7 +458,7 @@ virtual HRESULT UnregisterCOMObject(
 
 この操作が成功した場合は S_OK。それ以外の場合は、操作が失敗した理由を示すエラー HRESULT。
 
-## <a name="moduleunregisterobjects"></a><a name="unregisterobjects"></a>Module:: UnregisterObjects
+## <a name="moduleunregisterobjects"></a><a name="unregisterobjects"></a> Module:: UnregisterObjects
 
 他のアプリケーションが接続できないように、指定したモジュール内のオブジェクトの登録を解除します。
 
@@ -472,14 +473,14 @@ HRESULT UnregisterObjects(
 *第*<br/>
 モジュールへのポインター。
 
-*Server*<br/>
+*serverName*<br/>
 この操作によって影響を受けるオブジェクトのサブセットを指定する修飾名。
 
 ### <a name="return-value"></a>戻り値
 
 この操作が成功した場合は S_OK。それ以外の場合は、この操作が失敗した理由を示すエラー HRESULT。
 
-## <a name="moduleunregisterwinrtobject"></a><a name="unregisterwinrtobject"></a>Module:: UnregisterWinRTObject
+## <a name="moduleunregisterwinrtobject"></a><a name="unregisterwinrtobject"></a> Module:: UnregisterWinRTObject
 
 他のアプリケーションが接続できないように、1つまたは複数の Windows ランタイムオブジェクトの登録を解除します。
 

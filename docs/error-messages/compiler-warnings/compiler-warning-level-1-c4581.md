@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: コンパイラの警告 (レベル 1) C4581'
 title: コンパイラの警告 (レベル 1) C4581
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - C4581
 ms.assetid: 598bcd87-257d-4eb3-94e4-15bb31aadc99
-ms.openlocfilehash: 491121bc236c54ce5b74c76abfa6a650ff7a99ff
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 6fffa3f7ea74cb17eae7fe4af2575e1d574084fc
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80162167"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97332212"
 ---
 # <a name="compiler-warning-level-1-c4581"></a>コンパイラの警告 (レベル 1) C4581
 
 非推奨の動作: 属性を処理するために ' string2 ' ' が ' string2 ' に置き換えられました
 
-このエラーは、visual Studio 2005 で実行されたコンパイラ準拠作業の結果として生成される可能性C++があります。パラメーターは、ビジュアル属性をチェックします。
+このエラーは、Visual Studio 2005 で実行されたコンパイラ準拠作業の結果として生成される場合があります。 Visual C++ の属性を確認するには、パラメーターをチェックします。
 
 以前のバージョンでは、属性値は引用符で囲まれているかどうかにかかわらず受け入れられていました。 値が列挙型の場合は、引用符で囲まないでください。
 

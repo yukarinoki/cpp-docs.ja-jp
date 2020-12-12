@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: _com_error クラス'
 title: _com_error クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,26 +7,26 @@ f1_keywords:
 helpviewer_keywords:
 - _com_error class
 ms.assetid: 70dafa69-b1fb-4a5c-9249-e857e0793d42
-ms.openlocfilehash: ace3ac33e4dccd66c0a44095533d657e32b15f1c
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 2d297da005feba39838679ed2b7062ce54ad9c38
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88837815"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97318209"
 ---
 # <a name="_com_error-class"></a>_com_error クラス
 
 **Microsoft 固有の仕様**
 
-**_Com_error**オブジェクトは、タイプライブラリから生成されたヘッダーファイル内のエラー処理ラッパー関数、またはいずれかの com サポートクラスによって検出された例外条件を表します。 **_Com_error**クラスは、HRESULT エラーコードおよび関連付けられているオブジェクトをカプセル化し `IErrorInfo Interface` ます。
+**_Com_error** オブジェクトは、タイプライブラリから生成されたヘッダーファイル内のエラー処理ラッパー関数、またはいずれかの com サポートクラスによって検出された例外条件を表します。 **_Com_error** クラスは、HRESULT エラーコードおよび関連付けられているオブジェクトをカプセル化し `IErrorInfo Interface` ます。
 
 ### <a name="construction"></a>建設
 
 | 名前 | 説明 |
 |-|-|
-|[_com_error](../cpp/com-error-com-error.md)|**_Com_error**オブジェクトを構築します。|
+|[_com_error](../cpp/com-error-com-error.md)|**_Com_error** オブジェクトを構築します。|
 
-### <a name="operators"></a>演算子
+### <a name="operators"></a>オペレーター
 
 | 名前 | 説明 |
 |-|-|
@@ -53,7 +54,7 @@ ms.locfileid: "88837815"
 
 | 名前 | 説明 |
 |-|-|
-|[ErrorMessage](../cpp/com-error-errormessage.md)|**_Com_error**オブジェクトに格納されている HRESULT の文字列メッセージを取得します。|
+|[ErrorMessage](../cpp/com-error-errormessage.md)|**_Com_error** オブジェクトに格納されている HRESULT の文字列メッセージを取得します。|
 
 ### <a name="exepinfowcode-to-hresult-mappers"></a>ExepInfo.wCode と HRESULT のマッパー
 
@@ -64,7 +65,7 @@ ms.locfileid: "88837815"
 
 **Microsoft 固有の仕様はここまで**
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:**\<comdef.h>
 

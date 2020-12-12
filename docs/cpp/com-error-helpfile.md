@@ -1,4 +1,5 @@
 ---
+description: '詳細については、「_com_error:: HelpFile」を参照してください。'
 title: _com_error::HelpFile
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - HelpFile method [C++]
 ms.assetid: d2d3a0a1-6b62-4d52-a818-3cfae545a4af
-ms.openlocfilehash: 775adfa7d5dd5aca098edcd793c2164d65fe7efa
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: e45785913a8a5a1909f702bce672727171e0baef
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80190223"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97295927"
 ---
 # <a name="_com_errorhelpfile"></a>_com_error::HelpFile
 
@@ -27,14 +28,14 @@ _bstr_t HelpFile() const;
 
 ## <a name="return-value"></a>戻り値
 
-`_com_error` オブジェクト内に記録された `IErrorInfo` オブジェクトの `IErrorInfo::GetHelpFile` の結果を返します。 結果の BSTR は `_bstr_t` オブジェクトにカプセル化されます。 `IErrorInfo` が記録されていない場合は、空の `_bstr_t`を返します。
+オブジェクト内に記録されたオブジェクトのの結果を返し `IErrorInfo::GetHelpFile` `IErrorInfo` `_com_error` ます。 結果の BSTR は `_bstr_t` オブジェクトにカプセル化されます。 が記録されていない場合は、空のを `IErrorInfo` 返し `_bstr_t` ます。
 
 ## <a name="remarks"></a>解説
 
-`IErrorInfo::GetHelpFile` メソッドの呼び出し中に発生したエラーは無視されます。
+メソッドの呼び出し中に発生したエラー `IErrorInfo::GetHelpFile` はすべて無視されます。
 
 **Microsoft 固有の仕様はここまで**
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [_com_error クラス](../cpp/com-error-class.md)

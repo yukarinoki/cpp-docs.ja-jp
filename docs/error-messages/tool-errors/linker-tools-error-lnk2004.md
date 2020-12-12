@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「リンカツール Error LNK2004」を参照してください。
 title: リンカ ツール エラー LNK2004
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - LNK2004
 ms.assetid: 07645371-e67b-4a2c-b0e0-dde24c94ef7e
-ms.openlocfilehash: 0d26ab12c5b82d52b7dcbb176d9bfa033d7ddfee
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 6fc08f343726e6b037c33e9eef53d3fbac8f176f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80194838"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97338513"
 ---
 # <a name="linker-tools-error-lnk2004"></a>リンカ ツール エラー LNK2004
 
@@ -19,7 +20,7 @@ gp 相対 fixup が ' target ' にオーバーフローしています。短い�
 
 セクションが大きすぎます。
 
-このエラーを解決するには、短いセクションのサイズを小さくします。そのためには、#pragma セクション ("sectionname"、read、write、long) を介して長いセクションにデータを明示的に配置し、データ定義と宣言で `__declspec(allocate(".sectionname"))` を使用します。  たとえば、次のように入力します。
+このエラーを解決するには、短いセクションのサイズを小さくします。そのためには、#pragma セクション ("sectionname"、read、write、long) を介して長いセクションにデータを明示的に配置し、 `__declspec(allocate(".sectionname"))` データ定義と宣言でを使用します。  たとえば、次のように入力します。
 
 ```
 #pragma section(".data$mylong", read, write, long)
@@ -50,4 +51,4 @@ struct X {
 } x  = { 23, 23*2, 23*3, 23*4 };
 ```
 
-このエラーには、致命的なエラー `LNK1165`が続きます。
+このエラーの後に致命的なエラーが発生 `LNK1165` します。

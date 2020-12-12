@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: コンパイラの警告 (レベル 3) C4738'
 title: コンパイラの警告 (レベル 3) C4738
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4738
 ms.assetid: 9094895f-7eec-46c2-83d3-249b761d585e
-ms.openlocfilehash: 639fb14fc409a9954315184bab7ae1127460ea0d
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: d57b992438148b3925b5366747db0b9de53ec87e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87214413"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97332144"
 ---
 # <a name="compiler-warning-level-3-c4738"></a>コンパイラの警告 (レベル 3) C4738
 
@@ -19,7 +20,7 @@ ms.locfileid: "87214413"
 
 C4738 は、代入、キャスト、渡された引数、またはその他の操作の結果を丸める必要があるか、または操作がレジスタから不足してメモリを使用する必要があることを警告します (書き込む)。 これにより、パフォーマンスが低下する可能性があります。
 
-この警告を解決して丸めを回避するには、 [/fp: fast](../../build/reference/fp-specify-floating-point-behavior.md)でコンパイルするか、ではなくを使用し **`double`** **`float`** ます。
+この警告を解決して丸めを回避するには、 [/fp: fast](../../build/reference/fp-specify-floating-point-behavior.md) でコンパイルするか、ではなくを使用し **`double`** **`float`** ます。
 
 この警告を解決してレジスタが不足しないようにするには、計算の順序を変更し、インライン展開の使用を変更します。
 

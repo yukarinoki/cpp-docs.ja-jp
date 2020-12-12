@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: CArrayRowset クラス'
 title: CArrayRowset クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -42,12 +43,12 @@ helpviewer_keywords:
 - operator[], arrays
 - m_nRowsRead
 ms.assetid: 511427e1-73ca-4fd8-9ba1-ae9463557cb6
-ms.openlocfilehash: c5f12afa09bc1c62d3287bab93159e217721906f
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 929f8744671cecc54e7c192d4f3ddc17e27287cd
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88843249"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97213183"
 ---
 # <a name="carrayrowset-class"></a>CArrayRowset クラス
 
@@ -67,7 +68,7 @@ class CArrayRowset :
 *TAccessor*<br/>
 行セットで使用するアクセサークラスの型。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** atldbcli.h
 
@@ -80,7 +81,7 @@ class CArrayRowset :
 | [CArrayRowset](#carrayrowset) | コンストラクターです。 |
 | [スナップショット](#snapshot) | 行セット全体をメモリに読み込みます。 |
 
-### <a name="operators"></a>演算子
+### <a name="operators"></a>オペレーター
 
 | 名前 | 説明 |
 |--|--|
@@ -141,7 +142,7 @@ TAccessor & operator[](int nrow);
 
 ### <a name="remarks"></a>解説
 
-*Nrow*が行セット内の行の数を超えると、例外がスローされます。
+*Nrow* が行セット内の行の数を超えると、例外がスローされます。
 
 ## <a name="carrayrowsetm_nrowsread"></a><a name="nrowsread"></a> CArrayRowset:: m_nRowsRead
 

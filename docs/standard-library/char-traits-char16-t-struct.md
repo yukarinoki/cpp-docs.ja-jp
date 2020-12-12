@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「char_traits &lt; char16_t 構造体」を参照してください。 &gt;
 title: char_traits&lt;char16_t&gt; 構造体
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - char_traits<char16_t> class
 ms.assetid: 5daf3b62-dd6e-451f-b189-0350a04ff966
-ms.openlocfilehash: 53a77ff993d3a99cae1ec8e48a06dd7800ce74c7
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 2ad725b514d6804edfdea6d4ba72c2cfd44c4f21
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87230221"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97325263"
 ---
 # <a name="char_traitsltchar16_tgt-struct"></a>char_traits&lt;char16_t&gt; 構造体
 
-テンプレート構造体**char_traits \<CharType> **型の要素に特殊化した構造体 **`char16_t`** 。
+テンプレート構造体 **char_traits \<CharType>** 型の要素に特殊化した構造体 **`char16_t`** 。
 
 ## <a name="syntax"></a>構文
 
@@ -29,7 +30,7 @@ struct char_traits<char16_t>;
 
 特殊化により、構造体は、型のオブジェクトを操作するライブラリ関数を利用でき **`char16_t`** ます。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:**\<string>
 

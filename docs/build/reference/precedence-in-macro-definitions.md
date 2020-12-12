@@ -1,32 +1,33 @@
 ---
+description: '詳細情報: マクロ定義における優先順位'
 title: マクロ定義の優先順位
 ms.date: 11/04/2016
 helpviewer_keywords:
 - NMAKE program, precedence in macro definitions
 - macros, precedence
 ms.assetid: 0c13182d-83cb-4cbd-af2d-f4c916b62aeb
-ms.openlocfilehash: 38a653a9f460beae81f9f88ea457870d30f25339
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1738c4ba77f330103395278a6daae169b04fae4c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62320163"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97225896"
 ---
 # <a name="precedence-in-macro-definitions"></a>マクロ定義の優先順位
 
-マクロに複数の定義がある場合は、NMAKE が最も高い優先順位の定義を使用します。 次に、高いものから、優先順位の順序を示します。
+マクロに複数の定義がある場合、NMAKE は最も優先順位の高い定義を使用します。 次の一覧に、優先順位の高い順を示します。
 
-1. コマンドラインで定義されているマクロ
+1. コマンドラインで定義されたマクロ
 
-1. マクロは、メイクファイルで定義されているか、ファイルを含める
+1. メイクファイルまたはインクルードファイルで定義されたマクロ
 
-1. 継承の環境変数マクロ
+1. 継承された環境変数マクロ
 
 1. Tools.ini ファイルで定義されているマクロ
 
-1. 定義済みマクロなど[CC](command-macros-and-options-macros.md)と[AS](command-macros-and-options-macros.md)
+1. [CC](command-macros-and-options-macros.md)や[as](command-macros-and-options-macros.md)などの定義済みマクロ
 
-/E を使用して、同じ名前のメイクファイルのマクロをオーバーライドする環境変数から継承されたマクロが発生します。 使用 **!UNDEF**コマンドラインを上書きします。
+/E を使用して、環境変数から継承されたマクロが同じ名前のメイクファイルマクロをオーバーライドするようにします。 を使用し **ます。UNDEF** は、コマンドラインをオーバーライドします。
 
 ## <a name="see-also"></a>関連項目
 

@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: 致命的なエラー C1083'
 title: 致命的なエラー C1083
 ms.date: 09/01/2017
 f1_keywords:
@@ -6,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - C1083
 ms.assetid: 97e52df3-e79c-4f85-8f1e-bbd1057d55e7
-ms.openlocfilehash: 57ae8f2d0b7f02732032151f86617498e5201c61
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 5a2a0cb842b385963f4f4695a2289abc1c07a702
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91509746"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97189627"
 ---
 # <a name="fatal-error-c1083"></a>致命的なエラー C1083
 
-> *Filetype*ファイルを開くことができません: '*file*': *message*
+> *Filetype* ファイルを開くことができません: '*file*': *message*
 
 必要なファイルが見つからない場合、コンパイラは C1083 エラーを生成します。 このエラーには多くの原因が考えられます。 不適切なインクルード検索パス、または missing または misnamed ヘッダーファイルは、最も一般的な原因ですが、他のファイルの種類や問題によって C1083 が発生する場合もあります。 コンパイラがこのエラーを生成する一般的な理由のいくつかを次に示します。
 
@@ -55,7 +56,7 @@ ms.locfileid: "91509746"
 
 `#include "headers\myheader.h"`
 
-相対パスは、インクルード検索パスのディレクトリと共に使用することもできます。 **インクルード**環境変数にディレクトリを追加する場合、または Visual Studio の**インクルードディレクトリ**パスにディレクトリを追加する場合は、インクルードディレクティブにパスの一部を追加しないでください。 たとえば、ヘッダーがにあり、 *`\path\example\headers\myheader.h`* *`\path\example\headers\`* Visual Studio の **インクルードディレクトリ** パスにを追加したが、 `#include` ディレクティブがファイルをとして参照している場合などです。
+相対パスは、インクルード検索パスのディレクトリと共に使用することもできます。 **インクルード** 環境変数にディレクトリを追加する場合、または Visual Studio の **インクルードディレクトリ** パスにディレクトリを追加する場合は、インクルードディレクティブにパスの一部を追加しないでください。 たとえば、ヘッダーがにあり、 *`\path\example\headers\myheader.h`* *`\path\example\headers\`* Visual Studio の **インクルードディレクトリ** パスにを追加したが、 `#include` ディレクティブがファイルをとして参照している場合などです。
 
 `#include <headers\myheader.h>`
 
@@ -75,7 +76,7 @@ Visual Studio でインクルードディレクトリパスを設定するには
 
 ## <a name="the-command-line-include-or-lib-environment-is-not-set"></a>コマンドラインのインクルードまたは LIB 環境が設定されていません
 
-コマンド ラインでコンパイラを実行するときに、環境変数を使用して、検索パスを指定することはよくあります。 **INCLUDE**または**LIB**環境変数によって記述された検索パスが正しく設定されていない場合は、C1083 エラーが生成されることがあります。 コマンドラインビルドの基本環境を設定するには、開発者コマンドプロンプトのショートカットを使用することを強くお勧めします。 詳細については、 [コマンドラインでの c/c + + のビルドに](../../build/building-on-the-command-line.md)関する説明を参照してください。 環境変数の使用方法の詳細については、「 [方法: ビルドで環境変数を使用](/visualstudio/msbuild/how-to-use-environment-variables-in-a-build)する」を参照してください。
+コマンド ラインでコンパイラを実行するときに、環境変数を使用して、検索パスを指定することはよくあります。 **INCLUDE** または **LIB** 環境変数によって記述された検索パスが正しく設定されていない場合は、C1083 エラーが生成されることがあります。 コマンドラインビルドの基本環境を設定するには、開発者コマンドプロンプトのショートカットを使用することを強くお勧めします。 詳細については、 [コマンドラインでの c/c + + のビルドに](../../build/building-on-the-command-line.md)関する説明を参照してください。 環境変数の使用方法の詳細については、「 [方法: ビルドで環境変数を使用](/visualstudio/msbuild/how-to-use-environment-variables-in-a-build)する」を参照してください。
 
 ## <a name="the-file-may-be-locked-or-in-use"></a>ファイルがロックされているか、使用中の可能性があります
 

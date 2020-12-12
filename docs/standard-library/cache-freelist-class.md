@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: cache_freelist クラス'
 title: cache_freelist クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - stdext::cache_freelist [C++], allocate
 - stdext::cache_freelist [C++], deallocate
 ms.assetid: 840694de-36ba-470f-8dae-2b723d5a8cd9
-ms.openlocfilehash: bbe0ff0f2297afcec99bd162ebe6a6d3e10f9bce
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: 9d5b3da272cff39b0c9d7d69df2c744d6952cd03
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88560727"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97325383"
 ---
 # <a name="cache_freelist-class"></a>cache_freelist クラス
 
@@ -38,7 +39,7 @@ class cache_freelist
 
 ## <a name="remarks"></a>解説
 
-Cache_freelist クラステンプレートは、サイズ *Sz*のメモリブロックの空きリストを保持します。 フリーリストがいっぱいの場合は、 **operator delete** を使用してメモリブロックの割り当てを解除します。 フリーリストが空の場合は、 **operator new** を使用して新しいメモリブロックを割り当てます。 フリーリストの最大サイズは、 *max* パラメーターで渡されるクラス max クラスによって決まります。
+Cache_freelist クラステンプレートは、サイズ *Sz* のメモリブロックの空きリストを保持します。 フリーリストがいっぱいの場合は、 **operator delete** を使用してメモリブロックの割り当てを解除します。 フリーリストが空の場合は、 **operator new** を使用して新しいメモリブロックを割り当てます。 フリーリストの最大サイズは、 *max* パラメーターで渡されるクラス max クラスによって決まります。
 
 各メモリブロックは、使用可能なメモリの *Sz* バイトと、 **operator new** および **operator delete** に必要なデータを保持します。
 
@@ -55,7 +56,7 @@ Cache_freelist クラステンプレートは、サイズ *Sz*のメモリブロ
 |[割当て](#allocate)|メモリのブロックを割り当てます。|
 |[配置](#deallocate)|指定した位置で始まるストレージから、指定された数のオブジェクトを解放します。|
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:**\<allocators>
 
