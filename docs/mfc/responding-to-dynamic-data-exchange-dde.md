@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: 動的データ交換への応答 (DDE)'
 title: ダイナミック データ エクスチェンジ (DDE) への応答
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -11,17 +12,17 @@ helpviewer_keywords:
 - responding to dynamic data exchange (DDE)
 - frame windows [MFC], shell registration
 ms.assetid: 4db838d5-62cf-4123-915a-66e514155c0c
-ms.openlocfilehash: f6ca50b95e35ea4d7a6c29c6dd6919e02c9bdc7a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3dc9a3881b78f95a8571143aceace50836ab8fa0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62308915"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97218031"
 ---
 # <a name="responding-to-dynamic-data-exchange-dde"></a>ダイナミック データ エクスチェンジ (DDE) への応答
 
-フレーム ウィンドウは、(ファイル拡張子が登録されているか、アプリケーションに関連付けられている) 場合、ファイルをファイル マネージャーから開くダイナミック データ エクス (チェンジ DDE) の要求に応答できます。 参照してください[シェル登録](../mfc/special-cwinapp-services.md)します。
+フレームウィンドウは、ファイルマネージャーからファイルを開くためのダイナミックデータエクスチェンジ (DDE) 要求に応答できます (ファイル拡張子が登録されているか、アプリケーションに関連付けられている場合)。 「 [シェルの登録](../mfc/special-cwinapp-services.md)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 
-[フレーム ウィンドウの使用](../mfc/using-frame-windows.md)
+[フレームウィンドウの使用](../mfc/using-frame-windows.md)

@@ -1,5 +1,6 @@
 ---
-title: クラスを表示します。
+description: '詳細情報: CRecentFileList クラス'
+title: CRecentFileList クラス
 ms.date: 11/04/2016
 f1_keywords:
 - CRecentFileList
@@ -22,14 +23,14 @@ helpviewer_keywords:
 - CRecentFileList [MFC], UpdateMenu
 - CRecentFileList [MFC], WriteList
 ms.assetid: a77f0524-7584-4582-849a-7e97b76d186e
-ms.openlocfilehash: a2102c6a39c14c548828e57ad1c49de6a5bc03dd
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 9433e65336cba1018c7bff8cf3a90e239ae5e3eb
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81370907"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97301127"
 ---
-# <a name="crecentfilelist-class"></a>クラスを表示します。
+# <a name="crecentfilelist-class"></a>CRecentFileList クラス
 
 MRU ファイル リストのコントロールをサポートします。
 
@@ -45,41 +46,41 @@ class CRecentFileList
 
 |名前|説明|
 |----------|-----------------|
-|[リスト::コリストファイルリスト](#crecentfilelist)|`CRecentFileList` オブジェクトを構築します。|
+|[CRecentFileList::CRecentFileList](#crecentfilelist)|`CRecentFileList` オブジェクトを構築します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
 |名前|説明|
 |----------|-----------------|
-|[ファイルリスト::追加](#add)|MRU ファイル リストにファイルを追加します。|
-|[一覧::表示名を取得します。](#getdisplayname)|MRU ファイル名のメニュー表示の表示名を指定します。|
-|[一覧::取得サイズ](#getsize)|MRU ファイル リスト内のファイル数を取得します。|
-|[リストの一覧::リストの読み取り](#readlist)|レジストリまたは から MRU ファイルの一覧を読み取ります。INI ファイル。|
-|[リスト::削除](#remove)|MRU ファイル リストからファイルを削除します。|
-|[一覧:メニューの更新](#updatemenu)|MRU ファイルリストのメニュー表示を更新します。|
-|[リスト::ライトリスト](#writelist)|レジストリまたは から MRU ファイルリストを書き込みます。INI ファイル。|
+|[CRecentFileList:: Add](#add)|MRU ファイルリストにファイルを追加します。|
+|[CRecentFileList:: GetDisplayName](#getdisplayname)|MRU ファイル名をメニューに表示するための表示名を提供します。|
+|[CRecentFileList:: GetSize](#getsize)|MRU ファイルリスト内のファイルの数を取得します。|
+|[CRecentFileList:: ReadList](#readlist)|MRU ファイルリストをレジストリまたはから読み取ります。INI ファイル。|
+|[CRecentFileList:: Remove](#remove)|MRU ファイルリストからファイルを削除します。|
+|[CRecentFileList:: UpdateMenu](#updatemenu)|MRU ファイルリストのメニュー表示を更新します。|
+|[CRecentFileList:: WriteList](#writelist)|レジストリまたはから MRU ファイルリストを書き込みます。INI ファイル。|
 
 ### <a name="public-operators"></a>パブリック演算子
 
 |名前|説明|
 |----------|-----------------|
-|[一覧::演算子\[\]](#operator_at)|指定した`CString`位置にあるオブジェクトを返します。|
+|[CRecentFileList:: operator \[\]](#operator_at)|`CString`指定された位置にあるオブジェクトを返します。|
 
 ## <a name="remarks"></a>解説
 
-MRU ファイルリストにファイルを追加したり、MRU ファイルリストから削除したり、ファイルリストをレジストリまたは .INI ファイル、および MRU ファイルリストを表示するメニューを更新することができます。
+MRU ファイルリストに対してファイルの追加または削除を行うことができます。ファイルの一覧は、レジストリまたはに対して読み書きできます。INI ファイルを使用すると、MRU ファイルリストを表示するメニューを更新できます。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
 `CRecentFileList`
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-**ヘッダー:** afxadv.h
+**ヘッダー:** afxadv
 
-## <a name="crecentfilelistadd"></a><a name="add"></a>ファイルリスト::追加
+## <a name="crecentfilelistadd"></a><a name="add"></a> CRecentFileList:: Add
 
-最近使用した (MRU) ファイルリストにファイルを追加します。
+最近使用した (MRU) ファイルの一覧にファイルを追加します。
 
 ```
 virtual void Add(LPCTSTR lpszPathName);
@@ -103,26 +104,26 @@ void Add(
 
 ### <a name="parameters"></a>パラメーター
 
-*パス名*<br/>
+*lpszPathName*<br/>
 リストに追加するパス名を指定します。
 
-*をクリックします。*<br/>
-アプリケーションのアプリケーション ユーザー モデル ID を指定します。
+*lpszAppID*<br/>
+アプリケーションのアプリケーションユーザーモデル ID を指定します。
 
-*Pitem*<br/>
+*pItem*<br/>
 リストに追加するシェル項目へのポインターを指定します。
 
-*Plink*<br/>
-リストに追加するシェル リンクへのポインターを指定します。
+*pLink*<br/>
+リストに追加するシェルリンクへのポインターを指定します。
 
-*Pidl*<br/>
-最近使ったドキュメント フォルダに追加するシェル項目の IDLIST を指定します。
+*pidl*<br/>
+最近使用した docs フォルダーに追加する必要があるシェル項目の IDLIST を指定します。
 
 ### <a name="remarks"></a>解説
 
-ファイル名は MRU リストの先頭に追加されます。 ファイル名が既に MRU リストに存在する場合は、先頭に移動します。
+ファイル名は MRU 一覧の先頭に追加されます。 MRU 一覧にファイル名が既に存在する場合は、一番上に移動します。
 
-## <a name="crecentfilelistcrecentfilelist"></a><a name="crecentfilelist"></a>リスト::コリストファイルリスト
+## <a name="crecentfilelistcrecentfilelist"></a><a name="crecentfilelist"></a> CRecentFileList::CRecentFileList
 
 `CRecentFileList` オブジェクトを構築します。
 
@@ -137,28 +138,28 @@ CRecentFileList(
 
 ### <a name="parameters"></a>パラメーター
 
-*n開始*<br/>
-MRU (最近使用した) ファイル・リストのメニュー表示での番号付けのオフセット。
+*nStart*<br/>
+MRU (最近使用された) ファイルリストのメニュー表示での番号付けのオフセット。
 
-*セクション*<br/>
-レジストリまたはアプリケーションのセクションの名前を指定します。MRU ファイル リストが読み取られるか書き込まれる INI ファイル。
+*lpszSection*<br/>
+レジストリまたはアプリケーションののセクション名を指します。MRU ファイルリストが読み取られ、書き込まれている INI ファイル。
 
-*フォーマット*<br/>
-レジストリまたはアプリケーションの に格納されているエントリの名前に使用する書式指定文字列へのポイント。INI ファイル。
+*lpszEntryFormat*<br/>
+レジストリまたはアプリケーションのに格納されているエントリの名前に使用される書式指定文字列を指します。INI ファイル。
 
-*Nsize*<br/>
-MRU ファイル リスト内の最大ファイル数。
+*nSize*<br/>
+MRU ファイルリスト内のファイルの最大数。
 
-*nマックスディスレン*<br/>
-MRU ファイル リストのファイル名のメニュー表示に使用できる最大長 (文字数)。
+*nMaxDispLen*<br/>
+MRU ファイルリスト内のファイル名のメニュー表示に使用できる最大文字数。
 
 ### <a name="remarks"></a>解説
 
-*lpszEntryFormat*によって指される書式指定文字列は、"%d" を含む必要があります。 たとえば、書式指定文字列の場合、`"file%d"`エントリは 、 など`file0``file1`という名前になります。
+*Lpszentryformat* が指す書式指定文字列には、"% d" が含まれている必要があります。これは、各 MRU 項目のインデックスを置き換えるために使用されます。 たとえば、書式文字列がの場合、エントリには、、などの `"file%d"` 名前が付けられ `file0` `file1` ます。
 
-## <a name="crecentfilelistgetdisplayname"></a><a name="getdisplayname"></a>一覧::表示名を取得します。
+## <a name="crecentfilelistgetdisplayname"></a><a name="getdisplayname"></a> CRecentFileList:: GetDisplayName
 
-MRU ファイル・リストのメニュー表示で使用する、MRU ファイル・リスト内のファイルの表示名を取得します。
+Mru リストのメニュー表示に使用する、MRU ファイルリスト内のファイルの表示名を取得します。
 
 ```
 virtual BOOL GetDisplayName(
@@ -172,31 +173,31 @@ virtual BOOL GetDisplayName(
 ### <a name="parameters"></a>パラメーター
 
 *strName*<br/>
-MRU ファイルのメニューリストに表示される名前のファイルの完全パス。
+MRU ファイルのメニューリストに表示される名前を持つファイルの完全パスです。
 
 *nIndex*<br/>
-MRU ファイル リスト内のファイルの 0 から始まるインデックス。
+MRU ファイルリスト内のファイルの0から始まるインデックス。
 
-*ル・シ・ラ*<br/>
-現在のディレクトリを保持する文字列。
+*lpszCurDir*<br/>
+現在のディレクトリを保持している文字列。
 
 *nCurDir*<br/>
 現在のディレクトリ文字列の長さ。
 
-*名前*<br/>
-0 以外の場合は、ファイルの基本名が最大表示長 *(nMaxDispLen*パラメーターとして`CRecentFileList`コンストラクターに渡された) を超えても返されることを示します。
+*bAtLeastName*<br/>
+0以外の場合は、ファイルの基本名が返されることを示します ( *nMaxDispLen* パラメーターとしてコンストラクターに渡される `CRecentFileList` )。
 
 ### <a name="return-value"></a>戻り値
 
-最後に使用された (MRU) ファイル・リスト内の指定されたインデックスにファイル名がない場合**は FALSE。**
+最後に使用した (MRU) ファイルリストの指定されたインデックスにファイル名がない場合は **FALSE** 。
 
 ### <a name="remarks"></a>解説
 
-ファイルが現在のディレクトリにある場合、この関数はディレクトリを表示から外します。 ファイル名が長すぎる場合は、ディレクトリと拡張子が削除されます。 ファイル名がまだ長すぎる場合は *、bAtLeastName*が 0 以外の場合を除き、表示名は空の文字列に設定されます。
+ファイルが現在のディレクトリにある場合、この関数はディレクトリを表示から外に出ます。 ファイル名が長すぎる場合、ディレクトリと拡張子は削除されます。 ファイル名が長すぎる場合、 *bAtLeastName* が0以外の場合を除き、表示名は空の文字列に設定されます。
 
-## <a name="crecentfilelistgetsize"></a><a name="getsize"></a>一覧::取得サイズ
+## <a name="crecentfilelistgetsize"></a><a name="getsize"></a> CRecentFileList:: GetSize
 
-MRU ファイル リスト内のファイル数を取得します。
+MRU ファイルリスト内のファイルの数を取得します。
 
 ```
 int GetSize() const;
@@ -204,11 +205,11 @@ int GetSize() const;
 
 ### <a name="return-value"></a>戻り値
 
-現在使用されている (MRU) ファイル リスト内のファイルの数。
+現在使用されている (MRU) ファイルリスト内のファイルの数。
 
-## <a name="crecentfilelistoperator--"></a><a name="operator_at"></a>一覧::演算子 [ ]
+## <a name="crecentfilelistoperator--"></a><a name="operator_at"></a> CRecentFileList:: operator []
 
-オーバーロードされた添字 (`[]`) 演算子は`CString`*、nIndex*の 0 から始まるインデックスで指定された単一の値を返します。
+オーバーロードされた添字 ( `[]` ) 演算子は、型の `CString` 0 から始まるインデックスで指定された単一のを返します。
 
 ```
 CString& operator[ ](int nindex);
@@ -217,19 +218,19 @@ CString& operator[ ](int nindex);
 ### <a name="parameters"></a>パラメーター
 
 *nIndex*<br/>
-s のセット内の`CString`a の`CString`0 から始まるインデックス。
+のセット内のの0から始まるインデックス `CString` `CString` 。
 
-## <a name="crecentfilelistreadlist"></a><a name="readlist"></a>リストの一覧::リストの読み取り
+## <a name="crecentfilelistreadlist"></a><a name="readlist"></a> CRecentFileList:: ReadList
 
-レジストリまたはアプリケーションのから、最近使用した (MRU) ファイルの一覧を読み取ります。INI ファイル。
+最近使用した (MRU) ファイルの一覧をレジストリまたはアプリケーションのから読み取ります。INI ファイル。
 
 ```
 virtual void ReadList();
 ```
 
-## <a name="crecentfilelistremove"></a><a name="remove"></a>リスト::削除
+## <a name="crecentfilelistremove"></a><a name="remove"></a> CRecentFileList:: Remove
 
-MRU ファイル リストからファイルを削除します。
+MRU ファイルリストからファイルを削除します。
 
 ```
 virtual void Remove(int nIndex);
@@ -238,9 +239,9 @@ virtual void Remove(int nIndex);
 ### <a name="parameters"></a>パラメーター
 
 *nIndex*<br/>
-最後に使用した (MRU) ファイルリストから削除するファイルの 0 から始まるインデックス。
+最近使用した (MRU) ファイルの一覧から削除するファイルの0から始まるインデックス。
 
-## <a name="crecentfilelistupdatemenu"></a><a name="updatemenu"></a>一覧:メニューの更新
+## <a name="crecentfilelistupdatemenu"></a><a name="updatemenu"></a> CRecentFileList:: UpdateMenu
 
 MRU ファイルリストのメニュー表示を更新します。
 
@@ -250,12 +251,12 @@ virtual void UpdateMenu(CCmdUI* pCmdUI);
 
 ### <a name="parameters"></a>パラメーター
 
-*を使用します。*<br/>
-最近使用した (MRU) ファイル一覧メニューの[CCmdUI](../../mfc/reference/ccmdui-class.md)オブジェクトへのポインター。
+*pCmdUI*<br/>
+最近使用した (MRU) ファイルリストメニューの [CCmdUI](../../mfc/reference/ccmdui-class.md) オブジェクトへのポインター。
 
-## <a name="crecentfilelistwritelist"></a><a name="writelist"></a>リスト::ライトリスト
+## <a name="crecentfilelistwritelist"></a><a name="writelist"></a> CRecentFileList:: WriteList
 
-最後に使用した (MRU) ファイルの一覧をレジストリまたはアプリケーションの .INI ファイル。
+最近使用した (MRU) ファイルの一覧をレジストリまたはアプリケーションのに書き込みます。INI ファイル。
 
 ```
 virtual void WriteList();
@@ -263,4 +264,4 @@ virtual void WriteList();
 
 ## <a name="see-also"></a>関連項目
 
-[階層グラフ](../../mfc/hierarchy-chart.md)
+[階層図](../../mfc/hierarchy-chart.md)

@@ -1,15 +1,16 @@
 ---
+description: '詳細情報: HTML の基礎'
 title: HTML の基礎
 ms.date: 11/04/2016
 helpviewer_keywords:
 - HTML [MFC], about HTML
 ms.assetid: aab8ea9f-12d4-4bdd-a585-ac3124081a2a
-ms.openlocfilehash: 29ca2e3df4981db22a10281ba2a2938fc91d5b46
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: f32926beb9152441169320bf3553b0066f78fa7c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84620001"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97290246"
 ---
 # <a name="html-basics"></a>HTML の基礎
 
@@ -21,7 +22,7 @@ ms.locfileid: "84620001"
 
 1. メモ帳または任意のプレーンテキストエディターを開きます。
 
-1. [**ファイル**] メニューの [**新規作成**] をクリックします。
+1. [ **ファイル** ] メニューの [ **新規作成**] をクリックします。
 
 1. 次の行を入力します。
 
@@ -33,9 +34,9 @@ ms.locfileid: "84620001"
     </HTML>
     ```
 
-1. [**ファイル**] メニューの [**保存**] をクリックし、ファイルを c:\webpages\First.htm. として保存します。 ファイルはエディターで開いたままにしておきます。
+1. [ **ファイル** ] メニューの [ **保存**] をクリックし、ファイルを c:\webpages\First.htm として保存します。 ファイルはエディターで開いたままにしておきます。
 
-1. ブラウザーに切り替え、[**ファイル**] メニューの [**開く**] をクリックするか、ブラウザーの URL 編集ボックスに「 *file://C:/webpages/first.htm* 」と入力します。 ウィンドウキャプションが "Top HTML Tags" である空のページが表示されます。
+1. ブラウザーに切り替え、[ **ファイル** ] メニューの [ **開く**] をクリックするか、ブラウザーの URL 編集ボックスに「 *file://C:/webpages/first.htm* 」と入力します。 ウィンドウキャプションが "Top HTML Tags" である空のページが表示されます。
 
    タグがペアで、山かっこに囲まれていることに注意してください。 タグの大文字と小文字は区別されませんが、多くの場合、タグを目立たせるために使用されます。
 
@@ -50,7 +51,7 @@ ms.locfileid: "84620001"
     </BODY>
     ```
 
-1. [**ファイル**] メニューの [**保存**] をクリックします。
+1. [ **ファイル** ] メニューの [ **保存**] をクリックします。
 
 1. ブラウザーに戻り、ページを更新します。
 

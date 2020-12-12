@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: XML データへのアクセス'
 title: XML データへのアクセス
 ms.date: 10/18/2018
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - rowsets [C++], retrieving XML data
 - CStreamRowset class, retrieving XML data
 ms.assetid: 6b693d55-a554-4846-8118-e8773b79b572
-ms.openlocfilehash: 437f1d103420ec5727294894c02587c68cffbdda
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: f229dc4567247ea95ebf00a5dbc9316be8aeac1b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91509131"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97246085"
 ---
 # <a name="accessing-xml-data"></a>XML データへのアクセス
 
@@ -36,7 +37,7 @@ ms.locfileid: "91509131"
 CCommand<CAccessor<CMyAccessor>, CStreamRowset> myCmd;
 ```
 
-\- または -
+または
 
 ```cpp
 CCommand<CNoAccessor, CStreamRowset> myCmd;
@@ -52,7 +53,7 @@ myCmd.m_spStream->Read()
 
 SQL Server 2000 では、XML の書式設定が行われ、すべての列と行セットのすべての行が1つの XML 文字列として返されます。
 
-メソッドの使用例については `Read` 、「[単純なコンシューマーの実装](../../data/oledb/implementing-a-simple-consumer.md)」の「 **XML サポートをコンシューマーに追加**する」を参照してください。
+メソッドの使用例については `Read` 、「[単純なコンシューマーの実装](../../data/oledb/implementing-a-simple-consumer.md)」の「 **XML サポートをコンシューマーに追加** する」を参照してください。
 
 > [!NOTE]
 > を使用した XML サポートは `CStreamRowset` SQL Server 2000 でのみ動作し、SQL Server 2000 (MDAC と共にインストールされる) の OLE DB プロバイダーが必要です。

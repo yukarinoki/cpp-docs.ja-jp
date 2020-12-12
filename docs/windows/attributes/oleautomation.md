@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: oleautomation'
 title: oleautomation (C++ COM 属性)
 ms.date: 10/02/2018
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - oleautomation attribute
 ms.assetid: c1086c91-260b-4dc3-b244-662852d09906
-ms.openlocfilehash: 47842454ce52c65cf71a317f39a7649b0f9dd27d
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 0227b1926d1e78f8f7bbfeb9b75ddd1b6d98aa2f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88842183"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97327416"
 ---
 # <a name="oleautomation"></a>oleautomation
 
@@ -29,9 +30,9 @@ ms.locfileid: "88842183"
 
 ## <a name="example"></a>例
 
-**Oleautomation**の使用例については、 [defaultvalue](defaultvalue.md)の例と[非拡張](nonextensible.md)の例を参照してください。
+**Oleautomation** の使用例については、 [defaultvalue](defaultvalue.md)の例と [非拡張](nonextensible.md)の例を参照してください。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 | 属性コンテキスト | 値 |
 |-|-|

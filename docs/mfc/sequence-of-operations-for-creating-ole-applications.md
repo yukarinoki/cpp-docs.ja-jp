@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: OLE アプリケーションを作成するための一連の操作'
 title: OLE アプリケーションの作成手順
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,28 +8,28 @@ helpviewer_keywords:
 - applications [OLE], creating
 - applications [OLE]
 ms.assetid: 84b0f606-36c1-4253-9cea-44427f0074b9
-ms.openlocfilehash: b7fa989d1a3b799cf6b427e27142d4479be900bf
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2bce49d569c6d3def536cbe9386cafbe08ccdbfb
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62308187"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97217563"
 ---
 # <a name="sequence-of-operations-for-creating-ole-applications"></a>OLE アプリケーションの作成手順
 
-次の表は、OLE リンク、埋め込みアプリケーションを作成することで、役割、およびフレームワークの役割を示します。 これらを実行する手順のシーケンスではなく使用できるオプションを表します。
+次の表は、OLE リンクと埋め込みアプリケーションの作成におけるロールとフレームワークの役割を示しています。 これらは、実行する一連の手順ではなく、使用可能なオプションを表します。
 
 ### <a name="creating-ole-applications"></a>OLE アプリケーションの作成
 
-|タスク|そうですよね|フレームワークを動作します。|
+|タスク|そうですよね|フレームワークは|
 |----------|------------|------------------------|
-|COM コンポーネントを作成します。|MFC アプリケーション ウィザードを実行します。 選択**フル サーバー**または**ミニ サーバー**で、**複合ドキュメント サポート**タブ。|フレームワークは、COM コンポーネントの機能が有効になっていると、スケルトン アプリケーションを生成します。 すべての COM 機能は、わずかな変更だけで、既存のアプリケーションに転送できます。|
-|コンテナー アプリケーションをゼロから作成します。|MFC アプリケーション ウィザードを実行します。 選択**コンテナー**で、**複合ドキュメント サポート**タブ。クラス ビューを使用すると、ソース コード エディターに移動します。 COM ハンドラー関数のコードを入力します。|フレームワークでは、COM コンポーネント (サーバー) のアプリケーションによって作成された COM オブジェクトを挿入できる、スケルトン アプリケーションを生成します。|
-|最初からオートメーションをサポートするアプリケーションを作成します。|MFC アプリケーション ウィザードを実行します。 選択**Automation**から、**高度な機能**タブ。お使いの automation のメソッドとプロパティを公開するのにには、クラス ビューを使用します。|フレームワークには、スケルトン アプリケーションをアクティブ化し、他のアプリケーションによって自動化できますが生成されます。|
+|COM コンポーネントを作成します。|MFC アプリケーションウィザードを実行します。 [**複合ドキュメントのサポート**] タブで、[**フルサーバー** ] または [**ミニサーバー** ] を選択します。|フレームワークによって、COM コンポーネント機能が有効になっているスケルトンアプリケーションが生成されます。 すべての COM 機能は、わずかな変更だけで既存のアプリケーションに転送できます。|
+|コンテナーアプリケーションを最初から作成します。|MFC アプリケーションウィザードを実行します。 [**複合ドキュメントサポート**] タブで [**コンテナー** ] を選択します。クラスビューを使用して、ソースコードエディターにアクセスします。 COM ハンドラー関数のコードを入力します。|フレームワークは、COM コンポーネント (サーバー) アプリケーションによって作成された COM オブジェクトを挿入できるスケルトンアプリケーションを生成します。|
+|最初からオートメーションをサポートするアプリケーションを作成します。|MFC アプリケーションウィザードを実行します。 **[高度な機能**] タブで [**オートメーション**] を選択します。アプリケーションのメソッドとプロパティをオートメーション用に公開するには、クラスビューを使用します。|フレームワークは、他のアプリケーションによってアクティブ化および自動化できるスケルトンアプリケーションを生成します。|
 
 ## <a name="see-also"></a>関連項目
 
-[フレームワークを使ったアプリケーションの作成](../mfc/building-on-the-framework.md)<br/>
-[MFC アプリケーションの作成手順](../mfc/sequence-of-operations-for-building-mfc-applications.md)<br/>
-[ActiveX コントロールの作成手順](../mfc/sequence-of-operations-for-creating-activex-controls.md)<br/>
-[データベース アプリケーションの作成手順](../mfc/sequence-of-operations-for-creating-database-applications.md)
+[フレームワークでのビルド](../mfc/building-on-the-framework.md)<br/>
+[MFC アプリケーションをビルドするための一連の操作](../mfc/sequence-of-operations-for-building-mfc-applications.md)<br/>
+[ActiveX コントロールを作成するための一連の操作](../mfc/sequence-of-operations-for-creating-activex-controls.md)<br/>
+[データベースアプリケーションを作成するための一連の操作](../mfc/sequence-of-operations-for-creating-database-applications.md)

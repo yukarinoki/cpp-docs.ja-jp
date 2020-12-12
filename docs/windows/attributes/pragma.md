@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: プラグマ'
 title: pragma (C++ COM 属性)
 ms.date: 10/02/2018
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - pragma attribute
 ms.assetid: 3f90d023-b8b5-4007-8311-008bb72cbea1
-ms.openlocfilehash: e5683a6f52eccf9eae7c29010849a148e506b286
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 1c9b9313b05d5f6b6123189b823ef750cb7c16a7
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88836170"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97327399"
 ---
 # <a name="pragma"></a>pragma
 
@@ -30,7 +31,7 @@ ms.locfileid: "88836170"
 
 ## <a name="remarks"></a>解説
 
-**プラグマ**C++ 属性には、 [pragma](/windows/win32/Midl/pragma) MIDL 属性と同じ機能があります。
+**プラグマ** C++ 属性には、 [pragma](/windows/win32/Midl/pragma) MIDL 属性と同じ機能があります。
 
 ## <a name="example"></a>例
 
@@ -48,7 +49,7 @@ __interface A
 };
 ```
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 | 属性コンテキスト | 値 |
 |-|-|

@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「propget」を参照してください。
 title: propget (C++ COM 属性)
 ms.date: 10/02/2018
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - propget attribute
 ms.assetid: c9d4a97f-36dd-4b61-8eb0-b1a217598f14
-ms.openlocfilehash: 2627213d1d1dc74edb33d70ac45f3b7bbd38ba6b
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 9fe284fb35d4753fbc3e124458200a9882838450
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88839973"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97327403"
 ---
 # <a name="propget"></a>propget
 
@@ -29,9 +30,9 @@ ms.locfileid: "88839973"
 
 ## <a name="example"></a>例
 
-**Propget**の使用例については、[バインド](bindable.md)可能なの例を参照してください。
+**Propget** の使用例については、[バインド](bindable.md)可能なの例を参照してください。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 | 属性コンテキスト | 値 |
 |-|-|

@@ -1,5 +1,6 @@
 ---
-title: Cメニュークラス
+description: '詳細情報: CMenu クラス'
+title: CMenu クラス
 ms.date: 11/04/2016
 f1_keywords:
 - CMenu
@@ -84,14 +85,14 @@ helpviewer_keywords:
 - CMenu [MFC], TrackPopupMenuEx
 - CMenu [MFC], m_hMenu
 ms.assetid: 40cacfdc-d45c-4ec7-bf28-991c72812499
-ms.openlocfilehash: 5ec97d8cf039034078f29b38fb6a41d6ff9a5e53
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: e1f0caea839e0660db10d055adf2af5fc7deb353
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81369977"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97341582"
 ---
-# <a name="cmenu-class"></a>Cメニュークラス
+# <a name="cmenu-class"></a>CMenu クラス
 
 Windows の `HMENU`をカプセル化したものです。
 
@@ -107,71 +108,71 @@ class CMenu : public CObject
 
 |名前|説明|
 |----------|-----------------|
-|[Cメニュー::Cメニュー](#cmenu)|`CMenu` オブジェクトを構築します。|
+|[CMenu:: CMenu](#cmenu)|`CMenu` オブジェクトを構築します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
 |名前|説明|
 |----------|-----------------|
 |[CMenu::AppendMenu](#appendmenu)|このメニューの末尾に新しい項目を追加します。|
-|[Cメニュー::添付](#attach)|Windows のメニュー ハンドルをオブジェクト`CMenu`にアタッチします。|
-|[メニュー::チェックメニューアイテム](#checkmenuitem)|ポップアップ メニューのメニュー項目の横にチェック マークを付けるか、またはメニュー項目のチェック マークを削除します。|
-|[Cメニュー::チェックメニューラジオアイテム](#checkmenuradioitem)|メニュー項目の横にラジオ ボタンを配置し、そのオプション ボタンをグループ内の他のすべてのメニュー項目から削除します。|
-|[Cメニュー::メニューを作成します。](#createmenu)|空のメニューを作成し、オブジェクトに`CMenu`アタッチします。|
-|[メニュー::ポップアップメニューを作成します。](#createpopupmenu)|空のポップアップ メニューを作成し、`CMenu`オブジェクトにアタッチします。|
-|[CMenu::Dエレテメニュー](#deletemenu)|メニューから指定した項目を削除します。 メニュー項目に関連付けられたポップアップ メニューがある場合、ポップアップ メニューへのハンドルを破棄し、そのメニューで使用されているメモリを解放します。|
-|[CMenu::Dエレテ一時地図](#deletetempmap)|メンバー関数によって作成`CMenu`された一時オブジェクト`FromHandle`を削除します。|
-|[CMenu::Dエストロイメニュー](#destroymenu)|オブジェクトにアタッチされたメニューを`CMenu`破棄し、メニューが占有していたすべてのメモリを解放します。|
-|[CMenu::Dエタッハ](#detach)|Windows メニュー ハンドルをオブジェクトから`CMenu`切り離し、そのハンドルを返します。|
-|[メニュー::Dローアイテム](#drawitem)|オーナー描画メニューの視覚的な側面が変更されたときに、フレームワークによって呼び出されます。|
-|[メニュー::メニュー項目を有効にする](#enablemenuitem)|メニュー項目を有効にする、無効にする、または淡色表示 (灰色) します。|
-|[Cメニュー::ハンドルから](#fromhandle)|Windows メニュー ハンドル`CMenu`を指定したオブジェクトへのポインターを返します。|
-|[メニュー::デフォルトアイテムを取得します。](#getdefaultitem)|指定したメニューの既定のメニュー項目を決定します。|
-|[メニュー::メニューコンテキストヘルプId](#getmenucontexthelpid)|メニューに関連付けられているヘルプ コンテキスト ID を取得します。|
-|[メニュー::メニュー情報](#getmenuinfo)|特定のメニューの情報を取得します。|
-|[メニュー::メニュー項目数](#getmenuitemcount)|ポップアップ メニューまたはトップレベル メニューの項目数を指定します。|
-|[メニュー::メニュー項目ID](#getmenuitemid)|指定した位置にあるメニュー項目のメニュー項目識別子を取得します。|
-|[メニュー::メニュー項目情報](#getmenuiteminfo)|メニュー項目に関する情報を取得します。|
-|[メニュー::メニュー状態を取得します。](#getmenustate)|指定したメニュー項目のステータスまたはポップアップ メニューの項目数を返します。|
-|[メニュー::メニュー文字列を取得します。](#getmenustring)|指定したメニュー項目のラベルを取得します。|
-|[メニュー::ゲットセーフメニュー](#getsafehmenu)|この`CMenu`オブジェクト`m_hMenu`でラップされた値を返します。|
-|[メニュー::サブメニューを取得します。](#getsubmenu)|ポップアップ メニューへのポインターを取得します。|
-|[CMenu::InsertMenu](#insertmenu)|新しいメニュー項目を指定した位置に挿入し、その他の項目をメニューの下に移動します。|
-|[メニュー::メニュー項目の挿入](#insertmenuitem)|メニューの指定した位置に新しいメニュー項目を挿入します。|
-|[メニュー::ロードメニュー](#loadmenu)|実行可能ファイルからメニュー リソースを読み込み、`CMenu`オブジェクトにアタッチします。|
-|[メニュー::ロードメニュー間接的](#loadmenuindirect)|メニュー テンプレートからメニューをメモリに読み込み、`CMenu`オブジェクトにアタッチします。|
-|[Cメニュー::メジャーアイテム](#measureitem)|オーナー描画メニューの作成時にメニューのサイズを決定するために、フレームワークによって呼び出されます。|
+|[CMenu:: Attach](#attach)|Windows のメニューハンドルをオブジェクトにアタッチ `CMenu` します。|
+|[CMenu:: CheckMenuItem](#checkmenuitem)|ポップアップメニューのメニュー項目の横にチェックマークを付けたり、チェックマークを削除したりします。|
+|[CMenu:: Checkmenuro Item](#checkmenuradioitem)|メニュー項目の横にラジオボタンを配置し、グループ内の他のすべてのメニュー項目からオプションボタンを削除します。|
+|[CMenu:: CreateMenu](#createmenu)|空のメニューを作成し、オブジェクトにアタッチし `CMenu` ます。|
+|[CMenu:: CreatePopupMenu](#createpopupmenu)|空のポップアップメニューを作成し、オブジェクトにアタッチし `CMenu` ます。|
+|[CMenu::D eleteMenu](#deletemenu)|指定した項目をメニューから削除します。 メニュー項目にポップアップメニューが関連付けられている場合、はポップアップメニューへのハンドルを破棄し、それによって使用されているメモリを解放します。|
+|[CMenu::D eleteTempMap](#deletetempmap)|`CMenu`メンバー関数によって作成された一時オブジェクトを削除 `FromHandle` します。|
+|[CMenu::D estroyMenu](#destroymenu)|オブジェクトに関連付けられているメニューを破棄し、メニューによっ `CMenu` て占有されているすべてのメモリを解放します。|
+|[CMenu::D etach](#detach)|Windows のメニューハンドルをオブジェクトからデタッチ `CMenu` し、ハンドルを返します。|
+|[CMenu: rawItem:D](#drawitem)|オーナー描画メニューの外観が変化したときにフレームワークによって呼び出されます。|
+|[CMenu:: EnableMenuItem](#enablemenuitem)|メニュー項目を有効または無効にしたり、淡色 (灰色) したりします。|
+|[CMenu:: FromHandle](#fromhandle)|`CMenu`Windows のメニューハンドルを指定して、オブジェクトへのポインターを返します。|
+|[CMenu:: GetDefaultItem](#getdefaultitem)|指定したメニューの既定のメニュー項目を決定します。|
+|[CMenu:: GetMenuContextHelpId](#getmenucontexthelpid)|メニューに関連付けられたヘルプコンテキスト ID を取得します。|
+|[CMenu:: GetMenuInfo](#getmenuinfo)|特定のメニューに関する情報を取得します。|
+|[CMenu:: GetMenuItemCount](#getmenuitemcount)|ポップアップメニューまたはトップレベルメニュー内の項目数を決定します。|
+|[CMenu:: GetMenuItemID](#getmenuitemid)|指定した位置にあるメニュー項目のメニュー項目の識別子を取得します。|
+|[CMenu:: GetMenuItemInfo](#getmenuiteminfo)|メニュー項目に関する情報を取得します。|
+|[CMenu:: GetMenuState](#getmenustate)|指定されたメニュー項目のステータス、またはポップアップメニュー内の項目数を返します。|
+|[CMenu:: GetMenuString](#getmenustring)|指定したメニュー項目のラベルを取得します。|
+|[CMenu:: GetSafeHmenu](#getsafehmenu)|`m_hMenu`このオブジェクトによってラップされたを返し `CMenu` ます。|
+|[CMenu:: GetSubMenu メニュー](#getsubmenu)|ポップアップメニューへのポインターを取得します。|
+|[CMenu::InsertMenu](#insertmenu)|新しいメニュー項目を指定した位置に挿入し、他の項目をメニューの下に移動します。|
+|[CMenu:: InsertMenuItem](#insertmenuitem)|メニュー内の指定した位置に新しいメニュー項目を挿入します。|
+|[CMenu:: LoadMenu](#loadmenu)|実行可能ファイルからメニューリソースを読み込み、それをオブジェクトにアタッチし `CMenu` ます。|
+|[CMenu:: LoadMenuIndirect](#loadmenuindirect)|メニューをメモリ内のメニューテンプレートから読み込み、オブジェクトにアタッチし `CMenu` ます。|
+|[CMenu:: MeasureItem](#measureitem)|オーナー描画メニューが作成されたときにメニューのサイズを決定するために、フレームワークによって呼び出されます。|
 |[CMenu::ModifyMenu](#modifymenu)|指定した位置にある既存のメニュー項目を変更します。|
-|[メニュー::メニューの削除](#removemenu)|指定したメニューから、関連付けられたポップアップ メニューを持つメニュー項目を削除します。|
-|[Cメニュー::デフォルトアイテムを設定します。](#setdefaultitem)|指定したメニューの既定のメニュー項目を設定します。|
-|[メニュー::メニューコンテキストヘルプId](#setmenucontexthelpid)|メニューに関連付けるヘルプ コンテキスト ID を設定します。|
-|[メニュー::セットメニュー情報](#setmenuinfo)|特定のメニューに関する情報を設定します。|
-|[をクリックします。](#setmenuitembitmaps)|指定したチェック マーク ビットマップをメニュー項目に関連付けます。|
-|[メニュー::セットメニューアイテム情報](#setmenuiteminfo)|メニュー項目に関する情報を変更します。|
-|[メニュー::トラックポップアップメニュー](#trackpopupmenu)|指定した位置にフローティング ポップアップ メニューを表示し、ポップアップ メニュー上の項目の選択を追跡します。|
-|[Cメニュー::トラックポップアップメニュー](#trackpopupmenuex)|指定した位置にフローティング ポップアップ メニューを表示し、ポップアップ メニュー上の項目の選択を追跡します。|
+|[CMenu:: RemoveMenu](#removemenu)|指定したメニューから、関連付けられたポップアップメニューを含むメニュー項目を削除します。|
+|[CMenu:: SetDefaultItem](#setdefaultitem)|指定したメニューの既定のメニュー項目を設定します。|
+|[CMenu:: SetMenuContextHelpId](#setmenucontexthelpid)|メニューに関連付けられるヘルプコンテキスト ID を設定します。|
+|[CMenu:: SetMenuInfo](#setmenuinfo)|特定のメニューに関する情報を設定します。|
+|[CMenu:: SetMenuItemBitmaps](#setmenuitembitmaps)|指定されたチェックマークビットマップをメニュー項目に関連付けます。|
+|[CMenu:: SetMenuItemInfo](#setmenuiteminfo)|メニュー項目に関する情報を変更します。|
+|[CMenu:: TrackPopupMenu](#trackpopupmenu)|指定した位置にフローティングポップアップメニューを表示し、ポップアップメニュー上の項目の選択を追跡します。|
+|[CMenu:: TrackPopupMenuEx](#trackpopupmenuex)|指定した位置にフローティングポップアップメニューを表示し、ポップアップメニュー上の項目の選択を追跡します。|
 
 ### <a name="public-operators"></a>パブリック演算子
 
 |名前|説明|
 |----------|-----------------|
-|[Cメニュー::演算子HMENU](#operator_hmenu)|メニュー オブジェクトのハンドルを取得します。|
-|[Cメニュー::演算子!=](#operator_neq)|2 つのメニュー オブジェクトが等しくないかどうかを判断します。|
-|[Cメニュー::演算子 ==](#operator_eq_eq)|2 つのメニュー オブジェクトが等しいかどうかを判断します。|
+|[CMenu:: operator HMENU](#operator_hmenu)|メニューオブジェクトのハンドルを取得します。|
+|[CMenu:: operator! =](#operator_neq)|2つのメニューオブジェクトが等しくないかどうかを判断します。|
+|[CMenu:: operator = =](#operator_eq_eq)|2つのメニューオブジェクトが等しいかどうかを判断します。|
 
 ### <a name="public-data-members"></a>パブリック データ メンバー
 
 |名前|説明|
 |----------|-----------------|
-|[メニュー::m_hMenu](#m_hmenu)|オブジェクトにアタッチされた Windows メニューへのハンドル`CMenu`を指定します。|
+|[CMenu:: m_hMenu](#m_hmenu)|オブジェクトに関連付けられている Windows メニューへのハンドルを指定し `CMenu` ます。|
 
 ## <a name="remarks"></a>解説
 
-メニューの作成、追跡、更新、および破棄を行うためのメンバー関数を提供します。
+これには、メニューを作成、追跡、更新、および破棄するためのメンバー関数が用意されています。
 
-スタック`CMenu`フレーム上にローカルオブジェクトを作成し、必要に`CMenu`応じてメンバー関数を呼び出して新しいメニューを操作します。 次に[、CWnd::SetMenu](../../mfc/reference/cwnd-class.md#setmenu)を呼び出してメニューをウィンドウに設定し、その直後`CMenu`にオブジェクトの[Detach](#detach)メンバー関数を呼び出します。 この`CWnd::SetMenu`メンバー関数は、ウィンドウのメニューを新しいメニューに設定し、ウィンドウを再描画してメニューの変更を反映させ、メニューの所有権をウィンドウに渡します。 ローカル`CMenu`変数が`Detach`スコープ外に渡されるときに、`CMenu`オブジェクト`CMenu`デストラクタが所有していないメニューを破棄しないように、オブジェクトから HMENU をデタッチする呼び出し。 ウィンドウが破棄されると、メニュー自体は自動的に破棄されます。
+`CMenu`ローカルとしてスタックフレームにオブジェクトを作成し、その後 `CMenu` 、のメンバー関数を呼び出して、必要に応じて新しいメニューを操作します。 次に、 [CWnd:: SetMenu](../../mfc/reference/cwnd-class.md#setmenu) を呼び出して、メニューをウィンドウに設定し、その直後に `CMenu` オブジェクトの [Detach](#detach) メンバー関数を呼び出します。 この `CWnd::SetMenu` メンバー関数は、ウィンドウのメニューを新しいメニューに設定し、メニューの変更を反映するようにウィンドウを再描画します。また、メニューの所有権をウィンドウに渡します。 を呼び出すと、 `Detach` オブジェクトから HMENU が切り離され `CMenu` ます。これにより、ローカル変数がスコープ外に出ると、 `CMenu` オブジェクトデストラクターは、 `CMenu` 所有していないメニューを破棄しようとしません。 メニュー自体は、ウィンドウが破棄されると自動的に破棄されます。
 
-[LoadMenuIndirect](#loadmenuindirect)メンバー関数を使用して、メモリ内のテンプレートからメニューを作成できますが[、LoadMenu](#loadmenu)の呼び出しによってリソースから作成されたメニューは保守が容易になり、メニュー リソース自体はメニュー エディターで作成および変更できます。
+[Loadmenuindirect](#loadmenuindirect)メンバー関数を使用すると、メモリ内のテンプレートからメニューを作成できますが、 [loadmenu](#loadmenu)の呼び出しによってリソースから作成されたメニューはより簡単に管理でき、メニューリソース自体はメニューエディターで作成および変更できます。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -179,11 +180,11 @@ class CMenu : public CObject
 
 `CMenu`
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** afxwin.h
 
-## <a name="cmenuappendmenu"></a><a name="appendmenu"></a>Cメニュー::追加メニュー
+## <a name="cmenuappendmenu"></a><a name="appendmenu"></a> CMenu:: AppendMenu
 
 メニューの末尾に新しい項目を追加します。
 
@@ -201,23 +202,23 @@ BOOL AppendMenu(
 
 ### <a name="parameters"></a>パラメーター
 
-*Nflags*<br/>
-メニューに追加するときの新しいメニュー項目の状態に関する情報を指定します。 「解説」セクションにリストされている 1 つ以上の値で構成されます。
+*nFlags*<br/>
+メニューに追加されたときの新しいメニュー項目の状態に関する情報を指定します。 これは、「解説」に記載されている1つ以上の値で構成されます。
 
-*新しいアイテム*<br/>
-新しいメニュー項目のコマンド ID を指定するか *、nFlags*が MF_POPUP に設定されている場合`HMENU`は、ポップアップ メニューのメニュー ハンドル ( ) を指定します。 *nIdNewItem*パラメーターは *、nFlags*がMF_SEPARATORに設定されている場合は無視されます (必要ありません)。
+*nIDNewItem*<br/>
+新しいメニュー項目のコマンド ID を指定するか、または *nFlags* が MF_POPUP に設定されている場合は、ポップアップメニューのメニューハンドル () を指定し `HMENU` ます。 *NFlags* が MF_SEPARATOR に設定されている場合、 *nIDNewItem* パラメーターは無視されます (必要ありません)。
 
-*新しいアイテムを表示します。*<br/>
-新しいメニュー項目の内容を指定します。 *nFlags*パラメーターは、次の方法で*lpszNewItem*を解釈するために使用されます。
+*lpszNewItem*<br/>
+新しいメニュー項目の内容を指定します。 *NFlags* パラメーターは、次の方法で *lpszNewItem* を解釈するために使用されます。
 
-|Nflags|の解釈|
+|nFlags|LpszNewItem の解釈|
 |------------|-----------------------------------|
-|MF_OWNERDRAW|アプリケーションが指定した 32 ビット値を格納します。 この 32 ビット値は、WM_MEASUREITEMおよびWM_DRAWITEMメッセージを処理するときに、アプリケーションで使用できます。 値は、これらのメッセージで`itemData`提供される構造体のメンバーに格納されます。|
-|MF_STRING|null で終わる文字列へのポインターを格納します。 これはデフォルトの解釈です。|
-|MF_SEPARATOR|*lpszNewItem*パラメーターは無視されます (必要ありません)。|
+|MF_OWNERDRAW|アプリケーションが、メニュー項目に関連付けられた追加データを保持するために使用できる32ビット値を格納します。 この32ビット値は、アプリケーションが WM_MEASUREITEM メッセージと WM_DRAWITEM メッセージを処理するときに使用できます。 値は、 `itemData` これらのメッセージと共に提供される構造体のメンバーに格納されます。|
+|MF_STRING|Null で終わる文字列へのポインターが含まれています。 これが既定の解釈です。|
+|MF_SEPARATOR|*LpszNewItem* パラメーターは無視されます (不要)。|
 
-*pBmp*<br/>
-メニュー項目として`CBitmap`使用されるオブジェクトへのポイント。
+*.Pbmp*<br/>
+`CBitmap`メニュー項目として使用されるオブジェクトを指します。
 
 ### <a name="return-value"></a>戻り値
 
@@ -225,51 +226,51 @@ BOOL AppendMenu(
 
 ### <a name="remarks"></a>解説
 
-nFlags で値を設定することにより、アプリケーションはメニュー項目の*nFlags*状態を指定できます。 *nIDNewItem*がポップアップ メニューを指定すると、追加先のメニューの一部になります。 そのメニューが破棄されると、追加されたメニューも破棄されます。 競合を避けるために、追加されたメニューを`CMenu`オブジェクトからデタッチする必要があります。 MF_STRINGとMF_OWNERDRAWは、 の`AppendMenu`ビットマップ バージョンでは無効です。
+アプリケーションでは、値を *nFlags* に設定することによって、メニュー項目の状態を指定できます。 *NIDNewItem* がポップアップメニューを指定すると、それが追加されるメニューの一部になります。 このメニューが破棄された場合、追加されたメニューも破棄されます。 競合を回避するには、追加されたメニューをオブジェクトからデタッチする必要があり `CMenu` ます。 MF_STRING と MF_OWNERDRAW は、のビットマップバージョンでは有効ではないことに注意して `AppendMenu` ください。
 
-次のリストは *、nFlags*で設定できるフラグを示しています。
+次の一覧では、 *nFlags* で設定できるフラグについて説明します。
 
-- MF_CHECKED 項目の横に既定のチェック マークを付けるMF_UNCHECKEDの切り替えとして機能します。 アプリケーションがチェック マーク ビットマップを提供する場合[(SetMenuItemBitmaps](#setmenuitembitmaps)メンバー関数を参照)、"チェック マークオン" ビットマップが表示されます。
+- MF_CHECKED は、MF_UNCHECKED の切り替えとして機能し、項目の横に既定のチェックマークを配置します。 アプリケーションがチェックマークビットマップ ( [Setmenuitembitmaps](#setmenuitembitmaps) メンバー関数を参照) を提供する場合は、[チェックマーク] ビットマップが表示されます。
 
-- MF_UNCHECKED 項目の横にあるチェック マークを削除するMF_CHECKEDとの切り替えとして機能します。 アプリケーションがチェック マーク ビットマップ (メンバー関数を`SetMenuItemBitmaps`参照) を提供すると、"チェック マーク オフ" ビットマップが表示されます。
+- MF_UNCHECKED は、項目の横にあるチェックマークを解除するための MF_CHECKED の切り替えとして機能します。 アプリケーションがチェックマークビットマップ (メンバー関数を参照) を提供する場合 `SetMenuItemBitmaps` 、[チェックマークをオフにする] ビットマップが表示されます。
 
-- MF_DISABLED メニュー項目を無効にして、選択できないようにしますが、淡暗く表示されません。
+- メニュー項目を選択できないように MF_DISABLED 無効にしますが、淡色は設定されません。
 
-- MF_ENABLED メニュー項目を選択して淡色表示の状態に戻します。
+- MF_ENABLED では、メニュー項目を選択して、淡色表示の状態から復元することができます。
 
-- MF_GRAYED メニュー項目を選択できないように無効にし、淡暗くします。
+- メニュー項目を無効にして、選択できないように MF_GRAYED します。
 
-- MF_MENUBARBREAK項目を静的メニューの新しい行に配置するか、ポップアップ メニューの新しい列に配置します。 新しいポップアップメニュー列は、古い列と垂直分割線で区切られます。
+- MF_MENUBARBREAK は、静的メニューまたはポップアップメニューの新しい列に項目を新しい行に配置します。 新しいポップアップメニュー列は、前の列から垂直の区切り線で区切られます。
 
-- MF_MENUBREAK静的メニューの新しい行に項目を配置するか、ポップアップ メニューの新しい列に項目を配置します。 列の間に分割線は配置されません。
+- MF_MENUBREAK は、静的メニューまたはポップアップメニューの新しい列に項目を新しい行に配置します。 列の間には、分割線は挿入されません。
 
-- MF_OWNERDRAWアイテムがオーナー描画項目であることを指定します。 メニューが初めて表示されるとき、メニューを所有するウィンドウは、メニュー項目の高さと幅を取得するWM_MEASUREITEMメッセージを受け取ります。 WM_DRAWITEM メッセージは、所有者がメニュー項目の外観を更新する必要がある場合に送信されるメッセージです。 このオプションは、トップレベルのメニュー項目には無効です。
+- MF_OWNERDRAW 項目がオーナー描画項目であることを指定します。 メニューが初めて表示されるとき、メニューを所有するウィンドウは、メニュー項目の高さと幅を取得する WM_MEASUREITEM メッセージを受け取ります。 WM_DRAWITEM メッセージは、オーナーがメニュー項目の外観を更新する必要があるときに送信されるメッセージです。 このオプションは、トップレベルのメニュー項目に対しては無効です。
 
-- MF_POPUPメニュー項目に関連付けられたポップアップ メニューを持つ場合に指定します。 ID パラメーターは、項目に関連付けるポップアップ・メニューへのハンドルを指定します。 これは、トップレベルのポップアップメニューまたは階層ポップアップメニューをポップアップメニュー項目に追加するために使用されます。
+- MF_POPUP メニュー項目にポップアップメニューが関連付けられていることを指定します。 ID パラメーターは、項目に関連付けられるポップアップメニューへのハンドルを指定します。 これは、トップレベルのポップアップメニューまたは階層のポップアップメニューをポップアップメニュー項目に追加するために使用されます。
 
-- MF_SEPARATOR 水平分割線を描画します。 ポップアップメニューでのみ使用できます。 この線は、淡色表示、無効、または強調表示できません。 他のパラメーターは無視されます。
+- MF_SEPARATOR は、水平方向の区切り線を描画します。 ポップアップメニューでのみ使用できます。 この行を淡色表示、無効、または強調表示することはできません。 その他のパラメーターは無視されます。
 
 - MF_STRING メニュー項目が文字列であることを指定します。
 
 次の各グループには、相互に排他的で、同時に使用できないフラグが一覧表示されます。
 
-- MF_DISABLED、MF_ENABLED、MF_GRAYED
+- MF_DISABLED、MF_ENABLED、および MF_GRAYED
 
 - MF_STRING、MF_OWNERDRAW、MF_SEPARATOR、およびビットマップバージョン
 
-- MF_MENUBARBREAKとMF_MENUBREAK
+- MF_MENUBARBREAK と MF_MENUBREAK
 
-- MF_CHECKEDとMF_UNCHECKED
+- MF_CHECKED と MF_UNCHECKED
 
-ウィンドウ内のメニューが変更されると (ウィンドウが表示されるかどうかにかかわらず)、アプリケーションは[CWnd::DrawMenuBar](../../mfc/reference/cwnd-class.md#drawmenubar)を呼び出す必要があります。
+ウィンドウに表示されているメニューが変更された場合 (ウィンドウが表示されているかどうかにかかわらず)、アプリケーションは [CWnd::D rawMenuBar](../../mfc/reference/cwnd-class.md#drawmenubar)を呼び出す必要があります。
 
 ### <a name="example"></a>例
 
-  [CMenu::CreateMenu](#createmenu)の例を参照してください。
+  「 [CMenu:: CreateMenu](#createmenu)」の例を参照してください。
 
-## <a name="cmenuattach"></a><a name="attach"></a>Cメニュー::添付
+## <a name="cmenuattach"></a><a name="attach"></a> CMenu:: Attach
 
-既存の Windows メニューをオブジェクト`CMenu`にアタッチします。
+既存の Windows メニューをオブジェクトにアタッチ `CMenu` します。
 
 ```
 BOOL Attach(HMENU hMenu);
@@ -277,26 +278,26 @@ BOOL Attach(HMENU hMenu);
 
 ### <a name="parameters"></a>パラメーター
 
-*Hmenu*<br/>
-Windows メニューへのハンドルを指定します。
+*hMenu*<br/>
+Windows メニューのハンドルを指定します。
 
 ### <a name="return-value"></a>戻り値
 
-操作が成功した場合は 0 以外。それ以外の場合は 0。
+操作が成功した場合は0以外の。それ以外の場合は0です。
 
 ### <a name="remarks"></a>解説
 
-メニューが既にオブジェクトにアタッチされている場合は、この関数を`CMenu`呼び出す必要があります。 メニュー ハンドルはデータ メンバー`m_hMenu`に格納されます。
+メニューが既にオブジェクトにアタッチされている場合、この関数を呼び出すことはできません `CMenu` 。 メニューハンドルは、データメンバーに格納され `m_hMenu` ます。
 
-操作するメニューが既にウィンドウに関連付けられている場合は[、CWnd::GetMenu](../../mfc/reference/cwnd-class.md#getmenu)関数を使用してメニューへのハンドルを取得できます。
+操作するメニューが既にウィンドウに関連付けられている場合は、 [CWnd:: getmenu](../../mfc/reference/cwnd-class.md#getmenu) 関数を使用して、メニューへのハンドルを取得できます。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_MFCWindowing#21](../../mfc/reference/codesnippet/cpp/cmenu-class_1.cpp)]
 
-## <a name="cmenucheckmenuitem"></a><a name="checkmenuitem"></a>メニュー::チェックメニューアイテム
+## <a name="cmenucheckmenuitem"></a><a name="checkmenuitem"></a> CMenu:: CheckMenuItem
 
-ポップアップ メニューのメニュー項目にチェック マークを追加または削除します。
+ポップアップメニューのメニュー項目からチェックマークを追加または削除します。
 
 ```
 UINT CheckMenuItem(
@@ -306,37 +307,37 @@ UINT CheckMenuItem(
 
 ### <a name="parameters"></a>パラメーター
 
-*チェックアイテム*<br/>
-*nCheck*で指定された、チェックするメニュー項目を指定します。
+*nIDCheckItem*<br/>
+*N* によって決定される、チェックするメニュー項目を指定します。
 
-*nチェック*<br/>
-メニュー項目のチェック方法と、メニュー内での項目の位置の決定方法を指定します。 *nCheck*パラメーターは、MF_BYPOSITION フラグまたはMF_BYCOMMAND フラグを持つMF_CHECKEDまたはMF_UNCHECKEDの組み合わせにすることができます。 これらのフラグは、ビットごとの OR 演算子を使用して組み合わせることができます。 彼らは次の意味を持っています:
+*n*<br/>
+メニュー項目を確認する方法、およびメニュー内の項目の位置を確認する方法を指定します。 *N* パラメーターは、MF_BYPOSITION または MF_BYCOMMAND フラグを持つ MF_CHECKED または MF_UNCHECKED の組み合わせにすることができます。 これらのフラグは、ビットごとの OR 演算子を使用して組み合わせることができます。 これらの意味は次のとおりです。
 
-- MF_BYCOMMAND パラメーターが既存のメニュー項目のコマンド ID を提供することを指定します。 これは既定値です。
+- MF_BYCOMMAND は、パラメーターが既存のメニュー項目のコマンド ID を与えることを指定します。 既定値です。
 
-- MF_BYPOSITION パラメーターが既存のメニュー項目の位置を指定することを指定します。 最初の項目は位置 0 です。
+- MF_BYPOSITION は、パラメーターが既存のメニュー項目の位置を示すことを指定します。 最初の項目の位置は0です。
 
-- MF_CHECKED 項目の横に既定のチェック マークを付けるMF_UNCHECKEDの切り替えとして機能します。
+- MF_CHECKED は、MF_UNCHECKED の切り替えとして機能し、項目の横に既定のチェックマークを配置します。
 
-- MF_UNCHECKED 項目の横にあるチェック マークを削除するMF_CHECKEDとの切り替えとして機能します。
+- MF_UNCHECKED は、項目の横にあるチェックマークを解除するための MF_CHECKED の切り替えとして機能します。
 
 ### <a name="return-value"></a>戻り値
 
-項目の前の状態は、MF_CHECKEDまたはMF_UNCHECKED、またはメニュー項目が存在しない場合は 0xFFFFFFFF。
+項目の以前の状態: MF_CHECKED または MF_UNCHECKED、またはメニュー項目が存在しない場合は0xFFFFFFFF。
 
 ### <a name="remarks"></a>解説
 
-*nIDCheckItem*パラメーターは、変更する項目を指定します。
+*NIDCheckItem* パラメーターは、変更する項目を指定します。
 
-*nIDCheckItem*パラメーターは、メニュー項目と同様にポップアップ メニュー項目を識別できます。 ポップアップメニュー項目をチェックするために特別な手順は必要ありません。 トップレベルのメニュー項目はチェックできません。 ポップアップ メニュー項目には、メニュー項目識別子が関連付けられていないため、位置によってチェックする必要があります。
+*NIDCheckItem* パラメーターは、ポップアップメニュー項目およびメニュー項目を識別できます。 ポップアップメニュー項目をチェックするために特別な手順は必要ありません。 トップレベルのメニュー項目を確認することはできません。 ポップアップメニュー項目は、メニュー項目識別子が関連付けられていないため、位置によって確認する必要があります。
 
 ### <a name="example"></a>例
 
-  [CMenu::GetMenuState](#getmenustate)の例を参照してください。
+  「 [CMenu:: GetMenuState](#getmenustate)」の例を参照してください。
 
-## <a name="cmenucheckmenuradioitem"></a><a name="checkmenuradioitem"></a>Cメニュー::チェックメニューラジオアイテム
+## <a name="cmenucheckmenuradioitem"></a><a name="checkmenuradioitem"></a> CMenu:: Checkmenuro Item
 
-指定されたメニュー項目をチェックし、ラジオ項目にします。
+指定されたメニュー項目をチェックし、それをラジオ項目にします。
 
 ```
 BOOL CheckMenuRadioItem(
@@ -348,38 +349,38 @@ BOOL CheckMenuRadioItem(
 
 ### <a name="parameters"></a>パラメーター
 
-*最初の id*<br/>
-オプション ボタン グループの最初のメニュー項目を指定します *(nFlags*の値に応じて、ID またはオフセットとして指定します)。
+*nIDFirst*<br/>
+オプションボタングループの最初のメニュー項目を、( *nFlags* の値に応じて) ID またはオフセットとして指定します。
 
-*NIDラスト*<br/>
-オプション ボタン グループの最後のメニュー項目を指定します *(nFlags*の値に応じて、ID またはオフセットとして指定します)。
+*nIDLast*<br/>
+オプションボタングループの最後のメニュー項目を、( *nFlags* の値に応じて) ID またはオフセットとして指定します。
 
-*nIDアイテム*<br/>
-オプション ボタンでチェックされるグループ内の項目を指定します *(nFlags*の値に応じて、ID またはオフセット)。
+*nIDItem*<br/>
+オプションボタンを使用してチェックするグループ内の項目を、(値が *nFlags* の場合は ID またはオフセットとして) 指定します。
 
-*Nflags*<br/>
-次の方法で *、nIDFirst* *、nIDLast、**および nIDItem*の解釈を指定します。
+*nFlags*<br/>
+次のように、 *nIDFirst*、 *NIDLast*、および *nIDItem* の解釈を指定します。
 
-|Nflags|解釈|
+|nFlags|解釈|
 |------------|--------------------|
-|MF_BYCOMMAND|パラメーターが既存のメニュー項目のコマンド ID を提供することを指定します。 MF_BYCOMMANDもMF_BYPOSITIONも設定されていない場合、これはデフォルトです。|
-|MF_BYPOSITION|パラメーターが既存のメニュー項目の位置を指定することを指定します。 最初の項目は位置 0 です。|
+|MF_BYCOMMAND|パラメーターが既存のメニュー項目のコマンド ID を与えることを指定します。 これは、MF_BYCOMMAND も MF_BYPOSITION も設定されていない場合の既定値です。|
+|MF_BYPOSITION|パラメーターが既存のメニュー項目の位置を指定することを指定します。 最初の項目の位置は0です。|
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合は 0 以外。それ以外の場合は 0
+成功した場合は0以外の。それ以外の場合は0
 
 ### <a name="remarks"></a>解説
 
-同時に、関連するグループ内の他のすべてのメニュー項目のチェックを解除し、それらの項目のラジオ項目タイプフラグをクリアします。 チェック マークのビットマップではなく、ラジオ ボタン (箇条書き) ビットマップを使用して、チェックマークの項目が表示されます。
+同時に、関数は、関連付けられているグループ内の他のすべてのメニュー項目をオフにし、それらの項目のオプション項目の種類フラグをクリアします。 チェックマークの付いた項目は、チェックマークのビットマップの代わりに、オプションボタン (または箇条書き) のビットマップを使用して表示されます。
 
 ### <a name="example"></a>例
 
   [ON_COMMAND_RANGE](message-map-macros-mfc.md#on_command_range)の例を参照してください。
 
-## <a name="cmenucmenu"></a><a name="cmenu"></a>Cメニュー::Cメニュー
+## <a name="cmenucmenu"></a><a name="cmenu"></a> CMenu:: CMenu
 
-空のメニューを作成し、オブジェクトに`CMenu`アタッチします。
+空のメニューを作成し、オブジェクトにアタッチし `CMenu` ます。
 
 ```
 CMenu();
@@ -387,21 +388,21 @@ CMenu();
 
 ### <a name="remarks"></a>解説
 
-メニューは、作成またはロードのメンバー関数のいずれかを呼び出すまで作成されません。`CMenu:`
+メニューは、の create または load メンバー関数のいずれかを呼び出すまでは作成されません。 `CMenu:`
 
-- [メニューの作成](#createmenu)
+- [CreateMenu](#createmenu)
 
-- [メニューを作成します。](#createpopupmenu)
+- [CreatePopupMenu](#createpopupmenu)
 
-- [メニューを読み込む](#loadmenu)
+- [LoadMenu](#loadmenu)
 
-- [ダイレクトメニュー](#loadmenuindirect)
+- [LoadMenuIndirect](#loadmenuindirect)
 
-- [Attach](#attach)
+- [[アタッチ]](#attach)
 
-## <a name="cmenucreatemenu"></a><a name="createmenu"></a>Cメニュー::メニューを作成します。
+## <a name="cmenucreatemenu"></a><a name="createmenu"></a> CMenu:: CreateMenu
 
-メニューを作成し、オブジェクトに`CMenu`アタッチします。
+メニューを作成し、オブジェクトにアタッチし `CMenu` ます。
 
 ```
 BOOL CreateMenu();
@@ -409,23 +410,23 @@ BOOL CreateMenu();
 
 ### <a name="return-value"></a>戻り値
 
-メニューが正常に作成された場合は 0 以外の値を返します。それ以外の場合は 0。
+メニューが正常に作成された場合は0以外の。それ以外の場合は0です。
 
 ### <a name="remarks"></a>解説
 
-メニューは最初は空です。 メニュー項目は、 または`AppendMenu``InsertMenu`メンバー関数を使用して追加できます。
+このメニューは、最初は空です。 メニュー項目を追加するには、 `AppendMenu` またはメンバー関数を使用し `InsertMenu` ます。
 
-メニューがウィンドウに割り当てられている場合、ウィンドウが破棄されると自動的に破棄されます。
+メニューがウィンドウに割り当てられている場合は、ウィンドウが破棄されると自動的に破棄されます。
 
-メニューがウィンドウに割り当てられていない場合、アプリケーションは、メニューに関連付けられたシステム リソースを解放する必要があります。 アプリケーションは[、DestroyMenu](#destroymenu)メンバー関数を呼び出すことによってメニューを解放します。
+終了する前に、メニューがウィンドウに割り当てられていない場合は、アプリケーションでメニューに関連付けられているシステムリソースを解放する必要があります。 アプリケーションは、 [destroymenu](#destroymenu) メンバー関数を呼び出すことによってメニューを解放します。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_MFCWindowing#22](../../mfc/reference/codesnippet/cpp/cmenu-class_2.cpp)]
 
-## <a name="cmenucreatepopupmenu"></a><a name="createpopupmenu"></a>メニュー::ポップアップメニューを作成します。
+## <a name="cmenucreatepopupmenu"></a><a name="createpopupmenu"></a> CMenu:: CreatePopupMenu
 
-ポップアップ メニューを作成し、オブジェクトに`CMenu`アタッチします。
+ポップアップメニューを作成し、オブジェクトにアタッチし `CMenu` ます。
 
 ```
 BOOL CreatePopupMenu();
@@ -433,21 +434,21 @@ BOOL CreatePopupMenu();
 
 ### <a name="return-value"></a>戻り値
 
-ポップアップ メニューが正常に作成された場合は 0 以外の値を返します。それ以外の場合は 0。
+ポップアップメニューが正常に作成された場合は0以外の。それ以外の場合は0です。
 
 ### <a name="remarks"></a>解説
 
-メニューは最初は空です。 メニュー項目は、 または`AppendMenu``InsertMenu`メンバー関数を使用して追加できます。 アプリケーションは、既存のメニューまたはポップアップメニューにポップアップメニューを追加できます。 `TrackPopupMenu`このメンバー関数を使用して、このメニューをフローティング ポップアップ メニューとして表示し、ポップアップ メニューの選択内容を追跡することができます。
+このメニューは、最初は空です。 メニュー項目を追加するには、 `AppendMenu` またはメンバー関数を使用し `InsertMenu` ます。 アプリケーションでは、既存のメニューまたはポップアップメニューにポップアップメニューを追加できます。 `TrackPopupMenu`このメンバー関数を使用すると、このメニューをフローティングポップアップメニューとして表示したり、ポップアップメニューで選択を追跡したりできます。
 
-メニューがウィンドウに割り当てられている場合、ウィンドウが破棄されると自動的に破棄されます。 メニューが既存のメニューに追加されると、そのメニューが破棄されると自動的に破棄されます。
+メニューがウィンドウに割り当てられている場合は、ウィンドウが破棄されると自動的に破棄されます。 メニューが既存のメニューに追加されると、メニューが破棄されると自動的に破棄されます。
 
-終了する前に、メニューがウィンドウに割り当てられていない場合、アプリケーションはポップアップメニューに関連付けられたシステムリソースを解放する必要があります。 アプリケーションは[、DestroyMenu](#destroymenu)メンバー関数を呼び出すことによってメニューを解放します。
+メニューがウィンドウに割り当てられていない場合、終了する前に、アプリケーションでポップアップメニューに関連付けられているシステムリソースを解放する必要があります。 アプリケーションは、 [destroymenu](#destroymenu) メンバー関数を呼び出すことによってメニューを解放します。
 
 ### <a name="example"></a>例
 
-  [CMenu::CreateMenu](#createmenu)の例を参照してください。
+  「 [CMenu:: CreateMenu](#createmenu)」の例を参照してください。
 
-## <a name="cmenudeletemenu"></a><a name="deletemenu"></a>CMenu::Dエレテメニュー
+## <a name="cmenudeletemenu"></a><a name="deletemenu"></a> CMenu::D eleteMenu
 
 メニューから項目を削除します。
 
@@ -459,16 +460,16 @@ BOOL DeleteMenu(
 
 ### <a name="parameters"></a>パラメーター
 
-*n位置*<br/>
-*nFlags*で指定された、削除するメニュー項目を指定します。
+*nPosition*<br/>
+*NFlags* によって決定される、削除するメニュー項目を指定します。
 
-*Nflags*<br/>
-nPosition を*nPosition*次のように解釈するために使用されます。
+*nFlags*<br/>
+は、次のように *nPosition* を解釈するために使用されます。
 
-|Nflags|n位置の解釈|
+|nFlags|NPosition の解釈|
 |------------|---------------------------------|
-|MF_BYCOMMAND|パラメーターが既存のメニュー項目のコマンド ID を提供することを指定します。 MF_BYCOMMANDもMF_BYPOSITIONも設定されていない場合、これはデフォルトです。|
-|MF_BYPOSITION|パラメーターが既存のメニュー項目の位置を指定することを指定します。 最初の項目は位置 0 です。|
+|MF_BYCOMMAND|パラメーターが既存のメニュー項目のコマンド ID を与えることを指定します。 これは、MF_BYCOMMAND も MF_BYPOSITION も設定されていない場合の既定値です。|
+|MF_BYPOSITION|パラメーターが既存のメニュー項目の位置を指定することを指定します。 最初の項目の位置は0です。|
 
 ### <a name="return-value"></a>戻り値
 
@@ -476,17 +477,17 @@ nPosition を*nPosition*次のように解釈するために使用されます�
 
 ### <a name="remarks"></a>解説
 
-メニュー項目に関連付けられたポップアップメニューがある場合、`DeleteMenu`ポップアップメニューへのハンドルが破棄され、ポップアップメニューで使用されているメモリが解放されます。
+メニュー項目にポップアップメニューが関連付けられている場合は、ポップアップメニュー `DeleteMenu` のハンドルを破棄し、ポップアップメニューによって使用されているメモリを解放します。
 
-ウィンドウ内のメニューが変更されると (ウィンドウが表示されるかどうかにかかわらず)、アプリケーションは[CWnd::DrawMenuBar](../../mfc/reference/cwnd-class.md#drawmenubar)を呼び出す必要があります。
+ウィンドウに表示されているメニューが変更された場合 (ウィンドウが表示されているかどうかにかかわらず)、アプリケーションは [CWnd::D rawMenuBar](../../mfc/reference/cwnd-class.md#drawmenubar)を呼び出す必要があります。
 
 ### <a name="example"></a>例
 
-  [CWnd::GetMenu](../../mfc/reference/cwnd-class.md#getmenu)の例を参照してください。
+  [CWnd:: GetMenu](../../mfc/reference/cwnd-class.md#getmenu)の例を参照してください。
 
-## <a name="cmenudeletetempmap"></a><a name="deletetempmap"></a>CMenu::Dエレテ一時地図
+## <a name="cmenudeletetempmap"></a><a name="deletetempmap"></a> CMenu::D eleteTempMap
 
-`CWinApp`アイドル時ハンドラーによって自動的に呼び出され[、FromHandle](#fromhandle)メンバー関数によって作成された一時`CMenu`オブジェクトを削除します。
+アイドルタイムハンドラーによって自動的に呼び出され `CWinApp` 、 `CMenu` [FromHandle](#fromhandle) メンバー関数によって作成された一時オブジェクトを削除します。
 
 ```
 static void PASCAL DeleteTempMap();
@@ -494,15 +495,15 @@ static void PASCAL DeleteTempMap();
 
 ### <a name="remarks"></a>解説
 
-`DeleteTempMap`オブジェクトを削除する前に、一時`CMenu`オブジェクトにアタッチされている Windows`CMenu`メニュー オブジェクトをデタッチします。
+`DeleteTempMap` オブジェクトを削除する前に、一時オブジェクトにアタッチされている Windows メニューオブジェクトをデタッチし `CMenu` `CMenu` ます。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_MFCWindowing#23](../../mfc/reference/codesnippet/cpp/cmenu-class_3.cpp)]
 
-## <a name="cmenudestroymenu"></a><a name="destroymenu"></a>CMenu::Dエストロイメニュー
+## <a name="cmenudestroymenu"></a><a name="destroymenu"></a> CMenu::D estroyMenu
 
-メニューと使用された Windows リソースを破棄します。
+メニューと、使用されたすべての Windows リソースを破棄します。
 
 ```
 BOOL DestroyMenu();
@@ -510,19 +511,19 @@ BOOL DestroyMenu();
 
 ### <a name="return-value"></a>戻り値
 
-メニューが破棄された場合は 0 以外の値を返します。それ以外の場合は 0。
+メニューが破棄された場合は0以外の。それ以外の場合は0です。
 
 ### <a name="remarks"></a>解説
 
-メニューは破棄される前に`CMenu`オブジェクトから切り離されます。 Windows`DestroyMenu`関数は、デストラクターで`CMenu`自動的に呼び出されます。
+メニューは、 `CMenu` 破棄される前にオブジェクトからデタッチされます。 Windows の `DestroyMenu` 関数は、デストラクターで自動的に呼び出され `CMenu` ます。
 
 ### <a name="example"></a>例
 
-  [CMenu::CreateMenu](#createmenu)の例を参照してください。
+  「 [CMenu:: CreateMenu](#createmenu)」の例を参照してください。
 
-## <a name="cmenudetach"></a><a name="detach"></a>CMenu::Dエタッハ
+## <a name="cmenudetach"></a><a name="detach"></a> CMenu::D etach
 
-オブジェクトから Windows メニューを`CMenu`切り離し、ハンドルを返します。
+Windows メニューをオブジェクトからデタッチ `CMenu` し、ハンドルを返します。
 
 ```
 HMENU Detach();
@@ -530,19 +531,19 @@ HMENU Detach();
 
 ### <a name="return-value"></a>戻り値
 
-HMENU 型のハンドルを Windows メニューに対して、成功した場合はメニューに移動します。それ以外の場合は NULL。
+成功した場合は、HMENU 型のハンドルを Windows メニューに返します。それ以外の場合は NULL。
 
 ### <a name="remarks"></a>解説
 
-データ`m_hMenu`メンバは NULL に設定されます。
+`m_hMenu`データメンバーが NULL に設定されています。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_MFCWindowing#21](../../mfc/reference/codesnippet/cpp/cmenu-class_1.cpp)]
 
-## <a name="cmenudrawitem"></a><a name="drawitem"></a>メニュー::Dローアイテム
+## <a name="cmenudrawitem"></a><a name="drawitem"></a> CMenu: rawItem:D
 
-オーナー描画メニューの視覚的な側面が変更されたときに、フレームワークによって呼び出されます。
+オーナー描画メニューの外観が変化したときにフレームワークによって呼び出されます。
 
 ```
 virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
@@ -550,24 +551,24 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
 
 ### <a name="parameters"></a>パラメーター
 
-*構造体*<br/>
-必要な描画の種類に関する情報を含む[DRAWITEMSTRUCT 構造体](/windows/win32/api/winuser/ns-winuser-drawitemstruct)へのポインター。
+*lpDrawItemStruct*<br/>
+必要な描画の種類に関する情報を格納している [DRAWITEMSTRUCT](/windows/win32/api/winuser/ns-winuser-drawitemstruct) 構造体へのポインター。
 
 ### <a name="remarks"></a>解説
 
-構造`itemAction`のメンバーは`DRAWITEMSTRUCT`、実行される描画アクションを定義します。 オーナー描画`CMenu`オブジェクトの描画を実装するには、このメンバー関数をオーバーライドします。 アプリケーションは、このメンバー関数の終了前に *、lpDrawItemStruct*で提供される表示コンテキストに選択されているすべてのグラフィックス デバイス インターフェイス (GDI) オブジェクトを復元する必要があります。
+`itemAction`構造体のメンバーは、 `DRAWITEMSTRUCT` 実行する描画アクションを定義します。 オーナー描画オブジェクトの描画を実装するには、このメンバー関数をオーバーライドし `CMenu` ます。 アプリケーションは、このメンバー関数が終了する前に、 *lpDrawItemStruct* で指定された表示コンテキスト用に選択されたすべてのグラフィックスデバイスインターフェイス (GDI) オブジェクトを復元する必要があります。
 
-構造体の説明については[、CWnd::OnDrawItem](../../mfc/reference/cwnd-class.md#ondrawitem) `DRAWITEMSTRUCT`を参照してください。
+構造の説明については、「 [CWnd:: OnDrawItem](../../mfc/reference/cwnd-class.md#ondrawitem) 」を参照してください `DRAWITEMSTRUCT` 。
 
 ### <a name="example"></a>例
 
-次のコードは、MFC [CTRLTEST](../../overview/visual-cpp-samples.md)サンプルから取得されています。
+次のコードは、MFC [CTRLTEST](../../overview/visual-cpp-samples.md) サンプルからのものです。
 
 [!code-cpp[NVC_MFCWindowing#24](../../mfc/reference/codesnippet/cpp/cmenu-class_4.cpp)]
 
-## <a name="cmenuenablemenuitem"></a><a name="enablemenuitem"></a>メニュー::メニュー項目を有効にする
+## <a name="cmenuenablemenuitem"></a><a name="enablemenuitem"></a> CMenu:: EnableMenuItem
 
-メニュー項目を有効にする、無効にする、または淡く設定します。
+メニュー項目を有効、無効、または暗くします。
 
 ```
 UINT EnableMenuItem(
@@ -577,41 +578,41 @@ UINT EnableMenuItem(
 
 ### <a name="parameters"></a>パラメーター
 
-*NID 有効化アイテム*<br/>
-*nEnable*で指定されたメニュー項目を指定します。 このパラメータでは、ポップアップメニュー項目と標準メニュー項目を指定できます。
+*nIDEnableItem*<br/>
+*NEnable* によって決定される、有効にするメニュー項目を指定します。 このパラメーターでは、ポップアップメニュー項目だけでなく、標準のメニュー項目を指定できます。
 
-*n有効*<br/>
-実行するアクションを指定します。 MF_BYCOMMANDまたはMF_BYPOSITIONを使用して、MF_DISABLED、MF_ENABLED、またはMF_GRAYEDの組み合わせが可能です。 これらの値は、ビットごとの OR 演算子を使用して組み合わせることができます。 これらの値には次の意味があります。
+*nEnable*<br/>
+実行するアクションを指定します。 MF_BYCOMMAND または MF_BYPOSITION を使用して、MF_DISABLED、MF_ENABLED、または MF_GRAYED の組み合わせにすることができます。 これらの値は、ビットごとの OR 演算子を使用して組み合わせることができます。 これらの値には次の意味があります。
 
-- MF_BYCOMMAND パラメーターが既存のメニュー項目のコマンド ID を提供することを指定します。 これは既定値です。
+- MF_BYCOMMAND は、パラメーターが既存のメニュー項目のコマンド ID を与えることを指定します。 既定値です。
 
-- MF_BYPOSITION パラメーターが既存のメニュー項目の位置を指定することを指定します。 最初の項目は位置 0 です。
+- MF_BYPOSITION は、パラメーターが既存のメニュー項目の位置を示すことを指定します。 最初の項目の位置は0です。
 
-- MF_DISABLED メニュー項目を無効にして、選択できないようにしますが、淡暗く表示されません。
+- メニュー項目を選択できないように MF_DISABLED 無効にしますが、淡色は設定されません。
 
-- MF_ENABLED メニュー項目を選択して淡色表示の状態に戻します。
+- MF_ENABLED では、メニュー項目を選択して、淡色表示の状態から復元することができます。
 
-- MF_GRAYED メニュー項目を選択できないように無効にし、淡暗くします。
+- メニュー項目を無効にして、選択できないように MF_GRAYED します。
 
 ### <a name="return-value"></a>戻り値
 
-前の状態 (MF_DISABLED、MF_ENABLED、またはMF_GRAYED) または -1 (無効な場合)。
+以前の状態 (MF_DISABLED、MF_ENABLED、または MF_GRAYED)、または有効でない場合は-1。
 
 ### <a name="remarks"></a>解説
 
-メニューの[作成](#createmenu)、[挿入メニュー](#insertmenu)、[変更メニュー](#modifymenu)、および[読み込みメニューの間接的](#loadmenuindirect)なメンバー関数は、メニュー項目の状態 (有効、無効、または淡色表示) を設定することもできます。
+[CreateMenu](#createmenu)、 [insertmenu](#insertmenu)、 [Modifymenu](#modifymenu)、および[loadmenuindirect](#loadmenuindirect)メンバー関数は、メニュー項目の状態 (有効、無効、または淡色表示) を設定することもできます。
 
-MF_BYPOSITION値を使用するには、アプリケーションが正しい`CMenu`. メニュー`CMenu`バーの が使用されている場合、トップレベルのメニュー項目 (メニュー バーの項目) が影響を受けます。 ポップアップメニューまたはネストされたポップアップメニューの項目の状態を位置ごとに設定するには、アプリケーションでポップアップメニューの を`CMenu`指定する必要があります。
+MF_BYPOSITION 値を使用するには、アプリケーションが正しいを使用する必要があり `CMenu` ます。 メニューバーのが使用されている場合は、 `CMenu` トップレベルのメニュー項目 (メニューバーの項目) が影響を受けます。 ポップアップメニューまたは入れ子になったポップアップメニューの位置によって項目の状態を設定するには、アプリケーションでポップアップメニューのを指定する必要があり `CMenu` ます。
 
-アプリケーションでMF_BYCOMMAND フラグを指定すると、 に従属するすべてのポップアップ メニュー項目がチェックされます`CMenu`。したがって、重複するメニュー項目が存在しない限り`CMenu`、メニューバーの を使用するだけで十分です。
+アプリケーションで MF_BYCOMMAND フラグが指定されている場合、Windows はの下位にあるすべてのポップアップメニュー項目をチェックします `CMenu` 。したがって、重複するメニュー項目が存在しない場合 `CMenu` は、メニューバーのを使用するだけで十分です。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_MFCWindowing#25](../../mfc/reference/codesnippet/cpp/cmenu-class_5.cpp)]
 
-## <a name="cmenufromhandle"></a><a name="fromhandle"></a>Cメニュー::ハンドルから
+## <a name="cmenufromhandle"></a><a name="fromhandle"></a> CMenu:: FromHandle
 
-メニューへの Windows`CMenu`ハンドルを指定したオブジェクトへのポインターを返します。
+メニューへの Windows ハンドルを指定して、オブジェクトへのポインターを返し `CMenu` ます。
 
 ```
 static CMenu* PASCAL FromHandle(HMENU hMenu);
@@ -619,24 +620,24 @@ static CMenu* PASCAL FromHandle(HMENU hMenu);
 
 ### <a name="parameters"></a>パラメーター
 
-*Hmenu*<br/>
-メニューへの Windows ハンドル。
+*hMenu*<br/>
+メニューを対象とした Windows ハンドル。
 
 ### <a name="return-value"></a>戻り値
 
-一時的または永続的`CMenu`なを指すポインター。
+`CMenu`一時的または永続的なへのポインター。
 
 ### <a name="remarks"></a>解説
 
-`CMenu`オブジェクトが Windows メニュー オブジェクトにまだアタッチされていない場合は、`CMenu`一時オブジェクトが作成され、アタッチされます。
+`CMenu`オブジェクトが Windows メニューオブジェクトにまだアタッチされていない場合は、一時 `CMenu` オブジェクトが作成され、アタッチされます。
 
-この一`CMenu`時オブジェクトは、アプリケーションがイベント ループで次にアイドル時間を持つまで有効で、その時点ですべての一時オブジェクトが削除されます。
+この一時 `CMenu` オブジェクトは、アプリケーションが次にそのイベントループ内でアイドル状態になるまで有効です。その時点で、すべての一時オブジェクトが削除されます。
 
 ### <a name="example"></a>例
 
-  [CMenu::CreateMenu](#createmenu)の例を参照してください。
+  「 [CMenu:: CreateMenu](#createmenu)」の例を参照してください。
 
-## <a name="cmenugetdefaultitem"></a><a name="getdefaultitem"></a>メニュー::デフォルトアイテムを取得します。
+## <a name="cmenugetdefaultitem"></a><a name="getdefaultitem"></a> CMenu:: GetDefaultItem
 
 指定したメニューの既定のメニュー項目を決定します。
 
@@ -648,32 +649,32 @@ UINT GetDefaultItem(
 
 ### <a name="parameters"></a>パラメーター
 
-*グマディフラグ*<br/>
-メニュー項目の検索方法を指定する値。 このパラメーターには、なし、1 つ、または次の値の組み合わせを指定できます。
+*gmdiFlags*<br/>
+関数がメニュー項目を検索する方法を指定する値。 このパラメーターには、none、1、または次の値の組み合わせを指定できます。
 
-|[値]|意味|
+|値|説明|
 |-----------|-------------|
-|GMDI_GOINTOPOPUPS|サブメニューを開く既定の項目の場合、関数は対応するサブメニューを再帰的に検索することを指定します。 サブメニューに既定の項目がない場合、戻り値はサブメニューを開く項目を識別します。<br /><br /> 既定では、サブメニューを開く項目かどうかにかかわらず、指定されたメニューの最初の既定の項目が返されます。|
-|GMDI_USEDISABLED|無効にした場合でも、関数が既定の項目を返すように指定します。<br /><br /> 既定では、無効または灰色の項目はスキップされます。|
+|GMDI_GOINTOPOPUPS|既定の項目がサブメニューを開く場合は、対応するサブメニュー内を再帰的に検索することを指定します。 サブメニューに既定の項目がない場合は、そのサブメニューを開く項目が戻り値によって識別されます。<br /><br /> 既定では、この関数は、サブメニューを開く項目であるかどうかに関係なく、指定されたメニューの最初の既定の項目を返します。|
+|GMDI_USEDISABLED|関数が無効になっている場合でも、既定の項目を返すことを指定します。<br /><br /> 既定では、この関数は、無効またはグレーの項目をスキップします。|
 
-*フバイポス*<br/>
-メニュー項目の識別子またはその位置を取得するかどうかを指定する値。 このパラメーターが FALSE の場合、識別子が返されます。 それ以外の場合は、位置が返されます。
+*fByPos*<br/>
+メニュー項目の識別子またはその位置を取得するかどうかを指定する値。 このパラメーターが FALSE の場合は、識別子が返されます。 それ以外の場合は、位置が返されます。
 
 ### <a name="return-value"></a>戻り値
 
-関数が成功した場合、戻り値はメニュー項目の識別子または位置になります。 関数が失敗した場合、戻り値は -1 です。
+関数が成功した場合、戻り値はメニュー項目の識別子または位置になります。 関数が失敗した場合、戻り値は-1 になります。
 
 ### <a name="remarks"></a>解説
 
-このメンバー関数は、Windows SDK で説明されているように、Win32 関数の動作を実装[します](/windows/win32/api/winuser/nf-winuser-getmenudefaultitem)。
+このメンバー関数は、Windows SDK で説明されているように、Win32 関数 [Getmenudefaultitem](/windows/win32/api/winuser/nf-winuser-getmenudefaultitem)の動作を実装します。
 
 ### <a name="example"></a>例
 
-  [CMenu::InsertMenu](#insertmenu)の例を参照してください。
+  「 [CMenu:: InsertMenu](#insertmenu)」の例を参照してください。
 
-## <a name="cmenugetmenucontexthelpid"></a><a name="getmenucontexthelpid"></a>メニュー::メニューコンテキストヘルプId
+## <a name="cmenugetmenucontexthelpid"></a><a name="getmenucontexthelpid"></a> CMenu:: GetMenuContextHelpId
 
-に関連付けられている`CMenu`コンテキスト ヘルプ ID を取得します。
+に関連付けられているコンテキストヘルプ ID を取得 `CMenu` します。
 
 ```
 DWORD GetMenuContextHelpId() const;
@@ -681,13 +682,13 @@ DWORD GetMenuContextHelpId() const;
 
 ### <a name="return-value"></a>戻り値
 
-コンテキスト ヘルプ ID が`CMenu`現在関連付けられている場合は、その ID が関連付けられています。それ以外の場合はゼロ。
+現在に関連付けられているコンテキストヘルプ ID がある場合は、 `CMenu` それ以外の場合は0。
 
 ### <a name="example"></a>例
 
-  [CMenu::InsertMenu](#insertmenu)の例を参照してください。
+  「 [CMenu:: InsertMenu](#insertmenu)」の例を参照してください。
 
-## <a name="cmenugetmenuinfo"></a><a name="getmenuinfo"></a>メニュー::メニュー情報
+## <a name="cmenugetmenuinfo"></a><a name="getmenuinfo"></a> CMenu:: GetMenuInfo
 
 メニューの情報を取得します。
 
@@ -698,19 +699,19 @@ BOOL GetMenuInfo(LPMENUINFO lpcmi) const;
 ### <a name="parameters"></a>パラメーター
 
 *lpcmi*<br/>
-メニューの情報を含む[MENUINFO](/windows/win32/api/winuser/ns-winuser-menuinfo)構造体へのポインター。
+メニューの情報を格納している [Menuinfo](/windows/win32/api/winuser/ns-winuser-menuinfo) 構造体へのポインター。
 
 ### <a name="return-value"></a>戻り値
 
-関数が成功した場合、戻り値は 0 以外になります。それ以外の場合、戻り値は 0 です。
+関数が成功した場合、戻り値は0以外になります。それ以外の場合、戻り値は0です。
 
 ### <a name="remarks"></a>解説
 
-メニューに関する情報を取得します。
+メニューに関する情報を取得するには、この関数を呼び出します。
 
-## <a name="cmenugetmenuitemcount"></a><a name="getmenuitemcount"></a>メニュー::メニュー項目数
+## <a name="cmenugetmenuitemcount"></a><a name="getmenuitemcount"></a> CMenu:: GetMenuItemCount
 
-ポップアップ メニューまたはトップレベル メニューの項目数を指定します。
+ポップアップメニューまたはトップレベルメニュー内の項目数を決定します。
 
 ```
 UINT GetMenuItemCount() const;
@@ -718,15 +719,15 @@ UINT GetMenuItemCount() const;
 
 ### <a name="return-value"></a>戻り値
 
-関数が正常に実行された場合のメニューの項目数。それ以外の場合は -1。
+関数が成功した場合のメニュー内の項目数。それ以外の場合は-1。
 
 ### <a name="example"></a>例
 
-  [CWnd::GetMenu](../../mfc/reference/cwnd-class.md#getmenu)の例を参照してください。
+  [CWnd:: GetMenu](../../mfc/reference/cwnd-class.md#getmenu)の例を参照してください。
 
-## <a name="cmenugetmenuitemid"></a><a name="getmenuitemid"></a>メニュー::メニュー項目ID
+## <a name="cmenugetmenuitemid"></a><a name="getmenuitemid"></a> CMenu:: GetMenuItemID
 
-*nPos*で定義された位置にあるメニュー項目のメニュー項目識別子を取得します。
+*NPos* で定義された位置にあるメニュー項目のメニュー項目識別子を取得します。
 
 ```
 UINT GetMenuItemID(int nPos) const;
@@ -734,18 +735,18 @@ UINT GetMenuItemID(int nPos) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*Npo*<br/>
+*nPos*<br/>
 ID を取得するメニュー項目の位置 (0 から始まる) を指定します。
 
 ### <a name="return-value"></a>戻り値
 
-関数が正常に実行された場合の、ポップアップ メニュー内の指定された項目の項目 ID。 指定した項目がポップアップメニューの場合(ポップアップメニュー内の項目とは対照的に)、戻り値は -1 です。 *nPos が*セパレータ メニュー項目に対応する場合、戻り値は 0 です。
+関数が成功した場合のポップアップメニュー内の指定された項目の項目 ID。 ポップアップメニュー内の項目ではなく、指定した項目がポップアップメニューの場合、戻り値は-1 です。 *NPos* が SEPARATOR メニュー項目に対応している場合、戻り値は0です。
 
 ### <a name="example"></a>例
 
-  [CMenu::InsertMenu](#insertmenu)の例を参照してください。
+  「 [CMenu:: InsertMenu](#insertmenu)」の例を参照してください。
 
-## <a name="cmenugetmenuiteminfo"></a><a name="getmenuiteminfo"></a>メニュー::メニュー項目情報
+## <a name="cmenugetmenuiteminfo"></a><a name="getmenuiteminfo"></a> CMenu:: GetMenuItemInfo
 
 メニュー項目に関する情報を取得します。
 
@@ -758,30 +759,30 @@ BOOL GetMenuItemInfo(
 
 ### <a name="parameters"></a>パラメーター
 
-*アイテム*<br/>
-情報を取得するメニュー項目の識別子または位置。 このパラメーターの意味は、 の`ByPos`値によって異なります。
+*uItem*<br/>
+情報を取得するメニュー項目の識別子または位置。 このパラメーターの意味は、の値によって異なり `ByPos` ます。
 
-*をクリックします。*<br/>
-メニューに関する情報を含む、Windows SDK で説明されているように[、MENUITEMINFO](/windows/win32/api/winuser/ns-winuser-menuiteminfow)へのポインター。
+*lpMenuItemInfo*<br/>
+Windows SDK で説明されているように、メニューに関する情報を格納している [MENUITEMINFO](/windows/win32/api/winuser/ns-winuser-menuiteminfow)へのポインター。
 
-*フバイポス*<br/>
-の意味を指定する値`nIDItem`。 既定では、uItem`ByPos`がメニュー項目識別子であることを示す FALSE です。 FALSE`ByPos`に設定されていない場合は、メニュー項目の位置を示します。
+*fByPos*<br/>
+の意味を指定する値 `nIDItem` 。 既定で `ByPos` は、は FALSE です。これは、uItem がメニュー項目識別子であることを示します。 `ByPos`が FALSE に設定されていない場合は、メニュー項目の位置を示します。
 
 ### <a name="return-value"></a>戻り値
 
-関数が成功した場合、戻り値は 0 以外になります。 関数が失敗した場合は、0 を返します。 拡張エラー情報を取得するには、Windows SDK で説明されているように、Win32 関数[GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror)を使用します。
+関数が成功すると、戻り値は 0 以外になります。 関数が失敗した場合は、0 を返します。 拡張エラー情報を取得するには、Windows SDK で説明されているように、Win32 関数 [GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror)を使用します。
 
 ### <a name="remarks"></a>解説
 
-このメンバー関数は、Windows SDK で説明されているように、Win32 関数[の GetMenuItemInfo](/windows/win32/api/winuser/nf-winuser-getmenuiteminfow)の動作を実装します。 MFC の実装では`GetMenuItemInfo`、メニューへのハンドルは使用しません。
+このメンバー関数は、Windows SDK で説明されているように、Win32 関数 [GetMenuItemInfo](/windows/win32/api/winuser/nf-winuser-getmenuiteminfow)のの動作を実装します。 の MFC 実装では、メニューへのハンドルを使用しないことに注意してください `GetMenuItemInfo` 。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_MFCWindowing#26](../../mfc/reference/codesnippet/cpp/cmenu-class_6.cpp)]
 
-## <a name="cmenugetmenustate"></a><a name="getmenustate"></a>メニュー::メニュー状態を取得します。
+## <a name="cmenugetmenustate"></a><a name="getmenustate"></a> CMenu:: GetMenuState
 
-指定したメニュー項目のステータスまたはポップアップ メニューの項目数を返します。
+指定されたメニュー項目のステータス、またはポップアップメニュー内の項目数を返します。
 
 ```
 UINT GetMenuState(
@@ -792,40 +793,40 @@ UINT GetMenuState(
 ### <a name="parameters"></a>パラメーター
 
 *nID*<br/>
-*nFlags*で指定されるメニュー項目 ID を指定します。
+*NFlags* によって決定されるメニュー項目 ID を指定します。
 
-*Nflags*<br/>
-*nID*の性質を指定します。 次のいずれかの値を指定できます。
+*nFlags*<br/>
+*NID* の性質を指定します。 次のいずれかの値を指定できます。
 
-- MF_BYCOMMAND パラメーターが既存のメニュー項目のコマンド ID を提供することを指定します。 これは既定値です。
+- MF_BYCOMMAND は、パラメーターが既存のメニュー項目のコマンド ID を与えることを指定します。 既定値です。
 
-- MF_BYPOSITION パラメーターが既存のメニュー項目の位置を指定することを指定します。 最初の項目は位置 0 です。
+- MF_BYPOSITION は、パラメーターが既存のメニュー項目の位置を示すことを指定します。 最初の項目の位置は0です。
 
 ### <a name="return-value"></a>戻り値
 
-指定された項目が存在しない場合の値 0xFFFFFFFF。 *nId*がポップアップメニューを識別する場合、上位バイトにはポップアップメニュー内の項目数が含まれ、下位バイトにはポップアップメニューに関連付けられたメニューフラグが含まれます。 それ以外の場合、戻り値は次のリストの値のマスク (ブール OR) になります (このマスクは *、nId*が識別するメニュー項目の状態を表します)。
+指定した項目が存在しない場合は0xFFFFFFFF。 *NId* がポップアップメニューを識別する場合、上位バイトにはポップアップメニュー内の項目の数が含まれ、下位バイトにはポップアップメニューに関連付けられているメニューフラグが格納されます。 それ以外の場合、戻り値は次の一覧の値のマスク (ブール値または) になります (このマスクは、 *nId* が識別するメニュー項目の状態を示します)。
 
-- MF_CHECKED 項目の横に既定のチェック マークを付けるMF_UNCHECKEDの切り替えとして機能します。 アプリケーションがチェック マーク ビットマップ (メンバー関数を`SetMenuItemBitmaps`参照) を提供すると、"チェック マークオン" ビットマップが表示されます。
+- MF_CHECKED は、MF_UNCHECKED の切り替えとして機能し、項目の横に既定のチェックマークを配置します。 アプリケーションがチェックマークビットマップ (メンバー関数を参照) を提供する場合 `SetMenuItemBitmaps` 、[チェックマーク] ビットマップが表示されます。
 
-- MF_DISABLED メニュー項目を無効にして、選択できないようにしますが、淡暗く表示されません。
+- メニュー項目を選択できないように MF_DISABLED 無効にしますが、淡色は設定されません。
 
-- MF_ENABLED メニュー項目を選択して淡色表示の状態に戻します。 この定数の値は 0 です。この値を使用する場合、アプリケーションは 0 に対して fail をテストしないでください。
+- MF_ENABLED では、メニュー項目を選択して、淡色表示の状態から復元することができます。 この定数の値が0であることに注意してください。アプリケーションでは、この値を使用しているときにエラーが発生した場合、0に対してテストしないでください。
 
-- MF_GRAYED メニュー項目を選択できないように無効にし、淡暗くします。
+- メニュー項目を無効にして、選択できないように MF_GRAYED します。
 
-- MF_MENUBARBREAK項目を静的メニューの新しい行に配置するか、ポップアップ メニューの新しい列に配置します。 新しいポップアップメニュー列は、古い列と垂直分割線で区切られます。
+- MF_MENUBARBREAK は、静的メニューまたはポップアップメニューの新しい列に項目を新しい行に配置します。 新しいポップアップメニュー列は、前の列から垂直の区切り線で区切られます。
 
-- MF_MENUBREAK静的メニューの新しい行に項目を配置するか、ポップアップ メニューの新しい列に項目を配置します。 列の間に分割線は配置されません。
+- MF_MENUBREAK は、静的メニューまたはポップアップメニューの新しい列に項目を新しい行に配置します。 列の間には、分割線は挿入されません。
 
-- MF_SEPARATOR 水平分割線を描画します。 ポップアップメニューでのみ使用できます。 この線は、淡色表示、無効、または強調表示できません。 他のパラメーターは無視されます。
+- MF_SEPARATOR は、水平方向の区切り線を描画します。 ポップアップメニューでのみ使用できます。 この行を淡色表示、無効、または強調表示することはできません。 その他のパラメーターは無視されます。
 
-- MF_UNCHECKED 項目の横にあるチェック マークを削除するMF_CHECKEDとの切り替えとして機能します。 アプリケーションがチェック マーク ビットマップ (メンバー関数を`SetMenuItemBitmaps`参照) を提供すると、"チェック マーク オフ" ビットマップが表示されます。 この定数の値は 0 です。この値を使用する場合、アプリケーションは 0 に対して fail をテストしないでください。
+- MF_UNCHECKED は、項目の横にあるチェックマークを解除するための MF_CHECKED の切り替えとして機能します。 アプリケーションがチェックマークビットマップ (メンバー関数を参照) を提供する場合 `SetMenuItemBitmaps` 、[チェックマークをオフにする] ビットマップが表示されます。 この定数の値が0であることに注意してください。アプリケーションでは、この値を使用しているときにエラーが発生した場合、0に対してテストしないでください。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_MFCWindowing#27](../../mfc/reference/codesnippet/cpp/cmenu-class_7.cpp)]
 
-## <a name="cmenugetmenustring"></a><a name="getmenustring"></a>メニュー::メニュー文字列を取得します。
+## <a name="cmenugetmenustring"></a><a name="getmenustring"></a> CMenu:: GetMenuString
 
 指定したメニュー項目のラベルを指定したバッファーにコピーします。
 
@@ -844,41 +845,41 @@ int GetMenuString(
 
 ### <a name="parameters"></a>パラメーター
 
-*nIDアイテム*<br/>
-*nFlags*の値に応じて、メニュー項目の整数識別子またはメニュー項目のオフセットを指定します。
+*nIDItem*<br/>
+*NFlags* の値に応じて、メニュー項目の整数識別子、またはメニュー項目のオフセットを指定します。
 
-*文字列*<br/>
-ラベルを受け取るバッファーへのポイント。
+*lpString*<br/>
+は、ラベルを受け取るバッファーを指します。
 
-*文字列*<br/>
-コピーされた`CString`メニュー文字列を受け取るオブジェクトへの参照。
+*rString*<br/>
+コピーされた `CString` メニュー文字列を受け取るオブジェクトへの参照。
 
-*カウントカウント*<br/>
-コピーするラベルの最大長 (文字数) を指定します。 ラベルが*nMaxCount*で指定された最大値より長い場合、余分な文字は切り捨てられます。
+*nMaxCount*<br/>
+コピーするラベルの最大長 (文字数) を指定します。 ラベルが *nMaxCount* で指定された最大値より長い場合は、余分な文字が切り捨てられます。
 
-*Nflags*<br/>
-*パラメーター*の解釈を指定します。 次のいずれかの値を指定できます。
+*nFlags*<br/>
+*NIDItem* パラメーターの解釈を指定します。 次のいずれかの値を指定できます。
 
-|Nflags|nIDアイテムの解釈|
+|nFlags|NIDItem の解釈|
 |------------|-------------------------------|
-|MF_BYCOMMAND|パラメーターが既存のメニュー項目のコマンド ID を提供することを指定します。 MF_BYCOMMANDもMF_BYPOSITIONも設定されていない場合、これはデフォルトです。|
-|MF_BYPOSITION|パラメーターが既存のメニュー項目の位置を指定することを指定します。 最初の項目は位置 0 です。|
+|MF_BYCOMMAND|パラメーターが既存のメニュー項目のコマンド ID を与えることを指定します。 これは、MF_BYCOMMAND も MF_BYPOSITION も設定されていない場合の既定値です。|
+|MF_BYPOSITION|パラメーターが既存のメニュー項目の位置を指定することを指定します。 最初の項目の位置は0です。|
 
 ### <a name="return-value"></a>戻り値
 
-バッファにコピーされる実際の文字数を指定します。
+Null 終端文字を含まない、バッファーにコピーされる実際の文字数を指定します。
 
 ### <a name="remarks"></a>解説
 
-*nMaxCount*パラメーターは、文字列を終了する NULL 文字を収容するために、ラベル内の文字数より 1 大きい値にする必要があります。
+*NMaxCount* パラメーターは、文字列を終了する null 文字を格納するために、ラベル内の文字数よりも1つ大きい値にする必要があります。
 
 ### <a name="example"></a>例
 
-  [CMenu::InsertMenu](#insertmenu)の例を参照してください。
+  「 [CMenu:: InsertMenu](#insertmenu)」の例を参照してください。
 
-## <a name="cmenugetsafehmenu"></a><a name="getsafehmenu"></a>メニュー::ゲットセーフメニュー
+## <a name="cmenugetsafehmenu"></a><a name="getsafehmenu"></a> CMenu:: GetSafeHmenu
 
-この`CMenu`オブジェクトでラップされた HMENU または NULL`CMenu`ポインターを返します。
+このオブジェクトによってラップされた HMENU、 `CMenu` または NULL ポインターを返し `CMenu` ます。
 
 ```
 HMENU GetSafeHmenu() const;
@@ -886,11 +887,11 @@ HMENU GetSafeHmenu() const;
 
 ### <a name="example"></a>例
 
-  [CMenu::ロードメニュー](#loadmenu)の例を参照してください。
+  「 [CMenu:: LoadMenu](#loadmenu)」の例を参照してください。
 
-## <a name="cmenugetsubmenu"></a><a name="getsubmenu"></a>メニュー::サブメニューを取得します。
+## <a name="cmenugetsubmenu"></a><a name="getsubmenu"></a> CMenu:: GetSubMenu メニュー
 
-ポップアップ メニュー`CMenu`のオブジェクトを取得します。
+`CMenu`ポップアップメニューのオブジェクトを取得します。
 
 ```
 CMenu* GetSubMenu(int nPos) const;
@@ -898,20 +899,20 @@ CMenu* GetSubMenu(int nPos) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*Npo*<br/>
-メニューに含まれるポップアップ メニューの位置を指定します。 最初のメニュー項目の位置の値は 0 から始まります。 この関数では、ポップアップメニューの識別子は使用できません。
+*nPos*<br/>
+メニューに表示されるポップアップメニューの位置を指定します。 最初のメニュー項目の位置の値は0から始まります。 ポップアップメニューの識別子は、この関数では使用できません。
 
 ### <a name="return-value"></a>戻り値
 
-ポップアップ メニューが`CMenu`指定された`m_hMenu`位置に存在する場合、メンバーがポップアップ メニューへのハンドルを含むオブジェクトへのポインター。それ以外の場合は NULL。 オブジェクトが`CMenu`存在しない場合は、一時的なオブジェクトが作成されます。 返`CMenu`されたポインターは格納しないでください。
+指定された `CMenu` `m_hMenu` 位置にポップアップメニューが存在する場合は、そのメンバーにポップアップメニューへのハンドルを格納しているオブジェクトへのポインター。それ以外の場合は NULL。 オブジェクトが存在しない場合は、 `CMenu` 一時的なものが作成されます。 返された `CMenu` ポインターを格納することはできません。
 
 ### <a name="example"></a>例
 
-  [CMenu::トラックポップアップメニュー](#trackpopupmenu)の例を参照してください。
+  「 [CMenu:: TrackPopupMenu](#trackpopupmenu)」の例を参照してください。
 
-## <a name="cmenuinsertmenu"></a><a name="insertmenu"></a>メニュー::メニューの挿入
+## <a name="cmenuinsertmenu"></a><a name="insertmenu"></a> CMenu:: InsertMenu
 
-*nPosition*で指定した位置に新しいメニュー項目を挿入し、その他の項目をメニューの下に移動します。
+*NPosition* で指定した位置に新しいメニュー項目を挿入し、他の項目をメニューの下に移動します。
 
 ```
 BOOL InsertMenu(
@@ -929,31 +930,31 @@ BOOL InsertMenu(
 
 ### <a name="parameters"></a>パラメーター
 
-*n位置*<br/>
-新しいメニュー項目を挿入する前のメニュー項目を指定します。 *nFlags*パラメーターを使用して、次の方法で*nPosition*を解釈できます。
+*nPosition*<br/>
+新しいメニュー項目を挿入する前のメニュー項目を指定します。 *NFlags* パラメーターを使用すると、次の方法で *nPosition* を解釈できます。
 
-|Nflags|n位置の解釈|
+|nFlags|NPosition の解釈|
 |------------|---------------------------------|
-|MF_BYCOMMAND|パラメーターが既存のメニュー項目のコマンド ID を提供することを指定します。 MF_BYCOMMANDもMF_BYPOSITIONも設定されていない場合、これはデフォルトです。|
-|MF_BYPOSITION|パラメーターが既存のメニュー項目の位置を指定することを指定します。 最初の項目は位置 0 です。 *nPosition が*-1 の場合、新しいメニュー項目はメニューの末尾に追加されます。|
+|MF_BYCOMMAND|パラメーターが既存のメニュー項目のコマンド ID を与えることを指定します。 これは、MF_BYCOMMAND も MF_BYPOSITION も設定されていない場合の既定値です。|
+|MF_BYPOSITION|パラメーターが既存のメニュー項目の位置を指定することを指定します。 最初の項目の位置は0です。 *NPosition* が-1 の場合、新しいメニュー項目がメニューの最後に追加されます。|
 
-*Nflags*<br/>
-*nPosition*の解釈方法を指定し、メニューに追加されたときの新しいメニュー項目の状態に関する情報を指定します。 設定できるフラグの一覧については、メンバー関数の[AppendMenu](#appendmenu)を参照してください。 複数の値を指定するには、ビットごとの OR 演算子を使用して、MF_BYCOMMAND またはMF_BYPOSITION フラグと組み合わせます。
+*nFlags*<br/>
+*NPosition* をどのように解釈するかを指定し、メニューに追加されたときの新しいメニュー項目の状態に関する情報を指定します。 設定できるフラグの一覧については、「 [Appendmenu](#appendmenu) メンバー関数」を参照してください。 複数の値を指定するには、ビットごとの OR 演算子を使用して、MF_BYCOMMAND または MF_BYPOSITION フラグと結合します。
 
-*新しいアイテム*<br/>
-新しいメニュー項目のコマンド ID を指定するか *、nFlags*がMF_POPUPに設定されている場合は、ポップアップ メニューのメニュー ハンドル (HMENU) を指定します。 *nIdNewItem*パラメーターは *、nFlags*がMF_SEPARATORに設定されている場合は無視されます (必要ありません)。
+*nIDNewItem*<br/>
+新しいメニュー項目のコマンド ID を指定するか、または *nFlags* が MF_POPUP に設定されている場合は、ポップアップメニューのメニューハンドル (HMENU) を指定します。 *NFlags* が MF_SEPARATOR に設定されている場合、 *nIDNewItem* パラメーターは無視されます (必要ありません)。
 
-*新しいアイテムを表示します。*<br/>
-新しいメニュー項目の内容を指定します。 *nFlags*は、次の方法で*lpszNewItem*を解釈するために使用できます。
+*lpszNewItem*<br/>
+新しいメニュー項目の内容を指定します。 *nFlags* は、次の方法で *lpszNewItem* を解釈するために使用できます。
 
-|Nflags|の解釈|
+|nFlags|LpszNewItem の解釈|
 |------------|-----------------------------------|
-|MF_OWNERDRAW|アプリケーションが指定した 32 ビット値を格納します。 この 32 ビット値は[、WM_MEASUREITEM](/windows/win32/Controls/wm-measureitem)および[WM_DRAWITEM](/windows/win32/Controls/wm-drawitem)メッセージ`itemData`によって提供される構造体のメンバー内でアプリケーションで使用できます。 これらのメッセージは、メニュー項目が最初に表示されるか、変更されたときに送信されます。|
-|MF_STRING|null で終わる文字列への長いポインターを格納します。 これはデフォルトの解釈です。|
-|MF_SEPARATOR|*lpszNewItem*パラメーターは無視されます (必要ありません)。|
+|MF_OWNERDRAW|アプリケーションが、メニュー項目に関連付けられた追加データを保持するために使用できる32ビット値を格納します。 この32ビット値は、 `itemData` [WM_MEASUREITEM](/windows/win32/Controls/wm-measureitem) および [WM_DRAWITEM](/windows/win32/Controls/wm-drawitem) メッセージによって提供される構造体のメンバー内のアプリケーションで使用できます。 これらのメッセージは、メニュー項目が最初に表示されたとき、または変更されたときに送信されます。|
+|MF_STRING|Null で終わる文字列への long ポインターを格納します。 これが既定の解釈です。|
+|MF_SEPARATOR|*LpszNewItem* パラメーターは無視されます (不要)。|
 
-*pBmp*<br/>
-メニュー項目として`CBitmap`使用されるオブジェクトへのポイント。
+*.Pbmp*<br/>
+`CBitmap`メニュー項目として使用されるオブジェクトを指します。
 
 ### <a name="return-value"></a>戻り値
 
@@ -961,21 +962,21 @@ BOOL InsertMenu(
 
 ### <a name="remarks"></a>解説
 
-nFlags で値を設定することにより、アプリケーションはメニュー項目の*nFlags*状態を指定できます。
+アプリケーションでは、値を *nFlags* に設定することによって、メニュー項目の状態を指定できます。
 
-ウィンドウ内のメニューが変更されると (ウィンドウが表示されるかどうかにかかわらず)、アプリケーションは`CWnd::DrawMenuBar`.
+ウィンドウに表示されているメニューが変更された場合 (ウィンドウが表示されているかどうかにかかわらず)、アプリケーションはを呼び出す必要があり `CWnd::DrawMenuBar` ます。
 
-*nIDNewItem*がポップアップ メニューを指定すると、ポップアップ メニューが挿入されるメニューの一部になります。 そのメニューが破棄されると、挿入されたメニューも破棄されます。 挿入されたメニューは、競合を`CMenu`避けるためにオブジェクトから切り離す必要があります。
+*NIDNewItem* がポップアップメニューを指定すると、それが挿入されるメニューの一部になります。 このメニューが破棄されると、挿入されたメニューも破棄されます。 競合を回避するには、挿入されたメニューをオブジェクトからデタッチする必要があり `CMenu` ます。
 
-アクティブなマルチ ドキュメント インターフェイス (MDI) 子ウィンドウが最大化され、アプリケーションがこの関数を呼び出してMF_BYPOSITION フラグを指定して、MDI アプリケーションのメニューにポップアップ メニューを挿入すると、メニューは予想より 1 つ後ろに挿入されます。 これは、アクティブな MDI 子ウィンドウのコントロール メニューが MDI フレーム ウィンドウのメニュー バーの最初の位置に挿入されるために発生します。 メニューを正しく配置するには、アプリケーションは、それ以外の場合に使用される位置の値に 1 を追加する必要があります。 アプリケーションは、WM_MDIGETACTIVE メッセージを使用して、現在アクティブな子ウィンドウが最大化されているかどうかを判断できます。
+アクティブなマルチドキュメントインターフェイス (MDI) 子ウィンドウが最大化されていて、アプリケーションがこの関数を呼び出して MF_BYPOSITION フラグを指定することによって、MDI アプリケーションのメニューにポップアップメニューを挿入する場合、メニューは予想よりも1つ上の位置に挿入されます。 これは、アクティブな MDI 子ウィンドウのコントロールメニューが MDI フレームウィンドウのメニューバーの最初の位置に挿入されるために発生します。 メニューを適切に配置するには、アプリケーションで、使用する位置の値に1を追加する必要があります。 アプリケーションでは、WM_MDIGETACTIVE メッセージを使用して、現在アクティブな子ウィンドウが最大化されているかどうかを判断できます。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_MFCWindowing#28](../../mfc/reference/codesnippet/cpp/cmenu-class_8.cpp)]
 
-## <a name="cmenuinsertmenuitem"></a><a name="insertmenuitem"></a>メニュー::メニュー項目の挿入
+## <a name="cmenuinsertmenuitem"></a><a name="insertmenuitem"></a> CMenu:: InsertMenuItem
 
-メニューの指定した位置に新しいメニュー項目を挿入します。
+メニュー内の指定した位置に新しいメニュー項目を挿入します。
 
 ```
 BOOL InsertMenuItem(
@@ -986,22 +987,22 @@ BOOL InsertMenuItem(
 
 ### <a name="parameters"></a>パラメーター
 
-*アイテム*<br/>
-Windows SDK の[挿入メニューアイテム](/windows/win32/api/winuser/nf-winuser-insertmenuitemw)の*uItem*の説明を参照してください。
+*uItem*<br/>
+Windows SDK の [Insertmenuitem](/windows/win32/api/winuser/nf-winuser-insertmenuitemw)の *uitem* の説明を参照してください。
 
-*をクリックします。*<br/>
-の Windows SDK で`InsertMenuItem`*の lpmii*の説明を参照してください。
+*lpMenuItemInfo*<br/>
+Windows SDK の「 *lpmii* in」を参照してください `InsertMenuItem` 。
 
-*フバイポス*<br/>
-Windows SDK の*fByPosition*の`InsertMenuItem`説明を参照してください。
+*fByPos*<br/>
+Windows SDK の「」の *Fbyposition* の説明を参照してください `InsertMenuItem` 。
 
 ### <a name="remarks"></a>解説
 
-この関数は、Windows SDK で説明されている[InsertMenuItem](/windows/win32/api/winuser/nf-winuser-insertmenuitemw)をラップします。
+この関数は、Windows SDK で説明されている [Insertmenuitem](/windows/win32/api/winuser/nf-winuser-insertmenuitemw)をラップします。
 
-## <a name="cmenuloadmenu"></a><a name="loadmenu"></a>メニュー::ロードメニュー
+## <a name="cmenuloadmenu"></a><a name="loadmenu"></a> CMenu:: LoadMenu
 
-アプリケーションの実行可能ファイルからメニュー リソースを読み込み、オブジェクトに`CMenu`アタッチします。
+アプリケーションの実行可能ファイルからメニューリソースを読み込み、それをオブジェクトにアタッチし `CMenu` ます。
 
 ```
 BOOL LoadMenu(LPCTSTR lpszResourceName);
@@ -1010,27 +1011,27 @@ BOOL LoadMenu(UINT nIDResource);
 
 ### <a name="parameters"></a>パラメーター
 
-*リソース名*<br/>
-読み込むメニュー リソースの名前を含む null で終わる文字列を指します。
+*lpszResourceName*<br/>
+読み込むメニューリソースの名前を含む、null で終わる文字列を指します。
 
-*リソース*<br/>
-読み込むメニュー リソースのメニュー ID を指定します。
+*nIDResource*<br/>
+読み込むメニューリソースのメニュー ID を指定します。
 
 ### <a name="return-value"></a>戻り値
 
-メニュー リソースが正常に読み込まれた場合は 0 以外の値を返します。それ以外の場合は 0。
+メニューリソースが正常に読み込まれた場合は0以外の。それ以外の場合は0です。
 
 ### <a name="remarks"></a>解説
 
-メニューがウィンドウに割り当てられていない場合、アプリケーションは、メニューに関連付けられたシステム リソースを解放する必要があります。 アプリケーションは[、DestroyMenu](#destroymenu)メンバー関数を呼び出すことによってメニューを解放します。
+終了する前に、メニューがウィンドウに割り当てられていない場合は、アプリケーションでメニューに関連付けられているシステムリソースを解放する必要があります。 アプリケーションは、 [destroymenu](#destroymenu) メンバー関数を呼び出すことによってメニューを解放します。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_MFCWindowing#29](../../mfc/reference/codesnippet/cpp/cmenu-class_9.cpp)]
 
-## <a name="cmenuloadmenuindirect"></a><a name="loadmenuindirect"></a>メニュー::ロードメニュー間接的
+## <a name="cmenuloadmenuindirect"></a><a name="loadmenuindirect"></a> CMenu:: LoadMenuIndirect
 
-メモリ内のメニュー テンプレートからリソースを読み込み、オブジェクト`CMenu`にアタッチします。
+メモリ内のメニューテンプレートからリソースを読み込み、それをオブジェクトにアタッチし `CMenu` ます。
 
 ```
 BOOL LoadMenuIndirect(const void* lpMenuTemplate);
@@ -1038,32 +1039,32 @@ BOOL LoadMenuIndirect(const void* lpMenuTemplate);
 
 ### <a name="parameters"></a>パラメーター
 
-*テンプレート*<br/>
-メニュー テンプレート (単一の[MENUITEMTEMPLATEHEADER](/windows/win32/api/winuser/ns-winuser-menuitemtemplateheader)構造体と 1 つ以上の[MENUITEMTEMPLATE](/windows/win32/api/winuser/ns-winuser-menuitemtemplate)構造体のコレクション) へのポイント。 これら 2 つの構造体の詳細については、Windows SDK を参照してください。
+*lpMenuTemplate*<br/>
+メニューテンプレート (1 つの [Menuitemtemplateheader](/windows/win32/api/winuser/ns-winuser-menuitemtemplateheader) 構造体と1つ以上の [menuitemtemplate](/windows/win32/api/winuser/ns-winuser-menuitemtemplate) 構造体のコレクション) をポイントします。 これらの2つの構造体の詳細については、Windows SDK を参照してください。
 
 ### <a name="return-value"></a>戻り値
 
-メニュー リソースが正常に読み込まれた場合は 0 以外の値を返します。それ以外の場合は 0。
+メニューリソースが正常に読み込まれた場合は0以外の。それ以外の場合は0です。
 
 ### <a name="remarks"></a>解説
 
-メニュー テンプレートは、ヘッダーの後に 1 つ以上の[MENUITEMTEMPLATE](/windows/win32/api/winuser/ns-winuser-menuitemtemplate)構造体のコレクションを指定します。
+メニューテンプレートとは、1つまたは複数のメニュー項目とポップアップメニューを含む、1つ以上の [Menuitemtemplate](/windows/win32/api/winuser/ns-winuser-menuitemtemplate) 構造体で構成されるヘッダーです。
 
-バージョン番号は 0 にする必要があります。
+バージョン番号は0にする必要があります。
 
-フラグ`mtOption`には、ポップアップ リストの最後の項目と、メイン リストの最後の項目のMF_ENDを含める必要があります。 その他`AppendMenu`のフラグについては、メンバー関数を参照してください。 MF_POPUP`mtId`が で指定されている場合、メンバーは MENUITEMTEMPLATE 構造体から`mtOption`省略する必要があります。
+フラグには、 `mtOption` ポップアップリストの最後の項目、およびメインリストの最後の項目の MF_END が含まれている必要があります。 `AppendMenu`他のフラグについては、メンバー関数を参照してください。 `mtId`で MF_POPUP が指定されている場合は、MENUITEMTEMPLATE 構造体からメンバーを省略する必要があり `mtOption` ます。
 
-MENUITEMTEMPLATE 構造体に割り当てられた領域は、メニュー項目`mtString`の名前を NULL で終わる文字列として格納するのに十分な大きさである必要があります。
+MENUITEMTEMPLATE 構造体に割り当てられた領域は、 `mtString` メニュー項目の名前を null で終わる文字列として格納するのに十分な大きさである必要があります。
 
-メニューがウィンドウに割り当てられていない場合、アプリケーションは、メニューに関連付けられたシステム リソースを解放する必要があります。 アプリケーションは[、DestroyMenu](#destroymenu)メンバー関数を呼び出すことによってメニューを解放します。
+終了する前に、メニューがウィンドウに割り当てられていない場合は、アプリケーションでメニューに関連付けられているシステムリソースを解放する必要があります。 アプリケーションは、 [destroymenu](#destroymenu) メンバー関数を呼び出すことによってメニューを解放します。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_MFCWindowing#30](../../mfc/reference/codesnippet/cpp/cmenu-class_10.cpp)]
 
-## <a name="cmenum_hmenu"></a><a name="m_hmenu"></a>メニュー::m_hMenu
+## <a name="cmenum_hmenu"></a><a name="m_hmenu"></a> CMenu:: m_hMenu
 
-オブジェクトにアタッチされた Windows メニューの HMENU`CMenu`ハンドルを指定します。
+オブジェクトに関連付けられている Windows メニューの HMENU ハンドルを指定し `CMenu` ます。
 
 ```
 HMENU m_hMenu;
@@ -1071,11 +1072,11 @@ HMENU m_hMenu;
 
 ### <a name="example"></a>例
 
-  [CMenu::ロードメニュー](#loadmenu)の例を参照してください。
+  「 [CMenu:: LoadMenu](#loadmenu)」の例を参照してください。
 
-## <a name="cmenumeasureitem"></a><a name="measureitem"></a>Cメニュー::メジャーアイテム
+## <a name="cmenumeasureitem"></a><a name="measureitem"></a> CMenu:: MeasureItem
 
-オーナー描画スタイルのメニューが作成されるときに、フレームワークによって呼び出されます。
+オーナー描画スタイルのメニューが作成されたときにフレームワークによって呼び出されます。
 
 ```
 virtual void MeasureItem(LPMEASUREITEMSTRUCT lpMeasureItemStruct);
@@ -1083,24 +1084,24 @@ virtual void MeasureItem(LPMEASUREITEMSTRUCT lpMeasureItemStruct);
 
 ### <a name="parameters"></a>パラメーター
 
-*クラス*<br/>
-`MEASUREITEMSTRUCT`構造体へのポインター。
+*lpMeasureItemStruct*<br/>
+構造体へのポインター `MEASUREITEMSTRUCT` 。
 
 ### <a name="remarks"></a>解説
 
-既定では、このメンバー関数は何も実行しません。 このメンバー関数をオーバーライドし、メニュー`MEASUREITEMSTRUCT`のディメンションを Windows に通知する構造を設定します。
+既定では、このメンバー関数は何も行いません。 このメンバー関数をオーバーライドし、構造体に入力して `MEASUREITEMSTRUCT` 、メニューの次元をウィンドウに通知します。
 
-構造体の説明については[、CWnd::OnMeasureItem](../../mfc/reference/cwnd-class.md#onmeasureitem) `MEASUREITEMSTRUCT`を参照してください。
+構造の説明については、「 [CWnd:: OnMeasureItem](../../mfc/reference/cwnd-class.md#onmeasureitem) 」を参照してください `MEASUREITEMSTRUCT` 。
 
 ### <a name="example"></a>例
 
-次のコードは、MFC [CTRLTEST](../../overview/visual-cpp-samples.md)サンプルから取得されています。
+次のコードは、MFC [CTRLTEST](../../overview/visual-cpp-samples.md) サンプルからのものです。
 
 [!code-cpp[NVC_MFCWindowing#31](../../mfc/reference/codesnippet/cpp/cmenu-class_11.cpp)]
 
-## <a name="cmenumodifymenu"></a><a name="modifymenu"></a>メニュー::メニューの変更
+## <a name="cmenumodifymenu"></a><a name="modifymenu"></a> CMenu:: ModifyMenu
 
-*nPosition*で指定された位置にある既存のメニュー項目を変更します。
+*NPosition* によって指定された位置にある既存のメニュー項目を変更します。
 
 ```
 BOOL ModifyMenu(
@@ -1118,31 +1119,31 @@ BOOL ModifyMenu(
 
 ### <a name="parameters"></a>パラメーター
 
-*n位置*<br/>
-変更するメニュー項目を指定します。 *nFlags*パラメーターを使用して、次の方法で*nPosition*を解釈できます。
+*nPosition*<br/>
+変更するメニュー項目を指定します。 *NFlags* パラメーターを使用すると、次の方法で *nPosition* を解釈できます。
 
-|Nflags|n位置の解釈|
+|nFlags|NPosition の解釈|
 |------------|---------------------------------|
-|MF_BYCOMMAND|パラメーターが既存のメニュー項目のコマンド ID を提供することを指定します。 MF_BYCOMMANDもMF_BYPOSITIONも設定されていない場合、これはデフォルトです。|
-|MF_BYPOSITION|パラメーターが既存のメニュー項目の位置を指定することを指定します。 最初の項目は位置 0 です。|
+|MF_BYCOMMAND|パラメーターが既存のメニュー項目のコマンド ID を与えることを指定します。 これは、MF_BYCOMMAND も MF_BYPOSITION も設定されていない場合の既定値です。|
+|MF_BYPOSITION|パラメーターが既存のメニュー項目の位置を指定することを指定します。 最初の項目の位置は0です。|
 
-*Nflags*<br/>
-*nPosition*の解釈方法を指定し、メニュー項目に加えられる変更に関する情報を提供します。 設定できるフラグの一覧については、メンバー関数の[AppendMenu](#appendmenu)を参照してください。
+*nFlags*<br/>
+*NPosition* をどのように解釈するかを指定し、メニュー項目に加えられる変更に関する情報を提供します。 設定できるフラグの一覧については、「 [Appendmenu](#appendmenu) メンバー関数」を参照してください。
 
-*新しいアイテム*<br/>
-変更されたメニュー項目のコマンド ID を指定するか *、nFlags*が MF_POPUP に設定されている場合は、ポップアップ メニューのメニュー ハンドル (HMENU) を指定します。 *nIdNewItem*パラメーターは *、nFlags*がMF_SEPARATORに設定されている場合は無視されます (必要ありません)。
+*nIDNewItem*<br/>
+変更したメニュー項目のコマンド ID を指定するか、または *nFlags* が MF_POPUP に設定されている場合は、ポップアップメニューのメニューハンドル (HMENU) を指定します。 *NFlags* が MF_SEPARATOR に設定されている場合、 *nIDNewItem* パラメーターは無視されます (必要ありません)。
 
-*新しいアイテムを表示します。*<br/>
-新しいメニュー項目の内容を指定します。 *nFlags*パラメーターは、次の方法で*lpszNewItem*を解釈するために使用できます。
+*lpszNewItem*<br/>
+新しいメニュー項目の内容を指定します。 *NFlags* パラメーターを使用すると、次の方法で *lpszNewItem* を解釈できます。
 
-|Nflags|の解釈|
+|nFlags|LpszNewItem の解釈|
 |------------|-----------------------------------|
-|MF_OWNERDRAW|アプリケーションが指定した 32 ビット値を格納します。 この 32 ビット値は、アプリケーションがMF_MEASUREITEM処理してMF_DRAWITEMするときに使用できます。|
-|MF_STRING|null で終わる文字列またはを指す長いポインターを`CString`含みます。|
-|MF_SEPARATOR|*lpszNewItem*パラメーターは無視されます (必要ありません)。|
+|MF_OWNERDRAW|アプリケーションが、メニュー項目に関連付けられた追加データを保持するために使用できる32ビット値を格納します。 この32ビット値は、アプリケーションが MF_MEASUREITEM と MF_DRAWITEM を処理するときに使用できます。|
+|MF_STRING|Null で終わる文字列またはへの long ポインターを格納し `CString` ます。|
+|MF_SEPARATOR|*LpszNewItem* パラメーターは無視されます (不要)。|
 
-*pBmp*<br/>
-メニュー項目として`CBitmap`使用されるオブジェクトへのポイント。
+*.Pbmp*<br/>
+`CBitmap`メニュー項目として使用されるオブジェクトを指します。
 
 ### <a name="return-value"></a>戻り値
 
@@ -1150,19 +1151,19 @@ BOOL ModifyMenu(
 
 ### <a name="remarks"></a>解説
 
-アプリケーションは*nFlags*の値を設定することによって、メニュー項目の新しい状態を指定します。 この関数がメニュー項目に関連付けられているポップアップメニューを置き換える場合、古いポップアップメニューは破棄され、ポップアップメニューで使用されているメモリが解放されます。
+アプリケーションでは、値を *nFlags* に設定することによって、メニュー項目の新しい状態を指定します。 この関数がメニュー項目に関連付けられているポップアップメニューを置き換える場合は、古いポップアップメニューを破棄し、ポップアップメニューで使用されているメモリを解放します。
 
-*nIDNewItem*がポップアップ メニューを指定すると、ポップアップ メニューが挿入されるメニューの一部になります。 そのメニューが破棄されると、挿入されたメニューも破棄されます。 挿入されたメニューは、競合を`CMenu`避けるためにオブジェクトから切り離す必要があります。
+*NIDNewItem* がポップアップメニューを指定すると、それが挿入されるメニューの一部になります。 このメニューが破棄されると、挿入されたメニューも破棄されます。 競合を回避するには、挿入されたメニューをオブジェクトからデタッチする必要があり `CMenu` ます。
 
-ウィンドウ内のメニューが変更されると (ウィンドウが表示されるかどうかにかかわらず)、アプリケーションは`CWnd::DrawMenuBar`. 既存のメニュー項目の属性を変更するには、`CheckMenuItem`および`EnableMenuItem`メンバー関数を使用するほうがはるかに高速です。
+ウィンドウに表示されているメニューが変更された場合 (ウィンドウが表示されているかどうかにかかわらず)、アプリケーションはを呼び出す必要があり `CWnd::DrawMenuBar` ます。 既存のメニュー項目の属性を変更するには、 `CheckMenuItem` およびメンバー関数を使用する方がはるかに高速です `EnableMenuItem` 。
 
 ### <a name="example"></a>例
 
-  [CMenu::InsertMenu](#insertmenu)の例を参照してください。
+  「 [CMenu:: InsertMenu](#insertmenu)」の例を参照してください。
 
-## <a name="cmenuoperator-hmenu"></a><a name="operator_hmenu"></a>Cメニュー::演算子HMENU
+## <a name="cmenuoperator-hmenu"></a><a name="operator_hmenu"></a> CMenu:: operator HMENU
 
-`CMenu`この演算子は、オブジェクトのハンドルを取得するために使用します。
+オブジェクトのハンドルを取得するには、この演算子を使用し `CMenu` ます。
 
 ```
 operator HMENU() const;
@@ -1170,15 +1171,15 @@ operator HMENU() const;
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合は、オブジェクトの`CMenu`ハンドル。それ以外の場合は NULL。
+成功した場合は、オブジェクトのハンドル `CMenu` 。それ以外の場合は NULL。
 
 ### <a name="remarks"></a>解説
 
-ハンドルを使用して、Windows API を直接呼び出すことができます。
+ハンドルを使用すると、Windows Api を直接呼び出すことができます。
 
-## <a name="cmenuoperator-"></a><a name="operator_neq"></a>Cメニュー::演算子!=
+## <a name="cmenuoperator-"></a><a name="operator_neq"></a> CMenu:: operator! =
 
-2 つのメニューが論理的に等しくないかどうかを判断します。
+2つのメニューが論理的に等しくないかどうかを判断します。
 
 ```
 BOOL operator!=(const CMenu& menu) const;
@@ -1191,11 +1192,11 @@ BOOL operator!=(const CMenu& menu) const;
 
 ### <a name="remarks"></a>解説
 
-左側のメニュー オブジェクトが右側のメニュー オブジェクトと等しくないかどうかをテストします。
+左側のメニューオブジェクトが右側のメニューオブジェクトと等しくないかどうかをテストします。
 
-## <a name="cmenuoperator-"></a><a name="operator_eq_eq"></a>Cメニュー::演算子 ==
+## <a name="cmenuoperator-"></a><a name="operator_eq_eq"></a> CMenu:: operator = =
 
-2 つのメニューが論理的に等しいかどうかを判断します。
+2つのメニューが論理的に等しいかどうかを判断します。
 
 ```
 BOOL operator==(const CMenu& menu) const;
@@ -1208,11 +1209,11 @@ BOOL operator==(const CMenu& menu) const;
 
 ### <a name="remarks"></a>解説
 
-左側のメニュー オブジェクトが、右側のメニュー オブジェクトと等しいかどうかをテストします (HMENU 値を参照)。
+左側のメニューオブジェクトが右側のメニューオブジェクトに等しいかどうかをテストします (HMENU 値の観点から)。
 
-## <a name="cmenuremovemenu"></a><a name="removemenu"></a>メニュー::メニューの削除
+## <a name="cmenuremovemenu"></a><a name="removemenu"></a> CMenu:: RemoveMenu
 
-関連付けられたポップアップ メニューを含むメニュー項目をメニューから削除します。
+メニューから、関連付けられたポップアップメニューを含むメニュー項目を削除します。
 
 ```
 BOOL RemoveMenu(
@@ -1222,16 +1223,16 @@ BOOL RemoveMenu(
 
 ### <a name="parameters"></a>パラメーター
 
-*n位置*<br/>
-削除するメニュー項目を指定します。 *nFlags*パラメーターを使用して、次の方法で*nPosition*を解釈できます。
+*nPosition*<br/>
+削除するメニュー項目を指定します。 *NFlags* パラメーターを使用すると、次の方法で *nPosition* を解釈できます。
 
-|Nflags|n位置の解釈|
+|nFlags|NPosition の解釈|
 |------------|---------------------------------|
-|MF_BYCOMMAND|パラメーターが既存のメニュー項目のコマンド ID を提供することを指定します。 MF_BYCOMMANDもMF_BYPOSITIONも設定されていない場合、これはデフォルトです。|
-|MF_BYPOSITION|パラメーターが既存のメニュー項目の位置を指定することを指定します。 最初の項目は位置 0 です。|
+|MF_BYCOMMAND|パラメーターが既存のメニュー項目のコマンド ID を与えることを指定します。 これは、MF_BYCOMMAND も MF_BYPOSITION も設定されていない場合の既定値です。|
+|MF_BYPOSITION|パラメーターが既存のメニュー項目の位置を指定することを指定します。 最初の項目の位置は0です。|
 
-*Nflags*<br/>
-*nPosition の*解釈方法を指定します。
+*nFlags*<br/>
+*NPosition* をどのように解釈するかを指定します。
 
 ### <a name="return-value"></a>戻り値
 
@@ -1239,15 +1240,15 @@ BOOL RemoveMenu(
 
 ### <a name="remarks"></a>解説
 
-ポップアップメニューのハンドルは破壊されないため、メニューを再利用できます。 この関数を呼び出す前に、`GetSubMenu`アプリケーションはメンバー関数を呼び出`CMenu`して、再利用するポップアップ オブジェクトを取得できます。
+ポップアップメニューのハンドルは破棄されないため、メニューを再利用できます。 この関数を呼び出す前に、アプリケーションはメンバー関数を呼び出して、 `GetSubMenu` 再利用のためにポップアップオブジェクトを取得することがあり `CMenu` ます。
 
-ウィンドウ内のメニューが変更された場合 (ウィンドウが表示されているかどうかに関係なく) 常に、アプリケーションは`CWnd::DrawMenuBar`呼び出す必要があります。
+ウィンドウに表示されているメニューが変更された場合 (ウィンドウが表示されているかどうかにかかわらず)、アプリケーションはを呼び出す必要があり `CWnd::DrawMenuBar` ます。
 
 ### <a name="example"></a>例
 
-  [CMenu::InsertMenu](#insertmenu)の例を参照してください。
+  「 [CMenu:: InsertMenu](#insertmenu)」の例を参照してください。
 
-## <a name="cmenusetdefaultitem"></a><a name="setdefaultitem"></a>Cメニュー::デフォルトアイテムを設定します。
+## <a name="cmenusetdefaultitem"></a><a name="setdefaultitem"></a> CMenu:: SetDefaultItem
 
 指定したメニューの既定のメニュー項目を設定します。
 
@@ -1259,27 +1260,27 @@ BOOL SetDefaultItem(
 
 ### <a name="parameters"></a>パラメーター
 
-*アイテム*<br/>
-新しい既定のメニュー項目の識別子または位置、または既定の項目の場合は - 1。 このパラメーターの意味は *、fByPos*の値によって異なります。
+*uItem*<br/>
+新しい既定のメニュー項目の識別子または位置。既定の項目がない場合は-1。 このパラメーターの意味は、 *fByPos* の値によって異なります。
 
-*フバイポス*<br/>
-*uItem*の意味を指定する値。 このパラメーターが FALSE の場合 *、uItem*はメニュー項目識別子です。 それ以外の場合は、メニュー項目の位置です。
+*fByPos*<br/>
+*Uitem* の意味を指定する値。 このパラメーターが FALSE の場合、 *Uitem* はメニュー項目識別子です。 それ以外の場合は、メニュー項目の位置になります。
 
 ### <a name="return-value"></a>戻り値
 
-関数が成功した場合、戻り値は 0 以外になります。 関数が失敗した場合は、0 を返します。 拡張エラー情報を取得するには、Windows SDK で説明されているように、Win32 関数[GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror)を使用します。
+関数が成功すると、戻り値は 0 以外になります。 関数が失敗した場合は、0 を返します。 拡張エラー情報を取得するには、Windows SDK で説明されているように、Win32 関数 [GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror)を使用します。
 
 ### <a name="remarks"></a>解説
 
-このメンバー関数は、Windows SDK で説明されているように、Win32 関数[SetMenuDefaultItem](/windows/win32/api/winuser/nf-winuser-setmenudefaultitem)の動作を実装します。
+このメンバー関数は、Windows SDK で説明されているように、Win32 関数 [Setmenudefaultitem](/windows/win32/api/winuser/nf-winuser-setmenudefaultitem)の動作を実装します。
 
 ### <a name="example"></a>例
 
-  [CMenu::InsertMenu](#insertmenu)の例を参照してください。
+  「 [CMenu:: InsertMenu](#insertmenu)」の例を参照してください。
 
-## <a name="cmenusetmenucontexthelpid"></a><a name="setmenucontexthelpid"></a>メニュー::メニューコンテキストヘルプId
+## <a name="cmenusetmenucontexthelpid"></a><a name="setmenucontexthelpid"></a> CMenu:: SetMenuContextHelpId
 
-コンテキスト ヘルプ ID を`CMenu`に関連付けます。
+コンテキストヘルプ ID をに関連付け `CMenu` ます。
 
 ```
 BOOL SetMenuContextHelpId(DWORD dwContextHelpId);
@@ -1287,22 +1288,22 @@ BOOL SetMenuContextHelpId(DWORD dwContextHelpId);
 
 ### <a name="parameters"></a>パラメーター
 
-*をクリックします。*<br/>
-に関連付`CMenu`けるコンテキスト ヘルプ ID。
+*dwContextHelpId*<br/>
+に関連付けるコンテキストヘルプ ID `CMenu` 。
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合は 0 以外。それ以外の場合は 0
+成功した場合は0以外の。それ以外の場合は0
 
 ### <a name="remarks"></a>解説
 
-メニュー内のすべての項目がこの識別子を共有します— 個々のメニュー項目にヘルプコンテキスト識別子を付加することはできません。
+メニュー内のすべての項目はこの識別子を共有します。個々のメニュー項目にヘルプコンテキスト識別子をアタッチすることはできません。
 
 ### <a name="example"></a>例
 
-  [CMenu::InsertMenu](#insertmenu)の例を参照してください。
+  「 [CMenu:: InsertMenu](#insertmenu)」の例を参照してください。
 
-## <a name="cmenusetmenuinfo"></a><a name="setmenuinfo"></a>メニュー::セットメニュー情報
+## <a name="cmenusetmenuinfo"></a><a name="setmenuinfo"></a> CMenu:: SetMenuInfo
 
 メニューの情報を設定します。
 
@@ -1313,17 +1314,17 @@ BOOL SetMenuInfo(LPCMENUINFO lpcmi);
 ### <a name="parameters"></a>パラメーター
 
 *lpcmi*<br/>
-メニューの情報を含む[MENUINFO](/windows/win32/api/winuser/ns-winuser-menuinfo)構造体へのポインター。
+メニューの情報を格納している [Menuinfo](/windows/win32/api/winuser/ns-winuser-menuinfo) 構造体へのポインター。
 
 ### <a name="return-value"></a>戻り値
 
-関数が成功した場合、戻り値は 0 以外になります。それ以外の場合、戻り値は 0 です。
+関数が成功した場合、戻り値は0以外になります。それ以外の場合、戻り値は0です。
 
 ### <a name="remarks"></a>解説
 
-メニューに関する特定の情報を設定します。
+この関数を呼び出して、メニューに関する特定の情報を設定します。
 
-## <a name="cmenusetmenuitembitmaps"></a><a name="setmenuitembitmaps"></a>をクリックします。
+## <a name="cmenusetmenuitembitmaps"></a><a name="setmenuitembitmaps"></a> CMenu:: SetMenuItemBitmaps
 
 指定したビットマップをメニュー項目に関連付けます。
 
@@ -1337,21 +1338,21 @@ BOOL SetMenuItemBitmaps(
 
 ### <a name="parameters"></a>パラメーター
 
-*n位置*<br/>
-変更するメニュー項目を指定します。 *nFlags*パラメーターを使用して、次の方法で*nPosition*を解釈できます。
+*nPosition*<br/>
+変更するメニュー項目を指定します。 *NFlags* パラメーターを使用すると、次の方法で *nPosition* を解釈できます。
 
-|Nflags|n位置の解釈|
+|nFlags|NPosition の解釈|
 |------------|---------------------------------|
-|MF_BYCOMMAND|パラメーターが既存のメニュー項目のコマンド ID を提供することを指定します。 MF_BYCOMMANDもMF_BYPOSITIONも設定されていない場合、これはデフォルトです。|
-|MF_BYPOSITION|パラメーターが既存のメニュー項目の位置を指定することを指定します。 最初の項目は位置 0 です。|
+|MF_BYCOMMAND|パラメーターが既存のメニュー項目のコマンド ID を与えることを指定します。 これは、MF_BYCOMMAND も MF_BYPOSITION も設定されていない場合の既定値です。|
+|MF_BYPOSITION|パラメーターが既存のメニュー項目の位置を指定することを指定します。 最初の項目の位置は0です。|
 
-*Nflags*<br/>
-*nPosition の*解釈方法を指定します。
+*nFlags*<br/>
+*NPosition* をどのように解釈するかを指定します。
 
-*チェックされていない*<br/>
+*pBmpUnchecked*<br/>
 チェックされていないメニュー項目に使用するビットマップを指定します。
 
-*チェック*<br/>
+*pBmpChecked*<br/>
 チェックされるメニュー項目に使用するビットマップを指定します。
 
 ### <a name="return-value"></a>戻り値
@@ -1360,13 +1361,13 @@ BOOL SetMenuItemBitmaps(
 
 ### <a name="remarks"></a>解説
 
-メニュー項目のチェックボックスをオンにするかオフにするかにかかわらず、Windows ではメニュー項目の横に適切なビットマップが表示されます。
+メニュー項目がチェックされているかどうかにかかわらず、Windows ではメニュー項目の横に適切なビットマップが表示されます。
 
-*pBmpUnchecked*または*pBmpChecked*が NULL の場合、対応する属性のメニュー項目の横に何も表示されません。 両方のパラメーターが NULL の場合、Windows は項目がチェックされるときにデフォルトのチェック マークを使用し、項目がオフのときにチェック マークを削除します。
+*Pbmpunchecked* または *pbmpunchecked* が NULL の場合は、対応する属性のメニュー項目の横に何も表示されません。 両方のパラメーターが NULL の場合、項目がチェックされるときに既定のチェックマークが使用され、項目がオフの場合はチェックマークが削除されます。
 
-メニューが破棄された場合、これらのビットマップは破棄されません。アプリケーションはそれらを破棄する必要があります。
+メニューが破棄されても、これらのビットマップは破棄されません。アプリケーションでそれらを破棄する必要があります。
 
-Windows`GetMenuCheckMarkDimensions`関数は、メニュー項目に使用される既定のチェック マークのサイズを取得します。 アプリケーションは、これらの値を使用して、この関数で提供されるビットマップに適したサイズを決定します。 サイズを取得し、ビットマップを作成し、それらを設定します。
+Windows 関数は、 `GetMenuCheckMarkDimensions` メニュー項目に使用される既定のチェックマークの寸法を取得します。 アプリケーションでは、これらの値を使用して、この関数で提供されるビットマップの適切なサイズを決定します。 サイズを取得し、ビットマップを作成して、設定します。
 
 ### <a name="example"></a>例
 
@@ -1374,7 +1375,7 @@ Windows`GetMenuCheckMarkDimensions`関数は、メニュー項目に使用され
 
 [!code-cpp[NVC_MFCWindowing#33](../../mfc/reference/codesnippet/cpp/cmenu-class_13.cpp)]
 
-## <a name="cmenusetmenuiteminfo"></a><a name="setmenuiteminfo"></a>メニュー::セットメニューアイテム情報
+## <a name="cmenusetmenuiteminfo"></a><a name="setmenuiteminfo"></a> CMenu:: SetMenuItemInfo
 
 メニュー項目に関する情報を変更します。
 
@@ -1387,22 +1388,22 @@ BOOL SetMenuItemInfo(
 
 ### <a name="parameters"></a>パラメーター
 
-*アイテム*<br/>
-Windows SDK の[設定メニュー項目情報](/windows/win32/api/winuser/nf-winuser-setmenuiteminfow)の*uItem*の説明を参照してください。
+*uItem*<br/>
+Windows SDK の「 [SetMenuItemInfo](/windows/win32/api/winuser/nf-winuser-setmenuiteminfow)の *uitem* の説明」を参照してください。
 
-*をクリックします。*<br/>
-の Windows SDK で`SetMenuItemInfo`*の lpmii*の説明を参照してください。
+*lpMenuItemInfo*<br/>
+Windows SDK の「 *lpmii* in」を参照してください `SetMenuItemInfo` 。
 
-*フバイポス*<br/>
-Windows SDK の*fByPosition*の`SetMenuItemInfo`説明を参照してください。
+*fByPos*<br/>
+Windows SDK の「」の *Fbyposition* の説明を参照してください `SetMenuItemInfo` 。
 
 ### <a name="remarks"></a>解説
 
-この関数は、Windows SDK で説明されている[SetMenuItemInfo](/windows/win32/api/winuser/nf-winuser-setmenuiteminfow)をラップします。
+この関数は、Windows SDK で説明されている [SetMenuItemInfo](/windows/win32/api/winuser/nf-winuser-setmenuiteminfow)をラップします。
 
-## <a name="cmenutrackpopupmenu"></a><a name="trackpopupmenu"></a>メニュー::トラックポップアップメニュー
+## <a name="cmenutrackpopupmenu"></a><a name="trackpopupmenu"></a> CMenu:: TrackPopupMenu
 
-指定した位置にフローティング ポップアップ メニューを表示し、ポップアップ メニュー上の項目の選択を追跡します。
+指定した位置にフローティングポップアップメニューを表示し、ポップアップメニュー上の項目の選択を追跡します。
 
 ```
 BOOL TrackPopupMenu(
@@ -1415,36 +1416,36 @@ BOOL TrackPopupMenu(
 
 ### <a name="parameters"></a>パラメーター
 
-*Nflags*<br/>
-画面位置フラグとマウス位置フラグを指定します。 使用可能なフラグの一覧については[、「TrackPopupMenu」](/windows/win32/api/winuser/nf-winuser-trackpopupmenu)を参照してください。
+*nFlags*<br/>
+画面位置とマウス位置のフラグを指定します。 使用可能なフラグの一覧については、「 [TrackPopupMenu](/windows/win32/api/winuser/nf-winuser-trackpopupmenu) 」を参照してください。
 
-*X*<br/>
-ポップアップ メニューの画面座標の水平位置を指定します。 *nFlags*パラメーターの値に応じて、メニューは左揃え、右揃え、またはこの位置を基準に中央揃えにすることができます。
+*x*<br/>
+ポップアップメニューの画面座標の水平位置を指定します。 *NFlags* パラメーターの値に応じて、この位置を基準として左揃え、右揃え、または中央揃えにすることができます。
 
-*Y*<br/>
-画面上のメニューの上部の画面座標の垂直方向の位置を指定します。
+*y*<br/>
+画面上のメニューの上部の画面座標での垂直位置を指定します。
 
-*Pwnd*<br/>
-ポップアップ メニューを所有するウィンドウを識別します。 TPM_NONOTIFY フラグが指定されている場合でも、このパラメーターを NULL にすることはできません。 このウィンドウは、メニューからすべてのWM_COMMANDメッセージを受け取ります。 Windows 3.1 以降では、ウィンドウが戻るまで`TrackPopupMenu`WM_COMMANDメッセージを受信しません。 Windows 3.0 では、ウィンドウは、WM_COMMANDメッセージ`TrackPopupMenu`を受け取って、メッセージを返します。
+*pWnd*<br/>
+ポップアップメニューを所有するウィンドウを識別します。 TPM_NONOTIFY フラグが指定されている場合でも、このパラメーターを NULL にすることはできません。 このウィンドウは、メニューからすべての WM_COMMAND メッセージを受信します。 Windows バージョン3.1 以降では、が返されるまで、ウィンドウは WM_COMMAND メッセージを受信しません `TrackPopupMenu` 。 Windows 3.0 では、ウィンドウはを返す前に WM_COMMAND メッセージを受信し `TrackPopupMenu` ます。
 
-*Lprect*<br/>
+*lpRect*<br/>
 無視されます。
 
 ### <a name="return-value"></a>戻り値
 
-このメソッドは、Windows SDK で[トラックポップアップ メニュー](/windows/win32/api/winuser/nf-winuser-trackpopupmenu)を呼び出した結果を返します。
+このメソッドは、Windows SDK で [TrackPopupMenu](/windows/win32/api/winuser/nf-winuser-trackpopupmenu) を呼び出した結果を返します。
 
 ### <a name="remarks"></a>解説
 
-フローティングポップアップメニューは、画面上の任意の場所に表示できます。
+フローティングポップアップメニューは、画面上の任意の場所に表示されます。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_MFCWindowing#34](../../mfc/reference/codesnippet/cpp/cmenu-class_14.cpp)]
 
-## <a name="cmenutrackpopupmenuex"></a><a name="trackpopupmenuex"></a>Cメニュー::トラックポップアップメニュー
+## <a name="cmenutrackpopupmenuex"></a><a name="trackpopupmenuex"></a> CMenu:: TrackPopupMenuEx
 
-指定した位置にフローティング ポップアップ メニューを表示し、ポップアップ メニュー上の項目の選択を追跡します。
+指定した位置にフローティングポップアップメニューを表示し、ポップアップメニュー上の項目の選択を追跡します。
 
 ```
 BOOL TrackPopupMenuEx(
@@ -1457,35 +1458,35 @@ BOOL TrackPopupMenuEx(
 
 ### <a name="parameters"></a>パラメーター
 
-*fuフラグ*<br/>
-拡張メニューのさまざまな機能を指定します。 すべての値とその意味の一覧については[、「TrackPopupMenuEx](/windows/win32/api/winuser/nf-winuser-trackpopupmenuex)」を参照してください。
+*Futex フラグ*<br/>
+拡張メニューのさまざまな機能を指定します。 すべての値とその意味の一覧については、「 [Trackpopupmenuex](/windows/win32/api/winuser/nf-winuser-trackpopupmenuex)」を参照してください。
 
-*X*<br/>
-ポップアップ メニューの画面座標の水平位置を指定します。
+*x*<br/>
+ポップアップメニューの画面座標の水平位置を指定します。
 
-*Y*<br/>
-画面上のメニューの上部の画面座標の垂直方向の位置を指定します。
+*y*<br/>
+画面上のメニューの上部の画面座標での垂直位置を指定します。
 
-*Pwnd*<br/>
-ポップアップ メニューを所有し、作成されたメニューからメッセージを受信するウィンドウへのポインター。 このウィンドウは、現在のアプリケーションの任意のウィンドウにできますが、NULL にすることはできません。 *fuFlags*パラメーターに TPM_NONOTIFYを指定した場合、この関数はメッセージを*pWnd*に送信しません。 *関数は、pWnd*が指すウィンドウがWM_COMMANDメッセージを受信するために返す必要があります。
+*pWnd*<br/>
+ポップアップメニューを所有し、作成されたメニューからメッセージを受信するウィンドウへのポインター。 このウィンドウは、現在のアプリケーションの任意のウィンドウにすることができますが、NULL にすることはできません。 *Futex フラグ* パラメーターに TPM_NONOTIFY を指定した場合、この関数は、メッセージを *pWnd* に送信しません。 この関数は、WM_COMMAND メッセージを受信するために、 *pWnd* が指すウィンドウに対してを返す必要があります。
 
 *lptpm*<br/>
-メニューが重ならないようにする画面の領域を指定する[TPMPARAMS](/windows/win32/api/winuser/ns-winuser-tpmparams)構造体へのポインター。 このパラメーターは NULL にすることができます。
+メニューを重ねることができない画面の領域を指定する [TPMPARAMS](/windows/win32/api/winuser/ns-winuser-tpmparams) 構造体へのポインター。 このパラメーターは、NULL でもかまいません。
 
 ### <a name="return-value"></a>戻り値
 
-*fuFlags*パラメーターにTPM_RETURNCMDを指定した場合、戻り値はユーザーが選択した項目のメニュー項目識別子です。 ユーザーが選択せずにメニューをキャンセルした場合、またはエラーが発生した場合は、戻り値は 0 になります。
+*Futex フラグ* パラメーターに TPM_RETURNCMD を指定した場合、戻り値は、ユーザーが選択した項目のメニュー項目識別子になります。 ユーザーが選択を行わずにメニューをキャンセルした場合、またはエラーが発生した場合、戻り値は0になります。
 
-*fuFlags*パラメーターに TPM_RETURNCMD を指定しない場合、関数が成功した場合は 0 以外の値が返され、失敗した場合は 0 が返されます。 拡張エラー情報を取得するには[、GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror)を呼び出します。
+*Futex フラグ* パラメーターに TPM_RETURNCMD を指定しなかった場合、戻り値は、関数が成功した場合は0以外の値になり、失敗した場合は0になります。 詳細なエラー情報を得るには、[GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror) を呼び出します。
 
 ### <a name="remarks"></a>解説
 
-フローティングポップアップメニューは、画面上の任意の場所に表示できます。 ポップアップ メニュー作成時のエラー処理の詳細については、「 [TrackPopupMenuEx](/windows/win32/api/winuser/nf-winuser-trackpopupmenuex)」を参照してください。
+フローティングポップアップメニューは、画面上の任意の場所に表示されます。 ポップアップメニューを作成するときのエラー処理の詳細については、「 [Trackpopupmenuex](/windows/win32/api/winuser/nf-winuser-trackpopupmenuex)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 
-[MFC サンプル CTRL テスト](../../overview/visual-cpp-samples.md)<br/>
-[MFC サンプル ダイナメニュー](../../overview/visual-cpp-samples.md)<br/>
-[Cオブジェクトクラス](../../mfc/reference/cobject-class.md)<br/>
-[階層グラフ](../../mfc/hierarchy-chart.md)<br/>
-[Cオブジェクトクラス](../../mfc/reference/cobject-class.md)
+[MFC のサンプル CTRLTEST](../../overview/visual-cpp-samples.md)<br/>
+[MFC のサンプル DYNAMENU](../../overview/visual-cpp-samples.md)<br/>
+[CObject クラス](../../mfc/reference/cobject-class.md)<br/>
+[階層図](../../mfc/hierarchy-chart.md)<br/>
+[CObject クラス](../../mfc/reference/cobject-class.md)

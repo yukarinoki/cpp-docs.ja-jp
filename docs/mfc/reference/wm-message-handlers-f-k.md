@@ -1,5 +1,6 @@
 ---
-title: Wm _ で始まるメッセージ ハンドラー:F - K
+description: '詳細については、「WM_ メッセージハンドラー: F-K」を参照してください。'
+title: 'WM_ で始まるメッセージのハンドラー : F - K'
 ms.date: 11/27/2018
 f1_keywords:
 - ON_WM_FONTCHANGE
@@ -29,38 +30,38 @@ helpviewer_keywords:
 - WM_ messages [MFC]
 - ON_WM_KEYDOWN [MFC]
 ms.assetid: 0e7de191-1499-499f-859c-62742797808e
-ms.openlocfilehash: fcb343994498f65fb58be3a499ac3e0fdc2166aa
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 91fb2448862dd70a852191f021244571813b0102
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62309279"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97218343"
 ---
-# <a name="wm-message-handlers-f---k"></a>Wm _ で始まるメッセージ ハンドラー:F - K
+# <a name="wm_-message-handlers-f---k"></a>WM_ で始まるメッセージのハンドラー : F - K
 
-左側で、次のマップ エントリは、右側の関数プロトタイプに対応します。
+左側の次のマップエントリは、右側の関数プロトタイプに対応しています。
 
-|マップ エントリ|関数プロトタイプ|
+|マップエントリ|関数プロトタイプ|
 |---------------|------------------------|
-|ON_WM_FONTCHANGE()|afx_msg void [OnFontChange](../../mfc/reference/cwnd-class.md#onfontchange)();|
-|ON_WM_GETDLGCODE()|afx_msg UINT [OnGetDlgCode](../../mfc/reference/cwnd-class.md#ongetdlgcode)();|
-|ON_WM_GETMINMAXINFO()|afx_msg void [OnGetMinMaxInfo](../../mfc/reference/cwnd-class.md#ongetminmaxinfo)(MINMAXINFO*);|
-|ON_WM_HELPINFO()|afx_msg BOOL [OnHelpInfo](../../mfc/reference/cwnd-class.md#onhelpinfo)(HELPINFO*);|
-|ON_WM_HOTKEY()|afx_msg void [OnHotKey](../../mfc/reference/cwnd-class.md#onhotkey)(UINT, UINT, UINT)|
-|ON_WM_HSCROLL()|afx_msg void [OnHScroll](../../mfc/reference/cwnd-class.md#onhscroll)(UINT, UINT, CWnd *)。|
-|ON_WM_HSCROLLCLIPBOARD()|afx_msg void [OnHScrollClipboard](../../mfc/reference/cwnd-class.md#onhscrollclipboard)(CWnd *, UINT, UINT)。|
-|ON_WM_ICONERASEBKGND()|afx_msg void [OnIconEraseBkgnd](../../mfc/reference/cwnd-class.md#oniconerasebkgnd)(CDC *)。|
-|ON_WM_INITMENU()|afx_msg void [OnInitMenu](../../mfc/reference/cwnd-class.md#oninitmenu)(CMenu *)。|
-|ON_WM_INITMENUPOPUP()|afx_msg void [OnInitMenuPopup](../../mfc/reference/cwnd-class.md#oninitmenupopup)(CMenu *、UINT、BOOL);|
-|ON_WM_INPUT()|afx_msg void [OnRawInput](../../mfc/reference/cwnd-class.md#onrawinput)(UINT, HRAWINPUT)。|
-|ON_WM_INPUT_DEVICE_CHANGE()|afx_msg void [OnInputDeviceChange](../../mfc/reference/cwnd-class.md#oninputdevicechange)(unsigned short 型)。|
-|ON_WM_INPUTLANGCHANGE()|afx_msg void [OnInputLangChange](../../mfc/reference/cwnd-class.md#oninputlangchange)(BYTE, UINT)。|
-|ON_WM_INPUTLANGCHANGEREQUEST()|afx_msg void [OnInputLangChangeRequest](../../mfc/reference/cwnd-class.md#oninputlangchangerequest)(UINT, HKL)。|
-|ON_WM_KEYDOWN()|afx_msg void [OnKeyDown](../../mfc/reference/cwnd-class.md#onkeydown)(UINT, UINT, UINT)|
-|ON_WM_KEYUP()|afx_msg void [OnKeyUp](../../mfc/reference/cwnd-class.md#onkeyup)(UINT, UINT, UINT)|
-|ON_WM_KILLFOCUS()|afx_msg void [OnKillFocus](../../mfc/reference/cwnd-class.md#onkillfocus)(CWnd*);|
+|ON_WM_FONTCHANGE ()|void [Onfontchange](../../mfc/reference/cwnd-class.md#onfontchange)() を afx_msg します。|
+|ON_WM_GETDLGCODE ()|afx_msg UINT [OnGetDlgCode](../../mfc/reference/cwnd-class.md#ongetdlgcode)();|
+|ON_WM_GETMINMAXINFO ()|afx_msg void [OnGetMinMaxInfo](../../mfc/reference/cwnd-class.md#ongetminmaxinfo)(MINMAXINFO *);|
+|ON_WM_HELPINFO ()|afx_msg BOOL [OnHelpInfo](../../mfc/reference/cwnd-class.md#onhelpinfo)(HELPINFO *);|
+|ON_WM_HOTKEY ()|void [Onhotkey キー](../../mfc/reference/cwnd-class.md#onhotkey)(UINT, UINT, uint) を afx_msg します。|
+|ON_WM_HSCROLL ()|afx_msg void [OnHScroll](../../mfc/reference/cwnd-class.md#onhscroll)(UINT, Uint, CWnd *);|
+|ON_WM_HSCROLLCLIPBOARD ()|void [Onhscrollclipboard](../../mfc/reference/cwnd-class.md#onhscrollclipboard)(CWnd *, UINT, uint) を afx_msg します。|
+|ON_WM_ICONERASEBKGND ()|afx_msg void [OnIconEraseBkgnd](../../mfc/reference/cwnd-class.md#oniconerasebkgnd)(CDC *);|
+|ON_WM_INITMENU ()|afx_msg void [OnInitMenu](../../mfc/reference/cwnd-class.md#oninitmenu)(CMenu *);|
+|ON_WM_INITMENUPOPUP ()|afx_msg void [OnInitMenuPopup](../../mfc/reference/cwnd-class.md#oninitmenupopup)(CMenu *, UINT, BOOL);|
+|ON_WM_INPUT ()|void [onrawinput](../../mfc/reference/cwnd-class.md#onrawinput)(UINT, hrawinput) を afx_msg します。|
+|ON_WM_INPUT_DEVICE_CHANGE ()|void [Oninputdevicechange](../../mfc/reference/cwnd-class.md#oninputdevicechange)(unsigned short) を afx_msg します。|
+|ON_WM_INPUTLANGCHANGE ()|afx_msg void [OnInputLangChange](../../mfc/reference/cwnd-class.md#oninputlangchange)(BYTE, UINT);|
+|ON_WM_INPUTLANGCHANGEREQUEST ()|afx_msg void [OnInputLangChangeRequest](../../mfc/reference/cwnd-class.md#oninputlangchangerequest)(UINT, hkl);|
+|ON_WM_KEYDOWN ()|afx_msg void [OnKeyDown](../../mfc/reference/cwnd-class.md#onkeydown)(UINT, UINT, uint);|
+|ON_WM_KEYUP ()|afx_msg void [OnKeyUp](../../mfc/reference/cwnd-class.md#onkeyup)(UINT, UINT, uint);|
+|ON_WM_KILLFOCUS ()|afx_msg void [OnKillFocus](../../mfc/reference/cwnd-class.md#onkillfocus)(CWnd *);|
 
 ## <a name="see-also"></a>関連項目
 
 [メッセージ マップ](../../mfc/reference/message-maps-mfc.md)<br/>
-[WM_ で始まるメッセージのハンドラー](../../mfc/reference/handlers-for-wm-messages.md)
+[WM_ メッセージのハンドラー](../../mfc/reference/handlers-for-wm-messages.md)

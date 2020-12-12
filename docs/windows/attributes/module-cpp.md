@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: module (C++)'
 title: module (C++ COM 属性)
 ms.date: 10/02/2018
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - module attributes
 ms.assetid: 02223b2a-62b5-4262-832f-564b1e11e58e
-ms.openlocfilehash: b6cde0baaae9901258e90ededf05c60cb13a7dc1
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 1780ebcb89e7d19f3f3a4c2656d383725d85657a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88833973"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97327487"
 ---
 # <a name="module-c"></a>module (C++)
 
@@ -43,7 +44,7 @@ Optionalライブラリブロックの名前。
 Optionalライブラリブロックに割り当てるバージョン番号です。 既定値は 1.0 です。
 
 *uuid*<br/>
-ライブラリの一意の ID です。 このパラメーターを省略した場合、ライブラリの ID は自動的に生成されます。 識別子 *__uuidof(* libraryname **)** *を使用して、ライブラリ ブロックの* **uuid**を取得する必要がある場合があります。
+ライブラリの一意の ID です。 このパラメーターを省略した場合、ライブラリの ID は自動的に生成されます。 識別子 *__uuidof(* libraryname **)** *を使用して、ライブラリ ブロックの* **uuid** を取得する必要がある場合があります。
 
 *lcid*<br/>
 ローカリゼーション パラメーターです。 詳細については、「 [lcid](/windows/win32/Midl/lcid) 」を参照してください。
@@ -73,7 +74,7 @@ Optionalライブラリ全体が表示されないようにします。 これ�
 Optionalライブラリのメンバーは、任意に呼び出すことはできません。 詳細については、「 [restricted](/windows/win32/Midl/restricted) 」の MIDL 属性に関する説明を参照してください。
 
 *ショー*<br/>
-Optional1つまたは複数の属性。これは、 [カスタム](custom-cpp.md) 属性に似ています。 *カスタム*の最初のパラメーターは、属性の GUID です。 次に例を示します。
+Optional1つまたは複数の属性。これは、 [カスタム](custom-cpp.md) 属性に似ています。 *カスタム* の最初のパラメーターは、属性の GUID です。 次に例を示します。
 
 ```
 [module(custom={guid,1}, custom={guid1,2})]
@@ -121,7 +122,7 @@ DLL、実行可能ファイルまたはサービスの登録に使用される .
 [module(name="MyLibrary", version="1.2", helpfile="MyHelpFile")];
 ```
 
-次のコードは、 **module**を使用した結果、挿入されたコード内に表示される独自の関数を実装できることを示しています。 挿入されたコードを参照する方法の詳細については、「 [/Fx](../../build/reference/fx-merge-injected-code.md) 」を参照してください。 **module** 属性によって挿入された関数の 1 つをオーバーライドするには、実装した関数を含めるクラスを作成し、そのクラスに **module** 属性を含めます。
+次のコードは、 **module** を使用した結果、挿入されたコード内に表示される独自の関数を実装できることを示しています。 挿入されたコードを参照する方法の詳細については、「 [/Fx](../../build/reference/fx-merge-injected-code.md) 」を参照してください。 **module** 属性によって挿入された関数の 1 つをオーバーライドするには、実装した関数を含めるクラスを作成し、そのクラスに **module** 属性を含めます。
 
 ```cpp
 // cpp_attr_ref_module2.cpp
@@ -146,7 +147,7 @@ BOOL WINAPI DllMain(DWORD dwReason, LPVOID lpReserved) {
 };
 ```
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 | 属性コンテキスト | 値 |
 |-|-|

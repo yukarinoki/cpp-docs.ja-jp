@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: _gcvt_s'
 title: _gcvt_s
 ms.date: 4/2/2020
 api_name:
@@ -34,12 +35,12 @@ helpviewer_keywords:
 - strings [C++], converting from floating point
 - CVTBUFSIZE
 ms.assetid: 0a8d8a26-5940-4ae3-835e-0aa6ec1b0744
-ms.openlocfilehash: 83e34bffbe62bf07d2d3f9f649d12607b0e08be7
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: f96822920430122a56d8503b99cc0b881d9f06be
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82919426"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97341525"
 ---
 # <a name="_gcvt_s"></a>_gcvt_s
 
@@ -82,19 +83,19 @@ errno_t _gcvt_s(
 
 ### <a name="error-conditions"></a>エラー条件
 
-|*格納*|*sizeInBytes*|*value*|*数値*|戻り値|*バッファー*内の値|
+|*格納*|*sizeInBytes*|*value*|*数値*|戻り値|*バッファー* 内の値|
 |--------------|-------------------|-------------|--------------|------------|-----------------------|
-|**空白**|any|any|any|**EINVAL**|変更されません。|
+|**NULL**|any|any|any|**EINVAL**|変更されません。|
 |Not **NULL** (有効なメモリを指す)|ゼロ|any|any|**EINVAL**|変更されません。|
 |Not **NULL** (有効なメモリを指す)|any|any|>= *sizeInBytes*|**EINVAL**|変更されません。|
 
 **セキュリティの問題**
 
-*バッファー*が有効なメモリを指しておらず、が**NULL**でない場合、 **_gcvt_s**はアクセス違反を生成する可能性があります。
+*バッファー* が有効なメモリを指しておらず、が **NULL** でない場合、 **_gcvt_s** はアクセス違反を生成する可能性があります。
 
 ## <a name="remarks"></a>解説
 
-**_Gcvt_s**関数は、浮動小数点*値*を文字列に変換します。これには、小数点と可能な符号バイトが含まれています。また、*バッファー*に文字列を格納します。 *バッファー*は、変換後の値と、自動的に追加される終端の null 文字を格納するのに十分な大きさである必要があります。 長さ **_CVTBUFSIZE**のバッファーは、任意の浮動小数点値に対して十分です。 *数字*+ 1 のバッファーサイズが使用されている場合、関数はバッファーの末尾を上書きしないため、この操作に十分なバッファーを指定してください。 **_gcvt_s**は、10進数形式で*桁*を生成しようとします。 そうでない場合は、指数形式*で数字が生成さ*れます。 後続のゼロは、変換時に非表示にできます。
+**_Gcvt_s** 関数は、浮動小数点 *値* を文字列に変換します。これには、小数点と可能な符号バイトが含まれています。また、*バッファー* に文字列を格納します。 *バッファー* は、変換後の値と、自動的に追加される終端の null 文字を格納するのに十分な大きさである必要があります。 長さ **_CVTBUFSIZE** のバッファーは、任意の浮動小数点値に対して十分です。 *数字*+ 1 のバッファーサイズが使用されている場合、関数はバッファーの末尾を上書きしないため、この操作に十分なバッファーを指定してください。 **_gcvt_s** は、10進数形式で *桁* を生成しようとします。 そうでない場合は、指数形式 *で数字が生成さ* れます。 後続のゼロは、変換時に非表示にできます。
 
 C++ では、テンプレートのオーバーロードによってこの関数を簡単に使用できます。オーバーロードでは、バッファー長を自動的に推論できるため、サイズ引数を指定する必要がなくなります。 詳細については、「[セキュリティ保護されたテンプレート オーバーロード](../../c-runtime-library/secure-template-overloads.md)」を参照してください。
 
@@ -104,7 +105,7 @@ C++ では、テンプレートのオーバーロードによってこの関数�
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|オプション ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|オプション ヘッダー|
 |-------------|---------------------|---------------------|
 |**_gcvt_s**|\<stdlib.h>|\<error.h>|
 
@@ -144,7 +145,7 @@ Converted value: 1.2
 ## <a name="see-also"></a>関連項目
 
 [データ変換](../../c-runtime-library/data-conversion.md)<br/>
-[浮動小数点サポート](../../c-runtime-library/floating-point-support.md)<br/>
+[浮動小数点のサポート](../../c-runtime-library/floating-point-support.md)<br/>
 [atof、_atof_l、_wtof、_wtof_l](atof-atof-l-wtof-wtof-l.md)<br/>
 [_ecvt_s](ecvt-s.md)<br/>
 [_fcvt_s](fcvt-s.md)<br/>

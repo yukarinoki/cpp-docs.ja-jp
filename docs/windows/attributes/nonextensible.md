@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: 非拡張'
 title: 非拡張 (C++ COM 属性)
 ms.date: 10/02/2018
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - nonextensible attribute
 ms.assetid: c7ef1554-809f-4ea0-a7cd-dc7786d40c3e
-ms.openlocfilehash: 01f89c4a06a8e90fd6a539fa5a5a85ebb8067d40
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: dfb0eda0fc8c6de367ee29ec3786750ba40395ec
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88833037"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97327443"
 ---
 # <a name="nonextensible"></a>nonextensible
 
@@ -25,9 +26,9 @@ ms.locfileid: "88833037"
 
 ## <a name="remarks"></a>解説
 
-**非拡張**C++ 属性には、[非拡張](/windows/win32/Midl/nonextensible)MIDL 属性と同じ機能があります。
+**非拡張** C++ 属性には、[非拡張](/windows/win32/Midl/nonextensible)MIDL 属性と同じ機能があります。
 
-**非拡張**を使用する場合は、 [oleautomation](oleautomation.md)属性も必要です。
+**非拡張** を使用する場合は、 [oleautomation](oleautomation.md)属性も必要です。
 
 ## <a name="example"></a>例
 
@@ -48,7 +49,7 @@ __interface IFireTabCtrl
 };
 ```
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 | 属性コンテキスト | 値 |
 |-|-|

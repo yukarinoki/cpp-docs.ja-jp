@@ -1,25 +1,26 @@
 ---
+description: '詳細情報: パラメーター属性'
 title: パラメーター属性 (C++ COM)
 ms.date: 10/02/2018
 helpviewer_keywords:
 - attributes [C++/CLI], parameter attributes
 - parameter attributes
 ms.assetid: 024c2dd5-49d7-4ced-a17a-c56c1bc485b6
-ms.openlocfilehash: 37ddd6ad575417b7ad891a173a77f27ef3823e03
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: f5d0cc2e71ebb77185a5454288c6719636624153
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80166550"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97327436"
 ---
 # <a name="parameter-attributes"></a>パラメーター属性
 
 クラスまたはインターフェイスのメソッドのパラメーターには、次の属性が適用されます。
 
-|Attribute|説明|
+|属性|説明|
 |---------------|-----------------|
-|[custom](custom-cpp.md)|では、独自の属性を定義できます。|
-|[defaultvalue](defaultvalue.md)|型指定された省略可能なパラメーターの既定値を指定できます。|
+|[ショー](custom-cpp.md)|では、独自の属性を定義できます。|
+|[既定](defaultvalue.md)|型指定された省略可能なパラメーターの既定値を指定できます。|
 |[first_is](first-is.md)|転送される最初の配列要素のインデックスを指定します。|
 |[iid_is](iid-is.md)|転送される最初の配列要素のインデックスを指定します。|
 |[immediatebind](immediatebind.md)|データバインドオブジェクトのプロパティに対するすべての変更が、すぐにデータベースに通知されることを示します。|
@@ -33,10 +34,10 @@ ms.locfileid: "80166550"
 |[range](range-cpp.md)|実行時に値が設定される引数またはフィールドに使用できる値の範囲を指定します。|
 |[ref](ref-cpp.md)|参照ポインターを識別します。|
 |[retval](retval.md)|メンバーの戻り値を受け取るパラメーターを指定します。|
-|[satype](satype.md)|`SAFEARRAY` 構造体のデータ型を指定します。|
+|[satype](satype.md)|構造体のデータ型を指定し `SAFEARRAY` ます。|
 |[size_is](size-is.md)|サイズポインターに割り当てられたメモリのサイズ、サイズ設定されたポインターへのサイズポインター、および単一または多次元の配列を指定します。|
 |[unique](unique-cpp.md)|一意のポインターを指定します。|
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [使用法別の属性](attributes-by-usage.md)

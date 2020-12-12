@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: CReBarCtrl クラス'
 title: CReBarCtrl クラス
 ms.date: 11/19/2018
 f1_keywords:
@@ -98,12 +99,12 @@ helpviewer_keywords:
 - CReBarCtrl [MFC], ShowBand
 - CReBarCtrl [MFC], SizeToRect
 ms.assetid: 154570d7-e48c-425d-8c7e-c64542bcb4cc
-ms.openlocfilehash: 872d577c2272939a6bf7ed1e3069cda426083e3f
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: 75caee2fb0b6bb883ecb421325d41b25c38252b5
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88561896"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97301231"
 ---
 # <a name="crebarctrl-class"></a>CReBarCtrl クラス
 
@@ -215,7 +216,7 @@ Rebar コントロールのサポート:
 
 `CReBarCtrl`
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** afxcmn.h
 
@@ -297,13 +298,13 @@ virtual BOOL CreateEx(
 ### <a name="parameters"></a>パラメーター
 
 *dwExStyle*<br/>
-作成するコントロールの拡張スタイルを指定します。 拡張 Windows スタイルの一覧については、Windows SDK の[CreateWindowEx](/windows/win32/api/winuser/nf-winuser-createwindowexw)の*dwexstyle*パラメーターを参照してください。
+作成するコントロールの拡張スタイルを指定します。 拡張 Windows スタイルの一覧については、Windows SDK の [CreateWindowEx](/windows/win32/api/winuser/nf-winuser-createwindowexw)の *dwexstyle* パラメーターを参照してください。
 
 *dwStyle*<br/>
 コントロールに適用される rebar コントロールスタイルの組み合わせを指定します。 サポートされているスタイルの一覧については、「Windows SDK の [Rebar コントロールスタイル](/windows/win32/Controls/rebar-control-styles) 」を参照してください。
 
 *rect*<br/>
-*PParentWnd*のクライアント座標で、作成されるウィンドウのサイズと位置を記述する[RECT](/windows/win32/api/windef/ns-windef-rect)構造体への参照。
+*PParentWnd* のクライアント座標で、作成されるウィンドウのサイズと位置を記述する [RECT](/windows/win32/api/windef/ns-windef-rect)構造体への参照。
 
 *pParentWnd*<br/>
 コントロールの親であるウィンドウへのポインター。
@@ -317,7 +318,7 @@ virtual BOOL CreateEx(
 
 ### <a name="remarks"></a>解説
 
-`CreateEx`Windows 拡張スタイルの先頭**WS_EX_** によって指定された拡張 windows スタイルを適用するには、[[作成](#create)] ではなくを使用します。
+`CreateEx`Windows 拡張スタイルの先頭 **WS_EX_** によって指定された拡張 windows スタイルを適用するには、[[作成](#create)] ではなくを使用します。
 
 ## <a name="crebarctrlcrebarctrl"></a><a name="crebarctrl"></a> CReBarCtrl:: CReBarCtrl
 
@@ -526,7 +527,7 @@ DWORD GetExtendedStyle() const;
 
 ### <a name="return-value"></a>戻り値
 
-拡張スタイルを示すフラグのビットごとの組み合わせ (or)。 使用できるフラグは RBS_EX_SPLITTER と RBS_EX_TRANSPARENT です。 詳細については、 [Crebarctrl:: SetExtendedStyle](#setextendedstyle)メソッドの*dwMask*パラメーターを参照してください。
+拡張スタイルを示すフラグのビットごとの組み合わせ (or)。 使用できるフラグは RBS_EX_SPLITTER と RBS_EX_TRANSPARENT です。 詳細については、 [Crebarctrl:: SetExtendedStyle](#setextendedstyle)メソッドの *dwMask* パラメーターを参照してください。
 
 ### <a name="remarks"></a>解説
 
@@ -799,7 +800,7 @@ void PushChevron(
 シェブロンをプッシュするバンドの0から始まるインデックス。
 
 *lAppValue*<br/>
-アプリケーションで32ビット値が定義されています。 Windows SDK の[RB_PUSHCHEVRON](/windows/win32/Controls/rb-pushchevron)の「 *lAppValue* 」を参照してください。
+アプリケーションで32ビット値が定義されています。 Windows SDK の [RB_PUSHCHEVRON](/windows/win32/Controls/rb-pushchevron)の「 *lAppValue* 」を参照してください。
 
 ## <a name="crebarctrlrestoreband"></a><a name="restoreband"></a> CReBarCtrl:: RestoreBand
 
@@ -816,7 +817,7 @@ void RestoreBand(UINT uBand);
 
 ### <a name="remarks"></a>解説
 
-[RB_MAXIMIZEBAND](/windows/win32/Controls/rb-maximizeband) `fIdeal` Windows SDK で説明されているように、を1に設定して、Win32 メッセージ RB_MAXIMIZEBAND の動作を実装します。
+[](/windows/win32/Controls/rb-maximizeband) `fIdeal` Windows SDK で説明されているように、を1に設定して、Win32 メッセージ RB_MAXIMIZEBAND の動作を実装します。
 
 ### <a name="example"></a>例
 
@@ -917,7 +918,7 @@ COLORREF SetBkColor(COLORREF clr);
 
 ### <a name="parameters"></a>パラメーター
 
-*clr*<br/>
+<bpt id="p1">*</bpt>clr<ept id="p1">*</ept><br/>
 新しい既定の背景色を表す COLORREF 値。
 
 ### <a name="return-value"></a>戻り値
@@ -1046,7 +1047,7 @@ COLORREF SetTextColor(COLORREF clr);
 
 ### <a name="parameters"></a>パラメーター
 
-*clr*<br/>
+<bpt id="p1">*</bpt>clr<ept id="p1">*</ept><br/>
 オブジェクトの新しいテキストの色を表す COLORREF 値 `CReBarCtrl` 。
 
 ### <a name="return-value"></a>戻り値
