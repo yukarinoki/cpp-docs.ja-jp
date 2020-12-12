@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: Platform:: STAThreadAttribute クラス'
 title: Platform::STAThreadAttribute クラス
 ms.date: 12/30/2016
 ms.topic: reference
@@ -11,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::STAThreadAttribute Class
 ms.assetid: f97960fc-e673-4d9e-910a-54c8415411c4
-ms.openlocfilehash: 6a8220d8cddca29e621b21fc56966efdb42cb32e
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: a1c235ef9a171e650c960df184b081c4b6511cf1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87213022"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97308004"
 ---
 # <a name="platformstathreadattribute-class"></a>Platform::STAThreadAttribute クラス
 
@@ -50,7 +51,7 @@ STAThreadAttribute 属性は、 [Platform:: Object クラス](../cppcx/platform-
 
 `Platform`
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 **ヘッダー:** collection.h
 
@@ -66,7 +67,7 @@ STAThreadAttribute クラスの新しいインスタンスを初期化します�
 public:STAThreadAttribute();
 ```
 
-## <a name="stathreadattributeequals"></a><a name="equals"></a>STAThreadAttribute:: Equals
+## <a name="stathreadattributeequals"></a><a name="equals"></a> STAThreadAttribute:: Equals
 
 指定されたオブジェクトが現在のオブジェクトと等しいかどうかを判断します。
 
@@ -79,13 +80,13 @@ public:virtual override bool Equals( Object^ obj );
 ### <a name="parameters"></a>パラメーター
 
 *obj*<br/>
-比較するオブジェクト。
+比較対象のオブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
 **`true`** オブジェクトが等しい場合は。それ以外の場合は **`false`** 。
 
-## <a name="stathreadattributegethashcode"></a><a name="gethashcode"></a>STAThreadAttribute:: GetHashCode
+## <a name="stathreadattributegethashcode"></a><a name="gethashcode"></a> STAThreadAttribute:: GetHashCode
 
 このインスタンスのハッシュ コードを返します。
 
@@ -99,7 +100,7 @@ public:int GetHashCode();
 
 対象のインスタンスのハッシュ コード。
 
-## <a name="stathreadattributetostring"></a><a name="tostring"></a>STAThreadAttribute:: ToString
+## <a name="stathreadattributetostring"></a><a name="tostring"></a> STAThreadAttribute:: ToString
 
 現在のオブジェクトを表す文字列を返します。
 

@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: スタックコレクションとキューコレクションの作成'
 title: スタック コレクションとキュー コレクションの作成
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -11,18 +12,18 @@ helpviewer_keywords:
 - stack collections
 - collections, queue
 ms.assetid: 3c7bc198-35f0-4fc3-aaed-6005a0f22638
-ms.openlocfilehash: 5db90422f78fc6ca3bc2a182f9569c33db56cad1
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: e6c3d4a2ade4262e01bd5d84529aa57d308a8623
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84623214"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97309772"
 ---
 # <a name="creating-stack-and-queue-collections"></a>スタック コレクションとキュー コレクションの作成
 
-この記事では、MFC リストクラスから、[スタック](#_core_stacks)や[キュー](#_core_queues)などの他のデータ構造を作成する方法について説明します。 この例では、から派生したクラスを使用し `CList` ますが、機能を追加する必要がない限り、を直接使用することもでき `CList` ます。
+この記事では、MFC リストクラスから、 [スタック](#_core_stacks) や [キュー](#_core_queues)などの他のデータ構造を作成する方法について説明します。 この例では、から派生したクラスを使用し `CList` ますが、機能を追加する必要がない限り、を直接使用することもでき `CList` ます。
 
-## <a name="stacks"></a><a name="_core_stacks"></a>煙
+## <a name="stacks"></a><a name="_core_stacks"></a> 煙
 
 標準リストコレクションには先頭と末尾の両方があるため、後入れ先出しスタックの動作を模倣する派生リストコレクションを簡単に作成できます。 スタックは、カフェテリアのトレイのスタックに似ています。 トレイがスタックに追加されると、スタックの一番上に表示されます。 最後に追加されたトレイが、最初に削除されます。 リストコレクションメンバー関数とは、 `AddHead` `RemoveHead` リストの先頭から要素を追加および削除するために使用できます。したがって、最後に追加された要素が最初に削除されます。
 

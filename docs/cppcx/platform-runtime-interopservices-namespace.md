@@ -1,4 +1,5 @@
 ---
+description: '詳細について: Platform:: Runtime:: InteropServices 名前空間'
 title: Platform::Runtime::InteropServices 名前空間
 ms.date: 12/30/2016
 ms.topic: reference
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::Runtime::InteropServices Namespace
 ms.assetid: 546b981a-a360-4a78-b89f-fdf0df848747
-ms.openlocfilehash: c527c642228d97d8b185e3b97ff38304b09d5769
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 710da76e27f8b1d6460a8f2c9809efff07ce132c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62330194"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97308030"
 ---
 # <a name="platformruntimeinteropservices-namespace"></a>Platform::Runtime::InteropServices 名前空間
 
@@ -30,7 +31,7 @@ namespace Platform {
 
 この名前空間は内部使用のためのものですが、ブラウザーでこの名前空間の次のメンバーを表示できます。
 
-|名前|コメント|
+|名前|注記|
 |----------|------------|
 |ComInterfaceType|列挙体|
 |InterfaceTypeAttribute||
@@ -43,12 +44,12 @@ namespace Platform {
 
 `Platform`
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
-**メタデータ:** platform.winmd
+**メタデータ:** platform. winmd
 
-**名前空間:** Platform::interopservices
+**名前空間:** Platform::InteropServices
 
 ## <a name="see-also"></a>関連項目
 
-[プラットフォーム Namespace](platform-namespace-c-cx.md)
+[Platform 名前空間](platform-namespace-c-cx.md)

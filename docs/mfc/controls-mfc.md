@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: コントロール (MFC)'
 title: コントロール (MFC)
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - common controls [MFC]
 - controls [MFC]
 ms.assetid: b2842884-6435-4b8f-933b-21671bf8af95
-ms.openlocfilehash: accbee66cdee4e7b849da2b034d253b1c206d8f1
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 94406928741eecd00794dbde230effe4d89ab3f6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84617180"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97310136"
 ---
 # <a name="controls-mfc"></a>コントロール (MFC)
 
@@ -43,11 +44,11 @@ ActiveX コントロールは、以前は OLE コントロールと呼ばれて�
 
 - [CDragListBox](reference/cdraglistbox-class.md)
 
-## <a name="finding-information-about-windows-common-controls"></a><a name="_core_finding_information_about_windows_common_controls"></a>Windows コモンコントロールに関する情報の入手
+## <a name="finding-information-about-windows-common-controls"></a><a name="_core_finding_information_about_windows_common_controls"></a> Windows コモンコントロールに関する情報の入手
 
 次の表では、MFC ラッパー クラスを含む Windows コモン コントロールについて簡単に説明します。
 
-### <a name="windows-common-controls-and-mfc-classes"></a><a name="_core_windows_common_controls_and_mfc_classes"></a>Windows コモンコントロールと MFC クラス
+### <a name="windows-common-controls-and-mfc-classes"></a><a name="_core_windows_common_controls_and_mfc_classes"></a> Windows コモンコントロールと MFC クラス
 
 |コントロール|MFC クラス|説明|Windows 95 の新方法|
 |-------------|---------------|-----------------|------------------------|
@@ -80,7 +81,7 @@ ActiveX コントロールは、以前は OLE コントロールと呼ばれて�
 
 - 各コントロールへのリンクについては、上記の「 [Windows コモン コントロールと MFC クラス](#_core_windows_common_controls_and_mfc_classes) 」を参照してください。
 
-- [コントロールの作成と使用](making-and-using-controls.md)
+- [コントロールの作成方法と使い方](making-and-using-controls.md)
 
 - [ダイアログエディターを使用したコントロールの追加](using-the-dialog-editor-to-add-controls.md)
 
@@ -102,7 +103,7 @@ ActiveX コントロールは、以前は OLE コントロールと呼ばれて�
 
 - [サンプル](common-control-sample-list.md)
 
-Windows SDK の Windows コモンコントロールの詳細については、「[コモンコントロール](/windows/win32/Controls/common-controls-intro)」を参照してください。
+Windows SDK の Windows コモンコントロールの詳細については、「 [コモンコントロール](/windows/win32/Controls/common-controls-intro)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

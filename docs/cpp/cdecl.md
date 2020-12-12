@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: __cdecl'
 title: __cdecl
 ms.date: 10/09/2018
 f1_keywords:
@@ -9,12 +10,12 @@ f1_keywords:
 helpviewer_keywords:
 - __cdecl keyword [C++]
 ms.assetid: 1ff1d03e-fb4e-4562-8be1-74f1ad6427f1
-ms.openlocfilehash: 9c1483d02bcb68d902cae527eb60e3ef9987607c
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: de6d34aa70353f65191c0c36c790d517a1fbbf0e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87227583"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97308576"
 ---
 # <a name="__cdecl"></a>__cdecl
 
@@ -28,11 +29,11 @@ ms.locfileid: "87227583"
 |大文字と小文字の変換規約|大文字小文字は変換されません。|
 
 > [!NOTE]
-> 関連情報については、「[装飾名](../build/reference/decorated-names.md)」を参照してください。
+> 関連情報については、「 [装飾名](../build/reference/decorated-names.md)」を参照してください。
 
 **`__cdecl`** 変数または関数名の前に修飾子を配置します。 C の名前と呼び出し規約は既定であるため、x86 コードでを使用する必要があるの **`__cdecl`** は、 `/Gv` (vectorcall)、 `/Gz` (stdcall)、または `/Gr` (fastcall) コンパイラオプションを指定した場合のみです。 [/Gd](../build/reference/gd-gr-gv-gz-calling-convention.md)コンパイラオプションは、呼び出し規約を強制的に実行し **`__cdecl`** ます。
 
-ARM および x64 プロセッサで **`__cdecl`** は、は受け入れられますが、通常はコンパイラによって無視されます。 ARM と x64 の規約に基づいて、引数は可能であればレジスタで渡され、残りの引数はスタックで渡されます。 X64 コードでは、を使用して **`__cdecl`** **/Gv**コンパイラオプションをオーバーライドし、既定の x64 呼び出し規約を使用します。
+ARM および x64 プロセッサで **`__cdecl`** は、は受け入れられますが、通常はコンパイラによって無視されます。 ARM と x64 の規約に基づいて、引数は可能であればレジスタで渡され、残りの引数はスタックで渡されます。 X64 コードでは、を使用して **`__cdecl`** **/Gv** コンパイラオプションをオーバーライドし、既定の x64 呼び出し規約を使用します。
 
 静的でないクラス関数がアウトオブラインで宣言されている場合、アウトオブラインの宣言で呼び出し規約の修飾子を指定する必要はありません。 つまり、クラスの静的でないメンバー メソッドの場合は、宣言時に指定された呼び出し規約が定義の時点で仮定されます。 次のクラス定義があるとします。
 
@@ -54,7 +55,7 @@ void CMyClass::mymethod() { return; }
 void __cdecl CMyClass::mymethod() { return; }
 ```
 
-以前のバージョンとの互換性を維持 **_cdecl**するために、 **cdecl** **`__cdecl`** コンパイラオプション[/za \( Disable language extension)](../build/reference/za-ze-disable-language-extensions.md)が指定されていない限り、cdecl と _cdecl はのシノニムになります。
+以前のバージョンとの互換性を維持するために、  **`__cdecl`** コンパイラオプション [/za \( Disable language extension)](../build/reference/za-ze-disable-language-extensions.md)が指定されていない限り、cdecl と _cdecl はのシノニムになります。
 
 ## <a name="example"></a>例
 
@@ -69,5 +70,5 @@ typedef BOOL (__cdecl *funcname_ptr)(void * arg1, const char * arg2, DWORD flags
 
 ## <a name="see-also"></a>関連項目
 
-[引数の引き渡し規則と名前付け規則](../cpp/argument-passing-and-naming-conventions.md)<br/>
+[引数の渡し規則と名前付け規則](../cpp/argument-passing-and-naming-conventions.md)<br/>
 [キーワード](../cpp/keywords-cpp.md)

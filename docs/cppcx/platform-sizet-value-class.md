@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: Platform:: SizeT value クラス'
 title: Platform::SizeT 値クラス
 ms.date: 12/30/2016
 ms.topic: reference
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::SizeT Struct
 ms.assetid: 0803612c-8ba1-430c-9b7b-1bebae88608d
-ms.openlocfilehash: 5add9212dc2655bc37cd357741073f855b009bde
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: ebcca27a94d23082374daafaa9fd7db180955a30
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81322159"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97308017"
 ---
 # <a name="platformsizet-value-class"></a>Platform::SizeT 値クラス
 
@@ -30,17 +31,17 @@ public ref class SizeT sealed : ValueType
 |------------|-----------------|
 |[SizeT::SizeT コンストラクター](#ctor)|指定された値で、クラスの新しいインスタンスを初期化します。|
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
-**サポートされる最小クライアント:** ウィンドウズ 8
+**サポートされている最低限のクライアント:** Windows 8
 
-**サポートされる最小サーバー:** ウィンドウズ サーバー 2012
+**サポートされる最小サーバー:** Windows Server 2012
 
 **名前空間:** Platform
 
-**メタデータ:** プラットフォーム.winmd
+**メタデータ:** platform. winmd
 
-## <a name="sizetsizet-constructor"></a><a name="ctor"></a>サイズ::サイズTコンストラクタ
+## <a name="sizetsizet-constructor"></a><a name="ctor"></a> SizeT:: SizeT コンストラクター
 
 指定された値を持つ SizeT の新しいインスタンスを初期化します。
 

@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: Platform:: NotImplementedException クラス'
 title: Platform::NotImplementedException クラス
 ms.date: 12/30/2016
 ms.topic: reference
@@ -8,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::NotImplementedException
 ms.assetid: 6da26cc2-dde8-4aea-aa85-67aac55cf97b
-ms.openlocfilehash: 5262aaf85c73e2ff09259fe350e8b5600c68be95
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ef99678994a42cde66ec460415ed1a57f43cbf5e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62325391"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97308277"
 ---
 # <a name="platformnotimplementedexception-class"></a>Platform::NotImplementedException クラス
 
@@ -25,20 +26,20 @@ ms.locfileid: "62325391"
 public ref class NotImplementedException : COMException,    IException,    IPrintable,    IEquatable
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 詳細については、 [COMException](../cppcx/platform-comexception-class.md) クラスを参照してください。
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
-**最小値には、クライアントがサポートされています。** Windows 8
+**サポートされている最低限のクライアント:** Windows 8
 
-**最小値には、サーバーがサポートされています。** Windows Server 2012
+**サポートされる最小サーバー:** Windows Server 2012
 
-**名前空間:** プラットフォーム
+**名前空間:** Platform
 
-**メタデータ:** platform.winmd
+**メタデータ:** platform. winmd
 
 ## <a name="see-also"></a>関連項目
 
-[Platform::COMException クラス](../cppcx/platform-comexception-class.md)
+[Platform:: COMException クラス](../cppcx/platform-comexception-class.md)

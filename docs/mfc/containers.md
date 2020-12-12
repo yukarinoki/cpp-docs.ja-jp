@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: コンテナー'
 title: Containers
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - containers [MFC], OLE container applications
 - containers [MFC], container applications
 ms.assetid: b19d7c05-4d02-44bd-b76a-4a6c25994a62
-ms.openlocfilehash: a76bc9775e13350a031539c63476a4a8fae68ed0
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 20f31535f055312de3da05f5fa3e469183941f25
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84620636"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97310279"
 ---
 # <a name="containers"></a>Containers
 
@@ -27,7 +28,7 @@ ms.locfileid: "84620636"
 
 [複合ファイルを使用する](containers-compound-files.md)
 
-[コンテナーのユーザーインターフェイスの問題](containers-user-interface-issues.md)
+[コンテナーの User-Interface の問題](containers-user-interface-issues.md)
 
 [コンテナーの高度な機能](containers-advanced-features.md)
 
@@ -35,5 +36,5 @@ ms.locfileid: "84620636"
 
 [OLE●ole○](ole-in-mfc.md)<br/>
 [サーバー](servers.md)<br/>
-[アクティブ化](activation-cpp.md)<br/>
+[アクティベーション](activation-cpp.md)<br/>
 [メニューとリソース (OLE)](menus-and-resources-ole.md)

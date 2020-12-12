@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: コンパイラの警告 (レベル 1) C4397'
 title: コンパイラの警告 (レベル 1) C4397
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - C4397
 ms.assetid: 6346fdc2-dbbf-4fba-803a-32b0d0a707be
-ms.openlocfilehash: e9fb7527124d1838c1f900144f1fea943616f384
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 17ad322980a199b9602c4aa1ea60d818e657eaa1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80162674"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97311254"
 ---
 # <a name="compiler-warning-level-1-c4397"></a>コンパイラの警告 (レベル 1) C4397
 
 DefaultCharSetAttribute は無視されます
 
-<xref:System.Runtime.InteropServices.DefaultCharSetAttribute> は、Microsoft C++コンパイラでは無視されます。 DLL の文字セットを指定するには、DllImport の CharSet オプションを使用します。 詳細については、「 [Interop (暗黙のC++ PInvoke) の使用](../../dotnet/using-cpp-interop-implicit-pinvoke.md)」を参照してください。
+<xref:System.Runtime.InteropServices.DefaultCharSetAttribute> は、Microsoft C++ コンパイラによって無視されます。 DLL の文字セットを指定するには、DllImport の CharSet オプションを使用します。 詳細については、「 [C++ Interop の使用 (暗黙的な PInvoke)](../../dotnet/using-cpp-interop-implicit-pinvoke.md)」を参照してください。
 
 ## <a name="example"></a>例
 

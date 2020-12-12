@@ -1,4 +1,5 @@
 ---
+description: '詳細について: Platform:: Runtime:: System.runtime.compilerservices 名前空間'
 title: Platform::Runtime::CompilerServices 名前空間
 ms.date: 12/30/2016
 ms.topic: reference
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::Runtime::CompilerServices Namespace
 ms.assetid: 8613b6b3-b193-45d1-b956-881a4a700788
-ms.openlocfilehash: 88eac06eeb97fce26f321e8beb494b6b9e66be41
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 273a218c0a53ff28188491277ffb6f7f0fe7f744
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62183146"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97308043"
 ---
 # <a name="platformruntimecompilerservices-namespace"></a>Platform::Runtime::CompilerServices 名前空間
 
@@ -30,7 +31,7 @@ namespace Platform {
 
 この名前空間は内部使用のためのものですが、ブラウザーでこの名前空間の次のメンバーを表示できます。
 
-|名前|コメント|
+|名前|注記|
 |----------|------------|
 |CallConvCdecl||
 |CallConvFastcall||
@@ -54,12 +55,12 @@ namespace Platform {
 
 `Platform`
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
-**メタデータ:** platform.winmd
+**メタデータ:** platform. winmd
 
-**名前空間:** Platform::compilerservices
+**名前空間:** Platform::CompilerServices
 
 ## <a name="see-also"></a>関連項目
 
-[プラットフォーム Namespace](platform-namespace-c-cx.md)
+[Platform 名前空間](platform-namespace-c-cx.md)

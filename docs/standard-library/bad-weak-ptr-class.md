@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: bad_weak_ptr クラス'
 title: bad_weak_ptr クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,14 +8,14 @@ helpviewer_keywords:
 - bad_weak_ptr
 - bad_weak_ptr class
 ms.assetid: a09336d5-7237-4480-ab6b-3787e0e6025e
-ms.openlocfilehash: e1d536eed6727a5d1e828d358aa6b64521d748b8
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: db74ed31ff92f7665e8ecde5fc4700bcdf1a7fc1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68454269"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97312918"
 ---
-# <a name="badweakptr-class"></a>bad_weak_ptr クラス
+# <a name="bad_weak_ptr-class"></a>bad_weak_ptr クラス
 
 weak_ptr が無効であることを示す例外を報告します。
 
@@ -28,7 +29,7 @@ class bad_weak_ptr : public std::exception
 };
 ```
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 このクラスは、型 [weak_ptr クラス](../standard-library/weak-ptr-class.md)の引数を取る [shared_ptr クラス](../standard-library/shared-ptr-class.md) コンストラクターからスローされる可能性がある例外について記述します。 メンバー関数 `what` は、`"bad_weak_ptr"` を返します。
 

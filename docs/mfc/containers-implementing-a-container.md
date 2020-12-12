@@ -1,16 +1,17 @@
 ---
+description: '詳細については、「コンテナー: コンテナーの実装」を参照してください。'
 title: 'コンテナー : コンテナーの実装'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - applications [OLE], OLE container
 - OLE containers [MFC], implementing
 ms.assetid: af1e2079-619a-4eac-9327-985ad875823a
-ms.openlocfilehash: 0ba8d4aea6b69fdbfeedfba59449d0d30433eb94
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 24e3c7f7d4546ebe9b103af0e9ca0d9694b25d2e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84623224"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97310324"
 ---
 # <a name="containers-implementing-a-container"></a>コンテナー : コンテナーの実装
 
@@ -36,7 +37,7 @@ ms.locfileid: "84623224"
 
 1. メッセージハンドラーを実装し `OnSize` て、OLE 埋め込みアイテムに四角形を変更し、それを含むビューのサイズの変更を反映する必要があることを通知します。
 
-これらの機能の実装はアプリケーションによって大きく異なるため、アプリケーションウィザードには基本的な実装のみが用意されています。 アプリケーションを正しく機能させるには、これらの関数をカスタマイズする必要があります。 この例については、[コンテナー](../overview/visual-cpp-samples.md)のサンプルを参照してください。
+これらの機能の実装はアプリケーションによって大きく異なるため、アプリケーションウィザードには基本的な実装のみが用意されています。 アプリケーションを正しく機能させるには、これらの関数をカスタマイズする必要があります。 この例については、 [コンテナー](../overview/visual-cpp-samples.md) のサンプルを参照してください。
 
 #### <a name="to-handle-embedded-and-linked-items"></a>埋め込み項目とリンクされた項目を処理するには
 
@@ -44,9 +45,9 @@ ms.locfileid: "84623224"
 
 1. `OnChange`、 `OnChangeItemPosition` 、およびをオーバーライド `OnGetItemPosition` します。 これらの関数は、埋め込みおよびリンクされた項目のサイズ変更、配置、および変更を処理します。
 
-クラスはアプリケーションウィザードによって派生されますが、前の手順の `OnChange` 手順 2. で一覧表示された他の関数をオーバーライドする必要がある場合があります。 スケルトン実装は、アプリケーションごとに異なる方法で実装されるため、ほとんどのアプリケーションに合わせてカスタマイズする必要があります。 この例については、MFC のサンプル[DRAWCLI](../overview/visual-cpp-samples.md)と[コンテナー](../overview/visual-cpp-samples.md)を参照してください。
+クラスはアプリケーションウィザードによって派生されますが、前の手順の `OnChange` 手順 2. で一覧表示された他の関数をオーバーライドする必要がある場合があります。 スケルトン実装は、アプリケーションごとに異なる方法で実装されるため、ほとんどのアプリケーションに合わせてカスタマイズする必要があります。 この例については、MFC のサンプル [DRAWCLI](../overview/visual-cpp-samples.md) と [コンテナー](../overview/visual-cpp-samples.md)を参照してください。
 
-OLE をサポートするには、コンテナーアプリケーションのメニュー構造に複数の項目を追加する必要があります。 これらの詳細については、「[メニューとリソース: コンテナーの追加](menus-and-resources-container-additions.md)」を参照してください。
+OLE をサポートするには、コンテナーアプリケーションのメニュー構造に複数の項目を追加する必要があります。 これらの詳細については、「 [メニューとリソース: コンテナーの追加](menus-and-resources-container-additions.md)」を参照してください。
 
 コンテナーアプリケーションで、次の機能の一部をサポートすることもできます。
 
@@ -60,9 +61,9 @@ OLE をサポートするには、コンテナーアプリケーションのメ�
 
 - 埋め込みオブジェクトまたは組み合わせたコンテナー/サーバーアプリケーションへのリンク。
 
-   詳細については、「[コンテナー: 高度な機能](containers-advanced-features.md)」を参照してください。
+   詳細については、「 [コンテナー: 高度な機能](containers-advanced-features.md)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 
 [Containers](containers.md)<br/>
-[コンテナー : クライアント アイテム](containers-client-items.md)
+[コンテナー: クライアントアイテム](containers-client-items.md)

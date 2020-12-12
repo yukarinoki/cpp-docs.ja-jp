@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「y0、y1、yn」を参照してください。
 title: y0、y1、yn
 ms.date: 12/16/2019
 api_name:
@@ -29,15 +30,15 @@ helpviewer_keywords:
 - y1 function
 - yn function
 ms.assetid: e14215f3-53d4-4ae8-816e-4c1ec2019316
-ms.openlocfilehash: ade2978d9a052b481c8250933257cfa33493860f
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: d59ea472509f0eba050da12f8867f48d25cb1f63
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75301718"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97309103"
 ---
 # <a name="y0-y1-yn"></a>y0、y1、yn
 
-Microsoft 実装の POSIX 関数名 `y0`、`y1`、および `yn` は、 [_y0、_y1、および _yn](bessel-functions-j0-j1-jn-y0-y1-yn.md)関数の非推奨のエイリアスです。 既定では、[コンパイラの警告 (レベル 3) C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md)が生成されます。 これらの名前は、実装固有の名前の標準 C 規則に従っていないため、非推奨とされます。 ただし、関数は引き続きサポートされます。
+Microsoft が実装した POSIX 関数名、 `y0` `y1` 、およびは、 `yn` [_y0、_y1、および _yn](bessel-functions-j0-j1-jn-y0-y1-yn.md) 関数の非推奨のエイリアスです。 既定では、 [コンパイラの警告 (レベル 3) C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md)が生成されます。 これらの名前は、実装固有の名前の標準 C 規則に従っていないため、非推奨とされます。 ただし、関数は引き続きサポートされます。
 
-代わりに、 [_y0、_y1、および _yn](bessel-functions-j0-j1-jn-y0-y1-yn.md)を使用することをお勧めします。 または、これらの関数名を引き続き使用して、警告を無効にすることもできます。 詳細については、「警告と[POSIX の関数名](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#posix-function-names)を[無効にする](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#turn-off-the-warning)」を参照してください。
+代わりに、 [_y0、_y1、および _yn](bessel-functions-j0-j1-jn-y0-y1-yn.md) を使用することをお勧めします。 または、これらの関数名を引き続き使用して、警告を無効にすることもできます。 詳細については、「警告と[POSIX の関数名](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#posix-function-names)を[無効にする](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#turn-off-the-warning)」を参照してください。

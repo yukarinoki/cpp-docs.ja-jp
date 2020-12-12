@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: Platform:: String クラス'
 title: Platform::String クラス
 ms.date: 10/16/2019
 ms.topic: reference
@@ -19,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::String
 ms.assetid: 72dd04a4-a694-40d3-b899-eaa0b503eab8
-ms.openlocfilehash: f8b5888ee2d28a3d870b5f0eeab143b189c88180
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 66e545b529ccd229b3c76395e265a006331d8652
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87185256"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97307978"
 ---
 # <a name="platformstring-class"></a>Platform::String クラス
 
-テキストを表現するために使用される Unicode 文字のシーケンシャル コレクションを表します。 詳細と例については、「[文字列](../cppcx/strings-c-cx.md)」を参照してください。
+テキストを表現するために使用される Unicode 文字のシーケンシャル コレクションを表します。 詳細と例については、「 [文字列](../cppcx/strings-c-cx.md)」を参照してください。
 
 ## <a name="syntax"></a>構文
 
@@ -64,7 +65,7 @@ String クラスには、次の種類のメンバーの種類もあります。
 
 String クラスは、 [Platform::Object Class](../cppcx/platform-object-class.md)の Equals()、Finalize()、GetHashCode()、GetType()、MemberwiseClose()、および ToString() の各メソッドを継承します。 String には、次のメソッドもあります。
 
-|メソッド|説明|
+|Method|説明|
 |------------|-----------------|
 |[String:: Begin](#begin)|現在の文字列の先頭へのポインターを返します。|
 |[String:: CompareOrdinal](#compareordinal)|オブジェクトによって表される 2 つの文字列値に含まれる、対応する文字列の数値を評価することにより、2 つの `String` オブジェクトを比較します。|
@@ -75,7 +76,7 @@ String クラスは、 [Platform::Object Class](../cppcx/platform-object-class.m
 |[String:: Equals](#equals)|指定されたオブジェクトが現在のオブジェクトと等しいかどうかを示します。|
 |[String:: GetHashCode](#gethashcode)|このインスタンスのハッシュ コードを返します。|
 |[String:: IsEmpty](#isempty)|現在の String オブジェクトが空かどうかを示します。|
-|[String:: IsFastPass](#isfastpass)|現在の文字列オブジェクトが*高速パス*操作に参加しているかどうかを示します。 高速渡し操作では、参照カウントは中断されます。|
+|[String:: IsFastPass](#isfastpass)|現在の文字列オブジェクトが *高速パス* 操作に参加しているかどうかを示します。 高速渡し操作では、参照カウントは中断されます。|
 |[String:: Length](#length)|現在の String オブジェクトの長さを取得します。|
 |[String:: ToString](#tostring)|値が現在の文字列と同じである String オブジェクトを返します。|
 
@@ -92,7 +93,7 @@ String クラスには、次の演算子があります。
 |[String:: operator! = 演算子](#operator-inequality)|指定した2つの String オブジェクトの値が異なるかどうかを示します。|
 |[String:: operator< 演算子](#operator-less-than)|1 つの String オブジェクトの値が、2 番目の String オブジェクトの値より小さいかどうかを示します。|
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 **サポートされている最低限のクライアント:** Windows 8
 
@@ -102,7 +103,7 @@ String クラスには、次の演算子があります。
 
 **ヘッダー** vccorlib.h (既定でインクルードされる)
 
-## <a name="stringbegin-method"></a><a name="begin"></a>String:: Begin メソッド
+## <a name="stringbegin-method"></a><a name="begin"></a> String:: Begin メソッド
 
 現在の文字列の先頭へのポインターを返します。
 
@@ -116,7 +117,7 @@ char16* Begin();
 
 現在の文字列の先頭へのポインター。
 
-## <a name="stringcompareordinal-method"></a><a name="compareordinal"></a>String:: CompareOrdinal メソッド
+## <a name="stringcompareordinal-method"></a><a name="compareordinal"></a> String:: CompareOrdinal メソッド
 
 `String`オブジェクトが表す2つの文字列値の対応する文字の数値を評価することによって2つのオブジェクトを比較する静的メソッド。
 
@@ -138,13 +139,13 @@ static int CompareOrdinal( String^ str1, String^ str2 );
 
 2 つの比較対照値の構文上の関係を示す整数。 次の表は、可能性のある戻り値の一覧です。
 
-|値|条件|
+|[値]|条件|
 |-----------|---------------|
 |-1|`str1` は `str2` より小さい値です。|
 |0|`str1` は `str2` と等価。|
 |1|`str1` が `str2` より大きくなっています。|
 
-## <a name="stringconcat-method"></a><a name="concat"></a>String:: Concat メソッド
+## <a name="stringconcat-method"></a><a name="concat"></a> String:: Concat メソッド
 
 指定された 2 つの String オブジェクトの値を連結します。
 
@@ -168,7 +169,7 @@ String^ Concat( String^ str1, String^ str2);
 
 `str1` が `null` で、`str2` がそうでない場合は、`str1` が返されます。 `str2` が `null` で、`str1` がそうでない場合は、`str2` が返されます。 `str1` と `str2` の両方が `null` の場合は、空の文字列 (L"") が返されます。
 
-## <a name="stringdata-method"></a><a name="data"></a>文字列::D ata メソッド
+## <a name="stringdata-method"></a><a name="data"></a> 文字列::D ata メソッド
 
 () 要素の C スタイル配列としてオブジェクトのデータバッファーの先頭へのポインターを返し `char16` **`wchar_t`** ます。
 
@@ -184,9 +185,9 @@ Unicode 文字の配列の先頭へのポインター `const char16` ( `char16` 
 
 ### <a name="remarks"></a>解説
 
-`Platform::String^` から `wchar_t*` に変換するには、このメソッドを使用します。 `String` オブジェクトがスコープ外に出ると、データ ポインターが有効であるという保証がなくなります。 元のオブジェクトの有効期間を超えてデータを格納するには `String` 、 [wcscpy_s](../c-runtime-library/reference/strcpy-s-wcscpy-s-mbscpy-s.md)を使用して、自分で割り当てたメモリに配列をコピーします。
+`Platform::String^` から `wchar_t*` に変換するには、このメソッドを使用します。 `String` オブジェクトがスコープ外に出ると、データ ポインターが有効であるという保証がなくなります。 元のオブジェクトの有効期間を超えてデータを格納するには `String` 、 [wcscpy_s](../c-runtime-library/reference/strcpy-s-wcscpy-s-mbscpy-s.md) を使用して、自分で割り当てたメモリに配列をコピーします。
 
-## <a name="stringdispose-method"></a><a name="dispose"></a>String::D ispose メソッド
+## <a name="stringdispose-method"></a><a name="dispose"></a> String::D ispose メソッド
 
 リソースを解放またはリソースします。
 
@@ -196,7 +197,7 @@ Unicode 文字の配列の先頭へのポインター `const char16` ( `char16` 
 virtual override void Dispose();
 ```
 
-## <a name="stringend-method"></a><a name="end"></a>String:: End メソッド
+## <a name="stringend-method"></a><a name="end"></a> String:: End メソッド
 
 現在の文字列の末尾を越えたポインターを返します。
 
@@ -214,7 +215,7 @@ char16* End();
 
 End () は、Begin () + Length を返します。
 
-## <a name="stringequals-method"></a><a name="equals"></a>String:: Equals メソッド
+## <a name="stringequals-method"></a><a name="equals"></a> String:: Equals メソッド
 
 指定された String に現在のオブジェクトと同じ値が存在するかどうかを示します。
 
@@ -227,8 +228,8 @@ bool String::Equals(String^ str);
 
 ### <a name="parameters"></a>パラメーター
 
-*引数*<br/>
-比較するオブジェクト。
+*str*<br/>
+比較対象のオブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
@@ -236,9 +237,9 @@ bool String::Equals(String^ str);
 
 ### <a name="remarks"></a>解説
 
-このメソッドは、静的な[文字列:: CompareOrdinal](#compareordinal)に相当します。 最初のオーバーロードでは、`str` パラメーターが String^ オブジェクトにキャストできることが想定されています。
+このメソッドは、静的な [文字列:: CompareOrdinal](#compareordinal)に相当します。 最初のオーバーロードでは、`str` パラメーターが String^ オブジェクトにキャストできることが想定されています。
 
-## <a name="stringgethashcode-method"></a><a name="gethashcode"></a>String:: GetHashCode メソッド
+## <a name="stringgethashcode-method"></a><a name="gethashcode"></a> String:: GetHashCode メソッド
 
 このインスタンスのハッシュ コードを返します。
 
@@ -252,7 +253,7 @@ virtual override int GetHashCode();
 
 対象のインスタンスのハッシュ コード。
 
-## <a name="stringisempty-method"></a><a name="isempty"></a>String:: IsEmpty メソッド
+## <a name="stringisempty-method"></a><a name="isempty"></a> String:: IsEmpty メソッド
 
 現在の String オブジェクトが空かどうかを示します。
 
@@ -264,11 +265,11 @@ bool IsEmpty();
 
 ### <a name="return-value"></a>戻り値
 
-**`true`** 現在の `String` オブジェクトが**null**または空の文字列 (L "") の場合は。それ以外の場合は **`false`** 。
+**`true`** 現在の `String` オブジェクトが **null** または空の文字列 (L "") の場合は。それ以外の場合は **`false`** 。
 
-## <a name="stringisfastpass-method"></a><a name="isfastpass"></a>String:: IsFastPass メソッド
+## <a name="stringisfastpass-method"></a><a name="isfastpass"></a> String:: IsFastPass メソッド
 
-現在の文字列オブジェクトが*高速パス*操作に参加しているかどうかを示します。 高速渡し操作では、参照カウントは中断されます。
+現在の文字列オブジェクトが *高速パス* 操作に参加しているかどうかを示します。 高速渡し操作では、参照カウントは中断されます。
 
 ### <a name="syntax"></a>構文
 
@@ -284,7 +285,7 @@ bool IsFastPass();
 
 参照カウントを使用するオブジェクトがパラメーターであり、呼び出された関数がそのオブジェクトだけを読み取る場合の関数への呼び出しでは、コンパイラは安全に参照カウントを中断し、呼び出しのパフォーマンスを改善することができます。 このプロパティをコード内で活用することはできません。 システムがすべての詳細を処理します。
 
-## <a name="stringlength-method"></a><a name="length"></a>String:: Length メソッド
+## <a name="stringlength-method"></a><a name="length"></a> String:: Length メソッド
 
 現在のオブジェクト内の文字数を取得し `String` ます。
 
@@ -307,11 +308,11 @@ String^ str = "Hello";
 int len = str->Length(); //len = 5
 ```
 
-文字列によって返される文字配列[::D ata](#data)には、終端の NULL または ' \ 0 ' という文字が1つ追加されます。 この文字は、長さが 2 バイトです。
+文字列によって返される文字配列 [::D ata](#data) には、終端の NULL または ' \ 0 ' という文字が1つ追加されます。 この文字は、長さが 2 バイトです。
 
-## <a name="stringoperator-operator"></a><a name="operator-plus"></a>String:: operator + 演算子
+## <a name="stringoperator-operator"></a><a name="operator-plus"></a> String:: operator + 演算子
 
-2つの[文字列](../cppcx/platform-string-class.md)オブジェクトを連結して新しい[文字列](../cppcx/platform-string-class.md)オブジェクトを作成します。
+2つの [文字列](../cppcx/platform-string-class.md) オブジェクトを連結して新しい [文字列](../cppcx/platform-string-class.md) オブジェクトを作成します。
 
 ### <a name="syntax"></a>構文
 
@@ -329,13 +330,13 @@ bool String::operator+( String^ str1, String^ str2);
 
 ### <a name="return-value"></a>戻り値
 
-**`true`***str1*が*str2*と等しい場合は、それ以外の場合は **`false`** 。
+**`true`***str1* が *str2* と等しい場合は、それ以外の場合は **`false`** 。
 
 ### <a name="remarks"></a>解説
 
 この演算子は、2 種類のオペランドのデータを含む `String^` オブジェクトを作成します。 パフォーマンスを極端に高める必要がない場合には、便宜上、この演算子を使用します。 関数で "`+`" を数回呼び出しても目立つことはないと思われますが、サイズの大きなオブジェクトまたはテキスト データを頻繁に操作するときには、標準的な C++ の機構と型を使用してください。
 
-## <a name="stringoperator-operator"></a><a name="operator-equality"></a>String:: operator = = 演算子
+## <a name="stringoperator-operator"></a><a name="operator-equality"></a> String:: operator = = 演算子
 
 指定された 2 つの String オブジェクトのテキスト値が同じかどうかを示します。
 
@@ -348,7 +349,7 @@ bool String::operator==( String^ str1, String^ str2);
 ### <a name="parameters"></a>パラメーター
 
 *str1*<br/>
-比較する最初の `String` オブジェクトです。
+比較する最初の `String` オブジェクト。
 
 *str2*<br/>
 比較する 2 番目の `String` オブジェクトです。
@@ -359,9 +360,9 @@ bool String::operator==( String^ str1, String^ str2);
 
 ### <a name="remarks"></a>解説
 
-この演算子は[String:: CompareOrdinal](#compareordinal)に相当します。
+この演算子は [String:: CompareOrdinal](#compareordinal)に相当します。
 
-## <a name="stringoperatorgt"></a><a name="operator-greater-than"></a>String:: operator&gt;
+## <a name="stringoperatorgt"></a><a name="operator-greater-than"></a> String:: operator&gt;
 
 1つのオブジェクトの値 `String` が2番目のオブジェクトの値より大きいかどうかを示し `String` ます。
 
@@ -385,9 +386,9 @@ bool String::operator>( String^ str1, String^ str2);
 
 ### <a name="remarks"></a>解説
 
-この演算子は、 [String:: CompareOrdinal](#compareordinal)を明示的に呼び出して、0より大きい結果を取得することと同じです。
+この演算子は、 [String:: CompareOrdinal](#compareordinal) を明示的に呼び出して、0より大きい結果を取得することと同じです。
 
-## <a name="stringoperatorgt"></a><a name="operator-greater-than-or-equals"></a>String:: operator&gt;=
+## <a name="stringoperatorgt"></a><a name="operator-greater-than-or-equals"></a> String:: operator&gt;=
 
 1つのオブジェクトの値 `String` が2番目のオブジェクトの値以上かどうかを示し `String` ます。
 
@@ -409,7 +410,7 @@ bool String::operator>=( String^ str1, String^ str2);
 
 **`true`** の値がの値以上の場合は `str1` `str2` 。それ以外の場合は **`false`** 。
 
-## <a name="stringoperator"></a><a name="operator-inequality"></a>String:: operator! =
+## <a name="stringoperator"></a><a name="operator-inequality"></a> String:: operator! =
 
 指定した2つ `String` のオブジェクトの値が異なるかどうかを示します。
 
@@ -422,7 +423,7 @@ bool String::operator!=( String^ str1, String^ str2);
 ### <a name="parameters"></a>パラメーター
 
 *str1*<br/>
-比較する最初の `String` オブジェクトです。
+比較する最初の `String` オブジェクト。
 
 *str2*<br/>
 比較する 2 番目の `String` オブジェクトです。
@@ -431,7 +432,7 @@ bool String::operator!=( String^ str1, String^ str2);
 
 **`true`**`str1`がと等しくない場合は `str2` 。それ以外の場合は **`false`** 。
 
-## <a name="stringoperatorlt"></a><a name="operator-less-than"></a>String:: operator&lt;
+## <a name="stringoperatorlt"></a><a name="operator-less-than"></a> String:: operator&lt;
 
 1つのオブジェクトの値 `String` が2番目のオブジェクトの値より小さいかどうかを示し `String` ます。
 
@@ -451,9 +452,9 @@ bool String::operator<( String^ str1, String^ str2);
 
 ### <a name="return-value"></a>戻り値
 
-**`true`***str1*の値が*str2*の値より小さい場合は、それ以外の場合は **`false`** 。
+**`true`***str1* の値が *str2* の値より小さい場合は、それ以外の場合は **`false`** 。
 
-## <a name="stringstring-constructor"></a><a name="ctor"></a>String:: String コンストラクター
+## <a name="stringstring-constructor"></a><a name="ctor"></a> String:: String コンストラクター
 
 入力文字列データのコピーを使用して、クラスの新しいインスタンスを初期化 `String` します。
 
@@ -467,7 +468,7 @@ String(char16* s, unsigned int n);
 
 ### <a name="parameters"></a>パラメーター
 
-*2$s*<br/>
+*s*<br/>
 文字列を初期化する一連のワイド文字。 char16
 
 *n*<br/>
@@ -475,7 +476,7 @@ String(char16* s, unsigned int n);
 
 ### <a name="remarks"></a>解説
 
-パフォーマンスが重要で、ソース文字列の有効期間を制御する場合は、String の代わりに[Platform:: StringReference](../cppcx/platform-stringreference-class.md)を使用できます。
+パフォーマンスが重要で、ソース文字列の有効期間を制御する場合は、String の代わりに [Platform:: StringReference](../cppcx/platform-stringreference-class.md) を使用できます。
 
 ### <a name="example"></a>例
 
@@ -483,7 +484,7 @@ String(char16* s, unsigned int n);
 String^ s = L"Hello!";
 ```
 
-## <a name="stringtostring"></a><a name="tostring"></a>String:: ToString
+## <a name="stringtostring"></a><a name="tostring"></a> String:: ToString
 
 現在の `String` 文字列と同じ値を持つオブジェクトを返します。
 

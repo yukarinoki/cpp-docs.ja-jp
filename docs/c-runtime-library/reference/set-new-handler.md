@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: _set_new_handler'
 title: _set_new_handler
 ms.date: 4/2/2020
 api_name:
@@ -30,12 +31,12 @@ helpviewer_keywords:
 - error handling
 - transferring control to error handler
 ms.assetid: 1d1781b6-5cf8-486a-b430-f365e0bb023f
-ms.openlocfilehash: cd6e4df47b28e84bb0ac5ee857cfa1a3e7cf805a
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 1e693e010bcbb9489426fc5c67e888d50f430765
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87218547"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97312398"
 ---
 # <a name="_set_new_handler"></a>_set_new_handler
 
@@ -54,17 +55,17 @@ _PNH _set_new_handler( _PNH pNewHandler );
 
 ## <a name="return-value"></a>戻り値
 
-前の関数を後で復元できるように、 **_set_new_handler**によって登録された前の例外処理関数へのポインターを返します。 前の関数が設定されていない場合は、戻り値を使用して既定の動作を復元できます。この値には**NULL**を指定できます。
+前の関数を後で復元できるように、 **_set_new_handler** によって登録された前の例外処理関数へのポインターを返します。 前の関数が設定されていない場合は、戻り値を使用して既定の動作を復元できます。この値には **NULL** を指定できます。
 
 ## <a name="remarks"></a>解説
 
-C++ の **_set_new_handler**関数は、演算子がメモリの割り当てに失敗した場合に制御を取得する例外処理関数を指定し **`new`** ます。 が失敗した場合 **`new`** 、ランタイムシステムは、引数として渡された例外処理関数を **_set_new_handler**に自動的に呼び出します。 新しい .h で定義されている **_PNH**は、型を返し **`int`** 、 **size_t**型の引数を受け取る関数へのポインターです。 **Size_t**を使用して、割り当てる領域のサイズを指定します。
+C++ の **_set_new_handler** 関数は、演算子がメモリの割り当てに失敗した場合に制御を取得する例外処理関数を指定し **`new`** ます。 が失敗した場合 **`new`** 、ランタイムシステムは、引数として渡された例外処理関数を **_set_new_handler** に自動的に呼び出します。 新しい .h で定義されている **_PNH** は、型を返し **`int`** 、 **size_t** 型の引数を受け取る関数へのポインターです。 **Size_t** を使用して、割り当てる領域のサイズを指定します。
 
 既定のハンドラーはありません。
 
-**_set_new_handler**は、基本的にはガベージコレクションスキームです。 ランタイム システムは、関数がゼロ以外の値を返すたびに割り当てを再試行し、関数がゼロを返すと失敗します。
+**_set_new_handler** は、基本的にはガベージコレクションスキームです。 ランタイム システムは、関数がゼロ以外の値を返すたびに割り当てを再試行し、関数がゼロを返すと失敗します。
 
-プログラムで **_set_new_handler**関数が発生すると、引数リストで指定された例外処理関数がランタイムシステムに登録されます。
+プログラムで **_set_new_handler** 関数が発生すると、引数リストで指定された例外処理関数がランタイムシステムに登録されます。
 
 ```cpp
 // set_new_handler1.cpp
@@ -84,7 +85,7 @@ int main( void )
 }
 ```
 
-**_Set_new_handler**関数に最後に渡された関数のアドレスを保存し、後で再開することができます。
+**_Set_new_handler** 関数に最後に渡された関数のアドレスを保存し、後で再開することができます。
 
 ```cpp
    _PNH old_handler = _set_new_handler( my_handler );
@@ -95,7 +96,7 @@ int main( void )
    // . . .
 ```
 
-C++ の [_set_new_mode](set-new-mode.md) 関数は、[malloc](malloc.md) 用の新しいハンドラー モードを設定します。 新しいハンドラーモードは、エラー発生時に**malloc**が **_set_new_handler**によって設定された新しいハンドラールーチンを呼び出すかどうかを示します。 既定では、 **malloc**は、メモリの割り当てに失敗したときに新しいハンドラールーチンを呼び出しません。 この既定の動作を無効にすると、 **malloc**がメモリの割り当てに失敗したときに、 **malloc**は、同じ理由で失敗したときと同じ方法で新しいハンドラールーチンを呼び出します **`new`** 。 既定の動作をオーバーライドするには、次の関数を呼び出します。
+C++ の [_set_new_mode](set-new-mode.md) 関数は、[malloc](malloc.md) 用の新しいハンドラー モードを設定します。 新しいハンドラーモードは、エラー発生時に **malloc** が **_set_new_handler** によって設定された新しいハンドラールーチンを呼び出すかどうかを示します。 既定では、 **malloc** は、メモリの割り当てに失敗したときに新しいハンドラールーチンを呼び出しません。 この既定の動作を無効にすると、 **malloc** がメモリの割り当てに失敗したときに、 **malloc** は、同じ理由で失敗したときと同じ方法で新しいハンドラールーチンを呼び出します **`new`** 。 既定の動作をオーバーライドするには、次の関数を呼び出します。
 
 ```cpp
 _set_new_mode(1);
@@ -107,7 +108,7 @@ _set_new_mode(1);
 
 詳細については、「*C++ 言語リファレンス*」の「[new](../../cpp/new-operator-cpp.md)」および「[delete](../../cpp/delete-operator-cpp.md)」を参照してください。
 
-動的にリンクされたすべての Dll または実行可能ファイルに対して1つの **_set_new_handler**ハンドラーがあります。を呼び出す場合でも、ハンドラーを別の DLL または実行可能ファイルによって設定されたハンドラーの代わりに置き換えることが **_set_new_handler**ます。
+動的にリンクされたすべての Dll または実行可能ファイルに対して1つの **_set_new_handler** ハンドラーがあります。を呼び出す場合でも、ハンドラーを別の DLL または実行可能ファイルによって設定されたハンドラーの代わりに置き換えることが **_set_new_handler** ます。
 
 ## <a name="requirements"></a>必要条件
 
@@ -171,5 +172,5 @@ Please contact the application's support team for more information.
 
 [メモリの割り当て](../../c-runtime-library/memory-allocation.md)<br/>
 [calloc](calloc.md)<br/>
-[空け](free.md)<br/>
+[free](free.md)<br/>
 [realloc](realloc.md)<br/>

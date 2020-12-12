@@ -1,16 +1,17 @@
 ---
+description: '詳細については、「Cast 演算子: ()」を参照してください。'
 title: 'キャスト演算子: ()'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - cast operators [C++]
 - () cast operator
 ms.assetid: 4c99eb92-1b19-4a5d-9840-5d8c29b8453e
-ms.openlocfilehash: 6b1abfc4e2798f973951a24ea27f35b2dcf6cca7
-ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
+ms.openlocfilehash: d80336fdd9d9e73f0af17703cc09fef7a599fce1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90686320"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97308602"
 ---
 # <a name="cast-operator-"></a>キャスト演算子: ()
 

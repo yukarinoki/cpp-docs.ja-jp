@@ -1,4 +1,5 @@
 ---
+description: '詳細については、「コンテナー: 複合ファイル」を参照してください。'
 title: 'コンテナー : 複合ファイル'
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 - OLE containers [MFC], compound files
 - access modes for files [MFC]
 ms.assetid: 8b83cb3e-76c8-4bbe-ba16-737092b36f49
-ms.openlocfilehash: 344c444602555e2b5c145e58d237586199b9e1ed
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: d7c7d62569575890afd0f28b803c813a3576f627
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84624818"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97310422"
 ---
 # <a name="containers-compound-files"></a>コンテナー : 複合ファイル
 
@@ -30,7 +31,7 @@ ms.locfileid: "84624818"
 > [!NOTE]
 > 複合ファイルを使用することは、その情報が OLE ドキュメントや複合ドキュメントから取得されることを意味するものではありません。 複合ファイルは、複合ドキュメント、OLE ドキュメント、およびその他のデータを格納するための1つの方法にすぎません。
 
-## <a name="components-of-a-compound-file"></a><a name="_core_components_of_a_compound_file"></a>複合ファイルのコンポーネント
+## <a name="components-of-a-compound-file"></a><a name="_core_components_of_a_compound_file"></a> 複合ファイルのコンポーネント
 
 複合ファイルの OLE 実装では、ストリームオブジェクト、ストレージオブジェクト、およびオブジェクトの3種類のオブジェクトを使用します。 `ILockBytes` これらのオブジェクトは、次の方法で標準ファイルシステムのコンポーネントに似ています。
 
@@ -38,11 +39,11 @@ ms.locfileid: "84624818"
 
 - ストレージオブジェクト (ディレクトリなど) には、他のストレージおよびストリームオブジェクトを含めることができます。
 
-- `LockBytes`オブジェクトは、ストレージオブジェクトと物理ハードウェア間のインターフェイスを表します。 `LockBytes`ハードドライブやグローバルメモリの領域など、オブジェクトがアクセスしている記憶装置に実際のバイトがどのように書き込まれるかを決定します。 オブジェクトとインターフェイスの詳細については `LockBytes` `ILockBytes` 、 *OLE プログラマーリファレンス*を参照してください。
+- `LockBytes` オブジェクトは、ストレージオブジェクトと物理ハードウェア間のインターフェイスを表します。 `LockBytes`ハードドライブやグローバルメモリの領域など、オブジェクトがアクセスしている記憶装置に実際のバイトがどのように書き込まれるかを決定します。 オブジェクトとインターフェイスの詳細については `LockBytes` `ILockBytes` 、 *OLE プログラマーリファレンス* を参照してください。
 
-## <a name="advantages-and-disadvantages-of-compound-files"></a><a name="_core_advantages_and_disadvantages_of_compound_files"></a>複合ファイルの長所と短所
+## <a name="advantages-and-disadvantages-of-compound-files"></a><a name="_core_advantages_and_disadvantages_of_compound_files"></a> 複合ファイルの長所と短所
 
-複合ファイルは、以前のファイルストレージのメソッドでは利用できない利点を提供します。 それには以下が含まれます。
+複合ファイルは、以前のファイルストレージのメソッドでは利用できない利点を提供します。 具体的な内容を次に示します。
 
 - ファイルの増分アクセス。
 
@@ -52,11 +53,11 @@ ms.locfileid: "84624818"
 
 複合ファイルをアプリケーションで使用するかどうかを決定する際には、複合ファイルの潜在的な短所 (フロッピーディスク上の記憶域に関連する大きなサイズとパフォーマンスの問題) を考慮する必要があります。
 
-### <a name="incremental-access-to-files"></a><a name="_core_incremental_access_to_files"></a>ファイルへの増分アクセス
+### <a name="incremental-access-to-files"></a><a name="_core_incremental_access_to_files"></a> ファイルへの増分アクセス
 
 ファイルへの増分アクセスは、複合ファイルを使用する場合の自動的な利点です。 複合ファイルは "ファイル内のファイルシステム" として表示されるため、ストリームやストレージなどの個々のオブジェクトの種類にアクセスしても、ファイル全体を読み込む必要がありません。 これにより、ユーザーが編集できるように、アプリケーションが新しいオブジェクトにアクセスするために必要な時間が大幅に短縮されます。 同じ概念に基づく増分更新でも、同様の利点が得られます。 ファイル全体を保存するのではなく、1つのオブジェクトに加えた変更を保存するのではなく、ユーザーが編集したストリームまたはストレージオブジェクトのみを保存します。
 
-### <a name="file-access-modes"></a><a name="_core_file_access_modes"></a>ファイルアクセスモード
+### <a name="file-access-modes"></a><a name="_core_file_access_modes"></a> ファイルアクセスモード
 
 複合ファイル内のオブジェクトに対する変更がディスクにどのようにコミットされるかを判断できることは、複合ファイルを使用するもう1つの利点です。 ファイルがアクセスされるモード (トランザクションまたはダイレクト) は、変更がコミットされるタイミングを決定します。
 
@@ -64,27 +65,27 @@ ms.locfileid: "84624818"
 
 - ダイレクトモードでは、ドキュメントが変更されたときに、後で元に戻すことはできません。
 
-アクセスモードの詳細については、 *OLE プログラマーリファレンス*を参照してください。
+アクセスモードの詳細については、 *OLE プログラマーリファレンス* を参照してください。
 
-### <a name="standardization"></a><a name="_core_standardization"></a>統一
+### <a name="standardization"></a><a name="_core_standardization"></a> 統一
 
 複合ファイルの標準化された構造により、さまざまな OLE アプリケーションで、実際にファイルを作成したアプリケーションを知らずに、OLE アプリケーションで作成された複合ファイルを参照できます。
 
-### <a name="size-and-performance-considerations"></a><a name="_core_size_and_performance_considerations"></a>サイズとパフォーマンスに関する考慮事項
+### <a name="size-and-performance-considerations"></a><a name="_core_size_and_performance_considerations"></a> サイズとパフォーマンスに関する考慮事項
 
 複合ファイルのストレージ構造は複雑で、データを段階的に保存できるため、この形式を使用するファイルは、非構造化または "フラットファイル" ストレージを使用する他のファイルよりも大きくなる傾向があります。 アプリケーションでファイルの読み込みと保存が頻繁に行われる場合、複合ファイルを使用すると、ファイルサイズが非複合ファイルよりもはるかに高速になる可能性があります。 複合ファイルは大きくなる可能性があるため、フロッピーディスクに格納されているファイルのアクセス時間も影響を受ける可能性があり、その結果、ファイルへのアクセスが遅くなります。
 
 パフォーマンスに影響を与えるもう1つの問題は、複合ファイルの断片化です。 複合ファイルのサイズは、ファイルで使用されている最初と最後のディスクセクターの違いによって決まります。 断片化されたファイルには、データを含まないが、サイズを計算するときにカウントされる空き領域の多くの領域を含めることができます。 複合ファイルの有効期間中、これらの領域はストレージオブジェクトの挿入または削除によって作成されます。
 
-## <a name="using-compound-files-format-for-your-data"></a><a name="_core_using_compound_files_format_for_your_data"></a>データに複合ファイル形式を使用する
+## <a name="using-compound-files-format-for-your-data"></a><a name="_core_using_compound_files_format_for_your_data"></a> データに複合ファイル形式を使用する
 
 から派生したドキュメントクラスを持つアプリケーションを正常に作成した後 `COleDocument` 、メインドキュメントコンストラクターがを呼び出すようにし `EnableCompoundFile` ます。 アプリケーションウィザードで OLE コンテナーアプリケーションを作成するときに、この呼び出しが挿入されます。
 
-*OLE プログラマーリファレンス*では、「 [IStream](/windows/win32/api/objidl/nn-objidl-istream)、 [IStorage](/windows/win32/api/objidl/nn-objidl-istorage)、および[ILockBytes](/windows/win32/api/objidl/nn-objidl-ilockbytes)」を参照してください。
+*OLE プログラマーリファレンス* では、「 [IStream](/windows/win32/api/objidl/nn-objidl-istream)、 [IStorage](/windows/win32/api/objidl/nn-objidl-istorage)、および [ILockBytes](/windows/win32/api/objidl/nn-objidl-ilockbytes)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 
 [Containers](containers.md)<br/>
-[コンテナー : ユーザー インターフェイスの問題](containers-user-interface-issues.md)<br/>
+[コンテナー: User-Interface の問題](containers-user-interface-issues.md)<br/>
 [COleStreamFile クラス](reference/colestreamfile-class.md)<br/>
 [COleDocument クラス](reference/coledocument-class.md)

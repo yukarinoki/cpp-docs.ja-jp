@@ -1,4 +1,5 @@
 ---
+description: '詳細については、Platform:: Metadata:: RuntimeClassName を参照してください。'
 title: Platform::Metadata::RuntimeClassName
 ms.date: 12/30/2016
 ms.topic: reference
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - RuntimeClassName
 - Platform::Metadata::RuntimeClassName
 ms.assetid: fdef8f85-ab94-4edd-ba50-ee0da9358ff6
-ms.openlocfilehash: d3de753c3a8897058333e02ce4294a0780d5b818
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 25d6f3ae6b7509029b08f809fa20d5bd0ca5e735
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62387579"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97308381"
 ---
 # <a name="platformmetadataruntimeclassname"></a>Platform::Metadata::RuntimeClassName
 
@@ -30,7 +31,7 @@ ms.locfileid: "62387579"
 *name*<br/>
 Windows ランタイムで表示される既存のパブリックの種類の名前です。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 プライベート ref クラスのこの属性を使用して、カスタム ランタイムの種類の名前、および既存の名前が要件を満たさない場合を指定します。 名前としてクラスが実装するパブリック インターフェイスを指定します。
 
@@ -68,4 +69,4 @@ namespace Test
 
 ## <a name="see-also"></a>関連項目
 
-[Platform::Metadata 名前空間](../cppcx/platform-metadata-namespace.md)
+[Platform:: Metadata 名前空間](../cppcx/platform-metadata-namespace.md)

@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: Platform:: MTAThreadAttribute クラス'
 title: Platform::MTAThreadAttribute クラス
 ms.date: 12/30/2016
 ms.topic: reference
@@ -9,12 +10,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::MTAThreadAttribute Class
 ms.assetid: bfc546a7-4333-4407-85b4-4721565e1f44
-ms.openlocfilehash: 700eeae226be48c1f6659d621f2f5c0ed397bb7f
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: cc8586b37b4e5a1f6a6d0f33a27a21acca4aceb0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87213048"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97308368"
 ---
 # <a name="platformmtathreadattribute-class"></a>Platform::MTAThreadAttribute クラス
 
@@ -32,7 +33,7 @@ public ref class MTAThreadAttribute sealed : Attribute
 
 |名前|説明|
 |----------|-----------------|
-|[MTAThreadAttribute コンストラクター 1](#ctor)コンストラクター|クラスの新しいインスタンスを初期化します。|
+|[MTAThreadAttribute コンストラクター 1](#ctor) コンストラクター|クラスの新しいインスタンスを初期化します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
@@ -48,13 +49,13 @@ MTAThreadAttribute 属性は、 [Platform:: Object クラス](../cppcx/platform-
 
 `Platform`
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 **メタデータ:** platform. winmd
 
 **名前空間:** Platform
 
-## <a name="mtathreadattribute-constructor"></a><a name="ctor"></a>MTAThreadAttribute コンストラクター
+## <a name="mtathreadattribute-constructor"></a><a name="ctor"></a> MTAThreadAttribute コンストラクター
 
 MTAThreadAttribute クラスの新しいインスタンスを初期化します。
 
@@ -64,7 +65,7 @@ MTAThreadAttribute クラスの新しいインスタンスを初期化します�
 public:MTAThreadAttribute();
 ```
 
-## <a name="mtathreadattributeequals"></a><a name="equals"></a>MTAThreadAttribute:: Equals
+## <a name="mtathreadattributeequals"></a><a name="equals"></a> MTAThreadAttribute:: Equals
 
 指定されたオブジェクトが現在のオブジェクトと等しいかどうかを判断します。
 
@@ -77,13 +78,13 @@ public:virtual override bool Equals( Object^ obj );
 ### <a name="parameters"></a>パラメーター
 
 *obj*<br/>
-比較するオブジェクト。
+比較対象のオブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
 **`true`** オブジェクトが等しい場合は。それ以外の場合は **`false`** 。
 
-## <a name="mtathreadattributegethashcode"></a><a name="gethashcode"></a>MTAThreadAttribute:: GetHashCode
+## <a name="mtathreadattributegethashcode"></a><a name="gethashcode"></a> MTAThreadAttribute:: GetHashCode
 
 このインスタンスのハッシュ コードを返します。
 
@@ -97,7 +98,7 @@ public:int GetHashCode();
 
 対象のインスタンスのハッシュ コード。
 
-## <a name="mtathreadattributetostring"></a><a name="tostring"></a>MTAThreadAttribute:: ToString
+## <a name="mtathreadattributetostring"></a><a name="tostring"></a> MTAThreadAttribute:: ToString
 
 現在のオブジェクトを表す文字列を返します。
 

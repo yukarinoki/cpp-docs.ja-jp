@@ -1,20 +1,21 @@
 ---
+description: '詳細情報: &lt; 制限の &gt; 列挙型'
 title: '&lt;limits&gt; 列挙型'
 ms.date: 11/04/2016
 f1_keywords:
 - limits/std::float_denorm_style
 - limits/std::float_round_style
 ms.assetid: c86680a2-ba97-4ed9-8c20-a448857d7dc5
-ms.openlocfilehash: 567e0538f59c40d57f85d652a8919be6e034cf0b
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 115122a4901298018df8809be56a7fc69249d700
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79425611"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97312866"
 ---
 # <a name="ltlimitsgt-enums"></a>&lt;limits&gt; 列挙型
 
-## <a name="float_denorm_style"></a>float_denorm_style
+## <a name="float_denorm_style"></a><a name="float_denorm_style"></a> float_denorm_style
 
 この列挙体では、小さすぎて、正規化された値としては表現できない非正規化された浮動小数点値を表現するために、実装で選択できるさまざまなメソッドを記述します。
 
@@ -29,17 +30,17 @@ enum float_denorm_style {
 
 この列挙型は以下を返します。
 
-- 変換時に非正規化されたフォームの有無を判断できない場合に `denorm_indeterminate` します。
+- `denorm_indeterminate` 変換時に非正規化された形式が存在するかどうかを判断できない場合は。
 
-- 非正規化形式が存在しない場合に `denorm_absent` します。
+- `denorm_absent` 非正規化形式が存在しない場合。
 
-- 非正規化形式が存在する場合は `denorm_present` します。
+- `denorm_present` 非正規化された形式が存在する場合。
 
 ### <a name="example"></a>例
 
 この列挙型の値にアクセスする例については、「[numeric_limits::has_denorm](../standard-library/numeric-limits-class.md#has_denorm)」を参照してください。
 
-## <a name="float_round_style"></a>float_round_style
+## <a name="float_round_style"></a><a name="float_round_style"></a> float_round_style
 
 この列挙体では、浮動小数点値を整数値に丸めるために、実装で選択できるさまざまなメソッドを記述します。
 
@@ -56,15 +57,15 @@ enum float_round_style {
 
 この列挙型は以下を返します。
 
-- 丸め方法を決定できない場合は `round_indeterminate` します。
+- `round_indeterminate` 丸め方法を決定できない場合は。
 
-- を0方向に丸める場合は `round_toward_zero` します。
+- `round_toward_zero` を0方向に丸める場合は。
 
-- が最も近い整数に丸める場合は `round_to_nearest` します。
+- `round_to_nearest` が最も近い整数に丸められる場合は。
 
-- が0から離れる場合に `round_toward_infinity` します。
+- `round_toward_infinity` が0から離れる場合は。
 
-- 負の整数に丸められた場合は `round_toward_neg_infinity` します。
+- `round_toward_neg_infinity` 負の整数に丸められる場合は。
 
 ### <a name="example"></a>例
 

@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: CWinApp および MFC アプリケーションウィザード'
 title: CWinApp および MFC アプリケーション ウィザード
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - CWinApp class [MFC], and MFC Application Wizard
 - MFC, wizards
 ms.assetid: f8ac0491-3302-4e46-981d-0790624eb8a2
-ms.openlocfilehash: f57b3b2b37a97093aa6d81b59a12c8cf023e3157
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 1ce1f0a84aa5a0f123f9fa8654d1ce286c47d1d9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84622938"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97309265"
 ---
 # <a name="cwinapp-and-the-mfc-application-wizard"></a>CWinApp および MFC アプリケーション ウィザード
 
@@ -25,12 +26,12 @@ ms.locfileid: "84622938"
 
 - メンバー関数の標準実装 `InitInstance` 。
 
-アプリケーションクラスは、プロジェクトのヘッダーとメインのソースファイルに配置されます。 クラスの名前と作成されたファイルは、MFC アプリケーションウィザードで指定したプロジェクト名に基づいています。 これらのクラスのコードを表示する最も簡単な方法は、[クラスビュー](/visualstudio/ide/viewing-the-structure-of-code)を使用することです。
+アプリケーションクラスは、プロジェクトのヘッダーとメインのソースファイルに配置されます。 クラスの名前と作成されたファイルは、MFC アプリケーションウィザードで指定したプロジェクト名に基づいています。 これらのクラスのコードを表示する最も簡単な方法は、 [クラスビュー](/visualstudio/ide/viewing-the-structure-of-code)を使用することです。
 
 提供される標準実装とメッセージマップは、多くの目的に適していますが、必要に応じて変更できます。 これらの実装の中で最も興味深いのは、 `InitInstance` メンバー関数です。 通常は、のスケルトン実装にコードを追加し `InitInstance` ます。
 
 ## <a name="see-also"></a>関連項目
 
-[CWinApp: アプリケーション クラス](cwinapp-the-application-class.md)<br/>
+[CWinApp: Application クラス](cwinapp-the-application-class.md)<br/>
 [オーバーライド可能な CWinApp メンバー関数](overridable-cwinapp-member-functions.md)<br/>
-[CWinApp のその他のサービス](special-cwinapp-services.md)
+[特別な CWinApp サービス](special-cwinapp-services.md)

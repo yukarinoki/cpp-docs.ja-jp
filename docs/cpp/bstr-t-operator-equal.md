@@ -1,4 +1,5 @@
 ---
+description: '詳細については、「_bstr_t:: operator =」を参照してください。'
 title: _bstr_t::operator =
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - operator = [C++], bstr
 - operator= [C++], bstr
 ms.assetid: fb31bb1b-ce29-4388-b5fd-8dac830cf18a
-ms.openlocfilehash: 5b7f499dd84a67020232aab84966647378daadad
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 78447048a45567df603acf3af0bc51cefbdb187d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80181071"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97308784"
 ---
 # <a name="_bstr_toperator-"></a>_bstr_t::operator =
 
@@ -49,6 +50,6 @@ _bstr_t& operator=(const _variant_t& var);
 
 **演算子 =** の使用例については、「 [_Bstr_t:: Assign](../cpp/bstr-t-assign.md) 」を参照してください。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [_bstr_t クラス](../cpp/bstr-t-class.md)

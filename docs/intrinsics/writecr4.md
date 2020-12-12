@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: __writecr4'
 title: __writecr4
 ms.date: 09/02/2019
 f1_keywords:
@@ -6,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - _writecr4 intrinsic
 ms.assetid: ab7651d7-b86b-4be7-a0a0-7263099c70fc
-ms.openlocfilehash: 1afdadcdfdbf1060c87e3865dd5597b0b9a2ea6b
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 711a6dff42f3805886865d09b4638479173bc64e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70219270"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97313087"
 ---
 # <a name="__writecr4"></a>__writecr4
 
 **Microsoft 固有の仕様**
 
-値`Data`を CR4 register に書き込みます。
+値を `Data` CR4 register に書き込みます。
 
 ## <a name="syntax"></a>構文
 
@@ -32,15 +33,15 @@ void writecr4(
 *データ*\
 からCR4 register に書き込む値。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-|組み込み|アーキテクチャ|
+|Intrinsic|アーキテクチャ|
 |---------------|------------------|
 |`__writecr4`|x86、x64|
 
-**ヘッダーファイル**\<>
+**ヘッダー ファイル** \<intrin.h>
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 この組み込みはカーネル モードのみで使用でき、そのルーチンは組み込みとしてのみ使用できます。
 

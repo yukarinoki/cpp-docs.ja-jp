@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「キャスト」を参照してください。
 title: キャスト
 ms.date: 11/19/2018
 helpviewer_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - polymorphic classes [C++]
 - classes [C++], polymorphism
 ms.assetid: 3dbeb06e-2f4b-4693-832d-624bc8ec95de
-ms.openlocfilehash: bb06db3af6aee031b6cb2d69b38a9404304420fc
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 0850b20db0e3f951414ba2b1d480cdcf43fb971f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80190135"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97308641"
 ---
 # <a name="casting"></a>キャスト
 
@@ -28,14 +29,14 @@ C++ 言語では、仮想関数を含む基底クラスからクラスが派生�
 
 `C` 型のオブジェクトは、次の図に示すように視覚化できます。
 
-![サブ&#45;オブジェクト B と A を持つクラス C](../cpp/media/vc38zz2.gif "サブ&#45;オブジェクト B と A を持つクラス C") <br/>
+![サブ&#45;オブジェクト B と A のクラス C](../cpp/media/vc38zz2.gif "サブ&#45;オブジェクト B と A のクラス C") <br/>
 B サブオブジェクトと A サブオブジェクトを持つクラス C
 
 `C` クラスのインスタンスには、`B` サブオブジェクトと `A` サブオブジェクトがあります。 `C` サブオブジェクトと `A` サブオブジェクトを含む `B` のインスタンスは、「完全なオブジェクト」です。
 
 実行時の型情報を使用すると、ポインターが実際に完全なオブジェクトをポイントしていて、階層内の別のオブジェクトをポイントするように安全にキャストできるかどうかを調べることができます。 [Dynamic_cast](../cpp/dynamic-cast-operator.md)演算子を使用すると、これらの種類のキャストを行うことができます。 また、操作を安全にするために必要なランタイム チェックも実行します。
 
-非ポリモーフィック型の変換では、 [static_cast](../cpp/static-cast-operator.md)演算子を使用できます (このトピックでは、静的キャスト変換と動的キャスト変換の違いと、それぞれの使用に適した場合の違いについて説明します)。
+非ポリモーフィック型の変換では、 [static_cast](../cpp/static-cast-operator.md) 演算子を使用できます (このトピックでは、静的キャスト変換と動的キャスト変換の違いと、それぞれの使用に適した場合の違いについて説明します)。
 
 このセクションは、次のトピックで構成されています。
 
@@ -43,6 +44,6 @@ B サブオブジェクトと A サブオブジェクトを持つクラス C
 
 - [実行時の型情報](../cpp/run-time-type-information.md)
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [式](../cpp/expressions-cpp.md)

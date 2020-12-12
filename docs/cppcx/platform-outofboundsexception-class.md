@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: Platform:: OutOfBoundsException クラス'
 title: Platform::OutOfBoundsException クラス
 ms.date: 12/30/2016
 ms.topic: reference
@@ -8,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::OutOfBoundsException
 ms.assetid: 96f8bf75-1207-4049-964b-7771822cadf3
-ms.openlocfilehash: 3f5165c0394726e0f6606f5261ba6306d8408948
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 451ed02897237eeee25dd92851baa60ccf4c417b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62330389"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97308212"
 ---
 # <a name="platformoutofboundsexception-class"></a>Platform::OutOfBoundsException クラス
 
@@ -25,20 +26,20 @@ ms.locfileid: "62330389"
 public ref class OutOfBoundsException : COMException,    IException,    IPrintable,    IEquatable
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 詳細については、 [COMException](../cppcx/platform-comexception-class.md) クラスを参照してください。
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
-**最小値には、クライアントがサポートされています。** Windows 8
+**サポートされている最低限のクライアント:** Windows 8
 
-**最小値には、サーバーがサポートされています。** Windows Server 2012
+**サポートされる最小サーバー:** Windows Server 2012
 
-**名前空間:** プラットフォーム
+**名前空間:** Platform
 
-**メタデータ:** platform.winmd
+**メタデータ:** platform. winmd
 
 ## <a name="see-also"></a>関連項目
 
-[Platform::COMException クラス](../cppcx/platform-comexception-class.md)
+[Platform:: COMException クラス](../cppcx/platform-comexception-class.md)

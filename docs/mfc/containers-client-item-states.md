@@ -1,4 +1,5 @@
 ---
+description: '詳細については、「コンテナー: Client-Item の状態」を参照してください。'
 title: 'コンテナー : クライアント アイテムの状態'
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,18 +8,18 @@ helpviewer_keywords:
 - lifetime, lifetime states and OLE container client items
 - client items and OLE containers
 ms.assetid: e7021caa-bd07-4adb-976e-f5f3d025bc53
-ms.openlocfilehash: 660b544a0f061ae2e4435777cdd934367f2e7652
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 2f6560b5694bcd7a55b7547593d9ba2dc9a93389
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87228649"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97310461"
 ---
 # <a name="containers-client-item-states"></a>コンテナー : クライアント アイテムの状態
 
 この記事では、クライアント項目が有効期間内に通過するさまざまな状態について説明します。
 
-クライアント項目は、作成、アクティブ化、変更、および保存されると、いくつかの状態を通過します。 フレームワークは、項目の状態が変化するたびに、 **OLE_CHANGED_STATE**通知を使用して[COleClientItem:: OnChange](reference/coleclientitem-class.md#onchange)を呼び出します。 2番目のパラメーターは、列挙体の値です `COleClientItem::ItemState` 。 次のいずれかを指定できます。
+クライアント項目は、作成、アクティブ化、変更、および保存されると、いくつかの状態を通過します。 フレームワークは、項目の状態が変化するたびに、 **OLE_CHANGED_STATE** 通知を使用して [COleClientItem:: OnChange](reference/coleclientitem-class.md#onchange)を呼び出します。 2番目のパラメーターは、列挙体の値です `COleClientItem::ItemState` 。 次のいずれかを指定できます。
 
 - *COleClientItem:: emptyState*
 
@@ -32,7 +33,7 @@ ms.locfileid: "87228649"
 
 空の状態では、クライアント項目はまだ完全な項目ではありません。 メモリが割り当てられていますが、OLE 項目のデータでまだ初期化されていません。 これは、の呼び出しによって作成されたクライアント項目の状態です **`new`** が、通常の2段階作成の2番目の手順はまだ行われていません。
 
-2番目の手順では、または別の xxxx 関数を呼び出すことで実行されます。この場合、 `COleClientItem::CreateFromFile` 項目は完全に `CreateFrom` *xxxx*作成されます。 OLE データ (ファイルまたはクリップボードなどの他のソース) が、から派生したオブジェクトに関連付けられてい `COleClientItem` ます。 これで、項目が読み込まれた状態になります。
+2番目の手順では、または別の xxxx 関数を呼び出すことで実行されます。この場合、 `COleClientItem::CreateFromFile` 項目は完全に `CreateFrom` 作成されます。 OLE データ (ファイルまたはクリップボードなどの他のソース) が、から派生したオブジェクトに関連付けられてい `COleClientItem` ます。 これで、項目が読み込まれた状態になります。
 
 コンテナーのドキュメント内ではなく、サーバーのウィンドウで項目が開かれている場合は、開いている (または完全に開いている) 状態になります。 この状態では、通常、項目が他の場所でアクティブであることを示すために、コンテナーのウィンドウ内の項目の表現に交差するハッチが描画されます。
 
@@ -41,7 +42,7 @@ ms.locfileid: "87228649"
 ## <a name="see-also"></a>関連項目
 
 [Containers](containers.md)<br/>
-[ライセンス認証](activation-cpp.md)<br/>
-[コンテナー: クライアントアイテムの通知](containers-client-item-notifications.md)<br/>
-[トラッカー](trackers.md)<br/>
+[アクティベーション](activation-cpp.md)<br/>
+[コンテナー: Client-Item 通知](containers-client-item-notifications.md)<br/>
+[Trackers](trackers.md)<br/>
 [CRectTracker クラス](reference/crecttracker-class.md)

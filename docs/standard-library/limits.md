@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: &lt; 制限&gt;'
 title: '&lt;limits&gt;'
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,18 +8,18 @@ f1_keywords:
 helpviewer_keywords:
 - limits header
 ms.assetid: e07d6379-5b00-4a3d-a789-40d41538b59e
-ms.openlocfilehash: 1527672bd51682bf32c82601ff54a94ea4154a0b
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 5347a5035e3650a2685d3be9166b41506fc14b1f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88841910"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97312840"
 ---
 # <a name="ltlimitsgt"></a>&lt;limits&gt;
 
 クラステンプレートと、 `numeric_limits` 浮動小数点の表現と丸め処理に関する2つの列挙体を定義します。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:**\<limits>
 
@@ -30,7 +31,7 @@ ms.locfileid: "88841910"
 
 ## <a name="members"></a>メンバー
 
-### <a name="enumerations"></a>列挙
+### <a name="enumerations"></a>列挙型
 
 |名前|説明|
 |-|-|

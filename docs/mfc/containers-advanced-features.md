@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: コンテナー: 高度な機能'
 title: 'コンテナー : 高度な機能'
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - server/container applications [MFC]
 - containers [MFC], container applications
 ms.assetid: 221fd99c-b138-40fa-ad6a-974e3b3ad1f8
-ms.openlocfilehash: 1ef4ed9865d3a88a6ff85f777984b856d03cc48e
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: d49f699ec0349e5c53b95996c6ee4b5d151dce5e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84616355"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97310513"
 ---
 # <a name="containers-advanced-features"></a>コンテナー : 高度な機能
 
@@ -27,11 +28,11 @@ ms.locfileid: "84616355"
 
 - [埋め込みオブジェクトへの OLE リンク](#_core_links_to_embedded_objects)
 
-## <a name="creating-a-containerserver-application"></a><a name="_core_creating_a_container_server_application"></a>コンテナー/サーバーアプリケーションの作成
+## <a name="creating-a-containerserver-application"></a><a name="_core_creating_a_container_server_application"></a> コンテナー/サーバーアプリケーションの作成
 
 コンテナー/サーバーアプリケーションは、コンテナーとサーバーの両方として機能するアプリケーションです。 この例として、Microsoft Word for Windows が挙げられます。 Windows ドキュメント用 Word を他のアプリケーションに埋め込むことができます。また、Windows ドキュメント用 Word に項目を埋め込むこともできます。 コンテナーアプリケーションをコンテナーと完全サーバーの両方に変更するプロセス (コンテナー/ミニサーバーアプリケーションを組み合わせて作成することはできません) は、完全なサーバーを作成するプロセスと似ています。
 
-「サーバー [: サーバーの実装](servers-implementing-a-server.md)」では、サーバーアプリケーションを実装するために必要な多数のタスクを示します。 コンテナーアプリケーションをコンテナー/サーバーアプリケーションに変換する場合は、それらのタスクの一部を実行して、コンテナーにコードを追加する必要があります。 考慮する必要がある重要事項を次に示します。
+「サーバー [: サーバーの実装](servers-implementing-a-server.md) 」では、サーバーアプリケーションを実装するために必要な多数のタスクを示します。 コンテナーアプリケーションをコンテナー/サーバーアプリケーションに変換する場合は、それらのタスクの一部を実行して、コンテナーにコードを追加する必要があります。 考慮する必要がある重要事項を次に示します。
 
 - アプリケーションウィザードによって作成されたコンテナーコードは、OLE サブシステムを既に初期化しています。 そのサポートについては、変更や追加を行う必要はありません。
 
@@ -39,13 +40,13 @@ ms.locfileid: "84616355"
 
 - `COleClientItem::CanActivate`サーバー自体を編集するために使用されている間に、項目の編集を回避するには、をオーバーライドします。
 
-   たとえば、MFC OLE サンプル[OCLIENT](../overview/visual-cpp-samples.md)には、コンテナー/サーバーアプリケーションによって作成された項目が埋め込まれています。 OCLIENT アプリケーションを開き、コンテナー/サーバーアプリケーションによって作成された項目をインプレース編集します。 アプリケーションの項目を編集するときに、MFC OLE サンプル[HIERSVR](../overview/visual-cpp-samples.md)によって作成された項目を埋め込むことを選択します。 これを行うには、インプレースライセンス認証を使用できません。 この項目をアクティブにするには、HIERSVR を完全に開く必要があります。 Microsoft Foundation Class ライブラリではこの OLE 機能がサポートされていないため、をオーバーライド `COleClientItem::CanActivate` すると、このような状況を確認し、アプリケーションで実行時エラーが発生しないようにすることができます。
+   たとえば、MFC OLE サンプル [OCLIENT](../overview/visual-cpp-samples.md) には、コンテナー/サーバーアプリケーションによって作成された項目が埋め込まれています。 OCLIENT アプリケーションを開き、コンテナー/サーバーアプリケーションによって作成された項目をインプレース編集します。 アプリケーションの項目を編集するときに、MFC OLE サンプル [HIERSVR](../overview/visual-cpp-samples.md)によって作成された項目を埋め込むことを選択します。 これを行うには、インプレースライセンス認証を使用できません。 この項目をアクティブにするには、HIERSVR を完全に開く必要があります。 Microsoft Foundation Class ライブラリではこの OLE 機能がサポートされていないため、をオーバーライド `COleClientItem::CanActivate` すると、このような状況を確認し、アプリケーションで実行時エラーが発生しないようにすることができます。
 
-新しいアプリケーションを作成し、コンテナー/サーバーアプリケーションとして機能させる場合は、アプリケーションウィザードの [OLE オプション] ダイアログボックスでこのオプションを選択すると、このサポートが自動的に作成されます。 詳細については、「[概要: ActiveX コントロールコンテナーの作成](reference/creating-an-mfc-activex-control-container.md)」を参照してください。 MFC サンプルの詳細については、「 [Mfc サンプル](../overview/visual-cpp-samples.md#mfc-samples)」を参照してください。
+新しいアプリケーションを作成し、コンテナー/サーバーアプリケーションとして機能させる場合は、アプリケーションウィザードの [OLE オプション] ダイアログボックスでこのオプションを選択すると、このサポートが自動的に作成されます。 詳細については、「 [概要: ActiveX コントロールコンテナーの作成](reference/creating-an-mfc-activex-control-container.md)」を参照してください。 MFC サンプルの詳細については、「 [Mfc サンプル](../overview/visual-cpp-samples.md#mfc-samples)」を参照してください。
 
 MDI アプリケーションをそれ自体に挿入することはできないことに注意してください。 コンテナーまたはサーバーであるアプリケーションは、SDI アプリケーションでなければ、それ自体に挿入することはできません。
 
-## <a name="links-to-embedded-objects"></a><a name="_core_links_to_embedded_objects"></a>埋め込みオブジェクトへのリンク
+## <a name="links-to-embedded-objects"></a><a name="_core_links_to_embedded_objects"></a> 埋め込みオブジェクトへのリンク
 
 埋め込みオブジェクトへのリンク機能を使用すると、ユーザーは、コンテナーアプリケーション内の埋め込みオブジェクトへの OLE リンクを使用してドキュメントを作成できます。 たとえば、埋め込みスプレッドシートを含むワードプロセッサでドキュメントを作成します。 アプリケーションが埋め込みオブジェクトへのリンクをサポートしている場合は、ワードプロセッサのドキュメントに含まれているスプレッドシートへのリンクを貼り付けることができます。 この機能を使用すると、アプリケーションは、最初に word プロセッサがそれを入手した場所を知らなくても、スプレッドシートに含まれている情報を使用できます。
 
@@ -65,11 +66,11 @@ MDI アプリケーションをそれ自体に挿入することはできない�
 
    - メンバー関数を呼び出して、 `COleTemplateServer::RegisterAll` すべてのクラスオブジェクトを OLE システムに登録します。
 
-   - `COleTemplateServer::UpdateRegistry` を呼び出します。 `UpdateRegistry`アプリケーションが "/Embedded" スイッチで起動されていない場合は、の唯一のパラメーターを*OAT_CONTAINER*する必要があります。 これにより、埋め込みオブジェクトへのリンクをサポートするコンテナーとしてアプリケーションが登録されます。
+   - `COleTemplateServer::UpdateRegistry` を呼び出します。 `UpdateRegistry`アプリケーションが "/Embedded" スイッチで起動されていない場合は、の唯一のパラメーターを *OAT_CONTAINER* する必要があります。 これにより、埋め込みオブジェクトへのリンクをサポートするコンテナーとしてアプリケーションが登録されます。
 
       アプリケーションが "/Embedded" スイッチを使用して起動された場合、サーバーアプリケーションと同様に、メインウィンドウは表示されません。
 
-MFC OLE サンプル[OCLIENT](../overview/visual-cpp-samples.md)では、この機能が実装されています。 これを行う方法の例については、OCLIENT の関数を参照してください `InitInstance` *。* このサンプルアプリケーションの CPP ファイル。
+MFC OLE サンプル [OCLIENT](../overview/visual-cpp-samples.md) では、この機能が実装されています。 これを行う方法の例については、OCLIENT の関数を参照してください `InitInstance` *。* このサンプルアプリケーションの CPP ファイル。
 
 ## <a name="see-also"></a>関連項目
 

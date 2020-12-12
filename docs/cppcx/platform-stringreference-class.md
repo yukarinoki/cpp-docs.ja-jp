@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: Platform:: StringReference クラス'
 title: Platform::StringReference クラス
 ms.date: 12/30/2016
 ms.topic: reference
@@ -9,12 +10,12 @@ f1_keywords:
 - VCCORLIB/Platform::StringReference::GetHSTRING
 - VCCORLIB/Platform::StringReference::GetString
 ms.assetid: 2d09c7ec-0f16-458e-83ed-7225a1b9221e
-ms.openlocfilehash: 4748eecdf67ae5a60ddf97783a934a05e80b406c
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 5c211776bccbd3ba2fedaf769502f7dad71b6eb6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81374659"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97307952"
 ---
 # <a name="platformstringreference-class"></a>Platform::StringReference クラス
 
@@ -34,35 +35,35 @@ class StringReference
 
 |名前|説明|
 |----------|-----------------|
-|[文字列参照::文字列参照](#ctor)|`StringReference`のインスタンスを作成するための 2 つのコンストラクター。|
+|[StringReference:: StringReference](#ctor)|`StringReference`のインスタンスを作成するための 2 つのコンストラクター。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
 |名前|説明|
 |----------|-----------------|
-|[文字列参照::Data](#data)|文字列データを char16 値の配列として返します。|
-|[文字列参照::長さ](#length)|文字列内の文字数を返します。|
-|[文字列参照::ゲット文字列](#gethstring)|文字列データを HSTRING として返します。|
-|[文字列参照::取得文字列](#getstring)|文字列データを `Platform::String^`として返します。|
+|[StringReference::D ata](#data)|文字列データを char16 値の配列として返します。|
+|[StringReference:: Length](#length)|文字列内の文字数を返します。|
+|[StringReference:: GetHSTRING](#gethstring)|文字列データを HSTRING として返します。|
+|[StringReference:: GetString](#getstring)|文字列データを `Platform::String^`として返します。|
 
 ### <a name="public-operators"></a>パブリック演算子
 
 |名前|説明|
 |----------|-----------------|
-|[参照::演算子=](#operator-assign)|`StringReference` を新しい `StringReference` インスタンスに割り当てます。|
-|[文字列参照::演算子()](#operator-call)|`StringReference` を `Platform::String^`に変換します。|
+|[StringReference:: operator =](#operator-assign)|`StringReference` を新しい `StringReference` インスタンスに割り当てます。|
+|[StringReference:: operator ()](#operator-call)|`StringReference` を `Platform::String^`に変換します。|
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
-**サポートされる最小クライアント:** ウィンドウズ 8
+**サポートされている最低限のクライアント:** Windows 8
 
-**サポートされる最小サーバー:** ウィンドウズ サーバー 2012
+**サポートされる最小サーバー:** Windows Server 2012
 
 **名前空間:** Platform
 
 **ヘッダー:** vccorlib.h
 
-## <a name="stringreferencedata-method"></a><a name="data"></a>文字列参照::Data メソッド
+## <a name="stringreferencedata-method"></a><a name="data"></a> StringReference::D ata メソッド
 
 この `StringReference` のコンテンツを char16 値の配列として返します。
 
@@ -76,7 +77,7 @@ const ::default::char16 * Data() const;
 
 char16 UNICODE テキスト文字の配列。
 
-## <a name="stringreferencegethstring-method"></a><a name="gethstring"></a>文字列参照:メソッドを取得します。
+## <a name="stringreferencegethstring-method"></a><a name="gethstring"></a> StringReference:: GetHSTRING メソッド
 
 `__abi_HSTRING` として文字列の内容を返します。
 
@@ -92,7 +93,7 @@ __abi_HSTRING GetHSTRING() const;
 
 ### <a name="remarks"></a>解説
 
-## <a name="stringreferencegetstring-method"></a><a name="getstring"></a>文字列参照:メソッドを取得します。
+## <a name="stringreferencegetstring-method"></a><a name="getstring"></a> StringReference:: GetString メソッド
 
 `Platform::String^` として文字列の内容を返します。
 
@@ -107,7 +108,7 @@ __declspec(no_release_return) __declspec(no_refcount)
 
 文字列データを格納する `Platform::String^`。
 
-## <a name="stringreferencelength-method"></a><a name="length"></a>文字列参照::長さメソッド
+## <a name="stringreferencelength-method"></a><a name="length"></a> StringReference:: Length メソッド
 
 文字列内の文字数を返します。
 
@@ -123,7 +124,7 @@ unsigned int Length() const;
 
 ### <a name="remarks"></a>解説
 
-## <a name="stringreferenceoperator-operator"></a><a name="operator-assign"></a>参照::演算子= 演算子
+## <a name="stringreferenceoperator-operator"></a><a name="operator-assign"></a> StringReference:: operator = 演算子
 
 指定されたオブジェクトを現在の `StringReference` オブジェクトに割り当てます。
 
@@ -148,9 +149,9 @@ StringReference& operator=(const ::default::char16* __strArg);
 
 ### <a name="remarks"></a>解説
 
-標準`StringReference`の C++ クラスであり、ref クラスではないため、**オブジェクト ブラウザー**には表示されません。
+`StringReference`は ref クラスではなく、標準 C++ クラスであるため、**オブジェクトブラウザー** には表示されません。
 
-## <a name="stringreferenceoperator--operator"></a><a name="operator-call"></a>文字列参照::演算子() 演算子
+## <a name="stringreferenceoperator--operator"></a><a name="operator-call"></a> StringReference:: operator () 演算子
 
 `StringReference` オブジェクトを `Platform::String^` オブジェクトに変換します。
 
@@ -165,7 +166,7 @@ __declspec(no_release_return) __declspec(no_refcount)
 
 `Platform::String` 型のオブジェクトへのハンドル。
 
-## <a name="stringreferencestringreference-constructor"></a><a name="ctor"></a>文字列参照::文字列参照コンストラクター
+## <a name="stringreferencestringreference-constructor"></a><a name="ctor"></a> StringReference:: StringReference コンストラクター
 
 `StringReference` クラスの新しいインスタンスを初期化します。
 
@@ -191,8 +192,8 @@ StringReference(const ::default::char16* __strArg, size_t __lenArg);
 
 ### <a name="remarks"></a>解説
 
-このコンストラクターの最初のバージョンは、既定のコンストラクターです。 2 番目のバージョンは、`StringReference` パラメーターで指定されたオブジェクトから新しい `__fstrArg` インスタンス クラスを初期化します。 3 番目と 4 番目の`StringReference`オーバーロードは、char16 値の配列から新しいインスタンスを初期化します。 char16 は、16 ビット UNICODE テキスト文字を表します。
+このコンストラクターの最初のバージョンは、既定のコンストラクターです。 2 番目のバージョンは、`StringReference` パラメーターで指定されたオブジェクトから新しい `__fstrArg` インスタンス クラスを初期化します。 3番目と4番目のオーバーロードは、 `StringReference` char16 値の配列から新しいインスタンスを初期化します。 char16 は、16ビットの UNICODE テキスト文字を表します。
 
 ## <a name="see-also"></a>関連項目
 
-[Platform::StringReference クラス](../cppcx/platform-stringreference-class.md)
+[Platform:: StringReference クラス](../cppcx/platform-stringreference-class.md)

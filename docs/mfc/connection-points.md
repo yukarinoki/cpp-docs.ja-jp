@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: 接続ポイント'
 title: コネクション ポイント
 ms.date: 11/19/2018
 f1_keywords:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 - CCmdTarget class [MFC], and connection points
 - sinks, connection points
 ms.assetid: bc9fd7c7-8df6-4752-ac8c-0b177442c88d
-ms.openlocfilehash: c14d8247be2abdf828b88e728bd930691ec6571f
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 721f35ea1737bf8e49f8b802b5382687a848c084
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87214153"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97310552"
 ---
 # <a name="connection-points"></a>コネクション ポイント
 
@@ -33,7 +34,7 @@ ms.locfileid: "87214153"
 ![実装されたコネクション ポイント](../mfc/media/vc37lh1.gif "実装されたコネクション ポイント") <br/>
 コネクション ポイントの実装
 
-MFC では、 [CConnectionPoint](reference/cconnectionpoint-class.md)クラスと[CCmdTarget](reference/ccmdtarget-class.md)クラスにこのモデルが実装されています。 から派生したクラスは、 `CConnectionPoint` `IConnectionPoint` 接続ポイントを他のオブジェクトに公開するために使用されるインターフェイスを実装します。 から派生したクラス `CCmdTarget` は、インターフェイスを実装します `IConnectionPointContainer` 。これにより、オブジェクトの使用可能なすべての接続ポイントを列挙したり、特定のコネクションポイントを検索したりできます。
+MFC では、 [CConnectionPoint](reference/cconnectionpoint-class.md) クラスと [CCmdTarget](reference/ccmdtarget-class.md) クラスにこのモデルが実装されています。 から派生したクラスは、 `CConnectionPoint` `IConnectionPoint` 接続ポイントを他のオブジェクトに公開するために使用されるインターフェイスを実装します。 から派生したクラス `CCmdTarget` は、インターフェイスを実装します `IConnectionPointContainer` 。これにより、オブジェクトの使用可能なすべての接続ポイントを列挙したり、特定のコネクションポイントを検索したりできます。
 
 クラスに実装されている各接続ポイントについて、コネクションポイントを実装する接続部分を宣言する必要があります。 1つ以上のコネクションポイントを実装する場合は、クラスで1つの接続マップも宣言する必要があります。 接続マップは、ActiveX コントロールによってサポートされる接続ポイントのテーブルです。
 
@@ -41,13 +42,13 @@ MFC では、 [CConnectionPoint](reference/cconnectionpoint-class.md)クラス�
 
 [!code-cpp[NVC_MFCConnectionPoints#1](codesnippet/cpp/connection-points_1.h)]
 
-**BEGIN_CONNECTION_PART**マクロと**END_CONNECTION_PART**マクロは、 `XSampleConnPt` この特定のコネクションポイントを実装する (から派生した) 埋め込みクラスを宣言し `CConnectionPoint` ます。 メンバー関数をオーバーライドする場合 `CConnectionPoint` 、または独自のメンバー関数を追加する場合は、これらの2つのマクロの間で宣言します。 たとえば、マクロは、 `CONNECTION_IID` `CConnectionPoint::GetIID` この2つのマクロの間に配置されたメンバー関数をオーバーライドします。
+**BEGIN_CONNECTION_PART** マクロと **END_CONNECTION_PART** マクロは、 `XSampleConnPt` この特定のコネクションポイントを実装する (から派生した) 埋め込みクラスを宣言し `CConnectionPoint` ます。 メンバー関数をオーバーライドする場合 `CConnectionPoint` 、または独自のメンバー関数を追加する場合は、これらの2つのマクロの間で宣言します。 たとえば、マクロは、 `CONNECTION_IID` `CConnectionPoint::GetIID` この2つのマクロの間に配置されたメンバー関数をオーバーライドします。
 
 2番目の例では、コントロールの実装ファイル (.cpp ファイル) にコードが挿入されます。 このコードは、接続ポイントを含む接続マップを実装し `SampleConnPt` ます。
 
 [!code-cpp[NVC_MFCConnectionPoints#2](codesnippet/cpp/connection-points_2.cpp)]
 
-クラスに複数のコネクションポイントがある場合は、 **BEGIN_CONNECTION_MAP**と**END_CONNECTION_MAP**マクロの間に追加の**CONNECTION_PART**マクロを挿入します。
+クラスに複数のコネクションポイントがある場合は、 **BEGIN_CONNECTION_MAP** と **END_CONNECTION_MAP** マクロの間に追加の **CONNECTION_PART** マクロを挿入します。
 
 最後に、クラスのコンストラクターにの呼び出しを追加し `EnableConnections` ます。 次に例を示します。
 

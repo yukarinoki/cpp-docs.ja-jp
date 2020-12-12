@@ -1,4 +1,5 @@
 ---
+description: '詳細については、「_bstr_t:: operator + =, +」を参照してください。'
 title: _bstr_t::operator +=、+
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - += operator [C++], appending strings
 - + operator [C++], _bstr_t objects
 ms.assetid: d28316ce-c2c8-4a38-bdb3-44fa4e582c44
-ms.openlocfilehash: b9eddca85d66f4978e1b33299ca655cd880cf45e
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: e3ae71a3a43e189251ac0ddaf77572656a031aaf
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80181149"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97308810"
 ---
 # <a name="_bstr_toperator--"></a>_bstr_t::operator +=、+
 
@@ -45,16 +46,16 @@ Unicode 文字列。
 
 これらの演算子は文字列連結を実行します。
 
-- **operator + = (** *s1* **)** *S1*のカプセル化された `BSTR` の文字を、このオブジェクトのカプセル化された `BSTR`の末尾に追加します。
+- **operator + = (***s1***)** S1 のカプセル化されたの文字を、 `BSTR` カプセル化されたこのオブジェクトの末尾に追加し `BSTR` ます。    
 
-- **演算子 + (** *s1* **)** このオブジェクトの `BSTR` と*s1*の値を連結して形成された新しい `_bstr_t` を返します。
+- **演算子 + (***s1***)**`_bstr_t`このオブジェクト `BSTR` と *s1* のを連結して形成された新しいを返します。    
 
-- **演算子 + (** *s2* **&#124;** *s1* **)** Unicode に変換されたマルチバイト文字列*s2*と*s1*にカプセル化された `BSTR` を連結して形成される新しい `_bstr_t` を返します。
+- **operator + (***s2* **&#124;** *s1***)**`_bstr_t`Unicode に変換されたマルチバイト文字列 *s2* を `BSTR` *s1* にカプセル化されたを連結して形成される新しいを返します。        
 
-- **operator + (** *s3* **、** *s1* **)** *S1*にカプセル化された `BSTR` と Unicode 文字列*s3*を連結して形成される新しい `_bstr_t` を返します。
+- **operator + (***s3* **、***s1***)**`_bstr_t`Unicode 文字列 *s3* を `BSTR` *s1* にカプセル化されたと連結することによって形成される新しいを返します。      
 
 **Microsoft 固有の仕様はここまで**
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [_bstr_t クラス](../cpp/bstr-t-class.md)
