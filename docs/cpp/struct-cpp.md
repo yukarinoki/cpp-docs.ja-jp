@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: 構造体 (C++)'
 title: struct (C++ )
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - struct constructors
 ms.assetid: 3c6ba273-e248-4ff1-8c69-d2abcf1263c6
-ms.openlocfilehash: d0092cf107159f4c84b431f5eeae130df64dc835
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 4c7f8ab04bec2f161e303c3fed93414332fddeb6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91507462"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97246254"
 ---
 # <a name="struct-c"></a>struct (C++ )
 
@@ -38,7 +39,7 @@ ms.locfileid: "91507462"
 *ms の宣言*<br/>
 ストレージ クラスの指定 (省略可能)。 詳細については、 [__declspec](../cpp/declspec.md) キーワードを参照してください。
 
-*番号*<br/>
+*タグ*<br/>
 構造体に渡す型名。 タグは構造体のスコープ内で予約語になります。 タグは省略できます。 省略した場合、匿名構造体が定義されます。 詳細については、「 [匿名クラス型](../cpp/anonymous-class-types.md)」を参照してください。
 
 *base-list*<br/>
@@ -50,7 +51,7 @@ ms.locfileid: "91507462"
 *declarators*<br/>
 構造体の名前を指定する宣言子リスト。 宣言子リストは構造体型の 1 つ以上のインスタンスを宣言します。 構造体のすべてのデータメンバーがである場合は、宣言子に初期化子リストを含めることができ **`public`** ます。 初期化子リストは、データメンバーが既定であるため、構造で共通 **`public`** です。  詳細については、「 [宣言子の概要](./declarations-and-definitions-cpp.md) 」を参照してください。
 
-## <a name="remarks"></a>注釈
+## <a name="remarks"></a>解説
 
 構造体型はユーザー定義の複合データ型です。 この型は異なる型のフィールドやメンバーで構成されます。
 

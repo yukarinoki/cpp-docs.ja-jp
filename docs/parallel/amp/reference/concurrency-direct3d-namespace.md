@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: Concurrency::d irect3d 名前空間'
 title: Concurrency::direct3d 名前空間
 ms.date: 11/04/2016
 f1_keywords:
@@ -10,16 +11,16 @@ f1_keywords:
 helpviewer_keywords:
 - direct3d namespace
 ms.assetid: 9566a2f1-4d5f-43e4-a3ac-676643d38420
-ms.openlocfilehash: e1374acbd7061afaba372100cf6e69d9d717da8a
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: 9fb0e7d4f5abbccbd9cd931fe2c4520e9410cbc9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77127034"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97247736"
 ---
 # <a name="concurrencydirect3d-namespace"></a>Concurrency::direct3d 名前空間
 
-`direct3d` 名前空間は、D3D の相互運用性をサポートする関数を提供します。 AMP コードでの計算に D3D リソースを使用できます。 また、冗長な中間コピーを作成せずに、AMP で作成されたリソースを D3D コードで使用することもできます。 Amp を使用C++して、DirectX アプリケーションの多くのコンピューティング処理を要するセクションを段階的に高速化し、amp 計算から生成されたデータに対して D3D API を使用することができます。
+`direct3d` 名前空間は、D3D の相互運用性をサポートする関数を提供します。 AMP コードでの計算に D3D リソースを使用できます。 また、冗長な中間コピーを作成せずに、AMP で作成されたリソースを D3D コードで使用することもできます。 C++ AMP を使用して DirectX アプリケーションの多くのコンピューティング処理を要するセクションを段階的に高速化し、AMP 計算から生成されたデータに対して D3D API を使用することができます。
 
 ## <a name="syntax"></a>構文
 
@@ -31,24 +32,24 @@ namespace direct3d;
 
 ### <a name="classes"></a>クラス
 
-|Name|説明|
+|名前|説明|
 |----------|-----------------|
 |[scoped_d3d_access_lock クラス](scoped-d3d-access-lock-class.md)|`accelerator_view` オブジェクトの D3D アクセスのロックの RAII ラッパー。|
 
 ### <a name="structures"></a>構造体
 
-|Name|説明|
+|名前|説明|
 |----------|-----------------|
 |[adopt_d3d_access_lock_t 構造体](adopt-d3d-access-lock-t-structure.md)|D3D のアクセスのロックを示すタグの種類は、取得するのではなく、導入する必要があります。|
 
 ### <a name="functions"></a>関数
 
-|Name|説明|
+|名前|説明|
 |----------|-----------------|
-|[abs](concurrency-direct3d-namespace-functions-amp.md#abs)|引数の絶対値を返します。|
+|[絶対](concurrency-direct3d-namespace-functions-amp.md#abs)|引数の絶対値を返します。|
 |[クリップ](concurrency-direct3d-namespace-functions-amp.md#clamp)|オーバーロードされます。 _X を指定された _Min と _Max の範囲にクランプします。|
 |[countbits](concurrency-direct3d-namespace-functions-amp.md#countbits)|_X 内で設定されているビットの数をカウントします。|
-|[create_accelerator_view](concurrency-direct3d-namespace-functions-amp.md#create_accelerator_view)|Direct3D デバイスインターフェイスへのポインターから[Accelerator_view クラス](accelerator-view-class.md)を作成します。|
+|[create_accelerator_view](concurrency-direct3d-namespace-functions-amp.md#create_accelerator_view)|Direct3D デバイスインターフェイスへのポインターから [Accelerator_view クラス](accelerator-view-class.md) を作成します。|
 |[d3d_access_lock](concurrency-direct3d-namespace-functions-amp.md#d3d_access_lock)|と共有されているリソースに対して D3D 操作を安全に実行するために、accelerator_view のロックを取得し accelerator_view|
 |[d3d_access_try_lock](concurrency-direct3d-namespace-functions-amp.md#d3d_access_try_lock)|ブロックせずに、accelerator_view に対する D3D アクセスのロックを取得します。|
 |[d3d_access_unlock](concurrency-direct3d-namespace-functions-amp.md#d3d_access_unlock)|指定された accelerator_view に対する D3D アクセスのロックを解除します。|
@@ -77,6 +78,6 @@ namespace direct3d;
 
 **名前空間:** Concurrency
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[コンカレンシー名前空間 (C++ AMP)](concurrency-namespace-cpp-amp.md)
+[Concurrency 名前空間 (C++ AMP)](concurrency-namespace-cpp-amp.md)

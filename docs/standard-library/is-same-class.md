@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: is_same クラス'
 title: is_same クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,14 +8,14 @@ helpviewer_keywords:
 - is_same class
 - is_same
 ms.assetid: d9df6c1d-c270-4ec2-802a-af275648dd1d
-ms.openlocfilehash: f4e4babeef89960762ebb2ccf0f733f60eadfa47
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 19e0ecec009227c0785c263893aa32beff4049e4
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68450054"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97247723"
 ---
-# <a name="issame-class"></a>is_same クラス
+# <a name="is_same-class"></a>is_same クラス
 
 2 つの型が等しいかどうかをテストします。
 
@@ -33,9 +34,9 @@ struct is_same;
 *Ty2*\
 照会する 2 番目の型。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-型*Ty1*と*Ty2*の型が同じである場合、型の述語のインスタンスは true を保持します。それ以外の場合は、false を保持します。
+型 *Ty1* と *Ty2* の型が同じである場合、型の述語のインスタンスは true を保持します。それ以外の場合は、false を保持します。
 
 ## <a name="example"></a>例
 
@@ -80,9 +81,9 @@ is_same<int, int> == true
 is_same<int, const int> == false
 ```
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-**ヘッダー:** \<type_traits>
+**ヘッダー:**\<type_traits>
 
 **名前空間:** std
 

@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: リンクオプション'
 title: リンク オプション
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -30,12 +31,12 @@ helpviewer_keywords:
 - threadlocale.obj
 - pnoarg.obj
 ms.assetid: 05b5a77b-9dd1-494b-ae46-314598c770bb
-ms.openlocfilehash: 146722fb0dd3a4fc774ede692808b1e6bfb1e5c7
-ms.sourcegitcommit: fe146adb3a02872538637196bb3c45aeeeaaf5c2
+ms.openlocfilehash: affb5d95af176ba49aa2aeafff5ac84653df2ad8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84506859"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97246527"
 ---
 # <a name="link-options"></a>リンク オプション
 
@@ -55,7 +56,7 @@ CRT lib ディレクトリには、コード変更を加えずに特定の CRT �
 |loosefpmath.obj|該当なし|浮動小数点コードが非正規化値を許容するようにします。|
 |newmode.obj|pnewmode.obj|失敗時に [malloc](../c-runtime-library/reference/malloc.md) が新しいハンドラーを呼び出すようにします。 [_set_new_mode](../c-runtime-library/reference/set-new-mode.md)、[_set_new_handler](../c-runtime-library/reference/set-new-handler.md)、[calloc](../c-runtime-library/reference/calloc.md)、[realloc](../c-runtime-library/reference/realloc.md) をご覧ください。|
 |noarg.obj|pnoarg.obj|argc および argv のすべてのプロセスを無効にします。|
-|nochkclr.obj|該当なし|何も実行しません。 プロジェクトから削除してください。|
+|nochkclr.obj|該当なし|処理を行いません。 プロジェクトから削除してください。|
 |noenv.obj|pnoenv.obj|CRT のキャッシュ済み環境の作成を無効にします。|
 |nothrownew.obj|pnothrownew.obj|CRT で new のスローしないバージョンを有効にします。 「[new および delete 演算子](../cpp/new-and-delete-operators.md)」をご覧ください。|
 |setargv.obj|psetargv.obj|コマンド ライン引数のワイルドカードの展開を有効にします。 「[ワイルドカード引数の展開](../c-language/expanding-wildcard-arguments.md)」をご覧ください。|

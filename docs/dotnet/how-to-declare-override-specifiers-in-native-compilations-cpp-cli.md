@@ -1,15 +1,16 @@
 ---
+description: '詳細については、「方法: ネイティブコンパイルでオーバーライド指定子を宣言する (C++/CLI)」を参照してください。'
 title: '方法: オーバーライド指定子を宣言する (C++/CLI)'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - override specifiers in native compilation, overriding
 ms.assetid: d0551836-9ac7-41eb-a6e9-a4b3ef60767d
-ms.openlocfilehash: 92bdc41cf9ebe2389f2d22dab211029899283266
-ms.sourcegitcommit: 94893973211d0b254c8bcdcf0779997dcc136b0c
+ms.openlocfilehash: 75e925e26dc62d87e40d56b05e3be6d2dbda3e4a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/28/2020
-ms.locfileid: "91414595"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97246397"
 ---
 # <a name="how-to-declare-override-specifiers-in-native-compilations-ccli"></a>方法: ネイティブ コンパイルでオーバーライド指定子を宣言する (C++/CLI)
 

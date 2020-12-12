@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: queue (STL/CLR)'
 title: queue (STL/CLR)
 ms.date: 11/04/2016
 ms.topic: reference
@@ -57,12 +58,12 @@ helpviewer_keywords:
 - to_array member [STL/CLR]
 - value_type member [STL/CLR]
 ms.assetid: 9ea7dec3-ea98-48ff-87d0-a5afc924aaf2
-ms.openlocfilehash: 2d5c1d30704838cdb69516d68d328c90a094a08e
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 1cbe30dff567c81840f2b78498b04648954399dc
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91502387"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97245877"
 ---
 # <a name="queue-stlclr"></a>queue (STL/CLR)
 
@@ -90,7 +91,7 @@ template<typename Value,
 *コンテナー*<br/>
 基になるコンテナーの型。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:**\<cliext/queue>
 
@@ -144,7 +145,7 @@ template<typename Value,
 |<xref:System.ICloneable>|オブジェクトを複製します。|
 |IQueue\<Value, Container>|汎用コンテナーアダプターを維持します。|
 
-## <a name="remarks"></a>注釈
+## <a name="remarks"></a>解説
 
 オブジェクトは、 `Container` 要素を格納し、必要に応じて拡張する、基になるコンテナー (型) によって制御されるシーケンスのストレージを割り当て、解放し `Value` ます。 オブジェクトは、最初の要素をプッシュして最後の要素をポップするだけにアクセスを制限し、先入れ先出しのキュー (FIFO キューとも呼ばれます) または単なるキューを実装します。
 
@@ -165,7 +166,7 @@ void assign(queue<Value, Container>% right);
 *そうです*<br/>
 挿入するコンテナーアダプター。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 このメンバー関数は、 `right.get_container()` 基になるコンテナーにを割り当てます。 キューの内容全体を変更するには、これを使用します。
 
@@ -787,9 +788,9 @@ queue <Value, Container>% operator=(queue <Value, Container>% right);
 *そうです*<br/>
 コピーするコンテナーアダプター。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
-メンバー演算子は、オブジェクトに *right* をコピーし、を返し **`*this`** ます。 このメソッドを使用して、被制御シーケンスを *右側*の被制御シーケンスのコピーで置き換えます。
+メンバー演算子は、オブジェクトに *right* をコピーし、を返し **`*this`** ます。 このメソッドを使用して、被制御シーケンスを *右側* の被制御シーケンスのコピーで置き換えます。
 
 ### <a name="example"></a>例
 
@@ -936,7 +937,7 @@ explicit queue(container_type% wrapped);
 *回り*<br/>
 使用するためにラップされたコンテナー。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 コンストラクター:
 
@@ -948,7 +949,7 @@ explicit queue(container_type% wrapped);
 
 `queue(queue<Value, Container>% right);`
 
-のコピーである、ラップされたコンテナーを作成し `right.get_container()` ます。 このメソッドを使用して、キューオブジェクト *権限*によって制御されるシーケンスのコピーである最初の被制御シーケンスを指定します。
+のコピーである、ラップされたコンテナーを作成し `right.get_container()` ます。 このメソッドを使用して、キューオブジェクト *権限* によって制御されるシーケンスのコピーである最初の被制御シーケンスを指定します。
 
 コンストラクター:
 
@@ -1222,7 +1223,7 @@ typedef Value value_type;
 
 ### <a name="remarks"></a>解説
 
-この型は、テンプレートパラメーター *値*のシノニムです。
+この型は、テンプレートパラメーター *値* のシノニムです。
 
 ### <a name="example"></a>例
 
@@ -1276,7 +1277,7 @@ template<typename Value,
 *そうです*<br/>
 比較する右のコンテナー。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 演算子関数はを返し `!(left == right)` ます。 このメソッドを使用して、2つのキューが要素別に比較されるときに、 *left* が *right* と同じ順序で並んでいないかどうかをテストします。
 
@@ -1347,9 +1348,9 @@ template<typename Value,
 *そうです*<br/>
 比較する右のコンテナー。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
-演算子関数は、が true である場合にも true を返し `i` `!(right[i] < left[i])` `left[i] < right[i]` ます。 それ以外の場合は、 `left->` [queue:: size (STL/CLR)](#size)を返し `() <` `right->size()` ます。このメソッドを使用して、2つのキューが要素別に比較されるときに、 *left*が*right*の前に並べられているかどうかをテストします。
+演算子関数は、が true である場合にも true を返し `i` `!(right[i] < left[i])` `left[i] < right[i]` ます。 それ以外の場合は、 `left->` [queue:: size (STL/CLR)](#size)を返し `() <` `right->size()` ます。このメソッドを使用して、2つのキューが要素別に比較されるときに、 *left* が *right* の前に並べられているかどうかをテストします。
 
 ### <a name="example"></a>例
 
@@ -1418,9 +1419,9 @@ template<typename Value,
 *そうです*<br/>
 比較する右のコンテナー。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
-演算子関数はを返し `!(right < left)` ます。 このメソッドを使用して、2つのキューが要素別に比較されるときに、 *right*の後に*left*が順序付けされていないかどうかをテストします。
+演算子関数はを返し `!(right < left)` ます。 このメソッドを使用して、2つのキューが要素別に比較されるときに、 *right* の後に *left* が順序付けされていないかどうかをテストします。
 
 ### <a name="example"></a>例
 
@@ -1489,7 +1490,7 @@ template<typename Value,
 *そうです*<br/>
 比較する右のコンテナー。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 演算子関数は、 *左* と *右* で制御されるシーケンスの長さが同じで、各位置についてがである場合にのみ true を返し `i` `left[i] ==` `right[i]` ます。 このメソッドを使用して、2つのキューが要素別に比較されるときに、 *left* が *right* と同じ順序で並んでいるかどうかをテストします。
 
@@ -1560,9 +1561,9 @@ template<typename Value,
 *そうです*<br/>
 比較する右のコンテナー。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
-演算子関数はを返し `right` `<` `left` ます。 このメソッドを使用して、2つのキューが要素別に比較されたときに、 *right*の後にある*かどうか*をテストします。
+演算子関数はを返し `right` `<` `left` ます。 このメソッドを使用して、2つのキューが要素別に比較されたときに、 *right* の後にある *かどうか* をテストします。
 
 ### <a name="example"></a>例
 
@@ -1631,7 +1632,7 @@ template<typename Value,
 *そうです*<br/>
 比較する右のコンテナー。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 演算子関数はを返し `!(left < right)` ます。 このメソッドを使用して、2つのキューが要素別に比較されるときに、 *left* が *right* の前に順序付けされていないかどうかをテストします。
 

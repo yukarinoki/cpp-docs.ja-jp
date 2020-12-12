@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: リフレクション (C++/CLI)'
 title: リフレクション (C++/CLI)
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -18,29 +19,29 @@ helpviewer_keywords:
 - data types [C++], enumerating
 - public members [C++]
 ms.assetid: 46b6ff4a-e441-4022-8892-78e69422f230
-ms.openlocfilehash: 5f18a7faa4e77571a87cc0d76a43240aaf1fd52c
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
-ms.translationtype: HT
+ms.openlocfilehash: a3a9a33a239ec678279455ea41b7c60749cc0189
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65447225"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97245799"
 ---
 # <a name="reflection-ccli"></a>リフレクション (C++/CLI)
 
 リフレクションでは、既知のデータ型を実行時に調査できます。 リフレクションでは、アセンブリに含まれているデータ型を列挙したり、クラス型や値型のメンバーを探索したりできます。 この処理は、コンパイル時に型が認識または参照された場合のどちらにも対応できます。 そのため、リフレクションは、開発およびコード管理ツール向けの便利な機能です。
 
-指定されたアセンブリ名が厳密な名前に注意してください (を参照してください[の作成と using strong-named Assemblies](/dotnet/framework/app-domains/create-and-use-strong-named-assemblies))、アセンブリのバージョン、カルチャ、および署名情報が含まれます。 また、基底クラスの名前に加えて、データ型が定義されている名前空間の名前も取得できることに注目してください。
+指定されたアセンブリ名が厳密な名前であることに注意してください (「 [Strong-Named アセンブリの作成と使用](/dotnet/framework/app-domains/create-and-use-strong-named-assemblies)」を参照してください)。これには、アセンブリのバージョン、カルチャ、および署名情報が含まれます。 また、基底クラスの名前に加えて、データ型が定義されている名前空間の名前も取得できることに注目してください。
 
-リフレクションの機能にアクセスする最も一般的な方法は、<xref:System.Object.GetType%2A> メソッドを使用することです。 このメソッドがによって提供される<xref:System.Object?displayProperty=nameWithType>からガベージ コレクションのすべてのクラスが派生します。
+リフレクションの機能にアクセスする最も一般的な方法は、<xref:System.Object.GetType%2A> メソッドを使用することです。 このメソッドは <xref:System.Object?displayProperty=nameWithType> 、すべてのガベージコレクションクラスの派生元であるによって提供されます。
 
 > [!NOTE]
-> Microsoft で構築された .exe のリフレクションC++コンパイラは、.exe に組み込まれている場合にのみ使用できます、 **/clr: 純粋な**または **/clr:safe**コンパイラ オプション。 **/Clr: 純粋な**と **/clr:safe**コンパイラ オプションは、Visual Studio 2015 で非推奨と Visual Studio 2017 では使用できません。 参照してください[/clr (共通言語ランタイムのコンパイル)](../build/reference/clr-common-language-runtime-compilation.md)詳細についてはします。
+> Microsoft C++ コンパイラでビルドされた .exe のリフレクションは、.exe が **/clr: pure** または **/clr: safe** コンパイラオプションを使用してビルドされている場合にのみ許可されます。 **/Clr: pure** および **/clr: safe** コンパイラオプションは visual studio 2015 で非推奨とされており、visual studio 2017 では使用できません。 詳細については、「 [/clr (共通言語ランタイムのコンパイル)](../build/reference/clr-common-language-runtime-compilation.md) 」を参照してください。
 
 詳細については、「<xref:System.Reflection>」を参照してください。
 
-## <a name="example-gettype"></a>例:GetType
+## <a name="example-gettype"></a>例: GetType
 
-`GetType` メソッドは、オブジェクトが基になっている場合は型を表す <xref:System.Type> クラス オブジェクトへのポインターを返します。 (、**型**オブジェクトには、インスタンス固有の情報が含まれていない)。このメソッドで取得できる項目には、型の完全名があります。完全名は、次のように表示できます。
+`GetType` メソッドは、オブジェクトが基になっている場合は型を表す <xref:System.Type> クラス オブジェクトへのポインターを返します。 ( **型** オブジェクトには、インスタンス固有の情報が含まれていません)。このような項目の1つに、型の完全名があります。これは次のように表示できます。
 
 型名には、型が定義されている完全なスコープ (名前空間も含む) が含まれています。また、.NET 構文でスコープ解決演算子としてドット (.) が付けられている点にも注意してください。
 
@@ -58,7 +59,7 @@ int main() {
 full type name of 'sample string' is 'System.String'
 ```
 
-## <a name="example-boxed-value-types"></a>例: ボックス化された値の型
+## <a name="example-boxed-value-types"></a>例: ボックス化された値型
 
 値型を `GetType` 関数で使用する場合も、最初にボックス化する必要があります。
 
@@ -79,9 +80,9 @@ type of i = 'System.Int32'
 
 ## <a name="example-typeid"></a>例: typeid
 
-同様、`GetType`メソッド、 [typeid](../extensions/typeid-cpp-component-extensions.md)演算子へのポインターを返します、**型**オブジェクト、このコードは型名を示すため**System.Int32**します。 型名を表示することは、リフレクションの最も基本的な機能ですが、より便利であると思われるのが、列挙型の有効な値を調査または探索できる点です。 これを行う静的**enum::getnames**関数は、テキスト形式での列挙値を含む各文字列の配列で返します。  次の例の値の列挙値を表す文字列の配列を取得する、**オプション**(CLR) 列挙され、ループに表示されます。
+メソッドと同様に、 `GetType` [typeid](../extensions/typeid-cpp-component-extensions.md)演算子は **型** オブジェクトへのポインターを返すため、このコードは型名 system.string を示します。 型名を表示することは、リフレクションの最も基本的な機能ですが、より便利であると思われるのが、列挙型の有効な値を調査または探索できる点です。 これを行うには、static **Enum:: GetNames** 関数を使用します。この関数は、文字列の配列を返します。各文字列には、テキスト形式の列挙値が含まれています。  次の例では、 **Options** (CLR) 列挙型の値の列挙値を記述する文字列の配列を取得し、それらをループに表示します。
 
-4 番目のオプションを追加する場合、**オプション**列挙型では、このコードには、列挙体が別のアセンブリで定義されている場合でも、再コンパイルなしの新しいオプションが報告されます。
+4番目のオプションを **Options** 列挙に追加した場合、列挙が別のアセンブリで定義されていても、このコードは再コンパイルせずに新しいオプションを報告します。
 
 ```cpp
 // vcpp_reflection_3.cpp
@@ -114,7 +115,7 @@ there are 3 options in enum 'Options'
 value of 'o' is Option2
 ```
 
-## <a name="example-gettype-members-and-properties"></a>例:GetType メンバーとプロパティ
+## <a name="example-gettype-members-and-properties"></a>例: GetType のメンバーとプロパティ
 
 `GetType` オブジェクトは、型を調べるために使用できる多くのメンバーとプロパティをサポートします。 次のコードは、この情報の一部を取得して表示します。
 
@@ -153,7 +154,7 @@ is array: False
 is class: True
 ```
 
-## <a name="example-enumeration-of-types"></a>型の例: 列挙型
+## <a name="example-enumeration-of-types"></a>例: 型の列挙体
 
 リフレクションを使用すると、アセンブリ内の型とクラス内のメンバーも列挙できます。 この機能の例を示すために、次のような単純なクラスを定義します。
 
@@ -175,13 +176,13 @@ public:
 };
 ```
 
-## <a name="example-inspection-of-assemblies"></a>アセンブリの例: 検査
+## <a name="example-inspection-of-assemblies"></a>例: アセンブリの検査
 
-このコードを vcpp_reflection_6.dll という DLL にコンパイルすると、リフレクションを使用してアセンブリの内容を確認できます。 これは、静的リフレクション API 関数 xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType を使用してアセンブリを読み込む必要があります。 この関数のアドレスを返します、**アセンブリ**モジュールと内の型について、クエリを実行できるオブジェクト。
+このコードを vcpp_reflection_6.dll という DLL にコンパイルすると、リフレクションを使用してアセンブリの内容を確認できます。 これには、静的なリフレクション API 関数 xref: system.object% 2A? displayProperty = nameWithType を使用したアセンブリの読み込みが含まれます。 この関数は、内のモジュールと型についてクエリを実行できる **アセンブリ** オブジェクトのアドレスを返します。
 
-リフレクション システムが、アセンブリの配列を正常に読み込まれたら**型**でオブジェクトを取得、<xref:System.Reflection.Assembly.GetTypes%2A?displayProperty=nameWithType>関数。 各配列要素には、異なる型の情報が含まれています。ただし、この例で定義されているクラスは 1 つだけです。 ループを使用して各**型**型のメンバーを使用してこの配列をクエリ、 **:getmembers**関数。 この関数の配列を返します**MethodInfo**オブジェクト、メンバー関数は、データ メンバー、または型のプロパティに関する情報を格納している各オブジェクト。
+リフレクションシステムによってアセンブリが正常に読み込まれると、 **型** オブジェクトの配列が関数を使用して取得され <xref:System.Reflection.Assembly.GetTypes%2A?displayProperty=nameWithType> ます。 各配列要素には、異なる型の情報が含まれています。ただし、この例で定義されているクラスは 1 つだけです。 ループを使用すると、この配列内の各 **型** は、 **Type:: getmembers** 関数を使用して型のメンバーについてクエリを実行します。 この関数は、 **MethodInfo** オブジェクトの配列を返します。各オブジェクトには、メンバー関数、データメンバー、または型のプロパティに関する情報が含まれています。
 
-定義されているメソッドの一覧が、関数には明示的に含まれているメモ**TestClass**関数が暗黙的に継承し、 **system::object**クラス。 Visual C++ 構文ではなく .NET で記述されている部分では、プロパティは get 関数と set 関数でアクセスする基底のデータ メンバーとして表示されます。 get 関数と set 関数は、通常のメソッドとしてこのリストに表示されています。 リフレクションは、マイクロソフトではなく、共通言語ランタイムを通じてサポートC++コンパイラ。
+メソッドの一覧には、 **TestClass** で明示的に定義された関数と、 **System:: Object** クラスから暗黙的に継承される関数が含まれていることに注意してください。 Visual C++ 構文ではなく .NET で記述されている部分では、プロパティは get 関数と set 関数でアクセスする基底のデータ メンバーとして表示されます。 get 関数と set 関数は、通常のメソッドとしてこのリストに表示されています。 リフレクションは、Microsoft C++ コンパイラではなく、共通言語ランタイムによってサポートされています。
 
 このコードを使用すると、定義したアセンブリを調べるだけでなく、.NET アセンブリを調べることもできます。 たとえば、TestAssembly を mscorlib に置き換えると、mscorlib.dll に定義されているすべての型とメソッドのリストが表示されます。
 
@@ -232,19 +233,19 @@ int main() {
 }
 ```
 
-## <a name="implement"></a>方法: リフレクションを使用してプラグイン コンポーネント アーキテクチャを実装します。
+## <a name="how-to-implement-a-plug-in-component-architecture-using-reflection"></a><a name="implement"></a> 方法: リフレクションを使用して Plug-In コンポーネントアーキテクチャを実装する
 
-次のコード例では、単純な「プラグイン」アーキテクチャを実装するためにリフレクションを使用を示します。 最初のリストは、アプリケーションと、2 番目のプラグインです。 アプリケーションは、コマンドライン引数として指定されたプラグイン DLL 内のフォーム ベースのクラスを使用して自身を設定する複数のドキュメント形式です。
+次のコード例は、単純な "プラグイン" アーキテクチャを実装するためのリフレクションの使用方法を示しています。 最初の一覧はアプリケーションで、2つ目はプラグインです。 アプリケーションは、コマンドライン引数として提供されたプラグイン DLL 内のフォームベースのクラスを使用して、それ自体を作成する複数のドキュメント形式です。
 
-使用して、指定されたアセンブリの読み込みを試行、<xref:System.Reflection.Assembly.Load%2A?displayProperty=fullName>メソッド。 成功すると、アセンブリ内で型が列挙を使用して、<xref:System.Reflection.Assembly.GetTypes%2A?displayProperty=fullName>メソッド。 互換性を使用して各型をチェックしてから、<xref:System.Type.IsAssignableFrom%2A?displayProperty=fullName>メソッド。 この例で指定されたアセンブリ内で見つかったクラスをから派生する必要があります、<xref:System.Windows.Forms.Form>クラスをプラグインとして修飾します。
+アプリケーションは、メソッドを使用して、指定されたアセンブリを読み込もうとし <xref:System.Reflection.Assembly.Load%2A?displayProperty=fullName> ます。 成功した場合、アセンブリ内の型は、メソッドを使用して列挙され <xref:System.Reflection.Assembly.GetTypes%2A?displayProperty=fullName> ます。 その後、メソッドを使用して、各型の互換性がチェックされ <xref:System.Type.IsAssignableFrom%2A?displayProperty=fullName> ます。 この例では、提供されたアセンブリ内のクラスは、 <xref:System.Windows.Forms.Form> プラグインとして修飾されるクラスから派生する必要があります。
 
-互換性のあるクラスがインスタンス化し、<xref:System.Activator.CreateInstance%2A?displayProperty=fullName>を受け入れ、メソッド、<xref:System.Type>を引数として、新しいインスタンスにポインターを返します。 それぞれの新しいインスタンスは、フォームにアタッチされ、表示されます。
+互換性のあるクラスは、メソッドを使用してインスタンス化され <xref:System.Activator.CreateInstance%2A?displayProperty=fullName> ます。このメソッドは、を <xref:System.Type> 引数として受け取り、新しいインスタンスへのポインターを返します。 次に、新しいインスタンスがフォームにアタッチされて表示されます。
 
-なお、<xref:System.Reflection.Assembly.Load%2A>メソッドは、ファイル拡張子を含むアセンブリ名を受け付けません。 アプリケーションでは、メインの関数は、次のコード例は、いずれの場合も動作するように指定された拡張子をトリムします。
+メソッドでは、 <xref:System.Reflection.Assembly.Load%2A> ファイル拡張子を含むアセンブリ名を使用できないことに注意してください。 アプリケーションの main 関数は、指定されたすべての拡張機能をトリミングします。そのため、次のコード例はいずれの場合でも機能します。
 
 ### <a name="example"></a>例
 
-次のコードをプラグインを受け付けるアプリケーションを定義します。アセンブリ名は、最初の引数として指定する必要があります。 このアセンブリは、少なくとも 1 つのパブリックを含める必要があります<xref:System.Windows.Forms.Form>派生型。
+次のコードは、プラグインを受け入れるアプリケーションを定義します。最初の引数としてアセンブリ名を指定する必要があります。 このアセンブリには、少なくとも1つのパブリック派生型が含まれている必要があり <xref:System.Windows.Forms.Form> ます。
 
 ```cpp
 // plugin_application.cpp
@@ -290,7 +291,7 @@ int main() {
 
 ### <a name="example"></a>例
 
-次のコードから派生した 3 つのクラスを定義する<xref:System.Windows.Forms.Form>します。 結果として得られるアセンブリ名の名前が前の一覧で、実行可能ファイルに渡されると、これら 3 つのクラスの各が検出され、コンパイル時に、ホスト アプリケーションに認識されているすべてがされていないことにもかかわらず、インスタンス化します。
+次のコードは、から派生した3つのクラスを定義し <xref:System.Windows.Forms.Form> ます。 生成されたアセンブリ名の名前が前の一覧の実行可能ファイルに渡されると、コンパイル時にそれらの3つのクラスがすべて検出され、インスタンス化されます。
 
 ```cpp
 // plugin_assembly.cpp
@@ -340,13 +341,13 @@ protected:
 };
 ```
 
-## <a name="enumerate"></a>方法: リフレクションを使用してアセンブリ内のデータ型を列挙します。
+## <a name="how-to-enumerate-data-types-in-assemblies-using-reflection"></a><a name="enumerate"></a> 方法: リフレクションを使用してアセンブリ内のデータ型を列挙する
 
-次の例では、パブリック型とメンバーを使用しての列挙体<xref:System.Reflection>します。
+次のコードは、を使用したパブリック型とメンバーの列挙を示して <xref:System.Reflection> います。
 
-次のコードは、ローカル ディレクトリまたは GAC にアセンブリの名前を指定、アセンブリを開くし、説明の取得を試行します。 成功した場合は、種類ごとに、そのパブリック メンバーが表示されます。
+ローカルディレクトリまたは GAC にアセンブリの名前が指定されている場合、次のコードはアセンブリを開き、説明を取得しようとします。 成功した場合、各型はパブリックメンバーと共に表示されます。
 
-なお<xref:System.Reflection.Assembly.Load%2A?displayProperty=fullName>ファイル拡張子が使用されていないことが必要です。 そのため、コマンドライン引数として"mscorlib.dll"を使用して、失敗しますだけ"mscorlib"を使用すると、.NET Framework 型の表示中。 アセンブリ名が指定されていない場合、コードが検出し、現在のアセンブリ内の型 (このコードから生成された EXE) を報告します。
+で <xref:System.Reflection.Assembly.Load%2A?displayProperty=fullName> は、ファイル拡張子を使用しないことが必要です。 したがって、コマンドライン引数として "mscorlib.dll" を使用すると失敗しますが、"mscorlib" だけを使用すると、.NET Framework の種類が表示されます。 アセンブリ名が指定されていない場合、コードは現在のアセンブリ内の型を検出して報告します (このコードによって生成される EXE)。
 
 ### <a name="example"></a>例
 
@@ -399,4 +400,4 @@ int main() {
 
 ## <a name="see-also"></a>関連項目
 
-- [C++/CLI (Visual C++) による .NET プログラミング](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
+- [C++/CLI を使用した .NET プログラミング (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
