@@ -1,4 +1,5 @@
 ---
+description: 詳しくは、「チェックを行う反復子」をご覧ください。
 title: Checked Iterators
 ms.date: 11/04/2016
 f1_keywords:
@@ -10,18 +11,18 @@ helpviewer_keywords:
 - iterators, checked
 - checked iterators
 ms.assetid: cfc87df8-e3d9-403b-ab78-e9483247d940
-ms.openlocfilehash: 2327638208f30908cd3429ae656ce569f5821195
-ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
+ms.openlocfilehash: affa280bf967727a08449cc4f488c3a984e32b0c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90684904"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97234281"
 ---
 # <a name="checked-iterators"></a>Checked Iterators
 
 チェックを行う反復子は、コンテナーの境界が上書きされないようにします。 チェックを行う反復子は、リリース ビルドおよびデバッグ ビルドの両方に適用されます。 デバッグ モードでのコンパイル時に debug 反復子を使用する方法の詳細については、「[debug 反復子のサポート](../standard-library/debug-iterator-support.md)」を参照してください。
 
-## <a name="remarks"></a>注釈
+## <a name="remarks"></a>解説
 
 チェックを行う反復子によって生成される警告を無効にする方法の詳細については、「[_SCL_SECURE_NO_WARNINGS](../standard-library/scl-secure-no-warnings.md)」を参照してください。
 

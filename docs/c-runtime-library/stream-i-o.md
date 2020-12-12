@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「ストリーム入出力」を参照してください。
 title: ストリーム入出力
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - I/O [CRT], stream
 - stream I/O
 ms.assetid: dc7874d3-a91b-456a-9015-4748bb358217
-ms.openlocfilehash: 8bff3cd74dfe4b1e3aa749ec28a361dd4a09c2f7
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: a787d83390239679ad48c2ca09b41f567a0a8c95
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87231248"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97235672"
 ---
 # <a name="stream-io"></a>ストリーム入出力
 
@@ -19,7 +20,7 @@ ms.locfileid: "87231248"
 
 ## <a name="stream-io-routines"></a>ストリーム入出力ルーチン
 
-|ルーチンによって返される値|用途|
+|ルーチンによって返される値|使用|
 |-------------|---------|
 |[clearerr](../c-runtime-library/reference/clearerr.md)、[clearerr_s](../c-runtime-library/reference/clearerr-s.md)|ストリームのクリア エラー インジケーター|
 |[fclose](../c-runtime-library/reference/fclose-fcloseall.md)|ストリームを閉じる|
@@ -57,7 +58,7 @@ ms.locfileid: "87231248"
 |[putchar、putwchar](../c-runtime-library/reference/putc-putwc.md)|**stdout** に文字を書き込む (**fputchar** および **fputwchar** のマクロ バージョン)|
 |[puts、_putws](../c-runtime-library/reference/puts-putws.md)|ストリームに行を書き込む|
 |[_putw](../c-runtime-library/reference/putw.md)|**`int`** ストリームにバイナリを書き込む|
-|[rewind](../c-runtime-library/reference/rewind.md)|ファイルの位置をストリームの先頭に移動する|
+|[巻き](../c-runtime-library/reference/rewind.md)|ファイルの位置をストリームの先頭に移動する|
 |[_rmtmp](../c-runtime-library/reference/rmtmp.md)|**tmpfile** によって作成された一時ファイルを削除する|
 |[scanf、_scanf_l、wscanf、_wscanf_l](../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md)、[scanf_s、_scanf_s_l、wscanf_s、_wscanf_s_l](../c-runtime-library/reference/scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md)|**stdin** から書式付きデータを読み取る|
 |[setbuf](../c-runtime-library/reference/setbuf.md)|ストリーム バッファリングを制御する|

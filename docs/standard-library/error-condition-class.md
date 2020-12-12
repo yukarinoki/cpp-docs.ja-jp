@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: error_condition クラス'
 title: error_condition クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -17,12 +18,12 @@ helpviewer_keywords:
 - std::error_condition::clear
 - std::error_condition::message
 ms.assetid: 6690f481-97c9-4554-a0ff-851dc96b7a06
-ms.openlocfilehash: 1708a3f560f60fe3933406a904d95b4d29890a7f
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 6567a4406271147eadfdc9e9443ba333d931afba
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88830775"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97232682"
 ---
 # <a name="error_condition-class"></a>error_condition クラス
 
@@ -52,7 +53,7 @@ class error_condition;
 |-|-|
 |[value_type](#value_type)|格納されたエラー コード値を表す型。|
 
-### <a name="functions"></a>Functions
+### <a name="functions"></a>関数
 
 |名前|説明|
 |-|-|
@@ -61,7 +62,7 @@ class error_condition;
 |[オフ](#clear)|エラー コード値とカテゴリをクリアします。|
 |[message](#message)|エラー コードの名前を返します。|
 
-### <a name="operators"></a>演算子
+### <a name="operators"></a>オペレーター
 
 |名前|説明|
 |-|-|
@@ -89,7 +90,7 @@ void assign(value_type val, const error_category& _Cat);
 
 #### <a name="remarks"></a>解説
 
-このメンバー関数は、エラーコード値として *val* を格納し、 *_Cat*へのポインターを格納します。
+このメンバー関数は、エラーコード値として *val* を格納し、 *_Cat* へのポインターを格納します。
 
 ### <a name="category"></a><a name="category"></a> 別
 
@@ -203,7 +204,7 @@ bool operator!=(const error_condition& right) const;
 
 #### <a name="return-value"></a>戻り値
 
-**`true`**`error_condition`オブジェクトが、渡されたオブジェクトと等しくない場合は `error_condition` 。それ以外*right*の場合は **`false`** 。
+**`true`**`error_condition`オブジェクトが、渡されたオブジェクトと等しくない場合は `error_condition` 。それ以外の場合は **`false`** 。
 
 #### <a name="remarks"></a>解説
 

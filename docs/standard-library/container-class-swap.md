@@ -1,22 +1,23 @@
 ---
+description: '詳細については、コンテナークラス:: swap に関するページを参照してください。'
 title: コンテナー クラス::swap
 ms.date: 11/04/2016
 helpviewer_keywords:
 - swap method
 ms.assetid: 898c219c-bc8e-4d14-a149-6240426c693f
-ms.openlocfilehash: ccf4ae6ebc3ca13a42ca950310a60e30dbb27034
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: a38dd6d14ada3ad50927060ccec1542ebf2fd4ca
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68450772"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97233358"
 ---
 # <a name="container-classswap"></a>コンテナー クラス::swap
 
 > [!NOTE]
-> このトピックは、 C++ C++標準ライブラリで使用されているコンテナーの非機能例として、Microsoft ドキュメントに記載されています。 詳細については、「[C++ Standard Library Containers (C++ 標準ライブラリ コンテナ―)](../standard-library/stl-containers.md)」をご覧ください。
+> このトピックは、C++ 標準ライブラリで使用されるコンテナーの非機能例として、Microsoft C++ ドキュメントに記載されています。 詳細については、「[C++ 標準ライブラリ コンテナー](../standard-library/stl-containers.md)」を参照してください。
 
-**\*this** とその引数の間で被制御シーケンスを交換します。
+**\* この** とその引数の間で被制御シーケンスを交換します。
 
 ## <a name="syntax"></a>構文
 
@@ -24,10 +25,10 @@ ms.locfileid: "68450772"
 void swap(Container& right);
 ```
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-**\*this.get\_allocator ==** _right_ **.get_allocator** の場合、一定時間で交換します。 それ以外の場合、2 つの被制御シーケンス内の要素数に比例した回数、要素の割り当てとコンストラクター呼び出しが実行されます。
+この場合、 **\* \_ アロケーター = =** _right_**.get_allocator** を取得すると、一定の時間だけスワップが実行されます。 それ以外の場合、2 つの被制御シーケンス内の要素数に比例した回数、要素の割り当てとコンストラクター呼び出しが実行されます。
 
 ## <a name="see-also"></a>関連項目
 
-[サンプル コンテナー クラス](../standard-library/sample-container-class.md)
+[サンプルコンテナークラス](../standard-library/sample-container-class.md)

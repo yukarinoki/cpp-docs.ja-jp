@@ -1,20 +1,21 @@
 ---
+description: '詳細については、「コンテナークラス:: clear」を参照してください。'
 title: コンテナー クラス::clear
 ms.date: 11/04/2016
 helpviewer_keywords:
 - clear method
 ms.assetid: 725f2717-5dc2-428f-a19a-05f046aafb2b
-ms.openlocfilehash: 8727db5df8014519381b05343d7145238b6267e0
-ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
+ms.openlocfilehash: a309775e9c90450076ffd49cc56a2390036d7a48
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77258251"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97233592"
 ---
 # <a name="container-classclear"></a>コンテナー クラス::clear
 
 > [!NOTE]
-> このトピックは、 C++ C++標準ライブラリで使用されているコンテナーの非機能例として、Microsoft ドキュメントに記載されています。 詳しくは、「[C++ 標準ライブラリのコンテナー](../standard-library/stl-containers.md)」をご覧ください。
+> このトピックは、C++ 標準ライブラリで使用されるコンテナーの非機能例として、Microsoft C++ ドキュメントに記載されています。 詳細については、「[C++ 標準ライブラリ コンテナー](../standard-library/stl-containers.md)」を参照してください。
 
 [erase](../standard-library/container-class-erase.md)([begin](../standard-library/container-class-begin.md), [end](../standard-library/container-class-end.md)) を呼び出します。
 
@@ -24,6 +25,6 @@ ms.locfileid: "77258251"
 void clear();
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[サンプル コンテナー クラス](../standard-library/sample-container-class.md)
+[サンプルコンテナークラス](../standard-library/sample-container-class.md)

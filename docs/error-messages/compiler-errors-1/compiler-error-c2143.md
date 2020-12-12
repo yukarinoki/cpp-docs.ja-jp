@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「コンパイラエラー C2143」を参照してください。
 title: コンパイラ エラー C2143
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2143
 ms.assetid: 1d8d1456-e031-4965-9240-09a6e33ba81c
-ms.openlocfilehash: 310083a650f842c6c0f0912efe1ceddb66c4fd6f
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 4218a14520016ef7b9180c2f5c8c7ddee55ffec7
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87214751"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97235516"
 ---
 # <a name="compiler-error-c2143"></a>コンパイラ エラー C2143
 
@@ -47,7 +48,7 @@ class MyClass
 };
 ```
 
-C2143 は、 **/clr**が使用され、ディレクティブに構文エラーがある場合に発生する可能性があり **`using`** ます。
+C2143 は、 **/clr** が使用され、ディレクティブに構文エラーがある場合に発生する可能性があり **`using`** ます。
 
 ```cpp
 // C2143a.cpp
@@ -56,7 +57,7 @@ using namespace System.Reflection;   // C2143
 using namespace System::Reflection;
 ```
 
-また、 **/clr**を使用せずに CLR 構文を使用してソースコードファイルをコンパイルしようとした場合にも発生することがあります。
+また、 **/clr** を使用せずに CLR 構文を使用してソースコードファイルをコンパイルしようとした場合にも発生することがあります。
 
 ```cpp
 // C2143b.cpp

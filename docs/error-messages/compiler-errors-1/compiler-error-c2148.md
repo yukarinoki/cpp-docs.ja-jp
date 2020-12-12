@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「コンパイラエラー C2148」を参照してください。
 title: コンパイラ エラー C2148
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2148
 ms.assetid: e510c2c9-7b57-4ce8-be03-ba363e2cc5d9
-ms.openlocfilehash: aac14024e7ed2942eaf80c45817ba9c208e7e1ce
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 253d3d491a17002ab885649c010190833c59f687
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74756501"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97235360"
 ---
 # <a name="compiler-error-c2148"></a>コンパイラ エラー C2148
 
@@ -19,7 +20,7 @@ ms.locfileid: "74756501"
 
 配列が制限を超えています。 配列のサイズを小さくします。
 
-## <a name="example"></a>使用例
+## <a name="example"></a>例
 
 次の例では、C2148 が生成されます。
 

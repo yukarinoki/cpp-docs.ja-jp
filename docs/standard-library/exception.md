@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: &lt; exception&gt;'
 title: '&lt;exception&gt;'
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - exception header
 ms.assetid: 28900768-5dd7-4834-b907-5e37ab3407db
-ms.openlocfilehash: 1533e8238b40f6ca5dc6faaef35a65db9020defd
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: b4cba2def6416e7bcabb8d769e92c7c7f2af4281
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88835970"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97232526"
 ---
 # <a name="ltexceptiongt"></a>&lt;exception&gt;
 
 例外の処理に関連する型と関数を定義します。 例外処理は、システムがエラーから回復できる場合に使用されます。 例外処理では、関数からプログラムへ制御を返すための方法を利用できます。 例外処理を組み込む目的は、規則的な手順でエラーから回復する方法を実施して、プログラムの信頼性を向上させることです。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:**\<exception>
 
@@ -33,7 +34,7 @@ ms.locfileid: "88835970"
 |[terminate_handler](../standard-library/exception-typedefs.md#terminate_handler)|`terminate_handler` として使用するのに適した関数へのポインターを表す型。|
 |[unexpected_handler](../standard-library/exception-typedefs.md#unexpected_handler)|`unexpected_handler` として使用するのに適した関数へのポインターを表す型。|
 
-### <a name="functions"></a>Functions
+### <a name="functions"></a>関数
 
 |名前|説明|
 |-|-|

@@ -1,15 +1,16 @@
 ---
+description: 詳細については、「出力ストリームオブジェクトの構築」を参照してください。
 title: 出力ストリーム オブジェクトのコンストラクト
 ms.date: 11/04/2016
 helpviewer_keywords:
 - output stream objects
 ms.assetid: 93c8eab6-610c-4f48-b76d-1d960cac7641
-ms.openlocfilehash: d7bec211f30986deccc869a879dd5155ea70996b
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: e730e4cb675b216fa56b5624feb69fadcd61400a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68457281"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97233644"
 ---
 # <a name="constructing-output-stream-objects"></a>出力ストリーム オブジェクトのコンストラクト
 
@@ -17,9 +18,9 @@ ms.locfileid: "68457281"
 
 - [出力ファイル ストリーム コンストラクター](#vclrfoutputfilestreamconstructorsanchor1)
 
-- [出力文字列ストリーム コンストラクター](#vclrfoutputstringstreamconstructorsanchor2)
+- [出力文字列ストリームコンストラクター](#vclrfoutputstringstreamconstructorsanchor2)
 
-## <a name="vclrfoutputfilestreamconstructorsanchor1"></a> 出力ファイル ストリーム コンストラクター
+## <a name="output-file-stream-constructors"></a><a name="vclrfoutputfilestreamconstructorsanchor1"></a> 出力ファイルストリームコンストラクター
 
 2 つの方法のいずれかで、出力ファイル ストリームをコンストラクトできます。
 
@@ -39,7 +40,7 @@ ms.locfileid: "68457281"
    ofstream myFile("filename", ios_base::out);
    ```
 
-## <a name="vclrfoutputstringstreamconstructorsanchor2"></a> 出力文字列ストリーム コンストラクター
+## <a name="output-string-stream-constructors"></a><a name="vclrfoutputstringstreamconstructorsanchor2"></a> 出力文字列ストリーム コンストラクター
 
 出力文字列ストリームをコンストラクトするには、次のように `ostringstream` を使うことができます。
 

@@ -1,20 +1,21 @@
 ---
+description: '詳細情報: &lt; chrono &gt; functions'
 title: '&lt;chrono&gt; 関数'
 ms.date: 11/04/2016
 f1_keywords:
 - chrono/std::duration_cast
 - chrono/std::time_point_cast
 ms.assetid: d6800e15-77a1-4df3-900e-d8b2fee190c7
-ms.openlocfilehash: 85fdd413354b3f310d3315a80cf7da983cf6621d
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 161edeccace243c10a6382d931f5f9387f35790d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79423949"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97234203"
 ---
 # <a name="ltchronogt-functions"></a>&lt;chrono&gt; 関数
 
-## <a name="duration_cast"></a>duration_cast
+## <a name="duration_cast"></a><a name="duration_cast"></a> duration_cast
 
 `duration` オブジェクトを指定した型にキャストします。
 
@@ -38,7 +39,7 @@ constexpr ToDuration round(const duration<Rep, Period>& d);
 
 `To` が `duration` のインスタンス化の場合、この関数はオーバーロードの解決に関与しません。
 
-## <a name="time_point_cast"></a>time_point_cast
+## <a name="time_point_cast"></a><a name="time_point_cast"></a> time_point_cast
 
 [time_point](../standard-library/time-point-class.md) オブジェクトを指定した型にキャストします。
 

@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: &lt; ios &gt; functions'
 title: '&lt;ios&gt; 関数'
 ms.date: 11/04/2016
 f1_keywords:
@@ -56,16 +57,16 @@ helpviewer_keywords:
 - std::skipws [C++]
 - std::unitbuf [C++]
 - std::uppercase [C++]
-ms.openlocfilehash: a750f17ba8eba40dd01a2fb4a89e47a0927e4b61
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 82353509be371f9292c05947dbc4221bb0e74b05
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87212294"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97231434"
 ---
 # <a name="ltiosgt-functions"></a>&lt;ios&gt; 関数
 
-## <a name="boolalpha"></a><a name="boolalpha"></a>boolalpha
+## <a name="boolalpha"></a><a name="boolalpha"></a> boolalpha
 
 [Bool](../cpp/bool-cpp.md)型の変数を **`true`** ストリームでまたはとして表示するように指定し **`false`** ます。
 
@@ -80,13 +81,13 @@ ios_base& boolalpha(ios_base& str);
 
 ### <a name="return-value"></a>戻り値
 
-*Str*の派生元であるオブジェクトへの参照。
+*Str* の派生元であるオブジェクトへの参照。
 
 ### <a name="remarks"></a>解説
 
 既定では、型の変数 **`bool`** は1または0として表示されます。
 
-`boolalpha`は実質的 `str.` に[setf](../standard-library/ios-base-class.md#setf)( `ios_base::boolalpha` ) を呼び出し、次に*str*を返します。
+`boolalpha`は実質的 `str.` に [setf](../standard-library/ios-base-class.md#setf)( `ios_base::boolalpha` ) を呼び出し、次に *str* を返します。
 
 [noboolalpha](../standard-library/ios-functions.md#noboolalpha) は `boolalpha` の実行結果を元に戻します。
 
@@ -117,7 +118,7 @@ true
 true
 ```
 
-## <a name="dec"></a><a name="dec"></a>alpha
+## <a name="dec"></a><a name="dec"></a> alpha
 
 整数変数を 10 進表記で表示するように指定します。
 
@@ -132,13 +133,13 @@ ios_base& dec(ios_base& str);
 
 ### <a name="return-value"></a>戻り値
 
-*Str*の派生元であるオブジェクトへの参照。
+*Str* の派生元であるオブジェクトへの参照。
 
 ### <a name="remarks"></a>解説
 
 既定では、整数変数は、10 進表記で表示されます。
 
-`dec`は実質的に `str.` [setf](../standard-library/ios-base-class.md#setf)( `ios_base::dec` , `ios_base::basefield` ) を呼び出し、次に*str*を返します。
+`dec`は実質的に `str.` [setf](../standard-library/ios-base-class.md#setf)( `ios_base::dec` , `ios_base::basefield` ) を呼び出し、次に *str* を返します。
 
 ### <a name="example"></a>例
 
@@ -185,9 +186,9 @@ ios_base& defaultfloat(ios_base& iosbase);
 
 ### <a name="remarks"></a>Remarks
 
-マニピュレーターは実質的 `iosbase.` に[ios_base:: unsetf](../standard-library/ios-base-class.md#unsetf) `(ios_base::floatfield)` を呼び出し、次に*iosbase. flags*を返します。
+マニピュレーターは実質的 `iosbase.` に [ios_base:: unsetf](../standard-library/ios-base-class.md#unsetf) `(ios_base::floatfield)` を呼び出し、次に *iosbase. flags* を返します。
 
-## <a name="fixed"></a><a name="fixed"></a>固定
+## <a name="fixed"></a><a name="fixed"></a> 固定
 
 浮動小数点数を固定 10 進表記で表示するように指定します。
 
@@ -202,13 +203,13 @@ ios_base& fixed(ios_base& str);
 
 ### <a name="return-value"></a>戻り値
 
-*Str*の派生元であるオブジェクトへの参照。
+*Str* の派生元であるオブジェクトへの参照。
 
 ### <a name="remarks"></a>解説
 
-`fixed`は、浮動小数点数の既定の表示表記です。 [scientific](../standard-library/ios-functions.md#scientific) は、浮動小数点数を指数表記を使用して表示します。
+`fixed` は、浮動小数点数の既定の表示表記です。 [scientific](../standard-library/ios-functions.md#scientific) は、浮動小数点数を指数表記を使用して表示します。
 
-マニピュレーターは実質的に*str*を呼び出します。[setf](../standard-library/ios-base-class.md#setf)( `ios_base::fixed` , `ios_base::floatfield` ),、 *str*を返します。
+マニピュレーターは実質的に *str* を呼び出します。[setf](../standard-library/ios-base-class.md#setf)( `ios_base::fixed` , `ios_base::floatfield` ),、 *str* を返します。
 
 ### <a name="example"></a>例
 
@@ -235,7 +236,7 @@ int main( )
 1.1
 ```
 
-## <a name="hex"></a><a name="hex"></a>表記
+## <a name="hex"></a><a name="hex"></a> 表記
 
 整数変数を 16 進表記で表示するように指定します。
 
@@ -250,25 +251,25 @@ ios_base& hex(ios_base& str);
 
 ### <a name="return-value"></a>戻り値
 
-*Str*の派生元であるオブジェクトへの参照。
+*Str* の派生元であるオブジェクトへの参照。
 
 ### <a name="remarks"></a>解説
 
 既定では、整数変数は、10 進表記で表示されます。 [dec](../standard-library/ios-functions.md#dec) および [oct](../standard-library/ios-functions.md#oct) も整数変数の表示方法を変更します。
 
-マニピュレーターは実質的に `str` **を呼び出します。**[setf](../standard-library/ios-base-class.md#setf)( `ios_base::hex` , `ios_base::basefield` ),、 *str*を返します。
+マニピュレーターは実質的に `str` **を呼び出します。**[setf](../standard-library/ios-base-class.md#setf)( `ios_base::hex` , `ios_base::basefield` ),、 *str* を返します。
 
 ### <a name="example"></a>例
 
 の使用例については、「 [dec](../standard-library/ios-functions.md#dec) 」を参照してください `hex` 。
 
-## <a name="hexfloat"></a><a name="hexfloat"></a>hexfloat
+## <a name="hexfloat"></a><a name="hexfloat"></a> hexfloat
 
 ```cpp
 ios_base& hexfloat (ios_base& str);
 ```
 
-## <a name="io_errc"></a><a name="io_errc"></a>io_errc
+## <a name="io_errc"></a><a name="io_errc"></a> io_errc
 
 ```cpp
 enum class io_errc {
@@ -276,7 +277,7 @@ enum class io_errc {
 };
 ```
 
-## <a name="internal"></a><a name="internal"></a>イントラネット
+## <a name="internal"></a><a name="internal"></a> イントラネット
 
 数値の符号を左揃え、数値を右揃えにします。
 
@@ -291,13 +292,13 @@ ios_base& internal(ios_base& str);
 
 ### <a name="return-value"></a>戻り値
 
-*Str*の派生元であるオブジェクトへの参照。
+*Str* の派生元であるオブジェクトへの参照。
 
 ### <a name="remarks"></a>解説
 
 [showpos](../standard-library/ios-functions.md#showpos) によって、正の数値に符号が表示されます。
 
-マニピュレーターは実質的に `str.` [setf](../standard-library/ios-base-class.md#setf) `(` [ios_base:: internal](../standard-library/ios-base-class.md#fmtflags) `,` [ios_base:: adjustfield](../standard-library/ios-base-class.md#fmtflags) `)` を呼び出し、次に*str*を返します。
+マニピュレーターは実質的に `str.` [setf](../standard-library/ios-base-class.md#setf) `(` [ios_base:: internal](../standard-library/ios-base-class.md#fmtflags) `,` [ios_base:: adjustfield](../standard-library/ios-base-class.md#fmtflags) `)` を呼び出し、次に *str* を返します。
 
 ### <a name="example"></a>例
 
@@ -322,19 +323,19 @@ int main( void )
 -..123.456
 ```
 
-## <a name="is_error_code_enum"></a><a name="is_error_code_enum"></a>is_error_code_enum
+## <a name="is_error_code_enum"></a><a name="is_error_code_enum"></a> is_error_code_enum
 
 ```cpp
 template <> struct is_error_code_enum<io_errc> : public true_type { };
 ```
 
-## <a name="iostream_category"></a><a name="iostream_category"></a>iostream_category
+## <a name="iostream_category"></a><a name="iostream_category"></a> iostream_category
 
 ```cpp
 const error_category& iostream_category() noexcept;
 ```
 
-## <a name="left"></a><a name="left"></a>左側
+## <a name="left"></a><a name="left"></a> 左側
 
 出力幅に満たないテキストをストリーム フラッシュで左揃えに表示します。
 
@@ -349,11 +350,11 @@ ios_base& left(ios_base& str);
 
 ### <a name="return-value"></a>戻り値
 
-*Str*の派生元であるオブジェクトへの参照。
+*Str* の派生元であるオブジェクトへの参照。
 
 ### <a name="remarks"></a>解説
 
-マニピュレーターは実質的 `str.` に[setf](../standard-library/ios-base-class.md#setf) `(ios_base::left, ios_base::adjustfield)` を呼び出し、次に*str*を返します。
+マニピュレーターは実質的 `str.` に [setf](../standard-library/ios-base-class.md#setf) `(ios_base::left, ios_base::adjustfield)` を呼び出し、次に *str* を返します。
 
 ### <a name="example"></a>例
 
@@ -377,19 +378,19 @@ int main( )
         5
 ```
 
-## <a name="make_error_code"></a><a name="make_error_code"></a>make_error_code
+## <a name="make_error_code"></a><a name="make_error_code"></a> make_error_code
 
 ```cpp
 error_code make_error_code(io_errc e) noexcept;
 ```
 
-## <a name="make_error_condition"></a><a name="make_error_condition"></a>make_error_condition
+## <a name="make_error_condition"></a><a name="make_error_condition"></a> make_error_condition
 
 ```cpp
 error_condition make_error_condition(io_errc e) noexcept;
 ```
 
-## <a name="noboolalpha"></a><a name="noboolalpha"></a>noブールアルファ
+## <a name="noboolalpha"></a><a name="noboolalpha"></a> noブールアルファ
 
 [bool](../cpp/bool-cpp.md) 型の変数をストリームで 1 または 0 として表示するように指定します。
 
@@ -404,13 +405,13 @@ ios_base& noboolalpha(ios_base& str);
 
 ### <a name="return-value"></a>戻り値
 
-*Str*の派生元であるオブジェクトへの参照。
+*Str* の派生元であるオブジェクトへの参照。
 
 ### <a name="remarks"></a>解説
 
 既定では、`noboolalpha` は有効です。
 
-`noboolalpha`は実質的 `str.` に[unsetf](../standard-library/ios-base-class.md#unsetf) `(ios_base::boolalpha)` を呼び出し、次に*str*を返します。
+`noboolalpha`は実質的 `str.` に [unsetf](../standard-library/ios-base-class.md#unsetf) `(ios_base::boolalpha)` を呼び出し、次に *str* を返します。
 
 [boolalpha](../standard-library/ios-functions.md#boolalpha) は `noboolalpha` の実行結果を元に戻します。
 
@@ -418,7 +419,7 @@ ios_base& noboolalpha(ios_base& str);
 
 `noboolalpha` の使用例については、「[boolalpha](../standard-library/ios-functions.md#boolalpha)」を参照してください。
 
-## <a name="noshowbase"></a><a name="noshowbase"></a>noshowbase
+## <a name="noshowbase"></a><a name="noshowbase"></a> noshowbase
 
 指定している数値表記の基底の設定をオフにします。
 
@@ -433,19 +434,19 @@ ios_base& noshowbase(ios_base& str);
 
 ### <a name="return-value"></a>戻り値
 
-*Str*の派生元であるオブジェクトへの参照。
+*Str* の派生元であるオブジェクトへの参照。
 
 ### <a name="remarks"></a>解説
 
 `noshowbase` は既定でオンです。 [showbase](../standard-library/ios-functions.md#showbase) を使用して、数値表記の基底を示します。
 
-マニピュレーターは実質的 `str.` に[unsetf](../standard-library/ios-base-class.md#unsetf) `(ios_base::showbase)` を呼び出し、次に*str*を返します。
+マニピュレーターは実質的 `str.` に [unsetf](../standard-library/ios-base-class.md#unsetf) `(ios_base::showbase)` を呼び出し、次に *str* を返します。
 
 ### <a name="example"></a>例
 
 `noshowbase` の使用例については、「[showbase](../standard-library/ios-functions.md#showbase)」を参照してください。
 
-## <a name="noshowpoint"></a><a name="noshowpoint"></a>noshowpoint
+## <a name="noshowpoint"></a><a name="noshowpoint"></a> noshowpoint
 
 小数部分が 0 の浮動小数点数の整数部分のみを表示します。
 
@@ -460,13 +461,13 @@ ios_base& noshowpoint(ios_base& str);
 
 ### <a name="return-value"></a>戻り値
 
-*Str*の派生元であるオブジェクトへの参照。
+*Str* の派生元であるオブジェクトへの参照。
 
 ### <a name="remarks"></a>解説
 
 `noshowpoint` は既定ではオンです。[showpoint](../standard-library/ios-functions.md#showpoint) と [precision](../standard-library/ios-base-class.md#precision) を使用して、小数点の後に 0 を表示します。
 
-マニピュレーターは実質的 `str.` に[unsetf](../standard-library/ios-base-class.md#unsetf) `(ios_base::showpoint)` を呼び出し、次に*str*を返します。
+マニピュレーターは実質的 `str.` に [unsetf](../standard-library/ios-base-class.md#unsetf) `(ios_base::showpoint)` を呼び出し、次に *str* を返します。
 
 ### <a name="example"></a>例
 
@@ -492,7 +493,7 @@ int main( )
 5
 ```
 
-## <a name="noshowpos"></a><a name="noshowpos"></a>noshowpos
+## <a name="noshowpos"></a><a name="noshowpos"></a> noshowpos
 
 正の数値に明示的に符号を付けないようにします。
 
@@ -507,19 +508,19 @@ ios_base& noshowpos(ios_base& str);
 
 ### <a name="return-value"></a>戻り値
 
-*Str*の派生元であるオブジェクトへの参照。
+*Str* の派生元であるオブジェクトへの参照。
 
 ### <a name="remarks"></a>解説
 
 `noshowpos` は既定でオンです。
 
-マニピュレーターは実質的 `str.` に[unsetf](../standard-library/ios-base-class.md#unsetf) `(ios_base::showps)` を呼び出し、次に*str*を返します。
+マニピュレーターは実質的 `str.` に [unsetf](../standard-library/ios-base-class.md#unsetf) `(ios_base::showps)` を呼び出し、次に *str* を返します。
 
 ### <a name="example"></a>例
 
 `noshowpos` の使用例については、「[showpos](../standard-library/ios-functions.md#showpos)」を参照してください。
 
-## <a name="noskipws"></a><a name="noskipws"></a>noskipws
+## <a name="noskipws"></a><a name="noskipws"></a> noskipws
 
 入力ストリームで空白を読み取るようにします。
 
@@ -534,13 +535,13 @@ ios_base& noskipws(ios_base& str);
 
 ### <a name="return-value"></a>戻り値
 
-*Str*の派生元であるオブジェクトへの参照。
+*Str* の派生元であるオブジェクトへの参照。
 
 ### <a name="remarks"></a>解説
 
 既定では、[skipws](../standard-library/ios-functions.md#skipws) は有効です。 入力ストリームでスペースが読み込まれると、バッファーの終了を通知します。
 
-マニピュレーターは実質的 `str.` に[unsetf](../standard-library/ios-base-class.md#unsetf) `(ios_base::skipws)` を呼び出し、次に*str*を返します。
+マニピュレーターは実質的 `str.` に [unsetf](../standard-library/ios-base-class.md#unsetf) `(ios_base::skipws)` を呼び出し、次に *str* を返します。
 
 ### <a name="example"></a>例
 
@@ -561,7 +562,7 @@ int main() {
 }
 ```
 
-## <a name="nounitbuf"></a><a name="nounitbuf"></a>nounitbuf
+## <a name="nounitbuf"></a><a name="nounitbuf"></a> nounitbuf
 
 出力をバッファーし、バッファーが一杯になると、出力を処理します。
 
@@ -576,15 +577,15 @@ ios_base& nounitbuf(ios_base& str);
 
 ### <a name="return-value"></a>戻り値
 
-*Str*の派生元であるオブジェクトへの参照。
+*Str* の派生元であるオブジェクトへの参照。
 
 ### <a name="remarks"></a>解説
 
 [unitbuf](../standard-library/ios-functions.md#unitbuf) はバッファーが空ではないときに、バッファーを処理します。
 
-マニピュレーターは実質的 `str.` に[unsetf](../standard-library/ios-base-class.md#unsetf) `(ios_base::unitbuf)` を呼び出し、次に*str*を返します。
+マニピュレーターは実質的 `str.` に [unsetf](../standard-library/ios-base-class.md#unsetf) `(ios_base::unitbuf)` を呼び出し、次に *str* を返します。
 
-## <a name="nouppercase"></a><a name="nouppercase"></a>nouppercase
+## <a name="nouppercase"></a><a name="nouppercase"></a> nouppercase
 
 16 進数と指数表記の指数を小文字で表示します。
 
@@ -599,17 +600,17 @@ ios_base& nouppercase(ios_base& str);
 
 ### <a name="return-value"></a>戻り値
 
-*Str*の派生元であるオブジェクトへの参照。
+*Str* の派生元であるオブジェクトへの参照。
 
 ### <a name="remarks"></a>解説
 
-マニピュレーターは実質的 `str.` に[unsetf](../standard-library/ios-base-class.md#unsetf) `(ios_base::uppercase)` を呼び出し、次に*str*を返します。
+マニピュレーターは実質的 `str.` に [unsetf](../standard-library/ios-base-class.md#unsetf) `(ios_base::uppercase)` を呼び出し、次に *str* を返します。
 
 ### <a name="example"></a>例
 
 `nouppercase` の使用例については、「[uppercase](../standard-library/ios-functions.md#uppercase)」を参照してください。
 
-## <a name="oct"></a><a name="oct"></a>シンガポール
+## <a name="oct"></a><a name="oct"></a> シンガポール
 
 整数変数を 8 進表記で表示するように指定します。
 
@@ -624,19 +625,19 @@ ios_base& oct(ios_base& str);
 
 ### <a name="return-value"></a>戻り値
 
-*Str*の派生元であるオブジェクトへの参照。
+*Str* の派生元であるオブジェクトへの参照。
 
 ### <a name="remarks"></a>解説
 
 既定では、整数変数は、10 進表記で表示されます。 [dec](../standard-library/ios-functions.md#dec) および [hex](../standard-library/ios-functions.md#hex) も整数変数の表示方法を変更します。
 
-マニピュレーターは実質的 `str.` に[setf](../standard-library/ios-base-class.md#setf) `(ios_base::oct, ios_base::basefield)` を呼び出し、次に*str*を返します。
+マニピュレーターは実質的 `str.` に [setf](../standard-library/ios-base-class.md#setf) `(ios_base::oct, ios_base::basefield)` を呼び出し、次に *str* を返します。
 
 ### <a name="example"></a>例
 
 の使用例については、「 [dec](../standard-library/ios-functions.md#dec) 」を参照してください `oct` 。
 
-## <a name="right"></a><a name="right"></a>そうです
+## <a name="right"></a><a name="right"></a> そうです
 
 出力幅に満たないテキストをストリーム フラッシュで右揃えに表示します。
 
@@ -651,13 +652,13 @@ ios_base& right(ios_base& str);
 
 ### <a name="return-value"></a>戻り値
 
-*Str*の派生元であるオブジェクトへの参照。
+*Str* の派生元であるオブジェクトへの参照。
 
 ### <a name="remarks"></a>解説
 
 [left](../standard-library/ios-functions.md#left) もテキストの両端揃えを変更します。
 
-マニピュレーターは実質的 `str.` に[setf](../standard-library/ios-base-class.md#setf) `(ios_base::right, ios_base::adjustfield)` を呼び出し、次に*str*を返します。
+マニピュレーターは実質的 `str.` に [setf](../standard-library/ios-base-class.md#setf) `(ios_base::right, ios_base::adjustfield)` を呼び出し、次に *str* を返します。
 
 ### <a name="example"></a>例
 
@@ -693,7 +694,7 @@ int main( )
                    5
 ```
 
-## <a name="scientific"></a><a name="scientific"></a>学術
+## <a name="scientific"></a><a name="scientific"></a> 学術
 
 浮動小数点数を指数表記を使用して表示します。
 
@@ -708,13 +709,13 @@ ios_base& scientific(ios_base& str);
 
 ### <a name="return-value"></a>戻り値
 
-*Str*の派生元であるオブジェクトへの参照。
+*Str* の派生元であるオブジェクトへの参照。
 
 ### <a name="remarks"></a>解説
 
 既定では、[fixed](../standard-library/ios-functions.md#fixed) 表記は浮動小数点数に対して有効です。
 
-マニピュレーターは実質的 `str.` に[setf](../standard-library/ios-base-class.md#setf) `(ios_base::scientific, ios_base::floatfield)` を呼び出し、次に*str*を返します。
+マニピュレーターは実質的 `str.` に [setf](../standard-library/ios-base-class.md#setf) `(ios_base::scientific, ios_base::floatfield)` を呼び出し、次に *str* を返します。
 
 ### <a name="example"></a>例
 
@@ -738,7 +739,7 @@ int main( )
 1.002300e+002
 ```
 
-## <a name="showbase"></a><a name="showbase"></a>showbase
+## <a name="showbase"></a><a name="showbase"></a> showbase
 
 数値表記の基底を指定します。
 
@@ -753,13 +754,13 @@ ios_base& showbase(ios_base& str);
 
 ### <a name="return-value"></a>戻り値
 
-*Str*の派生元であるオブジェクトへの参照。
+*Str* の派生元であるオブジェクトへの参照。
 
 ### <a name="remarks"></a>解説
 
 数値表記の基底は、[dec](../standard-library/ios-functions.md#dec)、[oct](../standard-library/ios-functions.md#oct)、または [hex](../standard-library/ios-functions.md#hex) を使用して変更できます。
 
-マニピュレーターは実質的 `str.` に[setf](../standard-library/ios-base-class.md#setf) `(ios_base::showbase)` を呼び出し、次に*str*を返します。
+マニピュレーターは実質的 `str.` に [setf](../standard-library/ios-base-class.md#setf) `(ios_base::showbase)` を呼び出し、次に *str* を返します。
 
 ### <a name="example"></a>例
 
@@ -792,7 +793,7 @@ int main( )
 144
 ```
 
-## <a name="showpoint"></a><a name="showpoint"></a>showpoint
+## <a name="showpoint"></a><a name="showpoint"></a> showpoint
 
 小数部分が 0 のときも浮動小数点数の整数部分と小数点の右側にある数字を表示します。
 
@@ -807,19 +808,19 @@ ios_base& showpoint(ios_base& str);
 
 ### <a name="return-value"></a>戻り値
 
-*Str*の派生元であるオブジェクトへの参照。
+*Str* の派生元であるオブジェクトへの参照。
 
 ### <a name="remarks"></a>解説
 
 既定では、[noshowpoint](../standard-library/ios-functions.md#noshowpoint) は有効です。
 
-マニピュレーターは実質的 `str.` に[setf](../standard-library/ios-base-class.md#setf) `(ios_base::showpoint)` を呼び出し、次に*str*を返します。
+マニピュレーターは実質的 `str.` に [setf](../standard-library/ios-base-class.md#setf) `(ios_base::showpoint)` を呼び出し、次に *str* を返します。
 
 ### <a name="example"></a>例
 
 `showpoint` の使用例については、「[noshowpoint](../standard-library/ios-functions.md#noshowpoint)」を参照してください。
 
-## <a name="showpos"></a><a name="showpos"></a>showpos
+## <a name="showpos"></a><a name="showpos"></a> showpos
 
 正の数値に明示的に符号を付けます。
 
@@ -834,13 +835,13 @@ ios_base& showpos(ios_base& str);
 
 ### <a name="return-value"></a>戻り値
 
-*Str*の派生元であるオブジェクトへの参照。
+*Str* の派生元であるオブジェクトへの参照。
 
 ### <a name="remarks"></a>解説
 
 [noshowpos](../standard-library/ios-functions.md#noshowpos) が既定の設定です。
 
-マニピュレーターは実質的 `str.` に[setf](../standard-library/ios-base-class.md#setf) `(ios_base::showpos)` を呼び出し、次に*str*を返します。
+マニピュレーターは実質的 `str.` に [setf](../standard-library/ios-base-class.md#setf) `(ios_base::showpos)` を呼び出し、次に *str* を返します。
 
 ### <a name="example"></a>例
 
@@ -864,7 +865,7 @@ int main( )
 +1
 ```
 
-## <a name="skipws"></a><a name="skipws"></a>skipws
+## <a name="skipws"></a><a name="skipws"></a> skipws
 
 入力ストリームで空白を読み飛ばします。
 
@@ -879,13 +880,13 @@ ios_base& skipws(ios_base& str);
 
 ### <a name="return-value"></a>戻り値
 
-*Str*の派生元であるオブジェクトへの参照。
+*Str* の派生元であるオブジェクトへの参照。
 
 ### <a name="remarks"></a>解説
 
 既定では、`skipws` は有効です。 [noskipws](../standard-library/ios-functions.md#noskipws) は、入力ストリームから空白を読み取るようにします。
 
-マニピュレーターは実質的 `str.` に[setf](../standard-library/ios-base-class.md#setf) `(ios_base::skipws)` を呼び出し、次に*str*を返します。
+マニピュレーターは実質的 `str.` に [setf](../standard-library/ios-base-class.md#setf) `(ios_base::skipws)` を呼び出し、次に *str* を返します。
 
 ### <a name="example"></a>例
 
@@ -916,7 +917,7 @@ Enter three characters: 1 2 3
 .3.
 ```
 
-## <a name="unitbuf"></a><a name="unitbuf"></a>unitbuf
+## <a name="unitbuf"></a><a name="unitbuf"></a> unitbuf
 
 バッファーが空ではないときに、出力を処理します。
 
@@ -931,7 +932,7 @@ ios_base& unitbuf(ios_base& str);
 
 ### <a name="return-value"></a>戻り値
 
-*Str*の派生元であるオブジェクトへの参照。
+*Str* の派生元であるオブジェクトへの参照。
 
 ### <a name="remarks"></a>解説
 
@@ -939,9 +940,9 @@ ios_base& unitbuf(ios_base& str);
 
 既定では、[nounitbuf](../standard-library/ios-functions.md#nounitbuf) は有効です。
 
-マニピュレーターは実質的に `str.` [setf](../standard-library/ios-base-class.md#setf) `(` [ios_base:: unitbuf](../standard-library/ios-base-class.md#fmtflags) `)` を呼び出し、次に*str*を返します。
+マニピュレーターは実質的に `str.` [setf](../standard-library/ios-base-class.md#setf) `(` [ios_base:: unitbuf](../standard-library/ios-base-class.md#fmtflags) `)` を呼び出し、次に *str* を返します。
 
-## <a name="uppercase"></a><a name="uppercase"></a>大文字
+## <a name="uppercase"></a><a name="uppercase"></a> 大文字
 
 16 進数と指数表記の指数を大文字で表示します。
 
@@ -956,13 +957,13 @@ ios_base& uppercase(ios_base& str);
 
 ### <a name="return-value"></a>戻り値
 
-*Str*の派生元であるオブジェクトへの参照。
+*Str* の派生元であるオブジェクトへの参照。
 
 ### <a name="remarks"></a>解説
 
 既定では、[nouppercase](../standard-library/ios-functions.md#nouppercase) は有効です。
 
-マニピュレーターは実質的 `str.` に[setf](../standard-library/ios-base-class.md#setf) `(` [ios_base:: アッパー](../standard-library/ios-base-class.md#fmtflags) `)` を呼び出し、次に*str*を返します。
+マニピュレーターは実質的 `str.` に [setf](../standard-library/ios-base-class.md#setf) `(` [ios_base:: アッパー](../standard-library/ios-base-class.md#fmtflags) `)` を呼び出し、次に *str* を返します。
 
 ### <a name="example"></a>例
 

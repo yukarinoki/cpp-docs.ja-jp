@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: &lt; ios&gt;'
 title: '&lt;ios&gt;'
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,18 +8,18 @@ f1_keywords:
 helpviewer_keywords:
 - ios header
 ms.assetid: d3d4c161-2f37-4f04-93cc-0a2a89984a9c
-ms.openlocfilehash: 8ba03e5ab5dd90a6f29e08b01576803a00f0bd24
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: d9ea336c3dc36b6f9afa76d00496965bb860d1be
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88845485"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97231408"
 ---
 # <a name="ltiosgt"></a>&lt;ios&gt;
 
 iostream 操作の基礎となる型と関数を定義します。 このヘッダーは通常、別の iostream ヘッダーによってインクルードされており、ユーザーが直接インクルードすることはほとんどありません。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー**: \<ios>
 
@@ -60,7 +61,7 @@ istr>> noskipws;
 |[alpha](../standard-library/ios-functions.md#dec)|整数変数を 10 進表記で表示するように指定します。|
 |[defaultfloat](../standard-library/ios-functions.md#ios_defaultfloat)|浮動小数値に既定の表示形式を使用するように、`ios_base` オブジェクトのフラグを構成します。|
 |[fixed](../standard-library/ios-functions.md#fixed)|浮動小数点数を固定 10 進表記で表示するように指定します。|
-|[hex](../standard-library/ios-functions.md#hex)|整数変数を 16 進表記で表示するように指定します。|
+|[表記](../standard-library/ios-functions.md#hex)|整数変数を 16 進表記で表示するように指定します。|
 |[hexfloat](../standard-library/ios-functions.md#hexfloat)|
 |[internal](../standard-library/ios-functions.md#internal)|数値の符号を左揃え、数値を右揃えにします。|
 |[左側](../standard-library/ios-functions.md#left)|出力幅に満たないテキストをストリーム フラッシュで左揃えに表示します。|

@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: extreme_value_distribution クラス'
 title: extreme_value_distribution クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -26,12 +27,12 @@ helpviewer_keywords:
 - std::extreme_value_distribution [C++], param_type
 - std::extreme_value_distribution [C++], param_type
 ms.assetid: a0cd8370-0a54-4e26-9388-8b9678fb57da
-ms.openlocfilehash: b086638d02afb929d18daad76716a12704585108
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: d4abd89ae7fee6ab170f5d827281146d703a6f97
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88835897"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97232487"
 ---
 # <a name="extreme_value_distribution-class"></a>extreme_value_distribution クラス
 
@@ -173,7 +174,7 @@ Distribution for 10 samples:
     10: 2.0568757061
 ```
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:**\<random>
 

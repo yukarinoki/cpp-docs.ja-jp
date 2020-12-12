@@ -1,20 +1,21 @@
 ---
+description: '詳細については、コンテナークラス:: rbegin に関するページを参照してください。'
 title: コンテナー クラス::rbegin
 ms.date: 11/04/2016
 helpviewer_keywords:
 - rbegin method
 ms.assetid: c1f0d60c-93aa-4313-81b9-04e3f9c796c2
-ms.openlocfilehash: 9772120ceeeaa906363037ad4f6cd830bc636255
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: eeb3afee9766c51a7176ff3696f64c2bab23317b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68453330"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97233462"
 ---
 # <a name="container-classrbegin"></a>コンテナー クラス::rbegin
 
 > [!NOTE]
-> このトピックは、 C++ C++標準ライブラリで使用されているコンテナーの非機能例として、Microsoft ドキュメントに記載されています。 詳細については、「[C++ Standard Library Containers (C++ 標準ライブラリ コンテナ―)](../standard-library/stl-containers.md)」をご覧ください。
+> このトピックは、C++ 標準ライブラリで使用されるコンテナーの非機能例として、Microsoft C++ ドキュメントに記載されています。 詳細については、「[C++ 標準ライブラリ コンテナー](../standard-library/stl-containers.md)」を参照してください。
 
 被制御シーケンスの末尾の次の位置を指す反転反復子を返し、反転シーケンスの先頭を指定します。
 
@@ -28,4 +29,4 @@ reverse_iterator rbegin();
 
 ## <a name="see-also"></a>関連項目
 
-[サンプル コンテナー クラス](../standard-library/sample-container-class.md)
+[サンプルコンテナークラス](../standard-library/sample-container-class.md)

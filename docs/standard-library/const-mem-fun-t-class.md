@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: const_mem_fun_t クラス'
 title: const_mem_fun_t クラス
 ms.date: 02/21/2019
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - const_mem_fun_t class
 ms.assetid: f169d381-019b-4a0e-a9a3-54da6d948270
-ms.openlocfilehash: 6b34fb6b20b2aaf2f18fbe8d937e50bdbaa3bdff
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: cfde3048758673b1918e3cc8eaab7151dde59896
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87228350"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97233670"
 ---
 # <a name="const_mem_fun_t-class"></a>const_mem_fun_t クラス
 
@@ -34,7 +35,7 @@ class const_mem_fun_t : public unary_function <Type *, Result>
 関数オブジェクトに変換されるクラス `Type` のメンバー関数へのポインター。
 
 *Pleft*\
-*Pm*メンバー関数が呼び出されるオブジェクト。
+*Pm* メンバー関数が呼び出されるオブジェクト。
 
 ## <a name="return-value"></a>戻り値
 
@@ -42,7 +43,7 @@ class const_mem_fun_t : public unary_function <Type *, Result>
 
 ## <a name="remarks"></a>解説
 
-クラステンプレートは、 *Pm* `Type` プライベートメンバーオブジェクト内のクラスのメンバー関数へのポインターである必要がある Pm のコピーを格納します。 そのメンバー関数は `operator()` () () を返すように定義さ `Pleft` -> \* `Pm` **`const`** れています。
+クラステンプレートは、  `Type` プライベートメンバーオブジェクト内のクラスのメンバー関数へのポインターである必要がある Pm のコピーを格納します。 そのメンバー関数は `operator()` () () を返すように定義さ `Pleft` -> \* `Pm` **`const`** れています。
 
 ## <a name="example"></a>例
 

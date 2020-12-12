@@ -1,20 +1,21 @@
 ---
+description: '詳細については、「コンテナークラス:: size_type」を参照してください。'
 title: コンテナー クラス::size_type
 ms.date: 11/04/2016
 helpviewer_keywords:
 - size_type typedef
 ms.assetid: e02de8af-e175-45a2-b006-835814a40e68
-ms.openlocfilehash: 8ef4f426289ba709f2e6fd3788880f878b9de260
-ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
+ms.openlocfilehash: bcac2a38298e9b256bc52bb33a6a8694bb39ded8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77258160"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97233384"
 ---
 # <a name="container-classsize_type"></a>コンテナー クラス::size_type
 
 > [!NOTE]
-> このトピックは、 C++ C++標準ライブラリで使用されているコンテナーの非機能例として、Microsoft ドキュメントに記載されています。 詳しくは、「[C++ 標準ライブラリのコンテナー](../standard-library/stl-containers.md)」をご覧ください。
+> このトピックは、C++ 標準ライブラリで使用されるコンテナーの非機能例として、Microsoft C++ ドキュメントに記載されています。 詳細については、「[C++ 標準ライブラリ コンテナー](../standard-library/stl-containers.md)」を参照してください。
 
 すべての被制御シーケンスの長さを表現できるオブジェクトを表します。
 
@@ -24,10 +25,10 @@ ms.locfileid: "77258160"
 typedef T0 size_type;
 ```
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
-ここでは、指定されていない型 `T0` (通常 `Alloc::size_type`) のシノニムとして記述されています。
+ここでは、指定されていない型 `T0` (通常は) のシノニムとして記述されてい `Alloc::size_type` ます。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[サンプル コンテナー クラス](../standard-library/sample-container-class.md)
+[サンプルコンテナークラス](../standard-library/sample-container-class.md)

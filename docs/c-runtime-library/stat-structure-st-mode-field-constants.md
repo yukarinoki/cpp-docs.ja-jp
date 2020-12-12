@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「_stat 構造体 st_mode フィールド定数」を参照してください。
 title: _stat 構造体の st_mode フィールド定数
 ms.date: 11/04/2016
 f1_keywords:
@@ -35,14 +36,14 @@ helpviewer_keywords:
 - _S_IREAD constant
 - _S_IFCHR constant
 ms.assetid: fd462004-7563-4766-8443-30b0a86174b6
-ms.openlocfilehash: ff2b6ac806b774ae3fe80f9b3cf4b3d2e82a2a9c
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: bd304119c705196981342caf5a257cc113fed923
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57744695"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97235737"
 ---
-# <a name="stat-structure-stmode-field-constants"></a>_stat 構造体の st_mode フィールド定数
+# <a name="_stat-structure-st_mode-field-constants"></a>_stat 構造体の st_mode フィールド定数
 
 ## <a name="syntax"></a>構文
 
@@ -61,7 +62,7 @@ ms.locfileid: "57744695"
 |`_S_IFMT`|ファイルの種類のマスク|
 |`_S_IFDIR`|ディレクトリ|
 |`_S_IFCHR`|特殊な文字 (設定されている場合に、デバイスを示す)|
-|`_S_IFREG`|Regular|
+|`_S_IFREG`|通常|
 |`_S_IREAD`|読み取りアクセス許可、所有者|
 |`_S_IWRITE`|書き込みアクセス許可、所有者|
 |`_S_IEXEC`|実行/検索アクセス許可、所有者|
@@ -70,5 +71,5 @@ ms.locfileid: "57744695"
 
 [_stat、_wstat 関数](../c-runtime-library/reference/stat-functions.md)<br/>
 [_fstat、_fstat32、_fstat64、_fstati64、_fstat32i64、_fstat64i32](../c-runtime-library/reference/fstat-fstat32-fstat64-fstati64-fstat32i64-fstat64i32.md)<br/>
-[標準の型](../c-runtime-library/standard-types.md)<br/>
+[標準型](../c-runtime-library/standard-types.md)<br/>
 [グローバル定数](../c-runtime-library/global-constants.md)

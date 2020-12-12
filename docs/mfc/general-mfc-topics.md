@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: MFC の一般的なトピック'
 title: MFC の一般的なトピック
 ms.date: 09/17/2019
 helpviewer_keywords:
@@ -6,18 +7,18 @@ helpviewer_keywords:
 - class libraries [MFC], MFC
 - MFC, application development
 ms.assetid: 617e9945-9bb3-471d-a3ba-e235fcfb55d1
-ms.openlocfilehash: effab556277b3cd9ca072798bea3a77dbde58620
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: a0e19a205e29297bf6808d6d979b9e27366b3e4d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84618762"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97234359"
 ---
 # <a name="general-mfc-topics"></a>MFC の一般的なトピック
 
 ここでは、MFC (Microsoft Foundation Class) ライブラリについて説明します。また、MFC フレームワークとその主要なコンポーネント、およびサブシステムの概要を示します。
 
-Microsoft Foundation Class ライブラリは、Microsoft Windows プログラミングのためのアプリケーション フレームワークです。 C++ 言語で書かれた MFC では、ウィンドウ、メニュー、ダイアログ ボックスの管理、基本的な入出力の実行、データ オブジェクトのコレクションの保存といった機能に必要なコードの多くが提供されます。 このフレームワークに独自のコードを追加するだけで、アプリケーションのコードとして利用できます。 C++ クラスプログラミングの性質上、 [MFC フレームワーク](framework-mfc.md)に用意されている基本的な機能を簡単に拡張またはオーバーライドできます。
+Microsoft Foundation Class ライブラリは、Microsoft Windows プログラミングのためのアプリケーション フレームワークです。 C++ 言語で書かれた MFC では、ウィンドウ、メニュー、ダイアログ ボックスの管理、基本的な入出力の実行、データ オブジェクトのコレクションの保存といった機能に必要なコードの多くが提供されます。 このフレームワークに独自のコードを追加するだけで、アプリケーションのコードとして利用できます。 C++ クラスプログラミングの性質上、 [MFC フレームワーク](framework-mfc.md) に用意されている基本的な機能を簡単に拡張またはオーバーライドできます。
 
 MFC フレームワークは、Windows の熟練プログラマの成果を基にしたプログラミングを可能にする強力なアプローチです。 MFC は、開発時間を短縮し、コードの移植性を高め、プログラミングの自由度や柔軟性を損なうことなく、さまざまなサポートを提供します。また MFC は、ユーザー インターフェイスの要素や通常はプログラミングが難しいと考えられている技術への簡便なアクセスを実現し、Active テクノロジ、OLE、インターネットなどのプログラミングを大幅に簡略化します。 さらに、MFC では、データアクセスオブジェクト (DAO) と Open Database Connectivity (ODBC) および Windows ソケットを使用したネットワークプログラミングによるデータベースプログラミングが簡略化されています。 MFC は、フローティング ツール バー、カスタマイズ可能なツール バー、プロパティ シート ("タブ ダイアログ ボックス")、印刷プレビューのプログラミングなどを簡単にします。
 
@@ -25,15 +26,15 @@ MFC フレームワークは、Windows の熟練プログラマの成果を基�
 
 [MFC のサンプル](../overview/visual-cpp-samples.md#mfc-samples)
 
-[MFC ソース ファイルの利用](using-the-mfc-source-files.md)
+[MFC ソースファイルの使用](using-the-mfc-source-files.md)
 
 [MFC ライブラリのバージョン](mfc-library-versions.md)
 
-[クラスを使用した Windows アプリケーションの作成](using-the-classes-to-write-applications-for-windows.md)
+[クラスを使用して Windows 用のアプリケーションを作成する](using-the-classes-to-write-applications-for-windows.md)
 
 [フレームワークでのビルド](building-on-the-framework.md)
 
-[CWinApp: アプリケーション クラス](cwinapp-the-application-class.md)
+[CWinApp: Application クラス](cwinapp-the-application-class.md)
 
 [ドキュメントテンプレートとドキュメント/ビュー作成プロセス](document-templates-and-the-document-view-creation-process.md)
 
@@ -45,7 +46,7 @@ MFC フレームワークは、Windows の熟練プログラマの成果を基�
 
 [MFC コモンコントロールライブラリの分離](isolation-of-the-mfc-common-controls-library.md)
 
-[Windows Vista コモン コントロールの作成要件](build-requirements-for-windows-vista-common-controls.md)
+[Windows Vista コモンコントロールのビルド要件](build-requirements-for-windows-vista-common-controls.md)
 
 [方法: 再起動マネージャーのサポートを追加する](how-to-add-restart-manager-support.md)
 
@@ -57,4 +58,4 @@ ATL の詳細については、「 [Active Template Library リファレンス](
 
 ## <a name="see-also"></a>関連項目
 
-[ウィンドウ オブジェクトの操作](working-with-window-objects.md)
+[ウィンドウオブジェクトの操作](working-with-window-objects.md)

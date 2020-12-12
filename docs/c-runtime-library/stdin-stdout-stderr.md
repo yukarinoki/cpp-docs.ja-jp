@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: stdin、stdout、stderr'
 title: stdin、stdout、stderr
 ms.date: 10/23/2018
 f1_keywords:
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - standard input stream
 - stderr function
 ms.assetid: badd4735-596d-4498-857c-ec8b7e670e4c
-ms.openlocfilehash: 5de1ff01282f30ad133f909cb87f5d7c8d521ae5
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: ba31487c472bd714560e919f45ec9e9aa5acd717
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57741951"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97235724"
 ---
 # <a name="stdin-stdout-stderr"></a>stdin、stdout、stderr
 

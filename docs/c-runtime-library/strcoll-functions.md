@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: strcoll 系 Functions'
 title: strcoll 系関数
 ms.date: 11/04/2016
 api_location:
@@ -20,12 +21,12 @@ helpviewer_keywords:
 - strcoll functions
 - strings [C++], comparing by code page
 ms.assetid: c09eeff3-8aba-4cfb-a524-752436d85573
-ms.openlocfilehash: c63a130cee6913006fff2ed5568c41cc4fdeac3c
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
-ms.translationtype: HT
+ms.openlocfilehash: 8a0b146bff2eab8927733923367b0ae49ecea4c1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70944900"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97235685"
 ---
 # <a name="strcoll-functions"></a>strcoll 系関数
 
@@ -33,7 +34,7 @@ ms.locfileid: "70944900"
 
 ### <a name="strcoll-functions"></a>strcoll 系関数
 
-|SBCS|Unicode|MBCS|説明|
+|SBCS (SBCS)|Unicode|MBCS (MBCS)|説明|
 |----------|-------------|----------|-----------------|
 |[strcoll](../c-runtime-library/reference/strcoll-wcscoll-mbscoll-strcoll-l-wcscoll-l-mbscoll-l.md)|[wcscoll](../c-runtime-library/reference/strcoll-wcscoll-mbscoll-strcoll-l-wcscoll-l-mbscoll-l.md)|[_mbscoll](../c-runtime-library/reference/strcoll-wcscoll-mbscoll-strcoll-l-wcscoll-l-mbscoll-l.md)|2 つの文字列を照合する|
 |[_stricoll](../c-runtime-library/reference/stricoll-wcsicoll-mbsicoll-stricoll-l-wcsicoll-l-mbsicoll-l.md)|[_wcsicoll](../c-runtime-library/reference/stricoll-wcsicoll-mbsicoll-stricoll-l-wcsicoll-l-mbsicoll-l.md)|[_mbsicoll](../c-runtime-library/reference/stricoll-wcsicoll-mbsicoll-stricoll-l-wcsicoll-l-mbsicoll-l.md)|2 つの文字列を照合する (大文字と小文字を区別しない)|
@@ -42,7 +43,7 @@ ms.locfileid: "70944900"
 
 ## <a name="remarks"></a>解説
 
-これらの関数の 1 バイト文字 (SBCS) バージョン (`strcoll`、`stricoll`、`_strncoll`、`_strnicoll`) は、現在のロケールの `LC_COLLATE` カテゴリ設定に基づいて `string1` と `string2` を比較します。 これらの関数は、対応する `strcmp` 関数 (その中の `strcoll` 関数が照合順序を提供するロケール コード ページ情報を使用する) とは異なります。 文字セット順序と辞書式文字順序が異なるロケールでの文字列比較では、対応する `strcmp` 関数ではなく `strcoll` 関数を使用する必要があります。 `LC_COLLATE` の詳細については、[setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md) に関する記事をご覧ください。
+これらの関数の 1 バイト文字 (SBCS) バージョン (`strcoll`、`stricoll`、`_strncoll`、`_strnicoll`) は、現在のロケールの `LC_COLLATE` カテゴリ設定に基づいて `string1` と `string2` を比較します。 これらの関数は、対応する `strcmp` 関数 (その中の `strcoll` 関数が照合順序を提供するロケール コード ページ情報を使用する) とは異なります。 文字セット順序と辞書式文字順序が異なるロケールでの文字列比較では、対応する `strcmp` 関数ではなく `strcoll` 関数を使用する必要があります。 の詳細につい `LC_COLLATE` ては、「 [setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md)」を参照してください。
 
 一部のコード ページとそれに対応する文字セットでは、文字セットの文字の順序が辞書式の文字の順序と異なる場合があります。 "C" ロケールでは、前述とは異なり、ASCII 文字セットの文字の順序が辞書式の文字の順序と同じです。 しかし、たとえば、ヨーロッパの一部のコード ページでは、文字 a (値 0x61) は文字セットで文字 'ä' (値 0xE4) の前にありますが、辞書式の順序では文字 'ä' が文字 'a' の前にあります。 このようなインスタンスで、辞書式比較を実行するには、`strcmp` ではなく `strcoll` を使用します。 あるいは、元の文字列に対して `strxfrm` を使用してから、結果の文字列に対して `strcmp` を使用できます。
 
