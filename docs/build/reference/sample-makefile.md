@@ -1,17 +1,18 @@
 ---
+description: '詳細情報: サンプルメイクファイル'
 title: サンプル メイクファイル
 ms.date: 11/04/2016
 ms.assetid: 8343ce71-5556-4ae0-8d1e-7efd82673070
-ms.openlocfilehash: 79ca4e466d37880787260be5b8b4ec76a5bb092f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 95b7eef18ca2b517d1b3de9ca450b1bbd03116d2
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62318824"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97224908"
 ---
 # <a name="sample-makefile"></a>サンプル メイクファイル
 
-このトピックでには、サンプル メイクファイルが含まれています。
+このトピックには、サンプルメイクファイルが含まれています。
 
 ## <a name="sample"></a>サンプル
 

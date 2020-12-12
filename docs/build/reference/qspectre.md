@@ -1,36 +1,37 @@
 ---
+description: 詳細情報:/Qspectre
 title: /Qspectre
 ms.date: 09/06/2019
 f1_keywords:
 - VC.Project.VCCLCompilerTool.SpectreMitigation
 helpviewer_keywords:
 - /Qspectre
-ms.openlocfilehash: a4872d18fed4523e235aee70839f1e482d78f345
-ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
+ms.openlocfilehash: 576052a9db8a4ce63c82afaf644f41fa847ad9a9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "92919112"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97225493"
 ---
 # <a name="qspectre"></a>/Qspectre
 
 特定のスペクター バリアント 1 のセキュリティ脆弱性を軽減するコンパイラの命令生成を指定します。
 
-## <a name="syntax"></a>Syntax
+## <a name="syntax"></a>構文
 
 > **/Qspectre**
 
-## <a name="remarks"></a>注釈
+## <a name="remarks"></a>解説
 
 **/Qspectre** オプションは、Visual Studio 2017 バージョン 15.5.5 以降、および Visual Studio 2015 Update 3 から [KB 4338871](https://support.microsoft.com/help/4338871/visual-studio-2015-update-3-spectre-variant-1-toolset-qspectre) で使用できます。 指定すると、コンパイラによって特定の[スペクター セキュリティ脆弱性](https://spectreattack.com/spectre.pdf)を軽減する命令が挿入されます。 これらの脆弱性は、予測 *実行のサイドチャネル攻撃* と呼ばれます。 多くのオペレーティングシステムと最新のプロセッサ (Intel、AMD、ARM のプロセッサを含む) に影響します。
 
 **/Qspectre** オプションは既定ではオフです。
 
-最初のリリースでは、 **/Qspectre** オプションは最適化されたコードに対してのみ機能しました。 Visual Studio 2017 バージョン 15.7 以降では、 **/Qspectre** オプションはすべての最適化レベルでサポートされています。
+最初のリリースでは、**/Qspectre** オプションは最適化されたコードに対してのみ機能しました。 Visual Studio 2017 バージョン 15.7 以降では、**/Qspectre** オプションはすべての最適化レベルでサポートされています。
 
-スペクターの軽減策を含むバージョンの Microsoft Visual C++ ライブラリもリリースされています。 Visual Studio 2017 以降用のスペクター軽減済みライブラリは、Visual Studio インストーラーでダウンロードできます。 これらは、[ **コンパイラ、ビルドツール、およびランタイム** ] の [ **個々のコンポーネント** ] タブにあり、名前に "lib for Spectre" があります。 軽減策が有効になっている DLL とスタティックランタイムライブラリは両方とも、Visual C++ ランタイムのサブセット (VC + + スタートアップコード、vcruntime140、msvcp140、concrt140、および vcamp140) で使用できます。 Dll は、アプリケーションローカル配置でのみサポートされています。 再頒布可能な Visual C++ 2017 以降のランタイムライブラリの内容は変更されていません。
+スペクターの軽減策を含むバージョンの Microsoft Visual C++ ライブラリもリリースされています。 Visual Studio 2017 以降用のスペクター軽減済みライブラリは、Visual Studio インストーラーでダウンロードできます。 これらは、[**コンパイラ、ビルドツール、およびランタイム**] の [**個々のコンポーネント**] タブにあり、名前に "lib for Spectre" があります。 軽減策が有効になっている DLL とスタティックランタイムライブラリは両方とも、Visual C++ ランタイムのサブセット (VC + + スタートアップコード、vcruntime140、msvcp140、concrt140、および vcamp140) で使用できます。 Dll は、アプリケーションローカル配置でのみサポートされています。 再頒布可能な Visual C++ 2017 以降のランタイムライブラリの内容は変更されていません。
 
-また、MFC および ATL 用の Spectre 軽減ライブラリをインストールすることもできます。 **Sdk、ライブラリ、およびフレームワーク** の [ **個々のコンポーネント** ] タブにあります。
+また、MFC および ATL 用の Spectre 軽減ライブラリをインストールすることもできます。 **Sdk、ライブラリ、およびフレームワーク** の [**個々のコンポーネント**] タブにあります。
 
 > [!NOTE]
 > ユニバーサル Windows (UWP) アプリまたはコンポーネント用の Spectre ライブラリのバージョンはありません。 このようなライブラリのアプリローカル展開はできません。
@@ -43,11 +44,11 @@ ms.locfileid: "92919112"
 
 **/Qspectre** オプションは、Visual Studio 2017 バージョン15.5.5、および2018年1月23日以降に作成された Microsoft C++ コンパイラ (MSVC) のすべての更新プログラムで使用できます。 Visual Studio インストーラーを使用してコンパイラを更新し、スペクター軽減済みライブラリを個別のコンポーネントとしてインストールします。 **/Qspectre** オプションは、修正プログラムを介して Visual Studio 2015 Update 3 でも利用できます。 詳細については、[KB 4338871](https://support.microsoft.com/help/4338871) を参照してください。
 
-すべてのバージョンの Visual Studio 2017 バージョン15.5、および Visual Studio 2017 バージョン15.6 のすべてのプレビュー。 ドキュメントに記載のないオプション **/d2guardspecload** を含めます。 これは、 **/Qspectre** の初期動作と同じです。 これらのバージョンのコンパイラでは、 **/d2guardspecload** を使用してコードに同じ軽減策を適用できます。 オプションをサポートするコンパイラで **/Qspectre** を使用するようにビルドを更新することをお勧めします。 **/Qspectre** オプションでは、新しいバージョンのコンパイラで新しい軽減策をサポートすることもできます。
+すべてのバージョンの Visual Studio 2017 バージョン15.5、および Visual Studio 2017 バージョン15.6 のすべてのプレビュー。 ドキュメントに記載のないオプション **/d2guardspecload** を含めます。 これは、 **/Qspectre** の初期動作と同じです。 これらのバージョンのコンパイラでは、**/d2guardspecload** を使用してコードに同じ軽減策を適用できます。 オプションをサポートするコンパイラで **/Qspectre** を使用するようにビルドを更新することをお勧めします。 **/Qspectre** オプションでは、新しいバージョンのコンパイラで新しい軽減策をサポートすることもできます。
 
-### <a name="effect"></a>結果
+### <a name="effect"></a>効果
 
-**/Qspectre** オプションを指定すると、スペクター バリアント 1 の Bounds Check Bypass ( [CVE-2017-5753](https://nvd.nist.gov/vuln/detail/CVE-2017-5753)) を軽減するコードが出力されます。 これは、投機的コード実行バリアとして動作する命令を挿入することで機能します。 プロセッサの投機の軽減に使用される具体的な命令は、プロセッサとそのマイクロアーキテクチャによって異なり、今後のバージョンのコンパイラでは変更される可能性があります。
+**/Qspectre** オプションを指定すると、スペクター バリアント 1 の Bounds Check Bypass ([CVE-2017-5753](https://nvd.nist.gov/vuln/detail/CVE-2017-5753)) を軽減するコードが出力されます。 これは、投機的コード実行バリアとして動作する命令を挿入することで機能します。 プロセッサの投機の軽減に使用される具体的な命令は、プロセッサとそのマイクロアーキテクチャによって異なり、今後のバージョンのコンパイラでは変更される可能性があります。
 
 **/Qspectre** オプションを有効にすると、コンパイラは、予測実行が境界チェックをバイパスする可能性のあるインスタンスを識別しようとします。 ここで、バリア命令を挿入します。 コンパイラがバリアント1のインスタンスを識別するために実行できる分析の制限に注意することが重要です。 そのため、バリアント1の可能なすべてのインスタンスが **/Qspectre** の下でインストルメント化されるという保証はありません。
 
@@ -63,7 +64,7 @@ ms.locfileid: "92919112"
 - Visual C++ ATL for \[(x86/x64) | ARM | ARM64] with Spectre Mitigations
 - Visual C++ MFC for \[x86/x64 | ARM | ARM64] with Spectre Mitigations
 
-**/Qspectre** を使用してコードをビルドし、これらのライブラリがインストールされていない場合、ビルドシステムは **警告 MSB8038: Spectre 軽減策が有効になっていますが、Spectre 軽減ライブラリが見つかりません** 。 MFC または ATL コードのビルドに失敗し、リンカーが致命的なエラー LNK1104 などのエラーを報告した場合 **: ファイル ' oldnames. lib ' を開くことができません** 。これらの不足しているライブラリが原因である可能性があります。
+**/Qspectre** を使用してコードをビルドし、これらのライブラリがインストールされていない場合、ビルドシステムは **警告 MSB8038: Spectre 軽減策が有効になっていますが、Spectre 軽減ライブラリが見つかりません**。 MFC または ATL コードのビルドに失敗し、リンカーが致命的なエラー LNK1104 などのエラーを報告した場合 **: ファイル ' oldnames. lib ' を開くことができません**。これらの不足しているライブラリが原因である可能性があります。
 
 ### <a name="additional-information"></a>関連情報
 
@@ -75,7 +76,7 @@ ms.locfileid: "92919112"
 
 1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、[Visual Studio での C++ コンパイラとビルド プロパティの設定](../working-with-project-properties.md)に関するページを参照してください。
 
-1. [ **構成プロパティ** ] [ > **C/c + +** > **コード生成** ] プロパティページを選択します。
+1. [ **構成プロパティ**] [ > **C/c + +** > **コード生成** ] プロパティページを選択します。
 
 1. **Spectre 軽減** プロパティの新しい値を選択します。 **[OK]** を選択して変更を適用します。
 
@@ -93,9 +94,9 @@ ms.locfileid: "92919112"
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>このコンパイラ オプションをコードから設定するには
 
-- 「<xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>」を参照してください。
+- 以下を参照してください。<xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 
 [/Q オプション (低レベルの操作)](q-options-low-level-operations.md)<br/>
 [MSVC コンパイラ オプション](compiler-options.md)<br/>

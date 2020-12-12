@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「引数アクセス」を参照してください。
 title: 引数へのアクセス
 ms.date: 04/04/2018
 f1_keywords:
@@ -7,16 +8,16 @@ helpviewer_keywords:
 - argument access macros [C++]
 - variable-length argument lists
 ms.assetid: 7046ae34-a0ec-44f0-815d-3209492a3e19
-ms.openlocfilehash: 8107cffa6a2da41c38b116b2e3fe36adf6ac945f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
-ms.translationtype: HT
+ms.openlocfilehash: f62ac2bc4ae895afe763d0a0a4caa32601e82713
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50470409"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97221866"
 ---
 # <a name="argument-access"></a>引数へのアクセス
 
-**va_arg**、**va_end**、**va_start** の各マクロは、引数の数が可変である場合に、関数の引数へのアクセスを提供します。 これらのマクロは、ANSI/ISO C 互換の場合は \<stdarg.h> で、UNIX System V と互換性がある場合は \<varargs.h> で定義されています。
+**va_arg**、**va_end**、**va_start** の各マクロは、引数の数が可変である場合に、関数の引数へのアクセスを提供します。 これらのマクロは、 \<stdarg.h> ANSI/ISO C 互換の場合はで、 \<varargs.h> UNIX System V との互換性のためにはで定義されています。
 
 ## <a name="argument-access-macros"></a>引数アクセス マクロ
 

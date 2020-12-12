@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「ルール内の検索パス」を参照してください。
 title: 規則の検索パス
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - inference rules in NMAKE
 - rules, inference
 ms.assetid: 38feded6-536d-425d-bf40-fff3173a5506
-ms.openlocfilehash: eab6e9d32940aaf5729ce82c4e8258a3a3132208
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bf070fc57907b68eb458b8a5276698282ef30f9d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62318863"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97224882"
 ---
 # <a name="search-paths-in-rules"></a>規則の検索パス
 
@@ -20,9 +21,9 @@ ms.locfileid: "62318863"
    commands
 ```
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-依存関係で正確に指定されたパスの推論規則のパスを一致する場合にのみ依存関係を推論規則が適用されます。 依存ファイルのディレクトリを指定する*frompath*とターゲットのディレクトリで*topath*; スペースは使用できません。 各拡張機能の 1 つだけのパスを指定します。 拡張機能の 1 つ上のパスには、別のパスが必要です。 現在のディレクトリを指定するには、ピリオド (.) または空のかっこ ({}) のいずれかを使用します。 マクロが表すことができます*frompath*と*topath*; プリプロセス時に呼び出されます。
+推論規則は、依存関係に指定されたパスが推論規則のパスと完全に一致する場合にのみ、依存関係に適用されます。 *Frompath* に依存するディレクトリを指定し、 *topath*; でターゲットのディレクトリを指定します。スペースは使用できません。 各拡張機能に指定できるパスは1つだけです。 1つの拡張機能のパスには、他方のパスが必要です。 現在のディレクトリを指定するには、ピリオド (.) または空の中かっこ ({}) のいずれかを使用します。 マクロは、 *frompath* および *topath* を表すことができます。これらは、プリプロセス中に呼び出されます。
 
 ## <a name="example"></a>例
 
@@ -59,4 +60,4 @@ ms.locfileid: "62318863"
 
 ## <a name="see-also"></a>関連項目
 
-[規則の定義](defining-a-rule.md)
+[ルールの定義](defining-a-rule.md)

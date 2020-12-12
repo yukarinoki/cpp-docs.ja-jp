@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「コンパイラエラー C3268」を参照してください。
 title: コンパイラ エラー C3268
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3268
 ms.assetid: d74a630c-daea-4e29-9759-83efef7fb184
-ms.openlocfilehash: 191456a1e290b568897ba76cd5bdccb8f83c310b
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 405977afe5a58545dd5e8b0d54cb08f431935191
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80201462"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97223322"
 ---
 # <a name="compiler-error-c3268"></a>コンパイラ エラー C3268
 
@@ -19,9 +20,9 @@ ms.locfileid: "80201462"
 
 ## <a name="remarks"></a>解説
 
-**/Clr: pure**および **/clr: safe**コンパイラオプションは visual studio 2015 で非推奨とされており、visual studio 2017 ではサポートされていません。
+**/Clr: pure** および **/clr: safe** コンパイラオプションは visual studio 2015 で非推奨とされており、visual studio 2017 ではサポートされていません。
 
-詳細については、「[ジェネリック](../../extensions/generics-cpp-component-extensions.md)」を参照してください。
+詳細については、「 [ジェネリック](../../extensions/generics-cpp-component-extensions.md) 」を参照してください。
 
 ## <a name="example"></a>例
 

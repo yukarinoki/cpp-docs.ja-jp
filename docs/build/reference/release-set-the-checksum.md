@@ -1,4 +1,5 @@
 ---
+description: 詳細情報:/RELEASE (チェックサムの設定)
 title: /RELEASE (チェックサムの設定)
 ms.date: 11/04/2016
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - checksum setting
 - RELEASE linker option
 ms.assetid: 93bcadf4-29ac-4824-914b-6997e3751d22
-ms.openlocfilehash: 1dc09b38beeb763733f8fa6a8ffa972059b30e03
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ed1e55dffb02ace26e91e262bd3e9514f056196e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62318928"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97225324"
 ---
 # <a name="release-set-the-checksum"></a>/RELEASE (チェックサムの設定)
 
@@ -23,23 +24,23 @@ ms.locfileid: "62318928"
 /RELEASE
 ```
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 /RELEASE オプションは、.exe ファイルのヘッダーにチェックサムを設定します。
 
-オペレーティング システムでは、デバイス ドライバーのチェックサムが必要です。 将来のオペレーティング システムとの互換性を確保する、デバイス ドライバーのリリース バージョンのチェックサムを設定します。
+オペレーティングシステムには、デバイスドライバーのチェックサムが必要です。 将来のオペレーティングシステムとの互換性を確保するために、デバイスドライバーのリリースバージョンのチェックサムを設定します。
 
-/RELEASE オプションは既定で設定時に、[中に/subsystem:native が](subsystem-specify-subsystem.md)オプションを指定します。
+/RELEASE オプションは、 [/SUBSYSTEM: NATIVE](subsystem-specify-subsystem.md) オプションが指定されている場合に既定で設定されます。
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのリンカー オプションを設定するには
 
-1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。 [Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)します。
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、[Visual Studio での C++ コンパイラとビルド プロパティの設定](../working-with-project-properties.md)に関するページを参照してください。
 
-1. をクリックして、**リンカー**フォルダー。
+1. **[リンカー]** フォルダーをクリックします。
 
-1. をクリックして、**詳細**プロパティ ページ。
+1. [ **詳細設定** ] プロパティページをクリックします。
 
-1. 変更、**チェックサムの設定**プロパティ。
+1. " **チェックサムの設定** " プロパティを変更します。
 
 ### <a name="to-set-this-linker-option-programmatically"></a>このリンカーをコードから設定するには
 

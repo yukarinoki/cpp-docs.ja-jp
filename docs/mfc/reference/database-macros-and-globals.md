@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「データベースマクロとグローバル」を参照してください。
 title: データベース マクロとデータベース グローバル関数
 ms.date: 11/04/2016
 f1_keywords:
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - global functions [MFC], database functions
 - macros [MFC], MFC database
 ms.assetid: 5b9b9e61-1cf9-4345-9f29-3807dd466488
-ms.openlocfilehash: 0dc53bce8b43677e7fe0aa1787d1adcc16a560c4
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 1dd6501c8ea37478a7b75341467e1c77819aa3f3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88837528"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97220319"
 ---
 # <a name="database-macros-and-globals"></a>データベース マクロとデータベース グローバル関数
 
@@ -55,7 +56,7 @@ void AFXAPI AfxDbInitModule( );
 
 この呼び出しは、基本クラスの呼び出しの前、または MFC データベース DLL にアクセスする追加のコードの前に行われていることを確認してください。 MFC データベース DLL は MFC 拡張 DLL です。MFC 拡張 DLL をチェーンに接続するには `CDynLinkLibrary` 、 `CDynLinkLibrary` それを使用するすべてのモジュールのコンテキストでオブジェクトを作成する必要があります。 `AfxDbInitModule` 通常の mfc dll のコンテキストでオブジェクトを作成し、 `CDynLinkLibrary` `CDynLinkLibrary` 通常の mfc dll のオブジェクトチェーンに接続できるようにします。
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 **ヘッダー:**\<afxdll_.h>
 
@@ -86,7 +87,7 @@ MFC ODBC クラスでは、同期処理のみが使用されるようになっ�
 
 [!code-cpp[NVC_MFCDatabase#39](../../mfc/codesnippet/cpp/database-macros-and-globals_1.cpp)]
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 **ヘッダー:** afxdb.h
 
@@ -100,7 +101,7 @@ AFX_SQL_ASYNC(prs, SQLFunc)
 
 ### <a name="parameters"></a>パラメーター
 
-*pr*<br/>
+*prs*<br/>
 `CRecordset`オブジェクトまたはオブジェクトへのポインター `CDatabase` 。 MFC 4.2 以降では、このパラメーターの値は無視されます。
 
 *SQLFunc*<br/>
@@ -113,7 +114,7 @@ ODBC API 関数。 ODBC API 関数の詳細については、Windows SDK を参�
 > [!NOTE]
 > MFC ODBC クラスでは、同期処理のみが使用されるようになりました。 非同期操作を実行するには、ODBC API 関数を呼び出す必要があり `SQLSetConnectOption` ます。 詳細については、Windows SDK の「関数の非同期実行」を参照してください。
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
   **ヘッダー** afxdb.h
 
@@ -144,7 +145,7 @@ MFC 4.2 では、の実装が変更されていることに注意 `AFX_SQL_SYNC`
 
 [!code-cpp[NVC_MFCDatabase#41](../../mfc/codesnippet/cpp/database-macros-and-globals_3.cpp)]
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
   **ヘッダー** afxdb.h
 
@@ -160,7 +161,7 @@ HENV AFXAPI AfxGetHENV();
 
 MFC によって現在使用されている ODBC 環境へのハンドル。 `SQL_HENV_NULL` [CDatabase](../../mfc/reference/cdatabase-class.md)オブジェクトがなく、使用されている[CRecordset](../../mfc/reference/crecordset-class.md)オブジェクトがない場合は、にすることができます。
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
   **ヘッダー** afxdb.h
 

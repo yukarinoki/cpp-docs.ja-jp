@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: __outbytestring'
 title: __outbytestring
 ms.date: 09/02/2019
 f1_keywords:
@@ -8,18 +9,18 @@ helpviewer_keywords:
 - __outbytestring intrinsic
 - outsb instruction
 ms.assetid: c9150661-9c18-427f-bae8-710bba6ed78c
-ms.openlocfilehash: 31caf17db5d56efccd6b30200994b1080356b4c1
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: feadb0b4275e370de88bfc04c8a10f90c41d0844
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70217172"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97222425"
 ---
 # <a name="__outbytestring"></a>__outbytestring
 
 **Microsoft 固有の仕様**
 
-が指すデータ`Count` `Port`の最初のバイトをで指定されたポート`rep outsb` に送信する命令を`Buffer`生成します。
+が `rep outsb` `Count` 指すデータの最初のバイトを `Buffer` で指定されたポートに送信する命令を生成し `Port` ます。
 
 ## <a name="syntax"></a>構文
 
@@ -42,15 +43,15 @@ void __outbytestring(
 *数*\
 から送信されるデータのバイト数。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-|組み込み|アーキテクチャ|
+|Intrinsic|アーキテクチャ|
 |---------------|------------------|
 |`__outbytestring`|x86、x64|
 
-**ヘッダーファイル**\<>
+**ヘッダー ファイル** \<intrin.h>
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 このルーチンは、組み込みとしてのみ使用できます。
 

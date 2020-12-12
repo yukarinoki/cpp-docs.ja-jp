@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: セクション (C/c + +)'
 title: SECTIONS (C/C++)
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,60 +7,60 @@ f1_keywords:
 helpviewer_keywords:
 - SECTIONS .def file statement
 ms.assetid: 7b974366-9ef5-4e57-bbcc-73a1df6f8857
-ms.openlocfilehash: 5125b09675969c784aafe375faf1fdbc36d8c5d9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: aaebeb19c921dfb389c55209c7a371f49043cb56
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62318629"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97224765"
 ---
 # <a name="sections-cc"></a>SECTIONS (C/C++)
 
-1 つ以上の概説`definitions`プロジェクトの出力ファイル内のセクションで、アクセス指定子であります。
+`definitions`プロジェクトの出力ファイル内のセクションのアクセス指定子である1つ以上のセクションを導入します。
 
 ```
 SECTIONS
 definitions
 ```
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-各定義は個別の行に指定する必要があります。 `SECTIONS`キーワードは、最初の定義と同じ行または前の行を指定できます。 .Def ファイルは、1 つまたは複数含めることができます`SECTIONS`ステートメント。
+各定義は個別の行に指定する必要があります。 キーワードは、 `SECTIONS` 最初の定義または前の行と同じ行に配置できます。 .Def ファイルには、1つまたは複数のステートメントを含めることができます `SECTIONS` 。
 
-これは、`SECTIONS`ステートメントが、イメージ ファイルのセクションでは 1 つまたは複数の属性を設定し、セクションの各種類の既定の属性をオーバーライドするために使用できます。
+この `SECTIONS` ステートメントは、イメージファイル内の1つ以上のセクションの属性を設定し、セクションの各種類の既定の属性をオーバーライドするために使用できます。
 
-形式`definitions`は。
+の形式 `definitions` は次のとおりです。
 
 `.section_name specifier`
 
-場所`.section_name`プログラム イメージ内のセクションの名前を指定し、`specifier`は次のアクセス修飾子の 1 つ以上。
+`.section_name`は、プログラムイメージ内のセクションの名前であり、は `specifier` 次のアクセス修飾子の1つまたは複数です。
 
 |修飾子|説明|
 |--------------|-----------------|
-|`EXECUTE`|セクションが実行可能ファイル|
-|`READ`|データの読み取り操作します。|
+|`EXECUTE`|セクションは実行可能です|
+|`READ`|データの読み取り操作を許可します|
 |`SHARED`|イメージを読み込むすべてのプロセス間でセクションを共有します|
-|`WRITE`|データの書き込み操作します。|
+|`WRITE`|データに対する書き込み操作を許可します|
 
-指定子の名前はスペースで区切ります。 例:
+指定子名をスペースで区切ります。 次に例を示します。
 
 ```
 SECTIONS
 .rdata READ WRITE
 ```
 
-`SECTIONS` セクションの一覧の先頭をマーク`definitions`します。 各`definition`別々 の行にある必要があります。 `SECTIONS`キーワードは、1 番目と同じ行に配置できます`definition`または前の行。 .Def ファイルは、1 つまたは複数含めることができます`SECTIONS`ステートメント。 `SEGMENTS`のシノニムとしてキーワードがサポートされている`SECTIONS`します。
+`SECTIONS` セクションのリストの先頭をマークし `definitions` ます。 各 `definition` は別々の行に配置する必要があります。 キーワードは、 `SECTIONS` 最初の行または前の行と同じ行に配置でき `definition` ます。 .Def ファイルには、1つまたは複数のステートメントを含めることができます `SECTIONS` 。 キーワードは、 `SEGMENTS` のシノニムとしてサポートされてい `SECTIONS` ます。
 
-Visual C の以前のバージョンがサポートされています。
+以前のバージョンの Visual C++ はサポートされています。
 
 ```
 section [CLASS 'classname'] specifier
 ```
 
-`CLASS`キーワードは互換性のため、サポートされているは無視されます。
+`CLASS`キーワードは互換性のためにサポートされていますが、無視されます。
 
-セクションの属性を指定することは、 [/section](section-specify-section-attributes.md)オプション。
+Section 属性の指定方法は、 [/SECTION](section-specify-section-attributes.md) オプションを使用する場合と同じです。
 
 ## <a name="see-also"></a>関連項目
 
-[モジュール定義ステートメントに関する規則](rules-for-module-definition-statements.md)
+[Module-Definition ステートメントの規則](rules-for-module-definition-statements.md)

@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「コンパイラエラー C3872」を参照してください。
 title: コンパイラ エラー C3872
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3872
 ms.assetid: 519e95be-5641-40cc-894c-da4819506604
-ms.openlocfilehash: f4b116729ad3b84014d202deb31ab490435fcef3
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 860db2f94fa198246290a0e491b1a647dbc91c20
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74761443"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97222737"
 ---
 # <a name="compiler-error-c3872"></a>コンパイラ エラー C3872
 

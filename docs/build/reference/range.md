@@ -1,4 +1,5 @@
 ---
+description: 詳細情報:/範囲
 title: /RANGE
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,16 +8,16 @@ helpviewer_keywords:
 - /RANGE dumpbin option
 - -RANGE dumpbin option
 ms.assetid: 7eeba266-32be-49cc-a350-96bdf541f98a
-ms.openlocfilehash: c631057e47e1a52a58d2b1304133dfdfc008ae14
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9af54bddde977e92b5256f0835c31afbff1405d4
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62319708"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97225402"
 ---
 # <a name="range"></a>/RANGE
 
-Dumpbin/RAWDATA または/DISASM など、他の dumpbin オプションと共に使用する場合の出力を変更します。
+/RAWDATA や/DISASM. など、他の dumpbin オプションと共に使用した場合の dumpbin の出力を変更します。
 
 ## <a name="syntax"></a>構文
 
@@ -30,15 +31,15 @@ Dumpbin/RAWDATA または/DISASM など、他の dumpbin オプションと共�
 Dumpbin 操作を開始する仮想アドレス。
 
 *vaMax*<br/>
-(省略可能)Dumpbin 操作が終了するたい仮想アドレス。 指定しない場合、dumpbin は、ファイルの末尾に移動します。
+OptionalDumpbin 操作を終了する仮想アドレス。 指定しない場合、dumpbin はファイルの末尾に移ります。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-イメージの仮想アドレスを表示するイメージ (RVA + ベース) のマップ ファイルを使用して、 **/DISASM**または **/HEADERS** dumpbin、または Visual Studio デバッガーで逆アセンブル ウィンドウのオプション。
+イメージの仮想アドレスを表示するには、イメージのマップファイル (RVA + Base)、dumpbin の **/disasm** または **/HEADERS** オプション、または Visual Studio デバッガーの [逆アセンブリ] ウィンドウを使用します。
 
 ## <a name="example"></a>例
 
-この例で**範囲/** の表示を変更するために使用、 **/disasm**オプション。 この例では、開始値は 10 進数として表現し、終了値は 16 進数として指定します。
+この例では、/ **範囲** を使用して、 **/disasm** オプションの表示を変更します。 この例では、開始値は10進数として表され、終了値は16進数として指定されます。
 
 ```
 dumpbin /disasm /range:4219334,0x004061CD t.exe

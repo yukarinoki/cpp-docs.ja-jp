@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: OLE コモンダイアログクラス'
 title: OLE コモン ダイアログ クラス
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,19 +8,19 @@ helpviewer_keywords:
 - OLE common dialog classes [MFC]
 - common dialog classes [MFC]
 ms.assetid: 706526ae-f94f-4909-a0f8-6b5fe954fd97
-ms.openlocfilehash: 1854d19c540f5e3e64b47786f465a05213eced86
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: c30871c8f49be608f5ceeea3d84c86d483e20a81
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84617790"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97222282"
 ---
 # <a name="ole-common-dialog-classes"></a>OLE コモン ダイアログ クラス
 
 これらのクラスは、多くの標準 OLE ダイアログボックスを実装することによって、一般的な OLE タスクを処理します。 また、OLE 機能の一貫したユーザーインターフェイスも用意されています。
 
 [COleDialog](reference/coledialog-class.md)<br/>
-すべての OLE ダイアログボックスの共通の実装を格納するために、フレームワークによって使用されます。 ユーザーインターフェイスカテゴリのすべてのダイアログボックスクラスは、この基本クラスから派生します。 `COleDialog`を直接使用することはできません。
+すべての OLE ダイアログボックスの共通の実装を格納するために、フレームワークによって使用されます。 ユーザーインターフェイスカテゴリのすべてのダイアログボックスクラスは、この基本クラスから派生します。 `COleDialog` を直接使用することはできません。
 
 [COleInsertDialog](reference/coleinsertdialog-class.md)<br/>
 [オブジェクトの挿入] ダイアログボックスを表示します。これは、新しい OLE リンクまたは埋め込みアイテムを挿入するための標準ユーザーインターフェイスです。

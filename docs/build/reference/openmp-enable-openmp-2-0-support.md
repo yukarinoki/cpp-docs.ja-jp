@@ -1,4 +1,5 @@
 ---
+description: 詳細について:/openmp (OpenMP サポートを有効にする)
 title: /openmp (OpenMP サポートの有効化)
 ms.date: 04/15/2019
 f1_keywords:
@@ -8,22 +9,22 @@ helpviewer_keywords:
 - /openmp compiler option [C++]
 - -openmp compiler option [C++]
 ms.assetid: 9082b175-18d3-4378-86a7-c0eb95664e13
-ms.openlocfilehash: 6bd1ffcd9b21bfe22ed9424ee77edf43100abf6c
-ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
+ms.openlocfilehash: 818cd6167bf56b9948a3d9f455b0153b4302e8df
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "92921231"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97221983"
 ---
 # <a name="openmp-enable-openmp-support"></a>/openmp (OpenMP サポートの有効化)
 
 OpenMP をサポートするディレクティブをコンパイラで処理し [`#pragma omp`](../../preprocessor/omp.md) ます。
 
-## <a name="syntax"></a>Syntax
+## <a name="syntax"></a>構文
 
 ::: moniker range=">= msvc-160"
 
-> **/openmp** \[**:**__試験段階__ ]
+> **/openmp** \[**:**__試験段階__]
 
 ::: moniker-end
 
@@ -33,7 +34,7 @@ OpenMP をサポートするディレクティブをコンパイラで処理し 
 
 ::: moniker-end
 
-## <a name="remarks"></a>注釈
+## <a name="remarks"></a>解説
 
 `#pragma omp` は、 [ディレクティブ](../../parallel/openmp/reference/openmp-directives.md) および [句](../../parallel/openmp/reference/openmp-clauses.md)を指定するために使用されます。 コンパイルで **/openmp** が指定されていない場合、コンパイラは openmp 句およびディレクティブを無視します。 [OpenMP 関数](../../parallel/openmp/reference/openmp-functions.md) 呼び出しは、 **/openmp** が指定されていない場合でも、コンパイラによって処理されます。
 
@@ -61,13 +62,13 @@ Microsoft では、部分的に信頼された呼び出し元を許可する **/
 
 1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、[Visual Studio での C++ コンパイラとビルド プロパティの設定](../working-with-project-properties.md)に関するページを参照してください。
 
-1. [ **構成プロパティ**  >  ] [ **C/c + +**  >  **言語** ] プロパティページを展開します。
+1. [**構成プロパティ**  >  ] [**C/c + +**  >  **言語**] プロパティページを展開します。
 
 1. **OpenMP サポート** プロパティを変更します。
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>このコンパイラ オプションをコードから設定するには
 
-- 「<xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.OpenMP%2A>」を参照してください。
+- 以下を参照してください。<xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.OpenMP%2A>
 
 ## <a name="example"></a>例
 
@@ -121,7 +122,7 @@ int main(int argc, char* argv[]) {
 }
 ```
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 
 [MSVC コンパイラオプション](compiler-options.md) \
 [MSVC Compiler Command-Line 構文](compiler-command-line-syntax.md) \

@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: 子ウィンドウの通知メッセージハンドラー'
 title: 子ウィンドウの通知メッセージ ハンドラー
 ms.date: 11/04/2016
 f1_keywords:
@@ -10,24 +11,24 @@ helpviewer_keywords:
 - windows [MFC], message handlers
 - child windows [MFC], messages
 ms.assetid: fddfdd08-8ecf-4f84-8b45-5a84616aaa8d
-ms.openlocfilehash: 06b13a7af2e73d6dc2758a342dae5beeca828ae4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 341fdcdf1f6f45a084380eedbe866d4f43462e10
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62391147"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97220449"
 ---
 # <a name="child-window-notification-message-handlers"></a>子ウィンドウの通知メッセージ ハンドラー
 
-子ウィンドウの通知メッセージの 5 つのカテゴリがあります。
+子ウィンドウ通知メッセージには、次の5つのカテゴリがあります。
 
 |カテゴリ|説明|
 |--------------|-----------------|
-|[汎用コントロール ハンドラー](../../mfc/reference/generic-control-handler.md)|汎用コントロール通知コードのハンドラー。|
-|[ユーザー ボタン ハンドラー](../../mfc/reference/user-button-handlers.md)|ユーザー用のハンドラーは、通知コードをクリックします。|
-|[コンボ ボックス ハンドラー](../../mfc/reference/combo-box-handlers.md)|コンボ ボックス通知コードのハンドラー。|
-|[エディット コントロール ハンドラー](../../mfc/reference/edit-control-handlers.md)|ハンドラーは、コントロール通知コードを編集します。|
-|[リスト ボックス ハンドラー](../../mfc/reference/list-box-handlers.md)|リスト ボックス通知コード用のハンドラー。|
+|[汎用コントロールハンドラー](../../mfc/reference/generic-control-handler.md)|汎用コントロールの通知コードのハンドラー。|
+|[ユーザーボタンハンドラー](../../mfc/reference/user-button-handlers.md)|ユーザーボタンの通知コードのハンドラー。|
+|[コンボボックスハンドラー](../../mfc/reference/combo-box-handlers.md)|コンボボックスの通知コードのハンドラー。|
+|[エディットコントロールハンドラー](../../mfc/reference/edit-control-handlers.md)|エディットコントロールの通知コードのハンドラー。|
+|[リストボックスハンドラー](../../mfc/reference/list-box-handlers.md)|リストボックスの通知コードのハンドラー。|
 
 ## <a name="see-also"></a>関連項目
 
