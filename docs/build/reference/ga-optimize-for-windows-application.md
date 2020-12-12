@@ -1,4 +1,5 @@
 ---
+description: 詳細情報:/GA (Windows アプリケーションの最適化)
 title: /GA (Windows アプリケーションの最適化)
 ms.date: 11/04/2016
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - -GA compiler option [C++]
 - Optimize for Windows compiler options
 ms.assetid: be97323e-15a0-4836-862c-95980b51926a
-ms.openlocfilehash: 85efa03a3f3d267580cbb0442839afb18ac6c313
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: f9d65dce26e80b585abc4d67e2eef55f10cb365b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69492863"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97191980"
 ---
 # <a name="ga-optimize-for-windows-application"></a>/GA (Windows アプリケーションの最適化)
 
@@ -27,13 +28,13 @@ ms.locfileid: "69492863"
 /GA
 ```
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-**/GA**は、Windows ベースのプログラムで[__declspec (thread)](../../cpp/declspec.md)を使用して宣言されたデータへのアクセスを高速化します。 このオプションを設定すると、 [__tls_index](/windows/win32/ProcThread/thread-local-storage)マクロは0と見なされます。
+**/GA** は、Windows ベースのプログラムで [__declspec (thread)](../../cpp/declspec.md) を使用して宣言されたデータへのアクセスを高速化します。 このオプションを設定した場合、 [__tls_index](/windows/win32/ProcThread/thread-local-storage) マクロは0と見なされます。
 
-DLL に **/GA**を使用すると、コードの生成に問題が生じる可能性があります。
+DLL に **/GA** を使用すると、コードの生成に問題が生じる可能性があります。
 
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境において、このコンパイラ オプションを設定する方法
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのコンパイラ オプションを設定するには
 
 1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、[Visual Studio での C++ コンパイラとビルド プロパティの設定](../working-with-project-properties.md)に関するページを参照してください。
 
@@ -41,7 +42,7 @@ DLL に **/GA**を使用すると、コードの生成に問題が生じる可�
 
 1. **[コマンド ライン]** プロパティ ページをクリックします。
 
-1. **[追加のオプション]** ボックスにコンパイラ オプションを入力します。
+1. [追加のオプション]  ボックスにコンパイラ オプションを入力します。
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>このコンパイラ オプションをコードから設定するには
 
@@ -50,4 +51,4 @@ DLL に **/GA**を使用すると、コードの生成に問題が生じる可�
 ## <a name="see-also"></a>関連項目
 
 [MSVC コンパイラ オプション](compiler-options.md)<br/>
-[MSVC コンパイラ コマンド ラインの構文](compiler-command-line-syntax.md)
+[MSVC Compiler Command-Line 構文](compiler-command-line-syntax.md)

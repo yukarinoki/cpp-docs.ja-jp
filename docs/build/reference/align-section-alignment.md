@@ -1,4 +1,5 @@
 ---
+description: 詳細情報:/ALIGN (セクションの配置)
 title: /ALIGN (セクションの配置)
 ms.date: 12/29/2017
 f1_keywords:
@@ -11,41 +12,41 @@ helpviewer_keywords:
 - -ALIGN linker option
 - section alignment
 - sections
-ms.openlocfilehash: d8d2e6a859c68af473d49dc04b76f0a15056aa56
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d8a9af473252a2eff8957c5d2b4c54c7f7c862aa
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62295267"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97187261"
 ---
 # <a name="align-section-alignment"></a>/ALIGN (セクションの配置)
 
 ## <a name="syntax"></a>構文
 
-> **/ALIGN**[**:**_number_]
+> **/Align**[**:**_number_]
 
 ### <a name="arguments"></a>引数
 
 *number*<br/>
-配置の値 (バイト単位)。
+アラインメントの値 (バイト単位)。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-**/Align**オプションは、プログラムのリニア アドレス空間内の各セクションの配置を指定します。 *数*引数をバイト単位で、2 の累乗である必要があります。 既定では 4 K (4096 です)。 配置が無効なイメージを生成した場合、リンカーは警告を発行します。
+**/Align** オプションは、プログラムのリニアアドレス空間内の各セクションの配置を指定します。 *Number* 引数はバイト単位で、2の累乗でなければなりません。 既定値は 4K (4096) です。 配置によって無効なイメージが生成された場合、リンカーは警告を発行します。
 
-デバイス ドライバーなどのアプリケーションを作成していない場合は、配置を変更する必要ありません。
+デバイスドライバーなどのアプリケーションを作成する場合を除き、配置を変更する必要はありません。
 
-配置パラメーターを特定のセクションのアラインメントを変更することは、 [/section](section-specify-section-attributes.md)オプション。
+Align パラメーターを使用して、特定のセクションのアラインメントを [/SECTION](section-specify-section-attributes.md) オプションに変更することができます。
 
-配置の値を指定するは、最大のセクションの配置より小さくすることはできません。
+指定するアラインメント値は、最大のセクションアラインメントより小さくすることはできません。
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのリンカー オプションを設定するには
 
-1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。 [Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)します。
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、[Visual Studio での C++ コンパイラとビルド プロパティの設定](../working-with-project-properties.md)に関するページを参照してください。
 
-1. 選択、**構成プロパティ** > **リンカー** > **コマンドライン**プロパティ ページ。
+1. [**構成プロパティ**] の [  >  **リンカー**  >  **コマンドライン**] プロパティページをクリックします。
 
-1. オプションを入力して、**追加オプション**ボックス。 選択**OK**または**適用**して変更を適用します。
+1. [ **追加オプション** ] ボックスにオプションを入力します。 **[OK]** または [**適用**] を選択して変更を適用します。
 
 ### <a name="to-set-this-linker-option-programmatically"></a>このリンカーをコードから設定するには
 

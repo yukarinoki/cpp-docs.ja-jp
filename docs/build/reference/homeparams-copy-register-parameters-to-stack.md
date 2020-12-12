@@ -1,4 +1,5 @@
 ---
+description: 詳細については、次を参照してください:/homeparams (レジスタパラメーターをスタックにコピー)
 title: /homeparams (レジスタ パラメーターのスタックへのコピー)
 ms.date: 12/17/2018
 f1_keywords:
@@ -7,38 +8,38 @@ helpviewer_keywords:
 - /homeparams compiler option [C++]
 - -homeparams compiler option [C++]
 ms.assetid: 51067de4-24f7-436b-b8d9-bc867a7d53aa
-ms.openlocfilehash: a1f9269c7deae6c9ae2e4f198006ad09dd37abc3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 52145534121831be256c3db2a6ccacdffb30b2c2
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62291419"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97191473"
 ---
 # <a name="homeparams-copy-register-parameters-to-stack"></a>/homeparams (レジスタ パラメーターのスタックへのコピー)
 
-強制パラメーターは、その場所に関数の開始時にスタックにも書き込まれるレジスタで渡されます。
+レジスタで渡されたパラメーターも、関数の入力時にスタック上のその場所に書き込まれるようにします。
 
 ## <a name="syntax"></a>構文
 
 > **/homeparams**
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-このコンパイラ オプションでは、ネイティブおよびクロス コンパイラを x64 を対象とするのみです。
+このコンパイラオプションは、x64 を対象とするネイティブコンパイラとクロスコンパイラでのみ使用できます。
 
-X64 呼び出し規則では、レジスタに渡されるパラメーターの場合でも、すべてのパラメーターに割り当てられるスタック領域が必要です。 詳細については、次を参照してください。[パラメーターの引き渡し](../../build/x64-calling-convention.md#parameter-passing)します。 既定では、登録パラメーターは、リリース ビルドに割り当てられたスタック領域にコピーされません。 これにより、プログラム、最適化されたリリース ビルドをデバッグは困難です。
+X64 呼び出し規約では、レジスタに渡されたパラメーターの場合でも、すべてのパラメーターにスタック領域を割り当てる必要があります。 詳細については、「 [パラメーターの引き渡し](../../build/x64-calling-convention.md#parameter-passing)」を参照してください。 既定では、レジスタパラメーターは、リリースビルドで割り当てられたスタック領域にコピーされません。 これにより、プログラムの最適化されたリリースビルドをデバッグすることが難しくなります。
 
-リリース ビルドを使用することができます、 **/homeparams**強制的にコンパイラをコピーするオプションが、アプリケーションをデバッグできるようにする、スタックにパラメーターを登録します。 **/homeparams**余分なサイクルをスタック レジスタ パラメーターの読み込みを必要とするためには、パフォーマンスを示すものでは。
+リリースビルドでは、 **/homeparams** オプションを使用して、アプリケーションをデバッグできるようにするために、コンパイラに対してレジスタパラメーターのスタックへのコピーを強制することができます。 **/homeparams** は、レジスタパラメーターをスタックに読み込むために余分なサイクルが必要になるため、パフォーマンスの欠点を意味します。
 
-デバッグ ビルドでのレジスタに渡されるパラメーターのスタックは常に設定されます。
+デバッグビルドでは、常にレジスタで渡されるパラメーターがスタックに設定されます。
 
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境において、このコンパイラ オプションを設定する方法
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのコンパイラ オプションを設定するには
 
-1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。 [Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)します。
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、[Visual Studio での C++ コンパイラとビルド プロパティの設定](../working-with-project-properties.md)に関するページを参照してください。
 
-1. 開く、**構成プロパティ** > **C/C++** > **コマンドライン**プロパティ ページ。
+1. [**構成プロパティ**  >  ] [**C/c + +**  >  **] [コマンドライン**] プロパティページを開きます。
 
-1. コンパイラ オプションを入力して、**追加オプション**ボックス。
+1. [ **追加オプション** ] ボックスにコンパイラオプションを入力します。
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>このコンパイラ オプションをコードから設定するには
 
@@ -47,4 +48,4 @@ X64 呼び出し規則では、レジスタに渡されるパラメーターの�
 ## <a name="see-also"></a>関連項目
 
 [MSVC コンパイラ オプション](compiler-options.md)<br/>
-[MSVC コンパイラ コマンド ラインの構文](compiler-command-line-syntax.md)
+[MSVC Compiler Command-Line 構文](compiler-command-line-syntax.md)

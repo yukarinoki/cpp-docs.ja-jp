@@ -1,4 +1,5 @@
 ---
+description: 詳細情報:/IGNORE (特定の警告を無視する)
 title: /IGNORE (特定の警告を無視する)
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - /IGNORE linker option
 ms.assetid: 37e77387-8838-4697-898f-d376ac641124
-ms.openlocfilehash: 4ed87a1a12bea189f56545cf5256351a29977643
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: 7098515a65981ffcdf60b5b517d2434d20e7c015
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90040263"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97191330"
 ---
 # <a name="ignore-ignore-specific-warnings"></a>/IGNORE (特定の警告を無視する)
 
@@ -24,13 +25,13 @@ ms.locfileid: "90040263"
 *warning*<br/>
 抑制するリンカー警告の番号 (範囲は 4000 ～ 4999)。
 
-## <a name="remarks"></a>注釈
+## <a name="remarks"></a>解説
 
 既定では、LINK ではすべての警告が報告されます。 **「/IGNORE:** 」と指定 `warning` すると、特定の警告番号を抑制するようにリンカーに指示します。 複数の警告を無視するには、警告番号をコンマで区切ります。
 
-リンカーで無視できない警告がいくつかあります。 次の表に、 **/IGNORE**によって抑制されない警告を示します。
+リンカーで無視できない警告がいくつかあります。 次の表に、 **/IGNORE** によって抑制されない警告を示します。
 
-| リンカー警告 | メッセージ |
+| リンカー警告 | Message |
 |--------------------|-|
 |LNK4017|`keyword` ステートメントはターゲット プラットフォームでサポートされていません。無視しました。|
 |[LNK4044](../../error-messages/tool-errors/linker-tools-warning-lnk4044.md)|オプション '`option`' は無効です。無視されます。|

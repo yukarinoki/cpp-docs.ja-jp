@@ -1,20 +1,21 @@
 ---
+description: 詳細については、「プリプロセスでのプログラムの実行」を参照してください。
 title: プリプロセスでのプログラムの実行
 ms.date: 11/04/2016
 helpviewer_keywords:
 - program execution [C++]
 ms.assetid: 5ecf123a-20e5-40cd-b8d8-dd5a9fdd4b24
-ms.openlocfilehash: 564e4aebb3a0502f18550fb9d323e8b30f1303f6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 72743fe1b75e170ce1aa7ea04dd5a0c70440de59
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62271594"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97192370"
 ---
 # <a name="executing-a-program-in-preprocessing"></a>プリプロセスでのプログラムの実行
 
-プリプロセス時にコマンドの終了コードを使用するには、角かっこ () 内の任意の引数を持つ、コマンドを指定します。 コマンドが実行される前に、すべてのマクロが展開されます。 NMAKE は、コマンドの仕様を前処理を制御する式の中で使用できるコマンドの終了コードに置き換えます。
+プリプロセス中にコマンドの終了コードを使用するには、角かっこ ([]) で任意の引数を指定してコマンドを指定します。 コマンドが実行される前に、すべてのマクロが展開されます。 NMAKE はコマンドの指定をコマンドの終了コードに置き換えます。これを式で使用して、前処理を制御できます。
 
 ## <a name="see-also"></a>関連項目
 
-[メイクファイル プリプロセスの式](expressions-in-makefile-preprocessing.md)
+[メイクファイルのプリプロセスの式](expressions-in-makefile-preprocessing.md)

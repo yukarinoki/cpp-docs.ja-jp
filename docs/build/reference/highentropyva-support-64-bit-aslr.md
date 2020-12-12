@@ -1,13 +1,14 @@
 ---
+description: 詳細情報:/HIGHENTROPYVA (64 ビット ASLR のサポート)
 title: /HIGHENTROPYVA (64 ビット ASLR のサポート)
 ms.date: 06/12/2018
 ms.assetid: fe35f9f7-d28e-4694-9aeb-a79db06168e0
-ms.openlocfilehash: ead296b1bd31171fb1a187685f407f6a0cf8a74c
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: aed5d5eea2d3351d4eff88a58818a953563ba0e5
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88835026"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97191551"
 ---
 # <a name="highentropyva-support-64-bit-aslr"></a>/HIGHENTROPYVA (64 ビット ASLR のサポート)
 
@@ -19,7 +20,7 @@ ms.locfileid: "88835026"
 
 ## <a name="remarks"></a>解説
 
-**`/HIGHENTROPYVA`***実行可能イメージ*ファイル (たとえば、またはファイル) のヘッダーを変更して *`.dll`* *`.exe`* 、ASLR が64ビットのアドレス空間全体を使用できるかどうかを示します。  効果を与えるには、実行可能ファイルと、それが依存するすべてのモジュールに対してオプションを設定します。 その後、64ビット ASLR をサポートするオペレーティングシステムでは、64ビットのランダム化された仮想アドレスを使用して、読み込み時に実行可能イメージのセグメントをリベースできます。 この大きいアドレス空間により、攻撃者は特定のメモリ領域の位置を推測することが困難となります。
+**`/HIGHENTROPYVA`***実行可能イメージ* ファイル (たとえば、またはファイル) のヘッダーを変更して *`.dll`* *`.exe`* 、ASLR が64ビットのアドレス空間全体を使用できるかどうかを示します。  効果を与えるには、実行可能ファイルと、それが依存するすべてのモジュールに対してオプションを設定します。 その後、64ビット ASLR をサポートするオペレーティングシステムでは、64ビットのランダム化された仮想アドレスを使用して、読み込み時に実行可能イメージのセグメントをリベースできます。 この大きいアドレス空間により、攻撃者は特定のメモリ領域の位置を推測することが困難となります。
 
 既定で **`/HIGHENTROPYVA`** は、64ビットの実行可能イメージに対してが有効になっています。 このオプションにはが必要です [`/LARGEADDRESSAWARE`](largeaddressaware-handle-large-addresses.md) 。これは、64ビットイメージでも既定で有効になっています。 **`/HIGHENTROPYVA`** 32ビットの実行可能イメージには適用されません。リンカーはこのオプションを無視します。 このオプションを明示的に無効にするには、を使用し **`/HIGHENTROPYVA:NO`** ます。
 
@@ -29,7 +30,7 @@ ms.locfileid: "88835026"
 
 1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳しくは、「[Visual Studio で C++ コンパイラとビルド プロパティを設定する](../working-with-project-properties.md)」をご覧ください。
 
-1. [**構成プロパティ**] [  >  **リンカー**  >  **コマンドライン**] プロパティページを選択します。
+1. **[構成プロパティ]**  >  **[リンカー]**  >  **[コマンド ライン]** プロパティ ページを選択します。
 
 1. [ **追加オプション**] で、またはを入力し `/HIGHENTROPYVA` `/HIGHENTROPYVA:NO` ます。
 

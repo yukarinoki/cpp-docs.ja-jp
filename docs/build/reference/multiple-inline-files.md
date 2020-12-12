@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: 複数のインラインファイル'
 title: 複数のインライン ファイル
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,16 +7,16 @@ helpviewer_keywords:
 - multiple inline files
 - NMAKE program, inline files
 ms.assetid: 6d381dcf-0ed8-45d1-8df3-b4598d860b99
-ms.openlocfilehash: 71f17ff6717e717693facb21b4a4341a040b14c1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d739591910007f69eca5d4834f6943ae0a0082ed
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62320592"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97190602"
 ---
 # <a name="multiple-inline-files"></a>複数のインライン ファイル
 
-コマンドは、1 つ以上のインライン ファイルを作成できます。
+コマンドでは、複数のインラインファイルを作成できます。
 
 ## <a name="syntax"></a>構文
 
@@ -27,10 +28,10 @@ inlinetext
 <<[KEEP | NOKEEP]
 ```
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-ファイルごとに 1 つまたは複数の行のインライン テキストが続く、区切り記号を表す終了行を指定します。 最初のファイルの区切り線の次の行に 2 番目のファイルのテキストを開始します。
+各ファイルに対して、1行以上のインラインテキストの後に区切り記号を含む終了行を指定します。 最初のファイルの区切り行の後の行で、2番目のファイルのテキストを開始します。
 
 ## <a name="see-also"></a>関連項目
 
-[メイクファイルのインライン ファイル](inline-files-in-a-makefile.md)
+[メイクファイルのインラインファイル](inline-files-in-a-makefile.md)

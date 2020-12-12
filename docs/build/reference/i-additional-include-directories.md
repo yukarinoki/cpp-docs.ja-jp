@@ -1,5 +1,6 @@
 ---
-title: /I (追加のインクルード ディレクトリ)
+description: /I の詳細情報:/I (追加のインクルードディレクトリ)
+title: /I (追加インクルード ディレクトリ)
 ms.date: 11/04/2016
 f1_keywords:
 - VC.Project.VCCLWCECompilerTool.AdditionalIncludeDirectories
@@ -14,47 +15,47 @@ helpviewer_keywords:
 - set include directories
 - include directories, compiler option [C++]
 ms.assetid: 3e9add2a-5ed8-4d15-ad79-5b411e313a49
-ms.openlocfilehash: 6ec8b15e77fec5214013c484e617904ed29e8197
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ad44abec28bbb87f91f449765a9ea2f30f2bffa8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62270143"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97191343"
 ---
-# <a name="i-additional-include-directories"></a>/I (追加のインクルード ディレクトリ)
+# <a name="i-additional-include-directories"></a>/I (追加インクルード ディレクトリ)
 
-インクルード ファイルを検索するディレクトリの一覧には、ディレクトリを追加します。
+インクルードファイルを検索するディレクトリのリストにディレクトリを追加します。
 
 ## <a name="syntax"></a>構文
 
-> **/I**[ ]*directory*
+> **/I**[]*ディレクトリ*
 
 ### <a name="arguments"></a>引数
 
-*directory*<br/>
-ディレクトリの一覧に追加するディレクトリは、インクルード ファイルを検索します。
+*名簿*<br/>
+インクルードファイルを検索するディレクトリの一覧に追加するディレクトリ。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-1 つ以上のディレクトリを追加するには、このオプションを複数回使用します。 指定したインクルード ファイルが見つかるまでにのみ、ディレクトリが検索されます。
+複数のディレクトリを追加するには、このオプションを複数回使用します。 指定されたインクルードファイルが見つかるまで、ディレクトリは検索されません。
 
-このオプションを使用することができます、([/X (標準インクルード パスの無視)](x-ignore-standard-include-paths.md)) オプション。
+このオプションは、([/x (標準インクルードパスを無視する)](x-ignore-standard-include-paths.md)) オプションと共に使用できます。
 
 コンパイラは、次の順序でディレクトリを検索します。
 
-1. 使用して指定されている場合、 [#include ディレクティブ](../../preprocessor/hash-include-directive-c-cpp.md)二重引用符のフォームで最初に検索のローカル ディレクトリ。 含むファイルと同じディレクトリで検索を開始、 **#include**ステートメント。 検索できない場合は、ファイルを検索、開かれた逆の順序で現在開かれているディレクトリのインクルード ファイル。 ディレクトリの検索は親インクルード ファイルのディレクトリから始まり、上方向へ移動して親の親インクルード ファイルのディレクトリへと続きます。
+1. 二重引用符形式で [#include ディレクティブ](../../preprocessor/hash-include-directive-c-cpp.md) を使用して指定した場合は、最初にローカルディレクトリが検索されます。 検索は、 **#include** ステートメントを含むファイルと同じディレクトリから開始されます。 このファイルが見つからない場合は、現在開いているインクルードファイルのディレクトリ内で、開いた順に検索します。 ディレクトリの検索は親インクルード ファイルのディレクトリから始まり、上方向へ移動して親の親インクルード ファイルのディレクトリへと続きます。
 
-1. 使用して指定されている場合、 **#include**ディレクティブの角度でフォームを角かっこまたはを使用して指定されたディレクトリを検索するローカル ディレクトリの検索が失敗した場合、 **/I** CL で出現する順序でのオプションコマンドライン。
+1. 山かっこ形式の **#include** ディレクティブを使用して指定した場合、またはローカルディレクトリ検索に失敗した場合は、コマンドラインで指定されている順序で、 **/i** オプションを使用して指定されたディレクトリが検索されます。
 
-1. 指定されたディレクトリ、 **INCLUDE**環境変数。
+1. **INCLUDE** 環境変数で指定されたディレクトリ。
 
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境において、このコンパイラ オプションを設定する方法
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのコンパイラ オプションを設定するには
 
-1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。 [Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)します。
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、[Visual Studio での C++ コンパイラとビルド プロパティの設定](../working-with-project-properties.md)に関するページを参照してください。
 
-1. 選択、**構成プロパティ** > **C/C++** > **全般**プロパティ ページ。
+1. **[構成プロパティ]**  >  **[C/C++]**  >  **[全般]** プロパティ ページを選択します。
 
-1. 変更、**追加のインクルード ディレクトリ**プロパティ。
+1. " **追加のインクルードディレクトリ** " プロパティを変更します。
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>このコンパイラ オプションをコードから設定するには
 
@@ -62,7 +63,7 @@ ms.locfileid: "62270143"
 
 ## <a name="example"></a>例
 
-次のコマンドは、次の順序で MAIN.c によって要求されたインクルード ファイルを探します。まず、二重引用符を使用して、指定した場合は、ローカル ファイルが検索されます。 次に、検索は、\INCLUDE ディレクトリから、\MY\INCLUDE ディレクトリを継続し、最後に、ディレクトリに、INCLUDE 環境変数に割り当てられています。
+次のコマンドは、MAIN によって要求されたインクルードファイルを次の順序で検索します。最初に、二重引用符を使用して指定した場合、ローカルファイルが検索されます。 次に、検索は、-include ディレクトリ、\MY\INCLUDE ディレクトリ、および INCLUDE 環境変数に割り当てられているディレクトリで続行されます。
 
 ```
 CL /I \INCLUDE /I\MY\INCLUDE MAIN.C
@@ -71,4 +72,4 @@ CL /I \INCLUDE /I\MY\INCLUDE MAIN.C
 ## <a name="see-also"></a>関連項目
 
 [MSVC コンパイラ オプション](compiler-options.md)<br/>
-[MSVC コンパイラ コマンド ラインの構文](compiler-command-line-syntax.md)
+[MSVC Compiler Command-Line 構文](compiler-command-line-syntax.md)

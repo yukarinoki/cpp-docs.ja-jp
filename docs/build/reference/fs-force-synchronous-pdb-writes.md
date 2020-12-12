@@ -1,4 +1,5 @@
 ---
+description: 詳細については、/FS (同期 PDB 書き込みの強制) に関するページを参照してください。
 title: /FS (同期 PDB 書き込みの強制)
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,16 +8,16 @@ helpviewer_keywords:
 - -FS compiler option [C++]
 - /FS compiler option [C++]
 ms.assetid: b2caaffe-f6e1-4963-b068-648f06b105e0
-ms.openlocfilehash: 97ffb9529087329cf327ba704523b93d5d9b99b1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2dcddd046cc7232f40be5a54d73e659ed099e85d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62270980"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97192032"
 ---
 # <a name="fs-force-synchronous-pdb-writes"></a>/FS (同期 PDB 書き込みの強制)
 
-プログラム データベース (PDB) ファイルへの書き込み: によって作成された[/Zi](z7-zi-zi-debug-information-format.md)または[/ZI](z7-zi-zi-debug-information-format.md)— MSPDBSRV をシリアル化します。実行可能ファイルです。
+[/Zi](z7-zi-zi-debug-information-format.md)または[/zi](z7-zi-zi-debug-information-format.md)によって作成されたプログラムデータベース (PDB) ファイルへの書き込みを、MSPDBSRV.EXE によってシリアル化するように強制します。
 
 ## <a name="syntax"></a>構文
 
@@ -24,21 +25,21 @@ ms.locfileid: "62270980"
 /FS
 ```
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-既定では、ときに **/Zi**または **/ZI**を指定すると、コンパイラが型情報とシンボリック デバッグ情報を記述する PDB ファイルをロックします。 これにより、型の数が多い場合、コンパイル時に型情報の生成にかかる時間が大幅に短くなることがあります。 ウイルス対策プログラムなどの別のプロセスによって PDB ファイルが一時的にロックされている場合、コンパイラによる書き込みは失敗し、重大なエラーが発生することがあります。 この問題は、cl.exe の複数のコピーが同じ PDB ファイルにアクセスするときにも発生することがあります。たとえば、ソリューションで個別のプロジェクトが同じ中間ディレクトリまたは出力ディレクトリを使用する場合や、並列ビルドが有効になっている場合です。 **/FS**コンパイラ オプションは、コンパイラが PDB ファイルをロックするを防ぎます、MSPDBSRV 経由への書き込みを強制します。EXE へのアクセスをシリアル化します。 これにより、ビルド時間が大幅に長くなることがあります。cl.exe の複数のインスタンスが PDB ファイルに同時にアクセスするときに発生する可能性があるすべてのエラーを防止できないこともあります。 個別のプロジェクトによりそれぞれ別々の中間ディレクトリと出力ディレクトリに書き込まれるように、または、他のプロジェクトに依存するいずれかのプロジェクトでプロジェクトのビルドがシリアル化されるように、ソリューションを変更することをお勧めします。
+既定では、 **/zi** または **/zi** を指定すると、コンパイラは PDB ファイルをロックして、型情報とシンボリックデバッグ情報を書き込みます。 これにより、型の数が多い場合、コンパイル時に型情報の生成にかかる時間が大幅に短くなることがあります。 ウイルス対策プログラムなどの別のプロセスによって PDB ファイルが一時的にロックされている場合、コンパイラによる書き込みは失敗し、重大なエラーが発生することがあります。 この問題は、cl.exe の複数のコピーが同じ PDB ファイルにアクセスするときにも発生することがあります。たとえば、ソリューションで個別のプロジェクトが同じ中間ディレクトリまたは出力ディレクトリを使用する場合や、並列ビルドが有効になっている場合です。 **/Fs** コンパイラオプションを使用すると、コンパイラが PDB ファイルをロックして、MSPDBSRV.EXE 経由で書き込みを強制的に実行できます。これにより、アクセスがシリアル化されます。 これにより、ビルド時間が大幅に長くなることがあります。cl.exe の複数のインスタンスが PDB ファイルに同時にアクセスするときに発生する可能性があるすべてのエラーを防止できないこともあります。 個別のプロジェクトによりそれぞれ別々の中間ディレクトリと出力ディレクトリに書き込まれるように、または、他のプロジェクトに依存するいずれかのプロジェクトでプロジェクトのビルドがシリアル化されるように、ソリューションを変更することをお勧めします。
 
-[/MP](mp-build-with-multiple-processes.md)オプションにより **/FS**既定。
+[/Mp](mp-build-with-multiple-processes.md)オプションを使用すると、既定で **/fs** が有効になります。
 
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境において、このコンパイラ オプションを設定する方法
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのコンパイラ オプションを設定するには
 
-1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。 [Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)します。
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、[Visual Studio での C++ コンパイラとビルド プロパティの設定](../working-with-project-properties.md)に関するページを参照してください。
 
-1. 選択、 **C/C++** フォルダー。
+1. [ **C/c + +** ] フォルダーを選択します。
 
-1. 選択、**コマンドライン**プロパティ ページ。
+1. [ **コマンドライン** ] プロパティページを選択します。
 
-1. 変更、**追加オプション**含めるプロパティを`/FS`選び、 **OK**します。
+1. を含めるように " **追加オプション** " プロパティを変更し、[ `/FS` **OK]** を選択します。
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>このコンパイラ オプションをコードから設定するには
 
@@ -47,4 +48,4 @@ ms.locfileid: "62270980"
 ## <a name="see-also"></a>関連項目
 
 [MSVC コンパイラ オプション](compiler-options.md)<br/>
-[MSVC コンパイラ コマンド ラインの構文](compiler-command-line-syntax.md)
+[MSVC Compiler Command-Line 構文](compiler-command-line-syntax.md)

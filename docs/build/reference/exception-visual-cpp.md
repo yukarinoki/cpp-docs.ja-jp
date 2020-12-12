@@ -1,16 +1,17 @@
 ---
+description: '詳細情報: &lt; 例外 &gt; タグ'
 title: '&lt;例外> (C++ ドキュメントコメント)'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - <exception> C++ XML tag
 - exception C++ XML tag
 ms.assetid: 24451e79-9b89-4b77-98fb-702c6516b818
-ms.openlocfilehash: 7e4b2276ecf5f4f4c4c05b389eb98a0f572f8027
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: c75f2a4a10386664e23b5ba730e1827c6d74af71
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90042109"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97192422"
 ---
 # <a name="ltexceptiongt-tag"></a>&lt;例外 &gt; タグ
 

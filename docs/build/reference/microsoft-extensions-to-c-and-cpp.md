@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「C および C++ に対する Microsoft の拡張機能」を参照してください。
 title: C および C++ の Microsoft 拡張機能
 ms.date: 06/14/2018
 helpviewer_keywords:
@@ -29,12 +30,12 @@ helpviewer_keywords:
 - extensions
 - compl method
 ms.assetid: e811a74a-45ba-4c00-b206-2f2321b8689a
-ms.openlocfilehash: 77f2ed64a0c816d84e67f66b664141581a9fad51
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: fac6edbdfd559f3cebd18dcdc3b8cfca2a9336dd
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87231508"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97190693"
 ---
 # <a name="microsoft-extensions-to-c-and-c"></a>C および C++ の Microsoft 拡張機能
 
@@ -57,7 +58,7 @@ class CMyClass  {
 const int CMyClass::max;   // out of class definition
 ```
 
-**/Ze**では、クラス外定義は static、const 整数、および const 列挙型のデータメンバーに対しては省略可能です。 クラス内に初期化子を持つことができるのは、静的で定数型の整数と列挙だけです。初期化式には、定数型の式を使用する必要があります。
+**/Ze** では、クラス外定義は static、const 整数、および const 列挙型のデータメンバーに対しては省略可能です。 クラス内に初期化子を持つことができるのは、静的で定数型の整数と列挙だけです。初期化式には、定数型の式を使用する必要があります。
 
 クラス外定義がヘッダーファイルに指定されていて、ヘッダーファイルが複数のソースファイルに含まれている場合にエラーが発生しないようにするには、 [selectany](../../cpp/selectany.md)を使用します。 次に例を示します。
 
@@ -232,11 +233,11 @@ C コンパイラでは、以下のデータ宣言およびデータ定義の機
 
 ## <a name="intrinsic-floating-point-functions"></a>組み込み浮動小数点関数
 
-X86 C++ コンパイラと C コンパイラはどちらも `atan` 、 `atan2` `cos` `exp` `log` `log10` `sin` `sqrt` `tan` **/Oi**が指定されている場合、、、、、、、、、およびの各関数のインライン生成をサポートしています。 C コンパイラの場合、これらの組み込みでは `errno` 変数が設定されないため、ANSI に準拠しなくなります。
+X86 C++ コンパイラと C コンパイラはどちらも `atan` 、 `atan2` `cos` `exp` `log` `log10` `sin` `sqrt` `tan` **/Oi** が指定されている場合、、、、、、、、、およびの各関数のインライン生成をサポートしています。 C コンパイラの場合、これらの組み込みでは `errno` 変数が設定されないため、ANSI に準拠しなくなります。
 
 ## <a name="passing-a-non-const-pointer-parameter-to-a-function-that-expects-a-reference-to-a-const-pointer-parameter"></a>Const ポインターパラメーターへの参照を必要とする関数に非定数ポインターパラメーターを渡す
 
-これは C++ の拡張機能です。 このコードは、 **/ze**を使用してコンパイルします。
+これは C++ の拡張機能です。 このコードは、 **/ze** を使用してコンパイルします。
 
 ```cpp
 typedef   int   T;
@@ -260,7 +261,7 @@ void func ()
 
 ## <a name="iso646h-not-enabled"></a>ISO646.H が有効ではありません
 
-**/Ze**では、次の演算子のテキスト形式を使用する場合は、iso646 を含める必要があります。
+**/Ze** では、次の演算子のテキスト形式を使用する場合は、iso646 を含める必要があります。
 
 - && (AND)
 
@@ -286,7 +287,7 @@ void func ()
 
 ## <a name="address-of-string-literal-has-type-const-char--not-const-char--"></a>文字列リテラルのアドレスの型が const char [] ではありません。 const char (*) [] ではありません
 
-次の例では `char const (*)[4]` 、 **/za**の下で、/ze の下に出力し `char const [4]` ます。 **/Ze**
+次の例では `char const (*)[4]` 、 **/za** の下で、/ze の下に出力し `char const [4]` ます。 
 
 ```cpp
 #include <stdio.h>
@@ -302,4 +303,4 @@ int main()
 
 - [/Za、/Ze (言語拡張機能の無効化)](za-ze-disable-language-extensions.md)
 - [MSVC コンパイラ オプション](compiler-options.md)
-- [MSVC コンパイラのコマンドライン構文](compiler-command-line-syntax.md)
+- [MSVC Compiler Command-Line 構文](compiler-command-line-syntax.md)

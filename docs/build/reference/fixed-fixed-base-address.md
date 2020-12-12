@@ -1,4 +1,5 @@
 ---
+description: 詳細情報:/FIXED (固定ベースアドレス)
 title: /FIXED (固定ベース アドレス)
 ms.date: 11/04/2016
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - -FIXED linker option
 - FIXED linker option
 ms.assetid: 929bba5e-b7d8-40ed-943e-056aa3710fc5
-ms.openlocfilehash: 6cc89df76e48ee258a7c6608aab12573ab11729b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 08b781b7fbeaf43d6c7e0e82da7bf8319cf77953
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62292485"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97192058"
 ---
 # <a name="fixed-fixed-base-address"></a>/FIXED (固定ベース アドレス)
 
@@ -23,9 +24,9 @@ ms.locfileid: "62292485"
 /FIXED[:NO]
 ```
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-オペレーティング システムに、指定されたベース アドレスにだけプログラムを読み込むように指示します。 指定したベース アドレスが使用できない場合、オペレーティング システムはファイルを読み込みません。 詳細については、「[/BASE (ベース アドレス)](base-base-address.md)」を参照してください。
+オペレーティング システムに、指定されたベース アドレスにだけプログラムを読み込むように指示します。 指定したベース アドレスが使用できない場合、オペレーティング システムはファイルを読み込みません。 詳細については、「 [/base (ベースアドレス)](base-base-address.md)」を参照してください。
 
 DLL には /FIXED:NO が既定で使用されます。他のすべての種類のプロジェクトには /FIXED が既定で使用されます。
 
@@ -35,13 +36,13 @@ DLL には /FIXED:NO が既定で使用されます。他のすべての種類�
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのリンカー オプションを設定するには
 
-1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。 [Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)します。
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、[Visual Studio での C++ コンパイラとビルド プロパティの設定](../working-with-project-properties.md)に関するページを参照してください。
 
-1. 選択、**リンカー**フォルダー。
+1. [ **リンカー** ] フォルダーを選択します。
 
-1. 選択、**コマンドライン**プロパティ ページ。
+1. [ **コマンドライン** ] プロパティページを選択します。
 
-1. オプション名を入力し、設定、**追加オプション**ボックス。
+1. [ **追加オプション** ] ボックスにオプション名と設定を入力します。
 
 ### <a name="to-set-this-linker-option-programmatically"></a>このリンカーをコードから設定するには
 

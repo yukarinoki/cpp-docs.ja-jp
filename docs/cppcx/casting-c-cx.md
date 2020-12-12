@@ -1,17 +1,18 @@
 ---
+description: '詳細情報: キャスト (C++/CX)'
 title: キャスト (C++/CX)
 ms.date: 06/19/2018
 ms.assetid: 5247f6c7-6a0a-4021-97c9-21c868bd9455
-ms.openlocfilehash: 5e51f9e100be2096494e10aca38232dbd1576f40
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 90b9e90833acc14bcf76287b44f70fb914c7604a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88843483"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97190277"
 ---
 # <a name="casting-ccx"></a>キャスト (C++/CX)
 
-4つの異なるキャスト演算子は Windows ランタイム型 ( [Static_cast operator](../cpp/static-cast-operator.md)、 [dynamic_cast Operator](../cpp/dynamic-cast-operator.md)、 **Safe_cast operator**、および [reinterpret_cast operator](../cpp/reinterpret-cast-operator.md)) に適用されます。 **safe_cast**変換を **`static_cast`** 実行できない場合は、safe_cast して例外をスローします。[Static_cast 演算子](../cpp/static-cast-operator.md)は、コンパイル時の型チェックも実行します。 **`dynamic_cast`****`nullptr`** 型の変換に失敗した場合はを返します。 は **`reinterpret_cast`** null 以外の値を返しますが、無効である可能性があります。 このため、 **`reinterpret_cast`** キャストが成功することがわかっている場合を除き、を使用しないことをお勧めします。 また、C++/CX コードはと同じであるため、C スタイルのキャストは使用しないことをお勧め **`reinterpret_cast`** します。
+4つの異なるキャスト演算子は Windows ランタイム型 ( [Static_cast operator](../cpp/static-cast-operator.md)、 [dynamic_cast Operator](../cpp/dynamic-cast-operator.md)、 **Safe_cast operator**、および [reinterpret_cast operator](../cpp/reinterpret-cast-operator.md)) に適用されます。 変換を **`static_cast`** 実行できない場合は、safe_cast して例外をスローします。[Static_cast 演算子](../cpp/static-cast-operator.md)は、コンパイル時の型チェックも実行します。 **`dynamic_cast`****`nullptr`** 型の変換に失敗した場合はを返します。 は **`reinterpret_cast`** null 以外の値を返しますが、無効である可能性があります。 このため、 **`reinterpret_cast`** キャストが成功することがわかっている場合を除き、を使用しないことをお勧めします。 また、C++/CX コードはと同じであるため、C スタイルのキャストは使用しないことをお勧め **`reinterpret_cast`** します。
 
 コンパイラとランタイムは、暗黙的なキャストも実行します。たとえば、ボックス化操作で、パラメーターの型が `Object^`であるメソッドに値型または組み込み型が引数として渡される場合です。 理論的には、暗黙的なキャストは実行時に例外を引き起こしません。コンパイラが暗黙的な変換を実行できない場合は、コンパイル時にエラーが発生します。
 
@@ -36,7 +37,7 @@ Ref クラスのを使用すると、 **`static_cast`** 実行時チェックも
 
 ## <a name="safe_cast"></a>safe_cast
 
-**Safe_cast**演算子は Windows ランタイムの一部です。 変換が失敗すると、実行時の型チェックを実行して `Platform::InvalidCastException` をスローします。 実行時エラーが例外的な条件を示している場合は、 **safe_cast** を使用します。 **Safe_cast**の主な目的は、開発フェーズおよびテストフェーズで発生した時点でのプログラミングエラーを特定するのに役立ちます。 ハンドルされていない例外自体がエラーの位置を示しているため、例外を処理する必要はありません。
+**Safe_cast** 演算子は Windows ランタイムの一部です。 変換が失敗すると、実行時の型チェックを実行して `Platform::InvalidCastException` をスローします。 実行時エラーが例外的な条件を示している場合は、 **safe_cast** を使用します。 **Safe_cast** の主な目的は、開発フェーズおよびテストフェーズで発生した時点でのプログラミングエラーを特定するのに役立ちます。 ハンドルされていない例外自体がエラーの位置を示しているため、例外を処理する必要はありません。
 
 コードが関係を宣言していないが、キャストが機能することを確信している場合は、safe_cast を使用します。
 
@@ -78,7 +79,7 @@ void App::OnLaunched(Windows::ApplicationModel::Activation::LaunchActivatedEvent
 
 ## <a name="dynamic_cast-and-tracking-references-"></a>dynamic_cast と追跡参照 (%) 
 
-を追跡参照に適用することもでき **`dynamic_cast`** ますが、この場合、キャストは **safe_cast**のように動作します。 `Platform::InvalidCastException`追跡参照の値をにすることはできないため、エラーが発生した場合はをスロー **`nullptr`** します。
+を追跡参照に適用することもでき **`dynamic_cast`** ますが、この場合、キャストは **safe_cast** のように動作します。 `Platform::InvalidCastException`追跡参照の値をにすることはできないため、エラーが発生した場合はをスロー **`nullptr`** します。
 
 ## <a name="reinterpret_cast"></a>reinterpret_cast
 
