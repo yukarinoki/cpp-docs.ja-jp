@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「printf_p 位置指定パラメーター」を参照してください。
 title: printf_p の位置指定パラメーター
 ms.date: 11/04/2016
 api_location:
@@ -16,12 +17,12 @@ helpviewer_keywords:
 - _printf_p function, positional parameters
 - printf_p function, positional parameters
 ms.assetid: beb4fd85-a7aa-4665-9085-2c907a5b9ab0
-ms.openlocfilehash: 156baa1a91931199ebca5f6200e239aa944fee1e
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
-ms.translationtype: HT
+ms.openlocfilehash: 2db76bc937e52b5945bf39cab1f47161fd3b162c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70944050"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97213430"
 ---
 # <a name="printf_p-positional-parameters"></a>printf_p の位置指定パラメーター
 
@@ -30,12 +31,12 @@ ms.locfileid: "70944050"
 | 位置指定以外の printf 関数 | 対応する位置指定パラメーター |
 |---|---|
 |[printf、_printf_l、wprintf、_wprintf_l](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)|[_printf_p、_printf_p_l、_wprintf_p、_wprintf_p_l](../c-runtime-library/reference/printf-p-printf-p-l-wprintf-p-wprintf-p-l.md)|
-|[sprintf、_sprintf_l、swprintf、_swprintf_l、\__swprintf_l](../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)|[_sprintf_p、_sprintf_p_l、_swprintf_p、_swprintf_p_l](../c-runtime-library/reference/sprintf-p-sprintf-p-l-swprintf-p-swprintf-p-l.md)|
+|[sprintf、_sprintf_l、swprintf、_swprintf_l、 \_ _swprintf_l](../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)|[_sprintf_p、_sprintf_p_l、_swprintf_p、_swprintf_p_l](../c-runtime-library/reference/sprintf-p-sprintf-p-l-swprintf-p-swprintf-p-l.md)|
 |[_cprintf、_cprintf_l、_cwprintf、_cwprintf_l](../c-runtime-library/reference/cprintf-cprintf-l-cwprintf-cwprintf-l.md)|[_cprintf_p、_cprintf_p_l、_cwprintf_p、_cwprintf_p_l](../c-runtime-library/reference/cprintf-p-cprintf-p-l-cwprintf-p-cwprintf-p-l.md)|
 |[fprintf、_fprintf_l、fwprintf、_fwprintf_l](../c-runtime-library/reference/fprintf-fprintf-l-fwprintf-fwprintf-l.md)|[_fprintf_p、_fprintf_p_l、_fwprintf_p、_fwprintf_p_l](../c-runtime-library/reference/fprintf-p-fprintf-p-l-fwprintf-p-fwprintf-p-l.md)|
 |[vprintf、_vprintf_l、vwprintf、_vwprintf_l](../c-runtime-library/reference/vprintf-vprintf-l-vwprintf-vwprintf-l.md)|[_vprintf_p、_vprintf_p_l、_vwprintf_p、_vwprintf_p_l](../c-runtime-library/reference/vprintf-p-vprintf-p-l-vwprintf-p-vwprintf-p-l.md)|
 |[vfprintf、_vfprintf_l、vfwprintf、_vfwprintf_l](../c-runtime-library/reference/vfprintf-vfprintf-l-vfwprintf-vfwprintf-l.md)|[_vfprintf_p、_vfprintf_p_l、_vfwprintf_p、_vfwprintf_p_l](../c-runtime-library/reference/vfprintf-p-vfprintf-p-l-vfwprintf-p-vfwprintf-p-l.md)|
-|[vsprintf、_vsprintf_l、vswprintf、_vswprintf_l、\__vswprintf_l](../c-runtime-library/reference/vsprintf-vsprintf-l-vswprintf-vswprintf-l-vswprintf-l.md)|[_vsprintf_p、_vsprintf_p_l、_vswprintf_p、_vswprintf_p_l](../c-runtime-library/reference/vsprintf-p-vsprintf-p-l-vswprintf-p-vswprintf-p-l.md)|
+|[vsprintf、_vsprintf_l、vswprintf、_vswprintf_l、 \_ _vswprintf_l](../c-runtime-library/reference/vsprintf-vsprintf-l-vswprintf-vswprintf-l-vswprintf-l.md)|[_vsprintf_p、_vsprintf_p_l、_vswprintf_p、_vswprintf_p_l](../c-runtime-library/reference/vsprintf-p-vsprintf-p-l-vswprintf-p-vswprintf-p-l.md)|
 
 ## <a name="how-to-specify-positional-parameters"></a>位置指定パラメーターの指定方法
 
@@ -67,7 +68,7 @@ _printf_p("%2$s %1$s", "November", "10");
 10 November
 ```
 
-従来の書式指定文字列とは異なり、位置指定パラメーターを書式指定文字列内に複数回使用できます。 たとえば、オブジェクトに適用された
+従来の書式指定文字列とは異なり、位置指定パラメーターを書式指定文字列内に複数回使用できます。 たとえば、次のように入力します。
 
 ```C
 _printf_p("%1$d times %1$d is %2$d", 10, 100);
@@ -83,13 +84,13 @@ _printf_p("%1$d times %1$d is %2$d", 10, 100);
 
 ### <a name="width-and-precision"></a>幅と精度
 
-`*n$` を使用して位置指定パラメーターを幅指定子または有効桁数指定子として指定できます。ここで、`n` は、パラメーター リストでの幅指定パラメーターまたは有効桁数のパラメーターの位置を示します。 幅または有効桁数の値は、\* シンボルの直後に指定する必要があります。 たとえば、オブジェクトに適用された
+`*n$` を使用して位置指定パラメーターを幅指定子または有効桁数指定子として指定できます。ここで、`n` は、パラメーター リストでの幅指定パラメーターまたは有効桁数のパラメーターの位置を示します。 幅または有効桁数の値は、\* シンボルの直後に指定する必要があります。 たとえば、次のように入力します。
 
 ```C
 _printf_p("%1$*2$s","Hello", 10);
 ```
 
-or
+または
 
 ```C
 _printf_p("%2$*1$s", 10, "Hello");

@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: __p__fmode'
 title: __p__fmode
 ms.date: 4/2/2020
 api_name:
@@ -23,16 +24,16 @@ f1_keywords:
 helpviewer_keywords:
 - __p__fmode
 ms.assetid: 1daa1394-81eb-43aa-a71b-4cc6acf3207b
-ms.openlocfilehash: dfd9962c49b03dbb30223d1d7403b791ed6dbec9
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: da7cae9c881ebe042aa5d6003b50c09c65ea02d7
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82919875"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97213521"
 ---
 # <a name="__p__fmode"></a>__p__fmode
 
-ファイルの入出力操作に対して既定の*ファイル変換モード*を指定する `_fmode` グローバル変数を指し示します。
+ファイルの入出力操作に対して既定の *ファイル変換モード* を指定する `_fmode` グローバル変数を指し示します。
 
 ## <a name="syntax"></a>構文
 
@@ -55,6 +56,6 @@ int* __p__fmode(
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |__p\__fmode|stdlib.h|
