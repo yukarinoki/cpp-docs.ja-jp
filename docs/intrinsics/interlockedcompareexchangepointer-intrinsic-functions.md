@@ -1,5 +1,6 @@
 ---
-title: _InterlockedCompareExchangePointer 組み込み関数
+description: 詳細については、_InterlockedCompareExchangePointer 組み込み関数」を参照してください。
+title: 組み込み関数の _InterlockedCompareExchangePointer
 ms.date: 09/02/2019
 f1_keywords:
 - _InterlockedCompareExchangePointer_HLERelease
@@ -24,14 +25,14 @@ helpviewer_keywords:
 - _InterlockedCompareExchangePointer_nf intrinsic
 - _InterlockedCompareExchangePointer_np intrinsic
 ms.assetid: 97fde59d-2bf9-42aa-a0fe-a5b6befdd44b
-ms.openlocfilehash: c0a0083c19df51d2d2eccb7a7bbf6521303c1f85
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: cd8d42c6a7036a6c779af6fc32a7176b7e48a73c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70222037"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97168060"
 ---
-# <a name="_interlockedcompareexchangepointer-intrinsic-functions"></a>_InterlockedCompareExchangePointer 組み込み関数
+# <a name="_interlockedcompareexchangepointer-intrinsic-functions"></a>組み込み関数の _InterlockedCompareExchangePointer
 
 **Microsoft 固有の仕様**
 
@@ -82,7 +83,7 @@ long _InterlockedCompareExchangePointer_rel (
 *インストール*\
 [入力、出力]対象の値へのポインターへのポインター。 符号は無視されます。
 
-*エクスチェンジ*\
+*Exchange*\
 から交換ポインター。 符号は無視されます。
 
 *比較対照値*\
@@ -92,23 +93,23 @@ long _InterlockedCompareExchangePointer_rel (
 
 戻り値は、対象の初期値です。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-|組み込み|アーキテクチャ|Header|
+|Intrinsic|アーキテクチャ|ヘッダー|
 |---------------|------------------|------------|
 |`_InterlockedCompareExchangePointer`|x86、ARM、x64、ARM64|\<intrin.h>|
-|`_InterlockedCompareExchangePointer_acq`、 `_InterlockedCompareExchangePointer_nf`、 `_InterlockedCompareExchangePointer_rel`|ARM、ARM64|\<iiintrin.h>|
+|`_InterlockedCompareExchangePointer_acq`, `_InterlockedCompareExchangePointer_nf`, `_InterlockedCompareExchangePointer_rel`|ARM、ARM64|\<iiintrin.h>|
 |`_InterlockedCompareExchangePointer_HLEAcquire`, `_InterlockedCompareExchangePointer_HLERelease`|x86、x64|\<immintrin.h>|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 `_InterlockedCompareExchangePointer` は `Destination` アドレスと `Comparand` アドレスのアトミックな比較を実行します。 `Destination` のアドレスが `Comparand` のアドレスと等しい場合、`Exchange` のアドレスは `Destination` で指定したアドレスに格納されます。 それ以外の場合は演算が実行されません。
 
-`_InterlockedCompareExchangePointer`Win32 Windows SDK [InterlockedCompareExchangePointer](/windows-hardware/drivers/ddi/content/wdm/nf-wdm-interlockedcompareexchangepointer)関数のコンパイラ組み込みサポートを提供します。
+`_InterlockedCompareExchangePointer` Win32 Windows SDK [InterlockedCompareExchangePointer](/windows-hardware/drivers/ddi/content/wdm/nf-wdm-interlockedcompareexchangepointer) 関数のコンパイラ組み込みサポートを提供します。
 
-の使用`_InterlockedCompareExchangePointer`例については、「 [_InterlockedDecrement](../intrinsics/interlockeddecrement-intrinsic-functions.md)」を参照してください。
+の使用例については `_InterlockedCompareExchangePointer` 、「 [_InterlockedDecrement](../intrinsics/interlockeddecrement-intrinsic-functions.md)」を参照してください。
 
-ARM プラットフォームでは、クリティカル セクションの最初と最後などで取得と解放のセマンティクスを必要とする場合は、`_acq` および `_rel` サフィックスの付いた組み込みを使用します。 ("フェンスなし`_nf` ") サフィックスを持つ ARM 組み込みは、メモリバリアとしては機能しません。
+ARM プラットフォームでは、クリティカル セクションの最初と最後などで取得と解放のセマンティクスを必要とする場合は、`_acq` および `_rel` サフィックスの付いた組み込みを使用します。 `_nf`("フェンスなし") サフィックスを持つ ARM 組み込みは、メモリバリアとしては機能しません。
 
 組み込みに `_np` ("プリフェッチなし") サフィックスが付いていると、コンパイラによってプリフェッチ操作が挿入される可能性がなくなります。
 

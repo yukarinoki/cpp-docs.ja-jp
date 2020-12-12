@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: __inword'
 title: __inword
 ms.date: 09/02/2019
 f1_keywords:
@@ -8,18 +9,18 @@ helpviewer_keywords:
 - in instruction
 - __inword intrinsic
 ms.assetid: 5c617edd-6709-40a1-aad2-40d5e39283c6
-ms.openlocfilehash: 7daaf1abd5089716061f118e30e9534e5c5c18ee
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 8e2d698437cdb27a472872cfe24d7d0ab0a3c768
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79440979"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97167878"
 ---
 # <a name="__inword"></a>__inword
 
 **Microsoft 固有の仕様**
 
-`in` 命令を使用して、指定されたポートからデータを読み取ります。
+命令を使用して、指定されたポートからデータを読み取り `in` ます。
 
 ## <a name="syntax"></a>構文
 
@@ -44,14 +45,14 @@ unsigned short __inword(
 |---------------|------------------|
 |`__inword`|x86、x64|
 
-**ヘッダーファイル**\<に存在します。 h >
+**ヘッダー ファイル** \<intrin.h>
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
 このルーチンは、組み込みとしてのみ使用できます。
 
 **Microsoft 固有の仕様はここまで**
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [コンパイラの組み込み](../intrinsics/compiler-intrinsics.md)

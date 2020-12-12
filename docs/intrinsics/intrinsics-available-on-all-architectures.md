@@ -1,25 +1,26 @@
 ---
+description: '詳細情報: すべてのアーキテクチャで使用可能な組み込み'
 title: すべてのアーキテクチャで使用可能な組み込みクラス
 ms.date: 09/02/2019
 helpviewer_keywords:
 - cl.exe compiler, intrinsics
 ms.assetid: 1fe3958e-d2fe-4188-8e34-5896738246eb
-ms.openlocfilehash: 0293daacd717b3ae85b993729090fe363f7e0b9b
-ms.sourcegitcommit: e805200eaef4fe7a65a00051bbd305273af94fe7
+ms.openlocfilehash: b2f3a1371b250230e09c60301478787fe17ea7cb
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2019
-ms.locfileid: "74163469"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97167943"
 ---
 # <a name="intrinsics-available-on-all-architectures"></a>すべてのアーキテクチャで使用可能な組み込みクラス
 
-Microsoft C/C++コンパイラとユニバーサル C ランタイムライブラリ (ucrt) は、一部の組み込みをすべてのアーキテクチャで使用できるようにします。
+Microsoft C/c + + コンパイラとユニバーサル C ランタイムライブラリ (UCRT) は、一部の組み込みをすべてのアーキテクチャで使用できるようにします。
 
 ## <a name="compiler-intrinsics"></a>コンパイラの組み込み
 
 X86、AMD64、ARM、および ARM64 の各アーキテクチャでは、次の組み込み関数を使用できます。
 
-|組み込み|Header|
+|Intrinsic|ヘッダー|
 |---------------|------------|
 |[_AddressOfReturnAddress](../intrinsics/addressofreturnaddress.md)|intrin.h|
 |[_BitScanForward](../intrinsics/bitscanforward-bitscanforward64.md)|intrin.h|
@@ -73,15 +74,15 @@ X86、AMD64、ARM、および ARM64 の各アーキテクチャでは、次の�
 
 次の UCRT 関数には、すべてのアーキテクチャに固有のフォームがあります。
 
-|組み込み|Header|
+|Intrinsic|ヘッダー|
 |---------------|------------|
-|[abs](../c-runtime-library/reference/abs-labs-llabs-abs64.md)|stdlib.h|
+|[絶対](../c-runtime-library/reference/abs-labs-llabs-abs64.md)|stdlib.h|
 |[_abs64](../c-runtime-library/reference/abs-labs-llabs-abs64.md)|stdlib.h|
 |[acos](../c-runtime-library/reference/acos-acosf-acosl.md)|math.h|
 |[acosf](../c-runtime-library/reference/acos-acosf-acosl.md)|math.h|
 |[acosl](../c-runtime-library/reference/acos-acosf-acosl.md)|math.h|
 |[_alloca](../c-runtime-library/reference/alloca.md)|malloc.h|
-|[asin](../c-runtime-library/reference/asin-asinf-asinl.md)|math.h|
+|[サイン](../c-runtime-library/reference/asin-asinf-asinl.md)|math.h|
 |[asinf](../c-runtime-library/reference/asin-asinf-asinl.md)|math.h|
 |[asinl](../c-runtime-library/reference/asin-asinf-asinl.md)|math.h|
 |[atan](../c-runtime-library/reference/atan-atanf-atanl-atan2-atan2f-atan2l.md)|math.h|
@@ -104,7 +105,7 @@ X86、AMD64、ARM、および ARM64 の各アーキテクチャでは、次の�
 |[cosl](../c-runtime-library/reference/cos-cosf-cosl.md)|math.h|
 |[exp](../c-runtime-library/reference/exp-expf.md)|math.h|
 |[expf](../c-runtime-library/reference/exp-expf.md)|math.h|
-|[損益](../c-runtime-library/reference/exp-expf.md)|math.h|
+|[expl](../c-runtime-library/reference/exp-expf.md)|math.h|
 |[fabs](../c-runtime-library/reference/fabs-fabsf-fabsl.md)|math.h|
 |[fabsf](../c-runtime-library/reference/fabs-fabsf-fabsl.md)|math.h|
 |[floor](../c-runtime-library/reference/floor-floorf-floorl.md)|math.h|
@@ -115,7 +116,7 @@ X86、AMD64、ARM、および ARM64 の各アーキテクチャでは、次の�
 |[fmodl](../c-runtime-library/reference/fmod-fmodf.md)|math.h|
 |[labs](../c-runtime-library/reference/abs-labs-llabs-abs64.md)|stdlib.h|
 |[llabs](../c-runtime-library/reference/abs-labs-llabs-abs64.md)|stdlib.h|
-|[log](../c-runtime-library/reference/log-logf-log10-log10f.md)|math.h|
+|[出力](../c-runtime-library/reference/log-logf-log10-log10f.md)|math.h|
 |[log10](../c-runtime-library/reference/log-logf-log10-log10f.md)|math.h|
 |[log10f](../c-runtime-library/reference/log-logf-log10-log10f.md)|math.h|
 |[log10l](../c-runtime-library/reference/log-logf-log10-log10f.md)|math.h|
@@ -126,14 +127,14 @@ X86、AMD64、ARM、および ARM64 の各アーキテクチャでは、次の�
 |[memcmp](../c-runtime-library/reference/memcmp-wmemcmp.md)|string.h|
 |[memcpy](../c-runtime-library/reference/memcpy-wmemcpy.md)|string.h|
 |[memset](../c-runtime-library/reference/memset-wmemset.md)|string.h|
-|[pow](../c-runtime-library/reference/pow-powf-powl.md)|math.h|
+|[えい](../c-runtime-library/reference/pow-powf-powl.md)|math.h|
 |[powf](../c-runtime-library/reference/pow-powf-powl.md)|math.h|
 |[powl](../c-runtime-library/reference/pow-powf-powl.md)|math.h|
 |[_rotl](../c-runtime-library/reference/rotl-rotl64-rotr-rotr64.md)|stdlib.h|
 |[_rotl64](../c-runtime-library/reference/rotl-rotl64-rotr-rotr64.md)|stdlib.h|
 |[_rotr](../c-runtime-library/reference/rotl-rotl64-rotr-rotr64.md)|stdlib.h|
 |[_rotr64](../c-runtime-library/reference/rotl-rotl64-rotr-rotr64.md)|stdlib.h|
-|[sin](../c-runtime-library/reference/sin-sinf-sinl.md)|math.h|
+|[サイン](../c-runtime-library/reference/sin-sinf-sinl.md)|math.h|
 |[sinf](../c-runtime-library/reference/sin-sinf-sinl.md)|math.h|
 |[sinh](../c-runtime-library/reference/sinh-sinhf-sinhl.md)|math.h|
 |[sinhf](../c-runtime-library/reference/sinh-sinhf-sinhl.md)|math.h|
@@ -148,7 +149,7 @@ X86、AMD64、ARM、および ARM64 の各アーキテクチャでは、次の�
 |[strlen](../c-runtime-library/reference/strlen-wcslen-mbslen-mbslen-l-mbstrlen-mbstrlen-l.md)|string.h|
 |[_strset](../c-runtime-library/reference/strset-strset-l-wcsset-wcsset-l-mbsset-mbsset-l.md)|string.h|
 |[strset](../c-runtime-library/reference/strset-wcsset.md)|string.h|
-|[tan](../c-runtime-library/reference/tan-tanf-tanl.md)|math.h|
+|[タンジェント](../c-runtime-library/reference/tan-tanf-tanl.md)|math.h|
 |[tanf](../c-runtime-library/reference/tan-tanf-tanl.md)|math.h|
 |[tanh](../c-runtime-library/reference/tanh-tanhf-tanhl.md)|math.h|
 |[tanhf](../c-runtime-library/reference/tanh-tanhf-tanhl.md)|math.h|
@@ -165,4 +166,4 @@ X86、AMD64、ARM、および ARM64 の各アーキテクチャでは、次の�
 [ARM 組み込み](../intrinsics/arm-intrinsics.md)\
 [ARM64 組み込み](../intrinsics/arm64-intrinsics.md)\
 [x86 組み込みリスト](../intrinsics/x86-intrinsics-list.md)\
-[x64 (amd64) 組み込みリスト](../intrinsics/x64-amd64-intrinsics-list.md)
+[x64 (amd64) 組み込み一覧](../intrinsics/x64-amd64-intrinsics-list.md)

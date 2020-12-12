@@ -1,5 +1,6 @@
 ---
-title: _InterlockedOr 組み込み関数
+description: 詳細については、_InterlockedOr 組み込み関数」を参照してください。
+title: 組み込み関数の _InterlockedOr
 ms.date: 09/02/2019
 f1_keywords:
 - _InterlockedOr8_nf
@@ -56,14 +57,14 @@ helpviewer_keywords:
 - _InterlockedOr16_rel intrinsic
 - _InterlockedOr_HLEAcquire intrinsic
 ms.assetid: 5f265240-7af8-44b7-b952-19f3a9c56186
-ms.openlocfilehash: baad724c85d2d8fb981ec7836d7a46152000fae3
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: d0bd01bdc1b3a32398d65d11c49fe162fa7b4cd0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70217590"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97167982"
 ---
-# <a name="_interlockedor-intrinsic-functions"></a>_InterlockedOr 組み込み関数
+# <a name="_interlockedor-intrinsic-functions"></a>組み込み関数の _InterlockedOr
 
 **Microsoft 固有の仕様**
 
@@ -172,7 +173,7 @@ __int64 _InterlockedOr64_rel(
 
 ### <a name="parameters"></a>パラメーター
 
-*数値*\
+*値*\
 [入力、出力]結果によって置き換えられる最初のオペランドへのポインター。
 
 *隠す*\
@@ -182,22 +183,22 @@ __int64 _InterlockedOr64_rel(
 
 最初のパラメーターが指す元の値。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-|組み込み|アーキテクチャ|Header|
+|Intrinsic|アーキテクチャ|ヘッダー|
 |---------------|------------------|------------|
-|`_InterlockedOr`、 `_InterlockedOr8`、 `_InterlockedOr16`|x86、ARM、x64、ARM64|\<intrin.h>|
+|`_InterlockedOr`, `_InterlockedOr8`, `_InterlockedOr16`|x86、ARM、x64、ARM64|\<intrin.h>|
 |`_InterlockedOr64`|ARM、x64、ARM64|\<intrin.h>|
 |`_InterlockedOr_acq`, `_InterlockedOr_nf`, `_InterlockedOr_rel`, `_InterlockedOr8_acq`, `_InterlockedOr8_nf`, `_InterlockedOr8_rel`, `_InterlockedOr16_acq`, `_InterlockedOr16_nf`, `_InterlockedOr16_rel`, `_InterlockedOr64_acq`, `_InterlockedOr64_nf`, `_InterlockedOr64_rel`|ARM、ARM64|\<intrin.h>|
-|`_InterlockedOr_np`, `_InterlockedOr8_np`, `_InterlockedOr16_np`, `_InterlockedOr64_np`|x64|\<intrin.h>|
+|`_InterlockedOr_np`, `_InterlockedOr8_np`, `_InterlockedOr16_np`, `_InterlockedOr64_np`|X64|\<intrin.h>|
 |`_InterlockedOr_HLEAcquire`, `_InterlockedOr_HLERelease`|x86、x64|\<immintrin.h>|
-|`_InterlockedOr64_HLEAcquire`, `_InterlockedOr64_HLERelease`|x64|\<immintrin.h>|
+|`_InterlockedOr64_HLEAcquire`, `_InterlockedOr64_HLERelease`|X64|\<immintrin.h>|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 各関数の名前に含まれる数値は、引数のビット サイズを示しています。
 
-ARM プラットフォームでは、クリティカル セクションの最初と最後などで取得と解放のセマンティクスを必要とする場合は、`_acq` および `_rel` サフィックスの付いた組み込みを使用します。 `_nf` ("フェンスなし") サフィックスを持つ ARM 組み込みは、メモリバリアとしては機能しません。
+ARM プラットフォームでは、クリティカル セクションの最初と最後などで取得と解放のセマンティクスを必要とする場合は、`_acq` および `_rel` サフィックスの付いた組み込みを使用します。 `_nf`("フェンスなし") サフィックスを持つ ARM 組み込みは、メモリバリアとしては機能しません。
 
 組み込みに `_np` ("プリフェッチなし") サフィックスが付いていると、コンパイラによってプリフェッチ操作が挿入される可能性がなくなります。
 
@@ -231,4 +232,4 @@ int main()
 ## <a name="see-also"></a>関連項目
 
 [コンパイラの組み込み](../intrinsics/compiler-intrinsics.md)\
-[x86 コンパイラとの競合](../build/x64-software-conventions.md#conflicts-with-the-x86-compiler)
+[X86 コンパイラとの競合](../build/x64-software-conventions.md#conflicts-with-the-x86-compiler)

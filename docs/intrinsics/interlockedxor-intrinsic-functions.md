@@ -1,5 +1,6 @@
 ---
-title: _InterlockedXor 組み込み関数
+description: 詳細については、_InterlockedXor 組み込み関数」を参照してください。
+title: 組み込み関数の _InterlockedXor
 ms.date: 09/02/2019
 f1_keywords:
 - _InterlockedXor_nf
@@ -34,14 +35,14 @@ helpviewer_keywords:
 - InterlockedXor64 intrinsic
 - _InterlockedXor intrinsic
 ms.assetid: faef1796-cb5a-4430-b1e2-9d5eaf9b4a91
-ms.openlocfilehash: 22cb9edd5fa4ffd8ffae7363ab07dc48f519fff0
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 47fb057f4a7e70b8cb8bcee1a5b05ad55d5918e9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70221906"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97167969"
 ---
-# <a name="_interlockedxor-intrinsic-functions"></a>_InterlockedXor 組み込み関数
+# <a name="_interlockedxor-intrinsic-functions"></a>組み込み関数の _InterlockedXor
 
 **Microsoft 固有の仕様**
 
@@ -150,7 +151,7 @@ __int64 _InterlockedXor64_rel(
 
 ### <a name="parameters"></a>パラメーター
 
-*数値*\
+*値*\
 [入力、出力]結果によって置き換えられる最初のオペランドへのポインター。
 
 *隠す*\
@@ -160,22 +161,22 @@ __int64 _InterlockedXor64_rel(
 
 最初のオペランドの元の値。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-|組み込み|アーキテクチャ|Header|
+|Intrinsic|アーキテクチャ|ヘッダー|
 |---------------|------------------|------------|
-|`_InterlockedXor`、 `_InterlockedXor8`、 `_InterlockedXor16`|x86、ARM、x64、ARM64|\<intrin.h>|
+|`_InterlockedXor`, `_InterlockedXor8`, `_InterlockedXor16`|x86、ARM、x64、ARM64|\<intrin.h>|
 |`_InterlockedXor64`|ARM、x64、ARM64|\<intrin.h>|
-|`_InterlockedXor_acq`、`_InterlockedXor_nf`、`_InterlockedXor_rel`、`_InterlockedXor8_acq`、`_InterlockedXor8_nf`、`_InterlockedXor8_rel`、`_InterlockedXor16_acq`、`_InterlockedXor16_nf`、`_InterlockedXor16_rel`、`_InterlockedXor64_acq`、`_InterlockedXor64_nf`、`_InterlockedXor64_rel`、|ARM、ARM64|\<intrin.h>|
-|`_InterlockedXor_np`, `_InterlockedXor8_np`, `_InterlockedXor16_np`, `_InterlockedXor64_np`|x64|\<intrin.h>|
+|`_InterlockedXor_acq`, `_InterlockedXor_nf`, `_InterlockedXor_rel`, `_InterlockedXor8_acq`, `_InterlockedXor8_nf`, `_InterlockedXor8_rel`, `_InterlockedXor16_acq`, `_InterlockedXor16_nf`, `_InterlockedXor16_rel`, `_InterlockedXor64_acq`, `_InterlockedXor64_nf`, `_InterlockedXor64_rel`,|ARM、ARM64|\<intrin.h>|
+|`_InterlockedXor_np`, `_InterlockedXor8_np`, `_InterlockedXor16_np`, `_InterlockedXor64_np`|X64|\<intrin.h>|
 |`_InterlockedXor_HLEAcquire`, `_InterlockedXor_HLERelease`|x86、x64|\<immintrin.h>|
-|`_InterlockedXor64_HLEAcquire`, `_InterlockedXor64_HLERelease`|x64|\<immintrin.h>|
+|`_InterlockedXor64_HLEAcquire`, `_InterlockedXor64_HLERelease`|X64|\<immintrin.h>|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 各関数の名前に含まれる数値は、引数のビット サイズを示しています。
 
-ARM プラットフォームでは、クリティカル セクションの最初と最後などで取得と解放のセマンティクスを必要とする場合は、`_acq` および `_rel` サフィックスの付いた組み込みを使用します。 `_nf` ("フェンスなし") サフィックスを持つ ARM 組み込みは、メモリバリアとしては機能しません。
+ARM プラットフォームでは、クリティカル セクションの最初と最後などで取得と解放のセマンティクスを必要とする場合は、`_acq` および `_rel` サフィックスの付いた組み込みを使用します。 `_nf`("フェンスなし") サフィックスを持つ ARM 組み込みは、メモリバリアとしては機能しません。
 
 組み込みに `_np` ("プリフェッチなし") サフィックスが付いていると、コンパイラによってプリフェッチ操作が挿入される可能性がなくなります。
 
@@ -209,4 +210,4 @@ int main()
 ## <a name="see-also"></a>関連項目
 
 [コンパイラの組み込み](../intrinsics/compiler-intrinsics.md)\
-[x86 コンパイラとの競合](../build/x64-software-conventions.md#conflicts-with-the-x86-compiler)
+[X86 コンパイラとの競合](../build/x64-software-conventions.md#conflicts-with-the-x86-compiler)
