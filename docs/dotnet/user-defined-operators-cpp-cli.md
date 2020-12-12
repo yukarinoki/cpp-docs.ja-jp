@@ -1,15 +1,16 @@
 ---
+description: 詳細については、「User-Defined 演算子 (C++/CLI)」を参照してください。
 title: ユーザー定義の演算子 (C++/CLI)
 ms.date: 11/04/2016
 helpviewer_keywords:
 - user-defined operators under /clr
 ms.assetid: 42f93b4a-6de4-4e34-b07b-5a62ac014f2c
-ms.openlocfilehash: ee5aa122983a315e55884c643a9b7894f075e260
-ms.sourcegitcommit: 43cee7a0d41a062661229043c2f7cbc6ace17fa3
+ms.openlocfilehash: e94a4d28517fc253fb8284a604b01a5f9d76de22
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92008949"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97204226"
 ---
 # <a name="user-defined-operators-ccli"></a>ユーザー定義の演算子 (C++/CLI)
 
@@ -39,11 +40,11 @@ ms.locfileid: "92008949"
 |!=|Binary|
 |%|Binary|
 |&|単項演算子および 2 項演算子|
-|&&|Binary|
+|&&|2 項|
 |*|単項演算子および 2 項演算子|
 |+|単項演算子および 2 項演算子|
 |++|単項|
-|,|Binary|
+|,|2 項|
 |-|単項演算子および 2 項演算子|
 |--|単項|
 |->|単項|
@@ -59,8 +60,8 @@ ms.locfileid: "92008949"
 |^|Binary|
 |false|単項|
 |true|単項|
-|&#124;|Binary|
-|&#124;&#124;|Binary|
+|&#124;|2 項|
+|&#124;&#124;|2 項|
 |~|単項|
 
 ## <a name="example-user-defined-operators"></a>例: ユーザー定義の演算子

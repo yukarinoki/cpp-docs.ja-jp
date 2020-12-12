@@ -1,4 +1,5 @@
-﻿---
+---
+description: 詳細については、「メンバー Access Control (C++)」を参照してください。
 title: メンバー アクセス コントロール (C++)
 ms.date: 11/19/2018
 helpviewer_keywords:
@@ -6,17 +7,16 @@ helpviewer_keywords:
 - member access [C++]
 - member-access control [C++]
 ms.assetid: 2d596bca-56ad-4277-94e1-ce3db45fa14a
-ms.openlocfilehash: de775c511701cd0b7cf923f47e33723b30a966e1
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 2cce7cb98e76098f3c20a6c2404f91ccf40db1cb
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87186972"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97206878"
 ---
 # <a name="member-access-control-c"></a>メンバー アクセス コントロール (C++)
 
 アクセス制御を使用すると、[プライベート](../cpp/private-cpp.md)実装の詳細と、派生クラスでのみ使用する[プロテクト](../cpp/protected-cpp.md)メンバーから、クラスの[パブリック](../cpp/public-cpp.md)インターフェイスを分離することができます。 アクセス指定子は、その後で宣言されたすべてのメンバーに対して当てはまり、これは、次のアクセス指定子が検出されるまで続きます。
-
 
 ```cpp
 class Point
@@ -40,7 +40,7 @@ protected:      // Declare protected function for derived classes only.
 
 ## <a name="member-access-control"></a>メンバー アクセス コントロール
 
-|アクセスの種類|意味|
+|アクセスの種類|説明|
 |--------------------|-------------|
 |[private](../cpp/private-cpp.md)|として宣言されたクラスメンバーは **`private`** 、クラスのメンバー関数およびフレンド (クラスまたは関数) によってのみ使用できます。|
 |[protected](../cpp/protected-cpp.md)|として宣言されたクラスメンバーは **`protected`** 、クラスのメンバー関数およびフレンド (クラスまたは関数) によって使用できます。 また、そのクラスから派生したクラスも "protected" メンバーを使用できます。|
@@ -69,7 +69,7 @@ protected:      // Declare protected function for derived classes only.
 ||プロテクト派生を使用する場合は派生クラス内でプロテクト|プロテクト派生を使用する場合は派生クラス内でプロテクト|
 ||パブリック派生を使用する場合は派生クラス内でプロテクト|パブリック派生を使用する場合は派生クラス内でパブリック|
 
-次の例を使って説明します。
+次に例を示します。
 
 ```cpp
 // access_specifiers_for_base_classes.cpp

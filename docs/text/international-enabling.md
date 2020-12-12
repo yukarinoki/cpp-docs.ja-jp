@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: 国際化の有効化'
 title: 国際化対応について
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - MBCS [C++], enabling
 - Unicode [C++], enabling
 ms.assetid: b077f4ca-5865-40ef-a46e-d9e4d686ef21
-ms.openlocfilehash: ff0fb4102a0453b900b5b406739492a9420a5b07
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 15db7e27b65f4225917945820c936e572fc5da94
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87228090"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97207268"
 ---
 # <a name="international-enabling"></a>国際化対応について
 
@@ -33,7 +34,7 @@ ms.locfileid: "87228090"
 
   - アプリケーションで ANSI (8 ビット) と Unicode (16 ビット) 文字を混在させる場合は注意が必要です。 プログラムの一部では ANSI 文字を使用し、他の部分では Unicode 文字を使用することができますが、同じ文字列に混在させることはできません。
 
-  - アプリケーションに文字列をハードコーディングしないでください。 代わりに、それらをアプリケーションの .rc ファイルに追加して、STRINGTABLE リソースにします。 これにより、ソースコードの変更や再コンパイルを必要とせずに、アプリケーションをローカライズできます。 STRINGTABLE リソースの詳細については、「[文字列エディター](../windows/string-editor.md)」を参照してください。
+  - アプリケーションに文字列をハードコーディングしないでください。 代わりに、それらをアプリケーションの .rc ファイルに追加して、STRINGTABLE リソースにします。 これにより、ソースコードの変更や再コンパイルを必要とせずに、アプリケーションをローカライズできます。 STRINGTABLE リソースの詳細については、「 [文字列エディター](../windows/string-editor.md)」を参照してください。
 
 > [!NOTE]
 > ヨーロッパと MBCS の文字セットには、文字コードとして0x80 文字を超える文字が含まれています。 ほとんどのコードでは、符号付き文字が使用されるため、0x80 を超えるこれらの文字は、に変換されるときに符号拡張され **`int`** ます。 これは、符号拡張文字 (負の値) が配列の外側にあるため、配列のインデックス作成に問題があります。 日本語など、MBCS を使用する言語も一意です。 文字は1バイトまたは2バイトで構成される可能性があるため、常に両方のバイトを同時に操作する必要があります。

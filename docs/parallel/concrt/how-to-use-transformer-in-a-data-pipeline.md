@@ -1,4 +1,5 @@
 ---
+description: '詳細については、「方法: データパイプラインでトランスフォーマーを使用する」を参照してください。'
 title: '方法: データ パイプラインでトランスフォーマーを使用する'
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,18 +7,18 @@ helpviewer_keywords:
 - data pipelines, using transformer [Concurrency Runtime]
 - using transformer in data pipelines [Concurrency Runtime]
 ms.assetid: ca49cb3f-4dab-4b09-a9c9-d3a109ae4c29
-ms.openlocfilehash: 4eb490ecf51abea324f20395279bff2d74b7af77
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 97b0af16a3ce89b940952117bb8639d281363a23
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87215856"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97205617"
 ---
 # <a name="how-to-use-transformer-in-a-data-pipeline"></a>方法: データ パイプラインでトランスフォーマーを使用する
 
-このトピックには、データパイプラインで[concurrency:: トランスフォーマー](../../parallel/concrt/reference/transformer-class.md)クラスを使用する方法を示す基本的な例が含まれています。 データパイプラインを使用してイメージ処理を実行する詳細な例については、「[チュートリアル: イメージ処理ネットワークの作成](../../parallel/concrt/walkthrough-creating-an-image-processing-network.md)」を参照してください。
+このトピックには、データパイプラインで [concurrency:: トランスフォーマー](../../parallel/concrt/reference/transformer-class.md) クラスを使用する方法を示す基本的な例が含まれています。 データパイプラインを使用してイメージ処理を実行する詳細な例については、「 [チュートリアル: Image-Processing ネットワークを作成](../../parallel/concrt/walkthrough-creating-an-image-processing-network.md)する」を参照してください。
 
-*データのパイプライン*処理は、同時実行プログラミングにおける一般的なパターンです。 データ パイプラインは一連のステージで構成され、各ステージで処理を実行し、その処理の結果を次のステージに渡します。 `transformer` クラスは、入力値を受け取り、その値に対して処理を実行し、別のコンポーネントで使用する結果を生成するため、データ パイプラインにおいて重要なコンポーネントとなっています。
+*データのパイプライン* 処理は、同時実行プログラミングにおける一般的なパターンです。 データ パイプラインは一連のステージで構成され、各ステージで処理を実行し、その処理の結果を次のステージに渡します。 `transformer` クラスは、入力値を受け取り、その値に対して処理を実行し、別のコンポーネントで使用する結果を生成するため、データ パイプラインにおいて重要なコンポーネントとなっています。
 
 ## <a name="example"></a>例
 
@@ -58,4 +59,4 @@ The result is -42.
 
 [非同期エージェント ライブラリ](../../parallel/concrt/asynchronous-agents-library.md)<br/>
 [非同期メッセージブロック](../../parallel/concrt/asynchronous-message-blocks.md)<br/>
-[チュートリアル: イメージ処理ネットワークの作成](../../parallel/concrt/walkthrough-creating-an-image-processing-network.md)
+[チュートリアル: Image-Processing ネットワークの作成](../../parallel/concrt/walkthrough-creating-an-image-processing-network.md)

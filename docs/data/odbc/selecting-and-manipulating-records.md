@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: レコードの選択と操作'
 title: レコードの選択と操作
 ms.date: 05/09/2019
 helpviewer_keywords:
@@ -6,19 +7,19 @@ helpviewer_keywords:
 - record selection, MFC ODBC classes
 - ODBC recordsets, selecting records
 ms.assetid: 7f0b3a4a-9941-4475-a612-9ec8d15b7691
-ms.openlocfilehash: 596ee602b5358fbd854888f43f21748fd4d85b7a
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 8f4254f85eb8c2e30b5e912890fdc271340df9db
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80212707"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97204304"
 ---
 # <a name="selecting-and-manipulating-records"></a>レコードの選択と操作
 
 > [!NOTE]
-> MFC ODBC コンシューマー ウィザードは、Visual Studio 2019 以降では利用できません。 ただし、手動でコンシューマーを作成することはできます。
+> MFC ODBC コンシューマー ウィザードは、Visual Studio 2019 以降はご利用いただけなくなります。 引き続き、コンシューマーを手動で作成することはできます。
 
-通常、SQL **SELECT** ステートメントを使用してデータ ソースからレコードを選択すると、テーブルまたはクエリからの一連のレコードである、結果セットが与えられます。 データベース クラスでは、レコードセット オブジェクトを使用し、結果セットを選択し、それにアクセスします。 これは、クラス [CRecordset](../../mfc/reference/crecordset-class.md) から誘導するアプリケーション固有クラスのオブジェクトです。 レコードセット クラスを定義するとき、それを関連付けるデータ ソース、使用するテーブル、テーブルの列を指定します。 MFC アプリケーション ウィザードまたは **[クラスの追加]** (「[MFC ODBC コンシューマーの追加](../../mfc/reference/adding-an-mfc-odbc-consumer.md)」で説明されています) により、特定のデータ ソースに接続するクラスが作成されます。 ウィザードによりクラス [ の ](../../mfc/reference/crecordset-class.md#getdefaultsql)GetDefaultSQL`CRecordset` メンバー関数が記述され、テーブル名が返されます。
+通常、SQL **SELECT** ステートメントを使用してデータ ソースからレコードを選択すると、テーブルまたはクエリからの一連のレコードである、結果セットが与えられます。 データベース クラスでは、レコードセット オブジェクトを使用し、結果セットを選択し、それにアクセスします。 これは、クラス [CRecordset](../../mfc/reference/crecordset-class.md) から誘導するアプリケーション固有クラスのオブジェクトです。 レコードセット クラスを定義するとき、それを関連付けるデータ ソース、使用するテーブル、テーブルの列を指定します。 MFC アプリケーション ウィザードまたは **[クラスの追加]** (「[MFC ODBC コンシューマーの追加](../../mfc/reference/adding-an-mfc-odbc-consumer.md)」で説明されています) により、特定のデータ ソースに接続するクラスが作成されます。 ウィザードによりクラス `CRecordset` の [GetDefaultSQL](../../mfc/reference/crecordset-class.md#getdefaultsql) メンバー関数が記述され、テーブル名が返されます。
 
 実行時に [CRecordset](../../mfc/reference/crecordset-class.md) オブジェクトを使用することでできること:
 
@@ -36,6 +37,6 @@ ms.locfileid: "80212707"
 
 レコードセットの使用が終わったら、それを閉じて破棄します。 レコードセットの詳細については、「[レコードセット (ODBC)](../../data/odbc/recordset-odbc.md)」を参照してください。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [ODBC と MFC](../../data/odbc/odbc-and-mfc.md)

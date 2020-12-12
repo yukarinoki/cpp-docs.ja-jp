@@ -1,4 +1,5 @@
 ---
+description: 詳細については、_ismbcgraph、_ismbcgraph_l、_ismbcprint、_ismbcprint_l、_ismbcpunct、_ismbcpunct_l、_ismbcblank、_ismbcblank_l、_ismbcspace、_ismbcspace_l に関するページを参照してください。
 title: _ismbcgraph、_ismbcgraph_l、_ismbcprint、_ismbcprint_l、_ismbcpunct、_ismbcpunct_l、_ismbcblank、_ismbcblank_l、_ismbcspace、_ismbcspace_l
 ms.date: 4/2/2020
 api_name:
@@ -70,12 +71,12 @@ helpviewer_keywords:
 - _ismbcgraph_l function
 - _ismbcspace function
 ms.assetid: 8e0a5f47-ba64-4411-92a3-3c525d16e3be
-ms.openlocfilehash: 5f2c8b595de323994aa670a8e0fee9e562897e49
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 08233d05dc558bf659c1c2ee00c3a381be2d1257
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82919758"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97206930"
 ---
 # <a name="_ismbcgraph-_ismbcgraph_l-_ismbcprint-_ismbcprint_l-_ismbcpunct-_ismbcpunct_l-_ismbcblank-_ismbcblank_l-_ismbcspace-_ismbcspace_l"></a>_ismbcgraph、_ismbcgraph_l、_ismbcprint、_ismbcprint_l、_ismbcpunct、_ismbcpunct_l、_ismbcblank、_ismbcblank_l、_ismbcspace、_ismbcspace_l
 
@@ -126,7 +127,7 @@ int _ismbcspace_l(
 
 ### <a name="parameters"></a>パラメーター
 
-*40u-c*<br/>
+*c*<br/>
 判定対象の文字。
 
 *locale*<br/>
@@ -134,27 +135,27 @@ int _ismbcspace_l(
 
 ## <a name="return-value"></a>戻り値
 
-これらの各ルーチンでは、文字がテスト条件を満たす場合に 0 以外の値が返され、テスト条件を満たさない場合に 0 が返されます。 *C* <= 255 で、対応する **_ismbb**ルーチン (たとえば、 **_ismbcalnum**が **_ismbbalnum**に対応する) がある場合、結果は対応する **_ismbb**ルーチンの戻り値になります。
+これらの各ルーチンでは、文字がテスト条件を満たす場合に 0 以外の値が返され、テスト条件を満たさない場合に 0 が返されます。 *C* <= 255 で、対応する **_ismbb** ルーチン (たとえば、 **_ismbcalnum** が **_ismbbalnum** に対応する) がある場合、結果は対応する **_ismbb** ルーチンの戻り値になります。
 
-これらの関数のバージョンは同じですが、 **_l**サフィックスを持つバージョンは、現在のロケールではなく、ロケールに依存する動作に渡されるロケールを使用する点が異なります。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
+これらの関数のバージョンは同じですが、 **_l** サフィックスを持つバージョンは、現在のロケールではなく、ロケールに依存する動作に渡されるロケールを使用する点が異なります。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
 
 ## <a name="remarks"></a>解説
 
 これらの各関数は特定の条件で特定のマルチバイト文字をテストします。
 
-|ルーチン|テスト条件|コード ページ 932 の例|
+|ルーチンによって返される値|テスト条件|コード ページ 932 の例|
 |-------------|--------------------|---------------------------|
-|**_ismbcgraph**|Graphic|*C*が空白 () を除く ASCII またはカタカナの印刷可能な文字の1バイト表現である場合にのみ、0以外の値を返します。|
-|**_ismbcprint**|印刷可能|*C*が空白 () を含む ASCII またはカタカナの印刷可能な文字の1バイト表現である場合にのみ、0以外の値を返します。|
-|**_ismbcpunct**|句読点|*C*が ASCII またはカタカナの区切り文字の1バイト表現である場合に限り、0以外の値を返します。|
-|**_ismbcblank**|空白または水平タブ|*C*がスペースまたは水平タブ文字の場合 (c = 0x20 または*c*= 0x09 の場合のみ)、0以外の値を*返します。*|
-|**_ismbcspace**|空白|*C*が空白文字の場合にのみ、0以外の値を返します。 *c*= 0x20 または 0x09<=*c*<= 0x0D。|
+|**_ismbcgraph**|Graphic|*C* が空白 () を除く ASCII またはカタカナの印刷可能な文字の1バイト表現である場合にのみ、0以外の値を返します。|
+|**_ismbcprint**|印刷可能|*C* が空白 () を含む ASCII またはカタカナの印刷可能な文字の1バイト表現である場合にのみ、0以外の値を返します。|
+|**_ismbcpunct**|句読点|*C* が ASCII またはカタカナの区切り文字の1バイト表現である場合に限り、0以外の値を返します。|
+|**_ismbcblank**|空白または水平タブ|*C* がスペースまたは水平タブ文字の場合 (c = 0x20 または *c*= 0x09 の場合のみ)、0以外の値を *返します。*|
+|**_ismbcspace**|空白|*C* が空白文字の場合にのみ、0以外の値を返します。 *c*= 0x20 または 0x09<=*c*<= 0x0D。|
 
 既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**_ismbcgraph**|\<mbstring.h>|
 |**_ismbcgraph_l**|\<mbstring.h>|
@@ -176,8 +177,8 @@ int _ismbcspace_l(
 ## <a name="see-also"></a>関連項目
 
 [文字分類](../../c-runtime-library/character-classification.md)<br/>
-[国](../../c-runtime-library/locale.md)<br/>
-[マルチバイト文字のシーケンスの解釈](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
-[_ismbc 系ルーチン](../../c-runtime-library/ismbc-routines.md)<br/>
-[is、isw 系ルーチン](../../c-runtime-library/is-isw-routines.md)<br/>
+[ロケール](../../c-runtime-library/locale.md)<br/>
+[Multibyte-Character シーケンスの解釈](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[_ismbc ルーチン](../../c-runtime-library/ismbc-routines.md)<br/>
+[is、isw ルーチン](../../c-runtime-library/is-isw-routines.md)<br/>
 [_ismbb ルーチン](../../c-runtime-library/ismbb-routines.md)<br/>

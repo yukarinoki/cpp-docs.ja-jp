@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: レコードセット (ODBC)'
 title: レコードセット (ODBC)
 ms.date: 05/09/2019
 helpviewer_keywords:
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - snapshots, ODBC recordsets
 - dynasets
 ms.assetid: 333337c5-575e-4d26-b5f6-47166ad7874d
-ms.openlocfilehash: b7a55621f4875b24cc33a0fd49a5b8b4c88b34cb
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: edbad5851db6f5ac9e1fddcc769c4f860ee5478e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81368644"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97204538"
 ---
 # <a name="recordset-odbc"></a>レコードセット (ODBC)
 
@@ -66,9 +67,9 @@ ms.locfileid: "81368644"
 
 ## <a name="your-recordsets"></a><a name="_core_your_recordsets"></a> レコード セット
 
-アクセスする個々のテーブル、ビュー、ストアド プロシージャごとに、通常、`CRecordset` から派生するクラスを定義します。 例外はデータベース結合で、1 つのレコードセットが複数のテーブルの列を表します。レコードセット クラスを派生させる場合は、レコード フィールド エクスチェンジ (RFX) メカニズムまたはバルク レコード フィールド エクスチェンジ (Bulk RFX) メカニズムを有効にします。 RFX と一括 RFX では、データ ソースからレコードセットにデータを簡単に転送できます。RFX ではまた、レコードセットからデータ セットにデータが転送されます。 詳細については、「[レコード フィールド エクスチェンジ (RFX)](../../data/odbc/record-field-exchange-rfx.md) 」および[「レコードセット : レコードの一括フェッチ (ODBC)」](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)を参照してください。
+アクセスする個々のテーブル、ビュー、ストアド プロシージャごとに、通常、`CRecordset` から派生するクラスを定義します。 (例外はデータベース結合であり、1つのレコードセットが2つ以上のテーブルの列を表します)。レコードセットクラスを派生させる場合は、レコードフィールドエクスチェンジ (RFX) メカニズムまたは bulk レコードフィールドエクスチェンジ (Bulk RFX) メカニズムを有効にします。これは、ダイアログデータエクスチェンジ (DDX) メカニズムに似ています。 RFX と一括 RFX では、データ ソースからレコードセットにデータを簡単に転送できます。RFX ではまた、レコードセットからデータ セットにデータが転送されます。 詳細については、「 [レコードフィールドエクスチェンジ (RFX)](../../data/odbc/record-field-exchange-rfx.md) 」および「レコード [セット: レコードの一括フェッチ (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)」を参照してください。
 
-レコードセット オブジェクトからは、選択したすべてのレコードにアクセスする許可が与えられます。 `MoveNext` や `MovePrev` など、`CRecordset` メンバー関数を利用し、選択されている複数のレコードをスクロールして閲覧します。 レコードセット オブジェクトは同時に、選択されているレコードのうち 1 つだけ、現在のレコードを表します。 データベース クエリから結果的に生成されたテーブルまたはレコードの列に対応するレコードセット クラス メンバー変数を宣言することで、現在のレコードのフィールドを調べることができます。 レコードセット データ メンバーの詳細については、「[レコードセット : アーキテクチャ (ODBC)](../../data/odbc/recordset-architecture-odbc.md)」を参照してください。
+レコードセット オブジェクトからは、選択したすべてのレコードにアクセスする許可が与えられます。 `MoveNext` や `MovePrev` など、`CRecordset` メンバー関数を利用し、選択されている複数のレコードをスクロールして閲覧します。 レコードセット オブジェクトは同時に、選択されているレコードのうち 1 つだけ、現在のレコードを表します。 データベース クエリから結果的に生成されたテーブルまたはレコードの列に対応するレコードセット クラス メンバー変数を宣言することで、現在のレコードのフィールドを調べることができます。 レコードセットデータメンバーの詳細については、「 [レコードセット: アーキテクチャ (ODBC)](../../data/odbc/recordset-architecture-odbc.md)」を参照してください。
 
 次のトピックでは、レコードセット オブジェクトの使用について説明しています。 トピックの一覧は機能的なカテゴリに基づいて表示されており、順を追って読めるよう、自然な閲覧順になっています。
 
@@ -76,9 +77,9 @@ ms.locfileid: "81368644"
 
 - [レコードセット: アーキテクチャ (ODBC)](../../data/odbc/recordset-architecture-odbc.md)
 
-- [レコードセット: テーブルにアクセスするレコードセット クラスの宣言 (ODBC)](../../data/odbc/recordset-declaring-a-class-for-a-table-odbc.md)
+- [レコードセット: テーブルのクラスの宣言 (ODBC)](../../data/odbc/recordset-declaring-a-class-for-a-table-odbc.md)
 
-- [レコードセット: レコードセットの生成と破棄 (ODBC)](../../data/odbc/recordset-creating-and-closing-recordsets-odbc.md)
+- [レコードセット: レコードセットの作成と終了 (ODBC)](../../data/odbc/recordset-creating-and-closing-recordsets-odbc.md)
 
 - [レコードセット: スクロール (ODBC)](../../data/odbc/recordset-scrolling-odbc.md)
 
@@ -88,29 +89,29 @@ ms.locfileid: "81368644"
 
 - [レコードセット: レコードの並べ替え (ODBC)](../../data/odbc/recordset-sorting-records-odbc.md)
 
-- [レコードセット: パラメーターを利用したレコードセット (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md)
+- [レコードセット: レコードセットのパラメーター化 (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md)
 
 ### <a name="topics-about-the-mechanics-of-modifying-recordsets"></a>レコードセットの変更メカニズムに関するトピック
 
-- [レコードセット: レコードの追加、更新、削除 (ODBC)](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md)
+- [レコードセット: レコードの追加、更新、および削除 (ODBC)](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md)
 
 - [レコードセット: レコードのロック (ODBC)](../../data/odbc/recordset-locking-records-odbc.md)
 
-- [レコードセット: クエリの再実行 (ODBC)](../../data/odbc/recordset-requerying-a-recordset-odbc.md)
+- [レコードセット: レコードセットの再クエリ (ODBC)](../../data/odbc/recordset-requerying-a-recordset-odbc.md)
 
 ### <a name="topics-about-somewhat-more-advanced-techniques"></a>やや高度な手法に関するトピック
 
-- [レコードセット: 結合 (ODBC)](../../data/odbc/recordset-performing-a-join-odbc.md)
+- [レコードセット: 結合の実行 (ODBC)](../../data/odbc/recordset-performing-a-join-odbc.md)
 
-- [レコードセット: 定義済みクエリを利用したクラスの宣言 (ODBC)](../../data/odbc/recordset-declaring-a-class-for-a-predefined-query-odbc.md)
+- [レコードセット: 定義済みクエリのクラスの宣言 (ODBC)](../../data/odbc/recordset-declaring-a-class-for-a-predefined-query-odbc.md)
 
-- [レコードセット: データ列を動的に結びつける方法 (ODBC)](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md)
+- [レコードセット: データ列を動的にバインドする (ODBC)](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md)
 
-- [レコードセット: バルク行フェッチ (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)
+- [レコードセット: レコードの一括フェッチ (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)
 
-- [レコードセット: 大量のデータの処理 (ODBC)](../../data/odbc/recordset-working-with-large-data-items-odbc.md)
+- [レコードセット: 大きなデータ項目の操作 (ODBC)](../../data/odbc/recordset-working-with-large-data-items-odbc.md)
 
-- [レコードセット: 集計値の計算 (ODBC)](../../data/odbc/recordset-obtaining-sums-and-other-aggregate-results-odbc.md)
+- [レコードセット: 合計およびその他の集計結果の取得 (ODBC)](../../data/odbc/recordset-obtaining-sums-and-other-aggregate-results-odbc.md)
 
 ### <a name="topics-about-how-recordsets-work"></a>レコード セットのしくみに関するトピック
 
@@ -120,6 +121,6 @@ ms.locfileid: "81368644"
 
 ## <a name="see-also"></a>関連項目
 
-[データベース接続を開く (ODBC)](../../data/odbc/open-database-connectivity-odbc.md)<br/>
+[Open Database Connectivity (ODBC)](../../data/odbc/open-database-connectivity-odbc.md)<br/>
 [MFC ODBC コンシューマー](../../mfc/reference/adding-an-mfc-odbc-consumer.md)<br/>
 [トランザクション (ODBC)](../../data/odbc/transaction-odbc.md)

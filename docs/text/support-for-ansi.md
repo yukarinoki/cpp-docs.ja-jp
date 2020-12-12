@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「ANSI のサポート」を参照してください。
 title: ANSI のサポート
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,19 +7,19 @@ helpviewer_keywords:
 - ANSI [MFC]
 - MFC [C++], ANSI support
 ms.assetid: f98440ad-90fc-42f5-bf74-975cd793c49c
-ms.openlocfilehash: 18c869cf9e7aeca909ac7ad52cb9a0efdb915a0f
-ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
+ms.openlocfilehash: 975678eb619d7eaf58e963b0bf3ef5b16ff53c4a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66504196"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97207125"
 ---
 # <a name="support-for-ansi"></a>ANSI のサポート
 
-ほとんどの MFC クラスとメソッドが、全体としての MFC フレームワークの進化の方向、Unicode のみをサポートしている段階的に、ANSI 文字セットをサポート文字セット。 Windows Vista と Windows のコモン コントロールのバージョン 6.1 で継続的な機能強化のためのいくつかの ANSI クラスとメソッドのサポートは非推奨とされます。  詳細については、次を参照してください。[非推奨の ANSI Api](../mfc/deprecated-ansi-apis.md)と[Unicode のサポート](../text/support-for-unicode.md)します。
+ほとんどの MFC クラスおよびメソッドは ANSI 文字セットをサポートしていますが、MFC フレームワーク全体は Unicode 文字セットのみをサポートするように段階的に進化しています。 Windows Vista および Windows コモンコントロールバージョン6.1 での継続的な拡張により、いくつかの ANSI クラスおよびメソッドのサポートは非推奨とされます。  詳細については、「 [非推奨の ANSI api](../mfc/deprecated-ansi-apis.md) と [Unicode のサポート](../text/support-for-unicode.md)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 
 [Unicode のサポート](../text/support-for-unicode.md)<br/>
 [非推奨の ANSI API](../mfc/deprecated-ansi-apis.md)<br/>
-[シェルと共通のコントロールのバージョン](/previous-versions/windows/desktop/legacy/bb776779\(v=vs.85\))
+[Shell およびコモンコントロールのバージョン](/previous-versions/windows/desktop/legacy/bb776779\(v=vs.85\))

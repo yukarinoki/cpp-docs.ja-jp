@@ -1,19 +1,20 @@
 ---
+description: '詳細情報: クイックリファレンス (C++/CX)'
 title: クイック リファレンス (C++/CX)
 ms.date: 12/30/2016
 ms.assetid: ba457195-26e5-43aa-b99d-24a871e550f4
-ms.openlocfilehash: 6effcaec6a619bdd674dcae3bf4092fe82404d08
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 74640449df21787d059509e80deb1e1e0cdaf94c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87214972"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97204655"
 ---
 # <a name="quick-reference-ccx"></a>クイック リファレンス (C++/CX)
 
-Windows ランタイムは、信頼できるオペレーティングシステム環境でのみ実行され、承認された機能、データ型、およびデバイスを使用し、Microsoft Store 経由で配布されるユニバーサル Windows プラットフォーム (UWP) アプリをサポートしています。 C++/CX では、Windows ランタイム用のアプリの記述が単純化されています。 この記事はクイックリファレンスです。詳細なドキュメントについては、「[型システム](../cppcx/type-system-c-cx.md)」を参照してください。
+Windows ランタイムは、信頼できるオペレーティングシステム環境でのみ実行され、承認された機能、データ型、およびデバイスを使用し、Microsoft Store 経由で配布されるユニバーサル Windows プラットフォーム (UWP) アプリをサポートしています。 C++/CX では、Windows ランタイム用のアプリの記述が単純化されています。 この記事はクイックリファレンスです。詳細なドキュメントについては、「 [型システム](../cppcx/type-system-c-cx.md)」を参照してください。
 
-コマンドラインでビルドする場合は、 **/ZW**コンパイラオプションを使用して UWP アプリまたは Windows ランタイムコンポーネントをビルドします。 Windows ランタイムメタデータ (winmd) ファイルで定義されている Windows ランタイム宣言にアクセスするに `#using` は、ディレクティブまたは **/fu**コンパイラオプションを指定します。 UWP アプリ用のプロジェクトを作成すると、Visual Studio は既定でこれらのオプションを設定し、すべての Windows ランタイムライブラリへの参照を追加します。
+コマンドラインでビルドする場合は、 **/ZW** コンパイラオプションを使用して UWP アプリまたは Windows ランタイムコンポーネントをビルドします。 Windows ランタイムメタデータ (winmd) ファイルで定義されている Windows ランタイム宣言にアクセスするに `#using` は、ディレクティブまたは **/fu** コンパイラオプションを指定します。 UWP アプリ用のプロジェクトを作成すると、Visual Studio は既定でこれらのオプションを設定し、すべての Windows ランタイムライブラリへの参照を追加します。
 
 ## <a name="quick-reference"></a>クイック リファレンス
 
@@ -24,7 +25,7 @@ Windows ランタイムは、信頼できるオペレーティングシステム
 ||**`wchar_t`**, **`char16_t`**|`char16`|Unicode (UTF-16) コード ポイントを表す 16 ビットの数字以外の値。|
 ||**`short`**<br /><br /> **`unsigned short`**|`int16`<br /><br /> `uint16`|16 ビット符号付き整数。<br /><br /> 16 ビット符号なし整数。|
 ||**`int`**<br /><br /> **`unsigned int`**|**`int`**<br /><br /> `uint32`|32 ビット符号付き整数。<br /><br /> 32 ビット符号なし整数|
-||**`long long`** もしくは**`__int64`**<br /><br /> **`unsigned long long`**|`int64`<br /><br /> `uint64`|64 ビット符号付き整数。<br /><br /> 64 ビット符号なし整数。|
+||**`long long`** もしくは **`__int64`**<br /><br /> **`unsigned long long`**|`int64`<br /><br /> `uint64`|64 ビット符号付き整数。<br /><br /> 64 ビット符号なし整数。|
 ||**`float`**, **`double`**|`float32, float64`|32 ビットまたは 64 ビットの IEEE 754 浮動小数点数。|
 ||**`enum`**|**`enum class`**<br /><br /> または<br /><br /> **`enum struct`**|32 ビット列挙体。|
 ||(該当なし)|`Platform::Guid`|`Platform` 名前空間での 128 ビット非数値 (GUID)。|
@@ -41,10 +42,10 @@ Windows ランタイムは、信頼できるオペレーティングシステム
 |構造体宣言|**`struct`***識別子*`{}`<br /><br /> (つまり、PODS (Plain Old Data Structure))|**`value class`***識別子*`{}`<br /><br /> **`value struct`***識別子*`{}`|既定のプライベート アクセシビリティを持つ POD 構造体を宣言します。<br /><br /> 値のクラスは Windows メタデータで表現できますが、標準の C++ クラスは Windows メタデータで表現できません。<br /><br /> 既定のパブリック アクセシビリティを持つ POD 構造体を宣言します。<br /><br /> 値の構造体は Windows メタデータで表現できますが、標準 C++ 構造体は Windows メタデータで表現できません。|
 |インターフェイス宣言|純粋仮想関数のみを含む抽象クラス。|**`interface class`***識別子*`{}`<br /><br /> **`interface struct`***識別子*`{}`|既定のプライベート アクセシビリティを持つインターフェイスを宣言します。<br /><br /> 既定のパブリック アクセシビリティを持つインターフェイスを宣言します。|
 |代理人|`std::function`|`public delegate` *return-type* *delegate-type-identifier* `(` *[ parameters ]* `);`|関数呼び出しのように呼び出すことができるオブジェクトを宣言します。|
-|Event|(該当なし)|**`event`***デリゲート型識別子**イベント識別子*`;`<br /><br /> *デリゲートの型*識別子のデリゲート*識別子*  =  `ref new` *delegate-type-identifier* `( this` *[, parameters]* 。`);`<br /><br /> *event-identifier* `+=` *delegate-identifier* `;`<br /><br /> または<br /><br /> `EventRegistrationToken`*トークン識別子*  = *obj* `.`*イベント識別子* `+=`*デリゲート-識別子*`;`<br /><br /> または<br /><br /> **`auto`***トークン識別子*  = *obj*。*イベント識別子* `::add(`*デリゲート-識別子*`);`<br /><br /> *obj* `.` *event-identifier* `-=` *token-identifier* `;`<br /><br /> または<br /><br /> *obj* `.` *event-identifier* `::remove(` *token-identifier* `);`|イベント オブジェクトを宣言し、そこにイベントが発生したときに呼び出されるイベント ハンドラー (デリゲート) のコレクションを格納します。<br /><br /> イベント ハンドラーを作成します。<br /><br /> イベント ハンドラーを追加します。<br /><br /> イベント ハンドラーを追加すると、イベント トークン (*token-identifier*) が返されます。 明示的にイベント ハンドラーを削除することを意図している場合は、後で使用できるようにイベント トークンを保存する必要があります。<br /><br /> イベント ハンドラーを削除します。<br /><br /> イベント ハンドラーを削除するには、イベント ハンドラーが追加されたときに保存したイベント トークンを指定する必要があります。|
-|プロパティ|(該当なし)|**`property`***T* *識別子*。<br /><br /> **`property`***T* *識別子*の `[` *インデックス*`];`<br /><br /> **`property`***T* `default[` *インデックス*`];`|クラス メンバー関数またはオブジェクト メンバー関数が、データ メンバーまたはインデックス付きの配列要素へのアクセスで使用されたのと同じ構文を使用してアクセスされることを宣言します。<br /><br /> クラス オブジェクト メンバー関数またはオブジェクト メンバー関数のインデックス付きプロパティを宣言します。<br /><br /> オブジェクト メンバー関数のインデックス付きプロパティを宣言します。<br /><br /> クラス メンバー関数のインデックス付きプロパティを宣言します。|
+|Event|(該当なし)|**`event`***デリゲート型識別子**イベント識別子*`;`<br /><br /> *デリゲートの型* 識別子のデリゲート *識別子*  =  `ref new`  `( this` *[, parameters]* 。`);`<br /><br /> *event-identifier* `+=` *delegate-identifier* `;`<br /><br /> または<br /><br /> `EventRegistrationToken`*トークン識別子*  = *obj* `.`*イベント識別子* `+=`*デリゲート-識別子*`;`<br /><br /> または<br /><br /> **`auto`***トークン識別子*  = *obj*。*イベント識別子* `::add(`*デリゲート-識別子*`);`<br /><br /> *obj* `.` *event-identifier* `-=` *token-identifier* `;`<br /><br /> または<br /><br /> *obj* `.` *event-identifier* `::remove(` *token-identifier* `);`|イベント オブジェクトを宣言し、そこにイベントが発生したときに呼び出されるイベント ハンドラー (デリゲート) のコレクションを格納します。<br /><br /> イベント ハンドラーを作成します。<br /><br /> イベント ハンドラーを追加します。<br /><br /> イベント ハンドラーを追加すると、イベント トークン (*token-identifier*) が返されます。 明示的にイベント ハンドラーを削除することを意図している場合は、後で使用できるようにイベント トークンを保存する必要があります。<br /><br /> イベント ハンドラーを削除します。<br /><br /> イベント ハンドラーを削除するには、イベント ハンドラーが追加されたときに保存したイベント トークンを指定する必要があります。|
+|プロパティ|(該当なし)|**`property`***T* *識別子*。<br /><br /> **`property`***T* *識別子* の `[` *インデックス*`];`<br /><br /> **`property`***T* `default[` *インデックス*`];`|クラス メンバー関数またはオブジェクト メンバー関数が、データ メンバーまたはインデックス付きの配列要素へのアクセスで使用されたのと同じ構文を使用してアクセスされることを宣言します。<br /><br /> クラス オブジェクト メンバー関数またはオブジェクト メンバー関数のインデックス付きプロパティを宣言します。<br /><br /> オブジェクト メンバー関数のインデックス付きプロパティを宣言します。<br /><br /> クラス メンバー関数のインデックス付きプロパティを宣言します。|
 |パラメーター化された型|テンプレートの使用|`generic <typename`*T* `> interface class` *識別子*`{}`<br /><br /> `generic <typename` *T* `> delegate` *[return-type]* *delegate-identifier* `() {}`|パラメーター化されたインターフェイス クラスを宣言します。<br /><br /> パラメーター化されたデリゲートを宣言します。|
-|null 許容値型|`boost::optional<T>`|[Platform:: IBox\<T>](../cppcx/platform-ibox-interface.md)|スカラー型および値構造体の変数がの値を持つことができるように **`nullptr`** します。|
+|null 許容値型|`boost::optional<T>`|[Platform:: IBox \<T>](../cppcx/platform-ibox-interface.md)|スカラー型および値構造体の変数がの値を持つことができるように **`nullptr`** します。|
 
 ## <a name="see-also"></a>関連項目
 

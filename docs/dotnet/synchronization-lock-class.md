@@ -1,20 +1,21 @@
 ---
+description: '詳細情報: 同期 (ロッククラス)'
 title: 同期 (lock クラス)
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
 - lock class
 ms.assetid: 5d468122-875d-4e81-b5ba-c9486a873335
-ms.openlocfilehash: 6348097fd209fd97948f5640d73271b0df5acc4b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: db55df86490667f4e9029e836592de67f42d2224
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62384570"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97204278"
 ---
 # <a name="synchronization-lock-class"></a>同期 (lock クラス)
 
-オブジェクトへのアクセスを同期するロックの取得を自動化するためのメカニズムを提供します。
+オブジェクトへのアクセスを同期するロックの取得を自動化するための機構を提供します。
 
 ## <a name="in-this-section"></a>このセクションの内容
 
@@ -22,4 +23,4 @@ ms.locfileid: "62384570"
 
 ## <a name="see-also"></a>関連項目
 
-[C++ のサポート ライブラリ](../dotnet/cpp-support-library.md)
+[C++ サポートライブラリ](../dotnet/cpp-support-library.md)

@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: ウィンドウの破棄順序'
 title: ウィンドウの破棄順序
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -9,23 +10,23 @@ helpviewer_keywords:
 - sequence [MFC]
 - windows [MFC], destroying
 ms.assetid: 2d819196-6240-415f-a308-db43745e616c
-ms.openlocfilehash: d4592e6ac0077d6bc335b50f2d67b140402b4fe2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2ba60f1dcd3668a754bbe4384a6c8cf6b4d541d5
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62167648"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97207684"
 ---
 # <a name="window-destruction-sequence"></a>ウィンドウの破棄順序
 
-ユーザーがウィンドウの既定値であるフレーム ウィンドウを閉じるときに、MFC フレームワーク[OnClose](../mfc/reference/cwnd-class.md#onclose)ハンドラー呼び出し[DestroyWindow](../mfc/reference/cwnd-class.md#destroywindow)します。 Windows のウィンドウが破棄されるときに呼び出されます最後のメンバー関数は[OnNcDestroy](../mfc/reference/cwnd-class.md#onncdestroy)、呼び出しを行ういくつかのクリーンアップ、[既定](../mfc/reference/cwnd-class.md#default)メンバーが Windows のクリーンアップを実行する関数を呼び出す最後に、仮想メンバー関数[PostNcDestroy](../mfc/reference/cwnd-class.md#postncdestroy)します。 [CFrameWnd](../mfc/reference/cframewnd-class.md)の実装`PostNcDestroy`C++ ウィンドウ オブジェクトを削除します。
+MFC フレームワークでは、ユーザーがフレームウィンドウを閉じると、ウィンドウの既定の [OnClose](../mfc/reference/cwnd-class.md#onclose) ハンドラーは [DestroyWindow](../mfc/reference/cwnd-class.md#destroywindow)を呼び出します。 Windows ウィンドウが破棄されるときに呼び出される最後のメンバー関数は [OnNcDestroy](../mfc/reference/cwnd-class.md#onncdestroy)であり、一部のクリーンアップでは、windows クリーンアップを実行する [既定](../mfc/reference/cwnd-class.md#default) のメンバー関数を呼び出し、最後に仮想メンバー関数 [PostNcDestroy](../mfc/reference/cwnd-class.md#postncdestroy)を呼び出します。 の [CFrameWnd](../mfc/reference/cframewnd-class.md) 実装は、 `PostNcDestroy` C++ ウィンドウオブジェクトを削除します。
 
-## <a name="what-do-you-want-to-know-more-about"></a>方法については、するして操作を行います
+## <a name="what-do-you-want-to-know-more-about"></a>詳細については、次を参照してください。
 
-- [割り当てとウィンドウ メモリの解放](../mfc/allocating-and-deallocating-window-memory.md)
+- [ウィンドウ メモリの割り当てと解放](../mfc/allocating-and-deallocating-window-memory.md)
 
-- [Cwnd と HWND の分離](../mfc/detaching-a-cwnd-from-its-hwnd.md)
+- [CWnd と HWND の分離](../mfc/detaching-a-cwnd-from-its-hwnd.md)
 
 ## <a name="see-also"></a>関連項目
 
-[ウィンドウ オブジェクトの破棄](../mfc/destroying-window-objects.md)
+[破棄 (ウィンドウオブジェクトを)](../mfc/destroying-window-objects.md)

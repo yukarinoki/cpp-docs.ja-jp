@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: thread クラス'
 title: thread クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -23,12 +24,12 @@ helpviewer_keywords:
 - std::thread [C++], joinable
 - std::thread [C++], native_handle
 - std::thread [C++], swap
-ms.openlocfilehash: 19f7ae1fc95f531f509273f0eb9998c73fe7d47b
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: b9afa8e649fd2b3fb0fdaf339e4a6fbead5b4ef6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87215583"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97207463"
 ---
 # <a name="thread-class"></a>thread クラス
 
@@ -78,13 +79,13 @@ class thread;
 |----------|-----------------|
 |[thread:: operator =](#op_eq)|スレッドを現在の `thread` オブジェクトと関連付けます。|
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:**\<thread>
 
 **名前空間:** std
 
-## <a name="threaddetach"></a><a name="detach"></a>スレッド::d します。
+## <a name="threaddetach"></a><a name="detach"></a> スレッド::d します。
 
 関連するスレッドをデタッチします。 オペレーティング システムは、終了時にスレッド リソースを解放することが必要になります。
 
@@ -100,7 +101,7 @@ void detach();
 
 呼び出し元のオブジェクトに関連付けられているスレッドが無効な場合、関数は、エラー コード `no_such_process` で `system_error` をスローします。
 
-## <a name="threadget_id"></a><a name="get_id"></a>thread:: get_id
+## <a name="threadget_id"></a><a name="get_id"></a> thread:: get_id
 
 関連付けられたスレッドの一意の識別子を返します。
 
@@ -112,7 +113,7 @@ id get_id() const noexcept;
 
 関連付けられたスレッドを一意に識別する [thread::id](#id_class) オブジェクト、またはオブジェクトに関連付けられているスレッドがない場合は `thread::id()`。
 
-## <a name="threadhardware_concurrency"></a><a name="hardware_concurrency"></a>thread:: hardware_concurrency
+## <a name="threadhardware_concurrency"></a><a name="hardware_concurrency"></a> thread:: hardware_concurrency
 
 ハードウェア スレッド コンテキストの数の見積もりを返す静的メソッド。
 
@@ -124,7 +125,7 @@ static unsigned int hardware_concurrency() noexcept;
 
 ハードウェア スレッド コンテキストの数の見積もり。 値を計算できない場合や、値が適切に定義されていない場合、このメソッドは 0 を返します。
 
-## <a name="threadid-class"></a><a name="id_class"></a>thread:: id クラス
+## <a name="threadid-class"></a><a name="id_class"></a> thread:: id クラス
 
 プロセス内の各実行スレッドの一意の識別子を提供します。
 
@@ -140,7 +141,7 @@ class thread::id {
 
 既定で構築される `thread::id` オブジェクトは等しいものになります。
 
-## <a name="threadjoin"></a><a name="join"></a>thread:: join
+## <a name="threadjoin"></a><a name="join"></a> thread:: join
 
 呼び出し元のオブジェクトに関連付けられている実行スレッドが完了するまでブロックします。
 
@@ -152,9 +153,9 @@ void join();
 
 呼び出しが成功すると、呼び出し元のオブジェクトの後続の [get_id](#get_id) 呼び出しは、既存のどのスレッドの `thread::id` にも等しくない既定の [thread::id](#id_class) を返します。呼び出しが成功しなかった場合、`get_id` によって返される値は変更されません。
 
-## <a name="threadjoinable"></a><a name="joinable"></a>スレッド:: 参加可能
+## <a name="threadjoinable"></a><a name="joinable"></a> スレッド:: 参加可能
 
-関連付けられたスレッドが結合可能かどうかを*指定します。*
+関連付けられたスレッドが結合可能かどうかを *指定します。*
 
 ```cpp
 bool joinable() const noexcept;
@@ -162,13 +163,13 @@ bool joinable() const noexcept;
 
 ### <a name="return-value"></a>戻り値
 
-**`true`** 関連付けられているスレッドが参加*可能な場合は。* それ以外の場合は **`false`** 。
+**`true`** 関連付けられているスレッドが参加 *可能な場合は。* それ以外の場合は **`false`** 。
 
 ### <a name="remarks"></a>解説
 
-`get_id() != id()` の場合、スレッド オブジェクトは*結合可能*です。
+`get_id() != id()` の場合、スレッド オブジェクトは *結合可能* です。
 
-## <a name="threadnative_handle"></a><a name="native_handle"></a>thread:: native_handle
+## <a name="threadnative_handle"></a><a name="native_handle"></a> thread:: native_handle
 
 スレッド ハンドルを表す実装固有の型を返します。 スレッド ハンドルは、実装固有の方法で使用できます。
 
@@ -180,7 +181,7 @@ native_handle_type native_handle();
 
 `native_handle_type` は、`void *` としてキャストされる Win32 `HANDLE` と定義されます。
 
-## <a name="threadoperator"></a><a name="op_eq"></a>thread:: operator =
+## <a name="threadoperator"></a><a name="op_eq"></a> thread:: operator =
 
 指定したオブジェクトのスレッドを現在のオブジェクトに関連付けます。
 
@@ -203,7 +204,7 @@ thread& operator=(thread&& Other) noexcept;
 
 関連付けが行われると、`Other` が既定で構築される状態に設定されます。
 
-## <a name="threadswap"></a><a name="swap"></a>thread:: swap
+## <a name="threadswap"></a><a name="swap"></a> thread:: swap
 
 オブジェクトの状態を、指定された `thread` オブジェクトの状態と交換します。
 
@@ -216,7 +217,7 @@ void swap(thread& Other) noexcept;
 *他の*\
 `thread` オブジェクト。
 
-## <a name="threadthread-constructor"></a><a name="thread"></a>thread:: thread コンストラクター
+## <a name="threadthread-constructor"></a><a name="thread"></a> thread:: thread コンストラクター
 
 `thread` オブジェクトを構築します。
 
@@ -234,7 +235,7 @@ thread(thread&& Other) noexcept;
 スレッドによって実行されるアプリケーション定義関数。
 
 *ある*\
-*F*に渡される引数のリスト。
+*F* に渡される引数のリスト。
 
 *他の*\
 既存の `thread` オブジェクトです。
@@ -243,7 +244,7 @@ thread(thread&& Other) noexcept;
 
 最初のコンストラクターは、実行スレッドに関連付けられていないオブジェクトを構築します。 構築されたオブジェクトの `get_id` への呼び出しによって返される値は `thread::id()` です。
 
-2番目のコンストラクターは、新しい実行スレッドに関連付けられたオブジェクトを構築し、で定義されている擬似関数を実行し `INVOKE` [\<functional>](../standard-library/functional.md) ます。 新しいスレッドを開始するのに十分なリソースがない場合、関数は、エラー コード `resource_unavailable_try_again` で [system_error](../standard-library/system-error-class.md) オブジェクトをスローします。 キャッチされない例外が発生して*F*の呼び出しが終了した場合、 [terminate](../standard-library/exception-functions.md#terminate)が呼び出されます。
+2番目のコンストラクターは、新しい実行スレッドに関連付けられたオブジェクトを構築し、で定義されている擬似関数を実行し `INVOKE` [\<functional>](../standard-library/functional.md) ます。 新しいスレッドを開始するのに十分なリソースがない場合、関数は、エラー コード `resource_unavailable_try_again` で [system_error](../standard-library/system-error-class.md) オブジェクトをスローします。 キャッチされない例外が発生して *F* の呼び出しが終了した場合、 [terminate](../standard-library/exception-functions.md#terminate) が呼び出されます。
 
 3 番目のコンストラクターは、`Other` に関連付けられているスレッドに関連付けられているオブジェクトを構築します。 `Other` は既定で構築される状態に設定されます。
 

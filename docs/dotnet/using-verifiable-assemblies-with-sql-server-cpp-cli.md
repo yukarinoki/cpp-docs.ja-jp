@@ -1,32 +1,33 @@
 ---
+description: '詳細情報: SQL Server での検証可能なアセンブリの使用 (C++/CLI)'
 title: SQL Server での確認可能なアセンブリの使用 (C++/CLI)
 ms.date: 10/17/2018
 helpviewer_keywords:
 - verifiable assemblies [C++], with SQL Server
 ms.assetid: 5248a60d-aa88-4ff3-b30a-b791c3ea2de9
-ms.openlocfilehash: 27dec67cc0932a784cdd041ba346bb8c635b280d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b155fb0360fb373f5931f51de3af557d06858a71
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62384414"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97204200"
 ---
 # <a name="using-verifiable-assemblies-with-sql-server-ccli"></a>SQL Server での確認可能なアセンブリの使用 (C++/CLI)
 
-ダイナミック リンク ライブラリ (Dll) としてパッケージ化、拡張ストアド プロシージャは、Visual C で開発した関数を使用して SQL Server の機能を拡張する手段を提供します。 拡張ストアド プロシージャは Dll 内の関数として実装されます。 拡張ストアド プロシージャも定義するだけでなく、機能[ユーザー定義型](../cpp/classes-and-structs-cpp.md)と集計関数 (SUM、AVG など)。
+ダイナミックリンクライブラリ (Dll) としてパッケージ化された拡張ストアドプロシージャは、Visual C++ を使用して開発された関数を使用して SQL Server 機能を拡張する方法を提供します。 拡張ストアドプロシージャは、Dll 内の関数として実装されます。 関数だけでなく、拡張ストアドプロシージャでは、 [ユーザー定義型](../cpp/classes-and-structs-cpp.md) および集計関数 (SUM や AVG など) を定義することもできます。
 
-クライアントは、拡張ストアド プロシージャを実行するとき、SQL Server DLL を検索は、拡張ストアド プロシージャに関連付けられているし、DLL を読み込みます。 SQL Server では、要求された拡張ストアド プロシージャを呼び出すし、指定したセキュリティ コンテキストで実行します。 拡張にストアド パスの結果が設定され、サーバーにパラメーターを返しますのプロシージャをします。
+クライアントが拡張ストアドプロシージャを実行すると、SQL Server は、拡張ストアドプロシージャに関連付けられている DLL を検索し、DLL を読み込みます。 SQL Server は、要求された拡張ストアドプロシージャを呼び出し、指定されたセキュリティコンテキストで実行します。 その後、拡張ストアドプロシージャは結果セットを渡し、パラメーターをサーバーに戻します。
 
-SQL Server TRANSACT-SQL (T-SQL) は、SQL Server に検証可能なアセンブリをインストールすることを許可する拡張機能を提供します。 SQL Server のアクセス許可セットでは、次のセキュリティ レベルで、セキュリティ コンテキストを指定します。
+SQL Server には、検証可能なアセンブリを SQL Server にインストールできるようにするための Transact-sql (T-sql) の拡張機能が用意されています。 SQL Server のアクセス許可セットでは、セキュリティコンテキストを指定します。セキュリティレベルは次のとおりです。
 
-- 無制限のモード:コードを各自の責任で実行します。コードはタイプ セーフではありません。
+- 無制限モード: 独自のリスクでコードを実行します。コードは、検証可能なタイプセーフである必要はありません。
 
-- セーフ モード:検証可能なタイプ セーフなコードを実行します。/clr:safe と共にコンパイル。
+- セーフモード: 検証可能なタイプセーフなコードを実行します。/clr: safe を使用してコンパイルされます。
 
 > [!IMPORTANT]
-> Visual Studio 2015 で非推奨とされ、Visual Studio 2017 がサポートしていない、 **/clr: 純粋な**と **/clr:safe**検証可能なプロジェクトを作成します。 検証可能なコードが必要な場合は、c# コードを変換することをお勧めします。
+> Visual Studio 2015 では非推奨とされ、Visual Studio 2017 では、検証可能なプロジェクトを **/clr: pure** および **/clr: safe** で作成することはできません。 検証可能なコードが必要な場合は、コードを C# に変換することをお勧めします。
 
-作成しを SQL Server に検証可能なアセンブリを読み込むようアセンブリの作成と DROP ASSEMBLY は、TRANSACT-SQL コマンドを使用します。
+検証可能なアセンブリを作成して SQL Server に読み込むには、次のように、Transact-sql コマンド CREATE ASSEMBLY および DROP ASSEMBLY を使用します。
 
 ```sql
 CREATE ASSEMBLY <assemblyName> FROM <'Assembly UNC Path'> WITH
@@ -34,9 +35,9 @@ CREATE ASSEMBLY <assemblyName> FROM <'Assembly UNC Path'> WITH
 DROP ASSEMBLY <assemblyName>
 ```
 
-PERMISSION_SET コマンドでは、セキュリティ コンテキストを指定し、無制限、SAFE、または拡張値を持つことができます。
+PERMISSION_SET コマンドは、セキュリティコンテキストを指定し、無制限、安全、または拡張の値を持つことができます。
 
-さらに、クラスでメソッド名にバインドする関数の作成コマンドを使用できます。
+また、CREATE FUNCTION コマンドを使用して、クラスのメソッド名にバインドすることもできます。
 
 ```sql
 CREATE FUNCTION <FunctionName>(<FunctionParams>)
@@ -46,7 +47,7 @@ RETURNS returnType
 
 ## <a name="example"></a>例
 
-次の SQL スクリプト (たとえば、名前付き"MyScript.sql") は、SQL Server にアセンブリを読み込み、クラスのメソッドを使用できるように。
+次の SQL スクリプト (たとえば、"Myscript.sql" という名前を付けた場合) は、アセンブリを SQL Server に読み込んで、クラスのメソッドを使用できるようにします。
 
 ```sql
 -- Create assembly without external access
@@ -70,7 +71,7 @@ select dbo.GetQuoteNoEA('MSFT')
 go
 ```
 
-SQL スクリプトは、SQL クエリ アナライザーまたは sqlcmd.exe ユーティリティを使用したコマンドラインで、対話的に実行できます。 次のコマンド ライン MyServer に接続する、既定のデータベースを使用して、信頼関係接続を使用して、MyScript.sql、入出力 MyResult.txt します。
+Sql スクリプトは、SQL クエリアナライザーで対話的に実行することも、sqlcmd.exe ユーティリティを使用してコマンドラインで実行することもできます。 次のコマンドラインは、MyServer に接続し、既定のデータベースを使用し、信頼関係接続を使用して、Myscript.sql を入力し、MyResult.txt 出力します。
 
 ```cmd
 sqlcmd -S MyServer -E -i myScript.sql -o myResult.txt

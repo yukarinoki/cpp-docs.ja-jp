@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: unary_negate クラス'
 title: unary_negate クラス
 ms.date: 02/21/2019
 f1_keywords:
@@ -6,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - unary_negate class
 ms.assetid: e3b86eec-3205-49b9-ab83-f55225af4e0c
-ms.openlocfilehash: 2d9f0bedd9e541e65f04ac20375f16f41413cf03
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 33907bce7e03005488d23b3ac39666b6310b0e43
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72684428"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97207411"
 ---
 # <a name="unary_negate-class"></a>unary_negate クラス
 
-指定された単項関数の戻り値を否定するメンバー関数を提供するクラステンプレート。 [Not_fn](functional-functions.md#not_fn)を優先する c++ 17 では非推奨となりました。
+指定された単項関数の戻り値を否定するメンバー関数を提供するクラステンプレート。 [Not_fn](functional-functions.md#not_fn)を優先するため、c++ 17 では非推奨となりました。
 
 ## <a name="syntax"></a>構文
 
@@ -31,19 +32,19 @@ class unary_negate
 
 ### <a name="parameters"></a>パラメーター
 
-*Func* \
+*Func*\
 否定する単項関数。
 
-*左*\
+*左側*\
 否定する単項関数のオペランド。
 
 ## <a name="return-value"></a>戻り値
 
 単項関数の否定。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-クラステンプレートは、単項関数オブジェクトのコピーを *\_Func*に格納します。 @No__t_1 を返すように、メンバー関数 `operator()` を定義します。
+クラステンプレートは、単項関数オブジェクト *\_ Func* のコピーを格納します。 そのメンバー関数は、 `operator()` を返すように定義さ `!_Func(left)` れています。
 
 `unary_negate` のコンストラクターが直接使用されることはほとんどありません。 **unary_negator** アダプター述語を宣言して使用する場合、ヘルパー関数 [not1](../standard-library/functional-functions.md#not1) を利用した方が簡単です。
 

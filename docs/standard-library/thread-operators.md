@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: &lt; スレッド &gt; 演算子'
 title: '&lt;thread&gt; 演算子'
 ms.date: 11/04/2016
 f1_keywords:
@@ -18,12 +19,12 @@ helpviewer_keywords:
 - std::operator&lt;&lt; (thread)
 - std::operator&lt;= (thread)
 - std::operator== (thread)
-ms.openlocfilehash: 26ed8157685502618fe6fb82fbf9c9ad4c47cba3
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 3992dccf051622bcf854c1843f1bdeb15d227731
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88845030"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97207424"
 ---
 # <a name="ltthreadgt-operators"></a>&lt;thread&gt; 演算子
 
@@ -133,7 +134,7 @@ bool operator<(
 
 ### <a name="return-value"></a>戻り値
 
-**`true`** 左*の順序で**左*にある場合は。それ以外の場合は **`false`** 。
+**`true`** 左 *の順序で**左* にある場合は。それ以外の場合は **`false`** 。
 
 ### <a name="remarks"></a>解説
 
@@ -217,7 +218,7 @@ basic_ostream<Elem, Tr>& operator<<(
 
 ### <a name="remarks"></a>解説
 
-この関数は、 *Ostr*に*Id*を挿入します。
+この関数は、 *Ostr* に *Id* を挿入します。
 
 2 つの `thread::id` オブジェクトが等しい場合、これらのオブジェクトの挿入されたテキスト表現は同じです。
 

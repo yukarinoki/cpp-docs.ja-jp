@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「ポインターのインクリメントとデクリメント」を参照してください。
 title: ポインターのインクリメントとデクリメント
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,56 +8,56 @@ helpviewer_keywords:
 - pointers [C++], multibyte characters
 - decrementing pointers
 ms.assetid: 0872b4a0-e2bd-4004-8319-070efb76f2fd
-ms.openlocfilehash: cdaee3d13a8ceab47f62100953a0eb6e51bfc255
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3c333c11c5a0b68bf013dbd374eb1cc4e5f00abc
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62410656"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97207320"
 ---
 # <a name="incrementing-and-decrementing-pointers"></a>ポインターのインクリメントとデクリメント
 
-次のヒントを使用します。
+次のヒントを参考にしてください。
 
-- 先行バイト、いない後続バイトをポイントします。 末尾バイトへのポインターが、通常は安全ではありません。 通常、逆の順序ではなく、順方向に文字列をスキャンするより安全になります。
+- リーダーバイトではなく先頭バイトをポイントします。 通常は、トレイルバイトへのポインターを持つことは安全ではありません。 通常、逆ではなく、文字列を前方にスキャンする方が安全です。
 
-- ポインターのインクリメントまたはデクリメント関数と全体の文字を重ねると使用可能なマクロがあります。
+- 文字全体を移動するポインターインクリメント/デクリメント関数とマクロが用意されています。
 
     ```cpp
     sz1++;
     ```
 
-   ようになります。
+   次のようになります。
 
     ```cpp
     sz1 = _mbsinc( sz1 );
     ```
 
-   `_mbsinc`と`_mbsdec`関数が正しくインクリメントし、デクリメントで`character`文字のサイズに関係なく、単位。
+   `_mbsinc`および関数は、文字のサイズに `_mbsdec` 関係なく、単位で適切にインクリメントおよびデクリメントし `character` ます。
 
-- デクリメント、次のように、文字列の先頭へのポインターが必要です。
+- デクリメントの場合、次に示すように、文字列の先頭へのポインターが必要です。
 
     ```cpp
     sz2--;
     ```
 
-   ようになります。
+   次のようになります。
 
     ```cpp
     sz2 = _mbsdec( sz2Head, sz2 );
     ```
 
-   または、ヘッド ポインターが、文字列で、有効な文字になります。 ように。
+   または、次のように、ヘッドポインターが文字列内の有効な文字になる場合もあります。
 
     ```cpp
     sz2Head < sz2
     ```
 
-   既知の有効な先行バイトへのポインターが必要です。
+   既知の有効な先行バイトへのポインターを持っている必要があります。
 
-- 高速の呼び出しの前の文字へのポインターを保持したい場合があります`_mbsdec`します。
+- の呼び出しを高速化するために、前の文字へのポインターを維持することもでき `_mbsdec` ます。
 
 ## <a name="see-also"></a>関連項目
 
-[MBCS のプログラミングについて](../text/mbcs-programming-tips.md)<br/>
-[バイト インデックス](../text/byte-indices.md)
+[MBCS のプログラミングに関するヒント](../text/mbcs-programming-tips.md)<br/>
+[バイトインデックス](../text/byte-indices.md)

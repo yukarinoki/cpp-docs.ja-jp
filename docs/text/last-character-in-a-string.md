@@ -1,33 +1,34 @@
 ---
+description: '詳細情報: 文字列の最後の文字'
 title: 文字列の最後の文字
 ms.date: 11/04/2016
 helpviewer_keywords:
 - last character in string
 - MBCS [C++], last character in string
 ms.assetid: 0a180376-4e55-41e8-9c64-539c7b6d8047
-ms.openlocfilehash: 4c99628cd12738fabb877a94cfd04a4033ee45aa
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 10ab90614509508b9667c29ccf166ddaf784a92e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62410675"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97207242"
 ---
 # <a name="last-character-in-a-string"></a>文字列の最後の文字
 
-次のヒントを使用します。
+次のヒントを参考にしてください。
 
-- 後続バイトの範囲では、ASCII 文字セットで多くの場合と重複します。 バイト単位のスキャンは、制御文字 (32 未満) を安全に使用できます。
+- 多くの場合、末尾のバイト範囲が ASCII 文字セットと重複しています。 任意の制御文字 (32 未満) に対して、バイト単位のスキャンを安全に使用できます。
 
-- 文字列の最後の文字が円記号かどうかをチェックしたり、コードの次の行を考慮してください。
+- 次のコード行について考えてみます。文字列の最後の文字が円記号であるかどうかが確認されている可能性があります。
 
     ```cpp
     if ( sz[ strlen( sz ) - 1 ] == '\\' )    // Is last character a '\'?
         // . . .
     ```
 
-   `strlen`は MBCS を認識しないマルチバイト文字列の文字の数ではなく、バイト数を返します。 コード ページ (932 など)、いくつかのことに注意も、'\\' (0x5c) が有効な末尾バイト (`sz`は C 文字列です)。
+   `strlen`は MBCS を認識しないため、マルチバイト文字列の文字数ではなくバイト数を返します。 また、一部のコードページ (932 など) では、' \\ ' (0x5c) は有効なトレイルバイト (は C 文字列) であることに注意して `sz` ください。
 
-   ソリューションの 1 つは、この方法でコードを書き換えるには。
+   考えられる解決策の1つは、次のようにコードを書き換えることです。
 
     ```cpp
     char *pLast;
@@ -36,9 +37,9 @@ ms.locfileid: "62410675"
         // . . .
     ```
 
-   このコードは、MBCS の関数を使用して`_mbsrchr`と`_mbsinc`します。 間と区別できるこれらの関数は、MBCS 対応であるため、'\\'文字と後続バイト'\\'。 コードは、文字列の最後の文字が null ('\0') の場合、何らかのアクションを実行します。
+   このコードでは、MBCS 関数 `_mbsrchr` とを使用し `_mbsinc` ます。 これらの関数は MBCS に対応しているため、' \\ ' 文字と後続バイト ' ' を区別でき \\ ます。 文字列の最後の文字が null (' \ 0 ') の場合、コードはなんらかのアクションを実行します。
 
 ## <a name="see-also"></a>関連項目
 
-[MBCS のプログラミングについて](../text/mbcs-programming-tips.md)<br/>
+[MBCS のプログラミングに関するヒント](../text/mbcs-programming-tips.md)<br/>
 [文字の代入](../text/character-assignment.md)

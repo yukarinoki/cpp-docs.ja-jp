@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: random_device クラス'
 title: random_device クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 - std::random_device [C++], entropy
 - std::random_device [C++], entropy
 ms.assetid: 4393d515-0cb6-4e0d-a2ba-c780f05dc1bf
-ms.openlocfilehash: b2176ce7dcdefdcf4fc0846cd18b1b01d4de2916
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 29f7f9d1359e488bbe15811193c034a0be12219b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88843548"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97207476"
 ---
 # <a name="random_device-class"></a>random_device クラス
 
@@ -67,7 +68,7 @@ public:
 
 ## <a name="example"></a>例
 
-次のコードは、このクラスの基本的な機能と結果の例を示しています。 `random_device` の持つ非確定的な特性のため、**出力**セクションに表示される乱数値は各人の結果と一致しません。 これは想定されている正常な動作です。
+次のコードは、このクラスの基本的な機能と結果の例を示しています。 `random_device` の持つ非確定的な特性のため、**出力** セクションに表示される乱数値は各人の結果と一致しません。 これは想定されている正常な動作です。
 
 ```cpp
 // random_device_engine.cpp
@@ -101,7 +102,7 @@ a random value == 213725214
 
 これは単純な例であり、このジェネレーターの一般的な使用例を表しているわけではありません。 より代表的なコード例については、「」を参照してください [\<random>](../standard-library/random.md) 。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:**\<random>
 

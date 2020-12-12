@@ -1,15 +1,16 @@
 ---
+description: '詳細情報: User-Defined 変換 (C++/CLI)'
 title: ユーザー定義変換 (C++/CLI)
 ms.date: 11/04/2016
 helpviewer_keywords:
 - user-defined conversions [C++]
 ms.assetid: 8010fd59-2775-4e9a-a6ed-58055032d66f
-ms.openlocfilehash: bb7a30382bc586f4d324d47ef6e6757fac83f5ae
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: 0b07ab3201bfd379a17922f020486d0b17a59558
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "79545133"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97204265"
 ---
 # <a name="user-defined-conversions-ccli"></a>ユーザー定義変換 (C++/CLI)
 
@@ -21,7 +22,7 @@ ms.locfileid: "79545133"
 
 ネイティブクラスのコンストラクターを使用して、参照型または値型をネイティブクラスに変換できます。
 
-変換の詳細については、「[ボックス](../extensions/boxing-cpp-component-extensions.md)化と[標準変換](../cpp/standard-conversions.md)」を参照してください。
+変換の詳細については、「 [ボックス](../extensions/boxing-cpp-component-extensions.md) 化と [標準変換](../cpp/standard-conversions.md)」を参照してください。
 
 ```cpp
 // mcpp_User_Defined_Conversions.cpp
@@ -80,7 +81,7 @@ in N::N
 
 変換元演算子は、他のクラスのオブジェクトから演算子が定義されているクラスのオブジェクトを作成します。
 
-標準C++では、変換元演算子はサポートされていません。標準C++では、この目的のためにコンストラクターを使用します。 ただし、CLR 型を使用する場合C++ 、Visual は、変換元演算子を呼び出すための構文サポートを提供します。
+標準 C++ では、変換元演算子はサポートされていません。標準 C++ では、コンストラクターがこの目的に使用します。 ただし、CLR 型を使用する場合は、Visual C++ 変換元演算子を呼び出すための構文サポートを提供します。
 
 他の CLS 準拠の言語と相互運用するには、対応する変換元演算子を使用して、特定のクラスのユーザー定義の単項コンストラクターをラップすることが必要になる場合があります。
 
@@ -319,6 +320,6 @@ int main() {
 2000
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [クラスと構造体](../extensions/classes-and-structs-cpp-component-extensions.md)

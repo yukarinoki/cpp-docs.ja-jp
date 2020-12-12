@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: コンパイラの警告 (レベル 4) C4471'
 title: コンパイラの警告 (レベル 4) C4471
 ms.date: 04/24/2017
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4471
 ms.assetid: ccfd8bd5-bc1b-4be7-a6ea-0e3a7add6607
-ms.openlocfilehash: 5b8c3ef419a4c6eaf9a674827cd5545a1f1b2bfe
-ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
+ms.openlocfilehash: cef492bf8aab33f46b3f590a13ffa5462a7ca41d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90685503"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97203498"
 ---
 # <a name="compiler-warning-level-4-c4471"></a>コンパイラの警告 (レベル 4) C4471
 
@@ -19,7 +20,7 @@ ms.locfileid: "90685503"
 
 対象範囲外の列挙の事前宣言が見つかりましたが、基になる型に指定子がありません。 既定では、Visual C++ **`int`** は列挙体の基になる型であると見なされます。 別の明示的な型が指定されている場合や、初期化子によって別の型が暗黙的に設定されている場合など、列挙定義で別の型が使用されていると、問題が発生する可能性があります。 また、移植性の問題がある場合もあります。他のコンパイラは **`int`** 、が列挙型の基になる型であると想定していません。
 
-既定では、この警告はオフになっています。/Wall または/w*N*4471 を使用してコマンドラインで有効にすることも、ソースファイルで #pragma [警告](../../preprocessor/warning.md) を使用することもできます。
+既定では、この警告はオフになっています。/Wall または/w *N* 4471 を使用してコマンドラインで有効にすることも、ソースファイルで #pragma [警告](../../preprocessor/warning.md) を使用することもできます。
 
 ## <a name="examples"></a>例
 
