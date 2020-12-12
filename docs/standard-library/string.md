@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: &lt; 文字列&gt;'
 title: '&lt;string&gt;'
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - string header
 ms.assetid: a2fb9d00-d7ae-4170-bfea-2dc337aa37cf
-ms.openlocfilehash: cb7d869d36bea6854e3eacbacb6dfad0c32a816f
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 4a5598189be96cb15ff423f57e45fd91e2d93216
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88833181"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97183543"
 ---
 # <a name="ltstringgt"></a>&lt;string&gt;
 
@@ -43,7 +44,7 @@ C++ 言語および C++ 標準ライブラリでは、2 種類の文字列がサ
 |[u16string](../standard-library/string-typedefs.md#u16string)|`basic_string`型の要素に基づいたクラステンプレートの特殊化を記述する型 **`char16_t`** 。|
 |[u32string](../standard-library/string-typedefs.md#u32string)|`basic_string`型の要素に基づいたクラステンプレートの特殊化を記述する型 **`char32_t`** 。|
 
-### <a name="operators"></a>演算子
+### <a name="operators"></a>オペレーター
 
 |演算子|説明|
 |-|-|
@@ -95,7 +96,7 @@ C++ 言語および C++ 標準ライブラリでは、2 種類の文字列がサ
 |[char_traits<char16_t> 構造体](../standard-library/char-traits-char16-t-struct.md)|テンプレート構造体を `char_traits` \<CharType> 型の要素に特殊化した構造体 **`char16_t`** 。|
 |[char_traits<char32_t> 構造体](../standard-library/char-traits-char32-t-struct.md)|テンプレート構造体を `char_traits` \<CharType> 型の要素に特殊化した構造体 **`char32_t`** 。|
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 - **ヘッダー:**\<string>
 

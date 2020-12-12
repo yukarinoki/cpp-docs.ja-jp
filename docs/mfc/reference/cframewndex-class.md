@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: CFrameWndEx クラス'
 title: CFrameWndEx クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -178,12 +179,12 @@ helpviewer_keywords:
 - CFrameWndEx [MFC], UpdateCaption
 - CFrameWndEx [MFC], WinHelp
 ms.assetid: 5830aca8-4a21-4f31-91f1-dd5477ffcc8d
-ms.openlocfilehash: 5aeffddcaa62732d2cba731f897f543e660cbab2
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 81774a3f2c11504f3e3022faf4a109cb1bafdc29
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88832767"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97184271"
 ---
 # <a name="cframewndex-class"></a>CFrameWndEx クラス
 
@@ -308,7 +309,7 @@ class CFrameWndEx : public CFrameWnd
 
 [CFrameWndEx](../../mfc/reference/cframewndex-class.md)
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** afxframewndex.h
 
@@ -400,7 +401,7 @@ void DockPane(
 
 ### <a name="remarks"></a>解説
 
-*NDockBarID*パラメーターには、次のいずれかの値を指定できます。
+*NDockBarID* パラメーターには、次のいずれかの値を指定できます。
 
 - AFX_IDW_DOCKBAR_TOP
 
@@ -426,11 +427,11 @@ BOOL DockPaneLeftOf(
 からドッキングするペインオブジェクトへのポインター。
 
 *自分の*<br/>
-から *Pbar*によって指定されたペインをドッキングする左側のペインへのポインター。
+から *Pbar* によって指定されたペインをドッキングする左側のペインへのポインター。
 
 ### <a name="return-value"></a>戻り値
 
-*Pbar*が正常にドッキングされている場合は TRUE。 それ以外の場合は FALSE。
+*Pbar* が正常にドッキングされている場合は TRUE。 それ以外の場合は FALSE。
 
 ### <a name="remarks"></a>解説
 
@@ -451,7 +452,7 @@ BOOL EnableAutoHidePanes(DWORD dwDockStyle);
 
 ### <a name="return-value"></a>戻り値
 
-*DwDockStyle*で指定されたフレームウィンドウ側にバーペインが正常にドッキングされている場合は TRUE、それ以外の場合は FALSE。
+*DwDockStyle* で指定されたフレームウィンドウ側にバーペインが正常にドッキングされている場合は TRUE、それ以外の場合は FALSE。
 
 ### <a name="remarks"></a>解説
 
@@ -484,7 +485,7 @@ BOOL EnableDocking(DWORD dwDockStyle);
 
 ### <a name="remarks"></a>解説
 
-*DwDockStyle*パラメーターには、次のいずれかの値を指定できます。
+*DwDockStyle* パラメーターには、次のいずれかの値を指定できます。
 
 - CBRS_ALIGN_TOP
 
@@ -716,7 +717,7 @@ BOOL InsertPane(
 ウィンドウの挿入位置の前または後にあるコントロール バーへのポインター。
 
 *bAfter*<br/>
-*Ptarget*の後に*pControlBar*を挿入する場合は TRUE、それ以外の場合は FALSE。
+*Ptarget* の後に *pControlBar* を挿入する場合は TRUE、それ以外の場合は FALSE。
 
 ### <a name="return-value"></a>戻り値
 
@@ -1238,7 +1239,7 @@ afx_msg void OnLButtonDown(
 ### <a name="parameters"></a>パラメーター
 
 *nFlags*<br/>
-からユーザーが修飾キーを押したかどうかを示します。 使用可能な値については、 [WM_LBUTTONDOWN 通知](/windows/win32/inputdev/wm-lbuttondown)の*wParam*パラメーターを参照してください。
+からユーザーが修飾キーを押したかどうかを示します。 使用可能な値については、 [WM_LBUTTONDOWN 通知](/windows/win32/inputdev/wm-lbuttondown)の *wParam* パラメーターを参照してください。
 
 *視点*<br/>
 からウィンドウの左上隅を基準とした、ポインターの x 座標と y 座標を指定します。
@@ -1258,7 +1259,7 @@ afx_msg void OnLButtonUp(
 ### <a name="parameters"></a>パラメーター
 
 *nFlags*<br/>
-からユーザーが修飾キーを押したかどうかを示します。 使用可能な値については、 [WM_LBUTTONUP 通知](/windows/win32/inputdev/wm-lbuttonup)の*wParam*パラメーターを参照してください。
+からユーザーが修飾キーを押したかどうかを示します。 使用可能な値については、 [WM_LBUTTONUP 通知](/windows/win32/inputdev/wm-lbuttonup)の *wParam* パラメーターを参照してください。
 
 *視点*<br/>
 からウィンドウの左上隅を基準とした、ポインターの x 座標と y 座標を指定します。
@@ -1336,7 +1337,7 @@ afx_msg void OnMouseMove(
 ### <a name="parameters"></a>パラメーター
 
 *nFlags*<br/>
-からユーザーが修飾キーを押したかどうかを示します。 使用可能な値については、 [WM_MOUSEMOVE 通知](/windows/win32/inputdev/wm-mousemove)の*wParam*パラメーターを参照してください。
+からユーザーが修飾キーを押したかどうかを示します。 使用可能な値については、 [WM_MOUSEMOVE 通知](/windows/win32/inputdev/wm-mousemove)の *wParam* パラメーターを参照してください。
 
 *視点*<br/>
 からウィンドウの左上隅を基準とした、ポインターの x 座標と y 座標を指定します。
@@ -1639,7 +1640,7 @@ virtual BOOL OnShowPanes(BOOL bShow);
 
 既定の実装では、 *bShow* が TRUE でペインが非表示になっている場合、または *bShow* が FALSE でペインが表示されている場合に、ペインが表示されます。
 
-*BShow*が TRUE でペインが表示されている場合、または*bShow*が FALSE でペインが非表示になっている場合、既定の実装はペインを非表示にします。
+*BShow* が TRUE でペインが表示されている場合、または *bShow* が FALSE でペインが非表示になっている場合、既定の実装はペインを非表示にします。
 
 フレームワークがペインの表示と非表示を切り替えるときに、派生クラスでこのメソッドをオーバーライドしてカスタムコードを実行します。
 
@@ -1678,7 +1679,7 @@ afx_msg void OnSize(
 ### <a name="parameters"></a>パラメーター
 
 *nType*<br/>
-からサイズ変更の種類。 使用可能な値については、 [WM_SIZE 通知](/windows/win32/winmsg/wm-size)の*wParam*パラメーターを参照してください。
+からサイズ変更の種類。 使用可能な値については、 [WM_SIZE 通知](/windows/win32/winmsg/wm-size)の *wParam* パラメーターを参照してください。
 
 *シリーズ*<br/>
 からフレームの新しい幅 (ピクセル単位)。
@@ -1701,7 +1702,7 @@ afx_msg void OnSizing(
 ### <a name="parameters"></a>パラメーター
 
 *fwSide*<br/>
-から移動されるフレームの端。 [WM_SIZING 通知](/windows/win32/winmsg/wm-sizing)のパラメーター *wParam*を参照してください。
+から移動されるフレームの端。 [WM_SIZING 通知](/windows/win32/winmsg/wm-sizing)のパラメーター *wParam* を参照してください。
 
 *pRect*<br/>
 [入力、出力]フレームの座標を格納している [CRect](../../atl-mfc-shared/reference/crect-class.md) 構造体または [RECT](/windows/win32/api/windef/ns-windef-rect) 構造体へのポインター。
@@ -1915,11 +1916,11 @@ CBasePane* PaneFromPoint(
 
 ### <a name="return-value"></a>戻り値
 
-*ポイント*を含むコントロールバーへのポインター。コントロールが見つからない場合は NULL。
+*ポイント* を含むコントロールバーへのポインター。コントロールが見つからない場合は NULL。
 
 ### <a name="remarks"></a>解説
 
-このメソッドは、アプリケーション内のすべてのコントロールバーで *ポイント*を検索します。
+このメソッドは、アプリケーション内のすべてのコントロールバーで *ポイント* を検索します。
 
 検索領域のサイズを大きくするには、 *Nsensitivity* を使用します。 メソッドが検索するコントロールバーの種類を制限するには、 *Prtcbartype* を使用します。
 
@@ -2005,7 +2006,7 @@ void SetDockState(const CDockState& state);
 
 ### <a name="parameters"></a>パラメーター
 
-*状態*<br/>
+*state*<br/>
 ドッキング状態。 このパラメーターは無視されます。
 
 ## <a name="cframewndexsetprintpreviewframe"></a><a name="setprintpreviewframe"></a> CFrameWndEx:: Setprintプレビューフレーム
@@ -2047,7 +2048,7 @@ void SetupToolbarMenu(
 
 ### <a name="remarks"></a>解説
 
-フレームワークは、ユーザー定義のコマンドをリストに格納します。 *Uiviewusertoolbarcmdfirst*と*Uiviewusertoolbarcmdfirst*を使用して、挿入するコマンドのインデックスを指定します。
+フレームワークは、ユーザー定義のコマンドをリストに格納します。 *Uiviewusertoolbarcmdfirst* と *Uiviewusertoolbarcmdfirst* を使用して、挿入するコマンドのインデックスを指定します。
 
 ## <a name="cframewndexshowfullscreen"></a><a name="showfullscreen"></a> CFrameWndEx:: ShowFullScreen 画面
 
@@ -2106,7 +2107,7 @@ virtual void WinHelp(
 ### <a name="parameters"></a>パラメーター
 
 *dwData*<br/>
-*Ncmd*パラメーターに依存するデータ。 使用可能な値の一覧については、「 [WinHelp](/windows/win32/api/winuser/nf-winuser-winhelpw)」を参照してください。
+*Ncmd* パラメーターに依存するデータ。 使用可能な値の一覧については、「 [WinHelp](/windows/win32/api/winuser/nf-winuser-winhelpw)」を参照してください。
 
 *nCmd*<br/>
 ヘルプコマンド。 使用可能な値の一覧については、「 [WinHelp](/windows/win32/api/winuser/nf-winuser-winhelpw)」を参照してください。
@@ -2116,5 +2117,5 @@ virtual void WinHelp(
 ## <a name="see-also"></a>関連項目
 
 [階層図](../../mfc/hierarchy-chart.md)<br/>
-[クラス](../../mfc/reference/mfc-classes.md)<br/>
+[Classes](../../mfc/reference/mfc-classes.md)<br/>
 [CFrameWnd](../../mfc/reference/cframewnd-class.md)

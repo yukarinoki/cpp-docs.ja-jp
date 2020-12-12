@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: subtract_with_carry_engine クラス'
 title: subtract_with_carry_engine クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -16,12 +17,12 @@ helpviewer_keywords:
 - std::subtract_with_carry_engine [C++], max
 - std::subtract_with_carry_engine [C++], seed
 ms.assetid: 94a055f2-a620-4a22-ac34-c156924bab31
-ms.openlocfilehash: cf82c4ca3ce995fa9a53dbea21293dc8515ff491
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 9d2c082f2c7b8405cf8cd25bce6a77d263fd8f64
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88840909"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97183387"
 ---
 # <a name="subtract_with_carry_engine-class"></a>subtract_with_carry_engine クラス
 
@@ -65,7 +66,7 @@ class subtract_with_carry_engine;
 
 `substract_with_carry_engine`クラステンプレートは、 [linear_congruential_engine](../standard-library/linear-congruential-engine-class.md)を改善したものです。 これらのエンジンはいずれも、[mersenne_twister_engine](../standard-library/mersenne-twister-engine-class.md) ほど高速ではなく、結果も高品質ではありません。
 
-このエンジンは、繰り返しの関係 ( *period*) を使用して、ユーザー指定の符号なし整数型の値を生成します。この場合、の `x(i) = (x(i - R) - x(i - S) - cy(i - 1)) mod M` 場合は `cy(i)` 値が、 `1` `x(i - S) - x(i - R) - cy(i - 1) < 0` それ以外の場合は値が `0` `M` `2` <sup>W</sup>になります。エンジンの状態は、キャリーインジケーターと*R*の値を加算したものです。 これらの値は、が r 回以上呼び出された場合に返される最後の*r*値、それ以外の場合は `operator()` *R* `N` 返された値、およびシードの最後の値で構成され `R - N` ます。
+このエンジンは、繰り返しの関係 ( *period*) を使用して、ユーザー指定の符号なし整数型の値を生成します。この場合、の `x(i) = (x(i - R) - x(i - S) - cy(i - 1)) mod M` 場合は `cy(i)` 値が、 `1` `x(i - S) - x(i - R) - cy(i - 1) < 0` それ以外の場合は値が `0` `M` `2` <sup>W</sup>になります。エンジンの状態は、キャリーインジケーターと *R* の値を加算したものです。 これらの値は、が r 回以上呼び出された場合に返される最後の *r* 値、それ以外の場合は `operator()`  `N` 返された値、およびシードの最後の値で構成され `R - N` ます。
 
 テンプレート引数 `UIntType` には、最大 `M - 1` の値を保持するのに十分な大きさが必要です。
 
@@ -79,7 +80,7 @@ class subtract_with_carry_engine;
 
 キャリー付き減算エンジンのアルゴリズムの詳細については、Wikipedia の記事「[Lagged Fibonacci generator](https://en.wikipedia.org/wiki/Lagged_Fibonacci_generator)」(Lagged Fibonacci 法) を参照してください。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:**\<random>
 

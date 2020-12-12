@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: &lt; 文字列 &gt; 関数'
 title: '&lt;string&gt; 関数'
 ms.date: 11/04/2016
 f1_keywords:
@@ -28,12 +29,12 @@ helpviewer_keywords:
 - std::swap [C++]
 - std::to_string [C++]
 - std::to_wstring [C++]
-ms.openlocfilehash: 350a66481c7061322f08a768ec1628598f4af68e
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 859cb6db2e02ad5e915b5d8f3ed31aaf7e443580
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88843184"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97183738"
 ---
 # <a name="ltstringgt-functions"></a>&lt;string&gt; 関数
 
@@ -88,7 +89,7 @@ basic_istream<Allocator, Traits>& getline(
 *引数*\
 入力ストリームから抽出した文字の読み込み先となる文字列。
 
-*delimiter*\
+*区切り記号*\
 行の区切り記号。
 
 ### <a name="return-value"></a>戻り値
@@ -97,7 +98,7 @@ basic_istream<Allocator, Traits>& getline(
 
 ### <a name="remarks"></a>解説
 
-`(1)`*区切り記号*が見つかるまで*in_stream*から文字を抽出し、 *str*に格納する関数シグネチャのペア。
+`(1)`*区切り記号* が見つかるまで *in_stream* から文字を抽出し、 *str* に格納する関数シグネチャのペア。
 
 としてマークされた関数シグネチャのペアは、 `(2)` 既定の行区切り記号として改行を使用し、として動作し `getline(in_stream, str, in_stream. widen('\n'))` ます。
 
@@ -107,15 +108,15 @@ basic_istream<Allocator, Traits>& getline(
 
 - ファイルの最後に、 *in_stream* の内部状態フラグがに設定されてい `ios_base::eofbit` ます。
 
-- 関数が *区切り記号*と等しい要素を抽出した後。 要素は、被制御シーケンスに戻されたり、追加されたりすることはありません。
+- 関数が *区切り記号* と等しい要素を抽出した後。 要素は、被制御シーケンスに戻されたり、追加されたりすることはありません。
 
-- 関数が `str.` [max_size](../standard-library/basic-string-class.md#max_size)要素を抽出した後。 *In_stream*の内部状態フラグがに設定されてい `ios_base::failbit` ます。
+- 関数が `str.` [max_size](../standard-library/basic-string-class.md#max_size)要素を抽出した後。 *In_stream* の内部状態フラグがに設定されてい `ios_base::failbit` ます。
 
 - 以前に一覧表示されていないエラーがあります。 *in_stream* の内部状態フラグがに設定されてい `ios_base::badbit` ます。
 
 内部状態フラグについては、「[ios_base::iostate](../standard-library/ios-base-class.md#iostate)」を参照してください。
 
-関数が要素を抽出しなかった場合、 *in_stream* の内部状態フラグはに設定され `ios_base::failbit` ます。 いずれの場合も、は `getline` *in_stream*を返します。
+関数が要素を抽出しなかった場合、 *in_stream* の内部状態フラグはに設定され `ios_base::failbit` ます。 いずれの場合も、は `getline` *in_stream* を返します。
 
 例外がスローされた場合、 *in_stream* と *str* は有効な状態のままになります。
 
@@ -451,7 +452,7 @@ void swap(basic_string<CharType, Traits, Allocator>& left, basic_string<CharType
 
 ### <a name="remarks"></a>解説
 
-このテンプレート関数は、特化されたメンバー関数を *左から*実行します。単純な複雑さを保証する文字列の場合は、 [swap](../standard-library/basic-string-class.md#swap)(*right*) を使用します。
+このテンプレート関数は、特化されたメンバー関数を *左から* 実行します。単純な複雑さを保証する文字列の場合は、 [swap](../standard-library/basic-string-class.md#swap)(*right*) を使用します。
 
 ### <a name="example"></a>例
 
@@ -515,23 +516,23 @@ string to_string(long double value);
 
 ### <a name="remarks"></a>解説
 
-関数は*value* `Buf` 、を呼び出した場合と同様に、関数内部の配列オブジェクトに格納されている要素のシーケンスに値を変換します。 `sprintf(Buf, Fmt, value)` ここで、 `Fmt` はです。
+関数は `Buf` 、を呼び出した場合と同様に、関数内部の配列オブジェクトに格納されている要素のシーケンスに値を変換します。 `sprintf(Buf, Fmt, value)` ここで、 `Fmt` はです。
 
-- `"%d"`*value*が型である場合**`int`**
+- `"%d"`*value* が型である場合 **`int`**
 
-- `"%u"`*value*が型である場合**`unsigned int`**
+- `"%u"`*value* が型である場合 **`unsigned int`**
 
-- `"%ld"`*value*が型である場合**`long`**
+- `"%ld"`*value* が型である場合 **`long`**
 
-- `"%lu"`*value*が型である場合**`unsigned long`**
+- `"%lu"`*value* が型である場合 **`unsigned long`**
 
-- `"%lld"`*value*が型である場合**`long long`**
+- `"%lld"`*value* が型である場合 **`long long`**
 
-- `"%llu"`*value*が型である場合**`unsigned long long`**
+- `"%llu"`*value* が型である場合 **`unsigned long long`**
 
-- `"%f"`*value*の型が **`float`** またはの場合**`double`**
+- `"%f"`*value* の型が **`float`** またはの場合 **`double`**
 
-- `"%Lf"`*value*が型である場合**`long double`**
+- `"%Lf"`*value* が型である場合 **`long double`**
 
 `string(Buf)` が返されます。
 
@@ -562,23 +563,23 @@ wstring to_wstring(long double value);
 
 ### <a name="remarks"></a>解説
 
-関数は*value* `Buf` 、を呼び出した場合と同様に、関数内部の配列オブジェクトに格納されている要素のシーケンスに値を変換します。 `swprintf(Buf, Len, Fmt, value)` ここで、 `Fmt` はです。
+関数は `Buf` 、を呼び出した場合と同様に、関数内部の配列オブジェクトに格納されている要素のシーケンスに値を変換します。 `swprintf(Buf, Len, Fmt, value)` ここで、 `Fmt` はです。
 
-- `L"%d"`*value*が型である場合**`int`**
+- `L"%d"`*value* が型である場合 **`int`**
 
-- `L"%u"`*value*が型である場合**`unsigned int`**
+- `L"%u"`*value* が型である場合 **`unsigned int`**
 
-- `L"%ld"`*value*が型である場合**`long`**
+- `L"%ld"`*value* が型である場合 **`long`**
 
-- `L"%lu"`*value*が型である場合**`unsigned long`**
+- `L"%lu"`*value* が型である場合 **`unsigned long`**
 
-- `L"%lld"`*value*が型である場合**`long long`**
+- `L"%lld"`*value* が型である場合 **`long long`**
 
-- `L"%llu"`*value*が型である場合**`unsigned long long`**
+- `L"%llu"`*value* が型である場合 **`unsigned long long`**
 
-- `L"%f"`*value*の型が **`float`** またはの場合**`double`**
+- `L"%f"`*value* の型が **`float`** またはの場合 **`double`**
 
-- `L"%Lf"`*value*が型である場合**`long double`**
+- `L"%Lf"`*value* が型である場合 **`long double`**
 
 `wstring(Buf)` が返されます。
 

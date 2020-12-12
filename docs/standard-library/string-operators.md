@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: &lt; 文字列 &gt; 演算子'
 title: '&lt;string&gt; 演算子'
 ms.date: 11/04/2016
 f1_keywords:
@@ -20,12 +21,12 @@ helpviewer_keywords:
 - std::operator&lt; (string)
 - std::operator&lt;&lt; (string)
 - std::operator&lt;= (string), std::operator== (string)
-ms.openlocfilehash: e031eb4421906e35a96a862855a140218f233778
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 9a23b4539fbb84533de83a541458deddbd13615e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88832543"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97183712"
 ---
 # <a name="ltstringgt-operators"></a>&lt;string&gt; 演算子
 
@@ -575,11 +576,11 @@ basic_ostream<CharType, Traits>& operator<<(
 
 ### <a name="return-value"></a>戻り値
 
-指定した文字列の値を出力ストリーム *_Ostr*に書き込みます。
+指定した文字列の値を出力ストリーム *_Ostr* に書き込みます。
 
 ### <a name="remarks"></a>解説
 
-このテンプレート関数は、**演算子<<** をオーバーロードして、クラステンプレート[basic_string](../standard-library/basic-string-class.md)のオブジェクト*str*を stream * \_ ostr*に挿入します。 関数は、を実質的に返し `_Ostr.write( str.c_str, str.size )` ます。
+このテンプレート関数は、**演算子<<** をオーバーロードして、クラステンプレート [basic_string](../standard-library/basic-string-class.md)のオブジェクト *str* を stream *\_ ostr* に挿入します。 関数は、を実質的に返し `_Ostr.write( str.c_str, str.size )` ます。
 
 ## <a name="operatorgt"></a><a name="op_gt"></a> operator&gt;
 
@@ -808,13 +809,13 @@ basic_istream<CharType, Traits>& operator>>(
 
 ### <a name="return-value"></a>戻り値
 
-指定した文字列の値を *_Istr* から読み取り、 *右*に戻します。
+指定した文字列の値を *_Istr* から読み取り、 *右* に戻します。
 
 ### <a name="remarks"></a>解説
 
 `skipws` フラグが設定されていない場合、演算子は先頭の余白をスキップします。 次の文字が余白か、ファイルの終わりに到達するまでは、次のすべての文字を読み取ります。
 
-テンプレート関数は、 **演算子>>** をオーバーロードして、 *right* によって制御されるシーケンスを、ストリーム *_Istr*から抽出された要素のシーケンスに置き換えます。 抽出は、次で停止します。
+テンプレート関数は、 **演算子>>** をオーバーロードして、 *right* によって制御されるシーケンスを、ストリーム *_Istr* から抽出された要素のシーケンスに置き換えます。 抽出は、次で停止します。
 
 - ファイルの終わり。
 
@@ -822,9 +823,9 @@ basic_istream<CharType, Traits>& operator>>(
 
 関数が `_Istr` を抽出した後。 [max_size](../standard-library/basic-string-class.md#max_size) 要素。
 
-- 関数が*ch* [use_facet](../standard-library/basic-filebuf-class.md#open) <  **ctype** \< **CharType**> > () の要素 ch を抽出した後 `getloc` 。 **is**( **ctype** \< **CharType**> :: **space**, *ch*) が true の場合、文字は戻ります。
+- 関数が [use_facet](../standard-library/basic-filebuf-class.md#open) <  **ctype** \< **CharType**> > () の要素 ch を抽出した後 `getloc` 。 **is**( **ctype** \< **CharType**> :: **space**, *ch*) が true の場合、文字は戻ります。
 
-関数が要素を抽出しなかった場合は、 [setstate](../standard-library/basic-ios-class.md#setstate)() を呼び出し `ios_base::failbit` ます。 どのような場合でも、 **istr**を呼び出します。 **width**(0) とを返し \* **`this`** ます。
+関数が要素を抽出しなかった場合は、 [setstate](../standard-library/basic-ios-class.md#setstate)() を呼び出し `ios_base::failbit` ます。 どのような場合でも、 **istr** を呼び出します。 **width**(0) とを返し \* **`this`** ます。
 
 ### <a name="example"></a>例
 

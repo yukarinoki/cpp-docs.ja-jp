@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: strstream クラス'
 title: strstream クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - std::strstream [C++], rdbuf
 - std::strstream [C++], str
 ms.assetid: 63f3be31-9e36-42b1-9715-a474a5997e2a
-ms.openlocfilehash: 796bf1b3ac41a4b5a6ab5bc16239d50616f554df
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: c37a2ec46872b34e256710fe61f216a84cb0359d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87224618"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97183530"
 ---
 # <a name="strstream-class"></a>strstream クラス
 
@@ -38,7 +39,7 @@ class strstream : public iostream
 
 ### <a name="constructors"></a>コンストラクター
 
-|コンストラクター|[説明]|
+|コンストラクター|説明|
 |-|-|
 |[strstream](#strstream)|`strstream` 型のオブジェクトを構築します。|
 
@@ -49,15 +50,15 @@ class strstream : public iostream
 |[あせん](#freeze)|ストリーム バッファーの操作により、ストリーム バッファーを使用不可にします。|
 |[pcount](#pcount)|被制御シーケンスに書き込まれる要素の数を返します。|
 |[rdbuf](#rdbuf)|ストリームの関連付けられた `strstreambuf` オブジェクトへのポインターを返します。|
-|[引数](#str)|[freeze](../standard-library/strstreambuf-class.md#freeze) を呼び出し、被制御シーケンスの先頭へのポインターを返します。|
+|[str](#str)|[freeze](../standard-library/strstreambuf-class.md#freeze) を呼び出し、被制御シーケンスの先頭へのポインターを返します。|
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:**\<strstream>
 
 **名前空間:** std
 
-## <a name="strstreamfreeze"></a><a name="freeze"></a>strstream:: freeze
+## <a name="strstreamfreeze"></a><a name="freeze"></a> strstream:: freeze
 
 ストリーム バッファーの操作により、ストリーム バッファーを使用不可にします。
 
@@ -78,7 +79,7 @@ void freeze(bool _Freezeit = true);
 
 の使用例については、「 [strstreambuf:: freeze](../standard-library/strstreambuf-class.md#freeze) 」を参照してください `freeze` 。
 
-## <a name="strstreampcount"></a><a name="pcount"></a>strstream::p 数
+## <a name="strstreampcount"></a><a name="pcount"></a> strstream::p 数
 
 被制御シーケンスに書き込まれる要素の数を返します。
 
@@ -98,7 +99,7 @@ streamsize pcount() const;
 
 pcount の使用例は、[strstreambuf::pcount](../standard-library/strstreambuf-class.md#pcount) をご覧ください。
 
-## <a name="strstreamrdbuf"></a><a name="rdbuf"></a>strstream:: rdbuf
+## <a name="strstreamrdbuf"></a><a name="rdbuf"></a> strstream:: rdbuf
 
 ストリームの関連付けられた strstreambuf オブジェクトへのポインターを返します。
 
@@ -118,7 +119,7 @@ strstreambuf *rdbuf() const
 
 `rdbuf` の使用例は、[strstreambuf::pcount](../standard-library/strstreambuf-class.md#pcount) をご覧ください。
 
-## <a name="strstreamstr"></a><a name="str"></a>strstream:: str
+## <a name="strstreamstr"></a><a name="str"></a> strstream:: str
 
 [freeze](../standard-library/strstreambuf-class.md#freeze) を呼び出し、被制御シーケンスの先頭へのポインターを返します。
 
@@ -138,7 +139,7 @@ char *str();
 
 を使用するサンプルについては、「 [strstreambuf:: str](../standard-library/strstreambuf-class.md#str) 」を参照してください `str` 。
 
-## <a name="strstreamstrstream"></a><a name="strstream"></a>strstream:: strstream
+## <a name="strstreamstrstream"></a><a name="strstream"></a> strstream:: strstream
 
 `strstream` 型のオブジェクトを構築します。
 
@@ -163,11 +164,11 @@ strstream(char* ptr,
 
 ### <a name="remarks"></a>解説
 
-どちらのコンストラクターも、 [streambuf](../standard-library/streambuf-typedefs.md#streambuf)( **sb**) を呼び出すことによって基底クラスを初期化します。ここで、 `sb` は[strstreambuf](../standard-library/strstreambuf-class.md)クラスの格納されているオブジェクトです。 最初のコンストラクターは、 `sb` [strstreambuf](../standard-library/strstreambuf-class.md#strstreambuf)を呼び出すことによっても初期化します。 2 番目のコンストラクターは、次のどちらかの方法で基本クラスを初期化します。
+どちらのコンストラクターも、 [streambuf](../standard-library/streambuf-typedefs.md#streambuf)( **sb**) を呼び出すことによって基底クラスを初期化します。ここで、 `sb` は [strstreambuf](../standard-library/strstreambuf-class.md)クラスの格納されているオブジェクトです。 最初のコンストラクターは、 `sb` [strstreambuf](../standard-library/strstreambuf-class.md#strstreambuf)を呼び出すことによっても初期化します。 2 番目のコンストラクターは、次のどちらかの方法で基本クラスを初期化します。
 
-- `_Mode`  &  **Ios_base:: app**= = 0 の場合、 *ptr*は要素の配列の最初の要素を指定する必要があり、 `count` コンストラクターは `strstreambuf` ( `ptr` , `count` ,) を呼び出し `ptr` ます。
+- `_Mode`  &  **Ios_base:: app**= = 0 の場合、 *ptr* は要素の配列の最初の要素を指定する必要があり、 `count` コンストラクターは `strstreambuf` ( `ptr` , `count` ,) を呼び出し `ptr` ます。
 
-- それ以外の場合、 *ptr*は、最初の要素が*ptr*によって指定されている C 文字列を含み、コンストラクターが `strstreambuf` ( `ptr` , `count` , `ptr`  +  `strlen` ( `ptr` )) を呼び出す、count 要素の配列の最初の要素を指定する必要があります。
+- それ以外の場合、 *ptr* は、最初の要素が *ptr* によって指定されている C 文字列を含み、コンストラクターが `strstreambuf` ( `ptr` , `count` , `ptr`  +  `strlen` ( `ptr` )) を呼び出す、count 要素の配列の最初の要素を指定する必要があります。
 
 ## <a name="see-also"></a>関連項目
 

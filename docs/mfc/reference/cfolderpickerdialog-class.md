@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: CFolderPickerDialog クラス'
 title: CFolderPickerDialog クラス
 ms.date: 03/27/2019
 f1_keywords:
@@ -8,16 +9,16 @@ f1_keywords:
 helpviewer_keywords:
 - CFolderPickerDialog [MFC], CFolderPickerDialog
 ms.assetid: 8db01684-dd1d-4e9c-989e-07a2318a8156
-ms.openlocfilehash: ed3dc151060519bce216cf4a2f3d6559d6b8937e
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: f4a5bcc3162a5fffcc723d7ec420685b02be10f0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81373870"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97184427"
 ---
 # <a name="cfolderpickerdialog-class"></a>CFolderPickerDialog クラス
 
-クラスは、フォルダー ピッカー モードで CFileDialog を実装します。
+CFolderPickerDialog クラスは、フォルダー選択モードで CFileDialog を実装します。
 
 ## <a name="syntax"></a>構文
 
@@ -31,8 +32,8 @@ class CFolderPickerDialog : public CFileDialog;
 
 |名前|説明|
 |----------|-----------------|
-|[ダイアログボックス::~Cフォルダピッカーダイアログ](#_dtorcfolderpickerdialog)|デストラクターです。|
-|[ダイアログ ボックス::C フォルダークリック ダイアログ](#cfolderpickerdialog)|コンストラクターです。|
+|[CFolderPickerDialog:: ~ CFolderPickerDialog](#_dtorcfolderpickerdialog)|デストラクターです。|
+|[CFolderPickerDialog:: CFolderPickerDialog](#cfolderpickerdialog)|コンストラクターです。|
 
 ## <a name="remarks"></a>解説
 
@@ -52,11 +53,11 @@ class CFolderPickerDialog : public CFileDialog;
 
 `CFolderPickerDialog`
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-**ヘッダー:** afxdlgs.h
+**ヘッダー:** afxdlgs
 
-## <a name="cfolderpickerdialogcfolderpickerdialog"></a><a name="cfolderpickerdialog"></a>ダイアログ ボックス::C フォルダークリック ダイアログ
+## <a name="cfolderpickerdialogcfolderpickerdialog"></a><a name="cfolderpickerdialog"></a> CFolderPickerDialog:: CFolderPickerDialog
 
 コンストラクターです。
 
@@ -70,21 +71,21 @@ explicit CFolderPickerDialog(
 
 ### <a name="parameters"></a>パラメーター
 
-*をクリックします。*<br/>
-初期フォルダ。
+*lpszFolder*<br/>
+初期フォルダー。
 
 *dwFlags*<br/>
-ダイアログ ボックスをカスタマイズするための 1 つまたは複数のフラグの組み合わせ。
+ダイアログボックスをカスタマイズできる1つ以上のフラグの組み合わせ。
 
 *pParentWnd*<br/>
-ダイアログ ボックス オブジェクトの親ウィンドウまたはオーナー ウィンドウへのポインター。
+ダイアログボックスオブジェクトの親またはオーナーウィンドウへのポインター。
 
-*Dwsize*<br/>
-ファイル名構造体のサイズ。
+*dwSize*<br/>
+OPENFILENAME 構造体のサイズ。
 
 ### <a name="remarks"></a>解説
 
-## <a name="cfolderpickerdialogcfolderpickerdialog"></a><a name="_dtorcfolderpickerdialog"></a>ダイアログボックス::~Cフォルダピッカーダイアログ
+## <a name="cfolderpickerdialogcfolderpickerdialog"></a><a name="_dtorcfolderpickerdialog"></a> CFolderPickerDialog:: ~ CFolderPickerDialog
 
 デストラクターです。
 

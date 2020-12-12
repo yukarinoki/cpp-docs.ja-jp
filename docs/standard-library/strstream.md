@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: &lt; strstream&gt;'
 title: '&lt;strstream&gt;'
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - strstream header
 ms.assetid: eaa9d0d4-d217-4f28-8a68-9b9ad7b1c0f5
-ms.openlocfilehash: 13eea1101abca0f79f0d7c15405ceb3118707b67
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: e99a07df2a63b991232440f8dad0eb299d0e00b4
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88845654"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97183556"
 ---
 # <a name="ltstrstreamgt"></a>&lt;strstream&gt;
 
 オブジェクトの割り当てられた配列に格納されているシーケンスに対して iostreams 操作をサポートする複数のクラスを定義 **`char`** します。 このようなシーケンスは、C 文字列と簡単に相互変換できます。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:**\<strstream>
 
@@ -41,7 +42,7 @@ ms.locfileid: "88845654"
 |[ostrstream クラス](../standard-library/ostrstream-class.md)|このクラスは、クラス [strstreambuf](../standard-library/strstreambuf-class.md) のストリーム バッファーへの、要素とエンコードされたオブジェクトの挿入を制御するオブジェクトを表します。|
 |[strstream クラス](../standard-library/strstream-class.md)|このクラスは、クラス [strstreambuf](../standard-library/strstreambuf-class.md) のストリーム バッファーを使用して要素とエンコードされたオブジェクトの挿入と抽出を制御するオブジェクトを表します。|
 
-### <a name="functions"></a>Functions
+### <a name="functions"></a>関数
 
 ```cpp
 void freeze(bool freezefl = true);

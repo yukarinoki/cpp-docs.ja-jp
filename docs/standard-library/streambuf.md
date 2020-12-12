@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「streambuf」を参照してください。 &lt;&gt;
 title: '&lt;streambuf&gt;'
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - streambuf header
 ms.assetid: 4365b25c-5831-488b-b9c2-867bfe961b89
-ms.openlocfilehash: 1121bd4e782fca57588d05fb29b5b9b6cdec18e9
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 417b31b919c95d8aef741b2988c576ff6454ce4a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87215609"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97183764"
 ---
 # <a name="ltstreambufgt"></a>&lt;streambuf&gt;
 
-Iostreams の標準ヘッダーをインクルードして \<streambuf> クラステンプレート[basic_streambuf](../standard-library/basic-streambuf-class.md)を定義します。これは iostreams クラスの操作の基本となります。 通常、このヘッダーは別の iostream ヘッダーにインクルードされているため、ユーザーが直接インクルードする必要はありません。
+Iostreams の標準ヘッダーをインクルードして \<streambuf> クラステンプレート [basic_streambuf](../standard-library/basic-streambuf-class.md)を定義します。これは iostreams クラスの操作の基本となります。 通常、このヘッダーは別の iostream ヘッダーにインクルードされているため、ユーザーが直接インクルードする必要はありません。
 
 ## <a name="syntax"></a>構文
 

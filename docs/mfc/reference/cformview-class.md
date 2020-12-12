@@ -1,5 +1,6 @@
 ---
-title: クラスを表示します。
+description: '詳細情報: CFormView クラス'
+title: CFormView クラス
 ms.date: 11/04/2016
 f1_keywords:
 - CFormView
@@ -10,14 +11,14 @@ helpviewer_keywords:
 - CFormView [MFC], CFormView
 - CFormView [MFC], IsInitDlgCompleted
 ms.assetid: a99ec313-36f0-4f28-9d2b-de11de14ac19
-ms.openlocfilehash: a9b897c661731878f0bf78c9d04ae7c4ba28cd42
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: ec37a3819f299830fef96bfdf93c0170b2969c66
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81373802"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97184310"
 ---
-# <a name="cformview-class"></a>クラスを表示します。
+# <a name="cformview-class"></a>CFormView クラス
 
 フォーム ビューの基底クラスです。
 
@@ -43,13 +44,13 @@ class CFormView : public CScrollView
 
 ## <a name="remarks"></a>解説
 
-フォーム ビューは、基本的には、コントロールを含むビューです。 これらのコントロールは、ダイアログ テンプレート リソースに基づいて配置されます。 アプリケーションでフォームが必要な場合は、`CFormView` を使用します。 これらのビューは、必要に応じて[、CScrollView](../../mfc/reference/cscrollview-class.md)機能を使用してスクロールをサポートします。
+フォーム ビューは、基本的には、コントロールを含むビューです。 これらのコントロールは、ダイアログ テンプレート リソースに基づいて配置されます。 アプリケーションでフォームが必要な場合は、`CFormView` を使用します。 これらのビューでは、必要に応じて [CScrollView](../../mfc/reference/cscrollview-class.md) 機能を使用したスクロールがサポートされます。
 
-[フォーム ベース のアプリケーション を作成](../../mfc/reference/creating-a-forms-based-mfc-application.md)する場合は、フォーム ベースの`CFormView`アプリケーションに設定したビュー クラスを基に設定できます。
+[Forms-Based アプリケーションを作成](../../mfc/reference/creating-a-forms-based-mfc-application.md)するときは、そのビュークラスをに基づいてフォームベースのアプリケーションにすることができ `CFormView` ます。
 
-また、ドキュメント ビュー ベースのアプリケーションに新しい[フォーム トピック](../../mfc/form-views-mfc.md)を挿入することもできます。 アプリケーションで最初はフォームをサポートしていなかった場合でも、新しいフォームを挿入するときに、Visual C++ によってフォームのサポートが追加されます。
+ドキュメントビューベースのアプリケーションに新しい [フォームトピック](../../mfc/form-views-mfc.md) を挿入することもできます。 アプリケーションで最初はフォームをサポートしていなかった場合でも、新しいフォームを挿入するときに、Visual C++ によってフォームのサポートが追加されます。
 
-MFC アプリケーション ウィザードと [クラスの追加] コマンドは、フォーム ベースのアプリケーションを作成する方法として推奨されています。 これらのメソッドを使用せずにフォームベースのアプリケーションを作成する必要がある場合は、[フォームベースのアプリケーションの作成を](../../mfc/reference/creating-a-forms-based-mfc-application.md)参照してください。
+MFC アプリケーション ウィザードと [クラスの追加] コマンドは、フォーム ベースのアプリケーションを作成する方法として推奨されています。 これらの方法を使用せずにフォームベースのアプリケーションを作成する必要がある場合は、「 [Forms-Based アプリケーションの作成](../../mfc/reference/creating-a-forms-based-mfc-application.md)」を参照してください。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -65,11 +66,11 @@ MFC アプリケーション ウィザードと [クラスの追加] コマン�
 
 `CFormView`
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** afxext.h
 
-## <a name="cformviewcformview"></a><a name="cformview"></a>フォームビュー::フォームビュー
+## <a name="cformviewcformview"></a><a name="cformview"></a> CFormView:: CFormView
 
 `CFormView` オブジェクトを構築します。
 
@@ -80,20 +81,20 @@ CFormView(UINT nIDTemplate);
 
 ### <a name="parameters"></a>パラメーター
 
-*テンプレート名*<br/>
-ダイアログ テンプレート リソースの名前である null で終わる文字列を格納します。
+*lpszTemplateName*<br/>
+ダイアログテンプレートリソースの名前である null で終わる文字列を格納します。
 
-*テンプレート*<br/>
-ダイアログ テンプレート リソースの ID 番号を格納します。
+*nIDTemplate*<br/>
+ダイアログテンプレートリソースの ID 番号を格納します。
 
 ### <a name="remarks"></a>解説
 
-派生`CFormView`した型のオブジェクトを作成する場合は、いずれかのコンストラクターを呼び出してビュー オブジェクトを作成し、ビューの基になるダイアログ リソースを識別します。 リソースは、名前 (コンストラクターの引数として文字列を渡す) または ID (引数として符号なし整数を渡す) によって識別できます。
+から派生した型のオブジェクトを作成する場合 `CFormView` は、いずれかのコンストラクターを呼び出してビューオブジェクトを作成し、ビューの基になるダイアログリソースを識別します。 リソースは、名前で識別できます (コンストラクターの引数として文字列を渡すか、または ID で符号なし整数を渡します)。
 
-フォーム ビュー ウィンドウと子コントロールは、呼び`CWnd::Create`出されるまで作成されません。 `CWnd::Create`は、ドキュメント テンプレートによって駆動されるドキュメントとビューの作成プロセスの一部として、フレームワークによって呼び出されます。
+フォームビューウィンドウと子コントロールは、が呼び出されるまで作成されません `CWnd::Create` 。 `CWnd::Create` は、ドキュメントテンプレートによって駆動されるドキュメントおよびビュー作成プロセスの一部として、フレームワークによって呼び出されます。
 
 > [!NOTE]
-> 派生クラスは、独自のコンストラクターを指定*する必要があります*。 コンストラクターで、前述のクラスの概要`CFormView::CFormView`に示すように、リソース名または ID を引数としてコンストラクター を呼び出します。
+> 派生クラスは、独自のコンストラクターを提供 *する必要があり* ます。 コンストラクターで、 `CFormView::CFormView` 上のクラスの概要に示すように、リソース名または ID を引数として指定して、コンストラクターを呼び出します。
 
 ### <a name="example"></a>例
 
@@ -101,7 +102,7 @@ CFormView(UINT nIDTemplate);
 
 [!code-cpp[NVC_MFCDocView#91](../../mfc/codesnippet/cpp/cformview-class_2.cpp)]
 
-## <a name="cformviewisinitdlgcompleted"></a><a name="isinitdlgcompleted"></a>フォームビュー::イシニトドアルグ完了
+## <a name="cformviewisinitdlgcompleted"></a><a name="isinitdlgcompleted"></a> CFormView:: IsInitDlgCompleted
 
 他の操作が実行される前に初期化が完了したことを確認するために MFC によって使用されます。
 
@@ -115,9 +116,9 @@ BOOL IsInitDlgCompleted() const;
 
 ## <a name="see-also"></a>関連項目
 
-[MFC サンプル スナップVW](../../overview/visual-cpp-samples.md)<br/>
-[MFC サンプル ビューレックス](../../overview/visual-cpp-samples.md)<br/>
+[MFC のサンプル SNAPVW](../../overview/visual-cpp-samples.md)<br/>
+[MFC のサンプル VIEWEX](../../overview/visual-cpp-samples.md)<br/>
 [CScrollView クラス](../../mfc/reference/cscrollview-class.md)<br/>
-[階層グラフ](../../mfc/hierarchy-chart.md)<br/>
-[クラス](../../mfc/reference/cdialog-class.md)<br/>
+[階層図](../../mfc/hierarchy-chart.md)<br/>
+[CDialog クラス](../../mfc/reference/cdialog-class.md)<br/>
 [CScrollView クラス](../../mfc/reference/cscrollview-class.md)
