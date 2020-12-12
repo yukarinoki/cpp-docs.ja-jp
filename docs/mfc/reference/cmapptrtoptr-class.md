@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: CMapPtrToPtr クラス'
 title: CMapPtrToPtr クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -34,12 +35,12 @@ helpviewer_keywords:
 - CMapPtrToPtr [MFC], RemoveKey
 - CMapPtrToPtr [MFC], SetAt
 ms.assetid: 23cbbaec-9d64-48f2-92ae-5e24fa64b926
-ms.openlocfilehash: f8fc69007d35927daaa7128de1bc0ceb0b44c746
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 3cc561f7420e9c3c7bc2b2f6460536a80d7ef7cd
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87223045"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97259540"
 ---
 # <a name="cmapptrtoptr-class"></a>CMapPtrToPtr クラス
 
@@ -63,13 +64,13 @@ class CMapPtrToPtr : public CObject
 
 ### <a name="public-constructors"></a>パブリック コンストラクター
 
-|名前|[説明]|
+|名前|説明|
 |----------|-----------------|
 |[CMapPtrToPtr::CMapPtrToPtr](../../mfc/reference/cmapstringtoob-class.md#cmapstringtoob)|コンストラクターです。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
-|名前|[説明]|
+|名前|説明|
 |----------|-----------------|
 |[CMapPtrToPtr:: GetCount](../../mfc/reference/cmapstringtoob-class.md#getcount)|このマップ内の要素の数を返します。|
 |[CMapPtrToPtr::GetHashTableSize](../../mfc/reference/cmapstringtoob-class.md#gethashtablesize)|ハッシュテーブル内の現在の要素数を確認します。|
@@ -87,19 +88,19 @@ class CMapPtrToPtr : public CObject
 
 ### <a name="public-operators"></a>パブリック演算子
 
-|名前|[説明]|
+|名前|説明|
 |----------|-----------------|
 |[CMapPtrToPtr:: operator \[\]](../../mfc/reference/cmapstringtoob-class.md#operator_at)|Map に要素を挿入します。に対する演算子の代入 `SetAt` 。|
 
 ## <a name="remarks"></a>解説
 
-`CMapPtrToPtr`には、実行時の型へのアクセスとオブジェクトへのダンプをサポートする IMPLEMENT_DYNAMIC マクロが組み込まれて `CDumpContext` います。 個々のマップ要素 (ポインター値) のダンプが必要な場合は、ダンプコンテキストの深さを1以上に設定する必要があります。
+`CMapPtrToPtr` には、実行時の型へのアクセスとオブジェクトへのダンプをサポートする IMPLEMENT_DYNAMIC マクロが組み込まれて `CDumpContext` います。 個々のマップ要素 (ポインター値) のダンプが必要な場合は、ダンプコンテキストの深さを1以上に設定する必要があります。
 
 ポインターからポインターへのマップはシリアル化できません。
 
 `CMapPtrToPtr` オブジェクトが削除されたとき、またはその要素が削除されたときは、ポインターだけが削除されます。ポインターが参照するエンティティは削除されません。
 
-の詳細については `CMapPtrToPtr` 、「[コレクション](../../mfc/collections.md)」を参照してください。
+の詳細については `CMapPtrToPtr` 、「 [コレクション](../../mfc/collections.md)」を参照してください。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -107,7 +108,7 @@ class CMapPtrToPtr : public CObject
 
 `CMapPtrToPtr`
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** afxcoll.h
 

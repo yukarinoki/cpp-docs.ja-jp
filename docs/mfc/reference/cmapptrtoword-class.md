@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: CMapPtrToWord クラス'
 title: CMapPtrToWord クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -34,12 +35,12 @@ helpviewer_keywords:
 - CMapPtrToWord [MFC], RemoveKey
 - CMapPtrToWord [MFC], SetAt
 ms.assetid: 4631c6b6-d49f-49d9-adc0-1e0491e32d7b
-ms.openlocfilehash: 254659a9f00ff7c0c27174cfbea4c131993150f3
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: f1b9742b6693c07b27c22a77b8c45d5b20500bb8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87223032"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97259488"
 ---
 # <a name="cmapptrtoword-class"></a>CMapPtrToWord クラス
 
@@ -63,13 +64,13 @@ class CMapPtrToWord : public CObject
 
 ### <a name="public-constructors"></a>パブリック コンストラクター
 
-|名前|[説明]|
+|名前|説明|
 |----------|-----------------|
 |[CMapPtrToWord::CMapPtrToWord](../../mfc/reference/cmapstringtoob-class.md#cmapstringtoob)|コンストラクターです。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
-|名前|[説明]|
+|名前|説明|
 |----------|-----------------|
 |[CMapPtrToWord:: GetCount](../../mfc/reference/cmapstringtoob-class.md#getcount)|このマップ内の要素の数を返します。|
 |[CMapPtrToWord::GetHashTableSize](../../mfc/reference/cmapstringtoob-class.md#gethashtablesize)|ハッシュテーブル内の現在の要素数を確認します。|
@@ -87,19 +88,19 @@ class CMapPtrToWord : public CObject
 
 ### <a name="public-operators"></a>パブリック演算子
 
-|名前|[説明]|
+|名前|説明|
 |----------|-----------------|
 |[CMapPtrToWord:: operator \[\]](../../mfc/reference/cmapstringtoob-class.md#operator_at)|Map に要素を挿入します。に対する演算子の代入 `SetAt` 。|
 
 ## <a name="remarks"></a>解説
 
-`CMapWordToPtr`には、実行時の型へのアクセスとオブジェクトへのダンプをサポートする IMPLEMENT_DYNAMIC マクロが組み込まれて `CDumpContext` います。 個々のマップ要素のダンプが必要な場合は、ダンプコンテキストの深さを1以上に設定する必要があります。
+`CMapWordToPtr` には、実行時の型へのアクセスとオブジェクトへのダンプをサポートする IMPLEMENT_DYNAMIC マクロが組み込まれて `CDumpContext` います。 個々のマップ要素のダンプが必要な場合は、ダンプコンテキストの深さを1以上に設定する必要があります。
 
 ポインターからワードへのマップはシリアル化できません。
 
 `CMapPtrToWord`オブジェクトが削除されるか、その要素が削除されると、ポインターと単語が削除されます。 キーポインターによって参照されるエンティティは削除されません。
 
-の詳細については `CMapPtrToWord` 、「[コレクション](../../mfc/collections.md)」を参照してください。
+の詳細については `CMapPtrToWord` 、「 [コレクション](../../mfc/collections.md)」を参照してください。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -107,7 +108,7 @@ class CMapPtrToWord : public CObject
 
 `CMapPtrToWord`
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** afxcoll.h
 
