@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: __rdtscp'
 title: __rdtscp
 ms.date: 09/02/2019
 f1_keywords:
@@ -8,18 +9,18 @@ helpviewer_keywords:
 - __rdtscp intrinsic
 - rdtscp instruction
 ms.assetid: f17d9a9c-88bb-44e0-b69d-d516bc1c93ee
-ms.openlocfilehash: 4dcabd6ed0f7fb3f422927815cbdc91f2b4b9d43
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 511d0f1001c218fd838d4bb315fe8c95f10eb3bf
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70221324"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97257493"
 ---
 # <a name="__rdtscp"></a>__rdtscp
 
 **Microsoft 固有の仕様**
 
-`rdtscp`命令を生成してメモリに`TSC_AUX[31:0`を書き込み、64 ビットのタイム スタンプ カウンター`TSC)`を返します。
+`rdtscp`命令を生成して `TSC_AUX[31:0` メモリに書き込み、64ビットのタイムスタンプカウンターを返します ( `TSC)` 結果。
 
 ## <a name="syntax"></a>構文
 
@@ -32,7 +33,7 @@ unsigned __int64 __rdtscp(
 ### <a name="parameters"></a>パラメーター
 
 *助動詞*\
-入出力コンピューター固有のレジスタ`TSC_AUX[31:0]`の内容を格納する場所へのポインター。
+入出力コンピューター固有のレジスタの内容を格納する場所へのポインター `TSC_AUX[31:0]` 。
 
 ## <a name="return-value"></a>戻り値
 
@@ -40,19 +41,19 @@ unsigned __int64 __rdtscp(
 
 ## <a name="requirements"></a>要件
 
-|組み込み|アーキテクチャ|
+|Intrinsic|アーキテクチャ|
 |---------------|------------------|
 |`__rdtscp`|x86、x64|
 
-**ヘッダーファイル**\<>
+**ヘッダー ファイル** \<intrin.h>
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-組み込み`__rdtscp`によって`rdtscp`命令が生成されます。 この命令のハードウェア サポートを確認するには、組み込み関数`__cpuid`を`InfoType=0x80000001`として呼び出し、`CPUInfo[3] (EDX)`の 27 ビット目を確認してください。 命令がサポートされていればこのビットは 1 となり、サポートされていなければ 0 となります。  `rdtscp`命令をサポートしていないハードウェアに組み込みを使用するコードを実行する場合、結果は予測できません。
+組み込みによっ `__rdtscp` て命令が生成され `rdtscp` ます。 この命令のハードウェアサポートを確認するには、で組み込みのを呼び出し、 `__cpuid` `InfoType=0x80000001` のビット27を確認し `CPUInfo[3] (EDX)` ます。 命令がサポートされている場合、このビットは1になり、それ以外の場合は0になります。  命令をサポートしていないハードウェアに組み込みを使用するコードを実行する場合、 `rdtscp` 結果は予測できません。
 
 この命令は、前のすべての命令が実行され、以前のすべての読み込みがグローバルに表示されるまで待機します。 ただし、シリアル化命令ではありません。 詳細については、Intel および AMD のマニュアルを参照してください。
 
-値`TSC_AUX[31:0]`の意味はオペレーティング システムによって異なります。
+の値の意味は、 `TSC_AUX[31:0]` オペレーティングシステムによって異なります。
 
 ## <a name="example"></a>例
 

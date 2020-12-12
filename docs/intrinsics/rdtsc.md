@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: __rdtsc'
 title: __rdtsc
 ms.date: 09/02/2019
 f1_keywords:
@@ -8,18 +9,18 @@ helpviewer_keywords:
 - rdtsc instruction
 - Read Time Stamp Counter instruction
 ms.assetid: e31d0e51-c9bb-42ca-bbe9-a81ffe662387
-ms.openlocfilehash: 837b68ca6ac63587cd43a7e8828777221c677e3c
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 930c8fbd0ae762c8674a85e379899bc4fe4d3394
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70217148"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97257512"
 ---
 # <a name="__rdtsc"></a>__rdtsc
 
 **Microsoft 固有の仕様**
 
-プロセッサのタイムスタンプを返す命令を生成します。`rdtsc` プロセッサのタイムスタンプには、前回のリセットからのクロックサイクル数が記録されます。
+プロセッサの `rdtsc` タイムスタンプを返す命令を生成します。 プロセッサのタイムスタンプには、前回のリセットからのクロックサイクル数が記録されます。
 
 ## <a name="syntax"></a>構文
 
@@ -31,15 +32,15 @@ unsigned __int64 __rdtsc();
 
 ティック数を表す64ビット符号なし整数。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-|組み込み|アーキテクチャ|
+|Intrinsic|アーキテクチャ|
 |---------------|------------------|
 |`__rdtsc`|x86、x64|
 
-**ヘッダーファイル**\<>
+**ヘッダー ファイル** \<intrin.h>
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 このルーチンは、組み込みとしてのみ使用できます。
 

@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: __readcr2'
 title: __readcr2
 ms.date: 09/02/2019
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - __readcr2 intrinsic
 ms.assetid: d02c97d8-1953-46e7-a79e-a781e2c5bf27
-ms.openlocfilehash: 482f4548a692d6aa3b65fbc42caabda29bb393c1
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: dd862f88716fd2d385622c5100f91fdf47061543
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70217111"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97257356"
 ---
 # <a name="__readcr2"></a>__readcr2
 
@@ -29,15 +30,15 @@ unsigned __int64 __readcr2(void);
 
 CR2 レジスタの値。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-|組み込み|アーキテクチャ|
+|Intrinsic|アーキテクチャ|
 |---------------|------------------|
 |`__readcr2`|x86、x64|
 
-**ヘッダーファイル**\<>
+**ヘッダー ファイル** \<intrin.h>
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 組み込みはカーネルモードでのみ使用でき、ルーチンは組み込みとしてのみ使用できます。
 

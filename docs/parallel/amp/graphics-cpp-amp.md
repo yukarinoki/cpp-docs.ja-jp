@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: グラフィックス (C++ AMP)'
 title: グラフィックス (C++ AMP)
 ms.date: 11/04/2016
 ms.assetid: 190a98a4-5f7d-442e-866b-b374ca74c16f
-ms.openlocfilehash: 97fd433387aac809053ea6dd8ac59a56207a4fc8
-ms.sourcegitcommit: d77159732a8e782b2a1b7abea552065f2b6f61c1
+ms.openlocfilehash: 79e908ac673fb8fcc5ac370d6900697b3274585c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/04/2020
-ms.locfileid: "93344723"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97254548"
 ---
 # <a name="graphics-c-amp"></a>グラフィックス (C++ AMP)
 
@@ -21,7 +22,7 @@ C++ AMP には、Gpu のテクスチャサポートにアクセスするため�
 
 ## <a name="the-norm-and-unorm-types"></a>norm 型および unorm 型
 
-`norm`型と `unorm` 型は、値の範囲を制限するスカラー型です **`float`** 。これは、 *クランプ* と呼ばれます。 これらの型は他のスカラー型から明示的に作成することができます。 キャストでは、値は最初ににキャストされた **`float`** 後、標準 [-1.0、1.0] または unorm [0.0、1.0] で許可されている各リージョンにクランプされます。 +/- 無限値からのキャストは +/-1 を返します。 NaN からキャストは未定義です。 norm は unorm から暗黙的に作成することができ、データは失われません。 float への暗黙の変換演算子がこれらの型に定義されます。 二項演算子は、これらの型と **`float`** 、and **`int`** : +、-、 \* 、/、= =、! =、>、 \<, > =、<= などの他の組み込みスカラー型の間で定義されます。 複合代入演算子もサポートされています。 + =、-=、 \* =、/=。 単項否定演算子 (-) は、norm 型に定義されます。
+`norm`型と `unorm` 型は、値の範囲を制限するスカラー型です **`float`** 。これは、*クランプ* と呼ばれます。 これらの型は他のスカラー型から明示的に作成することができます。 キャストでは、値は最初ににキャストされた **`float`** 後、標準 [-1.0、1.0] または unorm [0.0、1.0] で許可されている各リージョンにクランプされます。 +/- 無限値からのキャストは +/-1 を返します。 NaN からキャストは未定義です。 norm は unorm から暗黙的に作成することができ、データは失われません。 float への暗黙の変換演算子がこれらの型に定義されます。 二項演算子は、これらの型と **`float`** 、and **`int`** : +、-、 \* 、/、= =、! =、>、 \<, > =、<= などの他の組み込みスカラー型の間で定義されます。 複合代入演算子もサポートされています。 + =、-=、 \* =、/=。 単項否定演算子 (-) は、norm 型に定義されます。
 
 ## <a name="short-vector-library"></a>short ベクター ライブラリ
 
@@ -36,7 +37,7 @@ Short Vector ライブラリは、HLSL で定義されている [ベクター型
 |uint|uint_2<br /><br /> uint2|uint_3<br /><br /> uint3|uint_4<br /><br /> uint4|
 |unorm|unorm_2<br /><br /> unorm2|unorm_3<br /><br /> unorm3|unorm_4<br /><br /> unorm4|
 
-### <a name="operators"></a>演算子
+### <a name="operators"></a>オペレーター
 
 演算子が 2 つの short ベクターの間で定義されている場合、その演算子は short ベクターとスカラーの間でも定義されます。 また、これらのどちらかが TRUE である必要があります。
 
@@ -63,7 +64,7 @@ short ベクター ライブラリは、short ベクターのコンポーネン�
 
 多くの GPU には、ピクセルとテクセルをフェッチし、イメージとテクスチャを表示するために最適化されたハードウェアとキャッシュがあります。 この[テクスチャ \<T,N> ](../../parallel/amp/reference/texture-class.md)クラスは、テクセルオブジェクトのコンテナークラスであり、これらの gpu のテクスチャ機能を公開します。 テクセルは次のようになります。
 
-- **`int`** 、、 `uint` 、 **`float`** 、 **`double`** `norm` 、または `unorm` スカラー。
+- **`int`**、、 `uint` 、 **`float`** 、 **`double`** `norm` 、または `unorm` スカラー。
 
 - 2 つまたは 4 つのコンポーネントを持つ short ベクター。 許可されない唯一の例外は `double_4` です。
 

@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: _getdcwd_nolock、_wgetdcwd_nolock'
 title: _getdcwd_nolock、_wgetdcwd_nolock
 ms.date: 11/04/2016
 api_name:
@@ -37,12 +38,12 @@ helpviewer_keywords:
 - _wgetdcwd_nolock function
 - directories [C++], current working
 ms.assetid: d9bdf712-43f8-4173-8f9a-844e82beaa97
-ms.openlocfilehash: c07c52e0dcfe84c5f00a9a0b67d872a860941c6f
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: d40bd7a3cf8d666ad7ba108fc71e443ea262c13f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87229442"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97256563"
 ---
 # <a name="_getdcwd_nolock-_wgetdcwd_nolock"></a>_getdcwd_nolock、_wgetdcwd_nolock
 
@@ -75,7 +76,7 @@ wchar_t *_wgetdcwd_nolock(
 パスの格納場所。
 
 *maxlen*<br/>
-文字数でのパスの最大長: **`char`** **_getdcwd**の場合は、 **`wchar_t`** **_wgetdcwd**の場合は。
+文字数でのパスの最大長: **`char`** **_getdcwd** の場合は、 **`wchar_t`** **_wgetdcwd** の場合は。
 
 ## <a name="return-value"></a>戻り値
 
@@ -83,7 +84,7 @@ wchar_t *_wgetdcwd_nolock(
 
 ## <a name="remarks"></a>解説
 
-**_getdcwd_nolock**と **_wgetdcwd_nolock**は、それぞれ **_getdcwd**および **_wgetdcwd**と同じですが、他のスレッドによる干渉から保護されない点が異なります。 他のスレッドをロックアウトするオーバーヘッドが発生しないため、処理が速くなる場合があります。 これらの関数は、シングルスレッド アプリケーション、呼び出し元のスコープで既にスレッド分離を処理している場合などのスレッドセーフなコンテキストでのみ使用してください。
+**_getdcwd_nolock** と **_wgetdcwd_nolock** は、それぞれ **_getdcwd** および **_wgetdcwd** と同じですが、他のスレッドによる干渉から保護されない点が異なります。 他のスレッドをロックアウトするオーバーヘッドが発生しないため、処理が速くなる場合があります。 これらの関数は、シングルスレッド アプリケーション、呼び出し元のスコープで既にスレッド分離を処理している場合などのスレッドセーフなコンテキストでのみ使用してください。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 

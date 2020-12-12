@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: C++ AMP の概要'
 title: C++ AMP の概要
 ms.date: 11/19/2018
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - C++ Accelerated Massive Parallelism, overview
 - C++ Accelerated Massive Parallelism
 ms.assetid: 9e593b06-6e3c-43e9-8bae-6d89efdd39fc
-ms.openlocfilehash: 0eeda43a279be74ea71669b55356603e980cab40
-ms.sourcegitcommit: d77159732a8e782b2a1b7abea552065f2b6f61c1
+ms.openlocfilehash: edbf20385724c062deea00ff8ea159d7021f9c63
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/04/2020
-ms.locfileid: "93344749"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97254639"
 ---
 # <a name="c-amp-overview"></a>C++ AMP の概要
 

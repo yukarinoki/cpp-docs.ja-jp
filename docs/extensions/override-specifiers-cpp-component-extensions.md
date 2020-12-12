@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「オーバーライド指定子 (C++/CLI および C++/CX)」を参照してください。
 title: オーバーライド指定子 (C++/CLI および C++/CX)
 ms.date: 10/12/2018
 ms.topic: reference
@@ -6,16 +7,16 @@ helpviewer_keywords:
 - override specifiers, C++
 - override specifiers
 ms.assetid: 155bbf6f-4722-4654-afb1-9cb52af799fb
-ms.openlocfilehash: 410fe9ecc48b92c68132f7b1b8057c2549c8afcf
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: ce0b9ad4464eef66bc71826825e8129ef0a24cab
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80181903"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97257590"
 ---
 # <a name="override-specifiers--ccli-and-ccx"></a>オーバーライド指定子 (C++/CLI および C++/CX)
 
-*オーバーライド指定子*は、継承された型および継承された型のメンバーの派生型での動作を変更します。
+*オーバーライド指定子* は、継承された型および継承された型のメンバーの派生型での動作を変更します。
 
 ## <a name="all-runtimes"></a>すべてのランタイム
 
@@ -41,7 +42,7 @@ ms.locfileid: "80181903"
 
 (この言語機能には Windows ランタイムのみに適用される特記事項がありません。)
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 コンパイラ オプション: `/ZW`
 
@@ -49,10 +50,10 @@ ms.locfileid: "80181903"
 
 (この言語機能には共通言語ランタイムのみに適用される特記事項がありません。)
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 コンパイラ オプション: `/clr`
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[.NET および UWP でのコンポーネント拡張](component-extensions-for-runtime-platforms.md)
+[.NET および UWP 用のコンポーネントの拡張機能](component-extensions-for-runtime-platforms.md)

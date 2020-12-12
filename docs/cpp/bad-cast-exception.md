@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: bad_cast 例外'
 title: bad_cast 例外
 ms.date: 10/04/2019
 f1_keywords:
@@ -8,16 +9,16 @@ helpviewer_keywords:
 - exceptions [C++], bad_cast
 - bad_cast keyword [C++]
 ms.assetid: 31eae1e7-d8d5-40a0-9fef-64a6a4fc9021
-ms.openlocfilehash: 2efe5be5e44751831a56b29cfc629df2d21843f7
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 40408128bd1c90feff34e8ea1ce8bf7a3c0d56cf
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87229182"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97255692"
 ---
 # <a name="bad_cast-exception"></a>bad_cast 例外
 
-**Bad_cast**例外は、 **`dynamic_cast`** 参照型へのキャストが失敗した結果として、演算子によってスローされます。
+**Bad_cast** 例外は、 **`dynamic_cast`** 参照型へのキャストが失敗した結果として、演算子によってスローされます。
 
 ## <a name="syntax"></a>構文
 
@@ -28,13 +29,13 @@ catch (bad_cast)
 
 ## <a name="remarks"></a>解説
 
-**Bad_cast**のインターフェイスは次のとおりです。
+**Bad_cast** のインターフェイスは次のとおりです。
 
 ```cpp
 class bad_cast : public exception
 ```
 
-次のコードには、bad_cast 例外をスローする、失敗したの例が含まれてい **`dynamic_cast`** ます。 **bad_cast**
+次のコードには、bad_cast 例外をスローする、失敗したの例が含まれてい **`dynamic_cast`** ます。 
 
 ```cpp
 // expre_bad_cast_Exception.cpp
@@ -88,17 +89,17 @@ Shape& ref_shape = dynamic_cast<Shape&>(ref_circle);
 
 ### <a name="functions"></a>関数
 
-|機能|[説明]|
+|機能|説明|
 |-|-|
 |[結果](#what)|TBD|
 
 ### <a name="operators"></a>オペレーター
 
-|演算子|Description|
+|演算子|説明|
 |-|-|
 |[operator =](#op_eq)|ある `bad_cast` オブジェクトを別のオブジェクトに代入する代入演算子。|
 
-## <a name="bad_cast"></a><a name="bad_cast"></a>bad_cast
+## <a name="bad_cast"></a><a name="bad_cast"></a> bad_cast
 
 `bad_cast` 型のオブジェクトのコンストラクター。
 
@@ -107,7 +108,7 @@ bad_cast(const char * _Message = "bad cast");
 bad_cast(const bad_cast &);
 ```
 
-## <a name="operator"></a><a name="op_eq"></a>operator =
+## <a name="operator"></a><a name="op_eq"></a> operator =
 
 ある `bad_cast` オブジェクトを別のオブジェクトに代入する代入演算子。
 
@@ -115,7 +116,7 @@ bad_cast(const bad_cast &);
 bad_cast& operator=(const bad_cast&) noexcept;
 ```
 
-## <a name="what"></a><a name="what"></a>結果
+## <a name="what"></a><a name="what"></a> 結果
 
 ```cpp
 const char* what() const noexcept override;

@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: printf、_printf_l、wprintf、_wprintf_l'
 title: printf、_printf_l、wprintf、_wprintf_l
 ms.date: 11/04/2016
 api_name:
@@ -41,12 +42,12 @@ helpviewer_keywords:
 - printf function, using
 - formatted text [C++]
 ms.assetid: 77a854ae-5b48-4865-89f4-f2dc5cf80f52
-ms.openlocfilehash: 73de90667479fff647e399068f9b97453819d27c
-ms.sourcegitcommit: fe146adb3a02872538637196bb3c45aeeeaaf5c2
+ms.openlocfilehash: cd38713b4646536fb2ee5186810fd7630478743f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84507054"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97252832"
 ---
 # <a name="printf-_printf_l-wprintf-_wprintf_l"></a>printf、_printf_l、wprintf、_wprintf_l
 
@@ -88,17 +89,17 @@ int _wprintf_l(
 
 ## <a name="return-value"></a>戻り値
 
-出力した文字数を返します。エラーが発生した場合は負の値を返します。 *Format*が**NULL**の場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、この関数は-1 を返し、 **errno**を**EINVAL**に設定します。 **EOF** (0xffff) が*引数*で見つかった場合、この関数は-1 を返します。
+出力した文字数を返します。エラーが発生した場合は負の値を返します。 *Format* が **NULL** の場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、この関数は-1 を返し、 **errno** を **EINVAL** に設定します。 **EOF** (0xffff) が *引数* で見つかった場合、この関数は-1 を返します。
 
-**Errno**とエラーコードの詳細については、「 [_doserrno、errno、_sys_errlist、および _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」を参照してください。
+**Errno** とエラーコードの詳細については、「 [_doserrno、errno、_sys_errlist、および _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」を参照してください。
 
 ## <a name="remarks"></a>解説
 
-**Printf**関数は、一連の文字と値を書式設定し、標準出力ストリームである**stdout**に出力します。 *書式*指定文字列の後に引数を指定する場合、*書式*指定文字列には引数の出力形式を決定する仕様が含まれている必要があります。 **printf**と[fprintf](fprintf-fprintf-l-fwprintf-fwprintf-l.md)の動作は同じですが、 **printf**は、型**ファイル**の出力先ではなく**stdout**に出力を書き込みます。
+**Printf** 関数は、一連の文字と値を書式設定し、標準出力ストリームである **stdout** に出力します。 *書式* 指定文字列の後に引数を指定する場合、*書式* 指定文字列には引数の出力形式を決定する仕様が含まれている必要があります。 **printf** と [fprintf](fprintf-fprintf-l-fwprintf-fwprintf-l.md)の動作は同じですが、 **printf** は、型 **ファイル** の出力先ではなく **stdout** に出力を書き込みます。
 
-**wprintf**は、ワイド文字バージョンの**printf**です。*format*は、ワイド文字列です。 ストリームが ANSI モードで開かれている場合、 **wprintf**と**printf**は同じように動作します。 現在、 **printf**では UNICODE ストリームへの出力はサポートされていません。
+**wprintf** は、ワイド文字バージョンの **printf** です。 *format* は、ワイド文字列です。 ストリームが ANSI モードで開かれている場合、 **wprintf** と **printf** は同じように動作します。 現在、 **printf** では UNICODE ストリームへの出力はサポートされていません。
 
-**_L**サフィックスを持つこれらの関数のバージョンは、現在のスレッドロケールの代わりに渡されたロケールパラメーターを使用する点を除いて同じです。
+**_L** サフィックスを持つこれらの関数のバージョンは、現在のスレッドロケールの代わりに渡されたロケールパラメーターを使用する点を除いて同じです。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -106,7 +107,7 @@ int _wprintf_l(
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tprintf**|**printf**|**printf**|**wprintf**|
 
-*Format*引数は、通常の文字、エスケープシーケンス、および (引数が*形式*の場合) 書式指定形式で構成されます。 通常の文字とエスケープシーケンスは、外観の順に**stdout**にコピーされます。 たとえば、次の関数を呼び出します。
+*Format* 引数は、通常の文字、エスケープシーケンス、および (引数が *形式* の場合) 書式指定形式で構成されます。 通常の文字とエスケープシーケンスは、外観の順に **stdout** にコピーされます。 たとえば、次の関数を呼び出します。
 
 ```C
 printf("Line one\n\t\tLine two\n");
@@ -119,7 +120,7 @@ Line one
         Line two
 ```
 
-[書式指定](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)は必ずパーセント記号 () で始まり **%** 、左から右に読み取られます。 **Printf**が最初の書式指定 (存在する場合) を検出すると、最初の引数の値を*書式*の後に変換し、それに応じて出力します。 2 番目の書式指定を見つけると、2 番目の引数を変換して出力します。 書式指定よりも引数の数が多い場合、余分な引数は無視されます。 書式指定より引数が少ないと、結果は予測できません。
+[書式指定](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md) は必ずパーセント記号 () で始まり **%** 、左から右に読み取られます。 **Printf** が最初の書式指定 (存在する場合) を検出すると、最初の引数の値を *書式* の後に変換し、それに応じて出力します。 2 番目の書式指定を見つけると、2 番目の引数を変換して出力します。 書式指定よりも引数の数が多い場合、余分な引数は無視されます。 書式指定より引数が少ないと、結果は予測できません。
 
 > [!IMPORTANT]
 > *format* にユーザー定義の文字列を指定しないでください。
@@ -138,7 +139,7 @@ Line one
 |**printf**、 **_printf_l**|\<stdio.h>|
 |**wprintf**、 **_wprintf_l**|\<stdio.h> または \<wchar.h>|
 
-コンソールは、ユニバーサル Windows プラットフォーム (UWP) アプリではサポートされていません。 コンソール、 **stdin**、 **stdout**、および**stderr**に関連付けられている標準ストリームハンドルは、C ランタイム関数が UWP アプリで使用できるようになる前にリダイレクトする必要があります。 互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+コンソールは、ユニバーサル Windows プラットフォーム (UWP) アプリではサポートされていません。 コンソール、 **stdin**、 **stdout**、および **stderr** に関連付けられている標準ストリームハンドルは、C ランタイム関数が UWP アプリで使用できるようになる前にリダイレクトする必要があります。 互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
 > [!IMPORTANT]
 > Windows 10 バージョン 2004 (ビルド 19041) 以降では、 `printf` 関数ファミリは、丸め処理のために IEEE 754 の規則に従って、正確に表現可能な浮動小数点数を出力します。 以前のバージョンの Windows では、"5" で終わる厳密に表現可能な浮動小数点数は常に切り上げられます。 IEEE 754 では、最も近い偶数 ("銀行型丸め" とも呼ばれます) に丸める必要があることが示されています。 たとえば、1.5 と2.5 の両方が2に丸められる必要があります。 以前は、1.5 は2に丸められ、2.5 は3に丸められていました。 この変更は、正確に表現できる数値にのみ影響します。 たとえば、2.35 (メモリで表される場合は2.35000000000000008 に近い) は、2.4 に切り上げられます。 これらの関数によって行われる丸め処理は、 [fesetround](fegetround-fesetround2.md)によって設定される浮動小数点丸めモードにも反映されるようになりました。 以前は、丸め処理は常に FE_TONEAREST の動作を選択していました。 この変更は、Visual Studio 2019 バージョン16.2 以降を使用してビルドされたプログラムにのみ影響します。 従来の浮動小数点丸め動作を使用するには、 [legacy_stdio_float_rounding .obj](../link-options.md)にリンクします。
@@ -234,7 +235,7 @@ Address as:   0012FF3C
 [書式指定構文: printf 関数と wprintf 関数](../format-specification-syntax-printf-and-wprintf-functions.md)<br/>
 [浮動小数点のサポート](../../c-runtime-library/floating-point-support.md)<br/>
 [ストリーム入出力](../../c-runtime-library/stream-i-o.md)<br/>
-[Locale](../../c-runtime-library/locale.md)<br/>
+[ロケール](../../c-runtime-library/locale.md)<br/>
 [fopen、_wfopen](fopen-wfopen.md)<br/>
 [_fprintf_p、_fprintf_p_l、_fwprintf_p、_fwprintf_p_l](fprintf-p-fprintf-p-l-fwprintf-p-fwprintf-p-l.md)<br/>
 [scanf、_scanf_l、wscanf、_wscanf_l](scanf-scanf-l-wscanf-wscanf-l.md)<br/>

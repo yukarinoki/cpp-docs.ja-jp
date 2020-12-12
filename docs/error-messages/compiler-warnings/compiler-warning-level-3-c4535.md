@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: コンパイラの警告 (レベル 3) C4535'
 title: コンパイラの警告 (レベル 3) C4535
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,20 +7,20 @@ f1_keywords:
 helpviewer_keywords:
 - C4535
 ms.assetid: 2c5ad1aa-2558-41d1-8f06-47fef74c8d9b
-ms.openlocfilehash: 572aa5dc38ae1fff6116b3c3df588fc8478877d6
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: 89c93088ee4f2b5a8dedb760d937083fe9121706
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74992080"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97257876"
 ---
 # <a name="compiler-warning-level-3-c4535"></a>コンパイラの警告 (レベル 3) C4535
 
 _set_se_translator () の呼び出しには/EHa が必要です
 
-[_Set_se_translator](../../c-runtime-library/reference/set-se-translator.md)を使用するには、 **/ehs**ではなく、 [/eha](../../build/reference/eh-exception-handling-model.md)コンパイラオプションが必要です。
+[_Set_se_translator](../../c-runtime-library/reference/set-se-translator.md)を使用するには、 **/ehs** ではなく、 [/eha](../../build/reference/eh-exception-handling-model.md)コンパイラオプションが必要です。
 
-## <a name="example"></a>使用例
+## <a name="example"></a>例
 
 次の例では、C4535 が生成されます。
 

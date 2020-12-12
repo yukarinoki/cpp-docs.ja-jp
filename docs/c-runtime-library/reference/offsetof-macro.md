@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: offsetof マクロ'
 title: offsetof マクロ
 ms.date: 11/04/2016
 api_location:
@@ -22,12 +23,12 @@ helpviewer_keywords:
 - structure members, offset
 - offsetof macro
 ms.assetid: f3b4eb16-a882-4d38-afc9-eebd976a7352
-ms.openlocfilehash: ee6d5e56bb9f41a842e53984f754c7c07d58a125
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 055bda67bae178143561acd91b517c431f77cac0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87213503"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97256269"
 ---
 # <a name="offsetof-macro"></a>offsetof マクロ
 
@@ -52,14 +53,14 @@ size_t offsetof(
 
 ## <a name="return-value"></a>戻り値
 
-**offsetof**は、親データ構造体の先頭から、指定されたメンバーのオフセットをバイト単位で返します。 ビット フィールドには定義されません。
+**offsetof** は、親データ構造体の先頭から、指定されたメンバーのオフセットをバイト単位で返します。 ビット フィールドには定義されません。
 
 ## <a name="remarks"></a>解説
 
-**Offsetof**マクロは、 *structName*によって指定された構造*体の先頭から* **size_t**型の値としてオフセットをバイト単位で返します。 キーワードを使用して型を指定でき **`struct`** ます。
+**Offsetof** マクロは、 *structName* によって指定された構造 *体の先頭から* **size_t** 型の値としてオフセットをバイト単位で返します。 キーワードを使用して型を指定でき **`struct`** ます。
 
 > [!NOTE]
-> **offsetof**は関数ではなく、C プロトタイプを使用して記述することはできません。
+> **offsetof** は関数ではなく、C プロトタイプを使用して記述することはできません。
 
 ## <a name="requirements"></a>必要条件
 

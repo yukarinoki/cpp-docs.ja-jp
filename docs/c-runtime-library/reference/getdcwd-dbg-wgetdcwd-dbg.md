@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: _getdcwd_dbg、_wgetdcwd_dbg'
 title: _getdcwd_dbg、_wgetdcwd_dbg
 ms.date: 11/04/2016
 api_name:
@@ -33,12 +34,12 @@ helpviewer_keywords:
 - _wgetdcwd_dbg function
 - directories [C++], current working
 ms.assetid: 266bf6f0-0417-497f-963d-2e0f306d9385
-ms.openlocfilehash: a31617445ccb0640042be41ee4f710e528b9ceb7
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: b46847662aca04c07d6bdae42490d8a7d2ffe2cc
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87229455"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97256589"
 ---
 # <a name="_getdcwd_dbg-_wgetdcwd_dbg"></a>_getdcwd_dbg、_wgetdcwd_dbg
 
@@ -74,26 +75,26 @@ wchar_t *_wgetdcwd_dbg(
 パスの格納場所。
 
 *maxlen*<br/>
-文字数でのパスの最大長 **`char`** : **_getdcwd_dbg**の場合は、 **`wchar_t`** **_wgetdcwd_dbg**の場合は。
+文字数でのパスの最大長 **`char`** : **_getdcwd_dbg** の場合は、 **`wchar_t`** **_wgetdcwd_dbg** の場合は。
 
 *blockType*<br/>
-要求されたメモリブロックの種類: **_CLIENT_BLOCK**または **_NORMAL_BLOCK**。
+要求されたメモリブロックの種類: **_CLIENT_BLOCK** または **_NORMAL_BLOCK**。
 
-*ファイル名*<br/>
-割り当て操作を要求したソースファイルの名前へのポインターまたは**NULL**。
+*filename*<br/>
+割り当て操作を要求したソースファイルの名前へのポインターまたは **NULL**。
 
 *linenumber*<br/>
-割り当て操作が要求されたソースファイル内の行番号または**NULL**。
+割り当て操作が要求されたソースファイル内の行番号または **NULL**。
 
 ## <a name="return-value"></a>戻り値
 
-*バッファー*へのポインターを返します。 **Null**の戻り値はエラーを示し、 **errno**は**ENOMEM**に設定されます。これは、( **NULL**引数が*バッファー*として指定されている場合) *maxlen*バイトを割り当てるのに十分なメモリがないことを示し、 **ERANGE**は、パスが*maxlen*文字より長いことを示します。 詳細については、「[errno、_doserrno、_sys_errlist、および _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」を参照してください。
+*バッファー* へのポインターを返します。 **Null** の戻り値はエラーを示し、 **errno** は **ENOMEM** に設定されます。これは、( **NULL** 引数が *バッファー* として指定されている場合) *maxlen* バイトを割り当てるのに十分なメモリがないことを示し、 **ERANGE** は、パスが *maxlen* 文字より長いことを示します。 詳細については、「[errno、_doserrno、_sys_errlist、および _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」を参照してください。
 
 ## <a name="remarks"></a>解説
 
-**_Getdcwd_dbg**関数と **_wgetdcwd_dbg**関数は **_getdcwd**および **_wgetdcwd**と同じですが、 **_DEBUG**が定義されている場合、これらの関数は、*バッファー*パラメーターとして**NULL**が渡された場合に、 **malloc**および **_malloc_dbg**のデバッグバージョンを使用してメモリを割り当てます。 詳細については、「[_malloc_dbg](malloc-dbg.md)」をご覧ください。
+**_Getdcwd_dbg** 関数と **_wgetdcwd_dbg** 関数は **_getdcwd** および **_wgetdcwd** と同じですが、 **_DEBUG** が定義されている場合、これらの関数は、*バッファー* パラメーターとして **NULL** が渡された場合に、 **malloc** および **_malloc_dbg** のデバッグバージョンを使用してメモリを割り当てます。 詳細については、「[_malloc_dbg](malloc-dbg.md)」をご覧ください。
 
-多くの場合、これらの関数を明示的に呼び出す必要はありません。 代わりに、 **_CRTDBG_MAP_ALLOC**フラグを定義できます。 **_CRTDBG_MAP_ALLOC**が定義されている場合、 **_getdcwd**と **_wgetdcwd**の呼び出しは、それぞれ **_getdcwd_dbg**および **_wgetdcwd_dbg**に再マップされ、 *blocktype*が **_NORMAL_BLOCK**に設定されます。 したがって、ヒープブロックを **_CLIENT_BLOCK**としてマークする場合を除き、これらの関数を明示的に呼び出す必要はありません。 詳細については、「[デバッグヒープ上のブロックの種類](/visualstudio/debugger/crt-debug-heap-details)」を参照してください。
+多くの場合、これらの関数を明示的に呼び出す必要はありません。 代わりに、 **_CRTDBG_MAP_ALLOC** フラグを定義できます。 **_CRTDBG_MAP_ALLOC** が定義されている場合、 **_getdcwd** と **_wgetdcwd** の呼び出しは、それぞれ **_getdcwd_dbg** および **_wgetdcwd_dbg** に再マップされ、 *blocktype* が **_NORMAL_BLOCK** に設定されます。 したがって、ヒープブロックを **_CLIENT_BLOCK** としてマークする場合を除き、これらの関数を明示的に呼び出す必要はありません。 詳細については、「 [デバッグヒープ上のブロックの種類](/visualstudio/debugger/crt-debug-heap-details)」を参照してください。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 

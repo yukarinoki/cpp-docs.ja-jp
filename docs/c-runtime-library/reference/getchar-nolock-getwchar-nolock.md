@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: _getchar_nolock、_getwchar_nolock'
 title: _getchar_nolock、_getwchar_nolock
 ms.date: 11/04/2016
 api_name:
@@ -32,12 +33,12 @@ helpviewer_keywords:
 - getchar_nolock function
 - standard input, reading from
 ms.assetid: dc49ba60-0647-4ae9-aa9a-a0618b1666de
-ms.openlocfilehash: df7d07d4478d8feee1d5a0b35c40e4158a93be82
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 776eb6185cad072e416699e7ec253ab34bd146a2
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70955405"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97256693"
 ---
 # <a name="_getchar_nolock-_getwchar_nolock"></a>_getchar_nolock、_getwchar_nolock
 
@@ -54,9 +55,9 @@ wint_t _getwchar_nolock( void );
 
 「[getchar、getwchar](getchar-getwchar.md)」をご覧ください。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-**_getchar_nolock**と **_getwchar_nolock**は、他のスレッドによる干渉から保護されないことを除いて、 **getchar**および**getwchar**と同じです。 他のスレッドをロックアウトするオーバーヘッドが発生しないため、処理が速くなる場合があります。 これらの関数は、シングルスレッド アプリケーション、呼び出し元のスコープで既にスレッド分離を処理している場合などのスレッドセーフなコンテキストでのみ使用してください。
+**_getchar_nolock** と **_getwchar_nolock** は、他のスレッドによる干渉から保護されないことを除いて、 **getchar** と **getwchar** と同じです。 他のスレッドをロックアウトするオーバーヘッドが発生しないため、処理が速くなる場合があります。 これらの関数は、シングルスレッド アプリケーション、呼び出し元のスコープで既にスレッド分離を処理している場合などのスレッドセーフなコンテキストでのみ使用してください。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -71,7 +72,7 @@ wint_t _getwchar_nolock( void );
 |**_getchar_nolock**|\<stdio.h>|
 |**_getwchar_nolock**|\<stdio.h> または \<wchar.h>|
 
-コンソールは、ユニバーサル Windows プラットフォーム (UWP) アプリではサポートされていません。 コンソール、 **stdin**、 **stdout**、および**stderr**に関連付けられている標準ストリームハンドルは、C ランタイム関数が UWP アプリで使用できるようになる前にリダイレクトする必要があります。 互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+コンソールは、ユニバーサル Windows プラットフォーム (UWP) アプリではサポートされていません。 コンソール、 **stdin**、 **stdout**、および **stderr** に関連付けられている標準ストリームハンドルは、C ランタイム関数が UWP アプリで使用できるようになる前にリダイレクトする必要があります。 互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
 ## <a name="example"></a>例
 

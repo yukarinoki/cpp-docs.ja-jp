@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: accelerator_view_removed クラス'
 title: accelerator_view_removed クラス
 ms.date: 03/27/2019
 f1_keywords:
@@ -9,12 +10,12 @@ f1_keywords:
 helpviewer_keywords:
 - AMPRT/Concurrency::accelerator_view_removed::accelerator_view_removed Class
 ms.assetid: 262446de-311c-454e-a5ed-e2aaced0d88a
-ms.openlocfilehash: 9a3f6f349fc3103893639fe209dcf23a07ffec56
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: 86a5b89d3b8065bccd8eec8b10bade9ed26d6a05
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77127125"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97254496"
 ---
 # <a name="accelerator_view_removed-class"></a>accelerator_view_removed クラス
 
@@ -30,15 +31,15 @@ class accelerator_view_removed : public runtime_exception;
 
 ### <a name="public-constructors"></a>パブリック コンストラクター
 
-|Name|説明|
+|名前|説明|
 |----------|-----------------|
 |[accelerator_view_removed コンストラクター](#ctor)|`accelerator_view_removed` クラスの新しいインスタンスを初期化します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
-|Name|説明|
+|名前|説明|
 |----------|-----------------|
-|[get_view_removed_reason](#get_view_removed_reason)|`accelerator_view` オブジェクトの削除の原因を示す HRESULT エラーコードを返します。|
+|[get_view_removed_reason](#get_view_removed_reason)|オブジェクトの削除の原因を示す HRESULT エラーコードを返し `accelerator_view` ます。|
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -54,7 +55,7 @@ class accelerator_view_removed : public runtime_exception;
 
 **名前空間:** Concurrency
 
-## <a name="ctor"></a>accelerator_view_removed
+## <a name="accelerator_view_removed"></a><a name="ctor"></a> accelerator_view_removed
 
 [Accelerator_view_removed](accelerator-view-removed-class.md)クラスの新しいインスタンスを初期化します。
 
@@ -75,15 +76,15 @@ explicit accelerator_view_removed(
 エラーの説明。
 
 *view_removed_reason*<br/>
-`accelerator_view` オブジェクトが削除された原因を示す HRESULT エラーコード。
+オブジェクトが削除された原因を示す HRESULT エラーコード `accelerator_view` 。
 
 ### <a name="return-value"></a>戻り値
 
 `accelerator_view_removed` クラスの新しいインスタンス。
 
-## <a name="get_view_removed_reason"></a>get_view_removed_reason
+## <a name="get_view_removed_reason"></a><a name="get_view_removed_reason"></a> get_view_removed_reason
 
-`accelerator_view` オブジェクトの削除の原因を示す HRESULT エラーコードを返します。
+オブジェクトの削除の原因を示す HRESULT エラーコードを返し `accelerator_view` ます。
 
 ### <a name="syntax"></a>構文
 
@@ -91,6 +92,6 @@ explicit accelerator_view_removed(
 HRESULT get_view_removed_reason() const throw();
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[コンカレンシー名前空間 (C++ AMP)](concurrency-namespace-cpp-amp.md)
+[Concurrency 名前空間 (C++ AMP)](concurrency-namespace-cpp-amp.md)

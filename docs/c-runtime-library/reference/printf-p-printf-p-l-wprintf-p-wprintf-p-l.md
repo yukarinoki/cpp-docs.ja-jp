@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: _printf_p、_printf_p_l、_wprintf_p、_wprintf_p_l'
 title: _printf_p、_printf_p_l、_wprintf_p、_wprintf_p_l
 ms.date: 11/04/2016
 api_name:
@@ -42,12 +43,12 @@ helpviewer_keywords:
 - tprintf_p_l function
 - _printf_p_l function
 ms.assetid: 1b7e9ef9-a069-45db-af9d-c2730168322e
-ms.openlocfilehash: 555739fbcdd3503461d7b831660a94602f244aa3
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 1249395c883306c04eb0b294d06ec73c4f04447c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70950266"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97252845"
 ---
 # <a name="_printf_p-_printf_p_l-_wprintf_p-_wprintf_p_l"></a>_printf_p、_printf_p_l、_wprintf_p、_wprintf_p_l
 
@@ -91,20 +92,20 @@ int _wprintf_p_l(
 
 出力した文字数を返します。エラーが発生した場合は負の値を返します。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-**_Printf_p**関数は、一連の文字と値を書式設定し、標準出力ストリームである**stdout**に出力します。 *書式*指定文字列の後に引数を指定する場合は、*書式*指定文字列に引数の出力形式を決定する仕様が含まれている必要があります (「 [printf_p 位置指定パラメーター](../../c-runtime-library/printf-p-positional-parameters.md)」を参照してください)。
+**_Printf_p** 関数は、一連の文字と値を書式設定し、標準出力ストリームである **stdout** に出力します。 *書式* 指定文字列の後に引数を指定する場合は、引数の出力形式を決定する仕様が *書式設定* 文字列に含まれている必要があります (「 [printf_p 位置指定パラメーター](../../c-runtime-library/printf-p-positional-parameters.md)」を参照)。
 
-**_Printf_p**と**printf_s**の違いは、 **_printf_p**は位置指定パラメーターをサポートしている点です。これにより、書式設定文字列で引数を使用する順序を指定できます。 詳細については、「[printf_p の位置指定パラメーター](../../c-runtime-library/printf-p-positional-parameters.md)」をご覧ください。
+**_Printf_p** と **printf_s** の違いは、 **_printf_p** が位置指定パラメーターをサポートしていることです。これにより、書式設定文字列で引数が使用される順序を指定できます。 詳細については、「[printf_p の位置指定パラメーター](../../c-runtime-library/printf-p-positional-parameters.md)」を参照してください。
 
-**_wprintf_p**は、 **_printf_p**のワイド文字バージョンです。ストリームが ANSI モードで開かれている場合、これらは同じように動作します。 **_printf_p**は、現在 UNICODE ストリームへの出力をサポートしていません。
+**_wprintf_p** は **_printf_p** のワイド文字バージョンです。ストリームが ANSI モードで開かれている場合、これらは同じように動作します。 **_printf_p** は、現在 UNICODE ストリームへの出力をサポートしていません。
 
-**_L**サフィックスを持つこれらの関数のバージョンは、現在のスレッドロケールの代わりに渡されたロケールパラメーターを使用する点を除いて同じです。
+**_L** サフィックスを持つこれらの関数のバージョンは、現在のスレッドロケールの代わりに渡されたロケールパラメーターを使用する点を除いて同じです。
 
 > [!IMPORTANT]
 > *format* にユーザー定義の文字列を指定しないでください。
 
-*Format*または*引数*が**NULL**の場合、または書式指定文字列に無効な書式指定文字が含まれている場合、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、 **_printf_p**関数と **_wprintf_p**関数は無効なパラメーターハンドラーを呼び出します。 実行の継続が許可された場合、この関数は-1 を返し、 **errno**を**EINVAL**に設定します。
+*Format* または *引数* が **NULL** の場合、または書式指定文字列に無効な書式指定文字が含まれている場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、 **_printf_p** と **_wprintf_p** の関数は無効なパラメーターハンドラーを呼び出します。 実行の継続が許可された場合、この関数は-1 を返し、 **errno** を **EINVAL** に設定します。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -120,7 +121,7 @@ int _wprintf_p_l(
 |**_printf_p**、 **_printf_p_l**|\<stdio.h>|
 |**_wprintf_p**、 **_wprintf_p_l**|\<stdio.h> または \<wchar.h>|
 
-コンソールは、ユニバーサル Windows プラットフォーム (UWP) アプリではサポートされていません。 コンソール、 **stdin**、 **stdout**、および**stderr**に関連付けられている標準ストリームハンドルは、C ランタイム関数が UWP アプリで使用できるようになる前にリダイレクトする必要があります。 互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+コンソールは、ユニバーサル Windows プラットフォーム (UWP) アプリではサポートされていません。 コンソール、 **stdin**、 **stdout**、および **stderr** に関連付けられている標準ストリームハンドルは、C ランタイム関数が UWP アプリで使用できるようになる前にリダイレクトする必要があります。 互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
 ## <a name="example"></a>例
 
@@ -154,7 +155,7 @@ Width specifiers:     Hello
 
 ## <a name="see-also"></a>関連項目
 
-[浮動小数点サポート](../../c-runtime-library/floating-point-support.md)<br/>
+[浮動小数点のサポート](../../c-runtime-library/floating-point-support.md)<br/>
 [ストリーム入出力](../../c-runtime-library/stream-i-o.md)<br/>
 [ロケール](../../c-runtime-library/locale.md)<br/>
 [fopen、_wfopen](fopen-wfopen.md)<br/>
@@ -164,6 +165,6 @@ Width specifiers:     Hello
 [scanf、_scanf_l、wscanf、_wscanf_l](scanf-scanf-l-wscanf-wscanf-l.md)<br/>
 [scanf_s、_scanf_s_l、wscanf_s、_wscanf_s_l](scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md)<br/>
 [_sprintf_p、_sprintf_p_l、_swprintf_p、_swprintf_p_l](sprintf-p-sprintf-p-l-swprintf-p-swprintf-p-l.md)<br/>
-[sprintf、_sprintf_l、swprintf、_swprintf_l、\__swprintf_l](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)<br/>
+[sprintf、_sprintf_l、swprintf、_swprintf_l、 \_ _swprintf_l](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)<br/>
 [sprintf_s、_sprintf_s_l、swprintf_s、_swprintf_s_l](sprintf-s-sprintf-s-l-swprintf-s-swprintf-s-l.md)<br/>
-[vprintf 系関数](../../c-runtime-library/vprintf-functions.md)<br/>
+[vprintf 関数](../../c-runtime-library/vprintf-functions.md)<br/>

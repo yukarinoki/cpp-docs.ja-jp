@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「__popcnt16、__popcnt、__popcnt64」を参照してください。
 title: __popcnt16、__popcnt、__popcnt64
 ms.date: 09/02/2019
 f1_keywords:
@@ -11,18 +12,18 @@ helpviewer_keywords:
 - __popcnt64
 - __popcnt
 ms.assetid: e525b236-adc8-42df-9b9b-8b7d8c245d3b
-ms.openlocfilehash: 3e5ae7f897500775671f8bd2563028874579a627
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: cb95ff09d589cfd9a9cfc438d0334cf68f073825
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70221358"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97257525"
 ---
 # <a name="__popcnt16-__popcnt-__popcnt64"></a>__popcnt16、__popcnt、__popcnt64
 
 **Microsoft 固有の仕様**
 
-16、32、 `1`または64ビットの符号なし整数のビット数 (母数) をカウントします。
+`1`16、32、または64ビットの符号なし整数のビット数 (母数) をカウントします。
 
 ## <a name="syntax"></a>構文
 
@@ -40,28 +41,28 @@ unsigned __int64 __popcnt64(
 
 ### <a name="parameters"></a>パラメーター
 
-*value*\
+*数値*\
 から母集団の数を求める16、32、または64ビットの符号なし整数。
 
 ## <a name="return-value"></a>戻り値
 
-Value パラメーターの`1`ビット数。
+`1` *Value* パラメーターのビット数。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-|組み込み|アーキテクチャ|
+|Intrinsic|アーキテクチャ|
 |---------------|------------------|
 |`__popcnt16`|高度なビット操作|
 |`__popcnt`|高度なビット操作|
 |`__popcnt64`|64ビットモードでの高度なビット操作。|
 
-**ヘッダーファイル**\<>
+**ヘッダー ファイル** \<intrin.h>
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-各組み込みは、命令を`popcnt`生成します。 32ビットモードでは、64ビットの汎用レジスタがないため、64ビット`popcnt`はサポートされていません。
+各組み込みは、命令を生成し `popcnt` ます。 32ビットモードでは、64ビットの汎用レジスタがないため、64ビットはサポートされていません `popcnt` 。
 
-`popcnt`命令のハードウェアサポートを確認するには、 `__cpuid`で`InfoType=0x00000001`組み込みのを呼び出し、の`CPUInfo[2] (ECX)`ビット23を確認します。 命令がサポートされていればこのビットは 1 となり、サポートされていなければ 0 となります。 `popcnt`命令をサポートしていないハードウェアでこれらの組み込みを使用するコードを実行すると、結果は予測できません。
+命令のハードウェアサポートを確認するには、 `popcnt` で組み込みのを呼び出し、 `__cpuid` `InfoType=0x00000001` のビット23を確認し `CPUInfo[2] (ECX)` ます。 命令がサポートされている場合、このビットは1になり、それ以外の場合は0になります。 命令をサポートしていないハードウェアでこれらの組み込みを使用するコードを実行すると、 `popcnt` 結果は予測できません。
 
 ## <a name="example"></a>例
 
@@ -101,7 +102,7 @@ __popcnt(0xffffffff) = 32
 
 **Microsoft 固有の仕様はここまで**
 
-高度なマイクロデバイス (Inc.) による部分の著作権2007All rights reserved. 上級マイクロデバイス (Inc.) からのアクセス許可を使用して再現されます。
+高度なマイクロデバイス (Inc.) による部分の著作権2007すべての権限が予約されています。 上級マイクロデバイス (Inc.) からのアクセス許可を使用して再現されます。
 
 ## <a name="see-also"></a>関連項目
 
