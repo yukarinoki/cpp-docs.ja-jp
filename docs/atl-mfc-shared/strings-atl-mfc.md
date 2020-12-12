@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: 文字列 (ATL/MFC)'
 title: 文字列 (ATL-MFC)
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -21,32 +22,32 @@ helpviewer_keywords:
 - strings [C++], class CString
 - literal strings [C++], class CStringT
 ms.assetid: 3b33125b-1684-4542-a3a7-b00de7d0419e
-ms.openlocfilehash: f4d300bccb6387c510dc16d55eda17de20b4b134
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a63f69373f230d87880f0b3f2d016ce3263d3513
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62199025"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97166487"
 ---
-# <a name="strings-atlmfc"></a>文字列 (ATL と MFC)
+# <a name="strings-atlmfc"></a>文字列 (ATL/MFC)
 
-ほぼすべてのプログラムは、文字列データを操作します。 Visual C には、文字列データを管理するいくつかの方法が用意されています。
+ほぼすべてのプログラムは、文字列データを操作します。 Visual C++ には、この文字列データを管理するいくつかの方法が用意されています。
 
 ## <a name="in-this-section"></a>このセクションの内容
 
 [CStringT の使用](../atl-mfc-shared/using-cstringt.md)<br/>
-CStringT テンプレート クラスを使用したプログラミングについて説明します。
+テンプレートクラス CStringT を使用したプログラミングについて説明します。
 
 [CString の使用](../atl-mfc-shared/using-cstring.md)<br/>
-CString、CStringT の既定の実装を使用したプログラミングについて説明します。
+CStringT を使用したプログラミングについて説明します。これは、CStringT の既定の実装です。
 
 ## <a name="related-sections"></a>関連項目
 
 [CStringT の概要](../atl-mfc-shared/reference/cstringt-class.md)<br/>
-共有に関する参照情報を提供します。`CStringT`クラス。
+共有クラスに関する参照情報を提供 `CStringT` します。
 
 [MFC の概念](../mfc/mfc-concepts.md)<br/>
-役立つ概念とタスク ベースのトピックを提供、MFC ライブラリを使用してプログラミングできます。
+MFC ライブラリを使用したプログラミングに役立つ概念とタスクベースのトピックを示します。
 
 ## <a name="see-also"></a>関連項目
 

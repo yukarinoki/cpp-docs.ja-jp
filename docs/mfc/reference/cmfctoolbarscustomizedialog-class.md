@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: CMFCToolBarsCustomizeDialog クラス'
 title: CMFCToolBarsCustomizeDialog クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -24,18 +25,18 @@ helpviewer_keywords:
 - CMFCToolBarsCustomizeDialog [MFC], OnInitDialog
 - CMFCToolBarsCustomizeDialog [MFC], PostNcDestroy
 ms.assetid: 78e2cddd-4f13-4097-afc3-1ad646a113f1
-ms.openlocfilehash: a61cefa7f844062fcca42711ce6515180066b919
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: d05e94f614510c264e5916404abeeb6dfc4bea9a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88839102"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97143456"
 ---
 # <a name="cmfctoolbarscustomizedialog-class"></a>CMFCToolBarsCustomizeDialog クラス
 
 モードレスタブダイアログボックス ( [CPropertySheet クラス](../../mfc/reference/cpropertysheet-class.md))。ユーザーは、アプリケーションのツールバー、メニュー、キーボードショートカット、ユーザー定義ツール、および視覚スタイルをカスタマイズできます。 通常、このダイアログ ボックスを表示するには、 **[ツール]** メニューの **[ユーザー設定]** をクリックします。
 
-[ **ユーザー設定** ] ダイアログボックスには、 **コマンド**、 **ツールバー**、 **ツール**、 **キーボード**、 **メニュー**、 **オプション**の6つのタブがあります。
+[ **ユーザー設定** ] ダイアログボックスには、 **コマンド**、 **ツールバー**、 **ツール**、 **キーボード**、 **メニュー**、 **オプション** の6つのタブがあります。
 
 ## <a name="syntax"></a>構文
 
@@ -112,13 +113,13 @@ class CMFCToolBarsCustomizeDialog : public CPropertySheet
 
 `CMFCToolBarsCustomizeDialog`
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** afxToolBarsCustomizeDialog
 
 ## <a name="cmfctoolbarscustomizedialogaddbutton"></a><a name="addbutton"></a> CMFCToolBarsCustomizeDialog:: AddButton
 
-**コマンド**ページのコマンドの一覧にツールバーボタンを挿入します。
+**コマンド** ページのコマンドの一覧にツールバーボタンを挿入します。
 
 ```cpp
 void AddButton(
@@ -185,7 +186,7 @@ BOOL AddMenu(UINT uiMenuResId);
 
 ## <a name="cmfctoolbarscustomizedialogaddmenucommands"></a><a name="addmenucommands"></a> CMFCToolBarsCustomizeDialog:: AddMenuCommands
 
-**コマンド**ページのコマンド一覧に項目を追加して、指定したメニュー内のすべての項目を表示します。
+**コマンド** ページのコマンド一覧に項目を追加して、指定したメニュー内のすべての項目を表示します。
 
 ```cpp
 void AddMenuCommands(
@@ -211,9 +212,9 @@ void AddMenuCommands(
 
 ### <a name="remarks"></a>解説
 
-メソッドは、 `AddMenuCommands` *pmenu*のすべてのメニュー項目をループします。 サブメニューが含まれていない各メニュー項目に対して、このメソッドは [CMFCToolBarButton Class](../../mfc/reference/cmfctoolbarbutton-class.md) オブジェクトを作成し、 [Cmfctoolbarscustomizedialog:: addbutton](#addbutton) メソッドを呼び出して、メニュー項目をツールバーボタンとして **コマンド** ページのコマンド一覧に追加します。 このプロセスでは、区切り記号は無視されます。
+メソッドは、 `AddMenuCommands` *pmenu* のすべてのメニュー項目をループします。 サブメニューが含まれていない各メニュー項目に対して、このメソッドは [CMFCToolBarButton Class](../../mfc/reference/cmfctoolbarbutton-class.md) オブジェクトを作成し、 [Cmfctoolbarscustomizedialog:: addbutton](#addbutton) メソッドを呼び出して、メニュー項目をツールバーボタンとして **コマンド** ページのコマンド一覧に追加します。 このプロセスでは、区切り記号は無視されます。
 
-*Bpopup*が TRUE の場合、サブメニューを含む各メニュー項目に対して、このメソッドは[Cmfctoolbarmenubutton クラス](../../mfc/reference/cmfctoolbarmenubutton-class.md)オブジェクトを作成し、を呼び出してコマンドのリストに挿入し `AddButton` ます。 それ以外の場合、サブメニューを含むメニュー項目は、コマンドの一覧に表示されません。 どちらの場合も、でメニュー項目がサブメニューによって検出されたときに、 `AddMenuCommands` それ自体を再帰的に呼び出し、 *pmenu* パラメーターとしてサブメニューへのポインターを渡し、サブメニューのラベルを *lpszMenuPath*に追加します。
+*Bpopup* が TRUE の場合、サブメニューを含む各メニュー項目に対して、このメソッドは [Cmfctoolbarmenubutton クラス](../../mfc/reference/cmfctoolbarmenubutton-class.md)オブジェクトを作成し、を呼び出してコマンドのリストに挿入し `AddButton` ます。 それ以外の場合、サブメニューを含むメニュー項目は、コマンドの一覧に表示されません。 どちらの場合も、でメニュー項目がサブメニューによって検出されたときに、 `AddMenuCommands` それ自体を再帰的に呼び出し、 *pmenu* パラメーターとしてサブメニューへのポインターを渡し、サブメニューのラベルを *lpszMenuPath* に追加します。
 
 ## <a name="cmfctoolbarscustomizedialogaddtoolbar"></a><a name="addtoolbar"></a> CMFCToolBarsCustomizeDialog:: AddToolBar
 
@@ -321,9 +322,9 @@ CMFCToolBarsCustomizeDialog(
 
 ### <a name="remarks"></a>解説
 
-*PlistCustomPages*パラメーターは、 `CRuntimeClass` 追加のカスタムページを指定するオブジェクトの一覧を参照します。 コンストラクターは、 [CRuntimeClass:: CreateObject](../../mfc/reference/cruntimeclass-structure.md#createobject) メソッドを使用して、ダイアログボックスにページを追加します。 [ **カスタマイズ** ] ダイアログボックスにページを追加する例については、custompages サンプルを参照してください。
+*PlistCustomPages* パラメーターは、 `CRuntimeClass` 追加のカスタムページを指定するオブジェクトの一覧を参照します。 コンストラクターは、 [CRuntimeClass:: CreateObject](../../mfc/reference/cruntimeclass-structure.md#createobject) メソッドを使用して、ダイアログボックスにページを追加します。 [ **カスタマイズ** ] ダイアログボックスにページを追加する例については、custompages サンプルを参照してください。
 
-*Uiflags*パラメーターで渡すことができる値の詳細については、「 [Cmfctoolbarscustomizedialog:: getflags](#getflags)」を参照してください。
+*Uiflags* パラメーターで渡すことができる値の詳細については、「 [Cmfctoolbarscustomizedialog:: getflags](#getflags)」を参照してください。
 
 ### <a name="example"></a>例
 
@@ -362,7 +363,7 @@ void EnableUserDefinedToolbars(BOOL bEnable=TRUE);
 
 ### <a name="remarks"></a>解説
 
-*Benable*が TRUE の場合、[**ツールバー** ] ページに [**新規**]、[**名前の変更**]、[**削除**] の各ボタンが表示されます。
+*Benable* が TRUE の場合、[**ツールバー** ] ページに [**新規**]、[**名前の変更**]、[**削除**] の各ボタンが表示されます。
 
 既定では、または *Benable* が FALSE の場合、これらのボタンは表示されず、ユーザーは新しいツールバーを定義できません。
 
@@ -480,7 +481,7 @@ int GetCountInCategory(
 
 ### <a name="return-value"></a>戻り値
 
-指定されたリストに含まれる、テキストラベルが *Lpszitemname*と等しい項目の数。
+指定されたリストに含まれる、テキストラベルが *Lpszitemname* と等しい項目の数。
 
 ### <a name="remarks"></a>解説
 
@@ -568,7 +569,7 @@ virtual void OnBeforeChangeTool(CUserTool* pSelTool);
 
 ### <a name="remarks"></a>解説
 
-このメソッドは、ユーザー定義ツールのプロパティを変更しようとしているときに、フレームワークによって呼び出されます。 既定の実装では、何も行われません。 `OnBeforeChangeTool` `CMFCToolBarsCustomizeDialog` ユーザーツールに対する変更 ( *pseltool*が使用するリソースの解放など) が発生する前に処理を実行する場合は、から派生したクラスのメソッドをオーバーライドします。
+このメソッドは、ユーザー定義ツールのプロパティを変更しようとしているときに、フレームワークによって呼び出されます。 既定の実装では、何も行われません。 `OnBeforeChangeTool` `CMFCToolBarsCustomizeDialog` ユーザーツールに対する変更 ( *pseltool* が使用するリソースの解放など) が発生する前に処理を実行する場合は、から派生したクラスのメソッドをオーバーライドします。
 
 ## <a name="cmfctoolbarscustomizedialogonedittoolbarmenuimage"></a><a name="onedittoolbarmenuimage"></a> CMFCToolBarsCustomizeDialog:: OnEditToolbarMenuImage
 
@@ -614,11 +615,11 @@ virtual BOOL OnInitDialog();
 
 ### <a name="remarks"></a>解説
 
-このメソッドは、[**閉じる**] ボタンを表示することによって、基本クラスの実装である[CPropertySheet:: OnInitDialog](../../mfc/reference/cpropertysheet-class.md#oninitdialog)を拡張します。ダイアログボックスが現在の画面のサイズに合わせて表示されていることを確認し、[**ヘルプ**] ボタンをダイアログボックスの左下隅に移動します。
+このメソッドは、[**閉じる**] ボタンを表示することによって、基本クラスの実装である [CPropertySheet:: OnInitDialog](../../mfc/reference/cpropertysheet-class.md#oninitdialog)を拡張します。ダイアログボックスが現在の画面のサイズに合わせて表示されていることを確認し、[**ヘルプ**] ボタンをダイアログボックスの左下隅に移動します。
 
 ## <a name="cmfctoolbarscustomizedialogoninittoolspage"></a><a name="oninittoolspage"></a> CMFCToolBarsCustomizeDialog:: OnInitToolsPage
 
-**ツール**ページが初期化されようとしていることをフレームワークからの通知を処理します。
+**ツール** ページが初期化されようとしていることをフレームワークからの通知を処理します。
 
 ```
 virtual void OnInitToolsPage();
@@ -669,7 +670,7 @@ int RemoveButton(
 
 ### <a name="return-value"></a>戻り値
 
-削除されたボタンの0から始まるインデックス。指定したカテゴリに指定されたコマンド ID が見つからなかった場合は-1。 *UiCategoryId*が-1 の場合、戻り値は0です。
+削除されたボタンの0から始まるインデックス。指定したカテゴリに指定されたコマンド ID が見つからなかった場合は-1。 *UiCategoryId* が-1 の場合、戻り値は0です。
 
 ### <a name="remarks"></a>解説
 
@@ -703,7 +704,7 @@ BOOL RenameCategory(
 
 ## <a name="cmfctoolbarscustomizedialogreplacebutton"></a><a name="replacebutton"></a> CMFCToolBarsCustomizeDialog:: ReplaceButton
 
-**コマンド**ページのコマンドのリストボックスにあるツールバーボタンを置き換えます。
+**コマンド** ページのコマンドのリストボックスにあるツールバーボタンを置き換えます。
 
 ```cpp
 void ReplaceButton(
@@ -721,7 +722,7 @@ void ReplaceButton(
 
 ### <a name="remarks"></a>解説
 
-[Cmfctoolbarscustomizedialog:: AddMenu](#addmenu)、 [cmfctoolbarscustomizedialog:: addmenucommands](#addmenucommands)、または[Cmfctoolbarscustomizedialog:: addtoolbar](#addtoolbar) **がコマンドページに**コマンドを追加すると、そのコマンドは[CMFCToolBarButton Class](../../mfc/reference/cmfctoolbarbutton-class.md)オブジェクト (またはによって追加されたサブメニューを含むメニュー項目の[cmfctoolbarmenubutton クラス](../../mfc/reference/cmfctoolbarmenubutton-class.md)オブジェクト `AddMenuCommands` ) になります。 また、この3つのメソッドを呼び出して、コマンドを自動的に追加します。 代わりに、派生型でコマンドを表す場合は、を呼び出し、 `ReplaceButton` 派生型のボタンを渡します。
+[Cmfctoolbarscustomizedialog:: AddMenu](#addmenu)、 [cmfctoolbarscustomizedialog:: addmenucommands](#addmenucommands)、または [Cmfctoolbarscustomizedialog:: addtoolbar](#addtoolbar) **がコマンドページに** コマンドを追加すると、そのコマンドは [CMFCToolBarButton Class](../../mfc/reference/cmfctoolbarbutton-class.md)オブジェクト (またはによって追加されたサブメニューを含むメニュー項目の [cmfctoolbarmenubutton クラス](../../mfc/reference/cmfctoolbarmenubutton-class.md)オブジェクト `AddMenuCommands` ) になります。 また、この3つのメソッドを呼び出して、コマンドを自動的に追加します。 代わりに、派生型でコマンドを表す場合は、を呼び出し、 `ReplaceButton` 派生型のボタンを渡します。
 
 ### <a name="example"></a>例
 
@@ -753,5 +754,5 @@ BOOL SetUserCategory(LPCTSTR lpszCategory);
 ## <a name="see-also"></a>関連項目
 
 [階層図](../../mfc/hierarchy-chart.md)<br/>
-[クラス](../../mfc/reference/mfc-classes.md)<br/>
+[Classes](../../mfc/reference/mfc-classes.md)<br/>
 [CPropertySheet クラス](../../mfc/reference/cpropertysheet-class.md)

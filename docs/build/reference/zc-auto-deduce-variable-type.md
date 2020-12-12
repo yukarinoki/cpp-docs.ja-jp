@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: `/Zc:auto` (変数の型の推測)'
 title: /Zc:auto (変数の型の推測)
 ms.date: 02/28/2018
 f1_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - /Zc compiler options (C++)
 - Zc compiler options (C++)
 ms.assetid: 5f5bc102-44c3-4688-bbe1-080594dcee5c
-ms.openlocfilehash: 6bb1c8f2b14c483cbd46ecb6534a33db020e23e0
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: d20f377fc653e9c3cceb5c3e81b5e5e8a815bcad
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91502831"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97114716"
 ---
 # <a name="zcauto-deduce-variable-type"></a>`/Zc:auto` (変数の型の推測)
 
@@ -24,7 +25,7 @@ ms.locfileid: "91502831"
 
 > **`/Zc:auto`**[**`-`**]
 
-## <a name="remarks"></a>注釈
+## <a name="remarks"></a>解説
 
 C++ 標準では、キーワードの元の意味と改訂された意味が定義されて **`auto`** います。 Visual Studio 2010 より前では、キーワードは自動ストレージクラスの変数を宣言しています。つまり、ローカルの有効期間を持つ変数です。 Visual Studio 2010 以降では、キーワードは、宣言の初期化式から変数の型を推測します。 **`/Zc:auto`** コンパイラがキーワードの改訂された意味を使用するようにコンパイラに指示するには、コンパイラオプションを使用し **`auto`** ます。 **`/Zc:auto`** 既定では、このオプションはオンになっています。 オプションでは、 [`/permissive-`](permissive-standards-conformance.md) の既定の設定は変更されません **`/Zc:auto`** 。
 

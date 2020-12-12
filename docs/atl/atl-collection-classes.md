@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: ATL コレクションクラス'
 title: ATL コレクションクラスの概要
 ms.date: 11/19/2018
 helpviewer_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - CTraits classes
 - collection classes
 ms.assetid: 4d619d46-5b4e-41dd-b9fd-e86b1fbc00b5
-ms.openlocfilehash: 039af388a3713540c6ba7d39e8b639cf83d291ff
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: 32d9fe928024d82af7031fbbb8d88aba5e3eae31
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90040861"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97166084"
 ---
 # <a name="atl-collection-classes"></a>ATL コレクション クラス
 
@@ -50,8 +51,8 @@ ATL には、少数のオブジェクトを処理するための次の配列ク�
 |[CAtlArray](../atl/reference/catlarray-class.md)|配列を実装します。|
 |[CAtlList](../atl/reference/catllist-class.md)|リストを実装します。|
 |[CAtlMap](../atl/reference/catlmap-class.md)|キーまたは値によってデータを参照できるように、マッピング構造を実装します。|
-|[CRBMap](../atl/reference/crbmap-class.md)|レッドブラックアルゴリズムを使用して、マッピング構造を実装します。|
-|[CRBMultiMap](../atl/reference/crbmultimap-class.md)|赤と黒の multimapping 構造体を実装します。|
+|[CRBMap](../atl/reference/crbmap-class.md)|Red-Black アルゴリズムを使用して、マッピング構造体を実装します。|
+|[CRBMultiMap](../atl/reference/crbmultimap-class.md)|Red-Black multimapping 構造体を実装します。|
 
 これらのクラスは、デバッグビルドで使用されているときに多くのプログラミングエラーをトラップしますが、パフォーマンスを向上させるために、これらのチェックはリテールビルドでは実行されません。
 
@@ -86,9 +87,9 @@ ATL には、少数のオブジェクトを処理するための次の配列ク�
 |-----------|--------------|--------------|---------------------------|--------------------------------------|-----------------------------|
 |List|はい|いいえ|高速 (一定時間)|低速 O (n)|はい|
 |Array|はい|Int (定数時刻)|終わりに挿入する場合を除き、O (n) を使用しない場合 (その場合は定数時間)|低速 O (n)|はい|
-|マップ|No|キーで (一定時間)|高速 (一定時間)|高速 (一定時間)|いいえ (キー)、はい (値)|
-|赤-黒のマップ|はい (キーによる)|キー O (log n)|高速 O (ログ n)|高速 O (ログ n)|No|
-|赤-黒の Multimap|はい (キーによる)|キー O (log n) (キーごとに複数の値)|高速 O (ログ n)|高速 O (ログ n)|○ (キーごとに複数の値)|
+|マップ|いいえ|キーで (一定時間)|高速 (一定時間)|高速 (一定時間)|いいえ (キー)、はい (値)|
+|Red-Black マップ|はい (キーによる)|キー O (log n)|高速 O (ログ n)|高速 O (ログ n)|いいえ|
+|Red-Black Multimap|はい (キーによる)|キー O (log n) (キーごとに複数の値)|高速 O (ログ n)|高速 O (ログ n)|○ (キーごとに複数の値)|
 
 ## <a name="using-ctraits-objects"></a>CTraits オブジェクトの使用
 
@@ -104,7 +105,7 @@ CTraits クラスは、MFC コレクションクラスのヘルパー関数に�
 
 [!code-cpp[NVC_ATL_Utilities#112](../atl/codesnippet/cpp/atl-collection-classes_1.cpp)]
 
-## <a name="comments"></a>コメント
+## <a name="comments"></a>説明
 
 CTraits クラスの一覧については、「 [コレクションクラス](../atl/collection-classes.md)」を参照してください。
 
@@ -124,7 +125,7 @@ CTraits クラスの一覧については、「 [コレクションクラス](..
 
 - [Marquee サンプル](../overview/visual-cpp-samples.md)
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [概念](../atl/active-template-library-atl-concepts.md)<br/>
 [コレクションクラス](../atl/collection-classes.md)

@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「retval」を参照してください。
 title: retval (C++ COM 属性)
 ms.date: 10/02/2018
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - retval attribute
 ms.assetid: bfa16f08-157d-4eea-afde-1232c54b8501
-ms.openlocfilehash: f90893390bc67cb495e646f61e3d61a994e42e50
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 15bfc994d18a9c61c37402aa763ecbfd96cbd768
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88845992"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97114859"
 ---
 # <a name="retval"></a>retval
 
@@ -31,9 +32,9 @@ ms.locfileid: "88845992"
 
 ## <a name="example"></a>例
 
-**Retval**の使用例については、[バインド](bindable.md)可能なの例を参照してください。
+**Retval** の使用例については、[バインド](bindable.md)可能なの例を参照してください。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 | 属性コンテキスト | 値 |
 |-|-|

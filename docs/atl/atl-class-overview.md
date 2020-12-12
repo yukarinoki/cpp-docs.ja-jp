@@ -1,16 +1,17 @@
 ---
+description: '詳細情報: ATL クラスの概要'
 title: ATL のクラスの概要
 ms.date: 11/04/2016
 helpviewer_keywords:
 - classes [C++], ATL
 - ATL, class reference
 ms.assetid: c38ac93d-c3a2-4ce7-8153-f1d34c0f0fa6
-ms.openlocfilehash: 7480bc19ad4a49c0fb816bca5f1fed13f470030b
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: a35fd7b178082e81e7cc43ff037f2fc083ef4b67
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88831932"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97166058"
 ---
 # <a name="atl-class-overview"></a>ATL のクラスの概要
 
@@ -49,7 +50,7 @@ Active Template Library (ATL) のクラスは、次のように分類できま�
 [スレッドモデルとクリティカルセクション](../atl/threading-models-and-critical-sections-classes.md)\
 [UI のサポート](../atl/ui-support-classes.md)\
 [Windows のサポート](../atl/windows-support-classes.md)\
-[Utility](../atl/utility-classes.md)
+[ユーティリティ](../atl/utility-classes.md)
 
 ATL プロジェクトで使用できるその他のクラスについては、「 [共有クラス](../atl-mfc-shared/atl-mfc-shared-classes.md)」を参照してください。
 
@@ -59,5 +60,5 @@ ATL プロジェクトで使用できるその他のクラスについては、�
 [ATL COM デスクトップコンポーネント](../atl/atl-com-desktop-components.md)<br/>
 [関数](../atl/reference/atl-functions.md)<br/>
 [グローバル変数](../atl/reference/atl-global-variables.md)<br/>
-[[マクロ]](../atl/reference/atl-macros.md)<br/>
-[Typedef](../atl/reference/atl-typedefs.md)
+[マクロ](../atl/reference/atl-macros.md)<br/>
+[Typedefs](../atl/reference/atl-typedefs.md)

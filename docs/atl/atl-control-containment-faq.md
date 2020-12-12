@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: ATL コントロールコンテインメントに関する FAQ'
 title: 'ATL コントロール コンテインメント : Q &amp; A 集'
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,18 +9,18 @@ helpviewer_keywords:
 - ActiveX controls [C++], hosting
 - controls [ATL]
 ms.assetid: d4bdfbe0-82ca-4f2f-bb95-cb89bdcc9b53
-ms.openlocfilehash: 693617589f157d352972485396777cec587a5b8f
-ms.sourcegitcommit: d9c94dcabd94537e304be0261b3263c2071b437b
+ms.openlocfilehash: 5c5d3d452a119908cb6c8dcdb08da3276db78f51
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91352701"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97165772"
 ---
 # <a name="atl-control-containment-faq"></a>ATL コントロール コンテインメント : Q &amp; A 集
 
 ## <a name="which-atl-classes-facilitate-activex-control-containment"></a>ActiveX コントロール コンテインメイトを助ける ATL クラスはどれか。
 
-ATL のコントロールホストコードでは、ATL クラスを使用する必要はありません。 **"AtlAxWin80"** ウィンドウを作成し、必要に応じてコントロールホスティング api を使用することもできます (詳細については、「 **ATL コントロールホスト api とは**」を参照してください)。 ただし、次のクラスを使用すると、コンテインメント機能が簡単に使用できるようになります。
+ATL のコントロールホストコードでは、ATL クラスを使用する必要はありません。単純に **"AtlAxWin80"** ウィンドウを作成し、必要に応じてコントロールホスト API を使用できます (詳細については、「 **ATL Control-Hosting api とは**」を参照してください)。 ただし、次のクラスを使用すると、コンテインメント機能が簡単に使用できるようになります。
 
 |クラス|説明|
 |-----------|-----------------|
@@ -92,7 +93,7 @@ ATL のコントロールホスト API は、任意のウィンドウが ActiveX
 
 次に概要を示します。
 
-|USE_METHOD|Host|アクセスとイベントシンクの制御|関数のデモンストレーション|
+|USE_METHOD|ホスト|アクセスとイベントシンクの制御|関数のデモンストレーション|
 |-----------------|----------|--------------------------------------|---------------------------|
 |1|子ウィンドウ|1つの手順|CreateControlLicEx|
 |2|メイン ウィンドウ|1つの手順|AtlAxCreateControlLicEx|

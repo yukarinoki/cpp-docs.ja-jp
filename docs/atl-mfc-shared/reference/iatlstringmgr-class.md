@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: IAtlStringMgr クラス'
 title: IAtlStringMgr クラス
 ms.date: 10/18/2018
 f1_keywords:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 - memory, managing
 - IAtlStringMgr class
 ms.assetid: 722f0346-a770-4aa7-8f94-177be8dba823
-ms.openlocfilehash: a617ba829999e9e5778bd7f0091cfb0d624dce71
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 7b3aa9d8984639d42e673e96b5fcf25308a757bb
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88832010"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97166526"
 ---
 # <a name="iatlstringmgr-class"></a>IAtlStringMgr クラス
 
@@ -49,7 +50,7 @@ __interface IAtlStringMgr
 
 このクラスを使用して、カスタム文字列クラスのカスタムメモリマネージャーを実装することもできます。 詳細については、「 [メモリ管理と CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md)」を参照してください。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** atl. h
 
@@ -174,7 +175,7 @@ CStringData* Reallocate(
 
 ### <a name="remarks"></a>解説
 
-*PData*によって指定された既存のメモリブロックのサイズを変更するには、この関数を呼び出します。
+*PData* によって指定された既存のメモリブロックのサイズを変更するには、この関数を呼び出します。
 
 [IAtlStringMgr:: free](#free)を呼び出して、このメソッドによって割り当てられたメモリを解放します。
 

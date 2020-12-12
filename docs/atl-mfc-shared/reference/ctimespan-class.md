@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: CTimeSpan クラス'
 title: CTimeSpan クラス
 ms.date: 10/18/2018
 f1_keywords:
@@ -23,12 +24,12 @@ helpviewer_keywords:
 - shared classes, CTimeSpan
 - time, elapsed
 ms.assetid: ee1e42f6-1839-477a-8435-fb26ad475140
-ms.openlocfilehash: 0c13aa0d8f6c46db3b018283ab2a408a3f9531e1
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: b15fa247baaa4de77c5caab12d584a80321b9420
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88832023"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97166578"
 ---
 # <a name="ctimespan-class"></a>CTimeSpan クラス
 
@@ -63,7 +64,7 @@ class CTimeSpan
 |[CTimeSpan:: GetTotalSeconds](#gettotalseconds)|このの合計秒数を表す値を返し `CTimeSpan` ます。|
 |[CTimeSpan::Serialize64](#serialize64)|アーカイブとの間でデータをシリアル化します。|
 
-### <a name="operators"></a>演算子
+### <a name="operators"></a>オペレーター
 
 |名前|説明|
 |-|-|
@@ -77,7 +78,7 @@ class CTimeSpan
 
 `CTimeSpan` 関数は、数秒を日、時間、分、および秒のさまざまな組み合わせに変換します。
 
-`CTimeSpan`オブジェクトは、8バイトの **__time64_t**構造体に格納されます。
+`CTimeSpan`オブジェクトは、8バイトの **__time64_t** 構造体に格納されます。
 
 コンパニオンクラス [CTime](../../atl-mfc-shared/reference/ctime-class.md)は絶対時刻を表します。
 
@@ -85,7 +86,7 @@ class CTimeSpan
 
 の使用方法の詳細については、 `CTimeSpan` 「*ランタイムライブラリリファレンス*」の「[日付と時刻](../../atl-mfc-shared/date-and-time.md)」と「[時間管理](../../c-runtime-library/time-management.md)」を参照してください。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** atltime. h
 
@@ -149,7 +150,7 @@ CTimeSpan(
 
 - `CTimeSpan( const CTimeSpan& );` 別の `CTimeSpan` 値からオブジェクトを構築 `CTimeSpan` します。
 
-- `CTimeSpan( __time64_t );``CTimeSpan` **__Time64_t**型からオブジェクトを構築します。
+- `CTimeSpan( __time64_t );``CTimeSpan` **__Time64_t** 型からオブジェクトを構築します。
 
 - `CTimeSpan( LONG, int, int, int );``CTimeSpan`各コンポーネントが次の範囲に制限されているコンポーネントからオブジェクトを構築します。
 
@@ -399,7 +400,7 @@ CArchive& Serialize64(CArchive& ar);
 
 ### <a name="parameters"></a>パラメーター
 
-*金*<br/>
+*ar*<br/>
 `CArchive`更新するオブジェクト。
 
 ### <a name="return-value"></a>戻り値

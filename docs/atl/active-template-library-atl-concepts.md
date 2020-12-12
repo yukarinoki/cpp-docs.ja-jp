@@ -1,15 +1,16 @@
 ---
+description: '詳細情報: Active Template Library (ATL) の概念'
 title: ATL (Active Template Library) の概念
 ms.date: 05/06/2019
 helpviewer_keywords:
 - ATL, about ATL
 ms.assetid: a3960991-4d76-4da5-9568-3fa7fde53ff4
-ms.openlocfilehash: c87eedff5b6ce7d906c05ac0678425af575f0af8
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 5437f381ea145d5474dcdba25673d4e41c60c54b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91504270"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97166318"
 ---
 # <a name="active-template-library-atl-concepts"></a>ATL (Active Template Library) の概念
 
@@ -70,7 +71,7 @@ ATL で配列とマップを使用する方法について説明します。
 [ATL レジストリ コンポーネント (レジストラー)](atl-registry-component-registrar.md)<br/>
 ATL のスクリプト構文と置き換え可能パラメーターについて説明します。 また、レジストラーへの静的リンクを設定する方法も説明します。
 
-[ATL および C ランタイムコードによるプログラミング](programming-with-atl-and-c-run-time-code.md)<br/>
+[ATL および C Run-Time コードを使用したプログラミング](programming-with-atl-and-c-run-time-code.md)<br/>
 C ランタイム ライブラリ (CRT) への静的または動的なリンクの利点について説明します。
 
 [CComBSTR を使用したプログラミング](programming-with-ccombstr-atl.md)<br/>
@@ -93,7 +94,7 @@ ATL のサンプル プログラムの説明とリンクを提供します。
 [ATL プロジェクトの作成](reference/creating-an-atl-project.md)<br/>
 ATL プロジェクト ウィザードについての説明が含まれます。
 
-[ATL コントロール ウィザード](reference/atl-control-wizard.md)<br/>
+[ATL コントロールウィザード](reference/atl-control-wizard.md)<br/>
 クラスを追加する方法について説明します。
 
 [属性付きプログラミング](../windows/attributes/cpp-attributes-com-net.md)<br/>

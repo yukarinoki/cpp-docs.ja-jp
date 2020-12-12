@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: CString の使用'
 title: CString の使用
 ms.date: 06/18/2018
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - CString objects, reference counting
 - CString class (Visual C++)
 ms.assetid: ed018aaf-8b10-46f9-828c-f9c092dc7609
-ms.openlocfilehash: 8ebf3441c7d8856fe412e2efed4c717b01ced362
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: f0afea345f2a01d66cbb541aa2a6c958c28365a7
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87219015"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97166396"
 ---
 # <a name="using-cstring"></a>CString の使用
 
@@ -23,7 +24,7 @@ ms.locfileid: "87219015"
 
 オブジェクトには `CStringW` 型が含まれており、Unicode 文字列がサポートされてい **`wchar_t`** ます。 オブジェクトには `CStringA` 型が含まれて **`char`** おり、1バイト文字列とマルチバイト (MBCS) 文字列をサポートしています。 オブジェクトは、 `CString` **`char`** **`wchar_t`** MBCS シンボルまたは UNICODE シンボルがコンパイル時に定義されているかどうかに応じて、型または型のいずれかをサポートします。
 
-`CString` オブジェクトは、`CStringData` オブジェクトの文字データを保持します。 `CString`NULL で終わる C スタイルの文字列を受け入れます。 `CString`は、高速なパフォーマンスを実現するために文字列の長さを追跡しますが、LPCWSTR への変換をサポートするために、格納されている文字データの NULL 文字も保持します。 `CString`C スタイルの文字列をエクスポートするときに、null 終端文字を含めます。 内の他の場所に NULL を挿入することはでき `CString` ますが、予期しない結果が生じる可能性があります。
+`CString` オブジェクトは、`CStringData` オブジェクトの文字データを保持します。 `CString` NULL で終わる C スタイルの文字列を受け入れます。 `CString` は、高速なパフォーマンスを実現するために文字列の長さを追跡しますが、LPCWSTR への変換をサポートするために、格納されている文字データの NULL 文字も保持します。 `CString` C スタイルの文字列をエクスポートするときに、null 終端文字を含めます。 内の他の場所に NULL を挿入することはでき `CString` ますが、予期しない結果が生じる可能性があります。
 
 文字列クラス `CAtlString`、`CAtlStringA`、および `CAtlStringW` は、CRT サポートがある場合もない場合も、MFC ライブラリにリンクせずに使用できます。
 

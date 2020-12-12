@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: CTime クラス'
 title: CTime クラス
 ms.date: 10/18/2018
 f1_keywords:
@@ -24,12 +25,12 @@ helpviewer_keywords:
 - CTime class
 - shared classes, CTime
 ms.assetid: 0a299544-485b-48dc-9d3c-fdc30f57d612
-ms.openlocfilehash: d551698a81921227dd0d7b7d80436bba960ed176
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 3768423a4d3bf873e9161b846e21fda4beffdc9c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88832036"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97166604"
 ---
 # <a name="ctime-class"></a>CTime クラス
 
@@ -70,7 +71,7 @@ class CTime
 |[CTime:: GetYear](#getyear)|オブジェクトによって表される年を返し `CTime` ます。|
 |[CTime:: Serialize64](#serialize64)|アーカイブとの間でデータをシリアル化します。|
 
-### <a name="operators"></a>演算子
+### <a name="operators"></a>オペレーター
 
 |名前|説明|
 |-|-|
@@ -94,12 +95,12 @@ class CTime
 > [!NOTE]
 > 上限の日付は12/31/3000 です。 下限は 1/1/1970 12:00:00 AM GMT です。
 
-の使用方法の詳細については、 `CTime` 「ランタイムライブラリリファレンス」の「 [日付と時刻](../../atl-mfc-shared/date-and-time.md)」および「 [時刻管理](../../c-runtime-library/time-management.md) 」を参照してください。
+の使用方法の詳細については `CTime` 、Run-Time ライブラリリファレンスの記事「 [日付と時刻](../../atl-mfc-shared/date-and-time.md)」と「 [時間管理](../../c-runtime-library/time-management.md) 」を参照してください。
 
 > [!NOTE]
-> `CTime`構造体が mfc 7.1 から mfc 8.0 に変更されました。 `CTime`Mfc 8.0 以降のバージョンで** <<演算子**を使用して構造体をシリアル化する場合、結果のファイルは以前のバージョンの mfc では読み取ることができません。
+> `CTime`構造体が mfc 7.1 から mfc 8.0 に変更されました。 `CTime`Mfc 8.0 以降のバージョンで **<<演算子** を使用して構造体をシリアル化する場合、結果のファイルは以前のバージョンの mfc では読み取ることができません。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** atltime. h
 
@@ -167,7 +168,7 @@ CTime(const DBTIMESTAMP& dbts, int nDST = -1) throw();
 *Wdosdate*、 *wDosTime*<br/>
 日付/時刻値に変換され、新しいオブジェクトにコピーされる MS-DOS の日付と時刻の値 `CTime` 。
 
-*&*<br/>
+*st*<br/>
 日付/時刻値に変換され、新しいオブジェクトにコピーされる [SYSTEMTIME](/windows/win32/api/minwinbase/ns-minwinbase-systemtime) 構造体 `CTime` 。
 
 *cm*<br/>
@@ -184,7 +185,7 @@ CTime(const DBTIMESTAMP& dbts, int nDST = -1) throw();
 
 - `CTime( const CTime& );` 別の `CTime` 値からオブジェクトを構築 `CTime` します。
 
-- `CTime( __time64_t );``CTime` **__Time64_t**型からオブジェクトを構築します。 このコンストラクターは UTC 時刻を想定し、結果を格納する前に結果を現地時刻に変換します。
+- `CTime( __time64_t );``CTime` **__Time64_t** 型からオブジェクトを構築します。 このコンストラクターは UTC 時刻を想定し、結果を格納する前に結果を現地時刻に変換します。
 
 - `CTime( int, int, ...);``CTime`各コンポーネントが次の範囲に制限されているローカルタイムコンポーネントからオブジェクトを構築します。
 
@@ -397,7 +398,7 @@ struct tm* GetGmtTm(struct tm* ptm) const;
 
 ### <a name="return-value"></a>戻り値
 
-インクルードファイル時刻に定義されている、埋め込まれた **構造体 tm** へのポインター。始め. 構造体のレイアウトについては、「 [gmtime、_gmtime32、_gmtime64](../../c-runtime-library/reference/gmtime-gmtime32-gmtime64.md) 」を参照してください。
+インクルードファイルの時刻 .H に定義されている、入力された **構造体 tm** へのポインター。 構造体のレイアウトについては、「 [gmtime、_gmtime32、_gmtime64](../../c-runtime-library/reference/gmtime-gmtime32-gmtime64.md) 」を参照してください。
 
 ### <a name="remarks"></a>解説
 
@@ -444,7 +445,7 @@ struct tm* GetLocalTm(struct tm* ptm) const;
 
 ### <a name="return-value"></a>戻り値
 
-インクルードファイル時刻に定義されている、埋め込まれた **構造体 tm** へのポインター。始め. 構造体のレイアウトについては、「 [gmtime、_gmtime32、_gmtime64](../../c-runtime-library/reference/gmtime-gmtime32-gmtime64.md) 」を参照してください。
+インクルードファイルの時刻 .H に定義されている、入力された **構造体 tm** へのポインター。 構造体のレイアウトについては、「 [gmtime、_gmtime32、_gmtime64](../../c-runtime-library/reference/gmtime-gmtime32-gmtime64.md) 」を参照してください。
 
 ### <a name="remarks"></a>解説
 
@@ -642,7 +643,7 @@ CArchive& Serialize64(CArchive& ar);
 
 ### <a name="parameters"></a>パラメーター
 
-*金*<br/>
+*ar*<br/>
 `CArchive`更新するオブジェクト。
 
 ### <a name="return-value"></a>戻り値

@@ -1,4 +1,5 @@
 ---
+description: '詳細については、/Zc: forScope (for ループスコープの強制準拠) に関するページを参照してください。'
 title: /Zc:forScope (for ループのスコープの強制準拠)
 ms.date: 03/06/2018
 f1_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - Conformance compiler options
 - Zc compiler options [C++]
 ms.assetid: 3031f02d-3b14-4ad0-869e-22b0110c3aed
-ms.openlocfilehash: b1173ad609a1b2c95d6cf118f4e2d5defeec5b9c
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 7124bba6608facfea546974cfa40ef9556ff713a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87234342"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97114664"
 ---
 # <a name="zcforscope-force-conformance-in-for-loop-scope"></a>/Zc:forScope (for ループのスコープの強制準拠)
 
@@ -28,13 +29,13 @@ Microsoft の拡張機能 ( [/Ze](../../cpp/for-statement-cpp.md) ) の[for](za-
 
 ## <a name="remarks"></a>解説
 
-標準の動作では、ループの初期化子がループの後にスコープ外に出るようにし **`for`** **`for`** ます。 **/Zc: forScope-** および[/ze](za-ze-disable-language-extensions.md)では、 **`for`** ループの初期化子は、ローカルスコープが終了するまでスコープ内に残ります。
+標準の動作では、ループの初期化子がループの後にスコープ外に出るようにし **`for`** **`for`** ます。 **/Zc: forScope-** および [/ze](za-ze-disable-language-extensions.md)では、 **`for`** ループの初期化子は、ローカルスコープが終了するまでスコープ内に残ります。
 
-**/Zc: forScope**オプションは既定でオンになっています。 **/Zc: forScope**は、 [/permissive-](permissive-standards-conformance.md)オプションが指定されている場合、影響を受けません。
+**/Zc: forScope** オプションは既定でオンになっています。 **/Zc: forScope** は、 [/permissive-](permissive-standards-conformance.md) オプションが指定されている場合、影響を受けません。
 
 **/Zc:forScope-** オプションは非推奨とされます。今後のバージョンからは削除されます。 **/Zc:forScope-** を使うと、廃止予定の警告 D9035 が表示されます。
 
-次のコードは **/Ze** ではコンパイルされますが、 **/Za**ではコンパイルされません。
+次のコードは **/Ze** ではコンパイルされますが、 **/Za** ではコンパイルされません。
 
 ```cpp
 // zc_forScope.cpp

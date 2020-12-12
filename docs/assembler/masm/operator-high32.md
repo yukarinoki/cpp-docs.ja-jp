@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「operator HIGH32」を参照してください。
 title: HIGH32 演算子
 ms.date: 12/17/2019
 f1_keywords:
@@ -8,16 +9,16 @@ helpviewer_keywords:
 - operator HIGH32
 - HIGH32 operator
 ms.assetid: b32ae3b8-0bb3-42f8-b616-6f568791a618
-ms.openlocfilehash: 8b2754e3bf9c1c7e47550075797b2974ccc47598
-ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
+ms.openlocfilehash: 242a10091e09b1997c29c3f390397006905b019d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75316617"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97127700"
 ---
 # <a name="operator-high32"></a>HIGH32 演算子
 
-*式*の上位32ビットを返します。 MASM の式は、64ビットの値です。
+*式* の上位32ビットを返します。 MASM の式は、64ビットの値です。
 
 ## <a name="syntax"></a>構文
 

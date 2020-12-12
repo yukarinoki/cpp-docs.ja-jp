@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: @Line'
 title: '@Line'
 ms.date: 12/17/2019
 f1_keywords:
@@ -6,22 +7,22 @@ f1_keywords:
 helpviewer_keywords:
 - '@Line symbol'
 ms.assetid: f879fda0-c046-478a-acbd-2e7ff7f7ddad
-ms.openlocfilehash: 751c17c75e52f6a0567420eb1c242edc6f78e913
-ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
+ms.openlocfilehash: 854f16c6b2473e5fdd710679d18d5bcc168736fe
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75315668"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97121213"
 ---
-# <a name="line"></a>\@線
+# <a name="line"></a>\@行
 
 現在のファイルのソース行番号 (数値の等価)。
 
 ## <a name="syntax"></a>構文
 
-> **\@線**
+> **\@行**
 
 ## <a name="see-also"></a>関連項目
 
-[シンボルのリファレンス](symbols-reference.md)\
+[シンボルリファレンス](symbols-reference.md)\
 [MASM BNF 文法](masm-bnf-grammar.md)

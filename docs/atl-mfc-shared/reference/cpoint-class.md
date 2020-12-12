@@ -1,4 +1,5 @@
 ---
+description: '詳細: CPoint クラス'
 title: CPoint クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - POINT structure
 - CPoint class
 ms.assetid: a6d4db93-35cc-444d-9221-c3e160f6edaa
-ms.openlocfilehash: 331b89ff118f727303e887670960ee6078b01fb1
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: 9d1c6ecb628e4d47d80503bb7a441efc4deb1252
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81747087"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97166760"
 ---
 # <a name="cpoint-class"></a>CPoint クラス
 
@@ -34,36 +35,36 @@ class CPoint : public tagPOINT
 
 |名前|説明|
 |----------|-----------------|
-|[CPoint::CPoint](#cpoint)|`CPoint` を構築します。|
+|[CPoint:: CPoint](#cpoint)|`CPoint` を構築します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
 |名前|説明|
 |----------|-----------------|
-|[CPoint::オフセット](#offset)|のメンバーと`x``y`に値を追加`CPoint`します。|
+|[CPoint:: Offset](#offset)|のメンバーとメンバーに値を追加し `x` `y` `CPoint` ます。|
 
 ### <a name="public-operators"></a>パブリック演算子
 
 |名前|説明|
 |----------|-----------------|
-|[CPoint::演算子 -](#operator_-)|a`CPoint`と 1 つのサイズの差、ポイントの否定、2 点のサイズの差、または負のサイズによるオフセットを返します。|
-|[CPoint::演算子!=](#operator_neq)|2 点間の不等式をチェックします。|
-|[CPoint::演算子 +](#operator_add)|の合計`CPoint`とサイズまたはポイント、またはサイズによるオフセットを`CRect`返します。|
-|[CPoint::演算子 +=](#operator_add_eq)|サイズまたは`CPoint`ポイントを追加してオフセットします。|
-|[CPoint::演算子 -=](#operator_-_eq)|サイズまたは`CPoint`ポイントを減算してオフセットします。|
-|[CPoint::演算子 ==](#operator_eq_eq)|2 つのポイント間の等値をチェックします。|
+|[CPoint:: operator-](#operator_-)|`CPoint`とのサイズ、または点の否定、または2つの点のサイズの差、または負のサイズによるオフセットの差を返します。|
+|[CPoint:: operator! =](#operator_neq)|2つの点が等しくないかどうかをチェックします。|
+|[CPoint:: operator +](#operator_add)|`CPoint`とサイズまたはポイントの合計、または `CRect` サイズによるオフセットを返します。|
+|[CPoint:: operator + =](#operator_add_eq)|`CPoint`サイズまたはポイントを追加してオフセットします。|
+|[CPoint:: operator-=](#operator_-_eq)|`CPoint`サイズまたはポイントを減算してオフセットします。|
+|[CPoint:: operator = =](#operator_eq_eq)|2つの点が等しいかどうかをチェックします。|
 
 ## <a name="remarks"></a>解説
 
-また、操作`CPoint`するメンバー関数と[POINT](/windows/win32/api/windef/ns-windef-point)構造体も含まれています。
+また、構造体を操作するためのメンバー関数も含まれてい `CPoint` ます。 [](/windows/win32/api/windef/ns-windef-point)
 
-オブジェクト`CPoint`は、構造を使用する`POINT`場所であればどこでも使用できます。 "size" と対話するこのクラスの演算子は、2 つのオブジェクトが交換可能であるため[、CSize](../../atl-mfc-shared/reference/csize-class.md)オブジェクトまたは[SIZE](/windows/win32/api/windef/ns-windef-size)構造体のいずれかを受け入れます。
-
-> [!NOTE]
-> このクラスは、構造体から`tagPOINT`派生します。 (この名前`tagPOINT`は、`POINT`構造体ではあまり使用されません。つまり、`POINT`構造体のデータ メンバ、`x`および`y`は`CPoint`のアクセス可能なデータ メンバーです。
+オブジェクトは、 `CPoint` 構造体が使用されているすべての場所で使用でき `POINT` ます。 "サイズ" と対話するこのクラスの演算子は、2つの型が交換可能であるため、 [CSize](../../atl-mfc-shared/reference/csize-class.md) オブジェクトまたは [サイズ](/windows/win32/api/windef/ns-windef-size) 構造体のいずれかを受け入れます。
 
 > [!NOTE]
-> 共有ユーティリティ クラスの詳細については、「`CPoint`[共有クラス](../../atl-mfc-shared/atl-mfc-shared-classes.md)」を参照してください。
+> このクラスは、 `tagPOINT` 構造体から派生します。 (この名前 `tagPOINT` は、構造体で使用頻度の低い名前です `POINT` )。これは、構造体のデータメンバー、およびは、 `POINT` `x` `y` のアクセス可能なデータメンバーであることを意味し `CPoint` ます。
+
+> [!NOTE]
+> 共有ユーティリティクラス (など) の詳細につい `CPoint` ては、「 [共有クラス](../../atl-mfc-shared/atl-mfc-shared-classes.md)」を参照してください。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -71,11 +72,11 @@ class CPoint : public tagPOINT
 
 `CPoint`
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-**ヘッダー:** atltypes.h
+**ヘッダー:** atltypes. h
 
-## <a name="cpointcpoint"></a><a name="cpoint"></a>CPoint::CPoint
+## <a name="cpointcpoint"></a><a name="cpoint"></a> CPoint:: CPoint
 
 `CPoint` オブジェクトを構築します。
 
@@ -89,20 +90,20 @@ CPoint(LPARAM dwPoint) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*イニットX*<br/>
+*initX*<br/>
 `x` の `CPoint` メンバーの値を指定します。
 
-*イニティ*<br/>
+*initY*<br/>
 `y` の `CPoint` メンバーの値を指定します。
 
-*イニトプト*<br/>
-[POINT](/windows/win32/api/windef/ns-windef-point)構造体`CPoint`または初期化`CPoint`に使用する値を指定します。
+*initPt*<br/>
+[](/windows/win32/api/windef/ns-windef-point) `CPoint` 初期化に使用する値を指定する POINT 構造体または `CPoint` 。
 
-*イニトサイズ*<br/>
-[SIZE](/windows/win32/api/windef/ns-windef-size)`CPoint`構造体または初期化に使用する値を指定する[CSize。](../../atl-mfc-shared/reference/csize-class.md)
+*initSize*<br/>
+初期化に使用する値を指定する[サイズ](/windows/win32/api/windef/ns-windef-size)構造体または[CSize](../../atl-mfc-shared/reference/csize-class.md) `CPoint` 。
 
-*ドウポイント*<br/>
-メンバを`x` *dwPoint*の下位ワードに設定し、メンバ`y`を*dwPoint*の上位ワードに設定します。
+*dwPoint*<br/>
+メンバーを `x` *dwpoint* の下位ワードに設定し、 `y` メンバーを *dwpoint* の上位ワードに設定します。
 
 ### <a name="remarks"></a>解説
 
@@ -135,9 +136,9 @@ CPoint ptFromDouble(dwSize);
 ASSERT(ptFromDouble == ptMFCHere);
 ```
 
-## <a name="cpointoffset"></a><a name="offset"></a>CPoint::オフセット
+## <a name="cpointoffset"></a><a name="offset"></a> CPoint:: Offset
 
-のメンバーと`x``y`に値を追加`CPoint`します。
+のメンバーとメンバーに値を追加し `x` `y` `CPoint` ます。
 
 ```cpp
 void Offset(int xOffset, int yOffset) throw();
@@ -147,25 +148,25 @@ void Offset(SIZE size) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*x オフセット*<br/>
-のメンバーをオフセットする`x`量を指定します`CPoint`。
+*xOffset*<br/>
+のメンバーをオフセットする量を指定し `x` `CPoint` ます。
 
-*yオフセット*<br/>
-のメンバーをオフセットする`y`量を指定します`CPoint`。
+*yOffset*<br/>
+のメンバーをオフセットする量を指定し `y` `CPoint` ます。
 
-*ポイント*<br/>
-オフセットする量[POINT](/windows/win32/api/windef/ns-windef-point)( `CPoint`POINT または`CPoint`) を指定します。
+*視点*<br/>
+をオフセットする量 ( [ポイント](/windows/win32/api/windef/ns-windef-point) または) を指定し `CPoint` `CPoint` ます。
 
 *size*<br/>
-オフセットする量 ( [SIZE](/windows/win32/api/windef/ns-windef-size)または[CSize](../../atl-mfc-shared/reference/csize-class.md)) を指定します`CPoint`。
+をオフセットする量 ( [サイズ](/windows/win32/api/windef/ns-windef-size) または [CSize](../../atl-mfc-shared/reference/csize-class.md)) を指定し `CPoint` ます。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_ATLMFC_Utilities#28](../../atl-mfc-shared/codesnippet/cpp/cpoint-class_1.cpp)]
 
-## <a name="cpointoperator-"></a><a name="operator_eq_eq"></a>CPoint::演算子 ==
+## <a name="cpointoperator-"></a><a name="operator_eq_eq"></a> CPoint:: operator = =
 
-2 つのポイント間の等値をチェックします。
+2つの点が等しいかどうかをチェックします。
 
 ```
 BOOL operator==(POINT point) const throw();
@@ -173,20 +174,20 @@ BOOL operator==(POINT point) const throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*ポイント*<br/>
-[POINT](/windows/win32/api/windef/ns-windef-point)構造体または`CPoint`オブジェクトを格納します。
+*視点*<br/>
+[POINT](/windows/win32/api/windef/ns-windef-point)構造体またはオブジェクトが含まれてい `CPoint` ます。
 
 ### <a name="return-value"></a>戻り値
 
-ポイントが等しい場合は 0 以外。それ以外の場合は 0。
+点が等しい場合は0以外の値。それ以外の場合は0です。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_ATLMFC_Utilities#29](../../atl-mfc-shared/codesnippet/cpp/cpoint-class_2.cpp)]
 
-## <a name="cpointoperator-"></a><a name="operator_neq"></a>CPoint::演算子!=
+## <a name="cpointoperator-"></a><a name="operator_neq"></a> CPoint:: operator! =
 
-2 点間の不等式をチェックします。
+2つの点が等しくないかどうかをチェックします。
 
 ```
 BOOL operator!=(POINT point) const throw();
@@ -194,20 +195,20 @@ BOOL operator!=(POINT point) const throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*ポイント*<br/>
-[POINT](/windows/win32/api/windef/ns-windef-point)構造体または`CPoint`オブジェクトを格納します。
+*視点*<br/>
+[POINT](/windows/win32/api/windef/ns-windef-point)構造体またはオブジェクトが含まれてい `CPoint` ます。
 
 ### <a name="return-value"></a>戻り値
 
-ポイントが等しくない場合は 0 以外。それ以外の場合は 0。
+点が等しくない場合は0以外の値。それ以外の場合は0です。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_ATLMFC_Utilities#30](../../atl-mfc-shared/codesnippet/cpp/cpoint-class_3.cpp)]
 
-## <a name="cpointoperator-"></a><a name="operator_add_eq"></a>CPoint::演算子 +=
+## <a name="cpointoperator-"></a><a name="operator_add_eq"></a> CPoint:: operator + =
 
-最初のオーバーロードは、 にサイズ`CPoint`を追加します。
+最初のオーバーロードは、にサイズを追加し `CPoint` ます。
 
 ```cpp
 void operator+=(SIZE size) throw();
@@ -217,26 +218,26 @@ void operator+=(POINT point) throw();
 ### <a name="parameters"></a>パラメーター
 
 *size*<br/>
-[SIZE](/windows/win32/api/windef/ns-windef-size)構造体または[CSize](../../atl-mfc-shared/reference/csize-class.md)オブジェクトを格納します。
+[サイズ](/windows/win32/api/windef/ns-windef-size)構造体または[CSize](../../atl-mfc-shared/reference/csize-class.md)オブジェクトを格納します。
 
-*ポイント*<br/>
-[POINT](/windows/win32/api/windef/ns-windef-point)構造体または[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)オブジェクトを格納します。
+*視点*<br/>
+[POINT](/windows/win32/api/windef/ns-windef-point)構造体または[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)オブジェクトが含まれています。
 
 ### <a name="remarks"></a>解説
 
-2 番目のオーバーロードは、ポイント`CPoint`を .
+2番目のオーバーロードは、に点を追加し `CPoint` ます。
 
-どちらの`x`場合も、右側のオペランドの ( または`cx`) メンバーを の`x`メンバーに追加`CPoint`し、 のメンバーに`y`右側の`cy`オペランドの ( または ) メンバー`y`を追加することで`CPoint`、追加を行います。
+どちらの場合も、 `x` `cx` 右側のオペランドの (または) メンバーをのメンバーに追加 `x` し、右側の `CPoint` `y` オペランドの (または) メンバー `cy` をのメンバーに追加 `y` `CPoint` することによって、加算が行われます。
 
-たとえば、変数を`CPoint(5, -7)`含む`CPoint(30, 40)`変数に追加すると、変数が`CPoint(35, 33)`に変更されます。
+たとえば、を含む変数にを追加すると、 `CPoint(5, -7)` `CPoint(30, 40)` 変数がに変更され `CPoint(35, 33)` ます。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_ATLMFC_Utilities#31](../../atl-mfc-shared/codesnippet/cpp/cpoint-class_4.cpp)]
 
-## <a name="cpointoperator--"></a><a name="operator_-_eq"></a>CPoint::演算子 -=
+## <a name="cpointoperator--"></a><a name="operator_-_eq"></a> CPoint:: operator-=
 
-最初のオーバーロードでは、 からサイズが`CPoint`減算されます。
+最初のオーバーロードは、からサイズを減算し `CPoint` ます。
 
 ```cpp
 void operator-=(SIZE size) throw();
@@ -246,26 +247,26 @@ void operator-=(POINT point) throw();
 ### <a name="parameters"></a>パラメーター
 
 *size*<br/>
-[SIZE](/windows/win32/api/windef/ns-windef-size)構造体または[CSize](../../atl-mfc-shared/reference/csize-class.md)オブジェクトを格納します。
+[サイズ](/windows/win32/api/windef/ns-windef-size)構造体または[CSize](../../atl-mfc-shared/reference/csize-class.md)オブジェクトを格納します。
 
-*ポイント*<br/>
-[POINT](/windows/win32/api/windef/ns-windef-point)構造体または[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)オブジェクトを格納します。
+*視点*<br/>
+[POINT](/windows/win32/api/windef/ns-windef-point)構造体または[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)オブジェクトが含まれています。
 
 ### <a name="remarks"></a>解説
 
-2 番目のオーバーロードでは、 から`CPoint`ポイントが減算されます。
+2番目のオーバーロードは、から点を減算し `CPoint` ます。
 
-どちらの場合も`x`、右オペランドの ( または`cx`) メンバーをの`x`メンバーから減算`CPoint`し、 のメンバーから右側のオペランドの`y`(`cy`または ) メンバーを減算することによって`y`減算が`CPoint`行われます。
+どちらの場合も、減算を行うには `x` 、の `cx` メンバーから右側のオペランドの (または) メンバーを減算し、の `x` `CPoint` `y` `cy` メンバーから右側のオペランドの (または) メンバーを減算し `y` `CPoint` ます。
 
-たとえば、変数を`CPoint(5, -7)`含む`CPoint(30, 40)`変数からを減算すると、変数`CPoint(25, 47)`が に変更されます。
+たとえば、 `CPoint(5, -7)` を含む変数からを減算すると、 `CPoint(30, 40)` 変数がに変更され `CPoint(25, 47)` ます。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_ATLMFC_Utilities#32](../../atl-mfc-shared/codesnippet/cpp/cpoint-class_5.cpp)]
 
-## <a name="cpointoperator-"></a><a name="operator_add"></a>CPoint::演算子 +
+## <a name="cpointoperator-"></a><a name="operator_add"></a> CPoint:: operator +
 
-この演算子は、`CPoint``CPoint`または`CSize`オブジェクトでオフセットするか、 によって`CRect`オフセット`CPoint`を行う場合に使用します。
+この演算子は、 `CPoint` `CPoint` オブジェクトまたはオブジェクトによるオフセット `CSize` 、またはによるのオフセットに使用し `CRect` `CPoint` ます。
 
 ```
 CPoint operator+(SIZE size) const throw();
@@ -276,31 +277,31 @@ CRect operator+(const RECT* lpRect) const throw();
 ### <a name="parameters"></a>パラメーター
 
 *size*<br/>
-[SIZE](/windows/win32/api/windef/ns-windef-size)構造体または[CSize](../../atl-mfc-shared/reference/csize-class.md)オブジェクトを格納します。
+[サイズ](/windows/win32/api/windef/ns-windef-size)構造体または[CSize](../../atl-mfc-shared/reference/csize-class.md)オブジェクトを格納します。
 
-*ポイント*<br/>
-[POINT](/windows/win32/api/windef/ns-windef-point)構造体または[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)オブジェクトを格納します。
+*視点*<br/>
+[POINT](/windows/win32/api/windef/ns-windef-point)構造体または[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)オブジェクトが含まれています。
 
-*Lprect*<br/>
+*lpRect*<br/>
 [RECT](/windows/win32/api/windef/ns-windef-rect)構造体または[CRect](../../atl-mfc-shared/reference/crect-class.md)オブジェクトへのポインターを格納します。
 
 ### <a name="return-value"></a>戻り値
 
-サイズ`CPoint`によってオフセットされる、ポイントによってオフセットされる`CPoint`、または点による`CRect`オフセット。
+`CPoint`サイズでオフセットされる、 `CPoint` ポイントでオフセットされる、または `CRect` 点によるオフセットを表す。
 
 ### <a name="remarks"></a>解説
 
-たとえば、最初の 2 つのオーバーロードのいずれかを使用してポイントまたはサイズ`CPoint(25, -19)``CPoint(15, 5)``CSize(15, 5)`でポイントをオフセットすると、値`CPoint(40, -14)`が返されます。
+たとえば、最初の2つのオーバーロードのいずれかを使用してポイントを `CPoint(25, -19)` ポイントまたはサイズでオフセットすると、 `CPoint(15, 5)` `CSize(15, 5)` 値が返さ `CPoint(40, -14)` れます。
 
-ポイントに四角形を追加すると、ポイントで指定された`x`値とによって`y`オフセットされた後の四角形が返されます。 たとえば、最後のオーバーロードを使用して、ポイント`CRect(125, 219, 325, 419)``CPoint(25, -19)`によって四角形をオフセット`CRect(150, 200, 350, 400)`すると、 は返されます。
+点に四角形を追加する `x` と、 `y` ポイントに指定されたおよびの値によってオフセットされた後、四角形が返されます。 たとえば、最後のオーバーロードを使用して、ある点によって四角形をオフセットすると、が `CRect(125, 219, 325, 419)` `CPoint(25, -19)` 返さ `CRect(150, 200, 350, 400)` れます。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_ATLMFC_Utilities#33](../../atl-mfc-shared/codesnippet/cpp/cpoint-class_6.cpp)]
 
-## <a name="cpointoperator--"></a><a name="operator_-"></a>CPoint::演算子 -
+## <a name="cpointoperator--"></a><a name="operator_-"></a> CPoint:: operator-
 
-から a`CPoint`または`CSize`オブジェクトを減算するには、最初の`CPoint`2 つのオーバーロードのいずれかを使用します。
+最初の2つのオーバーロードのいずれかを使用して、 `CPoint` またはオブジェクトをから減算し `CSize` `CPoint` ます。
 
 ```
 CSize operator-(POINT point) const throw();
@@ -311,30 +312,30 @@ CPoint operator-() const throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*ポイント*<br/>
+*視点*<br/>
 [POINT](/windows/win32/api/windef/ns-windef-point)構造体または[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)オブジェクト。
 
 *size*<br/>
-[SIZE](/windows/win32/api/windef/ns-windef-size)構造体または[CSize](../../atl-mfc-shared/reference/csize-class.md)オブジェクト。
+[サイズ](/windows/win32/api/windef/ns-windef-size)構造体または[CSize](../../atl-mfc-shared/reference/csize-class.md)オブジェクト。
 
-*Lprect*<br/>
+*lpRect*<br/>
 [RECT](/windows/win32/api/windef/ns-windef-rect)構造体または[CRect](../../atl-mfc-shared/reference/crect-class.md)オブジェクトへのポインター。
 
 ### <a name="return-value"></a>戻り値
 
-A`CSize`は 2 つのポイントの差`CPoint`、サイズの否定によってオフセットされる、`CRect`ポイントの否定によってオフセットされる、またはポイントの否定である。 `CPoint`
+2つの点の差である、 `CSize` `CPoint` サイズの否定によってオフセットされる、 `CRect` 点の否定によってオフセットされる、または `CPoint` 点の否定である。
 
 ### <a name="remarks"></a>解説
 
-3 番目のオーバーロードは`CRect`、 の否定によって`CPoint`a をオフセットします。 最後に、単項演算子を使用して否定`CPoint`します。
+3番目のオーバーロードは、 `CRect` の否定によってをオフセットし `CPoint` ます。 最後に、単項演算子を使用してを否定 `CPoint` します。
 
-たとえば、最初のオーバーロードを使用して 2 つの点と`CPoint(25, -19)`戻`CPoint(15, 5)`り`CSize(10, -24)`値の差を見つけるとします。
+たとえば、最初のオーバーロードを使用して2つの点の差を検出し、 `CPoint(25, -19)` `CPoint(15, 5)` を返し `CSize(10, -24)` ます。
 
-`CSize`から`CPoint`を減算すると、上記と同じ計算が行`CPoint`われますが、オブジェクト`CSize`ではなくオブジェクトを返します。 たとえば、2 番目のオーバーロードを使用して、ポイント`CPoint(25, -19)`とサイズ`CSize(15, 5)`の差を見`CPoint(10, -24)`つけると、返されます。
+からを減算する `CSize` `CPoint` と、上記と同じ計算が行われますが、オブジェクトではなくオブジェクトが返され `CPoint` `CSize` ます。 たとえば、2番目のオーバーロードを使用して、ポイント `CPoint(25, -19)` とサイズの差を求め `CSize(15, 5)` `CPoint(10, -24)` ます。
 
-ポイントから四角形を引いた場合、そのポイントで指定された値`x`と`y`の負の値によって四角形がオフセットされます。 たとえば、最後のオーバーロードを使用して、ポイント`CRect(125, 200, 325, 400)``CPoint(25, -19)`によって四角形をオフセット`CRect(100, 219, 300, 419)`すると、 は返されます。
+点から四角形を減算する `x` と、 `y` ポイントで指定された値と値の否定によって四角形のオフセットが返されます。 たとえば、最後のオーバーロードを使用して、四角形をポイントでオフセットすると、が `CRect(125, 200, 325, 400)` `CPoint(25, -19)` 返さ `CRect(100, 219, 300, 419)` れます。
 
-単項演算子を使用して、ポイントを否定します。 たとえば、単項演算子を使用してポイント`CPoint(25, -19)`を返`CPoint(-25, 19)`すなどです。
+単項演算子を使用して、点を否定します。 たとえば、単項演算子をポイントと共に使用すると、が `CPoint(25, -19)` 返さ `CPoint(-25, 19)` れます。
 
 ### <a name="example"></a>例
 
@@ -342,8 +343,8 @@ A`CSize`は 2 つのポイントの差`CPoint`、サイズの否定によって�
 
 ## <a name="see-also"></a>関連項目
 
-[MDI のサンプル](../../overview/visual-cpp-samples.md)<br/>
-[階層グラフ](../../mfc/hierarchy-chart.md)<br/>
-[ポイント構造](/windows/win32/api/windef/ns-windef-point)<br/>
+[MFC のサンプル MDI](../../overview/visual-cpp-samples.md)<br/>
+[階層図](../../mfc/hierarchy-chart.md)<br/>
+[POINT 構造体](/windows/win32/api/windef/ns-windef-point)<br/>
 [CRect クラス](../../atl-mfc-shared/reference/crect-class.md)<br/>
 [CSize クラス](../../atl-mfc-shared/reference/csize-class.md)

@@ -1,34 +1,35 @@
 ---
+description: 詳細については、「コントロールへのプロパティの追加 (ATL チュートリアル、パート 3)」を参照してください。
 title: コントロールへのプロパティの追加 (ATL チュートリアル、パート 3)
 ms.custom: get-started-article
 ms.date: 09/26/2018
 ms.assetid: f775fe34-103b-4f07-9999-400e987ee030
-ms.openlocfilehash: c5f71880f780e793cd77eb5a7571d31de4a8d01a
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 22a44b6878afd6d51fb396d8f02a60e93436cf05
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87219002"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97166331"
 ---
 # <a name="adding-a-property-to-the-control-atl-tutorial-part-3"></a>コントロールへのプロパティの追加 (ATL チュートリアル、パート 3)
 
-`IPolyCtl`は、コントロールのカスタムメソッドとプロパティを含むインターフェイスであり、プロパティを追加します。
+`IPolyCtl` は、コントロールのカスタムメソッドとプロパティを含むインターフェイスであり、プロパティを追加します。
 
 ### <a name="to-add-the-property-definitions-to-your-project"></a>プロパティ定義をプロジェクトに追加するには
 
-1. **クラスビュー**で、分岐を展開し `Polygon` ます。
+1. **クラスビュー** で、分岐を展開し `Polygon` ます。
 
 1. を右クリック `IPolyCtl` します。
 
-1. ショートカットメニューの [**追加**] をクリックし、[**プロパティの追加**] をクリックします。 **プロパティの追加**ウィザードが表示されます。
+1. ショートカットメニューの [ **追加**] をクリックし、[ **プロパティの追加**] をクリックします。 **プロパティの追加** ウィザードが表示されます。
 
-1. `Sides`**プロパティ名**として「」と入力します。
+1. `Sides`**プロパティ名** として「」と入力します。
 
-1. **プロパティの種類**のドロップダウンリストで、[] を選択し **`short`** ます。
+1. **プロパティの種類** のドロップダウンリストで、[] を選択し **`short`** ます。
 
 1. [ **OK** ] をクリックして、プロパティの追加を完了します。
 
-1. **ソリューションエクスプローラー**から、Polygon を開き、インターフェイスの末尾にある次の行を置き換え `IPolyCtl : IDispatch` ます。
+1. **ソリューションエクスプローラー** から、Polygon を開き、インターフェイスの末尾にある次の行を置き換え `IPolyCtl : IDispatch` ます。
 
     ```cpp
     short get_Sides();
@@ -42,7 +43,7 @@ ms.locfileid: "87219002"
     [propput, id(1), helpstring("property Sides")] HRESULT Sides([in] short newVal);
     ```
 
-1. **ソリューションエクスプローラー**から polyctl.htm を開き、の定義の後に次の行を追加し `m_clrFillColor` ます。
+1. **ソリューションエクスプローラー** から polyctl.htm を開き、の定義の後に次の行を追加し `m_clrFillColor` ます。
 
     [!code-cpp[NVC_ATL_Windowing#44](../atl/codesnippet/cpp/adding-a-property-to-the-control-atl-tutorial-part-3_1.h)]
 

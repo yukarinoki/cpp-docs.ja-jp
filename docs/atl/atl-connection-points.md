@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: ATL コネクションポイント'
 title: ATL コネクション ポイント
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - ATL, connection points
 - connection points [C++], about connection points
 ms.assetid: 17d76165-5f83-4f95-b36d-483821c247a1
-ms.openlocfilehash: df69496a6d245702a9598d684b25122ca55b1e6d
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 60b9018185bea2af26407ee9d7a203148c8dc477
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69491809"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97165824"
 ---
 # <a name="atl-connection-points"></a>ATL コネクション ポイント
 
@@ -19,17 +20,17 @@ ms.locfileid: "69491809"
 
 ![接続ポイント](../atl/media/vc2zw31.gif "接続ポイント")
 
-各接続ポイントは、 [IConnectionPoint](/windows/win32/api/ocidl/nn-ocidl-iconnectionpoint)インターフェイスをサポートしています。 接続可能なオブジェクトは、 [IConnectionPointContainer](/windows/win32/api/ocidl/nn-ocidl-iconnectionpointcontainer)インターフェイスを使用してクライアントへの接続ポイントを公開します。
+各接続ポイントは、 [IConnectionPoint](/windows/win32/api/ocidl/nn-ocidl-iconnectionpoint) インターフェイスをサポートしています。 接続可能なオブジェクトは、 [IConnectionPointContainer](/windows/win32/api/ocidl/nn-ocidl-iconnectionpointcontainer) インターフェイスを使用してクライアントへの接続ポイントを公開します。
 
 ## <a name="in-this-section"></a>このセクションの内容
 
-[ATL コネクション ポイント クラス](../atl/atl-connection-point-classes.md)<br/>
+[ATL 接続ポイントクラス](../atl/atl-connection-point-classes.md)<br/>
 接続ポイントをサポートする ATL クラスを簡単に説明します。
 
 [オブジェクトへの接続ポイントの追加](../atl/adding-connection-points-to-an-object.md)<br/>
 オブジェクトに接続ポイントを追加するためのステップについて説明します。
 
-[ATL コネクション ポイントの例](../atl/atl-connection-point-example.md)<br/>
+[ATL 接続ポイントの例](../atl/atl-connection-point-example.md)<br/>
 接続ポイントの宣言の例を示します。
 
 ## <a name="related-sections"></a>関連項目

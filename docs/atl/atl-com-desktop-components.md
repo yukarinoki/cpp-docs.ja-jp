@@ -1,24 +1,25 @@
 ---
+description: 詳細については、「ATL COM デスクトップコンポーネント」を参照してください。
 title: ATL COM デスクトップ コンポーネント
 ms.date: 10/19/2018
 helpviewer_keywords:
 - ATL, reference
 - ATL, about ATL
 ms.assetid: 291f38d1-d2de-4687-86a9-99b4fd35706c
-ms.openlocfilehash: dab865215a357a29be2ff1cd187ceb1c44af897c
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 7cf03f129c1358a0407ebc6c1413c5a8a2aef7b1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69491888"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97166019"
 ---
 # <a name="atl-com-desktop-components"></a>ATL COM デスクトップ コンポーネント
 
-ATL リファレンスでは、コンポーネントオブジェクトモデル (COM) オブジェクトのプログラミングを簡略化C++する、テンプレートベースのクラスのセットである ACTIVE TEMPLATE LIBRARY (atl) をドキュメント化しています。 COM は、Windows 上でソフトウェアコンポーネントを作成および使用するためのバイナリ仕様です。 ATL を最大限に活用するには、COM に関する実用的な知識を強くお勧めします。 COM の詳細については、「 [Component Object Model (com)](/windows/win32/com/component-object-model--com--portal)」を参照してください。
+ATL リファレンスでは、コンポーネントオブジェクトモデル (COM) オブジェクトのプログラミングを簡略化する、テンプレートベースの C++ クラスのセットである Active Template Library (ATL) をドキュメント化しています。 COM は、Windows 上でソフトウェアコンポーネントを作成および使用するためのバイナリ仕様です。 ATL を最大限に活用するには、COM に関する実用的な知識を強くお勧めします。 COM の詳細については、「 [Component Object Model (com)](/windows/win32/com/component-object-model--com--portal)」を参照してください。
 
 ## <a name="in-this-section"></a>このセクションの内容
 
-[ATL のクラスの概要](../atl/atl-class-overview.md)<br/>
+[ATL クラスの概要](../atl/atl-class-overview.md)<br/>
 カテゴリ別に編成された ATL クラスのリンクと簡単な説明へのリンクを示します。
 
 [ATL クラスと構造体](../atl/reference/atl-classes.md)<br/>
@@ -36,7 +37,7 @@ ATL リファレンスでは、コンポーネントオブジェクトモデル 
 [ATL Typedefs](../atl/reference/atl-typedefs.md)<br/>
 Typedef にアルファベット順に編成された参照資料を提供します
 
-[ワーカーのアーキタイプ](../atl/reference/worker-archetype.md)<br/>
+[ワーカーの原型クラス](../atl/reference/worker-archetype.md)<br/>
 ATL Worker 原型へのリンクを提供します。
 
 ## <a name="related-sections"></a>関連項目

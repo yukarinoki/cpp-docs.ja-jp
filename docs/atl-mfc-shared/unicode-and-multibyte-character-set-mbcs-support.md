@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「Unicode およびマルチバイト文字セット (MBCS) のサポート」を参照してください。
 title: 'Unicode とマルチバイト文字セット (MBCS: Multibyte Character Set) のサポート'
 ms.date: 01/09/2017
 helpviewer_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - Unicode [C++], string objects
 - strings [C++], Unicode
 - strings [C++], character set support
-ms.openlocfilehash: efa90acd169aeb8739b0bf97a5ab27026cc80cc6
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 9e9a09777e835872a5c8bc6613460478acf9be9b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88831984"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97166409"
 ---
 # <a name="unicode-and-multibyte-character-set-mbcs-support"></a>Unicode とマルチバイト文字セット (MBCS: Multibyte Character Set) のサポート
 
@@ -25,7 +26,7 @@ ms.locfileid: "88831984"
 
 - [マルチバイト文字セット (MBCS)](#mfc-support-for-mbcs-strings) **`char`** 。ロケール固有の文字セットにエンコードされた1バイト文字または2バイト文字と文字列をベースにしています。
 
-Microsoft では、すべての新規開発に MFC Unicode ライブラリを推奨しています。また、MBCS ライブラリは Visual Studio 2013 と Visual Studio 2015 で非推奨とされました。 現在のバージョンには該当しません。 Visual Studio 2017 では、MBCS の非推奨の警告が削除されました。
+Microsoft では、すべての新規開発に MFC Unicode ライブラリを推奨しています。また、MBCS ライブラリは Visual Studio 2013 と Visual Studio 2015 で非推奨とされました。 この点は変更されました。 Visual Studio 2017 では、MBCS の非推奨の警告が削除されました。
 
 ## <a name="mfc-support-for-unicode-strings"></a>MFC がサポートする Unicode 文字列
 
@@ -35,30 +36,30 @@ MFC クラスライブラリ全体では、Unicode 文字およびワイド文�
 
 :::row:::
    :::column span="":::
-      MFC*バージョン*d-u-n-s \
-      MFC*バージョン*UD。変数
-      MFCM*バージョン*d-u-n-s \
-      MFCM*バージョン*UD。変数
-      MFCS*バージョン*d-u-n-s \
-      MFCS*バージョン*UD。変数
+      MFC *バージョン* d-u-n-s \
+      MFC *バージョン* UD。変数
+      MFCM *バージョン* d-u-n-s \
+      MFCM *バージョン* UD。変数
+      MFCS *バージョン* d-u-n-s \
+      MFCS *バージョン* UD。変数
       UAFXCW.変数
       UAFXCWD.LIB
    :::column-end:::
    :::column span="":::
-      MFC*バージョン*U. .pdb \
-      MFC*バージョン*UD。PDB
-      MFCM*バージョン*u. .pdb \
-      MFCM*バージョン*UD。PDB
-      MFCS*バージョン*u. .pdb \
-      MFCS*バージョン*UD。PDB
+      MFC *バージョン* U. .pdb \
+      MFC *バージョン* UD。PDB
+      MFCM *バージョン* u. .pdb \
+      MFCM *バージョン* UD。PDB
+      MFCS *バージョン* u. .pdb \
+      MFCS *バージョン* UD。PDB
       UAFXCW.PDB
       UAFXCWD.PDB
    :::column-end:::
    :::column span="":::
-      MFC*バージョン*U.DLL \
-      MFC*バージョン*UD.DLL \
-      MFCM*バージョン*U.DLL \
-      MFCM*バージョン*UD.DLL
+      MFC *バージョン* U.DLL \
+      MFC *バージョン* UD.DLL \
+      MFCM *バージョン* U.DLL \
+      MFCM *バージョン* UD.DLL
    :::column-end:::
 :::row-end:::
 
@@ -101,7 +102,7 @@ DBCS では、文字列の中に任意の ANSI の 1 バイト文字と 2 バイ
 
 `CString` のメンバー関数は、特別な "汎用テキスト" バージョンの C ランタイム ライブラリ関数を使用します。つまり、Unicode 対応の関数を使用します。 したがって、たとえば、`CString` のメンバー関数が通常 `strcmp` を呼び出す場所では、代わりに "汎用テキスト" 関数 `_tcscmp` を呼び出します。 シンボル _MBCS および _UNICODE の定義方法に応じて、は次のようにマップされ `_tcscmp` ます。
 
-|記号|関数|
+|シンボル|機能|
 |-|-|
 |_MBCS が定義されている場合|`_mbscmp`|
 |_UNICODE が定義されている場合|`wcscmp`|
@@ -110,9 +111,9 @@ DBCS では、文字列の中に任意の ANSI の 1 バイト文字と 2 バイ
 > [!NOTE]
 > シンボル _MBCS と _UNICODE は相互に排他的です。
 
-すべてのランタイム文字列処理ルーチンの汎用テキスト関数のマッピングについては、「 [C ランタイムライブラリリファレンス](../c-runtime-library/c-run-time-library-reference.md)」で説明されています。 一覧については、「 [国際化](../c-runtime-library/internationalization.md)」を参照してください。
+すべてのランタイム文字列処理ルーチンの汎用テキスト関数のマッピングについては、「 [C Run-Time ライブラリリファレンス](../c-runtime-library/c-run-time-library-reference.md)」で説明されています。 一覧については、「 [国際化](../c-runtime-library/internationalization.md)」を参照してください。
 
-同様に、 `CString` ジェネリックデータ型のマッピングを使用してメソッドが実装されます。 MBCS と Unicode の両方を有効にするには、MFC では、またはの場合は TCHAR、const char またはの場合は LPCTSTR を使用 **`char`** **`wchar_t`** **`char`** <strong>\*</strong> `wchar_t*` し**const char** <strong>\*</strong> `const wchar_t*` ます。 これによって、MBCS または Unicode への正しいマッピングが確保されます。
+同様に、 `CString` ジェネリックデータ型のマッピングを使用してメソッドが実装されます。 MBCS と Unicode の両方を有効にするには、MFC では、またはの場合は TCHAR、const char またはの場合は LPCTSTR を使用 **`char`** **`wchar_t`** **`char`** <strong>\*</strong> `wchar_t*` し <strong>\*</strong> `const wchar_t*` ます。 これによって、MBCS または Unicode への正しいマッピングが確保されます。
 
 ## <a name="see-also"></a>関連項目
 

@@ -1,31 +1,32 @@
 ---
+description: '詳細情報: ATL コレクションと列挙子クラス'
 title: ATL コレクションと列挙子クラス
 ms.date: 11/04/2016
 helpviewer_keywords:
 - enumerators, ATL classes
 - collection classes, ATL
 ms.assetid: 6818db73-7094-48d8-a0ca-18147beec362
-ms.openlocfilehash: b1ab9a160b01ea278d162a515e5121054bf398f7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b1f30aabb4908b0299a927f92a6d5ee4e9370a09
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62252326"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97166045"
 ---
 # <a name="atl-collection-and-enumerator-classes"></a>ATL コレクションと列挙子クラス
 
-ATL には、コレクションと列挙子を実装するための次のクラスが用意されています。
+ATL には、コレクションと列挙子の実装に役立つ次のクラスが用意されています。
 
 |クラス|説明|
 |-----------|-----------------|
-|[ICollectionOnSTLImpl](../atl/reference/icollectiononstlimpl-class.md)|コレクション インターフェイスの実装|
-|[IEnumOnSTLImpl](../atl/reference/ienumonstlimpl-class.md)|列挙子インターフェイスの実装 (C++ 標準ライブラリと互換性のあるコンテナーに格納されたデータを想定)|
-|[CComEnumImpl](../atl/reference/ccomenumimpl-class.md)|列挙子インターフェイスの実装 (配列に格納されたデータを想定)|
-|[CComEnumOnSTL](../atl/reference/ccomenumonstl-class.md)|列挙子オブジェクトの実装 (を使用して`IEnumOnSTLImpl`)|
-|[CComEnum](../atl/reference/ccomenum-class.md)|列挙子オブジェクトの実装 (を使用して`CComEnumImpl`)|
-|[_Copy](../atl/atl-copy-policy-classes.md)|コピー ポリシー クラス|
-|[_CopyInterface](../atl/atl-copy-policy-classes.md)|コピー ポリシー クラス|
-|[CAdapt](../atl/reference/cadapt-class.md)|アダプター クラス (非表示に**演算子 (& a)** 許可`CComPtr`、 `CComQIPtr`、および`CComBSTR`C++ 標準ライブラリ コンテナーに格納される)|
+|[ICollectionOnSTLImpl](../atl/reference/icollectiononstlimpl-class.md)|コレクションインターフェイスの実装|
+|[IEnumOnSTLImpl](../atl/reference/ienumonstlimpl-class.md)|列挙子インターフェイスの実装 (C++ 標準ライブラリと互換性のあるコンテナーに格納されているデータを想定)|
+|[CComEnumImpl](../atl/reference/ccomenumimpl-class.md)|列挙子インターフェイスの実装 (配列に格納されているデータを想定)|
+|[CComEnumOnSTL](../atl/reference/ccomenumonstl-class.md)|列挙子オブジェクトの実装 (を使用 `IEnumOnSTLImpl` )|
+|[CComEnum](../atl/reference/ccomenum-class.md)|列挙子オブジェクトの実装 (を使用 `CComEnumImpl` )|
+|[_Copy](../atl/atl-copy-policy-classes.md)|ポリシークラスのコピー|
+|[_CopyInterface](../atl/atl-copy-policy-classes.md)|ポリシークラスのコピー|
+|[CAdapt](../atl/reference/cadapt-class.md)|Adapter クラス (、  、 `CComPtr` `CComQIPtr` および `CComBSTR` を C++ 標準ライブラリコンテナーに格納できるようにするために、演算子 &を非表示にします)|
 
 ## <a name="see-also"></a>関連項目
 
