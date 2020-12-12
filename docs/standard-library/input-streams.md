@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「入力ストリーム」を参照してください。
 title: 入力ストリーム
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - input streams
 - input stream objects
 ms.assetid: f14d8954-8f8c-4c3c-8b99-14ddb3683f94
-ms.openlocfilehash: 5dc3fa0af76f73897fe1181d944eb34c8d05bc64
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: f7e6d41b904b2d28893637681e3c751d24aef441
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68449323"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97323963"
 ---
 # <a name="input-streams"></a>入力ストリーム
 
@@ -26,13 +27,13 @@ ms.locfileid: "68449323"
 
 ## <a name="in-this-section"></a>このセクションの内容
 
-[入力ストリーム オブジェクトの構築](../standard-library/constructing-input-stream-objects.md)
+[入力ストリームオブジェクトの構築](../standard-library/constructing-input-stream-objects.md)
 
 [抽出演算子の使用](../standard-library/using-extraction-operators.md)
 
 [抽出エラーのテスト](../standard-library/testing-for-extraction-errors.md)
 
-[入力ストリーム マニピュレーター](../standard-library/input-stream-manipulators.md)
+[入力ストリームマニピュレーター](../standard-library/input-stream-manipulators.md)
 
 [入力ストリームのメンバー関数](../standard-library/input-stream-member-functions.md)
 

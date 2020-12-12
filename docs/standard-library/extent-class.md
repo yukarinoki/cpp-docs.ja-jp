@@ -1,4 +1,5 @@
 ---
+description: '詳細: extent クラス'
 title: extent クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - extent class
 - extent
 ms.assetid: 6d16263d-90b2-4330-9ec7-b59ed898792d
-ms.openlocfilehash: 0cd53ba8537e706a68ffdcf08df998108266ad20
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: d3db49db99d2cb7a241ca3b69c48fa6bcf2cb490
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68457786"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97324387"
 ---
 # <a name="extent-class"></a>extent クラス
 
@@ -27,15 +28,15 @@ struct extent;
 
 ### <a name="parameters"></a>パラメーター
 
-*~* \
+*~*\
 照会する型。
 
 *私*\
 照会する配列の範囲。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-*Ty*が*i*次元以上の配列型である場合、型クエリは*i*で指定された次元の要素数を保持します。*Ty*が配列型ではない場合、またはランクが*I*より小さい場合、または*i*が0で*ty*が "不明`U`な範囲の配列" である場合、型クエリは値0を保持します。
+*Ty* が *i* 次元以上の配列型である場合、型クエリは *i* で指定された次元の要素数を保持します。*Ty* が配列型ではない場合、またはランクが *I* より小さい場合、または *i* が0で *ty* が "不明な範囲の配列" である場合 `U` 、型クエリは値0を保持します。
 
 ## <a name="example"></a>例
 
@@ -61,9 +62,9 @@ extent 0 == 5
 extent 1 == 10
 ```
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-**ヘッダー:** \<type_traits>
+**ヘッダー:**\<type_traits>
 
 **名前空間:** std
 

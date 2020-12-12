@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: basic_ofstream クラス'
 title: basic_ofstream クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -16,16 +17,16 @@ helpviewer_keywords:
 - std::basic_ofstream [C++], rdbuf
 - std::basic_ofstream [C++], swap
 ms.assetid: 3bcc9c51-6dfc-4844-8fcc-22ef57c9dff1
-ms.openlocfilehash: d825dbbe278325e755af6fdffe01a34ac0a4080d
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 10bb7ee14ea6b126ee907cbb8b56b3b3c31188a6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87219262"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97325668"
 ---
 # <a name="basic_ofstream-class"></a>basic_ofstream クラス
 
-要素とエンコードされたオブジェクトのストリームバッファーへの挿入を制御するオブジェクト[basic_filebuf](../standard-library/basic-filebuf-class.md)を記述します。このオブジェクトは、 <  `Elem` 型の要素を使用して、 `Tr` 文字の `Elem` 特徴がクラスによって決定される> basic_filebuf `Tr` ます。
+要素とエンコードされたオブジェクトのストリームバッファーへの挿入を制御するオブジェクト[](../standard-library/basic-filebuf-class.md)を記述します。このオブジェクトは、 <  `Elem` 型の要素を使用して、 `Tr` 文字の `Elem` 特徴がクラスによって決定される> basic_filebuf `Tr` ます。
 
 ## <a name="syntax"></a>構文
 
@@ -80,7 +81,7 @@ int main(int argc, char **argv)
 
 |メンバー関数|説明|
 |-|-|
-|[ok](#close)|ファイルを閉じます。|
+|[close](#close)|ファイルを閉じます。|
 |[is_open](#is_open)|ファイルが開いているかどうかを判断します。|
 |[open](#open)|ファイルを開きます。|
 |[rdbuf](#rdbuf)|格納されたストリーム バッファーのアドレスを返します。|
@@ -92,13 +93,13 @@ int main(int argc, char **argv)
 |-|-|
 |[operator =](#op_eq)|このストリーム オブジェクトの内容を割り当てます。 これは、`rvalue reference` が関係する移動代入で、コピーを残しません。|
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:**\<fstream>
 
 **名前空間:** std
 
-## <a name="basic_ofstreambasic_ofstream"></a><a name="basic_ofstream"></a>basic_ofstream:: basic_ofstream
+## <a name="basic_ofstreambasic_ofstream"></a><a name="basic_ofstream"></a> basic_ofstream:: basic_ofstream
 
 `basic_ofstream` 型のオブジェクトを作成します。
 
@@ -137,9 +138,9 @@ basic_ofstream(
 
 最初のコンストラクターは[basic_ostream](../standard-library/basic-ostream-class.md)() を呼び出すことによって基底クラスを初期化し `sb` `sb` ます。は、 [basic_filebuf](../standard-library/basic-filebuf-class.md)クラスの格納されているオブジェクトで、 <  `Elem` `Tr`> です。 また、`basic_filebuf`< `Elem`, `Tr`> を呼び出すことで `sb` の初期化もします。
 
-2 番目と 3 番目のコンストラクターは、`basic_ostream`( **sb**) を呼び出すことで基底クラスを初期化します。 また `sb` 、を呼び出してを初期化し、> してから、を初期化し `basic_filebuf` <  `Elem` `Tr` `sb` ます。 [open](../standard-library/basic-filebuf-class.md#open)( `_Filename` 、&#124; `_Mode` ) を開き `ios_base::out` ます。 後者の関数が null ポインターを返す場合、コンストラクターは[setstate](../standard-library/basic-ios-class.md#setstate)( `failbit` ) を呼び出します。
+2 番目と 3 番目のコンストラクターは、`basic_ostream`( **sb**) を呼び出すことで基底クラスを初期化します。 また `sb` 、を呼び出してを初期化し、> してから、を初期化し `basic_filebuf` <  `Elem` `Tr` `sb` ます。 [](../standard-library/basic-filebuf-class.md#open)( `_Filename` 、&#124; `_Mode` ) を開き `ios_base::out` ます。 後者の関数が null ポインターを返す場合、コンストラクターは [setstate](../standard-library/basic-ios-class.md#setstate)( `failbit` ) を呼び出します。
 
-4 番目のコンストラクターは、copy 関数です。 右辺値参照として扱われる*right*の内容を使用してオブジェクトを初期化します。
+4 番目のコンストラクターは、copy 関数です。 右辺値参照として扱われる *right* の内容を使用してオブジェクトを初期化します。
 
 ### <a name="example"></a>例
 
@@ -163,7 +164,7 @@ int main(int argc, char **argv)
 }
 ```
 
-## <a name="basic_ofstreamclose"></a><a name="close"></a>basic_ofstream:: close
+## <a name="basic_ofstreamclose"></a><a name="close"></a> basic_ofstream:: close
 
 ファイルを閉じます。
 
@@ -179,7 +180,7 @@ void close();
 
 `close` の使用例については、「[basic_filebuf::close](../standard-library/basic-filebuf-class.md#close)」を参照してください。
 
-## <a name="basic_ofstreamis_open"></a><a name="is_open"></a>basic_ofstream:: is_open
+## <a name="basic_ofstreamis_open"></a><a name="is_open"></a> basic_ofstream:: is_open
 
 ファイルが開いているかどうかを示します。
 
@@ -217,7 +218,7 @@ int main( )
 }
 ```
 
-## <a name="basic_ofstreamopen"></a><a name="open"></a>basic_ofstream:: open
+## <a name="basic_ofstreamopen"></a><a name="open"></a> basic_ofstream:: open
 
 ファイルを開きます。
 
@@ -254,13 +255,13 @@ void open(
 
 ### <a name="remarks"></a>解説
 
-このメンバー関数は、 [rdbuf](#rdbuf) **->** [open](../standard-library/basic-filebuf-class.md#open)(_ *Filename*, &#124;) を呼び出し `_Mode` `ios_base::out` ます。 この関数が null ポインターを返す場合、関数は[setstate](../standard-library/basic-ios-class.md#setstate)( `failbit` ) を呼び出します。
+このメンバー関数は、 [rdbuf](#rdbuf) **->** [open](../standard-library/basic-filebuf-class.md#open)(_ *Filename*, &#124;) を呼び出し `_Mode` `ios_base::out` ます。 この関数が null ポインターを返す場合、関数は [setstate](../standard-library/basic-ios-class.md#setstate)( `failbit` ) を呼び出します。
 
 ### <a name="example"></a>例
 
 の使用例については、「 [basic_filebuf:: open](../standard-library/basic-filebuf-class.md#open) 」を参照してください `open` 。
 
-## <a name="basic_ofstreamoperator"></a><a name="op_eq"></a>basic_ofstream:: operator =
+## <a name="basic_ofstreamoperator"></a><a name="op_eq"></a> basic_ofstream:: operator =
 
 このストリーム オブジェクトの内容を割り当てます。 これは、`rvalue reference` が関係する移動代入で、コピーを残しません。
 
@@ -279,9 +280,9 @@ basic_ofstream& operator=(basic_ofstream&& right);
 
 ### <a name="remarks"></a>解説
 
-メンバー演算子は、右辺値参照として扱われる*right*の内容を使用して、オブジェクトの内容を置き換えます。
+メンバー演算子は、右辺値参照として扱われる *right* の内容を使用して、オブジェクトの内容を置き換えます。
 
-## <a name="basic_ofstreamrdbuf"></a><a name="rdbuf"></a>basic_ofstream:: rdbuf
+## <a name="basic_ofstreamrdbuf"></a><a name="rdbuf"></a> basic_ofstream:: rdbuf
 
 格納されたストリーム バッファーのアドレスを返します。
 
@@ -297,7 +298,7 @@ basic_filebuf<Elem, Tr> *rdbuf() const
 
 `rdbuf` の使用例については、「[basic_filebuf::close](../standard-library/basic-filebuf-class.md#close)」を参照してください。
 
-## <a name="basic_ofstreamswap"></a><a name="swap"></a>basic_ofstream:: swap
+## <a name="basic_ofstreamswap"></a><a name="swap"></a> basic_ofstream:: swap
 
 2 つの `basic_ofstream` オブジェクトの内容を交換します。
 
@@ -312,7 +313,7 @@ void swap(basic_ofstream& right);
 
 ### <a name="remarks"></a>解説
 
-このメンバー関数は、このオブジェクトの内容を*右*の内容と交換します。
+このメンバー関数は、このオブジェクトの内容を *右* の内容と交換します。
 
 ## <a name="see-also"></a>関連項目
 

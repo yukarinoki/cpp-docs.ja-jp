@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: tiled_index クラス'
 title: tiled_index クラス
 ms.date: 03/27/2019
 f1_keywords:
@@ -19,12 +20,12 @@ f1_keywords:
 helpviewer_keywords:
 - tiled_index class
 ms.assetid: 0ce2ae26-f1bb-4436-b473-a9e1b619bb38
-ms.openlocfilehash: 9d295093031eaee0a2d4dd83aa931060e6eebc07
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 072735a9f98efc522c2f054d837d3c2f89e8958b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88832271"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97325825"
 ---
 # <a name="tiled_index-class"></a>tiled_index クラス
 
@@ -95,7 +96,7 @@ class tiled_index<_Dim0, 0, 0> : public _Tiled_index_base<1>;
 
 |名前|説明|
 |----------|-----------------|
-|[tile_extent](#tile_extent)|[extent](extent-class.md) `tiled_index` テンプレート引数テンプレート引数、、およびの値を持つ extent オブジェクトを取得し `tiled_index` `_Dim0` `_Dim1` `_Dim2` ます。|
+|[tile_extent](#tile_extent)|[](extent-class.md) `tiled_index` テンプレート引数テンプレート引数、、およびの値を持つ extent オブジェクトを取得し `tiled_index` `_Dim0` `_Dim1` `_Dim2` ます。|
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -103,7 +104,7 @@ class tiled_index<_Dim0, 0, 0> : public _Tiled_index_base<1>;
 
 `tiled_index`
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** amp.h
 
@@ -260,7 +261,7 @@ const index<rank> tile_origin
 
 ## <a name="tile_extent"></a><a name="tile_extent"></a> tile_extent
 
-[extent](extent-class.md) `tiled_index` テンプレート引数テンプレート引数、、およびの値を持つ extent オブジェクトを取得し `tiled_index` `_Dim0` `_Dim1` `_Dim2` ます。
+[](extent-class.md) `tiled_index` テンプレート引数テンプレート引数、、およびの値を持つ extent オブジェクトを取得し `tiled_index` `_Dim0` `_Dim1` `_Dim2` ます。
 
 ### <a name="syntax"></a>構文
 

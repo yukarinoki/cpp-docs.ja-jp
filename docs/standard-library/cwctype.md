@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: &lt; cwctype&gt;'
 title: '&lt;cwctype&gt;'
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - cwctype header
 ms.assetid: 46476f95-b8c3-4ab2-a172-9a1be91124b7
-ms.openlocfilehash: 26fbefa7dbaf68ac559e79c702a5a7a2c31266a2
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 604cffe5acb61a90fc36e7733db01f2f92aa6155
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68450605"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97324615"
 ---
 # <a name="ltcwctypegt"></a>&lt;cwctype&gt;
 
-標準 C ライブラリ ヘッダー \<wctype.h> をインクルードし、関連する名前を `std` 名前空間に追加します。
+標準 C ライブラリヘッダーをインクルード \<wctype.h> し、関連する名前を名前空間に追加し `std` ます。
 
 ## <a name="syntax"></a>構文
 
@@ -23,7 +24,7 @@ ms.locfileid: "68450605"
 #include <cwctype>
 ```
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 このヘッダーをインクルードすると、標準 C ライブラリ ヘッダーの外部リンケージで宣言された名前が、`std` 名前空間でも宣言されます。
 
@@ -64,6 +65,6 @@ wctrans_t wctrans(const char* property);
 
 ## <a name="see-also"></a>関連項目
 
-[ヘッダー ファイル リファレンス](../standard-library/cpp-standard-library-header-files.md)\
+[ヘッダーファイルのリファレンス](../standard-library/cpp-standard-library-header-files.md)\
 [C++ 標準ライブラリの概要](../standard-library/cpp-standard-library-overview.md)\
-[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[C++ 標準ライブラリのスレッドセーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)

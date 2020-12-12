@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: is_pod クラス'
 title: is_pod クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - is_pod class
 - is_pod
 ms.assetid: d73ebdee-746b-4082-9fa4-2db71432eb0e
-ms.openlocfilehash: 1398da92890072d8aa8a6f07c61920fe3bee1776
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: b5fd263a0f17831daf7a187c4f0f32a5a635a9d5
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87212242"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97323552"
 ---
 # <a name="is_pod-class"></a>is_pod クラス
 
@@ -32,7 +33,7 @@ struct is_pod;
 
 ## <a name="remarks"></a>解説
 
-`is_pod<T>::value`**`true`** *T*型が Plain OLD Data (ポッド) であるかどうかを示します。 それ以外の場合は **`false`** です。
+`is_pod<T>::value`**`true`** *T* 型が Plain OLD Data (ポッド) であるかどうかを示します。 それ以外の場合は **`false`** です。
 
 演算型、列挙型、ポインター型、およびメンバーへのポインター型は、POD です。
 
@@ -94,7 +95,7 @@ is_pod<int> == true
 is_pod<throws> == false
 ```
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:**\<type_traits>
 

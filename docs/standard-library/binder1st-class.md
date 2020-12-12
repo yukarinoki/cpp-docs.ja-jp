@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: binder1st クラス'
 title: binder1st クラス
 ms.date: 02/21/2019
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - binder1st class
 ms.assetid: 6b8ee343-c82f-48f8-867d-06f9d1d324c0
-ms.openlocfilehash: 15b704134d47b7bf7d8857bf380c756b0b03a1b0
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 1311d598c8300f3bba4d27acdaab879cbd054696
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72688384"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97325506"
 ---
 # <a name="binder1st-class"></a>binder1st クラス
 
@@ -43,24 +44,24 @@ protected:
 
 ### <a name="parameters"></a>パラメーター
 
-*binary_fn* \
+*binary_fn*\
 単項関数オブジェクトに変換する二項関数オブジェクト。
 
-*左*\
+*左側*\
 二項関数オブジェクトの最初の引数がバインドされている値。
 
-*右*\
+*そうです*\
 調整後の二項オブジェクトが 2 つ目の引数の固定値と比較する引数の値。
 
 ## <a name="return-value"></a>戻り値
 
-二項関数オブジェクトの最初の引数を*左*の値にバインドした結果として生成される単項関数オブジェクト。
+二項関数オブジェクトの最初の引数を *左* の値にバインドした結果として生成される単項関数オブジェクト。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-クラステンプレートには `op` にバイナリ*関数オブジェクトの*コピーが格納され、`value` には*左*のコピーが格納されます。 @No__t_1 を返すように、メンバー関数 `operator()` を定義します。
+クラステンプレートには、に *binary_fn* バイナリ関数オブジェクトのコピー、 `op` およびの *左側* のコピーが格納され `value` ます。 そのメンバー関数は、 `operator()` を返すように定義さ `op(value, right)` れています。
 
-*Binary_fn*が `Operation` 型のオブジェクトで `c` が定数である場合、`bind1st(binary_fn, c)` は `binder1st<Operation>(binary_fn, c)` と同じくらい便利です。 詳細については、「 [bind1st](../standard-library/functional-functions.md#bind1st)」を参照してください。
+*Binary_fn* が型のオブジェクトで、 `Operation` `c` が定数である場合、 `bind1st(binary_fn, c)` はと同じように便利です `binder1st<Operation>(binary_fn, c)` 。 詳細については、「 [bind1st](../standard-library/functional-functions.md#bind1st)」を参照してください。
 
 ## <a name="example"></a>例
 

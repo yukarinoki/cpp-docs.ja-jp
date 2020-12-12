@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: クラスを使用して Windows 用のアプリケーションを作成する'
 title: クラスを使用した Windows アプリケーションの作成
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -9,66 +10,66 @@ helpviewer_keywords:
 - OLE applications [MFC], MFC application framework
 - database applications [MFC], creating
 ms.assetid: 73f63470-857d-43dd-9a54-b38b7be0f1b7
-ms.openlocfilehash: c8b3d7061c0ef06063d9c6993f24d23fc2e1f92e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b94155b565872b614efa291699cecbaf4770fdaa
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62411475"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97322713"
 ---
 # <a name="using-the-classes-to-write-applications-for-windows"></a>クラスを使用した Windows アプリケーションの作成
 
-これらをまとめると、Microsoft Foundation Class (MFC) ライブラリ内のクラスは、「アプリケーション フレームワーク、」Windows オペレーティング システム用のアプリケーションをビルドするを構成します。 非常に一般的なレベルでは、フレームワークは、アプリケーションのスケルトンを定義し、スケルトンに配置できる標準のユーザー インターフェイスの実装を提供します。 プログラマは、スケルトンの残りの部分を埋めるために、アプリケーションに固有のものであります。 有利なスタートは、非常に詳細なスターター アプリケーション用のファイルを作成する MFC アプリケーション ウィザードを使用して取得できます。 特定のアプリケーション ロジックを実装するのに、ユーザー インターフェイス要素を視覚的に、デザインに Microsoft Visual C リソース エディター コード、およびクラス ライブラリにそれらの要素を接続クラス ビューのコマンドを使用するとします。
+Microsoft Foundation Class (MFC) ライブラリのクラスは、Windows オペレーティングシステム用のアプリケーションをビルドする "アプリケーションフレームワーク" を構成します。 非常に一般的なレベルでは、フレームワークはアプリケーションのスケルトンを定義し、スケルトンに配置できる標準のユーザーインターフェイスの実装を提供します。 プログラマとしての仕事は、アプリケーションに固有のものであるスケルトンの残りの部分を入力することです。 MFC アプリケーションウィザードを使用して、非常に完全なスターターアプリケーションのファイルを作成することにより、先頭を取得できます。 Microsoft Visual C++ リソースエディターを使用して、ユーザーインターフェイス要素を視覚的にデザインしたり、これらの要素をコードに接続するためのコマンドをクラスビューしたり、アプリケーション固有のロジックを実装するためのクラスライブラリを作成したりします。
 
-3.0 以降、MFC フレームワークのバージョンでは、Win32 プラットフォームは、Microsoft Windows 95 などと、後でプログラミングおよび Windows NT version 3.51 以降をサポートします。 マルチ スレッド MFC Win32 のサポートが含まれます。 バージョン 1.5 を使用して*x* 16 ビットのプログラミングを行う必要がある場合。
+MFC フレームワークのバージョン3.0 以降は、Microsoft Windows 95 以降および Windows NT バージョン3.51 以降を含む Win32 プラットフォームのプログラミングをサポートしています。 MFC Win32 サポートにはマルチスレッドが含まれます。 16ビットプログラミングを行う必要がある場合は、バージョン 1.5 *x* を使用します。
 
-この一連のトピックは、アプリケーション フレームワークの大まかな概要を表示します。 アプリケーションの作成方法を構成する主要なオブジェクトについても調べます。 次の記事で取り上げるトピック間では、次のように示します。
+この記事の記事では、アプリケーションフレームワークの概要について説明します。 また、アプリケーションを構成する主要なオブジェクトとその作成方法についても説明します。 これらの記事では、次のトピックについて説明します。
 
-- [フレームワーク](../mfc/framework-mfc.md)します。
+- [フレームワーク](../mfc/framework-mfc.md)。
 
-- フレームワークと」の説明に従って、コード間の作業分担[フレームワーク上に構築](../mfc/building-on-the-framework.md)します。
+- 「 [フレームワークでの構築](../mfc/building-on-the-framework.md)」で説明されているように、フレームワークとコードの間の労力を分担します。
 
-- [アプリケーション クラス](../mfc/cwinapp-the-application-class.md)、アプリケーション レベルの機能をカプセル化します。
+- アプリケーションクラス。アプリケーションレベル[の](../mfc/cwinapp-the-application-class.md)機能をカプセル化します。
 
-- どの[ドキュメント テンプレート](../mfc/document-templates-and-the-document-view-creation-process.md)フレーム ウィンドウの作成し、ドキュメントと関連付けられたビューを管理します。
+- [ドキュメントテンプレート](../mfc/document-templates-and-the-document-view-creation-process.md)で、ドキュメントとそれに関連付けられているビューおよびフレームウィンドウを作成および管理する方法を説明します。
 
-- クラス[CWnd](../mfc/window-objects.md)、すべての windows のルートの基本クラス。
+- すべてのウィンドウのルート基本クラスである [CWnd](../mfc/window-objects.md)クラス。
 
-- [グラフィック オブジェクト](../mfc/graphic-objects.md)ペンとブラシなど。
+- ペンやブラシなどの[グラフィックオブジェクト](../mfc/graphic-objects.md)。
 
-フレームワークの他の部分は次のとおりです。
+フレームワークのその他の部分は次のとおりです。
 
-- [ウィンドウ オブジェクト:概要](../mfc/window-objects.md)
+- [ウィンドウオブジェクト: 概要](../mfc/window-objects.md)
 
-- [メッセージの処理とのマッピング](../mfc/message-handling-and-mapping.md)
+- [メッセージの処理とマップ](../mfc/message-handling-and-mapping.md)
 
-- [CObject、ルートの基本クラス (mfc の)](../mfc/using-cobject.md)
+- [CObject (MFC のルート基底クラス)](../mfc/using-cobject.md)
 
-- [ドキュメント/ビュー アーキテクチャ](../mfc/document-view-architecture.md)
+- [ドキュメント/ビューアーキテクチャ](../mfc/document-view-architecture.md)
 
-- [ダイアログ ボックス](../mfc/dialog-boxes.md)
+- [ダイアログボックス](../mfc/dialog-boxes.md)
 
 - [コントロール](../mfc/controls-mfc.md)
 
-- [コントロール バー](../mfc/control-bars.md)
+- [コントロールバー](../mfc/control-bars.md)
 
-- [OLE](../mfc/ole-in-mfc.md)
+- [OLE●ole○](../mfc/ole-in-mfc.md)
 
 - [メモリ管理](../mfc/memory-management.md)
 
-   Windows オペレーティング システムのアプリケーションを作成する利点を渡すと、MFC もは、具体的には OLE リンクと埋め込みのテクノロジを使用するアプリケーションの記述が簡単です。 行うことができます、アプリケーション、OLE ビジュアル編集コンテナー、OLE ビジュアル編集サーバー、またはその両方とオートメーションを追加するには、他のアプリケーションは、アプリケーションからオブジェクトを使用したり、でもリモートでドライブようにします。
+   MFC では、Windows オペレーティングシステム用のアプリケーションを作成することができるだけでなく、OLE リンクおよび埋め込みテクノロジを使用するアプリケーションを簡単に記述できるようになりました。 アプリケーションを OLE ビジュアル編集コンテナー、OLE ビジュアル編集サーバー、またはその両方にすることができます。また、他のアプリケーションがアプリケーションのオブジェクトを使用できるように自動化を追加したり、リモートでドライブを使用したりすることもできます。
 
 - [MFC ActiveX コントロール](../mfc/mfc-activex-controls.md)
 
-   OLE コントロールの開発キット (CDK) が完全に統合フレームワークです。 ここでは、mfc ActiveX コントロールの開発の概要を提供します。 (ActiveX コントロールが以前の OLE コントロール。)
+   OLE コントロール開発キット (CDK) がフレームワークと完全に統合されました。 この記事ファミリでは、MFC を使用した ActiveX コントロール開発の概要を説明します。 (ActiveX コントロールは、以前は OLE コントロールと呼ばれていました)。
 
-- [データベースのプログラミング](../data/data-access-programming-mfc-atl.md)
+- [データベースプログラミング](../data/data-access-programming-mfc-atl.md)
 
-   MFC では、書き込みのデータ アクセスを簡略化するデータベース クラスの 2 つのセットも用意されてアプリケーション。 ODBC データベース クラスを使用して、Open Database Connectivity (ODBC) ドライバーを通じてデータベースに接続する、テーブルからレコードを選択してレコード情報を表示する画面上のフォームです。 データ アクセス オブジェクト (DAO) クラスを使用して、扱えるデータベース、Microsoft Jet データベース エンジンまたは ODBC データ ソースを含む、外部の (非 Jet) データ ソースを使用します。
+   MFC には、データアクセスアプリケーションの作成を簡略化する2セットのデータベースクラスも用意されています。 ODBC データベースクラスを使用すると、Open Database Connectivity (ODBC) ドライバーを使用してデータベースに接続し、テーブルからレコードを選択して、レコード情報を画面上の形式で表示できます。 データアクセスオブジェクト (DAO) クラスを使用すると、Microsoft Jet データベースエンジンまたは ODBC データソースを含む外部 (Jet 以外の) データソースを使用してデータベースを操作できます。
 
-   さらに、MFC が Unicode を使用するアプリケーションの記述を完全に有効にし、マルチバイト文字セット (MBCS)、具体的には 2 バイト文字セット (DBCS)。
+   さらに、MFC は、Unicode およびマルチバイト文字セット (MBCS) を使用するアプリケーション (特に2バイト文字セット (DBCS)) を記述するために完全に有効になっています。
 
-MFC のドキュメントを一般的なガイドは、次を参照してください。 [MFC の一般的なトピック](../mfc/general-mfc-topics.md)します。
+MFC ドキュメントの一般的なガイドについては、「 [mfc の一般的なトピック](../mfc/general-mfc-topics.md)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

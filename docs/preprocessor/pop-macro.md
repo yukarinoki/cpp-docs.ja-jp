@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: pop_macro プラグマ'
 title: pop_macro プラグマ
 ms.date: 08/29/2019
 f1_keywords:
@@ -8,24 +9,24 @@ helpviewer_keywords:
 - pop_macro pragma
 - pragmas, pop_macro
 ms.assetid: 3b5489d0-69ba-4c66-b572-2748af0f12bb
-ms.openlocfilehash: f9e097d139e1df5c9ba09ad9ca99f0cfe6bbbfb3
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 395e107586b9534b2e9db616f30ddd88b15b93ec
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70218285"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97325707"
 ---
 # <a name="pop_macro-pragma"></a>pop_macro プラグマ
 
-*マクロ名*マクロの値を、このマクロのスタックの一番上にある値に設定します。
+*マクロ名* マクロの値を、このマクロのスタックの一番上にある値に設定します。
 
 ## <a name="syntax"></a>構文
 
 > **#pragma pop_macro (** "*マクロ名*" **)**
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-**Pop_macro**を実行する前に、 [push_macro](../preprocessor/push-macro.md)の*マクロ名*を発行する必要があります。
+**Pop_macro** を実行する前に、*マクロ名* の [push_macro](../preprocessor/push-macro.md)を発行する必要があります。
 
 ## <a name="example"></a>例
 
@@ -63,4 +64,4 @@ int main() {
 
 ## <a name="see-also"></a>関連項目
 
-[プラグマディレクティブと __ プラグマキーワード](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+[プラグマ ディレクティブと __pragma キーワード](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

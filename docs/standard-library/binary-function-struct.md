@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: binary_function 構造体'
 title: binary_function 構造体
 ms.date: 02/21/2019
 f1_keywords:
@@ -6,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - binary_function class
 ms.assetid: 79b6d53d-644c-4add-b0ba-3a5f40f69c60
-ms.openlocfilehash: acbcb7496b7e6b37af61c5eb7a113c77855e6928
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 3a38579cc5026903dc7c3b7743afd81773b895b7
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68243396"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97325546"
 ---
-# <a name="binaryfunction-struct"></a>binary_function 構造体
+# <a name="binary_function-struct"></a>binary_function 構造体
 
-二項関数オブジェクトを提供する派生クラスによって継承される可能性がある型を定義する空の基底構造体。 C++ 11、c++ 17 では削除では、非推奨とされます。
+二項関数オブジェクトを提供する派生クラスによって継承される可能性がある型を定義する空の基底構造体。 C++ 11 では非推奨となりました。 C++ 17 では削除されています。
 
 ## <a name="syntax"></a>構文
 
@@ -27,11 +28,11 @@ struct binary_function {
 };
 ```
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 このテンプレート構造体は、フォームのメンバー関数を定義するクラスの基本として機能します。
 
-> *result_type* * * operator() (const * * <em>first_argument_type</em> **&, const** <em>second_argument_type</em> **(& a)) 定数**
+> *result_type* * * operator () (const * * <em>first_argument_type</em> **&、const** <em>second_argument_type</em> **&) const**
 
 このような二項関数はすべて、最初の引数の型として *first_argument_type* を参照し、2 つ目の引数の型として *second_argument_type* を参照し、戻り値の型として *result_type* を参照できます。
 

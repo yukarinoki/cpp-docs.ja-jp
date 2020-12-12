@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「アプリケーションの種類、MFC アプリケーションウィザード」を参照してください。
 title: '[アプリケーションの種類] (MFC アプリケーション ウィザード)'
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,70 +7,70 @@ f1_keywords:
 helpviewer_keywords:
 - static libraries, MFC
 ms.assetid: c3f62b0e-3f13-42c5-9859-d3890d0c3e1d
-ms.openlocfilehash: c6d8a57c577dad20ac7bb8f579220a77d2a34850
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
+ms.openlocfilehash: 178e9c1319b17e356273fc3e59d2133c8d4aa54c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65708265"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97322786"
 ---
 # <a name="application-type-mfc-application-wizard"></a>[アプリケーションの種類] (MFC アプリケーション ウィザード)
 
-このページを使用して、 [MFC アプリケーション ウィザード](../../mfc/reference/mfc-application-wizard.md)を設計し、新しい MFC アプリケーションへの基本的な機能を追加します。
+[Mfc アプリケーションウィザード](../../mfc/reference/mfc-application-wizard.md)のこのページを使用すると、基本的な機能をデザインし、新しい mfc アプリケーションに追加できます。
 
 - **アプリケーションの種類**
 
-  アプリケーションで作成するドキュメントのサポートの種類を指定します。 選択したアプリケーションの種類は、アプリケーションで利用可能なユーザー インターフェイスのオプションを決定します。 参照してください[ユーザー インターフェイスの機能には、MFC アプリケーション ウィザード](../../mfc/reference/user-interface-features-mfc-application-wizard.md)詳細についてはします。
+  アプリケーションで作成するドキュメントサポートの種類を指定します。 アプリケーションで使用できるユーザーインターフェイスオプションは、選択したアプリケーションの種類によって決まります。 詳細については [、「[ユーザーインターフェイスの機能] (MFC アプリケーションウィザード)](../../mfc/reference/user-interface-features-mfc-application-wizard.md) 」を参照してください。
 
-   ドキュメントの種類の詳細についてを参照してください。
+   ドキュメントの種類の詳細については、以下を参照してください。
 
   - [SDI と MDI](../../mfc/sdi-and-mdi.md)
 
-  - [フレーム ウィンドウ](../../mfc/frame-windows.md)
+  - [フレームウィンドウ](../../mfc/frame-windows.md)
 
-  - [フレーム ウィンドウ クラス](../../mfc/frame-window-classes.md)
+  - [フレームウィンドウクラス](../../mfc/frame-window-classes.md)
 
   - [ドキュメント、ビュー、フレームワーク](../../mfc/documents-views-and-the-framework.md)
 
-  - [ダイアログ ボックス](../../mfc/dialog-boxes.md)
+  - [ダイアログボックス](../../mfc/dialog-boxes.md)
 
   |オプション|説明|
   |------------|-----------------|
-  |**1 つのドキュメント**|ビュー クラスがに基づいて、アプリケーションのシングル ドキュメント インターフェイス (SDI) アーキテクチャを作成します。 [CView クラス](../../mfc/reference/cview-class.md)します。 ビューの基本クラスを変更することができます、[クラスの生成、MFC アプリケーション ウィザード](../../mfc/reference/generated-classes-mfc-application-wizard.md)ウィザードのページ。 たとえば、フォーム ベースのアプリケーションを作成するを使用して[CFormView クラス](../../mfc/reference/cformview-class.md)ビュー クラス。<br /><br /> この種のアプリケーションでは、ドキュメントのフレーム ウィンドウは、1 つだけのドキュメントを保持できます。|
-  |**複数のドキュメント**|ビュー クラスがに基づいて、アプリケーションの複数ドキュメント インターフェイス (MDI) アーキテクチャを作成します。`CView`します。 ビューの基本クラスを変更することができます、**生成されたクラス**ウィザードのページ。 たとえば、フォーム ベースのアプリケーションを作成するを使用して`CFormView`ビュー クラス。<br /><br /> この種のアプリケーションでは、ドキュメントのフレーム ウィンドウ保持できる複数の子ウィンドウ。|
-  |**タブ付きドキュメント**|別のタブには、各ドキュメントを配置します。|
-  |**ダイアログ ベース**|ダイアログ クラスがに基づいて、アプリケーションのダイアログ ベースのアーキテクチャを作成します。`CDialog`します。 (HTML ダイアログを作成するには、ボックスをオン**ダイアログを使用して HTML**)。|
-  |**HTML ダイアログを使用して、**|ダイアログ ボックス アプリケーションのみです。 ダイアログ クラスから派生した[CDHtmlDialog クラス](../../mfc/reference/cdhtmldialog-class.md)の代わりに[CDialog クラス](../../mfc/reference/cdialog-class.md)します。 場合は、このボックスをオン`CDHtmlDialog`に格納されて、**基本クラス**ボックスに、[クラスの生成、MFC アプリケーション ウィザード](../../mfc/reference/generated-classes-mfc-application-wizard.md)ウィザードのページ。<br /><br /> A `CDHtmlDialog`-派生 ダイアログ ボックスは、HTML ベースのダイアログ ボックスを表示、HTML を使用してデータを交換を制御し、HTML のイベントを処理します。|
-  |**複数のトップレベル ドキュメント**|ビュー クラスがに基づいて、アプリケーションの最上位アーキテクチャを複数作成`CView`です。<br /><br /> この種のアプリケーション、ユーザーがクリックしたときに**新規**(または**新しいフレーム**) で、**ファイル**メニューで、アプリケーションはその親は、デスクトップでは暗黙的にウィンドウを作成します。 新しいドキュメントのフレームでは、タスク バーに表示され、アプリケーション ウィンドウのクライアント領域に限定されません。|
+  |**1 つのドキュメント**|アプリケーションのためのシングルドキュメントインターフェイス (SDI) アーキテクチャを作成します。このアーキテクチャでは、ビュークラスは [CView クラス](../../mfc/reference/cview-class.md)に基づいています。 ウィザードの [ [生成されたクラス] (MFC アプリケーションウィザード)](../../mfc/reference/generated-classes-mfc-application-wizard.md) ページで、ビューの基本クラスを変更できます。 たとえば、フォームベースのアプリケーションを作成するには、ビュークラスに [CFormView クラス](../../mfc/reference/cformview-class.md) を使用します。<br /><br /> この種類のアプリケーションでは、ドキュメントのフレームウィンドウはドキュメントを1つだけ保持できます。|
+  |**複数のドキュメント**|アプリケーションのマルチドキュメントインターフェイス (MDI) アーキテクチャを作成します。ビュークラスは、に基づいて `CView` います。 ウィザードの [ **生成されたクラス** ] ページで、ビューの基本クラスを変更できます。 たとえば、フォームベースのアプリケーションを作成するには、 `CFormView` ビュークラスにを使用します。<br /><br /> この種類のアプリケーションでは、ドキュメントのフレームウィンドウに複数の子ウィンドウを含めることができます。|
+  |**[タブ付きドキュメント]**|各ドキュメントを別のタブに配置します。|
+  |**ダイアログベース**|ダイアログクラスの基になるアプリケーションのダイアログベースのアーキテクチャを作成し `CDialog` ます。 (HTML ダイアログを作成するには、[ **html ダイアログを使用** する] チェックボックスをオンにします)。|
+  |**HTML ダイアログの使用**|ダイアログボックスアプリケーションの場合のみ。 [CDialog](../../mfc/reference/cdialog-class.md)クラスではなく、 [CDHtmlDialog クラス](../../mfc/reference/cdhtmldialog-class.md)からダイアログクラスを派生させます。 このチェックボックスをオンにすると、 `CDHtmlDialog` ウィザードの [[生成されたクラス] (MFC アプリケーションウィザード)](../../mfc/reference/generated-classes-mfc-application-wizard.md)ページの [**基底クラス**] ボックスにが表示されます。<br /><br /> `CDHtmlDialog`から派生したダイアログボックスには、html ベースのダイアログボックスが表示されます。また、html コントロールとデータを交換し、html イベントを処理します。|
+  |**複数のトップレベルドキュメント**|ビュークラスの基になっているアプリケーションに対して、複数のトップレベルアーキテクチャを作成し `CView` ます。<br /><br /> この種類のアプリケーションでは、ユーザーが [**ファイル**] メニューの [**新規**] (または [**新しいフレーム**]) をクリックすると、アプリケーションによって、親が暗黙的にデスクトップとなるウィンドウが作成されます。 新しいドキュメントフレームはタスクバーに表示され、アプリケーションウィンドウのクライアント領域に制限されません。|
 
-- **ドキュメント/ビュー アーキテクチャ サポート**
+- **ドキュメント/ビューアーキテクチャのサポート**
 
-  使用して、アプリケーションでドキュメント/ビュー アーキテクチャを含めるかどうかを指定します、 [CDocument クラス](../../mfc/reference/cdocument-class.md)と[CView クラス](../../mfc/reference/cview-class.md)(既定値)。 非 MFC アプリケーションを移植する場合、または、コンパイル済み実行可能ファイルのサイズを小さく場合は、このチェック ボックスをオフにします。 既定では、ドキュメント/ビュー アーキテクチャを備えていないアプリケーションがから派生した[CWinApp クラス](../../mfc/reference/cwinapp-class.md)、ディスク ファイルからドキュメントを開くために MFC サポートは含まれません。
+  アプリケーションに、 [CDocument クラス](../../mfc/reference/cdocument-class.md) と [CView クラス](../../mfc/reference/cview-class.md) (既定値) を使用してドキュメント/ビューアーキテクチャを含めるかどうかを指定します。 非 MFC アプリケーションを移植する場合、またはコンパイルされた実行可能ファイルのサイズを小さくする場合は、このチェックボックスをオフにします。 既定では、ドキュメント/ビューアーキテクチャのないアプリケーションは、 [CWinApp クラス](../../mfc/reference/cwinapp-class.md)から派生しています。また、ディスクファイルからドキュメントを開くための MFC のサポートは含まれていません。
 
 - **リソース言語**
 
-  リソースの言語を設定します。 一覧は、Visual Studio がインストールされている、システムで使用できる言語を表示します。 システムの言語以外の言語を選択する場合は、その言語の適切なテンプレート フォルダー既にインストールする必要があります。
+  リソースの言語を設定します。 一覧には、Visual Studio によってインストールされたシステムで使用可能な言語が表示されます。 システム言語以外の言語を選択する場合は、その言語の適切なテンプレートフォルダーが既にインストールされている必要があります。
 
-  選択した言語に反映されます、**ローカライズ文字列**のオプション、[ドキュメント テンプレート文字列、MFC アプリケーション ウィザード](../../mfc/reference/document-template-strings-mfc-application-wizard.md)ウィザードのページ。
+  選択した言語は、ウィザードの [[ドキュメントテンプレート文字列] の [MFC アプリケーションウィザード](../../mfc/reference/document-template-strings-mfc-application-wizard.md)] ページにある [ローカライズされた **文字列**] オプションに反映されます。
 
-- **Unicode ライブラリを使用して**
+- **Unicode ライブラリを使用する**
 
-  Unicode または Unicode 以外のバージョンの MFC ライブラリを使用するかどうかを指定します。
+  MFC ライブラリの Unicode または非 Unicode バージョンを使用するかどうかを指定します。
 
-- **プロジェクトのスタイル**
+- **プロジェクトスタイル**
 
-  アプリケーションが、標準 MFC、ファイル エクスプ ローラー、Visual Studio、または Office のアーキテクチャおよび表示にするかどうかを示します。 詳細については、次を参照してください。[ファイル エクスプ ローラー スタイルの MFC アプリケーションの作成](../../mfc/reference/creating-a-file-explorer-style-mfc-application.md)です。
+  アプリケーションに標準の MFC、エクスプローラー、Visual Studio、または Office のアーキテクチャと表示があるかどうかを示します。 詳細については、「 [MFC アプリケーション Explorer-Style のファイルの作成](../../mfc/reference/creating-a-file-explorer-style-mfc-application.md)」を参照してください。
 
   |オプション|説明|
   |------------|-----------------|
-  |**MFC の標準**|標準の MFC アプリケーション アーキテクチャを提供します。|
-  |**ファイル エクスプ ローラー**|左側のウィンドウは分割ウィンドウを使用して、ファイル エクスプ ローラーのようなアプリケーションを実装、 [CTreeView クラス](../../mfc/reference/ctreeview-class.md)右側のウィンドウであり、 [CListView クラス](../../mfc/reference/clistview-class.md)。|
-  |**Visual Studio**|ドッキング可能な 4 つのペインを含む Visual Studio のようなアプリケーションの実装 (**ファイル ビュー**、**クラス ビュー**、**プロパティ**、および**出力**) から派生した[CDockablePane クラス](../../mfc/reference/cdockablepane-class.md)から派生したメイン フレーム ウィンドウと[CMDIFrameWndEx クラス](../../mfc/reference/cmdiframewndex-class.md)(既定値)。|
-  |**Office**|派生したリボンを含む Office のようなアプリケーションを実装する[CMFCRibbonBar クラス](../../mfc/reference/cmfcribbonbar-class.md)、Outlook バーから派生した[CMFCOutlookBar クラス](../../mfc/reference/cmfcoutlookbar-class.md)から派生したキャプション バー[CMFCCaptionBar クラス](../../mfc/reference/cmfccaptionbar-class.md)とから派生したメイン フレーム[CMDIFrameWndEx クラス](../../mfc/reference/cmdiframewndex-class.md)します。|
+  |**MFC 標準**|標準の MFC アプリケーションアーキテクチャを提供します。|
+  |**エクスプローラー**|左ペインが [CTreeView クラス](../../mfc/reference/ctreeview-class.md) で、右側のペインが [CListView クラス](../../mfc/reference/clistview-class.md)であるスプリッターウィンドウを使用して、エクスプローラーのようなアプリケーションを実装します。|
+  |**Visual Studio**|[CDockablePane クラス](../../mfc/reference/cdockablepane-class.md)から派生した4つのドッキング可能なペイン (**ファイルビュー**、**クラスビュー**、**プロパティ**、**出力**) と、 [CMDIFrameWndEx クラス](../../mfc/reference/cmdiframewndex-class.md)から派生したメインフレームウィンドウ (既定値) を含む、Visual Studio のようなアプリケーションを実装します。|
+  |**Office**|[CMFCRibbonBar クラス](../../mfc/reference/cmfcribbonbar-class.md)から派生したリボン、 [Cmfcoutlookbar クラス](../../mfc/reference/cmfcoutlookbar-class.md)から派生した Outlook バー、 [CMFCCaptionBar クラス](../../mfc/reference/cmfccaptionbar-class.md)から派生したキャプションバー、 [CMDIFrameWndEx クラス](../../mfc/reference/cmdiframewndex-class.md)から派生したメインフレームを含む、Office と同様のアプリケーションを実装します。|
 
-- **Visual スタイルと色**
+- **視覚スタイルと色**
 
-  アプリケーションの visual スタイルを決定します。 次のオプションを使用できます。
+  アプリケーションの視覚スタイルを決定します。 次のオプションを使用できます。
 
   - **Windows ネイティブ/既定**
 
@@ -81,24 +82,24 @@ ms.locfileid: "65708265"
 
   - **Office 2007 (黒のテーマ)**
 
-  - **Office 2007 (シルバーのテーマ)**
+  - **Office 2007 (シルバーテーマ)**
 
-  - **Office 2007 (アクア テーマ)**
+  - **Office 2007 (水色のテーマ)**
 
-- **Visual スタイルの切り替えを有効にします。**
+- **視覚スタイルの切り替えを有効にする**
 
-  かどうか、ユーザーことができます、視覚スタイルを変更、実行時にアプリケーションの通常 メニューまたはリボンから適切な visual スタイルを選択して指定します。
+  ユーザーが実行時にアプリケーションの視覚スタイルを変更できるかどうかを指定します。通常は、メニューまたはリボンから適切な視覚スタイルを選択します。
 
 - **MFC の使用法**
 
-  MFC ライブラリにリンクする方法を指定します。 既定では、MFC は、共有 DLL としてリンクされます。
+  MFC ライブラリにリンクする方法を指定します。 既定では、MFC は共有 DLL としてリンクされています。
 
   |オプション|説明|
   |------------|-----------------|
-  |**共有 DLL で MFC を使用します。**|MFC ライブラリを共有 DLL としてアプリケーションにリンクします。 アプリケーションが実行時に、MFC ライブラリへの呼び出しを行います。 このオプションは、MFC ライブラリを使用して複数の実行可能ファイルで構成されるアプリケーションのディスクとメモリの量を削減します。 Win32 と MFC の両方のアプリケーションは、(既定値)、DLL で関数を呼び出すことができます。|
-  |**スタティック ライブラリで MFC を使用します。**|ビルド時に、MFC のスタティック ライブラリをアプリケーションにリンクします。|
+  |**共有 DLL で MFC を使用する**|MFC ライブラリを共有 DLL としてアプリケーションにリンクします。 アプリケーションは、実行時に MFC ライブラリへの呼び出しを行います。 このオプションを選択すると、MFC ライブラリを使用する複数の実行可能ファイルで構成されるアプリケーションのディスクとメモリの要件が軽減されます。 Win32 と MFC の両方のアプリケーションで、DLL 内の関数を呼び出すことができます (既定)。|
+  |**スタティックライブラリで MFC を使用する**|ビルド時にアプリケーションを静的 MFC ライブラリにリンクします。|
 
 ## <a name="see-also"></a>関連項目
 
-[MFC アプリケーション ウィザード](../../mfc/reference/mfc-application-wizard.md)<br/>
-[Visual Studio のファイルの種類を作成C++プロジェクト](../../build/reference/file-types-created-for-visual-cpp-projects.md)
+[MFC アプリケーションウィザード](../../mfc/reference/mfc-application-wizard.md)<br/>
+[Visual Studio の C++ プロジェクトに対して作成されるファイルの種類](../../build/reference/file-types-created-for-visual-cpp-projects.md)

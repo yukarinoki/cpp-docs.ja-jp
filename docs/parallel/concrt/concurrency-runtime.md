@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: 同時実行ランタイム'
 title: コンカレンシー ランタイム
 ms.date: 07/20/2018
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - ConcRT (see Concurrency Runtime)
 - Concurrency Runtime
 ms.assetid: 874bc58f-8dce-483e-a3a1-4dcc9e52ed2c
-ms.openlocfilehash: ce75d7a78fec69922c08479f6c130c6b6ccec566
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 1bc161e8c70f98fe469feffa1c472ecaf6a7f161
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88845511"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97325785"
 ---
 # <a name="concurrency-runtime"></a>コンカレンシー ランタイム
 
@@ -39,7 +40,7 @@ C++ のコンカレンシー ランタイムにより、信頼性が高く、ス
 |-|-|
 |[タスクの並列処理](../../parallel/concrt/task-parallelism-concurrency-runtime.md)<br /><br /> [方法: parallel_invoke を使用して並列並べ替えルーチンを記述する](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md)<br /><br /> [方法: parallel_invoke を使用して並列操作を実行する](../../parallel/concrt/how-to-use-parallel-invoke-to-execute-parallel-operations.md)<br /><br /> [方法: 遅延後に完了するタスクを作成する](../../parallel/concrt/how-to-create-a-task-that-completes-after-a-delay.md)|非同期コードを記述し、並列処理を分解するために役立つ、タスク グループとタスクについて説明します。|
 |[チュートリアル: フューチャの実装](../../parallel/concrt/walkthrough-implementing-futures.md)|コンカレンシー ランタイムの機能をまとめて、より多くの処理を行う方法を示します。|
-|[チュートリアル: ユーザーインターフェイススレッドからの作業の削除](../../parallel/concrt/walkthrough-removing-work-from-a-user-interface-thread.md)|MFC アプリケーションの UI スレッドによって実行される処理をワーカー スレッドへ移動する方法を示します。|
+|[チュートリアル: User-Interface スレッドからの作業の削除](../../parallel/concrt/walkthrough-removing-work-from-a-user-interface-thread.md)|MFC アプリケーションの UI スレッドによって実行される処理をワーカー スレッドへ移動する方法を示します。|
 |[並列パターンライブラリのベストプラクティス](../../parallel/concrt/best-practices-in-the-parallel-patterns-library.md)<br /><br /> [同時実行ランタイムの一般的なベストプラクティス](../../parallel/concrt/general-best-practices-in-the-concurrency-runtime.md)|PPL の使用上のヒントとベスト プラクティスを提供します。|
 
 ## <a name="data-parallelism-in-the-ppl"></a>PPL でのデータの並列処理
@@ -69,9 +70,9 @@ C++ のコンカレンシー ランタイムにより、信頼性が高く、ス
 
 |[アーティクル]|説明|
 |-|-|
-|[非同期エージェント](../../parallel/concrt/asynchronous-agents.md)<br /><br /> [非同期メッセージブロック](../../parallel/concrt/asynchronous-message-blocks.md)<br /><br /> [メッセージパッシング関数](../../parallel/concrt/message-passing-functions.md)<br /><br /> [方法: さまざまなプロデューサー/コンシューマーパターンを実装する](../../parallel/concrt/how-to-implement-various-producer-consumer-patterns.md)<br /><br /> [方法: call クラスおよびトランスフォーマークラスに処理関数を提供する](../../parallel/concrt/how-to-provide-work-functions-to-the-call-and-transformer-classes.md)<br /><br /> [方法: データパイプラインでトランスフォーマーを使用する](../../parallel/concrt/how-to-use-transformer-in-a-data-pipeline.md)<br /><br /> [方法: 完了したタスクの中から選択する](../../parallel/concrt/how-to-select-among-completed-tasks.md)<br /><br /> [方法: メッセージを定期的に送信する](../../parallel/concrt/how-to-send-a-message-at-a-regular-interval.md)<br /><br /> [方法: メッセージブロックフィルターを使用する](../../parallel/concrt/how-to-use-a-message-block-filter.md)|非同期エージェント、メッセージ ブロック、およびコンカレンシー ランタイムでデータ フローの操作を実行するためのビルド ブロックであるメッセージ パッシング関数について説明します。|
-|[チュートリアル: エージェントベースのアプリケーションの作成](../../parallel/concrt/walkthrough-creating-an-agent-based-application.md)<br /><br /> [チュートリアル: データフローエージェントの作成](../../parallel/concrt/walkthrough-creating-a-dataflow-agent.md)|基本的なエージェント ベースのアプリケーションの作成方法を示します。|
-|[チュートリアル: イメージ処理ネットワークの作成](../../parallel/concrt/walkthrough-creating-an-image-processing-network.md)|イメージ処理を実行する非同期メッセージ ブロックのネットワークを作成する方法を示します。|
+|[非同期エージェント](../../parallel/concrt/asynchronous-agents.md)<br /><br /> [非同期メッセージブロック](../../parallel/concrt/asynchronous-message-blocks.md)<br /><br /> [メッセージパッシング関数](../../parallel/concrt/message-passing-functions.md)<br /><br /> [方法: さまざまな Producer-Consumer パターンを実装する](../../parallel/concrt/how-to-implement-various-producer-consumer-patterns.md)<br /><br /> [方法: call クラスおよびトランスフォーマークラスに処理関数を提供する](../../parallel/concrt/how-to-provide-work-functions-to-the-call-and-transformer-classes.md)<br /><br /> [方法: データパイプラインでトランスフォーマーを使用する](../../parallel/concrt/how-to-use-transformer-in-a-data-pipeline.md)<br /><br /> [方法: 完了したタスクの中から選択する](../../parallel/concrt/how-to-select-among-completed-tasks.md)<br /><br /> [方法: メッセージを定期的に送信する](../../parallel/concrt/how-to-send-a-message-at-a-regular-interval.md)<br /><br /> [方法: メッセージブロックフィルターを使用する](../../parallel/concrt/how-to-use-a-message-block-filter.md)|非同期エージェント、メッセージ ブロック、およびコンカレンシー ランタイムでデータ フローの操作を実行するためのビルド ブロックであるメッセージ パッシング関数について説明します。|
+|[チュートリアル: Agent-Based アプリケーションの作成](../../parallel/concrt/walkthrough-creating-an-agent-based-application.md)<br /><br /> [チュートリアル: データフローエージェントの作成](../../parallel/concrt/walkthrough-creating-a-dataflow-agent.md)|基本的なエージェント ベースのアプリケーションの作成方法を示します。|
+|[チュートリアル: Image-Processing ネットワークの作成](../../parallel/concrt/walkthrough-creating-an-image-processing-network.md)|イメージ処理を実行する非同期メッセージ ブロックのネットワークを作成する方法を示します。|
 |[チュートリアル: join を使用したデッドロックの防止](../../parallel/concrt/walkthrough-using-join-to-prevent-deadlock.md)|コンカレンシー ランタイムを使用してアプリケーションでデッドロックを防止する方法について、"食事する哲学者の問題" を使用して説明します。|
 |[チュートリアル: カスタムメッセージブロックの作成](../../parallel/concrt/walkthrough-creating-a-custom-message-block.md)|受信メッセージを優先順位に従って並べるカスタム メッセージ ブロックの型を作成する方法について説明します。|
 |[非同期エージェントライブラリのベストプラクティス](../../parallel/concrt/best-practices-in-the-asynchronous-agents-library.md)<br /><br /> [同時実行ランタイムの一般的なベストプラクティス](../../parallel/concrt/general-best-practices-in-the-concurrency-runtime.md)|エージェントの使用上のヒントとベスト プラクティスを提供します。|

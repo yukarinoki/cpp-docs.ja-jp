@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「C/c + + のコード分析の概要」を参照してください。
 title: C/C++ のコード分析の概要
 ms.date: 04/28/2018
 ms.topic: conceptual
@@ -16,12 +17,12 @@ helpviewer_keywords:
 - '#pragma directives, code analysis'
 - C, code analysis
 ms.assetid: 81f0c9e8-f471-4de5-aac4-99db336a8809
-ms.openlocfilehash: f128c9722138f453c72ca97b09cc1a69a737dbf6
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 4d018185e74926c880f8a174eb81cea344167782
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91504193"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97323302"
 ---
 # <a name="code-analysis-for-cc-overview"></a>C/C++ のコード分析の概要
 
@@ -53,7 +54,7 @@ C:\>cl /analyze Sample.cpp
 
 ## <a name="run-analysis-tool-as-part-of-check-in-policy"></a>チェックイン ポリシーの一部としての分析ツールの実行
 
-チェックインされるすべてのソース コードが、特定のポリシーを満たしていることが必要な場合があります。 具体的には、最新のローカル ビルドのステップとして分析が実行されたことを確認する必要があります。 コード分析のチェックインポリシーを有効にする方法の詳細については、「 [コード分析のチェックインポリシーの作成と使用](/visualstudio/code-quality/how-to-create-or-update-standard-code-analysis-check-in-policies)」を参照してください。
+チェックインされるすべてのソース コードが、特定のポリシーを満たしていることが必要な場合があります。 具体的には、最新のローカル ビルドのステップとして分析が実行されたことを確認する必要があります。 コード分析のチェックインポリシーを有効にする方法の詳細については、「 [コード分析 Check-In ポリシーの作成と使用](/visualstudio/code-quality/how-to-create-or-update-standard-code-analysis-check-in-policies)」を参照してください。
 
 ## <a name="team-build-integration"></a>チームビルドの統合
 

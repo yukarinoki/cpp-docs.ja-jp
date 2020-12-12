@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: basic_istringstream クラス'
 title: basic_istringstream クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -14,16 +15,16 @@ helpviewer_keywords:
 - std::basic_istringstream [C++], str
 - std::basic_istringstream [C++], swap
 ms.assetid: 1d5bb4b5-793d-4833-98e5-14676c451915
-ms.openlocfilehash: fd2ab79466c01343cbdadbcb649e3b05eee3c2a0
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: 34073c660b5ede3d7df54e9e067ef5c3963671f4
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88561779"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97325681"
 ---
 # <a name="basic_istringstream-class"></a>basic_istringstream クラス
 
-[basic_stringbuf](../standard-library/basic-stringbuf-class.md) <  **Elem**、 **Tr**、> クラス basic_stringbuf のストリームバッファーからの要素とエンコードされたオブジェクトの抽出を制御するオブジェクトを記述し `Alloc` ます。
+[](../standard-library/basic-stringbuf-class.md) <  **Elem**、 **Tr**、> クラス basic_stringbuf のストリームバッファーからの要素とエンコードされたオブジェクトの抽出を制御するオブジェクトを記述し `Alloc` ます。
 
 ## <a name="syntax"></a>構文
 
@@ -45,7 +46,7 @@ class basic_istringstream : public basic_istream<Elem, Tr>
 
 ## <a name="remarks"></a>解説
 
-クラステンプレートは、elem、Tr、> の各[basic_stringbuf](../standard-library/basic-stringbuf-class.md)クラスのストリームバッファーから、要素とエンコードされたオブジェクトの抽出を制御するオブジェクトを記述し <  **Elem** **Tr** `Alloc` ます。 *elem*型の要素は、文字の特徴が*tr*クラスによって決定され、その要素が*Alloc*クラスのアロケーターによって割り当てられている要素を持ちます。 このオブジェクトは、クラス basic_stringbuf< **Elem**, **Tr**, `Alloc`> のオブジェクトを格納します。
+クラステンプレートは、elem、Tr、> の各 [basic_stringbuf](../standard-library/basic-stringbuf-class.md)クラスのストリームバッファーから、要素とエンコードされたオブジェクトの抽出を制御するオブジェクトを記述し <    `Alloc` ます。 *elem* 型の要素は、文字の特徴が *tr* クラスによって決定され、その要素が *Alloc* クラスのアロケーターによって割り当てられている要素を持ちます。 このオブジェクトは、クラス basic_stringbuf< **Elem**, **Tr**, `Alloc`> のオブジェクトを格納します。
 
 ### <a name="constructors"></a>コンストラクター
 
@@ -64,7 +65,7 @@ class basic_istringstream : public basic_istream<Elem, Tr>
 |メンバー関数|説明|
 |-|-|
 |[rdbuf](#rdbuf)|型の格納されているストリームバッファーのアドレスを `pointer` [basic_stringbuf](../standard-library/basic-stringbuf-class.md) <  `Elem` 、 `Tr` 、> に返し `Alloc` ます。|
-|[引数](#str)|文字列バッファー内のテキストを設定または取得します。書き込み位置は変更しません。|
+|[str](#str)|文字列バッファー内のテキストを設定または取得します。書き込み位置は変更しません。|
 |[スワップ](#swap)|この `basic_istringstream` オブジェクト内の値を、提供されるオブジェクトの値と交換します。|
 
 ### <a name="operators"></a>オペレーター
@@ -73,7 +74,7 @@ class basic_istringstream : public basic_istream<Elem, Tr>
 |-|-|
 |[operator =](#op_eq)|オブジェクト パラメーターの値をこの `basic_istringstream` オブジェクトに代入します。|
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:**\<sstream>
 
@@ -120,7 +121,7 @@ basic_istringstream(
 
 2 番目のコンストラクターが `basic_istream(sb)` を呼び出して基底クラスを初期化します。 また、`basic_stringbuf`< `Elem`, `Tr`, `Alloc`>( `str`, `_Mode` &#124; `ios_base::in`) を呼び出すことで `sb` の初期化もします。
 
-3番目のコンストラクターは、右辺値参照として扱われる *right*の内容を使用してオブジェクトを初期化します。
+3番目のコンストラクターは、右辺値参照として扱われる *right* の内容を使用してオブジェクトを初期化します。
 
 ## <a name="basic_istringstreamoperator"></a><a name="op_eq"></a> basic_istringstream:: operator =
 
@@ -137,11 +138,11 @@ basic_istringstream& operator=(basic_istringstream&& right);
 
 ### <a name="remarks"></a>解説
 
-メンバー演算子は、右辺値参照の移動代入として扱われる、オブジェクトの内容を *右*の内容に置き換えます。
+メンバー演算子は、右辺値参照の移動代入として扱われる、オブジェクトの内容を *右* の内容に置き換えます。
 
 ## <a name="basic_istringstreamrdbuf"></a><a name="rdbuf"></a> basic_istringstream:: rdbuf
 
-型の格納されたストリームバッファーのアドレス `pointer` を[basic_stringbuf](../standard-library/basic-stringbuf-class.md) <  **Elem**、 **Tr**、 `Alloc`> に返します。
+型の格納されたストリームバッファーのアドレス `pointer` を [basic_stringbuf](../standard-library/basic-stringbuf-class.md) <  **Elem**、 **Tr**、 `Alloc`> に返します。
 
 ```cpp
 basic_stringbuf<Elem, Tr, Alloc> *rdbuf() const;
@@ -173,7 +174,7 @@ void str(
 
 ### <a name="return-value"></a>戻り値
 
-[basic_string](../standard-library/basic-string-class.md) <  **Elem** **Tr** `Alloc` 制御されたシーケンスが** \* this**によって制御されるシーケンスのコピーである Elem、Tr、> basic_string クラスのオブジェクトを返します。
+[](../standard-library/basic-string-class.md) <    `Alloc` 制御されたシーケンスが **\* this** によって制御されるシーケンスのコピーである Elem、Tr、> basic_string クラスのオブジェクトを返します。
 
 ### <a name="remarks"></a>解説
 
@@ -198,7 +199,7 @@ void swap(basic_istringstream& right);
 
 ### <a name="remarks"></a>解説
 
-このメンバー関数は、このオブジェクトの値と *right*の値を交換します。
+このメンバー関数は、このオブジェクトの値と *right* の値を交換します。
 
 ## <a name="see-also"></a>関連項目
 

@@ -1,15 +1,16 @@
 ---
+description: 詳細については、「コンシューマー Wizard-Generated メソッド」を参照してください。
 title: コンシューマー ウィザードで生成されたメソッド
 ms.date: 05/09/2019
 helpviewer_keywords:
 - OLE DB consumers, wizard-generated classes and methods
 ms.assetid: d80ee51c-8bb3-4dca-8760-5808e0fb47b4
-ms.openlocfilehash: 15d41aabee174a409ad11e4422292bcea5f10bbf
-ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
+ms.openlocfilehash: 29d586a46f91e9244a09fce5628d0f3b274c554c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "92919125"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97323288"
 ---
 # <a name="consumer-wizard-generated-methods"></a>コンシューマー ウィザードで生成されたメソッド
 
@@ -31,7 +32,7 @@ ATL OLE DB コンシューマー ウィザードは、Visual Studio 2019 以降�
 
 - `GetRowsetProperties` は、行セットのプロパティ セットへのポインターを取得します。このポインターを使用してプロパティを設定できます。
 
-- `OpenDataSource` は、 **[データ リンク プロパティ]** ダイアログ ボックスで指定された初期化文字列を使用してデータ ソースを開きます。
+- `OpenDataSource` は、**[データ リンク プロパティ]** ダイアログ ボックスで指定された初期化文字列を使用してデータ ソースを開きます。
 
 - `CloseDataSource` は、適切な方法でデータ ソースを閉じます。
 
@@ -76,7 +77,7 @@ int main(int argc, char* argv[])
 }
 ```
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 `HasBookmark` メソッドを定義すると、`OpenAll` コードによって `DBPROP_IRowsetLocate` プロパティが設定されます。これを行う場合、プロバイダーでこのプロパティがサポートされていることを確認してください。
 
@@ -141,7 +142,7 @@ void GetRowsetProperties(CDBPropSet* pPropSet)
 }
 ```
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 グローバルな `GetRowsetProperties` メソッドは、ウィザードによって定義されるメソッドと競合する可能性があるため、定義しないでください。 これは、テンプレート プロジェクトと属性プロジェクトとともに得られるウィザード生成メソッドであり、属性ではこのコードが挿入されません。
 
@@ -153,12 +154,12 @@ HRESULT OpenDataSource();
 void CloseDataSource();
 ```
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 ウィザードがメソッド `OpenDataSource` と `CloseDataSource` を定義します。`OpenDataSource` は [CDataSource::OpenFromInitializationString](./cdatasource-class.md#openfrominitializationstring) を呼び出します。
 
 ::: moniker-end
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 
 [ウィザードを使用して OLE DB コンシューマーを作成する](../../data/oledb/creating-an-ole-db-consumer-using-a-wizard.md)

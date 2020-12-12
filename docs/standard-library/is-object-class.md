@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: is_object クラス'
 title: is_object クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,14 +8,14 @@ helpviewer_keywords:
 - is_object class
 - is_object
 ms.assetid: b452ceea-5676-488f-925b-ab881126c387
-ms.openlocfilehash: 521c3fe1053f53e5d30edf39a41cb840522575a2
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 0f361d58676527e25887ad71097943a8b2b6c93a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68455853"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97323565"
 ---
-# <a name="isobject-class"></a>is_object クラス
+# <a name="is_object-class"></a>is_object クラス
 
 型がオブジェクトの種類であるかどうかをテストします。
 
@@ -27,12 +28,12 @@ struct is_object;
 
 ### <a name="parameters"></a>パラメーター
 
-*~* \
+*~*\
 照会する型。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-型*Ty*が参照型、関数型、または void で`cv-qualified`ある場合、またはそのいずれかの形式である場合、型述語のインスタンスは false を保持します。それ以外の場合は、true を保持します。
+型 *Ty* が参照型、関数型、または void である場合、またはそのいずれかの形式である場合、型述語のインスタンスは false を保持し `cv-qualified` ます。それ以外の場合は、true を保持します。
 
 ## <a name="example"></a>例
 
@@ -77,9 +78,9 @@ is_object<float()> == false
 is_object<void> == false
 ```
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-**ヘッダー:** \<type_traits>
+**ヘッダー:**\<type_traits>
 
 **名前空間:** std
 

@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: basic_ostringstream クラス'
 title: basic_ostringstream クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -12,16 +13,16 @@ helpviewer_keywords:
 - std::basic_ostringstream [C++], rdbuf
 - std::basic_ostringstream [C++], str
 ms.assetid: aea699f7-350f-432a-acca-adbae7b483fb
-ms.openlocfilehash: 9e10474d3e4fb2a37e8ab52f77495758c37e8a5b
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: b745f6b733d093b620e15d0aa22593713988caf9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81376773"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97325642"
 ---
 # <a name="basic_ostringstream-class"></a>basic_ostringstream クラス
 
-**Elem** **、Tr**、> [basic_stringbuf](../standard-library/basic-stringbuf-class.md)< クラスのストリーム バッファーへの要素およびエンコードされたオブジェクトの挿入を`Alloc`制御するオブジェクトについて説明します。
+要素とエンコードされたオブジェクトを [basic_stringbuf](../standard-library/basic-stringbuf-class.md) <  **Elem**、 **Tr**、> クラスのストリームバッファーに挿入する操作を制御するオブジェクトを記述し `Alloc` ます。
 
 ## <a name="syntax"></a>構文
 
@@ -32,7 +33,7 @@ class basic_ostringstream : public basic_ostream<Elem, Tr>
 
 ### <a name="parameters"></a>パラメーター
 
-*Alloc*\
+*割り当て*\
 アロケーター クラス。
 
 *Elem*\
@@ -43,42 +44,42 @@ class basic_ostringstream : public basic_ostream<Elem, Tr>
 
 ## <a name="remarks"></a>解説
 
-このクラスは、要素の挿入を制御するオブジェクトとストリーム バッファーへのエンコードされたオブジェクトを記述し`Elem`、文字の特徴が class によって決定され、`Tr`その要素が class`Alloc`のアロケータによって割り当てられる型の要素を持つ。 このオブジェクトは、クラス basic_stringbuf< **Elem**, **Tr**, `Alloc`> のオブジェクトを格納します。
+クラスは、要素とエンコードされたオブジェクトのストリームバッファーへの挿入を制御するオブジェクトを表し `Elem` ます。これは、文字の特徴がクラスによって決定され、その `Tr` 要素がクラスのアロケーターによって割り当てられる、型の要素を使用し `Alloc` ます。 このオブジェクトは、クラス basic_stringbuf< **Elem**, **Tr**, `Alloc`> のオブジェクトを格納します。
 
 ### <a name="constructors"></a>コンストラクター
 
-|Constructor|説明|
+|コンストラクター|説明|
 |-|-|
 |[basic_ostringstream](#basic_ostringstream)|`basic_ostringstream` 型のオブジェクトを構築します。|
 
 ### <a name="typedefs"></a>Typedefs
 
-|種類の名前。|説明|
+|型名|説明|
 |-|-|
-|[allocator_type](#allocator_type)|この型はテンプレート パラメータ*Alloc*のシノニムです。|
+|[allocator_type](#allocator_type)|この型は、テンプレートパラメーター *Alloc* のシノニムです。|
 
 ### <a name="member-functions"></a>メンバー関数
 
 |メンバー関数|説明|
 |-|-|
-|[rdbuf](#rdbuf)|>`pointer`に[basic_stringbuf](../standard-library/basic-stringbuf-class.md)< `Elem`する型の格納されたストリーム バッファーの`Tr`アドレス`Alloc`を返します。|
-|[Str](#str)|文字列バッファー内のテキストを設定または取得します。書き込み位置は変更しません。|
+|[rdbuf](#rdbuf)|型の格納されているストリームバッファーのアドレスを `pointer` [basic_stringbuf](../standard-library/basic-stringbuf-class.md) <  `Elem` 、 `Tr` 、> に返し `Alloc` ます。|
+|[str](#str)|文字列バッファー内のテキストを設定または取得します。書き込み位置は変更しません。|
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-**ヘッダー:** \<sstream>
+**ヘッダー:**\<sstream>
 
 **名前空間:** std
 
-## <a name="basic_ostringstreamallocator_type"></a><a name="allocator_type"></a>basic_ostringstream::allocator_type
+## <a name="basic_ostringstreamallocator_type"></a><a name="allocator_type"></a> basic_ostringstream:: allocator_type
 
-この型はテンプレート パラメータ*Alloc*のシノニムです。
+この型は、テンプレートパラメーター *Alloc* のシノニムです。
 
 ```cpp
 typedef Alloc allocator_type;
 ```
 
-## <a name="basic_ostringstreambasic_ostringstream"></a><a name="basic_ostringstream"></a>basic_ostringstream::basic_ostringstream
+## <a name="basic_ostringstreambasic_ostringstream"></a><a name="basic_ostringstream"></a> basic_ostringstream:: basic_ostringstream
 
 basic_ostringstream 型のオブジェクトを構築します。
 
@@ -93,18 +94,18 @@ explicit basic_ostringstream(const basic_string<Elem, Tr, Alloc>& str, ios_base:
 *_Mode*\
 [ios_base::openmode](../standard-library/ios-base-class.md#openmode) の列挙値のうちの 1 つ。
 
-*Str*\
-`basic_string` 型オブジェクト。
+*引数*\
+`basic_string` 型のオブジェクト。
 
 ### <a name="remarks"></a>解説
 
-最初のコンストラクターは、basic_ostream [(](../standard-library/basic-ostream-class.md) **sb**) を呼`sb`び出して基本クラス[を](../standard-library/basic-stringbuf-class.md)初期化しますが、ここで< **、クラス**basic_stringbuf Tr **、>**`Alloc`の格納されたオブジェクトです。 また、basic_stringbuf< **Elem**, **Tr**, `Alloc`>( `_Mode` &#124; `ios_base::out`) を呼び出すことで **sb** の初期化もします。
+最初のコンストラクターは [basic_ostream](../standard-library/basic-ostream-class.md)( **sb**) を呼び出すことによって基底クラスを初期化します。ここで、 `sb` は、 [](../standard-library/basic-stringbuf-class.md) <  **Elem**、 **Tr**、> basic_stringbuf クラスの格納されているオブジェクトです `Alloc` 。 また、basic_stringbuf< **Elem**, **Tr**, `Alloc`>( `_Mode` &#124; `ios_base::out`) を呼び出すことで **sb** の初期化もします。
 
-2 番目のコンストラクターが basic_ostream( **sb**) を呼び出して基底クラスを初期化します。 また`sb`**、<エレム** **、tr**、>(_ `Alloc` *Str*、 `_Mode` &#124; `ios_base::out`) basic_stringbuf呼び出すことによっても初期化されます。
+2 番目のコンストラクターが basic_ostream( **sb**) を呼び出して基底クラスを初期化します。 また、 `sb` basic_stringbuf< **Elem**、 **Tr**、 `Alloc`> (_ *Str*、&#124;) を呼び出すことによって初期化 `_Mode` `ios_base::out` します。
 
-## <a name="basic_ostringstreamrdbuf"></a><a name="rdbuf"></a>basic_ostringstream::rdbuf
+## <a name="basic_ostringstreamrdbuf"></a><a name="rdbuf"></a> basic_ostringstream:: rdbuf
 
-> の**Elem** **、Tr**`pointer`に格納されているストリーム バッファーの`Alloc`アドレスを[返](../standard-library/basic-stringbuf-class.md)< basic_stringbuf。
+型の格納されたストリームバッファーのアドレス `pointer` を [basic_stringbuf](../standard-library/basic-stringbuf-class.md) <  **Elem**、 **Tr**、 `Alloc`> に返します。
 
 ```cpp
 basic_stringbuf<Elem, Tr, Alloc> *rdbuf() const;
@@ -112,17 +113,17 @@ basic_stringbuf<Elem, Tr, Alloc> *rdbuf() const;
 
 ### <a name="return-value"></a>戻り値
 
-格納されたストリーム バッファーのアドレスは`pointer`**、basic_stringbufの型の elem** **、Tr 、><。** `Alloc`
+`pointer`< **Elem**、 **Tr**、> を basic_stringbuf する型の格納されたストリームバッファーのアドレス `Alloc` 。
 
 ### <a name="remarks"></a>解説
 
-メンバー関数は、> の **< の elem****に型**`pointer`の格納されたストリーム`Alloc`バッファーのアドレスを返basic_stringbuf。
+このメンバー関数は、型の格納されているストリームバッファーのアドレスを `pointer` basic_stringbuf< **Elem**、 **Tr**、> にし `Alloc` ます。
 
 ### <a name="example"></a>例
 
 `rdbuf` の使用例については、「[basic_filebuf::close](../standard-library/basic-filebuf-class.md#close)」を参照してください。
 
-## <a name="basic_ostringstreamstr"></a><a name="str"></a>basic_ostringstream::str
+## <a name="basic_ostringstreamstr"></a><a name="str"></a> basic_ostringstream:: str
 
 文字列バッファー内のテキストを設定または取得します。書き込み位置は変更しません。
 
@@ -140,18 +141,18 @@ void str(
 
 ### <a name="return-value"></a>戻り値
 
-制御シーケンスが**\*、この**メソッド[によって](../standard-library/basic-string-class.md)< 制御されるシーケンスの`Alloc`コピーである、クラス basic_string**Elem** **、Tr**、>のオブジェクトを返します。
+[](../standard-library/basic-string-class.md) <    `Alloc` 制御されたシーケンスが **\* this** によって制御されるシーケンスのコピーである Elem、Tr、> basic_string クラスのオブジェクトを返します。
 
 ### <a name="remarks"></a>解説
 
-最初のメンバー関数は[rdbuf](#rdbuf) -> [str](../standard-library/basic-stringbuf-class.md#str)を返します。 2 番目のメンバー`rdbuf` -> 関数は`_Newstr` **str**( ) を呼び出します。
+1つ目のメンバー関数は、 [rdbuf](#rdbuf)  ->  [str](../standard-library/basic-stringbuf-class.md#str)を返します。 2番目のメンバー関数は `rdbuf`  ->  **str**() を呼び出し `_Newstr` ます。
 
 ### <a name="example"></a>例
 
-を使用する例については[、 basic_stringbuf::str](../standard-library/basic-stringbuf-class.md#str)を参照`str`してください。
+の使用例については、「 [basic_stringbuf:: str](../standard-library/basic-stringbuf-class.md#str) 」を参照してください `str` 。
 
 ## <a name="see-also"></a>関連項目
 
-[C++ 標準ライブラリにおけるスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[C++ 標準ライブラリのスレッドセーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
 [iostream プログラミング](../standard-library/iostream-programming.md)\
-[ioストリームの規約](../standard-library/iostreams-conventions.md)
+[iostreams の規則](../standard-library/iostreams-conventions.md)

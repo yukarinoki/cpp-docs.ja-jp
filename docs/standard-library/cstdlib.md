@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: &lt; cstdlib&gt;'
 title: '&lt;cstdlib&gt;'
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - cstdlib header
 ms.assetid: 0a6aaebf-84e9-4b60-ae90-17e11981cf54
-ms.openlocfilehash: 1b20e13a43c5d223332af70a91e096cedc284a43
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 8ab3ecc7a2db1d1cf90c69230c34a301587fc1e4
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87230053"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97324723"
 ---
 # <a name="ltcstdlibgt"></a>&lt;cstdlib&gt;
 
 C 標準ライブラリヘッダーをインクルード \<stdlib.h> し、関連する名前を名前空間に追加し `std` ます。 このヘッダーをインクルードすると、C 標準ライブラリヘッダーの外部リンケージを使用して宣言された名前が、名前空間で宣言され `std` ます。
 
 > [!NOTE]
-> \<stdlib.h>に型が含まれていません **`wchar_t`** 。
+> \<stdlib.h> に型が含まれていません **`wchar_t`** 。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-**ヘッダー**:\<cstdlib>
+**ヘッダー**: \<cstdlib>
 
 **名前空間:** std
 
@@ -57,7 +58,7 @@ extern "C++" using compare-pred = int(const void*, const void*);
 |機能|説明|
 |-|-|
 |[_Exit](#_exit)|デストラクターや登録された関数を使用せずにプログラムを終了します。|
-|[を呼び出してプログラム実行を終了する際、](#abort)|デストラクターを使用せずにプログラムを終了します。|
+|[取り消し](#abort)|デストラクターを使用せずにプログラムを終了します。|
 |[atexit](#atexit)|プログラムの終了のために関数を登録します。|
 |[exit](#exit)|スレッドと静的ストレージを使用してオブジェクトを破棄し、制御を返します。|
 |[at_quick_exit](#at_quick_exit)|プログラムの終了に引数を指定せずに関数を登録します。|
@@ -65,7 +66,7 @@ extern "C++" using compare-pred = int(const void*, const void*);
 |[getenv](#getenv)|「C 標準ライブラリリファレンス」を参照してください。|
 |[システム](#system)|「C 標準ライブラリリファレンス」を参照してください。|
 
-### <a name="_exit"></a><a name="_exit"></a>_Exit
+### <a name="_exit"></a><a name="_exit"></a> _Exit
 
 ```cpp
 [[noreturn]] void _Exit(int status) noexcept;
@@ -75,7 +76,7 @@ extern "C++" using compare-pred = int(const void*, const void*);
 
 プログラムは、自動、スレッド、または静的ストレージ存続期間のオブジェクトに対してデストラクターを実行せずに終了し、に渡された関数を呼び出さずに終了し `atexit()` ます。 関数 `_Exit` は、シグナルセーフです。
 
-### <a name="abort"></a><a name="abort"></a>取り消し
+### <a name="abort"></a><a name="abort"></a> 取り消し
 
 ```cpp
 [[noreturn]] void abort() noexcept;
@@ -85,7 +86,7 @@ extern "C++" using compare-pred = int(const void*, const void*);
 
 プログラムは、自動、スレッド、または静的ストレージ存続期間のオブジェクトに対してデストラクターを実行せずに終了し、に渡された関数を呼び出さずに終了し `atexit()` ます。 関数 `abort` は、シグナルセーフです。
 
-### <a name="at_quick_exit"></a><a name="at_quick_exit"></a>at_quick_exit
+### <a name="at_quick_exit"></a><a name="at_quick_exit"></a> at_quick_exit
 
 ```cpp
 int at_quick_exit(c-atexit-handler * func) noexcept;
@@ -98,9 +99,9 @@ int at_quick_exit(atexit-handler * func) noexcept;
 
 #### <a name="remarks"></a>解説
 
-関数は、 `at_quick_exit()` が呼び出されたときに引数なしで呼び出される関数*func*を登録し `quick_exit` ます。 を呼び出すと、の `at_quick_exit()` すべての呼び出し `quick_exit` が成功しなくなる可能性があります。 これらの関数は、 `at_quick_exit()` データの競合を招くことはありません。 `at_quick_exit`が複数のスレッドから呼び出された場合、登録の順序が不確定になることがあります。 登録 `at_quick_exit` は登録とは別 `atexit` であるため、アプリケーションでは、同じ引数を使用して両方の登録関数を呼び出す必要がある場合があります。 MSVC では、少なくとも32関数の登録がサポートされています。
+関数は、 `at_quick_exit()` が呼び出されたときに引数なしで呼び出される関数 *func* を登録し `quick_exit` ます。 を呼び出すと、の `at_quick_exit()` すべての呼び出し `quick_exit` が成功しなくなる可能性があります。 これらの関数は、 `at_quick_exit()` データの競合を招くことはありません。 `at_quick_exit`が複数のスレッドから呼び出された場合、登録の順序が不確定になることがあります。 登録 `at_quick_exit` は登録とは別 `atexit` であるため、アプリケーションでは、同じ引数を使用して両方の登録関数を呼び出す必要がある場合があります。 MSVC では、少なくとも32関数の登録がサポートされています。
 
-### <a name="atexit"></a><a name="atexit"></a>atexit
+### <a name="atexit"></a><a name="atexit"></a> atexit
 
 ```cpp
 int atexit(c-atexit-handler * func) noexcept;
@@ -109,13 +110,13 @@ int atexit(atexit-handler * func) noexcept;
 
 #### <a name="remarks"></a>解説
 
-関数は、 `atexit()` 通常のプログラムの終了時に引数なしで呼び出されるように*func*が指す関数を登録します。 への呼び出しが失敗する前にを呼び出すことはでき `atexit()` `exit()` ません。 これらの関数は、 `atexit()` データの競合を招くことはありません。
+関数は、 `atexit()` 通常のプログラムの終了時に引数なしで呼び出されるように *func* が指す関数を登録します。 への呼び出しが失敗する前にを呼び出すことはでき `atexit()` `exit()` ません。 これらの関数は、 `atexit()` データの競合を招くことはありません。
 
 #### <a name="return-value"></a>戻り値
 
 登録が成功した場合は0を返し、失敗した場合は0以外の値を返します。
 
-### <a name="exit"></a><a name="exit"></a>終了
+### <a name="exit"></a><a name="exit"></a> 終了
 
 ```cpp
 [[noreturn]] void exit(int status);
@@ -129,15 +130,15 @@ int atexit(atexit-handler * func) noexcept;
 
 次に、すべての開いている C ストリーム (で宣言された関数シグネチャによって宣言された) が書き込まれていない \<cstdio> 状態でフラッシュされ、開いているすべての c ストリームが閉じられ、を呼び出すことによって作成されたすべてのファイル `tmpfile()` が削除されます。
 
-最後に、コントロールがホスト環境に返されます。 *Status*が0または EXIT_SUCCESS の場合、実装によって定義された状態の終了が正常終了として返されます。 MSVC は0の値を返します。 *Status*が EXIT_FAILURE の場合、MSVC は値3を返します。 それ以外の場合、MSVC は*status*パラメーターの値を返します。
+最後に、コントロールがホスト環境に返されます。 *Status* が0または EXIT_SUCCESS の場合、実装によって定義された状態の終了が正常終了として返されます。 MSVC は0の値を返します。 *Status* が EXIT_FAILURE の場合、MSVC は値3を返します。 それ以外の場合、MSVC は *status* パラメーターの値を返します。
 
-### <a name="getenv"></a><a name="getenv"></a>getenv
+### <a name="getenv"></a><a name="getenv"></a> getenv
 
 ```cpp
 char* getenv(const char* name);
 ```
 
-### <a name="quick_exit"></a><a name="quick_exit"></a>quick_exit
+### <a name="quick_exit"></a><a name="quick_exit"></a> quick_exit
 
 ```cpp
 [[noreturn]] void quick_exit(int status) noexcept;
@@ -147,7 +148,7 @@ char* getenv(const char* name);
 
 一般に、への呼び出しによって登録される関数 `at_quick_exit` は、登録の逆の順序で呼び出されます。 この順序は、他の登録済み関数が既に呼び出された後に登録された関数には適用されません。 が呼び出されても、オブジェクトは破棄されません `quick_exit` 。 関数がスローされた例外のハンドラーを提供しないため、コントロールがによって呼び出された登録済みの関数を離れる場合 `quick_exit` `std::terminate()` は、が呼び出されます。 経由で登録さ `at_quick_exit` れた関数は、を呼び出すスレッドによって呼び出され `quick_exit` ます。これは、それを登録したスレッドとは異なるスレッドになる可能性があります。 つまり、登録された関数は、スレッドストレージ存続期間を持つオブジェクトの id に依存することはできません。 登録された関数を呼び出すと、はを `quick_exit` 呼び出し `_Exit(status)` ます。 標準のファイルバッファーはフラッシュされません。 関数は、に登録されている `quick_exit` 関数がである場合、シグナルセーフです `at_quick_exit` 。
 
-### <a name="system"></a><a name="system"></a>system
+### <a name="system"></a><a name="system"></a> system
 
 ```cpp
 int system(const char* string);

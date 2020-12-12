@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: hash_multimap クラス'
 title: hash_multimap クラス
 ms.date: 10/18/2018
 f1_keywords:
@@ -86,12 +87,12 @@ helpviewer_keywords:
 - stdext::hash_multimap::upper_bound
 - stdext::hash_multimap::value_comp
 ms.assetid: f41a6db9-67aa-43a3-a3c5-dbfe9ec3ae7d
-ms.openlocfilehash: 089204ac77403923d38f198d53b3ff711e6a4963
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: b8cbf11bf633940140fb9a90b58ee1128b9efca6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88560825"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97324110"
 ---
 # <a name="hash_multimap-class"></a>hash_multimap クラス
 
@@ -170,7 +171,7 @@ hash_multimap クラスに用意されている反復子は双方向反復子で
 |[const_reference](#const_reference)|**`const`** `hash_multimap` 読み取りと操作の実行のために、に格納されている要素への参照を提供する型 **`const`** 。|
 |[const_reverse_iterator](#const_reverse_iterator)|内の任意の要素を読み取ることができる双方向反復子を提供する型 **`const`** `hash_multimap` 。|
 |[difference_type](#difference_type)|`hash_multimap` の要素の数を、反復子が指す要素の範囲に基づいて表すために使用できる符号付き整数型。|
-|[反](#iterator)|`hash_multimap` 内の任意の要素を読み取り、または変更できる双方向反復子を提供する型。|
+|[iterator](#iterator)|`hash_multimap` 内の任意の要素を読み取り、または変更できる双方向反復子を提供する型。|
 |[key_compare](#key_compare)|2 つの並べ替えキーを比較して、`hash_multimap` 内の 2 つの要素の相対順序を決定できる関数オブジェクトを提供する型。|
 |[key_type](#key_type)|`hash_multimap` の各要素の一部である並べ替えキー オブジェクトを表す型。|
 |[mapped_type](#mapped_type)|`hash_multimap` に格納されているデータ型を表す型。|
@@ -216,7 +217,7 @@ hash_multimap クラスに用意されている反復子は双方向反復子で
 |-|-|
 |[hash_multimap::operator=](#op_eq)|別の `hash_multimap` のコピーで `hash_multimap` の要素を置き換えます。|
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:**\<hash_map>
 
@@ -602,7 +603,7 @@ hash_multimap に、並べ替えキーがパラメーター キーと一致す�
 
 **[lower_bound (** `key` **), upper_bound (** `key` **) )**
 
-キー値 *キー*を持つ。
+キー値 *キー* を持つ。
 
 ### <a name="example"></a>例
 
@@ -917,7 +918,7 @@ iterator emplace_hint(
 
 要素の [hash_multimap::value_type](#value_type) はペアを表します。これにより、要素の値は順序付けされたペアになり、このペアの最初のコンポーネントはキー値と同じで、2 番目のコンポーネントは要素のデータ値と同じになります。
 
-挿入ポイントが *_Where*の直後にある場合、挿入は対数時間ではなく償却定数時間で実行できます。
+挿入ポイントが *_Where* の直後にある場合、挿入は対数時間ではなく償却定数時間で実行できます。
 
 ### <a name="example"></a>例
 
@@ -1608,7 +1609,7 @@ iterator insert(
 
 要素の [value_type](#value_type) はペアを表します。これにより、要素の値は順序付けされたペアになり、このペアの最初のコンポーネントはキー値と同じで、2 番目のコンポーネントは要素のデータ値と同じになります。
 
-挿入 `insert` ポイントが *位置*の直後にある場合は、対数時間ではなく、のヒントバージョンに対して、償却定数時間で挿入することができます。
+挿入 `insert` ポイントが *位置* の直後にある場合は、対数時間ではなく、のヒントバージョンに対して、償却定数時間で挿入することができます。
 
 ## <a name="hash_multimapiterator"></a><a name="iterator"></a> hash_multimap:: iterator
 
@@ -1720,9 +1721,9 @@ typedef Traits key_compare;
 
 ### <a name="remarks"></a>解説
 
-`key_compare` は、テンプレートパラメーターの *特徴*のシノニムです。
+`key_compare` は、テンプレートパラメーターの *特徴* のシノニムです。
 
-*特徴*の詳細については、 [hash_multimap クラス](../standard-library/hash-multimap-class.md)に関するトピックを参照してください。
+*特徴* の詳細については、 [hash_multimap クラス](../standard-library/hash-multimap-class.md)に関するトピックを参照してください。
 
 ### <a name="example"></a>例
 
@@ -1741,9 +1742,9 @@ typedef Key key_type;
 
 ### <a name="remarks"></a>解説
 
-`key_type` は、テンプレートパラメーター *キー*のシノニムです。
+`key_type` は、テンプレートパラメーター *キー* のシノニムです。
 
-*キー*の詳細については、 [hash_multimap クラス](../standard-library/hash-multimap-class.md)のトピックの「解説」を参照してください。
+*キー* の詳細については、 [hash_multimap クラス](../standard-library/hash-multimap-class.md)のトピックの「解説」を参照してください。
 
 ### <a name="example"></a>例
 
@@ -1859,7 +1860,7 @@ typedef Type mapped_type;
 
 `mapped_type` は、テンプレート パラメーター *Type* のシノニムです。
 
-*型*の詳細については、 [hash_multimap クラス](../standard-library/hash-multimap-class.md)に関するトピックを参照してください。
+*型* の詳細については、 [hash_multimap クラス](../standard-library/hash-multimap-class.md)に関するトピックを参照してください。
 
 ### <a name="example"></a>例
 
@@ -2479,7 +2480,7 @@ hash_multimap が要素の並べ替えに使用する比較関数オブジェク
 
 ### <a name="remarks"></a>解説
 
-Hash_multimap *m*の場合、2つの *要素 e1* (*k1*、 *d1*) *と e2*(*k2*、 *d2*) が型の [value_type](#value_type)オブジェクトである ( *k1* と *k2* は型 [key_type](#key_type) のキーであり、 *d1* と *d2* は [mapped_type](#mapped_type)型のデータである) 場合、 `m.value_comp()(e1, e2)` はと同じに `m.key_comp()(k1, k2)` なります。 格納されているオブジェクトは以下のメンバー関数を定義します。
+Hash_multimap *m* の場合、2つの *要素 e1* (*k1*、 *d1*) *と e2*(*k2*、 *d2*) が型の [value_type](#value_type)オブジェクトである ( *k1* と *k2* は型 [key_type](#key_type) のキーであり、 *d1* と *d2* は [mapped_type](#mapped_type)型のデータである) 場合、 `m.value_comp()(e1, e2)` はと同じに `m.key_comp()(k1, k2)` なります。 格納されているオブジェクトは以下のメンバー関数を定義します。
 
 `bool operator( value_type& left, value_type& right);`
 

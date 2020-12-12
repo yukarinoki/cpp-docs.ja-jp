@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: enable_if クラス'
 title: enable_if クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - enable_if class
 - enable_if
 ms.assetid: c6b8d41c-a18f-4e30-a39e-b3aa0e8fd926
-ms.openlocfilehash: 1017fc315a4440350a0190cf4b40e644cda16876
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 89bd78113a9f6ea9d94a69decccd58c7953e4a8f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87230040"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97324463"
 ---
 # <a name="enable_if-class"></a>enable_if クラス
 
@@ -31,13 +32,13 @@ struct enable_if;
 結果の型の存在を定義する値。
 
 *\T*\
-*B*が true の場合にインスタンスを生成する型。
+*B* が true の場合にインスタンスを生成する型。
 
 ## <a name="remarks"></a>解説
 
-*B*が true の場合、に `enable_if<B, T>` は、 *T*のシノニムである "type" という名前の入れ子になった typedef があります。
+*B* が true の場合、に `enable_if<B, T>` は、 *T* のシノニムである "type" という名前の入れ子になった typedef があります。
 
-*B*が false の場合、は `enable_if<B, T>` "type" という名前の入れ子になった typedef を持ちません。
+*B* が false の場合、は `enable_if<B, T>` "type" という名前の入れ子になった typedef を持ちません。
 
 このエイリアス テンプレートが提供されています。
 
@@ -129,9 +130,9 @@ func(make_pair("foo", "bar"));
 
 この例では、`make_pair("foo", "bar")` は `pair<const char *, const char *>` を返します。 オーバーロード解決では、どの `func()` が必要かを決定する必要があります。 `pair<A, B>` は、`pair<X, Y>` から暗黙に変換されるコンストラクターを持っています。  これは新しいものではなく、C++98 にありました。 ただし C++98/03 では、暗黙に変換されるコンストラクターのシグネチャは、`pair<int, int>(const pair<const char *, const char *>&)` の場合でも必ず存在します。  オーバーロードの解決では、コンストラクターのインスタンスをインスタンス化しようとして `const char *` も、 **`int`** 関数定義がインスタンス化される前にシグネチャを確認するだけであるため、そのコンストラクターのインスタンスをインスタンス化しようとしても、ようなが消えます。  そのため、この例のコードは曖昧です。シグネチャは、`pair<const char *, const char *>` を `pair<int, int>` と `pair<string, string>` の両方に変換するために存在するからです。
 
-C++11 は、`enable_if` を使用してこの曖昧さを解決しました。`pair<A, B>(const pair<X, Y>&)` が、以下の場合**のみ**、つまり `const X&` が `A` に暗黙に変換され、`const Y&` が `B` に暗黙に変換される場合のみ存在するようにしています。  これにより、オーバーロード解決は、`pair<const char *, const char *>` が `pair<int, int>` に変換されないこと、および `pair<string, string>` となるオーバーロードが実行可能であることを決定できます。
+C++11 は、`enable_if` を使用してこの曖昧さを解決しました。`pair<A, B>(const pair<X, Y>&)` が、以下の場合 **のみ**、つまり `const X&` が `A` に暗黙に変換され、`const Y&` が `B` に暗黙に変換される場合のみ存在するようにしています。  これにより、オーバーロード解決は、`pair<const char *, const char *>` が `pair<int, int>` に変換されないこと、および `pair<string, string>` となるオーバーロードが実行可能であることを決定できます。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:**\<type_traits>
 

@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「アプリケーション設定、MFC ActiveX コントロールウィザード」を参照してください。
 title: '[アプリケーションの設定] (MFC ActiveX コントロール ウィザード)'
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - MFC ActiveX Control Wizard, application settings
 ms.assetid: 48475194-cc63-467f-8499-f142269a4c1c
-ms.openlocfilehash: 55f202ffabe945e55589ab1fc771a1757e23ca2f
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: dac370f7ba3461534f2fd4782869e7ddcb50336a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81372475"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97322812"
 ---
 # <a name="application-settings-mfc-activex-control-wizard"></a>[アプリケーションの設定] (MFC ActiveX コントロール ウィザード)
 
@@ -40,6 +41,6 @@ MFC ActiveX コントロール ウィザードのこのページを使用して�
 
 ## <a name="see-also"></a>関連項目
 
-[MFC ActiveX コントロール ウィザード](../../mfc/reference/mfc-activex-control-wizard.md)<br/>
-[コントロール名、 MFC ActiveX コントロール ウィザード](../../mfc/reference/control-names-mfc-activex-control-wizard.md)<br/>
-[コントロールの設定、MFC ActiveX コントロール ウィザード](../../mfc/reference/control-settings-mfc-activex-control-wizard.md)
+[MFC ActiveX コントロールウィザード](../../mfc/reference/mfc-activex-control-wizard.md)<br/>
+[[コントロール名] (MFC ActiveX コントロールウィザード)](../../mfc/reference/control-names-mfc-activex-control-wizard.md)<br/>
+[[コントロールの設定] (MFC ActiveX コントロールウィザード)](../../mfc/reference/control-settings-mfc-activex-control-wizard.md)

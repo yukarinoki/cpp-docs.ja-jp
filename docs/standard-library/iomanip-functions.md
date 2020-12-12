@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: &lt; iomanip &gt; 関数'
 title: '&lt;iomanip&gt; 関数'
 ms.date: 11/04/2016
 f1_keywords:
@@ -26,12 +27,12 @@ helpviewer_keywords:
 - std::setiosflags [C++]
 - std::setprecision [C++]
 - std::setw [C++]
-ms.openlocfilehash: f540b311cafd59935a9cf1e521d3dbd558f59673
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: d9ddcea6b524c0413bc1c68c2b75ec910b529d22
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88845758"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97323929"
 ---
 # <a name="ltiomanipgt-functions"></a>&lt;iomanip&gt; 関数
 
@@ -110,7 +111,7 @@ T8 put_money(const Money& amount, bool use_intl);
 
 ### <a name="return-value"></a>戻り値
 
-`str` を返します。
+`str` が返されます。
 
 ### <a name="remarks"></a>解説
 
@@ -155,7 +156,7 @@ quoted(const char* str, char delimiter, char escape) // or wide versions
 *引数*\
 Std:: string、char \* 、string リテラル、または未加工の文字列リテラル、またはこれらのいずれかのワイドバージョン (例: std:: wstring、wchar_t \* )。
 
-*delimiter*\
+*区切り記号*\
 文字列の先頭と末尾の区切り記号として使用するユーザー指定の文字またはワイド文字。
 
 *付ける*\
@@ -344,13 +345,13 @@ T3 setbase(int base);
 
 マニピュレーターは、ストリームに抽出または挿入されるときに、 `str` `str.setf(mask,` [ios_base:: basefield](../standard-library/ios-base-class.md#fmtflags)を呼び出し、を返すオブジェクトを返し `)` `str` ます。 ここで `mask` は、は次のように決定されます。
 
-- *Base*が8の場合、 `mask` は `ios_base::` [10 月](../standard-library/ios-functions.md#oct)になります。
+- *Base* が8の場合、 `mask` は `ios_base::` [10 月](../standard-library/ios-functions.md#oct)になります。
 
-- *Base*が10の場合、mask は `ios_base::` [dec](../standard-library/ios-functions.md#dec)です。
+- *Base* が10の場合、mask は `ios_base::` [dec](../standard-library/ios-functions.md#dec)です。
 
-- *Base*が16の場合、 `mask` は `ios_base::` [16 進数](../standard-library/ios-functions.md#hex)です。
+- *Base* が16の場合、 `mask` は `ios_base::` [16 進数](../standard-library/ios-functions.md#hex)です。
 
-- *Base*がその他の値の場合、mask は `ios_base::` [fmtflags](../standard-library/ios-base-class.md#fmtflags)に `(0)` なります。
+- *Base* がその他の値の場合、mask は `ios_base::` [fmtflags](../standard-library/ios-base-class.md#fmtflags)に `(0)` なります。
 
 ### <a name="example"></a>例
 
@@ -372,7 +373,7 @@ T4 setfill(Elem Ch);
 
 ### <a name="return-value"></a>戻り値
 
-このテンプレートマニピュレーターは、ストリームに抽出または挿入されるときに、 `str` fill を呼び出し、を返すオブジェクトを返し `str.` [fill](../standard-library/basic-ios-class.md#fill) `(Ch)` `str` ます。 型は、 `Elem` ストリームの要素型と同じである必要があり `str` ます。
+このテンプレートマニピュレーターは、ストリームに抽出または挿入されるときに、 `str` fill を呼び出し、を返すオブジェクトを返し `str.` [](../standard-library/basic-ios-class.md#fill) `(Ch)` `str` ます。 型は、 `Elem` ストリームの要素型と同じである必要があり `str` ます。
 
 ### <a name="example"></a>例
 
@@ -435,7 +436,7 @@ T6 setw(streamsize Wide);
 
 ### <a name="return-value"></a>戻り値
 
-マニピュレーターは、ストリームに抽出または挿入されるときに、 `str` width を呼び出し、を返すオブジェクトを返し `str.` [width](../standard-library/ios-base-class.md#width) `(Wide)` `str` ます。
+マニピュレーターは、ストリームに抽出または挿入されるときに、 `str` width を呼び出し、を返すオブジェクトを返し `str.` [](../standard-library/ios-base-class.md#width) `(Wide)` `str` ます。
 
 ### <a name="remarks"></a>解説
 

@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「C++ プログラムの起動と終了」を参照してください。
 title: C++ プログラムの起動と終了
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - startup code, and C++ program termination
 - main function, program startup
 ms.assetid: f72c8f76-f507-4ddd-a270-7b60f4fed625
-ms.openlocfilehash: e59e8852172a998e4bf4f42f9f919dc29c2ded85
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 644be6d4392f8e41b1d1cf7d45b484ed9903d463
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68450652"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97324788"
 ---
 # <a name="c-program-startup-and-termination"></a>C++ プログラムの起動と終了
 
@@ -37,4 +38,4 @@ C と同様に、`main` からの戻りまたは `exit` の呼び出しでは、
 ## <a name="see-also"></a>関連項目
 
 [C++ 標準ライブラリの概要](../standard-library/cpp-standard-library-overview.md)\
-[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[C++ 標準ライブラリのスレッドセーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)

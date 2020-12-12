@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: error_code クラス'
 title: error_code クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -19,12 +20,12 @@ helpviewer_keywords:
 - std::error_code::default_error_condition
 - std::error_code::message
 ms.assetid: c09b4a96-cb14-4281-a319-63543f9b2b4a
-ms.openlocfilehash: 5bbd67d2967a1a6d070ece54ea464a2a5a2deac9
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 0fb084a7d33cc6c1b7d0d4a821a770e0e49a923e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88844458"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97324424"
 ---
 # <a name="error_code-class"></a>error_code クラス
 
@@ -54,7 +55,7 @@ class error_code;
 |-|-|
 |[value_type](#value_type)|格納されたエラー コード値を表す型。|
 
-### <a name="functions"></a>Functions
+### <a name="functions"></a>関数
 
 |名前|説明|
 |-|-|
@@ -64,7 +65,7 @@ class error_code;
 |[default_error_condition](#default_error_condition)|既定のエラー条件を返します。|
 |[message](#message)|エラー コードの名前を返します。|
 
-### <a name="operators"></a>演算子
+### <a name="operators"></a>オペレーター
 
 |名前|説明|
 |-|-|
@@ -92,7 +93,7 @@ void assign(value_type val, const error_category& _Cat);
 
 #### <a name="remarks"></a>解説
 
-このメンバー関数は、エラーコード値として *val* を格納し、 *_Cat*へのポインターを格納します。
+このメンバー関数は、エラーコード値として *val* を格納し、 *_Cat* へのポインターを格納します。
 
 ### <a name="category"></a><a name="category"></a> 別
 
@@ -218,7 +219,7 @@ bool operator!=(const error_code& right) const;
 
 #### <a name="return-value"></a>戻り値
 
-**`true`**`error_code`オブジェクトが、渡されたオブジェクトと等しくない場合は `error_code` 。それ以外*right*の場合は **`false`** 。
+**`true`**`error_code`オブジェクトが、渡されたオブジェクトと等しくない場合は `error_code` 。それ以外の場合は **`false`** 。
 
 #### <a name="remarks"></a>解説
 

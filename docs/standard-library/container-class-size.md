@@ -1,20 +1,21 @@
 ---
+description: '詳細については、コンテナークラス:: size に関するページを参照してください。'
 title: コンテナー クラス::size
 ms.date: 11/04/2016
 helpviewer_keywords:
 - size method
 ms.assetid: 67073661-2699-4534-ad3b-31a906658dc5
-ms.openlocfilehash: 473d179bf8fbb45d843fab75db1aeb2ea1df225c
-ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
+ms.openlocfilehash: 4cdf3dff9160efdb60221a413486dd0be56d31f5
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77257820"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97324816"
 ---
 # <a name="container-classsize"></a>コンテナー クラス::size
 
 > [!NOTE]
-> このトピックは、 C++ C++標準ライブラリで使用されているコンテナーの非機能例として、Microsoft ドキュメントに記載されています。 詳しくは、「[C++ 標準ライブラリのコンテナー](../standard-library/stl-containers.md)」をご覧ください。
+> このトピックは、C++ 標準ライブラリで使用されるコンテナーの非機能例として、Microsoft C++ ドキュメントに記載されています。 詳細については、「[C++ 標準ライブラリ コンテナー](../standard-library/stl-containers.md)」を参照してください。
 
 被制御シーケンスの長さにかかわらず一定時間で、被制御シーケンスの長さを返します。
 
@@ -24,6 +25,6 @@ ms.locfileid: "77257820"
 size_type size() const;
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[サンプル コンテナー クラス](../standard-library/sample-container-class.md)
+[サンプルコンテナークラス](../standard-library/sample-container-class.md)

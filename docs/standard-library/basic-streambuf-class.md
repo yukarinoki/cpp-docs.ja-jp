@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: basic_streambuf クラス'
 title: basic_streambuf クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -94,12 +95,12 @@ helpviewer_keywords:
 - std::basic_streambuf [C++], xsgetn
 - std::basic_streambuf [C++], xsputn
 ms.assetid: 136af6c3-13bf-4501-9288-b93da26efac7
-ms.openlocfilehash: 6c9a44f56e89baf32ba49241822bc4ba018f0701
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: 7600c60c501c1922deeabca11d41c89bc37548a5
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88561831"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97325614"
 ---
 # <a name="basic_streambuf-class"></a>basic_streambuf クラス
 
@@ -122,7 +123,7 @@ class basic_streambuf;
 
 ## <a name="remarks"></a>解説
 
-クラステンプレートは、ストリームの特定の表現との間での要素の伝送を制御する、ストリームバッファーを派生させるための抽象基本クラスを記述します。 クラスのオブジェクトは、 `basic_streambuf` [char_type](#char_type)とも呼ばれる*Tr*型の要素を含むストリームを制御するのに役立ちます。この場合、文字特性は[traits_type](#traits_type)とも呼ばれるクラス[char_traits](../standard-library/char-traits-struct.md)によって決定されます。
+クラステンプレートは、ストリームの特定の表現との間での要素の伝送を制御する、ストリームバッファーを派生させるための抽象基本クラスを記述します。 クラスのオブジェクトは、 `basic_streambuf` [char_type](#char_type)とも呼ばれる *Tr* 型の要素を含むストリームを制御するのに役立ちます。この場合、文字特性は [traits_type](#traits_type)とも呼ばれるクラス [char_traits](../standard-library/char-traits-struct.md)によって決定されます。
 
 各ストリーム バッファーは、抽出 (入力) 用ストリームと挿入 (出力) 用ストリームという 2 つの独立したストリームを概念上制御します。 ただし、特定の表現によってこれらのストリームのいずれか、もしくは両方がアクセス不可になる場合があります。 通常、そのような表現は、これら 2 つのストリームの何らかの関係を保持しています。 たとえば、 [basic_stringbuf](../standard-library/basic-stringbuf-class.md)の出力ストリームに挿入すると、 <  `Elem` `Tr`> オブジェクトなどが、後で入力ストリームから抽出されます。 [Basic_filebuf](../standard-library/basic-filebuf-class.md)の1つのストリームを> オブジェクトに配置する場合は、 <  `Elem` `Tr` もう一方のストリームを平行に配置します。
 
@@ -212,7 +213,7 @@ class basic_streambuf;
 |[stossc](#stossc)|ストリーム内の現在の要素の直後に移動します。|
 |[sungetc](#sungetc)|ストリームから単一の文字を取得します。|
 |[スワップ](#swap)|このオブジェクトの値を、指定した `basic_streambuf` オブジェクト パラメーターの値と交換します。|
-|[sync](#sync)|制御されているストリームと関連付けられている外部ストリームとの同期を試みるプロテクト仮想関数。|
+|[頻度](#sync)|制御されているストリームと関連付けられている外部ストリームとの同期を試みるプロテクト仮想関数。|
 |[uflow](#uflow)|入力ストリームから現在の要素を抽出するプロテクト仮想関数。|
 |[アンダー](#underflow)|入力ストリームから現在の要素を抽出するプロテクト仮想関数。|
 |[xsgetn](#xsgetn)|入力ストリームから要素を抽出するプロテクト仮想関数。|
@@ -224,7 +225,7 @@ class basic_streambuf;
 |-|-|
 |[operator =](#op_eq)|別の `basic_streambuf` オブジェクトの値をこのオブジェクトに割り当てます。|
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:**\<streambuf>
 
@@ -249,7 +250,7 @@ basic_streambuf(const basic_streambuf& right);
 
 最初の保護されたコンストラクターは、入力バッファーと出力バッファーを制御するすべてのポインターに Null ポインターを格納します。 また、`locale::classic` をロケール オブジェクトに格納します。 詳細については、「[locale::classic](../standard-library/locale-class.md#classic)」を参照してください。
 
-2番目のプロテクトコンストラクターは、ポインターとロケールを *右*からコピーします。
+2番目のプロテクトコンストラクターは、ポインターとロケールを *右* からコピーします。
 
 ## <a name="basic_streambufchar_type"></a><a name="char_type"></a> basic_streambuf:: char_type
 
@@ -457,7 +458,7 @@ virtual int_type overflow(int_type _Meta = traits_type::eof());
 
 ### <a name="remarks"></a>解説
 
-* \_ Meta*が**traits_type:: eof**と等しくない場合、プロテクト仮想メンバー関数は、要素**traits_type::**[to_char_type](../standard-library/char-traits-struct.md#to_char_type)(* \_ Meta*) を出力ストリームに挿入しようとします。 これはさまざまな方法で行うことができます。
+*\_ Meta* が **traits_type:: eof** と等しくない場合、プロテクト仮想メンバー関数は、要素 **traits_type::**[to_char_type](../standard-library/char-traits-struct.md#to_char_type)(*\_ Meta*) を出力ストリームに挿入しようとします。 これはさまざまな方法で行うことができます。
 
 - `write position` が使用可能な場合は、書き込み位置に要素を格納し、出力バッファーのネクスト ポインターをインクリメントできます。
 
@@ -492,7 +493,7 @@ virtual int_type pbackfail(int_type _Meta = traits_type::eof());
 
 ### <a name="remarks"></a>解説
 
-* \_ Meta*が**traits_type:: eof**と等しい場合、プッシュバックする要素は、実際には現在の要素の前に既にストリームにある要素になります。 それ以外の場合、その要素が **traits_type::**[to_char_type](../standard-library/char-traits-struct.md#to_char_type)(*\_Meta*) で置き換えられます。 この関数は、さまざまな方法で要素を戻すことができます。
+*\_ Meta* が **traits_type:: eof** と等しい場合、プッシュバックする要素は、実際には現在の要素の前に既にストリームにある要素になります。 それ以外の場合、その要素が **traits_type::**[to_char_type](../standard-library/char-traits-struct.md#to_char_type)(*\_Meta*) で置き換えられます。 この関数は、さまざまな方法で要素を戻すことができます。
 
 - 戻り位置が使用可能な場合は、戻り位置に要素を格納し、入力バッファーのネクスト ポインターをデクリメントできます。
 
@@ -583,7 +584,7 @@ pos_type pubseekoff(off_type _Off,
 ### <a name="parameters"></a>パラメーター
 
 *_Off*\
-*_Way*を基準にしてシークする位置。
+*_Way* を基準にしてシークする位置。
 
 *_Way*\
 オフセット演算の開始位置。 有効値については、「[seekdir](../standard-library/ios-base-class.md#seekdir)」を参照してください。
@@ -597,7 +598,7 @@ pos_type pubseekoff(off_type _Off,
 
 ### <a name="remarks"></a>解説
 
-ポインターを *_Way*の相対位置に移動します。
+ポインターを *_Way* の相対位置に移動します。
 
 ## <a name="basic_streambufpubseekpos"></a><a name="pubseekpos"></a> basic_streambuf::p ubseekpos
 
@@ -712,7 +713,7 @@ virtual pos_type seekoff(
 ### <a name="parameters"></a>パラメーター
 
 *_Off*\
-*_Way*を基準にしてシークする位置。
+*_Way* を基準にしてシークする位置。
 
 *_Way*\
 オフセット演算の開始位置。 有効値については、「[seekdir](../standard-library/ios-base-class.md#seekdir)」を参照してください。
@@ -867,7 +868,7 @@ int main( )
 
 ## <a name="basic_streambufsgetn"></a><a name="sgetn"></a> basic_streambuf:: sgetn
 
-最大文字 *数* を入力バッファーから抽出し、指定されたバッファー *ptr*に格納します。
+最大文字 *数* を入力バッファーから抽出し、指定されたバッファー *ptr* に格納します。
 
 渡された値が正しいことの確認を呼び出し元に依存するため、このメソッドは安全ではない可能性があります。
 
@@ -1039,7 +1040,7 @@ int_type sputc(char_type _Ch);
 
 ### <a name="remarks"></a>解説
 
-`write position`が使用可能な場合、メンバー関数は、書き込み位置に *_Ch*を格納し、出力バッファーの次のポインターをインクリメントし、 **traits_type::**[to_int_type](../standard-library/char-traits-struct.md#to_int_type)() を返し `_Ch` ます。 それ以外の場合は、 [overflow](#overflow)() を返し `_Ch` ます。
+`write position`が使用可能な場合、メンバー関数は、書き込み位置に *_Ch* を格納し、出力バッファーの次のポインターをインクリメントし、 **traits_type::**[to_int_type](../standard-library/char-traits-struct.md#to_int_type)() を返し `_Ch` ます。 それ以外の場合は、 [overflow](#overflow)() を返し `_Ch` ます。
 
 ### <a name="example"></a>例
 
@@ -1311,7 +1312,7 @@ virtual streamsize xsgetn(
 
 ### <a name="remarks"></a>解説
 
-プロテクト仮想メンバー関数は、 [sbumpc](#sbumpc)を繰り返し呼び出した場合と同じように、入力ストリームから最大*数*の要素を抽出し、それらを*ptr*で始まる配列に格納します。 実際に抽出された要素の数を返します。
+プロテクト仮想メンバー関数は、 [sbumpc](#sbumpc)を繰り返し呼び出した場合と同じように、入力ストリームから最大 *数* の要素を抽出し、それらを *ptr* で始まる配列に格納します。 実際に抽出された要素の数を返します。
 
 ## <a name="basic_streambufxsputn"></a><a name="xsputn"></a> basic_streambuf:: xsputn
 
@@ -1335,7 +1336,7 @@ virtual streamsize xsputn(const char_type* ptr, streamsize count);
 
 ### <a name="remarks"></a>解説
 
-プロテクト仮想メンバー関数は、 *ptr*から始まる配列から、 [sputc](#sputc)を繰り返し呼び出した場合と同じように、最大*数*の要素を出力ストリームに挿入します。 すべての *カウント* 文字が書き込まれるか、を呼び出すとが返されると、出力ストリームへの文字の挿入は停止し `sputc( count)` `traits::eof()` ます。 実際に挿入された要素の数を返します。
+プロテクト仮想メンバー関数は、 *ptr* から始まる配列から、 [sputc](#sputc)を繰り返し呼び出した場合と同じように、最大 *数* の要素を出力ストリームに挿入します。 すべての *カウント* 文字が書き込まれるか、を呼び出すとが返されると、出力ストリームへの文字の挿入は停止し `sputc( count)` `traits::eof()` ます。 実際に挿入された要素の数を返します。
 
 ## <a name="see-also"></a>関連項目
 

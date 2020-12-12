@@ -1,20 +1,21 @@
 ---
+description: '詳細については、「コンテナークラス:: max_size」を参照してください。'
 title: コンテナー クラス::max_size
 ms.date: 11/04/2016
 helpviewer_keywords:
 - max_size method
 ms.assetid: 56754753-9911-48fd-b463-ac06b2fa1aab
-ms.openlocfilehash: e03311c0fb279c0f9fdb69b30d3631470ee5bd4a
-ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
+ms.openlocfilehash: c85c0b02a8e0c1d237ef860e19dc557ddba859ea
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77257885"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97324855"
 ---
 # <a name="container-classmax_size"></a>コンテナー クラス::max_size
 
 > [!NOTE]
-> このトピックは、 C++ C++標準ライブラリで使用されているコンテナーの非機能例として、Microsoft ドキュメントに記載されています。 詳しくは、「[C++ 標準ライブラリのコンテナー](../standard-library/stl-containers.md)」をご覧ください。
+> このトピックは、C++ 標準ライブラリで使用されるコンテナーの非機能例として、Microsoft C++ ドキュメントに記載されています。 詳細については、「[C++ 標準ライブラリ コンテナー](../standard-library/stl-containers.md)」を参照してください。
 
 被制御シーケンスの長さにかかわらず一定時間で、オブジェクトが制御できる最長のシーケンスの長さを返します。
 
@@ -24,6 +25,6 @@ ms.locfileid: "77257885"
 size_type max_size() const;
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[サンプル コンテナー クラス](../standard-library/sample-container-class.md)
+[サンプルコンテナークラス](../standard-library/sample-container-class.md)

@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「AFX Messages」を参照してください。
 title: AFX メッセージ
 ms.date: 11/04/2016
 f1_keywords:
@@ -64,12 +65,12 @@ f1_keywords:
 helpviewer_keywords:
 - AFX messages [MFC]
 ms.assetid: 3d601f3c-af6d-47d3-8553-34f1318fa74f
-ms.openlocfilehash: 409760eff6ba6b31413c11fb45ea91a6d07b9485
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: edda0bffd7077a9898a83ff1a530145a008d2d94
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88832400"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97322838"
 ---
 # <a name="afx-messages"></a>AFX メッセージ
 
@@ -87,29 +88,29 @@ ms.locfileid: "88832400"
 |AFX_WM_CHANGE_CURRENT_FOLDER|フレームワークは、ユーザーが現在のフォルダーを変更したときに、の親にこのメッセージを送信し `CMFCShellListCtrl` ます。|使用しません。|使用しません。|使用しません。|
 |AFX_WM_CHANGEVISUALMANAGER|フレームワークは、ユーザーが現在のビジュアルマネージャーを変更したときに、すべてのフレームウィンドウにこのメッセージを送信します。 このメッセージに対する応答として、フレームウィンドウはその領域を再計算し、必要に応じて他のパラメーターを調整します。 このイベントについて通知する必要がある場合は、アプリケーションで AFX_WM_CHANGEVISUALMANAGER メッセージを処理することができます。 `OnChangeVisualManager`このイベントのフレームワーク内部処理が発生するようにするには、基本クラスハンドラー () を呼び出す必要があります。|使用しません。|使用しません。|使用しません。|
 |AFX_WM_CHANGING_ACTIVE_TAB|オブジェクトの親に送信され `CMFCTabCtrl` ます。  `CMFCTabCtrl`ユーザーがタブをリセットしたときにオブジェクトから通知を受け取る場合は、このメッセージを処理します。|アクティブ化されているタブのインデックス。|使用されていません。|なら.|
-|AFX_WM_CHECKEMPTYMINIFRAME|内部使用のみ。|適用不可。|適用不可。|適用不可。|
+|AFX_WM_CHECKEMPTYMINIFRAME|内部使用専用です。|適用不可。|適用不可。|適用不可。|
 |AFX_WM_CREATETOOLBAR|`CMFCToolBarsListPropertyPage`カスタマイズプロセス中にユーザーが新しいツールバーを作成したときに送信されます。 このメッセージを処理して、カスタム CMFCToolBar の派生オブジェクトをインスタンス化できます。 このメッセージを処理して独自のツールバーを作成する場合は、既定のハンドラーの呼び出しを省略します。|使用されていません。|ツールバーの名前を格納している文字列へのポインター。|新しく作成されたツールバーへのポインター。 NULL は、ツールバーの作成がキャンセルされたことを示します。|
 |AFX_WM_CUSTOMIZEHELP|`CMFCToolbarCustomize Dialog`ユーザーが [**ヘルプ**] ボタンまたは F1 キーを押したときに、カスタマイズプロパティシートからメインフレームウィンドウに送信されます。|カスタマイズプロパティシートのアクティブページを指定します。|`CMFCToolbarCustomize Dialog` オブジェクトを指すポインターです。|ゼロ。|
 |AFX_WM_CUSTOMIZETOOLBAR|は、 `CMFCToolbarCustomize Dialog` ユーザーが新しいツールバーを作成していることを親フレームに通知するために、このメッセージを送信します。|カスタマイズが開始された場合は TRUE、カスタマイズが終了した場合は FALSE。|使用されていません。|ゼロ。|
 |AFX_WM_DELETETOOLBAR|ユーザーがカスタマイズモードでツールバーを削除しようとしているときに、メインフレームウィンドウに送信されます。<br /><br /> ユーザーがカスタマイズモードでツールバーを削除したときに追加のアクションを実行するには、このメッセージを処理します。 また、既定のハンドラー () を呼び出す必要があり `OnToolbarDelete` ます。これにより、ツールバーが削除されます。 既定のハンドラーは、ツールバーを削除できるかどうかを示す値を返します。|使用されていません。|削除するオブジェクトへのポインター `CMFCToolBar` 。|ツールバーを削除できない場合は0以外。それ以外の場合は0です。|
 |AFX_WM_GETDOCUMENTCOLORS|`CMFCColorMenuButton` このメッセージをメインフレームウィンドウに送信して、ドキュメントの色を取得します。|使用されていません。|[入力、出力]オブジェクトへのポインター `CList<COLORREF, COLORREF>` 。|ゼロ。|
-|AFX_WM_GETDRAGBOUNDS|内部使用のみ。|適用不可。|適用不可。|適用不可。|
+|AFX_WM_GETDRAGBOUNDS|内部使用専用です。|適用不可。|適用不可。|適用不可。|
 |AFX_WM_HIGHLIGHT_RIBBON_LIST_ITEM|ユーザーがリボンリスト項目を強調表示したときにメインフレームウィンドウに送信されます。|強調表示された項目のインデックス|へのポインター `CMFCBaseRibbonElement`|使用されていません。|
 |AFX_WM_ON_AFTER_SHELL_COMMAND|`CMFCShellListCtrl` `CMFCShellTreeCtrl` ユーザーがシェルコマンドの実行を終了したときに、またはコントロールの親に送信されます。|ユーザーが実行したコマンドの ID|使用されていません。|アプリケーションがこのメッセージを処理する場合は、0を返します。|
 |AFX_WM_ON_BEFORE_SHOW_RIBBON_ITEM_MENU|フレームワークは、ポップアップメニューを表示する前に、このメッセージをリボンの親に送信します。 このメッセージを処理し、ポップアップメニューをいつでも変更できます。|使用されていません。|へのポインター `CMFCBaseRibbonElement`|使用されていません。|
-|AFX_WM_ON_CANCELTABMOVE|内部使用のみ。|適用不可。|適用不可。||
+|AFX_WM_ON_CANCELTABMOVE|内部使用専用です。|適用不可。|適用不可。||
 |AFX_WM_ON_CHANGE_RIBBON_CATEGORY|フレームワークは、ユーザーがアクティブなリボンコントロールのカテゴリを変更したときに、このメッセージをメインフレームに送信します。|使用されていません。|カテゴリが変更されたへのポインター `CMFCRibbonBar` 。|使用されていません。|
 |AFX_WM_ON_CLOSEPOPUPWINDOW|フレームワークは、ウィンドウが閉じようとしていることを所有者に通知するために、このメッセージを送信し `CMFCDesktopAlertWnd` ます。|使用されていません。|オブジェクトへのポインター `CMFCDesktopAlertWnd` 。|使用されていません。|
-|AFX_WM_ON_DRAGCOMPLETE|内部使用のみ。|適用不可。|適用不可。|適用不可。|
+|AFX_WM_ON_DRAGCOMPLETE|内部使用専用です。|適用不可。|適用不可。|適用不可。|
 |AFX_WM_ON_GET_TAB_TOOLTIP|カスタムツールヒントが有効になっている場合に、タブウィンドウでタブのツールヒントを表示しようとしているときに、メインフレームウィンドウに送信されます。|使用されていません。|構造体へのポインター `CMFCTabToolTipInfo` 。|使用されていません。|
 |AFX_WM_ON_HSCROLL|サイズ変更可能コントロールバーコントロールに送信されます。 このメッセージを処理し `CMFCTabCtrl` て、タブ付きウィジェットの水平スクロールバーでスクロールイベントが発生したときにオブジェクトから通知を受信します。|下位ワードは、ユーザーのスクロール要求を示すスクロールバーの値を指定します。  詳細については、このトピックで後に示す表を参照してください。|使用されていません。|なら.|
 |AFX_WM_ON_MOVE_TAB|ユーザーがタブを新しい位置にドラッグしたときに、タブ付きウィンドウの親に送信されます。|元の位置にあるタブの0から始まるインデックス。|入出力新しい位置のタブの0から始まるインデックス。|ゼロ。|
-|AFX_WM_ON_MOVETABCOMPLETE|内部使用のみ。|適用不可。|適用不可。|適用不可。|
+|AFX_WM_ON_MOVETABCOMPLETE|内部使用専用です。|適用不可。|適用不可。|適用不可。|
 |AFX_WM_ON_MOVETOTABGROUP|ユーザーが MDI 子ウィンドウを1つのタブ付きグループから別のグループに移動したときに、メインフレームウィンドウに送信されます。|`CMFCTabCtrl`MDI 子ウィンドウが削除されたタブ付きウィンドウ () へのハンドル。|入出力`CMFCTabCtrl`MDI 子ウィンドウが挿入されたタブ付きウィンドウ () へのハンドル。|無視されます。|
 |AFX_WM_ON_PRESS_CLOSE_BUTTON|`CDockablePane`ユーザーがコントロールバーのキャプションの [**閉じる**] ボタンをクリックしたときに、の親に送信されます。|使用されていません。|ユーザーが [ **閉じる** ] ボタンをクリックしたドッキング可能なペインへのポインター。|ペインを閉じることができない場合は TRUE。それ以外の場合は FALSE。|
 |AFX_WM_ON_RENAME_TAB|ユーザーが編集可能なタブの名前を変更した後に、タブ付きウィンドウの親に送信されます。|名前が変更されたタブの0から始まるインデックス。|入出力新しいタブ名を格納している文字列へのポインター。|アプリケーションがこのメッセージを処理する場合は0以外。フレームワークは、の呼び出しを抑制し `CMFCBaseTabCtrl::SetTabLabel` ます。  ゼロが返された場合、 `CMFCBaseTabCtrl::SetTabLabel` はフレームワークによって呼び出されます。|
 |AFX_WM_ON_RIBBON_CUSTOMIZE|ユーザーがカスタマイズを開始すると、親フレームに送信されます。 独自のカスタマイズダイアログボックスを表示する場合は、このメッセージを処理します。|使用されていません。|カスタマイズするリボンコントロールへのポインター。|アプリケーションがこのメッセージを処理し、独自のカスタマイズダイアログボックスを表示する場合は0以外の。 アプリケーションが0を返した場合は、フレームワークによって組み込みのカスタマイズダイアログボックスが表示されます。|
-|AFX_WM_ON_TABGROUPMOUSEMOVE|内部使用のみ。|適用不可。|適用不可。|適用不可。|
+|AFX_WM_ON_TABGROUPMOUSEMOVE|内部使用専用です。|適用不可。|適用不可。|適用不可。|
 |AFX_WM_POSTSETPREVIEWFRAME|ユーザーが印刷プレビューモードを変更したことをメインフレームに通知するために送信されます|TRUE は、印刷プレビューモードが設定されていることを示します。 FALSE は、印刷プレビューモードがオフになっていることを示します。|使用しません。|使用しません。|
 |AFX_WM_PROPERTY_CHANGED|`CMFCPropertyGridCtrl`ユーザーが選択したプロパティの値を変更したときに、プロパティグリッドコントロール () の所有者に送信されます。|プロパティリストのコントロール ID。|変更されたプロパティ () へのポインター `CMFCPropertyGridProperty` 。|使用されていません。|
 |AFX_WM_RESETCONTEXTMENU|カスタマイズ中にユーザーがコンテキストメニューをリセットしたときに、メインフレームウィンドウに送信されます。|コンテキストメニューのリソース ID。|現在のコンテキストメニューへのポインター `CMFCPopupMenu` 。|使用されていません。|
@@ -124,7 +125,7 @@ ms.locfileid: "88832400"
 
 次の表は、AFX_WM_HSCROLL メソッドの *lParam* パラメーターの下位ワードの値を示しています。
 
-|値|意味|
+|値|説明|
 |-|-|
 |SB_ENDSCROLL|ユーザーがスクロールを終了します。|
 |SB_LEFT|ユーザーは、左上にスクロールします。|

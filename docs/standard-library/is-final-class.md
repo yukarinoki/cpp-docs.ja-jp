@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: is_final クラス'
 title: is_final クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - is_final
 ms.assetid: 9dbad82f-6685-4909-94e8-98e4a93994b9
-ms.openlocfilehash: 14efbeb33193cc674c6e766b880e89d9b76d140a
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 04660309205689e14200cb5d214ce5dc80efb88f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68452652"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97323742"
 ---
-# <a name="isfinal-class"></a>is_final クラス
+# <a name="is_final-class"></a>is_final クラス
 
-型が `final` でマークされたクラス型であるかどうかをテストします。
+型が `final` とマークされるクラス型であるかどうかをテストします。
 
 ## <a name="syntax"></a>構文
 
@@ -29,13 +30,13 @@ struct is_final;
 *\T*\
 照会する型。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-型*T*がとマーク`final`されたクラス型である場合、型述語のインスタンスは true を保持します。それ以外の場合は、false を保持します。 *T*がクラス型の場合は、完全な型である必要があります。
+型 *T* がとマークされたクラス型である場合、型述語のインスタンスは true を保持し `final` ます。それ以外の場合は、false を保持します。 *T* がクラス型の場合は、完全な型である必要があります。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-**ヘッダー:** \<type_traits>
+**ヘッダー:**\<type_traits>
 
 **名前空間:** std
 

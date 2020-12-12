@@ -1,19 +1,20 @@
 ---
-title: 入出力の代替手段
+description: 詳細については、「入力/出力の代替手段」を参照してください。
+title: Input-Output 代替手段
 ms.date: 05/07/2019
 helpviewer_keywords:
 - I/O [C++], alternatives
 ms.assetid: 9f8401c7-d90d-4285-8918-63573df74a80
-ms.openlocfilehash: b46ff242fc263be5069eb691dd0ea9e8fb00b0f9
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: a6df022dd38bc23eaaaad49620067aca408b2df2
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68455291"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97324003"
 ---
 # <a name="inputoutput-alternatives"></a>入出力の代替手段
 
-Microsoft C++コンパイラでは、i/o プログラミングにいくつかの代替手段が用意されています。
+Microsoft C++ コンパイラでは、i/o プログラミングにいくつかの代替手段が用意されています。
 
 - C ランタイム ライブラリの直接的なバッファーされない入出力。
 
@@ -31,4 +32,4 @@ iostream クラスは、Microsoft Windows オペレーティング システム�
 
 ## <a name="see-also"></a>関連項目
 
-[ストリームとは何か](../standard-library/what-a-stream-is.md)
+[ストリームとは](../standard-library/what-a-stream-is.md)

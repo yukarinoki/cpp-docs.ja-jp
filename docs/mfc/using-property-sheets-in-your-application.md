@@ -1,4 +1,5 @@
 ---
+description: 詳細については、アプリケーションでのプロパティシートの使用に関するページを参照してください。
 title: アプリケーションでのプロパティ シートの使用
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - Create method [MFC], property sheets
 - CPropertyPage class [MFC], styles
 ms.assetid: 240654d4-152b-4e3f-af7b-44234339206e
-ms.openlocfilehash: 789764c9af988135219bd710d4f8aec1cda9143a
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 3bc1e21d99eb4a1688247524749b44028762892d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91504647"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97322687"
 ---
 # <a name="using-property-sheets-in-your-application"></a>アプリケーションでのプロパティ シートの使用
 
@@ -36,7 +37,7 @@ ms.locfileid: "91504647"
 
    - [**スタイル**] ページの [**タイトルバー** ] チェックボックスがオンになっていることを確認します。
 
-   - [その**他のスタイル**] ページで [**無効**] チェックボックスがオンになっていることを確認します。
+   - [その **他のスタイル**] ページで [**無効**] チェックボックスがオンになっていることを確認します。
 
 1. 各プロパティページダイアログテンプレートに対応する [CPropertyPage](../mfc/reference/cpropertypage-class.md)派生クラスを作成します。 「 [クラスの追加」を](../ide/adding-a-class-visual-cpp.md)参照してください。 `CPropertyPage`基本クラスとしてを選択します。
 
@@ -52,7 +53,7 @@ ms.locfileid: "91504647"
 
    通常、を作成するオブジェクトは、 `CPropertySheet` `CPropertyPage` この手順でもオブジェクトを作成します。 ただし、派生クラスを実装する場合は、オブジェクトを `CPropertySheet` `CPropertyPage` オブジェクトに埋め込み、 `CPropertySheet` から派生した `AddPage` クラスコンストラクターから各ページに対してを呼び出すことができ `CPropertySheet` ます。 `AddPage``CPropertyPage`プロパティシートのページの一覧にオブジェクトを追加しますが、実際にはそのページのウィンドウを作成しません。 そのため、プロパティシートのコンストラクターからを呼び出すことができるように、プロパティシートウィンドウが作成されるまで待つ必要はありません。 `AddPage` `AddPage`
 
-   既定では、プロパティシートに表示されるタブの数がプロパティシートの1行に収まりきらない場合、タブは複数の行にスタックされます。 スタックを無効にするには、パラメーターを**FALSE**に設定して[CPropertySheet:: EnableStackedTabs](../mfc/reference/cpropertysheet-class.md#enablestackedtabs)を呼び出します。 プロパティシートを作成するときに、を呼び出す必要があり `EnableStackedTabs` ます。
+   既定では、プロパティシートに表示されるタブの数がプロパティシートの1行に収まりきらない場合、タブは複数の行にスタックされます。 スタックを無効にするには、パラメーターを **FALSE** に設定して [CPropertySheet:: EnableStackedTabs](../mfc/reference/cpropertysheet-class.md#enablestackedtabs)を呼び出します。 プロパティシートを作成するときに、を呼び出す必要があり `EnableStackedTabs` ます。
 
 1. [CPropertySheet::D oModal](../mfc/reference/cpropertysheet-class.md#domodal)または[Create](../mfc/reference/cpropertysheet-class.md#create)を呼び出して、プロパティシートを表示します。 `DoModal`を呼び出して、モーダルダイアログボックスとしてプロパティシートを作成します。 [ **作成** ] を呼び出して、モードレスダイアログボックスとしてプロパティシートを作成します。
 

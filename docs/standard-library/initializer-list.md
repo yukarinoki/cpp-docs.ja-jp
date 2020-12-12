@@ -1,13 +1,14 @@
 ---
+description: '詳細については、次を参照してください: &lt; initializer_list&gt;'
 title: '&lt;initializer_list&gt;'
 ms.date: 11/04/2016
 ms.assetid: 820b6448-fb01-49a4-aeaa-546ad7576ea4
-ms.openlocfilehash: d04eb7e20a989fe310835250c6e51af754edbaf8
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 2bf70ccaa9c831e1ce2872fb03867ca35109e522
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72687910"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97324016"
 ---
 # <a name="ltinitializer_listgt"></a>&lt;initializer_list&gt;
 
@@ -21,7 +22,7 @@ ms.locfileid: "72687910"
 
 ### <a name="classes"></a>クラス
 
-|インスタンス|説明|
+|クラス|説明|
 |-|-|
 |[initializer_list](../standard-library/initializer-list-class.md)|すべてのメンバーが指定された型である要素の配列にアクセスできます。|
 

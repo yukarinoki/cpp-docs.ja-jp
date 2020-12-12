@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: binder2nd クラス'
 title: binder2nd クラス
 ms.date: 02/21/2019
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - binder2nd class
 ms.assetid: b2a9c1d1-dfc4-4ca9-a10e-ae84e195a62d
-ms.openlocfilehash: 297f91dd9283b9f004247d2d1814b30a17e7ffa2
-ms.sourcegitcommit: 4b0928a1a497648d0d327579c8262f25ed20d02e
+ms.openlocfilehash: a3c76fcea22045ee7e723ad3ad51390c39f602ef
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72890093"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97325493"
 ---
 # <a name="binder2nd-class"></a>binder2nd クラス
 
@@ -41,21 +42,21 @@ class binder2nd
 *func*\
 単項関数オブジェクトに変換する二項関数オブジェクト。
 
-*右*\
+*そうです*\
 二項関数オブジェクトの 2 つ目の引数がバインドされている値。
 
-*左*\
+*左側*\
 調整後の二項オブジェクトが 2 つ目の引数の固定値と比較する引数の値。
 
 ## <a name="return-value"></a>戻り値
 
-二項関数オブジェクトの2番目の引数を値*right*にバインドした結果として生成される単項関数オブジェクト。
+二項関数オブジェクトの2番目の引数を値 *right* にバインドした結果として生成される単項関数オブジェクト。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-クラステンプレートは、バイナリ関数オブジェクト*func*のコピーを `op`に格納し、`value`の*右側*のコピーを格納します。 `op(left, value)`を返すように、メンバー関数 `operator()` を定義します。
+クラステンプレートには、バイナリ関数オブジェクト *func* のコピー `op` と、の *right* のコピーが格納され `value` ます。 そのメンバー関数は、 `operator()` を返すように定義さ `op(left, value)` れています。
 
-*Func*が `Operation` 型のオブジェクトで、c が定数である場合、 [bind2nd](../standard-library/functional-functions.md#bind2nd)`(func, c)` は `binder2nd` クラス `binder2nd<Operation>(func, c)`コンストラクターに相当し、より便利です。
+*Func* が型のオブジェクトで、 `Operation` c が定数である場合、 [bind2nd](../standard-library/functional-functions.md#bind2nd) `(func, c)` は `binder2nd` クラスコンストラクターに相当し、 `binder2nd<Operation>(func, c)` さらに便利です。
 
 ## <a name="example"></a>例
 

@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: is_error_code_enum クラス'
 title: is_error_code_enum クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - is_error_code_enum class
 ms.assetid: cee5be2d-7c20-4cec-a352-1ab8b7d32601
-ms.openlocfilehash: 4080c62034b224a9553eca2787aa1c2f2cf69ab8
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 359f15c3d809435df81408a721a0c9ad11c1e7e5
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68454626"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97323756"
 ---
-# <a name="iserrorcodeenum-class"></a>is_error_code_enum クラス
+# <a name="is_error_code_enum-class"></a>is_error_code_enum クラス
 
 [error_code](../standard-library/error-code-class.md) 列挙型をテストする型述語を表します。
 
@@ -24,7 +25,7 @@ template <_Enum>
     class is_error_code_enum;
 ```
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 型 `_Enum` が型 `error_code` のオブジェクトを格納するのに適した列挙型の値である場合、この[型述語](../standard-library/type-traits.md)のインスタンスは true を保持します。
 

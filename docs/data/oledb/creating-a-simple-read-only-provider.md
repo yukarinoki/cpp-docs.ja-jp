@@ -1,16 +1,17 @@
 ---
+description: 詳細については、「簡単な Read-Only プロバイダーの作成」を参照してください。
 title: 単純な読み取り専用プロバイダーの作成
 ms.date: 05/09/2019
 helpviewer_keywords:
 - OLE DB providers, creating
 - OLE DB provider templates, creating providers
 ms.assetid: ade8ccdd-9ea4-4e46-a964-18460c2a2401
-ms.openlocfilehash: c7c6c5bb2691a110a6368decd875f5a5a06b11b5
-ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
+ms.openlocfilehash: 1904e850bc6a681e13e4799a2822963932ad9dfc
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "92919190"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97323221"
 ---
 # <a name="creating-a-simple-read-only-provider"></a>単純な読み取り専用プロバイダーの作成
 
@@ -32,6 +33,6 @@ ATL OLE DB プロバイダー ウィザードは、Visual Studio 2019 以降で�
 
 ::: moniker-end
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 
 [OLE DB プロバイダーの作成](../../data/oledb/creating-an-ole-db-provider.md)<br/>

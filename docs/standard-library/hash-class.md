@@ -1,4 +1,5 @@
 ---
+description: '詳細: hash クラス'
 title: hash クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -21,12 +22,12 @@ helpviewer_keywords:
 - std::hash [C++]
 - std::hash [C++]
 ms.assetid: e1b500c6-a5c8-4f6f-ad33-7ec52eb8e2e4
-ms.openlocfilehash: aa51e56197ba79afbe2bd2597596c52b23a4f65b
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 124740486482722ec065c01f0d71e9bbc413f8f7
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79446585"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97324162"
 ---
 # <a name="hash-class"></a>hash クラス
 
@@ -41,9 +42,9 @@ struct hash {
 };
 ```
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
-この関数オブジェクトは、*Ty* 型の値をインデックス値の分布にマッピングするのに適したハッシュ関数を定義します。 メンバー `operator()` は、クラステンプレート `unordered_map`、`unordered_multimap`、`unordered_set`、および `unordered_multiset`で使用するのに適した、 *val*のハッシュコードを返します。 標準ライブラリには、基本型の特殊化が用意されています。*Ty* は、ポインター型や列挙型など、任意のスカラー型にすることができます。 また、ライブラリ型 `string`、`wstring`、`u16string`、`u32string`、`string_view`、`wstring_view`、`u16string_view`、`u32string_view`、`bitset`、`error_code`、`error_condition`、`optional`、`shared_ptr`、`thread`、`type_index`、`unique_ptr`、`variant`、および `vector<bool>` の特殊化があります。
+この関数オブジェクトは、*Ty* 型の値をインデックス値の分布にマッピングするのに適したハッシュ関数を定義します。 メンバーは、 `operator()` クラステンプレート、、、およびでの使用に適した、 *val* のハッシュコードを返し `unordered_map` `unordered_multimap` `unordered_set` `unordered_multiset` ます。 標準ライブラリには、基本型の特殊化が用意されています。*Ty* は、ポインター型や列挙型など、任意のスカラー型にすることができます。 また、ライブラリ型 `string`、`wstring`、`u16string`、`u32string`、`string_view`、`wstring_view`、`u16string_view`、`u32string_view`、`bitset`、`error_code`、`error_condition`、`optional`、`shared_ptr`、`thread`、`type_index`、`unique_ptr`、`variant`、および `vector<bool>` の特殊化があります。
 
 ## <a name="example"></a>例
 
@@ -70,11 +71,11 @@ int main()
 
 ## <a name="requirements"></a>要件
 
-**ヘッダー:** \<機能 >
+**ヘッダー:**\<functional>
 
 **名前空間:** std
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [<unordered_map>](../standard-library/unordered-map.md)\
 [unordered_multimap クラス](../standard-library/unordered-multimap-class.md)\

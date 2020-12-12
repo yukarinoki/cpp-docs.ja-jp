@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: ctype_base クラス'
 title: ctype_base クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - ctype_base class
 ms.assetid: ccffe891-d7ab-4d22-baf8-8eb6d438a96d
-ms.openlocfilehash: 4fac75d90c4e40a22e8ceae974c3f49c3d50a1d3
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 430e6fbf77842e61e662fd3024a54b418f487748
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72688192"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97324683"
 ---
 # <a name="ctype_base-class"></a>ctype_base クラス
 
-クラスは、クラステンプレート[ctype](../standard-library/ctype-class.md)のファセットの基底クラスとして機能します。 個々の文字または範囲全体の文字を分類またはテストするための列挙型を定義するために使用される ctype クラスの基底クラス。
+クラスは、クラステンプレート [ctype](../standard-library/ctype-class.md)のファセットの基底クラスとして機能します。 個々の文字または範囲全体の文字を分類またはテストするための列挙型を定義するために使用される ctype クラスの基底クラス。
 
 ## <a name="syntax"></a>構文
 
@@ -43,9 +44,9 @@ struct ctype_base : public locale::facet
 };
 ```
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-列挙マスクを定義します。 ヘッダー \<ctype.h> に宣言されている同様の関数で定義されているように、列挙定数はそれぞれ、文字を分類する別の方法の特徴となっています。 定数は次のとおりです。
+列挙マスクを定義します。 各列挙定数は、ヘッダーで宣言された似た名前を持つ関数によって定義されているように、文字を分類する別の方法を特徴として \<ctype.h> います。 定数は次のとおりです。
 
 - **space** (関数 [isspace](../standard-library/locale-functions.md#isspace))
 
@@ -69,14 +70,14 @@ struct ctype_base : public locale::facet
 
 - **graph** (関数 [isgraph](../standard-library/locale-functions.md#isgraph))
 
-これらの定数を OR 演算することで、分類の組み合わせを特徴付けることができます。 特に、 **alnum** = = (**アルファ** &#124; **数字**\) と**graph** \= \= \( **alnum** &#124; **punct**) は常に true です。
+これらの定数を OR 演算することで、分類の組み合わせを特徴付けることができます。 特に、 **alnum** = = ( **α** &#124; **digit** \) と **graph** \= \= \( **alnum** &#124; **punct**) は常に true です。
 
-## <a name="requirements"></a>［要件］
+## <a name="requirements"></a>要件
 
-**ヘッダー:** \<locale>
+**ヘッダー:**\<locale>
 
 **名前空間:** std
 
 ## <a name="see-also"></a>関連項目
 
-[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[C++ 標準ライブラリのスレッドセーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)

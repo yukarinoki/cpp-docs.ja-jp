@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: linear_congruential_engine クラス'
 title: linear_congruential_engine クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - linear_congruential_engine class
 ms.assetid: 30e00ca6-1933-4701-9561-54f3e810a5a1
-ms.openlocfilehash: 8701570787275e853543e723f6461b8ad460f96f
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: b2171623190180cabc46dd760debabdefb9afd77
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88845446"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97323539"
 ---
 # <a name="linear_congruential_engine-class"></a>linear_congruential_engine クラス
 
@@ -76,9 +77,9 @@ class linear_congruential_engine{
 
 このエンジンは、繰り返しの関係 ( *period*) を使用して、ユーザー指定の符号なし整数型の値を生成し `x(i) = (A * x(i-1) + C) mod M` ます。
 
-*M*が0の場合、この剰余演算に使用される値は `numeric_limits<result_type>::max() + 1` です。 エンジンの状態は、最後に返された値か、または `operator()` に対して呼び出しが行われなかった場合はシード値になります。
+*M* が0の場合、この剰余演算に使用される値は `numeric_limits<result_type>::max() + 1` です。 エンジンの状態は、最後に返された値か、または `operator()` に対して呼び出しが行われなかった場合はシード値になります。
 
-*M*が0以外の場合、テンプレート引数*A*と*C*の値は*m*より小さくなければなりません。
+*M* が0以外の場合、テンプレート引数 *A* と *C* の値は *m* より小さくなければなりません。
 
 このエンジンから直接ジェネレーターを構築できますが、定義済みの typedef のいずれかを使用することもできます。
 
@@ -96,7 +97,7 @@ typedef linear_congruential_engine<unsigned int, 48271, 0, 2147483647> minstd_ra
 
 線形合同法エンジン アルゴリズムの詳細については、Wikipedia の記事「[Linear congruential generator (線形合同法)](https://go.microsoft.com/fwlink/p/?linkid=402446)」を参照してください。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:**\<random>
 

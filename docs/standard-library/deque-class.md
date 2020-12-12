@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: deque クラス'
 title: deque クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -88,12 +89,12 @@ helpviewer_keywords:
 - std::deque [C++], size
 - std::deque [C++], swap
 ms.assetid: 64842ee5-057a-4063-8c16-4267a0332584
-ms.openlocfilehash: 1edcabf526d0f3aa2ba52ba3fd0fc656c5ae6b9c
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: f46c3c31dd23f7603a1d4ef6289e435c9b38e823
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88838548"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97324576"
 ---
 # <a name="deque-class"></a>deque クラス
 
@@ -112,7 +113,7 @@ class deque
 deque に格納される要素のデータ型。
 
 *アロケーター*\
-メモリの deque の割り当てと解放に関する詳細をカプセル化する、格納されたアロケーター オブジェクトを表す型。 この引数は省略可能であり、既定値**は \<Type> アロケーター**です。
+メモリの deque の割り当てと解放に関する詳細をカプセル化する、格納されたアロケーター オブジェクトを表す型。 この引数は省略可能であり、既定値 **は \<Type> アロケーター** です。
 
 ## <a name="remarks"></a>解説
 
@@ -150,14 +151,14 @@ deque の再割り当ては、メンバー関数がシーケンスの要素を�
 |[const_reference](#const_reference)|読み取りと他の操作の実行のために、`deque` 内の要素への参照を `const.` として提供する型。|
 |[const_reverse_iterator](#const_reverse_iterator)|内の要素へのアクセスと読み取りを可能にするランダムアクセス反復子を提供する型 `deque` **`const`** 。 deque は逆に表示されます。 詳しくは、「[reverse_iterator クラス](../standard-library/reverse-iterator-class.md)」をご覧ください。|
 |[difference_type](#difference_type)|同じ `deque` 内の要素を参照する 2 つのランダム アクセス反復子の違いを提供する型。|
-|[反](#iterator)|`deque` 内の任意の要素を読み取り、または変更できるランダム アクセス反復子を提供する型。|
+|[iterator](#iterator)|`deque` 内の任意の要素を読み取り、または変更できるランダム アクセス反復子を提供する型。|
 |[pointer](#pointer)|`deque` 内の要素へのポインターを提供する型。|
 |[reference](#reference)|`deque` に格納されている要素への参照を提供する型。|
 |[reverse_iterator](#reverse_iterator)|`deque` 内の要素を読み取り、または変更できるランダム アクセス反復子を提供する型。 deque は逆の順序で表示されます。|
 |[size_type](#size_type)|`deque` 内の要素の数をカウントする型。|
 |[value_type](#value_type)|`deque` に格納されているデータ型を表す型。|
 
-### <a name="functions"></a>Functions
+### <a name="functions"></a>関数
 
 |名前|説明|
 |-|-|
@@ -191,7 +192,7 @@ deque の再割り当ては、メンバー関数がシーケンスの要素を�
 |[size](#size)|`deque` 内の要素数を返します。|
 |[スワップ](#swap)|2 つの `deque` の要素を交換します。|
 
-### <a name="operators"></a>演算子
+### <a name="operators"></a>オペレーター
 
 |名前|説明|
 |-|-|
@@ -323,7 +324,7 @@ deque 内で参照する要素を示す添字 (または位置の番号)。
 
 ### <a name="return-value"></a>戻り値
 
-*Pos*が deque のサイズより大きい場合、は `at` 例外をスローします。
+*Pos* が deque のサイズより大きい場合、は `at` 例外をスローします。
 
 ### <a name="return-value"></a>戻り値
 
@@ -406,7 +407,7 @@ The last integer of c1 is 11
 The next-to-last integer of c1 is 10
 ```
 
-## <a name="begin"></a><a name="begin"></a> 初め
+## <a name="begin"></a><a name="begin"></a> begin
 
 deque の 1 つ目の要素を示す反復子を返します。
 
@@ -797,11 +798,11 @@ deque(initializer_list<value_type> IList, const Allocator& Al);
 
 4番目と5番目のコンストラクターは、値の (*Count*) 要素の繰り返しを指定し `val` ます。
 
-6番目のコンストラクターは、deque *権限*のコピーを指定します。
+6番目のコンストラクターは、deque *権限* のコピーを指定します。
 
 7 番目と 8 番目のコンストラクターは、deque の範囲 `[First, Last)` をコピーします。
 
-7番目のコンストラクターは、deque *権限*を移動します。
+7番目のコンストラクターは、deque *権限* を移動します。
 
 8 番目のコンストラクターは、initializer_list の内容をコピーします。
 
@@ -1269,7 +1270,7 @@ int main( )
 The deque is not empty.
 ```
 
-## <a name="end"></a><a name="end"></a> 終わり
+## <a name="end"></a><a name="end"></a> end
 
 deque 内の最後の要素の次の位置を指す反復子を返します。
 
@@ -1595,7 +1596,7 @@ int main( )
 }
 ```
 
-## <a name="operator"></a><a name="op_at"></a> 演算子 []
+## <a name="operator"></a><a name="op_at"></a> operator[]
 
 指定した位置における deque 要素への参照を返します。
 
@@ -1663,7 +1664,7 @@ deque& operator=(deque&& right);
 
 ### <a name="remarks"></a>解説
 
-最初のオーバーライドは、要素を、割り当てのソースである deque *right*からこのにコピーします。 2番目のオーバーライドは、要素を *右*からこの deque に移動します。
+最初のオーバーライドは、要素を、割り当てのソースである deque *right* からこのにコピーします。 2番目のオーバーライドは、要素を *右* からこの deque に移動します。
 
 演算子の実行前にこの deque に格納されていた要素は削除されます。
 
@@ -2107,9 +2108,9 @@ deque の新しいサイズ。
 
 ### <a name="remarks"></a>解説
 
-Deque のサイズが *_Newsize*要求されたサイズより小さい場合は、要求されたサイズに達するまで、要素が deque に追加されます。
+Deque のサイズが *_Newsize* 要求されたサイズより小さい場合は、要求されたサイズに達するまで、要素が deque に追加されます。
 
-Deque のサイズが要求されたサイズよりも大きい場合は、deque が *_Newsize*サイズになるまで、deque の末尾に近い要素が削除されます。
+Deque のサイズが要求されたサイズよりも大きい場合は、deque が *_Newsize* サイズになるまで、deque の末尾に近い要素が削除されます。
 
 deque の現在のサイズが要求されたサイズと同じ場合は、何も実行されません。
 
@@ -2282,7 +2283,7 @@ void swap(deque<Type, Allocator>& left, deque<Type, Allocator>& right);
 交換する要素を提供する deque (deque `left` と要素を交換する deque)。
 
 *左側*\
-要素が deque *right*の要素と交換される deque。
+要素が deque *right* の要素と交換される deque。
 
 ### <a name="example"></a>例
 

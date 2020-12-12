@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: equal_to 構造体'
 title: equal_to 構造体
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,14 +8,14 @@ helpviewer_keywords:
 - equal_to function
 - equal_to struct
 ms.assetid: 8e4f2b50-b2db-48e3-b4cc-6cc03362c2a6
-ms.openlocfilehash: ac7c5a3ed8d85e6ea3ad46ec61c7968bc19cd15e
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: cae0531c31396d16d447e3b0123dc679bbfd5aa6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68245835"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97324437"
 ---
-# <a name="equalto-struct"></a>equal_to 構造体
+# <a name="equal_to-struct"></a>equal_to 構造体
 
 引数に対して等値演算 (`operator==`) を実行する二項述語。
 
@@ -42,19 +43,19 @@ struct equal_to<void>
 *型*、 *T*、 *U*\
 指定または推論された型のオペランドを受け取る `operator==` をサポートする任意の型。
 
-*左*\
-等値演算の左オペランド。 特化されていないテンプレートは、型の左辺値参照引数を受け取る*型*します。 特殊化されたテンプレートはの完全転送を左辺値と右辺値参照引数の型を推論する*T*します。
+*左側*\
+等値演算の左オペランド。 非特殊テンプレートは、type *型* の左辺値参照引数を受け取ります。 特殊化されたテンプレートは、推論された型 *T* の左辺値および右辺値参照引数の完全転送を行います。
 
 *そうです*\
-等値演算の右オペランド。 特化されていないテンプレートは、型の左辺値参照引数を受け取る*型*します。 特殊化されたテンプレートはの完全転送を左辺値と右辺値参照引数の型を推論する*U*します。
+等値演算の右オペランド。 非特殊テンプレートは、type *型* の左辺値参照引数を受け取ります。 特殊化されたテンプレートは、推論された型 *U* の左辺値および右辺値参照引数の完全転送を行います。
 
 ## <a name="return-value"></a>戻り値
 
 `Left == Right` の結果。 特殊化されたテンプレートは、結果の完全転送を行います。結果には `operator==` によって返された型が含まれます。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-型のオブジェクト*型*等しいかどうかを比較する必要があります。 オブジェクトのセットに対して定義されている `operator==` が、等価関係の数学的性質を満たしている必要があります。 組み込みの数値型とポインター型はすべて、この要件を満たします。
+Type *型* のオブジェクトは、等値比較可能である必要があります。 オブジェクトのセットに対して定義されている `operator==` が、等価関係の数学的性質を満たしている必要があります。 組み込みの数値型とポインター型はすべて、この要件を満たします。
 
 ## <a name="example"></a>例
 

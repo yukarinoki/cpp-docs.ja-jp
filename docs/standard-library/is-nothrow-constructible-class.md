@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: is_nothrow_constructible クラス'
 title: is_nothrow_constructible クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - is_nothrow_constructible
 ms.assetid: 8be3f927-283e-4d67-95a5-8bf5dc4e7a3d
-ms.openlocfilehash: e52b16965d849f992731c4ff4254fd218b944269
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 0bb822a42d149a552f18ff4d1b1c723ef9b88172
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87217754"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97323582"
 ---
 # <a name="is_nothrow_constructible-class"></a>is_nothrow_constructible クラス
 
@@ -30,13 +31,13 @@ struct is_nothrow_constructible;
 照会する型。
 
 *Value*\
-*T*のコンストラクターで一致する引数の型。
+*T* のコンストラクターで一致する引数の型。
 
 ## <a name="remarks"></a>解説
 
-型の述語のインスタンスは、型*T*が引数の型を引数として使用して構築可能であり、コンストラクターがコンパイラによってスローされない場合に*true を保持*します。それ以外の場合は、false を保持します。 型*T*は、変数定義が整形式である場合に構築可能です `T t(std::declval<Args>()...);` 。 *T*と*Args*内のすべての型は、完全な型、 **`void`** 、または不明なバインドの配列である必要があります。
+型の述語のインスタンスは、型 *T* が引数の型を引数として使用して構築可能であり、コンストラクターがコンパイラによってスローされない場合に *true を保持* します。それ以外の場合は、false を保持します。 型 *T* は、変数定義が整形式である場合に構築可能です `T t(std::declval<Args>()...);` 。 *T* と *Args* 内のすべての型は、完全な型、 **`void`** 、または不明なバインドの配列である必要があります。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:**\<type_traits>
 

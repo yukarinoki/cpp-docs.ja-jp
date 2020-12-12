@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: indirect_array クラス'
 title: indirect_array クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - indirect_array class
 ms.assetid: 10e1eaea-ba5a-405c-a25e-7bdd3eee7fc7
-ms.openlocfilehash: 6be0c5153cbc94d09b414fc9e14fa498c7a4cfa7
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 47c9a0e604fd9873d7705f70624e67d9b3a22a7a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72687921"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97324042"
 ---
 # <a name="indirect_array-class"></a>indirect_array クラス
 
@@ -19,13 +20,13 @@ ms.locfileid: "72687921"
 
 ## <a name="syntax"></a>構文
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-クラスは、クラス[valarray](../standard-library/valarray-class.md)  **\<Type >** の `va` オブジェクトへの参照、および `valarray<size_t>` オブジェクトから選択する要素のシーケンスを記述するクラス `valarray<Type>` のオブジェクト `xa` を格納するオブジェクトを表します。
+クラスは、クラス valarray のオブジェクトへの参照を、 `va` [](../standard-library/valarray-class.md) **\<Type>** `xa` `valarray<size_t>` オブジェクトから選択する要素のシーケンスを記述するクラスのオブジェクトと共に格納するオブジェクトを表し `valarray<Type>` ます。
 
-@No__t_0 オブジェクトを構築するには `va[xa]` フォームの式を記述する必要があります。 クラス indirect_array のメンバー関数は、`valarray<Type>` に対して定義されている対応する関数シグネチャのように動作します。ただし、選択された要素のシーケンスのみが影響を受けます。
+オブジェクトを構築するには、 `indirect_array<Type>` フォームの式を記述する必要が `va[xa]` あります。 クラス indirect_array のメンバー関数は、に対して定義されている対応する関数シグネチャと同様に動作し `valarray<Type>` ますが、選択された要素のシーケンスのみが影響を受けます。
 
-シーケンスは xa で構成さ**れます。** 要素の[サイズ](../standard-library/valarray-class.md#size)を変更します。ここで、要素 `I` は `va` 内のインデックス**xa**[`I`] になります。
+シーケンスは xa で構成さ **れます。** 要素の [サイズ](../standard-library/valarray-class.md#size)を変更 `I` します。要素は内のインデックス **xa**[] になり `I` `va` ます。
 
 ## <a name="example"></a>例:
 
@@ -73,12 +74,12 @@ The initial operand valarray is:  (0 -1 2 -1 4 -1 6 -1 8 -1).
 The modified operand valarray is:  (0 -1 10 -1 10 -1 10 -1 8 -1).
 ```
 
-## <a name="requirements"></a>［要件］
+## <a name="requirements"></a>要件
 
-**ヘッダー:** \<valarray>
+**ヘッダー:**\<valarray>
 
 **名前空間:** std
 
 ## <a name="see-also"></a>関連項目
 
-[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[C++ 標準ライブラリのスレッドセーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)

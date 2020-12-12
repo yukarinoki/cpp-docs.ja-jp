@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: domain_error クラス'
 title: domain_error クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - domain_error class
 ms.assetid: a1d8245d-61c2-4d1e-973f-073bd5dd5fa3
-ms.openlocfilehash: 850615f07af022aff3ed209d9142823b0f038134
-ms.sourcegitcommit: f2a135d69a2a8ef1777da60c53d58fe06980c997
+ms.openlocfilehash: 337df7c7c8e2327a4e5b88a45a736c697e6cb1bc
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87521240"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97324489"
 ---
 # <a name="domain_error-class"></a>domain_error クラス
 
@@ -29,7 +30,7 @@ public:
 };
 ```
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 によって返される値 `what()` は、のコピーです `message.data()` 。 詳細については、[`what`](../standard-library/exception-class.md) および [`data`](../standard-library/basic-string-class.md#data) を参照してください。
 
@@ -60,7 +61,7 @@ Type: class std::domain_error
 */
 ```
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:**\<stdexcept>
 

@@ -1,15 +1,16 @@
 ---
+description: 詳細については、「コンシューマー Wizard-Generated クラス」を参照してください。
 title: コンシューマー ウィザードで生成されたクラス
 ms.date: 05/09/2019
 helpviewer_keywords:
 - user record classes in OLE DB consumer
 ms.assetid: dba0538f-2afe-4354-8cbb-f202ea8ade5a
-ms.openlocfilehash: 5c8a975b2f4a8ae3285f035e7b708c5026f5f480
-ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
+ms.openlocfilehash: 13b8b56564ec0acaba342ffd55f8dd5c9b94accb
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "92924603"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97323275"
 ---
 # <a name="consumer-wizard-generated-classes"></a>コンシューマー ウィザードで生成されたクラス
 
@@ -23,7 +24,7 @@ ATL OLE DB コンシューマー ウィザードは、Visual Studio 2019 以降�
 
 **ATL OLE DB コンシューマー ウィザード** を使用してコンシューマーを生成する場合、OLE DB テンプレートと OLE DB 属性のどちらかを使用するよう選択できます。 どちらの場合も、ウィザードによってコマンド クラスとユーザー レコード クラスが生成されます。 コマンド クラスには、ウィザードで指定したデータ ソースと行セットを開くためのコードが含まれています。 ユーザー レコード クラスには、選択したデータベース テーブルの列マップが含まれています。 ただし、生成されるコードはそれぞれ異なります。
 
-- テンプレート コンシューマーを選択した場合、ウィザードはコマンド クラスとユーザー レコード クラスを生成します。 コマンド クラスは、ウィザードの **[クラス]** ボックスに入力した名前 (`CProducts` など) になり、ユーザー レコード クラスは、" *ClassName* Accessor" 形式の名前 (`CProductsAccessor` など) になります。 どちらのクラスも、コンシューマーのヘッダー ファイルに格納されます。
+- テンプレート コンシューマーを選択した場合、ウィザードはコマンド クラスとユーザー レコード クラスを生成します。 コマンド クラスは、ウィザードの **[クラス]** ボックスに入力した名前 (`CProducts` など) になり、ユーザー レコード クラスは、"*ClassName* Accessor" 形式の名前 (`CProductsAccessor` など) になります。 どちらのクラスも、コンシューマーのヘッダー ファイルに格納されます。
 
 - 属性コンシューマーを選択した場合は、ユーザー レコード クラスのフォームは、"_ *ClassName* Accessor" の名前で挿入されます。 つまり、テキスト エディターではコマンド クラスの表示のみが可能になり、ユーザー レコード クラスは挿入されたコードとして表示されます。 挿入されたコードを表示する方法については、「 [挿入されたコードのデバッグ](/visualstudio/debugger/how-to-debug-injected-code)」を参照してください。
 
@@ -88,7 +89,7 @@ public:
 
 ### <a name="rowset-properties"></a>行セット プロパティ
 
-次に、ウィザードは行セット プロパティを設定します。 ATL OLE DB コンシューマー ウィザードで **[変更]** 、 **[挿入]** 、または **[削除]** を選択した場合、適切なプロパティがここで設定されます (DBPROP_IRowsetChange は常に設定され、それぞれの場合に DBPROPVAL_UP_CHANGE、DBPROPVAL_UP_INSERT、DBPROPVAL_UP_DELETE のいずれかが設定されます)。
+次に、ウィザードは行セット プロパティを設定します。 ATL OLE DB コンシューマー ウィザードで **[変更]**、 **[挿入]**、または **[削除]** を選択した場合、適切なプロパティがここで設定されます (DBPROP_IRowsetChange は常に設定され、それぞれの場合に DBPROPVAL_UP_CHANGE、DBPROPVAL_UP_INSERT、DBPROPVAL_UP_DELETE のいずれかが設定されます)。
 
 ```cpp
 void GetRowsetProperties(CDBPropSet* pPropSet)
@@ -150,7 +151,7 @@ class CProducts : public CCommand<CAccessor<CProductsAccessor>>
 
 ## <a name="attribute-injected-user-record-classes"></a>属性が挿入されたユーザー レコード クラス
 
-データベース属性 ( [db_command](../../windows/attributes/db-command.md) または [db_table](../../windows/attributes/db-table.md)) を使用して OLE DB コンシューマーを作成する場合、この属性によって "_ *ClassName* Accessor" の形式の名前でユーザー レコード クラスが挿入されます。 たとえば、コマンド クラスに `COrders`と名前を付けると、ユーザー レコード クラスは `_COrdersAccessor`となります。 ユーザー レコード クラスは **クラス ビュー** に表示されますが、ダブルクリックすると、コマンドまたはヘッダー ファイルのテーブル クラスに移動します。 このような場合は、属性が挿入されたコードを表示すると、ユーザー レコード クラスの実際の宣言のみが表示されます。
+データベース属性 ([db_command](../../windows/attributes/db-command.md) または [db_table](../../windows/attributes/db-table.md)) を使用して OLE DB コンシューマーを作成する場合、この属性によって "_ *ClassName* Accessor" の形式の名前でユーザー レコード クラスが挿入されます。 たとえば、コマンド クラスに `COrders`と名前を付けると、ユーザー レコード クラスは `_COrdersAccessor`となります。 ユーザー レコード クラスは **クラス ビュー** に表示されますが、ダブルクリックすると、コマンドまたはヘッダー ファイルのテーブル クラスに移動します。 このような場合は、属性が挿入されたコードを表示すると、ユーザー レコード クラスの実際の宣言のみが表示されます。
 
 属性付きコンシューマーでメソッドを追加またはオーバーライドすると、問題が発生することがあります。 たとえば、 `_COrdersAccessor` コンストラクターは `COrders` 宣言に追加できますが、実際には、このコンストラクターは挿入された `COrdersAccessor` クラスに追加されます。 このようなコンストラクターは列やパラメーターを初期化できますが、`COrdersAccessor` オブジェクトを直接インスタンス化できないため、この方法でコンストラクターのコピーを作成することはできません。 `COrders` クラス上で直接コンストラクター (またはその他のメソッド) が必要な場合は、`COrders` から派生した新しいクラスを定義し、そこに必要なメソッドを追加することをお勧めします。
 
@@ -188,6 +189,6 @@ class CProducts : public CCommand<CAccessor<_CProductsAccessor>>
 
 ::: moniker-end
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 
 [ウィザードを使用して OLE DB コンシューマーを作成する](../../data/oledb/creating-an-ole-db-consumer-using-a-wizard.md)

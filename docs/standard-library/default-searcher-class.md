@@ -1,16 +1,17 @@
 ---
+description: '詳細情報: default_searcher クラス'
 title: default_searcher クラス
 ms.date: 08/03/2019
 f1_keywords:
 - functional/std::default_searcher
 helpviewer_keywords:
 - std::default_searcher [C++]
-ms.openlocfilehash: 307fc6da3b383690e0b65bff2a72f386a37d6711
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: 0eb47d3f4c49c9bb6c9c4e68ab2164b87ea9834d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90039691"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97324589"
 ---
 # <a name="default_searcher-class"></a>default_searcher クラス
 
@@ -70,9 +71,9 @@ constexpr default_searcher(         // C++20
 *pred*\
 Sequence 要素のオプションの等値比較述語。 等値比較型が指定されていない場合、既定値はに `std::equal_to` なります。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
-*Binarypredicate*型または*ForwardIterator*型のコピーコンストラクターによってスローされた例外をスローします。
+*Binarypredicate* 型または *ForwardIterator* 型のコピーコンストラクターによってスローされた例外をスローします。
 
 このクラスは、C++ 17 で新しく追加されたものです。 C++ 20 によってコンストラクターが作成されました **`constexpr`** 。
 
@@ -100,19 +101,19 @@ constexpr pair<ForwardIterator2, ForwardIterator2> operator()(
 *前の*\
 検索するシーケンスの末尾。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 反復子のペアを返します。 最初の反復子 *i* は、次のような結果になります。
 
 `std::search( first, last, pat_first, pat_last, pred )`.
 
-ペアの2番目の反復子は、 *i** が*last*の場合は*last*です。 それ以外の場合は、次のような結果になります。
+ペアの2番目の反復子は、 *i** が *last* の場合は *last* です。 それ以外の場合は、次のような結果になります。
 
 `std::next( i, std::distance( pat_first, pat_last ))`.
 
 このクラスは、C++ 17 で新しく追加されたものです。 C++ 20 は呼び出し演算子を作成しました **`constexpr`** 。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [\<functional>](functional.md)\
 [アルゴリズム関数](algorithm-functions.md)\

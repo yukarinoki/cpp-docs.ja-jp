@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: discard_block_engine クラス'
 title: discard_block_engine クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - discard_block_engine class
 ms.assetid: aa84808e-38fe-4fa0-9f73-d5b9a653345b
-ms.openlocfilehash: 6f7b11c360f58e6a838b22fbf2c68366dce973a3
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 0879dacac70afc78a9c77314ce5042580c6cbb39
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88846291"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97324517"
 ---
 # <a name="discard_block_engine-class"></a>discard_block_engine クラス
 
@@ -50,7 +51,7 @@ class discard_block_engine;
 
 このクラステンプレートは、ベースエンジンによって返された値の一部を破棄することによって値を生成するエンジンアダプターを表します。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:**\<random>
 

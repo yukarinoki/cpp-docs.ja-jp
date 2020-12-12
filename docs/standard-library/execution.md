@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: &lt; 実行&gt;'
 title: '&lt;例外&gt;'
 ms.date: 04/18/2019
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 - std::<execution>
 helpviewer_keywords:
 - execution header
-ms.openlocfilehash: f37458fdc0b58968e095a7c59de797eac295bde7
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: ea444ab2f4fcf3211e85837701a8ea6a0c3ec81f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88835937"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97324410"
 ---
 # <a name="ltexecutiongt"></a>&lt;例外&gt;
 
@@ -39,7 +40,7 @@ namespace std::execution {
 |[parallel_unsequenced_policy クラス](parallel-unsequenced-policy-class.md)|並列アルゴリズムのオーバーロードを明確にするための一意の型として使用され、並列アルゴリズムの実行が並列化され、ベクター化される可能性があることを示します。|
 |[sequenced_policy クラス](sequenced-policy-class.md)|並列アルゴリズムのオーバーロードを明確にするために一意の型として使用され、並列アルゴリズムの実行を並列化できないようにする必要があります。|
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:**\<execution>
 

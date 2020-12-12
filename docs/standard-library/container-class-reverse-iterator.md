@@ -1,20 +1,21 @@
 ---
+description: '詳細については、「コンテナークラス:: reverse_iterator」を参照してください。'
 title: コンテナー クラス::reverse_iterator
 ms.date: 11/04/2016
 helpviewer_keywords:
 - reverse_iterator method
 ms.assetid: 1d190c41-56b1-462e-b564-793b2a883c26
-ms.openlocfilehash: 1f65713050ec6c8c9675ce95b9affb7c7af533ec
-ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
+ms.openlocfilehash: 013b0f6021c37833243a6b8ff6238c966379d2c0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77257859"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97324829"
 ---
 # <a name="container-classreverse_iterator"></a>コンテナー クラス::reverse_iterator
 
 > [!NOTE]
-> このトピックは、 C++ C++標準ライブラリで使用されているコンテナーの非機能例として、Microsoft ドキュメントに記載されています。 詳しくは、「[C++ 標準ライブラリのコンテナー](../standard-library/stl-containers.md)」をご覧ください。
+> このトピックは、C++ 標準ライブラリで使用されるコンテナーの非機能例として、Microsoft C++ ドキュメントに記載されています。 詳細については、「[C++ 標準ライブラリ コンテナー](../standard-library/stl-containers.md)」を参照してください。
 
 被制御シーケンスの反転反復子として使用できるオブジェクトを表します。
 
@@ -24,10 +25,10 @@ ms.locfileid: "77257859"
 typedef T7 reverse_iterator;
 ```
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
-ここでは、指定されていない型 `T7` のシノニムとして記述されています (通常 `reverse_iterator` **\<** [iterator](../standard-library/container-class-iterator.md) **>** )。
+ここでは、指定されていない型 `T7` (通常は) のシノニムとして記述されてい `reverse_iterator` **\<**[iterator](../standard-library/container-class-iterator.md)**>** ます。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[サンプル コンテナー クラス](../standard-library/sample-container-class.md)
+[サンプルコンテナークラス](../standard-library/sample-container-class.md)

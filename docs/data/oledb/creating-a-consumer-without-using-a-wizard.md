@@ -1,23 +1,24 @@
 ---
+description: 詳細については、「ウィザードを使用せずにコンシューマーを作成する」を参照してください。
 title: ウィザードを使用しないコンシューマーの作成
 ms.date: 05/09/2019
 helpviewer_keywords:
 - OLE DB consumers, creating
 ms.assetid: e8241cfe-5faf-48f8-9de3-241203de020b
-ms.openlocfilehash: 65add1fe0d47253cd8d7ae7a273286d712ce9db2
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 4c642e0b346bd9825d590f54c3de3f6536722d01
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91500653"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97323262"
 ---
 # <a name="creating-a-consumer-without-using-a-wizard"></a>ウィザードを使用しないコンシューマーの作成
 
-次の例は、既存の ATL プロジェクトに OLE DB コンシューマーのサポートを追加していることを前提としています。 MFC アプリケーションに OLE DB コンシューマーのサポートを追加する場合は、**MFC アプリケーション ウィザード**を実行する必要があります。このウィザードが必要なすべてのサポートを作成し、アプリケーションを実行するために必要な MFC ルーチンを呼び出します。
+次の例は、既存の ATL プロジェクトに OLE DB コンシューマーのサポートを追加していることを前提としています。 MFC アプリケーションに OLE DB コンシューマーのサポートを追加する場合は、**MFC アプリケーション ウィザード** を実行する必要があります。このウィザードが必要なすべてのサポートを作成し、アプリケーションを実行するために必要な MFC ルーチンを呼び出します。
 
-**ATL OLE DB コンシューマー ウィザード**を使用せずに OLE DB コンシューマーのサポートを追加するには:
+**ATL OLE DB コンシューマー ウィザード** を使用せずに OLE DB コンシューマーのサポートを追加するには:
 
-- *.Pch*ファイルで、次のステートメントを追加します `#include` 。
+- *.Pch* ファイルで、次のステートメントを追加します `#include` 。
 
     ```cpp
     #include <atlbase.h>

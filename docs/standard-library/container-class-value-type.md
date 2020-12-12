@@ -1,20 +1,21 @@
 ---
+description: '詳細については、「コンテナークラス:: value_type」を参照してください。'
 title: コンテナー クラス::value_type
 ms.date: 11/04/2016
 helpviewer_keywords:
 - value_type typedef
 ms.assetid: e89d5a71-b48c-47fa-aa78-682243e6e97f
-ms.openlocfilehash: 06fbb013c66cd7cd37b6eb2ba7166a30a1545841
-ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
+ms.openlocfilehash: 0e2af5884d7744ba355c6d559990a880febf45b0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77257846"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97324801"
 ---
 # <a name="container-classvalue_type"></a>コンテナー クラス::value_type
 
 > [!NOTE]
-> このトピックは、 C++ C++標準ライブラリで使用されているコンテナーの非機能例として、Microsoft ドキュメントに記載されています。 詳しくは、「[C++ 標準ライブラリのコンテナー](../standard-library/stl-containers.md)」をご覧ください。
+> このトピックは、C++ 標準ライブラリで使用されるコンテナーの非機能例として、Microsoft C++ ドキュメントに記載されています。 詳細については、「[C++ 標準ライブラリ コンテナー](../standard-library/stl-containers.md)」を参照してください。
 
 テンプレート パラメーター *Ty* のシノニムとして動作します。
 
@@ -24,10 +25,10 @@ ms.locfileid: "77257846"
 typedef T4 value_type;
 ```
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
-ここでは、指定されていない型 `T4` (通常 `Alloc::value_type`) のシノニムとして記述されています。
+ここでは、指定されていない型 `T4` (通常は) のシノニムとして記述されてい `Alloc::value_type` ます。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[サンプル コンテナー クラス](../standard-library/sample-container-class.md)
+[サンプルコンテナークラス](../standard-library/sample-container-class.md)

@@ -1,16 +1,17 @@
 ---
+description: '詳細については、「方法: リダクション変数を使用する OpenMP ループを変換して同時実行ランタイムを使用する」を参照してください。'
 title: '方法: 減少変数を使用する OpenMP ループを変換し、コンカレンシー ランタイムを使用する'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - converting from OpenMP to the Concurrency Runtime, reduction variables
 - reduction variables, converting from OpenMP to the Concurrency Runtime
 ms.assetid: 96623f36-5e57-4d3f-8c13-669e6cd535b1
-ms.openlocfilehash: 06418bc1a331a5c77653087434a5cc621f92e7d7
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 131585caf3e06a11ed45bda4b58efa541272006f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91498554"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97325759"
 ---
 # <a name="how-to-convert-an-openmp-loop-that-uses-a-reduction-variable-to-use-the-concurrency-runtime"></a>方法: 減少変数を使用する OpenMP ループを変換し、コンカレンシー ランタイムを使用する
 
@@ -18,7 +19,7 @@ ms.locfileid: "91498554"
 
 OpenMP `reduction` 句を使用すると、並列領域の最後にあるリダクション演算の対象となる 1 つ以上のスレッド プライベート変数を指定できます。 OpenMP には、リダクション演算子のセットがあらかじめ定義されています。 各リダクション変数は、スカラーである必要があります (たとえば、、、など **`int`** **`long`** **`float`** )。 OpenMP には、並列領域でのリダクション変数の使用方法に関する制限事項もいくつか定義されています。
 
-並列パターンライブラリ (PPL) は、 [concurrency:: の組み合わせ](../../parallel/concrt/reference/combinable-class.md) 可能なクラスを提供します。これにより、きめ細かな計算を実行し、その計算を最終結果にマージできます。 `combinable` クラスは、スカラー型と複合型の両方に作用するテンプレートです。 クラスを使用するには `combinable` 、parallel コンストラクトの本体でサブ計算を実行し、 [concurrency::](reference/combinable-class.md#combine) 組み合わせ可能:: 組み合わせまたは [concurrency:: 組み合わせ可能:: combine_each](reference/combinable-class.md#combine_each) メソッドを呼び出して最終的な結果を生成します。 `combine`メソッドと `combine_each` メソッドはそれぞれ、要素の各ペアを結合する方法を指定する*結合関数*を受け取ります。 したがって、`combinable` クラスは、リダクション演算子の固定セットだけに制限されません。
+並列パターンライブラリ (PPL) は、 [concurrency:: の組み合わせ](../../parallel/concrt/reference/combinable-class.md) 可能なクラスを提供します。これにより、きめ細かな計算を実行し、その計算を最終結果にマージできます。 `combinable` クラスは、スカラー型と複合型の両方に作用するテンプレートです。 クラスを使用するには `combinable` 、parallel コンストラクトの本体でサブ計算を実行し、 [concurrency::](reference/combinable-class.md#combine) 組み合わせ可能:: 組み合わせまたは [concurrency:: 組み合わせ可能:: combine_each](reference/combinable-class.md#combine_each) メソッドを呼び出して最終的な結果を生成します。 `combine`メソッドと `combine_each` メソッドはそれぞれ、要素の各ペアを結合する方法を指定する *結合関数* を受け取ります。 したがって、`combinable` クラスは、リダクション演算子の固定セットだけに制限されません。
 
 ## <a name="example"></a>例
 

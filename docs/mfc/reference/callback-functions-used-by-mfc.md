@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「MFC で使用されるコールバック関数」を参照してください。
 title: MFC で使われているコールバック関数
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - functions [MFC], callback
 - callback functions [MFC]
 ms.assetid: b2a6857c-fdd3-45ec-8fd8-2e71fac77582
-ms.openlocfilehash: 553e87320828590c9e1e9204b54622f2f1ca6d80
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: 40c9fc15d6f7bc09aa991270d2f95ea5a7b2700d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90040887"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97322773"
 ---
 # <a name="callback-functions-used-by-mfc"></a>MFC で使われているコールバック関数
 
@@ -50,7 +51,7 @@ int CALLBACK EXPORT ObjectFunc(
 
 コールバック関数は、を返し **`int`** ます。 この戻り値は、ユーザー定義です。 コールバック関数が0を返した場合、は `EnumObjects` 初期の列挙を停止します。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 実際の名前をエクスポートする必要があります。
 
@@ -82,13 +83,13 @@ BOOL CALLBACK EXPORT OutputFunc(
 
 成功を示すには、コールバック関数の戻り値が TRUE である必要があります。それ以外の場合は FALSE になります。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 コールバック関数 (*Outputfunc*) は、(*x*, *y*) ではなく、座標 (0, 0) を基準としたイメージを描画する必要があります。
 
 ## <a name="callback-function-for-cdcsetabortproc"></a><a name="setabortproc"></a> CDC:: SetAbortProc のコールバック関数
 
-*Abortfunc*という名前は、アプリケーションによって提供される関数名のプレースホルダーです。
+*Abortfunc* という名前は、アプリケーションによって提供される関数名のプレースホルダーです。
 
 ### <a name="syntax"></a>構文
 
@@ -104,17 +105,17 @@ BOOL CALLBACK EXPORT AbortFunc(
 デバイスコンテキストを識別します。
 
 *code*<br/>
-エラーが発生したかどうかを示します。 エラーが発生しなかった場合は0になります。 これは、印刷マネージャーのディスク領域が不足していて、アプリケーションが待機しているときに使用可能なディスク領域が増えた場合に SP_OUTOFDISK ます。 *コード*が SP_OUTOFDISK 場合、アプリケーションは印刷ジョブを中止する必要はありません。 そうでない場合は、または Windows の関数を呼び出して、印刷マネージャーに渡す必要があり `PeekMessage` `GetMessage` ます。
+エラーが発生したかどうかを示します。 エラーが発生しなかった場合は0になります。 これは、印刷マネージャーのディスク領域が不足していて、アプリケーションが待機しているときに使用可能なディスク領域が増えた場合に SP_OUTOFDISK ます。 *コード* が SP_OUTOFDISK 場合、アプリケーションは印刷ジョブを中止する必要はありません。 そうでない場合は、または Windows の関数を呼び出して、印刷マネージャーに渡す必要があり `PeekMessage` `GetMessage` ます。
 
 ### <a name="return-value"></a>戻り値
 
 中止ハンドラー関数の戻り値は、印刷ジョブが続行する場合は0以外、キャンセルされた場合は0になります。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 [CDC:: SetAbortProc](../../mfc/reference/cdc-class.md#setabortproc)の「解説」の説明に従って、実際の名前をエクスポートする必要があります。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [構造体、スタイル、コールバック、およびメッセージマップ](structures-styles-callbacks-and-message-maps.md)<br/>
 [CDC:: EnumObjects](../../mfc/reference/cdc-class.md#enumobjects)<br/>

@@ -1,13 +1,14 @@
 ---
+description: '詳細については、「移植ガイド: MFC Scribble」を参照してください。'
 title: '移植のガイド: MFC Scribble'
 ms.date: 10/23/2019
 ms.assetid: 8ddb517d-89ba-41a1-ab0d-4d2c6d9047e8
-ms.openlocfilehash: 789d29effeea76045a4a10fbca19f20d06778f7c
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 46fac5ceaeadd803ff30f2fa3f8e7723d7d6f6f2
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80076963"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97322700"
 ---
 # <a name="porting-guide-mfc-scribble"></a>移植のガイド: MFC Scribble
 
@@ -19,7 +20,7 @@ ms.locfileid: "80076963"
 
 MFC Scribble は、多くの異なるリリースの Visual C++ に含まれている、よく知られているサンプルです。 これは、MFC の基本的な機能の一部を示す、簡単な描画アプリケーションです。 様々なバージョンを利用でき、マネージド コードとネイティブ コードの両方のバージョンがあります。 この例では、Scribble の旧バージョンが Visual Studio 2005 からのネイティブ コードで見つかり、Visual Studio 2017 で開いています。
 
-アップグレードを試みる前に、Windows デスクトップ ワークロードがインストールされていることを確認します。 Visual Studio インストーラー (vs_installer.exe) を開きます。 インストーラーを開くには、 **[ファイル]** 、 > [新しいプロジェクト] **の順に選択し、** [Visual Studio インストーラーを開く]** が表示されるまで、インストールされたテンプレートを下方にスクロールするという方法があります。 インストーラーを開くと、使用可能なすべてのワークロードが表示されます。 **Windows デスクトップ** ワークロードに対するボックスが選択されていない場合は、それを選択し、ウィンドウの下部にある **[変更]** ボタンをクリックします。
+アップグレードを試みる前に、Windows デスクトップ ワークロードがインストールされていることを確認します。 Visual Studio インストーラー (vs_installer.exe) を開きます。 インストーラーを開く方法の1つとして、[**ファイル**] [新しいプロジェクト] の順に選択し、[  >   **open Visual Studio インストーラー**] が表示されるまで、インストールされているテンプレートの一覧の一番下までスクロールします。 インストーラーを開くと、使用可能なすべてのワークロードが表示されます。 **Windows デスクトップ** ワークロードのボックスが選択されていない場合は、それを選択し、ウィンドウの下部にある [**変更**] ボタンをクリックします。
 
 次に、ソリューション全体と、その内容をすべてバックアップします。
 
@@ -31,7 +32,7 @@ MFC Scribble は、多くの異なるリリースの Visual C++ に含まれて�
 
 Visual Studio で古いプロジェクトファイルを開くと、Visual Studio によってプロジェクトファイルが最新のバージョンに変換されます。 次のダイアログ ボックスが表示されました。
 
-![プロジェクトとソリューションの変更の確認](../porting/media/scribbleprojectupgrade.PNG "プロジェクトとソリューションの変更をレビュー")
+![プロジェクトとソリューションの変更をレビュー](../porting/media/scribbleprojectupgrade.PNG "プロジェクトとソリューションの変更をレビュー")
 
 Itanium のターゲットは使用できず、変換されないことを通知するエラーが発生しました。
 
@@ -43,15 +44,15 @@ Platform 'Itanium' is missing from this project. All the configurations and thei
 
 Visual Studio で、古いプロジェクト ファイルのすべての問題を一覧表示する、移行レポートが表示されました。
 
-![アップグレードレポート](../porting/media/scribblemigrationreport.PNG "レポートのアップグレード")
+![レポートのアップグレード](../porting/media/scribblemigrationreport.PNG "レポートのアップグレード")
 
 ここでは、問題がすべて警告であり、Visual Studio がプロジェクト ファイルで適切な変更を行いました。 プロジェクトに関する大きな違いは、ビルド ツールが vcbuild から msbuild に変更されたことです。 この変更は、Visual Studio 2010 で初めて導入されました。 その他の変更点として、プロジェクト ファイル自体にいくつかの要素のシーケンスの再配列が含まれます。 このシンプルなプロジェクトについて、これ以上注意が必要な問題はありません。
 
 ### <a name="step-2-getting-it-to-build"></a>手順 2. ビルドできる状態にする
 
-ビルド前に、プロジェクト システムがどのコンパイラのバージョンを使用しているのかを知るため、プラットフォーム ツールセットを確認します。 [プロジェクトのプロパティ] ダイアログの **[構成プロパティ]** にある **[全般]** カテゴリで、 **[プラットフォーム ツールセット]** プロパティを確認します。 それには、Visual Studio のバージョンとプラットフォームのツールのバージョン番号が含まれ、このケースではツールの Visual Studio 2017 のバージョンは v141 です。 最初に Visual Studio 2010、2012、2013、または2015を使用してコンパイルされたプロジェクトを変換する場合、ツールセットは最新のツールセットに自動的に更新されません。
+ビルド前に、プロジェクト システムがどのコンパイラのバージョンを使用しているのかを知るため、プラットフォーム ツールセットを確認します。 [プロジェクトのプロパティ] ダイアログの **[構成プロパティ]** にある **[全般]** カテゴリで、**[プラットフォーム ツールセット]** プロパティを確認します。 それには、Visual Studio のバージョンとプラットフォームのツールのバージョン番号が含まれ、このケースではツールの Visual Studio 2017 のバージョンは v141 です。 最初に Visual Studio 2010、2012、2013、または2015を使用してコンパイルされたプロジェクトを変換する場合、ツールセットは最新のツールセットに自動的に更新されません。
 
-Unicode に切り替えるには、プロジェクトのプロパティを開き、 **[構成プロパティ]** で **[全般]** セクションを選択して、 **[文字セット]** プロパティを探します。 これを **[マルチ バイト文字セットを使用する]** から **[Unicode 文字セットを使用する]** に変更します。 この変更の影響として、_UNICODE と UNICODE のマクロが定義されて、_MBCS が定義されなくなります。このことは、 **[コマンド ライン]** プロパティの **[C/C++]** カテゴリで確認できます。
+Unicode に切り替えるには、プロジェクトのプロパティを開き、**[構成プロパティ]** で **[全般]** セクションを選択して、**[文字セット]** プロパティを探します。 これを **[マルチ バイト文字セットを使用する]** から **[Unicode 文字セットを使用する]** に変更します。 この変更の影響として、_UNICODE と UNICODE のマクロが定義されて、_MBCS が定義されなくなります。このことは、**[コマンド ライン]** プロパティの **[C/C++]** カテゴリで確認できます。
 
 ```Output
 /GS /analyze- /W4 /Zc:wchar_t /Zi /Gm- /Od /Fd".\Debug\vc141.pdb" /Zc:inline /fp:precise /D "_AFXDLL" /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_UNICODE" /D "UNICODE" /errorReport:prompt /WX /Zc:forScope /Gd /Oy- /MDd /Fa".\Debug\" /EHsc /nologo /Fo".\Debug\" /Fp".\Debug\Scribble.pch" /diagnostics:classic
@@ -81,11 +82,11 @@ _WIN32_WINNT not defined. Defaulting to _WIN32_WINNT_MAXVER (see WinSDKVer.h)
 
 Visual Studio 2017 に移行したので、C++ の新機能を活用するためにいくつかの変更を加えます。 現在のバージョンの C++ コンパイラは、以前のバージョンよりも C++ への適合性が向上しているので、コードの安全性を高めるためにコードを変更し、ほかのコンパイラやオペレーティング システムへの移植性を高めたい場合には、幾らかの改良を加えることを検討してください。
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 
 Scribble は小規模で単純な Windows デスクトップ アプリケーションであり、変換は難しくありません。 多くの小規模で単純なアプリケーションは、新しいバージョンに簡単に変換できます。  コードの行数が多く、エンジニアリングの最新の標準になっていない可能性がある古いレガシー コードや、複数のプロジェクトとライブラリ、カスタム ビルド アプリを持つ複雑なアプリケーションや、複雑なスクリプトを作成して自動化されていビルドでは、アップグレードにもう少し時間がかかります。 [次の例](../porting/porting-guide-com-spy.md)の COM Spy と呼ばれる ATL/COM アプリケーションに進みます。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [移植およびアップグレード: 例とケース スタディ](../porting/porting-and-upgrading-examples-and-case-studies.md)<br/>
 [次の例: COM Spy](../porting/porting-guide-com-spy.md)

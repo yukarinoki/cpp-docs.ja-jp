@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: 将来のクラス'
 title: future クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -20,16 +21,16 @@ helpviewer_keywords:
 - std::future [C++], wait
 - std::future [C++], wait_for
 - std::future [C++], wait_until
-ms.openlocfilehash: ac52429919f83a90a87141399952e248e18e0862
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: ca73a3d0273014c4f22e8e807c2bf7c3d6e43320
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87220939"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97324227"
 ---
 # <a name="future-class"></a>future クラス
 
-*非同期のリターン オブジェクト*を記述します。
+*非同期のリターン オブジェクト* を記述します。
 
 ## <a name="syntax"></a>構文
 
@@ -40,7 +41,7 @@ class future;
 
 ## <a name="remarks"></a>解説
 
-各標準*非同期プロバイダー*は、このテンプレートのインスタンス化の型を持つオブジェクトを返します。 `future` オブジェクトは、関連付けられている非同期プロバイダーへのアクセスのみを提供します。 同じ非同期プロバイダーに関連付けられている複数の非同期リターン オブジェクトが必要な場合は、`future` オブジェクトを [shared_future](../standard-library/shared-future-class.md) オブジェクトにコピーします。
+各標準 *非同期プロバイダー* は、このテンプレートのインスタンス化の型を持つオブジェクトを返します。 `future` オブジェクトは、関連付けられている非同期プロバイダーへのアクセスのみを提供します。 同じ非同期プロバイダーに関連付けられている複数の非同期リターン オブジェクトが必要な場合は、`future` オブジェクトを [shared_future](../standard-library/shared-future-class.md) オブジェクトにコピーします。
 
 ## <a name="members"></a>メンバー
 
@@ -48,7 +49,7 @@ class future;
 
 |名前|説明|
 |----------|-----------------|
-|[あと](#future)|`future` オブジェクトを構築します。|
+|[future](#future)|`future` オブジェクトを構築します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
@@ -57,7 +58,7 @@ class future;
 |[get](#get)|関連付けられた非同期状態に格納されている結果を取得します。|
 |[共有](#share)|オブジェクトを `shared_future` に変換します。|
 |[妥当](#valid)|オブジェクトが空でないかどうかを指定します。|
-|[待機](#wait)|関連付けられた非同期状態が準備できるまで、現在のスレッドをブロックします。|
+|[wait](#wait)|関連付けられた非同期状態が準備できるまで、現在のスレッドをブロックします。|
 |[wait_for](#wait_for)|関連付けられた非同期状態が準備できるまで、または指定した時間が経過するまでブロックします。|
 |[wait_until](#wait_until)|関連付けられた非同期状態が準備できるまで、または指定した時点までブロックします。|
 
@@ -67,13 +68,13 @@ class future;
 |----------|-----------------|
 |[future::operator=](#op_eq)|指定したオブジェクトから関連付けられた非同期状態を転送します。|
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:**\<future>
 
 **名前空間:** std
 
-## <a name="futurefuture-constructor"></a><a name="future"></a>future:: future コンストラクター
+## <a name="futurefuture-constructor"></a><a name="future"></a> future:: future コンストラクター
 
 `future` オブジェクトを構築します。
 
@@ -91,9 +92,9 @@ future(future&& Other) noexcept;
 
 1 つ目のコンストラクターは、関連付けられた非同期状態がない `future` オブジェクトを構築します。
 
-2番目のコンストラクターは、オブジェクトを構築 `future` し、関連付けられている非同期状態を*他の*から転送します。 *その他*には、関連付けられた非同期状態がありません。
+2番目のコンストラクターは、オブジェクトを構築 `future` し、関連付けられている非同期状態を *他の* から転送します。 *その他* には、関連付けられた非同期状態がありません。
 
-## <a name="futureget"></a><a name="get"></a>未来:: 取得
+## <a name="futureget"></a><a name="get"></a> 未来:: 取得
 
 関連付けられた非同期状態に格納されている結果を取得します。
 
@@ -115,7 +116,7 @@ Ty get();
 
 その他の特殊化では、メソッドは、格納されている値からその戻り値を移動します。 そのため、このメソッドを 1 回だけ呼び出します。
 
-## <a name="futureoperator"></a><a name="op_eq"></a>フューチャ:: operator =
+## <a name="futureoperator"></a><a name="op_eq"></a> フューチャ:: operator =
 
 関連付けられた非同期状態から、指定したオブジェクトを転送します。
 
@@ -134,9 +135,9 @@ future& operator=(future&& Right) noexcept;
 
 ### <a name="remarks"></a>解説
 
-転送後、*右側*には、関連付けられた非同期状態がなくなります。
+転送後、 *右側* には、関連付けられた非同期状態がなくなります。
 
-## <a name="futureshare"></a><a name="share"></a>未来:: 共有
+## <a name="futureshare"></a><a name="share"></a> 未来:: 共有
 
 オブジェクトを [shared_future](../standard-library/shared-future-class.md) オブジェクトに変換します。
 
@@ -148,7 +149,7 @@ shared_future<Ty> share();
 
 `shared_future(move(*this))`
 
-## <a name="futurevalid"></a><a name="valid"></a>未来:: 有効
+## <a name="futurevalid"></a><a name="valid"></a> 未来:: 有効
 
 オブジェクトが関連付けられた非同期状態であるかどうかを指定します。
 
@@ -160,7 +161,7 @@ bool valid() noexcept;
 
 **`true`** オブジェクトに関連付けられた非同期状態がある場合は。それ以外の場合は **`false`** 。
 
-## <a name="futurewait"></a><a name="wait"></a>未来:: wait
+## <a name="futurewait"></a><a name="wait"></a> 未来:: wait
 
 関連付けられた非同期状態が *ready* になるまで、現在のスレッドをブロックします。
 
@@ -170,9 +171,9 @@ void wait() const;
 
 ### <a name="remarks"></a>解説
 
-関連付けられた非同期状態は、非同期プロバイダーが戻り値を格納したか、または例外を格納した場合にのみ*準備ができ*ます。
+関連付けられた非同期状態は、非同期プロバイダーが戻り値を格納したか、または例外を格納した場合にのみ *準備ができ* ます。
 
-## <a name="futurewait_for"></a><a name="wait_for"></a>未来:: wait_for
+## <a name="futurewait_for"></a><a name="wait_for"></a> 未来:: wait_for
 
 関連付けられた非同期状態が *ready* になるまで、または指定した時間が経過するまでブロックします。
 
@@ -194,7 +195,7 @@ future_status wait_for(const chrono::duration<Rep, Period>& Rel_time) const;
 
 関連付けられている非同期状態は、非同期プロバイダーが戻り値を格納した場合か例外を格納した場合のみ準備完了になります。
 
-## <a name="futurewait_until"></a><a name="wait_until"></a>未来:: wait_until
+## <a name="futurewait_until"></a><a name="wait_until"></a> 未来:: wait_until
 
 関連付けられた非同期状態が *ready* になるまで、または指定した時点後まで現在のスレッドをブロックします。
 
@@ -214,7 +215,7 @@ future_status wait_until(const chrono::time_point<Clock, Duration>& Abs_time) co
 
 ### <a name="remarks"></a>解説
 
-関連付けられた非同期状態は、非同期プロバイダーが戻り値を格納したか、または例外を格納した場合にのみ*準備ができ*ます。
+関連付けられた非同期状態は、非同期プロバイダーが戻り値を格納したか、または例外を格納した場合にのみ *準備ができ* ます。
 
 ## <a name="see-also"></a>関連項目
 

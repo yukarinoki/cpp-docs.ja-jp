@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: hash_set クラス'
 title: hash_set クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -86,12 +87,12 @@ helpviewer_keywords:
 - stdext::hash_set::upper_bound
 - stdext::hash_set::value_comp
 ms.assetid: c765c06e-cbb6-48c2-93ca-d15468eb28d7
-ms.openlocfilehash: 01076d29a18a2b051695955e9409d8b77d22c313
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: 36bcb0e1f35fd8012ad1398a481bdae17b6d1424
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88561181"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97324097"
 ---
 # <a name="hash_set-class"></a>hash_set クラス
 
@@ -140,7 +141,7 @@ hash_set は次のようなものです。
 
 値とキーを関連付ける条件をアプリケーションが満たしている場合、hash_set は最適な連想コンテナーとなっている必要があります。 hash_set の要素は一意であり、独自の並べ替えキーとして機能します。 この種類の構造体のモデルは、単語が 1 回だけ出現する可能性がある単語の順序付きのリストです。 キーワードを複数設定できる場合は、hash_multiset が適切なコンテナー構造体となります。 値が一意のキーワードのリストにアタッチされている必要がある場合、hash_map がこのデータを格納するのに適切な構造体です。 キーが一意でない場合は、hash_multimap が最適なコンテナーです。
 
-Hash_set は、value_compare 型の格納されたハッシュオブジェクトを呼び出すことによって、制御するシーケンスを並べ替え `Traits` ます。 [value_compare](#value_compare) 格納されているこのオブジェクトには、メンバー関数 [key_comp](#key_comp) を呼び出すことによってアクセスできます。 このような関数オブジェクトは、><の hash_compare クラスのオブジェクトと同じように動作する必要があり * \<Key> ます。* 具体的には、Key 型のすべての値について、 `key` 呼び出しの特徴 () によって `key` size_t 型の値の分布が生成されます。
+Hash_set は、value_compare 型の格納されたハッシュオブジェクトを呼び出すことによって、制御するシーケンスを並べ替え `Traits` ます。 [](#value_compare) 格納されているこのオブジェクトには、メンバー関数 [key_comp](#key_comp) を呼び出すことによってアクセスできます。 このような関数オブジェクトは、><の hash_compare クラスのオブジェクトと同じように動作する必要があり *\<Key> ます。* 具体的には、Key 型のすべての値について、 `key` 呼び出しの特徴 () によって `key` size_t 型の値の分布が生成されます。
 
 通常、要素は、この順序を確立するために小なり比較だけを実行できる必要があります。これにより、2 つの要素が指定されたときに、それらの要素が等しいか (どちらか一方が小さくはない)、または一方が他方より小さいかを判断できます。 この結果、等価でない複数の要素間で順序が付けられます。 テクニカル ノートでは、比較関数は、数学上の標準的な意味で厳密弱順序を発生させる二項述語であると示されています。 二項述語 *f*( *x*, *y*) は、2つの引数オブジェクト (x および y) と戻り値 (true または false) を持つ関数オブジェクトです。 hash_set に適用される順序付けは、二項述語が非再帰、反対称、推移的であり、等価性が推移的である (2 つのオブジェクト (*x* と *y*) が、*f*( *x*, *y*) と *f*( *y*, *x*) の両方が false の場合に等価になるように定義されている) 場合、厳密弱順序になります。 2 つのキーの等値に関する条件が等価性の条件よりも厳しく、優先される場合、順序付けは完全な順序付け (すべての要素が相互の値に基づいて並べ替えられる) となり、一致するそれぞれのキーを識別するのが難しくなります。
 
@@ -164,7 +165,7 @@ hash_set クラスに用意されている反復子は双方向反復子です�
 |[const_reference](#const_reference)|**`const`** `hash_set` 読み取りと操作の実行のために、に格納されている要素への参照を提供する型 **`const`** 。|
 |[const_reverse_iterator](#const_reverse_iterator)|内の任意の要素を読み取ることができる双方向反復子を提供する型 **`const`** `hash_set` 。|
 |[difference_type](#difference_type)|`hash_set` の要素の数を、反復子が指す要素の範囲に基づいて表すために使用できる符号付き整数型。|
-|[反](#iterator)|`hash_set` 内の任意の要素を読み取り、または変更できる双方向反復子を提供する型。|
+|[iterator](#iterator)|`hash_set` 内の任意の要素を読み取り、または変更できる双方向反復子を提供する型。|
 |[key_compare](#key_compare)|2 つの並べ替えキーを比較して、`hash_set` 内の 2 つの要素の相対順序を決定できる関数オブジェクトを提供する型。|
 |[key_type](#key_type)|並べ替えキーとしてキャパシティ内に `hash_set` の要素として格納されるオブジェクトを表す型。|
 |[pointer](#pointer)|`hash_set` 内の要素へのポインターを提供する型。|
@@ -210,7 +211,7 @@ hash_set クラスに用意されている反復子は双方向反復子です�
 |-|-|
 |[hash_set:: operator =](#op_eq)|別の `hash_set` のコピーで `hash_set` の要素を置き換えます。|
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:**\<hash_set>
 
@@ -229,9 +230,9 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::allo
 
 ### <a name="remarks"></a>解説
 
-`allocator_type` は、テンプレートパラメーター *アロケーター*のシノニムです。
+`allocator_type` は、テンプレートパラメーター *アロケーター* のシノニムです。
 
-*アロケーター*の詳細については、 [hash_set クラス](../standard-library/hash-set-class.md)のトピックの「解説」を参照してください。
+*アロケーター* の詳細については、 [hash_set クラス](../standard-library/hash-set-class.md)のトピックの「解説」を参照してください。
 
 ### <a name="example"></a>例
 
@@ -856,7 +857,7 @@ iterator emplace(
 挿入される要素が `hash_set` にまだ含まれていない場合、より一般的には、キーが同じ順序付けになる要素がまだ含まれていない場合に、[hash_set](../standard-library/hash-set-class.md) に挿入される要素の値。
 
 *_Where*\
-正しい挿入ポイントの検索を開始する場所  (挿入ポイントが *_Where*の直後にある場合は、対数時間ではなく、償却定数時間で挿入できます)。
+正しい挿入ポイントの検索を開始する場所  (挿入ポイントが *_Where* の直後にある場合は、対数時間ではなく、償却定数時間で挿入できます)。
 
 ### <a name="return-value"></a>戻り値
 
@@ -864,7 +865,7 @@ iterator emplace(
 
 ### <a name="remarks"></a>解説
 
-挿入ポイントが *_Where*の直後にある場合、挿入は対数時間ではなく償却定数時間で実行できます。
+挿入ポイントが *_Where* の直後にある場合、挿入は対数時間ではなく償却定数時間で実行できます。
 
 ### <a name="example"></a>例
 
@@ -1026,7 +1027,7 @@ pair <iterator, iterator> equal_range (const Key& key);
 
 1 番目がそのキーの [lower_bound](../standard-library/set-class.md#lower_bound)、2 番目がそのキーの [upper_bound](../standard-library/set-class.md#upper_bound) である、反復子のペア。
 
-メンバー関数によって返されたペア pr の最初の反復子にアクセスするには、を使用し `pr` ます。 **最初**に、下限の反復子を逆参照するには、(を使用し \* `pr` ます。 **最初**)。 `pr`メンバー関数によって返されたペアの2番目の反復子にアクセスするには、を使用し `pr` ます。 **次**に、上限の反復子を逆参照するには、(を使用し \* `pr` ます。 **2 番目**)。
+メンバー関数によって返されたペア pr の最初の反復子にアクセスするには、を使用し `pr` ます。 **最初** に、下限の反復子を逆参照するには、(を使用し \* `pr` ます。 **最初**)。 `pr`メンバー関数によって返されたペアの2番目の反復子にアクセスするには、を使用し `pr` ます。 **次** に、上限の反復子を逆参照するには、(を使用し \* `pr` ます。 **2 番目**)。
 
 ### <a name="remarks"></a>解説
 
@@ -1300,9 +1301,9 @@ Allocator get_allocator() const;
 
 ### <a name="return-value"></a>戻り値
 
-Hash_set が、テンプレートパラメーター *アロケーター*であるメモリを管理するために使用するアロケーター。
+Hash_set が、テンプレートパラメーター *アロケーター* であるメモリを管理するために使用するアロケーター。
 
-*アロケーター*の詳細については、 [hash_set クラス](../standard-library/hash-set-class.md)のトピックの「解説」を参照してください。
+*アロケーター* の詳細については、 [hash_set クラス](../standard-library/hash-set-class.md)のトピックの「解説」を参照してください。
 
 ### <a name="remarks"></a>解説
 
@@ -1540,9 +1541,9 @@ key_compare key_comp() const;
 
 ### <a name="return-value"></a>戻り値
 
-Hash_set が要素の並べ替えに使用する関数オブジェクトを返します。これは、テンプレートパラメーターの *特徴*です。
+Hash_set が要素の並べ替えに使用する関数オブジェクトを返します。これは、テンプレートパラメーターの *特徴* です。
 
-*特徴*の詳細については、 [hash_set クラス](../standard-library/hash-set-class.md)に関するトピックを参照してください。
+*特徴* の詳細については、 [hash_set クラス](../standard-library/hash-set-class.md)に関するトピックを参照してください。
 
 ### <a name="remarks"></a>解説
 
@@ -1616,9 +1617,9 @@ typedef Traits key_compare;
 
 ### <a name="remarks"></a>解説
 
-`key_compare` は、テンプレートパラメーターの *特徴*のシノニムです。
+`key_compare` は、テンプレートパラメーターの *特徴* のシノニムです。
 
-*特徴*の詳細については、 [hash_set クラス](../standard-library/hash-set-class.md)に関するトピックを参照してください。
+*特徴* の詳細については、 [hash_set クラス](../standard-library/hash-set-class.md)に関するトピックを参照してください。
 
 `key_compare` および [value_compare](#value_compare) は、ともにテンプレート パラメーター *Traits* のシノニムです。 どちらも set および multiset クラスで使用でき、そこでは同一ですが、map および multimap クラスでは異なるものなので互換性を保つようになっています。
 
@@ -1639,9 +1640,9 @@ typedef Key key_type;
 
 ### <a name="remarks"></a>解説
 
-`key_type` は、テンプレートパラメーター *キー*のシノニムです。
+`key_type` は、テンプレートパラメーター *キー* のシノニムです。
 
-*キー*の詳細については、 [hash_set クラス](../standard-library/hash-set-class.md)のトピックの「解説」を参照してください。
+*キー* の詳細については、 [hash_set クラス](../standard-library/hash-set-class.md)のトピックの「解説」を参照してください。
 
 `key_type` および [value_type](#value_type) は両方ともテンプレート パラメーター *Key* のシノニムです。 どちらも hash_set および hash_multiset クラスで使用でき、そこでは同一ですが、hash_map および hash_multimap クラスでは異なるものなので互換性を保つようになっています。
 
@@ -2301,9 +2302,9 @@ value_compare value_comp() const;
 
 ### <a name="return-value"></a>戻り値
 
-Hash_set が要素の並べ替えに使用する関数オブジェクトを返します。これは、テンプレートパラメーターの *比較*です。
+Hash_set が要素の並べ替えに使用する関数オブジェクトを返します。これは、テンプレートパラメーターの *比較* です。
 
-*比較*の詳細については、 [hash_set クラス](../standard-library/hash-set-class.md)のトピックの「解説」を参照してください。
+*比較* の詳細については、 [hash_set クラス](../standard-library/hash-set-class.md)のトピックの「解説」を参照してください。
 
 ### <a name="remarks"></a>解説
 
@@ -2313,7 +2314,7 @@ Hash_set が要素の並べ替えに使用する関数オブジェクトを返�
 
 は、 **`true`** `_xVal` 並べ替え順序においてとがに等しくない場合にを返し `_yVal` ます。
 
-[Value_compare](../standard-library/set-class.md#value_compare)と[key_compare](../standard-library/set-class.md#key_compare)の両方がテンプレートパラメーター*比較*のシノニムであることに注意してください。 どちらも hash_set および hash_multiset クラスで使用でき、そこでは同一ですが、hash_map および hash_multimap クラスでは異なるものなので互換性を保つようになっています。
+[Value_compare](../standard-library/set-class.md#value_compare)と [key_compare](../standard-library/set-class.md#key_compare)の両方がテンプレートパラメーター *比較* のシノニムであることに注意してください。 どちらも hash_set および hash_multiset クラスで使用でき、そこでは同一ですが、hash_map および hash_multimap クラスでは異なるものなので互換性を保つようになっています。
 
 ### <a name="example"></a>例
 
@@ -2377,11 +2378,11 @@ typedef key_compare value_compare;
 
 ### <a name="remarks"></a>解説
 
-`value_compare` は、テンプレートパラメーターの *特徴*のシノニムです。
+`value_compare` は、テンプレートパラメーターの *特徴* のシノニムです。
 
-*特徴*の詳細については、 [hash_set クラス](../standard-library/hash-set-class.md)に関するトピックを参照してください。
+*特徴* の詳細については、 [hash_set クラス](../standard-library/hash-set-class.md)に関するトピックを参照してください。
 
-[Key_compare](#key_compare)との両方 `value_compare` が、テンプレートパラメーターの*特徴*のシノニムであることに注意してください。 どちらも hash_set および hash_multiset クラスで使用でき、そこでは同一ですが、hash_map および hash_multimap クラスでは異なるものなので互換性を保つようになっています。
+[Key_compare](#key_compare)との両方 `value_compare` が、テンプレートパラメーターの *特徴* のシノニムであることに注意してください。 どちらも hash_set および hash_multiset クラスで使用でき、そこでは同一ですが、hash_map および hash_multimap クラスでは異なるものなので互換性を保つようになっています。
 
 ### <a name="example"></a>例
 

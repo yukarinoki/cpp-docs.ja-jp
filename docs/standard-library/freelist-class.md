@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: freelist クラス'
 title: freelist クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - stdext::freelist [C++], pop
 - stdext::freelist [C++], push
 ms.assetid: 8ad7e35c-4c80-4479-8ede-1a2497b06d71
-ms.openlocfilehash: bf88e33f5d00b9b6b90d2712a0bbabaa3e571340
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: de0803aac13138dc25116084f52e7a5bea694b41
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88561207"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97324362"
 ---
 # <a name="freelist-class"></a>freelist クラス
 
@@ -38,7 +39,7 @@ class freelist : public Max
 
 ## <a name="remarks"></a>解説
 
-このクラステンプレートは、size *Sz* のメモリブロックのリストを管理します。このリストの最大長は *、最大で*渡されるクラスによって決定されます。
+このクラステンプレートは、size *Sz* のメモリブロックのリストを管理します。このリストの最大長は *、最大で* 渡されるクラスによって決定されます。
 
 ### <a name="constructors"></a>コンストラクター
 
@@ -53,7 +54,7 @@ class freelist : public Max
 |[ショート](#pop)|フリー リストから最初のメモリ ブロックを削除します。|
 |[push](#push)|メモリ ブロックをリストに追加します。|
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:**\<allocators>
 
@@ -104,7 +105,7 @@ bool push(void* ptr);
 
 ### <a name="remarks"></a>解説
 
-`full`Max クラスの関数がを返す場合 **`false`** 、このメンバー関数は、 *ptr*が指すメモリブロックをリストの先頭に追加します。
+`full`Max クラスの関数がを返す場合 **`false`** 、このメンバー関数は、 *ptr* が指すメモリブロックをリストの先頭に追加します。
 
 ## <a name="see-also"></a>関連項目
 
