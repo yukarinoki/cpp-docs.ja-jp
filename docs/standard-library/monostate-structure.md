@@ -1,20 +1,21 @@
 ---
-title: monostate 構造体
+description: '詳細: モノの状態構造体'
+title: モノの状態構造体
 ms.date: 04/04/2019
 f1_keywords:
 - variant/std::monostate
 helpviewer_keywords:
 - monostate struct
-ms.openlocfilehash: f083b5f4abd6e9fc482007744683342f7ab92fc0
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 93b21f399761970129a495590e0821aa911a0408
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68269334"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97115158"
 ---
-# <a name="monostate-struct"></a>monostate 構造体
+# <a name="monostate-struct"></a>モノの状態構造体
 
-クラス monostate はバリアント型の既定値を構築できることに一種の代替の型として機能します。
+クラスは、バリアント型の既定の構築可能にするバリアントの代替型として機能します。
 
 ## <a name="syntax"></a>構文
 

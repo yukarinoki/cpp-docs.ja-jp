@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「コンパイラエラー C3894」を参照してください。
 title: コンパイラ エラー C3894
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3894
 ms.assetid: 6d5ac903-1dea-431d-8e3a-cebca4342983
-ms.openlocfilehash: c08a7eca473a4ae043879b49266efec6b8afe7b1
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 6290cb247e45c4bd3fd3b140f467d608203b488b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74749439"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97115782"
 ---
 # <a name="compiler-error-c3894"></a>コンパイラ エラー C3894
 
 ' var ': initonly 静的データメンバーの左辺値の使用は、クラス ' class ' のクラスコンストラクターでのみ許可されています
 
-静的な[initonly](../../dotnet/initonly-cpp-cli.md)データメンバーは、宣言の時点、または静的コンストラクターの左辺値としてのみ使用できます。
+静的な [initonly](../../dotnet/initonly-cpp-cli.md) データメンバーは、宣言の時点、または静的コンストラクターの左辺値としてのみ使用できます。
 
 インスタンス (静的でない) initonly データメンバーは、宣言の時点、またはインスタンス (非静的) コンストラクターで左辺値としてのみ使用できます。
 

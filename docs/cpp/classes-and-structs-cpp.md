@@ -1,15 +1,16 @@
 ---
+description: 詳細については、「クラスと構造体 (C++)」を参照してください。
 title: クラスと構造体 (C++)
 ms.date: 05/07/2019
 helpviewer_keywords:
 - C++, classes and structs
 ms.assetid: 516dd496-13fb-4f17-845a-e9ca45437873
-ms.openlocfilehash: d593f6575fec64aa0eb14c7aa0fcbb5c4eb66691
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 9d845cf130c2cbf06e182a49f3d83c78745864d8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87220601"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97114066"
 ---
 # <a name="classes-and-structs-c"></a>クラスと構造体 (C++)
 
@@ -45,15 +46,15 @@ ms.locfileid: "87220601"
 
 - [C++ ビットフィールド](../cpp/cpp-bit-fields.md)
 
-3 つのクラス型は、構造体、クラス、および共用体です。 これらは、 [struct](../cpp/struct-cpp.md)、 [class](../cpp/class-cpp.md)、および[union](../cpp/unions.md)キーワードを使用して宣言されます。 次の表は、3 つのクラス型の違いを示しています。
+3 つのクラス型は、構造体、クラス、および共用体です。 これらは、 [struct](../cpp/struct-cpp.md)、 [class](../cpp/class-cpp.md)、および [union](../cpp/unions.md) キーワードを使用して宣言されます。 次の表は、3 つのクラス型の違いを示しています。
 
-共用体の詳細については、「[共用体](../cpp/unions.md)」を参照してください。 C++/CLI および C++/CX のクラスと構造体の詳細については、「[クラスと構造体](../extensions/classes-and-structs-cpp-component-extensions.md)」を参照してください。
+共用体の詳細については、「 [共用体](../cpp/unions.md)」を参照してください。 C++/CLI および C++/CX のクラスと構造体の詳細については、「 [クラスと構造体](../extensions/classes-and-structs-cpp-component-extensions.md)」を参照してください。
 
 ### <a name="access-control-and-constraints-of-structures-classes-and-unions"></a>構造体、クラス、および共用体のアクセス制御と制約
 
 |構造体|クラス|Unions|
 |----------------|-------------|------------|
-|クラスキーは**`struct`**|クラスキーは**`class`**|クラスキーは**`union`**|
+|クラスキーは **`struct`**|クラスキーは **`class`**|クラスキーは **`union`**|
 |既定のアクセスは public|既定のアクセスは private|既定のアクセスは public|
 |使用制約なし|使用制約なし|同時に複数のメンバーを使用することはできない|
 

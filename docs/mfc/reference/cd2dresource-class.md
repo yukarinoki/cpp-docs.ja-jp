@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: CD2DResource クラス'
 title: CD2DResource クラス
 ms.date: 03/27/2019
 f1_keywords:
@@ -22,12 +23,12 @@ helpviewer_keywords:
 - CD2DResource [MFC], m_bIsAutoDestroy
 - CD2DResource [MFC], m_pParentTarget
 ms.assetid: 34e3ee18-aab6-4c39-9294-de869e1f7820
-ms.openlocfilehash: 5e747eda42e625d0f4cf65859e471933bbb043ed
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: a110732a7e2bde5ab2fb3b6025acf98d6a3278c6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81369095"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97118733"
 ---
 # <a name="cd2dresource-class"></a>CD2DResource クラス
 
@@ -45,30 +46,30 @@ class CD2DResource : public CObject;
 
 |名前|説明|
 |----------|-----------------|
-|[リソース::CD2Dリソース](#cd2dresource)|オブジェクトを作成します。|
-|[リソース::~CD2Dリソース](#_dtorcd2dresource)|デストラクターです。 D2D リソース オブジェクトが破棄されるときに呼び出されます。|
+|[CD2DResource:: CD2DResource](#cd2dresource)|CD2DResource オブジェクトを構築します。|
+|[CD2DResource:: ~ CD2DResource](#_dtorcd2dresource)|デストラクターです。 D2D リソースオブジェクトが破棄されるときに呼び出されます。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
 |名前|説明|
 |----------|-----------------|
-|[CD2D リソース::作成](#create)|CD2D リソースを作成します。|
-|[CD2Dリソース::Dエストロイ](#destroy)|オブジェクトを破棄します。|
-|[リソース::イズバリ](#isvalid)|リソースの有効性を確認します|
+|[CD2DResource:: Create](#create)|CD2DResource を作成します。|
+|[CD2DResource::D estroy](#destroy)|CD2DResource オブジェクトを破棄します。|
+|[CD2DResource:: IsValid](#isvalid)|リソースの有効性を確認します|
 
 ### <a name="protected-methods"></a>プロテクト メソッド
 
 |名前|説明|
 |----------|-----------------|
-|[CD2D リソース::Is 自動破棄](#isautodestroy)|自動破壊フラグを確認してください。|
-|[CD2D リソース::再作成](#recreate)|CD2D リソースを再作成します。|
+|[CD2DResource:: IsAutoDestroy](#isautodestroy)|自動破棄フラグをオンにします。|
+|[CD2DResource:: 再作成](#recreate)|CD2DResource を再作成します。|
 
 ### <a name="protected-data-members"></a>プロテクト データ メンバー
 
 |名前|説明|
 |----------|-----------------|
-|[リソース:m_bIsAutoDestroy](#m_bisautodestroy)|リソースは所有者によって破棄されます (CRenderTarget)|
-|[リソース:m_pParentTarget](#m_pparenttarget)|親のCRenderTargetへのポインタ)|
+|[CD2DResource:: m_bIsAutoDestroy](#m_bisautodestroy)|リソースは所有者 (CRenderTarget) によって破棄されます|
+|[CD2DResource:: m_pParentTarget](#m_pparenttarget)|親 CRenderTarget へのポインター|
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -76,21 +77,21 @@ class CD2DResource : public CObject;
 
 `CD2DResource`
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-**ヘッダー:** afxrendertarget.h
+**ヘッダー:** afxrendertarget
 
-## <a name="cd2dresourcecd2dresource"></a><a name="_dtorcd2dresource"></a>リソース::~CD2Dリソース
+## <a name="cd2dresourcecd2dresource"></a><a name="_dtorcd2dresource"></a> CD2DResource:: ~ CD2DResource
 
-デストラクターです。 D2D リソース オブジェクトが破棄されるときに呼び出されます。
+デストラクターです。 D2D リソースオブジェクトが破棄されるときに呼び出されます。
 
 ```
 virtual ~CD2DResource();
 ```
 
-## <a name="cd2dresourcecd2dresource"></a><a name="cd2dresource"></a>リソース::CD2Dリソース
+## <a name="cd2dresourcecd2dresource"></a><a name="cd2dresource"></a> CD2DResource:: CD2DResource
 
-オブジェクトを作成します。
+CD2DResource オブジェクトを構築します。
 
 ```
 CD2DResource(
@@ -100,15 +101,15 @@ CD2DResource(
 
 ### <a name="parameters"></a>パラメーター
 
-*ターゲット*<br/>
-レンダー ターゲットへのポインター。
+*pParentTarget*<br/>
+レンダーターゲットへのポインター。
 
-*b自動破壊*<br/>
+*bAutoDestroy*<br/>
 オブジェクトが所有者 (pParentTarget) によって破棄されることを示します。
 
-## <a name="cd2dresourcecreate"></a><a name="create"></a>CD2D リソース::作成
+## <a name="cd2dresourcecreate"></a><a name="create"></a> CD2DResource:: Create
 
-CD2D リソースを作成します。
+CD2DResource を作成します。
 
 ```
 virtual HRESULT Create(CRenderTarget* pRenderTarget) = 0;
@@ -116,24 +117,24 @@ virtual HRESULT Create(CRenderTarget* pRenderTarget) = 0;
 
 ### <a name="parameters"></a>パラメーター
 
-*ターゲットをレンダリングします。*<br/>
-レンダー ターゲットへのポインター。
+*pRenderTarget*<br/>
+レンダーターゲットへのポインター。
 
 ### <a name="return-value"></a>戻り値
 
-メソッドが成功した場合は、S_OK を返します。 それ以外の場合は、HRESULT エラー コードを返します。
+メソッドが成功した場合は、S_OK を返します。 それ以外の場合は、HRESULT エラーコードを返します。
 
-## <a name="cd2dresourcedestroy"></a><a name="destroy"></a>CD2Dリソース::Dエストロイ
+## <a name="cd2dresourcedestroy"></a><a name="destroy"></a> CD2DResource::D estroy
 
-オブジェクトを破棄します。
+CD2DResource オブジェクトを破棄します。
 
 ```
 virtual void Destroy() = 0;
 ```
 
-## <a name="cd2dresourceisautodestroy"></a><a name="isautodestroy"></a>CD2D リソース::Is 自動破棄
+## <a name="cd2dresourceisautodestroy"></a><a name="isautodestroy"></a> CD2DResource:: IsAutoDestroy
 
-自動破壊フラグを確認してください。
+自動破棄フラグをオンにします。
 
 ```
 BOOL IsAutoDestroy() const;
@@ -143,7 +144,7 @@ BOOL IsAutoDestroy() const;
 
 オブジェクトが所有者によって破棄される場合は TRUE。それ以外の場合は FALSE。
 
-## <a name="cd2dresourceisvalid"></a><a name="isvalid"></a>リソース::イズバリ
+## <a name="cd2dresourceisvalid"></a><a name="isvalid"></a> CD2DResource:: IsValid
 
 リソースの有効性を確認します
 
@@ -155,25 +156,25 @@ virtual BOOL IsValid() const = 0;
 
 リソースが有効な場合は TRUE。それ以外の場合は FALSE。
 
-## <a name="cd2dresourcem_bisautodestroy"></a><a name="m_bisautodestroy"></a>リソース:m_bIsAutoDestroy
+## <a name="cd2dresourcem_bisautodestroy"></a><a name="m_bisautodestroy"></a> CD2DResource:: m_bIsAutoDestroy
 
-リソースは所有者によって破棄されます (CRenderTarget)
+リソースは所有者 (CRenderTarget) によって破棄されます
 
 ```
 BOOL m_bIsAutoDestroy;
 ```
 
-## <a name="cd2dresourcem_pparenttarget"></a><a name="m_pparenttarget"></a>リソース:m_pParentTarget
+## <a name="cd2dresourcem_pparenttarget"></a><a name="m_pparenttarget"></a> CD2DResource:: m_pParentTarget
 
-親のCRenderTargetへのポインタ)
+親 CRenderTarget へのポインター
 
 ```
 CRenderTarget* m_pParentTarget;
 ```
 
-## <a name="cd2dresourcerecreate"></a><a name="recreate"></a>CD2D リソース::再作成
+## <a name="cd2dresourcerecreate"></a><a name="recreate"></a> CD2DResource:: 再作成
 
-CD2D リソースを再作成します。
+CD2DResource を再作成します。
 
 ```
 virtual HRESULT ReCreate(CRenderTarget* pRenderTarget);
@@ -181,12 +182,12 @@ virtual HRESULT ReCreate(CRenderTarget* pRenderTarget);
 
 ### <a name="parameters"></a>パラメーター
 
-*ターゲットをレンダリングします。*<br/>
-レンダー ターゲットへのポインター。
+*pRenderTarget*<br/>
+レンダーターゲットへのポインター。
 
 ### <a name="return-value"></a>戻り値
 
-メソッドが成功した場合は、S_OK を返します。 それ以外の場合は、HRESULT エラー コードを返します。
+メソッドが成功した場合は、S_OK を返します。 それ以外の場合は、HRESULT エラーコードを返します。
 
 ## <a name="see-also"></a>関連項目
 

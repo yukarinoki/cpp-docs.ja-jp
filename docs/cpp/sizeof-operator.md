@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: sizeof 演算子'
 title: sizeof 演算子
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,19 +7,19 @@ f1_keywords:
 helpviewer_keywords:
 - sizeof operator
 ms.assetid: 8bc3b6fb-54a1-4eb7-ada0-05f8c5efc532
-ms.openlocfilehash: 13e181bf84e359d433fbe951b1aa69320a1f0013
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: d4af55697a1466829e81f5eb220ffba72bf73f6a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87186296"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97116887"
 ---
 # <a name="sizeof-operator"></a>sizeof 演算子
 
 型のサイズに対して、オペランドのサイズを生成 **`char`** します。
 
 > [!NOTE]
-> 演算子の詳細については `sizeof ...` 、「[省略記号と可変個引数のテンプレート](../cpp/ellipses-and-variadic-templates.md)」を参照してください。
+> 演算子の詳細については `sizeof ...` 、「 [省略記号と可変個引数のテンプレート](../cpp/ellipses-and-variadic-templates.md)」を参照してください。
 
 ## <a name="syntax"></a>構文
 
@@ -95,7 +96,7 @@ The size of the pointer is 4
 
 **`sizeof`** 演算子が参照に適用されると、結果は、が **`sizeof`** オブジェクト自体に適用された場合と同じになります。
 
-可変長配列が構造体の最後の要素である場合、 **`sizeof`** 演算子は配列のない構造体のサイズを返します。
+可変長配列が構造の最後の要素である場合、 **`sizeof`** 演算子は配列のない構造体のサイズを返します。
 
 演算子は、 **`sizeof`** 次の形式の式を使用して、配列内の要素の数を計算するためによく使用されます。
 

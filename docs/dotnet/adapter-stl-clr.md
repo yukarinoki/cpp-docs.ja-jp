@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: adapter (STL/CLR)'
 title: adapter (STL/CLR)
 ms.date: 06/15/2018
 ms.topic: reference
@@ -48,12 +49,12 @@ helpviewer_keywords:
 - operator= member [STL/CLR]
 - range_adapter member [STL/CLR]
 ms.assetid: 71ce7e51-42b6-4f70-9595-303791a97677
-ms.openlocfilehash: 3278371cc7afb08f0d461c77cde9578e1f2840c6
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 66e6346c644bc0d176d90701722cfcd90cbb3590
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91502421"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97116420"
 ---
 # <a name="adapter-stlclr"></a>adapter (STL/CLR)
 
@@ -164,7 +165,7 @@ template<typename Key,
 |--------------|-----------------|
 |[collection_adapter::operator= (STL/CLR)](#op_eq)|格納されている BCL ハンドルを置き換えます。|
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 このテンプレートクラスを使用して、BCL コンテナーを STL/CLR コンテナーとして操作します。 は、 `collection_adapter` BCL インターフェイスへのハンドルを格納します。これは、要素のシーケンスを制御します。 オブジェクトは、 `collection_adapter` `X` 要素に `X.begin()` `X.end()` 順番にアクセスするために使用する入力反復子のペアを返します。 また、一部の特殊化では、 `X.size()` 被制御シーケンスの長さを決定するためにも記述できます。
 
@@ -284,7 +285,7 @@ collection_adapter(Coll^ collection);
 *そうです*<br/>
 コピーするオブジェクト。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 コンストラクター:
 
@@ -614,9 +615,9 @@ collection_adapter<Coll>% operator=(collection_adapter<Coll>% right);
 *そうです*<br/>
 コピーするアダプター。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
-メンバー演算子は、オブジェクトに *right* をコピーし、を返し **`*this`** ます。 このメソッドを使用して、格納されている BCL ハンドルを *右側*の格納されている bcl ハンドルのコピーで置き換えます。
+メンバー演算子は、オブジェクトに *right* をコピーし、を返し **`*this`** ます。 このメソッドを使用して、格納されている BCL ハンドルを *右側* の格納されている bcl ハンドルのコピーで置き換えます。
 
 ### <a name="example"></a>例
 
@@ -807,9 +808,9 @@ void swap(collection_adapter<Coll>% right);
 *そうです*<br/>
 コンテンツを交換するコンテナー。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
-このメンバー関数は、格納されている BCL ハンドルをとの間で交換し **`*this`** ます。 *right*
+このメンバー関数は、格納されている BCL ハンドルをとの間で交換し **`*this`** ます。 
 
 ### <a name="example"></a>例
 
@@ -873,7 +874,7 @@ typedef Value value_type;
 
 ### <a name="remarks"></a>解説
 
-この型は、特殊化に存在する場合は、テンプレートパラメーター *値*のシノニムです。それ以外の場合は、のシノニムになり `System::Object^` ます。
+この型は、特殊化に存在する場合は、テンプレートパラメーター *値* のシノニムです。それ以外の場合は、のシノニムになり `System::Object^` ます。
 
 ### <a name="example"></a>例
 
@@ -932,7 +933,7 @@ template<typename Iter>
 *last*<br/>
 ラップする2番目の反復子。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 このテンプレート関数は `gcnew range_adapter<Iter>(first, last)` を返します。 このメソッドを使用して、 `range_adapter<Iter>` 1 組の反復子からオブジェクトを構築します。
 
@@ -1029,7 +1030,7 @@ template<typename Iter>
 |<xref:System.Collections.Generic.IEnumerable%601>|コレクション内の型指定された要素を反復処理します。|
 |<xref:System.Collections.Generic.ICollection%601>|型指定された要素のグループを保持します。|
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 Range_adapter は、要素のシーケンスを区切る反復子のペアを格納します。 オブジェクトには、要素を順番に反復処理できる4つの BCL インターフェイスが実装されています。 このテンプレートクラスを使用して、BCL コンテナーと同じように STL/CLR 範囲を操作します。
 
@@ -1048,9 +1049,9 @@ range_adapter<Iter>% operator=(range_adapter<Iter>% right);
 *そうです*<br/>
 コピーするアダプター。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
-メンバー演算子は、オブジェクトに *right* をコピーし、を返し **`*this`** ます。 このメソッドを使用して、格納されている反復子ペアを *右*の格納されている反復子ペアのコピーに置き換えることができます。
+メンバー演算子は、オブジェクトに *right* をコピーし、を返し **`*this`** ます。 このメソッドを使用して、格納されている反復子ペアを *右* の格納されている反復子ペアのコピーに置き換えることができます。
 
 ### <a name="example"></a>例
 
@@ -1114,7 +1115,7 @@ range_adapter(Iter first, Iter last);
 *そうです*<br/>
 コピーするオブジェクト。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 コンストラクター:
 
@@ -1126,7 +1127,7 @@ range_adapter(Iter first, Iter last);
 
 `range_adapter(range_adapter<Iter>% right);`
 
-*右側*に格納されているペアをコピーすることによって、格納された反復子ペアを初期化します
+*右側* に格納されているペアをコピーすることによって、格納された反復子ペアを初期化します
 
 コンストラクター:
 
@@ -1138,7 +1139,7 @@ range_adapter(Iter first, Iter last);
 
 `range_adapter(Iter^ first, last);`
 
-*最初*と*最後*の、格納されている反復子のペアを初期化します。
+*最初* と *最後* の、格納されている反復子のペアを初期化します。
 
 ### <a name="example"></a>例
 

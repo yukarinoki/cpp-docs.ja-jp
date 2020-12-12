@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「コンパイラエラー C3269」を参照してください。
 title: コンパイラ エラー C3269
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3269
 ms.assetid: c575f067-244d-4dd5-bf58-9e7630ea58b7
-ms.openlocfilehash: 95f71c9312faaf5c14bd8990898257002c528c0e
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 041a0af061e4ddd1a691c396cdd15e86085124c2
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74754018"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97113701"
 ---
 # <a name="compiler-error-c3269"></a>コンパイラ エラー C3269
 

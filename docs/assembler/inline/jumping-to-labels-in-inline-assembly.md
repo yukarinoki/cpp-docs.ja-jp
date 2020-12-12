@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: インラインアセンブリのラベルへのジャンプ'
 title: インライン アセンブラーのラベルにジャンプ
 ms.date: 08/30/2018
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - labels, in __asm blocks
 - jumping to labels in inline assembly
 ms.assetid: 36c18b97-8981-4631-9dfd-af6c14a04297
-ms.openlocfilehash: 0c411289745466bd6478cc82ab30e6a05be9cc25
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: b4a32dd9baace77245f612d68b58f954a81075ab
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87192003"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97117719"
 ---
 # <a name="jumping-to-labels-in-inline-assembly"></a>インライン アセンブラーのラベルにジャンプ
 
@@ -66,7 +67,7 @@ exit:
    ; More __asm code follows
 ```
 
-**Exit**は C ライブラリ関数の名前であるため、このコードでは、目的の場所ではなく**exit**関数へのジャンプが発生する可能性があります。
+**Exit** は C ライブラリ関数の名前であるため、このコードでは、目的の場所ではなく **exit** 関数へのジャンプが発生する可能性があります。
 
 MASM プログラムと同様に、ドル記号 ( `$` ) は現在の位置カウンターとして機能します。 これは、現在アセンブルされている命令のラベルです。 **`__asm`** ブロックでは、次のように、条件付きジャンプを長くすることが主に使用されます。
 

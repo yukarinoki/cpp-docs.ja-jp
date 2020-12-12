@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「単一継承」を参照してください。
 title: 単一継承
 ms.date: 11/19/2018
 helpviewer_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - derived classes [C++], single base class
 - inheritance, single
 ms.assetid: 1cb946ed-8b1b-4cf1-bde0-d9cecbfdc622
-ms.openlocfilehash: 306f5eb3624797ca48848ef0a8f69625e0f6b574
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: a750cf66074612ce40f9a4fa03d8453ae2decfef
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87186361"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97116952"
 ---
 # <a name="single-inheritance"></a>単一継承
 
@@ -56,7 +57,7 @@ class PaperbackBook : public Book {};
 > [!NOTE]
 > 有向非循環グラフは、単一継承に特有のものではありません。 多重継承グラフを記述するためにも使用されます。
 
-継承の場合、派生クラスは、基底クラスのメンバーと、追加した新しいメンバーを含みます。 その結果、派生クラスは基底クラスのメンバーを参照できます (それらのメンバーが派生クラスで再定義されていない限り)。 直接または間接基底クラスのメンバーが派生クラスで再定義された場合は、スコープ解決演算子 (`::`) を使用してそれらのメンバーを参照できます。 次の例を考えてみましょう。
+継承の場合、派生クラスは、基底クラスのメンバーと、追加した新しいメンバーを含みます。 その結果、派生クラスは基底クラスのメンバーを参照できます (それらのメンバーが派生クラスで再定義されていない限り)。 直接または間接基底クラスのメンバーが派生クラスで再定義された場合は、スコープ解決演算子 (`::`) を使用してそれらのメンバーを参照できます。 次の例について考えます。
 
 ```cpp
 // deriv_SingleInheritance2.cpp
@@ -154,4 +155,4 @@ int main() {
 `Document` クラスには `PrintNameOf` 関数があるため、ライブラリの各ブックの名前を出力できますが、ドキュメントの型に固有の情報の一部 (`Book` のページ番号、`HelpFile` のバイト数など) が省略される可能性があります。
 
 > [!NOTE]
-> 基底クラスで `PrintNameOf` のような関数の実装を強制するのは、多くの場合、最適なデザインではありません。 [仮想関数](../cpp/virtual-functions.md)は、他の設計上の代替手段を提供します。
+> 基底クラスで `PrintNameOf` のような関数の実装を強制するのは、多くの場合、最適なデザインではありません。 [仮想関数](../cpp/virtual-functions.md) は、他の設計上の代替手段を提供します。

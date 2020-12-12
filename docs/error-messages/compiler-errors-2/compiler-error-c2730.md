@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「コンパイラエラー C2730」を参照してください。
 title: コンパイラ エラー C2730
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2730
 ms.assetid: 07f0b17a-bc8e-4d79-af5a-07a07af3687b
-ms.openlocfilehash: 1ed1326bb6c0b8f6829b1001f8a1d8e0557a9dad
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: e2ff20d193b5dbb665659b92a218813697346958
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80202168"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97113691"
 ---
 # <a name="compiler-error-c2730"></a>コンパイラ エラー C2730
 

@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「コンパイラエラー C2140」を参照してください。
 title: コンパイラ エラー C2140
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2140
 ms.assetid: d44a0500-002c-4632-9e5e-c71c3a473ec4
-ms.openlocfilehash: 0329872ff0baee595bf32486a53d6abf91d208d4
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: b9292019ce9a17c8f1dabca87f61f27b21494a82
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74756527"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97124151"
 ---
 # <a name="compiler-error-c2140"></a>コンパイラ エラー C2140
 
@@ -21,7 +22,7 @@ ms.locfileid: "74756527"
 
 詳細については、「[型の特徴のコンパイラ サポート](../../extensions/compiler-support-for-type-traits-cpp-component-extensions.md)」を参照してください。
 
-## <a name="example"></a>使用例
+## <a name="example"></a>例
 
 次の例では、C2140 が生成されます。
 

@@ -1,4 +1,5 @@
 ---
+description: '詳細については、「Windows ソケット: バイトの順序付け」を参照してください。'
 title: 'Windows ソケット : バイトの順序付け'
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,16 +7,16 @@ helpviewer_keywords:
 - sockets [MFC], byte order issues
 - Windows Sockets [MFC], byte order issues
 ms.assetid: 8a787a65-f9f4-4002-a02f-ac25a5dace5d
-ms.openlocfilehash: f00936f3de07df8c1e4d9df1c678b2cfd5f3e3ad
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: d143967fdcc9b4d1dac772bf0fe25b67d70aef53
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87226803"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97118655"
 ---
 # <a name="windows-sockets-byte-ordering"></a>Windows ソケット : バイトの順序付け
 
-この記事と2つの記事では、Windows ソケットプログラミングにおけるいくつかの問題について説明します。 この記事では、バイトの順序付けについて説明します。 その他の問題については、「 [Windows ソケット: ブロッキング](../mfc/windows-sockets-blocking.md)と[Windows ソケット: 文字列の変換](../mfc/windows-sockets-converting-strings.md)」の記事で説明されています。
+この記事と2つの記事では、Windows ソケットプログラミングにおけるいくつかの問題について説明します。 この記事では、バイトの順序付けについて説明します。 その他の問題については、「 [Windows ソケット: ブロッキング](../mfc/windows-sockets-blocking.md) と [Windows ソケット: 文字列の変換](../mfc/windows-sockets-converting-strings.md)」の記事で説明されています。
 
 [CAsyncSocket](../mfc/reference/casyncsocket-class.md)クラスを使用する場合、またはクラスを派生させる場合は、これらの問題を自分で管理する必要があります。 またはを使用する場合は、 [MFC でそれらを管理](../mfc/reference/csocket-class.md)します。
 
@@ -23,12 +24,12 @@ ms.locfileid: "87226803"
 
 異なるコンピューターアーキテクチャでは、異なるバイトオーダーを使用してデータを格納する場合があります。 たとえば、Intel ベースのコンピューターでは、Macintosh (Motorola) コンピューターの逆の順序でデータが保存されます。 "リトルエンディアン" と呼ばれる Intel のバイトオーダーも、ネットワークの標準の "ビッグエンディアン" の順序と逆になります。 次の表では、これらの用語について説明します。
 
-### <a name="big--and-little-endian-byte-ordering"></a>ビッグエンディアンのバイト順
+### <a name="big--and-little-endian-byte-ordering"></a>大文字と Little-Endian バイトの順序付け
 
-|バイトの順序付け|意味|
+|バイトの順序付け|説明|
 |-------------------|-------------|
-|ビッグエンディアン|最上位バイトは単語の左端にあります。|
-|リトルエンディアン|最上位バイトは単語の右端にあります。|
+|Big-Endian|最上位バイトは単語の左端にあります。|
+|Little-Endian|最上位バイトは単語の右端にあります。|
 
 通常、ネットワーク経由で送受信されるデータのバイトオーダーの変換について心配する必要はありませんが、バイトオーダーを変換する必要がある場合があります。
 
@@ -54,14 +55,14 @@ ms.locfileid: "87226803"
 
 [CAsyncSocket](../mfc/reference/casyncsocket-class.md)を使用する場合は、必要なバイト順変換を自分で管理する必要があります。 Windows ソケットは、"ビッグエンディアン" バイト順モデルを標準化し、この順序と他の順序の間で変換を行う関数を提供します。 ただし、 [CSocket](../mfc/reference/csocket-class.md)で使用する[CArchive](../mfc/reference/carchive-class.md)は、逆の ("リトルエンディアン") 順序を使用し `CArchive` ますが、バイト順変換の詳細を処理します。 アプリケーションでこの標準の順序付けを使用するか、Windows ソケットのバイト順変換関数を使用することにより、コードの移植性を高めることができます。
 
-MFC ソケットの理想的な使用状況は、通信の両端を自分で作成し、両端で MFC を使用する場合です。 FTP サーバーなど、MFC 以外のアプリケーションと通信するアプリケーションを作成する場合は、Windows Sockets 変換ルーチン**ntohs**、 **ntohl**、 **htons**、および**htonl**を使用して、アーカイブオブジェクトにデータを渡す前に、バイトスワップを自分で管理する必要があります。 MFC 以外のアプリケーションとの通信で使用されるこれらの関数の例については、この記事の後半で説明します。
+MFC ソケットの理想的な使用状況は、通信の両端を自分で作成し、両端で MFC を使用する場合です。 FTP サーバーなど、MFC 以外のアプリケーションと通信するアプリケーションを作成する場合は、Windows Sockets 変換ルーチン **ntohs**、 **ntohl**、 **htons**、および **htonl** を使用して、アーカイブオブジェクトにデータを渡す前に、バイトスワップを自分で管理する必要があります。 MFC 以外のアプリケーションとの通信で使用されるこれらの関数の例については、この記事の後半で説明します。
 
 > [!NOTE]
 > 通信のもう一方の側が MFC アプリケーションでない場合は、から派生した C++ オブジェクトを、受信側がそれを処理できないのでアーカイブに保存しないようにする必要もあり `CObject` ます。 「 [Windows ソケット: アーカイブでのソケットの使用](../mfc/windows-sockets-using-sockets-with-archives.md)」の注を参照してください。
 
 バイトオーダーの詳細については、Windows SDK で使用可能な Windows ソケット仕様を参照してください。
 
-## <a name="a-byte-order-conversion-example"></a>バイト順変換の例
+## <a name="a-byte-order-conversion-example"></a>Byte-Order 変換の例
 
 次の例は、アーカイブを使用するオブジェクトのシリアル化関数を示して `CSocket` います。 また、Windows Sockets API でバイト順変換関数を使用する方法についても説明します。
 
@@ -81,7 +82,7 @@ C++ では、は基本的には **`struct`** クラスと同じです。 構造�
 
 この例では、データのバイト順変換に対してを呼び出しています。これは、一方の端にある非 MFC サーバーアプリケーションのバイト順と、もう一方の側の `CArchive` mfc クライアントアプリケーションで使用されるが明確に一致しないためです。 この例は、Windows ソケットが提供するバイト順変換関数のいくつかを示しています。 次の表では、これらの関数について説明します。
 
-### <a name="windows-sockets-byte-order-conversion-functions"></a>Windows ソケットのバイト順変換関数
+### <a name="windows-sockets-byte-order-conversion-functions"></a>Windows ソケット Byte-Order 変換関数
 
 |機能|目的|
 |--------------|-------------|

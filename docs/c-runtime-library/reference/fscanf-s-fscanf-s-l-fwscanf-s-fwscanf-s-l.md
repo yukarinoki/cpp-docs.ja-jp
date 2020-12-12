@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: fscanf_s、_fscanf_s_l、fwscanf_s、_fwscanf_s_l'
 title: fscanf_s、_fscanf_s_l、fwscanf_s、_fwscanf_s_l
 ms.date: 11/04/2016
 api_name:
@@ -43,12 +44,12 @@ helpviewer_keywords:
 - streams [C++], reading formatted data from
 - fscanf_s_l function
 ms.assetid: b6e88194-714b-4322-be82-1cc0b343fe01
-ms.openlocfilehash: ff4fa01fe53794ed04f087f264021de9beea4ba9
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: ae5d0c953cb46850cf56a4ce4113e5831518ae5f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87220692"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97124918"
 ---
 # <a name="fscanf_s-_fscanf_s_l-fwscanf_s-_fwscanf_s_l"></a>fscanf_s、_fscanf_s_l、fwscanf_s、_fwscanf_s_l
 
@@ -97,20 +98,20 @@ int _fwscanf_s_l(
 
 ## <a name="return-value"></a>戻り値
 
-これらの関数は、正常に変換および代入されたフィールドの数を返します。読み込まれただけで代入されなかったフィールドは戻り値には含まれません。 戻り値が 0 の場合は、代入されたフィールドがなかったことを示します。 エラーが発生した場合、または最初の変換の前にファイルストリームの末尾に到達した場合、 **fscanf_s**と**fwscanf_s**の戻り値は**EOF**になります。
+これらの関数は、正常に変換および代入されたフィールドの数を返します。読み込まれただけで代入されなかったフィールドは戻り値には含まれません。 戻り値が 0 の場合は、代入されたフィールドがなかったことを示します。 エラーが発生した場合、または最初の変換の前にファイルストリームの末尾に到達した場合、 **fscanf_s** と **fwscanf_s** の戻り値は **EOF** になります。
 
-これらの関数では、パラメーターの検証が行われます。 *Stream*が無効なファイルポインターの場合、または*format*が null ポインターの場合、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、これらの関数は無効なパラメーターハンドラーを呼び出します。 実行の継続が許可された場合、これらの関数は**EOF**を返し、 **errno**を**EINVAL**に設定します。
+これらの関数では、パラメーターの検証が行われます。 *Stream* が無効なファイルポインターの場合、または *format* が null ポインターの場合、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、これらの関数は無効なパラメーターハンドラーを呼び出します。 実行の継続が許可された場合、これらの関数は **EOF** を返し、 **errno** を **EINVAL** に設定します。
 
 ## <a name="remarks"></a>解説
 
-**Fscanf_s**関数は、*ストリーム*の現在位置から、*引数*によって指定された位置 (存在する場合) にデータを読み取ります。 各*引数*は、*形式*の型指定子に対応する型の変数へのポインターである必要があります。 *format*は、入力フィールドの解釈を制御し、 **scanf_s**の*書式*引数と同じ形式と機能を持ちます。*形式*の説明については、「 [scanf 関数と Wscanf 関数の書式指定フィールド](../../c-runtime-library/format-specification-fields-scanf-and-wscanf-functions.md)」を参照してください。  **fwscanf_s**は**fscanf_s**のワイド文字バージョンです。**fwscanf_s**の format 引数は、ワイド文字列です。 ストリームが ANSI モードで開かれている場合、これらの関数の動作は同じになります。 **fscanf_s**は、UNICODE ストリームからの入力を現在サポートしていません。
+**Fscanf_s** 関数は、*ストリーム* の現在位置から、*引数* によって指定された位置 (存在する場合) にデータを読み取ります。 各 *引数* は、 *形式* の型指定子に対応する型の変数へのポインターである必要があります。 *format* は、入力フィールドの解釈を制御し、 **scanf_s** の *書式* 引数と同じ形式と機能を持ちます。*形式* の説明については、「 [scanf 関数と Wscanf 関数の書式指定フィールド](../../c-runtime-library/format-specification-fields-scanf-and-wscanf-functions.md)」を参照してください。  **fwscanf_s** は **fscanf_s** のワイド文字バージョンです。 **fwscanf_s** の format 引数は、ワイド文字列です。 ストリームが ANSI モードで開かれている場合、これらの関数の動作は同じになります。 **fscanf_s** は、UNICODE ストリームからの入力を現在サポートしていません。
 
-より安全な関数 ( **_s**サフィックスを持つ) とその他のバージョンの主な違いは、セキュリティが強化された関数では、各**c**、 **c**、 **s**、 **s**、および **[** 型フィールドの文字数を、変数の直後の引数として渡す必要があることです。 詳細については、「[scanf_s、_scanf_s_l、wscanf_s、_wscanf_s_l](scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md)」と「[scanf 関数の文字幅指定](../../c-runtime-library/scanf-width-specification.md)」を参照してください。
+より安全な関数 ( **_s** サフィックスを持つ) とその他のバージョンの主な違いは、セキュリティが強化された関数では、各 **c**、 **c**、 **s**、 **s**、および **[** 型フィールドの文字数を、変数の直後の引数として渡す必要があることです。 詳細については、「[scanf_s、_scanf_s_l、wscanf_s、_wscanf_s_l](scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md)」と「[scanf 関数の文字幅指定](../../c-runtime-library/scanf-width-specification.md)」を参照してください。
 
 > [!NOTE]
-> Size パラメーターの型は **`unsigned`** であり、 **size_t**ではありません。
+> Size パラメーターの型は **`unsigned`** であり、 **size_t** ではありません。
 
-**_L**サフィックスを持つこれらの関数のバージョンは、現在のスレッドロケールの代わりに渡されたロケールパラメーターを使用する点を除いて同じです。
+**_L** サフィックスを持つこれらの関数のバージョンは、現在のスレッドロケールの代わりに渡されたロケールパラメーターを使用する点を除いて同じです。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -119,7 +120,7 @@ int _fwscanf_s_l(
 |**_ftscanf_s**|**fscanf_s**|**fscanf_s**|**fwscanf_s**|
 |**_ftscanf_s_l**|**_fscanf_s_l**|**_fscanf_s_l**|**_fwscanf_s_l**|
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 |機能|必須ヘッダー|
 |--------------|---------------------|

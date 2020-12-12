@@ -1,4 +1,5 @@
 ---
+description: '詳細については、「方法: シンボルを管理する」を参照してください。'
 title: '方法: シンボルを管理する'
 ms.date: 02/14/2019
 f1_keywords:
@@ -35,12 +36,12 @@ helpviewer_keywords:
 - calculated symbols
 - shared symbols
 ms.assetid: 26541832-8dba-4177-b642-e08f94502ea7
-ms.openlocfilehash: 67a5c801c13038e7215473edecc2d41a8f7086e0
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 2a7bdc6994bfcdadc9b7d1d5b98350fcd47ad6fe
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91505717"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97118226"
 ---
 # <a name="how-to-manage-symbols"></a>方法: シンボルを管理する
 
@@ -74,11 +75,11 @@ ms.locfileid: "91505717"
 
 シンボル名には説明的なプレフィックスがあり、対象となるリソースやオブジェクトの種類を示します。 これらの説明的なプレフィックスは、テキストを組み合わせた ID で始まります。 MFC (Microsoft Foundation Class) ライブラリでは、次の表に示すシンボルの名前付け規則が使用されています。
 
-|カテゴリ|Prefix|用途|
+|カテゴリ|Prefix|使用|
 |--------------|------------|---------|
 |リソース|IDR_、IDD_、IDC_、IDI_、IDB_|アクセラレータまたはメニュー (および関連付けられているまたはカスタムリソース)、ダイアログボックス、カーソル、アイコン、ビットマップ|
 |メニュー項目|ID_|メニュー項目|
-|コマンド|ID_|command|
+|コマンド|ID_|コマンド|
 |コントロールと子ウィンドウ|IDC_|コントロール|
 |文字列|IDS_|文字列テーブル内の文字列|
 |MFC|AFX_|定義済みの MFC シンボル用に予約されています|
@@ -185,7 +186,7 @@ ms.locfileid: "91505717"
 
 ### <a name="to-include-shared-read-only-symbols-in-your-resource-file"></a>共有 (読み取り専用) シンボルをリソース ファイルに含めるには
 
-1. [リソースビュー](how-to-create-a-resource-script-file.md#create-resources)で、 *.rc*ファイルを右クリックし、[[リソースのインクルード](./how-to-include-resources-at-compile-time.md)] を選択します。
+1. [リソースビュー](how-to-create-a-resource-script-file.md#create-resources)で、 *.rc* ファイルを右クリックし、[[リソースのインクルード](./how-to-include-resources-at-compile-time.md)] を選択します。
 
 1. [読み取り専用の **シンボルディレクティブ** ] ボックスで、コンパイラディレクティブを使用して、 `#include` 読み取り専用のシンボルを保存するファイルを指定します。
 
@@ -204,11 +205,11 @@ ms.locfileid: "91505717"
 
 ### <a name="to-change-the-name-of-the-resource-symbol-header-file"></a>リソースのシンボル用のヘッダー ファイルの名前を変更するには
 
-1. [リソースビュー](how-to-create-a-resource-script-file.md#create-resources)で、 *.rc*ファイルを右クリックし、[[リソースのインクルード](./how-to-include-resources-at-compile-time.md)] を選択します。
+1. [リソースビュー](how-to-create-a-resource-script-file.md#create-resources)で、 *.rc* ファイルを右クリックし、[[リソースのインクルード](./how-to-include-resources-at-compile-time.md)] を選択します。
 
 1. [ **シンボルヘッダーファイル** ] ボックスに、インクルードファイルの新しい名前を入力します。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 Win32
 

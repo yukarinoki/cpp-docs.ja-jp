@@ -1,4 +1,5 @@
 ---
+description: 詳細については、CVTRES のエラーと警告に関するページ (CVTxxxx) を参照してください。
 title: CVTRES のエラーと警告
 ms.date: 04/16/2019
 f1_keywords:
@@ -11,20 +12,20 @@ f1_keywords:
 - CVT1109
 - CVT1110
 ms.assetid: ac94d0fb-0da3-4327-b3d9-ceaeb3fc2e4d
-ms.openlocfilehash: 81dbac6b0408a7cf1cc319c1eed90bad5f742890
-ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
+ms.openlocfilehash: 5c95dfddf7f691b3a9475ce21a7c4360872847e7
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64855931"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97119776"
 ---
 # <a name="cvtres-errors-and-warnings-cvtxxxx"></a>CVTRES のエラーと警告 (CVTxxxx)
 
-このセクションでは、エラーへの参照と、CVTRES によって生成される警告は、ツールをビルドします。 CVTRES 協調フォームのメッセージを生成する*xxxx*ここで、 *xxxx*は 4 桁の番号です。
+このセクションでは、CVTRES build ツールによって生成されるエラーと警告について説明します。 CVTRES は、CVT *xxxx* という形式のメッセージを生成します。ここで、 *xxxx* は4桁の数字です。
 
 [!INCLUDE[error-boilerplate](../../error-messages/includes/error-boilerplate.md)]
 
-## <a name="fatal-error-messages"></a>致命的なエラー メッセージ
+## <a name="fatal-error-messages"></a>致命的なエラーメッセージ
 
 [CVTRES の致命的なエラー CVT1100](cvtres-fatal-error-cvt1100.md) \
 [CVTRES の致命的なエラー CVT1103](cvtres-fatal-error-cvt1103.md) \
@@ -36,4 +37,4 @@ ms.locfileid: "64855931"
 
 ## <a name="see-also"></a>関連項目
 
-[C/C++コンパイラとビルド ツールのエラーと警告](../compiler-errors-1/c-cpp-build-errors.md)
+[C/C++ コンパイラとビルド ツールのエラーと警告](../compiler-errors-1/c-cpp-build-errors.md)

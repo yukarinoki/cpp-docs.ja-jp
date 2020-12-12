@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: _fseek_nolock、_fseeki64_nolock'
 title: _fseek_nolock、_fseeki64_nolock
 ms.date: 4/2/2020
 api_name:
@@ -36,12 +37,12 @@ helpviewer_keywords:
 - _fseeki64_nolock function
 - seek file pointers
 ms.assetid: 2dd4022e-b715-462b-b935-837561605a02
-ms.openlocfilehash: c09f9964416785131c0c928c214a0de5ec6dd859
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 3a8701dcb7380bee31d1d04aa92209169682e54d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82910168"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97114262"
 ---
 # <a name="_fseek_nolock-_fseeki64_nolock"></a>_fseek_nolock、_fseeki64_nolock
 
@@ -68,7 +69,7 @@ int _fseeki64_nolock(
 **FILE** 構造体へのポインター。
 
 *offset*<br/>
-*配信元*からのバイト数。
+*配信元* からのバイト数。
 
 *発行*<br/>
 最初の位置。
@@ -79,13 +80,13 @@ int _fseeki64_nolock(
 
 ## <a name="remarks"></a>解説
 
-これらの関数は、それぞれ[fseek](fseek-fseeki64.md)と[_fseeki64](fseek-fseeki64.md)の非ロックバージョンです。 これらは、他のスレッドによる干渉から保護されない点を除いて、 [fseek](fseek-fseeki64.md)および[_fseeki64](fseek-fseeki64.md)と同じです。 これらの関数では他のスレッドをロックアウトするオーバーヘッドが発生しないため、処理が速くなる場合があります。 これらの関数は、シングルスレッド アプリケーション、呼び出し元のスコープで既にスレッド分離を処理している場合などのスレッドセーフなコンテキストでのみ使用してください。
+これらの関数は、それぞれ [fseek](fseek-fseeki64.md) と [_fseeki64](fseek-fseeki64.md)の非ロックバージョンです。 これらは、他のスレッドによる干渉から保護されない点を除いて、 [fseek](fseek-fseeki64.md) および [_fseeki64](fseek-fseeki64.md) と同じです。 これらの関数では他のスレッドをロックアウトするオーバーヘッドが発生しないため、処理が速くなる場合があります。 これらの関数は、シングルスレッド アプリケーション、呼び出し元のスコープで既にスレッド分離を処理している場合などのスレッドセーフなコンテキストでのみ使用してください。
 
 既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-|関数|必須ヘッダー|
+|機能|必須ヘッダー|
 |--------------|---------------------|
 |**_fseek_nolock**、 **_fseeki64_nolock**|\<stdio.h>|
 

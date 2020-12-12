@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: __asm ブロックを C マクロとして定義する'
 title: __asm ブロックの C マクロとしての定義
 ms.date: 08/30/2018
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - Visual C, macros
 - __asm keyword [C++], as C macros
 ms.assetid: 677ba11c-21c8-4609-bba7-cd47312243b0
-ms.openlocfilehash: 4195624078c53f6c1f20cd2a03ed53dac937d9cd
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: a0fe13acdd5a75fd86fd8107396632a5c6e7c283
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87192107"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97117838"
 ---
 # <a name="defining-__asm-blocks-as-c-macros"></a>__asm ブロックの C マクロとしての定義
 
@@ -51,7 +52,7 @@ __asm /* Port output */ { __asm mov al, 2  __asm mov dx, 0xD007 __asm out dx, al
 
 **`__asm`** C マクロとして記述されたブロックは、引数を受け取ることができます。 ただし、通常の C マクロとは異なり、 **`__asm`** マクロは値を返すことはできません。 そのため、C または C++ の式ではこのようなマクロを使用できません。
 
-この型のマクロをむやみに呼び出さないように注意してください。 たとえば、規則で宣言された関数でアセンブリ言語マクロを呼び出すと、 **`__fastcall`** 予期しない結果が発生する可能性があります。 (「[インラインアセンブリでのレジスタの使用と保持」を](../../assembler/inline/using-and-preserving-registers-in-inline-assembly.md)参照してください)。
+この型のマクロをむやみに呼び出さないように注意してください。 たとえば、規則で宣言された関数でアセンブリ言語マクロを呼び出すと、 **`__fastcall`** 予期しない結果が発生する可能性があります。 (「 [インラインアセンブリでのレジスタの使用と保持」を](../../assembler/inline/using-and-preserving-registers-in-inline-assembly.md)参照してください)。
 
 **Microsoft 固有の仕様はここまで**
 

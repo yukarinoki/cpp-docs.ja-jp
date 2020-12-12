@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: _set_printf_count_output'
 title: _set_printf_count_output
 ms.date: 11/04/2016
 api_name:
@@ -27,16 +28,16 @@ helpviewer_keywords:
 - set_printf_count_output function
 - _set_printf_count_output function
 ms.assetid: d8259ec5-764e-42d0-9169-72172e95163b
-ms.openlocfilehash: 0d53b4e4c56a69582a4eb517fa1a5c9e10cd7d2f
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 455c4f0e49ce111853145a05d78efabcd76386fe
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70948417"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97114248"
 ---
 # <a name="_set_printf_count_output"></a>_set_printf_count_output
 
-[Printf、wprintf、_wprintf_l](printf-printf-l-wprintf-wprintf-l.md)の各関数で **% n**形式のサポートを有効または無効にします。
+[Printf、_printf_l、wprintf、_wprintf_l](printf-printf-l-wprintf-wprintf-l.md)ファミリ関数での **% n** 形式のサポートを有効または無効にします。
 
 ## <a name="syntax"></a>構文
 
@@ -49,15 +50,15 @@ int _set_printf_count_output(
 ### <a name="parameters"></a>パラメーター
 
 *enable*<br/>
-**% N**のサポートを有効にする0以外の値。 **% n**のサポートを無効にする場合は0。
+**% N** のサポートを有効にする0以外の値。 **% n** のサポートを無効にする場合は0。
 
 ## <a name="property-valuereturn-value"></a>プロパティ値/戻り値
 
-この関数を呼び出す前の **% n**のサポートの状態: **% n**のサポートが有効になっている場合は0以外、無効になっている場合は0。
+この関数を呼び出す前の **% n** のサポートの状態: **% n** のサポートが有効になっている場合は0以外、無効になっている場合は0。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-セキュリティ上の理由から、 **printf**とそのすべてのバリエーションでは、 **% n**書式指定子のサポートは既定で無効になっています。 **Printf**形式の指定で **% n**が発生した場合、既定の動作では、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 0以外の引数を指定して **_set_printf_count_output**を呼び出すと、printf 関数[と wprintf 関数](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)に記述されているように、 **printf**関数が **% n**を解釈します。
+セキュリティ上の理由から、 **printf** とそのすべてのバリエーションでは、 **% n** 書式指定子のサポートは既定で無効になっています。 **Printf** 形式の指定で **% n** が発生した場合、既定の動作では、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 0以外の引数を指定して **_set_printf_count_output** を呼び出すと、printf 関数 [と Wprintf 関数の書式指定構文](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)に記述されているように、 **printf** 関数は **% n** を解釈します。
 
 ## <a name="requirements"></a>必要条件
 

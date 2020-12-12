@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: wire_marshal'
 title: wire_marshal (C++ COM 属性)
 ms.date: 10/02/2018
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - wire_marshal attribute
 ms.assetid: 244f9d72-776d-4ebd-b60a-cee600a126b5
-ms.openlocfilehash: 04d6e7dcc887815b6f1b3becd67bd11bef4a81d7
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 69e3b85137d656e40cb77f9f75c361495c88f4a0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88832882"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97118291"
 ---
 # <a name="wire_marshal"></a>wire_marshal
 
@@ -29,7 +30,7 @@ ms.locfileid: "88832882"
 
 ## <a name="example"></a>例
 
-次のコードは、 **wire_marshal**の使用方法を示しています。
+次のコードは、 **wire_marshal** の使用方法を示しています。
 
 ```cpp
 // cpp_attr_ref_wire_marshal.cpp
@@ -47,7 +48,7 @@ ms.locfileid: "88832882"
 [export, wire_marshal(TWO_X_TWO_BYTE_DATA)] typedef _FOUR_BYTE_DATA FOUR_BYTE_DATA;
 ```
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 | 属性コンテキスト | 値 |
 |-|-|

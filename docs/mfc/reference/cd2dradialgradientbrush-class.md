@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: CD2DRadialGradientBrush クラス'
 title: CD2DRadialGradientBrush クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -38,16 +39,16 @@ helpviewer_keywords:
 - CD2DRadialGradientBrush [MFC], m_pRadialGradientBrush
 - CD2DRadialGradientBrush [MFC], m_RadialGradientBrushProperties
 ms.assetid: 6c76d84a-d831-4ee2-96f1-82c1f5b0d6a9
-ms.openlocfilehash: 450314fdbf8441b0cc345430518d083573659add
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: c5e169a5d608edd246d5c7269c94e3b225fdd491
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81750307"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97118746"
 ---
 # <a name="cd2dradialgradientbrush-class"></a>CD2DRadialGradientBrush クラス
 
-ID2D1ラジアルグラデーションブラシのラッパー。
+ID2D1RadialGradientBrush のラッパー。
 
 ## <a name="syntax"></a>構文
 
@@ -61,67 +62,67 @@ class CD2DRadialGradientBrush : public CD2DGradientBrush;
 
 |名前|説明|
 |----------|-----------------|
-|[CD2Dラジアルグラデーションブラシ::CD2Dラジアルグラデーションブラシ](#cd2dradialgradientbrush)|オブジェクトを構築します。|
-|[CD2Dラジアルグラデーションブラシ:~CD2Dラジアルグラデーションブラシ](#_dtorcd2dradialgradientbrush)|デストラクターです。 D2D 放射状グラデーション ブラシ オブジェクトが破棄されるときに呼び出されます。|
+|[CD2DRadialGradientBrush:: CD2DRadialGradientBrush](#cd2dradialgradientbrush)|CD2DLinearGradientBrush オブジェクトを構築します。|
+|[CD2DRadialGradientBrush:: ~ CD2DRadialGradientBrush](#_dtorcd2dradialgradientbrush)|デストラクターです。 D2D 放射状グラデーションブラシオブジェクトが破棄されるときに呼び出されます。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
 |名前|説明|
 |----------|-----------------|
-|[CD2Dラジアルグラデーションブラシ::アタッチ](#attach)|既存のリソース インターフェイスをオブジェクトにアタッチします。|
-|[CD2Dラジアルグラデーションブラシ::作成](#create)|CD2Dラジアルグラデーションブラシを作成します。 [(CD2D リソースをオーバーライドします::作成](../../mfc/reference/cd2dresource-class.md#create).)|
-|[CD2Dラジアルグラデーションブラシ::Dエストロイ](#destroy)|オブジェクトを破棄します。 [(CD2Dグラデーションブラシ::Dエストロイ](../../mfc/reference/cd2dgradientbrush-class.md#destroy)をオーバーライドします。|
-|[CD2Dラジアルグラデーションブラシ::Dエタッハ](#detach)|オブジェクトからリソース インターフェイスを切り離します。|
-|[CD2Dラジアルグラデーションブラシ::取得](#get)|インターフェイスを返します。|
-|[CD2Dラジアルグラデーションブラシ::ゲットセンター](#getcenter)|グラデーション楕円の中心を取得します。|
-|[CD2Dラジアルグラデーションブラシ::取得グラデーションオリジンオフセット](#getgradientoriginoffset)|グラデーション楕円の中心を基準としたグラデーション原点のオフセットを取得します。|
-|[CD2Dラジアルグラデーションブラシ::取得半径X](#getradiusx)|グラデーション楕円の x 半径を取得します。|
-|[CD2Dラジアルグラデーションブラシ::取得半径](#getradiusy)|グラデーション楕円の y 半径を取得します。|
-|[CD2Dラジアルグラデーションブラシ::セットセンター](#setcenter)|ブラシの座標空間内のグラデーション楕円の中心を指定します。|
-|[CD2Dラジアルグラデーションブラシ::設定グラデーションオリジンオフセット](#setgradientoriginoffset)|グラデーション楕円の中心を基準としたグラデーション原点のオフセットを指定します。|
-|[CD2Dラジアルグラデーションブラシ::セットラジアレックス](#setradiusx)|ブラシの座標空間でのグラデーション楕円の x 半径を指定します。|
-|[CD2Dラジアルグラデーションブラシ::設定半径](#setradiusy)|ブラシの座標空間でのグラデーション楕円の Y 半径を指定します。|
+|[CD2DRadialGradientBrush:: Attach](#attach)|既存のリソースインターフェイスをオブジェクトにアタッチします。|
+|[CD2DRadialGradientBrush:: Create](#create)|CD2DRadialGradientBrush を作成します。 ( [CD2DResource:: Create](../../mfc/reference/cd2dresource-class.md#create)をオーバーライドします)。|
+|[CD2DRadialGradientBrush::D estroy](#destroy)|CD2DRadialGradientBrush オブジェクトを破棄します。 ( [CD2DGradientBrush::D estroy](../../mfc/reference/cd2dgradientbrush-class.md#destroy)をオーバーライドします。)|
+|[CD2DRadialGradientBrush::D etach](#detach)|オブジェクトからリソースインターフェイスをデタッチします。|
+|[CD2DRadialGradientBrush:: Get](#get)|ID2D1RadialGradientBrush インターフェイスを返します。|
+|[CD2DRadialGradientBrush:: GetCenter](#getcenter)|グラデーションの楕円の中心を取得します。|
+|[CD2DRadialGradientBrush:: GetGradientOriginOffset](#getgradientoriginoffset)|グラデーション楕円の中心を基準としたグラデーションの原点のオフセットを取得します。|
+|[CD2DRadialGradientBrush:: GetRadiusX](#getradiusx)|グラデーションの楕円の x 半径を取得します。|
+|[CD2DRadialGradientBrush:: GetRadiusY](#getradiusy)|グラデーションの楕円の y 半径を取得します。|
+|[CD2DRadialGradientBrush:: SetCenter](#setcenter)|ブラシの座標空間におけるグラデーションの楕円の中心を指定します。|
+|[CD2DRadialGradientBrush:: SetGradientOriginOffset](#setgradientoriginoffset)|グラデーションの楕円の中心を基準とするグラデーションの原点のオフセットを指定します。|
+|[CD2DRadialGradientBrush:: SetRadiusX](#setradiusx)|ブラシの座標空間におけるグラデーションの楕円の x 半径を指定します。|
+|[CD2DRadialGradientBrush:: SetRadiusY](#setradiusy)|ブラシの座標空間におけるグラデーションの楕円の y 半径を指定します。|
 
 ### <a name="public-operators"></a>パブリック演算子
 
 |名前|説明|
 |----------|-----------------|
-|[CD2Dラジアルグラデーションブラシ::演算子ID2D1ラジアルグラデーションブラシ*](#operator_id2d1radialgradientbrush_star)|インターフェイスを返します。|
+|[CD2DRadialGradientBrush:: operator ID2D1RadialGradientBrush *](#operator_id2d1radialgradientbrush_star)|ID2D1RadialGradientBrush インターフェイスを返します。|
 
 ### <a name="protected-data-members"></a>プロテクト データ メンバー
 
 |名前|説明|
 |----------|-----------------|
-|[CD2Dラジアルグラデーションブラシ::m_pRadialGradientBrush](#m_pradialgradientbrush)|ID2D1ラジアルグラデーションブラシへのポインタ。|
-|[CD2Dラジアルグラデーションブラシ::m_RadialGradientBrushProperties](#m_radialgradientbrushproperties)|ブラシのグラデーションの中心、原点オフセット、x 半径と y 半径。|
+|[CD2DRadialGradientBrush:: m_pRadialGradientBrush](#m_pradialgradientbrush)|ID2D1RadialGradientBrush へのポインター。|
+|[CD2DRadialGradientBrush:: m_RadialGradientBrushProperties](#m_radialgradientbrushproperties)|ブラシのグラデーションの中心、グラデーションの原点オフセット、および x 半径と y 半径。|
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
 [CObject](../../mfc/reference/cobject-class.md)
 
-[リソース](../../mfc/reference/cd2dresource-class.md)
+[CD2DResource](../../mfc/reference/cd2dresource-class.md)
 
-[CD2Dブラシ](../../mfc/reference/cd2dbrush-class.md)
+[CD2DBrush](../../mfc/reference/cd2dbrush-class.md)
 
-[グラデーションブラシ](../../mfc/reference/cd2dgradientbrush-class.md)
+[CD2DGradientBrush](../../mfc/reference/cd2dgradientbrush-class.md)
 
 `CD2DRadialGradientBrush`
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-**ヘッダー:** afxrendertarget.h
+**ヘッダー:** afxrendertarget
 
-## <a name="cd2dradialgradientbrushcd2dradialgradientbrush"></a><a name="_dtorcd2dradialgradientbrush"></a>CD2Dラジアルグラデーションブラシ:~CD2Dラジアルグラデーションブラシ
+## <a name="cd2dradialgradientbrushcd2dradialgradientbrush"></a><a name="_dtorcd2dradialgradientbrush"></a> CD2DRadialGradientBrush:: ~ CD2DRadialGradientBrush
 
-デストラクターです。 D2D 放射状グラデーション ブラシ オブジェクトが破棄されるときに呼び出されます。
+デストラクターです。 D2D 放射状グラデーションブラシオブジェクトが破棄されるときに呼び出されます。
 
 ```
 virtual ~CD2DRadialGradientBrush();
 ```
 
-## <a name="cd2dradialgradientbrushattach"></a><a name="attach"></a>CD2Dラジアルグラデーションブラシ::アタッチ
+## <a name="cd2dradialgradientbrushattach"></a><a name="attach"></a> CD2DRadialGradientBrush:: Attach
 
-既存のリソース インターフェイスをオブジェクトにアタッチします。
+既存のリソースインターフェイスをオブジェクトにアタッチします。
 
 ```cpp
 void Attach(ID2D1RadialGradientBrush* pResource);
@@ -129,12 +130,12 @@ void Attach(ID2D1RadialGradientBrush* pResource);
 
 ### <a name="parameters"></a>パラメーター
 
-*リソース*<br/>
-既存のリソース インターフェイス。 NULL にすることはできません。
+*pResource*<br/>
+既存のリソースインターフェイス。 NULL にすることはできません
 
-## <a name="cd2dradialgradientbrushcd2dradialgradientbrush"></a><a name="cd2dradialgradientbrush"></a>CD2Dラジアルグラデーションブラシ::CD2Dラジアルグラデーションブラシ
+## <a name="cd2dradialgradientbrushcd2dradialgradientbrush"></a><a name="cd2dradialgradientbrush"></a> CD2DRadialGradientBrush:: CD2DRadialGradientBrush
 
-オブジェクトを構築します。
+CD2DLinearGradientBrush オブジェクトを構築します。
 
 ```
 CD2DRadialGradientBrush(
@@ -150,33 +151,33 @@ CD2DRadialGradientBrush(
 
 ### <a name="parameters"></a>パラメーター
 
-*ターゲット*<br/>
-レンダー ターゲットへのポインター。
+*pParentTarget*<br/>
+レンダーターゲットへのポインター。
 
-*グラデーションストップ*<br/>
-D2D1_GRADIENT_STOP構造体の配列へのポインター。
+*gradientStops*<br/>
+D2D1_GRADIENT_STOP 構造体の配列へのポインター。
 
-*グラデーションストップカウント*<br/>
-gradientStops 配列内のグラデーションの終了位置の数を指定する 1 以上の値。
+*gradientStopsCount*<br/>
+GradientStops 配列内のグラデーションの分岐点の数を指定する1以上の値。
 
-*ラジアルグラデーションブラシプロパティ*<br/>
-ブラシのグラデーションの中心、原点オフセット、x 半径と y 半径。
+*RadialGradientBrushProperties*<br/>
+ブラシのグラデーションの中心、グラデーションの原点オフセット、および x 半径と y 半径。
 
-*カラー補間ガンマ*<br/>
-グラデーションの分岐点間の色補間を行うスペース。
+*colorInterpolationGamma*<br/>
+グラデーションの分岐点の間の色補間が実行される領域。
 
-*拡張モード*<br/>
-[0,1] 正規化された範囲外のグラデーションの動作。
+*extendMode*<br/>
+[0, 1] の正規化された範囲外のグラデーションの動作。
 
-*プロパティ*<br/>
+*pBrushProperties*<br/>
 ブラシの不透明度と変換へのポインター。
 
-*b自動破壊*<br/>
+*bAutoDestroy*<br/>
 オブジェクトが所有者 (pParentTarget) によって破棄されることを示します。
 
-## <a name="cd2dradialgradientbrushcreate"></a><a name="create"></a>CD2Dラジアルグラデーションブラシ::作成
+## <a name="cd2dradialgradientbrushcreate"></a><a name="create"></a> CD2DRadialGradientBrush:: Create
 
-CD2Dラジアルグラデーションブラシを作成します。
+CD2DRadialGradientBrush を作成します。
 
 ```
 virtual HRESULT Create(CRenderTarget* pRenderTarget);
@@ -184,24 +185,24 @@ virtual HRESULT Create(CRenderTarget* pRenderTarget);
 
 ### <a name="parameters"></a>パラメーター
 
-*ターゲットをレンダリングします。*<br/>
-レンダー ターゲットへのポインター。
+*pRenderTarget*<br/>
+レンダーターゲットへのポインター。
 
 ### <a name="return-value"></a>戻り値
 
-メソッドが成功した場合は、S_OK を返します。 それ以外の場合は、HRESULT エラー コードを返します。
+メソッドが成功した場合は、S_OK を返します。 それ以外の場合は、HRESULT エラーコードを返します。
 
-## <a name="cd2dradialgradientbrushdestroy"></a><a name="destroy"></a>CD2Dラジアルグラデーションブラシ::Dエストロイ
+## <a name="cd2dradialgradientbrushdestroy"></a><a name="destroy"></a> CD2DRadialGradientBrush::D estroy
 
-オブジェクトを破棄します。
+CD2DRadialGradientBrush オブジェクトを破棄します。
 
 ```
 virtual void Destroy();
 ```
 
-## <a name="cd2dradialgradientbrushdetach"></a><a name="detach"></a>CD2Dラジアルグラデーションブラシ::Dエタッハ
+## <a name="cd2dradialgradientbrushdetach"></a><a name="detach"></a> CD2DRadialGradientBrush::D etach
 
-オブジェクトからリソース インターフェイスを切り離します。
+オブジェクトからリソースインターフェイスをデタッチします。
 
 ```
 ID2D1RadialGradientBrush* Detach();
@@ -209,11 +210,11 @@ ID2D1RadialGradientBrush* Detach();
 
 ### <a name="return-value"></a>戻り値
 
-デタッチされたリソース インターフェイスへのポインター。
+デタッチされたリソースインターフェイスへのポインター。
 
-## <a name="cd2dradialgradientbrushget"></a><a name="get"></a>CD2Dラジアルグラデーションブラシ::取得
+## <a name="cd2dradialgradientbrushget"></a><a name="get"></a> CD2DRadialGradientBrush:: Get
 
-インターフェイスを返します。
+ID2D1RadialGradientBrush インターフェイスを返します。
 
 ```
 ID2D1RadialGradientBrush* Get();
@@ -221,11 +222,11 @@ ID2D1RadialGradientBrush* Get();
 
 ### <a name="return-value"></a>戻り値
 
-ID2D1RadialGradientBrush インターフェイスへのポインターまたは NULL オブジェクトがまだ初期化されていない場合。
+ID2D1RadialGradientBrush インターフェイスへのポインター。オブジェクトがまだ初期化されていない場合は NULL。
 
-## <a name="cd2dradialgradientbrushgetcenter"></a><a name="getcenter"></a>CD2Dラジアルグラデーションブラシ::ゲットセンター
+## <a name="cd2dradialgradientbrushgetcenter"></a><a name="getcenter"></a> CD2DRadialGradientBrush:: GetCenter
 
-グラデーション楕円の中心を取得します。
+グラデーションの楕円の中心を取得します。
 
 ```
 CD2DPointF GetCenter() const;
@@ -233,11 +234,11 @@ CD2DPointF GetCenter() const;
 
 ### <a name="return-value"></a>戻り値
 
-グラデーション楕円の中心。 この値はブラシの座標空間で表されます。
+グラデーション楕円の中心。 この値は、ブラシの座標空間で表現されます。
 
-## <a name="cd2dradialgradientbrushgetgradientoriginoffset"></a><a name="getgradientoriginoffset"></a>CD2Dラジアルグラデーションブラシ::取得グラデーションオリジンオフセット
+## <a name="cd2dradialgradientbrushgetgradientoriginoffset"></a><a name="getgradientoriginoffset"></a> CD2DRadialGradientBrush:: GetGradientOriginOffset
 
-グラデーション楕円の中心を基準としたグラデーション原点のオフセットを取得します。
+グラデーション楕円の中心を基準としたグラデーションの原点のオフセットを取得します。
 
 ```
 CD2DPointF GetGradientOriginOffset() const;
@@ -245,11 +246,11 @@ CD2DPointF GetGradientOriginOffset() const;
 
 ### <a name="return-value"></a>戻り値
 
-グラデーション楕円の中心からのグラデーション原点のオフセット。 この値はブラシの座標空間で表されます。
+グラデーション楕円の中心からのグラデーションの原点のオフセット。 この値は、ブラシの座標空間で表現されます。
 
-## <a name="cd2dradialgradientbrushgetradiusx"></a><a name="getradiusx"></a>CD2Dラジアルグラデーションブラシ::取得半径X
+## <a name="cd2dradialgradientbrushgetradiusx"></a><a name="getradiusx"></a> CD2DRadialGradientBrush:: GetRadiusX
 
-グラデーション楕円の x 半径を取得します。
+グラデーションの楕円の x 半径を取得します。
 
 ```
 FLOAT GetRadiusX() const;
@@ -257,11 +258,11 @@ FLOAT GetRadiusX() const;
 
 ### <a name="return-value"></a>戻り値
 
-グラデーション楕円の x 半径。 この値はブラシの座標空間で表されます。
+グラデーション楕円の x 半径。 この値は、ブラシの座標空間で表現されます。
 
-## <a name="cd2dradialgradientbrushgetradiusy"></a><a name="getradiusy"></a>CD2Dラジアルグラデーションブラシ::取得半径
+## <a name="cd2dradialgradientbrushgetradiusy"></a><a name="getradiusy"></a> CD2DRadialGradientBrush:: GetRadiusY
 
-グラデーション楕円の y 半径を取得します。
+グラデーションの楕円の y 半径を取得します。
 
 ```
 FLOAT GetRadiusY() const;
@@ -269,27 +270,27 @@ FLOAT GetRadiusY() const;
 
 ### <a name="return-value"></a>戻り値
 
-グラデーション楕円の y 半径。 この値はブラシの座標空間で表されます。
+グラデーション楕円の y 半径。 この値は、ブラシの座標空間で表現されます。
 
-## <a name="cd2dradialgradientbrushm_pradialgradientbrush"></a><a name="m_pradialgradientbrush"></a>CD2Dラジアルグラデーションブラシ::m_pRadialGradientBrush
+## <a name="cd2dradialgradientbrushm_pradialgradientbrush"></a><a name="m_pradialgradientbrush"></a> CD2DRadialGradientBrush:: m_pRadialGradientBrush
 
-ID2D1ラジアルグラデーションブラシへのポインタ。
+ID2D1RadialGradientBrush へのポインター。
 
 ```
 ID2D1RadialGradientBrush* m_pRadialGradientBrush;
 ```
 
-## <a name="cd2dradialgradientbrushm_radialgradientbrushproperties"></a><a name="m_radialgradientbrushproperties"></a>CD2Dラジアルグラデーションブラシ::m_RadialGradientBrushProperties
+## <a name="cd2dradialgradientbrushm_radialgradientbrushproperties"></a><a name="m_radialgradientbrushproperties"></a> CD2DRadialGradientBrush:: m_RadialGradientBrushProperties
 
-ブラシのグラデーションの中心、原点オフセット、x 半径と y 半径。
+ブラシのグラデーションの中心、グラデーションの原点オフセット、および x 半径と y 半径。
 
 ```
 D2D1_RADIAL_GRADIENT_BRUSH_PROPERTIES m_RadialGradientBrushProperties;
 ```
 
-## <a name="cd2dradialgradientbrushoperator-id2d1radialgradientbrush"></a><a name="operator_id2d1radialgradientbrush_star"></a>CD2Dラジアルグラデーションブラシ::演算子ID2D1ラジアルグラデーションブラシ*
+## <a name="cd2dradialgradientbrushoperator-id2d1radialgradientbrush"></a><a name="operator_id2d1radialgradientbrush_star"></a> CD2DRadialGradientBrush:: operator ID2D1RadialGradientBrush *
 
-インターフェイスを返します。
+ID2D1RadialGradientBrush インターフェイスを返します。
 
 ```
 operator ID2D1RadialGradientBrush*();
@@ -297,11 +298,11 @@ operator ID2D1RadialGradientBrush*();
 
 ### <a name="return-value"></a>戻り値
 
-ID2D1RadialGradientBrush インターフェイスへのポインターまたは NULL オブジェクトがまだ初期化されていない場合。
+ID2D1RadialGradientBrush インターフェイスへのポインター。オブジェクトがまだ初期化されていない場合は NULL。
 
-## <a name="cd2dradialgradientbrushsetcenter"></a><a name="setcenter"></a>CD2Dラジアルグラデーションブラシ::セットセンター
+## <a name="cd2dradialgradientbrushsetcenter"></a><a name="setcenter"></a> CD2DRadialGradientBrush:: SetCenter
 
-ブラシの座標空間内のグラデーション楕円の中心を指定します。
+ブラシの座標空間におけるグラデーションの楕円の中心を指定します。
 
 ```cpp
 void SetCenter(CD2DPointF point);
@@ -309,12 +310,12 @@ void SetCenter(CD2DPointF point);
 
 ### <a name="parameters"></a>パラメーター
 
-*ポイント*<br/>
-グラデーション楕円の中心 (ブラシの座標空間内)
+*視点*<br/>
+ブラシの座標空間におけるグラデーション楕円の中心。
 
-## <a name="cd2dradialgradientbrushsetgradientoriginoffset"></a><a name="setgradientoriginoffset"></a>CD2Dラジアルグラデーションブラシ::設定グラデーションオリジンオフセット
+## <a name="cd2dradialgradientbrushsetgradientoriginoffset"></a><a name="setgradientoriginoffset"></a> CD2DRadialGradientBrush:: SetGradientOriginOffset
 
-グラデーション楕円の中心を基準としたグラデーション原点のオフセットを指定します。
+グラデーションの楕円の中心を基準とするグラデーションの原点のオフセットを指定します。
 
 ```cpp
 void SetGradientOriginOffset(CD2DPointF gradientOriginOffset);
@@ -322,12 +323,12 @@ void SetGradientOriginOffset(CD2DPointF gradientOriginOffset);
 
 ### <a name="parameters"></a>パラメーター
 
-*グラデーションオリジンオフセット*<br/>
-グラデーション楕円の中心からのグラデーション原点のオフセット
+*gradientOriginOffset*<br/>
+グラデーション楕円の中心からのグラデーションの原点のオフセット
 
-## <a name="cd2dradialgradientbrushsetradiusx"></a><a name="setradiusx"></a>CD2Dラジアルグラデーションブラシ::セットラジアレックス
+## <a name="cd2dradialgradientbrushsetradiusx"></a><a name="setradiusx"></a> CD2DRadialGradientBrush:: SetRadiusX
 
-ブラシの座標空間でのグラデーション楕円の x 半径を指定します。
+ブラシの座標空間におけるグラデーションの楕円の x 半径を指定します。
 
 ```cpp
 void SetRadiusX(FLOAT radiusX);
@@ -335,12 +336,12 @@ void SetRadiusX(FLOAT radiusX);
 
 ### <a name="parameters"></a>パラメーター
 
-*半径X*<br/>
-グラデーション楕円の x 半径。 この値はブラシの座標空間内にあります。
+*radiusX*<br/>
+グラデーション楕円の x 半径。 この値は、ブラシの座標空間にあります
 
-## <a name="cd2dradialgradientbrushsetradiusy"></a><a name="setradiusy"></a>CD2Dラジアルグラデーションブラシ::設定半径
+## <a name="cd2dradialgradientbrushsetradiusy"></a><a name="setradiusy"></a> CD2DRadialGradientBrush:: SetRadiusY
 
-ブラシの座標空間でのグラデーション楕円の Y 半径を指定します。
+ブラシの座標空間におけるグラデーションの楕円の y 半径を指定します。
 
 ```cpp
 void SetRadiusY(FLOAT radiusY);
@@ -348,8 +349,8 @@ void SetRadiusY(FLOAT radiusY);
 
 ### <a name="parameters"></a>パラメーター
 
-*半径Y*<br/>
-グラデーション楕円の y 半径。 この値はブラシの座標空間内にあります。
+*radiusY*<br/>
+グラデーション楕円の y 半径。 この値は、ブラシの座標空間にあります
 
 ## <a name="see-also"></a>関連項目
 

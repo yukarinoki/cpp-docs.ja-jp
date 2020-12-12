@@ -1,63 +1,64 @@
-﻿---
+---
+description: 詳細については、「ARM アセンブラディレクティブ」を参照してください。
 title: ARM アセンブラー ディレクティブ
 ms.date: 08/30/2018
 ms.assetid: 9cfa8896-ec10-4e77-855a-3135c40d7d2a
-ms.openlocfilehash: 9124f893b3334e0893073332c9d5f5a1388373d9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8362453f2113922c5e834d1d68583b4199cf8d4c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62167674"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97118119"
 ---
 # <a name="arm-assembler-directives"></a>ARM アセンブラー ディレクティブ
 
-ほとんどの場合、Microsoft ARM アセンブラーが記載されている ARM アセンブリ言語を使用して、 [ARM コンパイラ armasm リファレンス ガイド](http://infocenter.arm.com/help/topic/com.arm.doc.dui0802b/index.html)します。 ただし、一部のアセンブリ ディレクティブの Microsoft 実装には、ARM アセンブリ ディレクティブによって異なります。 この記事では、相違点について説明します。
+ほとんどの場合、Microsoft ARM アセンブラーは arm アセンブリ言語を使用します。これは [Arm Compiler armasm リファレンスガイド](http://infocenter.arm.com/help/topic/com.arm.doc.dui0802b/index.html)に記載されています。 ただし、一部のアセンブリディレクティブの Microsoft 実装は、ARM アセンブリディレクティブとは異なります。 この記事では、その違いについて説明します。
 
-## <a name="microsoft-implementations-of-arm-assembly-directives"></a>Microsoft の実装の ARM アセンブリ ディレクティブ
+## <a name="microsoft-implementations-of-arm-assembly-directives"></a>ARM アセンブリディレクティブの Microsoft 実装
 
 - 領域
 
-   これらをサポートする Microsoft ARM アセンブラー`AREA`属性: `ALIGN`、 `CODE`、 `CODEALIGN`、 `DATA`、 `NOINIT`、 `READONLY`、 `READWRITE`、 `THUMB`、`ARM`します。
+   Microsoft ARM アセンブラーは `AREA` `ALIGN` 、、、 `CODE` `CODEALIGN` 、 `DATA` `NOINIT` `READONLY` `READWRITE` `THUMB` `ARM` 、、、、、の各属性をサポートしています。
 
-   除くすべて`THUMB`と`ARM`に記載されている作業、 [ARM コンパイラ armasm リファレンス ガイド](http://infocenter.arm.com/help/topic/com.arm.doc.dui0802b/index.html)します。
+   およびを除くすべての `THUMB` `ARM` は、 [ARM コンパイラ Armasm リファレンスガイド](http://infocenter.arm.com/help/topic/com.arm.doc.dui0802b/index.html)に記載されているとおりに動作します。
 
-   Microsoft ARM アセンブラー、`THUMB`ことを示します、`CODE`セクションが Thumb コードが含まれの既定値は、`CODE`セクション。  `ARM` ARM コードにはセクションが含まれていることを示します。
+   Microsoft ARM アセンブラーで、 `THUMB` `CODE` セクションに Thumb コードが含まれていることを示します。これがセクションの既定値です `CODE` 。  `ARM` セクションに ARM コードが含まれていることを示します。
 
 - ATTR
 
    サポートされていません。
 
-- コード 16
+- コード
 
-   Microsoft ARM アセンブラーが許可されていない pre UAL Thumb 構文を使用すると、発生するので、サポートされていません。  使用して、`THUMB`代わりに、UAL 構文と共にディレクティブ。
+   サポートされていません。これは、Microsoft ARM アセンブラーで許可されていない UAL Thumb 構文を意味するためです。  `THUMB`代わりに、UAL 構文と共にディレクティブを使用します。
 
-- 一般的です
+- 的
 
-   一般的な領域の配置の仕様がサポートされていません。
+   共通領域のアラインメントの指定はサポートされていません。
 
 - DCDO
 
    サポートされていません。
 
-- `DN`、 `QN`、 `SN`
+- `DN`, `QN`, `SN`
 
-   型またはレジスタ エイリアスのレーンの仕様がサポートされていません。
+   レジスタエイリアスでの型またはレーンの指定はサポートされていません。
 
-- エントリ
+- ENTRY
 
    サポートされていません。
 
 - EQU
 
-   定義されているシンボルの型の仕様がサポートされていません。
+   定義されたシンボルの型の指定はサポートされていません。
 
 - `EXPORT` および `GLOBAL`
 
-   この構文を使用してエクスポートを指定します。
+   次の構文を使用してエクスポートを指定します。
 
-   > **EXPORT**|**GLOBAL** <em>sym</em>{ **[** <em>type</em> **]** }
+   > **エクスポート** |**グローバル** <em>sym</em>{**[**<em>種類</em>**]**}
 
-   *sym*はエクスポートする記号です。  [*型*]、指定した場合いずれかになります`[DATA]`シンボル データをポイントすることを示すまたは`[FUNC]`をシンボルがコードを指していることを示します。 `GLOBAL` は `EXPORT`のシノニムです。
+   *sym* エクスポートするシンボルを指定します。  [*型*] を指定する場合は、 `[DATA]` シンボルがデータを指していることを示すか、 `[FUNC]` シンボルがコードを指していることを示すことができます。 `GLOBAL` は `EXPORT`のシノニムです。
 
 - EXPORTAS
 
@@ -69,49 +70,49 @@ ms.locfileid: "62167674"
 
 - `FUNCTION` および `PROC`
 
-   Assembly 構文は、カスタムの仕様をサポートしていますは、呼び出し元の保存と呼び出し先保存されるレジスタの一覧を表示して、プロシージャの呼び出し規約、Microsoft ARM アセンブラーは、構文を受け入れますが、レジスタの一覧を無視します。  アセンブラーによって生成されるデバッグ情報には、既定の呼び出し規約のみがサポートしています。
+   アセンブリ構文では、呼び出し元の保存ファイルと呼び出し先で保存されるレジスタを一覧表示することによって、プロシージャのカスタム呼び出し規約を指定することができますが、Microsoft ARM アセンブラーは構文を受け入れますが、レジスタリストを無視します。  アセンブラによって生成されるデバッグ情報では、既定の呼び出し規約のみがサポートされます。
 
 - `IMPORT` および `EXTERN`
 
-   この構文を使用してインポートを指定します。
+   次の構文を使用してインポートを指定します。
 
-   > **IMPORT**|**EXTERN** *sym*{ **, WEAK***エイリアス*{ **, TYPE***t*}}
+   > **インポート** |**EXTERN** *Sym*{**、WEAK** *エイリアス*{**、型** *t*}}
 
-   *sym*をインポートするシンボルの名前を指定します。
+   *sym* インポートするシンボルの名前を指定します。
 
-   場合`WEAK`*エイリアス*が指定されていることを示します*sym*弱い外部です。 リンク時に、その定義が見つからないかどうかへの参照がすべてをバインドする代わりに*エイリアス*します。
+   `WEAK`*別名* が指定されている場合は、 *sym* が外部の弱いものであることを示します。 リンク時にその定義が見つからない場合は、それに対するすべての参照が *エイリアス* にバインドされます。
 
-   場合`TYPE` *t*が指定されると、 *t*解決するのには、リンカーを試みる必要がある方法を示します*sym*します。  これらの値の*t*が考えられます。
+   `TYPE` *T* が指定されている場合、 *t* はリンカーが *sym* の解決を試行する方法を示します。  *T* には次の値を指定できます。
 
-   |[値]|説明|
+   |値|説明|
    |-|-|
-   |1|ライブラリの検索を実行しない*sym*|
-   |2|ライブラリの検索を実行*sym*|
-   |3|*sym*の別名です*エイリアス*(既定値)|
+   |1|*Sym* のライブラリ検索を実行しない|
+   |2|*Sym* のライブラリ検索を実行する|
+   |3|*sym* *エイリアス* の別名 (既定値)|
 
-   `EXTERN` シノニムです`IMPORT`ことを除いて、 *sym*への参照が現在のアセンブリである場合にのみをインポートします。
+   `EXTERN` はのシノニムです `IMPORT` 。ただし、 *sym* は、現在のアセンブリに参照がある場合にのみインポートされます。
 
 - MACRO
 
-   マクロの条件コードを保持する変数の使用がサポートされていません。 既定の値はマクロのパラメーターがサポートされていません。
+   マクロの条件コードを保持するための変数の使用はサポートされていません。 マクロパラメーターの既定値はサポートされていません。
 
 - NOFP
 
    サポートされていません。
 
-- `OPT`、 `TTL`、 `SUBT`
+- `OPT`, `TTL`, `SUBT`
 
-   Microsoft ARM アセンブラーが番組表を生成しないため、サポートされていません。
+   Microsoft ARM アセンブラーではリストが生成されないため、サポートされません。
 
 - PRESERVE8
 
    サポートされていません。
 
-- 再配置します。
+- 配置
 
-   `RELOC n` 命令またはデータ定義ディレクティブしか従うことができます。 これは、シンボルがありません。"匿名"を再配置することができます。
+   `RELOC n` 命令またはデータ定義ディレクティブの後にのみ使用できます。 再配置できる "匿名シンボル" はありません。
 
-- 必要です。
+- です
 
    サポートされていません。
 
@@ -121,9 +122,9 @@ ms.locfileid: "62167674"
 
 - THUMBX
 
-   Microsoft ARM アセンブラーは 2 ee のつまみの命令セットをサポートしていないためにサポートされていません。
+   Microsoft ARM アセンブラーが Thumb-2EE 命令セットをサポートしていないため、サポートされません。
 
 ## <a name="see-also"></a>関連項目
 
-[ARM アセンブラーのコマンド ライン リファレンス](../../assembler/arm/arm-assembler-command-line-reference.md)<br/>
+[ARM アセンブラー Command-Line リファレンス](../../assembler/arm/arm-assembler-command-line-reference.md)<br/>
 [ARM アセンブラー診断メッセージ](../../assembler/arm/arm-assembler-diagnostic-messages.md)<br/>

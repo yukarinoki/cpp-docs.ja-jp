@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「デバッグおよびエラー報告のグローバル関数」を参照してください。
 title: デバッグとエラー報告のグローバル関数
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - functions [ATL], error reporting
 ms.assetid: 11339c02-98cd-428d-b3b9-7deeb155a6a3
-ms.openlocfilehash: 10aca6862f6989c126981a9f6437c61f1c07bdae
-ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
+ms.openlocfilehash: 3c729a7d8e870ce7b104ca53cd83bf8c41112dea
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90742789"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97139985"
 ---
 # <a name="debugging-and-error-reporting-global-functions"></a>デバッグとエラー報告のグローバル関数
 
@@ -35,11 +36,11 @@ ms.locfileid: "90742789"
 HRESULT AtlHresultFromLastError();
 ```
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 `AtlHresultFromLastError` を呼び出して `GetLastError` 、最後のエラーを取得し、HRESULT_FROM_WIN32 マクロを使用して HRESULT に変換した後にエラーを返します。
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 **ヘッダー:** atlcomcli. h
 
@@ -56,14 +57,14 @@ AtlHresultFromWin32(DWORD error);
 *error*<br/>
 変換するエラー値。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 マクロ HRESULT_FROM_WIN32 を使用して、Win32 エラーコードを HRESULT に変換します。
 
 > [!NOTE]
 > を使用する代わり `HRESULT_FROM_WIN32(GetLastError())` に、関数 [AtlHresultFromLastError](debugging-and-error-reporting-global-functions.md#atlhresultfromlasterror)を使用します。
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 **ヘッダー:** atlcomcli. h
 
@@ -132,7 +133,7 @@ HRESULT WINAPI AtlReportError(
 から呼び出し元に返される HRESULT。
 
 *nID*<br/>
-からエラー説明文字列が格納されているリソース識別子。 この値は、0x0200 ~ 0xFFFF の範囲で指定する必要があります。 デバッグビルドでは、 *nID*が有効な文字列にインデックスを作成しない場合、**アサート**が発生します。 リリースビルドでは、エラーの説明文字列が "不明なエラー" に設定されます。
+からエラー説明文字列が格納されているリソース識別子。 この値は、0x0200 ~ 0xFFFF の範囲で指定する必要があります。 デバッグビルドでは、 *nID* が有効な文字列にインデックスを作成しない場合、**アサート** が発生します。 リリースビルドでは、エラーの説明文字列が "不明なエラー" に設定されます。
 
 *dwHelpID*<br/>
 からエラーのヘルプコンテキスト識別子。
@@ -145,9 +146,9 @@ HRESULT WINAPI AtlReportError(
 
 ### <a name="return-value"></a>戻り値
 
-*Hres*パラメーターが0以外の場合、は*hres*の値を返します。 *Hres*が0の場合、の最初の4つのバージョンが `AtlReportError` DISP_E_EXCEPTION を返します。 最後の2つのバージョンでは、マクロ**MAKE_HRESULT (1, FACILITY_ITF,** ) の結果が返され `nID` **)** ます。
+*Hres* パラメーターが0以外の場合、は *hres* の値を返します。 *Hres* が0の場合、の最初の4つのバージョンが `AtlReportError` DISP_E_EXCEPTION を返します。 最後の2つのバージョンでは、マクロ **MAKE_HRESULT (1, FACILITY_ITF,** ) の結果が返され `nID` ます。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 文字列 *Lpszdesc* は、エラーの説明テキストとして使用されます。 クライアントは、返された *Hres* を受け取ると、 `AtlReportError` `IErrorInfo` エラーの詳細を表す構造にアクセスできます。
 
@@ -158,7 +159,7 @@ HRESULT WINAPI AtlReportError(
 > [!CAUTION]
 > `AtlReportError`C++ の catch ハンドラーでは使用しないでください。 これらの関数の一部のオーバーライドでは、内部的に関数を使用する、ATL 文字列変換マクロを内部で使用し `_alloca` ます。 `AtlReportError`C++ の catch ハンドラーでを使用すると、c++ の catch ハンドラーで例外が発生する可能性があります。
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 **ヘッダー:** atlcom. h
 
@@ -175,7 +176,7 @@ __declspec(noreturn) inline void AtlThrow(HRESULT hr);
 *時間*<br/>
 標準の HRESULT 値。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 この関数は、エラー条件が発生した場合に ATL および MFC コードによって使用されます。 また、独自のコードから呼び出すこともできます。 この関数の既定の実装は、シンボルの定義と、プロジェクトの種類 (MFC または ATL) によって _ATL_NO_EXCEPTIONS ます。
 
@@ -195,7 +196,7 @@ ATL プロジェクトでは、エラーが発生した場合に ATL が使用�
 
 [!code-cpp[NVC_ATL_Windowing#95](../../atl/codesnippet/cpp/debugging-and-error-reporting-global-functions_2.h)]
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 **ヘッダー:** atldef. h
 
@@ -207,7 +208,7 @@ Windows の `GetLastError` 関数の結果に基づいてエラーを通知し�
 inline void AtlThrowLastWin32();
 ```
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 この関数は、の結果を `GetLastError` デバッガーにトレースします。
 
@@ -217,7 +218,7 @@ ATL プロジェクトで _ATL_NO_EXCEPTIONS が定義されていない場合�
 
 _ATL_NO_EXCEPTIONS が定義されている場合、関数は、例外をスローする代わりにアサーションエラーを発生させます。
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 **ヘッダー:** atldef. h
 
