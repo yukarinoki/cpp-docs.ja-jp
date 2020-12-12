@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: CAnimationManagerEventHandler クラス'
 title: CAnimationManagerEventHandler クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 - CAnimationManagerEventHandler [MFC], OnManagerStatusChanged
 - CAnimationManagerEventHandler [MFC], SetAnimationController
 ms.assetid: 6089ec07-e661-4805-b227-823b4652aade
-ms.openlocfilehash: 58bb37e9de40f4bc711b417eab107aa55b8ff0e8
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: aab944c23822486bbc04bb7710d257dd8c42beed
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81750121"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97207947"
 ---
 # <a name="canimationmanagereventhandler-class"></a>CAnimationManagerEventHandler クラス
 
@@ -37,19 +38,19 @@ class CAnimationManagerEventHandler : public CUIAnimationManagerEventHandlerBase
 
 |名前|説明|
 |----------|-----------------|
-|[イベントハンドラー::Cアニメーションマネージャーイベントハンドラー](#canimationmanagereventhandler)|`CAnimationManagerEventHandler` オブジェクトを構築します。|
+|[CAnimationManagerEventHandler:: CAnimationManagerEventHandler](#canimationmanagereventhandler)|`CAnimationManagerEventHandler` オブジェクトを構築します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
 |名前|説明|
 |----------|-----------------|
-|[イベントハンドラー::インスタンスの作成](#createinstance)|オブジェクトのインスタンスを`CAnimationManagerEventHandler`作成します。|
-|[イベントハンドラー::オンマネージャーステータス変更](#onmanagerstatuschanged)|アニメーション マネージャーの状態が変更されたときに呼び出されます。 ( `CUIAnimationManagerEventHandlerBase::OnManagerStatusChanged`をオーバーライドします)。|
-|[イベントハンドラー::アニメーションコントローラを設定します。](#setanimationcontroller)|イベントをルーティングするアニメーション コントローラへのポインターを格納します。|
+|[CAnimationManagerEventHandler:: CreateInstance](#createinstance)|オブジェクトのインスタンスを作成し `CAnimationManagerEventHandler` ます。|
+|[CAnimationManagerEventHandler:: OnManagerStatusChanged](#onmanagerstatuschanged)|アニメーションマネージャーの状態が変更されたときに呼び出されます。 ( `CUIAnimationManagerEventHandlerBase::OnManagerStatusChanged`をオーバーライドします)。|
+|[CAnimationManagerEventHandler:: Setアニメーションコントローラー](#setanimationcontroller)|イベントをルーティングするアニメーションコントローラーへのポインターを格納します。|
 
 ## <a name="remarks"></a>解説
 
-このイベント ハンドラーが作成され、メソッドに渡されます。
+このイベントハンドラーは、CAnimationController:: Enableの Eventhandler イベントを呼び出すときに作成され、IUIAnimationManager:: SetManagerEventHandler メソッドに渡されます。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -59,25 +60,25 @@ class CAnimationManagerEventHandler : public CUIAnimationManagerEventHandlerBase
 
 `CAnimationManagerEventHandler`
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** afxanimationcontroller.h
 
-## <a name="canimationmanagereventhandlercanimationmanagereventhandler"></a><a name="canimationmanagereventhandler"></a>イベントハンドラー::Cアニメーションマネージャーイベントハンドラー
+## <a name="canimationmanagereventhandlercanimationmanagereventhandler"></a><a name="canimationmanagereventhandler"></a> CAnimationManagerEventHandler:: CAnimationManagerEventHandler
 
 Visual Studio 2010 SP1 が必要です。
 
-オブジェクトを構築します。
+CAnimationManagerEventHandler オブジェクトを構築します。
 
 ```
 CAnimationManagerEventHandler();
 ```
 
-## <a name="canimationmanagereventhandlercreateinstance"></a><a name="createinstance"></a>イベントハンドラー::インスタンスの作成
+## <a name="canimationmanagereventhandlercreateinstance"></a><a name="createinstance"></a> CAnimationManagerEventHandler:: CreateInstance
 
 Visual Studio 2010 SP1 が必要です。
 
-オブジェクトのインスタンスを作成します。
+CAnimationManagerEventHandler オブジェクトのインスタンスを作成します。
 
 ```
 static COM_DECLSPEC_NOTHROW HRESULT CreateInstance(
@@ -87,21 +88,21 @@ static COM_DECLSPEC_NOTHROW HRESULT CreateInstance(
 
 ### <a name="parameters"></a>パラメーター
 
-*を切り取る*<br/>
-イベントを受け取るアニメーション コントローラへのポインター。
+*pAnimationController*<br/>
+イベントを受信するアニメーションコントローラーへのポインター。
 
-*イベントハンドラー*<br/>
-出力。 メソッドが成功すると、アニメーション マネージャのステータス更新を処理する COM オブジェクトへのポインタが含まれます。
+*ppManagerEventHandler*<br/>
+出力。 メソッドが成功した場合は、アニメーションマネージャーのステータスの更新を処理する COM オブジェクトへのポインターが含まれています。
 
 ### <a name="return-value"></a>戻り値
 
-メソッドが成功した場合は、S_OK を返します。 それ以外の場合は、HRESULT エラー コードを返します。
+メソッドが成功した場合は、S_OK を返します。 それ以外の場合は、HRESULT エラーコードを返します。
 
-## <a name="canimationmanagereventhandleronmanagerstatuschanged"></a><a name="onmanagerstatuschanged"></a>イベントハンドラー::オンマネージャーステータス変更
+## <a name="canimationmanagereventhandleronmanagerstatuschanged"></a><a name="onmanagerstatuschanged"></a> CAnimationManagerEventHandler:: OnManagerStatusChanged
 
 Visual Studio 2010 SP1 が必要です。
 
-アニメーション マネージャーの状態が変更されたときに呼び出されます。
+アニメーションマネージャーの状態が変更されたときに呼び出されます。
 
 ```
 IFACEMETHOD(OnManagerStatusChanged)(
@@ -112,20 +113,20 @@ IFACEMETHOD(OnManagerStatusChanged)(
 ### <a name="parameters"></a>パラメーター
 
 *newStatus*<br/>
-新しいステータス。
+新しい状態。
 
-*以前のステータス*<br/>
-前の状態。
+*前の状態*<br/>
+以前の状態。
 
 ### <a name="return-value"></a>戻り値
 
-現在の実装は常にS_OK返します。
+現在の実装は常に S_OK を返します。
 
-## <a name="canimationmanagereventhandlersetanimationcontroller"></a><a name="setanimationcontroller"></a>イベントハンドラー::アニメーションコントローラを設定します。
+## <a name="canimationmanagereventhandlersetanimationcontroller"></a><a name="setanimationcontroller"></a> CAnimationManagerEventHandler:: Setアニメーションコントローラー
 
 Visual Studio 2010 SP1 が必要です。
 
-イベントをルーティングするアニメーション コントローラへのポインターを格納します。
+イベントをルーティングするアニメーションコントローラーへのポインターを格納します。
 
 ```cpp
 void SetAnimationController(CAnimationController* pAnimationController);
@@ -133,8 +134,8 @@ void SetAnimationController(CAnimationController* pAnimationController);
 
 ### <a name="parameters"></a>パラメーター
 
-*を切り取る*<br/>
-イベントを受け取るアニメーション コントローラへのポインター。
+*pAnimationController*<br/>
+イベントを受信するアニメーションコントローラーへのポインター。
 
 ## <a name="see-also"></a>関連項目
 

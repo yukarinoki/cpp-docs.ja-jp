@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: CMapStringToString クラス'
 title: CMapStringToString クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -42,12 +43,12 @@ helpviewer_keywords:
 - CMapStringToString [MFC], RemoveKey
 - CMapStringToString [MFC], SetAt
 ms.assetid: b45794c2-fe6b-4edb-a8ca-faa03b57b4a8
-ms.openlocfilehash: 28422c26ba2ca77657bfcf166592d2bc69169891
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: ba82647a6e81e82b4d977e4de3beee1bfd0b7c4e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87223006"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97207814"
 ---
 # <a name="cmapstringtostring-class"></a>CMapStringToString クラス
 
@@ -71,19 +72,19 @@ class CMapStringToString : public CObject
 
 ### <a name="public-structures"></a>パブリック構造体
 
-|名前|[説明]|
+|名前|説明|
 |----------|-----------------|
 |[CMapStringToString::CPair](#cpair)|キー値と、関連付けられている文字列オブジェクトの値を格納している入れ子構造体。|
 
 ### <a name="public-constructors"></a>パブリック コンストラクター
 
-|名前|[説明]|
+|名前|説明|
 |----------|-----------------|
 |[CMapStringToString::CMapStringToString](../../mfc/reference/cmapstringtoob-class.md#cmapstringtoob)|コンストラクターです。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
-|名前|[説明]|
+|名前|説明|
 |----------|-----------------|
 |[CMapStringToString:: GetCount](../../mfc/reference/cmapstringtoob-class.md#getcount)|このマップ内の要素の数を返します。|
 |[CMapStringToString::GetHashTableSize](../../mfc/reference/cmapstringtoob-class.md#gethashtablesize)|ハッシュテーブル内の現在の要素数を確認します。|
@@ -104,7 +105,7 @@ class CMapStringToString : public CObject
 
 ### <a name="public-operators"></a>パブリック演算子
 
-|名前|[説明]|
+|名前|説明|
 |----------|-----------------|
 |[CMapStringToString:: operator \[\]](../../mfc/reference/cmapstringtoob-class.md#operator_at)|Map に要素を挿入します。に対する演算子の代入 `SetAt` 。|
 
@@ -116,7 +117,7 @@ class CMapStringToString : public CObject
 
 `CMapStringToString`オブジェクトが削除されるか、またはその要素が削除されると、 `CString` オブジェクトは必要に応じて削除されます。
 
-の詳細については `CMapStringToString` 、「[コレクション](../../mfc/collections.md)」を参照してください。
+の詳細については `CMapStringToString` 、「 [コレクション](../../mfc/collections.md)」を参照してください。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -124,23 +125,23 @@ class CMapStringToString : public CObject
 
 `CMapStringToString`
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** afxcoll.h
 
-## <a name="cmapstringtostringcpair"></a><a name="cpair"></a>CMapStringToString::CPair
+## <a name="cmapstringtostringcpair"></a><a name="cpair"></a> CMapStringToString::CPair
 
 キーの値と、関連付けられている文字列オブジェクトの値を格納します。
 
 ### <a name="remarks"></a>解説
 
-これは、クラス[CMapStringToString](../../mfc/reference/cmapstringtostring-class.md)内の入れ子構造です。
+これは、クラス [CMapStringToString](../../mfc/reference/cmapstringtostring-class.md)内の入れ子構造です。
 
 構造体は、次の2つのフィールドで構成されます。
 
-- `key`キーの型の実際の値。
+- `key` キーの型の実際の値。
 
-- `value`関連付けられたオブジェクトの値。
+- `value` 関連付けられたオブジェクトの値。
 
 [CMapStringToString::P lookup](#plookup)、 [CMapStringToString::P getfirstassoc](#pgetfirstassoc)、および[CMapStringToString::P getnextassoc](#pgetnextassoc)からの戻り値を格納するために使用されます。
 
@@ -148,7 +149,7 @@ class CMapStringToString : public CObject
 
   使用例については、「 [CMapStringToString::P lookup](#plookup)」の例を参照してください。
 
-## <a name="cmapstringtostringpgetfirstassoc"></a><a name="pgetfirstassoc"></a>CMapStringToString::P GetFirstAssoc
+## <a name="cmapstringtostringpgetfirstassoc"></a><a name="pgetfirstassoc"></a> CMapStringToString::P GetFirstAssoc
 
 Map オブジェクトの最初のエントリを返します。
 
@@ -170,9 +171,9 @@ Map 内の最初のエントリへのポインター。「 [CMapStringToString::
 
 [!code-cpp[NVC_MFCCollections#73](../../mfc/codesnippet/cpp/cmapstringtostring-class_1.cpp)]
 
-## <a name="cmapstringtostringpgetnextassoc"></a><a name="pgetnextassoc"></a>CMapStringToString::P GetNextAssoc
+## <a name="cmapstringtostringpgetnextassoc"></a><a name="pgetnextassoc"></a> CMapStringToString::P GetNextAssoc
 
-*によって*ポイントされるマップ要素を取得します。
+*によって* ポイントされるマップ要素を取得します。
 
 ```
 const CPair *PGetNextAssoc(const CPair* pAssoc) const;
@@ -183,7 +184,7 @@ CPair *PGetNextAssoc(const CPair* pAssoc);
 ### <a name="parameters"></a>パラメーター
 
 *パスワード*<br/>
-前の[PGetNextAssoc](#pgetnextassoc)呼び出しまたは[Pgetfirstassoc](#pgetfirstassoc)呼び出しによって返されたマップエントリを指します。
+前の [PGetNextAssoc](#pgetnextassoc) 呼び出しまたは [Pgetfirstassoc](#pgetfirstassoc) 呼び出しによって返されたマップエントリを指します。
 
 ### <a name="return-value"></a>戻り値
 
@@ -197,7 +198,7 @@ Map 内のすべての要素を反復処理するには、このメソッドを�
 
   [CMapStringToString::P GetFirstAssoc](#pgetfirstassoc)の例を参照してください。
 
-## <a name="cmapstringtostringplookup"></a><a name="plookup"></a>CMapStringToString::P 参照
+## <a name="cmapstringtostringplookup"></a><a name="plookup"></a> CMapStringToString::P 参照
 
 指定されたキーにマップされている値を検索します。
 
