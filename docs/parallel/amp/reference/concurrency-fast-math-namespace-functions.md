@@ -1,4 +1,5 @@
 ---
+description: '詳細については、「Concurrency:: fast_math 名前空間関数」を参照してください。'
 title: Concurrency::fast_math 名前空間関数
 ms.date: 11/04/2016
 f1_keywords:
@@ -46,12 +47,12 @@ f1_keywords:
 - amp_math/Concurrency::fast_math::tanhf
 - amp_math/Concurrency::fast_math::trunc
 ms.assetid: f5763d62-795b-4de6-a7a5-c7115f158708
-ms.openlocfilehash: ff919016449723ad67e029a249ec222ccf1fe6a4
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: aef9b660b0f707baeb0b7b87da520a0510f89cc2
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88831061"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97122435"
 ---
 # <a name="concurrencyfast_math-namespace-functions"></a>Concurrency::fast_math 名前空間関数
 
@@ -1324,7 +1325,7 @@ inline float truncf(float _X) restrict(amp);
 
 引数の整数部分を返します。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** Amp_math **名前空間:** Concurrency:: fast_math
 

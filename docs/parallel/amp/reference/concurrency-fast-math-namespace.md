@@ -1,15 +1,16 @@
 ---
+description: '詳細情報: Concurrency:: fast_math 名前空間'
 title: Concurrency::fast_math 名前空間
 ms.date: 11/04/2016
 f1_keywords:
 - amp_math/Concurrency::fast_math
 ms.assetid: 54fed939-9902-49db-9f29-e98fd9821508
-ms.openlocfilehash: 6ed8dcfa2faff49e8811769b76aad9df15b2fe7b
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 99638e3d8b0a452774d1e92d408ce3edddfa861c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87226751"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97122370"
 ---
 # <a name="concurrencyfast_math-namespace"></a>Concurrency::fast_math 名前空間
 
@@ -23,7 +24,7 @@ namespace fast_math;
 
 ## <a name="members"></a>メンバー
 
-### <a name="functions"></a>関数
+### <a name="functions"></a>機能
 
 |名前|説明|
 |----------|-----------------|
@@ -47,7 +48,7 @@ namespace fast_math;
 |[expf](concurrency-fast-math-namespace-functions.md#expf)|e を底とする引数のべき乗を計算します。|
 |[fabs](concurrency-fast-math-namespace-functions.md#fabs)|引数の絶対値を返します。|
 |[fabsf](concurrency-fast-math-namespace-functions.md#fabsf)|引数の絶対値を返します。|
-|[階数](concurrency-fast-math-namespace-functions.md#floor)|引数の切り捨てを計算します。|
+|[floor](concurrency-fast-math-namespace-functions.md#floor)|引数の切り捨てを計算します。|
 |[floorf](concurrency-fast-math-namespace-functions.md#floorf)|引数の切り捨てを計算します。|
 |[fmax](concurrency-fast-math-namespace-functions.md#fmax)|引数の最大数値を判断します。|
 |[fmaxf](concurrency-fast-math-namespace-functions.md#fmaxf)|引数の最大数値を判断します。|
@@ -93,7 +94,7 @@ namespace fast_math;
 |[trunc](concurrency-fast-math-namespace-functions.md#trunc)|引数を整数コンポーネントに切り捨てます。|
 |[truncf](concurrency-fast-math-namespace-functions.md#truncf)|引数を整数コンポーネントに切り捨てます。|
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** amp_math
 

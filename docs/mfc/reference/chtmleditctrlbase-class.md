@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: CHtmlEditCtrlBase クラス'
 title: CHtmlEditCtrlBase クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -220,12 +221,12 @@ helpviewer_keywords:
 - CHtmlEditCtrlBase [MFC], Unlink
 - CHtmlEditCtrlBase [MFC], UnorderList
 ms.assetid: e0cc74b4-8320-4570-b673-16c03d2ae266
-ms.openlocfilehash: 74df35a82342bad59e9065ef593581add6d3d734
-ms.sourcegitcommit: d77159732a8e782b2a1b7abea552065f2b6f61c1
+ms.openlocfilehash: 2dfe61dfce86230f87f7e4883f6800e897c3770b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/04/2020
-ms.locfileid: "93344736"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97115418"
 ---
 # <a name="chtmleditctrlbase-class"></a>CHtmlEditCtrlBase クラス
 
@@ -356,7 +357,7 @@ template <class T> class CHtmlEditCtrlBase
 *T*<br/>
 派生クラスの名前。
 
-## <a name="remarks"></a>注釈
+## <a name="remarks"></a>解説
 
 `CHtmlEditCtrlBase`[Bold](#bold)など、WEBBROWSER の HTML 編集コマンドのメンバー関数を提供します。 (または、 [ExecCommand](#execcommand) を呼び出して IDM_BOLD コマンドを実行することもできます)。
 
@@ -366,7 +367,7 @@ template <class T> class CHtmlEditCtrlBase
 
 `CHtmlEditCtrlBase`
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** afxhtml.h
 
@@ -416,7 +417,7 @@ Alignment (四角形の要素のみ): このパラメーターは、イメージ
 
 成功した場合は S_OK を返し、失敗した場合はエラー HRESULT を返します。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 パラメーターの詳細については、「グリフの [編集](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa969614\(v=vs.85\))」の「グリフテーブル文字列形式」を参照してください。
 
@@ -434,7 +435,7 @@ HRESULT Bold() const;
 
 成功した場合は S_OK を返し、失敗した場合はエラー HRESULT を返します。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 このメソッドは、 [IDM_BOLD コマンド ID](/previous-versions/aa769861\(v=vs.85\)) を WebBrowser コントロールに送信します。
 
@@ -455,7 +456,7 @@ HRESULT Button(LPCTSTR szId = NULL) const;
 
 成功した場合は S_OK を返し、失敗した場合はエラー HRESULT を返します。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 このメソッドは、 [IDM_BUTTON コマンド ID](/previous-versions/aa769966\(v=vs.85\)) を WebBrowser コントロールに送信します。
 
@@ -476,7 +477,7 @@ HRESULT CheckBox(LPCTSTR szId = NULL) const;
 
 成功した場合は S_OK を返し、失敗した場合はエラー HRESULT を返します。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 このメソッドは、 [IDM_CHECKBOX コマンド ID](/previous-versions/aa769972\(v=vs.85\)) を WebBrowser コントロールに送信します。
 
@@ -492,7 +493,7 @@ HRESULT ClearSelection() const;
 
 成功した場合は S_OK を返し、失敗した場合はエラー HRESULT を返します。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 このメソッドは、 [IDM_CLEARSELECTION コマンド ID](/previous-versions/aa770038\(v=vs.85\)) を WebBrowser コントロールに送信します。
 
@@ -508,7 +509,7 @@ HRESULT Copy() const;
 
 成功した場合は S_OK を返し、失敗した場合はエラー HRESULT を返します。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 このメソッドは、 [IDM_COPY コマンド ID](/previous-versions/aa769872\(v=vs.85\)) を WebBrowser コントロールに送信します。
 
@@ -524,7 +525,7 @@ HRESULT Cut() const;
 
 成功した場合は S_OK を返し、失敗した場合はエラー HRESULT を返します。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 このメソッドは、 [IDM_CUT コマンド ID](/previous-versions/aa769875\(v=vs.85\)) を WebBrowser コントロールに送信します。
 
@@ -540,7 +541,7 @@ HRESULT Delete() const;
 
 成功した場合は S_OK を返し、失敗した場合はエラー HRESULT を返します。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 このメソッドは、 [IDM_DELETE コマンド ID](/previous-versions/aa769876\(v=vs.85\)) を WebBrowser コントロールに送信します。
 
@@ -561,7 +562,7 @@ HRESULT DropDownBox(LPCTSTR szId = NULL) const;
 
 成功した場合は S_OK を返し、失敗した場合はエラー HRESULT を返します。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 このメソッドは、 [IDM_DROPDOWNBOX コマンド ID](/previous-versions/aa769984\(v=vs.85\)) を WebBrowser コントロールに送信します。
 
@@ -577,7 +578,7 @@ HRESULT EmptyGlyphTable() const;
 
 成功した場合は S_OK を返し、失敗した場合はエラー HRESULT を返します。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 このメソッドは、 [IDM_EMPTYGLYPHTABLE コマンド ID](/previous-versions/aa769907\(v=vs.85\)) を WebBrowser コントロールに送信します。
 
@@ -621,7 +622,7 @@ HRESULT ExecCommand(
 
 成功した場合は S_OK を返し、失敗した場合はエラー HRESULT を返します。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 このメソッドは、 [IOleCommandTarget:: Exec](/windows/win32/api/docobj/nf-docobj-iolecommandtarget-exec)の機能を提供します。
 
@@ -637,7 +638,7 @@ HRESULT Font() const;
 
 成功した場合は S_OK を返し、失敗した場合はエラー HRESULT を返します。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 このメソッドは、 [IDM_FONT コマンド ID](/previous-versions/aa769913\(v=vs.85\)) を WebBrowser コントロールに送信します。
 
@@ -658,7 +659,7 @@ HRESULT GetAbsolutePosition(bool& bCurValue) const;
 
 成功した場合は S_OK を返し、失敗した場合はエラー HRESULT を返します。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 詳細については、「 [IDM_ABSOLUTE_POSITION コマンド ID](/previous-versions/aa769889\(v=vs.85\))」を参照してください。
 
@@ -679,7 +680,7 @@ HRESULT GetBackColor(int& nColor) const;
 
 成功した場合は S_OK を返し、失敗した場合はエラー HRESULT を返します。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 このメソッドは、 [IDM_BACKCOLOR コマンド ID](/previous-versions/aa769858\(v=vs.85\)) を WebBrowser コントロールに送信します。
 
@@ -700,7 +701,7 @@ HRESULT GetBlockFormat(CString& strFormat) const;
 
 成功した場合は S_OK を返し、失敗した場合はエラー HRESULT を返します。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 このメソッドは、 [IDM_BLOCKFMT コマンド ID](/previous-versions/aa769883\(v=vs.85\)) を WebBrowser コントロールに送信します。
 
@@ -721,7 +722,7 @@ HRESULT GetBlockFormatNames(CStringArray& sa) const;
 
 成功した場合は S_OK を返し、失敗した場合はエラー HRESULT を返します。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 このメソッドは、 [IDM_GETBLOCKFMTS コマンド ID](/previous-versions/aa769884\(v=vs.85\)) を WebBrowser コントロールに送信します。
 
@@ -742,7 +743,7 @@ HRESULT GetBookMark(CString& strAnchor) const;
 
 成功した場合は S_OK を返し、失敗した場合はエラー HRESULT を返します。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 詳細については、「 [IDM_BOOKMARK コマンド ID](/previous-versions/aa769873\(v=vs.85\))」を参照してください。
 
@@ -848,7 +849,7 @@ HRESULT GetFontFace(CString& strFace) const;
 
 成功した場合は S_OK を返し、失敗した場合はエラー HRESULT を返します。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 現在の選択範囲で複数のフォントが使用されている場合、 *Strface* は空の文字列になります。
 
@@ -871,7 +872,7 @@ HRESULT GetFontSize(short& nSize) const;
 
 HTML フォントサイズ (1-7) を返します。 選択範囲に複数のフォントサイズが含まれている場合は0を返します。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 このメソッドは、 [IDM_FONTSIZE コマンド ID](/previous-versions/aa769881\(v=vs.85\)) を WebBrowser コントロールに送信します。
 
@@ -892,7 +893,7 @@ HRESULT GetForeColor(int& nColor);
 
 成功した場合は S_OK を返し、失敗した場合はエラー HRESULT を返します。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 このメソッドは、 [IDM_FORECOLOR コマンド ID](/previous-versions/aa769882\(v=vs.85\)) を WebBrowser コントロールに送信します。
 
@@ -913,7 +914,7 @@ HRESULT GetFrameZone(short& nZone) const;
 
 成功した場合は S_OK を返し、失敗した場合はエラー HRESULT を返します。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 このメソッドは、 [IDM_GETFRAMEZONE コマンド ID](/previous-versions/aa769916\(v=vs.85\)) を WebBrowser コントロールに送信します。
 
@@ -925,7 +926,7 @@ HTML ドキュメントが変更されたかどうかを示します。
 HRESULT GetIsDirty() const;
 ```
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 ドキュメントが変更されたかどうかを示します。 `GetIsDirty`[IPersistStorage:: IsDirty](/windows/win32/api/objidl/nf-objidl-ipersiststorage-isdirty)から HRESULT を返します。
 
@@ -946,7 +947,7 @@ HRESULT GetShowAlignedSiteTags(bool& bCurValue) const;
 
 成功した場合は S_OK を返し、失敗した場合はエラー HRESULT を返します。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 詳細については、「 [IDM_SHOWALIGNEDSITETAGS コマンド ID](/previous-versions/aa769947\(v=vs.85\))」を参照してください。
 
@@ -967,7 +968,7 @@ HRESULT GetShowAllTags(bool& bCurValue) const;
 
 成功した場合は S_OK を返し、失敗した場合はエラー HRESULT を返します。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 詳細については、「 [IDM_SHOWALLTAGS コマンド ID](/previous-versions/aa769948\(v=vs.85\))」を参照してください。
 
@@ -988,7 +989,7 @@ WebBrowser が区分タグのグリフを表示する場合は TRUE、それ以�
 
 成功した場合は S_OK を返し、失敗した場合はエラー HRESULT を返します。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 詳細については、「 [IDM_SHOWAREATAGS コマンド ID](/previous-versions/aa769949\(v=vs.85\))」を参照してください。
 
@@ -1009,7 +1010,7 @@ WebBrowser で br タグのグリフが表示される場合は TRUE、そうで
 
 成功した場合は S_OK を返し、失敗した場合はエラー HRESULT を返します。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 詳細については、「 [IDM_SHOWWBRTAGS コマンド ID](/previous-versions/aa769956\(v=vs.85\))」を参照してください。
 
@@ -1030,7 +1031,7 @@ WebBrowser でコメントタグのグリフが表示される場合は TRUE、�
 
 成功した場合は S_OK を返し、失敗した場合はエラー HRESULT を返します。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 詳細については、「 [IDM_SHOWCOMMENTTAGS コマンド ID](/previous-versions/aa769950\(v=vs.85\))」を参照してください。
 
@@ -1051,7 +1052,7 @@ Microsoft Internet Explorer 4.0 に示されているすべてのタグが WebBr
 
 成功した場合は S_OK を返し、失敗した場合はエラー HRESULT を返します。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 詳細については、「 [IDM_SHOWMISCTAGS コマンド ID](/previous-versions/aa769952\(v=vs.85\))」を参照してください。
 
@@ -1072,7 +1073,7 @@ WebBrowser がすべてのスクリプトタグのグリフを表示する場合
 
 成功した場合は S_OK を返し、失敗した場合はエラー HRESULT を返します。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 詳細については、「 [IDM_SHOWSCRIPTTAGS コマンド ID](/previous-versions/aa769953\(v=vs.85\))」を参照してください。
 
@@ -1093,7 +1094,7 @@ WebBrowser がすべてのスタイルタグのグリフを表示する場合は
 
 成功した場合は S_OK を返し、失敗した場合はエラー HRESULT を返します。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 詳細については、「 [IDM_SHOWSTYLETAGS コマンド ID](/previous-versions/aa769954\(v=vs.85\))」を参照してください。
 
@@ -1114,7 +1115,7 @@ WebBrowser で不明なすべてのタグのグリフが表示される場合は
 
 成功した場合は S_OK を返し、失敗した場合はエラー HRESULT を返します。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 詳細については、「 [IDM_SHOWUNKNOWNTAGS コマンド ID](/previous-versions/aa769955\(v=vs.85\))」を参照してください。
 
@@ -1135,7 +1136,7 @@ HRESULT HorizontalLine(LPCTSTR szId = NULL) const;
 
 成功した場合は S_OK を返し、失敗した場合はエラー HRESULT を返します。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 このメソッドは、 [IDM_HORIZONTALLINE コマンド ID](/previous-versions/aa769968\(v=vs.85\)) を WebBrowser コントロールに送信します。
 
@@ -1156,7 +1157,7 @@ HRESULT HyperLink(LPCTSTR szUrl = NULL) const;
 
 成功した場合は S_OK を返し、失敗した場合はエラー HRESULT を返します。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 このメソッドは、 [IDM_HYPERLINK コマンド ID](/previous-versions/aa769874\(v=vs.85\)) を WebBrowser コントロールに送信します。
 
@@ -1177,7 +1178,7 @@ HRESULT IE50Paste(LPCTSTR szData) const;
 
 成功した場合は S_OK を返し、失敗した場合はエラー HRESULT を返します。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 このメソッドは、 [IDM_IE50_PASTE コマンド ID](/previous-versions/aa769922\(v=vs.85\)) を WebBrowser コントロールに送信します。
 
@@ -1198,7 +1199,7 @@ HRESULT Iframe(LPCTSTR szId = NULL) const;
 
 成功した場合は S_OK を返し、失敗した場合はエラー HRESULT を返します。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 このメソッドは、 [IDM_IFRAME コマンド ID](/previous-versions/aa769969\(v=vs.85\)) を WebBrowser コントロールに送信します。
 
@@ -1219,7 +1220,7 @@ HRESULT Image(LPCTSTR szUrl = NULL) const;
 
 成功した場合は S_OK を返し、失敗した場合はエラー HRESULT を返します。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 このメソッドは、 [IDM_IMAGE コマンド ID](/previous-versions/aa769970\(v=vs.85\)) を WebBrowser コントロールに送信します。
 
@@ -1235,7 +1236,7 @@ HRESULT Indent() const;
 
 成功した場合は S_OK を返し、失敗した場合はエラー HRESULT を返します。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 このメソッドは、 [IDM_INDENT コマンド ID](/previous-versions/aa769963\(v=vs.85\)) を WebBrowser コントロールに送信します。
 
@@ -1256,7 +1257,7 @@ HRESULT InsFieldSet(LPCTSTR szId = NULL) const;
 
 成功した場合は S_OK を返し、失敗した場合はエラー HRESULT を返します。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 このメソッドは、 [IDM_INSFIELDSET コマンド ID](/previous-versions/aa769967\(v=vs.85\)) を WebBrowser コントロールに送信します。
 
@@ -1277,7 +1278,7 @@ HRESULT InsInputButton(LPCTSTR szId = NULL) const;
 
 成功した場合は S_OK を返し、失敗した場合はエラー HRESULT を返します。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 このメソッドは、 [IDM_INSINPUTBUTTON コマンド ID](/previous-versions/aa769971\(v=vs.85\)) を WebBrowser コントロールに送信します。
 
@@ -1298,7 +1299,7 @@ HRESULT InsInputHidden(LPCTSTR szId = NULL) const;
 
 成功した場合は S_OK を返し、失敗した場合はエラー HRESULT を返します。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 このメソッドは、 [IDM_INSINPUTHIDDEN コマンド ID](/previous-versions/aa769974\(v=vs.85\)) を WebBrowser コントロールに送信します。
 
@@ -1319,7 +1320,7 @@ HRESULT InsInputImage(LPCTSTR szId = NULL) const;
 
 成功した場合は S_OK を返し、失敗した場合はエラー HRESULT を返します。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 このメソッドは、 [IDM_INSINPUTIMAGE コマンド ID](/previous-versions/aa769975\(v=vs.85\)) を WebBrowser コントロールに送信します。
 
@@ -1340,7 +1341,7 @@ HRESULT InsInputPassword(LPCTSTR szId = NULL) const;
 
 成功した場合は S_OK を返し、失敗した場合はエラー HRESULT を返します。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 このメソッドは、 [IDM_INSINPUTPASSWORD コマンド ID](/previous-versions/aa769976\(v=vs.85\)) を WebBrowser コントロールに送信します。
 
@@ -1361,7 +1362,7 @@ HRESULT InsInputReset(LPCTSTR szId = NULL) const;
 
 成功した場合は S_OK を返し、失敗した場合はエラー HRESULT を返します。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 このメソッドは、 [IDM_INSINPUTRESET コマンド ID](/previous-versions/aa769978\(v=vs.85\)) を WebBrowser コントロールに送信します。
 
@@ -1382,7 +1383,7 @@ HRESULT InsInputSubmit(LPCTSTR szId = NULL) const;
 
 成功した場合は S_OK を返し、失敗した場合はエラー HRESULT を返します。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 このメソッドは、 [IDM_INSINPUTSUBMIT コマンド ID](/previous-versions/aa769979\(v=vs.85\)) を WebBrowser コントロールに送信します。
 
@@ -1403,7 +1404,7 @@ HRESULT InsInputUpload(LPCTSTR szId = NULL) const;
 
 成功した場合は S_OK を返し、失敗した場合はエラー HRESULT を返します。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 このメソッドは、 [IDM_INSINPUTUPLOAD コマンド ID](/previous-versions/aa769973\(v=vs.85\)) を WebBrowser コントロールに送信します。
 
@@ -1424,7 +1425,7 @@ HRESULT Is1DElement(bool& bValue) const;
 
 成功した場合は S_OK を返し、失敗した場合はエラー HRESULT を返します。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 このメソッドは、 [IDM_1D_ELEMENT コマンド ID](/previous-versions/aa769885\(v=vs.85\)) を WebBrowser コントロールに送信します。
 
@@ -1445,7 +1446,7 @@ HRESULT Is2DElement(bool& bValue) const;
 
 成功した場合は S_OK を返し、失敗した場合はエラー HRESULT を返します。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 このメソッドは、 [IDM_2D_ELEMENT コマンド ID](/previous-versions/aa769886\(v=vs.85\)) を WebBrowser コントロールに送信します。
 
@@ -1461,7 +1462,7 @@ HRESULT Italic() const;
 
 成功した場合は S_OK を返し、失敗した場合はエラー HRESULT を返します。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 このメソッドは、 [IDM_ITALIC コマンド ID](/previous-versions/aa769988\(v=vs.85\)) を WebBrowser コントロールに送信します。
 
@@ -1477,7 +1478,7 @@ HRESULT JustifyCenter() const;
 
 成功した場合は S_OK を返し、失敗した場合はエラー HRESULT を返します。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 このメソッドは、 [IDM_JUSTIFYCENTER コマンド ID](/previous-versions/aa769989\(v=vs.85\)) を WebBrowser コントロールに送信します。
 
@@ -1493,7 +1494,7 @@ HRESULT JustifyLeft() const;
 
 成功した場合は S_OK を返し、失敗した場合はエラー HRESULT を返します。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 このメソッドは、 [IDM_JUSTIFYLEFT コマンド ID](/previous-versions/aa770011\(v=vs.85\)) を WebBrowser コントロールに送信します。
 
@@ -1509,7 +1510,7 @@ HRESULT JustifyRight() const;
 
 成功した場合は S_OK を返し、失敗した場合はエラー HRESULT を返します。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 このメソッドは、 [IDM_JUSTIFYRIGHT コマンド ID](/previous-versions/aa770013\(v=vs.85\)) を WebBrowser コントロールに送信します。
 
@@ -1530,7 +1531,7 @@ HRESULT ListBox(LPCTSTR szId = NULL) const;
 
 成功した場合は S_OK を返し、失敗した場合はエラー HRESULT を返します。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 このメソッドは、 [IDM_LISTBOX コマンド ID](/previous-versions/aa769985\(v=vs.85\)) を WebBrowser コントロールに送信します。
 
@@ -1551,7 +1552,7 @@ HRESULT Marquee(LPCTSTR szId = NULL) const;
 
 成功した場合は S_OK を返し、失敗した場合はエラー HRESULT を返します。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 このメソッドは、 [IDM_MARQUEE コマンド ID](/previous-versions/aa769981\(v=vs.85\)) を WebBrowser コントロールに送信します。
 
@@ -1584,7 +1585,7 @@ HRESULT OrderList(LPCTSTR szId = NULL) const;
 
 成功した場合は S_OK を返し、失敗した場合はエラー HRESULT を返します。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 このメソッドは、 [IDM_ORDERLIST コマンド ID](/previous-versions/aa769982\(v=vs.85\)) を WebBrowser コントロールに送信します。
 
@@ -1600,7 +1601,7 @@ HRESULT Outdent() const;
 
 成功した場合は S_OK を返し、失敗した場合はエラー HRESULT を返します。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 このメソッドは、 [IDM_OUTDENT コマンド ID](/previous-versions/aa770015\(v=vs.85\)) を WebBrowser コントロールに送信します。
 
@@ -1621,7 +1622,7 @@ HRESULT Paragraph(LPCTSTR szId = NULL) const;
 
 成功した場合は S_OK を返し、失敗した場合はエラー HRESULT を返します。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 このメソッドは、 [IDM_PARAGRAPH コマンド ID](/previous-versions/aa769983\(v=vs.85\)) を WebBrowser コントロールに送信します。
 
@@ -1637,7 +1638,7 @@ HRESULT Paste() const;
 
 成功した場合は S_OK を返し、失敗した場合はエラー HRESULT を返します。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 このメソッドは、 [IDM_PASTE コマンド ID](/previous-versions/aa770017\(v=vs.85\)) を WebBrowser コントロールに送信します。
 
@@ -1663,7 +1664,7 @@ TRUE の場合、[印刷] ダイアログが表示されます。
 
 成功した場合は S_OK を返し、失敗した場合はエラー HRESULT を返します。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 このメソッドは、 [IDM_PRINT コマンド ID](/previous-versions/aa769937\(v=vs.85\)) を WebBrowser コントロールに送信します。
 
@@ -1685,7 +1686,7 @@ HRESULT PrintPreview(LPCTSTR szPrintTemplate) const;
 
 成功した場合は S_OK を返し、失敗した場合はエラー HRESULT を返します。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 このメソッドは、 [IDM_PRINTPREVIEW コマンド ID](/previous-versions/aa769938\(v=vs.85\)) を WebBrowser コントロールに送信します。
 
@@ -1723,7 +1724,7 @@ HRESULT RadioButton(LPCTSTR szId = NULL) const;
 
 成功した場合は S_OK を返し、失敗した場合はエラー HRESULT を返します。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 このメソッドは、 [IDM_RADIOBUTTON コマンド ID](/previous-versions/aa769977\(v=vs.85\)) を WebBrowser コントロールに送信します。
 
@@ -1739,7 +1740,7 @@ HRESULT RefreshDocument() const;
 
 成功した場合は S_OK を返し、失敗した場合はエラー HRESULT を返します。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 このメソッドは、 [IDM_REFRESH コマンド ID](/previous-versions/aa770020\(v=vs.85\)) を WebBrowser コントロールに送信します。
 
@@ -1755,7 +1756,7 @@ HRESULT RemoveFormat() const;
 
 成功した場合は S_OK を返し、失敗した場合はエラー HRESULT を返します。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 このメソッドは、 [IDM_REMOVEFORMAT コマンド ID](/previous-versions/aa770021\(v=vs.85\)) を WebBrowser コントロールに送信します。
 
@@ -1776,7 +1777,7 @@ Web ページの保存先のパスとファイル名。
 
 成功した場合は S_OK を返し、失敗した場合はエラー HRESULT を返します。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 このメソッドは、 [IDM_SAVEAS コマンド ID](/previous-versions/aa770024\(v=vs.85\)) を WebBrowser コントロールに送信します。
 
@@ -1792,7 +1793,7 @@ HRESULT SelectAll() const;
 
 成功した場合は S_OK を返し、失敗した場合はエラー HRESULT を返します。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 このメソッドは、 [IDM_SELECTALL コマンド ID](/previous-versions/aa770025\(v=vs.85\)) を WebBrowser コントロールに送信します。
 
@@ -1813,7 +1814,7 @@ TRUE の場合、絶対に配置された要素はドラッグして移動でき
 
 成功した場合は S_OK を返し、失敗した場合はエラー HRESULT を返します。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 このメソッドは、 [IDM_2D_POSITION コマンド ID](/previous-versions/aa769887\(v=vs.85\)) を WebBrowser コントロールに送信します。
 
@@ -1834,7 +1835,7 @@ TRUE の場合、要素の position プロパティは "absolute" です。FALSE
 
 成功した場合は S_OK を返し、失敗した場合はエラー HRESULT を返します。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 このメソッドは、 [IDM_ABSOLUTE_POSITION コマンド ID](/previous-versions/aa769889\(v=vs.85\)) を WebBrowser コントロールに送信します。
 
@@ -1855,7 +1856,7 @@ TRUE の場合、ATOMICSELECTION 属性が TRUE に設定されている要素�
 
 成功した場合は S_OK を返し、失敗した場合はエラー HRESULT を返します。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 このメソッドは、 [IDM_ATOMICSELECTION コマンド ID](/previous-versions/aa769892\(v=vs.85\)) を WebBrowser コントロールに送信します。
 
@@ -1876,7 +1877,7 @@ TRUE の場合、URL の自動検出が有効になります。
 
 成功した場合は S_OK を返し、失敗した場合はエラー HRESULT を返します。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 このメソッドは、 [IDM_AUTOURLDETECT_MODE コマンド ID](/previous-versions/aa769893\(v=vs.85\)) を WebBrowser コントロールに送信します。
 
@@ -1901,7 +1902,7 @@ HRESULT SetBackColor(LPCTSTR szColor) const;
 
 成功した場合は S_OK を返し、失敗した場合はエラー HRESULT を返します。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 このメソッドは、 [IDM_BACKCOLOR_ コマンド ID](/previous-versions/aa769858\(v=vs.85\)) を WebBrowser コントロールに送信します。
 
@@ -1922,7 +1923,7 @@ Format タグ。
 
 成功した場合は S_OK を返し、失敗した場合はエラー HRESULT を返します。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 このメソッドは、 [IDM_BLOCKFMT_COMMAND ID](/previous-versions/aa769883\(v=vs.85\)) を WebBrowser コントロールに送信します。
 
@@ -1943,7 +1944,7 @@ HRESULT SetBookMark(LPCTSTR szAnchorName) const;
 
 成功した場合は S_OK を返し、失敗した場合はエラー HRESULT を返します。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 このメソッドは、 [IDM_BOOKMARK コマンド ID](/previous-versions/aa769873\(v=vs.85\)) を WebBrowser コントロールに送信します。
 
@@ -1964,7 +1965,7 @@ CSS レベル。 CSS のサポートが不要な場合は、0を渡します。
 
 成功した場合は S_OK を返し、失敗した場合はエラー HRESULT を返します。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 このメソッドは、 [IDM_CSSEDITING_LEVEL コマンド ID](/previous-versions/aa769903\(v=vs.85\)) を WebBrowser コントロールに送信します。
 
@@ -2010,7 +2011,7 @@ HRESULT SetDefaultComposeSettings(
 
 成功した場合は S_OK を返し、失敗した場合はエラー HRESULT を返します。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 このメソッドは、 [IDM_COMPOSESETTINGS コマンド ID](/previous-versions/aa769901\(v=vs.85\)) を WebBrowser コントロールに送信します。
 
@@ -2048,7 +2049,7 @@ TRUE の場合は、要素がデザインモードで "エディットフォー�
 
 成功した場合は S_OK を返し、失敗した場合はエラー HRESULT を返します。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 このメソッドは、 [IDM_DISABLE_EDITFOCUS_UI コマンド ID](/previous-versions/aa769905\(v=vs.85\)) を WebBrowser コントロールに送信します。
 
@@ -2086,7 +2087,7 @@ HRESULT SetFontFace(LPCTSTR szFace) const;
 
 成功した場合は S_OK を返し、失敗した場合はエラー HRESULT を返します。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 このメソッドは、 [IDM_FONTNAME コマンド ID](/previous-versions/aa769880\(v=vs.85\)) を WebBrowser コントロールに送信します。
 
@@ -2107,7 +2108,7 @@ HTML フォントサイズ (1-7)。 値が0の場合、フォントサイズは1
 
 成功した場合は S_OK を返し、失敗した場合はエラー HRESULT を返します。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 このメソッドは、 [IDM_FONTSIZE コマンド ID](/previous-versions/aa769881\(v=vs.85\)) を WebBrowser コントロールに送信します。
 
@@ -2132,7 +2133,7 @@ HRESULT SetForeColor(int nColor) const;
 
 成功した場合は S_OK を返し、失敗した場合はエラー HRESULT を返します。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 このメソッドは、 [IDM_FORECOLOR コマンド ID](/previous-versions/aa769882\(v=vs.85\)) を WebBrowser コントロールに送信します。
 
@@ -2153,7 +2154,7 @@ TRUE の場合、すべての貼り付け操作は Internet Explorer 5 と互換
 
 成功した場合は S_OK を返し、失敗した場合はエラー HRESULT を返します。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 このメソッドは、 [IDM_IE50_PASTE_MODE コマンド ID](/previous-versions/aa769923\(v=vs.85\)) を WebBrowser コントロールに送信します。
 
@@ -2174,7 +2175,7 @@ TRUE の場合、WebBrowser はサイズ変更中または移動操作中に要�
 
 成功した場合は S_OK を返し、失敗した場合はエラー HRESULT を返します。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 このメソッドは、 [IDM_LIVERESIZE コマンド ID](/previous-versions/aa769928\(v=vs.85\)) を WebBrowser コントロールに送信します。
 
@@ -2195,7 +2196,7 @@ TRUE の場合、ユーザーが SHIFT キーまたは CTRL キーを押した�
 
 成功した場合は S_OK を返し、失敗した場合はエラー HRESULT を返します。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 このメソッドは、 [IDM_MULTIPLESELECTION コマンド ID](/previous-versions/aa769929\(v=vs.85\)) を WebBrowser コントロールに送信します。
 
@@ -2216,7 +2217,7 @@ TRUE の場合、WebBrowser はマウスポインターを変更しません。
 
 成功した場合は S_OK を返し、失敗した場合はエラー HRESULT を返します。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 このメソッドは、 [IDM_OVERRIDE_CURSOR コマンド ID](/previous-versions/aa769932\(v=vs.85\)) を WebBrowser コントロールに送信します。
 
@@ -2237,7 +2238,7 @@ TRUE の場合、テキスト入力モードは overwrite です。FALSE の場�
 
 成功した場合は S_OK を返し、失敗した場合はエラー HRESULT を返します。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 このメソッドは、 [IDM_OVERWRITE コマンド ID](/previous-versions/aa770016\(v=vs.85\)) を WebBrowser コントロールに送信します。
 
@@ -2258,7 +2259,7 @@ TRUE の場合、可視性が "hidden" または display プロパティが "non
 
 成功した場合は S_OK を返し、失敗した場合はエラー HRESULT を返します。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 このメソッドは、 [IDM_RESPECTVISIBILITY_INDESIGN コマンド ID](/previous-versions/aa770023\(v=vs.85\)) を WebBrowser コントロールに送信します。
 
@@ -2279,7 +2280,7 @@ TRUE の場合、プロパティを持つすべての要素のグリフが表示
 
 成功した場合は S_OK を返し、失敗した場合はエラー HRESULT を返します。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 このメソッドは、 [IDM_SHOWALIGNEDSITETAGS コマンド ID](/previous-versions/aa769947\(v=vs.85\)) を WebBrowser コントロールに送信します。
 
@@ -2300,7 +2301,7 @@ TRUE の場合、文書内のすべてのタグの位置を示すグリフが表
 
 成功した場合は S_OK を返し、失敗した場合はエラー HRESULT を返します。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 このメソッドは、 [IDM_SHOWALLTAGS コマンド ID](/previous-versions/aa769948\(v=vs.85\)) を WebBrowser コントロールに送信します。
 
@@ -2321,7 +2322,7 @@ TRUE の場合、すべての区分タグのグリフが表示されます。
 
 成功した場合は S_OK を返し、失敗した場合はエラー HRESULT を返します。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 このメソッドは、 [IDM_SHOWAREATAGS コマンド ID](/previous-versions/aa769949\(v=vs.85\)) を WebBrowser コントロールに送信します。
 
@@ -2342,7 +2343,7 @@ TRUE の場合、すべての br タグのグリフが表示されます。
 
 成功した場合は S_OK を返し、失敗した場合はエラー HRESULT を返します。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 このメソッドは、 [IDM_SHOWWBRTAGS コマンド ID](/previous-versions/aa769956\(v=vs.85\)) を WebBrowser コントロールに送信します。
 
@@ -2363,7 +2364,7 @@ TRUE の場合、すべてのコメントタグのグリフが表示されます
 
 成功した場合は S_OK を返し、失敗した場合はエラー HRESULT を返します。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 このメソッドは、 [IDM_SHOWCOMMENTTAGS コマンド ID](/previous-versions/aa769950\(v=vs.85\)) を WebBrowser コントロールに送信します。
 
@@ -2384,7 +2385,7 @@ TRUE の場合は、Microsoft Internet Explorer 4.0 に表示されるすべて�
 
 成功した場合は S_OK を返し、失敗した場合はエラー HRESULT を返します。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 このメソッドは、 [IDM_SHOWMISCTAGS コマンド ID](/previous-versions/aa769952\(v=vs.85\)) を WebBrowser コントロールに送信します。
 
@@ -2405,7 +2406,7 @@ TRUE の場合、すべてのスクリプトタグのグリフが表示されま
 
 成功した場合は S_OK を返し、失敗した場合はエラー HRESULT を返します。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 このメソッドは、 [IDM_SHOWSCRIPTTAGS コマンド ID](/previous-versions/aa769953\(v=vs.85\)) を WebBrowser コントロールに送信します。
 
@@ -2426,7 +2427,7 @@ TRUE の場合、すべてのスタイルタグのグリフが表示されます
 
 成功した場合は S_OK を返し、失敗した場合はエラー HRESULT を返します。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 このメソッドは、 [IDM_SHOWSTYLETAGS コマンド ID](/previous-versions/aa769954\(v=vs.85\)) を WebBrowser コントロールに送信します。
 
@@ -2447,7 +2448,7 @@ TRUE の場合、不明なすべてのタグのグリフが表示されます。
 
 成功した場合は S_OK を返し、失敗した場合はエラー HRESULT を返します。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 このメソッドは、 [IDM_SHOWUNKNOWNTAGS コマンド ID](/previous-versions/aa769955\(v=vs.85\)) を WebBrowser コントロールに送信します。
 
@@ -2468,7 +2469,7 @@ HRESULT TextArea(LPCTSTR szId = NULL) const;
 
 成功した場合は S_OK を返し、失敗した場合はエラー HRESULT を返します。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 このメソッドは、 [IDM_TEXTAREA コマンド ID](/previous-versions/aa769986\(v=vs.85\)) を WebBrowser コントロールに送信します。
 
@@ -2489,7 +2490,7 @@ HRESULT TextBox(LPCTSTR szId = NULL) const;
 
 成功した場合は S_OK を返し、失敗した場合はエラー HRESULT を返します。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 このメソッドは、 [IDM_TEXTBOX コマンド ID](/previous-versions/aa769980\(v=vs.85\)) を WebBrowser コントロールに送信します。
 
@@ -2505,7 +2506,7 @@ HRESULT UnBookmark() const;
 
 成功した場合は S_OK を返し、失敗した場合はエラー HRESULT を返します。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 このメソッドは、 [IDM_UNBOOKMARK コマンド ID](/previous-versions/aa770034\(v=vs.85\)) を WebBrowser コントロールに送信します。
 
@@ -2521,7 +2522,7 @@ HRESULT Underline() const;
 
 成功した場合は S_OK を返し、失敗した場合はエラー HRESULT を返します。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 このメソッドは、 [IDM_UNDERLINE コマンド ID](/previous-versions/aa770035\(v=vs.85\)) を WebBrowser コントロールに送信します。
 
@@ -2537,7 +2538,7 @@ HRESULT Unlink() const;
 
 成功した場合は S_OK を返し、失敗した場合はエラー HRESULT を返します。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 このメソッドは、 [IDM_UNLINK コマンド ID](/previous-versions/aa770037\(v=vs.85\)) を WebBrowser コントロールに送信します。
 
@@ -2558,7 +2559,7 @@ HRESULT UnorderList(LPCTSTR szId = NULL) const;
 
 成功した場合は S_OK を返し、失敗した場合はエラー HRESULT を返します。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 このメソッドは、 [IDM_UNORDERLIST コマンド ID](/previous-versions/aa769987\(v=vs.85\)) を WebBrowser コントロールに送信します。
 
