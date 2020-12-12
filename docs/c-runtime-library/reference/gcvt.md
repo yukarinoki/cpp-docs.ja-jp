@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: _gcvt'
 title: _gcvt
 ms.date: 4/2/2020
 api_name:
@@ -33,12 +34,12 @@ helpviewer_keywords:
 - strings [C++], converting from floating point
 - CVTBUFSIZE
 ms.assetid: 5761411e-c06b-409a-912f-810fe7f4bcb5
-ms.openlocfilehash: d13ae6cee293036f0454b23e0349cabb2869be30
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 942f233e3b0e4c1ac3bc96d1fa64fd46cdccbcc2
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82919408"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97341504"
 ---
 # <a name="_gcvt"></a>_gcvt
 
@@ -67,21 +68,21 @@ char *_gcvt(
 
 ## <a name="return-value"></a>戻り値
 
-**_gcvt**は、数字の文字列へのポインターを返します。
+**_gcvt** は、数字の文字列へのポインターを返します。
 
 ## <a name="remarks"></a>解説
 
-**_Gcvt**関数は、浮動小数点*値*を文字列に変換します。これには、小数点と可能な符号バイトが含まれています。また、*バッファー*に文字列を格納します。 *バッファー*は、変換後の値と、自動的に追加される終端の null 文字を格納するのに十分な大きさにする必要があります。 *数字*+ 1 のバッファーサイズが使用されている場合、関数はバッファーの末尾を上書きします。 これは、変換後の文字列に小数点が含まれており、符号と指数の情報が含まれている可能性があるためです。 オーバーフローに対するプロビジョニングはありません。 **_gcvt**は、10進数形式で*桁*を生成しようとします。 そうでない場合は、指数形式*で数字が生成さ*れます。 後続のゼロは、変換時に非表示になる可能性があります。
+**_Gcvt** 関数は、浮動小数点 *値* を文字列に変換します。これには、小数点と可能な符号バイトが含まれています。また、*バッファー* に文字列を格納します。 *バッファー* は、変換後の値と、自動的に追加される終端の null 文字を格納するのに十分な大きさにする必要があります。 *数字*+ 1 のバッファーサイズが使用されている場合、関数はバッファーの末尾を上書きします。 これは、変換後の文字列に小数点が含まれており、符号と指数の情報が含まれている可能性があるためです。 オーバーフローに対するプロビジョニングはありません。 **_gcvt** は、10進数形式で *桁* を生成しようとします。 そうでない場合は、指数形式 *で数字が生成さ* れます。 後続のゼロは、変換時に非表示になる可能性があります。
 
-長さ **_CVTBUFSIZE**の*バッファー*は、任意の浮動小数点値に対して十分です。
+長さ **_CVTBUFSIZE** の *バッファー* は、任意の浮動小数点値に対して十分です。
 
-この関数は、パラメーターを検証します。 *Buffer*が**NULL**の場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、この関数は**errno**を**EINVAL**に設定し、 **NULL**を返します。
+この関数は、パラメーターを検証します。 *Buffer* が **NULL** の場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、この関数は **errno** を **EINVAL** に設定し、 **NULL** を返します。
 
 既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**_gcvt**|\<stdlib.h>|
 
@@ -146,7 +147,7 @@ buffer: '-1.23456789012e-002' (19 chars)
 ## <a name="see-also"></a>関連項目
 
 [データ変換](../../c-runtime-library/data-conversion.md)<br/>
-[浮動小数点サポート](../../c-runtime-library/floating-point-support.md)<br/>
+[浮動小数点のサポート](../../c-runtime-library/floating-point-support.md)<br/>
 [atof、_atof_l、_wtof、_wtof_l](atof-atof-l-wtof-wtof-l.md)<br/>
 [_ecvt](ecvt.md)<br/>
 [_fcvt](fcvt.md)<br/>

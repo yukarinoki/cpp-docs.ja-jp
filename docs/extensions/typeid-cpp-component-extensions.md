@@ -1,16 +1,17 @@
 ---
+description: '詳細情報: typeid (C++/CLI および C++/CX)'
 title: typeid (C++/CLI および C++/CX)
 ms.date: 10/12/2018
 ms.topic: reference
 helpviewer_keywords:
 - typeid keyword [C++]
 ms.assetid: e9706cae-e7c4-4d6d-b474-646d73df3e70
-ms.openlocfilehash: bfb226bc11f0fd7d3feddfb2c50ffe1aa6311d3d
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 0452de57b93eb5d55bed34fc1f9745280a6b6184
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91500388"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97185662"
 ---
 # <a name="typeid--ccli-and-ccx"></a>typeid (C++/CLI および C++/CX)
 
@@ -45,11 +46,11 @@ Platform::Type^ type = T::typeid;
 *T*<br/>
 型の名前。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 C++/CX では、typeid は、ランタイムの型情報から構築された [Platform::Type](../cppcx/platform-type-class.md) を返します。
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 コンパイラ オプション: `/ZW`
 
@@ -66,7 +67,7 @@ type::typeid
 *type*<br/>
 `System::Type` オブジェクトに適用する型 (抽象宣言子) の名前。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 **`typeid`** は、 <xref:System.Type> コンパイル時に型のを取得するために使用されます。
 
@@ -78,7 +79,7 @@ type::typeid
 
 **`typeid`** はネイティブ型とも連携しますが、は引き続きを返し `System::Type` ます。  Type_info 構造体を取得するには、 [ `typeid` 演算子](../cpp/typeid-operator.md)を使用します。
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 コンパイラ オプション: `/clr`
 

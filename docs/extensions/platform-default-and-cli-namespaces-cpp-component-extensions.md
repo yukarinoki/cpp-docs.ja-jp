@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: プラットフォーム、既定、および cli 名前空間 (C++/CLI および C++/CX)'
 title: プラットフォーム、既定、および cli 名前空間 (C++/CLI および C++/CX)
 ms.date: 10/12/2018
 ms.topic: reference
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - lang namespace
 - cli namespace
 ms.assetid: 9d38bd1e-dc78-47d1-a84b-9b4683e52c9c
-ms.openlocfilehash: df699b12404d9de1a9acaae6e9dc8c00fd2f15df
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 1b4b47a1568b1a137bc49a09b8b50feb8ec3a76b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87195357"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97185675"
 ---
 # <a name="platform-default-and-cli-namespaces--ccli-and-ccx"></a>プラットフォーム、既定、および cli 名前空間 (C++/CLI および C++/CX)
 
@@ -28,7 +29,7 @@ Visual Studio では、プロジェクトの作成時に、既定の名前空間
 
 詳細については、「[名前空間と型の参照範囲 (C++/CX)](../cppcx/namespaces-and-type-visibility-c-cx.md)」を参照してください。
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 コンパイラ オプション: `/ZW`
 
@@ -54,7 +55,7 @@ C++CLI では、**cli** 名前空間がサポートされています。 を使�
 
 - [safe_cast](safe-cast-cpp-component-extensions.md)
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 コンパイラ オプション: `/clr`
 

@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「OLE コントロールのダイアログデータエクスチェンジ関数」を参照してください。
 title: OLE コントロールのダイアログ データ エクスチェンジ (DDX) 関数
 ms.date: 11/04/2016
 f1_keywords:
@@ -18,12 +19,12 @@ helpviewer_keywords:
 - OLE controls [MFC], DDX functions
 - DDX (dialog data exchange), OLE support
 ms.assetid: 7ef1f288-ff65-40d4-aad2-5497bc00bb27
-ms.openlocfilehash: 9133c30dd1ac069145862d4bf61ba0bc0d504838
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: ed2a3c36655ce5fccf482c0a7dedad0a4c67baa5
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88837360"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97219955"
 ---
 # <a name="dialog-data-exchange-functions-for-ole-controls"></a>OLE コントロールのダイアログ データ エクスチェンジ (DDX) 関数
 
@@ -33,22 +34,22 @@ ms.locfileid: "88837360"
 
 |名前|説明|
 |-|-|
-|[DDX_OCBool](#ddx_ocbool)|OLE コントロールのプロパティと**bool**データメンバーとの間の**ブール**データの転送を管理します。|
-|[DDX_OCBoolRO](#ddx_ocboolro)|OLE コントロールの読み取り専用プロパティと**ブール**データメンバーとの間の**ブール**データの転送を管理します。|
-|[DDX_OCColor](#ddx_occolor)|OLE コントロールのプロパティと**OLE_COLOR**データメンバーの間の**OLE_COLOR**データの転送を管理します。|
-|[DDX_OCColorRO](#ddx_occolorro)|OLE コントロールの読み取り専用プロパティと**OLE_COLOR**データメンバーの間の**OLE_COLOR**データの転送を管理します。|
+|[DDX_OCBool](#ddx_ocbool)|OLE コントロールのプロパティと **bool** データメンバーとの間の **ブール** データの転送を管理します。|
+|[DDX_OCBoolRO](#ddx_ocboolro)|OLE コントロールの読み取り専用プロパティと **ブール** データメンバーとの間の **ブール** データの転送を管理します。|
+|[DDX_OCColor](#ddx_occolor)|OLE コントロールのプロパティと **OLE_COLOR** データメンバーの間の **OLE_COLOR** データの転送を管理します。|
+|[DDX_OCColorRO](#ddx_occolorro)|OLE コントロールの読み取り専用プロパティと **OLE_COLOR** データメンバーの間の **OLE_COLOR** データの転送を管理します。|
 |[DDX_OCFloat](#ddx_ocfloat)|**`float`** **`double`** OLE コントロールのプロパティと **`float`** (または) データメンバーの間の (または) データの転送を管理し **`double`** ます。|
 |[DDX_OCFloatRO](#ddx_ocfloatro)|**`float`** **`double`** OLE コントロールの読み取り専用プロパティと **`float`** (または) データメンバーとの間での (または) データの転送を管理し **`double`** ます。|
 |[DDX_OCInt](#ddx_ocint)|**`int`** **`long`** OLE コントロールのプロパティと **`int`** (または) データメンバーの間の (または) データの転送を管理し **`long`** ます。|
 |[DDX_OCIntRO](#ddx_ocintro)|**`int`** **`long`** OLE コントロールの読み取り専用プロパティと **`int`** (または) データメンバーとの間での (または) データの転送を管理し **`long`** ます。|
 |[DDX_OCShort](#ddx_ocshort)|**`short`** OLE コントロールのプロパティとデータメンバーの間のデータ転送を管理し **`short`** ます。|
 |[DDX_OCShortRO](#ddx_ocshortro)|**`short`** OLE コントロールの読み取り専用プロパティとデータメンバーの間のデータ転送を管理し **`short`** ます。|
-|[DDX_OCText](#ddx_octext)|OLE コントロールのプロパティと**cstring**データメンバーとの間での**cstring**データの転送を管理します。|
-|[DDX_OCTextRO](#ddx_octextro)|OLE コントロールの読み取り専用プロパティと**cstring**データメンバーとの間での**cstring**データの転送を管理します。|
+|[DDX_OCText](#ddx_octext)|OLE コントロールのプロパティと **cstring** データメンバーとの間での **cstring** データの転送を管理します。|
+|[DDX_OCTextRO](#ddx_octextro)|OLE コントロールの読み取り専用プロパティと **cstring** データメンバーとの間での **cstring** データの転送を管理します。|
 
 ## <a name="ddx_ocbool"></a><a name="ddx_ocbool"></a> DDX_OCBool
 
-この `DDX_OCBool` 関数は、ダイアログボックス、フォームビュー、またはコントロールビューオブジェクトの OLE コントロールのプロパティと、ダイアログボックス、フォームビュー、またはコントロールビューオブジェクトの**ブール**データメンバーとの間で、**ブール**データの転送を管理します。
+この `DDX_OCBool` 関数は、ダイアログボックス、フォームビュー、またはコントロールビューオブジェクトの OLE コントロールのプロパティと、ダイアログボックス、フォームビュー、またはコントロールビューオブジェクトの **ブール** データメンバーとの間で、**ブール** データの転送を管理します。
 
 ```cpp
 void AFXAPI DDX_OCBool(
@@ -76,13 +77,13 @@ void AFXAPI DDX_OCBool(
 
 DDX の詳細については、「 [ダイアログ データ エクスチェンジとダイアログ データ バリデーション](../../mfc/dialog-data-exchange-and-validation.md)」を参照してください。
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
   **ヘッダー :** afxdisp.h
 
 ## <a name="ddx_ocboolro"></a><a name="ddx_ocboolro"></a> DDX_OCBoolRO
 
-この `DDX_OCBoolRO` 関数は、ダイアログボックス、フォームビュー、またはコントロールビューオブジェクトの OLE コントロールの読み取り専用プロパティと、ダイアログボックス、フォームビュー、またはコントロールビューオブジェクトの**ブール**データメンバーとの間で、**ブール**データの転送を管理します。
+この `DDX_OCBoolRO` 関数は、ダイアログボックス、フォームビュー、またはコントロールビューオブジェクトの OLE コントロールの読み取り専用プロパティと、ダイアログボックス、フォームビュー、またはコントロールビューオブジェクトの **ブール** データメンバーとの間で、**ブール** データの転送を管理します。
 
 ```cpp
 void AFXAPI DDX_OCBoolRO(
@@ -110,7 +111,7 @@ void AFXAPI DDX_OCBoolRO(
 
 DDX の詳細については、「 [ダイアログ データ エクスチェンジとダイアログ データ バリデーション](../../mfc/dialog-data-exchange-and-validation.md)」を参照してください。
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
   **ヘッダー** afxdisp.h
 
@@ -144,7 +145,7 @@ void AFXAPI DDX_OCColor(
 
 DDX の詳細については、「 [ダイアログ データ エクスチェンジとダイアログ データ バリデーション](../../mfc/dialog-data-exchange-and-validation.md)」を参照してください。
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
   **ヘッダー** afxdisp.h
 
@@ -178,7 +179,7 @@ void AFXAPI DDX_OCColorRO(
 
 DDX の詳細については、「 [ダイアログ データ エクスチェンジとダイアログ データ バリデーション](../../mfc/dialog-data-exchange-and-validation.md)」を参照してください。
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
   **ヘッダー** afxdisp.h
 
@@ -218,7 +219,7 @@ void AFXAPI DDX_OCFloat(
 
 DDX の詳細については、「 [ダイアログ データ エクスチェンジとダイアログ データ バリデーション](../../mfc/dialog-data-exchange-and-validation.md)」を参照してください。
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
   **ヘッダー** afxdisp.h
 
@@ -258,7 +259,7 @@ void AFXAPI DDX_OCFloatRO(
 
 DDX の詳細については、「 [ダイアログ データ エクスチェンジとダイアログ データ バリデーション](../../mfc/dialog-data-exchange-and-validation.md)」を参照してください。
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
   **ヘッダー** afxdisp.h
 
@@ -298,7 +299,7 @@ void AFXAPI DDX_OCInt(
 
 DDX の詳細については、「 [ダイアログ データ エクスチェンジとダイアログ データ バリデーション](../../mfc/dialog-data-exchange-and-validation.md)」を参照してください。
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
   **ヘッダー** afxdisp.h
 
@@ -338,7 +339,7 @@ void AFXAPI DDX_OCIntRO(
 
 DDX の詳細については、「 [ダイアログ データ エクスチェンジとダイアログ データ バリデーション](../../mfc/dialog-data-exchange-and-validation.md)」を参照してください。
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
   **ヘッダー** afxdisp.h
 
@@ -372,7 +373,7 @@ void AFXAPI DDX_OCShort(
 
 DDX の詳細については、「 [ダイアログ データ エクスチェンジとダイアログ データ バリデーション](../../mfc/dialog-data-exchange-and-validation.md)」を参照してください。
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
   **ヘッダー** afxdisp.h
 
@@ -406,13 +407,13 @@ void AFXAPI DDX_OCShortRO(
 
 DDX の詳細については、「 [ダイアログ データ エクスチェンジとダイアログ データ バリデーション](../../mfc/dialog-data-exchange-and-validation.md)」を参照してください。
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
   **ヘッダー** afxdisp.h
 
 ## <a name="ddx_octext"></a><a name="ddx_octext"></a> DDX_OCText
 
-**DDX_OCText**関数は、ダイアログボックス、フォームビュー、またはコントロールビューオブジェクトの OLE コントロールのプロパティと、ダイアログボックス、フォームビュー、またはコントロールビューオブジェクトの**cstring**データメンバーとの間での**cstring**データの転送を管理します。
+**DDX_OCText** 関数は、ダイアログボックス、フォームビュー、またはコントロールビューオブジェクトの OLE コントロールのプロパティと、ダイアログボックス、フォームビュー、またはコントロールビューオブジェクトの **cstring** データメンバーとの間での **cstring** データの転送を管理します。
 
 ```cpp
 void AFXAPI DDX_OCText(
@@ -425,7 +426,7 @@ void AFXAPI DDX_OCText(
 ### <a name="parameters"></a>パラメーター
 
 *pDX*<br/>
-**CDataExchange**オブジェクトへのポインター。 フレームワークは、データ交換のコンテキスト (交換方向を含みます) を確定するためにこのオブジェクトを提供します。
+**CDataExchange** オブジェクトへのポインター。 フレームワークは、データ交換のコンテキスト (交換方向を含みます) を確定するためにこのオブジェクトを提供します。
 
 *nIDC*<br/>
 ダイアログ ボックス、フォーム ビュー、またはコントロール ビュー オブジェクトの OLE コントロールの ID。
@@ -440,7 +441,7 @@ void AFXAPI DDX_OCText(
 
 DDX の詳細については、「 [ダイアログ データ エクスチェンジとダイアログ データ バリデーション](../../mfc/dialog-data-exchange-and-validation.md)」を参照してください。
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
   **ヘッダー** afxdisp.h
 
@@ -474,7 +475,7 @@ void AFXAPI DDX_OCTextRO(
 
 DDX の詳細については、「 [ダイアログ データ エクスチェンジとダイアログ データ バリデーション](../../mfc/dialog-data-exchange-and-validation.md)」を参照してください。
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
   **ヘッダー** afxdisp.h
 

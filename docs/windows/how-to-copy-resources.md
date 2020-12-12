@@ -1,5 +1,6 @@
 ---
-title: '方法: リソースを管理するC++()'
+description: '詳細については、「方法: リソースを管理する (C++)」を参照してください。'
+title: '方法: リソースを管理する (C++)'
 ms.date: 02/14/2019
 f1_keywords:
 - vc.resvw.resource.copying
@@ -30,14 +31,14 @@ helpviewer_keywords:
 - cursors [C++], importing and exporting
 - images [C++], exporting
 ms.assetid: 65f523e8-017f-4fc6-82d1-083c56d9131f
-ms.openlocfilehash: 0af4e8faeb3d8606fb351b193364a2748fbc944e
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 3720cb5f3ab3b99ecba798abce1e4fdba25f8646
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80215216"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97329384"
 ---
-# <a name="how-to-manage-resources-c"></a>方法: リソースを管理するC++()
+# <a name="how-to-manage-resources-c"></a>方法: リソースを管理する (C++)
 
 ## <a name="copy-and-edit-resources"></a>リソースのコピーと編集
 
@@ -46,41 +47,41 @@ ms.locfileid: "80215216"
 既存のリソースまたは実行可能ファイルから現在のリソースファイルにリソースを簡単にコピーできます。 リソースをコピーするには、リソースが含まれている両方のファイルを同時に開き、1つのファイルから別のファイルに項目をドラッグします。2つのファイルをコピーして貼り付けることもできます。 このメソッドは、リソーススクリプト (.rc) ファイルとリソーステンプレート (.rct) ファイル、および実行可能 (.exe) ファイルとして機能します。
 
 > [!NOTE]
-> ビジュアルC++には、独自のアプリケーションで使用できるサンプルリソースファイルが含まれています。 詳細については、「[クリップアート: 共通リソース](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/general)」を参照してください。
+> Visual C++ には、独自のアプリケーションで使用できるサンプルリソースファイルが含まれています。 詳細については、「 [クリップアート: 共通リソース](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/general)」を参照してください。
 
 プロジェクト (**リソースビュー**) 内のリソースファイルと、ドキュメントウィンドウでスタンドアロンの .rc ファイルの間でドラッグアンドドロップ、コピー、切り取り、貼り付けを行うことはできません。 これは、以前のバージョンの製品で行うことができます。 プロジェクトの外部で開かれている .rc ファイル間でドラッグアンドドロップのメソッドのみを使用します。
 
 ### <a name="to-copy-resources"></a>リソースをコピーするには
 
-1. 2 つのリソース ファイルをスタンドアロンで開きます。 (「[リソーススクリプトファイルの使用」を](how-to-create-a-resource-script-file.md#use-resource-script-files)参照してください)。 たとえば、 *Source1*と*Source2*を開きます。
+1. 2 つのリソース ファイルをスタンドアロンで開きます。 (「 [リソーススクリプトファイルの使用」を](how-to-create-a-resource-script-file.md#use-resource-script-files)参照してください)。 たとえば、 *Source1* と *Source2* を開きます。
 
 1. 最初の .rc ファイル内で、次のいずれかの方法を実行します。
 
    - ドラッグアンドドロップの方法を使用する
 
-      1. コピーするリソースを選択します。 たとえば、 *Source1*で、 **[IDD_DIALOG1]** を選択します。
+      1. コピーするリソースを選択します。 たとえば、 *Source1* で、[ **IDD_DIALOG1**] を選択します。
 
-      1. **Ctrl**キーを押しながら、リソースを2番目の .rc ファイルにドラッグします。 たとえば、 **IDD_DIALOG1**を*Source1*から*Source2*にドラッグします。
+      1. **Ctrl** キーを押しながら、リソースを2番目の .rc ファイルにドラッグします。 たとえば、 **IDD_DIALOG1** を *Source1* から *Source2* にドラッグします。
 
          > [!TIP]
-         > **Ctrl**キーを押したままリソースをドラッグしても、リソースはコピーされずに移動します。
+         > **Ctrl** キーを押したままリソースをドラッグしても、リソースはコピーされずに移動します。
 
    - コピーと貼り付けの方法を使用する
 
-      1. コピーするリソース (たとえば、 *Source1*) を右クリックし、 **[コピー]** を選択します。
+      1. コピーするリソース (たとえば、 *Source1*) を右クリックし、[ **コピー**] を選択します。
 
-      1. リソースを貼り付けるリソースファイル (たとえば、 *Source2*) を右クリックし、 **[貼り付け]** を選択します。
+      1. リソースを貼り付けるリソースファイル (たとえば、 *Source2*) を右クリックし、[ **貼り付け**] を選択します。
 
 > [!NOTE]
-> 既存のファイルのシンボル名または値との競合を避けるC++ために、新しいファイルにコピーするときに、移動されたリソースのシンボル値またはシンボル名と値がビジュアルによって変更されることがあります。
+> 既存のファイルのシンボル名または値との競合を避けるために、新しいファイルにコピーするときに、転送されたリソースのシンボル値またはシンボルの名前と値が Visual C++ 変更されることがあります。
 
 リソースのコピー時に、リソースの言語プロパティ、条件プロパティ、またはその両方を変更できます。
 
-- リソースの言語では、検索対象のリソースを識別するために[Findresource](/windows/win32/api/winbase/nf-winbase-findresourcea)によって使用される言語を指定します。 リソースには、テキストに関連付けられていない言語ごとに異なるものを含めることができます。たとえば、日本語キーボードでのみ動作するアクセラレータや、中国語のローカライズされたビルドにのみ適したビットマップなどです。
+- リソースの言語では、検索対象のリソースを識別するために [Findresource](/windows/win32/api/winbase/nf-winbase-findresourcea) によって使用される言語を指定します。 リソースには、テキストに関連付けられていない言語ごとに異なるものを含めることができます。たとえば、日本語キーボードでのみ動作するアクセラレータや、中国語のローカライズされたビルドにのみ適したビットマップなどです。
 
 - リソースの条件とは、リソースの特定のコピーが使用される条件を識別する定義済みのシンボルです。
 
-リソースの言語と条件は、**ワークスペース**ウィンドウのリソース名の後にかっこで囲まれて表示されます。 ここで、`IDD_AboutBox` という名前のリソースは言語として `Finnish` を使用し、その条件は `XX33`ます。
+リソースの言語と条件は、 **ワークスペース** ウィンドウのリソース名の後にかっこで囲まれて表示されます。 ここで、という名前のリソースは言語として `IDD_AboutBox` を使用し、 `Finnish` その条件は次のようになり `XX33` ます。
 
 ```cpp
 IDD_AboutBox (Finnish - XX33)
@@ -88,26 +89,26 @@ IDD_AboutBox (Finnish - XX33)
 
 ### <a name="to-copy-an-existing-resource-and-change-its-language-or-condition"></a>既存のリソースをコピーして、そのリソースの言語または条件を変更するには
 
-*.Rc*ファイルまたは [[リソースビュー](how-to-create-a-resource-script-file.md#create-resources) ] ウィンドウで、コピーするリソースを右クリックし、 **[コピーの挿入]** を選択します。 次のように設定します。
+*.Rc* ファイルまたは [[リソースビュー](how-to-create-a-resource-script-file.md#create-resources) ] ウィンドウで、コピーするリソースを右クリックし、[**コピーの挿入**] を選択します。 次のように設定します。
 
-- **[言語]** ボックスの一覧で、言語を選択します。
+- [ **言語** ] ボックスの一覧で、言語を選択します。
 
-- **[条件]** ボックスに、条件を入力します。
+- [ **条件** ] ボックスに、条件を入力します。
 
 ### <a name="to-edit-resources"></a>リソースを編集するには
 
-マネージリソース (.resx) ファイルは XML ファイルです。 **[新しい項目の追加]** ダイアログボックスからマネージリソースファイルをプロジェクトに追加すると、 **[マネージリソースエディター]** が既定で開きます。
+マネージリソース (.resx) ファイルは XML ファイルです。 [ **新しい項目の追加** ] ダイアログボックスからマネージリソースファイルをプロジェクトに追加すると、[ **マネージリソースエディター** ] が既定で開きます。
 
-## <a name="import-and-export-resources"></a>リソースのインポートとエクスポート
+## <a name="import-and-export-resources"></a>リソースをインポートおよびエクスポートする
 
-グラフィカル リソース (ビットマップ、アイコン、カーソル、ツール バー)、HTML ファイル、および Visual C++ で使用するためのカスタム リソースをインポートすることができます。 Visual Studio C++プロジェクトから同じ種類のファイルをエクスポートして、開発環境の外部で使用できるファイルを分離することができます。
+グラフィカル リソース (ビットマップ、アイコン、カーソル、ツール バー)、HTML ファイル、および Visual C++ で使用するためのカスタム リソースをインポートすることができます。 Visual Studio C++ プロジェクトから同じ種類のファイルをエクスポートして、開発環境の外部で使用できるファイルを分離することができます。
 
 > [!NOTE]
 > アクセラレータ、ダイアログボックス、文字列テーブルなどのリソースの種類は、スタンドアロンのファイルの種類ではないため、インポートまたはエクスポートできません。
 
 ### <a name="to-import-a-resource-into-the-resource-script-file"></a>リソースをリソーススクリプトファイルにインポートするには
 
-1. で、リソースを追加するリソーススクリプト (.rc) ファイルのノードを右クリックし、 **[インポート]** を選択し[リソースビュー](how-to-create-a-resource-script-file.md#create-resources)ます。
+1. で、リソースを追加するリソーススクリプト (.rc) ファイルのノードを右クリックし、[**インポート**] を選択し [リソースビュー](how-to-create-a-resource-script-file.md#create-resources)ます。
 
 1. ビットマップ (.bmp)、アイコン (.ico)、カーソル (...)、html ファイル (.htm)、またはその他のインポートするファイルの名前を探して選択します。
 
@@ -116,18 +117,18 @@ IDD_AboutBox (Finnish - XX33)
 > [!NOTE]
 > インポートプロセスは、選択したリソースの種類に関係なく同じように動作します。 インポートされたリソースは、そのリソースの種類の適切なノードに自動的に追加されます。
 
-### <a name="to-export-a-resource-for-use-outside-of-visual-c"></a>ビジュアルの外部で使用するためにリソースをエクスポートするにはC++
+### <a name="to-export-a-resource-for-use-outside-of-visual-c"></a>Visual C++ の外部で使用するためにリソースをエクスポートするには
 
-1. [リソースビュー](how-to-create-a-resource-script-file.md#create-resources)で、エクスポートするリソースを右クリックし、 **[エクスポート]** を選択します。 現在のファイル名をそのまま使用することも、新しいファイル名を入力することもできます。
+1. [リソースビュー](how-to-create-a-resource-script-file.md#create-resources)で、エクスポートするリソースを右クリックし、[**エクスポート**] を選択します。 現在のファイル名をそのまま使用することも、新しいファイル名を入力することもできます。
 
-1. ファイルを保存するフォルダーに移動し、 **[エクスポート]** を選択します。
+1. ファイルを保存するフォルダーに移動し、[ **エクスポート**] を選択します。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 Win32
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[リソース ファイル](../windows/resource-files-visual-studio.md)<br/>
+[リソースファイル](../windows/resource-files-visual-studio.md)<br/>
 [方法: リソースを作成する](../windows/how-to-create-a-resource-script-file.md)<br/>
-[方法: コンパイル時にリソースをインクルードする](../windows/how-to-include-resources-at-compile-time.md)
+[方法: コンパイル時にリソースを含める](../windows/how-to-include-resources-at-compile-time.md)

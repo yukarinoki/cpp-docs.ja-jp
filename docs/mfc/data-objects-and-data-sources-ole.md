@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「データオブジェクトとデータソース (OLE)」を参照してください。
 title: データ オブジェクトとデータ ソース (OLE)
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - OLE [MFC], data objects
 - OLE [MFC], data sources
 ms.assetid: 8f68eed8-0ce8-4489-a4cc-f95554f89090
-ms.openlocfilehash: dfe400dddfecce3e52337f7f449e975dff2ca83e
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 719053e2a75b18fbf54440403351198acc66b9d3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84616218"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97291208"
 ---
 # <a name="data-objects-and-data-sources-ole"></a>データ オブジェクトとデータ ソース (OLE)
 
@@ -27,13 +28,13 @@ ms.locfileid: "84616218"
 
 次の記事では、アプリケーションでデータオブジェクトとデータソースを使用する方法について説明します。 この情報は、コンテナーとサーバーアプリケーションの両方に適用されます。これは、データのコピーと貼り付けを行うために両方が呼び出される可能性があるためです。
 
-- [データ オブジェクトとデータ ソース: 作成と破棄](data-objects-and-data-sources-creation-and-destruction.md)
+- [データオブジェクトとデータソース: 作成と破棄](data-objects-and-data-sources-creation-and-destruction.md)
 
-- [データ オブジェクトとデータ ソース: 操作](data-objects-and-data-sources-manipulation.md)
+- [データオブジェクトとデータソース: 操作](data-objects-and-data-sources-manipulation.md)
 
 ## <a name="in-this-section"></a>このセクションの内容
 
-[ドラッグアンドドロップ](drag-and-drop-ole.md)
+[ドラッグ アンド ドロップ](drag-and-drop-ole.md)
 
 [クリップボード](clipboard.md)
 

@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: コンパイラの警告 (レベル 4) C4706'
 title: コンパイラの警告 (レベル 4) C4706
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4706
 ms.assetid: 89cd3f4f-812c-4a4b-9426-65a5a6d1b99c
-ms.openlocfilehash: 2ff8794dcf29539b492f53bfdf6f0810988c0f72
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: ca614d0ca55dcfa22ec31df78ebe2be904ffd9e7
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74989909"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97208529"
 ---
 # <a name="compiler-warning-level-4-c4706"></a>コンパイラの警告 (レベル 4) C4706
 
@@ -49,7 +50,7 @@ int main()
 }
 ```
 
-関係をテストする必要があり、割り当てを行わない場合は、`==` 演算子を使用します。 たとえば、次の行は、a と b が等しいかどうかをテストします。
+関係をテストする必要があり、割り当てを行わない場合は、演算子を使用し `==` ます。 たとえば、次の行は、a と b が等しいかどうかをテストします。
 
 ```cpp
 // C4706c.cpp

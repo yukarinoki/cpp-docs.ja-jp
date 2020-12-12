@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「リンカツール Error LNK1301」を参照してください。
 title: リンカ ツール エラー LNK1301
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - LNK1301
 ms.assetid: 760da428-7182-4b25-b20a-de90d4b9a9cd
-ms.openlocfilehash: fe64eecfbc9fed57c3748afd5804b76d6e4284a4
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: ac282aea62836591c6e30abb3030ef2143a78003
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74990940"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97335950"
 ---
 # <a name="linker-tools-error-lnk1301"></a>リンカ ツール エラー LNK1301
 
@@ -21,7 +22,7 @@ LTCG clr モジュールが見つかりました。/LTCG: parameter と互換性
 
 ガイド付き最適化のプロファイルは、/clr モジュールではサポートされていません。
 
-詳細については、次のトピックを参照してください。
+詳細については、次を参照してください。
 
 - [/GL (プログラム全体の最適化)](../../build/reference/gl-whole-program-optimization.md)
 
@@ -35,7 +36,7 @@ LTCG clr モジュールが見つかりました。/LTCG: parameter と互換性
 
 1. /Clr を使用してコンパイルしないでください。または、いずれかの PGO パラメーターを/LTCG. にリンクしないでください。
 
-## <a name="example"></a>使用例
+## <a name="example"></a>例
 
 次の例では、LNK1301 が生成されます。
 

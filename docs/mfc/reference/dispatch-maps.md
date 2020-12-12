@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「ディスパッチマップ」を参照してください。
 title: ディスパッチ マップ
 ms.date: 06/20/2018
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - dispatch maps [MFC]
 - dispatch map macros [MFC]
 ms.assetid: bef9d08b-ad35-4c3a-99d8-04150c7c04e2
-ms.openlocfilehash: 24921f2da404a2e5103d9a3cd2abba03109f0681
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 3b160040af52e8346cbcbb09cc05c301f607052b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87222811"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97219968"
 ---
 # <a name="dispatch-maps"></a>ディスパッチ マップ
 
@@ -29,7 +30,7 @@ OLE オートメーションには、メソッドを呼び出し、アプリケ�
 |[DISP_PROPERTY_PARAM](#disp_property_param)|パラメーターを受け取り、Get 関数と Set 関数に名前を設定する OLE オートメーションプロパティを定義します。|
 |[DISP_DEFVALUE](#disp_defvalue)|既存のプロパティをオブジェクトの既定値にします。|
 
-## <a name="declare_dispatch_map"></a><a name="declare_dispatch_map"></a>DECLARE_DISPATCH_MAP
+## <a name="declare_dispatch_map"></a><a name="declare_dispatch_map"></a> DECLARE_DISPATCH_MAP
 
 `CCmdTarget`プログラムの派生クラスが OLE オートメーションをサポートしている場合、そのクラスは、メソッドとプロパティを公開するディスパッチマップを提供する必要があります。
 
@@ -44,17 +45,17 @@ DECLARE_DISPATCH_MAP()
 > [!NOTE]
 > DECLARE_DISPATCH_MAP 後にメンバーを宣言する場合は、 **`public`** そのメンバーに対して新しいアクセスの種類 (、 **`private`** 、または) を指定する必要があり **`protected`** ます。
 
-アプリケーションウィザードとコードウィザードは、オートメーションクラスを作成し、ディスパッチマップを維持する際に役立ちます。 ディスパッチマップの詳細については、「[オートメーションサーバー](../../mfc/automation-servers.md)」を参照してください。
+アプリケーションウィザードとコードウィザードは、オートメーションクラスを作成し、ディスパッチマップを維持する際に役立ちます。 ディスパッチマップの詳細については、「 [オートメーションサーバー](../../mfc/automation-servers.md)」を参照してください。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_MFCAutomation#10](../../mfc/codesnippet/cpp/dispatch-maps_1.h)]
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 **ヘッダー:** afxwin.h
 
-## <a name="begin_dispatch_map"></a><a name="begin_dispatch_map"></a>BEGIN_DISPATCH_MAP
+## <a name="begin_dispatch_map"></a><a name="begin_dispatch_map"></a> BEGIN_DISPATCH_MAP
 
 ディスパッチマップの定義を宣言します。
 
@@ -68,17 +69,17 @@ BEGIN_DISPATCH_MAP(theClass, baseClass)
 このディスパッチマップを所有するクラスの名前を指定します。
 
 *baseClass*<br/>
-*クラス*の基本クラス名を指定します。
+*クラス* の基本クラス名を指定します。
 
 ### <a name="remarks"></a>解説
 
 クラスのメンバー関数を定義する実装 (.cpp) ファイルで、BEGIN_DISPATCH_MAP マクロを使用してディスパッチマップを開始し、各ディスパッチ関数とプロパティにマクロエントリを追加し、END_DISPATCH_MAP マクロを使用してディスパッチマップを完成させます。
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 **ヘッダー :** afxdisp.h
 
-## <a name="end_dispatch_map"></a><a name="end_dispatch_map"></a>END_DISPATCH_MAP
+## <a name="end_dispatch_map"></a><a name="end_dispatch_map"></a> END_DISPATCH_MAP
 
 ディスパッチマップの定義を終了します。
 
@@ -90,11 +91,11 @@ END_DISPATCH_MAP()
 
 BEGIN_DISPATCH_MAP と組み合わせて使用する必要があります。
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 **ヘッダー :** afxdisp.h
 
-## <a name="disp_function"></a><a name="disp_function"></a>DISP_FUNCTION
+## <a name="disp_function"></a><a name="disp_function"></a> DISP_FUNCTION
 
 ディスパッチマップ内の OLE オートメーション関数を定義します。
 
@@ -126,7 +127,7 @@ DISP_FUNCTION(
 
 ### <a name="remarks"></a>解説
 
-*Vtretval*引数の型は VARTYPE です。 この引数に指定できる値は、列挙体から取得され `VARENUM` ます。
+*Vtretval* 引数の型は VARTYPE です。 この引数に指定できる値は、列挙体から取得され `VARENUM` ます。
 
 |Symbol|の戻り値の型 :|
 |------------|-----------------|
@@ -144,7 +145,7 @@ DISP_FUNCTION(
 |VT_VARIANT|VARIANT|
 |VT_UNKNOWN|LPUNKNOWN|
 
-*Vtsparc ams*引数は、定数の値をスペースで区切ったリストです `VTS_*` 。 これらの値のうち1つ以上 (コンマではない) で区切られた関数のパラメーターリストを指定します。 たとえば、次のように入力します。
+*Vtsparc ams* 引数は、定数の値をスペースで区切ったリストです `VTS_*` 。 これらの値のうち1つ以上 (コンマではない) で区切られた関数のパラメーターリストを指定します。 たとえば、次のように入力します。
 
 [!code-cpp[NVC_MFCAutomation#14](../../mfc/codesnippet/cpp/dispatch-maps_2.cpp)]
 
@@ -180,11 +181,11 @@ DISP_FUNCTION(
 |VTS_PUNKNOWN|`LPUNKNOWN*`|
 |VTS_NONE|パラメーターなし|
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 **ヘッダー :** afxdisp.h
 
-## <a name="disp_property"></a><a name="disp_property"></a>DISP_PROPERTY
+## <a name="disp_property"></a><a name="disp_property"></a> DISP_PROPERTY
 
 ディスパッチマップの OLE オートメーションプロパティを定義します。
 
@@ -212,7 +213,7 @@ DISP_PROPERTY(
 
 ### <a name="remarks"></a>解説
 
-*Vtproptype*引数は、 **VARTYPE**型です。 この引数に指定できる値は、VARENUM 列挙体から取得されます。
+*Vtproptype* 引数は、 **VARTYPE** 型です。 この引数に指定できる値は、VARENUM 列挙体から取得されます。
 
 |Symbol|プロパティの型|
 |------------|-----------------------|
@@ -229,13 +230,13 @@ DISP_PROPERTY(
 |VT_VARIANT|VARIANT|
 |VT_UNKNOWN|LPUNKNOWN|
 
-外部クライアントがプロパティを変更すると、 *memberName*によって指定されたメンバー変数の値が変更されます。変更の通知はありません。
+外部クライアントがプロパティを変更すると、 *memberName* によって指定されたメンバー変数の値が変更されます。変更の通知はありません。
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 **ヘッダー :** afxdisp.h
 
-## <a name="disp_property_ex"></a><a name="disp_property_ex"></a>DISP_PROPERTY_EX
+## <a name="disp_property_ex"></a><a name="disp_property_ex"></a> DISP_PROPERTY_EX
 
 OLE オートメーションプロパティを定義し、ディスパッチマップでプロパティの値を取得および設定するために使用する関数に名前を付けます。
 
@@ -267,15 +268,15 @@ DISP_PROPERTY_EX(
 
 ### <a name="remarks"></a>解説
 
-*Memberget*関数と*メンバメンバー*関数には、 *vtproptype*引数によって決定されるシグネチャがあります。 *Memberget*関数は引数を取らず、 *vtproptype*によって指定された型の値を返します。 *メンバセット*関数は、 *vtproptype*によって指定された型の引数を受け取り、nothing を返します。
+*Memberget* 関数と *メンバメンバー* 関数には、 *vtproptype* 引数によって決定されるシグネチャがあります。 *Memberget* 関数は引数を取らず、 *vtproptype* によって指定された型の値を返します。 *メンバセット* 関数は、 *vtproptype* によって指定された型の引数を受け取り、nothing を返します。
 
-*Vtproptype*引数は、VARTYPE 型です。 この引数に指定できる値は、VARENUM 列挙体から取得されます。 これらの値の一覧については、 [DISP_FUNCTION](#disp_function)の*Vtretval*パラメーターの解説を参照してください。 DISP_FUNCTION の解説に記載されている VT_EMPTY は、プロパティのデータ型として許可されていないことに注意してください。
+*Vtproptype* 引数は、VARTYPE 型です。 この引数に指定できる値は、VARENUM 列挙体から取得されます。 これらの値の一覧については、 [DISP_FUNCTION](#disp_function)の *Vtretval* パラメーターの解説を参照してください。 DISP_FUNCTION の解説に記載されている VT_EMPTY は、プロパティのデータ型として許可されていないことに注意してください。
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 **ヘッダー :** afxdisp.h
 
-## <a name="disp_property_notify"></a><a name="disp_property_notify"></a>DISP_PROPERTY_NOTIFY
+## <a name="disp_property_notify"></a><a name="disp_property_notify"></a> DISP_PROPERTY_NOTIFY
 
 ディスパッチマップで通知を使用して、OLE オートメーションプロパティを定義します。
 
@@ -300,16 +301,16 @@ DISP_PROPERTY_NOTIFY(
 プロパティが格納されているメンバー変数の名前。
 
 *pfnAfterSet*<br/>
-*Szexternalname*の通知関数の名前。
+*Szexternalname* の通知関数の名前。
 
 *vtPropType*<br/>
 プロパティの型を指定する値。
 
 ### <a name="remarks"></a>解説
 
-DISP_PROPERTY で定義されたプロパティとは異なり、DISP_PROPERTY_NOTIFY で定義されたプロパティは、プロパティが変更されたときに、 *Pfnafterset*によって指定された関数を自動的に呼び出します。
+DISP_PROPERTY で定義されたプロパティとは異なり、DISP_PROPERTY_NOTIFY で定義されたプロパティは、プロパティが変更されたときに、 *Pfnafterset* によって指定された関数を自動的に呼び出します。
 
-*Vtproptype*引数は、VARTYPE 型です。 この引数に指定できる値は、VARENUM 列挙体から取得されます。
+*Vtproptype* 引数は、VARTYPE 型です。 この引数に指定できる値は、VARENUM 列挙体から取得されます。
 
 |Symbol|プロパティの型|
 |------------|-----------------------|
@@ -326,11 +327,11 @@ DISP_PROPERTY で定義されたプロパティとは異なり、DISP_PROPERTY_N
 |VT_VARIANT|VARIANT|
 |VT_UNKNOWN|LPUNKNOWN|
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 **ヘッダー :** afxdisp.h
 
-## <a name="disp_property_param"></a><a name="disp_property_param"></a>DISP_PROPERTY_PARAM
+## <a name="disp_property_param"></a><a name="disp_property_param"></a> DISP_PROPERTY_PARAM
 
 個別のおよびメンバー関数でアクセスされるプロパティを定義し `Get` `Set` ます。
 
@@ -386,11 +387,11 @@ Get および set メンバー関数の次の宣言について考えてみま�
 
 [!code-cpp[NVC_MFCActiveXControl#12](../../mfc/codesnippet/cpp/dispatch-maps_6.cpp)]
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 **ヘッダー :** afxdisp.h
 
-## <a name="disp_defvalue"></a><a name="disp_defvalue"></a>DISP_DEFVALUE
+## <a name="disp_defvalue"></a><a name="disp_defvalue"></a> DISP_DEFVALUE
 
 既存のプロパティをオブジェクトの既定値にします。
 
@@ -412,7 +413,7 @@ DISP_DEFVALUE(theClass, pszName)
 
 オブジェクトの "既定値" は、オブジェクトへの参照にプロパティまたはメンバー関数が指定されていない場合に取得または設定されるプロパティです。
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 **ヘッダー :** afxdisp.h
 

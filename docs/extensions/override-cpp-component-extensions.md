@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: オーバーライド (C++/CLI および C++/CX)'
 title: override (C++/CLI および C++/CX)
 ms.date: 11/04/2016
 ms.topic: reference
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - overriding, override keyword [C++]
 - override keyword [C++]
 ms.assetid: 34d19257-1686-4fcd-96f5-af07c70ba914
-ms.openlocfilehash: 32c825539efe670528eab7416afefe07d4cb1b6c
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 1be49ac9b9e2d0f2eb3342855a42e9707f883078
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80172101"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97335936"
 ---
 # <a name="override--ccli-and-ccx"></a>override (C++/CLI および C++/CX)
 
@@ -57,7 +58,7 @@ ref struct X : public I1 {
 };
 ```
 
-#### <a name="requirements"></a>必要条件
+#### <a name="requirements"></a>要件
 
 コンパイラ オプション: `/ZW`
 
@@ -77,11 +78,11 @@ ref struct X : public I1 {
 };
 ```
 
-#### <a name="requirements"></a>必要条件
+#### <a name="requirements"></a>要件
 
 コンパイラ オプション: `/clr`
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[override 指定子](../cpp/override-specifier.md)<br/>
+[オーバーライド指定子](../cpp/override-specifier.md)<br/>
 [オーバーライド指定子](override-specifiers-cpp-component-extensions.md)
