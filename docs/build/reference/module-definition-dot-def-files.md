@@ -1,4 +1,5 @@
 ---
+description: 詳細については、Module-Definition () を参照してください。Def) ファイル
 title: モジュール定義 (.def) ファイル
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,42 +7,42 @@ helpviewer_keywords:
 - module definition files
 - .def files
 ms.assetid: 08c0bc28-c5d2-47aa-9624-7fc68bcaa4d8
-ms.openlocfilehash: 0047f24722644cd9a68bbbf827ced26ad085d4c1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d52141a2917b2c82616597b2d070a84b96d1a653
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62321229"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97137814"
 ---
 # <a name="module-definition-def-files"></a>モジュール定義 (.def) ファイル
 
-モジュール定義 (.def) ファイルは、エクスポート、属性、およびその他の情報をリンクできるプログラムの詳細については、リンカーを提供します。 .Def ファイルは、DLL を構築する際に最も役立ちます。 あるため、 [MSVC リンカー オプション](linker-options.md)使用できるモジュール定義ステートメントではなく .def ファイルは通常必要ありません。 使用することも[方式](../exporting-from-a-dll-using-declspec-dllexport.md)エクスポートされた関数を指定する方法として。
+モジュール定義 (.def) ファイルは、リンクするプログラムに関するエクスポート、属性、およびその他の情報に関する情報をリンカーに提供します。 .Def ファイルは、DLL をビルドするときに最も役立ちます。 モジュール定義ステートメントの代わりに使用できる [MSVC リンカーオプション](linker-options.md) があるため、.def ファイルは通常必要ありません。 エクスポートされた関数を指定する方法として、 [__declspec (dllexport)](../exporting-from-a-dll-using-declspec-dllexport.md) を使用することもできます。
 
-リンカーのフェーズ中に .def ファイルを呼び出すことができます、 [/DEF (モジュール定義ファイルの指定)](def-specify-module-definition-file.md)リンカー オプション。
+リンカーフェーズ中に、 [/def (Module-Definition ファイルの指定)](def-specify-module-definition-file.md) リンカーオプションを使用して、.def ファイルを呼び出すことができます。
 
-エクスポートを持たない .exe ファイルを作成する場合、.def ファイルを使用すると、出力ファイルの大規模かつ低速の読み込みが作成されます。
+エクスポートのない .exe ファイルをビルドする場合、.def ファイルを使用すると、出力ファイルのサイズが大きくなり、読み込みが遅くなります。
 
-例については、次を参照してください。 [DEF ファイルを使用する DLL からエクスポート](../exporting-from-a-dll-using-def-files.md)します。
+例については、「 [DEF ファイルを使用した DLL からのエクスポート](../exporting-from-a-dll-using-def-files.md)」を参照してください。
 
-詳細については、次のセクションを参照してください。
+詳しくは、以下のセクションをご覧ください。
 
-- [モジュール定義ステートメントに関する規則](rules-for-module-definition-statements.md)
+- [Module-Definition ステートメントの規則](rules-for-module-definition-statements.md)
 
 - [エクスポート](exports.md)
 
-- [ヒープサイズ](heapsize.md)
+- [HEAPSIZE](heapsize.md)
 
 - [ライブラリ](library.md)
 
-- [NAME](name-c-cpp.md)
+- [名前](name-c-cpp.md)
 
-- [セクション](sections-c-cpp.md)
+- [各項](sections-c-cpp.md)
 
-- [スタックサイズ](stacksize.md)
+- [STACKSIZE](stacksize.md)
 
 - [スタブ](stub.md)
 
-- [バージョン](version-c-cpp.md)
+- [VERSION](version-c-cpp.md)
 
 - [予約語](reserved-words.md)
 

@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: CStockPropImpl クラス'
 title: CStockPropImpl クラス
 ms.date: 05/06/2019
 f1_keywords:
@@ -64,12 +65,12 @@ helpviewer_keywords:
 - controls [ATL], stock properties
 - stock properties, ATL controls
 ms.assetid: 45f11d7d-6580-4a0e-872d-3bc8b836cfda
-ms.openlocfilehash: 9d54e4e5c49e73a12fc5d360c3963c2bcf5b2b38
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: d2d71b4b318daeb6590e36d30f71e37a5d2b52b9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88835585"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97140519"
 ---
 # <a name="cstockpropimpl-class"></a>CStockPropImpl クラス
 
@@ -114,7 +115,7 @@ class ATL_NO_VTABLE CStockPropImpl :
 タイプ ライブラリのマイナー バージョンです。 既定値は 0 です。
 
 *tihclass*<br/>
-*T*の型情報の管理に使用されるクラス。既定値は `CComTypeInfoHolder` です。
+*T* の型情報の管理に使用されるクラス。既定値は `CComTypeInfoHolder` です。
 
 ## <a name="members"></a>メンバー
 
@@ -192,7 +193,7 @@ Visual Studio では、ウィザードを使用してストックプロパティ
 
 - MouseIcon
 
-- 写真
+- Picture
 
 同じ3つのストックプロパティで、対応するデータメンバーが型である `CComPtr` か、代入演算子によって正しいインターフェイス参照カウントを提供するその他のクラスである必要があります。
 
@@ -204,7 +205,7 @@ Visual Studio では、ウィザードを使用してストックプロパティ
 
 `CStockPropImpl`
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** atlctl. h
 

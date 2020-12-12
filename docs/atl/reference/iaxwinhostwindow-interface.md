@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「IAxWinHostWindow インターフェイス」を参照してください。
 title: IAxWinHostWindow インターフェイス
 ms.date: 11/04/2016
 f1_keywords:
@@ -13,12 +14,12 @@ f1_keywords:
 helpviewer_keywords:
 - IAxWinHostWindow interface
 ms.assetid: 9821c035-cd52-4c46-b58a-9278064f09b4
-ms.openlocfilehash: 44681b94e0bd1dfd757ebfa19f83074785dd95f5
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 86cccd2b9ae19d5020cd1cf7ff2f0aff8759060e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88833375"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97139712"
 ---
 # <a name="iaxwinhostwindow-interface"></a>IAxWinHostWindow インターフェイス
 
@@ -50,7 +51,7 @@ interface IAxWinHostWindow : IUnknown
 
 このインターフェイスは、ATL の ActiveX コントロールのホストオブジェクトによって公開されます。 このインターフェイスのメソッドを呼び出して、ホストオブジェクトに対してコントロールを作成またはアタッチしたり、ホストされているコントロールからインターフェイスを取得したり、Web ブラウザーをホストするときに使用する外部ディスパッチインターフェイスまたは UI ハンドラーを設定したりします。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 このインターフェイスの定義は、次に示すように、IDL または C++ として使用できます。
 
@@ -61,7 +62,7 @@ interface IAxWinHostWindow : IUnknown
 
 ## <a name="iaxwinhostwindowattachcontrol"></a><a name="attachcontrol"></a> IAxWinHostWindow:: AttachControl
 
-*HWnd*で識別されるウィンドウを使用して、既存の (および以前に初期化された) コントロールをホストオブジェクトにアタッチします。
+*HWnd* で識別されるウィンドウを使用して、既存の (および以前に初期化された) コントロールをホストオブジェクトにアタッチします。
 
 ```
 STDMETHOD(AttachControl)(IUnknown* pUnkControl, HWND hWnd);
@@ -81,7 +82,7 @@ STDMETHOD(AttachControl)(IUnknown* pUnkControl, HWND hWnd);
 
 ## <a name="iaxwinhostwindowcreatecontrol"></a><a name="createcontrol"></a> IAxWinHostWindow::CreateControl
 
-コントロールを作成して初期化し、 *hWnd*で識別されるウィンドウでホストします。
+コントロールを作成して初期化し、 *hWnd* で識別されるウィンドウでホストします。
 
 ```
 STDMETHOD(CreateControl)(

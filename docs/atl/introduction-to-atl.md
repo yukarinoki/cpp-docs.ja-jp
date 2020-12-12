@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: ATL の概要'
 title: ATL の概要
 ms.custom: index-page
 ms.date: 11/04/2016
@@ -6,16 +7,16 @@ helpviewer_keywords:
 - COM objects, creating in ATL
 - ATL
 ms.assetid: 77f565e8-c4ec-4a80-af4b-7278fcfe5c98
-ms.openlocfilehash: 5eba816bc87eeebea2c41489a5d15c48645739e8
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 43a99dbd784b33f0595cccfa6014bdda17a2bdd1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69492109"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97147707"
 ---
 # <a name="introduction-to-atl"></a>ATL の概要
 
-ATL は、小規模で高速のコンポーネントオブジェクトモデル ( C++ COM) オブジェクトを簡単に作成できるテンプレートベースのクラスのセット Active Template Library です。 これには、 [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown)、 [IClassFactory](/windows/win32/api/unknwnbase/nn-unknwnbase-iclassfactory)、 [IClassFactory2](/windows/win32/api/ocidl/nn-ocidl-iclassfactory2)、および`IDispatch`の2つのインターフェイスのストック実装、標準の com 列挙子インターフェイス、接続ポイント、ティアオフなど、主要な com 機能が特別にサポートされています。インターフェイスおよび ActiveX コントロール。
+ATL は、小規模で高速のコンポーネントオブジェクトモデル (COM) オブジェクトを簡単に作成できる、テンプレートベースの C++ クラスのセットである Active Template Library です。 これには、 [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown)、 [IClassFactory](/windows/win32/api/unknwnbase/nn-unknwnbase-iclassfactory)、 [IClassFactory2](/windows/win32/api/ocidl/nn-ocidl-iclassfactory2)、およびの `IDispatch` 2 つのインターフェイス、標準 com 列挙子インターフェイス、コネクションポイント、ティアオフインターフェイス、ActiveX コントロールなどの主要な com 機能が特別にサポートされています。
 
 ATL コードを使用すると、シングルスレッドオブジェクト、アパートメントモデルオブジェクト、フリースレッドモデルオブジェクト、またはフリースレッドオブジェクトとアパートメントモデルオブジェクトの両方を作成できます。
 

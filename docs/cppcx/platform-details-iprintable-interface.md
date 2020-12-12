@@ -1,4 +1,5 @@
 ---
+description: '詳細については、「Platform::D etails:: IPrintable 可能なインターフェイス」を参照してください。'
 title: Platform::Details::IPrintable インターフェイス
 ms.date: 12/30/2016
 ms.topic: reference
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::Details::IPrintable Interface
 ms.assetid: b863a872-2563-4d90-88e0-c5a0bdde83f4
-ms.openlocfilehash: d6de13e05ffe6144fd6db0ba5e79f92c0a708dbb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 52a5645ab8108f28e5ef8e2d632a729d9d9e259d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62330415"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97145693"
 ---
 # <a name="platformdetailsiprintable-interface"></a>Platform::Details::IPrintable インターフェイス
 
@@ -24,7 +25,7 @@ ms.locfileid: "62330415"
 interface class IPrintable;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 ブラウザーで検査できるため、このインターフェイスは完全を期すためだけに提供されています。
 
@@ -32,12 +33,12 @@ interface class IPrintable;
 
 `Platform`
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
-**メタデータ:** platform.winmd
+**メタデータ:** platform. winmd
 
 **名前空間:** Platform::Details
 
 ## <a name="see-also"></a>関連項目
 
-[プラットフォーム Namespace](platform-namespace-c-cx.md)
+[Platform 名前空間](platform-namespace-c-cx.md)

@@ -1,26 +1,27 @@
 ---
+description: '詳細情報: MFC プログラムまたはコントロールのソースファイルとヘッダーファイル'
 title: MFC プログラムまたはコントロールのソース ファイルとヘッダー ファイル
 ms.date: 11/04/2016
 helpviewer_keywords:
 - file types [C++], MFC source and header
 ms.assetid: f61419a8-bf69-4bbb-8f7c-1734be5e6db6
-ms.openlocfilehash: 6a6561e993016e70764186114e1f7cabd93cdc2d
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
+ms.openlocfilehash: dfe20b2e458db72a14c9ccc78df6f481442b72b2
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65707435"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97137853"
 ---
 # <a name="mfc-program-or-control-source-and-header-files"></a>MFC プログラムまたはコントロールのソース ファイルとヘッダー ファイル
 
 Visual Studio で MFC プロジェクトを作成する場合、作成するプロジェクト用に選択したオプションに応じて、次のファイルが作成されます。 たとえば、プロジェクトに <*プロジェクト名*>dlg.cpp および <*プロジェクト名*>dlg.h ファイルが含まれるのは、ダイアログベースのプロジェクトまたはクラスを作成した場合だけです。
 
-これらのファイルはすべて、*Projname* ディレクトリ、およびソリューション エクスプローラーのヘッダー ファイル (.h ファイル) フォルダーまたはソース ファイル (.cpp ファイル) フォルダーにあります。
+これらのファイルはすべて、<*プロジェクト名*> ディレクトリ、およびソリューション エクスプローラーのヘッダー ファイル(.h ファイル) フォルダーまたはソース ファイル (.cpp ファイル) フォルダーにあります。
 
 |ファイル名|説明|
 |---------------|-----------------|
-|<*プロジェクト名*>.h|プログラムまたは DLL のメイン インクルード ファイルです。 すべてのグローバル シンボルおよび他のヘッダー ファイルに対する `#include` ディレクティブが含まれます。 `CWinApp` から `CPrjnameApp` クラスが派生され、`InitInstance` メンバー関数が宣言されています。 コントロールの場合、`CPrjnameApp` クラスは `COleControlModule` から派生されます。|
-|<*プロジェクト名*>.cpp|メイン プログラム ソース ファイルです。 `CWinApp` から派生する `CPrjnameApp` クラスのオブジェクトを 1 つ作成し、`InitInstance` メンバー関数をオーバーライドします。<br /><br /> 実行可能ファイルの場合、`CPrjnameApp::InitInstance` は複数のことを行います。 ドキュメントとビュー間の接続として機能するドキュメント テンプレートを登録し、メイン フレーム ウィンドウを作成し、空のドキュメントを作成します (または、アプリケーションに対するコマンド ライン引数として指定されている場合は、ドキュメントを開きます)。<br /><br /> DLL および ActiveX (旧称 OLE) コントロールの場合は、`CProjNameApp::InitInstance` は `COleObjectFactory::RegisterAll` を呼び出すことによってコントロールのオブジェクト ファクトリを OLE に登録し、`AfxOLEInit` を呼び出します。 さらに、メンバー関数 `CProjNameApp::ExitInstance` を使い、**AfxOleTerm** を呼び出してメモリからコントロールをアンロードします。<br /><br /> このファイルは、`DllRegisterServer` および `DllUnregisterServer` 関数を実装することにより、Windows 登録データベース内のコントロールの登録と登録解除も行います。|
+|*Projname*. h|プログラムまたは DLL のメイン インクルード ファイルです。 すべてのグローバル シンボルおよび他のヘッダー ファイルに対する `#include` ディレクティブが含まれます。 `CWinApp` から `CPrjnameApp` クラスが派生され、`InitInstance` メンバー関数が宣言されています。 コントロールの場合、`CPrjnameApp` クラスは `COleControlModule` から派生されます。|
+|*Projname*.cpp|プログラムの主要なソース ファイルです。 `CWinApp` から派生する `CPrjnameApp` クラスのオブジェクトを 1 つ作成し、`InitInstance` メンバー関数をオーバーライドします。<br /><br /> 実行可能ファイルの場合、`CPrjnameApp::InitInstance` は複数のことを行います。 ドキュメントとビュー間の接続として機能するドキュメント テンプレートを登録し、メイン フレーム ウィンドウを作成し、空のドキュメントを作成します (または、アプリケーションに対するコマンド ライン引数として指定されている場合は、ドキュメントを開きます)。<br /><br /> DLL および ActiveX (旧称 OLE) コントロールの場合は、`CProjNameApp::InitInstance` は `COleObjectFactory::RegisterAll` を呼び出すことによってコントロールのオブジェクト ファクトリを OLE に登録し、`AfxOLEInit` を呼び出します。 さらに、メンバー関数 `CProjNameApp::ExitInstance` を使い、**AfxOleTerm** を呼び出してメモリからコントロールをアンロードします。<br /><br /> このファイルは、`DllRegisterServer` および `DllUnregisterServer` 関数を実装することにより、Windows 登録データベース内のコントロールの登録と登録解除も行います。|
 |<*プロジェクト名*>ctrl.h、<*プロジェクト名*>ctrl.cpp|`CProjnameCtrl` クラスを宣言および実装します。 `CProjnameCtrl` は `COleControl` から派生し、コントロールを初期化、描画、およびシリアル化 (読み込みと保存) する一部のメンバー関数のスケルトン実装が定義されています。 メッセージ、イベント、およびディスパッチのマップも定義されています。|
 |<*プロジェクト名*>dlg.cpp、<*プロジェクト名*>dlg.h|ダイアログ ベースのアプリケーションを選択した場合に作成されます。 これらのファイルは `CProjnameDlg` という名前のダイアログ クラスから派生してそれを実装し、ダイアログを初期化してダイアログ データ交換 (DDX) を実行するスケルトン メンバー関数を含みます。 About ダイアログ クラスも、<*プロジェクト名*>.cpp 内ではなくこれらのファイルに配置されます。|
 |Dlgproxy.cpp、Dlgproxy.h|ダイアログ ベースのプログラムでは、メイン ダイアログのプロジェクトのオートメーション プロキシ クラスに対する実装およびヘッダー ファイルで。 オートメーションのサポートを選択した場合にのみ使用されます。|
@@ -35,5 +36,5 @@ Visual Studio で MFC プロジェクトを作成する場合、作成するプ�
 ## <a name="see-also"></a>関連項目
 
 [Visual Studio の C++ プロジェクトに対して作成されるファイルの種類](file-types-created-for-visual-cpp-projects.md)<br>
-[ATL プログラムまたはコントロールのソース ファイルとヘッダー ファイル](atl-program-or-control-source-and-header-files.md)<br>
+[ATL プログラムまたはコントロールのソースファイルとヘッダーファイル](atl-program-or-control-source-and-header-files.md)<br>
 [CLR プロジェクト](files-created-for-clr-projects.md)

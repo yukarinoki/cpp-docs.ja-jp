@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: CAtlComModule クラス'
 title: CAtlComModule クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -12,12 +13,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlComModule class
 ms.assetid: af5dd71a-a0d1-4a2e-9a24-154a03381c75
-ms.openlocfilehash: 4b8c98630b27c35ed6a7e32318c6ebad8a82a5c5
-ms.sourcegitcommit: 2bc15c5b36372ab01fa21e9bcf718fa22705814f
+ms.openlocfilehash: dbea2de34d684b1fa52af8576ed37de228c4ec08
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82168826"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97147551"
 ---
 # <a name="catlcommodule-class"></a>CAtlComModule クラス
 
@@ -49,9 +50,9 @@ class CAtlComModule : public _ATL_COM_MODULE
 
 ## <a name="remarks"></a>解説
 
-`CAtlComModule`COM サーバーモジュールを実装して、クライアントがモジュールのコンポーネントにアクセスできるようにします。
+`CAtlComModule` COM サーバーモジュールを実装して、クライアントがモジュールのコンポーネントにアクセスできるようにします。
 
-このクラスは、以前のバージョンの ATL で使用されていた古い[CComModule](../../atl/reference/ccommodule-class.md)クラスに代わるものです。 詳細については、「 [ATL モジュールクラス](../../atl/atl-module-classes.md)」を参照してください。
+このクラスは、以前のバージョンの ATL で使用されていた古い [CComModule](../../atl/reference/ccommodule-class.md) クラスに代わるものです。 詳細については、「 [ATL モジュールクラス](../../atl/atl-module-classes.md) 」を参照してください。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -59,11 +60,11 @@ class CAtlComModule : public _ATL_COM_MODULE
 
 `CAtlComModule`
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** atlbase. h
 
-## <a name="catlcommodulecatlcommodule"></a><a name="catlcommodule"></a>CAtlComModule::CAtlComModule
+## <a name="catlcommodulecatlcommodule"></a><a name="catlcommodule"></a> CAtlComModule::CAtlComModule
 
 コンストラクターです。
 
@@ -75,7 +76,7 @@ CAtlComModule() throw();
 
 モジュールを初期化します。
 
-## <a name="catlcommodulecatlcommodule"></a><a name="dtor"></a>CAtlComModule:: ~ CAtlComModule
+## <a name="catlcommodulecatlcommodule"></a><a name="dtor"></a> CAtlComModule:: ~ CAtlComModule
 
 デストラクターです。
 
@@ -87,7 +88,7 @@ CAtlComModule() throw();
 
 すべてのクラスファクトリを解放します。
 
-## <a name="catlcommoduleregisterserver"></a><a name="registerserver"></a>CAtlComModule::RegisterServer
+## <a name="catlcommoduleregisterserver"></a><a name="registerserver"></a> CAtlComModule::RegisterServer
 
 オブジェクトマップ内の各オブジェクトのシステムレジストリを更新するには、このメソッドを呼び出します。
 
@@ -109,9 +110,9 @@ HRESULT RegisterServer(BOOL bRegTypeLib = FALSE, const CLSID* pCLSID = NULL);
 
 ### <a name="remarks"></a>解説
 
-グローバル関数[AtlComModuleRegisterServer](server-registration-global-functions.md#atlcommoduleregisterserver)を呼び出します。
+グローバル関数 [AtlComModuleRegisterServer](server-registration-global-functions.md#atlcommoduleregisterserver)を呼び出します。
 
-## <a name="catlcommoduleregistertypelib"></a><a name="registertypelib"></a>CAtlComModule::RegisterTypeLib
+## <a name="catlcommoduleregistertypelib"></a><a name="registertypelib"></a> CAtlComModule::RegisterTypeLib
 
 タイプライブラリを登録するには、このメソッドを呼び出します。
 
@@ -123,7 +124,7 @@ HRESULT RegisterTypeLib();
 ### <a name="parameters"></a>パラメーター
 
 *lpszIndex*<br/>
-"\\\N" という形式の文字列。ここで、N は TYPELIB リソースの整数インデックスです。
+"\N" という形式の文字列 \\ 。ここで、N は TYPELIB リソースの整数インデックスです。
 
 ### <a name="return-value"></a>戻り値
 
@@ -133,7 +134,7 @@ HRESULT RegisterTypeLib();
 
 タイプライブラリに関する情報をシステムレジストリに追加します。 モジュールインスタンスに複数のタイプライブラリが含まれている場合は、このメソッドの最初のバージョンを使用して、使用するタイプライブラリを指定します。
 
-## <a name="catlcommoduleunregisterserver"></a><a name="unregisterserver"></a>CAtlComModule::UnregisterServer
+## <a name="catlcommoduleunregisterserver"></a><a name="unregisterserver"></a> CAtlComModule::UnregisterServer
 
 オブジェクトマップ内の各オブジェクトの登録を解除するには、このメソッドを呼び出します。
 
@@ -157,9 +158,9 @@ HRESULT UnregisterServer(
 
 ### <a name="remarks"></a>解説
 
-グローバル関数[AtlComModuleUnregisterServer](server-registration-global-functions.md#atlcommoduleunregisterserver)を呼び出します。
+グローバル関数 [AtlComModuleUnregisterServer](server-registration-global-functions.md#atlcommoduleunregisterserver)を呼び出します。
 
-## <a name="catlcommoduleunregistertypelib"></a><a name="unregistertypelib"></a>CAtlComModule::UnRegisterTypeLib
+## <a name="catlcommoduleunregistertypelib"></a><a name="unregistertypelib"></a> CAtlComModule::UnRegisterTypeLib
 
 タイプライブラリの登録を解除するには、このメソッドを呼び出します。
 
@@ -171,7 +172,7 @@ HRESULT UnRegisterTypeLib();
 ### <a name="parameters"></a>パラメーター
 
 *lpszIndex*<br/>
-"\\\N" という形式の文字列。ここで、N は TYPELIB リソースの整数インデックスです。
+"\N" という形式の文字列 \\ 。ここで、N は TYPELIB リソースの整数インデックスです。
 
 ### <a name="remarks"></a>解説
 

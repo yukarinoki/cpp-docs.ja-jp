@@ -1,14 +1,15 @@
 ---
+description: '詳細情報: プロジェクトの作成 (ATL チュートリアル、パート 1)'
 title: プロジェクトの作成 (ATL チュートリアル、パート 1)
 ms.custom: get-started-article
 ms.date: 08/19/2019
 ms.assetid: f6b727d1-390a-4b27-b82f-daadcd9fc059
-ms.openlocfilehash: 8a0374fcaf9a18c82e90bde2abc032158ecc537a
-ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
+ms.openlocfilehash: f594294b5d97222791a3f3f43c147fae9514889b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "92923867"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97148087"
 ---
 # <a name="creating-the-project-atl-tutorial-part-1"></a>プロジェクトの作成 (ATL チュートリアル、パート 1)
 
@@ -37,9 +38,9 @@ ms.locfileid: "92923867"
 
 ### <a name="to-create-the-initial-atl-project-using-the-atl-project-wizard"></a>ATL プロジェクトウィザードを使用して最初の ATL プロジェクトを作成するには
 
-1. Visual Studio 2017 以前の場合: [ **ファイル** ] [  >  **新しい**  >  **プロジェクト** ]。 [ **Visual C++** ] タブを開き、[ **MFC/ATL** ] を選択します。 [ **ATL プロジェクト** ] を選択します。
+1. Visual Studio 2017 以前の場合: [**ファイル**] [  >  **新しい**  >  **プロジェクト**]。 [ **Visual C++** ] タブを開き、[ **MFC/ATL**] を選択します。 [ **ATL プロジェクト**] を選択します。
 
-   Visual Studio 2019: [ **ファイル** ] [新規作成] [プロジェクト] の順に選択し、  >  **New**  >  **Project** 検索ボックスに「atl」と入力して、[ **atl プロジェクト** ] を選択します。
+   Visual Studio 2019: [**ファイル**] [新規作成] [プロジェクト] の順に選択し、  >    >  検索ボックスに「atl」と入力して、[ **atl プロジェクト**] を選択します。
 
 1. プロジェクト名として「 *Polygon* 」と入力します。
 
@@ -61,7 +62,7 @@ Visual Studio では、複数のファイルを生成することでプロジェ
 |Polygon|リソースファイル。最初はバージョン情報とプロジェクト名を含む文字列が含まれています。|
 |Resource.h|リソース ファイルのヘッダー ファイルです。|
 |Polygonps|このモジュール定義ファイルは、アパートメント間の呼び出しをサポートするプロキシおよびスタブコードに必要なエクスポートに関する情報をリンカーに提供します。|
-|stdafx.cpp|Stdafx.h にするファイル `#include` *stdafx.h* 。|
+|stdafx.cpp|Stdafx.h にするファイル `#include` 。|
 |stdafx.h|`#include`ATL ヘッダーファイルをプリコンパイルするファイル。|
 
 ::: moniker-end
@@ -77,16 +78,16 @@ Visual Studio では、複数のファイルを生成することでプロジェ
 |Polygon|リソースファイル。最初はバージョン情報とプロジェクト名を含む文字列が含まれています。|
 |Resource.h|リソース ファイルのヘッダー ファイルです。|
 |Polygonps|このモジュール定義ファイルは、アパートメント間の呼び出しをサポートするプロキシおよびスタブコードに必要なエクスポートに関する情報をリンカーに提供します。|
-|pch|.Pch になるファイル `#include` *pch.h* 。|
+|pch|.Pch になるファイル `#include` 。|
 |.pch. h|`#include`ATL ヘッダーファイルをプリコンパイルするファイル。|
 
 ::: moniker-end
 
 1. **ソリューションエクスプローラー** で、プロジェクトを右クリックし `Polygon` ます。
 
-1. ショートカットメニューの [ **プロパティ** ] をクリックします。
+1. ショートカットメニューの [ **プロパティ**] をクリックします。
 
-1. [ **リンカー** ] をクリックします。 **UserRedirection** オプションを **[はい]** に変更します。
+1. [ **リンカー**] をクリックします。 **UserRedirection** オプションを **[はい]** に変更します。
 
 1. **[OK]** をクリックします。
 
@@ -94,6 +95,6 @@ Visual Studio では、複数のファイルを生成することでプロジェ
 
 [手順2に進みます。](../atl/adding-a-control-atl-tutorial-part-2.md)
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 
 [チュートリアル](../atl/active-template-library-atl-tutorial.md)

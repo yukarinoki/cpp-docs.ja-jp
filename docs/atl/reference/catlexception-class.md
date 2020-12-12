@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: CAtlException クラス'
 title: CAtlException クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -9,12 +10,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlException class
 ms.assetid: 3fd7b041-f70d-4292-b947-0d70781d95a8
-ms.openlocfilehash: f09d9b2f46233cf356f5ade8a5b90e08a213d276
-ms.sourcegitcommit: 2bc15c5b36372ab01fa21e9bcf718fa22705814f
+ms.openlocfilehash: b6d788bc8d852fa0b8d091682ff7740aa4ebbbed
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82168203"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97147473"
 ---
 # <a name="catlexception-class"></a>CAtlException クラス
 
@@ -48,15 +49,15 @@ class CAtlException
 
 ## <a name="remarks"></a>解説
 
-オブジェクト`CAtlException`は、ATL 操作に関連する例外条件を表します。 クラス`CAtlException`には、例外の理由を示すステータスコードを格納するパブリックデータメンバーと、例外を HRESULT として扱うことができるキャスト演算子が含まれています。
+オブジェクトは、 `CAtlException` ATL 操作に関連する例外条件を表します。 クラスには、 `CAtlException` 例外の理由を示すステータスコードを格納するパブリックデータメンバーと、例外を HRESULT として扱うことができるキャスト演算子が含まれています。
 
-一般に、オブジェクトを`AtlThrow` `CAtlException`直接作成するのではなく、を呼び出します。
+一般に、 `AtlThrow` オブジェクトを直接作成するのではなく、を呼び出し `CAtlException` ます。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** atlexcept. h
 
-## <a name="catlexceptioncatlexception"></a><a name="catlexception"></a>CAtlException::CAtlException
+## <a name="catlexceptioncatlexception"></a><a name="catlexception"></a> CAtlException::CAtlException
 
 コンストラクターです。
 
@@ -67,10 +68,10 @@ CAtlException() throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*hr*<br/>
+*時間*<br/>
 HRESULT エラー コード。
 
-## <a name="catlexceptionoperator-hresult"></a><a name="operator_hresult"></a>CAtlException:: operator HRESULT
+## <a name="catlexceptionoperator-hresult"></a><a name="operator_hresult"></a> CAtlException:: operator HRESULT
 
 現在のオブジェクトを HRESULT 値にキャストします。
 
@@ -78,7 +79,7 @@ HRESULT エラー コード。
 operator HRESULT() const throw ();
 ```
 
-## <a name="catlexceptionm_hr"></a><a name="m_hr"></a>CAtlException:: m_hr
+## <a name="catlexceptionm_hr"></a><a name="m_hr"></a> CAtlException:: m_hr
 
 HRESULT データメンバー。
 

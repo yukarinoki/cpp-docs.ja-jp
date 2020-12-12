@@ -1,5 +1,6 @@
 ---
-title: MIDL コンパイラのプロパティ ページ
+description: '詳細情報: MIDL プロパティページ'
+title: MIDL コンパイラプロパティページ
 ms.date: 07/24/2019
 ms.topic: article
 ms.assetid: 57498a01-fccc-4a0e-a036-6ff702f83126
@@ -47,48 +48,48 @@ f1_keywords:
 - VC.Project.VCMidlTool.RedirectOutputAndErrors
 - VC.Project.VCMidlTool.MinimumTargetSystem
 - vc.project.AdditionalOptionsPage
-ms.openlocfilehash: d6833230baca892836c187799df7f0658aa16772
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 12cc0791bfadf7611d62ab16fc788081f4c7b7e1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81336250"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97137827"
 ---
 # <a name="midl-property-pages"></a>[MIDL] プロパティ ページ
 
-MIDL プロパティ ページは、 のアイテム プロパティとして使用できます。COM を使用する C++ プロジェクトの IDL ファイル。 [MIDL コンパイラ](/windows/win32/midl/using-the-midl-compiler-2)を構成するために使用します。 C++ プロジェクト用の MIDL オプションにプログラムでアクセスする方法の詳細については、<xref:Microsoft.VisualStudio.VCProjectEngine.VCMidlTool> オブジェクトに関するページを参照してください。 [「MIDL コマンド ラインの一般的な構文](/windows/win32/midl/general-midl-command-line-syntax)」も参照してください。
+MIDL プロパティページは、の項目プロパティとして使用できます。COM を使用する C++ プロジェクトの IDL ファイル。 それらを使用して [MIDL コンパイラ](/windows/win32/midl/using-the-midl-compiler-2)を構成します。 C++ プロジェクト用の MIDL オプションにプログラムでアクセスする方法の詳細については、<xref:Microsoft.VisualStudio.VCProjectEngine.VCMidlTool> オブジェクトに関するページを参照してください。 「 [一般的な MIDL コマンドライン構文](/windows/win32/midl/general-midl-command-line-syntax)」も参照してください。
 
-## <a name="general-property-page"></a>[全般] プロパティ ページ
+## <a name="general-property-page"></a>[全般] プロパティページ
 
 ### <a name="preprocessor-definitions"></a>プリプロセッサの定義
 
-MIDL マクロ ([/D](/windows/win32/midl/-d)) マクロ\[\]を含む 1 つまたは複数の定義を指定します。
+MIDL マクロ ([/d](/windows/win32/midl/-d)) マクロを含め、1つまたは複数の定義を指定し \[ \] ます。
 
 ### <a name="additional-include-directories"></a>追加のインクルード ディレクトリ
 
-インクルード パス ([/I](/windows/win32/midl/-i)\[パス\]) に追加する 1 つ以上のディレクトリを指定します。
+インクルードパス ([/i](/windows/win32/midl/-i)パス) に追加する1つ以上のディレクトリを指定し \[ \] ます。
 
-### <a name="additional-metadata-directories"></a>追加のメタデータ ディレクトリ
+### <a name="additional-metadata-directories"></a>追加のメタデータディレクトリ
 
-ファイル ([/metadata_dir](/windows/win32/midl/-metadata-dir)\[パス\]) を含むディレクトリを指定します。
+Windows の WinMD ファイル ([/metadata_dir](/windows/win32/midl/-metadata-dir)パス) が格納されているディレクトリを指定し \[ \] ます。
 
 ### <a name="enable-windows-runtime"></a>Windows ランタイムを有効にする
 
-Windows ランタイム セマンティクスを有効にして、Windows メタデータ ファイル ([/winrt](/windows/win32/midl/-winrt)) を作成します。
+Windows メタデータファイル ([winrt](/windows/win32/midl/-winrt)) を作成するための Windows ランタイムセマンティクスを有効にします。
 
-### <a name="ignore-standard-include-path"></a>標準インクルードパスを無視
+### <a name="ignore-standard-include-path"></a>標準インクルードパスを無視する
 
-現在のディレクトリと INCLUDE ディレクトリ ([/no_def_idir](/windows/win32/midl/-no-def-idir)) は無視します。
+現在のディレクトリとインクルードディレクトリを無視します ([/no_def_idir](/windows/win32/midl/-no-def-idir))。
 
-### <a name="mktyplib-compatible"></a>互換性のある MkTypLib
+### <a name="mktyplib-compatible"></a>MkTypLib 互換
 
 mktyplib.exe バージョン 2.03 ([/mktyplib203](/windows/win32/midl/-mktyplib203)) との互換性を強制します。
 
 ### <a name="warning-level"></a>警告レベル
 
-MIDL コード エラーの厳密さを選択します ([/W](/windows/win32/midl/-w))。
+MIDL コードエラーの厳格度 ([/w](/windows/win32/midl/-w)) を選択します。
 
-**選択肢**
+**Choices**
 
 - **1**
 - **1**
@@ -98,188 +99,188 @@ MIDL コード エラーの厳密さを選択します ([/W](/windows/win32/midl
 
 ### <a name="treat-warnings-as-errors"></a>[警告をエラーとして扱う]
 
-MIDL がすべての警告をエラー ([/WX](/windows/win32/midl/-wx)) として扱うようにします。
+MIDL ですべての警告をエラーとして扱う ([/wx](/windows/win32/midl/-wx)) ことができます。
 
 ### <a name="suppress-startup-banner"></a>著作権情報の非表示
 
-スタートアップ バナーと情報メッセージ ([/nologo](/windows/win32/midl/-nologo)) の表示を抑制します。
+著作権情報メッセージ ([/nologo](/windows/win32/midl/-nologo)) の表示を抑制します。
 
-### <a name="c-compiler-char-type"></a>C コンパイラの文字タイプ
+### <a name="c-compiler-char-type"></a>C コンパイラの Char 型
 
-生成されたコードのコンパイルに使用される C コンパイラの既定の文字型を指定します。 ([/char](/windows/win32/midl/-char)符号付き|符号なし|ascii7)。
+生成されたコードをコンパイルするために使用される C コンパイラの既定の文字型を指定します。 ([/文字](/windows/win32/midl/-char) 符号付き | unsigned | ascii7)。
 
-**選択肢**
+**Choices**
 
-- **署名済**み - 署名済み
-- **符号なし**- 未署名
-- **アスキー** - アスキー
+- **署名** 済み
+- **符号** なし-符号なし
+- **Ascii** -ascii
 
 ### <a name="target-environment"></a>ターゲット環境
 
-対象とする環境を指定します[(/env](/windows/win32/midl/-env) arm32|win32|ia64|x64)。
+ターゲットにする環境を指定します ([/env](/windows/win32/midl/-env) arm32 | win32 | ia64 | x64)。
 
-**選択肢**
+**Choices**
 
-- **設定されていません**- Win32
-- **マイクロソフトウィンドウズ 32ビット**- Win32
-- **マイクロソフトのウィンドウズ 64 ビット オン イタニウム**- IA64
-- **マイクロソフト ウィンドウズ アーム**- アーム
-- **マイクロソフト ウィンドウズ ARM64** - ARM64
-- **マイクロソフトのウィンドウズ 64 ビット x64 - X64**
+- **設定なし** -Win32
+- **Microsoft Windows 32-bit** -Win32
+- **Itanium の Microsoft Windows 64-bit** -IA64
+- **Microsoft WINDOWS arm** -arm
+- **Microsoft WINDOWS ARM64** -ARM64
+- **Microsoft Windows 64-bit on x64** -x64
 
-### <a name="generate-stubless-proxies"></a>スタブレス プロキシの生成
+### <a name="generate-stubless-proxies"></a>スタブレスプロキシの生成
 
-オブジェクト インターフェイス ([/Oicf](/windows/win32/midl/-oi)、 [/Oif](/windows/win32/midl/-oi) ) の拡張とスタブレス プロキシを備えた完全に解釈されたスタブを生成します。
+オブジェクトインターフェイス ([/Oicf](/windows/win32/midl/-oi)、 [/Oif](/windows/win32/midl/-oi) ) の拡張機能とスタブレスプロキシを使用して、完全に解釈されたスタブを生成します。
 
 ### <a name="suppress-compiler-warnings"></a>コンパイラ警告の非表示
 
-コンパイラの警告メッセージを表示しない ([/no_warn](/windows/win32/midl/-no-warn))。
+コンパイラの警告メッセージを非表示にします ([/no_warn](/windows/win32/midl/-no-warn))。
 
 ### <a name="application-configuration-mode"></a>アプリケーション構成モード
 
-IDL ファイル内の選択した ACF 属性を許可する ([/app_config](/windows/win32/midl/-app-config))。
+IDL ファイル ([/app_config](/windows/win32/midl/-app-config)) で選択した acf 属性を許可します。
 
 ### <a name="locale-id"></a>ロケール ID
 
-入力ファイル、ファイル名、およびディレクトリ パス[(/lcid](/windows/win32/midl/-lcid) DECIMAL) の LCID を指定します。
+入力ファイルの LCID、ファイル名、およびディレクトリパス ([/Lcid](/windows/win32/midl/-lcid) DECIMAL) を指定します。
 
-### <a name="multi-processor-compilation"></a>マルチプロセッサ コンパイル
+### <a name="multi-processor-compilation"></a>マルチプロセッサコンパイル
 
 複数のインスタンスを同時に実行します。
 
-## <a name="output-property-page"></a>出力プロパティ ページ
+## <a name="output-property-page"></a>[出力] プロパティページ
 
 ### <a name="output-directory"></a>出力ディレクトリ
 
-出力ディレクトリ[(/out](/windows/win32/midl/-out) [ディレクトリ]) を指定します。
+出力ディレクトリ ([/out](/windows/win32/midl/-out) [ディレクトリ]) を指定します。
 
-### <a name="metadata-file"></a>メタデータ ファイル
+### <a name="metadata-file"></a>メタデータファイル
 
-生成されるメタデータ ファイルの名前[(/winmd](/windows/win32/midl/-winmd)ファイル名) を指定します。
+生成されたメタデータファイルの名前 ([/winmd](/windows/win32/midl/-winmd) ファイル名) を指定します。
 
 ### <a name="header-file"></a>ヘッダー ファイル
 
-生成されるヘッダー ファイルの名前[(/h](/windows/win32/midl/-h)ファイル名) を指定します。
+生成されるヘッダーファイルの名前を指定します ([/h](/windows/win32/midl/-h) ファイル名)。
 
-### <a name="dlldata-file"></a>Dll データ ファイル
+### <a name="dlldata-file"></a>DllData ファイル
 
-DLLDATA ファイルの名前[(/dlldata](/windows/win32/midl/-dlldata)ファイル名) を指定します。
+DLLDATA ファイル ([/dlldata](/windows/win32/midl/-dlldata) ファイル名) の名前を指定します。
 
 ### <a name="iid-file"></a>IID ファイル
 
-インターフェイス識別子ファイル[(/iid](/windows/win32/midl/-iid)ファイル名) の名前を指定します。
+インターフェイス識別子ファイル ([iid](/windows/win32/midl/-iid) ファイル名) の名前を指定します。
 
-### <a name="proxy-file"></a>プロキシ ファイル
+### <a name="proxy-file"></a>プロキシファイル
 
-プロキシ ファイルの名前[(/proxy](/windows/win32/midl/-proxy)ファイル名) を指定します。
+プロキシファイルの名前 ([/プロキシ](/windows/win32/midl/-proxy) ファイル名) を指定します。
 
-### <a name="generate-type-library"></a>タイプ ライブラリの生成
+### <a name="generate-type-library"></a>タイプライブラリの生成
 
-タイプ ライブラリを生成しないように指定します ([/notlb] を no にします)。
+タイプライブラリを生成しないように指定します ([/notlb] (いいえ))。
 
-### <a name="type-library"></a>タイプ ライブラリ
+### <a name="type-library"></a>タイプライブラリ
 
-タイプ ライブラリ ファイルの名前[(/tlb](/windows/win32/midl/-tlb)ファイル名) を指定します。
+タイプライブラリファイルの名前を指定します ([/tlb](/windows/win32/midl/-tlb) ファイル名)。
 
-### <a name="generate-client-stub-files"></a>クライアント スタブ ファイルの生成
+### <a name="generate-client-stub-files"></a>クライアントスタブファイルの生成
 
-クライアント スタブ ファイルのみを生成します[(/クライアント](/windows/win32/midl/-client)[スタブ|なし])。
+クライアントスタブファイルのみを生成します ([/client](/windows/win32/midl/-client) [スタブ | なし])。
 
-**選択肢**
+**Choices**
 
-- **スタブ**- スタブ
-- **なし**- なし
+- **スタブ** スタブ
+- **なし** -なし
 
-### <a name="generate-server-stub-files"></a>サーバー スタブ ファイルの生成
+### <a name="generate-server-stub-files"></a>サーバースタブファイルの生成
 
-サーバー スタブ ファイルのみを生成します ([/server](/windows/win32/midl/-server) [スタブ|なし])。
+サーバースタブファイルのみを生成します ([/server](/windows/win32/midl/-server) [スタブ | なし])。
 
-**選択肢**
+**Choices**
 
-- **スタブ**- スタブ
-- **なし**- なし
+- **スタブ** スタブ
+- **なし** -なし
 
-### <a name="client-stub-file"></a>クライアント スタブ ファイル
+### <a name="client-stub-file"></a>クライアントスタブファイル
 
-クライアント スタブ ファイル[(/cstub](/windows/win32/midl/-cstub) [ファイル]) を指定します。
+クライアントスタブファイルを指定します ([/cスタブ](/windows/win32/midl/-cstub) [ファイル])。
 
-### <a name="server-stub-file"></a>サーバー スタブ ファイル
+### <a name="server-stub-file"></a>サーバースタブファイル
 
-サーバー スタブ ファイル[(/sstub](/windows/win32/midl/-sstub) [ファイル]) を指定します。
+サーバースタブファイル ([/sstub](/windows/win32/midl/-sstub) [ファイル]) を指定します。
 
-### <a name="type-library-format"></a>タイプ ライブラリ形式
+### <a name="type-library-format"></a>タイプライブラリ形式
 
-タイプ ライブラリ ファイル形式 ([/oldtlb|/newtlb]) を指定します。
+タイプライブラリファイル形式を指定します ([/oldtlb |/newtlb])。
 
-**選択肢**
+**Choices**
 
-- **新しい書式**- 新しい書式
-- **古い形式**- 古い形式
+- **Newformat** -新しい形式
+- **Oldformat** -old 形式
 
-## <a name="advanced-property-page"></a>[詳細プロパティ] ページ
+## <a name="advanced-property-page"></a>[詳細設定] プロパティページ
 
 ### <a name="c-preprocess-options"></a>C 前処理オプション
 
-C コンパイラ プリプロセッサ[(/cpp_opt](/windows/win32/midl/-cpp-opt)スイッチ) に渡すスイッチを指定します。
+C コンパイラプリプロセッサ ([/cpp_opt](/windows/win32/midl/-cpp-opt) スイッチ) に渡すスイッチを指定します。
 
 ### <a name="undefine-preprocessor-definitions"></a>指定したプリプロセッサ定義の無効化
 
-MIDL マクロ ([/U](/windows/win32/midl/-U) [マクロ]) を含む、1 つ以上の未定義を指定します。
+MIDL マクロ ([/u](/windows/win32/midl/-U)  [マクロ]) を含め、1つ以上の未定義を指定します。
 
-### <a name="enable-error-checking"></a>エラー チェックを有効にする
+### <a name="enable-error-checking"></a>エラーチェックを有効にする
 
-エラー チェック オプションを選択します ([エラー all|none])。
+エラーチェックオプションを選択します ([/エラーすべて | なし])。
 
-**選択肢**
+**Choices**
 
-- **カスタムを有効に**する - すべて
-- **すべて**- すべて
-- **なし**- なし
+- **EnableCustom** -すべて
+- **すべて** -すべて
+- **なし** -なし
 
-### <a name="check-allocations"></a>配賦の確認
+### <a name="check-allocations"></a>割り当ての確認
 
-メモリ不足エラー[(/エラー](/windows/win32/midl/-error)割り当て) を確認します。
+メモリ不足エラーをチェックします ([/エラー](/windows/win32/midl/-error) 割り当て)。
 
-### <a name="check-bounds"></a>境界の確認
+### <a name="check-bounds"></a>範囲のチェック
 
-サイズと伝送長の指定を確認する ([/エラー](/windows/win32/midl/-error) bounds_check)。
+[サイズと転送の長さの指定] ([エラー](/windows/win32/midl/-error) bounds_check) を確認します。
 
-### <a name="check-enum-range"></a>列挙範囲の確認
+### <a name="check-enum-range"></a>列挙型の範囲のチェック
 
-列挙値が許容範囲内に入ることを確認します ([/エラー](/windows/win32/midl/-error)列挙 )。
+列挙値が許容範囲内であることを確認してください ([/エラー](/windows/win32/midl/-error) 列挙型)。
 
-### <a name="check-reference-pointers"></a>参照ポインタの確認
+### <a name="check-reference-pointers"></a>参照ポインターの確認
 
-ref ポインターが null 以外の場合[(/エラー](/windows/win32/midl/-error) ref) を確認します。
+参照ポインターが null 以外 ([/エラー](/windows/win32/midl/-error) 参照) であることを確認してください。
 
-### <a name="check-stub-data"></a>スタブ データの確認
+### <a name="check-stub-data"></a>スタブデータのチェック
 
-サーバー側スタブ データの有効性[(/エラー](/windows/win32/midl/-error) stub_data) の追加チェックを行います。
+サーバー側のスタブデータの有効性について追加のチェックを生成します ([/エラー](/windows/win32/midl/-error) stub_data)。
 
-### <a name="prepend-with-abi-namespace"></a>'ABI' 名前空間を先頭に付け
+### <a name="prepend-with-abi-namespace"></a>' ABI ' 名前空間を先頭に付ける
 
-'ABI' 名前空間をすべての型の前に付ける。  ([/ns_prefix](/windows/win32/midl/-ns-prefix))。
+' ABI ' 名前空間をすべての型に先頭に付加します。  ([/ns_prefix](/windows/win32/midl/-ns-prefix))。
 
 ### <a name="validate-parameters"></a>パラメーターの検証
 
-パラメータを検証するための追加情報を生成します ([/強い](/windows/win32/midl/-robust) | [/no_robust](/windows/win32/midl/-no-robust))。
+パラメーターを検証するための追加情報を生成します (/[堅牢](/windows/win32/midl/-robust)  |  [/no_robust](/windows/win32/midl/-no-robust))。
 
-### <a name="struct-member-alignment"></a>構造体メンバーの配置
+### <a name="struct-member-alignment"></a>構造体メンバーのアラインメント
 
-ターゲット システム (/ZpN) の構造体のパッキング レベルを指定します。
+ターゲットシステム (/ZpN) 内の構造体のパッキングレベルを指定します。
 
-**選択肢**
+**Choices**
 
-- **設定されていません**- 設定されていません
-- **1 バイト**- Zp1
-- **2 バイト**- Zp2
-- **4 バイト**- Zp4
-- **8 バイト**- Zp8
+- **設定されて** いません-設定されていません
+- **1 バイト** -Zp1
+- **2 バイト** Zp2
+- **4 バイト** -Zp4
+- **8 バイト** -Zp8
 
-### <a name="redirect-output"></a>リダイレクト出力
+### <a name="redirect-output"></a>出力のリダイレクト
 
-画面からファイル[(/o](/windows/win32/midl/-o)ファイル) に出力をリダイレクトします。
+画面からファイル ([/o](/windows/win32/midl/-o) ファイル) に出力をリダイレクトします。
 
 ### <a name="minimum-target-system"></a>最小ターゲットシステム
 
-最小ターゲット システム[(/ターゲット](/windows/win32/midl/-target)文字列) を設定します。
+最小のターゲットシステム ([/Target](/windows/win32/midl/-target) STRING) を設定します。

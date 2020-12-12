@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: CComCompositeControl クラス'
 title: CComCompositeControl クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -16,12 +17,12 @@ helpviewer_keywords:
 - CComCompositeControl class
 - composite controls, CComCompositeControl class
 ms.assetid: 1304b931-27e8-4fbc-be8e-bb226ad887fb
-ms.openlocfilehash: a37386c40f119c855dcb8584a72ce85c48a66381
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 5c4d5b3e04855d570cab3a85bfe3a4c59482d990
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88834740"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97146823"
 ---
 # <a name="ccomcompositecontrol-class"></a>CComCompositeControl クラス
 
@@ -98,7 +99,7 @@ class CComCompositeControl : public CComControl<T,CAxDialogImpl<T>>
 
 `CComCompositeControl`
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** atlctl. h
 
@@ -171,7 +172,7 @@ HWND Create(
 予約済み。
 
 *dwInitParam*<br/>
-コントロールの作成時にコントロールに渡されるデータ。 *Dwinitparam*として渡されるデータは、 [WM_INITDIALOG](/windows/win32/dlgbox/wm-initdialog)メッセージの LPARAM パラメーターとして表示されます。これは、複合コントロールが作成されたときに送信されます。
+コントロールの作成時にコントロールに渡されるデータ。 *Dwinitparam* として渡されるデータは、 [WM_INITDIALOG](/windows/win32/dlgbox/wm-initdialog)メッセージの LPARAM パラメーターとして表示されます。これは、複合コントロールが作成されたときに送信されます。
 
 ### <a name="return-value"></a>戻り値
 
@@ -221,7 +222,7 @@ virtual HWND CreateControlWindow(
 コントロールの親ウィンドウへのハンドル。
 
 *rcPos*<br/>
-*HWndParent*を基準とした、クライアント座標での複合コントロールの位置を示す四角形。
+*HWndParent* を基準とした、クライアント座標での複合コントロールの位置を示す四角形。
 
 ### <a name="return-value"></a>戻り値
 

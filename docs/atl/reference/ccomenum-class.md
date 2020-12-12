@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: CComEnum クラス'
 title: CComEnum クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - CComEnum class
 ms.assetid: bff7dd7b-eb6e-4d6e-96ed-2706e66c8b3b
-ms.openlocfilehash: 7241d903e44329eb8fd50155059355a470fb7b90
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 0cee4129c0bc5129313b92e144c22de9d161c9cb
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87226621"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97146693"
 ---
 # <a name="ccomenum-class"></a>CComEnum クラス
 
@@ -41,14 +42,14 @@ COM 列挙子インターフェイス。 例については、「 [IEnumString](
 列挙子インターフェイスによって公開される項目の型。
 
 *コピー*<br/>
-同種の[コピーポリシークラス](../../atl/atl-copy-policy-classes.md)。
+同種の [コピーポリシークラス](../../atl/atl-copy-policy-classes.md)。
 
 *ThreadModel*<br/>
 クラスのスレッドモデル。 このパラメーターの既定値は、プロジェクトで使用されるグローバルオブジェクトスレッドモデルです。
 
 ## <a name="remarks"></a>解説
 
-`CComEnum`配列に基づいて COM 列挙子オブジェクトを定義します。 このクラスは、C++ 標準ライブラリコンテナーに基づく列挙子を実装する[CComEnumOnSTL](../../atl/reference/ccomenumonstl-class.md)に似ています。 このクラスを使用するための一般的な手順を次に示します。 詳細については、「 [ATL コレクションと列挙子](../../atl/atl-collections-and-enumerators.md)」を参照してください。
+`CComEnum` 配列に基づいて COM 列挙子オブジェクトを定義します。 このクラスは、C++ 標準ライブラリコンテナーに基づく列挙子を実装する [CComEnumOnSTL](../../atl/reference/ccomenumonstl-class.md) に似ています。 このクラスを使用するための一般的な手順を次に示します。 詳細については、「 [ATL コレクションと列挙子](../../atl/atl-collections-and-enumerators.md)」を参照してください。
 
 ## <a name="to-use-this-class"></a>このクラスを使用するには:
 
@@ -74,7 +75,7 @@ COM 列挙子インターフェイス。 例については、「 [IEnumString](
 
 `CComEnum`
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** atlcom. h
 

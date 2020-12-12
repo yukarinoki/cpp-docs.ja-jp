@@ -1,5 +1,6 @@
 ---
-title: クラス
+description: '詳細情報: CComClassFactory2 クラス'
+title: CComClassFactory2 クラス
 ms.date: 11/04/2016
 f1_keywords:
 - CComClassFactory2
@@ -12,16 +13,16 @@ f1_keywords:
 helpviewer_keywords:
 - CComClassFactory2 class
 ms.assetid: 19b66fd6-b9ed-47a0-822c-8132184f5a3e
-ms.openlocfilehash: 0cb2064cfaea6317c4522ff917f3963fca2219b8
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 7aebf09616c7fc4e85f6c44aee4db84886033f8b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81321012"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97146888"
 ---
-# <a name="ccomclassfactory2-class"></a>クラス
+# <a name="ccomclassfactory2-class"></a>CComClassFactory2 クラス
 
-このクラスは[、IClassFactory2](/windows/win32/api/ocidl/nn-ocidl-iclassfactory2)インターフェイスを実装します。
+このクラスは、 [IClassFactory2](/windows/win32/api/ocidl/nn-ocidl-iclassfactory2) インターフェイスを実装します。
 
 ## <a name="syntax"></a>構文
 
@@ -34,7 +35,7 @@ class CComClassFactory2 : public IClassFactory2,
 
 #### <a name="parameters"></a>パラメーター
 
-*ライセンス*<br/>
+*使用*<br/>
 次の静的関数を実装するクラス。
 
 - `static BOOL VerifyLicenseKey( BSTR bstr );`
@@ -49,25 +50,25 @@ class CComClassFactory2 : public IClassFactory2,
 
 |名前|説明|
 |----------|-----------------|
-|[2::インスタンスの作成](#createinstance)|指定した CLSID のオブジェクトを作成します。|
-|[2::インスタンスリックを作成します。](#createinstancelic)|ライセンス キーを指定すると、指定された CLSID のオブジェクトが作成されます。|
-|[クラスファクトリー2::ゲットリックインフォ](#getlicinfo)|クラス ファクトリのライセンス機能を説明する情報を取得します。|
-|[2::ロックサーバー](#lockserver)|クラス ファクトリをメモリ内でロックします。|
-|[2::リクエストリックキー](#requestlickey)|ライセンス キーを作成して返します。|
+|[CComClassFactory2:: CreateInstance](#createinstance)|指定された CLSID のオブジェクトを作成します。|
+|[CComClassFactory2::CreateInstanceLic](#createinstancelic)|ライセンスキーを指定すると、指定した CLSID のオブジェクトが作成されます。|
+|[CComClassFactory2:: Get Info](#getlicinfo)|クラスファクトリのライセンス機能について説明する情報を取得します。|
+|[CComClassFactory2:: LockServer](#lockserver)|メモリ内のクラスファクトリをロックします。|
+|[CComClassFactory2:: Requestのキー](#requestlickey)|ライセンスキーを作成して返します。|
 
 ## <a name="remarks"></a>解説
 
-`CComClassFactory2`[は、IClassFactory](/windows/win32/api/ocidl/nn-ocidl-iclassfactory2)の拡張機能である[IClassFactory2](/windows/win32/api/unknwnbase/nn-unknwnbase-iclassfactory)インターフェイスを実装します。 `IClassFactory2`ライセンスを使用してオブジェクトの作成を制御します。 ライセンスを受けたマシンで実行されるクラス ファクトリは、実行時のライセンス キーを提供できます。 このライセンス キーを使用すると、フル マシン ライセンスが存在しない場合に、アプリケーションでオブジェクトをインスタンス化できます。
+`CComClassFactory2`[IClassFactory](/windows/win32/api/unknwnbase/nn-unknwnbase-iclassfactory)の拡張である[IClassFactory2](/windows/win32/api/ocidl/nn-ocidl-iclassfactory2)インターフェイスを実装します。 `IClassFactory2` ライセンスによってオブジェクトの作成を制御します。 ライセンスされたコンピューターで実行されるクラスファクトリは、実行時ライセンスキーを提供できます。 このライセンスキーを使用すると、アプリケーションは、完全なコンピューターライセンスが存在しない場合にオブジェクトをインスタンス化できます。
 
-ATL オブジェクトは、通常[、CComCoClass](../../atl/reference/ccomcoclass-class.md)から派生することによってクラス ファクトリを取得します。 このクラスには[、CComClassFactory](../../atl/reference/ccomclassfactory-class.md)を既定のクラス ファクトリとして宣言するマクロ[DECLARE_CLASSFACTORY](aggregation-and-class-factory-macros.md#declare_classfactory)が含まれます。 を使用`CComClassFactory2`するには、オブジェクトのクラス定義で[DECLARE_CLASSFACTORY2](aggregation-and-class-factory-macros.md#declare_classfactory2)マクロを指定します。 次に例を示します。
+ATL オブジェクトは通常、 [CComCoClass](../../atl/reference/ccomcoclass-class.md)から派生することによってクラスファクトリを取得します。 このクラスには、 [CComClassFactory](../../atl/reference/ccomclassfactory-class.md)を既定のクラスファクトリとして宣言するマクロ[DECLARE_CLASSFACTORY](aggregation-and-class-factory-macros.md#declare_classfactory)が含まれています。 を使用するには `CComClassFactory2` 、オブジェクトのクラス定義で [DECLARE_CLASSFACTORY2](aggregation-and-class-factory-macros.md#declare_classfactory2) マクロを指定します。 次に例を示します。
 
 [!code-cpp[NVC_ATL_COM#2](../../atl/codesnippet/cpp/ccomclassfactory2-class_1.h)]
 
-`CMyLicense`の`CComClassFactory2`テンプレート パラメータは、 、 、`VerifyLicenseKey``GetLicenseKey`および`IsLicenseValid`静的関数を実装する必要があります。 次に、単純なライセンス クラスの例を示します。
+`CMyLicense`のテンプレートパラメーターは、 `CComClassFactory2` 静的関数、、およびを実装する必要があり `VerifyLicenseKey` `GetLicenseKey` `IsLicenseValid` ます。 単純なライセンスクラスの例を次に示します。
 
 [!code-cpp[NVC_ATL_COM#3](../../atl/codesnippet/cpp/ccomclassfactory2-class_2.h)]
 
-`CComClassFactory2`と ライセンス`CComClassFactory2Base`の*license*両方から派生します。 `CComClassFactory2Base`を取得すると、 と`IClassFactory2``CComObjectRootEx< CComGlobalsThreadModel >`から派生します。
+`CComClassFactory2` との両方 `CComClassFactory2Base` の *ライセンス* から派生します。 `CComClassFactory2Base`さらに、は、およびから派生し `IClassFactory2` `CComObjectRootEx< CComGlobalsThreadModel >` ます。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -75,19 +76,19 @@ ATL オブジェクトは、通常[、CComCoClass](../../atl/reference/ccomcocla
 
 `license`
 
-[ココムオブジェクトルート](../../atl/reference/ccomobjectrootex-class.md)
+[CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md)
 
 `IClassFactory2`
 
 `CComClassFactory2`
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-**ヘッダー:** atlcom.h
+**ヘッダー:** atlcom. h
 
-## <a name="ccomclassfactory2createinstance"></a><a name="createinstance"></a>2::インスタンスの作成
+## <a name="ccomclassfactory2createinstance"></a><a name="createinstance"></a> CComClassFactory2:: CreateInstance
 
-指定した CLSID のオブジェクトを作成し、このオブジェクトへのインターフェイス ポインターを取得します。
+指定した CLSID のオブジェクトを作成し、このオブジェクトへのインターフェイスポインターを取得します。
 
 ```
 STDMETHOD(CreateInstance)(LPUNKNOWN pUnkOuter, REFIID riid, void** ppvObj);
@@ -95,14 +96,14 @@ STDMETHOD(CreateInstance)(LPUNKNOWN pUnkOuter, REFIID riid, void** ppvObj);
 
 ### <a name="parameters"></a>パラメーター
 
-*プンクアウター*<br/>
-[in]オブジェクトが集約の一部として作成される場合 *、pUnkOuter*は外部不明である必要があります。 それ以外の場合は *、pUnkOuter*は NULL である必要があります。
+*pUnkOuter*<br/>
+からオブジェクトが集計の一部として作成されている場合、 *pUnkOuter* は外側の unknown である必要があります。 それ以外の場合、 *pUnkOuter* は NULL である必要があります。
 
 *riid*<br/>
-[in]要求されたインターフェイスの IID。 *pUnkOuter*が NULL 以外の場合は *、riid*を指定する必要があります`IID_IUnknown`。
+から要求されたインターフェイスの IID。 *PUnkOuter* が NULL 以外の場合、 *riid* はである必要があり `IID_IUnknown` ます。
 
-*Ppvobj*<br/>
-[アウト]*riid*によって識別されるインターフェイス ポインターへのポインター。 オブジェクトがこのインターフェイスをサポートしていない場合 *、ppvObj*は NULL に設定されます。
+*ppvObj*<br/>
+入出力 *Riid* によって識別されるインターフェイスポインターへのポインター。 オブジェクトがこのインターフェイスをサポートしていない場合、 *ppvObj* は NULL に設定されます。
 
 ### <a name="return-value"></a>戻り値
 
@@ -110,11 +111,11 @@ STDMETHOD(CreateInstance)(LPUNKNOWN pUnkOuter, REFIID riid, void** ppvObj);
 
 ### <a name="remarks"></a>解説
 
-マシンのライセンスを完全に取得する必要があります。 フル マシン ライセンスが存在しない場合は[、CreateInstanceLic](#createinstancelic)を呼び出します。
+コンピューターに完全にライセンスを付与する必要があります。 完全なコンピューターライセンスが存在しない場合は、 [CreateInstanceLic](#createinstancelic)を呼び出します。
 
-## <a name="ccomclassfactory2createinstancelic"></a><a name="createinstancelic"></a>2::インスタンスリックを作成します。
+## <a name="ccomclassfactory2createinstancelic"></a><a name="createinstancelic"></a> CComClassFactory2::CreateInstanceLic
 
-[CreateInstance](#createinstance)と同様ですが、`CreateInstanceLic`ライセンス キーが必要です。
+には、ライセンスキーが必要な点を除いて、 [CreateInstance](#createinstance)と似て `CreateInstanceLic` います。
 
 ```
 STDMETHOD(CreateInstanceLic)(
@@ -128,20 +129,20 @@ STDMETHOD(CreateInstanceLic)(
 
 ### <a name="parameters"></a>パラメーター
 
-*プンクアウター*<br/>
-[in]オブジェクトが集約の一部として作成される場合 *、pUnkOuter*は外部不明である必要があります。 それ以外の場合は *、pUnkOuter*は NULL である必要があります。
+*pUnkOuter*<br/>
+からオブジェクトが集計の一部として作成されている場合、 *pUnkOuter* は外側の unknown である必要があります。 それ以外の場合、 *pUnkOuter* は NULL である必要があります。
 
-*pUnk予約済み*<br/>
-[in]使用されていません。 NULL にする必要があります
+*pUnkReserved*<br/>
+から使用しません。 NULL にする必要があります
 
 *riid*<br/>
-[in]要求されたインターフェイスの IID。 *pUnkOuter*が NULL 以外の場合は *、riid*を指定する必要があります`IID_IUnknown`。
+から要求されたインターフェイスの IID。 *PUnkOuter* が NULL 以外の場合、 *riid* はである必要があり `IID_IUnknown` ます。
 
-*をクリックします。*<br/>
-[in]の呼び出しから以前に取得されたランタイム`RequestLicKey`ライセンス キー。 このキーは、オブジェクトを作成するために必要です。
+*bstrKey*<br/>
+から以前にを呼び出したときに取得したランタイムライセンスキー `RequestLicKey` 。 このキーは、オブジェクトを作成するために必要です。
 
-*オブジェクト*<br/>
-[アウト]*riid*で指定されたインターフェイス ポインターへのポインター。 オブジェクトがこのインターフェイスをサポートしていない場合 *、ppvObject*は NULL に設定されます。
+*ppvObject*<br/>
+入出力 *Riid* によって指定されたインターフェイスポインターへのポインター。 オブジェクトがこのインターフェイスをサポートしていない場合、 *ppvObject* は NULL に設定されます。
 
 ### <a name="return-value"></a>戻り値
 
@@ -149,11 +150,11 @@ STDMETHOD(CreateInstanceLic)(
 
 ### <a name="remarks"></a>解説
 
-ライセンス キーは[、RequestLicKey](#requestlickey)を使用して取得できます。 ライセンスのないマシン上にオブジェクトを作成するには、 を呼び出す`CreateInstanceLic`必要があります。
+[Requestのキー](#requestlickey)を使用してライセンスキーを取得できます。 ライセンスされていないコンピューター上にオブジェクトを作成するには、を呼び出す必要があり `CreateInstanceLic` ます。
 
-## <a name="ccomclassfactory2getlicinfo"></a><a name="getlicinfo"></a>クラスファクトリー2::ゲットリックインフォ
+## <a name="ccomclassfactory2getlicinfo"></a><a name="getlicinfo"></a> CComClassFactory2:: Get Info
 
-クラス ファクトリのライセンス機能を説明する情報を[LICINFO](/windows/win32/api/ocidl/ns-ocidl-licinfo)構造体に入力します。
+は、クラスファクトリのライセンス機能を説明する情報を使用し [て、登録](/windows/win32/api/ocidl/ns-ocidl-licinfo) されている情報を格納します。
 
 ```
 STDMETHOD(GetLicInfo)(LICINFO* pLicInfo);
@@ -161,8 +162,8 @@ STDMETHOD(GetLicInfo)(LICINFO* pLicInfo);
 
 ### <a name="parameters"></a>パラメーター
 
-*をクリックします。*<br/>
-[アウト]`LICINFO`構造体へのポインター。
+*pLicInfo*<br/>
+入出力構造体へのポインター `LICINFO` 。
 
 ### <a name="return-value"></a>戻り値
 
@@ -170,11 +171,11 @@ STDMETHOD(GetLicInfo)(LICINFO* pLicInfo);
 
 ### <a name="remarks"></a>解説
 
-この`fRuntimeKeyAvail`構造体のメンバーは、ライセンス キーを指定すると、クラス ファクトリがライセンスのないコンピュータでオブジェクトを作成できるかどうかを示します。 *fLicVerified*メンバーは、フル マシン ライセンスが存在するかどうかを示します。
+`fRuntimeKeyAvail`この構造体のメンバーは、ライセンスキーが指定されているかどうかを示します。これは、クラスファクトリが、ライセンスされていないコンピューター上でオブジェクトを作成できるかどうかを示します。 *FLicVerified* メンバーは、完全なコンピューターライセンスが存在するかどうかを示します。
 
-## <a name="ccomclassfactory2lockserver"></a><a name="lockserver"></a>2::ロックサーバー
+## <a name="ccomclassfactory2lockserver"></a><a name="lockserver"></a> CComClassFactory2:: LockServer
 
-モジュールのロックカウントをそれぞれ、 と を呼び`_Module::Lock`出`_Module::Unlock`して、インクリメントとデクリメントします。
+とをそれぞれ呼び出して、モジュールのロックカウントをインクリメントおよびデクリメントし `_Module::Lock` `_Module::Unlock` ます。
 
 ```
 STDMETHOD(LockServer)(BOOL fLock);
@@ -182,8 +183,8 @@ STDMETHOD(LockServer)(BOOL fLock);
 
 ### <a name="parameters"></a>パラメーター
 
-*群れ*<br/>
-[in]TRUE の場合、ロックカウントはインクリメントされます。それ以外の場合、ロックカウントは減少します。
+*fLock*<br/>
+からTRUE の場合、ロック数がインクリメントされます。それ以外の場合は、ロック数が減少します。
 
 ### <a name="return-value"></a>戻り値
 
@@ -191,13 +192,13 @@ STDMETHOD(LockServer)(BOOL fLock);
 
 ### <a name="remarks"></a>解説
 
-`_Module`[CComModule](../../atl/reference/ccommodule-class.md)のグローバル インスタンス、またはそこから派生したクラスを指します。
+`_Module`[CComModule](../../atl/reference/ccommodule-class.md)のグローバルインスタンス、またはそれから派生したクラスを参照します。
 
-呼`LockServer`び出しを使用すると、クライアントはクラス ファクトリを保持できるため、複数のオブジェクトを迅速に作成できます。
+を呼び出すこと `LockServer` で、クライアントは、複数のオブジェクトをすばやく作成できるように、クラスファクトリに保持できます。
 
-## <a name="ccomclassfactory2requestlickey"></a><a name="requestlickey"></a>2::リクエストリックキー
+## <a name="ccomclassfactory2requestlickey"></a><a name="requestlickey"></a> CComClassFactory2:: Requestのキー
 
-`fRuntimeKeyAvail` [LICINFO](/windows/win32/api/ocidl/ns-ocidl-licinfo)構造体のメンバーが TRUE である場合、ライセンス キーを作成して返します。
+ライセンスキーを作成して返します。このとき、使用している場合は、そのメンバーが TRUE であることを示し `fRuntimeKeyAvail` ます。 [](/windows/win32/api/ocidl/ns-ocidl-licinfo)
 
 ```
 STDMETHOD(RequestLicKey)(DWORD dwReserved, BSTR* pbstrKey);
@@ -205,11 +206,11 @@ STDMETHOD(RequestLicKey)(DWORD dwReserved, BSTR* pbstrKey);
 
 ### <a name="parameters"></a>パラメーター
 
-*dw予約済み*<br/>
-[in]使用されていません。 ゼロを指定してください。
+*dwReserved*<br/>
+から使用しません。 ゼロを指定してください。
 
-*pbstrキー*<br/>
-[アウト]ライセンス キーへのポインター。
+*pbstrKey*<br/>
+入出力ライセンスキーへのポインター。
 
 ### <a name="return-value"></a>戻り値
 
@@ -217,14 +218,14 @@ STDMETHOD(RequestLicKey)(DWORD dwReserved, BSTR* pbstrKey);
 
 ### <a name="remarks"></a>解説
 
-ライセンス キーは[、CreateInstanceLic](#createinstancelic)を呼び出して、ライセンスのないコンピュータ上にオブジェクトを作成するために必要です。 FALSE`fRuntimeKeyAvail`の場合、オブジェクトは完全にライセンスされたマシン上でのみ作成できます。
+[CreateInstanceLic](#createinstancelic)を呼び出して、ライセンスされていないコンピューターにオブジェクトを作成するには、ライセンスキーが必要です。 `fRuntimeKeyAvail`が FALSE の場合、オブジェクトは完全にライセンスされたコンピューター上でのみ作成できます。
 
-の値を取得するために[GetLicInfo](#getlicinfo)を呼び出`fRuntimeKeyAvail`します。
+[Get/info](#getlicinfo)を呼び出して、の値を取得 `fRuntimeKeyAvail` します。
 
 ## <a name="see-also"></a>関連項目
 
-[クラスクラス](../../atl/reference/ccomclassfactoryautothread-class.md)<br/>
-[シングルトンクラス](../../atl/reference/ccomclassfactorysingleton-class.md)<br/>
-[クラス](../../atl/reference/ccomobjectrootex-class.md)<br/>
-[スレッドモデル](atl-typedefs.md#ccomglobalsthreadmodel)<br/>
+[CComClassFactoryAutoThread クラス](../../atl/reference/ccomclassfactoryautothread-class.md)<br/>
+[CComClassFactorySingleton クラス](../../atl/reference/ccomclassfactorysingleton-class.md)<br/>
+[CComObjectRootEx クラス](../../atl/reference/ccomobjectrootex-class.md)<br/>
+[CComGlobalsThreadModel](atl-typedefs.md#ccomglobalsthreadmodel)<br/>
 [クラスの概要](../../atl/atl-class-overview.md)

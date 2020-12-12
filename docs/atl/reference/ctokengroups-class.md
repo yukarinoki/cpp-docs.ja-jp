@@ -1,5 +1,6 @@
 ---
-title: クラス
+description: '詳細情報: CTokenGroups クラス'
+title: CTokenGroups クラス
 ms.date: 11/04/2016
 f1_keywords:
 - CTokenGroups
@@ -16,16 +17,16 @@ f1_keywords:
 helpviewer_keywords:
 - CTokenGroups class
 ms.assetid: 2ab08076-4b08-4487-bc70-ec6dee304190
-ms.openlocfilehash: ccfa628f4a099f7e13eb09d272c72c2bdd846f37
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: 3d6633afbd649aa175196f1fae8e62afdf784f99
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81746381"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97140349"
 ---
-# <a name="ctokengroups-class"></a>クラス
+# <a name="ctokengroups-class"></a>CTokenGroups クラス
 
-このクラスは構造体のラッパー`TOKEN_GROUPS`です。
+このクラスは、構造体のラッパーです `TOKEN_GROUPS` 。
 
 > [!IMPORTANT]
 > このクラスとそのメンバーは、Windows ランタイムで実行されるアプリケーションでは使用できません。
@@ -42,44 +43,44 @@ class CTokenGroups
 
 |名前|説明|
 |----------|-----------------|
-|[Cトークングループ::Cトークングループ](#ctokengroups)|コンストラクターです。|
-|[次のグループ:~Cトークングループ](#dtor)|デストラクターです。|
+|[CTokenGroups:: CTokenGroups](#ctokengroups)|コンストラクターです。|
+|[CTokenGroups:: ~ CTokenGroups](#dtor)|デストラクターです。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
 |名前|説明|
 |----------|-----------------|
-|[Cトークングループ::追加](#add)|オブジェクトに`CSid`既存`TOKEN_GROUPS`の構造体または`CTokenGroups`既存の構造体を追加します。|
-|[Cトークングループ::Delete](#delete)|オブジェクトから`CSid`a およびその関連属性を`CTokenGroups`削除します。|
-|[Cトークングループ::DeleteAll](#deleteall)|オブジェクトからすべての`CSid`オブジェクトと関連する属性を`CTokenGroups`削除します。|
-|[次の値を取得します。](#getcount)|オブジェクトに含まれる`CSid`オブジェクトと関連する属性の数`CTokenGroups`を返します。|
-|[次の値を取得します。](#getlength)|オブジェクトのサイズを`CTokenGroups`返します。|
-|[Cトークングループ::GetPTOKEN_GROUPS](#getptoken_groups)|構造体へのポインターを`TOKEN_GROUPS`取得します。|
-|[次の属性を取得します。](#getsidsandattributes)|オブジェクトに属`CSid`するオブジェクトと属性を`CTokenGroups`取得します。|
-|[次の項目をグループ化します。](#lookupsid)|オブジェクトに関連付けられている属性を`CSid`取得します。|
+|[CTokenGroups:: Add](#add)|`CSid`または既存 `TOKEN_GROUPS` の構造体をオブジェクトに追加し `CTokenGroups` ます。|
+|[CTokenGroups::D e)](#delete)|`CSid`とそれに関連付けられている属性をオブジェクトから削除し `CTokenGroups` ます。|
+|[CTokenGroups::D eleteAll](#deleteall)|オブジェクトからすべての `CSid` オブジェクトとそれに関連付けられている属性を削除 `CTokenGroups` します。|
+|[CTokenGroups:: GetCount](#getcount)|`CSid`オブジェクトに格納されているオブジェクトと関連する属性の数を返し `CTokenGroups` ます。|
+|[CTokenGroups:: GetLength](#getlength)|オブジェクトのサイズを返し `CTokenGroups` ます。|
+|[CTokenGroups:: GetPTOKEN_GROUPS](#getptoken_groups)|構造体へのポインターを取得 `TOKEN_GROUPS` します。|
+|[CTokenGroups:: GetSidsAndAttributes](#getsidsandattributes)|`CSid`オブジェクトに属するオブジェクトと属性を取得し `CTokenGroups` ます。|
+|[CTokenGroups:: LookupSid](#lookupsid)|オブジェクトに関連付けられている属性を取得し `CSid` ます。|
 
 ### <a name="public-operators"></a>パブリック演算子
 
 |名前|説明|
 |----------|-----------------|
-|[cトークングループ::演算子コンストTOKEN_GROUPS *](#operator_const_token_groups__star)|構造体への`CTokenGroups`ポインターにオブジェクトをキャストします`TOKEN_GROUPS`。|
-|[Cトークングループ::演算子 =](#operator_eq)|代入演算子。|
+|[CTokenGroups:: operator const TOKEN_GROUPS *](#operator_const_token_groups__star)|オブジェクトを `CTokenGroups` 構造体へのポインターにキャストし `TOKEN_GROUPS` ます。|
+|[CTokenGroups:: operator =](#operator_eq)|代入演算子。|
 
 ## <a name="remarks"></a>解説
 
-[アクセス トークン](/windows/win32/SecAuthZ/access-tokens)は、プロセスまたはスレッドのセキュリティ コンテキストを記述するオブジェクトで、Windows システムにログオンしている各ユーザーに割り当てられます。
+[アクセストークン](/windows/win32/SecAuthZ/access-tokens)は、プロセスまたはスレッドのセキュリティコンテキストを記述するオブジェクトで、Windows システムにログオンした各ユーザーに割り当てられます。
 
-クラス`CTokenGroups`は、アクセス トークン内のグループ セキュリティ識別子 (SID) に関する情報を含む[、TOKEN_GROUPS](/windows/win32/api/winnt/ns-winnt-token_groups)構造体のラッパーです。
+クラスは、 `CTokenGroups` アクセストークンのグループセキュリティ識別子 (sid) に関する情報を含む [TOKEN_GROUPS](/windows/win32/api/winnt/ns-winnt-token_groups) 構造体のラッパーです。
 
-Windows のアクセス制御モデルの概要については、Windows SDK の[アクセス制御](/windows/win32/SecAuthZ/access-control)を参照してください。
+Windows のアクセス制御モデルの概要については、Windows SDK の「 [Access Control](/windows/win32/SecAuthZ/access-control) 」を参照してください。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-**ヘッダー:** atlsecurity.h
+**ヘッダー:** atlsecurity .h
 
-## <a name="ctokengroupsadd"></a><a name="add"></a>Cトークングループ::追加
+## <a name="ctokengroupsadd"></a><a name="add"></a> CTokenGroups:: Add
 
-オブジェクトに`CSid`既存`TOKEN_GROUPS`の構造体または`CTokenGroups`既存の構造体を追加します。
+`CSid`または既存 `TOKEN_GROUPS` の構造体をオブジェクトに追加し `CTokenGroups` ます。
 
 ```cpp
 void Add(const CSid& rSid, DWORD dwAttributes) throw(... );
@@ -91,17 +92,17 @@ void Add(const TOKEN_GROUPS& rTokenGroups) throw(...);
 *rSid*<br/>
 [CSid](../../atl/reference/csid-class.md)オブジェクト。
 
-*dw属性*<br/>
-`CSid`オブジェクトに関連付ける属性。
+*dwAttributes*<br/>
+オブジェクトに関連付ける属性 `CSid` 。
 
-*グループ*<br/>
-[TOKEN_GROUPS](/windows/win32/api/winnt/ns-winnt-token_groups)構造。
+*rTokenGroups*<br/>
+[TOKEN_GROUPS](/windows/win32/api/winnt/ns-winnt-token_groups)構造体。
 
 ### <a name="remarks"></a>解説
 
-これらのメソッドは、1`CSid`つ以上のオブジェクトとそれに関連`CTokenGroups`付けられた属性をオブジェクトに追加します。
+これらのメソッドは、オブジェクトに1つ以上の `CSid` オブジェクトとそれに関連付けられている属性を追加し `CTokenGroups` ます。
 
-## <a name="ctokengroupsctokengroups"></a><a name="ctokengroups"></a>Cトークングループ::Cトークングループ
+## <a name="ctokengroupsctokengroups"></a><a name="ctokengroups"></a> CTokenGroups:: CTokenGroups
 
 コンストラクターです。
 
@@ -114,13 +115,13 @@ CTokenGroups(const TOKEN_GROUPS& rhs) throw(...);
 ### <a name="parameters"></a>パラメーター
 
 *rhs*<br/>
-オブジェクトの構築[TOKEN_GROUPS](/windows/win32/api/winnt/ns-winnt-token_groups)に使用する`CTokenGroups`オブジェクトまたはTOKEN_GROUPS構造体。 `CTokenGroups`
+`CTokenGroups`オブジェクトの構築に使用するオブジェクトまたは[TOKEN_GROUPS](/windows/win32/api/winnt/ns-winnt-token_groups)構造体 `CTokenGroups` 。
 
 ### <a name="remarks"></a>解説
 
-オブジェクト`CTokenGroups`は、必要に応じて、構造体`TOKEN_GROUPS`または定義済みの`CTokenGroups`オブジェクトを使用して作成できます。
+オブジェクトは、 `CTokenGroups` 必要に応じて、構造体または以前に定義したオブジェクトを使用して作成でき `TOKEN_GROUPS` `CTokenGroups` ます。
 
-## <a name="ctokengroupsctokengroups"></a><a name="dtor"></a>次のグループ:~Cトークングループ
+## <a name="ctokengroupsctokengroups"></a><a name="dtor"></a> CTokenGroups:: ~ CTokenGroups
 
 デストラクターです。
 
@@ -130,11 +131,11 @@ virtual ~CTokenGroups() throw();
 
 ### <a name="remarks"></a>解説
 
-デストラクタは、割り当てられたすべてのリソースを解放します。
+デストラクターは、割り当てられたすべてのリソースを解放します。
 
-## <a name="ctokengroupsdelete"></a><a name="delete"></a>Cトークングループ::Delete
+## <a name="ctokengroupsdelete"></a><a name="delete"></a> CTokenGroups::D e)
 
-オブジェクトから`CSid`a およびその関連属性を`CTokenGroups`削除します。
+`CSid`とそれに関連付けられている属性をオブジェクトから削除し `CTokenGroups` ます。
 
 ```
 bool Delete(const CSid& rSid) throw();
@@ -143,23 +144,23 @@ bool Delete(const CSid& rSid) throw();
 ### <a name="parameters"></a>パラメーター
 
 *rSid*<br/>
-セキュリティ識別子 (SID) と属性を削除する必要がある[CSid](../../atl/reference/csid-class.md)オブジェクト。
+セキュリティ識別子 (SID) と属性を削除する必要がある [CSid](../../atl/reference/csid-class.md) オブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
-が削除された`CSid`場合は true を返し、それ以外の場合は false を返します。
+が削除された場合は true、それ以外の場合は false を返し `CSid` ます。
 
-## <a name="ctokengroupsdeleteall"></a><a name="deleteall"></a>Cトークングループ::DeleteAll
+## <a name="ctokengroupsdeleteall"></a><a name="deleteall"></a> CTokenGroups::D eleteAll
 
-オブジェクトからすべての`CSid`オブジェクトと関連する属性を`CTokenGroups`削除します。
+オブジェクトからすべての `CSid` オブジェクトとそれに関連付けられている属性を削除 `CTokenGroups` します。
 
 ```cpp
 void DeleteAll() throw();
 ```
 
-## <a name="ctokengroupsgetcount"></a><a name="getcount"></a>次の値を取得します。
+## <a name="ctokengroupsgetcount"></a><a name="getcount"></a> CTokenGroups:: GetCount
 
-に含まれるオブジェクト`CSid`の数を`CTokenGroups`返します。
+に格納されているオブジェクトの数を返し `CSid` `CTokenGroups` ます。
 
 ```
 UINT GetCount() const throw();
@@ -167,11 +168,11 @@ UINT GetCount() const throw();
 
 ### <a name="return-value"></a>戻り値
 
-オブジェクトに含まれる[CSid](../../atl/reference/csid-class.md)オブジェクトと関連する属性の`CTokenGroups`数を返します。
+オブジェクトに格納されている [CSid](../../atl/reference/csid-class.md) オブジェクトとそれに関連付けられている属性の数を返し `CTokenGroups` ます。
 
-## <a name="ctokengroupsgetlength"></a><a name="getlength"></a>次の値を取得します。
+## <a name="ctokengroupsgetlength"></a><a name="getlength"></a> CTokenGroups:: GetLength
 
-オブジェクトのサイズを`CTokenGroup`返します。
+オブジェクトのサイズを返し `CTokenGroup` ます。
 
 ```
 UINT GetLength() const throw();
@@ -179,11 +180,11 @@ UINT GetLength() const throw();
 
 ### <a name="remarks"></a>解説
 
-オブジェクトの合計サイズを`CTokenGroup`バイト単位で返します。
+オブジェクトの合計サイズ `CTokenGroup` をバイト単位で返します。
 
-## <a name="ctokengroupsgetptoken_groups"></a><a name="getptoken_groups"></a>Cトークングループ::GetPTOKEN_GROUPS
+## <a name="ctokengroupsgetptoken_groups"></a><a name="getptoken_groups"></a> CTokenGroups:: GetPTOKEN_GROUPS
 
-構造体へのポインターを`TOKEN_GROUPS`取得します。
+構造体へのポインターを取得 `TOKEN_GROUPS` します。
 
 ```
 const TOKEN_GROUPS* GetPTOKEN_GROUPS() const throw(...);
@@ -191,11 +192,11 @@ const TOKEN_GROUPS* GetPTOKEN_GROUPS() const throw(...);
 
 ### <a name="return-value"></a>戻り値
 
-アクセス トークン オブジェクトに属する[TOKEN_GROUPS](/windows/win32/api/winnt/ns-winnt-token_groups)構造体への`CTokenGroups`ポインターを取得します。
+アクセストークンオブジェクトに属する [TOKEN_GROUPS](/windows/win32/api/winnt/ns-winnt-token_groups) 構造体へのポインターを取得 `CTokenGroups` します。
 
-## <a name="ctokengroupsgetsidsandattributes"></a><a name="getsidsandattributes"></a>次の属性を取得します。
+## <a name="ctokengroupsgetsidsandattributes"></a><a name="getsidsandattributes"></a> CTokenGroups:: GetSidsAndAttributes
 
-オブジェクトと、`CSid`オブジェクトに属する属性 (オプション) を`CTokenGroups`取得します。
+オブジェクト、 `CSid` および (オプションで) オブジェクトに属する属性を取得し `CTokenGroups` ます。
 
 ```cpp
 void GetSidsAndAttributes(
@@ -205,19 +206,19 @@ void GetSidsAndAttributes(
 
 ### <a name="parameters"></a>パラメーター
 
-*pSid*<br/>
+*pSids*<br/>
 [CSid](../../atl/reference/csid-class.md)オブジェクトの配列へのポインター。
 
-*属性*<br/>
-DWORD の配列へのポインター。 このパラメーターを省略するか NULL にすると、属性は取得されません。
+*pAttributes*<br/>
+Dword の配列へのポインター。 このパラメーターを省略した場合、または NULL の場合、属性は取得されません。
 
 ### <a name="remarks"></a>解説
 
-このメソッドは、オブジェクトに含`CSid`まれるすべてのオブジェクトを`CTokenGroups`列挙し、それらを配置し、(オプションで) 属性フラグを配列オブジェクトに配置します。
+このメソッドは、オブジェクトに格納されているすべてのオブジェクトを列挙し、それらのオブジェクト `CSid` `CTokenGroups` と (必要に応じて) 属性フラグを配列オブジェクトに格納します。
 
-## <a name="ctokengroupslookupsid"></a><a name="lookupsid"></a>次の項目をグループ化します。
+## <a name="ctokengroupslookupsid"></a><a name="lookupsid"></a> CTokenGroups:: LookupSid
 
-オブジェクトに関連付けられている属性を`CSid`取得します。
+オブジェクトに関連付けられている属性を取得し `CSid` ます。
 
 ```
 bool LookupSid(
@@ -230,18 +231,18 @@ bool LookupSid(
 *rSid*<br/>
 [CSid](../../atl/reference/csid-class.md)オブジェクト。
 
-*属性*<br/>
-`CSid`オブジェクトの属性を受け入れる DWORD へのポインター。 省略または NULL の場合、属性は取得されません。
+*pdwAttributes*<br/>
+オブジェクトの属性を受け取る DWORD へのポインター `CSid` 。 省略した場合、または NULL の場合、属性は取得されません。
 
 ### <a name="return-value"></a>戻り値
 
-が見つかった場合`CSid`は true を返し、そうでない場合は false を返します。
+が見つかった場合は true、それ以外の場合は false を返し `CSid` ます。
 
 ### <a name="remarks"></a>解説
 
-*pdwAttributes*を NULL に設定すると、属性にアクセスせずに`CSid`、 の存在を確認できます。 このメソッドは、アクセス権のチェックには使用しないでください。 代わりに、アプリケーションは[C アクセス トークン::チェックトークン メンバーシップ](../../atl/reference/caccesstoken-class.md#checktokenmembership)メソッドを使用する必要があります。
+*PdwAttributes* を NULL に設定すると、属性にアクセスせずにの存在を確認することが `CSid` できます。 アクセス権を確認するためにこの方法を使用することはできないことに注意してください。 アプリケーションでは、代わりに [CAccessToken:: CheckTokenMembership](../../atl/reference/caccesstoken-class.md#checktokenmembership) メソッドを使用する必要があります。
 
-## <a name="ctokengroupsoperator-"></a><a name="operator_eq"></a>Cトークングループ::演算子 =
+## <a name="ctokengroupsoperator-"></a><a name="operator_eq"></a> CTokenGroups:: operator =
 
 代入演算子。
 
@@ -253,15 +254,15 @@ CTokenGroups& operator= (const CTokenGroups& rhs) throw(...);
 ### <a name="parameters"></a>パラメーター
 
 *rhs*<br/>
-オブジェクトに割[TOKEN_GROUPS](/windows/win32/api/winnt/ns-winnt-token_groups)り当てる`CTokenGroups`オブジェクトまたはTOKEN_GROUPS構造。 `CTokenGroups`
+`CTokenGroups`オブジェクトに割り当てるオブジェクトまたは[TOKEN_GROUPS](/windows/win32/api/winnt/ns-winnt-token_groups)構造体 `CTokenGroups` 。
 
 ### <a name="return-value"></a>戻り値
 
-更新された`CTokenGroups`オブジェクトを返します。
+更新されたオブジェクトを返し `CTokenGroups` ます。
 
-## <a name="ctokengroupsoperator-const-token_groups-"></a><a name="operator_const_token_groups__star"></a>cトークングループ::演算子コンストTOKEN_GROUPS *
+## <a name="ctokengroupsoperator-const-token_groups-"></a><a name="operator_const_token_groups__star"></a> CTokenGroups:: operator const TOKEN_GROUPS *
 
-構造体へのポインターに値をキャストします`TOKEN_GROUPS`。
+構造体へのポインターに値をキャスト `TOKEN_GROUPS` します。
 
 ```
 operator const TOKEN_GROUPS *() const throw(...);
@@ -269,11 +270,11 @@ operator const TOKEN_GROUPS *() const throw(...);
 
 ### <a name="remarks"></a>解説
 
-[TOKEN_GROUPS](/windows/win32/api/winnt/ns-winnt-token_groups)構造体へのポインターに値をキャストします。
+値を [TOKEN_GROUPS](/windows/win32/api/winnt/ns-winnt-token_groups) 構造体へのポインターにキャストします。
 
 ## <a name="see-also"></a>関連項目
 
-[セキュリティサンプル](../../overview/visual-cpp-samples.md)<br/>
-[CSidクラス](../../atl/reference/csid-class.md)<br/>
+[セキュリティのサンプル](../../overview/visual-cpp-samples.md)<br/>
+[CSid クラス](../../atl/reference/csid-class.md)<br/>
 [クラスの概要](../../atl/atl-class-overview.md)<br/>
 [セキュリティグローバル関数](../../atl/reference/security-global-functions.md)

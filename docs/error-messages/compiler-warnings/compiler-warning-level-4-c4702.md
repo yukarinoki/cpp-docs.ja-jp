@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: コンパイラの警告 (レベル 4) C4702'
 title: コンパイラの警告 (レベル 4) C4702
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4702
 ms.assetid: d8198c1e-8762-42a6-9e6b-cb568b7a1686
-ms.openlocfilehash: a2d1f6f4bdc20a35638274e2099c00428f4f6ddf
-ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
+ms.openlocfilehash: 9a171641a2c923083471d510e27fbdb3ebd08832
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90684288"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97133797"
 ---
 # <a name="compiler-warning-level-4-c4702"></a>コンパイラの警告 (レベル 4) C4702
 
@@ -36,7 +37,7 @@ int main() {
 }
 ```
 
-**/Gx**、 **/EHc**、 **/ehsc**、または **/EHac**でコンパイルするときに extern C 関数を使用すると、extern c 関数はスローされないと見なされるため、コードに到達できなくなります。したがって、catch ブロックには到達できません。  関数がスローする可能性があるため、この警告が無効であると思われる場合は、スローされた例外に応じて、 **/eha** または **/ehs**を使用してコンパイルします。
+**/Gx**、 **/EHc**、 **/ehsc**、または **/EHac** でコンパイルするときに extern C 関数を使用すると、extern c 関数はスローされないと見なされるため、コードに到達できなくなります。したがって、catch ブロックには到達できません。  関数がスローする可能性があるため、この警告が無効であると思われる場合は、スローされた例外に応じて、 **/eha** または **/ehs** を使用してコンパイルします。
 
 詳細については、「 [/EH (例外処理モデル)](../../build/reference/eh-exception-handling-model.md) 」を参照してください。
 

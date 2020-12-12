@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: コンパイラオプションマクロ'
 title: コンパイラオプションのマクロ
 ms.date: 08/19/2019
 f1_keywords:
@@ -16,12 +17,12 @@ f1_keywords:
 helpviewer_keywords:
 - compiler options, macros
 ms.assetid: a869adc6-b3de-4299-b040-9ae20b45f82c
-ms.openlocfilehash: 90b80aaa34456677f2d7c2dd5717ae6837f4523f
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 247ede37721d868c9c941ce85e024a55a2487947
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88833570"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97141272"
 ---
 # <a name="compiler-options-macros"></a>コンパイラオプションのマクロ
 
@@ -51,7 +52,7 @@ ms.locfileid: "88833570"
 
 ### <a name="remarks"></a>解説
 
-.NET 2002 を Visual C++ する前に、ATL は多くの警告を無効にし、ユーザーコードに示されないように無効にしました。 具体的な内容は次のとおりです。
+.NET 2002 を Visual C++ する前に、ATL は多くの警告を無効にし、ユーザーコードに示されないように無効にしました。 具体的には、次のとおりです。
 
 - C4127 条件式は定数です
 
@@ -69,13 +70,13 @@ ms.locfileid: "88833570"
 
 以前のバージョンから変換されたプロジェクトでは、これらの警告はライブラリヘッダーによってまだ無効になっています。
 
-ライブラリヘッダーを含める前に、 *.pch* (Visual Studio 2017 以前のバージョンでは*stdafx.h* ) ファイルに次の行を追加すると、この動作を変更できます。
+ライブラリヘッダーを含める前に、 *.pch* (Visual Studio 2017 以前のバージョンでは *stdafx.h* ) ファイルに次の行を追加すると、この動作を変更できます。
 
 [!code-cpp[NVC_ATL_Utilities#97](../../atl/codesnippet/cpp/compiler-options-macros_1.h)]
 
 これが追加された場合 `#define` 、ATL ヘッダーはこれらの警告の状態を保持し、グローバルに無効にしないようにします (または、ユーザーが個々の警告を明示的に無効にし、有効にしない場合)。
 
-新しいプロジェクトは、 `#define` 既定で *Pch* (Visual Studio 2017 以前の*stdafx.h* ) に設定されています。
+新しいプロジェクトは、 `#define` 既定で *Pch* (Visual Studio 2017 以前の *stdafx.h* ) に設定されています。
 
 ## <a name="_atl_apartment_threaded"></a><a name="_atl_apartment_threaded"></a> _ATL_APARTMENT_THREADED
 
@@ -115,7 +116,7 @@ _ATL_CSTRING_EXPLICIT_CONSTRUCTORS
 
 ATL および MFC ライブラリは、Microsoft C++ コンパイラによって強化された標準 C++ 準拠に合わせて変更されています。 ANSI C++ 標準によれば、クラスメンバー関数へのポインターの構文はである必要があり `&CMyClass::MyFunc` ます。
 
-[_ATL_ENABLE_PTM_WARNING](#_atl_enable_ptm_warning)が定義されていない場合 (既定のケース)、ATL/MFC はマクロマップ (特にメッセージマップ) の C4867 エラーを無効にして、以前のバージョンで作成されたコードを以前と同じようにビルドできるようにします。 **_ATL_ENABLE_PTM_WARNING**を定義する場合、コードは C++ 標準に準拠している必要があります。
+[_ATL_ENABLE_PTM_WARNING](#_atl_enable_ptm_warning)が定義されていない場合 (既定のケース)、ATL/MFC はマクロマップ (特にメッセージマップ) の C4867 エラーを無効にして、以前のバージョンで作成されたコードを以前と同じようにビルドできるようにします。 **_ATL_ENABLE_PTM_WARNING** を定義する場合、コードは C++ 標準に準拠している必要があります。
 
 ただし、非標準のフォームは非推奨とされます。 C++ 標準に準拠した構文に既存のコードを移動する必要があります。 コード例を次に示します。
 
@@ -222,4 +223,4 @@ _ATL_SINGLE_THREADED
 
 ## <a name="see-also"></a>関連項目
 
-[[マクロ]](../../atl/reference/atl-macros.md)
+[マクロ](../../atl/reference/atl-macros.md)

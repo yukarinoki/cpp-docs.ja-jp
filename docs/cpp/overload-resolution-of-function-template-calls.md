@@ -1,15 +1,16 @@
 ---
+description: 詳細については、関数テンプレート呼び出しのオーバーロードの解決に関するページを参照してください。
 title: 関数テンプレート呼び出しのオーバーロード解決
 ms.date: 11/04/2016
 helpviewer_keywords:
 - function templates overload resolution
 ms.assetid: a2918748-2cbb-4fc6-a176-e256f120bee4
-ms.openlocfilehash: 7b7e374328b6d234426d8263e4c6655191133700
-ms.sourcegitcommit: 43cee7a0d41a062661229043c2f7cbc6ace17fa3
+ms.openlocfilehash: 6174ac7fe4354f655a5c6a94c7493c6cc1a423cd
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92008900"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97146017"
 ---
 # <a name="overload-resolution-of-function-template-calls"></a>関数テンプレート呼び出しのオーバーロード解決
 

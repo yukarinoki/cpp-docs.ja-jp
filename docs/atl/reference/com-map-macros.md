@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「COM Map マクロ」を参照してください。
 title: COM マップマクロ
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - COM interfaces, COM map macros
 ms.assetid: 0f33656d-321f-4996-90cc-9a7f21ab73c3
-ms.openlocfilehash: 100402e17ca1bee5f338c37f2315fbc4898a713e
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 076a13418a48147654862c2b5a26688b195d5252
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88833583"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97141324"
 ---
 # <a name="com-map-macros"></a>COM マップマクロ
 
@@ -23,7 +24,7 @@ ms.locfileid: "88833583"
 |[BEGIN_COM_MAP](#begin_com_map)|COM インターフェイスマップエントリの先頭をマークします。|
 |[END_COM_MAP](#end_com_map)|COM インターフェイスマップエントリの終了をマークします。|
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** atlcom. h
 
@@ -60,5 +61,5 @@ END_COM_MAP()
 
 ## <a name="see-also"></a>関連項目
 
-[[マクロ]](../../atl/reference/atl-macros.md)<br/>
+[マクロ](../../atl/reference/atl-macros.md)<br/>
 [COM マップのグローバル関数](../../atl/reference/com-map-global-functions.md)

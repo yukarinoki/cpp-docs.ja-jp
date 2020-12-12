@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: ATL DHTML コントロールの作成'
 title: ATL DHTML コントロールの作成
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,24 +7,24 @@ helpviewer_keywords:
 - DHTML controls
 - DHTML controls, creating
 ms.assetid: 1d8f0ede-7d8b-4959-976e-b4d0e2a87f5a
-ms.openlocfilehash: bd83909144526080ff10de0c75cc975089e88f91
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 52c7861c2e5f48927eb8a70dbb6649582b88afc0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62262295"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97148194"
 ---
 # <a name="creating-an-atl-dhtml-control"></a>ATL DHTML コントロールの作成
 
-ATL コントロール ウィザードでは、DHTML コントロールの作成のプロセスを自動化します。 サンプル コードを含む HTML ファイルなど、必要なリソース ファイルを生成します。
+ATL コントロールウィザードでは、DHTML コントロールの作成プロセスが自動化されます。 サンプルコードを含む HTML ファイルなど、必要なリソースファイルが生成されます。
 
 ## <a name="to-create-an-atl-dhtml-control"></a>ATL DHTML コントロールを作成するには
 
-1. 次の手順では、 [ATL プロジェクトの作成](../atl/reference/creating-an-atl-project.md)です。
+1. 「 [ATL プロジェクトの作成](../atl/reference/creating-an-atl-project.md)」の手順に従います。
 
-1. **クラス ビュー**、プロジェクト ノードを右クリックし、 をポイント**追加**、 をクリック**クラスの追加**ショートカット メニューから。 **クラスの追加**ダイアログ ボックスで、ダブルクリックして、 [ATL コントロール ウィザード](../atl/reference/atl-control-wizard.md)します。 **ATL コントロール ウィザード**、 をクリックして、**オプション**タブ**DHTML コントロール**します。
+1. **クラスビュー** で、プロジェクトノードを右クリックして [**追加**] をポイントし、ショートカットメニューの [**クラスの追加**] をクリックします。 [ **クラスの追加** ] ダイアログボックスで、[ [ATL コントロールウィザード](../atl/reference/atl-control-wizard.md)] をダブルクリックします。 **ATL コントロールウィザード** で、[**オプション**] タブをクリックし、[ **DHTML コントロール**] を選択します。
 
-できるようになりました[既定のコントロールをテスト](../atl/testing-the-atl-dhtml-control.md)します。
+これで [、既定のコントロールをテスト](../atl/testing-the-atl-dhtml-control.md)できるようになりました。
 
 ## <a name="see-also"></a>関連項目
 

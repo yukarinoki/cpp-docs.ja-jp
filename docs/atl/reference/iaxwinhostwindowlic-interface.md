@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「IAxWinHostWindowLic インターフェイス」を参照してください。
 title: IAxWinHostWindowLic インターフェイス
 ms.date: 11/04/2016
 f1_keywords:
@@ -9,12 +10,12 @@ f1_keywords:
 helpviewer_keywords:
 - IAxWinHostWindowLic interface
 ms.assetid: 750f1520-6bce-428c-aca0-fccbe3f063c7
-ms.openlocfilehash: d7a63fc63b8abcf8574ea9a2fed2556635dba045
-ms.sourcegitcommit: d9c94dcabd94537e304be0261b3263c2071b437b
+ms.openlocfilehash: bf13d6f0209b982955fdf015ef47643c83b27eee
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91352948"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97139647"
 ---
 # <a name="iaxwinhostwindowlic-interface"></a>IAxWinHostWindowLic インターフェイス
 
@@ -41,7 +42,7 @@ interface IAxWinHostWindowLic : IAxWinHostWindow
 
 このインターフェイスのメンバーを使用するサンプルについては、「 [ATL AXHost を使用した ActiveX コントロールのホスト](../../atl/atl-control-containment-faq.md#hosting-activex-controls-using-atl-axhost) 」を参照してください。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 このインターフェイスの定義は、次に示すように、IDL または C++ として使用できます。
 

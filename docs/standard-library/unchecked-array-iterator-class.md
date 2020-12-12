@@ -1,17 +1,18 @@
 ---
+description: '詳細情報: unchecked_array_iterator クラス'
 title: unchecked_array_iterator クラス
 ms.date: 11/04/2016
 f1_keywords:
 - stdext::unchecked_array_iterator
 ms.assetid: 693b3b30-4e3a-465b-be06-409700bc50b1
-ms.openlocfilehash: 5344a108f32b694b9dafac78dbb8eb7064cdf4cc
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 6f2bbe4c31a76101a04e8c5be6a4e0dcf67cf87e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68455009"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97132744"
 ---
-# <a name="uncheckedarrayiterator-class"></a>unchecked_array_iterator クラス
+# <a name="unchecked_array_iterator-class"></a>unchecked_array_iterator クラス
 
 `unchecked_array_iterator` クラスを使用すると、配列またはポインターをチェックを行わない反復子にラップできます。 チェックを行わないポインター警告をグローバルに抑制する代わりに、これらの警告を管理するのに適した方法として、このクラスを生のポインターまたは配列のラッパーとして使用します ([make_unchecked_array_iterator](../standard-library/iterator-functions.md#make_unchecked_array_iterator) 関数を使用)。 可能な場合は、このクラスのチェックを行うバージョンである [checked_array_iterator](../standard-library/checked-array-iterator-class.md) が推奨されます。
 
@@ -25,19 +26,19 @@ template <class Iterator>
 class unchecked_array_iterator;
 ```
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 このクラスは、[stdext](../standard-library/stdext-namespace.md) 名前空間で定義されます。
 
 これは、[checked_array_iterator クラス](../standard-library/checked-array-iterator-class.md)のチェックを行わないバージョンであり、すべての同じオーバーロードおよびメンバーをサポートします。 チェックを行う反復子の機能の詳細とコード サンプルについては、「[チェックを行う反復子](../standard-library/checked-iterators.md)」を参照してください。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-**ヘッダー:** \<iterator>
+**ヘッダー:**\<iterator>
 
 **名前空間:** stdext
 
 ## <a name="see-also"></a>関連項目
 
 [\<iterator>](../standard-library/iterator.md)\
-[C++ 標準ライブラリ リファレンス](../standard-library/cpp-standard-library-reference.md)
+[C++ 標準ライブラリリファレンス](../standard-library/cpp-standard-library-reference.md)

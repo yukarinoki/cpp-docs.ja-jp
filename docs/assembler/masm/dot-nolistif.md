@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「」を参照してください。.NOLISTIF
 title: .NOLISTIF
 ms.date: 12/16/2019
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - .NOLISTIF directive
 ms.assetid: 9243af7a-7221-4531-bbc3-281b6b292bfd
-ms.openlocfilehash: c3f474528bee5b8838dedef4717295a1cbf82695
-ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
+ms.openlocfilehash: 34f5c5359ff9f73213788765aa7dd3e68bc6d852
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75317592"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97131340"
 ---
 # <a name="nolistif"></a>.NOLISTIF
 
@@ -21,11 +22,11 @@ ms.locfileid: "75317592"
 
 > **.NOLISTIF**
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
-これは既定です。 と同じ[です.SFCOND](dot-sfcond.md)。
+既定値です。 と同じ [です。.SFCOND](dot-sfcond.md)。
 
 ## <a name="see-also"></a>関連項目
 
-[ディレクティブリファレンス](directives-reference.md)
+[ディレクティブリファレンス](directives-reference.md) 
 [MASM BNF 文法](masm-bnf-grammar.md)

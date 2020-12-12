@@ -1,5 +1,6 @@
 ---
-title: CW2CWEXクラス
+description: '詳細情報: CW2CWEX クラス'
+title: CW2CWEX クラス
 ms.date: 11/04/2016
 f1_keywords:
 - CW2CWEX
@@ -9,16 +10,16 @@ f1_keywords:
 helpviewer_keywords:
 - CW2CWEX class
 ms.assetid: d654b22b-05a6-410f-a0ec-9a2cbbb4cca7
-ms.openlocfilehash: 07dd0319586054403d8ed0c8efc813b4061e355a
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 769dcedf1a9dc15129b09e3305330de33242562e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81330434"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97140232"
 ---
-# <a name="cw2cwex-class"></a>CW2CWEXクラス
+# <a name="cw2cwex-class"></a>CW2CWEX クラス
 
-このクラスは、文字列変換マクロ CW2CTEX と CT2CWEX、およびタイプ定義 CW2W で使用されます。
+このクラスは、文字列変換マクロ CW2CTEX と CT2CWEX、および typedef CW2W によって使用されます。
 
 > [!IMPORTANT]
 > このクラスとそのメンバーは、Windows ランタイムで実行されるアプリケーションでは使用できません。
@@ -33,7 +34,7 @@ class CW2CWEX
 #### <a name="parameters"></a>パラメーター
 
 *t_nBufferLength*<br/>
-変換プロセスで使用されるバッファーのサイズ。 デフォルトの長さは 128 バイトです。
+変換プロセスで使用されるバッファーのサイズ。 既定の長さは128バイトです。
 
 ## <a name="members"></a>メンバー
 
@@ -42,47 +43,47 @@ class CW2CWEX
 |名前|説明|
 |----------|-----------------|
 |[CW2CWEX::CW2CWEX](#cw2cwex)|コンストラクターです。|
-|[CW2CWEX::~CW2CWEX](#dtor)|デストラクターです。|
+|[CW2CWEX:: ~ CW2CWEX](#dtor)|デストラクターです。|
 
 ### <a name="public-operators"></a>パブリック演算子
 
 |名前|説明|
 |----------|-----------------|
-|[CW2CWEX::オペレーター LPCWSTR](#operator_lpcwstr)|変換演算子。|
+|[CW2CWEX:: operator LPCWSTR](#operator_lpcwstr)|変換演算子。|
 
 ### <a name="public-data-members"></a>パブリック データ メンバー
 
 |名前|説明|
 |----------|-----------------|
-|[CW2CWEX::m_psz](#m_psz)|ソース文字列を格納するデータ メンバー。|
+|[CW2CWEX:: m_psz](#m_psz)|ソース文字列を格納するデータメンバー。|
 
 ## <a name="remarks"></a>解説
 
-追加の機能が必要な場合を除き、コード内で CW2CTEX、CT2CWEX、または CW2W を使用してください。
+追加機能が必要な場合を除き、コードで CW2CTEX、CT2CWEX、または CW2W を使用してください。
 
-このクラスはループで安全に使用でき、スタックをオーバーフローしません。 既定では、ATL 変換クラスとマクロは、変換に現在のスレッドの ANSI コード ページを使用します。
+このクラスは、ループで使用するのが安全であり、スタックをオーバーフローすることはありません。 既定では、ATL の変換クラスとマクロは、現在のスレッドの ANSI コードページを使用して変換を行います。
 
-このクラスに基づくマクロは次のとおりです。
+次のマクロは、このクラスに基づいています。
 
 - CW2CTEX
 
 - CT2CWEX
 
-このクラスに基づく型定義の例を次に示します。
+次の typedef は、このクラスに基づいています。
 
 - CW2W
 
-これらのテキスト変換マクロの詳細については、「 [ATL および MFC 文字列変換マクロ](string-conversion-macros.md)」を参照してください。
+これらのテキスト変換マクロの詳細については、「 [ATL および MFC の文字列変換マクロ](string-conversion-macros.md)」を参照してください。
 
 ## <a name="example"></a>例
 
-これらの[文字列変換マクロの使用例については、「ATL および MFC 文字列](string-conversion-macros.md)変換マクロ」を参照してください。
+これらの文字列変換マクロの使用例については、「 [ATL および MFC の文字列変換マクロ](string-conversion-macros.md) 」を参照してください。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-**ヘッダー:** アトルコンフ.h
+**ヘッダー:** atlconv. h
 
-## <a name="cw2cwexcw2cwex"></a><a name="cw2cwex"></a>CW2CWEX::CW2CWEX
+## <a name="cw2cwexcw2cwex"></a><a name="cw2cwex"></a> CW2CWEX::CW2CWEX
 
 コンストラクターです。
 
@@ -94,16 +95,16 @@ CW2CWEX(LPCWSTR psz) throw(...);
 ### <a name="parameters"></a>パラメーター
 
 *psz*<br/>
-変換するテキスト文字列。
+変換されるテキスト文字列。
 
-*nコードページ*<br/>
+*nCodePage*<br/>
 コード ページです。 このクラスでは使用されません。
 
 ### <a name="remarks"></a>解説
 
 変換プロセスで使用されるバッファーを割り当てます。
 
-## <a name="cw2cwexcw2cwex"></a><a name="dtor"></a>CW2CWEX::~CW2CWEX
+## <a name="cw2cwexcw2cwex"></a><a name="dtor"></a> CW2CWEX:: ~ CW2CWEX
 
 デストラクターです。
 
@@ -113,17 +114,17 @@ CW2CWEX(LPCWSTR psz) throw(...);
 
 ### <a name="remarks"></a>解説
 
-割り当てられたバッファを解放します。
+割り当てられたバッファーを解放します。
 
-## <a name="cw2cwexm_psz"></a><a name="m_psz"></a>CW2CWEX::m_psz
+## <a name="cw2cwexm_psz"></a><a name="m_psz"></a> CW2CWEX:: m_psz
 
-ソース文字列を格納するデータ メンバー。
+ソース文字列を格納するデータメンバー。
 
 ```
 LPCWSTR m_psz;
 ```
 
-## <a name="cw2cwexoperator-lpcwstr"></a><a name="operator_lpcwstr"></a>CW2CWEX::オペレーター LPCWSTR
+## <a name="cw2cwexoperator-lpcwstr"></a><a name="operator_lpcwstr"></a> CW2CWEX:: operator LPCWSTR
 
 変換演算子。
 
@@ -133,13 +134,13 @@ operator LPCWSTR() const throw();
 
 ### <a name="return-value"></a>戻り値
 
-テキスト文字列を LPCWSTR 型として返します。
+LPCWSTR 型のテキスト文字列を返します。
 
 ## <a name="see-also"></a>関連項目
 
 [CA2AEX クラス](../../atl/reference/ca2aex-class.md)<br/>
 [CA2CAEX クラス](../../atl/reference/ca2caex-class.md)<br/>
-[CA2WEXクラス](../../atl/reference/ca2wex-class.md)<br/>
+[CA2WEX クラス](../../atl/reference/ca2wex-class.md)<br/>
 [CW2AEX クラス](../../atl/reference/cw2aex-class.md)<br/>
-[CW2WEXクラス](../../atl/reference/cw2wex-class.md)<br/>
+[CW2WEX クラス](../../atl/reference/cw2wex-class.md)<br/>
 [クラスの概要](../../atl/atl-class-overview.md)

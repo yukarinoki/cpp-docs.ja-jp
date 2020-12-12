@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: uniform_real_distribution クラス'
 title: uniform_real_distribution クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -26,12 +27,12 @@ helpviewer_keywords:
 - std::uniform_real_distribution [C++], param_type
 - std::uniform_real_distribution [C++], param_type
 ms.assetid: 5cf906fd-0319-4984-b21b-98425cd7532d
-ms.openlocfilehash: ba2ec419e524ca571120fe82c7cbf63c1a97eaaa
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: ae272955cb7586342d403e332b981ca8a1005256
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88839596"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97132679"
 ---
 # <a name="uniform_real_distribution-class"></a>uniform_real_distribution クラス
 
@@ -170,7 +171,7 @@ Distribution for 10 samples:
          10: 0.8795716566
 ```
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:**\<random>
 
@@ -200,7 +201,7 @@ explicit uniform_real_distribution(const param_type& parm);
 
 **前提条件:**`a < b`
 
-1つ目のコンストラクターは、値 *を* 保持し、格納さ *れて* いる *b* 値が値 *b*を保持するオブジェクトを構築します。
+1つ目のコンストラクターは、値 *を* 保持し、格納さ *れて* いる *b* 値が値 *b* を保持するオブジェクトを構築します。
 
 2 つ目のコンストラクターは、格納されているパラメーターが *parm* から初期化されるオブジェクトを作成します。 `param()` メンバー関数を呼び出すと、既存の分布の現在のパラメーターを取得および設定できます。
 

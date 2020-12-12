@@ -1,5 +1,6 @@
 ---
-title: クラス
+description: 詳細については、CSnapInItemImpl クラスに関するページを参照してください。
+title: CSnapInItemImpl クラス
 ms.date: 11/04/2016
 f1_keywords:
 - CSnapInItemImpl
@@ -27,16 +28,16 @@ helpviewer_keywords:
 - CSnapInItemImpl class
 - snap-ins
 ms.assetid: 52caefbd-9eae-49b0-add2-d55524271aa7
-ms.openlocfilehash: 04eeba0239789b9f3220b7bfece3eb41dc7f2826
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: c1c63f5b60d57743087bffde214d9b8addef5b8b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81746417"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97140557"
 ---
-# <a name="csnapinitemimpl-class"></a>クラス
+# <a name="csnapinitemimpl-class"></a>CSnapInItemImpl クラス
 
-このクラスには、スナップイン ノード オブジェクトを実装するためのメソッドが用意されています。
+このクラスには、スナップインノードオブジェクトを実装するためのメソッドが用意されています。
 
 > [!IMPORTANT]
 > このクラスとそのメンバーは、Windows ランタイムで実行されるアプリケーションでは使用できません。
@@ -51,10 +52,10 @@ class ATL_NO_VTABLE CSnapInItemImpl : public CSnapInItem
 #### <a name="parameters"></a>パラメーター
 
 *T*<br/>
-から派生したクラス`CSnapInItemImpl`。
+から派生したクラス `CSnapInItemImpl` 。
 
 *bIsExtension*<br/>
-オブジェクトがスナップイン拡張の場合は TRUE。それ以外の場合は FALSE。
+オブジェクトがスナップイン拡張である場合は TRUE。それ以外の場合は FALSE。
 
 ## <a name="members"></a>メンバー
 
@@ -62,37 +63,37 @@ class ATL_NO_VTABLE CSnapInItemImpl : public CSnapInItem
 
 |名前|説明|
 |----------|-----------------|
-|[Cスナップインアイテムインプル::Cスナップインアイテムインプル](#csnapinitemimpl)|コンストラクターです。|
+|[CSnapInItemImpl:: CSnapInItemImpl](#csnapinitemimpl)|コンストラクターです。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
 |名前|説明|
 |----------|-----------------|
-|[メニュー項目の追加](#addmenuitems)|コンテキスト メニューにメニュー項目を追加します。|
-|[Cスナップインアイテムインプル::コマンド](#command)|カスタム メニュー項目が選択されたときにコンソールによって呼び出されます。|
-|[プロパティ ページを作成します。](#createpropertypages)|スナップインのプロパティ シートにページを追加します。|
-|[クスナップインアイテムインプル::フィルデータ](#filldata)|スナップイン オブジェクトの情報を指定したストリームにコピーします。|
-|[をクリックします。](#getresultpaneinfo)|スナップインの`RESULTDATAITEM`構造を取得します。|
-|[を返します。](#getresultviewtype)|結果ペインで使用されるビューの種類を決定します。|
-|[をクリックします。](#getscopepaneinfo)|スナップインの`SCOPEDATAITEM`構造を取得します。|
-|[CSnapInItemImpl::通知](#notify)|ユーザーが実行した操作のスナップインに通知するために、コンソールによって呼び出されます。|
-|[次のページを表示します。](#querypagesfor)|スナップイン ノードがプロパティ ページをサポートしているかどうかを確認するために呼び出されます。|
-|[をクリックします。](#setmenuinsertionflags)|スナップイン オブジェクトのメニュー挿入フラグを変更します。|
-|[をクリックします。](#settoolbarbuttoninfo)|指定したツール バー ボタンの情報を設定します。|
-|[をクリックします。](#updatemenustate)|コンテキスト メニュー項目の状態を更新します。|
-|[をクリックします。](#updatetoolbarbutton)|指定したツール バー ボタンの状態を更新します。|
+|[CSnapInItemImpl:: AddMenuItems](#addmenuitems)|メニュー項目をコンテキストメニューに追加します。|
+|[CSnapInItemImpl:: Command](#command)|カスタムメニュー項目が選択されたときにコンソールによって呼び出されます。|
+|[CSnapInItemImpl:: CreatePropertyPages](#createpropertypages)|スナップインのプロパティシートにページを追加します。|
+|[CSnapInItemImpl:: FillData](#filldata)|スナップインオブジェクトの情報を指定したストリームにコピーします。|
+|[CSnapInItemImpl:: Getresultimpl Info](#getresultpaneinfo)|スナップイン `RESULTDATAITEM` の構造を取得します。|
+|[CSnapInItemImpl:: GetResultViewType](#getresultviewtype)|結果ペインによって使用されるビューの種類を決定します。|
+|[CSnapInItemImpl:: GetScopePaneInfo](#getscopepaneinfo)|スナップイン `SCOPEDATAITEM` の構造を取得します。|
+|[CSnapInItemImpl:: Notify](#notify)|コンソールによって呼び出され、ユーザーによって実行されるアクションのスナップインを通知します。|
+|[CSnapInItemImpl:: QueryPagesFor](#querypagesfor)|スナップインノードがプロパティページをサポートしているかどうかを確認するために呼び出されます。|
+|[CSnapInItemImpl:: SetMenuInsertionFlags](#setmenuinsertionflags)|スナップインオブジェクトのメニュー挿入フラグを変更します。|
+|[CSnapInItemImpl:: SetToolbarButtonInfo](#settoolbarbuttoninfo)|指定したツールバーボタンの情報を設定します。|
+|[CSnapInItemImpl:: UpdateMenuState](#updatemenustate)|コンテキストメニュー項目の状態を更新します。|
+|[CSnapInItemImpl:: UpdateToolbarButton](#updatetoolbarbutton)|指定したツールバーボタンの状態を更新します。|
 
 ### <a name="public-data-members"></a>パブリック データ メンバー
 
 |名前|説明|
 |----------|-----------------|
-|[Cスナップインアイテムインプル::m_bstrDisplayName](#m_bstrdisplayname)|スナップイン オブジェクトの名前。|
-|[Cスナップインアイテムインプル::m_resultDataItem](#m_resultdataitem)|オブジェクトによって`RESULTDATAITEM`使用される Windows`CSnapInItemImpl`構造体。|
-|[Cスナップインアイテムインプル::m_scopeDataItem](#m_scopedataitem)|オブジェクトによって`SCOPEDATAITEM`使用される Windows`CSnapInItemImpl`構造体。|
+|[CSnapInItemImpl:: m_bstrDisplayName](#m_bstrdisplayname)|スナップインオブジェクトの名前。|
+|[CSnapInItemImpl:: m_resultDataItem](#m_resultdataitem)|`RESULTDATAITEM`オブジェクトによって使用される Windows 構造体 `CSnapInItemImpl` 。|
+|[CSnapInItemImpl:: m_scopeDataItem](#m_scopedataitem)|`SCOPEDATAITEM`オブジェクトによって使用される Windows 構造体 `CSnapInItemImpl` 。|
 
 ## <a name="remarks"></a>解説
 
-`CSnapInItemImpl`は、メニュー項目やツール バーの追加、スナップイン ノードのコマンドを適切なハンドラー関数に転送するなど、スナップイン ノード オブジェクトの基本的な実装を提供します。 これらの機能は、いくつかの異なるインターフェイスとマップの種類を使用して実装されます。 既定の実装では、派生クラスの正しいインスタンスを決定し、メッセージを正しいインスタンスに転送することによって、ノード オブジェクトに送信された通知を処理します。
+`CSnapInItemImpl` メニュー項目やツールバーの追加、スナップインノードのコマンドの転送など、スナップインノードオブジェクトの基本的な実装を提供します。 これらの機能は、いくつかの異なるインターフェイスとマップの種類を使用して実装されます。 既定の実装では、派生クラスの正しいインスタンスを決定し、適切なインスタンスにメッセージを転送することによって、node オブジェクトに送信される通知を処理します。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -100,13 +101,13 @@ class ATL_NO_VTABLE CSnapInItemImpl : public CSnapInItem
 
 `CSnapInItemImpl`
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-**ヘッダー:** atlsnap.h
+**ヘッダー:** atlsnap. h
 
-## <a name="csnapinitemimpladdmenuitems"></a><a name="addmenuitems"></a>メニュー項目の追加
+## <a name="csnapinitemimpladdmenuitems"></a><a name="addmenuitems"></a> CSnapInItemImpl:: AddMenuItems
 
-このメソッドは、関数[IExtendContextMenu::AddMenuItems](/windows/win32/api/mmc/nf-mmc-iextendcontextmenu-addmenuitems)を実装します。
+このメソッドは、Win32 関数 [IExtendContextMenu:: AddMenuItems](/windows/win32/api/mmc/nf-mmc-iextendcontextmenu-addmenuitems)を実装します。
 
 ```
 AddMenuItems(
@@ -117,34 +118,34 @@ AddMenuItems(
 
 ### <a name="parameters"></a>パラメーター
 
-*パイコールバック*<br/>
-[in]コンテキスト メニュー`IContextMenuCallback`に項目を追加できる を指すポインター。
+*piCallback*<br/>
+から `IContextMenuCallback` コンテキストメニューに項目を追加できるへのポインター。
 
-*挿入可能*<br/>
-[イン、アウト]使用できる Microsoft 管理コンソール (MMC) 定義されたメニュー項目挿入ポイントを識別します。 これは、次のフラグの組み合わせです。
+*許可された ppg tion*<br/>
+[入力、出力]Microsoft 管理コンソール (MMC) で定義されている、使用可能なメニュー項目の挿入ポイントを識別します。 これは、次のフラグの組み合わせにすることができます。
 
-- CCM_INSERTIONALLOWED_TOP項目は、コンテキストメニューの上部に挿入できます。
+- CCM_INSERTIONALLOWED_TOP の項目は、コンテキストメニューの上部に挿入できます。
 
-- CCM_INSERTIONALLOWED_NEW アイテムは、[新規作成] サブメニューに挿入できます。
+- CCM_INSERTIONALLOWED_NEW の項目は、[新規作成] サブメニューに挿入できます。
 
-- CCM_INSERTIONALLOWED_TASK項目は、[タスク] サブメニューに挿入できます。
+- CCM_INSERTIONALLOWED_TASK の項目は、[タスク] サブメニューに挿入できます。
 
-- CCM_INSERTIONALLOWED_VIEW項目は、ツールバーの表示メニューまたは結果ペインのコンテキストメニューの表示サブメニューに挿入できます。
+- CCM_INSERTIONALLOWED_VIEW の項目は、ツールバーの [表示] メニュー、または結果ペインのコンテキストメニューの [表示] サブメニューに挿入できます。
 
 *type*<br/>
-[in]オブジェクトの種類を指定します。 次のいずれかの値になります。
+からオブジェクトの種類を指定します。 次のいずれかの値になります。
 
-- CCT_SCOPE スコープ ペイン コンテキストのデータ オブジェクト。
+- スコープペインコンテキストのデータオブジェクトを CCT_SCOPE します。
 
-- CCT_RESULT結果ペインコンテキストのデータオブジェクト。
+- 結果ペインのコンテキストのデータオブジェクトを CCT_RESULT します。
 
-- CCT_SNAPIN_MANAGER スナップイン マネージャー コンテキストのデータ オブジェクトです。
+- スナップインマネージャーコンテキストのデータオブジェクトを CCT_SNAPIN_MANAGER します。
 
-- CCT_UNINITIALIZED Data オブジェクトの型が無効です。
+- CCT_UNINITIALIZED データオブジェクトの型が無効です。
 
-## <a name="csnapinitemimplcommand"></a><a name="command"></a>Cスナップインアイテムインプル::コマンド
+## <a name="csnapinitemimplcommand"></a><a name="command"></a> CSnapInItemImpl:: Command
 
-このメソッドは、Win32 関数[を実装します](/windows/win32/api/mmc/nf-mmc-iextendcontextmenu-command)。
+このメソッドは、Win32 関数 [IExtendContextMenu:: Command](/windows/win32/api/mmc/nf-mmc-iextendcontextmenu-command)を実装します。
 
 ```
 Command(long lCommandID, DATA_OBJECT_TYPES type);
@@ -152,23 +153,23 @@ Command(long lCommandID, DATA_OBJECT_TYPES type);
 
 ### <a name="parameters"></a>パラメーター
 
-*をクリックします。*<br/>
-[in]メニュー項目のコマンド ID を指定します。
+*lCommandID*<br/>
+からメニュー項目のコマンド id を指定します。
 
 *type*<br/>
-[in]オブジェクトの種類を指定します。 次のいずれかの値になります。
+からオブジェクトの種類を指定します。 次のいずれかの値になります。
 
-- CCT_SCOPE スコープ ペイン コンテキストのデータ オブジェクト。
+- スコープペインコンテキストのデータオブジェクトを CCT_SCOPE します。
 
-- CCT_RESULT結果ペインコンテキストのデータオブジェクト。
+- 結果ペインのコンテキストのデータオブジェクトを CCT_RESULT します。
 
-- CCT_SNAPIN_MANAGER スナップイン マネージャー コンテキストのデータ オブジェクトです。
+- スナップインマネージャーコンテキストのデータオブジェクトを CCT_SNAPIN_MANAGER します。
 
-- CCT_UNINITIALIZED Data オブジェクトの型が無効です。
+- CCT_UNINITIALIZED データオブジェクトの型が無効です。
 
-## <a name="csnapinitemimplcreatepropertypages"></a><a name="createpropertypages"></a>プロパティ ページを作成します。
+## <a name="csnapinitemimplcreatepropertypages"></a><a name="createpropertypages"></a> CSnapInItemImpl:: CreatePropertyPages
 
-このメソッドは、Win32 関数[を実装します](/windows/win32/api/mmc/nn-mmc-iextendpropertysheet2)。
+このメソッドは、Win32 関数 [IExtendPropertySheet:: CreatePropertyPages](/windows/win32/api/mmc/nn-mmc-iextendpropertysheet2)を実装します。
 
 ```
 CreatePropertyPages(
@@ -180,27 +181,27 @@ CreatePropertyPages(
 
 ### <a name="parameters"></a>パラメーター
 
-*プロバイダ*<br/>
-[in]`IPropertySheetCallback`インターフェイスへのポインター。
+*lpProvider*<br/>
+からインターフェイスへのポインター `IPropertySheetCallback` 。
 
-*処理*<br/>
-[in]MMCN_PROPERTY_CHANGE通知メッセージを適切なデータ クラスにルーティングするために使用するハンドルを指定します。
+*扱え*<br/>
+からMMCN_PROPERTY_CHANGE 通知メッセージを適切なデータクラスにルーティングするために使用するハンドルを指定します。
 
 *パンク*<br/>
-[in]ノードに`IExtendPropertySheet`関するコンテキスト情報を含むオブジェクトのインターフェイスへのポインター。
+から `IExtendPropertySheet` ノードに関するコンテキスト情報を格納しているオブジェクト上のインターフェイスへのポインター。
 
 *type*<br/>
-[in]オブジェクトの種類を指定します。 次のいずれかの値になります。
+からオブジェクトの種類を指定します。 次のいずれかの値になります。
 
-- CCT_SCOPE スコープ ペイン コンテキストのデータ オブジェクト。
+- スコープペインコンテキストのデータオブジェクトを CCT_SCOPE します。
 
-- CCT_RESULT結果ペインコンテキストのデータオブジェクト。
+- 結果ペインのコンテキストのデータオブジェクトを CCT_RESULT します。
 
-- CCT_SNAPIN_MANAGER スナップイン マネージャー コンテキストのデータ オブジェクトです。
+- スナップインマネージャーコンテキストのデータオブジェクトを CCT_SNAPIN_MANAGER します。
 
-- CCT_UNINITIALIZED Data オブジェクトの型が無効です。
+- CCT_UNINITIALIZED データオブジェクトの型が無効です。
 
-## <a name="csnapinitemimplcsnapinitemimpl"></a><a name="csnapinitemimpl"></a>Cスナップインアイテムインプル::Cスナップインアイテムインプル
+## <a name="csnapinitemimplcsnapinitemimpl"></a><a name="csnapinitemimpl"></a> CSnapInItemImpl:: CSnapInItemImpl
 
 `CSnapInItemImpl` オブジェクトを構築します。
 
@@ -208,7 +209,7 @@ CreatePropertyPages(
 CSnapInItemImpl();
 ```
 
-## <a name="csnapinitemimplfilldata"></a><a name="filldata"></a>クスナップインアイテムインプル::フィルデータ
+## <a name="csnapinitemimplfilldata"></a><a name="filldata"></a> CSnapInItemImpl:: FillData
 
 この関数は、項目に関する情報を取得するために呼び出されます。
 
@@ -218,19 +219,19 @@ FillData(CLIPFORMAT cf, LPSTREAM pStream);
 
 ### <a name="parameters"></a>パラメーター
 
-*Cf*<br/>
-[in]クリップボードの形式 (テキスト、リッチ テキスト、OLE アイテムを含むリッチ テキスト) を指定します。
+*cf*<br/>
+からクリップボードの形式 (テキスト、リッチテキスト、または OLE 項目を含むリッチテキスト)。
 
-*pストリーム*<br/>
-[in]オブジェクト データを含むストリームへのポインター。
+*pStream*<br/>
+からオブジェクトデータを格納しているストリームへのポインター。
 
 ### <a name="remarks"></a>解説
 
-この関数を正しく実装するには、 *cf*で示されたクリップボード形式に応じて、正しい情報をストリーム (*pStream*) にコピーします。
+この関数を適切に実装するには、 *cf* で示されたクリップボードの形式に応じて、正しい情報をストリーム (*pstream*) にコピーします。
 
-## <a name="csnapinitemimplgetresultviewtype"></a><a name="getresultviewtype"></a>を返します。
+## <a name="csnapinitemimplgetresultviewtype"></a><a name="getresultviewtype"></a> CSnapInItemImpl:: GetResultViewType
 
-スナップイン オブジェクトの結果ペインのビューの種類を取得します。
+スナップインオブジェクトの結果ペインのビューの種類を取得するには、この関数を呼び出します。
 
 ```
 GetResultViewType(
@@ -240,19 +241,19 @@ GetResultViewType(
 
 ### <a name="parameters"></a>パラメーター
 
-*ビュータイプ*<br/>
-[アウト]返されたビューの種類のアドレスへのポインター。
+*ppViewType*<br/>
+入出力返されたビュー型のアドレスへのポインター。
 
-*オプション*<br/>
-[アウト]MMC_VIEW_OPTIONS列挙体へのポインター。 この値は、次のいずれかです。
+*pViewOptions*<br/>
+入出力MMC_VIEW_OPTIONS 列挙体へのポインター。コンソールには、所有しているスナップインによって指定されたオプションが用意されています。 この値は、次のいずれかです。
 
-- MMC_VIEW_OPTIONS_NOLISTVIEWS = 0x0000001 [**表示**] メニューに標準のリスト ビューの選択肢を表示しないようにコンソールに指示します。 スナップインで、結果ビュー ペインに独自のカスタム ビューのみを表示できます。 これは、この時点で定義されている唯一のオプション・フラグです。
+- MMC_VIEW_OPTIONS_NOLISTVIEWS = 0x00000001 は、[ **表示** ] メニューに標準のリストビューの選択肢を表示しないようにコンソールに指示します。 スナップインで、結果ビューペインにのみ独自のカスタムビューを表示できるようにします。 これは、現時点で定義されている唯一のオプションフラグです。
 
-- MMC_VIEW_OPTIONS_NONE = 0 既定の表示オプションを使用できます。
+- MMC_VIEW_OPTIONS_NONE = 0 に設定すると、既定の表示オプションが使用できるようになります。
 
-## <a name="csnapinitemimplgetscopepaneinfo"></a><a name="getscopepaneinfo"></a>をクリックします。
+## <a name="csnapinitemimplgetscopepaneinfo"></a><a name="getscopepaneinfo"></a> CSnapInItemImpl:: GetScopePaneInfo
 
-スナップインの構造を`SCOPEDATAITEM`取得します。
+スナップインの構造を取得するには、この関数を呼び出し `SCOPEDATAITEM` ます。
 
 ```
 GetScopePaneInfo (SCOPEDATAITEM* pScopeDataItem);
@@ -260,12 +261,12 @@ GetScopePaneInfo (SCOPEDATAITEM* pScopeDataItem);
 
 ### <a name="parameters"></a>パラメーター
 
-*をクリックします。*<br/>
-[アウト]`CSnapInItemImpl`オブジェクトの`SCOPEDATAITEM`構造体へのポインター。
+*pScopeDataItem*<br/>
+入出力 `SCOPEDATAITEM` オブジェクトの構造体へのポインター `CSnapInItemImpl` 。
 
-## <a name="csnapinitemimplgetresultpaneinfo"></a><a name="getresultpaneinfo"></a>をクリックします。
+## <a name="csnapinitemimplgetresultpaneinfo"></a><a name="getresultpaneinfo"></a> CSnapInItemImpl:: Getresultimpl Info
 
-スナップインの構造を`RESULTDATAITEM`取得します。
+スナップインの構造を取得するには、この関数を呼び出し `RESULTDATAITEM` ます。
 
 ```
 GetResultPaneInfo (RESULTDATAITEM* pResultDataItem);
@@ -273,36 +274,36 @@ GetResultPaneInfo (RESULTDATAITEM* pResultDataItem);
 
 ### <a name="parameters"></a>パラメーター
 
-*を返します。*<br/>
-[アウト]`CSnapInItemImpl`オブジェクトの`RESULTDATAITEM`構造体へのポインター。
+*pResultDataItem*<br/>
+入出力 `RESULTDATAITEM` オブジェクトの構造体へのポインター `CSnapInItemImpl` 。
 
-## <a name="csnapinitemimplm_bstrdisplayname"></a><a name="m_bstrdisplayname"></a>Cスナップインアイテムインプル::m_bstrDisplayName
+## <a name="csnapinitemimplm_bstrdisplayname"></a><a name="m_bstrdisplayname"></a> CSnapInItemImpl:: m_bstrDisplayName
 
-ノード項目に表示される文字列を格納します。
+ノード項目に対して表示される文字列を格納します。
 
 ```
 CComBSTR m_bstrDisplayName;
 ```
 
-## <a name="csnapinitemimplm_scopedataitem"></a><a name="m_scopedataitem"></a>Cスナップインアイテムインプル::m_scopeDataItem
+## <a name="csnapinitemimplm_scopedataitem"></a><a name="m_scopedataitem"></a> CSnapInItemImpl:: m_scopeDataItem
 
-スナップイン`SCOPEDATAITEM`データ オブジェクトの構造。
+`SCOPEDATAITEM`スナップインデータオブジェクトの構造。
 
 ```
 SCOPEDATAITEM m_scopeDataItem;
 ```
 
-## <a name="csnapinitemimplm_resultdataitem"></a><a name="m_resultdataitem"></a>Cスナップインアイテムインプル::m_resultDataItem
+## <a name="csnapinitemimplm_resultdataitem"></a><a name="m_resultdataitem"></a> CSnapInItemImpl:: m_resultDataItem
 
-スナップイン データ オブジェクトの[RESULTDATAITEM](/windows/win32/api/mmc/ns-mmc-resultdataitem)構造体。
+スナップインデータオブジェクトの [Resultdataitem](/windows/win32/api/mmc/ns-mmc-resultdataitem) 構造体。
 
 ```
 RESULTDATAITEM m_resultDataItem;
 ```
 
-## <a name="csnapinitemimplnotify"></a><a name="notify"></a>CSnapInItemImpl::通知
+## <a name="csnapinitemimplnotify"></a><a name="notify"></a> CSnapInItemImpl:: Notify
 
-スナップイン オブジェクトがユーザーによって処理されたときに呼び出されます。
+スナップインオブジェクトがユーザーによって操作されるときに呼び出されます。
 
 ```
 STDMETHOD(Notify)(
@@ -317,70 +318,70 @@ STDMETHOD(Notify)(
 ### <a name="parameters"></a>パラメーター
 
 *event*<br/>
-[in]ユーザーが実行するアクションを識別します。 次の通知が可能です。
+からユーザーによって実行されるアクションを識別します。 次の通知が可能です。
 
-- MMCN_ACTIVATE ウィンドウがアクティブ化および非アクティブ化されているときに送信されます。
+- ウィンドウがアクティブ化され、非アクティブになったときに送信 MMCN_ACTIVATE ます。
 
-- MMCN_ADD_IMAGES 結果ウィンドウにイメージを追加するために送信されます。
+- MMCN_ADD_IMAGES、結果ペインに画像を追加するために送信されます。
 
-- MMCN_BTN_CLICK ユーザーがツール バー ボタンのいずれかをクリックしたときに送信されます。
+- MMCN_BTN_CLICK、ユーザーがツールバーのボタンのいずれかをクリックしたときに送信されます。
 
-- MMCN_CLICK ユーザーがリスト ビュー アイテムのマウス ボタンをクリックしたときに送信されます。
+- ユーザーがリストビュー項目でマウスボタンをクリックしたときに送信される MMCN_CLICK ます。
 
-- MMCN_DBLCLICK ユーザーがリスト ビュー アイテムのマウス ボタンをダブルクリックしたときに送信されます。
+- ユーザーがリストビューアイテムのマウスボタンをダブルクリックしたときに送信される MMCN_DBLCLICK ます。
 
-- MMCN_DELETE オブジェクトを削除する必要があることをスナップインに通知するために送信されます。
+- オブジェクトを削除する必要があることをスナップインに通知するために MMCN_DELETE 送信されます。
 
-- MMCN_EXPAND フォルダを拡張または縮小する必要がある場合に送信されます。
+- フォルダーの展開または MMCN_EXPAND を行う必要がある場合に送信されます。
 
-- MMCN_MINIMIZED ウィンドウが最小化または最大化されているときに送信されます。
+- ウィンドウが最小化または最大化されているときに送信 MMCN_MINIMIZED ます。
 
-- MMCN_PROPERTY_CHANGE スナップイン オブジェクトのビューが変更されようとしていることを通知するために送信されます。
+- スナップインオブジェクトのビューが変更されようとしていることをスナップインオブジェクトに通知するために MMCN_PROPERTY_CHANGE 送信されます。
 
-- MMCN_REMOVE_CHILDREN スナップインが指定されたノードの下に追加したサブツリー全体を削除する必要があるときに送信されます。
+- スナップインが、指定されたノードの下に追加されたサブツリー全体を削除する必要がある場合に送信 MMCN_REMOVE_CHILDREN ます。
 
-- MMCN_RENAME 名前の変更をクエリする最初の時間と、名前の変更を行う 2 回目の送信日時です。
+- 名前変更をクエリするために最初に送信された MMCN_RENAME、2回目に名前の変更を行います。
 
-- MMCN_SELECT スコープまたは結果ビュー ペイン内のアイテムが選択されたときに送信されます。
+- [スコープ] ウィンドウまたは結果ビューペイン内の項目が選択されたときに送信される MMCN_SELECT ます。
 
-- MMCN_SHOW スコープアイテムが最初に選択または選択解除されたときに送信されます。
+- スコープ項目が最初に選択または選択解除されたときに送信される MMCN_SHOW ます。
 
-- MMCN_VIEW_CHANGE 変更が発生したときにスナップインがすべてのビューを更新できる場合に送信されます。
+- 変更が発生したときにスナップインがすべてのビューを更新できる場合、MMCN_VIEW_CHANGE 送信されます。
 
-*Arg*<br/>
-[in]通知の種類によって異なります。
+*arg*<br/>
+から通知の種類によって異なります。
 
-*Param*<br/>
-[in]通知の種類によって異なります。
+*param*<br/>
+から通知の種類によって異なります。
 
-*を使用します。*<br/>
-[アウト]を実装`IComponentData`するオブジェクトへのポインター。 から`IComponentData::Notify`通知が転送されない場合、このパラメータは NULL です。
+*pComponentData*<br/>
+入出力を実装するオブジェクトへのポインター `IComponentData` 。 通知がから転送されていない場合、このパラメーターは NULL になり `IComponentData::Notify` ます。
 
-*コンポーネント*<br/>
-[アウト]を実装するオブジェクトへのポインター `IComponent`。 から`IComponent::Notify`通知が転送されない場合、このパラメータは NULL です。
+*pComponent*<br/>
+入出力を実装するオブジェクトへのポインター `IComponent` 。 通知がから転送されていない場合、このパラメーターは NULL になり `IComponent::Notify` ます。
 
 *type*<br/>
-[in]オブジェクトの種類を指定します。 次のいずれかの値になります。
+からオブジェクトの種類を指定します。 次のいずれかの値になります。
 
-- CCT_SCOPE スコープ ペイン コンテキストのデータ オブジェクト。
+- スコープペインコンテキストのデータオブジェクトを CCT_SCOPE します。
 
-- CCT_RESULT結果ペインコンテキストのデータオブジェクト。
+- 結果ペインのコンテキストのデータオブジェクトを CCT_RESULT します。
 
-- CCT_SNAPIN_MANAGER スナップイン マネージャー コンテキストのデータ オブジェクトです。
+- スナップインマネージャーコンテキストのデータオブジェクトを CCT_SNAPIN_MANAGER します。
 
-- CCT_UNINITIALIZED Data オブジェクトの型が無効です。
+- CCT_UNINITIALIZED データオブジェクトの型が無効です。
 
-## <a name="csnapinitemimplquerypagesfor"></a><a name="querypagesfor"></a>次のページを表示します。
+## <a name="csnapinitemimplquerypagesfor"></a><a name="querypagesfor"></a> CSnapInItemImpl:: QueryPagesFor
 
-スナップイン ノードがプロパティ ページをサポートしているかどうかを確認するために呼び出されます。
+スナップインノードがプロパティページをサポートしているかどうかを確認するために呼び出されます。
 
 ```
 QueryPagesFor(DATA_OBJECT_TYPES type);
 ```
 
-## <a name="csnapinitemimplsetmenuinsertionflags"></a><a name="setmenuinsertionflags"></a>をクリックします。
+## <a name="csnapinitemimplsetmenuinsertionflags"></a><a name="setmenuinsertionflags"></a> CSnapInItemImpl:: SetMenuInsertionFlags
 
-スナップイン オブジェクトのメニュー挿入フラグを p*挿入許可*で指定した値を変更します。
+この関数を呼び出して、スナップインオブジェクトの *pインサーター Tionallowed* で指定されたメニュー挿入フラグを変更します。
 
 ```cpp
 void SetMenuInsertionFlags(
@@ -390,29 +391,29 @@ void SetMenuInsertionFlags(
 
 ### <a name="parameters"></a>パラメーター
 
-*前に挿入*<br/>
-[in]項目がコンテキスト メニューに追加される前に関数を呼び出す必要がある場合は 0 以外の値を返します。それ以外の場合は 0。
+*bBeforeInsertion*<br/>
+から項目をコンテキストメニューに追加する前に関数を呼び出す必要がある場合は0以外の場合は。それ以外の場合は0です。
 
-*挿入可能*<br/>
-[イン、アウト]使用できる Microsoft 管理コンソール (MMC) 定義されたメニュー項目挿入ポイントを識別します。 これは、次のフラグの組み合わせです。
+*許可された ppg tion*<br/>
+[入力、出力]Microsoft 管理コンソール (MMC) で定義されている、使用可能なメニュー項目の挿入ポイントを識別します。 これは、次のフラグの組み合わせにすることができます。
 
-- CCM_INSERTIONALLOWED_TOP項目は、コンテキストメニューの上部に挿入できます。
+- CCM_INSERTIONALLOWED_TOP の項目は、コンテキストメニューの上部に挿入できます。
 
-- CCM_INSERTIONALLOWED_NEW アイテムは、[新規作成] サブメニューに挿入できます。
+- CCM_INSERTIONALLOWED_NEW の項目は、[新規作成] サブメニューに挿入できます。
 
-- CCM_INSERTIONALLOWED_TASK項目は、[タスク] サブメニューに挿入できます。
+- CCM_INSERTIONALLOWED_TASK の項目は、[タスク] サブメニューに挿入できます。
 
-- CCM_INSERTIONALLOWED_VIEW項目は、ツールバーの表示メニューまたは結果ペインのコンテキストメニューの表示サブメニューに挿入できます。
+- CCM_INSERTIONALLOWED_VIEW の項目は、ツールバーの [表示] メニュー、または結果ペインのコンテキストメニューの [表示] サブメニューに挿入できます。
 
 ### <a name="remarks"></a>解説
 
-プライマリ スナップインを開発している場合は、サードパーティの拡張機能が追加できるメニュー項目の種類を制限する方法として、挿入フラグをリセットできます。 たとえば、プライマリ スナップインでは、CCM_INSERTIONALLOWED_NEW フラグをクリアして、拡張機能が独自の [新規作成] メニュー項目を追加できないようにすることができます。
+プライマリスナップインを開発している場合は、サードパーティの拡張機能によって追加できるメニュー項目の種類を制限する方法として、挿入フラグをリセットできます。 たとえば、プライマリスナップインは CCM_INSERTIONALLOWED_NEW フラグをクリアして、拡張機能によって独自の [新規作成] メニュー項目が追加されないようにすることができます。
 
-最初にクリアされた p*挿入許可*のビットを設定しないでください。 今後のバージョンの MMC では、現在定義されていないビットが使用される可能性があるため、現在定義されていないビットは変更しないでください。
+最初はクリアされた *Ppg Tionallowed* にビットを設定しないようにしてください。 将来のバージョンの MMC では、現在定義されていないビットが使用される可能性があるため、現在定義されていないビットを変更することはできません。
 
-## <a name="csnapinitemimplsettoolbarbuttoninfo"></a><a name="settoolbarbuttoninfo"></a>をクリックします。
+## <a name="csnapinitemimplsettoolbarbuttoninfo"></a><a name="settoolbarbuttoninfo"></a> CSnapInItemImpl:: SetToolbarButtonInfo
 
-この関数は、ツール バーを作成する前に、スナップイン オブジェクトのツール バー ボタン スタイルを変更します。
+ツールバーが作成される前に、スナップインオブジェクトのツールバーボタンのスタイルを変更するには、この関数を呼び出します。
 
 ```cpp
 void SetToolbarButtonInfo(
@@ -424,39 +425,39 @@ void SetToolbarButtonInfo(
 ### <a name="parameters"></a>パラメーター
 
 *id*<br/>
-[in]設定するツール バー ボタンの ID。
+から設定するツールバーボタンの ID。
 
-*fsステート*<br/>
-[in]ボタンの状態フラグ。 次の 1 つ以上の値を指定できます。
+*fsState*<br/>
+からボタンの状態フラグ。 次の1つまたは複数を指定できます。
 
-- TBSTATE_CHECKED ボタンはTBSTYLE_CHECKEDスタイルを持ち、押されています。
+- ボタンのスタイルが TBSTYLE_CHECKED TBSTATE_CHECKED、が押されています。
 
-- TBSTATE_ENABLED ボタンはユーザー入力を受け入れます。 この状態ではないボタンは、ユーザー入力を受け付け、灰色表示になります。
+- TBSTATE_ENABLED ボタンはユーザー入力を受け入れます。 この状態を持たないボタンはユーザー入力を受け付けず、淡色表示になります。
 
-- TBSTATE_HIDDEN ボタンは表示されず、ユーザー入力を受け取ることができません。
+- TBSTATE_HIDDEN ボタンが表示されず、ユーザー入力を受け取ることができません。
 
-- TBSTATE_INDETERMINATE ボタンがグレー表示されます。
+- TBSTATE_INDETERMINATE ボタンは淡色表示になっています。
 
-- TBSTATE_PRESSED ボタンが押されています。
+- TBSTATE_PRESSED ボタンが押されていることを示します。
 
-- TBSTATE_WRAP ボタンの後に改行が表示されます。 ボタンにはTBSTATE_ENABLEDも必要です。
+- ボタンの後に改行を TBSTATE_WRAP ます。 また、このボタンには TBSTATE_ENABLED が必要です。
 
 *fsType*<br/>
-[in]ボタンの状態フラグ。 次の 1 つ以上の値を指定できます。
+からボタンの状態フラグ。 次の1つまたは複数を指定できます。
 
-- TBSTYLE_BUTTON 標準のプッシュ ボタンを作成します。
+- TBSTYLE_BUTTON は、標準のプッシュボタンを作成します。
 
-- TBSTYLE_CHECK ユーザーがクリックするたびに押された状態と押されていない状態を切り替えるボタンを作成します。 ボタンが押された状態のとき、背景色が異なります。
+- TBSTYLE_CHECK は、ユーザーがクリックするたびに押された状態と押されていない状態を切り替えるボタンを作成します。 ボタンの背景色は、押された状態のときに異なります。
 
-- TBSTYLE_CHECKGROUP グループ内の別のボタンが押されるまで押されたままのチェック ボタンを作成します。
+- TBSTYLE_CHECKGROUP によって、グループ内の別のボタンが押されるまで押された状態のチェックボタンが作成されます。
 
-- TBSTYLE_GROUP グループ内の別のボタンが押されるまで押されたままのボタンを作成します。
+- TBSTYLE_GROUP によって、グループ内の別のボタンが押されるまで押されたままになるボタンが作成されます。
 
-- TBSTYLE_SEP ボタン グループ間に小さな間隔を設け、区切り記号を作成します。 このスタイルのボタンは、ユーザー入力を受け取りません。
+- TBSTYLE_SEP によって区切り文字が作成され、ボタングループ間のギャップが小さくなります。 このスタイルのボタンは、ユーザー入力を受け取りません。
 
-## <a name="csnapinitemimplupdatemenustate"></a><a name="updatemenustate"></a>をクリックします。
+## <a name="csnapinitemimplupdatemenustate"></a><a name="updatemenustate"></a> CSnapInItemImpl:: UpdateMenuState
 
-スナップイン オブジェクトのコンテキスト メニューに挿入される前に、メニュー項目を変更します。
+スナップインオブジェクトのコンテキストメニューにメニュー項目を挿入する前に、この関数を呼び出してメニュー項目を変更します。
 
 ```cpp
 void UpdateMenuState(
@@ -468,45 +469,45 @@ void UpdateMenuState(
 ### <a name="parameters"></a>パラメーター
 
 *id*<br/>
-[in]設定するメニュー項目の ID。
+から設定するメニュー項目の ID。
 
 *pBuf*<br/>
-[in]更新するメニュー項目の文字列へのポインター。
+から更新するメニュー項目の文字列へのポインター。
 
-*フラグ*<br/>
-[in]新しい状態フラグを指定します。 これは、次のフラグの組み合わせです。
+*flags*<br/>
+から新しい状態フラグを指定します。 これは、次のフラグの組み合わせにすることができます。
 
-- MF_POPUP コンテキスト メニュー内のサブメニューであることを指定します。 メニュー項目、挿入ポイント、および追加のサブメニューを、`lCommandID``IInsertionPointID`としてこのサブメニューに追加できます。
+- MF_POPUP は、これがショートカットメニュー内のサブメニューであることを指定します。 メニュー項目、挿入ポイント、およびその他のサブメニューは、をとして使用することで、このサブメニューに追加でき `lCommandID` `IInsertionPointID` ます。
 
-- MF_BITMAPおよびMF_OWNERDRAW これらのフラグは許可されず、戻り値が E_INVALIDARG になります。
+- これらのフラグを MF_BITMAP および MF_OWNERDRAW することは許可されていません。 E_INVALIDARG の戻り値になります。
 
-- MF_SEPARATOR 水平分割線を描画します。 設定`IContextMenuProvider`されたメニュー項目のみを追加MF_SEPARATOR。
+- MF_SEPARATOR は、水平方向の区切り線を描画します。 `IContextMenuProvider`MF_SEPARATOR セットを持つメニュー項目を追加できるのはのみです。
 
-- MF_CHECKED メニュー項目の横にチェック マークを付けます。
+- MF_CHECKED メニュー項目の横にチェックマークを付けます。
 
-- MF_DISABLED メニュー項目を無効にして選択できないようにしますが、フラグは淡色表示されません。
+- メニュー項目を選択できないように MF_DISABLED 無効にしますが、フラグは灰色になりません。
 
-- MF_ENABLED メニュー項目を選択できるように有効にし、灰色の状態から復元します。
+- メニュー項目を選択して灰色の状態から復元できるようにするには、MF_ENABLED します。
 
-- MF_GRAYED メニュー項目を無効にし、選択できないように淡色表示します。
+- メニュー項目を無効に MF_GRAYED、選択できないように graying します。
 
-- MF_MENUBARBREAK メニュー バーのMF_MENUBREAK フラグと同じ機能を持ちます。 ドロップダウン メニュー、サブメニュー、またはショートカット メニューの場合、新しい列は、元の列と縦線で区切られます。
+- MF_MENUBARBREAK 関数は、メニューバーの MF_MENUBREAK フラグと同じです。 ドロップダウンメニュー、サブメニュー、またはショートカットメニューの場合、新しい列は、前の列から縦線で区切られます。
 
-- MF_MENUBREAK 列を区切らずに、新しい行 (メニュー バーの場合) または新しい列 (ドロップダウン メニュー、サブメニュー、ショートカット メニューの場合) に項目を配置します。
+- MF_MENUBREAK は、列を区切ることなく、新しい行 (メニューバーの場合) または新しい列 (ドロップダウンメニュー、サブメニュー、またはショートカットメニュー) に項目を配置します。
 
-- MF_UNCHECKED 項目の横にチェック マークを付けないことを示します (既定値)。
+- MF_UNCHECKED は、項目の横にチェックマークを付けません (既定)。
 
-次のフラググループは、一緒に使用することはできません。
+次のフラグのグループを一緒に使用することはできません。
 
-- MF_DISABLED、MF_ENABLED、MF_GRAYED。
+- MF_DISABLED、MF_ENABLED、および MF_GRAYED。
 
-- MF_MENUBARBREAKとMF_MENUBREAK。
+- MF_MENUBARBREAK と MF_MENUBREAK。
 
-- MF_CHECKEDとMF_UNCHECKED。
+- MF_CHECKED と MF_UNCHECKED。
 
-## <a name="csnapinitemimplupdatetoolbarbutton"></a><a name="updatetoolbarbutton"></a>をクリックします。
+## <a name="csnapinitemimplupdatetoolbarbutton"></a><a name="updatetoolbarbutton"></a> CSnapInItemImpl:: UpdateToolbarButton
 
-スナップイン オブジェクトのツール バー ボタンを、表示する前に変更します。
+スナップインオブジェクトのツールバーボタンを表示する前に変更するには、この関数を呼び出します。
 
 ```
 BOOL UpdateToolbarButton(UINT id, BYTE fsState);
@@ -515,20 +516,20 @@ BOOL UpdateToolbarButton(UINT id, BYTE fsState);
 ### <a name="parameters"></a>パラメーター
 
 *id*<br/>
-更新するツール バー ボタンのボタン ID を指定します。
+更新するツールバーボタンのボタン ID を指定します。
 
-*fsステート*<br/>
-ツール バー ボタンの状態を指定します。 この状態を設定する場合は、TRUE を返します。 これは、次のフラグの組み合わせです。
+*fsState*<br/>
+ツールバーボタンの状態を指定します。 この状態を設定する場合は、TRUE を返します。 これは、次のフラグの組み合わせにすることができます。
 
-- 有効ボタンは、ユーザー入力を受け入れます。 この状態ではないボタンは、ユーザー入力を受け付け、灰色表示になります。
+- [有効] に設定すると、ユーザー入力が受け入れられます。 この状態を持たないボタンはユーザー入力を受け付けず、淡色表示になります。
 
-- チェックボタンはCHECKEDスタイルを持ち、押されています。
+- チェックボックスがオンになっていることを確認します。
 
-- HIDDEN ボタンは表示されず、ユーザー入力を受け取ることができません。
+- [非表示] ボタンは表示されず、ユーザー入力を受け取ることはできません。
 
-- [不確定] ボタンは灰色表示されます。
+- [不確定] ボタンがグレーで表示されます。
 
-- ボタン押下 ボタンが押されています。
+- BUTTONPRESSED れたボタンが押されています。
 
 ## <a name="see-also"></a>関連項目
 

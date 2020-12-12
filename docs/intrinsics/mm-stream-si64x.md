@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: _mm_stream_si64x'
 title: _mm_stream_si64x
 ms.date: 09/02/2019
 f1_keywords:
@@ -7,18 +8,18 @@ helpviewer_keywords:
 - movnti instruction
 - _mm_stream_si64x intrinsic
 ms.assetid: 114c2cd0-085f-41aa-846e-87bdd56c9ee7
-ms.openlocfilehash: f6ed0f2482ecbcdaa4d50034e0d08381768847a2
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 2a68437905c0d5dd56a522d15985db7179921852
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70221749"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97133225"
 ---
 # <a name="_mm_stream_si64x"></a>_mm_stream_si64x
 
 **Microsoft 固有の仕様**
 
-MOVNTI 命令を生成します。 キャッシュを汚染せずに、転送*元*のデータを*変換先*によって指定されたメモリ位置に書き込みます。
+MOVNTI 命令を生成します。 キャッシュを汚染せずに、転送 *元* のデータを *変換先* によって指定されたメモリ位置に書き込みます。
 
 ## <a name="syntax"></a>構文
 
@@ -34,18 +35,18 @@ void _mm_stream_si64x(
 *インストール*\
 入出力ソースデータの書き込み先の場所を指すポインター。
 
-*Source*\
+*電源*\
 から書き込むデータ。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-|組み込み|アーキテクチャ|
+|Intrinsic|アーキテクチャ|
 |---------------|------------------|
 |`_mm_stream_si64x`|X64|
 
-**ヘッダーファイル**\<>
+**ヘッダー ファイル** \<intrin.h>
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 このルーチンは、組み込みとしてのみ使用できます。
 

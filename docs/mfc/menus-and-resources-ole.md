@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「メニューとリソース (OLE)」を参照してください。
 title: メニューとリソース (OLE)
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -18,12 +19,12 @@ helpviewer_keywords:
 - containers [MFC], OLE container applications
 - OLE menus and resources [MFC]
 ms.assetid: 52bfa086-7d3d-466f-94c7-c7061f3bdb3a
-ms.openlocfilehash: e705f28476df7b594f9648aee8317759211c66c9
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: a6ec4f2750a99935cb0113a3ad607be8a80d4bfe
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84626210"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97133147"
 ---
 # <a name="menus-and-resources-ole"></a>メニューとリソース (OLE)
 
@@ -39,7 +40,7 @@ OLE ビジュアル編集では、コンテナーとサーバー (コンポー�
 
 これには、アプリケーションの可能なモードごとに1つずつ、3つの異なるメニューレイアウトが必要です。 アクセラレータテーブルは、新しいモードごとにも必要です。 コンテナーアプリケーションでは、インプレースライセンス認証がサポートされている場合とサポートされていない場合があります。存在する場合は、新しいメニュー構造と関連するアクセラレータテーブルが必要です。
 
-インプレースライセンス認証を使用するには、コンテナーとサーバーアプリケーションがメニュー、ツールバー、ステータスバーの領域に対してネゴシエートする必要があります。 すべてのリソースは、この点を念頭に置いて設計する必要があります。 記事のメニュー[とリソース: メニューのマージ](menus-and-resources-menu-merging.md)については、このトピックで詳しく説明します。
+インプレースライセンス認証を使用するには、コンテナーとサーバーアプリケーションがメニュー、ツールバー、ステータスバーの領域に対してネゴシエートする必要があります。 すべてのリソースは、この点を念頭に置いて設計する必要があります。 記事のメニュー [とリソース: メニューのマージ](menus-and-resources-menu-merging.md) については、このトピックで詳しく説明します。
 
 これらの問題のため、アプリケーションウィザードで作成された OLE ドキュメントアプリケーションは、最大4つの個別のメニューとアクセラレータテーブルリソースを持つことができます。 これらは、次の理由で使用されます。
 
@@ -54,11 +55,11 @@ OLE ビジュアル編集では、コンテナーとサーバー (コンポー�
 
 次の記事では、コンテナー、サーバー、および埋め込み先でのライセンス認証を実装するために必要なメニューのマージに関連するトピックについて説明します。
 
-- [メニューとリソース : コンテナーの変更点](menus-and-resources-container-additions.md)
+- [メニューとリソース: コンテナーの追加](menus-and-resources-container-additions.md)
 
-- [メニューとリソース: サーバーの変更点](menus-and-resources-server-additions.md)
+- [メニューとリソース: サーバーの追加](menus-and-resources-server-additions.md)
 
-- [メニューとリソース : メニューの結合](menus-and-resources-menu-merging.md)
+- [メニューとリソース: メニューのマージ](menus-and-resources-menu-merging.md)
 
 ## <a name="see-also"></a>関連項目
 

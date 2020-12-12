@@ -1,18 +1,19 @@
 ---
+description: 詳細については、Compile-Time カプセル化の Pimpl (最新 C++) に関するページを参照してください。
 title: コンパイル時のカプセル化の Pimpl (Modern C++)
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: c3e8a90a-b328-4990-82bb-e1b147f76e07
-ms.openlocfilehash: f1eb06ad3a52be486f085babf699677951b1ee71
-ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
+ms.openlocfilehash: 95d1ca4f377cc911e862885e86f846d8536d3b1f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74245175"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97145887"
 ---
 # <a name="pimpl-for-compile-time-encapsulation-modern-c"></a>コンパイル時のカプセル化の Pimpl (Modern C++)
 
-*Pimpl*表現は、実装をC++非表示にするための最新の手法であり、結合を最小限にし、インターフェイスを分離します。 Pimpl は、"実装へのポインター" の省略形です。 概念は既に理解しているものの、Cheshire Cat や Compiler Firewall イディオムなどの他の名前で理解している場合があります。
+*Pimpl* 表現は、実装を非表示にし、結合を最小限にし、インターフェイスを分離するための最新の C++ 手法です。 Pimpl は、"実装へのポインター" の省略形です。 概念は既に理解しているものの、Cheshire Cat や Compiler Firewall イディオムなどの他の名前で理解している場合があります。
 
 ## <a name="why-use-pimpl"></a>Pimpl を使用する理由
 
@@ -22,7 +23,7 @@ ms.locfileid: "74245175"
 
 - インターフェイスと実装の分離。
 
-- 携帯.
+- 移植性。
 
 ## <a name="pimpl-header"></a>Pimpl ヘッダー
 
@@ -39,7 +40,7 @@ Pimpl 表現は、カスケードおよび不安定なオブジェクトレイ�
 
 ## <a name="pimpl-implementation"></a>Pimpl 実装
 
-.Cpp ファイルで `impl` クラスを定義します。
+`impl`.Cpp ファイルでクラスを定義します。
 
 ```cpp
 // my_class.cpp
@@ -57,8 +58,8 @@ my_class::my_class(): pimpl( new impl )
 
 スローしないスワップ特殊化のサポートを追加するかどうかを検討します。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[に戻るC++](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
+[C++ へようこそ](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
 [C++ 言語リファレンス](../cpp/cpp-language-reference.md)<br/>
 [C++ 標準ライブラリ](../standard-library/cpp-standard-library-reference.md)

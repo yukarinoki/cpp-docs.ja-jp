@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: underlying_type クラス'
 title: underlying_type クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - underlying_type
 ms.assetid: 691ddce3-2677-4480-bd35-d933fab85d3e
-ms.openlocfilehash: ea4768d78047112a7584ca49b0e4487fad55a970
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: e717abe854f13fc96926deba1d4bf177529618cf
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72688842"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97132705"
 ---
 # <a name="underlying_type-class"></a>underlying_type クラス
 
@@ -26,16 +27,16 @@ struct underlying_type;
 
 ### <a name="parameters"></a>パラメーター
 
-*T* \
+*\T*\
 変更する型。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-クラステンプレートの `type` メンバー typedef は、 *t*が列挙型である場合*に、基*になる整数型の名前を指定します。それ以外の場合は、`type` メンバー typedef は存在しません。
+`type` *T* が列挙型である場合、クラステンプレートのメンバー typedef は、基になる整数型 *t* に名前を指定します。それ以外の場合は、メンバー typedef は存在しません `type` 。
 
-## <a name="requirements"></a>［要件］
+## <a name="requirements"></a>要件
 
-**ヘッダー:** \<type_traits>
+**ヘッダー:**\<type_traits>
 
 **名前空間:** std
 

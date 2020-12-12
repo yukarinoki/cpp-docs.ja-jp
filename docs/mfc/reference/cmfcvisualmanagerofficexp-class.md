@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: CMFCVisualManagerOfficeXP クラス'
 title: CMFCVisualManagerOfficeXP クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - CMFCVisualManagerOfficeXP class [MFC]
 ms.assetid: 46b6f854-37c2-4836-8f56-5cb6ff63c9af
-ms.openlocfilehash: c975a2b7ae7de12c154954e44470e7af9feeaa1d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b248158b963de67e3b40c0e664ee9020091d25ba
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62337805"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97143404"
 ---
 # <a name="cmfcvisualmanagerofficexp-class"></a>CMFCVisualManagerOfficeXP クラス
 
-`CMFCVisualManagerOfficeXP`アプリケーション、Microsoft Office XP の外観を与えます。
+は、 `CMFCVisualManagerOfficeXP` アプリケーションに XP の Microsoft Office の外観を与えます。
 
 ## <a name="syntax"></a>構文
 
@@ -25,15 +26,15 @@ class CMFCVisualManagerOfficeXP : public CMFCVisualManager
 
 ## <a name="members"></a>メンバー
 
-このクラスの先祖から派生した仮想関数はすべてこのクラスのメンバーの[CMFCVisualManager クラス](../../mfc/reference/cmfcvisualmanager-class.md)します。
+このクラスのすべてのメンバーは、このクラスの先祖 ( [Cmfcvisualmanager クラス](../../mfc/reference/cmfcvisualmanager-class.md)) から派生した仮想関数です。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-使用する、`CMFCVisualManagerOfficeXP`を Microsoft Office XP のように、アプリケーションの外観を変更するクラス。
+クラスを使用して、 `CMFCVisualManagerOfficeXP` MICROSOFT OFFICE XP の場合と同様に、アプリケーションの外観を変更します。
 
 ## <a name="example"></a>例
 
-次の例を使用する方法を示します`CMFCVisualManagerOfficeXP`します。 このコード スニペットの一部、[デスクトップ アラート デモ サンプル](../../overview/visual-cpp-samples.md)します。
+を使用する方法を次の例に示し `CMFCVisualManagerOfficeXP` ます。 このコードスニペットは、 [デスクトップアラートのデモサンプル](../../overview/visual-cpp-samples.md)に含まれています。
 
 [!code-cpp[NVC_MFC_DesktopAlertDemo#8](../../mfc/reference/codesnippet/cpp/cmfcvisualmanagerofficexp-class_1.cpp)]
 
@@ -47,12 +48,12 @@ class CMFCVisualManagerOfficeXP : public CMFCVisualManager
 
 [CMFCVisualManagerOfficeXP](../../mfc/reference/cmfcvisualmanagerofficexp-class.md)
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-**ヘッダー:** afxvisualmanagerofficexp.h
+**ヘッダー:** afxvisualmanagerofficexp
 
 ## <a name="see-also"></a>関連項目
 
 [階層図](../../mfc/hierarchy-chart.md)<br/>
-[クラス](../../mfc/reference/mfc-classes.md)<br/>
+[Classes](../../mfc/reference/mfc-classes.md)<br/>
 [CMFCVisualManager クラス](../../mfc/reference/cmfcvisualmanager-class.md)

@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「IAxWinAmbientDispatchEx インターフェイス」を参照してください。
 title: IAxWinAmbientDispatchEx インターフェイス
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - IAxWinAmbientDispatchEx interface
 ms.assetid: 2c25e079-6128-4278-bc72-b2c6195ba7ef
-ms.openlocfilehash: 3359c17996eb78c3249abc83ff2d439381f209fe
-ms.sourcegitcommit: d9c94dcabd94537e304be0261b3263c2071b437b
+ms.openlocfilehash: c26ce7fb4f41273a498e3b28e9d6e15d4c89f9ea
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91352987"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97139725"
 ---
 # <a name="iaxwinambientdispatchex-interface"></a>IAxWinAmbientDispatchEx インターフェイス
 
@@ -48,7 +49,7 @@ ATL90.dll にリンクしている場合、 **AXHost** は DLL のタイプラ�
 
 詳細については、「 [ATL AXHost を使用した ActiveX コントロールのホスト](../../atl/atl-control-containment-faq.md#hosting-activex-controls-using-atl-axhost) 」を参照してください。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 このインターフェイスの定義は、次の表に示すように、さまざまな形式で使用できます。
 

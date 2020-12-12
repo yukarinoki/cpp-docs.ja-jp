@@ -1,35 +1,36 @@
 ---
-title: デュアル インターフェイスと ATL
+description: 詳細については、デュアルインターフェイスと ATL に関するページを参照してください。
+title: デュアルインターフェイスと ATL
 ms.date: 11/04/2016
 helpviewer_keywords:
 - COM, and ATL
 - ATL, dual interfaces
 - dual interfaces, about dual interfaces
 ms.assetid: 5a390e89-d2c4-41f0-8538-cab2c5e5d4c8
-ms.openlocfilehash: efa523099aaca77fba06efdaeabd1c7562a372a5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7b277b719d30b398d7b4a401c4b65402be954d99
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62234840"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97147993"
 ---
-# <a name="dual-interfaces-and-atl"></a>デュアル インターフェイスと ATL
+# <a name="dual-interfaces-and-atl"></a>デュアルインターフェイスと ATL
 
-デュアル インターフェイスは、そのメソッドまたは vtable メソッドのディスパッチ インターフェイスのメソッドとしてアクセスを許可します。 このセクションでは、ATL の観点からデュアル インターフェイスの機能の一部について説明します。
+デュアルインターフェイスを使用すると、ディスパッチインターフェイスメソッドまたは vtable メソッドとしてメソッドにアクセスできます。 ここでは、ATL 観点からのデュアルインターフェイスの一部の機能について説明します。
 
 ## <a name="in-this-section"></a>このセクションの内容
 
-[デュアル インターフェイスの実装](../atl/implementing-a-dual-interface.md)<br/>
-クラスとデュアル インターフェイスの実装に関連するウィザードについて説明します。
+[デュアルインターフェイスの実装](../atl/implementing-a-dual-interface.md)<br/>
+デュアルインターフェイスの実装に関連するクラスとウィザードについて説明します。
 
-[複数のデュアル インターフェイス](../atl/multiple-dual-interfaces.md)<br/>
-単一のオブジェクトに対して複数のデュアル インターフェイスを公開する方法について説明します。
+[複数のデュアルインターフェイス](../atl/multiple-dual-interfaces.md)<br/>
+1つのオブジェクトで複数のデュアルインターフェイスを公開する方法について説明します。
 
-[Nonextensible 属性](../atl/nonextensible-attribute.md)<br/>
-使用するかについて説明します、 **nonextensible**インターフェイス定義に対する属性。
+[非拡張属性](../atl/nonextensible-attribute.md)<br/>
+インターフェイス定義で **非拡張** 属性を使用する場合について説明します。
 
-[デュアル インターフェイスとイベント](../atl/dual-interfaces-and-events.md)<br/>
-イベント インターフェイスをデュアル インターフェイスを行わないの設計上の理由について説明します。
+[デュアルインターフェイスとイベント](../atl/dual-interfaces-and-events.md)<br/>
+イベントインターフェイスをデュアルインターフェイスにしない場合の設計上の理由について説明します。
 
 ## <a name="related-sections"></a>関連項目
 

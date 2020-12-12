@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: 等しい'
 title: EQU
 ms.date: 12/17/2019
 f1_keywords:
@@ -6,28 +7,28 @@ f1_keywords:
 helpviewer_keywords:
 - EQU directive
 ms.assetid: 96db466a-1eab-45bd-a3c2-5a59bd754eab
-ms.openlocfilehash: f409110e665edc590383c438f12cc8b13084bc22
-ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
+ms.openlocfilehash: b62816d0d7d8890b3800db70c17997766bdcfd41
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75317345"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97130469"
 ---
 # <a name="equ"></a>EQU
 
-最初のディレクティブは、*式*の数値を*名前*に代入します。
+最初のディレクティブは、 *式* の数値を *名前* に代入します。
 
 ## <a name="syntax"></a>構文
 
 > *名前***等しい***式*
 >
-> *name* **等しい** __\<__ *text* __>__
+> *名前***等しい**__\<__*text*__>__
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
-後で*名前*を再定義することはできません。
+後で *名前* を再定義することはできません。
 
-2番目のディレクティブは、指定された*テキスト*を*名前*に割り当てます。 *名前*には、後で別の*テキスト*を割り当てることができます。 「 [TEXTEQU](textequ.md)」を参照してください。
+2番目のディレクティブは、指定された *テキスト* を *名前* に割り当てます。 *名前* には、後で別の *テキスト* を割り当てることができます。 「 [TEXTEQU](textequ.md)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

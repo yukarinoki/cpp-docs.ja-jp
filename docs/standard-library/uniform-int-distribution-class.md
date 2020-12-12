@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: uniform_int_distribution クラス'
 title: uniform_int_distribution クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -26,12 +27,12 @@ helpviewer_keywords:
 - std::uniform_int_distribution [C++], param_type
 - std::uniform_int_distribution [C++], param_type
 ms.assetid: a1867dcd-3bd9-4787-afe3-4b62692c1d04
-ms.openlocfilehash: 3d9bb3cf9c4e34916dad3e435c7f4040dcc5f373
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 96e5782c04ce77f8d705f60002ef8316b26793e4
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88831412"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97132692"
 ---
 # <a name="uniform_int_distribution-class"></a>uniform_int_distribution クラス
 
@@ -171,7 +172,7 @@ Distribution for 200 samples:
    12 :::::::::::::::::
 ```
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:**\<random>
 
@@ -202,7 +203,7 @@ explicit uniform_int_distribution(const param_type& parm);
 
 **前提条件:**`a ≤ b`
 
-1つ目のコンストラクターは、値 *を* 保持し、格納さ *れて* いる *b* 値が値 *b*を保持するオブジェクトを構築します。
+1つ目のコンストラクターは、値 *を* 保持し、格納さ *れて* いる *b* 値が値 *b* を保持するオブジェクトを構築します。
 
 2 つ目のコンストラクターは、格納されているパラメーターが *parm* から初期化されるオブジェクトを作成します。 `param()` メンバー関数を呼び出すと、既存の分布の現在のパラメーターを取得および設定できます。
 

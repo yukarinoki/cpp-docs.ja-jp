@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: CComCurrency クラス'
 title: CComCurrency クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -15,12 +16,12 @@ f1_keywords:
 helpviewer_keywords:
 - CComCurrency class
 ms.assetid: a1c3d10a-bba6-40cc-8bcf-aed9023c8a9e
-ms.openlocfilehash: 2b3c260f250fdb198c8317355628fa2fe62c44eb
-ms.sourcegitcommit: 13f42c339fb7af935e3a93ac80e350d5e784c9f1
+ms.openlocfilehash: a53e4fe098d3f422b0ccab341f7d6f29d5fec49b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/31/2020
-ms.locfileid: "87470785"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97146719"
 ---
 # <a name="ccomcurrency-class"></a>CComCurrency クラス
 
@@ -78,7 +79,7 @@ class CComCurrency
 |----------|-----------------|
 |[CComCurrency::m_currency](#m_currency)|クラスインスタンスによって作成される通貨変数。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 `CComCurrency` は、CURRENCY データ型のラッパーです。 CURRENCY は、10,000 倍した値を 8 バイトの 2 の補数で表現した整数値として実装されます。 これは、15 桁の整数部と 4 桁の小数部を持つ固定小数点数として表現されます。 CURRENCY データ型は、通貨に関連する計算、または精度が重要となる固定小数点数の計算に非常に役立ちます。
 
@@ -90,16 +91,16 @@ class CComCurrency
 
 |値|考えられる CComCurrency の割り当て|
 |-----------|---------------------------------------|
-|$10.50|CComCurrency (10, 5000)*または*CComCurrency (10.50)|
-|$10.05|CComCurrency (10500)*または*CComCurrency (10.05)|
+|$10.50|CComCurrency (10, 5000) *または* CComCurrency (10.50)|
+|$10.05|CComCurrency (10500) *または* CComCurrency (10.05)|
 
 値  CY_MIN_FRACTION、CY_MAX_FRACTION、および  CY_SCALE は、atlcur.h で定義されています。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** atlcur .h です。
 
-## <a name="ccomcurrencyccomcurrency"></a><a name="ccomcurrency"></a>CComCurrency:: CComCurrency
+## <a name="ccomcurrencyccomcurrency"></a><a name="ccomcurrency"></a> CComCurrency:: CComCurrency
 
 コンストラクターです。
 
@@ -138,7 +139,7 @@ CURRENCY 型の変数。
 メンバー変数に与えられた初期値を格納している文字 `m_currency` 。
 
 *Ninteger*、 *ninteger*<br/>
-初期通貨値の整数部と小数部の要素。 詳細については、「 [CComCurrency](../../atl/reference/ccomcurrency-class.md)の概要」を参照してください。
+初期通貨値の整数部と小数部の要素。 詳細については、「 [CComCurrency](../../atl/reference/ccomcurrency-class.md) の概要」を参照してください。
 
 *pDispSrc*<br/>
 `IDispatch`ポインター。
@@ -149,15 +150,15 @@ VARIANT 型の変数。 変換を実行するために、現在のスレッド�
 *szSrc*<br/>
 初期値を格納している Unicode または ANSI 文字列。 変換を実行するために、現在のスレッドのロケールが使用されます。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-コンストラクターは[CComCurrency:: m_currency](#m_currency)の初期値を設定し、整数、文字列、浮動小数点数、通貨変数、その他のオブジェクトなど、さまざまなデータ型を受け入れ `CComCurrency` ます。 値が指定されていない場合、 `m_currency` は0に設定されます。
+コンストラクターは [CComCurrency:: m_currency](#m_currency)の初期値を設定し、整数、文字列、浮動小数点数、通貨変数、その他のオブジェクトなど、さまざまなデータ型を受け入れ `CComCurrency` ます。 値が指定されていない場合、 `m_currency` は0に設定されます。
 
 オーバーフローなどのエラーが発生した場合、コンストラクターには、エラーを説明する HRESULT を使用して、空の例外指定 (**throw ()**) 呼び出しが不足して `AtlThrow` います。
 
 浮動小数点値または double 値を使用して値を代入する場合、はと等価であり、ではないことに注意して `CComCurrency(10.50)` `CComCurrency(10,5000)` `CComCurrency(10,50)` ください。
 
-## <a name="ccomcurrencygetcurrencyptr"></a><a name="getcurrencyptr"></a>CComCurrency:: GetCurrencyPtr
+## <a name="ccomcurrencygetcurrencyptr"></a><a name="getcurrencyptr"></a> CComCurrency:: GetCurrencyPtr
 
 `m_currency` データ メンバーのアドレスを返します。
 
@@ -169,7 +170,7 @@ CURRENCY* GetCurrencyPtr() throw();
 
 データメンバーのアドレスを返します。 `m_currency`
 
-## <a name="ccomcurrencygetfraction"></a><a name="getfraction"></a>CComCurrency:: GetFraction
+## <a name="ccomcurrencygetfraction"></a><a name="getfraction"></a> CComCurrency:: GetFraction
 
 オブジェクトの小数部分を返すには、このメソッドを呼び出し `CComCurrency` ます。
 
@@ -181,15 +182,15 @@ SHORT GetFraction() const;
 
 データメンバーの小数部分を返し `m_currency` ます。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-小数部分は、-9999 (CY_MIN_FRACTION) ~ + 9999 (CY_MAX_FRACTION) の4桁の整数値です。 `GetFraction`1万 (CY_SCALE) でスケーリングされたこの値を返します。 CY_MIN_FRACTION、CY_MAX_FRACTION、および CY_SCALE の値は、atlcur .h で定義されています。
+小数部分は、-9999 (CY_MIN_FRACTION) ~ + 9999 (CY_MAX_FRACTION) の4桁の整数値です。 `GetFraction` 1万 (CY_SCALE) でスケーリングされたこの値を返します。 CY_MIN_FRACTION、CY_MAX_FRACTION、および CY_SCALE の値は、atlcur .h で定義されています。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_ATL_Utilities#50](../../atl/codesnippet/cpp/ccomcurrency-class_1.cpp)]
 
-## <a name="ccomcurrencygetinteger"></a><a name="getinteger"></a>CComCurrency:: GetInteger
+## <a name="ccomcurrencygetinteger"></a><a name="getinteger"></a> CComCurrency:: GetInteger
 
 オブジェクトの整数部分を取得するには、このメソッドを呼び出し `CComCurrency` ます。
 
@@ -205,7 +206,7 @@ LONGLONG GetInteger() const;
 
 [!code-cpp[NVC_ATL_Utilities#51](../../atl/codesnippet/cpp/ccomcurrency-class_2.cpp)]
 
-## <a name="ccomcurrencym_currency"></a><a name="m_currency"></a>CComCurrency:: m_currency
+## <a name="ccomcurrencym_currency"></a><a name="m_currency"></a> CComCurrency:: m_currency
 
 通貨データメンバー。
 
@@ -213,11 +214,11 @@ LONGLONG GetInteger() const;
 CURRENCY m_currency;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 このメンバーは、このクラスのメソッドによってアクセスおよび操作される通貨を保持します。
 
-## <a name="ccomcurrencyoperator--"></a><a name="operator_-"></a>CComCurrency:: operator-
+## <a name="ccomcurrencyoperator--"></a><a name="operator_-"></a> CComCurrency:: operator-
 
 この演算子は、`CComCurrency` オブジェクトで減算を実行するために使用します。
 
@@ -239,7 +240,7 @@ CComCurrency operator-(const CComCurrency& cur) const;
 
 [!code-cpp[NVC_ATL_Utilities#55](../../atl/codesnippet/cpp/ccomcurrency-class_3.cpp)]
 
-## <a name="ccomcurrencyoperator-"></a><a name="operator_neq"></a>CComCurrency:: operator! =
+## <a name="ccomcurrencyoperator-"></a><a name="operator_neq"></a> CComCurrency:: operator! =
 
 この演算子は、2つのオブジェクトが等しくないかどうかを比較します。
 
@@ -260,7 +261,7 @@ bool operator!= (const CComCurrency& cur) const;
 
 [!code-cpp[NVC_ATL_Utilities#56](../../atl/codesnippet/cpp/ccomcurrency-class_4.cpp)]
 
-## <a name="ccomcurrencyoperator-"></a><a name="operator_star"></a>CComCurrency:: operator *
+## <a name="ccomcurrencyoperator-"></a><a name="operator_star"></a> CComCurrency:: operator *
 
 この演算子は、`CComCurrency` オブジェクトで乗算を実行するために使用します。
 
@@ -285,7 +286,7 @@ CComCurrency operator*(const CComCurrency& cur) const;
 
 [!code-cpp[NVC_ATL_Utilities#57](../../atl/codesnippet/cpp/ccomcurrency-class_5.cpp)]
 
-## <a name="ccomcurrencyoperator-"></a><a name="operator_star_eq"></a>CComCurrency:: operator\*=
+## <a name="ccomcurrencyoperator-"></a><a name="operator_star_eq"></a> CComCurrency:: operator \*=
 
 この演算子は、`CComCurrency` オブジェクトで乗算を実行し、オブジェクトに結果を代入するために使用します。
 
@@ -310,7 +311,7 @@ const CComCurrency& operator*= (const CComCurrency& cur);
 
 [!code-cpp[NVC_ATL_Utilities#58](../../atl/codesnippet/cpp/ccomcurrency-class_6.cpp)]
 
-## <a name="ccomcurrencyoperator-"></a><a name="operator_div"></a>CComCurrency:: operator/
+## <a name="ccomcurrencyoperator-"></a><a name="operator_div"></a> CComCurrency:: operator/
 
 この演算子は、`CComCurrency` オブジェクトで除算を実行するために使用します。
 
@@ -331,7 +332,7 @@ CComCurrency operator/(long nOperand) const;
 
 [!code-cpp[NVC_ATL_Utilities#59](../../atl/codesnippet/cpp/ccomcurrency-class_7.cpp)]
 
-## <a name="ccomcurrencyoperator-"></a><a name="operator_div_eq"></a>CComCurrency:: operator/=
+## <a name="ccomcurrencyoperator-"></a><a name="operator_div_eq"></a> CComCurrency:: operator/=
 
 この演算子は、`CComCurrency` オブジェクトで除算を実行し、オブジェクトに結果を代入するために使用します。
 
@@ -352,7 +353,7 @@ const CComCurrency& operator/= (long nOperand);
 
 [!code-cpp[NVC_ATL_Utilities#60](../../atl/codesnippet/cpp/ccomcurrency-class_8.cpp)]
 
-## <a name="ccomcurrencyoperator-"></a><a name="operator_add"></a>CComCurrency:: operator +
+## <a name="ccomcurrencyoperator-"></a><a name="operator_add"></a> CComCurrency:: operator +
 
 この演算子は、`CComCurrency` オブジェクトで加算を実行するために使用します。
 
@@ -373,7 +374,7 @@ CComCurrency operator+(const CComCurrency& cur) const;
 
 [!code-cpp[NVC_ATL_Utilities#61](../../atl/codesnippet/cpp/ccomcurrency-class_9.cpp)]
 
-## <a name="ccomcurrencyoperator-"></a><a name="operator_add_eq"></a>CComCurrency:: operator + =
+## <a name="ccomcurrencyoperator-"></a><a name="operator_add_eq"></a> CComCurrency:: operator + =
 
 この演算子は、`CComCurrency` オブジェクトで加算を実行し、結果を現在のオブジェクトに代入するために使用します。
 
@@ -394,7 +395,7 @@ const CComCurrency& operator+= (const CComCurrency& cur);
 
 [!code-cpp[NVC_ATL_Utilities#62](../../atl/codesnippet/cpp/ccomcurrency-class_10.cpp)]
 
-## <a name="ccomcurrencyoperator-lt"></a><a name="operator_lt"></a>CComCurrency:: operator&lt;
+## <a name="ccomcurrencyoperator-lt"></a><a name="operator_lt"></a> CComCurrency:: operator &lt;
 
 この演算子は、2 つの `CComCurrency` オブジェクトを比較して、小さい方を決定します。
 
@@ -415,7 +416,7 @@ bool operator<(const CComCurrency& cur) const;
 
 [!code-cpp[NVC_ATL_Utilities#63](../../atl/codesnippet/cpp/ccomcurrency-class_11.cpp)]
 
-## <a name="ccomcurrencyoperator-lt"></a><a name="operator_lt_eq"></a>CComCurrency:: operator&lt;=
+## <a name="ccomcurrencyoperator-lt"></a><a name="operator_lt_eq"></a> CComCurrency:: operator &lt;=
 
 この演算子では、2 つの `CComCurrency` オブジェクトを比較して、等しいかどうか、または小さい方を決定します。
 
@@ -436,7 +437,7 @@ bool operator<= (const CComCurrency& cur) const;
 
 [!code-cpp[NVC_ATL_Utilities#64](../../atl/codesnippet/cpp/ccomcurrency-class_12.cpp)]
 
-## <a name="ccomcurrencyoperator-"></a><a name="operator_eq"></a>CComCurrency:: operator =
+## <a name="ccomcurrencyoperator-"></a><a name="operator_eq"></a> CComCurrency:: operator =
 
 この演算子は、`CComCurrency` オブジェクトに新しい値を割り当てます。
 
@@ -473,7 +474,7 @@ CURRENCY 型の変数。
 
 [!code-cpp[NVC_ATL_Utilities#65](../../atl/codesnippet/cpp/ccomcurrency-class_13.cpp)]
 
-## <a name="ccomcurrencyoperator--"></a><a name="operator_-_eq"></a>CComCurrency:: operator-=
+## <a name="ccomcurrencyoperator--"></a><a name="operator_-_eq"></a> CComCurrency:: operator-=
 
 この演算子は、`CComCurrency` オブジェクトで減算を実行し、オブジェクトに結果を代入するために使用します。
 
@@ -494,7 +495,7 @@ const CComCurrency& operator-= (const CComCurrency& cur);
 
 [!code-cpp[NVC_ATL_Utilities#66](../../atl/codesnippet/cpp/ccomcurrency-class_14.cpp)]
 
-## <a name="ccomcurrencyoperator-"></a><a name="operator_eq_eq"></a>CComCurrency:: operator = =
+## <a name="ccomcurrencyoperator-"></a><a name="operator_eq_eq"></a> CComCurrency:: operator = =
 
 この演算子は、2 つの `CComCurrency` オブジェクトが等しいかどうかを比較します。
 
@@ -515,7 +516,7 @@ bool operator== (const CComCurrency& cur) const;
 
 [!code-cpp[NVC_ATL_Utilities#67](../../atl/codesnippet/cpp/ccomcurrency-class_15.cpp)]
 
-## <a name="ccomcurrencyoperator-gt"></a><a name="operator_gt"></a>CComCurrency:: operator&gt;
+## <a name="ccomcurrencyoperator-gt"></a><a name="operator_gt"></a> CComCurrency:: operator &gt;
 
 この演算子は、2 つの `CComCurrency` オブジェクトを比較して、大きい方を決定します。
 
@@ -536,7 +537,7 @@ bool operator>(const CComCurrency& cur) const;
 
 [!code-cpp[NVC_ATL_Utilities#68](../../atl/codesnippet/cpp/ccomcurrency-class_16.cpp)]
 
-## <a name="ccomcurrencyoperator-gt"></a><a name="operator_gt_eq"></a>CComCurrency:: operator&gt;=
+## <a name="ccomcurrencyoperator-gt"></a><a name="operator_gt_eq"></a> CComCurrency:: operator &gt;=
 
 この演算子は、2 つの `CComCurrency` オブジェクトを比較して、等しいかどうか、または大きい方を決定します。
 
@@ -557,7 +558,7 @@ bool operator>= (const CComCurrency& cur) const;
 
 [!code-cpp[NVC_ATL_Utilities#69](../../atl/codesnippet/cpp/ccomcurrency-class_17.cpp)]
 
-## <a name="ccomcurrencyoperator-currency"></a><a name="operator_currency"></a>CComCurrency:: operator CURRENCY
+## <a name="ccomcurrencyoperator-currency"></a><a name="operator_currency"></a> CComCurrency:: operator CURRENCY
 
 これらの演算子は、オブジェクトを `CComCurrency` CURRENCY データ型にキャストするために使用されます。
 
@@ -574,7 +575,7 @@ CURRENCY オブジェクトへの参照を返します。
 
 [!code-cpp[NVC_ATL_Utilities#70](../../atl/codesnippet/cpp/ccomcurrency-class_18.cpp)]
 
-## <a name="ccomcurrencyround"></a><a name="round"></a>CComCurrency:: Round
+## <a name="ccomcurrencyround"></a><a name="round"></a> CComCurrency:: Round
 
 このメソッドを呼び出して、指定した小数点以下の桁数に通貨を丸めます。
 
@@ -595,7 +596,7 @@ HRESULT Roundint nDecimals);
 
 [!code-cpp[NVC_ATL_Utilities#52](../../atl/codesnippet/cpp/ccomcurrency-class_19.cpp)]
 
-## <a name="ccomcurrencysetfraction"></a><a name="setfraction"></a>CComCurrency:: SetFraction
+## <a name="ccomcurrencysetfraction"></a><a name="setfraction"></a> CComCurrency:: SetFraction
 
 `CComCurrency` オブジェクトの小数部を設定するには、このメソッドを呼び出します。
 
@@ -616,7 +617,7 @@ HRESULT SetFraction(SHORT nFraction);
 
 [!code-cpp[NVC_ATL_Utilities#53](../../atl/codesnippet/cpp/ccomcurrency-class_20.cpp)]
 
-## <a name="ccomcurrencysetinteger"></a><a name="setinteger"></a>CComCurrency:: SetInteger
+## <a name="ccomcurrencysetinteger"></a><a name="setinteger"></a> CComCurrency:: SetInteger
 
 `CComCurrency` オブジェクトの整数部を設定するには、このメソッドを呼び出します。
 
@@ -629,7 +630,7 @@ HRESULT SetInteger(LONGLONG nInteger);
 *n 整数*<br/>
 データメンバーの整数部分に代入される値 `m_currency` 。 整数部分の符号は、既存の小数部分の符号と一致している必要があります。
 
-*Ninteger*は CY_MAX_INTEGER を含む CY_MIN_INTEGER の範囲内である必要があります。 これらの値は、atlcur. h で定義されています。
+*Ninteger* は CY_MAX_INTEGER を含む CY_MIN_INTEGER の範囲内である必要があります。 これらの値は、atlcur. h で定義されています。
 
 ### <a name="return-value"></a>戻り値
 
@@ -642,5 +643,5 @@ HRESULT SetInteger(LONGLONG nInteger);
 ## <a name="see-also"></a>関連項目
 
 [COleCurrency クラス](../../mfc/reference/colecurrency-class.md)<br/>
-[貨](/windows/win32/api/wtypes/ns-wtypes-cy-r1)<br/>
+[CURRENCY](/windows/win32/api/wtypes/ns-wtypes-cy-r1)<br/>
 [クラスの概要](../../atl/atl-class-overview.md)

@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: _CrtSetReportHook2、_CrtSetReportHookW2'
 title: _CrtSetReportHook2、_CrtSetReportHookW2
 ms.date: 11/04/2016
 api_name:
@@ -30,12 +31,12 @@ helpviewer_keywords:
 - _CrtSetReportHookW2 function
 - CrtSetReportHookW2 function
 ms.assetid: 12e5f68d-c8a7-4b1a-9a75-72ba4a8592d0
-ms.openlocfilehash: 37ec0cea3fb558a5926e6f9c707e0e5033a17222
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: eab1ad4da90d5a86b821c374aae0aeceb97d7518
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70942220"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97135721"
 ---
 # <a name="_crtsetreporthook2-_crtsetreporthookw2"></a>_CrtSetReportHook2、_CrtSetReportHookW2
 
@@ -56,23 +57,23 @@ int _CrtSetReportHookW2(
 
 ### <a name="parameters"></a>パラメーター
 
-*モード*<br/>
-実行するアクション: **_CRT_RPTHOOK_INSTALL**または **_CRT_RPTHOOK_REMOVE**。
+*mode*<br/>
+実行するアクション: **_CRT_RPTHOOK_INSTALL** または **_CRT_RPTHOOK_REMOVE**。
 
 *Pfn*<br/>
 この関数のナロー文字またはワイド文字バージョンでインストールまたは削除するレポートフック。
 
 ## <a name="return-value"></a>戻り値
 
-エラーが発生した場合は、 **EINVAL**または**ENOMEM** set で-1 を返します。それ以外の場合は、呼び出しの後に*Pfnneの*参照カウントを返します。
+エラーが発生した場合は、 **EINVAL** または **ENOMEM** set で-1 を返します。それ以外の場合は、呼び出しの後に *Pfnneの* 参照カウントを返します。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-**_CrtSetReportHook2**と **_CrtSetReportHookW2**を使用すると、関数のフックやアンフックを行うことができます。一方、 [_CrtSetReportHook](crtsetreporthook.md)では関数をフックできます。
+**_CrtSetReportHook2** と **_CrtSetReportHookW2** を使用すると、関数をフックまたはアンフックできます。一方、 [_CrtSetReportHook](crtsetreporthook.md) では、関数をフックできます。
 
-**_CrtSetReportHook2**または **_CRTSETREPORTHOOKW2**は、dll でフック呼び出しが行われ、複数の dll が読み込まれ、独自のフック関数が設定されている場合に、 **_CrtSetReportHook**の代わりに使用する必要があります。 そのような状況では、DLL はロードされたときとは異なる順序でアンロードできます。フック関数はアンロードされた DLL をポイントしたままにできます。 **_CrtSetReportHook**を使用してフック関数を追加すると、デバッグ出力によってプロセスがクラッシュします。
+DLL でフック呼び出しが行われ、複数の Dll が読み込まれ、独自のフック関数が設定されている場合は、 **_CrtSetReportHook** の代わりに **_CrtSetReportHook2** または **_CrtSetReportHookW2** を使用する必要があります。 そのような状況では、DLL はロードされたときとは異なる順序でアンロードできます。フック関数はアンロードされた DLL をポイントしたままにできます。 フック関数が **_CrtSetReportHook** で追加された場合、デバッグ出力によってプロセスがクラッシュします。
 
-**_CrtSetReportHook**で追加されたフック関数は、 **_CrtSetReportHook2**または **_CrtSetReportHookW2**を使用して追加されたフック関数がない場合、または、すべてのフック関数が **_CrtSetReportHook2**および _ で追加された場合に呼び出されます。 **CrtSetReportHookW2**は**FALSE**を返します。
+**_CrtSetReportHook** で追加されたフック関数は、 **_CrtSetReportHook2** または **_CrtSetReportHookW2** と共に追加されたフック関数がない場合、またはすべてのフック関数が **_CrtSetReportHook2** に追加され、 **_CrtSetReportHookW2** が **FALSE** を返した場合に呼び出されます。
 
 関数のワイド文字バージョンが利用できます。 レポート用のフック関数は、使用されたこの関数のバージョンと型 (ワイド文字またはナロー文字) が一致しなければならない文字列を受け取ります。 この関数のワイド文字バージョンで使用されたレポート フックには、次の関数プロトタイプを使用します。
 
@@ -86,10 +87,10 @@ int YourReportHook( int reportType, wchar_t *message, int *returnValue );
 int YourReportHook( int reportType, char *message, int *returnValue );
 ```
 
-これらの関数では、パラメーターの検証が行われます。 *Mode*または**Pfnnewnook**が無効である場合、これらの関数は、「パラメーターの[検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーを呼び出します。 実行の継続が許可された場合、これらの関数は**errno**を**EINVAL**に設定し、-1 を返します。
+これらの関数では、パラメーターの検証が行われます。 *Mode* または **Pfnnewnook** が無効である場合、これらの関数は、「パラメーターの [検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーを呼び出します。 実行の継続が許可された場合、これらの関数は **errno** を **EINVAL** に設定し、-1 を返します。
 
 > [!NOTE]
-> アプリケーションが **/clr**でコンパイルされ、アプリケーションが main を終了した後でレポート関数が呼び出された場合、レポート関数が CRT 関数を呼び出すと clr は例外をスローします。
+> アプリケーションが **/clr** でコンパイルされ、アプリケーションが main を終了した後でレポート関数が呼び出された場合、レポート関数が CRT 関数を呼び出すと clr は例外をスローします。
 
 ## <a name="requirements"></a>必要条件
 
@@ -98,7 +99,7 @@ int YourReportHook( int reportType, char *message, int *returnValue );
 |**_CrtSetReportHook2**|\<crtdbg.h>|\<errno.h>|
 |**_CrtSetReportHookW2**|\<crtdbg.h>|\<errno.h>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性について詳しくは、「 [Compatibility](../../c-runtime-library/compatibility.md)」をご覧ください。
 
 ## <a name="libraries"></a>ライブラリ
 
@@ -238,7 +239,7 @@ int   main(int argc, char* argv[])
 }
 ```
 
-### <a name="output"></a>Output
+### <a name="output"></a>出力
 
 ```Output
 _CrtSetReportHook2(_CRT_RPTHOOK_INSTALL, TestHook1) returned 0
@@ -254,4 +255,4 @@ _CrtSetReportHook2(_CRT_RPTHOOK_REMOVE, TestHook1) returned 0
 
 ## <a name="see-also"></a>関連項目
 
-[デバッグ ルーチン](../../c-runtime-library/debug-routines.md)<br/>
+[デバッグルーチン](../../c-runtime-library/debug-routines.md)<br/>

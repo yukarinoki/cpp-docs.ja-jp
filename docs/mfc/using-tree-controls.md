@@ -1,34 +1,35 @@
 ---
+description: 詳細については、「ツリーコントロールの使用」を参照してください。
 title: ツリー コントロールの使い方
 ms.date: 11/04/2016
 helpviewer_keywords:
 - CTreeCtrl class [MFC], using
 - tree controls [MFC], about tree controls
 ms.assetid: 4e92941a-e477-4fb1-b1ce-4abeafbef1c1
-ms.openlocfilehash: 9cff48018d728ef9578be38c0d94300011265fa1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7b8a10acc3ee256f4b26c9988c4de7df900e1535
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62411449"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97143196"
 ---
 # <a name="using-tree-controls"></a>ツリー コントロールの使い方
 
-ツリー コントロールの一般的な使用方法 ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) 次のパターンします。
+通常、ツリーコントロール ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) の使用方法は次のパターンに従います。
 
-- コントロールが作成されます。 コントロールがダイアログ ボックスのテンプレートで指定されている場合、または使用する場合`CTreeView`、ダイアログ ボックスまたはビューの作成時に、作成は自動です。 その他のいくつかのウィンドウの子ウィンドウとしてツリーのコントロールを作成する場合を使用して、[作成](../mfc/reference/ctreectrl-class.md#create)メンバー関数。
+- コントロールが作成されます。 コントロールがダイアログボックステンプレートで指定されている場合、またはを使用している場合は `CTreeView` 、ダイアログボックスまたはビューの作成時に作成が自動的に作成されます。 他のウィンドウの子ウィンドウとしてツリーコントロールを作成する場合は、 [create](../mfc/reference/ctreectrl-class.md#create) member 関数を使用します。
 
-- ツリー コントロールのイメージを使用する場合は、イメージ リストを呼び出すことによって設定[SetImageList](../mfc/reference/ctreectrl-class.md#setimagelist)します。 呼び出すことによって、インデントを変更することもできます。 [SetIndent](../mfc/reference/ctreectrl-class.md#setindent)します。 これを行う適切な時刻が[OnInitDialog](../mfc/reference/cdialog-class.md#oninitdialog) (用ダイアログ ボックスのコントロール) または[OnInitialUpdate](../mfc/reference/cview-class.md#oninitialupdate) (ビュー) の。
+- ツリーコントロールでイメージを使用する場合は、 [SetImageList](../mfc/reference/ctreectrl-class.md#setimagelist)を呼び出してイメージリストを設定します。 また、 [Setindent](../mfc/reference/ctreectrl-class.md#setindent)を呼び出してインデントを変更することもできます。 これを行うには、 [OnInitDialog](../mfc/reference/cdialog-class.md#oninitdialog) (ダイアログボックスのコントロールの場合) または [OnInitialUpdate](../mfc/reference/cview-class.md#oninitialupdate) (ビューの場合) を使用することをお勧めします。
 
-- データを呼び出すことによって、コントロールを配置、`CTreeCtrl`の[InsertItem](../mfc/reference/ctreectrl-class.md#insertitem)データ項目ごとに 1 回の関数。 `InsertItem` 子項目を追加する場合など後で、それを参照する際の項目にハンドルを返します。 データを初期化するために適切な時刻が`OnInitDialog`(用ダイアログ ボックスのコントロール) または`OnInitialUpdate`(ビュー) の。
+- データ `CTreeCtrl` 項目ごとに1回の [InsertItem](../mfc/reference/ctreectrl-class.md#insertitem) 関数を呼び出して、データをコントロールに配置します。 `InsertItem` 子項目を追加するときなど、後で参照するために使用できる項目へのハンドルを返します。 データの初期化には、 `OnInitDialog` (ダイアログボックスのコントロールの場合) または `OnInitialUpdate` (ビューの場合) の方が適しています。
 
-- ユーザー コントロールと対話をさまざまな通知メッセージを送信します。 各コントロール ウィンドウのメッセージ マップで、ON_NOTIFY_REFLECT マクロを追加するか、ON_NOTIFY マクロを親ウィンドウのメッセージ マップに追加することで処理するメッセージを処理する関数を指定することができます。 参照してください[ツリー コントロールの通知メッセージ](../mfc/tree-control-notification-messages.md)可能な通知の一覧については、このトピックで後述します。
+- ユーザーがコントロールと対話すると、さまざまな通知メッセージが送信されます。 コントロールウィンドウのメッセージマップに ON_NOTIFY_REFLECT マクロを追加するか、または親ウィンドウのメッセージマップに ON_NOTIFY マクロを追加することによって、処理する各メッセージを処理する関数を指定できます。 使用可能な通知の一覧については、このトピックの後半の「 [ツリーコントロールの通知メッセージ](../mfc/tree-control-notification-messages.md) 」を参照してください。
 
-- コントロールの値を設定するさまざまなセットのメンバー関数を呼び出します。 実行できる変更には、インデントを設定し、テキスト、画像、または項目に関連付けられているデータの変更が含まれます。
+- さまざまな Set メンバー関数を呼び出して、コントロールの値を設定します。 行うことができる変更には、インデントを設定したり、アイテムに関連付けられたテキスト、画像、またはデータを変更したりすることがあります。
 
-- コントロールの内容を調べるには、さまざまな Get 関数を使用します。 親、子、および指定した項目の兄弟にハンドルを取得するための関数で、ツリー コントロールの内容を走査することもできます。 特定のノードの子を並べ替えることもできます。
+- さまざまな Get 関数を使用して、コントロールの内容を確認します。 また、ツリーコントロールの内容を、指定した項目の親、子、および兄弟へのハンドルの取得を可能にする関数を使用して走査することもできます。 特定のノードの子を並べ替えることもできます。
 
-- コントロールに完了したらが適切に破棄されることを確認します。 ツリー コントロールがダイアログ ボックスの場合、またはビューである場合に、`CTreeCtrl`オブジェクトが自動的に破棄されます。 かどうか、する必要があることに、両方のコントロールを確認し、`CTreeCtrl`オブジェクトが破棄されました。
+- コントロールが完成したら、適切に破棄されていることを確認します。 ツリーコントロールがダイアログボックス内にある場合、またはビューである場合、オブジェクトは `CTreeCtrl` 自動的に破棄されます。 それ以外の場合は、コントロールとオブジェクトの両方が正しく破棄されていることを確認する必要があり `CTreeCtrl` ます。
 
 ## <a name="see-also"></a>関連項目
 
