@@ -1,4 +1,5 @@
 ---
+description: 詳細情報:/Y-(プリコンパイル済みヘッダーオプションの無視)
 title: /Y- (プリコンパイル済みヘッダー オプションの無視)
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,16 +9,16 @@ helpviewer_keywords:
 - -Y- compiler option [C++]
 - /Y- compiler option [C++]
 ms.assetid: cfaecb36-58db-46b8-b04d-cca6072b1b7a
-ms.openlocfilehash: c56c25d587d84e599718d2e1a74d469def3501f7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b3d1eb6d404e0463ee547c1905f792b485bf65f6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62316185"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97260840"
 ---
 # <a name="y--ignore-precompiled-header-options"></a>/Y- (プリコンパイル済みヘッダー オプションの無視)
 
-他のすべてのエラーの原因`/Y`コンパイラ オプションを無視する (および自体をオーバーライドすることはできません)。
+他のすべての `/Y` コンパイラオプションを無視します (それ自体をオーバーライドすることはできません)。
 
 ## <a name="syntax"></a>構文
 
@@ -25,23 +26,23 @@ ms.locfileid: "62316185"
 /Y-
 ```
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-プリコンパイル済みヘッダーの詳細についてを参照してください。
+プリコンパイル済みヘッダーの詳細については、以下を参照してください。
 
 - [/Y (プリコンパイル済みヘッダー)](y-precompiled-headers.md)
 
-- [プリコンパイル済みヘッダー ファイル](../creating-precompiled-header-files.md)
+- [プリコンパイル済みヘッダーファイル](../creating-precompiled-header-files.md)
 
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境において、このコンパイラ オプションを設定する方法
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのコンパイラ オプションを設定するには
 
-1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。 [Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)します。
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、[Visual Studio での C++ コンパイラとビルド プロパティの設定](../working-with-project-properties.md)に関するページを参照してください。
 
 1. **[C/C++]** フォルダーをクリックします。
 
 1. **[コマンド ライン]** プロパティ ページをクリックします。
 
-1. **[追加のオプション]** ボックスにコンパイラ オプションを入力します。
+1. [追加のオプション]  ボックスにコンパイラ オプションを入力します。
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>このコンパイラ オプションをコードから設定するには
 
@@ -50,4 +51,4 @@ ms.locfileid: "62316185"
 ## <a name="see-also"></a>関連項目
 
 [MSVC コンパイラ オプション](compiler-options.md)<br/>
-[MSVC コンパイラ コマンド ラインの構文](compiler-command-line-syntax.md)
+[MSVC Compiler Command-Line 構文](compiler-command-line-syntax.md)

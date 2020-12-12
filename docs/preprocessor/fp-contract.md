@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: fp_contract プラグマ'
 title: fp_contract プラグマ
 ms.date: 08/29/2019
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - pragmas, fp_contract
 - fp_contract pragma
 ms.assetid: 15b97338-6680-4287-ba2a-2dccc5b2ccf5
-ms.openlocfilehash: 833d8e7f4b8c9da18901610e52afed619468c5c3
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: cefcf0519f08b3fd68a0f8b464938ea7cdbda6d0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70218566"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97261178"
 ---
 # <a name="fp_contract-pragma"></a>fp_contract プラグマ
 
@@ -21,13 +22,13 @@ ms.locfileid: "70218566"
 
 ## <a name="syntax"></a>構文
 
-> **#pragma fp_contract (** { **on** | **off** } **)**
+> **#pragma fp_contract (** { **on**  |  **off** } **)**
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-既定では、 **fp_contract**は**オンに**なっています。 これは、可能であれば、浮動小数点の省略形命令を使用するようにコンパイラに指示します。 個々の浮動小数点命令を保持するには、 **fp_contract**を**off**に設定します。
+既定では、 **fp_contract** は **オンに** なっています。 これは、可能であれば、浮動小数点の省略形命令を使用するようにコンパイラに指示します。 個々の浮動小数点命令を保持するには、 **fp_contract** を **off** に設定します。
 
-浮動小数点の動作の詳細については、「 [/fp (浮動小数点の動作の指定)](../build/reference/fp-specify-floating-point-behavior.md)」を参照してください。
+浮動小数点動作の詳細については、「 [/fp (Floating-Point 動作の指定)](../build/reference/fp-specify-floating-point-behavior.md)」を参照してください。
 
 その他の浮動小数点プラグマには以下があります。
 
@@ -37,7 +38,7 @@ ms.locfileid: "70218566"
 
 ## <a name="example"></a>例
 
-このサンプルから生成されたコードでは、ターゲットプロセッサで使用可能な場合でも、追加命令が使用されません。 コメントアウト`#pragma fp_contract (off)`した場合、生成されたコードは、使用可能な場合は、追加された非表示命令を使用することがあります。
+このサンプルから生成されたコードでは、ターゲットプロセッサで使用可能な場合でも、追加命令が使用されません。 コメントアウトした場合 `#pragma fp_contract (off)` 、生成されたコードは、使用可能な場合は、追加された非表示命令を使用することがあります。
 
 ```cpp
 // pragma_directive_fp_contract.cpp
@@ -77,4 +78,4 @@ out = 4.587525000000000e+03
 
 ## <a name="see-also"></a>関連項目
 
-[プラグマディレクティブと __ プラグマキーワード](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+[プラグマ ディレクティブと __pragma キーワード](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

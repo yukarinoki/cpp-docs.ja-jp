@@ -1,4 +1,5 @@
 ---
+description: 詳細については、asctime、_wasctime を参照してください。
 title: asctime、_wasctime
 ms.date: 4/2/2020
 api_name:
@@ -36,16 +37,16 @@ helpviewer_keywords:
 - time structure conversion
 - time, converting
 ms.assetid: 974f1727-10ff-4ed4-8cac-2eb2d681f576
-ms.openlocfilehash: 00c6be8ee409d76b80d323102950f8c1d6420ba3
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 3ae075481b364af01bfa75f1cc29423de9fcdbf1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82909423"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97260801"
 ---
 # <a name="asctime-_wasctime"></a>asctime、_wasctime
 
-**Tm**時間構造体を文字列に変換します。 これらの関数のセキュリティを強化したバージョンを使用できます。「[asctime_s、_wasctime_s](asctime-s-wasctime-s.md)」を参照してください。
+**Tm** 時間構造体を文字列に変換します。 これらの関数のセキュリティを強化したバージョンを使用できます。「[asctime_s、_wasctime_s](asctime-s-wasctime-s.md)」を参照してください。
 
 ## <a name="syntax"></a>構文
 
@@ -65,13 +66,13 @@ wchar_t *_wasctime(
 
 ## <a name="return-value"></a>戻り値
 
-**asctime**は、文字列の結果へのポインターを返します。**_wasctime**は、ワイド文字列の結果へのポインターを返します。 エラーの戻り値はありません。
+**asctime** は、文字列の結果へのポインターを返します。 **_wasctime** は、ワイド文字列の結果へのポインターを返します。 エラーの戻り値はありません。
 
 ## <a name="remarks"></a>解説
 
 これらの関数のセキュリティを強化したバージョンを使用できます。「[asctime_s、_wasctime_s](asctime-s-wasctime-s.md)」を参照してください。
 
-**Asctime**関数は、構造体として格納されている時刻を文字列に変換します。 *Timeptr*値は、通常、 **gmtime**または**localtime**の呼び出しから取得されます。この場合、両方とも、TIME で定義された**tm**構造体へのポインターが返されます。始め.
+**Asctime** 関数は、構造体として格納されている時刻を文字列に変換します。 *Timeptr* 値は、通常、 **gmtime** または **localtime** の呼び出しから取得されます。この場合、両方とも、TIME. H で定義されている **tm** 構造体へのポインターを返します。
 
 |timeptr メンバー|値|
 |--------------------|-----------|
@@ -87,11 +88,11 @@ wchar_t *_wasctime(
 
 変換された文字列も、ローカル タイム ゾーンの設定に従って調整されます。 ローカル タイムの設定の詳細については、[time](time-time32-time64.md)、[_ftime](ftime-ftime32-ftime64.md)、および [localtime](localtime-localtime32-localtime64.md) の関数を参照してください。また、タイム ゾーン環境とグローバル変数の定義の詳細については、[_tzset](tzset.md) 関数を参照してください。
 
-**Asctime**によって生成される文字列の結果は、26文字`Wed Jan 02 02:03:55 1980\n\0`で、という形式になっています。 24 時間制が使用されます。 すべてのフィールドには一定の幅があります。 文字列の最後の 2 つの位置には、改行文字と null 文字が入ります。 **asctime**は、静的に割り当てられた単一のバッファーを使用して、返される文字列を保持します。 この関数を呼び出すたびに、前の呼び出しの結果は破棄されます。
+**Asctime** によって生成される文字列の結果は、26文字で、という形式になってい `Wed Jan 02 02:03:55 1980\n\0` ます。 24 時間制が使用されます。 すべてのフィールドには一定の幅があります。 文字列の最後の 2 つの位置には、改行文字と null 文字が入ります。 **asctime** は、静的に割り当てられた単一のバッファーを使用して、返される文字列を保持します。 この関数を呼び出すたびに、前の呼び出しの結果は破棄されます。
 
-**_wasctime**は**asctime**のワイド文字バージョンです。 それ以外の場合、 **_wasctime**と**asctime**は同じように動作します。
+**_wasctime** は **asctime** のワイド文字バージョンです。 それ以外の場合、 **_wasctime** と **asctime** は同じように動作します。
 
-これらの関数では、パラメーターの検証が行われます。 *Timeptr*が null ポインターの場合、または範囲外の値が含まれている場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、関数は**NULL**を返し、 **errno**を**EINVAL**に設定します。
+これらの関数では、パラメーターの検証が行われます。 *Timeptr* が null ポインターの場合、または範囲外の値が含まれている場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、関数は **NULL** を返し、 **errno** を **EINVAL** に設定します。
 
 既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
@@ -103,14 +104,14 @@ wchar_t *_wasctime(
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**asctime**|\<time.h>|
 |**_wasctime**|\<time.h> または \<wchar.h>|
 
 ## <a name="example"></a>例
 
-このプログラムは、システム時刻を長整数の**aclock**に配置し、それを構造体の**newtime**に変換した後、 **asctime**関数を使用して出力用の文字列形式に変換します。
+このプログラムは、システム時刻を長整数の **aclock** に配置し、それを構造体の **newtime** に変換した後、 **asctime** 関数を使用して出力用の文字列形式に変換します。
 
 ```C
 // crt_asctime.c

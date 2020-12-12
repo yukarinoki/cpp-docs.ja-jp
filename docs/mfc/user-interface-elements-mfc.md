@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: ユーザーインターフェイス要素 (MFC)'
 title: ユーザー インターフェイス要素 (MFC)
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,80 +7,80 @@ helpviewer_keywords:
 - user interfaces, creating
 - user interfaces
 ms.assetid: f5daf2c1-bc08-4b71-9b03-da2c0aab5764
-ms.openlocfilehash: bf1c3f677ac8cd2e3ad91ef694f0637af8a6f578
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bd3cebc94213da3f951745ead9de1200eb582b9f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62180773"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97263596"
 ---
 # <a name="user-interface-elements-mfc"></a>ユーザー インターフェイス要素 (MFC)
 
-Microsoft Foundation Class (MFC) ライブラリを使用して、アプリケーションのユーザー インターフェイスを作成する方法については、次のトピックを参照してください。
+MFC (Microsoft Foundation Class) ライブラリを使用してアプリケーションのユーザーインターフェイスを作成する方法の詳細については、次のトピックを参照してください。
 
 ## <a name="in-this-section"></a>このセクションの内容
 
 [ActiveX コントロール](../mfc/activex-controls.md)<br/>
-基に、コンポーネント オブジェクト モデル (COM)、さまざまな OLE 機能のサポートおよび多くのソフトウェア ニーズに合わせてカスタマイズできます再利用可能なソフトウェア コンポーネントを使用する方法について説明します
+コンポーネントオブジェクトモデル (COM) に基づいて再利用可能なソフトウェアコンポーネントを使用する方法について説明します。 COM は、さまざまな OLE 機能をサポートし、多くのソフトウェアニーズに合わせてカスタマイズできます。
 
 [クリップボード](../mfc/clipboard.md)<br/>
 MFC アプリケーションで Windows クリップボードのサポートを実装する方法について説明します。
 
 [コントロール](../mfc/controls-mfc.md)<br/>
-オーナー描画コントロール、ActiveX コントロール、MFC ライブラリによって提供されるその他のコントロール クラスなどの Windows コモン コントロールについて説明します。
+オーナー描画コントロール、ActiveX コントロール、MFC ライブラリによって提供されるその他のコントロールクラスなど、Windows コモンコントロールについて説明します。
 
-[コントロール バー](../mfc/control-bars.md)<br/>
-ツールバー、ステータス バー、およびダイアログ バーの機能について説明します。
+[コントロールバー](../mfc/control-bars.md)<br/>
+ツールバー、ステータスバー、およびダイアログバーの機能について説明します。
 
-[ダイアログ バー](../mfc/dialog-bars.md)<br/>
-ある種のあらゆる種類のコントロールを含むことのできるコントロール バーをについて説明します。
+[ダイアログバー](../mfc/dialog-bars.md)<br/>
+任意の種類のコントロールを含めることができるコントロールバーの種類を記述します。
 
-[ダイアログ ボックス](../mfc/dialog-boxes.md)<br/>
-エディターとコード ウィザードを使用してダイアログ ボックスを作成する方法について説明します。
+[ダイアログボックス](../mfc/dialog-boxes.md)<br/>
+エディターとコードウィザードを使用してダイアログボックスを作成する方法について説明します。
 
-[ドキュメント/ビュー アーキテクチャ](../mfc/document-view-architecture.md)<br/>
-MFC におけるデータの管理について説明します。
+[ドキュメント/ビューアーキテクチャ](../mfc/document-view-architecture.md)<br/>
+MFC でのデータ管理について説明します。
 
 [フォーム ビュー](../mfc/form-views-mfc.md)<br/>
-フォームのサポートをアプリケーションに追加する方法について説明します。
+アプリケーションにフォームサポートを追加する方法について説明します。
 
-[HTML ヘルプ: プログラムの状況依存のヘルプ](../mfc/html-help-context-sensitive-help-for-your-programs.md)<br/>
+[HTML ヘルプ: Context-Sensitive プログラムのヘルプ](../mfc/html-help-context-sensitive-help-for-your-programs.md)<br/>
 HTML ヘルプを使用して、アプリケーションに状況依存のヘルプを追加する方法について説明します。
 
 [MDI タブ付きグループ](../mfc/mdi-tabbed-groups.md)<br/>
-により、1 つまたは複数のタブ付きウィンドウを表示する、マルチ ドキュメント インターフェイス (MDI) アプリケーション (またはグループと呼ばれる、タブ付きウィンドウの*タブ付きグループ*) MDI クライアント領域にします。
+マルチドキュメントインターフェイス (MDI) アプリケーションで、MDI クライアント領域に1つ以上のタブ付きウィンドウ (タブ付き *グループ* と呼ばれる) を表示できます。
 
 [メニュー](../mfc/menus-mfc.md)<br/>
-ユーザー インターフェイスにメニューを追加する方法について説明します。
+ユーザーインターフェイスにメニューを追加する方法について説明します。
 
-[OLE](../mfc/ole-mfc.md)<br/>
-リンクと埋め込みオブジェクトについて説明するトピックへのリンクを提供します。
+[OLE●ole○](../mfc/ole-mfc.md)<br/>
+オブジェクトのリンクと埋め込みについて説明するトピックへのリンクを示します。
 
-[[印刷と印刷プレビュー]](../mfc/printing-and-print-preview.md)<br/>
-MFC アプリケーションから印刷と印刷プレビューのサポートについて説明します。
+[印刷と印刷プレビュー](../mfc/printing-and-print-preview.md)<br/>
+アプリケーションから印刷と印刷プレビューを行うための MFC のサポートについて説明します。
 
-[プロパティ シート](../mfc/property-sheets-mfc.md)<br/>
-プロパティ シートを使用して、多数のダイアログ ボックス内のコントロールを管理する方法について説明します。
+[プロパティシート](../mfc/property-sheets-mfc.md)<br/>
+プロパティシートを使用して、ダイアログボックスで多数のコントロールを管理する方法について説明します。
 
-[リボン デザイナー (MFC)](../mfc/ribbon-designer-mfc.md)<br/>
-MFC の作成とリボン UI のリソースの変更のサポートについて説明します。
+[リボンデザイナー (MFC)](../mfc/ribbon-designer-mfc.md)<br/>
+リボン UI リソースを作成および変更するための MFC のサポートについて説明します。
 
-[ステータス バー](../mfc/status-bars.md)<br/>
-ステータス バーをアプリケーションで使用する方法について説明します。
+[ステータスバー](../mfc/status-bars.md)<br/>
+アプリケーションでステータスバーを使用する方法について説明します。
 
-[ツール ヒント](../mfc/tool-tips.md)<br/>
-アプリケーションを使用してユーザーを支援するためにツール ヒントを実装する方法について説明します。
+[ツールヒント](../mfc/tool-tips.md)<br/>
+ユーザーがアプリケーションを使用する際に役立つツールヒントを実装する方法について説明します。
 
-[ツールバー](../mfc/toolbars.md)<br/>
-Mfc ツールバーを使用する方法について基本事項をについて説明します。
+[[ツール バー]](../mfc/toolbars.md)<br/>
+MFC でのツールバーの使用方法についての基本事項について説明します。
 
-[ビジュアル マネージャー](../mfc/visualization-manager.md)<br/>
-アプリケーションのすべての描画コードをコピー先の場所を 1 つのクラスとして機能します。
+[視覚化マネージャー](../mfc/visualization-manager.md)<br/>
+アプリケーションのすべての描画コードを配置できる1つのクラスとして機能します。
 
 [Windows](../mfc/windows.md)<br/>
-MFC での windows を使用する方法について基本事項をについて説明します。
+MFC で windows を使用する方法の基本について説明します。
 
 ## <a name="related-sections"></a>関連項目
 
-[MFC デスクトップ アプリケーション](../mfc/mfc-desktop-applications.md)<br/>
-MFC ライブラリのリファレンスを提供します。 MFC は、一連の Windows API 用に記述されたアプリケーションのフレームワークである、アプリケーション フレームワークを構成するクラスです。
+[MFC デスクトップアプリケーション](../mfc/mfc-desktop-applications.md)<br/>
+MFC ライブラリのリファレンス資料を提供します。 MFC は、Windows API 用に記述されたアプリケーションのフレームワークであるアプリケーションフレームワークを構成するクラスのセットです。

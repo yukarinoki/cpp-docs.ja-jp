@@ -1,4 +1,5 @@
 ---
+description: 詳細情報:/WX (リンカー警告をエラーとして扱う)
 title: /WX (リンカー警告をエラーとして扱う)
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - -WX linker option
 - WX linker option
 ms.assetid: e4ba97c7-93f7-43ae-a4bb-d866790926c9
-ms.openlocfilehash: b4b29ed364d39c5f105dded703b8530c08db35e6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 965c48ff9c9f975350f3c1e54d8090823be8fd2e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62316302"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97261035"
 ---
 # <a name="wx-treat-linker-warnings-as-errors"></a>/WX (リンカー警告をエラーとして扱う)
 
@@ -21,23 +22,23 @@ ms.locfileid: "62316302"
 /WX[:NO]
 ```
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-/WX には、リンカーが警告を生成する場合に生成される出力ファイルは行われません。
+/WX を指定すると、リンカーが警告を生成した場合に出力ファイルが生成されません。
 
-似ています **/WX**コンパイラ (を参照してください[/w、/W0、/W1、/W2、/W3、/W4、/w1、/w2、/w3、/w4、/Wall、/wd、//we、/wo、/Wv、/WX (警告レベル)](compiler-option-warning-level.md)詳細については)。 ただしを指定する **/WX**のコンパイルとは限りませんが **/WX**リンク フェーズが無効にも、明示的に指定する必要があります。 **/WX**ツールごとにします。
+これは、コンパイラの **/wx** に似ています ( [/w、/W0、/W1、/W2、/W3、/W4、/W1、/W2、/W3、/W4、/Wall、/wd、/we、/wo、/Wv、/Wx (警告レベル)](compiler-option-warning-level.md) など)。 ただし、コンパイルに **/wx** を指定しても、 **/wx** がリンクフェーズに対して有効であることを意味するわけではありません。各ツールに対して、 **/wx** を明示的に指定する必要があります。
 
-既定では、 **/WX**は無効です。 リンカー警告をエラーとして扱う、次のように指定します。 **/WX**します。 **/WX:NO**は指定しない場合と同じ **/WX**します。
+既定では、 **/wx** は無効です。 リンカー警告をエラーとして扱うには、 **/wx** を指定します。 **/Wx: NO** は **/wx** を指定しないと同じです。
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのリンカー オプションを設定するには
 
-1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。 [Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)します。
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、[Visual Studio での C++ コンパイラとビルド プロパティの設定](../working-with-project-properties.md)に関するページを参照してください。
 
-1. をクリックして、**リンカー**フォルダー。
+1. **[リンカー]** フォルダーをクリックします。
 
 1. **[コマンド ライン]** プロパティ ページをクリックします。
 
-1. オプションを入力、**追加オプション**ボックス。
+1. [ **追加オプション** ] ボックスにオプションを入力します。
 
 ### <a name="to-set-this-linker-option-programmatically"></a>このリンカーをコードから設定するには
 

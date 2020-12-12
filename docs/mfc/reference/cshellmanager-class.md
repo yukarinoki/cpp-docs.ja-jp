@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: CShellManager クラス'
 title: CShellManager クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -28,12 +29,12 @@ helpviewer_keywords:
 - CShellManager [MFC], GetParentItem
 - CShellManager [MFC], ItemFromPath
 ms.assetid: f15c4c1a-6fae-487d-9913-9b7369b33da0
-ms.openlocfilehash: 1c2f9ac1658f50f0ec5bd9e2f53d270c09bfcb6a
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: 67145782432c11ed62512eb618444fa19a4909ae
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81750326"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97264649"
 ---
 # <a name="cshellmanager-class"></a>CShellManager クラス
 
@@ -51,28 +52,28 @@ class CShellManager : public CObject
 
 |名前|説明|
 |----------|-----------------|
-|[次の手順を実行します。](#cshellmanager)|`CShellManager` オブジェクトを構築します。|
+|[CShellManager:: CShellManager](#cshellmanager)|`CShellManager` オブジェクトを構築します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
 |名前|説明|
 |----------|-----------------|
-|[を見る](#browseforfolder)|ユーザーがシェル フォルダを選択するためのダイアログ ボックスを表示します。|
-|[をクリックします。](#concatenateitem)|2 つの PidL を連結します。|
-|[次の項目をコピーします。](#copyitem)|新しい PIDL を作成し、指定された PIDL をコピーします。|
-|[次の項目を作成します。](#createitem)|指定したサイズの新しい PIDL を作成します。|
-|[次の項目を使用します。](#freeitem)|指定された PIDL を削除します。|
-|[を使用します。](#getitemcount)|指定された PIDL 内の項目数を返します。|
-|[次の項目を使用します。](#getitemsize)|指定された PIDL のサイズを返します。|
-|[次の項目を取得します。](#getnextitem)|PIDL から次の項目を返します。|
-|[次の項目を取得します。](#getparentitem)|指定された項目の親項目を取得します。|
-|[次のパスを使用します。](#itemfrompath)|指定されたパスで識別される項目の PIDL を取得します。|
+|[CShellManager:: BrowseForFolder](#browseforfolder)|ユーザーがシェルフォルダーを選択できるダイアログボックスを表示します。|
+|[CShellManager:: ConcatenateItem](#concatenateitem)|2つの Pidl を連結します。|
+|[CShellManager:: CopyItem](#copyitem)|新しい PIDL を作成し、指定された PIDL をその PIDL にコピーします。|
+|[CShellManager:: CreateItem](#createitem)|指定したサイズの新しい PIDL を作成します。|
+|[CShellManager:: FreeItem](#freeitem)|指定された PIDL を削除します。|
+|[CShellManager:: GetItemCount](#getitemcount)|指定された PIDL 内の項目数を返します。|
+|[CShellManager:: GetItemSize](#getitemsize)|指定された PIDL のサイズを返します。|
+|[CShellManager:: GetNextItem](#getnextitem)|PIDL から次の項目を返します。|
+|[CShellManager:: GetParentItem](#getparentitem)|指定された項目の親項目を取得します。|
+|[CShellManager:: ItemFromPath](#itemfrompath)|指定されたパスによって識別される項目の PIDL を取得します。|
 
 ## <a name="remarks"></a>解説
 
-クラスの`CShellManager`メソッドはすべて、PIDL を扱います。 PIDL はシェルオブジェクトの一意の識別子です。
+クラスのメソッドは `CShellManager` すべて、pidl を処理します。 PIDL は、シェルオブジェクトの一意の識別子です。
 
-オブジェクトは手動で`CShellManager`作成しないでください。 アプリケーションのフレームワークによって自動的に作成されます。 ただし、アプリケーションの初期化プロセス中に[CWinAppEx::InitShellManager](../../mfc/reference/cwinappex-class.md#initshellmanager)を呼び出す必要があります。 アプリケーションのシェル マネージャーへのポインターを取得するには[、CWinAppEx::GetShellManager](../../mfc/reference/cwinappex-class.md#getshellmanager)を呼び出します。
+オブジェクトを手動で作成しないでください `CShellManager` 。 アプリケーションのフレームワークによって自動的に作成されます。 ただし、アプリケーションの初期化プロセスでは、 [CWinAppEx:: InitShellManager](../../mfc/reference/cwinappex-class.md#initshellmanager) を呼び出す必要があります。 アプリケーションのシェルマネージャーへのポインターを取得するには、 [CWinAppEx:: GetShellManager](../../mfc/reference/cwinappex-class.md#getshellmanager)を呼び出します。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -80,13 +81,13 @@ class CShellManager : public CObject
 
 [CShellManager](../../mfc/reference/cshellmanager-class.md)
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-**ヘッダー:** afxshellmanager.h
+**ヘッダー:** afxshellmanager
 
-## <a name="cshellmanagerbrowseforfolder"></a><a name="browseforfolder"></a>を見る
+## <a name="cshellmanagerbrowseforfolder"></a><a name="browseforfolder"></a> CShellManager:: BrowseForFolder
 
-ユーザーがシェル フォルダを選択するためのダイアログ ボックスを表示します。
+ユーザーがシェルフォルダーを選択できるダイアログボックスを表示します。
 
 ```
 BOOL BrowseForFolder(
@@ -100,41 +101,41 @@ BOOL BrowseForFolder(
 
 ### <a name="parameters"></a>パラメーター
 
-*ストラウトフォルダ*<br/>
-[アウト]選択したフォルダーのパスを格納するためにメソッドによって使用される文字列。
+*strOutFolder*<br/>
+入出力選択したフォルダーのパスを格納するためにメソッドによって使用される文字列。
 
-*親の子*<br/>
-[in]親ウィンドウへのポインター。
+*pWndParent*<br/>
+から親ウィンドウへのポインター。
 
-*をクリックします。*<br/>
-[in]ダイアログ ボックスが表示されるときに既定で選択されているフォルダーを含む文字列。
+*lplszInitialFolder*<br/>
+からダイアログボックスが表示されるときに既定で選択されるフォルダーを含む文字列。
 
-*lpszタイトル*<br/>
-[in]ダイアログ ボックスのタイトル。
+*lpszTitle*<br/>
+からダイアログボックスのタイトル。
 
 *ulFlags*<br/>
-[in]ダイアログ ボックスのオプションを指定するフラグ。 詳細な説明については[、BROWSEINFO](/windows/win32/api/shlobj_core/ns-shlobj_core-browseinfow)を参照してください。
+からダイアログボックスのオプションを指定するフラグ。 詳細については、「 [BROWSEINFO](/windows/win32/api/shlobj_core/ns-shlobj_core-browseinfow) 」を参照してください。
 
-*イメージ*<br/>
-[アウト]選択したフォルダーのイメージ インデックスを書き込む整数値へのポインター。
+*piFolderImage*<br/>
+入出力メソッドが、選択したフォルダーのイメージインデックスを書き込む整数値へのポインター。
 
 ### <a name="return-value"></a>戻り値
 
-ユーザーがダイアログ ボックスからフォルダを選択した場合は 0 以外の値を指定します。それ以外の場合は 0。
+ユーザーがダイアログボックスからフォルダーを選択した場合は0以外の。それ以外の場合は0です。
 
 ### <a name="remarks"></a>解説
 
-このメソッドを呼び出すと、アプリケーションは、ユーザーがフォルダーを選択できるダイアログ ボックスを作成して表示します。 メソッドは、フォルダーのパスを*strOutFolder*パラメーターに書き込みます。
+このメソッドを呼び出すと、アプリケーションによって、ユーザーがフォルダーを選択できるダイアログボックスが作成されて表示されます。 メソッドは、フォルダーのパスを *strOutFolder* パラメーターに書き込みます。
 
 ### <a name="example"></a>例
 
-メソッドを使用してオブジェクトへの参照を取得する方法と`CShellManager`、メソッドを使用`CWinAppEx::GetShellManager`する方法を次の例`BrowseForFolder`に示します。 このコード スニペットは[、エクスプローラーのサンプル](../../overview/visual-cpp-samples.md)の一部です。
+次の例は、メソッドを使用してオブジェクトへの参照を取得する方法 `CShellManager` `CWinAppEx::GetShellManager` と、メソッドを使用する方法を示して `BrowseForFolder` います。 このコードスニペットは、エクスプローラーの [サンプル](../../overview/visual-cpp-samples.md)に含まれています。
 
 [!code-cpp[NVC_MFC_Explorer#6](../../mfc/reference/codesnippet/cpp/cshellmanager-class_1.cpp)]
 
-## <a name="cshellmanagerconcatenateitem"></a><a name="concatenateitem"></a>をクリックします。
+## <a name="cshellmanagerconcatenateitem"></a><a name="concatenateitem"></a> CShellManager:: ConcatenateItem
 
-2 つの PIDL を含む新しいリストを作成します。
+2つの Pidl を含む新しいリストを作成します。
 
 ```
 LPITEMIDLIST ConcatenateItem(
@@ -144,21 +145,21 @@ LPITEMIDLIST ConcatenateItem(
 
 ### <a name="parameters"></a>パラメーター
 
-*ピドル1*<br/>
-[in]最初の項目。
+*pidl1*<br/>
+から最初の項目。
 
-*ピドル2*<br/>
-[in]2 番目の項目。
+*pidl2*<br/>
+から2番目の項目。
 
 ### <a name="return-value"></a>戻り値
 
-関数が成功した場合は新しい項目リストへのポインター。
+関数が成功した場合は、新しい項目のリストへのポインター。それ以外の場合は NULL。
 
 ### <a name="remarks"></a>解説
 
-このメソッドは *、pidl1*と*pidl2*の両方を含めるのに十分な大きさの新しい[ITEMIDLIST](/windows/win32/api/shtypes/ns-shtypes-itemidlist)を作成します。 次に *、pidl1*と*pidl2 を*新しいリストにコピーします。
+このメソッドは、 *pidl1* と *pidl2* の両方を格納するのに十分な大きさの新しい [itemidlist](/windows/win32/api/shtypes/ns-shtypes-itemidlist)を作成します。 次に、 *pidl1* と *pidl2* を新しいリストにコピーします。
 
-## <a name="cshellmanagercopyitem"></a><a name="copyitem"></a>次の項目をコピーします。
+## <a name="cshellmanagercopyitem"></a><a name="copyitem"></a> CShellManager:: CopyItem
 
 項目リストをコピーします。
 
@@ -168,18 +169,18 @@ LPITEMIDLIST CopyItem(LPCITEMIDLIST pidlSource);
 
 ### <a name="parameters"></a>パラメーター
 
-*ピドルソース*<br/>
-[in]元の項目リスト。
+*pidlSource*<br/>
+から元の項目リスト。
 
 ### <a name="return-value"></a>戻り値
 
-正常に終了した場合は、新しく作成された項目リストへのポインター。それ以外の場合は NULL。
+成功した場合は、新しく作成された項目リストへのポインター。それ以外の場合は NULL。
 
 ### <a name="remarks"></a>解説
 
-新しく作成された項目リストのサイズは、ソース項目リストと同じです。
+新しく作成されたアイテムの一覧は、ソースアイテムの一覧と同じサイズになります。
 
-## <a name="cshellmanagercreateitem"></a><a name="createitem"></a>次の項目を作成します。
+## <a name="cshellmanagercreateitem"></a><a name="createitem"></a> CShellManager:: CreateItem
 
 新しい PIDL を作成します。
 
@@ -189,14 +190,14 @@ LPITEMIDLIST CreateItem(UINT cbSize);
 
 ### <a name="parameters"></a>パラメーター
 
-*Cbsize*<br/>
-[in]項目リストのサイズ。
+*cbSize*<br/>
+から項目リストのサイズ。
 
 ### <a name="return-value"></a>戻り値
 
-正常終了した場合は、作成された項目リストへのポインター。それ以外の場合は NULL。
+成功した場合は、作成された項目リストへのポインター。それ以外の場合は NULL。
 
-## <a name="cshellmanagercshellmanager"></a><a name="cshellmanager"></a>次の手順を実行します。
+## <a name="cshellmanagercshellmanager"></a><a name="cshellmanager"></a> CShellManager:: CShellManager
 
 `CShellManager` オブジェクトを構築します。
 
@@ -206,11 +207,11 @@ CShellManager();
 
 ### <a name="remarks"></a>解説
 
-ほとんどの場合、`CShellManager`直接作成する必要はありません。 既定では、フレームワークは自動的に作成されます。 へのポインターを取得するには`CShellManager`[、CWinAppEx::GetShellManager](../../mfc/reference/cwinappex-class.md#getshellmanager)を呼び出します。 手動で作成する`CShellManager`場合は、CWinAppEx::InitShellManager メソッドを使用して初期化する必要があります。 [CWinAppEx::InitShellManager](../../mfc/reference/cwinappex-class.md#initshellmanager)
+ほとんどの場合、を直接作成する必要はありません `CShellManager` 。 既定では、フレームワークによって作成されます。 へのポインターを取得するには `CShellManager` 、 [CWinAppEx:: GetShellManager](../../mfc/reference/cwinappex-class.md#getshellmanager)を呼び出します。 を手動で作成する場合は、 `CShellManager` [CWinAppEx:: InitShellManager](../../mfc/reference/cwinappex-class.md#initshellmanager)メソッドを使用して初期化する必要があります。
 
-## <a name="cshellmanagerfreeitem"></a><a name="freeitem"></a>次の項目を使用します。
+## <a name="cshellmanagerfreeitem"></a><a name="freeitem"></a> CShellManager:: FreeItem
 
-アイテム リストを削除します。
+項目リストを削除します。
 
 ```cpp
 void FreeItem(LPITEMIDLIST pidl);
@@ -218,12 +219,12 @@ void FreeItem(LPITEMIDLIST pidl);
 
 ### <a name="parameters"></a>パラメーター
 
-*Pidl*<br/>
-[in]削除する項目リスト。
+*pidl*<br/>
+から削除する項目リスト。
 
-## <a name="cshellmanagergetitemcount"></a><a name="getitemcount"></a>を使用します。
+## <a name="cshellmanagergetitemcount"></a><a name="getitemcount"></a> CShellManager:: GetItemCount
 
-項目リスト内の項目数を返します。
+項目リスト内の項目の数を返します。
 
 ```
 UINT GetItemCount(LPCITEMIDLIST pidl);
@@ -231,14 +232,14 @@ UINT GetItemCount(LPCITEMIDLIST pidl);
 
 ### <a name="parameters"></a>パラメーター
 
-*Pidl*<br/>
-[in]項目リストへのポインター。
+*pidl*<br/>
+から項目リストへのポインター。
 
 ### <a name="return-value"></a>戻り値
 
 項目リスト内の項目の数。
 
-## <a name="cshellmanagergetitemsize"></a><a name="getitemsize"></a>次の項目を使用します。
+## <a name="cshellmanagergetitemsize"></a><a name="getitemsize"></a> CShellManager:: GetItemSize
 
 項目リストのサイズを返します。
 
@@ -248,14 +249,14 @@ UINT GetItemSize(LPCITEMIDLIST pidl);
 
 ### <a name="parameters"></a>パラメーター
 
-*Pidl*<br/>
-[in]項目リストへのポインター。
+*pidl*<br/>
+から項目リストへのポインター。
 
 ### <a name="return-value"></a>戻り値
 
 項目リストのサイズ。
 
-## <a name="cshellmanagergetnextitem"></a><a name="getnextitem"></a>次の項目を取得します。
+## <a name="cshellmanagergetnextitem"></a><a name="getnextitem"></a> CShellManager:: GetNextItem
 
 項目識別子リスト (PIDL) へのポインターから次の項目を取得します。
 
@@ -265,8 +266,8 @@ LPITEMIDLIST GetNextItem(LPCITEMIDLIST pidl);
 
 ### <a name="parameters"></a>パラメーター
 
-*Pidl*<br/>
-[in]反復処理する項目のリスト。
+*pidl*<br/>
+から反復処理する項目のリスト。
 
 ### <a name="return-value"></a>戻り値
 
@@ -274,9 +275,9 @@ LPITEMIDLIST GetNextItem(LPCITEMIDLIST pidl);
 
 ### <a name="remarks"></a>解説
 
-リストに項目がなくなった場合、このメソッドは NULL を返します。
+リストに他の項目がない場合、このメソッドは NULL を返します。
 
-## <a name="cshellmanagergetparentitem"></a><a name="getparentitem"></a>次の項目を取得します。
+## <a name="cshellmanagergetparentitem"></a><a name="getparentitem"></a> CShellManager:: GetParentItem
 
 項目識別子リスト (PIDL) へのポインターの親を取得します。
 
@@ -288,23 +289,23 @@ int GetParentItem(
 
 ### <a name="parameters"></a>パラメーター
 
-*ルピドル*<br/>
-[in]親が取得される PIDL。
+*lpidl*<br/>
+から親を取得する PIDL。
 
-*ルピドル親*<br/>
-[アウト]メソッドが結果を格納する PIDL への参照。
+*lpidlParent*<br/>
+入出力メソッドが結果を格納する PIDL への参照。
 
 ### <a name="return-value"></a>戻り値
 
-親 PIDL のレベル。
+親の PIDL のレベル。
 
 ### <a name="remarks"></a>解説
 
-PIDL のレベルは、デスクトップに対して相対的です。 デスクトップ PIDL はレベル 0 と見なされます。
+PIDL のレベルは、デスクトップに対する相対パスです。 デスクトップの PIDL のレベルは0であると見なされます。
 
-## <a name="cshellmanageritemfrompath"></a><a name="itemfrompath"></a>次のパスを使用します。
+## <a name="cshellmanageritemfrompath"></a><a name="itemfrompath"></a> CShellManager:: ItemFromPath
 
-文字列パスで識別される項目から項目識別子リスト (PIDL) へのポインターを取得します。
+文字列パスによって識別される項目から項目識別子リスト (PIDL) へのポインターを取得します。
 
 ```
 HRESULT ItemFromPath(
@@ -314,17 +315,17 @@ HRESULT ItemFromPath(
 
 ### <a name="parameters"></a>パラメーター
 
-*パス*<br/>
-[in]項目のパスを指定する文字列。
+*lpszPath*<br/>
+から項目のパスを指定する文字列。
 
-*Pidl*<br/>
-[アウト]PIDL への参照。 このメソッドは、この PIDL を使用して、戻り値へのポインターを格納します。
+*pidl*<br/>
+入出力PIDL への参照。 メソッドは、この PIDL を使用して、戻り値へのポインターを格納します。
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合は NOERROR を返します。OLE 定義エラー値。
+成功した場合、NOERROR を返します。OLE 定義エラー値です。
 
 ## <a name="see-also"></a>関連項目
 
-[階層グラフ](../../mfc/hierarchy-chart.md)<br/>
+[階層図](../../mfc/hierarchy-chart.md)<br/>
 [クラス](../../mfc/reference/mfc-classes.md)

@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: CSingleDocTemplate クラス'
 title: CSingleDocTemplate クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - CSingleDocTemplate [MFC], CSingleDocTemplate
 ms.assetid: 4f3a8212-81ee-48a0-ad22-e0ed7c36a391
-ms.openlocfilehash: 5a014b35a6cd2d12367e190e4d6dd689e28eae66
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 611cada1c90fa776bafb78f0856658cd1bd0a8e4
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81318348"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97264623"
 ---
 # <a name="csingledoctemplate-class"></a>CSingleDocTemplate クラス
 
@@ -31,25 +32,25 @@ class CSingleDocTemplate : public CDocTemplate
 
 |名前|説明|
 |----------|-----------------|
-|[テンプレートを使用します。](#csingledoctemplate)|`CSingleDocTemplate` オブジェクトを構築します。|
+|[CSingleDocTemplate::CSingleDocTemplate](#csingledoctemplate)|`CSingleDocTemplate` オブジェクトを構築します。|
 
 ## <a name="remarks"></a>解説
 
-SDI アプリケーションでは、メイン フレーム ウィンドウを使用してドキュメントを表示します。一度に開くことができるドキュメントは 1 つだけです。
+SDI アプリケーションは、メインフレームウィンドウを使用してドキュメントを表示します。一度に開くことができるドキュメントは1つだけです。
 
-ドキュメント テンプレートは、次の 3 種類のクラスの間の関係を定義します。
+ドキュメントテンプレートでは、次の3種類のクラス間のリレーションシップを定義します。
 
-- から派生するドキュメント クラス`CDocument`。
+- から派生するドキュメントクラス `CDocument` 。
 
-- 上記のドキュメント クラスのデータを表示するビュー クラス。 このクラス`CView`は、 `CScrollView`、 、 `CFormView`、 `CEditView`、 、 から派生できます。 (直接使用`CEditView`することもできます。
+- ビュークラス。上に一覧表示されているドキュメントクラスのデータを表示します。 このクラスは、、、 `CView` 、またはから派生させることができ `CScrollView` `CFormView` `CEditView` ます。 (を直接使用することもでき `CEditView` ます)。
 
-- ビューを含むフレーム ウィンドウ クラス。 SDI ドキュメント テンプレートの場合、このクラスをから`CFrameWnd`派生させることができます。メイン フレーム ウィンドウの動作をカスタマイズする必要がない場合は、独自のクラス`CFrameWnd`を派生させずに直接使用できます。
+- ビューを含むフレームウィンドウクラス。 SDI ドキュメントテンプレートでは、このクラスをから派生させることができ `CFrameWnd` ます。メインフレームウィンドウの動作をカスタマイズする必要がない場合は、独自のクラスを派生させずにを直接使用することができ `CFrameWnd` ます。
 
-SDI アプリケーションは通常、1 種類のドキュメントをサポートするため、`CSingleDocTemplate`オブジェクトは 1 つだけです。 一度に開くことができるドキュメントは 1 つだけです。
+SDI アプリケーションは通常、1種類のドキュメントをサポートしているため、オブジェクトは1つだけ `CSingleDocTemplate` です。 一度に開くことができるドキュメントは1つだけです。
 
-コンストラクター`CSingleDocTemplate`以外のメンバー関数を呼び出す必要はありません。 フレームワークはオブジェクト`CSingleDocTemplate`を内部的に処理します。
+コンストラクターを除き、のメンバー関数を呼び出す必要はありません `CSingleDocTemplate` 。 フレームワークは、 `CSingleDocTemplate` オブジェクトを内部で処理します。
 
-の使用`CSingleDocTemplate`の詳細については、「[ドキュメント テンプレートとドキュメント/ビュー作成プロセス](../../mfc/document-templates-and-the-document-view-creation-process.md)」を参照してください。
+の使用方法の詳細については `CSingleDocTemplate` 、「 [ドキュメントテンプレート」と「ドキュメント/ビューの作成プロセス](../../mfc/document-templates-and-the-document-view-creation-process.md)」を参照してください。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -61,11 +62,11 @@ SDI アプリケーションは通常、1 種類のドキュメントをサポ�
 
 `CSingleDocTemplate`
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** afxwin.h
 
-## <a name="csingledoctemplatecsingledoctemplate"></a><a name="csingledoctemplate"></a>テンプレートを使用します。
+## <a name="csingledoctemplatecsingledoctemplate"></a><a name="csingledoctemplate"></a> CSingleDocTemplate::CSingleDocTemplate
 
 `CSingleDocTemplate` オブジェクトを構築します。
 
@@ -79,10 +80,10 @@ CSingleDocTemplate(
 
 ### <a name="parameters"></a>パラメーター
 
-*リソース*<br/>
-ドキュメントタイプで使用されるリソースの ID を指定します。 これには、メニュー、アイコン、アクセラレータ テーブル、および文字列リソースが含まれます。
+*nIDResource*<br/>
+ドキュメントの種類で使用されるリソースの ID を指定します。 これには、メニュー、アイコン、アクセラレータテーブル、および文字列リソースが含まれます。
 
-文字列リソースは、'\n' 文字で区切られた最大 7 個の部分文字列で構成されます (部分文字列が含まれていない場合はプレースホルダとして '\n' 文字が必要です。これらの部分文字列はドキュメントタイプを記述します。 サブストリングの詳細については[、「CDoc テンプレート::GetDocString](../../mfc/reference/cdoctemplate-class.md#getdocstring)」を参照してください。 この文字列リソースは、アプリケーションのリソース ファイルにあります。 次に例を示します。
+文字列リソースは、' \n ' 文字で区切られた最大7つの部分文字列で構成されます (部分文字列が含まれていない場合、' \n ' 文字はプレースホルダーとして必要です)。ただし、末尾の ' \n ' 文字は必要ありません)。これらの部分文字列は、ドキュメントの種類を記述します。 部分文字列の詳細については、「 [CDocTemplate:: GetDocString](../../mfc/reference/cdoctemplate-class.md#getdocstring)」を参照してください。 この文字列リソースは、アプリケーションのリソースファイルにあります。 次に例を示します。
 
 ```RC
 // MYCALC.RC
@@ -92,22 +93,22 @@ BEGIN
 END
 ```
 
-この文字列は、文字列エディタを使用して編集できます。文字列全体が、7 つの個別のエントリではなく、文字列エディタ内の単一のエントリとして表示されます。
+この文字列は、文字列エディターを使用して編集できます。文字列全体は、7つの個別のエントリとしてではなく、文字列エディターに単一のエントリとして表示されます。
 
-これらのリソースの種類の詳細については、「[文字列エディタ](../../windows/string-editor.md)」を参照してください。
+これらのリソースの種類の詳細については、「 [文字列エディター](../../windows/string-editor.md)」を参照してください。
 
-*クラス*<br/>
-ドキュメント クラス`CRuntimeClass`のオブジェクトへのポイント。 このクラスは、`CDocument`ドキュメントを表すために定義する派生クラスです。
+*pDocClass*<br/>
+`CRuntimeClass`ドキュメントクラスのオブジェクトを指します。 このクラスは、 `CDocument` ドキュメントを表すために定義するの派生クラスです。
 
-*クラス*<br/>
-フレーム ウィンドウ`CRuntimeClass`クラスのオブジェクトへのポイント。 このクラスは`CFrameWnd`、派生クラスにすることも、メイン フレーム`CFrameWnd`ウィンドウの既定の動作を行う場合は、それ自体にすることもできます。
+*pFrameClass*<br/>
+`CRuntimeClass`フレームウィンドウクラスのオブジェクトを指します。 このクラスは、派生クラスにすることも `CFrameWnd` 、 `CFrameWnd` メインフレームウィンドウの既定の動作が必要な場合は、それ自体にすることもできます。
 
-*クラスを表示します。*<br/>
-ビュー クラス`CRuntimeClass`のオブジェクトへのポイント。 このクラスは、`CView`ドキュメントを表示するために定義する派生クラスです。
+*pViewClass*<br/>
+`CRuntimeClass`ビュークラスのオブジェクトを指します。 このクラスは、 `CView` ドキュメントを表示するために定義するの派生クラスです。
 
 ### <a name="remarks"></a>解説
 
-オブジェクトを`CSingleDocTemplate`動的に割り当て、`CWinApp::AddDocTemplate`アプリケーション`InitInstance`クラスのメンバー関数から渡します。
+オブジェクトを動的 `CSingleDocTemplate` に割り当て、 `CWinApp::AddDocTemplate` `InitInstance` アプリケーションクラスのメンバー関数からに渡します。
 
 ### <a name="example"></a>例
 
@@ -117,12 +118,12 @@ END
 
 ## <a name="see-also"></a>関連項目
 
-[MFC サンプル ドッキングツール](../../overview/visual-cpp-samples.md)<br/>
-[クラス](../../mfc/reference/cdoctemplate-class.md)<br/>
-[階層グラフ](../../mfc/hierarchy-chart.md)<br/>
-[クラス](../../mfc/reference/cdoctemplate-class.md)<br/>
+[MFC のサンプル DOCKTOOL](../../overview/visual-cpp-samples.md)<br/>
+[CDocTemplate クラス](../../mfc/reference/cdoctemplate-class.md)<br/>
+[階層図](../../mfc/hierarchy-chart.md)<br/>
+[CDocTemplate クラス](../../mfc/reference/cdoctemplate-class.md)<br/>
 [CDocument クラス](../../mfc/reference/cdocument-class.md)<br/>
 [CFrameWnd クラス](../../mfc/reference/cframewnd-class.md)<br/>
 [CMultiDocTemplate クラス](../../mfc/reference/cmultidoctemplate-class.md)<br/>
-[Cビュークラス](../../mfc/reference/cview-class.md)<br/>
+[CView クラス](../../mfc/reference/cview-class.md)<br/>
 [CWinApp クラス](../../mfc/reference/cwinapp-class.md)

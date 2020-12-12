@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: XDCMake リファレンス'
 title: XDCMake リファレンス
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - xdcmake program
 ms.assetid: 14e65747-d000-4343-854b-8393bf01cbac
-ms.openlocfilehash: 9970470d1feb471f9e0b8c9284a08337dac7ef0f
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: c9e597828ca37b67a21a5b2f442fffcac001b541
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81335855"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97260996"
 ---
 # <a name="xdcmake-reference"></a>XDCMake リファレンス
 
-xdcmake.exe は .xdc ファイルを .xml ファイルにコンパイルするプログラムです。 ソース コードが[/doc](doc-process-documentation-comments-c-cpp.md)でコンパイルされ、ソース コード ファイルに XML タグでマークアップされたドキュメント コメントが含まれている場合、各ソース コード ファイルの MSVC コンパイラによって .xdc ファイルが作成されます。
+xdcmake.exe は .xdc ファイルを .xml ファイルにコンパイルするプログラムです。 .Xdc ファイルは、ソースコードが [/doc](doc-process-documentation-comments-c-cpp.md) を使用してコンパイルされ、ソースコードファイルに XML タグでマークされたドキュメントコメントが含まれている場合に、ソースコードファイルごとに MSVC コンパイラによって作成されます。
 
 ### <a name="to-use-xdcmakeexe-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境で xdcmake.exe を使用するには
 
@@ -37,13 +38,13 @@ xdcmake `input_filename options`
 *input_filename*<br/>
 xdcmake.exe への入力として使用されている .xdc ファイルのファイル名。 1 つまたは複数の .xdc ファイルを指定するか、*.xdc と指定し、現在のディレクトリにあるすべての .xdc ファイルを使用します。
 
-*オプション*<br/>
+*options*<br/>
 次をいくつか指定できます。指定しないこともできます。
 
 |オプション|説明|
 |------------|-----------------|
 |/?, /help|xdcmake.exe のヘルプを表示します。|
-|/assembly:*filename*|.xml ファイルに \<assembly> タグの値を指定できます。  既定では、\<assembly> タグは .xml ファイルのファイル名と同じになります。|
+|/アセンブリ:*ファイル名*|では、.xml ファイルのタグの値を指定でき \<assembly> ます。  既定では、タグの値 \<assembly> は .xml ファイルのファイル名と同じです。|
 |/nologo|著作権メッセージを表示しません。|
 |/out:*filename*|.xml ファイルの名前を指定できます。  既定では、.xml ファイルの名前は xdcmake.exe によって処理される最初の .xdc ファイルのファイル名になります。|
 

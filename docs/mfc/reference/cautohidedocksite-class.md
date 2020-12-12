@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: CAutoHideDockSite クラス'
 title: CAutoHideDockSite クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -22,12 +23,12 @@ helpviewer_keywords:
 - CAutoHideDockSite [MFC], UnSetAutoHideMode
 - CAutoHideDockSite [MFC], m_nExtraSpace
 ms.assetid: 2a0f6bec-c369-4ab7-977d-564e7946ebad
-ms.openlocfilehash: 14db8d93ea7706b3a4daad2ba751f8410974f6cb
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 00ac5224d559f84378bd87bd9abe56756a6f4d97
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88841637"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97261282"
 ---
 # <a name="cautohidedocksite-class"></a>CAutoHideDockSite クラス
 
@@ -94,7 +95,7 @@ class CAutoHideDockSite : public CDockSite
 
 [!code-cpp[NVC_MFC_RibbonApp#29](../../mfc/reference/codesnippet/cpp/cautohidedocksite-class_1.cpp)]
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** afxautohidedocksite
 
@@ -113,7 +114,7 @@ virtual BOOL CanAcceptPane(const CBasePane* pBar) const;
 
 ### <a name="return-value"></a>戻り値
 
-*Pbar*がから派生している場合は TRUE `CMFCAutoHideBar` 。それ以外の場合は FALSE。
+*Pbar* がから派生している場合は TRUE `CMFCAutoHideBar` 。それ以外の場合は FALSE。
 
 ### <a name="remarks"></a>解説
 
@@ -143,9 +144,9 @@ virtual void DockPane(
 
 ### <a name="remarks"></a>解説
 
-既定の実装では、パラメーター *dockMethod*は使用されません。このパラメーターは将来使用するために用意されています。
+既定の実装では、パラメーター *dockMethod* は使用されません。このパラメーターは将来使用するために用意されています。
 
-*LpRect*が NULL の場合、フレームワークはペインをドッキングサイトの既定の場所に配置します。 Dock サイトが横方向の場合、既定の場所は dock サイトの左端にあります。 それ以外の場合、既定の場所は dock サイトの上部にあります。
+*LpRect* が NULL の場合、フレームワークはペインをドッキングサイトの既定の場所に配置します。 Dock サイトが横方向の場合、既定の場所は dock サイトの左端にあります。 それ以外の場合、既定の場所は dock サイトの上部にあります。
 
 ## <a name="cautohidedocksitegetalignrect"></a><a name="getalignrect"></a> CAutoHideDockSite:: GetAlignRect
 
@@ -225,7 +226,7 @@ virtual void RepositionPanes(CRect& rectNewClientArea);
 
 ### <a name="remarks"></a>解説
 
-既定の実装では、 *rectNewClientArea*は使用されません。 グローバルツールバーの余白とボタンの間隔を使用して、ウィンドウを再描画します。
+既定の実装では、 *rectNewClientArea* は使用されません。 グローバルツールバーの余白とボタンの間隔を使用して、ウィンドウを再描画します。
 
 ## <a name="cautohidedocksiteunsetautohidemode"></a><a name="unsetautohidemode"></a> CAutoHideDockSite:: UnSetAutoHideMode
 
@@ -242,10 +243,10 @@ void UnSetAutoHideMode(CMFCAutoHideBar* pAutoHideToolbar);
 
 ### <a name="remarks"></a>解説
 
-このメソッドは、 *Pautohidetoolbar*を含む行を検索します。 このメソッドは `CMFCAutoHideBar.UnSetAutoHideMode` 、 `CMFCAutoHideBar` その行のすべてのオブジェクトを呼び出します。 *Pautohidetoolbar*が見つからないか、NULL の場合、このメソッドはの `CMFCAutoHideBar.UnSetAutoHideMode` すべてのオブジェクトに対してを呼び出し `CMFCAutoHideBar` `CAutoHideDockSite` ます。
+このメソッドは、 *Pautohidetoolbar* を含む行を検索します。 このメソッドは `CMFCAutoHideBar.UnSetAutoHideMode` 、 `CMFCAutoHideBar` その行のすべてのオブジェクトを呼び出します。 *Pautohidetoolbar* が見つからないか、NULL の場合、このメソッドはの `CMFCAutoHideBar.UnSetAutoHideMode` すべてのオブジェクトに対してを呼び出し `CMFCAutoHideBar` `CAutoHideDockSite` ます。
 
 ## <a name="see-also"></a>関連項目
 
 [階層図](../../mfc/hierarchy-chart.md)<br/>
-[クラス](../../mfc/reference/mfc-classes.md)<br/>
+[Classes](../../mfc/reference/mfc-classes.md)<br/>
 [CDockSite クラス](../../mfc/reference/cdocksite-class.md)

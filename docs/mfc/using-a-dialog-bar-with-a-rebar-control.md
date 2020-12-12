@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「Rebar コントロールでのダイアログバーの使用」を参照してください。
 title: Rebar コントロールでのダイアログ バーの使い方
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - rebar controls [MFC], dialog bars
 - dialog bars [MFC], using with rebar bands
 ms.assetid: e528cea0-6b81-4bdf-9643-7c03b6176590
-ms.openlocfilehash: e4e786d3670ec74b734739e29aa7e3e33b5af384
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: 97fb8ca5c356d91fa4b4ba44753fbdc9bf298435
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75302368"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97263531"
 ---
 # <a name="using-a-dialog-bar-with-a-rebar-control"></a>Rebar コントロールでのダイアログ バーの使い方
 
@@ -23,7 +24,7 @@ ms.locfileid: "75302368"
 
 ### <a name="to-implement-a-transparent-dialog-bar-in-a-rebar-band"></a>Rebar バンドに透過的なダイアログバーを実装するには
 
-1. [[クラスの追加] ダイアログボックス](../mfc/reference/adding-an-mfc-class.md)を使用して、ダイアログバーオブジェクトを実装する新しいクラス (`CMyDlgBar`など) を追加します。
+1. [ [クラスの追加] ダイアログボックス](../mfc/reference/adding-an-mfc-class.md)を使用して、ダイアログバーオブジェクトを実装する新しいクラス (たとえば、) を追加し `CMyDlgBar` ます。
 
 1. WM_ERASEBKGND メッセージのハンドラーを追加します。
 

@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: array クラス (C++ 標準ライブラリ)'
 title: array クラス (C++ 標準ライブラリ) |Microsoft Docs
 ms.date: 11/13/2019
 f1_keywords:
@@ -96,12 +97,12 @@ helpviewer_keywords:
 - std::array [C++], size
 - std::array [C++], swap
 ms.assetid: fdfd43a5-b2b5-4b9e-991f-93bf10fb4293
-ms.openlocfilehash: f826bb679d3391855d0a0dbc7c4355a735b9c529
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: 058d1a6f3ad49392271f553fe381cc31624be360
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88562572"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97261126"
 ---
 # <a name="array-class-c-standard-library"></a>array クラス (C++ 標準ライブラリ)
 
@@ -131,7 +132,7 @@ class array;
 |[const_reference](#const_reference)|要素への定数参照の型です。|
 |[const_reverse_iterator](#const_reverse_iterator)|被制御シーケンスの定数反転反復子の型です。|
 |[difference_type](#difference_type)|2 つの要素間の距離を表す、符号付きの型です。|
-|[反](#iterator)|被制御シーケンスの反復子の型です。|
+|[iterator](#iterator)|被制御シーケンスの反復子の型です。|
 |[pointer](#pointer)|要素へのポインターの型です。|
 |[reference](#reference)|要素への参照の型です。|
 |[reverse_iterator](#reverse_iterator)|被制御シーケンスの反転反復子の型です。|
@@ -175,7 +176,7 @@ array<int, 4> ai = { 1, 2, 3 };
 
 このコードは、4 つの整数値を保持するオブジェクト `ai` を作成し、最初の 3 つの要素はそれぞれ値 1、2、3 に初期化し、4 番目の要素は 0 に初期化します。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:**\<array>
 
@@ -261,7 +262,7 @@ constexpr const_reference at(size_type off) const;
 
 ### <a name="remarks"></a>解説
 
-このメンバー関数は、制御されたシーケンスの要素への参照を *off*の位置に返します。 その位置が無効の場合、関数はクラス `out_of_range` のオブジェクトをスローします。
+このメンバー関数は、制御されたシーケンスの要素への参照を *off* の位置に返します。 その位置が無効の場合、関数はクラス `out_of_range` のオブジェクトをスローします。
 
 ### <a name="example"></a>例
 
@@ -1087,9 +1088,9 @@ constexpr const_reference operator[](size_type off) const;
 
 ### <a name="remarks"></a>解説
 
-このメンバー関数は、制御されたシーケンスの要素への参照を *off*の位置に返します。 その位置が無効な場合、動作は定義されません。
+このメンバー関数は、制御されたシーケンスの要素への参照を *off* の位置に返します。 その位置が無効な場合、動作は定義されません。
 
-また、**配列**の要素への参照を取得するために使用できる非メンバーの[get](array-functions.md#get)関数もあります。
+また、**配列** の要素への参照を取得するために使用できる非メンバーの [get](array-functions.md#get)関数もあります。
 
 ### <a name="example"></a>例
 
@@ -1138,7 +1139,7 @@ array<Value> operator=(array<Value> right);
 
 ### <a name="remarks"></a>解説
 
-メンバー演算子は、制御されたシーケンスの対応する要素に *right* の各要素を代入し、を返し **`*this`** ます。 このメソッドを使用して、被制御シーケンスを *右側*の被制御シーケンスのコピーで置き換えます。
+メンバー演算子は、制御されたシーケンスの対応する要素に *right* の各要素を代入し、を返し **`*this`** ます。 このメソッドを使用して、被制御シーケンスを *右側* の被制御シーケンスのコピーで置き換えます。
 
 ### <a name="example"></a>例
 
@@ -1502,9 +1503,9 @@ void swap(array& right);
 
 ### <a name="remarks"></a>解説
 
-このメンバー関数は、との間で被制御シーケンスを交換し **`*this`** ます。 *right* さまざまな要素の割り当てを実行し、`N` に比例してコンストラクターを呼び出します。
+このメンバー関数は、との間で被制御シーケンスを交換し **`*this`** ます。  さまざまな要素の割り当てを実行し、`N` に比例してコンストラクターを呼び出します。
 
-2つの**配列**インスタンスをスワップするために使用できる非メンバー[スワップ](array-functions.md#swap)関数もあります。
+2つの **配列** インスタンスをスワップするために使用できる非メンバー [スワップ](array-functions.md#swap)関数もあります。
 
 ### <a name="example"></a>例
 

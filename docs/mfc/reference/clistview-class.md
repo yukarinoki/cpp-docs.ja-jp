@@ -1,5 +1,6 @@
 ---
-title: クラスを表示します。
+description: '詳細情報: CListView クラス'
+title: CListView クラス
 ms.date: 11/04/2016
 f1_keywords:
 - CListView
@@ -12,16 +13,16 @@ helpviewer_keywords:
 - CListView [MFC], GetListCtrl
 - CListView [MFC], RemoveImageList
 ms.assetid: 7626bdb2-a1b8-4eab-b631-6743710a8432
-ms.openlocfilehash: d7f3b7c43d98c4f2c42d0c27c8e224f33e4b3301
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: 5576a0997c84e8f5639911a1120a6645e720a7cf
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81749128"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97259566"
 ---
-# <a name="clistview-class"></a>クラスを表示します。
+# <a name="clistview-class"></a>CListView クラス
 
-リスト コントロールと、リスト コントロール機能をカプセル化するクラス[である CListCtrl](../../mfc/reference/clistctrl-class.md)の使用を簡略化します。
+リストコントロールと、リストコントロールの機能をカプセル化するクラスである [CListCtrl](../../mfc/reference/clistctrl-class.md)の使用を、MFC のドキュメント/ビューアーキテクチャと共に簡略化します。
 
 ## <a name="syntax"></a>構文
 
@@ -35,23 +36,23 @@ class CListView : public CCtrlView
 
 |名前|説明|
 |----------|-----------------|
-|[を表示します。](#clistview)|`CListView` オブジェクトを構築します。|
+|[CListView:: CListView](#clistview)|`CListView` オブジェクトを構築します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
 |名前|説明|
 |----------|-----------------|
-|[次のリストビュー::リストCtrl](#getlistctrl)|ビューに関連付けられているリスト コントロールを返します。|
+|[CListView:: GetListCtrl](#getlistctrl)|ビューに関連付けられているリストコントロールを返します。|
 
 ### <a name="protected-methods"></a>プロテクト メソッド
 
 |名前|説明|
 |----------|-----------------|
-|[次の項目を表示します。](#removeimagelist)|指定したイメージ リストをリスト ビューから削除します。|
+|[CListView:: RemoveImageList](#removeimagelist)|リストビューから指定されたイメージリストを削除します。|
 
 ## <a name="remarks"></a>解説
 
-このアーキテクチャの詳細については[、CView](../../mfc/reference/cview-class.md)クラスの概要と、そこで引用されている相互参照を参照してください。
+このアーキテクチャの詳細については、「 [CView](../../mfc/reference/cview-class.md) クラスの概要」と「相互参照」を参照してください。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -67,11 +68,11 @@ class CListView : public CCtrlView
 
 `CListView`
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-**ヘッダー:** afxcview.h
+**ヘッダー:** afxcview
 
-## <a name="clistviewclistview"></a><a name="clistview"></a>を表示します。
+## <a name="clistviewclistview"></a><a name="clistview"></a> CListView:: CListView
 
 `CListView` オブジェクトを構築します。
 
@@ -79,9 +80,9 @@ class CListView : public CCtrlView
 CListView();
 ```
 
-## <a name="clistviewgetlistctrl"></a><a name="getlistctrl"></a>次のリストビュー::リストCtrl
+## <a name="clistviewgetlistctrl"></a><a name="getlistctrl"></a> CListView:: GetListCtrl
 
-ビューに関連付けられているリスト コントロールへの参照を取得します。
+ビューに関連付けられているリストコントロールへの参照を取得するには、このメンバー関数を呼び出します。
 
 ```
 CListCtrl& GetListCtrl() const;
@@ -89,15 +90,15 @@ CListCtrl& GetListCtrl() const;
 
 ### <a name="return-value"></a>戻り値
 
-ビューに関連付けられているリスト コントロールへの参照。
+ビューに関連付けられたリストコントロールへの参照。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_MFCListView#7](../../atl/reference/codesnippet/cpp/clistview-class_1.cpp)]
 
-## <a name="clistviewremoveimagelist"></a><a name="removeimagelist"></a>次の項目を表示します。
+## <a name="clistviewremoveimagelist"></a><a name="removeimagelist"></a> CListView:: RemoveImageList
 
-指定したイメージ リストをリスト ビューから削除します。
+リストビューから指定されたイメージリストを削除します。
 
 ```cpp
 void RemoveImageList(int nImageList);
@@ -105,12 +106,12 @@ void RemoveImageList(int nImageList);
 
 ### <a name="parameters"></a>パラメーター
 
-*一覧*<br/>
-削除するイメージの 0 から始まるインデックス。
+*nImageList*<br/>
+削除するイメージの0から始まるインデックス。
 
 ## <a name="see-also"></a>関連項目
 
-[MFC サンプル行一覧](../../overview/visual-cpp-samples.md)<br/>
-[クラスを表示します。](../../mfc/reference/cctrlview-class.md)<br/>
-[階層グラフ](../../mfc/hierarchy-chart.md)<br/>
-[クラスを表示します。](../../mfc/reference/cctrlview-class.md)
+[MFC のサンプル行リスト](../../overview/visual-cpp-samples.md)<br/>
+[CCtrlView クラス](../../mfc/reference/cctrlview-class.md)<br/>
+[階層図](../../mfc/hierarchy-chart.md)<br/>
+[CCtrlView クラス](../../mfc/reference/cctrlview-class.md)

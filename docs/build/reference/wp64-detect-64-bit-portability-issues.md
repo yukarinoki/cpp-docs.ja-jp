@@ -1,4 +1,5 @@
 ---
+description: 詳細情報:/wp64 (64 ビット移植性の問題の検出)
 title: /Wp64 (64 ビット移植性の問題の検出)
 ms.date: 11/04/2016
 f1_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - -Wp64 compiler option [C++]
 - Wp64 compiler option [C++]
 ms.assetid: 331ae5aa-e627-4d03-8f63-dd2c2d76dadd
-ms.openlocfilehash: e5c30ac9096094948a83195f5b3990794c421685
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: d1ee441089531c4ebe222c73f6cec16b59fa7583
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81335882"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97261087"
 ---
 # <a name="wp64-detect-64-bit-portability-issues"></a>/Wp64 (64 ビット移植性の問題の検出)
 
@@ -30,10 +31,10 @@ ms.locfileid: "81335882"
 
 ## <a name="remarks"></a>解説
 
-既定では、Visual Studio 2013 より前のバージョンの Visual Studio では、32 ビット x86 コードをビルドする MSVC コンパイラと、64 ビット x64 コードをビルドする MSVC コンパイラでは **、/Wp64**コンパイラ オプションはオフになっています。
+既定では、Visual Studio 2013 前のバージョンの Visual Studio では、MSVC コンパイラでは、32ビットの x86 コードをビルドする MSVC コンパイラの/ **wp64** コンパイラオプションがオフになっています。また、64ビットの x64 コードをビルドするコンパイラではオフになっています。
 
 > [!IMPORTANT]
-> [/Wp64](wp64-detect-64-bit-portability-issues.md) コンパイラ オプションと [__w64](../../cpp/w64.md) キーワードは、Visual Studio 2010 および Visual Studio 2012 で非推奨となり、Visual Studio 2013 以降ではサポートされません。 このスイッチを使用するプロジェクトを変換すると、変換中にスイッチは移行されません。 このオプションを Visual Studio 2010 または Visual Studio 2012 で使用するには、プロジェクト プロパティの **[コマンド ライン]** セクションの **[追加オプション]** で、コンパイラ スイッチを入力する必要があります。 コマンド ラインから **/Wp64** コンパイラ オプションを使用すると、コンパイラはコマンド ラインの警告 D9002 を発行します。 64 ビットの移植性の問題を検出するためにこのオプションとキーワードを使用する代わりに、64 ビット プラットフォームを対象とする MSVC コンパイラを使用し[、/W4](compiler-option-warning-level.md)オプションを指定します。 詳細については、「 [64 ビット x64 ターゲットの C++ プロジェクトを構成する](../configuring-programs-for-64-bit-visual-cpp.md)」を参照してください。
+> [/Wp64](wp64-detect-64-bit-portability-issues.md) コンパイラ オプションと [__w64](../../cpp/w64.md) キーワードは、Visual Studio 2010 および Visual Studio 2012 で非推奨となり、Visual Studio 2013 以降ではサポートされません。 このスイッチを使用するプロジェクトを変換すると、変換中にスイッチは移行されません。 このオプションを Visual Studio 2010 または Visual Studio 2012 で使用するには、プロジェクト プロパティの **[コマンド ライン]** セクションの **[追加オプション]** で、コンパイラ スイッチを入力する必要があります。 コマンド ラインから **/Wp64** コンパイラ オプションを使用すると、コンパイラはコマンド ラインの警告 D9002 を発行します。 このオプションとキーワードを使用して64ビット移植性の問題を検出する代わりに、64ビットプラットフォームを対象とする MSVC コンパイラを使用して、 [/W4](compiler-option-warning-level.md) オプションを指定します。 詳細については、「 [64 ビット、x64 ターゲット用の C++ プロジェクトの構成](../configuring-programs-for-64-bit-visual-cpp.md)」を参照してください。
 
 次の型の変数は、64 ビット オペレーティング システムで使用されている場合と同様に、32 ビットのオペレーティング システムでテストされます。
 
@@ -43,7 +44,7 @@ ms.locfileid: "81335882"
 
 - ポインター (pointer)
 
-64 ビット x64 コードをビルドするコンパイラを使用して定期的にアプリケーションをコンパイルする場合は、64 ビット コンパイラがすべての問題を検出するため、32 ビット コンパイルで **/Wp64**を無効にできます。 Windows 64 ビット オペレーティング システムを対象とする方法の詳細については[、「64 ビット x64 ターゲット用の C++ プロジェクトを構成する](../configuring-programs-for-64-bit-visual-cpp.md)」を参照してください。
+64ビットの x64 コードをビルドするコンパイラを使用してアプリケーションを定期的にコンパイルする場合は、64ビットコンパイラによってすべての問題が検出されるため、32ビットのコンパイルで **/wp64** を無効にするだけで済みます。 Windows 64 ビットオペレーティングシステムを対象とする方法の詳細については、「 [64-bit、x64 ターゲット用の C++ プロジェクトの構成](../configuring-programs-for-64-bit-visual-cpp.md)」を参照してください。
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのコンパイラ オプションを設定するには
 
@@ -59,10 +60,10 @@ ms.locfileid: "81335882"
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>このコンパイラ オプションをコードから設定するには
 
-- 「<xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.Detect64BitPortabilityProblems%2A>」を参照してください。
+- 以下を参照してください。<xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.Detect64BitPortabilityProblems%2A>
 
 ## <a name="see-also"></a>関連項目
 
 [MSVC コンパイラ オプション](compiler-options.md)<br/>
-[MSVC コンパイラ コマンド ラインの構文](compiler-command-line-syntax.md)<br/>
+[MSVC Compiler Command-Line 構文](compiler-command-line-syntax.md)<br/>
 [64 ビットの x64 ターゲット用に C++ プロジェクトを構成する](../configuring-programs-for-64-bit-visual-cpp.md)

@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: `/X` (標準インクルードパスの無視)'
 title: /X (標準インクルード パスの無視)
 ms.date: 07/31/2020
 f1_keywords:
@@ -14,14 +15,14 @@ helpviewer_keywords:
 - X compiler option
 - Ignore Standard Include Paths compiler option
 ms.assetid: 16bdf2cc-c8dc-46e4-bdcc-f3caeba5e1ef
-ms.openlocfilehash: 652feeb200b7106aaca1ed7264f1e25c088a3dab
-ms.sourcegitcommit: f2a135d69a2a8ef1777da60c53d58fe06980c997
+ms.openlocfilehash: 69936b80893de2c45622ec9973a218a94e8029a4
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87520409"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97261009"
 ---
-# <a name="x-ignore-standard-include-paths"></a>`/X`(標準インクルードパスを無視します)
+# <a name="x-ignore-standard-include-paths"></a>`/X` (標準インクルードパスを無視します)
 
 パスで指定されたディレクトリ内のインクルードファイルをコンパイラが検索できないようにし、環境変数を含めます。
 
@@ -29,7 +30,7 @@ ms.locfileid: "87520409"
 
 > **`/X`**
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 このオプションを ([追加の[ `/I` インクルードディレクトリ])](i-additional-include-directories.md)オプションと共に使用すると、標準のインクルードファイルへの代替パスを指定できます。
 
@@ -39,7 +40,7 @@ ms.locfileid: "87520409"
 
 1. [**構成プロパティ**] [  >  **C/c + +**] [  >  **プリプロセッサ**] プロパティページを選択します。
 
-1. "**標準インクルードパスを無視**する" プロパティを変更します。
+1. " **標準インクルードパスを無視** する" プロパティを変更します。
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>このコンパイラ オプションをコードから設定するには
 
@@ -55,5 +56,5 @@ CL /X /I \ALT\INCLUDE MAIN.C
 
 ## <a name="see-also"></a>関連項目
 
-[MSVC コンパイラオプション](compiler-options.md)<br/>
+[MSVC コンパイラ オプション](compiler-options.md)<br/>
 [MSVC コンパイラ コマンド ラインの構文](compiler-command-line-syntax.md)

@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: Csliderctrl 使い方クラス'
 title: Csliderctrl 使い方クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -74,12 +75,12 @@ helpviewer_keywords:
 - CSliderCtrl [MFC], SetTipSide
 - CSliderCtrl [MFC], SetToolTips
 ms.assetid: dd12b084-4eda-4550-a810-8f3cfb06b871
-ms.openlocfilehash: 8dfdcf34474027180708045131a19bf6f7e14512
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: 556366f429b39344f4ae2f20acd3c20fd9760552
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88562533"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97264545"
 ---
 # <a name="csliderctrl-class"></a>Csliderctrl 使い方クラス
 
@@ -161,7 +162,7 @@ class CSliderCtrl : public CWnd
 
 `CSliderCtrl`
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** afxcmn.h
 
@@ -225,7 +226,7 @@ virtual BOOL Create(
 
 を作成する `CSliderCtrl` には、2つの手順を実行します。 まず、コンストラクターを呼び出し、次に `Create` を呼び出します。これにより、スライダーコントロールが作成され、オブジェクトにアタッチさ `CSliderCtrl` れます。
 
-*DwStyle*に設定されている値に応じて、スライダーコントロールは垂直方向または水平方向のどちらかを持つことができます。 両端に目盛りを設定するか、どちらか一方または両方に目盛りを付けることができます。 また、連続する値の範囲を指定するために使用することもできます。
+*DwStyle* に設定されている値に応じて、スライダーコントロールは垂直方向または水平方向のどちらかを持つことができます。 両端に目盛りを設定するか、どちらか一方または両方に目盛りを付けることができます。 また、連続する値の範囲を指定するために使用することもできます。
 
 拡張ウィンドウスタイルをスライダーコントロールに適用するには、ではなく [CreateEx](#createex) を呼び出し `Create` ます。
 
@@ -245,13 +246,13 @@ virtual BOOL CreateEx(
 ### <a name="parameters"></a>パラメーター
 
 *dwExStyle*<br/>
-作成するコントロールの拡張スタイルを指定します。 拡張 Windows スタイルの一覧については、Windows SDK の[CreateWindowEx](/windows/win32/api/winuser/nf-winuser-createwindowexw)の*dwexstyle*パラメーターを参照してください。
+作成するコントロールの拡張スタイルを指定します。 拡張 Windows スタイルの一覧については、Windows SDK の [CreateWindowEx](/windows/win32/api/winuser/nf-winuser-createwindowexw)の *dwexstyle* パラメーターを参照してください。
 
 *dwStyle*<br/>
 スライダーコントロールのスタイルを指定します。 Windows SDK で説明されている [スライダーコントロールスタイル](/windows/win32/Controls/trackbar-control-styles)の任意の組み合わせをコントロールに適用します。
 
 *rect*<br/>
-*PParentWnd*のクライアント座標で、作成されるウィンドウのサイズと位置を記述する[RECT](/windows/win32/api/windef/ns-windef-rect)構造体への参照。
+*PParentWnd* のクライアント座標で、作成されるウィンドウのサイズと位置を記述する [RECT](/windows/win32/api/windef/ns-windef-rect)構造体への参照。
 
 *pParentWnd*<br/>
 コントロールの親であるウィンドウへのポインター。
@@ -265,7 +266,7 @@ virtual BOOL CreateEx(
 
 ### <a name="remarks"></a>解説
 
-`CreateEx`Windows 拡張スタイルの先頭**WS_EX_** によって指定された拡張 windows スタイルを適用するには、[[作成](#create)] ではなくを使用します。
+`CreateEx`Windows 拡張スタイルの先頭 **WS_EX_** によって指定された拡張 windows スタイルを適用するには、[[作成](#create)] ではなくを使用します。
 
 ## <a name="csliderctrlcsliderctrl"></a><a name="csliderctrl"></a> Csliderctrl 使い方:: Csliderctrl 使い方
 
@@ -294,7 +295,7 @@ CWnd* GetBuddy(BOOL fLocation = TRUE) const;
 
 ### <a name="return-value"></a>戻り値
 
-*Flocation*によって指定された場所にある関連ウィンドウである[CWnd](../../mfc/reference/cwnd-class.md)オブジェクトへのポインター。その場所に関連ウィンドウが存在しない場合は NULL。
+*Flocation* によって指定された場所にある関連ウィンドウである [CWnd](../../mfc/reference/cwnd-class.md)オブジェクトへのポインター。その場所に関連ウィンドウが存在しない場合は NULL。
 
 ### <a name="remarks"></a>解説
 
@@ -393,7 +394,7 @@ void GetRange(
 
 ### <a name="remarks"></a>解説
 
-この関数は、 *Nmin* および *n1 日*によって参照される整数に値をコピーします。
+この関数は、 *Nmin* および *n1 日* によって参照される整数に値をコピーします。
 
 ## <a name="csliderctrlgetrangemax"></a><a name="getrangemax"></a> Csliderctrl 使い方:: GetRangeMax
 
@@ -775,7 +776,7 @@ int SetTipSide(int nLocation);
 
 ### <a name="return-value"></a>戻り値
 
-ツールヒントコントロールの前の位置を表す値。 戻り値は、 *Nlocation*に指定できる値の1つになります。
+ツールヒントコントロールの前の位置を表す値。 戻り値は、 *Nlocation* に指定できる値の1つになります。
 
 ### <a name="remarks"></a>解説
 

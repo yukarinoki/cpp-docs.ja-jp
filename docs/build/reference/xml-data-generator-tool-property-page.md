@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: XML データジェネレーターツールのプロパティページ'
 title: '[XML データ ジェネレーター ツール] プロパティ ページ'
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - XML Data Generator Tool property page
 ms.assetid: b2ef1c12-3419-429d-bb9d-bd7d9ffe1ffb
-ms.openlocfilehash: 51042e3eab0c789d2e923f40de2d0ee82d06a5ab
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4d6548deb3ae872e002f2a445acbd2a28619c9c3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62316445"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97260983"
 ---
 # <a name="xml-data-generator-tool-property-page"></a>[XML データ ジェネレーター ツール] プロパティ ページ
 
@@ -33,10 +34,10 @@ ms.locfileid: "62316445"
 
    マネージド コードを生成するかどうかを決定します。
 
-アクセスする方法については、 **XML データ ジェネレーター ツール**プロパティ ページを参照してください[Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)します。
+[ **XML データジェネレーターツール** ] プロパティページにアクセスする方法の詳細については、「 [Visual Studio での C++ コンパイラとビルドプロパティの設定](../working-with-project-properties.md)」を参照してください。
 
 このプロジェクトのメンバーにプログラムを使ってアクセスする方法については、「<xref:Microsoft.VisualStudio.VCProjectEngine.VCXMLDataGeneratorTool>」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 
-[C++ プロジェクト プロパティ ページの参照](property-pages-visual-cpp.md)
+[C++ プロジェクトのプロパティ ページのリファレンス](property-pages-visual-cpp.md)

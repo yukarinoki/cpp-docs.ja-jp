@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: CArray クラス'
 title: CArray クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -42,12 +43,12 @@ helpviewer_keywords:
 - CArray [MFC], SetAtGrow
 - CArray [MFC], SetSize
 ms.assetid: fead8b00-4cfd-4625-ad0e-251df62ba92f
-ms.openlocfilehash: f73666f3a20488d14a82b7c56d682f3f5b2386df
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 2aea88178347fd146720a8205974049e4baf039f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87195175"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97259644"
 ---
 # <a name="carray-class"></a>CArray クラス
 
@@ -63,10 +64,10 @@ class CArray : public CObject
 #### <a name="parameters"></a>パラメーター
 
 *TYPE*<br/>
-配列に格納されているオブジェクトの型を指定するテンプレートパラメーター。 *型*は、によって返されるパラメーターです `CArray` 。
+配列に格納されているオブジェクトの型を指定するテンプレートパラメーター。 *型* は、によって返されるパラメーターです `CArray` 。
 
 *ARG_TYPE*<br/>
-配列に格納されているオブジェクトへのアクセスに使用される引数の型を指定するテンプレートパラメーター。 多くの場合、*型*への参照です。 *ARG_TYPE*は、に渡されるパラメーターです `CArray` 。
+配列に格納されているオブジェクトへのアクセスに使用される引数の型を指定するテンプレートパラメーター。 多くの場合、 *型* への参照です。 *ARG_TYPE* は、に渡されるパラメーターです `CArray` 。
 
 ## <a name="members"></a>メンバー
 
@@ -109,20 +110,20 @@ class CArray : public CObject
 配列インデックスは、常に0の位置から開始します。 現在の境界を越えて要素を追加するときに、上限を修正するか、配列を拡張するかを決定できます。 一部の要素が null であっても、メモリは上限に連続して割り当てられます。
 
 > [!NOTE]
-> オブジェクトのサイズを変更し `CArray` たり、要素を追加したりするほとんどのメソッドは、要素を移動するために[memcpy_s](../../c-runtime-library/reference/memcpy-s-wmemcpy-s.md)を使用します。 `memcpy_s`は、コンストラクターを呼び出す必要があるオブジェクトと互換性がないため、問題になります。 の項目 `CArray` がと互換性がない場合は `memcpy_s` 、 `CArray` 適切なサイズの新しいを作成する必要があります。 その後、 [CArray:: Copy](#copy)と[CArray:: SetAt](#setat)を使用して新しい配列にデータを設定する必要があります。これらのメソッドは、の代わりに代入演算子を使用するため `memcpy_s` です。
+> オブジェクトのサイズを変更し `CArray` たり、要素を追加したりするほとんどのメソッドは、要素を移動するために [memcpy_s](../../c-runtime-library/reference/memcpy-s-wmemcpy-s.md) を使用します。 `memcpy_s`は、コンストラクターを呼び出す必要があるオブジェクトと互換性がないため、問題になります。 の項目 `CArray` がと互換性がない場合は `memcpy_s` 、 `CArray` 適切なサイズの新しいを作成する必要があります。 その後、 [CArray:: Copy](#copy) と [CArray:: SetAt](#setat) を使用して新しい配列にデータを設定する必要があります。これらのメソッドは、の代わりに代入演算子を使用するため `memcpy_s` です。
 
 C 配列の場合と同様に、インデックス付き要素のアクセス時間は定数であり、 `CArray` 配列のサイズに依存しません。
 
 > [!TIP]
-> 配列を使用する前に、 [SetSize](#setsize)を使用してサイズを設定し、メモリを割り当てます。 `SetSize` を使用しない場合、配列に要素を追加すると、配列の再割り当てとコピーが頻繁に発生します。 頻繁な再割り当てとコピーは非効率であり、メモリが断片化される可能性があります。
+> 配列を使用する前に、 [SetSize](#setsize) を使用してサイズを設定し、メモリを割り当てます。 `SetSize` を使用しない場合、配列に要素を追加すると、配列の再割り当てとコピーが頻繁に発生します。 頻繁な再割り当てとコピーは非効率であり、メモリが断片化される可能性があります。
 
-配列内の個々の要素のダンプが必要な場合は、 [CDumpContext](../../mfc/reference/cdumpcontext-class.md)オブジェクトの深さを1以上に設定する必要があります。
+配列内の個々の要素のダンプが必要な場合は、 [CDumpContext](../../mfc/reference/cdumpcontext-class.md) オブジェクトの深さを1以上に設定する必要があります。
 
-このクラスの特定のメンバー関数は、クラスのほとんどの用途に合わせてカスタマイズする必要があるグローバルヘルパー関数を呼び出し `CArray` ます。 「MFC マクロとグローバルセクション」の「[コレクションクラスヘルパー](../../mfc/reference/collection-class-helpers.md) 」を参照してください。
+このクラスの特定のメンバー関数は、クラスのほとんどの用途に合わせてカスタマイズする必要があるグローバルヘルパー関数を呼び出し `CArray` ます。 「MFC マクロとグローバルセクション」の「 [コレクションクラスヘルパー](../../mfc/reference/collection-class-helpers.md) 」を参照してください。
 
 配列クラスの派生は、リストの派生に似ています。
 
-の使用方法の詳細については `CArray` 、「[コレクション](../../mfc/collections.md)」を参照してください。
+の使用方法の詳細については `CArray` 、「 [コレクション](../../mfc/collections.md)」を参照してください。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -130,11 +131,11 @@ C 配列の場合と同様に、インデックス付き要素のアクセス時
 
 `CArray`
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** afxtempl.h
 
-## <a name="carrayadd"></a><a name="add"></a>CArray:: Add
+## <a name="carrayadd"></a><a name="add"></a> CArray:: Add
 
 配列の末尾に新しい要素を追加し、配列を1だけ拡大します。
 
@@ -162,7 +163,7 @@ INT_PTR Add(ARG_TYPE newElement);
 
 [!code-cpp[NVC_MFCCollections#22](../../mfc/codesnippet/cpp/carray-class_1.cpp)]
 
-## <a name="carrayappend"></a><a name="append"></a>CArray:: Append
+## <a name="carrayappend"></a><a name="append"></a> CArray:: Append
 
 ある配列の内容を別の配列の末尾に追加するには、このメンバー関数を呼び出します。
 
@@ -189,7 +190,7 @@ INT_PTR Append(const CArray& src);
 
 [!code-cpp[NVC_MFCCollections#23](../../mfc/codesnippet/cpp/carray-class_2.cpp)]
 
-## <a name="carraycarray"></a><a name="carray"></a>CArray:: CArray
+## <a name="carraycarray"></a><a name="carray"></a> CArray:: CArray
 
 空の配列を生成します。
 
@@ -205,7 +206,7 @@ CArray();
 
 [!code-cpp[NVC_MFCCollections#24](../../mfc/codesnippet/cpp/carray-class_3.cpp)]
 
-## <a name="carraycopy"></a><a name="copy"></a>CArray:: Copy
+## <a name="carraycopy"></a><a name="copy"></a> CArray:: Copy
 
 1つの配列の要素を別の配列にコピーするには、このメンバー関数を使用します。
 
@@ -222,13 +223,13 @@ void Copy(const CArray& src);
 
 1つの配列の要素を別の配列の要素で上書きするには、このメンバー関数を呼び出します。
 
-`Copy`はメモリを解放しません。ただし、必要に応じ `Copy` て、は配列にコピーされた要素を格納するために追加のメモリを割り当てることがあります。
+`Copy` はメモリを解放しません。ただし、必要に応じ `Copy` て、は配列にコピーされた要素を格納するために追加のメモリを割り当てることがあります。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_MFCCollections#25](../../mfc/codesnippet/cpp/carray-class_4.cpp)]
 
-## <a name="carrayelementat"></a><a name="elementat"></a>CArray:: ElementAt
+## <a name="carrayelementat"></a><a name="elementat"></a> CArray:: ElementAt
 
 配列内の指定された要素への一時的な参照を返します。
 
@@ -254,7 +255,7 @@ const TYPE& ElementAt(INT_PTR nIndex) const;
 
   [GetSize](#getsize)の例を参照してください。
 
-## <a name="carrayfreeextra"></a><a name="freeextra"></a>CArray:: FreeExtra
+## <a name="carrayfreeextra"></a><a name="freeextra"></a> CArray:: FreeExtra
 
 配列が拡張されたときに割り当てられた余分なメモリを解放します。
 
@@ -270,7 +271,7 @@ void FreeExtra();
 
   [GetData](#getdata)の例を参照してください。
 
-## <a name="carraygetat"></a><a name="getat"></a>CArray:: GetAt
+## <a name="carraygetat"></a><a name="getat"></a> CArray:: GetAt
 
 指定したインデックス位置にある配列要素を返します。
 
@@ -299,7 +300,7 @@ const TYPE& GetAt(INT_PTR nIndex) const;
 
 [!code-cpp[NVC_MFCCollections#26](../../mfc/codesnippet/cpp/carray-class_5.cpp)]
 
-## <a name="carraygetcount"></a><a name="getcount"></a>CArray:: GetCount
+## <a name="carraygetcount"></a><a name="getcount"></a> CArray:: GetCount
 
 配列要素の数を返します。
 
@@ -313,13 +314,13 @@ INT_PTR GetCount() const;
 
 ### <a name="remarks"></a>解説
 
-配列内の要素の数を取得するには、このメソッドを呼び出します。 インデックスは0から始まるため、サイズは最大のインデックスよりも1大きい値になります。 このメソッドを呼び出すと、 [CArray:: GetSize](#getsize)メソッドと同じ結果が生成されます。
+配列内の要素の数を取得するには、このメソッドを呼び出します。 インデックスは0から始まるため、サイズは最大のインデックスよりも1大きい値になります。 このメソッドを呼び出すと、 [CArray:: GetSize](#getsize) メソッドと同じ結果が生成されます。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_MFCCollections#27](../../mfc/codesnippet/cpp/carray-class_6.cpp)]
 
-## <a name="carraygetdata"></a><a name="getdata"></a>CArray:: GetData
+## <a name="carraygetdata"></a><a name="getdata"></a> CArray:: GetData
 
 配列内の要素に直接アクセスするには、このメンバー関数を使用します。
 
@@ -347,7 +348,7 @@ TYPE* GetData();
 
 [!code-cpp[NVC_MFCCollections#28](../../mfc/codesnippet/cpp/carray-class_7.cpp)]
 
-## <a name="carraygetsize"></a><a name="getsize"></a>CArray:: GetSize
+## <a name="carraygetsize"></a><a name="getsize"></a> CArray:: GetSize
 
 配列のサイズを返します。
 
@@ -357,13 +358,13 @@ INT_PTR GetSize() const;
 
 ### <a name="remarks"></a>解説
 
-インデックスは0から始まるため、サイズは最大のインデックスよりも1大きい値になります。 このメソッドを呼び出すと、 [CArray:: GetCount](#getcount)メソッドと同じ結果が生成されます。
+インデックスは0から始まるため、サイズは最大のインデックスよりも1大きい値になります。 このメソッドを呼び出すと、 [CArray:: GetCount](#getcount) メソッドと同じ結果が生成されます。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_MFCCollections#29](../../mfc/codesnippet/cpp/carray-class_8.cpp)]
 
-## <a name="carraygetupperbound"></a><a name="getupperbound"></a>CArray:: System.array.getupperbound
+## <a name="carraygetupperbound"></a><a name="getupperbound"></a> CArray:: System.array.getupperbound
 
 この配列の現在の上限を返します。
 
@@ -381,7 +382,7 @@ INT_PTR GetUpperBound() const;
 
   [CArray:: GetAt](#getat)の例を参照してください。
 
-## <a name="carrayinsertat"></a><a name="insertat"></a>CArray:: InsertAt
+## <a name="carrayinsertat"></a><a name="insertat"></a> CArray:: InsertAt
 
 の最初のバージョンで `InsertAt` は、配列内の指定したインデックス位置に1つの要素 (または要素の複数のコピー) を挿入します。
 
@@ -420,7 +421,7 @@ void InsertAt(
 
 このプロセスでは、このインデックスの既存の要素を (インデックスのインクリメントによって) シフトアップし、その上にあるすべての要素をシフトアップします。
 
-2番目のバージョンでは、Nstartindex 位置から開始して、別のコレクションのすべての要素を挿入し `CArray` ます。 *nStartIndex*
+2番目のバージョンでは、Nstartindex 位置から開始して、別のコレクションのすべての要素を挿入し `CArray` ます。 
 
 これに対し、関数は、 `SetAt` 指定された1つの配列要素を置き換え、要素をシフトしません。
 
@@ -428,7 +429,7 @@ void InsertAt(
 
 [!code-cpp[NVC_MFCCollections#30](../../mfc/codesnippet/cpp/carray-class_9.cpp)]
 
-## <a name="carrayisempty"></a><a name="isempty"></a>CArray:: IsEmpty
+## <a name="carrayisempty"></a><a name="isempty"></a> CArray:: IsEmpty
 
 配列が空かどうかを判断します。
 
@@ -440,9 +441,9 @@ BOOL IsEmpty() const;
 
 配列に要素が含まれていない場合は0以外の。それ以外の場合は0です。
 
-## <a name="carrayoperator-"></a><a name="operator_at"></a>CArray:: operator\[\]
+## <a name="carrayoperator-"></a><a name="operator_at"></a> CArray:: operator \[\]
 
-これらの添字演算子は、 [SetAt](#setat)関数と[GetAt](#getat)関数に代わる便利な方法です。
+これらの添字演算子は、 [SetAt](#setat) 関数と [GetAt](#getat) 関数に代わる便利な方法です。
 
 ```
 TYPE& operator[](int_ptr nindex);
@@ -467,7 +468,7 @@ const TYPE& operator[](int_ptr nindex) const;
 
 [!code-cpp[NVC_MFCCollections#34](../../mfc/codesnippet/cpp/carray-class_10.cpp)]
 
-## <a name="carrayrelocateelements"></a><a name="relocateelements"></a>CArray:: RelocateElements
+## <a name="carrayrelocateelements"></a><a name="relocateelements"></a> CArray:: RelocateElements
 
 配列が拡大または縮小されるときに、新しいバッファーにデータを再配置します。
 
@@ -492,13 +493,13 @@ AFX_INLINE void CArray<TYPE, ARG_TYPE>::RelocateElements(
 
 ### <a name="remarks"></a>解説
 
-*pNewData*は常に、すべての*pData*要素を保持するのに十分な大きさです。
+*pNewData* は常に、すべての *pData* 要素を保持するのに十分な大きさです。
 
 [CArray](../../mfc/reference/carray-class.md)の実装では、このメソッドを使用して、配列が拡大または縮小するときに古いデータを新しいバッファーにコピーします ( [SetSize](#setsize)または[freeextra](#freeextra)が呼び出された場合)。 既定の実装では、データのみがコピーされます。
 
 要素に独自のメンバーの1つへのポインターが含まれているか、または別の構造体に配列要素の1つへのポインターが含まれている配列の場合、ポインターはプレーンコピーで更新されません。 この場合は、関連する型を使用しての特殊化を実装することで、ポインターを修正でき `RelocateElements` ます。 また、データのコピーも行います。
 
-## <a name="carrayremoveall"></a><a name="removeall"></a>CArray:: RemoveAll
+## <a name="carrayremoveall"></a><a name="removeall"></a> CArray:: RemoveAll
 
 この配列からすべての要素を削除します。
 
@@ -514,7 +515,7 @@ void RemoveAll();
 
 [!code-cpp[NVC_MFCCollections#31](../../mfc/codesnippet/cpp/carray-class_11.cpp)]
 
-## <a name="carrayremoveat"></a><a name="removeat"></a>CArray:: RemoveAt
+## <a name="carrayremoveat"></a><a name="removeat"></a> CArray:: RemoveAt
 
 配列内の指定したインデックスを開始位置として、1つ以上の要素を削除します。
 
@@ -542,7 +543,7 @@ void RemoveAt(
 
 [!code-cpp[NVC_MFCCollections#32](../../mfc/codesnippet/cpp/carray-class_12.cpp)]
 
-## <a name="carraysetat"></a><a name="setat"></a>CArray:: SetAt
+## <a name="carraysetat"></a><a name="setat"></a> CArray:: SetAt
 
 指定したインデックス位置に配列要素を設定します。
 
@@ -563,7 +564,7 @@ void SetAt(INT_PTR nIndex, ARG_TYPE newElement);
 
 ### <a name="remarks"></a>解説
 
-`SetAt`では、配列が拡張されることはありません。 配列が自動的に拡張されるようにする場合は、 [SetAtGrow](#setatgrow)を使用します。
+`SetAt` では、配列が拡張されることはありません。 配列が自動的に拡張されるようにする場合は、 [SetAtGrow](#setatgrow) を使用します。
 
 インデックス値が配列内の有効な位置を表していることを確認する必要があります。 範囲外の場合は、ライブラリのデバッグバージョンがアサートされます。
 
@@ -571,7 +572,7 @@ void SetAt(INT_PTR nIndex, ARG_TYPE newElement);
 
   [GetAt](#getat)の例を参照してください。
 
-## <a name="carraysetatgrow"></a><a name="setatgrow"></a>CArray:: SetAtGrow
+## <a name="carraysetatgrow"></a><a name="setatgrow"></a> CArray:: SetAtGrow
 
 指定したインデックス位置に配列要素を設定します。
 
@@ -598,7 +599,7 @@ void SetAtGrow(INT_PTR nIndex, ARG_TYPE newElement);
 
 [!code-cpp[NVC_MFCCollections#33](../../mfc/codesnippet/cpp/carray-class_13.cpp)]
 
-## <a name="carraysetsize"></a><a name="setsize"></a>CArray:: SetSize
+## <a name="carraysetsize"></a><a name="setsize"></a> CArray:: SetSize
 
 空または既存の配列のサイズを設定します。必要に応じてメモリを割り当てます。
 
@@ -611,7 +612,7 @@ void SetSize(
 ### <a name="parameters"></a>パラメーター
 
 *nNewSize*<br/>
-新しい配列のサイズ (要素の数)。 0 以上であることが必要です。
+新しい配列のサイズ (要素の数)。 0 以上である必要があります。
 
 *nGrowBy*<br/>
 サイズの増加が必要な場合に割り当てる要素スロットの最小数。
@@ -622,7 +623,7 @@ void SetSize(
 
 配列の使用を開始する前に、この関数を使用して配列のサイズを設定します。 `SetSize` を使用しない場合、配列に要素を追加すると、配列の再割り当てとコピーが頻繁に発生します。 頻繁な再割り当てとコピーは非効率であり、メモリが断片化される可能性があります。
 
-*Ngrowby*パラメーターは、配列が拡大している間の内部メモリの割り当てに影響します。 その使用は、 [GetSize](#getsize)および[system.array.getupperbound](#getupperbound)によって報告された配列のサイズには影響しません。 既定値が使用されている場合は、メモリの断片化を回避し、ほとんどの場合に効率を最適化するために、MFC によって計算された方法でメモリが割り当てられます。
+*Ngrowby* パラメーターは、配列が拡大している間の内部メモリの割り当てに影響します。 その使用は、 [GetSize](#getsize) および [system.array.getupperbound](#getupperbound)によって報告された配列のサイズには影響しません。 既定値が使用されている場合は、メモリの断片化を回避し、ほとんどの場合に効率を最適化するために、MFC によって計算された方法でメモリが割り当てられます。
 
 ### <a name="example"></a>例
 

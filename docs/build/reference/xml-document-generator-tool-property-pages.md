@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: XML ドキュメントジェネレーターツールのプロパティページ'
 title: '[XML ドキュメント ジェネレーター] プロパティ ページ'
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,12 +9,12 @@ f1_keywords:
 - VC.Project.VCXDCMakeTool.OutputDocumentFile
 - VC.Project.VCXDCMakeTool.AdditionalDocumentFiles
 ms.assetid: 645912b5-197a-4c36-ba58-64df09444ca0
-ms.openlocfilehash: d17913909532c5bebcac712937af00be3ad98712
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: e344d8ef796a5c3455c88851a1fc410801b991bd
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81335767"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97260970"
 ---
 # <a name="xml-document-generator-tool-property-pages"></a>[XML ドキュメント ジェネレーター] プロパティ ページ
 
@@ -22,7 +23,7 @@ ms.locfileid: "81335767"
 > [!NOTE]
 > 開発環境 (プロパティ ページ) の xdcmake.exe オプションは、コマンド ラインで xdcmake.exe を使用する場合のオプションとは異なります。 コマンド ラインで xdcmake.exe を使用する詳細については、「[XDCMake リファレンス](xdcmake-reference.md)」を参照してください。
 
-## <a name="uielement-list"></a>UI 要素の一覧
+## <a name="uielement-list"></a>UIElement の一覧
 
 - **著作権情報の非表示**
 
@@ -34,7 +35,7 @@ ms.locfileid: "81335767"
 
 - **出力ドキュメント ファイル**
 
-   .xml 出力ファイルの名前とディレクトリの場所。 マクロを使用してディレクトリの場所を指定する方法については、[ビルド コマンドとプロパティの共通](common-macros-for-build-commands-and-properties.md)マクロを参照してください。
+   .xml 出力ファイルの名前とディレクトリの場所。 マクロを使用してディレクトリの場所を指定する方法については [、「ビルドコマンドとプロパティの一般的なマクロ](common-macros-for-build-commands-and-properties.md) 」を参照してください。
 
 - **ドキュメント ライブラリの依存関係**
 

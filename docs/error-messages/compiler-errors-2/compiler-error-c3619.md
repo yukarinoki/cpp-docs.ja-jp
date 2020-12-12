@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「コンパイラエラー C3619」を参照してください。
 title: コンパイラ エラー C3619
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3619
 ms.assetid: 76ae80d0-9fbe-4297-a1ef-b1503377fdcf
-ms.openlocfilehash: 1002e4c5a8b3b347207b34db4a90d67dc274d849
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1ecf3a29ae395fe3228d507ffb0520d6eeeb62bb
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62222127"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97262234"
 ---
 # <a name="compiler-error-c3619"></a>コンパイラ エラー C3619
 
@@ -19,4 +20,4 @@ ms.locfileid: "62222127"
 
 クラス テンプレートは、マネージド クラスや WinRT クラスまたはインターフェイスでは使用できません。
 
-C3619 が古い形式のコンパイラ オプションを使用して到達のみ **/clr:oldSyntax**します。
+C3619 は、互換性のために残されているコンパイラオプション **/clr: oldSyntax** を使用してのみ到達可能です。

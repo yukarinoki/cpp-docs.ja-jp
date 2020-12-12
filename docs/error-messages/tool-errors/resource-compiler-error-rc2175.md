@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「リソースコンパイラエラー RC2175」を参照してください。
 title: リソース コンパイラ エラー RC2175
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - RC2175
 ms.assetid: 3864a371-dba8-41a7-962c-e792709774f1
-ms.openlocfilehash: 10af91f56efd2e10c9ce8ab95c2aaa2694d19d17
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 509704b0dcec74739d7b4a0b9f3cb4c6f9ac28c5
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80190730"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97259722"
 ---
 # <a name="resource-compiler-error-rc2175"></a>リソース コンパイラ エラー RC2175
 

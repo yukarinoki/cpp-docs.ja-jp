@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「コンパイラエラー C3615」を参照してください。
 title: コンパイラエラー C3615
 ms.date: 10/24/2017
 f1_keywords:
@@ -6,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3615
 ms.assetid: 5ce96ba9-3d31-49f3-9aa8-24e5cdf6dcfc
-ms.openlocfilehash: 17a210e2a514af1ffd62bf38651c4d17bd1fe32b
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 9f3b95b96ff10a99f3ebeac1bc3b19f759dd0ab7
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87230793"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97262283"
 ---
 # <a name="compiler-error-c3615"></a>コンパイラエラー C3615
 
 > constexpr 関数 '*function*' の結果を定数式にすることはできません
 
-関数*関数*は、コンパイル時にとして評価できませんでした **`constexpr`** 。 関数は **`constexpr`** 、他の関数だけを呼び出すことができ **`constexpr`** ます。
+関数 *関数* は、コンパイル時にとして評価できませんでした **`constexpr`** 。 関数は **`constexpr`** 、他の関数だけを呼び出すことができ **`constexpr`** ます。
 
 ## <a name="example"></a>例
 
