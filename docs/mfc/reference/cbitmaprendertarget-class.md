@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: CBitmapRenderTarget クラス'
 title: CBitmapRenderTarget クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - CBitmapRenderTarget [MFC], GetBitmapRenderTarget
 - CBitmapRenderTarget [MFC], m_pBitmapRenderTarget
 ms.assetid: c89a4437-812e-4943-acb2-b429a04cc4d2
-ms.openlocfilehash: 8ba8c8819b47185315d67d732fc90ab2ffc0ad0a
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: a7987651c988dcf7fcd4c4decf4a2bd474ab8619
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81752938"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97122682"
 ---
 # <a name="cbitmaprendertarget-class"></a>CBitmapRenderTarget クラス
 
-ID2D1ビットマップレンダーターゲットのラッパー。
+ID2D1BitmapRenderTarget のラッパー。
 
 ## <a name="syntax"></a>構文
 
@@ -41,44 +42,44 @@ class CBitmapRenderTarget : public CRenderTarget;
 
 |名前|説明|
 |----------|-----------------|
-|[をクリックします。](#cbitmaprendertarget)|オブジェクトを構築します。|
+|[CBitmapRenderTarget:: CBitmapRenderTarget](#cbitmaprendertarget)|CBitmapRenderTarget オブジェクトを構築します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
 |名前|説明|
 |----------|-----------------|
-|[をクリックします。](#attach)|既存のレンダー ターゲット インターフェイスをオブジェクトにアタッチします。|
-|[レンダリングターゲット::Dエタッハ](#detach)|オブジェクトからレンダー ターゲット インターフェイスをデタッチします。|
-|[をクリックします。](#getbitmap)|このレンダー ターゲットのビットマップを取得します。 返されたビットマップは、描画操作に使用できます。|
-|[をクリックします。](#getbitmaprendertarget)|インターフェイスを返します。|
+|[CBitmapRenderTarget:: Attach](#attach)|既存のレンダーターゲットインターフェイスをオブジェクトにアタッチします。|
+|[CBitmapRenderTarget::D etach](#detach)|オブジェクトからレンダーターゲットインターフェイスをデタッチします|
+|[CBitmapRenderTarget:: GetBitmap](#getbitmap)|このレンダーターゲットのビットマップを取得します。 返されたビットマップは描画操作に使用できます。|
+|[CBitmapRenderTarget:: GetBitmapRenderTarget](#getbitmaprendertarget)|ID2D1BitmapRenderTarget インターフェイスを返します。|
 
 ### <a name="public-operators"></a>パブリック演算子
 
 |名前|説明|
 |----------|-----------------|
-|[を示す値を指定します。](#operator_id2d1bitmaprendertarget_star)|インターフェイスを返します。|
+|[CBitmapRenderTarget:: operator ID2D1BitmapRenderTarget *](#operator_id2d1bitmaprendertarget_star)|ID2D1BitmapRenderTarget インターフェイスを返します。|
 
 ### <a name="protected-data-members"></a>プロテクト データ メンバー
 
 |名前|説明|
 |----------|-----------------|
-|[オブジェクトを描画します。:m_pBitmapRenderTarget](#m_pbitmaprendertarget)|オブジェクトへのポインター。|
+|[CBitmapRenderTarget:: m_pBitmapRenderTarget](#m_pbitmaprendertarget)|ID2D1BitmapRenderTarget オブジェクトへのポインター。|
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
 [CObject](../../mfc/reference/cobject-class.md)
 
-[クレンダターゲット](../../mfc/reference/crendertarget-class.md)
+[CRenderTarget](../../mfc/reference/crendertarget-class.md)
 
 `CBitmapRenderTarget`
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-**ヘッダー:** afxrendertarget.h
+**ヘッダー:** afxrendertarget
 
-## <a name="cbitmaprendertargetattach"></a><a name="attach"></a>をクリックします。
+## <a name="cbitmaprendertargetattach"></a><a name="attach"></a> CBitmapRenderTarget:: Attach
 
-既存のレンダー ターゲット インターフェイスをオブジェクトにアタッチします。
+既存のレンダーターゲットインターフェイスをオブジェクトにアタッチします。
 
 ```cpp
 void Attach(ID2D1BitmapRenderTarget* pTarget);
@@ -86,20 +87,20 @@ void Attach(ID2D1BitmapRenderTarget* pTarget);
 
 ### <a name="parameters"></a>パラメーター
 
-*pターゲット*<br/>
-既存のレンダー ターゲット インターフェイス。 NULL にすることはできません。
+*pTarget*<br/>
+既存のレンダーターゲットインターフェイス。 NULL にすることはできません
 
-## <a name="cbitmaprendertargetcbitmaprendertarget"></a><a name="cbitmaprendertarget"></a>をクリックします。
+## <a name="cbitmaprendertargetcbitmaprendertarget"></a><a name="cbitmaprendertarget"></a> CBitmapRenderTarget:: CBitmapRenderTarget
 
-オブジェクトを構築します。
+CBitmapRenderTarget オブジェクトを構築します。
 
 ```
 CBitmapRenderTarget();
 ```
 
-## <a name="cbitmaprendertargetdetach"></a><a name="detach"></a>レンダリングターゲット::Dエタッハ
+## <a name="cbitmaprendertargetdetach"></a><a name="detach"></a> CBitmapRenderTarget::D etach
 
-オブジェクトからレンダー ターゲット インターフェイスをデタッチします。
+オブジェクトからレンダーターゲットインターフェイスをデタッチします
 
 ```
 ID2D1BitmapRenderTarget* Detach();
@@ -107,11 +108,11 @@ ID2D1BitmapRenderTarget* Detach();
 
 ### <a name="return-value"></a>戻り値
 
-デタッチされたレンダー ターゲット インターフェイスへのポインター。
+デタッチされたレンダーターゲットインターフェイスへのポインター。
 
-## <a name="cbitmaprendertargetgetbitmap"></a><a name="getbitmap"></a>をクリックします。
+## <a name="cbitmaprendertargetgetbitmap"></a><a name="getbitmap"></a> CBitmapRenderTarget:: GetBitmap
 
-このレンダー ターゲットのビットマップを取得します。 返されたビットマップは、描画操作に使用できます。
+このレンダーターゲットのビットマップを取得します。 返されたビットマップは描画操作に使用できます。
 
 ```
 BOOL GetBitmap(CD2DBitmap& bitmap);
@@ -120,15 +121,15 @@ BOOL GetBitmap(CD2DBitmap& bitmap);
 ### <a name="parameters"></a>パラメーター
 
 *ビットマップ*<br/>
-このメソッドが返されるときに、このレンダー ターゲットに有効なビットマップを格納します。 このビットマップは、描画操作に使用できます。
+このメソッドから制御が戻るときに、このレンダーターゲットの有効なビットマップを格納します。 このビットマップは描画操作に使用できます。
 
 ### <a name="return-value"></a>戻り値
 
-メソッドが成功すると、TRUE が返されます。 それ以外の場合は FALSE を返します。
+メソッドが成功した場合、TRUE を返します。 それ以外の場合は FALSE を返します。
 
-## <a name="cbitmaprendertargetgetbitmaprendertarget"></a><a name="getbitmaprendertarget"></a>をクリックします。
+## <a name="cbitmaprendertargetgetbitmaprendertarget"></a><a name="getbitmaprendertarget"></a> CBitmapRenderTarget:: GetBitmapRenderTarget
 
-インターフェイスを返します。
+ID2D1BitmapRenderTarget インターフェイスを返します。
 
 ```
 ID2D1BitmapRenderTarget* GetBitmapRenderTarget();
@@ -136,19 +137,19 @@ ID2D1BitmapRenderTarget* GetBitmapRenderTarget();
 
 ### <a name="return-value"></a>戻り値
 
-オブジェクトがまだ初期化されていない場合は、ID2D1BitmapRenderTarget インターフェイスへのポインターまたは NULL。
+ID2D1BitmapRenderTarget インターフェイスへのポインター。オブジェクトがまだ初期化されていない場合は NULL。
 
-## <a name="cbitmaprendertargetm_pbitmaprendertarget"></a><a name="m_pbitmaprendertarget"></a>オブジェクトを描画します。:m_pBitmapRenderTarget
+## <a name="cbitmaprendertargetm_pbitmaprendertarget"></a><a name="m_pbitmaprendertarget"></a> CBitmapRenderTarget:: m_pBitmapRenderTarget
 
-オブジェクトへのポインター。
+ID2D1BitmapRenderTarget オブジェクトへのポインター。
 
 ```
 ID2D1BitmapRenderTarget* m_pBitmapRenderTarget;
 ```
 
-## <a name="cbitmaprendertargetoperator-id2d1bitmaprendertarget"></a><a name="operator_id2d1bitmaprendertarget_star"></a>を示す値を指定します。
+## <a name="cbitmaprendertargetoperator-id2d1bitmaprendertarget"></a><a name="operator_id2d1bitmaprendertarget_star"></a> CBitmapRenderTarget:: operator ID2D1BitmapRenderTarget *
 
-インターフェイスを返します。
+ID2D1BitmapRenderTarget インターフェイスを返します。
 
 ```
 operator ID2D1BitmapRenderTarget*();
@@ -156,7 +157,7 @@ operator ID2D1BitmapRenderTarget*();
 
 ### <a name="return-value"></a>戻り値
 
-オブジェクトがまだ初期化されていない場合は、ID2D1BitmapRenderTarget インターフェイスへのポインターまたは NULL。
+ID2D1BitmapRenderTarget インターフェイスへのポインター。オブジェクトがまだ初期化されていない場合は NULL。
 
 ## <a name="see-also"></a>関連項目
 

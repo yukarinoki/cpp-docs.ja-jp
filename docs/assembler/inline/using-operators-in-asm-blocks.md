@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「__asm ブロックでの演算子の使用」を参照してください。
 title: __asm ブロックでの演算子の使用
 ms.date: 08/30/2018
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - operators [C++], using in __asm blocks
 - square brackets [ ]
 ms.assetid: a26ccfd4-40ae-4a61-952f-c417982aa8dd
-ms.openlocfilehash: cdcfee20cfdc5a6dc315d00ef024d1616900a2e8
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 266d840e6cb407d45c1d3a49bed6a2390e52aa2e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87191106"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97121850"
 ---
 # <a name="using-operators-in-__asm-blocks"></a>__asm ブロックでの演算子の使用
 
@@ -30,7 +31,7 @@ __asm mov array[6], bx ;  Store BX at array+6 (not scaled)
 array[6] = 0;         /* Store 0 at array+24 (scaled) */
 ```
 
-への最初の参照 `array` はスケーリングされませんが、2番目の参照はになります。 **型**演算子を使用すると、定数に基づいてスケーリングを実現できます。 たとえば、次のステートメントは互いに対応しています。
+への最初の参照 `array` はスケーリングされませんが、2番目の参照はになります。 **型** 演算子を使用すると、定数に基づいてスケーリングを実現できます。 たとえば、次のステートメントは互いに対応しています。
 
 ```cpp
 __asm mov array[6 * TYPE int], 0 ; Store 0 at array + 24

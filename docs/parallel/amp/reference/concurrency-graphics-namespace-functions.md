@@ -1,16 +1,17 @@
 ---
+description: '詳細情報: Concurrency:: graphics 名前空間関数'
 title: Concurrency::graphics 名前空間関数
 ms.date: 11/04/2016
 f1_keywords:
 - amp_graphics/Concurrency::fast_math::copy_async
 - amp_graphics/Concurrency::fast_math::copy
 ms.assetid: ace01cd5-29d3-4356-930e-c81a61c5f934
-ms.openlocfilehash: e767c6b3e02564d89be48f47e8bf7718600af961
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: dab12e4a0d1c767d9422991679ed59152cd89c1d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88841247"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97122279"
 ---
 # <a name="concurrencygraphics-namespace-functions"></a>Concurrency::graphics 名前空間関数
 
@@ -291,7 +292,7 @@ concurrency::completion_future copy_async(_Src_type& _Src,
 *last*<br/>
 ソース コンテナーへの終了の反復子。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** amp_graphics
 

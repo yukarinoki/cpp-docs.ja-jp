@@ -1,19 +1,20 @@
 ---
+description: 詳細については、「参照型の C++ スタックセマンティクス」を参照してください。
 title: 参照型の C++ スタック セマンティクス
 ms.date: 11/04/2016
 helpviewer_keywords:
 - reference types, C++ stack semantics for
 ms.assetid: 319a1304-f4a4-4079-8b84-01cec847d531
-ms.openlocfilehash: 886d0d16d8b81364078db5604ab10d8dcc3fa561
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: a7f377225e70eff4093d4b9820a3d14644b96f58
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87197840"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97124320"
 ---
 # <a name="c-stack-semantics-for-reference-types"></a>参照型の C++ スタック セマンティクス
 
-Visual Studio 2005 より前では、参照型のインスタンスは、 **`new`** ガベージコレクションヒープにオブジェクトを作成した演算子を使用してのみ作成できました。 ただし、スタックでネイティブ型のインスタンスを作成する場合と同じ構文を使用して、参照型のインスタンスを作成できるようになりました。 そのため、参照型のオブジェクトを作成するために[ref new, gcnew](../extensions/ref-new-gcnew-cpp-component-extensions.md)を使用する必要はありません。 また、オブジェクトがスコープ外に出ると、コンパイラはオブジェクトのデストラクターを呼び出します。
+Visual Studio 2005 より前では、参照型のインスタンスは、 **`new`** ガベージコレクションヒープにオブジェクトを作成した演算子を使用してのみ作成できました。 ただし、スタックでネイティブ型のインスタンスを作成する場合と同じ構文を使用して、参照型のインスタンスを作成できるようになりました。 そのため、参照型のオブジェクトを作成するために [ref new, gcnew](../extensions/ref-new-gcnew-cpp-component-extensions.md) を使用する必要はありません。 また、オブジェクトがスコープ外に出ると、コンパイラはオブジェクトのデストラクターを呼び出します。
 
 ## <a name="remarks"></a>解説
 
@@ -27,7 +28,7 @@ Visual Studio 2005 より前では、参照型のインスタンスは、 **`new
 
 コンパイラは、参照型の既定の代入演算子を生成しません。 代入演算子を使用すると、スタックセマンティクスを使用してオブジェクトを作成し、スタックセマンティクスを使用して作成された既存のオブジェクトを使用してオブジェクトを初期化できます。 参照型の代入演算子には、という形式のシグネチャがあり `void operator=( R% ){}` ます。
 
-型のデストラクターが重要なリソースを解放し、参照型にスタックセマンティクスを使用する場合は、デストラクターを明示的に呼び出す必要はありません (またはを呼び出す必要はありません **`delete`** )。 参照型のデストラクターの詳細については、「[方法: クラスと構造体を定義および使用する (C++/cli)」の「デストラクターとファイナライザー](../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers)」を参照してください。
+型のデストラクターが重要なリソースを解放し、参照型にスタックセマンティクスを使用する場合は、デストラクターを明示的に呼び出す必要はありません (またはを呼び出す必要はありません **`delete`** )。 参照型のデストラクターの詳細については、「 [方法: クラスと構造体を定義および使用する (C++/cli)」の「デストラクターとファイナライザー](../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers)」を参照してください。
 
 コンパイラによって生成された代入演算子は、次の追加機能を備えた通常の標準 C++ 規則に従います。
 

@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: ostream_iterator クラス'
 title: ostream_iterator クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - std::ostream_iterator [C++], ostream_type
 - std::ostream_iterator [C++], traits_type
 ms.assetid: 24d842d3-9f45-4bf6-a697-62f5968f5a03
-ms.openlocfilehash: 97367c19d0b1bdb4b9c16d5d12621210c8562485
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 2123c2a9addb5024877364a1906800b244b91edb
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87224670"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97118369"
 ---
 # <a name="ostream_iterator-class"></a>ostream_iterator クラス
 
@@ -45,7 +46,7 @@ ostream_iterator クラスは出力反復子の要件を満たす必要があり
 
 ### <a name="constructors"></a>コンストラクター
 
-|コンストラクター|[説明]|
+|コンストラクター|説明|
 |-|-|
 |[ostream_iterator](#ostream_iterator)|出力ストリームに書き込むために初期化され、区切られた `ostream_iterator` を構築します。|
 
@@ -59,19 +60,19 @@ ostream_iterator クラスは出力反復子の要件を満たす必要があり
 
 ### <a name="operators"></a>オペレーター
 
-|演算子|[説明]|
+|演算子|説明|
 |-|-|
 |[operator](#op_star)|出力反復子式を実装するために使用される逆参照演算子 \* `i`  =  `x` 。|
 |[+ + 演算子](#op_add_add)|操作が呼び出される前に示したものと同じオブジェクトに `ostream_iterator` を返す、実質的な機能を持たないインクリメント演算子。|
 |[operator =](#op_eq)|\* `i`  =  `x` 出力ストリームに書き込むための出力反復子式を実装するために使用される代入演算子。|
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:**\<iterator>
 
 **名前空間:** std
 
-## <a name="ostream_iteratorchar_type"></a><a name="char_type"></a>ostream_iterator:: char_type
+## <a name="ostream_iteratorchar_type"></a><a name="char_type"></a> ostream_iterator:: char_type
 
 反復子の文字型を提供する型。
 
@@ -120,9 +121,9 @@ by intOut are:
 */
 ```
 
-## <a name="ostream_iteratoroperator"></a><a name="op_star"></a>ostream_iterator:: operator *
+## <a name="ostream_iteratoroperator"></a><a name="op_star"></a> ostream_iterator:: operator *
 
-出力反復子式 \* *ii*  =  *x*を実装するために使用される逆参照演算子。
+出力反復子式 \* *ii*  =  *x* を実装するために使用される逆参照演算子。
 
 ```cpp
 ostream_iterator<Type, CharType, Traits>& operator*();
@@ -134,7 +135,7 @@ ostream_iterator<Type, CharType, Traits>& operator*();
 
 ### <a name="remarks"></a>解説
 
-が満たす必要のある出力反復子の要件は、 `ostream_iterator` 式 ii t が有効であることを必要とし、 \* *ii*  =  *t*独自のまたはについては何もしないということです **`operator`** `operator=` 。 この実装のメンバー演算子は** \* this**を返します。
+が満たす必要のある出力反復子の要件は、 `ostream_iterator` 式 ii t が有効であることを必要とし、 \*   =  独自のまたはについては何もしないということです **`operator`** `operator=` 。 この実装のメンバー演算子は **\* this** を返します。
 
 ### <a name="example"></a>例
 
@@ -169,7 +170,7 @@ Elements written to output stream:
 */
 ```
 
-## <a name="ostream_iteratoroperator"></a><a name="op_add_add"></a>ostream_iterator:: operator + +
+## <a name="ostream_iteratoroperator"></a><a name="op_add_add"></a> ostream_iterator:: operator + +
 
 操作が呼び出される前に示したものと同じオブジェクトに `ostream_iterator` を返す、実質的な機能を持たないインクリメント演算子。
 
@@ -184,7 +185,7 @@ ostream_iterator<Type, CharType, Traits> operator++(int);
 
 ### <a name="remarks"></a>解説
 
-これらのメンバー演算子はどちらも** \* this**を返します。
+これらのメンバー演算子はどちらも **\* this** を返します。
 
 ### <a name="example"></a>例
 
@@ -219,7 +220,7 @@ Elements written to output stream:
 */
 ```
 
-## <a name="ostream_iteratoroperator"></a><a name="op_eq"></a>ostream_iterator:: operator =
+## <a name="ostream_iteratoroperator"></a><a name="op_eq"></a> ostream_iterator:: operator =
 
 \* `i`  =  `x` 出力ストリームに書き込むための output_iterator 式を実装するために使用される代入演算子。
 
@@ -234,7 +235,7 @@ ostream_iterator<Type, CharType, Traits>& operator=(const Type& val);
 
 ### <a name="return-value"></a>戻り値
 
-演算子は、オブジェクトに関連付けられた出力ストリームに*val*を挿入し、その後に[ostream_iterator コンストラクター](#ostream_iterator)で指定された区切り記号 (存在する場合) を指定して、への参照を返し `ostream_iterator` ます。
+演算子は、オブジェクトに関連付けられた出力ストリームに *val* を挿入し、その後に [ostream_iterator コンストラクター](#ostream_iterator) で指定された区切り記号 (存在する場合) を指定して、への参照を返し `ostream_iterator` ます。
 
 ### <a name="remarks"></a>解説
 
@@ -273,7 +274,7 @@ Elements written to output stream:
 */
 ```
 
-## <a name="ostream_iteratorostream_iterator"></a><a name="ostream_iterator"></a>ostream_iterator:: ostream_iterator
+## <a name="ostream_iteratorostream_iterator"></a><a name="ostream_iterator"></a> ostream_iterator:: ostream_iterator
 
 出力ストリームに書き込むために初期化され、区切られた `ostream_iterator` を構築します。
 
@@ -298,7 +299,7 @@ ostream_iterator(
 
 最初のコンストラクターは、出力ストリーム ポインターを `&_Ostr` で初期化します。 区切り記号文字列ポインターは、空の文字列を指定します。
 
-2番目のコンストラクターは、を使用して出力ストリームポインターを初期化し、 `&_Ostr` *_Delimiter*の区切り記号文字列ポインターを初期化します。
+2番目のコンストラクターは、を使用して出力ストリームポインターを初期化し、 `&_Ostr` *_Delimiter* の区切り記号文字列ポインターを初期化します。
 
 ### <a name="example"></a>例
 
@@ -347,7 +348,7 @@ Elements output with delimiter: 1 : 2 : 3 : 4 : 5 : 6 :
 */
 ```
 
-## <a name="ostream_iteratorostream_type"></a><a name="ostream_type"></a>ostream_iterator:: ostream_type
+## <a name="ostream_iteratorostream_type"></a><a name="ostream_type"></a> ostream_iterator:: ostream_type
 
 反復子のストリーム型を提供する型。
 
@@ -357,13 +358,13 @@ typedef basic_ostream<CharType, Traits> ostream_type;
 
 ### <a name="remarks"></a>解説
 
-この型は、 [basic_ostream](../standard-library/basic-ostream-class.md) <  `CharType` `Traits` 書き込みに使用できるオブジェクトを定義する iostream 階層のストリームクラス> basic_ostream のシノニムです。
+この型は、 [](../standard-library/basic-ostream-class.md) <  `CharType` `Traits` 書き込みに使用できるオブジェクトを定義する iostream 階層のストリームクラス> basic_ostream のシノニムです。
 
 ### <a name="example"></a>例
 
 `ostream_type` を宣言して使用する方法の例については、[ostream_iterator](#ostream_iterator) に関するセクションをご覧ください。
 
-## <a name="ostream_iteratortraits_type"></a><a name="traits_type"></a>ostream_iterator:: traits_type
+## <a name="ostream_iteratortraits_type"></a><a name="traits_type"></a> ostream_iterator:: traits_type
 
 反復子の文字特性型を提供する型。
 

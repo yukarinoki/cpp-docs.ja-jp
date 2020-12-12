@@ -1,4 +1,5 @@
 ---
+description: '詳細については、「間接演算子: *」を参照してください。'
 title: '間接演算子: *'
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - operators [C++], indirection
 - indirection operator [C++], syntax
 ms.assetid: c50309e1-6c02-4184-9fcb-2e13c1f4ac03
-ms.openlocfilehash: 8f27cfd943455d52b04c41ef2d2d83e6e03a84c0
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: d82e65676178fcfc9a62b10a780360c0c69d0d2b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80178280"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97113910"
 ---
 # <a name="indirection-operator-"></a>間接演算子: *
 
@@ -24,7 +25,7 @@ ms.locfileid: "80178280"
 
 ## <a name="remarks"></a>解説
 
-単項間接演算子 (<strong>\*</strong>) は、ポインターを逆参照します。つまり、ポインター値を左辺値に変換します。 間接演算子のオペランドを型へのポインターにすることはできません。 間接式の結果は、ポインター型の派生元の型です。 このコンテキストでの<strong>\*</strong>演算子の使用は、乗算である二項演算子とは異なります。
+単項間接演算子 () は、ポインターを逆参照します。 <strong>\*</strong> つまり、ポインター値を左辺値に変換します。 間接演算子のオペランドを型へのポインターにすることはできません。 間接式の結果は、ポインター型の派生元の型です。 このコンテキストでの演算子の使用は、 <strong>\*</strong> 二項演算子 (乗算) とは異なります。
 
 オペランドが関数を指している場合、結果は関数指定子になります。 格納場所を指している場合、結果は格納場所を指定する左辺値になります。
 
@@ -60,9 +61,9 @@ int main() {
 
 - ポインターが、実行プログラムで使用されていないアドレスを指定しています。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [単項演算子を含む式](../cpp/expressions-with-unary-operators.md)<br/>
-[C++ の組み込み演算子、優先順位と結合規則](../cpp/cpp-built-in-operators-precedence-and-associativity.md)<br/>
+[C++ の演算子、優先順位と結合規則](../cpp/cpp-built-in-operators-precedence-and-associativity.md)<br/>
 [address-of 演算子: &](../cpp/address-of-operator-amp.md)<br/>
 [間接演算子とアドレス演算子](../c-language/indirection-and-address-of-operators.md)

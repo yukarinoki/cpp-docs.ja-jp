@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: 古いコードに対するマルチスレッドサポート (Visual C++)'
 title: 旧形式のコードのためのマルチスレッド サポート (Visual C++)
 ms.date: 08/27/2018
 helpviewer_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - multiple concurrent threads
 - multithreading [C++]
 ms.assetid: 24425b1f-5031-4c6b-aac7-017115a40e7c
-ms.openlocfilehash: 6f76ff42d2e28afe251ce234220051111736d3c9
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: a3b04fdde01e2576d37d41f2860526fcf5ba1691
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80215086"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97149904"
 ---
 # <a name="multithreading-support-for-older-code-visual-c"></a>旧形式のコードのためのマルチスレッド サポート (Visual C++)
 
@@ -30,7 +31,7 @@ Microsoft Windows で動作するマルチスレッド アプリケーション�
 プロセスとスレッドについて説明します。また、MFC でマルチスレッドを使用する方法についても説明します。
 
 [マルチスレッドとロケール](multithreading-and-locales.md)<br/>
-マルチスレッドアプリケーションで C ランタイムライブラリとC++標準ライブラリの両方のロケール機能を使用するときに発生する問題について説明します。
+マルチスレッドアプリケーションで C ランタイムライブラリと C++ 標準ライブラリの両方のロケール機能を使用するときに発生する問題について説明します。
 
 ## <a name="related-sections"></a>関連項目
 

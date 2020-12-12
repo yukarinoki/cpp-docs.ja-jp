@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: @stack'
 title: '@stack'
 ms.date: 12/17/2019
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - '@stack symbol'
 ms.assetid: 4f656d9f-c3d4-4e19-9d97-bdee01b41861
-ms.openlocfilehash: 517ab7202d62196ccec4bf62a2e97a8336c9b077
-ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
+ms.openlocfilehash: 2ccb470eeb583179d56681e8d74a2ef8bc9a616d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75315434"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97121161"
 ---
 # <a name="stack"></a>\@スタック
 
@@ -23,5 +24,5 @@ ms.locfileid: "75315434"
 
 ## <a name="see-also"></a>関連項目
 
-[シンボルのリファレンス](symbols-reference.md)\
+[シンボルリファレンス](symbols-reference.md)\
 [MASM BNF 文法](masm-bnf-grammar.md)

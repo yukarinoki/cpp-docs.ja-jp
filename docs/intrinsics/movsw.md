@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: __movsw'
 title: __movsw
 ms.date: 09/02/2019
 f1_keywords:
@@ -8,18 +9,18 @@ helpviewer_keywords:
 - rep movsw instruction
 - __movsw intrinsic
 ms.assetid: db402ad5-7f0e-449a-b0b0-eea9928d6435
-ms.openlocfilehash: 67eef7fe0a5b9803650f345740a8c40262cd2014
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 500a2bc3af83887cdd5d65501695c9db60ef60f1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70221727"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97119030"
 ---
 # <a name="__movsw"></a>__movsw
 
 **Microsoft 固有の仕様**
 
-Move String (`rep movsw`) 命令を生成します。
+Move String ( `rep movsw` ) 命令を生成します。
 
 ## <a name="syntax"></a>構文
 
@@ -36,23 +37,23 @@ void __movsw(
 *インストール*\
 入出力操作の転送先。
 
-*Source*\
+*電源*\
 から操作のソース。
 
 *数*\
 からコピーする単語数。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-|組み込み|アーキテクチャ|
+|Intrinsic|アーキテクチャ|
 |---------------|------------------|
 |`__movsw`|x86、x64|
 
-**ヘッダーファイル**\<>
+**ヘッダー ファイル** \<intrin.h>
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-結果として、*ソース*によって参照されている最初の*カウント*単語が、コピー*先*の文字列にコピーされます。
+結果として、*ソース* によって参照されている最初の *カウント* 単語が、コピー *先* の文字列にコピーされます。
 
 このルーチンは、組み込みとしてのみ使用できます。
 

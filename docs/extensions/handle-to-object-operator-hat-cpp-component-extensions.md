@@ -1,20 +1,21 @@
 ---
+description: '詳細情報: オブジェクト演算子 (^) へのハンドル (C++/CLI および C++/CX)'
 title: オブジェクト演算子 (^) へのハンドル (C++/CLI および C++/CX)
 ms.date: 10/12/2018
 ms.topic: reference
 helpviewer_keywords:
 - ^ handle to object [C++]
 ms.assetid: 70c411e6-be57-4468-a944-6ea7be89f392
-ms.openlocfilehash: c8927ef0e34f2c2b12722d453e0dde6f7357eb33
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 67c553b70ce1d39a18b75cd38833184c74037864
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91503134"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97119383"
 ---
 # <a name="handle-to-object-operator---ccli-and-ccx"></a>オブジェクト演算子 (^) へのハンドル (C++/CLI および C++/CX)
 
-*ハンドル宣言子*( `^` は "hat") は、オブジェクトがアクセス不可能であるとシステムが判断したときに、宣言されたオブジェクトが自動的に削除されることを意味する型[指定子](../cpp/declarations-and-definitions-cpp.md)をに変更します。
+*ハンドル宣言子*( `^` は "hat") は、オブジェクトがアクセス不可能であるとシステムが判断したときに、宣言されたオブジェクトが自動的に削除されることを意味する型 [指定子](../cpp/declarations-and-definitions-cpp.md)をに変更します。
 
 ## <a name="accessing-the-declared-object"></a>宣言されたオブジェクトへのアクセス
 
@@ -28,7 +29,7 @@ ms.locfileid: "91503134"
 
 オブジェクトをインスタンス化する方法の詳細については、「[ref new](ref-new-gcnew-cpp-component-extensions.md)」を参照してください。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 コンパイラ オプション: `/ZW`
 
@@ -217,7 +218,7 @@ int main() {
 }
 ```
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 コンパイラ オプション: `/clr`
 

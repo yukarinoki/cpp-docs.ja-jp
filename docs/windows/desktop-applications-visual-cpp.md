@@ -1,14 +1,15 @@
 ---
+description: 詳細については、「デスクトップアプリケーション (Visual C++)」を参照してください。
 title: デスクトップ アプリケーション (Visual C++)
 ms.date: 07/28/2019
 ms.assetid: a020b534-293c-44e2-aa48-516c43ddeb8f
 ms.topic: overview
-ms.openlocfilehash: 26448ca65b3162e2adfe6988dfd8c9e85432429c
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: eb7badb73af507d31c9dd982f0a6189362249a3b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91504438"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97114755"
 ---
 # <a name="desktop-applications-visual-c"></a>デスクトップ アプリケーション (Visual C++)
 
@@ -24,7 +25,7 @@ Visual Studio 2017 バージョン15.4 以降では、Windows アプリケーシ
 
 ## <a name="terminology"></a>用語
 
-- *Win32*アプリケーションは、C++ の windows デスクトップアプリケーションであり、ネイティブな[windows C Api や COM api](/windows/win32/apiindex/windows-api-list) 、CRT、標準ライブラリ api、およびサードパーティ製のライブラリを利用できます。 ウィンドウで実行される Win32 アプリケーションでは、開発者が Windows プロシージャ関数内で Windows メッセージを明示的に操作する必要があります。 名前にかかわらず、Win32 アプリケーションは、32ビット (x86) または64ビット (x64) のバイナリとしてコンパイルできます。 Visual Studio IDE では、x86 と Win32 という用語は同義です。
+- *Win32* アプリケーションは、C++ の windows デスクトップアプリケーションであり、ネイティブな [windows C Api や COM api](/windows/win32/apiindex/windows-api-list) 、CRT、標準ライブラリ api、およびサードパーティ製のライブラリを利用できます。 ウィンドウで実行される Win32 アプリケーションでは、開発者が Windows プロシージャ関数内で Windows メッセージを明示的に操作する必要があります。 名前にかかわらず、Win32 アプリケーションは、32ビット (x86) または64ビット (x64) のバイナリとしてコンパイルできます。 Visual Studio IDE では、x86 と Win32 という用語は同義です。
 
 - [コンポーネントオブジェクトモデル (COM)](/windows/win32/com/the-component-object-model)は、さまざまな言語で記述されたプログラムが相互に通信できるようにするための仕様です。 多くの Windows コンポーネントは COM オブジェクトとして実装され、オブジェクトの作成、インターフェイスの検出、およびオブジェクトの破棄に関する標準的な COM 規則に従います。  C++ デスクトップアプリケーションから COM オブジェクトを使用するのは比較的簡単ですが、独自の COM オブジェクトを作成する方がより高度です。 [Active Template Library (ATL)](../atl/atl-com-desktop-components.md)には、COM 開発を簡略化するマクロとヘルパー関数が用意されています。
 
@@ -44,7 +45,7 @@ C++ のすべてのデスクトップアプリケーションでは、C ラン�
 |[空の Win32 アプリケーションへのファイルの追加](./overview-of-windows-programming-in-cpp.md)|空のプロジェクトにファイルを追加する方法。|
 |[リソース ファイルの操作](working-with-resource-files.md)|画像、アイコン、文字列テーブル、およびその他のリソースをデスクトップアプリケーションに追加する方法。|
 |[DirectX を使用するゲームを作成するためのリソース (C++)](resources-for-creating-a-game-using-directx.md)|C++ でゲームを作成するためのコンテンツへのリンク。|
-|[チュートリアル: スタティック ライブラリの作成と使用](../build/walkthrough-creating-and-using-a-static-library-cpp.md)|.Lib バイナリファイルを作成する方法。|
+|[チュートリアル: スタティック ライブラリの作成と使用](../build/walkthrough-creating-and-using-a-static-library-cpp.md)|.lib バイナリ ファイルを作成する方法。|
 |[方法: windows デスクトップアプリケーションで Windows 10 SDK を使用する](how-to-use-the-windows-10-sdk-in-a-windows-desktop-application.md)|Windows 10 SDK を使用してビルドするプロジェクトの設定手順が示されています。|
 
 ## <a name="related-articles"></a>関連トピック

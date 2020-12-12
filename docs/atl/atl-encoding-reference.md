@@ -1,16 +1,17 @@
 ---
+description: 詳細については、「ATL Encoding Reference」を参照してください。
 title: ATL のエンコーディングのリファレンス
 ms.date: 11/04/2016
 helpviewer_keywords:
 - encoding
 - encoding, functions
 ms.assetid: 82d4fdf3-3c4a-4fe2-b297-8ffb4714406f
-ms.openlocfilehash: a284645030b5bcdb30b72d7df92231680efb36b4
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 309c4cbf695b5f40e58116c9422f8da481799cbc
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88831893"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97148669"
 ---
 # <a name="atl-encoding-reference"></a>ATL のエンコーディングのリファレンス
 

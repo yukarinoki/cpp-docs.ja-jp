@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: com_interface_entry (C++)'
 title: com_interface_entry (C++ COM 属性)
 ms.date: 10/02/2018
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - com_interface_entry attribute
 ms.assetid: 10368f81-b99b-4a0f-ba4f-a142e6911a5c
-ms.openlocfilehash: 8339afb97df57f5080629dfed08823c5c091c5a3
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 2f182149eeac887292391cbb06f625aff261e91f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88844120"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97114886"
 ---
 # <a name="com_interface_entry-c"></a>com_interface_entry (C++)
 
@@ -35,7 +36,7 @@ ms.locfileid: "88844120"
 
 この属性を使用するには、 [coclass](coclass.md)、 [progid](progid.md)、または [vi_progid](vi-progid.md) 属性 (または、これらのいずれかを意味する別の属性) も同じ要素に適用する必要があります。 いずれか 1 つの属性を使用すると、他の 2 つも自動的に適用されます。 たとえば、が適用されている場合、 `progid` `vi_progid` と `coclass` も適用されます。
 
-**Com_interface_entry**の最初の使用方法では、インターフェイスマップの先頭に新しいインターフェイスが挿入されるため、次のいずれかの COM_INTERFACE_ENTRY 型である必要があります。
+**Com_interface_entry** の最初の使用方法では、インターフェイスマップの先頭に新しいインターフェイスが挿入されるため、次のいずれかの COM_INTERFACE_ENTRY 型である必要があります。
 
 - COM_INTERFACE_ENTRY
 
@@ -45,7 +46,7 @@ ms.locfileid: "88844120"
 
 - COM_INTERFACE_ENTRY2_IID
 
-**Com_interface_entry**属性の使用法を追加すると、サポートされているすべての COM_INTERFACE_ENTRY 型を使用できます。
+**Com_interface_entry** 属性の使用法を追加すると、サポートされているすべての COM_INTERFACE_ENTRY 型を使用できます。
 
 ATL では、インターフェイスマップの最初のエントリを id として使用するため、この制限が必要です `IUnknown` 。したがって、エントリは有効なインターフェイスである必要があります。 たとえば、次のコードサンプルは、インターフェイスマップの最初のエントリに実際の COM インターフェイスが指定されていないため、無効です。
 
@@ -103,7 +104,7 @@ BEGIN_COM_MAP(CMyClass)
 END_COM_MAP()
 ```
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 | 属性コンテキスト | 値 |
 |-|-|

@@ -1,5 +1,6 @@
 ---
-title: Tchar. h の汎用テキストマッピング
+description: 詳細については、「tchar.h での Generic-Text のマッピング」を参照してください。
+title: Tchar. h での Generic-Text のマッピング
 ms.date: 11/04/2016
 helpviewer_keywords:
 - mapping generic-text
@@ -10,14 +11,14 @@ helpviewer_keywords:
 - TCHAR.H data types, mapping
 - mappings [C++], TCHAR.H
 ms.assetid: 01e1bb74-5a01-4093-8720-68b6c1fdda80
-ms.openlocfilehash: c317e7d67cc3d086dacbe0f24b0103d389afefda
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: f083dc03eab7db25b54955d8d34a13f2b5b7197b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87217299"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97118349"
 ---
-# <a name="generic-text-mappings-in-tcharh"></a>Tchar. h の汎用テキストマッピング
+# <a name="generic-text-mappings-in-tcharh"></a>Tchar. h での Generic-Text のマッピング
 
 国際対応のコードの転送を簡単にするために、Microsoft ランタイムライブラリでは、多くのデータ型、ルーチン、およびその他のオブジェクトに対して、Microsoft 固有の汎用テキストマッピングが提供されています。 Tchar.h で定義されているこれらのマッピングを使用すると、ステートメントを使用して定義したマニフェスト定数に応じて、1バイト、マルチバイト、または Unicode 文字セットに対してコンパイルできる汎用コードを記述できます `#define` 。 汎用テキスト マッピングは Microsoft 固有の拡張機能であり、ANSI とは互換性がありません。
 
@@ -27,7 +28,7 @@ Tchar.h を使用すると、1バイト、マルチバイト文字セット (MBC
 
 一部の1バイト文字セット (SBCS) の文字列処理関数は (符号付き) **`char*`** パラメーターを受け取るため、が定義されている場合、型が一致しないとコンパイラの警告結果が返され `_MBCS` ます。 この警告を回避する方法は 3 つあります。
 
-1. Tchar.h のタイプセーフなインライン関数サンクを使用します。 これは既定の動作です。
+1. Tchar.h のタイプセーフなインライン関数サンクを使用します。 これが既定の動作です。
 
 1. コマンドラインでを定義して、tchar.h の直接マクロを使用します `_MB_MAP_DIRECT` 。 この場合は、型を手作業で一致させる必要があります。 これは一番速い方法ですが、タイプ セーフではありません。
 
@@ -52,9 +53,9 @@ Tchar.h を使用すると、1バイト、マルチバイト文字セット (MBC
 |`_TSCHAR`|**`signed char`**|**`signed char`**|**`wchar_t`**|
 |`_TUCHAR`|**`unsigned char`**|**`unsigned char`**|**`wchar_t`**|
 |`_TXCHAR`|**`char`**|**`unsigned char`**|**`wchar_t`**|
-|`_T` または `_TEXT`|影響なし (プリプロセッサによって削除される)|影響なし (プリプロセッサによって削除される)|`L`(次の文字または文字列を Unicode 対応の文字列に変換します)|
+|`_T` または `_TEXT`|影響なし (プリプロセッサによって削除される)|影響なし (プリプロセッサによって削除される)|`L` (次の文字または文字列を Unicode 対応の文字列に変換します)|
 
-ルーチン、変数、およびその他のオブジェクトの汎用テキストマッピングの一覧については、「ランタイムライブラリリファレンス」の「[汎用テキストマップ](../c-runtime-library/generic-text-mappings.md)」を参照してください。
+ルーチン、変数、およびその他のオブジェクトの汎用テキストマッピングの一覧については、Run-Time ライブラリリファレンスの「 [汎用テキストマップ](../c-runtime-library/generic-text-mappings.md) 」を参照してください。
 
 > [!NOTE]
 > Unicode の文字列には NULL バイトが含まれている可能性があるため、この文字列と一緒に `str` ファミリの関数を使用しないでください。 同様に、MBCS (または SBCS) 文字列には `wcs` ファミリの関数を使用しないでください。

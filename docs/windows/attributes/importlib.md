@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: importlib'
 title: importlib (C++ COM 属性)
 ms.date: 10/02/2018
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - importlib attribute
 ms.assetid: f129e459-b8d3-4aca-a0bc-ee53e18b62ed
-ms.openlocfilehash: 004533282ca089a076df6b110d52701abc16f71d
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: f3000be3415ed944d621ebcd36442e33951efc84
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88842222"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97114950"
 ---
 # <a name="importlib"></a>importlib
 
@@ -30,11 +31,11 @@ ms.locfileid: "88842222"
 
 ## <a name="remarks"></a>解説
 
-**Importlib** C++ 属性により、 `importlib` 生成された .idl ファイルのライブラリブロックにステートメントが配置されます。 **Importlib**属性には、 [importlib](/windows/win32/Midl/importlib) MIDL 属性と同じ機能があります。
+**Importlib** C++ 属性により、 `importlib` 生成された .idl ファイルのライブラリブロックにステートメントが配置されます。 **Importlib** 属性には、 [importlib](/windows/win32/Midl/importlib) MIDL 属性と同じ機能があります。
 
 ## <a name="example"></a>例
 
-次のコードは、 **importlib**の使用方法の例を示しています。
+次のコードは、 **importlib** の使用方法の例を示しています。
 
 ```cpp
 // cpp_attr_ref_importlib.cpp
@@ -43,7 +44,7 @@ ms.locfileid: "88842222"
 [importlib("importlib.tlb")];
 ```
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 | 属性コンテキスト | 値 |
 |-|-|

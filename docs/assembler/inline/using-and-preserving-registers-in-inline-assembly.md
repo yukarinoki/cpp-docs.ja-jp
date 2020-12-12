@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「インラインアセンブリでのレジスタの使用と保持」を参照してください。
 title: インライン アセンブリでのレジスタの使用および保持
 ms.date: 08/30/2018
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - registers, inline assembly
 - preserving registers
 ms.assetid: dbcd7360-6f3e-4b22-9ee2-9f65ca6f2543
-ms.openlocfilehash: 99ca0093bb27e859854dfd1ca64addea923e5a5c
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 36758a313044190c9ee2f2a9b094325821d87635
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87191509"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97122006"
 ---
 # <a name="using-and-preserving-registers-in-inline-assembly"></a>インライン アセンブリでのレジスタの使用および保持
 
@@ -24,9 +25,9 @@ ms.locfileid: "87191509"
 
 このようなレジスタの競合を回避するには、 **`__fastcall`** ブロックを含む関数に規則を使用しないで **`__asm`** ください。 **`__fastcall`**/Gr コンパイラオプションを使用してグローバル規則を指定する場合は、ブロックを含むすべての関数を **`__asm`** またはで宣言し **`__cdecl`** **`__stdcall`** ます。 (属性は、 **`__cdecl`** その関数に対して C 呼び出し規約を使用するようにコンパイラに指示します)。/Gr を使用してコンパイルしない場合は、属性を使用して関数を宣言しないで **`__fastcall`** ください。
 
-を使用して **`__asm`** C/c + + 関数でアセンブリ言語を記述する場合、EAX、EBX、ECX、EDX、ESI、または EDI レジスタを保持する必要はありません。 たとえば、POWER2 です。C の例[インラインアセンブリを使用して関数を記述](../../assembler/inline/writing-functions-with-inline-assembly.md)する場合、関数は、 `power2` EAX レジスタの値を保持しません。 ただし、レジスタアロケーターでは、これらのレジスタを使用してブロック間で値を格納することはできないため、これらのレジスタを使用するとコードの品質に影響し **`__asm`** ます。 また、インラインアセンブラーコードで EBX、ESI、または EDI を使用することにより、コンパイラは、プロローグおよびエピローグ関数のレジスタを保存して復元するように強制します。
+を使用して **`__asm`** C/c + + 関数でアセンブリ言語を記述する場合、EAX、EBX、ECX、EDX、ESI、または EDI レジスタを保持する必要はありません。 たとえば、POWER2 です。C の例 [インラインアセンブリを使用して関数を記述](../../assembler/inline/writing-functions-with-inline-assembly.md)する場合、関数は、 `power2` EAX レジスタの値を保持しません。 ただし、レジスタアロケーターでは、これらのレジスタを使用してブロック間で値を格納することはできないため、これらのレジスタを使用するとコードの品質に影響し **`__asm`** ます。 また、インラインアセンブラーコードで EBX、ESI、または EDI を使用することにより、コンパイラは、プロローグおよびエピローグ関数のレジスタを保存して復元するように強制します。
 
-使用する他のレジスタ (DS、SS、SP、BP、flags レジスタなど) は、ブロックのスコープに対して保持する必要があり **`__asm`** ます。 ESP および EBP レジスタを変更する理由がない場合 (スタックを切り替える場合など) は、そのままにしておいてください。 「[インラインアセンブリの最適化](../../assembler/inline/optimizing-inline-assembly.md)」も参照してください。
+使用する他のレジスタ (DS、SS、SP、BP、flags レジスタなど) は、ブロックのスコープに対して保持する必要があり **`__asm`** ます。 ESP および EBP レジスタを変更する理由がない場合 (スタックを切り替える場合など) は、そのままにしておいてください。 「 [インラインアセンブリの最適化](../../assembler/inline/optimizing-inline-assembly.md)」も参照してください。
 
 一部の SSE 型では、8バイトのスタックアラインメントが必要で、コンパイラは動的なスタックアラインメントコードを出力します。 配置後にローカル変数と関数パラメーターの両方にアクセスできるようにするために、コンパイラは2つのフレームポインターを保持します。  コンパイラがフレームポインターの省略 (FPO) を実行すると、EBP と ESP が使用されます。  コンパイラが FPO を実行しない場合は、EBX と EBP が使用されます。 コードが正しく実行されるようにするには、asm コードで EBX を変更しないでください。これは、関数がフレームポインターを変更する際に動的なスタックアラインメントを必要とする場合です。 8バイトのアラインメントされた型を関数の外に移動するか、EBX を使用しないようにします。
 

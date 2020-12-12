@@ -1,4 +1,5 @@
 ---
+description: '詳細について: com::p tr クラス'
 title: com::ptr Class
 ms.date: 01/16/2019
 ms.topic: reference
@@ -16,12 +17,12 @@ f1_keywords:
 helpviewer_keywords:
 - msclr::ptr class
 ms.assetid: 0144d0e4-919c-45f9-a3f8-fbc9edba32bf
-ms.openlocfilehash: 9cb0ad23450d06bb314b0e2d6fa1d01784d633e2
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 73016d425d06ecbda12702afc1793a4bab81ccc7
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87214907"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97124398"
 ---
 # <a name="comptr-class"></a>com::ptr Class
 
@@ -43,7 +44,7 @@ COM インターフェイス。
 
 を `com::ptr` ローカル関数変数として使用して、さまざまな COM タスクを簡略化し、有効期間の管理を自動化することもできます。
 
-を `com::ptr` 関数パラメーターとして直接使用することはできません。代わりに、[追跡参照演算子](../extensions/tracking-reference-operator-cpp-component-extensions.md)または[オブジェクト演算子 (^) へのハンドル](../extensions/handle-to-object-operator-hat-cpp-component-extensions.md)を使用してください。
+を `com::ptr` 関数パラメーターとして直接使用することはできません。代わりに、 [追跡参照演算子](../extensions/tracking-reference-operator-cpp-component-extensions.md) または [オブジェクト演算子 (^) へのハンドル](../extensions/handle-to-object-operator-hat-cpp-component-extensions.md) を使用してください。
 
 は、 `com::ptr` 関数から直接返すことはできません。代わりにハンドルを使用してください。
 
@@ -192,13 +193,13 @@ int main() {
 |[ptr:: operator &nbsp; bool](#operator-bool)|条件式でを使用するための演算子 `com::ptr` 。|
 |[ptr::operator!](#operator-logical-not)|所有している COM オブジェクトが無効かどうかを判断する演算子。|
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー ファイル** \<msclr\com\ptr.h>
 
-**名前空間**msclr:: com
+**名前空間** msclr:: com
 
-## <a name="ptrptr"></a><a name="ptr"></a>ptr::p tr
+## <a name="ptrptr"></a><a name="ptr"></a> ptr::p tr
 
 所有されている COM オブジェクトへのポインターを返します。
 
@@ -285,7 +286,7 @@ int main() {
 }
 ```
 
-## <a name="ptrptr"></a><a name="tilde-ptr"></a>ptr:: ~ ptr
+## <a name="ptrptr"></a><a name="tilde-ptr"></a> ptr:: ~ ptr
 
 Destructs a `com::ptr` .
 
@@ -360,7 +361,7 @@ int main() {
 }
 ```
 
-## <a name="ptrattach"></a><a name="attach"></a>ptr:: Attach
+## <a name="ptrattach"></a><a name="attach"></a> ptr:: Attach
 
 COM オブジェクトをにアタッチ `com::ptr` します。
 
@@ -461,7 +462,7 @@ int main() {
 }
 ```
 
-## <a name="ptrcreateinstance"></a><a name="createInstance"></a>ptr:: CreateInstance
+## <a name="ptrcreateinstance"></a><a name="createInstance"></a> ptr:: CreateInstance
 
 内に COM オブジェクトのインスタンスを作成し `com::ptr` ます。
 
@@ -516,7 +517,7 @@ void CreateInstance(
 新しく作成されたオブジェクトを管理するコードが実行されるコンテキスト。 値は、列挙体から取得され `CLSCTX` ます。 が `cls_context` 指定されていない場合は、CLSCTX_ALL 値が使用されます。
 
 *rclsid*<br/>
-`CLSID`オブジェクトの作成に使用されるデータとコードに関連付けられています。
+`CLSID` オブジェクトの作成に使用されるデータとコードに関連付けられています。
 
 ### <a name="exceptions"></a>例外
 
@@ -526,7 +527,7 @@ void CreateInstance(
 
 ### <a name="remarks"></a>解説
 
-`CreateInstance`を使用し `CoCreateInstance` て、指定したオブジェクトの新しいインスタンスを作成します。これは、ProgID または CLSID から識別されます。 は、 `com::ptr` 新しく作成されたオブジェクトを参照し、破棄時に所有されているすべての参照を自動的に解放します。
+`CreateInstance` を使用し `CoCreateInstance` て、指定したオブジェクトの新しいインスタンスを作成します。これは、ProgID または CLSID から識別されます。 は、 `com::ptr` 新しく作成されたオブジェクトを参照し、破棄時に所有されているすべての参照を自動的に解放します。
 
 ### <a name="example"></a>例
 
@@ -579,7 +580,7 @@ int main() {
 }
 ```
 
-## <a name="ptrdetach"></a><a name="detach"></a>ptr::D
+## <a name="ptrdetach"></a><a name="detach"></a> ptr::D
 
 オブジェクトへのポインターを返す COM オブジェクトの所有権を取得します。
 
@@ -599,7 +600,7 @@ COM オブジェクトへのポインター。
 
 ### <a name="remarks"></a>解説
 
-`Detach`は、呼び出し元に代わって COM オブジェクトへの参照を追加し、によって所有されているすべての参照を解放し `com::ptr` ます。  呼び出し元は、返されたオブジェクトを破棄するために最終的に解放する必要があります。
+`Detach` は、呼び出し元に代わって COM オブジェクトへの参照を追加し、によって所有されているすべての参照を解放し `com::ptr` ます。  呼び出し元は、返されたオブジェクトを破棄するために最終的に解放する必要があります。
 
 ### <a name="example"></a>例
 
@@ -684,7 +685,7 @@ int main() {
 }
 ```
 
-## <a name="ptrgetinterface"></a><a name="getInterface"></a>ptr:: GetInterface
+## <a name="ptrgetinterface"></a><a name="getInterface"></a> ptr:: GetInterface
 
 所有されている COM オブジェクトへのポインターを返します。
 
@@ -826,7 +827,7 @@ int main() {
 <word>persnickety</word>
 ```
 
-## <a name="ptrqueryinterface"></a><a name="queryInterface"></a>ptr:: QueryInterface
+## <a name="ptrqueryinterface"></a><a name="queryInterface"></a> ptr:: QueryInterface
 
 所有されている COM オブジェクトに対してインターフェイスを照会し、結果を別のにアタッチし `com::ptr` ます。
 
@@ -957,7 +958,7 @@ int main() {
 <#document>persnickety</#document>
 ```
 
-## <a name="ptrrelease"></a><a name="release"></a>ptr:: Release
+## <a name="ptrrelease"></a><a name="release"></a> ptr:: Release
 
 COM オブジェクトに対して所有されているすべての参照を解放します。
 
@@ -1045,7 +1046,7 @@ int main() {
 }
 ```
 
-## <a name="ptroperator-gt"></a><a name="operator-arrow"></a>ptr:: operator-&gt;
+## <a name="ptroperator-gt"></a><a name="operator-arrow"></a> ptr:: operator-&gt;
 
 メンバーアクセス演算子。所有している COM オブジェクトのメソッドを呼び出すために使用されます。
 
@@ -1187,7 +1188,7 @@ int main() {
 <word>persnickety</word>
 ```
 
-## <a name="ptroperator"></a><a name="operator-assign"></a>ptr:: operator =
+## <a name="ptroperator"></a><a name="operator-assign"></a> ptr:: operator =
 
 COM オブジェクトをにアタッチ `com::ptr` します。
 
@@ -1292,7 +1293,7 @@ int main() {
 }
 ```
 
-## <a name="ptroperator-bool"></a><a name="operator-bool"></a>ptr:: operator bool
+## <a name="ptroperator-bool"></a><a name="operator-bool"></a> ptr:: operator bool
 
 条件式でを使用するための演算子 `com::ptr` 。
 
@@ -1302,7 +1303,7 @@ operator bool();
 
 ### <a name="return-value"></a>戻り値
 
-**`true`** 所有されている COM オブジェクトが有効な場合は。**`false`** それ以外の場合は。
+**`true`** 所有されている COM オブジェクトが有効な場合は。 **`false`** それ以外の場合は。
 
 ### <a name="remarks"></a>解説
 
@@ -1363,7 +1364,7 @@ int main() {
 DOM Document created.
 ```
 
-## <a name="ptroperator"></a><a name="operator-logical-not"></a>ptr:: operator!
+## <a name="ptroperator"></a><a name="operator-logical-not"></a> ptr:: operator!
 
 所有している COM オブジェクトが無効かどうかを判断する演算子。
 
@@ -1373,7 +1374,7 @@ bool operator!();
 
 ### <a name="return-value"></a>戻り値
 
-**`true`** 所有されている COM オブジェクトが無効な場合は。**`false`** それ以外の場合は。
+**`true`** 所有されている COM オブジェクトが無効な場合は。 **`false`** それ以外の場合は。
 
 ### <a name="remarks"></a>解説
 

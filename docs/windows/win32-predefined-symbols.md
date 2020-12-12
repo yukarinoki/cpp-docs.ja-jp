@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: Win32 の定義済みシンボル'
 title: Win32 の定義済みシンボル
 ms.date: 02/14/2019
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - symbols [C++], Win32 predefined
 - Windows API [C++], predefined symbols
 ms.assetid: 45c8e193-ee2a-4024-bfc2-34d1ec9c9239
-ms.openlocfilehash: f69dddcb8b6a9a390f80ab4d0112e19c4e8d32e1
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: ed6d41bc82a30a40d157c2e23b999e430d505fa9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88835650"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97148773"
 ---
 # <a name="win32-predefined-symbols"></a>Win32 の定義済みシンボル
 
@@ -34,7 +35,7 @@ ms.locfileid: "88835650"
 |IDS_APP_TITLE|文字列現在のアプリケーション名|
 |IDYES|制御ダイアログボックス、[はい] ボタン|
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 Win32
 

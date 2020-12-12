@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「dup、dup2」を参照してください。
 title: dup、dup2
 ms.date: 12/16/2019
 api_name:
@@ -26,15 +27,15 @@ helpviewer_keywords:
 - dup function
 - dup2 function
 ms.assetid: c7572170-47ff-4e0d-b9c3-10f0ab0ba40a
-ms.openlocfilehash: ea6fe475b4a5e3cce5e9d05d89bd351361c2a4de
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: a3a7700aa37a5166c76bca0fcb5c71e6dc50e1a4
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75301211"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97117511"
 ---
 # <a name="dup-dup2"></a>dup、dup2
 
-Microsoft 実装の POSIX 関数名 `dup` と `dup2` は、 [_dup](dup-dup2.md)および[_dup2](dup-dup2.md)関数の非推奨のエイリアスです。 既定では、[コンパイラの警告 (レベル 3) C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md)が生成されます。 これらの名前は、実装固有の名前の標準 C 規則に従っていないため、非推奨とされます。 ただし、関数は引き続きサポートされます。
+Microsoft が実装した POSIX 関数名 `dup` と `dup2` は、 [_dup](dup-dup2.md) および [_dup2](dup-dup2.md) 関数の非推奨のエイリアスです。 既定では、 [コンパイラの警告 (レベル 3) C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md)が生成されます。 これらの名前は、実装固有の名前の標準 C 規則に従っていないため、非推奨とされます。 ただし、関数は引き続きサポートされます。
 
-代わりに[_dup](dup-dup2.md)と[_dup2](dup-dup2.md)を使用することをお勧めします。 または、これらの関数名を引き続き使用して、警告を無効にすることもできます。 詳細については、「警告と[POSIX の関数名](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#posix-function-names)を[無効にする](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#turn-off-the-warning)」を参照してください。
+代わりに [_dup](dup-dup2.md) と [_dup2](dup-dup2.md) を使用することをお勧めします。 または、これらの関数名を引き続き使用して、警告を無効にすることもできます。 詳細については、「警告と[POSIX の関数名](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#posix-function-names)を[無効にする](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#turn-off-the-warning)」を参照してください。

@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「ATL Services」を参照してください。
 title: ATL サービス
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,42 +8,42 @@ helpviewer_keywords:
 - services, ATL
 - ATL services
 ms.assetid: 8c09d1a8-7548-4d2c-947c-9d795a81659b
-ms.openlocfilehash: 052169154a62cbd07a82f08087fc2c2db8ae46c5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1cb1f526434cefe57dc4675d592f836e04a6cdb6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62251916"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97148604"
 ---
 # <a name="atl-services"></a>ATL サービス
 
-ATL COM オブジェクトを作成するには、サービスで実行されるように、ATL プロジェクト ウィザードでのサーバー オプションの一覧からサービス (EXE) を選択します。 ウィザードはから派生したクラスを作成し、`CAtlServiceModuleT`してサービスを実装します。
+ATL COM オブジェクトを作成してサービスで実行されるようにするには、ATL プロジェクトウィザードのサーバーオプションの一覧から [Service (EXE)] を選択します。 次に、ウィザードは、から派生したクラスを作成し `CAtlServiceModuleT` てサービスを実装します。
 
-ATL COM オブジェクトをサービスとしてビルドするとき、のみ、ローカル サーバーとして登録され、コントロール パネルの サービスの一覧では表示されません。 も、サービスとしてのローカル サーバーとしてサービスをデバッグする方が簡単であるためにです。 サービスとしてインストールするには、コマンド プロンプトで、次を実行します。
+ATL COM オブジェクトがサービスとして構築されると、ローカルサーバーとしてのみ登録され、コントロールパネルの [サービス] の一覧には表示されません。 これは、サービスをサービスとしてのローカルサーバーとしてデバッグする方が簡単であるためです。 サービスとしてインストールするには、コマンドプロンプトで次のコマンドを実行します。
 
 `YourEXE` `.exe /Service`
 
-これをアンインストールするには次の手順を実行します。
+アンインストールするには、次のように実行します。
 
 `YourEXE` `.exe /UnregServer`
 
-このセクションでは最初の 4 つのトピックについて説明しての実行中に発生するアクション`CAtlServiceModuleT`メンバー関数。 関数が呼び出されると、通常、同じ順序でこれらのトピックが表示されます。 これらのトピックについての理解を向上させるのには、参照として ATL プロジェクト ウィザードによって生成されたソース コードを使用することをお勧めを勧めします。 これらの最初の 4 つのトピックは次のとおりです。
+このセクションの最初の4つのトピックでは、メンバー関数の実行中に発生するアクションについて説明し `CAtlServiceModuleT` ます。 これらのトピックは、通常呼び出される関数と同じ順序で表示されます。 これらのトピックの理解を深めるために、ATL プロジェクトウィザードで生成されたソースコードを参照として使用することをお勧めします。 最初の4つのトピックは次のとおりです。
 
-- [Catlservicemodulet::start 関数](../atl/reference/catlservicemodulet-class.md#start)
+- [CAtlServiceModuleT:: Start 関数](../atl/reference/catlservicemodulet-class.md#start)
 
-- [Catlservicemodulet::servicemain 関数](../atl/reference/catlservicemodulet-class.md#servicemain)
+- [CAtlServiceModuleT:: ServiceMain 関数](../atl/reference/catlservicemodulet-class.md#servicemain)
 
-- [Catlservicemodulet::run 関数](../atl/reference/catlservicemodulet-class.md#run)
+- [CAtlServiceModuleT:: Run 関数](../atl/reference/catlservicemodulet-class.md#run)
 
-- [Catlservicemodulet::handler 関数](../atl/reference/catlservicemodulet-class.md#handler)
+- [CAtlServiceModuleT:: Handler 関数](../atl/reference/catlservicemodulet-class.md#handler)
 
-最後の 3 つのトピックでは、サービスの開発に関連する概念を説明します。
+最後の3つのトピックでは、サービスの開発に関連する概念について説明します。
 
-- [レジストリ エントリ](../atl/registry-entries.md)ATL サービス
+- ATL サービスの[レジストリエントリ](../atl/registry-entries.md)
 
 - [DCOMCNFG](../atl/dcomcnfg.md)
 
-- [デバッグのヒント](../atl/debugging-tips.md)ATL サービス
+- ATL サービスの[デバッグのヒント](../atl/debugging-tips.md)
 
 ## <a name="see-also"></a>関連項目
 

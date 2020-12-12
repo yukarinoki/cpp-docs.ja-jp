@@ -1,4 +1,5 @@
 ---
+description: 詳細については、__asm ブロックでの C または C++ の使用に関するページを参照してください。
 title: __asm ブロックでの C または C++ の使用
 ms.date: 08/30/2018
 helpviewer_keywords:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 - typedef names, used in __asm blocks
 - __asm keyword [C++], C/C++ elements in
 ms.assetid: ae8b2b52-6b75-42e3-ac0c-ad02d922ed97
-ms.openlocfilehash: 05e63d666f3fc39126d6f48e8fc523c4a02e76df
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 2fc1987339fcbabee07e2b626c3ae764c3d5e2e1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87191418"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97121928"
 ---
 # <a name="using-c-or-c-in-__asm-blocks"></a>__asm ブロックでの C または C++ の使用
 
@@ -35,11 +36,11 @@ ms.locfileid: "87191418"
 
 - マクロおよびプリプロセッサディレクティブ
 
-- コメント (と__ / \* \* / __の両方 __//__ )
+- コメント (と __/ \* \* /__ の両方 __//__ )
 
 - 型名 (MASM の型が有効である任意の場所)
 
-- **`typedef`** 名前。通常、 **PTR** 、**型**、またはなどの演算子と共に使用して、構造体または共用体のメンバーを指定します。
+- **`typedef`** 名前。通常、 **PTR** 、 **型** 、またはなどの演算子と共に使用して、構造体または共用体のメンバーを指定します。
 
 ブロック内では **`__asm`** 、C 表記またはアセンブラー基数表記 (0x100 と100h は同等) で整数定数を指定できます。 これにより、C で定数を定義 (を使用) して、 `#define` c または C++ とプログラムのアセンブリ部分の両方で使用できます。 また、定数を8進数で指定するには、その前に0を指定します。 たとえば、0777は8進数の定数を指定します。
 

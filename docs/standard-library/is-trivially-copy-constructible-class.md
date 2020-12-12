@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: is_trivially_copy_constructible クラス'
 title: is_trivially_copy_constructible クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - is_trivially_copy_constructible
 ms.assetid: 4274cef5-afdd-4f2d-bc83-7562e7944ddf
-ms.openlocfilehash: f8c4026da424e77b57555dd4c342c9ac7a386591
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: c247e81f52ad98e546a840bb38938fe15bc9b302
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68447986"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97118525"
 ---
-# <a name="istriviallycopyconstructible-class"></a>is_trivially_copy_constructible クラス
+# <a name="is_trivially_copy_constructible-class"></a>is_trivially_copy_constructible クラス
 
 型に自明なコピー コンストラクターが含まれるかどうかをテストします。
 
@@ -29,15 +30,15 @@ struct is_trivially_copy_constructible;
 *\T*\
 照会する型。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-型*T*が自明なコピーコンストラクターを持つクラスである場合、型述語のインスタンスは true を保持します。それ以外の場合は、false を保持します。
+型 *T* が自明なコピーコンストラクターを持つクラスである場合、型述語のインスタンスは true を保持します。それ以外の場合は、false を保持します。
 
-クラス*t*のコピーコンストラクターは、暗黙的に宣言されている場合は単純です *。クラス t*には仮想関数も仮想基底もありません。クラス*t*のすべての直接基底に自明なコピーコンストラクター、すべての非静的データメンバーのクラスが含まれます。クラス型のに自明なコピーコンストラクターがあり、クラスの型配列のすべての非静的データメンバーのクラスに自明なコピーコンストラクターが含まれています。
+クラス t のコピーコンストラクターは、暗黙的に宣言されている場合は *単純です。* *クラス t には* 仮想関数も仮想基底もありません。 *クラス t の* すべての直接基底クラスに自明なコピーコンストラクターがあるため、クラス型のすべての非静的データメンバーのクラスに自明なコピーコンストラクターが含まれます。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-**ヘッダー:** \<type_traits>
+**ヘッダー:**\<type_traits>
 
 **名前空間:** std
 

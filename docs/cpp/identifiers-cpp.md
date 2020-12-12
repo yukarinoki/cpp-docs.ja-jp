@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: 識別子 (C++)'
 title: C++ 識別子
 ms.date: 05/07/2019
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - white space, in C++ identifiers
 - identifiers [C++]
 ms.assetid: 03a0dfb1-4530-4cdf-8295-5ea4dca4c1b8
-ms.openlocfilehash: 2d16dd318cd42b6294ef60edf44a16ccaf47b99b
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 24798675940761eb7a2b8cbdeb6d63592bb4d05a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87187674"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97114014"
 ---
 # <a name="identifiers-c"></a>C++ 識別子
 
@@ -62,7 +63,7 @@ N O P Q R S T U V W X Y Z
 
 **Microsoft 固有の仕様**
 
-Microsoft C++ 識別子の最初の 2048 文字だけが意味を持ちます。 ユーザー定義型の名前はコンパイラによって型情報を保持するように修飾されます。 結果の名前は、型情報を含め、2048 文字を超えることはできません (詳細については、「[装飾名](../build/reference/decorated-names.md)」を参照してください)。修飾された識別子の長さに影響する要因は次のとおりです。
+Microsoft C++ 識別子の最初の 2048 文字だけが意味を持ちます。 ユーザー定義型の名前はコンパイラによって型情報を保持するように修飾されます。 結果の名前は、型情報を含め、2048 文字を超えることはできません (詳細については、「 [装飾名](../build/reference/decorated-names.md) 」を参照してください)。修飾された識別子の長さに影響する要因は次のとおりです。
 
 - 識別子が、ユーザー定義型のオブジェクト、またはユーザー定義型から派生した型を表すかどうか。
 

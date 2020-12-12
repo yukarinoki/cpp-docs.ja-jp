@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「コンパイラエラー C2482」を参照してください。
 title: コンパイラ エラー C2482
 ms.date: 09/15/2017
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2482
 ms.assetid: 98c87da2-625c-4cc2-9bf7-78d15921e779
-ms.openlocfilehash: a68c3f06daf977bda4700a293803859d4aa96771
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 1ffde4d7ea9f4eccdd643b3ac6efe0545775816a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87216207"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97123930"
 ---
 # <a name="compiler-error-c2482"></a>コンパイラ エラー C2482
 
@@ -19,7 +20,7 @@ ms.locfileid: "87216207"
 
 ## <a name="remarks"></a>解説
 
-マネージまたは WinRT コードでは、 [__declspec (スレッド)](../../cpp/thread.md)ストレージクラス修飾子属性または[thread_local](../../cpp/storage-classes-cpp.md#thread_local)ストレージクラス指定子を使用して宣言された変数を、実行時の評価が必要な式で初期化することはできません。 `__declspec(thread)`これらのランタイム環境で、またはデータを初期化するには、静的な式が必要です **`thread_local`** 。
+マネージまたは WinRT コードでは、 [__declspec (スレッド)](../../cpp/thread.md) ストレージクラス修飾子属性または [thread_local](../../cpp/storage-classes-cpp.md#thread_local) ストレージクラス指定子を使用して宣言された変数を、実行時の評価が必要な式で初期化することはできません。 `__declspec(thread)`これらのランタイム環境で、またはデータを初期化するには、静的な式が必要です **`thread_local`** 。
 
 ## <a name="example"></a>例
 

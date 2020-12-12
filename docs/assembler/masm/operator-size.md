@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: 演算子のサイズ'
 title: SIZE 演算子
 ms.date: 12/17/2019
 f1_keywords:
@@ -8,16 +9,16 @@ helpviewer_keywords:
 - operator SIZE
 - SIZE operator
 ms.assetid: 2e380289-3ad7-4bf0-8b1c-75211f59e5c4
-ms.openlocfilehash: 9a1906e4a8771df24d352d73bfa870ea71705444
-ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
+ms.openlocfilehash: a0d8c47fbfbfdc84d351ea65d8cb87ffe3ae43c3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75318879"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97126504"
 ---
 # <a name="operator-size"></a>SIZE 演算子
 
-最初の初期化子によって割り当てられた*変数*のバイト数を返します。
+最初の初期化子によって割り当てられた *変数* のバイト数を返します。
 
 ## <a name="syntax"></a>構文
 

@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「コンパイラエラー C3094」を参照してください。
 title: コンパイラ エラー C3094
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3094
 ms.assetid: 10da9b7c-e72d-4013-9925-c83e1bb142db
-ms.openlocfilehash: 9c9d3aaf8911e74734bb6a8ac03dfd6ebe5bc7a8
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 0ca6beeaf8976aab3847b7384c74f6dfef5a2f5a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74751327"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97116341"
 ---
 # <a name="compiler-error-c3094"></a>コンパイラ エラー C3094
 
@@ -19,7 +20,7 @@ ms.locfileid: "74751327"
 
 属性のスコープを正しく指定しませんでした。  詳細については、「 [User-Defined Attributes](../../extensions/user-defined-attributes-cpp-component-extensions.md)」を参照してください。
 
-## <a name="example"></a>使用例
+## <a name="example"></a>例
 
 次の例では C3094 が生成されます。
 

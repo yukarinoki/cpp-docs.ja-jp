@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: CBaseTabbedPane クラス'
 title: CBaseTabbedPane クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -62,12 +63,12 @@ helpviewer_keywords:
 - CBaseTabbedPane [MFC], SetAutoHideMode
 - CBaseTabbedPane [MFC], ShowTab
 ms.assetid: f22c0080-5b29-4a0a-8f74-8f0a4cd2dbcf
-ms.openlocfilehash: 21f2821392d2b9e71837997f5a9a10ab80ba073f
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 980f2691aa9e129b0e47070d7ff095d486c45b65
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88838673"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97122747"
 ---
 # <a name="cbasetabbedpane-class"></a>CBaseTabbedPane クラス
 
@@ -150,7 +151,7 @@ class CBaseTabbedPane : public CDockablePane
 
 `CBaseTabbedPane`
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** afxBaseTabbedPane
 
@@ -186,7 +187,7 @@ virtual BOOL AddTab(
 
 ### <a name="remarks"></a>解説
 
-タブ付きペインに新しいタブとしてペインを追加するには、このメソッドを呼び出します。 *Pnewbar*が型のオブジェクトを指している場合は `CBaseTabbedPane` 、すべてのタブがタブ付きペインにコピーされ、 *pnewbar*が破棄されます。 したがって、 *Pnewbar* は無効なポインターになるため、使用しないでください。
+タブ付きペインに新しいタブとしてペインを追加するには、このメソッドを呼び出します。 *Pnewbar* が型のオブジェクトを指している場合は `CBaseTabbedPane` 、すべてのタブがタブ付きペインにコピーされ、 *pnewbar* が破棄されます。 したがって、 *Pnewbar* は無効なポインターになるため、使用しないでください。
 
 ## <a name="cbasetabbedpaneallowdestroyemptytabbedpane"></a><a name="allowdestroyemptytabbedpane"></a> CBaseTabbedPane:: AllowDestroyEmptyTabbedPane
 
@@ -260,7 +261,7 @@ virtual void ConvertToTabbedDocument(BOOL bActiveTabOnly = TRUE);
 ### <a name="parameters"></a>パラメーター
 
 *bActiveTabOnly*<br/>
-からタブ付きペインを変換する場合は、[TRUE] を指定して、アクティブなタブのみを変換します。ペイン内のすべてのタブを変換するには、FALSE を指定します。
+からタブ付きペインを変換する場合、[TRUE] を指定すると、アクティブなタブのみが変換されます。ペイン内のすべてのタブを変換するには、FALSE を指定します。
 
 ## <a name="cbasetabbedpanedetachpane"></a><a name="detachpane"></a> CBaseTabbedPane::D etachPane
 
@@ -358,7 +359,7 @@ virtual CWnd* FindBarByTabNumber(
 
 ### <a name="remarks"></a>解説
 
-*NTabNum*パラメーターで指定したタブにあるペインを取得するには、このメソッドを呼び出します。
+*NTabNum* パラメーターで指定したタブにあるペインを取得するには、このメソッドを呼び出します。
 
 ## <a name="cbasetabbedpanefloattab"></a><a name="floattab"></a> CBaseTabbedPane:: FloatTab
 
@@ -444,7 +445,7 @@ virtual void GetMinSize(CSize& size) const;
 
 ### <a name="remarks"></a>解説
 
-最小ペインサイズの一貫した処理がアクティブ ( [CPane:: m_bHandleMinSize](../../mfc/reference/cpane-class.md#m_bhandleminsize)) である場合、 *サイズ* にはアクティブなタブで許容される最小サイズが設定されます。それ以外の場合、 *サイズ* には [CPane:: GetMinSize](../../mfc/reference/cpane-class.md#getminsize)の戻り値が格納されます。
+最小ペインサイズの一貫した処理がアクティブ ( [CPane:: m_bHandleMinSize](../../mfc/reference/cpane-class.md#m_bhandleminsize)) の場合、 *サイズ* にはアクティブなタブで許容される最小サイズが設定されます。それ以外の場合、 *size* には [CPane:: GetMinSize](../../mfc/reference/cpane-class.md#getminsize)の戻り値が格納されます。
 
 ## <a name="cbasetabbedpanegetpaneicon"></a><a name="getpaneicon"></a> CBaseTabbedPane:: Get区画アイコン
 
@@ -461,7 +462,7 @@ virtual void GetMinSize(CSize& size) const;
 
 ### <a name="remarks"></a>解説
 
-最小ペインサイズの一貫した処理がアクティブ ( [CPane:: m_bHandleMinSize](../../mfc/reference/cpane-class.md#m_bhandleminsize)) である場合、 *サイズ* にはアクティブなタブで許容される最小サイズが設定されます。それ以外の場合、 *サイズ* には [CPane:: GetMinSize](../../mfc/reference/cpane-class.md#getminsize)の戻り値が格納されます。
+最小ペインサイズの一貫した処理がアクティブ ( [CPane:: m_bHandleMinSize](../../mfc/reference/cpane-class.md#m_bhandleminsize)) の場合、 *サイズ* にはアクティブなタブで許容される最小サイズが設定されます。それ以外の場合、 *size* には [CPane:: GetMinSize](../../mfc/reference/cpane-class.md#getminsize)の戻り値が格納されます。
 
 ## <a name="cbasetabbedpanegetpanelist"></a><a name="getpanelist"></a> CBaseTabbedPane:: Get List
 
@@ -594,7 +595,7 @@ virtual BOOL RemovePane(CWnd* pBar);
 
 ### <a name="remarks"></a>解説
 
-*Pbar*パラメーターによって指定されたペインをタブ付きペインから削除するには、このメソッドを呼び出します。
+*Pbar* パラメーターによって指定されたペインをタブ付きペインから削除するには、このメソッドを呼び出します。
 
 ## <a name="cbasetabbedpanesetautodestroy"></a><a name="setautodestroy"></a> CBaseTabbedPane:: SetAutoDestroy
 
@@ -702,5 +703,5 @@ virtual CMFCAutoHideToolBar* SetAutoHideMode(
 ## <a name="see-also"></a>関連項目
 
 [階層図](../../mfc/hierarchy-chart.md)<br/>
-[クラス](../../mfc/reference/mfc-classes.md)<br/>
+[Classes](../../mfc/reference/mfc-classes.md)<br/>
 [CDockablePane クラス](../../mfc/reference/cdockablepane-class.md)
