@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: is_member_object_pointer クラス'
 title: is_member_object_pointer クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,14 +8,14 @@ helpviewer_keywords:
 - is_member_object_pointer class
 - is_member_object_pointer
 ms.assetid: 64f9cdf3-4621-4310-a076-a7bc986926b9
-ms.openlocfilehash: 37d836c3626b492750ffa28c378413757119c9d3
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: bf98bfa4017730a212f99849bde552ceb67625b0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68456166"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97230934"
 ---
-# <a name="ismemberobjectpointer-class"></a>is_member_object_pointer クラス
+# <a name="is_member_object_pointer-class"></a>is_member_object_pointer クラス
 
 型がメンバー オブジェクトへのポインターであるかどうかをテストします。
 
@@ -27,12 +28,12 @@ struct is_member_object_pointer;
 
 ### <a name="parameters"></a>パラメーター
 
-*~* \
+*~*\
 照会する型。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-型*Ty*がメンバーオブジェクトへのポインターまたは`cv-qualified`メンバーオブジェクトへのポインターである場合、型述語のインスタンスは true を保持します。それ以外の場合は、false を保持します。 Ty が`is_member_object_pointer`メンバー関数へのポインターである場合、は false を保持することに注意してください。
+型 *Ty* がメンバーオブジェクトへのポインターまたはメンバーオブジェクトへのポインターである場合、型述語のインスタンスは true を保持し `cv-qualified` ます。それ以外の場合は、false を保持します。 `is_member_object_pointer` *Ty* がメンバー関数へのポインターである場合、は false を保持することに注意してください。
 
 ## <a name="example"></a>例
 
@@ -77,9 +78,9 @@ is_member_object_pointer<int trivial::*> == true
 is_member_object_pointer<int (functional::*)()> == false
 ```
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-**ヘッダー:** \<type_traits>
+**ヘッダー:**\<type_traits>
 
 **名前空間:** std
 

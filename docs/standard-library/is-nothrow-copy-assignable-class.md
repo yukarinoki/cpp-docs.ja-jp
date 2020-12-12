@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: is_nothrow_copy_assignable クラス'
 title: is_nothrow_copy_assignable クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - is_nothrow_copy_assignable
 ms.assetid: baa8abd6-4f53-489f-abba-8d5d5c53bbbc
-ms.openlocfilehash: 330c97cd945e161d2bf47deb377dd732bf53b3c9
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 43618158e33a393012a9f7a4a3ad14c816e3cd6d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68455985"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97230810"
 ---
-# <a name="isnothrowcopyassignable-class"></a>is_nothrow_copy_assignable クラス
+# <a name="is_nothrow_copy_assignable-class"></a>is_nothrow_copy_assignable クラス
 
 スローしないことがコンパイラに判明しているコピー代入演算子が型にあるかどうかをテストします。
 
@@ -29,13 +30,13 @@ struct is_nothrow_copy_assignable;
 *\T*\
 照会する型。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-型述語のインスタンスは、が true を`is_nothrow_assignable<T&, const T&>`保持する参照可能 type *T*に対して true を保持します。それ以外の場合は、false を保持します。
+型述語のインスタンスは、が true を保持する参照可能 type *T* に対して true を保持 `is_nothrow_assignable<T&, const T&>` します。それ以外の場合は、false を保持します。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-**ヘッダー:** \<type_traits>
+**ヘッダー:**\<type_traits>
 
 **名前空間:** std
 

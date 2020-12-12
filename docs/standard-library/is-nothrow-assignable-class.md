@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: is_nothrow_assignable クラス'
 title: is_nothrow_assignable クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - is_nothrow_assignable
 ms.assetid: aa3aca92-308b-4b1d-b3f3-c54216c48fe7
-ms.openlocfilehash: 7130079ff58820ec5a8893fd248c5b98fc10c93c
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 2d63c0f29b398cb8cd9eaef5e3e9e637c0b4eb16
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87222369"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97230823"
 ---
 # <a name="is_nothrow_assignable-class"></a>is_nothrow_assignable クラス
 
-型*の値を型**に*割り当てることができるかどうかをテストし、割り当てがスローしないことがわかっていることを確認します。
+型 *の値を型**に* 割り当てることができるかどうかをテストし、割り当てがスローしないことがわかっていることを確認します。
 
 ## <a name="syntax"></a>構文
 
@@ -34,9 +35,9 @@ struct is_nothrow_assignable;
 
 ## <a name="remarks"></a>解説
 
-式 `declval<To>() = declval<From>()` は正しい形式である必要があり、スローしないことがコンパイラに判明している必要があります。 と*の*どちら*To*も、完全な型、 **`void`** 、または不明なバインドの配列である必要があります。
+式 `declval<To>() = declval<From>()` は正しい形式である必要があり、スローしないことがコンパイラに判明している必要があります。 と *の* どちらも、完全な型、 **`void`** 、または不明なバインドの配列である必要があります。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:**\<type_traits>
 

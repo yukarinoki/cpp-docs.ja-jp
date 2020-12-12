@@ -1,4 +1,5 @@
 ---
+description: 詳細については、is_invocable、is_invocable_r、is_nothrow_invocable、is_nothrow_invocable_r クラス」を参照してください。
 title: is_invocable、is_invocable_r、is_nothrow_invocable、is_nothrow_invocable_r クラス
 ms.date: 02/21/2019
 f1_keywords:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 - is_nothrow_invocable
 - is_nothrow_invocable_r class
 - is_nothrow_invocable_r
-ms.openlocfilehash: 47801eff0ea0c41c7b69dfb7a1aa5190a43f1b75
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 117e2ff85634898e170223e726a2cfea0ac6a470
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87233107"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97230935"
 ---
 # <a name="is_invocable-is_invocable_r-is_nothrow_invocable-is_nothrow_invocable_r-classes"></a>is_invocable、is_invocable_r、is_nothrow_invocable、is_nothrow_invocable_r クラス
 
@@ -68,19 +69,19 @@ inline constexpr bool is_nothrow_invocable_r_v =
 照会する引数の型。
 
 *コンバーチブル*\
-*呼び出し*可能の結果を変換できる型である必要があります。
+*呼び出し* 可能の結果を変換できる型である必要があります。
 
 ## <a name="remarks"></a>解説
 
-型の述語は、 `is_invocable` 未評価のコンテキストで引数引数を使用して呼び出し*Args*可能な型を呼び出すことができる場合に true*を*保持します。
+型の述語は、 `is_invocable` 未評価のコンテキストで引数引数を使用して呼び出し可能な型を呼び出すことができる場合に true *を* 保持します。
 
-`is_invocable_r`型述語は、未評価のコンテキストで引数*Callable*引数を使用して呼び出し可能*Args*な型を呼び出すことができる場合に True を保持し、*変換*可能に変換可能な結果型を生成します。
+`is_invocable_r`型述語は、未評価のコンテキストで引数引数を使用して呼び出し可能な型を呼び出すことができる場合に True を保持し、*変換* 可能に変換可能な結果型を生成します。
 
-型の述語は、評価され `is_nothrow_invocable` ないコンテキストで引数引数を使用して呼び出し可能な型を呼び出すことができ、そのような呼び出しが例外をスローしない*ことが*わかっている場合*に、* true を保持します。
+型の述語は、評価され `is_nothrow_invocable` ないコンテキストで引数引数を使用して呼び出し可能な型を呼び出すことができ、そのような呼び出しが例外をスローしない *ことが* わかっている場合 *に、* true を保持します。
 
-型の述語は、 `is_nothrow_invocable_r` 未評価のコンテキストで*Callable*引数*Args*を使用して呼び出し可能な型を呼び出すことができる場合に True を保持し、*変換*可能なに変換可能な結果型を生成します。このような呼び出しは例外をスローしないことがわかっています。
+型の述語は、 `is_nothrow_invocable_r` 未評価のコンテキストで引数 *Args* を使用して呼び出し可能な型を呼び出すことができる場合に True を保持し、*変換* 可能なに変換可能な結果型を生成します。このような呼び出しは例外をスローしないことがわかっています。
 
-型*変換*可能、*呼び出し*可能、およびパラメーターパック*引数*の型はそれぞれ、完全な型、不明なバインドの配列、または cv で修飾された型である必要があり **`void`** ます。 それ以外の場合、述語の動作は未定義です。
+型 *変換* 可能、 *呼び出し* 可能、およびパラメーターパック *引数* の型はそれぞれ、完全な型、不明なバインドの配列、または cv で修飾された型である必要があり **`void`** ます。 それ以外の場合、述語の動作は未定義です。
 
 ## <a name="example"></a>例
 
@@ -114,7 +115,7 @@ int main()
 }
 ```
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:**\<type_traits>
 

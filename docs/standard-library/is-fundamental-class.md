@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: is_fundamental クラス'
 title: is_fundamental クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - is_fundamental class
 - is_fundamental
 ms.assetid: b84eee84-2fb2-4611-beaf-b384074d8b6a
-ms.openlocfilehash: 99d712d11fd47f694477029bc5c2b23fe732eb04
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 83af1491eb92f111a36e89f1511a71b48d784c73
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87233120"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97230953"
 ---
 # <a name="is_fundamental-class"></a>is_fundamental クラス
 
@@ -32,7 +33,7 @@ struct is_fundamental;
 
 ## <a name="remarks"></a>解説
 
-型*Ty*が基本型、つまり、、 **`void`** 整数型、浮動小数点型、またはそのいずれかの形式である場合、型述語のインスタンスは true を保持し `cv-qualified` ます。それ以外の場合は、false を保持します。
+型 *Ty* が基本型、つまり、、 **`void`** 整数型、浮動小数点型、またはそのいずれかの形式である場合、型述語のインスタンスは true を保持し `cv-qualified` ます。それ以外の場合は、false を保持します。
 
 ## <a name="example"></a>例
 
@@ -69,7 +70,7 @@ is_fundamental<const float> == true
 is_fundamental<void> == true
 ```
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:**\<type_traits>
 
