@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: signal 定数'
 title: signal 定数
 ms.date: 11/04/2016
 f1_keywords:
@@ -17,12 +18,12 @@ helpviewer_keywords:
 - signal constants
 - SIGILL constant
 ms.assetid: a3b39281-dae7-4e44-8d68-e6a610c669dd
-ms.openlocfilehash: d26671b8c3d983e7f1c3fd559d8aa2029e3162fe
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 57615e3a694ae24c0bfefe42b6a8ddd1de2a55ed
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88841143"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97276999"
 ---
 # <a name="signal-constants"></a>signal 定数
 
@@ -50,5 +51,5 @@ ms.locfileid: "88841143"
 ## <a name="see-also"></a>関連項目
 
 [signal](../c-runtime-library/reference/signal.md)<br/>
-[発生](../c-runtime-library/reference/raise.md)<br/>
+[raise](../c-runtime-library/reference/raise.md)<br/>
 [グローバル定数](../c-runtime-library/global-constants.md)

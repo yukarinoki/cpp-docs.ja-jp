@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: Security-Enhanced バージョンの CRT 関数'
 title: CRT 関数のセキュリティが強化されたバージョン
 ms.date: 03/21/2018
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - security-enhanced CRT
 - CRT, security enhancements
 ms.assetid: f87e5a01-4cb2-4379-9e8f-d4693828c55a
-ms.openlocfilehash: 9cc44caa047e087b2f3de9b5af142d1ea868e893
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 95e94eb7790ef589fee3287b6cee8997faac7ab6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87232379"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97277207"
 ---
 # <a name="security-enhanced-versions-of-crt-functions"></a>CRT 関数のセキュリティが強化されたバージョン
 
@@ -19,7 +20,7 @@ ms.locfileid: "87232379"
 
 ## <a name="secure-functions"></a>セキュリティで保護された関数
 
-|CRT 関数|セキュリティが強化された関数|用途|
+|CRT 関数|セキュリティが強化された関数|使用|
 |------------------|--------------------------------|---------|
 |[_access、_waccess](../c-runtime-library/reference/access-waccess.md)|[_access_s、_waccess_s](../c-runtime-library/reference/access-s-waccess-s.md)|ファイル アクセス許可を決定します。|
 |[_alloca](../c-runtime-library/reference/alloca.md)|[_malloca](../c-runtime-library/reference/malloca.md)|スタックにメモリを割り当てます。|

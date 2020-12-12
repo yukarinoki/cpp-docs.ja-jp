@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「定数の生成」を参照してください
 title: spawn 定数
 ms.date: 11/04/2016
 f1_keywords:
@@ -20,12 +21,12 @@ helpviewer_keywords:
 - P_WAIT constant
 - _P_WAIT constant
 ms.assetid: e0533e88-d362-46fc-b53c-5f193226d879
-ms.openlocfilehash: 988cc5e1b982f0c5577db77ae94f1df46c95ec0e
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: 0bac30346c974fa63d65da78a097cb24768cb313
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57742755"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97276960"
 ---
 # <a name="spawn-constants"></a>spawn 定数
 
@@ -43,10 +44,10 @@ ms.locfileid: "57742755"
 |--------------|-------------|
 |`_P_OVERLAY`|呼び出し元のプロセスを新しいプロセスでオーバーレイし、呼び出し元のプロセスを破棄します (`_exec` 呼び出しと同じ影響)。|
 |`_P_WAIT`|新しいプロセスの実行が完了するまで、呼び出し元のスレッドが中断されます (同期 `_spawn`)。|
-|`_P_NOWAIT`、 `_P_NOWAITO`|新しいプロセスと同時に呼び出し元のプロセスを実行し続けます (非同期 `_spawn`)。|
+|`_P_NOWAIT`, `_P_NOWAITO`|新しいプロセスと同時に呼び出し元のプロセスを実行し続けます (非同期 `_spawn`)。|
 |`_P_DETACH`|呼び出し元のプロセスの実行を継続します。新しいプロセスは、コンソールまたはキーボードへのアクセスなしでバックグラウンドで実行されます。 新しいプロセスに対する `_cwait` 呼び出しは失敗します。 これは、非同期の `_spawn` です。|
 
 ## <a name="see-also"></a>関連項目
 
-[_spawn 系関数と _wspawn 系関数](../c-runtime-library/spawn-wspawn-functions.md)<br/>
+[_spawn, _wspawn 関数](../c-runtime-library/spawn-wspawn-functions.md)<br/>
 [グローバル定数](../c-runtime-library/global-constants.md)

@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: Platform:: IDisposable インターフェイス'
 title: Platform::IDisposable インターフェイス
 ms.date: 02/03/2017
 ms.topic: reference
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::IDisposable Interface
 ms.assetid: f4344056-7030-42ed-bc98-b140edffddcd
-ms.openlocfilehash: 0024edbad0bb3311a0497be67fc8bcfc954602e1
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 0a1e7b44861d48f496f21d634d4d28ff1c968bcf
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80214241"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97276778"
 ---
 # <a name="platformidisposable-interface"></a>Platform::IDisposable インターフェイス
 
@@ -38,11 +39,11 @@ IDisposable インターフェイスは IUnknown インターフェイスから�
 
 IDisposable インターフェイスには、次のメソッドがあります。
 
-|方法|説明|
+|Method|説明|
 |------------|-----------------|
 |Dispose|アンマネージ リソースを解放するために使用されます。|
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 **サポートされている最低限のクライアント:** Windows 8
 

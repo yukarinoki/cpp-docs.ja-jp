@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: _set_output_format'
 title: _set_output_format
 ms.date: 11/04/2016
 api_name:
@@ -25,12 +26,12 @@ helpviewer_keywords:
 - _set_output_format function
 - set_output_format function
 ms.assetid: 1cb48df8-44b4-4400-bd27-287831d6b3ff
-ms.openlocfilehash: c855df4c29a53fd898b920f6446afe4e568ba5bb
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: d0e45f4f7ce2a6837bce1e583ec3afd5a70f108a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81360919"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97277181"
 ---
 # <a name="_set_output_format"></a>_set_output_format
 
@@ -49,7 +50,7 @@ unsigned int _set_output_format(
 
 #### <a name="parameters"></a>パラメーター
 
-*形式*<br/>
+*format*<br/>
 [in] 使用する書式を表す値。
 
 ## <a name="return-value"></a>戻り値
@@ -66,7 +67,7 @@ unsigned int _set_output_format(
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |`_set_output_format`|\<stdio.h>|
 

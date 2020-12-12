@@ -1,5 +1,6 @@
 ---
-title: メンバーアクセス演算子:。 および-&gt;
+description: 詳細については、「メンバーアクセス演算子:」を参照してください。 と&gt;
+title: メンバーアクセス演算子:。 と&gt;
 ms.date: 11/04/2016
 f1_keywords:
 - .
@@ -14,14 +15,14 @@ helpviewer_keywords:
 - . operator
 - member access
 ms.assetid: f8fc3df9-d728-40c5-b384-276927f5f1b3
-ms.openlocfilehash: 05bab55e1646783e0f8ab9b414d608c912f60a0f
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 242ded47c22e0cacfc09659fca275c9e412c004e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80178016"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97276817"
 ---
-# <a name="member-access-operators--and--gt"></a>メンバーアクセス演算子:。 および-&gt;
+# <a name="member-access-operators--and--gt"></a>メンバーアクセス演算子:。 と&gt;
 
 ## <a name="syntax"></a>構文
 
@@ -32,13 +33,13 @@ postfix-expression -> name
 
 ## <a name="remarks"></a>解説
 
-メンバーアクセス演算子 **。** および **->** は、構造体、共用体、およびクラスのメンバーを参照するために使用されます。 メンバー アクセス式は、選択したメンバーの値と型を持ちます。
+メンバーアクセス演算子 **。** と **->** は、構造体、共用体、およびクラスのメンバーを参照するために使用されます。 メンバー アクセス式は、選択したメンバーの値と型を持ちます。
 
 メンバー アクセス式には、次の 2 つの形式があります。
 
-1. 最初の形式では、*後置式*は構造体、クラス、または共用体型の値を表し、 *name*は指定された構造体、共用体、またはクラスのメンバーに名前を指定します。 操作の値は*name*の値で、*後置式*が左辺値の場合は左辺値になります。
+1. 最初の形式では、 *後置式* は構造体、クラス、または共用体型の値を表し、 *name* は指定された構造体、共用体、またはクラスのメンバーに名前を指定します。 操作の値は *name* の値で、 *後置式* が左辺値の場合は左辺値になります。
 
-1. 2番目の形式では、*後置式*は構造体、共用体、またはクラスへのポインターを表し、 *name*は指定された構造体、共用体、またはクラスのメンバーに名前を指定します。 値は、 *name*の値で、左辺値です。 **->** 演算子はポインターを逆参照します。 したがって、式 `e->member` および `(*e).member` ( *e*はポインターを表します) は同一の結果を生成します (演算子 **->** または<strong>\*</strong>がオーバーロードされている場合を除きます)。
+1. 2番目の形式では、 *後置式* は構造体、共用体、またはクラスへのポインターを表し、 *name* は指定された構造体、共用体、またはクラスのメンバーに名前を指定します。 値は、 *name* の値で、左辺値です。 **->** 演算子は、ポインターを逆参照します。 したがって、式 `e->member` と `(*e).member` ( *e* はポインターを表します) は同じ結果を生成します (演算子 **->** またはがオーバーロードされている場合を除き <strong>\*</strong> ます)。
 
 ## <a name="example"></a>例
 
@@ -76,9 +77,9 @@ int main() {
 2/1/2000
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [後置式](../cpp/postfix-expressions.md)<br/>
-[C++ の組み込み演算子、優先順位と結合規則](../cpp/cpp-built-in-operators-precedence-and-associativity.md)<br/>
+[C++ の演算子、優先順位と結合規則](../cpp/cpp-built-in-operators-precedence-and-associativity.md)<br/>
 [クラスと構造体](../cpp/classes-and-structs-cpp.md)<br/>
 [構造体と共用体のメンバー](../c-language/structure-and-union-members.md)
