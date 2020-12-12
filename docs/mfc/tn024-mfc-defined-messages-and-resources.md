@@ -1,4 +1,5 @@
 ---
+description: '詳細については、「テクニカルノート 24: MFC-Defined メッセージとリソース」を参照してください。'
 title: 'テクニカル ノート 24: MFC で定義されているメッセージおよびリソース'
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - messages [MFC], MFC
 - TN024
 ms.assetid: c65353ce-8096-454b-ad22-1a7a1dd9a788
-ms.openlocfilehash: 9ad6827e4a46bb9f2ff3b02986a01737772e0858
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 7ead4d72588b9acae125cbe90be67d1e03230de8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88839219"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97215756"
 ---
 # <a name="tn024-mfc-defined-messages-and-resources"></a>テクニカル ノート 24: MFC で定義されているメッセージおよびリソース
 
@@ -45,7 +46,7 @@ MFC プライベートリソースの種類は、0xF0 ~ >0xFF の範囲内です
 |-|-|
 |wParam|使用されていない|
 |lParam|使用されていない|
-|は、次の値は返します。|**AfxWndProc**によって処理された場合は1|
+|は、次の値は返します。|**AfxWndProc** によって処理された場合は1|
 
 **WM_SIZEPARENT**
 
@@ -79,7 +80,7 @@ MFC プライベートリソースの種類は、0xF0 ~ >0xFF の範囲内です
 |lParam|使用されていません (0)|
 |は、次の値は返します。|使用されていません (0)|
 
-ON_UPDATE_COMMAND_UI も ON_COMMAND ハンドラーも存在しない場合、 *Bdisableifnohandler*は0以外の場合、UI オブジェクトを無効にします。
+ON_UPDATE_COMMAND_UI も ON_COMMAND ハンドラーも存在しない場合、 *Bdisableifnohandler* は0以外の場合、UI オブジェクトを無効にします。
 
 **WM_EXITHELPMODE**
 

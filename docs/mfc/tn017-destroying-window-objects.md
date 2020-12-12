@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: テクニカルノート 17: ウィンドウオブジェクトの破棄'
 title: 'テクニカル ノート 17: ウィンドウ オブジェクトの破棄'
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,16 +9,16 @@ helpviewer_keywords:
 - TN017
 - PostNcDestroy method [MFC]
 ms.assetid: 5bf208a5-5683-439b-92a1-547c5ded26cd
-ms.openlocfilehash: 2448a2661851f14fc6fe8747ca19495925442436
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 86ce1255055db98a247ac8997aa7d146eb135583
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87226816"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97215912"
 ---
 # <a name="tn017-destroying-window-objects"></a>テクニカル ノート 17: ウィンドウ オブジェクトの破棄
 
-このメモでは、 [CWnd::P ostncdestroy](../mfc/reference/cwnd-class.md#postncdestroy)メソッドの使用について説明します。 派生オブジェクトのカスタマイズされた割り当てを行う場合は、このメソッドを使用し `CWnd` ます。 このメモでは、 [CWnd::D estroywindow](../mfc/reference/cwnd-class.md#destroywindow)を使用して、演算子ではなく C++ Windows オブジェクトを破棄する必要がある理由についても説明し **`delete`** ます。
+このメモでは、 [CWnd::P ostncdestroy](../mfc/reference/cwnd-class.md#postncdestroy) メソッドの使用について説明します。 派生オブジェクトのカスタマイズされた割り当てを行う場合は、このメソッドを使用し `CWnd` ます。 このメモでは、 [CWnd::D estroywindow](../mfc/reference/cwnd-class.md#destroywindow) を使用して、演算子ではなく C++ Windows オブジェクトを破棄する必要がある理由についても説明し **`delete`** ます。
 
 このトピックのガイドラインに従うと、クリーンアップの問題がほとんど発生しません。 これらの問題は、C++ メモリの削除/解放、のようなシステムリソースの解放、オブジェクトの解放などの問題が原因で発生する可能性が `HWND` あります。
 
@@ -39,14 +40,14 @@ Windows オブジェクトを破棄するには、次の2つの許可された�
 
 ## <a name="auto-cleanup-with-cwndpostncdestroy"></a>CWnd を使用した自動クリーンアップ::P ostNcDestroy
 
-システムが Windows ウィンドウを破棄すると、ウィンドウに最後に送信された Windows メッセージが WM_NCDESTROY されます。 `CWnd`そのメッセージの既定のハンドラーは、 [CWnd:: OnNcDestroy](../mfc/reference/cwnd-class.md#onncdestroy)です。 `OnNcDestroy`は、 `HWND` C++ オブジェクトからをデタッチし、仮想関数を呼び出し `PostNcDestroy` ます。 一部のクラスでは、この関数をオーバーライドして C++ オブジェクトを削除しています。
+システムが Windows ウィンドウを破棄すると、ウィンドウに最後に送信された Windows メッセージが WM_NCDESTROY されます。 `CWnd`そのメッセージの既定のハンドラーは、 [CWnd:: OnNcDestroy](../mfc/reference/cwnd-class.md#onncdestroy)です。 `OnNcDestroy` は、 `HWND` C++ オブジェクトからをデタッチし、仮想関数を呼び出し `PostNcDestroy` ます。 一部のクラスでは、この関数をオーバーライドして C++ オブジェクトを削除しています。
 
 の既定の実装で `CWnd::PostNcDestroy` は何も実行されません。これは、スタックフレームに割り当てられているウィンドウオブジェクト、または他のオブジェクトに埋め込まれたウィンドウオブジェクトに適しています。 これは、他のオブジェクトを使用せずにヒープに割り当てられるように設計されたウィンドウオブジェクトには適していません。 言い換えると、他の C++ オブジェクトに埋め込まれていないウィンドウオブジェクトには適していません。
 
-ヒープに対してのみ割り当てられるように設計されたクラスは、メソッドをオーバーライドして、 `PostNcDestroy` **削除**を実行します。 このステートメントは、C++ オブジェクトに関連付けられているメモリを解放します。 `CWnd`M_hWnd が NULL 以外の場合に既定のデストラクターがを呼び出す場合でも `DestroyWindow` 、クリーンアップフェーズ中にハンドルがデタッチされ、NULL になるため、無限再帰は発生しません。 *m_hWnd*
+ヒープに対してのみ割り当てられるように設計されたクラスは、メソッドをオーバーライドして、 `PostNcDestroy` **削除** を実行します。 このステートメントは、C++ オブジェクトに関連付けられているメモリを解放します。 `CWnd`M_hWnd が NULL 以外の場合に既定のデストラクターがを呼び出す場合でも `DestroyWindow` 、クリーンアップフェーズ中にハンドルがデタッチされ、NULL になるため、無限再帰は発生しません。 
 
 > [!NOTE]
-> システムは通常、 `CWnd::PostNcDestroy` Windows WM_NCDESTROY メッセージを処理した後にを呼び出し、 `HWND` と C++ ウィンドウオブジェクトが接続されなくなります。 システムは、 `CWnd::PostNcDestroy` エラーが発生した場合に、ほとんどの[CWnd:: Create](../mfc/reference/cwnd-class.md#create)呼び出しの実装でもを呼び出します。 自動クリーンアップの規則については、このトピックの後半で説明します。
+> システムは通常、 `CWnd::PostNcDestroy` Windows WM_NCDESTROY メッセージを処理した後にを呼び出し、 `HWND` と C++ ウィンドウオブジェクトが接続されなくなります。 システムは、 `CWnd::PostNcDestroy` エラーが発生した場合に、ほとんどの [CWnd:: Create](../mfc/reference/cwnd-class.md#create) 呼び出しの実装でもを呼び出します。 自動クリーンアップの規則については、このトピックの後半で説明します。
 
 ## <a name="auto-cleanup-classes"></a>自動クリーンアップクラス
 
@@ -58,7 +59,7 @@ Windows オブジェクトを破棄するには、次の2つの許可された�
 
 - 分割ウィンドウ ( `CSplitterWnd` )。
 
-- 既定のコントロールバー (から派生したクラス `CControlBar` 、コントロールバーオブジェクトの自動削除を有効にするための[テクニカルノート 31](../mfc/tn031-control-bars.md)を参照)。
+- 既定のコントロールバー (から派生したクラス `CControlBar` 、コントロールバーオブジェクトの自動削除を有効にするための [テクニカルノート 31](../mfc/tn031-control-bars.md) を参照)。
 
 - ダイアログ ( `CDialog` ) は、スタックフレームのモーダルダイアログ用に設計されています。
 
@@ -72,7 +73,7 @@ Windows オブジェクトを破棄するには、次の2つの許可された�
 
 - (から直接または間接的に派生した) ウィンドウを表示 `CView` します。
 
-これらの規則を解除する場合は、派生クラスのメソッドをオーバーライドする必要があり `PostNcDestroy` ます。 クラスに自動クリーンアップを追加するには、基底クラスを呼び出してから、**このを削除**します。 自動クリーンアップをクラスから削除するには、直接 `CWnd::PostNcDestroy` `PostNcDestroy` 基底クラスのメソッドではなく、直接を呼び出します。
+これらの規則を解除する場合は、派生クラスのメソッドをオーバーライドする必要があり `PostNcDestroy` ます。 クラスに自動クリーンアップを追加するには、基底クラスを呼び出してから、 **このを削除** します。 自動クリーンアップをクラスから削除するには、直接 `CWnd::PostNcDestroy` `PostNcDestroy` 基底クラスのメソッドではなく、直接を呼び出します。
 
 自動クリーンアップ動作を変更する最も一般的な方法は、ヒープに割り当てることができるモードレスダイアログを作成することです。
 
@@ -89,9 +90,9 @@ Warning: calling DestroyWindow in CWnd::~CWnd
     OnDestroy or PostNcDestroy in derived class will not be called
 ```
 
-自動クリーンアップを実行する C++ Windows オブジェクトの場合は、を呼び出す必要があり `DestroyWindow` ます。 演算子を直接使用する場合は **`delete`** 、メモリを2回解放することを示す MFC 診断メモリアロケーターが通知されます。 最初の明示的な呼び出しと、の自動クリーンアップの実装で**このを削除**する間接呼び出しの2回が発生し `PostNcDestroy` ます。
+自動クリーンアップを実行する C++ Windows オブジェクトの場合は、を呼び出す必要があり `DestroyWindow` ます。 演算子を直接使用する場合は **`delete`** 、メモリを2回解放することを示す MFC 診断メモリアロケーターが通知されます。 最初の明示的な呼び出しと、の自動クリーンアップの実装で **このを削除** する間接呼び出しの2回が発生し `PostNcDestroy` ます。
 
-`DestroyWindow`非自動クリーンアップオブジェクトでを呼び出した後も、C++ オブジェクトは引き続き使用されますが、 *M_HWND*は NULL になります。 自動クリーンアップオブジェクトでを呼び出すと、 `DestroyWindow` c++ オブジェクトが失われ、の自動クリーンアップ実装で c++ delete 演算子によって解放され `PostNcDestroy` ます。
+`DestroyWindow`非自動クリーンアップオブジェクトでを呼び出した後も、C++ オブジェクトは引き続き使用されますが、 *M_HWND* は NULL になります。 自動クリーンアップオブジェクトでを呼び出すと、 `DestroyWindow` c++ オブジェクトが失われ、の自動クリーンアップ実装で c++ delete 演算子によって解放され `PostNcDestroy` ます。
 
 ## <a name="see-also"></a>関連項目
 

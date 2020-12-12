@@ -1,4 +1,5 @@
 ---
+description: '詳細については、「テクニカルノート 61: ON_NOTIFY」および「WM_NOTIFY メッセージ」を参照してください。'
 title: 'テクニカル ノート 61: ON_NOTIFY メッセージと WM_NOTIFY メッセージ'
 ms.date: 06/28/2018
 helpviewer_keywords:
@@ -10,35 +11,35 @@ helpviewer_keywords:
 - notification messages
 - WM_NOTIFY message
 ms.assetid: 04a96dde-7049-41df-9954-ad7bb5587caf
-ms.openlocfilehash: 845558dad6b9f6e820c759cb83fce2c6cbceaa0c
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: ecbbc03ad7328b163f89e5b1da095c8c179df097
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81366596"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97214755"
 ---
 # <a name="tn061-on_notify-and-wm_notify-messages"></a>テクニカル ノート 61: ON_NOTIFY メッセージと WM_NOTIFY メッセージ
 
 > [!NOTE]
 > 次のテクニカル ノートは、最初にオンライン ドキュメントの一部とされてから更新されていません。 結果として、一部のプロシージャおよびトピックが最新でないか、不正になります。 最新の情報について、オンライン ドキュメントのキーワードで関係のあるトピックを検索することをお勧めします。
 
-このテクニカル ノートでは、新しいWM_NOTIFY メッセージの背景情報を提供し、MFC アプリケーションでWM_NOTIFY メッセージを処理する推奨される (および最も一般的な) 方法について説明します。
+このテクニカルノートでは、新しい WM_NOTIFY メッセージに関する背景情報を提供し、MFC アプリケーションで WM_NOTIFY メッセージを処理するために推奨される (そして最も一般的な) 方法について説明します。
 
 **Windows 3.x の通知メッセージ**
 
-Windows 3.x では、コントロールは、マウス クリック、コンテンツと選択の変更、および親にメッセージを送信することによってバックグラウンド描画を制御するなどのイベントを親に通知します。 単純な通知は、通知コード (BN_CLICKED など) とコントロール ID が*wParam*にパックされ、コントロールのハンドルが*lParam*に含まれる、特別なWM_COMMAND メッセージとして送信されます。 *wParam*と*lParam*がいっぱいなので、追加のデータを渡す方法はありません。 たとえば、BN_CLICKED通知では、ボタンがクリックされたときにマウス カーソルの位置に関する情報を送信する方法はありません。
+Windows 3.x では、コントロールは、マウスのクリック、コンテンツや選択の変更などのイベントの親に通知し、親にメッセージを送信することによって背景の描画を制御します。 単純な通知は、特殊な WM_COMMAND メッセージとして送信されます。通知コード (BN_CLICKED など) とコントロール ID が *wParam* にパックされ、コントロール ID が *lParam* に組み込まれています。 *WParam* と *lParam* がいっぱいであるため、追加のデータを渡すことはできません。これらのメッセージは単純な通知だけにすることができます。 たとえば、BN_CLICKED 通知では、ボタンがクリックされたときにマウスカーソルの場所に関する情報を送信する方法はありません。
 
-Windows 3.x のコントロールは、追加のデータを含む通知メッセージを送信する必要がある場合、WM_CTLCOLOR、WM_VSCROLL、WM_HSCROLL、WM_DRAWITEM、WM_MEASUREITEM、WM_COMPAREITEM、WM_DELETEITEM、WM_CHARTOITEM、WM_VKEYTOITEMなど、さまざまな特別な目的のメッセージを使用します。 これらのメッセージは、送信したコントロールに反映できます。 詳細については、「 [TN062: Windows コントロールのメッセージ リフレクション](../mfc/tn062-message-reflection-for-windows-controls.md)」を参照してください。
+Windows 3.x のコントロールが追加データを含む通知メッセージを送信する必要がある場合、WM_CTLCOLOR、WM_VSCROLL、WM_HSCROLL、WM_DRAWITEM、WM_MEASUREITEM、WM_COMPAREITEM、WM_DELETEITEM、WM_CHARTOITEM、WM_VKEYTOITEM などのさまざまな用途に特化したメッセージを使用します。 これらのメッセージは、送信元のコントロールに反映されます。 詳細については、「 [テクニカルノート 62: Message リフレクション For Windows Controls](../mfc/tn062-message-reflection-for-windows-controls.md)」を参照してください。
 
-**Win32 の通知メッセージ**
+**Win32 での通知メッセージ**
 
-Windows 3.1 に存在するコントロールの場合、Win32 API は Windows 3.x で使用されていた通知メッセージのほとんどを使用します。 ただし、Win32 では、Windows 3.x でサポートされている高度で複雑なコントロールも追加されています。 多くの場合、これらのコントロールは、通知メッセージとともに追加のデータを送信する必要があります。 追加のデータを必要とする新しい通知ごとに新しい**WM_**<strong>\*</strong>メッセージを追加するのではなく、Win32 API の設計者は、標準化された方法で任意の量の追加データを渡すことができる 1 つのメッセージWM_NOTIFY追加することを選択しました。
+Windows 3.1 に存在するコントロールの場合、Win32 API は、Windows 3.x で使用されていたほとんどの通知メッセージを使用します。 ただし、Win32 では、Windows 3.x でサポートされているものに対して、多数の高度な複雑なコントロールも追加します。 多くの場合、これらのコントロールは、通知メッセージと共に追加のデータを送信する必要があります。 追加 <strong>\*</strong> データを必要とする新しい通知ごとに新しい WM_ メッセージを追加するのではなく、Win32 API のデザイナーは、1つのメッセージだけを追加することを選択しました。 WM_NOTIFY は、標準化された方法で任意の量の追加データを渡すことができます。
 
-WM_NOTIFYメッセージには、メッセージを*wParam*で送信するコントロールの ID と *、lParam*の構造体へのポインタが含まれています。 この構造は **、NMHDR**構造または最初のメンバーとして**NMHDR**構造を有する大きな構造のいずれかである。 **NMHDR**メンバーが最初に使用されるので、この構造体へのポインターは **、NMHDR**へのポインターとして、またはキャスト方法に応じて、より大きな構造体へのポインターとして使用できます。
+WM_NOTIFY メッセージには、 *wParam* でメッセージを送信するコントロールの ID と、 *lParam* の構造体へのポインターが含まれます。 この構造体は、 **nmhdr** 構造体、または最初のメンバーとして **nmhdr** 構造体を持つ、より大きな構造体です。 **Nmhdr** メンバーが最初に使用されるため、この構造体へのポインターは、キャストの方法に応じて、 **nmhdr** へのポインターまたはより大きな構造体へのポインターとして使用できます。
 
-ほとんどの場合、ポインタはより大きな構造体を指し示し、使用するときにキャストする必要があります。 一般的な通知 (名前が**NM_** で始まる) やツール ヒント コントロールのTTN_SHOWとTTN_POP通知など、ほんの数個の通知では、実際に使用される**NMHDR**構造です。
+ほとんどの場合、ポインターはより大きな構造体を指し、使用時にキャストする必要があります。 一般的な通知 (名前が **NM_** で始まる)、ツールヒントコントロールの TTN_SHOW と TTN_POP 通知など、いくつかの通知のみが、実際に使用される **NMHDR** 構造体です。
 
-**NMHDR**構造体または初期メンバーには、メッセージを送信するコントロールのハンドルと ID と通知コード (TTN_SHOWなど) が含まれています。 **NMHDR**構造体の形式は、以下のとおりです。
+**NMHDR** 構造体または初期メンバーには、メッセージを送信するコントロールのハンドルと ID と、通知コード (TTN_SHOW など) が含まれます。 次に、 **NMHDR** 構造体の形式を示します。
 
 ```cpp
 typedef struct tagNMHDR {
@@ -48,9 +49,9 @@ typedef struct tagNMHDR {
 } NMHDR;
 ```
 
-TTN_SHOW メッセージの場合、**コード**メンバーはTTN_SHOWに設定されます。
+TTN_SHOW メッセージの場合、 **コード** メンバーは TTN_SHOW に設定されます。
 
-ほとんどの通知は、最初のメンバーとして**NMHDR**構造体を含む大きな構造体へのポインターを渡します。 たとえば、リスト ビュー コントロールでキーが押されたときに送信される、リスト ビュー コントロールのLVN_KEYDOWN通知メッセージによって使用される構造を考えてみます。 ポインターは、次のように定義されている**LV_KEYDOWN**構造体を指します。
+ほとんどの通知では、最初のメンバーとして **NMHDR** 構造体を含む大きな構造体へのポインターが渡されます。 たとえば、リストビューコントロールの LVN_KEYDOWN 通知メッセージによって使用される構造を考えてみます。このメッセージは、リストビューコントロールでキーが押されたときに送信されます。 ポインターは **LV_KEYDOWN** 構造体を指します。これは次のように定義されています。
 
 ```cpp
 typedef struct tagLV_KEYDOWN {
@@ -60,30 +61,30 @@ typedef struct tagLV_KEYDOWN {
 } LV_KEYDOWN;
 ```
 
-**NMHDR**メンバーはこの構造体の最初にあるので、通知メッセージで渡されるポインターは **、NMHDR**へのポインターまたは**LV_KEYDOWN**へのポインターのいずれかにキャストできます。
+**Nmhdr** メンバーがこの構造体の最初にあるため、通知メッセージで渡されるポインターは、 **nmhdr** へのポインターまたは **LV_KEYDOWN** へのポインターにキャストできます。
 
 **すべての新しい Windows コントロールに共通の通知**
 
-一部の通知は、すべての新しい Windows コントロールに共通です。 これらの通知は **、NMHDR**構造体へのポインタを渡します。
+一部の通知は、すべての新しい Windows コントロールに共通です。 これらの通知は、 **NMHDR** 構造体へのポインターを渡します。
 
-|通知コード|送信されたのは|
+|通知コード|送信の理由|
 |-----------------------|------------------|
-|NM_CLICK|ユーザーがコントロール内でマウスの左ボタンをクリックした|
-|NM_DBLCLK|ユーザーがコントロール内でマウスの左ボタンをダブルクリックした場合|
-|NM_RCLICK|ユーザーがコントロール内でマウスの右ボタンをクリックした|
-|NM_RDBLCLK|ユーザーがコントロール内で右クリックしたボタン|
-|NM_RETURN|コントロールが入力フォーカスを持っている間にユーザーが Enter キーを押した|
-|NM_SETFOCUS|コントロールに入力フォーカスが与えられている|
+|NM_CLICK|ユーザーがコントロールでマウスの左ボタンをクリックしました|
+|NM_DBLCLK|ユーザーがコントロールでマウスの左ボタンをダブルクリックしました|
+|NM_RCLICK|ユーザーがコントロールでマウスの右ボタンをクリックしました|
+|NM_RDBLCLK|ユーザーがコントロールでマウスの右ボタンをダブルクリックしました|
+|NM_RETURN|コントロールに入力フォーカスがあるときにユーザーが ENTER キーを押しました|
+|NM_SETFOCUS|コントロールに入力フォーカスが与えられました|
 |NM_KILLFOCUS|コントロールが入力フォーカスを失いました|
-|NM_OUTOFMEMORY|メモリが不足しているため、コントロールは操作を完了できませんでした|
+|NM_OUTOFMEMORY|使用可能なメモリが不足しているため、コントロールは操作を完了できませんでした|
 
-## <a name="on_notify-handling-wm_notify-messages-in-mfc-applications"></a><a name="_mfcnotes_on_notify.3a_.handling_wm_notify_messages_in_mfc_applications"></a>ON_NOTIFY: MFC アプリケーションでのWM_NOTIFY メッセージの処理
+## <a name="on_notify-handling-wm_notify-messages-in-mfc-applications"></a><a name="_mfcnotes_on_notify.3a_.handling_wm_notify_messages_in_mfc_applications"></a> ON_NOTIFY: MFC アプリケーションでの WM_NOTIFY メッセージの処理
 
-この関数`CWnd::OnNotify`は通知メッセージを処理します。 既定の実装では、メッセージ マップをチェックして、呼び出す通知ハンドラーを探します。 一般に、 はオーバーライド`OnNotify`しません。 代わりに、ハンドラー関数を提供し、そのハンドラーのメッセージ マップ エントリを所有者ウィンドウのクラスのメッセージ マップに追加します。
+関数は、 `CWnd::OnNotify` 通知メッセージを処理します。 既定の実装では、通知ハンドラーがを呼び出すためにメッセージマップがチェックされます。 通常、をオーバーライドすることはありません `OnNotify` 。 代わりに、ハンドラー関数を指定し、そのハンドラーのメッセージマップエントリを所有者ウィンドウのクラスのメッセージマップに追加します。
 
-ClassWizard プロパティ シートを使用して、ON_NOTIFY メッセージ マップ エントリを作成し、スケルトン ハンドラー関数を提供できます。 ClassWizard を使用してこれを簡単にする方法の詳細については、「[関数へのメッセージのマッピング](../mfc/reference/mapping-messages-to-functions.md)」を参照してください。
+Classwizard では、ClassWizard プロパティシートを使用して ON_NOTIFY のメッセージマップエントリを作成し、スケルトンハンドラー関数を提供できます。 ClassWizard を使用してこれを簡単にする方法の詳細については、「 [関数へのメッセージのマッピング](../mfc/reference/mapping-messages-to-functions.md)」を参照してください。
 
-ON_NOTIFYメッセージ マップ マクロの構文は次のとおりです。
+ON_NOTIFY メッセージマップマクロには、次の構文があります。
 
 ```cpp
 ON_NOTIFY(wNotifyCode, id, memberFxn)
@@ -91,16 +92,16 @@ ON_NOTIFY(wNotifyCode, id, memberFxn)
 
 パラメーターは次のとおりです。
 
-*コードを通知します。*<br/>
-LVN_KEYDOWNなどの、処理する通知メッセージのコード。
+*wNotifyCode*<br/>
+処理する通知メッセージのコード (LVN_KEYDOWN など)。
 
 *id*<br/>
 通知を送信するコントロールの子識別子。
 
-*メンバーFxn*<br/>
-この通知が送信されたときに呼び出されるメンバー関数。
+*memberFxn*<br/>
+この通知が送信されるときに呼び出されるメンバー関数。
 
-メンバー関数は、次のプロトタイプで宣言する必要があります。
+メンバー関数は、次のプロトタイプで宣言されている必要があります。
 
 ```cpp
 afx_msg void memberFxn(NMHDR* pNotifyStruct, LRESULT* result);
@@ -108,21 +109,21 @@ afx_msg void memberFxn(NMHDR* pNotifyStruct, LRESULT* result);
 
 パラメーターは次のとおりです。
 
-*をクリックします。*<br/>
+*pNotifyStruct*<br/>
 上のセクションで説明したように、通知構造体へのポインター。
 
 *result*<br/>
-戻る前に設定する結果コードへのポインター。
+を返す前に設定する結果コードへのポインター。
 
 ## <a name="example"></a>例
 
-メンバー関数`OnKeydownList1`が、 ID`CListCtrl``IDC_LIST1`からのメッセージLVN_KEYDOWN処理するように指定するには、ClassWizard を使用して、メッセージ マップに次のメッセージを追加します。
+ID がであるからの LVN_KEYDOWN メッセージをメンバー関数で処理するように指定するには、 `OnKeydownList1` `CListCtrl` ClassWizard を使用して、 `IDC_LIST1` メッセージマップに次のコードを追加します。
 
 ```cpp
 ON_NOTIFY(LVN_KEYDOWN, IDC_LIST1, OnKeydownList1)
 ```
 
-上の例では、ClassWizard によって提供される関数は次のとおりです。
+上記の例では、ClassWizard によって提供される関数は次のとおりです。
 
 ```cpp
 void CMessageReflectionDlg::OnKeydownList1(NMHDR* pNMHDR, LRESULT* pResult)
@@ -136,17 +137,17 @@ void CMessageReflectionDlg::OnKeydownList1(NMHDR* pNMHDR, LRESULT* pResult)
 }
 ```
 
-ClassWizard は適切な型のポインタを自動的に提供します。 通知構造には *、pNMHDR*または*pLVKeyDow*を使用してアクセスできます。
+ClassWizard では、適切な型のポインターが自動的に提供されることに注意してください。 通知構造には、 *Pnmhdr* または *plvkeydow* よってアクセスできます。
 
-## <a name="on_notify_range"></a><a name="_mfcnotes_on_notify_range"></a>ON_NOTIFY_RANGE
+## <a name="on_notify_range"></a><a name="_mfcnotes_on_notify_range"></a> ON_NOTIFY_RANGE
 
-一連のコントロールに対して同じWM_NOTIFY メッセージを処理する必要がある場合は、ON_NOTIFYではなくON_NOTIFY_RANGEを使用できます。 たとえば、特定の通知メッセージに対して同じアクションを実行するボタンのセットがあるとします。
+コントロールのセットに対して同じ WM_NOTIFY メッセージを処理する必要がある場合は、ON_NOTIFY ではなく ON_NOTIFY_RANGE を使用できます。 たとえば、特定の通知メッセージに対して同じ操作を実行するためのボタンのセットがあるとします。
 
-ON_NOTIFY_RANGE使用する場合は、範囲の開始と終了の子 ID を指定して、通知メッセージを処理する連続した範囲の子 ID を指定します。
+ON_NOTIFY_RANGE を使用する場合は、範囲の開始と終了の子識別子を指定することによって、通知メッセージを処理する連続する範囲の子識別子を指定します。
 
-クラス ウィザードはON_NOTIFY_RANGEを処理しません。これを使用するには、自分でメッセージ マップを編集する必要があります。
+ClassWizard は ON_NOTIFY_RANGE を処理しません。これを使用するには、自分でメッセージマップを編集する必要があります。
 
-ON_NOTIFY_RANGEのメッセージ・マップ項目および関数プロトタイプは、以下のとおりです。
+ON_NOTIFY_RANGE のメッセージマップエントリと関数プロトタイプは次のとおりです。
 
 ```cpp
 ON_NOTIFY_RANGE(wNotifyCode, id, idLast, memberFxn)
@@ -154,19 +155,19 @@ ON_NOTIFY_RANGE(wNotifyCode, id, idLast, memberFxn)
 
 パラメーターは次のとおりです。
 
-*コードを通知します。*<br/>
-LVN_KEYDOWNなどの、処理する通知メッセージのコード。
+*wNotifyCode*<br/>
+処理する通知メッセージのコード (LVN_KEYDOWN など)。
 
 *id*<br/>
 連続する識別子の範囲内の最初の識別子。
 
 *idLast*<br/>
-連続する識別子の範囲内の最後の識別子。
+連続した識別子の範囲の最後の識別子。
 
-*メンバーFxn*<br/>
-この通知が送信されたときに呼び出されるメンバー関数。
+*memberFxn*<br/>
+この通知が送信されるときに呼び出されるメンバー関数。
 
-メンバー関数は、次のプロトタイプで宣言する必要があります。
+メンバー関数は、次のプロトタイプで宣言されている必要があります。
 
 ```cpp
 afx_msg void memberFxn(UINT id, NMHDR* pNotifyStruct, LRESULT* result);
@@ -177,19 +178,19 @@ afx_msg void memberFxn(UINT id, NMHDR* pNotifyStruct, LRESULT* result);
 *id*<br/>
 通知を送信したコントロールの子識別子。
 
-*をクリックします。*<br/>
-上で説明した通知構造体へのポインター。
+*pNotifyStruct*<br/>
+前に説明したように、通知構造へのポインター。
 
 *result*<br/>
-戻る前に設定する結果コードへのポインター。
+を返す前に設定する結果コードへのポインター。
 
-## <a name="on_notify_ex-on_notify_ex_range"></a><a name="_mfcnotes_tn061_on_notify_ex.2c_.on_notify_ex_range"></a>ON_NOTIFY_EX、ON_NOTIFY_EX_RANGE
+## <a name="on_notify_ex-on_notify_ex_range"></a><a name="_mfcnotes_tn061_on_notify_ex.2c_.on_notify_ex_range"></a> ON_NOTIFY_EX、ON_NOTIFY_EX_RANGE
 
-通知ルーティング内の複数のオブジェクトでメッセージを処理する場合は、ON_NOTIFY (またはON_NOTIFY_RANGEではなく、ON_NOTIFY_EX (またはON_NOTIFY_EX_RANGE) を使用できます。 **EX**バージョンと通常バージョンの唯一の違いは **、EX**バージョン用に呼び出されたメンバー関数が、メッセージ処理を続行するかどうかを示す**BOOL**を返す点です。 この関数から**FALSE**を返すと、複数のオブジェクトで同じメッセージを処理できます。
+通知ルーティングで1つのメッセージを処理するために複数のオブジェクトが必要な場合は、ON_NOTIFY (または ON_NOTIFY_RANGE) ではなく ON_NOTIFY_EX (または ON_NOTIFY_EX_RANGE) を使用できます。 **Ex** バージョンと標準バージョンの唯一の違いは、 **ex** バージョンに対して呼び出されるメンバー関数が、メッセージ処理を続行するかどうかを示す **ブール** 値を返すことです。 この関数から **FALSE** を返すと、複数のオブジェクトで同じメッセージを処理できます。
 
-クラス ウィザードはON_NOTIFY_EXまたはON_NOTIFY_EX_RANGEを処理しません。どちらかを使用する場合は、自分でメッセージ マップを編集する必要があります。
+ClassWizard では、ON_NOTIFY_EX または ON_NOTIFY_EX_RANGE は処理されません。これらのいずれかを使用する場合は、自分でメッセージマップを編集する必要があります。
 
-ON_NOTIFY_EXとON_NOTIFY_EX_RANGEのメッセージマップエントリと関数プロトタイプは次のとおりです。 パラメータの意味は、非**EX**バージョンの場合と同じです。
+ON_NOTIFY_EX と ON_NOTIFY_EX_RANGE のメッセージマップエントリと関数プロトタイプは次のとおりです。 パラメーターの意味は、**EX** 以外のバージョンの場合と同じです。
 
 ```cpp
 ON_NOTIFY_EX(nCode, id, memberFxn)
@@ -202,11 +203,11 @@ ON_NOTIFY_EX_RANGE(wNotifyCode, id, idLast, memberFxn)
 afx_msg BOOL memberFxn(UINT id, NMHDR* pNotifyStruct, LRESULT* result);
 ```
 
-どちらの場合も *、id*は通知を送信したコントロールの子識別子を保持します。
+どちらの場合も、 *id* は、通知を送信したコントロールの子識別子を保持します。
 
-通知メッセージが完全に処理された場合は関数が**TRUE** **を返**す必要があります。
+関数は、通知メッセージが完全に処理された場合は **TRUE** を返し、コマンドルーティング内の他のオブジェクトがメッセージを処理する可能性がある場合は **FALSE** を返す必要があります。
 
 ## <a name="see-also"></a>関連項目
 
-[番号順テクニカル ノート](../mfc/technical-notes-by-number.md)<br/>
-[カテゴリ別テクニカル ノート](../mfc/technical-notes-by-category.md)
+[番号別テクニカルノート](../mfc/technical-notes-by-number.md)<br/>
+[カテゴリ別テクニカルノート](../mfc/technical-notes-by-category.md)

@@ -1,4 +1,5 @@
 ---
+description: '詳細については、「サーバー: In-Place フレームウィンドウの実装」を参照してください。'
 title: 'サーバー : 埋め込み先フレーム ウィンドウの実装'
 ms.date: 09/09/2019
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - frame windows [MFC], in-place
 - in-place frame windows
 ms.assetid: 09bde4d8-15e2-4fba-8d14-9b954d926b92
-ms.openlocfilehash: a082afe141a21e4175886f13a26043694ac0d426
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 859a31bf107162aea6adb4d40ccf7b7b87f485b5
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87230468"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97217355"
 ---
 # <a name="servers-implementing-in-place-frame-windows"></a>サーバー : 埋め込み先フレーム ウィンドウの実装
 
@@ -45,9 +46,9 @@ ms.locfileid: "87230468"
 
 ステートメント内の一連の関数呼び出しによって、 **`if`** サーバーが提供するリソースからツールバーが作成されます。 この時点で、ツールバーはコンテナーのウィンドウ階層の一部です。 このツールバーはから派生しているので、 `CToolBar` 所有者を変更しない限り、メッセージはコンテナーアプリケーションのフレームウィンドウである所有者に渡されます。 そのため、を呼び出す `SetOwner` 必要があります。 この呼び出しによって、コマンドがサーバーの埋め込み先フレームウィンドウとして送信されるウィンドウが変更され、メッセージがサーバーに渡されます。 これにより、サーバーは、提供されているツールバーに対する操作に対応できます。
 
-ツールバーのビットマップの ID は、サーバーアプリケーションで定義されている他のインプレースリソースと同じである必要があります。 詳細については[、「メニューとリソース: サーバーの追加](../mfc/menus-and-resources-server-additions.md)」を参照してください。
+ツールバーのビットマップの ID は、サーバーアプリケーションで定義されている他のインプレースリソースと同じである必要があります。 詳細については [、「メニューとリソース: サーバーの追加](../mfc/menus-and-resources-server-additions.md) 」を参照してください。
 
-詳細については、*クラスライブラリリファレンス*の「 [COleIPFrameWnd](../mfc/reference/coleipframewnd-class.md)、 [Coleresizebar](../mfc/reference/coleresizebar-class.md)、および[CDocTemplate:: setserverinfo](../mfc/reference/cdoctemplate-class.md#setserverinfo) 」を参照してください。
+詳細については、*クラスライブラリリファレンス* の「 [COleIPFrameWnd](../mfc/reference/coleipframewnd-class.md)、 [Coleresizebar](../mfc/reference/coleresizebar-class.md)、および [CDocTemplate:: setserverinfo](../mfc/reference/cdoctemplate-class.md#setserverinfo) 」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

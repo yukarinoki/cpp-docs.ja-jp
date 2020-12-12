@@ -1,4 +1,5 @@
 ---
+description: 詳細については、アーカイブを使用した通じた cobject の格納と読み込みに関するページを参照してください。
 title: アーカイブを通じた CObject の格納と読み込み
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,34 +9,34 @@ helpviewer_keywords:
 - CObject class [MFC], CArchive objects
 - CObjects [MFC]
 ms.assetid: a829b6dd-bc31-47e0-8108-fbb946722db9
-ms.openlocfilehash: f1b59516d5bba13b6f5e006f91d8ebd560543b05
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: c84c507fc556268eea526c1350211fd4b82f54fe
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81372146"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97216562"
 ---
 # <a name="storing-and-loading-cobjects-via-an-archive"></a>アーカイブを通じた CObject の格納と読み込み
 
-アーカイブ経由で`CObject`の s の保存と読み込みには、追加の考慮事項が必要です。 場合によっては、オブジェクトの`Serialize`関数を呼び出す必要があります。 `CArchive` `Serialize` ** < ** **>>** `CArchive` 重要な点は、`CArchive`**>>** 格納アーカイブによってファイル`CObject`に書き込まれた情報に`CRuntimeClass`基づいて、オペレータがインメモリを構築することです。
+アーカイブを使用して s を格納して読み込む `CObject` には、別途考慮が必要です。 場合によっては、オブジェクトの関数を呼び出す必要があります。この場合、 `Serialize` `CArchive` オブジェクトは `Serialize` **<\<** or **>>** 、の演算子を使用するのではなく、呼び出しのパラメーターです `CArchive` 。 注意すべき重要な事実は、 `CArchive` **>>** `CObject` `CRuntimeClass` 格納アーカイブによって以前にファイルに書き込まれた情報に基づいて、演算子によってがメモリに構築されることです。
 
-したがって`CArchive`**<**、 演算子と**>>** 演算子を使用するかどうか、`Serialize`と を呼び出すのとは、 以前に格納された`CRuntimeClass`情報に基づいてオブジェクトを動的に再構築するために、ロード・アーカイブが*必要*かどうかによって異なります。 この関数`Serialize`は、次の場合に使用します。
+したがって、演算子を使用するかどうかは、 `CArchive` **<\<** and **>>** `Serialize` 以前に保存された情報に基づいてオブジェクトを動的に再構築するために、読み込みアーカイブ *が必要* かどうかによって異なり `CRuntimeClass` ます。 次の場合は、関数を使用し `Serialize` ます。
 
-- オブジェクトを逆シリアル化する場合は、オブジェクトの正確なクラスを事前に把握しておく必要があります。
+- オブジェクトを逆シリアル化するときに、オブジェクトの正確なクラスが事前にわかっていることを確認します。
 
-- オブジェクトを逆シリアル化する場合、メモリが割り当て済みである。
+- オブジェクトを逆シリアル化するときに、既にメモリが割り当てられています。
 
 > [!CAUTION]
-> 関数を使用してオブジェクトをロード`Serialize`する場合は、 関数を使用してオブジェクト`Serialize`も格納する必要があります。 演算子を使用して格納してから`CArchive`**<<** 関数を`Serialize`使用して読み込んだり、関数を`Serialize`使用して格納してから演算子を`CArchive >>`使用して読み込んだりしないでください。
+> 関数を使用してオブジェクトを読み込む場合は、 `Serialize` 関数を使用してオブジェクトも格納する必要があり `Serialize` ます。 演算子を使用して格納せずに、関数を使用して読み込むか、または関数を使用して格納し、 `CArchive` **<<** `Serialize` `Serialize` 次に演算子を使用して読み込み `CArchive >>` ます。
 
-次の例は、ケースを示しています。
+次に例を示します。
 
 [!code-cpp[NVC_MFCSerialization#36](../mfc/codesnippet/cpp/storing-and-loading-cobjects-via-an-archive_1.h)]
 
 [!code-cpp[NVC_MFCSerialization#37](../mfc/codesnippet/cpp/storing-and-loading-cobjects-via-an-archive_2.cpp)]
 
-つまり、シリアル化可能なクラスで埋め込`CObject`み型のメンバーとして定義されている場合は`CArchive`**<**、**>>** オブジェクトに and 演算子を使用`Serialize`*するのではなく*、代わりに関数を呼び出す必要があります。 また、シリアル化可能なクラスで`CObject`、 または`CObject`から派生した オブジェクトへのポインターをメンバーとして定義し、その他のオブジェクトを独自のコンストラクターに構築する場合は`Serialize`、 も呼び出す必要があります。
+要約すると、シリアル化可能なクラスでメンバーとして埋め込まれたが定義されている場合は、 `CObject` そのオブジェクトに対して演算子を使用し *ない* でください `CArchive` **<\<** and **>>** 。ただし、代わりに関数を呼び出す必要があり `Serialize` ます。 また、シリアル化可能なクラスで、 `CObject` メンバーとして (またはから派生したオブジェクト) へのポインターが定義さ `CObject` れていて、その他のオブジェクトが独自のコンストラクターに構築されている場合も、を呼び出す必要があり `Serialize` ます。
 
 ## <a name="see-also"></a>関連項目
 
-[シリアル化 : オブジェクトのシリアル化](../mfc/serialization-serializing-an-object.md)
+[シリアル化: オブジェクトのシリアル化](../mfc/serialization-serializing-an-object.md)

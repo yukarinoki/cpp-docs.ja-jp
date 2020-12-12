@@ -1,5 +1,6 @@
 ---
-title: TN062:Windows のコントロールのメッセージ リフレクション
+description: '詳細については、「テクニカルノート 62: Message リフレクション for Windows Controls」を参照してください。'
+title: 'テクニカル ノート 62: Windows コントロールへのメッセージ リフレクション (メッセージ返送)'
 ms.date: 06/28/2018
 f1_keywords:
 - vc.controls.messages
@@ -27,102 +28,102 @@ helpviewer_keywords:
 - WM_NOTIFY message [MFC]
 - ON_CONTROL_REFLECT macro
 ms.assetid: 53efb0ba-fcda-4fa0-a3c7-14e0b78fb494
-ms.openlocfilehash: aa189eec430d72bef753fef7ebbe9ad929d76c87
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9dc106c1513032e654acfc2c4b86b8eb3b939578
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62351847"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97214729"
 ---
-# <a name="tn062-message-reflection-for-windows-controls"></a>TN062:Windows のコントロールのメッセージ リフレクション
+# <a name="tn062-message-reflection-for-windows-controls"></a>テクニカル ノート 62: Windows コントロールへのメッセージ リフレクション (メッセージ返送)
 
 > [!NOTE]
 > 次のテクニカル ノートは、最初にオンライン ドキュメントの一部とされてから更新されていません。 結果として、一部のプロシージャおよびトピックが最新でないか、不正になります。 最新の情報について、オンライン ドキュメントのキーワードで関係のあるトピックを検索することをお勧めします。
 
-このテクニカル ノートでは、メッセージは、MFC 4.0 の新機能について説明します。 メッセージ リフレクションを使用する単純な再利用可能なコントロールを作成する手順も含まれています。
+このテクニカルノートでは、MFC 4.0 の新機能であるメッセージリフレクションについて説明します。 また、メッセージリフレクションを使用する単純な再利用可能なコントロールを作成するための指示も含まれています。
 
-このテクニカル ノートでは、(旧称 OLE コントロール) の ActiveX コントロールに適用されるメッセージ リフレクションは説明しません。 この記事を参照してください[ActiveX コントロール。Windows コントロールをサブクラス化](../mfc/mfc-activex-controls-subclassing-a-windows-control.md)します。
+このテクニカルノートでは、ActiveX コントロール (旧称 OLE コントロール) に適用されるメッセージリフレクションについては説明しません。 「 [ActiveX コントロール: Windows コントロールのサブクラス](../mfc/mfc-activex-controls-subclassing-a-windows-control.md)化」を参照してください。
 
-**メッセージ リフレクションとは**
+**メッセージのリフレクションとは**
 
-Windows コントロールは、頻繁に親ウィンドウに通知メッセージを送信します。 たとえば、多くのコントロールは、それぞれの親コントロールの背景を描画するブラシを指定する親を許可するコントロールの色の通知メッセージ (WM_CTLCOLOR またはそのバリエーションの 1 つ) を送信します。
+Windows コントロールは、多くの場合、通知メッセージを親ウィンドウに送信します。 たとえば、多くのコントロールでは、コントロールの色の通知メッセージ (WM_CTLCOLOR またはそのバリアントの1つ) が親に送信され、親はコントロールの背景を描画するためのブラシを提供できます。
 
-Windows および MFC バージョン 4.0 より前に、では、親ウィンドウ、ダイアログ ボックスでは多くの場合がこれらのメッセージを処理します。 つまり、メッセージを処理するコードを親ウィンドウのクラスである必要があることと、そのメッセージを処理する必要があるすべてのクラス内で重複する必要があります。 上記の例でカスタムの背景を持つコントロールを必要なすべてのダイアログ ボックスはコントロールの色の通知メッセージを処理する必要があります。 独自の背景色を処理すると、コントロール クラスが書き込まれる場合は、コードを再利用するはるかに簡単になります。
+バージョン4.0 より前の Windows および MFC では、親ウィンドウ (多くの場合、ダイアログボックス) がこれらのメッセージの処理を担当します。 これは、メッセージを処理するコードが親ウィンドウのクラスに存在し、そのメッセージを処理する必要があるすべてのクラスで重複している必要があることを意味します。 上の例では、カスタムの背景を持つコントロールが必要なすべてのダイアログボックスで、コントロールの色の通知メッセージを処理する必要があります。 独自の背景色を処理するコントロールクラスを記述できる場合は、コードを再利用する方がはるかに簡単です。
 
-MFC 4.0 では、従来の機能でも、親ウィンドウは、通知メッセージを処理できます。 さらに、ただし、MFC 4.0 を容易に再利用「メッセージ リフレクション」と呼ばれる機能を提供することでこれらの通知メッセージに子コントロールのウィンドウまたは親ウィンドウのいずれかまたは両方で処理できるようにします。 コントロールの背景色の例で、リフレクション WM_CTLCOLOR メッセージを処理することによって、独自の背景色を設定するコントロール クラスを記述することができますようになりました: 親に頼ることがなくすべて。 (メッセージ リフレクションは、MFC によって実装される、ためいない、Windows によって親ウィンドウ クラスする必要がありますを派生させるから`CWnd`させるメッセージ リフレクション)。
+MFC 4.0 では、以前のメカニズムは引き続き機能します。親ウィンドウでは、通知メッセージを処理できます。 また、MFC 4.0 では、これらの通知メッセージを子コントロールウィンドウ、親ウィンドウ、またはその両方で処理できる "メッセージリフレクション" と呼ばれる機能を提供することで、再利用が容易になります。 コントロールの背景色の例では、親に依存せずに、リフレクションされた WM_CTLCOLOR メッセージを処理することによって、独自の背景色を設定するコントロールクラスを記述できるようになりました。 (メッセージリフレクションは Windows ではなく MFC によって実装されるため、 `CWnd` メッセージリフレクションを機能させるには、親ウィンドウクラスがから派生している必要があることに注意してください)。
 
-MFC の以前のバージョンでは、オーナー描画リスト ボックス) (WM_DRAWITEM、およびなど) のメッセージなど、いくつかのメッセージの仮想関数を提供することによってメッセージ リフレクションのようなものを行いました。 新しいメッセージ リフレクション メカニズムとは、一般化されたで一貫性のあります。
+以前のバージョンの MFC では、オーナー描画のリストボックス (WM_DRAWITEM など) のためのメッセージなど、いくつかのメッセージに対して仮想関数を提供することによって、メッセージのリフレクションと同様の処理を行いました。 新しいメッセージのリフレクションメカニズムは一般化され、一貫性があります。
 
-メッセージ リフレクションは、4.0 より前に、のバージョンの MFC に対して記述されたコードとの下位互換性です。
+メッセージリフレクションは、4.0 より前のバージョンの MFC 用に記述されたコードとの下位互換性があります。
 
-特定のメッセージのハンドラーを指定するか、さまざまなメッセージは、親ウィンドウのクラスでオーバーライドされる場合は、独自のハンドラーの基本クラスのハンドラー関数を呼び出さない限り、同じメッセージのメッセージ ハンドラーを反映します。 たとえば、WM_CTLCOLOR をダイアログ ボックス クラスを処理する場合、処理は、リフレクション メッセージ ハンドラーをオーバーライドします。
+親ウィンドウのクラスで特定のメッセージまたは範囲のメッセージのハンドラーを指定した場合は、独自のハンドラーで基底クラスのハンドラー関数を呼び出さないと、同じメッセージに対して、リフレクションされたメッセージハンドラーがオーバーライドされます。 たとえば、ダイアログボックスクラスで WM_CTLCOLOR を処理する場合、処理は、反映されたメッセージハンドラーをオーバーライドします。
 
-これらのメッセージを送信する子コントロールを使用してリフレクション メッセージ ハンドラーがない場合にのみ、ハンドラーが呼び出されます場合、親ウィンドウ クラス、特定の WM_NOTIFY メッセージまたは範囲の WM_NOTIFY メッセージのハンドラーを指定する、`ON_NOTIFY_REFLECT()`します。 使用する場合`ON_NOTIFY_REFLECT_EX()`メッセージ ハンドラー、メッセージ マップに可能性がありますまたはメッセージを処理するために、親ウィンドウを許可しない場合があります。 ハンドラーが返された場合**FALSE**を返す呼び出し中に、同様に、親によってメッセージが処理される**TRUE**処理し親ことはできません。 通知メッセージの前に反映されたメッセージが処理されることに注意してください。
+親ウィンドウクラスで、特定の WM_NOTIFY メッセージまたは WM_NOTIFY メッセージの範囲のハンドラーを指定した場合、そのメッセージを送信する子コントロールにからのリフレクションメッセージハンドラーがない場合にのみ、ハンドラーが呼び出され `ON_NOTIFY_REFLECT()` ます。 メッセージマップでを使用する場合は、メッセージ `ON_NOTIFY_REFLECT_EX()` ハンドラーが親ウィンドウでメッセージを処理できるかどうかによって異なることがあります。 ハンドラーが **FALSE** を返す場合、メッセージは親によっても処理されますが、 **TRUE** を返す呼び出しでは親がそれを処理できません。 反映されたメッセージは、通知メッセージの前に処理されることに注意してください。
 
-WM_NOTIFY メッセージが送信されるときに、コントロールにはそれを処理する最初の機会が提供されます。 リフレクションの他のメッセージが送信される場合は、親ウィンドウがそれを処理する最初の機会とコントロールが反映されたメッセージを受け取る。 これを行うには、それにハンドラー関数とコントロールのクラスのメッセージ マップ内の適切なエントリ必要があります。
+WM_NOTIFY メッセージが送信されると、コントロールは最初に処理する機会に提供されます。 他のリフレクションメッセージが送信された場合、親ウィンドウは最初にそれを処理する機会があり、コントロールはリフレクションされたメッセージを受信します。 これを行うには、ハンドラー関数と、コントロールのクラスメッセージマップ内の適切なエントリが必要です。
 
-リフレクション メッセージ用のメッセージ マップ マクロは通常の通知よりも若干異なります。 が *_REFLECT* 、通常の名前に追加されます。 たとえば、親 WM_NOTIFY メッセージを処理するには、親のメッセージ マップ マクロ ON_NOTIFY を使用します。 子コントロールに反映されたメッセージを処理するには、子コントロールのメッセージ マップで ON_NOTIFY_REFLECT マクロを使用します。 場合によっては、パラメーターは、さまざまなも。 ClassWizard のメッセージ マップ エントリを追加および正しいパラメーターを持つ関数の骨組み実装を提供することが通常に注意してください。
+リフレクションされたメッセージのメッセージマップマクロは、通常の通知とは少し異なります。通常の名前に追加 *_REFLECT* れます。 たとえば、親の WM_NOTIFY メッセージを処理するには、親のメッセージマップで ON_NOTIFY マクロを使用します。 子コントロールでリフレクションされたメッセージを処理するには、子コントロールのメッセージマップで ON_NOTIFY_REFLECT マクロを使用します。 場合によっては、パラメーターも異なっています。 ClassWizard は通常、メッセージマップのエントリを追加し、正しいパラメーターを使用してスケルトン関数の実装を提供することに注意してください。
 
-参照してください[TN061:ON_NOTIFY メッセージと WM_NOTIFY メッセージ](../mfc/tn061-on-notify-and-wm-notify-messages.md)については、新しい WM_NOTIFY メッセージ。
+新しい WM_NOTIFY メッセージの情報については、「 [テクニカルノート 61: ON_NOTIFY」および「WM_NOTIFY メッセージ](../mfc/tn061-on-notify-and-wm-notify-messages.md) 」を参照してください。
 
-**メッセージ マップ エントリと返送されたメッセージのハンドラー関数のプロトタイプ**
+**メッセージマップのエントリと、反映されたメッセージのハンドラー関数のプロトタイプ**
 
-反映されたコントロールの通知メッセージを処理するために、メッセージ マップ マクロと関数プロトタイプが以下の表を使用します。
+リフレクションされたコントロールの通知メッセージを処理するには、次の表に示すメッセージマップマクロと関数プロトタイプを使用します。
 
-ClassWizard は、通常、これらのメッセージ マップ エントリを追加し、スケルトン関数の実装を提供できます。 参照してください[リフレクション メッセージ用のメッセージ ハンドラーを定義する](../mfc/reference/defining-a-message-handler-for-a-reflected-message.md)反映されたメッセージのハンドラーを定義する方法についてはします。
+通常、ClassWizard では、これらのメッセージマップエントリを追加し、スケルトン関数の実装を提供できます。 リフレクションされたメッセージのハンドラーを定義する方法の詳細については、「リフレクションされ [たメッセージのメッセージハンドラーの定義](../mfc/reference/defining-a-message-handler-for-a-reflected-message.md) 」を参照してください。
 
-メッセージ名から反映されたマクロ名に変換する付加*on _* と追加 *_REFLECT*します。 たとえば、WM_CTLCOLOR ON_WM_CTLCOLOR_REFLECT になります。 (次の表に、マクロのエントリを逆の変換を実行するメッセージを反映して)。
+メッセージ名をリフレクションされたマクロ名に変換するには、 *ON_* を付加し、 *_REFLECT* を追加します。 たとえば、WM_CTLCOLOR が ON_WM_CTLCOLOR_REFLECT になります。 (どのメッセージを反映できるかを確認するには、次の表のマクロエントリで逆の変換を行います)。
 
-上記のルールには、次の 3 つの例外は次のとおりです。
+上記のルールの3つの例外は次のとおりです。
 
-- WM_COMMAND 通知用のマクロは、ON_CONTROL_REFLECT です。
+- WM_COMMAND 通知のマクロは ON_CONTROL_REFLECT。
 
-- WM_NOTIFY 反射のマクロは、ON_NOTIFY_REFLECT です。
+- WM_NOTIFY の反射のマクロは ON_NOTIFY_REFLECT です。
 
-- ON_UPDATE_COMMAND_UI 反射のマクロは、ON_UPDATE_COMMAND_UI_REFLECT です。
+- ON_UPDATE_COMMAND_UI の反射のマクロは ON_UPDATE_COMMAND_UI_REFLECT です。
 
-上記の特殊なケースの各でハンドラー メンバー関数の名前を指定する必要があります。 その他の場合、ハンドラー関数の標準の名前を使用する必要があります。
+上記の各特殊なケースでは、ハンドラーメンバー関数の名前を指定する必要があります。 それ以外の場合は、ハンドラー関数の標準名を使用する必要があります。
 
-パラメーターの意味と、関数の戻り値が関数名または関数名の下に記載されている*で*先頭に付加します。 たとえば、`CtlColor`に記載されて`OnCtlColor`します。 リフレクション メッセージ ハンドラーには、親ウィンドウのようなハンドラーよりも少ないパラメーターが必要があります。 ドキュメントの仮パラメーターの名前を持つ次の表の名前に一致だけです。
+関数のパラメーターと戻り値の意味については、の前にとを含む関数名または関数名の下 *に* 記載されています。 たとえば、 `CtlColor` は「」に記載されてい `OnCtlColor` ます。 いくつかのリフレクションされたメッセージハンドラーには、親ウィンドウの同様のハンドラーよりも多くのパラメーターが必要です。 次の表の名前は、ドキュメント内の仮パラメーターの名前と一致するだけです。
 
-|マップ エントリ|関数プロトタイプ|
+|マップエントリ|関数プロトタイプ|
 |---------------|------------------------|
-|**ON_CONTROL_REFLECT(** `wNotifyCode` **,** `memberFxn` **)**|**afx_msg void** `memberFxn` **( );**|
-|**ON_NOTIFY_REFLECT(** `wNotifyCode` **,** `memberFxn` **)**|**afx_msg void** `memberFxn` **( NMHDR** <strong>\*</strong> `pNotifyStruct` **, LRESULT**<strong>\*</strong> *result* **);**|
-|**ON_UPDATE_COMMAND_UI_REFLECT(** `memberFxn` **)**|**afx_msg void** `memberFxn` **( CCmdUI**<strong>\*</strong> `pCmdUI` **);**|
-|**ON_WM_CTLCOLOR_REFLECT( )**|**afx_msg HBRUSH CtlColor ( CDC**<strong>\*</strong> `pDC` **, UINT** `nCtlColor` **);**|
-|**ON_WM_DRAWITEM_REFLECT( )**|**afx_msg void DrawItem ( LPDRAWITEMSTRUCT** `lpDrawItemStruct` **);**|
-|**ON_WM_MEASUREITEM_REFLECT( )**|**afx_msg void MeasureItem (LPMEASUREITEMSTRUCT** `lpMeasureItemStruct` **)。**|
-|**ON_WM_DELETEITEM_REFLECT( )**|**afx_msg void DeleteItem ( LPDELETEITEMSTRUCT** `lpDeleteItemStruct` **);**|
-|**ON_WM_COMPAREITEM_REFLECT( )**|**afx_msg int CompareItem ( LPCOMPAREITEMSTRUCT** `lpCompareItemStruct` **);**|
-|**ON_WM_CHARTOITEM_REFLECT( )**|**afx_msg int CharToItem (UINT** `nKey` **、UINT** `nIndex` **)。**|
-|**ON_WM_VKEYTOITEM_REFLECT( )**|**afx_msg int VKeyToItem ( UINT** `nKey` **, UINT** `nIndex` **);**|
-|**ON_WM_HSCROLL_REFLECT( )**|**afx_msg void HScroll (UINT** `nSBCode` **、UINT** `nPos` **)。**|
-|**ON_WM_VSCROLL_REFLECT( )**|**afx_msg void VScroll (UINT** `nSBCode` **、UINT** `nPos` **)。**|
-|**ON_WM_PARENTNOTIFY_REFLECT( )**|**afx_msg void ParentNotify ( UINT** `message` **, LPARAM** `lParam` **);**|
+|**ON_CONTROL_REFLECT (** `wNotifyCode` **、** `memberFxn` **)**|**void afx_msg** `memberFxn`**( );**|
+|**ON_NOTIFY_REFLECT (** `wNotifyCode` **、** `memberFxn` **)**|**void afx_msg** `memberFxn`**(NMHDR** <strong>\*</strong> `pNotifyStruct`**、LRESULT** <strong>\*</strong>*結果* **);**|
+|**ON_UPDATE_COMMAND_UI_REFLECT (** `memberFxn` **)**|**void afx_msg** `memberFxn`**(CCmdUI** <strong>\*</strong> `pCmdUI`**);**|
+|**ON_WM_CTLCOLOR_REFLECT ()**|**afx_msg HBRUSH CtlColor (CDC)** <strong>\*</strong> `pDC`**, UINT** `nCtlColor`**);**|
+|**ON_WM_DRAWITEM_REFLECT ()**|**afx_msg Void DrawItem (LPDRAWITEMSTRUCT** `lpDrawItemStruct` **);**|
+|**ON_WM_MEASUREITEM_REFLECT ()**|**afx_msg Void MeasureItem (LPMEASUREITEMSTRUCT** `lpMeasureItemStruct` **);**|
+|**ON_WM_DELETEITEM_REFLECT ()**|**afx_msg Void DeleteItem (LPDELETEITEMSTRUCT** `lpDeleteItemStruct` **);**|
+|**ON_WM_COMPAREITEM_REFLECT ()**|**afx_msg Int CompareItem (LPCOMPAREITEMSTRUCT** `lpCompareItemStruct` **);**|
+|**ON_WM_CHARTOITEM_REFLECT ()**|**afx_msg int chartoitem (uint** `nKey` **, uint** `nIndex` **);**|
+|**ON_WM_VKEYTOITEM_REFLECT ()**|**afx_msg int vkeytoitem (uint** `nKey` **, uint** `nIndex` **);**|
+|**ON_WM_HSCROLL_REFLECT ()**|**afx_msg void HScroll (uint** `nSBCode` **, uint** `nPos` **);**|
+|**ON_WM_VSCROLL_REFLECT ()**|**void vscroll (uint** `nSBCode` **, uint) を afx_msg し** `nPos` **ます。**|
+|**ON_WM_PARENTNOTIFY_REFLECT ()**|**afx_msg void ParentNotify (UINT** `message` **, LPARAM** `lParam` **);**|
 
-ON_NOTIFY_REFLECT と ON_CONTROL_REFLECT マクロでは、特定のメッセージを処理するために 1 つ以上のオブジェクト (コントロールとその親) などを許可するバリエーションがあります。
+ON_NOTIFY_REFLECT マクロと ON_CONTROL_REFLECT マクロには、特定のメッセージを処理するために複数のオブジェクト (コントロールやその親など) を許可するバリエーションがあります。
 
-|マップ エントリ|関数プロトタイプ|
+|マップエントリ|関数プロトタイプ|
 |---------------|------------------------|
-|**ON_NOTIFY_REFLECT_EX(** `wNotifyCode` **,** `memberFxn` **)**|**afx_msg BOOL** `memberFxn` **( NMHDR** <strong>\*</strong> `pNotifyStruct` **, LRESULT**<strong>\*</strong> *result* **);**|
-|**ON_CONTROL_REFLECT_EX(** `wNotifyCode` **,** `memberFxn` **)**|**afx_msg BOOL** `memberFxn` **( );**|
+|**ON_NOTIFY_REFLECT_EX (** `wNotifyCode` **、** `memberFxn` **)**|**AFX_MSG ブール** `memberFxn` 値 **(NMHDR** <strong>\*</strong> `pNotifyStruct`**、LRESULT** <strong>\*</strong>*結果* **);**|
+|**ON_CONTROL_REFLECT_EX (** `wNotifyCode` **、** `memberFxn` **)**|**AFX_MSG ブール** `memberFxn` 値 **( );**|
 
-## <a name="handling-reflected-messages-an-example-of-a-reusable-control"></a>反映されたメッセージの処理。再利用可能なコントロールの例
+## <a name="handling-reflected-messages-an-example-of-a-reusable-control"></a>リフレクションされたメッセージの処理: 再利用可能なコントロールの例
 
-この簡単な例と呼ばれる再利用可能なコントロールを作成する`CYellowEdit`します。 コントロールは、黄色の背景に黒のテキストが表示される点を除いて、通常のエディット コントロールと同じでは機能します。 簡単にできるようにするメンバー関数を追加することが、`CYellowEdit`さまざまな色を表示するコントロール。
+この簡単な例では、という再利用可能なコントロールを作成し `CYellowEdit` ます。 コントロールは通常の編集コントロールと同じように動作しますが、黒いテキストが黄色の背景に表示される点が異なります。 コントロールに異なる色を表示させるメンバー関数を簡単に追加でき `CYellowEdit` ます。
 
-### <a name="to-try-the-example-that-creates-a-reusable-control"></a>再利用可能なコントロールを作成する例を試す
+### <a name="to-try-the-example-that-creates-a-reusable-control"></a>再利用可能なコントロールを作成する例を試すには
 
-1. 既存のアプリケーションでは、新しいダイアログ ボックスを作成します。 詳細については、次を参照してください。、[ダイアログ エディター](../windows/dialog-editor.md)トピック。
+1. 既存のアプリケーションに新しいダイアログボックスを作成します。 詳細については、「 [ダイアログエディター](../windows/dialog-editor.md) 」を参照してください。
 
-   再利用可能なコントロールを開発するためのアプリケーションが必要です。 使用する既存のアプリケーションを持っていない場合は、AppWizard を使用して、ダイアログ ベースのアプリケーションを作成します。
+   再利用可能なコントロールを開発するアプリケーションが必要です。 使用する既存のアプリケーションがない場合は、AppWizard を使用してダイアログベースのアプリケーションを作成します。
 
-2. Visual C に読み込まれるプロジェクトと ClassWizard を使用してという新しいクラスを作成する`CYellowEdit`に基づいて`CEdit`します。
+2. プロジェクトが Visual C++ に読み込まれた状態で、ClassWizard を使用して、に基づいてという新しいクラスを作成し `CYellowEdit` `CEdit` ます。
 
-3. 次の 3 つのメンバー変数を追加して、`CYellowEdit`クラス。 最初の 2 つになります*COLORREF*テキストの色と背景の色を保持する変数。 3 番目になります、`CBrush`背景の描画ブラシを保持するオブジェクト。 `CBrush`オブジェクトを使用するブラシで 1 回だけではその後、参照を作成するときに自動的にブラシを破棄して、`CYellowEdit`コントロールが破棄されます。
+3. クラスに3つのメンバー変数を追加 `CYellowEdit` します。 最初の2つは、テキストの色と背景色を保持するために、 *COLORREF* 変数になります。 3番目のは、 `CBrush` 背景を描画するためのブラシを保持するオブジェクトです。 オブジェクトを使用すると、 `CBrush` ブラシを1回だけ作成し、その後で単にそれを参照するだけで、 `CYellowEdit` コントロールが破棄されたときにブラシを自動的に破棄することができます。
 
-4. 次のように、コンス トラクターを記述することで、メンバー変数を初期化します。
+4. 次のようにコンストラクターを記述して、メンバー変数を初期化します。
 
     ```cpp
     CYellowEdit::CYellowEdit()
@@ -133,9 +134,9 @@ ON_NOTIFY_REFLECT と ON_CONTROL_REFLECT マクロでは、特定のメッセー
     }
     ```
 
-5. 反映された WM_CTLCOLOR メッセージのハンドラーを追加、ClassWizard を使用して、`CYellowEdit`クラス。 処理できるメッセージの一覧で、メッセージ名の前に等号 (=) が、メッセージが反映されることを示すことに注意してください。 「[リフレクション メッセージ用のメッセージ ハンドラーを定義する](../mfc/reference/defining-a-message-handler-for-a-reflected-message.md)します。
+5. ClassWizard を使用して、リフレクションされた WM_CTLCOLOR メッセージのハンドラーをクラスに追加し `CYellowEdit` ます。 処理可能なメッセージの一覧のメッセージ名の前に等号があると、メッセージが反映されていることに注意してください。 これについては、「リフレクションされ [たメッセージのメッセージハンドラーの定義](../mfc/reference/defining-a-message-handler-for-a-reflected-message.md)」を参照してください。
 
-   ClassWizard では、次のメッセージ マップ マクロとスケルトン関数を追加します。
+   ClassWizard では、次のメッセージマップマクロとスケルトン関数が追加されます。
 
     ```cpp
     ON_WM_CTLCOLOR_REFLECT()
@@ -150,7 +151,7 @@ ON_NOTIFY_REFLECT と ON_CONTROL_REFLECT マクロでは、特定のメッセー
     }
     ```
 
-6. 関数の本体を次のコードに置き換えます。 コードでは、テキストの色、テキストの背景色、およびコントロールの残りの部分の背景色を指定します。
+6. 関数の本体を次のコードに置き換えます。 このコードでは、コントロールの残りの部分のテキストの色、テキストの背景色、および背景色を指定します。
 
     ```cpp
     pDC->SetTextColor(m_clrText);   // text
@@ -158,11 +159,11 @@ ON_NOTIFY_REFLECT と ON_CONTROL_REFLECT マクロでは、特定のメッセー
     return m_brBkgnd;               // ctl bkgnd
     ```
 
-7. ダイアログ ボックスで、編集コントロールを作成し、コントロール キーを押しながら、編集コントロールをダブルクリックして、メンバー変数にアタッチします。 メンバー変数の追加 ダイアログ ボックスでは、変数名を完了し、カテゴリには、"CYellowEdit"変数の型の「コントロール」を選択します。 忘れずに、ダイアログ ボックスで、タブ オーダーを設定します。 また、インクルード ヘッダー ファイルを必ず、 `CYellowEdit`  ダイアログ ボックスのヘッダー ファイル内のコントロール。
+7. ダイアログボックスに編集コントロールを作成し、コントロールキーを押しながら編集コントロールをダブルクリックしてメンバー変数にアタッチします。 [メンバー変数の追加] ダイアログボックスで、変数名を入力し、カテゴリの [コントロール] を選択します。次に、変数の型として "CYellowEdit" を選択します。 ダイアログボックスのタブオーダーは忘れずに設定してください。 また、 `CYellowEdit` ダイアログボックスのヘッダーファイルにコントロールのヘッダーファイルを含めるようにしてください。
 
-8. アプリケーションをビルドして実行します。 エディット コントロールでは、黄色の背景があります。
+8. アプリケーションをビルドして実行します。 エディットコントロールには黄色の背景が表示されます。
 
 ## <a name="see-also"></a>関連項目
 
-[番号順テクニカル ノート](../mfc/technical-notes-by-number.md)<br/>
-[カテゴリ別テクニカル ノート](../mfc/technical-notes-by-category.md)
+[番号別テクニカルノート](../mfc/technical-notes-by-number.md)<br/>
+[カテゴリ別テクニカルノート](../mfc/technical-notes-by-category.md)

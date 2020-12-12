@@ -1,22 +1,23 @@
 ---
-title: TN049:MFC/OLE の MBCS から Unicode への翻訳層 (MFCANS32)
+description: '詳細については、次を参照してください: テクニカルノート 49: MFC/OLE MBCS から Unicode 変換レイヤー (MFCANS32)'
+title: 'テクニカルノート 49: MFC-OLE MBCS から Unicode 変換レイヤー (MFCANS32)'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - MFCANS32.DLL
 - TN049
 ms.assetid: c027e30d-8a51-4e28-b215-13fc49b40431
-ms.openlocfilehash: 3f91b2c4d476eb4de6f8413693d27475292ff4fd
-ms.sourcegitcommit: 934cb53fa4cb59fea611bfeb9db110d8d6f7d165
+ms.openlocfilehash: a7a523b3b1c31644b0e656dd06acdb8767c31f51
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65611051"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97215093"
 ---
-# <a name="tn049-mfcole-mbcs-to-unicode-translation-layer-mfcans32"></a>TN049:しかし、MFC/OLE の MBCS から Unicode への翻訳層 (MFCANS32)
+# <a name="tn049-mfcole-mbcs-to-unicode-translation-layer-mfcans32"></a>テクニカル ノート 49: MFC/OLE の MBCS から Unicode への翻訳層 (MFCANS32)
 
-どのように記載されているこの注 MFCANS32 します。DLL で ANSI インターフェイスを提供する、32 ビット OLE の Unicode 世界主にします。 この DLL が MFC では使用されません。
+このノートでは、主に32ビット OLE の Unicode の世界で MFCANS32.DLL が ANSI インターフェイスを提供する方法について説明しています。 この DLL は、MFC では使用されなくなりました。
 
 ## <a name="see-also"></a>関連項目
 
-[番号順テクニカル ノート](../mfc/technical-notes-by-number.md)<br/>
-[カテゴリ別テクニカル ノート](../mfc/technical-notes-by-category.md)
+[番号別テクニカルノート](../mfc/technical-notes-by-number.md)<br/>
+[カテゴリ別テクニカルノート](../mfc/technical-notes-by-category.md)

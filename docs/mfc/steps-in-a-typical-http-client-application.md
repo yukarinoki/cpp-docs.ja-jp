@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: 一般的な HTTP クライアントアプリケーションのステップ'
 title: 典型的な HTTP クライアント アプリケーションの作成手順
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -9,29 +10,29 @@ helpviewer_keywords:
 - Internet client applications [MFC], HTTP table
 - WinInet classes [MFC], HTTP
 ms.assetid: f86552e8-8acd-4b23-bdc5-0c3a247ebd74
-ms.openlocfilehash: 59b585d3e6b8c9f13c585f5a712d33abd6123f67
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0f08ca7629c389df67b579b8c20acceeb16b0cd3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62306965"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97216601"
 ---
 # <a name="steps-in-a-typical-http-client-application"></a>典型的な HTTP クライアント アプリケーションの作成手順
 
-次の表に、一般的な HTTP クライアント アプリケーションでの手順を示します。
+次の表は、一般的な HTTP クライアントアプリケーションで実行できる手順を示しています。
 
-|目標|操作を実行します。|効果|
+|目標|実行する操作|エフェクト|
 |---------------|----------------------|-------------|
-|HTTP セッションを開始します。|作成、 [CInternetSession](../mfc/reference/cinternetsession-class.md)オブジェクト。|WinInet を初期化し、サーバーに接続します。|
-|HTTP サーバーに接続します。|使用[代わりに](../mfc/reference/cinternetsession-class.md#gethttpconnection)します。|返します、 [CHttpConnection](../mfc/reference/chttpconnection-class.md)オブジェクト。|
-|HTTP 要求を開きます。|使用[しないで](../mfc/reference/chttpconnection-class.md#openrequest)します。|返します、 [CHttpFile](../mfc/reference/chttpfile-class.md)オブジェクト。|
-|HTTP 要求を送信します。|使用[CHttpFile::AddRequestHeaders](../mfc/reference/chttpfile-class.md#addrequestheaders)と[chttpfile::sendrequest](../mfc/reference/chttpfile-class.md#sendrequest)します。|ファイルを見つけます。 ファイルが見つからない場合は FALSE を返します。|
-|ファイルから読み取ります。|使用[CHttpFile](../mfc/reference/chttpfile-class.md)します。|指定した数の指定したバッファーを使用してバイトを読み取ります。|
-|例外を処理する|使用して、 [CInternetException](../mfc/reference/cinternetexception-class.md)クラス。|すべての一般的なインターネット例外タイプを処理します。|
-|HTTP セッションを終了します。|破棄、 [CInternetSession](../mfc/reference/cinternetsession-class.md)オブジェクト。|開いているファイル ハンドルと接続を自動的にクリーンアップします。|
+|HTTP セッションを開始します。|[CInternetSession](../mfc/reference/cinternetsession-class.md)オブジェクトを作成します。|WinInet を初期化し、サーバーに接続します。|
+|HTTP サーバーに接続します。|[CInternetSession:: GetHttpConnection](../mfc/reference/cinternetsession-class.md#gethttpconnection)を使用します。|[CHttpConnection](../mfc/reference/chttpconnection-class.md)オブジェクトを返します。|
+|HTTP 要求を開きます。|[CHttpConnection:: OpenRequest](../mfc/reference/chttpconnection-class.md#openrequest)を使用します。|[CHttpFile](../mfc/reference/chttpfile-class.md)オブジェクトを返します。|
+|HTTP 要求を送信します。|[CHttpFile:: AddRequestHeaders](../mfc/reference/chttpfile-class.md#addrequestheaders)と[CHttpFile:: sendrequest](../mfc/reference/chttpfile-class.md#sendrequest)を使用します。|ファイルを検索します。 ファイルが見つからない場合は FALSE を返します。|
+|ファイルから読み取ります。|[CHttpFile](../mfc/reference/chttpfile-class.md)を使用します。|指定したバッファーを使用して、指定したバイト数を読み取ります。|
+|例外を処理する|[CInternetException](../mfc/reference/cinternetexception-class.md)クラスを使用します。|すべての一般的なインターネット例外の種類を処理します。|
+|HTTP セッションを終了します。|[CInternetSession](../mfc/reference/cinternetsession-class.md)オブジェクトを破棄します。|開いているファイルハンドルと接続を自動的にクリーンアップします。|
 
 ## <a name="see-also"></a>関連項目
 
 [Win32 インターネット拡張機能 (WinInet)](../mfc/win32-internet-extensions-wininet.md)<br/>
-[インターネット クライアント クラスの必要条件](../mfc/prerequisites-for-internet-client-classes.md)<br/>
-[MFC WinInet クラスを使ってインターネット クライアント アプリケーションを作成する方法](../mfc/writing-an-internet-client-application-using-mfc-wininet-classes.md)
+[インターネットクライアントクラスの前提条件](../mfc/prerequisites-for-internet-client-classes.md)<br/>
+[MFC WinInet クラスを使用したインターネットクライアントアプリケーションの作成](../mfc/writing-an-internet-client-application-using-mfc-wininet-classes.md)

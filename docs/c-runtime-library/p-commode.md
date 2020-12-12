@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: __p__commode'
 title: __p__commode
 ms.date: 4/2/2020
 api_name:
@@ -23,16 +24,16 @@ f1_keywords:
 helpviewer_keywords:
 - __p__commode
 ms.assetid: 4380acb8-e3e4-409c-a60f-6205ac5189ce
-ms.openlocfilehash: 057a0146aed87a50fc2e8c444b97a8b7b51eada1
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: f3f779196b650d05bb16c0da652d47946fc2a10d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82919496"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97213625"
 ---
 # <a name="__p__commode"></a>__p__commode
 
-ファイルの入出力操作に対して既定の*ファイル コミット モード*を指定する `_commode` グローバル変数を指し示します。
+ファイルの入出力操作に対して既定の *ファイル コミット モード* を指定する `_commode` グローバル変数を指し示します。
 
 ## <a name="syntax"></a>構文
 
@@ -55,6 +56,6 @@ int * __p__commode(
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |__p\__commode|internal.h|

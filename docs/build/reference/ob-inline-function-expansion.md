@@ -1,4 +1,5 @@
 ---
+description: 詳細について:/Ob (関数のインライン展開)
 title: /Ob (関数のインライン展開)
 ms.date: 08/08/2019
 f1_keywords:
@@ -24,28 +25,28 @@ helpviewer_keywords:
 - Ob0 compiler option [C++]
 - inline expansion, compiler option
 ms.assetid: f134e6df-e939-4980-a01d-47425dbc562a
-ms.openlocfilehash: 56a755de69b4f2ce6b659959eca5b25a6d75bfdc
-ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
+ms.openlocfilehash: 9a003f83d27ca0517b427bab6f7ffda75ff51557
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "92921192"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97214342"
 ---
 # <a name="ob-inline-function-expansion"></a>/Ob (関数のインライン展開)
 
 関数のインライン展開を制御します。 既定では、最適化すると、すべての関数に対するコンパイラの裁量によって拡張が行われます。これは、多くの場合、 *自動インライン展開* と呼ばれます。
 
-## <a name="syntax"></a>Syntax
+## <a name="syntax"></a>構文
 
 ::: moniker range=">=msvc-160"
 
-> **/Ob** { **0** | **1** | **2** | **3** }
+> **/Ob**{**0** | **1** | **2** | **3**}
 
 ::: moniker-end
 
 ::: moniker range="<=msvc-150"
 
-> **/Ob** { **0** | **1** | **2** }
+> **/Ob**{**0** | **1** | **2**}
 
 ::: moniker-end
 
@@ -67,26 +68,26 @@ ms.locfileid: "92921192"
 
 ::: moniker-end
 
-## <a name="remarks"></a>注釈
+## <a name="remarks"></a>解説
 
 インライン展開に関するオプションとキーワードは、インライン展開の対象となる候補をコンパイラに示すだけです。 関数がインラインで展開される保証はありません。 インライン展開を無効にすることはできますが、キーワードを使用している場合でも、特定の関数のインライン化をコンパイラに強制することはできません **`__forceinline`** 。
 
 インライン展開の候補として関数を除外するには、 [__declspec (noinline)](../../cpp/noinline.md)、または [#pragma auto_inline (off)](../../preprocessor/auto-inline.md) と [#pragma auto_inline (on)](../../preprocessor/auto-inline.md) ディレクティブでマークされた領域を使用できます。 コンパイラにインライン展開ヒントを提供する別の方法については、「 [#pragma 組み込み](../../preprocessor/intrinsic.md) ディレクティブ」を参照してください。
 
 > [!NOTE]
-> プロファイリングテストの実行から収集された情報は、 **/Ob** 、 **/os** 、または **/ot** を指定したために適用される最適化よりも優先されます。 詳細については、「[ガイド付き最適化のプロファイル](../profile-guided-optimizations.md)」を参照してください。
+> プロファイリングテストの実行から収集された情報は、 **/Ob**、 **/os**、または **/ot** を指定したために適用される最適化よりも優先されます。 詳細については、「[ガイド付き最適化のプロファイル](../profile-guided-optimizations.md)」を参照してください。
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのコンパイラ オプションを設定するには
 
 1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、[Visual Studio での C++ コンパイラとビルド プロパティの設定](../working-with-project-properties.md)に関するページを参照してください。
 
-1. [ **構成プロパティ** ] [  >  **C/c + +**  >  **最適化** ] プロパティページを選択します。
+1. [**構成プロパティ**] [  >  **C/c + +**  >  **最適化**] プロパティページを選択します。
 
 1. **インライン関数の展開** プロパティを変更します。
 
 ::: moniker range=">=msvc-160"
 
-**/Ob3** オプションは、[ **インライン関数の展開** ] プロパティでは使用できません。 設定する方法 **/ob3** :
+**/Ob3** オプションは、[**インライン関数の展開**] プロパティでは使用できません。 設定する方法 **/ob3**:
 
 1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、[Visual Studio での C++ コンパイラとビルド プロパティの設定](../working-with-project-properties.md)に関するページを参照してください。
 
@@ -98,9 +99,9 @@ ms.locfileid: "92921192"
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>このコンパイラ オプションをコードから設定するには
 
-- 「<xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.InlineFunctionExpansion%2A>」を参照してください。
+- 以下を参照してください。<xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.InlineFunctionExpansion%2A>
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 
 [/O オプション (コードの最適化)](o-options-optimize-code.md)\
 [MSVC コンパイラオプション](compiler-options.md)\

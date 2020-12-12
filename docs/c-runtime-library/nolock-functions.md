@@ -1,18 +1,19 @@
 ---
+description: '詳細情報: _nolock 関数'
 title: _nolock 関数
 ms.date: 11/04/2016
 helpviewer_keywords:
 - _nolock functions
 - nolock functions
 ms.assetid: 7d651d87-38d2-4303-9897-fdb5f7a3e899
-ms.openlocfilehash: 7bd0592fb8dc43307a902714723d1b1e43207d1c
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: f4326f873ab16a368624b28dd70a8d39cb9a9ac9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57746410"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97213651"
 ---
-# <a name="nolock-functions"></a>_nolock 関数
+# <a name="_nolock-functions"></a>_nolock 関数
 
 これらは、ロックを実行しない関数です。 最大のパフォーマンスを必要とするユーザーに提供されます。 詳細については、「[マルチスレッド ライブラリのパフォーマンス](../c-runtime-library/multithreaded-libraries-performance.md)」をご覧ください。
 
@@ -56,5 +57,5 @@ _nolock 関数は、プログラムが真のシングル スレッドの場合�
 
 ## <a name="see-also"></a>関連項目
 
-[入出力](../c-runtime-library/input-and-output.md)<br/>
+[入力と出力](../c-runtime-library/input-and-output.md)<br/>
 [カテゴリ別ユニバーサル C ランタイム ルーチン](../c-runtime-library/run-time-routines-by-category.md)<br/>
