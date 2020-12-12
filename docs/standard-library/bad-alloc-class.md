@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: bad_alloc クラス'
 title: bad_alloc クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - bad_alloc class
 ms.assetid: 6429a8e6-5a49-4907-8d56-f4a4ec8131d0
-ms.openlocfilehash: 9d1d81e393b4a3eb27ea08bc53634bfcbc119240
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 1096157e5c69633ee8d4e1c34d98c65775391aca
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68243978"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97321654"
 ---
-# <a name="badalloc-class"></a>bad_alloc クラス
+# <a name="bad_alloc-class"></a>bad_alloc クラス
 
 このクラスは、割り当て要求が成功しなかったことを示すためにスローされる例外を記述します。
 
@@ -29,9 +30,9 @@ class bad_alloc : public exception {
 };
 ```
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-によって返される値`what`実装で定義された C 文字列します。 このメンバー関数は、いずれも例外をスローしません。
+によって返される値 `what` は、実装定義の C 文字列です。 このメンバー関数は、いずれも例外をスローしません。
 
 ## <a name="example"></a>例
 

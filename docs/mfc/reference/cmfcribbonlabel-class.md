@@ -1,5 +1,6 @@
 ---
-title: クラス
+description: '詳細情報: CMFCRibbonLabel クラス'
+title: CMFCRibbonLabel クラス
 ms.date: 11/04/2016
 f1_keywords:
 - CMFCRibbonLabel
@@ -10,14 +11,14 @@ helpviewer_keywords:
 - CMFCRibbonLabel [MFC], CMFCRibbonLabel
 - CMFCRibbonLabel [MFC], SetACCData
 ms.assetid: 0346c891-83bf-4f20-b8a1-c84cf2aadced
-ms.openlocfilehash: cd30e374441661368d3ea7abf5177424f8dffb3c
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 0699e76dfe90b87cd813d18d076adf23f8512bee
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81375124"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97321827"
 ---
-# <a name="cmfcribbonlabel-class"></a>クラス
+# <a name="cmfcribbonlabel-class"></a>CMFCRibbonLabel クラス
 
 リボンのクリックできないテキスト ラベルを実装します。
 
@@ -33,7 +34,7 @@ class CMFCRibbonLabel : public CMFCRibbonButton
 
 |名前|説明|
 |----------|-----------------|
-|[CMFCリボンラベル::CMFCリボンラベル](#cmfcribbonlabel)|指定したテキスト文字列を使用`CMFCRibbonLabel`してオブジェクトを構築および初期化します。|
+|[CMFCRibbonLabel::CMFCRibbonLabel](#cmfcribbonlabel)|`CMFCRibbonLabel`指定したテキスト文字列を使用してオブジェクトを構築し、初期化します。|
 |`CMFCRibbonLabel::~CMFCRibbonLabel`|デストラクターです。|
 
 ### <a name="public-methods"></a>パブリック メソッド
@@ -41,14 +42,14 @@ class CMFCRibbonLabel : public CMFCRibbonButton
 |名前|説明|
 |----------|-----------------|
 |`CMFCRibbonLabel::CreateObject`|このクラス型の動的インスタンスを作成するために、フレームワークで使用されます。|
-|`CMFCRibbonLabel::GetThisClass`|このクラス型に関連付けられている[CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)オブジェクトへのポインターを取得するために、フレームワークによって使用されます。|
-|[を設定します。](#setaccdata)|現在のリボン ラベル要素のアクセシビリティ データを決定します。 (オーバーライド[CMFCリボンボタン:::セットアックデータ](../../mfc/reference/cmfcribbonbutton-class.md#setaccdata).)|
+|`CMFCRibbonLabel::GetThisClass`|このクラス型に関連付けられている [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) オブジェクトへのポインターを取得するために、フレームワークによって使用されます。|
+|[CMFCRibbonLabel:: Setのデータ](#setaccdata)|現在のリボンラベル要素のアクセシビリティデータを決定します。 ( [CMFCRibbonButton:: setのデータ](../../mfc/reference/cmfcribbonbutton-class.md#setaccdata)をオーバーライドします)。|
 
 ### <a name="remarks"></a>解説
 
-リボン ラベルを作成したら[、CMFCRibbonPanel::Add](../../mfc/reference/cmfcribbonpanel-class.md#add)を呼び出してパネルに追加します。
+リボンラベルを作成したら、 [CMFCRibbonPanel:: add](../../mfc/reference/cmfcribbonpanel-class.md#add)を呼び出してパネルに追加します。
 
-クイック アクセス ツールバーにリボン ラベルを追加することはできません。
+クイックアクセスツールバーにリボンラベルを追加することはできません。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -60,13 +61,13 @@ class CMFCRibbonLabel : public CMFCRibbonButton
 
 [CMFCRibbonLabel](../../mfc/reference/cmfcribbonlabel-class.md)
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-**ヘッダー:** afxRibbonLabel.h
+**ヘッダー:** afxRibbonLabel
 
-## <a name="cmfcribbonlabelcmfcribbonlabel"></a><a name="cmfcribbonlabel"></a>CMFCリボンラベル::CMFCリボンラベル
+## <a name="cmfcribbonlabelcmfcribbonlabel"></a><a name="cmfcribbonlabel"></a> CMFCRibbonLabel::CMFCRibbonLabel
 
-指定したテキスト文字列を表示する[CMFCRibbonLabel](../../mfc/reference/cmfcribbonlabel-class.md)オブジェクトを構築および初期化します。
+指定されたテキスト文字列を表示する [CMFCRibbonLabel](../../mfc/reference/cmfcribbonlabel-class.md) オブジェクトを構築し、初期化します。
 
 ```
 CMFCRibbonLabel(
@@ -77,14 +78,14 @@ CMFCRibbonLabel(
 ### <a name="parameters"></a>パラメーター
 
 *lpszText*<br/>
-[in]ラベルに表示するテキスト。
+からラベルに表示されるテキスト。
 
-*ビスマルチライン*<br/>
-[in]ラベルが複数行ラベルであることを指定する場合は TRUE。それ以外の場合は FALSE。
+*bIsMultiLine*<br/>
+からラベルが複数行のラベルであることを指定する場合は TRUE。それ以外の場合は FALSE。
 
-## <a name="cmfcribbonlabelsetaccdata"></a><a name="setaccdata"></a>を設定します。
+## <a name="cmfcribbonlabelsetaccdata"></a><a name="setaccdata"></a> CMFCRibbonLabel:: Setのデータ
 
-現在のリボン ラベル要素のアクセシビリティ データを決定します。
+現在のリボンラベル要素のアクセシビリティデータを決定します。
 
 ```
 virtual BOOL SetACCData(
@@ -94,18 +95,18 @@ virtual BOOL SetACCData(
 
 ### <a name="parameters"></a>パラメーター
 
-*親*<br/>
-[in]現在のリボン ラベルの親ウィンドウを表します。
+*pParent*<br/>
+から現在のリボンラベルの親ウィンドウを表します。
 
-*データ*<br/>
-[アウト]現在のリボン`CAccessibilityData`ラベルのアクセシビリティ データが設定されている型のオブジェクト。
+*data*<br/>
+入出力 `CAccessibilityData` 現在のリボンラベルのアクセシビリティデータを格納する型のオブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
-現在のリボン ラベルのアクセシビリティ データが*データ*パラメーターに正常に設定された場合は TRUE。それ以外の場合は FALSE。
+*データ* パラメーターに現在のリボンラベルのアクセシビリティデータが正常に設定された場合は TRUE。それ以外の場合は FALSE。
 
 ## <a name="see-also"></a>関連項目
 
-[階層グラフ](../../mfc/hierarchy-chart.md)<br/>
-[クラス](../../mfc/reference/mfc-classes.md)<br/>
+[階層図](../../mfc/hierarchy-chart.md)<br/>
+[Classes](../../mfc/reference/mfc-classes.md)<br/>
 [CMFCRibbonButton クラス](../../mfc/reference/cmfcribbonbutton-class.md)

@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: _CrtGetReportHook'
 title: _CrtGetReportHook
 ms.date: 11/04/2016
 api_name:
@@ -25,12 +26,12 @@ helpviewer_keywords:
 - CrtGetReportHook function
 - _CrtGetReportHook function
 ms.assetid: 922758ed-7edd-4359-9c92-0535192dc11a
-ms.openlocfilehash: bc005dda435b5e11d6c3c886de180ed85b9c2a04
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 9c950341e3f1b0231620449d983fcfe5bc0f5f12
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70942401"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97319740"
 ---
 # <a name="_crtgetreporthook"></a>_CrtGetReportHook
 
@@ -46,9 +47,9 @@ _CRT_REPORT_HOOK _CrtGetReportHook( void );
 
 現在のクライアント定義レポート関数を返します。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-**_CrtGetReportHook**を使用すると、アプリケーションは、C ランタイムデバッグライブラリのレポートプロセスの現在のレポート関数を取得できます。
+**_CrtGetReportHook** を使用すると、アプリケーションは、C ランタイムデバッグライブラリのレポートプロセスの現在のレポート関数を取得できます。
 
 フックをサポートするその他のランタイム関数の使い方の詳細と、独自のクライアント定義フック関数の記述方法については、「[デバッグ用フック関数の作成](/visualstudio/debugger/debug-hook-function-writing)」を参照してください。
 
@@ -58,7 +59,7 @@ _CRT_REPORT_HOOK _CrtGetReportHook( void );
 |-------------|---------------------|
 |**_CrtGetReportHook**|\<crtdbg.h>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性について詳しくは、「 [Compatibility](../../c-runtime-library/compatibility.md)」をご覧ください。
 
 ## <a name="libraries"></a>ライブラリ
 
@@ -66,9 +67,9 @@ _CRT_REPORT_HOOK _CrtGetReportHook( void );
 
 ## <a name="example"></a>例
 
-**_CrtSetReportHook**の使用例については、「[レポート](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/crt/report)」を参照してください。
+**_CrtSetReportHook** の使用方法の例については、「[レポート](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/crt/report)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 
-[デバッグ ルーチン](../../c-runtime-library/debug-routines.md)<br/>
+[デバッグルーチン](../../c-runtime-library/debug-routines.md)<br/>
 [_CrtSetReportHook](crtsetreporthook.md)<br/>

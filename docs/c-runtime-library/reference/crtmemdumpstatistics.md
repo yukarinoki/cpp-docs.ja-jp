@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: _CrtMemDumpStatistics'
 title: _CrtMemDumpStatistics
 ms.date: 11/04/2016
 api_name:
@@ -25,12 +26,12 @@ helpviewer_keywords:
 - _CrtMemDumpStatistics function
 - CrtMemDumpStatistics function
 ms.assetid: 27b9d731-3184-4a2d-b9a7-6566ab28a9fe
-ms.openlocfilehash: 7aba82e3dfea220f2edc3bd3a689a48e316a0087
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 2f02c35ff61dc2bc5ac7e8dfbe921fa48731c2b3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70938697"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97319615"
 ---
 # <a name="_crtmemdumpstatistics"></a>_CrtMemDumpStatistics
 
@@ -49,13 +50,13 @@ void _CrtMemDumpStatistics(
 *state*<br/>
 ダンプするヒープ状態へのポインター。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-**_CrtMemDumpStatistics**関数は、ヒープの指定された状態のデバッグヘッダー情報をユーザーが判読できる形式でダンプします。 ダンプ統計情報は、割り当ての追跡とメモリの問題の検出のためにアプリケーションで使用できます。 メモリ状態には、特定のヒープ状態、または 2 つの状態の相違点を含めることができます。 [_Debug](../../c-runtime-library/debug.md)が定義されていない場合、 **_CrtMemDumpStatistics**の呼び出しはプリプロセス中に削除されます。
+**_CrtMemDumpStatistics** 関数は、指定されたヒープ状態のデバッグヘッダー情報をユーザーが判読できる形式でダンプします。 ダンプ統計情報は、割り当ての追跡とメモリの問題の検出のためにアプリケーションで使用できます。 メモリ状態には、特定のヒープ状態、または 2 つの状態の相違点を含めることができます。 [_DEBUG](../../c-runtime-library/debug.md)が定義されていない場合、 **_CrtMemDumpStatistics** の呼び出しはプリプロセス中に削除されます。
 
-*State*パラメーターは、 **_CrtMemDumpStatistics**が呼び出される前に、 [_CrtMemCheckpoint](crtmemcheckpoint.md)によって入力された、または[_CrtMemDifference](crtmemdifference.md)によって返された **_CrtMemState**構造体へのポインターである必要があります。 *State*が**NULL**の場合、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、 **errno**は**EINVAL**に設定され、アクションは実行されません。 詳細については、「[errno、_doserrno、_sys_errlist、_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」をご覧ください。
+*State* パラメーターは、 **_CrtMemDumpStatistics** が呼び出される前に [_CrtMemCheckpoint](crtmemcheckpoint.md)によって入力された、または [_CrtMemDifference](crtmemdifference.md)によって返された **_CrtMemState** 構造体へのポインターである必要があります。 *State* が **NULL** の場合、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、 **errno** は **EINVAL** に設定され、アクションは実行されません。 詳細については、「[errno、_doserrno、_sys_errlist、および _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」を参照してください。
 
-ヒープ状態関数と **_CrtMemState**構造体の詳細については、「[ヒープ状態レポート関数](/visualstudio/debugger/crt-debug-heap-details)」を参照してください。 デバッグ バージョンのベース ヒープでのメモリ ブロックの割り当て、初期化、管理の方法について詳しくは、「 [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details)」をご覧ください。
+ヒープ状態関数と **_CrtMemState** 構造体の詳細については、「 [ヒープ状態レポート関数](/visualstudio/debugger/crt-debug-heap-details)」を参照してください。 デバッグ バージョンのベース ヒープでのメモリ ブロックの割り当て、初期化、管理の方法について詳しくは、「 [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details)」をご覧ください。
 
 ## <a name="requirements"></a>必要条件
 
@@ -63,10 +64,10 @@ void _CrtMemDumpStatistics(
 |-------------|---------------------|----------------------|
 |**_CrtMemDumpStatistics**|\<crtdbg.h>|\<errno.h>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性について詳しくは、「 [Compatibility](../../c-runtime-library/compatibility.md)」をご覧ください。
 
-**ライブラリ**[CRT ライブラリ機能](../../c-runtime-library/crt-library-features.md)のデバッグバージョンのみ。
+**ライブラリ:**[CRT ライブラリの機能](../../c-runtime-library/crt-library-features.md)のデバッグ バージョンのみ。
 
 ## <a name="see-also"></a>関連項目
 
-[デバッグ ルーチン](../../c-runtime-library/debug-routines.md)<br/>
+[デバッグルーチン](../../c-runtime-library/debug-routines.md)<br/>

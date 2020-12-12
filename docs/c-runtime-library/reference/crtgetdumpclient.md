@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: _CrtGetDumpClient'
 title: _CrtGetDumpClient
 ms.date: 11/04/2016
 api_name:
@@ -25,16 +26,16 @@ helpviewer_keywords:
 - _CrtGetDumpClient function
 - CrtGetDumpClient function
 ms.assetid: 9051867f-341b-493b-b53d-45d2b454a3ad
-ms.openlocfilehash: 4b5c6c7d4d123d2d419f104ddaabd57c10ad320e
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: b4163e6f4f252eddd304f2704c3f5a9aa62b5371
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70938748"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97319753"
 ---
 # <a name="_crtgetdumpclient"></a>_CrtGetDumpClient
 
-**_CLIENT_BLOCK** type メモリブロックをダンプするための現在のアプリケーション定義関数を取得します (デバッグバージョンのみ)。
+**_CLIENT_BLOCK** 型のメモリブロックをダンプするための現在のアプリケーション定義関数を取得します (デバッグバージョンのみ)。
 
 ## <a name="syntax"></a>構文
 
@@ -46,9 +47,9 @@ _CRT_DUMP_CLIENT _CrtGetDumpClient( void );
 
 現在のダンプ ルーチンを返します。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-**_CrtGetDumpClient**関数は、C ランタイムデバッグメモリダンププロセス用に、 **_CLIENT_BLOCK**メモリブロックに格納されているオブジェクトをダンプするための現在のフック関数を取得します。
+**_CrtGetDumpClient** 関数は、C ランタイムデバッグメモリダンププロセス用に、 **_CLIENT_BLOCK** メモリブロックに格納されているオブジェクトをダンプするための現在のフック関数を取得します。
 
 フックをサポートするその他のランタイム関数の使い方の詳細と、独自のクライアント定義フック関数の記述方法については、「[デバッグ用フック関数の作成](/visualstudio/debugger/debug-hook-function-writing)」を参照してください。
 
@@ -58,7 +59,7 @@ _CRT_DUMP_CLIENT _CrtGetDumpClient( void );
 |-------------|---------------------|
 |**_CrtGetDumpClient**|\<crtdbg.h>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性について詳しくは、「 [Compatibility](../../c-runtime-library/compatibility.md)」をご覧ください。
 
 ## <a name="libraries"></a>ライブラリ
 
@@ -66,6 +67,6 @@ _CRT_DUMP_CLIENT _CrtGetDumpClient( void );
 
 ## <a name="see-also"></a>関連項目
 
-[デバッグ ルーチン](../../c-runtime-library/debug-routines.md)<br/>
+[デバッグルーチン](../../c-runtime-library/debug-routines.md)<br/>
 [_CrtReportBlockType](crtreportblocktype.md)<br/>
 [_CrtSetDumpClient](crtsetdumpclient.md)<br/>

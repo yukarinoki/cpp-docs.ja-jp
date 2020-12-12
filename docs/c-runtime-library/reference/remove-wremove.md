@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「remove、_wremove」を参照してください。
 title: remove、_wremove
 ms.date: 4/2/2020
 api_name:
@@ -36,12 +37,12 @@ helpviewer_keywords:
 - wremove function
 - remove function
 ms.assetid: b6345ec3-3289-4645-93a4-28b9e478cc19
-ms.openlocfilehash: bf3eedaa9c24e7385686e2343857e69171e43090
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: c17215803e03e1e59df86b6049249a824d5615c9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82917834"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97322512"
 ---
 # <a name="remove-_wremove"></a>remove、_wremove
 
@@ -65,13 +66,13 @@ int _wremove(
 
 ## <a name="return-value"></a>戻り値
 
-ファイルが正常に削除された場合、これらの関数はそれぞれ 0 を返します。 それ以外の場合は、-1 を返し、 **errno**を**EACCES**に設定して、パスが読み取り専用ファイルを指定しているか、ディレクトリを指定しているか、ファイルが開いていることを示します。または、ファイル名またはパスが見つからなかったことを示すために**ENOENT**を設定します。
+ファイルが正常に削除された場合、これらの関数はそれぞれ 0 を返します。 それ以外の場合は、-1 を返し、 **errno** を **EACCES** に設定して、パスが読み取り専用ファイルを指定しているか、ディレクトリを指定しているか、ファイルが開いていることを示します。または、ファイル名またはパスが見つからなかったことを示すために **ENOENT** を設定します。
 
 これらのリターンコードの詳細については、「 [_doserrno、errno、_sys_errlist、および _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) 」を参照してください。
 
 ## <a name="remarks"></a>解説
 
-**remove** 関数は、*path* によって指定されたファイルを削除します。 **_wremove**は **_remove**のワイド文字バージョンです。**_wremove**の*パス*引数は、ワイド文字列です。 **_wremove**と **_remove**は同じように動作します。 ファイルを削除する前に、ファイルへのすべてのハンドルを閉じる必要があります。
+**remove** 関数は、*path* によって指定されたファイルを削除します。 **_wremove** は **_remove** のワイド文字バージョンです。**_wremove** の *パス* 引数は、ワイド文字列です。 **_wremove** と **_remove** は同じように動作します。 ファイルを削除する前に、ファイルへのすべてのハンドルを閉じる必要があります。
 
 既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
@@ -83,7 +84,7 @@ int _wremove(
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**remove**|\<stdio.h> または \<io.h>|
 |**_wremove**|\<stdio.h> または \<wchar.h>|
@@ -117,7 +118,7 @@ int main( void )
 This file will be deleted.
 ```
 
-### <a name="sample-output"></a>サンプル出力
+### <a name="sample-output"></a>出力例
 
 ```Output
 Deleted 'CRT_REMOVE.TXT'
@@ -125,5 +126,5 @@ Deleted 'CRT_REMOVE.TXT'
 
 ## <a name="see-also"></a>関連項目
 
-[ファイル処理](../../c-runtime-library/file-handling.md)<br/>
+[ファイルの処理](../../c-runtime-library/file-handling.md)<br/>
 [_unlink、_wunlink](unlink-wunlink.md)<br/>

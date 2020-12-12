@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: texture_view クラス'
 title: texture_view クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -14,16 +15,16 @@ f1_keywords:
 - AMP_GRAPHICS/Concurrency::graphics::texture_view::set
 - AMP_GRAPHICS/Concurrency::graphics::texture_view::value_type
 ms.assetid: 6ec2e289-1626-4727-9592-07981cf1d27d
-ms.openlocfilehash: 1fa21f2a5a5c1d004fc23d70b686d7e45bbcac81
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: e2c96f2fbddb5d2dc39a1e2e39fe5a0af656176a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87215908"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97321722"
 ---
 # <a name="texture_view-class"></a>texture_view クラス
 
-テクスチャへの読み取りアクセスおよび書き込みアクセスを提供します。 `texture_view`は、値の型が **`int`** 、 **`unsigned int`** 、または **`float`** 既定の32ビット bpse を持つテクスチャの読み取りにのみ使用できます。 他のテクスチャ形式を読み取るには、`texture_view<const value_type, _Rank>` を使用します。
+テクスチャへの読み取りアクセスおよび書き込みアクセスを提供します。 `texture_view` は、値の型が **`int`** 、 **`unsigned int`** 、または **`float`** 既定の32ビット bpse を持つテクスチャの読み取りにのみ使用できます。 他のテクスチャ形式を読み取るには、`texture_view<const value_type, _Rank>` を使用します。
 
 ## <a name="syntax"></a>構文
 
@@ -97,13 +98,13 @@ class texture_view<const value_type, _Rank>
 
 `texture_view`
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** amp_graphics
 
 **名前空間:** concurrency:: graphics
 
-## <a name="texture_view"></a><a name="dtor"></a>~ texture_view
+## <a name="texture_view"></a><a name="dtor"></a> ~ texture_view
 
 `texture_view` インスタンスを破棄します。
 
@@ -111,7 +112,7 @@ class texture_view<const value_type, _Rank>
 ~texture_view() restrict(amp, cpu);
 ```
 
-## <a name="texture_view"></a><a name="ctor"></a>texture_view
+## <a name="texture_view"></a><a name="ctor"></a> texture_view
 
 `texture_view` インスタンスを構築します。
 
@@ -146,9 +147,9 @@ texture_view(// [7] copy constructor
 ### <a name="parameters"></a>パラメーター
 
 *_Src*<br/>
-[1, 2]`texture`書き込み可能 `texture_view` なが作成されるコンストラクター。
+[1, 2] `texture` 書き込み可能 `texture_view` なが作成されるコンストラクター。
 
-[3, 4]`texture`書き込み可能でないを作成するコンストラクター `texture_view` 。
+[3, 4] `texture` 書き込み可能でないを作成するコンストラクター `texture_view` 。
 
 *_Other*<br/>
 [5] ソース書き込み可能なコンストラクターをコピー `texture_view` します。
@@ -164,7 +165,7 @@ texture_view(// [7] copy constructor
 *_Mip_levels*<br/>
 `texture_view` を使用してアクセスできる MIPMAP レベルの数。
 
-## <a name="gather_red"></a><a name="gather_red"></a>gather_red
+## <a name="gather_red"></a><a name="gather_red"></a> gather_red
 
 指定されたサンプリング構成を使用して指定された座標でテクスチャをサンプリングし、4 つのサンプリングされたテクセルの赤 (x) 要素を返します。
 
@@ -195,7 +196,7 @@ const gather_return_type gather_red(
 
 4 つのサンプリングされたテクセル値の赤 (x) 要素を含むランク 4 の短いベクター。
 
-## <a name="gather_green"></a><a name="gather_green"></a>gather_green
+## <a name="gather_green"></a><a name="gather_green"></a> gather_green
 
 指定されたサンプリング構成を使用して指定された座標でテクスチャをサンプリングし、4 つのサンプリングされたテクセルの緑 (y) 要素を返します。
 
@@ -226,7 +227,7 @@ const gather_return_type gather_green(
 
 4 つのサンプリングされたテクセル値の緑 (y) 要素を含むランク 4 の短いベクター。
 
-## <a name="gather_blue"></a><a name="gather_blue"></a>gather_blue
+## <a name="gather_blue"></a><a name="gather_blue"></a> gather_blue
 
 指定されたサンプリング構成を使用して指定された座標でテクスチャをサンプリングし、4 つのサンプリングされたテクセルの青 (z) 要素を返します。
 
@@ -257,7 +258,7 @@ const gather_return_type gather_blue(
 
 4 つのサンプリングされたテクセル値の赤 (x) 要素を含むランク 4 の短いベクター。
 
-## <a name="gather_alpha"></a><a name="gather_alpha"></a>gather_alpha
+## <a name="gather_alpha"></a><a name="gather_alpha"></a> gather_alpha
 
 指定されたサンプリング構成を使用して指定された座標でテクスチャをサンプリングし、4 つのサンプリングされたテクセルのアルファ (w) 要素を返します。
 
@@ -288,7 +289,7 @@ const gather_return_type gather_alpha(
 
 4 つのサンプリングされたテクセル値のアルファ (w) 要素を含むランク 4 の短いベクター。
 
-## <a name="get"></a><a name="get"></a>取得
+## <a name="get"></a><a name="get"></a> 取得
 
 指定したインデックス位置にある要素の値を取得します。
 
@@ -311,9 +312,9 @@ value_type get(
 
 ### <a name="return-value"></a>戻り値
 
-要素の値です。
+要素の値。
 
-## <a name="operator"></a><a name="operator_eq"></a>operator =
+## <a name="operator"></a><a name="operator_eq"></a> operator =
 
 指定された `texture_view` と同じテクスチャのビューをこの `texture_view` インスタンスに割り当てます。
 
@@ -339,7 +340,7 @@ texture_view<const value_type, _Rank>& operator= (// [3] copy constructor
 
 この `texture_view` インスタンスへの参照。
 
-## <a name="operator"></a><a name="operator_at"></a>演算子 []
+## <a name="operator"></a><a name="operator_at"></a> operator[]
 
 インデックスごとの要素の値を返します。
 
@@ -365,7 +366,7 @@ value_type operator[] (int _I0) const restrict(amp);
 
 `_Index` でインデックス付けされている要素の値。
 
-## <a name="operator"></a><a name="operator_call"></a>operator ()
+## <a name="operator"></a><a name="operator_call"></a> operator ()
 
 インデックスごとの要素の値を返します。
 
@@ -418,7 +419,7 @@ value_type operator() (
 
 `_Index` でインデックス付けされている要素の値。
 
-## <a name="sample"></a><a name="sample"></a>サンプル
+## <a name="sample"></a><a name="sample"></a> サンプル
 
 指定されたサンプリング構成を使用して詳細な指定された座標およびレベルでテクスチャをサンプリングします。
 
@@ -458,7 +459,7 @@ texture_view をサンプリングするために使用するサンプラー構�
 
 補間されたサンプル値。
 
-## <a name="set"></a><a name="set"></a>一連
+## <a name="set"></a><a name="set"></a> 一連
 
 指定したインデックス位置にある要素の値を指定した値に設定します。
 
@@ -476,7 +477,7 @@ void set(
 *value*<br/>
 要素を設定する値。
 
-## <a name="value_type"></a><a name="value_type"></a>value_type
+## <a name="value_type"></a><a name="value_type"></a> value_type
 
 texture_view の要素の値型です。
 

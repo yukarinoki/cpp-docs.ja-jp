@@ -1,16 +1,17 @@
 ---
+description: '詳細情報: 割り当て'
 title: 割り当て
 ms.date: 11/04/2016
 helpviewer_keywords:
 - operators [C++], assignment
 - assignment operators [C++], overloaded
 ms.assetid: d87e4f89-f8f5-42c1-9d3c-184bca9d0e15
-ms.openlocfilehash: f1697a8de3dff6c46de01db6bbff5447c03b6282
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 696706202e70e8baf50dda34ac98ff9bca5dcda2
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80190704"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97319490"
 ---
 # <a name="assignment"></a>割り当て
 
@@ -18,7 +19,7 @@ ms.locfileid: "80190704"
 
 - 非静的メンバー関数である必要があります。 **Operator =** を非メンバー関数として宣言することはできません。
 - 派生クラスにより継承されません。
-- クラス型の場合は、コンパイラによって既定の**operator =** 関数が生成されます (存在しない場合)。
+- クラス型の場合は、コンパイラによって既定の **operator =** 関数が生成されます (存在しない場合)。
 
 次の例では、代入演算子を宣言する方法を示しています。
 
@@ -66,9 +67,9 @@ Point pt4(pt1); // Copy constructor call.
 ```
 
 > [!NOTE]
-> コピー代入演算子を定義するクラスでは、C++ 11、移動コンストラクター、移動代入演算子で始まるコピーコンストラクター、デストラクター、およびを明示的に定義する必要があるという[3 つの規則](https://en.wikipedia.org/wiki/Rule_of_three_(C%2B%2B_programming))に従うことをお勧めします。
+> コピー代入演算子を定義するクラスでは、C++ 11、移動コンストラクター、移動代入演算子で始まるコピーコンストラクター、デストラクター、およびを明示的に定義する必要があるという [3 つの規則](https://en.wikipedia.org/wiki/Rule_of_three_(C%2B%2B_programming)) に従うことをお勧めします。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [演算子のオーバーロード](../cpp/operator-overloading.md)
 - [コピー コンストラクターとコピー代入演算子 (C++)](../cpp/copy-constructors-and-copy-assignment-operators-cpp.md)

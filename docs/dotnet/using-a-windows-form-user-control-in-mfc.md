@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「MFC での Windows フォームユーザーコントロールの使用」を参照してください。
 title: MFC での Windows フォーム ユーザー コントロールの使用
 ms.date: 01/08/2018
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - interop [C++], MFC
 - Windows Forms [C++], MFC support
 ms.assetid: 63fb099b-1dff-469c-9e34-dab52e122fcd
-ms.openlocfilehash: efabbf84778d925ec1de03f5f4ea0ca09185bd81
-ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
+ms.openlocfilehash: 61022d241faba1650d1a044ef6d3667febe34cde
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "79544748"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97319028"
 ---
 # <a name="using-a-windows-form-user-control-in-mfc"></a>MFC での Windows フォーム ユーザー コントロールの使用
 
@@ -29,22 +30,22 @@ Mfc Windows フォームサポートクラスを使用すると、mfc アプリ�
 - Windows フォームフォームを MFC ダイアログボックスとしてホストします。
 
 > [!NOTE]
-> MFC Windows フォーム統合は、MFC と動的にリンクするプロジェクト (`_AFXDLL` が定義されているプロジェクト) でのみ機能します。
+> MFC Windows フォーム統合は、MFC (が定義されているプロジェクト) と動的にリンクするプロジェクトでのみ機能 `_AFXDLL` します。
 
 > [!NOTE]
-> MFC Windows フォームインターフェイス DLL (mfcmifc80.dll) のプライベート (変更された) コピーを使用してアプリケーションをビルドする場合、Microsoft キーを独自のベンダキーに置き換える場合を除き、GAC にインストールすることはできません。 アセンブリの署名の詳細については、「アセンブリおよび厳密な名前のアセンブリを[使用したプログラミング](/dotnet/framework/app-domains/programming-with-assemblies) [(アセンブリ署名) (C++/cli)](../dotnet/strong-name-assemblies-assembly-signing-cpp-cli.md)」を参照してください。
+> MFC Windows フォームインターフェイス DLL (mfcmifc80.dll) のプライベート (変更された) コピーを使用してアプリケーションをビルドする場合、Microsoft キーを独自のベンダキーに置き換える場合を除き、GAC にインストールすることはできません。 アセンブリの署名の詳細については、「アセンブリおよび厳密な名前のアセンブリ [を使用したプログラミング](/dotnet/framework/app-domains/programming-with-assemblies) [(アセンブリ署名) (C++/cli)](../dotnet/strong-name-assemblies-assembly-signing-cpp-cli.md)」を参照してください。
 
-MFC アプリケーションで Windows フォームを使用する場合は、アプリケーションで mfcmifc80.dll を再配布する必要があります。 詳細については、「 [MFC ライブラリの再配布](../windows/redistributing-the-mfc-library.md)」を参照してください。
+MFC アプリケーションで Windows フォームを使用する場合は、アプリケーションと共に mfcmifc80.dll を再配布する必要があります。 詳細については、「 [MFC ライブラリの再配布](../windows/redistributing-the-mfc-library.md)」を参照してください。
 
 ## <a name="in-this-section"></a>このセクションの内容
 
-[MFC ダイアログ ボックスにおける Windows フォーム ユーザー コントロールのホスト](../dotnet/hosting-a-windows-form-user-control-in-an-mfc-dialog-box.md)
+[MFC ダイアログボックスでの Windows フォームユーザーコントロールのホスト](../dotnet/hosting-a-windows-form-user-control-in-an-mfc-dialog-box.md)
 
 [MFC ビューとしての Windows フォーム ユーザー コントロールのホスト](../dotnet/hosting-a-windows-forms-user-control-as-an-mfc-view.md)
 
-[MFC ダイアログ ボックスとしての Windows フォーム ユーザー コントロールのホスト](../dotnet/hosting-a-windows-form-user-control-as-an-mfc-dialog-box.md)
+[MFC ダイアログボックスとしての Windows フォームユーザーコントロールのホスト](../dotnet/hosting-a-windows-form-user-control-as-an-mfc-dialog-box.md)
 
-## <a name="reference"></a>参照
+## <a name="reference"></a>リファレンス
 
 [CWinFormsControl クラス](../mfc/reference/cwinformscontrol-class.md)
 
@@ -66,13 +67,13 @@ MFC アプリケーションで Windows フォームを使用する場合は、�
 
 [UICheckState](../mfc/reference/uicheckstate-enumeration.md)
 
-## <a name="related-sections"></a>関連セクション
+## <a name="related-sections"></a>関連項目
 
 [Windows フォーム](/dotnet/framework/winforms/index)
 
-[Windows フォーム コントロール](/dotnet/framework/winforms/controls/index)
+[Windows フォームコントロール](/dotnet/framework/winforms/controls/index)
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [ユーザーインターフェイス要素](../mfc/user-interface-elements-mfc.md)<br/>
-[フォームビュー](../mfc/form-views-mfc.md)
+[フォーム ビュー](../mfc/form-views-mfc.md)

@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: basic_iostream クラス'
 title: basic_iostream クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - basic_iostream class
 ms.assetid: 294b680b-eb49-4066-8db2-6d52dac9d6e3
-ms.openlocfilehash: e2a892525afbbad6d5b42d0b836fee096a70c297
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: c9b605c5eb36a0bc725ce21e2c89617357078d40
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81376820"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97321515"
 ---
 # <a name="basic_iostream-class"></a>basic_iostream クラス
 
@@ -35,11 +36,11 @@ public:
 
 ## <a name="remarks"></a>解説
 
-クラス テンプレートは、基本クラス[basic_ostream](../standard-library/basic-ostream-class.md)< `Elem`、>、`Tr`および抽出を通じて、その基本クラス[basic_istream](../standard-library/basic-istream-class.md)< `Elem`> を通じて`Tr`挿入を制御するオブジェクトを記述します。 2 つのオブジェクトは、共通の仮想[basic_ios](../standard-library/basic-ios-class.md)< `Elem`基本クラス`Tr`basic_ios を共有>。 また、これらは共通のストリーム バッファーを管理します。このストリーム バッファーには、`Elem` 型の要素が含まれ、その文字特性は `Tr` クラスによって決定されます。 コンストラクターは `basic_istream`( **strbuf**) および `basic_ostream`( **strbuf**) を使用して基底クラスを初期化します。
+クラステンプレートは、基本クラスの[basic_ostream](../standard-library/basic-ostream-class.md) <  `Elem` 、 `Tr`>、および抽出を、基本クラス[basic_istream](../standard-library/basic-istream-class.md) <  `Elem` 、> を通じて、挿入を制御するオブジェクトを表し `Tr` ます。 2つのオブジェクトは、共通の仮想基底クラス[basic_ios](../standard-library/basic-ios-class.md) <  `Elem` 、> を共有 `Tr` します。 また、これらは共通のストリーム バッファーを管理します。このストリーム バッファーには、`Elem` 型の要素が含まれ、その文字特性は `Tr` クラスによって決定されます。 コンストラクターは `basic_istream`( **strbuf**) および `basic_ostream`( **strbuf**) を使用して基底クラスを初期化します。
 
 ### <a name="constructors"></a>コンストラクター
 
-|Constructor|説明|
+|コンストラクター|説明|
 |-|-|
 |[basic_iostream](#basic_iostream)|`basic_iostream` オブジェクトを作成します。|
 
@@ -53,15 +54,15 @@ public:
 
 |演算子|説明|
 |-|-|
-|[演算子=](#op_eq)|このオブジェクトに、指定された `basic_iostream` オブジェクトの値を代入します。 これは、`rvalue` が関係する移動代入で、コピーを残しません。|
+|[operator =](#op_eq)|このオブジェクトに、指定された `basic_iostream` オブジェクトの値を代入します。 これは、`rvalue` が関係する移動代入で、コピーを残しません。|
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-**ヘッダー:** \<istream>
+**ヘッダー:**\<istream>
 
 **名前空間:** std
 
-## <a name="basic_iostreambasic_iostream"></a><a name="basic_iostream"></a>basic_iostream::basic_iostream
+## <a name="basic_iostreambasic_iostream"></a><a name="basic_iostream"></a> basic_iostream:: basic_iostream
 
 `basic_iostream` オブジェクトを作成します。
 
@@ -75,7 +76,7 @@ basic_iostream();
 
 ### <a name="parameters"></a>パラメーター
 
-*ストルブフ*\
+*strbuf*\
 既存の `basic_streambuf` オブジェクトです。
 
 *そうです*\
@@ -85,9 +86,9 @@ basic_iostream();
 
 最初のコンストラクターが `basic_istream(strbuf)` および `basic_ostream(strbuf)` を使用してベース オブジェクトを初期化します。
 
-2 番目のコンストラクターは、 を呼`move(right)`び出して基本オブジェクトを初期化します。
+2番目のコンストラクターは、を呼び出すことによって、ベースオブジェクトを初期化し `move(right)` ます。
 
-## <a name="basic_iostreamoperator"></a><a name="op_eq"></a>basic_iostream::演算子=
+## <a name="basic_iostreamoperator"></a><a name="op_eq"></a> basic_iostream:: operator =
 
 このオブジェクトに、指定された `basic_iostream` オブジェクトの値を割り当てます。 これは、右辺値が関係する移動代入で、コピーを残しません。
 
@@ -102,9 +103,9 @@ basic_iostream& operator=(basic_iostream&& right);
 
 ### <a name="remarks"></a>解説
 
-メンバ オペレータは`swap(right)`を呼び出します。
+このメンバー演算子は、 `swap(right)` を呼び出します。
 
-## <a name="basic_iostreamswap"></a><a name="swap"></a>basic_iostream::スワップ
+## <a name="basic_iostreamswap"></a><a name="swap"></a> basic_iostream:: swap
 
 指定された `basic_iostream` オブジェクトの内容を、このオブジェクトの内容と交換します。
 
@@ -119,10 +120,10 @@ void swap(basic_iostream& right);
 
 ### <a name="remarks"></a>解説
 
-メンバー関数が呼`swap(right)`び出します。
+このメンバー関数はを呼び出し `swap(right)` ます。
 
 ## <a name="see-also"></a>関連項目
 
-[C++ 標準ライブラリにおけるスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[C++ 標準ライブラリのスレッドセーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
 [iostream プログラミング](../standard-library/iostream-programming.md)\
-[ioストリームの規約](../standard-library/iostreams-conventions.md)
+[iostreams の規則](../standard-library/iostreams-conventions.md)

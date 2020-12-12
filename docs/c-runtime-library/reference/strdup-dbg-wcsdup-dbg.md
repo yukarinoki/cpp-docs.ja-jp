@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: _strdup_dbg、_wcsdup_dbg'
 title: _strdup_dbg、_wcsdup_dbg
 ms.date: 11/04/2016
 api_name:
@@ -34,16 +35,16 @@ helpviewer_keywords:
 - _strdup_dbg function
 - wcsdup_dbg function
 ms.assetid: 681db70c-d124-43ab-b83e-5eeea9035097
-ms.openlocfilehash: 9f7d4fd8781269ee37f7515fdcab72e5195fdf00
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: c7001d7948f733977213267fdabd9faee4ddffd4
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70958200"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97322480"
 ---
 # <a name="_strdup_dbg-_wcsdup_dbg"></a>_strdup_dbg、_wcsdup_dbg
 
-**Malloc**のデバッグバージョンを使用する[_strdup と _wcsdup](strdup-wcsdup-mbsdup.md)のバージョン。
+**Malloc** のデバッグバージョンを使用する [_strdup および _wcsdup](strdup-wcsdup-mbsdup.md)のバージョン。
 
 ## <a name="syntax"></a>構文
 
@@ -68,23 +69,23 @@ wchar_t *_wcsdup_dbg(
 NULL で終わる元の文字列。
 
 *blockType*<br/>
-要求されたメモリブロックの種類: **_CLIENT_BLOCK**または **_NORMAL_BLOCK**。
+要求されたメモリブロックの種類: **_CLIENT_BLOCK** または **_NORMAL_BLOCK**。
 
-*ファイル名*<br/>
-割り当て操作を要求したソースファイル名へのポインターまたは**NULL**。
+*filename*<br/>
+割り当て操作を要求したソースファイル名へのポインターまたは **NULL**。
 
-*行番号*<br/>
-割り当て操作が要求されたソースファイル内の行番号または**NULL**。
+*linenumber*<br/>
+割り当て操作が要求されたソースファイル内の行番号または **NULL**。
 
 ## <a name="return-value"></a>戻り値
 
-これらの各関数は、コピーされた文字列の格納場所へのポインターを返すか、ストレージを割り当てることができない場合は**NULL**を返します。
+これらの各関数は、コピーされた文字列の格納場所へのポインターを返すか、ストレージを割り当てることができない場合は **NULL** を返します。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-**_Strdup_dbg**関数と **_wcsdup_dbg**関数は **_strdup**および **_wcsdup**と同じですが、 **_debug**が定義されている場合、これらの関数は**malloc**, **_malloc_dbg**のデバッグバージョンを使用してを割り当てます。複製された文字列のメモリ。 **_Malloc_dbg**のデバッグ機能の詳細については、 [_malloc_dbg](malloc-dbg.md)を参照してください。
+**_Strdup_dbg** 関数と **_wcsdup_dbg** 関数は **_strdup** および **_wcsdup** と同じですが、 **_DEBUG** が定義されている場合、これらの関数は **malloc** のデバッグバージョン ( **_malloc_dbg**) を使用して、複製された文字列にメモリを割り当てます。 **_Malloc_dbg** のデバッグ機能の詳細については、「 [_malloc_dbg](malloc-dbg.md)」を参照してください。
 
-多くの場合、これらの関数を明示的に呼び出す必要はありません。 代わりに、フラグ **_CRTDBG_MAP_ALLOC**を定義できます。 **_CRTDBG_MAP_ALLOC**が定義されている場合、 **_strdup**と **_wcsdup**の呼び出しはそれぞれ **_strdup_dbg**と **_wcsdup_dbg**に再マップされ、 *blocktype*は **_NORMAL_BLOCK**に設定されます。 したがって、ヒープブロックを **_CLIENT_BLOCK**としてマークする場合を除き、これらの関数を明示的に呼び出す必要はありません。 ブロック型の詳細については、[デバッグ ヒープ上のメモリ ブロックの型](/visualstudio/debugger/crt-debug-heap-details)に関する記事をご覧ください。
+多くの場合、これらの関数を明示的に呼び出す必要はありません。 代わりに、フラグ **_CRTDBG_MAP_ALLOC** を定義できます。 **_CRTDBG_MAP_ALLOC** が定義されている場合、 **_strdup** と **_wcsdup** の呼び出しは、それぞれ **_strdup_dbg** および **_wcsdup_dbg** に再マップされ、 *blocktype* が **_NORMAL_BLOCK** に設定されます。 したがって、ヒープブロックを **_CLIENT_BLOCK** としてマークする場合を除き、これらの関数を明示的に呼び出す必要はありません。 ブロック型の詳細については、[デバッグ ヒープ上のメモリ ブロックの型](/visualstudio/debugger/crt-debug-heap-details)に関する記事をご覧ください。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -98,7 +99,7 @@ NULL で終わる元の文字列。
 |-------------|---------------------|
 |**_strdup_dbg**、 **_wcsdup_dbg**|\<crtdbg.h>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
 ## <a name="libraries"></a>ライブラリ
 

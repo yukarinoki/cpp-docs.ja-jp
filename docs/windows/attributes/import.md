@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「インポート」を参照してください。
 title: import (C++ COM 属性)
 ms.date: 10/03/2018
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - import attribute
 ms.assetid: ebf07cae-39fb-4047-8b57-54af0a9a83de
-ms.openlocfilehash: 6b146bdad7d870b534c371a4396993202cc83a4b
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: a3ebb7aa625c0a422197662973985275647a049f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88842313"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97321403"
 ---
 # <a name="import"></a>import
 
@@ -32,9 +33,9 @@ ms.locfileid: "88842313"
 
 ## <a name="remarks"></a>解説
 
-**Import** C++ 属性により、 `#import` ステートメントが生成された `import "docobj.idl"` .idl ファイル内のステートメントの下に配置されます。 **Import**属性には、 [import](/windows/win32/Midl/import) MIDL 属性と同じ機能があります。
+**Import** C++ 属性により、 `#import` ステートメントが生成された `import "docobj.idl"` .idl ファイル内のステートメントの下に配置されます。 **Import** 属性には、 [import](/windows/win32/Midl/import) MIDL 属性と同じ機能があります。
 
-**Import**属性は、指定されたファイルを、プロジェクトによって生成される .idl ファイルにのみ配置します。**import**属性を使用しても、プロジェクト内のソースコードから指定されたファイル内の構造体を呼び出すことはできません。  プロジェクト内のソースコードから指定されたファイルの構造体を呼び出すには、 [#import](../../preprocessor/hash-import-directive-cpp.md) と属性を使用するか、 `embedded_idl` .h ファイルが存在する場合は *idl_file*の .h ファイルを含めることができます。
+**Import** 属性は、指定されたファイルを、プロジェクトによって生成される .idl ファイルにのみ配置します。**import** 属性を使用しても、プロジェクト内のソースコードから指定されたファイル内の構造体を呼び出すことはできません。  プロジェクト内のソースコードから指定されたファイルの構造体を呼び出すには、 [#import](../../preprocessor/hash-import-directive-cpp.md) と属性を使用するか、 `embedded_idl` .h ファイルが存在する場合は *idl_file* の .h ファイルを含めることができます。
 
 ## <a name="example"></a>例
 
@@ -60,7 +61,7 @@ library MyLib {
 ...
 ```
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 | 属性コンテキスト | 値 |
 |-|-|

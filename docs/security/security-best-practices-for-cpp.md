@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「C++ のセキュリティのベストプラクティス」を参照してください。
 title: C++ のセキュリティ推奨事項
 ms.date: 05/08/2018
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - security [C++]
 - security [C++], best practices
 ms.assetid: 86acaccf-cdb4-4517-bd58-553618e3ec42
-ms.openlocfilehash: 63c5567cf1b06d52aa4b458a9ca127039e5c5daf
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 512029445dee7dd995e56b224e454e0f7f68d322
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91499590"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97319972"
 ---
 # <a name="security-best-practices-for-c"></a>C++ のセキュリティ推奨事項
 
@@ -62,7 +63,7 @@ C ランタイム ライブラリ (CRT) が強化され、セキュリティ上�
 
 - ライブラリ デザイン
 
-- ローカリゼーション
+- ローカライズ
 
 - 名前付け規則
 

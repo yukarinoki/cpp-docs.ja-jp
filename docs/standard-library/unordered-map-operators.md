@@ -1,16 +1,17 @@
 ---
+description: 詳細については、「 &lt; unordered_map 演算子」を参照してください。 &gt;
 title: '&lt;unordered_map&gt; 演算子'
 ms.date: 11/04/2016
 f1_keywords:
 - unordered_map/std::operator!=
 - unordered_map/std::operator==
 ms.assetid: 9d5add0b-84bd-4a79-bd82-3f58b55145ed
-ms.openlocfilehash: 2c09fa0070151f7cdd502e8f5583645110e91c5b
-ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
+ms.openlocfilehash: b7bf3712a7068b3af2d8316249d169854401b93e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90741958"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97321479"
 ---
 # <a name="ltunordered_mapgt-operators"></a>&lt;unordered_map&gt; 演算子
 
@@ -39,7 +40,7 @@ bool operator!=(const unordered_map <Key, Type, Hash, Pred, Allocator>& left, co
 
 **`true`** unordered_maps が等しくない場合は。 **`false`** 等しい場合は。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 unordered_map オブジェクト間の比較は、要素を任意の順序で格納することによる影響を受けません。 同じ数の要素が存在し、一方のコンテナー内の要素がもう一方のコンテナー内の要素の順列である場合、2 つの unordered_map は等しくなります。 それ以外の場合は等しくありません。
 
@@ -101,7 +102,7 @@ bool operator==(const unordered_map <Key, Type, Hash, Pred, Allocator>& left, co
 
 **`true`** unordered_maps が等しい場合は。 **`false`** 等しくない場合。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 unordered_map オブジェクト間の比較は、要素を任意の順序で格納することによる影響を受けません。 同じ数の要素が存在し、一方のコンテナー内の要素がもう一方のコンテナー内の要素の順列である場合、2 つの unordered_map は等しくなります。 それ以外の場合は等しくありません。
 
@@ -163,7 +164,7 @@ bool operator!=(const unordered_multimap <Key, Type, Hash, Pred, Allocator>& lef
 
 **`true`** unordered_multimaps が等しくない場合は。 **`false`** 等しい場合は。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 unordered_multimap オブジェクト間の比較は、要素を任意の順序で格納することによる影響を受けません。 同じ数の要素が存在し、一方のコンテナー内の要素がもう一方のコンテナー内の要素の順列である場合、2 つの unordered_multimap は等しくなります。 それ以外の場合は等しくありません。
 
@@ -226,7 +227,7 @@ bool operator==(const unordered_multimap <Key, Type, Hash, Pred, Allocator>& lef
 
 **`true`** unordered_multimaps が等しい場合は。 **`false`** 等しくない場合。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 unordered_multimap オブジェクト間の比較は、要素を任意の順序で格納することによる影響を受けません。 同じ数の要素が存在し、一方のコンテナー内の要素がもう一方のコンテナー内の要素の順列である場合、2 つの unordered_multimap は等しくなります。 それ以外の場合は等しくありません。
 

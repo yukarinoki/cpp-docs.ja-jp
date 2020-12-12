@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: CMFCRibbonSeparator クラス'
 title: CMFCRibbonSeparator クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -22,12 +23,12 @@ helpviewer_keywords:
 - CMFCRibbonSeparator [MFC], OnDraw
 - CMFCRibbonSeparator [MFC], OnDrawOnList
 ms.assetid: bedb1a53-cb07-4c3c-be12-698c5409e7cf
-ms.openlocfilehash: f435dc5ae8821a6d5626af2f93710a1672fd374c
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: db8e7f92089d1e6332fdb2ad057398c465c72f97
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88831802"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97321749"
 ---
 # <a name="cmfcribbonseparator-class"></a>CMFCRibbonSeparator クラス
 
@@ -64,7 +65,7 @@ class CMFCRibbonSeparator : public CMFCRibbonBaseElement
 |[CMFCRibbonSeparator:: IsSeparator](#isseparator)|区切り記号かどうかを示します。|
 |[CMFCRibbonSeparator:: IsTabStop](#istabstop)|このがタブストップであるかどうかを示します。|
 |[CMFCRibbonSeparator:: OnDraw](#ondraw)|リボンまたはクイックアクセスツールバーのいずれかに区分線を描画するために、システムによって呼び出されます。|
-|[CMFCRibbonSeparator::OnDrawOnList](#ondrawonlist)|**コマンド**リストの区切り記号を描画するためにシステムによって呼び出されます。|
+|[CMFCRibbonSeparator::OnDrawOnList](#ondrawonlist)|**コマンド** リストの区切り記号を描画するためにシステムによって呼び出されます。|
 
 ## <a name="remarks"></a>解説
 
@@ -91,7 +92,7 @@ pMainPanel->Add(new CMFCRibbonSeparator(TRUE));
 
 [CMFCRibbonSeparator](../../mfc/reference/cmfcribbonseparator-class.md)
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** afxbaseribbonelement.h
 
@@ -115,7 +116,7 @@ virtual int AddToListBox(
 
 ### <a name="return-value"></a>戻り値
 
-*PWndListBox*によって指定されたリストボックス内の文字列の0から始まるインデックス。
+*PWndListBox* によって指定されたリストボックス内の文字列の0から始まるインデックス。
 
 ## <a name="cmfcribbonseparatorcmfcribbonseparator"></a><a name="cmfcribbonseparator"></a> CMFCRibbonSeparator::CMFCRibbonSeparator
 
@@ -213,7 +214,7 @@ virtual void OnDraw(CDC* pDC);
 
 ## <a name="cmfcribbonseparatorondrawonlist"></a><a name="ondrawonlist"></a> CMFCRibbonSeparator::OnDrawOnList
 
-**コマンド**リストの区切り記号を描画するためにシステムによって呼び出されます。
+**コマンド** リストの区切り記号を描画するためにシステムによって呼び出されます。
 
 ```
 virtual void OnDrawOnList(

@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: implements (C++)'
 title: implements (C++ COM 属性)
 ms.date: 10/02/2018
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - implements attribute
 ms.assetid: 9cf0858b-cb7d-4d3c-81a6-97d87ed00d25
-ms.openlocfilehash: 946972a9a7c3041c75e82865acb35feb4a97254a
-ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
+ms.openlocfilehash: 601d1c99a9f59af8354d98e930a3e21c45255401
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90686744"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97321390"
 ---
 # <a name="implements-c"></a>implements (C++)
 
@@ -32,11 +33,11 @@ IDL コクラスのメンバーになるインターフェイスのコンマ区�
 *ディスパッチ*<br/>
 IDL コクラスのメンバーになるディスパッチインターフェイスのコンマ区切りのリスト。 単一のディスパッチインターフェイスを指定するための簡単な方法は、 **(ディスパッチインターフェイス =** *dispinterface_name* **)** を実装することです。
 
-## <a name="remarks"></a>注釈
+## <a name="remarks"></a>解説
 
 既定では、の基本クラスである COM インターフェイスのみ `coclass` が IDL コクラスに追加されます。 **implements** を使用すると、他のインターフェイスを強制的に IDL メンバーにすることができ `coclass` ます。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 | 属性コンテキスト | 値 |
 |-|-|

@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「_strdup、_wcsdup、_mbsdup」を参照してください。
 title: _strdup、_wcsdup、_mbsdup
 ms.date: 4/2/2020
 api_name:
@@ -48,19 +49,19 @@ helpviewer_keywords:
 - tcsdup function
 - _tcsdup function
 ms.assetid: 8604f8bb-95e9-45d3-93ef-20397ebf247a
-ms.openlocfilehash: 42b4a890c1c7f350b83bb92a548d716ee6d9ebfc
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: b080f614f46aabc63e798c16113cffe45008047d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82914468"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97322447"
 ---
 # <a name="_strdup-_wcsdup-_mbsdup"></a>_strdup、_wcsdup、_mbsdup
 
 文字列を複製します。
 
 > [!IMPORTANT]
-> **_mbsdup**は、Windows ランタイムで実行されるアプリケーションでは使用できません。 詳細については、「[ユニバーサル Windows プラットフォームアプリでサポートされていない CRT 関数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)」を参照してください。
+> **_mbsdup** は、Windows ランタイムで実行されるアプリケーションでは使用できません。 詳細については、「                  [ユニバーサル Windows プラットフォームアプリでサポートされていない CRT 関数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)」を参照してください。
 
 ## <a name="syntax"></a>構文
 
@@ -83,13 +84,13 @@ NULL で終わる元の文字列。
 
 ## <a name="return-value"></a>戻り値
 
-これらの各関数は、コピーされた文字列の格納場所へのポインターを返すか、ストレージを割り当てることができない場合は**NULL**を返します。
+これらの各関数は、コピーされた文字列の格納場所へのポインターを返すか、ストレージを割り当てることができない場合は **NULL** を返します。
 
 ## <a name="remarks"></a>解説
 
-**_Strdup**関数は、 [malloc](malloc.md)を呼び出して、 *strsource*のコピーにストレージ領域を割り当ててから、 *strsource*を割り当てられた領域にコピーします。
+**_Strdup** 関数は、 [malloc](malloc.md)を呼び出して、 *strsource* のコピーにストレージ領域を割り当ててから、 *strsource* を割り当てられた領域にコピーします。
 
-**_wcsdup**と **_mbsdup**は **_strdup**のワイド文字バージョンとマルチバイト文字バージョンです。 **_Wcsdup**の引数と戻り値はワイド文字列です。これらの **_mbsdup**はマルチバイト文字列です。 それ以外では、これらの関数の動作は同じです。
+**_wcsdup** と **_mbsdup** は **_strdup** のワイド文字バージョンとマルチバイト文字バージョンです。 **_Wcsdup** の引数と戻り値はワイド文字列です。これらの **_mbsdup** はマルチバイト文字列です。 それ以外では、これらの関数の動作は同じです。
 
 既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
@@ -99,13 +100,13 @@ NULL で終わる元の文字列。
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tcsdup**|**_strdup**|**_mbsdup**|**_wcsdup**|
 
-**_Strdup**は**malloc**を呼び出して*strsource*のコピーにストレージ領域を割り当てます。そのため、 **_strdup**への呼び出しによって返されたポインターに対して[フリー](free.md)ルーチンを呼び出すことによって、常にこのメモリを解放することをお勧めします。
+**_Strdup** は **malloc** を呼び出して *strsource* のコピーにストレージ領域を割り当てます。そのため、 **_strdup** への呼び出しによって返されたポインターに対して [フリー](free.md)ルーチンを呼び出すことによって、常にこのメモリを解放することをお勧めします。
 
-**_DEBUG**と **_CRTDBG_MAP_ALLOC**が定義されている場合、 **_strdup**と **_wcsdup**は、メモリ割り当てのデバッグを可能にするために **_strdup_dbg**と **_wcsdup_dbg**の呼び出しに置き換えられます。 詳細については、「[_strdup_dbg、_wcsdup_dbg](strdup-dbg-wcsdup-dbg.md)」をご覧ください。
+**_DEBUG** と **_CRTDBG_MAP_ALLOC** が定義されている場合、 **_strdup** と **_wcsdup** は、メモリ割り当てのデバッグを可能にするために **_strdup_dbg** と **_wcsdup_dbg** の呼び出しに置き換えられます。 詳細については、「[_strdup_dbg、_wcsdup_dbg](strdup-dbg-wcsdup-dbg.md)」をご覧ください。
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**_strdup**|\<string.h>|
 |**_wcsdup**|\<string.h> または \<wchar.h>|

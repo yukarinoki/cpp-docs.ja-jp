@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「Users グループのメンバーとして実行する」を参照してください。
 title: ユーザー グループのメンバーとしての実行
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - user accounts [C++]
 - administrator (not running as) [C++]
 ms.assetid: e48a03ec-d345-49f6-809a-1a291eecbc81
-ms.openlocfilehash: 117ef426950fc9aff5ae41e894f0d7ae898369cd
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 7b3f73dc572a3a132300eb0f246f68030f0b27dd
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79445434"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97319994"
 ---
 # <a name="running-as-a-member-of-the-users-group"></a>ユーザー グループのメンバーとしての実行
 
@@ -26,7 +27,7 @@ Windows ユーザー アカウントを (Administrators グループではなく
 
 ## <a name="non-administrator-user-groups"></a>非管理者ユーザー グループ
 
-開発者が使用する Windows ユーザー アカウントは、通常は Users または Power Users グループのいずれかに追加される必要があります。 開発者は Debugging グループにも追加される必要があります。 Users グループのメンバーは、コンピューターを不要な危険にさらすことなく、プログラムを実行したり、インターネット サイトにアクセスしたりするなどの一般的なタスクを実行できます。 Power Users グループのメンバーは、アプリケーションのインストール、プリンターのインストール、コントロール パネルでの操作などのタスクも実行できます。 オペレーティング システムのアップグレード、システム パラメーターの構成などの管理者タスクを実行する必要がある場合は、管理者タスクを実行するのに適切な管理者アカウントにログインする必要があります。 また、Windows **runas**コマンドを使用して、管理アクセス権を持つ特定のアプリケーションを起動することもできます。
+開発者が使用する Windows ユーザー アカウントは、通常は Users または Power Users グループのいずれかに追加される必要があります。 開発者は Debugging グループにも追加される必要があります。 Users グループのメンバーは、コンピューターを不要な危険にさらすことなく、プログラムを実行したり、インターネット サイトにアクセスしたりするなどの一般的なタスクを実行できます。 Power Users グループのメンバーは、アプリケーションのインストール、プリンターのインストール、コントロール パネルでの操作などのタスクも実行できます。 オペレーティング システムのアップグレード、システム パラメーターの構成などの管理者タスクを実行する必要がある場合は、管理者タスクを実行するのに適切な管理者アカウントにログインする必要があります。 また、Windows **runas** コマンドを使用して、管理アクセス権を持つ特定のアプリケーションを起動することもできます。
 
 ## <a name="exposing-customers-to-security-risks"></a>ユーザーのセキュリティ上のリスク
 
@@ -48,6 +49,6 @@ Windows ユーザー アカウントを (Administrators グループではなく
 
 Debugging グループのメンバーになると、Visual Studio (ネイティブおよびアンマネージ) 内で起動した任意のアプリケーションを非管理者としてデバッグできます。 また、[プロセスにアタッチ] コマンドを使用して、実行中のアプリケーションにアタッチすることもできます。 ただし、別のユーザーが起動したネイティブまたはマネージド アプリケーションをデバッグするには、Administrator グループのメンバーである必要があります。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[セキュリティ推奨事項](security-best-practices-for-cpp.md)
+[セキュリティのベストプラクティス](security-best-practices-for-cpp.md)

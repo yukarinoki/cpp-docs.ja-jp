@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: add_const クラス'
 title: add_const クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - add_const class
 - add_const
 ms.assetid: 1262a1eb-8c9c-4dd6-9f43-88ba280182f1
-ms.openlocfilehash: c82a3fac8ef95da9e226ca3e2e9122b3c8774cbf
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: ce1dd895a5968234feca7905d3b9f8d571336053
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84620830"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97319945"
 ---
 # <a name="add_const-class"></a>add_const クラス
 
@@ -30,9 +31,9 @@ struct add_const;
 *~*\
 変更する型。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-この型修飾子のインスタンスは、 *ty*が参照、関数、または const で修飾さ*れた型である場合は*、修飾型を保持します。それ以外の場合は、を保持 `const Ty` します。
+この型修飾子のインスタンスは、 *ty* が参照、関数、または const で修飾さ *れた型である場合は*、修飾型を保持します。それ以外の場合は、を保持 `const Ty` します。
 
 ## <a name="example"></a>例
 
@@ -58,7 +59,7 @@ int main()
 add_const<int> == int
 ```
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:**\<type_traits>
 

@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: インクルード (C++)'
 title: インクルード (C++ COM 属性)
 ms.date: 10/02/2018
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - includelib attribute
 ms.assetid: cd90ea6e-5ae8-4f11-b8d1-662db95412b2
-ms.openlocfilehash: 30e84a6c82ec25e07ca0eb08f64c7aa5b560e9e7
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 9a7565a931a865b69f0da95da9e92481b27de3b0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88830697"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97321351"
 ---
 # <a name="includelib-c"></a>includelib (C++)
 
@@ -30,7 +31,7 @@ ms.locfileid: "88830697"
 
 ## <a name="remarks"></a>解説
 
-**インクルード**された C++ 属性により、.idl ファイルまたは .h ファイルが、ステートメントの後に生成される .idl ファイルに追加されます。 `importlib`
+**インクルード** された C++ 属性により、.idl ファイルまたは .h ファイルが、ステートメントの後に生成される .idl ファイルに追加されます。 `importlib`
 
 ## <a name="example"></a>例
 
@@ -43,7 +44,7 @@ ms.locfileid: "88830697"
 [includelib("includelib.idl")];
 ```
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 | 属性コンテキスト | 値 |
 |-|-|

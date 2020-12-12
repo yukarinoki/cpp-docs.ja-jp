@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: ユーザーレコード'
 title: ユーザー レコード
 ms.date: 05/09/2019
 f1_keywords:
@@ -15,19 +16,19 @@ helpviewer_keywords:
 - accessors [C++], static
 - BEGIN_ACCESSOR macro, example
 ms.assetid: 2de9e5eb-53ce-42b1-80fa-57d46600a80c
-ms.openlocfilehash: 2de4cc9227da9d4ad8a012dacd85500ab698c4ae
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 1d31ef93bb1b06925306c84d436d7a7837a08431
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91509426"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97322326"
 ---
 # <a name="user-records"></a>ユーザー レコード
 
 > [!NOTE]
 > ATL OLE DB コンシューマー ウィザードは、Visual Studio 2019 以降では使用できません。 ただし、この機能を手動で追加することは可能です。 詳細については、「[ウィザードを使用しないコンシューマーの作成](creating-a-consumer-without-using-a-wizard.md)」をご覧ください。
 
-静的アクセサー ( `CAccessor` から派生したアクセサー) を使用するには、コンシューマーにユーザー レコードが必要です。 ユーザー レコードは、入力や出力を処理するためのデータ要素を含む C++ クラスです。 **ATL OLE DB コンシューマー ウィザード**では、コンシューマーのユーザー レコードが生成されます。 ユーザー レコードにメソッドを追加して、コマンドの処理などのオプションのタスクを実行できます。
+静的アクセサー ( `CAccessor` から派生したアクセサー) を使用するには、コンシューマーにユーザー レコードが必要です。 ユーザー レコードは、入力や出力を処理するためのデータ要素を含む C++ クラスです。 **ATL OLE DB コンシューマー ウィザード** では、コンシューマーのユーザー レコードが生成されます。 ユーザー レコードにメソッドを追加して、コマンドの処理などのオプションのタスクを実行できます。
 
 以下のコードは、コマンドを処理するサンプル レコードを示しています。 ユーザー レコード内の BEGIN_COLUMN_MAP は、プロバイダーからコンシューマーに渡されるデータ行セットを表します。 BEGIN_PARAM_MAP は、一連のコマンド パラメーターを表します。 この例では、[CCommand](../../data/oledb/ccommand-class.md) クラスを使用して、コマンド パラメーターを処理しています。 マップ エントリ内のデータ メンバーは、クラスの各インスタンスの隣接する 1 つのメモリ ブロック内へのオフセットを表します。 COLUMN_ENTRY マクロは、プロバイダー側の PROVIDER_COLUMN_ENTRY マクロに対応しています。
 
@@ -58,7 +59,7 @@ END_PARAM_MAP()
 
 ## <a name="wizard-generated-user-records"></a>ウィザードで生成されたユーザー レコード
 
-**ATL OLE DB コンシューマー ウィザード**を使用してコンシューマーを生成する場合は、OLE DB テンプレートと OLE DB 属性のいずれを使用するかを選択できます。 生成されるコードは、それぞれの場合で異なります。 このコードの詳細については、「[コンシューマー ウィザードで生成されたクラス](../../data/oledb/consumer-wizard-generated-classes.md)」をご覧ください。
+**ATL OLE DB コンシューマー ウィザード** を使用してコンシューマーを生成する場合は、OLE DB テンプレートと OLE DB 属性のいずれを使用するかを選択できます。 生成されるコードは、それぞれの場合で異なります。 このコードの詳細については、「[コンシューマー ウィザードで生成されたクラス](../../data/oledb/consumer-wizard-generated-classes.md)」をご覧ください。
 
 ## <a name="user-record-support-for-multiple-accessors"></a>複数のアクセサーのユーザー レコード サポート
 

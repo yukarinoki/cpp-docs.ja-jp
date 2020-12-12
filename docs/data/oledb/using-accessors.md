@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: アクセサーの使用'
 title: アクセサーの使用
 ms.date: 10/24/2018
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - OLE DB consumer templates, accessors
 - rowsets [C++], accessors
 ms.assetid: 6ce484a6-fbbe-40de-8ff9-5cddcd78d283
-ms.openlocfilehash: 5e35318fd1b5a245eaed982674d69484e34f9dac
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 66d7c7d26da0d808e533bee438fec1283a89e839
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80209340"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97322312"
 ---
 # <a name="using-accessors"></a>アクセサーの使用
 
@@ -19,7 +20,7 @@ ms.locfileid: "80209340"
 
 - [使用するアクセサーの決定](../../data/oledb/determining-which-type-of-accessor-to-use.md)
 
-- [行セットでの複数アクセサーの使用](../../data/oledb/using-multiple-accessors-on-a-rowset.md)
+- [行セットに対して複数のアクセサーを使用する](../../data/oledb/using-multiple-accessors-on-a-rowset.md)
 
 - [動的アクセサーの使用](../../data/oledb/using-dynamic-accessors.md)
 
@@ -27,6 +28,6 @@ ms.locfileid: "80209340"
 
 - [XML データへのアクセス](../../data/oledb/accessing-xml-data.md)
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[OLE DB コンシューマー テンプレートの操作](../../data/oledb/working-with-ole-db-consumer-templates.md)
+[OLE DB コンシューマーテンプレートの使用](../../data/oledb/working-with-ole-db-consumer-templates.md)

@@ -1,4 +1,5 @@
 ---
+description: 詳細については、ブックマークの使用
 title: ブックマークを使用する
 ms.date: 10/24/2018
 helpviewer_keywords:
@@ -7,16 +8,16 @@ helpviewer_keywords:
 - bookmarks, OLE DB
 - OLE DB providers, bookmark support
 ms.assetid: 7fa1d1a8-5063-4aa9-93ee-815bb9c98fae
-ms.openlocfilehash: 8caa33b3bafbaa9e537d9669aa7b60a9355475ef
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: d0cf27a5f93b3e6b00fa6f8cbb69ae7414f4d819
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87218300"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97319158"
 ---
 # <a name="using-bookmarks"></a>ブックマークを使用する
 
-行セットを開く前に、ブックマークを使用するようにプロバイダーに指示する必要があります。 これを行うには、プロパティ `DBPROP_BOOKMARKS` セットでプロパティをに設定 **`true`** します。 プロバイダーはブックマークを列0として取得するので、 `CBookmark` 静的アクセサーを使用している場合は、特殊なマクロ BOOKMARK_ENTRY とクラスを使用する必要があります。 `CBookmark`は、引数がブックマークバッファーの長さ (バイト単位) であるテンプレートクラスです。 ブックマークに必要なバッファーの長さは、プロバイダーによって異なります。 次の例に示すように、ODBC OLE DB プロバイダーを使用している場合は、バッファーが4バイトである必要があります。
+行セットを開く前に、ブックマークを使用するようにプロバイダーに指示する必要があります。 これを行うには、プロパティ `DBPROP_BOOKMARKS` セットでプロパティをに設定 **`true`** します。 プロバイダーはブックマークを列0として取得するので、 `CBookmark` 静的アクセサーを使用している場合は、特殊なマクロ BOOKMARK_ENTRY とクラスを使用する必要があります。 `CBookmark` は、引数がブックマークバッファーの長さ (バイト単位) であるテンプレートクラスです。 ブックマークに必要なバッファーの長さは、プロバイダーによって異なります。 次の例に示すように、ODBC OLE DB プロバイダーを使用している場合は、バッファーが4バイトである必要があります。
 
 ```cpp
 class CProducts
@@ -55,7 +56,7 @@ product.MoveNext();
 product.GetBookmark(&bookmark);
 ```
 
-プロバイダーでのブックマークのサポートについては、「[プロバイダーによるブックマークのサポート](../../data/oledb/provider-support-for-bookmarks.md)」を参照してください。
+プロバイダーでのブックマークのサポートについては、「 [プロバイダーによるブックマークのサポート](../../data/oledb/provider-support-for-bookmarks.md)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

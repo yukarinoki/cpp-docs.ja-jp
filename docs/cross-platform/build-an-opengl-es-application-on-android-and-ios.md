@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: Android および iOS での OpenGL ES アプリケーションのビルド'
 title: Android および iOS での OpenGL ES アプリケーションのビルド
 ms.date: 10/09/2019
 ms.assetid: 76a67886-df57-4a81-accb-2e3c2eaf607b
-ms.openlocfilehash: 278fd66202332417f7663542f0d66a3ec545b715
-ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
+ms.openlocfilehash: c840e9bbfd450c412ff7c0646127c157a3af565a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "92924301"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97319418"
 ---
 # <a name="build-an-opengl-es-application-on-android-and-ios"></a>Android および iOS での OpenGL ES アプリケーションのビルド
 
@@ -27,11 +28,11 @@ IOS アプリをビルドしてテストするには、Mac コンピューター
 
 ::: moniker range="msvc-150"
 
-1. Visual Studio で、[ **ファイル** ] [ > **新規作成** ] [プロジェクト] の順に選択し > **Project** ます。
+1. Visual Studio で、[**ファイル**] [ > **新規作成**] [プロジェクト] の順に選択し > ます。
 
-1. **[新しいプロジェクト]** ダイアログ ボックスの **[テンプレート]** で **[Visual C++]** > **[クロス プラットフォーム]** の順に選択し、 **[OpenGLES アプリケーション (Android, iOS)]** テンプレートを選択します。
+1. **[新しいプロジェクト]** ダイアログ ボックスの **[テンプレート]** で **[Visual C++]** > **[クロス プラットフォーム]** の順に選択し、**[OpenGLES アプリケーション (Android, iOS)]** テンプレートを選択します。
 
-1. アプリに *MyOpenGLESApp* などの名前を付け、 **[OK]** を選択します。
+1. アプリに *MyOpenGLESApp* などの名前を付け、**[OK]** を選択します。
 
    ![新しい OpenGLES アプリケーション プロジェクト](../cross-platform/media/cppmdd-opengles-newproj.png "新しい OpenGLES アプリケーション プロジェクト")
 
@@ -43,11 +44,11 @@ IOS アプリをビルドしてテストするには、Mac コンピューター
 
 ::: moniker range=">=msvc-160"
 
-1. Visual Studio で、[ **ファイル** ] [ > **新規作成** ] [プロジェクト] の順に選択し > **Project** ます。
+1. Visual Studio で、[**ファイル**] [ > **新規作成**] [プロジェクト] の順に選択し > ます。
 
-1. **[新しいプロジェクトの作成]** ダイアログ ボックスで、 **[OpenGLES アプリケーション (Android, iOS)]** テンプレートを選択し、 **[次へ]** を選択します。
+1. **[新しいプロジェクトの作成]** ダイアログ ボックスで、**[OpenGLES アプリケーション (Android, iOS)]** テンプレートを選択し、**[次へ]** を選択します。
 
-1. **[新しいプロジェクトの構成]** ダイアログ ボックスで、 **プロジェクト名** に *MyOpenGLESApp* のような名前を入力し、 **[作成]** を選択します。
+1. **[新しいプロジェクトの構成]** ダイアログ ボックスで、**プロジェクト名** に *MyOpenGLESApp* のような名前を入力し、**[作成]** を選択します。
 
    Visual Studio は新しいソリューションを作成し、ソリューション エクスプローラーを開きます。
 
@@ -57,9 +58,9 @@ IOS アプリをビルドしてテストするには、Mac コンピューター
 
 新しい OpenGL ES アプリケーション ソリューションには、次の 3 つのライブラリ プロジェクトと 2 つのアプリケーション プロジェクトが含まれています。 ライブラリフォルダーには、共有コードプロジェクトが含まれています。 また、共有コードを参照するプラットフォーム固有のプロジェクトが2つあります。
 
-- `MyOpenGLESApp.Android.NativeActivity` には、Android 上の Native Activity としてアプリを実装する参照とグルー コードが含まれています。 グルー コードからのエントリ ポイントは、 *main.cpp* に実装され、これには `MyOpenGLESApp.Shared` に共通の共有コードが含まれています。 プリコンパイル済みヘッダーは *pch.h* にあります。 この Native Activity アプリ プロジェクトは、共有ライブラリ ( *.so* ) ファイルにコンパイルされ、`MyOpenGLESApp.Android.Packaging` プロジェクトで使用されます。
+- `MyOpenGLESApp.Android.NativeActivity` には、Android 上の Native Activity としてアプリを実装する参照とグルー コードが含まれています。 グルー コードからのエントリ ポイントは、*main.cpp* に実装され、これには `MyOpenGLESApp.Shared` に共通の共有コードが含まれています。 プリコンパイル済みヘッダーは *pch.h* にあります。 この Native Activity アプリ プロジェクトは、共有ライブラリ (*.so*) ファイルにコンパイルされ、`MyOpenGLESApp.Android.Packaging` プロジェクトで使用されます。
 
-- `MyOpenGLESApp.iOS.StaticLibrary` は、`MyOpenGLESApp.Shared` に共有コードが含まれている iOS スタティック ライブラリ ( *.a* ) ファイルを作成します。 それは `MyOpenGLESApp.iOS.Application` プロジェクトで作成されたアプリにリンクされます。
+- `MyOpenGLESApp.iOS.StaticLibrary` は、`MyOpenGLESApp.Shared` に共有コードが含まれている iOS スタティック ライブラリ (*.a*) ファイルを作成します。 それは `MyOpenGLESApp.iOS.Application` プロジェクトで作成されたアプリにリンクされます。
 
 - `MyOpenGLESApp.Shared` には、プラットフォーム間で機能する共有コードが含まれています。 プラットフォーム固有のコードの条件付きコンパイルにプリプロセッサ マクロを使用します。 共有コードは、`MyOpenGLESApp.Android.NativeActivity` と `MyOpenGLESApp.iOS.StaticLibrary` の両方のプロジェクト参照によって使用されます。
 
@@ -75,13 +76,13 @@ IOS アプリをビルドしてテストするには、Mac コンピューター
 
 ### <a name="to-build-and-run-the-android-native-activity-app"></a>Android Native Activity アプリをビルドして実行するには
 
-1. まだ選択されていない場合は、 **[ソリューション プラットフォーム]** ドロップダウン リストから **[x86]** を選択します。
+1. まだ選択されていない場合は、**[ソリューション プラットフォーム]** ドロップダウン リストから **[x86]** を選択します。
 
    ![ソリューション プラットフォームを x86 に設定する](../cross-platform/media/cppmdd-opengles-solutionplat.png "ソリューション プラットフォームを x86 に設定する")
 
-   x86 を使用してエミュレーターを対象とします。 デバイスを対象とするには、デバイス プロセッサに基づいてソリューション プラットフォームを選択します。 **[ソリューション プラットフォーム]** リストが表示されない場合は、 **[ボタンの追加と削除]** リストから **[ソリューション プラットフォーム]** を選択してから、使用するプラットフォームを選択します。
+   x86 を使用してエミュレーターを対象とします。 デバイスを対象とするには、デバイス プロセッサに基づいてソリューション プラットフォームを選択します。 **[ソリューション プラットフォーム]** リストが表示されない場合は、**[ボタンの追加と削除]** リストから **[ソリューション プラットフォーム]** を選択してから、使用するプラットフォームを選択します。
 
-1. **ソリューション エクスプローラー** で `MyOpenGLESApp.Android.Packaging` プロジェクトのショートカット メニューを開き、 **[ビルド]** を選択します。
+1. **ソリューション エクスプローラー** で `MyOpenGLESApp.Android.Packaging` プロジェクトのショートカット メニューを開き、**[ビルド]** を選択します。
 
    ![Android パッケージ化プロジェクトのビルド](../cross-platform/media/cppmdd-opengles-andbuild.png "Android パッケージ化プロジェクトのビルド")
 
@@ -125,9 +126,9 @@ IOS アプリプロジェクトを作成し、Visual Studio で編集します�
 
 1. 新しい **Single View Application** Xcode プロジェクトを作成ます。 プロジェクトの作成中に、必須フィールドに入力します。 この値は、後でアプリのビルドに署名するために使用するプロビジョニング プロファイルの作成にのみ使用されるため、任意で指定できます。
 
-1. [Apple Developer Program](https://developer.apple.com/programs/) アカウントに登録されている Apple ID を Xcode に追加します。 Apple ID は、アプリに署名するための署名 ID として使用されます。 Xcode で署名 ID を追加するには、 **[Xcode]** メニューを開き、 **[Preferences]\(環境設定\)** を選択します。 **[Accounts]\(アカウント\)** を選択し、[Add]\(追加\) ボタン (+) をクリックして Apple ID を追加します。 詳しい手順については、「[Add your Apple ID account](https://help.apple.com/xcode/mac/current/#/devaf282080a)」 (Apple ID アカウントを追加する) を参照してください。
+1. [Apple Developer Program](https://developer.apple.com/programs/) アカウントに登録されている Apple ID を Xcode に追加します。 Apple ID は、アプリに署名するための署名 ID として使用されます。 Xcode で署名 ID を追加するには、**[Xcode]** メニューを開き、**[Preferences]\(環境設定\)** を選択します。 **[Accounts]\(アカウント\)** を選択し、[Add]\(追加\) ボタン (+) をクリックして Apple ID を追加します。 詳しい手順については、「[Add your Apple ID account](https://help.apple.com/xcode/mac/current/#/devaf282080a)」 (Apple ID アカウントを追加する) を参照してください。
 
-1. Xcode プロジェクトの [General]\(全般\) 設定から、 **[Bundle Identifier]\(バンドル識別子\)** の値を `com.<NameOfVSProject>` に変更します。ここで、`<NameOfVSProject>` は作成した Visual Studio ソリューションのプロジェクトと同じ名前です。 たとえば、Visual Studio で `MyOpenGLESApp` という名前のプロジェクトを作成した場合、 **[Bundle Identifier]\(バンドル識別子\)** を `com.MyOpenGLESApp` に設定します。
+1. Xcode プロジェクトの [General]\(全般\) 設定から、**[Bundle Identifier]\(バンドル識別子\)** の値を `com.<NameOfVSProject>` に変更します。ここで、`<NameOfVSProject>` は作成した Visual Studio ソリューションのプロジェクトと同じ名前です。 たとえば、Visual Studio で `MyOpenGLESApp` という名前のプロジェクトを作成した場合、**[Bundle Identifier]\(バンドル識別子\)** を `com.MyOpenGLESApp` に設定します。
 
    ![Xcode バンドル識別子](../cross-platform/media/cppmdd-opengles-iosxcodeid.png "Xcode バンドル識別子")
 
@@ -147,19 +148,19 @@ IOS アプリプロジェクトを作成し、Visual Studio で編集します�
 
 1. iOS デバイスを Mac に接続します。 デバイスを初めてコンピューターに接続すると、アラートで、デバイスにアクセスするコンピューターを信頼するかどうかがたずねられます。 デバイスが Mac コンピューターを信頼するようにできます。
 
-1. Visual Studio で、まだ選択されていない場合は、デバイス プロセッサに基づいて、 **[ソリューション プラットフォーム]** ドロップダウン リストから、ソリューション プラットフォームを選択します。 この例では、それは **ARM64** プロセッサになります。
+1. Visual Studio で、まだ選択されていない場合は、デバイス プロセッサに基づいて、**[ソリューション プラットフォーム]** ドロップダウン リストから、ソリューション プラットフォームを選択します。 この例では、それは **ARM64** プロセッサになります。
 
    ![ソリューション プラットフォームを ARM64 に設定する](../cross-platform/media/cppmdd-opengles-pickplatformarm64.png "ソリューション プラットフォームを ARM64 に設定する")
 
-1. ソリューション エクスプローラーで、MyOpenGLESApp.iOS.Application プロジェクトのショートカット メニューを開き、 **[プロジェクトのアンロード]** を選択して、プロジェクトをアンロードします。
+1. ソリューション エクスプローラーで、MyOpenGLESApp.iOS.Application プロジェクトのショートカット メニューを開き、**[プロジェクトのアンロード]** を選択して、プロジェクトをアンロードします。
 
-1. 再度、アンロードした MyOpenGLESApp.iOS.Application プロジェクトのショートカット メニューを開き、 **[Edit project.pbxproj]\(project.pbxproj の編集\)** を選択して、プロジェクト ファイルを編集します。 `project.pbxproj` ファイルで、`buildSettings` 属性を探し、Apple チーム ID を使用して、`DEVELOPMENT_TEAM` を追加します。 次のスクリーンショットに、Apple チーム ID の `123456ABC` の値の例を示します。 Xcode から Apple チーム ID の値を見つけることができます。 **[ビルド設定]** に移動し、開発チーム名にマウス ポインターを移動して、ヒントを表示します。 ヒントに、チーム ID が表示されます。
+1. 再度、アンロードした MyOpenGLESApp.iOS.Application プロジェクトのショートカット メニューを開き、**[Edit project.pbxproj]\(project.pbxproj の編集\)** を選択して、プロジェクト ファイルを編集します。 `project.pbxproj` ファイルで、`buildSettings` 属性を探し、Apple チーム ID を使用して、`DEVELOPMENT_TEAM` を追加します。 次のスクリーンショットに、Apple チーム ID の `123456ABC` の値の例を示します。 Xcode から Apple チーム ID の値を見つけることができます。 **[ビルド設定]** に移動し、開発チーム名にマウス ポインターを移動して、ヒントを表示します。 ヒントに、チーム ID が表示されます。
 
    ![開発チームを設定する](../cross-platform/media/cppmdd-opengles-iosdevelopmentteam.png "開発チームを設定する")
 
-1. `project.pbxproj` ファイルを閉じてから、アンロードした MyOpenGLESApp.iOS.Application プロジェクトのショートカット メニューを開き、 **[プロジェクトの再読み込み]** を選択して、プロジェクトを再読み込みします。
+1. `project.pbxproj` ファイルを閉じてから、アンロードした MyOpenGLESApp.iOS.Application プロジェクトのショートカット メニューを開き、**[プロジェクトの再読み込み]** を選択して、プロジェクトを再読み込みします。
 
-1. ここで、プロジェクトのショートカット メニューを開き、 **[ビルド]** を選択して、MyOpenGLESApp.iOS.Application プロジェクトをビルドします。
+1. ここで、プロジェクトのショートカット メニューを開き、**[ビルド]** を選択して、MyOpenGLESApp.iOS.Application プロジェクトをビルドします。
 
    ![iOS アプリケーション プロジェクトのビルド](../cross-platform/media/cppmdd-opengles-iosbuild.png "iOS アプリケーション プロジェクトのビルド")
 
@@ -167,7 +168,7 @@ IOS アプリプロジェクトを作成し、Visual Studio で編集します�
 
    Mac コンピューターで、codesign にキーチェーンへのアクセスを許可するように求められることがあります。 **[許可]** を選択して続行します。
 
-1. ツールバーで、iOS デバイスを選択し、Mac に接続されているデバイスでアプリを実行します。 アプリが起動しない場合、デバイスによって、デプロイされたアプリケーションに、デバイス上で実行するためのアクセス許可が付与されていることを確認します。 このアクセス許可を設定するには、デバイスの [ **設定** ]  >  **[全般] [**  >  **デバイス管理** ] に移動します。 デベロッパ APP のアカウントを選択し、アカウントを信頼して、アプリを確認します。 Visual Studio からアプリの再実行を試行します。
+1. ツールバーで、iOS デバイスを選択し、Mac に接続されているデバイスでアプリを実行します。 アプリが起動しない場合、デバイスによって、デプロイされたアプリケーションに、デバイス上で実行するためのアクセス許可が付与されていることを確認します。 このアクセス許可を設定するには、デバイスの [**設定**]  >  **[全般] [**  >  **デバイス管理**] に移動します。 デベロッパ APP のアカウントを選択し、アカウントを信頼して、アプリを確認します。 Visual Studio からアプリの再実行を試行します。
 
    ![iOS デバイス上の iOS アプリ](../cross-platform/media/cppmdd-opengles-iosdevice.png "iOS デバイス上の iOS アプリ")
 
@@ -177,7 +178,7 @@ IOS アプリプロジェクトを作成し、Visual Studio で編集します�
 
 1. **Shift** + **F5** キーを押してデバッグを停止します。
 
-   生成された iOS アプリとライブラリのプロジェクトは、共有コードのみを実装するスタティック ライブラリに C++ コードを配置します。 アプリケーション コードのほとんどは、`Application` プロジェクトに配置されます。 このテンプレート プロジェクトの共有ライブラリ コードへの呼び出しは、 *GameViewController.m* ファイルで実行されます。 iOS アプリをビルドするために、Visual Studio は Xcode プラットフォーム ツールセットを使用します。これは、Mac で実行されるリモート クライアントと通信する必要があります。
+   生成された iOS アプリとライブラリのプロジェクトは、共有コードのみを実装するスタティック ライブラリに C++ コードを配置します。 アプリケーション コードのほとんどは、`Application` プロジェクトに配置されます。 このテンプレート プロジェクトの共有ライブラリ コードへの呼び出しは、*GameViewController.m* ファイルで実行されます。 iOS アプリをビルドするために、Visual Studio は Xcode プラットフォーム ツールセットを使用します。これは、Mac で実行されるリモート クライアントと通信する必要があります。
 
    Visual Studio は、プロジェクトファイルをリモートクライアントに転送します。 次に、Xcode を使用してアプリをビルドするためのコマンドを送信します。 リモート クライアントは、ビルドの状態情報を Visual Studio に返します。 アプリが正常にビルドされると、Visual Studio はアプリを実行してデバッグするためのコマンドを送信できます。 Visual Studio のデバッガーによって、Mac に接続されている iOS デバイスで実行されているアプリが制御されます。 Visual Studio は、プロジェクトのプロパティを、ターゲット iOS プラットフォームでコンパイル、リンク、デバッグするために使用されるオプションにマップします。 コンパイラ コマンド ライン オプションの詳細については、MyOpenGLESApp.iOS.StaticLibrary プロジェクトの **[プロパティ ページ]** ダイアログを開いてください。
 

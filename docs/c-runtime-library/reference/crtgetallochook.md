@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: _CrtGetAllocHook'
 title: _CrtGetAllocHook
 ms.date: 11/04/2016
 api_name:
@@ -25,12 +26,12 @@ helpviewer_keywords:
 - _CrtGetAllocHook function
 - CrtGetAllocHook function
 ms.assetid: 036acf7c-547a-4b3f-a636-80451070d7ed
-ms.openlocfilehash: 769621e92bf5f99f76f71b368a3b9a5cd0f79fd0
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 997e3a03f0c9b56fda3a0fd89daf606a652136c5
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70942416"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97319766"
 ---
 # <a name="_crtgetallochook"></a>_CrtGetAllocHook
 
@@ -46,9 +47,9 @@ _CRT_ALLOC_HOOK _CrtGetAllocHook( void );
 
 現在定義されている割り当てフック関数を返します。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-**_CrtGetAllocHook**は、C ランタイムデバッグライブラリのメモリ割り当てプロセスのために、現在のクライアント定義アプリケーションのフック関数を取得します。
+**_CrtGetAllocHook** は、C ランタイムデバッグライブラリのメモリ割り当てプロセスのために、現在のクライアント定義アプリケーションのフック関数を取得します。
 
 フックをサポートするその他のランタイム関数の使い方の詳細と、独自のクライアント定義フック関数の記述方法については、「[デバッグ用フック関数の作成](/visualstudio/debugger/debug-hook-function-writing)」を参照してください。
 
@@ -58,7 +59,7 @@ _CRT_ALLOC_HOOK _CrtGetAllocHook( void );
 |-------------|---------------------|
 |**_CrtGetAllocHook**|\<crtdbg.h>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性について詳しくは、「 [Compatibility](../../c-runtime-library/compatibility.md)」をご覧ください。
 
 ## <a name="libraries"></a>ライブラリ
 
@@ -66,5 +67,5 @@ _CRT_ALLOC_HOOK _CrtGetAllocHook( void );
 
 ## <a name="see-also"></a>関連項目
 
-[デバッグ ルーチン](../../c-runtime-library/debug-routines.md)<br/>
+[デバッグルーチン](../../c-runtime-library/debug-routines.md)<br/>
 [_CrtSetAllocHook](crtsetallochook.md)<br/>

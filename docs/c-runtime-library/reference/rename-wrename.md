@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「rename、_wrename」を参照してください。
 title: rename、_wrename
 ms.date: 4/2/2020
 api_name:
@@ -40,12 +41,12 @@ helpviewer_keywords:
 - names [C++], changing directory
 - renaming files
 ms.assetid: 9f0a6103-26a2-4dda-b14b-79a48946266a
-ms.openlocfilehash: b0a5f43d92d6dd85626f00bf5c2a6350e5bfa10f
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 2a68bff031f321a2566c0da99aacc053ba475928
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82917799"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97322499"
 ---
 # <a name="rename-_wrename"></a>rename、_wrename
 
@@ -74,7 +75,7 @@ int _wrename(
 
 ## <a name="return-value"></a>戻り値
 
-名前が正常に変更された場合、これらの関数はそれぞれ 0 を返します。 エラーが発生した場合、関数は0以外の値を返し、 **errno**を次の値のいずれかに設定します。
+名前が正常に変更された場合、これらの関数はそれぞれ 0 を返します。 エラーが発生した場合、関数は0以外の値を返し、 **errno** を次の値のいずれかに設定します。
 
 |errno の値|条件|
 |-|-|
@@ -88,7 +89,7 @@ int _wrename(
 
 **rename** 関数は、*oldname* によって指定されたファイルまたはディレクトリの名前を *newname* によって指定された名前に変更します。 古い名前は、既存のファイルまたはディレクトリのパスである必要があります。 新しい名前を既存のファイルまたはディレクトリのパスにすることはできません。 **rename** を使用して、*newname* 引数で別のパスを指定することにより、1 つのディレクトリまたはデバイスから別のディレクトリまたはデバイスにファイルを移動することができます。 ただし、**rename** を使用してディレクトリを移動することはできません。 ディレクトリの名前を変更することはできますが、移動はできません。
 
-**_wrename**は **_rename**のワイド文字バージョンです。**_wrename**する引数はワイド文字列です。 **_wrename**と **_rename**は同じように動作します。
+**_wrename** は **_rename** のワイド文字バージョンです。 **_wrename** する引数はワイド文字列です。 **_wrename** と **_rename** は同じように動作します。
 
 既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
@@ -100,7 +101,7 @@ int _wrename(
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**rename**|\<io.h> または \<stdio.h>|
 |**_wrename**|\<stdio.h> または \<wchar.h>|
@@ -145,4 +146,4 @@ File 'CRT_RENAMER.OBJ' renamed to 'CRT_RENAMER.JBO'
 
 ## <a name="see-also"></a>関連項目
 
-[ファイル処理](../../c-runtime-library/file-handling.md)<br/>
+[ファイルの処理](../../c-runtime-library/file-handling.md)<br/>

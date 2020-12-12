@@ -1,19 +1,20 @@
 ---
+description: '詳細情報: atomic 構造体'
 title: atomic 構造体
 ms.date: 04/20/2018
 f1_keywords:
 - atomic/std::atomic
 ms.assetid: 261628ed-7049-41ac-99b9-cfe49f696b44
-ms.openlocfilehash: 738f79f966b8b0482baf4f78120c0d690425a4bf
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 9698e0e14129d8fa020bd1432912aea85498ff6e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88834792"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97321695"
 ---
 # <a name="atomic-structure"></a>atomic 構造体
 
-*Ty*型の格納された値に対してアトミック操作を実行するオブジェクトを記述します。
+*Ty* 型の格納された値に対してアトミック操作を実行するオブジェクトを記述します。
 
 ## <a name="syntax"></a>構文
 
@@ -46,13 +47,13 @@ struct atomic;
 |[fetch_or](#fetch_or)|指定した値と格納されている値に対してビットごとの or を実行します。|
 |[fetch_sub](#fetch_sub)|指定した値を格納されている値から減算します。|
 |[fetch_xor](#fetch_xor)|指定した値と格納されている値に対してビットごとの排他的 or を実行します。|
-|[is_lock_free](#is_lock_free)|に対するアトミック操作がロックを解放するかどうかを指定し **`this`** ます。 *lock free* その型に対する分割不可能な操作においてロックが使用される場合、atomic 型は*ロック制御不要*になります。|
+|[is_lock_free](#is_lock_free)|に対するアトミック操作がロックを解放するかどうかを指定し **`this`** ます。  その型に対する分割不可能な操作においてロックが使用される場合、atomic 型は *ロック制御不要* になります。|
 |[ロード](#load)|格納されている値を読み取って返します。|
 |[store](#store)|格納されている値を置き換えるために指定された値を使用します。|
 
 ## <a name="remarks"></a>解説
 
-型 *Ty* は、 *普通にコピー可能*である必要があります。 つまり、 [memcpy](../c-runtime-library/reference/memcpy-wmemcpy.md) を使用してそのバイトをコピーするには、元のオブジェクトと等しい有効な *Ty* オブジェクトを生成する必要があります。 [Compare_exchange_weak](#compare_exchange_weak)および[compare_exchange_strong](#compare_exchange_strong)のメンバー関数は、 [memcmp](../c-runtime-library/reference/memcmp-wmemcmp.md)を使用して2つの*Ty*値が等しいかどうかを判断します。 これらの関数は、 *Ty*定義を使用しません `operator==` 。 のメンバー関数は `atomic` 、 `memcpy` *Ty*型の値をコピーするために使用します。
+型 *Ty* は、 *普通にコピー可能* である必要があります。 つまり、 [memcpy](../c-runtime-library/reference/memcpy-wmemcpy.md) を使用してそのバイトをコピーするには、元のオブジェクトと等しい有効な *Ty* オブジェクトを生成する必要があります。 [Compare_exchange_weak](#compare_exchange_weak)および [compare_exchange_strong](#compare_exchange_strong)のメンバー関数は、 [memcmp](../c-runtime-library/reference/memcmp-wmemcmp.md)を使用して2つの *Ty* 値が等しいかどうかを判断します。 これらの関数は、 *Ty* 定義を使用しません `operator==` 。 のメンバー関数は `atomic` 、 `memcpy` *Ty* 型の値をコピーするために使用します。
 
 部分的特殊化 `atomic<Ty*>` は、すべてのポインター型において存在します。 特殊化により、マネージド ポインター値のオフセットの加算またはマネージド ポインター値からのオフセットの減算が可能になります。 算術演算は型の引数を受け取り、 `ptrdiff_t` 通常のアドレス演算との一貫性を確保するために、 *Ty* のサイズに従ってその引数を調整します。
 
@@ -81,7 +82,7 @@ struct atomic;
 
 整数の特殊化は、対応する `atomic_integral` 型から派生します。 たとえば、`atomic<unsigned int>` は `atomic_uint` から派生します。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:**\<atomic>
 
@@ -115,7 +116,7 @@ atomic<int> ai1(0);
 
 ## <a name="atomicoperator-ty"></a><a name="op_ty"></a> atomic:: operator *Ty*
 
-テンプレートに指定された型の演算子である atomic \<*Ty*> 。 ** \* この**に格納されている値を取得します。
+テンプレートに指定された型の演算子である atomic \<*Ty*> 。 **\* この** に格納されている値を取得します。
 
 ```cpp
 atomic<Ty>::operator Ty() const volatile noexcept;
@@ -142,11 +143,11 @@ Ty operator=(
 ### <a name="parameters"></a>パラメーター
 
 *値*\
-*Ty*オブジェクト。
+*Ty* オブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
-*値*を返します。
+*値* を返します。
 
 ## <a name="atomicoperator"></a><a name="op_inc"></a> atomic:: operator + +
 
@@ -161,7 +162,7 @@ Ty atomic<Ty>::operator++() noexcept;
 
 ### <a name="return-value"></a>戻り値
 
-最初の2つの演算子は、インクリメントされた値を返します。最後の2つの演算子は、インクリメントの前に値を返します。 演算子は memory_order を使用し `memory_order_seq_cst` [memory_order](atomic-enums.md)ます。
+最初の2つの演算子は、インクリメントされた値を返します。最後の2つの演算子は、インクリメントの前に値を返します。 演算子は memory_order を使用し `memory_order_seq_cst` [](atomic-enums.md)ます。
 
 ## <a name="atomicoperator"></a><a name="op_add_eq"></a> atomic:: operator + =
 
@@ -202,7 +203,7 @@ Ty atomic<Ty>::operator--() noexcept;
 
 ### <a name="return-value"></a>戻り値
 
-最初の2つの演算子は、デクリメントされた値を返します。最後の2つの演算子は、デクリメントの前に値を返します。 演算子は memory_order を使用し `memory_order_seq_cst` [memory_order](atomic-enums.md)ます。
+最初の2つの演算子は、デクリメントされた値を返します。最後の2つの演算子は、デクリメントの前に値を返します。 演算子は memory_order を使用し `memory_order_seq_cst` [](atomic-enums.md)ます。
 
 ## <a name="atomicoperator-"></a><a name="op_sub_eq"></a> atomic:: operator-=
 
@@ -232,7 +233,7 @@ Ty atomic<Ty>::operator-=(
 
 ## <a name="atomicoperator"></a><a name="op_and_eq"></a> atomic:: operator&=
 
-指定した値と、 ** \* この**の格納された値に対してビットごとの and を実行します。 整数の特殊化でのみ使用されます。
+指定した値と、 **\* この** の格納された値に対してビットごとの and を実行します。 整数の特殊化でのみ使用されます。
 
 ```cpp
 atomic<Ty>::operator&= (
@@ -246,7 +247,7 @@ atomic<Ty>::operator&= (
 ### <a name="parameters"></a>パラメーター
 
 *値*\
-*Ty*型の値。
+*Ty* 型の値。
 
 ### <a name="return-value"></a>戻り値
 
@@ -254,11 +255,11 @@ atomic<Ty>::operator&= (
 
 ### <a name="remarks"></a>解説
 
-この演算子は、読み取り/書き込み操作を実行して、 ** \* この**の格納された値を、memory_order の制約内で、*値*のビットごとの and と、 ** \* この**に格納されている現在の値に置き換え `memory_order_seq_cst` [memory_order](atomic-enums.md)ます。
+この演算子は、読み取り/書き込み操作を実行して、 **\* この** の格納された値を、memory_order の制約内で、*値* のビットごとの and と、 **\* この** に格納されている現在の値に置き換え `memory_order_seq_cst` [](atomic-enums.md)ます。
 
 ## <a name="atomicoperator124"></a><a name="op_or_eq"></a> atomic:: operator&#124;=
 
-指定した値と、 ** \* この**の格納された値に対してビットごとの or を実行します。 整数の特殊化でのみ使用されます。
+指定した値と、 **\* この** の格納された値に対してビットごとの or を実行します。 整数の特殊化でのみ使用されます。
 
 ```cpp
 atomic<Ty>::operator|= (
@@ -272,7 +273,7 @@ atomic<Ty>::operator|= (
 ### <a name="parameters"></a>パラメーター
 
 *値*\
-*Ty*型の値。
+*Ty* 型の値。
 
 ### <a name="return-value"></a>戻り値
 
@@ -280,11 +281,11 @@ atomic<Ty>::operator|= (
 
 ### <a name="remarks"></a>解説
 
-この演算子は、読み取り/書き込み操作を実行して、 ** \* この**の格納されている値を、memory_order 制約の制約内で、ビットごとの or*値*と、 ** \* この**に格納されている現在の値に置き換え `memory_order_seq_cst` [memory_order](atomic-enums.md)ます。
+この演算子は、読み取り/書き込み操作を実行して、 **\* この** の格納されている値を、memory_order 制約の制約内で、ビットごとの or *値* と、 **\* この** に格納されている現在の値に置き換え `memory_order_seq_cst` [](atomic-enums.md)ます。
 
 ## <a name="atomicoperator"></a><a name="op_xor_eq"></a> atomic:: operator ^ =
 
-指定した値と、 ** \* この**の格納された値に対してビットごとの排他的 or を実行します。 整数の特殊化でのみ使用されます。
+指定した値と、 **\* この** の格納された値に対してビットごとの排他的 or を実行します。 整数の特殊化でのみ使用されます。
 
 ```cpp
 atomic<Ty>::operator^= (
@@ -298,7 +299,7 @@ atomic<Ty>::operator^= (
 ### <a name="parameters"></a>パラメーター
 
 *値*\
-*Ty*型の値。
+*Ty* 型の値。
 
 ### <a name="return-value"></a>戻り値
 
@@ -306,11 +307,11 @@ atomic<Ty>::operator^= (
 
 ### <a name="remarks"></a>解説
 
-この演算子は、読み取り/書き込み操作を実行して、 ** \* この**の格納されている値を、memory_order 制約の制約内で、ビットごとの排他的 or*値*と、 ** \* この**に格納されている現在の値に置き換え `memory_order_seq_cst` [memory_order](atomic-enums.md)ます。
+この演算子は、読み取り/書き込み操作を実行して、 **\* この** の格納されている値を、memory_order 制約の制約内で、ビットごとの排他的 or *値* と、 **\* この** に格納されている現在の値に置き換え `memory_order_seq_cst` [](atomic-enums.md)ます。
 
 ## <a name="atomiccompare_exchange_strong"></a><a name="compare_exchange_strong"></a> atomic:: compare_exchange_strong
 
-** \* この**に対してアトミックの比較および交換操作を実行します。
+**\* この** に対してアトミックの比較および交換操作を実行します。
 
 ```cpp
 bool compare_exchange_strong(
@@ -340,10 +341,10 @@ bool compare_exchange_strong(
 ### <a name="parameters"></a>パラメーター
 
 *期限*\
-*Ty*型の値。
+*Ty* 型の値。
 
 *値*\
-*Ty*型の値。
+*Ty* 型の値。
 
 *Order1*\
 1番目 `memory_order` の引数。
@@ -357,15 +358,15 @@ bool compare_exchange_strong(
 
 ### <a name="remarks"></a>解説
 
-このアトミックの比較および交換操作では、 ** \* この**に格納されている値と*Exp*を比較します。値が等しい場合、操作は、 ** \* この**に格納されている値を、読み取り/書き込み操作を使用し、 *Order1*で指定されたメモリ順序制約を適用して、*値*に置き換えます。 値が等しくない場合、この操作は、 ** \* この**に格納されている値を使用して*Exp*を置き換え、 *Order2*で指定されているメモリ順序制約を適用します。
+このアトミックの比較および交換操作では、 **\* この** に格納されている値と *Exp* を比較します。値が等しい場合、操作は、 **\* この** に格納されている値を、読み取り/書き込み操作を使用し、 *Order1* で指定されたメモリ順序制約を適用して、*値* に置き換えます。 値が等しくない場合、この操作は、 **\* この** に格納されている値を使用して *Exp* を置き換え、 *Order2* で指定されているメモリ順序制約を適用します。
 
-2番目のを持たないオーバーロードで `memory_order` は、 *Order1*の値に基づく暗黙的な*Order2*が使用されます。 *Order1*がの場合 `memory_order_acq_rel` 、 *Order2*は `memory_order_acquire` です。 *Order1*がの場合 `memory_order_release` 、 *Order2*は `memory_order_relaxed` です。 それ以外の場合は、 *Order2* は *Order1*と等しくなります。
+2番目のを持たないオーバーロードで `memory_order` は、 *Order1* の値に基づく暗黙的な *Order2* が使用されます。 *Order1* がの場合 `memory_order_acq_rel` 、 *Order2* は `memory_order_acquire` です。 *Order1* がの場合 `memory_order_release` 、 *Order2* は `memory_order_relaxed` です。 それ以外の場合は、 *Order2* は *Order1* と等しくなります。
 
-2つのパラメーターを受け取るオーバーロードで `memory_order` は、 *Order2* の値をまたはにすることはできません `memory_order_release` 。また、 `memory_order_acq_rel` *Order1*の値よりも強い値を指定することはできません。
+2つのパラメーターを受け取るオーバーロードで `memory_order` は、 *Order2* の値をまたはにすることはできません `memory_order_release` 。また、 `memory_order_acq_rel` *Order1* の値よりも強い値を指定することはできません。
 
 ## <a name="atomiccompare_exchange_weak"></a><a name="compare_exchange_weak"></a> atomic:: compare_exchange_weak
 
-** \* この**に対して弱いアトミック比較と交換操作を実行します。
+**\* この** に対して弱いアトミック比較と交換操作を実行します。
 
 ```cpp
 bool compare_exchange_weak(
@@ -395,10 +396,10 @@ bool compare_exchange_weak(
 ### <a name="parameters"></a>パラメーター
 
 *期限*\
-*Ty*型の値。
+*Ty* 型の値。
 
 *値*\
-*Ty*型の値。
+*Ty* 型の値。
 
 *Order1*\
 1番目 `memory_order` の引数。
@@ -412,17 +413,17 @@ bool compare_exchange_weak(
 
 ### <a name="remarks"></a>解説
 
-このアトミックの比較および交換操作では、 ** \* この**に格納されている値と*Exp*を比較します。値が等しい場合、操作は、 ** \* この**に格納されている値を、読み取り/書き込み操作を使用し、 *Order1*で指定されたメモリ順序制約を適用して、*値*に置き換えます。 値が等しくない場合、この操作は、 ** \* この**に格納されている値を使用して*Exp*を置き換え、 *Order2*で指定されているメモリ順序制約を適用します。
+このアトミックの比較および交換操作では、 **\* この** に格納されている値と *Exp* を比較します。値が等しい場合、操作は、 **\* この** に格納されている値を、読み取り/書き込み操作を使用し、 *Order1* で指定されたメモリ順序制約を適用して、*値* に置き換えます。 値が等しくない場合、この操作は、 **\* この** に格納されている値を使用して *Exp* を置き換え、 *Order2* で指定されているメモリ順序制約を適用します。
 
 比較された値が同一の場合、弱いアトミック比較および交換操作は交換を実行します。 値が同じでない場合、操作による交換の実行は保証されません。
 
-2番目のを持たないオーバーロードで `memory_order` は、 *Order1*の値に基づく暗黙的な*Order2*が使用されます。 *Order1*がの場合 `memory_order_acq_rel` 、 *Order2*は `memory_order_acquire` です。 *Order1*がの場合 `memory_order_release` 、 *Order2*は `memory_order_relaxed` です。 それ以外の場合は、 *Order2* は *Order1*と等しくなります。
+2番目のを持たないオーバーロードで `memory_order` は、 *Order1* の値に基づく暗黙的な *Order2* が使用されます。 *Order1* がの場合 `memory_order_acq_rel` 、 *Order2* は `memory_order_acquire` です。 *Order1* がの場合 `memory_order_release` 、 *Order2* は `memory_order_relaxed` です。 それ以外の場合は、 *Order2* は *Order1* と等しくなります。
 
-2つのパラメーターを受け取るオーバーロードで `memory_order` は、 *Order2* の値をまたはにすることはできません `memory_order_release` 。また、 `memory_order_acq_rel` *Order1*の値よりも強い値を指定することはできません。
+2つのパラメーターを受け取るオーバーロードで `memory_order` は、 *Order2* の値をまたはにすることはできません `memory_order_release` 。また、 `memory_order_acq_rel` *Order1* の値よりも強い値を指定することはできません。
 
 ## <a name="atomicexchange"></a><a name="exchange"></a> atomic:: exchange
 
-指定した値を使用して、 ** \* この**の格納されている値を置き換えます。
+指定した値を使用して、 **\* この** の格納されている値を置き換えます。
 
 ```cpp
 Ty atomic<Ty>::exchange(
@@ -438,22 +439,22 @@ Ty atomic<Ty>::exchange(
 ### <a name="parameters"></a>パラメーター
 
 *値*\
-*Ty*型の値。
+*Ty* 型の値。
 
 *順序*\
 `memory_order`。
 
 ### <a name="return-value"></a>戻り値
 
-Exchange の前に格納されていた** \* この**の値。
+Exchange の前に格納されていた **\* この** の値。
 
 ### <a name="remarks"></a>解説
 
-この操作では、*値*を使用して、 *Order*によって指定されたメモリ制約内で、 ** \* この**に格納されている値を置き換える読み取り/書き込み操作を実行します。
+この操作では、*値* を使用して、 *Order* によって指定されたメモリ制約内で、 **\* この** に格納されている値を置き換える読み取り/書き込み操作を実行します。
 
 ## <a name="atomicfetch_add"></a><a name="fetch_add"></a> atomic:: fetch_add
 
-** \* この**に格納されている値をフェッチし、格納されている値に指定した値を加算します。
+**\* この** に格納されている値をフェッチし、格納されている値に指定した値を加算します。
 
 ```cpp
 Ty atomic<Ty>::fetch_add (
@@ -469,22 +470,22 @@ Ty atomic<Ty>::fetch_add (
 ### <a name="parameters"></a>パラメーター
 
 *値*\
-*Ty*型の値。
+*Ty* 型の値。
 
 *順序*\
 `memory_order`。
 
 ### <a name="return-value"></a>戻り値
 
-加算の前に、 ** \* この**に格納されている値を格納している*Ty*オブジェクト。
+加算の前に、 **\* この** に格納されている値を格納している *Ty* オブジェクト。
 
 ### <a name="remarks"></a>解説
 
-メソッドは、 `fetch_add` 読み取り/書き込み操作を実行して、 ** \* この**の格納された値に*値*をアトミックに追加し、 *Order*によって指定されたメモリ制約を適用します。
+メソッドは、 `fetch_add` 読み取り/書き込み操作を実行して、 **\* この** の格納された値に *値* をアトミックに追加し、 *Order* によって指定されたメモリ制約を適用します。
 
 ## <a name="atomicfetch_and"></a><a name="fetch_and"></a> atomic:: fetch_and
 
-値と、 ** \* この**に格納されている既存の値に対してビットごとの and を実行します。
+値と、 **\* この** に格納されている既存の値に対してビットごとの and を実行します。
 
 ```cpp
 Ty atomic<Ty>::fetch_and (
@@ -500,7 +501,7 @@ Ty atomic<Ty>::fetch_and (
 ### <a name="parameters"></a>パラメーター
 
 *値*\
-*Ty*型の値。
+*Ty* 型の値。
 
 *順序*\
 `memory_order`。
@@ -511,11 +512,11 @@ Ty atomic<Ty>::fetch_and (
 
 ### <a name="remarks"></a>解説
 
-メソッドは、 `fetch_and` ** \* この**の格納された値を、 *Order*によって指定されたメモリ制約内で、*値*のビットごとの and と、 ** \* この**に格納されている現在の値に置換する読み取り/書き込み操作を実行します。
+メソッドは、 `fetch_and` **\* この** の格納された値を、 *Order* によって指定されたメモリ制約内で、*値* のビットごとの and と、 **\* この** に格納されている現在の値に置換する読み取り/書き込み操作を実行します。
 
 ## <a name="atomicfetch_or"></a><a name="fetch_or"></a> atomic:: fetch_or
 
-値と、 ** \* この**に格納されている既存の値に対してビットごとの or を実行します。
+値と、 **\* この** に格納されている既存の値に対してビットごとの or を実行します。
 
 ```cpp
 Ty atomic<Ty>::fetch_or (
@@ -531,7 +532,7 @@ Ty atomic<Ty>::fetch_or (
 ### <a name="parameters"></a>パラメーター
 
 *値*\
-*Ty*型の値。
+*Ty* 型の値。
 
 *順序*\
 `memory_order`。
@@ -542,7 +543,7 @@ Ty atomic<Ty>::fetch_or (
 
 ### <a name="remarks"></a>解説
 
-メソッドは、 `fetch_or` read/modify 書き込み操作を実行して、 ** \* この**の格納されている値を、 *Order*で指定されたメモリ制約内で、ビットごとの or*値*と、 ** \* この**に格納されている現在の値に置き換えます。
+メソッドは、 `fetch_or` read/modify 書き込み操作を実行して、 **\* この** の格納されている値を、 *Order* で指定されたメモリ制約内で、ビットごとの or *値* と、 **\* この** に格納されている現在の値に置き換えます。
 
 ## <a name="atomicfetch_sub"></a><a name="fetch_sub"></a> atomic:: fetch_sub
 
@@ -562,7 +563,7 @@ Ty atomic<Ty>::fetch_sub (
 ### <a name="parameters"></a>パラメーター
 
 *値*\
-*Ty*型の値。
+*Ty* 型の値。
 
 *順序*\
 `memory_order`。
@@ -573,11 +574,11 @@ Ty atomic<Ty>::fetch_sub (
 
 ### <a name="remarks"></a>解説
 
-メソッドは、 `fetch_sub` *順序*によって指定されたメモリの制約内で、 ** \* この**の格納されている値から*値*をアトミックに減算するために、読み取り/書き込み操作を実行します。
+メソッドは、 `fetch_sub` *順序* によって指定されたメモリの制約内で、 **\* この** の格納されている値から *値* をアトミックに減算するために、読み取り/書き込み操作を実行します。
 
 ## <a name="atomicfetch_xor"></a><a name="fetch_xor"></a> atomic:: fetch_xor
 
-値と、 ** \* この**に格納されている既存の値に対してビットごとの排他的 or を実行します。
+値と、 **\* この** に格納されている既存の値に対してビットごとの排他的 or を実行します。
 
 ```cpp
 Ty atomic<Ty>::fetch_xor (
@@ -593,7 +594,7 @@ Ty atomic<Ty>::fetch_xor (
 ### <a name="parameters"></a>パラメーター
 
 *値*\
-*Ty*型の値。
+*Ty* 型の値。
 
 *順序*\
 `memory_order`。
@@ -604,11 +605,11 @@ Ty atomic<Ty>::fetch_xor (
 
 ### <a name="remarks"></a>解説
 
-メソッドは、 `fetch_xor` 読み取り/書き込み操作を実行して、 ** \* この**の格納された値をビットごとの排他的 or*値*に置き換え、 ** \* この**に格納されている現在の値を、 *Order*によって指定されたメモリ制約を適用します。
+メソッドは、 `fetch_xor` 読み取り/書き込み操作を実行して、 **\* この** の格納された値をビットごとの排他的 or *値* に置き換え、 **\* この** に格納されている現在の値を、 *Order* によって指定されたメモリ制約を適用します。
 
 ## <a name="atomicis_lock_free"></a><a name="is_lock_free"></a> atomic:: is_lock_free
 
-** \* この**に対するアトミック操作がロックを解放するかどうかを指定します。
+**\* この** に対するアトミック操作がロックを解放するかどうかを指定します。
 
 ```cpp
 bool is_lock_free() const volatile noexcept;
@@ -616,7 +617,7 @@ bool is_lock_free() const volatile noexcept;
 
 ### <a name="return-value"></a>戻り値
 
-** \* この**に対するアトミック操作がロックを解放している場合は true、それ以外の場合は false。
+**\* この** に対するアトミック操作がロックを解放している場合は true、それ以外の場合は false。
 
 ### <a name="remarks"></a>解説
 
@@ -624,7 +625,7 @@ bool is_lock_free() const volatile noexcept;
 
 ## <a name="atomicload"></a><a name="load"></a> atomic:: load
 
-指定されたメモリ制約内で、 ** \* この**内の格納されている値を取得します。
+指定されたメモリ制約内で、 **\* この** 内の格納されている値を取得します。
 
 ```cpp
 Ty atomic::load(
@@ -642,7 +643,7 @@ Ty atomic::load(
 
 ### <a name="return-value"></a>戻り値
 
-** \* この**に格納されている取得値。
+**\* この** に格納されている取得値。
 
 ## <a name="atomicstore"></a><a name="store"></a> atomic:: store
 
@@ -662,14 +663,14 @@ void atomic<Ty>::store(
 ### <a name="parameters"></a>パラメーター
 
 *値*\
-*Ty*オブジェクト。
+*Ty* オブジェクト。
 
 *順序*\
 `memory_order`制約です。
 
 ### <a name="remarks"></a>解説
 
-このメンバー関数は*Value* **`*this`** 、 *Order*によって指定されたメモリ制約内で、に値をアトミックに格納します。
+このメンバー関数は **`*this`** 、 *Order* によって指定されたメモリ制約内で、に値をアトミックに格納します。
 
 ## <a name="see-also"></a>関連項目
 

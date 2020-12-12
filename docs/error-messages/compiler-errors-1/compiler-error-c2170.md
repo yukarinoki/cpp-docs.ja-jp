@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「コンパイラエラー C2170」を参照してください。
 title: コンパイラ エラー C2170
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2170
 ms.assetid: d5c663f0-2459-4e11-a8bf-a52b62f3c71d
-ms.openlocfilehash: 828e5bbca0b796864ec8b364ee69c18a3b5eea00
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 2f6093221d214aa12f6b90f40dde14518e44e08e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80206954"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97322259"
 ---
 # <a name="compiler-error-c2170"></a>コンパイラ エラー C2170
 

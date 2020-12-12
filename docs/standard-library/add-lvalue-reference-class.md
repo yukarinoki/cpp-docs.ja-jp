@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: add_lvalue_reference クラス'
 title: add_lvalue_reference クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - add_lvalue_reference
 ms.assetid: 9933afc2-ad0d-465d-98fe-7d547fa3efe2
-ms.openlocfilehash: 5f822e3393853c780bfe4ee86d5a5c799ec7646d
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 07bbfb96241b12c409b8754bdb4854e994c65cc0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84617671"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97319910"
 ---
 # <a name="add_lvalue_reference-class"></a>add_lvalue_reference クラス
 
@@ -32,9 +33,9 @@ using add_lvalue_reference_t = typename add_lvalue_reference<T>::type;
 *\T*\
 変更する型。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-*T*が左辺値参照の場合、型修飾子のインスタンスは*t*である修飾型を保持します。それ以外の場合はを保持 `T&` します。
+*T* が左辺値参照の場合、型修飾子のインスタンスは *t* である修飾型を保持します。それ以外の場合はを保持 `T&` します。
 
 ## <a name="example"></a>例
 
@@ -59,7 +60,7 @@ int main()
 add_lvalue_reference_t<int> == int
 ```
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:**\<type_traits>
 

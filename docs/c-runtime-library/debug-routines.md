@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: デバッグルーチン'
 title: デバッグ ルーチン
 ms.date: 04/10/2018
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - debug macros
 - debugging [CRT], runtime routines
 ms.assetid: cb4d2664-10f3-42f7-a516-595558075471
-ms.openlocfilehash: 59e705947856ba9fe9477e88328b1fb2344abb7c
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 60857549cbbb0871da208708e9acd812444b3274
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88842495"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97321285"
 ---
 # <a name="debug-routines"></a>デバッグ ルーチン
 
@@ -33,7 +34,7 @@ C ランタイム ライブラリのデバッグ バージョンには、プロ�
 
 これらのルーチンを使うには、[_DEBUG](../c-runtime-library/debug.md) フラグを定義する必要があります。 これらのルーチンはすべて、アプリケーションの製品版ビルドでは何も行いません。 新しいデバッグ ルーチンの使い方について詳しくは、「[CRT のデバッグ技術](/visualstudio/debugger/crt-debugging-techniques)」をご覧ください。
 
-| ルーチンによって返される値 | vmmblue_2 |
+| ルーチンによって返される値 | 使用 |
 |--|--|
 | [`_ASSERT`](../c-runtime-library/reference/assert-asserte-assert-expr-macros.md) | 式を評価し、結果が FALSE の場合はデバッグ レポートを生成します |
 | [`_ASSERTE`](../c-runtime-library/reference/assert-asserte-assert-expr-macros.md) | に似 **`_ASSERT`** ていますが、生成されたレポートに失敗した式が含まれています。 |

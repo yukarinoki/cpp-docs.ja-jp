@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: `auto` (C++)'
 title: auto (C++)
 ms.date: 12/10/2019
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - auto keyword [C++]
 ms.assetid: e9d495d7-601c-4547-b897-998389a311f4
-ms.openlocfilehash: be268635e61005efbdb01ed8c4eec79c7cb9b800
-ms.sourcegitcommit: d9c94dcabd94537e304be0261b3263c2071b437b
+ms.openlocfilehash: 2237c8aa3cb1b1078a8b90ba5a3ba6cba0a7134b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91353039"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97319470"
 ---
 # <a name="auto-c"></a>`auto` (C++)
 
@@ -49,7 +50,7 @@ ms.locfileid: "91353039"
 
 キーワードを使用するには、 **`auto`** 変数を宣言するために型の代わりに使用し、初期化式を指定します。 また、、 **`auto`** **`const`** **`volatile`** 、pointer ( **`*`** )、reference ( **`&`** )、右辺値参照 () などの指定子と宣言子を使用して、キーワードを変更することもでき **`&&`** ます。 コンパイラは初期化式を評価し、その情報を使用して変数の型を推測します。
 
-初期化式には、代入 (等号の構文)、直接の初期化 (関数形式の構文)、 [`operator new`](new-operator-cpp.md) 式、または、[範囲ベースの `for` ステートメント (C++)](../cpp/range-based-for-statement-cpp.md)ステートメントで*の範囲宣言*のパラメーターを指定できます。 詳細については、このドキュメントで後述する「 [初期化子](../cpp/initializers.md) とコード例」を参照してください。
+初期化式には、代入 (等号の構文)、直接の初期化 (関数形式の構文)、 [`operator new`](new-operator-cpp.md) 式、または、[範囲ベースの `for` ステートメント (C++)](../cpp/range-based-for-statement-cpp.md)ステートメントで *の範囲宣言* のパラメーターを指定できます。 詳細については、このドキュメントで後述する「 [初期化子](../cpp/initializers.md) とコード例」を参照してください。
 
 キーワードは、 **`auto`** 型のプレースホルダーですが、それ自体は型ではありません。 そのため、キーワードは、やなどの **`auto`** キャストまたは演算子では使用できません [`sizeof`](../cpp/sizeof-operator.md) (C++/cli の場合) [`typeid`](../extensions/typeid-cpp-component-extensions.md) 。
 
@@ -61,11 +62,11 @@ ms.locfileid: "91353039"
 
 ## <a name="trailing-return-types"></a>後続の戻り値の型
 
-を型指定子と共に使用すると、 **`auto`** **`decltype`** テンプレートライブラリを記述するのに役立ちます。 とを使用し **`auto`** て、 **`decltype`** 戻り値の型がテンプレート引数の型に依存するテンプレート関数を宣言します。 または、とを使用して、 **`auto`** **`decltype`** 別の関数の呼び出しをラップするテンプレート関数を宣言し、その他の関数の戻り値の型を返します。 詳細については、[`decltype`](../cpp/decltype-cpp.md) を参照してください。
+を型指定子と共に使用すると、 **`auto`** **`decltype`** テンプレートライブラリを記述するのに役立ちます。 とを使用し **`auto`** て、 **`decltype`** 戻り値の型がテンプレート引数の型に依存するテンプレート関数を宣言します。 または、とを使用して、 **`auto`** **`decltype`** 別の関数の呼び出しをラップするテンプレート関数を宣言し、その他の関数の戻り値の型を返します。 詳細については、「[`decltype`](../cpp/decltype-cpp.md)」を参照してください。
 
 ## <a name="references-and-cv-qualifiers"></a>参照と cv 修飾子
 
-を使用する **`auto`** と、参照、修飾子、および修飾子が削除されることに注意 **`const`** **`volatile`** してください。 次に例を示します。
+を使用する **`auto`** と、参照、修飾子、および修飾子が削除されることに注意 **`const`** **`volatile`** してください。 次の例を確認してください。
 
 ```cpp
 // cl.exe /analyze /EHsc /W4
@@ -132,7 +133,7 @@ int main()
 |[C3536](../error-messages/compiler-errors-2/compiler-error-c3536.md)|シンボルは初期化前に使用することはできません。 実際には、変数はその変数自体を初期化するために使用できないことを意味します。|
 |[C3537](../error-messages/compiler-errors-2/compiler-error-c3537.md)|キーワードで宣言された型にキャストすることはできません **`auto`** 。|
 |[C3538](../error-messages/compiler-errors-2/compiler-error-c3538.md)|キーワードを使用して宣言されている宣言子リスト内のすべてのシンボルは、 **`auto`** 同じ型に解決する必要があります。 詳細については、「 [宣言と定義](declarations-and-definitions-cpp.md)」を参照してください。|
-|[C3540](../error-messages/compiler-errors-2/compiler-error-c3540.md)、 [C3541](../error-messages/compiler-errors-2/compiler-error-c3541.md)|[Sizeof](../cpp/sizeof-operator.md)および[typeid](../extensions/typeid-cpp-component-extensions.md)演算子は、キーワードで宣言されたシンボルには適用できません **`auto`** 。|
+|[C3540](../error-messages/compiler-errors-2/compiler-error-c3540.md)、 [C3541](../error-messages/compiler-errors-2/compiler-error-c3541.md)|[Sizeof](../cpp/sizeof-operator.md)および [typeid](../extensions/typeid-cpp-component-extensions.md)演算子は、キーワードで宣言されたシンボルには適用できません **`auto`** 。|
 
 ## <a name="examples"></a>例
 

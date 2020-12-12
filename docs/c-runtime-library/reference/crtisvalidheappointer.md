@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: _CrtIsValidHeapPointer'
 title: _CrtIsValidHeapPointer
 ms.date: 11/04/2016
 api_name:
@@ -25,12 +26,12 @@ helpviewer_keywords:
 - _CrtIsValidHeapPointer function
 - CrtIsValidHeapPointer function
 ms.assetid: caf597ce-1b05-4764-9f37-0197a982bec5
-ms.openlocfilehash: 9a8746eb2da90ac5515d92113b977011a4647fe6
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 71a281cdf63ad1c37162da1b1be099764085f739
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70942385"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97319704"
 ---
 # <a name="_crtisvalidheappointer"></a>_CrtIsValidHeapPointer
 
@@ -51,11 +52,11 @@ int _CrtIsValidHeapPointer(
 
 ## <a name="return-value"></a>戻り値
 
-指定されたポインターがすべての CRT ライブラリインスタンスによって共有されるヒープ内にある場合、 **_CrtIsValidHeapPointer**は TRUE を返します。 これにより、Visual Studio 2010 以前のバージョンの CRT では、指定したポインターがローカル ヒープにある場合は、TRUE を返します。 それ以外の場合、関数は FALSE を返します。
+指定されたポインターがすべての CRT ライブラリインスタンスによって共有されるヒープ内にある場合、 **_CrtIsValidHeapPointer** は TRUE を返します。 これにより、Visual Studio 2010 以前のバージョンの CRT では、指定したポインターがローカル ヒープにある場合は、TRUE を返します。 それ以外の場合、関数は FALSE を返します。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-この関数を使用しないことをお勧めします。 Visual Studio 2010 CRT ライブラリ以降、すべての CRT ライブラリでは 1 つの OS ヒープ (*プロセス ヒープ*) を共有します。 **_CrtIsValidHeapPointer**関数は、ポインターが crt ヒープで割り当てられているかどうかを報告しますが、呼び出し元の crt ライブラリによって割り当てられたものではありません。 たとえば、Visual Studio 2010 バージョンの CRT ライブラリを使用して割り当てられたブロックがあるとします。 Visual Studio 2012 バージョンの CRT ライブラリによってエクスポートされた **_CrtIsValidHeapPointer**関数がポインターをテストする場合は、TRUE を返します。 これは便利なテストではなくなりました。 Visual Studio 2010 以前のバージョンの CRT ライブラリでは、この関数は、特定のメモリ アドレスがローカル ヒープ内にあることを確認するために使用されます。 ローカル ヒープとは、C ランタイム ライブラリの特定のインスタンスによって作成および管理されるヒープを指します。 ダイナミック リンク ライブラリ (DLL) にランタイム ライブラリへの静的なリンクが含まれている場合、DLL はランタイム ヒープの独自のインスタンスを持つため、アプリケーションのローカル ヒープとは別の独自のヒープを持ちます。 [_Debug](../../c-runtime-library/debug.md)が定義されていない場合、 **_CrtIsValidHeapPointer**の呼び出しはプリプロセス中に削除されます。
+この関数を使用しないことをお勧めします。 Visual Studio 2010 CRT ライブラリ以降、すべての CRT ライブラリでは 1 つの OS ヒープ (*プロセス ヒープ*) を共有します。 **_CrtIsValidHeapPointer** 関数は、ポインターが crt ヒープで割り当てられたかどうかを報告しますが、呼び出し元の crt ライブラリによって割り当てられたものではありません。 たとえば、Visual Studio 2010 バージョンの CRT ライブラリを使用して割り当てられたブロックがあるとします。 Visual Studio 2012 バージョンの CRT ライブラリによってエクスポートされた **_CrtIsValidHeapPointer** 関数がポインターをテストする場合は、TRUE を返します。 これは便利なテストではなくなりました。 Visual Studio 2010 以前のバージョンの CRT ライブラリでは、この関数は、特定のメモリ アドレスがローカル ヒープ内にあることを確認するために使用されます。 ローカル ヒープとは、C ランタイム ライブラリの特定のインスタンスによって作成および管理されるヒープを指します。 ダイナミック リンク ライブラリ (DLL) にランタイム ライブラリへの静的なリンクが含まれている場合、DLL はランタイム ヒープの独自のインスタンスを持つため、アプリケーションのローカル ヒープとは別の独自のヒープを持ちます。 [_DEBUG](../../c-runtime-library/debug.md)が定義されていない場合、 **_CrtIsValidHeapPointer** の呼び出しはプリプロセス中に削除されます。
 
 この関数は TRUE または FALSE を返すため、[_ASSERT](assert-asserte-assert-expr-macros.md) 系マクロに渡すことによって、デバッグ用の単純なエラー処理機構を作成できます。 指定されたアドレスがローカル ヒープ内にない場合に、アサーションの失敗を発生させるには、次のように記述します。
 
@@ -63,7 +64,7 @@ int _CrtIsValidHeapPointer(
 _ASSERTE( _CrtIsValidHeapPointer( userData ) );
 ```
 
-**_CrtIsValidHeapPointer**を他のデバッグ関数およびマクロと共に使用する方法の詳細については、「[レポート用マクロ](/visualstudio/debugger/macros-for-reporting)」を参照してください。 デバッグ バージョンのベース ヒープに対するメモリ ブロックの割り当て、初期化、管理方法については、「 [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details)」をご覧ください。
+**_CrtIsValidHeapPointer** を他のデバッグ関数およびマクロと共に使用する方法の詳細については、「[レポート用マクロ](/visualstudio/debugger/macros-for-reporting)」を参照してください。 デバッグ バージョンのベース ヒープに対するメモリ ブロックの割り当て、初期化、管理方法については、「 [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details)」をご覧ください。
 
 ## <a name="requirements"></a>必要条件
 
@@ -71,7 +72,7 @@ _ASSERTE( _CrtIsValidHeapPointer( userData ) );
 |-------------|---------------------|
 |**_CrtIsValidHeapPointer**|\<crtdbg.h>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性について詳しくは、「 [Compatibility](../../c-runtime-library/compatibility.md)」をご覧ください。
 
 ## <a name="libraries"></a>ライブラリ
 
@@ -133,4 +134,4 @@ my_pointer is within the local heap.
 
 ## <a name="see-also"></a>関連項目
 
-[デバッグ ルーチン](../../c-runtime-library/debug-routines.md)<br/>
+[デバッグルーチン](../../c-runtime-library/debug-routines.md)<br/>

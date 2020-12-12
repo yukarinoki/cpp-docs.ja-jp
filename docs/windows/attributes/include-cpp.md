@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: include (C++)'
 title: include (C++ COM 属性)
 ms.date: 10/02/2018
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - include attribute
 ms.assetid: d23f8b91-fe5b-48fa-9371-8bd73af7b8e3
-ms.openlocfilehash: 6b75df74ee69ee4f89eb7bf18fb6bcd77d8a6284
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: c6d12b9d8826ce84de0c01aaf055f5a4176fea10
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88842196"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97321364"
 ---
 # <a name="include-c"></a>include (C++)
 
@@ -36,7 +37,7 @@ ms.locfileid: "88842196"
 
 ## <a name="example"></a>例
 
-次のコードは、 **include**を使用する方法の例を示しています。 この例では、ファイルにはステートメントだけが含まれています。 `#include`
+次のコードは、 **include** を使用する方法の例を示しています。 この例では、ファイルにはステートメントだけが含まれています。 `#include`
 
 ```cpp
 // cpp_attr_ref_include.cpp
@@ -45,7 +46,7 @@ ms.locfileid: "88842196"
 [include(cpp_attr_ref_include.h)];
 ```
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 | 属性コンテキスト | 値 |
 |-|-|

@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: OLE DB プロバイダーテンプレートの操作'
 title: OLE DB プロバイダー テンプレートの操作
 ms.date: 10/29/2018
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - templates, OLE DB provider
 - OLE DB providers, templates
 ms.assetid: c90b7523-dbff-431c-be06-eed9055710d2
-ms.openlocfilehash: 21e02f3630b9235ec200452d3b79b04710458823
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: acea10c085059290d543cb3ca9382cf26f944f33
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80209244"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97319067"
 ---
 # <a name="working-with-ole-db-provider-templates"></a>OLE DB プロバイダー テンプレートの操作
 
@@ -24,17 +25,17 @@ OLE DB プロバイダーテンプレートの使用方法については、次�
 
 - [プロバイダーでのプロパティの設定](../../data/oledb/setting-properties-in-your-provider.md)
 
-- [プロバイダーでの列の動的な連結](../../data/oledb/dynamically-binding-columns-in-your-provider.md)
+- [プロバイダーでの列の動的なバインド](../../data/oledb/dynamically-binding-columns-in-your-provider.md)
 
-- [プロバイダーでのフリー スレッドのサポート](../../data/oledb/supporting-free-threading-in-your-provider.md)
+- [プロバイダーでのフリースレッドのサポート](../../data/oledb/supporting-free-threading-in-your-provider.md)
 
 - [プロバイダーのテスト](../../data/oledb/testing-your-provider.md)
 
 - [プロバイダーのデバッグ](../../data/oledb/debugging-your-provider.md)
 
-- [プロバイダーでサポートされないデータの変換](../../data/oledb/converting-data-not-supported-by-the-provider.md)
+- [プロバイダーでサポートされていないデータの変換](../../data/oledb/converting-data-not-supported-by-the-provider.md)
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[OLE DB プロバイダー テンプレート リファレンス](../../data/oledb/ole-db-provider-templates-reference.md)<br/>
-[OLE DB コンシューマー テンプレートに関するページ](../../data/oledb/ole-db-consumer-templates-cpp.md)
+[OLE DB プロバイダーテンプレートのリファレンス](../../data/oledb/ole-db-provider-templates-reference.md)<br/>
+[OLE DB コンシューマー テンプレート](../../data/oledb/ole-db-consumer-templates-cpp.md)

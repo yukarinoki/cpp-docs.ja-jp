@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: &lt; valarray &gt; 演算子'
 title: '&lt;valarray&gt; 演算子'
 ms.date: 03/27/2019
 f1_keywords:
@@ -30,16 +31,16 @@ helpviewer_keywords:
 - std::operator&lt; (valarray)
 - std::operator&lt;&lt; (valarray)
 - std::operator&lt;= (valarray), std::operator== (valarray)
-ms.openlocfilehash: 76eb3553090cd88cf0798b2b17bbd49906852e40
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 574d0b67910b79941431f3ee8c1f9e3118de35a4
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87212010"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97321466"
 ---
 # <a name="ltvalarraygt-operators"></a>&lt;valarray&gt; 演算子
 
-## <a name="operator"></a><a name="op_neq"></a>operator! =
+## <a name="operator"></a><a name="op_neq"></a> operator! =
 
 サイズが等しい 2 つの valarray の対応する要素が等しくないか、またはある valarray のすべての要素が指定値と等しくないかをテストします。
 
@@ -136,7 +137,7 @@ The element-by-element result of the not equal comparison test is the
 valarray: ( 0 0 1 0 1 0 1 0 1 0 ).
 ```
 
-## <a name="operator"></a><a name="op_mod"></a>operator
+## <a name="operator"></a><a name="op_mod"></a> operator
 
 サイズが等しい 2 つの valarray の対応する要素を除算した剰余か、valarray を指定値で除算した剰余、または指定値を valarray で除算した剰余を取得します。
 
@@ -170,7 +171,7 @@ operator%(
 
 ### <a name="return-value"></a>戻り値
 
-要素ごとの剰余を*左*に*right*で除算した要素を持つ valarray。
+要素ごとの剰余を *左* に *right* で除算した要素を持つ valarray。
 
 ### <a name="example"></a>例
 
@@ -221,7 +222,7 @@ The remainders from the element-by-element division is the
 valarray: ( 0 -3 4 -7 1 -3 ).
 ```
 
-## <a name="operatoramp"></a><a name="op_amp"></a>operator&amp;
+## <a name="operatoramp"></a><a name="op_amp"></a> operator&amp;
 
 サイズが等しい 2 つの valarray の対応する要素間、または valarray と要素型の指定値との間でビットごとの **AND** を計算した結果を取得します。
 
@@ -255,7 +256,7 @@ operator&(
 
 ### <a name="return-value"></a>戻り値
 
-*左辺*と*右辺*のビットごとの and 演算の要素ごとの組み合わせを要素とする valarray。
+*左辺* と *右辺* のビットごとの and 演算の要素ごとの組み合わせを要素とする valarray。
 
 ### <a name="remarks"></a>解説
 
@@ -312,7 +313,7 @@ The element-by-element result of the bitwise operator & is the
 valarray: ( 0 0 0 0 0 4 0 0 0 8 ).
 ```
 
-## <a name="operatorampamp"></a><a name="op_amp_amp"></a>operator&amp;&amp;
+## <a name="operatorampamp"></a><a name="op_amp_amp"></a> operator&amp;&amp;
 
 サイズが等しい 2 つの valarray の対応する要素間、または valarray と valarray の要素型の指定値との間で論理 **AND** を計算した結果を取得します。
 
@@ -346,11 +347,11 @@ operator&&(
 
 ### <a name="return-value"></a>戻り値
 
-ブール型の要素を持つ valarray `AND` 。*左辺*と*右辺*の論理演算の要素ごとの組み合わせです。
+ブール型の要素を持つ valarray `AND` 。 *左辺* と *右辺* の論理演算の要素ごとの組み合わせです。
 
 ### <a name="remarks"></a>解説
 
-論理は `ANDoperator&&` 要素レベルで適用され、すべての非ゼロ値を true と見なし、結果はブール値の valarray になります。 これに対し、ビットごとのバージョンの `AND` 、[演算子&](#op_amp)は、ビットごとの演算の結果に応じて、0または1以外の値の valarray になる場合があります。
+論理は `ANDoperator&&` 要素レベルで適用され、すべての非ゼロ値を true と見なし、結果はブール値の valarray になります。 これに対し、ビットごとのバージョンの `AND` 、 [演算子&](#op_amp)は、ビットごとの演算の結果に応じて、0または1以外の値の valarray になる場合があります。
 
 ### <a name="example"></a>例
 
@@ -401,7 +402,7 @@ The element-by-element result of the logical AND operator&& is the
 valarray: ( 0 0 0 1 0 1 0 1 0 1 ).
 ```
 
-## <a name="operatorgt"></a><a name="op_gt"></a>operator&gt;
+## <a name="operatorgt"></a><a name="op_gt"></a> operator&gt;
 
 ある valarray の要素がサイズの等しい valarray の要素より大きいか、またはある valarray のすべての要素が指定値より大きいか、もしくは指定値未満であるかをテストします。
 
@@ -437,9 +438,9 @@ operator>(
 
 ブール値の valarray。ブール値は、それぞれ次のようになります。
 
-- **`true`***左*の要素または値が、対応する*右*の要素または値より大きい場合は。
+- **`true`***左* の要素または値が、対応する *右* の要素または値より大きい場合は。
 
-- **`false`***左*の要素または値が、対応する*右*の要素または値より大きい場合は。
+- **`false`***左* の要素または値が、対応する *右* の要素または値より大きい場合は。
 
 ### <a name="remarks"></a>解説
 
@@ -494,7 +495,7 @@ The element-by-element result of the greater than comparison test is the
 valarray: ( 1 1 0 1 0 1 0 1 0 1 ).
 ```
 
-## <a name="operatorgt"></a><a name="op_gt_eq"></a>operator&gt;=
+## <a name="operatorgt"></a><a name="op_gt_eq"></a> operator&gt;=
 
 ある valarray の要素がサイズが等しい valarray の要素以上であるか、またはある valarray のすべての要素が valarray の要素型の指定値以上であるか、もしくは指定値以下であるかをテストします。
 
@@ -530,9 +531,9 @@ operator>=(
 
 ブール値の valarray。ブール値は、それぞれ次のようになります。
 
-- **`true`***左*の要素または値が、対応する*右側*の要素または値以上の場合。
+- **`true`***左* の要素または値が、対応する *右側* の要素または値以上の場合。
 
-- **`false`***左*の要素または値が、対応する*右*の要素または値より小さい場合は。
+- **`false`***左* の要素または値が、対応する *右* の要素または値より小さい場合は。
 
 ### <a name="remarks"></a>解説
 
@@ -587,7 +588,7 @@ The element-by-element result of the greater than or equal test is the
 valarray: ( 1 1 0 1 0 1 0 1 0 1 ).
 ```
 
-## <a name="operatorgtgt"></a><a name="op_gt_gt"></a>operator&gt;&gt;
+## <a name="operatorgtgt"></a><a name="op_gt_gt"></a> operator&gt;&gt;
 
 valarray の各要素のビットを、指定された位置数だけ右にシフトさせるか、2 番目の valarray で指定された要素ごとの量だけ右にシフトさせます。
 
@@ -676,7 +677,7 @@ The element-by-element result of the right shift is the
 valarray: ( 64 -32 16 -8 4 -2 1 -1 ).
 ```
 
-## <a name="operatorlt"></a><a name="op_lt"></a>operator&lt;
+## <a name="operatorlt"></a><a name="op_lt"></a> operator&lt;
 
 ある valarray の要素がサイズが等しい valarray の要素未満であるか、またはある valarray のすべての要素が valarray の要素型の指定値より大きいか、もしくは指定値未満であるかをテストします。
 
@@ -712,9 +713,9 @@ operator<(
 
 ブール値の valarray。ブール値は、それぞれ次のようになります。
 
-- **`true`***左*の要素または値が、対応する*右*の要素または値より小さい場合は。
+- **`true`***左* の要素または値が、対応する *右* の要素または値より小さい場合は。
 
-- **`false`***左*の要素または値が、対応する*右*の要素または値より小さい場合は。
+- **`false`***左* の要素または値が、対応する *右* の要素または値より小さい場合は。
 
 ### <a name="remarks"></a>解説
 
@@ -769,7 +770,7 @@ The element-by-element result of the less-than comparson test is the
 valarray: ( 0 0 1 0 1 0 1 0 1 0 ).
 ```
 
-## <a name="operatorlt"></a><a name="op_lt_eq"></a>operator&lt;=
+## <a name="operatorlt"></a><a name="op_lt_eq"></a> operator&lt;=
 
 ある valarray の要素がサイズが等しい valarray の要素以下であるか、またはある valarray のすべての要素が valarray の要素型の指定値以上であるか、もしくは指定値以下であるかをテストします。
 
@@ -805,9 +806,9 @@ operator<=(
 
 ブール値の valarray。ブール値は、それぞれ次のようになります。
 
-- **`true`***左*の要素または値が、対応する*右*の要素または値以下である場合は。
+- **`true`***左* の要素または値が、対応する *右* の要素または値以下である場合は。
 
-- **`false`***左*の要素または値が、対応する*右*の要素または値より大きい場合は。
+- **`false`***左* の要素または値が、対応する *右* の要素または値より大きい場合は。
 
 ### <a name="remarks"></a>解説
 
@@ -862,7 +863,7 @@ The element-by-element result of the less than or equal test is the
 valarray: ( 0 0 1 0 1 0 1 0 1 0 ).
 ```
 
-## <a name="operatorltlt"></a><a name="op_lt_lt"></a>operator&lt;&lt;
+## <a name="operatorltlt"></a><a name="op_lt_lt"></a> operator&lt;&lt;
 
 valarray の各要素のビットを、指定された位置数だけ左にシフトさせるか、2 番目の valarray で指定された要素ごとの量だけ左にシフトさせます。
 
@@ -951,7 +952,7 @@ The element-by-element result of the left shift is the
 valarray: ( 1 -2 4 -8 16 -32 64 -128 ).
 ```
 
-## <a name="operator"></a><a name="op_star"></a>operator
+## <a name="operator"></a><a name="op_star"></a> operator
 
 サイズが等しい 2 つの valarray の対応する要素間の要素ごとの積、または valarray と指定値との間の積を取得します。
 
@@ -985,7 +986,7 @@ operator*(
 
 ### <a name="return-value"></a>戻り値
 
-*左辺*と*右辺*の要素ごとの積を要素とする valarray。
+*左辺* と *右辺* の要素ごとの積を要素とする valarray。
 
 ### <a name="example"></a>例
 
@@ -1036,7 +1037,7 @@ The element-by-element result of the multiplication is the
 valarray: ( 0 -1 4 -3 8 -5 12 -7 ).
 ```
 
-## <a name="operator"></a><a name="op_add"></a>演算子 +
+## <a name="operator"></a><a name="op_add"></a> 演算子 +
 
 サイズが等しい 2 つの valarray の対応する要素間の要素ごとの和、または valarray と指定値との間の和を取得します。
 
@@ -1070,7 +1071,7 @@ operator+(
 
 ### <a name="return-value"></a>戻り値
 
-*左辺*と*右辺*の要素ごとの和を要素とする valarray。
+*左辺* と *右辺* の要素ごとの和を要素とする valarray。
 
 ### <a name="example"></a>例
 
@@ -1121,7 +1122,7 @@ The element-by-element result of the sum is the
 valarray: ( 2 0 4 2 6 4 8 6 ).
 ```
 
-## <a name="operator-"></a><a name="operator-"></a>operator
+## <a name="operator-"></a><a name="operator-"></a> operator
 
 サイズが等しい 2 つの valarray の対応する要素間の要素ごとの差、または valarray と指定値との間の差を取得します。
 
@@ -1155,7 +1156,7 @@ operator-(
 
 ### <a name="return-value"></a>戻り値
 
-*左辺*と*右辺*の要素ごとの差を要素とする valarray。
+*左辺* と *右辺* の要素ごとの差を要素とする valarray。
 
 ### <a name="remarks"></a>解説
 
@@ -1212,7 +1213,7 @@ The element-by-element result of the difference is the
 valarray: ( 10 -1 8 -3 6 -5 4 -7 ).
 ```
 
-## <a name="operator"></a><a name="op_div"></a>operator
+## <a name="operator"></a><a name="op_div"></a> operator
 
 サイズが等しい 2 つの valarray の対応する要素間の要素ごとの商、または valarray と指定値との間の商を取得します。
 
@@ -1246,7 +1247,7 @@ operator/(
 
 ### <a name="return-value"></a>戻り値
 
-*左辺*が*right*で除算された要素ごとの商を要素とする valarray。
+*左辺* が *right* で除算された要素ごとの商を要素とする valarray。
 
 ### <a name="remarks"></a>解説
 
@@ -1303,7 +1304,7 @@ The element-by-element result of the quotient is the
 valarray: ( inf -50 25 -16.6667 12.5 -10 ).
 ```
 
-## <a name="operator"></a><a name="op_eq_eq"></a>operator = =
+## <a name="operator"></a><a name="op_eq_eq"></a> operator = =
 
 サイズが等しい 2 つの valarray の対応する要素が等しいか、またはある valarray のすべての要素が指定値と等しいかをテストします。
 
@@ -1396,7 +1397,7 @@ The element-by-element result of the equality comparison test is the
 valarray: ( 1 1 0 1 0 1 0 1 0 1 ).
 ```
 
-## <a name="operator"></a><a name="op_xor"></a>^ 演算子
+## <a name="operator"></a><a name="op_xor"></a> ^ 演算子
 
 サイズが等しい 2 つの valarray の対応する要素間、または valarray と要素型の指定値との間でビットごとの排他的 `OR` ( **XOR**) を計算した結果を取得します。
 
@@ -1430,13 +1431,13 @@ operator^(
 
 ### <a name="return-value"></a>戻り値
 
-*左辺*と*右辺*のビットごとの**XOR**演算の要素ごとの組み合わせを要素とする valarray。
+*左辺* と *右辺* のビットごとの **XOR** 演算の要素ごとの組み合わせを要素とする valarray。
 
 ### <a name="remarks"></a>解説
 
 ビットごとの演算は、およびデータ型およびバリアントのビットを操作するためにのみ使用でき、 **`char`** **`int`** 、、 **`float`** **`double`** **`long double`** 、などの **`void`** **`bool`** より複雑なデータ型には使用できません。
 
-ビットごとの `OR` 排他的 **(XOR**) には次のセマンティクスがあります。指定されたビット*b*1 と*b*2、 *b*1 **XOR** *b*2 は、1 **`true`** つのビットが true の場合は true、両方のビットが false の場合 **`false`** は true、両方のビットが true の場合はです。
+ビットごとの `OR` 排他的 **(XOR**) には次のセマンティクスがあります。指定されたビット *b* 1 と *b* 2、 *b* 1 **XOR** *b* 2 は、1 **`true`** つのビットが true の場合は true、両方のビットが false の場合 **`false`** は true、両方のビットが true の場合はです。
 
 ### <a name="example"></a>例
 
@@ -1525,13 +1526,13 @@ operator|(
 
 ### <a name="return-value"></a>戻り値
 
-`OR`*左辺*と*右辺*のビットごとの演算の要素ごとの組み合わせを要素とする valarray。
+`OR`*左辺* と *右辺* のビットごとの演算の要素ごとの組み合わせを要素とする valarray。
 
 ### <a name="remarks"></a>解説
 
 ビットごとの演算は、およびデータ型とバリアントのビットを操作するためにのみ使用できます。また、、 **`char`** **`int`** **`float`** **`double`** 、 **longdouble**、 **`void`** 、 **`bool`** またはその他の複雑なデータ型には使用できません。
 
-ビットごとの OR は論理 `OR` と同じ真理値表を持ちますが、個々のビットのレベルでデータ型に適用されます。 ビット*b*1 と*b*2 が指定されている場合、少なくと*b* `OR` *b* **`true`** も1つのビットが true であるか、両方のビットが false である場合、b 1 b 2 はになり **`false`** ます。 論理 `OR` [演算子&#124;&#124;](../standard-library/valarray-operators.md#op_lor)は要素レベルで適用され、すべての非ゼロ値はとしてカウントされ、 **`true`** 結果はブール値の valarray になります。 それに対して、ビットごとの OR `operator|` は、ビットごとの演算の結果に応じて、0 でも 1 でもない値を含む valarray になる場合があります。
+ビットごとの OR は論理 `OR` と同じ真理値表を持ちますが、個々のビットのレベルでデータ型に適用されます。 ビット *b* 1 と *b* 2 が指定されている場合、少なくと `OR`  **`true`** も1つのビットが true であるか、両方のビットが false である場合、b 1 b 2 はになり **`false`** ます。 論理 `OR` [演算子&#124;&#124;](../standard-library/valarray-operators.md#op_lor)は要素レベルで適用され、すべての非ゼロ値はとしてカウントされ、 **`true`** 結果はブール値の valarray になります。 それに対して、ビットごとの OR `operator|` は、ビットごとの演算の結果に応じて、0 でも 1 でもない値を含む valarray になる場合があります。
 
 ### <a name="example"></a>例
 
@@ -1620,7 +1621,7 @@ operator||(
 
 ### <a name="return-value"></a>戻り値
 
-要素が型で、 **`bool`** *左右*の論理 OR 演算の要素ごとの組み合わせである valarray。 *right*
+要素が型で、 **`bool`** *左右* の論理 OR 演算の要素ごとの組み合わせである valarray。 
 
 ### <a name="remarks"></a>解説
 

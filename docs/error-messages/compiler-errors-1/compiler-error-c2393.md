@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「コンパイラエラー C2393」を参照してください。
 title: コンパイラ エラー C2393
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2393
 ms.assetid: 4bd95728-e813-4ce8-844a-c6ebe235ca82
-ms.openlocfilehash: cc3c124f1a4daea0f2517a93c6b354b8233aa5e5
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 7cf1b333afac9f976bb4bf38ce769e6982255959
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80205986"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97318989"
 ---
 # <a name="compiler-error-c2393"></a>コンパイラ エラー C2393
 
@@ -19,9 +20,9 @@ ms.locfileid: "80205986"
 
 ## <a name="remarks"></a>解説
 
-**/Clr: pure**および **/clr: safe**コンパイラオプションは visual studio 2015 で非推奨とされており、visual studio 2017 ではサポートされていません。
+**/Clr: pure** および **/clr: safe** コンパイラオプションは visual studio 2015 で非推奨とされており、visual studio 2017 ではサポートされていません。
 
-[Appdomain](../../cpp/appdomain.md)変数を使用することは、 **/clr: pure**または **/clr: safe**を使用してコンパイルすることを意味します。また、safe または純粋なイメージにデータセグメントを含めることはできません。
+[Appdomain](../../cpp/appdomain.md)変数を使用することは、 **/clr: pure** または **/clr: safe** を使用してコンパイルすることを意味します。また、safe または純粋なイメージにデータセグメントを含めることはできません。
 
 詳細については、「 [/clr (共通言語ランタイムのコンパイル)](../../build/reference/clr-common-language-runtime-compilation.md) 」を参照してください。
 

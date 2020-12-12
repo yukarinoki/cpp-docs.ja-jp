@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: レコードセット: データ列を動的にバインドする (ODBC)'
 title: 'レコードセット: データ列を動的に結びつける方法 (ODBC)'
 ms.date: 05/09/2019
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - data binding [C++], columns in recordsets
 - columns [C++], binding to recordsets
 ms.assetid: bff67254-d953-4ae4-9716-91c348cb840b
-ms.openlocfilehash: 8bc9ba8a143234bec7927c9578a69a95a511bb9f
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: cb141874fa39b06e8e000c03e538021650facf91
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88837789"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97322380"
 ---
 # <a name="recordset-dynamically-binding-data-columns-odbc"></a>レコードセット: データ列を動的に結びつける方法 (ODBC)
 
@@ -146,7 +147,7 @@ ms.locfileid: "88837789"
 前の手順の結果は、現在のレコードの列の値を含む列の名前と動的列の値を動的に含む、2つの主なリストになります。
 
 > [!TIP]
-> 新しい列がすべて同じデータ型ではない場合は、列リストの各対応要素の型を何らかの方法で定義している項目が含まれる追加の並列リストが必要な場合があります。 (必要な場合は、AFX_RFX_BOOL、AFX_RFX_BYTE などの値をこれに使用できます。 これらの定数は、AFXDB.H で定義されています。H) 列のデータ型の表現方法に基づいてリストの種類を選択します。
+> 新しい列がすべて同じデータ型ではない場合は、列リストの各対応要素の型を何らかの方法で定義している項目が含まれる追加の並列リストが必要な場合があります。 (必要な場合は、AFX_RFX_BOOL、AFX_RFX_BYTE などの値をこれに使用できます。 これらの定数は、AFXDB.H で定義されています。)列のデータ型の表現方法に基づいて、リストの種類を選択します。
 
 ### <a name="adding-rfx-calls-to-bind-the-columns"></a><a name="_core_adding_rfx_calls_to_bind_the_columns"></a> 列をバインドするための RFX 呼び出しの追加
 

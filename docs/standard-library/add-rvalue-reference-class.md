@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: add_rvalue_reference クラス'
 title: add_rvalue_reference クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - add_rvalue_reference Class
 ms.assetid: 76b0cb7c-1031-45d0-b409-f03ab0297580
-ms.openlocfilehash: 6d7cc1d45ed3b963de0a0a004c1696ddbf0af440
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: f4f5b58ddd2aa1e02b3023a27ef2feba83624326
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84623920"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97319883"
 ---
 # <a name="add_rvalue_reference-class"></a>add_rvalue_reference クラス
 
@@ -32,9 +33,9 @@ using add_rvalue_reference_t = typename add_rvalue_reference<T>::type;
 *\T*\
 変更する型。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-クラスには `add_rvalue_reference` 、という名前のメンバーがあり `type` ます。これは、テンプレートパラメーター *T*への右辺値参照の型のエイリアスです。参照の縮小のセマンティクスは、非オブジェクト型と非関数型*t*の場合、 `T&&` *t*です。たとえば、 *T*が左辺値参照型の場合、 `add_rvalue_reference<T>::type` は右辺値参照ではなく左辺値参照型です。
+クラスには `add_rvalue_reference` 、という名前のメンバーがあり `type` ます。これは、テンプレートパラメーター *T* への右辺値参照の型のエイリアスです。参照の縮小のセマンティクスは、非オブジェクト型と非関数型 *t* の場合、 `T&&` *t* です。たとえば、 *T* が左辺値参照型の場合、 `add_rvalue_reference<T>::type` は右辺値参照ではなく左辺値参照型です。
 
 便宜上、は、 \<type_traits> `add_rvalue_reference_t` のメンバーにエイリアスを使用するヘルパーテンプレートを定義し `type` `add_rvalue_reference` ます。
 
@@ -69,7 +70,7 @@ All static_assert tests of add_rvalue_reference passed.
 */
 ```
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 ヘッダー: \<type_traits>
 

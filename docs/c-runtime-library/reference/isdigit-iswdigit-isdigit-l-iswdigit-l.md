@@ -1,4 +1,5 @@
 ---
+description: Isdigit、iswdigit、_isdigit_l、_iswdigit_l の詳細については、こちらを参照してください。
 title: isdigit、iswdigit、_isdigit_l、_iswdigit_l
 ms.date: 4/2/2020
 api_name:
@@ -45,12 +46,12 @@ helpviewer_keywords:
 - _ismbcdigit_l function
 - _isdigit_l function
 ms.assetid: 350b0093-843a-47b0-954e-c1776e8a3853
-ms.openlocfilehash: 70a370068ca05c430845a8eba83a73498384b067
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 3c0b2695f76a9dff1a4502e51938c428dc971fb8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82917583"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97321101"
 ---
 # <a name="isdigit-iswdigit-_isdigit_l-_iswdigit_l"></a>isdigit、iswdigit、_isdigit_l、_iswdigit_l
 
@@ -77,7 +78,7 @@ int _iswdigit_l(
 
 ### <a name="parameters"></a>パラメーター
 
-*40u-c*<br/>
+*c*<br/>
 テストする整数。
 
 *locale*<br/>
@@ -85,11 +86,11 @@ int _iswdigit_l(
 
 ## <a name="return-value"></a>戻り値
 
-これらの各ルーチンは、 *c*が10進数の文字の特殊表現である場合は0以外の値を返します。 *c*が10進数 (0-9) の場合、 **isdigit**は0以外の値を返します。 *c*が10進数の文字に対応するワイド文字である場合、 **iswdigit**は0以外の値を返します。 これらの各ルーチンは、 *c*がテスト条件を満たしていない場合は0を返します。
+これらの各ルーチンは、 *c* が10進数の文字の特殊表現である場合は0以外の値を返します。 *c* が10進数 (0-9) の場合、 **isdigit** は0以外の値を返します。 *c* が10進数の文字に対応するワイド文字である場合、 **iswdigit** は0以外の値を返します。 これらの各ルーチンは、 *c* がテスト条件を満たしていない場合は0を返します。
 
-**_L**サフィックスを持つこれらの関数のバージョンでは、ロケールに依存する動作に現在のロケールではなく渡されたロケールが使用されます。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
+**_L** サフィックスを持つこれらの関数のバージョンでは、ロケールに依存する動作に現在のロケールではなく渡されたロケールが使用されます。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
 
-*C*が EOF でない場合、または 0 ~ 0xff の範囲内にある場合、 **isdigit**と **_isdigit_l**の動作は未定義です。 デバッグ CRT ライブラリが使用され、 *c*がこれらの値のいずれでもない場合、関数はアサーションを発生させます。
+*C* が EOF でない場合、または 0 ~ 0xff の範囲内にある場合、 **isdigit** と **_isdigit_l** の動作は未定義です。 デバッグ CRT ライブラリが使用され、 *c* がこれらの値のいずれでもない場合、関数はアサーションを発生させます。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -104,7 +105,7 @@ int _iswdigit_l(
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**isdigit**|\<ctype.h>|
 |**iswdigit**|\<ctype.h> または \<wchar.h>|
@@ -116,5 +117,5 @@ int _iswdigit_l(
 ## <a name="see-also"></a>関連項目
 
 [文字分類](../../c-runtime-library/character-classification.md)<br/>
-[国](../../c-runtime-library/locale.md)<br/>
-[is、isw 系ルーチン](../../c-runtime-library/is-isw-routines.md)<br/>
+[ロケール](../../c-runtime-library/locale.md)<br/>
+[is、isw ルーチン](../../c-runtime-library/is-isw-routines.md)<br/>

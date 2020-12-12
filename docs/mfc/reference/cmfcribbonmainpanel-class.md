@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: CMFCRibbonMainPanel クラス'
 title: CMFCRibbonMainPanel クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -16,16 +17,16 @@ helpviewer_keywords:
 - CMFCRibbonMainPanel [MFC], AddToRight
 - CMFCRibbonMainPanel [MFC], GetCommandsFrame
 ms.assetid: 1af78798-5e75-4365-9c81-a54aa5679602
-ms.openlocfilehash: 0fd1cd2fec31f9da0c2bec36d08586780f4f95c3
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: 823a1ce8a8684ca791f838346a1fb50727096a62
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81753570"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97321813"
 ---
 # <a name="cmfcribbonmainpanel-class"></a>CMFCRibbonMainPanel クラス
 
-をクリックすると表示されるリボン パネルを実装[します](../../mfc/reference/cmfcribbonapplicationbutton-class.md)。
+[CMFCRibbonApplicationButton](../../mfc/reference/cmfcribbonapplicationbutton-class.md)をクリックしたときに表示されるリボンパネルを実装します。
 
 ## <a name="syntax"></a>構文
 
@@ -46,23 +47,23 @@ class CMFCRibbonMainPanel : public CMFCRibbonPanel
 
 |名前|説明|
 |----------|-----------------|
-|[CMFCリボンメインパネル::追加](#add)|アプリケーション ボタン パネルの左側のペインにリボン要素を追加します。 [(CMFCリボンパネルをオーバーライドします。:追加](../../mfc/reference/cmfcribbonpanel-class.md#add).)|
-|[次の項目一覧を追加します。](#addrecentfileslist)|最近使ったファイルの一覧メニューにテキスト文字列を追加します。|
-|[CMFCリボンメインパネル::下へ](#addtobottom)|リボン アプリケーション パネルの下部ペインにリボン要素を追加します。|
-|[CMFCリボンメインパネル::右に追加](#addtoright)|アプリケーション ボタン パネルの右側のペインにリボン要素を追加します。|
+|[CMFCRibbonMainPanel:: Add](#add)|アプリケーションのボタンパネルの左ペインにリボン要素を追加します。 ( [CMFCRibbonPanel:: Add](../../mfc/reference/cmfcribbonpanel-class.md#add)をオーバーライドします)。|
+|[CMFCRibbonMainPanel::AddRecentFilesList](#addrecentfileslist)|[最近使ったファイル] リストメニューにテキスト文字列を追加します。|
+|[CMFCRibbonMainPanel:: AddToBottom](#addtobottom)|リボンアプリケーションパネルの下部ペインにリボン要素を追加します。|
+|[CMFCRibbonMainPanel::AddToRight](#addtoright)|アプリケーションのボタンパネルの右ペインにリボン要素を追加します。|
 |`CMFCRibbonMainPanel::CreateObject`|このクラス型の動的インスタンスを作成するために、フレームワークで使用されます。|
-|[コマンド フレームを取得します。](#getcommandsframe)|リボンのメイン パネルの領域を表す四角形を返します。|
-|`CMFCRibbonMainPanel::GetThisClass`|このクラス型に関連付けられている[CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)オブジェクトへのポインターを取得するために、フレームワークによって使用されます。|
+|[CMFCRibbonMainPanel:: Getコマンドフレーム](#getcommandsframe)|リボンのメインパネルの領域を表す四角形を返します。|
+|`CMFCRibbonMainPanel::GetThisClass`|このクラス型に関連付けられている [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) オブジェクトへのポインターを取得するために、フレームワークによって使用されます。|
 
 ## <a name="remarks"></a>解説
 
-フレームワークは、アプリケーション`CMFCRibbonMainPanel`パネルを開くと表示されます。 このウィンドウには、次の 3 つのペインが含まれています。
+アプリケーションパネルを開いたときに、フレームワークによってが表示され `CMFCRibbonMainPanel` ます。 次の3つのペインがあります。
 
-- 左側のウィンドウには、ファイルに関連付けられたコマンド **([開く**]、[**保存**]、[**印刷**]、[閉じる]など) が**表示されます**。 このウィンドウにコマンドを追加するには[、CMFCRibbonMainPanel::Add](#add)を呼び出します。
+- 左側のウィンドウには、ファイルに関連付けられているコマンド ([ **開く**]、[ **保存**]、[ **印刷**]、[ **閉じる**] など) が表示されます。 このウィンドウにコマンドを追加するには、 [CMFCRibbonMainPanel:: add](#add)を呼び出します。
 
-- 右側のペインには、左側のペインでクリックしたコマンドを変更するオプションが含まれています。 たとえば、左側のウィンドウで **[名前を付けて保存**] をクリックすると、右側のペインに使用可能なファイルの種類が表示されます。 このウィンドウに項目を追加するには[、CMFCRibbonMainPanel::AddToRight](#addtoright)を呼び出します。
+- 右ペインには、左側のウィンドウでクリックしたコマンドを変更するオプションが表示されます。 たとえば、左側のウィンドウから [ **名前を付けて保存** ] をクリックすると、右側のウィンドウに使用可能なファイルの種類が表示されます。 このペインに項目を追加するには、 [CMFCRibbonMainPanel:: AddToRight](#addtoright)を呼び出します。
 
-- 下部ペインには、アプリケーションの設定を変更し、プログラムを終了するためのボタンがあります。 このウィンドウに項目を追加するには[、CMFCRibbonMainPanel::AddToBottom](#addtobottom)を呼び出します。
+- 下部のペインには、アプリケーションの設定を変更したり、プログラムを終了したりするためのボタンがあります。 このペインに項目を追加するには、 [CMFCRibbonMainPanel:: AddToBottom](#addtobottom)を呼び出します。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -72,13 +73,13 @@ class CMFCRibbonMainPanel : public CMFCRibbonPanel
 
 [CMFCRibbonMainPanel](../../mfc/reference/cmfcribbonmainpanel-class.md)
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-**ヘッダー:** afxRibbonメインパネル.h
+**ヘッダー:** afxRibbonMainPanel
 
-## <a name="cmfcribbonmainpaneladd"></a><a name="add"></a>CMFCリボンメインパネル::追加
+## <a name="cmfcribbonmainpaneladd"></a><a name="add"></a> CMFCRibbonMainPanel:: Add
 
-アプリケーション ボタン パネルの左側のペインにリボン要素を追加します。
+アプリケーションのボタンパネルの左ペインにリボン要素を追加します。
 
 ```
 virtual void Add(CMFCRibbonBaseElement* pElem);
@@ -86,16 +87,16 @@ virtual void Add(CMFCRibbonBaseElement* pElem);
 
 ### <a name="parameters"></a>パラメーター
 
-*ペレム*<br/>
-[イン、アウト]メイン パネルに追加するリボン要素へのポインター。
+*pElem*<br/>
+[入力、出力]メインパネルに追加するリボン要素へのポインター。
 
 ### <a name="remarks"></a>解説
 
-パネルにリボン要素を追加します。 このメソッドを使用して追加された要素は、メイン パネルの左の列にあります。
+リボン要素をパネルに追加します。 このメソッドを使用して追加された要素は、メインパネルの左側の列に配置されます。
 
-## <a name="cmfcribbonmainpaneladdrecentfileslist"></a><a name="addrecentfileslist"></a>次の項目一覧を追加します。
+## <a name="cmfcribbonmainpaneladdrecentfileslist"></a><a name="addrecentfileslist"></a> CMFCRibbonMainPanel::AddRecentFilesList
 
-最近使ったファイルの一覧メニューにテキスト文字列を追加します。
+[最近使ったファイル] リストメニューにテキスト文字列を追加します。
 
 ```cpp
 void AddRecentFilesList(
@@ -105,17 +106,17 @@ void AddRecentFilesList(
 
 ### <a name="parameters"></a>パラメーター
 
-*ラベル*<br/>
+*lpszLabel*<br/>
 最近使ったファイルの一覧に追加する文字列を指定します。
 
-*n幅*<br/>
-最近使ったファイルのリスト パネルの幅をピクセル単位で指定します。
+*nWidth*<br/>
+[最近使ったファイル] リストパネルの幅をピクセル単位で指定します。
 
 ### <a name="remarks"></a>解説
 
-## <a name="cmfcribbonmainpaneladdtobottom"></a><a name="addtobottom"></a>CMFCリボンメインパネル::下へ
+## <a name="cmfcribbonmainpaneladdtobottom"></a><a name="addtobottom"></a> CMFCRibbonMainPanel:: AddToBottom
 
-リボン アプリケーション パネルの下部ペインにリボン要素を追加します。
+リボンアプリケーションパネルの下部ペインにリボン要素を追加します。
 
 ```cpp
 void AddToBottom(CMFCRibbonMainPanelButton* pElem);
@@ -123,14 +124,14 @@ void AddToBottom(CMFCRibbonMainPanelButton* pElem);
 
 ### <a name="parameters"></a>パラメーター
 
-*ペレム*<br/>
-[イン、アウト]メイン パネルの下部に追加するリボン要素へのポインター。
+*pElem*<br/>
+[入力、出力]メインパネルの下部に追加するリボン要素へのポインター。
 
 ### <a name="remarks"></a>解説
 
-## <a name="cmfcribbonmainpaneladdtoright"></a><a name="addtoright"></a>CMFCリボンメインパネル::右に追加
+## <a name="cmfcribbonmainpaneladdtoright"></a><a name="addtoright"></a> CMFCRibbonMainPanel::AddToRight
 
-アプリケーション ボタン パネルの右側のペインにリボン要素を追加します。
+アプリケーションのボタンパネルの右ペインにリボン要素を追加します。
 
 ```cpp
 void AddToRight(
@@ -140,19 +141,19 @@ void AddToRight(
 
 ### <a name="parameters"></a>パラメーター
 
-*ペレム*<br/>
-メイン パネルの右側に追加するリボン要素へのポインター。
+*pElem*<br/>
+メインパネルの右側に追加するリボン要素へのポインター。
 
-*n幅*<br/>
+*nWidth*<br/>
 右側のパネルの幅をピクセル単位で指定します。
 
 ### <a name="remarks"></a>解説
 
-この関数を使用して、右側のパネルにリボン要素を追加します。 通常、右側のパネルには最近使用したファイルの一覧が表示されますが、ここで他のリボン要素を追加することもできます。
+この関数を使用すると、リボン要素を右側のパネルに追加できます。 通常、右側のパネルには最近使用したファイルの一覧が表示されますが、その他のリボン要素を追加することもできます。
 
-## <a name="cmfcribbonmainpanelgetcommandsframe"></a><a name="getcommandsframe"></a>コマンド フレームを取得します。
+## <a name="cmfcribbonmainpanelgetcommandsframe"></a><a name="getcommandsframe"></a> CMFCRibbonMainPanel:: Getコマンドフレーム
 
-リボンのメイン パネルの領域を表す四角形を返します。
+リボンのメインパネルの領域を表す四角形を返します。
 
 ```
 CRect GetCommandsFrame() const;
@@ -160,10 +161,10 @@ CRect GetCommandsFrame() const;
 
 ### <a name="return-value"></a>戻り値
 
-リボンのメイン パネルの領域を表す四角形。
+リボンのメインパネルの領域を表す四角形。
 
 ## <a name="see-also"></a>関連項目
 
-[階層グラフ](../../mfc/hierarchy-chart.md)<br/>
-[クラス](../../mfc/reference/mfc-classes.md)<br/>
-[クラス](../../mfc/reference/cmfcribbonpanel-class.md)
+[階層図](../../mfc/hierarchy-chart.md)<br/>
+[Classes](../../mfc/reference/mfc-classes.md)<br/>
+[CMFCRibbonPanel クラス](../../mfc/reference/cmfcribbonpanel-class.md)

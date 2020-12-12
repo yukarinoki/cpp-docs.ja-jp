@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: Android Native Activity アプリの作成'
 title: Android Native Activity アプリの作成
 ms.date: 10/17/2019
 ms.assetid: 884014b1-5208-45ec-b0da-ad0070d2c24d
-ms.openlocfilehash: 664729a920076839f5f9b4440768fe3adb846803
-ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
+ms.openlocfilehash: d8ccccde40c89553d12fd98645cda2877e581273
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "92924188"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97319327"
 ---
 # <a name="create-an-android-native-activity-app"></a>Android Native Activity アプリの作成
 
@@ -23,11 +24,11 @@ Android Native Activity アプリを作成する前に、すべてのシステ�
 
 ::: moniker range="msvc-150"
 
-1. Visual Studio で、[ **ファイル** ] [ > **新規作成** ] [プロジェクト] の順に選択し > **Project** ます。
+1. Visual Studio で、[**ファイル**] [ > **新規作成**] [プロジェクト] の順に選択し > ます。
 
-1. **[新しいプロジェクト]** ダイアログ ボックスの **[テンプレート]** で、 **[Visual C++]** > **[クロス プラットフォーム]** の順に選択し、 **[Native-Activity Application (Android)]** テンプレートを選択します。
+1. **[新しいプロジェクト]** ダイアログ ボックスの **[テンプレート]** で、**[Visual C++]** > **[クロス プラットフォーム]** の順に選択し、**[Native-Activity Application (Android)]** テンプレートを選択します。
 
-1. アプリに *MyAndroidApp* などの名前を付け、 **[OK]** を選択します。
+1. アプリに *MyAndroidApp* などの名前を付け、**[OK]** を選択します。
 
    ![Native Activity プロジェクトを作成する](../cross-platform/media/cppmdd-newproject.png "ネイティブ アクティビティ プロジェクトの作成")
 
@@ -39,11 +40,11 @@ Android Native Activity アプリを作成する前に、すべてのシステ�
 
 ::: moniker range=">=msvc-160"
 
-1. Visual Studio で、[ **ファイル** ] [ > **新規作成** ] [プロジェクト] の順に選択し > **Project** ます。
+1. Visual Studio で、[**ファイル**] [ > **新規作成**] [プロジェクト] の順に選択し > ます。
 
-1. **[新しいプロジェクトの作成]** ダイアログ ボックスで、 **[Native-Activity アプリケーション (Android)]** テンプレートを選択し、 **[次へ]** を選択します。
+1. **[新しいプロジェクトの作成]** ダイアログ ボックスで、**[Native-Activity アプリケーション (Android)]** テンプレートを選択し、**[次へ]** を選択します。
 
-1. **[新しいプロジェクトの構成]** ダイアログ ボックスで、 **[プロジェクト名]** に *MyAndroidApp* のような名前を入力し、 **[作成]** を選択します。
+1. **[新しいプロジェクトの構成]** ダイアログ ボックスで、**[プロジェクト名]** に *MyAndroidApp* のような名前を入力し、**[作成]** を選択します。
 
    Visual Studio は新しいソリューションを作成し、ソリューション エクスプローラーを開きます。
 
@@ -61,11 +62,11 @@ Android Native Activity アプリを作成する前に、すべてのシステ�
 
 ## <a name="to-build-and-run-the-default-native-activity-app"></a>既定の Native Activity アプリをビルドして実行するには
 
-1. まだ選択されていない場合は、[ **ソリューションプラットフォーム** ] ボックスの一覧から [ **x86** ] を選択します。
+1. まだ選択されていない場合は、[**ソリューションプラットフォーム**] ボックスの一覧から [ **x86** ] を選択します。
 
      ![ソリューション プラットフォーム ドロップダウン x86 の選択](../cross-platform/media/cppmdd-rc-na-solution-x86.png "ソリューション プラットフォーム ドロップダウン x86 の選択")
 
-     **[ソリューション プラットフォーム]** リストが表示されない場合は、 **[ボタンの追加と削除]** リストから **[ソリューション プラットフォーム]** を選択してから、使用するプラットフォームを選択します。
+     **[ソリューション プラットフォーム]** リストが表示されない場合は、**[ボタンの追加と削除]** リストから **[ソリューション プラットフォーム]** を選択してから、使用するプラットフォームを選択します。
 
 1. メニュー バーで、 **[ビルド]**  >  **[ソリューションのビルド]** の順にクリックします。
 

@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「in (C++)」を参照してください。
 title: in (C++ COM 属性)
 ms.date: 10/02/2018
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - in attribute
 ms.assetid: 7b450cc4-4d2e-4910-a195-7487c6b7c373
-ms.openlocfilehash: 2838a00ffe365f42fb7778b654306eb0c73b5996
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: c4d19fcf7adc767986306a3ef55b26a2cc91dccf
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88842235"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97321377"
 ---
 # <a name="in-c"></a>in (C++)
 
@@ -29,9 +30,9 @@ C++ **属性のは** 、の [in](/windows/win32/Midl/in) MIDL 属性と同じ機
 
 ## <a name="example"></a>例
 
-**で**を使用する方法の例については、「[バインド](bindable.md)可能」を参照してください。
+**で** を使用する方法の例については、「[バインド](bindable.md)可能」を参照してください。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 | 属性コンテキスト | 値 |
 |-|-|

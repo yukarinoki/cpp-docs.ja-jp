@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: レコードビュー (MFC データアクセス)'
 title: レコード ビュー (MFC データ アクセス)
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,18 +9,18 @@ helpviewer_keywords:
 - record views [C++]
 - forms [C++], data access tasks
 ms.assetid: 562122d9-01d8-4284-acf6-ea109ab0408d
-ms.openlocfilehash: 31dbd92219f263c625050524279b97ef38ba9ba1
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 098a45c0bff0dfaf1aba83f12dddad9a5f943638
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80209132"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97319054"
 ---
 # <a name="record-views--mfc-data-access"></a>レコード ビュー (MFC データ アクセス)
 
-このセクションは、MFC ODBC クラスにのみ適用されます。 OLE DB レコードビューの詳細に[ついては、「](../mfc/reference/coledbrecordview-class.md) [OLE DB レコードビューの使用](../data/oledb/using-ole-db-record-views.md)」および「レコードビューの使用」を参照してください。
+このセクションは、MFC ODBC クラスにのみ適用されます。 OLE DB レコードビューの詳細に [ついては、「](../mfc/reference/coledbrecordview-class.md) [OLE DB レコードビューの使用](../data/oledb/using-ole-db-record-views.md)」および「レコードビューの使用」を参照してください。
 
-フォームベースのデータアクセスアプリケーションをサポートするために、クラスライブラリにはクラス[CRecordView](../mfc/reference/crecordview-class.md)が用意されています。 レコードビューは、コントロールが[レコードセット](../data/odbc/recordset-odbc.md)オブジェクトのフィールドデータメンバーに直接マップされるフォームビューオブジェクトです (また、データソースのクエリ結果またはテーブル内の対応する列に間接的にマップされます)。 基本クラス[CFormView](../mfc/reference/cformview-class.md)と同様に、`CRecordView` はダイアログテンプレートリソースに基づいています。
+フォームベースのデータアクセスアプリケーションをサポートするために、クラスライブラリにはクラス [CRecordView](../mfc/reference/crecordview-class.md)が用意されています。 レコードビューは、コントロールが [レコードセット](../data/odbc/recordset-odbc.md) オブジェクトのフィールドデータメンバーに直接マップされるフォームビューオブジェクトです (また、データソースのクエリ結果またはテーブル内の対応する列に間接的にマップされます)。 基本クラス [CFormView](../mfc/reference/cformview-class.md)と同様に、 `CRecordView` はダイアログテンプレートリソースに基づいています。
 
 ## <a name="form-uses"></a>フォームの利用
 
@@ -37,17 +38,17 @@ ms.locfileid: "80209132"
 
 取り上げるトピックは次のとおりです。
 
-- [レコードビュークラスの機能](../data/features-of-record-view-classes-mfc-data-access.md)
+- [レコード ビュー クラスの機能](../data/features-of-record-view-classes-mfc-data-access.md)
 
-- [レコードビューのデータ交換](../data/data-exchange-for-record-views-mfc-data-access.md)
+- [レコード ビューのデータ交換](../data/data-exchange-for-record-views-mfc-data-access.md)
 
-- [レコードビューを操作するときのロール](../data/your-role-in-working-with-a-record-view-mfc-data-access.md)
+- [レコード ビューを利用するために必要な作業](../data/your-role-in-working-with-a-record-view-mfc-data-access.md)
 
-- [レコードビューのデザインと作成](../data/designing-and-creating-a-record-view-mfc-data-access.md)
+- [レコード ビューのデザインと作成](../data/designing-and-creating-a-record-view-mfc-data-access.md)
 
-- [レコードビューの使用](../data/using-a-record-view-mfc-data-access.md)
+- [レコード ビューの使用法](../data/using-a-record-view-mfc-data-access.md)
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[データ アクセス プログラミング (MFC/ATL)](../data/data-access-programming-mfc-atl.md)<br/>
+[データアクセスプログラミング (MFC/ATL)](../data/data-access-programming-mfc-atl.md)<br/>
 [ODBC ドライバーの一覧](../data/odbc/odbc-driver-list.md)

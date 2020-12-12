@@ -1,17 +1,18 @@
 ---
+description: '詳細情報: クロスプラットフォームモバイル開発の例'
 title: クロス プラットフォーム モバイル開発の例
 ms.date: 10/17/2019
 ms.assetid: bc384c12-fccc-45d7-9fb9-b90d536aa663
-ms.openlocfilehash: 0c2e40be96bd0efdad608daaab973c34e8c90495
-ms.sourcegitcommit: a673f6a54cc97e3d4cd032b10aa8dce7f0539d39
+ms.openlocfilehash: 4577791a21fc7340414df1e03eea320c094661f8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "79470017"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97319262"
 ---
 # <a name="cross-platform-mobile-development-examples"></a>クロス プラットフォーム モバイル開発の例
 
-**C++ によるモバイル開発**ワークロードによってインストールされるテンプレートの一部では、学習に利用できる完全なサンプルが生成されます。 さらに、Windows デベロッパー センターにはダウンロードして Visual Studio で試用できる複数のサンプル アプリケーションがあります。
+**C++ によるモバイル開発** ワークロードによってインストールされるテンプレートの一部では、学習に利用できる完全なサンプルが生成されます。 さらに、Windows デベロッパー センターにはダウンロードして Visual Studio で試用できる複数のサンプル アプリケーションがあります。
 
 - [hello-jni Android アプリケーションのサンプル](https://code.msdn.microsoft.com/hello-jni-Android-790ab73d)
 
@@ -43,4 +44,4 @@ ms.locfileid: "79470017"
 
   いずれかのサンプルを Visual Studio で開くには、zip ファイルをダウンロードし、ダウンロードしたファイルの **[プロパティ]** ページをエクスプローラーで開きます。 **[ブロックの解除]** ボタンを選び、次に **[OK]** を選びます。 zip ファイルの内容を任意の場所に解凍し、解凍したサンプルの C++ フォルダーを開いてからソリューション ファイルを開きます。
 
-  サンプルをビルドするには、**F7** キーを押すか、または、メニュー バーの **[ビルド]** 、 **[ソリューションのビルド]** の順に選びます。
+  サンプルをビルドするには、**F7** キーを押すか、または、メニュー バーの **[ビルド]**、**[ソリューションのビルド]** の順に選びます。
