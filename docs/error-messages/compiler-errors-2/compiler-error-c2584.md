@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「コンパイラエラー C2584」を参照してください。
 title: コンパイラ エラー C2584
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,20 +7,20 @@ f1_keywords:
 helpviewer_keywords:
 - C2584
 ms.assetid: 836e2c0a-86c0-4742-b432-beb0191ad20e
-ms.openlocfilehash: 2c3b10ecd6808ccd864ecf877fe9f1d0e9f30a3a
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 7820019c3ec49928f59980adbd9ec814d67c3499
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74748633"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97177680"
 ---
 # <a name="compiler-error-c2584"></a>コンパイラ エラー C2584
 
 ' Class ': direct base ' Base2 ' にアクセスできません。' Base1 ' のベースが既にあります
 
-`Class` は `Base1`から直接派生しています。 `Base2` も `Base1`から派生します。 `Base1` は既に直接基底クラスであるため、`Class` を `Base2` から派生させることはできません。これは `Base1` から間接的に継承することを意味します。
+`Class` はから直接派生 `Base1` しています。 `Base2` もから派生 `Base1` します。 `Class``Base2` `Base1` は、既に直接の基底クラスであるため、から派生できません。これは、から間接的に (間接的に) 継承されることを意味 `Base1` します。
 
-## <a name="example"></a>使用例
+## <a name="example"></a>例
 
 次の例では、C2584 が生成されます。
 
