@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: mbsinit'
 title: mbsinit
 ms.date: 11/04/2016
 api_name:
@@ -23,12 +24,12 @@ f1_keywords:
 helpviewer_keywords:
 - mbsinit function
 ms.assetid: 4618555b-baaa-4d04-93fa-36abae411034
-ms.openlocfilehash: e3b1eecc252a2bee83997aa6f2f6f47a96d3321a
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 48edb74e47549cb9e1a97757d4922bc0bd8b6c24
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70952371"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97178603"
 ---
 # <a name="mbsinit"></a>mbsinit
 
@@ -49,11 +50,11 @@ int mbsinit(
 
 ## <a name="return-value"></a>戻り値
 
-*Ps*が NULL の場合、または変換の途中でない場合は0以外の**値**です。
+*Ps* が NULL の場合、または変換の途中でない場合は0以外の **値** です。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-**Mbstate_t**ポインターを受け取る ANSI 関数のいずれかを使用する場合、 **mbstate_t**のアドレスを渡すと、バッファーの最後のバイトが変換されたかどうかに関する情報が返されます。
+**Mbstate_t** ポインターを受け取る ANSI 関数のいずれかを使用する場合、 **mbstate_t** のアドレスを渡すと、バッファーの最後のバイトが変換されたかどうかに関する情報が返されます。
 
 マルチバイト文字をサポートするには適切なコード ページをインストールする必要があります。
 

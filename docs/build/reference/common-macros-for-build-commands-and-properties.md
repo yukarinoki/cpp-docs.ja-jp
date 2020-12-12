@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: MSBuild のコマンドとプロパティの一般的なマクロ'
 title: MSBuild のコマンドとプロパティの一般的なマクロ
 ms.date: 08/02/2019
 helpviewer_keywords:
@@ -90,12 +91,12 @@ helpviewer_keywords:
 - $(PlatformShortName) macro
 - SolutionPath macro $(SolutionPath)
 ms.assetid: 239bd708-2ea9-4687-b264-043f1febf98b
-ms.openlocfilehash: 5038416a8df3282b426d3298c73520f78e962766
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 3911e3285ca09fefce51f0522690943b1f8b2c27
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79440167"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97179110"
 ---
 # <a name="common-macros-for-msbuild-commands-and-properties"></a>MSBuild のコマンドとプロパティの一般的なマクロ
 
@@ -103,67 +104,67 @@ ms.locfileid: "79440167"
 
 ## <a name="view-the-current-properties-and-macros"></a>現在のプロパティとマクロを表示する
 
-現在使用可能なすべてのマクロを表示するには、 **[プロパティページ]** ダイアログの **[VC++ ディレクトリ]** で、プロパティ行の末尾にあるドロップダウン矢印をクリックします。 **[編集]** をクリックし、編集 ダイアログボックスで **[マクロ]** ボタンを選択します。 Visual Studio に表示されているプロパティとマクロの現在のセットが、それぞれの現在の値と共に表示されます。 詳細については、「 [ C++プロジェクトプロパティページの参照](property-pages-visual-cpp.md)」の「**ユーザー定義の値の指定**」セクションを参照してください。
+現在使用可能なすべてのマクロを表示するには、[ **プロパティページ** ] ダイアログの [ **VC + + ディレクトリ**] で、プロパティ行の末尾にあるドロップダウン矢印をクリックします。 [ **編集** ] をクリックし、[編集] ダイアログボックスで [ **マクロ** ] ボタンを選択します。 Visual Studio に表示されているプロパティとマクロの現在のセットが、それぞれの現在の値と共に表示されます。 詳細については、「 [C++ プロジェクトプロパティページリファレンス](property-pages-visual-cpp.md)」の「 **User-Defined 値の指定**」セクションを参照してください。
 
 ![VC + + マクロボタン](../media/vcppdir_libdir_macros.png "マクロメニュー")
 
 ## <a name="list-of-common-macros"></a>一般的なマクロの一覧
 
-次の表は、使用可能なマクロのよく使用されるサブセットを示しています。ここには他に多くのものがあります。 **[マクロ]** ダイアログにアクセスして、プロジェクトのすべてのプロパティとその現在の値を確認します。 MSBuild プロパティ定義がどのように作成され、.props、.targets、および .vcxproj ファイル内でマクロとして使用されるかについて詳しくは、「[MSBuild プロパティ](/visualstudio/msbuild/msbuild-properties)」を参照してください。
+次の表は、使用可能なマクロのよく使用されるサブセットを示しています。ここには他に多くのものがあります。 [ **マクロ** ] ダイアログにアクセスして、プロジェクトのすべてのプロパティとその現在の値を確認します。 MSBuild プロパティ定義がどのように作成され、.props、.targets、および .vcxproj ファイル内でマクロとして使用されるかについて詳しくは、「[MSBuild プロパティ](/visualstudio/msbuild/msbuild-properties)」を参照してください。
 
 |マクロ|説明|
 |-----------|-----------------|
-|**$(Configuration)**|現在のプロジェクト構成の名前 ("Debug" など)。|
+|**$ (構成)**|現在のプロジェクト構成の名前 ("Debug" など)。|
 |**$(DevEnvDir)**|Visual Studio のインストール ディレクトリ (ドライブ + パスで定義) です。最後に円記号 (\\) が含まれます。|
 |**$(FrameworkDir)**|.NET Framework をインストールしたディレクトリです。|
 |**$(FrameworkSDKDir)**|.NET Framework をインストールしたディレクトリです。 .NET Framework は、Visual Studio 一部としてインストールされている場合も、個別にインストールされている場合もあります。|
-|**$(FrameworkVersion)**|Visual Studio が使用する .NET Framework のバージョンです。 **$(FrameworkDir)** と組み合わせると、Visual Studio が使用する .NET Framework のバージョンへの完全なパスになります。|
+|**$ (FrameworkVersion)**|Visual Studio が使用する .NET Framework のバージョンです。 **$(FrameworkDir)** と組み合わせると、Visual Studio が使用する .NET Framework のバージョンへの完全なパスになります。|
 |**$(FxCopDir)**|fxcop.cmd ファイルへのパスです。 Fxcop ファイルは、Visual Studio のすべてのエディションと共にインストールされるわけではありません。|
-|**$(IntDir)**|中間ファイルに指定されたディレクトリへのパスです。 相対パスの場合、中間ファイルは、プロジェクトディレクトリに追加されたこのパスに移ります。 このパスの末尾にはスラッシュが必要です。 この値は、**中間ディレクトリ**プロパティの値に解決されます。 **$ (OutDir)** を使用してこのプロパティを定義しないでください。|
-|**$(OutDir)**|出力ファイルのディレクトリへのパスです。 相対パスの場合、出力ファイルはプロジェクトディレクトリに追加されたこのパスに移ります。 このパスの末尾にはスラッシュが必要です。 これは、**出力ディレクトリ**プロパティの値に解決されます。 **$ (Intdir)** を使用してこのプロパティを定義しないでください。|
-|**$(Platform)**|現在のプロジェクト プラットフォームの名前 (例: "Win32") です。|
+|**$(IntDir)**|中間ファイルに指定されたディレクトリへのパスです。 相対パスの場合、中間ファイルは、プロジェクトディレクトリに追加されたこのパスに移ります。 このパスの末尾にはスラッシュが必要です。 この値は、 **中間ディレクトリ** プロパティの値に解決されます。 **$ (OutDir)** を使用してこのプロパティを定義しないでください。|
+|**$ (OutDir)**|出力ファイルのディレクトリへのパスです。 相対パスの場合、出力ファイルはプロジェクトディレクトリに追加されたこのパスに移ります。 このパスの末尾にはスラッシュが必要です。 これは、 **出力ディレクトリ** プロパティの値に解決されます。 **$ (Intdir)** を使用してこのプロパティを定義しないでください。|
+|**$ (プラットフォーム)**|現在のプロジェクト プラットフォームの名前 (例: "Win32") です。|
 |**$ (PlatformShortName)**|現在のアーキテクチャの短い名前 ("x86"、"x64" など)。|
 |**$(ProjectDir)**|プロジェクトのディレクトリ (ドライブ + パスで定義) です。最後に円記号 (\\) が含まれます。|
 |**$(ProjectExt)**|プロジェクトのファイル拡張子。 ファイル拡張子の前にピリオド '.' が付きます。|
 |**$(ProjectFileName)**|プロジェクトのファイル名 (基本名 + ファイル拡張子で定義) です。|
-|**$(ProjectName)**|プロジェクトの基本名です。|
+|**$ (ProjectName)**|プロジェクトの基本名です。|
 |**$(ProjectPath)**|プロジェクトの絶対パス名 (ドライブ + パス + 基本名 + ファイル拡張子で定義) です。|
-|**$ (PublishDir)**|発行先の出力場所。末尾に円記号 '\\' が含まれています。 既定値は **$ (OutDir) app. publish\\** フォルダーです。|
+|**$ (PublishDir)**|発行先の出力場所。末尾の円記号 ' ' が含まれてい \\ ます。 既定値は **$ (OutDir) app. publish \\** フォルダーです。|
 |**$(RemoteMachine)**|[デバッグ] プロパティ ページで **Remote Machine** プロパティの値を設定します。 詳細については、「 [C または C++ デバッグ構成のプロジェクト設定](/visualstudio/debugger/project-settings-for-a-cpp-debug-configuration) 」を参照してください。|
-|**$(RootNameSpace)**|アプリケーションを含む名前空間 (定義されている場合) です。|
+|**$ (RootNameSpace)**|アプリケーションを含む名前空間 (定義されている場合) です。|
 |**$(SolutionDir)**|ソリューションのディレクトリ (ドライブ + パスで定義) です。最後に円記号 (\\) が含まれます。 IDE でソリューションをビルドする場合にのみ定義されます。|
 |**$(SolutionExt)**|ソリューションのファイル拡張子です。 ファイル拡張子の前にピリオド '.' が付きます。 IDE でソリューションをビルドする場合にのみ定義されます。|
 |**$(SolutionFileName)**|ソリューションのファイル名 (基本名 + ファイル拡張子で定義) です。 IDE でソリューションをビルドする場合にのみ定義されます。|
-|**$(SolutionName)**|ソリューションの基本名です。 IDE でソリューションをビルドする場合にのみ定義されます。|
+|**$ (SolutionName)**|ソリューションの基本名です。 IDE でソリューションをビルドする場合にのみ定義されます。|
 |**$(SolutionPath)**|ソリューションの絶対パス名 (ドライブ + パス + 基本名 + ファイル拡張子で定義) です。 IDE でソリューションをビルドする場合にのみ定義されます。|
 |**$(TargetDir)**|ビルドのプライマリ出力ファイルのディレクトリ (ドライブ + パスで定義) です。最後に円記号 (\\) が含まれます。|
 |**$(TargetExt)**|ビルドのプライマリ出力ファイルのファイル拡張子。 ファイル拡張子の前にピリオド '.' が付きます。|
 |**$(TargetFileName)**|ビルドのプライマリ出力ファイルの名前 (基本名 + ファイル拡張子で定義) です。|
 |**$(TargetName)**|ビルドのプライマリ出力ファイルの基本名です。|
 |**$(TargetPath)**|ビルドのプライマリ出力ファイルの絶対パス名 (ドライブ + パス + 基本名 + ファイル拡張子で定義) です。|
-|**$(VCInstallDir)**|Visual Studio インストールの C++ コンテンツを格納するディレクトリ。 このプロパティには、対象となる Microsoft C++ (MSVC) ツールセットのバージョンが含まれていますが、ホストの Visual Studio とは異なる場合があります。 たとえば、`$(PlatformToolset) = v140`でビルドする場合、 **$ (VCInstallDir)** には Visual Studio 2015 インストールのパスが含まれます。|
-|**$(VSInstallDir)**|Visual Studio をインストールしたディレクトリです。 このプロパティにはターゲットの Visual Studio ツールセットのバージョンが含まれますが、ホストの Visual C++ とは異なることがあります。 たとえば、 `$(PlatformToolset) = v110`を設定してビルドした場合、 **$(VSInstallDir)** には Visual Studio 2012 インストールへのパスが含まれます。|
+|**$(VCInstallDir)**|Visual Studio インストールの C++ コンテンツを格納するディレクトリ。 このプロパティには、対象となる Microsoft C++ (MSVC) ツールセットのバージョンが含まれていますが、ホストの Visual Studio とは異なる場合があります。 たとえば、を使用してビルドする場合、 `$(PlatformToolset) = v140` **$ (VCInstallDir)** には Visual Studio 2015 インストールのパスが含まれます。|
+|**$ (VSInstallDir)**|Visual Studio をインストールしたディレクトリです。 このプロパティにはターゲットの Visual Studio ツールセットのバージョンが含まれますが、ホストの Visual C++ とは異なることがあります。 たとえば、 `$(PlatformToolset) = v110`を設定してビルドした場合、 **$(VSInstallDir)** には Visual Studio 2012 インストールへのパスが含まれます。|
 |**$(WebDeployPath)**|Web 配置のルートから、プロジェクト出力が存在するディレクトリへの相対パスです。|
-|**$(WebDeployRoot)**|**\<localhost>** への絶対パスです。 たとえば、c:\inetpub\wwwroot などです。|
+|**$(WebDeployRoot)**|の場所への絶対パス **\<localhost>** 。 たとえば、c:\inetpub\wwwroot などです。|
 
 ## <a name="obsolete-macros"></a>古いマクロ
 
-C++ のビルド システムは、Visual Studio 2008 と Visual Studio 2010 の間で大幅に変更されました。 以前のプロジェクトの種類で使用されていた多くのマクロは、新しいものに変更されています。 これらのマクロは使用されなくなったか、あるいは 1 つまたは複数の同等のプロパティまたは[項目メタデータ マクロ ](/visualstudio/msbuild/itemmetadata-element-msbuild)( **%(** _名前_ **)** ) 値に置き換えられました。 "移行済み" とマークされたマクロは、プロジェクトの移行ツールによって更新できます。 そのマクロを含むプロジェクトが Visual Studio 2008 以前から Visual Studio 2010 に移行された場合、Visual Studio はそのマクロを同等の現在のマクロに変換します。 新しいバージョンの Visual Studio は、プロジェクトを Visual Studio 2008 以前から新しいプロジェクトの種類に変換できません。 2 つの手順でこれらのプロジェクトを変換する必要があります。まず Visual Studio 2010 に変換し、Visual Studio の新しいバージョンにその結果を変換します。 詳細については、「[Overview of potential upgrade issues](../../porting/overview-of-potential-upgrade-issues-visual-cpp.md)」 (アップグレードの潜在的な問題の概要) を参照してください。
+C++ のビルド システムは、Visual Studio 2008 と Visual Studio 2010 の間で大幅に変更されました。 以前のプロジェクトの種類で使用されていた多くのマクロは、新しいものに変更されています。 これらのマクロは使用されなくなったか、あるいは 1 つまたは複数の同等のプロパティまたは [項目メタデータ マクロ](/visualstudio/msbuild/itemmetadata-element-msbuild)(**%(**_名前_**)**) 値に置き換えられました。 "移行済み" とマークされたマクロは、プロジェクトの移行ツールによって更新できます。 そのマクロを含むプロジェクトが Visual Studio 2008 以前から Visual Studio 2010 に移行された場合、Visual Studio はそのマクロを同等の現在のマクロに変換します。 新しいバージョンの Visual Studio は、プロジェクトを Visual Studio 2008 以前から新しいプロジェクトの種類に変換できません。 2 つの手順でこれらのプロジェクトを変換する必要があります。まず Visual Studio 2010 に変換し、Visual Studio の新しいバージョンにその結果を変換します。 詳細については、「[Overview of potential upgrade issues](../../porting/overview-of-potential-upgrade-issues-visual-cpp.md)」 (アップグレードの潜在的な問題の概要) を参照してください。
 
 |マクロ|説明|
 |-----------|-----------------|
-|**$(InputDir)**|(移行済み)入力ファイルのディレクトリ (ドライブ + パスとして定義されています)。末尾に円記号 '\\' が含まれています。 プロジェクトが入力の場合、このマクロは **$(ProjectDir)** と同等です。|
+|**$ (InputDir)**|(移行済み)入力ファイルのディレクトリ (ドライブ + パスとして定義されています)。末尾の円記号 ' ' が含まれてい \\ ます。 プロジェクトが入力の場合、このマクロは **$(ProjectDir)** と同等です。|
 |**$(InputExt)**|(移行済み)入力ファイルのファイル拡張子。 ファイル拡張子の前にピリオド '.' が付きます。 プロジェクトが入力の場合、このマクロは **$(ProjectExt)** と同等です。 ソース ファイルの場合、これは **%(Extension)** です。|
-|**$(InputFileName)**|(移行済み)入力ファイルのファイル名 (基本名 + ファイル拡張子で定義)。 プロジェクトが入力の場合、このマクロは **$(ProjectFileName)** と同等です。 ソース ファイルの場合、これは **%(Identity)** です。|
-|**$(InputName)**|(移行済み)入力ファイルの基本名。 プロジェクトが入力の場合、このマクロは **$(ProjectName)** と同等です。 ソース ファイルの場合、これは **%(Filename)** です。|
+|**$ (InputFileName)**|(移行済み)入力ファイルのファイル名 (基本名 + ファイル拡張子で定義)。 プロジェクトが入力の場合、このマクロは **$(ProjectFileName)** と同等です。 ソース ファイルの場合、これは **%(Identity)** です。|
+|**$ (InputName)**|(移行済み)入力ファイルの基本名。 プロジェクトが入力の場合、このマクロは **$(ProjectName)** と同等です。 ソース ファイルの場合、これは **%(Filename)** です。|
 |**$(InputPath)**|(移行済み)入力ファイルの絶対パス名 (ドライブ + パス + 基本名 + ファイル拡張子で定義)。 プロジェクトが入力の場合、このマクロは **$(ProjectPath)** と同等です。 ソース ファイルの場合、これは **%(FullPath)** です。|
-|**$(ParentName)**|このプロジェクト項目を含む項目の名前です。 これは、親フォルダー名またはプロジェクト名になります。|
+|**$ (ParentName)**|このプロジェクト項目を含む項目の名前です。 これは、親フォルダー名またはプロジェクト名になります。|
 |**$(SafeInputName)**|有効なクラス名としてのファイル名です。ファイル拡張子は除きます。 このプロパティには、正確に等しいものはありません。|
 |**$(SafeParentName)**|有効な名前形式で指定された、直接の親の名前です。 たとえば、フォームは .resx ファイルの親です。 このプロパティには、正確に等しいものはありません。|
 |**$(SafeRootNamespace)**|プロジェクト ウィザードでコードが追加される名前空間の名前です。 この名前空間名には、有効な C++ 識別子で許可される文字列だけが含まれます。 このプロパティには、正確に等しいものはありません。|
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[Visual Studio プロジェクト- C++ ](../creating-and-managing-visual-cpp-projects.md)\
-[ビジュアルC++移植およびアップグレードガイド](../../porting/visual-cpp-porting-and-upgrading-guide.md)\
+[Visual Studio プロジェクト-C++](../creating-and-managing-visual-cpp-projects.md)\
+[Visual C++ 移植およびアップグレードガイド](../../porting/visual-cpp-porting-and-upgrading-guide.md)\
 [アップグレード時の潜在的な問題の概要](../../porting/overview-of-potential-upgrade-issues-visual-cpp.md)

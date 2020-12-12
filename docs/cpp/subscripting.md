@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: 時'
 title: 添字演算子
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - operator overloading [C++], examples
 - subscript operator
 ms.assetid: eb151281-6733-401d-9787-39ab6754c62c
-ms.openlocfilehash: 2573f30b2dfee20d12afea2a1072bbdcef46228b
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 77230045e66336e9989f49dd54557fa92d2ab001
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87231079"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97178200"
 ---
 # <a name="subscripting"></a>添字演算子
 
@@ -93,7 +94,7 @@ Element: [10] = 10
 
 `i`前のプログラムでが10に達すると、 **operator []** は、範囲外の添字が使用されていることを検出し、エラーメッセージを発行します。
 
-関数**演算子 []** は参照型を返すことに注意してください。 これにより、これが左辺値になり、代入演算子の両側で添字式を使用できるようになります。
+関数 **演算子 []** は参照型を返すことに注意してください。 これにより、これが左辺値になり、代入演算子の両側で添字式を使用できるようになります。
 
 ## <a name="see-also"></a>関連項目
 

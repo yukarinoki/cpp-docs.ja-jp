@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: _com_raise_error'
 title: _com_raise_error
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - _com_raise_error function
 ms.assetid: a98226c2-c3fe-44f1-8ff5-85863de11cd6
-ms.openlocfilehash: f5efbe98a489a380c4e9be5a0e40603be2a409c0
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: 81697b565104971d22da04a7b8b0e33a7f9255ac
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81745085"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97178213"
 ---
 # <a name="_com_raise_error"></a>_com_raise_error
 
-**マイクロソフト固有**
+**Microsoft 固有の仕様**
 
-エラーに対して[_com_error](../cpp/com-error-class.md)をスローします。
+エラーへの応答として [_com_error](../cpp/com-error-class.md) をスローします。
 
 ## <a name="syntax"></a>構文
 
@@ -30,19 +31,19 @@ void __stdcall _com_raise_error(
 
 #### <a name="parameters"></a>パラメーター
 
-*人事*<br/>
+*時間*<br/>
 HRESULT 情報。
 
-*ペラーインフォ*<br/>
+*perrinfo*<br/>
 `IErrorInfo` オブジェクト。
 
 ## <a name="remarks"></a>解説
 
-**_com_raise_error**は comdef.h>で\<定義され、同じ名前とプロトタイプのユーザー作成バージョンに置き換えることができます。 `#import` を使用し、C++ 例外処理を使用しない場合は、こうすることができます。 その場合、ユーザー バージョンの **_com_raise_error**が、 を`longjmp`実行するか、またはメッセージ ボックスを表示して停止する場合があります。 ユーザー バージョンで返すことはできません。コンパイラ COM サポート コードがそれを予期していないためです。
+で定義されている **_com_raise_error** は、 \<comdef.h> 同じ名前およびプロトタイプのユーザーが記述したバージョンに置き換えることができます。 `#import` を使用し、C++ 例外処理を使用しない場合は、こうすることができます。 この場合、 **_com_raise_error** のユーザーバージョンでは、を実行する `longjmp` か、メッセージボックスを表示して停止することがあります。 ユーザー バージョンで返すことはできません。コンパイラ COM サポート コードがそれを予期していないためです。
 
-また[、_set_com_error_handler](../cpp/set-com-error-handler.md)を使用して、デフォルトのエラー処理関数を置き換えることもできます。
+[_Set_com_error_handler](../cpp/set-com-error-handler.md)を使用して、既定のエラー処理関数を置き換えることもできます。
 
-デフォルトでは **、_com_raise_error**は次のように定義されます。
+既定では、 **_com_raise_error** は次のように定義されます。
 
 ```cpp
 void __stdcall _com_raise_error(HRESULT hr, IErrorInfo* perrinfo) {
@@ -50,15 +51,15 @@ void __stdcall _com_raise_error(HRESULT hr, IErrorInfo* perrinfo) {
 }
 ```
 
-**エンド マイクロソフト 固有**
+**Microsoft 固有の仕様はここまで**
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-**ヘッダー:** \<comdef.h>
+**ヘッダー:**\<comdef.h>
 
-**リブ:****wchar_tがネイティブ型**コンパイラ オプションをオンにしている場合は、comsuppw.lib または comsuppwd.lib を使用します。 **wchar_tネイティブ型が**オフの場合は、comsupp.lib を使用します。 「[/Zc:wchar_t (wchar_t をネイティブ型として認識)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md)」を参照してください。
+**Lib:****Wchar_t がネイティブ型** のコンパイラオプションである場合は、comsuppw または comsuppw を使用します。 **Wchar_t がネイティブ型** である場合は、comsupp .lib を使用します。 詳細については、「 [/zc: wchar_t (Wchar_t はネイティブ型)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 
-[コンパイラ COM のグローバル関数](../cpp/compiler-com-global-functions.md)<br/>
+[コンパイラ COM グローバル関数](../cpp/compiler-com-global-functions.md)<br/>
 [_set_com_error_handler](../cpp/set-com-error-handler.md)

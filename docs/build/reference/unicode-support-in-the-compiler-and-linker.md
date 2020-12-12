@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「コンパイラとリンカーでの Unicode のサポート」を参照してください。
 title: コンパイラおよびリンカーでの Unicode のサポート
 ms.date: 12/15/2017
 f1_keywords:
@@ -8,20 +9,20 @@ f1_keywords:
 - VC.Project.VCXDCMakeTool.UseUnicodeResponseFiles
 helpviewer_keywords:
 - Unicode, Visual C++
-ms.openlocfilehash: 420b01263320cf86df3f99da4523cc2b8bb4d4b6
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: c853907dd0d70a4ab7311c41f51d8d73bb25cf20
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80168838"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97178954"
 ---
 # <a name="unicode-support-in-the-compiler-and-linker"></a>コンパイラおよびリンカーでの Unicode のサポート
 
-ほとんどのC++ Visual ビルドツールは、Unicode 入力と出力をサポートしています。
+ほとんどの Visual C++ ビルドツールは、Unicode 入力と出力をサポートしています。
 
 ## <a name="filenames"></a>ファイル名
 
-コマンドラインまたはコンパイラディレクティブ (`#include`など) で指定されたファイル名には、Unicode 文字を含めることができます。
+コマンドラインまたはコンパイラディレクティブ (など) で指定されたファイル名には、 `#include` Unicode 文字を含めることができます。
 
 ## <a name="source-code-files"></a>ソース コード ファイル
 
@@ -35,7 +36,7 @@ Unicode は、次のエンコーディングのソース コード ファイル�
 
 - UTF-8 with BOM
 
-## <a name="output"></a>Output
+## <a name="output"></a>出力
 
 コンパイラは、コンパイル時に、UTF-16 で診断をコンソールに出力します。  コンソールに表示できる文字は、コンソール ウィンドウのプロパティによって決まります  ファイルにリダイレクトされるコンパイラ出力は、現在の ANSI コンソール コードページになります。
 
@@ -45,8 +46,8 @@ Unicode は、次のエンコーディングのソース コード ファイル�
 
 ## <a name="asm-and-cod-dumps"></a>.asm ダンプおよび .cod ダンプ
 
-.asm ダンプおよび .cod ダンプは、MASM との互換性のために、既定で ANSI になっています。 [/FAu](fa-fa-listing-file.md)を使用して utf-8 を出力します。 **/Fa**を指定した場合、混在ソースは直接印刷されるだけで、ソースコードが utf-8 で、 **/FAsu**を指定していない場合などには、正しく表示されないことに注意してください。
+.asm ダンプおよび .cod ダンプは、MASM との互換性のために、既定で ANSI になっています。 [/FAu](fa-fa-listing-file.md)を使用して utf-8 を出力します。 **/Fa** を指定した場合、混在ソースは直接印刷されるだけで、ソースコードが utf-8 で、 **/FAsu** を指定していない場合などには、正しく表示されないことに注意してください。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [コマンド ラインから MSVC ツールセットを使用する](../building-on-the-command-line.md)

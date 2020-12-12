@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: `__super`'
 title: __super
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - __super keyword [C++]
 ms.assetid: f0957c31-9256-405b-b402-cad182404b5f
-ms.openlocfilehash: 3afc2e8049cfcca40db389bed84baa6f42dae126
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 30f2733abbd4599deabfa989d72b099c929cb050
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87213152"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97178135"
 ---
 # `__super`
 
@@ -31,9 +32,9 @@ __super::member_function();
 
 **`__super`** は、メンバー関数の本体内でのみ使用できます。
 
-**`__super`** using 宣言と共に使用することはできません。 詳細については、「 [Using 宣言」を](../cpp/using-declaration.md)参照してください。
+**`__super`** using 宣言と共に使用することはできません。 詳細については、「 [Using 宣言」を](../cpp/using-declaration.md) 参照してください。
 
-コードを挿入する[属性](../windows/attributes/attributes-alphabetical-reference.md)の導入により、コードには既知の名前ではないが、呼び出すメソッドを含む1つ以上の基底クラスが含まれている場合があります。
+コードを挿入する [属性](../windows/attributes/attributes-alphabetical-reference.md) の導入により、コードには既知の名前ではないが、呼び出すメソッドを含む1つ以上の基底クラスが含まれている場合があります。
 
 ## <a name="example"></a>例
 

@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: fprintf、_fprintf_l、fwprintf、_fwprintf_l'
 title: fprintf、_fprintf_l、fwprintf、_fwprintf_l
 ms.date: 11/04/2016
 api_name:
@@ -38,12 +39,12 @@ helpviewer_keywords:
 - print formatted data to streams
 - fwprintf_l function
 ms.assetid: 34a87e1c-6e4d-4d48-a611-58314dd4dc4b
-ms.openlocfilehash: 1a296b8ac97a7f20a3834814c1ca3b7319720148
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 05896f56ac7058be1618833d6f50a8935a61a14f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70956988"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97178681"
 ---
 # <a name="fprintf-_fprintf_l-fwprintf-_fwprintf_l"></a>fprintf、_fprintf_l、fwprintf、_fwprintf_l
 
@@ -92,17 +93,17 @@ int _fwprintf_l(
 
 ## <a name="return-value"></a>戻り値
 
-**fprintf**は、書き込まれたバイト数を返します。 **fwprintf**は、書き込まれたワイド文字の数を返します。 これらの関数は、出力エラーが発生した場合、負の値を返します。 *Stream*または*format*が**NULL**の場合、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、これらの関数は無効なパラメーターハンドラーを呼び出します。 実行の継続が許可された場合、これらの関数は-1 を返し、 **errno**を**EINVAL**に設定します。 書式指定文字列は、 **fprintf_s**または**fwprintf_s**を使用する場合と同じように、有効な書式指定文字に対してチェックされません。
+**fprintf** は、書き込まれたバイト数を返します。 **fwprintf** は、書き込まれたワイド文字の数を返します。 これらの関数は、出力エラーが発生した場合、負の値を返します。 *Stream* または *format* が **NULL** の場合、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、これらの関数は無効なパラメーターハンドラーを呼び出します。 実行の継続が許可された場合、これらの関数は-1 を返し、 **errno** を **EINVAL** に設定します。 書式指定文字列は、 **fprintf_s** または **fwprintf_s** を使用する場合と同じように、有効な書式指定文字に対してチェックされません。
 
-エラー コードの詳細については、「[_doserrno、errno、_sys_errlist、_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」をご覧ください。
+エラー コードの詳細については、「[_doserrno、errno、_sys_errlist、および _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」を参照してください。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-**fprintf**は、一連の文字と値を書式設定し、出力*ストリーム*に出力します。 各関数の*引数*(存在する場合) は、対応する書式指定に従って変換および出力さ*れます。* **Fprintf**の場合、 *format*引数の構文と、 **printf**で使用される構文は同じです。
+**fprintf** は、一連の文字と値を書式設定し、出力 *ストリーム* に出力します。 各関数の *引数*(存在する場合) は、対応する書式指定に従って変換および出力さ *れます。* **Fprintf** の場合、 *format* 引数の構文と、 **printf** で使用される構文は同じです。
 
-**fwprintf**は、 **fprintf**のワイド文字バージョンです。**fwprintf**では、 *format*はワイド文字列です。 ストリームが ANSI モードで開かれている場合、これらの関数の動作は同じになります。 **fprintf**は、現在 UNICODE ストリームへの出力をサポートしていません。
+**fwprintf** は、 **fprintf** のワイド文字バージョンです。 **fwprintf** では、 *format* はワイド文字列です。 ストリームが ANSI モードで開かれている場合、これらの関数の動作は同じになります。 **fprintf** は、現在 UNICODE ストリームへの出力をサポートしていません。
 
-**_L**サフィックスを持つこれらの関数のバージョンは、現在のスレッドロケールの代わりに渡されたロケールパラメーターを使用する点を除いて同じです。
+**_L** サフィックスを持つこれらの関数のバージョンは、現在のスレッドロケールの代わりに渡されたロケールパラメーターを使用する点を除いて同じです。
 
 > [!IMPORTANT]
 > *format* にユーザー定義の文字列を指定しないでください。
@@ -111,19 +112,19 @@ int _fwprintf_l(
 
 |TCHAR.H のルーチン|_UNICODE および _MBCS が未定義の場合|_MBCS が定義されている場合|_UNICODE が定義されている場合|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**ftprintf (_d)**|**fprintf**|**fprintf**|**fwprintf**|
-|**ftprintf_l (_d)**|**_fprintf_l**|**_fprintf_l**|**_fwprintf_l**|
+|**_ftprintf**|**fprintf**|**fprintf**|**fwprintf**|
+|**_ftprintf_l**|**_fprintf_l**|**_fprintf_l**|**_fwprintf_l**|
 
-詳細については、「 [printf 関数と wprintf 関数の書式指定フィールド](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)」を参照してください。
+詳細については、[書式の指定](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)に関する記事をご覧ください。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-|関数|必須ヘッダー|
+|機能|必須ヘッダー|
 |--------------|---------------------|
 |**fprintf**、 **_fprintf_l**|\<stdio.h>|
 |**fwprintf**、 **_fwprintf_l**|\<stdio.h> または \<wchar.h>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
 ## <a name="example"></a>例
 
@@ -167,5 +168,5 @@ this is a string
 [ストリーム入出力](../../c-runtime-library/stream-i-o.md)<br/>
 [_cprintf、_cprintf_l、_cwprintf、_cwprintf_l](cprintf-cprintf-l-cwprintf-cwprintf-l.md)<br/>
 [fscanf、_fscanf_l、fwscanf、_fwscanf_l](fscanf-fscanf-l-fwscanf-fwscanf-l.md)<br/>
-[sprintf、_sprintf_l、swprintf、_swprintf_l、\__swprintf_l](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)<br/>
+[sprintf、_sprintf_l、swprintf、_swprintf_l、 \_ _swprintf_l](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)<br/>
 [書式指定構文: printf 関数と wprintf 関数](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)<br/>

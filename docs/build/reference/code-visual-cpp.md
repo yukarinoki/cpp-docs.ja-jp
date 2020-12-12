@@ -1,5 +1,6 @@
 ---
-title: '&lt;コード > (C++ドキュメントコメント)'
+description: '詳細情報: &lt; コード&gt;'
+title: '&lt;コード> (C++ ドキュメントコメント)'
 ms.date: 11/04/2016
 f1_keywords:
 - <code>
@@ -7,16 +8,16 @@ helpviewer_keywords:
 - <code> C++ XML tag
 - code C++ XML tag
 ms.assetid: 687db3f8-d435-4a90-b781-8da503fa39bc
-ms.openlocfilehash: f4bc28c4615a4aab3076940806f54c699ec1ee0e
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: ae40becf272e6be00cd23d157953bd54da21b2b3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80169931"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97179097"
 ---
 # <a name="ltcodegt"></a>&lt;code&gt;
 
-\<code> タグを使用すると、1 行または複数行をコードとして指定できます。
+\<code>タグを使用すると、コードとして1つ以上の行を示すことができます。
 
 ## <a name="syntax"></a>構文
 
@@ -29,16 +30,16 @@ ms.locfileid: "80169931"
 *content*<br/>
 コードとしてマークするテキストです。
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>Remarks
 
-テキストの一部をコードとしてマークすることを示すには、[\<c>](c-visual-cpp.md) を使用します。
+[\<c>](c-visual-cpp.md)テキストの一部をコードとしてマークする必要があることを示すために使用します。
 
-コンパイル時に [/doc](doc-process-documentation-comments-c-cpp.md) を指定して、ドキュメント コメントをファイルに出力します。
+ドキュメントコメントをファイルに処理するために、 [/doc](doc-process-documentation-comments-c-cpp.md) を使用してコンパイルします。
 
 ## <a name="example"></a>例
 
-[code> タグの使用例については、「\<](example-visual-cpp.md)example\<」を参照してください。
+タグの [\<example>](example-visual-cpp.md) 使用方法の例については、「」を参照してください \<code> 。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [XML に関するドキュメント](xml-documentation-visual-cpp.md)
