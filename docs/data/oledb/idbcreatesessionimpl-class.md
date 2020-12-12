@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: IDBCreateSessionImpl クラス'
 title: IDBCreateSessionImpl クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - IDBCreateSessionImpl class
 - CreateSession method
 ms.assetid: 48c02c5c-8362-45ac-af8e-bb119cf8c5c7
-ms.openlocfilehash: aeeca008499ca43cdcebd008390e5cb6c5a9e63c
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 8456ce4ec7bde5721ac6753ed9ec64d69c63e41f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88845524"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97317481"
 ---
 # <a name="idbcreatesessionimpl-class"></a>IDBCreateSessionImpl クラス
 
@@ -39,7 +40,7 @@ class ATL_NO_VTABLE IDBCreateSessionImpl
 *SessionClass*<br/>
 セッションオブジェクト。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** atldb.h
 
@@ -69,7 +70,7 @@ STDMETHOD(CreateSession)(IUnknown * pUnkOuter,
 
 #### <a name="parameters"></a>パラメーター
 
-*OLE DB プログラマーリファレンス*の「 [IDBCreateSession:: CreateSession](/previous-versions/windows/desktop/ms714942(v=vs.85)) 」を参照してください。
+*OLE DB プログラマーリファレンス* の「 [IDBCreateSession:: CreateSession](/previous-versions/windows/desktop/ms714942(v=vs.85)) 」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

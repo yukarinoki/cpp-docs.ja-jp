@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「complex double」を参照してください。 &lt;&gt;
 title: complex&lt;double&gt;
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - complex<double> function
 ms.assetid: 0d0b9d2a-9b9b-410b-82a0-86b6df127e47
-ms.openlocfilehash: b9bf4780dd78800653804762301b36ff6bb30a92
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 9238e71fcdd70576276eb1ba429a48eeec954601
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87230079"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97325037"
 ---
 # <a name="complexltdoublegt"></a>complex&lt;double&gt;
 
@@ -53,7 +54,7 @@ constexpr explicit complex(const complex<long double>& complexNum);
 
 クラステンプレート complex を型の複合クラスに明示的に特殊化する **`double`** ことは、それが定義するコンストラクター内でのみクラステンプレートとは異なります。 からへの **`float`** 変換 **`double`** は暗黙的に行うことができますが、からへの変換は **`long double`** **`double`** である必要があり **`explicit`** ます。 を使用すると、 **`explicit`** 割り当て構文を使用した型変換での開始がルールによって除外されます。
 
-クラステンプレートの詳細につい `complex` ては、「[複合クラス](../standard-library/complex-class.md)」を参照してください。 クラステンプレートのメンバーの一覧につい `complex` ては、「」を参照してください。
+クラステンプレートの詳細につい `complex` ては、「 [複合クラス](../standard-library/complex-class.md)」を参照してください。 クラステンプレートのメンバーの一覧につい `complex` ては、「」を参照してください。
 
 ## <a name="example"></a>例
 
@@ -110,9 +111,9 @@ arg ( c3 ) = 0.896055 radians, which is 51.3402 degrees.
 */
 ```
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-**ヘッダー**:\<complex>
+**ヘッダー**: \<complex>
 
 **名前空間:** std
 

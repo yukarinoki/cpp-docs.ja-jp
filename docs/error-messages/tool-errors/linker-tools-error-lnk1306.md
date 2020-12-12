@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「リンカツール Error LNK1306」を参照してください。
 title: リンカ ツール エラー LNK1306
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,32 +7,32 @@ f1_keywords:
 helpviewer_keywords:
 - LNK1306
 ms.assetid: fad1df6a-0bd9-412f-b0d1-7c9bc749c584
-ms.openlocfilehash: ddaa8797e0cf8ff617408aedc770b21cc656cec4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: aa6386da7c836eea8365d8a4ffde0bbd80d0fa81
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62160459"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97193657"
 ---
 # <a name="linker-tools-error-lnk1306"></a>リンカ ツール エラー LNK1306
 
-> DLL エントリ ポイント関数を管理することはできません。ネイティブにコンパイルされます。
+> DLL エントリポイント関数を管理できません。ネイティブにコンパイル
 
-`DllMain` MSIL にコンパイルすることはできませんこれは、ネイティブにコンパイルする必要があります。
+`DllMain` を MSIL にコンパイルできません。ネイティブにコンパイルする必要があります。
 
-この問題を解決するには
+この問題を解決するには、
 
-- エントリ ポイントなしを含むファイルをコンパイル **/clr**します。
+- **/Clr** を指定せずにエントリポイントを含むファイルをコンパイルします。
 
-- エントリ ポイントを`#pragma unmanaged`セクション。
+- セクションにエントリポイントを配置し `#pragma unmanaged` ます。
 
-詳細については次を参照してください:
+詳細については、次を参照してください。
 
 - [/clr (共通言語ランタイムのコンパイル)](../../build/reference/clr-common-language-runtime-compilation.md)
 
-- [managed、unmanaged](../../preprocessor/managed-unmanaged.md)
+- [マネージド、アンマネージド](../../preprocessor/managed-unmanaged.md)
 
-- [混在アセンブリの初期化](../../dotnet/initialization-of-mixed-assemblies.md)
+- [混合アセンブリの初期化](../../dotnet/initialization-of-mixed-assemblies.md)
 
 - [DLL と Visual C++ ランタイム ライブラリの動作](../../build/run-time-library-behavior.md)
 
@@ -49,7 +50,7 @@ int __stdcall NewDllMain( HINSTANCE h, ULONG ulReason, PVOID pvReserved ) {
 }
 ```
 
-この問題を解決するオプションを使用しない、/clr をこのファイルをコンパイルまたはを使用して、`#pragma`この例で示すように、非管理対象のセクションでは、エントリ ポイントの定義を配置するディレクティブ。
+この問題を解決するには、/clr オプションを使用してこのファイルをコンパイルしないようにするか、 `#pragma` 次の例に示すように、ディレクティブを使用してアンマネージセクションにエントリポイント定義を配置します。
 
 ```cpp
 // LNK1306fix.cpp

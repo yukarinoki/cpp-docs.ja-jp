@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: 印刷と印刷プレビュー'
 title: 印刷および印刷プレビュー
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,16 +9,16 @@ helpviewer_keywords:
 - print preview
 - printing [MFC], print preview
 ms.assetid: d15059cd-32de-4450-95f7-e73aece238f6
-ms.openlocfilehash: 26ced8172a36d34883d6b65997bb3a81fdc3c319
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 57dfd8eed1719b17f776a62273c9afa9ff5e80f1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84625271"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97205838"
 ---
 # <a name="printing-and-print-preview"></a>印刷および印刷プレビュー
 
-MFC では、 [CView](reference/cview-class.md)クラスを使用して、プログラムのドキュメントの印刷と印刷プレビューをサポートしています。 基本的な印刷と印刷プレビューの場合は、ビュークラスの[OnDraw](reference/cview-class.md#ondraw)メンバー関数をオーバーライドするだけです。この操作を行う必要があります。 この関数は、画面上のビュー、実際のプリンターのプリンターデバイスコンテキスト、または画面上でプリンターをシミュレートするデバイスコンテキストに描画できます。
+MFC では、 [CView](reference/cview-class.md)クラスを使用して、プログラムのドキュメントの印刷と印刷プレビューをサポートしています。 基本的な印刷と印刷プレビューの場合は、ビュークラスの [OnDraw](reference/cview-class.md#ondraw) メンバー関数をオーバーライドするだけです。この操作を行う必要があります。 この関数は、画面上のビュー、実際のプリンターのプリンターデバイスコンテキスト、または画面上でプリンターをシミュレートするデバイスコンテキストに描画できます。
 
 また、複数ページにわたるドキュメントの印刷とプレビューを管理したり、印刷したドキュメントの改ページを調整したり、ヘッダーとフッターを追加したりするコードを追加することもできます。
 

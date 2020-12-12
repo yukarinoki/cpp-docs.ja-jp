@@ -1,15 +1,16 @@
 ---
+description: '詳細情報: &lt; mutex&gt;'
 title: '&lt;mutex&gt;'
 ms.date: 11/04/2016
 f1_keywords:
 - <mutex>
 ms.assetid: efb60c89-687a-4e38-8fe4-694e11c4e8a3
-ms.openlocfilehash: d5ff6f2a81a5caa564792e2c0cb43b7722c3e1dd
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: b04b62629253e725e650009f373702f907b9116a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88838553"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97338259"
 ---
 # <a name="ltmutexgt"></a>&lt;mutex&gt;
 
@@ -18,7 +19,7 @@ ms.locfileid: "88838553"
 > [!WARNING]
 > Visual Studio 2015 以降では、C++ 標準ライブラリの同期の種類は Windows 同期プリミティブに基づいており、ConcRT を使用しなくなりました (ターゲットプラットフォームが Windows XP の場合を除く)。 で定義されている型は、 \<mutex> ConcRT 型または関数では使用できません。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:**\<mutex>
 
@@ -27,9 +28,9 @@ ms.locfileid: "88838553"
 ## <a name="remarks"></a>解説
 
 > [!NOTE]
-> **/Clr**を使用してコンパイルされたコードでは、このヘッダーはブロックされます。
+> **/Clr** を使用してコンパイルされたコードでは、このヘッダーはブロックされます。
 
-クラス `mutex` と`recursive_mutex` は *mutex 型*です。 mutex 型には、既定のコンストラクターとデストラクターがあり、例外をスローしません。 これらのオブジェクトには、同じオブジェクトをロックしようとしている複数のスレッドがある場合に相互排他するためのメソッドがあります。 具体的には、mutex 型にはメソッド `lock`、`try_lock`、および`unlock` が含まれます。
+クラス `mutex` と`recursive_mutex` は *mutex 型* です。 mutex 型には、既定のコンストラクターとデストラクターがあり、例外をスローしません。 これらのオブジェクトには、同じオブジェクトをロックしようとしている複数のスレッドがある場合に相互排他するためのメソッドがあります。 具体的には、mutex 型にはメソッド `lock`、`try_lock`、および`unlock` が含まれます。
 
 - `lock` メソッドは、スレッドがミューテックスの所有権を得るまでそのスレッドの呼び出しをブロックします。 その戻り値は無視されます。
 
@@ -45,7 +46,7 @@ ms.locfileid: "88838553"
 
 - `try_lock_until` メソッドは、型が [chrono::time_point](../standard-library/time-point-class.md) でインスタンス化されている引数 `Abs_time` を使用して呼び出し可能である必要があります。 メソッドはミューテックスの所有権を取得しようとしますが、取得できたかどうかに関係なく、`Abs_time` で指定された時間内に値が返されます。 メソッドが所有権を取得した場合、戻り値はに変換されます。 **`true`** それ以外の場合、戻り値はに変換され **`false`** ます。
 
-mutex 型は *lockable 型*とも呼ばれます。 メンバー関数 `try_lock` が提供されない場合は、*basic lockable 型*になります。 timed mutex 型は *timed lockable 型*とも呼ばれます。
+mutex 型は *lockable 型* とも呼ばれます。 メンバー関数 `try_lock` が提供されない場合は、*basic lockable 型* になります。 timed mutex 型は *timed lockable 型* とも呼ばれます。
 
 ## <a name="members"></a>メンバー
 
@@ -61,7 +62,7 @@ mutex 型は *lockable 型*とも呼ばれます。 メンバー関数 `try_lock
 |[timed_mutex クラス](../standard-library/timed-mutex-class.md)|timed mutex 型を表します。 この型のオブジェクトを使用して、プログラム内で時間制限ブロックのある相互排他を適用します。|
 |[unique_lock クラス](../standard-library/unique-lock-class.md)|`mutex` のロックとロック解除を管理するオブジェクトを作成するためにインスタンス化できるテンプレートを表します。|
 
-### <a name="functions"></a>Functions
+### <a name="functions"></a>関数
 
 |名前|説明|
 |-|-|

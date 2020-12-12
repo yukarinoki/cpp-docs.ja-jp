@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: Ierrorrecordシム Pl クラス'
 title: IErrorRecordsImpl クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -63,12 +64,12 @@ helpviewer_keywords:
 - GetRecordCount method
 - m_rgErrors
 ms.assetid: dea8e938-c5d8-45ab-86de-eb8fbf534ffb
-ms.openlocfilehash: cb0e236a31846e3465d76b6904a7b4c57a2b8cf4
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 2c4a674a6197178e3418afc6e62cda1894497599
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91508994"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97317455"
 ---
 # <a name="ierrorrecordsimpl-class"></a>IErrorRecordsImpl クラス
 
@@ -89,7 +90,7 @@ class IErrorRecordsImpl : public IErrorRecords
 *RecordClass*<br/>
 OLE DB エラーオブジェクトを表すクラス。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** atldb.h
 
@@ -233,7 +234,7 @@ STDMETHOD(AddErrorRecord )(ERRORINFO *pErrorInfo,
 
 #### <a name="parameters"></a>パラメーター
 
-*OLE DB プログラマーリファレンス*の「 [Ierrorrecords:: adderrorrecord](/previous-versions/windows/desktop/ms725362(v=vs.85)) 」を参照してください。
+*OLE DB プログラマーリファレンス* の「 [Ierrorrecords:: adderrorrecord](/previous-versions/windows/desktop/ms725362(v=vs.85)) 」を参照してください。
 
 ## <a name="ierrorrecordsimplgetbasicerrorinfo"></a><a name="getbasicerrorinfo"></a> Ierrorrecordシム Pl:: GetBasicErrorInfo
 
@@ -248,7 +249,7 @@ STDMETHOD(GetBasicErrorInfo )(ULONG ulRecordNum,
 
 #### <a name="parameters"></a>パラメーター
 
-*OLE DB プログラマーリファレンス*の「 [Ierrorrecords:: getbasicerrorinfo](/previous-versions/windows/desktop/ms723907(v=vs.85)) 」を参照してください。
+*OLE DB プログラマーリファレンス* の「 [Ierrorrecords:: getbasicerrorinfo](/previous-versions/windows/desktop/ms723907(v=vs.85)) 」を参照してください。
 
 ## <a name="ierrorrecordsimplgetcustomerrorobject"></a><a name="getcustomerrorobject"></a> Ierrorrecordシム Pl:: GetCustomErrorObject
 
@@ -264,7 +265,7 @@ STDMETHOD(GetCustomErrorObject )(ULONG ulRecordNum,
 
 #### <a name="parameters"></a>パラメーター
 
-*OLE DB プログラマーリファレンス*の「 [Ierrorrecords:: GetCustomErrorObject](/previous-versions/windows/desktop/ms725417(v=vs.85)) 」を参照してください。
+*OLE DB プログラマーリファレンス* の「 [Ierrorrecords:: GetCustomErrorObject](/previous-versions/windows/desktop/ms725417(v=vs.85)) 」を参照してください。
 
 ## <a name="ierrorrecordsimplgeterrorinfo"></a><a name="geterrorinfo"></a> Ierrorrecordシム Pl:: GetErrorInfo
 
@@ -280,7 +281,7 @@ STDMETHOD(GetErrorInfo )(ULONG ulRecordNum,
 
 #### <a name="parameters"></a>パラメーター
 
-*OLE DB プログラマーリファレンス*の「 [Ierrorrecords:: GetErrorInfo](/previous-versions/windows/desktop/ms711230(v=vs.85)) 」を参照してください。
+*OLE DB プログラマーリファレンス* の「 [Ierrorrecords:: GetErrorInfo](/previous-versions/windows/desktop/ms711230(v=vs.85)) 」を参照してください。
 
 ## <a name="ierrorrecordsimplgeterrorparameters"></a><a name="geterrorparameters"></a> Ierrorrecordシム Pl:: GetErrorParameters
 
@@ -295,7 +296,7 @@ STDMETHOD(GetErrorParameters )(ULONG ulRecordNum,
 
 #### <a name="parameters"></a>パラメーター
 
-*OLE DB プログラマーリファレンス*の「 [Ierrorrecords:: GetErrorParameters](/previous-versions/windows/desktop/ms715793(v=vs.85)) 」を参照してください。
+*OLE DB プログラマーリファレンス* の「 [Ierrorrecords:: GetErrorParameters](/previous-versions/windows/desktop/ms715793(v=vs.85)) 」を参照してください。
 
 ## <a name="ierrorrecordsimplgetrecordcount"></a><a name="getrecordcount"></a> Ierrorrecordシム Pl:: GetRecordCount
 
@@ -309,7 +310,7 @@ STDMETHOD(GetRecordCount )(ULONG *pcRecords);
 
 #### <a name="parameters"></a>パラメーター
 
-*OLE DB プログラマーリファレンス*の「 [Ierrorrecords:: GetRecordCount](/previous-versions/windows/desktop/ms722724(v=vs.85)) 」を参照してください。
+*OLE DB プログラマーリファレンス* の「 [Ierrorrecords:: GetRecordCount](/previous-versions/windows/desktop/ms722724(v=vs.85)) 」を参照してください。
 
 ## <a name="ierrorrecordsimplm_rgerrors"></a><a name="rgerrors"></a> Ierrorrecordシム Pl:: m_rgErrors
 

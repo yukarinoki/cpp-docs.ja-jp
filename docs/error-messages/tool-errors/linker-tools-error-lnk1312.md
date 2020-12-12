@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「リンカツール Error LNK1312」を参照してください。
 title: リンカ ツール エラー LNK1312
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - LNK1312
 ms.assetid: 48284abb-d849-43fc-ab53-45aded14fd8a
-ms.openlocfilehash: 69af2bd2c22fdb1188cf0b7119791e451e80f966
-ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
+ms.openlocfilehash: d861b6976f9b065e3a693e916164879a3311d3db
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90686497"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97193631"
 ---
 # <a name="linker-tools-error-lnk1312"></a>リンカ ツール エラー LNK1312
 
 ファイルが無効であるか壊れています: アセンブリをインポートできません
 
-アセンブリをビルドするときに、 **/clr** でコンパイルされたモジュールまたはアセンブリ以外のファイルが、 **/assemblymodule** リンカーオプションに渡されました。  オブジェクトファイルを **/Dns モジュール**に渡した場合は、 **/assemblymodule**ではなく、直接リンカーにオブジェクトを渡します。
+アセンブリをビルドするときに、 **/clr** でコンパイルされたモジュールまたはアセンブリ以外のファイルが、 **/assemblymodule** リンカーオプションに渡されました。  オブジェクトファイルを **/Dns モジュール** に渡した場合は、 **/assemblymodule** ではなく、直接リンカーにオブジェクトを渡します。
 
 ## <a name="examples"></a>例
 

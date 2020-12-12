@@ -1,4 +1,5 @@
 ---
+description: '詳細については、「MFC ActiveX コントロール: フォントの使用」を参照してください。'
 title: 'MFC ActiveX コントロール: フォントの使用'
 ms.date: 11/19/2018
 f1_keywords:
@@ -19,12 +20,12 @@ helpviewer_keywords:
 - SelectStockFont method [MFC]
 - fonts [MFC], ActiveX controls
 ms.assetid: 7c51d602-3f5a-481d-84d1-a5d8a3a71761
-ms.openlocfilehash: 02c52d2544afdc9d13fc3ec67ad9eed757a3f277
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 5f0c495ee92dbcfcb27627628f3bcf92982f719f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91499696"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97206007"
 ---
 # <a name="mfc-activex-controls-using-fonts"></a>MFC ActiveX コントロール: フォントの使用
 
@@ -124,7 +125,7 @@ Stock Caption プロパティは、ストックフォントプロパティ情報
 
    これにより、プロパティの追加ウィザードが開きます。
 
-1. [ **プロパティ名** ] ボックスに、プロパティの名前を入力します。 この例では、 **HeadingFont**を使用します。
+1. [ **プロパティ名** ] ボックスに、プロパティの名前を入力します。 この例では、 **HeadingFont** を使用します。
 
 1. **[実装型]** として、 **[Get/Set メソッド]** をクリックします。
 
@@ -202,7 +203,7 @@ DISP_PROPERTY_EX マクロは、 `HeadingFont` プロパティ名を対応する
 
 ほとんどの場合、コントロールは、フォントオブジェクトの特性が変更されたことを認識している必要があります。 各フォントオブジェクトは、によって実装されたインターフェイスのメンバー関数を呼び出すことによって変更されるときに、通知を提供 `IFontNotification` `COleControl` できます。
 
-コントロールがストックフォントプロパティを使用している場合、その通知はのメンバー関数によって処理され `OnFontChanged` `COleControl` ます。 カスタムフォントプロパティを追加すると、同じ実装を使用できます。 前のセクションの例では、 *m_fontHeading*メンバー変数を初期化するときに &*m_xFontNotification*を渡すことによってこれを実現しました。
+コントロールがストックフォントプロパティを使用している場合、その通知はのメンバー関数によって処理され `OnFontChanged` `COleControl` ます。 カスタムフォントプロパティを追加すると、同じ実装を使用できます。 前のセクションの例では、 *m_fontHeading* メンバー変数を初期化するときに &*m_xFontNotification* を渡すことによってこれを実現しました。
 
 ![複数のフォントオブジェクトインターフェイスの実装](../mfc/media/vc373q1.gif "複数のフォント オブジェクト インターフェイスの実装") <br/>
 複数のフォント オブジェクト インターフェイスの実装
@@ -225,7 +226,7 @@ DISP_PROPERTY_EX マクロは、 `HeadingFont` プロパティ名を対応する
 
 ### <a name="additions-to-the-implementation-file"></a>実装ファイルへの追加
 
-(コントロールコンストラクター内の) 見出しのフォントを初期化するコードで、&*m_xFontNotification* を &*m_xHeadingFontNotify*に変更します。 次のコードを追加します。
+(コントロールコンストラクター内の) 見出しのフォントを初期化するコードで、&*m_xFontNotification* を &*m_xHeadingFontNotify* に変更します。 次のコードを追加します。
 
 [!code-cpp[NVC_MFC_AxFont#20](codesnippet/cpp/mfc-activex-controls-using-fonts_20.cpp)]
 

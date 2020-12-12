@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「非同期エージェントライブラリのベストプラクティス」を参照してください。
 title: 非同期エージェント ライブラリに関するベスト プラクティス
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,20 +8,20 @@ helpviewer_keywords:
 - Asynchronous Agents Library, practices to avoid
 - practices to avoid, Asynchronous Agents Library
 ms.assetid: 85f52354-41eb-4b0d-98c5-f7344ee8a8cf
-ms.openlocfilehash: 99780de11d85831a6901f370d2491f15ef88c0b1
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 5468d5c7a0ddb3a0a87d0675dfb3f19385ccc8b4
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87231742"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97205721"
 ---
 # <a name="best-practices-in-the-asynchronous-agents-library"></a>非同期エージェント ライブラリに関するベスト プラクティス
 
 ここでは、非同期エージェント ライブラリを効果的に使用する方法について説明します。 エージェント ライブラリは、アクター ベースのプログラミング モデルと、粒度の粗いデータ フローおよびパイプライン処理タスクのためのインプロセス メッセージ パッシングを推進します。
 
-エージェントライブラリの詳細については、「[非同期エージェントライブラリ](../../parallel/concrt/asynchronous-agents-library.md)」を参照してください。
+エージェントライブラリの詳細については、「 [非同期エージェントライブラリ](../../parallel/concrt/asynchronous-agents-library.md)」を参照してください。
 
-## <a name="sections"></a><a name="top"></a>各項
+## <a name="sections"></a><a name="top"></a> 各項
 
 このドキュメントは、次のトピックに分かれています。
 
@@ -34,7 +35,7 @@ ms.locfileid: "87231742"
 
 - [所有権が未定義の場合にデータ ネットワークで shared_ptr を使用する](#ownership)
 
-## <a name="use-agents-to-isolate-state"></a><a name="isolation"></a>エージェントを使用して状態を分離する
+## <a name="use-agents-to-isolate-state"></a><a name="isolation"></a> エージェントを使用して状態を分離する
 
 エージェント ライブラリは、非同期メッセージ引き渡し方法を使用して分離コンポーネントを接続できるようにすることで、共有状態に代わる手段を提供します。 非同期エージェントは、他のコンポーネントから内部状態を分離する場合に最も効果的です。 状態を分離することによって、通常、複数のコンポーネントが共有データに作用することがなくなります。 状態分離により共有メモリの競合が軽減されるため、アプリケーションのスケーラビリティが高まります。 また、コンポーネントが共有データへのアクセスを同期する必要がなくなるため、デッドロックや競合状態が発生しにくくなります。
 
@@ -42,15 +43,15 @@ ms.locfileid: "87231742"
 
 [!code-cpp[concrt-simple-agent#1](../../parallel/concrt/codesnippet/cpp/best-practices-in-the-asynchronous-agents-library_1.cpp)]
 
-エージェントを定義して使用する方法の完全な例については、「[チュートリアル: エージェントベースのアプリケーションの作成](../../parallel/concrt/walkthrough-creating-an-agent-based-application.md)」および「[チュートリアル: データフローエージェントの作成](../../parallel/concrt/walkthrough-creating-a-dataflow-agent.md)」を参照してください。
+エージェントを定義して使用する方法の完全な例については、「 [チュートリアル: Agent-Based アプリケーションの作成](../../parallel/concrt/walkthrough-creating-an-agent-based-application.md) 」および「 [チュートリアル: データフローエージェントの作成](../../parallel/concrt/walkthrough-creating-a-dataflow-agent.md)」を参照してください。
 
 [[上](#top)]
 
-## <a name="use-a-throttling-mechanism-to-limit-the-number-of-messages-in-a-data-pipeline"></a><a name="throttling"></a>スロットルメカニズムを使用して、データパイプライン内のメッセージの数を制限する
+## <a name="use-a-throttling-mechanism-to-limit-the-number-of-messages-in-a-data-pipeline"></a><a name="throttling"></a> スロットルメカニズムを使用して、データパイプライン内のメッセージの数を制限する
 
 [Concurrency:: unbounded_buffer](reference/unbounded-buffer-class.md)など、多くのメッセージバッファーの種類では、無制限の数のメッセージを保持できます。 メッセージ プロデューサーがメッセージをデータ パイプラインに送信する速度が、コンシューマーがそれらのメッセージを処理する速度よりも速い場合、アプリケーションはメモリ不足の状態になることがあります。 セマフォなどのスロットリング機構を使用すると、データ パイプラインで同時にアクティブになるメッセージの数を制限できます。
 
-次の基本的な例では、セマフォを使用してデータ パイプラインのメッセージの数を制限する方法を示します。 データパイプラインでは、 [concurrency:: wait](reference/concurrency-namespace-functions.md#wait)関数を使用して、100ミリ秒以上かかる操作をシミュレートします。 コンシューマーがメッセージを処理するよりも速く送信側でメッセージが生成されるため、この例では `semaphore` クラスを定義し、アプリケーションがアクティブ メッセージの数を制限できるようにしています。
+次の基本的な例では、セマフォを使用してデータ パイプラインのメッセージの数を制限する方法を示します。 データパイプラインでは、 [concurrency:: wait](reference/concurrency-namespace-functions.md#wait) 関数を使用して、100ミリ秒以上かかる操作をシミュレートします。 コンシューマーがメッセージを処理するよりも速く送信側でメッセージが生成されるため、この例では `semaphore` クラスを定義し、アプリケーションがアクティブ メッセージの数を制限できるようにしています。
 
 [!code-cpp[concrt-message-throttling#1](../../parallel/concrt/codesnippet/cpp/best-practices-in-the-asynchronous-agents-library_2.cpp)]
 
@@ -58,21 +59,21 @@ ms.locfileid: "87231742"
 
 この例では、プロデューサーからコンシューマーに送信されるメッセージは比較的少量です。 そのため、メモリ不足の状態は発生しません。 ただし、データ パイプラインに含まれるメッセージの数が比較的多い場合、この機構は便利です。
 
-この例で使用するセマフォクラスを作成する方法の詳細については、「[方法: コンテキストクラスを使用して協調セマフォを実装](../../parallel/concrt/how-to-use-the-context-class-to-implement-a-cooperative-semaphore.md)する」を参照してください。
+この例で使用するセマフォクラスを作成する方法の詳細については、「 [方法: コンテキストクラスを使用して協調セマフォを実装](../../parallel/concrt/how-to-use-the-context-class-to-implement-a-cooperative-semaphore.md)する」を参照してください。
 
 [[上](#top)]
 
-## <a name="do-not-perform-fine-grained-work-in-a-data-pipeline"></a><a name="fine-grained"></a>データパイプラインで粒度の細かい作業を実行しない
+## <a name="do-not-perform-fine-grained-work-in-a-data-pipeline"></a><a name="fine-grained"></a> データパイプラインで Fine-Grained 作業を実行しない
 
-エージェント ライブラリが最も役立つのは、データ パイプラインで実行される処理の粒度が非常に粗い場合です。 たとえば、1 つのアプリケーション コンポーネントがファイルまたはネットワーク接続からデータを読み取り、状況に応じてそのデータを別のコンポーネントに送信する場合があります。 エージェントライブラリがメッセージの伝達に使用するプロトコルによって、メッセージパッシング機構は、[並列パターンライブラリ](../../parallel/concrt/parallel-patterns-library-ppl.md)(PPL) によって提供されるタスク並列構造よりもオーバーヘッドが大きくなります。 したがって、データ パイプラインで実行される処理の時間が十分長く、このオーバーヘッドを相殺できることを確認してください。
+エージェント ライブラリが最も役立つのは、データ パイプラインで実行される処理の粒度が非常に粗い場合です。 たとえば、1 つのアプリケーション コンポーネントがファイルまたはネットワーク接続からデータを読み取り、状況に応じてそのデータを別のコンポーネントに送信する場合があります。 エージェントライブラリがメッセージの伝達に使用するプロトコルによって、メッセージパッシング機構は、 [並列パターンライブラリ](../../parallel/concrt/parallel-patterns-library-ppl.md) (PPL) によって提供されるタスク並列構造よりもオーバーヘッドが大きくなります。 したがって、データ パイプラインで実行される処理の時間が十分長く、このオーバーヘッドを相殺できることを確認してください。
 
-データ パイプラインはそのタスクの粒度が粗い場合に最も有効ですが、データ パイプラインの各ステージでは PPL コンストラクト (タスク グループや並列アルゴリズムなど) を使用してより粒度の細かい処理を実行できます。 各処理ステージで粒度の細かい並列処理を使用する粒度の粗いデータネットワークの例については、「[チュートリアル: イメージ処理ネットワークの作成](../../parallel/concrt/walkthrough-creating-an-image-processing-network.md)」を参照してください。
+データ パイプラインはそのタスクの粒度が粗い場合に最も有効ですが、データ パイプラインの各ステージでは PPL コンストラクト (タスク グループや並列アルゴリズムなど) を使用してより粒度の細かい処理を実行できます。 各処理ステージで詳細な並列処理を使用する粒度の粗いデータネットワークの例については、「 [チュートリアル: Image-Processing ネットワークの作成](../../parallel/concrt/walkthrough-creating-an-image-processing-network.md)」を参照してください。
 
 [[上](#top)]
 
-## <a name="do-not-pass-large-message-payloads-by-value"></a><a name="large-payloads"></a>サイズの大きいメッセージペイロードを値で渡さない
+## <a name="do-not-pass-large-message-payloads-by-value"></a><a name="large-payloads"></a> サイズの大きいメッセージペイロードを値で渡さない
 
-ランタイムでは、各メッセージのコピーを作成してそれをメッセージ バッファー間での引き渡しに使用する場合があります。 たとえば、 [concurrency:: overwrite_buffer](../../parallel/concrt/reference/overwrite-buffer-class.md)クラスは、各メッセージのコピーを各ターゲットに提供します。 また、 [concurrency:: send](reference/concurrency-namespace-functions.md#send)や[concurrency:: receive](reference/concurrency-namespace-functions.md#receive)などのメッセージパッシング関数を使用してメッセージバッファーにメッセージを書き込み、メッセージを読み取るときに、ランタイムはメッセージデータのコピーを作成します。 この機構を使用すると、共有データに対する同時書き込みのリスクはなくなりますが、メッセージ ペイロードが比較的大きい場合、メモリのパフォーマンスが低下する可能性があります。
+ランタイムでは、各メッセージのコピーを作成してそれをメッセージ バッファー間での引き渡しに使用する場合があります。 たとえば、 [concurrency:: overwrite_buffer](../../parallel/concrt/reference/overwrite-buffer-class.md) クラスは、各メッセージのコピーを各ターゲットに提供します。 また、 [concurrency:: send](reference/concurrency-namespace-functions.md#send) や [concurrency:: receive](reference/concurrency-namespace-functions.md#receive) などのメッセージパッシング関数を使用してメッセージバッファーにメッセージを書き込み、メッセージを読み取るときに、ランタイムはメッセージデータのコピーを作成します。 この機構を使用すると、共有データに対する同時書き込みのリスクはなくなりますが、メッセージ ペイロードが比較的大きい場合、メモリのパフォーマンスが低下する可能性があります。
 
 ペイロードの大きいメッセージを渡す場合は、ポインターまたは参照を使用してメモリのパフォーマンスを向上させることができます。 次の例では、大きなメッセージの値渡しを行う場合と同じメッセージ型にポインターを渡す場合を比較します。 この例では、`producer` オブジェクトに対して作用する 2 種類のエージェント `consumer` および `message_data` を定義します。 また、プロデューサーが複数の `message_data` オブジェクトをコンシューマーに送信するのに必要な時間と、プロデューサー エージェントが複数のポインターを `message_data` オブジェクト、コンシューマーへと順番に送信するのに必要な時間を比較します。
 
@@ -91,13 +92,13 @@ took 47ms.
 
 [[上](#top)]
 
-## <a name="use-shared_ptr-in-a-data-network-when-ownership-is-undefined"></a><a name="ownership"></a>所有権が定義されていない場合にデータネットワークで shared_ptr を使用する
+## <a name="use-shared_ptr-in-a-data-network-when-ownership-is-undefined"></a><a name="ownership"></a> 所有権が定義されていない場合にデータネットワークで shared_ptr を使用する
 
 メッセージ パッシング パイプラインまたはネットワークを通じてメッセージをポインターで送信する場合、通常、ネットワークの始端で各メッセージ用のメモリを割り当て、ネットワークの終端でそのメモリを解放します。 この機構も通常は有効に働きますが、使用するのが困難な場合や、使用できない場合もあります。 たとえば、データ ネットワークに複数の終了ノードが存在する場合を考えます。 この場合、メッセージ用のメモリを解放する場所が明確ではありません。
 
-この問題を解決するには、たとえば[std:: shared_ptr](../../standard-library/shared-ptr-class.md)というメカニズムを使用して、複数のコンポーネントがポインターを所有できるようにします。 リソースを所有する最後の `shared_ptr` オブジェクトが破棄されると、そのリソースも解放されます。
+この問題を解決するには、たとえば [std:: shared_ptr](../../standard-library/shared-ptr-class.md)というメカニズムを使用して、複数のコンポーネントがポインターを所有できるようにします。 リソースを所有する最後の `shared_ptr` オブジェクトが破棄されると、そのリソースも解放されます。
 
-次の例では、`shared_ptr` を使用して複数のメッセージ バッファー間でポインター値を共有する方法を示します。 この例では、 [concurrency:: overwrite_buffer](../../parallel/concrt/reference/overwrite-buffer-class.md)オブジェクトを3つの[concurrency:: call](../../parallel/concrt/reference/call-class.md)オブジェクトに接続します。 `overwrite_buffer` クラスは、メッセージを各ターゲットに提供します。 データ ネットワークの終端にはデータの所有者が複数存在するため、この例では `shared_ptr` を使用して各 `call` オブジェクトでメッセージの所有権を共有できるようにしています。
+次の例では、`shared_ptr` を使用して複数のメッセージ バッファー間でポインター値を共有する方法を示します。 この例では、 [concurrency:: overwrite_buffer](../../parallel/concrt/reference/overwrite-buffer-class.md) オブジェクトを3つの [concurrency:: call](../../parallel/concrt/reference/call-class.md) オブジェクトに接続します。 `overwrite_buffer` クラスは、メッセージを各ターゲットに提供します。 データ ネットワークの終端にはデータの所有者が複数存在するため、この例では `shared_ptr` を使用して各 `call` オブジェクトでメッセージの所有権を共有できるようにしています。
 
 [!code-cpp[concrt-message-sharing#1](../../parallel/concrt/codesnippet/cpp/best-practices-in-the-asynchronous-agents-library_4.cpp)]
 
@@ -118,8 +119,8 @@ Destroying resource 64...
 
 [同時実行ランタイムのベストプラクティス](../../parallel/concrt/concurrency-runtime-best-practices.md)<br/>
 [非同期エージェント ライブラリ](../../parallel/concrt/asynchronous-agents-library.md)<br/>
-[チュートリアル: エージェントベースのアプリケーションの作成](../../parallel/concrt/walkthrough-creating-an-agent-based-application.md)<br/>
+[チュートリアル: Agent-Based アプリケーションの作成](../../parallel/concrt/walkthrough-creating-an-agent-based-application.md)<br/>
 [チュートリアル: データフローエージェントの作成](../../parallel/concrt/walkthrough-creating-a-dataflow-agent.md)<br/>
-[チュートリアル: イメージ処理ネットワークの作成](../../parallel/concrt/walkthrough-creating-an-image-processing-network.md)<br/>
+[チュートリアル: Image-Processing ネットワークの作成](../../parallel/concrt/walkthrough-creating-an-image-processing-network.md)<br/>
 [並列パターンライブラリのベストプラクティス](../../parallel/concrt/best-practices-in-the-parallel-patterns-library.md)<br/>
 [同時実行ランタイムの一般的なベストプラクティス](../../parallel/concrt/general-best-practices-in-the-concurrency-runtime.md)

@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「構造体の反転」をご覧ください。
 title: negate 構造体
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - negate struct
 - negate class
 ms.assetid: 8a372686-786e-4262-b37c-ca13dc11e62f
-ms.openlocfilehash: cb45f61323a407e90c2a455460a4d2cdd7b6720a
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: fccc583d38b797a856ed4e0915e5e0255bb9eaee
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68240554"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97338245"
 ---
 # <a name="negate-struct"></a>negate 構造体
 
@@ -39,15 +40,15 @@ struct negate<void>
 
 ### <a name="parameters"></a>パラメーター
 
-*型*\
+*各種*\
 指定または推論された型のオペランドを受け取る `operator-` をサポートする任意の型。
 
-*左*\
-符号を反転されるオペランド。 特殊化されたテンプレートはの完全転送を左辺値と右辺値参照引数の型を推論する*型*します。
+*左側*\
+符号を反転されるオペランド。 特殊化されたテンプレートは、推論された型の *型* の左辺値および右辺値参照引数の完全転送を行います。
 
 ## <a name="return-value"></a>戻り値
 
-`-Left` の結果。 特殊化されたテンプレートに完全に単項によって返される型の結果の転送を行います`operator-`します。
+`-Left` の結果。 特殊化されたテンプレートは、単項によって返される型を持つ結果を完全に転送します `operator-` 。
 
 ## <a name="example"></a>例
 
