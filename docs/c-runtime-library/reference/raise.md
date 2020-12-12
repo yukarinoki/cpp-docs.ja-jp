@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: raise'
 title: raise
 ms.date: 4/2/2020
 api_name:
@@ -28,12 +29,12 @@ helpviewer_keywords:
 - raise function
 - signals
 - programs [C++], sending signals to executing programs
-ms.openlocfilehash: 81b92404603820948a384b6ad33421251a27c13c
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: eb225e25ef0ff4e04f1ea8877a434c2af240cbfe
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82919550"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97274867"
 ---
 # <a name="raise"></a>raise
 
@@ -63,7 +64,7 @@ int raise(
 
 **raise** 関数は実行中のプログラムに *sig* を送信します。 **signal** への前回の呼び出しが *sig* の通知処理関数を組み込んでいた場合、**raise** はその関数を実行します。 ハンドラー関数がインストールされていない場合、シグナル値 *sig* に関連付けられた既定のアクションは、次のように取得されます。
 
-|Signal|説明|既定値|
+|Signal|説明|Default|
 |------------|-------------|-------------|
 |**SIGABRT**|異常終了|コード 3 で呼び出し元のプログラムを終了する|
 |**SIGFPE**|浮動小数点エラー|呼び出し元のプログラムを終了します。|
@@ -72,13 +73,13 @@ int raise(
 |**SIGSEGV**|ストレージへの無効なアクセス|呼び出し元のプログラムを終了します。|
 |**SIGTERM**|プログラムに送信される終了要求|シグナルを無視する|
 
-上で指定したように、引数が有効なシグナルでない場合、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」に説明されているように、無効なパラメーター ハンドラーが呼び出されます。 処理されない場合、関数は**errno**を**EINVAL**に設定し、0以外の値を返します。
+上で指定したように、引数が有効なシグナルでない場合、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」に説明されているように、無効なパラメーター ハンドラーが呼び出されます。 処理されない場合、関数は **errno** を **EINVAL** に設定し、0以外の値を返します。
 
 既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**raise**|\<signal.h>|
 

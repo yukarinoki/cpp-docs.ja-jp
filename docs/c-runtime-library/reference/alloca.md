@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: _alloca'
 title: _alloca
 ms.date: 11/04/2016
 api_name:
@@ -26,12 +27,12 @@ helpviewer_keywords:
 - alloca function
 - _alloca function
 ms.assetid: 74488eb1-b71f-4515-88e1-cdd03b6f8225
-ms.openlocfilehash: 159f474927b4aaf364ad6972450edbe513a3c0b0
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 959478afac06c22181a595c00969690babbe6ade
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87218742"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97275192"
 ---
 # <a name="_alloca"></a>_alloca
 
@@ -52,28 +53,28 @@ void *_alloca(
 
 ## <a name="return-value"></a>戻り値
 
-**_Alloca**ルーチンは、 **`void`** 割り当てられた領域へのポインターを返します。これは、オブジェクトのすべての型を格納するために適切にアラインメントされていることが保証されています。 *Size*が0の場合、 **_alloca**によって長さ0の項目が割り当てられ、その項目への有効なポインターが返されます。
+**_Alloca** ルーチンは、 **`void`** 割り当てられた領域へのポインターを返します。これは、オブジェクトのすべての型を格納するために適切にアラインメントされていることが保証されています。 *Size* が0の場合、 **_alloca** によって長さ0の項目が割り当てられ、その項目への有効なポインターが返されます。
 
 領域の割り当てができない場合、スタック オーバーフロー例外が生成されます。 スタック オーバーフロー例外は C++ 例外ではなく、構造化例外です。 C++ 例外処理を使用する代わりに、[構造化例外処理](../../cpp/structured-exception-handling-c-cpp.md) (SEH) を使用する必要があります。
 
 ## <a name="remarks"></a>解説
 
-**_alloca**は、プログラムスタックから*サイズ*バイトを割り当てます。 割り当てられた領域は、呼び出し元の関数が終了したときに自動的に解放されます (割り当てがスコープ外に渡されるだけではありません)。 したがって、 **_alloca**によって返されたポインター値を引数として[解放](free.md)することはできません。
+**_alloca** は、プログラムスタックから *サイズ* バイトを割り当てます。 割り当てられた領域は、呼び出し元の関数が終了したときに自動的に解放されます (割り当てがスコープ外に渡されるだけではありません)。 したがって、 **_alloca** によって返されたポインター値を引数として [解放](free.md)することはできません。
 
-例外ハンドラー (EH) で **_alloca**を明示的に呼び出すには制限があります。 x86 クラスのプロセッサで動作する EH ルーチンは、自身のメモリ フレーム内で処理されるため、外側の関数のスタック ポインターが示す現在位置を基にしたメモリ領域ではタスクを実行しません。 最も一般的な実装には、Windows NT 構造化例外処理 (SEH) や C++ catch 句の式などがあります。 したがって、次のいずれかのシナリオで明示的に **_alloca**を呼び出すと、呼び出し元の EH ルーチンに戻るときにプログラムエラーが発生します。
+例外ハンドラー (EH) で **_alloca** を明示的に呼び出すには制限があります。 x86 クラスのプロセッサで動作する EH ルーチンは、自身のメモリ フレーム内で処理されるため、外側の関数のスタック ポインターが示す現在位置を基にしたメモリ領域ではタスクを実行しません。 最も一般的な実装には、Windows NT 構造化例外処理 (SEH) や C++ catch 句の式などがあります。 したがって、次のいずれかのシナリオで明示的に **_alloca** を呼び出すと、呼び出し元の EH ルーチンに戻るときにプログラムエラーが発生します。
 
-- Windows NT SEH 例外フィルター式:`__except ( _alloca() )`
+- Windows NT SEH 例外フィルター式: `__except ( _alloca() )`
 
-- Windows NT SEH の最後の例外ハンドラー:`__finally { _alloca() }`
+- Windows NT SEH の最後の例外ハンドラー: `__finally { _alloca() }`
 
 - C++ EH catch 句の式
 
-ただし、 **_alloca**は、eh ルーチン内から直接呼び出すことも、前述の eh シナリオのいずれかで呼び出されるアプリケーション提供のコールバックから呼び出すこともできます。
+ただし、 **_alloca** は、eh ルーチン内から直接呼び出すことも、前述の eh シナリオのいずれかで呼び出されるアプリケーション提供のコールバックから呼び出すこともできます。
 
 > [!IMPORTANT]
-> Windows XP で **_alloca**が try/catch ブロック内で呼び出された場合は、catch ブロックで[_resetstkoflw](resetstkoflw.md)を呼び出す必要があります。
+> Windows XP で **_alloca** が try/catch ブロック内で呼び出された場合は、catch ブロックで [_resetstkoflw](resetstkoflw.md) を呼び出す必要があります。
 
-上記の制限に加え、[/clr (共通言語ランタイムのコンパイル)](../../build/reference/clr-common-language-runtime-compilation.md)オプションを使用する場合、 **_alloca**をブロック内で使用することはできません **`__except`** 。 詳細については、「 [/clr Restrictions](../../build/reference/clr-restrictions.md)」を参照してください。
+上記の制限に加え、[/clr (共通言語ランタイムのコンパイル)](../../build/reference/clr-common-language-runtime-compilation.md) オプションを使用する場合、 **_alloca** をブロック内で使用することはできません **`__except`** 。 詳細については、「 [/clr Restrictions](../../build/reference/clr-restrictions.md)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 

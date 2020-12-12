@@ -1,4 +1,5 @@
 ---
+description: 詳細については、catanh、catanh、catanh に関するページを参照してください。
 title: catanh、catanhf、catanhl
 ms.date: 11/04/2016
 api_name:
@@ -33,12 +34,12 @@ helpviewer_keywords:
 - catanhf function
 - catanhl function
 ms.assetid: 1b6021cb-647a-41b4-9d7f-919cc8b57b86
-ms.openlocfilehash: 9b21427eb4ab1a3ec8eab10d52e636bf253bc947
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 9f69ee7644c295fe36b0d907d858d33db27f1c99
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70943234"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97275166"
 ---
 # <a name="catanh-catanhf-catanhl"></a>catanh、catanhf、catanhl
 
@@ -71,23 +72,23 @@ _Lcomplex catanhl(
 
 ## <a name="return-value"></a>戻り値
 
-*Z*の逆双曲線タンジェント (ラジアン)。 結果は、実数軸に沿って無制限になり、虚数軸に沿って [-iπ/2; + iπ/2] の間隔で計算されます。 *Z*が間隔 [-1, + 1] の外側にある場合は、ドメインエラーが発生します。 *Z*が-1 または + 1 の場合、極エラーが発生します。
+*Z* の逆双曲線タンジェント (ラジアン)。 結果は、実数軸に沿って無制限になり、虚数軸に沿って [-iπ/2; + iπ/2] の間隔で計算されます。 *Z* が間隔 [-1, + 1] の外側にある場合は、ドメインエラーが発生します。 *Z* が-1 または + 1 の場合、極エラーが発生します。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-でC++はオーバーロードが可能であるため、 **_Fcomplex**と **_Lcomplex**の値を受け取って返す**catanh**のオーバーロードを呼び出すことができます。 C プログラムでは、 **catanh**は常にを受け取り、**戻り値を**返します。
+C++ ではオーバーロードが可能であるため、 **_Fcomplex** と **_Lcomplex** の値を受け取って返す **catanh** のオーバーロードを呼び出すことができます。 C プログラムでは、 **catanh** は常に **_Dcomplex** 値を取得して返します。
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチン|C ヘッダー|C++ ヘッダー|
+|ルーチンによって返される値|C ヘッダー|C++ ヘッダー|
 |-------------|--------------|------------------|
-|**catanh**、 **catanh**、 **catanh**|\<complex.h>|\<ccomplex>|
+|**catanh**、               **catanh**、 **catanh**|\<complex.h>|\<ccomplex>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性について詳しくは、「 [Compatibility](../../c-runtime-library/compatibility.md)」をご覧ください。
 
 ## <a name="see-also"></a>関連項目
 
-[関数リファレンス (アルファベット順)](crt-alphabetical-function-reference.md)<br/>
+[アルファベット順の関数リファレンス](crt-alphabetical-function-reference.md)<br/>
 [ctanh、ctanhf、ctanhl](ctanh-ctanhf-ctanhl.md)<br/>
 [catan、catanf、catanl](catan-catanf-catanl.md)<br/>
 [csinh、csinhf、csinhl](csinh-csinhf-csinhl.md)<br/>

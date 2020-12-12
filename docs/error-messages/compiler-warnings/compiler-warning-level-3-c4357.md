@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: コンパイラの警告 (レベル 3) C4357'
 title: コンパイラの警告 (レベル 3) C4357
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - C4357
 ms.assetid: 9259c633-3c02-4900-b94a-2d8d366d61cd
-ms.openlocfilehash: 3af2e742bde40bc3787603e32efbc34e59dcb419
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 89446d131d62134c181c691d8103f75b8cdbe4a4
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80198706"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97274243"
 ---
 # <a name="compiler-warning-level-3-c4357"></a>コンパイラの警告 (レベル 3) C4357
 
 ' function ' を生成するときに、デリゲート ' del ' の仮引数リストの param 配列引数が無視されました
 
-`ParamArray` 属性は無視されましたが、`function` を変数引数と共に呼び出すことはできません。
+`ParamArray`属性は無視されました `function` 。可変個の引数を指定して呼び出すことはできません。
 
 次の例では、C4357 が生成されます。
 

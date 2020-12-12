@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「コンパイラエラー C3892」を参照してください。
 title: コンパイラ エラー C3892
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3892
 ms.assetid: 83fff42c-ea48-442f-bc2e-b33a6b99d890
-ms.openlocfilehash: 73d96c61e918da3aabbfc00b83213fa79a2eedf9
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 1fe2692e594debebdaf3493414d0e6136c9403a5
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74736387"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97274269"
 ---
 # <a name="compiler-error-c3892"></a>コンパイラ エラー C3892
 
