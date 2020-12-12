@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: プロセスと環境の制御'
 title: プロセス制御と環境制御
 ms.date: 11/04/2016
 f1_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - environment control routines
 - process control routines
 ms.assetid: 7fde74c3-c2a6-4d15-84b8-092160d60c3e
-ms.openlocfilehash: ed8d15181a171b4b6a436a3e410a99b48232bc6e
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 7ba9c81aff87f6cfdf253da6a5d4504bcc59dce5
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87217026"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97284565"
 ---
 # <a name="process-and-environment-control"></a>プロセス制御と環境制御
 
@@ -24,9 +25,9 @@ ms.locfileid: "87217026"
 
 ## <a name="process-and-environment-control-functions"></a>プロセス制御と環境制御の関数
 
-|ルーチンによって返される値|用途|
+|ルーチンによって返される値|使用|
 |-------------|---------|
-|[を呼び出してプログラム実行を終了する際、](../c-runtime-library/reference/abort.md)|バッファーをフラッシュしたり、**atexit** および **_onexit** によって登録された関数を呼び出したりせずにプロセスを中止する|
+|[取り消し](../c-runtime-library/reference/abort.md)|バッファーをフラッシュしたり、**atexit** および **_onexit** によって登録された関数を呼び出したりせずにプロセスを中止する|
 |[アサート](../c-runtime-library/reference/assert-macro-assert-wassert.md)|論理エラーのテスト|
 |[_ASSERT マクロ、_ASSERTE マクロ](../c-runtime-library/reference/assert-asserte-assert-expr-macros.md)|**assert** に類似。ただしランタイム ライブラリのデバッグ バージョンでのみ使用できる|
 |[atexit](../c-runtime-library/reference/atexit.md)|プログラムの終了時に実行されるルーチンをスケジュールする|
@@ -47,7 +48,7 @@ ms.locfileid: "87217026"
 |[_exit](../c-runtime-library/reference/exit-exit-exit.md)|**atexit** または **_onexit** の呼び出し、またはバッファーのフラッシュを行わずに直ちにプロセスを終了する|
 |[getenv、_wgetenv](../c-runtime-library/reference/getenv-wgetenv.md)、[getenv_s、_wgetenv_s](../c-runtime-library/reference/getenv-s-wgetenv-s.md)|環境変数の値を取得する|
 |[_getpid](../c-runtime-library/reference/getpid.md)|プロセス ID 番号を取得する|
-|[longjmp](../c-runtime-library/reference/longjmp.md)|保存されたスタック環境を復元します。非ローカルのを実行するために使用する**`goto`**|
+|[longjmp](../c-runtime-library/reference/longjmp.md)|保存されたスタック環境を復元します。非ローカルのを実行するために使用する **`goto`**|
 |[_onexit](../c-runtime-library/reference/onexit-onexit-m.md)|プログラムの終了時に実行されるルーチンをスケジュールする (Microsoft C/C++ version 7.0 以前のバージョンとの互換性のために使用)|
 |[_pclose](../c-runtime-library/reference/pclose.md)|新しいコマンド プロセッサを待機し、関連するパイプのストリームを閉じる|
 |[perror、_wperror](../c-runtime-library/reference/perror-wperror.md)|エラー メッセージを出力する|
@@ -55,7 +56,7 @@ ms.locfileid: "87217026"
 |[_popen、_wpopen](../c-runtime-library/reference/popen-wpopen.md)|パイプを作成し、コマンドを実行する|
 |[_putenv、_wputenv](../c-runtime-library/reference/putenv-wputenv.md)、[_putenv_s、_wputenv_s](../c-runtime-library/reference/putenv-s-wputenv-s.md)|環境変数の値を追加または変更する|
 |[raise](../c-runtime-library/reference/raise.md)|呼び出し元のプロセスにシグナルを送る|
-|[setjmp](../c-runtime-library/reference/setjmp.md)|スタック環境を保存します。ローカル以外で実行するために使用**`goto`**|
+|[setjmp](../c-runtime-library/reference/setjmp.md)|スタック環境を保存します。ローカル以外で実行するために使用 **`goto`**|
 |[signal](../c-runtime-library/reference/signal.md)|割り込みシグナルを処理する|
 |[_spawnl、_wspawnl](../c-runtime-library/reference/spawnl-wspawnl.md)|指定した引数リストを含む新しいプロセスを作成して実行する|
 |[_spawnle、_wspawnle](../c-runtime-library/reference/spawnle-wspawnle.md)|指定した引数リストおよび環境を含む新しいプロセスを作成して実行する|

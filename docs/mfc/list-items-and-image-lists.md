@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「リスト項目とイメージリスト」を参照してください。
 title: リスト項目とイメージ リスト
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - CListCtrl class [MFC], image lists
 - list items [MFC], image lists
 ms.assetid: 317d095f-f978-47da-acb6-7bfe7dd3bc69
-ms.openlocfilehash: 14abf72551d39b2d1b2069bd17da308b39d7f6cc
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 674c67c2eb104d86f0bd80732469129b6c70e0f5
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84621410"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97283369"
 ---
 # <a name="list-items-and-image-lists"></a>リスト項目とイメージ リスト
 
@@ -23,9 +24,9 @@ ms.locfileid: "84621410"
 > [!NOTE]
 > リストビューコントロールが LVS_SHAREIMAGELISTS スタイルで作成されている場合は、使用されなくなったときにイメージリストを破棄する必要があります。 同じイメージリストを複数のリストビューコントロールに割り当てる場合は、このスタイルを指定します。それ以外の場合は、複数のコントロールが同じイメージリストを破棄しようとすることがあります。
 
-リスト項目の詳細については、「Windows SDK の[リストビューのイメージリスト](/windows/win32/Controls/using-list-view-controls)と[項目および](/windows/win32/Controls/using-list-view-controls)サブ項目」を参照してください。 また、 *MFC リファレンス*のクラス[cimagelist](reference/cimagelist-class.md)と、このファミリーの記事の「 [cimagelist](using-cimagelist.md) 」を参照してください。
+リスト項目の詳細については、「Windows SDK の [リストビューのイメージリスト](/windows/win32/Controls/using-list-view-controls) と [項目および](/windows/win32/Controls/using-list-view-controls) サブ項目」を参照してください。 また、 *MFC リファレンス* のクラス [cimagelist](reference/cimagelist-class.md)と、このファミリーの記事の「 [cimagelist](using-cimagelist.md) 」を参照してください。
 
-リストコントロールを作成するには、リストに新しい項目を挿入するときに使用するイメージリストを指定する必要があります。 次の例では、 *m_pImagelist*が型のポインターであり `CImageList` *m_listctrl*がデータメンバーであるこの手順を示し `CListCtrl` ます。
+リストコントロールを作成するには、リストに新しい項目を挿入するときに使用するイメージリストを指定する必要があります。 次の例では、 *m_pImagelist* が型のポインターであり `CImageList` *m_listctrl* がデータメンバーであるこの手順を示し `CListCtrl` ます。
 
 [!code-cpp[NVC_MFCControlLadenDialog#19](codesnippet/cpp/list-items-and-image-lists_1.cpp)]
 
@@ -34,4 +35,4 @@ ms.locfileid: "84621410"
 ## <a name="see-also"></a>関連項目
 
 [CListCtrl の使い方](using-clistctrl.md)<br/>
-[制限](controls-mfc.md)
+[コントロール](controls-mfc.md)

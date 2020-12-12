@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: Platform:: Array クラス'
 title: Platform::Array クラス
 ms.date: 12/30/2016
 ms.topic: reference
@@ -8,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::Array Class
 ms.assetid: 7815ab40-88c5-42b0-83b8-081cef0cda31
-ms.openlocfilehash: 4903c18f981c87c418a6ab08595816ce22a7413c
-ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
+ms.openlocfilehash: 76e8329cdc324bc7a8de338725d48188b79ac9f3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90742945"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97284201"
 ---
 # <a name="platformarray-class"></a>Platform::Array クラス
 
@@ -36,7 +37,7 @@ Platform:: Array は、 [platform:: WriteOnlyArray クラス](../cppcx/platform-
 
 |名前|説明|
 |----------|-----------------|
-|[Array コンストラクター](#ctor)|クラステンプレートパラメーター *T*によって指定された型の、変更可能な1次元配列を初期化します。|
+|[Array コンストラクター](#ctor)|クラステンプレートパラメーター *T* によって指定された型の、変更可能な1次元配列を初期化します。|
 
 ### <a name="methods"></a>メソッド
 
@@ -48,7 +49,7 @@ Platform:: Array は、 [platform:: WriteOnlyArray クラス](../cppcx/platform-
 |--|--|
 | [Array:: Value](#value) | 現在の配列へのハンドルを取得します。 |
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 この Array クラスはシール クラスであり、継承できません。
 
@@ -58,13 +59,13 @@ Platform:: Array を使用するタイミングと方法の詳細については
 
 このクラスは、コンパイラによって自動的に含まれる vccorlib.h ヘッダーで定義されます。 これは、IntelliSense では表示できますが、オブジェクトブラウザーでは表示されません。これは、platform. winmd で定義されているパブリック型ではないためです。
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 コンパイラ オプション: **/ZW**
 
 ## <a name="array-constructors"></a><a name="ctor"></a> 配列コンストラクター
 
-クラステンプレートパラメーター *T*によって指定された型の、変更可能な1次元配列を初期化します。
+クラステンプレートパラメーター *T* によって指定された型の、変更可能な1次元配列を初期化します。
 
 ### <a name="syntax"></a>構文
 
@@ -84,7 +85,7 @@ Array(T* data, unsigned int size);
 *data*<br/>
 この Array オブジェクトを初期化するために使用する型 `T` のデータ配列へのポインター。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 Platform:: Array のインスタンスを作成する方法の詳細については、「 [array および WriteOnlyArray](../cppcx/array-and-writeonlyarray-c-cx.md)」を参照してください。
 

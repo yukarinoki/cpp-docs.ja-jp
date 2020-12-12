@@ -1,16 +1,17 @@
 ---
+description: 詳細については、「Windows フォーム/MFC プログラミングの違い」を参照してください。
 title: Windows フォーム-MFC プログラミングの違い
 ms.date: 11/04/2016
 helpviewer_keywords:
 - MFC [C++], Windows Forms support
 - Windows Forms [C++], compared to MFC
 ms.assetid: f3bfcf45-cfd4-45a4-8cde-5f4dbb18ee51
-ms.openlocfilehash: 136549bb457cc17293d4c7201c9836d9094eea94
-ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
+ms.openlocfilehash: a48b4f54e44145abab33990e20ca76ed654659e0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "79544821"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97283941"
 ---
 # <a name="windows-formsmfc-programming-differences"></a>Windows フォームと MFC のプログラミング上の違い
 
@@ -34,7 +35,7 @@ Windows フォームには、次の MFC ビュー/ドキュメント、および
 
    MFC では、ドキュメント テンプレートを使用して、MDI モード、SDI モード、または MTI モードのフレーム ウィンドウに含まれているビューを、プログラマが開いたドキュメントに関連付けます。 Windows フォームには、ドキュメント テンプレートに相当する機能がありません。
 
-- ドキュメント
+- Documents
 
    MFC はドキュメント ファイルの種類を登録し、シェルからドキュメントを開くときにドキュメントの種類を処理します。 Windows フォームはドキュメントをサポートしません。
 
@@ -54,6 +55,6 @@ Windows フォームには、次の MFC ビュー/ドキュメント、および
 
    MFC にはコマンド更新機構があります。 このため、アクティブなビューまたはドキュメントが、UI 要素の状態 (メニュー項目やツール ボタンの有効化/無効化、チェック状態など) を管理します。 Windows フォームには、コマンド更新機構に相当する機構がありません。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[MFC での Windows フォーム ユーザー コントロールの使用](../dotnet/using-a-windows-form-user-control-in-mfc.md)
+[MFC での Windows フォームユーザーコントロールの使用](../dotnet/using-a-windows-form-user-control-in-mfc.md)

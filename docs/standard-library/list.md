@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: &lt; リスト&gt;'
 title: '&lt;list&gt;'
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - list header
 ms.assetid: 2345823b-5612-44d8-95d3-aa96ed076d17
-ms.openlocfilehash: cbc93500c3fe61b2a4640008b869f3a6b71b5c6c
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: dd75c6871e9996b7bfba32ed34999a6fec6fc1b0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88833310"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97284669"
 ---
 # <a name="ltlistgt"></a>&lt;list&gt;
 
@@ -28,7 +29,7 @@ ms.locfileid: "88833310"
 
 ## <a name="members"></a>メンバー
 
-### <a name="operators"></a>演算子
+### <a name="operators"></a>オペレーター
 
 |名前|説明|
 |-|-|
@@ -39,7 +40,7 @@ ms.locfileid: "88833310"
 |[>演算子 ](../standard-library/list-operators.md#op_gt)|演算子の左辺の list オブジェクトが右辺の list オブジェクトより大きいかどうかを調べます。|
 |[operator>=](../standard-library/list-operators.md#op_gt_eq)|演算子の左辺の list オブジェクトが右辺の list オブジェクト以上かどうかを調べます。|
 
-### <a name="functions"></a>Functions
+### <a name="functions"></a>関数
 
 |名前|説明|
 |-|-|

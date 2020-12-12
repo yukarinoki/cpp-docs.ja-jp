@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: _fread_nolock_s'
 title: _fread_nolock_s2
 ms.date: 4/2/2020
 api_name:
@@ -25,12 +26,12 @@ f1_keywords:
 - _fread_nolock_s
 - stdio/_fread_nolock_s
 ms.assetid: 5badb9ab-11df-4e17-8162-30bda2a4572e
-ms.openlocfilehash: 702264f3728b0d9eca3f2fb51ba2ea0467b592df
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: ba971d8db9fde15009362b2e8da0791883fb64e4
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82912730"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97283070"
 ---
 # <a name="_fread_nolock_s"></a>_fread_nolock_s
 
@@ -71,15 +72,15 @@ size_t _fread_nolock_s(
 
 ## <a name="remarks"></a>解説
 
-この関数は、 **fread_s**のロックされていないバージョンです。 これは、他のスレッドによる干渉から保護されない点を除いて、 **fread_s**と同じです。 他のスレッドをロックするオーバーヘッドが発生しないため、処理が速くなる場合があります。 この関数は、シングルスレッド アプリケーション、呼び出し元のスコープで既にスレッド分離を処理している場合などのスレッドセーフなコンテキストでのみご使用ください。
+この関数は、 **fread_s** のロックされていないバージョンです。 これは、他のスレッドによる干渉から保護されない点を除いて、 **fread_s** と同じです。 他のスレッドをロックするオーバーヘッドが発生しないため、処理が速くなる場合があります。 この関数は、シングルスレッド アプリケーション、呼び出し元のスコープで既にスレッド分離を処理している場合などのスレッドセーフなコンテキストでのみご使用ください。
 
 既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-|関数|必須ヘッダー|
+|機能|必須ヘッダー|
 |--------------|---------------------|
-|**_fread_nolock_s**|C: \<stdio.h>、C++: \<cstdio>、または \<stdio.h>|
+|**_fread_nolock_s**|C: \<stdio.h> ;C++: \<cstdio> または \<stdio.h>|
 
 互換性について詳しくは、「 [Compatibility](../../c-runtime-library/compatibility.md)」をご覧ください。
 

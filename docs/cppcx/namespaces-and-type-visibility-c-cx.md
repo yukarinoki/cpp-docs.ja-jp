@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: 名前空間と型の参照範囲 (C++/CX)'
 title: 名前空間と型の参照範囲 (C++/CX)
 ms.date: 12/30/2016
 ms.assetid: cbc01a3a-3b69-4ded-9c42-ecbf0fd0a00e
-ms.openlocfilehash: 78d5f5af761cef985ec43cf448251b4dc3c70bc2
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 014791ef322538c824c68409681d7fb856e1c837
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88837802"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97282901"
 ---
 # <a name="namespaces-and-type-visibility-ccx-"></a>名前空間と型の参照範囲 (C++/CX)
 
@@ -28,7 +29,7 @@ ms.locfileid: "88837802"
 
 次のアクセス修飾子を使用して、メタデータの可視性およびソース コード アクセシビリティを制御します。
 
-| 修飾子 | 意味 | メタデータに出力されるか。 |
+| 修飾子 | 説明 | メタデータに出力されるか。 |
 |--|--|--|
 | **`private`** | 既定のアクセシビリティ。 標準 C++ の場合と同じ意味です。 | いいえ |
 | **`protected`** | 標準 C++ の場合と同じ意味であり、アプリまたはコンポーネント内およびメタデータ内では両方。 | はい |
@@ -39,7 +40,7 @@ ms.locfileid: "88837802"
 
 ## <a name="windows-runtime-namespaces"></a>名前空間の Windows ランタイム
 
-Windows API は、Windows:: 名前空間で宣言された型で構成され \* ます。 これらの名前空間は Windows 用に予約されており、それらの名前空間に型を追加できません。 **オブジェクト ブラウザー**では、windows.winmd ファイル内でこれらの名前空間を表示できます。 これらの名前空間に関するドキュメントについては、「 [Windows API](/uwp/api/)」を参照してください。
+Windows API は、Windows:: 名前空間で宣言された型で構成され \* ます。 これらの名前空間は Windows 用に予約されており、それらの名前空間に型を追加できません。 **オブジェクト ブラウザー** では、windows.winmd ファイル内でこれらの名前空間を表示できます。 これらの名前空間に関するドキュメントについては、「 [Windows API](/uwp/api/)」を参照してください。
 
 ## <a name="ccx-namespaces"></a>C++/CX 名前空間
 

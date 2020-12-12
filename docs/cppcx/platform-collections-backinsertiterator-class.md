@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: Platform:: Collections:: Backの Titerator クラス'
 title: Platform::Collections::BackInsertIterator クラス
 ms.date: 03/27/2019
 ms.topic: reference
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - BackInsertIterator Class
 ms.assetid: aecee1ff-100d-4129-b84b-1966f0923dbf
-ms.openlocfilehash: f5c82a776a537d469d42a16bd4f425e7bb2c13aa
-ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
+ms.openlocfilehash: d4130db388470b5e29b545b66b06ee85b2cbb608
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90742932"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97283993"
 ---
 # <a name="platformcollectionsbackinsertiterator-class"></a>Platform::Collections::BackInsertIterator クラス
 
@@ -31,7 +32,7 @@ public ::std::iterator<::std::output_iterator_tag, void, void, void, void>;
 *T*<br/>
 現在のコレクション内の項目の型。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 BackInsertIterator クラスは、 [back_insert_iterator Class](../standard-library/back-insert-iterator-class.md)が要求する規則を実装します。
 
@@ -55,7 +56,7 @@ BackInsertIterator クラスは、 [back_insert_iterator Class](../standard-libr
 
 `BackInsertIterator`
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 **ヘッダー:** collection.h
 
@@ -74,10 +75,10 @@ explicit BackInsertIterator(
 
 #### <a name="parameters"></a>パラメーター
 
-*画像*<br/>
+*v*<br/>
 IVector \<T> オブジェクト。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 `BackInsertIterator` は、`v` パラメーターで指定されたオブジェクトの最後の要素の後に要素を挿入します。
 
@@ -114,7 +115,7 @@ BackInsertIterator& operator*();
 
 現在の BackInsertIterator への参照。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 この演算子は、現在のコレクション内の要素ではなく、現在の BackInsertIterator への参照を返します。
 
@@ -134,7 +135,7 @@ BackInsertIterator operator++(int);
 
 現在の BackInsertIterator への参照。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 仕様では、最初の構文は現在の BackInsertIterator に前置インクリメント演算を行い、2 つ目の構文は現在の BackInsertIterator に後置インクリメント演算を行います。 **`int`** 2 番目の構文の型は、実際の整数オペランドではなく、後置インクリメント演算を示します。
 

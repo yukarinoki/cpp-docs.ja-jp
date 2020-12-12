@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: out_of_range クラス'
 title: out_of_range クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - out_of_range class
 ms.assetid: d0e14dc0-065e-4666-9ac9-51e52223c503
-ms.openlocfilehash: 3bbbc48aa2020782594606c6a53a34f7b937fc58
-ms.sourcegitcommit: f2a135d69a2a8ef1777da60c53d58fe06980c997
+ms.openlocfilehash: 28d0982f711dba8d7a7bb069c4ae79e267b902df
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87521279"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97283278"
 ---
 # <a name="out_of_range-class"></a>out_of_range クラス
 
@@ -29,7 +30,7 @@ public:
 };
 ```
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 によって返される値 `what()` は、のコピーです `message.data()` 。 詳細については、[`what`](../standard-library/exception-class.md) および [`data`](../standard-library/basic-string-class.md#data) を参照してください。
 
@@ -63,7 +64,7 @@ int main() {
 Caught: invalid string position
 ```
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:**\<stdexcept>
 

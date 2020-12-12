@@ -1,4 +1,5 @@
 ---
+description: コマンドルーティングの詳細情報
 title: コマンド ルーティング
 ms.date: 09/06/2019
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - handlers, command [MFC]
 - command routing
 ms.assetid: 9393a956-bdd4-47c5-9013-dbd680433f93
-ms.openlocfilehash: e47ffd38b342301da32abae9690738ef83c0426b
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 4004f74413f236599c5cdd14f6593bc5d2bd26b8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84620691"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97283447"
 ---
 # <a name="command-routing"></a>コマンド ルーティング
 
@@ -35,9 +36,9 @@ ms.locfileid: "84620691"
 
 |コマンドを受信したオブジェクトの種類 . .|コマンドを処理する機会が与えられるコマンド ターゲット オブジェクトとその順序|
 |----------------------------------------------------------|-----------------------------------------------------------------------------------------------------|
-|MDI フレーム ウィンドウ (`CMDIFrameWnd`)|1. アクティブ`CMDIChildWnd`<br />2. このフレームウィンドウ<br />3. Application ( `CWinApp` オブジェクト)|
+|MDI フレーム ウィンドウ (`CMDIFrameWnd`)|1. アクティブ `CMDIChildWnd`<br />2. このフレームウィンドウ<br />3. Application ( `CWinApp` オブジェクト)|
 |ドキュメント フレーム ウィンドウ (`CFrameWnd`､ `CMDIChildWnd`)|1. アクティブビュー<br />2. このフレームウィンドウ<br />3. Application ( `CWinApp` オブジェクト)|
-|View|1. このビュー<br />2. ビューに添付されたドキュメント|
+|表示|1. このビュー<br />2. ビューに添付されたドキュメント|
 |ドキュメント|1. このドキュメント<br />2. ドキュメントに添付されたドキュメントテンプレート|
 |ダイアログ ボックス|1. このダイアログボックス<br />2. ダイアログボックスを所有するウィンドウ<br />3. Application ( `CWinApp` オブジェクト)|
 

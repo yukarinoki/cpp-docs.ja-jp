@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: Platform:: Collections:: InputIterator クラス'
 title: Platform::Collections::InputIterator クラス
 ms.date: 03/27/2019
 ms.topic: reference
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - InputIterator Class
 ms.assetid: ef72eea4-32a9-42b9-8119-ce87dbdcd3be
-ms.openlocfilehash: 4aeef07a34c04bd1ab47acf808026024faada567
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 7345435c57c75c04f0eb30d9773d655d713853de
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87218430"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97283957"
 ---
 # <a name="platformcollectionsinputiterator-class"></a>Platform::Collections::InputIterator クラス
 
@@ -38,8 +39,8 @@ InputIterator テンプレート クラスの型名。
 |----------|-----------------|
 |`difference_type`|ポインターの相違点 (ptrdiff_t)。|
 |`iterator_category`|入力反復子のカテゴリ (::std::input_iterator_tag)。|
-|`pointer`|へのポインター。`const X`|
-|`reference`|への参照。`const X`|
+|`pointer`|へのポインター。 `const X`|
+|`reference`|への参照。 `const X`|
 |`value_type`|`X` 型名。|
 
 ### <a name="public-constructors"></a>パブリック コンストラクター
@@ -62,13 +63,13 @@ InputIterator テンプレート クラスの型名。
 
 `InputIterator`
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 **ヘッダー:** collection.h
 
 **名前空間:** Platform::Collections
 
-## <a name="inputiteratorinputiterator-constructor"></a><a name="ctor"></a>InputIterator:: InputIterator コンストラクター
+## <a name="inputiteratorinputiterator-constructor"></a><a name="ctor"></a> InputIterator:: InputIterator コンストラクター
 
 InputIterator クラスの新しいインスタンスを初期化します。
 
@@ -81,10 +82,10 @@ explicit InputIterator(Windows::Foundation::Collections<X>^ iterator);
 
 ### <a name="parameters"></a>パラメーター
 
-*反*<br/>
+*iterator*<br/>
 反復子オブジェクト。
 
-## <a name="inputiteratoroperator-gt-operator"></a><a name="operator-arrow"></a>InputIterator:: operator- &gt; 演算子
+## <a name="inputiteratoroperator-gt-operator"></a><a name="operator-arrow"></a> InputIterator:: operator- &gt; 演算子
 
 現在の InputIterator により指定される要素のアドレスを取得します。
 
@@ -98,7 +99,7 @@ pointer operator->() const;
 
 現在の InputIterator により指定される要素のアドレス。
 
-## <a name="inputiteratoroperator-operator"></a><a name="operator-dereference"></a>InputIterator:: operator \* 演算子
+## <a name="inputiteratoroperator-operator"></a><a name="operator-dereference"></a> InputIterator:: operator \* 演算子
 
 現在の InputIterator により指定された要素への参照を取得します。
 
@@ -112,7 +113,7 @@ reference operator*() const;
 
 現在の InputIterator により指定された要素。
 
-## <a name="inputiteratoroperator-operator"></a><a name="operator-equality"></a>InputIterator:: operator = = 演算子
+## <a name="inputiteratoroperator-operator"></a><a name="operator-equality"></a> InputIterator:: operator = = 演算子
 
 現在の InputIterator が、指定された InputIterator と等しいかどうかを示します。
 
@@ -129,9 +130,9 @@ bool operator== (const InputIterator& other) const;
 
 ### <a name="return-value"></a>戻り値
 
-**`true`** 現在の InputIterator が*other*と等しい場合は。それ以外の場合は **`false`** 。
+**`true`** 現在の InputIterator が *other* と等しい場合は。それ以外の場合は **`false`** 。
 
-## <a name="inputiteratoroperator-operator"></a><a name="operator-increment"></a>InputIterator:: operator + + 演算子
+## <a name="inputiteratoroperator-operator"></a><a name="operator-increment"></a> InputIterator:: operator + + 演算子
 
 現在の InputIterator をインクリメントします。
 
@@ -152,7 +153,7 @@ InputIterator operator++(int);
 
 2 番目の構文は、現在の InputIterator の後置インクリメントを実行します。 **`int`** 2 番目の構文の型は、実際の整数オペランドではなく、後置インクリメント演算を示します。
 
-## <a name="inputiteratoroperator-operator"></a><a name="operator-inequality"></a>InputIterator:: operator! = 演算子
+## <a name="inputiteratoroperator-operator"></a><a name="operator-inequality"></a> InputIterator:: operator! = 演算子
 
 現在の InputIterator が、指定された InputIterator と等しくないかどうかを示します。
 
@@ -169,7 +170,7 @@ bool operator!=(const InputIterator& other) const;
 
 ### <a name="return-value"></a>戻り値
 
-**`true`** 現在の InputIterator が*other*と等しくない場合は。それ以外の場合は **`false`** 。
+**`true`** 現在の InputIterator が *other* と等しくない場合は。それ以外の場合は **`false`** 。
 
 ## <a name="see-also"></a>関連項目
 

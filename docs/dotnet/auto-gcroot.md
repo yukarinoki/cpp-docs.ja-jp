@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: auto_gcroot'
 title: auto_gcroot
 ms.date: 11/04/2016
 ms.topic: reference
@@ -7,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - auto_gcroot
 ms.assetid: 1084ff0f-3094-4d19-8646-1314c0733355
-ms.openlocfilehash: 24640f6c98b54f2df8deec6bf8bcf2a352d8b461
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 64a3b717d07831bb11b7e80e42096e776501657a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62223002"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97282784"
 ---
-# <a name="autogcroot"></a>auto_gcroot
+# <a name="auto_gcroot"></a>auto_gcroot
 
-定義、`auto_gcroot`クラスと`swap`関数。
+`auto_gcroot`クラスと関数を定義し `swap` ます。
 
 ## <a name="syntax"></a>構文
 
@@ -24,9 +25,9 @@ ms.locfileid: "62223002"
 #include <msclr\auto_gcroot.h>
 ```
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-このヘッダー ファイル。
+次のヘッダーファイル:
 
 [auto_gcroot クラス](../dotnet/auto-gcroot-class.md)
 
@@ -34,4 +35,4 @@ ms.locfileid: "62223002"
 
 ## <a name="see-also"></a>関連項目
 
-[C++ のサポート ライブラリ](../dotnet/cpp-support-library.md)
+[C++ サポートライブラリ](../dotnet/cpp-support-library.md)
