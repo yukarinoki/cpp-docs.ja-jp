@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「コンパイラエラー C2480」を参照してください。
 title: コンパイラ エラー C2480
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,20 +7,20 @@ f1_keywords:
 helpviewer_keywords:
 - C2480
 ms.assetid: 1a58d1c2-971b-4084-96fa-f94aa51c02f1
-ms.openlocfilehash: 3e495a8019405a558511637467133877dae1183e
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 0c7f73b7e1aa205d38577602b93907309935b216
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74743524"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97316545"
 ---
 # <a name="compiler-error-c2480"></a>コンパイラ エラー C2480
 
 ' identifier ': ' thread ' は静的なデータ項目に対してのみ有効です
 
-`thread` 属性を、自動変数、非静的データメンバー、関数パラメーター、または関数の宣言または定義で使用することはできません。
+`thread`自動変数、非静的データメンバー、関数パラメーター、または関数の宣言または定義で属性を使用することはできません。
 
-グローバル変数、静的データメンバー、およびローカルの静的変数に対してのみ、`thread` 属性を使用します。
+`thread`グローバル変数、静的データメンバー、およびローカルの静的変数に対してのみ属性を使用します。
 
 次の例では、C2480 が生成されます。
 

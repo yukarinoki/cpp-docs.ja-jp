@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: CTaskDialog クラス'
 title: CTaskDialog Class
 ms.date: 11/19/2018
 f1_keywords:
@@ -116,12 +117,12 @@ helpviewer_keywords:
 - CTaskDialog [MFC], ShowDialog
 - CTaskDialog [MFC], TaskDialogCallback
 ms.assetid: 1991ec98-ae56-4483-958b-233809c8c559
-ms.openlocfilehash: 3fd67eed7e80a2e594710df8ae8bc6fd13f0e96c
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 91cd3caec703f8e81116fccd75c0457abb69a3e9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88837672"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97318586"
 ---
 # <a name="ctaskdialog-class"></a>CTaskDialog Class
 
@@ -220,7 +221,7 @@ class CTaskDialog : public CObject
 |`m_nProgressPos`|プログレスバーの現在の位置。  この値の有効値の範囲は `m_nProgressRangeMin` ～ `m_nProgressRangeMax` です。|
 |`m_nProgressRangeMax`|プログレスバーの最大値。|
 |`m_nProgressRangeMin`|プログレスバーの最小値。|
-|`m_nProgressState`|プログレスバーの状態。 詳細については、「 [CTaskDialog:: setのステータスバーの状態](#setprogressbarstate)」を参照してください。|
+|`m_nProgressState`|進行状況バーの状態。 詳細については、「 [CTaskDialog:: setのステータスバーの状態](#setprogressbarstate)」を参照してください。|
 |`m_nRadioId`|選択されたラジオボタンコントロールの ID。|
 |`m_nWidth`|`CTaskDialog` の幅 (ピクセル単位)。|
 |`m_strCollapse`|展開された `CTaskDialog` 情報が非表示になったときに、展開ボックスの右側に表示される文字列。|
@@ -245,7 +246,7 @@ class CTaskDialog : public CObject
 ![CTaskDialog の例](../../mfc/reference/media/ctaskdialogsample.png "CTaskDialog の例") <br/>
 CTaskDialog サンプル
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **最低限必要なオペレーティングシステム:** Windows Vista
 
@@ -409,7 +410,7 @@ CTaskDialog(
 
 アプリケーションにを追加するには、次の2つの方法があり `CTaskDialog` ます。 最初の方法では、コンストラクターの1つを使用し `CTaskDialog` てを作成し、 [CTaskDialog::D omodal](#domodal)を使用して表示します。 2番目の方法では、静的関数 [CTaskDialog:: ShowDialog](#showdialog)を使用します。これにより、 `CTaskDialog` オブジェクトを明示的に作成せずにを表示でき `CTaskDialog` ます。
 
-2番目のコンストラクターは、アプリケーションのリソースファイルからのデータを使用して、コマンドボタンコントロールを作成します。 リソースファイル内の文字列テーブルには、文字列 Id が関連付けられた複数の文字列があります。 このメソッドは、NIDCommandControlsFirst と*Ncommand*の間の文字列テーブル内の*nIDCommandControlsFirst*有効な各エントリに対して、コマンドボタンコントロールを追加します。 これらのコマンドボタンコントロールでは、文字列テーブル内の文字列はコントロールのキャプションで、文字列 ID はコントロールの ID です。
+2番目のコンストラクターは、アプリケーションのリソースファイルからのデータを使用して、コマンドボタンコントロールを作成します。 リソースファイル内の文字列テーブルには、文字列 Id が関連付けられた複数の文字列があります。 このメソッドは、NIDCommandControlsFirst と *Ncommand* の間の文字列テーブル内の有効な各エントリに対して、コマンドボタンコントロールを追加します。 これらのコマンドボタンコントロールでは、文字列テーブル内の文字列はコントロールのキャプションで、文字列 ID はコントロールの ID です。
 
 有効なオプションの一覧については、「 [CTaskDialog:: SetOptions](#setoptions) 」を参照してください。
 
@@ -593,7 +594,7 @@ BOOL IsCommandControlEnabled(int nCommandControlID) const;
 
 このメソッドを使用すると、コマンドボタンコントロールとクラス * の共通ボタンの両方が使用可能かどうかを判断でき `CTaskDialog` ます。
 
-*Ncommandcontrolid*が、共通ボタンまたはコマンドボタンコントロールの有効な識別子ではない場合 `CTaskDialog` 、このメソッドは例外をスローします。
+*Ncommandcontrolid* が、共通ボタンまたはコマンドボタンコントロールの有効な識別子ではない場合 `CTaskDialog` 、このメソッドは例外をスローします。
 
 ### <a name="example"></a>例
 
@@ -618,7 +619,7 @@ BOOL IsRadioButtonEnabled(int nRadioButtonID) const;
 
 ### <a name="remarks"></a>解説
 
-*NRadioButtonID*がオプションボタンの有効な識別子ではない場合、このメソッドは例外をスローします。
+*NRadioButtonID* がオプションボタンの有効な識別子ではない場合、このメソッドは例外をスローします。
 
 ### <a name="example"></a>例
 
@@ -664,7 +665,7 @@ void LoadCommandControls(
 
 ### <a name="remarks"></a>解説
 
-このメソッドは、アプリケーションのリソースファイルからのデータを使用して、コマンドボタンコントロールを作成します。 リソースファイル内の文字列テーブルには、文字列 Id が関連付けられた複数の文字列があります。 このメソッドを使用して追加された新しいコマンドボタンコントロールは、コントロールのキャプションに文字列を、コントロールの ID に文字列 ID を使用します。 選択された文字列の範囲は、 *nIDCommandControlsFirst と* *ncommand*によって指定されます。 範囲内に空のエントリがある場合、メソッドはそのエントリのコマンドボタンコントロールを追加しません。
+このメソッドは、アプリケーションのリソースファイルからのデータを使用して、コマンドボタンコントロールを作成します。 リソースファイル内の文字列テーブルには、文字列 Id が関連付けられた複数の文字列があります。 このメソッドを使用して追加された新しいコマンドボタンコントロールは、コントロールのキャプションに文字列を、コントロールの ID に文字列 ID を使用します。 選択された文字列の範囲は、 *nIDCommandControlsFirst と* *ncommand* によって指定されます。 範囲内に空のエントリがある場合、メソッドはそのエントリのコマンドボタンコントロールを追加しません。
 
 既定では、新しいコマンドボタンコントロールが有効になり、昇格は必要ありません。
 
@@ -692,7 +693,7 @@ void LoadRadioButtons(
 
 ### <a name="remarks"></a>解説
 
-このメソッドは、アプリケーションのリソースファイルからのデータを使用して、オプションボタンを作成します。 リソースファイル内の文字列テーブルには、文字列 Id が関連付けられた複数の文字列があります。 このメソッドを使用して追加された新しいラジオボタンは、ラジオボタンのキャプションに文字列を使用し、ラジオボタンの ID に文字列 ID を使用します。 選択された文字列の範囲は、 *nIDRadioButtonsFirst* および *nRadioButtonsLast*によって指定されます。 範囲内に空のエントリがある場合、メソッドはそのエントリに対してオプションボタンを追加しません。
+このメソッドは、アプリケーションのリソースファイルからのデータを使用して、オプションボタンを作成します。 リソースファイル内の文字列テーブルには、文字列 Id が関連付けられた複数の文字列があります。 このメソッドを使用して追加された新しいラジオボタンは、ラジオボタンのキャプションに文字列を使用し、ラジオボタンの ID に文字列 ID を使用します。 選択された文字列の範囲は、 *nIDRadioButtonsFirst* および *nRadioButtonsLast* によって指定されます。 範囲内に空のエントリがある場合、メソッドはそのエントリに対してオプションボタンを追加しません。
 
 既定では、新しいオプションボタンが有効になっています。
 
@@ -716,7 +717,7 @@ void NavigateTo(CTaskDialog& oTaskDialog) const;
 
 ### <a name="remarks"></a>解説
 
-このメソッドは、 `CTaskDialog` *Otaskdialog*を表示するときに、現在のを非表示にします。 *Otaskdialog*は、現在のと同じ場所に表示され `CTaskDialog` ます。
+このメソッドは、 `CTaskDialog` *Otaskdialog* を表示するときに、現在のを非表示にします。 *Otaskdialog* は、現在のと同じ場所に表示され `CTaskDialog` ます。
 
 ## <a name="ctaskdialogoncommandcontrolclick"></a><a name="oncommandcontrolclick"></a> CTaskDialog:: OnCommandControlClick
 
@@ -1004,7 +1005,7 @@ Ctaskdialog [クラス](../../mfc/reference/ctaskdialog-class.md) のインス�
 
 このメソッドを使用して、このでは使用できない共通ボタンを無効または昇格する場合 `CTaskDialog` 、このメソッドは、 [保証](diagnostic-services.md#ensure) マクロを使用して例外をスローします。
 
-このメソッドは、で使用可能なすべてのボタンを有効にしますが、 `CTaskDialog` 以前に無効になっていた場合でも、 *nDisabledButtonMask*には含まれません。 このメソッドは、昇格を同様の方法で処理します。共通ボタンが使用可能であっても、 *nElevationButtonMask*に含まれていない場合は、一般的なボタンが表示されます。
+このメソッドは、で使用可能なすべてのボタンを有効にしますが、 `CTaskDialog` 以前に無効になっていた場合でも、 *nDisabledButtonMask* には含まれません。 このメソッドは、昇格を同様の方法で処理します。共通ボタンが使用可能であっても、 *nElevationButtonMask* に含まれていない場合は、一般的なボタンが表示されます。
 
 ### <a name="example"></a>例
 
@@ -1036,9 +1037,9 @@ void SetCommonButtons(
 
 クラスのこのインスタンスの表示ウィンドウが作成された後に、このメソッドを呼び出すことはできません `CTaskDialog` 。 このメソッドを実行すると、例外がスローされます。
 
-*Nbuttonmask*によって示されるボタンは、以前にに追加された共通ボタンをオーバーライドし `CTaskDialog` ます。 *Nbuttonmask*に示されているボタンのみ使用できます。
+*Nbuttonmask* によって示されるボタンは、以前にに追加された共通ボタンをオーバーライドし `CTaskDialog` ます。 *Nbuttonmask* に示されているボタンのみ使用できます。
 
-*NDisabledButtonMask*または*NElevationButtonMask*に*nbuttonmask*にないボタンが含まれている場合、このメソッドは、[保証](diagnostic-services.md#ensure)マクロを使用して例外をスローします。
+*NDisabledButtonMask* または *NElevationButtonMask* に *nbuttonmask* にないボタンが含まれている場合、このメソッドは、[保証](diagnostic-services.md#ensure)マクロを使用して例外をスローします。
 
 既定では、すべての共通ボタンが有効になり、昇格は必要ありません。
 
@@ -1084,7 +1085,7 @@ void SetDefaultCommandControl(int nCommandControlID);
 
 既定のコマンドボタンコントロールは、が `CTaskDialog` 最初にユーザーに表示されるときに選択されるコントロールです。
 
-*Ncommandcontrolid*によって指定されたコマンドボタンコントロールが見つからない場合、このメソッドは例外をスローします。
+*Ncommandcontrolid* によって指定されたコマンドボタンコントロールが見つからない場合、このメソッドは例外をスローします。
 
 ### <a name="example"></a>例
 
@@ -1107,7 +1108,7 @@ void SetDefaultRadioButton(int nRadioButtonID);
 
 既定のオプションボタンは、 `CTaskDialog` が最初にユーザーに表示されるときに選択されるボタンです。
 
-*NRadioButtonID*によって指定されたオプションボタンが見つからない場合、このメソッドは例外をスローします。
+*NRadioButtonID* によって指定されたオプションボタンが見つからない場合、このメソッドは例外をスローします。
 
 ### <a name="example"></a>例
 
@@ -1130,7 +1131,7 @@ void SetDialogWidth(int nWidth = 0);
 
 パラメーター *nWidth* は0以上である必要があります。 それ以外の場合、このメソッドは例外をスローします。
 
-*NWidth*が0に設定されている場合、このメソッドはダイアログボックスを既定のサイズに設定します。
+*NWidth* が0に設定されている場合、このメソッドはダイアログボックスを既定のサイズに設定します。
 
 ### <a name="example"></a>例
 
@@ -1162,7 +1163,7 @@ void SetExpansionArea(
 
 クラスの展開領域を `CTaskDialog` 使用すると、ユーザーに追加情報を提供できます。 展開領域はのメイン部分にあり `CTaskDialog` 、タイトルとコンテンツ文字列のすぐ下に配置されます。
 
-が最初に表示されるときは、展開された `CTaskDialog` 情報が表示されず、 `strCollapsedLabel` 展開ボタンの横に配置されます。 ユーザーが展開ボタンをクリックすると、 `CTaskDialog` *Strexpandedinformation* が表示され、ラベルが *strexpandedinformation*に変わります。
+が最初に表示されるときは、展開された `CTaskDialog` 情報が表示されず、 `strCollapsedLabel` 展開ボタンの横に配置されます。 ユーザーが展開ボタンをクリックすると、 `CTaskDialog` *Strexpandedinformation* が表示され、ラベルが *strexpandedinformation* に変わります。
 
 ### <a name="example"></a>例
 
@@ -1330,9 +1331,9 @@ void SetProgressBarMarquee(
 
 クラスのメインテキストの下に、マーキーバーが表示され `CTaskDialog` ます。
 
-*NMarqueeSpeed*を使用して、マーキーバーの速度を設定します。値が大きいほど低速であることを示します。 *NMarqueeSpeed*の値を0に設定すると、マーキーバーは Windows の既定の速度で移動します。
+*NMarqueeSpeed* を使用して、マーキーバーの速度を設定します。値が大きいほど低速であることを示します。 *NMarqueeSpeed* の値を0に設定すると、マーキーバーは Windows の既定の速度で移動します。
 
-*NMarqueeSpeed*が0未満の場合、このメソッドは、[保証](diagnostic-services.md#ensure)マクロで例外をスローします。
+*NMarqueeSpeed* が0未満の場合、このメソッドは、[保証](diagnostic-services.md#ensure)マクロで例外をスローします。
 
 ### <a name="example"></a>例
 
@@ -1353,7 +1354,7 @@ void SetProgressBarPosition(int nProgressPos);
 
 ### <a name="remarks"></a>解説
 
-*Nprogress Spos*が進行状況バーの範囲内にない場合、このメソッドは、[保証](diagnostic-services.md#ensure)マクロで例外をスローします。 [「CTaskDialog:: setprogress Barrange](#setprogressbarrange)」で進行状況バーの範囲を変更できます。
+*Nprogress Spos* が進行状況バーの範囲内にない場合、このメソッドは、[保証](diagnostic-services.md#ensure)マクロで例外をスローします。 [「CTaskDialog:: setprogress Barrange](#setprogressbarrange)」で進行状況バーの範囲を変更できます。
 
 ### <a name="example"></a>例
 
@@ -1379,11 +1380,11 @@ void SetProgressBarRange(
 
 ### <a name="remarks"></a>解説
 
-プログレスバーの位置は、 *nRangeMin* と *nRangeMax*を基準にしています。 たとえば、 *nRangeMin* が50で *nRangeMax* が100の場合、75の位置はプログレスバーの半分になります。 [CTaskDialog:: setprogress Barposition](#setprogressbarposition)を使用して、進行状況バーの位置を設定します。
+プログレスバーの位置は、 *nRangeMin* と *nRangeMax* を基準にしています。 たとえば、 *nRangeMin* が50で *nRangeMax* が100の場合、75の位置はプログレスバーの半分になります。 [CTaskDialog:: setprogress Barposition](#setprogressbarposition)を使用して、進行状況バーの位置を設定します。
 
 進行状況バーを表示するには、オプション TDF_SHOW_PROGRESS_BAR が有効になっていて、TDF_SHOW_MARQUEE_PROGRESS_BAR 有効になっている必要があります。 このメソッドは、自動的に TDF_SHOW_PROGRESS_BAR を設定し、TDF_SHOW_MARQUEE_PROGRESS_BAR をクリアします。 Ctaskdialog[クラス](../../mfc/reference/ctaskdialog-class.md)のこのインスタンスのオプションを手動で変更するには、 [Ctaskdialog:: SetOptions](#setoptions)を使用します。
 
-このメソッドは、 *nRangeMin*が*nRangeMax*未満でない場合に、[必ず](diagnostic-services.md#ensure)マクロを使用して例外をスローします。 このメソッドは、 `CTaskDialog` が既に表示されていて、マーキープログレスバーがある場合にも例外をスローします。
+このメソッドは、 *nRangeMin* が *nRangeMax* 未満でない場合に、[必ず](diagnostic-services.md#ensure)マクロを使用して例外をスローします。 このメソッドは、 `CTaskDialog` が既に表示されていて、マーキープログレスバーがある場合にも例外をスローします。
 
 ### <a name="example"></a>例
 
@@ -1406,7 +1407,7 @@ void SetProgressBarState(int nState = PBST_NORMAL);
 
 このメソッドは、が既に表示されていて、マーキープログレスバーがある [場合、このマクロを](diagnostic-services.md#ensure) 使用して例外をスローし `CTaskDialog` ます。
 
-次の表に、 *nState*で使用できる値を示します。 これらのすべての場合、進行状況バーは、指定された停止位置に到達するまで通常の色で塗りつぶされます。 その時点で、状態に基づいて色が変更されます。
+次の表に、 *nState* で使用できる値を示します。 これらのすべての場合、進行状況バーは、指定された停止位置に到達するまで通常の色で塗りつぶされます。 その時点で、状態に基づいて色が変更されます。
 
 |名前|説明|
 |-|-|
@@ -1440,7 +1441,7 @@ void SetRadioButtonOptions(
 
 ### <a name="remarks"></a>解説
 
-このメソッドは、 *nRadioButtonID*がラジオボタンの有効な ID でない場合に、[必ず](diagnostic-services.md#ensure)マクロを使用して例外をスローします。
+このメソッドは、 *nRadioButtonID* がラジオボタンの有効な ID でない場合に、[必ず](diagnostic-services.md#ensure)マクロを使用して例外をスローします。
 
 ### <a name="example"></a>例
 
@@ -1478,7 +1479,7 @@ void SetVerificationCheckboxText(CString& strVerificationText);
 
 ### <a name="remarks"></a>解説
 
-このメソッドは、クラスのこの[ENSURE](diagnostic-services.md#ensure)インスタンス `CTaskDialog` が既に表示されている場合に、必ずマクロを使用して例外をスローします。
+このメソッドは、クラスのこの[](diagnostic-services.md#ensure)インスタンス `CTaskDialog` が既に表示されている場合に、必ずマクロを使用して例外をスローします。
 
 ### <a name="example"></a>例
 
@@ -1553,7 +1554,7 @@ static INT_PTR ShowDialog(
 
 この静的メソッドを使用すると、 `CTaskDialog` コード内にオブジェクトを明示的に作成せずに、クラスのインスタンスを作成でき `CTaskDialog` ます。 オブジェクトが存在しないため、 `CTaskDialog` このメソッドを使用してを `CTaskDialog` ユーザーに表示する場合は、の他のメソッドを呼び出すことはできません `CTaskDialog` 。
 
-このメソッドは、アプリケーションのリソースファイルからのデータを使用して、コマンドボタンコントロールを作成します。 リソースファイル内の文字列テーブルには、文字列 Id が関連付けられた複数の文字列があります。 このメソッドは、NIDCommandControlsFirst と*Ncommand*の間の文字列テーブル内の*nIDCommandControlsFirst*有効な各エントリに対して、コマンドボタンコントロールを追加します。 これらのコマンドボタンコントロールでは、文字列テーブル内の文字列はコントロールのキャプションで、文字列 ID はコントロールの ID です。
+このメソッドは、アプリケーションのリソースファイルからのデータを使用して、コマンドボタンコントロールを作成します。 リソースファイル内の文字列テーブルには、文字列 Id が関連付けられた複数の文字列があります。 このメソッドは、NIDCommandControlsFirst と *Ncommand* の間の文字列テーブル内の有効な各エントリに対して、コマンドボタンコントロールを追加します。 これらのコマンドボタンコントロールでは、文字列テーブル内の文字列はコントロールのキャプションで、文字列 ID はコントロールの ID です。
 
 有効なオプションの一覧については、「 [CTaskDialog:: SetOptions](#setoptions) 」を参照してください。
 
@@ -1602,7 +1603,7 @@ HRESULT TaskDialogCallback(
 
 の既定の実装では、 `TaskDialogCallback` 特定のメッセージが処理された後、 [CTaskDialog クラス](../../mfc/reference/ctaskdialog-class.md)の適切な On メソッドが呼び出されます。 たとえば、TDN_BUTTON_CLICKED メッセージに対する応答として `TaskDialogCallback` 、 [CTaskDialog:: OnCommandControlClick](#oncommandcontrolclick)を呼び出します。
 
-*WParam*および*lParam*の値は、生成された特定のメッセージによって異なります。 これらの値のいずれかまたは両方を空にすることができます。 次の表に、サポートされている既定の通知と、 *wParam* と *lParam* の値の意味を示します。 派生クラスでこのメソッドをオーバーライドする場合は、次の表の各メッセージに対してコールバックコードを実装する必要があります。
+*WParam* および *lParam* の値は、生成された特定のメッセージによって異なります。 これらの値のいずれかまたは両方を空にすることができます。 次の表に、サポートされている既定の通知と、 *wParam* と *lParam* の値の意味を示します。 派生クラスでこのメソッドをオーバーライドする場合は、次の表の各メッセージに対してコールバックコードを実装する必要があります。
 
 |通知メッセージ|*wParam* 数値|*lParam* 数値|
 |--------------------------|--------------------|--------------------|

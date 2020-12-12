@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: 生 (C++)'
 title: naked (C++)
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - __declspec keyword [C++], naked
 - naked __declspec keyword
 ms.assetid: 69723241-05e1-439b-868e-20a83a16ab6d
-ms.openlocfilehash: cff2455608966886e9c5b07039dff439538caefe
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 1f416f116d7d2a3179dc43545f1302fcd9c7d101
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87227336"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97313828"
 ---
 # <a name="naked-c"></a>naked (C++)
 
@@ -28,9 +29,9 @@ __declspec(naked) declarator
 
 ## <a name="remarks"></a>解説
 
-属性は **`naked`** 関数の定義だけに関連し、型修飾子ではないため、生の関数では拡張属性構文と[__declspec](../cpp/declspec.md)キーワードを使用する必要があります。
+属性は **`naked`** 関数の定義だけに関連し、型修飾子ではないため、生の関数では拡張属性構文と [__declspec](../cpp/declspec.md) キーワードを使用する必要があります。
 
-関数が[__forceinline](inline-functions-cpp.md)キーワードでマークされている場合でも、コンパイラは、生の属性でマークされた関数のインライン関数を生成できません。
+関数が [__forceinline](inline-functions-cpp.md) キーワードでマークされている場合でも、コンパイラは、生の属性でマークされた関数のインライン関数を生成できません。
 
 **`naked`** 非メンバーメソッドの定義以外に属性が適用されると、コンパイラはエラーを発行します。
 

@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: CTable クラス'
 title: CTable クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - CTable class
 - Open method
 ms.assetid: f13fdaa3-e198-4557-977d-54b0bbc3454d
-ms.openlocfilehash: a967ef8fa2832afd56442ae4f988ba080d0b2872
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 62808080a68bbd5de00b39c43661e06617ba53f1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88845641"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97317728"
 ---
 # <a name="ctable-class"></a>CTable クラス
 
@@ -41,7 +42,7 @@ class CTable :
 *TRowset*<br/>
 行セットクラス。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** atldbcli.h
 
@@ -95,10 +96,10 @@ HRESULT Open(const CSession& session,
 から `DBID` 開くテーブルの。
 
 *pPropSet*<br/>
-から設定するプロパティと値を格納している [DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85)) 構造体の配列へのポインター。 Windows SDK の*OLE DB プログラマーリファレンス*の「[プロパティセットとプロパティグループ](/previous-versions/windows/desktop/ms713696(v=vs.85))」を参照してください。 既定値の NULL はプロパティを指定しません。
+から設定するプロパティと値を格納している [DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85)) 構造体の配列へのポインター。 Windows SDK の *OLE DB プログラマーリファレンス* の「[プロパティセットとプロパティグループ](/previous-versions/windows/desktop/ms713696(v=vs.85))」を参照してください。 既定値の NULL はプロパティを指定しません。
 
 *ulPropSets*<br/>
-から*PPropSet*引数で渡される[DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85))構造体の数。
+から *PPropSet* 引数で渡される [DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85))構造体の数。
 
 ### <a name="return-value"></a>戻り値
 
@@ -106,7 +107,7 @@ HRESULT Open(const CSession& session,
 
 ### <a name="remarks"></a>解説
 
-詳細については、 *OLE DB プログラマーリファレンス*の「 [IOpenRowset:: OpenRowset](/previous-versions/windows/desktop/ms716724(v=vs.85)) 」を参照してください。
+詳細については、 *OLE DB プログラマーリファレンス* の「 [IOpenRowset:: OpenRowset](/previous-versions/windows/desktop/ms716724(v=vs.85)) 」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: CWaitCursor クラス'
 title: CWaitCursor クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - CWaitCursor [MFC], CWaitCursor
 - CWaitCursor [MFC], Restore
 ms.assetid: 5dfae2ff-d7b6-4383-b0ad-91e0868c67b3
-ms.openlocfilehash: dfeedad18b3ebcefedff446699f074c86037a4a3
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: f9552dcd6f5304c96d550e153870f69d78d932ad
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87222876"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97318469"
 ---
 # <a name="cwaitcursor-class"></a>CWaitCursor クラス
 
@@ -31,19 +32,19 @@ class CWaitCursor
 
 ### <a name="public-constructors"></a>パブリック コンストラクター
 
-|名前|[説明]|
+|名前|説明|
 |----------|-----------------|
 |[CWaitCursor::CWaitCursor](#cwaitcursor)|オブジェクトを構築 `CWaitCursor` し、待機カーソルを表示します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
-|名前|[説明]|
+|名前|説明|
 |----------|-----------------|
 |[CWaitCursor:: Restore](#restore)|変更された待機カーソルを復元します。|
 
 ## <a name="remarks"></a>解説
 
-`CWaitCursor`に基底クラスがありません。
+`CWaitCursor` に基底クラスがありません。
 
 優れた Windows プログラミング手法を使用するには、時間がかかる操作を実行するたびに待機カーソルを表示する必要があります。
 
@@ -54,18 +55,18 @@ class CWaitCursor
 > [!NOTE]
 > コンストラクターとデストラクターがどのように動作するかによっ `CWaitCursor` て、オブジェクトは常にローカル変数として宣言されます。グローバル変数として宣言されることも、で割り当てられることもありません **`new`** 。
 
-メッセージボックスやダイアログボックスの表示など、カーソルが変更される可能性のある操作を実行する場合は、 [restore](#restore)メンバー関数を呼び出して待機カーソルを復元します。 `Restore`待機カーソルが現在表示されている場合でも、を呼び出すことはできます。
+メッセージボックスやダイアログボックスの表示など、カーソルが変更される可能性のある操作を実行する場合は、 [restore](#restore) メンバー関数を呼び出して待機カーソルを復元します。 `Restore`待機カーソルが現在表示されている場合でも、を呼び出すことはできます。
 
-待機カーソルを表示するもう1つの方法は、 [ccmdtarget:: BeginWaitCursor](../../mfc/reference/ccmdtarget-class.md#beginwaitcursor)、 [Ccmdtarget:: EndWaitCursor](../../mfc/reference/ccmdtarget-class.md#endwaitcursor)、および[RestoreWaitCursor](../../mfc/reference/ccmdtarget-class.md#restorewaitcursor)の組み合わせを使用することです。 ただし、 `CWaitCursor` 長い操作が終了したときにカーソルを前のカーソルに設定する必要がないため、を使用する方が簡単です。
+待機カーソルを表示するもう1つの方法は、 [ccmdtarget:: BeginWaitCursor](../../mfc/reference/ccmdtarget-class.md#beginwaitcursor)、 [Ccmdtarget:: EndWaitCursor](../../mfc/reference/ccmdtarget-class.md#endwaitcursor)、および [RestoreWaitCursor](../../mfc/reference/ccmdtarget-class.md#restorewaitcursor)の組み合わせを使用することです。 ただし、 `CWaitCursor` 長い操作が終了したときにカーソルを前のカーソルに設定する必要がないため、を使用する方が簡単です。
 
 > [!NOTE]
-> MFC では、 [CWinApp::D oWaitCursor](../../mfc/reference/cwinapp-class.md#dowaitcursor)仮想関数を使用してカーソルを設定し、復元します。 この関数をオーバーライドして、カスタム動作を提供できます。
+> MFC では、 [CWinApp::D oWaitCursor](../../mfc/reference/cwinapp-class.md#dowaitcursor) 仮想関数を使用してカーソルを設定し、復元します。 この関数をオーバーライドして、カスタム動作を提供できます。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
 `CWaitCursor`
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** afxwin.h
 
@@ -73,7 +74,7 @@ class CWaitCursor
 
 [!code-cpp[NVC_MFCWindowing#62](../../mfc/reference/codesnippet/cpp/cwaitcursor-class_1.cpp)]
 
-## <a name="cwaitcursorcwaitcursor"></a><a name="cwaitcursor"></a>CWaitCursor::CWaitCursor
+## <a name="cwaitcursorcwaitcursor"></a><a name="cwaitcursor"></a> CWaitCursor::CWaitCursor
 
 待機カーソルを表示するには、時間の `CWaitCursor` かかる操作を実行するコードの前にオブジェクトを宣言するだけです。
 
@@ -96,7 +97,7 @@ CWaitCursor();
 
 [!code-cpp[NVC_MFCWindowing#63](../../mfc/reference/codesnippet/cpp/cwaitcursor-class_2.cpp)]
 
-## <a name="cwaitcursorrestore"></a><a name="restore"></a>CWaitCursor:: Restore
+## <a name="cwaitcursorrestore"></a><a name="restore"></a> CWaitCursor:: Restore
 
 待機カーソルを復元するには、メッセージボックスやダイアログボックスの表示などの操作を実行した後に、この関数を呼び出します。これにより、待機カーソルが別のカーソルに変わる可能性があります。
 

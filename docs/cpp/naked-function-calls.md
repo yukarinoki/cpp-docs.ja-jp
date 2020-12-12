@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: 生関数の呼び出し'
 title: naked 関数呼び出し
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -11,18 +12,18 @@ helpviewer_keywords:
 - naked keyword [C++]
 - naked keyword [C++], storage-class attribute
 ms.assetid: 2a66847a-a43f-4541-a7be-c9f5f29b5fdb
-ms.openlocfilehash: 9b49d34d7276d3c9260488f23d1821b9708d2481
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: ffc28b65a8c16881164805f0cfa55ffe1bc54e9b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87227323"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97313802"
 ---
 # <a name="naked-function-calls"></a>naked 関数呼び出し
 
 **Microsoft 固有の仕様**
 
-属性を使用して宣言 **`naked`** された関数は、プロローグまたはエピローグコードなしで生成されるため、[インラインアセンブラー](../assembler/inline/inline-assembler.md)を使用して独自のカスタムプロローグ/エピローグシーケンスを記述できます。 naked 関数は高度な機能です。 これにより、C/C++ 以外のコンテキストから呼び出される関数を宣言して、パラメーターの存在する場所や保持されるレジスタについて、異なる想定をすることができます。 例としては、割り込みハンドラーのようなルーチンが挙げられます。 この機能は、仮想デバイス ドライバー (VxD) を作成するときに特に便利です。
+属性を使用して宣言 **`naked`** された関数は、プロローグまたはエピローグコードなしで生成されるため、 [インラインアセンブラー](../assembler/inline/inline-assembler.md)を使用して独自のカスタムプロローグ/エピローグシーケンスを記述できます。 naked 関数は高度な機能です。 これにより、C/C++ 以外のコンテキストから呼び出される関数を宣言して、パラメーターの存在する場所や保持されるレジスタについて、異なる想定をすることができます。 例としては、割り込みハンドラーのようなルーチンが挙げられます。 この機能は、仮想デバイス ドライバー (VxD) を作成するときに特に便利です。
 
 ## <a name="what-do-you-want-to-know-more-about"></a>さらに詳しくは次のトピックをクリックしてください
 

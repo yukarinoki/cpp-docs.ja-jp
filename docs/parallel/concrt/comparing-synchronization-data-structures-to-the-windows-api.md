@@ -1,22 +1,23 @@
 ---
+description: 詳細については、「同期データ構造と Windows API の比較」を参照してください。
 title: 同期データ構造と Windows API の比較
 ms.date: 11/04/2016
 helpviewer_keywords:
 - synchronization data structures, compared to Windows API
 - event class, example
 ms.assetid: 8b0b1a3a-ef80-408c-91fa-93e6af920b4e
-ms.openlocfilehash: b889570935b3a94e0cb8717c8af1783e2ce31c42
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: b5c633c61d070e2cd687b6281597694a7533fe0f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90040342"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97318417"
 ---
 # <a name="comparing-synchronization-data-structures-to-the-windows-api"></a>同期データ構造と Windows API の比較
 
 ここでは、コンカレンシー ランタイムが提供する同期データ構造と Windows API が提供する同期データ構造の動作を比較します。
 
-同時実行ランタイムによって提供される同期データ構造は、 *協調スレッドモデル*に従います。 協調スレッド処理モデルでは、同期プリミティブは処理リソースを他のスレッドに明示的に譲渡します。 これは、制御スケジューラまたはオペレーティングシステムによって処理リソースが他のスレッドに転送される、 *プリエンプティブなスレッドモデル*とは異なります。
+同時実行ランタイムによって提供される同期データ構造は、 *協調スレッドモデル* に従います。 協調スレッド処理モデルでは、同期プリミティブは処理リソースを他のスレッドに明示的に譲渡します。 これは、制御スケジューラまたはオペレーティングシステムによって処理リソースが他のスレッドに転送される、 *プリエンプティブなスレッドモデル* とは異なります。
 
 ## <a name="critical_section"></a>critical_section
 
@@ -26,7 +27,7 @@ ms.locfileid: "90040342"
 
 [Concurrency:: reader_writer_lock](../../parallel/concrt/reference/reader-writer-lock-class.md)クラスは、Windows スリムリーダー/ライター (SRW) ロックに似ています。 類似点と相違点を次の表に示します。
 
-| 特徴量 | `reader_writer_lock` クラス | SRW ロック |
+| 機能 | `reader_writer_lock` クラス | SRW ロック |
 |--|--|--|
 | 再入不可能 | はい | はい |
 | リーダーをライターに昇格 (アップグレード サポート) | いいえ | いいえ |
@@ -36,7 +37,7 @@ ms.locfileid: "90040342"
 
 SRW ロックの詳細については、Platform SDK の「 [スリムリーダー/ライター (SRW) ロック](/windows/win32/sync/slim-reader-writer--srw--locks) 」を参照してください。
 
-## <a name="event"></a>event
+## <a name="event"></a>イベント
 
 [Concurrency:: event](../../parallel/concrt/reference/event-class.md)クラスは、名前のない Windows 手動リセットイベントに似ています。 ただし、`event` オブジェクトは協調して動作しますが、Windows イベントはプリエンプティブに動作します。 Windows イベントの詳細については、「 [イベントオブジェクト](/windows/win32/Sync/event-objects)」を参照してください。
 
@@ -50,7 +51,7 @@ SRW ロックの詳細については、Platform SDK の「 [スリムリーダ�
 
 [!code-cpp[concrt-event-comparison#1](../../parallel/concrt/codesnippet/cpp/comparing-synchronization-data-structures-to-the-windows-api_1.cpp)]
 
-### <a name="comments"></a>コメント
+### <a name="comments"></a>説明
 
 この例では、次のサンプル出力が生成されます。
 
@@ -85,6 +86,6 @@ Windows event:
 
 タスクの詳細については、「 [タスクの並列](../../parallel/concrt/task-parallelism-concurrency-runtime.md)化」を参照してください。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [同期データ構造](../../parallel/concrt/synchronization-data-structures.md)

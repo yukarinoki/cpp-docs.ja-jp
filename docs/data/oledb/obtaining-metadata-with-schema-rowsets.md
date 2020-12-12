@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: スキーマ行セットを使用したメタデータの取得'
 title: スキーマ行セットを使用したメタデータの取得
 ms.date: 10/24/2018
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - OLE DB consumer templates, getting provider metadata
 - metadata, getting (OLE DB Templates)
 ms.assetid: 6b448461-82fb-4acf-816b-3cbb0ca1d186
-ms.openlocfilehash: 37418cc91913ed840d1601aab9005b476bf29ee0
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 9692b27de6d949e23b3868b2c55b79b685d6b5fe
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91508993"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97317182"
 ---
 # <a name="obtaining-metadata-with-schema-rowsets"></a>スキーマ行セットを使用したメタデータの取得
 
@@ -82,7 +83,7 @@ CRestrictions<CAccessor<CColumnsInfo>
 
 スキーマ行セットのリファレンスについては、OLE DB テンプレートに用意されている typedef クラス (「 [スキーマ行セットクラスと Typedef クラス](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)」を参照してください)。
 
-制限列を含む OLE DB スキーマ行セットの詳細については、 **OLE DB プログラマーリファレンス**の[「付録 B: スキーマ行セット](/previous-versions/windows/desktop/ms712921(v=vs.85))」を参照してください。
+制限列を含む OLE DB スキーマ行セットの詳細については、 **OLE DB プログラマーリファレンス** の [「付録 B: スキーマ行セット](/previous-versions/windows/desktop/ms712921(v=vs.85))」を参照してください。
 
 スキーマ行セットクラスの使用方法のより複雑な例については、 [CatDB](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Consumer) と [DBViewer](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Consumer) のサンプルを参照してください。
 

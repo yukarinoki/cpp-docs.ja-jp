@@ -1,5 +1,6 @@
 ---
-title: クラス
+description: '詳細情報: CSyncObject クラス'
+title: CSyncObject クラス
 ms.date: 11/04/2016
 f1_keywords:
 - CSyncObject
@@ -14,14 +15,14 @@ helpviewer_keywords:
 - CSyncObject [MFC], Unlock
 - CSyncObject [MFC], m_hObject
 ms.assetid: c62ea6eb-a17b-4e01-aed4-321fc435a5f4
-ms.openlocfilehash: ebfbc185cdca2effc96ce2e6d96d05f997c52bf7
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 5743f632f9a8c482ac15995e8d2429851ba015d8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81365972"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97318599"
 ---
-# <a name="csyncobject-class"></a>クラス
+# <a name="csyncobject-class"></a>CSyncObject クラス
 
 Win32 の同期オブジェクトに共通の機能を提供する純粋仮想クラスです。
 
@@ -37,32 +38,32 @@ class CSyncObject : public CObject
 
 |名前|説明|
 |----------|-----------------|
-|[オブジェクトを同期します。](#csyncobject)|`CSyncObject` オブジェクトを構築します。|
+|[CSyncObject::CSyncObject](#csyncobject)|`CSyncObject` オブジェクトを構築します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
 |名前|説明|
 |----------|-----------------|
-|[ロックオブジェクト::ロック](#lock)|同期オブジェクトへのアクセス権を取得します。|
-|[オブジェクトのロック解除](#unlock)|同期オブジェクトへのアクセス権を取得します。|
+|[CSyncObject:: Lock](#lock)|同期オブジェクトへのアクセスを取得します。|
+|[CSyncObject:: Unlock](#unlock)|同期オブジェクトへのアクセスを取得します。|
 
 ### <a name="public-operators"></a>パブリック演算子
 
 |名前|説明|
 |----------|-----------------|
-|[ハンドルを操作します。](#operator_handle)|同期オブジェクトへのアクセスを提供します。|
+|[CSyncObject:: operator ハンドル](#operator_handle)|同期オブジェクトへのアクセスを提供します。|
 
 ### <a name="public-data-members"></a>パブリック データ メンバー
 
 |名前|説明|
 |----------|-----------------|
-|[オブジェクト:m_hObject](#m_hobject)|基になる同期オブジェクトへのハンドル。|
+|[CSyncObject:: m_hObject](#m_hobject)|基になる同期オブジェクトへのハンドル。|
 
 ## <a name="remarks"></a>解説
 
-Microsoft Foundation クラス ライブラリには、`CSyncObject`から派生したクラスがいくつか用意されています。 これらは[、CEvent](../../mfc/reference/cevent-class.md) [、CMutex、CCriticalSection、](../../mfc/reference/cmutex-class.md)および[CSemaphore](../../mfc/reference/csemaphore-class.md)です。 [CCriticalSection](../../mfc/reference/ccriticalsection-class.md)
+Microsoft Foundation Class ライブラリには、から派生した複数のクラスが用意されて `CSyncObject` います。 これらは、 [CEvent](../../mfc/reference/cevent-class.md)、 [CMutex](../../mfc/reference/cmutex-class.md)、 [CCriticalSection](../../mfc/reference/ccriticalsection-class.md)、および [CSemaphore](../../mfc/reference/csemaphore-class.md)です。
 
-同期オブジェクトの使用方法については、「[マルチスレッド : 同期クラスの使用方法](../../parallel/multithreading-how-to-use-the-synchronization-classes.md)」を参照してください。
+同期オブジェクトの使用方法の詳細については、「 [マルチスレッド: 同期クラスの使用方法](../../parallel/multithreading-how-to-use-the-synchronization-classes.md)」を参照してください。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -70,13 +71,13 @@ Microsoft Foundation クラス ライブラリには、`CSyncObject`から派生
 
 `CSyncObject`
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-**ヘッダー:** afxmt.h
+**ヘッダー:** afxmt
 
-## <a name="csyncobjectcsyncobject"></a><a name="csyncobject"></a>オブジェクトを同期します。
+## <a name="csyncobjectcsyncobject"></a><a name="csyncobject"></a> CSyncObject::CSyncObject
 
-指定された名前を持つ同期オブジェクトを構築します。
+指定された名前を使用して同期オブジェクトを構築します。
 
 ```
 explicit CSyncObject(LPCTSTR pstrName);
@@ -85,12 +86,12 @@ virtual ~CSyncObject();
 
 ### <a name="parameters"></a>パラメーター
 
-*名前*<br/>
-オブジェクトの名前。 NULL の場合 *、pstrName*は null になります。
+*pstrName*<br/>
+オブジェクトの名前。 NULL の場合、 *Pstrname* は null になります。
 
-## <a name="csyncobjectlock"></a><a name="lock"></a>ロックオブジェクト::ロック
+## <a name="csyncobjectlock"></a><a name="lock"></a> CSyncObject:: Lock
 
-同期オブジェクトによって制御されるリソースにアクセスするために、この関数を呼び出します。
+同期オブジェクトによって制御されるリソースにアクセスするには、この関数を呼び出します。
 
 ```
 virtual BOOL Lock(DWORD dwTimeout = INFINITE);
@@ -98,18 +99,18 @@ virtual BOOL Lock(DWORD dwTimeout = INFINITE);
 
 ### <a name="parameters"></a>パラメーター
 
-*タイムアウト*<br/>
-同期オブジェクトが使用可能 (シグナル状態) になるまで待機する時間をミリ秒単位で指定します。 INFINITE の`Lock`場合、オブジェクトがシグナル状態になるまで待機してから戻ります。
+*dwTimeout*<br/>
+同期オブジェクトが使用可能になるまでの待機時間をミリ秒単位で指定します (シグナル状態)。 無限の場合、 `Lock` はオブジェクトがシグナル状態になるまで待機してから制御を戻します。
 
 ### <a name="return-value"></a>戻り値
 
-関数が正常に終了した場合は 0 以外の値を返します。それ以外の場合は 0。
+関数が成功した場合は0以外の。それ以外の場合は0です。
 
 ### <a name="remarks"></a>解説
 
-同期オブジェクトがシグナル状態になっている場合、`Lock`正常に返され、スレッドがオブジェクトを所有するようになりました。 同期オブジェクトが非シグナル状態 (使用不可)`Lock`の場合は *、dwTimeOut*パラメーターで指定されたミリ秒数まで同期オブジェクトがシグナル状態になるまで待機します。 同期オブジェクトが指定された時間内にシグナル状態にならなかった場合は、`Lock`失敗を返します。
+同期オブジェクトがシグナル状態になる `Lock` と、は正常に戻り、スレッドはオブジェクトを所有するようになります。 同期オブジェクトが非シグナル状態 (利用不可) の場合、 `Lock` は、同期オブジェクトが *dwTimeOut* パラメーターで指定されたミリ秒数までシグナル状態になるのを待機します。 指定された時間内に同期オブジェクトがシグナル状態にならなかった場合、は `Lock` 失敗を返します。
 
-## <a name="csyncobjectm_hobject"></a><a name="m_hobject"></a>オブジェクト:m_hObject
+## <a name="csyncobjectm_hobject"></a><a name="m_hobject"></a> CSyncObject:: m_hObject
 
 基になる同期オブジェクトへのハンドル。
 
@@ -117,9 +118,9 @@ virtual BOOL Lock(DWORD dwTimeout = INFINITE);
 HANDLE m_hObject;
 ```
 
-## <a name="csyncobjectoperator-handle"></a><a name="operator_handle"></a>ハンドルを操作します。
+## <a name="csyncobjectoperator-handle"></a><a name="operator_handle"></a> CSyncObject:: operator ハンドル
 
-この演算子を使用して、オブジェクトのハンドル`CSyncObject`を取得します。
+オブジェクトのハンドルを取得するには、この演算子を使用し `CSyncObject` ます。
 
 ```
 operator HANDLE() const;
@@ -131,11 +132,11 @@ operator HANDLE() const;
 
 ### <a name="remarks"></a>解説
 
-ハンドルを使用して、Windows API を直接呼び出すことができます。
+ハンドルを使用すると、Windows Api を直接呼び出すことができます。
 
-## <a name="csyncobjectunlock"></a><a name="unlock"></a>オブジェクトのロック解除
+## <a name="csyncobjectunlock"></a><a name="unlock"></a> CSyncObject:: Unlock
 
-パラメーターなしの`Unlock`宣言は純粋仮想関数であり、 から`CSyncObject`派生するすべてのクラスによってオーバーライドされる必要があります。
+パラメーターを指定しないの宣言 `Unlock` は純粋仮想関数であり、から派生するすべてのクラスでオーバーライドする必要があり `CSyncObject` ます。
 
 ```
 virtual BOOL Unlock() = 0; virtual BOOL Unlock(
@@ -145,10 +146,10 @@ virtual BOOL Unlock() = 0; virtual BOOL Unlock(
 
 ### <a name="parameters"></a>パラメーター
 
-*Lcount*<br/>
+*lCount*<br/>
 既定の実装では使用されません。
 
-*カウント*<br/>
+*lpPrevCount*<br/>
 既定の実装では使用されません。
 
 ### <a name="return-value"></a>戻り値
@@ -157,9 +158,9 @@ virtual BOOL Unlock() = 0; virtual BOOL Unlock(
 
 ### <a name="remarks"></a>解説
 
-2 つのパラメーターを持つ宣言の既定の実装は常に TRUE を返します。 この関数は、呼び出し元のスレッドが所有する同期オブジェクトへのアクセスを解放するために呼び出されます。 2 番目の宣言は、制御されたリソースの複数のアクセスを許可するセマフォなどの同期オブジェクトに対して提供されます。
+2つのパラメーターを持つ宣言の既定の実装では、常に TRUE が返されます。 この関数は、呼び出し元のスレッドが所有する同期オブジェクトへのアクセスを解放するために呼び出されます。 2つ目の宣言は、制御されたリソースへの複数のアクセスを許可するセマフォなどの同期オブジェクトに対して提供されます。
 
 ## <a name="see-also"></a>関連項目
 
-[Cオブジェクトクラス](../../mfc/reference/cobject-class.md)<br/>
-[階層グラフ](../../mfc/hierarchy-chart.md)
+[CObject クラス](../../mfc/reference/cobject-class.md)<br/>
+[階層図](../../mfc/hierarchy-chart.md)

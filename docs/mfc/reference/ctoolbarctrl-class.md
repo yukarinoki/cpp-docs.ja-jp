@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: CToolBarCtrl クラス'
 title: CToolBarCtrl クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -182,12 +183,12 @@ helpviewer_keywords:
 - CToolBarCtrl [MFC], SetToolTips
 - CToolBarCtrl [MFC], SetWindowTheme
 ms.assetid: 8f2f8ad2-05d7-4975-8715-3f2eed795248
-ms.openlocfilehash: e62d1a6773e1b65eaa1d2f0a8050873c673b5039
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: 769403be6e4015df1de04d41fcb0a1b2721ee434
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88561857"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97318560"
 ---
 # <a name="ctoolbarctrl-class"></a>CToolBarCtrl クラス
 
@@ -349,7 +350,7 @@ Internet Explorer バージョン4.0 以降で導入された機能をサポー�
 
 `CToolBarCtrl`
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** afxcmn.h
 
@@ -402,7 +403,7 @@ BOOL AddButtons(
 追加するボタンの数。
 
 *lpButtons*<br/>
-`TBBUTTON`追加するボタンに関する情報を格納する構造体の配列のアドレス。 *Nnumbuttons*によって指定されたボタンと同じ数の要素が配列内に存在する必要があります。
+`TBBUTTON`追加するボタンに関する情報を格納する構造体の配列のアドレス。 *Nnumbuttons* によって指定されたボタンと同じ数の要素が配列内に存在する必要があります。
 
 ### <a name="return-value"></a>戻り値
 
@@ -410,7 +411,7 @@ BOOL AddButtons(
 
 ### <a name="remarks"></a>解説
 
-*Lpbuttons*ポインターは、構造体の配列を指し `TBBUTTON` ます。 各 `TBBUTTON` 構造体は、ボタンのスタイル、イメージ、または文字列、コマンド ID、状態、およびユーザー定義データを使用して、追加するボタンを関連付けます。
+*Lpbuttons* ポインターは、構造体の配列を指し `TBBUTTON` ます。 各 `TBBUTTON` 構造体は、ボタンのスタイル、イメージ、または文字列、コマンド ID、状態、およびユーザー定義データを使用して、追加するボタンを関連付けます。
 
 ```cpp
 typedef struct _TBBUTTON {
@@ -676,13 +677,13 @@ virtual BOOL CreateEx(
 ### <a name="parameters"></a>パラメーター
 
 *dwExStyle*<br/>
-作成するコントロールの拡張スタイルを指定します。 拡張 Windows スタイルの一覧については、Windows SDK の[CreateWindowEx](/windows/win32/api/winuser/nf-winuser-createwindowexw)の*dwexstyle*パラメーターを参照してください。
+作成するコントロールの拡張スタイルを指定します。 拡張 Windows スタイルの一覧については、Windows SDK の [CreateWindowEx](/windows/win32/api/winuser/nf-winuser-createwindowexw)の *dwexstyle* パラメーターを参照してください。
 
 *dwStyle*<br/>
 ツールバーコントロールのスタイルを指定します。 ツールバーには、常に WS_CHILD スタイルが必要です。 さらに、「[作成](#create)」の「**解説**」で説明されているように、ツールバーのスタイルとウィンドウスタイルの任意の組み合わせを指定できます。
 
 *rect*<br/>
-*PParentWnd*のクライアント座標で、作成されるウィンドウのサイズと位置を記述する[RECT](/windows/win32/api/windef/ns-windef-rect)構造体への参照。
+*PParentWnd* のクライアント座標で、作成されるウィンドウのサイズと位置を記述する [RECT](/windows/win32/api/windef/ns-windef-rect)構造体への参照。
 
 *pParentWnd*<br/>
 コントロールの親であるウィンドウへのポインター。
@@ -696,7 +697,7 @@ virtual BOOL CreateEx(
 
 ### <a name="remarks"></a>解説
 
-`CreateEx`Windows 拡張スタイルの先頭**WS_EX_** によって指定された拡張 windows スタイルを適用するには、[[作成](#create)] ではなくを使用します。 `CreateEx`*Dwexstyle*によって指定された拡張 Windows スタイルを使用して、コントロールを作成します。 [SetExtendedStyle](#setextendedstyle)を使用して、コントロールに固有の拡張スタイルを設定します。 たとえば、を使用し `CreateEx` て、このようなスタイルを WS_EX_CONTEXTHELP として設定します。ただし、を使用し `SetExtendedStyle` て、そのようなスタイルを TBSTYLE_EX_DRAWDDARROWS として設定します。 詳細については、「Windows SDK の [ツールバーの拡張スタイル](/windows/win32/Controls/toolbar-extended-styles) 」に記載されているスタイルを参照してください。
+`CreateEx`Windows 拡張スタイルの先頭 **WS_EX_** によって指定された拡張 windows スタイルを適用するには、[[作成](#create)] ではなくを使用します。 `CreateEx`*Dwexstyle* によって指定された拡張 Windows スタイルを使用して、コントロールを作成します。 [SetExtendedStyle](#setextendedstyle)を使用して、コントロールに固有の拡張スタイルを設定します。 たとえば、を使用し `CreateEx` て、このようなスタイルを WS_EX_CONTEXTHELP として設定します。ただし、を使用し `SetExtendedStyle` て、そのようなスタイルを TBSTYLE_EX_DRAWDDARROWS として設定します。 詳細については、「Windows SDK の [ツールバーの拡張スタイル](/windows/win32/Controls/toolbar-extended-styles) 」に記載されているスタイルを参照してください。
 
 ## <a name="ctoolbarctrlctoolbarctrl"></a><a name="ctoolbarctrl"></a> CToolBarCtrl:: CToolBarCtrl
 
@@ -1275,7 +1276,7 @@ int GetString(
 *cchMaxLen*<br/>
 バッファーの長さ (バイト単位)。
 
-*引数*<br/>
+*str*<br/>
 文字列。
 
 ### <a name="return-value"></a>戻り値
@@ -1325,7 +1326,7 @@ int HitTest(LPPOINT ppt) const;
 ### <a name="parameters"></a>パラメーター
 
 *ppt*<br/>
-メンバー内のヒット[POINT](/windows/win32/api/windef/ns-windef-point)テストの x 座標 `x` とメンバー内のヒットテストの y 座標を格納している点構造体へのポインター `y` 。 座標は、ツールバーのクライアント領域を基準としています。
+メンバー内のヒット[](/windows/win32/api/windef/ns-windef-point)テストの x 座標 `x` とメンバー内のヒットテストの y 座標を格納している点構造体へのポインター `y` 。 座標は、ツールバーのクライアント領域を基準としています。
 
 ### <a name="return-value"></a>戻り値
 
@@ -1610,7 +1611,7 @@ BOOL MapAccelerator(
 マップされるアクセラレータ文字。 この文字は、ボタンのテキストで下線が引かれている文字と同じです。
 
 *pIDBtn*<br/>
-*ChAccel*で指定されたアクセラレータに対応するボタンのコマンド識別子を受け取る UINT へのポインター。
+*ChAccel* で指定されたアクセラレータに対応するボタンのコマンド識別子を受け取る UINT へのポインター。
 
 ### <a name="return-value"></a>戻り値
 
@@ -2004,7 +2005,7 @@ DWORD SetDrawTextFlags(
 ### <a name="parameters"></a>パラメーター
 
 *dwMask*<br/>
-テキストを描画するときに使用される*Dwdtflags*内のビットを示す、Win32 関数[DrawText](/windows/win32/api/winuser/nf-winuser-drawtext)で指定された1つ以上の DT_ フラグの組み合わせ。
+テキストを描画するときに使用される *Dwdtflags* 内のビットを示す、Win32 関数 [DrawText](/windows/win32/api/winuser/nf-winuser-drawtext)で指定された1つ以上の DT_ フラグの組み合わせ。
 
 *dwDTFlags*<br/>
 ボタンテキストの描画方法を示す、Win32 関数で指定される1つ以上の DT_ フラグの組み合わせ `DrawText` 。 この値は `DrawText` 、ボタンテキストが描画されるときにに渡されます。
@@ -2299,7 +2300,7 @@ void SetRows(
 
 ### <a name="remarks"></a>解説
 
-ツールバーのサイズが要求された数または行数に合わせて変更できない場合、そのサイズは、 *Blarger*の値に応じて、次に大きいか、次に小さい有効なサイズのいずれかに変更されます。 *Blarger*が TRUE の場合、新しい行数は要求された数よりも大きくなります。 *Blarger*が FALSE の場合、新しい行数は要求された数よりも小さくなります。
+ツールバーのサイズが要求された数または行数に合わせて変更できない場合、そのサイズは、 *Blarger* の値に応じて、次に大きいか、次に小さい有効なサイズのいずれかに変更されます。 *Blarger* が TRUE の場合、新しい行数は要求された数よりも大きくなります。 *Blarger* が FALSE の場合、新しい行数は要求された数よりも小さくなります。
 
 すべての行に同じ数のボタン (最後の行を除く) が含まれるようにボタンを配置できる場合は、ツールバーに対して指定された行数が有効になります。 たとえば、4つのボタンを含むツールバーのサイズを3行にすることはできません。これは、最後の2つの行の方が短いためです。 3行にサイズを変更しようとすると、 *Blarger* が TRUE であった場合は4行、 *BLARGER* が FALSE の場合は2行が取得されます。
 

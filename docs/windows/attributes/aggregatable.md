@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: 集計可能'
 title: 集計可能 (C++ COM 属性)
 ms.date: 10/02/2018
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - aggregatable attribute
 ms.assetid: 9253a46a-cd76-41f2-b3b6-86f709bb069c
-ms.openlocfilehash: 6782b1ca28eb07b3f726bd85cd7fffa9b1f1bad2
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 0ba6c96f1b12deb2db91c20f0558961ef1ed6f61
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88836375"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97314257"
 ---
 # <a name="aggregatable"></a>aggregatable
 
@@ -36,7 +37,7 @@ OptionalCOM オブジェクトを集計できるかどうかを示すパラメ�
 
 ## <a name="remarks"></a>解説
 
-**集計**可能な C++ 属性には、[集計](/windows/win32/Midl/aggregatable)可能な MIDL 属性と同じ機能があります。 これは、コンパイラが **集計** 可能な属性をから生成された .idl ファイルに渡すことを意味します。
+**集計** 可能な C++ 属性には、[集計](/windows/win32/Midl/aggregatable)可能な MIDL 属性と同じ機能があります。 これは、コンパイラが **集計** 可能な属性をから生成された .idl ファイルに渡すことを意味します。
 
 この属性を使用するには、 [coclass](coclass.md)、 [progid](progid.md)、または [vi_progid](vi-progid.md) 属性 (または、これらのいずれかを意味する別の属性) も同じ要素に適用する必要があります。 いずれか 1 つの属性を使用すると、他の 2 つも自動的に適用されます。 たとえば、が適用されている場合、 `progid` `vi_progid` と `coclass` も適用されます。
 
@@ -66,7 +67,7 @@ OptionalCOM オブジェクトを集計できるかどうかを示すパラメ�
 class CMyClass {};
 ```
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 | 属性コンテキスト | 値 |
 |-|-|

@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: CSocketFile クラス'
 title: CSocketFile クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - CSocketFile [MFC], CSocketFile
 ms.assetid: 7924c098-5f72-40d6-989d-42800a47958f
-ms.openlocfilehash: 83810a05925e5c8302240b61d95c131fdd78b426
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 4ca484545e11502a11acf5f27b00ee2df49fc9d6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81318170"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97318651"
 ---
 # <a name="csocketfile-class"></a>CSocketFile クラス
 
@@ -31,26 +32,26 @@ class CSocketFile : public CFile
 
 |名前|説明|
 |----------|-----------------|
-|[ファイル::Cソケットファイル](#csocketfile)|`CSocketFile` オブジェクトを構築します。|
+|[CSocketFile:: CSocketFile](#csocketfile)|`CSocketFile` オブジェクトを構築します。|
 
 ## <a name="remarks"></a>解説
 
-この目的のためにオブジェクト`CSocketFile`をオブジェクトに`CSocket`アタッチできます。 また、MFC シリアル化を使用してデータ`CSocketFile`の送受信を`CArchive`簡単にするために、オブジェクトをオブジェクトにアタッチすることもできます。
+`CSocketFile`このために、オブジェクトをオブジェクトにアタッチでき `CSocket` ます。 オブジェクト `CSocketFile` をオブジェクトにアタッチし `CArchive` て、MFC のシリアル化を使用したデータの送受信を簡略化することもできます。
 
-データをシリアル化 (送信) するには、データをアーカイブ`CSocketFile``CSocket`に挿入します。 データを逆シリアル化 (受信) するには、アーカイブから抽出します。 これにより、アーカイブは、オブジェクト`CSocketFile`からデータを読み取るために`CSocket`メンバー関数を呼び出します。
+データをシリアル化 (送信) するには、そのデータをアーカイブに挿入します。これは、メンバー関数を呼び出して `CSocketFile` 、オブジェクトにデータを書き込み `CSocket` ます。 データを逆シリアル化 (受信) するには、アーカイブから抽出します。 これにより、アーカイブが `CSocketFile` メンバー関数を呼び出して、オブジェクトからデータを読み取るようにし `CSocket` ます。
 
 > [!TIP]
-> ここで説明`CSocketFile`する方法で使用する以外に、基本クラスと同様`CFile`に、スタンドアロンのファイル オブジェクトとして使用できます。 また、アーカイブ`CSocketFile`ベースの MFC シリアル化関数でも使用できます。 すべての`CSocketFile`機能をサポートしていないため、`CFile`既定の MFC シリアル化関数の一部は`CSocketFile`と互換性がありません。 これは特にクラスに`CEditView`当てはまります。 を`CEditView`使用して`CArchive``CSocketFile``CEditView::SerializeRaw`オブジェクトにアタッチされたオブジェクトを通じてデータをシリアル化しようとしないでください。代`CEditView::Serialize`わりに使用します。 この`SerializeRaw`関数は、ファイル オブジェクトに、含まれていない関数`Seek`などが`CSocketFile`含まれる必要があります。
+> ここで説明するように、を使用するだけでなく、基本クラスの場合と同様に、 `CSocketFile` スタンドアロンのファイルオブジェクトとしても使用でき `CFile` ます。 また、を `CSocketFile` アーカイブベースの MFC シリアル化関数と共に使用することもできます。 `CSocketFile`は、のすべての機能をサポートしているわけではないため `CFile` 、一部の既定の MFC シリアル化関数はと互換性がありません `CSocketFile` 。 これは、クラスに特に当てはまり `CEditView` ます。 `CEditView` `CArchive` を使用してオブジェクトにアタッチされたオブジェクトを介してデータをシリアル化することは避けてください。代わりに、を `CSocketFile` `CEditView::SerializeRaw` 使用 `CEditView::Serialize` してください。 関数では、 `SerializeRaw` ファイルオブジェクトに、 `Seek` が含まれていないなどの関数があることを想定してい `CSocketFile` ます。
 
-と`CSocket`を`CArchive``CSocketFile`使用すると、要求されたバイト数を待`CSocket::Receive`つループがループ`PumpMessages(FD_READ)`に入る状況が発生する場合があります。 これは、Windows ソケットでは、FD_READ通知ごとに 1 つの recv `CSocketFile` `CSocket`呼び出ししか許可しませんが、FD_READごとに複数の recv 呼び出しを許可するためです。 読み取るデータがないときにFD_READを取得すると、アプリケーションがハングします。 FD_READがもうない場合、アプリケーションはソケット経由で通信を停止します。
+とを一緒に使用すると `CArchive` `CSocketFile` `CSocket` 、 `CSocket::Receive` によって () によって `PumpMessages(FD_READ)` 要求されたバイト数の待機が開始される状況が発生する可能性があります。 これは、Windows sockets では FD_READ 通知ごとに1つの recv 呼び出しのみが許可されていますが、 `CSocketFile` FD_READ ごとに複数の recv 呼び出しが許可されているためです `CSocket` 。 読み取るデータが存在しない場合に FD_READ を取得すると、アプリケーションがハングします。 別の FD_READ が得られない場合、アプリケーションはソケット経由の通信を停止します。
 
-この問題は、次のように解決できます。 ソケット`OnReceive`クラスのメソッドでは、ソケットから`CAsyncSocket::IOCtl(FIONREAD, ...)`読み取る`Serialize`データが 1 つの TCP パケットのサイズ (ネットワーク メディアの最大伝送単位、通常は少なくとも 1096 バイト) を超えたときに、メッセージ クラスのメソッドを呼び出す前に呼び出します。 使用可能なデータのサイズが必要以上に小さい場合は、すべてのデータが受信されるのを待ってから、読み取り操作を開始してください。
+この問題は、次のように解決できます。 `OnReceive`ソケットクラスのメソッドで、 `CAsyncSocket::IOCtl(FIONREAD, ...)` `Serialize` ソケットから読み取られると予想されるデータが1つの TCP パケット (ネットワークメディアの最大転送単位 (通常は1096バイト以上)) のサイズを超えたときに、メッセージクラスのメソッドを呼び出す前に、を呼び出します。 使用可能なデータのサイズが必要以上に満たない場合は、すべてのデータが受信されるのを待ってから、読み取り操作を開始します。
 
-次の例では、`m_dwExpected`ユーザーが受信する必要があるおよそのバイト数を示します。 コード内の他の場所で宣言することを前提としています。
+次の例で `m_dwExpected` は、は、ユーザーが受け取ると予想されるおおよそのバイト数です。 コード内の他の場所で宣言することを前提としています。
 
 [!code-cpp[NVC_MFCSocketThread#4](../../mfc/reference/codesnippet/cpp/csocketfile-class_1.cpp)]
 
-詳細については、「 MFC の[Windows ソケット](../../mfc/windows-sockets-in-mfc.md)」 を参照[してください。](../../mfc/windows-sockets-using-sockets-with-archives.md) [Windows Sockets 2 API](/windows/win32/WinSock/windows-sockets-start-page-2)
+詳細については、「 [MFC の Windows ソケット](../../mfc/windows-sockets-in-mfc.md)」、「 [Windows ソケット: アーカイブ付きソケットの使用](../../mfc/windows-sockets-using-sockets-with-archives.md)」、および「 [windows sockets 2 API](/windows/win32/WinSock/windows-sockets-start-page-2)」を参照してください。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -60,11 +61,11 @@ class CSocketFile : public CFile
 
 `CSocketFile`
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-**ヘッダー:** afxsock.h
+**ヘッダー:** afxsock
 
-## <a name="csocketfilecsocketfile"></a><a name="csocketfile"></a>ファイル::Cソケットファイル
+## <a name="csocketfilecsocketfile"></a><a name="csocketfile"></a> CSocketFile:: CSocketFile
 
 `CSocketFile` オブジェクトを構築します。
 
@@ -76,28 +77,28 @@ explicit CSocketFile(
 
 ### <a name="parameters"></a>パラメーター
 
-*ソケット*<br/>
-オブジェクトにアタッチする`CSocketFile`ソケット。
+*pSocket*<br/>
+オブジェクトにアタッチするソケット `CSocketFile` 。
 
-*互換性のあるファイルをアーカイブする*<br/>
-ファイル オブジェクトが`CArchive`オブジェクトで使用されるかどうかを指定します。 オブジェクトをスタンドアロンオブジェクトと同じように使用する`CSocketFile`場合に限り、特定の`CFile`制限がある場合にのみ FALSE を渡します。 このフラグは、オブジェクト`CArchive`にアタッチされたオブジェクト`CSocketFile`が読み取り用のバッファをどのように管理するかを変更します。
+*bArchiveCompatible*<br/>
+ファイルオブジェクトがオブジェクトで使用されるかどうかを指定し `CArchive` ます。 スタンドアロンのオブジェクトと同じようにスタンドアロンの方法でオブジェクトを使用する場合にのみ、FALSE を渡し `CSocketFile` `CFile` ます。特定の制限事項があります。 このフラグは、 `CArchive` オブジェクトにアタッチされているオブジェクトが読み取り用のバッファーを管理する方法を変更し `CSocketFile` ます。
 
 ### <a name="remarks"></a>解説
 
-オブジェクトがスコープ外に出たり削除されたりすると、オブジェクトのデストラクターは自身とソケット オブジェクトの関連付けを解除します。
+オブジェクトのデストラクターは、オブジェクトがスコープ外に出るか削除されるときに、ソケットオブジェクトとの関連付けを解除します。
 
 > [!NOTE]
-> A`CSocketFile`は`CArchive`、オブジェクトを持たない (限定された) ファイルとして使用することもできます。 既定では、コンストラクター`CSocketFile`の*bArchive 互換性パラメーター*は TRUE です。 これは、ファイルオブジェクトがアーカイブで使用されることを指定します。 アーカイブを使用せずにファイル オブジェクトを使用するには *、bArchiveCompatible*パラメーターに FALSE を渡します。
+> は、 `CSocketFile` オブジェクトなしで (制限された) ファイルとして使用することもでき `CArchive` ます。 既定では、 `CSocketFile` コンストラクターの *bArchiveCompatible* パラメーターは TRUE です。 これは、ファイルオブジェクトがアーカイブで使用されることを指定します。 アーカイブのないファイルオブジェクトを使用するには、 *bArchiveCompatible* パラメーターに FALSE を渡します。
 
-「アーカイブ互換」モードでは、オブジェクトの`CSocketFile`パフォーマンスが向上し、「デッドロック」の危険性が軽減されます。 デッドロックは、送信ソケットと受信ソケットの両方が互いに待機している場合、または共通のリソースを待機しているときに発生します。 この状況は、オブジェクトが`CArchive`オブジェクトと同`CSocketFile`じように動作した場合に発生することがあります`CFile`。 では`CFile`、アーカイブは、要求されたバイト数よりも少ないバイト数を受け取ると、ファイルの終わりに達したと想定できます。
+"アーカイブ互換" モードでは、 `CSocketFile` オブジェクトを使用すると、パフォーマンスが向上し、"デッドロック" の危険性が軽減されます。 デッドロックは、送信側と受信側の両方のソケットが互いに待機している場合、または共通のリソースの場合に発生します。 このような状況は、オブジェクトがオブジェクトを使用して動作する場合に発生する可能性があり `CArchive` `CSocketFile` `CFile` ます。 では `CFile` 、要求されたバイト数よりも多くのバイトを受信した場合、ファイルの終わりに達したと見なすことができます。
 
-ただし`CSocketFile`、 では、データはメッセージ ベースです。バッファーには複数のメッセージを含めることができるため、要求されたバイト数より少ない数を受信しても、ファイルの終わりを意味しません。 アプリケーションは、`CFile`での場合のようにブロックせず、バッファーが空になるまで、バッファーからメッセージを読み取り続けることができます。 [CArchive::IsBufferEmpty](../../mfc/reference/carchive-class.md#isbufferempty)関数は、このような場合にアーカイブのバッファの状態を監視するのに便利です。
+`CSocketFile`ただし、では、データはメッセージベースであり、バッファーには複数のメッセージを含めることができます。したがって、受信したバイト数よりも少なくともファイルの終端を示すことはできません。 この場合、アプリケーションはと同様にブロックしません `CFile` 。バッファーが空になるまで、バッファーからのメッセージの読み取りを続行できます。 [CArchive:: IsBufferEmpty](../../mfc/reference/carchive-class.md#isbufferempty)関数は、このような場合にアーカイブのバッファーの状態を監視するのに便利です。
 
-の使用方法の詳細については、「 Windows ソケット : アーカイブと Windows[ソケットでのソケットの使用](../../mfc/windows-sockets-using-sockets-with-archives.md) [: アーカイブを使用したソケットの使用例](../../mfc/windows-sockets-example-of-sockets-using-archives.md)」を参照してください。 `CSocketFile`
+の使用方法の詳細につい `CSocketFile` ては、「 [windows ソケット: アーカイブ](../../mfc/windows-sockets-using-sockets-with-archives.md) を使用したソケットの使用」および「 [Windows ソケット: アーカイブを使用するソケットの例](../../mfc/windows-sockets-example-of-sockets-using-archives.md)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 
 [CFile クラス](../../mfc/reference/cfile-class.md)<br/>
-[階層グラフ](../../mfc/hierarchy-chart.md)<br/>
-[クラス](../../mfc/reference/casyncsocket-class.md)<br/>
+[階層図](../../mfc/hierarchy-chart.md)<br/>
+[CAsyncSocket クラス](../../mfc/reference/casyncsocket-class.md)<br/>
 [CSocket クラス](../../mfc/reference/csocket-class.md)

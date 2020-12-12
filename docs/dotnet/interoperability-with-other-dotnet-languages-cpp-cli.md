@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: 他の .NET 言語との相互運用性 (C++/CLI)'
 title: 他の .NET 言語との相互運用性 (C++/CLI)
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -9,28 +10,28 @@ helpviewer_keywords:
 - lock statement
 - lock C# keyword [C++]
 ms.assetid: a5902cf8-a14d-4559-aefb-c178615d45bb
-ms.openlocfilehash: ffdf9a8b11912bde38e15408228670c8cff9a503
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 51cead7fcc7dedc05f0225facf10fe70a3d606fd
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62188323"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97316610"
 ---
 # <a name="interoperability-with-other-net-languages-ccli"></a>他の .NET 言語との相互運用性 (C++/CLI)
 
-このセクションのトピックでは、c# または Visual Basic で記述されたアセンブリに機能を提供するかを消費する Visual C のアセンブリを作成する方法を示します。
+このセクションのトピックでは、C# または Visual Basic で記述されたアセンブリを使用したり、機能を提供したりする Visual C++ でアセンブリを作成する方法について説明します。
 
-## <a name="consume_indexer"></a> C# インデクサーを使用します。
+## <a name="consume-a-c-indexer"></a><a name="consume_indexer"></a> C# インデクサーを使用する
 
-Visual C にインデクサー; が含まれていませんそれには、プロパティがインデックス付け。 インデックス付きプロパティの場合と同様に c# インデクサーを使用するには、インデクサーにアクセスします。
+Visual C++ にインデクサーが含まれていません。インデックス付きプロパティがあります。 C# インデクサーを使用するには、インデックス付きプロパティのようにインデクサーにアクセスします。
 
-インデクサーの詳細についてを参照してください。
+インデクサーの詳細については、次を参照してください。
 
 - [インデクサー](/dotnet/csharp/programming-guide/indexers/index)
 
 ### <a name="example"></a>例
 
-次の c# プログラムでは、インデクサーを定義します。
+次の C# プログラムは、インデクサーを定義します。
 
 ```csharp
 // consume_cs_indexers.cs
@@ -70,7 +71,7 @@ public class MainClass {
 
 ### <a name="example"></a>例
 
-この Visual C プログラムでは、インデクサーを使用します。
+この Visual C++ プログラムは、インデクサーを使用します。
 
 ```cpp
 // consume_cs_indexers_2.cpp
@@ -100,9 +101,9 @@ Element #9 = 0
 Element #10 = 0
 ```
 
-## <a name="implement_isas"></a> 実装は、キーワードと as c# キーワード
+## <a name="implement-is-and-as-c-keywords"></a><a name="implement_isas"></a> Is キーワードと as C# キーワードを実装する
 
-このトピックでは、の機能を実装する方法を示します、`is`と`as`Visual C での c# のキーワード。
+このトピックでは、 `is` Visual C++ でおよび C# のキーワードの機能を実装する方法について説明し `as` ます。
 
 ### <a name="example"></a>例
 
@@ -141,11 +142,11 @@ int main() {
 o is a string
 ```
 
-## <a name="implement_locak"></a> Lock c# キーワードを実装します。
+## <a name="implement-the-lock-c-keyword"></a><a name="implement_locak"></a> Lock C# キーワードを実装する
 
-このトピックでは、c# を実装する方法を示しています。 `lock` Visual c でキーワード。
+このトピックでは、Visual C++ で C# キーワードを実装する方法について説明し `lock` ます。
 
-使用することも、 `lock` C++ サポート ライブラリ内のクラス。 参照してください[同期 (lock クラス)](../dotnet/synchronization-lock-class.md)詳細についてはします。
+C++ サポートライブラリのクラスを使用することもでき `lock` ます。 詳細については、「 [同期 (ロッククラス)](../dotnet/synchronization-lock-class.md) 」を参照してください。
 
 ### <a name="example"></a>例
 
@@ -186,4 +187,4 @@ int main()
 
 ## <a name="see-also"></a>関連項目
 
-[C++/CLI (Visual C++) による .NET プログラミング](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
+[C++/CLI を使用した .NET プログラミング (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)

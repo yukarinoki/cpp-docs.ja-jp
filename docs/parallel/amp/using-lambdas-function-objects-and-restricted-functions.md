@@ -1,17 +1,18 @@
 ---
+description: 詳細については、「ラムダ、関数オブジェクト、および制限された関数の使用」を参照してください。
 title: ラムダ、関数オブジェクト、および制限関数の使用
 ms.date: 11/04/2016
 ms.assetid: 25346cc9-869d-4ada-aad3-e2228cad3d6c
-ms.openlocfilehash: 0c72ae6f600fe73405481e34ab05b60f163e44d2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bef02f30b5d5b5f11b8051c7a596ac0a141eef0a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62405327"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97314452"
 ---
 # <a name="using-lambdas-function-objects-and-restricted-functions"></a>ラムダ、関数オブジェクト、および制限関数の使用
 
-C++ 、アクセラレータ上で実行する AMP コードへの呼び出しで引数として指定されましたが、 [parallel_for_each](reference/concurrency-namespace-functions-amp.md#parallel_for_each)メソッド。 その引数としてラムダ式または関数オブジェクト (ファンクター) を指定できます。 また、ラムダ式や関数オブジェクトでは、C++ AMP 制限関数を呼び出すことができます。 このトピックでは、配列追加アルゴリズムを使用して、ラムダ、関数オブジェクト、および制限関数の概要を示します。 次の例では、C++ AMP コードを使用しないアルゴリズムを示します。 同じ長さの 2 個の 1 次元配列が作成されます。 対応する整数の要素が加算され、3 番目の 1 次元配列に格納されます。 C++ AMP は使用されません。
+アクセラレータで実行する C++ AMP コードは、 [parallel_for_each](reference/concurrency-namespace-functions-amp.md#parallel_for_each) メソッドの呼び出しで引数として指定されます。 その引数としてラムダ式または関数オブジェクト (ファンクター) を指定できます。 また、ラムダ式や関数オブジェクトでは、C++ AMP 制限関数を呼び出すことができます。 このトピックでは、配列追加アルゴリズムを使用して、ラムダ、関数オブジェクト、および制限関数の概要を示します。 次の例では、C++ AMP コードを使用しないアルゴリズムを示します。 同じ長さの 2 個の 1 次元配列が作成されます。 対応する整数の要素が加算され、3 番目の 1 次元配列に格納されます。 C++ AMP は使用されません。
 
 ```cpp
 void CpuMethod() {
@@ -63,7 +64,7 @@ void AddArraysWithLambda() {
 }
 ```
 
-ラムダ式には、1 個のインデックス パラメーターと `restrict(amp)` が含まれている必要があります。 この例で、 [array_view](../../parallel/amp/reference/array-view-class.md) `sum`オブジェクトのランクは 1 には。 したがって、ラムダ ステートメントに対するパラメーターは、[インデックス](../../parallel/amp/reference/index-class.md)をランク 1 を持つオブジェクト。 、実行時に、ラムダ式は 1 回実行の各要素に対して、 [array_view](../../parallel/amp/reference/array-view-class.md)オブジェクト。 詳細については、次を参照してください。[ラムダ式の構文](../../cpp/lambda-expression-syntax.md)します。
+ラムダ式には、1 個のインデックス パラメーターと `restrict(amp)` が含まれている必要があります。 この例では、 [array_view](../../parallel/amp/reference/array-view-class.md) `sum` オブジェクトのランクは1です。 したがって、ラムダステートメントのパラメーターは、ランク1を持つ [インデックス](../../parallel/amp/reference/index-class.md) オブジェクトです。 実行時に、ラムダ式は、 [array_view](../../parallel/amp/reference/array-view-class.md) オブジェクト内の要素ごとに1回実行されます。 詳細については、「 [ラムダ式の構文](../../cpp/lambda-expression-syntax.md)」を参照してください。
 
 ## <a name="function-object"></a>Function オブジェクト
 
@@ -114,7 +115,7 @@ void AddArraysWithFunctionObject() {
 }
 ```
 
-関数オブジェクトには、コンストラクターと、関数呼び出し演算子のオーバーロードが含まれている必要があります。 関数呼び出し演算子には、1 個のインデックス パラメーターが含まれている必要があります。 関数オブジェクトのインスタンスが 2 番目の引数として渡される、 [parallel_for_each](reference/concurrency-namespace-functions-amp.md#parallel_for_each)メソッド。 この例では、次の 3 つ[array_view](../../parallel/amp/reference/array-view-class.md)オブジェクトは、関数オブジェクトのコンス トラクターに渡されます。 [Array_view](../../parallel/amp/reference/array-view-class.md)オブジェクト`sum`1 のランクがあります。 関数呼び出し演算子に対するパラメーターは、そのため、[インデックス](../../parallel/amp/reference/index-class.md)をランク 1 を持つオブジェクト。 、実行時に、関数が実行される 1 回の各要素に対して、 [array_view](../../parallel/amp/reference/array-view-class.md)オブジェクト。 詳細については、次を参照してください。[関数を呼び出す](../../cpp/function-call-cpp.md)と[C++ 標準ライブラリ内の関数オブジェクト](../../standard-library/function-objects-in-the-stl.md)します。
+関数オブジェクトには、コンストラクターと、関数呼び出し演算子のオーバーロードが含まれている必要があります。 関数呼び出し演算子には、1 個のインデックス パラメーターが含まれている必要があります。 関数オブジェクトのインスタンスは、 [parallel_for_each](reference/concurrency-namespace-functions-amp.md#parallel_for_each) メソッドに2番目の引数として渡されます。 この例では、3つの [array_view](../../parallel/amp/reference/array-view-class.md) オブジェクトが関数オブジェクトコンストラクターに渡されます。 [Array_view](../../parallel/amp/reference/array-view-class.md)オブジェクトの `sum` ランクは1です。 したがって、関数呼び出し演算子のパラメーターは、ランク1を持つ [インデックス](../../parallel/amp/reference/index-class.md) オブジェクトです。 実行時には、 [array_view](../../parallel/amp/reference/array-view-class.md) オブジェクトの各要素に対して関数が1回実行されます。 詳細については、「 [C++ 標準ライブラリ](../../standard-library/function-objects-in-the-stl.md)の[関数呼び出し](../../cpp/function-call-cpp.md)と関数オブジェクト」を参照してください。
 
 ## <a name="c-amp-restricted-function"></a>C++ AMP 制限関数
 
@@ -153,7 +154,7 @@ void AddArraysWithFunction() {
 }
 ```
 
-制限付きの関数を含める必要があります`restrict(amp)`で説明されている制限事項に従っている[制限 (C++ AMP)](../../cpp/restrict-cpp-amp.md)します。
+制限付きの関数には、 `restrict(amp)` 「 [制限 (C++ AMP)](../../cpp/restrict-cpp-amp.md)」で説明されている制限を含め、準拠させる必要があります。
 
 ## <a name="see-also"></a>関連項目
 

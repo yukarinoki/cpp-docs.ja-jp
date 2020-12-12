@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: 出力パラメーター'
 title: 出力パラメーター
 ms.date: 10/24/2018
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - procedure calls
 - procedure calls, stored procedures
 ms.assetid: 4f7c2700-1c2d-42f3-8c9f-7e83962b2442
-ms.openlocfilehash: ece626eb7fbecae9b90321ccc2569607897cf520
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: c52877483d40d7de1a8313eb806769ce92af7337
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80209860"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97316935"
 ---
 # <a name="output-parameters"></a>出力パラメーター
 
@@ -53,8 +54,8 @@ as
 return 0
 ```
 
-`@_rowcount` outparameter は、テストテーブルから返された行数を報告します。 ただし、このストアドプロシージャでは行の数が50に制限されます。 たとえば、テストで100行があった場合、rowcount は50になります (このコードでは上位の50行のみが取得されるため)。 テーブルに30行しかない場合、rowcount は30になります。 値をフェッチする前に、`Close` または `CloseAll` を呼び出して、outparameter を設定するようにしてください。
+`@_rowcount`Outparameter は、テストテーブルから返された行数を報告します。 ただし、このストアドプロシージャでは行の数が50に制限されます。 たとえば、テストで100行があった場合、rowcount は50になります (このコードでは上位の50行のみが取得されるため)。 テーブルに30行しかない場合、rowcount は30になります。 `Close` `CloseAll` 値をフェッチする前に、またはを呼び出して、outparameter を設定してください。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[ストアド プロシージャの使用](../../data/oledb/using-stored-procedures.md)
+[ストアドプロシージャの使用](../../data/oledb/using-stored-procedures.md)

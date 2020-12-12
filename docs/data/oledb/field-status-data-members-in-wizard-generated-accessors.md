@@ -1,16 +1,17 @@
 ---
+description: 詳細については、「Wizard-Generated アクセサーのフィールドの状態データメンバー」を参照してください。
 title: ウィザードで生成されたアクセサーのフィールド ステータスのデータ メンバー
 ms.date: 05/09/2019
 helpviewer_keywords:
 - OLE DB consumer templates, field status
 - field status in OLE DB templates
 ms.assetid: 66e4e223-c60c-471e-860d-d23abcdfe371
-ms.openlocfilehash: 476c91f55071f6d1c7f243257273a32798813cae
-ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
+ms.openlocfilehash: 0e0df633883b83d7d8fd0966082fbf00d2a72e13
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "92924633"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97317650"
 ---
 # <a name="field-status-data-members-in-wizard-generated-accessors"></a>ウィザードで生成されたアクセサーのフィールド ステータスのデータ メンバー
 
@@ -24,7 +25,7 @@ ATL OLE DB コンシューマー ウィザードは、Visual Studio 2019 以降�
 
 **ATL OLE DB コンシューマー ウィザード** を使用してコンシューマーを作成する場合、列マップで指定したフィールドごとにユーザー レコード クラスのデータ メンバーが生成されます。 各データ メンバーは `DWORD` 型で、それぞれのフィールドに対応するステータス値が含まれています。
 
-たとえば、データ メンバー *m_OwnerID* に対しては、フィールド ステータスが ( *dwOwnerIDStatus* ) のデータ メンバーと、フィールド長が ( *dwOwnerIDLength* ) のデータ メンバーが追加で生成されます。 また、COLUMN_ENTRY_LENGTH_STATUS エントリを含む列マップも生成されます。
+たとえば、データ メンバー *m_OwnerID* に対しては、フィールド ステータスが (*dwOwnerIDStatus*) のデータ メンバーと、フィールド長が (*dwOwnerIDLength*) のデータ メンバーが追加で生成されます。 また、COLUMN_ENTRY_LENGTH_STATUS エントリを含む列マップも生成されます。
 
 これを次のコードに示します。
 
@@ -66,7 +67,7 @@ public:
 
 ステータス値を使用して、特定のフィールドに NULL 値を設定することもできます。 これは、フィールドの値を 0 ではなく NULL として区別する場合に役立ちます。 NULL を有効な値と特殊な値のどちらにするか、また、それをアプリケーションでどのように処理するかは、自由に決めることができます。 OLE DB は、汎用的な NULL 値を指定する適切な手段として、DBSTATUS_S_ISNULL を定義します。 コンシューマーがデータを読み取り、その値が null であった場合、ステータス フィールドが DBSTATUS_S_ISNULL に設定されます。 コンシューマーが NULL 値を設定する場合、そのコンシューマーは、ステータス値を DBSTATUS_S_ISNULL に設定してからプロバイダーを呼び出します。
 
-次に、Oledb.h を開いて DBSTATUSENUM を検索します。 その後、DBSTATUSENUM 列挙値に対して、0 以外のステータスを表す数値を照合できます。 列挙名から問題を特定できない場合は、「 [OLE DB プログラマ ガイド](/sql/connect/oledb/ole-db/oledb-driver-for-sql-server-programming)」の **データ値のバインド** に関するセクションで **ステータス** に関するトピックを参照してください。 このトピックには、データを取得または設定するときに使用されるステータス値の表が含まれています。 長さの値については、同じセクションの **長さ** に関するトピックを参照してください。
+次に、Oledb.h を開いて DBSTATUSENUM を検索します。 その後、DBSTATUSENUM 列挙値に対して、0 以外のステータスを表す数値を照合できます。 列挙名から問題を特定できない場合は、「[OLE DB プログラマ ガイド](/sql/connect/oledb/ole-db/oledb-driver-for-sql-server-programming)」の **データ値のバインド** に関するセクションで **ステータス** に関するトピックを参照してください。 このトピックには、データを取得または設定するときに使用されるステータス値の表が含まれています。 長さの値については、同じセクションの **長さ** に関するトピックを参照してください。
 
 ## <a name="retrieving-the-length-or-status-of-a-column"></a>列の長さまたはステータスを取得する
 
@@ -114,6 +115,6 @@ public:
 
 ::: moniker-end
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 
 [OLE DB コンシューマーテンプレートの使用](../../data/oledb/working-with-ole-db-consumer-templates.md)

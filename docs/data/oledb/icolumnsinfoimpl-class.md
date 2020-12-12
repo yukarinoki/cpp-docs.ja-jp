@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: IColumnsInfoImpl クラス'
 title: IColumnsInfoImpl クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -26,12 +27,12 @@ helpviewer_keywords:
 - GetColumnInfo method
 - MapColumnIDs method
 ms.assetid: ba74c1c5-2eda-4452-8b57-84919fa0d066
-ms.openlocfilehash: 05e902e09c51012bd456751fb701ce2508a2fc16
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 9f6586f4d0315904ea16baf5aa1837bc43107602
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88845602"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97317624"
 ---
 # <a name="icolumnsinfoimpl-class"></a>IColumnsInfoImpl クラス
 
@@ -51,7 +52,7 @@ class ATL_NO_VTABLE IColumnsInfoImpl :
 *T*<br/>
 から派生したクラス `IColumnsInfoImpl` 。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** atldb.h
 
@@ -82,7 +83,7 @@ STDMETHOD (GetColumnInfo)(DBORDINAL* pcColumns,
 
 #### <a name="parameters"></a>パラメーター
 
-*OLE DB プログラマーリファレンス*の「 [IColumnsInfo:: GetColumnInfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\)) 」を参照してください。
+*OLE DB プログラマーリファレンス* の「 [IColumnsInfo:: GetColumnInfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\)) 」を参照してください。
 
 ## <a name="icolumnsinfoimplmapcolumnids"></a><a name="mapcolumnids"></a> IColumnsInfoImpl:: MapColumnIDs
 
@@ -98,7 +99,7 @@ STDMETHOD (MapColumnIDs)(DBORDINAL cColumnIDs,
 
 #### <a name="parameters"></a>パラメーター
 
-*OLE DB プログラマーリファレンス*の「 [IColumnsInfo:: mapcolumnids](/previous-versions/windows/desktop/ms714200(v=vs.85)) 」を参照してください。
+*OLE DB プログラマーリファレンス* の「 [IColumnsInfo:: mapcolumnids](/previous-versions/windows/desktop/ms714200(v=vs.85)) 」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

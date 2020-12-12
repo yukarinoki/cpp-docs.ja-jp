@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「fputs、fputws」を参照してください。
 title: fputs、fputws
 ms.date: 4/2/2020
 api_name:
@@ -34,12 +35,12 @@ helpviewer_keywords:
 - fputs function
 - fputts function
 ms.assetid: d48c82b8-aa17-4830-8c7d-30442ddbb326
-ms.openlocfilehash: 718bcd227e5821c85517ff7c0a1f195bd24d230b
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: bba51a6001d9ec27f39b590b2246a50409f5e47d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82912734"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97314114"
 ---
 # <a name="fputs-fputws"></a>fputs、fputws
 
@@ -60,7 +61,7 @@ int fputws(
 
 ### <a name="parameters"></a>パラメーター
 
-*引数*<br/>
+*str*<br/>
 出力する文字列。
 
 *一連*<br/>
@@ -68,15 +69,15 @@ int fputws(
 
 ## <a name="return-value"></a>戻り値
 
-これらの関数は、正常に終了した場合に 0 以上の値を返します。 エラーが発生した場合、 **fputs**と**fputws**は**EOF**を返します。 *Str*または*stream*が null ポインターの場合、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、これらの関数は無効なパラメーターハンドラーを呼び出します。 実行の継続が許可された場合、これらの関数は**errno**を**EINVAL**に設定し、 **fputs**は**EOF**を返し、 **fputws**は**WEOF**を返します。
+これらの関数は、正常に終了した場合に 0 以上の値を返します。 エラーが発生した場合、 **fputs** と **fputws** は **EOF** を返します。 *Str* または *stream* が null ポインターの場合、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、これらの関数は無効なパラメーターハンドラーを呼び出します。 実行の継続が許可された場合、これらの関数は **errno** を **EINVAL** に設定し、 **fputs** は **EOF** を返し、 **fputws** は **WEOF** を返します。
 
 エラー コードの詳細については、「[_doserrno、errno、_sys_errlist、および _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」を参照してください。
 
 ## <a name="remarks"></a>解説
 
-これらの各関数は、 *str*を現在の位置の出力*ストリーム*にコピーします。 **fputws**は、ワイド文字の引数*str*を、*ストリームがテキスト*モードとバイナリモードのどちらで開かれているかに応じて、マルチバイト文字列またはワイド文字列として*ストリーム*にコピーします。 どちらの関数も、終端の null 文字をコピーしません。
+これらの各関数は、 *str* を現在の位置の出力 *ストリーム* にコピーします。 **fputws** は、ワイド文字の引数 *str* を、*ストリームがテキスト* モードとバイナリモードのどちらで開かれているかに応じて、マルチバイト文字列またはワイド文字列として *ストリーム* にコピーします。 どちらの関数も、終端の null 文字をコピーしません。
 
-ストリームが ANSI モードで開かれている場合、2 つの関数の動作は同じになります。 **fputs**は、現在 UNICODE ストリームへの出力をサポートしていません。
+ストリームが ANSI モードで開かれている場合、2 つの関数の動作は同じになります。 **fputs** は、現在 UNICODE ストリームへの出力をサポートしていません。
 
 既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
@@ -86,9 +87,9 @@ int fputws(
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_fputts**|**fputs**|**fputs**|**fputws**|
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-|関数|必須ヘッダー|
+|機能|必須ヘッダー|
 |--------------|---------------------|
 |**fputs**|\<stdio.h>|
 |**fputws**|\<stdio.h> または \<wchar.h>|
@@ -118,5 +119,5 @@ Hello world from fputs.
 
 [ストリーム入出力](../../c-runtime-library/stream-i-o.md)<br/>
 [fgets、fgetws](fgets-fgetws.md)<br/>
-[を取得し、_getws します。](../../c-runtime-library/gets-getws.md)<br/>
+[gets、_getws](../../c-runtime-library/gets-getws.md)<br/>
 [puts、_putws](puts-putws.md)<br/>

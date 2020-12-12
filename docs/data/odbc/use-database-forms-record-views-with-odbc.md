@@ -1,16 +1,17 @@
 ---
+description: '詳細: ODBC でデータベースフォーム (レコードビュー) を使用する'
 title: ODBC でデータベース フォーム (レコード ビュー) を使うには
 ms.date: 11/04/2016
 helpviewer_keywords:
 - ODBC, record views
 - record views, ODBC
 ms.assetid: 6a2ce346-8104-4ccd-b06e-ca0859a132fe
-ms.openlocfilehash: e0b5235508c3e44381736b0575ebdfc994bee1a3
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 3c178451c3b15eed5a3ffd3910c5b28b4091f13c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80212546"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97313659"
 ---
 # <a name="use-database-forms-record-views-with-odbc"></a>ODBC でデータベース フォーム (レコード ビュー) を使うには
 
@@ -30,6 +31,6 @@ ms.locfileid: "80212546"
 
 - [レコードビューの使用](../../data/using-a-record-view-mfc-data-access.md)
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[ODBC (Open Database Connectivity)](../../data/odbc/open-database-connectivity-odbc.md)
+[Open Database Connectivity (ODBC)](../../data/odbc/open-database-connectivity-odbc.md)

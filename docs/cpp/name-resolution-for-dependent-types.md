@@ -1,13 +1,14 @@
 ---
+description: 詳細については、「依存型の名前解決」を参照してください。
 title: 依存する型の名前解決
 ms.date: 11/04/2016
 ms.assetid: 34066bb4-0c79-4fd8-bda7-539a60a277ab
-ms.openlocfilehash: de40bd056fe351e679ff32d9908c068ea4c6752a
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: f50b067062f01d04ce26374ad969d572e1a7fe08
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87227310"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97313789"
 ---
 # <a name="name-resolution-for-dependent-types"></a>依存する型の名前解決
 

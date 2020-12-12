@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: CWinFormsView クラス'
 title: CWinFormsView クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - CWinFormsView [MFC], CWinFormsView
 - CWinFormsView [MFC], GetControl
 ms.assetid: d597e397-6529-469b-88f5-7f65a6b9e895
-ms.openlocfilehash: 3c247babd2ec1057f1e24b8132ed81727a0fd402
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: 09dad434ebe0e0011fef5836196fd15e25390536
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90040653"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97318430"
 ---
 # <a name="cwinformsview-class"></a>CWinFormsView クラス
 
@@ -43,11 +44,11 @@ class CWinFormsView : public CView;
 
 ### <a name="public-operators"></a>パブリック演算子
 
-|Name|説明|
+|名前|説明|
 |----------|-|
 |[CWinFormsView:: operator コントロール ^](#operator_control)|型を Windows フォームコントロールへのポインターとしてキャストします。|
 
-## <a name="remarks"></a>注釈
+## <a name="remarks"></a>解説
 
 MFC では、クラスを使用して、 `CWinFormsView` mfc ビュー内の .NET Framework Windows フォームコントロールをホストします。 コントロールはネイティブビューの子であり、MFC ビューのクライアント領域全体を占有します。 結果はビューに似ているため `CFormView` 、Windows フォームデザイナーと実行時間を利用して、豊富なフォームベースのビューを作成することができます。
 
@@ -96,7 +97,7 @@ System::Windows::Forms::Control^ GetControl() const;
 
 `System.Windows.Forms.Control` オブジェクトを指すポインターです。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 Windows フォームの使用方法の例については、「 [MFC での Windows フォームユーザーコントロールの使用](../../dotnet/using-a-windows-form-user-control-in-mfc.md)」を参照してください。
 
@@ -108,7 +109,7 @@ Windows フォームの使用方法の例については、「 [MFC での Windo
 operator System::Windows::Forms::Control^() const;
 ```
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 この演算子を使用すると、 `CWinFormsView` 型の Windows フォームコントロールへのポインターを受け取る関数にビューを渡すことができ <xref:System.Windows.Forms.Control> ます。
 
@@ -116,7 +117,7 @@ operator System::Windows::Forms::Control^() const;
 
   「 [CWinFormsView:: GetControl](#getcontrol)」を参照してください。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [階層図](../../mfc/hierarchy-chart.md)<br/>
 [CWinFormsControl クラス](../../mfc/reference/cwinformscontrol-class.md)<br/>

@@ -1,19 +1,20 @@
 ---
+description: 詳細については、「パラメーター化クエリの発行」を参照してください。
 title: パラメーター クエリの実行
 ms.date: 10/19/2018
 helpviewer_keywords:
 - parameter queries, running using CCommand class
 ms.assetid: aedb0fce-52a4-4c97-a5c9-b2114be6c3b0
-ms.openlocfilehash: bb8b879d08595150b2db61f4840131e3ccc500a2
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 2d3f03a359fe3ce079239fdcb9603b2d30299c33
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80210172"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97317234"
 ---
 # <a name="issuing-a-parameterized-query"></a>パラメーター クエリの実行
 
-次の例では、Microsoft Access データベースのテーブルから age フィールド (30 を超える) のレコードを取得する単純なパラメーター化クエリを発行します。 パラメーターをサポートするには、ユーザーレコードにマップが追加されている必要があります。 次のコードでは、ATL プロジェクトで、[単純な行セットを走査する](../../data/oledb/traversing-a-simple-rowset.md)前の例で使用した `CTable` クラスではなく、`CCommand` クラスを使用しています。
+次の例では、Microsoft Access データベースのテーブルから age フィールド (30 を超える) のレコードを取得する単純なパラメーター化クエリを発行します。 パラメーターをサポートするには、ユーザーレコードにマップが追加されている必要があります。 ATL プロジェクトの次のコードでは、前の例で使用したクラスでは `CCommand` なく、 `CTable` [単純な行セットを走査](../../data/oledb/traversing-a-simple-rowset.md)するクラスを使用しています。
 
 ```cpp
 #include <atldbcli.h>
@@ -51,7 +52,7 @@ int main()
 }
 ```
 
-ユーザーレコード `CArtists`は、次の例のようになります。
+ユーザーレコードは、次の `CArtists` 例のようになります。
 
 ```cpp
 class CArtists
@@ -77,6 +78,6 @@ END_PARAM_MAP()
 };
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[OLE DB コンシューマー テンプレートの操作](../../data/oledb/working-with-ole-db-consumer-templates.md)
+[OLE DB コンシューマーテンプレートの使用](../../data/oledb/working-with-ole-db-consumer-templates.md)

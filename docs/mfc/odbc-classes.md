@@ -1,16 +1,17 @@
 ---
+description: '詳細情報: ODBC クラス'
 title: ODBC クラス
 ms.date: 11/04/2016
 helpviewer_keywords:
 - database classes [MFC], ODBC
 - ODBC classes [MFC]
 ms.assetid: 6c40fca8-3033-4873-9abe-7f51725de0e0
-ms.openlocfilehash: 18b6e3a0ea20dbd352a61c4faab52c35b852dcb3
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: ac03543a6dfd9cf85320f9ff051730c102f2e0bd
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84622189"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97318690"
 ---
 # <a name="odbc-classes"></a>ODBC クラス
 
@@ -31,15 +32,15 @@ ODBC データベースを使用するプログラムには、少なく `CDataba
 データアクセス処理の失敗に起因する例外。 このクラスは、クラスライブラリの例外処理機構における他の例外クラスと同じ目的を果たします。
 
 [CFieldExchange](reference/cfieldexchange-class.md)<br/>
-レコードフィールドエクスチェンジ (RFX) をサポートするためのコンテキスト情報を提供します。 RFX は、レコードセットオブジェクトのフィールドデータメンバーとパラメーターデータメンバーと、データソースの対応するテーブル列との間でデータを交換します。 ダイアログデータエクスチェンジ (DDX) と同様に使用される[CDataExchange](reference/cdataexchange-class.md)クラスに似ています。
+レコードフィールドエクスチェンジ (RFX) をサポートするためのコンテキスト情報を提供します。 RFX は、レコードセットオブジェクトのフィールドデータメンバーとパラメーターデータメンバーと、データソースの対応するテーブル列との間でデータを交換します。 ダイアログデータエクスチェンジ (DDX) と同様に使用される [CDataExchange](reference/cdataexchange-class.md)クラスに似ています。
 
 ## <a name="related-classes"></a>関連クラス
 
 [CLongBinary](reference/clongbinary-class.md)<br/>
-ビットマップなどのバイナリラージオブジェクト (BLOB) のストレージへのハンドルをカプセル化します。 `CLongBinary`オブジェクトは、データベーステーブルに格納されている大規模なデータオブジェクトを管理するために使用されます。
+ビットマップなどのバイナリラージオブジェクト (BLOB) のストレージへのハンドルをカプセル化します。 `CLongBinary` オブジェクトは、データベーステーブルに格納されている大規模なデータオブジェクトを管理するために使用されます。
 
 [CDBVariant](reference/cdbvariant-class.md)<br/>
-値のデータ型を気にせずに値を格納できます。 `CDBVariant`共用体に格納されている現在の値のデータ型を追跡します。
+値のデータ型を気にせずに値を格納できます。 `CDBVariant` 共用体に格納されている現在の値のデータ型を追跡します。
 
 ## <a name="see-also"></a>関連項目
 

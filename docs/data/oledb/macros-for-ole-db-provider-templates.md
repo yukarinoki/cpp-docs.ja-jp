@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「OLE DB プロバイダーテンプレートのマクロ」を参照してください。
 title: OLE DB プロバイダー テンプレート用マクロ
 ms.date: 02/11/2019
 f1_keywords:
@@ -50,12 +51,12 @@ helpviewer_keywords:
 - END_SCHEMA_MAP macro
 - SCHEMA_ENTRY macro
 ms.assetid: 909482c5-64ab-4e52-84a9-1c07091db183
-ms.openlocfilehash: e72204102bfa47a9dd162499030a38c07bbfe46c
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 5e1e1137f49060273c60c73fc89c24c75fd2604d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91504017"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97317169"
 ---
 # <a name="macros-for-ole-db-provider-templates"></a>OLE DB プロバイダー テンプレート用マクロ
 
@@ -97,7 +98,7 @@ OLE DB テンプレートプロバイダーマクロは、次のカテゴリの�
 |[END_SCHEMA_MAP](#end_schema_map)|スキーママップの終了をマークします。|
 |[SCHEMA_ENTRY](#schema_entry)|GUID をクラスに関連付けます。|
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** atldb.h
 
@@ -184,7 +185,7 @@ CHAIN_PROPERTY_SET(ChainClass)
 *ChainClass*<br/>
 からプロパティを連結するクラスの名前。 これは、既にマップ (セッション、コマンド、データソースオブジェクトクラスなど) が含まれている ATL プロジェクトウィザードによって生成されるクラスです。
 
-#### <a name="remarks"></a>注釈
+#### <a name="remarks"></a>解説
 
 別のクラスのプロパティセットを独自のクラスにチェーンし、クラスから直接プロパティにアクセスすることができます。
 
@@ -239,7 +240,7 @@ PROPERTY_INFO_ENTRY(dwPropID)
 *dwPropID*<br/>
 [入力] プロパティ セット GUID と組み合わせて使用してプロパティを特定する [DBPROPID](/previous-versions/windows/desktop/ms723882(v=vs.85)) 値。
 
-#### <a name="remarks"></a>注釈
+#### <a name="remarks"></a>解説
 
 このマクロは、 `DWORD` 型のプロパティ値を、ATLDB.H で定義された既定値に設定します。 選択した値にプロパティを設定するには、 [PROPERTY_INFO_ENTRY_VALUE](#property_info_entry_value)を使用します。 `VARTYPE`プロパティのおよび[Dbpropflags](/previous-versions/windows/desktop/ms724342(v=vs.85))を同時に設定するには、 [PROPERTY_INFO_ENTRY_EX](#property_info_entry_ex)を使用します。
 
@@ -274,7 +275,7 @@ PROPERTY_INFO_ENTRY_EX(dwPropID, vt, dwFlags, value, options)
 *options*<br/>
 DBPROPOPTIONS_REQUIRED または DBPROPOPTIONS_SETIFCHEAP。 通常、プロバイダーはコンシューマーによって設定されているため、 *オプション* を設定する必要はありません。
 
-#### <a name="remarks"></a>注釈
+#### <a name="remarks"></a>解説
 
 このマクロでは、オプションとフラグだけでなく、 `DWORD` 型のプロパティの値を直接指定できます。 単にプロパティを ATLDB.H に定義されている既定値に設定するには、 [PROPERTY_INFO_ENTRY](#property_info_entry)を使用します。 オプションやフラグを設定せずに任意の値にプロパティを設定するには、 [PROPERTY_INFO_ENTRY_VALUE](#property_info_entry_value)を使用します。
 
@@ -300,7 +301,7 @@ PROPERTY_INFO_ENTRY_VALUE(dwPropID, value)
 *value*<br/>
 [入力] `DWORD`型のプロパティ値。
 
-#### <a name="remarks"></a>注釈
+#### <a name="remarks"></a>解説
 
 このマクロでは、型のプロパティ値を直接指定でき `DWORD` ます。 ATLDB.H で定義されている既定値にプロパティを設定します。H では、 [PROPERTY_INFO_ENTRY](#property_info_entry)を使用します。 プロパティの値、フラグ、およびオプションを設定するには、 [PROPERTY_INFO_ENTRY_EX](#property_info_entry_ex)を使用します。
 
@@ -388,7 +389,7 @@ PROVIDER_COLUMN_ENTRY_FIXED(name, ordinal, dbtype, member)
 *レプリカ*<br/>
 からデータを格納するのメンバー変数 `dataClass` 。
 
-#### <a name="remarks"></a>注釈
+#### <a name="remarks"></a>解説
 
 列のデータ型を指定できます。
 
@@ -430,9 +431,9 @@ PROVIDER_COLUMN_ENTRY_GN (name, ordinal, flags, colSize, dbtype, precision, scal
 からDbType が DBTYPE_NUMERIC または DBTYPE_DECIMAL 場合に、データを取得するときに使用する小数点以下桁数を示します。 `bScale` [DBBINDING 構造体](/previous-versions/windows/desktop/ms716845(v=vs.85))の説明を参照してください。
 
 *guid*<br/>
-スキーマ行セットの GUID。 スキーマ行セットとその Guid の一覧については、 *OLE DB プログラマーリファレンス*の「 [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686(v=vs.85)) 」を参照してください。
+スキーマ行セットの GUID。 スキーマ行セットとその Guid の一覧については、 *OLE DB プログラマーリファレンス* の「 [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686(v=vs.85)) 」を参照してください。
 
-#### <a name="remarks"></a>注釈
+#### <a name="remarks"></a>解説
 
 列のサイズ、データ型、有効桁数、小数点以下桁数、およびスキーマ行セット GUID を指定できます。
 
@@ -460,7 +461,7 @@ PROVIDER_COLUMN_ENTRY_LENGTH(name, ordinal, size, member)
 *レプリカ*<br/>
 から `dataClass` 列データを格納するのメンバー変数。
 
-#### <a name="remarks"></a>注釈
+#### <a name="remarks"></a>解説
 
 列のサイズを指定できます。
 
@@ -489,7 +490,7 @@ PROVIDER_COLUMN_ENTRY_STR(name, ordinal, member)
 *レプリカ*<br/>
 からデータを格納するデータクラスのメンバー変数。
 
-#### <a name="remarks"></a>注釈
+#### <a name="remarks"></a>解説
 
 列データを [DBTYPE_STR](/previous-versions/windows/desktop/ms711251(v=vs.85))と想定する場合は、このマクロを使用します。
 
@@ -524,7 +525,7 @@ PROVIDER_COLUMN_ENTRY_TYPE_LENGTH(name, ordinal, dbtype, size, member)
 *レプリカ*<br/>
 からデータを格納するデータクラスのメンバー変数。
 
-#### <a name="remarks"></a>注釈
+#### <a name="remarks"></a>解説
 
 [PROVIDER_COLUMN_ENTRY_LENGTH](#provider_column_entry_length)に似ていますが、列のデータ型やサイズを指定することもできます。
 
@@ -549,7 +550,7 @@ PROVIDER_COLUMN_ENTRY_WSTR(name, ordinal, member)
 *レプリカ*<br/>
 からデータを格納するデータクラスのメンバー変数。
 
-#### <a name="remarks"></a>注釈
+#### <a name="remarks"></a>解説
 
 このマクロは、列のデータが null で終了した Unicode 文字列 ( [DBTYPE_WSTR](/previous-versions/windows/desktop/ms711251(v=vs.85))) の場合に使用します。
 
@@ -568,7 +569,7 @@ BEGIN_SCHEMA_MAP(SchemaClass);
 *SchemaClass*<br/>
 MAP を含むクラスです。 通常、これは session クラスになります。
 
-#### <a name="remarks"></a>注釈
+#### <a name="remarks"></a>解説
 
 スキーマ行セットの詳細については、Windows SDK の「 [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686(v=vs.85)) 」を参照してください。
 
@@ -600,12 +601,12 @@ SCHEMA_ENTRY(guid,
 #### <a name="parameters"></a>パラメーター
 
 *guid*<br/>
-スキーマ行セットの GUID。 スキーマ行セットとその Guid の一覧については、 *OLE DB プログラマーリファレンス*の「 [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686(v=vs.85)) 」を参照してください。
+スキーマ行セットの GUID。 スキーマ行セットとその Guid の一覧については、 *OLE DB プログラマーリファレンス* の「 [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686(v=vs.85)) 」を参照してください。
 
 *rowsetClass*<br/>
 スキーマ行セットを表すために作成されるクラス。
 
-#### <a name="remarks"></a>注釈
+#### <a name="remarks"></a>解説
 
 [IDBSchemaRowsetImpl](../../data/oledb/idbschemarowsetimpl-class.md) は、guid のリストについてマップを照会できます。また、guid が指定されている場合は、行セットを作成することもできます。 スキーマ行セットの `IDBSchemaRowsetImpl` 作成は、標準 `CRowsetImpl` の派生クラスに似ていますが、 `Execute` 次のシグネチャを持つメソッドを提供する必要があります。
 

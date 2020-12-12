@@ -1,4 +1,5 @@
 ---
+description: 詳細については、OLE DB プロバイダーテンプレートのアーキテクチャに関するページを参照してください。
 title: OLE DB プロバイダー テンプレートのアーキテクチャ
 ms.date: 11/19/2018
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - architecture [C++], OLE DB Provider
 - OLE DB provider templates, object model
 ms.assetid: 639304a3-f9e0-44dc-8d0c-0ebd2455b363
-ms.openlocfilehash: 89e07f95853c3611b7cceaef3f247c220c630add
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 1cc1619ab7ed13c2d7962f75229df2ecd8cf0d78
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91509543"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97317130"
 ---
 # <a name="ole-db-provider-template-architecture"></a>OLE DB プロバイダー テンプレートのアーキテクチャ
 
@@ -21,7 +22,7 @@ OLE DB プロバイダーのアーキテクチャには、データソースオ�
 
 ![プロバイダー アーキテクチャ](../../data/oledb/media/vc4twb1.gif "プロバイダー アーキテクチャ")
 
-**OLE DB プロバイダーウィザード**によって作成されたソースファイルと共に、OLE DB テンプレートはデータソースオブジェクトを実装します。 セッションは、OLE DB に対応するオブジェクトです `TSession` 。
+**OLE DB プロバイダーウィザード** によって作成されたソースファイルと共に、OLE DB テンプレートはデータソースオブジェクトを実装します。 セッションは、OLE DB に対応するオブジェクトです `TSession` 。
 
 ## <a name="mandatory-and-optional-interfaces"></a>必須および省略可能なインターフェイス
 

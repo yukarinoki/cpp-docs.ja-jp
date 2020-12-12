@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: _fputc_nolock、_fputwc_nolock'
 title: _fputc_nolock、_fputwc_nolock
 ms.date: 4/2/2020
 api_name:
@@ -39,12 +40,12 @@ helpviewer_keywords:
 - _fputtc_nolock function
 - _fputwc_nolock function
 ms.assetid: c63eb3ad-58fa-46d0-9249-9c25f815eab9
-ms.openlocfilehash: e25539bf6c6d590a787615e091ec68753cd1c93e
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: c9070f641fce2acbd584ef75f6209464f3e90130
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82920136"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97314161"
 ---
 # <a name="_fputc_nolock-_fputwc_nolock"></a>_fputc_nolock、_fputwc_nolock
 
@@ -65,7 +66,7 @@ wint_t _fputwc_nolock(
 
 ### <a name="parameters"></a>パラメーター
 
-*40u-c*<br/>
+*c*<br/>
 書き込む文字。
 
 *一連*<br/>
@@ -77,9 +78,9 @@ wint_t _fputwc_nolock(
 
 ## <a name="remarks"></a>解説
 
-**_fputc_nolock**と **_fputwc_nolock**はそれぞれ、他のスレッドによる干渉から保護されない点を除いて、 **fputc**および**fputwc**と同じです。 他のスレッドをロックアウトするオーバーヘッドが発生しないため、処理が速くなる場合があります。 これらの関数は、シングルスレッド アプリケーション、呼び出し元のスコープで既にスレッド分離を処理している場合などのスレッドセーフなコンテキストでのみ使用してください。
+**_fputc_nolock** と **_fputwc_nolock** はそれぞれ、他のスレッドによる干渉から保護されない点を除いて、 **fputc** および **fputwc** と同じです。 他のスレッドをロックアウトするオーバーヘッドが発生しないため、処理が速くなる場合があります。 これらの関数は、シングルスレッド アプリケーション、呼び出し元のスコープで既にスレッド分離を処理している場合などのスレッドセーフなコンテキストでのみ使用してください。
 
-ストリームが ANSI モードで開かれている場合、2 つの関数の動作は同じになります。 **_fputc_nolock**は、現在 UNICODE ストリームへの出力をサポートしていません。
+ストリームが ANSI モードで開かれている場合、2 つの関数の動作は同じになります。 **_fputc_nolock** は、現在 UNICODE ストリームへの出力をサポートしていません。
 
 既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
@@ -89,9 +90,9 @@ wint_t _fputwc_nolock(
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_fputtc_nolock**|**_fputc_nolock**|**_fputc_nolock**|**_fputwc_nolock**|
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-|関数|必須ヘッダー|
+|機能|必須ヘッダー|
 |--------------|---------------------|
 |**_fputc_nolock**|\<stdio.h>|
 |**_fputwc_nolock**|\<stdio.h> または \<wchar.h>|

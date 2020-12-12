@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: 入れ子になったクラス宣言'
 title: 入れ子にされたクラス宣言
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - declaring classes [C++]
 - declarations, nested classes
 ms.assetid: c02e471d-b7f9-41b8-8ef6-2323f006dbd5
-ms.openlocfilehash: 672156e65e223be45c91558ed91065859566a8b9
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 8247a969be59cb35752f141ea281a271de24f87b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87227284"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97313685"
 ---
 # <a name="nested-class-declarations"></a>入れ子にされたクラス宣言
 
@@ -54,7 +55,7 @@ int main()
 }
 ```
 
-`BufferedIO::BufferedInput`と `BufferedIO::BufferedOutput` は、内で宣言され `BufferedIO` ます。 `BufferedIO` クラスのスコープ外ではこれらのクラス名が表示されません。 ただし、`BufferedIO` 型のオブジェクトには、`BufferedInput` 型または `BufferedOutput` 型のオブジェクトが含まれません。
+`BufferedIO::BufferedInput` と `BufferedIO::BufferedOutput` は、内で宣言され `BufferedIO` ます。 `BufferedIO` クラスのスコープ外ではこれらのクラス名が表示されません。 ただし、`BufferedIO` 型のオブジェクトには、`BufferedInput` 型または `BufferedOutput` 型のオブジェクトが含まれません。
 
 入れ子になったクラスは、外側のクラスからのみ、名前、型名、静的メンバー名、および列挙子を直接使用できます。 他のクラス メンバーの名前を使用するには、ポインター、参照、またはオブジェクト名を使用する必要があります。
 
@@ -134,13 +135,13 @@ int main()
 }
 ```
 
-前の例では、関数名を宣言するために、*修飾型名*の構文が使用されています。 宣言:
+前の例では、関数名を宣言するために、 *修飾型名* の構文が使用されています。 宣言:
 
 ```cpp
 BufferedIO::BufferedInput::read()
 ```
 
-"`read` クラスのスコープ内の `BufferedInput` クラスのメンバーである `BufferedIO` 関数" という意味です。 この宣言では、*修飾型名*の構文が使用されるため、次の形式の構造が可能です。
+"`read` クラスのスコープ内の `BufferedInput` クラスのメンバーである `BufferedIO` 関数" という意味です。 この宣言では、 *修飾型名* の構文が使用されるため、次の形式の構造が可能です。
 
 ```cpp
 typedef BufferedIO::BufferedInput BIO_INPUT;

@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「OLE DB コンシューマーテンプレート (C++)」を参照してください。
 title: OLE DB コンシューマー テンプレート (C++)
 ms.date: 10/22/2018
 helpviewer_keywords:
@@ -7,16 +8,16 @@ helpviewer_keywords:
 - OLE DB consumer templates [C++]
 - databases [C++], consumers
 ms.assetid: d3e42612-0bc0-4d65-9c32-0e8a7b219e82
-ms.openlocfilehash: d2697c955d2063bb075e06536b083c0b138aa4ac
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6aaf935234b8ec3396c97345ca7e38a0f8d806bf
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62284047"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97317156"
 ---
 # <a name="ole-db-consumer-templates-c"></a>OLE DB コンシューマー テンプレート (C++)
 
-OLE DB コンシューマー テンプレートは、OLE DB Version 2.6 仕様をサポートしています (OLE DB コンシューマー テンプレートは OLE DB 2.6 でテストされますが、仕様内のすべてのインターフェイスをサポートしない)。コンシューマー テンプレートを使用すると、OLE DB コンシューマーを実装するために記述するコードの量を最小限に抑えられます。 テンプレートには、次に示す機能があります。
+OLE DB コンシューマー テンプレートは、OLE DB Version 2.6 仕様をサポートしています (OLE DB コンシューマーテンプレートは OLE DB 2.6 に対してテストされますが、仕様内のすべてのインターフェイスをサポートしているわけではありません)。コンシューマーテンプレートによって、OLE DB コンシューマーを実装するために記述する必要があるコードの量が最小限に抑えられます。 テンプレートには、次に示す機能があります。
 
 - OLE DB 機能への簡単なアクセスと ATL および MFC との簡単な統合。
 
@@ -24,7 +25,7 @@ OLE DB コンシューマー テンプレートは、OLE DB Version 2.6 仕様�
 
 - OLE DB プログラミング用のネイティブの C/C++ データ型。
 
-OLE DB テンプレートを使用するには、C++ テンプレート、COM、および OLE DB インターフェイスに関する知識が必要です。 OLE DB を知らない場合は、次を参照してください。 [Microsoft OLE DB Driver for SQL Server](/sql/connect/oledb/oledb-driver-for-sql-server)します。
+OLE DB テンプレートを使用するには、C++ テンプレート、COM、および OLE DB インターフェイスに関する知識が必要です。 OLE DB に慣れていない場合は、「 [Microsoft OLE DB Driver for SQL Server](/sql/connect/oledb/oledb-driver-for-sql-server)」を参照してください。
 
 OLE DB テンプレートは、新しいオブジェクト モデルを追加するのではなく、既存の OLE DB オブジェクト モデルをサポートします。 OLE DB コンシューマー テンプレートの最上位クラスは、OLE DB 仕様で定義されたコンポーネントと同等のものです。 OLE DB コンシューマー テンプレートのデザインには、1 つの行セットに対する複数のアクセサーなどの高度な機能が含まれます。 テンプレートと多重継承を使用することで、ライブラリを小型で柔軟なものにすることができます。
 
@@ -32,13 +33,13 @@ OLE DB テンプレートは、新しいオブジェクト モデルを追加す
 
 コンシューマーは、複数の種類のオブジェクトを使用します。これらのオブジェクトについては、次に示すトピックで説明しています。
 
-- [データ ソースとセッション](../../data/oledb/data-sources-and-sessions.md)
+- [データソースとセッション](../../data/oledb/data-sources-and-sessions.md)
 
 - [アクセサーと行セット](../../data/oledb/accessors-and-rowsets.md)
 
 - [コマンドとテーブル](../../data/oledb/commands-and-tables.md)
 
-- [ユーザー レコード](../../data/oledb/user-records.md)
+- [ユーザーレコード](../../data/oledb/user-records.md)
 
 コンシューマーが何らかの処理を行う前に、アクセスする必要のあるデータベースの種類 (SQL、Oracle、ODBC、MSDS など) に適した OLE DB プロバイダーを選択します。 プロバイダーを選択するには、通常は列挙子を使用します (「 [データ ソースとセッション](../../data/oledb/cenumerator-class.md) 」の説明にある「 [CEnumerator](../../data/oledb/data-sources-and-sessions.md)」を参照してください)。
 

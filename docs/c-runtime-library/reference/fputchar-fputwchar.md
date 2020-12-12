@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: _fputchar、_fputwchar'
 title: _fputchar、_fputwchar
 ms.date: 4/2/2020
 api_name:
@@ -38,12 +39,12 @@ helpviewer_keywords:
 - fputtchar function
 - _fputchar function
 ms.assetid: b92ff600-a924-4f2b-b0e7-3097ee31bdff
-ms.openlocfilehash: 08997730e0ef80072e29de5bc5e7c106cb6cb9e0
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: f682f134c3435392176155865f4808a6178ce35a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82912014"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97314192"
 ---
 # <a name="_fputchar-_fputwchar"></a>_fputchar、_fputwchar
 
@@ -62,18 +63,18 @@ wint_t _fputwchar(
 
 ### <a name="parameters"></a>パラメーター
 
-*40u-c*<br/>
+*c*<br/>
 書き込む文字。
 
 ## <a name="return-value"></a>戻り値
 
-これらの各関数は、書き込まれた文字を返します。 **_Fputchar**の場合、 **EOF**の戻り値はエラーを示します。 **_Fputwchar**の場合、 **WEOF**の戻り値はエラーを示します。 C が**NULL**の場合、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、これらの関数は無効なパラメーター例外を生成します。 実行の継続が許可された場合は、 **EOF** (または**WEOF**) を返し、 **errno**を**EINVAL**に設定します。
+これらの各関数は、書き込まれた文字を返します。 **_Fputchar** の場合、 **EOF** の戻り値はエラーを示します。 **_Fputwchar** の場合、 **WEOF** の戻り値はエラーを示します。 C が **NULL** の場合、「 [パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、これらの関数は無効なパラメーター例外を生成します。 実行の継続が許可された場合は、 **EOF** (または **WEOF**) を返し、 **errno** を **EINVAL** に設定します。
 
 エラー コードの詳細については、「[_doserrno、errno、_sys_errlist、および _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」を参照してください。
 
 ## <a name="remarks"></a>解説
 
-どちらの関数も、1つの文字*c*を**stdout**に書き込み、必要に応じてインジケーターを進めます。 **_fputchar**はと同じ`fputc( stdout )`です。 これは、 **putchar**とも同じですが、関数およびマクロとしてではなく、関数としてのみ実装されます。 **Fputc**や**putchar**とは異なり、これらの関数は ANSI 規格と互換性がありません。
+どちらの関数も、1つの文字 *c* を **stdout** に書き込み、必要に応じてインジケーターを進めます。 **_fputchar** はと同じです `fputc( stdout )` 。 これは、 **putchar** とも同じですが、関数およびマクロとしてではなく、関数としてのみ実装されます。 **Fputc** や **putchar** とは異なり、これらの関数は ANSI 規格と互換性がありません。
 
 既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
@@ -83,9 +84,9 @@ wint_t _fputwchar(
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_fputtchar**|**_fputchar**|**_fputchar**|**_fputwchar**|
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-|関数|必須ヘッダー|
+|機能|必須ヘッダー|
 |--------------|---------------------|
 |**_fputchar**|\<stdio.h>|
 |**_fputwchar**|\<stdio.h> または \<wchar.h>|

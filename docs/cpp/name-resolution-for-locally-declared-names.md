@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: ローカルで宣言された名前の名前解決'
 title: ローカルに宣言された名前の名前解決
 ms.date: 11/04/2016
 ms.assetid: 743b88f3-de11-48f4-ae83-931449ea3886
-ms.openlocfilehash: 0216154b55e9742c2c4f3f5df7e6d612e16ec9b1
-ms.sourcegitcommit: 43cee7a0d41a062661229043c2f7cbc6ace17fa3
+ms.openlocfilehash: 14530aae65940830db15f7e6fc0ec2c33935afe3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92008925"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97313776"
 ---
 # <a name="name-resolution-for-locally-declared-names"></a>ローカルに宣言された名前の名前解決
 
