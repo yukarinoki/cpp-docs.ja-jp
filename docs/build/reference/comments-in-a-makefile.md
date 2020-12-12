@@ -1,19 +1,20 @@
 ---
+description: '詳細情報: メイクファイル内のコメント'
 title: メイクファイルのコメント
 ms.date: 11/04/2016
 helpviewer_keywords:
 - makefiles, comments
 ms.assetid: 76fd9e3d-5966-47f4-a091-c9e80b232b49
-ms.openlocfilehash: c66819210d2112f9a68243ed4d3b34f491caae9d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9edee594c0299d8e93928c1284b7244af71f61e1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62294357"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97182295"
 ---
 # <a name="comments-in-a-makefile"></a>メイクファイルのコメント
 
-シャープ記号付きのコメントの前 (#)。 NMAKE では、次の改行文字にシャープ記号からのテキストは無視されます。 次に例を示します。 
+コメントの前にシャープ記号 (#) を付けます。 NMAKE は、シャープ記号から次の改行文字までのテキストを無視します。 例 :
 
 ```
 # Comment on line by itself
@@ -33,7 +34,7 @@ my.exe : my.obj ; link my.obj  # Err: cannot comment this
 .obj.exe: ; link $<  # Error: cannot comment this
 ```
 
-リテラルの番号記号を指定する前にカレット (**^**)、次のようにします。
+リテラルのシャープ記号を指定するには、その前に次のようにカレット () を付け **^** ます。
 
 ```
 DEF = ^#define  #Macro for a C preprocessing directive

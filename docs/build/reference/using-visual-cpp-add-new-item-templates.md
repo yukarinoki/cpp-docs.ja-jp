@@ -1,4 +1,5 @@
 ---
+description: 詳細については、Visual C++ 新しい項目テンプレートの追加
 title: Visual C++ の新しい項目の追加テンプレートの使用方法
 ms.date: 05/06/2019
 helpviewer_keywords:
@@ -7,18 +8,18 @@ helpviewer_keywords:
 - Add New Item command
 - templates, Add New Item
 ms.assetid: 286d1be6-0473-407f-9a51-437dff1bfab7
-ms.openlocfilehash: e6ef78d1a43bc649a31b715afd4ce1d44f25a8c6
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
-ms.translationtype: HT
+ms.openlocfilehash: 11e7057f563ac446daf8e7506896a5af778fdac4
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65217762"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97182204"
 ---
 # <a name="using-visual-c-add-new-item-templates"></a>Visual C++ の新しい項目の追加テンプレートの使用方法
 
-使用して Visual Studio プロジェクトに共通する項目を簡単に追加することができます、**新しい項目の追加**コマンド。 **[新しい項目の追加]** コマンドを選ぶと、適切なファイルをプロジェクトに追加する項目テンプレートの一覧が [`Add New Item`] ダイアログ ボックスに表示されます。
+[ **新しい項目の追加** ] コマンドを使用すると、Visual Studio プロジェクトに共通する項目を簡単に追加できます。 **[新しい項目の追加]** コマンドを選ぶと、適切なファイルをプロジェクトに追加する項目テンプレートの一覧が [`Add New Item`] ダイアログ ボックスに表示されます。
 
-次の表では、Visual Studio 新しい項目の追加テンプレートのアルファベット順の一覧を示します。
+次の表は、Visual Studio の [新しい項目の追加] テンプレートをアルファベット順にした一覧です。
 
 |テンプレート|説明|
 |--------------|-----------------|
@@ -38,7 +39,7 @@ ms.locfileid: "65217762"
 |インストーラー クラス|CLR 機能を使う <xref:System.Configuration.Install.Installer> を継承するクラスを追加します。|
 |MIDL ファイル (.idl)|インターフェイス定義言語ファイルを作成します。|
 |モジュール定義ファイル (.def)|DLL エクスポート定義ファイルを作成します。|
-|プロパティ シート (.props)|プロパティ シート ファイルを作成します。|
+|プロパティ シート (.props)|プロパティシートファイルを作成します。|
 |登録スクリプト (.rgs)|ATL 登録スクリプト ファイルを作成します。|
 |レポート (.rdlc)|レポート ファイルを作成します。|
 |リソース ファイル (.rc)|Win32 のリソース ファイルを作成します。|

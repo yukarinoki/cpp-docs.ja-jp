@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: Generic-Text のマッピング'
 title: 汎用テキスト マップ
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - generic-text mappings
 - mappings, generic-text
 ms.assetid: 1ed02e02-3649-42dd-a697-e1b4af25bb02
-ms.openlocfilehash: d4bf4fdc44cc8807bebacdad3700d2040c628b0d
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: 3f993b4bd9d00f0acf4988fb8311a35383a70156
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57742673"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97181788"
 ---
 # <a name="generic-text-mappings"></a>汎用テキスト マップ
 
@@ -28,5 +29,5 @@ ms.locfileid: "57742673"
 
 ## <a name="see-also"></a>関連項目
 
-[データ型のマップ](../c-runtime-library/data-type-mappings.md)<br/>
-[汎用テキストのプログラム例](../c-runtime-library/a-sample-generic-text-program.md)
+[データ型のマッピング](../c-runtime-library/data-type-mappings.md)<br/>
+[サンプル Generic-Text プログラム](../c-runtime-library/a-sample-generic-text-program.md)

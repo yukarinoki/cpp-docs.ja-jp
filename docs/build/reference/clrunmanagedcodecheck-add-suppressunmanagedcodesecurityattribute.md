@@ -1,4 +1,5 @@
 ---
+description: 詳細情報:/CLRUNMANAGEDCODECHECK (Remove SuppressUnmanagedCodeSecurityAttribute)
 title: /CLRUNMANAGEDCODECHECK (SuppressUnmanagedCodeSecurityAttribute の削除)
 ms.date: 05/16/2019
 ms.topic: reference
@@ -10,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 73abc426-dab0-45e2-be85-0f9a14206cc2
 author: corob-msft
 ms.author: corob
-ms.openlocfilehash: ecc560673a8e98752289ef0e0f89d3abfc1938e4
-ms.sourcegitcommit: a10c9390413978d36b8096b684d5ed4cf1553bc8
+ms.openlocfilehash: e08b7b4b18a463122316b041ad81d6ddd2598bca
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "65837238"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97182399"
 ---
 # <a name="clrunmanagedcodecheck-remove-suppressunmanagedcodesecurityattribute"></a>/CLRUNMANAGEDCODECHECK (SuppressUnmanagedCodeSecurityAttribute の削除)
 
@@ -23,13 +24,13 @@ ms.locfileid: "65837238"
 
 ## <a name="syntax"></a>構文
 
-> **/CLRUNMANAGEDCODECHECK** **[:NO]**
+> **/CLRUNMANAGEDCODECHECK** [**:NO**]
 
 ## <a name="remarks"></a>解説
 
-既定では、リンカーによって生成された `PInvoke` 呼び出しに対して、リンカーで **SuppressUnmanagedCodeSecurityAttribute** が適用されます。 **/CLRUNMANAGEDCODECHECK** が有効である場合、**SuppressUnmanagedCodeSecurityAttribute** は削除されます。 リンカーによって生成された `PInvoke` 呼び出しに対して **SuppressUnmanagedCodeSecurityAttribute** を明示的に適用するには、 **/CLRUNMANAGEDCODECHECK:NO** を使用します。
+既定では、リンカーによって生成された `PInvoke` 呼び出しに対して、リンカーで **SuppressUnmanagedCodeSecurityAttribute** が適用されます。 **/CLRUNMANAGEDCODECHECK** が有効である場合、**SuppressUnmanagedCodeSecurityAttribute** は削除されます。 リンカーによって生成された `PInvoke` 呼び出しに対して **SuppressUnmanagedCodeSecurityAttribute** を明示的に適用するには、**/CLRUNMANAGEDCODECHECK:NO** を使用します。
 
-この属性は、リンカーにより、 **/clr** または **/clr:pure** を使用してコンパイルされたオブジェクトに対してのみ追加されます。 ただし、 **/clr:pure** コンパイラ オプションは Visual Studio 2015 では非推奨とされており、Visual Studio 2017 以降ではサポートされていません。
+この属性は、リンカーにより、**/clr** または **/clr:pure** を使用してコンパイルされたオブジェクトに対してのみ追加されます。 ただし、**/clr:pure** コンパイラ オプションは Visual Studio 2015 では非推奨とされており、Visual Studio 2017 以降ではサポートされていません。
 
 リンカーで、マネージド呼び出し元からの参照を満たすマネージド シンボルを見つけることができないが、その参照を満たすネイティブ シンボルを見つけることができる場合、リンカーによって `PInvoke` 呼び出しが生成されます。 `PInvoke` の詳細については、「[マネージド コードからのネイティブ関数の呼び出し](../../dotnet/calling-native-functions-from-managed-code.md)」を参照してください。
 

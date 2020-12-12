@@ -1,4 +1,5 @@
 ---
+description: 詳細情報:/CLRSUPPORTLASTERROR (PInvoke 呼び出しの最終エラーコードの保持)
 title: /CLRSUPPORTLASTERROR (PInvoke 呼び出しの最終エラー コードの保持)
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,16 +8,16 @@ helpviewer_keywords:
 - /CLRSUPPORTLASTERROR linker option
 - -CLRSUPPORTLASTERROR linker option
 ms.assetid: b7057990-4154-4b1d-9fc9-6236f7be7575
-ms.openlocfilehash: ccf13971bf77fb8e960b781e4a1aa2a0e06a5d61
-ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
+ms.openlocfilehash: 253d67e2ced2667d3ca8c7b9330ed3e6d4182d9f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90686104"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97182412"
 ---
 # <a name="clrsupportlasterror-preserve-last-error-code-for-pinvoke-calls"></a>/CLRSUPPORTLASTERROR (PInvoke 呼び出しの最終エラー コードの保持)
 
-既定でオンになっている **/CLRSUPPORTLASTERROR**は、P/Invoke 機構を通じて呼び出された関数の最後のエラーコードを保持します。これにより、 **/clr**でコンパイルされたコードから dll 内のネイティブ関数を呼び出すことができます。
+既定でオンになっている **/CLRSUPPORTLASTERROR** は、P/Invoke 機構を通じて呼び出された関数の最後のエラーコードを保持します。これにより、 **/clr** でコンパイルされたコードから dll 内のネイティブ関数を呼び出すことができます。
 
 ## <a name="syntax"></a>構文
 
@@ -26,9 +27,9 @@ ms.locfileid: "90686104"
 
 ## <a name="remarks"></a>解説
 
-最後のエラーコードを保持することは、パフォーマンスの低下を意味します。  最新のエラーコードを保持することによるパフォーマンスへの影響を避ける場合は、  **/CLRSUPPORTLASTERROR: NO**とリンクします。
+最後のエラーコードを保持することは、パフォーマンスの低下を意味します。  最新のエラーコードを保持することによるパフォーマンスへの影響を避ける場合は、  **/CLRSUPPORTLASTERROR: NO** とリンクします。
 
-**/CLRSUPPORTLASTERROR: SYSTEMDLL**とリンクすることで、パフォーマンスへの影響を最小限に抑えることができます。この場合、システム dll 内の関数の最後のエラーコードのみが保持されます。
+**/CLRSUPPORTLASTERROR: SYSTEMDLL** とリンクすることで、パフォーマンスへの影響を最小限に抑えることができます。この場合、システム dll 内の関数の最後のエラーコードのみが保持されます。
 
 > [!NOTE]
 > 同じモジュールで CLR コードによって使用されるアンマネージ関数では、最後のエラーの保持はサポートされていません。
@@ -66,7 +67,7 @@ __declspec(dllexport) double MySqrt(__int64 n) {
 }
 ```
 
-次の例では、DLL を使用して、 **/CLRSUPPORTLASTERROR**の使用方法を示しています。
+次の例では、DLL を使用して、 **/CLRSUPPORTLASTERROR** の使用方法を示しています。
 
 ```cpp
 // CLRSUPPORTLASTERROR_client.cpp

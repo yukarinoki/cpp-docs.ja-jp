@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: @ (リンカー応答ファイルの指定)'
 title: '@ (リンカー応答ファイルの指定)'
 ms.date: 09/05/2018
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - '@ linker option'
 - response files, C/C++ linker
 ms.assetid: 5530014f-17d0-4f6b-a6b0-a6ba34f34cfd
-ms.openlocfilehash: 9e595857a6089c59aa6638ed51acacae3a0eb5e9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d05136742ab476b649346d3e89d47c58b05f5b23
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62294997"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97182815"
 ---
 # <a name="-specify-a-linker-response-file"></a>@ (リンカー応答ファイルの指定)
 
@@ -28,19 +29,19 @@ ms.locfileid: "62294997"
 ## <a name="arguments"></a>引数
 
 *response_file*<br/>
-リンカーのコマンドを指定するテキスト ファイルです。
+リンカーコマンドを指定するテキストファイル。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-参照してください[@ (コンパイラ応答ファイルを指定してください)](at-specify-a-compiler-response-file.md)詳細についてはします。
+詳細については [、「@ (コンパイラ応答ファイルの指定)](at-specify-a-compiler-response-file.md) 」を参照してください。
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのリンカー オプションを設定するには
 
-- このリンカー オプションは、Visual Studio 開発環境からご利用いただけません。
+- このリンカーオプションは、Visual Studio 開発環境では使用できません。
 
 ### <a name="to-set-this-linker-option-programmatically"></a>このリンカーをコードから設定するには
 
-- このリンカー オプションをプログラムで変更することはできません。
+- このリンカーオプションは、プログラムによって変更することはできません。
 
 ## <a name="see-also"></a>関連項目
 

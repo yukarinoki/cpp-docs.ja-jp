@@ -1,4 +1,5 @@
 ---
+description: '詳細については、「方法: System:: String を標準文字列に変換する」を参照してください。'
 title: '方法: System::String を標準文字列に変換する'
 ms.custom: get-started-article
 ms.date: 11/04/2016
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - C++ Standard Library, converting System::String to standard string
 - string conversion, System::String
 ms.assetid: 79e2537e-d4eb-459f-9506-0e738045b59e
-ms.openlocfilehash: 7dd73b8fed98918135b66af1b6351977426cd26e
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: 2bcdaef743f2856f2db20dae8b804bb33546ea0d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "79545301"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97181332"
 ---
 # <a name="how-to-convert-systemstring-to-standard-string"></a>方法: System::String を標準文字列に変換する
 
@@ -63,6 +64,6 @@ abcd
 efgh
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [C++ Interop (暗黙の PInvoke) の使用](../dotnet/using-cpp-interop-implicit-pinvoke.md)

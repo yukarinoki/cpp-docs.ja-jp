@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「コンパイラエラー C3836」を参照してください。
 title: コンパイラ エラー C3836
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3836
 ms.assetid: 254f851b-7b7d-4c34-a740-fcf72f6a636a
-ms.openlocfilehash: 9c8a7e761f2ece046d5de5c0e74ee911e5ee550d
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: c7e05bbf95facf5b8552b4442138cc38b86703c0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74741405"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97180878"
 ---
 # <a name="compiler-error-c3836"></a>コンパイラ エラー C3836
 
@@ -19,7 +20,7 @@ ms.locfileid: "74741405"
 
 マネージクラスは、メンバー初期化リストも持つ静的コンストラクターを持つことはできません。 静的クラスのコンストラクターは、静的データメンバーを初期化して、クラスの初期化を実行するために共通言語ランタイムによって呼び出されます。
 
-## <a name="example"></a>使用例
+## <a name="example"></a>例
 
 次の例では、C3836 が生成されます。
 
