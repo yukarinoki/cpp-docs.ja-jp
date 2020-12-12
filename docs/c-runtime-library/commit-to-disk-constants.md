@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「ディスクのコミット」を参照してください。
 title: ディスク コミット定数
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - commit-to-disk constants
 ms.assetid: 0b903b23-b4fa-431e-a937-51d95f695ecf
-ms.openlocfilehash: c02b18e5a4a731957a7c74cc45e6e181fe23fad8
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: 416729f4b3b7bfdfdcb0ba11193f6c2a52691e6e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57750612"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97322647"
 ---
 # <a name="commit-to-disk-constants"></a>ディスク コミット定数
 
@@ -35,7 +36,7 @@ ms.locfileid: "57750612"
 
 - **n**
 
-   指定したバッファーの書き込まれていない内容をオペレーティング システムのバッファーに書き込みます。 オペレーティング システムはデータをキャッシュし、ディスクに書き込むための最適な時間を決定します。 多くの状況で、この動作は効率的なプログラムの動作になります。 ただし、データの保有期間が重要な場合 (銀行取引や航空券の情報など) は、**c**オプションを使用することを検討してください。 既定では **n** モードです。
+   指定したバッファーの書き込まれていない内容をオペレーティング システムのバッファーに書き込みます。 オペレーティング システムはデータをキャッシュし、ディスクに書き込むための最適な時間を決定します。 多くの状況で、この動作は効率的なプログラムの動作になります。 ただし、データの保有期間が重要な場合 (銀行取引や航空券の情報など) は、**c** オプションを使用することを検討してください。 既定では **n** モードです。
 
 > [!NOTE]
 > **c** および **n** オプションは、`fopen` の ANSI 標準には含まれませんが、Microsoft 拡張機能です。ANSI 互換が必要な場合は使用しないでください。

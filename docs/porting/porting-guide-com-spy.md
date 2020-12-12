@@ -1,13 +1,14 @@
 ---
+description: '詳細については、「移植ガイド: COM Spy」を参照してください。'
 title: '移植のガイド: COM Spy'
 ms.date: 11/04/2016
 ms.assetid: 24aa0d52-4014-4acb-8052-f4e2e4bbc3bb
-ms.openlocfilehash: c21049a2faa8bb34ecd1ba75a5beda1db119f0fc
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 69a97a04d255e64fdde0d863e637d72dfb238967
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87230286"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97322636"
 ---
 # <a name="porting-guide-com-spy"></a>移植のガイド: COM Spy
 
@@ -25,7 +26,7 @@ COMSpy は、コンピューター上のサービス コンポーネントのア
 ComSpyAudit\ComSpyAudit.vcproj: MSB8012: $(TargetPath) ('C:\Users\UserName\Desktop\spy\spy\ComSpyAudit\.\XP32_DEBUG\ComSpyAudit.dll') does not match the Librarian's OutputFile property value '.\XP32_DEBUG\ComSpyAudit.dll' ('C:\Users\UserName\Desktop\spy\spy\XP32_DEBUG\ComSpyAudit.dll') in project configuration 'Unicode Debug|Win32'. This may cause your project to build incorrectly. To correct this, please make sure that $(TargetPath) property value matches the value specified in %(Lib.OutputFile).
 ```
 
-プロジェクトをアップグレードする際によくある問題の1つは、[プロジェクトのプロパティ] ダイアログボックスの [**リンカー OutputFile** ] 設定を確認する必要があることです。 Visual Studio 2010 より前のプロジェクトでは、OutputFile が標準以外の値に設定されている場合、自動変換ウィザードで問題が発生することがあります。 このケースでは、出力ファイルのパスが非標準のフォルダー XP32_DEBUG に設定されていました。 このエラーの詳細について調べるため、Visual Studio 2010 プロジェクトのアップグレードに関連する[ブログの投稿](https://devblogs.microsoft.com/cppblog/visual-studio-2010-c-project-upgrade-guide/)を参照しました。これは、比較的大きな変更である vcbuild から msbuild への変更に関連するアップグレードです。 この情報によると、新しいプロジェクトを作成するときの**出力ファイル**の設定の既定値は `$(OutDir)$(TargetName)$(TargetExt)` ですが、これは変換されたプロジェクトでうまくいくことが確認できないため、変換時に設定されていません。 ただし、OutputFile でその設定にして、機能するか確認してみましょう。  機能すれば、続行できます。 非標準の出力フォルダーを使用する特段の理由がなければ、標準の場所を使用することをお勧めします。 このケースでは、移植とアップグレード プロセス中に、出力の場所を非標準のままにすることを選択しました。`$(OutDir)` は、**デバッグ**構成で XP32_DEBUG フォルダーに解決され、**リリース**構成では ReleaseU フォルダーに解決されます。
+プロジェクトをアップグレードする際によくある問題の1つは、[プロジェクトのプロパティ] ダイアログボックスの [ **リンカー OutputFile** ] 設定を確認する必要があることです。 Visual Studio 2010 より前のプロジェクトでは、OutputFile が標準以外の値に設定されている場合、自動変換ウィザードで問題が発生することがあります。 このケースでは、出力ファイルのパスが非標準のフォルダー XP32_DEBUG に設定されていました。 このエラーの詳細について調べるため、Visual Studio 2010 プロジェクトのアップグレードに関連する[ブログの投稿](https://devblogs.microsoft.com/cppblog/visual-studio-2010-c-project-upgrade-guide/)を参照しました。これは、比較的大きな変更である vcbuild から msbuild への変更に関連するアップグレードです。 この情報によると、新しいプロジェクトを作成するときの **出力ファイル** の設定の既定値は `$(OutDir)$(TargetName)$(TargetExt)` ですが、これは変換されたプロジェクトでうまくいくことが確認できないため、変換時に設定されていません。 ただし、OutputFile でその設定にして、機能するか確認してみましょう。  機能すれば、続行できます。 非標準の出力フォルダーを使用する特段の理由がなければ、標準の場所を使用することをお勧めします。 このケースでは、移植とアップグレード プロセス中に、出力の場所を非標準のままにすることを選択しました。`$(OutDir)` は、**デバッグ** 構成で XP32_DEBUG フォルダーに解決され、**リリース** 構成では ReleaseU フォルダーに解決されます。
 
 ### <a name="step-2-getting-it-to-build"></a>手順 2. ビルドできる状態にする
 
@@ -66,7 +67,7 @@ HRESULT IPersistStreamInit_Load(LPSTREAM pStm, const ATL_PROPMAP_ENTRY* pMap);
 error MSB3073: The command "regsvr32 /s /c "C:\Users\username\Desktop\spy\spy\ComSpyCtl\.\XP32_DEBUG\ComSpyCtl.lib"error MSB3073: echo regsvr32 exec. time > ".\XP32_DEBUG\regsvr32.trg"error MSB3073:error MSB3073: :VCEnd" exited with code 3.
 ```
 
-このビルド後の登録コマンドはもう必要ありません。 代わりに、単にカスタムビルドコマンドを削除し、**リンカー**設定で出力を登録するように指定します。
+このビルド後の登録コマンドはもう必要ありません。 代わりに、単にカスタムビルドコマンドを削除し、 **リンカー** 設定で出力を登録するように指定します。
 
 ### <a name="dealing-with-warnings"></a>警告に対処する
 
@@ -76,7 +77,7 @@ error MSB3073: The command "regsvr32 /s /c "C:\Users\username\Desktop\spy\spy\Co
 warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/SAFESEH' specification
 ```
 
-`/SAFESEH` コンパイラ オプションはデバッグ モード (`/EDITANDCONTINUE` が有効なとき) では役に立たないので、ここでは、**デバッグ**の構成でのみ、`/SAFESEH` を無効にします。 [プロパティ] ダイアログでこれを行うには、このエラーを生成するプロジェクトの [プロパティ] ダイアログを開き、まず **[構成]** を **[デバッグ]** に設定して (実際は **Unicode のデバッグ**)、**[リンカー高度クラス]** セクションで、**[安全な例外ハンドラーを含むイメージ]** プロパティを **[いいえ]** に設定 (`/SAFESEH:NO`) します。
+`/SAFESEH` コンパイラ オプションはデバッグ モード (`/EDITANDCONTINUE` が有効なとき) では役に立たないので、ここでは、**デバッグ** の構成でのみ、`/SAFESEH` を無効にします。 [プロパティ] ダイアログでこれを行うには、このエラーを生成するプロジェクトの [プロパティ] ダイアログを開き、まず **[構成]** を **[デバッグ]** に設定して (実際は **Unicode のデバッグ**)、**[リンカー高度クラス]** セクションで、**[安全な例外ハンドラーを含むイメージ]** プロパティを **[いいえ]** に設定 (`/SAFESEH:NO`) します。
 
 コンパイラからはほかにも、`PROP_ENTRY_EX` が非推奨とされていることが警告されています。 これは安全でなく、推奨される代替手段は `PROP_ENTRY_TYPE_EX` です。
 
@@ -143,7 +144,7 @@ virtual ~CWindowImplRoot()
 
 `hWnd` は通常、`WindowProc` 関数で 0 に設定されますが、既定の `WindowProc` の代わりに、ウィンドウを閉じる Windows メッセージ (WM_SYSCOMMAND) でカスタム ハンドラーが呼び出されたため、そのような処理が発生しませんでした。 カスタム ハンドラーは `hWnd` をゼロに設定していませんでした。 MFC の `CWnd` クラスの同様のコードを見ると、ウィンドウが破棄されるときに `OnNcDestroy` が呼び出されています。MFC では、`CWnd::OnNcDestroy` をオーバーライドするときには基本 `NcDestroy` を呼び出し、ウィンドウのハンドルをウィンドウから分離することを含めた適切なクリーンアップ操作が必ず発生するようにする、つまり、`hWnd` をゼロに設定するようドキュメントでアドバイスされています。 このアサーションは、同じアサーション コードが古いバージョンの atlwin.h に存在するため、元のバージョンのサンプルでもトリガーされている可能性があります。
 
-アプリの機能をテストするために、atl プロジェクトテンプレートを使用して**サービスコンポーネント**を作成し、atl プロジェクトウィザードで com + サポートを追加するように選択しました。 以前にサービスコンポーネントを使用したことがない場合は、それを作成し、他のアプリが使用できるようにシステムまたはネットワークに登録して使用することは困難です。 COM Spy アプリは、診断を目的としてサービス コンポーネントのアクティビティを監視するよう設計されています。
+アプリの機能をテストするために、atl プロジェクトテンプレートを使用して **サービスコンポーネント** を作成し、atl プロジェクトウィザードで com + サポートを追加するように選択しました。 以前にサービスコンポーネントを使用したことがない場合は、それを作成し、他のアプリが使用できるようにシステムまたはネットワークに登録して使用することは困難です。 COM Spy アプリは、診断を目的としてサービス コンポーネントのアクティビティを監視するよう設計されています。
 
 次に、クラスを追加して ATL オブジェクトを選択し、オブジェクト名を `Dog` と指定しました。 そして、dog.h および dog.cpp に実装を追加しました。
 
@@ -156,7 +157,7 @@ STDMETHODIMP CDog::Wag(LONG* lDuration)
 }
 ```
 
-次に、これをビルドして登録し (Visual Studio を管理者として実行する必要があります)、Windows コントロールパネルの**サービスコンポーネント**アプリケーションを使用してアクティブ化します。 C# Windows フォーム プロジェクトを作成し、ツールボックスからフォームにボタンをドラッグして、クリック イベント ハンドラーをダブルクリックしました。 次のコードを追加し、`Dog` コンポーネントのインスタンスを作成しました。
+次に、これをビルドして登録し (Visual Studio を管理者として実行する必要があります)、Windows コントロールパネルの **サービスコンポーネント** アプリケーションを使用してアクティブ化します。 C# Windows フォーム プロジェクトを作成し、ツールボックスからフォームにボタンをドラッグして、クリック イベント ハンドラーをダブルクリックしました。 次のコードを追加し、`Dog` コンポーネントのインスタンスを作成しました。
 
 ```cpp
 private void button1_Click(object sender, EventArgs e)

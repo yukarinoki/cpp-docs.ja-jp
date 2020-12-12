@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: feof'
 title: feof
 ms.date: 4/2/2020
 api_name:
@@ -27,12 +28,12 @@ helpviewer_keywords:
 - end of file, testing for
 - feof function
 ms.assetid: 09081eee-7c4b-4189-861f-2fad95d3ec6d
-ms.openlocfilehash: 2b3a8d35491272409ecf911fe2f98ca60b2b2b38
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 6bfa0382878cef2843f3a6a6e2ba6e6d8c5bed8a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82920167"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97322538"
 ---
 # <a name="feof"></a>feof
 
@@ -53,21 +54,21 @@ int feof(
 
 ## <a name="return-value"></a>戻り値
 
-**Feof**関数は、読み取り操作がファイルの末尾を越えて読み取ろうとした場合、0以外の値を返します。それ以外の場合は0を返します。 ストリームポインターが**NULL**の場合、関数は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーを呼び出します。 実行の継続が許可された場合、 **errno**は**EINVAL**に設定され、 **feof**は0を返します。
+**Feof** 関数は、読み取り操作がファイルの末尾を越えて読み取ろうとした場合、0以外の値を返します。それ以外の場合は0を返します。 ストリームポインターが **NULL** の場合、関数は、「 [パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーを呼び出します。 実行の継続が許可された場合、 **errno** は **EINVAL** に設定され、 **feof** は0を返します。
 
 エラー コードの詳細については、「[_doserrno、errno、_sys_errlist、および _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」を参照してください。
 
 ## <a name="remarks"></a>解説
 
-**Feof**ルーチン (関数とマクロの両方として実装されます) は、*ストリーム*の末尾が渡されたかどうかを判断します。 ファイルの終わりが渡されると、読み取り操作は、ストリームが閉じられるか、または[rewind](rewind.md)、 **fsetpos**、 [fseek](fseek-fseeki64.md)、または**clearerr**が呼び出されるまで、ファイルの終端のインジケーターを返します。
+**Feof** ルーチン (関数とマクロの両方として実装されます) は、*ストリーム* の末尾が渡されたかどうかを判断します。 ファイルの終わりが渡されると、読み取り操作は、ストリームが閉じられるか、または [rewind](rewind.md)、 **fsetpos**、 [fseek](fseek-fseeki64.md)、または **clearerr** が呼び出されるまで、ファイルの終端のインジケーターを返します。
 
-たとえば、ファイルに10バイトが含まれていて、ファイルから10バイトを読み取った場合、 **feof**は0を返します。これは、ファイルポインターがファイルの末尾にある場合でも、末尾を越えて読み取ろうとしていないためです。 11番目のバイトを読み取った後にのみ、 **feof**は0以外の値を返します。
+たとえば、ファイルに10バイトが含まれていて、ファイルから10バイトを読み取った場合、 **feof** は0を返します。これは、ファイルポインターがファイルの末尾にある場合でも、末尾を越えて読み取ろうとしていないためです。 11番目のバイトを読み取った後にのみ、 **feof** は0以外の値を返します。
 
 既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-|関数|必須ヘッダー|
+|機能|必須ヘッダー|
 |--------------|---------------------|
 |**feof**|\<stdio.h>|
 
