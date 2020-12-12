@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: idl_module'
 title: idl_module (C++ COM 属性)
 ms.date: 10/02/2018
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - idl_module attribute
 ms.assetid: 3578b337-e38a-4334-b747-15404c02dbc0
-ms.openlocfilehash: 651d2e133d7ef08fce48feded1b7a5aff458adb1
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 01fbb6cb04f31d9df4466e148a89fccb012835e4
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88845225"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97183140"
 ---
 # <a name="idl_module"></a>idl_module
 
@@ -57,7 +58,7 @@ Optionalライブラリのメンバーは、任意に呼び出すことはでき
 
 **Idl_module** C++ 属性を使用すると、.dll ファイルのエントリポイントを指定できます。これにより、.dll ファイルからインポートできます。
 
-**Idl_module**属性には、 [module](/windows/win32/Midl/module) MIDL 属性と同様の機能があります。
+**Idl_module** 属性には、 [module](/windows/win32/Midl/module) MIDL 属性と同様の機能があります。
 
 .Dll ファイルからエクスポートできる COM オブジェクトから任意のものをエクスポートするには、.idl ファイルのライブラリブロックに DLL エントリポイントを配置します。
 
@@ -76,7 +77,7 @@ Optionalライブラリのメンバーは、任意に呼び出すことはでき
 void FuncName(int i);
 ```
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 | 属性コンテキスト | 値 |
 |-|-|

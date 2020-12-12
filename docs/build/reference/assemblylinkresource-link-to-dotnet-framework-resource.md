@@ -1,4 +1,5 @@
 ---
+description: 詳細については、次を参照してください:/ASSEMBLYLINKRESOURCE (.NET Framework リソースへのリンク)
 title: /ASSEMBLYLINKRESOURCE (.NET Framework リソースへのリンク)
 ms.date: 11/04/2016
 f1_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - ASSEMBLYLINKRESOURCE linker option
 - /ASSEMBLYLINKRESOURCE linker option
 ms.assetid: 8b6ad184-1b33-47a4-8513-4803cf915b64
-ms.openlocfilehash: fb707a2721ed40ee3ec37d01b2bbcfcc51f05c38
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 32761cb16e8428d5e3c18330dffb49a50a42903c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62295163"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97183010"
 ---
 # <a name="assemblylinkresource-link-to-net-framework-resource"></a>/ASSEMBLYLINKRESOURCE (.NET Framework リソースへのリンク)
 
@@ -24,22 +25,22 @@ ms.locfileid: "62295163"
 
 ## <a name="arguments"></a>引数
 
-*ファイル名*<br/>
+*filename*<br/>
 アセンブリからリンクする .NET Framework のリソース ファイル。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-/ASSEMBLYLINKRESOURCE オプションは、出力ファイルで .NET Framework リソースへのリンクを作成します出力ファイルでは、リソース ファイルが配置されていません。 [/ASSEMBLYRESOURCE](assemblyresource-embed-a-managed-resource.md)リソース ファイル、出力ファイルに埋め込みます。
+/ASSEMBLYLINKRESOURCE オプションを指定すると、出力ファイル内の .NET Framework リソースへのリンクが作成されます。リソースファイルは出力ファイルに配置されません。 [/Assemblyresource](assemblyresource-embed-a-managed-resource.md) は、リソースファイルを出力ファイルに埋め込みます。
 
-リンクされたリソースでは、リンカーで作成したアセンブリでパブリックです。
+リンカーを使用して作成した場合、リンクされたリソースはアセンブリでパブリックになります。
 
-/ASSEMBLYLINKRESOURCE では、コンパイルが含まれている必要があります[/clr](clr-common-language-runtime-compilation.md);[/LN](ln-create-msil-module.md)または[/NOASSEMBLY](noassembly-create-a-msil-module.md) /ASSEMBLYLINKRESOURCE で許可されていません。
+/ASSEMBLYLINKRESOURCE をコンパイルするには、 [/clr](clr-common-language-runtime-compilation.md)をインクルードする必要があります。 [/LN](ln-create-msil-module.md) または [/NOASSEMBLY](noassembly-create-a-msil-module.md) は、/assemblylinkresourceでは許可されていません。
 
-場合*filename*作成例についてでの .NET Framework リソース ファイルは、 [Resgen.exe](/dotnet/framework/tools/resgen-exe-resource-file-generator)または開発環境でアクセスできるメンバー間で、 **System.Resources**名前空間。 詳細については、次を参照してください。 [System.Resources.ResourceManager](/dotnet/api/system.resources.resourcemanager)します。 他のすべてのリソースを使用して、**それ以外**\*メソッド、 **System.Reflection.Assembly**実行時にリソースにアクセスするクラス。
+*Filename* が、たとえば [Resgen.exe](/dotnet/framework/tools/resgen-exe-resource-file-generator)または開発環境で作成された .NET Framework のリソースファイルである場合は、 **System. .resources** 名前空間のメンバーを使用してアクセスできます。 詳細については、「system.servicemodel」[を参照してください。](/dotnet/api/system.resources.resourcemanager) その他のすべてのリソースについては、 \* 実行時にリソースにアクセスするために **、System.object** クラスの getmanifestresource メソッドを使用します。
 
-*ファイル名*任意のファイル形式を指定できます。 たとえば、グローバル アセンブリ キャッシュにインストールされているし、アセンブリ内のマネージ コードからアクセスできるように、ネイティブの DLL が、アセンブリの一部を作成したい場合があります。
+ファイル *名* には任意のファイル形式を使用できます。 たとえば、アセンブリのネイティブ DLL を作成して、グローバルアセンブリキャッシュにインストールし、アセンブリ内のマネージコードからアクセスできるようにすることができます。
 
-アセンブリの生成に影響するその他のリンカー オプションがあります。
+アセンブリの生成に影響を与える他のリンカーオプションは次のとおりです。
 
 - [/ASSEMBLYDEBUG](assemblydebug-add-debuggableattribute.md)
 
@@ -57,13 +58,13 @@ ms.locfileid: "62295163"
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのリンカー オプションを設定するには
 
-1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。 [Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)します。
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、[Visual Studio での C++ コンパイラとビルド プロパティの設定](../working-with-project-properties.md)に関するページを参照してください。
 
-1. をクリックして、**リンカー**フォルダー。
+1. **[リンカー]** フォルダーをクリックします。
 
 1. **[コマンド ライン]** プロパティ ページをクリックします。
 
-1. オプションを入力、**追加オプション**ボックス。
+1. [ **追加オプション** ] ボックスにオプションを入力します。
 
 ### <a name="to-set-this-linker-option-programmatically"></a>このリンカーをコードから設定するには
 

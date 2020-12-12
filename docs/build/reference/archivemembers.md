@@ -1,4 +1,5 @@
 ---
+description: 詳細情報:/ARCHIVEMEMBERS
 title: /ARCHIVEMEMBERS
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - /ARCHIVEMEMBERS dumpbin option
 - -ARCHIVEMEMBERS dumpbin option
 ms.assetid: 47056a7a-a1ba-42bc-9f2e-0599195ef79a
-ms.openlocfilehash: 880e36219b45367ff96e0d292b9728bf797c308a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2fd032f740bb890047185098efe1ca708e34c0a8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62295118"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97183023"
 ---
 # <a name="archivemembers"></a>/ARCHIVEMEMBERS
 
@@ -21,11 +22,11 @@ ms.locfileid: "62295118"
 /ARCHIVEMEMBERS
 ```
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-このオプションは、ライブラリのメンバー オブジェクトについて最小限の情報を表示します。
+このオプションは、ライブラリ内のメンバーオブジェクトに関する最小限の情報を表示します。
 
-のみ、 [/HEADERS](headers.md) DUMPBIN オプションがで生成されたファイルで使用できる、 [/GL](gl-whole-program-optimization.md)コンパイラ オプション。
+[/GL](gl-whole-program-optimization.md) コンパイラ オプションで生成したファイルで使用できるのは、[/HEADERS](headers.md) DUMPBIN オプションだけです。
 
 ## <a name="see-also"></a>関連項目
 
