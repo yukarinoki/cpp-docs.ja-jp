@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: _com_error:: HelpContext'
 title: _com_error::HelpContext
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - HelpContext method [C++]
 ms.assetid: 160d6443-9b68-4cf5-a540-50da951a5b2b
-ms.openlocfilehash: b3c79bb069ef504680e83359d6ec90c803f16d9d
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 757fb572d9e41486af419712eb7f70cd7cfa7b14
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80180590"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97295940"
 ---
 # <a name="_com_errorhelpcontext"></a>_com_error::HelpContext
 
@@ -27,14 +28,14 @@ DWORD HelpContext( ) const throw( );
 
 ## <a name="return-value"></a>戻り値
 
-`_com_error` オブジェクト内に記録された `IErrorInfo` オブジェクトの `IErrorInfo::GetHelpContext` の結果を返します。 `IErrorInfo` オブジェクトが記録されない場合は、0を返します。
+オブジェクト内に記録されたオブジェクトのの結果を返し `IErrorInfo::GetHelpContext` `IErrorInfo` `_com_error` ます。 `IErrorInfo`オブジェクトが記録されない場合は、0を返します。
 
 ## <a name="remarks"></a>解説
 
-`IErrorInfo::GetHelpContext` メソッドの呼び出し中に発生したエラーは無視されます。
+メソッドの呼び出し中に発生したエラー `IErrorInfo::GetHelpContext` はすべて無視されます。
 
 **Microsoft 固有の仕様はここまで**
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [_com_error クラス](../cpp/com-error-class.md)

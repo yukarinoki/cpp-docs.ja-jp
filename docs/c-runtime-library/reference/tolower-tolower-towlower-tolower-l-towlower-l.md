@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: tolower、_tolower、towlower、_tolower_l、_towlower_l'
 title: tolower、_tolower、towlower、_tolower_l、_towlower_l
 ms.date: 4/2/2020
 api_name:
@@ -52,12 +53,12 @@ helpviewer_keywords:
 - characters, converting
 - _towlower_l function
 ms.assetid: 86e0fc02-94ae-4472-9631-bf8e96f67b92
-ms.openlocfilehash: c8b27c4cc618d34d9da9b5884c6db2f525fd2388
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 5b686d9b511fe4864724f85be78ac511a6351ef7
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82910012"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97318326"
 ---
 # <a name="tolower-_tolower-towlower-_tolower_l-_towlower_l"></a>tolower、_tolower、towlower、_tolower_l、_towlower_l
 
@@ -87,7 +88,7 @@ int _towlower_l(
 
 ### <a name="parameters"></a>パラメーター
 
-*40u-c*<br/>
+*c*<br/>
 変換する文字。
 
 *locale*<br/>
@@ -95,13 +96,13 @@ int _towlower_l(
 
 ## <a name="return-value"></a>戻り値
 
-これらの各ルーチンは、変換が可能な場合は*c*のコピーを小文字に変換し、結果を返します。 エラーを示す戻り値は予約されていません。
+これらの各ルーチンは、変換が可能な場合は *c* のコピーを小文字に変換し、結果を返します。 エラーを示す戻り値は予約されていません。
 
 ## <a name="remarks"></a>解説
 
-これらの各ルーチンは、変換が可能で適切な場合に、指定した大文字を適宜小文字に変換します。 **Towlower**の大文字と小文字の変換は、ロケール固有です。 現在のロケールに関連する文字の大文字/小文字のみが変換されます。 **_L**サフィックスが付いていない関数は、現在設定されているロケールを使用します。 **_L**サフィックスを持つこれらの関数のバージョンは、ロケールをパラメーターとして受け取り、現在設定されているロケールの代わりにそれを使用します。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
+これらの各ルーチンは、変換が可能で適切な場合に、指定した大文字を適宜小文字に変換します。 **Towlower** の大文字と小文字の変換は、ロケール固有です。 現在のロケールに関連する文字の大文字/小文字のみが変換されます。 **_L** サフィックスが付いていない関数は、現在設定されているロケールを使用します。 **_L** サフィックスを持つこれらの関数のバージョンは、ロケールをパラメーターとして受け取り、現在設定されているロケールの代わりにそれを使用します。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
 
-**_Tolower**が予期される結果を得るためには、 [__isascii](isascii-isascii-iswascii.md)と[isupper](isupper-isupper-l-iswupper-iswupper-l.md)の両方が0以外の値を返す必要があります。
+**_Tolower** が予期される結果を得るためには、 [__isascii](isascii-isascii-iswascii.md)と [isupper](isupper-isupper-l-iswupper-iswupper-l.md)の両方が0以外の値を返す必要があります。
 
 既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
@@ -113,11 +114,11 @@ int _towlower_l(
 |**_totlower_l**|**_tolower_l**|**_mbctolower_l**|**_towlower_l**|
 
 > [!NOTE]
-> **_tolower_l**と **_towlower_l**はロケールに依存せず、直接呼び出すためのものではありません。 これらは、 **_totlower_l**によって内部で使用するために用意されています。
+> **_tolower_l** と **_towlower_l** はロケールに依存せず、直接呼び出すためのものではありません。 これらは、 **_totlower_l** によって内部で使用するために用意されています。
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**tolower**|\<ctype.h>|
 |**_tolower**|\<ctype.h>|
@@ -132,7 +133,7 @@ int _towlower_l(
 ## <a name="see-also"></a>関連項目
 
 [データ変換](../../c-runtime-library/data-conversion.md)<br/>
-[is、isw 系ルーチン](../../c-runtime-library/is-isw-routines.md)<br/>
-[to 系関数](../../c-runtime-library/to-functions.md)<br/>
-[国](../../c-runtime-library/locale.md)<br/>
-[マルチバイト文字のシーケンスの解釈](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[is、isw ルーチン](../../c-runtime-library/is-isw-routines.md)<br/>
+[関数に](../../c-runtime-library/to-functions.md)<br/>
+[ロケール](../../c-runtime-library/locale.md)<br/>
+[Multibyte-Character シーケンスの解釈](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>

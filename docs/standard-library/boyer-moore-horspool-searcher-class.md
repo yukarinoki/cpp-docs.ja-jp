@@ -1,16 +1,17 @@
 ---
+description: '詳細情報: boyer_moore_horspool_searcher クラス'
 title: boyer_moore_horspool_searcher クラス
 ms.date: 08/03/2019
 f1_keywords:
 - functional/std::boyer_moore_horspool_searcher
 helpviewer_keywords:
 - std::boyer_moore_horspool_searcher [C++]
-ms.openlocfilehash: 1eb1f099ca2976dd4b0ea80ebdfb93a8b5c61f70
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: 727af034dbb20bd1a0d09ae7de8f88da16a6ba36
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90039834"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97325426"
 ---
 # <a name="boyer_moore_horspool_searcher-class"></a>boyer_moore_horspool_searcher クラス
 
@@ -73,9 +74,9 @@ boyer_moore_horspool_searcher(
 *pred*\
 Sequence 要素のオプションの等値比較述語。 等値比較型が指定されていない場合、既定値はに `std::equal_to` なります。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
-*Binarypredicate*、 *Hash*、または*RandomAccessIterator*型のコピーコンストラクター、または*Binarypredicate*または*Hash*の call 演算子によってスローされた例外をスローします。
+*Binarypredicate*、 *Hash*、または *RandomAccessIterator* 型のコピーコンストラクター、または *Binarypredicate* または *Hash* の call 演算子によってスローされた例外をスローします。
 
 このクラスは、C++ 17 で新しく追加されたものです。
 
@@ -98,13 +99,13 @@ pair<RandomAccessIterator2, RandomAccessIterator2> operator()(
 *前の*\
 検索するシーケンスの末尾。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
-検索パターンが空の場合、はを `[pat_first, pat_last)` 返し `make_pair(first, first)` ます。 検索パターンが見つからない場合は、を返し `make_pair(last, last)` ます。 それ以外の場合は、 `[first, last)` `[pat_first, pat_last)` 述語 *pred*に従って、に等しいシーケンスの先頭と末尾に反復子のペアを返します。
+検索パターンが空の場合、はを `[pat_first, pat_last)` 返し `make_pair(first, first)` ます。 検索パターンが見つからない場合は、を返し `make_pair(last, last)` ます。 それ以外の場合は、 `[first, last)` `[pat_first, pat_last)` 述語 *pred* に従って、に等しいシーケンスの先頭と末尾に反復子のペアを返します。
 
 このクラスは、C++ 17 で新しく追加されたものです。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [\<functional>](functional.md)\
 [アルゴリズム関数](algorithm-functions.md)\

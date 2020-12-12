@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: istrstream クラス'
 title: istrstream クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - istrstream class
 ms.assetid: c2d41c75-bd2c-4437-bd77-5939ce1b97af
-ms.openlocfilehash: 37118772f7cefd6f380ceb01908da55500ee7ab5
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 45e60878c63c30daca85924a9d0091e202387b55
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87228233"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97306652"
 ---
 # <a name="istrstream-class"></a>istrstream クラス
 
@@ -33,7 +34,7 @@ class istrstream : public istream
 
 ### <a name="constructors"></a>コンストラクター
 
-|コンストラクター|[説明]|
+|コンストラクター|説明|
 |-|-|
 |[istrstream](#istrstream)|`istrstream` 型のオブジェクトを構築します。|
 
@@ -42,15 +43,15 @@ class istrstream : public istream
 |メンバー関数|説明|
 |-|-|
 |[rdbuf](#rdbuf)|ストリームの関連付けられた `strstreambuf` オブジェクトへのポインターを返します。|
-|[引数](#str)|[freeze](../standard-library/strstreambuf-class.md#freeze) を呼び出し、被制御シーケンスの先頭へのポインターを返します。|
+|[str](#str)|[freeze](../standard-library/strstreambuf-class.md#freeze) を呼び出し、被制御シーケンスの先頭へのポインターを返します。|
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:**\<strstream>
 
 **名前空間:** std
 
-## <a name="istrstreamistrstream"></a><a name="istrstream"></a>istrstream:: istrstream
+## <a name="istrstreamistrstream"></a><a name="istrstream"></a> istrstream:: istrstream
 
 `istrstream` 型のオブジェクトを構築します。
 
@@ -80,9 +81,9 @@ istrstream(
 
 ### <a name="remarks"></a>解説
 
-すべてのコンストラクターは、 [istream](../standard-library/istream-typedefs.md#istream)(**sb**) を呼び出すことによって基底クラスを初期化します。ここで、 `sb` は[strstreambuf](../standard-library/strstreambuf-class.md)クラスの格納されているオブジェクトです。 最初の2つのコンストラクターは、を `sb` 呼び出すことによっても初期化し `strstreambuf( ( const char *) ptr, 0 )` ます。 残りの2つのコンストラクターは、を代わりに呼び出し `strstreambuf( ( const char *) ptr, count )` ます。
+すべてのコンストラクターは、 [istream](../standard-library/istream-typedefs.md#istream)(**sb**) を呼び出すことによって基底クラスを初期化します。ここで、 `sb` は [strstreambuf](../standard-library/strstreambuf-class.md)クラスの格納されているオブジェクトです。 最初の2つのコンストラクターは、を `sb` 呼び出すことによっても初期化し `strstreambuf( ( const char *) ptr, 0 )` ます。 残りの2つのコンストラクターは、を代わりに呼び出し `strstreambuf( ( const char *) ptr, count )` ます。
 
-## <a name="istrstreamrdbuf"></a><a name="rdbuf"></a>istrstream:: rdbuf
+## <a name="istrstreamrdbuf"></a><a name="rdbuf"></a> istrstream:: rdbuf
 
 ストリームの関連付けられた strstreambuf オブジェクトへのポインターを返します。
 
@@ -102,7 +103,7 @@ strstreambuf *rdbuf() const
 
 `rdbuf` の使用例は、[strstreambuf::pcount](../standard-library/strstreambuf-class.md#pcount) をご覧ください。
 
-## <a name="istrstreamstr"></a><a name="str"></a>istrstream:: str
+## <a name="istrstreamstr"></a><a name="str"></a> istrstream:: str
 
 [freeze](../standard-library/strstreambuf-class.md#freeze) を呼び出し、被制御シーケンスの先頭へのポインターを返します。
 

@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: cache_chunklist クラス'
 title: cache_chunklist クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - stdext::cache_chunklist [C++], allocate
 - stdext::cache_chunklist [C++], deallocate
 ms.assetid: af19eccc-4ae7-4a34-bbb2-81e397424cb9
-ms.openlocfilehash: 1ee422423356a18f1c81796790593a20dc03fbab
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: 264713ed12727d45928f40f2bc6a790e0e3b1db1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88560714"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97325399"
 ---
 # <a name="cache_chunklist-class"></a>cache_chunklist クラス
 
@@ -52,7 +53,7 @@ class cache_chunklist
 |[割当て](#allocate)|メモリのブロックを割り当てます。|
 |[配置](#deallocate)|指定した位置で始まるストレージから、指定された数のオブジェクトを解放します。|
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:**\<allocators>
 
