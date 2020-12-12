@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「プロパティシート (MFC)」を参照してください。
 title: プロパティ シート (MFC)
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,39 +8,39 @@ helpviewer_keywords:
 - dialog boxes [MFC], property sheets
 - tab dialog boxes
 ms.assetid: 09439f65-921d-45a2-b3cc-e13884a087b1
-ms.openlocfilehash: 974d6cc0004985544f1786139a9a89c61f00382f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2c2342446187f7b24e5e589e599dfe56271b5162
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62297079"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97248841"
 ---
 # <a name="property-sheets-mfc"></a>プロパティ シート (MFC)
 
-この一連のトピックでは、MFC アプリケーションでプロパティ シートのサポートを実装する方法について説明します。 タブ ダイアログ ボックスとも呼ばれる、プロパティ シートでは、多数のダイアログ ボックスのコントロールを管理する方法を提供します。 プロパティ シートには、プロパティ ページが含まれている、それぞれ別のダイアログ テンプレート リソースに基づきます。 ダイアログ ボックスのコントロールを論理グループに分割し、独自のプロパティ ページで各グループに配置できます。
+この一連の記事では、MFC アプリケーションでプロパティシートのサポートを実装する方法について説明します。 プロパティシートは、タブダイアログボックスとも呼ばれ、ダイアログボックスで多数のコントロールを管理する方法を提供します。 プロパティシートには、それぞれ別個のダイアログテンプレートリソースに基づくプロパティページが含まれています。 ダイアログボックスのコントロールを論理グループに分割し、各グループをそれぞれのプロパティページに配置できます。
 
-## <a name="what-do-you-want-to-know-more-about"></a>方法については、するして操作を行います
+## <a name="what-do-you-want-to-know-more-about"></a>詳細については、次を参照してください。
 
-- [プロパティ シートとプロパティ ページ](../mfc/property-sheets-and-property-pages-in-mfc.md)
+- [プロパティシートとプロパティページ](../mfc/property-sheets-and-property-pages-in-mfc.md)
 
-- [アプリケーションでのプロパティ シートの使用](../mfc/using-property-sheets-in-your-application.md)
+- [アプリケーションでのプロパティシートの使用](../mfc/using-property-sheets-in-your-application.md)
 
-- [プロパティ シートにコントロールを追加する](../mfc/adding-controls-to-a-property-sheet.md)(プロパティ ページ) ではなく
+- プロパティページではなく[、プロパティシートへのコントロールの追加](../mfc/adding-controls-to-a-property-sheet.md)
 
-- [プロパティ シートと、プログラム間でデータを交換します。](../mfc/exchanging-data.md)
+- [プロパティシートとプログラムの間でのデータ交換](../mfc/exchanging-data.md)
 
 - [モードレス プロパティ シートの作成](../mfc/creating-a-modeless-property-sheet.md)
 
 - [[適用] ボタンの処理](../mfc/handling-the-apply-button.md)
 
-- [ウィザードとしてのプロパティ シート](../mfc/property-sheets-as-wizards.md)
+- [ウィザードとしてのプロパティシート](../mfc/property-sheets-as-wizards.md)
 
-- [CPropertySheet をクラスします。](../mfc/reference/cpropertysheet-class.md)
+- [CPropertySheet クラス](../mfc/reference/cpropertysheet-class.md)
 
-- [CPropertyPage をクラスします。](../mfc/reference/cpropertypage-class.md)
+- [CPropertyPage クラス](../mfc/reference/cpropertypage-class.md)
 
 - [サンプル](../overview/visual-cpp-samples.md)
 
 ## <a name="see-also"></a>関連項目
 
-[ユーザー インターフェイス要素](../mfc/user-interface-elements-mfc.md)
+[ユーザーインターフェイス要素](../mfc/user-interface-elements-mfc.md)

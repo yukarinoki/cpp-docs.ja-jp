@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: CDaoWorkspace クラス'
 title: CDaoWorkspace クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -62,12 +63,12 @@ helpviewer_keywords:
 - CDaoWorkspace [MFC], SetLoginTimeout
 - CDaoWorkspace [MFC], m_pDAOWorkspace
 ms.assetid: 64f60de6-4df1-4d4a-a65b-c489b5257d52
-ms.openlocfilehash: eea3fb29f219890ebe596c5d8109257e9d422054
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 73236019db3ecf4a79ef93e19a55d909e6e0d61d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88839791"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97247998"
 ---
 # <a name="cdaoworkspace-class"></a>CDaoWorkspace クラス
 
@@ -143,7 +144,7 @@ class CDaoWorkspace : public CObject
 
 - データベースエンジンのワークスペースコレクションにアクセスします。このコレクションには、追加されたすべてのアクティブなワークスペースが格納されます。 また、ワークスペースをコレクションに追加せずに作成および操作することもできます。
 
-## <a name="security"></a>セキュリティ
+## <a name="security"></a>Security
 
 MFC は、セキュリティ制御に使用される DAO のユーザーとグループのコレクションを実装していません。 DAO のこれらの側面が必要な場合は、DAO インターフェイスを直接呼び出すことによって自分でプログラミングする必要があります。 詳細については、「 [テクニカルノート 54](../../mfc/tn054-calling-dao-directly-while-using-mfc-dao-classes.md)」を参照してください。
 
@@ -189,7 +190,7 @@ DAO の直接呼び出しと DAO セキュリティの詳細については、�
 
 `CDaoWorkspace`
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** afxdao
 
@@ -313,13 +314,13 @@ static void PASCAL CompactDatabase(
 既存の閉じているデータベースの名前。 "C: \MYDB." のように、完全なパスとファイル名を指定できます。 \\MDB "。 ファイル名に拡張子がある場合は、それを指定する必要があります。 ネットワークで汎用名前付け規則 (UNC) がサポートされている場合は、" \\ \\ \\ \ MYSERVER \\ \MYSHARE \\ \MYDIR \\ \MYDB." のようなネットワークパスを指定することもできます。MDB "。 パス文字列には二重の円記号が必要です \\ 。 "" は C++ のエスケープ文字です。
 
 *lpszDestName*<br/>
-作成する最適化されたデータベースの完全パスです。 また、 *Lpszsrcname*と同じようにネットワークパスを指定することもできます。 *Lpszdestname*引数を使用して、同じデータベースファイルを*lpszsrcname*として指定することはできません。
+作成する最適化されたデータベースの完全パスです。 また、 *Lpszsrcname* と同じようにネットワークパスを指定することもできます。 *Lpszdestname* 引数を使用して、同じデータベースファイルを *lpszsrcname* として指定することはできません。
 
 *lpszPassword*<br/>
 パスワードで保護されたデータベースを圧縮するときに使用するパスワードです。 パスワードを受け取るのバージョンを使用する場合は、すべてのパラメーターを指定する必要があることに注意してください `CompactDatabase` 。 また、これは connect パラメーターであるため、次のように特殊な書式設定が必要です。PWD = *Lpszpassword*。 たとえば、次のようになります。PWD = "ハッピー"。 (先頭にセミコロンが必要です)。
 
 *lpszLocale*<br/>
-*Lpszdestname*を作成するための照合順序を指定するために使用される文字列式。 の既定値 (下記参照) を受け入れてこの引数を省略した場合 `dbLangGeneral` 、新しいデータベースのロケールは古いデータベースのロケールと同じになります。 次のいずれかの値になります。
+*Lpszdestname* を作成するための照合順序を指定するために使用される文字列式。 の既定値 (下記参照) を受け入れてこの引数を省略した場合 `dbLangGeneral` 、新しいデータベースのロケールは古いデータベースのロケールと同じになります。 次のいずれかの値になります。
 
 - `dbLangGeneral` 英語、ドイツ語、フランス語、ポルトガル語、イタリア語、および現代スペイン語
 
@@ -352,7 +353,7 @@ static void PASCAL CompactDatabase(
 - `dbLangTurkish` トルコ語
 
 *nOptions*<br/>
-ターゲットデータベース ( *Lpszdestname*) に対して1つ以上のオプションを示します。 既定値を受け入れてこの引数を省略した場合、 *Lpszdestname* の暗号化と同じバージョンが *lpszsrcname*と同じになります。 Or オプションは、 `dbEncrypt` `dbDecrypt` ビットごとの or 演算子を使用して、いずれかのバージョンオプションと組み合わせることができます。 データベースエンジンのバージョンではなく、データベース形式を指定できる値は次のとおりです。
+ターゲットデータベース ( *Lpszdestname*) に対して1つ以上のオプションを示します。 既定値を受け入れてこの引数を省略した場合、 *Lpszdestname* の暗号化と同じバージョンが *lpszsrcname* と同じになります。 Or オプションは、 `dbEncrypt` `dbDecrypt` ビットごとの or 演算子を使用して、いずれかのバージョンオプションと組み合わせることができます。 データベースエンジンのバージョンではなく、データベース形式を指定できる値は次のとおりです。
 
 - `dbEncrypt` 圧縮中にデータベースを暗号化します。
 
@@ -366,7 +367,7 @@ static void PASCAL CompactDatabase(
 
 - `dbVersion30` 圧縮中に Microsoft Jet データベースエンジンバージョン3.0 を使用するデータベースを作成します。
 
-`dbEncrypt`またはオプションの引数でまたはを使用して、 `dbDecrypt` 圧縮時にデータベースを暗号化するか復号化するかを指定できます。 暗号化定数を省略した場合、またはとの両方を含めた場合 `dbDecrypt` `dbEncrypt` 、 *lpszdestname* の暗号化は *lpszsrcname*と同じになります。 [オプション] 引数のいずれかのバージョン定数を使用すると、圧縮されたデータベースのデータ形式のバージョンを指定できます。 この定数は、 *Lpszdestname*のデータ形式のバージョンにのみ影響します。 指定できるバージョン定数は1つだけです。 バージョン定数を省略した場合、 *Lpszdestname* のバージョンは *lpszsrcname*と同じになります。 *Lpszdestname*は、 *lpszsrcname*と同じかそれ以降のバージョンにのみ圧縮できます。
+`dbEncrypt`またはオプションの引数でまたはを使用して、 `dbDecrypt` 圧縮時にデータベースを暗号化するか復号化するかを指定できます。 暗号化定数を省略した場合、またはとの両方を含めた場合 `dbDecrypt` `dbEncrypt` 、 *lpszdestname* の暗号化は *lpszsrcname* と同じになります。 [オプション] 引数のいずれかのバージョン定数を使用すると、圧縮されたデータベースのデータ形式のバージョンを指定できます。 この定数は、 *Lpszdestname* のデータ形式のバージョンにのみ影響します。 指定できるバージョン定数は1つだけです。 バージョン定数を省略した場合、 *Lpszdestname* のバージョンは *lpszsrcname* と同じになります。 *Lpszdestname* は、 *lpszsrcname* と同じかそれ以降のバージョンにのみ圧縮できます。
 
 > [!CAUTION]
 > データベースが暗号化されていない場合は、ユーザーまたはパスワードのセキュリティを実装している場合でも、データベースを構成するバイナリディスクファイルを直接読み取ることができます。
@@ -400,7 +401,7 @@ virtual void Create(
 新しいワークスペースオブジェクトに一意の名前を付けた最大14文字の文字列。 名前を指定する必要があります。 関連情報については、DAO ヘルプの「Name プロパティ」を参照してください。
 
 *lpszUserName*<br/>
-ワークスペースの所有者のユーザー名。 要件については、 [setdefaultuser](#setdefaultuser)メンバー関数の*lpszdefaultuser*パラメーターを参照してください。 関連情報については、DAO ヘルプの「UserName プロパティ」を参照してください。
+ワークスペースの所有者のユーザー名。 要件については、 [setdefaultuser](#setdefaultuser)メンバー関数の *lpszdefaultuser* パラメーターを参照してください。 関連情報については、DAO ヘルプの「UserName プロパティ」を参照してください。
 
 *lpszPassword*<br/>
 新しいワークスペースオブジェクトのパスワードです。 パスワードの長さは最大14文字で、ASCII 0 (null) 以外の任意の文字を含めることができます。 パスワードでは大文字と小文字が区別されます。 関連情報については、DAO ヘルプの「Password プロパティ」を参照してください。
@@ -473,7 +474,7 @@ void GetDatabaseInfo(
 
 関数の1つのバージョンでは、インデックスを使用してデータベースを検索できます。 もう1つのバージョンでは、データベースを名前で検索できます。
 
-*Dbinfo*で返される情報の説明については、 [CDaoDatabaseInfo](../../mfc/reference/cdaodatabaseinfo-structure.md)構造体を参照してください。 この構造体には、前に説明した情報の項目に対応するメンバーが含まれ*ています。* 1つのレベルで情報を要求すると、以前のレベルについても情報が得られます。
+*Dbinfo* で返される情報の説明については、 [CDaoDatabaseInfo](../../mfc/reference/cdaodatabaseinfo-structure.md)構造体を参照してください。 この構造体には、前に説明した情報の項目に対応するメンバーが含まれ *ています。* 1つのレベルで情報を要求すると、以前のレベルについても情報が得られます。
 
 ## <a name="cdaoworkspacegetinipath"></a><a name="getinipath"></a> CDaoWorkspace::GetIniPath
 
@@ -641,7 +642,7 @@ void GetWorkspaceInfo(
 
 ### <a name="remarks"></a>解説
 
-*Wkspcinfo*で返される情報の説明については、 [CDaoWorkspaceInfo](../../mfc/reference/cdaoworkspaceinfo-structure.md)構造体を参照してください。 この構造体には、前に説明した情報の項目に対応するメンバーが含まれ*ています。* 1つのレベルで情報を要求すると、以前のレベルについても情報が得られます。
+*Wkspcinfo* で返される情報の説明については、 [CDaoWorkspaceInfo](../../mfc/reference/cdaoworkspaceinfo-structure.md)構造体を参照してください。 この構造体には、前に説明した情報の項目に対応するメンバーが含まれ *ています。* 1つのレベルで情報を要求すると、以前のレベルについても情報が得られます。
 
 ## <a name="cdaoworkspaceidle"></a><a name="idle"></a> CDaoWorkspace:: Idle
 
@@ -706,13 +707,13 @@ virtual void Open(LPCTSTR lpszName = NULL);
 ### <a name="parameters"></a>パラメーター
 
 *lpszName*<br/>
-開く DAO ワークスペースオブジェクトの名前。ワークスペースに一意の名前を付けて、最大14文字の文字列を指定します。 既定値の NULL をそのまま使用して、既定のワークスペースを明示的に開きます。 名前付けの要件については、「[作成](#create)用の*lpszname*パラメーター」を参照してください。 関連情報については、DAO ヘルプの「Name プロパティ」を参照してください。
+開く DAO ワークスペースオブジェクトの名前。ワークスペースに一意の名前を付けて、最大14文字の文字列を指定します。 既定値の NULL をそのまま使用して、既定のワークスペースを明示的に開きます。 名前付けの要件については、「[作成](#create)用の *lpszname* パラメーター」を参照してください。 関連情報については、DAO ヘルプの「Name プロパティ」を参照してください。
 
 ### <a name="remarks"></a>解説
 
 オブジェクトを構築した後 `CDaoWorkspace` 、次のいずれかの操作を行うには、このメンバー関数を呼び出します。
 
-- 既定のワークスペースを明示的に開きます。 *Lpszname*に NULL を渡します。
+- 既定のワークスペースを明示的に開きます。 *Lpszname* に NULL を渡します。
 
 - `CDaoWorkspace`名前を指定して、ワークスペースコレクションのメンバーである既存のオブジェクトを開きます。 既存のワークスペースオブジェクトの有効な名前を渡してください。
 
@@ -755,7 +756,7 @@ static void PASCAL RepairDatabase(LPCTSTR lpszName);
 
 ### <a name="remarks"></a>解説
 
-修復する前に、 *Lpszname* で指定されたデータベースを閉じる必要があります。 マルチユーザー環境では、他のユーザーは、修復中に *Lpszname* を開くことはできません。 *Lpszname*が閉じられていないか、排他的に使用できない場合は、エラーが発生します。
+修復する前に、 *Lpszname* で指定されたデータベースを閉じる必要があります。 マルチユーザー環境では、他のユーザーは、修復中に *Lpszname* を開くことはできません。 *Lpszname* が閉じられていないか、排他的に使用できない場合は、エラーが発生します。
 
 このメンバー関数は、不完全な書き込み操作によって破損している可能性があるとマークされたデータベースの修復を試みます。 これは、Microsoft Jet データベースエンジンを使用しているアプリケーションが、停電またはコンピューターのハードウェアの問題のために予期せず終了した場合に発生する可能性があります。 操作を完了して [Close](../../mfc/reference/cdaodatabase-class.md#close) メンバー関数を呼び出すか、通常の方法でアプリケーションを終了すると、データベースは破損しているとマークされません。
 
@@ -777,7 +778,7 @@ void Rollback();
 > [!CAUTION]
 > 1つのワークスペースオブジェクト内では、トランザクションは常にワークスペースに対してグローバルであり、1つのデータベースまたはレコードセットに限定されません。 ワークスペーストランザクション内の複数のデータベースまたはレコードセットに対して操作を実行すると、は `Rollback` すべてのデータベースとレコードセットに対するすべての操作を復元します。
 
-保留中のトランザクションを保存またはロールバックせずにワークスペースオブジェクトを閉じると、トランザクションは自動的にロールバックされます。 [CommitTrans](#committrans) `Rollback` 最初に[BeginTrans](#begintrans)を呼び出さずに CommitTrans を呼び出すと、エラーが発生します。
+保留中のトランザクションを保存またはロールバックせずにワークスペースオブジェクトを閉じると、トランザクションは自動的にロールバックされます。 [](#committrans) `Rollback` 最初に[BeginTrans](#begintrans)を呼び出さずに CommitTrans を呼び出すと、エラーが発生します。
 
 > [!NOTE]
 > トランザクションを開始すると、データベースエンジンは、ワークステーションの TEMP 環境変数で指定されたディレクトリに保持されているファイルにその操作を記録します。 トランザクションログファイルが一時ドライブの使用可能なストレージを使い果たすと、データベースエンジンによって、MFC によってがスローされ `CDaoException` ます (DAO エラー 2004)。 この時点で、を呼び出すと `CommitTrans` 、不確定な操作の数がコミットされますが、残りの未完了の操作は失われ、操作を再起動する必要があります。 を呼び出すと、トランザクション `Rollback` ログが解放され、トランザクション内のすべての操作がロールバックされます。

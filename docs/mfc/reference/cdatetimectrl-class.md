@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: Cdatetimectrl 使い方クラス'
 title: Cdatetimectrl 使い方クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -40,12 +41,12 @@ helpviewer_keywords:
 - CDateTimeCtrl [MFC], SetRange
 - CDateTimeCtrl [MFC], SetTime
 ms.assetid: 7113993b-5d37-4148-939f-500a190c5bdc
-ms.openlocfilehash: f04cce93aa6a86d11c2d9ec953992a0f90f635c5
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: cfed57d74e16f8433a5199ca912379b90a4f48cb
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88561948"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97247932"
 ---
 # <a name="cdatetimectrl-class"></a>Cdatetimectrl 使い方クラス
 
@@ -104,7 +105,7 @@ class CDateTimeCtrl : public CWnd
 
 `CDateTimeCtrl`
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** afxdtctl
 
@@ -130,7 +131,7 @@ void CloseMonthCal() const;
 
 ### <a name="example"></a>例
 
-次のコード例では、プログラムを使用して日付と時刻の選択コントロールにアクセスするために使用される、 *m_dateTimeCtrl*変数を定義します。 この変数は次の例で使用されています。
+次のコード例では、プログラムを使用して日付と時刻の選択コントロールにアクセスするために使用される、 *m_dateTimeCtrl* 変数を定義します。 この変数は次の例で使用されています。
 
 [!code-cpp[NVC_MFC_CDateTimeCtrl_s1#1](../../mfc/reference/codesnippet/cpp/cdatetimectrl-class_1.h)]
 
@@ -207,7 +208,7 @@ BOOL GetDateTimePickerInfo(LPDATETIMEPICKERINFO pDateTimePickerInfo) const;
 
 ### <a name="example"></a>例
 
-次のコード例では、プログラムを使用して日付と時刻の選択コントロールにアクセスするために使用される、 *m_dateTimeCtrl*変数を定義します。 この変数は次の例で使用されています。
+次のコード例では、プログラムを使用して日付と時刻の選択コントロールにアクセスするために使用される、 *m_dateTimeCtrl* 変数を定義します。 この変数は次の例で使用されています。
 
 [!code-cpp[NVC_MFC_CDateTimeCtrl_s1#1](../../mfc/reference/codesnippet/cpp/cdatetimectrl-class_1.h)]
 
@@ -228,7 +229,7 @@ COLORREF GetMonthCalColor(int iColor) const;
 ### <a name="parameters"></a>パラメーター
 
 *iColor*<br/>
-**`int`** 取得する月のカレンダーの色領域を指定する値。 値の一覧については、 [SetMonthCalColor](#setmonthcalcolor)の*iColor*パラメーターを参照してください。
+**`int`** 取得する月のカレンダーの色領域を指定する値。 値の一覧については、 [SetMonthCalColor](#setmonthcalcolor)の *iColor* パラメーターを参照してください。
 
 ### <a name="return-value"></a>戻り値
 
@@ -318,7 +319,7 @@ DWORD GetRange(
 
 ### <a name="return-value"></a>戻り値
 
-どの範囲が設定されているかを示すフラグを含む DWORD 値です。 状況
+どの範囲が設定されているかを示すフラグを含む DWORD 値です。 If
 
 `return value & GDTR_MAX` == 0
 
@@ -356,13 +357,13 @@ DWORD GetTime(LPSYSTEMTIME pTimeDest) const;
 
 ### <a name="return-value"></a>戻り値
 
-最初のバージョンでは、時刻がオブジェクトに正常に書き込まれた場合は0以外の場合は `COleDateTime` 0。それ以外の場合は0。 2番目と3番目のバージョンでは、 [NMDATETIMECHANGE](/windows/win32/api/commctrl/ns-commctrl-nmdatetimechange)構造体の*dwflag*メンバーセットと同じ DWORD 値が設定されています。 詳細については、後述の「 **解説** 」を参照してください。
+最初のバージョンでは、時刻がオブジェクトに正常に書き込まれた場合は0以外の場合は `COleDateTime` 0。それ以外の場合は0。 2番目と3番目のバージョンでは、 [NMDATETIMECHANGE](/windows/win32/api/commctrl/ns-commctrl-nmdatetimechange)構造体の *dwflag* メンバーセットと同じ DWORD 値が設定されています。 詳細については、後述の「 **解説** 」を参照してください。
 
 ### <a name="remarks"></a>解説
 
 このメンバー関数は、Windows SDK で説明されているように、Win32 メッセージ [DTM_GETSYSTEMTIME](/windows/win32/Controls/dtm-getsystemtime)の動作を実装します。 の MFC 実装で `GetTime` `COleDateTime` は、クラスまたは `CTime` クラスを使用するか、構造体を使用し `SYSTEMTIME` て時刻情報を格納できます。
 
-上記の2番目と3番目のバージョンの戻り値 DWORD は、 [NMDATETIMECHANGE](/windows/win32/api/commctrl/ns-commctrl-nmdatetimechange) structure メンバーの *dwFlags*に示されているように、日付と時刻の選択コントロールが "日付なし" の状態に設定されているかどうかを示します。 返された値が GDT_NONE の場合、コントロールは "日付なし" の状態に設定され、DTS_SHOWNONE スタイルを使用します。 返された値が GDT_VALID の場合は、システム時刻がコピー先の場所に正常に格納されます。
+上記の2番目と3番目のバージョンの戻り値 DWORD は、 [NMDATETIMECHANGE](/windows/win32/api/commctrl/ns-commctrl-nmdatetimechange) structure メンバーの *dwFlags* に示されているように、日付と時刻の選択コントロールが "日付なし" の状態に設定されているかどうかを示します。 返された値が GDT_NONE の場合、コントロールは "日付なし" の状態に設定され、DTS_SHOWNONE スタイルを使用します。 返された値が GDT_VALID の場合は、システム時刻がコピー先の場所に正常に格納されます。
 
 ### <a name="example"></a>例
 
@@ -391,7 +392,7 @@ BOOL GetIdealSize(LPSIZE psize) const;
 
 ### <a name="example"></a>例
 
-次のコード例では、プログラムを使用して日付と時刻の選択コントロールにアクセスするために使用される、 *m_dateTimeCtrl*変数を定義します。 この変数は次の例で使用されています。
+次のコード例では、プログラムを使用して日付と時刻の選択コントロールにアクセスするために使用される、 *m_dateTimeCtrl* 変数を定義します。 この変数は次の例で使用されています。
 
 [!code-cpp[NVC_MFC_CDateTimeCtrl_s1#1](../../mfc/reference/codesnippet/cpp/cdatetimectrl-class_1.h)]
 
@@ -444,7 +445,7 @@ COLORREF SetMonthCalColor(
 *iColor*<br/>
 **`int`** 月間予定表コントロールのどの領域を設定するかを指定する値。 この値には、次のいずれかを指定できます。
 
-|値|意味|
+|値|説明|
 |-----------|-------------|
 |MCSC_BACKGROUND|月の間に表示される背景色を設定します。|
 |MCSC_MONTHBK|月内に表示される背景色を設定します。|
@@ -520,7 +521,7 @@ DWORD SetMonthCalStyle(DWORD dwStyle);
 
 ### <a name="example"></a>例
 
-次のコード例では、プログラムを使用して日付と時刻の選択コントロールにアクセスするために使用される、 *m_dateTimeCtrl*変数を定義します。 この変数は次の例で使用されています。
+次のコード例では、プログラムを使用して日付と時刻の選択コントロールにアクセスするために使用される、 *m_dateTimeCtrl* 変数を定義します。 この変数は次の例で使用されています。
 
 [!code-cpp[NVC_MFC_CDateTimeCtrl_s1#1](../../mfc/reference/codesnippet/cpp/cdatetimectrl-class_1.h)]
 

@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: CDaoRecordView クラス'
 title: CDaoRecordView クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -16,12 +17,12 @@ helpviewer_keywords:
 - CDaoRecordView [MFC], OnGetRecordset
 - CDaoRecordView [MFC], OnMove
 ms.assetid: 5aa7d0e2-bd05-413e-b216-80c404ce18ac
-ms.openlocfilehash: 95ed9207d0047287e373401da52f05235a817999
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: cb91f6d3890806ac357a1f662905845598df1680
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87223136"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97248178"
 ---
 # <a name="cdaorecordview-class"></a>CDaoRecordView クラス
 
@@ -52,7 +53,7 @@ class AFX_NOVTABLE CDaoRecordView : public CFormView
 
 ## <a name="remarks"></a>解説
 
-ビューは、オブジェクトに直接接続されたフォームビューです `CDaoRecordset` 。 ビューはダイアログテンプレートリソースから作成され、 `CDaoRecordset` ダイアログテンプレートのコントロールにオブジェクトのフィールドが表示されます。 オブジェクトは、 `CDaoRecordView` ダイアログデータエクスチェンジ (DDX) と DAO レコードフィールドエクスチェンジ (DFX) を使用して、フォーム上のコントロールとレコードセットのフィールドの間でのデータの移動を自動化します。 `CDaoRecordView`また、は、最初、次、前、または最後のレコードに移動するための既定の実装と、現在ビューにあるレコードを更新するためのインターフェイスを提供します。
+ビューは、オブジェクトに直接接続されたフォームビューです `CDaoRecordset` 。 ビューはダイアログテンプレートリソースから作成され、 `CDaoRecordset` ダイアログテンプレートのコントロールにオブジェクトのフィールドが表示されます。 オブジェクトは、 `CDaoRecordView` ダイアログデータエクスチェンジ (DDX) と DAO レコードフィールドエクスチェンジ (DFX) を使用して、フォーム上のコントロールとレコードセットのフィールドの間でのデータの移動を自動化します。 `CDaoRecordView` また、は、最初、次、前、または最後のレコードに移動するための既定の実装と、現在ビューにあるレコードを更新するためのインターフェイスを提供します。
 
 > [!NOTE]
 > DAO データベースクラスは、Open Database Connectivity (ODBC) に基づく MFC データベースクラスとは異なります。 すべての DAO データベースクラス名には、"CDao" プレフィックスが付いています。 DAO クラスを使用して ODBC データソースにアクセスすることもできます。DAO クラスは、一般に Microsoft Jet データベースエンジンを使用するため、優れた機能を提供します。
@@ -63,11 +64,11 @@ class AFX_NOVTABLE CDaoRecordView : public CFormView
 
 エンドユーザーがレコードビューでレコード間を簡単に移動できるようにするために、アプリケーションウィザードでは、最初、次、前、または最後のレコードに移動するためのメニュー (および必要に応じてツールバー) リソースを作成します。 ClassWizard でレコードビュークラスを作成する場合は、メニューエディターとビットマップエディターを使用してこれらのリソースを自分で作成する必要があります。
 
-レコード間の移動の既定の実装の詳細については、「」および「」と「」を参照してください `IsOnFirstRecord` `IsOnLastRecord` 。[レコードビューは](../../data/using-a-record-view-mfc-data-access.md)、との両方に適用され `CRecordView` `CDaoRecordView` ます。
+レコード間の移動の既定の実装の詳細については、「」および「」と「」を参照してください `IsOnFirstRecord` `IsOnLastRecord` 。 [レコードビューは](../../data/using-a-record-view-mfc-data-access.md)、との両方に適用され `CRecordView` `CDaoRecordView` ます。
 
-`CDaoRecordView`レコードビューでユーザーインターフェイスを更新できるように、レコードセット内のユーザーの位置を追跡します。 ユーザーがレコードセットの末尾に移動すると、[レコード] ビューでは、メニュー項目やツールバーボタンなどのユーザーインターフェイスオブジェクトが、同じ方向に移動するために無効になります。
+`CDaoRecordView` レコードビューでユーザーインターフェイスを更新できるように、レコードセット内のユーザーの位置を追跡します。 ユーザーがレコードセットの末尾に移動すると、[レコード] ビューでは、メニュー項目やツールバーボタンなどのユーザーインターフェイスオブジェクトが、同じ方向に移動するために無効になります。
 
-レコードビューおよびレコードセットクラスの宣言と使用の詳細については、 [「レコードビュー](../../data/record-views-mfc-data-access.md)のデザインと作成」の「レコードビューのデザインと作成」を参照してください。 レコードビューの動作と使用方法の詳細については、[レコードビューの使用](../../data/using-a-record-view-mfc-data-access.md)に関する記事を参照してください。 前述のすべての記事は、との両方に適用され `CRecordView` `CDaoRecordView` ます。
+レコードビューおよびレコードセットクラスの宣言と使用の詳細については、 [「レコードビュー](../../data/record-views-mfc-data-access.md)のデザインと作成」の「レコードビューのデザインと作成」を参照してください。 レコードビューの動作と使用方法の詳細については、 [レコードビューの使用](../../data/using-a-record-view-mfc-data-access.md)に関する記事を参照してください。 前述のすべての記事は、との両方に適用され `CRecordView` `CDaoRecordView` ます。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -85,11 +86,11 @@ class AFX_NOVTABLE CDaoRecordView : public CFormView
 
 `CDaoRecordView`
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** afxdao
 
-## <a name="cdaorecordviewcdaorecordview"></a><a name="cdaorecordview"></a>CDaoRecordView:: CDaoRecordView
+## <a name="cdaorecordviewcdaorecordview"></a><a name="cdaorecordview"></a> CDaoRecordView:: CDaoRecordView
 
 から派生した型のオブジェクトを作成する場合は `CDaoRecordView` 、コンストラクターのいずれかの形式を呼び出して、ビューオブジェクトを初期化し、ビューの基になるダイアログリソースを識別します。
 
@@ -113,14 +114,14 @@ explicit CDaoRecordView(UINT nIDTemplate);
 > [!NOTE]
 > 派生クラスは、独自のコンストラクターを提供する必要があります。 派生クラスのコンストラクターで、 `CDaoRecordView::CDaoRecordView` リソース名または ID を引数として使用してコンストラクターを呼び出します。
 
-`CDaoRecordView::OnInitialUpdate`を呼び出す `CWnd::UpdateData` と、が呼び出さ `CWnd::DoDataExchange` れます。 への最初の呼び出しでは、 `DoDataExchange` `CDaoRecordView` `CDaoRecordset` ClassWizard によって作成されたフィールドデータメンバーにコントロール (間接的に) を接続します。 これらのデータメンバーは、基底クラスのメンバー関数を呼び出すまで使用できません `CFormView::OnInitialUpdate` 。
+`CDaoRecordView::OnInitialUpdate` を呼び出す `CWnd::UpdateData` と、が呼び出さ `CWnd::DoDataExchange` れます。 への最初の呼び出しでは、 `DoDataExchange` `CDaoRecordView` `CDaoRecordset` ClassWizard によって作成されたフィールドデータメンバーにコントロール (間接的に) を接続します。 これらのデータメンバーは、基底クラスのメンバー関数を呼び出すまで使用できません `CFormView::OnInitialUpdate` 。
 
 > [!NOTE]
 > ClassWizard を使用する場合、ウィザードは **`enum`** `CDaoRecordView::IDD` クラス宣言で値を定義し、コンストラクターのメンバー初期化リストでそれを使用します。
 
 [!code-cpp[NVC_MFCDatabase#35](../../mfc/codesnippet/cpp/cdaorecordview-class_1.cpp)]
 
-## <a name="cdaorecordviewisonfirstrecord"></a><a name="isonfirstrecord"></a>CDaoRecordView:: IsOnFirstRecord
+## <a name="cdaorecordviewisonfirstrecord"></a><a name="isonfirstrecord"></a> CDaoRecordView:: IsOnFirstRecord
 
 このメンバー関数を呼び出して、現在のレコードが、このレコードビューに関連付けられているレコードセットオブジェクトの最初のレコードであるかどうかを確認します。
 
@@ -138,7 +139,7 @@ BOOL IsOnFirstRecord();
 
 ユーザーが最初のレコードに移動した場合、フレームワークは、最初または前のレコードに移動するために必要なユーザーインターフェイスオブジェクト (メニュー項目やツールバーボタンなど) を無効にします。
 
-## <a name="cdaorecordviewisonlastrecord"></a><a name="isonlastrecord"></a>CDaoRecordView:: IsOnLastRecord
+## <a name="cdaorecordviewisonlastrecord"></a><a name="isonlastrecord"></a> CDaoRecordView:: IsOnLastRecord
 
 このメンバー関数を呼び出して、現在のレコードが、このレコードビューに関連付けられているレコードセットオブジェクトの最後のレコードであるかどうかを確認します。
 
@@ -157,7 +158,7 @@ BOOL IsOnLastRecord();
 > [!CAUTION]
 > この関数の結果は信頼性が高くなります。ただし、ビューでは、ユーザーがレコードセットを移動してから、レコードセットの末尾を検出できない可能性があります。 ユーザーは最後のレコードを超えて移動することが必要になる場合があります。レコードビューでは、次のレコードまたは最後のレコードに移動するためにユーザーインターフェイスオブジェクトを無効にする必要があることがわかります。 ユーザーが最後のレコードを移動してから最後のレコード (またはその前) に戻ると、レコードビューでレコードセット内のユーザーの位置を追跡し、ユーザーインターフェイスオブジェクトを正しく無効にすることができます。
 
-## <a name="cdaorecordviewongetrecordset"></a><a name="ongetrecordset"></a>CDaoRecordView:: OnGetRecordset
+## <a name="cdaorecordviewongetrecordset"></a><a name="ongetrecordset"></a> CDaoRecordView:: OnGetRecordset
 
 `CDaoRecordset`レコードビューに関連付けられているから派生したオブジェクトへのポインターを返します。
 
@@ -173,9 +174,9 @@ virtual CDaoRecordset* OnGetRecordset() = 0;
 
 このメンバー関数をオーバーライドして、レコードセットオブジェクトを構築または取得し、そのオブジェクトへのポインターを返すようにする必要があります。 ClassWizard でレコードビュークラスを宣言すると、ウィザードによって既定の上書きが書き込まれます。 ClassWizard の既定の実装では、レコードビューに格納されているレコードセットポインターが存在する場合、そのポインターが返されます。 そうでない場合は、ClassWizard で指定した型のレコードセットオブジェクトを構築し、そのメンバー関数を呼び出して `Open` テーブルを開くかクエリを実行し、オブジェクトへのポインターを返します。
 
-詳細と例については、レコード[ビューの使用](../../data/using-a-record-view-mfc-data-access.md)に関する記事を参照してください。
+詳細と例については、レコード [ビューの使用](../../data/using-a-record-view-mfc-data-access.md)に関する記事を参照してください。
 
-## <a name="cdaorecordviewonmove"></a><a name="onmove"></a>CDaoRecordView:: OnMove
+## <a name="cdaorecordviewonmove"></a><a name="onmove"></a> CDaoRecordView:: OnMove
 
 レコードセット内の別のレコードに移動し、そのフィールドを [レコード] ビューのコントロールに表示するには、このメンバー関数を呼び出します。
 

@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: CDaoTableDefInfo 構造体'
 title: CDaoTableDefInfo 構造体
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,16 +8,16 @@ helpviewer_keywords:
 - CDaoTableDefInfo structure [MFC]
 - DAO (Data Access Objects), TableDefs collection
 ms.assetid: c01ccebb-5615-434e-883c-4f60eac943dd
-ms.openlocfilehash: 5785ed19c6929e19c7d376efa012dd1c059611c7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 953a255b35860dcce0ac8d3ef5081951dd15c344
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62152099"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97247970"
 ---
 # <a name="cdaotabledefinfo-structure"></a>CDaoTableDefInfo 構造体
 
-`CDaoTableDefInfo`構造体には、データ アクセス オブジェクト (DAO) に対して定義されているテーブル定義のオブジェクトに関する情報が含まれています。
+構造体には、 `CDaoTableDefInfo` データアクセスオブジェクト (DAO) 用に定義されたテーブルオブジェクトオブジェクトに関する情報が含まれています。
 
 ## <a name="syntax"></a>構文
 
@@ -39,61 +40,61 @@ struct CDaoTableDefInfo
 #### <a name="parameters"></a>パラメーター
 
 *m_strName*<br/>
-テーブル定義のオブジェクトの一意名します。 このプロパティの値を直接取得する呼び出し定義オブジェクトの[GetName](../../mfc/reference/cdaotabledef-class.md#getname)メンバー関数。 詳細については、「Name プロパティ」DAO ヘルプのトピックを参照してください。
+Tabledef オブジェクトに一意の名前を定義します。 このプロパティの値を直接取得するには、tabledef オブジェクトの [GetName](../../mfc/reference/cdaotabledef-class.md#getname) メンバー関数を呼び出します。 詳細については、DAO ヘルプの「Name プロパティ」を参照してください。
 
 *m_bUpdatable*<br/>
-変更をテーブルにできるかどうかを示します。 テーブルが更新可能かどうかを簡単を開くには、`CDaoTableDef`テーブルのオブジェクトし、オブジェクトの[CanUpdate](../../mfc/reference/cdaotabledef-class.md#canupdate)メンバー関数。 `CanUpdate` 常に 0 以外の値 (TRUE) を返します、新しく作成されたテーブル定義オブジェクトおよび接続されたテーブル定義オブジェクトの 0 (FALSE)。 新しいテーブル定義オブジェクトは、現在のユーザーが書き込みアクセス許可がデータベースにのみ追加できます。 テーブルには、更新できないフィールドのみが含まれている場合`CanUpdate`0 を返します。 1 つまたは複数のフィールドが更新可能な`CanUpdate`0 以外の値を返します。 更新可能なフィールドのみを編集することができます。 詳細については、「更新可能なプロパティ」DAO ヘルプのトピックを参照してください。
+テーブルに変更を加えることができるかどうかを示します。 テーブルが更新可能かどうかを簡単に判断するには、 `CDaoTableDef` テーブルのオブジェクトを開き、オブジェクトの [CanUpdate](../../mfc/reference/cdaotabledef-class.md#canupdate) メンバー関数を呼び出します。 `CanUpdate` 新しく作成された tabledef オブジェクトに対しては、常に0以外 (TRUE) を返し、アタッチされたテーブルオブジェクトには 0 (FALSE) を返します。 新しい tabledef オブジェクトは、現在のユーザーが書き込み権限を持っているデータベースにのみ追加できます。 テーブルに nonupdatable フィールドのみが含まれている場合、は `CanUpdate` 0 を返します。 1つまたは複数のフィールドが更新可能な場合、は `CanUpdate` 0 以外の値を返します。 編集できるのは、更新可能なフィールドのみです。 詳細については、DAO ヘルプの「更新可能なプロパティ」を参照してください。
 
 *m_lAttributes*<br/>
-テーブル定義のオブジェクトによって表されるテーブルの特性を指定します。 テーブル定義の現在の属性を取得するその[GetAttributes](../../mfc/reference/cdaotabledef-class.md#getattributes)メンバー関数。 返される値は、これらの長い定数の組み合わせを指定できます (ビットごとの OR を使用して (**&#124;**) 演算子)。
+Tabledef オブジェクトによって表されるテーブルの特性を指定します。 Tabledef の現在の属性を取得するには、その [Getattributes](../../mfc/reference/cdaotabledef-class.md#getattributes) メンバー関数を呼び出します。 返される値は、これらの長い定数の組み合わせにすることができます (ビットごとの or (**&#124;**) 演算子を使用します)。
 
-- `dbAttachExclusive` Microsoft Jet データベース エンジンを使用するデータベースの場合は、排他的に開かれて、接続されているテーブルを示します。
+- `dbAttachExclusive` Microsoft Jet データベースエンジンを使用するデータベースの場合、テーブルは、排他的に使用するために開かれた添付テーブルであることを示します。
 
-- `dbAttachSavePWD` Microsoft Jet データベース エンジンを使用してデータベースの場合は、ユーザー ID と接続されているテーブルのパスワードが保存接続情報を持つことを示します。
+- `dbAttachSavePWD` Microsoft Jet データベースエンジンを使用するデータベースの場合、アタッチされたテーブルのユーザー ID とパスワードが接続情報と共に保存されることを示します。
 
-- `dbSystemObject` テーブルが、Microsoft Jet データベース エンジンによって提供されるシステム テーブルであることを示します。 システム テーブルは読み取り専用です。
+- `dbSystemObject` テーブルが Microsoft Jet データベースエンジンによって提供されるシステムテーブルであることを示します。 システム テーブルは読み取り専用です。
 
-- `dbHiddenObject` テーブルが一時的に使用) (Microsoft Jet データベース エンジンによって提供される非表示のテーブルであることを示します。 システム テーブルは読み取り専用です。
+- `dbHiddenObject` テーブルが Microsoft Jet データベースエンジンによって提供される非表示テーブルであることを示します (一時的に使用する場合)。 システム テーブルは読み取り専用です。
 
-- `dbAttachedTable` テーブルが Paradox データベースなどの非 ODBC データベースからの接続されているテーブルであることを示します。
+- `dbAttachedTable` テーブルが、非 ODBC データベース (Paradox データベースなど) からアタッチされたテーブルであることを示します。
 
-- `dbAttachedODBC` テーブルが Microsoft SQL Server など、ODBC データベースからの接続されているテーブルであることを示します。
+- `dbAttachedODBC` テーブルが、Microsoft SQL Server などの ODBC データベースからアタッチされたテーブルであることを示します。
 
 *m_dateCreated*<br/>
-日付と、テーブルが作成された時刻。 テーブルが作成された日付を直接取得する、 [GetDateCreated](../../mfc/reference/cdaotabledef-class.md#getdatecreated)のメンバー関数、`CDaoTableDef`テーブルに関連付けられているオブジェクト。 詳細については、以下のコメントを参照してください。 関連情報については、DAO のヘルプ トピックの"DateCreated、LastUpdated プロパティ"を参照してください。
+テーブルが作成された日付と時刻。 テーブルが作成された日付を直接取得するに[](../../mfc/reference/cdaotabledef-class.md#getdatecreated)は、 `CDaoTableDef` テーブルに関連付けられているオブジェクトの GetDateCreated メンバー関数を呼び出します。 詳細については、以下のコメントを参照してください。 関連情報については、DAO ヘルプの「DateCreated、LastUpdated Properties」を参照してください。
 
 *m_dateLastUpdated*<br/>
-日付と、テーブルのデザインに加えられた最新の変更の時刻。 テーブルの最終更新日を直接取得する、 [GetDateLastUpdated](../../mfc/reference/cdaotabledef-class.md#getdatelastupdated)のメンバー関数、`CDaoTableDef`テーブルに関連付けられているオブジェクト。 詳細については、以下のコメントを参照してください。 関連情報については、DAO のヘルプ トピックの"DateCreated、LastUpdated プロパティ"を参照してください。
+テーブルのデザインに対して行われた最新の変更の日付と時刻。 テーブルが最後に更新された日付を直接取得するには、テーブルに関連付けられているオブジェクトの [Getdatelastupdated](../../mfc/reference/cdaotabledef-class.md#getdatelastupdated) メンバー関数を呼び出し `CDaoTableDef` ます。 詳細については、以下のコメントを参照してください。 関連情報については、DAO ヘルプの「DateCreated、LastUpdated Properties」を参照してください。
 
 *m_strSrcTableName*<br/>
-存在する場合は、接続されたテーブルの名前を指定します。 ソース テーブル名を直接取得する呼び出し、 [GetSourceTableName](../../mfc/reference/cdaotabledef-class.md#getsourcetablename)のメンバー関数、`CDaoTableDef`テーブルに関連付けられているオブジェクト。
+アタッチされたテーブルの名前を指定します (存在する場合)。 ソーステーブル名を直接取得するには、テーブルに関連付けられているオブジェクトの [Getsourcetablename](../../mfc/reference/cdaotabledef-class.md#getsourcetablename) メンバー関数を呼び出し `CDaoTableDef` ます。
 
 *m_strConnect*<br/>
-開いているデータベースのソースに関する情報を提供します。 このプロパティを確認するには呼び出すことによって、 [GetConnect](../../mfc/reference/cdaotabledef-class.md#getconnect)のメンバー関数、`CDaoTableDef`オブジェクト。 詳細については、接続文字列を参照してください`GetConnect`します。
+開いているデータベースのソースに関する情報を提供します。 このプロパティを確認するには、オブジェクトの [Getconnect](../../mfc/reference/cdaotabledef-class.md#getconnect) メンバー関数を呼び出し `CDaoTableDef` ます。 接続文字列の詳細については、「」を参照してください `GetConnect` 。
 
 *m_strValidationRule*<br/>
-テーブルに追加または変更されると、テーブル定義のフィールドのデータを検証する値。 検証は、Microsoft Jet データベース エンジンを使用するデータベースのみサポートされます。 検証規則を直接取得する呼び出し、 [GetValidationRule](../../mfc/reference/cdaotabledef-class.md#getvalidationrule)のメンバー関数、`CDaoTableDef`テーブルに関連付けられているオブジェクト。 関連情報については、"Validationrule"DAO ヘルプのトピックを参照してください。
+テーブルに変更または追加されたときに、テーブル定義フィールド内のデータを検証する値。 検証は、Microsoft Jet データベースエンジンを使用するデータベースに対してのみサポートされます。 検証規則を直接取得するには、テーブルに関連付けられているオブジェクトの [Getvalidationrule](../../mfc/reference/cdaotabledef-class.md#getvalidationrule) メンバー関数を呼び出し `CDaoTableDef` ます。 関連情報については、DAO ヘルプのトピック「ValidationRule プロパティ」を参照してください。
 
 *m_strValidationText*<br/>
-プロパティで指定された検証規則が満たされていない場合に、アプリケーションが表示されるメッセージのテキストを指定する値。 関連情報については、「プロパティ」DAO ヘルプのトピックを参照してください。
+ValidationRule プロパティによって指定された検証規則が満たされない場合にアプリケーションで表示する必要があるメッセージのテキストを指定する値。 関連情報については、DAO ヘルプのトピック「ValidationText プロパティ」を参照してください。
 
 *m_lRecordCount*<br/>
-テーブル定義のオブジェクトにアクセスするレコードの数。 このプロパティの設定とは、読み取り専用です。 レコードの数を直接取得する、 [GetRecordCount](../../mfc/reference/cdaotabledef-class.md#getrecordcount)のメンバー関数、`CDaoTableDef`オブジェクト。 ドキュメントを`GetRecordCount`レコード数の詳細について説明します。 この数を取得できる時間のかかる操作、テーブルには、多くのレコードが含まれている場合に注意してください。
+Tabledef オブジェクトでアクセスされたレコードの数。 このプロパティ設定は読み取り専用です。 レコード数を直接取得するには、オブジェクトの [GetRecordCount](../../mfc/reference/cdaotabledef-class.md#getrecordcount) メンバー関数を呼び出し `CDaoTableDef` ます。 のドキュメントでは、 `GetRecordCount` さらにレコード数について説明しています。 テーブルに多数のレコードが含まれている場合、この数を取得するには時間がかかることに注意してください。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-テーブル定義がクラスのオブジェクト[CDaoTableDef](../../mfc/reference/cdaotabledef-class.md)します。 プライマリ、セカンダリ、および上記のすべてへの参照情報がによって返される方法を示すため、[プライマリ](../../mfc/reference/cdaodatabase-class.md#gettabledefinfo)クラスのメンバー関数`CDaoDatabase`します。
+Tabledef は、 [CDaoTableDef](../../mfc/reference/cdaotabledef-class.md)クラスのオブジェクトです。 上記の Primary、Secondary、および All への参照は、クラスの [Gettableていぎ fo](../../mfc/reference/cdaodatabase-class.md#gettabledefinfo) メンバー関数によって情報がどのように返されるかを示して `CDaoDatabase` います。
 
-によって取得される情報、 [cdaodatabase::gettabledefinfo](../../mfc/reference/cdaodatabase-class.md#gettabledefinfo)にメンバー関数が格納されている、`CDaoTableDefInfo`構造体。 呼び出す、`GetTableDefInfo`のメンバー関数、 `CDaoDatabase` TableDefs コレクションでのテーブル定義のオブジェクトが格納されているオブジェクト。 `CDaoTableDefInfo` 定義、`Dump`デバッグでのメンバー関数を作成します。 使用することができます`Dump`の内容をダンプする`CDaoTableDefInfo`オブジェクト。
+[CDaoDatabase:: Gettableていぎ fo](../../mfc/reference/cdaodatabase-class.md#gettabledefinfo)メンバー関数によって取得された情報は、構造体に格納され `CDaoTableDefInfo` ます。 テーブル定義 `GetTableDefInfo` コレクションが格納されている内のオブジェクトのメンバー関数を呼び出し `CDaoDatabase` ます。 `CDaoTableDefInfo` は、 `Dump` デバッグビルドでメンバー関数も定義します。 を使用すると、 `Dump` オブジェクトの内容をダンプでき `CDaoTableDefInfo` ます。
 
-日付と時刻の設定は、ベース テーブルが作成または最後に更新されたコンピューターから派生します。 マルチ ユーザー環境では、ユーザーはこれらのファイル サーバーから直接、DateCreated で不一致を避けるための設定および LastUpdated プロパティの設定を取得する必要があります。
+日付と時刻の設定は、ベーステーブルが作成されたコンピューター、または最後に更新されたコンピューターから取得されます。 マルチユーザー環境では、これらの設定をファイルサーバーから直接取得して、DateCreated および LastUpdated プロパティの設定の不一致を回避する必要があります。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-**ヘッダー:** afxdao.h
+**ヘッダー:** afxdao
 
 ## <a name="see-also"></a>関連項目
 
-[構造体、スタイル、コールバック関数とメッセージ マップ](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)<br/>
+[構造体、スタイル、コールバック、およびメッセージマップ](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)<br/>
 [CDaoTableDef クラス](../../mfc/reference/cdaotabledef-class.md)<br/>
 [CDaoDatabase クラス](../../mfc/reference/cdaodatabase-class.md)

@@ -1,40 +1,41 @@
 ---
+description: '詳細情報: Rebar コントロールとバンド'
 title: Rebar コントロールとバンド
 ms.date: 11/04/2016
 helpviewer_keywords:
 - rebar controls [MFC], working with bands in
 - bands, in rebar controls
 ms.assetid: b647e7a5-9ea7-48b1-8e5f-096d104748f0
-ms.openlocfilehash: 4bb7b4aeab1478138aa2b52649f41ca943b5daa4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 27ada3633a560ad8b5852b05bdd6330a0936fb99
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62378166"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97248568"
 ---
 # <a name="rebar-controls-and-bands"></a>Rebar コントロールとバンド
 
-Rebar コントロールの主な目的では、子ウィンドウ、コモン ダイアログのコントロール、メニューのツールバー、およびなどのコンテナーとして機能します。 このコンテインメントが「域外」の概念によってサポートされています。 各 rebar バンド グリッパー バー、ビットマップ、テキスト ラベル、および子ウィンドウの任意の組み合わせを含めることができます。
+Rebar コントロールの主な目的は、子ウィンドウ、コモンダイアログコントロール、メニュー、ツールバーなどのコンテナーとして機能することです。 この含有は、"バンド" の概念によってサポートされています。 各 rebar バンドには、グリップバー、ビットマップ、テキストラベル、および子ウィンドウの任意の組み合わせを含めることができます。
 
-クラス`CReBarCtrl`が多くのメンバー関数を使用して取得すると、特定の rebar バンドの情報を操作できます。
+クラス `CReBarCtrl` には、特定の rebar バンドに関する情報を取得して操作するために使用できる多数のメンバー関数があります。
 
-- [GetBandCount](../mfc/reference/crebarctrl-class.md#getbandcount) rebar コントロールでの現在のバンドの数を取得します。
+- [Getバンド数](../mfc/reference/crebarctrl-class.md#getbandcount) Rebar コントロールの現在のバンド数を取得します。
 
-- [GetBandInfo](../mfc/reference/crebarctrl-class.md#getbandinfo)を初期化します、 **REBARBANDINFO**構造体に情報を帯域を指定します。 対応する[SetBandInfo](../mfc/reference/crebarctrl-class.md#setbandinfo)メンバー関数。
+- [Getバンド情報](../mfc/reference/crebarctrl-class.md#getbandinfo) 指定したバンドの情報を使用して、 **REBARBANDINFO** 構造体を初期化します。 対応する [Setバンド情報](../mfc/reference/crebarctrl-class.md#setbandinfo) メンバー関数があります。
 
-- [GetRect](../mfc/reference/crebarctrl-class.md#getrect)指定の帯域外接する四角形を取得します。
+- [Getrect](../mfc/reference/crebarctrl-class.md#getrect) 指定したバンドの外接する四角形を取得します。
 
-- [な](../mfc/reference/crebarctrl-class.md#getrowcount)rebar コントロールのバンドの行の数を取得します。
+- [Getrowcount](../mfc/reference/crebarctrl-class.md#getrowcount) Rebar コントロールのバンド行の数を取得します。
 
-- [IDToIndex](../mfc/reference/crebarctrl-class.md#idtoindex)指定バンドのインデックスを取得します。
+- [Idtoindex](../mfc/reference/crebarctrl-class.md#idtoindex) 指定したバンドのインデックスを取得します。
 
-- [GetBandBorders](../mfc/reference/crebarctrl-class.md#getbandborders)バンドの境界線を取得します。
+- [Getバンド境界線](../mfc/reference/crebarctrl-class.md#getbandborders) バンドの境界線を取得します。
 
-操作、に加えていくつかのメンバー関数は、特定の rebar バンドを操作できるものです。
+操作に加えて、特定の rebar バンドでの操作を可能にするいくつかのメンバー関数が用意されています。
 
-[InsertBand](../mfc/reference/crebarctrl-class.md#insertband)と[DeleteBand](../mfc/reference/crebarctrl-class.md#deleteband)を追加し、rebar バンドを削除します。 [MinimizeBand](../mfc/reference/crebarctrl-class.md#minimizeband)と[MaximizeBand](../mfc/reference/crebarctrl-class.md#maximizeband)特定 rebar バンドの現在のサイズに影響します。 [MoveBand](../mfc/reference/crebarctrl-class.md#moveband)特定 rebar バンドのインデックスを変更します。 [ShowBand](../mfc/reference/crebarctrl-class.md#showband)表示と非ユーザーから rebar バンドを表示します。
+[Insertband](../mfc/reference/crebarctrl-class.md#insertband) と [deleteband](../mfc/reference/crebarctrl-class.md#deleteband) rebar バンドを追加および削除します。 [MinimizeBand](../mfc/reference/crebarctrl-class.md#minimizeband) と [最大化](../mfc/reference/crebarctrl-class.md#maximizeband) が、特定の rebar バンドの現在のサイズに影響します。 [Moveband](../mfc/reference/crebarctrl-class.md#moveband) は、特定の rebar バンドのインデックスを変更します。 [Showband](../mfc/reference/crebarctrl-class.md#showband) は、ユーザーからの rebar バンドを表示または非表示にします。
 
-ツールバーのバンドを追加する次の例に示します (*m_wndToolBar*) を既存の rebar コントロール (*m_wndReBar*)。 初期化することにより、バンドが説明されている、`rbi`構造体とし、呼び出し、`InsertBand`メンバー関数。
+次の例では、既存の rebar コントロール (*m_wndReBar*) にツールバーバンド (*m_wndToolBar*) を追加する方法を示します。 このバンドは、 `rbi` 構造体を初期化してからメンバー関数を呼び出すことによって記述され `InsertBand` ます。
 
 [!code-cpp[NVC_MFCControlLadenDialog#27](../mfc/codesnippet/cpp/rebar-controls-and-bands_1.cpp)]
 

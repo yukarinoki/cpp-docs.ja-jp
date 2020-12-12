@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: CDaoRelationFieldInfo 構造体'
 title: CDaoRelationFieldInfo 構造体
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,16 +8,16 @@ helpviewer_keywords:
 - DAO (Data Access Objects), Relations collection
 - CDaoRelationFieldInfo structure [MFC]
 ms.assetid: 47cb89ca-dc80-47ce-96fd-cc4b88512558
-ms.openlocfilehash: 85dd853a9aae41a87bbe7ef5c69e22846678cf8a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: eb470752a9e9da5f610dd59976f2716fa1c4e18a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62206109"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97248165"
 ---
 # <a name="cdaorelationfieldinfo-structure"></a>CDaoRelationFieldInfo 構造体
 
-`CDaoRelationFieldInfo`構造体には、データ アクセス オブジェクト (DAO) に対して定義されているリレーションシップでフィールドに関する情報が含まれています。
+構造体には、 `CDaoRelationFieldInfo` データアクセスオブジェクト (DAO) に対して定義されているリレーションシップ内のフィールドに関する情報が含まれています。
 
 ## <a name="syntax"></a>構文
 
@@ -34,21 +35,21 @@ struct CDaoRelationFieldInfo
 リレーションシップの主テーブル内のフィールドの名前。
 
 *m_strForeignName*<br/>
-リレーションシップの外部テーブルのフィールドの名前。
+リレーションシップの外部テーブル内のフィールドの名前。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-DAO のリレーションシップ オブジェクトでは、主テーブルとリレーションシップを定義した外部テーブル内のフィールドのフィールドを指定します。 上記の構造体の定義でプライマリへの参照で、情報を返す方法を示すため、`m_pFieldInfos`のメンバー、 [CDaoRelationInfo](../../mfc/reference/cdaorelationinfo-structure.md)オブジェクトを呼び出すことによって取得、 [GetRelationInfo](../../mfc/reference/cdaodatabase-class.md#getrelationinfo)クラスのメンバー関数`CDaoDatabase`します。
+DAO リレーションシップオブジェクトでは、主テーブルのフィールドと、リレーションシップを定義する外部テーブルのフィールドを指定します。 上の構造体定義の Primary への参照は、 `m_pFieldInfos` クラスの[GetRelationInfo](../../mfc/reference/cdaodatabase-class.md#getrelationinfo)メンバー関数を呼び出すことによって取得される[CDaoRelationInfo](../../mfc/reference/cdaorelationinfo-structure.md)オブジェクトのメンバーで情報がどのように返されるかを示して `CDaoDatabase` います。
 
-リレーションシップ オブジェクトとフィールド オブジェクトの関係は、MFC クラスでは表されません。 DAO オブジェクトを基になる MFC オブジェクト クラスの代わりに、 [CDaoDatabase](../../mfc/reference/cdaodatabase-class.md)関係コレクションと呼ばれる、関連オブジェクトのコレクションを含めることができます。 各リレーションシップ オブジェクトには、さらに、リレーションシップのフィールド オブジェクトのコレクションが含まれています。 各リレーションシップのフィールド オブジェクトは、外部テーブル内のフィールドに、主テーブル内のフィールドを関連付けます。 これらをまとめると、フィールド オブジェクトの関係を定義フィールドのグループ、各テーブルのリレーションシップを定義します。 `CDaoDatabase` リレーションシップ オブジェクトにアクセスすることができます、`CDaoRelationInfo`オブジェクトを呼び出すことによって、`GetRelationInfo`メンバー関数。 `CDaoRelationInfo`オブジェクトを持つデータ メンバー、`m_pFieldInfos`の配列を指す`CDaoRelationFieldInfo`オブジェクト。
+リレーションシップオブジェクトとリレーションシップフィールドオブジェクトは、MFC クラスでは表されません。 代わりに、 [CDaoDatabase](../../mfc/reference/cdaodatabase-class.md) クラスの基になる DAO オブジェクトには、リレーションコレクションと呼ばれる relation オブジェクトのコレクションが含まれています。 各リレーションシップオブジェクトには、リレーションシップフィールドオブジェクトのコレクションが含まれています。 各リレーションシップフィールドオブジェクトは、主テーブルのフィールドを外部テーブルのフィールドと関連付けます。 リレーションシップフィールドオブジェクトでは、各テーブルのフィールドのグループを定義して、リレーションシップを定義します。 `CDaoDatabase``CDaoRelationInfo`メンバー関数を呼び出すことによって、オブジェクトを使用してリレーションシップオブジェクトにアクセスできるように `GetRelationInfo` します。 `CDaoRelationInfo`オブジェクトには、 `m_pFieldInfos` オブジェクトの配列を指すデータメンバーがあり `CDaoRelationFieldInfo` ます。
 
-呼び出す、 [GetRelationInfo](../../mfc/reference/cdaodatabase-class.md#getrelationinfo)含むのメンバー関数`CDaoDatabase`関係コレクションが格納興味のあるリレーションシップ オブジェクトのオブジェクトします。 アクセスし、`m_pFieldInfos`のメンバー、 [CDaoRelationInfo](../../mfc/reference/cdaorelationinfo-structure.md)オブジェクト。 `CDaoRelationFieldInfo` 定義、`Dump`デバッグでのメンバー関数を作成します。 使用することができます`Dump`の内容をダンプする`CDaoRelationFieldInfo`オブジェクト。
+対象のリレーションシップオブジェクトが格納されている内の、親オブジェクトの [GetRelationInfo](../../mfc/reference/cdaodatabase-class.md#getrelationinfo) メンバー関数を呼び出し `CDaoDatabase` ます。 次に、 `m_pFieldInfos` [CDaoRelationInfo](../../mfc/reference/cdaorelationinfo-structure.md) オブジェクトのメンバーにアクセスします。 `CDaoRelationFieldInfo` は、 `Dump` デバッグビルドでメンバー関数も定義します。 を使用すると、 `Dump` オブジェクトの内容をダンプでき `CDaoRelationFieldInfo` ます。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-**ヘッダー:** afxdao.h
+**ヘッダー:** afxdao
 
 ## <a name="see-also"></a>関連項目
 
-[構造体、スタイル、コールバック関数とメッセージ マップ](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)<br/>
+[構造体、スタイル、コールバック、およびメッセージマップ](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)<br/>
 [CDaoRelationInfo 構造体](../../mfc/reference/cdaorelationinfo-structure.md)

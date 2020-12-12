@@ -1,5 +1,6 @@
 ---
-title: クラス
+description: '詳細情報: CDataPathProperty クラス'
+title: CDataPathProperty クラス
 ms.date: 11/04/2016
 f1_keywords:
 - CDataPathProperty
@@ -20,14 +21,14 @@ helpviewer_keywords:
 - CDataPathProperty [MFC], SetControl
 - CDataPathProperty [MFC], SetPath
 ms.assetid: 1f96efdb-54e4-460b-862c-eba5d4103488
-ms.openlocfilehash: 479f5d47d9cff72d36dbd25e434182af1ba01ef4
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: 7d9ff9f380fd44d5261374879bab63c9925c4442
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81754650"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97247957"
 ---
-# <a name="cdatapathproperty-class"></a>クラス
+# <a name="cdatapathproperty-class"></a>CDataPathProperty クラス
 
 非同期で読み込める OLE コントロール プロパティを実装します。
 
@@ -43,30 +44,30 @@ class CDataPathProperty : public CAsyncMonikerFile
 
 |名前|説明|
 |----------|-----------------|
-|[プロパティ::Cデータパスプロパティ](#cdatapathproperty)|`CDataPathProperty` オブジェクトを構築します。|
+|[CDataPathProperty::CDataPathProperty](#cdatapathproperty)|`CDataPathProperty` オブジェクトを構築します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
 |名前|説明|
 |----------|-----------------|
-|[プロパティ::取得コントロール](#getcontrol)|オブジェクトに関連付けられている非同期 OLE`CDataPathProperty`コントロールを取得します。|
-|[次のプロパティを使用します。](#getpath)|プロパティのパス名を取得します。|
-|[プロパティ::オープン](#open)|関連付けられた ActiveX (OLE) コントロールの非同期プロパティの読み込みを開始します。|
-|[プロパティ::リセットデータ](#resetdata)|コントロール`CAsyncMonikerFile::OnDataAvailable`のプロパティが変更されたことをコンテナーに通知する呼び出し。|
-|[プロパティ::セットコントロール](#setcontrol)|プロパティに関連付けられている非同期 ActiveX (OLE) コントロールを設定します。|
-|[プロパティ::セットパス](#setpath)|プロパティのパス名を設定します。|
+|[CDataPathProperty:: GetControl](#getcontrol)|オブジェクトに関連付けられた非同期 OLE コントロールを取得し `CDataPathProperty` ます。|
+|[CDataPathProperty:: GetPath](#getpath)|プロパティのパス名を取得します。|
+|[CDataPathProperty:: Open](#open)|関連付けられた ActiveX (OLE) コントロールの非同期プロパティの読み込みを開始します。|
+|[CDataPathProperty:: ResetData](#resetdata)|を呼び出して、 `CAsyncMonikerFile::OnDataAvailable` コントロールのプロパティが変更されたことをコンテナーに通知します。|
+|[CDataPathProperty:: SetControl](#setcontrol)|プロパティに関連付けられた非同期 ActiveX (OLE) コントロールを設定します。|
+|[CDataPathProperty::SetPath](#setpath)|プロパティのパス名を設定します。|
 
 ## <a name="remarks"></a>解説
 
-非同期プロパティは、同期開始後に読み込まれます。
+非同期プロパティは、同期の開始後に読み込まれます。
 
-クラス`CDataPathProperty`は`CAysncMonikerFile`から派生します。 OLE コントロールに非同期プロパティを実装するには、 から`CDataPathProperty`クラスを派生させ、 [OnDataAvailable](../../mfc/reference/casyncmonikerfile-class.md#ondataavailable)をオーバーライドします。
+クラス `CDataPathProperty` はから派生 `CAysncMonikerFile` しています。 OLE コントロールで非同期プロパティを実装するには、からクラスを派生させ、 `CDataPathProperty` [OnDataAvailable](../../mfc/reference/casyncmonikerfile-class.md#ondataavailable)をオーバーライドします。
 
-インターネット アプリケーションで非同期モニカーと ActiveX コントロールを使用する方法の詳細については、次の記事を参照してください。
+インターネットアプリケーションで非同期モニカーと ActiveX コントロールを使用する方法の詳細については、次の記事を参照してください。
 
 - [インターネットの最初の手順: ActiveX コントロール](../../mfc/activex-controls-on-the-internet.md)
 
-- [インターネットの最初のステップ: 非同期モニカー](../../mfc/asynchronous-monikers-on-the-internet.md)
+- [インターネットの最初の手順: 非同期モニカー](../../mfc/asynchronous-monikers-on-the-internet.md)
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -82,11 +83,11 @@ class CDataPathProperty : public CAsyncMonikerFile
 
 `CDataPathProperty`
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** afxctl.h
 
-## <a name="cdatapathpropertycdatapathproperty"></a><a name="cdatapathproperty"></a>プロパティ::Cデータパスプロパティ
+## <a name="cdatapathpropertycdatapathproperty"></a><a name="cdatapathproperty"></a> CDataPathProperty::CDataPathProperty
 
 `CDataPathProperty` オブジェクトを構築します。
 
@@ -98,18 +99,18 @@ CDataPathProperty(LPCTSTR lpszPath, COleControl* pControl = NULL);
 ### <a name="parameters"></a>パラメーター
 
 *pControl*<br/>
-この`CDataPathProperty`オブジェクトに関連付ける OLE コントロール オブジェクトへのポインター。
+このオブジェクトに関連付けられる OLE コントロールオブジェクトへのポインター `CDataPathProperty` 。
 
-*パス*<br/>
-絶対パスまたは相対パスは、プロパティの実際の絶対位置を参照する非同期モニカーを作成するために使用されます。 `CDataPathProperty`では、ファイル名ではなく URL を使用します。 ファイルのオブジェクトが`CDataPathProperty`必要な場合は、パスの`file://`前に追加します。
+*lpszPath*<br/>
+絶対パスまたは相対パスを指定します。このパスは、プロパティの実際の絶対位置を参照する非同期モニカーを作成するために使用されます。 `CDataPathProperty` ファイル名ではなく Url を使用します。 ファイルのオブジェクトが必要な場合は `CDataPathProperty` 、パスの前にを付加し `file://` ます。
 
 ### <a name="remarks"></a>解説
 
-*pControl*によって指されるオブジェクトは`Open``COleControl`、派生クラスによって使用および取得されます。 *pControl*が NULL の場合、`Open`で使用されるコントロール`SetControl`は で設定する必要があります。 *lpszPath*が NULL の場合は、パスを`Open`渡すか、または`SetPath`を使用してパスを設定できます。
+`COleControl` *Pcontrol* が指すオブジェクトは、によって使用され、 `Open` 派生クラスによって取得されます。 *Pcontrol* が NULL の場合は、で使用されるコントロールを `Open` で設定する必要があり `SetControl` ます。 *Lpszpath* が NULL の場合は、を使用してパスを渡す `Open` か、を使用して設定でき `SetPath` ます。
 
-## <a name="cdatapathpropertygetcontrol"></a><a name="getcontrol"></a>プロパティ::取得コントロール
+## <a name="cdatapathpropertygetcontrol"></a><a name="getcontrol"></a> CDataPathProperty:: GetControl
 
-オブジェクトに関連付けられているオブジェクトを`COleControl`取得します。 `CDataPathProperty`
+`COleControl`オブジェクトに関連付けられたオブジェクトを取得するには、このメンバー関数を呼び出し `CDataPathProperty` ます。
 
 ```
 COleControl* GetControl();
@@ -117,11 +118,11 @@ COleControl* GetControl();
 
 ### <a name="return-value"></a>戻り値
 
-オブジェクトに関連付けられた OLE コントロールへの`CDataPathProperty`ポインターを返します。 制御が関連付けられていない場合は NULL。
+オブジェクトに関連付けられた OLE コントロールへのポインターを返し `CDataPathProperty` ます。 コントロールが関連付けられていない場合は NULL です。
 
-## <a name="cdatapathpropertygetpath"></a><a name="getpath"></a>次のプロパティを使用します。
+## <a name="cdatapathpropertygetpath"></a><a name="getpath"></a> CDataPathProperty:: GetPath
 
-このメンバー関数を呼び出して、パスを取得`CDataPathProperty`したり、オブジェクトが構築されたか`Open`、 で指定されたか、メンバー関数`SetPath`に対する前回の呼び出しで指定されたか、パスを取得します。
+このメンバー関数を呼び出して、パスの取得、 `CDataPathProperty` オブジェクトが構築されたとき、またはで指定したときの設定、 `Open` またはメンバー関数の前の呼び出しで指定したパスを取得し `SetPath` ます。
 
 ```
 CString GetPath() const;
@@ -129,11 +130,11 @@ CString GetPath() const;
 
 ### <a name="return-value"></a>戻り値
 
-プロパティ自体へのパス名を返します。 パスが指定されていない場合は、空にすることができます。
+プロパティ自体にパス名を返します。 パスが指定されていない場合は、空にすることができます。
 
-## <a name="cdatapathpropertyopen"></a><a name="open"></a>プロパティ::オープン
+## <a name="cdatapathpropertyopen"></a><a name="open"></a> CDataPathProperty:: Open
 
-関連付けられたコントロールの非同期プロパティの読み込みを開始します。
+このメンバー関数を呼び出して、関連付けられているコントロールの非同期プロパティの読み込みを開始します。
 
 ```
 virtual BOOL Open(
@@ -155,13 +156,13 @@ virtual BOOL Open(CFileException* pError = NULL);
 ### <a name="parameters"></a>パラメーター
 
 *pControl*<br/>
-この`CDataPathProperty`オブジェクトに関連付ける OLE コントロール オブジェクトへのポインター。
+このオブジェクトに関連付けられる OLE コントロールオブジェクトへのポインター `CDataPathProperty` 。
 
 *pError*<br/>
-ファイル例外へのポインター。 エラーが発生した場合は、その原因に設定されます。
+ファイル例外へのポインター。 エラーが発生した場合は、が原因になります。
 
-*パス*<br/>
-絶対パスまたは相対パスは、プロパティの実際の絶対位置を参照する非同期モニカーを作成するために使用されます。 `CDataPathProperty`では、ファイル名ではなく URL を使用します。 ファイルのオブジェクトが`CDataPathProperty`必要な場合は、パスの`file://`前に追加します。
+*lpszPath*<br/>
+絶対パスまたは相対パスを指定します。このパスは、プロパティの実際の絶対位置を参照する非同期モニカーを作成するために使用されます。 `CDataPathProperty` ファイル名ではなく Url を使用します。 ファイルのオブジェクトが必要な場合は `CDataPathProperty` 、パスの前にを付加し `file://` ます。
 
 ### <a name="return-value"></a>戻り値
 
@@ -169,17 +170,17 @@ virtual BOOL Open(CFileException* pError = NULL);
 
 ### <a name="remarks"></a>解説
 
-この関数は、コントロールからインターフェイス`IBindHost`を取得しようとします。
+関数は、コントロールからインターフェイスを取得しようとし `IBindHost` ます。
 
-パスを`Open`指定せずに呼び出す前に、プロパティのパスの値を設定する必要があります。 これは、オブジェクトが構築されるとき、またはメンバー関数を`SetPath`呼び出すことによって行うことができます。
+`Open`パスを指定せずにを呼び出す前に、プロパティのパスの値を設定する必要があります。 これは、オブジェクトが構築されるとき、またはメンバー関数を呼び出すことによって行うことができ `SetPath` ます。
 
-コントロールを`Open`使用せずに呼び出す前に、ActiveX コントロール (以前は OLE コントロール) をオブジェクトに関連付けることができます。 これは、オブジェクトが構築されている場合、または を呼び`SetControl`出すことによって行うことができます。
+`Open`コントロールを使用せずにを呼び出す前に、ActiveX コントロール (旧称 OLE コントロール) をオブジェクトに関連付けることができます。 これは、オブジェクトが構築されたとき、またはを呼び出すことによって行うことができ `SetControl` ます。
 
-[CAsyncMonikerFile::Open](../../mfc/reference/casyncmonikerfile-class.md#open)のすべてのオーバーロードもから入手できます`CDataPathProperty`。
+[CAsyncMonikerFile:: Open](../../mfc/reference/casyncmonikerfile-class.md#open)のすべてのオーバーロードは、からも使用でき `CDataPathProperty` ます。
 
-## <a name="cdatapathpropertyresetdata"></a><a name="resetdata"></a>プロパティ::リセットデータ
+## <a name="cdatapathpropertyresetdata"></a><a name="resetdata"></a> CDataPathProperty:: ResetData
 
-コントロールのプロパティが変更`CAsyncMonikerFile::OnDataAvailable`され、非同期に読み込まれた情報がすべて役に立たなくなったことをコンテナーに通知します。
+この関数を呼び出して、 `CAsyncMonikerFile::OnDataAvailable` コントロールのプロパティが変更されたことをコンテナーに通知します。また、非同期に読み込まれたすべての情報は、役に立たなくなります。
 
 ```
 virtual void ResetData();
@@ -187,11 +188,11 @@ virtual void ResetData();
 
 ### <a name="remarks"></a>解説
 
-開きが再開されます。 派生クラスは、さまざまな既定値に対してこの関数をオーバーライドできます。
+を再起動する必要があります。 派生クラスでは、この関数を異なる既定値に対してオーバーライドできます。
 
-## <a name="cdatapathpropertysetcontrol"></a><a name="setcontrol"></a>プロパティ::セットコントロール
+## <a name="cdatapathpropertysetcontrol"></a><a name="setcontrol"></a> CDataPathProperty:: SetControl
 
-非同期 OLE コントロールをオブジェクトに関連付けるには`CDataPathProperty`、このメンバー関数を呼び出します。
+このメンバー関数を呼び出して、非同期 OLE コントロールをオブジェクトに関連付け `CDataPathProperty` ます。
 
 ```cpp
 void SetControl(COleControl* pControl);
@@ -202,9 +203,9 @@ void SetControl(COleControl* pControl);
 *pControl*<br/>
 プロパティに関連付ける非同期 OLE コントロールへのポインター。
 
-## <a name="cdatapathpropertysetpath"></a><a name="setpath"></a>プロパティ::セットパス
+## <a name="cdatapathpropertysetpath"></a><a name="setpath"></a> CDataPathProperty::SetPath
 
-プロパティのパス名を設定します。
+このメンバー関数を呼び出して、プロパティのパス名を設定します。
 
 ```cpp
 void SetPath(LPCTSTR lpszPath);
@@ -212,12 +213,12 @@ void SetPath(LPCTSTR lpszPath);
 
 ### <a name="parameters"></a>パラメーター
 
-*パス*<br/>
-非同期的に読み込まれるプロパティへの絶対パスまたは相対パス。 `CDataPathProperty`では、ファイル名ではなく URL を使用します。 ファイルのオブジェクトが`CDataPathProperty`必要な場合は、パスの`file://`前に追加します。
+*lpszPath*<br/>
+非同期的に読み込まれるプロパティへの絶対パスまたは相対パスを指定できます。 `CDataPathProperty` ファイル名ではなく Url を使用します。 ファイルのオブジェクトが必要な場合は `CDataPathProperty` 、パスの前にを付加し `file://` ます。
 
 ## <a name="see-also"></a>関連項目
 
-[MFC サンプル イメージ](../../overview/visual-cpp-samples.md)<br/>
-[クラスクラス](../../mfc/reference/casyncmonikerfile-class.md)<br/>
-[階層グラフ](../../mfc/hierarchy-chart.md)<br/>
-[クラスクラス](../../mfc/reference/casyncmonikerfile-class.md)
+[MFC のサンプルイメージ](../../overview/visual-cpp-samples.md)<br/>
+[CAsyncMonikerFile クラス](../../mfc/reference/casyncmonikerfile-class.md)<br/>
+[階層図](../../mfc/hierarchy-chart.md)<br/>
+[CAsyncMonikerFile クラス](../../mfc/reference/casyncmonikerfile-class.md)

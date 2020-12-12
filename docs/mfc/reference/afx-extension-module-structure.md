@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: AFX_EXTENSION_MODULE 構造'
 title: AFX_EXTENSION_MODULE 構造体
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - AFX_EXTENSION_MODULE structure [MFC]
 ms.assetid: b85a989c-d0c5-4b28-b53c-dad45b75704e
-ms.openlocfilehash: e1bdc9d744424ab0ad59be3bd7b815b5122bcd10
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d3a5abd449f13a06aa5d7388b2dd2926a6011973
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62338637"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97248230"
 ---
-# <a name="afxextensionmodule-structure"></a>AFX_EXTENSION_MODULE 構造体
+# <a name="afx_extension_module-structure"></a>AFX_EXTENSION_MODULE 構造体
 
-`AFX_EXTENSION_MODULE` MFC 拡張 DLL のモジュールの状態を保持する MFC 拡張 Dll の初期化中に使用されます。
+は、mfc 拡張 `AFX_EXTENSION_MODULE` dll モジュールの状態を保持するために、mfc 拡張 dll の初期化中に使用されます。
 
 ## <a name="syntax"></a>構文
 
@@ -32,43 +33,43 @@ struct AFX_EXTENSION_MODULE
 
 #### <a name="parameters"></a>パラメーター
 
-*bInitialized*<br/>
-DLL モジュールがで初期化された場合は TRUE。`AfxInitExtensionModule`します。
+*ビン分割*<br/>
+DLL モジュールがで初期化されている場合は TRUE `AfxInitExtensionModule` 。
 
 *hModule*<br/>
-DLL のモジュールのハンドルを指定します。
+DLL モジュールのハンドルを指定します。
 
 *hResource*<br/>
-DLL のカスタム リソース モジュールのハンドルを指定します。
+DLL カスタムリソースモジュールのハンドルを指定します。
 
 *pFirstSharedClass*<br/>
-情報へのポインター (、`CRuntimeClass`構造) DLL モジュールの最初のランタイム クラスの概要。 ランタイム クラスの一覧の先頭を指定するために使用します。
+`CRuntimeClass`DLL モジュールの最初のランタイムクラスに関する情報 (構造体) へのポインター。 ランタイムクラスリストの先頭を指定するために使用されます。
 
 *pFirstSharedFactory*<br/>
-DLL モジュールの最初のオブジェクト ファクトリへのポインター (、`COleObjectFactory`オブジェクト)。 クラス ファクトリの一覧の先頭を指定するために使用します。
+DLL モジュールの最初のオブジェクトファクトリ (オブジェクト) へのポインター `COleObjectFactory` 。 クラスファクトリリストの先頭を指定するために使用されます。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-MFC 拡張 Dll の 2 つの作業を実行しなければ、`DllMain`関数。
+MFC 拡張 Dll では、関数内で次の2つの処理を行う必要があり `DllMain` ます。
 
-- 呼び出す[AfxInitExtensionModule](extension-dll-macros.md#afxinitextensionmodule)戻り値を確認します。
+- [AfxInitExtensionModule](extension-dll-macros.md#afxinitextensionmodule)を呼び出し、戻り値を確認します。
 
-- 作成、`CDynLinkLibrary`オブジェクトのかどうか、DLL をエクスポート[CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)オブジェクトか、独自のカスタム リソース。
+- DLL が `CDynLinkLibrary` [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) オブジェクトをエクスポートする場合、または独自のカスタムリソースがある場合は、オブジェクトを作成します。
 
-`AFX_EXTENSION_MODULE`構造が MFC 拡張 DLL のモジュールの状態、実行する前に通常の静的オブジェクトの構築の一部としてに MFC 拡張 DLL が初期化されたランタイム クラスのオブジェクトのコピーを含むのコピーを保持するために使用される`DllMain`は入力します。 例えば:
+`AFX_EXTENSION_MODULE`構造体は、mfc 拡張 dll モジュールの状態のコピーを保持するために使用されます。これには、が入力される前に実行される通常の静的オブジェクト構築の一部として、mfc 拡張 dll によって初期化されたランタイムクラスオブジェクトのコピーが含まれ `DllMain` ます。 次に例を示します。
 
 [!code-cpp[NVC_MFC_DLL#2](../../atl-mfc-shared/codesnippet/cpp/afx-extension-module-structure_1.cpp)]
 
-格納されているモジュールの情報、`AFX_EXTENSION_MODULE`構造にコピーできる、`CDynLinkLibrary`オブジェクト。 例:
+構造体に格納されているモジュール情報を `AFX_EXTENSION_MODULE` オブジェクトにコピーでき `CDynLinkLibrary` ます。 次に例を示します。
 
 [!code-cpp[NVC_MFC_DLL#5](../../atl-mfc-shared/codesnippet/cpp/afx-extension-module-structure_2.cpp)]
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-**ヘッダー:** afx.h
+**ヘッダー:** afx
 
 ## <a name="see-also"></a>関連項目
 
-[構造体、スタイル、コールバック関数とメッセージ マップ](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)<br/>
+[構造体、スタイル、コールバック、およびメッセージマップ](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)<br/>
 [AfxInitExtensionModule](extension-dll-macros.md#afxinitextensionmodule)<br/>
 [AfxTermExtensionModule](extension-dll-macros.md#afxtermextensionmodule)

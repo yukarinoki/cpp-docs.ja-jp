@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: すぐに使用可能なマップクラス'
 title: 使用可能なマップ クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - classes [MFC], map
 - map classes [MFC]
 ms.assetid: 3f0b1c05-2243-4d4d-98d4-429fc3310c9f
-ms.openlocfilehash: 5ed191525e11ca2a4d3f5b1c39e9b50b65066d7c
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: bc672d7b64104c3faceae03022945392b0e48d16
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87228545"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97248581"
 ---
 # <a name="ready-to-use-map-classes"></a>使用可能なマップ クラス
 
@@ -23,7 +24,7 @@ ms.locfileid: "87228545"
 **`void`** ポインターをキーとして使用して、他のポインターを検索 **`void`** します。
 
 [CMapPtrToWord](../mfc/reference/cmapptrtoword-class.md)<br/>
-は **`void`** 、**ワード**型のデータを検索するためのキーとしてポインターを使用します。
+は **`void`** 、 **ワード** 型のデータを検索するためのキーとしてポインターを使用します。
 
 [CMapStringToOb](../mfc/reference/cmapstringtoob-class.md)<br/>
 `CString`ポインターを検索するために、オブジェクトをキーとして使用し `CObject` ます。
@@ -35,10 +36,10 @@ ms.locfileid: "87228545"
 は `CString` 、オブジェクトをキーとして使用して他のオブジェクトを検索 `CString` します。
 
 [CMapWordToOb](../mfc/reference/cmapwordtoob-class.md)<br/>
-**WORD**型のデータを使用してポインターを検索 `CObject` します。
+**WORD** 型のデータを使用してポインターを検索 `CObject` します。
 
 [CMapWordToPtr](../mfc/reference/cmapwordtoptr-class.md)<br/>
-**WORD**型のデータを使用してポインターを検索 **`void`** します。
+**WORD** 型のデータを使用してポインターを検索 **`void`** します。
 
 ## <a name="see-also"></a>関連項目
 
