@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: CD2DLayer クラス'
 title: CD2DLayer クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -24,12 +25,12 @@ helpviewer_keywords:
 - CD2DLayer [MFC], IsValid
 - CD2DLayer [MFC], m_pLayer
 ms.assetid: 2f96378e-66bb-40d1-9661-6afe324de3c1
-ms.openlocfilehash: 30025d6097e439c07202d144a6e549845b78ffa6
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: bd41cd591e6422c9434cd84d20cb6e5d778410bd
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81754758"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97306951"
 ---
 # <a name="cd2dlayer-class"></a>CD2DLayer クラス
 
@@ -47,56 +48,56 @@ class CD2DLayer : public CD2DResource;
 
 |名前|説明|
 |----------|-----------------|
-|[CD2Dレイヤー::CD2Dレイヤー](#cd2dlayer)|CD2DLayer オブジェクトを構築します。|
-|[CD2Dレイヤー::~CD2Dレイヤー](#_dtorcd2dlayer)|デストラクターです。 D2D レイヤー オブジェクトが破棄されるときに呼び出されます。|
+|[CD2DLayer:: CD2DLayer](#cd2dlayer)|CD2DLayer オブジェクトを構築します。|
+|[CD2DLayer:: ~ CD2DLayer](#_dtorcd2dlayer)|デストラクターです。 D2D layer オブジェクトが破棄されるときに呼び出されます。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
 |名前|説明|
 |----------|-----------------|
-|[CD2Dレイヤー::アタッチ](#attach)|既存のリソース インターフェイスをオブジェクトにアタッチします。|
-|[CD2Dレイヤー::作成](#create)|CD2D レイヤーを作成します。 [(CD2D リソースをオーバーライドします::作成](../../mfc/reference/cd2dresource-class.md#create).)|
-|[CD2Dレイヤー::Dエストロイ](#destroy)|CD2DLayer オブジェクトを破棄します。 [(CD2D リソース::Dエストロイ](../../mfc/reference/cd2dresource-class.md#destroy)をオーバーライドします。|
-|[CD2Dレイヤー::Dエタッハ](#detach)|オブジェクトからリソース インターフェイスを切り離します。|
-|[CD2Dレイヤー::取得](#get)|ID2D1Layer インターフェイスを返します。|
-|[CD2Dレイヤー::ゲットサイズ](#getsize)|レンダー ターゲットのサイズをデバイスに依存しないピクセル単位で返します。|
-|[CD2Dレイヤー::イズバリ](#isvalid)|リソースの妥当性を確認します[(CD2D リソースをオーバーライドします::IsValid](../../mfc/reference/cd2dresource-class.md#isvalid).)|
+|[CD2DLayer:: Attach](#attach)|既存のリソースインターフェイスをオブジェクトにアタッチします。|
+|[CD2DLayer:: Create](#create)|CD2DLayer を作成します。 ( [CD2DResource:: Create](../../mfc/reference/cd2dresource-class.md#create)をオーバーライドします)。|
+|[CD2DLayer::D estroy](#destroy)|CD2DLayer オブジェクトを破棄します。 ( [CD2DResource::D estroy](../../mfc/reference/cd2dresource-class.md#destroy)をオーバーライドします。)|
+|[CD2DLayer::D etach](#detach)|オブジェクトからリソースインターフェイスをデタッチします。|
+|[CD2DLayer:: Get](#get)|ID2D1Layer インターフェイスを返します。|
+|[CD2DLayer:: GetSize](#getsize)|レンダリングターゲットのサイズをデバイスに依存しないピクセル単位で返します|
+|[CD2DLayer:: IsValid](#isvalid)|リソースの有効性を確認します ( [CD2DResource:: IsValid](../../mfc/reference/cd2dresource-class.md#isvalid)をオーバーライドします)。|
 
 ### <a name="public-operators"></a>パブリック演算子
 
 |名前|説明|
 |----------|-----------------|
-|[CD2Dレイヤー::オペレーターID2D1レイヤー*](#operator_id2d1layer_star)|ID2D1Layer インターフェイスを返します。|
+|[CD2DLayer:: operator ID2D1Layer *](#operator_id2d1layer_star)|ID2D1Layer インターフェイスを返します。|
 
 ### <a name="protected-data-members"></a>プロテクト データ メンバー
 
 |名前|説明|
 |----------|-----------------|
-|[CD2Dレイヤー:m_pLayer](#m_player)|ID2D1Layer オブジェクトへのポインターを格納します。|
+|[CD2DLayer:: m_pLayer](#m_player)|ID2D1Layer オブジェクトへのポインターを格納します。|
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
 [CObject](../../mfc/reference/cobject-class.md)
 
-[リソース](../../mfc/reference/cd2dresource-class.md)
+[CD2DResource](../../mfc/reference/cd2dresource-class.md)
 
 `CD2DLayer`
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-**ヘッダー:** afxrendertarget.h
+**ヘッダー:** afxrendertarget
 
-## <a name="cd2dlayercd2dlayer"></a><a name="_dtorcd2dlayer"></a>CD2Dレイヤー::~CD2Dレイヤー
+## <a name="cd2dlayercd2dlayer"></a><a name="_dtorcd2dlayer"></a> CD2DLayer:: ~ CD2DLayer
 
-デストラクターです。 D2D レイヤー オブジェクトが破棄されるときに呼び出されます。
+デストラクターです。 D2D layer オブジェクトが破棄されるときに呼び出されます。
 
 ```
 virtual ~CD2DLayer();
 ```
 
-## <a name="cd2dlayerattach"></a><a name="attach"></a>CD2Dレイヤー::アタッチ
+## <a name="cd2dlayerattach"></a><a name="attach"></a> CD2DLayer:: Attach
 
-既存のリソース インターフェイスをオブジェクトにアタッチします。
+既存のリソースインターフェイスをオブジェクトにアタッチします。
 
 ```cpp
 void Attach(ID2D1Layer* pResource);
@@ -104,10 +105,10 @@ void Attach(ID2D1Layer* pResource);
 
 ### <a name="parameters"></a>パラメーター
 
-*リソース*<br/>
-既存のリソース インターフェイス。 NULL にすることはできません。
+*pResource*<br/>
+既存のリソースインターフェイス。 NULL にすることはできません
 
-## <a name="cd2dlayercd2dlayer"></a><a name="cd2dlayer"></a>CD2Dレイヤー::CD2Dレイヤー
+## <a name="cd2dlayercd2dlayer"></a><a name="cd2dlayer"></a> CD2DLayer:: CD2DLayer
 
 CD2DLayer オブジェクトを構築します。
 
@@ -119,15 +120,15 @@ CD2DLayer(
 
 ### <a name="parameters"></a>パラメーター
 
-*ターゲット*<br/>
-レンダー ターゲットへのポインター。
+*pParentTarget*<br/>
+レンダーターゲットへのポインター。
 
-*b自動破壊*<br/>
+*bAutoDestroy*<br/>
 オブジェクトが所有者 (pParentTarget) によって破棄されることを示します。
 
-## <a name="cd2dlayercreate"></a><a name="create"></a>CD2Dレイヤー::作成
+## <a name="cd2dlayercreate"></a><a name="create"></a> CD2DLayer:: Create
 
-CD2D レイヤーを作成します。
+CD2DLayer を作成します。
 
 ```
 virtual HRESULT Create(CRenderTarget* pRenderTarget);
@@ -135,14 +136,14 @@ virtual HRESULT Create(CRenderTarget* pRenderTarget);
 
 ### <a name="parameters"></a>パラメーター
 
-*ターゲットをレンダリングします。*<br/>
-レンダー ターゲットへのポインター。
+*pRenderTarget*<br/>
+レンダーターゲットへのポインター。
 
 ### <a name="return-value"></a>戻り値
 
-メソッドが成功した場合は、S_OK を返します。 それ以外の場合は、HRESULT エラー コードを返します。
+メソッドが成功した場合は、S_OK を返します。 それ以外の場合は、HRESULT エラーコードを返します。
 
-## <a name="cd2dlayerdestroy"></a><a name="destroy"></a>CD2Dレイヤー::Dエストロイ
+## <a name="cd2dlayerdestroy"></a><a name="destroy"></a> CD2DLayer::D estroy
 
 CD2DLayer オブジェクトを破棄します。
 
@@ -150,9 +151,9 @@ CD2DLayer オブジェクトを破棄します。
 virtual void Destroy();
 ```
 
-## <a name="cd2dlayerdetach"></a><a name="detach"></a>CD2Dレイヤー::Dエタッハ
+## <a name="cd2dlayerdetach"></a><a name="detach"></a> CD2DLayer::D etach
 
-オブジェクトからリソース インターフェイスを切り離します。
+オブジェクトからリソースインターフェイスをデタッチします。
 
 ```
 ID2D1Layer* Detach();
@@ -160,9 +161,9 @@ ID2D1Layer* Detach();
 
 ### <a name="return-value"></a>戻り値
 
-デタッチされたリソース インターフェイスへのポインター。
+デタッチされたリソースインターフェイスへのポインター。
 
-## <a name="cd2dlayerget"></a><a name="get"></a>CD2Dレイヤー::取得
+## <a name="cd2dlayerget"></a><a name="get"></a> CD2DLayer:: Get
 
 ID2D1Layer インターフェイスを返します。
 
@@ -172,11 +173,11 @@ ID2D1Layer* Get();
 
 ### <a name="return-value"></a>戻り値
 
-ID2D1Layer インターフェイスへのポインタ、またはオブジェクトがまだ初期化されていない場合は NULL。
+ID2D1Layer インターフェイスへのポインター。オブジェクトがまだ初期化されていない場合は NULL。
 
-## <a name="cd2dlayergetsize"></a><a name="getsize"></a>CD2Dレイヤー::ゲットサイズ
+## <a name="cd2dlayergetsize"></a><a name="getsize"></a> CD2DLayer:: GetSize
 
-レンダー ターゲットのサイズをデバイスに依存しないピクセル単位で返します。
+レンダリングターゲットのサイズをデバイスに依存しないピクセル単位で返します
 
 ```
 CD2DSizeF GetSize() const;
@@ -184,9 +185,9 @@ CD2DSizeF GetSize() const;
 
 ### <a name="return-value"></a>戻り値
 
-デバイスに依存しないピクセル単位のレンダー ターゲットの現在のサイズ
+レンダリングターゲットの現在のサイズ (デバイスに依存しないピクセル単位)
 
-## <a name="cd2dlayerisvalid"></a><a name="isvalid"></a>CD2Dレイヤー::イズバリ
+## <a name="cd2dlayerisvalid"></a><a name="isvalid"></a> CD2DLayer:: IsValid
 
 リソースの有効性を確認します
 
@@ -198,7 +199,7 @@ virtual BOOL IsValid() const;
 
 リソースが有効な場合は TRUE。それ以外の場合は FALSE。
 
-## <a name="cd2dlayerm_player"></a><a name="m_player"></a>CD2Dレイヤー:m_pLayer
+## <a name="cd2dlayerm_player"></a><a name="m_player"></a> CD2DLayer:: m_pLayer
 
 ID2D1Layer オブジェクトへのポインターを格納します。
 
@@ -206,7 +207,7 @@ ID2D1Layer オブジェクトへのポインターを格納します。
 ID2D1Layer* m_pLayer;
 ```
 
-## <a name="cd2dlayeroperator-id2d1layer"></a><a name="operator_id2d1layer_star"></a>CD2Dレイヤー::オペレーターID2D1レイヤー*
+## <a name="cd2dlayeroperator-id2d1layer"></a><a name="operator_id2d1layer_star"></a> CD2DLayer:: operator ID2D1Layer *
 
 ID2D1Layer インターフェイスを返します。
 
@@ -216,7 +217,7 @@ operator ID2D1Layer* ();
 
 ### <a name="return-value"></a>戻り値
 
-ID2D1Layer インターフェイスへのポインタ、またはオブジェクトがまだ初期化されていない場合は NULL。
+ID2D1Layer インターフェイスへのポインター。オブジェクトがまだ初期化されていない場合は NULL。
 
 ## <a name="see-also"></a>関連項目
 

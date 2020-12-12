@@ -1,4 +1,5 @@
 ---
+description: 詳細については、_strnset_s、_strnset_s_l、_wcsnset_s、_wcsnset_s_l、_mbsnset_s、_mbsnset_s_l を参照してください。
 title: _strnset_s、_strnset_s_l、_wcsnset_s、_wcsnset_s_l、_mbsnset_s、_mbsnset_s_l
 ms.date: 4/2/2020
 api_name:
@@ -63,19 +64,19 @@ helpviewer_keywords:
 - strnset_s function
 - _wcsnset_s function
 ms.assetid: 9cf1b321-b5cb-4469-b285-4c07cfbd8813
-ms.openlocfilehash: 123f8c4945d98ccf3dd94a48dbbb0fef3b35a8e5
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 388d0ed82b811187f10d68fed7e48b954fdb3e2b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82911218"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97305911"
 ---
 # <a name="_strnset_s-_strnset_s_l-_wcsnset_s-_wcsnset_s_l-_mbsnset_s-_mbsnset_s_l"></a>_strnset_s、_strnset_s_l、_wcsnset_s、_wcsnset_s_l、_mbsnset_s、_mbsnset_s_l
 
 文字列の文字を所定の書式に初期化します。 これらの [_strnset、_strnset_l、_wcsnset、_wcsnset_l、_mbsnset、_mbsnset_l](strnset-strnset-l-wcsnset-wcsnset-l-mbsnset-mbsnset-l.md) のバージョンは、「[CRT のセキュリティ機能](../../c-runtime-library/security-features-in-the-crt.md)」で説明されているように、セキュリティが強化されています。
 
 > [!IMPORTANT]
-> **_mbsnset_s**と **_mbsnset_s_l**は、Windows ランタイムで実行されるアプリケーションでは使用できません。 詳細については、「[ユニバーサル Windows プラットフォーム アプリでサポートされていない CRT 関数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)」を参照してください。
+> **_mbsnset_s** と **_mbsnset_s_l** は、Windows ランタイムで実行されるアプリケーションでは使用できません。 詳細については、「[ユニバーサル Windows プラットフォーム アプリでサポートされていない CRT 関数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)」を参照してください。
 
 ## <a name="syntax"></a>構文
 
@@ -123,13 +124,13 @@ errno_t _mbsnset_s_l(
 
 ### <a name="parameters"></a>パラメーター
 
-*引数*<br/>
+*str*<br/>
 変更対象の文字列。
 
 *numberOfElements*<br/>
-*Str*バッファーのサイズ。
+*Str* バッファーのサイズ。
 
-*40u-c*<br/>
+*c*<br/>
 文字設定。
 
 *count*<br/>
@@ -142,13 +143,13 @@ errno_t _mbsnset_s_l(
 
 正常に終了した場合は 0 を返し、それ以外の場合はエラー コードを返します。
 
-これらの関数は、引数を検証します。 *Str*が null で終わる有効な文字列でない場合、またはサイズ引数が0以下の場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、これらの関数はエラーコードを返し、 **errno**をそのエラーコードに設定します。 より具体的な値が適用されない場合、既定のエラーコードは**EINVAL**です。
+これらの関数は、引数を検証します。 *Str* が null で終わる有効な文字列でない場合、またはサイズ引数が0以下の場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、これらの関数はエラーコードを返し、 **errno** をそのエラーコードに設定します。 より具体的な値が適用されない場合、既定のエラーコードは **EINVAL** です。
 
 ## <a name="remarks"></a>解説
 
-これらの関数は、str の最大文字*数*である*str*を*c*に設定します。 *Count*が*str*のサイズより大きい場合は、 *count*の代わりに*str*のサイズが使用されます。 *Count*が*numberofelements*よりも大きく、両方のパラメーターが*str*のサイズより大きい場合、エラーが発生します。
+これらの関数は、str の最大文字 *数* である *str* を *c* に設定します。 *Count* が *str* のサイズより大きい場合は、 *count* の代わりに *str* のサイズが使用されます。 *Count* が *numberofelements* よりも大きく、両方のパラメーターが *str* のサイズより大きい場合、エラーが発生します。
 
-**_wcsnset_s**と **_mbsnset_s**は **_strnset_s**のワイド文字バージョンとマルチバイト文字バージョンです。 **_Wcsnset_s**の文字列引数はワイド文字列です。この **_mbsnset_s**は amultibyte 文字列です。 それ以外では、これらの関数の動作は同じです。
+**_wcsnset_s** と **_mbsnset_s** は **_strnset_s** のワイド文字バージョンとマルチバイト文字バージョンです。 **_Wcsnset_s** の文字列引数はワイド文字列です。この **_mbsnset_s** は amultibyte 文字列です。 それ以外では、これらの関数の動作は同じです。
 
 出力値は、ロケールの **LC_CTYPE** カテゴリの設定に影響されます。詳細については、「[setlocale](setlocale-wsetlocale.md)」を参照してください。 **_l** サフィックスが付いていないこれらの関数のバージョンでは、このロケールに依存する動作に現在のロケールを使用します。**_l** サフィックスが付いているバージョンは、渡されたロケール パラメーターを代わりに使用する点を除いて同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
 
@@ -165,7 +166,7 @@ errno_t _mbsnset_s_l(
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**_strnset_s**|\<string.h>|
 |**_strnset_s_l**|\<tchar.h>|
@@ -200,8 +201,8 @@ After:  **** is a test
 ## <a name="see-also"></a>関連項目
 
 [文字列操作](../../c-runtime-library/string-manipulation-crt.md)<br/>
-[国](../../c-runtime-library/locale.md)<br/>
-[マルチバイト文字のシーケンスの解釈](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[ロケール](../../c-runtime-library/locale.md)<br/>
+[Multibyte-Character シーケンスの解釈](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [strcat、wcscat、_mbscat](strcat-wcscat-mbscat.md)<br/>
 [strcmp、wcscmp、_mbscmp](strcmp-wcscmp-mbscmp.md)<br/>
 [strcpy、wcscpy、_mbscpy](strcpy-wcscpy-mbscpy.md)<br/>

@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「リンカーツールの警告 LNK4248」を参照してください。
 title: リンカー ツールの警告 LNK4248
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - LNK4248
 ms.assetid: e40523ff-e3cb-4ba6-ab79-23f0f339f6cf
-ms.openlocfilehash: 81f3c2abc41673e6e4c9e3f59ff1dd515e1cf365
-ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
+ms.openlocfilehash: b5b2247713e5e61ee26cd16e3e6fd46a8cd483af
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90685426"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97305287"
 ---
 # <a name="linker-tools-warning-lnk4248"></a>リンカー ツールの警告 LNK4248
 
@@ -19,7 +20,7 @@ ms.locfileid: "90685426"
 
 型には、MSIL メタデータの定義がありません。
 
-LNK4248 は、msil モジュール ( **/clr**でコンパイルされた) 内の型に対して、型が msil モジュールで参照され、その型の定義を持つネイティブモジュールに msil モジュールがリンクされている場合に発生する可能性があります。
+LNK4248 は、msil モジュール ( **/clr** でコンパイルされた) 内の型に対して、型が msil モジュールで参照され、その型の定義を持つネイティブモジュールに msil モジュールがリンクされている場合に発生する可能性があります。
 
 この場合、リンカーは MSIL メタデータにネイティブ型定義を提供します。これにより、正しい動作が提供される可能性があります。
 

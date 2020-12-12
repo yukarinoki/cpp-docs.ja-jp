@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: __shiftleft128'
 title: __shiftleft128
 ms.date: 09/02/2019
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - __shiftleft128 intrinsic
 ms.assetid: 557b846a-8fb0-469d-91ac-1b1fad80dc2a
-ms.openlocfilehash: 5da9ac81cedbdd24e10eb438892f88510c32ca24
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: e0e1402660c2ddb6f5993e5186302ff489ed864f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70218003"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97306990"
 ---
 # <a name="__shiftleft128"></a>__shiftleft128
 
@@ -44,17 +45,17 @@ unsigned __int64 __shiftleft128(
 
 結果の上位 64 ビット。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-|組み込み|アーキテクチャ|
+|Intrinsic|アーキテクチャ|
 |---------------|------------------|
 |`__shiftleft128`|X64|
 
-**ヘッダーファイル**\<>
+**ヘッダー ファイル** \<intrin.h>
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-*シフト*値は常にモジュロ64であるため、たとえば、を呼び出す`__shiftleft128(1, 0, 64)`と、関数は低位部分`0`のビットを左にシフトし、の大`0`部分を`1`返しますが、それ以外の場合はを返します。
+*シフト* 値は常にモジュロ64であるため、たとえば、を呼び出すと、 `__shiftleft128(1, 0, 64)` 関数は低位部分のビットを左にシフト `0` し、の大部分を返しますが、それ以外の場合はを返し `0` `1` ます。
 
 ## <a name="example"></a>例
 

@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: Platform:: Type クラス'
 title: Platform::Type クラス
 ms.date: 12/30/2016
 ms.topic: reference
@@ -8,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::Type Class
 ms.assetid: d6b03f1e-b240-49b9-a08e-53a460030475
-ms.openlocfilehash: f94e1b37cf198f92d49efc793753892c1b138d69
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: c11e85180dfb3eeeeb6eea88c3bd47b40fa7289b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88846564"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97307900"
 ---
 # <a name="platformtype-class"></a>Platform::Type クラス
 
@@ -51,7 +52,7 @@ public ref class Platform::Type :
 | [演算子の種類 ^](../cppcx/operator-type-hat.md) | `Windows::UI::Xaml::Interop::TypeName` から `Platform::Type`への変換を有効にします。 |
 | [Windows::UI::Xaml::Interop::TypeName 演算子](../cppcx/operator-windows-ui-xaml-interop-typename.md) | `Platform::Type` から `Windows::UI::Xaml::Interop::TypeName`への変換を有効にします。 |
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 **サポートされている最低限のクライアント:** Windows 8
 

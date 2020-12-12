@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: CMFCStatusBar クラス'
 title: CMFCStatusBar クラス
 ms.date: 11/19/2018
 f1_keywords:
@@ -72,12 +73,12 @@ helpviewer_keywords:
 - CMFCStatusBar [MFC], SetTipText
 - CMFCStatusBar [MFC], OnDrawPane
 ms.assetid: f2960d1d-f4ed-41e8-bd99-0382b2f8d88e
-ms.openlocfilehash: 004873ef2696eb9504cdd4df77e700c4a145e886
-ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
+ms.openlocfilehash: 79ba7c749a73406893173d7486fd5df208a37b83
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90686575"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97307081"
 ---
 # <a name="cmfcstatusbar-class"></a>CMFCStatusBar クラス
 
@@ -95,7 +96,7 @@ class CMFCStatusBar : public CPane
 
 ### <a name="public-methods"></a>パブリック メソッド
 
-|名前|[説明]|
+|名前|説明|
 |----------|-----------------|
 |[CMFCStatusBar:: CalcFixedLayout](#calcfixedlayout)|( [Cbasepane:: CalcFixedLayout](../../mfc/reference/cbasepane-class.md#calcfixedlayout)をオーバーライドします)。|
 |[CMFCStatusBar:: CommandToIndex](#commandtoindex)||
@@ -132,11 +133,11 @@ class CMFCStatusBar : public CPane
 
 ### <a name="protected-methods"></a>プロテクト メソッド
 
-|名前|[説明]|
+|名前|説明|
 |----------|-----------------|
 |[CMFCStatusBar:: OnDrawPane](#ondrawpane)|ステータスバーのペインを再描画するときに、フレームワークによって呼び出されます。|
 
-## <a name="remarks"></a>注釈
+## <a name="remarks"></a>解説
 
 次の図は、 [ステータスバーのデモサンプル](../../overview/visual-cpp-samples.md) アプリケーションのステータスバーの図を示しています。
 
@@ -176,7 +177,7 @@ class CMFCStatusBar : public CPane
 
 [CMFCStatusBar](../../mfc/reference/cmfcstatusbar-class.md)
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** afxstatusbar
 
@@ -195,7 +196,7 @@ virtual CSize CalcFixedLayout(
 
 ### <a name="return-value"></a>戻り値
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 ## <a name="cmfcstatusbarcommandtoindex"></a><a name="commandtoindex"></a> CMFCStatusBar:: CommandToIndex
 
@@ -209,7 +210,7 @@ int CommandToIndex(UINT nIDFind) const;
 
 ### <a name="return-value"></a>戻り値
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 ## <a name="cmfcstatusbarcreate"></a><a name="create"></a> CMFCStatusBar:: Create
 
@@ -228,7 +229,7 @@ BOOL Create(
 
 ### <a name="return-value"></a>戻り値
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 ## <a name="cmfcstatusbarcreateex"></a><a name="createex"></a> CMFCStatusBar:: CreateEx
 
@@ -249,7 +250,7 @@ BOOL CreateEx(
 
 ### <a name="return-value"></a>戻り値
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 ## <a name="cmfcstatusbardoesallowdyninsertbefore"></a><a name="doesallowdyninsertbefore"></a> CMFCStatusBar::D oesAllowDynInsertBefore
 
@@ -259,7 +260,7 @@ virtual BOOL DoesAllowDynInsertBefore() const;
 
 ### <a name="return-value"></a>戻り値
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 ## <a name="cmfcstatusbarenablepanedoubleclick"></a><a name="enablepanedoubleclick"></a> CMFCStatusBar:: EnablePaneDoubleClick
 
@@ -274,7 +275,7 @@ void EnablePaneDoubleClick(BOOL bEnable=TRUE);
 *bEnable*<br/>
 からTRUE の場合は、マウスのダブルクリックの処理を有効にします。 それ以外の場合は、マウスのダブルクリックの処理を無効にします。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 ステータスバーでダブルクリックの処理が有効になっている場合、ユーザーがステータスバーペインをダブルクリックするたびに、Windows によって、WM_COMMAND 通知がリソース ID と共にステータスバーの所有者に送信されます。
 
@@ -312,9 +313,9 @@ void EnablePaneProgressBar(
 *clrProgressText*<br/>
 からプログレスバーのテキストの色を指定します。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
-`EnablePaneProgressBar` *Ntotal*が-1 に設定された進行状況バーの呼び出しを無効にする場合。 既定では、 *Ntotal* は100に設定されています。 そのため、進行状況をパーセンテージとして表示するための追加の計算は必要ありません。
+`EnablePaneProgressBar` *Ntotal* が-1 に設定された進行状況バーの呼び出しを無効にする場合。 既定では、 *Ntotal* は100に設定されています。 そのため、進行状況をパーセンテージとして表示するための追加の計算は必要ありません。
 
 状態バーの背景色にグラデーションの色が表示されるように、 *clrbar* と *clrbardest* に異なる値を渡す必要があります。 .
 
@@ -340,7 +341,7 @@ BOOL GetDrawExtendedArea() const;
 
 ### <a name="return-value"></a>戻り値
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 ## <a name="cmfcstatusbargetextendedarea"></a><a name="getextendedarea"></a> CMFCStatusBar:: GetExtendedArea
 
@@ -354,7 +355,7 @@ virtual BOOL GetExtendedArea(CRect& rect) const;
 
 ### <a name="return-value"></a>戻り値
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 ## <a name="cmfcstatusbargetitemid"></a><a name="getitemid"></a> CMFCStatusBar:: GetItemID
 
@@ -368,7 +369,7 @@ UINT GetItemID(int nIndex) const;
 
 ### <a name="return-value"></a>戻り値
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 ## <a name="cmfcstatusbargetitemrect"></a><a name="getitemrect"></a> CMFCStatusBar:: GetItemRect
 
@@ -383,7 +384,7 @@ void GetItemRect(
 から *nIndex*<br/>
 から *lpRect*<br/>
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 ## <a name="cmfcstatusbargetpaneinfo"></a><a name="getpaneinfo"></a> CMFCStatusBar:: Get Info
 
@@ -402,7 +403,7 @@ void GetPaneInfo(
 から *Nstyle*<br/>
 から *Cxwidth*<br/>
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 ## <a name="cmfcstatusbargetpaneprogress"></a><a name="getpaneprogress"></a> CMFCStatusBar:: Get Progress
 
@@ -416,7 +417,7 @@ long GetPaneProgress(int nIndex) const;
 
 ### <a name="return-value"></a>戻り値
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 ## <a name="cmfcstatusbargetpanestyle"></a><a name="getpanestyle"></a> CMFCStatusBar:: Get Style
 
@@ -430,7 +431,7 @@ UINT GetPaneStyle(int nIndex) const;
 
 ### <a name="return-value"></a>戻り値
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 ## <a name="cmfcstatusbargetpanetext"></a><a name="getpanetext"></a> CMFCStatusBar:: Getて Text
 
@@ -449,7 +450,7 @@ CString GetPaneText(int nIndex) const;
 
 ### <a name="return-value"></a>戻り値
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 ## <a name="cmfcstatusbargetpanewidth"></a><a name="getpanewidth"></a> CMFCStatusBar:: Get Width
 
@@ -466,7 +467,7 @@ int GetPaneWidth(int nIndex) const;
 
 ### <a name="return-value"></a>戻り値
 
-*NIndex*が指定するステータスバーペインの幅。それ以外の場合は、ステータスバーペインが存在しない場合は0です。
+*NIndex* が指定するステータスバーペインの幅。それ以外の場合は、ステータスバーペインが存在しない場合は0です。
 
 ## <a name="cmfcstatusbargettiptext"></a><a name="gettiptext"></a> CMFCStatusBar:: GetTipText
 
@@ -483,7 +484,7 @@ CString GetTipText(int nIndex) const;
 
 ### <a name="return-value"></a>戻り値
 
-*NIndex*が指定するステータスバーペインのツールヒントテキスト。 それ以外の場合は、指定された *nIndex* にステータスバーペインが存在しない場合、またはツールヒントテキストが空の場合は空の文字列。
+*NIndex* が指定するステータスバーペインのツールヒントテキスト。 それ以外の場合は、指定された *nIndex* にステータスバーペインが存在しない場合、またはツールヒントテキストが空の場合は空の文字列。
 
 ## <a name="cmfcstatusbarinvalidatepanecontent"></a><a name="invalidatepanecontent"></a> CMFCStatusBar:: InvalidatePaneContent
 
@@ -498,7 +499,7 @@ void InvalidatePaneContent(int nIndex);
 *nIndex*<br/>
 からコンテンツを無効にして再描画するペインのインデックスを指定します。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 ステータスバーが無効化されると、再描画のマークが付けられます。 `UpdateWindow`メソッドがメソッドに WM_PAINT メッセージを送信すると、Windows はそれを再描画し `OnPaint` ます。
 
@@ -520,7 +521,7 @@ virtual void OnDrawPane(
 *pPane*<br/>
 から再 `CMFCStatusBarPaneInfo` 描画するペインに関する情報を格納している構造体へのポインター。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 既定では、 `OnDrawPane` ウィンドウのスタイルと内容に応じて、デバイスコンテキスト *pDC* を使用してウィンドウを再描画します。
 
@@ -538,7 +539,7 @@ virtual BOOL PreCreateWindow(CREATESTRUCT& cs);
 
 ### <a name="return-value"></a>戻り値
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 ## <a name="cmfcstatusbarsetdrawextendedarea"></a><a name="setdrawextendedarea"></a> CMFCStatusBar:: SetDrawExtendedArea
 
@@ -550,7 +551,7 @@ void SetDrawExtendedArea(BOOL bSet = TRUE);
 
 から *Bset*<br/>
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 ## <a name="cmfcstatusbarsetindicators"></a><a name="setindicators"></a> CMFCStatusBar:: SetIndicators
 
@@ -567,7 +568,7 @@ BOOL SetIndicators(
 
 ### <a name="return-value"></a>戻り値
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 ## <a name="cmfcstatusbarsetpaneanimation"></a><a name="setpaneanimation"></a> CMFCStatusBar:: Setて Animation
 
@@ -595,7 +596,7 @@ void SetPaneAnimation(
 *bUpdate*<br/>
 からTRUE の場合は、すぐにウィンドウコンテンツを更新します。 それ以外の場合は、無効になったときにウィンドウの内容が更新されます。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 現在のアニメーションを無効にする場合は、 `SetPaneAnimation` `hImageList` を NULL に設定してを呼び出します。
 
@@ -655,7 +656,7 @@ void SetPaneIcon(
 *clrTransparent*<br/>
 から *HBmp* が示すビットマップの透明色を指定します。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 HICON または HBITMAP を透明色と共に渡して、ウィンドウのイメージを設定できます。 イメージを今後表示しない場合は、イメージハンドルとして NULL 値を渡します。
 
@@ -678,7 +679,7 @@ void SetPaneInfo(
 から *Nstyle*<br/>
 から *Cxwidth*<br/>
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 ## <a name="cmfcstatusbarsetpaneprogress"></a><a name="setpaneprogress"></a> CMFCStatusBar:: Set Progress
 
@@ -702,7 +703,7 @@ void SetPaneProgress(
 *bUpdate*<br/>
 からペインをすぐに更新するかどうかを指定します。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 指定したペインのプログレスバーの進行状況インジケーターを更新する場合は、このメソッドを呼び出します。
 
@@ -721,7 +722,7 @@ void SetPaneStyle(
 から *nIndex*<br/>
 から *Nstyle*<br/>
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 ## <a name="cmfcstatusbarsetpanetext"></a><a name="setpanetext"></a> CMFCStatusBar:: Setて Text
 
@@ -740,7 +741,7 @@ virtual BOOL SetPaneText(
 
 ### <a name="return-value"></a>戻り値
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 ## <a name="cmfcstatusbarsetpanetextcolor"></a><a name="setpanetextcolor"></a> CMFCStatusBar:: SetPaneTextColor
 
@@ -803,6 +804,6 @@ void SetTipText(
 ## <a name="see-also"></a>関連項目
 
 [階層図](../../mfc/hierarchy-chart.md)<br/>
-[クラス](../../mfc/reference/mfc-classes.md)<br/>
+[Classes](../../mfc/reference/mfc-classes.md)<br/>
 [CPane クラス](../../mfc/reference/cpane-class.md)<br/>
 [CStatusBar クラス](../../mfc/reference/cstatusbar-class.md)

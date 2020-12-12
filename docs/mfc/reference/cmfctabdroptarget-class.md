@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: CMFCTabDropTarget クラス'
 title: CMFCTabDropTarget クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -16,12 +17,12 @@ helpviewer_keywords:
 - CMFCTabDropTarget [MFC], OnDropEx
 - CMFCTabDropTarget [MFC], Register
 ms.assetid: 9777b7b6-10da-4c4b-b1d1-7ea795b0f1cb
-ms.openlocfilehash: 9160cfd847977f98ac22eecd72632822c751a3aa
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 2a12d171a934912993a61ba4ae915d9e1f3a5cf6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88834233"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97306782"
 ---
 # <a name="cmfctabdroptarget-class"></a>CMFCTabDropTarget クラス
 
@@ -73,7 +74,7 @@ class CMFCTabDropTarget : public COleDropTarget
 
 [CMFCTabDropTarget](../../mfc/reference/cmfctabdroptarget-class.md)
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** afxbasetabctrl.h
 
@@ -105,7 +106,7 @@ virtual DROPEFFECT OnDragEnter(
 
 ### <a name="return-value"></a>戻り値
 
-*ポイント*によって指定された場所でドロップが発生した場合の結果の効果。 次の1つまたは複数を指定できます。
+*ポイント* によって指定された場所でドロップが発生した場合の結果の効果。 次の1つまたは複数を指定できます。
 
 - DROPEFFECT_NONE
 
@@ -168,7 +169,7 @@ virtual DROPEFFECT OnDragOver(
 
 ### <a name="return-value"></a>戻り値
 
-*ポイント*によって指定された場所でドロップが発生した場合の結果の効果。 次の1つまたは複数を指定できます。
+*ポイント* によって指定された場所でドロップが発生した場合の結果の効果。 次の1つまたは複数を指定できます。
 
 - DROPEFFECT_NONE
 
@@ -232,7 +233,7 @@ virtual DROPEFFECT OnDropEx(
 
 ### <a name="remarks"></a>解説
 
-このメソッドは `CMFCBaseTabCtrl::OnDrop` 、ツールバーフレームワークがカスタマイズモードで、クリップボードのデータ形式が使用可能な場合にを呼び出します。 の呼び出しが `CMFCBaseTabCtrl::OnDrop` 0 以外の値を返す場合、このメソッドは *dropeffect*によって指定された既定のドロップ効果を返します。 それ以外の場合、このメソッドは DROPEFFECT_NONE を返します。 ドロップ効果の詳細については、「 [COleDropTarget:: OnDropEx](../../mfc/reference/coledroptarget-class.md#ondropex)」を参照してください。
+このメソッドは `CMFCBaseTabCtrl::OnDrop` 、ツールバーフレームワークがカスタマイズモードで、クリップボードのデータ形式が使用可能な場合にを呼び出します。 の呼び出しが `CMFCBaseTabCtrl::OnDrop` 0 以外の値を返す場合、このメソッドは *dropeffect* によって指定された既定のドロップ効果を返します。 それ以外の場合、このメソッドは DROPEFFECT_NONE を返します。 ドロップ効果の詳細については、「 [COleDropTarget:: OnDropEx](../../mfc/reference/coledroptarget-class.md#ondropex)」を参照してください。
 
 カスタマイズモードの詳細については、「 [Cmfctoolbar:: Iscustomization emode](../../mfc/reference/cmfctoolbar-class.md#iscustomizemode)」を参照してください。 クリップボードのデータ形式の詳細については、「 [COleDataObject:: IsDataAvailable](../../mfc/reference/coledataobject-class.md#isdataavailable)」を参照してください。
 
@@ -260,5 +261,5 @@ BOOL Register(CMFCBaseTabCtrl *pOwner);
 ## <a name="see-also"></a>関連項目
 
 [階層図](../../mfc/hierarchy-chart.md)<br/>
-[クラス](../../mfc/reference/mfc-classes.md)<br/>
+[Classes](../../mfc/reference/mfc-classes.md)<br/>
 [OLE のドラッグ アンド ドロップ](../../mfc/drag-and-drop-ole.md)

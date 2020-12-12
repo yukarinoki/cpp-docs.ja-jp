@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: __sidt'
 title: __sidt
 ms.date: 09/02/2019
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - sidt instruction
 - __sidt intrinsic
 ms.assetid: 01e83d14-6e63-4dea-8f64-5a0339d69641
-ms.openlocfilehash: d6b685da0e02373307a3149c5b7b28213f37ad40
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 075351bc10981dd8453381e9ce9393a046dfd884
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70222326"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97306964"
 ---
 # <a name="__sidt"></a>__sidt
 
@@ -31,17 +32,17 @@ void __sidt(void * Destination);
 *インストール*\
 からIDTR が格納されているメモリ位置へのポインター。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-|組み込み|アーキテクチャ|
+|Intrinsic|アーキテクチャ|
 |---------------|------------------|
 |`__sidt`|x86、x64|
 
-**ヘッダーファイル**\<>
+**ヘッダー ファイル** \<intrin.h>
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-`__sidt` 関数は `SIDT` マシン語命令と同じです。 詳細については、「Intel Architecture Software Developer's Manual, Volume 2:命令セットリファレンス、「 [」を参照してください](https://software.intel.com/articles/intel-sdm)。
+`__sidt` 関数は `SIDT` マシン語命令と同じです。 詳細については、 [Intel Corporation](https://software.intel.com/articles/intel-sdm) サイトのドキュメント「Intel Architecture Software Developer's Manual, Volume 2: 命令セットリファレンス」を検索してください。
 
 **Microsoft 固有の仕様はここまで**
 

@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: CMFCTasksPaneTask クラス'
 title: CMFCTasksPaneTask クラス
 ms.date: 11/19/2018
 f1_keywords:
@@ -30,16 +31,16 @@ helpviewer_keywords:
 - CMFCTasksPaneTask [MFC], m_strName
 - CMFCTasksPaneTask [MFC], m_uiCommandID
 ms.assetid: c5a7513b-cd8f-4e2e-b16f-650e1fe30954
-ms.openlocfilehash: 49fccdf161da7deb1fd88a12a107df40bafdae92
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8dad8520c938cae655143464189897d216a5f3ce
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81375868"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97306769"
 ---
 # <a name="cmfctaskspanetask-class"></a>CMFCTasksPaneTask クラス
 
-クラス`CMFCTasksPaneTask`は、作業ウィンドウ コントロール ( [CMFCTasksPane](../../mfc/reference/cmfctaskspane-class.md)) のタスクを表すヘルパー クラスです。 タスク オブジェクトは、タスク[グループ内の](../../mfc/reference/cmfctaskspanetaskgroup-class.md)項目を表します 。 各タスクには、ユーザーがタスク名の左側に表示されるタスクやアイコンをクリックしたときにフレームワークが実行するコマンドを設定できます。
+クラスは、 `CMFCTasksPaneTask` 作業ウィンドウコントロール ( [CMFCTasksPane](../../mfc/reference/cmfctaskspane-class.md)) のタスクを表すヘルパークラスです。 タスクオブジェクトは、タスクグループ ( [CMFCTasksPaneTaskGroup](../../mfc/reference/cmfctaskspanetaskgroup-class.md)) 内の項目を表します。 各タスクには、ユーザーがタスク名の左側に表示されるタスクやアイコンをクリックしたときにフレームワークが実行するコマンドを設定できます。
 
 ## <a name="syntax"></a>構文
 
@@ -53,35 +54,35 @@ class CMFCTasksPaneTask : public CObject
 
 |名前|説明|
 |----------|-----------------|
-|[タスク::CMFC タスク ペインタスク](#cmfctaskspanetask)|`CMFCTasksPaneTask` オブジェクトを構築して、初期化します。|
+|[CMFCTasksPaneTask:: CMFCTasksPaneTask](#cmfctaskspanetask)|`CMFCTasksPaneTask` オブジェクトを構築して、初期化します。|
 |`CMFCTasksPaneTask::~CMFCTasksPaneTask`|デストラクターです。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
 |名前|説明|
 |----------|-----------------|
-|[タスク::セットアプデータ](#setaccdata)|現在のタスクのアクセシビリティ データを決定します。|
+|[CMFCTasksPaneTask:: Setのデータ](#setaccdata)|現在のタスクのユーザー補助データを決定します。|
 
 ### <a name="data-members"></a>データ メンバー
 
 |名前|説明|
 |----------|-----------------|
-|[タスク::m_bAutoDestroyWindow](#m_bautodestroywindow)|タスク ウィンドウが自動的に破棄されるかどうかを判断します。|
-|[タスク::m_bIsBold](#m_bisbold)|フレームワークがタスク ラベルを太字テキストで描画するかどうかを決定します。|
-|[タスク::m_dwUserData](#m_dwuserdata)|フレームワークがタスクに関連付けるユーザー定義データを格納します。 タスクに関連付けられたデータがない場合は、0 に設定します。|
-|[タスク::m_hwndTask](#m_hwndtask)|タスク ウィンドウへのハンドル。|
-|[タスク::m_nIcon](#m_nicon)|フレームワークがタスクの横に表示するイメージのイメージ リスト内のインデックス。|
-|[タスク::m_nWindowHeight](#m_nwindowheight)|タスク ウィンドウの高さ。 タスクウィンドウがない場合、この値はゼロです。|
-|[タスク::m_pGroup](#m_pgroup)|このタスクが属`CMFCTasksPaneTaskGroup`するへのポインター。|
-|[タスク::m_rect](#m_rect)|タスクの外接する四角形を指定します。|
-|[タスク::m_strName](#m_strname)|タスクの名前。|
-|[タスク::m_uiCommandID](#m_uicommandid)|ユーザーがタスクをクリックしたときにフレームワークが実行するコマンドのコマンド ID を指定します。 この値が有効なコマンド ID でない場合、タスクは単純なラベルとして扱われます。|
+|[CMFCTasksPaneTask:: m_bAutoDestroyWindow](#m_bautodestroywindow)|タスクウィンドウを自動的に破棄するかどうかを決定します。|
+|[CMFCTasksPaneTask:: m_bIsBold](#m_bisbold)|フレームワークがタスクラベルを太字で描画するかどうかを決定します。|
+|[CMFCTasksPaneTask:: m_dwUserData](#m_dwuserdata)|フレームワークによってタスクに関連付けられるユーザー定義データを格納します。 タスクに関連付けられたデータがない場合は、0に設定します。|
+|[CMFCTasksPaneTask:: m_hwndTask](#m_hwndtask)|タスクウィンドウへのハンドル。|
+|[CMFCTasksPaneTask:: m_nIcon](#m_nicon)|フレームワークによってタスクの横に表示されるイメージのイメージリスト内のインデックス。|
+|[CMFCTasksPaneTask:: m_nWindowHeight](#m_nwindowheight)|タスクウィンドウの高さ。 タスクウィンドウがない場合、この値は0です。|
+|[CMFCTasksPaneTask:: m_pGroup](#m_pgroup)|`CMFCTasksPaneTaskGroup`このタスクが属するへのポインター。|
+|[CMFCTasksPaneTask:: m_rect](#m_rect)|タスクの外接する四角形を指定します。|
+|[CMFCTasksPaneTask:: m_strName](#m_strname)|タスクの名前です。|
+|[CMFCTasksPaneTask:: m_uiCommandID](#m_uicommandid)|ユーザーがタスクをクリックしたときにフレームワークが実行するコマンドのコマンド ID を指定します。 この値が有効なコマンド ID でない場合、タスクは単純なラベルとして扱われます。|
 
 ## <a name="remarks"></a>解説
 
-次の図は、3 つのタスクを含むタスク グループを示しています。
+次の図は、3つのタスクを含むタスクグループを示しています。
 
-![タスク グループ、展開](../../mfc/reference/media/nexttaskgrpexpand.png "展開されたタスク グループ")
+![タスクグループ、展開](../../mfc/reference/media/nexttaskgrpexpand.png "展開されたタスク グループ")
 
 > [!NOTE]
 > タスクに有効なコマンド ID がない場合は、単純なラベルとして扱われます。
@@ -92,11 +93,11 @@ class CMFCTasksPaneTask : public CObject
 
 [CMFCTasksPaneTask](../../mfc/reference/cmfctaskspanetask-class.md)
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-**ヘッダー:** afx タスクペイン.h
+**ヘッダー:** afxtaskspane.h
 
-## <a name="cmfctaskspanetaskcmfctaskspanetask"></a><a name="cmfctaskspanetask"></a>タスク::CMFC タスク ペインタスク
+## <a name="cmfctaskspanetaskcmfctaskspanetask"></a><a name="cmfctaskspanetask"></a> CMFCTasksPaneTask:: CMFCTasksPaneTask
 
 `CMFCTasksPaneTask` オブジェクトを構築して、初期化します。
 
@@ -114,35 +115,35 @@ CMFCTasksPaneTask(
 
 ### <a name="parameters"></a>パラメーター
 
-*グループ化*<br/>
-タスクが属する[CMFC タスク ペイン タスク グループ](../../mfc/reference/cmfctaskspanetaskgroup-class.md)を指定します。
+*pGroup*<br/>
+タスクが所属する [CMFCTasksPaneTaskGroup](../../mfc/reference/cmfctaskspanetaskgroup-class.md) を指定します。
 
-*名前を指定します。*<br/>
+*lpszName*<br/>
 タスクの名前を指定します。
 
-*ニコン*<br/>
-イメージ リスト内のタスクのイメージのインデックスを指定します。
+*nIcon*<br/>
+イメージリスト内のタスクのイメージのインデックスを指定します。
 
-*コマンド ID*<br/>
-タスクがクリックされたときに実行されるコマンドのコマンド ID を指定します。
+*uiCommandID*<br/>
+タスクをクリックしたときに実行されるコマンドのコマンド ID を指定します。
 
-*データ*<br/>
+*dwUserData*<br/>
 ユーザー定義データ。
 
-*タスク*<br/>
-タスク ウィンドウへのハンドルを指定します。
+*hwndTask*<br/>
+タスクウィンドウへのハンドルを指定します。
 
-*ウィンドウを破壊する*<br/>
-TRUE の場合、タスク ウィンドウは自動的に破棄されます。
+*bAutoDestroyWindow*<br/>
+TRUE の場合、タスクウィンドウは自動的に破棄されます。
 
-*ウィンドウの高さ*<br/>
-タスク ウィンドウの高さを指定します。
+*nWindowHeight*<br/>
+タスクウィンドウの高さを指定します。
 
 ### <a name="remarks"></a>解説
 
-## <a name="cmfctaskspanetaskm_bautodestroywindow"></a><a name="m_bautodestroywindow"></a>タスク::m_bAutoDestroyWindow
+## <a name="cmfctaskspanetaskm_bautodestroywindow"></a><a name="m_bautodestroywindow"></a> CMFCTasksPaneTask:: m_bAutoDestroyWindow
 
-タスク ウィンドウが自動的に破棄されるかどうかを判断します。
+タスクウィンドウを自動的に破棄するかどうかを決定します。
 
 ```
 BOOL m_bAutoDestroyWindow;
@@ -150,11 +151,11 @@ BOOL m_bAutoDestroyWindow;
 
 ### <a name="remarks"></a>解説
 
-タスク ウィンドウ ( [CMFCTasksPaneTask::m_hwndTask](#m_hwndtask)) を自動的に破棄するように指定するには TRUE に設定します。それ以外の場合は FALSE。
+タスクウィンドウ ( [CMFCTasksPaneTask:: m_hwndTask](#m_hwndtask)) を自動的に破棄するように指定するには、TRUE に設定します。それ以外の場合は FALSE。
 
-## <a name="cmfctaskspanetaskm_bisbold"></a><a name="m_bisbold"></a>タスク::m_bIsBold
+## <a name="cmfctaskspanetaskm_bisbold"></a><a name="m_bisbold"></a> CMFCTasksPaneTask:: m_bIsBold
 
-タスク ラベルを太字で描画するかどうかを指定します。
+タスクラベルを太字テキストで描画するかどうかを決定します。
 
 ```
 BOOL m_bIsBold;
@@ -162,11 +163,11 @@ BOOL m_bIsBold;
 
 ### <a name="remarks"></a>解説
 
-タスク ラベルの太字テキストを表示するには、このメンバーを TRUE に設定します。
+タスクラベルに太字のテキストを表示するには、このメンバーを TRUE に設定します。
 
-## <a name="cmfctaskspanetaskm_dwuserdata"></a><a name="m_dwuserdata"></a>タスク::m_dwUserData
+## <a name="cmfctaskspanetaskm_dwuserdata"></a><a name="m_dwuserdata"></a> CMFCTasksPaneTask:: m_dwUserData
 
-タスクに関連付けられているユーザー定義データが含まれます。 タスクに関連付けられているデータがない場合は、ゼロに設定します。
+タスクに関連付けられているユーザー定義データを格納します。 タスクにデータが関連付けられていない場合は、0に設定します。
 
 ```
 DWORD m_dwUserData;
@@ -174,9 +175,9 @@ DWORD m_dwUserData;
 
 ### <a name="remarks"></a>解説
 
-## <a name="cmfctaskspanetaskm_hwndtask"></a><a name="m_hwndtask"></a>タスク::m_hwndTask
+## <a name="cmfctaskspanetaskm_hwndtask"></a><a name="m_hwndtask"></a> CMFCTasksPaneTask:: m_hwndTask
 
-タスク ウィンドウへのハンドル。
+タスクウィンドウへのハンドル。
 
 ```
 HWND m_hwndTask;
@@ -184,11 +185,11 @@ HWND m_hwndTask;
 
 ### <a name="remarks"></a>解説
 
-タスク ウィンドウを追加するには[、CMFC タスク ペインを](../../mfc/reference/cmfctaskspane-class.md#addwindow)呼び出します。
+タスクウィンドウを追加するには、 [CMFCTasksPane:: AddWindow](../../mfc/reference/cmfctaskspane-class.md#addwindow)を呼び出します。
 
-## <a name="cmfctaskspanetaskm_nicon"></a><a name="m_nicon"></a>タスク::m_nIcon
+## <a name="cmfctaskspanetaskm_nicon"></a><a name="m_nicon"></a> CMFCTasksPaneTask:: m_nIcon
 
-指定したタスクの横に表示されるイメージを識別するイメージ リスト内のインデックス位置。
+指定したタスクの横に表示されるイメージを識別するイメージリスト内のインデックス位置。
 
 ```
 int m_nIcon;
@@ -196,13 +197,13 @@ int m_nIcon;
 
 ### <a name="remarks"></a>解説
 
-イメージ リストは[、CMFC タスク ペインによって設定されます。](../../mfc/reference/cmfctaskspane-class.md#seticonslist)
+イメージリストは [CMFCTasksPane:: SetIconsList](../../mfc/reference/cmfctaskspane-class.md#seticonslist)によって設定されます。
 
-画像`m_nIcon`を使用せずにタスクを表示する場合は、-1 に設定します。
+`m_nIcon`イメージを使用せずにタスクを表示する場合は、-1 に設定します。
 
-## <a name="cmfctaskspanetaskm_nwindowheight"></a><a name="m_nwindowheight"></a>タスク::m_nWindowHeight
+## <a name="cmfctaskspanetaskm_nwindowheight"></a><a name="m_nwindowheight"></a> CMFCTasksPaneTask:: m_nWindowHeight
 
-タスク ウィンドウの高さ。 タスクウィンドウがない場合、この値はゼロです。
+タスクウィンドウの高さ。 タスクウィンドウがない場合、この値は0です。
 
 ```
 int m_nWindowHeight;
@@ -210,9 +211,9 @@ int m_nWindowHeight;
 
 ### <a name="remarks"></a>解説
 
-## <a name="cmfctaskspanetaskm_pgroup"></a><a name="m_pgroup"></a>タスク::m_pGroup
+## <a name="cmfctaskspanetaskm_pgroup"></a><a name="m_pgroup"></a> CMFCTasksPaneTask:: m_pGroup
 
-このタスクが属する[CMFC タスク ペインタスク グループ](../../mfc/reference/cmfctaskspanetaskgroup-class.md)へのポインター。
+このタスクが所属する [CMFCTasksPaneTaskGroup](../../mfc/reference/cmfctaskspanetaskgroup-class.md) へのポインター。
 
 ```
 CMFCTasksPaneTaskGroup* m_pGroup;
@@ -220,9 +221,9 @@ CMFCTasksPaneTaskGroup* m_pGroup;
 
 ### <a name="remarks"></a>解説
 
-すべてのタスクには親グループが必要です。 グループを作業ウィンドウに追加するには[、CMFCTasksPane::AddGroup](../../mfc/reference/cmfctaskspane-class.md#addgroup)を呼び出します。
+すべてのタスクに親グループが必要です。 グループを作業ウィンドウに追加するには、 [CMFCTasksPane:: AddGroup](../../mfc/reference/cmfctaskspane-class.md#addgroup)を呼び出します。
 
-## <a name="cmfctaskspanetaskm_rect"></a><a name="m_rect"></a>タスク::m_rect
+## <a name="cmfctaskspanetaskm_rect"></a><a name="m_rect"></a> CMFCTasksPaneTask:: m_rect
 
 タスクの外接する四角形を指定します。
 
@@ -234,9 +235,9 @@ CRect m_rect;
 
 この値は、タスクが描画されるときにフレームワークによって計算されます。
 
-## <a name="cmfctaskspanetaskm_strname"></a><a name="m_strname"></a>タスク::m_strName
+## <a name="cmfctaskspanetaskm_strname"></a><a name="m_strname"></a> CMFCTasksPaneTask:: m_strName
 
-タスクの名前。
+タスクの名前です。
 
 ```
 CString m_strName;
@@ -244,7 +245,7 @@ CString m_strName;
 
 ### <a name="remarks"></a>解説
 
-## <a name="cmfctaskspanetaskm_uicommandid"></a><a name="m_uicommandid"></a>タスク::m_uiCommandID
+## <a name="cmfctaskspanetaskm_uicommandid"></a><a name="m_uicommandid"></a> CMFCTasksPaneTask:: m_uiCommandID
 
 ユーザーがタスクをクリックしたときに実行されるコマンドのコマンド ID を指定します。 この値が有効なコマンド ID でない場合、タスクは単純なラベルとして扱われます。
 
@@ -254,9 +255,9 @@ UINT m_uiCommandID;
 
 ### <a name="remarks"></a>解説
 
-## <a name="cmfctaskspanetasksetaccdata"></a><a name="setaccdata"></a>タスク::セットアプデータ
+## <a name="cmfctaskspanetasksetaccdata"></a><a name="setaccdata"></a> CMFCTasksPaneTask:: Setのデータ
 
-現在のタスクのアクセシビリティ データを決定します。
+現在のタスクのユーザー補助データを決定します。
 
 ```
 virtual BOOL SetACCData(
@@ -266,18 +267,18 @@ virtual BOOL SetACCData(
 
 ### <a name="parameters"></a>パラメーター
 
-*親*<br/>
-[in]現在のタスクの親ウィンドウを表します。
+*pParent*<br/>
+から現在のタスクの親ウィンドウを表します。
 
-*データ*<br/>
-[アウト]現在のタスクの`CAccessibilityData`アクセシビリティ データが設定されている型のオブジェクト。
+*data*<br/>
+入出力 `CAccessibilityData` 現在のタスクのユーザー補助データを格納する型のオブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
-*データ*パラメーターに現在のタスクのユーザー補助データが正常に設定された場合は TRUE。それ以外の場合は FALSE。
+*データ* パラメーターに現在のタスクのアクセシビリティデータが正常に設定された場合は TRUE。それ以外の場合は FALSE。
 
 ## <a name="see-also"></a>関連項目
 
-[階層グラフ](../../mfc/hierarchy-chart.md)<br/>
-[クラス](../../mfc/reference/mfc-classes.md)<br/>
-[Cオブジェクトクラス](../../mfc/reference/cobject-class.md)
+[階層図](../../mfc/hierarchy-chart.md)<br/>
+[Classes](../../mfc/reference/mfc-classes.md)<br/>
+[CObject クラス](../../mfc/reference/cobject-class.md)

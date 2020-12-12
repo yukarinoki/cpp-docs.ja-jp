@@ -1,4 +1,5 @@
 ---
+description: 詳細については、_strncoll、_wcsncoll、_mbsncoll、_strncoll_l、_wcsncoll_l、_mbsncoll_l を参照してください。
 title: _strncoll、_wcsncoll、_mbsncoll、_strncoll_l、_wcsncoll_l、_mbsncoll_l
 ms.date: 4/2/2020
 api_name:
@@ -70,19 +71,19 @@ helpviewer_keywords:
 - ftcsnccoll function
 - _wcsncoll_l function
 ms.assetid: e659a5a4-8afe-4033-8e72-17ffd4bdd8e9
-ms.openlocfilehash: c7abe5ce96d0fa3d198834f6923724321d60d666
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 71f37511ab531def178926d77e61978190fce817
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82919302"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97306119"
 ---
 # <a name="_strncoll-_wcsncoll-_mbsncoll-_strncoll_l-_wcsncoll_l-_mbsncoll_l"></a>_strncoll、_wcsncoll、_mbsncoll、_strncoll_l、_wcsncoll_l、_mbsncoll_l
 
 ロケール固有の情報を使用して文字列を比較します。
 
 > [!IMPORTANT]
-> **_mbsncoll**と **_mbsncoll_l**は、Windows ランタイムで実行されるアプリケーションでは使用できません。 詳細については、「[ユニバーサル Windows プラットフォーム アプリでサポートされていない CRT 関数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)」を参照してください。
+> **_mbsncoll** と **_mbsncoll_l** は、Windows ランタイムで実行されるアプリケーションでは使用できません。 詳細については、「[ユニバーサル Windows プラットフォーム アプリでサポートされていない CRT 関数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)」を参照してください。
 
 ## <a name="syntax"></a>構文
 
@@ -135,21 +136,21 @@ Null で終わる比較対象の文字列。
 
 ## <a name="return-value"></a>戻り値
 
-これらの各関数は、次のように、 *string1*と*string2*の部分文字列の関係を示す値を返します。
+これらの各関数は、次のように、 *string1* と *string2* の部分文字列の関係を示す値を返します。
 
 |戻り値|string1 と string2 との関係|
 |------------------|----------------------------------------|
-|< 0|*string1*は*string2*未満です。|
-|0|*string1*は*string2*と同じです。|
-|> 0|*string1*が*string2*を超えています。|
+|< 0|*string1* は *string2* 未満です。|
+|0|*string1* は *string2* と同じです。|
+|> 0|*string1* が *string2* を超えています。|
 
-これらの各関数は **_NLSCMPERROR**を返します。 **_NLSCMPERROR**を使用するには、STRING .h または mbstring.h のいずれかを指定します。 *string1*または*string2*に照合シーケンスのドメイン外のワイド文字コードが含まれている場合、 **_wcsncoll**は失敗する可能性があります。 エラーが発生した場合、 **_wcsncoll**は**errno**を**EINVAL**に設定することがあります。 **_Wcsncoll**の呼び出し時にエラーが発生していないかどうかを確認するには、 **errno**を0に設定し、 **_wcsncoll**を呼び出した後に**errno**をチェックします。
+これらの各関数は **_NLSCMPERROR** を返します。 **_NLSCMPERROR** を使用するには、STRING .h または mbstring.h のいずれかを指定します。 *string1* または *string2* に照合シーケンスのドメイン外のワイド文字コードが含まれている場合、 **_wcsncoll** は失敗する可能性があります。 エラーが発生した場合、 **_wcsncoll** は **errno** を **EINVAL** に設定することがあります。 **_Wcsncoll** の呼び出し時にエラーが発生していないかどうかを確認するには、 **errno** を0に設定し、 **_wcsncoll** を呼び出した後に **errno** をチェックします。
 
 ## <a name="remarks"></a>解説
 
-これらの各関数は、現在使用されているコードページに従って、 *string1*と*string2*の最初の*カウント*文字を大文字と小文字を区別して比較します。 これらの関数は、コード ページの文字セット順序と辞書式文字順序との間に相違点あり、この違いが文字列比較に関係がある場合にのみ使用します。 文字セット順序は、ロケールに依存します。 **_L**サフィックスが付いていないこれらの関数のバージョンは、現在のロケールを使用しますが、 **_l**サフィックスが付いているバージョンは、渡されたロケールを使用します。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
+これらの各関数は、現在使用されているコードページに従って、 *string1* と *string2* の最初の *カウント* 文字を大文字と小文字を区別して比較します。 これらの関数は、コード ページの文字セット順序と辞書式文字順序との間に相違点あり、この違いが文字列比較に関係がある場合にのみ使用します。 文字セット順序は、ロケールに依存します。 **_L** サフィックスが付いていないこれらの関数のバージョンは、現在のロケールを使用しますが、 **_l** サフィックスが付いているバージョンは、渡されたロケールを使用します。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
 
-これらのすべての関数では、パラメーターの検証が行われます。 *String1*または*string2*が null ポインターの場合、または*count*が**INT_MAX**より大きい場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、これらの関数は **_NLSCMPERROR**を返し、 **errno**を**EINVAL**に設定します。
+これらのすべての関数では、パラメーターの検証が行われます。 *String1* または *string2* が null ポインターの場合、または *count* が **INT_MAX** より大きい場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、これらの関数は **_NLSCMPERROR** を返し、 **errno** を **EINVAL** に設定します。
 
 既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
@@ -162,7 +163,7 @@ Null で終わる比較対象の文字列。
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**_strncoll**、 **_strncoll_l**|\<string.h>|
 |**_wcsncoll**、 **_wcsncoll_l**|\<wchar.h> または \<string.h>|
@@ -172,7 +173,7 @@ Null で終わる比較対象の文字列。
 
 ## <a name="see-also"></a>関連項目
 
-[国](../../c-runtime-library/locale.md)<br/>
+[ロケール](../../c-runtime-library/locale.md)<br/>
 [文字列操作](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [strcoll 系関数](../../c-runtime-library/strcoll-functions.md)<br/>
 [localeconv](localeconv.md)<br/>

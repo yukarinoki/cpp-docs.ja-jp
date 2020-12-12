@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: CAccessorRowset クラス'
 title: CAccessorRowset クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -27,12 +28,12 @@ helpviewer_keywords:
 - FreeRecordMemory method
 - GetColumnInfo method
 ms.assetid: bd4f58ed-cebf-4d43-8985-1e5fcbf06953
-ms.openlocfilehash: d9dd2eec3948896487b5b977d1107db1f4a1046b
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: c93580fa41967004947b075e82e00bdcb745ad4e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91498714"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97307575"
 ---
 # <a name="caccessorrowset-class"></a>CAccessorRowset クラス
 
@@ -54,7 +55,7 @@ class CAccessorRowset : public TAccessor, public TRowset<TAccessor>
 *TRowset*<br/>
 行セットクラス。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** atldbcli.h
 
@@ -70,7 +71,7 @@ class CAccessorRowset : public TAccessor, public TRowset<TAccessor>
 | [FreeRecordMemory](#freerecordmemory) | 解放する必要がある現在のレコード内のすべての列を解放します。 |
 | [GetColumnInfo](#getcolumninfo) | [IColumnsInfo:: GetColumnInfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\))を実装します。 |
 
-## <a name="remarks"></a>注釈
+## <a name="remarks"></a>解説
 
 クラス `TAccessor` は、アクセサーを管理します。 クラス *trowset* は、行セットを管理します。
 
@@ -139,17 +140,17 @@ HRESULT GetColumnInfo(DBORDINAL* pColumns,
 
 #### <a name="parameters"></a>パラメーター
 
-*OLE DB プログラマーリファレンス*の「 [IColumnsInfo:: GetColumnInfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\)) 」を参照してください。
+*OLE DB プログラマーリファレンス* の「 [IColumnsInfo:: GetColumnInfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\)) 」を参照してください。
 
 ### <a name="return-value"></a>戻り値
 
 標準の HRESULT です。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 ユーザーは、返された列情報と文字列バッファーを解放する必要があります。 [CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md)を使用し、バインドをオーバーライドする必要がある場合は、このメソッドの2番目のバージョンを使用します。
 
-詳細については、 *OLE DB プログラマーリファレンス*の「 [IColumnsInfo:: GetColumnInfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\)) 」を参照してください。
+詳細については、 *OLE DB プログラマーリファレンス* の「 [IColumnsInfo:: GetColumnInfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\)) 」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

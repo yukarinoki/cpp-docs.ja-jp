@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: __segmentlimit'
 title: __segmentlimit
 ms.date: 09/02/2019
 f1_keywords:
@@ -7,18 +8,18 @@ helpviewer_keywords:
 - __segmentlimit intrinsic
 - lsl instruction
 ms.assetid: d0bc3630-90cb-4185-8667-686fd41e23d4
-ms.openlocfilehash: 9239d8de8ce2065d09ee7975301a2cb41832ba89
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 49f8688918e07e143615af7b184a784daa0eaaa1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70217993"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97307003"
 ---
 # <a name="__segmentlimit"></a>__segmentlimit
 
 **Microsoft 固有の仕様**
 
-(セグメント`lsl`の読み込み制限) 命令を生成します。
+`lsl`(セグメントの読み込み制限) 命令を生成します。
 
 ## <a name="syntax"></a>構文
 
@@ -35,17 +36,17 @@ unsigned long __segmentlimit(
 
 ## <a name="return-value"></a>戻り値
 
-セレクターが有効で現在のアクセス許可レベルで表示されている場合は、によって指定されたセグメントセレクターのセグメント制限。
+セレクターが有効で現在のアクセス許可レベルで表示されている場合 *は、によって* 指定されたセグメントセレクターのセグメント制限。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-|組み込み|アーキテクチャ|
+|Intrinsic|アーキテクチャ|
 |---------------|------------------|
 |`__segmentlimit`|x86、x64|
 
-**ヘッダーファイル**\<>
+**ヘッダー ファイル** \<intrin.h>
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 セグメントの上限を取得できない場合、この命令は失敗します。 エラーが発生すると、この命令は ZF フラグをクリアし、戻り値は未定義になります。
 

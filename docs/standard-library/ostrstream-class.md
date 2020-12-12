@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: ostrstream クラス'
 title: ostrstream クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - std::ostrstream [C++], rdbuf
 - std::ostrstream [C++], str
 ms.assetid: e2e34679-b266-4728-a8e1-8eda5d400e46
-ms.openlocfilehash: f17d8006aea6c5467f8de270318386bb12df264a
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 9966f044d48aa762d681bafcfc22441f7124c9a8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87222226"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97305144"
 ---
 # <a name="ostrstream-class"></a>ostrstream クラス
 
@@ -49,15 +50,15 @@ class ostrstream : public ostream
 |[あせん](#freeze)|ストリーム バッファーの操作により、ストリーム バッファーを使用不可にします。|
 |[pcount](#pcount)|被制御シーケンスに書き込まれる要素の数を返します。|
 |[rdbuf](#rdbuf)|ストリームの関連付けられた `strstreambuf` オブジェクトへのポインターを返します。|
-|[引数](#str)|[freeze](../standard-library/strstreambuf-class.md#freeze) を呼び出し、被制御シーケンスの先頭へのポインターを返します。|
+|[str](#str)|[freeze](../standard-library/strstreambuf-class.md#freeze) を呼び出し、被制御シーケンスの先頭へのポインターを返します。|
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:**\<strstream>
 
 **名前空間:** std
 
-## <a name="ostrstreamfreeze"></a><a name="freeze"></a>ostrstream:: freeze
+## <a name="ostrstreamfreeze"></a><a name="freeze"></a> ostrstream:: freeze
 
 ストリーム バッファーの操作により、ストリーム バッファーを使用不可にします。
 
@@ -78,7 +79,7 @@ void freeze(bool _Freezeit = true);
 
 の使用例については、「 [strstream:: freeze](../standard-library/strstreambuf-class.md#freeze) 」を参照してください `freeze` 。
 
-## <a name="ostrstreamostrstream"></a><a name="ostrstream"></a>ostrstream:: ostrstream
+## <a name="ostrstreamostrstream"></a><a name="ostrstream"></a> ostrstream:: ostrstream
 
 `ostrstream` 型のオブジェクトを構築します。
 
@@ -103,13 +104,13 @@ ostrstream(char* ptr,
 
 ### <a name="remarks"></a>解説
 
-どちらのコンストラクターも、 [ostream](../standard-library/ostream-typedefs.md#ostream)(**sb**) を呼び出すことによって基底クラスを初期化します。ここで、 `sb` は[strstreambuf](../standard-library/strstreambuf-class.md)クラスの格納されているオブジェクトです。 最初のコンストラクターは、を `sb` 呼び出すことによっても初期化し `strstreambuf` ます。 2 番目のコンストラクターは、次のどちらかの方法で基本クラスを初期化します。
+どちらのコンストラクターも、 [ostream](../standard-library/ostream-typedefs.md#ostream)(**sb**) を呼び出すことによって基底クラスを初期化します。ここで、 `sb` は [strstreambuf](../standard-library/strstreambuf-class.md)クラスの格納されているオブジェクトです。 最初のコンストラクターは、を `sb` 呼び出すことによっても初期化し `strstreambuf` ます。 2 番目のコンストラクターは、次のどちらかの方法で基本クラスを初期化します。
 
 - `_Mode`  &  **Ios_base:: app**= = 0 の場合は、 `ptr` 要素の配列の最初の要素を指定する必要があり、 `count` コンストラクターは `strstreambuf` ( `ptr` , `count` ,) を呼び出し `ptr` ます。
 
 - それ以外の場合、は、 `ptr` 最初の要素がによって指定された C 文字列を含む count 要素の最初の要素を指定する必要があり `ptr` ます。また、コンストラクターは `strstreambuf` ( `ptr` , `count` , `ptr`  +  `strlen` ( `ptr` )) を呼び出します。
 
-## <a name="ostrstreampcount"></a><a name="pcount"></a>ostrstream::p 数
+## <a name="ostrstreampcount"></a><a name="pcount"></a> ostrstream::p 数
 
 被制御シーケンスに書き込まれる要素の数を返します。
 
@@ -129,7 +130,7 @@ streamsize pcount() const;
 
 `pcount` の使用例は、[strstream::pcount](../standard-library/strstreambuf-class.md#pcount) をご覧ください。
 
-## <a name="ostrstreamrdbuf"></a><a name="rdbuf"></a>ostrstream:: rdbuf
+## <a name="ostrstreamrdbuf"></a><a name="rdbuf"></a> ostrstream:: rdbuf
 
 ストリームの関連付けられた strstreambuf オブジェクトへのポインターを返します。
 
@@ -149,7 +150,7 @@ strstreambuf *rdbuf() const
 
 `rdbuf` の使用例は、[strstreambuf::pcount](../standard-library/strstreambuf-class.md#pcount) をご覧ください。
 
-## <a name="ostrstreamstr"></a><a name="str"></a>ostrstream:: str
+## <a name="ostrstreamstr"></a><a name="str"></a> ostrstream:: str
 
 [freeze](../standard-library/strstreambuf-class.md#freeze) を呼び出し、被制御シーケンスの先頭へのポインターを返します。
 

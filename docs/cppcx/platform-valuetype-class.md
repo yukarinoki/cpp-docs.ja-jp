@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: Platform:: ValueType クラス'
 title: Platform::ValueType クラス
 ms.date: 02/03/2017
 ms.topic: reference
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::ValueType Class
 ms.assetid: 79aa8754-b140-4974-a5b1-be046938a10a
-ms.openlocfilehash: f4ce34fa3f197424833d34bdb866712d412e69c3
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: e6873b4b884586d06dae6e2fd1966041fd49bcc8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88846551"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97307809"
 ---
 # <a name="platformvaluetype-class"></a>Platform::ValueType クラス
 
@@ -34,7 +35,7 @@ public ref class ValueType : Object
 
 ValueType クラスは、値型を構築するために使用されます。 ValueType は Object (基本メンバーを持つ) から派生します。 ただし、コンパイラは、それらのメンバーを、ValueType クラスから派生する値型からデタッチします。 値型がボックス化されると、コンパイラは、その基本メンバーを再びアタッチします。
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 **サポートされている最低限のクライアント:** Windows 8
 

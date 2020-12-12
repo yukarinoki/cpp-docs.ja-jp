@@ -1,17 +1,18 @@
 ---
+description: '詳細情報: 文字列 (C++/CX)'
 title: 文字列 (C++/CX)
 ms.date: 01/22/2017
 ms.assetid: 5b34e1df-7c2b-4269-aba8-b767d36c49d9
-ms.openlocfilehash: a67b9a4552dc83791c05029cca76f60fd83df0f1
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: 83ea4cd86b57e8bfd81968cbb617b7b8af81b978
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81745354"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97307614"
 ---
 # <a name="strings-ccx"></a>文字列 (C++/CX)
 
-Windows ランタイムのテキストは、[プラットフォーム::文字列クラス](../cppcx/platform-string-class.md)によって C++/CX で表されます。 `Platform::String Class`を使用するのは、Windows ランタイム クラスのメソッドに文字列を渡すとき、またはアプリケーション バイナリ インターフェイス (ABI) 境界を越えて他の Windows ランタイム コンポーネントとやり取りする場合です。 `Platform::String Class` は、いくつかの一般的な文字列操作のメソッドを提供しますが、すべての機能を備えた文字列クラスとしては設計されていません。 C++ モジュールでは、重要なテキスト処理のために [wstring](../standard-library/basic-string-class.md) などの標準 C++ 文字列型を使用し、パブリック インターフェイスとの間でやり取りする前に、最終結果を [Platform::String^](../cppcx/platform-string-class.md) に変換します。 `wstring` または `wchar_t*` と `Platform::String`の間で変換することは簡単かつ効率的です。
+Windows ランタイム内のテキストは、C++/CX で [Platform:: String クラス](../cppcx/platform-string-class.md)によって表されます。 `Platform::String Class`Windows ランタイムクラスのメソッドに文字列を前後に渡す場合、またはアプリケーションバイナリインターフェイス (ABI) の境界を越えて他の Windows ランタイムコンポーネントと対話する場合は、を使用します。 `Platform::String Class` は、いくつかの一般的な文字列操作のメソッドを提供しますが、すべての機能を備えた文字列クラスとしては設計されていません。 C++ モジュールでは、重要なテキスト処理のために [wstring](../standard-library/basic-string-class.md) などの標準 C++ 文字列型を使用し、パブリック インターフェイスとの間でやり取りする前に、最終結果を [Platform::String^](../cppcx/platform-string-class.md) に変換します。 `wstring` または `wchar_t*` と `Platform::String`の間で変換することは簡単かつ効率的です。
 
 **高速渡し**
 
@@ -37,7 +38,7 @@ Windows ランタイムのテキストは、[プラットフォーム::文字列
 
 ## <a name="string-conversions"></a>文字列変換
 
-`Platform::String` には、 `char16` 文字または `NULL` 文字だけを含めることができます。 アプリケーションで 8 ビット文字を使用する必要がある場合は、 [String::Data](../cppcx/platform-string-class.md#data)を使用して`const wchar_t*`テキストを . そして、適切な Windows 関数または標準ライブラリ関数を使用してデータを操作し、データを `wchar_t*` または [wstring](../standard-library/basic-string-class.md)に戻します。これらを使用して、新しい `Platform::String`で表されます。
+`Platform::String` には、 `char16` 文字または `NULL` 文字だけを含めることができます。 アプリケーションで8ビット文字を使用する必要がある場合は、 [文字列::D ata](../cppcx/platform-string-class.md#data) を使用してテキストをとして抽出し `const wchar_t*` ます。 そして、適切な Windows 関数または標準ライブラリ関数を使用してデータを操作し、データを `wchar_t*` または [wstring](../standard-library/basic-string-class.md)に戻します。これらを使用して、新しい `Platform::String`で表されます。
 
 次のコードに、 `String^` 変数と `wstring` 変数の間で変換する方法を示します。 この例で使用される文字列操作の詳細については、「 [basic_string::replace](../standard-library/basic-string-class.md#replace)」を参照してください。
 
@@ -45,13 +46,13 @@ Windows ランタイムのテキストは、[プラットフォーム::文字列
 
 ## <a name="string-length-and-embedded-null-values"></a>文字列の長さと埋め込み NULL 値
 
-[String::Length](../cppcx/platform-string-class.md#length)は、バイト数ではなく、文字列内の文字数を返します。 スタック セマンティクスを使用して文字列を構築すると、終端の NULL 文字は明示的に指定しない限りカウントされません。
+[String:: Length](../cppcx/platform-string-class.md#length)は、バイト数ではなく、文字列内の文字数を返します。 スタック セマンティクスを使用して文字列を構築すると、終端の NULL 文字は明示的に指定しない限りカウントされません。
 
 `Platform::String` には埋め込み NULL 値を含めることができますが、連結演算の結果として NULL 値が含まれるときだけです。 埋め込み NULL は文字列リテラルではサポートされないため、 `Platform::String`を初期化するためにそのように埋め込まれた NULL は使用できません。 `Platform::String` 内の埋め込み NULL 値は、文字列が `TextBlock::Text` プロパティに割り当てられたときなど、文字列が表示されるときには無視されます。 埋め込み NULL は、文字列値が `Data` プロパティによって返されるときに削除されます。
 
 ## <a name="stringreference"></a>StringReference
 
-場合によっては、コード (a) は std::wstring を受け取るか、文字列または L"" 文字列リテラルをwchar_tし、それを String^ を入力パラメータとして受け取る別のメソッドに渡すだけです。 元の文字列バッファー自体が有効な状態にとどまり、関数が制御を返す前に変更されていない場合、 `wchar_t*` 文字列またはリテラル文字列を [Platform::StringReference](../cppcx/platform-stringreference-class.md)に変換し、 `Platform::String^`の代わりにそれを渡すことができます。 `StringReference` には、 `Platform::String^`に対するユーザー定義の変換があるため、この操作が許可されます。 `StringReference` を使用して、文字列データの余分なコピーを回避することもできます。 多数の文字列を渡すループの中や、非常に大きな文字列を渡す場合は、 `StringReference`を使用すると、パフォーマンスの大幅な向上を実現できる可能性があります。 ただし、 `StringReference` は基本的に元の文字列バッファーをそのまま利用するので、メモリの破損を防止するために十分注意する必要があります。 メソッドが制御を返すときに、元の文字列がスコープ内にあることが保証されている場合以外は、非同期メソッドに `StringReference` を渡さないでください。 2 番目の代入演算が発生した場合、StringReference によって初期化される String^ で、文字列データの割り当てとコピーが強制的に実行されます。 この場合、 `StringReference`が持つパフォーマンスの利点が失われます。
+場合によっては、コード (a) は、std:: wstring、または wchar_t 文字列または L "" 文字列リテラルを受け取ることがあり、入力パラメーターとして文字列 ^ を受け取る別のメソッドにそれを渡すだけです。 元の文字列バッファー自体が有効な状態にとどまり、関数が制御を返す前に変更されていない場合、 `wchar_t*` 文字列またはリテラル文字列を [Platform::StringReference](../cppcx/platform-stringreference-class.md)に変換し、 `Platform::String^`の代わりにそれを渡すことができます。 `StringReference` には、 `Platform::String^`に対するユーザー定義の変換があるため、この操作が許可されます。 `StringReference` を使用して、文字列データの余分なコピーを回避することもできます。 多数の文字列を渡すループの中や、非常に大きな文字列を渡す場合は、 `StringReference`を使用すると、パフォーマンスの大幅な向上を実現できる可能性があります。 ただし、 `StringReference` は基本的に元の文字列バッファーをそのまま利用するので、メモリの破損を防止するために十分注意する必要があります。 メソッドが制御を返すときに、元の文字列がスコープ内にあることが保証されている場合以外は、非同期メソッドに `StringReference` を渡さないでください。 2 番目の代入演算が発生した場合、StringReference によって初期化される String^ で、文字列データの割り当てとコピーが強制的に実行されます。 この場合、 `StringReference`が持つパフォーマンスの利点が失われます。
 
 `StringReference` は ref クラスではなく、標準 C++ のクラス型であるため、定義した ref クラスのパブリック インターフェイス内で使用できないことに注意してください。
 
