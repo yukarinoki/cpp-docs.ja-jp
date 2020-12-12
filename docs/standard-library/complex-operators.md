@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「 &lt; 複合演算子」を参照してください。 &gt;
 title: '&lt;complex&gt; 演算子'
 ms.date: 11/04/2016
 f1_keywords:
@@ -15,16 +16,16 @@ helpviewer_keywords:
 - std::operator!= (complex)
 - std::operator&gt;&gt; (complex)
 - std::operator&lt;&lt; (complex), std::operator== (complex)
-ms.openlocfilehash: 325e194e9cc5b597ae010477ecbe313be11b179a
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 88930dbf0b96d42c5c643305b56121cec8a1bacd
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87222590"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97325011"
 ---
 # <a name="ltcomplexgt-operators"></a>&lt;complex&gt; 演算子
 
-## <a name="operator"></a><a name="op_neq"></a>operator! =
+## <a name="operator"></a><a name="op_neq"></a> operator! =
 
 2 つの複素数の間の非同等性をテストします。その一方または両方が実数部と虚数部の型のサブセットに属している場合があります。
 
@@ -55,7 +56,7 @@ bool operator!=(
 
 ### <a name="return-value"></a>戻り値
 
-**`true`** 数値が等しくない場合は。**`false`** 数値が等しい場合は。
+**`true`** 数値が等しくない場合は。 **`false`** 数値が等しい場合は。
 
 ### <a name="remarks"></a>解説
 
@@ -163,7 +164,7 @@ The 2nd right-side complex number is cr3b = (5,0)
 The complex numbers cl3b & cr3b are equal.
 ```
 
-## <a name="operator"></a><a name="op_star"></a>operator\*
+## <a name="operator"></a><a name="op_star"></a> operator\*
 
 2 つの複素数を乗算します。その一方または両方が実数部と虚数部の型のサブセットに属している場合があります。
 
@@ -260,7 +261,7 @@ int main( )
 }
 ```
 
-## <a name="operator"></a><a name="op_add"></a>演算子 +
+## <a name="operator"></a><a name="op_add"></a> 演算子 +
 
 2 つの複素数を加算します。その一方または両方が実数部と虚数部の型のサブセットに属している場合があります。
 
@@ -298,7 +299,7 @@ complex<Type> operator+(const complex<Type>& left);
 
 ### <a name="remarks"></a>解説
 
-データを特定の形式に変換せずに単純な算術演算を実行できるようにするために、演算はオーバーロードされます。 単項演算子は*left*を返します。
+データを特定の形式に変換せずに単純な算術演算を実行できるようにするために、演算はオーバーロードされます。 単項演算子は *left* を返します。
 
 ### <a name="example"></a>例
 
@@ -400,7 +401,7 @@ The modulus of cs4 is: 5
 The argument of cs4 is: 0.927295 radians, which is 53.1301 degrees.
 ```
 
-## <a name="operator-"></a><a name="operator-"></a>operator
+## <a name="operator-"></a><a name="operator-"></a> operator
 
 2 つの複素数を減算します。その一方または両方が実数部と虚数部の型のサブセットに属している場合があります。
 
@@ -434,7 +435,7 @@ complex<Type> operator-(const complex<Type>& left);
 
 ### <a name="return-value"></a>戻り値
 
-*左*から*右*を減算した結果の複素数。値がパラメーター入力によって指定されている2つの数値。
+*左* から *右* を減算した結果の複素数。値がパラメーター入力によって指定されている2つの数値。
 
 ### <a name="remarks"></a>解説
 
@@ -542,7 +543,7 @@ The modulus of cs4 is: 5
 The argument of cs4 is: -2.2143 radians, which is -126.87 degrees.
 ```
 
-## <a name="operator"></a><a name="op_div"></a>operator
+## <a name="operator"></a><a name="op_div"></a> operator
 
 2 つの複素数を除算します。その一方または両方が実数部と虚数部の型のサブセットに属している場合があります。
 
@@ -662,7 +663,7 @@ The modulus of cs3 is: 1.66667
 The argument of cs3 is: -0.523599 radians, which is -30 degrees.
 ```
 
-## <a name="operatorltlt"></a><a name="op_lt_lt"></a>operator&lt;&lt;
+## <a name="operatorltlt"></a><a name="op_lt_lt"></a> operator&lt;&lt;
 
 出力ストリームに指定された複素数を挿入します。
 
@@ -683,7 +684,7 @@ basic_ostream<Elem, Traits>& operator<<(
 
 ### <a name="return-value"></a>戻り値
 
-指定した複素数の値を、デカルト形式 (*実数部、虚数部*) で*ostr*に書き込みます。
+指定した複素数の値を、デカルト形式 (*実数部、虚数部*) で *ostr* に書き込みます。
 
 ### <a name="remarks"></a>解説
 
@@ -724,7 +725,7 @@ The modulus of c2 is: 2
 The argument of c2 is: 0.523599 radians, which is 30 degrees.
 ```
 
-## <a name="operator"></a><a name="op_eq_eq"></a>operator = =
+## <a name="operator"></a><a name="op_eq_eq"></a> operator = =
 
 2 つの複素数の間の同等性をテストします。その一方または両方が実数部と虚数部の型のサブセットに属している場合があります。
 
@@ -755,7 +756,7 @@ bool operator==(
 
 ### <a name="return-value"></a>戻り値
 
-**`true`** 数値が等しい場合は。**`false`** 数値が等しくない場合。
+**`true`** 数値が等しい場合は。 **`false`** 数値が等しくない場合。
 
 ### <a name="remarks"></a>解説
 
@@ -863,7 +864,7 @@ The 2nd right-side complex number is cr3b = (5,0)
 The complex numbers cl3b & cr3b are equal.
 ```
 
-## <a name="operatorgtgt"></a><a name="op_gt_gt"></a>operator&gt;&gt;
+## <a name="operatorgtgt"></a><a name="op_gt_gt"></a> operator&gt;&gt;
 
 入力ストリームから複素数の値を抽出します。
 
@@ -884,7 +885,7 @@ basic_istream<Elem, Traits>& operator>>(
 
 ### <a name="return-value"></a>戻り値
 
-指定した複素数の値を*Istr*から読み取り、*右*に戻します。
+指定した複素数の値を *Istr* から読み取り、 *右* に戻します。
 
 ### <a name="remarks"></a>解説
 

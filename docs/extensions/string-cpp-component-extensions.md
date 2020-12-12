@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: 文字列 (C++/CLI および C++/CX)'
 title: 文字列 (C++/CLI および C++/CX)
 ms.date: 10/08/2018
 ms.topic: reference
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - string support with /clr
 - /clr compiler option [C++], string support
 ms.assetid: c695f965-9be0-4e20-9661-373bfee6557e
-ms.openlocfilehash: b9da900ffbfff34dc596d8981095d8285bf37208
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: a47842713d1e7349717eaaeddcd4f3cba86fbbea
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80171945"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97206332"
 ---
 # <a name="string--ccli-and-ccx"></a>文字列 (C++/CLI および C++/CX)
 
@@ -59,7 +60,7 @@ using namespace default;
 
 詳細については、「[文字列リテラルと文字リテラル](../cpp/string-and-character-literals-cpp.md)」を参照してください。
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 コンパイラ オプション: **/clr**
 
@@ -259,8 +260,8 @@ System.SByte*
 System.String
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[.NET および UWP でのコンポーネント拡張](component-extensions-for-runtime-platforms.md)<br/>
+[.NET および UWP 用のコンポーネントの拡張機能](component-extensions-for-runtime-platforms.md)<br/>
 [文字列リテラルと文字リテラル](../cpp/string-and-character-literals-cpp.md)<br/>
 [/clr (共通言語ランタイムのコンパイル)](../build/reference/clr-common-language-runtime-compilation.md)

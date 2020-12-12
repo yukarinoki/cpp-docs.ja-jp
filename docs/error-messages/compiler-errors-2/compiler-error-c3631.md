@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「コンパイラエラー C3631」を参照してください。
 title: コンパイラ エラー C3631
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3631
 ms.assetid: 88cbd2d5-6fef-4940-be34-d8cbe816d3da
-ms.openlocfilehash: 493be303be86b181bf26b65d8dbbeff3eb889fed
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b090a7a9a614eee715c8fdca7853caa7d456084e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62221608"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97194164"
 ---
 # <a name="compiler-error-c3631"></a>コンパイラ エラー C3631
 
@@ -19,4 +20,4 @@ ms.locfileid: "62221608"
 
 マネージド イベントまたは WinRT イベントをオーバーロードできません。
 
-C3631 が古い形式のコンパイラ オプションを使用して到達のみ **/clr:oldSyntax**します。
+C3631 は、互換性のために残されているコンパイラオプション **/clr: oldSyntax** を使用してのみ到達可能です。

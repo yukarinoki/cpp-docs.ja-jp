@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: negative_binomial_distribution クラス'
 title: negative_binomial_distribution クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -26,12 +27,12 @@ helpviewer_keywords:
 - std::negative_binomial_distribution [C++], param_type
 - std::negative_binomial_distribution [C++], param_type
 ms.assetid: 7f5f0967-7fdd-4578-99d4-88f292b4fe9c
-ms.openlocfilehash: fd5153a8eb0652aed7d963fb1dbdb1277e4f6718
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 59b13cce627faed54427a08acf71de3546aca96e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88836453"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97338228"
 ---
 # <a name="negative_binomial_distribution-class"></a>negative_binomial_distribution クラス
 
@@ -213,7 +214,7 @@ Histogram for 100 samples:
     69 ::::
 ```
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:**\<random>
 

@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: &lt; 新しい &gt; 関数'
 title: '&lt;new&gt; 関数'
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,16 +7,16 @@ f1_keywords:
 - new/std::nothrow
 - new/std::set_new_handler
 ms.assetid: e250f06a-b025-4509-ae7a-5356d56aad7d
-ms.openlocfilehash: 6b51a5bcbb9c90370cef1391d4020862d2e2cefd
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: b46a21223fcee4f1e208f97e087e47445d5526c5
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87212177"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97338194"
 ---
 # <a name="ltnewgt-functions"></a>&lt;new&gt; 関数
 
-## <a name="get_new_handler"></a><a name="get_new_handler"></a>get_new_handler
+## <a name="get_new_handler"></a><a name="get_new_handler"></a> get_new_handler
 
 ```cpp
 new_handler get_new_handler() noexcept;
@@ -25,7 +26,7 @@ new_handler get_new_handler() noexcept;
 
 現在のを返し `new_handler` ます。
 
-## <a name="launder"></a><a name="launder"></a>launder
+## <a name="launder"></a><a name="launder"></a> launder
 
 ```cpp
 template <class T>
@@ -35,11 +36,11 @@ template <class T>
 ### <a name="parameters"></a>パラメーター
 
 *ポインター*\
-*T*に似た型のオブジェクトを保持する、メモリ内のバイトのアドレス。
+*T* に似た型のオブジェクトを保持する、メモリ内のバイトのアドレス。
 
 ### <a name="return-value"></a>戻り値
 
-X を指す*T \* *型の値。
+X を指す *T \** 型の値。
 
 ### <a name="remarks"></a>解説
 
@@ -59,7 +60,7 @@ const int b = p->n; // undefined behavior
 const int c = std::launder(p)->n; // OK
 ```
 
-## <a name="nothrow"></a><a name="nothrow"></a>nothrow
+## <a name="nothrow"></a><a name="nothrow"></a> nothrow
 
 およびのバージョンの引数として使用されるオブジェクトを提供し **`nothrow`** **`new`** **`delete`** ます。
 
@@ -75,9 +76,9 @@ extern const std::nothrow_t nothrow;
 
 `std::nothrow_t` を関数パラメーターとして使用する方法の例については、[operator new](../standard-library/new-operators.md#op_new) および [operator new&#91;&#93;](../standard-library/new-operators.md#op_new_arr) に関する記事をご覧ください。
 
-## <a name="set_new_handler"></a><a name="set_new_handler"></a>set_new_handler
+## <a name="set_new_handler"></a><a name="set_new_handler"></a> set_new_handler
 
-メモリを割り当てようとしたときに**operator new**が失敗したときに呼び出されるユーザー関数をインストールします。
+メモリを割り当てようとしたときに **operator new** が失敗したときに呼び出されるユーザー関数をインストールします。
 
 ```cpp
 new_handler set_new_handler(new_handler Pnew) throw();
@@ -94,7 +95,7 @@ new_handler set_new_handler(new_handler Pnew) throw();
 
 ### <a name="remarks"></a>解説
 
-関数は、保持する静的[新しいハンドラー](../standard-library/new-typedefs.md#new_handler)ポインターに*pnew*を格納し、ポインターに以前に格納されていた値を返します。 新しいハンドラーは、 [operator new](../standard-library/new-operators.md#op_new)(**size_t**) によって使用されます。
+関数は、保持する静的 [新しいハンドラー](../standard-library/new-typedefs.md#new_handler)ポインターに *pnew* を格納し、ポインターに以前に格納されていた値を返します。 新しいハンドラーは、 [operator new](../standard-library/new-operators.md#op_new)(**size_t**) によって使用されます。
 
 ### <a name="example"></a>例
 

@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: __writemsr'
 title: __writemsr
 ms.date: 09/02/2019
 f1_keywords:
@@ -8,18 +9,18 @@ helpviewer_keywords:
 - wrmsr instruction
 - __writemsr intrinsic
 ms.assetid: 938b1553-51a8-4822-a818-6bed79b0fde5
-ms.openlocfilehash: 7819477edb8d4e6b18a1213a73ba67065ea7ff57
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 0ab7392d9df07a9083ca095bc7002a6bf7d45628
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70219135"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97331857"
 ---
 # <a name="__writemsr"></a>__writemsr
 
 **Microsoft 固有の仕様**
 
-モデル固有のレジスタ (`wrmsr`) 命令への書き込みを生成します。
+モデル固有のレジスタ () 命令への書き込みを生成し `wrmsr` ます。
 
 ## <a name="syntax"></a>構文
 
@@ -35,18 +36,18 @@ void __writemsr(
 *取引*\
 からモデル固有のレジスタ。
 
-*数値*\
+*値*\
 から書き込む値。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-|組み込み|アーキテクチャ|
+|Intrinsic|アーキテクチャ|
 |---------------|------------------|
 |`__writemsr`|x86、x64|
 
-**ヘッダーファイル**\<>
+**ヘッダー ファイル** \<intrin.h>
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 この関数はカーネルモードでのみ使用でき、このルーチンは組み込みとしてのみ使用できます。
 

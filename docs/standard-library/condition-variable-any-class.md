@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: condition_variable_any クラス'
 title: condition_variable_any クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -18,12 +19,12 @@ helpviewer_keywords:
 - std::condition_variable_any::wait
 - std::condition_variable_any::wait_for
 - std::condition_variable_any::wait_until
-ms.openlocfilehash: 9dc73de515aa8e321dbb28ca4a859b256613fbfe
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 853944a8eab0698fae6a12cace4ce9426ada8f3d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88831478"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97324998"
 ---
 # <a name="condition_variable_any-class"></a>condition_variable_any クラス
 
@@ -43,13 +44,13 @@ class condition_variable_any;
 |-|-|
 |[condition_variable_any](#condition_variable_any)|`condition_variable_any` オブジェクトを構築します。|
 
-### <a name="functions"></a>Functions
+### <a name="functions"></a>関数
 
 |名前|説明|
 |-|-|
 |[notify_all](#notify_all)|`condition_variable_any` オブジェクトを待機しているすべてのスレッドのブロックを解除します。|
 |[notify_one](#notify_one)|`condition_variable_any` オブジェクトを待機しているスレッドの 1 つのブロックを解除します。|
-|[待機](#wait)|スレッドをブロックします。|
+|[wait](#wait)|スレッドをブロックします。|
 |[wait_for](#wait_for)|スレッドをブロックし、スレッドがブロック解除されるまでの時間間隔を設定します。|
 |[wait_until](#wait_until)|スレッドをブロックし、スレッドがブロック解除される最大の時刻を設定します。|
 
@@ -139,7 +140,7 @@ bool wait_for(Lock& Lck, const chrono::duration<Rep, Period>& Rel_time, Predicat
 
 最初のメソッドは、 `cv_status::timeout` *Rel_time* が経過したときに待機が終了した場合、を返します。 それ以外の場合、メソッドは `cv_status::no_timeout` を返します。
 
-2番目のメソッドは、 *Pred*の値を返します。
+2番目のメソッドは、 *Pred* の値を返します。
 
 ### <a name="remarks"></a>解説
 
@@ -192,13 +193,13 @@ void wait_until(
 
 ### <a name="return-value"></a>戻り値
 
-`cv_status` `cv_status::timeout` *Abs_time*が経過したときに待機が終了した場合、型を返すメソッドはを返します。 それ以外の場合、メソッドは `cv_status::no_timeout` を返します。
+`cv_status` `cv_status::timeout` *Abs_time* が経過したときに待機が終了した場合、型を返すメソッドはを返します。 それ以外の場合、メソッドは `cv_status::no_timeout` を返します。
 
-を返すメソッドは、 **`bool`** *Pred*の値を返します。
+を返すメソッドは、 **`bool`** *Pred* の値を返します。
 
 ### <a name="remarks"></a>解説
 
-最初のメソッドは、 `condition_variable` オブジェクトが [notify_one](../standard-library/condition-variable-class.md#notify_one) または [notify_all](../standard-library/condition-variable-class.md#notify_all)の呼び出しによって通知されるまで、または *Abs_time*するまでブロックします。 また、擬似的に開始することもできます。
+最初のメソッドは、 `condition_variable` オブジェクトが [notify_one](../standard-library/condition-variable-class.md#notify_one) または [notify_all](../standard-library/condition-variable-class.md#notify_all)の呼び出しによって通知されるまで、または *Abs_time* するまでブロックします。 また、擬似的に開始することもできます。
 
 実際には、2 つ目のメソッドは次のコードを実行します。
 
