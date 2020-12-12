@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「ダイアログエディターを使用したコントロールの追加」を参照してください。
 title: ダイアログ エディターを使用したコントロールの追加
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,20 +9,20 @@ helpviewer_keywords:
 - Dialog editor, creating controls
 - common controls [MFC], adding
 ms.assetid: d3f9f994-7e54-4656-a545-42c204557c36
-ms.openlocfilehash: b88056d1c44e434e77f3f3b94976bf92516bbf3e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a57031539c284529b6ad21d51fd5fd2c409e2a3c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62411488"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97314556"
 ---
 # <a name="using-the-dialog-editor-to-add-controls"></a>ダイアログ エディターを使用したコントロールの追加
 
-ダイアログ テンプレート リソースを作成する場合、[ダイアログ エディター](../windows/dialog-editor.md)、コントロール パレットからコントロールをドラッグし、ダイアログ ボックスにドロップします。 これにより、そのコントロール型の仕様がダイアログ テンプレート リソースを追加します。 ダイアログ オブジェクトと呼び出しを構築する際にその`Create`または`DoModal`メンバー関数は、フレームワークが Windows コントロールを作成し、画面のダイアログ ウィンドウに配置されます。
+ダイアログ [エディター](../windows/dialog-editor.md)を使用してダイアログテンプレートリソースを作成する場合は、コントロールパレットからコントロールをドラッグして、ダイアログボックスにドロップします。 これにより、そのコントロール型の仕様がダイアログテンプレートリソースに追加されます。 ダイアログオブジェクトを構築し、その `Create` 関数または `DoModal` メンバー関数を呼び出すと、フレームワークによって Windows コントロールが作成され、画面のダイアログウィンドウに配置されます。
 
-代わりにできます[コントロールを手動で作成](../mfc/adding-controls-by-hand.md)たい場合。 これより多くの作業です。
+代わりに、必要 [に応じて手動でコントロールを作成](../mfc/adding-controls-by-hand.md) できます。 これはより多くの作業です。
 
 ## <a name="see-also"></a>関連項目
 
-[コントロールの作成方法と使い方](../mfc/making-and-using-controls.md)<br/>
+[コントロールの作成と使用](../mfc/making-and-using-controls.md)<br/>
 [コントロール](../mfc/controls-mfc.md)

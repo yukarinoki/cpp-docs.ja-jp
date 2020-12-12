@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: SRWLockExclusiveTraits 構造体'
 title: SRWLockExclusiveTraits 構造体
 ms.date: 09/27/2018
 ms.topic: reference
@@ -11,16 +12,16 @@ helpviewer_keywords:
 - Microsoft::WRL::Wrappers::HandleTraits::SRWLockExclusiveTraits::GetInvalidValue method
 - Microsoft::WRL::Wrappers::HandleTraits::SRWLockExclusiveTraits::Unlock method
 ms.assetid: 38a996ef-c2d7-4886-b413-a426ecee8f05
-ms.openlocfilehash: eb7b30915d6061e8470601df33fecec310d1bbca
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 135d4f866d1ca32ee9170ef9844cb0bf8d38c29a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81374306"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97186208"
 ---
 # <a name="srwlockexclusivetraits-structure"></a>SRWLockExclusiveTraits 構造体
 
-排他ロック モードで`SRWLock`のクラスの一般的な特性について説明します。
+排他ロックモードでのクラスの一般的な特性について説明し `SRWLock` ます。
 
 ## <a name="syntax"></a>構文
 
@@ -34,28 +35,28 @@ struct SRWLockExclusiveTraits;
 
 名前   | 説明
 ------ | --------------------------------------------------------------------------
-`Type` | [SRWLOCK](srwlock-class.md)クラスへのポインターの同義語。
+`Type` | [Srwlock](srwlock-class.md)クラスへのポインターのシノニム。
 
 ### <a name="public-methods"></a>パブリック メソッド
 
 名前                                                        | 説明
 ----------------------------------------------------------- | --------------------------------------------------------------------
-[リクルーシブトレイト::無効な値を取得します。](#getinvalidvalue) | 常に無効`SRWLockExclusiveTraits`なオブジェクトを取得します。
-[SRWロックエクスクルーシブトレイト::ロック解除](#unlock)                   | 指定した`SRWLock`オブジェクトの排他制御を解放します。
+[SRWLockExclusiveTraits:: GetInvalidValue](#getinvalidvalue) | `SRWLockExclusiveTraits`常に無効なオブジェクトを取得します。
+[SRWLockExclusiveTraits:: Unlock](#unlock)                   | 指定されたオブジェクトの排他的な制御を解放 `SRWLock` します。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
 `SRWLockExclusiveTraits`
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-**ヘッダー:** コアラッパー.h
+**ヘッダー:** corewrappers .h
 
-**名前空間:** マイクロソフト::WRL::ラッパー::ハンドルトレイツ
+**名前空間:** Microsoft:: WRL:: Wrapper:: HandleTraits
 
-## <a name="srwlockexclusivetraitsgetinvalidvalue"></a><a name="getinvalidvalue"></a>リクルーシブトレイト::無効な値を取得します。
+## <a name="srwlockexclusivetraitsgetinvalidvalue"></a><a name="getinvalidvalue"></a> SRWLockExclusiveTraits:: GetInvalidValue
 
-常に無効`SRWLockExclusiveTraits`なオブジェクトを取得します。
+`SRWLockExclusiveTraits`常に無効なオブジェクトを取得します。
 
 ```cpp
 inline static Type GetInvalidValue();
@@ -65,9 +66,9 @@ inline static Type GetInvalidValue();
 
 空の `SRWLockExclusiveTraits` オブジェクトです。
 
-## <a name="srwlockexclusivetraitsunlock"></a><a name="unlock"></a>SRWロックエクスクルーシブトレイト::ロック解除
+## <a name="srwlockexclusivetraitsunlock"></a><a name="unlock"></a> SRWLockExclusiveTraits:: Unlock
 
-指定した`SRWLock`オブジェクトの排他制御を解放します。
+指定されたオブジェクトの排他的な制御を解放 `SRWLock` します。
 
 ```cpp
 inline static void Unlock(
@@ -77,5 +78,5 @@ inline static void Unlock(
 
 ### <a name="parameters"></a>パラメーター
 
-*スヴロック*<br/>
-`SRWLock`オブジェクトへのハンドル。
+*srwlock*<br/>
+オブジェクトをハンドル `SRWLock` します。

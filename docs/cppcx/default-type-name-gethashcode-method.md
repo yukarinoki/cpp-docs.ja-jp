@@ -1,13 +1,14 @@
 ---
+description: '詳細については、次を参照してください: 既定::(type_name):: GetHashCode メソッド'
 title: default::(type_name)::GetHashCode メソッド
 ms.date: 12/30/2016
 ms.assetid: 58ea60f8-f820-4103-9b9b-b6635ada3fa5
-ms.openlocfilehash: 9f64607ab21cd0fd5deccbd16f3f69f96e4d245b
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 9a014b3e3ee0690c8eab384c3b04fb3928c5a0a0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79444306"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97330863"
 ---
 # <a name="defaulttype_namegethashcode-method"></a>default::(type_name)::GetHashCode メソッド
 
@@ -21,7 +22,7 @@ public:int GetHashCode();
 
 ### <a name="return-value"></a>戻り値
 
-このインスタンスのハッシュ コード。
+対象のインスタンスのハッシュ コード。
 
 ### <a name="requirements"></a>要件
 
@@ -33,6 +34,6 @@ public:int GetHashCode();
 
 **ヘッダー:** vccorlib.h
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[default 名前空間](../cppcx/default-namespace.md)
+[既定の名前空間](../cppcx/default-namespace.md)

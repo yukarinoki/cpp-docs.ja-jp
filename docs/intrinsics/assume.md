@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: __assume'
 title: __assume
 ms.date: 09/02/2019
 f1_keywords:
@@ -8,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - __assume keyword [C++]
 ms.assetid: d8565123-b132-44b1-8235-5a8c8bff85a7
-ms.openlocfilehash: 80acb417ed85ced8f72906848474837efe6bc9d1
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: fd7f275a8b570bc6176f4464ee59f2656328cf30
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87225099"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97337238"
 ---
 # <a name="__assume"></a>__assume
 
@@ -45,13 +46,13 @@ __assume(
 
 `__assume` は正規の組み込みではありません。 これは関数として宣言する必要がなく、また `#pragma intrinsic` ディレクティブ内では使用できません。 コードは生成されませんが、オプティマイザーが生成するコードには影響を与えます。
 
-アサート **`__assume`** が復旧できない場合にのみ、[アサート](../c-runtime-library/reference/assert-asserte-assert-expr-macros.md)でを使用します。 後続のエラー回復コードがあるアサートでは、を使用しないでください。これは、 **`__assume`** コンパイラがエラー処理コードを最適化する可能性があるためです。
+アサート **`__assume`** が復旧できない場合にのみ、 [アサート](../c-runtime-library/reference/assert-asserte-assert-expr-macros.md) でを使用します。 後続のエラー回復コードがあるアサートでは、を使用しないでください。これは、 **`__assume`** コンパイラがエラー処理コードを最適化する可能性があるためです。
 
 `__assume(0)` このステートメントは特殊なケースです。 到達できないコード パスを示すために `__assume(0)` を使用します。 次の例では、switch ステートメントの default ケースに到達できないことを示すために `__assume(0)` を使用します。 これは、`__assume(0)` の最も一般的な使用方法です。
 
-以前のバージョンとの互換性を維持するために、 **`_assume`** **`__assume`** コンパイラオプションの [ [ \( 言語拡張を無効にする](../build/reference/za-ze-disable-language-extensions.md)] が指定されていない限り、はのシノニムになります。
+以前のバージョンとの互換性を維持するために、 **`_assume`** **`__assume`** コンパイラオプションの [ [ \( 言語拡張を無効にする](../build/reference/za-ze-disable-language-extensions.md) ] が指定されていない限り、はのシノニムになります。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 |Intrinsic|アーキテクチャ|
 |---------------|------------------|

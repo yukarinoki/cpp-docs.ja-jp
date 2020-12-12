@@ -1,4 +1,5 @@
 ---
+description: '詳細: Mutex クラス'
 title: Mutex クラス
 ms.date: 10/03/2018
 ms.topic: reference
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - Microsoft::WRL::Wrappers::Mutex::Mutex, constructor
 - Microsoft::WRL::Wrappers::Mutex::operator= operator
 ms.assetid: 682a0963-721c-46a2-8871-000e9997505b
-ms.openlocfilehash: 36466bd00c5b100f20ee87173e68fdef4131ec23
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: f69c14014a2283fe56ef8e7f705bebe5a5f6dc9d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81371240"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97330838"
 ---
 # <a name="mutex-class"></a>Mutex クラス
 
@@ -38,37 +39,37 @@ class Mutex : public HandleT<HandleTraits::MutexTraits>;
 ---------- | ------------------------------------------------------
 `SyncLock` | 同期ロックをサポートするクラスのシノニム。
 
-### <a name="public-constructor"></a>パブリック コンストラクタ
+### <a name="public-constructor"></a>パブリックコンストラクター
 
 名前                   | 説明
 ---------------------- | ------------------------------------------------
-[ミューテックス::ミューテックス](#mutex) | `Mutex` クラスの新しいインスタンスを初期化します。
+[Mutex:: Mutex](#mutex) | `Mutex` クラスの新しいインスタンスを初期化します。
 
 ### <a name="public-members"></a>パブリックメンバー
 
 名前                 | 説明
 -------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------
-[ミューテックス::ロック](#lock) | 現在のオブジェクト、または指定したハンドル`Mutex`に関連付けられたオブジェクトがミューテックスを解放するか、指定されたタイムアウト間隔が経過するまで待機します。
+[Mutex:: Lock](#lock) | 現在のオブジェクト、または `Mutex` 指定されたハンドルに関連付けられているオブジェクトがミューテックスを解放するか、指定されたタイムアウト間隔が経過するまで待機します。
 
-### <a name="public-operator"></a>公共オペレーター
+### <a name="public-operator"></a>Public 演算子
 
 名前                                 | 説明
 ------------------------------------ | ---------------------------------------------------------------------------
-[ミューテックス::演算子=](#operator-assign) | 指定した`Mutex`オブジェクトを現在`Mutex`のオブジェクトに割り当てます (移動)。
+[Mutex:: operator =](#operator-assign) | 指定された `Mutex` オブジェクトを現在のオブジェクトに割り当てます (移動し `Mutex` ます)。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
 `Mutex`
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-**ヘッダー:** コアラッパー.h
+**ヘッダー:** corewrappers .h
 
-**名前空間:** マイクロソフト::WRL::ラッパー
+**名前空間:** Microsoft:: WRL:: Wrapper
 
-## <a name="mutexlock"></a><a name="lock"></a>ミューテックス::ロック
+## <a name="mutexlock"></a><a name="lock"></a> Mutex:: Lock
 
-現在のオブジェクト、または指定したハンドル`Mutex`に関連付けられたオブジェクトがミューテックスを解放するか、指定されたタイムアウト間隔が経過するまで待機します。
+現在のオブジェクト、または `Mutex` 指定されたハンドルに関連付けられているオブジェクトがミューテックスを解放するか、指定されたタイムアウト間隔が経過するまで待機します。
 
 ```cpp
 SyncLock Lock(
@@ -83,15 +84,15 @@ static SyncLock Lock(
 
 ### <a name="parameters"></a>パラメーター
 
-*ミリ秒*<br/>
-タイムアウト間隔 (ミリ秒単位)。 デフォルト値は無限で、無期限に待機します。
+*milliseconds*<br/>
+タイムアウト間隔 (ミリ秒単位)。 既定値は無限で、無制限に待機します。
 
-*H*<br/>
-`Mutex`オブジェクトのハンドル。
+*h*<br/>
+オブジェクトのハンドル `Mutex` 。
 
 ### <a name="return-value"></a>戻り値
 
-## <a name="mutexmutex"></a><a name="mutex"></a>ミューテックス::ミューテックス
+## <a name="mutexmutex"></a><a name="mutex"></a> Mutex:: Mutex
 
 `Mutex` クラスの新しいインスタンスを初期化します。
 
@@ -107,16 +108,16 @@ Mutex(
 
 ### <a name="parameters"></a>パラメーター
 
-*H*<br/>
-`Mutex`オブジェクトへのハンドル、またはハンドルへの右辺値参照。
+*h*<br/>
+オブジェクトへのハンドル、またはハンドルへの右辺値参照 `Mutex` 。
 
 ### <a name="remarks"></a>解説
 
-最初のコンストラクターは、指定`Mutex`したハンドルからオブジェクトを初期化します。 2 番目のコンストラクターは`Mutex`、指定したハンドルからオブジェクトを初期化し、ミューテックスの所有権を現在`Mutex`のオブジェクトに移動します。
+最初のコンストラクターは、 `Mutex` 指定されたハンドルからオブジェクトを初期化します。 2番目のコンストラクターは、 `Mutex` 指定されたハンドルからオブジェクトを初期化し、ミューテックスの所有権を現在のオブジェクトに移動し `Mutex` ます。
 
-## <a name="mutexoperator"></a><a name="operator-assign"></a>ミューテックス::演算子=
+## <a name="mutexoperator"></a><a name="operator-assign"></a> Mutex:: operator =
 
-指定した`Mutex`オブジェクトを現在`Mutex`のオブジェクトに割り当てます (移動)。
+指定された `Mutex` オブジェクトを現在のオブジェクトに割り当てます (移動し `Mutex` ます)。
 
 ```cpp
 Mutex& operator=(
@@ -126,13 +127,13 @@ Mutex& operator=(
 
 ### <a name="parameters"></a>パラメーター
 
-*H*<br/>
-`Mutex`オブジェクトへの右辺値参照。
+*h*<br/>
+オブジェクトへの右辺値参照 `Mutex` 。
 
 ### <a name="return-value"></a>戻り値
 
-現在`Mutex`のオブジェクトへの参照。
+現在のオブジェクトへの参照 `Mutex` 。
 
 ### <a name="remarks"></a>解説
 
-詳細については、「[右辺値参照宣言子: &&」](../../cpp/rvalue-reference-declarator-amp-amp.md)の **「セマンティクスの移動**」セクションを参照してください。
+詳細については、「[右辺値参照宣言子:  &&](../../cpp/rvalue-reference-declarator-amp-amp.md)」の「**移動セマンティクス**」セクションを参照してください。

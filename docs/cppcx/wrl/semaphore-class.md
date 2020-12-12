@@ -1,4 +1,5 @@
 ---
+description: '詳細: セマフォクラス'
 title: Semaphore クラス
 ms.date: 10/03/2018
 ms.topic: reference
@@ -13,16 +14,16 @@ helpviewer_keywords:
 - Microsoft::WRL::Wrappers::Semaphore::operator= operator
 - Microsoft::WRL::Wrappers::Semaphore::Semaphore, constructor
 ms.assetid: ded53526-17b4-4381-9c60-ea5e77363db6
-ms.openlocfilehash: e017b1b6316c4b6d49563d9a543950ab28961d90
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 0cf99ff0a0e5263b3ed924ec5ac69b7edb0bd1f7
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81359354"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97186234"
 ---
 # <a name="semaphore-class"></a>Semaphore クラス
 
-限られた数のユーザーをサポートできる共有リソースを制御する同期オブジェクトを表します。
+限定された数のユーザーをサポートできる共有リソースを制御する同期オブジェクトを表します。
 
 ## <a name="syntax"></a>構文
 
@@ -42,33 +43,33 @@ class Semaphore : public HandleT<HandleTraits::SemaphoreTraits>;
 
 名前                               | 説明
 ---------------------------------- | ----------------------------------------------------
-[セマフォ::セマフォ](#semaphore) | `Semaphore` クラスの新しいインスタンスを初期化します。
+[セマフォ:: セマフォ](#semaphore) | `Semaphore` クラスの新しいインスタンスを初期化します。
 
 ### <a name="public-methods"></a>パブリック メソッド
 
 名前                     | 説明
 ------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------
-[セマフォ::ロック](#lock) | 現在のオブジェクト、または指定したハンドルに関連付けられたオブジェクトがシグナル状態になるまで待機するか、指定されたタイムアウト間隔が経過するまで待機します。
+[セマフォ:: Lock](#lock) | 現在のオブジェクト、または指定したハンドルに関連付けられているオブジェクトがシグナル状態になるか、指定されたタイムアウト間隔が経過するまで待機します。
 
 ### <a name="public-operators"></a>パブリック演算子
 
 名前                                     | 説明
 ---------------------------------------- | ---------------------------------------------------------------------------------------
-[セマフォ::演算子=](#operator-assign) | 指定したハンドルをオブジェクトから`Semaphore`現在`Semaphore`のオブジェクトに移動します。
+[セマフォ:: operator =](#operator-assign) | 指定したハンドルを `Semaphore` オブジェクトから現在のオブジェクトに移動 `Semaphore` します。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
 `Semaphore`
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-**ヘッダー:** コアラッパー.h
+**ヘッダー:** corewrappers .h
 
-**名前空間:** マイクロソフト::WRL::ラッパー
+**名前空間:** Microsoft:: WRL:: Wrapper
 
-## <a name="semaphorelock"></a><a name="lock"></a>セマフォ::ロック
+## <a name="semaphorelock"></a><a name="lock"></a> セマフォ:: Lock
 
-現在のオブジェクト、または指定したハンドル`Semaphore`に関連付けられたオブジェクトがシグナル状態になるまで待機するか、指定されたタイムアウト間隔が経過するまで待機します。
+現在のオブジェクト、または指定した `Semaphore` ハンドルに関連付けられているオブジェクトがシグナル状態になるか、指定されたタイムアウト間隔が経過するまで待機します。
 
 ```cpp
 SyncLock Lock(
@@ -83,19 +84,19 @@ static SyncLock Lock(
 
 ### <a name="parameters"></a>パラメーター
 
-*ミリ秒*<br/>
-タイムアウト間隔 (ミリ秒単位)。 デフォルト値は無限で、無期限に待機します。
+*milliseconds*<br/>
+タイムアウト間隔 (ミリ秒単位)。 既定値は無限で、無制限に待機します。
 
-*H*<br/>
-`Semaphore`オブジェクトへのハンドル。
+*h*<br/>
+オブジェクトへのハンドル `Semaphore` 。
 
 ### <a name="return-value"></a>戻り値
 
-`Details::SyncLockWithStatusT<HandleTraits::SemaphoreTraits>` 変数
+`Details::SyncLockWithStatusT<HandleTraits::SemaphoreTraits>`。
 
-## <a name="semaphoreoperator"></a><a name="operator-assign"></a>セマフォ::演算子=
+## <a name="semaphoreoperator"></a><a name="operator-assign"></a> セマフォ:: operator =
 
-指定したハンドルをオブジェクトから`Semaphore`現在`Semaphore`のオブジェクトに移動します。
+指定したハンドルを `Semaphore` オブジェクトから現在のオブジェクトに移動 `Semaphore` します。
 
 ```cpp
 Semaphore& operator=(
@@ -105,14 +106,14 @@ Semaphore& operator=(
 
 ### <a name="parameters"></a>パラメーター
 
-*H*<br/>
-`Semaphore`オブジェクトへの右辺値参照。
+*h*<br/>
+Rvalue-オブジェクトへの参照 `Semaphore` 。
 
 ### <a name="return-value"></a>戻り値
 
-現在`Semaphore`のオブジェクトへの参照。
+現在のオブジェクトへの参照 `Semaphore` 。
 
-## <a name="semaphoresemaphore"></a><a name="semaphore"></a>セマフォ::セマフォ
+## <a name="semaphoresemaphore"></a><a name="semaphore"></a> セマフォ:: セマフォ
 
 `Semaphore` クラスの新しいインスタンスを初期化します。
 
@@ -128,5 +129,5 @@ WRL_NOTHROW Semaphore(
 
 ### <a name="parameters"></a>パラメーター
 
-*H*<br/>
-`Semaphore`オブジェクトへのハンドルまたは右辺値参照。
+*h*<br/>
+オブジェクトへのハンドルまたは右辺値参照 `Semaphore` 。

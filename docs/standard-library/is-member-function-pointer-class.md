@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: is_member_function_pointer クラス'
 title: is_member_function_pointer クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,14 +8,14 @@ helpviewer_keywords:
 - is_member_function_pointer class
 - is_member_function_pointer
 ms.assetid: 02e372c4-2714-40f2-b376-2e10ca91c8ed
-ms.openlocfilehash: 1f51c389e86f2d0550a6418d04080f40f4bf4204
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 49bf5eb7b28f3bfae3e5bbdd883010986755c2e6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68456178"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97323671"
 ---
-# <a name="ismemberfunctionpointer-class"></a>is_member_function_pointer クラス
+# <a name="is_member_function_pointer-class"></a>is_member_function_pointer クラス
 
 型がメンバー関数へのポインターであるかどうかをテストします。
 
@@ -27,12 +28,12 @@ struct is_member_function_pointer;
 
 ### <a name="parameters"></a>パラメーター
 
-*~* \
+*~*\
 照会する型。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-型*Ty*がメンバー関数へのポインターまたは`cv-qualified`メンバー関数へのポインターである場合、型述語のインスタンスは true を保持します。それ以外の場合は、false を保持します。
+型 *Ty* がメンバー関数へのポインターまたはメンバー関数へのポインターである場合、型述語のインスタンスは true を保持し `cv-qualified` ます。それ以外の場合は、false を保持します。
 
 ## <a name="example"></a>例
 
@@ -77,9 +78,9 @@ is_member_function_pointer<int trivial::*> == false
 is_member_function_pointer<int (functional::*)()> == true
 ```
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-**ヘッダー:** \<type_traits>
+**ヘッダー:**\<type_traits>
 
 **名前空間:** std
 

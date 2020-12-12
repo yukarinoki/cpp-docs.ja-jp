@@ -1,13 +1,14 @@
 ---
+description: 詳細については、「accelerator オブジェクトと accelerator_view オブジェクトの使用」を参照してください。
 title: アクセラレータおよび accelerator_view オブジェクトの使用
 ms.date: 11/04/2016
 ms.assetid: 18f0dc66-8236-4420-9f46-1a14f2c3fba1
-ms.openlocfilehash: 7807f0c1c572b2e7c3224cf0366233e2a28dbe07
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 270b517764b8060efbaea9d00c20e24aa1746818
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87215895"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97314491"
 ---
 # <a name="using-accelerator-and-accelerator_view-objects"></a>アクセラレータおよび accelerator_view オブジェクトの使用
 
@@ -90,11 +91,11 @@ void pick_with_most_memory()
 ```
 
 > [!NOTE]
-> `accelerator::get_all` によって返されるアクセラレータの 1 つが、CPU アクセラレータです。 CPU アクセラレータではコードを実行できません。 CPU アクセラレータをフィルターで除外するには、によって返されるアクセラレータの[device_path](reference/accelerator-class.md#device_path)プロパティの値を `accelerator::get_all` [accelerator:: cpu_accelerator](reference/accelerator-class.md#cpu_accelerator)の値と比較します。 詳細については、この記事で後述する「特別なアクセラレータ」のセクションを参照してください。
+> `accelerator::get_all` によって返されるアクセラレータの 1 つが、CPU アクセラレータです。 CPU アクセラレータではコードを実行できません。 CPU アクセラレータをフィルターで除外するには、によって返されるアクセラレータの [device_path](reference/accelerator-class.md#device_path) プロパティの値を `accelerator::get_all` [accelerator:: cpu_accelerator](reference/accelerator-class.md#cpu_accelerator)の値と比較します。 詳細については、この記事で後述する「特別なアクセラレータ」のセクションを参照してください。
 
 ## <a name="shared-memory"></a>共有メモリ
 
-共有メモリは、CPU とアクセラレータの両方からアクセスできるメモリです。 共有メモリの使用は CPU とアクセラレータ間でのデータのコピーによるオーバーヘッドを排除するか、大幅に低下させます。 メモリは共有されますが、CPU とアクセラレータの両方から同時にアクセスすることはできず、同時にアクセスすると未定義の動作が発生します。 アクセラレータが共有メモリをサポートしている場合は[supports_cpu_shared_memory](reference/accelerator-class.md#supports_cpu_shared_memory)を返し、 **`true`** [default_cpu_access_type](reference/accelerator-class.md#default_cpu_access_type)プロパティはに割り当てられたメモリの既定の[access_type](reference/concurrency-namespace-enums-amp.md#access_type)を取得し `accelerator` ます。たとえば、に関連付けられた**配列**s `accelerator` や `array_view` 、でアクセスされるオブジェクト `accelerator` です。
+共有メモリは、CPU とアクセラレータの両方からアクセスできるメモリです。 共有メモリの使用は CPU とアクセラレータ間でのデータのコピーによるオーバーヘッドを排除するか、大幅に低下させます。 メモリは共有されますが、CPU とアクセラレータの両方から同時にアクセスすることはできず、同時にアクセスすると未定義の動作が発生します。 アクセラレータが共有メモリをサポートしている場合は [supports_cpu_shared_memory](reference/accelerator-class.md#supports_cpu_shared_memory) を返し、 **`true`** [default_cpu_access_type](reference/accelerator-class.md#default_cpu_access_type) プロパティはに割り当てられたメモリの既定の [access_type](reference/concurrency-namespace-enums-amp.md#access_type) を取得し `accelerator` ます。たとえば、に関連付けられた **配列** s `accelerator` や `array_view` 、でアクセスされるオブジェクト `accelerator` です。
 
 C++ AMP ランタイムは、各 `access_type` に最適な既定の `accelerator` を自動的に選択しますが、CPU からの読み込み、CPU からの書き込み、またはその両方が行われる場合、共有メモリのパフォーマンス特性 (帯域幅と待機時間) は専用 (共有されない) のアクセラレータ メモリのパフォーマンス特性より悪い場合があります。 共有メモリが CPU からの読み取りと書き込みの専用メモリと同様に使用される場合、ランタイムは既定値が `access_type_read_write` となり、それ以外の場合、ランタイムは保守的な既定値 `access_type` を選択し、計算のカーネルのメモリ アクセス パターンが別の `access_type` を利用する場合は、アプリケーションがそれをオーバーライドできるようにします。
 
@@ -162,7 +163,7 @@ bool pick_accelerator()
 
 - `accelerator_view` [Parallel_for_each](reference/concurrency-namespace-functions-amp.md#parallel_for_each)メソッドへの呼び出しにオブジェクトを渡すことができます。
 
-- 特定のオブジェクトを使用して**配列**オブジェクトを構築でき `accelerator_view` ます。 C + AMP ランタイムは、 `accelerator_view` ラムダ式でキャプチャされた**配列**オブジェクトからオブジェクトを取得します。
+- 特定のオブジェクトを使用して **配列** オブジェクトを構築でき `accelerator_view` ます。 C + AMP ランタイムは、 `accelerator_view` ラムダ式でキャプチャされた **配列** オブジェクトからオブジェクトを取得します。
 
 ## <a name="special-accelerators"></a>特別なアクセラレータ
 
@@ -172,7 +173,7 @@ bool pick_accelerator()
 
 - [accelerator::d Irect3d_warp データメンバー](reference/accelerator-class.md#direct3d_warp): このアクセラレータは、ストリーミング SIMD 拡張 (SSE) を使用するマルチコア cpu で C++ AMP コードを実行するためのフォールバックソリューションを提供します。
 
-- [accelerator:: Cpu_accelerator データメンバー](reference/accelerator-class.md#cpu_accelerator): このアクセラレータを使用して、ステージングアレイを設定できます。 これは C++ AMP コードを実行できません。 詳細については、ネイティブコードでの並列プログラミングに関するブログの C++ AMP 投稿の[ステージング配列に](/archive/blogs/nativeconcurrency/staging-arrays-in-c-amp)関するブログを参照してください。
+- [accelerator:: Cpu_accelerator データメンバー](reference/accelerator-class.md#cpu_accelerator): このアクセラレータを使用して、ステージングアレイを設定できます。 これは C++ AMP コードを実行できません。 詳細については、ネイティブコードでの並列プログラミングに関するブログの C++ AMP 投稿の [ステージング配列に](/archive/blogs/nativeconcurrency/staging-arrays-in-c-amp) 関するブログを参照してください。
 
 ## <a name="interoperability"></a>相互運用性
 

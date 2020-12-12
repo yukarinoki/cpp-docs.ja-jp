@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: コンパイラの警告 (レベル 3) C4290'
 title: コンパイラの警告 (レベル 3) C4290
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,22 +7,22 @@ f1_keywords:
 helpviewer_keywords:
 - C4290
 ms.assetid: d1c6d85b-28e0-4a1f-9d48-23593337a6fb
-ms.openlocfilehash: 5970aa439a450bda4c1a2036da299d5c3cfbdb7a
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 771eb01c23778a716aee22ca747ea6473909a8bc
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80198901"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97344069"
 ---
 # <a name="compiler-warning-level-3-c4290"></a>コンパイラの警告 (レベル 3) C4290
 
-C++関数が __declspec でないことを示す場合を除き、例外の指定は無視されました (nothrow)
+関数が __declspec でないことを示す場合を除き、C++ 例外の指定は無視されました (nothrow)
 
-関数が例外指定を使用して宣言さC++れていますが、これはビジュアルが受け入れるが実装していません。 コンパイル中に無視される例外指定を含むコードは、例外指定をサポートする将来のバージョンで再コンパイルおよびリンクされる必要があります。
+関数が例外指定を使用して宣言されていますが、Visual C++ はを受け入れますが、を実装していません。 コンパイル中に無視される例外指定を含むコードは、例外指定をサポートする将来のバージョンで再コンパイルおよびリンクされる必要があります。
 
-詳細については、「[例外の指定 (throw)](../../cpp/exception-specifications-throw-cpp.md) 」を参照してください。
+詳細については、「 [例外の指定 (throw)](../../cpp/exception-specifications-throw-cpp.md) 」を参照してください。
 
-この警告を回避するには、 [warning](../../preprocessor/warning.md)プラグマを使用します。
+この警告を回避するには、 [warning](../../preprocessor/warning.md) プラグマを使用します。
 
 ```cpp
 #pragma warning( disable : 4290 )

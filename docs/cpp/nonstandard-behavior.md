@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: 非標準動作'
 title: 非標準動作
 ms.date: 05/06/2019
 helpviewer_keywords:
@@ -6,18 +7,18 @@ helpviewer_keywords:
 - Microsoft-specific, compiler behavior
 - nonstandard behavior, compliance and compatibility
 ms.assetid: a57dea27-dc79-4f64-8a83-017e84841773
-ms.openlocfilehash: f31938c78e443bb53a286f79661d86b7a6e9edbc
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 9f696582b23dfd4a22e6d48b9294a79787518b50
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87186543"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97330857"
 ---
 # <a name="nonstandard-behavior"></a>非標準動作
 
 以下のセクションでは、c++ の Microsoft 実装が C++ 標準に準拠していない箇所をいくつか紹介します。 ここで示している節番号は C++ 11 規格 (ISO/IEC 14882:2011(E)) の節番号に対応しています。
 
-C++ 標準で定義されているものとは異なるコンパイラの制限の一覧については、「[コンパイラの制限](../cpp/compiler-limits.md)」を指定します。
+C++ 標準で定義されているものとは異なるコンパイラの制限の一覧については、「 [コンパイラの制限](../cpp/compiler-limits.md)」を指定します。
 
 ## <a name="covariant-return-types"></a>共変の戻り値の型
 
@@ -71,11 +72,11 @@ void f() throw(int); // parsed but not used
 void g() throw();    // parsed and used
 ```
 
-例外の指定の詳細については、「[例外の指定](../cpp/exception-specifications-throw-cpp.md)」を参照してください。
+例外の指定の詳細については、「 [例外の指定](../cpp/exception-specifications-throw-cpp.md)」を参照してください。
 
 ## <a name="char_traitseof"></a>char_traits::eof()
 
-C++ 標準では、 [char_traits:: eof](../standard-library/char-traits-struct.md#eof)は、有効な値に対応していない必要があり `char_type` ます。 Microsoft C++ コンパイラは、型に対してこの制約を強制し **`char`** ますが、型には適用しません **`wchar_t`** 。 このことは、C++ ISO 規格の 12.1.1 節の表 62 に示された要件に準拠していません。 次に示しているのはその例です。
+C++ 標準では、 [char_traits:: eof](../standard-library/char-traits-struct.md#eof) は、有効な値に対応していない必要があり `char_type` ます。 Microsoft C++ コンパイラは、型に対してこの制約を強制し **`char`** ますが、型には適用しません **`wchar_t`** 。 このことは、C++ ISO 規格の 12.1.1 節の表 62 に示された要件に準拠していません。 次に示しているのはその例です。
 
 ```cpp
 #include <iostream>

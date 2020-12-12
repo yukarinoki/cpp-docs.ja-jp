@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: unorm クラス'
 title: unorm クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 - AMP_SHORT_VECTORS/unorm
 - AMP_SHORT_VECTORS/Concurrency::graphics::unorm Constructor
 ms.assetid: bc30bd20-6452-4d5f-9158-3b11c4c16ed2
-ms.openlocfilehash: 7c9ec967be8be618e5f8ab3bad1bfd940bfeaef4
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: 947660d046ea41025e70aa4e6521e3c8f34c0a94
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77126306"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97314528"
 ---
 # <a name="unorm-class"></a>unorm クラス
 
@@ -27,34 +28,34 @@ class unorm;
 
 ### <a name="public-constructors"></a>パブリック コンストラクター
 
-|Name|説明|
+|名前|説明|
 |----------|-----------------|
 |[unorm コンストラクター](#ctor)|オーバーロードされます。 既定のコンストラクターです。 を 0.0 f に初期化します。|
 
 ### <a name="public-operators"></a>パブリック演算子
 
-|Name|説明|
+|名前|説明|
 |----------|-----------------|
-|unorm::operator--||
+|unorm:: operator--||
 |unorm:: operator float|変換演算子。 Unorm 数値を浮動小数点値に変換します。|
 |unorm:: operator * =||
 |unorm:: operator/=||
 |unorm:: operator + +||
-|unorm::operator+=||
-|unorm::operator=||
-|unorm::operator-=||
+|unorm:: operator + =||
+|unorm:: operator =||
+|unorm:: operator-=||
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
 `unorm`
 
-## <a name="requirements"></a>［要件］
+## <a name="requirements"></a>要件
 
 **ヘッダー:** amp_short_vectors
 
 **名前空間:** Concurrency:: graphics
 
-## <a name="ctor"></a>unorm
+## <a name="unorm"></a><a name="ctor"></a> unorm
 
 既定のコンストラクターです。 を 0.0 f に初期化します。
 
@@ -96,6 +97,6 @@ inline explicit unorm(
 *_Other*<br/>
 の初期化に使用される基準オブジェクト。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [Concurrency::graphics 名前空間](concurrency-graphics-namespace.md)

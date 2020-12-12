@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: is_error_condition_enum クラス'
 title: is_error_condition_enum クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - is_error_condition_enum class
 ms.assetid: 752bb87a-c61c-4304-9254-5aaf228b59c0
-ms.openlocfilehash: c40f8f6eb93a33098cfbcf8133f08c56285abb43
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 3fd4f95e06ebee66a1f4d7d0e7de039d26b9f1fe
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68452604"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97323729"
 ---
-# <a name="iserrorconditionenum-class"></a>is_error_condition_enum クラス
+# <a name="is_error_condition_enum-class"></a>is_error_condition_enum クラス
 
 [error_condition](../standard-library/error-condition-class.md) をテストする型述語を表します。
 
@@ -24,7 +25,7 @@ template <_Enum>
     class is_error_condition_enum;
 ```
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 型 `_Enum` が型 `error_condition` のオブジェクトを格納するのに適した列挙型の値である場合、この[型述語](../standard-library/type-traits.md)のインスタンスは true を保持します。
 

@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: unsupported_feature クラス'
 title: unsupported_feature クラス
 ms.date: 03/27/2019
 f1_keywords:
@@ -8,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - unsupported_feature class
 ms.assetid: 6b1ab917-df13-48c7-9648-7cb2465a0ff5
-ms.openlocfilehash: 561f0a258943f6d7e1c0f1b5cae716592c931fbc
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: 22cbc193de2a42e76ead4097d1e39351693ef706
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77127713"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97314504"
 ---
 # <a name="unsupported_feature-class"></a>unsupported_feature クラス
 
@@ -29,7 +30,7 @@ class unsupported_feature : public runtime_exception;
 
 ### <a name="public-constructors"></a>パブリック コンストラクター
 
-|Name|説明|
+|名前|説明|
 |----------|-----------------|
 |[unsupported_feature コンストラクター](#unsupported_feature)|`unsupported_feature` 例外の新しいインスタンスを構築します。|
 
@@ -41,7 +42,7 @@ class unsupported_feature : public runtime_exception;
 
 `unsupported_feature`
 
-## <a name="unsupported_feature"></a>unsupported_feature
+## <a name="unsupported_feature"></a><a name="unsupported_feature"></a> unsupported_feature
 
   `unsupported_feature` 例外の新しいインスタンスを構築します。
 
@@ -63,12 +64,12 @@ unsupported_feature() throw();
 
 `unsupported_feature` オブジェクト。
 
-## <a name="requirements"></a>［要件］
+## <a name="requirements"></a>要件
 
 **ヘッダー:** amprt. h
 
 **名前空間:** Concurrency
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[コンカレンシー名前空間 (C++ AMP)](concurrency-namespace-cpp-amp.md)
+[Concurrency 名前空間 (C++ AMP)](concurrency-namespace-cpp-amp.md)
