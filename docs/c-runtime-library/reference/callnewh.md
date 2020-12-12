@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: _callnewh'
 title: _callnewh
 ms.date: 4/2/2020
 api_name:
@@ -26,16 +27,16 @@ f1_keywords:
 helpviewer_keywords:
 - _callnewh
 ms.assetid: 4dcb73e9-6384-4d12-a973-a8807d4de7a8
-ms.openlocfilehash: 3990d4b15c25cfd6c753c2b1d44c112971ff59af
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: f75028a47bbdbb6c12617a79b07a2fb8f4c5a6bc
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82918798"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97209608"
 ---
 # <a name="_callnewh"></a>_callnewh
 
-現在インストールされている*新しいハンドラー*を呼び出します。
+現在インストールされている *新しいハンドラー* を呼び出します。
 
 ## <a name="syntax"></a>構文
 
@@ -59,17 +60,17 @@ int _callnewh(
 
 ## <a name="exceptions"></a>例外
 
-*新しいハンドラー*が見つからない場合、[bad_alloc](../../standard-library/bad-alloc-class.md) をスローします。
+*新しいハンドラー* が見つからない場合、[bad_alloc](../../standard-library/bad-alloc-class.md) をスローします。
 
 ## <a name="remarks"></a>解説
 
-*新しいハンドラー*は、[new 演算子](../../cpp/new-operator-cpp.md)がメモリの割り当てに失敗した場合に呼び出されます。 新しいハンドラーは、後続の割り当てが成功するようにメモリを解放するなど、適切な処理を開始する場合があります。
+*新しいハンドラー* は、[new 演算子](../../cpp/new-operator-cpp.md)がメモリの割り当てに失敗した場合に呼び出されます。 新しいハンドラーは、後続の割り当てが成功するようにメモリを解放するなど、適切な処理を開始する場合があります。
 
 既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |_callnewh|internal.h|
 

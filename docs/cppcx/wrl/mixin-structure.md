@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「MixIn 構造」を参照してください。
 title: MixIn 構造体
 ms.date: 10/03/2018
 ms.topic: reference
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - MixIn structure
 ms.assetid: 47e2df9b-3a2e-4ae8-8ba3-b1fd3aa73566
-ms.openlocfilehash: cfa03706bc6030b337009f7228466a26e242aa6b
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: a438fb6846ae6ba88aaaa968d7b94e8d6636c4aa
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87221537"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97209387"
 ---
 # <a name="mixin-structure"></a>MixIn 構造体
 
@@ -38,17 +39,17 @@ struct MixIn;
 基本型。
 
 *hasImplements*<br/>
-**`true`***MixInType*が現在の実装から派生した場合、基本データ型はです。**`false`** それ以外の場合は。
+**`true`***MixInType* が現在の実装から派生した場合、基本データ型はです。**`false`** それ以外の場合は。
 
 ## <a name="remarks"></a>解説
 
-クラスが Windows ランタイムとクラスの両方の COM インターフェイスから派生している場合は、まず、クラス宣言リストで Windows ランタイムインターフェイスを一覧表示し、次にすべてのクラシック COM インターフェイスを一覧表示する必要があります。 **MixIn**は、インターフェイスが正しい順序で指定されることを保証します。
+クラスが Windows ランタイムとクラスの両方の COM インターフェイスから派生している場合は、まず、クラス宣言リストで Windows ランタイムインターフェイスを一覧表示し、次にすべてのクラシック COM インターフェイスを一覧表示する必要があります。 **MixIn** は、インターフェイスが正しい順序で指定されることを保証します。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
 `MixIn`
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **Header:** を実装します。
 

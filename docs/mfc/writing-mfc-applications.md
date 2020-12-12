@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「MFC アプリケーションの作成」を参照してください。
 title: MFC アプリケーションの作成
 ms.date: 09/12/2018
 helpviewer_keywords:
@@ -7,36 +8,36 @@ helpviewer_keywords:
 - application wizards [MFC], Internet applications
 - MFC, application development
 ms.assetid: 6a8d8a03-abfa-4976-86c2-c5773a4b7179
-ms.openlocfilehash: 63636e8c5738eb3823de0befa6237f7ae5b3491d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b01d147f5b15546c9e15e9f8bd5654c7b986cad6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62399461"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97209920"
 ---
 # <a name="writing-mfc-applications"></a>MFC アプリケーションの作成
 
-この記事では、アプリケーションを開発する初期手順について説明します。 まず、記述するアプリケーションの種類を決定する必要があります。 説明したいくつかの選択肢の[アプリケーション設計の選択肢](../mfc/application-design-choices.md)します。 アプリケーションになります。
+この記事では、アプリケーションの開発に必要な最初の手順について説明します。 まず、書き込み中のアプリケーションの種類を決定する必要があります。 いくつかの選択肢については、「 [アプリケーション設計の選択](../mfc/application-design-choices.md)」で説明しました。 アプリケーションは次のようになります。
 
-- インターネットまたはイントラネットで実行されています。
+- インターネットまたはイントラネットでの実行
 
-- クライアントまたはサーバーで実行されています。
+- クライアントまたはサーバーでの実行
 
-- ブラウザーで、またはスタンドアロン アプリケーションとして実行しています。
+- ブラウザーで実行するか、スタンドアロンアプリケーションとして実行する
 
-- COM またはアクティブなテクノロジを使用してください。
+- COM またはアクティブなテクノロジの使用
 
-- WinInet または非同期モニカーを使用してデータをダウンロードします。
+- WinInet または非同期モニカーを使用したデータのダウンロード
 
-どのクラスがアプリケーションに適したを決めます。 回答では、アプリケーションの構築を開始するアプリケーション ウィザードを実行するときに選択した内容を確認できます。
+決定によって、アプリケーションに適したクラスが決まります。 回答は、アプリケーションウィザードを実行してアプリケーションの構築を開始するときの選択を決定するのにも役立ちます。
 
-インターネット アプリケーションに関する初期の設計に関する決定を行った後に開始するアプリケーション ウィザードを使用できます。 アプリケーション ウィザードを使用して、スケルトン アプリケーションを作成し、次の記事で説明されているようにコードを変更します。
+インターネットアプリケーションに関する最初の設計上の決定を行ったら、アプリケーションウィザードを使用して作業を開始できます。 アプリケーションウィザードを使用してスケルトンアプリケーションを作成し、次の記事の説明に従ってコードを変更します。
 
-- ActiveX コントロールは、次を参照してください。[インターネット上の ActiveX コントロール](../mfc/activex-controls-on-the-internet.md)します。
+- ActiveX コントロールについては、「 [インターネット上の Activex コントロール](../mfc/activex-controls-on-the-internet.md)」を参照してください。
 
-次の記事では、プログラミング タスクを開始するための手順も提供します。
+次の記事では、プログラミングタスクを開始する際に役立つ手順についても説明しています。
 
-- [アプリケーションのデザイン上の検討事項](../mfc/application-design-choices.md)
+- [アプリケーション設計の選択肢](../mfc/application-design-choices.md)
 
 - [インターネット上の非同期モニカー](../mfc/asynchronous-monikers-on-the-internet.md)
 
@@ -44,5 +45,5 @@ ms.locfileid: "62399461"
 
 ## <a name="see-also"></a>関連項目
 
-[MFC インターネット プログラミングの作業](../mfc/mfc-internet-programming-tasks.md)<br/>
-[MFC インターネット プログラミングの基礎](../mfc/mfc-internet-programming-basics.md)
+[MFC インターネットプログラミングタスク](../mfc/mfc-internet-programming-tasks.md)<br/>
+[MFC インターネットプログラミングの基礎](../mfc/mfc-internet-programming-basics.md)

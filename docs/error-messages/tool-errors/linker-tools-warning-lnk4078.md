@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「リンカーツールの警告 LNK4078」を参照してください。
 title: リンカー ツールの警告 LNK4078
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - LNK4078
 ms.assetid: 5a16796d-6caf-42d9-8f65-b042843eafb8
-ms.openlocfilehash: 9ce72f476aa85434acd5277d0307ffc61e0a0214
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: 3fd22316d0775561c18fc2662c2f2ca843e64977
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74990991"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97210128"
 ---
 # <a name="linker-tools-warning-lnk4078"></a>リンカー ツールの警告 LNK4078
 
@@ -23,9 +24,9 @@ ms.locfileid: "74990991"
 
 ファイルを再作成して再リンクします。
 
-## <a name="example"></a>使用例
+## <a name="example"></a>例
 
-LNK4078 は、互換性に影響する変更によって発生することもあります。 x86 上の[init_seg](../../preprocessor/init-seg.md)によって名前が付けられたセクションは読み取り/書き込みであり、現在は読み取り専用です。
+LNK4078 は、互換性に影響する変更によって発生することもあります。 x86 上の [init_seg](../../preprocessor/init-seg.md) によって名前が付けられたセクションは読み取り/書き込みであり、現在は読み取り専用です。
 
 次の例では、LNK4078 が生成されます。
 

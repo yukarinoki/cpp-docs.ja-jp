@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: _CIlog'
 title: _CIlog
 ms.date: 4/2/2020
 api_name:
@@ -25,12 +26,12 @@ helpviewer_keywords:
 - _CIlog intrinsic
 - CIlog intrinsic
 ms.assetid: 23503854-ddaa-4fe0-a4a3-7fbb3a43bdec
-ms.openlocfilehash: 405af59eab918498578c2d62c66be1017ecf156f
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: a6eac8270a741f4378e860f3a6c486897e6d418e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82918057"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97209660"
 ---
 # <a name="_cilog"></a>_CIlog
 
@@ -50,11 +51,11 @@ void __cdecl _CIlog();
 
 既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](global-state.md)」を参照してください。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **プラットフォーム:** x86
 
 ## <a name="see-also"></a>関連項目
 
-[関数リファレンス (アルファベット順)](../c-runtime-library/reference/crt-alphabetical-function-reference.md)<br/>
+[アルファベット順の関数リファレンス](../c-runtime-library/reference/crt-alphabetical-function-reference.md)<br/>
 [log、logf、log10、log10f](../c-runtime-library/reference/log-logf-log10-log10f.md)

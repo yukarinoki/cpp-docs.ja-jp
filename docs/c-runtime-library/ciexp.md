@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: _CIexp'
 title: _CIexp
 ms.date: 4/2/2020
 api_name:
@@ -25,12 +26,12 @@ helpviewer_keywords:
 - CIexp intrinsic
 - _CIexp intrinsic
 ms.assetid: f8a3e3b7-fa57-41a3-9983-6c81914cbb55
-ms.openlocfilehash: 90a8fdac4b3b671853d2274de26040e3bf67def4
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: bc1e4ccb081fe31f786fcd19d3d8c761a7472212
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82918043"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97209673"
 ---
 # <a name="_ciexp"></a>_CIexp
 
@@ -50,11 +51,11 @@ void __cdecl _CIexp();
 
 既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](global-state.md)」を参照してください。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **プラットフォーム:** x86
 
 ## <a name="see-also"></a>関連項目
 
-[関数リファレンス (アルファベット順)](../c-runtime-library/reference/crt-alphabetical-function-reference.md)<br/>
+[アルファベット順の関数リファレンス](../c-runtime-library/reference/crt-alphabetical-function-reference.md)<br/>
 [exp、expf、expl](../c-runtime-library/reference/exp-expf.md)

@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: printf_s、_printf_s_l、wprintf_s、_wprintf_s_l'
 title: printf_s、_printf_s_l、wprintf_s、_wprintf_s_l
 ms.date: 11/04/2016
 api_name:
@@ -39,12 +40,12 @@ helpviewer_keywords:
 - tprintf_s_l function
 - _wprintf_s_l function
 ms.assetid: 044ebb2e-5cc1-445d-bb4c-f084b405615b
-ms.openlocfilehash: f8b324b5f3c23b324bdcd43e3529ad3a3d4d6847
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: d26f18a45f218f6d1921a8603ffed15df24dcc90
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70950183"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97209478"
 ---
 # <a name="printf_s-_printf_s_l-wprintf_s-_wprintf_s_l"></a>printf_s、_printf_s_l、wprintf_s、_wprintf_s_l
 
@@ -88,19 +89,19 @@ int _wprintf_s_l(
 
 出力した文字数を返します。エラーが発生した場合は負の値を返します。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-**Printf_s**関数は、一連の文字と値を書式設定し、標準出力ストリームである**stdout**に出力します。 *書式*指定文字列の後に引数を指定する場合、*書式*指定文字列には引数の出力形式を決定する仕様が含まれている必要があります。
+**Printf_s** 関数は、一連の文字と値を書式設定し、標準出力ストリームである **stdout** に出力します。 *書式* 指定文字列の後に引数を指定する場合、*書式* 指定文字列には引数の出力形式を決定する仕様が含まれている必要があります。
 
-**Printf_s**と**printf**の主な違いは、 **printf_s**では書式指定文字列が有効な書式指定文字であることを確認するのに対し、 **printf**では書式指定文字列が null ポインターであるかどうかのみをチェックするためです。 いずれかのチェックが失敗した場合、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」に説明されているように、無効なパラメーター ハンドラーが呼び出されます。 実行の継続が許可された場合、この関数は-1 を返し、 **errno**を**EINVAL**に設定します。
+**Printf_s** と **printf** の主な違いは、 **printf_s** によって書式設定文字列が有効な書式指定文字であるかどうかがチェックされるのに対し、 **printf** では書式指定文字列が null ポインターであるかどうかのみがチェックされる点です。 いずれかのチェックが失敗した場合、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」に説明されているように、無効なパラメーター ハンドラーが呼び出されます。 実行の継続が許可された場合、この関数は-1 を返し、 **errno** を **EINVAL** に設定します。
 
-**Errno**とエラーコードの詳細については、「 [_doserrno、errno、_sys_errlist、および _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」を参照してください。
+**Errno** とエラーコードの詳細については、「 [_doserrno、errno、_sys_errlist、および _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」を参照してください。
 
-**printf_s**と**fprintf_s**は同じように動作しますが、 **printf_s**は、type**ファイル**の出力先ではなく**stdout**に出力を書き込みます。 詳細については、「[fprintf_s、_fprintf_s_l、fwprintf_s、_fwprintf_s_l](fprintf-s-fprintf-s-l-fwprintf-s-fwprintf-s-l.md)」を参照してください。
+**printf_s** と **fprintf_s** の動作は同じですが、 **Printf_s** が出力を型 **ファイル** の出力先に書き込むのではなく、 **stdout** に出力する点が異なります。 詳細については、「[fprintf_s、_fprintf_s_l、fwprintf_s、_fwprintf_s_l](fprintf-s-fprintf-s-l-fwprintf-s-fwprintf-s-l.md)」を参照してください。
 
-**wprintf_s**は、 **printf_s**のワイド文字バージョンです。*format*は、ワイド文字列です。 ストリームが ANSI モードで開かれている場合、 **wprintf_s**と**printf_s**は同じように動作します。 **printf_s**は、現在 UNICODE ストリームへの出力をサポートしていません。
+**wprintf_s** は **printf_s** のワイド文字バージョンです。 *format* は、ワイド文字列です。 ストリームが ANSI モードで開かれている場合、 **wprintf_s** と **printf_s** は同じように動作します。 **printf_s** は、現在 UNICODE ストリームへの出力をサポートしていません。
 
-**_L**サフィックスを持つこれらの関数のバージョンは、現在のスレッドロケールの代わりに渡されたロケールパラメーターを使用する点を除いて同じです。
+**_L** サフィックスを持つこれらの関数のバージョンは、現在のスレッドロケールの代わりに渡されたロケールパラメーターを使用する点を除いて同じです。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -109,7 +110,7 @@ int _wprintf_s_l(
 |**_tprintf_s**|**printf_s**|**printf_s**|**wprintf_s**|
 |**_tprintf_s_l**|**_printf_s_l**|**_printf_s_l**|**_wprintf_s_l**|
 
-*Format*引数は、通常の文字、エスケープシーケンス、および (引数が*形式*の場合) 書式指定形式で構成されます。 通常の文字とエスケープシーケンスは、外観の順に**stdout**にコピーされます。 たとえば、次の関数を呼び出します。
+*Format* 引数は、通常の文字、エスケープシーケンス、および (引数が *形式* の場合) 書式指定形式で構成されます。 通常の文字とエスケープシーケンスは、外観の順に **stdout** にコピーされます。 たとえば、次の関数を呼び出します。
 
 ```C
 printf_s("Line one\n\t\tLine two\n");
@@ -122,7 +123,7 @@ Line one
         Line two
 ```
 
-[書式指定](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)は必ずパーセント記号 ( **%** ) で始まり、左から右に読み取られます。 **Printf_s**が最初の書式指定 (存在する場合) を検出すると、最初の引数の値を*書式*の後に変換し、それに応じて出力します。 2 番目の書式指定を見つけると、2 番目の引数を変換して出力します。 書式指定よりも引数の数が多い場合、余分な引数は無視されます。 書式指定より引数が少ないと、結果は予測できません。
+[書式指定](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md) は必ずパーセント記号 () で始まり **%** 、左から右に読み取られます。 **Printf_s** が最初の書式指定 (存在する場合) を検出すると、最初の引数の値を *書式* の後に変換し、それに応じて出力します。 2 番目の書式指定を見つけると、2 番目の引数を変換して出力します。 書式指定よりも引数の数が多い場合、余分な引数は無視されます。 書式指定より引数が少ないと、結果は予測できません。
 
 > [!IMPORTANT]
 > *format* にユーザー定義の文字列を指定しないでください。
@@ -134,7 +135,7 @@ Line one
 |**printf_s**、 **_printf_s_l**|\<stdio.h>|
 |**wprintf_s**、 **_wprintf_s_l**|\<stdio.h> または \<wchar.h>|
 
-コンソールは、ユニバーサル Windows プラットフォーム (UWP) アプリではサポートされていません。 コンソール、 **stdin**、 **stdout**、および**stderr**に関連付けられている標準ストリームハンドルは、C ランタイム関数が UWP アプリで使用できるようになる前にリダイレクトする必要があります。 互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+コンソールは、ユニバーサル Windows プラットフォーム (UWP) アプリではサポートされていません。 コンソール、 **stdin**、 **stdout**、および **stderr** に関連付けられている標準ストリームハンドルは、C ランタイム関数が UWP アプリで使用できるようになる前にリダイレクトする必要があります。 互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
 ## <a name="example"></a>例
 
@@ -215,11 +216,11 @@ Address as:   0012FF78
 
 ## <a name="see-also"></a>関連項目
 
-[浮動小数点サポート](../../c-runtime-library/floating-point-support.md)<br/>
+[浮動小数点のサポート](../../c-runtime-library/floating-point-support.md)<br/>
 [ストリーム入出力](../../c-runtime-library/stream-i-o.md)<br/>
 [ロケール](../../c-runtime-library/locale.md)<br/>
 [fopen、_wfopen](fopen-wfopen.md)<br/>
 [fprintf、_fprintf_l、fwprintf、_fwprintf_l](fprintf-fprintf-l-fwprintf-fwprintf-l.md)<br/>
 [scanf、_scanf_l、wscanf、_wscanf_l](scanf-scanf-l-wscanf-wscanf-l.md)<br/>
-[sprintf、_sprintf_l、swprintf、_swprintf_l、\__swprintf_l](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)<br/>
-[vprintf 系関数](../../c-runtime-library/vprintf-functions.md)<br/>
+[sprintf、_sprintf_l、swprintf、_swprintf_l、 \_ _swprintf_l](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)<br/>
+[vprintf 関数](../../c-runtime-library/vprintf-functions.md)<br/>

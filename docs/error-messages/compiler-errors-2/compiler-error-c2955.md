@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「コンパイラエラー C2955」を参照してください。
 title: コンパイラ エラー C2955
 ms.date: 03/28/2017
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2955
 ms.assetid: 77709fb6-d69b-46fd-a62f-e8564563d01b
-ms.openlocfilehash: 8afdeaf43c0c9789753b9165f1e8a8287aaac76d
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 0d81410aaf9b111b8c601a28ef50d5c4d377d5f6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74742874"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97210620"
 ---
 # <a name="compiler-error-c2955"></a>コンパイラ エラー C2955
 
@@ -19,7 +20,7 @@ ms.locfileid: "74742874"
 
 クラス テンプレートまたはクラス ジェネリックは、テンプレートまたは汎用引数リストを付けずに識別子として使用することはできません。
 
-詳細については、「[クラステンプレート](../../cpp/class-templates.md)」を参照してください。
+詳細については、「 [クラステンプレート](../../cpp/class-templates.md)」を参照してください。
 
 次の例では C2955 が生成され、その修正方法が示されています。
 
@@ -68,7 +69,7 @@ int main() {
 }
 ```
 
-## <a name="example"></a>使用例
+## <a name="example"></a>例
 
 **Visual Studio 2017 以降:** テンプレートがテンプレートパラメーターリストに存在する場合、コンパイラはテンプレート引数リストがないことを正しく診断します (たとえば、既定のテンプレート引数または非型テンプレートパラメーターの一部として)。 次のコードは、Visual Studio 2015 ではコンパイルされますが、Visual Studio 2017 ではエラーが発生します。
 

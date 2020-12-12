@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: Move 関数'
 title: Move 関数
 ms.date: 11/04/2016
 ms.topic: reference
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - Move function
 ms.assetid: c9525426-97e8-4d8c-9877-b689d8a0dc67
-ms.openlocfilehash: 65fe85e95453165430c7ef3cfd4c4bb2babd9868
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: eada3cac16abc445a9c48d01240f4ccf46d78372
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80213708"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97209309"
 ---
 # <a name="move-function"></a>Move 関数
 
@@ -37,20 +38,20 @@ inline typename RemoveReference<T>::Type&& Move(
 
 ## <a name="return-value"></a>戻り値
 
-参照または rvalue 参照の特徴 (存在する場合) の後のパラメーター*引数*が削除されました。
+参照または rvalue 参照の特徴 (存在する場合) の後のパラメーター *引数* が削除されました。
 
 ## <a name="remarks"></a>解説
 
 指定された引数をある場所から別の場所に移動します。
 
-詳細については、「[右辺値参照宣言子: & &](../../cpp/rvalue-reference-declarator-amp-amp.md)」の「**移動セマンティクス**」セクションを参照してください。
+詳細については、「[右辺値参照宣言子:  &&](../../cpp/rvalue-reference-declarator-amp-amp.md)」の「**移動セマンティクス**」セクションを参照してください。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** 内部 .h
 
 **名前空間:** Microsoft:: WRL::D etails
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[Microsoft::WRL::Details 名前空間](microsoft-wrl-details-namespace.md)
+[Microsoft:: WRL::D etails 名前空間](microsoft-wrl-details-namespace.md)
