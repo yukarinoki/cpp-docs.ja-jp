@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「フレームウィンドウについて」を参照してください。
 title: フレーム ウィンドウの機能
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,30 +7,30 @@ helpviewer_keywords:
 - frame windows [MFC], tasks
 - MFC, frame windows
 ms.assetid: 1148a952-6786-4622-b5a8-68a2d7eae584
-ms.openlocfilehash: 594700ef1cbe0030bbe452adaa40b29b4a72f4d0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8f70bbe55b15310133688079236fe57459679090
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62405678"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97142832"
 ---
 # <a name="what-frame-windows-do"></a>フレーム ウィンドウの機能
 
-フレーム ウィンドウは単に、ビューのフレーム化、だけでなく、そのビューと、アプリケーションのフレームの調整に関連する多数のタスクを担当します。 [CMDIFrameWnd](../mfc/reference/cmdiframewnd-class.md)と[CMDIChildWnd](../mfc/reference/cmdichildwnd-class.md)継承[CFrameWnd](../mfc/reference/cframewnd-class.md)があるため、`CFrameWnd`機能だけではなく、新しい機能を追加します。 子ウィンドウの例には、ビュー、ボタン、リスト ボックス、およびコントロール バー、ツールバー、ステータス バー、およびダイアログ バーを含むなどのコントロールが含まれます。
+フレームウィンドウは、単純にビューをフレーミングするだけでなく、フレームをビューとアプリケーションで調整するために必要な多数のタスクを担当します。 [CMDIFrameWnd](../mfc/reference/cmdiframewnd-class.md) と [CMDIChildWnd](../mfc/reference/cmdichildwnd-class.md) は、 [CFrameWnd](../mfc/reference/cframewnd-class.md)から継承されるため、 `CFrameWnd` 追加される新機能だけでなく、機能も備えています。 子ウィンドウの例としては、ビュー、ボタンやリストボックスなどのコントロール、ツールバー、ステータスバー、およびダイアログバーを含むコントロールバーなどがあります。
 
-フレーム ウィンドウは、その子ウィンドウのレイアウトの管理を担当します。 MFC フレームワークでは、フレーム ウィンドウは、クライアント領域内で、コントロール バー、ビュー、およびその他の子ウィンドウを配置します。
+フレームウィンドウは、子ウィンドウのレイアウトを管理する役割を担います。 MFC フレームワークでは、フレームウィンドウは、コントロールバー、ビュー、およびその他の子ウィンドウをクライアント領域内に配置します。
 
-また、フレーム ウィンドウ、コマンドをビューに転送し、windows のコントロールから通知メッセージに応答できます。
+また、フレームウィンドウは、コマンドをビューに転送し、コントロールウィンドウからの通知メッセージに応答できます。
 
-## <a name="what-do-you-want-to-know-more-about"></a>方法については、するして操作を行います
+## <a name="what-do-you-want-to-know-more-about"></a>詳細については、次を参照してください。
 
-- [(これらに適合させる方法、フレーム ウィンドウ) コントロール バー](../mfc/control-bars.md)
+- [コントロールバー (フレームウィンドウにどのように表示されるか)](../mfc/control-bars.md)
 
-- [メニューのコントロール バー、およびアクセラレータ (それらに適合させる方法、フレーム ウィンドウ) の管理](../mfc/managing-menus-control-bars-and-accelerators.md)
+- [メニュー、コントロールバー、およびアクセラレータの管理 (フレームウィンドウにどのように表示されるか)](../mfc/managing-menus-control-bars-and-accelerators.md)
 
-- [(そのビューを他のコマンド ターゲット フレーム ウィンドウ) からのコマンド ルーティング](../mfc/command-routing.md)
+- [コマンドルーティング (フレームウィンドウからビューおよびその他のコマンドターゲットまで)](../mfc/command-routing.md)
 
-- [ドキュメント/ビュー アーキテクチャ](../mfc/document-view-architecture.md)
+- [ドキュメントの/View アーキテクチャ](../mfc/document-view-architecture.md)
 
 - [コントロール バー](../mfc/control-bars.md)
 
@@ -37,4 +38,4 @@ ms.locfileid: "62405678"
 
 ## <a name="see-also"></a>関連項目
 
-[フレーム ウィンドウ](../mfc/frame-windows.md)
+[フレームウィンドウ](../mfc/frame-windows.md)

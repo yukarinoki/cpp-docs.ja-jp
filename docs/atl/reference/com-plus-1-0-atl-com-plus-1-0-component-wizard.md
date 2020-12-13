@@ -1,15 +1,16 @@
 ---
+description: 詳細については、「COM + 1.0」、「ATL COM + 1.0 コンポーネントウィザード」を参照してください。
 title: COM+ 1.0、ATL COM+ 1.0 コンポーネント ウィザード
 ms.date: 05/09/2019
 f1_keywords:
 - vc.codewiz.class.atl.mts.options
 ms.assetid: 2fbe259c-6be1-4d0e-9cfe-721c75c97cb1
-ms.openlocfilehash: 986e579de4d04aea4db8ab74e1e4d4c9e3263014
-ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
+ms.openlocfilehash: 581a258fc2702465fea40590430080bb6b9fcd66
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "92923682"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97141298"
 ---
 # <a name="com-10-atl-com-10-component-wizard"></a>COM+ 1.0、ATL COM+ 1.0 コンポーネント ウィザード
 
@@ -61,7 +62,7 @@ ATL プロジェクトや ATL COM クラスの詳細については、「[ATL CO
 
 ::: moniker-end
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 
 [ATL COM+ 1.0 コンポーネント ウィザード](../../atl/reference/atl-com-plus-1-0-component-wizard.md)<br/>
 [ATL COM+ 1.0 コンポーネント](../../atl/reference/adding-an-atl-com-plus-1-0-component.md)

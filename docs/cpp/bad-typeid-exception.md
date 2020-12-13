@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: bad_typeid 例外'
 title: bad_typeid 例外
 ms.date: 10/04/2019
 f1_keywords:
@@ -8,16 +9,16 @@ helpviewer_keywords:
 - bad_typeid exception
 - exceptions [C++], bad_typeid
 ms.assetid: 5963ed58-4ede-4597-957d-f7bbd06299c2
-ms.openlocfilehash: 3e01f97c67803408c9ce5bf056e3e9ed4746d259
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: cdc582e2becba35b851bc3b6c2d68c877110068c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87229169"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97146264"
 ---
 # <a name="bad_typeid-exception"></a>bad_typeid 例外
 
-のオペランドが NULL ポインターの場合、 [typeid 演算子](../cpp/typeid-operator.md)によって**bad_typeid**例外がスローされ **`typeid`** ます。
+のオペランドが NULL ポインターの場合、 [typeid 演算子](../cpp/typeid-operator.md)によって **bad_typeid** 例外がスローされ **`typeid`** ます。
 
 ## <a name="syntax"></a>構文
 
@@ -28,7 +29,7 @@ catch (bad_typeid)
 
 ## <a name="remarks"></a>解説
 
-**Bad_typeid**のインターフェイスは次のとおりです。
+**Bad_typeid** のインターフェイスは次のとおりです。
 
 ```cpp
 class bad_typeid : public exception
@@ -44,7 +45,7 @@ public:
 };
 ```
 
-次の例は、 **`typeid`** **bad_typeid**例外をスローする演算子を示しています。
+次の例は、 **`typeid`** **bad_typeid** 例外をスローする演算子を示しています。
 
 ```cpp
 // expre_bad_typeid.cpp

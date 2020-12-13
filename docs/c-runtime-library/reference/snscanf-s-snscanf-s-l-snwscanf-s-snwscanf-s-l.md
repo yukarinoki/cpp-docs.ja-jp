@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: _snscanf_s、_snscanf_s_l、_snwscanf_s、_snwscanf_s_l'
 title: _snscanf_s、_snscanf_s_l、_snwscanf_s、_snwscanf_s_l
 ms.date: 11/04/2016
 api_name:
@@ -52,12 +53,12 @@ helpviewer_keywords:
 - _sntscanf_s function
 - snwscanf_s_l function
 ms.assetid: 72356653-7362-461a-af73-597b9c0a8094
-ms.openlocfilehash: 6c814d0085fed90f1b3c36684f54368d811c294f
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 13ffbc1de17cfe3c154bf1cef512dd7cc58974f7
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87229403"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97137073"
 ---
 # <a name="_snscanf_s-_snscanf_s_l-_snwscanf_s-_snwscanf_s_l"></a>_snscanf_s、_snscanf_s_l、_snwscanf_s、_snwscanf_s_l
 
@@ -96,7 +97,7 @@ int __cdecl _snwscanf_s_l(
 チェックする入力文字列。
 
 *length*<br/>
-*入力*時に調べる文字数。
+*入力* 時に調べる文字数。
 
 *format*<br/>
 1 つまたは複数の書式指定子。
@@ -109,22 +110,22 @@ int __cdecl _snwscanf_s_l(
 
 ## <a name="return-value"></a>戻り値
 
-これらの関数は、正常に変換および代入されたフィールドの数を返します。読み込まれただけで代入されなかったフィールドは戻り値には含まれません。 戻り値が 0 の場合は、代入されたフィールドがなかったことを示します。 エラーの場合、または最初の変換の前に文字列の末尾に到達した場合、戻り値は**EOF**になります。 詳細については、「[sscanf_s、_sscanf_s_l、swscanf_s、_swscanf_s_l](sscanf-s-sscanf-s-l-swscanf-s-swscanf-s-l.md)」を参照してください。
+これらの関数は、正常に変換および代入されたフィールドの数を返します。読み込まれただけで代入されなかったフィールドは戻り値には含まれません。 戻り値が 0 の場合は、代入されたフィールドがなかったことを示します。 エラーの場合、または最初の変換の前に文字列の末尾に到達した場合、戻り値は **EOF** になります。 詳細については、「[sscanf_s、_sscanf_s_l、swscanf_s、_swscanf_s_l](sscanf-s-sscanf-s-l-swscanf-s-swscanf-s-l.md)」を参照してください。
 
-*Input*または*format*が**NULL**ポインターの場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、これらの関数は**EOF**を返し、 **errno**を**EINVAL**に設定します。
+*Input* または *format* が **NULL** ポインターの場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、これらの関数は **EOF** を返し、 **errno** を **EINVAL** に設定します。
 
 これらと他のエラー コードの詳細については、「[_doserrno、errno、_sys_errlist、および _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」を参照してください。
 
 ## <a name="remarks"></a>解説
 
-この関数は**sscanf_s**に似ていますが、入力文字列から調べる必要がある固定数の文字を指定する機能が用意されています。 詳細については、「[sscanf_s、_sscanf_s_l、swscanf_s、_swscanf_s_l](sscanf-s-sscanf-s-l-swscanf-s-swscanf-s-l.md)」を参照してください。
+この関数は **sscanf_s** に似ていますが、入力文字列から調べる必要がある固定数の文字を指定する機能が用意されています。 詳細については、「[sscanf_s、_sscanf_s_l、swscanf_s、_swscanf_s_l](sscanf-s-sscanf-s-l-swscanf-s-swscanf-s-l.md)」を参照してください。
 
-バッファーサイズのパラメーターには、型フィールド文字**c**、 **c**、 **s**、 **s**、および **[** が必要です。 詳細については、「[scanf 関数の型フィールド文字](../../c-runtime-library/scanf-type-field-characters.md)」を参照してください。
+バッファーサイズのパラメーターには、型フィールド文字 **c**、 **c**、 **s**、 **s**、および **[** が必要です。 詳細については、「[scanf 関数の型フィールド文字](../../c-runtime-library/scanf-type-field-characters.md)」を参照してください。
 
 > [!NOTE]
-> Size パラメーターの型は **`unsigned`** であり、 **size_t**ではありません。
+> Size パラメーターの型は **`unsigned`** であり、 **size_t** ではありません。
 
-**_L**サフィックスを持つこれらの関数のバージョンは、現在のスレッドロケールの代わりに渡されたロケールパラメーターを使用する点を除いて同じです。
+**_L** サフィックスを持つこれらの関数のバージョンは、現在のスレッドロケールの代わりに渡されたロケールパラメーターを使用する点を除いて同じです。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 

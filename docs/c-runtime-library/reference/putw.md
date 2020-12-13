@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: _putw'
 title: _putw
 ms.date: 4/2/2020
 api_name:
@@ -29,12 +30,12 @@ helpviewer_keywords:
 - streams, writing integers to
 - _putw function
 ms.assetid: 83d63644-249d-4a39-87e5-3b7aa313968d
-ms.openlocfilehash: 12f54c54b59e43d9a2861489171dd6c9c9436a8a
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: e49240d7410f47042f515f310ba79f9a9eb38398
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87232431"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97146394"
 ---
 # <a name="_putw"></a>_putw
 
@@ -59,13 +60,13 @@ int _putw(
 
 ## <a name="return-value"></a>戻り値
 
-書き込まれた値を返します。 **EOF**の戻り値は、エラーを示している可能性があります。 **EOF**も正当な整数値であるため、 **ferror**を使用してエラーを確認します。 *Stream*が null ポインターの場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、この関数は**errno**を**EINVAL**に設定し、 **EOF**を返します。
+書き込まれた値を返します。 **EOF** の戻り値は、エラーを示している可能性があります。 **EOF** も正当な整数値であるため、 **ferror** を使用してエラーを確認します。 *Stream* が null ポインターの場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、この関数は **errno** を **EINVAL** に設定し、 **EOF** を返します。
 
 これらと他のエラー コードの詳細については、「[_doserrno、errno、_sys_errlist、および _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」を参照してください。
 
 ## <a name="remarks"></a>解説
 
-**_Putw**関数は、型のバイナリ値を **`int`** ストリームの現在位置に書き込み*ます。* **_putw**は、ストリーム内の項目の配置には影響しません。また、特別な配置を想定していません。 **_putw**は、主に以前のライブラリとの互換性を維持するためのものです。 のサイズ **_putw** **`int`** と内のバイトの順序が **`int`** システム間で異なるため、_putw で移植性の問題が発生する可能性があります。
+**_Putw** 関数は、型のバイナリ値を **`int`** ストリームの現在位置に書き込み *ます。* **_putw** は、ストリーム内の項目の配置には影響しません。また、特別な配置を想定していません。 **_putw** は、主に以前のライブラリとの互換性を維持するためのものです。 のサイズ **`int`** と内のバイトの順序が **`int`** システム間で異なるため、_putw で移植性の問題が発生する可能性があります。
 
 既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 

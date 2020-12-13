@@ -1,44 +1,45 @@
 ---
-title: raw_property_prefixes import 属性
+description: 詳細については、「raw_property_prefixes import 属性」を参照してください。
+title: raw_property_prefixes インポート属性
 ms.date: 08/29/2019
 f1_keywords:
 - raw_property_prefixes
 helpviewer_keywords:
 - raw_property_prefixes attribute
 ms.assetid: 03a0f48c-c460-4175-a762-9f7f8d84b12f
-ms.openlocfilehash: d4d91470781e7c5f673fd228c24904322d1db8b3
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 7289f9aeba249249ecf78ffb3ad3b32669ac9fe3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70216040"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97142715"
 ---
-# <a name="raw_property_prefixes-import-attribute"></a>raw_property_prefixes import 属性
+# <a name="raw_property_prefixes-import-attribute"></a>raw_property_prefixes インポート属性
 
-**C++のみ**
+**C++ 固有の仕様**
 
 3 つのプロパティ メソッドの代替プレフィックスを指定します。
 
 ## <a name="syntax"></a>構文
 
-> **#import***タイプライブラリ***raw_property_prefixes (** "*getprefix*" **,** "*putprefix*" **,** "*putrefprefix*" **)**
+> **#import** *タイプライブラリ* **raw_property_prefixes (** "*getprefix*" **、** "*putprefix*" **、** "*putrefprefix*" **)**
 
 ### <a name="parameters"></a>パラメーター
 
 *GetPrefix*\
-`propget`メソッドに使用するプレフィックス。
+メソッドに使用するプレフィックス `propget` 。
 
 *PutPrefix*\
-`propput`メソッドに使用するプレフィックス。
+メソッドに使用するプレフィックス `propput` 。
 
 *PutRefPrefix*\
-`propputref`メソッドに使用するプレフィックス。
+メソッドに使用するプレフィックス `propputref` 。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-既定では、低レベル`propget`の`propput`、、 `propputref`およびの各メソッドは、それぞれ`put_`、、および`get_` `putref_`のプレフィックスを使用して名前が付けられたメンバー関数によって公開されます。 これらのプレフィックスは、MIDL によって生成されるヘッダー ファイルで使用される名前と互換性があります。
+既定では、低レベルの `propget` 、 `propput` 、および `propputref` の各メソッドは `get_` 、それぞれ、、およびのプレフィックスを使用して名前が付けられたメンバー関数によって公開され `put_` `putref_` ます。 これらのプレフィックスは、MIDL によって生成されるヘッダー ファイルで使用される名前と互換性があります。
 
-**特定C++の終了**
+**END C++ 固有の仕様**
 
 ## <a name="see-also"></a>関連項目
 

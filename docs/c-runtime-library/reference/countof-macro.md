@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: _countof マクロ'
 title: _countof マクロ
 ms.date: 03/22/2018
 api_location:
@@ -23,12 +24,12 @@ helpviewer_keywords:
 - countof macro
 - _countof macro
 ms.assetid: 86198767-f7e5-4beb-898d-3cbbf60350a3
-ms.openlocfilehash: 3debd63da7d218e29f31847034c69d89b4691643
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 190f47aa7bb6bcf6bbd9478cce9df90aca81b437
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70942686"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97146459"
 ---
 # <a name="_countof-macro"></a>_countof マクロ
 
@@ -47,15 +48,15 @@ ms.locfileid: "70942686"
 
 ## <a name="return-value"></a>戻り値
 
-**Size_t**として表される、配列内の要素の数。
+**Size_t** として表される、配列内の要素の数。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-**の countof**は、関数に似たプリプロセッサマクロとして実装されています (_c)。 このC++バージョンには、静的に宣言された配列ではなくポインターが渡された場合に、コンパイル時に検出する追加のテンプレート機構があります。
+**_countof** は、関数に似たプリプロセッサマクロとして実装されます。 C++ のバージョンには、静的に宣言された配列ではなくポインターが渡された場合に、コンパイル時に検出する追加のテンプレート機構があります。
 
-*配列*が実際にはポインターではなく配列であることを確認します。 C では、*配列*がポインターである場合、**は、が誤った結果**を生成します。 でC++は、*配列*がポインターである場合、**の countは**コンパイルに失敗します。  *ポインターに decays*する関数にパラメーターとして渡された配列。つまり、関数内では、を使用して配列の範囲を**決定すること**はできません。
+*配列* が実際にはポインターではなく配列であることを確認します。 C では、*配列* がポインターの場合、 **_countof** は間違った結果を生成します。 C++ では、*配列* がポインターである場合、 **_countof** はコンパイルできません。  *ポインターに decays* する関数にパラメーターとして渡された配列。これは、関数内では、配列の範囲を判断するために **_countof** を使用できないことを意味します。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 |マクロ|必須ヘッダー|
 |-----------|---------------------|

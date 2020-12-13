@@ -1,5 +1,6 @@
 ---
-title: I プロパティページ2Implクラス
+description: '詳細情報: IPropertyPage2Impl クラス'
+title: IPropertyPage2Impl クラス
 ms.date: 11/04/2016
 f1_keywords:
 - IPropertyPage2Impl
@@ -10,16 +11,16 @@ helpviewer_keywords:
 - IPropertyPage2 ATL implementation
 - IPropertyPage2Impl class
 ms.assetid: e89fbe90-203a-47f0-a5de-23616697e1ce
-ms.openlocfilehash: d112a2411a9debbf2eb77e6b851f4500e8d32ab8
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8311746b03c4c680a040c0873ee58f936044dd9d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81329590"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97139283"
 ---
-# <a name="ipropertypage2impl-class"></a>I プロパティページ2Implクラス
+# <a name="ipropertypage2impl-class"></a>IPropertyPage2Impl クラス
 
-このクラスは、`IUnknown`[実装し、IPropertyPageImpl](../../atl/reference/ipropertypageimpl-class.md)の既定の実装を継承します。
+このクラス `IUnknown` はを実装し、 [IPropertyPageImpl](../../atl/reference/ipropertypageimpl-class.md)の既定の実装を継承します。
 
 > [!IMPORTANT]
 > このクラスとそのメンバーは、Windows ランタイムで実行されるアプリケーションでは使用できません。
@@ -34,7 +35,7 @@ class IPropertyPage2Impl : public IPropertyPageImpl<T>
 #### <a name="parameters"></a>パラメーター
 
 *T*<br/>
-から派生したクラス`IPropertyPage2Impl`。
+から派生したクラス `IPropertyPage2Impl` 。
 
 ## <a name="members"></a>メンバー
 
@@ -42,33 +43,33 @@ class IPropertyPage2Impl : public IPropertyPageImpl<T>
 
 |名前|説明|
 |----------|-----------------|
-|[I プロパティ ページ2Impl::プロパティの編集](#editproperty)|プロパティ ページがアクティブになったときにフォーカスを受け取るプロパティ コントロールを指定します。 ATL の実装はE_NOTIMPL返します。|
+|[IPropertyPage2Impl:: EditProperty](#editproperty)|プロパティページがアクティブになったときにフォーカスを受け取るプロパティコントロールを指定します。 ATL 実装は E_NOTIMPL を返します。|
 
 ## <a name="remarks"></a>解説
 
-インターフェイスは、メソッド[を](/windows/win32/api/ocidl/nn-ocidl-ipropertypage2)追加することで[IPropertyPage](/windows/win32/api/ocidl/nn-ocidl-ipropertypage)を`EditProperty`拡張します。 このメソッドを使用すると、クライアントはプロパティ ページ オブジェクト内の特定のプロパティを選択できます。
+[IPropertyPage2](/windows/win32/api/ocidl/nn-ocidl-ipropertypage2)インターフェイスは、メソッドを追加して[IPropertyPage](/windows/win32/api/ocidl/nn-ocidl-ipropertypage)を拡張し `EditProperty` ます。 このメソッドを使用すると、クライアントは、プロパティページオブジェクト内の特定のプロパティを選択できます。
 
-クラス`IPropertyPage2Impl`は、単に`IPropertyPage2::EditProperty`E_NOTIMPL を返します。 ただし、デバッグ ビルドでダンプ デバイスに情報を送信`IUnknown`することで[、IPropertyPageImpl](../../atl/reference/ipropertypageimpl-class.md)の既定の実装を継承し、実装します。
+クラス `IPropertyPage2Impl` は、の E_NOTIMPL を単に返し `IPropertyPage2::EditProperty` ます。 ただし、 [IPropertyPageImpl](../../atl/reference/ipropertypageimpl-class.md) の既定の実装を継承し、 `IUnknown` デバッグビルドでダンプデバイスに情報を送信することによってを実装します。
 
-プロパティ ページを作成する場合、通常、クラスは`IPropertyPageImpl`から派生します。 の追加サポート`IPropertyPage2`を提供するには、クラス定義を変更し、メソッド`EditProperty`をオーバーライドします。
+プロパティページを作成する場合、通常、クラスはから派生 `IPropertyPageImpl` します。 の追加サポートを提供するには `IPropertyPage2` 、クラス定義を変更し、メソッドをオーバーライドし `EditProperty` ます。
 
-**関連記事** [ATL チュートリアル](../../atl/active-template-library-atl-tutorial.md), [ATL プロジェクトの作成](../../atl/reference/creating-an-atl-project.md)
+**関連記事** [ATL チュートリアル](../../atl/active-template-library-atl-tutorial.md)、 [atl プロジェクトの作成](../../atl/reference/creating-an-atl-project.md)
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
 `IPropertyPage`
 
-[プロパティ ページ インビジプル](../../atl/reference/ipropertypageimpl-class.md)
+[IPropertyPageImpl](../../atl/reference/ipropertypageimpl-class.md)
 
 `IPropertyPage2Impl`
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-**ヘッダー:** atlctl.h
+**ヘッダー:** atlctl. h
 
-## <a name="ipropertypage2impleditproperty"></a><a name="editproperty"></a>I プロパティ ページ2Impl::プロパティの編集
+## <a name="ipropertypage2impleditproperty"></a><a name="editproperty"></a> IPropertyPage2Impl:: EditProperty
 
-プロパティ ページがアクティブになったときにフォーカスを受け取るプロパティ コントロールを指定します。
+プロパティページがアクティブになったときにフォーカスを受け取るプロパティコントロールを指定します。
 
 ```
 HRESULT EditProperty(DISPID dispID);
@@ -80,10 +81,10 @@ E_NOTIMPL を返します。
 
 ### <a name="remarks"></a>解説
 
-「プロパティ[ページ2::編集プロパティ](/windows/win32/api/ocidl/nf-ocidl-ipropertypage2-editproperty)」を参照してください。
+Windows SDK の「 [IPropertyPage2:: EditProperty](/windows/win32/api/ocidl/nf-ocidl-ipropertypage2-editproperty) 」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 
-[クラスを参照しています。](../../atl/reference/iperpropertybrowsingimpl-class.md)<br/>
-[クラスを指定します。](../../atl/reference/ispecifypropertypagesimpl-class.md)<br/>
+[IPerPropertyBrowsingImpl クラス](../../atl/reference/iperpropertybrowsingimpl-class.md)<br/>
+[ISpecifyPropertyPagesImpl クラス](../../atl/reference/ispecifypropertypagesimpl-class.md)<br/>
 [クラスの概要](../../atl/atl-class-overview.md)

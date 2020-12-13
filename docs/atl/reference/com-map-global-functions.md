@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「COM Map グローバル関数」を参照してください。
 title: COM マップのグローバル関数
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,23 +8,23 @@ f1_keywords:
 helpviewer_keywords:
 - COM interfaces, COM map global functions
 ms.assetid: b9612d30-eb23-46ef-8093-d56f237d3cf1
-ms.openlocfilehash: adf4e06eb46aed74d08071dccce1db549ca31226
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: ee502a68a0a3b21849d2fabdadcc9ecbbcc1602d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88833596"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97141337"
 ---
 # <a name="com-map-global-functions"></a>COM マップのグローバル関数
 
 これらの関数は、COM マップの実装をサポート `IUnknown` します。
 
-|関数|説明|
+|機能|説明|
 |-|-|
 |[AtlInternalQueryInterface](#atlinternalqueryinterface)|`IUnknown`非集計オブジェクトのにデリゲートします。|
 |[InlineIsEqualIUnknown](#inlineisequaliunknown)|インターフェイスをと比較するための効率的なコードを生成 `IUnknown` します。|
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** atlbase. h
 
@@ -51,7 +52,7 @@ HRESULT AtlInternalQueryInterface(
 から要求されているインターフェイスの GUID。
 
 *ppvObject*<br/>
-入出力 *Iid*で指定されたインターフェイスポインターへのポインター。インターフェイスが見つからない場合は NULL。
+入出力 *Iid* で指定されたインターフェイスポインターへのポインター。インターフェイスが見つからない場合は NULL。
 
 ### <a name="return-value"></a>戻り値
 

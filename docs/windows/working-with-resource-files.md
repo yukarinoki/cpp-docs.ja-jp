@@ -1,4 +1,5 @@
 ---
+description: 詳細については、リソースファイルの操作に関するページを参照してください。
 title: リソース ファイルの操作 (C++)
 ms.date: 02/14/2019
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - resources [C++], about resource files
 - resource files [C++], about resource files
 ms.assetid: 2699a539-b369-4b78-80f0-df03eb7b6780
-ms.openlocfilehash: 3e387a1cefb6577760a34c7957d4f5019b1d49ef
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: c8e1a891839ee19201a98f9beb5e538e24c1d3f0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91502910"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97135799"
 ---
 # <a name="working-with-resource-files"></a>リソース ファイルの操作
 
@@ -30,7 +31,7 @@ ms.locfileid: "91502910"
 新しいリソースをプロジェクトに追加し、適切なリソース エディターを使用してそれらのリソースを変更できます。 ほとんどの Visual C++ ウィザードでは、プロジェクトの .rc ファイルが自動的に生成されます。
 
 > [!NOTE]
-> **リソースエディター**と**リソースビュー**は、Express edition では使用できません。
+> **リソースエディター** と **リソースビュー** は、Express edition では使用できません。
 
 マネージプロジェクトにリソースファイルを手動で追加する方法については、「 [デスクトップアプリ用のリソースファイルの作成](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)」を参照してください。 この記事では、リソースへのアクセス方法、静的リソースの表示方法、およびプロパティへのリソース文字列の割り当て方法について説明します。
 

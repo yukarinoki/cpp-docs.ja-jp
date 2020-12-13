@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「ATL/MFC 共有クラス」を参照してください。
 title: ATL-MFC 共有クラス
 ms.custom: index-page
 ms.date: 11/04/2016
@@ -23,29 +24,29 @@ helpviewer_keywords:
 - CString objects, shared class
 - shared classes
 ms.assetid: e13aaac3-21ec-4f4d-8834-432b40fde544
-ms.openlocfilehash: 5632de3d248ded83c1db2c0b469de165e676bf9d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ba5927436b5f5c7bd31b21ec6dd7f187e2eb4e83
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62216871"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97142586"
 ---
 # <a name="atlmfc-shared-classes"></a>ATL/MFC 共有クラス
 
-これらのユーティリティ クラスは、MFC DLL を必要とせず、すべてのネイティブ C++ プロジェクトで使用できます。
+これらのユーティリティクラスは、MFC DLL を必要とせずに、任意のネイティブ C++ プロジェクトで使用できます。
 
 ## <a name="in-this-section"></a>このセクションの内容
 
-[MFC と ATL で共有クラス](../atl-mfc-shared/reference/classes-shared-by-mfc-and-atl.md)<br/>
-MFC と ATL で共有されるクラスへのリンクを提供します。
+[MFC と ATL 間で共有されるクラス](../atl-mfc-shared/reference/classes-shared-by-mfc-and-atl.md)<br/>
+MFC と ATL 間で共有されるクラスへのリンクを示します。
 
 ## <a name="related-sections"></a>関連項目
 
-[Active Template Library (ATL) のリファレンス](../atl/atl-com-desktop-components.md)<br/>
+[Active Template Library (ATL) リファレンスに関するページ](../atl/atl-com-desktop-components.md)<br/>
 COM オブジェクトのプログラミングを簡単にする、ATL ライブラリ (テンプレート ベースの C++ クラスの集合) の一覧があります。
 
-[Microsoft Foundation クラス ライブラリ (MFC) リファレンス](../mfc/mfc-desktop-applications.md)<br/>
-一連のクラスには、Windows API 用に記述されたアプリケーションのフレームワークであるアプリケーション フレームワークを構成、MFC ライブラリのリファレンスを提供します。
+[Microsoft Foundation Class ライブラリ (MFC) リファレンス](../mfc/mfc-desktop-applications.md)<br/>
+MFC ライブラリのリファレンス資料を提供します。これは、Windows API 用に記述されたアプリケーションのフレームワークであるアプリケーションフレームワークを構成するのクラスのセットです。
 
 [デバッグ](/visualstudio/debugger/debugging-in-visual-studio)<br/>
 Visual Studio デバッガーを使用してアプリケーションやストアド プロシージャの論理エラーを修正する方法を説明するトピックへのリンクがあります。

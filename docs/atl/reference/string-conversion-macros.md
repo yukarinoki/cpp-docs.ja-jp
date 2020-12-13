@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: 文字列変換マクロ'
 title: 文字列変換マクロ
 ms.date: 11/04/2016
 f1_keywords:
@@ -11,12 +12,12 @@ f1_keywords:
 - atlconv/ATL::DEVMODEW2A
 - atlconv/ATL::TEXTMETRICW2A
 ms.assetid: 2ff7c0b6-2bde-45fe-897f-6128e18e0c27
-ms.openlocfilehash: 60cccebf4e1db8369ea5a88f04a37b96838ff49f
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: a7717f7876d9dbe23c0b95fd68b4bcd971e81267
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88835156"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97138776"
 ---
 # <a name="string-conversion-macros"></a>文字列変換マクロ
 
@@ -44,7 +45,7 @@ MACRONAME( address_of_structure )
 
 [!code-cpp[NVC_ATL_Utilities#129](../../atl/codesnippet/cpp/string-conversion-macros_2.cpp)]
 
-マクロ名では、ソース構造内の文字列型が左 ( **たとえば) で**あり、変換先構造体の文字列型が右側にあります (たとえば、 **W**)。 **は** LPSTR を表し、 **OLE** は LPOLESTR、 **T** は LPTSTR を表し、 **W** は LPWSTR を表します。
+マクロ名では、ソース構造内の文字列型が左 ( **たとえば) で** あり、変換先構造体の文字列型が右側にあります (たとえば、 **W**)。 **は** LPSTR を表し、 **OLE** は LPOLESTR、 **T** は LPTSTR を表し、 **W** は LPWSTR を表します。
 
 したがって、DEVMODEA2W は、LPSTR 文字列を含む構造体を `DEVMODE` LPWSTR 文字列を含む構造体にコピー `DEVMODE` します。 TEXTMETRICOLE2T は、LPOLESTR 文字列を含む構造体を、 `TEXTMETRIC` `TEXTMETRIC` LPTSTR 文字列を含む構造体にコピーします。
 
@@ -57,9 +58,9 @@ MACRONAME( address_of_structure )
 |有効なコンパイラ ディレクティブ|T の変更後|OLE の変更後|
 |----------------------------------|---------------|-----------------|
 |なし|**A**|**W**|
-|**\_UNICODE**|**W**|**W**|
+|**\_対応**|**W**|**W**|
 |**OLE2ANSI**|**A**|**A**|
-|** \_ UNICODE**と**OLE2ANSI**|**W**|**A**|
+|**\_ UNICODE** と **OLE2ANSI**|**W**|**A**|
 
 次の表に、 `DEVMODE` および `TEXTMETRIC` 文字列変換マクロの一覧を示します。
 
@@ -72,4 +73,4 @@ MACRONAME( address_of_structure )
 
 ## <a name="see-also"></a>関連項目
 
-[[マクロ]](../../atl/reference/atl-macros.md)
+[マクロ](../../atl/reference/atl-macros.md)

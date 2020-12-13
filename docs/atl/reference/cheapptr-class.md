@@ -1,5 +1,6 @@
 ---
-title: Cヒーププタークラス
+description: '詳細情報: CHeapPtr クラス'
+title: CHeapPtr クラス
 ms.date: 11/04/2016
 f1_keywords:
 - CHeapPtr
@@ -10,16 +11,16 @@ f1_keywords:
 helpviewer_keywords:
 - CHeapPtr class
 ms.assetid: e5c5bfd4-9bf1-4164-8a83-8155fe253454
-ms.openlocfilehash: a512aa974cb57072915f887f0c2a20ed1263ffa3
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: dc795c199562fa423a160b053c96983651d0812d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81326913"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97141649"
 ---
-# <a name="cheapptr-class"></a>Cヒーププタークラス
+# <a name="cheapptr-class"></a>CHeapPtr クラス
 
-ヒープ ポインターを管理するためのスマート ポインター クラス。
+ヒープポインターを管理するためのスマートポインタークラス。
 
 > [!IMPORTANT]
 > このクラスとそのメンバーは、Windows ランタイムで実行されるアプリケーションでは使用できません。
@@ -34,7 +35,7 @@ class CHeapPtr : public CHeapPtrBase<T, Allocator>
 #### <a name="parameters"></a>パラメーター
 
 *T*<br/>
-ヒープに格納されるオブジェクト型。
+ヒープに格納されるオブジェクトの種類。
 
 *アロケーター*<br/>
 使用するメモリ割り当てクラス。
@@ -45,38 +46,38 @@ class CHeapPtr : public CHeapPtrBase<T, Allocator>
 
 |名前|説明|
 |----------|-----------------|
-|[Cヒーププター::Cヒーププター](#cheapptr)|コンストラクターです。|
+|[CHeapPtr::CHeapPtr](#cheapptr)|コンストラクターです。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
 |名前|説明|
 |----------|-----------------|
-|[Cヒーププター::割り当て](#allocate)|オブジェクトを格納するヒープにメモリを割り当てます。|
-|[Cヒーププター::再割り当て](#reallocate)|ヒープ上のメモリを再割り当てします。|
+|[CHeapPtr:: Allocate](#allocate)|オブジェクトを格納するためにヒープにメモリを割り当てるには、このメソッドを呼び出します。|
+|[CHeapPtr:: 再割り当て](#reallocate)|ヒープ上のメモリを再割り当てするには、このメソッドを呼び出します。|
 
 ### <a name="public-operators"></a>パブリック演算子
 
 |名前|説明|
 |----------|-----------------|
-|[Cヒーププター::演算子 =](#operator_eq)|代入演算子。|
+|[CHeapPtr:: operator =](#operator_eq)|代入演算子。|
 
 ## <a name="remarks"></a>解説
 
-`CHeapPtr`は[CHeapPtrBase](../../atl/reference/cheapptrbase-class.md)から派生し、デフォルトでは CRT ルーチン[(CCRTAllocator)](../../atl/reference/ccrtallocator-class.md)を使用して、メモリの割り当てと解放を行います。 [CHeapPtrList](../../atl/reference/cheapptrlist-class.md)クラスを使用して、ヒープ ポインターのリストを作成できます。 COM メモリ割り当てルーチンを使用する[CComHeapPtr](../../atl/reference/ccomheapptr-class.md)も参照してください。
+`CHeapPtr` は [CHeapPtrBase](../../atl/reference/cheapptrbase-class.md) から派生し、既定では CRT ルーチン ( [CCRTAllocator](../../atl/reference/ccrtallocator-class.md)) を使用してメモリの割り当てと解放を行います。 クラスは、ヒープポインターのリストを構築するために [使用できます](../../atl/reference/cheapptrlist-class.md) 。 COM メモリ割り当てルーチンを使用する「 [CComHeapPtr](../../atl/reference/ccomheapptr-class.md)」も参照してください。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
-[ヒーププターベース](../../atl/reference/cheapptrbase-class.md)
+[CHeapPtrBase](../../atl/reference/cheapptrbase-class.md)
 
 `CHeapPtr`
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-**ヘッダー:** atlcore.h
+**ヘッダー:** atlcore .h
 
-## <a name="cheapptrallocate"></a><a name="allocate"></a>Cヒーププター::割り当て
+## <a name="cheapptrallocate"></a><a name="allocate"></a> CHeapPtr:: Allocate
 
-オブジェクトを格納するヒープにメモリを割り当てます。
+オブジェクトを格納するためにヒープにメモリを割り当てるには、このメソッドを呼び出します。
 
 ```
 bool Allocate(size_t nElements = 1) throw();
@@ -84,7 +85,7 @@ bool Allocate(size_t nElements = 1) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*n要素*<br/>
+*nElements*<br/>
 割り当てるメモリの量を計算するために使用される要素の数。 既定値は 1 です。
 
 ### <a name="return-value"></a>戻り値
@@ -93,13 +94,13 @@ bool Allocate(size_t nElements = 1) throw();
 
 ### <a name="remarks"></a>解説
 
-アロケーター ルーチンは、コンストラクターで定義された型の*nElement*オブジェクトを格納するためにヒープに十分なメモリを予約するために使用されます。
+アロケータールーチンは、コンストラクターで定義されている型の *nElement* オブジェクトを格納するために、ヒープに十分なメモリを確保するために使用されます。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_ATL_Utilities#77](../../atl/codesnippet/cpp/cheapptr-class_1.cpp)]
 
-## <a name="cheapptrcheapptr"></a><a name="cheapptr"></a>Cヒーププター::Cヒーププター
+## <a name="cheapptrcheapptr"></a><a name="cheapptr"></a> CHeapPtr::CHeapPtr
 
 コンストラクターです。
 
@@ -111,18 +112,18 @@ CHeapPtr(CHeapPtr<T, Allocator>& p) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*P*<br/>
-既存のヒープ ポインタ`CHeapPtr`または .
+*p*<br/>
+既存のヒープポインターまたは `CHeapPtr` 。
 
 ### <a name="remarks"></a>解説
 
-ヒープ ポインターは、既存のポインターまたはオブジェクトを使用して、オプション`CHeapPtr`で作成できます。 その場合、新しい`CHeapPtr`オブジェクトは、新しいポインターとリソースを管理する責任を負います。
+ヒープポインターは、必要に応じて、既存のポインターまたはオブジェクトを使用して作成でき `CHeapPtr` ます。 その場合、新しいオブジェクトは、 `CHeapPtr` 新しいポインターとリソースを管理する役割を担います。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_ATL_Utilities#78](../../atl/codesnippet/cpp/cheapptr-class_2.cpp)]
 
-## <a name="cheapptroperator-"></a><a name="operator_eq"></a>Cヒーププター::演算子 =
+## <a name="cheapptroperator-"></a><a name="operator_eq"></a> CHeapPtr:: operator =
 
 代入演算子。
 
@@ -133,20 +134,20 @@ CHeapPtr<T, Allocator>& operator=(
 
 ### <a name="parameters"></a>パラメーター
 
-*P*<br/>
+*p*<br/>
 既存の `CHeapPtr` オブジェクトです。
 
 ### <a name="return-value"></a>戻り値
 
-更新された`CHeapPtr`への参照を返します。
+更新されたへの参照を返し `CHeapPtr` ます。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_ATL_Utilities#80](../../atl/codesnippet/cpp/cheapptr-class_3.cpp)]
 
-## <a name="cheapptrreallocate"></a><a name="reallocate"></a>Cヒーププター::再割り当て
+## <a name="cheapptrreallocate"></a><a name="reallocate"></a> CHeapPtr:: 再割り当て
 
-ヒープ上のメモリを再割り当てします。
+ヒープ上のメモリを再割り当てするには、このメソッドを呼び出します。
 
 ```
 bool Reallocate(size_t nElements) throw();
@@ -154,8 +155,8 @@ bool Reallocate(size_t nElements) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*n要素*<br/>
-割り当てるメモリの量を計算するために使用される新しい要素数。
+*nElements*<br/>
+割り当てるメモリの量を計算するために使用される新しい要素の数。
 
 ### <a name="return-value"></a>戻り値
 
@@ -167,6 +168,6 @@ bool Reallocate(size_t nElements) throw();
 
 ## <a name="see-also"></a>関連項目
 
-[クラス](../../atl/reference/cheapptrbase-class.md)<br/>
-[CCRTアロケータークラス](../../atl/reference/ccrtallocator-class.md)<br/>
+[CHeapPtrBase クラス](../../atl/reference/cheapptrbase-class.md)<br/>
+[CCRTAllocator クラス](../../atl/reference/ccrtallocator-class.md)<br/>
 [クラスの概要](../../atl/atl-class-overview.md)

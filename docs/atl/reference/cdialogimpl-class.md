@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: CDialogImpl クラス'
 title: CDialogImpl クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -17,12 +18,12 @@ helpviewer_keywords:
 - dialog boxes, ATL
 - CDialogImpl class
 ms.assetid: d430bc7b-8a28-4ad3-9507-277bdd2c2c2e
-ms.openlocfilehash: b92b5130b31e88565d79b59a24b2bd377d0d84c0
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 228a63edde7eb66960a0acad5d60088d909946a7
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88834727"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97141857"
 ---
 # <a name="cdialogimpl-class"></a>CDialogImpl クラス
 
@@ -51,7 +52,7 @@ template <class T,
 
 ### <a name="methods"></a>メソッド
 
-|関数|説明|
+|機能|説明|
 |-|-|
 |[作成](#create)|モードレスダイアログボックスを作成します。|
 |[DestroyWindow](#destroywindow)|モードレスダイアログボックスを破棄します。|
@@ -60,7 +61,7 @@ template <class T,
 
 ### <a name="cdialogimplbaset-methods"></a>CDialogImplBaseT メソッド
 
-|関数|説明|
+|機能|説明|
 |-|-|
 |[Getの Proc](#getdialogproc)|現在のダイアログボックスプロシージャを返します。|
 |[Mapの Rect](#mapdialogrect)|指定した四角形のダイアログボックスの単位を画面単位 (ピクセル) にマップします。|
@@ -68,7 +69,7 @@ template <class T,
 
 ### <a name="static-functions"></a>静的関数
 
-|関数|説明|
+|機能|説明|
 |-|-|
 |[DialogProc](#dialogproc)|ダイアログボックスに送信されたメッセージを処理します。|
 |[Startview Proc](#startdialogproc)|ダイアログボックスに送信されたメッセージを処理するために最初のメッセージを受信したときに呼び出されます。|
@@ -86,7 +87,7 @@ template <class T,
 
 [!code-cpp[NVC_ATL_Windowing#41](../../atl/codesnippet/cpp/cdialogimpl-class_1.h)]
 
-ここ `MyDlg` で、はウィザードの [**名前**] ページに入力された**短い名前**です。
+ここ `MyDlg` で、はウィザードの [**名前**] ページに入力された **短い名前** です。
 
 |詳細情報|解決方法については、|
 |--------------------------------|---------|
@@ -95,7 +96,7 @@ template <class T,
 |ATL プロジェクト ウィザード|[ATL プロジェクトの作成](../../atl/reference/creating-an-atl-project.md)|
 |ダイアログ ボックス|Windows SDK の[ダイアログボックス](/windows/win32/dlgbox/dialog-boxes)と後続トピック|
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** atlwin. h
 
@@ -119,7 +120,7 @@ HWND Create(
 *hWndParent*<br/>
 からオーナーウィンドウへのハンドル。
 
-Rect **&** *rect* [in] ダイアログのサイズと位置を指定する[rect](/windows/win32/api/windef/ns-windef-rect)構造体。
+Rect **&** *rect* [in] ダイアログのサイズと位置を指定する [rect](/windows/win32/api/windef/ns-windef-rect)構造体。
 
 *dwInitParam*<br/>
 からWM_INITDIALOG メッセージの *lParam* パラメーターのダイアログボックスに渡す値を指定します。
@@ -204,7 +205,7 @@ INT_PTR DoModal(
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合は、 [EndDialog](#enddialog)への呼び出しで指定された*nRetCode*パラメーターの値。 それ以外の場合は、-1。
+成功した場合は、 [EndDialog](#enddialog)への呼び出しで指定された *nRetCode* パラメーターの値。 それ以外の場合は、-1。
 
 ### <a name="remarks"></a>解説
 

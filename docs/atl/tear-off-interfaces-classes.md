@@ -1,25 +1,26 @@
 ---
-title: ティアオフ インターフェイス クラス (ATL)
+description: 詳細については、「Tear-Off インターフェイスクラス」を参照してください。
+title: Tear-Off インターフェイスクラス (ATL)
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
 - interfaces, tear-off
 - tear-off interfaces classes
 ms.assetid: 14e4ab01-9213-43e5-bef5-78af1e6206ff
-ms.openlocfilehash: 7ed6d6d68ee5d05b7bec2c8545eab34cf82e38a8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 947ad22c686f86d00a4bc49c0ea90b24cc1d8a6f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62275166"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97138360"
 ---
-# <a name="tear-off-interfaces-classes"></a>ティアオフ インターフェイス クラス
+# <a name="tear-off-interfaces-classes"></a>Tear-Off インターフェイスクラス
 
-次のクラスは、ティアオフ インターフェイスのサポート。
+次のクラスでは、ティアオフインターフェイスがサポートされています。
 
-- [CComTearOffObject](../atl/reference/ccomtearoffobject-class.md)実装`IUnknown`ティアオフ インターフェイス。
+- [CComTearOffObject](../atl/reference/ccomtearoffobject-class.md)`IUnknown`ティアオフインターフェイス用にを実装します。
 
-- [CComCachedTearOffObject](../atl/reference/ccomcachedtearoffobject-class.md)実装`IUnknown`「キャッシュされた」ティアオフ インターフェイス。
+- [CComCachedTearOffObject](../atl/reference/ccomcachedtearoffobject-class.md)`IUnknown`"キャッシュされた" ティアオフインターフェイス用にを実装します。
 
 ## <a name="see-also"></a>関連項目
 

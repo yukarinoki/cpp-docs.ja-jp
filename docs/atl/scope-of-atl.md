@@ -1,21 +1,22 @@
 ---
+description: 詳細については、「ATL のスコープ」を参照してください。
 title: ATL の範囲
 ms.date: 11/04/2016
 helpviewer_keywords:
 - ATL, scope
 ms.assetid: 381adf50-3cb0-4d0f-a79a-07da093bc280
-ms.openlocfilehash: c45516dfdfb317adde787a51194a9f9deac19887
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 65fab72c0bca02975286a4349f996e74bbe97103
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62274409"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97138555"
 ---
 # <a name="scope-of-atl"></a>ATL の範囲
 
-ATL は、COM オブジェクト、オートメーション サーバー、および ActiveX コントロールを簡単に作成することができます。 ATL では、基本的な COM インターフェイスの多くの組み込みサポートを提供します。
+ATL では、COM オブジェクト、オートメーションサーバー、および ActiveX コントロールを簡単に作成できます。 ATL には、多くの基本的な COM インターフェイスの組み込みサポートが用意されています。
 
-ATL は、アプリケーションに組み込むソース コードが付属しています。 ATL では、DLL を使用可能な (atl90.dll) コンポーネント間で共有できるコードが含まれてもなります。 ただし、この DLL は必要ありません。
+ATL は、アプリケーションに含まれるソースコードとして付属しています。 また、ATL では DLL を使用できるようになります (atl90.dll)。これには、コンポーネント間で共有できるコードが含まれています。 ただし、この DLL は必要ありません。
 
 ## <a name="see-also"></a>関連項目
 

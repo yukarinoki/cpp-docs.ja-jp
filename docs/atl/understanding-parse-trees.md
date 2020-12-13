@@ -1,15 +1,16 @@
 ---
+description: '詳細情報: 解析ツリーについて'
 title: ATL レジストラーと解析ツリー
 ms.date: 11/04/2016
 helpviewer_keywords:
 - parse trees
 ms.assetid: 668ce2dd-a1c3-4ca0-8135-b25267cb6a85
-ms.openlocfilehash: ff74ff879e757a569232ff19244d3f7598063465
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: cae5256bf932478135db747f80816378e61429a0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90040289"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97138243"
 ---
 # <a name="understanding-parse-trees"></a>解析ツリーについて
 
@@ -61,6 +62,6 @@ HKEY_CLASSES_ROOT
 
 ここでは、最初にレジストラーが開きます (作成し `HKEY_CLASSES_ROOT\MyVeryOwnKey` ます)。 次に、サブキーがあることを確認し `MyVeryOwnKey` ます。 に対してキーを閉じるのではなく `MyVeryOwnKey` 、レジストラーはハンドルを保持し、 `HasASubKey` この親ハンドルを使用してを開きます (作成します)。 (親ハンドルが開いていない場合は、システムレジストリの速度が低下する可能性があります)。このため、を開い `HKEY_CLASSES_ROOT\MyVeryOwnKey` て、 `HasASubKey` を `MyVeryOwnKey` 親として開くと、を開く `MyVeryOwnKey` 、閉じる `MyVeryOwnKey` 、および開くよりも高速です `MyVeryOwnKey\HasASubKey` 。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [レジストラースクリプトの作成](../atl/creating-registrar-scripts.md)

@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: プロジェクトのスレッドモデルの指定 (ATL)'
 title: プロジェクトのスレッド モデルの指定 (ATL)
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,34 +9,34 @@ helpviewer_keywords:
 - threading [ATL], models
 - _ATL_SINGLE_THREADED macro
 ms.assetid: 6b571078-521c-4f3e-9f08-482aa235a822
-ms.openlocfilehash: 69c1c80bba0b09ce69e0b9b9b27296ef2508e60b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 81bf8413a2118797ec0e0c177a06468b8e3c7ba0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62275218"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97138477"
 ---
 # <a name="specifying-the-threading-model-for-a-project-atl"></a>プロジェクトのスレッド モデルの指定 (ATL)
 
-次のマクロは、ATL プロジェクトのスレッド モデルを指定できます。
+ATL プロジェクトのスレッドモデルを指定するには、次のマクロを使用できます。
 
-|マクロ|使用に関するガイドライン|
+|マクロ|を使用するためのガイドライン|
 |-----------|--------------------------|
-|_ATL_SINGLE_THREADED|場合 1 つのスレッド処理モデルを使用して、すべてのオブジェクトを定義します。|
-|_ATL_APARTMENT_THREADED|アパートメント スレッドを使用して 1 つまたは複数のオブジェクトの場合を定義します。|
-|_ATL_FREE_THREADED|無料またはニュートラル スレッドを使用して 1 つまたは複数のオブジェクトの場合を定義します。 既存のコードは同等のマクロへの参照を含めることができます[_ATL_MULTI_THREADED](reference/compiler-options-macros.md#_atl_multi_threaded)します。|
+|_ATL_SINGLE_THREADED|すべてのオブジェクトが単一のスレッドモデルを使用するかどうかを定義します。|
+|_ATL_APARTMENT_THREADED|1つ以上のオブジェクトがアパートメントスレッドを使用するかどうかを定義します。|
+|_ATL_FREE_THREADED|1つ以上のオブジェクトが、フリースレッドまたはニュートラルスレッドを使用するかどうかを定義します。 既存のコードには、同等のマクロ [_ATL_MULTI_THREADED](reference/compiler-options-macros.md#_atl_multi_threaded)への参照が含まれている場合があります。|
 
-プロジェクトのこれらのマクロのいずれかを定義しない場合は、_ATL_FREE_THREADED が有効になります。
+プロジェクトに対してこれらのマクロを定義しないと、_ATL_FREE_THREADED が有効になります。
 
 マクロは、次のように実行時のパフォーマンスに影響します。
 
-- プロジェクト内のオブジェクトに対応するマクロを指定すると、実行時のパフォーマンスが向上することができます。
+- プロジェクト内のオブジェクトに対応するマクロを指定すると、実行時のパフォーマンスが向上します。
 
-- 高いレベルのスレッドですべてのオブジェクトが 1 つ _ATL_APARTMENT_THREADED を指定した場合の例については、マクロを指定すると、実行時のパフォーマンスが若干低下します。
+- より高いレベルのマクロを指定する場合 (たとえば、すべてのオブジェクトがシングルスレッドの場合に _ATL_APARTMENT_THREADED を指定すると、では実行時のパフォーマンスが若干低下します。
 
-- _ATL_SINGLE_THREADED ときに 1 つを指定するか、またはとフリー スレッドのアパートメント スレッドを使用して、オブジェクトの場合、マクロなどの下位レベルを指定すると、アプリケーションが実行時に失敗する可能性があります。
+- 低いレベルのマクロを指定すると、たとえば、1つまたは複数のオブジェクトがアパートメントスレッドまたはフリースレッド処理を使用する場合に _ATL_SINGLE_THREADED を指定すると、アプリケーションが実行時に失敗する可能性があります。
 
-参照してください[オプション、ATL シンプル オブジェクト ウィザード](../atl/reference/options-atl-simple-object-wizard.md)ATL オブジェクトをモデル化については、スレッド処理します。
+ATL オブジェクトで使用できるスレッド処理モデルの説明については、「オプション」の「 [Atl シンプルオブジェクトウィザード](../atl/reference/options-atl-simple-object-wizard.md) 」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

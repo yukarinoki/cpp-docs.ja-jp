@@ -1,5 +1,6 @@
 ---
-title: クラスを処理します。
+description: '詳細情報: CHandle クラス'
+title: CHandle クラス
 ms.date: 07/09/2019
 f1_keywords:
 - CHandle
@@ -12,16 +13,16 @@ f1_keywords:
 helpviewer_keywords:
 - CHandle class
 ms.assetid: 883e9db5-40ec-4e29-9c74-4dd2ddd2e35d
-ms.openlocfilehash: 4b883bdf3159c40f8d74866f04f655ae73d82a8a
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: 01c3b281daf829bc6488df35114c6cb853640ed1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81747699"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97141675"
 ---
-# <a name="chandle-class"></a>クラスを処理します。
+# <a name="chandle-class"></a>CHandle クラス
 
-このクラスには、ハンドル オブジェクトを作成および使用するためのメソッドが用意されています。
+このクラスには、handle オブジェクトを作成および使用するためのメソッドが用意されています。
 
 ## <a name="syntax"></a>構文
 
@@ -35,44 +36,44 @@ class CHandle
 
 |名前|説明|
 |----------|-----------------|
-|[ハンドル::Cハンドル](#chandle)|コンストラクターです。|
-|[ハンドル::~Cハンドル](#dtor)|デストラクターです。|
+|[CHandle::CHandle](#chandle)|コンストラクターです。|
+|[CHandle:: ~ CHandle](#dtor)|デストラクターです。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
 |名前|説明|
 |----------|-----------------|
-|[ハンドル::アタッチ](#attach)|オブジェクトを既存のハンドルに`CHandle`アタッチします。|
-|[ハンドル::閉じる](#close)|`CHandle`オブジェクトを閉じます。|
-|[ハンドル::Dエタッハ](#detach)|`CHandle`オブジェクトからハンドルをデタッチします。|
+|[CHandle:: Attach](#attach)|オブジェクトを既存のハンドルにアタッチするには、このメソッドを呼び出し `CHandle` ます。|
+|[CHandle:: Close](#close)|オブジェクトを閉じるには、このメソッドを呼び出し `CHandle` ます。|
+|[CHandle::D etach](#detach)|オブジェクトからハンドルをデタッチするには、このメソッドを呼び出し `CHandle` ます。|
 
 ### <a name="public-operators"></a>パブリック演算子
 
 |名前|説明|
 |----------|-----------------|
-|[ハンドル::演算子ハンドル](#operator_handle)|格納されているハンドルの値を返します。|
-|[ハンドル::演算子 =](#operator_eq)|代入演算子。|
+|[CHandle:: operator ハンドル](#operator_handle)|格納されているハンドルの値を返します。|
+|[CHandle:: operator =](#operator_eq)|代入演算子。|
 
 ### <a name="public-data-members"></a>パブリック データ メンバー
 
 |名前|説明|
 |----------|-----------------|
-|[ハンドル::m_h](#m_h)|ハンドルを格納するメンバー変数。|
+|[CHandle:: m_h](#m_h)|ハンドルを格納するメンバー変数。|
 
 ## <a name="remarks"></a>解説
 
-ハンドル`CHandle`が必要な場合はいつでもオブジェクトを`CHandle`使用できます。
+オブジェクトは、 `CHandle` ハンドルが必要なときに常に使用できます。主な違いは、オブジェクトが自動的に削除されることです `CHandle` 。
 
 > [!NOTE]
-> 一部の API 関数では空または無効なハンドルとして NULL を使用し、他の API 関数はINVALID_HANDLE_VALUEを使用します。 `CHandle`NULL のみを使用し、INVALID_HANDLE_VALUEを実際のハンドルとして扱います。 INVALID_HANDLE_VALUE返すことができる API を呼び出す場合は[、CHandle::Attach](#attach)を呼び出すか`CHandle`、コンストラクターに渡す前にこの値をチェックし、代わりに NULL を渡す必要があります。
+> 一部の API 関数では、空または無効なハンドルとして NULL が使用され、他の関数は INVALID_HANDLE_VALUE を使用します。 `CHandle` は NULL のみを使用し、INVALID_HANDLE_VALUE を実際のハンドルとして扱います。 INVALID_HANDLE_VALUE を返すことができる API を呼び出す場合は、 [CHandle:: Attach](#attach) を呼び出す前にこの値を確認するか、コンストラクターに渡し `CHandle` 、代わりに NULL を渡す必要があります。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-**ヘッダー:** atlbase.h
+**ヘッダー:** atlbase. h
 
-## <a name="chandleattach"></a><a name="attach"></a>ハンドル::アタッチ
+## <a name="chandleattach"></a><a name="attach"></a> CHandle:: Attach
 
-オブジェクトを既存のハンドルに`CHandle`アタッチします。
+オブジェクトを既存のハンドルにアタッチするには、このメソッドを呼び出し `CHandle` ます。
 
 ```cpp
 void Attach(HANDLE h) throw();
@@ -80,14 +81,14 @@ void Attach(HANDLE h) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*H*<br/>
-`CHandle`ハンドル*h*の所有権を取得します。
+*h*<br/>
+`CHandle` は *、ハンドルの* 所有権を取得します。
 
 ### <a name="remarks"></a>解説
 
-h ハンドル`CHandle`にオブジェクトを*h*割り当て **、h.Detach() を**呼び出します。 デバッグ ビルドでは *、h*が NULL の場合に ATLASSERT が発生します。 ハンドルの有効性に関する他のチェックは行いません。
+オブジェクトを `CHandle` *h* ハンドルに割り当て、その後、 **.h ()** を呼び出します。 デバッグビルドでは、 *h* が NULL の場合に ATLASSERT が発生します。 ハンドルが有効であるかどうかの確認は行われません。
 
-## <a name="chandlechandle"></a><a name="chandle"></a>ハンドル::Cハンドル
+## <a name="chandlechandle"></a><a name="chandle"></a> CHandle::CHandle
 
 コンストラクターです。
 
@@ -99,14 +100,14 @@ explicit CHandle(HANDLE h) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*H*<br/>
-既存のハンドルまたは`CHandle`.
+*h*<br/>
+既存のハンドルまたは `CHandle` 。
 
 ### <a name="remarks"></a>解説
 
-既存のハンドル`CHandle`または`CHandle`オブジェクトを使用して、必要に応じて新しいオブジェクトを作成します。
+新しいオブジェクトを作成し `CHandle` ます。必要に応じて、既存のハンドルまたはオブジェクトを使用し `CHandle` ます。
 
-## <a name="chandlechandle"></a><a name="dtor"></a>ハンドル::~Cハンドル
+## <a name="chandlechandle"></a><a name="dtor"></a> CHandle:: ~ CHandle
 
 デストラクターです。
 
@@ -116,11 +117,11 @@ explicit CHandle(HANDLE h) throw();
 
 ### <a name="remarks"></a>解説
 
-`CHandle` [CHandle::Close](#close)を呼び出してオブジェクトを解放します。
+`CHandle` [CHandle:: Close](#close)を呼び出して、オブジェクトを解放します。
 
-## <a name="chandleclose"></a><a name="close"></a>ハンドル::閉じる
+## <a name="chandleclose"></a><a name="close"></a> CHandle:: Close
 
-`CHandle`オブジェクトを閉じます。
+オブジェクトを閉じるには、このメソッドを呼び出し `CHandle` ます。
 
 ```cpp
 void Close() throw();
@@ -128,11 +129,11 @@ void Close() throw();
 
 ### <a name="remarks"></a>解説
 
-開いているオブジェクト ハンドルを閉じます。 ハンドルが NULL の場合は、既に呼`Close`び出されている場合、デバッグ ビルドで ATLASSERT が発生します。
+開いているオブジェクトハンドルを閉じます。 ハンドルが NULL の場合、 `Close` が既に呼び出されている場合は、デバッグビルドで ATLASSERT が発生します。
 
-## <a name="chandledetach"></a><a name="detach"></a>ハンドル::Dエタッハ
+## <a name="chandledetach"></a><a name="detach"></a> CHandle::D etach
 
-`CHandle`オブジェクトからハンドルをデタッチします。
+オブジェクトからハンドルをデタッチするには、このメソッドを呼び出し `CHandle` ます。
 
 ```
 HANDLE Detach() throw();
@@ -146,7 +147,7 @@ HANDLE Detach() throw();
 
 ハンドルの所有権を解放します。
 
-## <a name="chandlem_h"></a><a name="m_h"></a>ハンドル::m_h
+## <a name="chandlem_h"></a><a name="m_h"></a> CHandle:: m_h
 
 ハンドルを格納するメンバー変数。
 
@@ -154,7 +155,7 @@ HANDLE Detach() throw();
 HANDLE m_h;
 ```
 
-## <a name="chandleoperator-"></a><a name="operator_eq"></a>ハンドル::演算子 =
+## <a name="chandleoperator-"></a><a name="operator_eq"></a> CHandle:: operator =
 
 代入演算子。
 
@@ -164,18 +165,18 @@ CHandle& operator=(CHandle& h) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*H*<br/>
-`CHandle`ハンドル*h*の所有権を取得します。
+*h*<br/>
+`CHandle` は *、ハンドルの* 所有権を取得します。
 
 ### <a name="return-value"></a>戻り値
 
-新しい`CHandle`オブジェクトへの参照を返します。
+新しいオブジェクトへの参照を返し `CHandle` ます。
 
 ### <a name="remarks"></a>解説
 
-オブジェクトに`CHandle`現在ハンドルが含まれている場合、そのハンドルは閉じられます。 渡`CHandle`されるオブジェクトのハンドル参照は NULL に設定されます。 これにより、2`CHandle`つのオブジェクトが同じアクティブ ハンドルを含めなくなります。
+オブジェクトに `CHandle` 現在ハンドルが含まれている場合は、閉じられます。 `CHandle`渡されたオブジェクトのハンドル参照が NULL に設定されます。 これにより、2つの `CHandle` オブジェクトが同じアクティブハンドルを含むことがなくなります。
 
-## <a name="chandleoperator-handle"></a><a name="operator_handle"></a>ハンドル::演算子ハンドル
+## <a name="chandleoperator-handle"></a><a name="operator_handle"></a> CHandle:: operator ハンドル
 
 格納されているハンドルの値を返します。
 
@@ -185,7 +186,7 @@ operator HANDLE() const throw();
 
 ### <a name="remarks"></a>解説
 
-に格納されている値[m_hを返](#m_h)します。
+[CHandle:: m_h](#m_h)に格納されている値を返します。
 
 ## <a name="see-also"></a>関連項目
 

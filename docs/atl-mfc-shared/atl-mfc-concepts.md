@@ -1,24 +1,25 @@
 ---
-title: ATL-MFC 概念
+description: 詳細については、「ATL/MFC の概念」を参照してください。
+title: ATL-MFC の概念
 ms.date: 11/04/2016
 helpviewer_keywords:
 - MFC
 - ATL
 ms.assetid: 4d973f56-8730-4e0b-9522-b5f43bc4548d
-ms.openlocfilehash: c1107a82cc4bb66e35620cb8c4d6c4cd711241f3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 67c78c9f2e42012bdf81b1e91bfddcc5ca216c9d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62210067"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97142702"
 ---
-# <a name="atlmfc-concepts"></a>ATL と MFC の概念
+# <a name="atlmfc-concepts"></a>ATL/MFC の概念
 
-このセクションに役立つ概念とタスク ベースのトピックは、Active Template Library (ATL) と Microsoft Foundation Class (MFC) ライブラリの間で共有されるクラスを使用したプログラミングします。
+このセクションでは、Active Template Library (ATL) と Microsoft Foundation Class (MFC) ライブラリ間で共有されるクラスを使用したプログラミングに役立つ概念とタスクベースのトピックを紹介します。
 
 ## <a name="in-this-section"></a>このセクションの内容
 
-[文字列 (ATL と MFC)](../atl-mfc-shared/strings-atl-mfc.md)<br/>
+[文字列 (ATL/MFC)](../atl-mfc-shared/strings-atl-mfc.md)<br/>
 アプリケーションで文字列データを管理する方法について説明します。
 
 ## <a name="see-also"></a>関連項目

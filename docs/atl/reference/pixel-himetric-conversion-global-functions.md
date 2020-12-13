@@ -1,16 +1,17 @@
 ---
+description: 詳細については、「Pixel/HIMETRIC 変換のグローバル関数」を参照してください。
 title: ピクセル-HIMETRIC 変換のグローバル関数
 ms.date: 11/04/2016
 f1_keywords:
 - atlwin/ATL::AtlHiMetricToPixel
 - atlwin/ATL::AtlPixelToHiMetric
 ms.assetid: ecb1b1b2-7e9d-4fbc-a855-16252d2d794c
-ms.openlocfilehash: e71dccbccbe43ea7df3b6a7005da138a8e31aeb3
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 53753ff92b04466a94b821fdc4b4f221117c6ade
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88834688"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97138984"
 ---
 # <a name="pixelhimetric-conversion-global-functions"></a>Pixel/HIMETRIC 変換のグローバル関数
 
@@ -46,7 +47,7 @@ extern void AtlHiMetricToPixel(
 
 [!code-cpp[NVC_ATL_COM#49](../../atl/codesnippet/cpp/pixel-himetric-conversion-global-functions_1.cpp)]
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 **ヘッダー:** atlwin. h
 
@@ -72,7 +73,7 @@ extern void AtlPixelToHiMetric(
 
 [!code-cpp[NVC_ATL_COM#51](../../atl/codesnippet/cpp/pixel-himetric-conversion-global-functions_2.cpp)]
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 **ヘッダー:** atlwin. h
 

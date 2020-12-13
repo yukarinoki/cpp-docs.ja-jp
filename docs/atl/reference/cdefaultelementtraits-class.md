@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: CDefaultElementTraits クラス'
 title: CDefaultElementTraits クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - CDefaultElementTraits class
 ms.assetid: ac5ee610-7957-4b7c-92b6-38ff72e4118e
-ms.openlocfilehash: 0ee076af5fc4a1c2145162ac510b3a4460e251e0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f4dd1bae67ef626ef793ecee946d88879a07f194
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62245935"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97141896"
 ---
 # <a name="cdefaultelementtraits-class"></a>CDefaultElementTraits クラス
 
-このクラスは、コレクション クラスの既定のメソッドおよび関数を提供します。
+このクラスは、コレクションクラスの既定のメソッドと関数を提供します。
 
 ## <a name="syntax"></a>構文
 
@@ -30,17 +31,17 @@ class CDefaultElementTraits : public CElementTraitsBase<T>,
 #### <a name="parameters"></a>パラメーター
 
 *T*<br/>
-コレクションに格納されるデータの型。
+コレクションに格納するデータの型。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-このクラスは、移動、コピー、比較、およびコレクション クラスのオブジェクトに格納されているハッシュの要素の既定の静的関数およびメソッドを提供します。 その関数とメソッドをこのクラスの派生[CElementTraitsBase](../../atl/reference/celementtraitsbase-class.md)、 [CDefaultHashTraits](../../atl/reference/cdefaulthashtraits-class.md)、および[CDefaultCompareTraits](../../atl/reference/cdefaultcomparetraits-class.md)を使用していると[CElementTraits](../../atl/reference/celementtraits-class.md)、 [CPrimitiveElementTraits](../../atl/reference/cprimitiveelementtraits-class.md)、および[CHeapPtrElementTraits](../../atl/reference/cheapptrelementtraits-class.md)します。
+このクラスには、コレクションクラスオブジェクトに格納されている要素の移動、コピー、比較、およびハッシュを行うための既定の静的関数とメソッドが用意されています。 このクラスは、 [CElementTraitsBase](../../atl/reference/celementtraitsbase-class.md)、 [cdefaulthashtraits](../../atl/reference/cdefaulthashtraits-class.md)、および [cdefaultcompare特徴](../../atl/reference/cdefaultcomparetraits-class.md)から派生した関数とメソッドを派生し、 [Celementtraits](../../atl/reference/celementtraits-class.md)、 [CPrimitiveElementTraits](../../atl/reference/cprimitiveelementtraits-class.md)、および [CHeapPtrElementTraits](../../atl/reference/cheapptrelementtraits-class.md)によって使用されます。
 
-詳細については、次を参照してください。 [ATL コレクション クラス](../../atl/atl-collection-classes.md)します。
+詳細については、「 [ATL コレクションクラス](../../atl/atl-collection-classes.md)」を参照してください。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-**ヘッダー:** atlcoll.h
+**ヘッダー:** atlcoll. h
 
 ## <a name="see-also"></a>関連項目
 
