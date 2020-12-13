@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: オプション、ATL プロパティページウィザード'
 title: オプション、ATL プロパティ ページ ウィザード
 ms.date: 05/09/2019
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - ATL Property Page Wizard, options
 ms.assetid: a7107779-b2ea-4f99-b84b-7f3e0c504bc8
-ms.openlocfilehash: 74cf72feedd8dc8e1186d54a8abe840195964620
-ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
+ms.openlocfilehash: ea7508f49e48c2ef1387fb4b48b816f4e16cdb99
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "92923663"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97138997"
 ---
 # <a name="options-atl-property-page-wizard"></a>オプション、ATL プロパティ ページ ウィザード
 
@@ -42,13 +43,13 @@ ATL プロパティ ページ ウィザードは、Visual Studio 2019 以降で�
 
    |オプション|説明|
    |------------|-----------------|
-   |**はい**|集計可能なプロパティ ページを作成します。|
+   |**あり**|集計可能なプロパティ ページを作成します。|
    |**いいえ**|集計が不可能なプロパティ ページを作成します。|
    |**専用**|集計経由でのみインスタンス化できるプロパティ ページを作成します。|
 
 ::: moniker-end
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 
 [ATL プロパティ ページ ウィザード](../../atl/reference/atl-property-page-wizard.md)<br/>
 [文字列、ATL プロパティ ページ ウィザード](../../atl/reference/strings-atl-property-page-wizard.md)

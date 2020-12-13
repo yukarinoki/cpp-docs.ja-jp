@@ -1,5 +1,6 @@
 ---
-title: クラス
+description: '詳細情報: C焼討 Propnotifyevent クラス'
+title: C焼討 Propnotifyevent クラス
 ms.date: 11/04/2016
 f1_keywords:
 - CFirePropNotifyEvent
@@ -11,16 +12,16 @@ helpviewer_keywords:
 - CFirePropNotifyEvent class
 - connection points [C++], notifying of events
 ms.assetid: eb7a563e-6bce-4cdf-8d20-8c6a5307781b
-ms.openlocfilehash: 1dfce42176341d74ffc7d9b42f856e71b17bf4f5
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 09102e67408195751e083807f444c1b028fd2762
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81326970"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97141727"
 ---
-# <a name="cfirepropnotifyevent-class"></a>クラス
+# <a name="cfirepropnotifyevent-class"></a>C焼討 Propnotifyevent クラス
 
-このクラスには、コントロール プロパティの変更に関するコンテナーのシンクに通知するメソッドが用意されています。
+このクラスは、コントロールプロパティの変更についてコンテナーのシンクに通知するためのメソッドを提供します。
 
 > [!IMPORTANT]
 > このクラスとそのメンバーは、Windows ランタイムで実行されるアプリケーションでは使用できません。
@@ -37,24 +38,24 @@ class CFirePropNotifyEvent
 
 |名前|説明|
 |----------|-----------------|
-|[イベント::火災が変更されました](#fireonchanged)|(静的)コントロール プロパティが変更されたことをコンテナーのシンクに通知します。|
-|[イベント:::イベントを送信します。](#fireonrequestedit)|(静的)コントロール プロパティが変更されようとしていることをコンテナーのシンクに通知します。|
+|[C焼討 Propnotifyevent:: FireOnChanged](#fireonchanged)|雑音コントロールプロパティが変更されたことをコンテナーのシンクに通知します。|
+|[C焼討 Propnotifyevent:: 焼討 Onrequestedit](#fireonrequestedit)|雑音コントロールプロパティが変更されようとしていることをコンテナーのシンクに通知します。|
 
 ## <a name="remarks"></a>解説
 
-`CFirePropNotifyEvent`には、コントロール プロパティが変更されたか、変更されようとしていることをコンテナーのシンクに通知する 2 つのメソッドがあります。
+`CFirePropNotifyEvent` には、コントロールプロパティが変更されたか変更されようとしていることをコンテナーのシンクに通知する2つのメソッドがあります。
 
-コントロールを`IPropertyNotifySink`実装するクラスが から派生している場合`CFirePropNotifyEvent`、メソッドは 呼び出`FireOnRequestEdit`し`FireOnChanged`時に呼び出されます。 コントロール クラスが から`IPropertyNotifySink`派生していない場合、これらの関数の呼び出しはS_OK返します。
+コントロールを実装しているクラスがから派生している場合は、 `IPropertyNotifySink` `CFirePropNotifyEvent` またはを呼び出すと、メソッドが呼び出され `FireOnRequestEdit` `FireOnChanged` ます。 コントロールクラスがから派生していない場合 `IPropertyNotifySink` 、これらの関数を呼び出すと S_OK が返されます。
 
-コントロールの作成の詳細については[、「ATL チュートリアル](../../atl/active-template-library-atl-tutorial.md)」を参照してください。
+コントロールの作成の詳細については、 [ATL チュートリアル](../../atl/active-template-library-atl-tutorial.md)を参照してください。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-**ヘッダー:** atlctl.h
+**ヘッダー:** atlctl. h
 
-## <a name="cfirepropnotifyeventfireonchanged"></a><a name="fireonchanged"></a>イベント::火災が変更されました
+## <a name="cfirepropnotifyeventfireonchanged"></a><a name="fireonchanged"></a> C焼討 Propnotifyevent:: FireOnChanged
 
-接続されているすべての[IPropertyNotifySink](/windows/win32/api/ocidl/nn-ocidl-ipropertynotifysink)インターフェイス (オブジェクトのすべてのコネクション ポイント) に、指定したオブジェクト プロパティが変更されたことを通知します。
+指定されたオブジェクトのプロパティが変更されたことを、すべての接続された [IPropertyNotifySink](/windows/win32/api/ocidl/nn-ocidl-ipropertynotifysink) インターフェイス (オブジェクトのすべての接続ポイント) に通知します。
 
 ```
 static HRESULT FireOnChanged(IUnknown* pUnk, DISPID dispID);
@@ -63,22 +64,22 @@ static HRESULT FireOnChanged(IUnknown* pUnk, DISPID dispID);
 ### <a name="parameters"></a>パラメーター
 
 *パンク*<br/>
-[in]通知を送信`IUnknown`するオブジェクトへのポインター。
+から通知を送信するオブジェクトのへのポインター `IUnknown` 。
 
-*Dispid*<br/>
-[in]変更されたプロパティの識別子。
+*dispID*<br/>
+から変更されたプロパティの識別子。
 
 ### <a name="return-value"></a>戻り値
 
-標準の HRESULT 値の 1 つ。
+標準の HRESULT 値の1つ。
 
 ### <a name="remarks"></a>解説
 
-この関数は、コントロールがコネクション ポイントをサポートしていない場合でも、安全に呼び出します。
+コントロールが接続ポイントをサポートしていない場合でも、この関数は安全に呼び出すことができます。
 
-## <a name="cfirepropnotifyeventfireonrequestedit"></a><a name="fireonrequestedit"></a>イベント:::イベントを送信します。
+## <a name="cfirepropnotifyeventfireonrequestedit"></a><a name="fireonrequestedit"></a> C焼討 Propnotifyevent:: 焼討 Onrequestedit
 
-接続されているすべての[IPropertyNotifySink](/windows/win32/api/ocidl/nn-ocidl-ipropertynotifysink)インターフェイス (オブジェクトのすべてのコネクション ポイント) に、指定したオブジェクト プロパティが変更されようとしていることを通知します。
+指定されたオブジェクトプロパティが変更されようとしている、すべての接続されている [IPropertyNotifySink](/windows/win32/api/ocidl/nn-ocidl-ipropertynotifysink) インターフェイス (オブジェクトのすべての接続ポイント) に通知します。
 
 ```
 static HRESULT FireOnRequestEdit(IUnknown* pUnk, DISPID dispID);
@@ -87,18 +88,18 @@ static HRESULT FireOnRequestEdit(IUnknown* pUnk, DISPID dispID);
 ### <a name="parameters"></a>パラメーター
 
 *パンク*<br/>
-[in]通知を送信`IUnknown`するオブジェクトへのポインター。
+から通知を送信するオブジェクトのへのポインター `IUnknown` 。
 
-*Dispid*<br/>
-[in]変更しようとしているプロパティの識別子。
+*dispID*<br/>
+から変更するプロパティの識別子。
 
 ### <a name="return-value"></a>戻り値
 
-標準の HRESULT 値の 1 つ。
+標準の HRESULT 値の1つ。
 
 ### <a name="remarks"></a>解説
 
-この関数は、コントロールがコネクション ポイントをサポートしていない場合でも、安全に呼び出します。
+コントロールが接続ポイントをサポートしていない場合でも、この関数は安全に呼び出すことができます。
 
 ## <a name="see-also"></a>関連項目
 

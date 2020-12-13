@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: CComVariant クラス'
 title: CComVariant クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -20,12 +21,12 @@ helpviewer_keywords:
 - CComVariant class
 - VARIANT macro, ATL
 ms.assetid: 4d31149c-d005-44b5-a509-10f84afa2b61
-ms.openlocfilehash: 40315077ceba3d87e12c8ab426560deef4928793
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: e618e7e68704d2fd8b69aecd58cbf986bb704c53
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88833609"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97142130"
 ---
 # <a name="ccomvariant-class"></a>CComVariant クラス
 
@@ -83,7 +84,7 @@ class CComVariant : public tagVARIANT
 
 `CComVariant`
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** atlcomcli. h
 
@@ -106,7 +107,7 @@ HRESULT Attach(VARIANT* pSrc);
 
 ### <a name="remarks"></a>解説
 
-*Psrc*によって保持されているデータの所有権は、オブジェクトに転送され `CComVariant` ます。
+*Psrc* によって保持されているデータの所有権は、オブジェクトに転送され `CComVariant` ます。
 
 ## <a name="ccomvariantccomvariant"></a><a name="ccomvariant"></a> CComVariant:: CComVariant
 
@@ -150,7 +151,7 @@ CComVariant(const CComBSTR& bstrSrc);
 から **`bool`** オブジェクトを初期化するために使用する `CComVariant` 。 **`bool`** 引数は、格納される前に VARIANT_BOOL に変換されます。 オブジェクトの型が `CComVariant` VT_BOOL されます。
 
 *nSrc*<br/>
-から**`int`** オブジェクトを**BYTE** **`short`** **`long`** **`unsigned short`** **`unsigned long`** **`unsigned int`** 初期化するために使用される、、BYTE、、、longlong、ULONGLONG、、、または `CComVariant` 。 オブジェクトの型は、 `CComVariant` それぞれ VT_I4、VT_UI1、VT_I2、VT_I4、VT_I8、VT_UI8、VT_UI2、VT_UI4、または VT_UI4 になります。
+から **`int`** オブジェクトを **`short`** **`long`** **`unsigned short`** **`unsigned long`** **`unsigned int`** 初期化するために使用される、、BYTE、、、longlong、ULONGLONG、、、または `CComVariant` 。 オブジェクトの型は、 `CComVariant` それぞれ VT_I4、VT_UI1、VT_I2、VT_I4、VT_I8、VT_UI8、VT_UI2、VT_UI4、または VT_UI4 になります。
 
 *vtSrc*<br/>
 からバリアントの型。 最初のパラメーターがの場合 **`int`** 、有効な型は VT_I4 および VT_INT です。 最初のパラメーターがの場合 **`long`** 、有効な型は VT_I4 および VT_ERROR です。 最初のパラメーターがの場合 **`double`** 、有効な型は VT_R8 および VT_DATE です。 最初のパラメーターがの場合 **`unsigned int`** 、有効な型は VT_UI4 および VT_UINT です。
@@ -213,7 +214,7 @@ HRESULT ChangeType(VARTYPE vtNew, const VARIANT* pSrc = NULL);
 
 ### <a name="remarks"></a>解説
 
-*Psrc*に値を渡すと、 `ChangeType` はこのバリアントを変換のソースとして使用します。 それ以外の場合は、 `CComVariant` オブジェクトがソースになります。
+*Psrc* に値を渡すと、 `ChangeType` はこのバリアントを変換のソースとして使用します。 それ以外の場合は、 `CComVariant` オブジェクトがソースになります。
 
 ## <a name="ccomvariantclear"></a><a name="clear"></a> CComVariant:: Clear
 
@@ -288,7 +289,7 @@ HRESULT Detach(VARIANT* pDest);
 
 ### <a name="remarks"></a>解説
 
-*Pdest*によって参照されるバリアントの内容は、呼び出し元のオブジェクトの値と型が割り当てられる前に自動的にクリアされることに注意して `CComVariant` ください。
+*Pdest* によって参照されるバリアントの内容は、呼び出し元のオブジェクトの値と型が割り当てられる前に自動的にクリアされることに注意して `CComVariant` ください。
 
 ## <a name="ccomvariantgetsize"></a><a name="getsize"></a> CComVariant:: GetSize
 
@@ -342,7 +343,7 @@ CComVariant& operator=(char cSrc) throw();
 ### <a name="parameters"></a>パラメーター
 
 *varSrc*<br/>
-から`CComVariant`オブジェクトに[VARIANT](/windows/win32/api/oaidl/ns-oaidl-variant)割り当てられるまたはバリアント `CComVariant` 。 変換元バリアントの内容は変換せずにコピー先にコピーされます。
+から`CComVariant`オブジェクトに[](/windows/win32/api/oaidl/ns-oaidl-variant)割り当てられるまたはバリアント `CComVariant` 。 変換元バリアントの内容は変換せずにコピー先にコピーされます。
 
 *bstrSrc*<br/>
 からオブジェクトに割り当てられる BSTR `CComVariant` 。 オブジェクトの型が `CComVariant` VT_BSTR されます。
@@ -383,7 +384,7 @@ bool operator==(const VARIANT& varSrc) const throw();
 
 ### <a name="remarks"></a>解説
 
-*Varsrc*の値と型が、オブジェクトの値と型にそれぞれ等しい場合に TRUE を返し `CComVariant` ます。 それ以外の場合は FALSE。 演算子は、ユーザーの既定のロケールを使用して比較を実行します。
+*Varsrc* の値と型が、オブジェクトの値と型にそれぞれ等しい場合に TRUE を返し `CComVariant` ます。 それ以外の場合は FALSE。 演算子は、ユーザーの既定のロケールを使用して比較を実行します。
 
 演算子は、バリアント型の値のみを比較します。 これは、文字列、整数、および浮動小数点を比較しますが、配列やレコードは比較しません。
 
@@ -397,7 +398,7 @@ bool operator!=(const VARIANT& varSrc) const throw();
 
 ### <a name="remarks"></a>解説
 
-*Varsrc*の値または型が、それぞれオブジェクトの値または型と等しくない場合に TRUE を返し `CComVariant` ます。 それ以外の場合は FALSE。 演算子は、ユーザーの既定のロケールを使用して比較を実行します。
+*Varsrc* の値または型が、それぞれオブジェクトの値または型と等しくない場合に TRUE を返し `CComVariant` ます。 それ以外の場合は FALSE。 演算子は、ユーザーの既定のロケールを使用して比較を実行します。
 
 演算子は、バリアント型の値のみを比較します。 これは、文字列、整数、および浮動小数点を比較しますが、配列やレコードは比較しません。
 
@@ -411,7 +412,7 @@ bool operator<(const VARIANT& varSrc) const throw();
 
 ### <a name="remarks"></a>解説
 
-オブジェクトの値 `CComVariant` が *varsrc*の値より小さい場合に TRUE を返します。 それ以外の場合は FALSE。 演算子は、ユーザーの既定のロケールを使用して比較を実行します。
+オブジェクトの値 `CComVariant` が *varsrc* の値より小さい場合に TRUE を返します。 それ以外の場合は FALSE。 演算子は、ユーザーの既定のロケールを使用して比較を実行します。
 
 ## <a name="ccomvariantoperator-gt"></a><a name="operator_gt"></a> CComVariant:: operator &gt;
 
@@ -423,7 +424,7 @@ bool operator>(const VARIANT& varSrc) const throw();
 
 ### <a name="remarks"></a>解説
 
-オブジェクトの値 `CComVariant` が *varsrc*の値より大きい場合に TRUE を返します。 それ以外の場合は FALSE。 演算子は、ユーザーの既定のロケールを使用して比較を実行します。
+オブジェクトの値 `CComVariant` が *varsrc* の値より大きい場合に TRUE を返します。 それ以外の場合は FALSE。 演算子は、ユーザーの既定のロケールを使用して比較を実行します。
 
 ## <a name="ccomvariantreadfromstream"></a><a name="readfromstream"></a> CComVariant:: ReadFromStream
 

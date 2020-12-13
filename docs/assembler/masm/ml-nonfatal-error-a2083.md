@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: ML の致命的でないエラー A2083'
 title: ML の致命的でないエラー A2083
 ms.date: 12/17/2019
 ms.custom: error-reference
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - A2083
 ms.assetid: d2715877-1702-44e5-ab8f-6ef1fb6069f1
-ms.openlocfilehash: 08994219eb1a1f322898ba9acfc92a22a3ce3eed
-ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
+ms.openlocfilehash: b90ddbfe9a140ef2a694fd155b5e923c18483fc9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75317956"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97128571"
 ---
 # <a name="ml-nonfatal-error-a2083"></a>ML の致命的でないエラー A2083
 

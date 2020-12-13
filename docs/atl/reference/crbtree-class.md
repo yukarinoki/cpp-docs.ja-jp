@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「CRBTree クラス」を参照してください。
 title: CRBTree クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -27,16 +28,16 @@ f1_keywords:
 helpviewer_keywords:
 - CRBTree class
 ms.assetid: a1b1cb63-38e4-4fc2-bb28-f774d1721760
-ms.openlocfilehash: 7b8e47b5cd0ac278711947abc867956333371be3
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 3c45c8b05429ba75905912d76f87605a07ff49e1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88833492"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97140973"
 ---
 # <a name="crbtree-class"></a>CRBTree クラス
 
-このクラスは、赤の黒のツリーを作成および利用するためのメソッドを提供します。
+このクラスには、Red-Black ツリーを作成および利用するためのメソッドが用意されています。
 
 ## <a name="syntax"></a>構文
 
@@ -50,7 +51,7 @@ class CRBTree
 
 #### <a name="parameters"></a>パラメーター
 
-*Kb*<br/>
+*K*<br/>
 キー要素の型。
 
 *V*<br/>
@@ -108,13 +109,13 @@ class CRBTree
 
 ## <a name="remarks"></a>解説
 
-赤い黒のツリーは、ノードごとに追加の情報を使用して "均衡" を保つようにするバイナリ検索ツリーです。つまり、ツリーの高さが過度に大きくなり、パフォーマンスに影響を与えることはありません。
+Red-Black ツリーは、ノードごとに追加の情報を使用して "均衡" を保つようにするバイナリ検索ツリーです。つまり、ツリーの高さが過度に大きくなり、パフォーマンスに影響を与えないようにします。
 
 このテンプレートクラスは、 [CRBMap](../../atl/reference/crbmap-class.md) と [CRBMultiMap](../../atl/reference/crbmultimap-class.md)によって使用されるように設計されています。 これらの派生クラスを構成するメソッドの大部分は、によって提供され `CRBTree` ます。
 
 さまざまなコレクションクラスとその機能とパフォーマンス特性の詳細については、「 [ATL コレクションクラス](../../atl/atl-collection-classes.md)」を参照してください。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** atlcoll. h
 
@@ -182,7 +183,7 @@ void GetAt(POSITION pos, KOUTARGTYPE key, VOUTARGTYPE value) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*po*<br/>
+*pos*<br/>
 位置を表す値です。
 
 *key*<br/>
@@ -239,7 +240,7 @@ const K& GetKeyAt(POSITION pos) const throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*po*<br/>
+*pos*<br/>
 位置を表す値です。
 
 ### <a name="return-value"></a>戻り値
@@ -248,7 +249,7 @@ const K& GetKeyAt(POSITION pos) const throw();
 
 ### <a name="remarks"></a>解説
 
-*Pos*が有効な位置の値でない場合、結果は予測できません。 デバッグビルドでは、 *pos* が NULL と等しい場合にアサーションエラーが発生します。
+*Pos* が有効な位置の値でない場合、結果は予測できません。 デバッグビルドでは、 *pos* が NULL と等しい場合にアサーションエラーが発生します。
 
 ## <a name="crbtreegetnext"></a><a name="getnext"></a> CRBTree:: GetNext
 
@@ -261,7 +262,7 @@ CPair* GetNext(POSITION& pos) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*po*<br/>
+*pos*<br/>
 [Crbtree:: GetHeadPosition](#getheadposition)や[Crbtree:: FindFirstKeyAfter](#findfirstkeyafter)などのメソッドの以前の呼び出しによって返された位置カウンター。
 
 ### <a name="return-value"></a>戻り値
@@ -285,7 +286,7 @@ void GetNextAssoc(
 
 ### <a name="parameters"></a>パラメーター
 
-*po*<br/>
+*pos*<br/>
 [Crbtree:: GetHeadPosition](#getheadposition)や[Crbtree:: FindFirstKeyAfter](#findfirstkeyafter)などのメソッドの以前の呼び出しによって返された位置カウンター。
 
 *key*<br/>
@@ -308,7 +309,7 @@ const K& GetNextKey(POSITION& pos) const throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*po*<br/>
+*pos*<br/>
 [Crbtree:: GetHeadPosition](#getheadposition)や[Crbtree:: FindFirstKeyAfter](#findfirstkeyafter)などのメソッドの以前の呼び出しによって返された位置カウンター。
 
 ### <a name="return-value"></a>戻り値
@@ -330,7 +331,7 @@ V& GetNextValue(POSITION& pos) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*po*<br/>
+*pos*<br/>
 [Crbtree:: GetHeadPosition](#getheadposition)や[Crbtree:: FindFirstKeyAfter](#findfirstkeyafter)などのメソッドの以前の呼び出しによって返された位置カウンター。
 
 ### <a name="return-value"></a>戻り値
@@ -352,7 +353,7 @@ CPair* GetPrev(POSITION& pos) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*po*<br/>
+*pos*<br/>
 [Crbtree:: GetHeadPosition](#getheadposition)や[Crbtree:: FindFirstKeyAfter](#findfirstkeyafter)などのメソッドの以前の呼び出しによって返された位置カウンター。
 
 ### <a name="return-value"></a>戻り値
@@ -390,7 +391,7 @@ V& GetValueAt(POSITION pos) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*po*<br/>
+*pos*<br/>
 [Crbtree:: GetHeadPosition](#getheadposition)や[Crbtree:: FindFirstKeyAfter](#findfirstkeyafter)などのメソッドの以前の呼び出しによって返された位置カウンター。
 
 ### <a name="return-value"></a>戻り値
@@ -447,12 +448,12 @@ void RemoveAt(POSITION pos) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*po*<br/>
+*pos*<br/>
 [Crbtree:: GetHeadPosition](#getheadposition)や[Crbtree:: FindFirstKeyAfter](#findfirstkeyafter)などのメソッドの以前の呼び出しによって返された位置カウンター。
 
 ### <a name="remarks"></a>解説
 
-指定した位置に格納されているキーと値のペアを削除します。 要素を格納するために使用されるメモリが解放されます。 *Pos*によって参照される位置が無効になり、ツリー内の他の要素の位置が有効なままでも、必ずしも同じ順序で保持されるわけではありません。
+指定した位置に格納されているキーと値のペアを削除します。 要素を格納するために使用されるメモリが解放されます。 *Pos* によって参照される位置が無効になり、ツリー内の他の要素の位置が有効なままでも、必ずしも同じ順序で保持されるわけではありません。
 
 ## <a name="crbtreesetvalueat"></a><a name="setvalueat"></a> CRBTree:: SetValueAt
 
@@ -464,7 +465,7 @@ void SetValueAt(POSITION pos, VINARGTYPE value);
 
 ### <a name="parameters"></a>パラメーター
 
-*po*<br/>
+*pos*<br/>
 [Crbtree:: GetHeadPosition](#getheadposition)や[Crbtree:: FindFirstKeyAfter](#findfirstkeyafter)などのメソッドの以前の呼び出しによって返された位置カウンター。
 
 *value*<br/>

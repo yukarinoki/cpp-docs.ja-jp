@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「複合コントロールのグローバル関数」を参照してください。
 title: 複合コントロールのグローバル関数
 ms.date: 11/04/2016
 f1_keywords:
@@ -18,12 +19,12 @@ f1_keywords:
 helpviewer_keywords:
 - composite controls, global functions
 ms.assetid: 536884cd-e863-4c7a-ab0a-604dc60a0bbe
-ms.openlocfilehash: fe9d9a3a0538e2e5744987adcd64e67562711ea8
-ms.sourcegitcommit: d9c94dcabd94537e304be0261b3263c2071b437b
+ms.openlocfilehash: fa46cc46247d409b85772e6c1aab229d97fd1c36
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91353117"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97141246"
 ---
 # <a name="composite-control-global-functions"></a>複合コントロールのグローバル関数
 
@@ -48,7 +49,7 @@ ms.locfileid: "91353117"
 |[AtlAxWinTerm](#atlaxwinterm)|AxWin オブジェクトのホストコードを初期化前します。|
 |[AtlGetObjectSourceInterface](#atlgetobjectsourceinterface)|オブジェクトの既定のソースインターフェイスに関する情報を返します。|
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** atlhost. h
 
@@ -88,7 +89,7 @@ ATLAPI_(int) AtlAxDialogBox(
 
 ### <a name="remarks"></a>解説
 
-ActiveX コントロールを含むダイアログテンプレートでを使用するには、 `AtlAxDialogBox` ダイアログリソースの**コントロール**セクションの*テキスト*フィールドとして有効な CLSID、APPID、または URL 文字列を指定し、同じセクションの下にある "AtlAxWin80" を*クラス名*フィールドとして指定します。 有効な **コントロール** セクションは次のようになります。
+ActiveX コントロールを含むダイアログテンプレートでを使用するには、 `AtlAxDialogBox` ダイアログリソースの **コントロール** セクションの *テキスト* フィールドとして有効な CLSID、APPID、または URL 文字列を指定し、同じセクションの下にある "AtlAxWin80" を *クラス名* フィールドとして指定します。 有効な **コントロール** セクションは次のようになります。
 
 ```
 CONTROL    "{04FE35E9-ADBC-4f1d-83FE-8FA4D1F71C7F}", IDC_TEST,

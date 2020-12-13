@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「リンカーツールの警告 LNK4220」を参照してください。
 title: リンカー ツールの警告 LNK4220
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,15 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - LNK4220
 ms.assetid: ba0cddfc-9c56-4a09-8207-f7b840a24b4d
-ms.openlocfilehash: ed572f0bb18e4b5a515f1512bd1001f7f21d8c93
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: f2d4b2139c26261c450bbc14c69a2dfe12c3a8f0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80183073"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97150567"
 ---
 # <a name="linker-tools-warning-lnk4220"></a>リンカー ツールの警告 LNK4220
 
 ' リンカーオプション ' の値 ' value ' が無効です。想定される既定値
 
-範囲外の値が[/TLBID](../../build/reference/tlbid-specify-resource-id-for-typelib.md)オプションと共に指定されました。 **/TLBID**の既定値は1です。
+範囲外の値が [/TLBID](../../build/reference/tlbid-specify-resource-id-for-typelib.md) オプションと共に指定されました。 **/TLBID** の既定値は1です。

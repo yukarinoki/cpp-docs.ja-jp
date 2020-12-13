@@ -1,5 +1,6 @@
 ---
-title: クラス
+description: '詳細情報: IOleControlImpl クラス'
+title: IOleControlImpl クラス
 ms.date: 11/04/2016
 f1_keywords:
 - IOleControlImpl
@@ -11,16 +12,16 @@ f1_keywords:
 helpviewer_keywords:
 - IOleControlImpl class
 ms.assetid: 5a4255ad-ede4-49ca-ba9a-07c2e919fa85
-ms.openlocfilehash: 947ec16e91b99cc42cff90abe7df4a5d13576e98
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: e224f6f8db79c05cb8a774cd57517ba06108e592
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81329615"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97139426"
 ---
-# <a name="iolecontrolimpl-class"></a>クラス
+# <a name="iolecontrolimpl-class"></a>IOleControlImpl クラス
 
-このクラスは、インターフェイスの既定の`IOleControl`実装を提供し`IUnknown`、実装します。
+このクラスは、インターフェイスの既定の実装を提供 `IOleControl` し、を実装し `IUnknown` ます。
 
 > [!IMPORTANT]
 > このクラスとそのメンバーは、Windows ランタイムで実行されるアプリケーションでは使用できません。
@@ -35,7 +36,7 @@ class IOleControlImpl
 #### <a name="parameters"></a>パラメーター
 
 *T*<br/>
-から派生したクラス`IOleControlImpl`。
+から派生したクラス `IOleControlImpl` 。
 
 ## <a name="members"></a>メンバー
 
@@ -43,16 +44,16 @@ class IOleControlImpl
 
 |名前|説明|
 |----------|-----------------|
-|[IOle コントロール インプル::フリーズイベント](#freezeevents)|コンテナーがコントロールのイベントを無視するか受け入れるかを示します。|
-|[コントロール インプル::取得コントロールヒント](#getcontrolinfo)|コントロールのキーボード動作に関する情報を入力します。 ATL の実装はE_NOTIMPL返します。|
-|[IOle コントロール インプル::オンアンビエントプロパティチェンジ](#onambientpropertychange)|コンテナーのアンビエント プロパティが変更されたことをコントロールに通知します。 ATL 実装はS_OKを返します。|
-|[IOleコントロールインプル::オンムネモニック](#onmnemonic)|指定したキーストロークをユーザーが押したことをコントロールに通知します。 ATL の実装はE_NOTIMPL返します。|
+|[IOleControlImpl:: FreezeEvents](#freezeevents)|コンテナーがコントロールのイベントを無視するか受け入れるかを示します。|
+|[IOleControlImpl:: Get制御 Linfo](#getcontrolinfo)|コントロールのキーボード動作に関する情報を入力します。 ATL 実装は E_NOTIMPL を返します。|
+|[IOleControlImpl:: OnAmbientPropertyChange](#onambientpropertychange)|1つ以上のコンテナーのアンビエントプロパティが変更されたことをコントロールに通知します。 ATL 実装は S_OK を返します。|
+|[IOleControlImpl:: OnMnemonic](#onmnemonic)|ユーザーが指定されたキーストロークを押したことをコントロールに通知します。 ATL 実装は E_NOTIMPL を返します。|
 
 ## <a name="remarks"></a>解説
 
-クラス`IOleControlImpl`は[、IOleControl](/windows/win32/api/ocidl/nn-ocidl-iolecontrol)インターフェイスの既定の実装を提供`IUnknown`し、デバッグ ビルドでダンプ デバイスに情報を送信することによって実装します。
+クラス `IOleControlImpl` は、 [IOleControl](/windows/win32/api/ocidl/nn-ocidl-iolecontrol) インターフェイスの既定の実装を提供し、 `IUnknown` デバッグビルドでダンプデバイスに情報を送信することによってを実装します。
 
-**関連記事** [ATL チュートリアル](../../atl/active-template-library-atl-tutorial.md), [ATL プロジェクトの作成](../../atl/reference/creating-an-atl-project.md)
+**関連記事** [ATL チュートリアル](../../atl/active-template-library-atl-tutorial.md)、 [atl プロジェクトの作成](../../atl/reference/creating-an-atl-project.md)
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -60,13 +61,13 @@ class IOleControlImpl
 
 `IOleControlImpl`
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-**ヘッダー:** atlctl.h
+**ヘッダー:** atlctl. h
 
-## <a name="iolecontrolimplfreezeevents"></a><a name="freezeevents"></a>IOle コントロール インプル::フリーズイベント
+## <a name="iolecontrolimplfreezeevents"></a><a name="freezeevents"></a> IOleControlImpl:: FreezeEvents
 
-ATL の実装では、`FreezeEvents``m_nFreezeEvents`コントロール クラスのデータ メンバーが TRUE`bFreeze`の場合はインクリメントし`m_nFreezeEvents`、FALSE の場合`bFreeze`はデクリメントします。
+ATL の実装で `FreezeEvents` は、が TRUE の場合はコントロールクラスの `m_nFreezeEvents` データメンバーをインクリメントし、 `bFreeze` が FALSE の場合はデクリメントし `m_nFreezeEvents` `bFreeze` ます。
 
 ```
 HRESULT FreezeEvents(BOOL bFreeze);
@@ -74,11 +75,11 @@ HRESULT FreezeEvents(BOOL bFreeze);
 
 ### <a name="remarks"></a>解説
 
-`FreezeEvents`S_OKを返します。
+`FreezeEvents` 次に、S_OK を返します。
 
-「Windows SDK[の IOleControl::フリーズイベント](/windows/win32/api/ocidl/nf-ocidl-iolecontrol-freezeevents)」を参照してください。
+Windows SDK の「 [IOleControl:: FreezeEvents](/windows/win32/api/ocidl/nf-ocidl-iolecontrol-freezeevents) 」を参照してください。
 
-## <a name="iolecontrolimplgetcontrolinfo"></a><a name="getcontrolinfo"></a>コントロール インプル::取得コントロールヒント
+## <a name="iolecontrolimplgetcontrolinfo"></a><a name="getcontrolinfo"></a> IOleControlImpl:: Get制御 Linfo
 
 コントロールのキーボード動作に関する情報を入力します。
 
@@ -88,15 +89,15 @@ HRESULT GetControlInfo(LPCONTROLINFO pCI);
 
 ### <a name="remarks"></a>解説
 
-Windows SDK[の「IOleControl:GetControlInfo」](/windows/win32/api/ocidl/nf-ocidl-iolecontrol-getcontrolinfo)を参照してください。
+Windows SDK の「 [IOleControl: Get Linfo](/windows/win32/api/ocidl/nf-ocidl-iolecontrol-getcontrolinfo) 」を参照してください。
 
 ### <a name="return-value"></a>戻り値
 
 E_NOTIMPL を返します。
 
-## <a name="iolecontrolimplonambientpropertychange"></a><a name="onambientpropertychange"></a>IOle コントロール インプル::オンアンビエントプロパティチェンジ
+## <a name="iolecontrolimplonambientpropertychange"></a><a name="onambientpropertychange"></a> IOleControlImpl:: OnAmbientPropertyChange
 
-コンテナーのアンビエント プロパティが変更されたことをコントロールに通知します。
+1つ以上のコンテナーのアンビエントプロパティが変更されたことをコントロールに通知します。
 
 ```
 HRESULT OnAmbientPropertyChange(DISPID dispid);
@@ -104,15 +105,15 @@ HRESULT OnAmbientPropertyChange(DISPID dispid);
 
 ### <a name="return-value"></a>戻り値
 
-S_OKを返します。
+S_OK を返します。
 
 ### <a name="remarks"></a>解説
 
-を参照してください[。](/windows/win32/api/ocidl/nf-ocidl-iolecontrol-onambientpropertychange)
+Windows SDK の「 [IOleControl:: OnAmbientPropertyChange](/windows/win32/api/ocidl/nf-ocidl-iolecontrol-onambientpropertychange) 」を参照してください。
 
-## <a name="iolecontrolimplonmnemonic"></a><a name="onmnemonic"></a>IOleコントロールインプル::オンムネモニック
+## <a name="iolecontrolimplonmnemonic"></a><a name="onmnemonic"></a> IOleControlImpl:: OnMnemonic
 
-指定したキーストロークをユーザーが押したことをコントロールに通知します。
+ユーザーが指定されたキーストロークを押したことをコントロールに通知します。
 
 ```
 HRESULT OnMnemonic(LPMSG pMsg);
@@ -124,10 +125,10 @@ E_NOTIMPL を返します。
 
 ### <a name="remarks"></a>解説
 
-Windows SDK[の「IOleControl::オンムネモニック](/windows/win32/api/ocidl/nf-ocidl-iolecontrol-onmnemonic)」を参照してください。
+Windows SDK の「 [IOleControl:: OnMnemonic](/windows/win32/api/ocidl/nf-ocidl-iolecontrol-onmnemonic) 」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 
-[クラス](../../atl/reference/ioleobjectimpl-class.md)<br/>
-[ActiveX コントロール インターフェイス](/windows/win32/com/activex-controls-interfaces)<br/>
+[IOleObjectImpl クラス](../../atl/reference/ioleobjectimpl-class.md)<br/>
+[ActiveX コントロールインターフェイス](/windows/win32/com/activex-controls-interfaces)<br/>
 [クラスの概要](../../atl/atl-class-overview.md)

@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: SafeInt 関数'
 title: SafeInt 関数
 ms.date: 06/23/2020
 ms.topic: reference
@@ -31,12 +32,12 @@ helpviewer_keywords:
 - SafeNotEquals function
 - SafeSubtract function
 ms.assetid: fdc208e5-5d8a-41a9-8271-567fd438958d
-ms.openlocfilehash: c968601d95403dd63540a7a8ec2190a199fa1c5a
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 0dc195742b4f848dd6f05bae1537dc0a4fa5ead5
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87219340"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97149605"
 ---
 # <a name="safeint-functions"></a>SafeInt 関数
 
@@ -68,7 +69,7 @@ Section                                                  | 説明
 [SafeInt](safeint-class.md)                   | `SafeInt` クラスです。
 [SafeIntException](safeintexception-class.md) | SafeInt ライブラリに固有の例外クラスです。
 
-## <a name="safeadd"></a><a name="safeadd"></a>SafeAdd
+## <a name="safeadd"></a><a name="safeadd"></a> SafeAdd
 
 オーバーフローから保護される方法で 2 つの数値を加算します。
 
@@ -83,7 +84,7 @@ inline bool SafeAdd (
 
 ### <a name="parameters"></a>パラメーター
 
-*\t*<br/>
+*t*<br/>
 [入力] 加算する最初の数値。 これは T 型である必要があります。
 
 *u*<br/>
@@ -94,9 +95,9 @@ inline bool SafeAdd (
 
 ### <a name="return-value"></a>戻り値
 
-**`true`** エラーが発生しなかった場合は、**`false`** エラーが発生した場合。
+**`true`** エラーが発生しなかった場合は、 **`false`** エラーが発生した場合。
 
-## <a name="safecast"></a><a name="safecast"></a>SafeCast
+## <a name="safecast"></a><a name="safecast"></a> SafeCast
 
 ある型の数値を別の型にキャストします。
 
@@ -118,9 +119,9 @@ inline bool SafeCast (
 
 ### <a name="return-value"></a>戻り値
 
-**`true`** エラーが発生しなかった場合は、**`false`** エラーが発生した場合。
+**`true`** エラーが発生しなかった場合は、 **`false`** エラーが発生した場合。
 
-## <a name="safedivide"></a><a name="safedivide"></a>保存
+## <a name="safedivide"></a><a name="safedivide"></a> 保存
 
 ゼロ除算から保護される方法で 2 つの数値を除算します。
 
@@ -135,7 +136,7 @@ inline bool SafeDivide (
 
 ### <a name="parameters"></a>パラメーター
 
-*\t*<br/>
+*t*<br/>
 [入力] 被除数。 これは T 型である必要があります。
 
 *u*<br/>
@@ -146,9 +147,9 @@ inline bool SafeDivide (
 
 ### <a name="return-value"></a>戻り値
 
-**`true`** エラーが発生しなかった場合は、**`false`** エラーが発生した場合。
+**`true`** エラーが発生しなかった場合は、 **`false`** エラーが発生した場合。
 
-## <a name="safeequals"></a><a name="safeequals"></a>SafeEquals
+## <a name="safeequals"></a><a name="safeequals"></a> SafeEquals
 
 2つの数値を比較して、等しいかどうかを確認します。
 
@@ -162,7 +163,7 @@ inline bool SafeEquals (
 
 ### <a name="parameters"></a>パラメーター
 
-*\t*<br/>
+*t*<br/>
 [入力] 比較する最初の数値。 これは T 型である必要があります。
 
 *u*<br/>
@@ -170,13 +171,13 @@ inline bool SafeEquals (
 
 ### <a name="return-value"></a>戻り値
 
-**`true`***t*と*u*が等しい場合は。それ以外の場合は **`false`** 。
+**`true`***t* と *u* が等しい場合は。それ以外の場合は **`false`** 。
 
 ### <a name="remarks"></a>解説
 
 このメソッドでは `==` が強化されます。`SafeEquals` を使うと、2 つの異なる型の数値を比較できるためです。
 
-## <a name="safegreaterthan"></a><a name="safegreaterthan"></a>SafeGreaterThan
+## <a name="safegreaterthan"></a><a name="safegreaterthan"></a> SafeGreaterThan
 
 2 つの数値を比較します。
 
@@ -190,7 +191,7 @@ inline bool SafeGreaterThan (
 
 ### <a name="parameters"></a>パラメーター
 
-*\t*<br/>
+*t*<br/>
 [入力] 比較する最初の数値。 これは `T` 型である必要があります。
 
 *u*<br/>
@@ -198,13 +199,13 @@ inline bool SafeGreaterThan (
 
 ### <a name="return-value"></a>戻り値
 
-**`true`***t*が*u*より大きい場合それ以外の場合は **`false`** 。
+**`true`***t* が *u* より大きい場合それ以外の場合は **`false`** 。
 
 ### <a name="remarks"></a>解説
 
 `SafeGreaterThan` では通常の比較演算子が拡張され、2 つの異なる型の数値を比較できます。
 
-## <a name="safegreaterthanequals"></a><a name="safegreaterthanequals"></a>SafeGreaterThanEquals
+## <a name="safegreaterthanequals"></a><a name="safegreaterthanequals"></a> SafeGreaterThanEquals
 
 2 つの数値を比較します。
 
@@ -218,7 +219,7 @@ inline bool SafeGreaterThanEquals (
 
 ### <a name="parameters"></a>パラメーター
 
-*\t*<br/>
+*t*<br/>
 [入力] 比較する最初の数値。 これは `T` 型である必要があります。
 
 *u*<br/>
@@ -226,13 +227,13 @@ inline bool SafeGreaterThanEquals (
 
 ### <a name="return-value"></a>戻り値
 
-**`true`***t*が*u*以上の場合は。それ以外の場合は **`false`** 。
+**`true`***t* が *u* 以上の場合は。それ以外の場合は **`false`** 。
 
 ### <a name="remarks"></a>解説
 
 `SafeGreaterThanEquals` では標準の比較演算子が強化され、2 つの異なる型の数値を比較できます。
 
-## <a name="safelessthan"></a><a name="safelessthan"></a>SafeLessThan
+## <a name="safelessthan"></a><a name="safelessthan"></a> SafeLessThan
 
 一方の数値がもう一方の数値よりも小さいかどうかを判定します。
 
@@ -246,7 +247,7 @@ inline bool SafeLessThan (
 
 ### <a name="parameters"></a>パラメーター
 
-*\t*<br/>
+*t*<br/>
 [入力] 最初の数値。 これは `T` 型である必要があります。
 
 *u*<br/>
@@ -254,13 +255,13 @@ inline bool SafeLessThan (
 
 ### <a name="return-value"></a>戻り値
 
-**`true`***t*が*u*未満の場合それ以外の場合は **`false`** 。
+**`true`***t* が *u* 未満の場合それ以外の場合は **`false`** 。
 
 ### <a name="remarks"></a>解説
 
 このメソッドでは標準の比較演算子が強化されます。`SafeLessThan` を使うと、2 つの異なる型の数値を比較できるためです。
 
-## <a name="safelessthanequals"></a><a name="safelessthanequals"></a>SafeLessThanEquals
+## <a name="safelessthanequals"></a><a name="safelessthanequals"></a> SafeLessThanEquals
 
 2 つの数値を比較します。
 
@@ -274,7 +275,7 @@ inline bool SafeLessThanEquals (
 
 ### <a name="parameters"></a>パラメーター
 
-*\t*<br/>
+*t*<br/>
 [入力] 比較する最初の数値。 これは `T` 型である必要があります。
 
 *u*<br/>
@@ -282,13 +283,13 @@ inline bool SafeLessThanEquals (
 
 ### <a name="return-value"></a>戻り値
 
-**`true`***t*が*u*以下の場合それ以外の場合は **`false`** 。
+**`true`***t* が *u* 以下の場合それ以外の場合は **`false`** 。
 
 ### <a name="remarks"></a>解説
 
 `SafeLessThanEquals` では通常の比較演算子が拡張され、2 つの異なる型の数値を比較できます。
 
-## <a name="safemodulus"></a><a name="safemodulus"></a>SafeModulus
+## <a name="safemodulus"></a><a name="safemodulus"></a> SafeModulus
 
 2 つの数値に対して剰余演算を実行します。
 
@@ -303,7 +304,7 @@ inline bool SafeModulus (
 
 ### <a name="parameters"></a>パラメーター
 
-*\t*<br/>
+*t*<br/>
 [入力] 除数。 これは `T` 型である必要があります。
 
 *u*<br/>
@@ -314,9 +315,9 @@ inline bool SafeModulus (
 
 ### <a name="return-value"></a>戻り値
 
-**`true`** エラーが発生しなかった場合は、**`false`** エラーが発生した場合。
+**`true`** エラーが発生しなかった場合は、 **`false`** エラーが発生した場合。
 
-## <a name="safemultiply"></a><a name="safemultiply"></a>SafeMultiply
+## <a name="safemultiply"></a><a name="safemultiply"></a> SafeMultiply
 
 オーバーフローから保護される方法で 2 つの数値を乗算します。
 
@@ -331,7 +332,7 @@ inline bool SafeMultiply (
 
 ### <a name="parameters"></a>パラメーター
 
-*\t*<br/>
+*t*<br/>
 [入力] 乗算する最初の数値。 これは `T` 型である必要があります。
 
 *u*<br/>
@@ -342,9 +343,9 @@ inline bool SafeMultiply (
 
 ### <a name="return-value"></a>戻り値
 
-**`true`** エラーが発生しなかった場合は、**`false`** エラーが発生した場合。
+**`true`** エラーが発生しなかった場合は、 **`false`** エラーが発生した場合。
 
-## <a name="safenotequals"></a><a name="safenotequals"></a>SafeNotEquals
+## <a name="safenotequals"></a><a name="safenotequals"></a> SafeNotEquals
 
 2つの数値が等しくないかどうかを判断します。
 
@@ -358,7 +359,7 @@ inline bool SafeNotEquals (
 
 ### <a name="parameters"></a>パラメーター
 
-*\t*<br/>
+*t*<br/>
 [入力] 比較する最初の数値。 これは `T` 型である必要があります。
 
 *u*<br/>
@@ -366,13 +367,13 @@ inline bool SafeNotEquals (
 
 ### <a name="return-value"></a>戻り値
 
-**`true`***t*と*u*が等しくない場合は。それ以外の場合は **`false`** 。
+**`true`***t* と *u* が等しくない場合は。それ以外の場合は **`false`** 。
 
 ### <a name="remarks"></a>解説
 
 このメソッドでは `!=` が強化されます。`SafeNotEquals` を使うと、2 つの異なる型の数値を比較できるためです。
 
-## <a name="safesubtract"></a><a name="safesubtract"></a>SafeSubtract
+## <a name="safesubtract"></a><a name="safesubtract"></a> SafeSubtract
 
 オーバーフローから保護される方法で 2 つの数値を減算します。
 
@@ -387,7 +388,7 @@ inline bool SafeSubtract (
 
 ### <a name="parameters"></a>パラメーター
 
-*\t*<br/>
+*t*<br/>
 [入力] 減算の最初の数値。 これは `T` 型である必要があります。
 
 *u*<br/>
@@ -398,4 +399,4 @@ inline bool SafeSubtract (
 
 ### <a name="return-value"></a>戻り値
 
-**`true`** エラーが発生しなかった場合は、**`false`** エラーが発生した場合。
+**`true`** エラーが発生しなかった場合は、 **`false`** エラーが発生した場合。

@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: COM_INTERFACE_ENTRY マクロ'
 title: COM インターフェイスのエントリマクロ
 ms.date: 03/28/2017
 f1_keywords:
@@ -18,12 +19,12 @@ f1_keywords:
 helpviewer_keywords:
 - COM interfaces, COM interface entry macros
 ms.assetid: 19dcb768-2e1f-4b8d-a618-453a01a4bd00
-ms.openlocfilehash: 1358a51f6bcb65f9c54c2006a6a467cf96593b5f
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 0564c1e4ba6b9778865442d281453ff3a4a56d7c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88834701"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97141363"
 ---
 # <a name="com_interface_entry-macros"></a>COM_INTERFACE_ENTRY マクロ
 
@@ -35,19 +36,19 @@ ms.locfileid: "88834701"
 |[COM_INTERFACE_ENTRY2](#com_interface_entry2)|このマクロは、継承の2つの分岐を明確にするために使用します。|
 |[COM_INTERFACE_ENTRY_IID](#com_interface_entry_iid)|このマクロを使用して、COM マップにインターフェイスを入力し、その IID を指定します。|
 |[COM_INTERFACE_ENTRY2_IID](#com_interface_entry2_iid)|[COM_INTERFACE_ENTRY2](#com_interface_entry2)と同じですが、別の IID を指定することができます。|
-|[COM_INTERFACE_ENTRY_AGGREGATE](#com_interface_entry_aggregate)|*Iid*によって識別されるインターフェイスがに対して照会されると、は `COM_INTERFACE_ENTRY_AGGREGATE` に転送され `punk` ます。|
-|[COM_INTERFACE_ENTRY_AGGREGATE_BLIND](#com_interface_entry_aggregate_blind)|[COM_INTERFACE_ENTRY_AGGREGATE](#com_interface_entry_aggregate)と同じですが、任意の IID を照会すると、クエリが*punk*に転送される点が異なります。|
-|[COM_INTERFACE_ENTRY_AUTOAGGREGATE](#com_interface_entry_autoaggregate)|[COM_INTERFACE_ENTRY_AGGREGATE](#com_interface_entry_aggregate)と同じですが、 *punk*が NULL の場合を除き、 *clsid*によって記述された集計が自動的に作成されます。|
-|[COM_INTERFACE_ENTRY_AUTOAGGREGATE_BLIND](#com_interface_entry_autoaggregate_blind)|[COM_INTERFACE_ENTRY_AUTOAGGREGATE](#com_interface_entry_autoaggregate)と同じですが、任意の IID に対してクエリを実行すると、クエリが*punk*に転送されます。また、 *punk*が NULL の場合、 *clsid*によって記述された集計が自動的に作成されます。|
+|[COM_INTERFACE_ENTRY_AGGREGATE](#com_interface_entry_aggregate)|*Iid* によって識別されるインターフェイスがに対して照会されると、は `COM_INTERFACE_ENTRY_AGGREGATE` に転送され `punk` ます。|
+|[COM_INTERFACE_ENTRY_AGGREGATE_BLIND](#com_interface_entry_aggregate_blind)|[COM_INTERFACE_ENTRY_AGGREGATE](#com_interface_entry_aggregate)と同じですが、任意の IID を照会すると、クエリが *punk* に転送される点が異なります。|
+|[COM_INTERFACE_ENTRY_AUTOAGGREGATE](#com_interface_entry_autoaggregate)|[COM_INTERFACE_ENTRY_AGGREGATE](#com_interface_entry_aggregate)と同じですが、 *punk* が NULL の場合を除き、 *clsid* によって記述された集計が自動的に作成されます。|
+|[COM_INTERFACE_ENTRY_AUTOAGGREGATE_BLIND](#com_interface_entry_autoaggregate_blind)|[COM_INTERFACE_ENTRY_AUTOAGGREGATE](#com_interface_entry_autoaggregate)と同じですが、任意の IID に対してクエリを実行すると、クエリが *punk* に転送されます。また、 *punk* が NULL の場合、 *clsid* によって記述された集計が自動的に作成されます。|
 |[COM_INTERFACE_ENTRY_BREAK](#com_interface_entry_break)|指定したインターフェイスに対してクエリを行うときに、プログラムによって [DebugBreak](/windows/win32/api/debugapi/nf-debugapi-debugbreak) が呼び出されるようにします。|
 |[COM_INTERFACE_ENTRY_CACHED_TEAR_OFF](#com_interface_entry_cached_tear_off)|すべてのインスタンスのインターフェイス固有のデータを保存します。|
 |[COM_INTERFACE_ENTRY_TEAR_OFF](#com_interface_entry_tear_off)|は、ティアオフインターフェイスを公開します。|
 |[COM_INTERFACE_ENTRY_CHAIN](#com_interface_entry_chain)|処理が COM マップ内のこのエントリに到達したときに、基底クラスの COM マップを処理します。|
 |[COM_INTERFACE_ENTRY_FUNC](#com_interface_entry_func)|ATL のロジックにフックするための一般的なメカニズム `QueryInterface` 。|
-|[COM_INTERFACE_ENTRY_FUNC_BLIND](#com_interface_entry_func_blind)|[COM_INTERFACE_ENTRY_FUNC](#com_interface_entry_func)と同じですが、任意の IID を照会すると*FUNC*が呼び出されます。|
+|[COM_INTERFACE_ENTRY_FUNC_BLIND](#com_interface_entry_func_blind)|[COM_INTERFACE_ENTRY_FUNC](#com_interface_entry_func)と同じですが、任意の IID を照会すると *FUNC* が呼び出されます。|
 |[COM_INTERFACE_ENTRY_NOINTERFACE](#com_interface_entry_nointerface)|指定したインターフェイスに対してクエリを実行するときに、E_NOINTERFACE を返し、COM マップの処理を終了します。|
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** atlcom. h
 
@@ -80,7 +81,7 @@ BEGIN_COM_MAP(CThisExample)
 END_COM_MAP()
 ```
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 **ヘッダー:** atlcom. h
 
@@ -122,7 +123,7 @@ COM_INTERFACE_ENTRY_IID(iid, x)
 から公開されているインターフェイスの GUID。
 
 *x*<br/>
-から *Iid*によって識別されるインターフェイスとして公開される vtable を持つクラスの名前。
+から *Iid* によって識別されるインターフェイスとして公開される vtable を持つクラスの名前。
 
 ### <a name="example"></a>例
 
@@ -149,7 +150,7 @@ COM_INTERFACE_ENTRY2_IID(iid, x, x2)
 
 ## <a name="com_interface_entry_aggregate"></a><a name="com_interface_entry_aggregate"></a> COM_INTERFACE_ENTRY_AGGREGATE
 
-*Iid*によって識別されるインターフェイスがに対して照会されると、COM_INTERFACE_ENTRY_AGGREGATE は*punk*に転送されます。
+*Iid* によって識別されるインターフェイスがに対して照会されると、COM_INTERFACE_ENTRY_AGGREGATE は *punk* に転送されます。
 
 ```
 COM_INTERFACE_ENTRY_AGGREGATE(iid, punk)
@@ -165,7 +166,7 @@ COM_INTERFACE_ENTRY_AGGREGATE(iid, punk)
 
 ### <a name="remarks"></a>解説
 
-*Punk*パラメーターは、集計の内部不明または NULL を指していると想定されます。この場合、エントリは無視されます。 通常は、 `CoCreate` で集計し `FinalConstruct` ます。
+*Punk* パラメーターは、集計の内部不明または NULL を指していると想定されます。この場合、エントリは無視されます。 通常は、 `CoCreate` で集計し `FinalConstruct` ます。
 
 ### <a name="example"></a>例
 
@@ -173,7 +174,7 @@ COM_INTERFACE_ENTRY_AGGREGATE(iid, punk)
 
 ## <a name="com_interface_entry_aggregate_blind"></a><a name="com_interface_entry_aggregate_blind"></a> COM_INTERFACE_ENTRY_AGGREGATE_BLIND
 
-[COM_INTERFACE_ENTRY_AGGREGATE](#com_interface_entry_aggregate)と同じですが、任意の IID を照会すると、クエリが*punk*に転送される点が異なります。
+[COM_INTERFACE_ENTRY_AGGREGATE](#com_interface_entry_aggregate)と同じですが、任意の IID を照会すると、クエリが *punk* に転送される点が異なります。
 
 ```
 COM_INTERFACE_ENTRY_AGGREGATE_BLIND(punk)
@@ -194,7 +195,7 @@ COM_INTERFACE_ENTRY_AGGREGATE_BLIND(punk)
 
 ## <a name="com_interface_entry_autoaggregate"></a><a name="com_interface_entry_autoaggregate"></a> COM_INTERFACE_ENTRY_AUTOAGGREGATE
 
-[COM_INTERFACE_ENTRY_AGGREGATE](#com_interface_entry_aggregate)と同じですが、 *punk*が NULL の場合を除き、 *clsid*によって記述された集計が自動的に作成されます。
+[COM_INTERFACE_ENTRY_AGGREGATE](#com_interface_entry_aggregate)と同じですが、 *punk* が NULL の場合を除き、 *clsid* によって記述された集計が自動的に作成されます。
 
 ```
 COM_INTERFACE_ENTRY_AUTOAGGREGATE(iid, punk, clsid)
@@ -219,7 +220,7 @@ COM_INTERFACE_ENTRY_AUTOAGGREGATE(iid, punk, clsid)
 
 ## <a name="com_interface_entry_autoaggregate_blind"></a><a name="com_interface_entry_autoaggregate_blind"></a> COM_INTERFACE_ENTRY_AUTOAGGREGATE_BLIND
 
-[COM_INTERFACE_ENTRY_AUTOAGGREGATE](#com_interface_entry_autoaggregate)と同じですが、任意の IID に対してクエリを実行すると、クエリが*punk*に転送されます。また、 *punk*が NULL の場合、 *clsid*によって記述された集計が自動的に作成されます。
+[COM_INTERFACE_ENTRY_AUTOAGGREGATE](#com_interface_entry_autoaggregate)と同じですが、任意の IID に対してクエリを実行すると、クエリが *punk* に転送されます。また、 *punk* が NULL の場合、 *clsid* によって記述された集計が自動的に作成されます。
 
 ```
 COM_INTERFACE_ENTRY_AUTOAGGREGATE_BLIND(punk, clsid)
@@ -346,22 +347,22 @@ COM_INTERFACE_ENTRY_FUNC(iid, dw, func)
 から公開されているインターフェイスの GUID。
 
 *dw*<br/>
-から *Func*に渡されるパラメーター。
+から *Func* に渡されるパラメーター。
 
 *func*<br/>
-から *Iid*を返す関数ポインター。
+から *Iid* を返す関数ポインター。
 
 ### <a name="remarks"></a>解説
 
-*Iid*がに対して照会されたインターフェイスの iid と一致する場合、 *func*によって指定された関数が呼び出されます。 関数の宣言は次のようになります。
+*Iid* がに対して照会されたインターフェイスの iid と一致する場合、 *func* によって指定された関数が呼び出されます。 関数の宣言は次のようになります。
 
 `HRESULT WINAPI func(void* pv, REFIID riid, LPVOID* ppv, DWORD_PTR dw);`
 
-関数が呼び出されると、は `pv` クラスオブジェクトをポイントします。 *Riid*パラメーターは、クエリ対象のインターフェイスを参照します。 `ppv` は、関数がインターフェイスへのポインターを格納する場所へのポインターであり、 *dw*はエントリで指定したパラメーターです。 関数は、 \* `ppv` を NULL に設定し、インターフェイスを返さないことを選択した場合は E_NOINTERFACE または S_FALSE を返します。 E_NOINTERFACE では、COM マップの処理が終了します。 S_FALSE を使用すると、インターフェイスポインターが返されなかった場合でも、COM マップ処理が続行されます。 関数がインターフェイスポインターを返す場合は、S_OK を返す必要があります。
+関数が呼び出されると、は `pv` クラスオブジェクトをポイントします。 *Riid* パラメーターは、クエリ対象のインターフェイスを参照します。 `ppv` は、関数がインターフェイスへのポインターを格納する場所へのポインターであり、 *dw* はエントリで指定したパラメーターです。 関数は、 \* `ppv` を NULL に設定し、インターフェイスを返さないことを選択した場合は E_NOINTERFACE または S_FALSE を返します。 E_NOINTERFACE では、COM マップの処理が終了します。 S_FALSE を使用すると、インターフェイスポインターが返されなかった場合でも、COM マップ処理が続行されます。 関数がインターフェイスポインターを返す場合は、S_OK を返す必要があります。
 
 ## <a name="com_interface_entry_func_blind"></a><a name="com_interface_entry_func_blind"></a> COM_INTERFACE_ENTRY_FUNC_BLIND
 
-[COM_INTERFACE_ENTRY_FUNC](#com_interface_entry_func)と同じですが、任意の IID を照会すると*FUNC*が呼び出されます。
+[COM_INTERFACE_ENTRY_FUNC](#com_interface_entry_func)と同じですが、任意の IID を照会すると *FUNC* が呼び出されます。
 
 ```
 COM_INTERFACE_ENTRY_FUNC_BLIND(dw, func)
@@ -370,7 +371,7 @@ COM_INTERFACE_ENTRY_FUNC_BLIND(dw, func)
 ### <a name="parameters"></a>パラメーター
 
 *dw*<br/>
-から *Func*に渡されるパラメーター。
+から *Func* に渡されるパラメーター。
 
 *func*<br/>
 からCOM マップ内のこのエントリが処理されるときに呼び出される関数。

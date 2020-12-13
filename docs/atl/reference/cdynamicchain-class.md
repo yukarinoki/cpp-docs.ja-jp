@@ -1,5 +1,6 @@
 ---
-title: Cダイナミックチェーンクラス
+description: '詳細情報: CDynamicChain クラス'
+title: CDynamicChain クラス
 ms.date: 11/04/2016
 f1_keywords:
 - CDynamicChain
@@ -13,16 +14,16 @@ helpviewer_keywords:
 - chaining message maps
 - CDynamicChain class
 ms.assetid: f084b2be-0e77-4836-973d-ae278a1e9da8
-ms.openlocfilehash: 4a72b3b4308ed83dfdc4a2895a04d1fe9a177ce5
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 5ada99b519900150afa2143fb1527245797fed98
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81327034"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97141818"
 ---
-# <a name="cdynamicchain-class"></a>Cダイナミックチェーンクラス
+# <a name="cdynamicchain-class"></a>CDynamicChain クラス
 
-このクラスには、メッセージ マップの動的チェーンをサポートするメソッドが用意されています。
+このクラスは、メッセージマップの動的チェーンをサポートするメソッドを提供します。
 
 > [!IMPORTANT]
 > このクラスとそのメンバーは、Windows ランタイムで実行されるアプリケーションでは使用できません。
@@ -39,48 +40,48 @@ class CDynamicChain
 
 |名前|説明|
 |----------|-----------------|
-|[Cダイナミックチェーン::Cダイナミックチェーン](#cdynamicchain)|コンストラクターです。|
-|[Cダイナミックチェーン::~Cダイナミックチェーン](#dtor)|デストラクターです。|
+|[CDynamicChain::CDynamicChain](#cdynamicchain)|コンストラクターです。|
+|[CDynamicChain:: ~ CDynamicChain](#dtor)|デストラクターです。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
 |名前|説明|
 |----------|-----------------|
-|[Cダイナミックチェーン::コールチェーン](#callchain)|Windows メッセージを別のオブジェクトのメッセージ マップに送信します。|
-|[Cダイナミックチェーン::除去チェーンエントリ](#removechainentry)|メッセージ マップ エントリをコレクションから削除します。|
-|[Cダイナミックチェーン::セットチェーンエントリー](#setchainentry)|メッセージ マップ エントリをコレクションに追加するか、既存のエントリを変更します。|
+|[CDynamicChain:: CallChain](#callchain)|Windows メッセージを別のオブジェクトのメッセージマップに送信します。|
+|[CDynamicChain:: Removの入力](#removechainentry)|コレクションからメッセージマップエントリを削除します。|
+|[CDynamicChain::SetChainEntry](#setchainentry)|メッセージマップエントリをコレクションに追加するか、既存のエントリを変更します。|
 
 ## <a name="remarks"></a>解説
 
-`CDynamicChain`メッセージ マップのコレクションを管理し、Windows メッセージを実行時に別のオブジェクトのメッセージ マップに送信できるようにします。
+`CDynamicChain` メッセージマップのコレクションを管理します。これにより、Windows メッセージを実行時に別のオブジェクトのメッセージマップに転送できるようになります。
 
-メッセージ マップの動的チェーンのサポートを追加するには、次の操作を行います。
+メッセージマップの動的チェーンのサポートを追加するには、次の手順を実行します。
 
-- から`CDynamicChain`クラスを派生させる。 メッセージ マップで、別のオブジェクトの既定のメッセージ マップにチェーンする[CHAIN_MSG_MAP_DYNAMIC](message-map-macros-atl.md#chain_msg_map_dynamic)マクロを指定します。
+- からクラスを派生させ `CDynamicChain` ます。 メッセージマップで、別のオブジェクトの既定のメッセージマップに連結する [CHAIN_MSG_MAP_DYNAMIC](message-map-macros-atl.md#chain_msg_map_dynamic) マクロを指定します。
 
-- [CMessageMap](../../atl/reference/cmessagemap-class.md)からチェインするクラスをすべて派生させます。 `CMessageMap`では、オブジェクトがメッセージ マップを他のオブジェクトに公開できます。
+- チェーンを作成するすべてのクラスを [CMessageMap](../../atl/reference/cmessagemap-class.md)から派生させます。 `CMessageMap` オブジェクトが他のオブジェクトにメッセージマップを公開できるようにします。
 
-- チェーン`CDynamicChain::SetChainEntry`先のオブジェクトとメッセージ マップを識別する呼び出し。
+- を呼び出し `CDynamicChain::SetChainEntry` て、チェーンするオブジェクトとメッセージマップを識別します。
 
 たとえば、クラスが次のように定義されているとします。
 
 [!code-cpp[NVC_ATL_Windowing#88](../../atl/codesnippet/cpp/cdynamicchain-class_1.h)]
 
-クライアントは次の`CMyWindow::SetChainEntry`呼び出しを行います。
+クライアントは次を呼び出し `CMyWindow::SetChainEntry` ます。
 
 [!code-cpp[NVC_ATL_Windowing#89](../../atl/codesnippet/cpp/cdynamicchain-class_2.cpp)]
 
-は`chainedObj`チェインされたオブジェクトで、 から`CMessageMap`派生したクラスのインスタンスです。 ここで、`myCtl`または`OnPaint``OnSetFocus`で処理されないメッセージを受信した場合、ウィンドウ プロシージャはメッセージを既定の`chainedObj`メッセージ マップに送信します。
+ここで、 `chainedObj` はチェーンオブジェクトで、はから派生したクラスのインスタンスです `CMessageMap` 。 では、 `myCtl` またはによって処理されないメッセージをが受信すると、ウィンドウプロシージャによって `OnPaint` `OnSetFocus` メッセージが `chainedObj` 既定のメッセージマップに送られます。
 
-メッセージ マップのチェーンの詳細については、「ATL ウィンドウ クラス」の[「メッセージ マップ](../../atl/message-maps-atl.md)」を参照してください。
+メッセージマップチェーンの詳細については、「ATL ウィンドウクラス」の「 [メッセージマップ](../../atl/message-maps-atl.md) 」を参照してください。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-**ヘッダー:** atlwin.h
+**ヘッダー:** atlwin. h
 
-## <a name="cdynamicchaincallchain"></a><a name="callchain"></a>Cダイナミックチェーン::コールチェーン
+## <a name="cdynamicchaincallchain"></a><a name="callchain"></a> CDynamicChain:: CallChain
 
-Windows メッセージを別のオブジェクトのメッセージ マップに送信します。
+Windows メッセージを別のオブジェクトのメッセージマップに送信します。
 
 ```
 BOOL CallChain(
@@ -94,23 +95,23 @@ BOOL CallChain(
 
 ### <a name="parameters"></a>パラメーター
 
-*ドウチェーンID*<br/>
-[in]チェーン オブジェクトとそのメッセージ マップに関連付けられた一意の識別子。
+*dwChainID*<br/>
+から連結されたオブジェクトとそのメッセージマップに関連付けられている一意の識別子。
 
 *hWnd*<br/>
-[in]メッセージを受信するウィンドウへのハンドル。
+からメッセージを受信しているウィンドウへのハンドル。
 
-*をクリックします。*<br/>
-[in]ウィンドウに送信されるメッセージ。
+*uMsg*<br/>
+からウィンドウに送信されたメッセージ。
 
 *wParam*<br/>
-[in]メッセージ固有の追加情報。
+からメッセージ固有の追加情報。
 
 *lParam*<br/>
-[in]メッセージ固有の追加情報。
+からメッセージ固有の追加情報。
 
 *lResult*<br/>
-[アウト]メッセージ処理の結果。
+入出力メッセージ処理の結果。
 
 ### <a name="return-value"></a>戻り値
 
@@ -118,11 +119,11 @@ BOOL CallChain(
 
 ### <a name="remarks"></a>解説
 
-ウィンドウ プロシージャを呼び`CallChain`出すには、メッセージ マップで[CHAIN_MSG_MAP_DYNAMIC](message-map-macros-atl.md#chain_msg_map_dynamic)マクロを指定する必要があります。 例については[、CDynamicChain](../../atl/reference/cdynamicchain-class.md)の概要を参照してください。
+ウィンドウプロシージャを呼び出すには、 `CallChain` メッセージマップで [CHAIN_MSG_MAP_DYNAMIC](message-map-macros-atl.md#chain_msg_map_dynamic) マクロを指定する必要があります。 例については、「 [CDynamicChain](../../atl/reference/cdynamicchain-class.md) の概要」を参照してください。
 
-`CallChain`*は、dwChainID*値をオブジェクトとそのメッセージ マップに関連付けるために、前の呼び出しを[SetChainEntry](#setchainentry)に対して必要とします。
+`CallChain`*dwChainID* 値をオブジェクトとそのメッセージマップに関連付けるために、 [SetChainEntry](#setchainentry)を以前に呼び出す必要があります。
 
-## <a name="cdynamicchaincdynamicchain"></a><a name="cdynamicchain"></a>Cダイナミックチェーン::Cダイナミックチェーン
+## <a name="cdynamicchaincdynamicchain"></a><a name="cdynamicchain"></a> CDynamicChain::CDynamicChain
 
 コンストラクターです。
 
@@ -130,7 +131,7 @@ BOOL CallChain(
 CDynamicChain();
 ```
 
-## <a name="cdynamicchaincdynamicchain"></a><a name="dtor"></a>Cダイナミックチェーン::~Cダイナミックチェーン
+## <a name="cdynamicchaincdynamicchain"></a><a name="dtor"></a> CDynamicChain:: ~ CDynamicChain
 
 デストラクターです。
 
@@ -142,9 +143,9 @@ CDynamicChain();
 
 割り当てられたすべてのリソースを解放します。
 
-## <a name="cdynamicchainremovechainentry"></a><a name="removechainentry"></a>Cダイナミックチェーン::除去チェーンエントリ
+## <a name="cdynamicchainremovechainentry"></a><a name="removechainentry"></a> CDynamicChain:: Removの入力
 
-指定したメッセージ マップをコレクションから削除します。
+指定したメッセージマップをコレクションから削除します。
 
 ```
 BOOL RemoveChainEntry(DWORD dwChainID);
@@ -152,16 +153,16 @@ BOOL RemoveChainEntry(DWORD dwChainID);
 
 ### <a name="parameters"></a>パラメーター
 
-*ドウチェーンID*<br/>
-[in]チェーン オブジェクトとそのメッセージ マップに関連付けられた一意の識別子。 この値は、もともと[SetChainEntry](#setchainentry)の呼び出しを通じて定義されていました。
+*dwChainID*<br/>
+から連結されたオブジェクトとそのメッセージマップに関連付けられている一意の識別子。 この値は、最初に [SetChainEntry](#setchainentry)の呼び出しを使用して定義します。
 
 ### <a name="return-value"></a>戻り値
 
-メッセージ マップがコレクションから正常に削除された場合は TRUE。 それ以外の場合は FALSE。
+メッセージマップがコレクションから正常に削除された場合は TRUE。 それ以外の場合は FALSE。
 
-## <a name="cdynamicchainsetchainentry"></a><a name="setchainentry"></a>Cダイナミックチェーン::セットチェーンエントリー
+## <a name="cdynamicchainsetchainentry"></a><a name="setchainentry"></a> CDynamicChain::SetChainEntry
 
-指定したメッセージ マップをコレクションに追加します。
+指定したメッセージマップをコレクションに追加します。
 
 ```
 BOOL SetChainEntry(
@@ -172,24 +173,24 @@ BOOL SetChainEntry(
 
 ### <a name="parameters"></a>パラメーター
 
-*ドウチェーンID*<br/>
-[in]チェーン オブジェクトとそのメッセージ マップに関連付けられた一意の識別子。
+*dwChainID*<br/>
+から連結されたオブジェクトとそのメッセージマップに関連付けられている一意の識別子。
 
 *pObject*<br/>
-[in]メッセージ マップを宣言するチェーン オブジェクトへのポインター。 このオブジェクトは[、CMessageMap](../../atl/reference/cmessagemap-class.md)から派生する必要があります。
+からメッセージマップを宣言するチェーンオブジェクトへのポインター。 このオブジェクトは [CMessageMap](../../atl/reference/cmessagemap-class.md)から派生する必要があります。
 
-*を使用します。*<br/>
-[in]チェーン オブジェクト内のメッセージ マップの識別子。 デフォルト値は 0 で[、BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map)で宣言されたデフォルトのメッセージ・マップを識別します。 [ALT_MSG_MAP(msgMapID)](message-map-macros-atl.md#alt_msg_map)で宣言された代替メッセージ マップを指定`msgMapID`するには、 を渡します。
+*dwMsgMapID*<br/>
+から連結されたオブジェクト内のメッセージマップの識別子。 既定値は0で、 [BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map)で宣言された既定のメッセージマップを識別します。 [ALT_MSG_MAP (msgMapID)](message-map-macros-atl.md#alt_msg_map)で宣言された代替メッセージマップを指定するには、を渡し `msgMapID` ます。
 
 ### <a name="return-value"></a>戻り値
 
-メッセージ マップがコレクションに正常に追加された場合は TRUE。 それ以外の場合は FALSE。
+メッセージマップが正常にコレクションに追加された場合は TRUE。 それ以外の場合は FALSE。
 
 ### <a name="remarks"></a>解説
 
-*dwChainID*値がコレクション内に既に存在する場合、関連付けられているオブジェクトとメッセージ マップは、それぞれ*pObject*と*dwMsgMapID*に置き換えられます。 それ以外の場合は、新しいエントリが追加されます。
+*DwChainID* 値がコレクション内に既に存在する場合、その値に関連付けられているオブジェクトとメッセージマップは、それぞれ *PObject* と *dwmsgmapid* に置き換えられます。 それ以外の場合は、新しいエントリが追加されます。
 
 ## <a name="see-also"></a>関連項目
 
-[クラス](../../atl/reference/cwindowimpl-class.md)<br/>
+[CWindowImpl クラス](../../atl/reference/cwindowimpl-class.md)<br/>
 [クラスの概要](../../atl/atl-class-overview.md)

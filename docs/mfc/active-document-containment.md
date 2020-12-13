@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「Active ドキュメントコンテインメント」を参照してください。
 title: Active ドキュメント コンテインメント
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - active document containers [MFC], about active document containers
 - MFC COM, active document containment
 ms.assetid: b8dfa74b-75ce-47df-b75e-fc87b7f7d687
-ms.openlocfilehash: 1c524d6890cd7b86bcae2c40d8c602e7b04e751b
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 9a190e0203152e2411699aa601a095a530303546
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84623435"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97150385"
 ---
 # <a name="active-document-containment"></a>Active ドキュメント コンテインメント
 
@@ -21,13 +22,13 @@ Active ドキュメントコンテインメントは、ドキュメントの種�
 
 Active ドキュメントコンテインメントテクノロジは、Office バインダーを実装するために Microsoft Office 向けに開発されました。 ただし、このテクノロジは、Office バインダー以外の active ドキュメントコンテナーをサポートするのに十分な柔軟性を備えており、Office や Office と互換性のあるアプリケーション以外のドキュメントサーバーをサポートできます。
 
-アクティブなドキュメントをホストするアプリケーションは、[アクティブドキュメントコンテナー](active-document-containers.md)と呼ばれます。 このようなコンテナーの例としては、Microsoft Office バインダーや Microsoft Internet Explorer などがあります。
+アクティブなドキュメントをホストするアプリケーションは、 [アクティブドキュメントコンテナー](active-document-containers.md)と呼ばれます。 このようなコンテナーの例としては、Microsoft Office バインダーや Microsoft Internet Explorer などがあります。
 
 Active ドキュメントコンテインメントは、ole の複合ドキュメントテクノロジである OLE ドキュメントに対する一連の拡張機能として実装されます。 拡張機能は、埋め込み可能な埋め込み先オブジェクトが埋め込みコンテンツの1つの部分ではなく、文書全体を表すことができるようにする追加のインターフェイスです。 OLE ドキュメントと同様、active ドキュメントコンテインメントでは、アクティブなドキュメントの表示領域を提供するコンテナーと、アクティブなドキュメント自体のユーザーインターフェイスと操作機能を提供するサーバーを使用します。
 
 [Active ドキュメントサーバー](active-document-servers.md)は、1つ以上のアクティブなドキュメントクラスをサポートするアプリケーション (Word、Excel、PowerPoint など) です。各オブジェクトは、適切なコンテナーでオブジェクトをアクティブ化できるようにする拡張インターフェイスをサポートしています。
 
-アクティブ[なドキュメント (Word](active-documents.md)や Excel などのアクティブなドキュメントサーバーから提供されるドキュメント) は、基本的には、別のアクティブなドキュメントコンテナー内にオブジェクトとして埋め込まれる、フルスケールの従来のドキュメントです。 埋め込みオブジェクトとは異なり、アクティブドキュメントはページ全体を完全に制御でき、アプリケーションの完全なインターフェイス (基になるすべてのコマンドとツールを含む) をユーザーが編集できるようになります。
+アクティブ [なドキュメント (Word](active-documents.md) や Excel などのアクティブなドキュメントサーバーから提供されるドキュメント) は、基本的には、別のアクティブなドキュメントコンテナー内にオブジェクトとして埋め込まれる、フルスケールの従来のドキュメントです。 埋め込みオブジェクトとは異なり、アクティブドキュメントはページ全体を完全に制御でき、アプリケーションの完全なインターフェイス (基になるすべてのコマンドとツールを含む) をユーザーが編集できるようになります。
 
 アクティブなドキュメントは、標準の OLE 埋め込みオブジェクトと区別することによって理解することをお勧めします。 OLE の表記規則に従うと、埋め込みオブジェクトは、そのオブジェクトを所有するドキュメントのページ内に表示され、ドキュメントは OLE コンテナーによって管理されます。 コンテナーには、埋め込みオブジェクトのデータがドキュメントの残りの部分と共に格納されます。 ただし、埋め込みオブジェクトは、表示されるページを制御しないという制限があります。
 

@@ -1,17 +1,18 @@
 ---
+description: '詳細情報: タイルの使用'
 title: タイルの使用
 ms.date: 11/19/2018
 ms.assetid: acb86a86-2b7f-43f1-8fcf-bcc79b21d9a8
-ms.openlocfilehash: edef9154b0c4da6f53c8ac40ee84e55e9b38a9b7
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 6277faf867cd64e5ea0e4503bb36f8e1d4a8bc74
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87228467"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97150164"
 ---
 # <a name="using-tiles"></a>タイルの使用
 
-タイルを使用して、アプリのアクセラレーションを最大化することができます。 タイルは、スレッドを等しい四角形のサブセットまたは*タイル*に分割します。 適切なタイルのサイズとタイル アルゴリズムを使用している場合、C++ AMP コードによるアクセラレーションがさらに向上します。 タイルの基本コンポーネントは次のとおりです。
+タイルを使用して、アプリのアクセラレーションを最大化することができます。 タイルは、スレッドを等しい四角形のサブセットまたは *タイル* に分割します。 適切なタイルのサイズとタイル アルゴリズムを使用している場合、C++ AMP コードによるアクセラレーションがさらに向上します。 タイルの基本コンポーネントは次のとおりです。
 
 - `tile_static` 変数。 タイルの主な利点は、`tile_static` へのアクセスによるパフォーマンスの向上です。 `tile_static` メモリのデータへのアクセスは、グローバル空間内のデータ (`array` または `array_view` オブジェクト) へのアクセスよりも大幅に高速になる場合があります。 各タイルについて `tile_static` 変数のインスタンスが作成され、タイル内のすべてのスレッドがこの変数にアクセスできます。 一般的なタイル アルゴリズムでは、データをグローバル メモリから `tile_static` メモリに 1 回コピーし、`tile_static` メモリから何度もアクセスします。
 
@@ -19,7 +20,7 @@ ms.locfileid: "87228467"
 
 - ローカルおよびグローバル インデックス作成。 `array_view` オブジェクトや `array` オブジェクト全体を基準とするスレッドのインデックス、およびタイルを基準とするインデックスにアクセスできます。 ローカル インデックスを使うと、コードが読みやすくなり、デバッグも容易になります。 通常、`tile_static` 変数にアクセスするにはローカル インデックスを使用し、`array` 変数や `array_view` 変数にアクセスするにはグローバル インデックスを使用します。
 
-- [Tiled_extent クラス](../../parallel/amp/reference/tiled-extent-class.md)と[tiled_index クラス](../../parallel/amp/reference/tiled-index-class.md)。 `tiled_extent` の呼び出しで `extent` オブジェクトではなく `parallel_for_each` オブジェクトを使用します。 `tiled_index` の呼び出しで `index` オブジェクトではなく `parallel_for_each` オブジェクトを使用します。
+- [Tiled_extent クラス](../../parallel/amp/reference/tiled-extent-class.md) と [tiled_index クラス](../../parallel/amp/reference/tiled-index-class.md)。 `tiled_extent` の呼び出しで `extent` オブジェクトではなく `parallel_for_each` オブジェクトを使用します。 `tiled_index` の呼び出しで `index` オブジェクトではなく `parallel_for_each` オブジェクトを使用します。
 
 タイルを活用するには、アルゴリズムによって、計算ドメインをタイルに分割し、すばやくアクセスできるようにタイルのデータを `tile_static` 変数にコピーする必要があります。
 
@@ -289,7 +290,7 @@ t_idx.barrier.wait();
 
 - `tile_static`
 
-*メモリフェンス*によって、スレッドタイルの他のスレッドがメモリアクセスを使用できるようになり、メモリアクセスはプログラムの順序に従って実行されます。 これを実現するために、コンパイラとプロセッサは、フェンスを越えて読み取りと書き込みの順序を変更しません。 C++ AMP では、メモリ フェンスは、次のいずれかのメソッドを呼び出すことによって作成されます。
+*メモリフェンス* によって、スレッドタイルの他のスレッドがメモリアクセスを使用できるようになり、メモリアクセスはプログラムの順序に従って実行されます。 これを実現するために、コンパイラとプロセッサは、フェンスを越えて読み取りと書き込みの順序を変更しません。 C++ AMP では、メモリ フェンスは、次のいずれかのメソッドを呼び出すことによって作成されます。
 
 - [tile_barrier:: Wait メソッド](reference/tile-barrier-class.md#wait): グローバルとメモリの両方にフェンスを作成し `tile_static` ます。
 

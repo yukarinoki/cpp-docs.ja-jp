@@ -1,5 +1,6 @@
 ---
-title: クラス
+description: '詳細情報: CComUnkArray クラス'
+title: CComUnkArray クラス
 ms.date: 11/04/2016
 f1_keywords:
 - CComUnkArray
@@ -15,16 +16,16 @@ helpviewer_keywords:
 - connection points [C++], managing
 - CComUnkArray class
 ms.assetid: 5fd4b378-a7b5-4cc1-8866-8ab72a73639e
-ms.openlocfilehash: c1d2f0296394d3979ef4f152e3f902c89adf5b45
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: e03022fb751b487debb9f81d9e3d99ce46f1b9e7
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81327301"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97142143"
 ---
-# <a name="ccomunkarray-class"></a>クラス
+# <a name="ccomunkarray-class"></a>CComUnkArray クラス
 
-このクラスは`IUnknown`ポインターを格納し[、IConnectionPointImpl](../../atl/reference/iconnectionpointimpl-class.md)テンプレート クラスのパラメーターとして使用するように設計されています。
+このクラス `IUnknown` はポインターを格納し、 [IConnectionPointImpl](../../atl/reference/iconnectionpointimpl-class.md) テンプレートクラスのパラメーターとして使用するように設計されています。
 
 ## <a name="syntax"></a>構文
 
@@ -35,8 +36,8 @@ class CComUnkArray
 
 #### <a name="parameters"></a>パラメーター
 
-*をクリックします。*<br/>
-静的配列に保持`IUnknown`できるポインターの最大数。
+*nMaxSize*<br/>
+`IUnknown`静的配列に保持できるポインターの最大数。
 
 ## <a name="members"></a>メンバー
 
@@ -44,37 +45,37 @@ class CComUnkArray
 
 |名前|説明|
 |----------|-----------------|
-|[コマンクアレイ::コマンクアレイ](#ccomunkarray)|コンストラクターです。|
+|[CComUnkArray::CComUnkArray](#ccomunkarray)|コンストラクターです。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
 |名前|説明|
 |----------|-----------------|
-|[コマンウンクアレイ::追加](#add)|配列へのポインターを`IUnknown`追加します。|
-|[コマンウンクアレイ::開始](#begin)|コレクション内の最初`IUnknown`のポインターへのポインターを返します。|
-|[コマンウンクアレイ::エンド](#end)|コレクション内の最後`IUnknown`のポインターの 1 つ後のポインターを返します。|
-|[コムウンクアレイ::ゲットクッキー](#getcookie)|指定した`IUnknown`ポインターに関連付けられている Cookie を取得します。|
-|[コマンウンクアレイ::ゲットUnknown](#getunknown)|指定された Cookie に`IUnknown`関連付けられているポインターを取得します。|
-|[コミュンクアレイ::削除](#remove)|配列からポインターを`IUnknown`削除します。|
+|[CComUnkArray:: Add](#add)|配列へのポインターを追加するには、このメソッドを呼び出し `IUnknown` ます。|
+|[CComUnkArray:: begin](#begin)|コレクション内の最初のポインターへのポインターを返し `IUnknown` ます。|
+|[CComUnkArray:: end](#end)|コレクション内の最後のポインターの1つ後ろへのポインターを返し `IUnknown` ます。|
+|[CComUnkArray:: GetCookie](#getcookie)|指定したポインターに関連付けられているクッキーを取得するには、このメソッドを呼び出し `IUnknown` ます。|
+|[CComUnkArray:: GetUnknown](#getunknown)|`IUnknown`特定のクッキーに関連付けられているポインターを取得するには、このメソッドを呼び出します。|
+|[CComUnkArray:: Remove](#remove)|配列からポインターを削除するには、このメソッドを呼び出し `IUnknown` ます。|
 
 ## <a name="remarks"></a>解説
 
-`CComUnkArray`は、接続ポイント上`IUnknown`の各インターフェイスの固定数のポインタを保持します。 `CComUnkArray`テンプレート[クラスのパラメーター](../../atl/reference/iconnectionpointimpl-class.md)として使用できます。 `CComUnkArray<1>`は、1 つの接続`CComUnkArray`ポイントに最適化されたテンプレートの特殊化です。
+`CComUnkArray` 固定された数のポインターを保持し `IUnknown` ます。各インターフェイスは接続ポイントにあります。 `CComUnkArray` は、 [IConnectionPointImpl](../../atl/reference/iconnectionpointimpl-class.md) テンプレートクラスのパラメーターとして使用できます。 `CComUnkArray<1>` は、 `CComUnkArray` 1 つの接続ポイントに対して最適化された、のテンプレート特殊化です。
 
-開始`CComUnkArray`と[begin](#begin)[終了](#end)のメソッドを使用して、すべてのコネクション ポイントをループできます (たとえば、イベントが発生したときなど)。
+`CComUnkArray` [Begin](#begin)および[end](#end)メソッドを使用して、すべてのコネクションポイントをループ処理できます (たとえば、イベントが発生したとき)。
 
-接続ポイント プロキシの作成の自動化の詳細については、「[オブジェクトへの](../../atl/adding-connection-points-to-an-object.md)接続ポイントの追加」を参照してください。
+接続ポイントプロキシの作成を自動化する方法の詳細については [、「オブジェクトへの接続ポイントの追加](../../atl/adding-connection-points-to-an-object.md) 」を参照してください。
 
 > [!NOTE]
-> **注**クラス[CComDynamicUnkArray](../../atl/reference/ccomdynamicunkarray-class.md)は、コネクション ポイントを持つコントロールを作成するときに**クラスの追加**ウィザードで使用されます。 接続`CComDynamicUnkArray`ポイントの数を手動で指定する場合は、参照を`CComUnkArray<`*n*`>`に変更します*n*。
+> **メモ** クラス [CComDynamicUnkArray](../../atl/reference/ccomdynamicunkarray-class.md) は、接続ポイントを持つコントロールを作成するときに、 **クラスの追加** ウィザードによって使用されます。 接続ポイントの数を手動で指定する場合は、参照をから `CComDynamicUnkArray` n に変更し `CComUnkArray<`  `>` ます。ここで、 *n* は必要な接続ポイントの数です。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-**ヘッダー:** atlcom.h
+**ヘッダー:** atlcom. h
 
-## <a name="ccomunkarrayadd"></a><a name="add"></a>コマンウンクアレイ::追加
+## <a name="ccomunkarrayadd"></a><a name="add"></a> CComUnkArray:: Add
 
-配列へのポインターを`IUnknown`追加します。
+配列へのポインターを追加するには、このメソッドを呼び出し `IUnknown` ます。
 
 ```
 DWORD Add(IUnknown* pUnk);
@@ -83,15 +84,15 @@ DWORD Add(IUnknown* pUnk);
 ### <a name="parameters"></a>パラメーター
 
 *パンク*<br/>
-配列へのポインターを`IUnknown`追加します。
+配列へのポインターを追加するには、このメソッドを呼び出し `IUnknown` ます。
 
 ### <a name="return-value"></a>戻り値
 
-新しく追加されたポインターに関連付けられた Cookie を返します。
+新しく追加されたポインターに関連付けられているクッキーを返します。または、配列が新しいポインターを格納するのに十分な大きさでない場合は0を返します。
 
-## <a name="ccomunkarraybegin"></a><a name="begin"></a>コマンウンクアレイ::開始
+## <a name="ccomunkarraybegin"></a><a name="begin"></a> CComUnkArray:: begin
 
-`IUnknown`インターフェイス ポインターのコレクションの先頭へのポインターを返します。
+インターフェイスポインターのコレクションの先頭へのポインターを返し `IUnknown` ます。
 
 ```
 IUnknown**
@@ -100,15 +101,15 @@ IUnknown**
 
 ### <a name="return-value"></a>戻り値
 
-`IUnknown`インターフェイス ポインターへのポインター。
+インターフェイスポインターへのポインター `IUnknown` 。
 
 ### <a name="remarks"></a>解説
 
-このコレクションには、ローカルに格納されているインターフェイスへの`IUnknown`ポインターが格納されます。 各`IUnknown`インターフェイスを実際のインターフェイス型にキャストし、それを通じて呼び出します。 最初にインターフェイスを照会する必要はありません。
+コレクションには、としてローカルに格納されるインターフェイスへのポインターが含まれてい `IUnknown` ます。 各 `IUnknown` インターフェイスを実際のインターフェイス型にキャストしてから、を呼び出します。 最初にインターフェイスを照会する必要はありません。
 
-インターフェイスを使用`IUnknown`する前に、NULL ではないことを確認する必要があります。
+インターフェイスを使用する前に `IUnknown` 、それが NULL でないことを確認する必要があります。
 
-## <a name="ccomunkarrayccomunkarray"></a><a name="ccomunkarray"></a>コマンクアレイ::コマンクアレイ
+## <a name="ccomunkarrayccomunkarray"></a><a name="ccomunkarray"></a> CComUnkArray::CComUnkArray
 
 コンストラクターです。
 
@@ -118,11 +119,11 @@ CComUnkArray();
 
 ### <a name="remarks"></a>解説
 
-ポインターを保持`nMaxSize``IUnknown`するようにコレクションを設定し、ポインターを NULL に初期化します。
+ポインターを保持するコレクションを設定 `nMaxSize` `IUnknown` し、ポインターを NULL に初期化します。
 
-## <a name="ccomunkarrayend"></a><a name="end"></a>コマンウンクアレイ::エンド
+## <a name="ccomunkarrayend"></a><a name="end"></a> CComUnkArray:: end
 
-コレクション内の最後`IUnknown`のポインターの 1 つ後のポインターを返します。
+コレクション内の最後のポインターの1つ後ろへのポインターを返し `IUnknown` ます。
 
 ```
 IUnknown**
@@ -131,17 +132,17 @@ IUnknown**
 
 ### <a name="return-value"></a>戻り値
 
-`IUnknown`インターフェイス ポインターへのポインター。
+インターフェイスポインターへのポインター `IUnknown` 。
 
 ### <a name="remarks"></a>解説
 
-メソッド`CComUnkArray``begin`および`end`メソッドを使用して、イベントが発生した場合など、すべてのコネクション ポイントをループ処理できます。
+`CComUnkArray`メソッドとは、 `begin` `end` イベントが発生したときなど、すべての接続ポイントをループ処理するために使用できます。
 
 [!code-cpp[NVC_ATL_COM#44](../../atl/codesnippet/cpp/ccomunkarray-class_1.cpp)]
 
-## <a name="ccomunkarraygetcookie"></a><a name="getcookie"></a>コムウンクアレイ::ゲットクッキー
+## <a name="ccomunkarraygetcookie"></a><a name="getcookie"></a> CComUnkArray:: GetCookie
 
-指定した`IUnknown`ポインターに関連付けられている Cookie を取得します。
+指定したポインターに関連付けられているクッキーを取得するには、このメソッドを呼び出し `IUnknown` ます。
 
 ```
 DWORD WINAPI GetCookie(IUnknown** ppFind);
@@ -149,20 +150,20 @@ DWORD WINAPI GetCookie(IUnknown** ppFind);
 
 ### <a name="parameters"></a>パラメーター
 
-*を見つける*<br/>
-関連`IUnknown`付けられた Cookie が必要なポインター。
+*ppFind*<br/>
+`IUnknown`関連付けられているクッキーが必要なポインター。
 
 ### <a name="return-value"></a>戻り値
 
-`IUnknown`ポインターに関連付けられた Cookie を返します`IUnknown`。
+ポインターに関連付けられているクッキーを返し `IUnknown` ます。一致するポインターが見つからない場合は0を返し `IUnknown` ます。
 
 ### <a name="remarks"></a>解説
 
-同じ`IUnknown`ポインターのインスタンスが複数ある場合、この関数は最初のインスタンスのクッキーを返します。
+同じポインターのインスタンスが複数ある場合 `IUnknown` 、この関数は最初のインスタンスのクッキーを返します。
 
-## <a name="ccomunkarraygetunknown"></a><a name="getunknown"></a>コマンウンクアレイ::ゲットUnknown
+## <a name="ccomunkarraygetunknown"></a><a name="getunknown"></a> CComUnkArray:: GetUnknown
 
-指定された Cookie に`IUnknown`関連付けられているポインターを取得します。
+`IUnknown`特定のクッキーに関連付けられているポインターを取得するには、このメソッドを呼び出します。
 
 ```
 IUnknown* WINAPI GetUnknown(DWORD dwCookie);
@@ -170,16 +171,16 @@ IUnknown* WINAPI GetUnknown(DWORD dwCookie);
 
 ### <a name="parameters"></a>パラメーター
 
-*ドウクッキー*<br/>
-関連付けられた`IUnknown`ポインターが必要な Cookie。
+*dwCookie*<br/>
+関連付けられた `IUnknown` ポインターが必要なクッキー。
 
 ### <a name="return-value"></a>戻り値
 
-一致`IUnknown`する Cookie が見つからない場合は、ポインターを返します。
+ポインターを返し `IUnknown` ます。一致するクッキーが見つからない場合は NULL を返します。
 
-## <a name="ccomunkarrayremove"></a><a name="remove"></a>コミュンクアレイ::削除
+## <a name="ccomunkarrayremove"></a><a name="remove"></a> CComUnkArray:: Remove
 
-配列からポインターを`IUnknown`削除します。
+配列からポインターを削除するには、このメソッドを呼び出し `IUnknown` ます。
 
 ```
 BOOL Remove(DWORD dwCookie);
@@ -187,14 +188,14 @@ BOOL Remove(DWORD dwCookie);
 
 ### <a name="parameters"></a>パラメーター
 
-*ドウクッキー*<br/>
-配列から削除する`IUnknown`ポインターを参照する Cookie。
+*dwCookie*<br/>
+配列から削除するポインターを参照しているクッキー `IUnknown` 。
 
 ### <a name="return-value"></a>戻り値
 
-ポインターが削除された場合は TRUE を返し、それ以外の場合は FALSE を返します。
+ポインターが削除された場合は TRUE、それ以外の場合は FALSE を返します。
 
 ## <a name="see-also"></a>関連項目
 
-[クラス](../../atl/reference/ccomdynamicunkarray-class.md)<br/>
+[CComDynamicUnkArray クラス](../../atl/reference/ccomdynamicunkarray-class.md)<br/>
 [クラスの概要](../../atl/atl-class-overview.md)

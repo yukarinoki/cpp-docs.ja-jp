@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「コンパイラエラー C3373」を参照してください。
 title: コンパイラ エラー C3373
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3373
 ms.assetid: 6e7586c3-1a15-4773-ad20-f90090a400dc
-ms.openlocfilehash: cbf6b19e6ae5e5278d7536ba8ec1cfc28483f753
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: ab066f10adac654578d1705af1aa01bd93b41b31
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74758581"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97150736"
 ---
 # <a name="compiler-error-c3373"></a>コンパイラ エラー C3373
 

@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「レジストリおよび TypeLib グローバル関数」を参照してください。
 title: レジストリとタイプ ライブラリに関するグローバル関数
 ms.date: 03/27/2019
 f1_keywords:
@@ -17,12 +18,12 @@ f1_keywords:
 helpviewer_keywords:
 - RegistryDataExchange function, global functions
 ms.assetid: d58b8a4e-975c-4417-8b34-d3c847f679b3
-ms.openlocfilehash: 0f29f8cac62a7452781e8fde697cdf992db00b8c
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: d7420dbbb472f1fc8b01329e9ded4c887e2bd71d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88834619"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97138887"
 ---
 # <a name="registry-and-typelib-global-functions"></a>レジストリとタイプ ライブラリに関するグローバル関数
 
@@ -52,7 +53,7 @@ ms.locfileid: "88834619"
 |[AtlGetPerUserRegistration](#atlgetperuserregistration)|アプリケーションがレジストリアクセスを **HKEY_CURRENT_USER** ( **HKCU**) ノードにリダイレクトするかどうかを取得します。|
 |[AtlSetPerUserRegistration](#atlsetperuserregistration)|アプリケーションがレジストリアクセスを **HKEY_CURRENT_USER** ( **HKCU**) ノードにリダイレクトするかどうかを設定します。|
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 **ヘッダー:** atlbase. h
 
@@ -77,11 +78,11 @@ ATLINLINE ATLAPI AtlGetPerUserRegistration(bool* pEnabled);
 
 ### <a name="remarks"></a>解説
 
-レジストリリダイレクトは、既定では有効になっていません。 このオプションを有効にすると、レジストリへのアクセスは **HKEY_CURRENT_USER の \ ソフトウェアクラス**にリダイレクトされます。
+レジストリリダイレクトは、既定では有効になっていません。 このオプションを有効にすると、レジストリへのアクセスが **HKEY_CURRENT_USER\Software\Classes** にリダイレクトされます。
 
 リダイレクトはグローバルではありません。 このレジストリのリダイレクトによって影響を受けるのは、MFC フレームワークと ATL フレームワークだけです。
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 **ヘッダー:** atlbase. h
 
@@ -113,7 +114,7 @@ LONG AFXAPI AfxRegCreateKey(HKEY hKey, LPCTSTR lpSubKey, PHKEY phkResult, CAtlTr
 
 関数が成功した場合、戻り値は ERROR_SUCCESS になります。 関数が失敗した場合、戻り値は Winerror.h で定義されている0以外のエラーコードになります。
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 **ヘッダー:** afxpriv.h
 
@@ -142,7 +143,7 @@ LONG AFXAPI AfxRegDeleteKey(HKEY hKey, LPCTSTR lpSubKey, CAtlTransactionManager*
 
 関数が成功した場合、戻り値は ERROR_SUCCESS になります。 関数が失敗した場合、戻り値は Winerror.h で定義されている0以外のエラーコードになります。
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 **ヘッダー:** afxpriv.h
 
@@ -167,7 +168,7 @@ BOOL AFXAPI AfxRegisterPreviewHandler(LPCTSTR lpszCLSID, LPCTSTR lpszShortTypeNa
 *lpszFilterExt*<br/>
 このハンドラーに登録されているファイル拡張子を指定します。
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 **ヘッダー :** afxdisp.h
 
@@ -195,7 +196,7 @@ ATLAPI AtlRegisterTypeLib(HINSTANCE hInstTypeLib, LPCOLESTR lpszIndex);
 
 このヘルパー関数は、 [AtlComModuleUnregisterServer](server-registration-global-functions.md#atlcommoduleunregisterserver) と [CAtlComModule:: RegisterTypeLib](../../atl/reference/catlcommodule-class.md#registertypelib)によって使用されます。
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 **ヘッダー:** atlbase. h
 
@@ -227,7 +228,7 @@ LONG AFXAPI AfxRegOpenKey(HKEY hKey, LPCTSTR lpSubKey, PHKEY phkResult, CAtlTran
 
 関数が成功した場合、戻り値は ERROR_SUCCESS になります。 関数が失敗した場合、戻り値は Winerror.h で定義されている0以外のエラーコードになります。
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 **ヘッダー:** afxpriv.h
 
@@ -265,7 +266,7 @@ LONG AFXAPI AfxRegOpenKeyEx(HKEY hKey, LPCTSTR lpSubKey, DWORD ulOptions, REGSAM
 
 関数が成功した場合、戻り値は ERROR_SUCCESS になります。 関数が失敗した場合、戻り値は Winerror.h で定義されている0以外のエラーコードになります。
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 **ヘッダー:** afxpriv.h
 
@@ -284,7 +285,7 @@ BOOL AFXAPI AfxUnRegisterPreviewHandler(LPCTSTR lpszCLSID);
 *lpszCLSID*<br/>
 登録を解除するハンドラーの CLSID を指定します。
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 **ヘッダー :** afxdisp.h
 
@@ -309,11 +310,11 @@ ATLINLINE ATLAPI AtlSetPerUserRegistration(bool bEnable);
 
 ### <a name="remarks"></a>解説
 
-レジストリリダイレクトは、既定では有効になっていません。 このオプションを有効にすると、レジストリへのアクセスは **HKEY_CURRENT_USER の \ ソフトウェアクラス**にリダイレクトされます。
+レジストリリダイレクトは、既定では有効になっていません。 このオプションを有効にすると、レジストリへのアクセスが **HKEY_CURRENT_USER\Software\Classes** にリダイレクトされます。
 
 リダイレクトはグローバルではありません。 このレジストリのリダイレクトによって影響を受けるのは、MFC フレームワークと ATL フレームワークだけです。
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 **ヘッダー:** atlbase. h
 
@@ -345,7 +346,7 @@ ATLAPI AtlUnRegisterTypeLib(
 
 このヘルパー関数は、 [CAtlComModule:: UnRegisterTypeLib](../../atl/reference/catlcommodule-class.md#unregistertypelib) と [AtlComModuleUnregisterServer](server-registration-global-functions.md#atlcommoduleunregisterserver)によって使用されます。
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 **ヘッダー:** atlbase. h
 
@@ -433,7 +434,7 @@ HRESULT RegistryDataExchange(
 |eWriteToReg|レジストリにデータを書き込みます。|
 |eDeleteFromReg|レジストリからキーを削除します。|
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 **ヘッダー:** atlbase. h
 

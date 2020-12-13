@@ -1,15 +1,16 @@
 ---
+description: '詳細情報: OLE の背景'
 title: OLE の背景知識
 ms.date: 11/04/2016
 helpviewer_keywords:
 - OLE, about OLE
 ms.assetid: 5f654eb5-66b1-40c9-9215-bb85356a67f8
-ms.openlocfilehash: baa2bca8b2e06fd55591c3a4fa2a9752abbb5355
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 89d8e3b6e1a84082fabdf954971e75ab86366622
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88830788"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97150229"
 ---
 # <a name="ole-background"></a>OLE の背景知識
 
@@ -28,7 +29,7 @@ OLE には、アプリケーション間でシームレスにやり取りする�
 
    リンクと埋め込みは、別のアプリケーションで作成された OLE ドキュメント内に作成されたアイテムを格納するための2つの方法です。 2つの相違点に関する一般的な情報については、「 [OLE の背景: リンクと埋め込み](ole-background-linking-and-embedding.md)」を参照してください。 詳細については、「 [コンテナー](containers.md) と [サーバー](servers.md)」を参照してください。
 
-- インプレースアクティブ化 (ビジュアル編集)
+- In-Place のアクティブ化 (ビジュアル編集)
 
    コンテナードキュメントのコンテキストで埋め込みアイテムをアクティブ化することを、インプレースアクティブ化またはビジュアル編集と呼びます。 コンテナーアプリケーションのインターフェイスが変更され、埋め込みアイテムを作成したコンポーネントアプリケーションの機能が組み込まれます。 リンクされた項目は、リンクを含むアプリケーションのコンテキストから別のファイルに格納されているため、その場でアクティブになりません。 インプレースアクティブ化の詳細については、「 [アクティブ化](activation-cpp.md)」を参照してください。
 

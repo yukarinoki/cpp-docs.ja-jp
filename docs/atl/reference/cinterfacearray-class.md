@@ -1,5 +1,6 @@
 ---
-title: クラス
+description: '詳細情報: CInterfaceArray クラス'
+title: CInterfaceArray クラス
 ms.date: 11/04/2016
 f1_keywords:
 - CInterfaceArray
@@ -8,16 +9,16 @@ f1_keywords:
 helpviewer_keywords:
 - CInterfaceArray class
 ms.assetid: 1f29cf66-a086-4a7b-b6a8-64f73da39f79
-ms.openlocfilehash: e6efe31989b06f0977ecff156a8f64053dc64ad1
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 6dbe382682b8411d7562d1d0ff75f0ef587396f2
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81326796"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97141545"
 ---
-# <a name="cinterfacearray-class"></a>クラス
+# <a name="cinterfacearray-class"></a>CInterfaceArray クラス
 
-このクラスには、COM インターフェイス ポインターの配列を構築するときに役立つメソッドが用意されています。
+このクラスには、COM インターフェイスポインターの配列を構築するときに役立つメソッドが用意されています。
 
 ## <a name="syntax"></a>構文
 
@@ -30,11 +31,11 @@ class CInterfaceArray :
 
 #### <a name="parameters"></a>パラメーター
 
-*私*<br/>
+*I*<br/>
 格納するポインターの型を指定する COM インターフェイス。
 
-*ピッド*<br/>
-I の IID への*ポインタ。*
+*piid*<br/>
+*I* の IID へのポインター。
 
 ## <a name="members"></a>メンバー
 
@@ -42,13 +43,13 @@ I の IID への*ポインタ。*
 
 |名前|説明|
 |----------|-----------------|
-|[次の手順を実行します。](#cinterfacearray)|インターフェイス配列のコンストラクター。|
+|[CInterfaceArray:: CInterfaceArray](#cinterfacearray)|インターフェイス配列のコンストラクター。|
 
 ## <a name="remarks"></a>解説
 
-このクラスは、COM インターフェイス ポインターの配列を作成するためのコンストラクターと派生メソッドを提供します。 リストが必要な場合は[、CInterfaceList](../../atl/reference/cinterfacelist-class.md)を使用します。
+このクラスは、COM インターフェイスポインターの配列を作成するためのコンストラクターと派生メソッドを提供します。 リストが必要な場合は、 [Cinterfacelist](../../atl/reference/cinterfacelist-class.md) を使用します。
 
-詳細については、「 [ATL コレクション クラス](../../atl/atl-collection-classes.md)」を参照してください。
+詳細については、「 [ATL コレクションクラス](../../atl/atl-collection-classes.md)」を参照してください。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -56,11 +57,11 @@ I の IID への*ポインタ。*
 
 `CInterfaceArray`
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-**ヘッダー:** atlcoll.h
+**ヘッダー:** atlcoll. h
 
-## <a name="cinterfacearraycinterfacearray"></a><a name="cinterfacearray"></a>次の手順を実行します。
+## <a name="cinterfacearraycinterfacearray"></a><a name="cinterfacearray"></a> CInterfaceArray:: CInterfaceArray
 
 コンストラクターです。
 
@@ -70,11 +71,11 @@ CInterfaceArray() throw();
 
 ### <a name="remarks"></a>解説
 
-スマート ポインター配列を初期化します。
+スマートポインターの配列を初期化します。
 
 ## <a name="see-also"></a>関連項目
 
-[クラス](../../atl/reference/catlarray-class.md)<br/>
-[CComQIPtrクラス](../../atl/reference/ccomqiptr-class.md)<br/>
-[クラスをクラス](../../atl/reference/ccomqiptrelementtraits-class.md)<br/>
+[CAtlArray クラス](../../atl/reference/catlarray-class.md)<br/>
+[CComQIPtr クラス](../../atl/reference/ccomqiptr-class.md)<br/>
+[CComQIPtrElementTraits クラス](../../atl/reference/ccomqiptrelementtraits-class.md)<br/>
 [クラスの概要](../../atl/atl-class-overview.md)

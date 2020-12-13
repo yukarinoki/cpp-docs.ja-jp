@@ -1,4 +1,5 @@
 ---
+description: '詳細については、「MFC ActiveX コントロール: ActiveX コントロールのローカライズ」を参照してください。'
 title: 'MFC ActiveX コントロール : ActiveX コントロールのローカライズ'
 ms.date: 09/12/2018
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - LocaleID ambient property [MFC]
 - LOCALIZE sample [MFC]
 ms.assetid: a44b839a-c652-4ec5-b824-04392708a5f9
-ms.openlocfilehash: a85ec5cbed797b756afd93cd8423c58d138a0625
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 830fecd316b48f61da4f90136dd29455801ec725
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84615420"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97150216"
 ---
 # <a name="mfc-activex-controls-localizing-an-activex-control"></a>MFC ActiveX コントロール : ActiveX コントロールのローカライズ
 
@@ -28,7 +29,7 @@ ActiveX コントロールを国際市場に合わせて調整する場合は、
 
 一般に、ActiveX コントロールは、常に、アンビエント LocaleID プロパティのロケールに基づいている必要があります。 これには 3 つの方法があります。
 
-- アンビエント LocaleID プロパティの現在の値に基づいて、リソースを常にオンデマンドで読み込みます。 MFC ActiveX コントロールのサンプル[ローカライズ](../overview/visual-cpp-samples.md)では、この方法を使用します。
+- アンビエント LocaleID プロパティの現在の値に基づいて、リソースを常にオンデマンドで読み込みます。 MFC ActiveX コントロールのサンプル [ローカライズ](../overview/visual-cpp-samples.md) では、この方法を使用します。
 
 - アンビエント LocaleID プロパティに基づいて、最初のコントロールがインスタンス化されたときにリソースを読み込み、他のすべてのインスタンスに対してこれらのリソースを使用します。 この記事では、この方法について説明します。
 
@@ -40,9 +41,9 @@ ActiveX コントロールを国際市場に合わせて調整する場合は、
     > [!NOTE]
     >  これはコントロールに対しては機能しますが、アンビエント LocaleID プロパティが変更された場合、ランタイム DLL は独自のリソースを動的に更新しません。 また、ActiveX コントロールのランタイム Dll では、スレッドロケールを使用してリソースのロケールを決定します。
 
-この記事の残りの部分では、2つのローカライズ戦略について説明します。 最初の方法では、[コントロールのプログラミングインターフェイス](#_core_localizing_your_control.92.s_programmability_interface)(プロパティ、メソッド、およびイベントの名前) をローカライズします。 2番目の方法では、コンテナーのアンビエント LocaleID プロパティを使用して、[コントロールのユーザーインターフェイスをローカライズ](#_core_localizing_the_control.92.s_user_interface)します。 コントロールのローカライズのデモンストレーションについては、「MFC ActiveX コントロールのサンプル[ローカライズ](../overview/visual-cpp-samples.md)」を参照してください。
+この記事の残りの部分では、2つのローカライズ戦略について説明します。 最初の方法では、 [コントロールのプログラミングインターフェイス](#_core_localizing_your_control.92.s_programmability_interface) (プロパティ、メソッド、およびイベントの名前) をローカライズします。 2番目の方法では、コンテナーのアンビエント LocaleID プロパティを使用して、 [コントロールのユーザーインターフェイスをローカライズ](#_core_localizing_the_control.92.s_user_interface)します。 コントロールのローカライズのデモンストレーションについては、「MFC ActiveX コントロールのサンプル [ローカライズ](../overview/visual-cpp-samples.md)」を参照してください。
 
-## <a name="localizing-the-controls-programmability-interface"></a><a name="_core_localizing_your_control.92.s_programmability_interface"></a>コントロールのプログラミングインターフェイスのローカライズ
+## <a name="localizing-the-controls-programmability-interface"></a><a name="_core_localizing_your_control.92.s_programmability_interface"></a> コントロールのプログラミングインターフェイスのローカライズ
 
 コントロールのプログラミングインターフェイス (プログラマがコントロールを使用するアプリケーションを作成するために使用するインターフェイス) をローカライズする場合は、コントロールの変更されたバージョンを作成する必要があります。IDL ファイル (コントロールタイプライブラリを構築するためのスクリプト) は、サポートする各言語に対応しています。 これは、コントロールのプロパティ名をローカライズするために必要な唯一の場所です。
 
@@ -50,23 +51,23 @@ ActiveX コントロールを国際市場に合わせて調整する場合は、
 
 [!code-cpp[NVC_MFC_AxLoc#1](codesnippet/cpp/mfc-activex-controls-localizing-an-activex-control_1.idl)]
 
-SAMPLEFR のプロパティ名を変更します。IDL をフランス語に相当するものにし、MKTYPLIB を使用します。EXE を実行して、フランス語タイプライブラリ (SAMPLEFR) を生成します。TLB.
+SAMPLEFR のプロパティ名を変更します。IDL をフランス語に相当するものにし、MKTYPLIB.EXE を使用して、フランス語タイプライブラリ (SAMPLEFR) を生成します。TLB.
 
 複数のローカライズされたタイプライブラリを作成するには、ローカライズ版を追加します。IDL ファイルはプロジェクトに自動的に作成されます。
 
 #### <a name="to-add-an-idl-file-to-your-activex-control-project"></a>を追加する場合は。IDL ファイルを ActiveX コントロールプロジェクトに
 
-1. コントロールプロジェクトを開いた状態で、[**プロジェクト**] メニューの [**既存項目の追加**] をクリックします。
+1. コントロールプロジェクトを開いた状態で、[ **プロジェクト** ] メニューの [ **既存項目の追加**] をクリックします。
 
    **[既存項目の追加]** ダイアログ ボックスが表示されます。
 
 1. 必要に応じて、表示するドライブとディレクトリを選択します。
 
-1. [**ファイルの種類**] ボックスで、[**すべてのファイル ( \* . \* )**] を選択します。
+1. [ **ファイルの種類** ] ボックスで、[ **すべてのファイル ( \* . \* )**] を選択します。
 
 1. [ファイル] ボックスの一覧で、をダブルクリックします。プロジェクトに挿入する IDL ファイル。
 
-1. 必要なものをすべて追加したら、[**開く**] をクリックします。IDL ファイル。
+1. 必要なものをすべて追加したら、[ **開く** ] をクリックします。IDL ファイル。
 
 ファイルはプロジェクトに追加されているため、プロジェクトの残りの部分がビルドされるときにビルドされます。 ローカライズされたタイプライブラリは、現在の ActiveX コントロールプロジェクトディレクトリにあります。
 
@@ -80,7 +81,7 @@ SAMPLEFR のプロパティ名を変更します。IDL をフランス語に相�
 
 コントロールが登録されると、関数は、指定されたを `AfxOleRegisterTypeLib` 自動的に検索します。TLB ファイルは、コントロールと同じディレクトリにあり、Windows 登録データベースに登録されます。 の場合は。TLB ファイルが見つかりません。関数は無効です。
 
-## <a name="localizing-the-controls-user-interface"></a><a name="_core_localizing_the_control.92.s_user_interface"></a>コントロールのユーザーインターフェイスのローカライズ
+## <a name="localizing-the-controls-user-interface"></a><a name="_core_localizing_the_control.92.s_user_interface"></a> コントロールのユーザーインターフェイスのローカライズ
 
 コントロールのユーザーインターフェイスをローカライズするには、コントロールのすべてのユーザーに表示されるリソース (プロパティページやエラーメッセージなど) を言語固有のリソース Dll に配置します。 その後、コンテナーのアンビエント LocaleID プロパティを使用して、ユーザーのロケールに適した DLL を選択できます。
 
@@ -88,13 +89,13 @@ SAMPLEFR のプロパティ名を変更します。IDL をフランス語に相�
 
 [!code-cpp[NVC_MFC_AxLoc#3](codesnippet/cpp/mfc-activex-controls-localizing-an-activex-control_3.cpp)]
 
-Switch ステートメントの各ケースでサブ言語 ID をチェックし、より専門的なローカライズを行うことができることに注意してください。 この関数のデモンストレーションについては、「 `GetResourceHandle` MFC ActiveX コントロールのサンプル[ローカライズ](../overview/visual-cpp-samples.md)」の関数を参照してください。
+Switch ステートメントの各ケースでサブ言語 ID をチェックし、より専門的なローカライズを行うことができることに注意してください。 この関数のデモンストレーションについては、「 `GetResourceHandle` MFC ActiveX コントロールのサンプル [ローカライズ](../overview/visual-cpp-samples.md)」の関数を参照してください。
 
-コントロールが最初にコンテナーに読み込まれるときに、 [COleControl:: AmbientLocaleID](reference/colecontrol-class.md#ambientlocaleid)を呼び出してロケール ID を取得できます。 次に、返されたロケール ID 値を、適切なリソースライブラリを読み込む関数に渡すことができ `GetLocalizedResourceHandle` ます。 コントロールは、結果として得られるハンドルを[AfxSetResourceHandle](reference/application-information-and-management.md#afxsetresourcehandle)に渡す必要があります。
+コントロールが最初にコンテナーに読み込まれるときに、 [COleControl:: AmbientLocaleID](reference/colecontrol-class.md#ambientlocaleid) を呼び出してロケール ID を取得できます。 次に、返されたロケール ID 値を、適切なリソースライブラリを読み込む関数に渡すことができ `GetLocalizedResourceHandle` ます。 コントロールは、結果として得られるハンドルを [AfxSetResourceHandle](reference/application-information-and-management.md#afxsetresourcehandle)に渡す必要があります。
 
 [!code-cpp[NVC_MFC_AxLoc#4](codesnippet/cpp/mfc-activex-controls-localizing-an-activex-control_4.cpp)]
 
-上記のコードサンプルを、たとえば、 [COleControl:: OnSetClientSite](reference/colecontrol-class.md#onsetclientsite)のオーバーライドなど、コントロールのメンバー関数に配置します。 さらに、 *m_hResDLL*は、コントロールクラスのメンバー変数である必要があります。
+上記のコードサンプルを、たとえば、 [COleControl:: OnSetClientSite](reference/colecontrol-class.md#onsetclientsite)のオーバーライドなど、コントロールのメンバー関数に配置します。 さらに、 *m_hResDLL* は、コントロールクラスのメンバー変数である必要があります。
 
 同様のロジックを使用して、コントロールのプロパティページをローカライズできます。 プロパティページをローカライズするには、次の例のようなコードをプロパティページの実装ファイルに追加します ( [COlePropertyPage:: OnSetPageSite](reference/colepropertypage-class.md#onsetpagesite)のオーバーライド内)。
 

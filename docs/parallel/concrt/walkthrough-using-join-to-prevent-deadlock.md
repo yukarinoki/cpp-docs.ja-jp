@@ -1,4 +1,5 @@
 ---
+description: '詳細については、「チュートリアル: join を使用したデッドロックの回避」を参照してください。'
 title: 'チュートリアル: join を使用したデッドロックの防止'
 ms.date: 04/25/2019
 helpviewer_keywords:
@@ -7,16 +8,16 @@ helpviewer_keywords:
 - non-greedy joins, example
 - join class, example
 ms.assetid: d791f697-bb93-463e-84bd-5df1651b7446
-ms.openlocfilehash: 5bdd6cd81051d224714dd66d4604cbdec4ddb552
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: b74a7cd3f5f2326bb73ece13e16be95d6677bdd0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87217884"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97150151"
 ---
 # <a name="walkthrough-using-join-to-prevent-deadlock"></a>チュートリアル: join を使用したデッドロックの防止
 
-このトピックでは、"食事する哲学者の問題" を使用して、 [concurrency:: join](../../parallel/concrt/reference/join-class.md)クラスを使用してアプリケーションでデッドロックを防止する方法を示します。 ソフトウェア アプリケーションで、2 つ以上のプロセスがそれぞれリソースを確保し、別のプロセスがリソースを解放するのをお互いに待機すると、*デッドロック*が発生します。
+このトピックでは、"食事する哲学者の問題" を使用して、 [concurrency:: join](../../parallel/concrt/reference/join-class.md) クラスを使用してアプリケーションでデッドロックを防止する方法を示します。 ソフトウェア アプリケーションで、2 つ以上のプロセスがそれぞれリソースを確保し、別のプロセスがリソースを解放するのをお互いに待機すると、*デッドロック* が発生します。
 
 "食事する哲学者の問題" は、リソース セットが複数の同時実行プロセス間で共有される場合に発生する可能性のある一般的な問題の特定の例です。
 
@@ -26,7 +27,7 @@ ms.locfileid: "87217884"
 
 - [非同期エージェント](../../parallel/concrt/asynchronous-agents.md)
 
-- [チュートリアル: エージェントベースのアプリケーションの作成](../../parallel/concrt/walkthrough-creating-an-agent-based-application.md)
+- [チュートリアル: Agent-Based アプリケーションの作成](../../parallel/concrt/walkthrough-creating-an-agent-based-application.md)
 
 - [非同期メッセージブロック](../../parallel/concrt/asynchronous-message-blocks.md)
 
@@ -34,7 +35,7 @@ ms.locfileid: "87217884"
 
 - [同期データ構造](../../parallel/concrt/synchronization-data-structures.md)
 
-## <a name="sections"></a><a name="top"></a>各項
+## <a name="sections"></a><a name="top"></a> 各項
 
 このチュートリアルは、次のセクションで構成されています。
 
@@ -44,7 +45,7 @@ ms.locfileid: "87217884"
 
 - [Join を使用してデッドロックを防止する](#solution)
 
-## <a name="the-dining-philosophers-problem"></a><a name="problem"></a>食事する哲学者の問題
+## <a name="the-dining-philosophers-problem"></a><a name="problem"></a> 食事する哲学者の問題
 
 "食事する哲学者の問題" は、アプリケーションでどのようにデッドロックが発生するかを示します。 この問題では、5 人の哲学者が丸いテーブルを囲んで座っています。 どの哲学者も思索と食事を交互に行っています。 どの哲学者も左隣の哲学者と 1 本の箸を共有する必要があり、また右隣の哲学者とも別の 1 本の箸を共有する必要があります。 次の図は、この配置を表しています。
 
@@ -54,9 +55,9 @@ ms.locfileid: "87217884"
 
 [[上](#top)]
 
-## <a name="a-nave-implementation"></a><a name="deadlock"></a>単純な実装
+## <a name="a-nave-implementation"></a><a name="deadlock"></a> 単純な実装
 
-次の例は、"食事する哲学者の問題" を考慮していない実装を示しています。 `philosopher` [Concurrency:: agent](../../parallel/concrt/reference/agent-class.md)から派生するクラスを使用すると、各哲学者を個別に動作させることができます。 この例では、 [concurrency:: critical_section](../../parallel/concrt/reference/critical-section-class.md)オブジェクトの共有配列を使用して、各 `philosopher` オブジェクトに箸のペアへの排他アクセスを与えます。
+次の例は、"食事する哲学者の問題" を考慮していない実装を示しています。 `philosopher` [Concurrency:: agent](../../parallel/concrt/reference/agent-class.md)から派生するクラスを使用すると、各哲学者を個別に動作させることができます。 この例では、 [concurrency:: critical_section](../../parallel/concrt/reference/critical-section-class.md) オブジェクトの共有配列を使用して、各 `philosopher` オブジェクトに箸のペアへの排他アクセスを与えます。
 
 この実装を図に関連付けて説明すると、`philosopher` クラスは 1 人の哲学者を表します。 変数は、 **`int`** 各箸を表します。 `critical_section` オブジェクトは、箸が置かれる箸置きとして機能します。 `run` メソッドは、哲学者の生命をシミュレートしています。 `think` メソッドは、考える行為をシミュレートしており、`eat` メソッドは、食事する行為をシミュレートしています。
 
@@ -76,17 +77,17 @@ ms.locfileid: "87217884"
 
 [[上](#top)]
 
-## <a name="using-join-to-prevent-deadlock"></a><a name="solution"></a>Join を使用してデッドロックを防止する
+## <a name="using-join-to-prevent-deadlock"></a><a name="solution"></a> Join を使用してデッドロックを防止する
 
 このセクションでは、メッセージ バッファーおよびメッセージ パッシング関数を使用して、デッドロックを発生させないようにする方法について説明します。
 
-この例を前の例と関連付けるために、 `philosopher` クラスは `critical_section` [concurrency:: unbounded_buffer](reference/unbounded-buffer-class.md)オブジェクトとオブジェクトを使用して各オブジェクトを置き換え `join` ます。 `join` オブジェクトは、哲学者に箸を与える決定者として機能します。
+この例を前の例と関連付けるために、 `philosopher` クラスは `critical_section` [concurrency:: unbounded_buffer](reference/unbounded-buffer-class.md) オブジェクトとオブジェクトを使用して各オブジェクトを置き換え `join` ます。 `join` オブジェクトは、哲学者に箸を与える決定者として機能します。
 
 この例では、`unbounded_buffer` クラスを使用しています。これは、ターゲットが `unbounded_buffer` オブジェクトからメッセージを受け取ったときに、そのメッセージはメッセージ キューから削除されるためです。 これにより、メッセージを保持する `unbounded_buffer` オブジェクトは、箸が使用できることを示すことができます。 メッセージを保持しない `unbounded_buffer` オブジェクトは、箸が使用されていることを示します。
 
 この例では、最短一致の `join` オブジェクトを使用しています。最短一致の join は、両方の `philosopher` オブジェクトにメッセージが含まれる場合に限り、各 `unbounded_buffer` オブジェクトに対し、両方の箸へのアクセス権を与えるためです。 最長一致の join は、メッセージが使用できるようになるとすぐにメッセージを受け取るため、最長一致の join ではデッドロックは防止されません。 すべての最長一致 `join` オブジェクトがメッセージのいずれかを受け取り、一方で他のメッセージが使用できるようになるのを長時間待つ場合、デッドロックが発生する可能性があります。
 
-最長一致と最短一致の結合、およびさまざまなメッセージバッファーの種類の違いの詳細については、「[非同期メッセージブロック](../../parallel/concrt/asynchronous-message-blocks.md)」を参照してください。
+最長一致と最短一致の結合、およびさまざまなメッセージバッファーの種類の違いの詳細については、「 [非同期メッセージブロック](../../parallel/concrt/asynchronous-message-blocks.md)」を参照してください。
 
 ### <a name="to-prevent-deadlock-in-this-example"></a>この例でデッドロックを防止するには
 

@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「コンパイラエラー C3352」を参照してください。
 title: コンパイラ エラー C3352
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,20 +7,20 @@ f1_keywords:
 helpviewer_keywords:
 - C3352
 ms.assetid: f233bed7-474e-425f-aad2-7801578169d4
-ms.openlocfilehash: b679a89bb768ad7a50d0bbaa7b814c7a72f9f4c5
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 66d6921c86c6b7a30026880f01ab2a5dada11a65
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74740430"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97150944"
 ---
 # <a name="compiler-error-c3352"></a>コンパイラ エラー C3352
 
 ' function ': 指定された関数は、デリゲート型 ' type ' と一致しません
 
-`function` のパラメーターリストとデリゲートが一致しません。
+とデリゲートのパラメーターリストが `function` 一致しません。
 
-詳細については、「 [delegate (C++コンポーネント拡張)](../../extensions/delegate-cpp-component-extensions.md)」を参照してください。
+詳細については、「 [delegate (C++ コンポーネント拡張)](../../extensions/delegate-cpp-component-extensions.md)」を参照してください。
 
 次の例では、C3352 が生成されます。
 

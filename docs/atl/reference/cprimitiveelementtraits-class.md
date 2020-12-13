@@ -1,5 +1,6 @@
 ---
-title: クラス
+description: '詳細情報: CPrimitiveElementTraits クラス'
+title: CPrimitiveElementTraits クラス
 ms.date: 11/04/2016
 f1_keywords:
 - CPrimitiveElementTraits
@@ -9,16 +10,16 @@ f1_keywords:
 helpviewer_keywords:
 - CPrimitiveElementTraits class
 ms.assetid: 21c1cea8-2c5a-486c-b65c-85490f3ed4e6
-ms.openlocfilehash: 6b45d93420d1832091cc451a3e6eb309f61d07a3
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: a9a47d9e6268ee6cc858d85e9236b00c270e8841
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81331432"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97141077"
 ---
-# <a name="cprimitiveelementtraits-class"></a>クラス
+# <a name="cprimitiveelementtraits-class"></a>CPrimitiveElementTraits クラス
 
-このクラスは、プリミティブ データ型で構成されるコレクション クラスの既定のメソッドと関数を提供します。
+このクラスは、プリミティブデータ型で構成されるコレクションクラスの既定のメソッドと関数を提供します。
 
 ## <a name="syntax"></a>構文
 
@@ -30,7 +31,7 @@ class CPrimitiveElementTraits : public CDefaultElementTraits<T>
 #### <a name="parameters"></a>パラメーター
 
 *T*<br/>
-コレクション クラス オブジェクトに格納されるデータの型。
+コレクションクラスオブジェクトに格納されるデータの型。
 
 ## <a name="members"></a>メンバー
 
@@ -38,42 +39,42 @@ class CPrimitiveElementTraits : public CDefaultElementTraits<T>
 
 |名前|説明|
 |----------|-----------------|
-|[要素トレイト::イナルグタイプ](#inargtype)|コレクション クラス オブジェクトに要素を追加するために使用するデータ型。|
-|[要素トレイト::アウトアルプタイプ](#outargtype)|コレクション クラス オブジェクトから要素を取得するために使用するデータ型。|
+|[CPrimitiveElementTraits:: INARGTYPE](#inargtype)|コレクションクラスオブジェクトに要素を追加するために使用するデータ型。|
+|[CPrimitiveElementTraits:: OUTARGTYPE](#outargtype)|コレクションクラスオブジェクトから要素を取得するために使用するデータ型。|
 
 ## <a name="remarks"></a>解説
 
-このクラスは、コレクション クラス オブジェクトに格納されているプリミティブ データ型要素の移動、コピー、比較、およびハッシュを行うための既定の静的関数とメソッドを提供します。
+このクラスには、コレクションクラスオブジェクトに格納されているプリミティブデータ型の要素の移動、コピー、比較、およびハッシュを行うための既定の静的関数とメソッドが用意されています。
 
-詳細については、「 [ATL コレクション クラス](../../atl/atl-collection-classes.md)」を参照してください。
+詳細については、「 [ATL コレクションクラス](../../atl/atl-collection-classes.md)」を参照してください。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
-[クセプチュ設定の比較](../../atl/reference/cdefaultcomparetraits-class.md)
+[CDefaultCompareTraits](../../atl/reference/cdefaultcomparetraits-class.md)
 
-[既定のハッシュトレイト](../../atl/reference/cdefaulthashtraits-class.md)
+[CDefaultHashTraits](../../atl/reference/cdefaulthashtraits-class.md)
 
-[Cエレメントトレイツベース](../../atl/reference/celementtraitsbase-class.md)
+[CElementTraitsBase](../../atl/reference/celementtraitsbase-class.md)
 
-[要素の状態](../../atl/reference/cdefaultelementtraits-class.md)
+[CDefaultElementTraits](../../atl/reference/cdefaultelementtraits-class.md)
 
 `CPrimitiveElementTraits`
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-**ヘッダー:** atlcoll.h
+**ヘッダー:** atlcoll. h
 
-## <a name="cprimitiveelementtraitsinargtype"></a><a name="inargtype"></a>要素トレイト::イナルグタイプ
+## <a name="cprimitiveelementtraitsinargtype"></a><a name="inargtype"></a> CPrimitiveElementTraits:: INARGTYPE
 
-コレクション クラス オブジェクトに要素を追加するために使用するデータ型。
+コレクションクラスオブジェクトに要素を追加するために使用するデータ型。
 
 ```
 typedef T INARGTYPE;
 ```
 
-## <a name="cprimitiveelementtraitsoutargtype"></a><a name="outargtype"></a>要素トレイト::アウトアルプタイプ
+## <a name="cprimitiveelementtraitsoutargtype"></a><a name="outargtype"></a> CPrimitiveElementTraits:: OUTARGTYPE
 
-コレクション クラス オブジェクトから要素を取得するために使用するデータ型。
+コレクションクラスオブジェクトから要素を取得するために使用するデータ型。
 
 ```
 typedef T& OUTARGTYPE;
@@ -81,5 +82,5 @@ typedef T& OUTARGTYPE;
 
 ## <a name="see-also"></a>関連項目
 
-[クラスの既定値](../../atl/reference/cdefaultelementtraits-class.md)<br/>
+[CDefaultElementTraits クラス](../../atl/reference/cdefaultelementtraits-class.md)<br/>
 [クラスの概要](../../atl/atl-class-overview.md)
