@@ -1,32 +1,33 @@
 ---
-title: '方法: アセンブリから STL/CLR コンテナーを公開します。'
+description: '詳細については、「方法: アセンブリから STL/CLR コンテナーを公開する」を参照してください。'
+title: '方法: アセンブリから STL/CLR コンテナーを公開する'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - STL/CLR Containers [STL/CLR]
 - STL/CLR, cross-assembly issues
 ms.assetid: 87efb41b-3db3-4498-a2e7-f3ef8a99f04d
-ms.openlocfilehash: 206a95cbaa808f54d7ae0e500b5a2bea272d974b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a4ed92af956def030c80f8f303f0a7501c4944c6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62387332"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97134980"
 ---
-# <a name="how-to-expose-an-stlclr-container-from-an-assembly"></a>方法: アセンブリから STL/CLR コンテナーを公開します。
+# <a name="how-to-expose-an-stlclr-container-from-an-assembly"></a>方法: アセンブリから STL/CLR コンテナーを公開する
 
-などの STL/CLR コンテナー`list`と`map`テンプレート ref クラスとして実装されます。 C++ テンプレートは、コンパイル時にインスタンス化ため正確に同じシグネチャが異なるアセンブリにある 2 つのテンプレート クラスは実際にはさまざまな種類にします。 つまり、アセンブリ境界を越えてテンプレート クラスを使用することはできません。
+やなどの STL/CLR `list` コンテナー `map` は、テンプレート ref クラスとして実装されます。 C++ テンプレートはコンパイル時にインスタンス化されるため、シグネチャがまったく同じで、アセンブリが異なる2つのテンプレートクラスは、実際には異なる型になります。 つまり、テンプレートクラスは、アセンブリの境界を越えて使用することはできません。
 
-STL/CLR コンテナーがジェネリック インターフェイスを実装するのには、アセンブリ間で共有可能な<xref:System.Collections.Generic.ICollection%601>します。 このジェネリック インターフェイスを使用すると、STL/CLR コンテナーを含む C++、c#、および Visual Basic の場合は、ジェネリックをサポートするすべての言語にアクセスできます。
+アセンブリ間の共有を可能にするために、STL/CLR コンテナーはジェネリックインターフェイスを実装し <xref:System.Collections.Generic.ICollection%601> ます。 このジェネリックインターフェイスを使用すると、C++、C#、および Visual Basic を含むジェネリックをサポートするすべての言語で、STL/CLR コンテナーにアクセスできます。
 
-このトピックでは、という名前の C++ アセンブリで記述された複数の STL/CLR コンテナーの要素を表示する方法を示します`StlClrClassLibrary`します。 2 つのアセンブリへのアクセスに紹介`StlClrClassLibrary`します。 最初のアセンブリは、C++、および c# では、2 つ目で記述されます。
+このトピックでは、という名前の C++ アセンブリに記述された複数の STL/CLR コンテナーの要素を表示する方法について説明し `StlClrClassLibrary` ます。 にアクセスする2つのアセンブリを示し `StlClrClassLibrary` ます。 最初のアセンブリは C++ で記述され、2番目のアセンブリは C# で記述されています。
 
-使用してコンテナーのジェネリック インターフェイスをアクセスすることができる場合、両方のアセンブリは C++ で記述された、その`generic_container`typedef。 たとえば、次の種類のコンテナーがある`cliext::vector<int>`、そのジェネリック インターフェイスは: `cliext::vector<int>::generic_container`。 使用して、ジェネリック インターフェイス経由で、反復子を取得する同様に、`generic_iterator`に示すように、typedef:`cliext::vector<int>::generic_iterator`します。
+両方のアセンブリが C++ で記述されている場合は、その typedef を使用して、コンテナーのジェネリックインターフェイスにアクセスでき `generic_container` ます。 たとえば、型のコンテナーがある場合、 `cliext::vector<int>` そのジェネリックインターフェイスはです `cliext::vector<int>::generic_container` 。 同様に、のように、typedef を使用してジェネリックインターフェイスの反復子を取得することもできます `generic_iterator` `cliext::vector<int>::generic_iterator` 。
 
-C++ ヘッダー ファイルでは、これらの typedef が宣言されている、ために、他の言語で記述されたアセンブリは、それらを使用できません。 そのため、ジェネリック インターフェイスにアクセスする`cliext::vector<int>`(C#) またはその他の .NET 言語で使用`System.Collections.Generic.ICollection<int>`します。 このコレクションを反復処理に使用して、`foreach`ループします。
+これらの typedef は C++ ヘッダーファイルで宣言されているため、他の言語で記述されたアセンブリでは使用できません。 したがって、 `cliext::vector<int>` C# またはその他の .net 言語でのジェネリックインターフェイスにアクセスするには、を使用し `System.Collections.Generic.ICollection<int>` ます。 このコレクションを反復処理するには、ループを使用し `foreach` ます。
 
-次の表では、各 STL/CLR コンテナーを実装するジェネリック インターフェイスを示します。
+次の表は、各 STL/CLR コンテナーが実装するジェネリックインターフェイスを示しています。
 
-|STL/CLR コンテナー|ジェネリック インターフェイス|
+|STL/CLR コンテナー|ジェネリックインターフェイス|
 |------------------------|-----------------------|
 |`deque<T>`|`ICollection<T>`|
 |`hash_map<K, V>`|`IDictionary<K, V>`|
@@ -41,13 +42,13 @@ C++ ヘッダー ファイルでは、これらの typedef が宣言されてい
 |`vector<T>`|`ICollection<T>`|
 
 > [!NOTE]
-> `queue`、 `priority_queue`、および`stack`ジェネリック インターフェイスを実装しないと、アセンブリ間のアクセスをすることはできませんが、コンテナーは反復子をサポートしていません。
+> `queue`、 `priority_queue` 、およびコンテナーは `stack` 反復子をサポートしていないため、ジェネリックインターフェイスを実装せず、アセンブリ間でアクセスすることはできません。
 
 ## <a name="example-1"></a>例 1
 
 ### <a name="description"></a>説明
 
-この例では、プライベートの STL/CLR メンバー データを格納する C++ クラスを宣言します。 クラスのプライベート コレクションへのアクセスを許可するパブリック メソッドを宣言します。 2 つの方法で、C++ のクライアントのいずれかおよびその他の .NET クライアントのいずれかを行います。
+この例では、プライベート STL/CLR メンバーデータを含む C++ クラスを宣言します。 次に、パブリックメソッドを宣言して、クラスのプライベートコレクションへのアクセスを許可します。 これは2つの異なる方法で行われます。1つは C++ クライアント用で、もう1つは他の .NET クライアント用です。
 
 ### <a name="code"></a>コード
 
@@ -105,9 +106,9 @@ namespace StlClrClassLibrary {
 
 ### <a name="description"></a>説明
 
-この例では、例 1 で宣言されたクラスを実装します。 マニフェスト ツールを使用してクライアントがこのクラス ライブラリを使用するためには、 **mt.exe** DLL にマニフェスト ファイルを埋め込む。 詳細については、コードのコメントを参照してください。
+この例では、例1で宣言したクラスを実装します。 このクラスライブラリをクライアントが使用できるようにするには、マニフェストツール **mt.exe** を使用してマニフェストファイルを DLL に埋め込みます。 詳細については、コードのコメントを参照してください。
 
-マニフェスト ツールとサイド バイ サイド アセンブリの詳細については、次を参照してください。 [c/c++ 分離アプリケーションの構築とサイド バイ サイド アセンブリ](../build/building-c-cpp-isolated-applications-and-side-by-side-assemblies.md)します。
+マニフェストツールとサイドバイサイドアセンブリの詳細については、「 [C/c + + 分離アプリケーションと Side-by-side アセンブリのビルド](../build/building-c-cpp-isolated-applications-and-side-by-side-assemblies.md)」を参照してください。
 
 ### <a name="code"></a>コード
 
@@ -199,7 +200,7 @@ namespace StlClrClassLibrary
 
 ### <a name="description"></a>説明
 
-この例では、例 1 および 2 で作成したクラス ライブラリを使用する C++ クライアントを作成します。 このクライアントを使用して、`generic_container`コンテナーを反復処理して、その内容を表示する STL/CLR コンテナーの typedef。
+この例では、例1および2で作成したクラスライブラリを使用する C++ クライアントを作成します。 このクライアントは、 `generic_container` STL/CLR コンテナーの typedef を使用して、コンテナーを反復処理し、その内容を表示します。
 
 ### <a name="code"></a>コード
 
@@ -293,7 +294,7 @@ cliext::vector contents:
 
 ### <a name="description"></a>説明
 
-この例では、例 1 および 2 で作成したクラス ライブラリを使用する c# クライアントを作成します。 このクライアントを使用して、 <xref:System.Collections.Generic.ICollection%601> STL/CLR コンテナー、コンテナーを反復処理して、その内容を表示する方法。
+この例では、例1および2で作成したクラスライブラリを使用する C# クライアントを作成します。 このクライアントは、 <xref:System.Collections.Generic.ICollection%601> STL/CLR コンテナーのメソッドを使用して、コンテナーを反復処理し、その内容を表示します。
 
 ### <a name="code"></a>コード
 
@@ -386,4 +387,4 @@ cliext::vector contents:
 
 ## <a name="see-also"></a>関連項目
 
-[STL/CLR ライブラリ リファレンス](../dotnet/stl-clr-library-reference.md)
+[STL/CLR ライブラリリファレンス](../dotnet/stl-clr-library-reference.md)

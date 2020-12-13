@@ -1,13 +1,14 @@
 ---
+description: 詳細については、UWP アプリ、Windows ランタイム、C Run-Time を参照してください。
 title: UWP アプリ、Windows ランタイム、および C ランタイム
 ms.date: 02/02/2019
 ms.assetid: 356d6d8d-76ee-4181-9ad0-6f24b2fede38
-ms.openlocfilehash: 932b5388f2d1bf87f0d77ae1330fa3e613c9dca7
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: cfbbdbde19b882fb51b8fd8782b20e4205bdb00b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57738671"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97136748"
 ---
 # <a name="uwp-apps-the-windows-runtime-and-the-c-run-time"></a>UWP アプリ、Windows ランタイム、および C ランタイム
 
@@ -42,6 +43,6 @@ UWP アプリで使用できない CRT 関数と使用できる代替関数の�
 ## <a name="see-also"></a>関連項目
 
 [互換性](../c-runtime-library/compatibility.md)<br/>
-[Windows ランタイムのサポートされていない CRT 関数](../c-runtime-library/windows-runtime-unsupported-crt-functions.md)<br/>
+[サポートされていない CRT 関数の Windows ランタイム](../c-runtime-library/windows-runtime-unsupported-crt-functions.md)<br/>
 [カテゴリ別ユニバーサル C ランタイム ルーチン](../c-runtime-library/run-time-routines-by-category.md)<br/>
-[ユニバーサル Windows プラットフォームのコンソール アプリを作成する](/windows/uwp/launch-resume/console-uwp)
+[ユニバーサル Windows プラットフォームを使用してコンソール アプリを作成する](/windows/uwp/launch-resume/console-uwp)

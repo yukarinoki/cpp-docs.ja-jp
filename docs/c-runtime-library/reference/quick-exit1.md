@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: quick_exit'
 title: quick_exit1
 ms.date: 11/04/2016
 api_name:
@@ -26,12 +27,12 @@ f1_keywords:
 helpviewer_keywords:
 - quick_exit function
 ms.assetid: ecfbdae6-01c4-45fa-aaeb-b368e1de2a9c
-ms.openlocfilehash: 86246ed7a32dcd2f12b38aa4148570fc5fb3b7a6
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 85640af902092d5cc60a1c718dfd8999c41406b3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70949667"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97137099"
 ---
 # <a name="quick_exit"></a>quick_exit
 
@@ -52,15 +53,15 @@ __declspec(noreturn) void quick_exit(
 
 ## <a name="return-value"></a>戻り値
 
-**Quick_exit**関数が呼び出し元に戻ることはできません。
+**Quick_exit** 関数は、呼び出し元に戻ることができません。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-**Quick_exit**関数は、通常のプログラムの終了を引き起こします。 これは、**シグナル**関数によって登録された**atexit**、 **_onexit** 、またはシグナルハンドラーによって登録された関数を呼び出しません。 **Quick_exit**が複数回呼び出される場合、または**exit**関数も呼び出される場合、動作は定義されません。
+**Quick_exit** 関数により、通常のプログラムの終了が発生します。 このメソッドは、 **atexit**、 **_onexit** 、または **シグナル関数に** よって登録されたシグナルハンドラーによって登録された関数を呼び出しません。 **Quick_exit** が複数回呼び出される場合、または **exit** 関数も呼び出される場合、動作は定義されません。
 
-**Quick_exit**関数は、 **at_quick_exit**によって登録された関数を、後入れ先出し (LIFO) の順序で呼び出します。ただし、関数の登録時に既に呼び出されている関数は除きます。  [longjmp](longjmp.md) 呼び出しが、関数の呼び出しを終了する登録済み関数を呼び出している間に呼び出される場合、動作は定義されません。
+**Quick_exit** 関数は、 **at_quick_exit** によって登録された関数を、後入れ先出し (LIFO) の順序で呼び出します。ただし、関数の登録時に既に呼び出されている関数は除きます。  [longjmp](longjmp.md) 呼び出しが、関数の呼び出しを終了する登録済み関数を呼び出している間に呼び出される場合、動作は定義されません。
 
-登録された関数が呼び出された後、 **quick_exit**は、 *status*値を使用して、ホスト環境に制御を返すために、 **_exit**を呼び出します。
+登録されている関数が呼び出されると、 **quick_exit** は、 *status* 値を使用してホスト環境に制御を返すことで **_Exit** を呼び出します。
 
 ## <a name="requirements"></a>必要条件
 
@@ -72,11 +73,11 @@ __declspec(noreturn) void quick_exit(
 
 ## <a name="see-also"></a>関連項目
 
-[プロセス制御と環境制御](../../c-runtime-library/process-and-environment-control.md)<br/>
-[abort](abort.md)<br/>
+[プロセスと環境の制御](../../c-runtime-library/process-and-environment-control.md)<br/>
+[取り消し](abort.md)<br/>
 [atexit](atexit.md)<br/>
-[_exec、_wexec 系関数](../../c-runtime-library/exec-wexec-functions.md)<br/>
-[exit、_Exit、_exit](exit-exit-exit.md)<br/>
+[_exec, _wexec 関数](../../c-runtime-library/exec-wexec-functions.md)<br/>
+[終了、_Exit、_exit](exit-exit-exit.md)<br/>
 [_onexit、_onexit_m](onexit-onexit-m.md)<br/>
-[_spawn 系関数と _wspawn 系関数](../../c-runtime-library/spawn-wspawn-functions.md)<br/>
+[_spawn, _wspawn 関数](../../c-runtime-library/spawn-wspawn-functions.md)<br/>
 [system、_wsystem](system-wsystem.md)<br/>
