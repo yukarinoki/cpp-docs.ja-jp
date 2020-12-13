@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: mask_array クラス'
 title: mask_array クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - mask_array class
 ms.assetid: c49bed6a-3000-4f39-bff6-cb9a453acb0b
-ms.openlocfilehash: 12398203d61f2c3ea155b5f6e6e7b118d4a13c75
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: d3eb105c7779ff54ddbec3d68a518dc74d089903
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72689404"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97149358"
 ---
 # <a name="mask_array-class"></a>mask_array クラス
 
@@ -19,13 +20,13 @@ ms.locfileid: "72689404"
 
 ## <a name="syntax"></a>構文
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-クラスは、[クラス valarray](../standard-library/valarray-class.md)  **\<Type >** の `va` オブジェクトへの参照、`ba` および選択する要素のシーケンスを記述するクラス[valarray \<bool >](../standard-library/valarray-bool-class.md)のオブジェクトへの参照を格納するオブジェクトを表します。`valarray<Type>` オブジェクトからです。
+クラスは、クラス valarray のオブジェクトへの参照を、 `va` [](../standard-library/valarray-class.md) **\<Type>** `ba` オブジェクトから選択する要素のシーケンスを記述する [valarray \<bool>](../standard-library/valarray-bool-class.md)クラスのオブジェクトと共に格納するオブジェクトを表し `valarray<Type>` ます。
 
-@No__t_0 オブジェクトを構築するには、 [va&#91;ba&#93;](../standard-library/valarray-class.md#op_at)という形式の式を記述する必要があります。 クラス mask_array のメンバー関数は、`valarray<Type>` に対して定義されている対応する関数シグネチャのように動作します。ただし、選択された要素のシーケンスのみが影響を受けます。
+オブジェクトを構築するには、 `mask_array<Type>` [va&#91;ba&#93;](../standard-library/valarray-class.md#op_at)の形式の式を記述する必要があります。 クラス mask_array のメンバー関数は、に対して定義されている対応する関数シグネチャと同様に動作し `valarray<Type>` ますが、選択された要素のシーケンスのみが影響を受けます。
 
-シーケンスは、最大 `ba.size` の要素で構成されます。 要素 *J* は **ba**[ *J*] が true である場合にのみ含まれます。 したがって、シーケンス内には `ba` に true 要素があるのと同じ数の要素があります。 @No__t_0 が `ba` の最下位の true 要素のインデックスである場合、 **va**[`I`] は選択されたシーケンスの要素0です。
+シーケンスは、ほとんどの要素で構成さ `ba.size` れます。 要素 *J* は、 **ba**[ *j*] が true の場合にのみ含まれます。 したがって、シーケンス内には、に true 要素があるのと同じ数の要素があり `ba` ます。 `I`がの最下位の true 要素のインデックスである場合 `ba` 、 **va**[ `I` ] は選択されたシーケンスの要素0です。
 
 ## <a name="example"></a>例
 
@@ -68,12 +69,12 @@ The initial operand valarray is:  (0 -1 2 -1 4 -1 6 -1 8 -1).
 The modified operand valarray is:  (0 -1 2 -1 10 -1 10 -1 10 -1).
 ```
 
-## <a name="requirements"></a>［要件］
+## <a name="requirements"></a>要件
 
-**ヘッダー:** \<valarray>
+**ヘッダー:**\<valarray>
 
 **名前空間:** std
 
 ## <a name="see-also"></a>関連項目
 
-[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[C++ 標準ライブラリのスレッドセーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)

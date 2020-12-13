@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: CComObjectRootEx クラス'
 title: CComObjectRootEx クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -20,12 +21,12 @@ f1_keywords:
 helpviewer_keywords:
 - reference counting
 ms.assetid: 894a3d7c-2daf-4fd0-8fa4-e6a05bcfb631
-ms.openlocfilehash: b4dbc42cb0c6fe2c9c6692e0db37267ce3fff361
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 9fe0140944e3da5ddf70e0da38d054a35bb648ff
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88833648"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97142481"
 ---
 # <a name="ccomobjectrootex-class"></a>CComObjectRootEx クラス
 
@@ -41,23 +42,23 @@ class CComObjectRootEx : public CComObjectRootBase
 #### <a name="parameters"></a>パラメーター
 
 *ThreadModel*<br/>
-目的のスレッド処理モデルを実装するメソッドを持つクラス。 *Threadmodel*を[CComSingleThreadModel](../../atl/reference/ccomsinglethreadmodel-class.md)、 [CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md)、または[CComMultiThreadModelNoCS](../../atl/reference/ccommultithreadmodelnocs-class.md)に設定することによって、スレッドモデルを明示的に選択できます。 *Threadmodel*を[CComObjectThreadModel](atl-typedefs.md#ccomobjectthreadmodel)または[CComGlobalsThreadModel](atl-typedefs.md#ccomglobalsthreadmodel)に設定することにより、サーバーの既定のスレッドモデルを受け入れることができます。
+目的のスレッド処理モデルを実装するメソッドを持つクラス。 *Threadmodel* を [CComSingleThreadModel](../../atl/reference/ccomsinglethreadmodel-class.md)、 [CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md)、または [CComMultiThreadModelNoCS](../../atl/reference/ccommultithreadmodelnocs-class.md)に設定することによって、スレッドモデルを明示的に選択できます。 *Threadmodel* を [CComObjectThreadModel](atl-typedefs.md#ccomobjectthreadmodel)または [CComGlobalsThreadModel](atl-typedefs.md#ccomglobalsthreadmodel)に設定することにより、サーバーの既定のスレッドモデルを受け入れることができます。
 
 ## <a name="members"></a>メンバー
 
 ### <a name="methods"></a>メソッド
 
-|関数|説明|
+|機能|説明|
 |-|-|
 |[CComObjectRootEx](#ccomobjectrootex)|コンストラクターです。|
 |[InternalAddRef](#internaladdref)|非集計オブジェクトの参照カウントをインクリメントします。|
 |[InternalRelease](#internalrelease)|非集計オブジェクトの参照カウントをデクリメントします。|
 |[[Lock] (ロック)](#lock)|スレッドモデルがマルチスレッドの場合、はクリティカルセクションオブジェクトの所有権を取得します。|
-|[ロック](#unlock)|スレッドモデルがマルチスレッドの場合、はクリティカルセクションオブジェクトの所有権を解放します。|
+|[Unlock](#unlock)|スレッドモデルがマルチスレッドの場合、はクリティカルセクションオブジェクトの所有権を解放します。|
 
 ### <a name="ccomobjectrootbase-methods"></a>CComObjectRootBase メソッド
 
-|関数|説明|
+|機能|説明|
 |-|-|
 |[FinalConstruct](#finalconstruct)|クラスでをオーバーライドして、オブジェクトに必要な初期化を実行します。|
 |[FinalRelease](#finalrelease)|クラスでをオーバーライドして、オブジェクトに必要なクリーンアップを実行します。|
@@ -67,7 +68,7 @@ class CComObjectRootEx : public CComObjectRootBase
 
 ### <a name="static-functions"></a>静的関数
 
-|関数|説明|
+|機能|説明|
 |-|-|
 |[InternalQueryInterface](#internalqueryinterface)|`IUnknown`非集計オブジェクトのにデリゲートします。|
 |[ObjectMain](#objectmain)|オブジェクトマップに示されている派生クラスのモジュールの初期化中および終了時に呼び出されます。|
@@ -83,7 +84,7 @@ class CComObjectRootEx : public CComObjectRootBase
 
 `CComObjectRootEx` 非集計と集計されたオブジェクトの両方のオブジェクト参照カウント管理を処理します。 オブジェクトが集計されていない場合、オブジェクト参照カウントを保持し、オブジェクトが集計されている場合は、外側の unknown へのポインターを保持します。 集計オブジェクトの場合、 `CComObjectRootEx` メソッドを使用して、構築する内部オブジェクトのエラーを処理したり、内部インターフェイスが解放されたとき、または内部オブジェクトが削除されたときに外部オブジェクトを削除から保護したりできます。
 
-COM サーバーを実装するクラスは、または CComObjectRoot から継承する必要があり `CComObjectRootEx` ます。 [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md)
+COM サーバーを実装するクラスは、または CComObjectRoot から継承する必要があり `CComObjectRootEx` ます。 [](../../atl/reference/ccomobjectroot-class.md)
 
 クラス定義で [DECLARE_POLY_AGGREGATABLE](aggregation-and-class-factory-macros.md#declare_poly_aggregatable) マクロが指定されている場合、ATL `CComPolyObject<CYourClass>` はが呼び出されたときにのインスタンスを作成し `IClassFactory::CreateInstance` ます。 作成時に、[外側の不明] の値がチェックされます。 NULL の場合は、 `IUnknown` 非集計オブジェクトに対してが実装されます。 外側の unknown が NULL でない場合、 `IUnknown` は集計オブジェクトに対して実装されます。
 
@@ -95,7 +96,7 @@ COM サーバーを実装するクラスは、または CComObjectRoot から継
 
 オブジェクトが集計されていない場合、は `IUnknown` またはによって実装され `CComObject` `CComPolyObject` ます。 この場合、 `QueryInterface` 、、およびへ `AddRef` の呼び出し `Release` は `CComObjectRootEx` `InternalQueryInterface` 、実際の `InternalAddRef` `InternalRelease` 操作を実行するために、、、およびに委任されます。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** atlcom. h
 
@@ -205,7 +206,7 @@ static HRESULT InternalQueryInterface(
 から要求されているインターフェイスの GUID。
 
 *ppvObject*<br/>
-入出力 *Iid*で指定されたインターフェイスポインターへのポインター。インターフェイスが見つからない場合は NULL。
+入出力 *Iid* で指定されたインターフェイスポインターへのポインター。インターフェイスが見つからない場合は NULL。
 
 ### <a name="return-value"></a>戻り値
 
@@ -303,7 +304,7 @@ static void WINAPI ObjectMain(bool bStarting);
 
 ### <a name="remarks"></a>解説
 
-*Bstarting*パラメーターの値は、モジュールが初期化されているか、終了しているかを示します。 の既定の実装で `ObjectMain` は何も実行されませんが、クラスでこの関数をオーバーライドして、クラスに割り当てたいリソースを初期化またはクリーンアップできます。 `ObjectMain`クラスのインスタンスが要求される前に、が呼び出されることに注意してください。
+*Bstarting* パラメーターの値は、モジュールが初期化されているか、終了しているかを示します。 の既定の実装で `ObjectMain` は何も実行されませんが、クラスでこの関数をオーバーライドして、クラスに割り当てたいリソースを初期化またはクリーンアップできます。 `ObjectMain`クラスのインスタンスが要求される前に、が呼び出されることに注意してください。
 
 `ObjectMain` は DLL のエントリポイントから呼び出されるため、エントリポイント関数が実行できる操作の種類は制限されます。 これらの制限の詳細については、「 [dll and Visual C++ ランタイムライブラリの動作](../../build/run-time-library-behavior.md) と [DllMain](/windows/win32/Dlls/dllmain)」を参照してください。
 
@@ -337,7 +338,7 @@ HRESULT OuterQueryInterface(REFIID iid, void** ppvObject);
 から要求されているインターフェイスの GUID。
 
 *ppvObject*<br/>
-入出力 *Iid*で指定されたインターフェイスポインターへのポインター。または、集計でインターフェイスがサポートされていない場合は NULL。
+入出力 *Iid* で指定されたインターフェイスポインターへのポインター。または、集計でインターフェイスがサポートされていない場合は NULL。
 
 ### <a name="return-value"></a>戻り値
 

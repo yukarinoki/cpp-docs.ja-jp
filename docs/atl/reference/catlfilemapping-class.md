@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: CAtlFileMapping クラス'
 title: CAtlFileMapping クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlFileMapping class
 ms.assetid: 899fc058-e05e-48b5-aca9-340403bb9e26
-ms.openlocfilehash: 7516349e4ec54d8cb90fa6ff23b0ded954aa043b
-ms.sourcegitcommit: 2bc15c5b36372ab01fa21e9bcf718fa22705814f
+ms.openlocfilehash: 875979d47ad4cb5b9c59047eff1f50acd35d1251
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82168125"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97147421"
 ---
 # <a name="catlfilemapping-class"></a>CAtlFileMapping クラス
 
@@ -39,11 +40,11 @@ class CAtlFileMapping : public CAtlFileMappingBase
 
 |名前|説明|
 |----------|-----------------|
-|[CAtlFileMapping:: operator T *](#operator_t_star)|オブジェクトからへの`CAtlFileMapping`暗黙的な`T*`変換を許可します。|
+|[CAtlFileMapping:: operator T *](#operator_t_star)|オブジェクトからへの暗黙的な変換 `CAtlFileMapping` を許可 `T*` します。|
 
 ## <a name="remarks"></a>解説
 
-このクラスは、 `CAtlFileMapping`オブジェクトをに暗黙的に`T*`変換できるように、単一のキャスト演算子を追加します。 その他のメンバーは、基本クラス[CAtlFileMappingBase](../../atl/reference/catlfilemappingbase-class.md)によって提供されます。
+このクラスは、オブジェクトをに暗黙的に変換できるように、単一のキャスト演算子を追加し `CAtlFileMapping` `T*` ます。 その他のメンバーは、基本クラス [CAtlFileMappingBase](../../atl/reference/catlfilemappingbase-class.md)によって提供されます。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -51,13 +52,13 @@ class CAtlFileMapping : public CAtlFileMappingBase
 
 `CAtlFileMapping`
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** atlfile .h
 
-## <a name="catlfilemappingoperator-t"></a><a name="operator_t_star"></a>CAtlFileMapping:: operator T *
+## <a name="catlfilemappingoperator-t"></a><a name="operator_t_star"></a> CAtlFileMapping:: operator T *
 
-オブジェクトからへの`CAtlFileMapping`暗黙的な`T*`変換を許可します。
+オブジェクトからへの暗黙的な変換 `CAtlFileMapping` を許可 `T*` します。
 
 ```cpp
 operator T*() const throw();
@@ -65,11 +66,11 @@ operator T*() const throw();
 
 ### <a name="return-value"></a>戻り値
 
-メモリマップト`T*`ファイルの先頭へのポインターを返します。
+`T*`メモリマップトファイルの先頭へのポインターを返します。
 
 ### <a name="remarks"></a>解説
 
-[CAtlFileMappingBase:: GetData](../../atl/reference/catlfilemappingbase-class.md#getdata)を呼び出し、返されたポインターをと`T*`して再解釈します。ここで、 *T*は、このクラスのテンプレートパラメーターとして使用される型です。
+[CAtlFileMappingBase:: GetData](../../atl/reference/catlfilemappingbase-class.md#getdata)を呼び出し、返されたポインターをとして再解釈します。ここで、 `T*` *T* は、このクラスのテンプレートパラメーターとして使用される型です。
 
 ## <a name="see-also"></a>関連項目
 

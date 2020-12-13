@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「_com_ptr_t 関係演算子」を参照してください。
 title: _com_ptr_t 関係演算子
 ms.date: 11/04/2016
 f1_keywords:
@@ -28,12 +29,12 @@ helpviewer_keywords:
 - operator< [C++], pointers
 - == operator [C++], with specific Visual C++ objects
 ms.assetid: 5ae4028c-33ee-485d-bbda-88d2604d6d4b
-ms.openlocfilehash: 95d1e7a1e4322eb497a2d7ed410065bb92f17e09
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 6c2b4bb3b3f7ca604874a4f2dad1caff58e70735
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80170647"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97135435"
 ---
 # <a name="_com_ptr_t-relational-operators"></a>_com_ptr_t 関係演算子
 
@@ -114,10 +115,10 @@ bool operator>=( _InterfaceType* p );
 
 ## <a name="remarks"></a>解説
 
-スマート ポインター オブジェクトを、別のスマート ポインター、生のインターフェイス ポインター、または NULL と比較します。 NULL ポインターテストを除き、これらの演算子はまず `IUnknown`の両方のポインターを照会し、結果を比較します。
+スマート ポインター オブジェクトを、別のスマート ポインター、生のインターフェイス ポインター、または NULL と比較します。 NULL ポインターテストを除き、これらの演算子はまずの両方のポインターを照会 `IUnknown` し、結果を比較します。
 
 **Microsoft 固有の仕様はここまで**
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [_com_ptr_t クラス](../cpp/com-ptr-t-class.md)

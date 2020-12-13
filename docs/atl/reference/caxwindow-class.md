@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: CAxWindow クラス'
 title: CAxWindow クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -16,12 +17,12 @@ helpviewer_keywords:
 - CAxWindow class
 - ATL, hosting ActiveX controls
 ms.assetid: 85e79261-43e4-4770-bde0-1ff87f222b0f
-ms.openlocfilehash: b74ecb9af2decf92f873cef8d016907b6c9474cf
-ms.sourcegitcommit: d9c94dcabd94537e304be0261b3263c2071b437b
+ms.openlocfilehash: 0b1cdabbce4fd6a36f6f3e9fb15b3f28249065c3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91353078"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97146992"
 ---
 # <a name="caxwindow-class"></a>CAxWindow クラス
 
@@ -52,7 +53,7 @@ class CAxWindow : public CWindow
 |[SetExternalDispatch](#setexternaldispatch)|オブジェクトによって使用される外部ディスパッチインターフェイスを設定し `CAxWindow` ます。|
 |[SetExternalUIHandler](#setexternaluihandler)|`IDocHostUIHandler`オブジェクトによって使用される外部インターフェイスを設定し `CAxWindow` ます。|
 
-### <a name="operators"></a>演算子
+### <a name="operators"></a>オペレーター
 
 |演算子|説明|
 |-|-|
@@ -68,7 +69,7 @@ class CAxWindow : public CWindow
 
 基底クラスを変更する必要がある場合は、を使用して、 `CAxWindowT` 新しい基底クラスをテンプレート引数として指定できます。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** atlwin. h
 
@@ -160,7 +161,7 @@ HTML リソースのリソース ID。 指定したリソースを使用して�
 
 ### <a name="remarks"></a>解説
 
-このメソッドの2番目のバージョンを使用すると、HTML コントロールが作成され、 *dwResID*によって識別されるリソースにバインドされます。
+このメソッドの2番目のバージョンを使用すると、HTML コントロールが作成され、 *dwResID* によって識別されるリソースにバインドされます。
 
 このメソッドでは、を呼び出した場合と同じ結果が得られます。
 
@@ -225,7 +226,7 @@ HRESULT CreateControlEx(
 から含まれているオブジェクトの送信インターフェイスのインターフェイス識別子。 IID_NULL できます。
 
 *punkSink*<br/>
-から `IUnknown` *Iidsink*によって指定された、格納されているオブジェクトのコネクションポイントに接続するシンクオブジェクトのインターフェイスへのポインター。
+から `IUnknown` *Iidsink* によって指定された、格納されているオブジェクトのコネクションポイントに接続するシンクオブジェクトのインターフェイスへのポインター。
 
 *dwResID*<br/>
 からHTML リソースのリソース ID。 指定したリソースを使用して、WebBrowser コントロールが作成され、読み込まれます。
@@ -291,7 +292,7 @@ HRESULT QueryControl(Q** ppUnk);
 *ppUnk*<br/>
 入出力コントロールのインターフェイスへのポインター。 このメソッドのテンプレートバージョンでは、関連付けられている UUID を持つ型指定されたインターフェイスが渡される限り、参照 ID は必要ありません。
 
-*Q.*<br/>
+*Q*<br/>
 から照会されているインターフェイス。
 
 ### <a name="return-value"></a>戻り値
@@ -316,7 +317,7 @@ HRESULT QueryHost(Q** ppUnk);
 *ppUnk*<br/>
 入出力ホスト上のインターフェイスへのポインター。 このメソッドのテンプレートバージョンでは、関連付けられている UUID を持つ型指定されたインターフェイスが渡される限り、参照 ID は必要ありません。
 
-*Q.*<br/>
+*Q*<br/>
 から照会されているインターフェイス。
 
 ### <a name="return-value"></a>戻り値

@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「SRWLockSharedTraits 構造」を参照してください。
 title: SRWLockSharedTraits 構造体
 ms.date: 09/27/2018
 ms.topic: reference
@@ -11,16 +12,16 @@ helpviewer_keywords:
 - Microsoft::WRL::Wrappers::HandleTraits::SRWLockSharedTraits::GetInvalidValue method
 - Microsoft::WRL::Wrappers::HandleTraits::SRWLockSharedTraits::Unlock method
 ms.assetid: 709cb51e-d70c-40b6-bdb4-d8eacf3af495
-ms.openlocfilehash: 0dc43d4b9c16145ed7a5abe03cddb598c59b1e94
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 2cdfbd584adeffc9dedd8504d9183d6c5d4c1a95
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81374301"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97135123"
 ---
 # <a name="srwlocksharedtraits-structure"></a>SRWLockSharedTraits 構造体
 
-共有ロック モードでの`SRWLock`クラスの一般的な特性について説明します。
+共有ロックモードでのクラスの一般的な特性について説明し `SRWLock` ます。
 
 ## <a name="syntax"></a>構文
 
@@ -34,28 +35,28 @@ struct SRWLockSharedTraits;
 
 名前   | 説明
 ------ | --------------------------------------------------------------------------
-`Type` | [SRWLOCK](srwlock-class.md)クラスへのポインターの同義語。
+`Type` | [Srwlock](srwlock-class.md)クラスへのポインターのシノニム。
 
 ### <a name="public-methods"></a>パブリック メソッド
 
 名前                                                     | 説明
 -------------------------------------------------------- | -----------------------------------------------------------------
-[ストリューロック共有トレイト::無効な値を取得します。](#getinvalidvalue) | 常に無効`SRWLockSharedTraits`なオブジェクトを取得します。
-[SRWロックシェアードトレイツ::ロック解除](#unlock)                   | 指定した`SRWLock`オブジェクトの排他制御を解放します。
+[SRWLockSharedTraits:: GetInvalidValue](#getinvalidvalue) | `SRWLockSharedTraits`常に無効なオブジェクトを取得します。
+[SRWLockSharedTraits:: Unlock](#unlock)                   | 指定されたオブジェクトの排他的な制御を解放 `SRWLock` します。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
 `SRWLockSharedTraits`
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-**ヘッダー:** コアラッパー.h
+**ヘッダー:** corewrappers .h
 
-**名前空間:** マイクロソフト::WRL::ラッパー::ハンドルトレイツ
+**名前空間:** Microsoft:: WRL:: Wrapper:: HandleTraits
 
-## <a name="srwlocksharedtraitsgetinvalidvalue"></a><a name="getinvalidvalue"></a>ストリューロック共有トレイト::無効な値を取得します。
+## <a name="srwlocksharedtraitsgetinvalidvalue"></a><a name="getinvalidvalue"></a> SRWLockSharedTraits:: GetInvalidValue
 
-常に無効`SRWLockSharedTraits`なオブジェクトを取得します。
+`SRWLockSharedTraits`常に無効なオブジェクトを取得します。
 
 ```cpp
 inline static Type GetInvalidValue();
@@ -63,11 +64,11 @@ inline static Type GetInvalidValue();
 
 ### <a name="return-value"></a>戻り値
 
-`SRWLockSharedTraits`オブジェクトへのハンドル。
+オブジェクトへのハンドル `SRWLockSharedTraits` 。
 
-## <a name="srwlocksharedtraitsunlock"></a><a name="unlock"></a>SRWロックシェアードトレイツ::ロック解除
+## <a name="srwlocksharedtraitsunlock"></a><a name="unlock"></a> SRWLockSharedTraits:: Unlock
 
-指定した`SRWLock`オブジェクトの排他制御を解放します。
+指定されたオブジェクトの排他的な制御を解放 `SRWLock` します。
 
 ```cpp
 inline static void Unlock(
@@ -77,5 +78,5 @@ inline static void Unlock(
 
 ### <a name="parameters"></a>パラメーター
 
-*スヴロック*<br/>
-`SRWLock`オブジェクトへのハンドル。
+*srwlock*<br/>
+オブジェクトへのハンドル `SRWLock` 。

@@ -1,20 +1,21 @@
 ---
+description: '詳細情報: &lt; map &gt; 関数'
 title: '&lt;map&gt; 系関数'
 ms.date: 11/04/2016
 f1_keywords:
 - map/std::swap (map)
 - map/std::swap (multimap)
 ms.assetid: 7cb3d1a5-7add-4726-a73f-61927eafd466
-ms.openlocfilehash: 8cc4a82e08963902f9ba5c21ace759c47bdd0014
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: dded58c4af44bca08a5cb9e2cd0436974f48f6c8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87228220"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97149514"
 ---
 # <a name="ltmapgt-functions"></a>&lt;map&gt; 系関数
 
-## <a name="swap-map"></a><a name="swap_multimap"></a>スワップ (マップ)
+## <a name="swap-map"></a><a name="swap_multimap"></a> スワップ (マップ)
 
 2 つの map の要素を交換します。
 
@@ -28,10 +29,10 @@ void swap(
 ### <a name="parameters"></a>パラメーター
 
 *そうです*\
-交換する要素を提供するマップ、またはマップの*左側*の要素と交換される要素を持つマップ。
+交換する要素を提供するマップ、またはマップの *左側* の要素と交換される要素を持つマップ。
 
 *左側*\
-マップ*右側*の要素と交換される要素を持つマップ。
+マップ *右側* の要素と交換される要素を持つマップ。
 
 ### <a name="remarks"></a>解説
 
@@ -41,7 +42,7 @@ void swap(
 
 `swap` のテンプレート バージョンの使用例については、メンバー関数 [map::swap](../standard-library/map-class.md#swap) のコード例をご覧ください。
 
-## <a name="swap-multimap"></a><a name="swap"></a>swap (multimap)
+## <a name="swap-multimap"></a><a name="swap"></a> swap (multimap)
 
 2 つの multimap の要素を交換します。
 
@@ -55,10 +56,10 @@ void swap(
 ### <a name="parameters"></a>パラメーター
 
 *そうです*\
-交換する要素を提供する multimap、また*は multimap の*要素と交換される要素を持つ multimap。
+交換する要素を提供する multimap、また *は multimap の* 要素と交換される要素を持つ multimap。
 
 *左側*\
-要素が multimap *right*の要素と交換される multimap。
+要素が multimap *right* の要素と交換される multimap。
 
 ### <a name="remarks"></a>解説
 

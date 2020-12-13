@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: CAtlTransactionManager クラス'
 title: CAtlTransactionManager クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -25,12 +26,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlTransactionManager class
 ms.assetid: b01732dc-1d16-4b42-bfac-b137fca2b740
-ms.openlocfilehash: 74afc1a82c12d6138198f5696d300825e06aba1e
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: 25d5ea7e9b4838f483dd7f9ee408cdd5bd4c88cb
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88562217"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97147187"
 ---
 # <a name="catltransactionmanager-class"></a>CAtlTransactionManager クラス
 
@@ -77,7 +78,7 @@ class CAtlTransactionManager;
 
 ### <a name="protected-data-members"></a>プロテクト データ メンバー
 
-|Name|説明|
+|名前|説明|
 |----------|-----------------|
 |[m_bFallback](#m_bfallback)|フォールバックがサポートされている場合は TRUE。それ以外の場合は FALSE。|
 |[m_hTransaction](#m_htransaction)|トランザクションハンドル。|
@@ -88,7 +89,7 @@ class CAtlTransactionManager;
 
 [ATL:: CAtlTransactionManager](../../atl/reference/catltransactionmanager-class.md)
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** atltransactionmanager. h
 
@@ -206,7 +207,7 @@ inline HANDLE CreateFile(
 ファイルの属性とフラグ。 このパラメーターには、使用可能なファイル属性 (FILE_ATTRIBUTE_ *) の任意の組み合わせを含めることができます。 その他のすべてのファイル属性は、FILE_ATTRIBUTE_NORMAL をオーバーライドします。 このパラメーターには \* 、バッファー動作、アクセスモード、およびその他の特殊な目的フラグを制御するためのフラグ (FILE_FLAG_) の組み合わせを含めることもできます。 これらは、任意の FILE_ATTRIBUTE_ 値と結合さ \* れます。
 
 *hTemplateFile*<br/>
-GENERIC_READ アクセス権限を持つテンプレートファイルへの有効なハンドル。 テンプレートファイルには、作成するファイルのファイル属性と拡張属性が用意されています。 このパラメーターには NULL を指定できます。
+GENERIC_READ アクセス権限を持つテンプレートファイルへの有効なハンドル。 テンプレートファイルには、作成するファイルのファイル属性と拡張属性が用意されています。 このパラメーターは、NULL でもかまいません。
 
 ### <a name="return-value"></a>戻り値
 
@@ -296,7 +297,7 @@ inline BOOL GetFileAttributesEx(
 取得する属性情報のレベル。
 
 *lpFileInformation*<br/>
-属性情報を受け取るバッファーへのポインター。 このバッファーに格納されている属性情報の型は、 *finの*値によって決まります。 *FinGetFileExInfoStandard Ev d*パラメーターが指定されている場合、このパラメーターは WIN32_FILE_ATTRIBUTE_DATA 構造体を指します。
+属性情報を受け取るバッファーへのポインター。 このバッファーに格納されている属性情報の型は、 *finの* 値によって決まります。 *FinGetFileExInfoStandard Ev d* パラメーターが指定されている場合、このパラメーターは WIN32_FILE_ATTRIBUTE_DATA 構造体を指します。
 
 ### <a name="remarks"></a>解説
 
@@ -399,7 +400,7 @@ inline LSTATUS RegCreateKeyEx(
 このパラメーターは予約されており、ゼロにする必要があります。
 
 *lpClass*<br/>
-このキーのユーザー定義クラス。 このパラメーターは無視してもかまいません。 このパラメーターには NULL を指定できます。
+このキーのユーザー定義クラス。 このパラメーターは無視してもかまいません。 このパラメーターは、NULL でもかまいません。
 
 *dwOptions*<br/>
 このパラメーターには、REG_OPTION_BACKUP_RESTORE、REG_OPTION_NON_VOLATILE、REG_OPTION_VOLATILE のいずれかの値を指定できます。
@@ -408,7 +409,7 @@ inline LSTATUS RegCreateKeyEx(
 キーのアクセス権を指定するマスク。
 
 *lpSecurityAttributes*<br/>
-SECURITY_ATTRIBUTES 構造体へのポインター。この構造体は、返されたハンドルを子プロセスが継承できるかどうかを決定します。 *Lpsecurityattributes*が NULL の場合、ハンドルを継承することはできません。
+SECURITY_ATTRIBUTES 構造体へのポインター。この構造体は、返されたハンドルを子プロセスが継承できるかどうかを決定します。 *Lpsecurityattributes* が NULL の場合、ハンドルを継承することはできません。
 
 *phkResult*<br/>
 開かれたキーまたは作成されたキーへのハンドルを受け取る変数へのポインター。 キーが定義済みのレジストリキーのいずれでもない場合は、 `RegCloseKey` ハンドルの使用が終了した後で関数を呼び出します。

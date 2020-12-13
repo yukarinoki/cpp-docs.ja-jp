@@ -1,4 +1,5 @@
 ---
+description: 詳細については、Command-Line Warning D9027 を参照してください。
 title: コマンド ラインの警告 D9027
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - D9027
 ms.assetid: 2a29edc5-5649-48f2-9058-2057c747284c
-ms.openlocfilehash: 46ed5750bd1f315f20658ace9b83fac532fbbabb
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 8c17750f3310072f8f69c77587a1c17fc9377e79
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80196679"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97136111"
 ---
 # <a name="command-line-warning-d9027"></a>コマンド ラインの警告 D9027
 
-ソースファイル '\<ファイル名 > ' が無視されました
+ソースファイル ' ' が無視されました \<filename>
 
-CL.EXE は入力ソースファイルを無視しました。
+CL.exe は入力ソースファイルを無視しました。
 
 この警告は、/Fo オプションと、/c オプションを使用したコマンドラインの出力ファイル名の間のスペースによって発生することがあります。 次に例を示します。
 
@@ -25,7 +26,7 @@ CL.EXE は入力ソースファイルを無視しました。
 cl /c /Fo output.obj input.c
 ```
 
-/Fo と `output.obj`の間には空白があるため、CL.EXE は入力ファイルの名前として `output.obj` します。 この問題を解決するには、領域を削除します。
+/Fo との間にはスペースがあるため `output.obj` 、CL.exe は `output.obj` 入力ファイルの名前としてを受け取ります。 この問題を解決するには、領域を削除します。
 
 ```
 cl /c /Fooutput.obj input.c

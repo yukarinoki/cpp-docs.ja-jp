@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「ルーチンマッピング」を参照してください。
 title: ルーチンのマップ
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,18 +7,18 @@ helpviewer_keywords:
 - TCHAR.H data types, list of routine mappings
 - generic-text mappings
 ms.assetid: 38f33d3b-0f7b-430d-8a4f-75e27c6f1c42
-ms.openlocfilehash: 245a44a6722bdf704a5ce750dd285eb3eac66609
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 22febc86d47ca435e9667015f1130b472e515946
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79444860"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97136800"
 ---
 # <a name="routine-mappings"></a>ルーチンのマップ
 
 汎用テキスト ルーチンのマップは TCHAR.H で定義されます。 `_tccpy` と `_tclen` は MBCS モデルの関数にマップされます。これらは完全を期すために SBCS モデルまたは Unicode モデルのマクロまたはインライン関数にマップされます。 汎用テキスト ルーチンの詳細については、`SBCS`、`_MBCS`、または `_UNICODE` に関連するルーチンのヘルプ トピックを参照してください。
 
-次の表の左の列に一覧されている個々のルーチンに関する詳細な情報は、このドキュメントでは参照できません。 ただし、対応する `SBCS`、`_MBCS`、または `_UNICODE` に関連するルーチンの情報は簡単に検索できます。 以下に一覧表示されている汎用テキスト ルーチンを検索するには、 **[ヘルプ]** メニューの **[検索]** コマンドを使用します。
+次の表の左の列に一覧されている個々のルーチンに関する詳細な情報は、このドキュメントでは参照できません。 ただし、対応する `SBCS`、`_MBCS`、または `_UNICODE` に関連するルーチンの情報は簡単に検索できます。 以下に一覧表示されている汎用テキスト ルーチンを検索するには、**[ヘルプ]** メニューの **[検索]** コマンドを使用します。
 
 関連情報については、「[Generic-Text Mappings in TCHAR.H. (Tchar.h における汎用テキストのマッピング)](../text/generic-text-mappings-in-tchar-h.md)」をご覧ください。
 
@@ -260,10 +261,10 @@ ms.locfileid: "79444860"
 |`_vtprintf`|`vprintf`|`vprintf`|`vwprintf`|
 |`_vtprintf_s`|`vprintf_s`|`vprintf_s`|`vwprintf_s`|
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[汎用テキスト マップ](../c-runtime-library/generic-text-mappings.md)<br/>
-[データ型のマップ](../c-runtime-library/data-type-mappings.md)<br/>
-[定数とグローバル変数のマップ](../c-runtime-library/constant-and-global-variable-mappings.md)<br/>
-[汎用テキストのプログラム例](../c-runtime-library/a-sample-generic-text-program.md)<br/>
-[汎用テキスト マップの使用](../c-runtime-library/using-generic-text-mappings.md)
+[汎用テキストマッピング](../c-runtime-library/generic-text-mappings.md)<br/>
+[データ型のマッピング](../c-runtime-library/data-type-mappings.md)<br/>
+[定数とグローバル変数のマッピング](../c-runtime-library/constant-and-global-variable-mappings.md)<br/>
+[サンプル Generic-Text プログラム](../c-runtime-library/a-sample-generic-text-program.md)<br/>
+[Generic-Text マッピングの使用](../c-runtime-library/using-generic-text-mappings.md)

@@ -1,5 +1,6 @@
 ---
-title: CComQIPtrクラス
+description: '詳細情報: CComQIPtr クラス'
+title: CComQIPtr クラス
 ms.date: 11/04/2016
 f1_keywords:
 - CComQIPtr
@@ -8,16 +9,16 @@ f1_keywords:
 helpviewer_keywords:
 - CComQIPtr class
 ms.assetid: 969cacb5-05b6-4af4-b683-24911d70242d
-ms.openlocfilehash: 2b1d8b92fbc5e95a5061956bafc4922d249a6f18
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: e5af938cd7b2bbae3b091eac5323d3455ce1cf02
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81327419"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97142325"
 ---
-# <a name="ccomqiptr-class"></a>CComQIPtrクラス
+# <a name="ccomqiptr-class"></a>CComQIPtr クラス
 
-COM インターフェイス ポインターを管理するためのスマート ポインター クラス。
+COM インターフェイスポインターを管理するためのスマートポインタークラス。
 
 ## <a name="syntax"></a>構文
 
@@ -31,8 +32,8 @@ class CComQIPtr: public CComPtr<T>
 *T*<br/>
 格納するポインターの型を指定する COM インターフェイス。
 
-*ピッド*<br/>
-*T*の IID へのポインター。
+*piid*<br/>
+*T* の IID へのポインター。
 
 ## <a name="members"></a>メンバー
 
@@ -40,31 +41,31 @@ class CComQIPtr: public CComPtr<T>
 
 |名前|説明|
 |----------|-----------------|
-|[CComQIPtr::CComQIPtr](#ccomqiptr)|コンストラクターです。|
+|[CComQIPtr:: CComQIPtr](#ccomqiptr)|コンストラクターです。|
 
 ### <a name="public-operators"></a>パブリック演算子
 
 |名前|説明|
 |----------|-----------------|
-|[CComQIPtr::演算子 =](#operator_eq)|メンバ ポインタにポインタを割り当てます。|
+|[CComQIPtr:: operator =](#operator_eq)|メンバーポインターにポインターを割り当てます。|
 
 ## <a name="remarks"></a>解説
 
-ATL`CComQIPtr`は COM インターフェイス ポインタを管理するために[CComPtr](../../atl/reference/ccomptr-class.md)を[CComPtrBase](../../atl/reference/ccomptrbase-class.md)使用します。 どちらのクラスも、 と`AddRef``Release`の呼び出しを通じて自動的に参照カウントを実行します。 オーバーロードされた演算子は、ポインター操作を処理します。
+ATL では `CComQIPtr` 、と [CComPtr](../../atl/reference/ccomptr-class.md) を使用して COM インターフェイスポインターを管理します。どちらも [CComPtrBase](../../atl/reference/ccomptrbase-class.md)から派生します。 両方のクラスは、との呼び出しによって自動参照カウントを実行し `AddRef` `Release` ます。 オーバーロードされた演算子はポインター操作を処理します。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
-[コムプトルベース](../../atl/reference/ccomptrbase-class.md)
+[CComPtrBase](../../atl/reference/ccomptrbase-class.md)
 
-[Ccomptr](../../atl/reference/ccomptr-class.md)
+[CComPtr](../../atl/reference/ccomptr-class.md)
 
 `CComQIPtr`
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-**ヘッダー:** atlcomcli.h
+**ヘッダー:** atlcomcli. h
 
-## <a name="ccomqiptrccomqiptr"></a><a name="ccomqiptr"></a>CComQIPtr::CComQIPtr
+## <a name="ccomqiptrccomqiptr"></a><a name="ccomqiptr"></a> CComQIPtr:: CComQIPtr
 
 コンストラクターです。
 
@@ -77,16 +78,16 @@ CComQIPtr(const CComQIPtr<T, piid>& lp) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*Lp*<br/>
-インターフェイス ポインターを初期化するために使用します。
+*世代*<br/>
+インターフェイスポインターを初期化するために使用されます。
 
 *T*<br/>
 COM インターフェイス。
 
-*ピッド*<br/>
-*T*の IID へのポインター。
+*piid*<br/>
+*T* の IID へのポインター。
 
-## <a name="ccomqiptroperator-"></a><a name="operator_eq"></a>CComQIPtr::演算子 =
+## <a name="ccomqiptroperator-"></a><a name="operator_eq"></a> CComQIPtr:: operator =
 
 代入演算子。
 
@@ -98,23 +99,23 @@ T* operator= (IUnknown* lp) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*Lp*<br/>
-インターフェイス ポインターを初期化するために使用します。
+*世代*<br/>
+インターフェイスポインターを初期化するために使用されます。
 
 *T*<br/>
 COM インターフェイス。
 
-*ピッド*<br/>
-*T*の IID へのポインター。
+*piid*<br/>
+*T* の IID へのポインター。
 
 ### <a name="return-value"></a>戻り値
 
-更新された`CComQIPtr`オブジェクトへのポインターを返します。
+更新されたオブジェクトへのポインターを返し `CComQIPtr` ます。
 
 ## <a name="see-also"></a>関連項目
 
-[コムプター::CComPtr](../../atl/reference/ccomptr-class.md#ccomptr)<br/>
-[CComQIPtr::CComQIPtr](#ccomqiptr)<br/>
-[クラス](../../atl/reference/ccomptrbase-class.md)<br/>
+[CComPtr:: CComPtr](../../atl/reference/ccomptr-class.md#ccomptr)<br/>
+[CComQIPtr:: CComQIPtr](#ccomqiptr)<br/>
+[CComPtrBase クラス](../../atl/reference/ccomptrbase-class.md)<br/>
 [クラスの概要](../../atl/atl-class-overview.md)<br/>
-[クラスをクラス](../../atl/reference/ccomqiptrelementtraits-class.md)
+[CComQIPtrElementTraits クラス](../../atl/reference/ccomqiptrelementtraits-class.md)

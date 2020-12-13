@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: VerifyInterfaceHelper 構造体'
 title: VerifyInterfaceHelper 構造体
 ms.date: 10/03/2018
 ms.topic: reference
@@ -9,16 +10,16 @@ helpviewer_keywords:
 - Microsoft::WRL::Details::VerifyInterfaceHelper structure
 - Microsoft::WRL::Details::VerifyInterfaceHelper::Verify method
 ms.assetid: ea95b641-199a-4fdf-964b-186b40cb3ba7
-ms.openlocfilehash: 09c2cc7e08e2dc0e8df42c64d285c37627c5925a
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: a9b51eac55666d15b8362fc070d0feb731e9674d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81374247"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97135032"
 ---
 # <a name="verifyinterfacehelper-structure"></a>VerifyInterfaceHelper 構造体
 
-Windows ランタイム C++ テンプレート ライブラリ インフラストラクチャをサポートし、コードから直接使用することを意図していません。
+は、Windows ランタイム C++ テンプレートライブラリインフラストラクチャをサポートします。独自に作成したコードから直接使用するためのものではありません。
 
 ## <a name="syntax"></a>構文
 
@@ -32,14 +33,14 @@ struct VerifyInterfaceHelper<false, I>;
 
 ### <a name="parameters"></a>パラメーター
 
-*私*<br/>
+*I*<br/>
 検証するインターフェイス。
 
-*インターフェイス*
+*isWinRTInterface*
 
 ## <a name="remarks"></a>解説
 
-テンプレート パラメーターで指定されたインターフェイスが特定の要件を満たしていることを確認します。
+テンプレートパラメーターによって指定されたインターフェイスが特定の要件を満たしていることを確認します。
 
 ## <a name="members"></a>メンバー
 
@@ -47,21 +48,21 @@ struct VerifyInterfaceHelper<false, I>;
 
 名前                                            | 説明
 ----------------------------------------------- | ---------------------------------------------------------------------------------------------------
-[VerifyInterfaceHelper::Verify メソッド](#verify) | 現在のテンプレート パラメーターで指定されたインターフェイスが特定の要件を満たしていることを確認します。
+[VerifyInterfaceHelper::Verify メソッド](#verify) | 現在のテンプレートパラメーターによって指定されたインターフェイスが特定の要件を満たしていることを確認します。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
 `VerifyInterfaceHelper`
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-**ヘッダー:** 実装.h
+**Header:** を実装します。
 
-**名前空間:** マイクロソフト::WRL::Dのテール
+**名前空間:** Microsoft:: WRL::D etails
 
-## <a name="verifyinterfacehelperverify"></a><a name="verify"></a>インターフェイスヘルパー::検証
+## <a name="verifyinterfacehelperverify"></a><a name="verify"></a> VerifyInterfaceHelper:: Verify
 
-WRL インフラストラクチャをサポートし、コードから直接使用するためのものではありません。
+は WRL インフラストラクチャをサポートします。独自に作成したコードから直接使用するためのものではありません。
 
 ```cpp
 static void Verify();
@@ -69,4 +70,4 @@ static void Verify();
 
 ### <a name="remarks"></a>解説
 
-現在のテンプレート パラメーターで指定されたインターフェイスが特定の要件を満たしていることを確認します。
+現在のテンプレートパラメーターによって指定されたインターフェイスが特定の要件を満たしていることを確認します。

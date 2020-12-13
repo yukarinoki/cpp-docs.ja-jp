@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「プロパティページの実装」を参照してください。
 title: プロパティ ページの実装
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - IPropertyPage class
 - property pages, implementing
 ms.assetid: 62f29440-33a7-40eb-a1ef-3634c95f640c
-ms.openlocfilehash: c9b1c0c159a15ec7d9a5c99208baa2ed6af2d6d1
-ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
+ms.openlocfilehash: 5f05831fa23eff586e85db56eca8013e0d1d2ea2
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "92923896"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97147759"
 ---
 # <a name="implementing-property-pages"></a>プロパティ ページの実装
 
@@ -29,7 +30,7 @@ ATL を使用してプロパティ ページを作成するには:
 
 - ATL ダイナミック リンク ライブラリ (DLL) サーバー プロジェクトを作成するか開きます。
 
-- [[クラスの追加] ダイアログ ボックス](../ide/adding-a-class-visual-cpp.md#add-class-dialog-box)を開き、 **[ATL プロパティ ページ]** を開きます。
+- [[クラスの追加] ダイアログ ボックス](../ide/adding-a-class-visual-cpp.md#add-class-dialog-box)を開き、**[ATL プロパティ ページ]** を開きます。
 
 - プロパティ ページがアパートメント スレッドであることを確認します (ユーザー インターフェイスがあるため)。
 
@@ -55,7 +56,7 @@ ATL を使用してプロパティ ページを作成するには:
 
 ::: moniker-end
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 
 [[プロパティ ページ]](../atl/atl-com-property-pages.md)<br/>
 [ATLPages の例](../overview/visual-cpp-samples.md)

@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: CComAutoThreadModule クラス'
 title: CComAutoThreadModule クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -17,12 +18,12 @@ helpviewer_keywords:
 - CComAutoThreadModule class
 - apartment model modules
 ms.assetid: 13063ea5-a57e-4aac-97d3-227137262811
-ms.openlocfilehash: 405b05548cda2b2d379b849d9278293b8d747d2e
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: fe6ded878a054bdcdc2569c8ca347e2ac20410b9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88833791"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97146940"
 ---
 # <a name="ccomautothreadmodule-class"></a>CComAutoThreadModule クラス
 
@@ -47,13 +48,13 @@ class CComAutoThreadModule : public CComModule
 
 ### <a name="methods"></a>メソッド
 
-|関数|説明|
+|機能|説明|
 |-|-|
 |[CreateInstance](#createinstance)|スレッドを選択し、関連付けられているアパートメント内にオブジェクトを作成します。|
 |[GetDefaultThreads](#getdefaultthreads)|雑音プロセッサの数に基づいて、モジュールのスレッド数を動的に計算します。|
 |[Init](#init)|モジュールのスレッドを作成します。|
 |[[Lock] (ロック)](#lock)|モジュールと現在のスレッドのロックカウントをインクリメントします。|
-|[ロック](#unlock)|モジュールと現在のスレッドのロックカウントをデクリメントします。|
+|[Unlock](#unlock)|モジュールと現在のスレッドのロックカウントをデクリメントします。|
 
 ### <a name="data-members"></a>データ メンバー
 
@@ -93,7 +94,7 @@ class CComAutoThreadModule : public CComModule
 
 `CComAutoThreadModule`
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** atlbase. h
 
@@ -117,7 +118,7 @@ HRESULT CreateInstance(
 から要求されたインターフェイスの IID。
 
 *ppvObj*<br/>
-入出力 *Riid*によって識別されるインターフェイスポインターへのポインター。 オブジェクトがこのインターフェイスをサポートしていない場合、 *ppvObj* は NULL に設定されます。
+入出力 *Riid* によって識別されるインターフェイスポインターへのポインター。 オブジェクトがこのインターフェイスをサポートしていない場合、 *ppvObj* は NULL に設定されます。
 
 ### <a name="return-value"></a>戻り値
 
@@ -169,7 +170,7 @@ HRESULT Init(
 
 ### <a name="parameters"></a>パラメーター
 
-*irtran-p*<br/>
+*p*<br/>
 からオブジェクトマップエントリの配列へのポインター。
 
 *h*<br/>
@@ -183,7 +184,7 @@ HRESULT Init(
 
 ### <a name="remarks"></a>解説
 
-データメンバーを初期化し、 *nThreads*によって指定されたスレッドの数を作成します。
+データメンバーを初期化し、 *nThreads* によって指定されたスレッドの数を作成します。
 
 ## <a name="ccomautothreadmodulelock"></a><a name="lock"></a> CComAutoThreadModule:: Lock
 
@@ -223,7 +224,7 @@ int m_nThreads;
 
 ### <a name="remarks"></a>解説
 
-EXE モジュール内のスレッドの数を格納します。 [Init](#init)が呼び出されると、 `m_nThreads` は*nThreads*パラメーター値に設定されます。 各スレッドに関連付けられているアパートメントは、 [CComApartment](../../atl/reference/ccomapartment-class.md) オブジェクトによって管理されます。
+EXE モジュール内のスレッドの数を格納します。 [Init](#init)が呼び出されると、 `m_nThreads` は *nThreads* パラメーター値に設定されます。 各スレッドに関連付けられているアパートメントは、 [CComApartment](../../atl/reference/ccomapartment-class.md) オブジェクトによって管理されます。
 
 ## <a name="ccomautothreadmodulem_papartments"></a><a name="m_papartments"></a> CComAutoThreadModule:: m_pApartments
 

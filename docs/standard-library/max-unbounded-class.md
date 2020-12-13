@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: max_unbounded クラス'
 title: max_unbounded クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -16,12 +17,12 @@ helpviewer_keywords:
 - stdext::max_unbounded [C++], released
 - stdext::max_unbounded [C++], saved
 ms.assetid: e34627a9-c231-4031-a483-cbb0514fff46
-ms.openlocfilehash: e0254563cc60db4a171527735b373c2954a5a9e5
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: 64501d9028b5adba0f9e3059f3581ad57d00ea27
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88561961"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97149241"
 ---
 # <a name="max_unbounded-class"></a>max_unbounded クラス
 
@@ -43,7 +44,7 @@ class max_unbounded
 |[たら](#released)|フリー リスト上のメモリ ブロックの数を減らします。|
 |[saved](#saved)|フリー リスト上のメモリ ブロックの数を減らします。|
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:**\<allocators>
 

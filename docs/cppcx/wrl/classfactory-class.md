@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: ClassFactory クラス'
 title: ClassFactory クラス
 ms.date: 10/03/2018
 ms.topic: reference
@@ -17,12 +18,12 @@ helpviewer_keywords:
 - Microsoft::WRL::ClassFactory::QueryInterface method
 - Microsoft::WRL::ClassFactory::Release method
 ms.assetid: f13e6bce-722b-4f18-b7cf-3ffa6345c1db
-ms.openlocfilehash: bbf20e2269e6d62206e06e748174d7b88898cd68
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: e6503cba1060c432b2cb85020799b83f0ee16c6d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87198100"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97135305"
 ---
 # <a name="classfactory-class"></a>ClassFactory クラス
 
@@ -65,7 +66,7 @@ class ClassFactory :
 
 を使用し `ClassFactory` て、ユーザー定義のファクトリ実装を提供します。
 
-次のプログラミングパターンは、 [Implements](implements-structure.md)構造体を使用して、クラスファクトリに3つ以上のインターフェイスを指定する方法を示しています。
+次のプログラミングパターンは、 [Implements](implements-structure.md) 構造体を使用して、クラスファクトリに3つ以上のインターフェイスを指定する方法を示しています。
 
 `struct MyFactory : ClassFactory<Implements<I1, I2, I3>, I4, I5>`
 
@@ -108,13 +109,13 @@ class ClassFactory :
 
 `ClassFactory`
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** resource.h
 
 **名前空間:** Microsoft::WRL
 
-## <a name="classfactoryaddref"></a><a name="addref"></a>ClassFactory:: AddRef
+## <a name="classfactoryaddref"></a><a name="addref"></a> ClassFactory:: AddRef
 
 現在のオブジェクトの参照カウントをインクリメントし `ClassFactory` ます。
 
@@ -129,13 +130,13 @@ STDMETHOD_(
 
 成功した場合は S_OK、そうでない場合は失敗を示す HRESULT。
 
-## <a name="classfactoryclassfactory"></a><a name="classfactory"></a>ClassFactory:: ClassFactory
+## <a name="classfactoryclassfactory"></a><a name="classfactory"></a> ClassFactory:: ClassFactory
 
 ```cpp
 WRL_NOTHROW ClassFactory();
 ```
 
-## <a name="classfactorylockserver"></a><a name="lockserver"></a>ClassFactory:: LockServer
+## <a name="classfactorylockserver"></a><a name="lockserver"></a> ClassFactory:: LockServer
 
 現在のオブジェクトによって追跡される、基になるオブジェクトの数をインクリメントまたはデクリメントし `ClassFactory` ます。
 
@@ -158,7 +159,7 @@ STDMETHOD(
 
 `ClassFactory`[モジュール](module-class.md)クラスの基になるインスタンスのオブジェクトを追跡します。
 
-## <a name="classfactoryqueryinterface"></a><a name="queryinterface"></a>ClassFactory:: QueryInterface
+## <a name="classfactoryqueryinterface"></a><a name="queryinterface"></a> ClassFactory:: QueryInterface
 
 パラメーターによって指定されたインターフェイスへのポインターを取得します。
 
@@ -174,13 +175,13 @@ STDMETHOD(
 インターフェイス ID。
 
 *ppvObject*<br/>
-この操作が完了したときに、パラメーター *riid*によって指定されたインターフェイスへのポインター。
+この操作が完了したときに、パラメーター *riid* によって指定されたインターフェイスへのポインター。
 
 ### <a name="return-value"></a>戻り値
 
 成功した場合は S_OK、そうでない場合は失敗を示す HRESULT。
 
-## <a name="classfactoryrelease"></a><a name="release"></a>ClassFactory:: Release
+## <a name="classfactoryrelease"></a><a name="release"></a> ClassFactory:: Release
 
 現在のオブジェクトの参照カウントをデクリメントし `ClassFactory` ます。
 

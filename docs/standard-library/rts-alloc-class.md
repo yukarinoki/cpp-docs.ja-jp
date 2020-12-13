@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: rts_alloc クラス'
 title: rts_alloc クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - stdext::rts_alloc [C++], deallocate
 - stdext::rts_alloc [C++], equals
 ms.assetid: ab41bffa-83d1-4a1c-87b9-5707d516931f
-ms.openlocfilehash: 04a6578c7abd07ff84f4c0a5cee68cfd7ec8ef04
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: b2fe4bf3fe3f54e8fe1de3d89605280b2ba2b857
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88560557"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97148942"
 ---
 # <a name="rts_alloc-class"></a>rts_alloc クラス
 
@@ -47,7 +48,7 @@ class rts_alloc
 |[配置](#deallocate)|指定した位置で始まるストレージから、指定された数のオブジェクトを解放します。|
 |[equals](#equals)|2 つのキャッシュが等しいかどうかを比較します。|
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:**\<allocators>
 
@@ -72,7 +73,7 @@ void *allocate(std::size_t count);
 
 ### <a name="remarks"></a>解説
 
-このメンバー関数は `caches[_IDX].allocate(count)` 、 `_IDX` 要求されたブロックサイズの *カウント*によってインデックスが決定されるを返します。また、 *count* が大きすぎる場合は、を返し `operator new(count)` ます。 キャッシュ オブジェクトを表す `cache`。
+このメンバー関数は `caches[_IDX].allocate(count)` 、 `_IDX` 要求されたブロックサイズの *カウント* によってインデックスが決定されるを返します。また、 *count* が大きすぎる場合は、を返し `operator new(count)` ます。 キャッシュ オブジェクトを表す `cache`。
 
 ## <a name="rts_allocdeallocate"></a><a name="deallocate"></a> rts_alloc::d eallocate
 
@@ -92,7 +93,7 @@ void deallocate(void* ptr, std::size_t count);
 
 ### <a name="remarks"></a>解説
 
-このメンバー関数は `caches[_IDX].deallocate(ptr, count)` 、 `_IDX` 要求されたブロックサイズの *カウント*によってインデックスが決定されるを呼び出します。 *count* が大きすぎる場合は、を返し `operator delete(ptr)` ます。
+このメンバー関数は `caches[_IDX].deallocate(ptr, count)` 、 `_IDX` 要求されたブロックサイズの *カウント* によってインデックスが決定されるを呼び出します。 *count* が大きすぎる場合は、を返し `operator delete(ptr)` ます。
 
 ## <a name="rts_allocequals"></a><a name="equals"></a> rts_alloc:: equals
 

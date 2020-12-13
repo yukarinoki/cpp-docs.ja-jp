@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「operator キャリー?」を参照してください。
 title: CARRY? 演算子
 ms.date: 12/17/2019
 f1_keywords:
@@ -8,16 +9,16 @@ helpviewer_keywords:
 - operator CARRY?
 - CARRY? operator
 ms.assetid: 5b195de7-3f66-436a-b75a-4b8d7c3c83b7
-ms.openlocfilehash: 51d74e28e176a4e7cd84ba817183d420100365ac
-ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
+ms.openlocfilehash: a80a1bcdc58bbbeec08d5b22fde17840fede47d7
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75311742"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97128025"
 ---
 # <a name="operator-carry"></a>CARRY? 演算子
 
-キャリーフラグの状態。 内でのみ使用され[ます。の場合は](dot-if.md) [。WHILE](dot-while.md)、or [。](dot-repeat.md)ブロックを繰り返し、アセンブリ時間ではなく実行時に評価します。
+キャリーフラグの状態。 内でのみ使用され [ます。の場合は](dot-if.md) [。WHILE](dot-while.md)、or [。](dot-repeat.md) ブロックを繰り返し、アセンブリ時間ではなく実行時に評価します。
 
 ## <a name="syntax"></a>構文
 
