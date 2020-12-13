@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「」を参照してください。ベース
 title: .RADIX
 ms.date: 12/17/2019
 f1_keywords:
@@ -6,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - .RADIX directive
 ms.assetid: 3f7c2717-fd41-4aff-820d-3f40fd9280a0
-ms.openlocfilehash: 0b36f08cf67cdeca9186a1f3382e9b10b56728bd
-ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
+ms.openlocfilehash: 4416d7dff80f3076051c454a2170115ca7c859c6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75313432"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97131236"
 ---
 # <a name="radix"></a>.RADIX
 
-2 ~ 16 の範囲の既定の基数を*expression*の値に設定します。
+2 ~ 16 の範囲の既定の基数を *expression* の値に設定します。
 
 ## <a name="syntax"></a>構文
 

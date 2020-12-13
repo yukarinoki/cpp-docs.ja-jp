@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: wctomb_s、_wctomb_s_l'
 title: wctomb_s、_wctomb_s_l
 ms.date: 4/2/2020
 api_name:
@@ -35,12 +36,12 @@ helpviewer_keywords:
 - characters, converting
 - string conversion, multibyte character strings
 ms.assetid: 7e94a888-deed-4dbd-b5e9-d4a0455538b8
-ms.openlocfilehash: 63839f70fa334fadd961eb173343d1b406268cfd
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 845bdd5fff74e24226700b1f233ccf1e29afc27e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82910441"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97136826"
 ---
 # <a name="wctomb_s-_wctomb_s_l"></a>wctomb_s、_wctomb_s_l
 
@@ -73,7 +74,7 @@ errno_t _wctomb_s_l(
 マルチバイト文字のアドレス。
 
 *sizeInBytes*<br/>
-バッファー *mbchar*のサイズ。
+バッファー *mbchar* のサイズ。
 
 *wchar*<br/>
 ワイド文字。
@@ -89,25 +90,25 @@ errno_t _wctomb_s_l(
 
 |*mbchar*|*sizeInBytes*|戻り値|*この値*|
 |--------------|-------------------|------------------|-----------------|
-|**空白**|>0|**EINVAL**|変更されない|
+|**NULL**|>0|**EINVAL**|変更されない|
 |any|>**INT_MAX**|**EINVAL**|変更されない|
 |any|小さすぎる|**EINVAL**|変更されない|
 
-上記のいずれかのエラー条件が発生すると、「[パラメータの検証](../../c-runtime-library/parameter-validation.md)」に説明されているように、無効なパラメーター ハンドラ―が呼び出されます。 実行の継続が許可された場合、 **wctomb**は**einval**を返し、 **errno**を**einval**に設定します。
+上記のいずれかのエラー条件が発生すると、「[パラメータの検証](../../c-runtime-library/parameter-validation.md)」に説明されているように、無効なパラメーター ハンドラ―が呼び出されます。 実行の継続が許可された場合、 **wctomb** は **einval** を返し、 **errno** を **einval** に設定します。
 
 ## <a name="remarks"></a>解説
 
-**Wctomb_s**関数は、 *wchar*引数を対応するマルチバイト文字に変換し、その結果を*mbchar*に格納します。 任意のプログラムの任意のポイントからこの関数を呼び出すことができます。
+**Wctomb_s** 関数は、 *wchar* 引数を対応するマルチバイト文字に変換し、その結果を *mbchar* に格納します。 任意のプログラムの任意のポイントからこの関数を呼び出すことができます。
 
-ワイド文字をマルチバイト文字に変換**wctomb_s**場合は、ワイド文字のバイト数 ( **MB_CUR_MAX**を超えることはありません) が、"" の*値*によって示される整数に格納されます。 *Wchar*がワイド文字の null 文字 (L ' \ 0 ') の場合、 **wctomb_s**に*は1が設定*されます。 ターゲットポインターの*mbchar*が**NULL**の場合、 **wctomb_s**は、の*値*に0を挿入します。 現在のロケールで変換できない場合、 **wctomb_s**は-1 を "の"*値*に入れます。
+ワイド文字をマルチバイト文字に変換 **wctomb_s** 場合は、ワイド文字のバイト数 ( **MB_CUR_MAX** を超えることはありません) が、"" の *値* によって示される整数に格納されます。 *Wchar* がワイド文字の null 文字 (L ' \ 0 ') の場合、 **wctomb_s** に *は1が設定* されます。 ターゲットポインターの *mbchar* が **NULL** の場合、 **wctomb_s** は、の *値* に0を挿入します。 現在のロケールで変換できない場合、 **wctomb_s** は-1 を "の" *値* に入れます。
 
-**wctomb_s**は、ロケールに依存する情報に現在のロケールを使用します。**_wctomb_s_l**は、渡されたロケールを代わりに使用する点を除いて同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
+**wctomb_s** は、ロケールに依存する情報に現在のロケールを使用します。 **_wctomb_s_l** は、渡されたロケールを代わりに使用する点を除いて同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
 
 既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**wctomb_s**|\<stdlib.h>|
 |**_wctomb_s_l**|\<stdlib.h>|
@@ -116,7 +117,7 @@ errno_t _wctomb_s_l(
 
 ## <a name="example"></a>例
 
-このプログラムは、 **wctomb**関数の動作を示しています。
+このプログラムは、 **wctomb** 関数の動作を示しています。
 
 ```cpp
 // crt_wctomb_s.cpp
@@ -145,7 +146,7 @@ Convert a wide character:
 ## <a name="see-also"></a>関連項目
 
 [データ変換](../../c-runtime-library/data-conversion.md)<br/>
-[国](../../c-runtime-library/locale.md)<br/>
+[ロケール](../../c-runtime-library/locale.md)<br/>
 [_mbclen、mblen、_mblen_l](mbclen-mblen-mblen-l.md)<br/>
 [mbstowcs、_mbstowcs_l](mbstowcs-mbstowcs-l.md)<br/>
 [mbtowc、_mbtowc_l](mbtowc-mbtowc-l.md)<br/>

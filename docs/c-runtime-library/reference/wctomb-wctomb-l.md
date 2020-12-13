@@ -1,4 +1,5 @@
 ---
+description: 詳細については、wctomb、_wctomb_l を参照してください。
 title: wctomb、_wctomb_l
 ms.date: 4/2/2020
 api_name:
@@ -35,12 +36,12 @@ helpviewer_keywords:
 - characters, converting
 - string conversion, multibyte character strings
 ms.assetid: 4a543f0e-5516-4d81-8ff2-3c5206f02ed5
-ms.openlocfilehash: 0a95d61c50af5f49e69df8ae20efccfd3fb8ff5f
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: f49915d062aa602ab361084cbcc7a9a034599de2
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82910425"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97136813"
 ---
 # <a name="wctomb-_wctomb_l"></a>wctomb、_wctomb_l
 
@@ -70,19 +71,19 @@ int _wctomb_l(
 
 ## <a name="return-value"></a>戻り値
 
-**Wctomb**がワイド文字をマルチバイト文字に変換する場合は、ワイド文字のバイト数 ( **MB_CUR_MAX**を超えない) を返します。 *Wchar*がワイド文字の null 文字 (L ' \ 0 ') の場合、 **wctomb**は1を返します。 ターゲットポインター *mbchar*が**NULL**の場合、 **wctomb**は0を返します。 現在のロケールで変換できない場合、 **wctomb**は-1 を返し、 **errno**は**EILSEQ**に設定されます。
+**Wctomb** がワイド文字をマルチバイト文字に変換する場合は、ワイド文字のバイト数 ( **MB_CUR_MAX** を超えない) を返します。 *Wchar* がワイド文字の null 文字 (L ' \ 0 ') の場合、 **wctomb** は1を返します。 ターゲットポインター *mbchar* が **NULL** の場合、 **wctomb** は0を返します。 現在のロケールで変換できない場合、 **wctomb** は-1 を返し、 **errno** は **EILSEQ** に設定されます。
 
 ## <a name="remarks"></a>解説
 
-**Wctomb**関数は、 *wchar*引数を対応するマルチバイト文字に変換し、その結果を*mbchar*に格納します。 任意のプログラムの任意のポイントからこの関数を呼び出すことができます。 **wctomb**は、ロケールに依存する動作に現在のロケールを使用します。**_wctomb_l**は、渡されたロケールを代わりに使用する点を除いて、 **wctomb**と同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
+**Wctomb** 関数は、 *wchar* 引数を対応するマルチバイト文字に変換し、その結果を *mbchar* に格納します。 任意のプログラムの任意のポイントからこの関数を呼び出すことができます。 **wctomb** は、ロケールに依存する動作に現在のロケールを使用します。 **_wctomb_l** は、渡されたロケールを代わりに使用する点を除いて、 **wctomb** と同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
 
-**wctomb**は、そのパラメーターを検証します。 *Mbchar*が**NULL**の場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、 **errno**は**EINVAL**に設定され、この関数は-1 を返します。
+**wctomb** は、そのパラメーターを検証します。 *Mbchar* が **NULL** の場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、 **errno** は **EINVAL** に設定され、この関数は-1 を返します。
 
 既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**wctomb**|\<stdlib.h>|
 
@@ -121,7 +122,7 @@ Convert a wide character:
 ## <a name="see-also"></a>関連項目
 
 [データ変換](../../c-runtime-library/data-conversion.md)<br/>
-[国](../../c-runtime-library/locale.md)<br/>
+[ロケール](../../c-runtime-library/locale.md)<br/>
 [_mbclen、mblen、_mblen_l](mbclen-mblen-mblen-l.md)<br/>
 [mbstowcs、_mbstowcs_l](mbstowcs-mbstowcs-l.md)<br/>
 [mbtowc、_mbtowc_l](mbtowc-mbtowc-l.md)<br/>

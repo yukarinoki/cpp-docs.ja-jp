@@ -1,4 +1,5 @@
 ---
+description: 詳細については、wcstombs、_wcstombs_l を参照してください。
 title: wcstombs、_wcstombs_l
 ms.date: 4/2/2020
 api_name:
@@ -36,12 +37,12 @@ helpviewer_keywords:
 - characters, converting
 - string conversion, multibyte character strings
 ms.assetid: 91234252-9ea1-423a-af99-e9d0ce4a40e3
-ms.openlocfilehash: 33c7554f1ab5c9822a1908a4b50d0ee0764615ae
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 070ba4dbf574ccd6b1afaec074dc9eb9f311e728
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82910633"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97136839"
 ---
 # <a name="wcstombs-_wcstombs_l"></a>wcstombs、_wcstombs_l
 
@@ -92,19 +93,19 @@ size_t _wcstombs_l(
 
 ## <a name="return-value"></a>戻り値
 
-**Wcstombs**がマルチバイト文字列を正常に変換した場合は、終端の null (存在する場合) を除いて、マルチバイト出力文字列に書き込まれたバイト数を返します。 *Mbstr*引数が**NULL**の場合、 **wcstombs**は、コピー先の文字列の必要なサイズをバイト単位で返します。 **Wcstombs**がマルチバイト文字に変換できないワイド文字を検出した場合は、型**size_t**に-1 をキャストし、 **errno**を**EILSEQ**に設定します。
+**Wcstombs** がマルチバイト文字列を正常に変換した場合は、終端の null (存在する場合) を除いて、マルチバイト出力文字列に書き込まれたバイト数を返します。 *Mbstr* 引数が **NULL** の場合、 **wcstombs** は、コピー先の文字列の必要なサイズをバイト単位で返します。 **Wcstombs** がマルチバイト文字に変換できないワイド文字を検出した場合は、型 **size_t** に-1 をキャストし、 **errno** を **EILSEQ** に設定します。
 
 ## <a name="remarks"></a>解説
 
-**Wcstombs**関数は、 *wcstr*が指すワイド文字列を対応するマルチバイト文字に変換し、結果を*mbstr*配列に格納します。 *Count*パラメーターは、マルチバイト出力文字列 (つまり、 *mbstr*のサイズ) に格納できる最大バイト数を示します。 通常、ワイド文字列を変換するときに必要になるバイト数は不明です。 出力文字列の 1 バイトだけを必要とするワイド文字もあれば、2 バイトを必要とする文字もあります。 入力文字列内のワイド文字ごとに、マルチバイト出力文字列に2バイト (ワイド文字の null を含む) がある場合、結果は確実に一致します。
+**Wcstombs** 関数は、 *wcstr* が指すワイド文字列を対応するマルチバイト文字に変換し、結果を *mbstr* 配列に格納します。 *Count* パラメーターは、マルチバイト出力文字列 (つまり、 *mbstr* のサイズ) に格納できる最大バイト数を示します。 通常、ワイド文字列を変換するときに必要になるバイト数は不明です。 出力文字列の 1 バイトだけを必要とするワイド文字もあれば、2 バイトを必要とする文字もあります。 入力文字列内のワイド文字ごとに、マルチバイト出力文字列に2バイト (ワイド文字の null を含む) がある場合、結果は確実に一致します。
 
-**Wcstombs**が、 *count*の前または後に、ワイド文字の null 文字 (L ' \ 0 ') を検出すると、それを8ビットの0に変換して停止します。 このため、 *mbstr*のマルチバイト文字列は、 **wcstombs**が変換中にワイド文字の null 文字を検出した場合にのみ、null で終了します。 *Wcstr*と*mbstr*が指すシーケンスが重なり合う場合、 **wcstombs**の動作は未定義になります。
+**Wcstombs** が、 *count* の前または後に、ワイド文字の null 文字 (L ' \ 0 ') を検出すると、それを8ビットの0に変換して停止します。 このため、 *mbstr* のマルチバイト文字列は、 **wcstombs** が変換中にワイド文字の null 文字を検出した場合にのみ、null で終了します。 *Wcstr* と *mbstr* が指すシーケンスが重なり合う場合、 **wcstombs** の動作は未定義になります。
 
-*Mbstr*引数が**NULL**の場合、 **wcstombs**は、コピー先の文字列の必要なサイズをバイト単位で返します。
+*Mbstr* 引数が **NULL** の場合、 **wcstombs** は、コピー先の文字列の必要なサイズをバイト単位で返します。
 
-**wcstombs**は、そのパラメーターを検証します。 *Wcstr*が**NULL**の場合、または*count*が**INT_MAX**より大きい場合、この関数は「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーを呼び出します。 実行の継続が許可された場合、関数は**errno**を**EINVAL**に設定し、-1 を返します。
+**wcstombs** は、そのパラメーターを検証します。 *Wcstr* が **NULL** の場合、または *count* が **INT_MAX** より大きい場合、この関数は「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーを呼び出します。 実行の継続が許可された場合、関数は **errno** を **EINVAL** に設定し、-1 を返します。
 
-**wcstombs**は、ロケールに依存する動作に現在のロケールを使用します。**_wcstombs_l**は、渡されたロケールを代わりに使用する点を除いて同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
+**wcstombs** は、ロケールに依存する動作に現在のロケールを使用します。 **_wcstombs_l** は、渡されたロケールを代わりに使用する点を除いて同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
 
 C++ では、これらの関数にテンプレートのオーバーロードがあります。このオーバーロードは、これらの関数に対応するセキュリティで保護された新しい関数を呼び出します。 詳細については、「[セキュリティ保護されたテンプレート オーバーロード](../../c-runtime-library/secure-template-overloads.md)」を参照してください。
 
@@ -112,7 +113,7 @@ C++ では、これらの関数にテンプレートのオーバーロードが�
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**wcstombs**|\<stdlib.h>|
 |**_wcstombs_l**|\<stdlib.h>|
@@ -121,7 +122,7 @@ C++ では、これらの関数にテンプレートのオーバーロードが�
 
 ## <a name="example"></a>例
 
-このプログラムは、 **wcstombs**関数の動作を示しています。
+このプログラムは、 **wcstombs** 関数の動作を示しています。
 
 ```C
 // crt_wcstombs.c
@@ -164,7 +165,7 @@ Convert wide-character string:
 ## <a name="see-also"></a>関連項目
 
 [データ変換](../../c-runtime-library/data-conversion.md)<br/>
-[国](../../c-runtime-library/locale.md)<br/>
+[ロケール](../../c-runtime-library/locale.md)<br/>
 [_mbclen、mblen、_mblen_l](mbclen-mblen-mblen-l.md)<br/>
 [mbstowcs、_mbstowcs_l](mbstowcs-mbstowcs-l.md)<br/>
 [mbtowc、_mbtowc_l](mbtowc-mbtowc-l.md)<br/>

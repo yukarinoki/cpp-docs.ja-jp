@@ -1,5 +1,6 @@
 ---
-title: クラスを見る
+description: '詳細情報: CHeapPtrElementTraits クラス'
+title: CHeapPtrElementTraits クラス
 ms.date: 11/04/2016
 f1_keywords:
 - CHeapPtrElementTraits
@@ -9,16 +10,16 @@ f1_keywords:
 helpviewer_keywords:
 - CHeapPtrElementTraits class
 ms.assetid: 910e0e06-3c8b-4242-bf00-b57eb74fbc77
-ms.openlocfilehash: f09da968b264463eba759372e4e0756397e9978e
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 7ca3d194a284f06e6b5baa0530cb49bc93d8510a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81326876"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97141610"
 ---
-# <a name="cheapptrelementtraits-class"></a>クラスを見る
+# <a name="cheapptrelementtraits-class"></a>CHeapPtrElementTraits クラス
 
-このクラスは、ヒープ ポインターのコレクションを作成するときに便利なメソッド、静的関数、および typedef を提供します。
+このクラスは、ヒープポインターのコレクションを作成するときに便利なメソッド、静的関数、および typedef を提供します。
 
 > [!IMPORTANT]
 > このクラスとそのメンバーは、Windows ランタイムで実行されるアプリケーションでは使用できません。
@@ -34,10 +35,10 @@ class CHeapPtrElementTraits :
 #### <a name="parameters"></a>パラメーター
 
 *T*<br/>
-コレクション クラスに格納されるオブジェクト型。
+コレクションクラスに格納されるオブジェクトの型。
 
 *アロケーター*<br/>
-使用するメモリ割り当てクラス。 デフォルトは[CCRTAllocator](../../atl/reference/ccrtallocator-class.md)です。
+使用するメモリ割り当てクラス。 既定値は [CCRTAllocator](../../atl/reference/ccrtallocator-class.md)です。
 
 ## <a name="members"></a>メンバー
 
@@ -45,42 +46,42 @@ class CHeapPtrElementTraits :
 
 |名前|説明|
 |----------|-----------------|
-|[要素トレイト::イナルグタイプ](#inargtype)|コレクション クラス オブジェクトに要素を追加するために使用するデータ型。|
-|[要素トレイト::アウトバーグタイプ](#outargtype)|コレクション クラス オブジェクトから要素を取得するために使用するデータ型。|
+|[CHeapPtrElementTraits:: INARGTYPE](#inargtype)|コレクションクラスオブジェクトに要素を追加するために使用するデータ型。|
+|[CHeapPtrElementTraits:: OUTARGTYPE](#outargtype)|コレクションクラスオブジェクトから要素を取得するために使用するデータ型。|
 
 ## <a name="remarks"></a>解説
 
-このクラスは、ヒープ ポインターを含むコレクション クラス オブジェクトの作成を支援するためのメソッド、静的関数、および typedef を提供します。 クラス`CHeapPtrList`は から`CHeapPtrElementTraits`派生します。
+このクラスには、ヒープポインターを含むコレクションクラスオブジェクトの作成を支援するためのメソッド、静的関数、および typedef が用意されています。 クラスは `CHeapPtrList` から派生 `CHeapPtrElementTraits` します。
 
-詳細については、「 [ATL コレクション クラス](../../atl/atl-collection-classes.md)」を参照してください。
+詳細については、「 [ATL コレクションクラス](../../atl/atl-collection-classes.md)」を参照してください。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
-[クセプチュ設定の比較](../../atl/reference/cdefaultcomparetraits-class.md)
+[CDefaultCompareTraits](../../atl/reference/cdefaultcomparetraits-class.md)
 
-[既定のハッシュトレイト](../../atl/reference/cdefaulthashtraits-class.md)
+[CDefaultHashTraits](../../atl/reference/cdefaulthashtraits-class.md)
 
-[Cエレメントトレイツベース](../../atl/reference/celementtraitsbase-class.md)
+[CElementTraitsBase](../../atl/reference/celementtraitsbase-class.md)
 
-[要素の状態](../../atl/reference/cdefaultelementtraits-class.md)
+[CDefaultElementTraits](../../atl/reference/cdefaultelementtraits-class.md)
 
 `CHeapPtrElementTraits`
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-**ヘッダー:** atlcoll.h
+**ヘッダー:** atlcoll. h
 
-## <a name="cheapptrelementtraitsinargtype"></a><a name="inargtype"></a>要素トレイト::イナルグタイプ
+## <a name="cheapptrelementtraitsinargtype"></a><a name="inargtype"></a> CHeapPtrElementTraits:: INARGTYPE
 
-コレクション クラス オブジェクトに要素を追加するために使用するデータ型。
+コレクションクラスオブジェクトに要素を追加するために使用するデータ型。
 
 ```
 typedef CHeapPtr<T, Allocator>& INARGTYPE;
 ```
 
-## <a name="cheapptrelementtraitsoutargtype"></a><a name="outargtype"></a>要素トレイト::アウトバーグタイプ
+## <a name="cheapptrelementtraitsoutargtype"></a><a name="outargtype"></a> CHeapPtrElementTraits:: OUTARGTYPE
 
-コレクション クラス オブジェクトから要素を取得するために使用するデータ型。
+コレクションクラスオブジェクトから要素を取得するために使用するデータ型。
 
 ```
 typedef T *& OUTARGTYPE;
@@ -88,6 +89,6 @@ typedef T *& OUTARGTYPE;
 
 ## <a name="see-also"></a>関連項目
 
-[クラスの既定値](../../atl/reference/cdefaultelementtraits-class.md)<br/>
-[クラス](../../atl/reference/ccomheapptr-class.md)<br/>
+[CDefaultElementTraits クラス](../../atl/reference/cdefaultelementtraits-class.md)<br/>
+[CComHeapPtr クラス](../../atl/reference/ccomheapptr-class.md)<br/>
 [クラスの概要](../../atl/atl-class-overview.md)

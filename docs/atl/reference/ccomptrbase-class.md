@@ -1,5 +1,6 @@
 ---
-title: クラス
+description: '詳細情報: CComPtrBase クラス'
+title: CComPtrBase クラス
 ms.date: 11/04/2016
 f1_keywords:
 - CComPtrBase
@@ -17,16 +18,16 @@ f1_keywords:
 helpviewer_keywords:
 - CComPtrBase class
 ms.assetid: 6dbe9543-dee8-4a97-b02f-dd3a25f4a1a0
-ms.openlocfilehash: 9c62cc912b3fea3ea68390882bdda37cbfb25a7e
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: 34f197904775bc15366f412e629ef81b26dde74e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81747763"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97142390"
 ---
-# <a name="ccomptrbase-class"></a>クラス
+# <a name="ccomptrbase-class"></a>CComPtrBase クラス
 
-このクラスは、COM ベースのメモリ ルーチンを使用するスマート ポインター クラスの基礎を提供します。
+このクラスは、COM ベースのメモリルーチンを使用するスマートポインタークラスの基礎となります。
 
 ## <a name="syntax"></a>構文
 
@@ -38,7 +39,7 @@ class CComPtrBase
 #### <a name="parameters"></a>パラメーター
 
 *T*<br/>
-スマート ポインターによって参照されるオブジェクト型。
+スマートポインターによって参照されるオブジェクトの種類。
 
 ## <a name="members"></a>メンバー
 
@@ -46,51 +47,51 @@ class CComPtrBase
 
 |名前|説明|
 |----------|-----------------|
-|[コムプターベース::~コムプターベース](#dtor)|デストラクターです。|
+|[CComPtrBase:: ~ CComPtrBase](#dtor)|デストラクターです。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
 |名前|説明|
 |----------|-----------------|
-|[コムプトルベース::アドバイス](#advise)|接続ポイントとクライアントシンクの間に`CComPtrBase`接続を作成します。|
-|[コムプターベース::アタッチ](#attach)|既存のポインターの所有権を取得します。|
-|[インスタンスを作成します。](#cocreateinstance)|指定したクラス ID またはプログラム ID に関連付けられたクラスのオブジェクトを作成します。|
-|[コムプターベース::コピート](#copyto)|ポインターを別のポインター変数`CComPtrBase`にコピーします。|
-|[コムプターベース::Dエタッハ](#detach)|ポインターの所有権を解放します。|
-|[オブジェクトを指定します。](#isequalobject)|指定した`IUnknown`オブジェクトが`CComPtrBase`、そのオブジェクトに関連付けられている同じオブジェクトを指しているかどうかを確認します。|
-|[クエリインターフェイス](#queryinterface)|指定したインターフェイスへのポインターを返します。|
-|[CComPtrベース::リリース](#release)|インターフェイスを解放するには、このメソッドを呼び出します。|
-|[コムプターベース::セットサイト](#setsite)|`CComPtrBase`オブジェクトのサイトを親オブジェクトの サイト`IUnknown`に設定します。|
+|[CComPtrBase:: Advise](#advise)|`CComPtrBase`のコネクションポイントとクライアントのシンクとの間の接続を作成するには、このメソッドを呼び出します。|
+|[CComPtrBase:: Attach](#attach)|既存のポインターの所有権を取得するには、このメソッドを呼び出します。|
+|[CComPtrBase:: CoCreateInstance](#cocreateinstance)|指定したクラス ID またはプログラム ID に関連付けられているクラスのオブジェクトを作成するには、このメソッドを呼び出します。|
+|[CComPtrBase:: CopyTo](#copyto)|`CComPtrBase`ポインターを別のポインター変数にコピーするには、このメソッドを呼び出します。|
+|[CComPtrBase::D etach](#detach)|ポインターの所有権を解放するには、このメソッドを呼び出します。|
+|[CComPtrBase::IsEqualObject](#isequalobject)|このメソッドを呼び出して、指定したが `IUnknown` オブジェクトに関連付けられている同じオブジェクトを指しているかどうかを確認し `CComPtrBase` ます。|
+|[CComPtrBase:: QueryInterface](#queryinterface)|指定したインターフェイスへのポインターを返すには、このメソッドを呼び出します。|
+|[CComPtrBase:: Release](#release)|インターフェイスを解放するには、このメソッドを呼び出します。|
+|[CComPtrBase:: SetSite](#setsite)|オブジェクトのサイトを親オブジェクトのに設定するには、このメソッドを呼び出し `CComPtrBase` `IUnknown` ます。|
 
 ### <a name="public-operators"></a>パブリック演算子
 
 |名前|説明|
 |----------|-----------------|
-|[コムプターベース::オペレーターT*](#operator_t_star)|キャスト演算子。|
-|[CComPtrBase::演算子!](#operator_not)|NOT 演算子。|
-|[CComPtrBase::オペレーター&](#operator_amp)|&amp; 演算子。|
-|[コムプターベース::演算子 *](#operator_star)|\* 演算子。|
-|[CComPtrBase::オペレーター<](#ccomptrbase__operator lt)|より小さい演算子。|
-|[を使用します。](#operator_eq_eq)|等価演算子。|
-|[コムプトルベース::オペレーター ->](#operator_ptr)|メンバへのポインター演算子。|
+|[CComPtrBase:: operator T *](#operator_t_star)|キャスト演算子。|
+|[CComPtrBase:: operator!](#operator_not)|NOT 演算子。|
+|[CComPtrBase:: operator &](#operator_amp)|&amp; 演算子。|
+|[CComPtrBase:: operator *](#operator_star)|\* 演算子。|
+|[CComPtrBase:: operator <](#ccomptrbase__operator lt)|小なり演算子。|
+|[CComPtrBase:: operator = =](#operator_eq_eq)|等値演算子。|
+|[CComPtrBase:: operator->](#operator_ptr)|メンバーへのポインター演算子。|
 
 ### <a name="public-data-members"></a>パブリック データ メンバー
 
 |名前|説明|
 |----------|-----------------|
-|[コムプトルベース::p](#p)|ポインター データ メンバー変数。|
+|[CComPtrBase::p](#p)|ポインターデータメンバー変数。|
 
 ## <a name="remarks"></a>解説
 
-このクラスは[、COM](../../atl/reference/ccomqiptr-class.md)メモリ管理ルーチンを使用する他のスマート ポインターの基礎を[提供します。](../../atl/reference/ccomptr-class.md) 派生クラスは独自のコンストラクターと演算子を追加しますが、 によって`CComPtrBase`提供されるメソッドに依存します。
+このクラスは、 [CComQIPtr](../../atl/reference/ccomqiptr-class.md) や [CCOMPTR](../../atl/reference/ccomptr-class.md)などの COM メモリ管理ルーチンを使用する他のスマートポインターの基礎となります。 派生クラスは独自のコンストラクターと演算子を追加しますが、によって提供されるメソッドに依存し `CComPtrBase` ます。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-**ヘッダー:** atlcomcli.h
+**ヘッダー:** atlcomcli. h
 
-## <a name="ccomptrbaseadvise"></a><a name="advise"></a>コムプトルベース::アドバイス
+## <a name="ccomptrbaseadvise"></a><a name="advise"></a> CComPtrBase:: Advise
 
-接続ポイントとクライアントシンクの間に`CComPtrBase`接続を作成します。
+`CComPtrBase`のコネクションポイントとクライアントのシンクとの間の接続を作成するには、このメソッドを呼び出します。
 
 ```
 HRESULT Advise(
@@ -102,25 +103,25 @@ HRESULT Advise(
 ### <a name="parameters"></a>パラメーター
 
 *パンク*<br/>
-クライアント`IUnknown`の .
+クライアントのへのポインター `IUnknown` 。
 
-*Iid*<br/>
-接続ポイントの GUID。 通常、これはコネクション ポイントによって管理される発信インターフェイスと同じです。
+*iid*<br/>
+コネクションポイントの GUID。 通常、これは接続ポイントによって管理される送信インターフェイスと同じです。
 
-*Pdw*<br/>
-接続を一意に識別する Cookie へのポインター。
+*ウィザード*<br/>
+接続を一意に識別するクッキーへのポインター。
 
 ### <a name="return-value"></a>戻り値
 
-成功時にS_OKを返すか、失敗した場合に HRESULT エラーを返します。
+成功した場合は S_OK を返し、失敗した場合はエラー HRESULT を返します。
 
 ### <a name="remarks"></a>解説
 
-詳細については[、AtlAdvise](connection-point-global-functions.md#atladvise)を参照してください。
+詳細については、「 [AtlAdvise](connection-point-global-functions.md#atladvise) 」を参照してください。
 
-## <a name="ccomptrbaseattach"></a><a name="attach"></a>コムプターベース::アタッチ
+## <a name="ccomptrbaseattach"></a><a name="attach"></a> CComPtrBase:: Attach
 
-既存のポインターの所有権を取得します。
+既存のポインターの所有権を取得するには、このメソッドを呼び出します。
 
 ```cpp
 void Attach(T* p2) throw();
@@ -129,13 +130,13 @@ void Attach(T* p2) throw();
 ### <a name="parameters"></a>パラメーター
 
 *p2*<br/>
-オブジェクト`CComPtrBase`は、このポインターの所有権を取得します。
+オブジェクトは、 `CComPtrBase` このポインターの所有権を取得します。
 
 ### <a name="remarks"></a>解説
 
-`Attach`既存の`CComPtrBase::p`[CComPtrBase:::p](#release) [CComPtrBase::p](#p)メンバー変数で解放を呼び出し *、p2*を に割り当てます。 オブジェクトが`CComPtrBase`ポインタの所有権を取得すると、ポインタを自動的に`Release`呼び出し、ポインタと、オブジェクトの参照カウントが 0 になると、割り当てられたデータが削除されます。
+`Attach`既存の [CComPtrBase::p](#p)メンバー変数に対して [CComPtrBase:: Release](#release)を呼び出し、 *p2* をに割り当て `CComPtrBase::p` ます。 オブジェクトが `CComPtrBase` ポインターの所有権を取得すると、オブジェクトの `Release` 参照カウントが0になった場合にポインターと割り当てられたデータを削除するポインターに対して、自動的にが呼び出されます。
 
-## <a name="ccomptrbaseccomptrbase"></a><a name="dtor"></a>コムプターベース::~コムプターベース
+## <a name="ccomptrbaseccomptrbase"></a><a name="dtor"></a> CComPtrBase:: ~ CComPtrBase
 
 デストラクターです。
 
@@ -145,11 +146,11 @@ void Attach(T* p2) throw();
 
 ### <a name="remarks"></a>解説
 
-が`CComPtrBase`指すインターフェイスを解放します。
+が指すインターフェイスを解放 `CComPtrBase` します。
 
-## <a name="ccomptrbasecocreateinstance"></a><a name="cocreateinstance"></a>インスタンスを作成します。
+## <a name="ccomptrbasecocreateinstance"></a><a name="cocreateinstance"></a> CComPtrBase:: CoCreateInstance
 
-指定したクラス ID またはプログラム ID に関連付けられたクラスのオブジェクトを作成します。
+指定したクラス ID またはプログラム ID に関連付けられているクラスのオブジェクトを作成するには、このメソッドを呼び出します。
 
 ```
 HRESULT CoCreateInstance(
@@ -166,30 +167,30 @@ HRESULT CoCreateInstance(
 ### <a name="parameters"></a>パラメーター
 
 *szProgID*<br/>
-CLSID の回復に使用される ProgID へのポインター。
+CLSID を回復するために使用される ProgID へのポインター。
 
-*プンクアウター*<br/>
-NULL の場合、オブジェクトが集約の一部として作成されないことを示します。 NULL 以外の場合は、集約オブジェクトの`IUnknown`インターフェイス (制御) へのポインター`IUnknown`です。
+*pUnkOuter*<br/>
+NULL の場合、オブジェクトが集計の一部として作成されていないことを示します。 NULL 以外の場合、は集約オブジェクトの `IUnknown` インターフェイス (コントロール) へのポインターです `IUnknown` 。
 
-*コンテキスト*<br/>
+*dwClsContext*<br/>
 新しく作成されたオブジェクトを管理するコードが実行されるコンテキスト。
 
 *rclsid*<br/>
-オブジェクトの作成に使用されるデータおよびコードに関連付けられた CLSID。
+オブジェクトの作成に使用されるデータとコードに関連付けられている CLSID。
 
 ### <a name="return-value"></a>戻り値
 
-成功、またはREGDB_E_CLASSNOTREG、CLASS_E_NOAGGREGATION、CO_E_CLASSSTRING、または失敗時のE_NOINTERFACEにS_OKを返します。 これらのエラーの説明については[、「コクリエイトクラスインスタンス](/windows/win32/api/combaseapi/nf-combaseapi-cocreateinstance)」および[「CLSIDFromProgID」](/windows/win32/api/combaseapi/nf-combaseapi-clsidfromprogid)を参照してください。
+成功した場合は S_OK、失敗した場合は REGDB_E_CLASSNOTREG、CLASS_E_NOAGGREGATION、CO_E_CLASSSTRING または E_NOINTERFACE を返します。 これらのエラーの説明については、「 [CoCreateClassInstance](/windows/win32/api/combaseapi/nf-combaseapi-cocreateinstance) And [Clsidfromprogid](/windows/win32/api/combaseapi/nf-combaseapi-clsidfromprogid) 」を参照してください。
 
 ### <a name="remarks"></a>解説
 
-メソッドの最初の形式が呼び出された場合は[、CLSID](/windows/win32/api/combaseapi/nf-combaseapi-clsidfromprogid)を回復するために使用されます。 次に、両方のフォーム[が呼](/windows/win32/api/combaseapi/nf-combaseapi-cocreateinstance)び出されます。
+メソッドの最初の形式が呼び出された場合、CLSID を復旧するために [Clsidfromprogid](/windows/win32/api/combaseapi/nf-combaseapi-clsidfromprogid) が使用されます。 どちらのフォームも [CoCreateClassInstance](/windows/win32/api/combaseapi/nf-combaseapi-cocreateinstance)を呼び出します。
 
-デバッグ ビルドでは[、CComPtrBase::p](#p)が NULL と等しくない場合、アサーション エラーが発生します。
+デバッグビルドでは、 [CComPtrBase::p](#p) が NULL と等しくない場合にアサーションエラーが発生します。
 
-## <a name="ccomptrbasecopyto"></a><a name="copyto"></a>コムプターベース::コピート
+## <a name="ccomptrbasecopyto"></a><a name="copyto"></a> CComPtrBase:: CopyTo
 
-ポインターを別のポインター変数`CComPtrBase`にコピーします。
+`CComPtrBase`ポインターを別のポインター変数にコピーするには、このメソッドを呼び出します。
 
 ```
 HRESULT CopyTo(T** ppT) throw();
@@ -197,22 +198,22 @@ HRESULT CopyTo(T** ppT) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*Ppt*<br/>
-ポインターを受け取る変数の`CComPtrBase`アドレス。
+*ppT*<br/>
+ポインターを受け取る変数のアドレス `CComPtrBase` 。
 
 ### <a name="return-value"></a>戻り値
 
-成功時にS_OKを返し、失敗時にE_POINTERします。
+成功した場合は S_OK を返し、失敗した場合は E_POINTER を返します。
 
 ### <a name="remarks"></a>解説
 
-ポインタを`CComPtrBase` *ppT*にコピーします。 [CComPtrBase::p](#p)メンバー変数の参照カウントがインクリメントされます。
+ポインターを `CComPtrBase` *ppT* にコピーします。 [CComPtrBase::p](#p)メンバー変数の参照カウントがインクリメントされます。
 
-*ppT*が NULL に等しい場合、エラー HRESULT が返されます。 デバッグ ビルドでは *、ppT*が NULL に等しい場合にアサーション エラーが発生します。
+*PpT* が NULL の場合は、エラー HRESULT が返されます。 デバッグビルドでは、 *ppT* が NULL に等しい場合にアサーションエラーが発生します。
 
-## <a name="ccomptrbasedetach"></a><a name="detach"></a>コムプターベース::Dエタッハ
+## <a name="ccomptrbasedetach"></a><a name="detach"></a> CComPtrBase::D etach
 
-ポインターの所有権を解放します。
+ポインターの所有権を解放するには、このメソッドを呼び出します。
 
 ```
 T* Detach() throw();
@@ -224,11 +225,11 @@ T* Detach() throw();
 
 ### <a name="remarks"></a>解説
 
-ポインターの所有権を解放し[、CComPtrBase::p](#p)データ メンバー変数を NULL に設定し、ポインターのコピーを返します。
+ポインターの所有権を解放し、 [CComPtrBase::p](#p) データメンバー変数を NULL に設定して、ポインターのコピーを返します。
 
-## <a name="ccomptrbaseisequalobject"></a><a name="isequalobject"></a>オブジェクトを指定します。
+## <a name="ccomptrbaseisequalobject"></a><a name="isequalobject"></a> CComPtrBase::IsEqualObject
 
-指定した`IUnknown`オブジェクトが`CComPtrBase`、そのオブジェクトに関連付けられている同じオブジェクトを指しているかどうかを確認します。
+このメソッドを呼び出して、指定したが `IUnknown` オブジェクトに関連付けられている同じオブジェクトを指しているかどうかを確認し `CComPtrBase` ます。
 
 ```
 bool IsEqualObject(IUnknown* pOther) throw();
@@ -241,9 +242,9 @@ bool IsEqualObject(IUnknown* pOther) throw();
 
 ### <a name="return-value"></a>戻り値
 
-オブジェクトが同一の場合は true、そうでない場合は false を返します。
+オブジェクトが同一の場合は true、それ以外の場合は false を返します。
 
-## <a name="ccomptrbaseoperator-"></a><a name="operator_not"></a>CComPtrBase::演算子!
+## <a name="ccomptrbaseoperator-"></a><a name="operator_not"></a> CComPtrBase:: operator!
 
 NOT 演算子。
 
@@ -253,9 +254,9 @@ bool operator!() const throw();
 
 ### <a name="return-value"></a>戻り値
 
-ポインターが NULL`CComHeapPtr`の場合は true、それ以外の場合は false を返します。
+`CComHeapPtr`ポインターが NULL の場合は true、それ以外の場合は false を返します。
 
-## <a name="ccomptrbaseoperator-amp"></a><a name="operator_amp"></a>コムプトルベース::オペレーター&amp;
+## <a name="ccomptrbaseoperator-amp"></a><a name="operator_amp"></a> CComPtrBase:: operator &amp;
 
 &amp; 演算子。
 
@@ -265,9 +266,9 @@ T** operator&() throw();
 
 ### <a name="return-value"></a>戻り値
 
-オブジェクトが指すオブジェクトのアドレスを`CComPtrBase`返します。
+オブジェクトが指すオブジェクトのアドレスを返し `CComPtrBase` ます。
 
-## <a name="ccomptrbaseoperator-"></a><a name="operator_star"></a>コムプトルベース::オペレーター\*
+## <a name="ccomptrbaseoperator-"></a><a name="operator_star"></a> CComPtrBase:: operator \*
 
 \* 演算子。
 
@@ -277,13 +278,13 @@ T& operator*() const throw();
 
 ### <a name="return-value"></a>戻り値
 
-[:p の](#p)値を返します。つまり、`CComPtrBase`オブジェクトが参照するオブジェクトへのポインター。
+[CComPtrBase::p](#p)の値を返します。つまり、オブジェクトによって参照されるオブジェクトへのポインターです `CComPtrBase` 。
 
-デバッグ ビルドの場合[、CComPtrBase::p](#p)が NULL と等しくない場合、アサーション エラーが発生します。
+デバッグビルドの場合、 [CComPtrBase::p](#p) が NULL と等しくない場合、アサーションエラーが発生します。
 
-## <a name="ccomptrbaseoperator-"></a><a name="operator_eq_eq"></a>を使用します。
+## <a name="ccomptrbaseoperator-"></a><a name="operator_eq_eq"></a> CComPtrBase:: operator = =
 
-等価演算子。
+等値演算子。
 
 ```
 bool operator== (T* pT) const throw();
@@ -291,14 +292,14 @@ bool operator== (T* pT) const throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*Pt*<br/>
+*未満*<br/>
 オブジェクトへのポインター。
 
 ### <a name="return-value"></a>戻り値
 
-true を`CComPtrBase`返す場合 *、pT*が同じオブジェクトを指し、そうでない場合は false を返します。
+`CComPtrBase`と *pT* が同じオブジェクトを指している場合は true、それ以外の場合は false を返します。
 
-## <a name="ccomptrbaseoperator--gt"></a><a name="operator_ptr"></a>コムプターベース::オペレーター -&gt;
+## <a name="ccomptrbaseoperator--gt"></a><a name="operator_ptr"></a> CComPtrBase:: operator-&gt;
 
 メンバーへのポインター演算子。
 
@@ -308,15 +309,15 @@ _NoAddRefReleaseOnCComPtr<T>* operator->() const throw();
 
 ### <a name="return-value"></a>戻り値
 
-データ メンバー変数[CComPtrBase::p](#p)の値を返します。
+[CComPtrBase::p](#p)データメンバー変数の値を返します。
 
 ### <a name="remarks"></a>解説
 
-この演算子は、オブジェクトが指すクラスのメソッドを`CComPtrBase`呼び出すために使います。 デバッグ ビルドでは、`CComPtrBase`データ メンバーが NULL を指すとアサーション エラーが発生します。
+この演算子を使用すると、オブジェクトが指すクラスのメソッドを呼び出すことが `CComPtrBase` できます。 デバッグビルドでは、データメンバーが NULL を指している場合、アサーションエラーが発生 `CComPtrBase` します。
 
-## <a name="ccomptrbaseoperator-lt"></a><a name="operator_lt"></a>コムプトルベース::オペレーター&lt;
+## <a name="ccomptrbaseoperator-lt"></a><a name="operator_lt"></a> CComPtrBase:: operator &lt;
 
-より小さい演算子。
+小なり演算子。
 
 ```
 bool operator<(T* pT) const throw();
@@ -324,14 +325,14 @@ bool operator<(T* pT) const throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*Pt*<br/>
+*未満*<br/>
 オブジェクトへのポインター。
 
 ### <a name="return-value"></a>戻り値
 
-現在のオブジェクトによって管理されているポインターが比較対象のポインターより小さい場合は true を返します。
+現在のオブジェクトによって管理されているポインターが、比較対象のポインターより小さい場合に true を返します。
 
-## <a name="ccomptrbaseoperator-t"></a><a name="operator_t_star"></a>コムプトルベース::オペレーターT\*
+## <a name="ccomptrbaseoperator-t"></a><a name="operator_t_star"></a> CComPtrBase:: operator T\*
 
 キャスト演算子。
 
@@ -341,11 +342,11 @@ operator T*() const throw();
 
 ### <a name="remarks"></a>解説
 
-クラス テンプレートで定義されているオブジェクト データ型へのポインターを返します。
+クラステンプレートで定義されているオブジェクトデータ型へのポインターを返します。
 
-## <a name="ccomptrbasep"></a><a name="p"></a>コムプトルベース::p
+## <a name="ccomptrbasep"></a><a name="p"></a> CComPtrBase::p
 
-ポインター データ メンバー変数。
+ポインターデータメンバー変数。
 
 ```
 T* p;
@@ -355,9 +356,9 @@ T* p;
 
 このメンバー変数は、ポインター情報を保持します。
 
-## <a name="ccomptrbasequeryinterface"></a><a name="queryinterface"></a>クエリインターフェイス
+## <a name="ccomptrbasequeryinterface"></a><a name="queryinterface"></a> CComPtrBase:: QueryInterface
 
-指定したインターフェイスへのポインターを返します。
+指定したインターフェイスへのポインターを返すには、このメソッドを呼び出します。
 
 ```
 template <class Q> HRESULT QueryInterface(Q
@@ -367,22 +368,22 @@ template <class Q> HRESULT QueryInterface(Q
 ### <a name="parameters"></a>パラメーター
 
 *Q*<br/>
-インターフェイス ポインターが必要なオブジェクト型。
+インターフェイスポインターが必要なオブジェクト型。
 
-*頁*<br/>
-要求されたインターフェイス ポインターを受け取る出力変数のアドレス。
+*ページ*<br/>
+要求されたインターフェイスポインターを受け取る出力変数のアドレス。
 
 ### <a name="return-value"></a>戻り値
 
-成功時にS_OKを返し、失敗した場合はE_NOINTERFACEを返します。
+成功した場合は S_OK を返し、失敗した場合は E_NOINTERFACE を返します。
 
 ### <a name="remarks"></a>解説
 
-このメソッド[は、IUnknown::クエリインターフェイス](/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(q))を呼び出します。
+このメソッド [は、IUnknown:: QueryInterface](/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(q))を呼び出します。
 
-デバッグ ビルドでは *、pp*が NULL と等しくない場合にアサーション エラーが発生します。
+デバッグビルドでは、 *pp* が NULL と等しくない場合にアサーションエラーが発生します。
 
-## <a name="ccomptrbaserelease"></a><a name="release"></a>CComPtrベース::リリース
+## <a name="ccomptrbaserelease"></a><a name="release"></a> CComPtrBase:: Release
 
 インターフェイスを解放するには、このメソッドを呼び出します。
 
@@ -392,11 +393,11 @@ void Release() throw();
 
 ### <a name="remarks"></a>解説
 
-インターフェイスが解放され[、CComPtrBase::p](#p)が NULL に設定されます。
+インターフェイスが解放され、 [CComPtrBase::p](#p) が NULL に設定されます。
 
-## <a name="ccomptrbasesetsite"></a><a name="setsite"></a>コムプターベース::セットサイト
+## <a name="ccomptrbasesetsite"></a><a name="setsite"></a> CComPtrBase:: SetSite
 
-`CComPtrBase`オブジェクトのサイトを親オブジェクトの サイト`IUnknown`に設定します。
+オブジェクトのサイトを親オブジェクトのに設定するには、このメソッドを呼び出し `CComPtrBase` `IUnknown` ます。
 
 ```
 HRESULT SetSite(IUnknown* punkParent) throw();
@@ -404,16 +405,16 @@ HRESULT SetSite(IUnknown* punkParent) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*パンクペアレント*<br/>
-親の`IUnknown`インターフェイスへのポインター。
+*punkParent*<br/>
+`IUnknown`親のインターフェイスへのポインター。
 
 ### <a name="return-value"></a>戻り値
 
-成功時にS_OKを返すか、失敗した場合に HRESULT エラーを返します。
+成功した場合は S_OK を返し、失敗した場合はエラー HRESULT を返します。
 
 ### <a name="remarks"></a>解説
 
-このメソッドは[、アトリセットチャイルドサイト](composite-control-global-functions.md#atlsetchildsite)を呼び出します。
+このメソッドは、 [Atlsetchildsite](composite-control-global-functions.md#atlsetchildsite)を呼び出します。
 
 ## <a name="see-also"></a>関連項目
 

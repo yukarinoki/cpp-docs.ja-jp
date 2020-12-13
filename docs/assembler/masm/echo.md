@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: ECHO'
 title: ECHO
 ms.date: 12/17/2019
 f1_keywords:
@@ -6,22 +7,22 @@ f1_keywords:
 helpviewer_keywords:
 - ECHO directive
 ms.assetid: 68b912cc-6bd3-4f22-88cb-00a1aa17ecaf
-ms.openlocfilehash: af21a083dcc947f685a698cb77583879d4993785
-ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
+ms.openlocfilehash: 1bdaa9745794ade7df6c90aa7b485263f36c1977
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75317384"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97130690"
 ---
 # <a name="echo"></a>ECHO
 
-標準出力デバイス (既定では画面) に*メッセージ*を表示します。
+標準出力デバイス (既定では画面) に *メッセージ* を表示します。
 
 ## <a name="syntax"></a>構文
 
 > **エコー** *メッセージ*
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
 [% OUT](percent-out.md)と同じです。
 

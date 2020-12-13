@@ -1,4 +1,5 @@
 ---
+description: 詳細については、次を参照してください:. 686P (32 ビット MASM)
 title: .686P
 ms.date: 11/05/2019
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - .686P directive
 ms.assetid: 06d9a9bf-50b1-4eed-b4a3-86b256c71b48
-ms.openlocfilehash: f7421d4b008d1f9245a49f05148b41f2206df73f
-ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
+ms.openlocfilehash: 855d37a012279ce37f6c1b82508df8277fb10f3a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75314329"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97132354"
 ---
 # <a name="686p-32-bit-masm"></a>. 686P (32 ビット MASM)
 

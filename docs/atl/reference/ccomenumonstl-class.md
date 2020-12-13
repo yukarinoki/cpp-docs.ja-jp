@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: CComEnumOnSTL クラス'
 title: CComEnumOnSTL クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - CComEnumOnSTL class
 ms.assetid: befe1a44-7a00-4f28-9a2e-cc0fa526643c
-ms.openlocfilehash: b0674d64b471318d972d209373e0d74af0fa77f5
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 1ff73796d7e3eefa76cbecdeb6d997bede2d2be5
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87226595"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97146667"
 ---
 # <a name="ccomenumonstl-class"></a>CComEnumOnSTL クラス
 
@@ -49,7 +50,7 @@ C++ 標準ライブラリコンテナークラス。
 
 ## <a name="remarks"></a>解説
 
-`CComEnumOnSTL`C++ 標準ライブラリコレクションに基づいて COM 列挙子オブジェクトを定義します。 このクラスは、独自のまたは[ICollectionOnSTLImpl](../../atl/reference/icollectiononstlimpl-class.md)と組み合わせて使用できます。 このクラスを使用するための一般的な手順を次に示します。 詳細については、「 [ATL コレクションと列挙子](../../atl/atl-collections-and-enumerators.md)」を参照してください。
+`CComEnumOnSTL` C++ 標準ライブラリコレクションに基づいて COM 列挙子オブジェクトを定義します。 このクラスは、独自のまたは [ICollectionOnSTLImpl](../../atl/reference/icollectiononstlimpl-class.md)と組み合わせて使用できます。 このクラスを使用するための一般的な手順を次に示します。 詳細については、「 [ATL コレクションと列挙子](../../atl/atl-collections-and-enumerators.md)」を参照してください。
 
 ## <a name="to-use-this-class-with-icollectiononstlimpl"></a>ICollectionOnSTLImpl でこのクラスを使用するには、次のようにします。
 
@@ -57,7 +58,7 @@ C++ 標準ライブラリコンテナークラス。
 
 - を特殊化した **`typedef`** の最終的なテンプレート引数としてを使用し `ICollectionOnSTLImpl` ます。
 
-例については、「 [ATL のコレクションと列挙子](../../atl/atl-collections-and-enumerators.md)」を参照してください。
+例については、「 [ATL のコレクションと列挙子](../../atl/atl-collections-and-enumerators.md) 」を参照してください。
 
 ## <a name="to-use-this-class-independently-of-icollectiononstlimpl"></a>このクラスを ICollectionOnSTLImpl とは無関係に使用するには、次のようにします。
 
@@ -83,7 +84,7 @@ C++ 標準ライブラリコンテナークラス。
 
 `CComEnumOnSTL`
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** atlcom. h
 

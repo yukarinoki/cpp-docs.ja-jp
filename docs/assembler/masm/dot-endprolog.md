@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「」を参照してください。ENDPROLOG
 title: .ENDPROLOG
 ms.date: 12/17/2019
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - .ENDPROLOG directive
 ms.assetid: 61a2474c-9527-46e6-9f9d-bc4b42c10f35
-ms.openlocfilehash: cf2209bee6c916abe0925834db3ef0b2bf583367
-ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
+ms.openlocfilehash: 5747e7ad838d61785d3e66f7a5a6943110ca8aeb
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75313796"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97132042"
 ---
 # <a name="endprolog"></a>.ENDPROLOG
 
@@ -21,9 +22,9 @@ ms.locfileid: "75313796"
 
 > **.ENDPROLOG**
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
-[PROC](proc.md) **FRAME**との間の領域外でプロローグ宣言を使用すると、エラーになり**ます。ENDPROLOG**。
+[PROC](proc.md) **FRAME** との間の領域外でプロローグ宣言を使用すると、エラーになり **ます。ENDPROLOG**。
 
 詳細については、「 [MASM for x64 (ml64.exe)](masm-for-x64-ml64-exe.md)」を参照してください。
 

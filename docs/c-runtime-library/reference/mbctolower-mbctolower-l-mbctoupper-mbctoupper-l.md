@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: _mbctolower、_mbctolower_l、_mbctoupper、_mbctoupper_l'
 title: _mbctolower、_mbctolower_l、_mbctoupper、_mbctoupper_l
 ms.date: 4/2/2020
 api_name:
@@ -50,12 +51,12 @@ helpviewer_keywords:
 - _totlower function
 - mbctoupper function
 ms.assetid: 787fab71-3224-4ed7-bc93-4dcd8023fc54
-ms.openlocfilehash: 3a3adb32b8620a49110e887788e9f3c4893b6a1a
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: abf09a7a96fc1df9f34f3263638c68da4f9991d1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82914288"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97146446"
 ---
 # <a name="_mbctolower-_mbctolower_l-_mbctoupper-_mbctoupper_l"></a>_mbctolower、_mbctolower_l、_mbctoupper、_mbctoupper_l
 
@@ -85,7 +86,7 @@ unsigned int _mbctoupper_l(
 
 ### <a name="parameters"></a>パラメーター
 
-*40u-c*<br/>
+*c*<br/>
 変換するマルチバイト文字。
 
 *locale*<br/>
@@ -93,20 +94,20 @@ unsigned int _mbctoupper_l(
 
 ## <a name="return-value"></a>戻り値
 
-これらの関数は、可能であれば、変換された文字*c*を返します。 それ以外の場合は、文字*c*を変更せずに返します。
+これらの関数は、可能であれば、変換された文字 *c* を返します。 それ以外の場合は、文字 *c* を変更せずに返します。
 
 ## <a name="remarks"></a>解説
 
-関数は*c*文字をテストし、可能であれば、次の変換のいずれか1つを適用します。
+関数は *c* 文字をテストし、可能であれば、次の変換のいずれか1つを適用します。
 
 |ルーチン|変換|
 |--------------|--------------|
 |**_mbctolower**、 **_mbctolower_l**|大文字を小文字に変換します。|
 |**_mbctoupper**、 **_mbctoupper_l**|小文字を大文字に変換します。|
 
-出力値は、ロケールの **LC_CTYPE** カテゴリの設定に影響されます。詳細については、「[setlocale](setlocale-wsetlocale.md)」を参照してください。 **_L**サフィックスが付いていないこの関数のバージョンは、このロケールに依存する動作に現在のロケールを使用します。**_l**サフィックスが付いているバージョンは、渡されたロケールパラメーターを代わりに使用する点を除いて同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
+出力値は、ロケールの **LC_CTYPE** カテゴリの設定に影響されます。詳細については、「[setlocale](setlocale-wsetlocale.md)」を参照してください。 **_L** サフィックスが付いていないこの関数のバージョンは、このロケールに依存する動作に現在のロケールを使用します。**_l** サフィックスが付いているバージョンは、渡されたロケールパラメーターを代わりに使用する点を除いて同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
 
-以前のバージョンでは、 **_mbctolower**は**jtolower**と呼ばれ、 **_mbctoupper**は**jtoupper**と呼ばれていました。 新しいコードでは、代わりに新しい名前を使用します。
+以前のバージョンでは、 **_mbctolower** は **jtolower** と呼ばれ、 **_mbctoupper** は **jtoupper** と呼ばれていました。 新しいコードでは、代わりに新しい名前を使用します。
 
 既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
@@ -119,7 +120,7 @@ unsigned int _mbctoupper_l(
 |**_totupper**|**toupper**|**_mbctoupper**|**towupper**|
 |**_totupper_l**|**toupper_l**|**_mbctoupper_l**|**_towupper_l**|
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 |ルーチン|必須ヘッダー|
 |--------------|---------------------|

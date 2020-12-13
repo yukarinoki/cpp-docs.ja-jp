@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: _ReturnAddress'
 title: _ReturnAddress
 ms.date: 09/02/2019
 f1_keywords:
@@ -7,28 +8,28 @@ helpviewer_keywords:
 - _ReturnAddress intrinsic
 - ReturnAddress intrinsic
 ms.assetid: 7f4a5811-35e6-4f64-ba7c-21203380eeda
-ms.openlocfilehash: 2a830ff1e8a2c9551dec52cf10a3d5cf126bde3b
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: abb6b879c466372fce0ecbeb7371101e3a3ef82b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70218053"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97143742"
 ---
 # <a name="_returnaddress"></a>_ReturnAddress
 
 **Microsoft 固有の仕様**
 
-組み込み`_ReturnAddress`は、呼び出し元に制御が戻った後に実行される呼び出し元関数の命令のアドレスを提供します。
+組み込みは、呼び出し `_ReturnAddress` 元に制御が戻った後に実行される呼び出し元関数の命令のアドレスを提供します。
 
-次のプログラムをビルドし、デバッガーでステップスルーします。 プログラムをステップ実行するときに、から`_ReturnAddress`返されたアドレスをメモしておきます。 次に、 `_ReturnAddress`が使用さ[れた関数から制御が戻った直後に、「方法:[逆アセンブル]](/visualstudio/debugger/how-to-use-the-disassembly-window)ウィンドウを使用して、次に実行される命令のアドレスがから`_ReturnAddress`返されたアドレスと一致することを確認します。
+次のプログラムをビルドし、デバッガーでステップスルーします。 プログラムをステップ実行するときに、から返されたアドレスをメモしておき `_ReturnAddress` ます。 次に、が使用された関数から制御が戻った直後に、「 `_ReturnAddress` [方法: [逆アセンブル] ウィンドウを使用する」](/visualstudio/debugger/how-to-use-the-disassembly-window) を開いて、次に実行される命令のアドレスがから返されたアドレスと一致することを確認し `_ReturnAddress` ます。
 
-インライン展開などの最適化は、返信先アドレスに影響を与える可能性があります。 たとえば、以下のサンプルプログラムが[/ob1](../build/reference/ob-inline-function-expansion.md)でコンパイルされると`inline_func` 、は呼び出し元の関数`main`にインライン化されます。 したがって、および`_ReturnAddress` `inline_func` `main`からへの呼び出しでは、それぞれ同じ値が生成されます。
+インライン展開などの最適化は、返信先アドレスに影響を与える可能性があります。 たとえば、以下のサンプルプログラムが [/ob1](../build/reference/ob-inline-function-expansion.md)でコンパイルされると、 `inline_func` は呼び出し元の関数にインライン化され `main` ます。 したがって、およびからへの呼び出しで `_ReturnAddress` `inline_func` は、 `main` それぞれ同じ値が生成されます。
 
-[/clr](../build/reference/clr-common-language-runtime-compilation.md) `_ReturnAddress`でコンパイルされたプログラムでを使用する場合、 `_ReturnAddress`呼び出しを含む関数はネイティブ関数としてコンパイルされます。 を含む`_ReturnAddress`関数へのマネージ呼び出しとしてコンパイルさ`_ReturnAddress`れた関数が、予期したとおりに動作しないことがあります。
+`_ReturnAddress` [/Clr](../build/reference/clr-common-language-runtime-compilation.md)でコンパイルされたプログラムでを使用する場合、呼び出しを含む関数 `_ReturnAddress` はネイティブ関数としてコンパイルされます。 を含む関数へのマネージ呼び出しとしてコンパイルされた関数 `_ReturnAddress` `_ReturnAddress` が、予期したとおりに動作しないことがあります。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-**ヘッダーファイル**\<>
+**ヘッダー ファイル** \<intrin.h>
 
 ## <a name="example"></a>例
 

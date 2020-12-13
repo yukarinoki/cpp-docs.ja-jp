@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「」を参照してください。.XALL
 title: .XALL
 ms.date: 12/17/2019
 f1_keywords:
@@ -6,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - .XALL directive
 ms.assetid: b2d851dd-f79e-46c6-825d-1938b8487e8c
-ms.openlocfilehash: e724e53a876dd49a3d982ec9488daf161e9aa313
-ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
+ms.openlocfilehash: 5c99247c74290fc2b15b4b0605f59293479bcd7c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75317462"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97130859"
 ---
 # <a name="xall"></a>.XALL
 
-「」を参照してください[。LISTMACRO](dot-listmacro.md)。
+「」を参照してください [。LISTMACRO](dot-listmacro.md)。
 
 ## <a name="syntax"></a>構文
 

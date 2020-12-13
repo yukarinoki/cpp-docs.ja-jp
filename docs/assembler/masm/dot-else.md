@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「」を参照してください。ELSE (32 ビット MASM)
 title: .ELSE
 ms.date: 11/05/2019
 f1_keywords:
@@ -6,22 +7,22 @@ f1_keywords:
 helpviewer_keywords:
 - .ELSE directive
 ms.assetid: ebfec69d-7107-47d1-9cb3-87c99cc8dff7
-ms.openlocfilehash: 08d3d3d6dbf423d25081cfd9c866bba717c50d29
-ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
+ms.openlocfilehash: eb10b781450171df627b2771e55725f5ab07c9fe
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75313835"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97132068"
 ---
 # <a name="else-32-bit-masm"></a>.ELSE (32 ビット MASM)
 
 ## <a name="syntax"></a>構文
 
-> **.ELSE**
+> **.さも**
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
-(32 ビット MASM のみ。)「」を参照してください[。の場合](dot-if.md)。
+(32 ビット MASM のみ。)「」を参照してください [。の場合](dot-if.md)。
 
 ## <a name="see-also"></a>関連項目
 

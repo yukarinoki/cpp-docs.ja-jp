@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「リソースコンパイラエラー RC2127」を参照してください。
 title: リソース コンパイラ エラー RC2127
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,15 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - RC2127
 ms.assetid: 13c1599d-ac4c-4044-a59a-48e69511ef7e
-ms.openlocfilehash: a3baa4d29eba4c8c3c2596e46d04d5bf92e7aa45
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: e3b619377f70d76ac89469fee78b957b6ba9ac6b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80191406"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97133563"
 ---
 # <a name="resource-compiler-error-rc2127"></a>リソース コンパイラ エラー RC2127
 
 コンマで区切られたバージョンワードが必要です
 
-バージョンリソースのバージョン番号は、**単語**型で、コンマで区切る必要があります。
+バージョンリソースのバージョン番号は、 **単語** 型で、コンマで区切る必要があります。

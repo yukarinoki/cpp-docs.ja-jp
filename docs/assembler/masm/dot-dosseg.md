@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「」を参照してください。.DOSSEG (32 ビット MASM)
 title: .DOSSEG
 ms.date: 11/05/2019
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - .DOSSEG directive
 ms.assetid: 175ad470-0a2b-4e2b-b078-65e224fec040
-ms.openlocfilehash: e27b0ae185542c11ee29119575d5c8225501f71e
-ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
+ms.openlocfilehash: 636f3f811b20e7cf9955648c71025cfb1766fb47
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75313848"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97132107"
 ---
 # <a name="dosseg-32-bit-masm"></a>..DOSSEG (32 ビット MASM)
 
@@ -19,9 +20,9 @@ ms.locfileid: "75313848"
 
 ## <a name="syntax"></a>構文
 
-> **.DOSSEG**
+> **..DOSSEG**
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
 DGROUP 内のセグメントは、BSS または STACK にないセグメント、BSS セグメント、および最後のスタックセグメントの順に続きます。 MASM のスタンドアロンプログラムでは、主に CodeView サポートを確保するために使用されます。 [.Dosseg](dosseg.md)と同じです。
 

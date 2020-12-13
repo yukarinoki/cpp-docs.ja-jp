@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「Command-Line エラー D8037」を参照してください。
 title: コマンド ライン エラー D8037
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,20 +7,20 @@ f1_keywords:
 helpviewer_keywords:
 - D8037
 ms.assetid: acddaaa0-bd84-426f-a37b-8f680b379c9d
-ms.openlocfilehash: ed6778861c89bb9755087c4d58f094a57d5f760f
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: a3f01828bbe8d1df98260ebec2b5646442ec65e1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80196860"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97136185"
 ---
 # <a name="command-line-error-d8037"></a>コマンド ライン エラー D8037
 
 一時 il ファイルを作成できません。古い il ファイルの一時ディレクトリを消去します
 
-一時コンパイラの中間ファイルを作成するための十分な領域がありません。 このエラーを解決するには、 **TMP**環境変数で指定されたディレクトリ内の古い MSIL ファイルをすべて削除します。 これらのファイルは _CL_hhhhhhhh. ss の形式になります。 h はランダムな16進数を表し、ss は IL ファイルの種類を表します。 また、必ず最新のオペレーティングシステムの修正プログラムを使用してコンピューターを更新してください。
+一時コンパイラの中間ファイルを作成するための十分な領域がありません。 このエラーを解決するには、 **TMP** 環境変数で指定されたディレクトリ内の古い MSIL ファイルをすべて削除します。 これらのファイルは _CL_hhhhhhhh. ss の形式になります。 h はランダムな16進数を表し、ss は IL ファイルの種類を表します。 また、必ず最新のオペレーティングシステムの修正プログラムを使用してコンピューターを更新してください。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [コマンド ライン エラー D8000 から D9999](../../error-messages/tool-errors/command-line-errors-d8000-through-d9999.md)<br/>
 [MSVC コンパイラ オプション](../../build/reference/compiler-options.md)

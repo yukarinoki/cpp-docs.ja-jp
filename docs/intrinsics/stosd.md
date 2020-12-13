@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: __stosd'
 title: __stosd
 ms.date: 09/02/2019
 f1_keywords:
@@ -8,18 +9,18 @@ helpviewer_keywords:
 - rep stosd instruction
 - __stosd intrinsic
 ms.assetid: 03104247-1cea-49f6-b6f8-287917bf5680
-ms.openlocfilehash: c46bb124390ff23d79361c66530493c48faf3f0a
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 56a29a27790f7f45a9fb3f0ace348759c0b1ff3c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70219981"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97143716"
 ---
 # <a name="__stosd"></a>__stosd
 
 **Microsoft 固有の仕様**
 
-ストア文字列命令 (`rep stosd`) を生成します。
+ストア文字列命令 () を生成 `rep stosd` します。
 
 ## <a name="syntax"></a>構文
 
@@ -42,17 +43,17 @@ void __stosd(
 *数*\
 から書き込むダブルワードのブロックの長さ。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-|組み込み|アーキテクチャ|
+|Intrinsic|アーキテクチャ|
 |---------------|------------------|
 |`__stosd`|x86、x64|
 
-**ヘッダーファイル**\<>
+**ヘッダー ファイル** \<intrin.h>
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-その結果、ダブルワード*データ*は、*変換先*が指すメモリ位置にある*Count*ダブルワードのブロックに書き込まれます。
+その結果、ダブルワード *データ* は、*変換先* が指すメモリ位置にある *Count* ダブルワードのブロックに書き込まれます。
 
 このルーチンは、組み込みとしてのみ使用できます。
 

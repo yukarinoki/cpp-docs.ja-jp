@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: __stosq'
 title: __stosq
 ms.date: 09/02/2019
 f1_keywords:
@@ -8,18 +9,18 @@ helpviewer_keywords:
 - stosq instruction
 - __stosq intrinsic
 ms.assetid: 3ea28297-4369-4c2d-bf0c-91fa539ce209
-ms.openlocfilehash: 8b347d595da4cdbf1fefb6244940e262981671e9
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 5fce587c163da18679750c20ec697c489ecf5d90
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70219953"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97143703"
 ---
 # <a name="__stosq"></a>__stosq
 
 **Microsoft 固有の仕様**
 
-ストア文字列命令 (`rep stosq`) を生成します。
+ストア文字列命令 () を生成 `rep stosq` します。
 
 ## <a name="syntax"></a>構文
 
@@ -42,17 +43,17 @@ void __stosb(
 *数*\
 から書き込む quadwords のブロックの長さ。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-|組み込み|アーキテクチャ|
+|Intrinsic|アーキテクチャ|
 |---------------|------------------|
 |`__stosq`|AMD64|
 
-**ヘッダーファイル**\<>
+**ヘッダー ファイル** \<intrin.h>
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-結果として、quadword*データ*は、*コピー先*の文字列の*Count* quadwords のブロックに書き込まれます。
+結果として、quadword *データ* は、*コピー先* の文字列の *Count* quadwords のブロックに書き込まれます。
 
 このルーチンは、組み込みとしてのみ使用できます。
 

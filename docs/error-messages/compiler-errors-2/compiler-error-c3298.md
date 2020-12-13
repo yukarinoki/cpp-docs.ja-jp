@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「コンパイラエラー C3298」を参照してください。
 title: コンパイラ エラー C3298
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3298
 ms.assetid: 458c2680-95bb-4d5e-895f-ce4115844193
-ms.openlocfilehash: d5e9586b026e0092491c80c23f55080354c9e465
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 25b0abc98d5498e59b97f83f47bc0ba12704a328
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74760076"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97144574"
 ---
 # <a name="compiler-error-c3298"></a>コンパイラ エラー C3298
 
@@ -21,7 +22,7 @@ ms.locfileid: "74760076"
 
 詳細については、「[Constraints on Generic Type Parameters (C++/CLI) (ジェネリック型パラメーターの (C++/CLI))](../../extensions/constraints-on-generic-type-parameters-cpp-cli.md)」を参照してください。
 
-## <a name="example"></a>使用例
+## <a name="example"></a>例
 
 次の例では C3298 が生成されます。
 

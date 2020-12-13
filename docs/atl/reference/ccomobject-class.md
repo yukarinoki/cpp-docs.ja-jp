@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: CComObject クラス'
 title: CComObject クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -12,12 +13,12 @@ f1_keywords:
 helpviewer_keywords:
 - CComObject class
 ms.assetid: e2b6433b-6349-4749-b4bc-acbd7a22c8b0
-ms.openlocfilehash: 81246ad8bd6281d0b7578932cd431609a1ec4ac5
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 086383172d5bb239bbac8ed90e9118838aea1254
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87224254"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97146524"
 ---
 # <a name="ccomobject-class"></a>CComObject クラス
 
@@ -55,7 +56,7 @@ class CComObject : public Base
 
 ## <a name="remarks"></a>解説
 
-`CComObject`非集計オブジェクトの[IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown)を実装します。 ただし、、、およびへの呼び出し `QueryInterface` `AddRef` `Release` はに委任され `CComObjectRootEx` ます。
+`CComObject` 非集計オブジェクトの [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown) を実装します。 ただし、、、およびへの呼び出し `QueryInterface` `AddRef` `Release` はに委任され `CComObjectRootEx` ます。
 
 の使用方法の詳細については `CComObject` 、「 [ATL COM オブジェクトの基礎](../../atl/fundamentals-of-atl-com-objects.md)」を参照してください。
 
@@ -65,11 +66,11 @@ class CComObject : public Base
 
 `CComObject`
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** atlcom. h
 
-## <a name="ccomobjectaddref"></a><a name="addref"></a>CComObject:: AddRef
+## <a name="ccomobjectaddref"></a><a name="addref"></a> CComObject:: AddRef
 
 オブジェクトの参照カウントをインクリメントします。
 
@@ -81,7 +82,7 @@ STDMETHOD_(ULONG, AddRef)();
 
 この関数は、オブジェクトに対してインクリメントされた新しい参照カウントを返します。 この値は、診断またはテストに便利な場合があります。
 
-## <a name="ccomobjectccomobject"></a><a name="ccomobject"></a>CComObject:: CComObject
+## <a name="ccomobjectccomobject"></a><a name="ccomobject"></a> CComObject:: CComObject
 
 コンストラクターは、モジュールのロックカウントをインクリメントします。
 
@@ -98,9 +99,9 @@ CComObject(void* = NULL);
 
 デストラクターはこれをデクリメントします。
 
-`CComObject`派生オブジェクトが演算子を使用して正常に構築された場合 **`new`** 、最初の参照カウントは0になります。 参照カウントを適切な値 (1) に設定するには、 [AddRef](#addref)関数を呼び出します。
+`CComObject`派生オブジェクトが演算子を使用して正常に構築された場合 **`new`** 、最初の参照カウントは0になります。 参照カウントを適切な値 (1) に設定するには、 [AddRef](#addref) 関数を呼び出します。
 
-## <a name="ccomobjectccomobject"></a><a name="dtor"></a>CComObject:: ~ CComObject
+## <a name="ccomobjectccomobject"></a><a name="dtor"></a> CComObject:: ~ CComObject
 
 デストラクターです。
 
@@ -112,9 +113,9 @@ CComObject();
 
 割り当てられたすべてのリソースを解放し、 [FinalRelease](ccomobjectrootex-class.md#finalrelease)を呼び出して、モジュールのロックカウントをデクリメントします。
 
-## <a name="ccomobjectcreateinstance"></a><a name="createinstance"></a>CComObject:: CreateInstance
+## <a name="ccomobjectcreateinstance"></a><a name="createinstance"></a> CComObject:: CreateInstance
 
-この静的関数を使用すると**CComObject<** `Base` **>** 、 [CoCreateInstance](/windows/win32/api/combaseapi/nf-combaseapi-cocreateinstance)のオーバーヘッドを発生させることなく、新しい CComObject<オブジェクトを作成できます。
+この静的関数を使用すると `Base` **>** 、 [CoCreateInstance](/windows/win32/api/combaseapi/nf-combaseapi-cocreateinstance)のオーバーヘッドを発生させることなく、新しい CComObject<オブジェクトを作成できます。
 
 ```
 static HRESULT WINAPI CreateInstance(CComObject<Base>** pp);
@@ -123,7 +124,7 @@ static HRESULT WINAPI CreateInstance(CComObject<Base>** pp);
 ### <a name="parameters"></a>パラメーター
 
 *ページ*<br/>
-入出力**CComObject<** ポインターへのポインター `Base` **>** 。 `CreateInstance`が失敗した場合、 *PP*は NULL に設定されます。
+入出力 **CComObject<** ポインターへのポインター `Base` **>** 。 `CreateInstance`が失敗した場合、 *PP* は NULL に設定されます。
 
 ### <a name="return-value"></a>戻り値
 
@@ -133,7 +134,7 @@ static HRESULT WINAPI CreateInstance(CComObject<Base>** pp);
 
 返されるオブジェクトは、参照カウントが0であるため、をすぐに呼び出し、を使用して `AddRef` `Release` オブジェクトポインターの参照を解放します。
 
-オブジェクトへの直接アクセスが不要でも、のオーバーヘッドなしで新しいオブジェクトを作成する場合は `CoCreateInstance` 、代わりに[CComCoClass:: CreateInstance](../../atl/reference/ccomcoclass-class.md#createinstance)を使用します。
+オブジェクトへの直接アクセスが不要でも、のオーバーヘッドなしで新しいオブジェクトを作成する場合は `CoCreateInstance` 、代わりに [CComCoClass:: CreateInstance](../../atl/reference/ccomcoclass-class.md#createinstance) を使用します。
 
 ### <a name="example"></a>例
 
@@ -141,7 +142,7 @@ static HRESULT WINAPI CreateInstance(CComObject<Base>** pp);
 
 [!code-cpp[NVC_ATL_COM#39](../../atl/codesnippet/cpp/ccomobject-class_2.cpp)]
 
-## <a name="ccomobjectqueryinterface"></a><a name="queryinterface"></a>CComObject:: QueryInterface
+## <a name="ccomobjectqueryinterface"></a><a name="queryinterface"></a> CComObject:: QueryInterface
 
 要求されたインターフェイスへのポインターを取得します。
 
@@ -157,16 +158,16 @@ HRESULT STDMETHODCALLTYPE QueryInterface(Q** pp);
 から要求されているインターフェイスの識別子。
 
 *ppvObject*<br/>
-入出力*Iid*によって識別されるインターフェイスポインターへのポインター。 オブジェクトがこのインターフェイスをサポートしていない場合、 *ppvObject*は NULL に設定されます。
+入出力 *Iid* によって識別されるインターフェイスポインターへのポインター。 オブジェクトがこのインターフェイスをサポートしていない場合、 *ppvObject* は NULL に設定されます。
 
 *ページ*<br/>
-入出力型によって識別されるインターフェイスポインターへのポインター `Q` 。 オブジェクトがこのインターフェイスをサポートしていない場合、 *pp*は NULL に設定されます。
+入出力型によって識別されるインターフェイスポインターへのポインター `Q` 。 オブジェクトがこのインターフェイスをサポートしていない場合、 *pp* は NULL に設定されます。
 
 ### <a name="return-value"></a>戻り値
 
 標準の HRESULT 値。
 
-## <a name="ccomobjectrelease"></a><a name="release"></a>CComObject:: Release
+## <a name="ccomobjectrelease"></a><a name="release"></a> CComObject:: Release
 
 オブジェクトの参照カウントをデクリメントします。
 

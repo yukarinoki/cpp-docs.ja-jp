@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: __writefsbyte、__writefsdword、__writefsqword、__writefsword'
 title: __writefsbyte、__writefsdword、__writefsqword、__writefsword
 ms.date: 09/02/2019
 f1_keywords:
@@ -16,12 +17,12 @@ helpviewer_keywords:
 - __writefsbyte intrinsic
 - writefsword intrinsic
 ms.assetid: 23ac6e8e-bc91-4e90-a4c6-da02993637ad
-ms.openlocfilehash: c0cb70986fc75d14f23fb70efe89f48e10fb047e
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: cde85cd7fea5b65ced127da96033ecc5b1f4f058
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70219119"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97136059"
 ---
 # <a name="__writefsbyte-__writefsdword-__writefsqword-__writefsword"></a>__writefsbyte、__writefsdword、__writefsqword、__writefsword
 
@@ -58,18 +59,18 @@ void __writefsqword(
 *データ*\
 から書き込む値。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-|組み込み|アーキテクチャ|
+|Intrinsic|アーキテクチャ|
 |---------------|------------------|
 |`__writefsbyte`|x86|
 |`__writefsword`|x86|
 |`__writefsdword`|x86|
 |`__writefsqword`|x86|
 
-**ヘッダーファイル**\<>
+**ヘッダー ファイル** \<intrin.h>
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 これらのルーチンは、組み込みとしてのみ使用できます。
 
@@ -77,5 +78,5 @@ void __writefsqword(
 
 ## <a name="see-also"></a>関連項目
 
-[__ readfsbyte、 \_"readfsdword \_"、"readfsqword \_"、"readfsword"](../intrinsics/readfsbyte-readfsdword-readfsqword-readfsword.md)\
+[__readfsbyte、 \_ _readfsdword、 \_ _readfsqword、 \_ _readfsword](../intrinsics/readfsbyte-readfsdword-readfsqword-readfsword.md)\
 [コンパイラの組み込み](../intrinsics/compiler-intrinsics.md)
