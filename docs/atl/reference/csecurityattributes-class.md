@@ -1,5 +1,6 @@
 ---
-title: クラス
+description: '詳細情報: CSecurityAttributes クラス'
+title: CSecurityAttributes クラス
 ms.date: 11/04/2016
 f1_keywords:
 - CSecurityAttributes
@@ -9,16 +10,16 @@ f1_keywords:
 helpviewer_keywords:
 - CSecurityAttributes class
 ms.assetid: a094880c-52e1-4a28-97ff-752d5869908e
-ms.openlocfilehash: e0ac813008a028bb233adfb4c7409a0ad62a6b78
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: 8cb772e574aef4ad941feef1cb838fb91d937576
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81746507"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97140817"
 ---
-# <a name="csecurityattributes-class"></a>クラス
+# <a name="csecurityattributes-class"></a>CSecurityAttributes クラス
 
-このクラスは、セキュリティ属性構造のシン ラッパーです。
+このクラスは、security attributes 構造体のシンラッパーです。
 
 > [!IMPORTANT]
 > このクラスとそのメンバーは、Windows ランタイムで実行されるアプリケーションでは使用できません。
@@ -35,19 +36,19 @@ class CSecurityAttributes : public SECURITY_ATTRIBUTES
 
 |名前|説明|
 |----------|-----------------|
-|[次の属性::Cセキュリティ属性](#csecurityattributes)|コンストラクターです。|
+|[CSecurityAttributes:: CSecurityAttributes](#csecurityattributes)|コンストラクターです。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
 |名前|説明|
 |----------|-----------------|
-|[セキュリティ属性::セット](#set)|`CSecurityAttributes`オブジェクトの属性を設定します。|
+|[CSecurityAttributes:: Set](#set)|オブジェクトの属性を設定するには、このメソッドを呼び出し `CSecurityAttributes` ます。|
 
 ## <a name="remarks"></a>解説
 
-構造体`SECURITY_ATTRIBUTES`には、オブジェクトの作成に使用される[セキュリティ記述子](/windows/win32/api/winnt/ns-winnt-security_descriptor)が含まれ、この構造体を指定して取得したハンドルを継承可能にするかどうかを指定します。
+構造体には、 `SECURITY_ATTRIBUTES` オブジェクトの作成に使用される [セキュリティ記述子](/windows/win32/api/winnt/ns-winnt-security_descriptor) が含まれ、この構造体を指定して取得されたハンドルが継承可能かどうかを指定します。
 
-Windows のアクセス制御モデルの概要については、Windows SDK の[アクセス制御](/windows/win32/SecAuthZ/access-control)を参照してください。
+Windows のアクセス制御モデルの概要については、Windows SDK の「 [Access Control](/windows/win32/SecAuthZ/access-control) 」を参照してください。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -55,11 +56,11 @@ Windows のアクセス制御モデルの概要については、Windows SDK の
 
 `CSecurityAttributes`
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-**ヘッダー:** atlsecurity.h
+**ヘッダー:** atlsecurity .h
 
-## <a name="csecurityattributescsecurityattributes"></a><a name="csecurityattributes"></a>次の属性::Cセキュリティ属性
+## <a name="csecurityattributescsecurityattributes"></a><a name="csecurityattributes"></a> CSecurityAttributes:: CSecurityAttributes
 
 コンストラクターです。
 
@@ -70,15 +71,15 @@ explicit CSecurityAttributes(const CSecurityDesc& rSecurityDescriptor, bool bInh
 
 ### <a name="parameters"></a>パラメーター
 
-*記述子*<br/>
+*rSecurityDescriptor*<br/>
 セキュリティ記述子への参照。
 
-*ハンドルを継承します。*<br/>
+*bInheritsHandle*<br/>
 新しいプロセスの作成時に、返されたハンドルを継承するかどうかを指定します。 このメンバーが true の場合、新しいプロセスは、返されたハンドルを継承します。
 
-## <a name="csecurityattributesset"></a><a name="set"></a>セキュリティ属性::セット
+## <a name="csecurityattributesset"></a><a name="set"></a> CSecurityAttributes:: Set
 
-`CSecurityAttributes`オブジェクトの属性を設定します。
+オブジェクトの属性を設定するには、このメソッドを呼び出し `CSecurityAttributes` ます。
 
 ```cpp
 void Set(const CSecurityDesc& rSecurityDescriptor, bool bInheritHandle = false) throw(...);
@@ -86,19 +87,19 @@ void Set(const CSecurityDesc& rSecurityDescriptor, bool bInheritHandle = false) 
 
 ### <a name="parameters"></a>パラメーター
 
-*記述子*<br/>
+*rSecurityDescriptor*<br/>
 セキュリティ記述子への参照。
 
-*ハンドルを継承*<br/>
+*bInheritHandle*<br/>
 新しいプロセスの作成時に、返されたハンドルを継承するかどうかを指定します。 このメンバーが true の場合、新しいプロセスは、返されたハンドルを継承します。
 
 ### <a name="remarks"></a>解説
 
-このメソッドは、オブジェクトを初期化するためにコンストラクターによって`CSecurityAttributes`使用されます。
+このメソッドは、オブジェクトを初期化するためにコンストラクターによって使用され `CSecurityAttributes` ます。
 
 ## <a name="see-also"></a>関連項目
 
-[セキュリティサンプル](../../overview/visual-cpp-samples.md)<br/>
+[セキュリティのサンプル](../../overview/visual-cpp-samples.md)<br/>
 [SECURITY_ATTRIBUTES](/previous-versions/windows/desktop/legacy/aa379560\(v=vs.85\))<br/>
 [セキュリティ記述子](/windows/win32/api/winnt/ns-winnt-security_descriptor)<br/>
 [クラスの概要](../../atl/atl-class-overview.md)<br/>

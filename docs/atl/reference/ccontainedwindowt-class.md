@@ -1,5 +1,6 @@
 ---
-title: クラスを含む
+description: '詳細情報: CContainedWindowT クラス'
+title: CContainedWindowT クラス
 ms.date: 11/04/2016
 f1_keywords:
 - CContainedWindowT
@@ -22,16 +23,16 @@ helpviewer_keywords:
 - contained windows
 - CContainedWindowT class
 ms.assetid: cde0ca36-9347-4068-995a-d294dae57ca9
-ms.openlocfilehash: 7b89346bbc62cdda808b193a199fdf121f052ebb
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: 68135ec6d8dc43623ec2a827bbe075e24eef8d42
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81747749"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97142078"
 ---
-# <a name="ccontainedwindowt-class"></a>クラスを含む
+# <a name="ccontainedwindowt-class"></a>CContainedWindowT クラス
 
-このクラスは、別のオブジェクトに含まれるウィンドウを実装します。
+このクラスは、別のオブジェクト内に含まれるウィンドウを実装します。
 
 > [!IMPORTANT]
 > このクラスとそのメンバーは、Windows ランタイムで実行されるアプリケーションでは使用できません。
@@ -45,14 +46,14 @@ class CContainedWindowT : public TBase
 
 #### <a name="parameters"></a>パラメーター
 
-*Tベース*<br/>
-新しいクラスの基本クラス。 既定の基本クラスは`CWindow`です。
+*TBase*<br/>
+新しいクラスの基本クラス。 既定の基底クラスは `CWindow` です。
 
-*Tウィントレイツ*<br/>
-ウィンドウのスタイルを定義する特徴クラス。 既定では、 `CControlWinTraits`です。
+*TWinTraits*<br/>
+ウィンドウのスタイルを定義する特徴クラス。 既定値は、`CControlWinTraits` です。
 
 > [!NOTE]
-> [の](ccontainedwindowt-class.md)特化されたウィンドウです`CContainedWindowT`。 基本クラスまたは特性を変更する場合は、直接使用`CContainedWindowT`します。
+> [CContainedWindow](ccontainedwindowt-class.md) は、の特殊化です `CContainedWindowT` 。 基底クラスまたは特徴を変更する場合は、を `CContainedWindowT` 直接使用します。
 
 ## <a name="members"></a>メンバー
 
@@ -60,42 +61,42 @@ class CContainedWindowT : public TBase
 
 |名前|説明|
 |----------|-----------------|
-|[ウィンドウを含む](#ccontainedwindowt)|コンストラクターです。 データ メンバーを初期化して、含まれているウィンドウのメッセージを処理するメッセージ マップを指定します。|
+|[CContainedWindowT::CContainedWindowT](#ccontainedwindowt)|コンストラクターです。 格納されているウィンドウのメッセージを処理するメッセージマップを指定するために、データメンバーを初期化します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
 |名前|説明|
 |----------|-----------------|
-|[ウィンドウ::作成](#create)|ウィンドウを作成します。|
-|[をクリック :Dします。](#defwindowproc)|既定のメッセージ処理を提供します。|
-|[ウィンドウをクリックします。](#getcurrentmessage)|現在のメッセージを返します。|
-|[ウィンドウ::レジスタオーンドスーパークラス](#registerwndsuperclass)|含まれているウィンドウのウィンドウ クラスを登録します。|
-|[ウィンドウを含む:サブクラス ウィンドウ](#subclasswindow)|ウィンドウをサブクラス化します。|
-|[ウィンドウ::スイッチメッセージマップ](#switchmessagemap)|含まれているウィンドウのメッセージを処理するために使用されるメッセージ マップを変更します。|
-|[ウィンドウをクリックします。](#unsubclasswindow)|前にサブクラス化されたウィンドウを復元します。|
-|[ウィンドウを開封します。](#windowproc)|(静的)含まれているウィンドウに送信されたメッセージを処理します。|
+|[CContainedWindowT:: Create](#create)|ウィンドウを作成します。|
+|[CContainedWindowT::D efWindowProc](#defwindowproc)|既定のメッセージ処理を提供します。|
+|[CContainedWindowT:: GetCurrentMessage](#getcurrentmessage)|現在のメッセージを返します。|
+|[CContainedWindowT::RegisterWndSuperclass](#registerwndsuperclass)|格納されているウィンドウのウィンドウクラスを登録します。|
+|[CContainedWindowT::SubclassWindow](#subclasswindow)|ウィンドウをサブクラス化します。|
+|[CContainedWindowT::SwitchMessageMap](#switchmessagemap)|格納されているウィンドウのメッセージを処理するために使用するメッセージマップを変更します。|
+|[CContainedWindowT::UnsubclassWindow](#unsubclasswindow)|前にサブクラス化されたウィンドウを復元します。|
+|[CContainedWindowT:: WindowProc](#windowproc)|雑音格納されているウィンドウに送信されたメッセージを処理します。|
 
 ### <a name="public-data-members"></a>パブリック データ メンバー
 
 |名前|説明|
 |----------|-----------------|
-|[ウィンドウト::m_dwMsgMapID](#m_dwmsgmapid)|含まれているウィンドウのメッセージを処理するメッセージ マップを識別します。|
-|[ウィンドウ::m_lpszClassName](#m_lpszclassname)|新しいウィンドウ クラスの基になる既存のウィンドウ クラスの名前を指定します。|
-|[ウィンドウト:m_pfnSuperWindowProc](#m_pfnsuperwindowproc)|ウィンドウ クラスの元のウィンドウ プロシージャをポイントします。|
-|[ウィンドウト::m_pObject](#m_pobject)|格納しているオブジェクトへのポイント。|
+|[CContainedWindowT:: m_dwMsgMapID](#m_dwmsgmapid)|含まれているウィンドウのメッセージを処理するメッセージマップを識別します。|
+|[CContainedWindowT:: m_lpszClassName](#m_lpszclassname)|新しいウィンドウクラスの基になる既存のウィンドウクラスの名前を指定します。|
+|[CContainedWindowT:: m_pfnSuperWindowProc](#m_pfnsuperwindowproc)|ウィンドウ クラスの元のウィンドウ プロシージャをポイントします。|
+|[CContainedWindowT:: m_pObject](#m_pobject)|格納しているオブジェクトを指します。|
 
 ## <a name="remarks"></a>解説
 
-`CContainedWindowT`は、別のオブジェクトに含まれるウィンドウを実装します。 `CContainedWindowT`'s のウィンドウ プロシージャは、メッセージを適切なハンドラーに送信するために、含まれているオブジェクト内のメッセージ マップを使用します。 オブジェクトを`CContainedWindowT`構築する際には、使用するメッセージ マップを指定します。
+`CContainedWindowT` 別のオブジェクト内に含まれるウィンドウを実装します。 `CContainedWindowT`のウィンドウプロシージャは、コンテナーオブジェクトのメッセージマップを使用して、メッセージを適切なハンドラーに送信します。 オブジェクトを構築するときは `CContainedWindowT` 、使用するメッセージマップを指定します。
 
-`CContainedWindowT`を使用すると、既存のウィンドウ クラスをスーパークラス化して新しいウィンドウを作成できます。 この`Create`メソッドは、まず既存のクラスに基づいているが、 を使用`CContainedWindowT::WindowProc`するウィンドウ クラスを登録します。 `Create`この新しいウィンドウ クラスに基づいてウィンドウを作成します。 の各インスタンス`CContainedWindowT`は、異なるウィンドウ クラスをスーパークラス化できます。
+`CContainedWindowT` 既存のウィンドウクラスを superclassing して、新しいウィンドウを作成できます。 メソッドは、 `Create` まず、既存のクラスに基づくウィンドウクラスを登録しますが、を使用 `CContainedWindowT::WindowProc` します。 `Create` 次に、この新しいウィンドウクラスに基づいてウィンドウを作成します。 の各インスタンス `CContainedWindowT` は、別のウィンドウクラスをスーパークラスにすることができます。
 
 `CContainedWindowT` は、ウィンドウのサブクラス化もサポートします。 `SubclassWindow` メソッドは、既存のウィンドウを `CContainedWindowT` オブジェクトにアタッチし、ウィンドウ プロシージャを `CContainedWindowT::WindowProc` に変更します。 `CContainedWindowT` の各インスタンスは、別のウィンドウをサブクラス化できます。
 
 > [!NOTE]
-> 任意`CContainedWindowT`のオブジェクトに対して、 `Create` `SubclassWindow`または を呼び出します。 同じオブジェクトに対して両方のメソッドを呼び出す必要はありません。
+> 特定のオブジェクトに対して `CContainedWindowT` 、 `Create` またはを呼び出し `SubclassWindow` ます。 同じオブジェクトで両方のメソッドを呼び出すことはできません。
 
-ATL プロジェクト ウィザードで [**コントロールの追加**基準] オプションを使用すると、ウィザードは`CContainedWindowT`コントロールを実装するクラスにデータ メンバを自動的に追加します。 次の例は、包含ウィンドウの宣言方法を示しています。
+ATL プロジェクトウィザードの **[に基づいてコントロールを追加** ] オプションを使用すると、ウィザードによって、 `CContainedWindowT` コントロールを実装するクラスにデータメンバーが自動的に追加されます。 次の例では、含まれているウィンドウがどのように宣言されているかを示します。
 
 [!code-cpp[NVC_ATL_Windowing#38](../../atl/codesnippet/cpp/ccontainedwindowt-class_1.h)]
 
@@ -103,12 +104,12 @@ ATL プロジェクト ウィザードで [**コントロールの追加**基準
 
 [!code-cpp[NVC_ATL_Windowing#40](../../atl/codesnippet/cpp/ccontainedwindowt-class_3.h)]
 
-|詳細情報|参照先|
+|詳細情報|解決方法については、|
 |--------------------------------|---------|
 |コントロールの作成|[ATL チュートリアル](../../atl/active-template-library-atl-tutorial.md)|
-|ATL でのウィンドウの使用|[ATL ウィンドウ クラス](../../atl/atl-window-classes.md)|
+|ATL でのウィンドウの使用|[ATL ウィンドウクラス](../../atl/atl-window-classes.md)|
 |ATL プロジェクト ウィザード|[ATL プロジェクトの作成](../../atl/reference/creating-an-atl-project.md)|
-|Windows|[Windows](/windows/win32/winmsg/windows) SDK のウィンドウとその後のトピック|
+|Windows|Windows SDK の[Windows](/windows/win32/winmsg/windows)とそれ以降のトピック|
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -116,13 +117,13 @@ ATL プロジェクト ウィザードで [**コントロールの追加**基準
 
 `CContainedWindowT`
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-**ヘッダー:** atlwin.h
+**ヘッダー:** atlwin. h
 
-## <a name="ccontainedwindowtccontainedwindowt"></a><a name="ccontainedwindowt"></a>ウィンドウを含む
+## <a name="ccontainedwindowtccontainedwindowt"></a><a name="ccontainedwindowt"></a> CContainedWindowT::CContainedWindowT
 
-コンストラクターは、データ メンバーを初期化します。
+コンストラクターは、データメンバーを初期化します。
 
 ```
 CContainedWindowT(
@@ -138,32 +139,32 @@ CContainedWindowT(
 
 ### <a name="parameters"></a>パラメーター
 
-*クラス名*<br/>
-[in]含まれているウィンドウが基になる既存のウィンドウ クラスの名前。
+*lpszClassName*<br/>
+から格納されているウィンドウの基になる既存のウィンドウクラスの名前。
 
 *pObject*<br/>
-[in]メッセージ マップを宣言する、格納しているオブジェクトへのポインター。 このオブジェクトのクラスは[、CMessageMap](../../atl/reference/cmessagemap-class.md)から派生する必要があります。
+からメッセージマップを宣言するコンテナーオブジェクトへのポインター。 このオブジェクトのクラスは、 [CMessageMap](../../atl/reference/cmessagemap-class.md)から派生しなければなりません。
 
-*を使用します。*<br/>
-[in]含まれているウィンドウのメッセージを処理するメッセージ マップを識別します。 既定値の 0 は[、BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map)で宣言された既定のメッセージ マップを指定します。 [ALT_MSG_MAP (msgMapID)](message-map-macros-atl.md#alt_msg_map)で宣言された代替メッセージ マップを`msgMapID`使用するには、 を渡します。
+*dwMsgMapID*<br/>
+から格納されているウィンドウのメッセージを処理するメッセージマップを識別します。 既定値は0で、 [BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map)で宣言された既定のメッセージマップを指定します。 [ALT_MSG_MAP (msgMapID)](message-map-macros-atl.md#alt_msg_map)で宣言された代替メッセージマップを使用するには、を渡し `msgMapID` ます。
 
 ### <a name="remarks"></a>解説
 
-[Create](#create)を使用して新しいウィンドウを作成する場合は *、lpszClassName*パラメーターに既存のウィンドウ クラスの名前を渡す必要があります。 例については[、CContainedWindow](../../atl/reference/ccontainedwindowt-class.md)の概要を参照してください。
+[Create](#create)で新しいウィンドウを作成する場合は、 *lpszclassname* パラメーターの既存のウィンドウクラスの名前を渡す必要があります。 例については、「 [CContainedWindow](../../atl/reference/ccontainedwindowt-class.md) の概要」を参照してください。
 
-コンストラクタは3つあります。
+コンストラクターには次の3つがあります。
 
-- 引数が 3 つあるコンストラクターは、通常呼び出されます。
+- 3つの引数を持つコンストラクターは、通常、と呼ばれます。
 
-- 引数が 2 つ付けられたコンストラクターでは`TBase::GetWndClassName`、 のクラス名を使用します。
+- 2つの引数を持つコンストラクターは、のクラス名を使用し `TBase::GetWndClassName` ます。
 
-- 引数を指定しないコンストラクターは、後で引数を指定する場合に使用されます。 後で 呼び出`Create`すときは、ウィンドウ クラス名、メッセージ マップ オブジェクト、およびメッセージ マップ ID を指定する必要があります。
+- 引数を持たないコンストラクターは、後で引数を指定する場合に使用します。 後でを呼び出すときに、ウィンドウクラス名、メッセージマップオブジェクト、およびメッセージマップ ID を指定する必要があり `Create` ます。
 
-サブクラス ウィンドウを使用して既存のウィンドウをサブ[クラス](#subclasswindow)化する場合*は、lpszClassName*値は使用されません。したがって、このパラメーターに NULL を渡すことができます。
+[SubclassWindow](#subclasswindow)を使用して既存のウィンドウをサブクラス化する場合、 *lpszclassname* 値は使用されません。したがって、このパラメーターには NULL を渡すことができます。
 
-## <a name="ccontainedwindowtcreate"></a><a name="create"></a>ウィンドウ::作成
+## <a name="ccontainedwindowtcreate"></a><a name="create"></a> CContainedWindowT:: Create
 
-既存のクラスに基づいているが[、CContainedWindowT::ウィンドウプロセッサ](#windowproc)を使用するウィンドウ クラスを登録するために[RegisterWndSuper クラス](#registerwndsuperclass)を呼び出します。
+[RegisterWndSuperclass](#registerwndsuperclass)を呼び出して、既存のクラスに基づくウィンドウクラスを登録しますが、 [CContainedWindowT:: WindowProc](#windowproc)を使用します。
 
 ```
 HWND Create(
@@ -201,53 +202,53 @@ HWND Create(
 
 ### <a name="parameters"></a>パラメーター
 
-*クラス名*<br/>
-[in]含まれているウィンドウが基になる既存のウィンドウ クラスの名前。
+*lpszClassName*<br/>
+から格納されているウィンドウの基になる既存のウィンドウクラスの名前。
 
 *pObject*<br/>
-[in]メッセージ マップを宣言する、格納しているオブジェクトへのポインター。 このオブジェクトのクラスは[、CMessageMap](../../atl/reference/cmessagemap-class.md)から派生する必要があります。
+からメッセージマップを宣言するコンテナーオブジェクトへのポインター。 このオブジェクトのクラスは、 [CMessageMap](../../atl/reference/cmessagemap-class.md)から派生しなければなりません。
 
-*を使用します。*<br/>
-[in]含まれているウィンドウのメッセージを処理するメッセージ マップを識別します。 既定値の 0 は[、BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map)で宣言された既定のメッセージ マップを指定します。 [ALT_MSG_MAP (msgMapID)](message-map-macros-atl.md#alt_msg_map)で宣言された代替メッセージ マップを`msgMapID`使用するには、 を渡します。
+*dwMsgMapID*<br/>
+から格納されているウィンドウのメッセージを処理するメッセージマップを識別します。 既定値は0で、 [BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map)で宣言された既定のメッセージマップを指定します。 [ALT_MSG_MAP (msgMapID)](message-map-macros-atl.md#alt_msg_map)で宣言された代替メッセージマップを使用するには、を渡し `msgMapID` ます。
 
-*スーンドペアレント*<br/>
-[in]親ウィンドウまたはオーナー ウィンドウへのハンドル。
+*hWndParent*<br/>
+から親ウィンドウまたはオーナーウィンドウへのハンドル。
 
-*Rect*<br/>
-[in]ウィンドウの位置を指定する[RECT](/windows/win32/api/windef/ns-windef-rect)構造体。 は`RECT`、ポインターまたは参照によって渡すことができます。
+*rect*<br/>
+からウィンドウの位置を指定する [RECT](/windows/win32/api/windef/ns-windef-rect) 構造体。 は、 `RECT` ポインターによって、または参照渡しで渡すことができます。
 
-*ウィンドウ名*<br/>
-[in]ウィンドウの名前を指定します。 既定値は NULL です。
+*szWindowName*<br/>
+からウィンドウの名前を指定します。 既定値は NULL です。
 
-*Dwstyle*<br/>
-[in]ウィンドウのスタイル。 デフォルト値は&#124;WS_VISIBLEWS_CHILD。 使用可能な値の一覧については、Windows SDK[の「ウィンドウの作成](/windows/win32/api/winuser/nf-winuser-createwindoww)」を参照してください。
+*dwStyle*<br/>
+からウィンドウのスタイル。 既定値は WS_VISIBLE &#124; WS_CHILD です。 使用可能な値の一覧については、Windows SDK の「 [CreateWindow](/windows/win32/api/winuser/nf-winuser-createwindoww) 」を参照してください。
 
-*ドウェエクススタイル*<br/>
-[in]拡張ウィンドウ スタイル。 既定値は 0 で、拡張スタイルがないことを意味します。 使用可能な値の一覧については、Windows SDK[の「ウィンドウエクスックスの作成](/windows/win32/api/winuser/nf-winuser-createwindowexw)」を参照してください。
+*dwExStyle*<br/>
+から拡張ウィンドウスタイル。 既定値は0で、拡張スタイルはありません。 使用可能な値の一覧については、Windows SDK の「 [CreateWindowEx](/windows/win32/api/winuser/nf-winuser-createwindowexw) 」を参照してください。
 
-*メニューオイド*<br/>
-[in]子ウィンドウの場合は、ウィンドウ識別子。 トップレベル ウィンドウの場合は、ウィンドウのメニュー ハンドル。 デフォルト値は**0U**です。
+*MenuOrID*<br/>
+から子ウィンドウの場合は、ウィンドウ識別子。 トップレベルウィンドウの場合は、ウィンドウのメニューハンドル。 既定値は **0u** です。
 
-*を作成します。*<br/>
-[in]ウィンドウ作成データへのポインター。 詳細については、 [CreateWindowEx](/windows/win32/api/winuser/nf-winuser-createwindowexw)の最終パラメータの説明を参照してください。
+*lpCreateParam*<br/>
+からウィンドウ作成データへのポインター。 詳細については、 [CreateWindowEx](/windows/win32/api/winuser/nf-winuser-createwindowexw)の最後のパラメーターの説明を参照してください。
 
 ### <a name="return-value"></a>戻り値
 
-正常に終了した場合は、新しく作成されたウィンドウへのハンドル。それ以外の場合は NULL。
+成功した場合は、新しく作成されたウィンドウへのハンドル。それ以外の場合は NULL。
 
 ### <a name="remarks"></a>解説
 
-既存のウィンドウ クラス名は[、 m_lpszClassName](#m_lpszclassname)に保存されます。 `Create`この新しいクラスに基づいてウィンドウを作成します。 新しく作成されたウィンドウは、オブジェクトに`CContainedWindowT`自動的にアタッチされます。
+既存のウィンドウクラス名は [m_lpszClassName](#m_lpszclassname)に保存されます。 `Create` 次に、この新しいクラスに基づいてウィンドウを作成します。 新しく作成されたウィンドウは、自動的にオブジェクトにアタッチされ `CContainedWindowT` ます。
 
 > [!NOTE]
-> 既に`Create`[SubclassWindow](#subclasswindow)を呼び出している場合は呼び出しません。
+> `Create`既に[SubclassWindow](#subclasswindow)を呼び出している場合は、を呼び出さないでください。
 
 > [!NOTE]
-> *MenuOrID*パラメーターの値として 0 を使用する場合は、コンパイラ エラーを回避するために 0U (既定値) を指定する必要があります。
+> 0を *Menuorid* パラメーターの値として使用する場合は、コンパイラエラーを回避するために、0u (既定値) として指定する必要があります。
 
-## <a name="ccontainedwindowtdefwindowproc"></a><a name="defwindowproc"></a>をクリック :Dします。
+## <a name="ccontainedwindowtdefwindowproc"></a><a name="defwindowproc"></a> CContainedWindowT::D efWindowProc
 
-メッセージ マップで処理されないメッセージを処理するために[、WindowProc](#windowproc)によって呼び出されます。
+[WindowProc](#windowproc)によって呼び出され、メッセージマップによって処理されないメッセージを処理します。
 
 ```
 LRESULT DefWindowProc()
@@ -259,14 +260,14 @@ LRESULT DefWindowProc(
 
 ### <a name="parameters"></a>パラメーター
 
-*をクリックします。*<br/>
-[in]ウィンドウに送信されるメッセージ。
+*uMsg*<br/>
+からウィンドウに送信されたメッセージ。
 
 *wParam*<br/>
-[in]メッセージ固有の追加情報。
+からメッセージ固有の追加情報。
 
 *lParam*<br/>
-[in]メッセージ固有の追加情報。
+からメッセージ固有の追加情報。
 
 ### <a name="return-value"></a>戻り値
 
@@ -274,11 +275,11 @@ LRESULT DefWindowProc(
 
 ### <a name="remarks"></a>解説
 
-既定では、`DefWindowProc`呼び出し、 [CallWindowProc](/windows/win32/api/winuser/nf-winuser-callwindowprocw) Win32 関数を呼び出して[、m_pfnSuperWindowProc](#m_pfnsuperwindowproc)で指定されたウィンドウ プロシージャにメッセージ情報を送信します。
+既定では、は `DefWindowProc` [CallWindowProc](/windows/win32/api/winuser/nf-winuser-callwindowprocw) Win32 関数を呼び出して、メッセージ情報を [m_pfnSuperWindowProc](#m_pfnsuperwindowproc)で指定されたウィンドウプロシージャに送信します。
 
-## <a name="ccontainedwindowtgetcurrentmessage"></a><a name="getcurrentmessage"></a>ウィンドウをクリックします。
+## <a name="ccontainedwindowtgetcurrentmessage"></a><a name="getcurrentmessage"></a> CContainedWindowT:: GetCurrentMessage
 
-現在のメッセージ (`m_pCurrentMsg`) を返します。
+現在のメッセージ () を返し `m_pCurrentMsg` ます。
 
 ```
 const _ATL_MSG* GetCurrentMessage();
@@ -286,11 +287,11 @@ const _ATL_MSG* GetCurrentMessage();
 
 ### <a name="return-value"></a>戻り値
 
-構造体にパッケージ化された現在の`MSG`メッセージ。
+構造体にパッケージ化されている現在のメッセージ `MSG` 。
 
-## <a name="ccontainedwindowtm_dwmsgmapid"></a><a name="m_dwmsgmapid"></a>ウィンドウト::m_dwMsgMapID
+## <a name="ccontainedwindowtm_dwmsgmapid"></a><a name="m_dwmsgmapid"></a> CContainedWindowT:: m_dwMsgMapID
 
-現在、包含ウィンドウで使用されているメッセージ マップの識別子を保持します。
+含まれているウィンドウに現在使用されているメッセージマップの識別子を保持します。
 
 ```
 DWORD m_dwMsgMapID;
@@ -298,15 +299,15 @@ DWORD m_dwMsgMapID;
 
 ### <a name="remarks"></a>解説
 
-このメッセージ マップは、格納するオブジェクトで宣言する必要があります。
+このメッセージマップは、含んでいるオブジェクトで宣言されている必要があります。
 
-[BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map)で宣言されたデフォルトのメッセージ・マップは、常にゼロで識別されます。 [ALT_MSG_MAP(msgMapID)](message-map-macros-atl.md#alt_msg_map)で宣言された代替メッセージ・マップは、`msgMapID`によって識別されます。
+[BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map)で宣言された既定のメッセージマップは、常に0によって識別されます。 [ALT_MSG_MAP (msgMapID)](message-map-macros-atl.md#alt_msg_map)で宣言された代替メッセージマップは、によって識別され `msgMapID` ます。
 
-`m_dwMsgMapID`は最初にコンストラクタによって初期化され[、SwitchMessageMap](#switchmessagemap)を呼び出すことによって変更できます。 例については[、「CContainedWindowT の概要](../../atl/reference/ccontainedwindowt-class.md)」を参照してください。
+`m_dwMsgMapID` はコンストラクターによって最初に初期化され、 [SwitchMessageMap](#switchmessagemap)を呼び出すことによって変更できます。 例については、「 [CContainedWindowT の概要](../../atl/reference/ccontainedwindowt-class.md)」を参照してください。
 
-## <a name="ccontainedwindowtm_lpszclassname"></a><a name="m_lpszclassname"></a>ウィンドウ::m_lpszClassName
+## <a name="ccontainedwindowtm_lpszclassname"></a><a name="m_lpszclassname"></a> CContainedWindowT:: m_lpszClassName
 
-既存のウィンドウ クラスの名前を指定します。
+既存のウィンドウクラスの名前を指定します。
 
 ```
 LPTSTR m_lpszClassName;
@@ -314,13 +315,13 @@ LPTSTR m_lpszClassName;
 
 ### <a name="remarks"></a>解説
 
-ウィンドウを作成すると[、Create](#create)は、この既存のクラスに基づいているが[、CContainedWindowT::ウィンドウプロを](#windowproc)使用する新しいウィンドウ クラスを登録します。
+ウィンドウを作成すると、この既存のクラスに基づく新しいウィンドウクラス [が登録さ](#create) れますが、 [CContainedWindowT:: WindowProc](#windowproc)が使用されます。
 
-`m_lpszClassName`は、コンストラクターによって初期化されます。 例については[、CContainedWindowT](../../atl/reference/ccontainedwindowt-class.md)の概要を参照してください。
+`m_lpszClassName` は、コンストラクターによって初期化されます。 例については、「 [CContainedWindowT](../../atl/reference/ccontainedwindowt-class.md) の概要」を参照してください。
 
-## <a name="ccontainedwindowtm_pfnsuperwindowproc"></a><a name="m_pfnsuperwindowproc"></a>ウィンドウト:m_pfnSuperWindowProc
+## <a name="ccontainedwindowtm_pfnsuperwindowproc"></a><a name="m_pfnsuperwindowproc"></a> CContainedWindowT:: m_pfnSuperWindowProc
 
-含まれているウィンドウがサブクラス化されている場合`m_pfnSuperWindowProc`は、ウィンドウ クラスの元のウィンドウ プロシージャを指します。
+含まれているウィンドウがサブクラス化されている場合、は `m_pfnSuperWindowProc` ウィンドウクラスの元のウィンドウプロシージャを指します。
 
 ```
 WNDPROC m_pfnSuperWindowProc;
@@ -328,13 +329,13 @@ WNDPROC m_pfnSuperWindowProc;
 
 ### <a name="remarks"></a>解説
 
-含まれているウィンドウがスーパークラス化されている場合、つまり、既存のクラスを変更するウィンドウ クラスに基づいている`m_pfnSuperWindowProc`場合は、既存のウィンドウ クラスのウィンドウ プロシージャを指します。
+格納されているウィンドウがスーパークラスである場合は、既存のクラスを変更するウィンドウクラスに基づいていることを意味します。これは、 `m_pfnSuperWindowProc` 既存のウィンドウクラスのウィンドウプロシージャを指します。
 
-[DefWindowProc](#defwindowproc)メソッドは、に保存されているウィンドウ プロシージャに`m_pfnSuperWindowProc`メッセージ情報を送信します。
+[DefWindowProc](#defwindowproc)メソッドは、に保存されているウィンドウプロシージャにメッセージ情報を送信し `m_pfnSuperWindowProc` ます。
 
-## <a name="ccontainedwindowtm_pobject"></a><a name="m_pobject"></a>ウィンドウト::m_pObject
+## <a name="ccontainedwindowtm_pobject"></a><a name="m_pobject"></a> CContainedWindowT:: m_pObject
 
-オブジェクトを含むオブジェクトへの`CContainedWindowT`ポイント。
+オブジェクトを格納しているオブジェクトを指し `CContainedWindowT` ます。
 
 ```
 CMessageMap* m_pObject;
@@ -342,13 +343,13 @@ CMessageMap* m_pObject;
 
 ### <a name="remarks"></a>解説
 
-このコンテナは、クラスが[CMessageMap](../../atl/reference/cmessagemap-class.md)から派生する必要があります。
+このコンテナーは、クラスが [CMessageMap](../../atl/reference/cmessagemap-class.md)から派生する必要があり、包含ウィンドウによって使用されるメッセージマップを宣言します。
 
-`m_pObject`は、コンストラクターによって初期化されます。 例については[、CContainedWindowT](../../atl/reference/ccontainedwindowt-class.md)の概要を参照してください。
+`m_pObject` は、コンストラクターによって初期化されます。 例については、「 [CContainedWindowT](../../atl/reference/ccontainedwindowt-class.md) の概要」を参照してください。
 
-## <a name="ccontainedwindowtregisterwndsuperclass"></a><a name="registerwndsuperclass"></a>ウィンドウ::レジスタオーンドスーパークラス
+## <a name="ccontainedwindowtregisterwndsuperclass"></a><a name="registerwndsuperclass"></a> CContainedWindowT::RegisterWndSuperclass
 
-格納されているウィンドウのウィンドウ クラスを登録するために[Create](#create)によって呼び出されます。
+格納されているウィンドウのウィンドウクラスを登録するために、 [Create](#create) によって呼び出されます。
 
 ```
 ATOM RegisterWndSuperClass();
@@ -356,15 +357,15 @@ ATOM RegisterWndSuperClass();
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合は、登録されているウィンドウ クラスを一意に識別するアトム。それ以外の場合は、ゼロ。
+成功した場合は、登録されているウィンドウクラスを一意に識別する atom。それ以外の場合は0。
 
 ### <a name="remarks"></a>解説
 
-このウィンドウ クラスは、既存のクラスに基づいていますが[、CContainedWindowT::ウィンドウプロシージャを](#windowproc)使用します。 既存のウィンドウ クラスの名前とウィンドウ プロシージャは、それぞれ[m_lpszClassName](#m_lpszclassname)と[m_pfnSuperWindowProc](#m_pfnsuperwindowproc)に保存されます。
+このウィンドウクラスは、既存のクラスに基づいていますが、 [CContainedWindowT:: WindowProc](#windowproc)を使用します。 既存のウィンドウクラスの名前とウィンドウプロシージャは、それぞれ [m_lpszClassName](#m_lpszclassname) と [m_pfnSuperWindowProc](#m_pfnsuperwindowproc)に保存されます。
 
-## <a name="ccontainedwindowtsubclasswindow"></a><a name="subclasswindow"></a>ウィンドウを含む:サブクラス ウィンドウ
+## <a name="ccontainedwindowtsubclasswindow"></a><a name="subclasswindow"></a> CContainedWindowT::SubclassWindow
 
-*hWnd*で識別されるウィンドウをサブクラス化し、オブジェクト`CContainedWindowT`にアタッチします。
+*HWnd* によって識別されるウィンドウをサブクラス化し、オブジェクトにアタッチし `CContainedWindowT` ます。
 
 ```
 BOOL SubclassWindow(HWND hWnd);
@@ -373,7 +374,7 @@ BOOL SubclassWindow(HWND hWnd);
 ### <a name="parameters"></a>パラメーター
 
 *hWnd*<br/>
-[in]サブクラス化されるウィンドウへのハンドル。
+からサブクラス化されているウィンドウへのハンドル。
 
 ### <a name="return-value"></a>戻り値
 
@@ -381,14 +382,14 @@ BOOL SubclassWindow(HWND hWnd);
 
 ### <a name="remarks"></a>解説
 
-サブクラス化されたウィンドウで[、CContainedWindowT::ウィンドウプロシージャが](#windowproc)使用されるようになりました。 元のウィンドウ プロシージャは[、 m_pfnSuperWindowProc](#m_pfnsuperwindowproc)に保存されます。
+サブクラス化されたウィンドウで [CContainedWindowT:: WindowProc](#windowproc)が使用されるようになりました。 元のウィンドウプロシージャは [m_pfnSuperWindowProc](#m_pfnsuperwindowproc)に保存されます。
 
 > [!NOTE]
-> 既に`SubclassWindow`[Create](#create)を呼び出している場合は、呼び出しを行いません。
+> `SubclassWindow`既に[Create](#create)を呼び出している場合は、を呼び出さないでください。
 
-## <a name="ccontainedwindowtswitchmessagemap"></a><a name="switchmessagemap"></a>ウィンドウ::スイッチメッセージマップ
+## <a name="ccontainedwindowtswitchmessagemap"></a><a name="switchmessagemap"></a> CContainedWindowT::SwitchMessageMap
 
-含まれているウィンドウのメッセージを処理するために使用されるメッセージ マップを変更します。
+格納されているウィンドウのメッセージを処理するために使用されるメッセージマップを変更します。
 
 ```cpp
 void SwitchMessageMap(DWORD dwMsgMapID);
@@ -396,18 +397,18 @@ void SwitchMessageMap(DWORD dwMsgMapID);
 
 ### <a name="parameters"></a>パラメーター
 
-*を使用します。*<br/>
-[in]メッセージ マップ識別子。 [BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map)で宣言された既定のメッセージ マップを使用するには、0 を渡します。 [ALT_MSG_MAP (msgMapID)](message-map-macros-atl.md#alt_msg_map)で宣言された代替メッセージ マップを`msgMapID`使用するには、 を渡します。
+*dwMsgMapID*<br/>
+からメッセージマップの識別子。 [BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map)で宣言された既定のメッセージマップを使用するには、0を渡します。 [ALT_MSG_MAP (msgMapID)](message-map-macros-atl.md#alt_msg_map)で宣言された代替メッセージマップを使用するには、を渡し `msgMapID` ます。
 
 ### <a name="remarks"></a>解説
 
-メッセージ マップは、含まれるオブジェクトで定義する必要があります。
+メッセージマップは、含んでいるオブジェクトで定義されている必要があります。
 
-最初は、メッセージ マップ識別子をコンストラクターで指定します。
+最初に、コンストラクターでメッセージマップの識別子を指定します。
 
-## <a name="ccontainedwindowtunsubclasswindow"></a><a name="unsubclasswindow"></a>ウィンドウをクリックします。
+## <a name="ccontainedwindowtunsubclasswindow"></a><a name="unsubclasswindow"></a> CContainedWindowT::UnsubclassWindow
 
-サブクラス化されたウィンドウを`CContainedWindowT`オブジェクトから切り離し、元のウィンドウ プロシージャを[m_pfnSuperWindowProc](#m_pfnsuperwindowproc)に保存します。
+サブクラスウィンドウをオブジェクトからデタッチ `CContainedWindowT` し、 [m_pfnSuperWindowProc](#m_pfnsuperwindowproc)に保存された元のウィンドウプロシージャを復元します。
 
 ```
 HWND UnsubclassWindow(BOOL bForce = FALSE);
@@ -415,20 +416,20 @@ HWND UnsubclassWindow(BOOL bForce = FALSE);
 
 ### <a name="parameters"></a>パラメーター
 
-*bフォース*<br/>
-[in]TRUE に設定すると、この`CContainedWindowT`オブジェクトのウィンドウ プロシージャが現在アクティブでない場合でも、元のウィンドウ プロシージャが強制的に復元されます。 *bForce*が FALSE に設定され、この`CContainedWindowT`オブジェクトのウィンドウプロシージャが現在アクティブでない場合、元のウィンドウプロシージャは復元されません。
+*bForce*<br/>
+からこのオブジェクトのウィンドウプロシージャが現在アクティブでない場合でも、元のウィンドウプロシージャを強制的に復元するには、TRUE に設定し `CContainedWindowT` ます。 *Bforce* が FALSE に設定されていて、このオブジェクトのウィンドウプロシージャ `CContainedWindowT` が現在アクティブになっていない場合、元のウィンドウプロシージャは復元されません。
 
 ### <a name="return-value"></a>戻り値
 
-以前にサブクラス化されたウィンドウへのハンドル。 *bForce*が FALSE に設定され、この`CContainedWindowT`オブジェクトのウィンドウ プロシージャが現在アクティブでない場合は、NULL を返します。
+以前にサブクラス化されたウィンドウへのハンドル。 *Bforce* が FALSE に設定され、このオブジェクトのウィンドウプロシージャ `CContainedWindowT` が現在アクティブでない場合、は NULL を返します。
 
 ### <a name="remarks"></a>解説
 
-このメソッドは、ウィンドウが破棄される前に元のウィンドウ プロシージャを復元する場合にのみ使用します。 それ以外の場合、ウィンドウが破棄されると[、WindowProc](#windowproc)は自動的にこれを実行します。
+このメソッドは、ウィンドウが破棄される前に元のウィンドウプロシージャを復元する場合にのみ使用します。 それ以外の場合、 [WindowProc](#windowproc) はウィンドウが破棄されると自動的にこれを実行します。
 
-## <a name="ccontainedwindowtwindowproc"></a><a name="windowproc"></a>ウィンドウを開封します。
+## <a name="ccontainedwindowtwindowproc"></a><a name="windowproc"></a> CContainedWindowT:: WindowProc
 
-この静的メソッドは、ウィンドウ プロシージャを実装します。
+この静的メソッドは、ウィンドウプロシージャを実装します。
 
 ```
 static LRESULT CALLBACK WindowProc(
@@ -441,16 +442,16 @@ static LRESULT CALLBACK WindowProc(
 ### <a name="parameters"></a>パラメーター
 
 *hWnd*<br/>
-[in]ウィンドウへのハンドル。
+からウィンドウへのハンドル。
 
-*をクリックします。*<br/>
-[in]ウィンドウに送信されるメッセージ。
+*uMsg*<br/>
+からウィンドウに送信されたメッセージ。
 
 *wParam*<br/>
-[in]メッセージ固有の追加情報。
+からメッセージ固有の追加情報。
 
 *lParam*<br/>
-[in]メッセージ固有の追加情報。
+からメッセージ固有の追加情報。
 
 ### <a name="return-value"></a>戻り値
 
@@ -458,13 +459,13 @@ static LRESULT CALLBACK WindowProc(
 
 ### <a name="remarks"></a>解説
 
-`WindowProc`m_dwMsgMapIDで識別されるメッセージ マップにメッセージ[を](#m_dwmsgmapid)送信します。 必要に応`WindowProc`じて、追加のメッセージ処理を行うための[DefWindowProc](#defwindowproc)を呼び出します。
+`WindowProc`[m_dwMsgMapID](#m_dwmsgmapid)によって識別されるメッセージマップにメッセージを送信します。 必要に応じ `WindowProc` て、 [DefWindowProc](#defwindowproc) を呼び出して、追加のメッセージ処理を行います。
 
 ## <a name="see-also"></a>関連項目
 
-[Cウィンドウクラス](../../atl/reference/cwindow-class.md)<br/>
-[クラス](../../atl/reference/cwindowimpl-class.md)<br/>
-[クラス](../../atl/reference/cmessagemap-class.md)<br/>
+[CWindow クラス](../../atl/reference/cwindow-class.md)<br/>
+[CWindowImpl クラス](../../atl/reference/cwindowimpl-class.md)<br/>
+[CMessageMap クラス](../../atl/reference/cmessagemap-class.md)<br/>
 [BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map)<br/>
-[ALT_MSG_MAP(メッセージマップID)](message-map-macros-atl.md#alt_msg_map)<br/>
+[ALT_MSG_MAP (msgMapID)](message-map-macros-atl.md#alt_msg_map)<br/>
 [クラスの概要](../../atl/atl-class-overview.md)

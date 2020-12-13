@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: Windows デスクトップウィザード'
 title: Windows デスクトップ ウィザード
 ms.date: 03/29/2019
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - Windows Desktop Wizard
 - Win32 Project Wizard
 ms.assetid: 5d7b3a5e-8461-479a-969a-67b7883725b9
-ms.openlocfilehash: 47984b4c4416bf129efb226381fe778659aa16ca
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: b80a5fb23bd9ce2428bee17b9c4ca6fd9401d1e4
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91503512"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97135929"
 ---
 # <a name="windows-desktop-wizard"></a>Windows デスクトップ ウィザード
 
@@ -76,14 +77,14 @@ Visual C++ に用意されているライブラリの 1 つに対するサポー
 |**ATL**|ATL (Active Template Library) のクラスのサポートがプロジェクトに組み込まれます。 このオプションを使用できるのは、Win32 コンソール アプリケーションだけです。<br /><br /> **メモ** このオプションでは、ATL コードウィザードを使用した ATL オブジェクトの追加はサポートされていません。 ATL オブジェクトを追加できるのは、ATL プロジェクト、または ATL サポートを含む MFC プロジェクトだけです。|
 |**MFC**|MFC (Microsoft Foundation Class) ライブラリのサポートがプロジェクトに組み込まれます。 このオプションを使用できるのは、Win32 コンソール アプリケーションとスタティック ライブラリだけです。|
 
-## <a name="remarks"></a>注釈
+## <a name="remarks"></a>解説
 
 Windows デスクトップ アプリケーションを作成したら、 [汎用](../ide/adding-a-generic-cpp-class.md#generic-c-class-wizard) コード ウィザードを使用して汎用 C++ クラスを追加できます。 HTML ファイル、ヘッダー ファイル、リソース、テキスト ファイルなど、その他の項目も追加できます。
 
 > [!NOTE]
 > ATL クラスは追加できません。また、MFC クラスを追加できるのは、MFC をサポートするタイプの Windows デスクトップ アプリケーションだけです。上の表を参照してください。
 
-ウィザードでプロジェクト用に作成されるファイルは、 **ソリューション エクスプローラー**で表示できます。 プロジェクト用にウィザードで作成されるファイルの詳細については、「」を参照してください `ReadMe.txt` 。 ファイルの種類の詳細については、「 [Visual Studio C++ プロジェクト用に作成されたファイルの種類](../build/reference/file-types-created-for-visual-cpp-projects.md)」を参照してください。
+ウィザードでプロジェクト用に作成されるファイルは、 **ソリューション エクスプローラー** で表示できます。 プロジェクト用にウィザードで作成されるファイルの詳細については、「」を参照してください `ReadMe.txt` 。 ファイルの種類の詳細については、「 [Visual Studio C++ プロジェクト用に作成されたファイルの種類](../build/reference/file-types-created-for-visual-cpp-projects.md)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

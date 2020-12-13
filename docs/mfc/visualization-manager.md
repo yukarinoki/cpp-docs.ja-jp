@@ -1,48 +1,49 @@
 ---
+description: 詳細については、「視覚化マネージャー」を参照してください。
 title: ビジュアル マネージャー
 ms.date: 11/19/2018
 helpviewer_keywords:
 - Visualization Manager
 ms.assetid: c9dd1365-27ac-42e5-8caa-1004525b4129
-ms.openlocfilehash: 9c9dc19266d80d56f696953c5f5896eb9d99cc8b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b99331503e4e7e69cc5d8a19fde7641c1b1daeeb
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62358579"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97143209"
 ---
 # <a name="visualization-manager"></a>ビジュアル マネージャー
 
-ビジュアル マネージャーは、アプリケーション全体の外観を制御するオブジェクトです。 1 つのクラスとして機能、アプリケーションのすべての描画コードを配置することができます。 MFC ライブラリには、いくつかのビジュアル マネージャーが含まれています。 アプリケーションのカスタム ビューを作成する場合、独自のビジュアル マネージャーを作成することもできます。 次の図は、異なるビジュアル マネージャーが有効にすると、同じアプリケーションを示してください。
+ビジュアルマネージャーは、アプリケーション全体の外観を制御するオブジェクトです。 アプリケーションのすべての描画コードを配置できる単一のクラスとして機能します。 MFC ライブラリには、いくつかのビジュアルマネージャーが含まれています。 アプリケーションのカスタムビューを作成する場合は、独自のビジュアルマネージャーを作成することもできます。 次の図は、異なるビジュアルマネージャーが有効になっている場合に同じアプリケーションを示しています。
 
 ![CMFCVisualManagerWindows で表示された MyApp](../mfc/media/vmwindows.png "CMFCVisualManagerWindows で表示された MyApp") <br/>
-MyApp CMFCVisualManagerWindows ビジュアル マネージャーを使用します。
+CMFCVisualManagerWindows ビジュアルマネージャーを使用する MyApp
 
 ![CMFCVisualManagerVS2005 で表示された MyApp](../mfc/media/vmvs2005.png "CMFCVisualManagerVS2005 で表示された MyApp") <br/>
-MyApp CMFCVisualManagerVS2005 ビジュアル マネージャーを使用します。
+CMFCVisualManagerVS2005 ビジュアルマネージャーを使用する MyApp
 
 ![CMFCVisualManagerOfficeXP で表示された MyApp](../mfc/media/vmofficexp.png "CMFCVisualManagerOfficeXP で表示された MyApp") <br/>
-MyApp CMFCVisualManagerOfficeXP ビジュアル マネージャーを使用します。
+CMFCVisualManagerOfficeXP ビジュアルマネージャーを使用する MyApp
 
 ![CMFCVisualManagerOffice2003 で表示された MyApp](../mfc/media/vmoffice2003.png "CMFCVisualManagerOffice2003 で表示された MyApp") <br/>
-MyApp CMFCVisualManagerOffice2003 ビジュアル マネージャーを使用します。
+CMFCVisualManagerOffice2003 ビジュアルマネージャーを使用する MyApp
 
 ![CMFCVisualManagerOffice2007 で表示された MyApp](../mfc/media/msoffice2007.png "CMFCVisualManagerOffice2007 で表示された MyApp") <br/>
-MyApp CMFCVisualManagerOffice2007 ビジュアル マネージャーを使用します。
+CMFCVisualManagerOffice2007 ビジュアルマネージャーを使用する MyApp
 
-既定では、ビジュアル マネージャーは、いくつかの GUI 要素の描画コードを保持します。 カスタムの UI 要素を提供するには、ビジュアル マネージャーの関連の描画メソッドをオーバーライドする必要があります。 これらのメソッドの一覧で、次を参照してください。 [CMFCVisualManager クラス](../mfc/reference/cmfcvisualmanager-class.md)します。 カスタムの外観を提供するオーバーライドできるメソッドで始まるすべてのメソッド`OnDraw`します。
+既定では、ビジュアルマネージャーはいくつかの GUI 要素の描画コードを保持します。 カスタム UI 要素を提供するには、ビジュアルマネージャーの関連描画メソッドをオーバーライドする必要があります。 これらのメソッドの一覧については、「 [Cmfcvisualmanager クラス](../mfc/reference/cmfcvisualmanager-class.md)」を参照してください。 カスタムの外観を提供するためにオーバーライドできるメソッドは、で始まるすべてのメソッドです `OnDraw` 。
 
-アプリケーションがある 1 つだけ`CMFCVisualManager`オブジェクト。 アプリケーションのビジュアル マネージャーへのポインターを取得するには、静的関数を呼び出す[CMFCVisualManager::GetInstance](../mfc/reference/cmfcvisualmanager-class.md#getinstance)します。 すべてのビジュアル マネージャーが継承するので`CMFCVisualManager`、`CMFCVisualManager::GetInstance`メソッドのカスタム ビジュアル マネージャーを作成する場合でも、適切なビジュアル マネージャーにポインターが取得されます。
+アプリケーションは、オブジェクトを1つだけ持つことができ `CMFCVisualManager` ます。 アプリケーションのビジュアルマネージャーへのポインターを取得するには、静的な関数 [Cmfcvisualmanager:: GetInstance](../mfc/reference/cmfcvisualmanager-class.md#getinstance)を呼び出します。 すべてのビジュアルマネージャーはから継承されるため `CMFCVisualManager` 、 `CMFCVisualManager::GetInstance` カスタムビジュアルマネージャーを作成した場合でも、メソッドは適切なビジュアルマネージャーへのポインターを取得します。
 
-カスタム ビジュアル マネージャーを作成する場合は、既に存在するビジュアル マネージャーから派生する必要があります。 既定のクラスから派生する`CMFCVisualManager`します。 ただしより、アプリケーションに必要なものを表している場合は、さまざまなビジュアル マネージャーを使用できます。 使用する場合など、`CMFCVisualManagerOffice2007`ビジュアルのマネージャーが区切り記号を検索する方法を変更するときだけからカスタム クラスを派生させることが`CMFCVisualManagerOffice2007`します。 このシナリオでの区切り記号を描画するためのメソッドのみを上書きする必要があります。
+カスタムビジュアルマネージャーを作成する場合は、既に存在するビジュアルマネージャーからそれを派生させる必要があります。 から派生する既定のクラスは `CMFCVisualManager` です。 ただし、アプリケーションの場合と同様に、別のビジュアルマネージャーを使用することもできます。 たとえば、ビジュアルマネージャーを使用するが、 `CMFCVisualManagerOffice2007` 区切り記号の表示方法を変更したい場合は、からカスタムクラスを派生させることができ `CMFCVisualManagerOffice2007` ます。 このシナリオでは、区切り記号を描画するメソッドのみを上書きする必要があります。
 
-アプリケーションの特定のビジュアル マネージャーを使用する 2 つの可能な方法はあります。 呼び出す方法の 1 つは、 [cmfcvisualmanager::setdefaultmanager](../mfc/reference/cmfcvisualmanager-class.md#setdefaultmanager)メソッドをパラメーターとして適切なビジュアル マネージャーを渡します。 次のコード例は、の使用方法を示しています、`CMFCVisualManagerVS2005`このメソッドを使用してビジュアル マネージャー。
+アプリケーションに特定のビジュアルマネージャーを使用するには、次の2つの方法があります。 1つの方法として、 [Cmfcvisualmanager:: SetDefaultManager](../mfc/reference/cmfcvisualmanager-class.md#setdefaultmanager) メソッドを呼び出し、適切なビジュアルマネージャーをパラメーターとして渡す方法があります。 次のコード例は、 `CMFCVisualManagerVS2005` このメソッドでビジュアルマネージャーを使用する方法を示しています。
 
 ```cpp
 CMFCVisualManager::SetDefaultManager (RUNTIME_CLASS (CMFCVisualManagerVS2005));
 ```
 
-アプリケーションでは、ビジュアル マネージャーを使用するその他の方法は、手動で作成します。 すべてのレンダリングに、この新しいビジュアル マネージャーをアプリケーションで使用されます。 ただし、1 つだけありますので`CMFCVisualManager`アプリケーション、オブジェクトの新しいものを作成する前に、現在のビジュアル マネージャーを削除する必要があります。 次の例では、`CMyVisualManager`から派生したカスタム ビジュアル マネージャーは、`CMFCVisualManager`します。 次のメソッドは、インデックスに基づいて、アプリケーションを表示するビジュアル マネージャーが使用される変更されます。
+アプリケーションでビジュアルマネージャーを使用するもう1つの方法は、手動で作成することです。 アプリケーションは、すべてのレンダリングにこの新しいビジュアルマネージャーを使用します。 ただし、アプリケーションごとにオブジェクトは1つしか存在できないため、 `CMFCVisualManager` 新しいビジュアルマネージャーを作成する前に、現在のビジュアルマネージャーを削除する必要があります。 次の例で `CMyVisualManager` は、は、から派生したカスタムビジュアルマネージャーです `CMFCVisualManager` 。 次のメソッドは、インデックスに応じて、アプリケーションの表示に使用されるビジュアルマネージャーを変更します。
 
 ```cpp
 void CMyApp::SetSkin (int index)
@@ -74,5 +75,5 @@ void CMyApp::SetSkin (int index)
 
 ## <a name="see-also"></a>関連項目
 
-[ユーザー インターフェイス要素](../mfc/user-interface-elements-mfc.md)<br/>
+[ユーザーインターフェイス要素](../mfc/user-interface-elements-mfc.md)<br/>
 [CMFCVisualManager クラス](../mfc/reference/cmfcvisualmanager-class.md)

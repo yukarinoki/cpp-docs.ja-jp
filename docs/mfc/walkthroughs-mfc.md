@@ -1,15 +1,16 @@
 ---
+description: '詳細情報: チュートリアル (MFC)'
 title: チュートリアル (MFC)
 ms.date: 09/20/2018
 helpviewer_keywords:
 - MFC Feature Pack, walkthroughs
 ms.assetid: 20d5756f-ad58-46f4-8b6c-c7a1020b72eb
-ms.openlocfilehash: 5c4b6d507615d991e950897ea07c19c94a5be559
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0fd386054e64287d5785de6c52622f848ad17a26
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62358256"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97142845"
 ---
 # <a name="walkthroughs-mfc"></a>チュートリアル (MFC)
 
@@ -17,10 +18,10 @@ ms.locfileid: "62358256"
 
 ## <a name="in-this-section"></a>このセクションの内容
 
-[チュートリアル: 新しい MFC シェル コントロールの使用](../mfc/walkthrough-using-the-new-mfc-shell-controls.md)<br/>
-このチュートリアルでは、ファイル エクスプ ローラーのようなアプリケーションを作成します。 2 つのペインを含むウィンドウを作成します。 左側のウィンドウには、 [CMFCShellTreeCtrl](../mfc/reference/cmfcshelltreectrl-class.md)階層ビューで、デスクトップを表示するオブジェクト。 右側のウィンドウが、 [CMFCShellListCtrl](../mfc/reference/cmfcshelllistctrl-class.md)を左側のウィンドウで選択されているフォルダーにファイルが表示されます。
+[チュートリアル: 新しい MFC シェルコントロールの使用](../mfc/walkthrough-using-the-new-mfc-shell-controls.md)<br/>
+このチュートリアルでは、ファイルエクスプローラーに似たアプリケーションを作成します。 2つのペインを含むウィンドウを作成します。 左側のウィンドウには、デスクトップを階層ビューで表示する [CMFCShellTreeCtrl](../mfc/reference/cmfcshelltreectrl-class.md) オブジェクトがあります。 右側のウィンドウには [Cmfcshelllistctrl](../mfc/reference/cmfcshelllistctrl-class.md) があり、左側のウィンドウで選択されているフォルダーにファイルが表示されます。
 
-[チュートリアル: ツール バーへのコントロールの追加](../mfc/walkthrough-putting-controls-on-toolbars.md)<br/>
+[チュートリアル: ツールバーへのコントロールの配置](../mfc/walkthrough-putting-controls-on-toolbars.md)<br/>
 最新の MFC ツール バーは、単純なボタン以外のコントロールをホストできます。 この記事では、その方法を説明します。
 
 [チュートリアル: MFC プロジェクトへの D2D オブジェクトの追加](../mfc/walkthrough-adding-a-d2d-object-to-an-mfc-project.md)<br/>
@@ -31,4 +32,4 @@ D2D オブジェクトをプロジェクトに追加する方法と D2D の使�
 
 ## <a name="see-also"></a>関連項目
 
-[MFC デスクトップ アプリケーション](../mfc/mfc-desktop-applications.md)
+[MFC デスクトップアプリケーション](../mfc/mfc-desktop-applications.md)

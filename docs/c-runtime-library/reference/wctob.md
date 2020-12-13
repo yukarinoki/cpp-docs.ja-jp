@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: wctob'
 title: wctob
 ms.date: 4/2/2020
 api_name:
@@ -28,12 +29,12 @@ helpviewer_keywords:
 - wctob function
 - characters, converting
 ms.assetid: 46aec98b-c2f2-4e9d-9d89-7db99ba8a9a6
-ms.openlocfilehash: 3740e4bebcc63f0f664d40b2e048f19c2aa24c99
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 184c9858aebcdecf3b5d9857980f27be45a5d2d9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87215089"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97136866"
 ---
 # <a name="wctob"></a>wctob
 
@@ -54,13 +55,13 @@ int wctob(
 
 ## <a name="return-value"></a>戻り値
 
-**Wctob**がワイド文字を正常に変換した場合、マルチバイト文字が1バイト長の場合にのみ、マルチバイト文字表現が返されます。 **Wctob**がマルチバイト文字に変換できないワイド文字を検出した場合、またはマルチバイト文字が1バイト長ではない場合は、-1 を返します。
+**Wctob** がワイド文字を正常に変換した場合、マルチバイト文字が1バイト長の場合にのみ、マルチバイト文字表現が返されます。 **Wctob** がマルチバイト文字に変換できないワイド文字を検出した場合、またはマルチバイト文字が1バイト長ではない場合は、-1 を返します。
 
 ## <a name="remarks"></a>解説
 
-**Wctob**関数は、 *wchar* **`int`** マルチバイト文字が1バイト長の場合に、wchar に含まれるワイド文字を、戻り値によって渡される対応するマルチバイト文字に変換します。
+**Wctob** 関数は、  **`int`** マルチバイト文字が1バイト長の場合に、wchar に含まれるワイド文字を、戻り値によって渡される対応するマルチバイト文字に変換します。
 
-**Wctob**が失敗し、対応するマルチバイト文字が検出されなかった場合、関数は**errno**を**EILSEQ**に設定し、-1 を返します。
+**Wctob** が失敗し、対応するマルチバイト文字が検出されなかった場合、関数は **errno** を **EILSEQ** に設定し、-1 を返します。
 
 既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
@@ -74,7 +75,7 @@ int wctob(
 
 ## <a name="example"></a>例
 
-このプログラムは、 **wcstombs**関数の動作を示しています。
+このプログラムは、 **wcstombs** 関数の動作を示しています。
 
 ```C
 // crt_wctob.c

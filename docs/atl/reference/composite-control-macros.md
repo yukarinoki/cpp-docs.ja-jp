@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「複合コントロールマクロ」を参照してください。
 title: 複合コントロールマクロ
 ms.date: 05/06/2019
 f1_keywords:
@@ -8,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - composite controls, macros
 ms.assetid: 17f2dd5e-07e6-4aa6-b965-7a361c78c45e
-ms.openlocfilehash: 7ac13a11646faca53b38ec610dc0388bdd14d251
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 0107f91350516bd0f7e35cf82a49f79ff3c5797e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88833544"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97141194"
 ---
 # <a name="composite-control-macros"></a>複合コントロールマクロ
 
@@ -29,7 +30,7 @@ ms.locfileid: "88833544"
 |[SINK_ENTRY_INFO](#sink_entry_info)|[IDispEventSimpleImpl](../../atl/reference/idispeventsimpleimpl-class.md)で使用するために手動で指定された型情報を持つイベントシンクマップへのエントリ。|
 |[SINK_ENTRY_INFO_P](#sink_entry_info)| (Visual Studio 2017)SINK_ENTRY_INFO に似ていますが、iid へのポインターを受け取る点が異なります。|
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** atlcom. h
 
@@ -72,7 +73,7 @@ CE ATL の ActiveX イベントシンクの実装では、イベントハンド�
 
 ## <a name="sink_entry"></a><a name="sink_entry"></a> SINK_ENTRY
 
-*Id*で識別されるコントロールの、指定されたイベント (*dispid*) のハンドラー関数 (*fn*) を宣言します。
+*Id* で識別されるコントロールの、指定されたイベント (*dispid*) のハンドラー関数 (*fn*) を宣言します。
 
 ```
 SINK_ENTRY( id, dispid, fn )
@@ -99,7 +100,7 @@ CE ATL の ActiveX イベントシンクの実装では、イベントハンド�
 
 ## <a name="sink_entry_ex-and-sink_entry_ex_p"></a><a name="sink_entry_ex"></a> SINK_ENTRY_EX と SINK_ENTRY_EX_P
 
-*Id*で識別されるコントロールのディスパッチインターフェイス (*iid*) の、指定されたイベント (*dispid*) のハンドラー関数 (*fn*) を宣言します。
+*Id* で識別されるコントロールのディスパッチインターフェイス (*iid*) の、指定されたイベント (*dispid*) のハンドラー関数 (*fn*) を宣言します。
 
 ```
 SINK_ENTRY_EX( id, iid, dispid, fn )
@@ -143,7 +144,7 @@ SINK_ENTRY_INFO_P( id, piid, dispid, fn, info ) // (Visual Studio 2017)
 ### <a name="parameters"></a>パラメーター
 
 *id*<br/>
-からイベントソースを識別する符号なし整数。 この値は、関連する[IDispEventSimpleImpl](../../atl/reference/idispeventsimpleimpl-class.md)基本クラスで使用される*nID*テンプレートパラメーターと一致している必要があります。
+からイベントソースを識別する符号なし整数。 この値は、関連する [IDispEventSimpleImpl](../../atl/reference/idispeventsimpleimpl-class.md)基本クラスで使用される *nID* テンプレートパラメーターと一致している必要があります。
 
 *iid*<br/>
 からディスパッチインターフェイスを識別する IID。
@@ -157,7 +158,7 @@ SINK_ENTRY_INFO_P( id, piid, dispid, fn, info ) // (Visual Studio 2017)
 *1億*<br/>
 からイベントハンドラー関数の名前。 この関数は、 `_stdcall` 呼び出し規約を使用し、適切なディスパッチインターフェイススタイルのシグネチャを持つ必要があります。
 
-*info*<br/>
+*インフォメーション*<br/>
 からイベントハンドラー関数の型情報。 この型情報は、構造体へのポインターの形式で提供され `_ATL_FUNC_INFO` ます。 CC_CDECL は、構造体の CALLCONV フィールドの Windows CE でサポートされている唯一のオプションです `_ATL_FUNC_INFO` 。 その他の値はサポートされていないため、動作は定義されていません。
 
 ### <a name="remarks"></a>解説
@@ -166,5 +167,5 @@ SINK_ENTRY_INFO_P( id, piid, dispid, fn, info ) // (Visual Studio 2017)
 
 ## <a name="see-also"></a>関連項目
 
-[[マクロ]](../../atl/reference/atl-macros.md)<br/>
+[マクロ](../../atl/reference/atl-macros.md)<br/>
 [複合コントロールのグローバル関数](../../atl/reference/composite-control-global-functions.md)

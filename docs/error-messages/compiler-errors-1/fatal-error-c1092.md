@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: 致命的なエラー C1092'
 title: 致命的なエラー C1092
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C1092
 ms.assetid: bcaa87f0-fbfc-4a33-844b-3b9f5d67f279
-ms.openlocfilehash: af43ddb83e872762f720b156644e0d466957a8a7
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: b2a16991784b901202e5d51c0d256ad48305f55f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80203880"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97145133"
 ---
 # <a name="fatal-error-c1092"></a>致命的なエラー C1092
 
@@ -21,7 +22,7 @@ ms.locfileid: "80203880"
 
 - エディットコンティニュは、クラス、構造体、または列挙型の定義など、既存のデータ型への変更をサポートしていません。 デバッグを停止し、アプリケーションをビルドする必要があります。
 
-- エディットコンティニュでは、vc*x*0 .pdb ( *x*は使用中のビジュアルC++のメジャーバージョン) などのプログラムデータベースファイルが読み取り専用の場合、新しいデータ型の追加はサポートされません。 データ型を追加するには、コンパイラが書き込みモードで .pdb ファイルを開く必要があります。
+- エディットコンティニュでは、vc *x* 0 .pdb ( *x* は使用中 Visual C++ のメジャーバージョン) などのプログラムデータベースファイルが読み取り専用の場合、新しいデータ型の追加はサポートされません。 データ型を追加するには、コンパイラが書き込みモードで .pdb ファイルを開く必要があります。
 
 ### <a name="to-remove-this-error-without-ending-the-current-debug-session"></a>現在のデバッグセッションを終了せずにこのエラーを削除するには
 

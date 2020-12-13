@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: _snscanf、_snscanf_l、_snwscanf、_snwscanf_l'
 title: _snscanf、_snscanf_l、_snwscanf、_snwscanf_l
 ms.date: 11/04/2016
 api_name:
@@ -51,12 +52,12 @@ helpviewer_keywords:
 - strings [C++], reading
 - _snscanf function
 ms.assetid: da1ac890-f905-4cd7-954b-3c90957b5551
-ms.openlocfilehash: f259eede1b2927b4676467c3450504f7ff7c19de
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 0098578a012666a498062a78eb9ae17d362ea466
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70947936"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97137021"
 ---
 # <a name="_snscanf-_snscanf_l-_snwscanf-_snwscanf_l"></a>_snscanf、_snscanf_l、_snwscanf、_snwscanf_l
 
@@ -99,46 +100,46 @@ int __cdecl _snwscanf_l(
 チェックする入力文字列。
 
 *length*<br/>
-*入力*時に調べる文字数。
+*入力* 時に調べる文字数。
 
 *format*<br/>
 1 つまたは複数の書式指定子。
 
 *...*<br/>
-形式の書式指定子によって入力文字列から抽出された値を格納するために使用される省略可能な*変数。*
+形式の書式指定子によって入力文字列から抽出された値を格納するために使用される省略可能な *変数。*
 
 *locale*<br/>
 使用するロケール。
 
 ## <a name="return-value"></a>戻り値
 
-これらの関数は、正常に変換および代入されたフィールドの数を返します。読み込まれただけで代入されなかったフィールドは戻り値には含まれません。 戻り値が 0 の場合は、代入されたフィールドがなかったことを示します。 エラーの場合、または最初の変換の前に文字列の末尾に到達した場合、戻り値は**EOF**になります。 詳細については、[sscanf](sscanf-sscanf-l-swscanf-swscanf-l.md) を参照してください
+これらの関数は、正常に変換および代入されたフィールドの数を返します。読み込まれただけで代入されなかったフィールドは戻り値には含まれません。 戻り値が 0 の場合は、代入されたフィールドがなかったことを示します。 エラーの場合、または最初の変換の前に文字列の末尾に到達した場合、戻り値は **EOF** になります。 詳細については、[sscanf](sscanf-sscanf-l-swscanf-swscanf-l.md) を参照してください
 
-*Input*または*format*が**NULL**ポインターの場合、または*length*が0以下の場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、これらの関数は**EOF**を返し、 **errno**を**EINVAL**に設定します。
+*Input* または *format* が **NULL** ポインターの場合、または *length* が0以下の場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、これらの関数は **EOF** を返し、 **errno** を **EINVAL** に設定します。
 
-エラー コードの詳細については、「[_doserrno、errno、_sys_errlist、_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」をご覧ください。
+これらと他のエラー コードの詳細については、「[_doserrno、errno、_sys_errlist、および _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」を参照してください。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-この関数は、入力文字列から調べる必要がある固定数の文字を指定できる点を除いて、 **sscanf**に似ています。 詳細については、[sscanf](sscanf-sscanf-l-swscanf-swscanf-l.md) を参照してください
+この関数は、入力文字列から調べる必要がある固定数の文字を指定できる点を除いて、 **sscanf** に似ています。 詳細については、[sscanf](sscanf-sscanf-l-swscanf-swscanf-l.md) を参照してください
 
-**_L**サフィックスを持つこれらの関数のバージョンは、現在のスレッドロケールの代わりに渡されたロケールパラメーターを使用する点を除いて同じです。
+**_L** サフィックスを持つこれらの関数のバージョンは、現在のスレッドロケールの代わりに渡されたロケールパラメーターを使用する点を除いて同じです。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
 |Tchar.h のルーチン|_UNICODE および _MBCS が未定義の場合|_MBCS が定義されている場合|_UNICODE が定義されている場合|
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_sntscanf**|**_snscanf**|**_snscanf**|**_snwscanf**|
-|**sntscanf_l (_d)**|**_snscanf_l**|**_snscanf_l**|**_snwscanf_l**|
+|**_sntscanf_l**|**_snscanf_l**|**_snscanf_l**|**_snwscanf_l**|
 
 ## <a name="requirements"></a>必要条件
 
 |ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
-|**snscanf**、 **_t** (_l)|\<stdio.h>|
-|**_snwscanf**、 **snwscanf_l**|\<stdio.h> または \<wchar.h>|
+|**_snscanf**、 **_snscanf_l**|\<stdio.h>|
+|**_snwscanf**、 **_snwscanf_l**|\<stdio.h> または \<wchar.h>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性について詳しくは、「 [Compatibility](../../c-runtime-library/compatibility.md)」をご覧ください。
 
 ## <a name="example"></a>例
 
@@ -175,4 +176,4 @@ _snwscanf converted 2 fields: 15 and 12.000000
 
 ## <a name="see-also"></a>関連項目
 
-[scanf 関数の文字幅指定](../../c-runtime-library/scanf-width-specification.md)<br/>
+[scanf 関数の幅指定](../../c-runtime-library/scanf-width-specification.md)<br/>

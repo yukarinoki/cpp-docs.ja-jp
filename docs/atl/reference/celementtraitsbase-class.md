@@ -1,5 +1,6 @@
 ---
-title: クラス
+description: '詳細情報: CElementTraitsBase クラス'
+title: CElementTraitsBase クラス
 ms.date: 11/04/2016
 f1_keywords:
 - CElementTraitsBase
@@ -11,16 +12,16 @@ f1_keywords:
 helpviewer_keywords:
 - CElementTraitsBase class
 ms.assetid: 75284caf-347e-4355-a7d8-efc708dd514a
-ms.openlocfilehash: 5a29e8778cf2f3400df25b55574950a005bad995
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: a200517e378cc3c3ca854ff60e9a49ac8e43d215
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81327001"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97141779"
 ---
-# <a name="celementtraitsbase-class"></a>クラス
+# <a name="celementtraitsbase-class"></a>CElementTraitsBase クラス
 
-このクラスは、コレクション クラスの既定のコピーおよび移動メソッドを提供します。
+このクラスは、コレクションクラスの既定のコピーおよび移動メソッドを提供します。
 
 ## <a name="syntax"></a>構文
 
@@ -32,7 +33,7 @@ class CElementTraitsBase
 #### <a name="parameters"></a>パラメーター
 
 *T*<br/>
-コレクションに格納されるデータの型。
+コレクションに格納するデータの型。
 
 ## <a name="members"></a>メンバー
 
@@ -40,29 +41,29 @@ class CElementTraitsBase
 
 |名前|説明|
 |----------|-----------------|
-|[C要素トレイトベース::イナルグタイプ](#inargtype)|コレクション クラス オブジェクトに要素を追加するために使用するデータ型。|
-|[ベース:アウトアルプタイプ](#outargtype)|コレクション クラス オブジェクトから要素を取得するために使用するデータ型。|
+|[CElementTraitsBase:: INARGTYPE](#inargtype)|コレクションクラスオブジェクトに要素を追加するために使用するデータ型。|
+|[CElementTraitsBase:: OUTARGTYPE](#outargtype)|コレクションクラスオブジェクトから要素を取得するために使用するデータ型。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
 |名前|説明|
 |----------|-----------------|
-|[要素トレイトベース::コピー要素](#copyelements)|コレクション クラス オブジェクトに格納されている要素をコピーします。|
-|[要素トレイトベース::再配置要素](#relocateelements)|コレクション クラス オブジェクトに格納されている要素を再配置します。|
+|[CElementTraitsBase:: CopyElements](#copyelements)|コレクションクラスオブジェクトに格納されている要素をコピーするには、このメソッドを呼び出します。|
+|[CElementTraitsBase::RelocateElements](#relocateelements)|コレクションクラスオブジェクトに格納されている要素を再配置するには、このメソッドを呼び出します。|
 
 ## <a name="remarks"></a>解説
 
-この基本クラスは、コレクション クラス内の要素をコピーおよび再配置するためのメソッドを定義します。 クラスによって利用されます。 [CDefaultElementTraits](../../atl/reference/cdefaultelementtraits-class.md) [CStringRefElementTraits](../../atl/reference/cstringrefelementtraits-class.md) [CStringElementTraitsI](../../atl/reference/cstringelementtraitsi-class.md)
+この基本クラスは、コレクションクラスの要素をコピーおよび再配置するためのメソッドを定義します。 [CDefaultElementTraits](../../atl/reference/cdefaultelementtraits-class.md)、 [cstringrefelementtraits](../../atl/reference/cstringrefelementtraits-class.md)、および[CStringElementTraitsI](../../atl/reference/cstringelementtraitsi-class.md)クラスによって使用されます。
 
-詳細については、「 [ATL コレクション クラス](../../atl/atl-collection-classes.md)」を参照してください。
+詳細については、「 [ATL コレクションクラス](../../atl/atl-collection-classes.md)」を参照してください。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-**ヘッダー:** atlcoll.h
+**ヘッダー:** atlcoll. h
 
-## <a name="celementtraitsbasecopyelements"></a><a name="copyelements"></a>要素トレイトベース::コピー要素
+## <a name="celementtraitsbasecopyelements"></a><a name="copyelements"></a> CElementTraitsBase:: CopyElements
 
-コレクション クラス オブジェクトに格納されている要素をコピーします。
+コレクションクラスオブジェクトに格納されている要素をコピーするには、このメソッドを呼び出します。
 
 ```
 static void CopyElements(
@@ -76,17 +77,17 @@ static void CopyElements(
 *pDest*<br/>
 コピーされたデータを受け取る最初の要素へのポインター。
 
-*pSrc*<br/>
+*.Psrc*<br/>
 コピーする最初の要素へのポインター。
 
-*n要素*<br/>
+*nElements*<br/>
 コピーする要素の数。
 
 ### <a name="remarks"></a>解説
 
-ソース要素とコピー先要素は重複しないようにします。
+コピー元とコピー先の要素を重複させることはできません。
 
-## <a name="celementtraitsbaseinargtype"></a><a name="inargtype"></a>C要素トレイトベース::イナルグタイプ
+## <a name="celementtraitsbaseinargtype"></a><a name="inargtype"></a> CElementTraitsBase:: INARGTYPE
 
 コレクションに要素を追加するために使用するデータ型。
 
@@ -94,7 +95,7 @@ static void CopyElements(
 typedef const T& INARGTYPE;
 ```
 
-## <a name="celementtraitsbaseoutargtype"></a><a name="outargtype"></a>ベース:アウトアルプタイプ
+## <a name="celementtraitsbaseoutargtype"></a><a name="outargtype"></a> CElementTraitsBase:: OUTARGTYPE
 
 コレクションから要素を取得するために使用するデータ型。
 
@@ -102,9 +103,9 @@ typedef const T& INARGTYPE;
 typedef T& OUTARGTYPE;
 ```
 
-## <a name="celementtraitsbaserelocateelements"></a><a name="relocateelements"></a>要素トレイトベース::再配置要素
+## <a name="celementtraitsbaserelocateelements"></a><a name="relocateelements"></a> CElementTraitsBase::RelocateElements
 
-コレクション クラス オブジェクトに格納されている要素を再配置します。
+コレクションクラスオブジェクトに格納されている要素を再配置するには、このメソッドを呼び出します。
 
 ```
 static void RelocateElements(
@@ -118,15 +119,15 @@ static void RelocateElements(
 *pDest*<br/>
 再配置されたデータを受け取る最初の要素へのポインター。
 
-*pSrc*<br/>
+*.Psrc*<br/>
 再配置する最初の要素へのポインター。
 
-*n要素*<br/>
+*nElements*<br/>
 再配置する要素の数。
 
 ### <a name="remarks"></a>解説
 
-このメソッドは、ほとんどのデータ型に対して十分な[memmove](../../c-runtime-library/reference/memmove-wmemmove.md)を呼び出します。 移動するオブジェクトに自身のメンバーへのポインターが含まれている場合、このメソッドをオーバーライドする必要があります。
+このメソッドは、ほとんどのデータ型に対して十分な [memmove](../../c-runtime-library/reference/memmove-wmemmove.md)を呼び出します。 移動するオブジェクトに独自のメンバーへのポインターが含まれている場合は、このメソッドをオーバーライドする必要があります。
 
 ## <a name="see-also"></a>関連項目
 

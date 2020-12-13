@@ -1,5 +1,6 @@
 ---
-title: クラス
+description: '詳細情報: CLocalHeap クラス'
+title: CLocalHeap クラス
 ms.date: 11/04/2016
 f1_keywords:
 - CLocalHeap
@@ -11,16 +12,16 @@ f1_keywords:
 helpviewer_keywords:
 - CLocalHeap class
 ms.assetid: 1ffa87a5-5fc8-4f8d-8809-58e87e963bd2
-ms.openlocfilehash: 303e3b85ad11c309f862f59d6ec610701c4ef6db
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 6cc168bc80182255017df3e3cdc970e5cfd56c7a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81326760"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97141519"
 ---
-# <a name="clocalheap-class"></a>クラス
+# <a name="clocalheap-class"></a>CLocalHeap クラス
 
-このクラスは、Win32 ローカル ヒープ関数を使用して[IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md)を実装します。
+このクラスは、Win32 ローカルヒープ関数を使用して [IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md) を実装します。
 
 > [!IMPORTANT]
 > このクラスとそのメンバーは、Windows ランタイムで実行されるアプリケーションでは使用できません。
@@ -37,21 +38,21 @@ class CLocalHeap : public IAtlMemMgr
 
 |名前|説明|
 |----------|-----------------|
-|[割り当て](#allocate)|メモリ ブロックを割り当てるには、このメソッドを呼び出します。|
-|[Cローカルヒープ::無料](#free)|このメモリ マネージャによって割り当てられたメモリ ブロックを解放します。|
-|[を指定します。](#getsize)|このメモリ マネージャーによって割り当てられたメモリ ブロックの割り当てサイズを取得します。|
-|[再割り当て](#reallocate)|このメソッドを呼び出し、このメモリ マネージャーによって割り当てられたメモリの再割り当てを行います。|
+|[CLocalHeap:: Allocate](#allocate)|メモリ ブロックを割り当てるには、このメソッドを呼び出します。|
+|[CLocalHeap:: Free](#free)|このメモリマネージャーによって割り当てられたメモリブロックを解放するには、このメソッドを呼び出します。|
+|[CLocalHeap:: GetSize](#getsize)|このメモリマネージャーによって割り当てられたメモリブロックの割り当てサイズを取得するには、このメソッドを呼び出します。|
+|[CLocalHeap:: 再割り当て](#reallocate)|このメソッドを呼び出し、このメモリ マネージャーによって割り当てられたメモリの再割り当てを行います。|
 
 ## <a name="remarks"></a>解説
 
-`CLocalHeap`は、Win32 ローカル ヒープ関数を使用してメモリ割り当て関数を実装します。
+`CLocalHeap` Win32 ローカルヒープ関数を使用して、メモリ割り当て関数を実装します。
 
 > [!NOTE]
-> ローカル ヒープ関数は、他のメモリ管理機能よりも低速で、多くの機能を提供しません。 したがって、新しいアプリケーションでは[ヒープ関数](/windows/win32/Memory/heap-functions)を使用する必要があります。 これらは[CWin32Heap](../../atl/reference/cwin32heap-class.md)クラスで使用できます。
+> ローカルヒープ関数は、他のメモリ管理関数よりも低速であり、多くの機能を提供するわけではありません。 そのため、新しいアプリケーションでは、 [ヒープ関数](/windows/win32/Memory/heap-functions)を使用する必要があります。 これらは、 [CWin32Heap](../../atl/reference/cwin32heap-class.md) クラスで使用できます。
 
 ## <a name="example"></a>例
 
-[IAtlMemgr](../../atl/reference/iatlmemmgr-class.md)の例を参照してください。
+[IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md)の例を参照してください。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -59,11 +60,11 @@ class CLocalHeap : public IAtlMemMgr
 
 `CLocalHeap`
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-**ヘッダー:** atlmem.h
+**ヘッダー:** atlmem. h
 
-## <a name="clocalheapallocate"></a><a name="allocate"></a>割り当て
+## <a name="clocalheapallocate"></a><a name="allocate"></a> CLocalHeap:: Allocate
 
 メモリ ブロックを割り当てるには、このメソッドを呼び出します。
 
@@ -73,7 +74,7 @@ virtual __declspec(allocator) void* Allocate(size_t nBytes) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*Nbytes*<br/>
+*nBytes*<br/>
 新しいメモリ ブロック内の要求されたバイト数。
 
 ### <a name="return-value"></a>戻り値
@@ -82,13 +83,13 @@ virtual __declspec(allocator) void* Allocate(size_t nBytes) throw();
 
 ### <a name="remarks"></a>解説
 
-呼び出し[CLocalHeap::Free](#free)または[CLocalHeap:この](#reallocate)メソッドによって割り当てられたメモリを解放するために再割り当てします。
+[Clocalheap:: Free](#free)または[clocalheap::](#reallocate)の再割り当てを呼び出して、このメソッドによって割り当てられたメモリを解放します。
 
-LMEM_FIXEDのフラグ パラメーターを持つ[LocalAlloc](/windows/win32/api/winbase/nf-winbase-localalloc)を使用して実装されます。
+LMEM_FIXED のフラグパラメーターを持つ [LocalAlloc](/windows/win32/api/winbase/nf-winbase-localalloc) を使用して実装されます。
 
-## <a name="clocalheapfree"></a><a name="free"></a>Cローカルヒープ::無料
+## <a name="clocalheapfree"></a><a name="free"></a> CLocalHeap:: Free
 
-このメモリ マネージャによって割り当てられたメモリ ブロックを解放します。
+このメモリマネージャーによって割り当てられたメモリブロックを解放するには、このメソッドを呼び出します。
 
 ```
 virtual void Free(void* p) throw();
@@ -96,16 +97,16 @@ virtual void Free(void* p) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*P*<br/>
-このメモリ マネージャーによって以前に割り当てられたメモリへのポインター。 NULL は有効な値であり、何も実行しません。
+*p*<br/>
+このメモリ マネージャーによって以前に割り当てられたメモリへのポインター。 NULL は有効な値であり、何も行いません。
 
 ### <a name="remarks"></a>解説
 
 [LocalFree](/windows/win32/api/winbase/nf-winbase-localfree)を使用して実装されます。
 
-## <a name="clocalheapgetsize"></a><a name="getsize"></a>を指定します。
+## <a name="clocalheapgetsize"></a><a name="getsize"></a> CLocalHeap:: GetSize
 
-このメモリ マネージャーによって割り当てられたメモリ ブロックの割り当てサイズを取得します。
+このメモリマネージャーによって割り当てられたメモリブロックの割り当てサイズを取得するには、このメソッドを呼び出します。
 
 ```
 virtual size_t GetSize(void* p) throw();
@@ -113,18 +114,18 @@ virtual size_t GetSize(void* p) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*P*<br/>
+*p*<br/>
 このメモリ マネージャーによって以前に割り当てられたメモリへのポインター。
 
 ### <a name="return-value"></a>戻り値
 
-割り当てられたメモリ ブロックのサイズをバイト単位で返します。
+割り当てられたメモリブロックのサイズをバイト数で返します。
 
 ### <a name="remarks"></a>解説
 
-[を](/windows/win32/api/winbase/nf-winbase-localsize)使用して実装します。
+[Localsize](/windows/win32/api/winbase/nf-winbase-localsize)を使用して実装されます。
 
-## <a name="clocalheapreallocate"></a><a name="reallocate"></a>再割り当て
+## <a name="clocalheapreallocate"></a><a name="reallocate"></a> CLocalHeap:: 再割り当て
 
 このメソッドを呼び出し、このメモリ マネージャーによって割り当てられたメモリの再割り当てを行います。
 
@@ -134,10 +135,10 @@ virtual __declspec(allocator) void* Reallocate(void* p, size_t nBytes) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*P*<br/>
+*p*<br/>
 このメモリ マネージャーによって以前に割り当てられたメモリへのポインター。
 
-*Nbytes*<br/>
+*nBytes*<br/>
 新しいメモリ ブロック内の要求されたバイト数。
 
 ### <a name="return-value"></a>戻り値
@@ -146,15 +147,15 @@ virtual __declspec(allocator) void* Reallocate(void* p, size_t nBytes) throw();
 
 ### <a name="remarks"></a>解説
 
-呼び出し[CLocalHeap::この](#free)メソッドによって割り当てられたメモリを解放するフリー。
+[Clocalheap:: free](#free)を呼び出して、このメソッドによって割り当てられたメモリを解放します。
 
-[を](/windows/win32/api/winbase/nf-winbase-localrealloc)使用して実装します。
+[Localrealloc](/windows/win32/api/winbase/nf-winbase-localrealloc)を使用して実装されます。
 
 ## <a name="see-also"></a>関連項目
 
 [クラスの概要](../../atl/atl-class-overview.md)<br/>
-[クラス](../../atl/reference/ccomheap-class.md)<br/>
-[クラスを使用します。](../../atl/reference/cwin32heap-class.md)<br/>
-[クラス](../../atl/reference/cglobalheap-class.md)<br/>
-[クラス](../../atl/reference/ccrtheap-class.md)<br/>
-[イアトルメムグラムクラス](../../atl/reference/iatlmemmgr-class.md)
+[CComHeap クラス](../../atl/reference/ccomheap-class.md)<br/>
+[CWin32Heap クラス](../../atl/reference/cwin32heap-class.md)<br/>
+[CGlobalHeap クラス](../../atl/reference/cglobalheap-class.md)<br/>
+[CCRTHeap クラス](../../atl/reference/ccrtheap-class.md)<br/>
+[IAtlMemMgr クラス](../../atl/reference/iatlmemmgr-class.md)

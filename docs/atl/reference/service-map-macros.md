@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: Service Map マクロ'
 title: Service Map マクロ
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 - atlcom/ATL::SERVICE_ENTRY
 - atlcom/ATL::SERVICE_ENTRY_CHAIN
 ms.assetid: ca02a125-454a-4cf6-aac2-1c5585025ed4
-ms.openlocfilehash: 1fa163098d89dd949c17ee7cd5e4ddc46cd2a091
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 08a26ac4043b62f8377ca9b4728eb262494f1aa1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88835208"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97138828"
 ---
 # <a name="service-map-macros"></a>Service Map マクロ
 
@@ -25,7 +26,7 @@ ms.locfileid: "88835208"
 |[SERVICE_ENTRY](#service_entry)|オブジェクトが特定のサービス ID をサポートしていることを示します。|
 |[SERVICE_ENTRY_CHAIN](#service_entry_chain)|指定されたオブジェクトにチェーンするよう [Iserviceproviderimpl:: QueryService](#queryservice) に指示します。|
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** atlcom. h
 
@@ -68,7 +69,7 @@ END_SERVICE_MAP()
 
 ## <a name="service_entry"></a><a name="service_entry"></a> SERVICE_ENTRY
 
-オブジェクトが *SID*によって指定されたサービス id をサポートしていることを示します。
+オブジェクトが *SID* によって指定されたサービス id をサポートしていることを示します。
 
 ```
 SERVICE_ENTRY( SID )
@@ -85,7 +86,7 @@ SERVICE_ENTRY( SID )
 
 ## <a name="service_entry_chain"></a><a name="service_entry_chain"></a> SERVICE_ENTRY_CHAIN
 
-*によって*指定されたオブジェクトにチェーンするよう[Iserviceproviderimpl:: QueryService](#queryservice)に指示します。
+*によって* 指定されたオブジェクトにチェーンするよう [Iserviceproviderimpl:: QueryService](#queryservice)に指示します。
 
 ```
 SERVICE_ENTRY_CHAIN( punk )
@@ -131,14 +132,14 @@ STDMETHOD(QueryService)(
 |S_OK|サービスが正常に作成または取得されました。|
 |E_INVALIDARG|1 つ以上の引数が無効です。|
 |E_OUTOFMEMORY|サービスを作成するにはメモリが不足しています。|
-|E_UNEXPECTED|原因不明のエラーが発生しました。|
+|E_UNEXPECTED|不明なエラーが発生しました。|
 |E_NOINTERFACE|要求されたインターフェイスは、このサービスの一部ではないか、サービスが不明です。|
 
 ### <a name="remarks"></a>解説
 
 `QueryService` 指定されたサービス内の要求されたインターフェイスへの間接ポインターを返します。 呼び出し元は、不要になったときにこのポインターを解放する必要があります。
 
-を呼び出すと `QueryService` 、サービス識別子 (*guidservice*) とインターフェイス識別子 (*riid*) の両方が渡されます。 *Guidservice*は、アクセスするサービスを指定します。また、 *riid*は、サービスの一部であるインターフェイスを識別します。 返されると、インターフェイスへの間接ポインターを受け取ります。
+を呼び出すと `QueryService` 、サービス識別子 (*guidservice*) とインターフェイス識別子 (*riid*) の両方が渡されます。 *Guidservice* は、アクセスするサービスを指定します。また、 *riid* は、サービスの一部であるインターフェイスを識別します。 返されると、インターフェイスへの間接ポインターを受け取ります。
 
 インターフェイスを実装するオブジェクトは、他のサービスの一部であるインターフェイスも実装する場合があります。 以下、具体例に沿って説明します。
 
@@ -152,4 +153,4 @@ SID_SMyService や SID_SYourService などの2つの異なるサービスでは�
 
 ## <a name="see-also"></a>関連項目
 
-[[マクロ]](../../atl/reference/atl-macros.md)
+[マクロ](../../atl/reference/atl-macros.md)

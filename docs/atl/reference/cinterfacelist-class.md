@@ -1,5 +1,6 @@
 ---
-title: クラスを一覧表示します。
+description: '詳細情報: CInterfaceList クラス'
+title: CInterfaceList クラス
 ms.date: 11/04/2016
 f1_keywords:
 - CInterfaceList
@@ -8,16 +9,16 @@ f1_keywords:
 helpviewer_keywords:
 - CInterfaceList class
 ms.assetid: 2077764d-25e5-4b3d-96c8-08a287bbcd25
-ms.openlocfilehash: 0a7fd781c63e4ea084cf078e49fc9efb9cfa2d85
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 2612ba4700466bb877f84978c55bfd018f1dd286
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81326788"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97141532"
 ---
-# <a name="cinterfacelist-class"></a>クラスを一覧表示します。
+# <a name="cinterfacelist-class"></a>CInterfaceList クラス
 
-このクラスは、COM インターフェイス ポインターのリストを構築するときに役立つメソッドを提供します。
+このクラスには、COM インターフェイスポインターのリストを構築するときに役立つメソッドが用意されています。
 
 ## <a name="syntax"></a>構文
 
@@ -30,11 +31,11 @@ class CInterfaceList
 
 #### <a name="parameters"></a>パラメーター
 
-*私*<br/>
+*I*<br/>
 格納するポインターの型を指定する COM インターフェイス。
 
-*ピッド*<br/>
-I の IID への*ポインタ。*
+*piid*<br/>
+*I* の IID へのポインター。
 
 ## <a name="members"></a>メンバー
 
@@ -42,27 +43,27 @@ I の IID への*ポインタ。*
 
 |名前|説明|
 |----------|-----------------|
-|[一覧::C インターフェイスリスト](#cinterfacelist)|インターフェイス リストのコンストラクター。|
+|[CInterfaceList:: CInterfaceList](#cinterfacelist)|インターフェイスリストのコンストラクター。|
 
 ## <a name="remarks"></a>解説
 
-このクラスは、COM インターフェイス ポインターのリストを作成するためのコンストラクターと派生メソッドを提供します。 配列が必要な場合は[、CInterfaceArray](../../atl/reference/cinterfacearray-class.md)を使用します。
+このクラスは、COM インターフェイスポインターのリストを作成するためのコンストラクターと派生メソッドを提供します。 配列が必要な場合は、 [Cinterfacearray](../../atl/reference/cinterfacearray-class.md) を使用します。
 
-詳細については、「 [ATL コレクション クラス](../../atl/atl-collection-classes.md)」を参照してください。
+詳細については、「 [ATL コレクションクラス](../../atl/atl-collection-classes.md)」を参照してください。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
-[カトルリスト](../../atl/reference/catllist-class.md)
+[CAtlList](../../atl/reference/catllist-class.md)
 
 `CInterfaceList`
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-**ヘッダー:** atlcoll.h
+**ヘッダー:** atlcoll. h
 
-## <a name="cinterfacelistcinterfacelist"></a><a name="cinterfacelist"></a>一覧::C インターフェイスリスト
+## <a name="cinterfacelistcinterfacelist"></a><a name="cinterfacelist"></a> CInterfaceList:: CInterfaceList
 
-インターフェイス リストのコンストラクター。
+インターフェイスリストのコンストラクター。
 
 ```
 CInterfaceList(UINT nBlockSize = 10) throw();
@@ -70,16 +71,16 @@ CInterfaceList(UINT nBlockSize = 10) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*ブロックサイズ*<br/>
-ブロック サイズ (既定値は 10)。
+*nBlockSize*<br/>
+ブロックサイズ。既定値は10です。
 
 ### <a name="remarks"></a>解説
 
-ブロック サイズは、新しい要素が必要なときに割り当てられるメモリの量を測定します。 ブロック サイズが大きくなると、メモリ割り当てルーチンの呼び出しは減りますが、使用するリソースは多くなります。
+ブロックサイズは、新しい要素が必要な場合に割り当てられるメモリの量を測定したものです。 ブロックサイズを大きくすると、メモリ割り当てルーチンの呼び出しが減少しますが、より多くのリソースが使用されます。
 
 ## <a name="see-also"></a>関連項目
 
-[クラスを表します。](../../atl/reference/catllist-class.md)<br/>
-[CComQIPtrクラス](../../atl/reference/ccomqiptr-class.md)<br/>
-[クラスをクラス](../../atl/reference/ccomqiptrelementtraits-class.md)<br/>
+[CAtlList クラス](../../atl/reference/catllist-class.md)<br/>
+[CComQIPtr クラス](../../atl/reference/ccomqiptr-class.md)<br/>
+[CComQIPtrElementTraits クラス](../../atl/reference/ccomqiptrelementtraits-class.md)<br/>
 [クラスの概要](../../atl/atl-class-overview.md)
