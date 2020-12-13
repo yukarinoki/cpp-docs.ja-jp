@@ -1,4 +1,5 @@
 ---
+description: Win32 インターネット拡張機能についての詳細情報 (WinInet)
 title: Win32 インターネット拡張機能 (WinInet)
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,46 +8,46 @@ helpviewer_keywords:
 - client applications [MFC], Win32 Internet
 - WinInet classes [MFC], about WinInet classes
 ms.assetid: f8c80f0b-ce14-4f0d-a3cf-4f7d8c5cca59
-ms.openlocfilehash: 64e699753a3cf266f1162df848afab6ab0b3904f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 52f04be25e16aa6c1c0546e68a7a702335ae5a09
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62326574"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97342596"
 ---
 # <a name="win32-internet-extensions-wininet"></a>Win32 インターネット拡張機能 (WinInet)
 
-インターネット クライアント アプリケーションは、gopher、FTP、HTTP などのインターネット プロトコルを使用して、ネットワーク データ ソース (サーバー) から情報にアクセスするプログラムです。 インターネット クライアント アプリケーションは、たとえば天気マップ、株価、新聞の見出しなどのデータを取得するサーバーにアクセスがあります。 インターネット クライアントは、外部ネットワーク (インターネット) または内部ネットワーク (イントラネットとも呼ばれます) を介して、サーバーにアクセスできます。
+インターネットクライアントアプリケーションは、gopher、FTP、HTTP などのインターネットプロトコルを使用してネットワークデータソース (サーバー) から情報にアクセスするプログラムです。 たとえば、インターネットクライアントアプリケーションは、サーバーにアクセスして、気象地図、株価、新聞ヘッドラインなどのデータを取得する場合があります。 インターネットクライアントは、外部ネットワーク (インターネット) または内部ネットワーク (イントラネットとも呼ばれます) を介してサーバーにアクセスできます。
 
-MFC には、インターネット クライアント アプリケーションを作成するための Win32 インターネット拡張機能、または、WinInet が含まれています。 MFC には、一連の標準的な使いやすいクラスでこれらのインターネット拡張機能がカプセル化します。 Win32 関数を直接呼び出すことによって、または MFC WinInet クラスを使用して、WinInet のクライアント アプリケーションを記述することができます。
+MFC には、インターネットクライアントアプリケーションを作成するための Win32 インターネット拡張機能 (WinInet) が含まれています。 MFC では、これらのインターネット拡張機能を、標準的で使いやすいクラスのセットとしてカプセル化しています。 WinInet クライアントアプリケーションを作成するには、直接 Win32 関数を呼び出すか、MFC WinInet クラスを使用します。
 
-Microsoft Win32 のインターネット機能 (WinInet) では、インターネット アプリケーションに不可欠な要素のために役立ちます。 新しい関数 WININET に含まれています。DLL、HTTP (ハイパー テキスト転送プロトコル)、gopher、FTP (ファイル転送プロトコル) を使用してインターネットへのアクセスを簡略化します。
+Microsoft Win32 インターネット機能 (WinInet) を使用すると、インターネットを任意のアプリケーションの不可欠な部分にすることができます。 WININET.DLL に含まれる新しい関数は、HTTP (ハイパーテキスト転送プロトコル)、FTP (ファイル転送プロトコル)、および gopher を使用したインターネットへのアクセスを簡略化します。
 
-次のトピックでは、インターネット クライアント アプリケーションを作成するプロセスについて説明します。
+次のトピックでは、インターネットクライアントアプリケーションを作成するプロセスについて説明します。
 
-- [WinInet を使ってインターネット クライアント アプリケーションを簡単に作成する方法](../mfc/how-wininet-makes-it-easier-to-create-internet-client-applications.md)
+- [WinInet を使用してインターネットクライアントアプリケーションを簡単に作成する方法](../mfc/how-wininet-makes-it-easier-to-create-internet-client-applications.md)
 
-- [MFC を使ってインターネット クライアント アプリケーションを簡単に作成する方法](../mfc/how-mfc-makes-it-easier-to-create-internet-client-applications.md)
+- [MFC を使用してインターネットクライアントアプリケーションを簡単に作成する方法](../mfc/how-mfc-makes-it-easier-to-create-internet-client-applications.md)
 
-- [インターネット クライアント アプリケーションの作成用の MFC クラス](../mfc/mfc-classes-for-creating-internet-client-applications.md)
+- [インターネットクライアントアプリケーションを作成するための MFC クラス](../mfc/mfc-classes-for-creating-internet-client-applications.md)
 
-- [インターネット クライアント クラスの必要条件](../mfc/prerequisites-for-internet-client-classes.md)
+- [インターネットクライアントクラスの前提条件](../mfc/prerequisites-for-internet-client-classes.md)
 
-- [MFC WinInet クラスを使ってインターネット クライアント アプリケーションを作成する方法](../mfc/writing-an-internet-client-application-using-mfc-wininet-classes.md)
+- [MFC WinInet クラスを使用したインターネットクライアントアプリケーションの作成](../mfc/writing-an-internet-client-application-using-mfc-wininet-classes.md)
 
-次のトピックでは、WinInet の一般的なタスクを実行するための手順を説明します。
+次のトピックでは、一般的な WinInet タスクを実行する手順について説明します。
 
-- [典型的なインターネット クライアント アプリケーションの作成手順](../mfc/steps-in-a-typical-internet-client-application.md)
+- [一般的なインターネットクライアントアプリケーションの手順](../mfc/steps-in-a-typical-internet-client-application.md)
 
-- [典型的な FTP クライアント アプリケーションの作成手順](../mfc/steps-in-a-typical-ftp-client-application.md)
+- [一般的な FTP クライアントアプリケーションの手順](../mfc/steps-in-a-typical-ftp-client-application.md)
 
-- [ファイルを削除する典型的な FTP クライアント アプリケーションの作成手順](../mfc/steps-in-a-typical-ftp-client-application-to-delete-a-file.md)
+- [一般的な FTP クライアントアプリケーションでファイルを削除する手順](../mfc/steps-in-a-typical-ftp-client-application-to-delete-a-file.md)
 
-- [典型的な Gopher クライアント アプリケーションの作成手順](../mfc/steps-in-a-typical-gopher-client-application.md)
+- [一般的な Gopher クライアントアプリケーションの手順](../mfc/steps-in-a-typical-gopher-client-application.md)
 
-- [典型的な HTTP クライアント アプリケーションの作成手順](../mfc/steps-in-a-typical-http-client-application.md)
+- [一般的な HTTP クライアントアプリケーションの手順](../mfc/steps-in-a-typical-http-client-application.md)
 
 ## <a name="see-also"></a>関連項目
 
-[MFC インターネット プログラミングの基礎](../mfc/mfc-internet-programming-basics.md)<br/>
+[MFC インターネットプログラミングの基礎](../mfc/mfc-internet-programming-basics.md)<br/>
 [WinInet の基礎](../mfc/wininet-basics.md)

@@ -1,236 +1,237 @@
 ---
-title: 'C:  OpenMP C および C++ の文法'
+description: '詳細情報: .C C と C++ の文法'
+title: C. OpenMP C と C++ の文法
 ms.date: 01/16/2019
 ms.assetid: 97a878ce-1533-47f7-a134-66fcbff48524
-ms.openlocfilehash: 85e18161079b49e83cc9fedb3184ee220c889e75
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9543d721afbff1069b5497ba8dc7092089a1b706
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62362947"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97342505"
 ---
-# <a name="c-openmp-c-and-c-grammar"></a>C:  OpenMP C および C++ の文法
+# <a name="c-openmp-c-and-c-grammar"></a>C. OpenMP C と C++ の文法
 
 [C.1 表記](#c1-notation)<br/>
 [C.2 規則](#c2-rules)
 
 ## <a name="c1-notation"></a>C.1 表記
 
-文法規則は、非-ターミナルでの名前の後に別の行に交換用の代替手段を続けて、コロンです。
+文法規則は、非ターミナルの名前と、その後にコロンを付けたもので構成され、その後に別の行で代替候補が続きます。
 
-式の構文用語<sub>opt</sub>という用語が置換内で省略可能であることを示します。
+構文式の<sub>選択</sub> 候補は、置換で用語が省略可能であることを示します。
 
-構文の式*用語*<sub>optseq</sub>と等価*用語 seq*<sub>opt</sub>次の追加の規則で。
+構文式 *用語*<sub>の optseq</sub> は、次の追加の規則を使用した *用語シーケンス*<sub>選択</sub> に相当します。
 
-*term-seq*:  
-&nbsp;&nbsp;&nbsp;&nbsp;*用語*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*term-seq* *term*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*term-seq*   `,` *term*
+*用語のシーケンス*:  
+&nbsp;&nbsp;&nbsp;&nbsp;*句*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*用語-seq* *語*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*用語-シーケンス* `,`*用語*   
 
 ## <a name="c2-rules"></a>C.2 規則
 
-表記法は、C 規格の 6.1 で説明します。 この文章の付録では、OpenMP C および C++ のディレクティブの基本言語の文法を拡張機能を示します。
+この表記は、C 標準のセクション6.1 で説明されています。 この文法付録では、OpenMP C および C++ ディレクティブの基本言語文法の拡張について説明します。
 
 **/\* C++ (ISO/IEC 14882:1998) \*/**
 
-*statement-seq*:<br/>
+*ステートメント-seq*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*statement*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*openmp-directive*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*statement-seq statement*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*statement-seq openmp-directive*
+&nbsp;&nbsp;&nbsp;&nbsp;*openmp ディレクティブ*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*ステートメント-seq ステートメント*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*ステートメント-seq openmp ディレクティブ*
 
-**/\* C90 で (ISO/IEC 9899:1990) \*/**
+**/\* C90 (ISO/IEC 9899:1990) \*/**
 
 *statement-list*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*statement*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*openmp-directive*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*ステートメント list ステートメント*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*ステートメントの一覧の openmp ディレクティブ*
+&nbsp;&nbsp;&nbsp;&nbsp;*openmp ディレクティブ*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*ステートメントリストステートメント*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*ステートメントリスト openmp ディレクティブ*
 
 **/\* C99 (ISO/IEC 9899:1999) \*/**
 
-*block-item*:<br/>
+*ブロック項目*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*declaration*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*statement*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*openmp-directive*
+&nbsp;&nbsp;&nbsp;&nbsp;*openmp ディレクティブ*
 
-**/\* 標準的なステートメント \*/**
+**/\* 標準ステートメント \*/**
 
 *statement*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*openmp コンストラクト*
 
 *openmp コンストラクト*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*並列のコンス トラクター*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*for コンストラクト*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*セクションのコンス トラクター*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*1 つのコンス トラクター*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*並列-for のコンストラクト*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*parallel-sections-construct*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*master コンストラクト*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*critical コンストラクト*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*parallel コンストラクト*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*-コンストラクト*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*セクション-コンストラクト*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*単一コンストラクト*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*parallel-コンストラクト*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*並列セクション-コンストラクト*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*マスター-コンストラクト*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*重大-コンストラクト*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*atomic コンストラクト*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*順序付けのコンス トラクター*
+&nbsp;&nbsp;&nbsp;&nbsp;*ordered-コンストラクト*
 
 *openmp ディレクティブ*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*barrier ディレクティブ*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*バリア-ディレクティブ*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*flush ディレクティブ*
 
 *構造化ブロック*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*statement*
 
-*parallel-construct*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*並列ディレクティブ構造化ブロック*
+*並列コンストラクト*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*並列ディレクティブの構造化ブロック*
 
-*parallel-directive*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;  `# pragma omp parallel` *parallel-clause*<sub>optseq</sub> *new-line*
+*並列ディレクティブ*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;  `# pragma omp parallel`*並列句の*<sub>optseq</sub> *改行*
 
-*並列句*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*unique-parallel-clause*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*data-clause*
+*parallel 句*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*unique-parallel 句*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*data 句*
 
-*unique-parallel-clause*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;  `if (` *expression*   `)`<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;  `num_threads (` *expression*   `)`
+*unique-parallel 句*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;  `if (`*式*   `)`<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;  `num_threads (`*式*   `)`
 
-*コンス トラクターの*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*イテレーション ステートメントの for ディレクティブ*
+*-コンストラクト*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*ディレクティブの反復ステートメント*
 
-*ディレクティブの*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;  `# pragma omp for` *for-clause*<sub>optseq</sub> *new-line*
+*ディレクティブ*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;  `# pragma omp for`*for 句*<sub>optseq</sub> *改行*
 
 *for 句*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*unique-for-clause*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*data-clause*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*unique-句*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*data 句*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;  `nowait`
 
-*unique-for-clause*:<br/>
+*unique-句*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;  `ordered`<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;  `schedule (` *schedule-kind*   `)`<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;  `schedule (` *schedule-kind*   `,` *expression*   `)`
+&nbsp;&nbsp;&nbsp;&nbsp;  `schedule (`*スケジュール-種類*   `)`<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;  `schedule (`*スケジュール-種類* `,`*式*      `)`
 
-*スケジュールの種類*:<br/>
+*スケジュール-種類*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;  `static`<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;  `dynamic`<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;  `guided`<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;  `runtime`
 
-*sections-construct*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*セクション ディレクティブのセクションのスコープ*
+*セクション-コンストラクト*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*セクション-ディレクティブセクション-スコープ*
 
-*sections-directive*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;  `# pragma omp sections` *sections-clause*<sub>optseq</sub> *new-line*
+*セクション-ディレクティブ*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;  `# pragma omp sections`*セクション-句*<sub>optseq</sub> *改行*
 
-*sections-clause*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*data-clause*<br/>
+*セクション-句*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*data 句*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;  `nowait`
 
-*section-scope*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*{ section-sequence }*
+*セクション-スコープ*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*{section-sequence}*
 
-*section-sequence*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*section-directive*<sub>opt</sub> *structured-block*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*セクション シーケンス構造セクション ディレクティブのブロック*
+*セクション-シーケンス*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*セクション-ディレクティブ*<sub>opt</sub> *構造化ブロック*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*セクション-シーケンスセクション-ディレクティブの構造化ブロック*
 
-*section-directive*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;  `# pragma omp section` *new-line*
+*セクション-ディレクティブ*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;  `# pragma omp section`*改行*
 
-*1 つのコンス トラクター*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*単一ディレクティブ構造化ブロック*
+*単一コンストラクト*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*単一ディレクティブの構造化ブロック*
 
-*single-directive*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;  `# pragma omp single` *single-clause*<sub>optseq</sub> *new-line*
+*シングルディレクティブ*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;  `# pragma omp single`*単一句の*<sub>optseq</sub> *改行*
 
 *単一句*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*data-clause*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*data 句*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;  `nowait`
 
-*parallel-for-construct*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*ディレクティブの並列の繰り返しステートメント*
+*parallel-コンストラクト*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*並列ディレクティブの反復ステートメント*
 
-*parallel-for-directive*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;  `# pragma omp parallel for` *parallel-for-clause*<sub>optseq</sub> *new-line*
+*並列ディレクティブ*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;  `# pragma omp parallel for`*並列句の*<sub>optseq</sub> *の改行*
 
-*並列-句の*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*unique-parallel-clause*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*unique-for-clause*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*data-clause*
+*parallel-句*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*unique-parallel 句*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*unique-句*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*data 句*
 
-*parallel-sections-construct*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*並列のセクションでは、ディレクティブのセクション スコープ*
+*並列セクション-コンストラクト*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*並列セクション-ディレクティブセクション-スコープ*
 
-*parallel-sections-directive*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;  `# pragma omp parallel sections` *parallel-sections-clause*<sub>optseq</sub> *new-line*
+*並列セクション-ディレクティブ*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;  `# pragma omp parallel sections`*並列セクション-句*<sub>optseq</sub> *改行*
 
-*parallel-sections-clause*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*unique-parallel-clause*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*data-clause*
+*並列セクション-句*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*unique-parallel 句*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*data 句*
 
-*マスター コンストラクト*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*master ディレクティブ構造化ブロック*
+*マスター-コンストラクト*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*マスターディレクティブの構造化ブロック*
 
-*master ディレクティブ*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;  `# pragma omp master` *new-line*
+*マスターディレクティブ*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;  `# pragma omp master`*改行*
 
-*critical-construct*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*critical ディレクティブ構造化ブロック*
+*重大な構成*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*重大なディレクティブの構造化ブロック*
 
-*critical ディレクティブ*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;  `# pragma omp critical` *region-phrase*<sub>opt</sub> *new-line*
+*重大なディレクティブ*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;  `# pragma omp critical`*リージョンフレーズの*<sub></sub> *改行*
 
-*リージョン語句*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*(識別子)*
+*地域-語句*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*識別子*
 
-*barrier ディレクティブ*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;  `# pragma omp barrier` *new-line*
+*バリア-ディレクティブ*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;  `# pragma omp barrier`*改行*
 
 *atomic コンストラクト*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*atomic ディレクティブの式ステートメント*
+&nbsp;&nbsp;&nbsp;&nbsp;*atomic ディレクティブ式-ステートメント*
 
 *atomic ディレクティブ*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;  `# pragma omp atomic` *new-line*
+&nbsp;&nbsp;&nbsp;&nbsp;  `# pragma omp atomic`*改行*
 
 *flush ディレクティブ*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;  `# pragma omp flush` *flush-vars*<sub>opt</sub> *new-line*
+&nbsp;&nbsp;&nbsp;&nbsp;  `# pragma omp flush`*フラッシュ-変数* を <sub>選択</sub> します。
 
-*フラッシュ var*:<br/>
+*フラッシュ変数*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*(変数リスト)*
 
-*順序付けられたコンストラクト*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*ordered ディレクティブ構造化ブロック*
+*順序付け* された構造:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*順序付きディレクティブの構造化ブロック*
 
-*ordered ディレクティブ*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;  `# pragma omp ordered` *new-line*
+*ordered-ディレクティブ*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;  `# pragma omp ordered`*改行*
 
 **/\* 標準の宣言 \*/**
 
 *declaration*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*threadprivate-directive*
+&nbsp;&nbsp;&nbsp;&nbsp;*threadprivate-ディレクティブ*
 
-*threadprivate-directive*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;  `# pragma omp threadprivate (` *variable-list*    `)` *new-line*
+*threadprivate-ディレクティブ*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;  `# pragma omp threadprivate (`*変数リスト* `)`*改行*    
 
-*データ句*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;  `private (` *variable-list*   `)`<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;  `copyprivate (`  *variable-list*    `)`<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;  `firstprivate (`  *variable-list*    `)`<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;  `lastprivate (` *variable-list*    `)`<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;  `shared (` *variable-list*   `)`<br/>
+*data 句*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;  `private (`*変数リスト*   `)`<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;  `copyprivate (`  *変数リスト*    `)`<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;  `firstprivate (`  *変数リスト*    `)`<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;  `lastprivate (`*変数リスト*    `)`<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;  `shared (`*変数リスト*   `)`<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;  `default ( shared )`<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;  `default ( none )`<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;  `reduction (`  *reduction-operator*    `:`  *variable-list*    `)`<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;  `copyin (`  *variable-list*    `)`
+&nbsp;&nbsp;&nbsp;&nbsp;  `reduction (`  *リダクション演算子* `:`*変数リスト*          `)`<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;  `copyin (`  *変数リスト*    `)`
 
-*減少演算子*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;いずれか:   `+ \* - & ^ | && ||`
+*リダクション演算子*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;次のいずれか:   `+ \* - & ^ | && ||`
 
-**/\* C で \*/**
+**/\* C の場合 \*/**
 
 *変数リスト*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*identifier*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*variable-list*   `,` *identifier*
+&nbsp;&nbsp;&nbsp;&nbsp;*変数リスト* `,`*識別子*   
 
-**/\* C++ では \*/**
+**/\* C++ の \*/**
 
 *変数リスト*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*id-expression*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*variable-list*   `,` *id-expression*
+&nbsp;&nbsp;&nbsp;&nbsp;*id-式*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*変数リスト* `,`*id-式*   

@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: lock_when 列挙型'
 title: lock_when Enum
 ms.date: 11/04/2016
 ms.topic: reference
@@ -9,12 +10,12 @@ f1_keywords:
 helpviewer_keywords:
 - lock_when enum
 ms.assetid: 6b87bbe9-63cd-450d-a02e-bb91ffd0dcea
-ms.openlocfilehash: 991cce4cfa6810f35c2ccb3ec1ed45adf2d849ac
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 5fcc0e428056f5076803ec1ba82bb20207e37189
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91508682"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97344485"
 ---
 # <a name="lock_when-enum"></a>lock_when Enum
 
@@ -122,7 +123,7 @@ In thread 6, Counter = 10
 All threads completed.
 ```
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー ファイル** \<msclr\lock.h>
 

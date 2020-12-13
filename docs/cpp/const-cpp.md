@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「const (C++)」を参照してください。
 title: const (C++)
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - const keyword [C++]
 ms.assetid: b21c0271-1ad0-40a0-b21c-5e812bba0318
-ms.openlocfilehash: db79e228f1fabc4b2da0a7778126a1b576a67768
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 35943a9b417029e92fe478d375423901c201b810
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87229039"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97344654"
 ---
 # <a name="const-c"></a>const (C++)
 
@@ -37,7 +38,7 @@ int main() {
 }
 ```
 
-C++ では、 **`const`** [#define](../preprocessor/hash-define-directive-c-cpp.md)プリプロセッサディレクティブの代わりにキーワードを使用して定数値を定義できます。 で定義された値 **`const`** は、型チェックの対象となり、定数式の代わりに使用できます。 C++ では、次のように変数を使用して配列のサイズを指定でき **`const`** ます。
+C++ では、 **`const`** [#define](../preprocessor/hash-define-directive-c-cpp.md) プリプロセッサディレクティブの代わりにキーワードを使用して定数値を定義できます。 で定義された値 **`const`** は、型チェックの対象となり、定数式の代わりに使用できます。 C++ では、次のように変数を使用して配列のサイズを指定でき **`const`** ます。
 
 ```cpp
 // constant_values2.cpp

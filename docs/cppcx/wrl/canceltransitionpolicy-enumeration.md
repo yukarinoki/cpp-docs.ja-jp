@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「Cancel遷移 Tionpolicy 列挙型」を参照してください。
 title: CancelTransitionPolicy 列挙型
 ms.date: 11/04/2016
 ms.topic: reference
@@ -9,12 +10,12 @@ f1_keywords:
 helpviewer_keywords:
 - CancelTransitionPolicy Enumeration
 ms.assetid: 5de49f7d-e5e3-43e9-bbca-666caf226cef
-ms.openlocfilehash: e820b3fffb4a00e95a1210a5c0beb3229c6d1657
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 8de995ed492f8f1260534b08b818b77d889d95fd
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80214124"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97344537"
 ---
 # <a name="canceltransitionpolicy-enumeration"></a>CancelTransitionPolicy 列挙型
 
@@ -35,12 +36,12 @@ enum CancelTransitionPolicy;
 |`RemainCanceled`|非同期操作が現在クライアントによって要求された取り消し状態にある場合、これは、ターミナルの完了状態またはエラー状態に遷移するのではなく、キャンセル状態のままになることを示します。|
 |`TransitionFromCanceled`|非同期操作が現在クライアントによって要求された取り消し状態にある場合は、このフラグを利用する呼び出しによって決定された状態が、その取り消し状態から完了またはエラーの状態に遷移することを示します。|
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** async .h
 
 **名前空間:** Microsoft::WRL
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[Microsoft::WRL 名前空間](microsoft-wrl-namespace.md)
+[Microsoft:: WRL 名前空間](microsoft-wrl-namespace.md)

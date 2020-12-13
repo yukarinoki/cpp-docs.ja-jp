@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: lock クラス'
 title: lock クラス
 ms.date: 01/16/2019
 ms.topic: reference
@@ -14,12 +15,12 @@ f1_keywords:
 helpviewer_keywords:
 - msclr::lock class
 ms.assetid: 5123edd9-6aed-497d-9a0b-f4b6d6c0d666
-ms.openlocfilehash: 7b2f187ec940af95523d0bbfb9265d7d9d6f69e8
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: d00614e814d171664a75ec61b9227942806b8cca
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91508647"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97344498"
 ---
 # <a name="lock-class"></a>lock クラス
 
@@ -63,7 +64,7 @@ ref class lock;
 |[lock::operator==](#operator-equality)|等値演算子。|
 |[lock:: operator! =](#operator-inequality)|非等値演算子。|
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー ファイル** \<msclr\lock.h>
 
@@ -103,7 +104,7 @@ template<class T> lock(
 
 <xref:System.ApplicationException>タイムアウト前にロックの取得が行われない場合にスローします。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 コンストラクターの最初の3つの形式は、 `_object` 指定されたタイムアウト期間内 (または <xref:System.Threading.Timeout.Infinite> 何も指定されていない場合) にロックを取得しようとします。
 
@@ -211,7 +212,7 @@ All threads completed.
 ~lock();
 ```
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 デストラクターは [lock:: release](#release)を呼び出します。
 
@@ -328,7 +329,7 @@ void acquire(
 
 <xref:System.ApplicationException>タイムアウト前にロックの取得が行われない場合にスローします。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 タイムアウト値が指定されていない場合、既定のタイムアウトはに <xref:System.Threading.Timeout.Infinite> なります。
 
@@ -539,7 +540,7 @@ operator bool();
 
 **`true`** ロックが保持されている場合は **`false`** 。それ以外の場合は。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 この演算子は、実際に `_detail_class::_safe_bool` は、 **`bool`** 整数型に変換できないため、より安全なに変換されます。
 
@@ -642,7 +643,7 @@ All threads completed.
 void release();
 ```
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 ロックが保持されていない場合、 `release` は何も行いません。
 
@@ -760,7 +761,7 @@ bool try_acquire(
 
 **`true`** ロックが取得された場合は **`false`** 。それ以外の場合は。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 ロックが既に取得されている場合、この関数は何も行いません。
 

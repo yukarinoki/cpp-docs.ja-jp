@@ -1,4 +1,5 @@
 ---
+description: '詳細については、「関数呼び出し演算子: ()」を参照してください。'
 title: '関数呼び出し演算子: ()'
 ms.date: 06/11/2020
 helpviewer_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 50c92e59-a4bf-415a-a6ab-d66c679ee80a
 no-loc:
 - opt
-ms.openlocfilehash: 5bb87795d3e91d853dc0d269ee9d2aa3ba025c0e
-ms.sourcegitcommit: 83ea5df40917885e261089b103d5de3660314104
+ms.openlocfilehash: 351674f345c7213a3c164ff88e9a165775088c68
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85813551"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97344563"
 ---
 # <a name="function-call-operator-"></a>関数呼び出し演算子: ()
 
@@ -28,9 +29,9 @@ ms.locfileid: "85813551"
 > *`postfix-expression`*:\
 > &emsp;*`postfix-expression`* **`(`** *`argument-expression-list`* <sub>opt</sub> **`)`**
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-関数呼び出し演算子の引数は *`argument-expression-list`* 、式のコンマ区切りリストであるから取得されます。 これらの式の値は、引数として関数に渡されます。 *引数式リスト*は空にすることができます。 C++ 17 より前では、関数式と引数式の評価順序は指定されておらず、任意の順序で発生する可能性があります。 C++ 17 以降では、関数式は、引数式または既定の引数の前に評価されます。 引数の式は、不確定なシーケンスで評価されます。
+関数呼び出し演算子の引数は *`argument-expression-list`* 、式のコンマ区切りリストであるから取得されます。 これらの式の値は、引数として関数に渡されます。 *引数式リスト* は空にすることができます。 C++ 17 より前では、関数式と引数式の評価順序は指定されておらず、任意の順序で発生する可能性があります。 C++ 17 以降では、関数式は、引数式または既定の引数の前に評価されます。 引数の式は、不確定なシーケンスで評価されます。
 
 は、 *`postfix-expression`* 呼び出す関数に評価されます。 次の形式のいずれかを使用できます。
 
@@ -136,7 +137,7 @@ int main()
 }
 ```
 
-上のコードでは、というクラスを定義し `Point` ています。これには、 *x*座標と*y*座標を表すプライベートデータオブジェクトが含まれています。 これらのデータ オブジェクトを変更し、値を取得する必要があります。 このプログラムは、このようなクラスのいくつかの設計の 1 つに過ぎません。`GetX` と `SetX` または `GetY` と `SetY` 関数を使う設計も可能です。
+上のコードでは、というクラスを定義し `Point` ています。これには、 *x* 座標と *y* 座標を表すプライベートデータオブジェクトが含まれています。 これらのデータ オブジェクトを変更し、値を取得する必要があります。 このプログラムは、このようなクラスのいくつかの設計の 1 つに過ぎません。`GetX` と `SetX` または `GetY` と `SetY` 関数を使う設計も可能です。
 
 クラス型を返す関数、クラス型へのポインター、またはクラス型への参照は、メンバー選択演算子の左のオペランドとして使用できます。 次のコードは有効です。
 
@@ -181,7 +182,7 @@ int main() {
 }
 ```
 
-関数は再帰的に呼び出すことができます。 関数宣言の詳細については、「[関数](functions-cpp.md)」を参照してください。 関連資料は[、翻訳単位およびリンケージ](../cpp/program-and-linkage-cpp.md)に含まれています。
+関数は再帰的に呼び出すことができます。 関数宣言の詳細については、「 [関数](functions-cpp.md)」を参照してください。 関連資料は [、翻訳単位およびリンケージ](../cpp/program-and-linkage-cpp.md)に含まれています。
 
 ## <a name="see-also"></a>関連項目
 

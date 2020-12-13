@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: MFC によるインターネットクライアントアプリケーションの作成が容易になります。'
 title: MFC を使ってインターネット クライアント アプリケーションを簡単に作成する方法
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - Internet applications [MFC], MFC
 - MFC, Internet applications
 ms.assetid: 94437b3f-f15c-437d-b5fd-264a2efec9ab
-ms.openlocfilehash: 71b72a3079cd0d0c87289c1813c09a24d9f75c89
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 7cc201c67cf4964e5bd561cd173186bc57feb89b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84618556"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97343603"
 ---
 # <a name="how-mfc-makes-it-easier-to-create-internet-client-applications"></a>MFC を使ってインターネット クライアント アプリケーションを簡単に作成する方法
 
@@ -34,4 +35,4 @@ MFC WinInet クラスは、 `CStdioFile` インターネット経由で転送さ
 ## <a name="see-also"></a>関連項目
 
 [Win32 インターネット拡張機能 (WinInet)](win32-internet-extensions-wininet.md)<br/>
-[WinInet を使ってインターネット クライアント アプリケーションを簡単に作成する方法](how-wininet-makes-it-easier-to-create-internet-client-applications.md)
+[WinInet を使用してインターネットクライアントアプリケーションを簡単に作成する方法](how-wininet-makes-it-easier-to-create-internet-client-applications.md)

@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: マネージ型 (C++/CLI)'
 title: マネージド型 (C++/CLI)
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -17,18 +18,18 @@ helpviewer_keywords:
 - exceptions, diagnosing odd behavior
 - compatibility, between assemblies
 ms.assetid: 679b8ed3-d966-4a0c-b627-2a3f3ec96b74
-ms.openlocfilehash: c542151bda780e5306db35049d988e6514fffd62
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: ccf126152216cfddb9a78cb5abc608f23cc3ba80
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87225606"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97344459"
 ---
 # <a name="managed-types-ccli"></a>マネージド型 (C++/CLI)
 
 Visual C++ を使用すると、共通言語ランタイムの機能をサポートするマネージ型を使用して .NET 機能にアクセスでき、ランタイムの利点と制限が適用されます。
 
-## <a name="managed-types-and-the-main-function"></a><a name="main_functions"></a>マネージ型と main 関数
+## <a name="managed-types-and-the-main-function"></a><a name="main_functions"></a> マネージ型と main 関数
 
 を使用してアプリケーションを作成する場合 **`/clr`** 、 **main ()** 関数の引数をマネージ型にすることはできません。
 
@@ -40,9 +41,9 @@ Visual C++ を使用すると、共通言語ランタイムの機能をサポー
 int main(int, char*[], char*[]) {}
 ```
 
-## <a name="net-framework-equivalents-to-c-native-types"></a><a name="dotnet"></a>.NET Framework C++ ネイティブ型に相当します。
+## <a name="net-framework-equivalents-to-c-native-types"></a><a name="dotnet"></a> .NET Framework C++ ネイティブ型に相当します。
 
-次の表は、**システム**名前空間の定義済みの型のエイリアスである組み込み Visual C++ 型のキーワードを示しています。
+次の表は、 **システム** 名前空間の定義済みの型のエイリアスである組み込み Visual C++ 型のキーワードを示しています。
 
 |Visual C++ の種類|.NET Framework 型|
 |-----------------------|-------------------------|
@@ -53,7 +54,7 @@ int main(int, char*[], char*[]) {}
 |**`wchar_t`**|<xref:System.Char?displayProperty=nameWithType>|
 |**`short`** および **`signed short`**|<xref:System.Int16?displayProperty=nameWithType>|
 |**`unsigned short`**|<xref:System.UInt16?displayProperty=nameWithType>|
-|**`int`**、 **`signed int`** 、 **`long`** 、および**`signed long`**|<xref:System.Int32?displayProperty=nameWithType>|
+|**`int`**、 **`signed int`** 、 **`long`** 、および **`signed long`**|<xref:System.Int32?displayProperty=nameWithType>|
 |**`unsigned int`** および **`unsigned long`**|<xref:System.UInt32?displayProperty=nameWithType>|
 |**`__int64`** および **`signed __int64`**|<xref:System.Int64?displayProperty=nameWithType>|
 |**`unsigned __int64`**|<xref:System.UInt64?displayProperty=nameWithType>|
@@ -62,7 +63,7 @@ int main(int, char*[], char*[]) {}
 
 コンパイラオプションの既定値をまたはに設定する方法の詳細につい **`signed char`** **`unsigned char`** ては、「 [ `/J` (既定 **`char`** の型は **`unsigned`** )](../build/reference/j-default-char-type-is-unsigned.md)」を参照してください。
 
-## <a name="version-issues-for-value-types-nested-in-native-types"></a><a name="version_issues"></a>ネイティブ型で入れ子になっている値型のバージョンの問題
+## <a name="version-issues-for-value-types-nested-in-native-types"></a><a name="version_issues"></a> ネイティブ型で入れ子になっている値型のバージョンの問題
 
 クライアントアセンブリを構築するために使用される署名済みの (厳密な名前の) アセンブリコンポーネントを考えてみます。 コンポーネントには、ネイティブ共用体、クラス、または配列のメンバーの型としてクライアントで使用される値の型が含まれています。 コンポーネントの将来のバージョンで値の型のサイズまたはレイアウトが変更された場合は、クライアントを再コンパイルする必要があります。
 
@@ -127,7 +128,7 @@ S.i = 11
 
 ただし、別のメンバーを `struct S` nested_value_types .cpp (など) に追加し、クライアントを `double d;` 再コンパイルせずにコンポーネントを再コンパイルした場合、結果はハンドルされない例外 (型) になり <xref:System.IO.FileLoadException?displayProperty=fullName> ます。
 
-## <a name="how-to-test-for-equality"></a><a name="test_equality"></a>方法: 等しいかどうかをテストする
+## <a name="how-to-test-for-equality"></a><a name="test_equality"></a> 方法: 等しいかどうかをテストする
 
 次の例では、Managed Extensions for C++ を使用する等しいかどうかのテストは、ハンドルが参照している内容に基づいています。
 
@@ -152,7 +153,7 @@ IL_0012:  call       bool [mscorlib]System.String::op_Equality(string,
                                                                string)
 ```
 
-## <a name="how-to-diagnose-and-fix-assembly-compatibility-problems"></a><a name="diagnose_fix"></a>方法: アセンブリの互換性の問題を診断および修正する
+## <a name="how-to-diagnose-and-fix-assembly-compatibility-problems"></a><a name="diagnose_fix"></a> 方法: アセンブリの互換性の問題を診断および修正する
 
 このトピックでは、コンパイル時に参照されるアセンブリのバージョンが、実行時に参照されるアセンブリのバージョンと一致しない場合に発生する可能性があることと、この問題を回避する方法について説明します。
 

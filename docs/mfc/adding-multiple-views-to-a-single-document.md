@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: 1 つのドキュメントに複数のビューを追加する'
 title: シングル ドキュメントへのマルチ ビューの追加
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - single document interface (SDI), adding views
 - views [MFC], SDI applications
 ms.assetid: 86d0c134-01d5-429c-b672-36cfb956dc01
-ms.openlocfilehash: 95de3a582c3d45db858e2b4bce0268e1dab63931
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 84f50ad96e4c5939c7ee2e97f8babfaa5221b6f5
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87215973"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97343732"
 ---
 # <a name="adding-multiple-views-to-a-single-document"></a>シングル ドキュメントへのマルチ ビューの追加
 
@@ -37,11 +38,11 @@ MFC (Microsoft Foundation Class) ライブラリを使用して作成された�
 
 このトピックの残りの部分では、次のことを前提としています。
 
-- 派生オブジェクトの名前 `CWinApp` はであり、 `CMyWinApp` `CMyWinApp` mywinapp で宣言および定義されてい*ます。H*と*Mywinapp。CPP*。
+- 派生オブジェクトの名前 `CWinApp` はであり、 `CMyWinApp` `CMyWinApp` mywinapp で宣言および定義されてい *ます。H* と *Mywinapp。CPP*。
 
-- `CNewView`は、新しい派生オブジェクトの名前です `CView` 。は、 `CNewView` newview で宣言および定義されてい*ます。H*と*newview。CPP*。
+- `CNewView` は、新しい派生オブジェクトの名前です `CView` 。は、 `CNewView` newview で宣言および定義されてい *ます。H* と *newview。CPP*。
 
-## <a name="modify-the-existing-application-class"></a><a name="vcconmodifyexistingapplicationa1"></a>既存のアプリケーションクラスを変更する
+## <a name="modify-the-existing-application-class"></a><a name="vcconmodifyexistingapplicationa1"></a> 既存のアプリケーションクラスを変更する
 
 アプリケーションでビューを切り替えるには、ビューを格納するメンバー変数を追加し、それらを切り替えるためのメソッドを追加して、アプリケーションクラスを変更する必要があります。
 
@@ -49,19 +50,19 @@ MFC (Microsoft Foundation Class) ライブラリを使用して作成された�
 
 [!code-cpp[NVC_MFCDocViewSDI#1](codesnippet/cpp/adding-multiple-views-to-a-single-document_1.h)]
 
-新しいメンバー変数である `m_pOldView` とは、 `m_pNewView` 現在のビューと新しく作成されたものを指します。 新しいメソッド () は、 `SwitchView` ユーザーが要求したときにビューを切り替えます。 メソッドの本体については、このトピックで後述する「[スイッチ関数の実装](#vcconswitchingfunctiona4)」を参照してください。
+新しいメンバー変数である `m_pOldView` とは、 `m_pNewView` 現在のビューと新しく作成されたものを指します。 新しいメソッド () は、 `SwitchView` ユーザーが要求したときにビューを切り替えます。 メソッドの本体については、このトピックで後述する「 [スイッチ関数の実装](#vcconswitchingfunctiona4)」を参照してください。
 
 アプリケーションクラスを最後に変更するには、スイッチ関数で使用される Windows メッセージ (**WM_INITIALUPDATE**) を定義する新しいヘッダーファイルを含める必要があります。
 
-Mywinapp の include セクションに次の行を挿入*します。CPP*:
+Mywinapp の include セクションに次の行を挿入 *します。CPP*:
 
 [!code-cpp[NVC_MFCDocViewSDI#2](codesnippet/cpp/adding-multiple-views-to-a-single-document_2.cpp)]
 
 変更内容を保存し、次の手順に進みます。
 
-## <a name="create-and-modify-the-new-view-class"></a><a name="vcconnewviewclassa2"></a>新しいビュークラスを作成および変更する
+## <a name="create-and-modify-the-new-view-class"></a><a name="vcconnewviewclassa2"></a> 新しいビュークラスを作成および変更する
 
-新しいビュークラスの作成は、クラスビューから利用できる**新しいクラス**コマンドを使用して簡単に行うことができます。 このクラスの唯一の要件は、から派生することです `CView` 。 この新しいクラスをアプリケーションに追加します。 新しいクラスをプロジェクトに追加する方法の詳細については、「[クラスの追加](../ide/adding-a-class-visual-cpp.md)」を参照してください。
+新しいビュークラスの作成は、クラスビューから利用できる **新しいクラス** コマンドを使用して簡単に行うことができます。 このクラスの唯一の要件は、から派生することです `CView` 。 この新しいクラスをアプリケーションに追加します。 新しいクラスをプロジェクトに追加する方法の詳細については、「 [クラスの追加](../ide/adding-a-class-visual-cpp.md)」を参照してください。
 
 クラスをプロジェクトに追加したら、一部のビュークラスメンバーのアクセシビリティを変更する必要があります。
 
@@ -69,7 +70,7 @@ Mywinapp の include セクションに次の行を挿入*します。CPP*:
 
 変更内容を保存し、次の手順に進みます。
 
-## <a name="create-and-attach-the-new-view"></a><a name="vcconattachnewviewa3"></a>新しいビューを作成してアタッチする
+## <a name="create-and-attach-the-new-view"></a><a name="vcconattachnewviewa3"></a> 新しいビューを作成してアタッチする
 
 新しいビューを作成してアタッチするには、アプリケーションクラスの関数を変更する必要があり `InitInstance` ます。 この変更により、新しいビューオブジェクトを作成し、 `m_pOldView` `m_pNewView` 2 つの既存のビューオブジェクトを使用してとの両方を初期化する新しいコードが追加されます。
 
@@ -81,7 +82,7 @@ Mywinapp の include セクションに次の行を挿入*します。CPP*:
 
 変更内容を保存し、次の手順に進みます。
 
-## <a name="implement-the-switching-function"></a><a name="vcconswitchingfunctiona4"></a>切り替え関数を実装する
+## <a name="implement-the-switching-function"></a><a name="vcconswitchingfunctiona4"></a> 切り替え関数を実装する
 
 前の手順では、新しいビューオブジェクトを作成および初期化するコードを追加しました。 最後の主要な部分は、切り替えメソッドを実装することです `SwitchView` 。
 
@@ -91,11 +92,11 @@ Mywinapp の include セクションに次の行を挿入*します。CPP*:
 
 変更内容を保存し、次の手順に進みます。
 
-## <a name="add-support-for-switching-the-view"></a><a name="vcconswitchingtheviewa5"></a>ビューを切り替えるためのサポートを追加する
+## <a name="add-support-for-switching-the-view"></a><a name="vcconswitchingtheviewa5"></a> ビューを切り替えるためのサポートを追加する
 
 最後の手順では、 `SwitchView` アプリケーションでビューを切り替える必要がある場合に、メソッドを呼び出すコードを追加します。 これを行うには、いくつかの方法があります。ユーザーが新しいメニュー項目を追加して、特定の条件が満たされたときにビューを内部で選択または切り替えることができます。
 
-新しいメニュー項目とコマンドハンドラー関数の追加の詳細については、「[コマンドとコントロール通知のハンドラー](handlers-for-commands-and-control-notifications.md)」を参照してください。
+新しいメニュー項目とコマンドハンドラー関数の追加の詳細については、「 [コマンドとコントロール通知のハンドラー](handlers-for-commands-and-control-notifications.md)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: 致命的なエラー C1070'
 title: 致命的なエラー C1070
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C1070
 ms.assetid: 1058269a-5db6-4c23-a97f-b5269eb9188b
-ms.openlocfilehash: 848c871049f498efc938ded4de11b4b8b6411976
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 2668bfa6c24c602606cbd9ee41b5322272eec093
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74747463"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97344394"
 ---
 # <a name="fatal-error-c1070"></a>致命的なエラー C1070
 
@@ -32,7 +33,7 @@ ms.locfileid: "74747463"
 // C1070
 ```
 
-解決方法:
+考えられる解決策:
 
 ```cpp
 // C1070b.cpp

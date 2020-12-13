@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: isxdigit、iswxdigit、_isxdigit_l、_iswxdigit_l'
 title: isxdigit、iswxdigit、_isxdigit_l、_iswxdigit_l
 ms.date: 4/2/2020
 api_name:
@@ -41,12 +42,12 @@ helpviewer_keywords:
 - hexadecimal characters
 - iswxdigit function
 ms.assetid: c8bc5146-0b58-4e3f-bee3-f2318dd0f829
-ms.openlocfilehash: 3aefa39d9fabb2b8a3124955f3ab0787e9e174f3
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 87e9e8d07f9a0da38bc6590f27fcb770fc2b789b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82916584"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97344849"
 ---
 # <a name="isxdigit-iswxdigit-_isxdigit_l-_iswxdigit_l"></a>isxdigit、iswxdigit、_isxdigit_l、_iswxdigit_l
 
@@ -73,7 +74,7 @@ int _iswxdigit_l(
 
 ### <a name="parameters"></a>パラメーター
 
-*40u-c*<br/>
+*c*<br/>
 テストする整数。
 
 *locale*<br/>
@@ -81,13 +82,13 @@ int _iswxdigit_l(
 
 ## <a name="return-value"></a>戻り値
 
-これらの各ルーチンは、 *c*が16進数字の特殊表現である場合は0以外の値を返します。 *c*が16進数字 (a ~ f、a ~ f、または 0-9) の場合、 **isxdigit**は0以外の値を返します。 *c*が16進数字に対応するワイド文字である場合、 **iswxdigit**は0以外の値を返します。 これらの各ルーチンは、 *c*がテスト条件を満たしていない場合は0を返します。
+これらの各ルーチンは、 *c* が16進数字の特殊表現である場合は0以外の値を返します。 *c* が16進数字 (a ~ f、a ~ f、または 0-9) の場合、 **isxdigit** は0以外の値を返します。 *c* が16進数字に対応するワイド文字である場合、 **iswxdigit** は0以外の値を返します。 これらの各ルーチンは、 *c* がテスト条件を満たしていない場合は0を返します。
 
-"C" ロケールの場合、 **iswxdigit**関数では Unicode の全角16進文字はサポートされません。
+"C" ロケールの場合、 **iswxdigit** 関数では Unicode の全角16進文字はサポートされません。
 
-**_L**サフィックスを持つこれらの関数のバージョンでは、ロケールに依存する動作に現在のロケールではなく渡されたロケールが使用されます。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
+**_L** サフィックスを持つこれらの関数のバージョンでは、ロケールに依存する動作に現在のロケールではなく渡されたロケールが使用されます。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
 
-*C*が EOF でない場合、または 0 ~ 0xff の範囲内にある場合、 **isxdigit**と **_isxdigit_l**の動作は未定義です。 デバッグ CRT ライブラリが使用され、 *c*がこれらの値のいずれでもない場合、関数はアサーションを発生させます。
+*C* が EOF でない場合、または 0 ~ 0xff の範囲内にある場合、 **isxdigit** と **_isxdigit_l** の動作は未定義です。 デバッグ CRT ライブラリが使用され、 *c* がこれらの値のいずれでもない場合、関数はアサーションを発生させます。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -101,7 +102,7 @@ int _iswxdigit_l(
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**isxdigit**|\<ctype.h>|
 |**iswxdigit**|\<ctype.h> または \<wchar.h>|
@@ -113,5 +114,5 @@ int _iswxdigit_l(
 ## <a name="see-also"></a>関連項目
 
 [文字分類](../../c-runtime-library/character-classification.md)<br/>
-[国](../../c-runtime-library/locale.md)<br/>
-[is、isw 系ルーチン](../../c-runtime-library/is-isw-routines.md)<br/>
+[ロケール](../../c-runtime-library/locale.md)<br/>
+[is、isw ルーチン](../../c-runtime-library/is-isw-routines.md)<br/>

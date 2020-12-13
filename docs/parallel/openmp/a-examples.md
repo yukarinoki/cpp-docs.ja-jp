@@ -1,21 +1,22 @@
 ---
-title: 'A:  使用例'
+description: '詳細情報: A. 例'
+title: A. 例
 ms.date: 01/18/2019
 ms.assetid: c0f6192f-a205-449b-b84c-cb30dbcc8b8f
-ms.openlocfilehash: 061490d34829175bfbdcd84d6208aa396bb19671
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d52b59f9f83cf791c03fb49ca726273a2c977e58
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62362973"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97342544"
 ---
-# <a name="a-examples"></a>A:  使用例
+# <a name="a-examples"></a>A. 例
 
-このドキュメントで定義された構成要素の例を次に示します。 ディレクティブに続くステートメントは、必要な場合にのみ複合および非複合ステートメントがそれに先行するディレクティブからインデントされます。
+このドキュメントで定義されているコンストラクトの例を次に示します。 ディレクティブの後に続くステートメントは、必要な場合にのみ複合で、複合でないステートメントは、その前のディレクティブからインデントされます。
 
-## <a name="a1-a-simple-loop-in-parallel"></a>A.1 する単純なループを並列で
+## <a name="a1-a-simple-loop-in-parallel"></a>..1 単純なループを並列処理する
 
-次の例を使用してループを並列化する方法を示します、[の並列](2-directives.md#251-parallel-for-construct)ディレクティブ。 ループの反復変数は既定では、プライベートなは、明示的に private 句で指定する必要はありませんが。
+次の例では、 [parallel for](2-directives.md#251-parallel-for-construct) ディレクティブを使用してループを並列化する方法を示します。 ループ反復変数は既定ではプライベートであるため、プライベート句で明示的に指定する必要はありません。
 
 ```cpp
 #pragma omp parallel for
@@ -23,9 +24,9 @@ ms.locfileid: "62362973"
         b[i] = (a[i] + a[i-1]) / 2.0;
 ```
 
-## <a name="a2-conditional-compilation"></a>A.2 条件付きコンパイル
+## <a name="a2-conditional-compilation"></a>1. 2 条件付きコンパイル
 
-次の例では、OpenMP マクロを使用して条件付きコンパイルの使用方法を示します[_OPENMP](2-directives.md#22-conditional-compilation)します。 OpenMP のコンパイルと、`_OPENMP`マクロが定義されています。
+次の例は、OpenMP マクロ [_OPENMP](2-directives.md#22-conditional-compilation)を使用した条件付きコンパイルの使用方法を示しています。 OpenMP コンパイルでは、 `_OPENMP` マクロが定義されます。
 
 ```cpp
 # ifdef _OPENMP
@@ -33,7 +34,7 @@ ms.locfileid: "62362973"
 # endif
 ```
 
-定義済みプリプロセッサ演算子には、1 つのディレクティブでテストする 1 つ以上のマクロができます。
+定義されたプリプロセッサ演算子を使用すると、1つのディレクティブで複数のマクロをテストできます。
 
 ```cpp
 # if defined(_OPENMP) && defined(VERBOSE)
@@ -41,9 +42,9 @@ ms.locfileid: "62362973"
 # endif
 ```
 
-## <a name="a3-parallel-regions"></a>A.3 並行領域
+## <a name="a3-parallel-regions"></a>A. 3 個の並列領域
 
-[並列](2-directives.md#23-parallel-construct)ディレクティブは、粒度が粗い並列プログラムで使用できます。 次の例では、並行領域内の各スレッドはグローバル配列のどの部分を決定`x`、操作スレッドの数に基づきます。
+[Parallel](2-directives.md#23-parallel-construct)ディレクティブは、粒度の粗い並列プログラムで使用できます。 次の例では、並列領域の各スレッドが、 `x` スレッド番号に基づいて、使用するグローバル配列のどの部分を決定するかを決定します。
 
 ```cpp
 #pragma omp parallel shared(x, npoints) private(iam, np, ipoints)
@@ -55,9 +56,9 @@ ms.locfileid: "62362973"
 }
 ```
 
-## <a name="a4-the-nowait-clause"></a>A.4 nowait 句
+## <a name="a4-the-nowait-clause"></a>4. nowait 句
 
-使用することが並行領域内で多数の独立したループがある場合、 [nowait](2-directives.md#241-for-construct)句の末尾にある暗黙のバリアを回避するために、`for`ディレクティブを次のとおりです。
+並列領域内に多数の独立したループがある場合は、次のように [nowait](2-directives.md#241-for-construct) 句を使用して、ディレクティブの最後に暗黙的なバリアを回避でき `for` ます。
 
 ```cpp
 #pragma omp parallel
@@ -71,9 +72,9 @@ ms.locfileid: "62362973"
 }
 ```
 
-## <a name="a5-the-critical-directive"></a>A.5 critical ディレクティブ
+## <a name="a5-the-critical-directive"></a>. 5. critical ディレクティブ
 
-次の例では、いくつか含まれています[重要な](2-directives.md#262-critical-construct)ディレクティブ。 この例では、タスクがキューから削除され作業キューのモデルを使用します。 多数のスレッドが同じタスクをキューからの保護、デキュー操作がである必要があります、`critical`セクション。 によって保護されているため、この例では、2 つのキューは独立して、 `critical` 、異なる名前のディレクティブ*xaxis*と*yaxis*します。
+次の例には、いくつかの [重要な](2-directives.md#262-critical-construct) ディレクティブが含まれています。 この例は、タスクをデキューして作業するキューモデルを示しています。 同じタスクをデキューする多くのスレッドに対して保護するには、デキュー操作がセクション内に存在する必要があり `critical` ます。 この例の2つのキューは独立しているため、 `critical` *xaxis* と *y 軸数値* の異なる名前を持つディレクティブによって保護されています。
 
 ```cpp
 #pragma omp parallel shared(x, y) private(x_next, y_next)
@@ -87,9 +88,9 @@ ms.locfileid: "62362973"
 }
 ```
 
-## <a name="a6-the-lastprivate-clause"></a>A.6 lastprivate 句
+## <a name="a6-the-lastprivate-clause"></a>. 6 a.6 lastprivate 句
 
-適切な実行場合によっては、ループの最後の反復変数に割り当てられている値に依存します。 このようなプログラムへの引数としてこのようなすべての変数を一覧する必要があります、 [lastprivate](2-directives.md#2723-lastprivate)句の変数の値は、ループが順番に実行されるときと同じようにします。
+正しい実行は、ループの最後のイテレーションが変数に代入した値によって異なる場合があります。 このようなプログラムでは、変数の値がループが順番に実行される場合と同じになるように、 [a.6 lastprivate](2-directives.md#2723-lastprivate) 句の引数としてすべての変数を列挙する必要があります。
 
 ```cpp
 #pragma omp parallel
@@ -101,11 +102,11 @@ ms.locfileid: "62362973"
 a[i]=b[i];
 ```
 
-前の例の値で`i`並列領域の最後に等しい`n-1`シーケンシャル ケースのようにします。
+前の例で `i` は、並列領域の最後にあるの値は、シーケンシャルな場合と同じになり `n-1` ます。
 
-## <a name="a7-the-reduction-clause"></a>A.7 reduction 句
+## <a name="a7-the-reduction-clause"></a>. 7 リダクション句
 
-次の例で、[削減](2-directives.md#2726-reduction)句。
+次の例は、 [リダクション](2-directives.md#2726-reduction) 句を示しています。
 
 ```cpp
 #pragma omp parallel for private(i) shared(x, y, n) \
@@ -116,9 +117,9 @@ a[i]=b[i];
     }
 ```
 
-## <a name="a8-parallel-sections"></a>A.8 並行セクション
+## <a name="a8-parallel-sections"></a>8つの並列セクション
 
-次の例 (の[2.4.2 セクション](2-directives.md#242-sections-construct))、関数*xaxis*、 *yaxis*、および*zaxis*同時に実行することができます。 最初の`section`ディレクティブは省略可能です。  すべて`section`ディレクティブはの構文の範囲で表示する必要があります、`parallel sections`を構築します。
+次の例 ( [セクション 2.4.2](2-directives.md#242-sections-construct)) では、関数 *xaxis*、 *y 軸数値*、および *zaxis* を同時に実行できます。 最初の `section` ディレクティブは省略可能です。  すべて `section` のディレクティブは、構造体の構文の範囲内に出現する必要があり `parallel sections` ます。
 
 ```cpp
 #pragma omp parallel sections
@@ -132,9 +133,9 @@ a[i]=b[i];
 }
 ```
 
-## <a name="a9-single-directives"></a>A.9 Single ディレクティブ
+## <a name="a9-single-directives"></a>. 9 の単一ディレクティブ
 
-次の例で、[単一](2-directives.md#243-single-construct)ディレクティブ。 例では、1 つのスレッドで (が発生した最初のスレッドは、通常、`single`ディレクティブ) 進行状況メッセージを出力します。 ユーザーでは、スレッドは実行には、どのような想定する必要があります加えないで、`single`セクション。 他のすべてのスレッドは、スキップ、`single`セクションし、バリアの最後で停止、`single`を構築します。 他のスレッドがスレッドの実行を待たずに進むことができるかどうか、 `single`  セクションで、`nowait`に句を指定できます、`single`ディレクティブ。
+次の例は、 [単一](2-directives.md#243-single-construct) のディレクティブを示しています。 この例では、1つのスレッド (通常、ディレクティブが発生した最初のスレッド) のみが `single` 進行状況メッセージを出力します。 ユーザーは、どのスレッドがセクションを実行するかを判断する必要はありません `single` 。 他のすべてのスレッドは、セクションをスキップ `single` し、コンストラクトの最後のバリアで停止し `single` ます。 セクションを実行するスレッドを待たずに他のスレッドを続行できる場合は、 `single` `nowait` ディレクティブで句を指定でき `single` ます。
 
 ```cpp
 #pragma omp parallel
@@ -150,9 +151,9 @@ a[i]=b[i];
 }
 ```
 
-## <a name="a10-sequential-ordering"></a>A.10 順番のシーケンシャルな順序付け
+## <a name="a10-sequential-ordering"></a>10順次順序
 
-[セクションでは順序付けられた](2-directives.md#266-ordered-construct)は並列で行われる処理からの出力を順番に配置するのに役立ちます。 次のプログラムは、順番にインデックスを印刷します。
+[順序](2-directives.md#266-ordered-construct) 指定されたセクションは、並列で実行される作業からの出力を順番に並べ替える場合に便利です。 次のプログラムでは、順番にインデックスを出力します。
 
 ```cpp
 #pragma omp for ordered schedule(dynamic)
@@ -165,9 +166,9 @@ void work(int k)
 }
 ```
 
-## <a name="a11-a-fixed-number-of-threads"></a>A.11 固定するスレッド数
+## <a name="a11-a-fixed-number-of-threads"></a>. 11 固定数のスレッド
 
-一部のプログラムは正常に実行するスレッドの固定、事前の数に依存します。  スレッドの数を動的に調整の既定の設定は、実装定義であるために、このようなプログラムは、動的なスレッドの機能をオフにして、移植性を維持するには、明示的にスレッドの数を設定を選択できます。 次の例を使用してこれを行う方法を示しています[omp_set_dynamic](3-run-time-library-functions.md#317-omp_set_dynamic-function)、および[omp_set_num_threads](3-run-time-library-functions.md#311-omp_set_num_threads-function):。
+プログラムによっては、事前の固定された数のスレッドを使用して正常に実行される場合があります。  スレッド数の動的調整の既定の設定は実装によって定義されるため、このようなプログラムでは、動的スレッド機能を無効にして、移植性を維持するためにスレッド数を明示的に設定できます。 次の例では、 [omp_set_dynamic](3-run-time-library-functions.md#317-omp_set_dynamic-function)、 [omp_set_num_threads](3-run-time-library-functions.md#311-omp_set_num_threads-function)を使用してこれを行う方法を示します。
 
 ```cpp
 omp_set_dynamic(0);
@@ -182,13 +183,13 @@ omp_set_num_threads(16);
 }
 ```
 
-プログラムは、この例では 16 のスレッドによって実行される場合にのみ正しく実行します。 実装が 16 のスレッドをサポートしていない場合は、この例の動作は実装定義です。
+この例では、プログラムは16個のスレッドによって実行される場合にのみ、正しく実行されます。 実装で16個のスレッドをサポートできない場合、この例の動作は実装定義になります。
 
-並列領域を実行するスレッドの数は、動的なスレッドの設定に関係なく、並行領域の中に定数が維持されます。 動的なスレッド メカニズムでは、並列領域の開始時に使用するスレッドの数を決定し、リージョンの間維持します。
+並列領域を実行するスレッドの数は、動的スレッドの設定に関係なく、並列領域の間は一定のままです。 動的スレッド機構は、並列領域の開始時に使用するスレッドの数を決定し、その領域の存続期間中は定数を保持します。
 
-## <a name="a12-the-atomic-directive"></a>A.12 atomic ディレクティブ
+## <a name="a12-the-atomic-directive"></a>. 12 atomic ディレクティブ
 
-次の例では、競合状態を回避できます (同時に更新する要素の*x*多数のスレッドによって) を使用して、[アトミック](2-directives.md#264-atomic-construct)ディレクティブ。
+次の例では、 [atomic](2-directives.md#264-atomic-construct)ディレクティブを使用して、競合状態 ( *x* の要素の同時更新) を回避しています。
 
 ```cpp
 #pragma omp parallel for shared(x, y, index, n)
@@ -200,13 +201,13 @@ omp_set_num_threads(16);
     }
 ```
 
-使用する利点、`atomic`ディレクティブがこの例では、並列的に実行する x の 2 つの異なる要素の更新できます。 場合、[重要な](2-directives.md#262-critical-construct)ディレクティブの代わりに、すべての更新の要素を使用*x*逐次的に (ただしではなく、順序を保証) に実行されます。
+`atomic`この例でディレクティブを使用する利点は、x の2つの異なる要素の更新を並行して実行できることです。 代わりに、 [critical](2-directives.md#262-critical-construct) ディレクティブを使用すると、 *x* の要素に対するすべての更新が直列に実行されます (ただし、保証された順序ではありません)。
 
-`atomic`ディレクティブが、C または C++ ステートメントの直後にのみ適用されます。  その結果、要素の*y*この例ではアトミックに更新されません。
+ディレクティブは、 `atomic` その直後の C または C++ ステートメントにのみ適用されます。  その結果、この例では、 *y* の要素はアトミックに更新されません。
 
-## <a name="a13-a-flush-directive-with-a-list"></a>一覧で A.13 A flush ディレクティブ
+## <a name="a13-a-flush-directive-with-a-list"></a>. 13. リストを含むフラッシュディレクティブ
 
-次の例では、`flush`ディレクティブを特定のオブジェクトのスレッドのペア間のポイント ツー ポイントの同期。
+次の例では、ディレクティブを使用して、 `flush` スレッドのペア間で特定のオブジェクトをポイントツーポイントで同期します。
 
 ```cpp
 int   sync[NUMBER_OF_THREADS];
@@ -240,9 +241,9 @@ float work[NUMBER_OF_THREADS];
 }
 ```
 
-## <a name="a14-a-flush-directive-without-a-list"></a>リストを伴わず a.14 A のない flush ディレクティブ
+## <a name="a14-a-flush-directive-without-a-list"></a>. 14. リストを含まないフラッシュディレクティブ
 
-次の例では、(の[2.6.5 セクション](2-directives.md#265-flush-directive)) 共有に影響を受けるオブジェクトを区別する、`flush`ディレクティブは影響を受けない共有のオブジェクトの一覧がありません。
+次の例 ( [セクション 2.6.5](2-directives.md#265-flush-directive)) では、ディレクティブによって影響を受ける共有オブジェクトが、 `flush` 影響を受けていない共有オブジェクトのリストと区別されます。
 
 ```cpp
 // omp_flush_without_list.c
@@ -297,9 +298,9 @@ int main()
 }
 ```
 
-## <a name="a15-the-number-of-threads-used"></a>A.15 使用されるスレッド数
+## <a name="a15-the-number-of-threads-used"></a>. 15 使用されるスレッドの数
 
-次の正しくない例を検討してください (の[セクション 3.1.2 に従って](3-run-time-library-functions.md#312-omp_get_num_threads-function))。
+次の不適切な例について考えてみます ( [セクション 3.1.2](3-run-time-library-functions.md#312-omp_get_num_threads-function))。
 
 ```cpp
 np = omp_get_num_threads(); // misplaced
@@ -308,9 +309,9 @@ np = omp_get_num_threads(); // misplaced
         work(i);
 ```
 
-`omp_get_num_threads()`ためシリアル、コードのセクションでは 1 を返しますを呼び出す*np*常に前の例を 1 に等しくなります。 並列領域に配置されるスレッドの数を調べるには、並行領域内の呼び出しでなければなりません。
+この呼び出しでは、 `omp_get_num_threads()` コードのシリアルセクションで1が返されます。そのため、前の例では、 *np* は常に1になります。 並列領域にデプロイされるスレッドの数を決定するには、その呼び出しが並列領域内に存在する必要があります。
 
-次の例では、スレッドの数のクエリを含めずにこのプログラムを書き換える方法を示します。
+次の例は、スレッド数のクエリを含めずに、このプログラムを書き直す方法を示しています。
 
 ```cpp
 #pragma omp parallel private(i)
@@ -320,9 +321,9 @@ np = omp_get_num_threads(); // misplaced
 }
 ```
 
-## <a name="a16-locks"></a>A.16 ロック
+## <a name="a16-locks"></a>16個のロック
 
-次の例 (の[セクション 3.2](3-run-time-library-functions.md#32-lock-functions))、ロック関数に引数は型である必要があります`omp_lock_t`、フラッシュされる前にする必要がないとします。  ロック関数では、最初の重要なセクションにエントリを待つ間アイドル状態であるが、2 番目のエントリの待機中に他の作業を行うスレッドをによりします。  `omp_set_lock`関数のブロックが、`omp_test_lock`関数で作業できるように`skip()`実行します。
+次の例 ( [セクション 3.2](3-run-time-library-functions.md#32-lock-functions)) では、ロック関数の引数は型である必要があり、 `omp_lock_t` フラッシュする必要はありません。  ロック関数を使用すると、最初の重要なセクションへのエントリを待機している間にスレッドがアイドル状態になりますが、2番目のエントリを待機している間は他の作業を行います。  `omp_set_lock`関数はブロックしますが、関数はを使用せず `omp_test_lock` 、の作業 `skip()` を実行できます。
 
 ```cpp
 // omp_using_locks.c
@@ -360,9 +361,9 @@ int main() {
 }
 ```
 
-## <a name="a17-nestable-locks"></a>A.17 入れ子にできるロック
+## <a name="a17-nestable-locks"></a>. 17 個の A.17 ロック
 
-次の例では、(の[セクション 3.2](3-run-time-library-functions.md#32-lock-functions)) 入れ子にできるロックを使用して、そのメンバーのいずれかにおよび構造体全体に更新を同期する方法を示します。
+次の例 ( [セクション 3.2](3-run-time-library-functions.md#32-lock-functions)) では、a.17 ロックを使用して、構造全体とそのメンバーのいずれかに更新を同期する方法を示しています。
 
 ```cpp
 #include <omp.h>
@@ -405,9 +406,9 @@ void f(pair *p)
 }
 ```
 
-## <a name="a18-nested-for-directives"></a>ディレクティブの A.18 入れ子になった
+## <a name="a18-nested-for-directives"></a>. 18 の入れ子になった for ディレクティブ
 
-次の例の`for`[ディレクティブの入れ子](2-directives.md#29-directive-nesting)が準拠しているため、内側と外側`for`ディレクティブは、並列の異なるリージョンにバインドします。
+次のディレクティブの入れ子の例は、 `for` [](2-directives.md#29-directive-nesting)内部ディレクティブと外部 `for` ディレクティブが異なる並列領域にバインドされているために準拠しています。
 
 ```cpp
 #pragma omp parallel default(shared)
@@ -425,7 +426,7 @@ void f(pair *p)
 }
 ```
 
-次の例のバリエーションが準拠してもです。
+前の例の次のバリエーションも準拠しています。
 
 ```cpp
 #pragma omp parallel default(shared)
@@ -448,11 +449,11 @@ void work1(int i, int n)
 }
 ```
 
-## <a name="a19-examples-showing-incorrect-nesting-of-work-sharing-directives"></a>作業の共有の正しくない入れ子 A.19 例ディレクティブ
+## <a name="a19-examples-showing-incorrect-nesting-of-work-sharing-directives"></a>作業共有ディレクティブの不適切な入れ子を示す、19個の例
 
-このセクションの例を示しています、[ディレクティブの入れ子](2-directives.md#29-directive-nesting)規則。
+このセクションの例では、 [ディレクティブの入れ子](2-directives.md#29-directive-nesting) 規則について説明します。
 
-次の例が準拠していないため、内側と外側`for`ディレクティブは入れ子になったし、同じバインド`parallel`ディレクティブ。
+次の例は、内部ディレクティブと外部 `for` ディレクティブが入れ子になっていて、同じディレクティブにバインドされているため、準拠していません `parallel` 。
 
 ```cpp
 void wrong1(int n)
@@ -470,7 +471,7 @@ void wrong1(int n)
 }
 ```
 
-前の例の次の動的に入れ子になったバージョンに準拠していないもです。
+上記の例の動的に入れ子にされた次のバージョンも非準拠になります。
 
 ```cpp
 void wrong2(int n)
@@ -493,7 +494,7 @@ void work1(int i, int n)
 }
 ```
 
-次の例が準拠していないため、`for`と`single`ディレクティブは入れ子になっているし、同じ並列領域にバインドします。
+次の例は、 `for` `single` ディレクティブとディレクティブが入れ子になっており、同じ並列領域にバインドされているため、非準拠です。
 
 ```cpp
 void wrong3(int n)
@@ -510,7 +511,7 @@ void wrong3(int n)
 }
 ```
 
-次の例が準拠していないため、`barrier`ディレクティブ内で、`for`デッドロックが発生することができます。
+次の例は `barrier` 、内のディレクティブに `for` よってデッドロックが発生する可能性があるため、準拠していません。
 
 ```cpp
 void wrong4(int n)
@@ -528,7 +529,7 @@ void wrong4(int n)
 }
 ```
 
-次の例が準拠していないため、`barrier`デッドロック、一度に 1 つのスレッドがクリティカル セクションに入力できるという事実が原因になります。
+次の例は、 `barrier` 一度に1つのスレッドのみがクリティカルセクションに入ることができるため、デッドロックが発生するため、準拠していません。
 
 ```cpp
 void wrong5()
@@ -545,7 +546,7 @@ void wrong5()
 }
 ```
 
-次の例が準拠していないため、 `barrier` 1 つのスレッドが実行されるという事実のデッドロックの結果、`single`セクション。
+次の例は、 `barrier` 1 つのスレッドのみがセクションを実行するという点でデッドロックが発生するため、準拠していません `single` 。
 
 ```cpp
 void wrong6()
@@ -564,11 +565,11 @@ void wrong6()
 }
 ```
 
-## <a name="a20-bind-barrier-directives"></a>A.20 バインド barrier ディレクティブ
+## <a name="a20-bind-barrier-directives"></a>. 20 バインドバリアディレクティブ
 
-ディレクティブのバインディング ルールの呼び出しを`barrier`最も近い外側にバインドするディレクティブ`parallel`ディレクティブ。 ディレクティブのバインディングの詳細については、次を参照してください。[セクション 2.8](2-directives.md#28-directive-binding)します。
+ディレクティブバインド規則は、ディレクティブを呼び出して、 `barrier` 最も近い外側のディレクティブにバインドし `parallel` ます。 ディレクティブバインドの詳細については、 [セクション 2.8](2-directives.md#28-directive-binding)を参照してください。
 
-次の例からの呼び出しで*メイン*に*sub2*が準拠しているため、 `barrier` (で*sub3*) で並列領域にバインドします*sub2*. 呼び出しから*メイン*に*sub1*が準拠しているため、`barrier`サブルーチン内での並列領域にバインドします*sub2*。  呼び出しから*メイン*に*sub3*が準拠しているため、`barrier`並列の任意のリージョンにはバインドされません、無視されます。 また、`barrier`のみ、チームの外側の並列領域でスレッドとで作成されたすべてのスレッドを同期*sub1*します。
+次の例では、 *main* から *sub2* への呼び出しが準拠しています。これは、 `barrier` ( *sub3* の) が *sub2* の並行領域にバインドされるためです。 *Main* から *sub1* への呼び出しは、が `barrier` サブルーチンの parallel 領域にバインドするため、準拠しています。 *sub2*  が並列領域にバインドされず、無視されるため、 *main* から *sub3* への呼び出しは準拠し `barrier` ています。 また、によって同期されるのは、 `barrier` *sub1* で作成されたすべてのスレッドではなく、外側の並列領域内のスレッドのチームだけです。
 
 ```cpp
 int main()
@@ -603,9 +604,9 @@ void sub3(int n)
 }
 ```
 
-## <a name="a21-scope-variables-with-the-private-clause"></a>A.21 private 句のスコープ変数
+## <a name="a21-scope-variables-with-the-private-clause"></a>. 21 スコープ変数と private 句
 
-値`i`と`j`次の例では、並列領域からの終了時に未定義です。
+次の例のとの値 `i` `j` は、並行領域からの終了時には定義されていません。
 
 ```cpp
 int i, j;
@@ -619,11 +620,11 @@ j = 2;
 printf_s("%d %d\n", i, j);
 ```
 
-詳細については、`private`句を参照してください[セクション 2.7.2.1](2-directives.md#2721-private)します。
+句の詳細につい `private` ては、「 [2.7.2.1」セクション](2-directives.md#2721-private)を参照してください。
 
-## <a name="a22-the-defaultnone-clause"></a>A.22 default(none) 句
+## <a name="a22-the-defaultnone-clause"></a>. 22 既定 (none) 句
 
-次の例では、影響を受ける変数を区別する、`default(none)`句ではない変数から。
+次の例では、句によって影響を受ける変数を、では `default(none)` ない変数から区別します。
 
 ```cpp
 // openmp_using_clausedefault.c
@@ -658,15 +659,15 @@ void fun(int a) {
 }
 ```
 
-詳細については、`default`句を参照してください[セクション 2.7.2.5](2-directives.md#2725-default)します。
+句の詳細につい `default` ては、「 [2.7.2.5」セクション](2-directives.md#2725-default)を参照してください。
 
-## <a name="a23-examples-of-the-ordered-directive"></a>A.23 ordered ディレクティブの例
+## <a name="a23-examples-of-the-ordered-directive"></a>Ordered ディレクティブの23の例
 
-多くの順序付けられたセクションをすることができます、`for`で指定された、`ordered`句。 最初の例は、API が次の規則を指定するために非準拠は。
+句を使用して、指定されたを含む複数の順序付けされたセクションを持つことができ `for` `ordered` ます。 最初の例は、API で次の規則が指定されているため、準拠していません。
 
-"使用して、ループのイテレーションを`for`コンストラクトでは同じ実行する必要がありますされません`ordered`ディレクティブを超えると、その 1 つ以上実行する必要がありますいない`ordered`ディレクティブ"。 (を参照してください[セクション 2.6.6](2-directives.md#266-ordered-construct))。
+"コンストラクトを持つループの反復処理では、同じディレクティブを複数回実行することはできません `for` 。また、複数のディレクティブを実行することはできません `ordered` `ordered` 。" (「 [2.6.6 ordered」セクション](2-directives.md#266-ordered-construct)を参照してください)。
 
-この規則違反の例では、すべてのイテレーションは、2 つの順序付けられたセクションを実行します。
+この非準拠の例では、すべてのイテレーションが2つの順序付けられたセクションを実行します。
 
 ```cpp
 #pragma omp for ordered
@@ -682,7 +683,7 @@ for (i=0; i<n; i++)
 }
 ```
 
-準拠している例を次に示します、`for`順序付けられた複数のセクション。
+次の準拠する例は、複数の `for` 順序付けされたセクションを持つを示しています。
 
 ```cpp
 #pragma omp for ordered
@@ -706,9 +707,9 @@ for (i=0; i<n; i++)
 }
 ```
 
-## <a name="a24-example-of-the-private-clause"></a>A.24 private 句の例
+## <a name="a24-example-of-the-private-clause"></a>プライベート句の24の例
 
-[プライベート](2-directives.md#2721-private)並行領域の句は、リージョンの動的範囲ではなく、リージョンの構文範囲に対する効果でのみです。  変数の使用を次の例ではそのため、 *、* 内で、`for`ルーチンでループ*f*のプライベート コピーを指す *、* での使用状況の中にルーチン*g*グローバル *、* します。
+並列領域の [private](2-directives.md#2721-private) 句は、領域の構文の範囲に対してのみ有効です。これは、領域の動的な範囲ではありません。  したがって、次の例では、ルーチンのループ内で *a 変数 a* を使用すると、のプライベートコピーが参照されますが、 `for` ルーチン *g* の使用法ではグローバル *a* が参照されます。 
 
 ```cpp
 int a;
@@ -733,9 +734,9 @@ void g(int k, int n)
 }
 ```
 
-## <a name="a25-examples-of-the-copyprivate-data-attribute-clause"></a>A.25 copyprivate データ属性句の例
+## <a name="a25-examples-of-the-copyprivate-data-attribute-clause"></a>Copyprivate data attribute 句の25の例
 
-**例 1:** [Copyprivate](2-directives.md#2728-copyprivate)他のスレッド内のプライベート変数のすべてのインスタンスに直接 1 つのスレッドによって取得された値をブロードキャストする句を使用できます。
+**例 1:**[Copyprivate](2-directives.md#2728-copyprivate)句を使用すると、1つのスレッドによって取得された値を、他のスレッドのプライベート変数のすべてのインスタンスに直接ブロードキャストできます。
 
 ```cpp
 float x, y;
@@ -755,9 +756,9 @@ void init( )
 }
 ```
 
-ルーチン*init*呼びますディレクティブの存在、serial リージョンからその動作に影響をします。 呼び出した後、 *get_values*ルーチンが 1 つのスレッドによって実行された、スレッドで指定されたプライベート オブジェクトまで、コンストラクトがない *、*、 *b*、 *x*、および*y*すべてのスレッドで読み取られた値で定義になります。
+ルーチン *初期化* がシリアル領域から呼び出された場合、その動作はディレクティブの存在による影響を受けません。 *Get_values* ルーチンの呼び出しが1つのスレッドによって実行されると、すべてのスレッドの *a*、 *b*、 *x*、および *y* によって指定されたプライベートオブジェクトが、値が読み込まれて定義されるまで、スレッドは構築を終了します。
 
-**例 2:** 前の例とは異なり、読み取りは、マスター スレッドと、特定のスレッドで実行する必要があるとします。 ここで、`copyprivate`ブロードキャストを直接実行する句を使用することはできませんが、一時的な共有オブジェクトへのアクセスを提供するために使用できます。
+**例 2:** 前の例とは異なり、読み取りは、マスタースレッドなど、特定のスレッドによって実行される必要があるとします。 この場合、句を `copyprivate` 使用してブロードキャストを直接実行することはできませんが、一時共有オブジェクトへのアクセスを提供するために使用できます。
 
 ```cpp
 float read_next( )
@@ -788,7 +789,7 @@ float read_next( )
 }
 ```
 
-**例 3:** 並行領域内で必要なロック オブジェクトの数はそれを入力する前に簡単に特定できないとします。 `copyprivate`その並行領域内で割り当てられている共有ロック オブジェクトへのアクセスを提供する句を使用できます。
+**例 3:** 並列領域内で必要とされるロックオブジェクトの数は、入力する前に簡単に判断できないとします。 句を使用して、 `copyprivate` その並列領域内に割り当てられている共有ロックオブジェクトへのアクセスを提供できます。
 
 ```cpp
 #include <omp.h>
@@ -807,9 +808,9 @@ omp_lock_t *new_lock()
 }
 ```
 
-## <a name="a26-the-threadprivate-directive"></a>A.26 threadprivate ディレクティブの
+## <a name="a26-the-threadprivate-directive"></a>. 26 threadprivate ディレクティブ
 
-次の例では、使用する方法、 [threadprivate](2-directives.md#271-threadprivate-directive)ディレクティブを各スレッドに別のカウンターを提供します。
+次の例では、 [threadprivate](2-directives.md#271-threadprivate-directive) ディレクティブを使用して、各スレッドに個別のカウンターを指定する方法を示します。
 
 ### <a name="example-1"></a>例 1
 
@@ -836,12 +837,12 @@ int sub()
 }
 ```
 
-## <a name="a27-c99-variable-length-arrays"></a>A.27 C99 可変長配列
+## <a name="a27-c99-variable-length-arrays"></a>. 27 C99 可変長配列
 
-次の例では、C99 可変長配列 (Vla) を使用する方法を示しますで、 [firstprivate](2-directives.md#2722-firstprivate)ディレクティブ。
+次の例では、 [firstprivate](2-directives.md#2722-firstprivate) ディレクティブで C99 可変長配列 (vlas) を使用する方法を示します。
 
 > [!NOTE]
-> 現在の Visual C では、可変長配列がサポートされていません。
+> 可変長配列は現在、Visual C++ ではサポートされていません。
 
 ```cpp
 void f(int m, int C[m][m])
@@ -853,9 +854,9 @@ void f(int m, int C[m][m])
 }
 ```
 
-## <a name="a28-the-numthreads-clause"></a>A.28 num_threads 句
+## <a name="a28-the-num_threads-clause"></a>Num_threads 句の28です。
 
-次の例で、 [num_threads](2-directives.md#23-parallel-construct)句。 並列領域は、最大 10 個のスレッドで実行されます。
+次の例は、 [num_threads](2-directives.md#23-parallel-construct) 句を示しています。 並列領域は、最大で10個のスレッドで実行されます。
 
 ```cpp
 #include <omp.h>
@@ -870,9 +871,9 @@ main()
 }
 ```
 
-## <a name="a29-work-sharing-constructs-inside-a-critical-construct"></a>A.29 critical コンストラクト内での work-sharing コンス トラクター
+## <a name="a29-work-sharing-constructs-inside-a-critical-construct"></a>重要なコンストラクト内にある、29の作業共有コンストラクト
 
-次の例での work-sharing コンス トラクター内でを使用して、`critical`を構築します。 この例は、作業の共有を構築ために準拠していると、`critical`コンストラクトを同じ並列領域にバインドしていません。
+次の例では、コンストラクト内で作業共有コンストラクトを使用する方法を示し `critical` ます。 この例は、ワークシェアリングコンストラクトと `critical` コンストラクトが同じ並行領域にバインドされていないため、準拠しています。
 
 ```cpp
 void f()
@@ -897,9 +898,9 @@ void f()
 }
 ```
 
-## <a name="a30-reprivatization"></a>A.30 再プライベート化
+## <a name="a30-reprivatization"></a>. 30 Reprivatization
 
-次の例では、変数の再プライベート化を示します。 プライベート変数をマークする`private`入れ子になったディレクティブにもう一度です。 外側の並列領域で、これらの変数を共有する必要はありません。
+次の例は、変数の reprivatization を示しています。 プライベート変数は `private` 、入れ子になったディレクティブで再びマークできます。 これらの変数は、外側の並列領域で共有する必要はありません。
 
 ```cpp
 int i, a;
@@ -915,9 +916,9 @@ int i, a;
 }
 ```
 
-## <a name="a31-thread-safe-lock-functions"></a>A.31 スレッド セーフなロック関数
+## <a name="a31-thread-safe-lock-functions"></a>. 31 スレッドセーフロック関数
 
-次C++を使用して、並列領域でロックの配列を初期化する方法の例[omp_init_lock 関数](3-run-time-library-functions.md#321-omp_init_lock-and-omp_init_nest_lock-functions)します。
+次の C++ の例は、 [omp_init_lock](3-run-time-library-functions.md#321-omp_init_lock-and-omp_init_nest_lock-functions)を使用して、並列領域内のロックの配列を初期化する方法を示しています。
 
 ```cpp
 // A_13_omp_init_lock.cpp

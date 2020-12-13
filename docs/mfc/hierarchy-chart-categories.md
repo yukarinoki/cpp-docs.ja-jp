@@ -1,15 +1,16 @@
 ---
+description: '詳細情報: 階層図のカテゴリ'
 title: 階層図カテゴリ
 ms.date: 11/19/2018
 helpviewer_keywords:
 - MFC, hierarchy
 ms.assetid: 1f109428-4b84-4f7c-90a9-e71fe071311e
-ms.openlocfilehash: 11e3d81702ddafb30acd44cf81ce4a6a216de9b5
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 7a139e8ea2f396689ae143fa6ec2273e573e5f0d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84620183"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97343616"
 ---
 # <a name="hierarchy-chart-categories"></a>階層図カテゴリ
 
@@ -18,4 +19,4 @@ ms.locfileid: "84620183"
 ## <a name="see-also"></a>関連項目
 
 [階層図](hierarchy-chart.md)<br/>
-[MFC デスクトップ アプリケーション](mfc-desktop-applications.md)
+[MFC デスクトップアプリケーション](mfc-desktop-applications.md)

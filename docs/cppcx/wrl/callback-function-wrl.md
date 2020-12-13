@@ -1,16 +1,17 @@
 ---
+description: '詳細情報: コールバック関数 (WRL)'
 title: Callback 関数 (WRL)
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
 - event/Microsoft::WRL::Callback
 ms.assetid: afb15d25-3230-44f7-b321-e17c54872943
-ms.openlocfilehash: 8615b92f9b46dcfc6e36867c51eeefdb7a5f5e81
-ms.sourcegitcommit: 0df2b7ab4e81284c5248e4584767591dcc1950c3
+ms.openlocfilehash: 75b24c67c0a7f2102307e2f868da7799b02c71e8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89609088"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97344550"
 ---
 # <a name="callback-function-wrl"></a>Callback 関数 (WRL)
 
@@ -244,7 +245,7 @@ ComPtr<TDelegateInterface> Callback(
 
 デリゲートオブジェクトの基本は、ではなくである必要があり `IUnknown` `IInspectable` ます。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** イベント .h
 

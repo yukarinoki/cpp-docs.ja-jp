@@ -1,4 +1,5 @@
 ---
+description: '詳細については、「_com_ptr_t:: Release」を参照してください。'
 title: _com_ptr_t::Release
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,18 +8,18 @@ f1_keywords:
 helpviewer_keywords:
 - Release method [C++]
 ms.assetid: db448b34-0efa-4f02-b701-ad1ca3ae6ca5
-ms.openlocfilehash: 73de3c2d19063f0738b8b0a3c510ea520f58de0b
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: a1b81295ab249b1826ea6d373f782d91765df3b7
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81745059"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97344719"
 ---
 # <a name="_com_ptr_trelease"></a>_com_ptr_t::Release
 
-**マイクロソフト固有**
+**Microsoft 固有の仕様**
 
-カプセル化**Release**されたインターフェイス ポインター`IUnknown`の Release メンバー関数を呼び出します。
+カプセル化されたインターフェイスポインターでの **Release** メンバー関数を呼び出し `IUnknown` ます。
 
 ## <a name="syntax"></a>構文
 
@@ -28,9 +29,9 @@ void Release( );
 
 ## <a name="remarks"></a>解説
 
-カプセル`IUnknown::Release`化されたインターフェイス ポインターを呼び出`E_POINTER`します。
+`IUnknown::Release`カプセル化されたインターフェイスポインターでを呼び出し、 `E_POINTER` このインターフェイスポインターが NULL の場合はエラーを発生させます。
 
-**エンド マイクロソフト 固有**
+**Microsoft 固有の仕様はここまで**
 
 ## <a name="see-also"></a>関連項目
 

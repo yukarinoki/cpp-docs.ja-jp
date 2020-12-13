@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「ConvertBSTRToString」を参照してください。
 title: ConvertBSTRToString
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - ConvertBSTRToString function
 ms.assetid: ab6ce555-3d75-4e9c-9cb8-ada6d8ce43b1
-ms.openlocfilehash: 1d0ad8727dd4d5ec06a45ec26c67dd3ad268f524
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 72d6033003f186f358d9b4143498df65858ee354
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80189524"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97344615"
 ---
 # <a name="convertbstrtostring"></a>ConvertBSTRToString
 
@@ -32,7 +33,7 @@ BSTR 変数。
 
 ## <a name="remarks"></a>解説
 
-**Convertbstrtostring**は、削除する必要がある文字列を割り当てます。
+**Convertbstrtostring** は、削除する必要がある文字列を割り当てます。
 
 ## <a name="example"></a>例
 
@@ -62,12 +63,12 @@ char * text: Test
 
 **Microsoft 固有の仕様はここまで**
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-**ヘッダー:** \<comutil. h >
+**ヘッダー:**\<comutil.h>
 
-**Lib:** comsuppw または comsuppw (詳細について[は、「/zc: Wchar_t (wchar_t ネイティブ型)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md) 」を参照してください)
+**Lib:** comsuppw または comsuppw (詳細について [は、「/zc: Wchar_t (wchar_t ネイティブ型)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md) 」を参照してください)
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[コンパイラ COM のグローバル関数](../cpp/compiler-com-global-functions.md)
+[コンパイラ COM グローバル関数](../cpp/compiler-com-global-functions.md)
