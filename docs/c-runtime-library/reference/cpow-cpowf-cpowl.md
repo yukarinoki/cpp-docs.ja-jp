@@ -1,4 +1,5 @@
 ---
+description: 詳細については、cpow、cpowf、cpowl を参照してください。
 title: cpow、cpowf、cpowl
 ms.date: 11/04/2016
 api_name:
@@ -33,12 +34,12 @@ helpviewer_keywords:
 - cpowf function
 - complex/cpowl function
 ms.assetid: 83fe2187-22b7-4295-ab16-4d77abdbb80b
-ms.openlocfilehash: 005bafd4b19164f5c85be839a90fc7d5259d61bf
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 3e12cab3a7ec8c7f3f4bf8cd4739e10f022de8fd
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70942700"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97339642"
 ---
 # <a name="cpow-cpowf-cpowl"></a>cpow、cpowf、cpowl
 
@@ -74,23 +75,23 @@ _Lcomplex cpowl(
 
 ## <a name="return-value"></a>戻り値
 
-X の分岐が負の実数軸*に沿って* *y*の累乗に累乗された*x*の値。
+X の分岐が負の実数軸 *に沿って* *y* の累乗に累乗された *x* の値。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-でC++はオーバーロードが可能であるため、 **_Fcomplex**と **_Lcomplex**の値を受け取って返す**cpow**のオーバーロードを呼び出すことができます。 C プログラムでは、 **cpow**は常にを受け取り、**戻り値を**返します。
+C++ ではオーバーロードが可能であるため、 **_Fcomplex** と **_Lcomplex** の値を受け取って返す **cpow** のオーバーロードを呼び出すことができます。 C プログラムでは、 **cpow** は常に **_Dcomplex** 値を取得して返します。
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチン|C ヘッダー|C++ ヘッダー|
+|ルーチンによって返される値|C ヘッダー|C++ ヘッダー|
 |-------------|--------------|------------------|
-|**cpow**、 **cpowf**、 **cpowl**|\<complex.h>|\<ccomplex>|
+|**cpow**、               **cpowf**、 **cpowl**|\<complex.h>|\<ccomplex>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性について詳しくは、「 [Compatibility](../../c-runtime-library/compatibility.md)」をご覧ください。
 
 ## <a name="see-also"></a>関連項目
 
-[関数リファレンス (アルファベット順)](crt-alphabetical-function-reference.md)<br/>
+[アルファベット順の関数リファレンス](crt-alphabetical-function-reference.md)<br/>
 [cexp、cexpf、cexpl](cexp-cexpf-cexpl.md)<br/>
 [clog10、clog10f、clog10l](clog10-clog10f-clog10l.md)<br/>
 [clog、clogf、clogl](clog-clogf-clogl.md)<br/>

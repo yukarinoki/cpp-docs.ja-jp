@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: コンパイラの警告 (レベル 1) C4312'
 title: コンパイラの警告 (レベル 1) C4312
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4312
 ms.assetid: 541906ed-4f62-4bcb-947f-cf9ae7411bcb
-ms.openlocfilehash: 379803260492449da4985e62d36750f121b4e7fa
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 52e165fd30a9171c1a08aa16f78cc1f298271b17
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87233263"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97340074"
 ---
 # <a name="compiler-warning-level-1-c4312"></a>コンパイラの警告 (レベル 1) C4312
 
@@ -21,7 +22,7 @@ ms.locfileid: "87233263"
 
 この変換は、符号拡張が発生する場合、32 ビットに収まるポインター値であっても安全でないことがあります。 負の 32 ビット整数が 64 ビット ポインター型に割り当てられる場合、符号拡張によって、ポインター値が整数の値とは異なるメモリ アドレスを参照するようになります。
 
-この警告は、64 ビット コンパイル ターゲットに対してのみ発行されます。 詳細については、「[ポインターを使用するための規則](/windows/win32/WinProg64/rules-for-using-pointers)」を参照してください。
+この警告は、64 ビット コンパイル ターゲットに対してのみ発行されます。 詳細については、「 [ポインターを使用するための規則](/windows/win32/WinProg64/rules-for-using-pointers)」を参照してください。
 
 次のコード例は、64 ビットのターゲットのコンパイル時に C4312 を生成します。
 

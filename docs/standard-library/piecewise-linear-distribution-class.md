@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: piecewise_linear_distribution クラス'
 title: piecewise_linear_distribution クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -26,12 +27,12 @@ helpviewer_keywords:
 - std::piecewise_linear_distribution [C++], param_type
 - std::piecewise_linear_distribution [C++], param_type
 ms.assetid: cd141152-7163-4754-8f98-c6d6500005e0
-ms.openlocfilehash: 57c6e19bc56068c98f6c85978c7af68e56cb4f2a
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 8ba2a0707599c8510488290c5d0c227d464588ff
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88832686"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97340737"
 ---
 # <a name="piecewise_linear_distribution-class"></a>piecewise_linear_distribution クラス
 
@@ -211,7 +212,7 @@ Distribution for 100 samples:
    14-15 :::::
 ```
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:**\<random>
 
@@ -288,7 +289,7 @@ piecewise_linear_distribution(
     InputIteratorW firstW);
 ```
 
-シーケンス [,) に対する反復子からの分布オブジェクトと、 `firstI` `lastI` *firstw*から始まる一致する重みシーケンスを構築します。
+シーケンス [,) に対する反復子からの分布オブジェクトと、 `firstI` `lastI` *firstw* から始まる一致する重みシーケンスを構築します。
 
 初期化子リスト コンストラクター
 
@@ -299,7 +300,7 @@ piecewise_linear_distribution(
     UnaryOperation weightfunc);
 ```
 
-初期化子リストの *間隔* 、および関数 *weightfunc*から生成された重みを持つ分布オブジェクトを構築します。
+初期化子リストの *間隔* 、および関数 *weightfunc* から生成された重みを持つ分布オブジェクトを構築します。
 
 次のように定義されたコンストラクターは
 
@@ -312,7 +313,7 @@ piecewise_linear_distribution(
     UnaryOperation weightfunc);
 ```
 
-[] で均等に分布した *数* の間隔を持つ分布オブジェクトを構築し `xmin,xmax` 、各間隔の重みを関数 *weightfunc*に従って割り当てます。 *weightfunc* は、1つのパラメーターを受け取り、戻り値を持つ必要があります。どちらもに変換 **`double`** できます。 **前提条件:** `xmin < xmax` 。
+[] で均等に分布した *数* の間隔を持つ分布オブジェクトを構築し `xmin,xmax` 、各間隔の重みを関数 *weightfunc* に従って割り当てます。 *weightfunc* は、1つのパラメーターを受け取り、戻り値を持つ必要があります。どちらもに変換 **`double`** できます。 **前提条件:** `xmin < xmax` 。
 
 次のように定義されたコンストラクターは
 

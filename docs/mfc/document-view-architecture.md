@@ -1,5 +1,6 @@
 ---
-title: ドキュメント/ビュー アーキテクチャ
+description: '詳細情報: ドキュメント/ビューアーキテクチャ'
+title: Document-View アーキテクチャ
 ms.date: 11/19/2018
 helpviewer_keywords:
 - CView class [MFC], view architecture
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - documents [MFC], MFC document/view model
 - document objects [MFC], document/view architecture
 ms.assetid: 6127768a-553f-462a-b01b-a5ee6068c81e
-ms.openlocfilehash: a74aeba651d385cf3a5386e94ec20e4e56b7cd57
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: ef6746a77a3f8a482c347d61685fccad3e6b4dfb
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84624785"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97339723"
 ---
 # <a name="documentview-architecture"></a>ドキュメント/ビュー アーキテクチャ
 
@@ -43,7 +44,7 @@ MFC のドキュメント/ビューアーキテクチャを使用すると、複
 
 [CFrameWnd](reference/cframewnd-class.md) (またはそのバリエーションの1つ) では、ドキュメントの1つ以上のビューの周囲にフレームを提供するオブジェクトがサポートされています。
 
-[CDocTemplate](reference/cdoctemplate-class.md) (または[CSingleDocTemplate](reference/csingledoctemplate-class.md)または[CMultiDocTemplate](reference/cmultidoctemplate-class.md)) は、指定された種類の1つ以上の既存のドキュメントを調整し、その型の正しいドキュメント、ビュー、およびフレームウィンドウオブジェクトの作成を管理するオブジェクトをサポートします。
+[CDocTemplate](reference/cdoctemplate-class.md) (または [CSingleDocTemplate](reference/csingledoctemplate-class.md) または [CMultiDocTemplate](reference/cmultidoctemplate-class.md)) は、指定された種類の1つ以上の既存のドキュメントを調整し、その型の正しいドキュメント、ビュー、およびフレームウィンドウオブジェクトの作成を管理するオブジェクトをサポートします。
 
 次の図は、ドキュメントとそのビューの関係を示しています。
 
@@ -66,13 +67,13 @@ MFC のドキュメント/ビューアーキテクチャを使用すると、複
 
 - [1つのドキュメントに複数のビューを追加する](adding-multiple-views-to-a-single-document.md)
 
-- [ドキュメントの使い方](using-documents.md)
+- [ドキュメントの使用](using-documents.md)
 
 - [ビューの使用](using-views.md)
 
-- [複数のドキュメント タイプ、ビュー、フレーム ウィンドウ](multiple-document-types-views-and-frame-windows.md)
+- [複数のドキュメントタイプ、ビュー、フレームウィンドウ](multiple-document-types-views-and-frame-windows.md)
 
-- [ドキュメントとビューの初期化とクリーンアップ](initializing-and-cleaning-up-documents-and-views.md)
+- [ドキュメントとビューの初期化と後処理](initializing-and-cleaning-up-documents-and-views.md)
 
 - [ドキュメント & ビュークラスに対する独自の追加の初期化](creating-new-documents-windows-and-views.md)
 
@@ -86,7 +87,7 @@ MFC のドキュメント/ビューアーキテクチャを使用すると、複
 
 [ユーザーインターフェイス要素](user-interface-elements-mfc.md)<br/>
 [Windows](windows.md)<br/>
-[フレーム ウィンドウ](frame-windows.md)<br/>
+[フレームウィンドウ](frame-windows.md)<br/>
 [ドキュメントテンプレートとドキュメント/ビュー作成プロセス](document-templates-and-the-document-view-creation-process.md)<br/>
-[ドキュメントおよびビューの作成](document-view-creation.md)<br/>
+[ドキュメント/ビューの作成](document-view-creation.md)<br/>
 [新しいドキュメント、ウィンドウ、およびビューの作成](creating-new-documents-windows-and-views.md)

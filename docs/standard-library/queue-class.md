@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: queue クラス'
 title: queue クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -22,12 +23,12 @@ helpviewer_keywords:
 - std::queue [C++], push
 - std::queue [C++], size
 ms.assetid: 28c20ab0-3a72-4185-9e0f-5a44eea0e204
-ms.openlocfilehash: e0bfa4ab037b52b237bd674d5f705de4e9699383
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: b2b30e7a564fa1889d9adc2bb99e48ec1a623c25
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88832608"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97340620"
 ---
 # <a name="queue-class"></a>queue クラス
 
@@ -80,7 +81,7 @@ C++ 標準ライブラリで定義されたコンテナー アダプターには
 |[size_type](#size_type)|`queue` 内の要素の数を表すことができる符号なし整数型。|
 |[value_type](#value_type)|`queue` 内に要素として格納されるオブジェクトの種類を表す型。|
 
-### <a name="functions"></a>Functions
+### <a name="functions"></a>関数
 
 |名前|説明|
 |-|-|

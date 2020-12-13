@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: コンパイラの警告 (レベル 1) C4291'
 title: コンパイラの警告 (レベル 1) C4291
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4291
 ms.assetid: c2b95dea-38f2-4609-9104-707c30798da4
-ms.openlocfilehash: e45856702eef7f24595d10b81f39047d8f9a08b2
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 190fbb1ed91c5524dcd83a0a02a0b0280e264891
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87221004"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97340113"
 ---
 # <a name="compiler-warning-level-1-c4291"></a>コンパイラの警告 (レベル 1) C4291
 
@@ -74,7 +75,7 @@ int main(void)
 }
 ```
 
-上の例では、 **`delete`** 演算子の配置形式に一致する演算子の配置形式が定義されていないため、警告 C4291 が生成され **`new`** ます。 この問題を解決するには、 **main**の上に次のコードを挿入します。 オーバーロードされた演算子のすべてのパラメーターが、 **`delete`** **`new`** 最初のパラメーターを除き、オーバーロードされた演算子のパラメーターと一致することに注意してください。
+上の例では、 **`delete`** 演算子の配置形式に一致する演算子の配置形式が定義されていないため、警告 C4291 が生成され **`new`** ます。 この問題を解決するには、 **main** の上に次のコードを挿入します。 オーバーロードされた演算子のすべてのパラメーターが、 **`delete`** **`new`** 最初のパラメーターを除き、オーバーロードされた演算子のパラメーターと一致することに注意してください。
 
 ```cpp
 void operator delete(void* pMem, char* pszFilename, int nLine)

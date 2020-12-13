@@ -1,18 +1,19 @@
 ---
+description: '詳細情報: parallel_policy クラス'
 title: parallel_policy クラス
 ms.date: 04/18/2019
 f1_keywords:
 - execution/std::execution::parallel_policy
-ms.openlocfilehash: 7bb2b095a50e664dfc585e0bd4aaa608a6ad8e95
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 1cead0bcc44256bf7d41d061d592849a7411b057
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68268964"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97340802"
 ---
-# <a name="parallelpolicy-class"></a>parallel_policy クラス
+# <a name="parallel_policy-class"></a>parallel_policy クラス
 
-並列アルゴリズムのオーバー ロードあいまいさを解消し、並列アルゴリズムの実行を並列化することがあることを示す一意の型として使用されます。
+並列アルゴリズムのオーバーロードを明確にするための一意の型として使用され、並列アルゴリズムの実行が並列化される可能性があることを示します。
 
 ## <a name="syntax"></a>構文
 
@@ -20,6 +21,6 @@ ms.locfileid: "68268964"
 class execution::parallel_policy;
 ```
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-使用の並列アルゴリズムの実行中に、 `execution::parallel_policy` 、キャッチされない例外を使用して、要素アクセス関数の呼び出しが終了した場合、ポリシー`terminate()`呼び出されます。
+ポリシーを使用した並列アルゴリズムの実行中に、 `execution::parallel_policy` 要素アクセス関数の呼び出しがキャッチされない例外によって終了した場合は、が `terminate()` 呼び出されます。

@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: 既定の引数'
 title: 既定の引数
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -10,16 +11,16 @@ helpviewer_keywords:
 - arguments [C++], default
 - defaults [C++], arguments
 ms.assetid: d32cf516-05cb-4d4d-b169-92f5649fdfa2
-ms.openlocfilehash: ef0c81501fe37bd27a23daf2dd1c58b3e6a4f6c0
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 7926070c4fa521dd190a7a9eff626e1c21463d06
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87221732"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97339489"
 ---
 # <a name="default-arguments"></a>既定の引数
 
-多くの場合、関数には引数がありますが、ほとんど使用されることはありません。既定値で十分です。 これに対処するために、既定の引数機能では、特定の呼び出しで有効な引数だけを関数に指定できます。 この概念を説明するために、関数の[オーバーロード](../cpp/function-overloading.md)に示されている例を考えてみましょう。
+多くの場合、関数には引数がありますが、ほとんど使用されることはありません。既定値で十分です。 これに対処するために、既定の引数機能では、特定の呼び出しで有効な引数だけを関数に指定できます。 この概念を説明するために、関数の [オーバーロード](../cpp/function-overloading.md)に示されている例を考えてみましょう。
 
 ```cpp
 // Prototype three print functions.

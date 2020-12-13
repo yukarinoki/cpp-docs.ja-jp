@@ -1,15 +1,16 @@
 ---
+description: 詳細については、「出力ストリーム」を参照してください。
 title: 出力ストリーム
 ms.date: 11/04/2016
 helpviewer_keywords:
 - output streams
 ms.assetid: b49410e3-5caa-4153-9d0d-c4266408dc83
-ms.openlocfilehash: e650f9fd0bbc7ad483363706e632686e8ec3749e
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: ec09a6bee1bcd2f329522b61950f3d051fb57889
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68450167"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97340867"
 ---
 # <a name="output-streams"></a>出力ストリーム
 
@@ -33,19 +34,19 @@ ms.locfileid: "68450167"
 
 ## <a name="in-this-section"></a>このセクションの内容
 
-[出力ストリーム オブジェクトの構築](../standard-library/constructing-output-stream-objects.md)
+[出力ストリームオブジェクトの構築](../standard-library/constructing-output-stream-objects.md)
 
 [挿入演算子と制御形式の使用](../standard-library/using-insertion-operators-and-controlling-format.md)
 
-[出力ファイル ストリームのメンバー関数](../standard-library/output-file-stream-member-functions.md)
+[出力ファイルストリームのメンバー関数](../standard-library/output-file-stream-member-functions.md)
 
 [バッファリングの効果](../standard-library/effects-of-buffering.md)
 
 [バイナリ出力ファイル](../standard-library/binary-output-files.md)
 
-[独自クラスのための << 演算子のオーバーロード](../standard-library/overloading-the-output-operator-for-your-own-classes.md)
+[独自のクラスの << 演算子のオーバーロード](../standard-library/overloading-the-output-operator-for-your-own-classes.md)
 
-[引数を使用しない独自マニピュレーターの作成](../standard-library/writing-your-own-manipulators-without-arguments.md)
+[引数を指定せずに独自のマニピュレーターを作成する](../standard-library/writing-your-own-manipulators-without-arguments.md)
 
 ## <a name="see-also"></a>関連項目
 

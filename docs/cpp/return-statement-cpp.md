@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: return ステートメント (C++)'
 title: return ステートメント (C++)
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - return keyword [C++], syntax
 - return keyword [C++]
 ms.assetid: a498903a-056a-4df0-a6cf-72f633a62210
-ms.openlocfilehash: 6a1ed4f374f133abd0233826d1b58896d49576cf
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: bb847900a0a9fc4c5d723d1b0392f27b6b5cf667
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87225866"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97340477"
 ---
 # <a name="return-statement-c"></a>return ステートメント (C++)
 
@@ -26,7 +27,7 @@ return [expression];
 
 ## <a name="remarks"></a>解説
 
-`expression` 句は、存在する場合、初期化が実行されたときと同様に、関数宣言で指定された型に変換されます。 式の型から関数の型への変換で **`return`** は、一時オブジェクトを作成できます。 一時要素を作成する方法とタイミングの詳細については、「[一時オブジェクト](../cpp/temporary-objects.md)」を参照してください。
+`expression` 句は、存在する場合、初期化が実行されたときと同様に、関数宣言で指定された型に変換されます。 式の型から関数の型への変換で **`return`** は、一時オブジェクトを作成できます。 一時要素を作成する方法とタイミングの詳細については、「 [一時オブジェクト](../cpp/temporary-objects.md)」を参照してください。
 
 `expression` 句の値が呼び出し元の関数に返されます。 expression が省略されている場合、関数の戻り値は未定義です。 コンストラクターとデストラクター、および型の関数 **`void`** は、ステートメントで式を指定することはできません **`return`** 。 他のすべての型の関数は、ステートメントで式を指定する必要があり **`return`** ます。
 

@@ -1,4 +1,5 @@
 ---
+description: ': Decltype (C++) の詳細情報'
 title: decltype  (C++)
 ms.date: 11/04/2016
 f1_keywords:
@@ -9,16 +10,16 @@ helpviewer_keywords:
 - operators [C++], type of an expression
 - operators [C++], deduce expression type
 ms.assetid: 6dcf8888-8196-4f13-af50-51e3797255d4
-ms.openlocfilehash: 9e769bbef66bd1b55b9d445874f00d37a736025e
-ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
+ms.openlocfilehash: e581436a43fc9632961fcb888dfb0b23974fc2df
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90683482"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97339502"
 ---
 # <a name="decltype--c"></a>decltype  (C++)
 
-**`decltype`** 型指定子は、指定された式の型を生成します。 **`decltype`** 型指定子は[ `auto` キーワード](../cpp/auto-cpp.md)と共に、主にテンプレートライブラリを記述する開発者にとって役立ちます。 とを使用し **`auto`** て、 **`decltype`** 戻り値の型がテンプレート引数の型に依存するテンプレート関数を宣言します。 または、とを使用して、 **`auto`** **`decltype`** 別の関数の呼び出しをラップするテンプレート関数を宣言し、ラップされた関数の戻り値の型を返します。
+**`decltype`** 型指定子は、指定された式の型を生成します。 **`decltype`** 型指定子は [ `auto` キーワード](../cpp/auto-cpp.md)と共に、主にテンプレートライブラリを記述する開発者にとって役立ちます。 とを使用し **`auto`** て、 **`decltype`** 戻り値の型がテンプレート引数の型に依存するテンプレート関数を宣言します。 または、とを使用して、 **`auto`** **`decltype`** 別の関数の呼び出しをラップするテンプレート関数を宣言し、ラップされた関数の戻り値の型を返します。
 
 ## <a name="syntax"></a>構文
 
@@ -31,19 +32,19 @@ ms.locfileid: "90683482"
 
 ## <a name="return-value"></a>戻り値
 
-*式*パラメーターの型。
+*式* パラメーターの型。
 
-## <a name="remarks"></a>注釈
+## <a name="remarks"></a>解説
 
 **`decltype`** 型指定子は、Visual Studio 2010 以降のバージョンでサポートされており、ネイティブコードまたはマネージコードと共に使用できます。 `decltype(auto)` (C++14) は Visual Studio 2015 以降でサポートされています。
 
 コンパイラは、次の規則を使用して、 *式* パラメーターの型を決定します。
 
-- *Expression*パラメーターが識別子または[クラスメンバーアクセス](../cpp/member-access-operators-dot-and.md)の場合、 `decltype(expression)` は*expression*によって名前が付けられたエンティティの型になります。 このようなエンティティが存在しない場合や、 *式* パラメーターがオーバーロードされた関数のセットに名前を指定していない場合は、コンパイラによってエラーメッセージが生成されます。
+- *Expression* パラメーターが識別子または [クラスメンバーアクセス](../cpp/member-access-operators-dot-and.md)の場合、 `decltype(expression)` は *expression* によって名前が付けられたエンティティの型になります。 このようなエンティティが存在しない場合や、 *式* パラメーターがオーバーロードされた関数のセットに名前を指定していない場合は、コンパイラによってエラーメッセージが生成されます。
 
-- *Expression*パラメーターが関数またはオーバーロードされた演算子関数の呼び出しである場合、 `decltype(expression)` は関数の戻り値の型です。 オーバーロードされた演算子を囲んでいるかっこは無視されます。
+- *Expression* パラメーターが関数またはオーバーロードされた演算子関数の呼び出しである場合、 `decltype(expression)` は関数の戻り値の型です。 オーバーロードされた演算子を囲んでいるかっこは無視されます。
 
-- *Expression*パラメーターが[右辺](../cpp/lvalues-and-rvalues-visual-cpp.md)値の場合 `decltype(expression)` は、*式*の型です。 *Expression*パラメーターが[左辺](../cpp/lvalues-and-rvalues-visual-cpp.md)値の場合、 `decltype(expression)` は*式*の型への左辺値[参照](../cpp/lvalue-reference-declarator-amp.md)です。
+- *Expression* パラメーターが [右辺](../cpp/lvalues-and-rvalues-visual-cpp.md)値の場合 `decltype(expression)` は、*式* の型です。 *Expression* パラメーターが [左辺](../cpp/lvalues-and-rvalues-visual-cpp.md)値の場合、 `decltype(expression)` は *式* の型への左辺値 [参照](../cpp/lvalue-reference-declarator-amp.md)です。
 
 型指定子の使用例を次のコード例に示し **`decltype`** ます。 最初に次のステートメントを記述したとします。
 
@@ -56,7 +57,7 @@ const A* a = new A();
 
 次に、次の表に示す4つのステートメントによって返される型を確認し **`decltype`** ます。
 
-|ステートメント|種類|メモ|
+|ステートメント|Type|メモ|
 |---------------|----------|-----------|
 |`decltype(fx());`|`const int&&`|への [右辺](../cpp/rvalue-reference-declarator-amp-amp.md) 値参照 **`const int`** 。|
 |`decltype(var);`|**`int`**|変数 `var` の型。|
@@ -76,11 +77,11 @@ UNKNOWN func(T&& t, U&& u){ return t + u; };
 
 **`decltype`** 型指定子の導入により、開発者は、テンプレート関数が返す式の型を取得できます。 後に示す *別の関数宣言構文* 、 **`auto`** キーワード、および **`decltype`** 型指定子を使用して、 *遅延指定* の戻り値の型を宣言します。 遅延指定された戻り値の型は、宣言がコード化されたときではなく、コンパイルされたときに決定します。
 
-次のプロトタイプは代替関数宣言の構文について説明します。 **`const`** 修飾子と修飾子、 **`volatile`** および **`throw`** [例外指定](../cpp/exception-specifications-throw-cpp.md)は省略可能であることに注意してください。 *Function_body*プレースホルダーは、関数の動作を指定する複合ステートメントを表します。 コーディングのベストプラクティスとして、ステートメント内の *式* のプレースホルダーは、 **`decltype`** **`return`** ステートメント (存在する場合) によって指定された式と一致する必要があります ( *function_body*)。
+次のプロトタイプは代替関数宣言の構文について説明します。 **`const`** 修飾子と修飾子、 **`volatile`** および **`throw`** [例外指定](../cpp/exception-specifications-throw-cpp.md)は省略可能であることに注意してください。 *Function_body* プレースホルダーは、関数の動作を指定する複合ステートメントを表します。 コーディングのベストプラクティスとして、ステートメント内の *式* のプレースホルダーは、 **`decltype`** **`return`** ステートメント (存在する場合) によって指定された式と一致する必要があります ( *function_body*)。
 
-**`auto`***function_name* **`(`***パラメーター*<sub>opt</sub> **`)`** **`const`** <sub>opt</sub> **`volatile`** <sub>opt</sub> **`->`** **`decltype(`** *式*の **`)`** **`noexcept`** <sub>選択</sub> **`{`** *function_body***`};`**
+**`auto`***function_name* **`(`***パラメーター*<sub>opt</sub> **`)`** **`const`** <sub>opt</sub> **`volatile`** <sub>opt</sub> **`->`** **`decltype(`** *式* の **`)`** **`noexcept`** <sub>選択</sub> **`{`** *function_body***`};`**
 
-次のコード例では、`myFunc` テンプレート関数の遅延指定された戻り値の型は、テンプレート引数 `t` と `u` の型によって決まります。 コーディングのベストプラクティスとして、コード例では、 `forward` *完全転送*をサポートする右辺値参照と関数テンプレートも使用します。 詳細については、「[右辺値参照宣言子: &&](../cpp/rvalue-reference-declarator-amp-amp.md)」を参照してください。
+次のコード例では、`myFunc` テンプレート関数の遅延指定された戻り値の型は、テンプレート引数 `t` と `u` の型によって決まります。 コーディングのベストプラクティスとして、コード例では、 `forward` *完全転送* をサポートする右辺値参照と関数テンプレートも使用します。 詳細については、「[右辺値参照宣言子: &&](../cpp/rvalue-reference-declarator-amp-amp.md)」を参照してください。
 
 ```cpp
 //C++11
@@ -197,7 +198,7 @@ constexpr bool test2 = !IsCallable<int*, int>::value;
 static_assert(test2, "PASS2");
 ```
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 Visual Studio 2010 以降のバージョン。
 

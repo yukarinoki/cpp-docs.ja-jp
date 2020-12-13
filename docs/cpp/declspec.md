@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: `__declspec`'
 title: __declspec
 ms.date: 03/21/2019
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 - _declspec
 helpviewer_keywords:
 - __declspec keyword [C++]
-ms.openlocfilehash: 06af67a24b7514b22e34852dc2c6ee3f35daa24e
-ms.sourcegitcommit: f2a135d69a2a8ef1777da60c53d58fe06980c997
+ms.openlocfilehash: d0567c522e0e21f70b9ed8acfa428c3374fd09f6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87521123"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97339541"
 ---
 # `__declspec`
 
@@ -60,7 +61,7 @@ ms.locfileid: "87521123"
 
 、、、、、、、、、、 **`code_seg`** **`dllexport`** およびの **`dllimport`** **`naked`** **`noalias`** **`nothrow`** **`property`** **`restrict`** **`selectany`** **`thread`** **`uuid`** 各ストレージクラス属性は、適用先のオブジェクトまたは関数の宣言のプロパティにすぎません。 属性は、 **`thread`** データとオブジェクトにのみ影響します。 **`naked`** 属性と **`spectre`** 属性は、関数にのみ影響します。 **`dllimport`** 属性と **`dllexport`** 属性は、関数、データ、およびオブジェクトに影響します。 **`property`**、、およびの各属性は、 **`selectany`** **`uuid`** COM オブジェクトに影響を与えます。
 
-以前のバージョンとの互換性を維持するために、 **`_declspec`** **`__declspec`** コンパイラオプションの [ [ \( 言語拡張を無効にする](../build/reference/za-ze-disable-language-extensions.md)] が指定されていない限り、はのシノニムになります。
+以前のバージョンとの互換性を維持するために、 **`_declspec`** **`__declspec`** コンパイラオプションの [ [ \( 言語拡張を無効にする](../build/reference/za-ze-disable-language-extensions.md) ] が指定されていない限り、はのシノニムになります。
 
 キーワードは、 **`__declspec`** 単純な宣言の先頭に配置する必要があります。 コンパイラは警告なしで、 **`__declspec`** * または & の後に配置されたキーワードを無視し、宣言の変数識別子の前に配置します。
 
@@ -82,7 +83,7 @@ class __declspec(dllimport) X {};
 
 *宣言子-seq* *init-宣言子リスト*。
 
-*宣言指定子-seq*には、特に基本型 (、、、 **`int`** **`float`** **`typedef`** またはクラス名)、ストレージクラス (など **`static`** )、 **`extern`** または **`__declspec`** 拡張機能を含める必要があります。 *初期化子リスト*には、特に、宣言のポインター部分が含まれている必要があります。 次に例を示します。
+*宣言指定子-seq* には、特に基本型 (、、、 **`int`** **`float`** **`typedef`** またはクラス名)、ストレージクラス (など **`static`** )、 **`extern`** または **`__declspec`** 拡張機能を含める必要があります。 *初期化子リスト* には、特に、宣言のポインター部分が含まれている必要があります。 次に例を示します。
 
 ```cpp
 __declspec(selectany) int * pi1 = 0;   //Recommended, selectany & int both part of decl-specifier

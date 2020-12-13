@@ -1,16 +1,17 @@
 ---
+description: '詳細については、「チュートリアル: User-Interface スレッドからの作業の削除」を参照してください。'
 title: 'チュートリアル: ユーザー インターフェイス スレッドからの処理の除去'
 ms.date: 08/19/2019
 helpviewer_keywords:
 - user-interface threads, removing work from [Concurrency Runtime]
 - removing work from user-interface threads [Concurrency Runtime]
 ms.assetid: a4a65cc2-b3bc-4216-8fa8-90529491de02
-ms.openlocfilehash: 003678f3c79f2abfa7ceb0c67fecd69cf178f442
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 816e8446771cda907397f43386c33476cf3665b8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87222694"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97340919"
 ---
 # <a name="walkthrough-removing-work-from-a-user-interface-thread"></a>チュートリアル: ユーザー インターフェイス スレッドからの処理の除去
 
@@ -34,7 +35,7 @@ ms.locfileid: "87222694"
 
 また、このチュートリアルを開始する前に、MFC アプリケーションの開発と GDI + の基本について理解しておくことをお勧めします。 MFC の詳細については、「 [Mfc Desktop Applications](../../mfc/mfc-desktop-applications.md)」を参照してください。 GDI + の詳細については、「 [Gdi +](/windows/win32/gdiplus/-gdiplus-gdi-start)」を参照してください。
 
-## <a name="sections"></a><a name="top"></a>各項
+## <a name="sections"></a><a name="top"></a> 各項
 
 このチュートリアルは、次のセクションで構成されています。
 
@@ -42,35 +43,35 @@ ms.locfileid: "87222694"
 
 - [ブロマンアプリケーションのシリアルバージョンの実装](#serial)
 
-- [ユーザーインターフェイススレッドからの作業の削除](#removing-work)
+- [User-Interface スレッドからの作業の削除](#removing-work)
 
 - [描画パフォーマンスの向上](#performance)
 
 - [キャンセルのサポートの追加](#cancellation)
 
-## <a name="creating-the-mfc-application"></a><a name="application"></a>MFC アプリケーションの作成
+## <a name="creating-the-mfc-application"></a><a name="application"></a> MFC アプリケーションの作成
 
 ここでは、基本的な MFC アプリケーションを作成する方法について説明します。
 
 ### <a name="to-create-a-visual-c-mfc-application"></a>Visual C++ MFC アプリケーションを作成するには
 
-1. **Mfc アプリケーションウィザード**を使用して、すべての既定の設定を含む mfc アプリケーションを作成します。 お使いのバージョンの Visual Studio のウィザードを開く方法については[、「チュートリアル: 新しい MFC シェルコントロールの使用](../../mfc/walkthrough-using-the-new-mfc-shell-controls.md)」を参照してください。
+1. **Mfc アプリケーションウィザード** を使用して、すべての既定の設定を含む mfc アプリケーションを作成します。 お使いのバージョンの Visual Studio のウィザードを開く方法については [、「チュートリアル: 新しい MFC シェルコントロールの使用](../../mfc/walkthrough-using-the-new-mfc-shell-controls.md) 」を参照してください。
 
-1. プロジェクトの名前 (たとえば、) を入力し、 `Mandelbrot` [ **OK** ] をクリックして、 **MFC アプリケーションウィザード**を表示します。
+1. プロジェクトの名前 (たとえば、) を入力し、 `Mandelbrot` [ **OK** ] をクリックして、 **MFC アプリケーションウィザード** を表示します。
 
-1. [**アプリケーションの種類**] ペインで、[**単一ドキュメント**] を選択します。 [**ドキュメント/ビューアーキテクチャのサポート**] チェックボックスがオフになっていることを確認します。
+1. [ **アプリケーションの種類** ] ペインで、[ **単一ドキュメント**] を選択します。 [ **ドキュメント/ビューアーキテクチャのサポート** ] チェックボックスがオフになっていることを確認します。
 
-1. [**完了**] をクリックしてプロジェクトを作成し、 **MFC アプリケーションウィザード**を閉じます。
+1. [ **完了** ] をクリックしてプロジェクトを作成し、 **MFC アプリケーションウィザード** を閉じます。
 
-   アプリケーションをビルドして実行することにより、アプリケーションが正常に作成されたことを確認します。 アプリケーションをビルドするには、[**ビルド**] メニューの [**ソリューションのビルド**] をクリックします。 アプリケーションが正常にビルドされた場合は、[**デバッグ**] メニューの [**デバッグ開始**] をクリックしてアプリケーションを実行します。
+   アプリケーションをビルドして実行することにより、アプリケーションが正常に作成されたことを確認します。 アプリケーションをビルドするには、[ **ビルド** ] メニューの [ **ソリューションのビルド**] をクリックします。 アプリケーションが正常にビルドされた場合は、[**デバッグ**] メニューの [**デバッグ開始**] をクリックしてアプリケーションを実行します。
 
-## <a name="implementing-the-serial-version-of-the-mandelbrot-application"></a><a name="serial"></a>ブロマンアプリケーションのシリアルバージョンの実装
+## <a name="implementing-the-serial-version-of-the-mandelbrot-application"></a><a name="serial"></a> ブロマンアプリケーションのシリアルバージョンの実装
 
-このセクションでは、マンデルブロフラクタルを描画する方法について説明します。 このバージョンは、マンデルブローフラクタルを GDI +[ビットマップ](/windows/win32/api/gdiplusheaders/nl-gdiplusheaders-bitmap)オブジェクトに描画し、そのビットマップの内容をクライアントウィンドウにコピーします。
+このセクションでは、マンデルブロフラクタルを描画する方法について説明します。 このバージョンは、マンデルブローフラクタルを GDI + [ビットマップ](/windows/win32/api/gdiplusheaders/nl-gdiplusheaders-bitmap) オブジェクトに描画し、そのビットマップの内容をクライアントウィンドウにコピーします。
 
 #### <a name="to-implement-the-serial-version-of-the-mandelbrot-application"></a>ブロマンアプリケーションのシリアルバージョンを実装するには
 
-1. *.Pch* (Visual Studio 2017 以前の*stdafx.h* ) で、次のディレクティブを追加します `#include` 。
+1. *.Pch* (Visual Studio 2017 以前の *stdafx.h* ) で、次のディレクティブを追加します `#include` 。
 
    [!code-cpp[concrt-mandelbrot#1](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_1.h)]
 
@@ -114,17 +115,17 @@ ms.locfileid: "87222694"
 
 [[上](#top)]
 
-## <a name="removing-work-from-the-ui-thread"></a><a name="removing-work"></a>UI スレッドからの作業の削除
+## <a name="removing-work-from-the-ui-thread"></a><a name="removing-work"></a> UI スレッドからの作業の削除
 
 このセクションでは、マンデルブロアプリケーションの UI スレッドから描画作業を削除する方法について説明します。 描画作業を UI スレッドからワーカースレッドに移動すると、ワーカースレッドがバックグラウンドでイメージを生成するときに、UI スレッドがメッセージを処理できます。
 
-同時実行ランタイムには、タスク[グループ](../../parallel/concrt/task-parallelism-concurrency-runtime.md)、[非同期エージェント](../../parallel/concrt/asynchronous-agents.md)、および[軽量タスク](../../parallel/concrt/task-scheduler-concurrency-runtime.md)の3つのタスク実行方法が用意されています。 これらのメカニズムのいずれかを使用して UI スレッドから作業を削除できますが、この例では、タスクグループがキャンセルをサポートしているため、 [concurrency:: task_group](reference/task-group-class.md)オブジェクトを使用しています。 このチュートリアルでは、後でキャンセルを使用して、クライアントウィンドウのサイズ変更時に実行される作業量を減らし、ウィンドウが破棄されたときにクリーンアップを実行します。
+同時実行ランタイムには、タスク [グループ](../../parallel/concrt/task-parallelism-concurrency-runtime.md)、 [非同期エージェント](../../parallel/concrt/asynchronous-agents.md)、および [軽量タスク](../../parallel/concrt/task-scheduler-concurrency-runtime.md)の3つのタスク実行方法が用意されています。 これらのメカニズムのいずれかを使用して UI スレッドから作業を削除できますが、この例では、タスクグループがキャンセルをサポートしているため、 [concurrency:: task_group](reference/task-group-class.md) オブジェクトを使用しています。 このチュートリアルでは、後でキャンセルを使用して、クライアントウィンドウのサイズ変更時に実行される作業量を減らし、ウィンドウが破棄されたときにクリーンアップを実行します。
 
-また、この例では、[同時実行:: unbounded_buffer](reference/unbounded-buffer-class.md)オブジェクトを使用して、UI スレッドとワーカースレッドが相互に通信できるようにします。 ワーカースレッドはイメージを生成した後、オブジェクトへのポインターをオブジェクトに送信 `Bitmap` `unbounded_buffer` し、描画メッセージを UI スレッドにポストします。 その後、UI スレッドがオブジェクトからオブジェクトを受け取り、 `unbounded_buffer` `Bitmap` それをクライアントウィンドウに描画します。
+また、この例では、 [同時実行:: unbounded_buffer](reference/unbounded-buffer-class.md) オブジェクトを使用して、UI スレッドとワーカースレッドが相互に通信できるようにします。 ワーカースレッドはイメージを生成した後、オブジェクトへのポインターをオブジェクトに送信 `Bitmap` `unbounded_buffer` し、描画メッセージを UI スレッドにポストします。 その後、UI スレッドがオブジェクトからオブジェクトを受け取り、 `unbounded_buffer` `Bitmap` それをクライアントウィンドウに描画します。
 
 #### <a name="to-remove-the-drawing-work-from-the-ui-thread"></a>UI スレッドから描画作業を削除するには
 
-1. *.Pch* (Visual Studio 2017 以前の*stdafx.h* ) で、次のディレクティブを追加します `#include` 。
+1. *.Pch* (Visual Studio 2017 以前の *stdafx.h* ) で、次のディレクティブを追加します `#include` 。
 
    [!code-cpp[concrt-mandelbrot#101](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_9.h)]
 
@@ -136,7 +137,7 @@ ms.locfileid: "87222694"
 
    [!code-cpp[concrt-mandelbrot#103](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_11.cpp)]
 
-1. メソッドで、の `CChildView::DrawMandelbrot` 呼び出しの後に、 `Bitmap::UnlockBits` [concurrency:: send](reference/concurrency-namespace-functions.md#send)関数を呼び出して、 `Bitmap` オブジェクトを UI スレッドに渡します。 次に、描画メッセージを UI スレッドにポストし、クライアント領域を無効にします。
+1. メソッドで、の `CChildView::DrawMandelbrot` 呼び出しの後に、 `Bitmap::UnlockBits` [concurrency:: send](reference/concurrency-namespace-functions.md#send) 関数を呼び出して、 `Bitmap` オブジェクトを UI スレッドに渡します。 次に、描画メッセージを UI スレッドにポストし、クライアント領域を無効にします。
 
    [!code-cpp[concrt-mandelbrot#104](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_12.cpp)]
 
@@ -152,9 +153,9 @@ ms.locfileid: "87222694"
 
 [[上](#top)]
 
-## <a name="improving-drawing-performance"></a><a name="performance"></a>描画パフォーマンスの向上
+## <a name="improving-drawing-performance"></a><a name="performance"></a> 描画パフォーマンスの向上
 
-各ピクセルの計算は他のすべての計算から独立しているため、マンデルブロフラクタルの生成は並列化の候補として適しています。 描画プロシージャを並列化するには、次のように、メソッドの外側の **`for`** ループを `CChildView::DrawMandelbrot` [concurrency::p arallel_for](reference/concurrency-namespace-functions.md#parallel_for)アルゴリズムへの呼び出しに変換します。
+各ピクセルの計算は他のすべての計算から独立しているため、マンデルブロフラクタルの生成は並列化の候補として適しています。 描画プロシージャを並列化するには、次のように、メソッドの外側の **`for`** ループを `CChildView::DrawMandelbrot` [concurrency::p arallel_for](reference/concurrency-namespace-functions.md#parallel_for) アルゴリズムへの呼び出しに変換します。
 
 [!code-cpp[concrt-mandelbrot#301](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_14.cpp)]
 
@@ -162,7 +163,7 @@ ms.locfileid: "87222694"
 
 [[上](#top)]
 
-## <a name="adding-support-for-cancellation"></a><a name="cancellation"></a>キャンセルのサポートの追加
+## <a name="adding-support-for-cancellation"></a><a name="cancellation"></a> キャンセルのサポートの追加
 
 このセクションでは、ウィンドウのサイズ変更を処理する方法と、ウィンドウが破棄されたときにアクティブな描画タスクをキャンセルする方法について説明します。
 
@@ -172,13 +173,13 @@ ms.locfileid: "87222694"
 
 マンデルブロアプリケーションは、 `Bitmap` クライアントウィンドウのサイズに合わせてディメンションを持つオブジェクトを作成します。 クライアントウィンドウのサイズが変更されるたびに、新しいウィンドウサイズのイメージを生成するためのバックグラウンドタスクが追加されます。 アプリケーションは、これらの中間イメージを必要としません。最終的なウィンドウサイズにはイメージのみが必要です。 アプリケーションでこの追加の作業が実行されないようにするには、メッセージハンドラーで、メッセージおよびメッセージのアクティブな描画タスクをキャンセル `WM_SIZE` `WM_SIZING` してから、ウィンドウのサイズを変更した後で描画作業を再スケジュールすることができます。
 
-ウィンドウのサイズが変更されたときにアクティブな描画タスクをキャンセルするには、アプリケーションはおよびメッセージのハンドラーで[concurrency:: task_group:: cancel](reference/task-group-class.md#cancel)メソッドを呼び出し `WM_SIZING` `WM_SIZE` ます。 また、メッセージのハンドラーは、 `WM_SIZE` [concurrency:: task_group:: wait](reference/task-group-class.md#wait)メソッドを呼び出して、すべてのアクティブなタスクが完了するのを待ってから、更新されたウィンドウサイズの描画タスクを再スケジュールします。
+ウィンドウのサイズが変更されたときにアクティブな描画タスクをキャンセルするには、アプリケーションはおよびメッセージのハンドラーで [concurrency:: task_group:: cancel](reference/task-group-class.md#cancel) メソッドを呼び出し `WM_SIZING` `WM_SIZE` ます。 また、メッセージのハンドラーは、 `WM_SIZE` [concurrency:: task_group:: wait](reference/task-group-class.md#wait) メソッドを呼び出して、すべてのアクティブなタスクが完了するのを待ってから、更新されたウィンドウサイズの描画タスクを再スケジュールします。
 
 クライアントウィンドウが破棄されたら、アクティブな描画タスクをキャンセルすることをお勧めします。 アクティブな描画タスクをキャンセルすると、クライアントウィンドウが破棄された後に、ワーカースレッドが UI スレッドにメッセージをポストしないようにすることができます。 アプリケーションは、メッセージのハンドラーでアクティブな描画タスクをキャンセルし `WM_DESTROY` ます。
 
 ### <a name="responding-to-cancellation"></a>キャンセルへの応答
 
-`CChildView::DrawMandelbrot`描画タスクを実行するメソッドは、キャンセルに応答する必要があります。 ランタイムは例外処理を使用してタスクを取り消すため、メソッドは、 `CChildView::DrawMandelbrot` すべてのリソースが正しくクリーンアップされることを保証するために、例外セーフメカニズムを使用する必要があります。 この例では、*リソース取得は初期化*(RAII) パターンを使用して、タスクが取り消されたときにビットマップビットのロックが解除されることを保証します。
+`CChildView::DrawMandelbrot`描画タスクを実行するメソッドは、キャンセルに応答する必要があります。 ランタイムは例外処理を使用してタスクを取り消すため、メソッドは、 `CChildView::DrawMandelbrot` すべてのリソースが正しくクリーンアップされることを保証するために、例外セーフメカニズムを使用する必要があります。 この例では、 *リソース取得は初期化* (RAII) パターンを使用して、タスクが取り消されたときにビットマップビットのロックが解除されることを保証します。
 
 ##### <a name="to-add-support-for-cancellation-in-the-mandelbrot-application"></a>マンデルブロアプリケーションでキャンセルのサポートを追加するには
 

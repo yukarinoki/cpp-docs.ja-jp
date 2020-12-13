@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: __min'
 title: __min
 ms.date: 04/05/2018
 api_name:
@@ -28,12 +29,12 @@ helpviewer_keywords:
 - minimum macro
 - _min macro
 ms.assetid: 2037f26c-b48a-4a69-8870-22519f052a3c
-ms.openlocfilehash: 6b5cc6517c125f91337ca0d9b12b7a49bd7c1753
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 337d4fc7226044e41a616dc6da8230e013b2702d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70951734"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97340581"
 ---
 # <a name="__min"></a>__min
 
@@ -48,17 +49,17 @@ ms.locfileid: "70951734"
 ### <a name="parameters"></a>パラメーター
 
 *a*、 *b*<br/>
-演算子が **<** 動作する任意の型の値。
+演算子が動作する任意の型の値 **<** 。
 
 ## <a name="return-value"></a>戻り値
 
 2 つの引数のうちの小さい方。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-**__ Min**マクロは、2つの値を比較し、小さい方の値を返します。 引数には、符号付きまたは符号なしのすべての数値データ型を指定できます。 引数と戻り値はともに同じデータ型である必要があります。
+**__Min** マクロは、2つの値を比較し、小さい方の値を返します。 引数には、符号付きまたは符号なしのすべての数値データ型を指定できます。 引数と戻り値はともに同じデータ型である必要があります。
 
-返される引数はマクロによって2回評価されます。 このため、引数が評価時に値を変更する式 (など`*p++`) の場合、予期しない結果になる可能性があります。
+返される引数はマクロによって2回評価されます。 このため、引数が評価時に値を変更する式 (など) の場合、予期しない結果になる可能性が `*p++` あります。
 
 ## <a name="requirements"></a>必要条件
 
@@ -91,5 +92,5 @@ The smaller of 10 and 21 is 10
 
 ## <a name="see-also"></a>関連項目
 
-[浮動小数点サポート](../../c-runtime-library/floating-point-support.md)<br/>
+[浮動小数点のサポート](../../c-runtime-library/floating-point-support.md)<br/>
 [__max](max.md)<br/>

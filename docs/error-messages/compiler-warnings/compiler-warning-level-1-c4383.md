@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: コンパイラの警告 (レベル 1) C4383'
 title: コンパイラの警告 (レベル 1) C4383
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4383
 ms.assetid: 96c0e52d-874e-4b57-a154-0e49b6a00fae
-ms.openlocfilehash: 1c4a7ca806430c73c8e8396e596782253cc06f09
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: f6ece51ed497919cf444952f42130cc3a4bfb4a2
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80162739"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97339931"
 ---
 # <a name="compiler-warning-level-1-c4383"></a>コンパイラの警告 (レベル 1) C4383
 
@@ -19,9 +20,9 @@ ms.locfileid: "80162739"
 
 マネージ型の逆参照演算子のユーザー定義インスタンスオーバーライドを追加すると、その型の逆参照演算子がハンドルのオブジェクトを返す機能をオーバーライドする可能性があります。 静的なユーザー定義の逆参照演算子を記述することを検討してください。
 
-詳細については、「[オブジェクト演算子 (^) へのハンドル](../../extensions/handle-to-object-operator-hat-cpp-component-extensions.md)」および「[参照操作の追跡](../../extensions/tracking-reference-operator-cpp-component-extensions.md)」を参照してください。
+詳細については、「 [オブジェクト演算子 (^) へのハンドル](../../extensions/handle-to-object-operator-hat-cpp-component-extensions.md) 」および「 [参照操作の追跡](../../extensions/tracking-reference-operator-cpp-component-extensions.md)」を参照してください。
 
-また、参照されたメタデータを使用して、他の言語コンパイラでインスタンス演算子を使用することはできません。 詳細については、「[ユーザー定義のC++演算子 (/cli)](../../dotnet/user-defined-operators-cpp-cli.md)」を参照してください。
+また、参照されたメタデータを使用して、他の言語コンパイラでインスタンス演算子を使用することはできません。 詳細については、「 [ユーザー定義の演算子 (C++/cli)](../../dotnet/user-defined-operators-cpp-cli.md)」を参照してください。
 
 ## <a name="example"></a>例
 

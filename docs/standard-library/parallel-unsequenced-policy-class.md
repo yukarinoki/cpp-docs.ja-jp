@@ -1,18 +1,19 @@
 ---
+description: '詳細情報: parallel_unsequenced_policy クラス'
 title: parallel_unsequenced_policy クラス
 ms.date: 04/18/2019
 f1_keywords:
 - execution/std::execution::parallel_unsequenced_policy
-ms.openlocfilehash: 92b4e3ce3743fdd3d5ba112a333b2306829b95d4
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: e39edc0979bf1374bc6092dbadb032811180f668
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68268784"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97340789"
 ---
-# <a name="parallelunsequencedpolicy-class"></a>parallel_unsequenced_policy クラス
+# <a name="parallel_unsequenced_policy-class"></a>parallel_unsequenced_policy クラス
 
-並列アルゴリズムの実行の並列化されベクター化ことを示し、並列アルゴリズムのオーバー ロードを明確に一意の型として使用されます。
+並列アルゴリズムのオーバーロードを明確にするための一意の型として使用され、並列アルゴリズムの実行が並列化され、ベクター化される可能性があることを示します。
 
 ## <a name="syntax"></a>構文
 
@@ -20,6 +21,6 @@ ms.locfileid: "68268784"
 class execution::parallel_unsequenced_policy;
 ```
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-使用の並列アルゴリズムの実行中に、 `execution::parallel_unsequenced_policy` 、キャッチされない例外を使用して、要素アクセス関数の呼び出しが終了した場合、ポリシー`terminate()`呼び出されます。
+ポリシーを使用した並列アルゴリズムの実行中に、 `execution::parallel_unsequenced_policy` 要素アクセス関数の呼び出しがキャッチされない例外によって終了した場合は、が `terminate()` 呼び出されます。

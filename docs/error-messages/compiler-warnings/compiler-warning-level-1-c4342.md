@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: コンパイラの警告 (レベル 1) C4342'
 title: コンパイラの警告 (レベル 1) C4342
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - C4342
 ms.assetid: 47d4d5ab-069f-4cdc-98c3-10d649577a37
-ms.openlocfilehash: 8ac00d3d57f8cf7d6c85f3106dbe9b8c3cb9adf0
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: f08cf24b0fe429e8b788a20fbcb05d2a8cd8b1d0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80162921"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97340021"
 ---
 # <a name="compiler-warning-level-1-c4342"></a>コンパイラの警告 (レベル 1) C4342
 
 動作変更: '*function*' が呼び出されましたが、メンバー演算子が前のバージョンで呼び出されました
 
-Visual Studio 2002 よりC++前のバージョンの visual Studio では、メンバーが呼び出されましたが、この動作は変更されており、コンパイラは名前空間のスコープ内で最適な一致を検出するようになりました。
+Visual Studio 2002 より前のバージョンの Visual C++ では、メンバーが呼び出されましたが、この動作は変更されており、コンパイラは名前空間スコープで最も一致するものを検出するようになりました。
 
 メンバー演算子が見つかった場合、コンパイラは以前は名前空間スコープ演算子を考慮していませんでした。 名前空間のスコープでより適切な一致がある場合、現在のコンパイラはそれを正しく呼び出しますが、以前のコンパイラはそれを考慮しません。
 

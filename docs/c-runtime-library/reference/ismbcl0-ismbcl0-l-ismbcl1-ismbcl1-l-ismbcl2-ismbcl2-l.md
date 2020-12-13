@@ -1,4 +1,5 @@
 ---
+description: 詳細については、_ismbcl0、_ismbcl0_l、_ismbcl1、_ismbcl1_l、_ismbcl2、_ismbcl2_l を参照してください。
 title: _ismbcl0、_ismbcl0_l、_ismbcl1、_ismbcl1_l、_ismbcl2、_ismbcl2_l
 ms.date: 4/2/2020
 api_name:
@@ -58,12 +59,12 @@ helpviewer_keywords:
 - _ismbcl2_l function
 - _ismbcl0 function
 ms.assetid: ee15ebd1-462c-4a43-95f3-6735836d626a
-ms.openlocfilehash: 813e6359d17f2ea4c6c0ded87a97c2afda243642
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 19d116f55f12026879730852fe6622c72686777e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82919738"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97340594"
 ---
 # <a name="_ismbcl0-_ismbcl0_l-_ismbcl1-_ismbcl1_l-_ismbcl2-_ismbcl2_l"></a>_ismbcl0、_ismbcl0_l、_ismbcl1、_ismbcl1_l、_ismbcl2、_ismbcl2_l
 
@@ -100,7 +101,7 @@ int _ismbcl2_l(
 
 ### <a name="parameters"></a>パラメーター
 
-*40u-c*<br/>
+*c*<br/>
 テストする文字。
 
 *locale*<br/>
@@ -108,7 +109,7 @@ int _ismbcl2_l(
 
 ## <a name="return-value"></a>戻り値
 
-これらの各ルーチンでは、文字がテスト条件を満たす場合に 0 以外の値が返され、テスト条件を満たさない場合に 0 が返されます。 *C* <= 255 で、対応する **_ismbb**ルーチン (たとえば、 **_ismbcalnum**が **_ismbbalnum**に対応する) がある場合、結果は対応する **_ismbb**ルーチンの戻り値になります。
+これらの各ルーチンでは、文字がテスト条件を満たす場合に 0 以外の値が返され、テスト条件を満たさない場合に 0 が返されます。 *C* <= 255 で、対応する **_ismbb** ルーチン (たとえば、 **_ismbcalnum** が **_ismbbalnum** に対応する) がある場合、結果は対応する **_ismbb** ルーチンの戻り値になります。
 
 ## <a name="remarks"></a>解説
 
@@ -116,7 +117,7 @@ int _ismbcl2_l(
 
 出力値は、ロケールの **LC_CTYPE** カテゴリの設定に影響されます。詳細については、「[setlocale](setlocale-wsetlocale.md)」を参照してください。 **_l** サフィックスが付いていないこれらの関数のバージョンでは、このロケールに依存する動作に現在のロケールを使用します。**_l** サフィックスが付いているバージョンは、渡されたロケール パラメーターを代わりに使用する点を除いて同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
 
-|ルーチン|テスト条件 (コード ページ 932 のみ)|
+|ルーチンによって返される値|テスト条件 (コード ページ 932 のみ)|
 |-------------|-------------------------------------------|
 |**_ismbcl0**|JIS 非漢字: 0x8140<=*c*<= 0x889E。|
 |**_ismbcl0_l**|JIS 非漢字: 0x8140<=*c*<= 0x889E。|
@@ -125,7 +126,7 @@ int _ismbcl2_l(
 |**_ismbcl2**|JIS レベル 2: 0x989F<=*c*<= 0xEAA4。|
 |**_ismbcl2_l**|JIS レベル 2: 0x989F<=*c*<= 0xEAA4。|
 
-関数は、指定された値*c*が上で説明したテスト条件に一致することを確認しますが、 *c*が有効なマルチバイト文字であることを確認しません。 下位バイトが範囲 0x00 - 0x3F、0x7F、または 0xFD - 0xFF にある場合、これらの関数は 0 以外の値を返し、文字がテスト条件を満たすことを示します。 マルチバイト文字が定義されているかどうかをテストするために [_ismbbtrail](ismbbtrail-ismbbtrail-l.md) を使用します。
+関数は、指定された値 *c* が上で説明したテスト条件に一致することを確認しますが、 *c* が有効なマルチバイト文字であることを確認しません。 下位バイトが範囲 0x00 - 0x3F、0x7F、または 0xFD - 0xFF にある場合、これらの関数は 0 以外の値を返し、文字がテスト条件を満たすことを示します。 マルチバイト文字が定義されているかどうかをテストするために [_ismbbtrail](ismbbtrail-ismbbtrail-l.md) を使用します。
 
 **終了コードページ932固有**
 
@@ -133,7 +134,7 @@ int _ismbcl2_l(
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**_ismbcl0**|\<mbstring.h>|
 |**_ismbcl0_l**|\<mbstring.h>|
@@ -147,5 +148,5 @@ int _ismbcl2_l(
 ## <a name="see-also"></a>関連項目
 
 [文字分類](../../c-runtime-library/character-classification.md)<br/>
-[_ismbc 系ルーチン](../../c-runtime-library/ismbc-routines.md)<br/>
-[is、isw 系ルーチン](../../c-runtime-library/is-isw-routines.md)<br/>
+[_ismbc ルーチン](../../c-runtime-library/ismbc-routines.md)<br/>
+[is、isw ルーチン](../../c-runtime-library/is-isw-routines.md)<br/>

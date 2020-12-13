@@ -1,19 +1,20 @@
 ---
+description: '詳細情報: path クラス'
 title: path クラス
 ms.date: 09/27/2018
 f1_keywords:
 - filesystem/std::experimental::filesystem::path
 ms.assetid: 8a1227ca-aeb2-4e0e-84aa-86e34e4f4fe8
-ms.openlocfilehash: fb56afbc1d29f1d321b394342382f89b06768720
-ms.sourcegitcommit: b5854134553db1d99a5761bec131841c374a3098
+ms.openlocfilehash: 469d594800036b165f8693162ca11ca161736cf0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91958660"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97340776"
 ---
 # <a name="path-class"></a>path クラス
 
-**Path**クラスは、型のオブジェクトを格納し `string_type` ます。これは、パス `myname` 名としての使用に適した、exposition の目的でここで呼び出されます。 `string_type` はのシノニムです `basic_string<value_type>` 。ここで、 `value_type` は Windows 上ののシノニムで、 **`wchar_t`** **`char`** POSIX ではです。
+**Path** クラスは、型のオブジェクトを格納し `string_type` ます。これは、パス `myname` 名としての使用に適した、exposition の目的でここで呼び出されます。 `string_type` はのシノニムです `basic_string<value_type>` 。ここで、 `value_type` は Windows 上ののシノニムで、 **`wchar_t`** **`char`** POSIX ではです。
 
 詳細およびコード例については、[ファイル システムのナビゲーション (C++)](../standard-library/file-system-navigation.md) に関する記事を参照してください。
 
@@ -34,7 +35,7 @@ class path;
 |型名|説明|
 |-|-|
 |[const_iterator](#const_iterator)|`iterator` と同義。|
-|[反](#iterator)|のコンポーネントを指定する双方向定数反復子 `path` `myname` 。|
+|[iterator](#iterator)|のコンポーネントを指定する双方向定数反復子 `path` `myname` 。|
 |[string_type](#string_type)|この型は `basic_string<value_type>` の同意語です。|
 
 ### <a name="member-functions"></a>メンバー関数
@@ -48,7 +49,7 @@ class path;
 |[オフ](#clear)|`mypath.clear()`を実行します。|
 |[対照](#compare)|比較値を返します。|
 |[concat](#compare)|必要に応じて、指定したシーケンスをに追加し `mypath` ます (区切り記号は挿入しません)。|
-|[empty](#empty)|`mypath.empty()` を返します。|
+|[empty](#empty)|`mypath.empty()` が返されます。|
 |[end](#end)|型のシーケンスの末尾の反復子を返し `iterator` ます。|
 |[extension](#extension)|のサフィックスを返し `filename()` ます。|
 |[filename](#filename)|myname のルート ディレクトリ コンポーネント (具体的には、 `empty() ? path() : *--end()`」を参照してください。 このコンポーネントは、空になることもあります。|
@@ -57,18 +58,18 @@ class path;
 |[generic_u32string](#generic_u32string)|すべての円記号がスラッシュに変換された `u32string()` を返します (Windows の場合)。|
 |[generic_u8string](#generic_u8string)|すべての円記号がスラッシュに変換された `u8string()` を返します (Windows の場合)。|
 |[generic_wstring](#generic_wstring)|すべての円記号がスラッシュに変換された `wstring()` を返します (Windows の場合)。|
-|[has_extension](#has_extension)|`!extension().empty()` を返します。|
-|[has_filename](#has_filename)|`!filename().empty()` を返します。|
-|[has_parent_path](#has_parent_path)|`!parent_path().empty()` を返します。|
-|[has_relative_path](#has_relative_path)|`!relative_path().empty()` を返します。|
-|[has_root_directory](#has_root_directory)|`!root_directory().empty()` を返します。|
-|[has_root_name](#has_root_name)|`!root_name().empty()` を返します。|
-|[has_root_path](#has_root_path)|`!root_path().empty()` を返します。|
-|[has_stem](#has_stem)|`!stem().empty()` を返します。|
+|[has_extension](#has_extension)|`!extension().empty()` が返されます。|
+|[has_filename](#has_filename)|`!filename().empty()` が返されます。|
+|[has_parent_path](#has_parent_path)|`!parent_path().empty()` が返されます。|
+|[has_relative_path](#has_relative_path)|`!relative_path().empty()` が返されます。|
+|[has_root_directory](#has_root_directory)|`!root_directory().empty()` が返されます。|
+|[has_root_name](#has_root_name)|`!root_name().empty()` が返されます。|
+|[has_root_path](#has_root_path)|`!root_path().empty()` が返されます。|
+|[has_stem](#has_stem)|`!stem().empty()` が返されます。|
 |[is_absolute](#is_absolute)|Windows の場合、関数はを返し `has_root_name() && has_root_directory()` ます。 POSIX の場合、関数はを返し `has_root_directory()` ます。|
-|[is_relative](#is_relative)|`!is_absolute()` を返します。|
+|[is_relative](#is_relative)|`!is_absolute()` が返されます。|
 |[make_preferred](#make_preferred)|各区切り記号を必要に応じて preferred_separator に変換します。|
-|[native](#native)|`myname` を返します。|
+|[native](#native)|`myname` が返されます。|
 |[parent_path](#parent_path)|の親パスコンポーネントを返し `myname` ます。|
 |[preferred_separator](#preferred_separator)|この定数オブジェクトでは、パスのコンポーネントを区切るために推奨される文字を指定します。この文字は、ホスト オペレーティング システムによって異なります。 |
 |[relative_path](#relative_path)|の相対パスコンポーネントを返し `myname` ます。 |
@@ -94,9 +95,9 @@ class path;
 |[operator =](#op_as)|パスの要素を別のパスのコピーで置き換えます。|
 |[演算子 + =](#op_add)|さまざまな `concat` 式。|
 |[operator/=](#op_divide)|さまざまな `append` 式。|
-|[string_type 演算子](#op_string)|`myname` を返します。|
+|[string_type 演算子](#op_string)|`myname` が返されます。|
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:**\<filesystem>
 
@@ -226,7 +227,7 @@ typedef iterator const_iterator;
 
 ## <a name="pathempty"></a><a name="empty"></a> path:: empty
 
-`mypath.empty()` を返します。
+`mypath.empty()` が返されます。
 
 ```cpp
 bool empty() const noexcept;
@@ -248,7 +249,7 @@ iterator end() const;
 path extension() const;
 ```
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 次のようなのサフィックスを返し `filename() X` ます。
 
@@ -312,7 +313,7 @@ wstring generic_wstring() const;
 
 ## <a name="pathhas_extension"></a><a name="has_extension"></a> パス:: has_extension
 
-`!extension().empty()` を返します。
+`!extension().empty()` が返されます。
 
 ```cpp
 bool has_extension() const;
@@ -320,7 +321,7 @@ bool has_extension() const;
 
 ## <a name="pathhas_filename"></a><a name="has_filename"></a> パス:: has_filename
 
-`!filename().empty()` を返します。
+`!filename().empty()` が返されます。
 
 ```cpp
 bool has_filename() const;
@@ -328,7 +329,7 @@ bool has_filename() const;
 
 ## <a name="pathhas_parent_path"></a><a name="has_parent_path"></a> パス:: has_parent_path
 
-`!parent_path().empty()` を返します。
+`!parent_path().empty()` が返されます。
 
 ```cpp
 bool has_parent_path() const;
@@ -336,7 +337,7 @@ bool has_parent_path() const;
 
 ## <a name="pathhas_relative_path"></a><a name="has_relative_path"></a> パス:: has_relative_path
 
-`!relative_path().empty()` を返します。
+`!relative_path().empty()` が返されます。
 
 ```cpp
 bool has_relative_path() const;
@@ -344,7 +345,7 @@ bool has_relative_path() const;
 
 ## <a name="pathhas_root_directory"></a><a name="has_root_directory"></a> パス:: has_root_directory
 
-`!root_directory().empty()` を返します。
+`!root_directory().empty()` が返されます。
 
 ```cpp
 bool has_root_directory() const;
@@ -352,7 +353,7 @@ bool has_root_directory() const;
 
 ## <a name="pathhas_root_name"></a><a name="has_root_name"></a> パス:: has_root_name
 
-`!root_name().empty()` を返します。
+`!root_name().empty()` が返されます。
 
 ```cpp
 bool has_root_name() const;
@@ -360,7 +361,7 @@ bool has_root_name() const;
 
 ## <a name="pathhas_root_path"></a><a name="has_root_path"></a> パス:: has_root_path
 
-`!root_path().empty()` を返します。
+`!root_path().empty()` が返されます。
 
 ```cpp
 bool has_root_path() const;
@@ -368,7 +369,7 @@ bool has_root_path() const;
 
 ## <a name="pathhas_stem"></a><a name="has_stem"></a> パス:: has_stem
 
-`!stem().empty()` を返します。
+`!stem().empty()` が返されます。
 
 ```cpp
 bool has_stem() const;
@@ -384,7 +385,7 @@ bool is_absolute() const;
 
 ## <a name="pathis_relative"></a><a name="is_relative"></a> パス:: is_relative
 
-`!is_absolute()` を返します。
+`!is_absolute()` が返されます。
 
 ```cpp
 bool is_relative() const;
@@ -407,7 +408,7 @@ class iterator
    };
 ```
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 クラスは、 `path` シーケンス内ののコンポーネントを指定する双方向定数反復子を表し `myname` ます。
 
@@ -441,7 +442,7 @@ path& make_preferred();
 
 ## <a name="pathnative"></a><a name="native"></a> パス:: native
 
-`myname` を返します。
+`myname` が返されます。
 
 ```cpp
 const string_type& native() const noexcept;
@@ -467,7 +468,7 @@ path& operator=(const Source& source);
 *電源*\
 ソースパス。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 最初のメンバー演算子は、 `right.myname` をにコピーし `myname` ます。 2番目のメンバー演算子は、 `right.myname` に移動 `myname` します。 3番目のメンバー演算子はと同じように動作し `*this = path(source)` ます。
 
@@ -505,7 +506,7 @@ path& operator+=(Elem elem);
 *電源*\
 追加されたソース。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 このメンバー関数には、次の対応する式と同じ効果があります。
 
@@ -540,7 +541,7 @@ path& operator/=(const Source& source);
 *電源*\
 追加されたソース。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 このメンバー関数には、次の対応する式と同じ効果があります。
 
@@ -550,7 +551,7 @@ path& operator/=(const Source& source);
 
 ## <a name="pathoperator-string_type"></a><a name="op_string"></a> path:: operator string_type
 
-`myname` を返します。
+`myname` が返されます。
 
 ```cpp
 operator string_type() const;
@@ -564,7 +565,7 @@ operator string_type() const;
 path parent_path() const;
 ```
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 の親パスコンポーネントを返し `myname` ます。具体的には、を `myname` 削除した後ののプレフィックス `filename().native()` と、直前のディレクトリ区切り記号を返します。 (同様に、場合によっては、 `begin() != end()` 範囲内のすべての要素を組み合わせ `[begin(), --end())` て適用 `operator/=` します)。コンポーネントが空である可能性があります。
 
@@ -608,7 +609,7 @@ path(InIt first, InIt last, const locale& loc);
 *前の*\
 コピーされる最後の要素の位置。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 コンストラクターはすべて、 `myname` 次のようにさまざまな方法で構成されます。
 
@@ -638,7 +639,7 @@ static constexpr value_type preferred_separator == '/';
 #endif // filesystem model now defined
 ```
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 Windows では、ほとんどのコンテキストで、L'/' の代用が許容されます。
 
@@ -650,7 +651,7 @@ Windows では、ほとんどのコンテキストで、L'/' の代用が許容�
 path relative_path() const;
 ```
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 の相対パスコンポーネントを返し `myname` ます。具体的には、を `myname` 削除した後ののサフィックス `root_path().native()` と、それ以降の冗長ディレクトリ区切り記号を返します。 このコンポーネントは、空になることもあります。
 
@@ -675,7 +676,7 @@ path& replace_extension(const path& newext = path());
 *newext*\
 新しい拡張機能。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 最初に、からサフィックスを削除 `extension().native()` `myname` します。 `!newext.empty() && newext[0] != dot`( `dot` がの場合 `*path(".").c_str()` ) の場合 `dot` は、がに追加され `myname` ます。 その後、 *newext* がに追加され `myname` ます。
 
@@ -692,7 +693,7 @@ path& replace_filename(const path& pval);
 *pval*\
 ファイル名のパス。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 このメンバー関数は、次のコードを実行します。
 
@@ -711,7 +712,7 @@ return (*this);
 path root_directory() const;
 ```
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 このコンポーネントは、空になることもあります。
 
@@ -723,7 +724,7 @@ path root_directory() const;
 path root_name() const;
 ```
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 このコンポーネントは、空になることもあります。
 
@@ -735,7 +736,7 @@ path root_name() const;
 path root_path() const;
 ```
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 のルートパスコンポーネント (具体的には) を返し `myname` `root_name()`  /  `root_directory` ます。 このコンポーネントは、空になることもあります。
 
@@ -747,7 +748,7 @@ path root_path() const;
 path stem() const;
 ```
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 `stem`のコンポーネントを返し `myname` `filename().native()` ます。具体的には、末尾が `extension().native()` 削除されます。 このコンポーネントは、空になることもあります。
 
@@ -761,7 +762,7 @@ basic_string\<Elem, Traits, Alloc> string(const Alloc& al = Alloc()) const;
 string string() const;
 ```
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 最初の (テンプレート) メンバー関数は、次のように、同じ方法で格納されているシーケンスを変換し `mypath` ます。
 

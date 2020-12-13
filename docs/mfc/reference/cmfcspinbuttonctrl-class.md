@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: CMFCSpinButtonCtrl クラス'
 title: CMFCSpinButtonCtrl クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,16 +9,16 @@ f1_keywords:
 helpviewer_keywords:
 - CMFCSpinButtonCtrl [MFC], OnDraw
 ms.assetid: 8773f259-4d3f-4bca-a71c-09e0c71bc843
-ms.openlocfilehash: 445b857400d8c82109ca7220b84bac692a2abf89
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 87e9abc94247416704ab801beeaa1953c4cceb46
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81376176"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97339637"
 ---
 # <a name="cmfcspinbuttonctrl-class"></a>CMFCSpinButtonCtrl クラス
 
-この`CMFCSpinButtonCtrl`クラスは、スピン ボタン コントロールを描画するビジュアル マネージャーをサポートします。
+クラスは、 `CMFCSpinButtonCtrl` スピンボタンコントロールを描画するビジュアルマネージャーをサポートしています。
 
 ## <a name="syntax"></a>構文
 
@@ -38,15 +39,15 @@ class CMFCSpinButtonCtrl : public CSpinButtonCtrl
 
 |名前|説明|
 |----------|-----------------|
-|[CMFCスピンボタンCtrl::オンドロー](#ondraw)|現在のスピン ボタン コントロールを再描画します。|
+|[CMFCSpinButtonCtrl:: OnDraw](#ondraw)|現在のスピンボタンコントロールを再描画します。|
 
 ## <a name="remarks"></a>解説
 
-ビジュアル マネージャーを使用してアプリケーションでスピン ボタン コントロールを描画するには、クラスのすべてのインスタンスを`CSpinButtonCtrl`クラスに`CMFCSpinButtonCtrl`置き換えます。
+ビジュアルマネージャーを使用して、アプリケーションにスピンボタンコントロールを描画するには、クラスのすべてのインスタンスを `CSpinButtonCtrl` クラスに置き換え `CMFCSpinButtonCtrl` ます。
 
 ## <a name="example"></a>例
 
-クラスのオブジェクトを作成し、そのメソッドを使用する`CMFCSpinButtonCtrl`方法を次の`Create`例に示します。
+次の例は、クラスのオブジェクトを作成し、そのメソッドを使用する方法を示して `CMFCSpinButtonCtrl` `Create` います。
 
 [!code-cpp[NVC_MFC_RibbonApp#25](../../mfc/reference/codesnippet/cpp/cmfcspinbuttonctrl-class_1.cpp)]
 
@@ -62,13 +63,13 @@ class CMFCSpinButtonCtrl : public CSpinButtonCtrl
 
 [CMFCSpinButtonCtrl](../../mfc/reference/cmfcspinbuttonctrl-class.md)
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-**ヘッダー:** afxspinbuttonctrl.h
+**ヘッダー:** afxspinbuttonctrl
 
-## <a name="cmfcspinbuttonctrlondraw"></a><a name="ondraw"></a>CMFCスピンボタンCtrl::オンドロー
+## <a name="cmfcspinbuttonctrlondraw"></a><a name="ondraw"></a> CMFCSpinButtonCtrl:: OnDraw
 
-現在のスピン ボタン コントロールを再描画します。
+現在のスピンボタンコントロールを再描画します。
 
 ```
 virtual void OnDraw(CDC* pDC);
@@ -77,14 +78,14 @@ virtual void OnDraw(CDC* pDC);
 ### <a name="parameters"></a>パラメーター
 
 *pDC*<br/>
-[in]デバイス コンテキストへのポインター。
+からデバイスコンテキストへのポインター。
 
 ### <a name="remarks"></a>解説
 
-フレームワークは`CMFCSpinButtonCtrl::OnPaint`[、CWnd::OnPaint](../../mfc/reference/cwnd-class.md#onpaint)メッセージを処理するメソッドを呼び出し、そのメソッド`CMFCSpinButtonCtrl::OnDraw`はこのメソッドを呼び出します。 フレームワークがスピン ボタン コントロールを描画する方法をカスタマイズするには、このメソッドをオーバーライドします。
+フレームワークは、 `CMFCSpinButtonCtrl::OnPaint` [CWnd:: OnPaint](../../mfc/reference/cwnd-class.md#onpaint) メッセージを処理するメソッドを呼び出し、そのメソッドがこのメソッドを呼び出し `CMFCSpinButtonCtrl::OnDraw` ます。 このメソッドをオーバーライドして、フレームワークがスピンボタンコントロールを描画する方法をカスタマイズします。
 
 ## <a name="see-also"></a>関連項目
 
-[階層グラフ](../../mfc/hierarchy-chart.md)<br/>
-[クラス](../../mfc/reference/mfc-classes.md)<br/>
-[クラス](../../mfc/reference/cmfcvisualmanager-class.md)
+[階層図](../../mfc/hierarchy-chart.md)<br/>
+[Classes](../../mfc/reference/mfc-classes.md)<br/>
+[CMFCVisualManager クラス](../../mfc/reference/cmfcvisualmanager-class.md)

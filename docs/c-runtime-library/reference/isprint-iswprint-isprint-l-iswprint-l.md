@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: isprint、iswprint、_isprint_l、_iswprint_l'
 title: isprint、iswprint、_isprint_l、_iswprint_l
 ms.date: 4/2/2020
 api_name:
@@ -40,12 +41,12 @@ helpviewer_keywords:
 - iswprint_l function
 - _isprint_l function
 ms.assetid: a8bbcdb0-e8d0-4d8c-ae4e-56d3bdee6ca3
-ms.openlocfilehash: 9921164220bc5289a7ae4a211c88107b4dac8e9c
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: e5d0ee00fbdbc6e5dd0778da5008b026a7c0e23f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82918518"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97339606"
 ---
 # <a name="isprint-iswprint-_isprint_l-_iswprint_l"></a>isprint、iswprint、_isprint_l、_iswprint_l
 
@@ -72,7 +73,7 @@ int _iswprint_l(
 
 ### <a name="parameters"></a>パラメーター
 
-*40u-c*<br/>
+*c*<br/>
 テストする整数。
 
 *locale*<br/>
@@ -80,11 +81,11 @@ int _iswprint_l(
 
 ## <a name="return-value"></a>戻り値
 
-これらの各ルーチンは、 *c*が印刷可能な文字の特殊表現である場合は0以外の値を返します。 *c*が印刷可能な文字の場合、 **isprint**は0以外の値を返します。これには、空白文字 (0x20-0x7e) が含まれます。 *c*が印刷可能なワイド文字である場合、 **iswprint**は0以外の値を返します。これには空白ワイド文字が含まれます。 これらの各ルーチンは、 *c*がテスト条件を満たしていない場合は0を返します。
+これらの各ルーチンは、 *c* が印刷可能な文字の特殊表現である場合は0以外の値を返します。 *c* が印刷可能な文字の場合、 **isprint** は0以外の値を返します。これには、空白文字 (0x20-0x7e) が含まれます。 *c* が印刷可能なワイド文字である場合、 **iswprint** は0以外の値を返します。これには空白ワイド文字が含まれます。 これらの各ルーチンは、 *c* がテスト条件を満たしていない場合は0を返します。
 
-これらの関数のテスト条件の結果は、ロケールの**LC_CTYPE**カテゴリの設定によって異なります。詳細について[は、「setlocale、_wsetlocale](setlocale-wsetlocale.md) 」を参照してください。 **_L**サフィックスが付いていないこれらの関数のバージョンは、ロケールに依存する動作に現在のロケールを使用します。**_l**サフィックスが付いているバージョンは、代わりに渡されたロケールを使用する点を除いて同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
+これらの関数のテスト条件の結果は、ロケールの **LC_CTYPE** カテゴリの設定によって異なります。詳細について [は、「setlocale、_wsetlocale](setlocale-wsetlocale.md) 」を参照してください。 **_L** サフィックスが付いていないこれらの関数のバージョンは、ロケールに依存する動作に現在のロケールを使用します。**_l** サフィックスが付いているバージョンは、代わりに渡されたロケールを使用する点を除いて同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
 
-*C*が EOF でない場合、または 0 ~ 0xff の範囲内にある場合、 **isprint**と **_isprint_l**の動作は未定義です。 デバッグ CRT ライブラリが使用され、 *c*がこれらの値のいずれでもない場合、関数はアサーションを発生させます。
+*C* が EOF でない場合、または 0 ~ 0xff の範囲内にある場合、 **isprint** と **_isprint_l** の動作は未定義です。 デバッグ CRT ライブラリが使用され、 *c* がこれらの値のいずれでもない場合、関数はアサーションを発生させます。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -98,7 +99,7 @@ int _iswprint_l(
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**isprint**|\<ctype.h>|
 |**iswprint**|\<ctype.h> または \<wchar.h>|
@@ -110,5 +111,5 @@ int _iswprint_l(
 ## <a name="see-also"></a>関連項目
 
 [文字分類](../../c-runtime-library/character-classification.md)<br/>
-[国](../../c-runtime-library/locale.md)<br/>
-[is、isw 系ルーチン](../../c-runtime-library/is-isw-routines.md)<br/>
+[ロケール](../../c-runtime-library/locale.md)<br/>
+[is、isw ルーチン](../../c-runtime-library/is-isw-routines.md)<br/>

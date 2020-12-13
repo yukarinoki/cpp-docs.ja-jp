@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: コンパイラの警告 (レベル 1) C4319'
 title: コンパイラの警告 (レベル 1) C4319
 ms.date: 01/18/2018
 f1_keywords:
@@ -6,22 +7,22 @@ f1_keywords:
 helpviewer_keywords:
 - C4319
 ms.assetid: 1fac8048-9bd6-4552-a21c-192c67772bb9
-ms.openlocfilehash: 2d5ae8fcf5a527031c3a974b227f713675f31ffa
-ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
+ms.openlocfilehash: af38714ab506fad389d9d2407b5a83aebf01f7c8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70926100"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97340061"
 ---
 # <a name="compiler-warning-level-1-c4319"></a>コンパイラの警告 (レベル 1) C4319
 
-> ' ~ ': サイズが大きい ' type1 ' を '*type1* *' に*拡張することはできません。
+> ' ~ ': サイズが大きい ' type1 ' を '*type1**' に* 拡張することはできません。
 
-**~** (ビットごとの補数) 演算子の結果は符号なしになり、大きな型に変換されるとゼロ拡張になります。
+**~**(ビットごとの補数) 演算子の結果は符号なしになり、大きな型に変換されるとゼロ拡張になります。
 
 ## <a name="example"></a>例
 
-次の例では`~(a - 1)` 、は、32ビットの符号なし long 式として評価された後、ゼロ拡張によって64ビットに変換されます。 これは、予期しない操作結果になる可能性があります。
+次の例で `~(a - 1)` は、は、32ビットの符号なし long 式として評価された後、ゼロ拡張によって64ビットに変換されます。 これは、予期しない操作結果になる可能性があります。
 
 ```cpp
 // C4319.cpp

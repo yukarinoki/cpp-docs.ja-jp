@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: piecewise_contruct_t 構造'
 title: piecewise_contruct_t 構造体
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - piecewise_contruct_t class
 - piecewise_contruct_t structure
-ms.openlocfilehash: 6a9a6af97ca5c7751d64cd1fa70c9d9eba87da7c
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 7fefacff75b47c25cb9ae07cc894498eadb551df
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68268364"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97340750"
 ---
-# <a name="piecewisecontructt-structure"></a>piecewise_contruct_t 構造体
+# <a name="piecewise_contruct_t-structure"></a>piecewise_contruct_t 構造体
 
-構造体`piecewise_construct_t`は別のコンス トラクターと関数のオーバー ロードを維持するために使用する空の構造型です。 具体的には、`pair`でコンス トラクターを持つ`piecewise_construct_t`によって 2 つの後に、最初の引数として`tuple`引数。
+構造体 `piecewise_construct_t` は、別のコンストラクターと関数のオーバーロードを維持するために使用される空の構造体型です。 具体的に `pair` は、には、最初の引数としてを持つコンストラクターがあり、 `piecewise_construct_t` その後に2つの引数があり `tuple` ます。
 
 ## <a name="syntax"></a>構文
 

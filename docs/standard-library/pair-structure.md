@@ -1,4 +1,5 @@
 ---
+description: '詳細: pair 構造体'
 title: pair 構造体
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - pair class
 ms.assetid: 539d3d67-80a2-4170-b347-783495d42109
-ms.openlocfilehash: 0a78d5074c37f4fbbfb736125626fa4b7fc7e275
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 052dd0e95125726f377e9d74585cfad6cc7e8c0f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91505756"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97340815"
 ---
 # <a name="pair-structure"></a>pair 構造体
 
@@ -76,9 +77,9 @@ template<class T1, class T2>
 
 3番目の (テンプレート) コンストラクターは、ペアの最初の要素をに初期化し `Right` ます。 **最初** に、2番目のをにし `Right` ます。 **second**。  これは、指定された値型から両方の型のペアが構築可能である場合に定義されます。
 
-4番目のコンストラクターは、ペアの最初の要素を*Val1*に初期化し、2番目のコンストラクターを[右辺値参照宣言子 ( &&](../cpp/rvalue-reference-declarator-amp-amp.md)) を使用して*Val2*に初期化します。  これは、指定された値型から両方の型のペアが構築可能である場合に定義されます。
+4番目のコンストラクターは、ペアの最初の要素を *Val1* に初期化し、2番目のコンストラクターを [右辺値参照宣言子 ( &&](../cpp/rvalue-reference-declarator-amp-amp.md)) を使用して *Val2* に初期化します。  これは、指定された値型から両方の型のペアが構築可能である場合に定義されます。
 
-## <a name="remarks"></a>注釈
+## <a name="remarks"></a>解説
 
 テンプレート構造体は、型と型のオブジェクトのペアをそれぞれ格納し `T1` `T2` ます。 型は `first_type` テンプレートパラメーターと同じであり、 `T1` 型は `second_type` テンプレートパラメーターと同じです `T2` 。 `T1` また、 `T2` それぞれのニーズで、既定のコンストラクター、1つの引数を持つコンストラクター、およびデストラクターだけを指定します。 型はとして `pair` ではなくとして宣言されているため、型のすべてのメンバーはパブリックです **`struct`** **`class`** 。 ペアの最も一般的な用途としては、2 つの値を返す関数の戻り値の型としての用途と、連想コンテナー クラスの [map クラス](../standard-library/map-class.md)と [multimap クラス](../standard-library/multimap-class.md)の要素としての用途の 2 つが挙げられます。これらのクラスはどちらも、キーと、各要素に関連付けられている値の型を持っています。 後者は、ペアの連想コンテナーの要件を満たし、フォームの値の型を持ち `pair< const key_type, mapped_type >` ます。
 

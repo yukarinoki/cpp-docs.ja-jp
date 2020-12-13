@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「コンパイラエラー C3772」を参照してください。
 title: コンパイラ エラー C3772
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3772
 ms.assetid: 63e938d4-088d-41cc-a562-5881a05b5710
-ms.openlocfilehash: 420e1eb12cbb178459a96f55efab444a538e6c2b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 679c5bc47e9b31ebf085dec63a46549a10484cac
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62400176"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97340126"
 ---
 # <a name="compiler-error-c3772"></a>コンパイラ エラー C3772
 
@@ -60,4 +61,4 @@ class X {
 ## <a name="see-also"></a>関連項目
 
 [テンプレート](../../cpp/templates-cpp.md)<br/>
-[クラス テンプレートの部分的特殊化](../../cpp/template-specialization-cpp.md)
+[テンプレートの特殊化](../../cpp/template-specialization-cpp.md)

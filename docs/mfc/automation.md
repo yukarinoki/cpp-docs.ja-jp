@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: Automation'
 title: オートメーション
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -20,12 +21,12 @@ helpviewer_keywords:
 - MFC COM, Automation
 - methods [MFC], Automation
 ms.assetid: 329117f0-c1aa-4680-a901-bfb71277dfba
-ms.openlocfilehash: e5790be14f26f59c2b51b339c8bee7c5eca7d692
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 8a038a3590c3db9c90c8f99eaaa6f98d2c4e20cc
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84616521"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97339840"
 ---
 # <a name="automation"></a>オートメーション
 
@@ -49,7 +50,7 @@ Microsoft Excel、Microsoft Visual C++ など、多くの商用アプリケー�
 
 ## <a name="passing-parameters-in-automation"></a><a name="_core_passing_parameters_in_automation"></a> オートメーションにおけるパラメーターの受け渡し
 
-オートメーション メソッドの作成で問題になるのは、オートメーション サーバーとオートメーション クライアント間でデータを "安全" に受け渡すための統一したメカニズムを提供することです。 オートメーションは、 **VARIANT** 型を使ってデータを渡します。 **VARIANT** 型はタグ付きの共用体であり、 値を示すデータ メンバー (C++ の匿名共用体) と、この共用体に格納されている情報の型を示すデータ メンバーを持ちます。 **VARIANT** 型は、標準データ型の数、つまり 2 および 4 バイトの整数、4 および 8 バイトの浮動小数点数、文字列、およびブール値をサポートしています。 さらに、 **HRESULT** (OLE エラーコード)、**通貨**(固定小数点数値型)、 **date** (絶対日付と時刻) 型、およびインターフェイスへのポインターもサポートしてい `IUnknown` `IDispatch` ます。
+オートメーション メソッドの作成で問題になるのは、オートメーション サーバーとオートメーション クライアント間でデータを "安全" に受け渡すための統一したメカニズムを提供することです。 オートメーションは、 **VARIANT** 型を使ってデータを渡します。 **VARIANT** 型はタグ付きの共用体であり、 値を示すデータ メンバー (C++ の匿名共用体) と、この共用体に格納されている情報の型を示すデータ メンバーを持ちます。 **VARIANT** 型は、標準データ型の数、つまり 2 および 4 バイトの整数、4 および 8 バイトの浮動小数点数、文字列、およびブール値をサポートしています。 さらに、 **HRESULT** (OLE エラーコード)、 **通貨** (固定小数点数値型)、 **date** (絶対日付と時刻) 型、およびインターフェイスへのポインターもサポートしてい `IUnknown` `IDispatch` ます。
 
 **VARIANT** 型は、 [COleVariant](reference/colevariant-class.md) クラスにカプセル化されています。 サポートしている **CURRENCY** クラスと **DATE** クラスは、 [COleCurrency](reference/colecurrency-class.md) クラスと [COleDateTime](../atl-mfc-shared/reference/coledatetime-class.md) クラスにカプセル化されています。
 

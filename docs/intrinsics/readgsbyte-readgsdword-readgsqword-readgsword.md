@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: __readgsbyte、__readgsdword、__readgsqword、__readgsword'
 title: __readgsbyte、__readgsdword、__readgsqword、__readgsword
 ms.date: 09/02/2019
 f1_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - __readgsqword intrinsic
 - __readgsbyte intrinsic
 ms.assetid: f822632d-854c-4558-a71b-cdfc3eea2236
-ms.openlocfilehash: 278f1de33a7e01c5893217ddd8aaa22e68cf0c94
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: fb1faf0e785f0d0983d7d3611e68a7515298e61c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70222356"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97340971"
 ---
 # <a name="__readgsbyte-__readgsdword-__readgsqword-__readgsword"></a>__readgsbyte、__readgsdword、__readgsqword、__readgsword
 
@@ -45,24 +46,24 @@ unsigned __int64 __readgsqword(
 ### <a name="parameters"></a>パラメーター
 
 *影*\
-からの`GS`先頭から読み取るオフセット。
+からの先頭から `GS` 読み取るオフセット。
 
 ## <a name="return-value"></a>戻り値
 
-位置`GS:[Offset]`にある byte、word、double word、または quadword のメモリの内容 (呼び出される関数の名前で示されます)。
+位置にある byte、word、double word、または quadword のメモリの内容 (呼び出される関数の名前で示されます) `GS:[Offset]` 。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-|組み込み|アーキテクチャ|
+|Intrinsic|アーキテクチャ|
 |---------------|------------------|
-|`__readgsbyte`|x64|
-|`__readgsdword`|x64|
-|`__readgsqword`|x64|
-|`__readgsword`|x64|
+|`__readgsbyte`|X64|
+|`__readgsdword`|X64|
+|`__readgsqword`|X64|
+|`__readgsword`|X64|
 
-**ヘッダーファイル**\<>
+**ヘッダー ファイル** \<intrin.h>
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 これらのルーチンは、組み込み関数としてのみ使用できます。
 
@@ -70,5 +71,5 @@ unsigned __int64 __readgsqword(
 
 ## <a name="see-also"></a>関連項目
 
-[__ writ/sbyte、 \_/writ、 \_sqword、/writ/sqword \_](../intrinsics/writegsbyte-writegsdword-writegsqword-writegsword.md)\
+[__writegsbyte、 \_ _writegsdword、 \_ _writegsqword、 \_ _writegsword](../intrinsics/writegsbyte-writegsdword-writegsqword-writegsword.md)\
 [コンパイラの組み込み](../intrinsics/compiler-intrinsics.md)

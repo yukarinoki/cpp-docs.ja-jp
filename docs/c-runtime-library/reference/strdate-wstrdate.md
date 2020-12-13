@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: _strdate、_wstrdate'
 title: _strdate、_wstrdate
 ms.date: 4/2/2020
 api_name:
@@ -39,12 +40,12 @@ helpviewer_keywords:
 - _tstrdate function
 - copying dates
 ms.assetid: de8e4097-58f8-42ba-9dcd-cb4d9a9f1696
-ms.openlocfilehash: ea3aec8c007a6c0cae76de2f76d8ca2bafad2241
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 1e0daab087653edf57b3f268aa14192ab145cac6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82911859"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97340568"
 ---
 # <a name="_strdate-_wstrdate"></a>_strdate、_wstrdate
 
@@ -76,17 +77,17 @@ wchar_t *_wstrdate(
 
 ## <a name="return-value"></a>戻り値
 
-これらの各関数は、結果として得られた文字列*datestr*へのポインターを返します。
+これらの各関数は、結果として得られた文字列 *datestr* へのポインターを返します。
 
 ## <a name="remarks"></a>解説
 
 これらの関数のセキュリティを強化したバージョンを使用できます。「[_strdate_s、_wstrdate_s](strdate-s-wstrdate-s.md)」をご覧ください。 可能な限りセキュリティが強化された関数を使用することをお勧めします。
 
-**_Strdate**関数は、 *datestr*によってポイントされるバッファーに現在のシステム日付をコピーします。形式は**mm**/**dd**/**yy**です。ここで、 **mm**は月を表す2桁、 **dd**は日を表す2桁、 **yy**は年の最後の2桁です。 たとえば、文字列**12/05/99**は1999年12月5日を表します。 バッファーは 9 バイト以上の長さである必要があります。
+**_Strdate** 関数は、 *datestr* によってポイントされるバッファーに現在のシステム日付をコピーします。形式は **mm** / **dd** / **yy** です。ここで、 **mm** は月を表す2桁、 **dd** は日を表す2桁、 **yy** は年の最後の2桁です。 たとえば、文字列 **12/05/99** は1999年12月5日を表します。 バッファーは 9 バイト以上の長さである必要があります。
 
-*Datestr*が**NULL**ポインターの場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、これらの関数は-1 を返し、 **errno**を**EINVAL**に設定します。
+*Datestr* が **NULL** ポインターの場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、これらの関数は-1 を返し、 **errno** を **EINVAL** に設定します。
 
-**_wstrdate**は **_strdate**のワイド文字バージョンです。**_wstrdate**の引数と戻り値はワイド文字列です。 それ以外では、これらの関数の動作は同じです。
+**_wstrdate** は **_strdate** のワイド文字バージョンです。 **_wstrdate** の引数と戻り値はワイド文字列です。 それ以外では、これらの関数の動作は同じです。
 
 C++ では、これらの関数にテンプレートのオーバーロードがあります。このオーバーロードは、これらの関数に対応するセキュリティで保護された新しい関数を呼び出します。 詳細については、「[セキュリティ保護されたテンプレート オーバーロード](../../c-runtime-library/secure-template-overloads.md)」を参照してください。
 
@@ -100,7 +101,7 @@ C++ では、これらの関数にテンプレートのオーバーロードが�
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**_strdate**|\<time.h>|
 |**_wstrdate**|\<time.h> または \<wchar.h>|

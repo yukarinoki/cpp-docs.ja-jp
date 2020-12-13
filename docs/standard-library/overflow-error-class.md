@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: overflow_error クラス'
 title: overflow_error クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - overflow_error class
 ms.assetid: bae7128d-e36b-4a45-84f1-2f89da441d20
-ms.openlocfilehash: b0bc3fc01dced3daf68c0b25ef1b68ea3f624761
-ms.sourcegitcommit: f2a135d69a2a8ef1777da60c53d58fe06980c997
+ms.openlocfilehash: 48d30974152089d941e9ba7c36deb2d8db3a2501
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87521227"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97340880"
 ---
 # <a name="overflow_error-class"></a>overflow_error クラス
 
@@ -29,7 +30,7 @@ public:
 };
 ```
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 によって返される値 `what()` は、のコピーです `message.data()` 。 詳細については、[`what`](../standard-library/exception-class.md) および [`data`](../standard-library/basic-string-class.md#data) を参照してください。
 
@@ -64,7 +65,7 @@ Type class std::overflow_error
 */
 ```
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:**\<stdexcept>
 

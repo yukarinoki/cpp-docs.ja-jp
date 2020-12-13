@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: + 構造体'
 title: plus 構造体
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - plus class
 - plus struct
 ms.assetid: 4594abd5-b2f2-4fac-9b6b-fc9a2723f8cf
-ms.openlocfilehash: 628823a7fc3c176f83bbb1dca59ec194b5d3db97
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 9f4b821da3f31255b71730d0f8c800450141d7c2
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81372070"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97340724"
 ---
 # <a name="plus-struct"></a>plus 構造体
 
@@ -39,14 +40,14 @@ struct plus<void>
 
 ### <a name="parameters"></a>パラメーター
 
-*タイプ*, *T*, *U*\
+*型*、 *T*、 *U*\
 指定または推論された型のオペランドを受け取る二項 `operator+` をサポートする型。
 
-*左*\
-加算演算の左オペランド。 特殊化されていないテンプレートは、*型 Type*の左辺値参照引数を受け取ります。 特殊なテンプレートは、推定型*T*の左辺値と右辺値参照引数を完全に転送します。
+*左側*\
+加算演算の左オペランド。 非特殊テンプレートは、type *型* の左辺値参照引数を受け取ります。 特殊化されたテンプレートは、推論された型 *T* の左辺値および右辺値参照引数の完全転送を行います。
 
 *そうです*\
-加算演算の右オペランド。 特殊化されていないテンプレートは、*型 Type*の左辺値参照引数を受け取ります。 特殊なテンプレートは、推定型*U*の左辺値と右辺値参照引数を完全に転送します。
+加算演算の右オペランド。 非特殊テンプレートは、type *型* の左辺値参照引数を受け取ります。 特殊化されたテンプレートは、推論された型 *U* の左辺値および右辺値参照引数の完全転送を行います。
 
 ## <a name="return-value"></a>戻り値
 

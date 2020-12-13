@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: piecewise_constant_distribution クラス'
 title: piecewise_constant_distribution クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -26,12 +27,12 @@ helpviewer_keywords:
 - std::piecewise_constant_distribution [C++], param_type
 - std::piecewise_constant_distribution [C++], param_type
 ms.assetid: 2c9a21fa-623e-4d63-b827-3f1556b6dedb
-ms.openlocfilehash: 59911d8a61a05de9ec92f4152b2835da3cf82f7f
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 92558f407073dab2d9cc5e8dd788ab3fba8998fb
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88832725"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97340763"
 ---
 # <a name="piecewise_constant_distribution-class"></a>piecewise_constant_distribution クラス
 
@@ -210,7 +211,7 @@ Distribution for 100 samples:
     14-15 ::::::::
 ```
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:**\<random>
 
@@ -296,7 +297,7 @@ intervals,
     UnaryOperation weightfunc);
 ```
 
-初期化子リストの *間隔* 、および関数 *weightfunc*から生成された重みを持つ分布オブジェクトを構築します。
+初期化子リストの *間隔* 、および関数 *weightfunc* から生成された重みを持つ分布オブジェクトを構築します。
 
 次のように定義されたコンストラクターは
 
@@ -306,7 +307,7 @@ piecewise_constant_distribution(size_t count, result_type xmin, result_type xmax
     UnaryOperation weightfunc);
 ```
 
-[] で均等に分布した *数* の間隔を持つ分布オブジェクトを構築し `xmin,xmax` 、各間隔の重みを関数 *weightfunc*に従って割り当てます。 *weightfunc* は、1つのパラメーターを受け取り、戻り値を持つ必要があります。どちらもに変換 **`double`** できます。 **前提条件:**`xmin < xmax`
+[] で均等に分布した *数* の間隔を持つ分布オブジェクトを構築し `xmin,xmax` 、各間隔の重みを関数 *weightfunc* に従って割り当てます。 *weightfunc* は、1つのパラメーターを受け取り、戻り値を持つ必要があります。どちらもに変換 **`double`** できます。 **前提条件:**`xmin < xmax`
 
 次のように定義されたコンストラクターは
 

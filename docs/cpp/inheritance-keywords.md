@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「継承キーワード」を参照してください。
 title: 継承キーワード
 ms.date: 11/04/2016
 f1_keywords:
@@ -18,12 +19,12 @@ helpviewer_keywords:
 - derived classes [C++], declaring
 - inheritance, keywords
 ms.assetid: bb810f56-7720-4fea-b8b6-9499edd141df
-ms.openlocfilehash: bc9afdcb7971c478c1cad9185cece57ea6326a48
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 05d13303064c2857780af62b1b4beba00483b72e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87233731"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97340464"
 ---
 # <a name="inheritance-keywords"></a>継承キーワード
 
@@ -35,7 +36,7 @@ class [__multiple_inheritance] class-name;
 class [__virtual_inheritance] class-name;
 ```
 
-各値の説明:
+ここで、
 
 *クラス名*<br/>
 宣言するクラスの名前。
@@ -51,7 +52,7 @@ int S::*p;
 
 - IDE の [ **pointer-to-member 表現**] の下
 
-- コマンドラインで[/vmg](../build/reference/vmb-vmg-representation-method.md)スイッチを使用する
+- コマンドラインで [/vmg](../build/reference/vmb-vmg-representation-method.md) スイッチを使用する
 
 - [Pointers_to_members](../preprocessor/pointers-to-members.md)プラグマの使用
 
@@ -74,7 +75,7 @@ int S::*p;
 > [!NOTE]
 > メンバーへのクラス ポインター表現の同じ前方宣言は、そのクラスのメンバーへのポインターを宣言する各翻訳単位で発生する必要があり、その宣言はメンバーへのポインターを宣言する前に発生する必要があります。
 
-以前のバージョンとの互換性を維持するために、 **_single_inheritance**、 **_multiple_inheritance**、および **_virtual_inheritance**は、、、およびのシノニムと **`__single_inheritance`** **`__multiple_inheritance`** **`__virtual_inheritance`** なります。ただし、コンパイラオプションでは、 [ \( 言語拡張機能を無効に](../build/reference/za-ze-disable-language-extensions.md)します。
+以前のバージョンとの互換性を維持するために、 **_single_inheritance**、 **_multiple_inheritance**、および **_virtual_inheritance** は、、、およびのシノニムと **`__single_inheritance`** **`__multiple_inheritance`** **`__virtual_inheritance`** なります。ただし、コンパイラオプションでは、 [ \( 言語拡張機能を無効に](../build/reference/za-ze-disable-language-extensions.md) します。
 
 **Microsoft 固有の仕様はここまで**
 

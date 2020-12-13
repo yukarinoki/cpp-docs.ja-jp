@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: _strdec、_wcsdec、_mbsdec、_mbsdec_l'
 title: _strdec、_wcsdec、_mbsdec、_mbsdec_l
 ms.date: 4/2/2020
 api_name:
@@ -46,19 +47,19 @@ helpviewer_keywords:
 - wcsdec function
 - _mbsdec function
 ms.assetid: ae37c223-800f-48a9-ae8e-38c8d20af2dd
-ms.openlocfilehash: c3988beac1a3c1b3d7fa831405208ddc564456a3
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 85001258baea9e7c6509bfdd33a74f9a0eccd80f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82914495"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97340555"
 ---
 # <a name="_strdec-_wcsdec-_mbsdec-_mbsdec_l"></a>_strdec、_wcsdec、_mbsdec、_mbsdec_l
 
 文字列ポインターを 1 文字前へ移動します。
 
 > [!IMPORTANT]
-> **mbsdec**と**mbsdec_l**は、Windows ランタイムで実行されるアプリケーションでは使用できません。 詳細については、「[ユニバーサル Windows プラットフォーム アプリでサポートされていない CRT 関数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)」を参照してください。
+> **mbsdec** と **mbsdec_l** は、Windows ランタイムで実行されるアプリケーションでは使用できません。 詳細については、「[ユニバーサル Windows プラットフォーム アプリでサポートされていない CRT 関数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)」を参照してください。
 
 ## <a name="syntax"></a>構文
 
@@ -85,25 +86,25 @@ unsigned char *_mbsdec_l(
 ### <a name="parameters"></a>パラメーター
 
 *start*<br/>
-ソース文字列内の任意の文字 (または、 **_mbsdec**と **_mbsdec_l**の場合は、マルチバイト文字の最初のバイト) へのポインター。ソース*文字列の先頭の前に**開始*する必要があります。
+ソース文字列内の任意の文字 (または、 **_mbsdec** と **_mbsdec_l** の場合は、マルチバイト文字の最初のバイト) へのポインター。ソース *文字列の先頭の前に**開始* する必要があります。
 
 *現在の*<br/>
-ソース文字列内の任意の文字 (または、 **_mbsdec**と **_mbsdec_l**の場合は、マルチバイト文字の最初のバイト) へのポインター。*現在*の位置は、ソース文字列の*先頭*に続く必要があります。
+ソース文字列内の任意の文字 (または、 **_mbsdec** と **_mbsdec_l** の場合は、マルチバイト文字の最初のバイト) へのポインター。 *現在* の位置は、ソース文字列の *先頭* に続く必要があります。
 
 *locale*<br/>
 使用するロケール。
 
 ## <a name="return-value"></a>戻り値
 
-**_mbsdec**、 **_mbsdec_l**、 **_strdec**、および **_wcsdec**はそれぞれ、*現在の*直前の文字へのポインターを返します。*start*の値が*現在*のの値以上の場合、 **_mbsdec**は**NULL**を返します。 **_tcsdec**は、これらの関数のいずれかにマップされ、戻り値はマッピングによって異なります。
+**_mbsdec**、 **_mbsdec_l**、 **_strdec**、および **_wcsdec** はそれぞれ、*現在の* 直前の文字へのポインターを返します。*start* の値が *現在* のの値以上の場合、 **_mbsdec** は **NULL** を返します。 **_tcsdec** は、これらの関数のいずれかにマップされ、戻り値はマッピングによって異なります。
 
 ## <a name="remarks"></a>解説
 
-**_Mbsdec**関数と **_mbsdec_l**関数は、 *start*を含む文字列の*現在*の直前にあるマルチバイト文字の最初のバイトへのポインターを返します。
+**_Mbsdec** 関数と **_mbsdec_l** 関数は、 *start* を含む文字列の *現在* の直前にあるマルチバイト文字の最初のバイトへのポインターを返します。
 
-出力値は、ロケールの**LC_CTYPE**カテゴリの設定に影響されます。詳細について[は、「setlocale、_wsetlocale](setlocale-wsetlocale.md) 」を参照してください。  **_mbsdec**は、現在使用されているロケールに従ってマルチバイト文字のシーケンスを認識しますが、 **_mbsdec_l**は、渡されたロケールパラメーターを代わりに使用する点を除いて同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
+出力値は、ロケールの **LC_CTYPE** カテゴリの設定に影響されます。詳細について [は、「setlocale、_wsetlocale](setlocale-wsetlocale.md) 」を参照してください。  **_mbsdec** は、現在使用されているロケールに従ってマルチバイト文字のシーケンスを認識しますが、 **_mbsdec_l** は、渡されたロケールパラメーターを代わりに使用する点を除いて同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
 
-*Start*または*current*が**NULL**の場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、この関数は**einval**を返し、 **errno**を**einval**に設定します。
+*Start* または *current* が **NULL** の場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、この関数は **einval** を返し、 **errno** を **einval** に設定します。
 
 > [!IMPORTANT]
 > これらの関数は、バッファー オーバーランの脅威に対して脆弱な場合があります。 バッファー オーバーランは、認められていない特権の昇格の原因となるため、システムの攻撃に使用される可能性があります。 詳しくは、「 [バッファー オーバーランの回避](/windows/win32/SecBP/avoiding-buffer-overruns)」をご覧ください。
@@ -116,13 +117,13 @@ unsigned char *_mbsdec_l(
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_tcsdec**|**_strdec**|**_mbsdec**|**_wcsdec**|
 
-**_strdec**と **_wcsdec**は、 **_mbsdec**と **_mbsdec_l**の1バイト文字とワイド文字バージョンです。 **_strdec**と **_wcsdec**はこのマッピングに対してのみ提供され、それ以外の場合は使用できません。
+**_strdec** と **_wcsdec** は、 **_mbsdec** と **_mbsdec_l** の1バイト文字とワイド文字バージョンです。 **_strdec** と **_wcsdec** はこのマッピングに対してのみ提供され、それ以外の場合は使用できません。
 
 詳細については、「[Using Generic-Text Mappings](../../c-runtime-library/using-generic-text-mappings.md)」(汎用テキスト マップの使用) および「[Generic-Text Mappings](../../c-runtime-library/generic-text-mappings.md)」(汎用テキスト マップ) をご覧ください。
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|オプション ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|オプション ヘッダー|
 |-------------|---------------------|---------------------|
 |**_mbsdec**|\<mbstring.h>|\<mbctype.h>|
 |**_mbsdec_l**|\<mbstring.h>|\<mbctype.h>|
@@ -133,7 +134,7 @@ unsigned char *_mbsdec_l(
 
 ## <a name="example"></a>例
 
-次の例は、 **_tcsdec**の使用方法を示しています。
+次の例は、 **_tcsdec** の使用方法を示しています。
 
 ```cpp
 // crt_tcsdec.cpp
@@ -159,7 +160,7 @@ int main()
 }
 ```
 
-次の例は、 **_mbsdec**の使用方法を示しています。
+次の例は、 **_mbsdec** の使用方法を示しています。
 
 ```cpp
 // crt_mbsdec.cpp
