@@ -1,15 +1,16 @@
 ---
+description: '詳細については、「例: プロパティページの実装」を参照してください。'
 title: プロパティ ページの実装 (ATL)
 ms.date: 05/09/2019
 helpviewer_keywords:
 - property pages, implementing
 ms.assetid: c30b67fe-ce08-4249-ae29-f3060fa8d61e
-ms.openlocfilehash: 82c2bd3765802f87025eaf2dfbda8f7467bbe9a0
-ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
+ms.openlocfilehash: b5f05d4e47187a8d3c2fe10ca7a00808095a713a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "92921244"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97152963"
 ---
 # <a name="example-implementing-a-property-page"></a>例: プロパティページの実装
 
@@ -47,9 +48,9 @@ ATL プロパティ ページ ウィザードは、Visual Studio 2019 以降で�
 
 ## <a name="adding-the-atl-property-page-class"></a><a name="vcconusing_the_atl_object_wizard"></a> ATL プロパティ ページ クラスの追加
 
-まず、`ATLPages7` という名前の DLL サーバー用の新しい ATL プロジェクトを作成します。 次に、[ATL プロパティ ページ ウィザード](../atl/reference/atl-property-page-wizard.md)を使用してプロパティ ページを生成します。 プロパティ ページに **DocProperties** という **短い名前** を付けた後、 **[文字列]** ページに切り替えて、次の表に示すプロパティ ページに固有の項目を設定します。
+まず、`ATLPages7` という名前の DLL サーバー用の新しい ATL プロジェクトを作成します。 次に、[ATL プロパティ ページ ウィザード](../atl/reference/atl-property-page-wizard.md)を使用してプロパティ ページを生成します。 プロパティ ページに **DocProperties** という **短い名前** を付けた後、**[文字列]** ページに切り替えて、次の表に示すプロパティ ページに固有の項目を設定します。
 
-|Item|値|
+|アイテム|値|
 |----------|-----------|
 |タイトル|TextDocument|
 |Doc String|VCUE TextDocument のプロパティ|
@@ -135,7 +136,7 @@ ATL プロパティ ページ ウィザードは、Visual Studio 2019 以降で�
 
 [[クラスの追加] ダイアログ ボックス](../ide/adding-a-class-visual-cpp.md#add-class-dialog-box)と [ATL シンプル オブジェクト ウィザード](../atl/reference/atl-simple-object-wizard.md)を使用して新しいクラスを作成し、その短い名前として `Helper` を使用します。 作成したら、次の表に示すように、メソッドを追加します。
 
-|Item|値|
+|アイテム|値|
 |----------|-----------|
 |メソッド名|`ShowPage`|
 |パラメーター|`[in] BSTR bstrCaption, [in] BSTR bstrID, [in] IUnknown* pUnk`|
@@ -148,7 +149,7 @@ ATL プロパティ ページ ウィザードは、Visual Studio 2019 以降で�
 
 ## <a name="creating-a-macro"></a><a name="vcconcreating_a_macro"></a> マクロの作成
 
-プロジェクトを作成したら、Visual Studio 開発環境で作成して実行できる単純なマクロを使用して、プロパティ ページとヘルパー オブジェクトをテストできます。 このマクロは、ヘルパー オブジェクトを作成した後、 **DocProperties** プロパティ ページの ProgID と Visual Studio エディターで現在アクティブになっているドキュメントの `IUnknown` ポインターを使用して、`ShowPage` メソッドを呼び出します。 このマクロで必要なコードを次に示します。
+プロジェクトを作成したら、Visual Studio 開発環境で作成して実行できる単純なマクロを使用して、プロパティ ページとヘルパー オブジェクトをテストできます。 このマクロは、ヘルパー オブジェクトを作成した後、**DocProperties** プロパティ ページの ProgID と Visual Studio エディターで現在アクティブになっているドキュメントの `IUnknown` ポインターを使用して、`ShowPage` メソッドを呼び出します。 このマクロで必要なコードを次に示します。
 
 ```vb
 Imports EnvDTE
@@ -171,7 +172,7 @@ End Module
 
 ::: moniker-end
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 
 [[プロパティ ページ]](../atl/atl-com-property-pages.md)<br/>
 [ATLPages の例](../overview/visual-cpp-samples.md)

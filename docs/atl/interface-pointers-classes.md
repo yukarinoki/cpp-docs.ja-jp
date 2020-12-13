@@ -1,5 +1,6 @@
 ---
-title: インターフェイス ポインター クラス (ATL)
+description: '詳細情報: インターフェイスポインタークラス'
+title: インターフェイスポインタークラス (ATL)
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -7,26 +8,26 @@ helpviewer_keywords:
 - interfaces, pointers classes
 - interface pointers classes
 ms.assetid: 712617a1-17ae-4b5c-a32c-a48b758df7a6
-ms.openlocfilehash: 992d4c7d882cd8837c3dbacbfde4855c9c94817f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 308814c0d2ba180e2cdc2a916e7f4f9e4bc520f1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62250354"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97152751"
 ---
-# <a name="interface-pointers-classes"></a>インターフェイス ポインター クラス
+# <a name="interface-pointers-classes"></a>インターフェイスポインタークラス
 
-次のクラスには、特定のインターフェイス ポインターが管理します。
+次のクラスは、指定されたインターフェイスポインターを管理します。
 
-- [CComPtr](../atl/reference/ccomptr-class.md)自動参照カウントを実行します。
+- [CComPtr](../atl/reference/ccomptr-class.md) 自動参照カウントを実行します。
 
-- [CComQIPtr](../atl/reference/ccomqiptr-class.md)と同様に`CComPtr`がも行いインターフェイスのクエリを実行します。
+- [CComQIPtr](../atl/reference/ccomqiptr-class.md) に似て `CComPtr` いますが、インターフェイスの自動クエリも実行します。
 
-- [CInterfaceArray](../atl/reference/cinterfacearray-class.md)インターフェイス ポインターを提供メソッドを COM の配列を構築するときに便利です。
+- [Cinterfacearray](../atl/reference/cinterfacearray-class.md) COM インターフェイスポインターの配列を構築するときに役立つメソッドを提供します。
 
-- [CInterfaceList](../atl/reference/cinterfacelist-class.md)インターフェイス ポインターを提供メソッドを COM のリストを構築するときに便利です。
+- [Cinterfacelist](../atl/reference/cinterfacelist-class.md) COM インターフェイスポインターのリストを構築するときに役立つメソッドを提供します。
 
-- [CComGITPtr](../atl/reference/ccomgitptr-class.md)インターフェイス ポインターとグローバル インターフェイス テーブル (GIT) への対処方法を提供します。
+- [CComGITPtr](../atl/reference/ccomgitptr-class.md) インターフェイスポインターとグローバルインターフェイステーブル (GIT) を処理するためのメソッドを提供します。
 
 ## <a name="see-also"></a>関連項目
 

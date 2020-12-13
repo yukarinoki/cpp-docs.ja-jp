@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「shared_mutex」を参照してください &lt;>
 title: '&lt;shared_mutex&gt;'
 ms.date: 03/27/2019
 f1_keywords:
@@ -45,12 +46,12 @@ f1_keywords:
 - shared_mutex/std::shared_timed_mutex::try_lock_shared_until
 - shared_mutex/std::shared_timed_mutex::unlock_shared
 ms.assetid: 0b37a97d-ee5d-4050-b29f-09db9f76beb3
-ms.openlocfilehash: f33a9c5fe4c5058d039feff896f7e53fe40cbf31
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 97446b3709dd71b49389fa63ac067f7cc9ccf820
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87217481"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97154065"
 ---
 # <a name="ltshared_mutex"></a>&lt;shared_mutex>
 
@@ -215,7 +216,7 @@ private:
 
 ## <a name="functions"></a>関数
 
-### <a name="swap"></a><a name="function_swap"></a>フォト
+### <a name="swap"></a><a name="function_swap"></a> フォト
 
 `shared_lock` オブジェクトを交換します。
 
@@ -226,7 +227,7 @@ void swap(shared_lock<Mutex>& x, shared_lock<Mutex>& y) noexcept;
 
 2 つの `shared_lock` オブジェクトの内容を交換します。 実質的に `x.swap(y)` と同じです。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** &lt;shared_mutex>
 

@@ -1,15 +1,16 @@
 ---
+description: 詳細については、「挿入演算子と制御形式の使用」を参照してください。
 title: 挿入演算子と制御形式の使用
 ms.date: 11/04/2016
 helpviewer_keywords:
 - insertion operators
 ms.assetid: cdefe986-6548-4cd1-8a67-b431d7d36a1c
-ms.openlocfilehash: 0d6a2afb320f91e51e2a89156a6e6732c6be90e0
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 0ed0e850cb578b66ea9131d135891cbbd26da4b7
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87215461"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97153565"
 ---
 # <a name="using-insertion-operators-and-controlling-format"></a>挿入演算子と制御形式の使用
 
@@ -19,7 +20,7 @@ ms.locfileid: "87215461"
 
 - [出力幅](#vclrfoutputwidthanchor3)
 
-- [Alignment](#vclrfalignmentanchor4)
+- [配置](#vclrfalignmentanchor4)
 
 - [[精度]](#vclrfprecisionanchor5)
 
@@ -72,7 +73,7 @@ for (int i = 0; i <4; i++)
 ******1.23
 *****35.36
 *****653.7
-***4358.24
+**_4358.24
 ```
 
 同じ行のデータ要素に幅を指定するには、`setw` マニピュレーターを使用します。
@@ -87,7 +88,7 @@ using namespace std;
 int main( )
 {
    double values[] = { 1.23, 35.36, 653.7, 4358.24 };
-   char *names[] = { "Zoot", "Jimmy", "Al", "Stan" };
+   char _names[] = { "Zoot", "Jimmy", "Al", "Stan" };
    for( int i = 0; i < 4; i++ )
       cout << setw( 7 )  << names[i]
            << setw( 10 ) << values[i] << endl;
@@ -105,7 +106,7 @@ int main( )
 
 `setw`または `width` 値の切り捨てを行いません。 書式付き出力がこの幅を超えた場合、ストリームの精度の設定に従い、値全体が出力されます。 `setw`と `width` は、次のフィールドのみに影響します。 フィールドが 1 つ出力されると、フィールドの幅は既定の動作 (既定の幅) に戻ります。 ただし、その他のストリームの形式オプションは変更されるまで有効です。
 
-## <a name="alignment"></a><a name="vclrfalignmentanchor4"></a>配置
+## <a name="alignment"></a><a name="vclrfalignmentanchor4"></a> 配置
 
 出力ストリームは、既定で右揃えのテキストになります。 前の例の名前を左揃えにし、数値を右揃えにするには、次のようにループを置き換え **`for`** ます。
 
@@ -128,11 +129,11 @@ Stan     4358.24
 
 [setiosflags](../standard-library/iomanip-functions.md#setiosflags) マニピュレーターと `left` 列挙子を使用して、left-align フラグを設定します。 この列挙子は、[ios](../standard-library/basic-ios-class.md) クラス内で定義されるため、その参照には、**ios::** プレフィックスをインクルードする必要があります。 [resetiosflags](../standard-library/iomanip-functions.md#resetiosflags) マニピュレーターは、left-align フラグをオフにします。 ととは異なり `width` `setw` 、との効果 `setiosflags` `resetiosflags` は永続的です。
 
-## <a name="precision"></a><a name="vclrfprecisionanchor5"></a>精度
+## <a name="precision"></a><a name="vclrfprecisionanchor5"></a> 精度
 
 浮動小数点の精度の既定値は、6 桁です。 たとえば、3466.9768 という数値は 3466.98 と出力されます。 この値を出力する方法を変更するには、[setprecision](../standard-library/iomanip-functions.md#setprecision) マニピュレーターを使用します。 このマニピュレーターには [fixed](../standard-library/ios-functions.md#fixed) と [scientific](../standard-library/ios-functions.md#scientific) の 2 つのフラグがあります。 [fixed](../standard-library/ios-functions.md#fixed) が設定されている場合、数値は、3466.976800 と出力されます。 `scientific`が設定されている場合は、3.4669773 + 003 として出力されます。
 
-1[つの有意](#vclrfalignmentanchor4)な桁と共に表示される浮動小数点数を表示するには、次のようにループを置き換え **`for`** ます。
+1 [つの有意](#vclrfalignmentanchor4) な桁と共に表示される浮動小数点数を表示するには、次のようにループを置き換え **`for`** ます。
 
 ```cpp
 for (int i = 0; i <4; i++)
@@ -181,7 +182,7 @@ Stan    4.4e+03
 
 この場合も、小数点以下 1 桁まで出力されます。 または `ios::fixed` が設定されている場合 `ios::scientific` 、有効桁数の値によって小数点の後の桁数が決まります。 どちらのフラグも設定されていない場合、精度の値は、全体の有効桁数を決定します。 `resetiosflags` マニピュレーターは、これらのフラグをオフにします。
 
-## <a name="radix"></a><a name="vclrfradixanchor6"></a>ベース
+## <a name="radix"></a><a name="vclrfradixanchor6"></a> ベース
 
 `dec`、 `oct` 、およびマニピュレーターは、 `hex` 入力と出力の既定の基数を設定します。 たとえば、マニピュレーターを出力ストリームに挿入すると、 `hex` オブジェクトは整数の内部データ表現を16進数の出力形式に正しく変換します。 数値は、[uppercase](../standard-library/ios-functions.md#uppercase) フラグがオフの場合 (既定)、a から f 桁が小文字で表示されます。それ以外の場合は、大文字で表示されます。 既定の基数は `dec` (decimal) です。
 
@@ -207,7 +208,7 @@ std::cout << extracted;    //  This
 
 挿入演算子と抽出演算子の空白の処理は、コード内での文字列の表記方法に依存しません。そのため、入力文字列が未加工の文字列リテラルであるか、標準の文字列であるかにかかわらず、quoted 演算子は便利です。 埋め込みの引用符、改行、タブなどが含まれる入力文字列は、書式にかかわらず、quoted() マニピュレーターで保持されます。
 
-詳細および完全なコード例については、「[引用符付き](../standard-library/iomanip-functions.md#quoted)」を参照してください。
+詳細および完全なコード例については、「 [引用符付き](../standard-library/iomanip-functions.md#quoted)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

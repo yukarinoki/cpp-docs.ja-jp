@@ -1,16 +1,17 @@
 ---
+description: '詳細情報: コレクションクラス'
 title: ATL のコレクションクラス
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
 - collection classes
 ms.assetid: eff95de6-78ef-4212-9d7d-1dacbdd4cc58
-ms.openlocfilehash: a93810b91cefd897b55cae4760ade32374900eb3
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: bf0b8cf1e45673dd64b1b1d60a56ed9889bb6cff
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90041420"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97153318"
 ---
 # <a name="collection-classes"></a>コレクション クラス
 
@@ -60,11 +61,11 @@ ms.locfileid: "90041420"
 
 - [CPrimitiveElementTraits](../atl/reference/cprimitiveelementtraits-class.md) このクラスは、プリミティブデータ型で構成されるコレクションクラスの既定のメソッドと関数を提供します。
 
-- [CRBMap](../atl/reference/crbmap-class.md) このクラスは、レッドブラックのバイナリツリーを使用して、マッピング構造を表します。
+- [CRBMap](../atl/reference/crbmap-class.md) このクラスは、Red-Black バイナリツリーを使用するマッピング構造体を表します。
 
-- [CRBMultiMap](../atl/reference/crbmultimap-class.md) このクラスは、赤黒のバイナリツリーを使用して、各キーが複数の値に関連付けられるようにするマッピング構造を表します。
+- [CRBMultiMap](../atl/reference/crbmultimap-class.md) このクラスは、Red-Black バイナリツリーを使用して、各キーが複数の値に関連付けられるようにするマッピング構造を表します。
 
-- [CRBTree](../atl/reference/crbtree-class.md) このクラスは、赤の黒のツリーを作成および利用するためのメソッドを提供します。
+- [CRBTree](../atl/reference/crbtree-class.md) このクラスには、Red-Black ツリーを作成および利用するためのメソッドが用意されています。
 
 - [CSimpleArray](../atl/reference/csimplearray-class.md) このクラスには、単純な配列を管理するためのメソッドが用意されています。
 
@@ -88,7 +89,7 @@ ms.locfileid: "90041420"
 
 [ATL コレクションクラスの概要](../atl/atl-collection-classes.md)
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [クラスの概要](../atl/atl-class-overview.md)<br/>
 [コレクションクラス](../atl/atl-collection-classes.md)

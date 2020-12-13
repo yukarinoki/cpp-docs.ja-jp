@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: is_volatile クラス'
 title: is_volatile クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,14 +8,14 @@ helpviewer_keywords:
 - is_volatile class
 - is_volatile
 ms.assetid: 54922e8a-db4e-4cae-8931-b3352f0b8d3b
-ms.openlocfilehash: daba5dff55e0f3afa1e9996631125bf7ba64d52e
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: b94a83360d62970b9a198976eeb6faaefdc89cbb
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68458840"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97154163"
 ---
-# <a name="isvolatile-class"></a>is_volatile クラス
+# <a name="is_volatile-class"></a>is_volatile クラス
 
 型が volatile かどうかをテストします。
 
@@ -27,12 +28,12 @@ struct is_volatile;
 
 ### <a name="parameters"></a>パラメーター
 
-*~* \
+*~*\
 照会する型。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-*Ty*がの場合、型の述語のインスタンスは`volatile-qualified`true を保持します。
+*Ty* がの場合、型の述語のインスタンスは true を保持 `volatile-qualified` します。
 
 ## <a name="example"></a>例
 
@@ -69,9 +70,9 @@ is_volatile<int> == false
 is_volatile<volatile int> == true
 ```
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-**ヘッダー:** \<type_traits>
+**ヘッダー:**\<type_traits>
 
 **名前空間:** std
 

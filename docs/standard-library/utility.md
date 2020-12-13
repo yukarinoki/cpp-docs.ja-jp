@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: &lt; ユーティリティ&gt;'
 title: '&lt;utility&gt;'
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - utility header
 ms.assetid: c4491103-5da9-47a1-9c2b-ed8bc64b0599
-ms.openlocfilehash: 1beade28ceec0f1552def4bc70c2e95e6b2aa24d
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 67472492acdb0ddbc1de957a69c01b1aafaf9367
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87215440"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97153435"
 ---
 # <a name="ltutilitygt"></a>&lt;utility&gt;
 
 C++ 標準ライブラリの型、関数、および演算子を定義し、オブジェクトのペアを作成し管理するのに役立てます。これらは 2 つのオブジェクトをあたかも 1 つのように扱う必要がある場合に役立ちます。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:**\<utility>
 
@@ -34,7 +35,7 @@ C++ 標準ライブラリの型、関数、および演算子を定義し、オ�
 
 ### <a name="classes"></a>クラス
 
-|Type|[説明]|
+|Type|説明|
 |-|-|
 |[chars_format](../standard-library/chars-format-class.md)|プリミティブ数値変換の浮動小数点形式。|
 |[tuple_element](../standard-library/tuple-element-class-tuple.md)|`pair` 要素の型をラップするクラスです。|
@@ -42,9 +43,9 @@ C++ 標準ライブラリの型、関数、および演算子を定義し、オ�
 
 ### <a name="objects"></a>Objects
 
-|Template|説明|
+|テンプレート|説明|
 |-|-|
-|[index_sequence](../standard-library/utility-functions.md#index_sequence)|共通のケースに対して定義されているエイリアステンプレート ( `T` is)`std::size_t`  |
+|[index_sequence](../standard-library/utility-functions.md#index_sequence)|共通のケースに対して定義されているエイリアステンプレート ( `T` is) `std::size_t`  |
 |[index_sequence_for](../standard-library/utility-functions.md#index_sequence_for)|任意の型パラメーターパックを同じ長さのインデックスシーケンスに変換するヘルパーエイリアステンプレート|
 |[make_index_sequence](../standard-library/utility-functions.md#make_index_sequence)| 型の作成を簡略化するヘルパーエイリアステンプレート `std::index_sequence` 。 |
 |[make_integer_sequence](../standard-library/utility-functions.md#make_integer_sequence)|型の作成を簡略化するヘルパーエイリアステンプレート `std::integer_sequence` 。|
@@ -67,13 +68,13 @@ C++ 標準ライブラリの型、関数、および演算子を定義し、オ�
 
 ### <a name="operators"></a>オペレーター
 
-|演算子|Description|
+|演算子|説明|
 |-|-|
 |[operator! =](../standard-library/utility-operators.md#op_neq)|演算子の左辺のペア オブジェクトが右辺のペア オブジェクトと等しくないかどうかを調べます。|
 |[operator = =](../standard-library/utility-operators.md#op_eq_eq)|演算子の左辺のペア オブジェクトが右辺のペア オブジェクトと等しいかどうかを調べます。|
 |[operator\<](../standard-library/utility-operators.md#op_lt)|演算子の左辺のペア オブジェクトが右辺のペア オブジェクトより小さいかどうかを調べます。|
 |[operator\<=](../standard-library/utility-operators.md#op_gt_eq)|演算子の左辺のペア オブジェクトが右辺のペア オブジェクト以下かどうかを調べます。|
-|[>演算子](../standard-library/utility-operators.md#op_gt)|演算子の左辺のペア オブジェクトが右辺のペア オブジェクトより大きいかどうかを調べます。|
+|[>演算子 ](../standard-library/utility-operators.md#op_gt)|演算子の左辺のペア オブジェクトが右辺のペア オブジェクトより大きいかどうかを調べます。|
 |[operator>=](../standard-library/utility-operators.md#op_gt_eq)|演算子の左辺のペア オブジェクトが右辺のペア オブジェクト以上かどうかを調べます。|
 
 ### <a name="structs"></a>構造体

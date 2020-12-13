@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「 &lt; ユーティリティ演算子」を参照してください。 &gt;
 title: '&lt;utility&gt; 演算子'
 ms.date: 11/04/2016
 f1_keywords:
@@ -16,19 +17,19 @@ helpviewer_keywords:
 - std::operator&lt; (utility)
 - std::operator&lt;= (utility)
 - std::operator== (utility)
-ms.openlocfilehash: 7146c31e33b514b20703b280a7194f639c387c26
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 0db6f5b18708052964353687190295084886c928
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87215460"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97153461"
 ---
 # <a name="ltutilitygt-operators"></a>&lt;utility&gt; 演算子
 
 > [!NOTE]
 > を使用する演算子 `Type&` は、に含まれてい `namespace rel_ops` ます。
 
-## <a name="operator"></a><a name="op_neq"></a>operator! =
+## <a name="operator"></a><a name="op_neq"></a> operator! =
 
 演算子の左辺のペア オブジェクトが右辺のペア オブジェクトと等しくないかどうかを調べます。
 
@@ -43,14 +44,14 @@ template <class T, class U>
 ### <a name="parameters"></a>パラメーター
 
 *左側*\
-`pair` 型オブジェクト。
+`pair` 型のオブジェクト。
 
 *そうです*\
-`pair` 型オブジェクト。
+`pair` 型のオブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
-**`true`** ペアが等しくない場合は。**`false`** ペアが等しい場合は。
+**`true`** ペアが等しくない場合は。 **`false`** ペアが等しい場合は。
 
 ### <a name="remarks"></a>解説
 
@@ -103,7 +104,7 @@ The pairs p1 and p2 are not equal.
 The pairs p1 and p3 are equal.
 ```
 
-## <a name="operator"></a><a name="op_eq_eq"></a>operator = =
+## <a name="operator"></a><a name="op_eq_eq"></a> operator = =
 
 演算子の左辺のペア オブジェクトが右辺のペア オブジェクトと等しいかどうかを調べます。
 
@@ -115,10 +116,10 @@ constexpr bool operator==(const pair<T, U>& left, const pair<T, U>& right);
 ### <a name="parameters"></a>パラメーター
 
 *左側*\
-`pair` 型オブジェクト。
+`pair` 型のオブジェクト。
 
 *そうです*\
-`pair` 型オブジェクト。
+`pair` 型のオブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
@@ -126,7 +127,7 @@ constexpr bool operator==(const pair<T, U>& left, const pair<T, U>& right);
 
 ### <a name="remarks"></a>解説
 
-ペアのそれぞれの要素が等しい場合に、ペアが等しくなります。 `left` が返されます。 **最初**に  ==  `right` 。 **最初**に  &&  `left` 。 **second**  ==  `right` 。 **second**。 片方のペアの最初または 2 番目の要素のいずれかがもう一方のペアの対応する要素と等しくない場合には、2 つのペアは等しくありません。
+ペアのそれぞれの要素が等しい場合に、ペアが等しくなります。 `left` が返されます。 **最初** に  ==  `right` 。 **最初** に  &&  `left` 。 **second**  ==  `right` 。 **second**。 片方のペアの最初または 2 番目の要素のいずれかがもう一方のペアの対応する要素と等しくない場合には、2 つのペアは等しくありません。
 
 ### <a name="example"></a>例
 
@@ -166,7 +167,7 @@ int main( )
 }
 ```
 
-## <a name="operatorlt"></a><a name="op_lt"></a>operator&lt;
+## <a name="operatorlt"></a><a name="op_lt"></a> operator&lt;
 
 演算子の左辺のペア オブジェクトが右辺のペア オブジェクトより小さいかどうかを調べます。
 
@@ -189,7 +190,7 @@ constexpr bool operator<(const pair<T, U>& left, const pair<T, U>& right);
 
 ### <a name="remarks"></a>解説
 
-`left` `pair` `right` `pair` *Left*が*right*以下の場合、オブジェクトはオブジェクトより厳密に小さくなると言います。
+`left` `pair` `right` `pair` *Left* が *right* 以下の場合、オブジェクトはオブジェクトより厳密に小さくなると言います。
 
 ペアを比較する場合、2 つのペアの最初の要素の値が、最も優先度が高くなります。 最初の要素の値が異なる場合、その比較の結果がペアの比較の結果として扱われます。 最初の要素の値が同じである場合、2 番目の要素の値が比較され、その比較の結果がペアの比較の結果として扱われます。
 
@@ -240,7 +241,7 @@ The pair p1 is less than the pair p2.
 The pair p1 is not less than the pair p3.
 ```
 
-## <a name="operatorlt"></a><a name="op_lt_eq"></a>operator&lt;=
+## <a name="operatorlt"></a><a name="op_lt_eq"></a> operator&lt;=
 
 演算子の左辺のペア オブジェクトが右辺のペア オブジェクト以下かどうかを調べます。
 
@@ -325,7 +326,7 @@ The pair p1 is greater than the pair p3.
 The pair p1 is less than or equal to the pair p4.
 ```
 
-## <a name="operatorgt"></a><a name="op_gt"></a>operator&gt;
+## <a name="operatorgt"></a><a name="op_gt"></a> operator&gt;
 
 演算子の左辺のペア オブジェクトが右辺のペア オブジェクトより大きいかどうかを調べます。
 
@@ -351,7 +352,7 @@ constexpr bool operator>(const pair<T, U>& left, const pair<T, U>& right);
 
 ### <a name="remarks"></a>解説
 
-`left` `pair` `right` `pair` *Left*が*right*以上の場合、オブジェクトはオブジェクトより厳密に大きいと言います。
+`left` `pair` `right` `pair` *Left* が *right* 以上の場合、オブジェクトはオブジェクトより厳密に大きいと言います。
 
 ペアを比較する場合、2 つのペアの最初の要素の値が、最も優先度が高くなります。 最初の要素の値が異なる場合、その比較の結果がペアの比較の結果として扱われます。 最初の要素の値が同じである場合、2 番目の要素の値が比較され、その比較の結果がペアの比較の結果として扱われます。
 
@@ -412,7 +413,7 @@ The pair p1 is greater than the pair p3.
 The pair p1 is not greater than the pair p4.
 ```
 
-## <a name="operatorgt"></a><a name="op_gt_eq"></a>operator&gt;=
+## <a name="operatorgt"></a><a name="op_gt_eq"></a> operator&gt;=
 
 演算子の左辺のペア オブジェクトが右辺のペア オブジェクト以上かどうかを調べます。
 

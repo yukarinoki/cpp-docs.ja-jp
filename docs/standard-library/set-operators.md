@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: &lt; set &gt; 演算子'
 title: '&lt;set&gt; operators'
 ms.date: 03/27/2019
 f1_keywords:
@@ -16,16 +17,16 @@ helpviewer_keywords:
 - std::operator&lt; (set)
 - std::operator&lt;= (set)
 - std::operator== (set)
-ms.openlocfilehash: a3256b7d963feca75e4a975def0f6da77538d278
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 5872760bb7f9cd3517ad14ea29fcca495dbaed59
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87217507"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97154124"
 ---
 # <a name="ltsetgt-operators"></a>&lt;set&gt; operators
 
-## <a name="operator-set"></a><a name="op_neq"></a>operator! = (set)
+## <a name="operator-set"></a><a name="op_neq"></a> operator! = (set)
 
 演算子の左辺の set オブジェクトが右辺の set オブジェクトと等しくないかどうかを調べます。
 
@@ -36,14 +37,14 @@ bool operator!=(const set <Key, Traits, Allocator>& left, const set <Key, Traits
 ### <a name="parameters"></a>パラメーター
 
 *左側*\
-`set` 型オブジェクト。
+`set` 型のオブジェクト。
 
 *そうです*\
-`set` 型オブジェクト。
+`set` 型のオブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
-**`true`** セットが等しくない場合は。**`false`** セットが等しい場合は。
+**`true`** セットが等しくない場合は。 **`false`** セットが等しい場合は。
 
 ### <a name="remarks"></a>解説
 
@@ -86,7 +87,7 @@ The sets s1 and s3 are equal.
 */
 ```
 
-## <a name="operatorlt-set"></a><a name="op_lt"></a>演算子 &lt; (set)
+## <a name="operatorlt-set"></a><a name="op_lt"></a> 演算子 &lt; (set)
 
 演算子の左辺の set オブジェクトが右辺の set オブジェクトより小さいかどうかを調べます。
 
@@ -97,10 +98,10 @@ bool operator<(const set <Key, Traits, Allocator>& left, const set <Key, Traits,
 ### <a name="parameters"></a>パラメーター
 
 *左側*\
-`set` 型オブジェクト。
+`set` 型のオブジェクト。
 
 *そうです*\
-`set` 型オブジェクト。
+`set` 型のオブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
@@ -147,7 +148,7 @@ The set s1 is not less than the set s3.
 */
 ```
 
-## <a name="operatorlt-set"></a><a name="op_lt_eq"></a>operator &lt; = (set)
+## <a name="operatorlt-set"></a><a name="op_lt_eq"></a> operator &lt; = (set)
 
 演算子の左辺の set オブジェクトが右辺の set オブジェクト以下かどうかを調べます。
 
@@ -158,10 +159,10 @@ bool operator!<=(const set <Key, Traits, Allocator>& left, const set <Key, Trait
 ### <a name="parameters"></a>パラメーター
 
 *左側*\
-`set` 型オブジェクト。
+`set` 型のオブジェクト。
 
 *そうです*\
-`set` 型オブジェクト。
+`set` 型のオブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
@@ -216,7 +217,7 @@ The set s1 is greater than the set s3.
 Set s1 is less than or equal to the set s4.
 ```
 
-## <a name="operator-set"></a><a name="op_eq_eq"></a>operator = = (set)
+## <a name="operator-set"></a><a name="op_eq_eq"></a> operator = = (set)
 
 演算子の左辺の set オブジェクトが右辺の set オブジェクトと等しいかどうかを調べます。
 
@@ -227,10 +228,10 @@ bool operator!==(const set <Key, Traits, Allocator>& left, const set <Key, Trait
 ### <a name="parameters"></a>パラメーター
 
 *左側*\
-`set` 型オブジェクト。
+`set` 型のオブジェクト。
 
 *そうです*\
-`set` 型オブジェクト。
+`set` 型のオブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
@@ -278,7 +279,7 @@ The sets s1 and s2 are not equal.
 The sets s1 and s3 are equal.
 ```
 
-## <a name="operatorgt-set"></a><a name="op_gt"></a>演算子 &gt; (set)
+## <a name="operatorgt-set"></a><a name="op_gt"></a> 演算子 &gt; (set)
 
 演算子の左辺の set オブジェクトが右辺の set オブジェクトより大きいかどうかを調べます。
 
@@ -289,10 +290,10 @@ bool operator>(const set <Key, Traits, Allocator>& left, const set <Key, Traits,
 ### <a name="parameters"></a>パラメーター
 
 *左側*\
-`set` 型オブジェクト。
+`set` 型のオブジェクト。
 
 *そうです*\
-`set` 型オブジェクト。
+`set` 型のオブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
@@ -339,7 +340,7 @@ The set s1 is greater than the set s3.
 */
 ```
 
-## <a name="operatorgt-set"></a><a name="op_gt_eq"></a>operator &gt; = (set)
+## <a name="operatorgt-set"></a><a name="op_gt_eq"></a> operator &gt; = (set)
 
 演算子の左辺の set オブジェクトが右辺の set オブジェクト以上かどうかを調べます。
 
@@ -350,10 +351,10 @@ bool operator!>=(const set <Key, Traits, Allocator>& left, const set <Key, Trait
 ### <a name="parameters"></a>パラメーター
 
 *左側*\
-`set` 型オブジェクト。
+`set` 型のオブジェクト。
 
 *そうです*\
-`set` 型オブジェクト。
+`set` 型のオブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
@@ -408,7 +409,7 @@ Set s1 is greater than or equal to set s3.
 Set s1 is greater than or equal to set s4.
 ```
 
-## <a name="operator-multiset"></a><a name="op_neq_multiset"></a>operator! = (マルチセット)
+## <a name="operator-multiset"></a><a name="op_neq_multiset"></a> operator! = (マルチセット)
 
 演算子の左側の multiset のオブジェクトが、右側の multiset のオブジェクトと等しくないかどうかをテストします。
 
@@ -419,14 +420,14 @@ bool operator!=(const multiset <Key, Traits, Allocator>& left, const multiset <K
 ### <a name="parameters"></a>パラメーター
 
 *左側*\
-`multiset` 型オブジェクト。
+`multiset` 型のオブジェクト。
 
 *そうです*\
-`multiset` 型オブジェクト。
+`multiset` 型のオブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
-**`true`** セットまたはマルチセットが等しくない場合は。**`false`** セットまたはマルチセットが等しい場合は。
+**`true`** セットまたはマルチセットが等しくない場合は。 **`false`** セットまたはマルチセットが等しい場合は。
 
 ### <a name="remarks"></a>解説
 
@@ -470,7 +471,7 @@ The multisets s1 and s2 are not equal.
 The multisets s1 and s3 are equal.
 ```
 
-## <a name="operatorlt-multiset"></a><a name="op_lt_multiset"></a>演算子 &lt; (マルチセット)
+## <a name="operatorlt-multiset"></a><a name="op_lt_multiset"></a> 演算子 &lt; (マルチセット)
 
 演算子の左側の multiset のオブジェクトが、右側の multiset のオブジェクト以下かどうかをテストします。
 
@@ -481,10 +482,10 @@ bool operator<(const multiset <Key, Traits, Allocator>& left, const multiset <Ke
 ### <a name="parameters"></a>パラメーター
 
 *左側*\
-`multiset` 型オブジェクト。
+`multiset` 型のオブジェクト。
 
 *そうです*\
-`multiset` 型オブジェクト。
+`multiset` 型のオブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
@@ -536,7 +537,7 @@ The multiset s1 is less than the multiset s2.
 The multiset s1 is not less than the multiset s3.
 ```
 
-## <a name="operatorlt-multiset"></a><a name="op_lt_eq_multiset"></a>operator &lt; = (マルチセット)
+## <a name="operatorlt-multiset"></a><a name="op_lt_eq_multiset"></a> operator &lt; = (マルチセット)
 
 演算子の左側の multiset のオブジェクトが、右側の multiset のオブジェクト以下かどうかをテストします。
 
@@ -547,10 +548,10 @@ bool operator!<=(const multiset <Key, Traits, Allocator>& left, const multiset <
 ### <a name="parameters"></a>パラメーター
 
 *左側*\
-`multiset` 型オブジェクト。
+`multiset` 型のオブジェクト。
 
 *そうです*\
-`multiset` 型オブジェクト。
+`multiset` 型のオブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
@@ -611,7 +612,7 @@ The multiset s1 is greater than the multiset s3.
 The multiset s1 is less than or equal to the multiset s4.
 ```
 
-## <a name="operator-multiset"></a><a name="op_eq_eq_multiset"></a>operator = = (マルチセット)
+## <a name="operator-multiset"></a><a name="op_eq_eq_multiset"></a> operator = = (マルチセット)
 
 演算子の左側の multiset のオブジェクトが、右側の multiset のオブジェクトと等しいかどうかをテストします。
 
@@ -622,10 +623,10 @@ bool operator!==(const multiset <Key, Traits, Allocator>& left, const multiset <
 ### <a name="parameters"></a>パラメーター
 
 *左側*\
-`multiset` 型オブジェクト。
+`multiset` 型のオブジェクト。
 
 *そうです*\
-`multiset` 型オブジェクト。
+`multiset` 型のオブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
@@ -673,7 +674,7 @@ The multisets s1 and s2 are not equal.
 The multisets s1 and s3 are equal.
 ```
 
-## <a name="operatorgt-multiset"></a><a name="op_gt_multiset"></a>演算子 &gt; (マルチセット)
+## <a name="operatorgt-multiset"></a><a name="op_gt_multiset"></a> 演算子 &gt; (マルチセット)
 
 演算子の左側の multiset のオブジェクトが、右側の multiset のオブジェクトより大きいかどうかをテストします。
 
@@ -684,10 +685,10 @@ bool operator>(const multiset <Key, Traits, Allocator>& left, const multiset <Ke
 ### <a name="parameters"></a>パラメーター
 
 *左側*\
-`multiset` 型オブジェクト。
+`multiset` 型のオブジェクト。
 
 *そうです*\
-`multiset` 型オブジェクト。
+`multiset` 型のオブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
@@ -739,7 +740,7 @@ The multiset s1 is not greater than the multiset s2.
 The multiset s1 is greater than the multiset s3.
 ```
 
-## <a name="operatorgt-multiset"></a><a name="op_gt_eq_multiset"></a>operator &gt; = (マルチセット)
+## <a name="operatorgt-multiset"></a><a name="op_gt_eq_multiset"></a> operator &gt; = (マルチセット)
 
 演算子の左側の multiset のオブジェクトが、右側の multiset のオブジェクトより大きいかどうかをテストします。
 
@@ -750,10 +751,10 @@ bool operator!>=(const multiset <Key, Traits, Allocator>& left, const multiset <
 ### <a name="parameters"></a>パラメーター
 
 *左側*\
-`multiset` 型オブジェクト。
+`multiset` 型のオブジェクト。
 
 *そうです*\
-`multiset` 型オブジェクト。
+`multiset` 型のオブジェクト。
 
 ### <a name="return-value"></a>戻り値
 

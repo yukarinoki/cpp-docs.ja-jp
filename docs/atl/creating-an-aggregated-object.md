@@ -1,33 +1,34 @@
 ---
-title: 集約オブジェクトの作成
+description: 詳細については、「集計オブジェクトの作成」を参照してください。
+title: 集計オブジェクトの作成
 ms.date: 11/04/2016
 helpviewer_keywords:
 - aggregation [C++], creating aggregated objects
 - aggregate objects [C++], creating
 ms.assetid: fc29d7aa-fd53-4276-9c2f-37379f71b179
-ms.openlocfilehash: 4be8d0e852da91b58125dc01d44eed4560b2b8d9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e6efbf63e28d0477730a2d7c31ec91e9b75520e4
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62250759"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97153227"
 ---
-# <a name="creating-an-aggregated-object"></a>集約オブジェクトの作成
+# <a name="creating-an-aggregated-object"></a>集計オブジェクトの作成
 
-集計デリゲート`IUnknown`、外側のオブジェクトへのポインターを提供する呼び出し`IUnknown`を内部オブジェクト。
+集計デリゲートは `IUnknown` 、外部オブジェクトへのポインターを内部オブジェクトに提供する呼び出しを呼び出します `IUnknown` 。
 
-## <a name="to-create-an-aggregated-object"></a>集約オブジェクトを作成するには
+## <a name="to-create-an-aggregated-object"></a>集計されたオブジェクトを作成するには
 
-1. 追加、`IUnknown`クラスへのポインター オブジェクトをコンス トラクターで NULL に初期化します。
+1. `IUnknown`クラスオブジェクトへのポインターを追加し、コンストラクターで NULL に初期化します。
 
-1. オーバーライド[finalconstruct 関数](../atl/reference/ccomobjectrootex-class.md#finalconstruct)集計を作成します。
+1. [FinalConstruct](../atl/reference/ccomobjectrootex-class.md#finalconstruct)をオーバーライドして、集計を作成します。
 
-1. 使用して、`IUnknown`の 2 番目のパラメーターとして、手順 1. で定義されているポインター、[で定義](reference/com-interface-entry-macros.md#com_interface_entry_aggregate)マクロ。
+1. `IUnknown`手順 1. で定義したポインターを、 [COM_INTERFACE_ENTRY_AGGREGATE](reference/com-interface-entry-macros.md#com_interface_entry_aggregate)マクロの2番目のパラメーターとして使用します。
 
-1. オーバーライド[FinalRelease](../atl/reference/ccomobjectrootex-class.md#finalrelease)を解放する、`IUnknown`ポインター。
+1. [FinalRelease](../atl/reference/ccomobjectrootex-class.md#finalrelease)をオーバーライドしてポインターを解放し `IUnknown` ます。
 
 > [!NOTE]
-> 使用して中に集計されたオブジェクトのインターフェイスを解放するかどうかは`FinalConstruct`、追加する必要があります、[アグリゲート](reference/aggregation-and-class-factory-macros.md#declare_protect_final_construct)クラスのオブジェクトの定義にマクロ。
+> の間に集約されたオブジェクトからインターフェイスを使用して解放する場合は `FinalConstruct` 、クラスオブジェクトの定義に [DECLARE_PROTECT_FINAL_CONSTRUCT](reference/aggregation-and-class-factory-macros.md#declare_protect_final_construct) マクロを追加する必要があります。
 
 ## <a name="see-also"></a>関連項目
 

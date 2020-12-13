@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「ダイアログボックスの実装」を参照してください。
 title: ダイアログボックスの実装
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - CAxDialogImpl class, implementing dialog boxes in ATL
 - ATL, dialog boxes
 ms.assetid: 478525f2-aa6a-435a-b162-68fc8aa98a8e
-ms.openlocfilehash: fa7b4122b513d48194dedeb39daecd1dfd7223eb
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 736619b39d06cffc28bc9723c94d0c5367dd51d4
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91499578"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97152911"
 ---
 # <a name="implementing-a-dialog-box"></a>ダイアログボックスの実装
 
@@ -20,7 +21,7 @@ ATL プロジェクトにダイアログボックスを追加するには、ATL 
 
 ## <a name="adding-a-dialog-box-with-the-atl-dialog-wizard"></a>ATL ダイアログウィザードを使用したダイアログボックスの追加
 
-[ [クラスの追加] ダイアログボックス](../ide/adding-a-class-visual-cpp.md#add-class-dialog-box)で、atl プロジェクトにダイアログボックスを追加する atl ダイアログオブジェクトを選択します。 必要に応じて ATL ダイアログウィザードに入力し、[ **完了**] をクリックします。 ウィザードによって、 [CAxDialogImpl](../atl/reference/caxdialogimpl-class.md) から派生したクラスがプロジェクトに追加されます。 [**表示**] メニューから**リソースビュー**を開き、ダイアログを見つけてダブルクリックし、リソースエディターで開きます。
+[ [クラスの追加] ダイアログボックス](../ide/adding-a-class-visual-cpp.md#add-class-dialog-box)で、atl プロジェクトにダイアログボックスを追加する atl ダイアログオブジェクトを選択します。 必要に応じて ATL ダイアログウィザードに入力し、[ **完了**] をクリックします。 ウィザードによって、 [CAxDialogImpl](../atl/reference/caxdialogimpl-class.md) から派生したクラスがプロジェクトに追加されます。 [**表示**] メニューから **リソースビュー** を開き、ダイアログを見つけてダブルクリックし、リソースエディターで開きます。
 
 > [!NOTE]
 > ダイアログボックスがから派生している場合は `CAxDialogImpl` 、ActiveX と Windows の両方のコントロールをホストできます。 ダイアログボックスクラスで ActiveX コントロールのサポートのオーバーヘッドを避けたい場合は、代わりに [CSimpleDialog](../atl/reference/csimpledialog-class.md) または [CDialogImpl](../atl/reference/cdialogimpl-class.md) を使用してください。

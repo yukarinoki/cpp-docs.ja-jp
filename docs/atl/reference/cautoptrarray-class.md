@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: CAutoPtrArray クラス'
 title: CAutoPtrArray クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAutoPtrArray class
 ms.assetid: 880a70da-8c81-4427-8ac6-49aa8d424244
-ms.openlocfilehash: 11f39eac8b8d080fd840f6454f393e33ebcb9e1c
-ms.sourcegitcommit: 2bc15c5b36372ab01fa21e9bcf718fa22705814f
+ms.openlocfilehash: 55f9382c82a1e242342d0d740c369a571c43f9ba
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82167664"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97152581"
 ---
 # <a name="cautoptrarray-class"></a>CAutoPtrArray クラス
 
@@ -33,7 +34,7 @@ class CAutoPtrArray : public CAtlArray<
 
 ### <a name="parameters"></a>パラメーター
 
-*つまり*<br/>
+*E*<br/>
 ポインター型。
 
 ## <a name="members"></a>メンバー
@@ -46,7 +47,7 @@ class CAutoPtrArray : public CAtlArray<
 
 ## <a name="remarks"></a>解説
 
-このクラスは、コンストラクターを提供し、 [CAtlArray](../../atl/reference/catlarray-class.md)および[CAutoPtrElementTraits](../../atl/reference/cautoptrelementtraits-class.md)からメソッドを派生させることにより、スマートポインターを格納するコレクションクラスオブジェクトの作成を支援します。
+このクラスは、コンストラクターを提供し、 [CAtlArray](../../atl/reference/catlarray-class.md) および [CAutoPtrElementTraits](../../atl/reference/cautoptrelementtraits-class.md) からメソッドを派生させることにより、スマートポインターを格納するコレクションクラスオブジェクトの作成を支援します。
 
 詳細については、「 [ATL コレクションクラス](../../atl/atl-collection-classes.md)」を参照してください。
 
@@ -56,11 +57,11 @@ class CAutoPtrArray : public CAtlArray<
 
 `CAutoPtrArray`
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** atlcoll. h
 
-## <a name="cautoptrarraycautoptrarray"></a><a name="cautoptrarray"></a>CAutoPtrArray::CAutoPtrArray
+## <a name="cautoptrarraycautoptrarray"></a><a name="cautoptrarray"></a> CAutoPtrArray::CAutoPtrArray
 
 コンストラクターです。
 

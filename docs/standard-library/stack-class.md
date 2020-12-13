@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: stack クラス'
 title: stack クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -20,12 +21,12 @@ helpviewer_keywords:
 - std::stack [C++], size
 - std::stack [C++], top
 ms.assetid: 02151c1e-eab0-41b8-be94-a839ead78ecf
-ms.openlocfilehash: f1d44a4242542ac6856fd7208fe423c43ae79997
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 6caec52124b247e405299d45f55a86c20f991abc
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88844302"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97153864"
 ---
 # <a name="stack-class"></a>stack クラス
 
@@ -76,7 +77,7 @@ Stack オブジェクトは、クラスの要素が等値比較可能であり�
 |[size_type](#size_type)|`stack` 内の要素の数を表すことができる符号なし整数型。|
 |[value_type](#value_type)|`stack` 内に要素として格納されるオブジェクトの種類を表す型。|
 
-### <a name="functions"></a>Functions
+### <a name="functions"></a>関数
 
 |名前|説明|
 |-|-|

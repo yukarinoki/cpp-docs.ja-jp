@@ -1,17 +1,18 @@
 ---
+description: '詳細情報: space_info 構造'
 title: space_info 構造体
 ms.date: 09/10/2018
 f1_keywords:
 - filesystem/std::tr2::sys::space_info
 ms.assetid: f2b35b42-06ff-45bd-8617-39a0f5358a54
-ms.openlocfilehash: 2a9856746a8bbc796871663a81bd8911d34dcd4a
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 254866a0eb225b4ed7bcfe4e06a734c5c9d0e3ee
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68457557"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97153877"
 ---
-# <a name="spaceinfo-structure"></a>space_info 構造体
+# <a name="space_info-structure"></a>space_info 構造体
 
 ボリュームに関する情報を保持します。
 
@@ -36,14 +37,14 @@ struct space_info
 |`unsigned long long free`|ボリューム上のデータを表すために使用されないバイト数を表します。|
 |`unsigned long long available`|ボリューム上のデータを表すために使用できるバイト数を表します。|
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-**ヘッダー:** \<ファイルシステム >
+**ヘッダー:**\<filesystem>
 
 **名前空間:** std::experimental::filesystem
 
 ## <a name="see-also"></a>関連項目
 
-[ヘッダー ファイル リファレンス](../standard-library/cpp-standard-library-header-files.md)\
+[ヘッダーファイルのリファレンス](../standard-library/cpp-standard-library-header-files.md)\
 [\<filesystem>](../standard-library/filesystem.md)\
 [ファイル システムのナビゲーション (C++)](../standard-library/file-system-navigation.md)

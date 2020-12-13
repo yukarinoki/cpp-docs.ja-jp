@@ -1,5 +1,6 @@
 ---
-title: クラスを実行します。
+description: '詳細情報: CAutoPtrList クラス'
+title: CAutoPtrList クラス
 ms.date: 11/04/2016
 f1_keywords:
 - CAutoPtrList
@@ -8,16 +9,16 @@ f1_keywords:
 helpviewer_keywords:
 - CAutoPtrList class
 ms.assetid: 11de4aca-28b0-4ff2-a74a-cb602312ffbd
-ms.openlocfilehash: 48c7ad6fe13c5f5fbbe5829c25ce1c27896841be
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 51544d464904d0ebfd31b82152088a0dfa638969
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81318803"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97152517"
 ---
-# <a name="cautoptrlist-class"></a>クラスを実行します。
+# <a name="cautoptrlist-class"></a>CAutoPtrList クラス
 
-このクラスは、スマート ポインターのリストを構築するときに役立つメソッドを提供します。
+このクラスには、スマートポインターのリストを構築するときに役立つメソッドが用意されています。
 
 > [!IMPORTANT]
 > このクラスとそのメンバーは、Windows ランタイムで実行されるアプリケーションでは使用できません。
@@ -41,25 +42,25 @@ class CAutoPtrList :
 
 |名前|説明|
 |----------|-----------------|
-|[を一覧します。](#cautoptrlist)|コンストラクターです。|
+|[CAutoPtrList::CAutoPtrList](#cautoptrlist)|コンストラクターです。|
 
 ## <a name="remarks"></a>解説
 
-このクラスは、コンストラクターを提供し、スマート ポインターを格納するリスト オブジェクトの作成を支援するために[、CAtlList](../../atl/reference/catllist-class.md)および[CAutoPtrElementTraits](../../atl/reference/cautoptrelementtraits-class.md)からメソッドを派生させます。 クラス[CAutoPtrArray](../../atl/reference/cautoptrarray-class.md)は、配列オブジェクトに対して同様の関数を提供します。
+このクラスは、コンストラクターを提供し、 [CAtlList](../../atl/reference/catllist-class.md) および [CAutoPtrElementTraits](../../atl/reference/cautoptrelementtraits-class.md) からメソッドを派生させることにより、スマートポインターを格納するリストオブジェクトの作成を支援します。 [CAutoPtrArray](../../atl/reference/cautoptrarray-class.md)クラスは、配列オブジェクトに対して同様の関数を提供します。
 
-詳細については、「 [ATL コレクション クラス](../../atl/atl-collection-classes.md)」を参照してください。
+詳細については、「 [ATL コレクションクラス](../../atl/atl-collection-classes.md)」を参照してください。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
-[カトルリスト](../../atl/reference/catllist-class.md)
+[CAtlList](../../atl/reference/catllist-class.md)
 
 `CAutoPtrList`
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-**ヘッダー:** atlcoll.h
+**ヘッダー:** atlcoll. h
 
-## <a name="cautoptrlistcautoptrlist"></a><a name="cautoptrlist"></a>を一覧します。
+## <a name="cautoptrlistcautoptrlist"></a><a name="cautoptrlist"></a> CAutoPtrList::CAutoPtrList
 
 コンストラクターです。
 
@@ -69,15 +70,15 @@ CAutoPtrList(UINT nBlockSize = 10) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*ブロックサイズ*<br/>
-ブロック サイズ (既定値は 10)。
+*nBlockSize*<br/>
+ブロックサイズ。既定値は10です。
 
 ### <a name="remarks"></a>解説
 
-ブロック サイズは、新しい要素が必要なときに割り当てられるメモリの量を測定します。 ブロック サイズが大きくなると、メモリ割り当てルーチンの呼び出しは減りますが、使用するリソースは多くなります。
+ブロックサイズは、新しい要素が必要な場合に割り当てられるメモリの量を測定したものです。 ブロックサイズを大きくすると、メモリ割り当てルーチンの呼び出しが減少しますが、より多くのリソースが使用されます。
 
 ## <a name="see-also"></a>関連項目
 
-[クラスを表します。](../../atl/reference/catllist-class.md)<br/>
-[クラスを示します。](../../atl/reference/cautoptrelementtraits-class.md)<br/>
+[CAtlList クラス](../../atl/reference/catllist-class.md)<br/>
+[CAutoPtrElementTraits クラス](../../atl/reference/cautoptrelementtraits-class.md)<br/>
 [クラスの概要](../../atl/atl-class-overview.md)

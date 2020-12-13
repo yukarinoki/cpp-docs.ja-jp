@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: CAtlWinModule クラス'
 title: CAtlWinModule クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -10,12 +11,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlWinModule class
 ms.assetid: 7ec844af-0f68-4a34-b0c8-9de50a025df0
-ms.openlocfilehash: 04dc7e5b8c0c5dd21567f23395b4bafd4ae839dc
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 4ed0c52a59401fa5411fd6d5acbcaf72f31aeb11
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87229988"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97152571"
 ---
 # <a name="catlwinmodule-class"></a>CAtlWinModule クラス
 
@@ -56,11 +57,11 @@ class CAtlWinModule : public _ATL_WIN_MODULE
 
 `CAtlWinModule`
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** atlbase. h
 
-## <a name="catlwinmoduleaddcreatewnddata"></a><a name="addcreatewnddata"></a>CAtlWinModule::AddCreateWndData
+## <a name="catlwinmoduleaddcreatewnddata"></a><a name="addcreatewnddata"></a> CAtlWinModule::AddCreateWndData
 
 このメソッドは、構造体を初期化して追加し `_AtlCreateWndData` ます。
 
@@ -80,7 +81,7 @@ void AddCreateWndData(_AtlCreateWndData* pData, void* pObject);
 
 このメソッドは、 [_AtlCreateWndData](../../atl/reference/atlcreatewnddata-structure.md)構造体を初期化する[AtlWinModuleAddCreateWndData](winmodule-global-functions.md#atlwinmoduleaddcreatewnddata)を呼び出します。 この構造体は、 **`this`** ウィンドウプロシージャでクラスインスタンスを取得するために使用されるポインターを格納します。
 
-## <a name="catlwinmodulecatlwinmodule"></a><a name="catlwinmodule"></a>CAtlWinModule::CAtlWinModule
+## <a name="catlwinmodulecatlwinmodule"></a><a name="catlwinmodule"></a> CAtlWinModule::CAtlWinModule
 
 コンストラクターです。
 
@@ -90,9 +91,9 @@ CAtlWinModule();
 
 ### <a name="remarks"></a>解説
 
-初期化に失敗した場合は、 **EXCEPTION_NONCONTINUABLE**例外が発生します。
+初期化に失敗した場合は、 **EXCEPTION_NONCONTINUABLE** 例外が発生します。
 
-## <a name="catlwinmodulecatlwinmodule"></a><a name="dtor"></a>CAtlWinModule:: ~ CAtlWinModule
+## <a name="catlwinmodulecatlwinmodule"></a><a name="dtor"></a> CAtlWinModule:: ~ CAtlWinModule
 
 デストラクターです。
 
@@ -104,7 +105,7 @@ CAtlWinModule();
 
 割り当てられたすべてのリソースを解放します。
 
-## <a name="catlwinmoduleextractcreatewnddata"></a><a name="extractcreatewnddata"></a>CAtlWinModule::ExtractCreateWndData
+## <a name="catlwinmoduleextractcreatewnddata"></a><a name="extractcreatewnddata"></a> CAtlWinModule::ExtractCreateWndData
 
 このメソッドは、構造体へのポインターを返し `_AtlCreateWndData` ます。
 
