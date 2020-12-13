@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: tiled_extent クラス'
 title: tiled_extent クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -13,12 +14,12 @@ f1_keywords:
 - AMP/Concurrency::tiled_extent::tile_dim2
 - AMP/Concurrency::tiled_extent::tile_extent
 ms.assetid: 671ecaf8-c7b0-4ac8-bbdc-e30bd92da7c0
-ms.openlocfilehash: ce2710da1a745efedcd6e9e524355eda41e26de2
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: ca5b5c630152263ca49adf5c201ee0b892a192c2
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81374709"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97163874"
 ---
 # <a name="tiled_extent-class"></a>tiled_extent クラス
 
@@ -63,29 +64,29 @@ class tiled_extent<_Dim0, 0, 0> : public Concurrency::extent<1>;
 
 |名前|説明|
 |----------|-----------------|
-|[tiled_extentコンストラクタ](#ctor)|`tiled_extent` クラスの新しいインスタンスを初期化します。|
+|[tiled_extent コンストラクター](#ctor)|`tiled_extent` クラスの新しいインスタンスを初期化します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
 |名前|説明|
 |----------|-----------------|
 |[get_tile_extent](#get_tile_extent)|`extent` テンプレート引数 `tiled_extent`、`_Dim0`、および `_Dim1` の値をキャプチャする `_Dim2` オブジェクトを返します。|
-|[パッド](#pad)|タイルの次元によって均等に分割できる範囲を上方調整した新しい `tiled_extent` オブジェクトを返します。|
-|[切り捨て](#truncate)|タイルの次元によって均等に分割できるように範囲を下方調整した新しい `tiled_extent` オブジェクトを返します。|
+|[埋める](#pad)|タイルの次元によって均等に分割できる範囲を上方調整した新しい `tiled_extent` オブジェクトを返します。|
+|[truncate](#truncate)|タイルの次元によって均等に分割できるように範囲を下方調整した新しい `tiled_extent` オブジェクトを返します。|
 
 ### <a name="public-operators"></a>パブリック演算子
 
 |名前|説明|
 |----------|-----------------|
-|[演算子=](#operator_eq)|指定された `tiled_index` オブジェクトの内容をこのオブジェクトにコピーします。|
+|[operator =](#operator_eq)|指定された `tiled_index` オブジェクトの内容をこのオブジェクトにコピーします。|
 
 ### <a name="public-constants"></a>パブリック定数
 
 |名前|説明|
 |----------|-----------------|
-|[tile_dim0定数](#tile_dim0)|最上位の次元の長さを格納します。|
-|[tile_dim1定数](#tile_dim1)|最上位の次の次元の長さを格納します。|
-|[tile_dim2定数](#tile_dim2)|最下位の次元の長さを格納します。|
+|[tile_dim0 定数](#tile_dim0)|最上位の次元の長さを格納します。|
+|[tile_dim1 定数](#tile_dim1)|最上位の次の次元の長さを格納します。|
+|[tile_dim2 定数](#tile_dim2)|最下位の次元の長さを格納します。|
 
 ### <a name="public-data-members"></a>パブリック データ メンバー
 
@@ -99,13 +100,13 @@ class tiled_extent<_Dim0, 0, 0> : public Concurrency::extent<1>;
 
 `tiled_extent`
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** amp.h
 
 **名前空間:** Concurrency
 
-## <a name="tiled_extent-constructor"></a><a name="ctor"> </a> tiled_extentコンストラクタ
+## <a name="tiled_extent-constructor"></a><a name="ctor"></a> tiled_extent コンストラクター
 
 `tiled_extent` クラスの新しいインスタンスを初期化します。
 
@@ -126,9 +127,9 @@ tiled_extent(
 *_Other*<br/>
 コピーする `extent` オブジェクトまたは `tiled_extent` オブジェクト。
 
-## <a name="get_tile_extent"></a><a name="get_tile_extent"> </a> get_tile_extent
+## <a name="get_tile_extent"></a><a name="get_tile_extent"></a> get_tile_extent
 
-テンプレート引数`extent``_Dim0`、、`_Dim1`および`_Dim2`の値を`tiled_extent`取得するオブジェクトを返します。
+`extent`テンプレート引数、、およびの値をキャプチャするオブジェクトを返し `tiled_extent` `_Dim0` `_Dim1` `_Dim2` ます。
 
 ### <a name="syntax"></a>構文
 
@@ -140,7 +141,7 @@ Concurrency::extent<rank> get_tile_extent() const restrict(amp,cpu);
 
 この `extent` インスタンスの次元をキャプチャする `tiled_extent` オブジェクト。
 
-## <a name="pad"></a><a name="pad"> </a>パッド
+## <a name="pad"></a><a name="pad"></a>埋め込み
 
 タイルの次元によって均等に分割できる範囲を上方調整した新しい `tiled_extent` オブジェクトを返します。
 
@@ -154,7 +155,7 @@ tiled_extent pad() const;
 
 新しい `tiled_extent` オブジェクト、値渡し。
 
-## <a name="truncate"></a><a name="truncate"> </a>切り捨て
+## <a name="truncate"></a><a name="truncate"></a>切り捨て
 
 タイルの次元によって均等に分割できるように範囲を下方調整した新しい `tiled_extent` オブジェクトを返します。
 
@@ -168,7 +169,7 @@ tiled_extent truncate() const;
 
 タイルの次元によって均等に分割できるように範囲を下方調整した新しい `tiled_extent` オブジェクトを返します。
 
-## <a name="operator"></a><a name="operator_eq"> </a>演算子=
+## <a name="operator"></a><a name="operator_eq"></a> operator =
 
 指定された `tiled_index` オブジェクトの内容をこのオブジェクトにコピーします。
 
@@ -188,7 +189,7 @@ tiled_extent&  operator= (
 
 この `tiled_index` インスタンスへの参照。
 
-## <a name="tile_dim0"></a><a name="tile_dim0"> </a> tile_dim0
+## <a name="tile_dim0"></a><a name="tile_dim0"></a> tile_dim0
 
 最上位の次元の長さを格納します。
 
@@ -198,7 +199,7 @@ tiled_extent&  operator= (
 static const int tile_dim0 = _Dim0;
 ```
 
-## <a name="tile_dim1"></a><a name="tile_dim1"> </a> tile_dim1
+## <a name="tile_dim1"></a><a name="tile_dim1"></a> tile_dim1
 
 最上位の次の次元の長さを格納します。
 
@@ -208,7 +209,7 @@ static const int tile_dim0 = _Dim0;
 static const int tile_dim1 = _Dim1;
 ```
 
-## <a name="tile_dim2"></a><a name="tile_dim2"> </a> tile_dim2
+## <a name="tile_dim2"></a><a name="tile_dim2"></a> tile_dim2
 
 最下位の次元の長さを格納します。
 
@@ -218,9 +219,9 @@ static const int tile_dim1 = _Dim1;
 static const int tile_dim2 = _Dim2;
 ```
 
-## <a name="tile_extent"></a><a name="tile_extent"> </a> tile_extent
+## <a name="tile_extent"></a><a name="tile_extent"></a> tile_extent
 
-テンプレート引数`extent``_Dim0`、および`_Dim1``_Dim2`の値を取得`tiled_extent`するオブジェクトを取得します。
+`extent`テンプレート引数、、およびの値をキャプチャするオブジェクトを取得し `tiled_extent` `_Dim0` `_Dim1` `_Dim2` ます。
 
 ### <a name="syntax"></a>構文
 
@@ -230,4 +231,4 @@ __declspec(property(get= get_tile_extent)) Concurrency::extent<rank> tile_extent
 
 ## <a name="see-also"></a>関連項目
 
-[同時実行名前空間 (C++ AMP)](concurrency-namespace-cpp-amp.md)
+[Concurrency 名前空間 (C++ AMP)](concurrency-namespace-cpp-amp.md)

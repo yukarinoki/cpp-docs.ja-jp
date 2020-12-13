@@ -1,22 +1,23 @@
 ---
+description: '詳細については、「チュートリアル: カスタムメッセージブロックの作成」を参照してください。'
 title: 'チュートリアル: カスタム メッセージ ブロックの作成'
 ms.date: 04/25/2019
 helpviewer_keywords:
 - creating custom message blocks Concurrency Runtime]
 - custom message blocks, creating [Concurrency Runtime]
 ms.assetid: 4c6477ad-613c-4cac-8e94-2c9e63cd43a1
-ms.openlocfilehash: f95eaf7e1da41bd473ab15d12330d0177b98ccdf
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 2347284c4541ef52579a2179c6387b435b1d382f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87219496"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97163848"
 ---
 # <a name="walkthrough-creating-a-custom-message-block"></a>チュートリアル: カスタム メッセージ ブロックの作成
 
 ここでは、受信メッセージを優先順位に従って並べるカスタム メッセージ ブロックの型を作成する方法について説明します。
 
-組み込みのメッセージ ブロックの型には幅広い機能が備わっていますが、独自のメッセージ ブロックの型を作成して、アプリケーションの要件を満たすようにカスタマイズすることもできます。 非同期エージェントライブラリに用意されている組み込みのメッセージブロックの型の詳細については、「[非同期メッセージブロック](../../parallel/concrt/asynchronous-message-blocks.md)」を参照してください。
+組み込みのメッセージ ブロックの型には幅広い機能が備わっていますが、独自のメッセージ ブロックの型を作成して、アプリケーションの要件を満たすようにカスタマイズすることもできます。 非同期エージェントライブラリに用意されている組み込みのメッセージブロックの型の詳細については、「 [非同期メッセージブロック](../../parallel/concrt/asynchronous-message-blocks.md)」を参照してください。
 
 ## <a name="prerequisites"></a>前提条件
 
@@ -26,7 +27,7 @@ ms.locfileid: "87219496"
 
 - [メッセージパッシング関数](../../parallel/concrt/message-passing-functions.md)
 
-## <a name="sections"></a><a name="top"></a>各項
+## <a name="sections"></a><a name="top"></a> 各項
 
 このチュートリアルは、次のセクションで構成されています。
 
@@ -36,31 +37,31 @@ ms.locfileid: "87219496"
 
 - [完全な例](#complete)
 
-## <a name="designing-a-custom-message-block"></a><a name="design"></a>カスタムメッセージブロックのデザイン
+## <a name="designing-a-custom-message-block"></a><a name="design"></a> カスタムメッセージブロックのデザイン
 
-メッセージ ブロックは、メッセージの送受信処理に参加します。 メッセージを送信するメッセージブロックは、*ソースブロック*と呼ばれます。 メッセージを受信するメッセージブロックは、*ターゲットブロック*と呼ばれます。 メッセージを送受信するメッセージブロックを*伝達子ブロック*と呼びます。 エージェントライブラリは、抽象クラスの[concurrency:: ISource](../../parallel/concrt/reference/isource-class.md)を使用してソースブロックを表し、抽象クラス[Concurrency:: ITarget](../../parallel/concrt/reference/itarget-class.md)を使用してターゲットブロックを表します。 ソースとして機能するメッセージ ブロックの型は `ISource` から派生します。ターゲットとして機能するメッセージ ブロックの型は `ITarget` から派生します。
+メッセージ ブロックは、メッセージの送受信処理に参加します。 メッセージを送信するメッセージブロックは、 *ソースブロック* と呼ばれます。 メッセージを受信するメッセージブロックは、 *ターゲットブロック* と呼ばれます。 メッセージを送受信するメッセージブロックを *伝達子ブロック* と呼びます。 エージェントライブラリは、抽象クラスの [concurrency:: ISource](../../parallel/concrt/reference/isource-class.md) を使用してソースブロックを表し、抽象クラス [Concurrency:: ITarget](../../parallel/concrt/reference/itarget-class.md) を使用してターゲットブロックを表します。 ソースとして機能するメッセージ ブロックの型は `ISource` から派生します。ターゲットとして機能するメッセージ ブロックの型は `ITarget` から派生します。
 
 メッセージ ブロックの型は `ISource` および `ITarget` から直接派生させることもできますが、エージェント ライブラリには、メッセージ ブロックのすべての型に共通の大部分の機能を実行する 3 つの基底クラスが定義されています。これらの基底クラスによって、エラーの処理やメッセージ ブロックの接続などの操作がコンカレンシー セーフに行われます。 [Concurrency:: source_block](../../parallel/concrt/reference/source-block-class.md)クラスはから派生 `ISource` し、他のブロックにメッセージを送信します。 [Concurrency:: target_block](../../parallel/concrt/reference/target-block-class.md)クラスは、から派生 `ITarget` し、他のブロックからメッセージを受信します。 [Concurrency::p ropagator_block](../../parallel/concrt/reference/propagator-block-class.md)クラスは、およびから派生 `ISource` し、 `ITarget` 他のブロックにメッセージを送信し、他のブロックからメッセージを受信します。 メッセージ ブロックの動作に焦点を合わせることができるように、インフラストラクチャの細部の処理にはこれらの 3 つの基底クラスを使用することをお勧めします。
 
 `source_block`、`target_block`、および `propagator_block` の各クラスはテンプレートであり、ソース ブロックとターゲット ブロック間の接続 (リンク) を管理する型、およびメッセージの処理方法を管理する型でパラメーター化されます。 エージェントライブラリでは、リンク管理、 [concurrency:: single_link_registry](../../parallel/concrt/reference/single-link-registry-class.md) 、 [concurrency:: multi_link_registry](../../parallel/concrt/reference/multi-link-registry-class.md)を実行する2つの型が定義されています。 `single_link_registry` クラスは、メッセージ ブロックを 1 つのソースまたは 1 つのターゲットにリンクできるようにします。 `multi_link_registry` クラスは、メッセージ ブロックを複数のソースまたは複数のターゲットにリンクできるようにします。 エージェントライブラリは、メッセージ管理を実行する1つのクラス ( [concurrency:: ordered_message_processor](../../parallel/concrt/reference/ordered-message-processor-class.md)) を定義します。 `ordered_message_processor` クラスは、メッセージ ブロックでメッセージを受信順に処理できるようにします。
 
-メッセージ ブロックとソースおよびターゲットとの相互関係をより深く理解できるように、次の例を考えてみてください。 この例は、 [concurrency:: トランスフォーマー](../../parallel/concrt/reference/transformer-class.md)クラスの宣言を示しています。
+メッセージ ブロックとソースおよびターゲットとの相互関係をより深く理解できるように、次の例を考えてみてください。 この例は、 [concurrency:: トランスフォーマー](../../parallel/concrt/reference/transformer-class.md) クラスの宣言を示しています。
 
 [!code-cpp[concrt-priority-buffer#20](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-a-custom-message-block_1.cpp)]
 
 `transformer` クラスは `propagator_block` から派生するため、ソース ブロックとしてもターゲット ブロックとしても機能します。 `_Input` 型のメッセージを受け入れ、`_Output` 型のメッセージを送信します。 `transformer` クラスは、`single_link_registry` をターゲット ブロックのリンク マネージャーとして指定し、`multi_link_registry` をソース ブロックのリンク マネージャーとして指定します。 したがって、`transformer` オブジェクトで許容されるターゲットは 1 つだけですが、ソースの数に制限はありません。
 
-から派生するクラスは、 `source_block` [propagate_to_any_targets](reference/source-block-class.md#propagate_to_any_targets)、 [accept_message](reference/source-block-class.md#accept_message)、 [reserve_message](reference/source-block-class.md#reserve_message)、 [consume_message](reference/source-block-class.md#consume_message)、 [release_message](reference/source-block-class.md#release_message)、および[resume_propagation](reference/source-block-class.md#resume_propagation)の6つのメソッドを実装する必要があります。 から派生するクラスは、 `target_block` [propagate_message](reference/propagator-block-class.md#propagate_message)メソッドを実装し、オプションで[send_message](reference/propagator-block-class.md#send_message)メソッドを実装する必要があります。 `propagator_block` からの派生は、`source_block` および `target_block` からの派生と機能的には同等です。
+から派生するクラスは、 `source_block` [propagate_to_any_targets](reference/source-block-class.md#propagate_to_any_targets)、 [accept_message](reference/source-block-class.md#accept_message)、 [reserve_message](reference/source-block-class.md#reserve_message)、 [consume_message](reference/source-block-class.md#consume_message)、 [release_message](reference/source-block-class.md#release_message)、および [resume_propagation](reference/source-block-class.md#resume_propagation)の6つのメソッドを実装する必要があります。 から派生するクラスは、 `target_block` [propagate_message](reference/propagator-block-class.md#propagate_message) メソッドを実装し、オプションで [send_message](reference/propagator-block-class.md#send_message) メソッドを実装する必要があります。 `propagator_block` からの派生は、`source_block` および `target_block` からの派生と機能的には同等です。
 
 `propagate_to_any_targets` メソッドは、受信メッセージを非同期的または同期的に処理し、送信メッセージを伝達するためにランタイムによって呼び出されます。 `accept_message` メソッドは、メッセージを受け入れるためにターゲット ブロックによって呼び出されます。 `unbounded_buffer` などのメッセージ ブロックの型の多くは、最初にメッセージを受信するターゲットにのみメッセージを送信します。 したがって、メッセージの所有権はそのターゲットに譲渡されます。 [Concurrency:: overwrite_buffer](../../parallel/concrt/reference/overwrite-buffer-class.md)などの他のメッセージブロックの型は、各ターゲットブロックにメッセージを提供します。 したがって、`overwrite_buffer` は各ターゲット用にメッセージのコピーを作成します。
 
 `reserve_message`、`consume_message`、`release_message`、および `resume_propagation` メソッドは、メッセージ ブロックがメッセージの予約に参加できるようにします。 ターゲット ブロックは、提供されたメッセージを予約して後で使用できるようにする場合に、`reserve_message` メソッドを呼び出します。 メッセージを受信したターゲット ブロックは、`consume_message` メソッドを呼び出してそのメッセージを処理するか、`release_message` メソッドを呼び出して予約を取り消すことができます。 `accept_message` メソッドと同様に、`consume_message` の実装では、メッセージの所有権を譲渡するか、メッセージのコピーを返すことができます。 ターゲット ブロックが予約済みのメッセージを処理または解放すると、ランタイムは `resume_propagation` メソッドを呼び出します。 通常、このメソッドは、キュー内の次のメッセージからメッセージ伝達を続行します。
 
-ランタイムは、`propagate_message` メソッドを呼び出して、別のブロックから現在のブロックにメッセージを非同期的に転送します。 `send_message` メソッドは、非同期的にではなく同期的にメッセージをターゲット ブロックに送信する点を除いて、`propagate_message` と似ています。 `send_message` の既定の実装では、すべての受信メッセージが拒否されます。 ターゲット ブロックに関連付けられているオプションのフィルター関数をメッセージが通過しない場合、ランタイムはどちらのメソッドも呼び出しません。 メッセージフィルターの詳細については、「[非同期メッセージブロック](../../parallel/concrt/asynchronous-message-blocks.md)」を参照してください。
+ランタイムは、`propagate_message` メソッドを呼び出して、別のブロックから現在のブロックにメッセージを非同期的に転送します。 `send_message` メソッドは、非同期的にではなく同期的にメッセージをターゲット ブロックに送信する点を除いて、`propagate_message` と似ています。 `send_message` の既定の実装では、すべての受信メッセージが拒否されます。 ターゲット ブロックに関連付けられているオプションのフィルター関数をメッセージが通過しない場合、ランタイムはどちらのメソッドも呼び出しません。 メッセージフィルターの詳細については、「 [非同期メッセージブロック](../../parallel/concrt/asynchronous-message-blocks.md)」を参照してください。
 
 [[上](#top)]
 
-## <a name="defining-the-priority_buffer-class"></a><a name="class"></a>Priority_buffer クラスの定義
+## <a name="defining-the-priority_buffer-class"></a><a name="class"></a> Priority_buffer クラスの定義
 
 `priority_buffer` クラスは、受信メッセージを優先順位に従って並べてから、メッセージの受信順に並べるカスタム メッセージ ブロックの型です。 `priority_buffer`クラスは[concurrency:: unbounded_buffer](reference/unbounded-buffer-class.md)クラスに似ています。これは、メッセージのキューを保持します。また、このクラスは、送信元と送信先の両方のメッセージブロックとして機能し、複数のソースと複数のターゲットを持つことができるためです。 ただし、`unbounded_buffer` でのメッセージの伝達順は、必ずソースからのメッセージの受信順になります。
 
@@ -162,7 +163,7 @@ ms.locfileid: "87219496"
 
    `propagate_message` メソッドは、`priority_buffer` クラスがメッセージの受信側 (つまりターゲット) として機能するようにします。 このメソッドは、指定されたソース ブロックから提供されたメッセージを受信し、そのメッセージを優先順位キューに挿入します。 その後、`propagate_message` メソッドは、すべての出力メッセージをターゲット ブロックに非同期的に送信します。
 
-   ランタイムは、 [concurrency:: asend](reference/concurrency-namespace-functions.md#asend)関数を呼び出すか、メッセージブロックが他のメッセージブロックに接続されたときに、このメソッドを呼び出します。
+   ランタイムは、 [concurrency:: asend](reference/concurrency-namespace-functions.md#asend) 関数を呼び出すか、メッセージブロックが他のメッセージブロックに接続されたときに、このメソッドを呼び出します。
 
 1. セクションで、 **`protected`** メソッドを定義し `send_message` ます。
 
@@ -170,21 +171,21 @@ ms.locfileid: "87219496"
 
    `send_message` メソッドは `propagate_message` と似ています。 ただし、このメソッドは、非同期的にではなく同期的に出力メッセージを送信します。
 
-   ランタイムは、 [concurrency:: send](reference/concurrency-namespace-functions.md#send)関数を呼び出す場合など、同期送信操作中にこのメソッドを呼び出します。
+   ランタイムは、 [concurrency:: send](reference/concurrency-namespace-functions.md#send) 関数を呼び出す場合など、同期送信操作中にこのメソッドを呼び出します。
 
-`priority_buffer` クラスには、多くのメッセージ ブロックの型に共通のコンストラクター オーバーロードが含まれています。 一部のコンストラクターオーバーロードは、 [concurrency:: Scheduler](../../parallel/concrt/reference/scheduler-class.md)オブジェクトまたは[Concurrency:: schedulegroup](../../parallel/concrt/reference/schedulegroup-class.md)オブジェクトを受け取ります。これにより、特定のタスクスケジューラによってメッセージブロックが管理されるようになります。 フィルター関数を受け取るコンストラクター オーバーロードもあります。 フィルター関数を使用すると、メッセージ ブロックでのメッセージの受け入れまたは拒否をメッセージ ペイロードに基づいて行うことができます。 メッセージフィルターの詳細については、「[非同期メッセージブロック](../../parallel/concrt/asynchronous-message-blocks.md)」を参照してください。 タスクスケジューラの詳細については、「[タスクスケジューラ](../../parallel/concrt/task-scheduler-concurrency-runtime.md)」を参照してください。
+`priority_buffer` クラスには、多くのメッセージ ブロックの型に共通のコンストラクター オーバーロードが含まれています。 一部のコンストラクターオーバーロードは、 [concurrency:: Scheduler](../../parallel/concrt/reference/scheduler-class.md) オブジェクトまたは [Concurrency:: schedulegroup](../../parallel/concrt/reference/schedulegroup-class.md) オブジェクトを受け取ります。これにより、特定のタスクスケジューラによってメッセージブロックが管理されるようになります。 フィルター関数を受け取るコンストラクター オーバーロードもあります。 フィルター関数を使用すると、メッセージ ブロックでのメッセージの受け入れまたは拒否をメッセージ ペイロードに基づいて行うことができます。 メッセージフィルターの詳細については、「 [非同期メッセージブロック](../../parallel/concrt/asynchronous-message-blocks.md)」を参照してください。 タスクスケジューラの詳細については、「 [タスクスケジューラ](../../parallel/concrt/task-scheduler-concurrency-runtime.md)」を参照してください。
 
-このクラスは、メッセージを `priority_buffer` 優先順位に従って並べ替え、その後、メッセージを受信する順序に従って並べ替えます。このクラスは、 [concurrency:: asend](reference/concurrency-namespace-functions.md#asend)関数を呼び出す場合や、メッセージブロックが他のメッセージブロックに接続された場合などに、メッセージを非同期的に受信するときに役立ちます。
+このクラスは、メッセージを `priority_buffer` 優先順位に従って並べ替え、その後、メッセージを受信する順序に従って並べ替えます。このクラスは、 [concurrency:: asend](reference/concurrency-namespace-functions.md#asend) 関数を呼び出す場合や、メッセージブロックが他のメッセージブロックに接続された場合などに、メッセージを非同期的に受信するときに役立ちます。
 
 [[上](#top)]
 
-## <a name="the-complete-example"></a><a name="complete"></a>完全な例
+## <a name="the-complete-example"></a><a name="complete"></a> 完全な例
 
 次の例では、`priority_buffer` クラスの完全な定義を示します。
 
 [!code-cpp[concrt-priority-buffer#18](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-a-custom-message-block_19.h)]
 
-次の例では、 `asend` オブジェクトに対して複数の[同時実行:: receive](reference/concurrency-namespace-functions.md#receive)操作を同時に実行し `priority_buffer` ます。
+次の例では、 `asend` オブジェクトに対して複数の [同時実行:: receive](reference/concurrency-namespace-functions.md#receive) 操作を同時に実行し `priority_buffer` ます。
 
 [!code-cpp[concrt-priority-buffer#19](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-a-custom-message-block_20.cpp)]
 

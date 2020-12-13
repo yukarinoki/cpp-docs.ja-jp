@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: &lt; アルゴリズム&gt;'
 title: '&lt;algorithm&gt;'
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - C++ Standard Library, algorithms
 - <algorithm> header
 ms.assetid: 19f97711-7a67-4a65-8fd1-9a2bd3ca327d
-ms.openlocfilehash: 003933499eee04c50f15ae4b63dd6b31b81e1069
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 42f03372d01ac2d3218ce5844b86e92526055bbf
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88845823"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97163770"
 ---
 # <a name="ltalgorithmgt"></a>&lt;algorithm&gt;
 
@@ -96,7 +97,7 @@ C++ 標準ライブラリ アルゴリズムは、通常、その目的や要件
 |[move_backward](algorithm-functions.md#move_backward)|ある反復子の要素を別の反復子に移動します。 移動は、指定した範囲の最後の要素から開始され、その範囲内の先頭の要素で終了します。|
 |[next_permutation](algorithm-functions.md#next_permutation)|範囲内の要素の順序を変更し、元の順序を辞書式に次に大きい順列 (存在する場合) に置き換えます。next の意味は二項述語によって指定できます。|
 |[none_of](algorithm-functions.md#none_of)|**`true`** 指定された範囲内の要素間に条件が存在しない場合はを返します。|
-|[nth_element](algorithm-functions.md#nth_element)|要素の範囲を分割し、その範囲内のシーケンスの *n*番目の要素を正しく検索します。これにより、その前にあるすべての要素がそれ以下で、シーケンス内の後続のすべての要素がその値以上になります。|
+|[nth_element](algorithm-functions.md#nth_element)|要素の範囲を分割し、その範囲内のシーケンスの *n* 番目の要素を正しく検索します。これにより、その前にあるすべての要素がそれ以下で、シーケンス内の後続のすべての要素がその値以上になります。|
 |[partial_sort](algorithm-functions.md#partial_sort)|範囲内で指定された数の、より小さい要素を、降順以外の順序、または二項述語で指定された順序の基準に従って配置します。|
 |[partial_sort_copy](algorithm-functions.md#partial_sort_copy)|ソース範囲からターゲット範囲に要素をコピーします。ソース要素は小なりまたは指定された別の二項述語によって並べ替えられます。|
 |[partition](algorithm-functions.md#partition)|範囲内の要素を 2 つの分離されたセットに分類し、単項述語を満たす要素が単項述語を満たさない要素よりも前に来るように配置します。|
