@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「ジェネリック型パラメーターの制約 (C++/CLI)」を参照してください。
 title: ジェネリック型パラメーターの制約 (C++/CLI)
 ms.date: 10/12/2018
 ms.topic: reference
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - where keyword [C++]
 - constraints, C++
 ms.assetid: eb828cc9-684f-48a3-a898-b327700c0a63
-ms.openlocfilehash: 829f11c9f0c3935f9a415cae381cfc12d88df18a
-ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
+ms.openlocfilehash: c9e340c229736cbe1c679b931e52f68b0971f8f2
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90686757"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97333736"
 ---
 # <a name="constraints-on-generic-type-parameters-ccli"></a>ジェネリック型パラメーターの制約 (C++/CLI)
 
@@ -41,7 +42,7 @@ where type-parameter: constraint list
 
 制約としてジェネリック パラメーターを指定することもできます。 制約が適用されている型に提供される型引数は、制約の型から派生する必要があります。 これは、生の型制約と呼ばれます。
 
-## <a name="remarks"></a>注釈
+## <a name="remarks"></a>解説
 
 制約句は **where**、型パラメーター、コロン (**:**)、および制約で構成され、型パラメーターに対する制約の性質を規定します。 **where** は状況依存キーワードです。詳細については、「[状況依存キーワード](context-sensitive-keywords-cpp-component-extensions.md)」を参照してください。 複数の **where** 句はスペースで分離します。
 

@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: invalid_scheduler_policy_value クラス'
 title: invalid_scheduler_policy_value クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - invalid_scheduler_policy_value class
 ms.assetid: 8c533e3f-2774-4192-8616-b2313b859bf7
-ms.openlocfilehash: 6a66b2b303a4b3b0cb8c2c7a3c515ac8cd1b33a0
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: c91295646b0bc85ea4ed5ee8f376c1ed029e4f0a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77142993"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97334488"
 ---
 # <a name="invalid_scheduler_policy_value-class"></a>invalid_scheduler_policy_value クラス
 
@@ -27,7 +28,7 @@ class invalid_scheduler_policy_value : public std::exception;
 
 ### <a name="public-constructors"></a>パブリック コンストラクター
 
-|Name|説明|
+|名前|説明|
 |----------|-----------------|
 |[invalid_scheduler_policy_value](無効-スケジューラ-ポリシー-スレッドの指定-クラス。 md # .ctor|オーバーロードされます。 `invalid_scheduler_policy_value` オブジェクトを構築します。|
 
@@ -37,13 +38,13 @@ class invalid_scheduler_policy_value : public std::exception;
 
 `invalid_scheduler_policy_value`
 
-## <a name="requirements"></a>［要件］
+## <a name="requirements"></a>要件
 
 **ヘッダー:** concrt .h
 
 **名前空間:** concurrency
 
-## <a name="ctor"></a>invalid_scheduler_policy_value
+## <a name="invalid_scheduler_policy_value"></a><a name="ctor"></a> invalid_scheduler_policy_value
 
 `invalid_scheduler_policy_value` オブジェクトを構築します。
 
@@ -58,7 +59,7 @@ invalid_scheduler_policy_value() throw();
 *_Message*<br/>
 エラーの説明メッセージ。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[コンカレンシー名前空間](concurrency-namespace.md)<br/>
-[SchedulerPolicy クラス](schedulerpolicy-class.md)
+[concurrency 名前空間](concurrency-namespace.md)<br/>
+[スケジューラポリシークラス](schedulerpolicy-class.md)

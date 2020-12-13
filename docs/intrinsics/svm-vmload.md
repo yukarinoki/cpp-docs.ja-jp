@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: __svm_vmload'
 title: __svm_vmload
 ms.date: 09/02/2019
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - __svm_vmload intrinsic
 - VMLOAD instruction
 ms.assetid: b46a5592-db76-4ffc-8694-2f3494e28bed
-ms.openlocfilehash: da6ca9786b9c7e5041b9a8ca908d567b16176436
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 975f6aed50007b0b184bbab2b9b48790e5e20616
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70219817"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97333714"
 ---
 # <a name="__svm_vmload"></a>__svm_vmload
 
@@ -33,17 +34,17 @@ void __svm_vmload(
 *VmcbPhysicalAddress*\
 からVMCB の物理アドレス。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-`__svm_vmload` 関数は `VMLOAD` マシン語命令と同じです。 この関数は、ホストの仮想マシンのモニターと、ゲスト オペレーティング システムとそのアプリケーションとの対話をサポートします。 詳細については、「AMD64 アーキテクチャプログラマの手動ボリューム 2:システムプログラミング、 [AMD corporation](https://developer.amd.com/resources/developer-guides-manuals/)サイトの「ドキュメント番号24593、リビジョン3.11」。
+`__svm_vmload` 関数は `VMLOAD` マシン語命令と同じです。 この関数は、ホストの仮想マシンのモニターと、ゲスト オペレーティング システムとそのアプリケーションとの対話をサポートします。 詳細については、 [AMD corporation](https://developer.amd.com/resources/developer-guides-manuals/) サイトのドキュメント「AMD64 アーキテクチャプログラマーの手動ボリューム 2: システムプログラミング」、「ドキュメント番号24593、リビジョン3.11」を検索してください。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-|組み込み|アーキテクチャ|
+|Intrinsic|アーキテクチャ|
 |---------------|------------------|
 |`__svm_vmload`|x86、x64|
 
-**ヘッダーファイル**\<>
+**ヘッダー ファイル** \<intrin.h>
 
 **Microsoft 固有の仕様はここまで**
 

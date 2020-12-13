@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「helpcontext」を参照してください。
 title: helpcontext (C++ COM 属性)
 ms.date: 10/02/2018
 f1_keywords:
@@ -6,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - helpcontext attribute
 ms.assetid: 6fbb022d-a4b7-4989-a02f-7f18a9b0ad96
-ms.openlocfilehash: 60e6bf66e088872a357751e4a7b7e043cd9b4dfc
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: cfedec2f7650490dd266331e6853ba47265aa4ec
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88845251"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97335724"
 ---
 # <a name="helpcontext"></a>helpcontext
 
-**ヘルプ**ファイル内のこの要素に関する情報をユーザーが表示できるようにするコンテキスト ID を指定します。
+**ヘルプ** ファイル内のこの要素に関する情報をユーザーが表示できるようにするコンテキスト ID を指定します。
 
 ## <a name="syntax"></a>構文
 
@@ -26,7 +27,7 @@ ms.locfileid: "88845251"
 ### <a name="parameters"></a>パラメーター
 
 *id*<br/>
-ヘルプトピックのコンテキスト ID。 コンテキスト Id の詳細については [、「HTML ヘルプ: プログラムの状況依存のヘルプ](../../mfc/html-help-context-sensitive-help-for-your-programs.md) 」を参照してください。
+ヘルプトピックのコンテキスト ID。 コンテキスト Id の詳細については [、「HTML ヘルプ: Context-Sensitive プログラムのヘルプ](../../mfc/html-help-context-sensitive-help-for-your-programs.md) 」を参照してください。
 
 ## <a name="remarks"></a>解説
 
@@ -34,9 +35,9 @@ ms.locfileid: "88845251"
 
 ## <a name="example"></a>例
 
-**Helpcontext**の使用例については、 [defaultvalue](defaultvalue.md)の例を参照してください。
+**Helpcontext** の使用例については、 [defaultvalue](defaultvalue.md)の例を参照してください。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 | 属性コンテキスト | 値 |
 |-|-|

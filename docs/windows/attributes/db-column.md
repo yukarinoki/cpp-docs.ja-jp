@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: db_column'
 title: db_column (C++ COM 属性)
 ms.date: 10/02/2018
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - db_column attribute
 ms.assetid: 58da4afc-f69c-4ae6-af9a-3f9515f56081
-ms.openlocfilehash: 05f734a9b083d93f2501172d9455b7889c65a5a6
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 931a285d28752273ecb1941702ff1cb32b42740c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91503541"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97333089"
 ---
 # <a name="db_column"></a>db_column
 
@@ -43,18 +44,18 @@ Optional列エントリに使用される有効桁数。 詳細については�
 Optional列エントリに使用される小数点以下桁数です。 詳細については、 `bScale` [DBBINDING 構造体](/previous-versions/windows/desktop/ms716845(v=vs.85))の要素の説明を参照してください。
 
 *status*<br/>
-Optionalこの列の状態を保持するために使用されるメンバー変数。 状態は、列の値がデータ値か、NULL などの他の値であるかを示します。 使用可能な値については、 *OLE DB プログラマーリファレンス*の「 [Status](/previous-versions/windows/desktop/ms722617(v=vs.85)) 」を参照してください。
+Optionalこの列の状態を保持するために使用されるメンバー変数。 状態は、列の値がデータ値か、NULL などの他の値であるかを示します。 使用可能な値については、 *OLE DB プログラマーリファレンス* の「 [Status](/previous-versions/windows/desktop/ms722617(v=vs.85)) 」を参照してください。
 
 *length*<br/>
 Optional列のサイズを保持するために使用されるメンバー変数 (バイト単位)。
 
-## <a name="remarks"></a>注釈
+## <a name="remarks"></a>解説
 
-**db_column** は、指定されたテーブル列を行セット内の変数にバインドします。 OLE DB ベースのバインドに参加できるメンバーデータを区切り `IAccessor` ます。 この属性は、OLE DB コンシューマーマクロ [BEGIN_COLUMN_MAP](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md#begin_column_map)、 [END_COLUMN_MAP](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md#end_column_map)、および [COLUMN_ENTRY](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md#column_entry)を使用して通常定義される列マップを設定します。 これらは、OLE DB [DBBINDING 構造体](/previous-versions/windows/desktop/ms716845(v=vs.85)) を操作して、指定された列をバインドします。 **Db_column**属性でマークする各メンバーは、列エントリの形式で列マップ内の1つのエントリを使用します。 したがって、この属性は、コマンドまたはテーブルクラスに列マップを配置するときに使用します。
+**db_column** は、指定されたテーブル列を行セット内の変数にバインドします。 OLE DB ベースのバインドに参加できるメンバーデータを区切り `IAccessor` ます。 この属性は、OLE DB コンシューマーマクロ [BEGIN_COLUMN_MAP](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md#begin_column_map)、 [END_COLUMN_MAP](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md#end_column_map)、および [COLUMN_ENTRY](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md#column_entry)を使用して通常定義される列マップを設定します。 これらは、OLE DB [DBBINDING 構造体](/previous-versions/windows/desktop/ms716845(v=vs.85)) を操作して、指定された列をバインドします。 **Db_column** 属性でマークする各メンバーは、列エントリの形式で列マップ内の1つのエントリを使用します。 したがって、この属性は、コマンドまたはテーブルクラスに列マップを配置するときに使用します。
 
-**Db_column**は、 [db_table](db-table.md)または[db_command](db-command.md)の属性と組み合わせて使用します。
+**Db_column** は、 [db_table](db-table.md)または [db_command](db-command.md)の属性と組み合わせて使用します。
 
-コンシューマー属性プロバイダーがこの属性をクラスに適用すると、コンパイラはクラスの名前を \_ *classname*アクセサーに変更します。ここで、 *classname*はクラスに指定した名前になります。また、コンパイラは*classname と*いうクラスを作成します。これは classname アクセサーから派生し \_ *YourClassName*ます。  クラス ビューでは、両方のクラスが表示されます。
+コンシューマー属性プロバイダーがこの属性をクラスに適用すると、コンパイラはクラスの名前を \_ *classname* アクセサーに変更します。ここで、 *classname* はクラスに指定した名前になります。また、コンパイラは *classname と* いうクラスを作成します。これは classname アクセサーから派生し \_ ます。  クラス ビューでは、両方のクラスが表示されます。
 
 アプリケーションで使用されるこの属性の例については、「 [MultiRead](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Consumer)」を参照してください。
 
@@ -96,14 +97,14 @@ class CProducts {
 };
 ```
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 | 属性コンテキスト | 値 |
 |-|-|
 |**適用対象**|**`class`**、 **`struct`** 、member、メソッド|
 |**Repeatable**|いいえ|
-|**必須属性**|None|
-|**無効な属性**|None|
+|**必須属性**|なし|
+|**無効な属性**|なし|
 
 属性コンテキストの詳細については、「 [属性コンテキスト](cpp-attributes-com-net.md#contexts)」を参照してください。
 

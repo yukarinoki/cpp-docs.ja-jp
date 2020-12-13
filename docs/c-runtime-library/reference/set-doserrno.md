@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: _set_doserrno'
 title: _set_doserrno
 ms.date: 4/2/2020
 api_name:
@@ -30,12 +31,12 @@ helpviewer_keywords:
 - set_doserrno function
 - _doserrno global variable
 ms.assetid: 8686c159-3797-4705-a53e-7457869ca6f3
-ms.openlocfilehash: 9de5ff8ccc4673468628275c3c3366681edc3776
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: c4b7860764505ab7d3388bace6fa86b0726851e1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82913059"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97334103"
 ---
 # <a name="_set_doserrno"></a>_set_doserrno
 
@@ -50,7 +51,7 @@ errno_t _set_doserrno( int error_value );
 ### <a name="parameters"></a>パラメーター
 
 *error_value*<br/>
-**_Doserrno**の新しい値。
+**_Doserrno** の新しい値。
 
 ## <a name="return-value"></a>戻り値
 
@@ -64,7 +65,7 @@ errno_t _set_doserrno( int error_value );
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|オプション ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|オプション ヘッダー|
 |-------------|---------------------|---------------------|
 |**_set_doserrno**|\<stdlib.h>|\<errno.h>|
 
@@ -73,4 +74,4 @@ errno_t _set_doserrno( int error_value );
 ## <a name="see-also"></a>関連項目
 
 [_get_doserrno](get-doserrno.md)<br/>
-[errno、_doserrno、_sys_errlist、_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)<br/>
+[errno、_doserrno、_sys_errlist、および _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)<br/>

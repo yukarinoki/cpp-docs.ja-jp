@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: FILENAME_MAX'
 title: FILENAME_MAX
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - FILENAME_MAX constant
 ms.assetid: fe368d24-3f31-42d6-859c-cbd84f446ee5
-ms.openlocfilehash: 28ebee819bc8a9b6370f67210881a561c9629ab4
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: 435128e3b780cedb7ca94b2f0aa8c2cccef58013
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57742734"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97332966"
 ---
-# <a name="filenamemax"></a>FILENAME_MAX
+# <a name="filename_max"></a>FILENAME_MAX
 
 文字列 `filename` のバッファー サイズに対して許容される最大長です。
 
@@ -25,5 +26,5 @@ ms.locfileid: "57742734"
 
 ## <a name="see-also"></a>関連項目
 
-[パス フィールドの制限](../c-runtime-library/path-field-limits.md)<br/>
+[パスフィールドの制限](../c-runtime-library/path-field-limits.md)<br/>
 [グローバル定数](../c-runtime-library/global-constants.md)

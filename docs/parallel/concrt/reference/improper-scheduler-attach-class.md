@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: improper_scheduler_attach クラス'
 title: improper_scheduler_attach クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - improper_scheduler_attach class
 ms.assetid: 5a76da0a-091b-4748-8f62-b3a28f674f9e
-ms.openlocfilehash: 85adf3f919d94a82f5a68a5cd9e5f44cdca10006
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: 755cd72d20eb88dbd1ff7c58586f0aaf3b964a6a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77141230"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97334620"
 ---
 # <a name="improper_scheduler_attach-class"></a>improper_scheduler_attach クラス
 
@@ -29,7 +30,7 @@ class improper_scheduler_attach : public std::exception;
 
 ### <a name="public-constructors"></a>パブリック コンストラクター
 
-|Name|説明|
+|名前|説明|
 |----------|-----------------|
 |[improper_scheduler_attach](#ctor)|オーバーロードされます。 `improper_scheduler_attach` オブジェクトを構築します。|
 
@@ -39,13 +40,13 @@ class improper_scheduler_attach : public std::exception;
 
 `improper_scheduler_attach`
 
-## <a name="requirements"></a>［要件］
+## <a name="requirements"></a>要件
 
 **ヘッダー:** concrt .h
 
 **名前空間:** concurrency
 
-## <a name="ctor"></a>improper_scheduler_attach
+## <a name="improper_scheduler_attach"></a><a name="ctor"></a> improper_scheduler_attach
 
 `improper_scheduler_attach` オブジェクトを構築します。
 
@@ -60,7 +61,7 @@ improper_scheduler_attach() throw();
 *_Message*<br/>
 エラーの説明メッセージ。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[コンカレンシー名前空間](concurrency-namespace.md)<br/>
+[concurrency 名前空間](concurrency-namespace.md)<br/>
 [Scheduler クラス](scheduler-class.md)

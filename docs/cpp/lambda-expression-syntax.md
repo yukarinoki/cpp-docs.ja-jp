@@ -1,15 +1,16 @@
 ---
+description: '詳細情報: ラムダ式の構文'
 title: ラムダ式の構文
 ms.date: 05/07/2019
 helpviewer_keywords:
 - lambda expressions [C++], syntax
 ms.assetid: 5d6154a4-f34d-4a15-970d-7e7de45f54e9
-ms.openlocfilehash: 8db094dd14e63c08fbe8514f245c1777922224cf
-ms.sourcegitcommit: d9c94dcabd94537e304be0261b3263c2071b437b
+ms.openlocfilehash: 522f9afd1b4d500e42bd5a5ff2adb4ae25cb7c19
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91352714"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97333943"
 ---
 # <a name="lambda-expression-syntax"></a>ラムダ式の構文
 
@@ -85,7 +86,7 @@ There are 4 even numbers in the vector.
 
 ラムダは、前の例よりも拡張するのがはるかに複雑になる場合があります。 次の例では、ラムダの代わりに関数オブジェクトを **for_each** 関数と共に使用して、例1と同じ結果を生成します。 どちらの例でも `vector` オブジェクトに含まれる偶数の数を格納します。 操作の状態を保持するために、`FunctorClass` クラスはメンバー変数の参照として `m_evenCount` 変数を格納します。 操作を実行するために、は `FunctorClass` 関数呼び出し演算子である **operator ()** を実装します。 Microsoft C++ コンパイラは、サイズとパフォーマンスに匹敵するコードを例1のラムダコードに生成します。 ここで紹介したような基本的な問題の場合は、おそらく、より単純なラムダのデザインの方が関数オブジェクトよりも適切です。 ただし、後で大幅な機能拡張が必要となる可能性がある場合は、コードの保守が容易になるように、関数オブジェクトのデザインを使用します。
 
-**演算子 ()** の詳細については、「[関数呼び出し](../cpp/function-call-cpp.md)」を参照してください。 **For_each**関数の詳細については、「 [for_each](../standard-library/algorithm-functions.md#for_each)」を参照してください。
+**演算子 ()** の詳細については、「[関数呼び出し](../cpp/function-call-cpp.md)」を参照してください。 **For_each** 関数の詳細については、「 [for_each](../standard-library/algorithm-functions.md#for_each)」を参照してください。
 
 ### <a name="code"></a>コード
 

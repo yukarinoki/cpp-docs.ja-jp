@@ -1,14 +1,15 @@
 ---
+description: '詳細については、次を参照してください: Windows ランタイム C++ テンプレートライブラリ (WRL)'
 title: Windows ランタイム C++ テンプレート ライブラリ (WRL)
 ms.date: 11/04/2016
 ms.topic: overview
 ms.assetid: b915afce-553b-44a7-b8dc-0ab601758eb0
-ms.openlocfilehash: 12bda00d6687340fbddfb8f81bbb83b6c2bd98a6
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: cc94f907964efdf4bf93e8d92922f69373740d85
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91509799"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97333928"
 ---
 # <a name="windows-runtime-c-template-library-wrl"></a>Windows ランタイム C++ テンプレート ライブラリ (WRL)
 
@@ -19,7 +20,7 @@ Windows ランタイム C++ テンプレート ライブラリ (WRL) は、Windo
 >
 > C++/WinRT では、標準に準拠した C++ 17 コンパイラを使用して Windows ランタイム Api を使用し、作成することができます。 C++/WinRT は通常、より優れたパフォーマンスを発揮し、Windows ランタイムの他の言語オプションよりも小さなバイナリを生成します。 C++/CX と WRL は引き続きサポートされますが、新しいアプリケーションでは C++/WinRT を使用することを強くお勧めします。 詳細については、「[C++/WinRT](/windows/uwp/cpp-and-winrt-apis/index)」を参照してください。
 
-## <a name="benefits"></a>メリット
+## <a name="benefits"></a>利点
 
 Windows ランタイム C++ テンプレートライブラリを使用すると、コンポーネントオブジェクトモデル (COM) コンポーネントの実装と使用をより簡単に行うことができます。 オブジェクトの有効期間を管理するための参照カウントや、操作が成功したか失敗したかを判断するための HRESULT 値のテストなどのハウスキーピング手法が用意されています。 Windows ランタイム C++ テンプレートライブラリを正常に使用するには、次の規則と手法に注意する必要があります。
 
@@ -115,7 +116,7 @@ Windows ランタイム C++ テンプレートライブラリには、いくつ�
 
 [RuntimeClass](runtimeclass-class.md) は、指定したインターフェイスのセットを継承する、インスタンス化されたクラスを表します。 `RuntimeClass`オブジェクトは、1つまたは複数の WINDOWS ランタイム COM インターフェイスのサポートと、コンポーネントへの弱い参照の組み合わせを提供できます。
 
-### <a name="module"></a>モジュール
+### <a name="module"></a>Module
 
 [Module](module-class.md) は、関連するオブジェクトから成るコレクションを表します。 `Module` オブジェクトは、オブジェクトを作成するクラス ファクトリと、他のアプリケーションからオブジェクトを使用できるようにする登録を管理します。
 
@@ -137,7 +138,7 @@ Windows ランタイム C++ テンプレートライブラリには、いくつ�
 
 ### <a name="weakref"></a>WeakRef
 
-[WeakRef](weakref-class.md) は、アクセス可能またはアクセス不可能のオブジェクトを参照する *弱い参照*を表すスマート ポインター型です。 オブジェクトは、 `WeakRef` 従来の COM ではなく、Windows ランタイムによってのみ使用できます。
+[WeakRef](weakref-class.md) は、アクセス可能またはアクセス不可能のオブジェクトを参照する *弱い参照* を表すスマート ポインター型です。 オブジェクトは、 `WeakRef` 従来の COM ではなく、Windows ランタイムによってのみ使用できます。
 
 `WeakRef` オブジェクトは通常、外部スレッドまたは外部アプリケーションによって存在が制御されるオブジェクトを表します。 たとえば、 `WeakRef` オブジェクトを使用して、ファイル オブジェクトを参照できます。 そのファイルが開いている場合は、 `WeakRef` が有効になり、参照先ファイルにアクセスできます。 一方、そのファイルが閉じている場合は、 `WeakRef` が無効になり、そのファイルにアクセスできません。
 

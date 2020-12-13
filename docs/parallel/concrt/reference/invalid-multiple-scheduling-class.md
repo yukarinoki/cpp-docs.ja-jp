@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: invalid_multiple_scheduling クラス'
 title: invalid_multiple_scheduling クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - invalid_multiple_scheduling class
 ms.assetid: e9a47cb7-a778-4df7-92b0-3752119fd4c7
-ms.openlocfilehash: a8b2a045ce94562dcba0019bc03aaa90c4d384a9
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: 23d89d93c953a3c01a6e0e698cfa7489effd2986
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77140900"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97334559"
 ---
 # <a name="invalid_multiple_scheduling-class"></a>invalid_multiple_scheduling クラス
 
@@ -29,7 +30,7 @@ class invalid_multiple_scheduling : public std::exception;
 
 ### <a name="public-constructors"></a>パブリック コンストラクター
 
-|Name|説明|
+|名前|説明|
 |----------|-----------------|
 |[invalid_multiple_scheduling](#ctor)|オーバーロードされます。 `invalid_multiple_scheduling` オブジェクトを構築します。|
 
@@ -39,13 +40,13 @@ class invalid_multiple_scheduling : public std::exception;
 
 `invalid_multiple_scheduling`
 
-## <a name="requirements"></a>［要件］
+## <a name="requirements"></a>要件
 
 **ヘッダー:** concrt .h
 
 **名前空間:** concurrency
 
-## <a name="ctor"></a>invalid_multiple_scheduling
+## <a name="invalid_multiple_scheduling"></a><a name="ctor"></a> invalid_multiple_scheduling
 
 `invalid_multiple_scheduling` オブジェクトを構築します。
 
@@ -60,12 +61,12 @@ invalid_multiple_scheduling() throw();
 *_Message*<br/>
 エラーの説明メッセージ。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[コンカレンシー名前空間](concurrency-namespace.md)<br/>
+[concurrency 名前空間](concurrency-namespace.md)<br/>
 [task_handle クラス](task-handle-class.md)<br/>
 [task_group クラス](task-group-class.md)<br/>
-[run](task-group-class.md)<br/>
-[待機](task-group-class.md)<br/>
+[実行](task-group-class.md)<br/>
+[wait](task-group-class.md)<br/>
 [run_and_wait](task-group-class.md)<br/>
 [structured_task_group クラス](structured-task-group-class.md)

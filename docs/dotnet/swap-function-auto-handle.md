@@ -1,16 +1,17 @@
 ---
+description: '詳細情報: swap 関数 (auto_handle)'
 title: swap 関数 (auto_handle)
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
 - swap function
 ms.assetid: 7dd91b5c-f0de-4634-a2e2-642626706e27
-ms.openlocfilehash: ed0e4ab7bce52d4dee54e7f9149edae535445d65
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 24e3ad0d80cb747ddff116682cb9760b29ccc893
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91498581"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97335287"
 ---
 # <a name="swap-function-auto_handle"></a>swap 関数 (auto_handle)
 
@@ -61,7 +62,7 @@ s1 = 'string one', s2 = 'string two'
 s1 = 'string two', s2 = 'string one'
 ```
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー ファイル** \<msclr\auto_handle.h>
 

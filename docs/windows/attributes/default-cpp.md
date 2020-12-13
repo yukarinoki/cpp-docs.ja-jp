@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: 既定 (C++)'
 title: 既定 (C++ COM 属性)
 ms.date: 10/02/2018
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - attributes [C#], default attribute
 - defaults, default attribute
 ms.assetid: 0cdca716-1ba8-46d7-9399-167e55492870
-ms.openlocfilehash: b53420d721b43f9a51b19c4cc8e4a83fc8b94ed4
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 83c4a17f513db755395ed978d57c9c6f01f84ca3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88842443"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97333011"
 ---
 # <a name="default-c"></a>default (C++)
 
@@ -93,7 +94,7 @@ int main() {
 
 また、 [source](source-cpp.md) 属性には、の使用方法の例も含まれてい **`default`** ます。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 | 属性コンテキスト | 値 |
 |-|-|

@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: delegate (C++/CLI および C++/CX)'
 title: delegate (C++/CLI および C++/CX)
 ms.date: 10/12/2018
 ms.topic: reference
@@ -8,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - delegate keyword [C++]
 ms.assetid: 03caf23d-7873-4a23-9b34-becf42aaf429
-ms.openlocfilehash: 77cd17eb8c164a08af9ec783f8aba422785609b6
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 92cd46980775a340e6bf0d6857ace91645d65a7d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87219730"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97333727"
 ---
 # <a name="delegate--ccli-and-ccx"></a>delegate (C++/CLI および C++/CX)
 
@@ -63,7 +64,7 @@ optionalデリゲートのアクセシビリティ **`public`** 。 (既定値) 
 
 *delegate-type-identifier* を使用して、デリゲートと同じプロトタイプのイベントを宣言します。 詳細については、「[デリゲート (C++/CX)](../cppcx/delegates-c-cx.md)」を参照してください。
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 コンパイラ オプション: `/ZW`
 
@@ -87,7 +88,7 @@ function_declaration
 *function_declaration*<br/>
 デリゲートにバインドできる関数のシグネチャ。 デリゲートの戻り値の型には、任意のマネージ型を指定できます。 相互運用性の理由から、デリゲートの戻り値の型は CLS 型にすることをお勧めします。
 
-バインドされていないデリゲートを定義するには、 *function_declaration*の最初のパラメーターが、オブジェクトのポインターの型である必要があり **`this`** ます。
+バインドされていないデリゲートを定義するには、 *function_declaration* の最初のパラメーターが、オブジェクトのポインターの型である必要があり **`this`** ます。
 
 ### <a name="remarks"></a>解説
 
@@ -123,7 +124,7 @@ function_declaration
 
 - [汎用デリゲート (C++/CLI)](generic-delegates-visual-cpp.md)
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 コンパイラ オプション: `/clr`
 

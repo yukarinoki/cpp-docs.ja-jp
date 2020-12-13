@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: db_table'
 title: db_table (C++ COM 属性)
 ms.date: 10/02/2018
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - db_table attribute
 ms.assetid: ff9eb957-4e6d-4175-afcc-fd8ea916cec0
-ms.openlocfilehash: dfdf012550359d0658d53b3f67c0619a124b6309
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 3d871961a8ded6070127e5e562615018a4320162
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88834194"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97333041"
 ---
 # <a name="db_table"></a>db_table
 
@@ -41,7 +42,7 @@ Optionalこのデータベースコマンドの HRESULT を受け取る変数を
 
 **db_table** は、テーブルを開くために OLE DB コンシューマーによって使用される [CTable](../../data/oledb/ctable-class.md) オブジェクトを作成します。 この属性はクラスレベルでのみ使用できます。インラインで使用することはできません。 を使用し `db_column` てテーブル列を変数にバインドします。 `db_param` パラメーターの区切り記号 (パラメーターの型の設定など) を使用します。
 
-コンシューマー属性プロバイダーがこの属性をクラスに適用すると、コンパイラはクラスの名前を \_ *classname*アクセサーに変更します。ここで、 *classname*はクラスに指定した名前になります。また、コンパイラは*classname と*いうクラスを作成します。これは classname アクセサーから派生し \_ *YourClassName*ます。  クラス ビューでは、両方のクラスが表示されます。
+コンシューマー属性プロバイダーがこの属性をクラスに適用すると、コンパイラはクラスの名前を \_ *classname* アクセサーに変更します。ここで、 *classname* はクラスに指定した名前になります。また、コンパイラは *classname と* いうクラスを作成します。これは classname アクセサーから派生し \_ ます。  クラス ビューでは、両方のクラスが表示されます。
 
 ## <a name="example"></a>例
 
@@ -62,7 +63,7 @@ class CProducts {
 
 アプリケーションで使用されるこの属性の例については、「 [MultiRead](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Consumer)」を参照してください。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 | 属性コンテキスト | 値 |
 |-|-|

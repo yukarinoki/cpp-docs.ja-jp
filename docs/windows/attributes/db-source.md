@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: db_source'
 title: db_source (C++ COM 属性)
 ms.date: 10/02/2018
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - db_source attribute
 ms.assetid: 0ec8bbf7-ade2-4899-bf4c-8608b92779bc
-ms.openlocfilehash: f17a4ea183a24f7bf4e88137f4536ca082efdf85
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 273d6626a8cd6fa2cadc42bac7ddb2e5e28a69c2
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88831386"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97333073"
 ---
 # <a name="db_source"></a>db_source
 
@@ -44,7 +45,7 @@ Optionalこのデータベースコマンドの HRESULT を受け取る変数を
 
 **db_source** 、クラスまたはメソッド内にデータソースプロパティを追加します。 これは、と組み合わせて使用され `db_command` ます ( *db_source* *name* パラメーターを *source_name* パラメーターとして受け取ります)。
 
-コンシューマー属性プロバイダーがこの属性をクラスに適用すると、コンパイラはクラスの名前を \_ *classname*アクセサーに変更します。ここで、 *classname*はクラスに指定した名前になります。また、コンパイラは*classname と*いうクラスを作成します。これは classname アクセサーから派生し \_ *YourClassName*ます。  クラス ビューでは、両方のクラスが表示されます。
+コンシューマー属性プロバイダーがこの属性をクラスに適用すると、コンパイラはクラスの名前を \_ *classname* アクセサーに変更します。ここで、 *classname* はクラスに指定した名前になります。また、コンパイラは *classname と* いうクラスを作成します。これは classname アクセサーから派生し \_ ます。  クラス ビューでは、両方のクラスが表示されます。
 
 アプリケーションで使用されるこの属性の例については、「 [MultiRead](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Consumer)」を参照してください。
 
@@ -66,7 +67,7 @@ Optionalこのデータベースコマンドの HRESULT を受け取る変数を
 class CMyCommand {};
 ```
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 | 属性コンテキスト | 値 |
 |-|-|

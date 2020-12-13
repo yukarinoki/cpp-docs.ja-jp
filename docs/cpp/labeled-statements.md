@@ -1,16 +1,17 @@
 ---
+description: '詳細情報: ラベル付きステートメント'
 title: ラベル付きステートメント
 ms.date: 11/04/2016
 helpviewer_keywords:
 - labeled statement
 - statements, labeled
 ms.assetid: 456a26d5-0fcc-4d1a-b71f-fa9ff3d73b91
-ms.openlocfilehash: a10d071e46c79f49abf7e3eba498fae0487ccdc7
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: dcedce1e67c712102be2d8ebb697c1839f3f53c8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87213360"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97333974"
 ---
 # <a name="labeled-statements"></a>ラベル付きステートメント
 
@@ -56,7 +57,7 @@ int main() {
 
 **GoTo ステートメント**
 
-ソースプログラム内の*識別子*ラベルの外観によってラベルが宣言されます。 [Goto](../cpp/goto-statement-cpp.md)ステートメントのみが*識別子*ラベルに制御を転送できます。 次のコードフラグメントは、 **`goto`** ステートメントと*識別子*ラベルの使用方法を示しています。
+ソースプログラム内の *識別子* ラベルの外観によってラベルが宣言されます。 [Goto](../cpp/goto-statement-cpp.md)ステートメントのみが *識別子* ラベルに制御を転送できます。 次のコードフラグメントは、 **`goto`** ステートメントと *識別子* ラベルの使用方法を示しています。
 
 ラベルは単独では使用できず、常にステートメントと一緒に使用する必要があります。 ラベルのみが必要な場合は、ラベルの後に null ステートメントを置きます。
 
@@ -156,7 +157,7 @@ switch( msg )
 
 ## <a name="labels-in-the-goto-statement"></a>GoTo ステートメント内のラベル
 
-ソースプログラム内の*識別子*ラベルの外観によってラベルが宣言されます。 [Goto](../cpp/goto-statement-cpp.md)ステートメントのみが*識別子*ラベルに制御を転送できます。 次のコードフラグメントは、 **`goto`** ステートメントと*識別子*ラベルの使用方法を示しています。
+ソースプログラム内の *識別子* ラベルの外観によってラベルが宣言されます。 [Goto](../cpp/goto-statement-cpp.md)ステートメントのみが *識別子* ラベルに制御を転送できます。 次のコードフラグメントは、 **`goto`** ステートメントと *識別子* ラベルの使用方法を示しています。
 
 ラベルは単独では使用できず、常にステートメントと一緒に使用する必要があります。 ラベルのみが必要な場合は、ラベルの後に null ステートメントを置きます。
 

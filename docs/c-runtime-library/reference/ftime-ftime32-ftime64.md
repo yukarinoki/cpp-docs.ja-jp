@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「_ftime、_ftime32、_ftime64」を参照してください。
 title: _ftime、_ftime32、_ftime64
 ms.date: 4/2/2020
 api_name:
@@ -41,12 +42,12 @@ helpviewer_keywords:
 - ftime32 function
 - time, getting current
 ms.assetid: 96bc464c-3bcd-41d5-a212-8bbd836b814a
-ms.openlocfilehash: a0d012c89058209832d1e78867e89b4bd87bf226
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 6f0e4a6061bcdc36b866f39fd2ad9e18efc49fa0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82909927"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97334205"
 ---
 # <a name="_ftime-_ftime32-_ftime64"></a>_ftime、_ftime32、_ftime64
 
@@ -63,34 +64,34 @@ void _ftime64( struct __timeb64 *timeptr );
 ### <a name="parameters"></a>パラメーター
 
 *timeptr*<br/>
-**_Timeb**、 **__timeb32**、または **__timeb64**構造体へのポインター。
+**_Timeb**、 **__timeb32**、または **__timeb64** 構造体へのポインター。
 
 ## <a name="remarks"></a>解説
 
-**_Ftime**関数は、現在の現地時刻を取得し、 *timeptr*によって示される構造体に格納します。 **_Timeb**、 **__timeb32**、および **__timeb64**構造体は、sys \<\\timeb. h> で定義されています。 これらは、次の表に示す 4 つのフィールドを含んでいます。
+**_Ftime** 関数は、現在の現地時刻を取得し、 *timeptr* によって示される構造体に格納します。 **_Timeb**、 **__timeb32**、および **__timeb64** 構造体は、で定義されてい \<sys\\timeb.h> ます。 これらは、次の表に示す 4 つのフィールドを含んでいます。
 
 |フィールド|説明|
 |-|-|
 |**dstflag**|ローカルのタイム ゾーンで夏時間が現在有効になっている場合は 0 以外の値です  (夏時間を判断する方法の詳細については、[_tzset](tzset.md) を参照してください)。|
 |**millitm**|ミリ秒単位での秒の小数部。|
 |**time**|世界協定時刻 (UTC: Coordinated Universal Time) の 1970 年 1 月 1 日の深夜 00:00:00 から経過した時間 (秒単位)。|
-|**部分**|西に移動するときの UTC と現地時刻の間の差 (分単位)。 **タイムゾーン**の値は、グローバル変数 **_timezone**の値から設定されます ( **_tzset**を参照してください)。|
+|**部分**|西に移動するときの UTC と現地時刻の間の差 (分単位)。 **タイムゾーン** の値は、グローバル変数 **_timezone** の値から設定されます ( **_tzset** を参照してください)。|
 
-**__Timeb64**構造体を使用する **_ftime64**関数を使用すると、ファイル作成日を3000年12月31日23:59:59 までに表すことができます。**_ftime32**は、23:59:59 年1月18日から2038日までの日付のみを表します。 これらの関数の日付範囲の下限は、いずれも 1970 年 1 月 1 日の午前 0 時です。
+**__Timeb64** 構造体を使用する **_ftime64** 関数を使用すると、ファイル作成日を3000年12月31日23:59:59 までに表すことができます。**_ftime32** は、23:59:59 年1月18日から2038日までの日付のみを表します。 これらの関数の日付範囲の下限は、いずれも 1970 年 1 月 1 日の午前 0 時です。
 
-**_Ftime**関数は **_ftime64**と同じです。 **_USE_32BIT_TIME_T**が定義されていない限り、 **_timeb**には64ビットの時刻が含まれます。この場合、以前の動作が有効になります。**_ftime**は32ビットの時刻を使用し、 **_timeb**に32ビットの時刻が含まれています。
+**_Ftime** 関数は **_ftime64** と同じです。 **_USE_32BIT_TIME_T** が定義されていない限り、 **_timeb** には64ビットの時刻が含まれます。この場合、以前の動作が有効になります。**_ftime** は32ビットの時刻を使用し、 **_timeb** に32ビットの時刻が含まれています。
 
-**_ftime**は、そのパラメーターを検証します。 *Timeptr*として null ポインターが渡された場合、関数は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーを呼び出します。 実行の継続が許可された場合、関数は**errno**を**EINVAL**に設定します。
+**_ftime** は、そのパラメーターを検証します。 *Timeptr* として null ポインターが渡された場合、関数は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーを呼び出します。 実行の継続が許可された場合、関数は **errno** を **EINVAL** に設定します。
 
 既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-|関数|必須ヘッダー|
+|機能|必須ヘッダー|
 |--------------|---------------------|
-|**_ftime**|\<sys/types.h> と \<sys/timeb.h>|
-|**_ftime32**|\<sys/types.h> と \<sys/timeb.h>|
-|**_ftime64**|\<sys/types.h> と \<sys/timeb.h>|
+|**_ftime**|\<sys/types.h> および \<sys/timeb.h>|
+|**_ftime32**|\<sys/types.h> および \<sys/timeb.h>|
+|**_ftime64**|\<sys/types.h> および \<sys/timeb.h>|
 
 互換性について詳しくは、「 [Compatibility](../../c-runtime-library/compatibility.md)」をご覧ください。
 

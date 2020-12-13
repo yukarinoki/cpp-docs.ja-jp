@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: カスタム (C++)'
 title: custom (C++)
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - custom attributes, defining
 ms.assetid: 3abac928-4d55-4ea6-8cf6-8427a4ad79f1
-ms.openlocfilehash: 7a1d9bd64a28fa7c08477c6011dc0e8236b7bcf6
-ms.sourcegitcommit: f2a135d69a2a8ef1777da60c53d58fe06980c997
+ms.openlocfilehash: 7771230fd6eed5f567fb2e74e8cd869a0b3618f0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87521253"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97333139"
 ---
 # <a name="custom-c"></a>custom (C++)
 
@@ -34,13 +35,13 @@ ms.locfileid: "87521253"
 *value*<br/>
 バリアントに含めることができる値。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-**カスタム**C++ 属性を使用すると、情報がタイプライブラリに配置されます。 タイプライブラリからカスタム値を読み取るツールが必要です。
+**カスタム** C++ 属性を使用すると、情報がタイプライブラリに配置されます。 タイプライブラリからカスタム値を読み取るツールが必要です。
 
-**カスタム**属性には、[カスタム](/windows/win32/Midl/custom)MIDL 属性と同じ機能があります。
+**カスタム** 属性には、[カスタム](/windows/win32/Midl/custom)MIDL 属性と同じ機能があります。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 ### <a name="attribute-context"></a>属性コンテキスト
 

@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: _ismbbalpha、_ismbbalpha_l'
 title: _ismbbalpha、_ismbbalpha_l
 ms.date: 4/2/2020
 api_name:
@@ -34,12 +35,12 @@ helpviewer_keywords:
 - _ismbbalpha function
 - _ismbbalpha_l function
 ms.assetid: 8e54cb92-fc2b-41f5-8ab4-b22ac8aa9ad0
-ms.openlocfilehash: 1fa92d8e0f0ed331110666add1015fbdacf20f07
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 93ae26ff54af4cdee5f99e51c8f85d14ec51ae4e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82917495"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97335661"
 ---
 # <a name="_ismbbalpha-_ismbbalpha_l"></a>_ismbbalpha、_ismbbalpha_l
 
@@ -58,7 +59,7 @@ int _ismbbalpha_l(
 
 ### <a name="parameters"></a>パラメーター
 
-*40u-c*<br/>
+*c*<br/>
 テストする整数。
 
 *locale*<br/>
@@ -66,11 +67,11 @@ int _ismbbalpha_l(
 
 ## <a name="return-value"></a>戻り値
 
-次の式の場合、 **_ismbbalpha**は0以外の値を返します。
+次の式の場合、 **_ismbbalpha** は0以外の値を返します。
 
 `isalpha(c) || _ismbbkalnum(c)`
 
-*c*の場合は0以外の。それ以外の場合は0。 **_ismbbalpha**は、ロケールに依存する任意の文字設定に現在のロケールを使用します。 **_ismbbalpha_l**は、渡されたロケールを使用する点を除いて同じです。
+*c* の場合は0以外の。それ以外の場合は0。 **_ismbbalpha** は、ロケールに依存する任意の文字設定に現在のロケールを使用します。 **_ismbbalpha_l** は、渡されたロケールを使用する点を除いて同じです。
 
 ## <a name="remarks"></a>解説
 
@@ -78,7 +79,7 @@ int _ismbbalpha_l(
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**_ismbbalpha**|\<mbctype.h>|
 |**_ismbbalpha_l**|\<mbctype.h>|

@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: _ismbbkana、_ismbbkana_l'
 title: _ismbbkana、_ismbbkana_l
 ms.date: 4/2/2020
 api_name:
@@ -34,12 +35,12 @@ helpviewer_keywords:
 - ismbbkana function
 - ismbbkana_l function
 ms.assetid: 64d4eb4a-205a-40ef-be35-ff9d77fabbaf
-ms.openlocfilehash: dd788d18692e11886caf4ee12703bb5878de1163
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 3b4c005068a6a646c256d0f091e4b86e15df2acb
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82918944"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97335654"
 ---
 # <a name="_ismbbkana-_ismbbkana_l"></a>_ismbbkana、_ismbbkana_l
 
@@ -59,7 +60,7 @@ int _ismbbkana_l(
 
 ### <a name="parameters"></a>パラメーター
 
-*40u-c*<br/>
+*c*<br/>
 テストする整数。
 
 *locale*<br/>
@@ -67,7 +68,7 @@ int _ismbbkana_l(
 
 ## <a name="return-value"></a>戻り値
 
-整数*c*がカタカナ記号の場合、 **_ismbbkana**は0以外の値を返し、そうでない場合は0を返します。 **_ismbbkana**は、ロケールに依存する文字情報に現在のロケールを使用します。 **_ismbbkana_l**は、渡されたロケールオブジェクトを使用する点を除いて同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
+整数 *c* がカタカナ記号の場合、 **_ismbbkana** は0以外の値を返し、そうでない場合は0を返します。 **_ismbbkana** は、ロケールに依存する文字情報に現在のロケールを使用します。 **_ismbbkana_l** は、渡されたロケールオブジェクトを使用する点を除いて同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
 
 ## <a name="remarks"></a>解説
 
@@ -75,7 +76,7 @@ int _ismbbkana_l(
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**_ismbbkana**|\<mbctype.h>|
 |**_ismbbkana_l**|\<mbctype.h>|

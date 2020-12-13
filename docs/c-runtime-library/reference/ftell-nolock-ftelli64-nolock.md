@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: _ftell_nolock、_ftelli64_nolock'
 title: _ftell_nolock、_ftelli64_nolock
 ms.date: 4/2/2020
 api_name:
@@ -35,12 +36,12 @@ helpviewer_keywords:
 - ftell_nolock function
 - file pointers [C++], getting current position
 ms.assetid: 84e68b0a-32f8-4c4a-90ad-3f2387685ede
-ms.openlocfilehash: 9f1f0018773f8fb5b00f1304011ba8128ce7d9df
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 77ddd09d6c72413f4ca0ef2fa1e4ea66e044dedc
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82909995"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97334221"
 ---
 # <a name="_ftell_nolock-_ftelli64_nolock"></a>_ftell_nolock、_ftelli64_nolock
 
@@ -60,21 +61,21 @@ __int64 _ftelli64_nolock(
 ### <a name="parameters"></a>パラメーター
 
 *一連*<br/>
-**ファイル**構造をターゲットにします。
+**ファイル** 構造をターゲットにします。
 
 ## <a name="return-value"></a>戻り値
 
-**Ftell**と **_ftelli64**と同じです。 詳細については、「 [ftell、_ftelli64](ftell-ftelli64.md)」を参照してください。
+**Ftell** と **_ftelli64** と同じです。 詳細については、「 [ftell、_ftelli64](ftell-ftelli64.md)」を参照してください。
 
 ## <a name="remarks"></a>解説
 
-これらの関数は、それぞれ、 **ftell**と **_ftelli64**の非ロックバージョンです。 これらは、他のスレッドによる干渉から保護されない点を除いて、 **ftell**および **_ftelli64**と同じです。 これらの関数では他のスレッドをロックアウトするオーバーヘッドが発生しないため、処理が速くなる場合があります。 これらの関数は、シングルスレッド アプリケーション、呼び出し元のスコープで既にスレッド分離を処理している場合などのスレッドセーフなコンテキストでのみ使用してください。
+これらの関数は、それぞれ、 **ftell** と **_ftelli64** の非ロックバージョンです。 これらは、他のスレッドによる干渉から保護されない点を除いて、 **ftell** および **_ftelli64** と同じです。 これらの関数では他のスレッドをロックアウトするオーバーヘッドが発生しないため、処理が速くなる場合があります。 これらの関数は、シングルスレッド アプリケーション、呼び出し元のスコープで既にスレッド分離を処理している場合などのスレッドセーフなコンテキストでのみ使用してください。
 
 既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-|関数|必須ヘッダー|オプション ヘッダー|
+|機能|必須ヘッダー|オプション ヘッダー|
 |--------------|---------------------|---------------------|
 |**ftell_nolock**|\<stdio.h>|\<errno.h>|
 |**_ftelli64_nolock**|\<stdio.h>|\<errno.h>|

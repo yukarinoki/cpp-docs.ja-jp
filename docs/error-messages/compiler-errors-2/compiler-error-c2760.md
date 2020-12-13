@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「コンパイラエラー C2760」を参照してください。
 title: コンパイラエラー C2760
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2760
 ms.assetid: 585757fd-d519-43f3-94e5-50316ac8b90b
-ms.openlocfilehash: 5680de2fe0364d7cdc5e7ef017bd298423ea4c21
-ms.sourcegitcommit: fd0f8839da5c6a3663798a47c6b0bb6e63b518bd
+ms.openlocfilehash: bba26b68a2e4c98cf478098b2e44e82962afd9f0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70273667"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97336166"
 ---
 # <a name="compiler-error-c2760"></a>コンパイラエラー C2760
 
 > 構文エラー: '*name2*' ではなく '*name1*' が必要です
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 このエラーを発生させるには、いくつかの方法があります。 通常、これは、コンパイラが意味を持たないトークンシーケンスによって発生します。
 

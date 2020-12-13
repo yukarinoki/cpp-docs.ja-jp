@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「ファイル名検索関数」を参照してください。
 title: ファイル名検索関数
 ms.date: 11/04/2016
 api_location:
@@ -20,12 +21,12 @@ helpviewer_keywords:
 - find function
 - _wfind function
 ms.assetid: 2bc2f8ef-44e4-4271-b3e8-666d36fde828
-ms.openlocfilehash: fb5cc0e18d150d4171e33038e27810989c0f503b
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 1ab547de95906909a75bdd73f653c5cdae519879
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87226243"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97332950"
 ---
 # <a name="filename-search-functions"></a>ファイル名検索関数
 
@@ -104,7 +105,7 @@ FAT システムなど、ファイルの作成と最終アクセス時刻をサ�
 |`_finddata32i64_t`, `_wfinddata32i64_t`|`__time32_t`|**`__int64`**|
 |`_finddata64i32_t`, `_wfinddata64i32_t`|`__time64_t`|`_fsize_t`|
 
-`_fsize_t`は、 **`typedef`** **`unsigned long`** (32 ビット) のです。
+`_fsize_t` は、 **`typedef`** **`unsigned long`** (32 ビット) のです。
 
 ## <a name="example"></a>例
 

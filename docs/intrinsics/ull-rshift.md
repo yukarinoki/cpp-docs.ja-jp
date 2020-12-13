@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: __ull_rshift'
 title: __ull_rshift
 ms.date: 09/02/2019
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - ull_rshift intrinsic
 - __ull_rshift intrinsic
 ms.assetid: b7ff5254-3540-4e6e-b57c-a6c4beb7dca2
-ms.openlocfilehash: bf9fe7775cee1c774c097a1b6bd371721c9fa34f
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 5b819e4a1df8db7b7562023c6acc9dbbd94f7f76
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80074988"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97333623"
 ---
 # <a name="__ull_rshift"></a>__ull_rshift
 
@@ -31,27 +32,27 @@ unsigned __int64 __ull_rshift(
 
 ### <a name="parameters"></a>パラメーター
 
-*マスク*\
+*隠す*\
 から右にシフトする64ビット整数値。
 
-*Nbit*\
+*nBit*\
 からシフトするビット数、x86 の場合は32、x64 の場合はモジュロ64。
 
 ## <a name="return-value"></a>戻り値
 
-`nBit` ビットでシフトしたマスク。
+ビットでシフトされたマスク `nBit` 。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-|Intrinsic|Architecture|
+|Intrinsic|アーキテクチャ|
 |---------------|------------------|
 |`__ull_rshift`|x86、x64|
 
-**ヘッダーファイル**\<に存在します。 h >
+**ヘッダー ファイル** \<intrin.h>
 
 ## <a name="remarks"></a>解説
 
-2番目のパラメーターが x86 の場合は 31 (x64 の場合は 63) を超える場合は、シフトするビット数を決定するために 32 (x64 では 64) が使用されます。 名前の `ull` は `unsigned long long (unsigned __int64)`を示します。
+2番目のパラメーターが x86 の場合は 31 (x64 の場合は 63) を超える場合は、シフトするビット数を決定するために 32 (x64 では 64) が使用されます。 `ull`名前に含まれるはを示し `unsigned long long (unsigned __int64)` ます。
 
 ## <a name="example"></a>例
 
@@ -80,7 +81,7 @@ int main()
 
 **Microsoft 固有の仕様はここまで**
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [__ll_lshift](../intrinsics/ll-lshift.md)\
 [__ll_rshift](../intrinsics/ll-rshift.md)\

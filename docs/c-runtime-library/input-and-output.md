@@ -1,5 +1,6 @@
 ---
-title: 入出力
+description: '詳細情報: 入力と出力'
+title: 入力と出力
 ms.date: 11/04/2016
 f1_keywords:
 - c.io
@@ -10,14 +11,14 @@ helpviewer_keywords:
 - I/O [CRT], routines
 - output routines
 ms.assetid: 1c177301-e341-4ca0-aedc-0a87fe1c75ae
-ms.openlocfilehash: 2669ed3437fe0eea7dd648367feabe66ae6ed6d4
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: 0edd66765f1633dc0adf12b311faf81d3a030512
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57738516"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97334281"
 ---
-# <a name="input-and-output"></a>入出力
+# <a name="input-and-output"></a>入力と出力
 
 I/O 関数はファイルやデバイスとの間でデータの読み書きを行います。 ファイル I/O 操作は、テキスト モードまたはバイナリ モードで行われます。 Microsoft ランタイム ライブラリには、次の 3 つの種類の I/O 関数があります。
 

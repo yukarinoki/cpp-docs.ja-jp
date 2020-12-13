@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: invalid_operation クラス'
 title: invalid_operation クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - invalid_operation class
 ms.assetid: 26ba07dc-fcdf-44cb-b748-a31d35205b52
-ms.openlocfilehash: e17d530569d16ba0084a58bf0be00d4a8423b7f6
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: f3050d487f2c374f66f264b6e568fce5244d25ba
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77140881"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97334546"
 ---
 # <a name="invalid_operation-class"></a>invalid_operation クラス
 
@@ -29,7 +30,7 @@ class invalid_operation : public std::exception;
 
 ### <a name="public-constructors"></a>パブリック コンストラクター
 
-|Name|説明|
+|名前|説明|
 |----------|-----------------|
 |[invalid_operation](#ctor)|オーバーロードされます。 `invalid_operation` オブジェクトを構築します。|
 
@@ -43,13 +44,13 @@ class invalid_operation : public std::exception;
 
 `invalid_operation`
 
-## <a name="requirements"></a>［要件］
+## <a name="requirements"></a>要件
 
 **ヘッダー:** concrt .h
 
 **名前空間:** concurrency
 
-## <a name="ctor"></a>invalid_operation
+## <a name="invalid_operation"></a><a name="ctor"></a> invalid_operation
 
 `invalid_operation` オブジェクトを構築します。
 
@@ -64,6 +65,6 @@ invalid_operation() throw();
 *_Message*<br/>
 エラーの説明メッセージ。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[コンカレンシー名前空間](concurrency-namespace.md)
+[concurrency 名前空間](concurrency-namespace.md)

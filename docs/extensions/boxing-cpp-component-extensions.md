@@ -1,16 +1,17 @@
 ---
+description: '詳細情報: ボックス化 (C++/CLI および C++/CX)'
 title: ボックス化 (C++/CLI および C++/CX)
 ms.date: 10/12/2018
 ms.topic: reference
 helpviewer_keywords:
 - boxing, C++
 ms.assetid: b5fd2c98-c578-4f83-8257-6dd663478665
-ms.openlocfilehash: 709754e8609406f635444937af93488060167ba9
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: b3bdc87d9dea2a5a70344ee032655712af221d59
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80172608"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97333756"
 ---
 # <a name="boxing--ccli-and-ccx"></a>ボックス化 (C++/CLI および C++/CX)
 
@@ -30,7 +31,7 @@ C++/CX では、値型のボックス化と参照型のボックス化解除の�
 value_variable = (value_type) object_variable;
 ```
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 コンパイラ オプション: `/ZW`
 
@@ -88,9 +89,9 @@ void BlankPage::OnNavigatedTo(NavigationEventArgs^ e)
 
 - [方法: ボックス化を解除する](../dotnet/how-to-unbox.md)
 
-- [標準変換と暗黙のボックス化](../dotnet/standard-conversions-and-implicit-boxing.md)
+- [標準変換と暗黙的なボックス化](../dotnet/standard-conversions-and-implicit-boxing.md)
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 コンパイラ オプション: `/clr`
 
@@ -188,6 +189,6 @@ in func2(System::ValueType^)
 in func2(System::ValueType^)
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[.NET および UWP でのコンポーネント拡張](component-extensions-for-runtime-platforms.md)
+[.NET および UWP 用のコンポーネントの拡張機能](component-extensions-for-runtime-platforms.md)

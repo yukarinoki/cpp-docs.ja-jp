@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: _ismbslead、_ismbstrail、_ismbslead_l、_ismbstrail_l'
 title: _ismbslead、_ismbstrail、_ismbslead_l、_ismbstrail_l
 ms.date: 4/2/2020
 api_name:
@@ -48,12 +49,12 @@ helpviewer_keywords:
 - ismbstrail_l function
 - _ismbstrail_l function
 ms.assetid: 86d2cd7a-3cff-443a-b713-14cc17a231e9
-ms.openlocfilehash: 892545ba0ac66604b0ea1c5adcfa32dd64b68973
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 54745c2db33a68b35236c5b6169280e5e7dacfef
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82919159"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97334128"
 ---
 # <a name="_ismbslead-_ismbstrail-_ismbslead_l-_ismbstrail_l"></a>_ismbslead、_ismbstrail、_ismbslead_l、_ismbstrail_l
 
@@ -87,7 +88,7 @@ int _ismbstrail_l(
 
 ### <a name="parameters"></a>パラメーター
 
-*引数*<br/>
+*str*<br/>
 文字列の先頭、または直前の既知の先頭バイトを指すポインター。
 
 *現在の*<br/>
@@ -98,24 +99,24 @@ int _ismbstrail_l(
 
 ## <a name="return-value"></a>戻り値
 
-文字が先行バイトの場合、 **_ismbslead**は-1 を返します。文字が末尾バイトの場合は-1 を返し **_ismbstrail** 。 入力文字列が有効であるものの、その文字が先頭バイトでも末尾バイトでもない場合、これらの関数は 0 を返します。 どちらかの引数が**NULL**の場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、これらの関数は**NULL**を返し、 **errno**を**EINVAL**に設定します。
+文字が先行バイトの場合、 **_ismbslead** は-1 を返します。文字が末尾バイトの場合は-1 を返し **_ismbstrail** 。 入力文字列が有効であるものの、その文字が先頭バイトでも末尾バイトでもない場合、これらの関数は 0 を返します。 どちらかの引数が **NULL** の場合は、「 [パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、これらの関数は **NULL** を返し、 **errno** を **EINVAL** に設定します。
 
 ## <a name="remarks"></a>解説
 
-**_ismbslead**と **_ismbstrail**は、文字列のコンテキストを考慮に入れるため、 **_ismbblead**と **_ismbbtrail**のバージョンよりも遅くなります。
+**_ismbslead** と **_ismbstrail** は、文字列のコンテキストを考慮に入れるため、 **_ismbblead** と **_ismbbtrail** のバージョンよりも遅くなります。
 
-**_L**サフィックスを持つこれらの関数のバージョンは同じですが、ロケールに依存する動作では、現在のロケールではなく渡されたロケールを使用します。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
+**_L** サフィックスを持つこれらの関数のバージョンは同じですが、ロケールに依存する動作では、現在のロケールではなく渡されたロケールを使用します。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
 
 既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|オプション ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|オプション ヘッダー|
 |-------------|---------------------|---------------------|
-|**_ismbslead**|\<mbctype.h> または \<mbstring.h>|\<ctype.h>、* \<limits.h>、\<stdlib.h>|
-|**_ismbstrail**|\<mbctype.h> または \<mbstring.h>|\<ctype.h>、* \<limits.h>、\<stdlib.h>|
-|**_ismbslead_l**|\<mbctype.h> または \<mbstring.h>|\<ctype.h>、* \<limits.h>、\<stdlib.h>|
-|**_ismbstrail_l**|\<mbctype.h> または \<mbstring.h>|\<ctype.h>、* \<limits.h>、\<stdlib.h>|
+|**_ismbslead**|\<mbctype.h> または \<mbstring.h>|\<ctype.h>,* \<limits.h>, \<stdlib.h>|
+|**_ismbstrail**|\<mbctype.h> または \<mbstring.h>|\<ctype.h>,* \<limits.h>, \<stdlib.h>|
+|**_ismbslead_l**|\<mbctype.h> または \<mbstring.h>|\<ctype.h>,* \<limits.h>, \<stdlib.h>|
+|**_ismbstrail_l**|\<mbctype.h> または \<mbstring.h>|\<ctype.h>,* \<limits.h>, \<stdlib.h>|
 
 \* テスト条件のマニフェスト定数の場合。
 
@@ -124,6 +125,6 @@ int _ismbstrail_l(
 ## <a name="see-also"></a>関連項目
 
 [文字分類](../../c-runtime-library/character-classification.md)<br/>
-[_ismbc 系ルーチン](../../c-runtime-library/ismbc-routines.md)<br/>
-[is、isw 系ルーチン](../../c-runtime-library/is-isw-routines.md)<br/>
+[_ismbc ルーチン](../../c-runtime-library/ismbc-routines.md)<br/>
+[is、isw ルーチン](../../c-runtime-library/is-isw-routines.md)<br/>
 [_ismbb ルーチン](../../c-runtime-library/ismbb-routines.md)<br/>

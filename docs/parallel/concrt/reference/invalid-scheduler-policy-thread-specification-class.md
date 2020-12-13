@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: invalid_scheduler_policy_thread_specification クラス'
 title: invalid_scheduler_policy_thread_specification クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - invalid_scheduler_policy_thread_specification class
 ms.assetid: 2d0fafb2-18f8-4284-8040-3db640d33303
-ms.openlocfilehash: b6c2fd853ae19c48ae04d6601eb47e5afcb71944
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: 97a3910fc83e741c54ece51ed8e20686bbd6c66b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77143034"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97334508"
 ---
 # <a name="invalid_scheduler_policy_thread_specification-class"></a>invalid_scheduler_policy_thread_specification クラス
 
@@ -27,9 +28,9 @@ class invalid_scheduler_policy_thread_specification : public std::exception;
 
 ### <a name="public-constructors"></a>パブリック コンストラクター
 
-|Name|説明|
+|名前|説明|
 |----------|-----------------|
-|[invalid_scheduler_policy_thread_specification](invalid-scheduler-policy-value-class.md#ctor|オーバーロードされます。 `invalid_scheduler_policy_value` オブジェクトを構築します。|
+|[invalid_scheduler_policy_thread_specification](無効な-scheduler-ポリシー-値-クラス md # .ctor)|オーバーロードされます。 `invalid_scheduler_policy_value` オブジェクトを構築します。|
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -37,13 +38,13 @@ class invalid_scheduler_policy_thread_specification : public std::exception;
 
 `invalid_scheduler_policy_thread_specification`
 
-## <a name="requirements"></a>［要件］
+## <a name="requirements"></a>要件
 
 **ヘッダー:** concrt .h
 
 **名前空間:** concurrency
 
-## <a name="ctor"></a>invalid_scheduler_policy_thread_specification
+## <a name="invalid_scheduler_policy_thread_specification"></a><a name="ctor"></a> invalid_scheduler_policy_thread_specification
 
 `invalid_scheduler_policy_value` オブジェクトを構築します。
 
@@ -58,7 +59,7 @@ invalid_scheduler_policy_thread_specification() throw();
 *_Message*<br/>
 エラーの説明メッセージ。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[コンカレンシー名前空間](concurrency-namespace.md)<br/>
-[SchedulerPolicy クラス](schedulerpolicy-class.md)
+[concurrency 名前空間](concurrency-namespace.md)<br/>
+[スケジューラポリシークラス](schedulerpolicy-class.md)

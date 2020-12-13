@@ -1,16 +1,17 @@
 ---
+description: '詳細情報: 呼び出しの例: 関数プロトタイプと呼び出し'
 title: '呼び出しの例: 関数プロトタイプと呼び出し'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - calling conventions, examples [C++]
 - examples [C++], calling conventions
 ms.assetid: e4275d1f-df2e-4bfc-a162-eb43ec69554a
-ms.openlocfilehash: c41d7679be8b7faa3c8df1368d14815a1b840284
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: d7d8b68abc030e12d10fc5daa8b56f793d3ea14a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80190171"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97335586"
 ---
 # <a name="calling-example-function-prototype-and-call"></a>呼び出しの例: 関数プロトタイプと呼び出し
 
@@ -37,10 +38,10 @@ void    MyFunc( char c, short s, int i, double f )
 MyFunc ('x', 12, 8192, 2.7183);
 ```
 
-詳細については、「[呼び出し例の結果](../cpp/results-of-calling-example.md)」を参照してください。
+詳細については、「 [呼び出し例の結果](../cpp/results-of-calling-example.md)」を参照してください。
 
 **Microsoft 固有の仕様はここまで**
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [呼び出し規約](../cpp/calling-conventions.md)

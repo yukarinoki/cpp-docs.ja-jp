@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「Visual C++ のテキストと文字列」を参照してください。
 title: Visual C++ のテキストと文字列
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -24,12 +25,12 @@ helpviewer_keywords:
 - portability [C++], character sets
 - MBCS [C++], international programming
 ms.assetid: a1bb27ac-abe5-4c6b-867d-f761d4b93205
-ms.openlocfilehash: 80b7139996fddc82b206828d4a036922fa1446d5
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 3b77df006e095871d11fb3bfbc3d83b081d6052f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80167603"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97335737"
 ---
 # <a name="text-and-strings-in-visual-c"></a>Visual C++ のテキストと文字列
 
@@ -46,10 +47,10 @@ Visual C++ でサポートする Unicode プログラミングと MBCS プログ
 [マルチバイト文字セット (MBCS) のサポート](../text/support-for-multibyte-character-sets-mbcss.md)<br/>
 Unicode の代わりとして、日本語や中国語など、1 バイト文字では表現できない文字セットをサポートする MBCS について説明します。
 
-[tchar.h における汎用テキストのマッピング](../text/generic-text-mappings-in-tchar-h.md)<br/>
+[Tchar. h の汎用テキストマッピング](../text/generic-text-mappings-in-tchar-h.md)<br/>
 多くのデータ型、ルーチン、およびその他のオブジェクトに対する、Microsoft 固有の汎用テキストのマッピングについて説明します。
 
-[方法: さまざまな文字列型間で変換する](../text/how-to-convert-between-various-string-types.md)<br/>
+[方法: さまざまな文字列型を変換する](../text/how-to-convert-between-various-string-types.md)<br/>
 さまざまな Visual C++ 文字列型を他の文字列に変換する方法について説明します。
 
 ## <a name="related-sections"></a>関連項目

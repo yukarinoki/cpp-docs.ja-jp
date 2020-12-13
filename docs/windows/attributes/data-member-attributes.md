@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: データメンバー属性'
 title: データメンバー属性 (C++ COM)
 ms.date: 10/02/2018
 helpviewer_keywords:
@@ -6,20 +7,20 @@ helpviewer_keywords:
 - data members [C++], attributes
 - data members [C++]
 ms.assetid: 95b2397d-1daf-4ae4-8cd0-06956d005b13
-ms.openlocfilehash: f23ca0963c63212ea2a8a70362b8e76fa0819fc7
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 2bc5878b927ee8f80721928cdc6d9dbc3b095ea5
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80214878"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97333135"
 ---
 # <a name="data-member-attributes"></a>データ メンバー属性
 
 クラス、コクラス、またはインターフェイスのデータメンバーには、次の属性が適用されます。
 
-|Attribute|説明|
+|属性|説明|
 |---------------|-----------------|
-|[db_accessor](db-accessor.md)|`IAccessor`ベースのバインドに参加する `db_column` 属性をグループ化します。|
+|[db_accessor](db-accessor.md)|`db_column`ベースのバインドに参加する属性をグループ化 `IAccessor` します。|
 |[db_column](db-column.md)|指定された列を行セットにバインドします。|
 |[db_command](db-command.md)|OLE DB コマンドを作成します。|
 |[db_param](db-param.md)|指定されたメンバー変数を入力パラメーターまたは出力パラメーターに関連付けて、その変数を区切ります。|
@@ -33,6 +34,6 @@ ms.locfileid: "80214878"
 |[readonly](readonly-cpp.md)|データ メンバーへの割り当てを禁止します。|
 |[requestedit](requestedit.md)|`OnRequestEdit` 通知がプロパティでサポートされることを示します。|
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [使用法別の属性](attributes-by-usage.md)

@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「コンパイラエラー C2184」を参照してください。
 title: コンパイラ エラー C2184
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2184
 ms.assetid: 80fc8bff-7d76-4bde-94d2-01d84bb6824a
-ms.openlocfilehash: 6c644bead9148c2019817b72f06587c36f3179c1
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 26513ff4162023398336eae3396e7be6abb8f8a6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74758451"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97335145"
 ---
 # <a name="compiler-error-c2184"></a>コンパイラ エラー C2184
 
@@ -30,7 +31,7 @@ void f() {
 }
 ```
 
-解決方法:
+考えられる解決策:
 
 ```cpp
 // C2184b.cpp

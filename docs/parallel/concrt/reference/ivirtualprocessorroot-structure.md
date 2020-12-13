@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: IVirtualProcessorRoot 構造'
 title: IVirtualProcessorRoot 構造体
 ms.date: 11/04/2016
 f1_keywords:
@@ -11,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - IVirtualProcessorRoot structure
 ms.assetid: 5ef371b8-9e4f-4fef-bb0d-49099693dd2b
-ms.openlocfilehash: 869d51144b686dd684f62b337bb90eff8a9a5589
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: b55aa72e9383447ea8d19e13e1e2aa9bd57d267d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87193953"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97334294"
 ---
 # <a name="ivirtualprocessorroot-structure"></a>IVirtualProcessorRoot 構造体
 
@@ -41,7 +42,7 @@ struct IVirtualProcessorRoot : public IExecutionResource;
 
 ## <a name="remarks"></a>解説
 
-すべての仮想プロセッサルートには、実行リソースが関連付けられています。 インターフェイスは、 `IVirtualProcessorRoot` [Iexecutionresource](iexecutionresource-structure.md)インターフェイスから継承されます。 複数の仮想プロセッサルートが、同じ基になるハードウェアスレッドに対応している可能性があります。
+すべての仮想プロセッサルートには、実行リソースが関連付けられています。 インターフェイスは、 `IVirtualProcessorRoot` [Iexecutionresource](iexecutionresource-structure.md) インターフェイスから継承されます。 複数の仮想プロセッサルートが、同じ基になるハードウェアスレッドに対応している可能性があります。
 
 リソースマネージャーは、リソースへの要求に応答して、仮想プロセッサルートをスケジューラに付与します。 スケジューラは、仮想プロセッサルートを使用して、実行コンテキストでアクティブ化することで、作業を実行できます。
 
@@ -51,13 +52,13 @@ struct IVirtualProcessorRoot : public IExecutionResource;
 
 `IVirtualProcessorRoot`
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** concrtrm. h
 
 **名前空間:** concurrency
 
-## <a name="ivirtualprocessorrootactivate-method"></a><a name="activate"></a>IVirtualProcessorRoot:: Activate メソッド
+## <a name="ivirtualprocessorrootactivate-method"></a><a name="activate"></a> IVirtualProcessorRoot:: Activate メソッド
 
 実行コンテキストインターフェイスに関連付けられたスレッドプロキシが、 `pContext` この仮想プロセッサルートで実行を開始します。
 
@@ -72,7 +73,7 @@ virtual void Activate(_Inout_ IExecutionContext* pContext) = 0;
 
 ### <a name="remarks"></a>解説
 
-リソースマネージャーは、実行コンテキストインターフェイスに関連付けられていない場合、スレッドプロキシを提供します。`pContext`
+リソースマネージャーは、実行コンテキストインターフェイスに関連付けられていない場合、スレッドプロキシを提供します。 `pContext`
 
 `Activate`メソッドを使用して、リソースマネージャーから返された新しい仮想プロセッサルートでの作業の実行を開始したり、非アクティブ化された仮想プロセッサルートまたは非アクティブ化しようとしている仮想プロセッサルートでスレッドプロキシを再開したりすることができます。 非アクティブ化の詳細については、「 [Ivirtualprocessorroot::D eactivate](#deactivate) 」を参照してください。 非アクティブ化された仮想プロセッサルートを再開する場合、パラメーターは、 `pContext` 仮想プロセッサルートを非アクティブ化するために使用するパラメーターと同じである必要があります。
 
@@ -80,13 +81,13 @@ virtual void Activate(_Inout_ IExecutionContext* pContext) = 0;
 
 仮想プロセッサルートをアクティブ化すると、この仮想プロセッサルートが現在ビジー状態であることがリソースマネージャーに通知されます。 スケジューラがこのルートで実行する作業を見つけられない場合は、 `Deactivate` 仮想プロセッサのルートがアイドル状態であることをリソースマネージャーに通知するメソッドを呼び出す必要があります。 リソースマネージャーは、このデータを使用してシステムの負荷を分散します。
 
-`invalid_argument`引数の値がの場合、がスローされ `pContext` `NULL` ます。
+`invalid_argument` 引数の値がの場合、がスローされ `pContext` `NULL` ます。
 
-`invalid_operation`引数が、 `pContext` この仮想プロセッサルートによって最後にディスパッチされた実行コンテキストを表していない場合は、がスローされます。
+`invalid_operation` 引数が、 `pContext` この仮想プロセッサルートによって最後にディスパッチされた実行コンテキストを表していない場合は、がスローされます。
 
 仮想プロセッサルートをアクティブ化すると、基になるハードウェアスレッドのサブスクリプションレベルが1ずつ増加します。 サブスクリプションレベルの詳細については、「 [Iexecutionresource:: CurrentSubscriptionLevel](iexecutionresource-structure.md#currentsubscriptionlevel)」を参照してください。
 
-## <a name="ivirtualprocessorrootdeactivate-method"></a><a name="deactivate"></a>IVirtualProcessorRoot::D eactivate メソッド
+## <a name="ivirtualprocessorrootdeactivate-method"></a><a name="deactivate"></a> IVirtualProcessorRoot::D eactivate メソッド
 
 この仮想プロセッサルートで現在実行されているスレッドプロキシが、実行コンテキストのディスパッチを停止します。 スレッドプロキシは、メソッドの呼び出しで実行を再開し `Activate` ます。
 
@@ -111,13 +112,13 @@ virtual bool Deactivate(_Inout_ IExecutionContext* pContext) = 0;
 
 仮想プロセッサのルート awakens とメソッドからの戻り値 `Deactivate` が値の場合 **`false`** 、スケジューラはメソッドを使用して UMS のコンプリートリストに対してクエリ `IUMSCompletionList::GetUnblockNotifications` を実行し、その情報を操作した後、 `Deactivate` メソッドを再度呼び出します。 これは、メソッドが値を返すようになるまで繰り返さ `Deactivate` **`true`** れます。
 
-`invalid_argument`引数の値が NULL の場合、がスローされ `pContext` ます。
+`invalid_argument` 引数の値が NULL の場合、がスローされ `pContext` ます。
 
-`invalid_operation`は、仮想プロセッサルートがアクティブになったことがない場合、または引数 `pContext` が、この仮想プロセッサルートによって最後にディスパッチされた実行コンテキストを表していない場合にスローされます。
+`invalid_operation` は、仮想プロセッサルートがアクティブになったことがない場合、または引数 `pContext` が、この仮想プロセッサルートによって最後にディスパッチされた実行コンテキストを表していない場合にスローされます。
 
 仮想プロセッサルートを非アクティブ化することにより、基になるハードウェアスレッドのサブスクリプションレベルが1ずつ減少します。 サブスクリプションレベルの詳細については、「 [Iexecutionresource:: CurrentSubscriptionLevel](iexecutionresource-structure.md#currentsubscriptionlevel)」を参照してください。
 
-## <a name="ivirtualprocessorrootensurealltasksvisible-method"></a><a name="ensurealltasksvisible"></a>IVirtualProcessorRoot:: EnsureAllTasksVisible メソッド
+## <a name="ivirtualprocessorrootensurealltasksvisible-method"></a><a name="ensurealltasksvisible"></a> IVirtualProcessorRoot:: EnsureAllTasksVisible メソッド
 
 個々のプロセッサのメモリ階層に格納されているデータが、システム上のすべてのプロセッサに対して可視になります。 これにより、メソッドが返される前に、すべてのプロセッサで完全なメモリフェンスが実行されます。
 
@@ -136,11 +137,11 @@ virtual void EnsureAllTasksVisible(_Inout_ IExecutionContext* pContext) = 0;
 
 メソッドの呼び出しは、 `EnsureAllTasksVisibleThe` `Dispatch` 仮想プロセッサのルートが最後にアクティブ化された実行コンテキストのメソッド内で発生する必要があります。 言い換えると、メソッドを呼び出すスレッドプロキシは、 `EnsureAllTasksVisible` 仮想プロセッサルートで現在実行されているものである必要があります。 実行されていない仮想プロセッサルートでメソッドを呼び出すと、未定義の動作が発生する可能性があります。
 
-`invalid_argument`引数の値がの場合、がスローされ `pContext` `NULL` ます。
+`invalid_argument` 引数の値がの場合、がスローされ `pContext` `NULL` ます。
 
-`invalid_operation`は、仮想プロセッサルートがアクティブになったことがない場合、または引数 `pContext` が、この仮想プロセッサルートによって最後にディスパッチされた実行コンテキストを表していない場合にスローされます。
+`invalid_operation` は、仮想プロセッサルートがアクティブになったことがない場合、または引数 `pContext` が、この仮想プロセッサルートによって最後にディスパッチされた実行コンテキストを表していない場合にスローされます。
 
-## <a name="ivirtualprocessorrootgetid-method"></a><a name="getid"></a>IVirtualProcessorRoot:: GetId メソッド
+## <a name="ivirtualprocessorrootgetid-method"></a><a name="getid"></a> IVirtualProcessorRoot:: GetId メソッド
 
 仮想プロセッサルートの一意の識別子を返します。
 

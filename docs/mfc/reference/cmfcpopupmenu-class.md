@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: CMFCPopupMenu クラス'
 title: CMFCPopupMenu クラス
 ms.date: 10/18/2018
 f1_keywords:
@@ -160,12 +161,12 @@ helpviewer_keywords:
 - CMFCPopupMenu [MFC], OnChangeHot
 - CMFCPopupMenu [MFC], OnChooseItem
 ms.assetid: 9555dca1-8c9c-44c9-af72-0659ddad128e
-ms.openlocfilehash: 89089559916419bc27b0528430fe7ad12ca804b0
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 97429da34643945ff75b2a16e7bbaf6df439e425
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88841026"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97334758"
 ---
 # <a name="cmfcpopupmenu-class"></a>CMFCPopupMenu クラス
 
@@ -228,7 +229,7 @@ class CMFCPopupMenu : public CMiniFrameWnd
 |[CMFCPopupMenu:: InsertSeparator](#insertseparator)|ポップアップメニューの指定した位置に区切り記号を挿入します。|
 |[CMFCPopupMenu:: IsAlwaysClose](#isalwaysclose)||
 |[CMFCPopupMenu:: Isalways Showemptyツールエントリ](#isalwaysshowemptytoolsentry)||
-|[CMFCPopupMenu:: IsCustomizePane](#iscustomizepane)|ポップアップメニューが **Quickcustomizepane**として機能しているかどうかを示します。|
+|[CMFCPopupMenu:: IsCustomizePane](#iscustomizepane)|ポップアップメニューが **Quickcustomizepane** として機能しているかどうかを示します。|
 |[CMFCPopupMenu:: IsEscClose](#isescclose)||
 |[CMFCPopupMenu:: IsIdle](#isidle)|ポップアップメニューが現在アイドル状態かどうかを示します。|
 |[CMFCPopupMenu:: IsMenuSound](#ismenusound)||
@@ -296,7 +297,7 @@ class CMFCPopupMenu : public CMiniFrameWnd
 
 `CMFCPopupMenu`
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** afxpopupmenu
 
@@ -447,7 +448,7 @@ virtual BOOL Create(
 
 ### <a name="remarks"></a>解説
 
-*BOwnMessage*が TRUE の場合、フレームワークはすべてのメニューメッセージを*pWndParent*にルーティングします。 *bOwnMessage*が TRUE の場合、 *pWndParent*を NULL にすることはできません。 *BOwnMessage*が FALSE の場合、フレームワークはメニューメッセージを親ポップアップメニューにルーティングします。
+*BOwnMessage* が TRUE の場合、フレームワークはすべてのメニューメッセージを *pWndParent* にルーティングします。 *bOwnMessage* が TRUE の場合、 *pWndParent* を NULL にすることはできません。 *BOwnMessage* が FALSE の場合、フレームワークはメニューメッセージを親ポップアップメニューにルーティングします。
 
 ### <a name="example"></a>例
 
@@ -506,7 +507,7 @@ void EnableMenuLogo(
 
 ロゴを表示するには、メインフレームウィンドウで [CFrameWndEx:: OnDrawMenuLogo](../../mfc/reference/cframewndex-class.md#ondrawmenulogo) メソッドを実装します。
 
-*NLogoLocation*に指定できる値は、MENU_LOGO_LEFT、MENU_LOGO_RIGHT、MENU_LOGO_TOP、および MENU_LOGO_BOTTOM です。
+*NLogoLocation* に指定できる値は、MENU_LOGO_LEFT、MENU_LOGO_RIGHT、MENU_LOGO_TOP、および MENU_LOGO_BOTTOM です。
 
 ## <a name="cmfcpopupmenuenablemenusound"></a><a name="enablemenusound"></a> CMFCPopupMenu:: EnableMenuSound
 
@@ -898,7 +899,7 @@ int InsertItem(
 から追加するメニュー項目への参照。
 
 *iInsertAt*<br/>
-から新しい項目の0から始まるインデックス。 *IInsertAt*が-1 の場合、項目はメニューの最後に追加されます。
+から新しい項目の0から始まるインデックス。 *IInsertAt* が-1 の場合、項目はメニューの最後に追加されます。
 
 ### <a name="return-value"></a>戻り値
 
@@ -906,7 +907,7 @@ int InsertItem(
 
 ### <a name="remarks"></a>解説
 
-*IInsertAt*に無効な値を指定すると、このメソッドは失敗します (現在ポップアップメニューに表示されている項目の数よりも大きい整数など)。
+*IInsertAt* に無効な値を指定すると、このメソッドは失敗します (現在ポップアップメニューに表示されている項目の数よりも大きい整数など)。
 
 ## <a name="cmfcpopupmenuinsertseparator"></a><a name="insertseparator"></a> CMFCPopupMenu:: InsertSeparator
 
@@ -927,9 +928,9 @@ int InsertSeparator(int iInsertAt = -1);
 
 ### <a name="remarks"></a>解説
 
-*IInsertAt*の値-1 は、このメソッドがポップアップメニューの末尾に区切り記号を追加することを意味します。
+*IInsertAt* の値-1 は、このメソッドがポップアップメニューの末尾に区切り記号を追加することを意味します。
 
-*IInsertAt*が無効な値の場合、このメソッドは失敗します。
+*IInsertAt* が無効な値の場合、このメソッドは失敗します。
 
 ## <a name="cmfcpopupmenuisalwaysclose"></a><a name="isalwaysclose"></a> CMFCPopupMenu:: IsAlwaysClose
 
@@ -953,7 +954,7 @@ static BOOL __stdcall IsAlwaysShowEmptyToolsEntry();
 
 ## <a name="cmfcpopupmenuiscustomizepane"></a><a name="iscustomizepane"></a> CMFCPopupMenu:: IsCustomizePane
 
-ポップアップメニューが **Quickcustomizepane**として機能しているかどうかを示します。
+ポップアップメニューが **Quickcustomizepane** として機能しているかどうかを示します。
 
 ```
 BOOL IsCustomizePane();
@@ -961,11 +962,11 @@ BOOL IsCustomizePane();
 
 ### <a name="return-value"></a>戻り値
 
-ポップアップが **QuckCustomizePane**の場合は TRUE を返します。それ以外の場合は FALSE。
+ポップアップが **QuckCustomizePane** の場合は TRUE を返します。それ以外の場合は FALSE。
 
 ### <a name="remarks"></a>解説
 
-ユーザーがポップアップメニューを直接カスタマイズできるようにするには、[ **Quickcustomizepane ウィンドウ** を使用します。 **Quickcustomizepane**は、 `CMFCPopupMenu` ユーザーがツールバーボタンをクリックして直接編集したときに表示されるです。
+ユーザーがポップアップメニューを直接カスタマイズできるようにするには、[ **Quickcustomizepane ウィンドウ** を使用します。 **Quickcustomizepane** は、 `CMFCPopupMenu` ユーザーがツールバーボタンをクリックして直接編集したときに表示されるです。
 
 アプリケーションでは、 [CMDIFrameWndEx:: OnShowCustomizePane](../../mfc/reference/cmdiframewndex-class.md#onshowcustomizepane)中にこのメソッドを呼び出す必要があります。
 
@@ -1238,7 +1239,7 @@ static void SetAnimationSpeed(UINT nElapse);
 
 アニメーションの速度はグローバルな値であり、アプリケーションのすべてのポップアップメニューに影響します。 この値は、ポップアップメニューのアニメーションを完了するために必要な時間を指定します。
 
-既定では、このパラメーターは30ミリ秒に設定されています。 *Nelapse*の有効な値の範囲は 0 ~ 200 です。
+既定では、このパラメーターは30ミリ秒に設定されています。 *Nelapse* の有効な値の範囲は 0 ~ 200 です。
 
 ## <a name="cmfcpopupmenusetanimationtype"></a><a name="setanimationtype"></a> CMFCPopupMenu:: Setアニメーションの種類
 
@@ -1255,7 +1256,7 @@ static void SetAnimationType(CMFCPopupMenu::ANIMATION_TYPE type);
 
 ### <a name="remarks"></a>解説
 
-*型*の有効な値の一覧については、「 [CMFCPopupMenu:: getアニメーション型](#getanimationtype)」を参照してください。
+*型* の有効な値の一覧については、「 [CMFCPopupMenu:: getアニメーション型](#getanimationtype)」を参照してください。
 
 ## <a name="cmfcpopupmenusetautodestroy"></a><a name="setautodestroy"></a> CMFCPopupMenu:: SetAutoDestroy
 
@@ -1472,5 +1473,5 @@ void UpdateShadow(LPRECT lprectScreen = NULL);
 ## <a name="see-also"></a>関連項目
 
 [階層図](../../mfc/hierarchy-chart.md)<br/>
-[クラス](../../mfc/reference/mfc-classes.md)<br/>
+[Classes](../../mfc/reference/mfc-classes.md)<br/>
 [CMFCPopupMenuBar クラス](../../mfc/reference/cmfcpopupmenubar-class.md)

@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: db_param'
 title: db_param (C++ COM 属性)
 ms.date: 10/02/2018
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - db_param attribute
 ms.assetid: a28315f5-4722-459e-92ef-32e83c0b205a
-ms.openlocfilehash: 008a7f1ea07e6c23ad6d812ac4fbf3b30ef1da89
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 27666b4cdf027e24b54326a3acc5fe701b9f6f44
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88833076"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97333106"
 ---
 # <a name="db_param"></a>db_param
 
@@ -47,7 +48,7 @@ Optional列エントリに使用される有効桁数。 詳細については�
 Optional列エントリに使用される小数点以下桁数です。 詳細については、 `bScale` [DBBINDING 構造体](/previous-versions/windows/desktop/ms716845(v=vs.85))の要素の説明を参照してください。
 
 *status*<br/>
-Optionalこの列の状態を保持するために使用されるメンバー変数。 状態は、列の値がデータ値か、NULL などの他の値であるかを示します。 使用可能な値については、 *OLE DB プログラマーリファレンス*の「 [Status](/previous-versions/windows/desktop/ms722617(v=vs.85)) 」を参照してください。
+Optionalこの列の状態を保持するために使用されるメンバー変数。 状態は、列の値がデータ値か、NULL などの他の値であるかを示します。 使用可能な値については、 *OLE DB プログラマーリファレンス* の「 [Status](/previous-versions/windows/desktop/ms722617(v=vs.85)) 」を参照してください。
 
 *length*<br/>
 Optional列のサイズを保持するために使用されるメンバー変数 (バイト単位)。
@@ -56,11 +57,11 @@ Optional列のサイズを保持するために使用されるメンバー変数
 
 **db_param** は、コマンドで使用するパラメーターを定義します。したがって、と共に使用し `db_command` ます。 たとえば、 **db_param** を使用して、SQL クエリまたはストアドプロシージャでパラメーターをバインドできます。 ストアドプロシージャのパラメーターは疑問符 (?) で示されます。また、パラメーターが表示される順序でデータメンバーをバインドする必要があります。
 
-OLE DB ベースのバインドに参加できるメンバーデータを区切る**db_param** `ICommandWithParameters` ます。 パラメーターの型 (入力または出力)、OLE DB 型、有効桁数、小数点以下桁数、状態、および長さを指定したパラメーターに設定します。 この属性は OLE DB コンシューマーマクロ BEGIN_PARAM_MAP を挿入します...END_PARAM_MAP。 **Db_param**属性でマークした各メンバーは、マップ内の1つのエントリを COLUMN_ENTRY の形式で使用します。
+OLE DB ベースのバインドに参加できるメンバーデータを区切る **db_param** `ICommandWithParameters` ます。 パラメーターの型 (入力または出力)、OLE DB 型、有効桁数、小数点以下桁数、状態、および長さを指定したパラメーターに設定します。 この属性は OLE DB コンシューマーマクロ BEGIN_PARAM_MAP を挿入します...END_PARAM_MAP。 **Db_param** 属性でマークした各メンバーは、マップ内の1つのエントリを COLUMN_ENTRY の形式で使用します。
 
 **db_param** は、 [db_table](db-table.md) 属性または [db_command](db-command.md) 属性と組み合わせて使用されます。
 
-コンシューマー属性プロバイダーがこの属性をクラスに適用すると、コンパイラはクラスの名前を \_ *classname*アクセサーに変更します。ここで、 *classname*はクラスに指定した名前になります。また、コンパイラは*classname と*いうクラスを作成します。これは classname アクセサーから派生し \_ *YourClassName*ます。  クラス ビューでは、両方のクラスが表示されます。
+コンシューマー属性プロバイダーがこの属性をクラスに適用すると、コンパイラはクラスの名前を \_ *classname* アクセサーに変更します。ここで、 *classname* はクラスに指定した名前になります。また、コンパイラは *classname と* いうクラスを作成します。これは classname アクセサーから派生し \_ ます。  クラス ビューでは、両方のクラスが表示されます。
 
 ## <a name="example"></a>例
 
@@ -102,7 +103,7 @@ struct CSalesbyYear {
 };
 ```
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 | 属性コンテキスト | 値 |
 |-|-|

@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: __vmx_on'
 title: __vmx_on
 ms.date: 09/02/2019
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - VMXON instruction
 - __vmx_on intrinsic
 ms.assetid: 16804991-6a75-4adf-8ec2-bc95acfa4801
-ms.openlocfilehash: b6041711d9b6806362b856475151f2c4f63750cb
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: a1e9171fe64a239b592f0d27ec49d4159b46523d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70219578"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97333578"
 ---
 # <a name="__vmx_on"></a>__vmx_on
 
@@ -35,23 +36,23 @@ unsigned char __vmx_on(
 
 ## <a name="return-value"></a>戻り値
 
-|値|説明|
+|値|意味|
 |-----------|-------------|
 |0|操作が成功しました。|
 |1|現在 VMCS の `VM-instruction error field` で有効な拡張状態が発生したため、操作は失敗しました。|
 |2|有効な状態がないため操作は失敗しました。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-関数`__vmx_on`は、 `VMXON`マシン命令に対応します。 この関数は、ホストの仮想マシンのモニターと、ゲスト オペレーティング システムとそのアプリケーションとの対話をサポートします。 詳細については、 [Intel Corporation](https://software.intel.com/articles/intel-sdm)サイトのドキュメント「IA-32 intel Architecture の Intel Virtualization Technical Specification」 (ドキュメント番号 C97063-002) を検索してください。
+関数は、 `__vmx_on` マシン命令に対応し `VMXON` ます。 この関数は、ホストの仮想マシンのモニターと、ゲスト オペレーティング システムとそのアプリケーションとの対話をサポートします。 詳細については、 [Intel Corporation](https://software.intel.com/articles/intel-sdm) サイトのドキュメント「IA-32 intel Architecture の Intel Virtualization Technical Specification」 (ドキュメント番号 C97063-002) を検索してください。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-|組み込み|アーキテクチャ|
+|Intrinsic|アーキテクチャ|
 |---------------|------------------|
 |`__vmx_on`|X64|
 
-**ヘッダーファイル**\<>
+**ヘッダー ファイル** \<intrin.h>
 
 **Microsoft 固有の仕様はここまで**
 

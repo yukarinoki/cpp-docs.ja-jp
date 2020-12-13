@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: __svm_vmrun'
 title: __svm_vmrun
 ms.date: 09/02/2019
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - __svm_vmrun intrinsic
 - VMRUN instruction
 ms.assetid: ae98a781-fc17-47b2-b40f-86fcebf1867b
-ms.openlocfilehash: f23df894cc8ad1c270c4c0acbc97cab727e47d93
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: c01716e496513aa11132fdfc95235a39c7277279
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70219822"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97333701"
 ---
 # <a name="__svm_vmrun"></a>__svm_vmrun
 
@@ -33,19 +34,19 @@ void __svm_vmrun(
 *VmcbPhysicalAddress*\
 からVMCB の物理アドレス。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-関数`__svm_vmrun`は、仮想マシンのゲストコードの実行を開始するために、vmcb 内の最小限の情報を使用します。 複雑な割り込みを処理したり、別のゲストに切り替えたりするための情報を追加する必要がある場合は、 [__ svmvmsave](../intrinsics/svm-vmsave.md)または[__ svmの vmload](../intrinsics/svm-vmload.md)関数を使用します。
+関数は、 `__svm_vmrun` 仮想マシンのゲストコードの実行を開始するために、VMCB 内の最小限の情報を使用します。 複雑な割り込みを処理したり、別のゲストに切り替えたりするために詳細情報が必要な場合は、 [__svm_vmsave](../intrinsics/svm-vmsave.md) または [__svm_vmload](../intrinsics/svm-vmload.md) 関数を使用します。
 
-`__svm_vmrun` 関数は `VMRUN` マシン語命令と同じです。 この関数は、ホストの仮想マシンのモニターと、ゲスト オペレーティング システムとそのアプリケーションとの対話をサポートします。 詳細については、「AMD64 アーキテクチャプログラマの手動ボリューム 2:[AMD corporation](https://developer.amd.com/resources/developer-guides-manuals/)サイトでのシステムプログラミング、"ドキュメント番号24593、リビジョン3.11 以降。
+`__svm_vmrun` 関数は `VMRUN` マシン語命令と同じです。 この関数は、ホストの仮想マシンのモニターと、ゲスト オペレーティング システムとそのアプリケーションとの対話をサポートします。 詳細については、 [AMD corporation](https://developer.amd.com/resources/developer-guides-manuals/) サイトのドキュメント「AMD64 アーキテクチャプログラマーの手動ボリューム 2: システムプログラミング」、「ドキュメント番号24593、リビジョン3.11 以降」を検索してください。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-|組み込み|アーキテクチャ|
+|Intrinsic|アーキテクチャ|
 |---------------|------------------|
 |`__svm_vmrun`|x86、x64|
 
-**ヘッダーファイル**\<>
+**ヘッダー ファイル** \<intrin.h>
 
 **Microsoft 固有の仕様はここまで**
 

@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: __svm_vmsave'
 title: __svm_vmsave
 ms.date: 09/02/2019
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - VMSAVE instruction
 - __svm_vmsave intrinsic
 ms.assetid: 617a60bd-8514-4ba1-8066-bcf4dd481030
-ms.openlocfilehash: f91efa7116a8a8e9ebe27c7e5e4e64c4f1533e9d
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 5c0e4eb5f2d4c0f73921572811b070c8f87a2673
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70219797"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97333676"
 ---
 # <a name="__svm_vmsave"></a>__svm_vmsave
 
@@ -33,17 +34,17 @@ void __svm_vmsave(
 *VmcbPhysicalAddress*\
 からVMCB の物理アドレス。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-`__svm_vmsave` 関数は `VMSAVE` マシン語命令と同じです。 この関数は、ホストの仮想マシンのモニターと、ゲスト オペレーティング システムとそのアプリケーションとの対話をサポートします。 詳細については、「AMD64 アーキテクチャプログラマの手動ボリューム 2:[AMD Corporation](https://developer.amd.com/resources/developer-guides-manuals/)サイトでのシステムプログラミング、"ドキュメント番号24593、リビジョン3.11 以降。
+`__svm_vmsave` 関数は `VMSAVE` マシン語命令と同じです。 この関数は、ホストの仮想マシンのモニターと、ゲスト オペレーティング システムとそのアプリケーションとの対話をサポートします。 詳細については、 [AMD Corporation](https://developer.amd.com/resources/developer-guides-manuals/) サイトのドキュメント「AMD64 アーキテクチャプログラマーの手動ボリューム 2: システムプログラミング」、「ドキュメント番号24593、リビジョン3.11 以降」を検索してください。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-|組み込み|アーキテクチャ|
+|Intrinsic|アーキテクチャ|
 |---------------|------------------|
 |`__svm_vmsave`|x86、x64|
 
-**ヘッダーファイル**\<>
+**ヘッダー ファイル** \<intrin.h>
 
 **Microsoft 固有の仕様はここまで**
 

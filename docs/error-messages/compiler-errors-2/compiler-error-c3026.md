@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「コンパイラエラー C3026」を参照してください。
 title: コンパイラ エラー C3026
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3026
 ms.assetid: 3297060e-cc5b-4600-a2db-09bfc4ffa21f
-ms.openlocfilehash: a6779e4181525a9fcb855712f762974d9b49913e
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: e388fbaca270ab889b7873677ab2b2e8252780a9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74741808"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97335067"
 ---
 # <a name="compiler-error-c3026"></a>コンパイラ エラー C3026
 
@@ -19,7 +20,7 @@ ms.locfileid: "74741808"
 
 句に整数値が渡されましたが、値が正の数値ではありませんでした。 値は正の数値である必要があります。
 
-## <a name="example"></a>使用例
+## <a name="example"></a>例
 
 次の例では C3026 が生成されます。
 

@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: _aligned_free_dbg'
 title: _aligned_free_dbg
 ms.date: 11/04/2016
 api_name:
@@ -25,12 +26,12 @@ helpviewer_keywords:
 - _aligned_free_dbg function
 - aligned_free_dbg function
 ms.assetid: eb0cb3c8-0992-4db8-bac3-65f1b8311ca6
-ms.openlocfilehash: 18c1a23d666070afaf1eff687c7d33b0240f0ac3
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 7320cb800cf42f7b641ed1d60afaf5d2144990e8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80171282"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97335687"
 ---
 # <a name="_aligned_free_dbg"></a>_aligned_free_dbg
 
@@ -51,13 +52,13 @@ void _aligned_free_dbg(
 
 ## <a name="remarks"></a>解説
 
-**_Aligned_free_dbg**関数は、 [_aligned_free](aligned-free.md)関数のデバッグバージョンです。 [_DEBUG](../../c-runtime-library/debug.md)が定義されていない場合、 **_aligned_free_dbg**の各呼び出しは `_aligned_free`への呼び出しに限定されます。 `_aligned_free` と **_aligned_free_dbg**は、ベースヒープ内のメモリブロックを解放しますが、 **_aligned_free_dbg**はデバッグ機能に対応しています。解放されたブロックをヒープのリンクリストに保持してメモリ不足の状態をシミュレートする機能です。
+**_Aligned_free_dbg** 関数は、 [_aligned_free](aligned-free.md)関数のデバッグバージョンです。 [_DEBUG](../../c-runtime-library/debug.md)が定義されていない場合、 **_aligned_free_dbg** の各呼び出しはの呼び出しに限定され `_aligned_free` ます。 `_aligned_free`と **_aligned_free_dbg** は、ベースヒープ内のメモリブロックを解放しますが、 **_aligned_free_dbg** はデバッグ機能に対応しています。解放されたブロックをヒープのリンクリストに保持してメモリ不足の状態をシミュレートする機能です。
 
-**_aligned_free_dbg**は、空き操作を実行する前に、指定されたすべてのファイルとブロックの場所に対して有効性チェックを実行します。 アプリケーションは、この情報を提供する必要はありません。 メモリ ブロックが解放されると、デバッグ ヒープ マネージャーはユーザー部分の前後のバッファーの整合性を自動的にチェックし、それらのバッファーが上書きされていた場合はエラー レポートを発行します。 [_CrtDbgFlag](../../c-runtime-library/crtdbgflag.md)フラグの _CRTDBG_DELAY_FREE_MEM_DF ビットフィールドが設定されている場合、解放されたブロックは値0xdd を格納し、_FREE_BLOCK ブロック型が割り当てられ、ヒープのメモリブロックのリンクリストに保持されます。
+**_aligned_free_dbg** は、空き操作を実行する前に、指定されたすべてのファイルとブロックの場所に対して有効性チェックを実行します。 アプリケーションは、この情報を提供する必要はありません。 メモリ ブロックが解放されると、デバッグ ヒープ マネージャーはユーザー部分の前後のバッファーの整合性を自動的にチェックし、それらのバッファーが上書きされていた場合はエラー レポートを発行します。 [_CrtDbgFlag](../../c-runtime-library/crtdbgflag.md)フラグの _CRTDBG_DELAY_FREE_MEM_DF ビットフィールドが設定されている場合、解放されたブロックは値0xdd を格納し、_FREE_BLOCK ブロック型が割り当てられ、ヒープのメモリブロックのリンクリストに保持されます。
 
-メモリの解放でエラーが発生すると、エラーの性質に関するオペレーティング システムからの情報が `errno` に設定されます。 詳細については、「[errno、_doserrno、_sys_errlist、_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」をご覧ください。
+メモリの解放でエラーが発生すると、エラーの性質に関するオペレーティング システムからの情報が `errno` に設定されます。 詳細については、「[errno、_doserrno、_sys_errlist、および _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」を参照してください。
 
-デバッグ バージョンのベース ヒープに対するメモリ ブロックの割り当て、初期化、管理方法については、「 [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details)」をご覧ください。 割り当てブロック型と、それらがどのように使用されるかについては、「[デバッグ ヒープ上のメモリ ブロックの型](/visualstudio/debugger/crt-debug-heap-details)」をご覧ください。 標準で呼び出すヒープ関数と、アプリケーションのデバッグ ビルドで呼び出すデバッグ バージョンのヒープ関数との違いの詳細については、「[デバッグ バージョンのヒープ割り当て関数](/visualstudio/debugger/debug-versions-of-heap-allocation-functions)」をご覧ください。
+デバッグ バージョンのベース ヒープに対するメモリ ブロックの割り当て、初期化、管理方法については、「 [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details)」をご覧ください。 割り当てブロックの型とその使用方法については、「 [デバッグヒープ上のブロックの型](/visualstudio/debugger/crt-debug-heap-details)」を参照してください。 標準で呼び出すヒープ関数と、アプリケーションのデバッグ ビルドで呼び出すデバッグ バージョンのヒープ関数との違いの詳細については、「[デバッグ バージョンのヒープ割り当て関数](/visualstudio/debugger/debug-versions-of-heap-allocation-functions)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
@@ -65,8 +66,8 @@ void _aligned_free_dbg(
 |-------------|---------------------|
 |**_aligned_free_dbg**|\<crtdbg.h>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性について詳しくは、「 [Compatibility](../../c-runtime-library/compatibility.md)」をご覧ください。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[デバッグ ルーチン](../../c-runtime-library/debug-routines.md)
+[デバッグルーチン](../../c-runtime-library/debug-routines.md)

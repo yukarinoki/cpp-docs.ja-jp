@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: _searchenv、_wsearchenv'
 title: _searchenv、_wsearchenv
 ms.date: 4/2/2020
 api_name:
@@ -40,12 +41,12 @@ helpviewer_keywords:
 - searchenv function
 - environment paths
 ms.assetid: 9c944a27-d326-409b-aee6-410e8762d9d3
-ms.openlocfilehash: 83ba5663d569d449a0024db5abe2eb3ee903123b
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 411cb2b909d3ed948adcce97c41ace1a806f2f02
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82913221"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97334118"
 ---
 # <a name="_searchenv-_wsearchenv"></a>_searchenv、_wsearchenv
 
@@ -83,7 +84,7 @@ void _wsearchenv(
 
 ### <a name="parameters"></a>パラメーター
 
-*/db*<br/>
+*filename*<br/>
 検索するファイルの名前。
 
 *varname*<br/>
@@ -94,19 +95,19 @@ void _wsearchenv(
 
 ## <a name="remarks"></a>解説
 
-**_Searchenv**ルーチンは、指定されたドメインでターゲットファイルを検索します。 *Varname*変数には、ディレクトリパスの一覧を指定する任意の環境またはユーザー定義変数 ( **PATH**、 **LIB**、 **INCLUDE**など) を指定できます。 **_Searchenv**では大文字と小文字が区別されるため、 *varname*は環境変数の場合と一致している必要があります。
+**_Searchenv** ルーチンは、指定されたドメインでターゲットファイルを検索します。 *Varname* 変数には、ディレクトリパスの一覧を指定する任意の環境またはユーザー定義変数 ( **PATH**、 **LIB**、 **INCLUDE** など) を指定できます。 **_Searchenv** では大文字と小文字が区別されるため、 *varname* は環境変数の場合と一致している必要があります。
 
-このルーチンは最初に現在の作業ディレクトリでファイルを検索します。 ファイルが見つからなかった場合、環境変数で指定されているディレクトリを検索します。 ターゲットファイルがこれらのディレクトリのいずれかにある場合は、新しく作成されたパスが*pathname*にコピーされます。 *Filename*ファイルが見つからない場合、 *pathname*には null で終わる空の文字列が含まれます。
+このルーチンは最初に現在の作業ディレクトリでファイルを検索します。 ファイルが見つからなかった場合、環境変数で指定されているディレクトリを検索します。 ターゲットファイルがこれらのディレクトリのいずれかにある場合は、新しく作成されたパスが *pathname* にコピーされます。 *Filename* ファイルが見つからない場合、 *pathname* には null で終わる空の文字列が含まれます。
 
-作成されたパス名の完全な長さを格納するには、*パス*名バッファーは少なくとも **_MAX_PATH**文字である必要があります。 それ以外の場合、 **_searchenv**によって*パス名*バッファーがオーバーランし、予期しない動作が発生する可能性があります。
+作成されたパス名の完全な長さを格納するには、 *パス* 名バッファーは少なくとも **_MAX_PATH** 文字である必要があります。 それ以外の場合、 **_searchenv** によって *パス名* バッファーがオーバーランし、予期しない動作が発生する可能性があります。
 
-**_wsearchenv**は **_searchenv**のワイド文字バージョンであり、 **_wsearchenv**する引数はワイド文字列です。 **_wsearchenv**と **_searchenv**は同じように動作します。
+**_wsearchenv** は **_searchenv** のワイド文字バージョンであり、 **_wsearchenv** する引数はワイド文字列です。 **_wsearchenv** と **_searchenv** は同じように動作します。
 
-*Filename*が空の文字列の場合、これらの関数は**ENOENT**を返します。
+*Filename* が空の文字列の場合、これらの関数は **ENOENT** を返します。
 
-*Filename*または*pathname*が**NULL**ポインターの場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、これらの関数は-1 を返し、 **errno**を**EINVAL**に設定します。
+*Filename* または *pathname* が **NULL** ポインターの場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、これらの関数は-1 を返し、 **errno** を **EINVAL** に設定します。
 
-**Errno**とエラーコードの詳細については、「 [errno 定数](../../c-runtime-library/errno-constants.md)」を参照してください。
+**Errno** とエラーコードの詳細については、「 [errno 定数](../../c-runtime-library/errno-constants.md)」を参照してください。
 
 C++ では、これらの関数にテンプレートのオーバーロードがあります。このオーバーロードは、これらの関数に対応するセキュリティを強化された新しい関数を呼び出します。 詳細については、「[セキュリティ保護されたテンプレート オーバーロード](../../c-runtime-library/secure-template-overloads.md)」を参照してください。
 
@@ -120,7 +121,7 @@ C++ では、これらの関数にテンプレートのオーバーロードが�
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**_searchenv**|\<stdlib.h>|
 |**_wsearchenv**|\<stdlib.h> または \<wchar.h>|
@@ -161,7 +162,7 @@ C:\Program Files\Microsoft Visual Studio 8\VC\BIN\CL.EXE
 
 ## <a name="see-also"></a>関連項目
 
-[ディレクトリ制御](../../c-runtime-library/directory-control.md)<br/>
+[ディレクトリコントロール](../../c-runtime-library/directory-control.md)<br/>
 [getenv、 _wgetenv](getenv-wgetenv.md)<br/>
 [_putenv、_wputenv](putenv-wputenv.md)<br/>
 [_searchenv_s、_wsearchenv_s](searchenv-s-wsearchenv-s.md)<br/>

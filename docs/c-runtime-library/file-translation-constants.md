@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「ファイル変換定数」を参照してください。
 title: ファイル変換定数
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - constants [C++], file translation mode
 - file translation [C++]
 ms.assetid: 49b13bf3-442e-4d19-878b-bd1029fa666a
-ms.openlocfilehash: 363d95e744ccdb45cf06b8303ae4b60c9ecd58c1
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 75bb54c7e038efd41ed22ec941d871f6fbc54b7c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79443263"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97332989"
 ---
 # <a name="file-translation-constants"></a>ファイル変換定数
 
@@ -24,9 +25,9 @@ ms.locfileid: "79443263"
 #include <stdio.h>
 ```
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
-これらの定数は、変換モードを指定します ( **"b"** または **"t"** )。 このモードは、アクセスの種類 ( **"r"** 、 **"w"** 、 **"a"** 、 **"r+"** 、 **"w+"** 、 **"a+"** ) を指定する文字列に含まれます。
+これらの定数は、変換モードを指定します (**"b"** または **"t"**)。 このモードは、アクセスの種類 (**"r"**、**"w"**、**"a"**、**"r+"**、**"w+"**、**"a+"**) を指定する文字列に含まれます。
 
 変換モードは次のとおりです。
 
@@ -43,9 +44,9 @@ ms.locfileid: "79443263"
 
 **t** または **b** を *mode* に指定しない場合、変換モードは既定のモード変数 [_fmode](../c-runtime-library/fmode.md) によって定義されます。 テキスト モードとバイナリ モードの使用の詳細については、「[テキスト モードとバイナリ モードのファイル入出力](../c-runtime-library/text-and-binary-mode-file-i-o.md)」をご覧ください。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[_fdopen、wfdopen](../c-runtime-library/reference/fdopen-wfdopen.md)<br/>
+[_fdopen、_wfdopen](../c-runtime-library/reference/fdopen-wfdopen.md)<br/>
 [fopen、_wfopen](../c-runtime-library/reference/fopen-wfopen.md)<br/>
 [freopen、_wfreopen](../c-runtime-library/reference/freopen-wfreopen.md)<br/>
 [_fsopen、_wfsopen](../c-runtime-library/reference/fsopen-wfsopen.md)<br/>

@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: __ud2'
 title: __ud2
 ms.date: 09/02/2019
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - UD2 instruction
 - __ud2 intrinsic
 ms.assetid: 0831cd5a-8b65-402e-bb57-11e1d5d7ffd2
-ms.openlocfilehash: b5aa20804099af4d75dcc62a5e62ccc0d4a09566
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 2b5f0b9ffec066baa3eb2fa212dfc7baf3a6cb49
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70219762"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97333667"
 ---
 # <a name="__ud2"></a>__ud2
 
@@ -26,19 +27,19 @@ ms.locfileid: "70219762"
 void __ud2();
 ```
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 定義されていない命令を実行すると、プロセッサは無効なオペコード例外を発生させます。
 
-関数は`UD2`コンピューター命令と同じであり、カーネルモードでのみ使用できます。 `__ud2` 詳細については、「Intel Architecture Software Developer's Manual, Volume 2:命令セットリファレンス、「 [」を参照してください](https://software.intel.com/articles/intel-sdm)。
+関数はコンピューター命令と同じであり、 `__ud2` `UD2` カーネルモードでのみ使用できます。 詳細については、 [Intel Corporation](https://software.intel.com/articles/intel-sdm) サイトのドキュメント「Intel Architecture Software Developer's Manual, Volume 2: 命令セットリファレンス」を検索してください。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-|組み込み|アーキテクチャ|
+|Intrinsic|アーキテクチャ|
 |---------------|------------------|
 |`__ud2`|x86、x64|
 
-**ヘッダーファイル**\<>
+**ヘッダー ファイル** \<intrin.h>
 
 **Microsoft 固有の仕様はここまで**
 

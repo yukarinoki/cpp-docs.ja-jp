@@ -1,16 +1,17 @@
 ---
+description: '詳細情報: Cmfcprintプレビューツールバークラス'
 title: Cmfcprintプレビューツールバークラス
 ms.date: 11/04/2016
 helpviewer_keywords:
 - CMFCPrintPreviewToolBar class [MFC]
 - CMFCPrintPreviewToolBar class [MFC], destructor
 ms.assetid: 7b9f641b-d402-4339-8815-e5247237e7e5
-ms.openlocfilehash: ee66c5faf12a8fd651c481f058c24b649a6c2fb4
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 69fef1ff5cc2a1ec8be99bdc896491fdbae19184
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88838647"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97334711"
 ---
 # <a name="cmfcprintpreviewtoolbar-class"></a>Cmfcprintプレビューツールバークラス
 
@@ -54,7 +55,7 @@ class CMFCPrintPreviewToolBar : public CMFCToolBar
 
 [Cmfcprintプレビューツールバー](../../mfc/reference/cmfcprintpreviewtoolbar-class.md)
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** afxpreviewviewex
 

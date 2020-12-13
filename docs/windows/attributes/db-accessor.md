@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: db_accessor'
 title: db_accessor (C++ COM 属性)
 ms.date: 10/02/2018
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - db_accessor attribute
 ms.assetid: ec407a9f-24d7-4822-96d4-7cc6a0301815
-ms.openlocfilehash: 2a4c5475007cbc516f1a06c6bf858089ba24311f
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: b32fb16fe938a84280b0fb047923bbc2aa687c75
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91503554"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97333125"
 ---
 # <a name="db_accessor"></a>db_accessor
 
@@ -31,15 +32,15 @@ ms.locfileid: "91503554"
 *auto*<br/>
 アクセサーが自動的に取得されるか (TRUE)、取得されないか (FALSE) を指定するブール値。
 
-## <a name="remarks"></a>注釈
+## <a name="remarks"></a>解説
 
 **db_accessor** `db_column` `db_param` は、同じクラスまたは関数内の後続のおよび属性の基になる OLE DB アクセサーを定義します。 **db_accessor** はメンバーレベルで使用 `db_column` でき、OLE DB ベースのバインドに参加する属性をグループ化するために使用され `IAccessor` ます。 または属性と組み合わせて使用さ `db_table` れ `db_command` ます。 この属性を呼び出すことは、マクロの [BEGIN_ACCESSOR](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md#begin_accessor) と [END_ACCESSOR](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md#end_accessor) の呼び出しに似ています。
 
-**db_accessor** は、行セットを生成し、それを対応するアクセサーマップにバインドします。 **Db_accessor**を呼び出さないと、アクセサー0が自動的に生成され、すべての列のバインドがこのアクセサーブロックにマップされます。
+**db_accessor** は、行セットを生成し、それを対応するアクセサーマップにバインドします。 **Db_accessor** を呼び出さないと、アクセサー0が自動的に生成され、すべての列のバインドがこのアクセサーブロックにマップされます。
 
 **db_accessor** 、データベースの列バインドを1つ以上のアクセサーにグループ化します。 複数のアクセサーを使用する必要があるシナリオの詳細については、「 [行セットでの複数のアクセサーの使用](../../data/oledb/using-multiple-accessors-on-a-rowset.md)」を参照してください。 「 [ユーザーレコード](../../data/oledb/user-records.md)」の「複数のアクセサーのユーザーレコードのサポート」も参照してください。
 
-コンシューマー属性プロバイダーがこの属性をクラスに適用すると、コンパイラはクラスの名前を \_ *classname*アクセサーに変更します。ここで、 *classname*はクラスに指定した名前になります。また、コンパイラは*classname と*いうクラスを作成します。これは classname アクセサーから派生し \_ *YourClassName*ます。  クラス ビューでは、両方のクラスが表示されます。
+コンシューマー属性プロバイダーがこの属性をクラスに適用すると、コンパイラはクラスの名前を \_ *classname* アクセサーに変更します。ここで、 *classname* はクラスに指定した名前になります。また、コンパイラは *classname と* いうクラスを作成します。これは classname アクセサーから派生し \_ ます。  クラス ビューでは、両方のクラスが表示されます。
 
 ## <a name="example"></a>例
 
@@ -65,14 +66,14 @@ public:
 };
 ```
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 | 属性コンテキスト | 値 |
 |-|-|
 |**適用対象**|属性ブロック|
 |**Repeatable**|いいえ|
-|**必須属性**|None|
-|**無効な属性**|None|
+|**必須属性**|なし|
+|**無効な属性**|なし|
 
 属性コンテキストの詳細については、「 [属性コンテキスト](cpp-attributes-com-net.md#contexts)」を参照してください。
 
