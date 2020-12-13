@@ -1,15 +1,16 @@
 ---
+description: '詳細情報: Concurrency:: graphics 名前空間'
 title: Concurrency::graphics 名前空間
 ms.date: 11/04/2016
 f1_keywords:
 - AMP_GRAPHICS/Concurrency
 ms.assetid: 4529d3b1-d7da-4ffb-82bf-080915e0f23e
-ms.openlocfilehash: 942b3bbace85fa297bba6cd4b509f67006a4aed3
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: f4ab25a6bc6e7bfd318ea58bb6a7efe403c51a89
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87226738"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97132835"
 ---
 # <a name="concurrencygraphics-namespace"></a>Concurrency::graphics 名前空間
 
@@ -78,7 +79,7 @@ namespace graphics;
 |[copy](concurrency-graphics-namespace-functions.md#copy)|オーバーロードされます。 ソース テクスチャの内容をターゲット ホスト バッファーにコピーします。|
 |[copy_async](concurrency-graphics-namespace-functions.md#copy_async)|オーバーロードされます。 ソース テクスチャの内容をターゲット ホスト バッファーに非同期にコピーします。|
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** amp_graphics
 
