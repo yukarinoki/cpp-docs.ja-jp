@@ -1,31 +1,32 @@
 ---
+description: ': SIMD 拡張機能についての詳細情報'
 title: SIMD 拡張命令
 ms.date: 03/20/2019
 helpviewer_keywords:
 - SIMD
 - OpenMP in Visual C++, new features
 - explicit parallelization, new features
-ms.openlocfilehash: 0a7f1142a3a432628795341f4885b76a5c144990
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 58a3f29002c4e517a2019454dfe741dfb5352a3e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81366450"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97342427"
 ---
 # <a name="simd-extension"></a>SIMD 拡張命令
 
-Visual C++ は現在、OpenMP 2.0 標準をサポートしますが、現在では、Visual Studio 2019 には SIMD 機能も用意されています。
+現在、Visual C++ では OpenMP 2.0 標準がサポートされていますが、Visual Studio 2019 には SIMD 機能も用意されています。
 
 > [!NOTE]
-> SIMD を使用するには、スイッチ`-openmp:experimental`を使用する場合に使用できない追加の OpenMP`-openmp`機能を有効にするスイッチを使用してコンパイルします。
+> SIMD を使用するには、スイッチを使用する `-openmp:experimental` ときに使用できない追加の OpenMP 機能を有効にするスイッチを使用してコンパイルし `-openmp` ます。
 >
-> スイッチ`-openmp:experimental`は`-openmp`、すべての OpenMP 2.0 機能が使用に含まれていることを意味します。
+> `-openmp:experimental`スイッチ subsumes `-openmp` 。これは、すべての OpenMP 2.0 機能が使用されることを意味します。
 
-詳細については、「 [C++ OpenMP の SIMD 拡張機能 」を参照](https://devblogs.microsoft.com/cppblog/simd-extension-to-c-openmp-in-visual-studio/)してください。
+詳細については、「 [Visual Studio での C++ OpenMP の SIMD 拡張」を](https://devblogs.microsoft.com/cppblog/simd-extension-to-c-openmp-in-visual-studio/)参照してください。
 
-## <a name="openmp-simd-in-visual-c"></a>ビジュアル C++ でのオープン MP SIMD
+## <a name="openmp-simd-in-visual-c"></a>Visual C++ の OpenMP SIMD
 
-OpenMP 4.0 規格で導入された OpenMP SIMD は、ベクトルに優しいループを作るターゲットです。 ループの前`simd`にディレクティブを使用することで、コンパイラはベクトルの依存関係を無視し、可能な限りベクトルに優しくループを作成し、複数のループ反復を同時に実行するユーザーの意図を尊重することができます。
+Openmp SIMD は、OpenMP 4.0 標準で導入され、ベクターを使いやすくするループを作成しています。 ループの前にディレクティブを使用することにより、 `simd` コンパイラはベクターの依存関係を無視し、可能な限りベクトルをわかりやすくすることができます。また、複数のループの反復が同時に実行されることをユーザーの意図として考慮します。
 
 ```c
     #pragma omp simd
@@ -37,15 +38,15 @@ OpenMP 4.0 規格で導入された OpenMP SIMD は、ベクトルに優しい�
     }
 ```
 
-Visual C++ は、同様の非 OpenMP`#pragma vector`ループ`#pragma ivdep`プラグマを提供し、 と同様に、 OpenMP SIMD を使用すると、コンパイラは次のように、より多くのことができます。
+Visual C++ には、やのような OpenMP 以外のループプラグマが `#pragma vector` `#pragma ivdep` ありますが、openmp SIMD を使用すると、コンパイラは次のような処理を行うことができます。
 
-- 常に現在のベクターの依存関係を無視できます。
-- `/fp:fast`ループ内で有効になります。
-- 関数呼び出しを使用した外部ループとループは、ベクトルに優しいものです。
-- ネストされたループは、1つのループに合体し、ベクトルにやさしいものにすることができます。
-- ハイブリッド加速により`#pragma omp for simd`、粗粒度のマルチスレッド化ときめ細かいベクトルを実現。  
+- 現在のベクター依存関係を無視することは常に許可されています。
+- `/fp:fast` は、ループ内で有効になっています。
+- 外側のループと関数呼び出しを使用したループは、ベクターを使いやすくします。
+- 入れ子になったループは、1つのループに結合して、ベクターを使いやすくすることができます。
+- を使用したハイブリッド高速化。粒度 `#pragma omp for simd` の粗いマルチスレッドおよび粒度の細かいベクターを実現します。  
 
-ベクトルフレンドリーなループの場合、ベクトルサポートログスイッチを使用しない限り、コンパイラはサイレントのままです。
+ベクター対応のループの場合、ベクター対応のログスイッチを使用しない限り、コンパイラはサイレント状態のままです。
 
 ```cmd
     cl -O2 -openmp:experimental -Qvec-report:2 mycode.cpp
@@ -57,7 +58,7 @@ Visual C++ は、同様の非 OpenMP`#pragma vector`ループ`#pragma ivdep`プ�
     mycode.cpp(96) : info C5001: Omp simd loop vectorized
 ```
 
-ベクトルに優しくないループの場合、コンパイラは各メッセージを発行します。
+ベクターを使用しないループの場合、コンパイラは各メッセージを発行します。
 
 ```cmd
     cl -O2 -openmp:experimental mycode.cpp
@@ -70,23 +71,23 @@ Visual C++ は、同様の非 OpenMP`#pragma vector`ループ`#pragma ivdep`プ�
 
 ### <a name="clauses"></a>句
 
-OpenMP SIMD ディレクティブは、ベクトルサポートを強化するために以下の節を取ることもできます。
+OpenMP SIMD ディレクティブは、次の句を使用してベクターのサポートを強化することもできます。
 
 |ディレクティブ|説明|
 |---|---|
-|`simdlen(length)`|ベクトルレーンの数を指定します。|
-|`safelen(length)`|ベクトルの依存関係の距離を指定します。|
-|`linear(list[ : linear-step]`)|ループ誘導変数から配列サブスクリプションへの線形マッピング。|
+|`simdlen(length)`|ベクターレーンの数を指定します。|
+|`safelen(length)`|ベクター依存関係の距離を指定します。|
+|`linear(list[ : linear-step]`)|ループから配列への変換変数に対する線形マッピング。|
 |`aligned(list[ : alignment])`|データの配置。|
-|`private(list)`|データの民営化を指定します。|
-|`lastprivate(list)`|最後のイテレーションの最終値を使用してデータの民営化を指定します。|
-|`reduction(reduction-identifier:list)`|カスタマイズされた縮小操作を指定します。|
-|`collapse(n)`|ループの結合|
+|`private(list)`|Data 民営化を指定します。|
+|`lastprivate(list)`|最後のイテレーションからの最終的な値を使用してデータ民営化を指定します。|
+|`reduction(reduction-identifier:list)`|カスタマイズされたリダクション操作を指定します。|
+|`collapse(n)`|ループの入れ子を結合します。|
 
 > [!NOTE]
-> 非有効な SIMD 句は、コンパイラによって解析され、警告を伴って無視されます。
+> 非効率的な SIMD 句は解析され、コンパイラによって警告として無視されます。
 >
-> たとえば、次のコードを使用すると警告が発行されます。
+> たとえば、次のコードを使用すると、警告が発行されます。
 >
 > ```c
 >    #pragma omp simd simdlen(8)
@@ -104,9 +105,9 @@ OpenMP SIMD ディレクティブは、ベクトルサポートを強化する�
 
 ### <a name="example"></a>例
   
-OpenMP SIMD ディレクティブは、コンパイラがループをベクトルに対応させる方法をユーザーに提供します。 OpenMP SIMD ディレクティブを使用してループにコメントを付けると、ユーザーは複数のループ反復を同時に実行する予定です。
+OpenMP SIMD ディレクティブを使用すると、コンパイラのループベクターをわかりやすくすることができます。 OpenMP SIMD ディレクティブを使用してループに注釈を付けることにより、複数のループイテレーションを同時に実行することを意図しています。
 
-たとえば、次のループは OpenMP SIMD ディレクティブでアポイントされています。 a[i] から a[i-1] への後方依存関係があるため、ループ反復の間で完全な並列処理はありませんが、SIMD ディレクティブにより、コンパイラは最初のステートメントの連続反復を 1 つのベクトル命令にパックし、並列実行することができます。
+たとえば、次のループには、OpenMP SIMD ディレクティブで注釈が付けられています。 ループの反復の間に完全な並列処理はありません。 [i] から [i-1] への下位依存関係がありますが、SIMD ディレクティブにより、コンパイラは、最初のステートメントの連続する反復を1つのベクター命令にまとめて、並列で実行することができます。
 
 ```c
     #pragma omp simd
@@ -118,7 +119,7 @@ OpenMP SIMD ディレクティブは、コンパイラがループをベクト�
     }
 ```
 
-したがって、次の変換されたベクトル形式のループは、コンパイラが元のループ反復の連続した動作を保持するため **、有効**です。 つまり`a[i]`、後に`a[-1]`実行され`b[i]``a[i]`、呼び出しが最後に`bar`発生します。
+したがって、ループの次の変換されたベクター形式は **有効** です。コンパイラは、元のループの反復処理ごとに順次動作を維持するためです。 つまり、はの `a[i]` 後に実行され、はの後に実行され、の `a[-1]` `b[i]` `a[i]` 呼び出しは `bar` 最後に行われます。
 
 ```c
     for (i = 0; i < count; i+=4)
@@ -132,7 +133,7 @@ OpenMP SIMD ディレクティブは、コンパイラがループをベクト�
     }
 ```
 
-または でエイリアス`a[i]`を使用する可能性がある場合`*c`、メモリ参照をループから移動**することは合法ではありません。** `b[i]` また、1 つの元のイテレーション内でステートメントが順次依存関係を解除した場合に、ステートメントを並べ替えることもできます。 たとえば、次の変換されたループは有効ではありません。
+またはで別名を付けることができる場合、ループからメモリ参照を移動するのは有効では **ありません** `*c` `a[i]` `b[i]` 。 また、シーケンシャルな依存関係が失われた場合に、1つのイテレーション内でステートメントの順序を変更することもできません。 たとえば、次の変換されたループは無効です。
 
 ```c
     c = b;
