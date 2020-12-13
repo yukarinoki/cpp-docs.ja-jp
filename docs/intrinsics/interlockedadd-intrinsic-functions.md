@@ -1,4 +1,5 @@
 ---
+description: 詳細については、_InterlockedAdd 組み込み関数」を参照してください。
 title: 組み込み関数の _InterlockedAdd
 ms.date: 09/02/2019
 f1_keywords:
@@ -26,12 +27,12 @@ helpviewer_keywords:
 - _InterlockedAdd_acq intrinsic
 - _InterlockedAdd64_rel intrinsic
 ms.assetid: 3d319603-ea9c-4fdd-ae61-e52430ccc3b1
-ms.openlocfilehash: c611a22e696b9dda0c6910cd4aac84399cc7d20a
-ms.sourcegitcommit: ced5ff1431ffbd25b20d106901955532723bd188
+ms.openlocfilehash: b467cc855e674a50899999c6e945321390735b00
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92135555"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97336886"
 ---
 # <a name="_interlockedadd-intrinsic-functions"></a>組み込み関数の _InterlockedAdd
 
@@ -88,9 +89,9 @@ __int64 _InterlockedAdd64_rel(
 
 どちらの関数も加算の結果を返します。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-|Intrinsic|Architecture|
+|Intrinsic|アーキテクチャ|
 |---------------|------------------|
 |`_InterlockedAdd`|ARM、ARM64|
 |`_InterlockedAdd_acq`|ARM、ARM64|

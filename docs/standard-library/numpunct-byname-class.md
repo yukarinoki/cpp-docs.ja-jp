@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: numpunct_byname クラス'
 title: numpunct_byname クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - numpunct_byname class
 ms.assetid: 18412924-e085-4771-b5e9-7a200cbdd7c0
-ms.openlocfilehash: da9259df8c527e44a4adea3a53be31b3c3ffc10b
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: e4e6352f9f65b2a726acf3f8f5f8ede9bffe54f9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72687603"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97338031"
 ---
 # <a name="numpunct_byname-class"></a>numpunct_byname クラス
 
-派生クラステンプレートは、特定のロケールの `numpunct` ファセットとして使用できるオブジェクトを表します。このオブジェクトは、数値式およびブール式の書式設定と区切り記号を有効にします。
+派生クラステンプレートは、特定のロケールのファセットとして使用できるオブジェクトを表します。このオブジェクトは、 `numpunct` 数値式およびブール式の書式設定と区切り記号を有効にします。
 
 ## <a name="syntax"></a>構文
 
@@ -37,16 +38,16 @@ protected:
 };
 ```
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-その動作は [名前付きの](../standard-library/locale-class.md#name)ロケール `_Locname` で決まります。 コンストラクターは、[numpunct](../standard-library/numpunct-class.md#numpunct)\<CharType>( `_Refs`) を使用して、その基本オブジェクトを初期化します。
+その動作は [名前付き](../standard-library/locale-class.md#name) のロケールによって決まり `_Locname` ます。 コンストラクターは、 [numpunct](../standard-library/numpunct-class.md#numpunct)() を使用して、その基本オブジェクトを初期化し \<CharType> `_Refs` ます。
 
-## <a name="requirements"></a>［要件］
+## <a name="requirements"></a>要件
 
-**ヘッダー:** \<locale>
+**ヘッダー:**\<locale>
 
 **名前空間:** std
 
 ## <a name="see-also"></a>関連項目
 
-[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[C++ 標準ライブラリのスレッドセーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)

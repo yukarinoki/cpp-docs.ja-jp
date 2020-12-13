@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: delete 演算子 (C++)'
 title: delete 演算子 (C++)
 ms.date: 08/12/2019
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - delete keyword [C++], deallocating objects
 - delete keyword [C++]
 ms.assetid: de39c900-3f57-489c-9598-dcb73c4b3930
-ms.openlocfilehash: 8ce9b8e606d5bbc2051af76e6dc4ac1350ec81a6
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: a66fc3af12c08cc019569c1fc1db25a539dcb089
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91509142"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97339450"
 ---
 # <a name="delete-operator-c"></a>delete 演算子 (C++)
 
@@ -24,9 +25,9 @@ ms.locfileid: "91509142"
 > [ `::` ] `delete` *キャスト式*\
 > [ `::` ] `delete []` *キャスト式*
 
-## <a name="remarks"></a>注釈
+## <a name="remarks"></a>解説
 
-*キャスト式*の引数は、 [new 演算子](../cpp/new-operator-cpp.md)で作成されたオブジェクトに対して以前に割り当てられたメモリブロックへのポインターである必要があります。 **`delete`** 演算子の結果は型である **`void`** ため、値を返しません。 次に例を示します。
+*キャスト式* の引数は、 [new 演算子](../cpp/new-operator-cpp.md)で作成されたオブジェクトに対して以前に割り当てられたメモリブロックへのポインターである必要があります。 **`delete`** 演算子の結果は型である **`void`** ため、値を返しません。 次に例を示します。
 
 ```cpp
 CDialog* MyDialog = new CDialog;
@@ -88,7 +89,7 @@ int main()
 
 ## <a name="how-delete-works"></a>delete の動作方法
 
-Delete 演算子は、関数 **operator delete**を呼び出します。
+Delete 演算子は、関数 **operator delete** を呼び出します。
 
 クラス型 ([クラス](../cpp/class-cpp.md)、 [構造体](../cpp/struct-cpp.md)、または [共用体](../cpp/unions.md)) ではないオブジェクトの場合、グローバルな delete 演算子が呼び出されます。 クラス型のオブジェクトの場合、delete 式が単項スコープ解決演算子 () で始まる場合、割り当て解除関数の名前はグローバルスコープで解決され `::` ます。 それ以外の場合、delete 演算子は、メモリ (ポインターが null でない場合) の割り当てを解除する前に、オブジェクトのデストラクターを呼び出します。 delete 演算子は、クラス単位で定義できます。指定のクラスの定義がない場合、グローバル delete 演算子が呼び出されます。 静的な型に仮想デストラクターが含まれるクラス オブジェクトの割り当ての解放に delete 式を使用した場合、deallocation 関数は動的な型のオブジェクトの仮想デストラクターを通じて解決されます。
 

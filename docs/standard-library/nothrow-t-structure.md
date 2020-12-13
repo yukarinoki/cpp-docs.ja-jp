@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: nothrow_t 構造'
 title: nothrow_t 構造体
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - nothrow_t class
 ms.assetid: dc7d5d42-ed5a-4919-88fe-bbad519b7a1d
-ms.openlocfilehash: bd65b5006326850522a251cbcf7d655133a1aa8a
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 974fbe3a1e27da41c6366c62d748426293a54437
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68245576"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97338097"
 ---
-# <a name="nothrowt-structure"></a>nothrow_t 構造体
+# <a name="nothrow_t-structure"></a>nothrow_t 構造体
 
 この構造体は operator new の関数パラメーターとして使用し、関数に対して、割り当て失敗を報告する際に例外をスローするのではなく Null ポインター を返すように指定します。
 
@@ -23,7 +24,7 @@ ms.locfileid: "68245576"
 struct std::nothrow_t {};
 ```
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 この構造体により、コンパイラが適切なバージョンのコンストラクターを選択できます。 [nothrow](../standard-library/new-functions.md#nothrow) は、`std::nothrow_t` 型のオブジェクトと同義です。
 

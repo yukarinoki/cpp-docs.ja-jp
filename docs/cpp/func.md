@@ -1,19 +1,20 @@
 ---
+description: 詳細については、「 __func__ 」を参照してください。
 title: __func__
 ms.date: 10/19/2017
 f1_keywords:
 - __func__
 ms.assetid: a5299b8d-f0ee-4af2-91dd-8fb165e68798
-ms.openlocfilehash: 8e94caffe120c325478d8b4f24c1915a516d69f4
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 6e075d0f566bb8c3eb72e62a30a36ef80528647b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80179823"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97337713"
 ---
 # <a name="__func__"></a>__func__
 
-**(C++ 11)** 定義済みの&#95; &#95;識別子&#95; &#95; func は、外側の関数の修飾されていない名前と非修飾名を含む文字列として暗黙的に定義されます。 &#95;&#95;func&#95; &#95;はC++標準によって義務付けられており、Microsoft の拡張機能ではありません。
+**(C++ 11)** &#95;&#95;func&#95;&#95; の定義済み識別子は、外側の関数の修飾されていない名前と非修飾名を含む文字列として暗黙的に定義されます。 &#95;&#95;func&#95;&#95; は C++ 標準によって義務付けられており、Microsoft の拡張機能ではありません。
 
 ## <a name="syntax"></a>構文
 
@@ -50,6 +51,6 @@ int main()
 }
 ```
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 C++11

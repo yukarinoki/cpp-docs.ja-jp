@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: _get_printf_count_output'
 title: _get_printf_count_output
 ms.date: 11/04/2016
 api_name:
@@ -27,16 +28,16 @@ helpviewer_keywords:
 - get_printf_count_output function
 - _get_printf_count_output function
 ms.assetid: 850f9f33-8319-433e-98d8-6a694200d994
-ms.openlocfilehash: 15b37ac759821ad56cc5c03c9b98719d8f0cc19a
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: fe5ee728b7bc8400cd93ec4e93131496d59334c5
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70955709"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97339007"
 ---
 # <a name="_get_printf_count_output"></a>_get_printf_count_output
 
-[Printf、wprintf、_wprintf_l](printf-printf-l-wprintf-wprintf-l.md)の各関数が **% n**形式をサポートするかどうかを示します。
+[Printf、_printf_l、wprintf、_wprintf_l](printf-printf-l-wprintf-wprintf-l.md)ファミリの各関数が **% n** 形式をサポートするかどうかを示します。
 
 ## <a name="syntax"></a>構文
 
@@ -46,11 +47,11 @@ int _get_printf_count_output();
 
 ## <a name="return-value"></a>戻り値
 
-**% N**がサポートされている場合は0以外、 **% n**がサポートされていない場合は0です。
+**% N** がサポートされている場合は0以外、 **% n** がサポートされていない場合は0です。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-**% N**がサポートされていない場合 (既定)、いずれかの**printf**関数の書式指定文字列で **% n**を検出すると、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 **% N**サポートが有効になっている場合 ( [_set_printf_count_output](set-printf-count-output.md)を参照)、 **% n**は[書式指定構文: printf 関数と wprintf 関数](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)の説明に従って動作します。
+**% N** がサポートされていない場合 (既定)、いずれかの **printf** 関数の書式指定文字列で **% n** を検出すると、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 **% N** サポートが有効になっている場合 ( [_set_printf_count_output](set-printf-count-output.md)を参照)、 **% n** は [書式指定構文: printf 関数と wprintf 関数](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)の説明に従って動作します。
 
 ## <a name="requirements"></a>必要条件
 

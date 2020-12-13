@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: mbrlen'
 title: mbrlen
 ms.date: 4/2/2020
 api_name:
@@ -26,12 +27,12 @@ f1_keywords:
 helpviewer_keywords:
 - mbrlen function
 ms.assetid: dde8dee9-e091-4c4c-81b3-639808885ae1
-ms.openlocfilehash: 2e0e0ec9d92744fc904bae5ac7f91db8049de4cd
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 1a485090c056cb1e5f075bfd226ac7d4717ec0ec
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88842118"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97336501"
 ---
 # <a name="mbrlen"></a>mbrlen
 
@@ -49,14 +50,14 @@ size_t mbrlen(
 
 ### <a name="parameters"></a>パラメーター
 
-*引数*<br/>
+*str*<br/>
 マルチバイト文字列内の検査対象となる次のバイトへのポインター。
 
 *count*<br/>
 検査対象の最大バイト数。
 
 *mbstate*<br/>
-*Str*の初期バイトの現在のシフト状態へのポインター。
+*Str* の初期バイトの現在のシフト状態へのポインター。
 
 ## <a name="return-value"></a>戻り値
 
@@ -71,11 +72,11 @@ size_t mbrlen(
 
 ## <a name="remarks"></a>解説
 
-**Mbrlen**関数は、 *str*が指すバイトで*始まる最大バイト数を*検査して、シフトシーケンスを含め、次のマルチバイト文字を完了するために必要なバイト数を決定します。 `mbrtowc(NULL, str, count, &mbstate)` *Mbstate*は、ユーザーが指定した**mbstate_t**オブジェクト、またはライブラリによって提供される静的な内部オブジェクトのいずれかの呼び出しに相当します。
+**Mbrlen** 関数は、 *str* が指すバイトで *始まる最大バイト数を* 検査して、シフトシーケンスを含め、次のマルチバイト文字を完了するために必要なバイト数を決定します。 `mbrtowc(NULL, str, count, &mbstate)` *Mbstate* は、ユーザーが指定した **mbstate_t** オブジェクト、またはライブラリによって提供される静的な内部オブジェクトのいずれかの呼び出しに相当します。
 
-**Mbrlen**関数は、不完全なマルチバイト文字のシフト状態を*mbstate*パラメーターに保存して使用します。 これにより、必要に応じてマルチバイト文字の途中で再起動する機能が **mbrlen** され、最大バイト *数* を調べることができます。 *Mbstate*が null ポインターの場合、 **mbrlen**は、内部の静的な**mbstate_t**オブジェクトを使用して、シフト状態を格納します。 内部 **mbstate_t** オブジェクトはスレッドセーフではないため、常に独自の *mbstate* パラメーターを割り当てて渡すことをお勧めします。
+**Mbrlen** 関数は、不完全なマルチバイト文字のシフト状態を *mbstate* パラメーターに保存して使用します。 これにより、必要に応じてマルチバイト文字の途中で再起動する機能が **mbrlen** され、最大バイト *数* を調べることができます。 *Mbstate* が null ポインターの場合、 **mbrlen** は、内部の静的な **mbstate_t** オブジェクトを使用して、シフト状態を格納します。 内部 **mbstate_t** オブジェクトはスレッドセーフではないため、常に独自の *mbstate* パラメーターを割り当てて渡すことをお勧めします。
 
-**Mbrlen**関数は、再起動によって[_mbclen、mblen、_mblen_l](mbclen-mblen-mblen-l.md)とは異なります。 シフト状態は、同じまたはその他の再開可能な関数への後続の呼び出しのために *mbstate* に格納されます。 再開可能な関数と再開不可能な関数を混用した場合、結果は未定義です。  たとえば、 **wcstombs**ではなく**wcsrtombs**の後続の呼び出しが使用される場合、アプリケーションでは**wcslen**ではなく**wcsrlen**を使用する必要があります。
+**Mbrlen** 関数は、再起動によって [_mbclen、mblen、_mblen_l](mbclen-mblen-mblen-l.md)とは異なります。 シフト状態は、同じまたはその他の再開可能な関数への後続の呼び出しのために *mbstate* に格納されます。 再開可能な関数と再開不可能な関数を混用した場合、結果は未定義です。  たとえば、 **wcstombs** ではなく **wcsrtombs** の後続の呼び出しが使用される場合、アプリケーションでは **wcslen** ではなく **wcsrlen** を使用する必要があります。
 
 既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
@@ -95,7 +96,7 @@ size_t mbrlen(
 
 ## <a name="example"></a>例
 
-この例は、マルチバイト文字の解釈が現在のコードページにどのように依存しているかを示し、 **mbrlen**の再開機能を示しています。
+この例は、マルチバイト文字の解釈が現在のコードページにどのように依存しているかを示し、 **mbrlen** の再開機能を示しています。
 
 ```C
 // crt_mbrlen.c

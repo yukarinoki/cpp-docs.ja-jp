@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: range_error クラス'
 title: range_error クラス
 ms.date: 08/14/2018
 f1_keywords:
@@ -6,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - range_error class
 ms.assetid: 8afb3e88-fc49-4213-b096-ed63d7aea37c
-ms.openlocfilehash: 3e741604a3bb23fa8166023d115f79e7a288e2f7
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: c9d1ef328ba077b4b675d782df9c85d2db3a2072
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68458240"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97337957"
 ---
-# <a name="rangeerror-class"></a>range_error クラス
+# <a name="range_error-class"></a>range_error クラス
 
 このクラスは、範囲のエラーを通知するためにスローされる例外すべてに対する基底クラスとして機能します。
 
@@ -27,9 +28,9 @@ public:
 };
 ```
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-の`message.data`コピー[によって](../standard-library/exception-class.md)返される値。 詳細については、「 [basic_string::d ata](../standard-library/basic-string-class.md#data)」を参照してください。
+のコピー [によって返される値](../standard-library/exception-class.md) `message.data` 。 詳細については、「 [basic_string::d ata](../standard-library/basic-string-class.md#data)」を参照してください。
 
 ## <a name="example"></a>例
 
@@ -56,13 +57,13 @@ Type: class std::range_error
 */
 ```
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-**ヘッダー:** \<stdexcept>
+**ヘッダー:**\<stdexcept>
 
 **名前空間:** std
 
 ## <a name="see-also"></a>関連項目
 
 [runtime_error クラス](../standard-library/runtime-error-class.md)\
-[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[C++ 標準ライブラリのスレッドセーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)

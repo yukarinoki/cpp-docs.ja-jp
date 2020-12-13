@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: _BitScanReverse、_BitScanReverse64'
 title: _BitScanReverse、_BitScanReverse64
 ms.date: 09/02/2019
 f1_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - _BitScanReverse intrinsic
 - BitScanReverse intrinsic
 ms.assetid: 2520a207-af8b-4aad-9ae7-831abeadf376
-ms.openlocfilehash: 848c153967e5581f08f1d499a28ab282ee2602df
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 1a535dcc95f9fbf791de3ecd2c2d54eddcc0399c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70216948"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97337208"
 ---
 # <a name="_bitscanreverse-_bitscanreverse64"></a>_BitScanReverse、_BitScanReverse64
 
@@ -39,7 +40,7 @@ unsigned char _BitScanReverse64(
 
 ### <a name="parameters"></a>パラメーター
 
-*化*\
+*[インデックス]* \
 入出力見つかった最初のセットビット (1) のビット位置を使用して読み込まれます。
 
 *隠す*\
@@ -49,9 +50,9 @@ unsigned char _BitScanReverse64(
 
 `Index` が設定された場合は 0 以外、設定済みビットが見つからなかった場合は 0。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-|組み込み|アーキテクチャ|Header|
+|Intrinsic|アーキテクチャ|ヘッダー|
 |---------------|------------------|------------|
 |`_BitScanReverse`|x86、ARM、x64、ARM64|\<intrin.h>|
 |`_BitScanReverse64`|ARM64、x64|\<intrin.h>|

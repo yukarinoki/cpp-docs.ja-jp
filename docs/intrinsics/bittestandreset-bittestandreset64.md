@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: _bittestandreset、_bittestandreset64'
 title: _bittestandreset、_bittestandreset64
 ms.date: 09/02/2019
 f1_keywords:
@@ -11,18 +12,18 @@ helpviewer_keywords:
 - _bittestandreset intrinsic
 - _bittestandreset64 intrinsic
 ms.assetid: 8dad63bb-a051-4cd7-a793-3357537dfeaf
-ms.openlocfilehash: 9e0c869b926b2f9f3c04fd648f84ef33b8d16fcd
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 5d0b6133b981a7008bbe4979ee123cebd5ef99fb
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70216924"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97337177"
 ---
 # <a name="_bittestandreset-_bittestandreset64"></a>_bittestandreset、_bittestandreset64
 
 **Microsoft 固有の仕様**
 
-`b` アドレス`a`のビットを確認する命令を生成し、その現在の値を返し、ビットを0にリセットします。
+アドレスのビットを確認する命令を生成し `b` `a` 、その現在の値を返し、ビットを0にリセットします。
 
 ## <a name="syntax"></a>構文
 
@@ -49,16 +50,16 @@ unsigned char _bittestandreset64(
 
 指定した位置にあるビット。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-|組み込み|アーキテクチャ|
+|Intrinsic|アーキテクチャ|
 |---------------|------------------|
 |`_bittestandreset`|x86、ARM、x64、ARM64|
 |`_bittestandreset64`|x64、ARM64|
 
-**ヘッダーファイル**\<>
+**ヘッダー ファイル** \<intrin.h>
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 このルーチンは、組み込みとしてのみ使用できます。
 

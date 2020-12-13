@@ -1,4 +1,5 @@
 ---
+description: '次の詳細情報: Bool Struct 構造体'
 title: BoolStruct 構造体
 ms.date: 09/21/2018
 ms.topic: reference
@@ -9,16 +10,16 @@ helpviewer_keywords:
 - Microsoft::WRL::Details::BoolStruct structure
 - Microsoft::WRL::Details::BoolStruct::Member data member
 ms.assetid: 666eae78-e81d-4fb7-a9e4-1ba617d6d4cd
-ms.openlocfilehash: 4f2a5acf6edb824cff2121c1b6444181b5cfcf98
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: d0c30f554cf2f7ebc3bfaf825b43dc28329f697e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81371852"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97338800"
 ---
 # <a name="boolstruct-structure"></a>BoolStruct 構造体
 
-WRL インフラストラクチャをサポートし、コードから直接使用するためのものではありません。
+は WRL インフラストラクチャをサポートします。独自に作成したコードから直接使用するためのものではありません。
 
 ## <a name="syntax"></a>構文
 
@@ -28,7 +29,7 @@ struct BoolStruct;
 
 ## <a name="remarks"></a>解説
 
-構造体`BoolStruct`は、インターフェイスの`ComPtr`オブジェクトの有効期間を管理するかどうかを定義します。 `BoolStruct`は[、BoolType()](comptr-class.md#operator-microsoft-wrl-details-booltype)演算子によって内部的に使用されます。
+`BoolStruct`構造体は、 `ComPtr` がインターフェイスのオブジェクトの有効期間を管理しているかどうかを定義します。 `BoolStruct` は、 [ブール型 ()](comptr-class.md#operator-microsoft-wrl-details-booltype) 演算子によって内部的に使用されます。
 
 ## <a name="members"></a>メンバー
 
@@ -36,21 +37,21 @@ struct BoolStruct;
 
 名前                          | 説明
 ----------------------------- | ------------------------------------------------------------------------------------------------------------------
-[ブール構造体:メンバー](#member) | [ComPtr](comptr-class.md)がインターフェイスのオブジェクトの有効期間を管理していることを指定します。
+[Bool Struct:: Member](#member) | [Comptr](comptr-class.md)がインターフェイスのオブジェクトの有効期間を管理するかどうかを指定します。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
 `BoolStruct`
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-**ヘッダー:** 内部.h
+**ヘッダー:** 内部 .h
 
-**名前空間:** マイクロソフト::WRL::Dのテール
+**名前空間:** Microsoft:: WRL::D etails
 
-## <a name="boolstructmember"></a><a name="member"></a>ブール構造体:メンバー
+## <a name="boolstructmember"></a><a name="member"></a> Bool Struct:: Member
 
-WRL インフラストラクチャをサポートし、コードから直接使用するためのものではありません。
+は WRL インフラストラクチャをサポートします。独自に作成したコードから直接使用するためのものではありません。
 
 ```cpp
 int Member;
@@ -58,4 +59,4 @@ int Member;
 
 ### <a name="remarks"></a>解説
 
-[ComPtr](comptr-class.md)がインターフェイスのオブジェクトの有効期間を管理していることを指定します。
+[Comptr](comptr-class.md)がインターフェイスのオブジェクトの有効期間を管理するかどうかを指定します。

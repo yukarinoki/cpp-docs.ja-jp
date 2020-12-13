@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: _get_tzname'
 title: _get_tzname
 ms.date: 4/2/2020
 api_name:
@@ -29,12 +30,12 @@ helpviewer_keywords:
 - time zones
 - get_tzname function
 ms.assetid: df0065ff-095f-4237-832c-2fe9ab913875
-ms.openlocfilehash: bf63b0ade0adc0a2dfa471bbfbeebc0cb2d04911
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: b98a068d6f2d2643df43078c5a274fd761ac8e95
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82919682"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97338957"
 ---
 # <a name="_get_tzname"></a>_get_tzname
 
@@ -54,50 +55,50 @@ errno_t _get_tzname(
 ### <a name="parameters"></a>パラメーター
 
 *pReturnValue*<br/>
-Null 終端文字を含む*Timezonename*の文字列長。
+Null 終端文字を含む *Timezonename* の文字列長。
 
 *timeZoneName*<br/>
-*インデックス*に応じて、タイムゾーン名または夏時間タイムゾーン名 (DST) の表現に使用する文字列のアドレス。
+*インデックス* に応じて、タイムゾーン名または夏時間タイムゾーン名 (DST) の表現に使用する文字列のアドレス。
 
 *sizeInBytes*<br/>
-*Timezonename*文字列のサイズ (バイト単位)。
+*Timezonename* 文字列のサイズ (バイト単位)。
 
-*index*<br/>
+*インデックス*<br/>
 取得する 2 つのタイム ゾーン名のいずれかのインデックス。
 
-|*index*|*Timezonename*の内容|*Timezonename*の既定値|
+|*インデックス*|*Timezonename* の内容|*Timezonename* の既定値|
 |-|-|-|
 |0|タイム ゾーン名|「PST」|
 |1|夏時間ゾーン名|「PDT」|
-|> 1 または < 0|**errno**が**EINVAL**に設定される|変更されない|
+|> 1 または < 0|**errno** が **EINVAL** に設定される|変更されない|
 
 実行時に値を明示的に変更しない限り、既定値はそれぞれ「PST」および「PDT」です。
 
 ## <a name="return-value"></a>戻り値
 
-成功した場合は0。それ以外の場合は**errno**型の値。
+成功した場合は0。それ以外の場合は **errno** 型の値。
 
-*Timezonename*が**NULL**であるか、または*sizeinbytes*がゼロまたは0未満 (両方ではない) の場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、この関数は**errno**を**einval**に設定し、 **einval**を返します。
+*Timezonename* が **NULL** であるか、または *sizeinbytes* がゼロまたは0未満 (両方ではない) の場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、この関数は **errno** を **einval** に設定し、 **einval** を返します。
 
 ### <a name="error-conditions"></a>エラー条件
 
-|*pReturnValue*|*timeZoneName*|*sizeInBytes*|*index*|戻り値|*Timezonename*の内容|
+|*pReturnValue*|*timeZoneName*|*sizeInBytes*|*インデックス*|戻り値|*Timezonename* の内容|
 |--------------------|--------------------|-------------------|-------------|------------------|--------------------------------|
-|TZ 名のサイズ|**空白**|0|0 または 1|0|変更されない|
+|TZ 名のサイズ|**NULL**|0|0 または 1|0|変更されない|
 |TZ 名のサイズ|any|> 0|0 または 1|0|TZ 名|
-|変更されない|**空白**|> 0|any|**EINVAL**|変更されない|
+|変更されない|**NULL**|> 0|any|**EINVAL**|変更されない|
 |変更されない|any|ゼロ|any|**EINVAL**|変更されない|
 |変更されない|any|> 0|> 1|**EINVAL**|変更されない|
 
 ## <a name="remarks"></a>解説
 
-**_Get_tzname**関数は、現在のタイムゾーン名または夏時間のタイムゾーン名 (DST) の文字列形式を、インデックス値に応じて*timezonename*のアドレスに、 *preturnvalue*値の文字列のサイズと共に取得します。 *Timezonename*が**NULL**で*sizeinbytes*が0の場合、指定されたタイムゾーンを保持するために必要な文字列のサイズとバイト単位の終端の NULL が*preturnvalue*値として返されます。 インデックス値は、標準タイムゾーンの場合は0、夏時間タイムゾーンの場合は1にする必要があります。その他の*インデックス*の値には、不明な結果があります。
+**_Get_tzname** 関数は、現在のタイムゾーン名または夏時間のタイムゾーン名 (DST) の文字列形式を、インデックス値に応じて *timezonename* のアドレスに、 *preturnvalue* 値の文字列のサイズと共に取得します。 *Timezonename* が **NULL** で *sizeinbytes* が0の場合、指定されたタイムゾーンを保持するために必要な文字列のサイズとバイト単位の終端の NULL が *preturnvalue* 値として返されます。 インデックス値は、標準タイムゾーンの場合は0、夏時間タイムゾーンの場合は1にする必要があります。その他の *インデックス* の値には、不明な結果があります。
 
 既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ## <a name="example"></a>例
 
-このサンプルでは、 **_get_tzname**を呼び出して、現在の夏時間のタイムゾーン名を表示するために必要なバッファーサイズを取得し、そのサイズのバッファーを割り当て、 **_get_tzname**を再度呼び出してバッファーに名前を読み込み、それをコンソールに出力します。
+このサンプルでは、 **_get_tzname** を呼び出して、現在の夏時間のタイムゾーン名を表示するために必要なバッファーサイズを取得し、そのサイズのバッファーを割り当て、 **_get_tzname** を再度呼び出してバッファーに名前を読み込み、それをコンソールに出力します。
 
 ```C
 // crt_get_tzname.c
@@ -141,7 +142,7 @@ The current Daylight standard time zone name is PDT.
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**_get_tzname**|\<time.h>|
 
@@ -150,7 +151,7 @@ The current Daylight standard time zone name is PDT.
 ## <a name="see-also"></a>関連項目
 
 [時間管理](../../c-runtime-library/time-management.md)<br/>
-[errno、_doserrno、_sys_errlist、_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)<br/>
+[errno、_doserrno、_sys_errlist、および _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)<br/>
 [_get_daylight](get-daylight.md)<br/>
 [_get_dstbias](get-dstbias.md)<br/>
 [_get_timezone](get-timezone.md)<br/>

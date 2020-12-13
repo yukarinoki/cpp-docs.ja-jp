@@ -1,19 +1,20 @@
 ---
+description: '詳細情報: once_flag 構造'
 title: once_flag 構造体
 ms.date: 09/17/2018
 f1_keywords:
 - mutex/std::once_flag
 ms.assetid: 71bfb88d-ca8c-4082-a6e1-ff52151e8629
-ms.openlocfilehash: 55c3f90f72857a4e4cd3f9075ce5bae10e14d218
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 4419353e68da5929d8abed9b2c718438855057e0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87202728"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97338001"
 ---
 # <a name="once_flag-structure"></a>once_flag 構造体
 
-**`struct`** 実行の複数のスレッドが存在する場合でも、初期化コードが1回だけ呼び出されるようにするために、テンプレート関数[call_once](../standard-library/mutex-functions.md#call_once)と共に使用されるを表します。
+**`struct`** 実行の複数のスレッドが存在する場合でも、初期化コードが1回だけ呼び出されるようにするために、テンプレート関数 [call_once](../standard-library/mutex-functions.md#call_once)と共に使用されるを表します。
 
 ## <a name="syntax"></a>構文
 
@@ -25,7 +26,7 @@ ms.locfileid: "87202728"
 
 `once_flag` 型のオブジェクトは、作成することはできますがコピーはできません。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:**\<mutex>
 

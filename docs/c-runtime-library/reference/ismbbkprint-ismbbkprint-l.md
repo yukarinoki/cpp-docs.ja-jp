@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: _ismbbkprint、_ismbbkprint_l'
 title: _ismbbkprint、_ismbbkprint_l
 ms.date: 4/2/2020
 api_name:
@@ -34,12 +35,12 @@ helpviewer_keywords:
 - ismbbkprint function
 - _ismbbkprint_l function
 ms.assetid: 8d1d3258-1e34-4365-81ed-97c95de25475
-ms.openlocfilehash: 183a883d259fd322c5ecd6712bba676b7ffe080c
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 2d48f77143ffb14b142380cf0c3d2f3b4ceb3675
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82915717"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97337758"
 ---
 # <a name="_ismbbkprint-_ismbbkprint_l"></a>_ismbbkprint、_ismbbkprint_l
 
@@ -59,7 +60,7 @@ int _ismbbkprint_l(
 
 ### <a name="parameters"></a>パラメーター
 
-*40u-c*<br/>
+*c*<br/>
 テストする整数。
 
 *locale*<br/>
@@ -67,7 +68,7 @@ int _ismbbkprint_l(
 
 ## <a name="return-value"></a>戻り値
 
-整数*c*が非 ascii テキストまたは非 ascii 区切り記号の場合、 **_ismbbkprint**は0以外の値を返します。それ以外の場合は0を返します。 たとえば、コード ページ 932 でのみ、**_ismbbkprint** はカタカナの英数字、またはカタカナの句読点 (範囲: 0xA1 - 0xDF) をテストします。 **_ismbbkprint**は、ロケールに依存する文字設定に現在のロケールを使用します。 **_ismbbkprint_l**は、渡されたロケールを使用する点を除いて同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
+整数 *c* が非 ascii テキストまたは非 ascii 区切り記号の場合、 **_ismbbkprint** は0以外の値を返します。それ以外の場合は0を返します。 たとえば、コード ページ 932 でのみ、**_ismbbkprint** はカタカナの英数字、またはカタカナの句読点 (範囲: 0xA1 - 0xDF) をテストします。 **_ismbbkprint** は、ロケールに依存する文字設定に現在のロケールを使用します。 **_ismbbkprint_l** は、渡されたロケールを使用する点を除いて同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
 
 ## <a name="remarks"></a>解説
 
@@ -75,7 +76,7 @@ int _ismbbkprint_l(
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**_ismbbkprint**|\<mbctype.h>|
 |**_ismbbkprint_l**|\<mbctype.h>|

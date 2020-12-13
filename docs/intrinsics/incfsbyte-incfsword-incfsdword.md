@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「__incfsbyte、__incfsword、__incfsdword」を参照してください。
 title: __incfsbyte、__incfsword、__incfsdword
 ms.date: 09/02/2019
 f1_keywords:
@@ -13,18 +14,18 @@ helpviewer_keywords:
 - __incfsdword intrinsic
 - __incfsbyte intrinsic
 ms.assetid: 820457fb-e35e-42d3-bcb6-725da3281c64
-ms.openlocfilehash: 43824829043304f5762d049b5c75a72b57e2102c
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 29d86de51ad282789cb19b72ca953f65af2dc19d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70222129"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97336960"
 ---
 # <a name="__incfsbyte-__incfsword-__incfsdword"></a>__incfsbyte、__incfsword、__incfsdword
 
 **Microsoft 固有の仕様**
 
-`FS`セグメントの先頭を基準としたオフセットによって指定されたメモリ位置の値に1つを追加します。
+セグメントの先頭を基準としたオフセットによって指定されたメモリ位置の値に1つを追加し `FS` ます。
 
 ## <a name="syntax"></a>構文
 
@@ -43,19 +44,19 @@ void __incfsdword(
 ### <a name="parameters"></a>パラメーター
 
 *影*\
-からの`FS`先頭からのオフセット。
+からの先頭からのオフセット `FS` 。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-|組み込み|アーキテクチャ|
+|Intrinsic|アーキテクチャ|
 |---------------|------------------|
 |`__incfsbyte`|x86|
 |`__incfsword`|x86|
 |`__incfsdword`|x86|
 
-**ヘッダーファイル**\<>
+**ヘッダー ファイル** \<intrin.h>
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 これらの組み込みはカーネルモードでのみ使用でき、ルーチンは組み込みとしてのみ使用できます。
 
@@ -63,7 +64,7 @@ void __incfsdword(
 
 ## <a name="see-also"></a>関連項目
 
-[\_addfsbyte、 \_addfsword、 \_addfsdword (_s)](../intrinsics/addfsbyte-addfsword-addfsdword.md)\
-[\_readfsbyte、 \_readfsdword、 \_readfsqword \_、readfsword (_d)](../intrinsics/readfsbyte-readfsdword-readfsqword-readfsword.md)\
-[\_writefsbyte、 \_ \_writefsdword、writefsqword \_、writefソード (_c)](../intrinsics/writefsbyte-writefsdword-writefsqword-writefsword.md)\
+[\__addfsbyte、 \_ _addfsword、 \_ _addfsdword](../intrinsics/addfsbyte-addfsword-addfsdword.md)\
+[\__readfsbyte、 \_ _readfsdword、 \_ _readfsqword、 \_ _readfsword](../intrinsics/readfsbyte-readfsdword-readfsqword-readfsword.md)\
+[\__writefsbyte、 \_ _writefsdword、 \_ _writefsqword、 \_ _writefsword](../intrinsics/writefsbyte-writefsdword-writefsqword-writefsword.md)\
 [コンパイラの組み込み](../intrinsics/compiler-intrinsics.md)

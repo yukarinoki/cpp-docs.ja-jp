@@ -1,16 +1,17 @@
 ---
+description: '詳細情報: ATL の定義済みシンボル'
 title: ATL の定義済みシンボル
 ms.date: 02/14/2019
 helpviewer_keywords:
 - symbols [C++], ATL predefined
 - ATL symbols
 ms.assetid: 60d8f4e6-6ed9-47f3-9051-e4bf34384456
-ms.openlocfilehash: 8134f334b0143a360fd3e02c04bca7a65ce67ce0
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 0234137f8311e369c39fcc3d13ea394eb70c9d87
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88836388"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97337807"
 ---
 # <a name="atl-predefined-symbols"></a>ATL の定義済みシンボル
 
@@ -31,7 +32,7 @@ ms.locfileid: "88836388"
 |IDS_PROJNAME|文字列現在のアプリケーション名|
 |IDYES|制御ダイアログボックス、[はい] ボタン|
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 ATL
 

@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: CAnimationTimerEventHandler クラス'
 title: CAnimationTimerEventHandler クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -16,12 +17,12 @@ helpviewer_keywords:
 - CAnimationTimerEventHandler [MFC], OnRenderingTooSlow
 - CAnimationTimerEventHandler [MFC], SetAnimationController
 ms.assetid: 188dea3b-4b5e-4f6b-8df9-09d993a21619
-ms.openlocfilehash: d1653e50fef03deb8eb23dd9a989d1ca2a529dd8
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: 5d5f3e07eeb7ffe3f3bb226afd566330808303ac
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81755094"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97336752"
 ---
 # <a name="canimationtimereventhandler-class"></a>CAnimationTimerEventHandler クラス
 
@@ -39,15 +40,15 @@ class CAnimationTimerEventHandler : public CUIAnimationTimerEventHandlerBase<CAn
 
 |名前|説明|
 |----------|-----------------|
-|[をイベントします。](#createinstance)|コールバックのインスタンスを`CAnimationTimerEventHandler`作成します。|
-|[イベントハンドラー::オンポストアップデート](#onpostupdate)|アニメーションの更新が完了した後に発生するイベントを処理します。 ( `CUIAnimationTimerEventHandlerBase::OnPostUpdate`をオーバーライドします)。|
-|[イベントハンドラー::オンプレアップデート](#onpreupdate)|アニメーションの更新が開始される前に発生するイベントを処理します。 ( `CUIAnimationTimerEventHandlerBase::OnPreUpdate`をオーバーライドします)。|
-|[イベントハンドラー::レンダリングスロー](#onrenderingtooslow)|アニメーションのレンダリング フレーム レートが望ましい最小フレーム レートを下回ったときに発生するイベントを処理します。 ( `CUIAnimationTimerEventHandlerBase::OnRenderingTooSlow`をオーバーライドします)。|
-|[を設定します。](#setanimationcontroller)|イベントをルーティングするアニメーション コントローラへのポインターを格納します。|
+|[CAnimationTimerEventHandler:: CreateInstance](#createinstance)|コールバックのインスタンスを作成し `CAnimationTimerEventHandler` ます。|
+|[CAnimationTimerEventHandler:: OnPostUpdate](#onpostupdate)|アニメーションの更新が完了した後に発生するイベントを処理します。 ( `CUIAnimationTimerEventHandlerBase::OnPostUpdate`をオーバーライドします)。|
+|[CAnimationTimerEventHandler:: OnPreUpdate](#onpreupdate)|アニメーションの更新が開始される前に発生するイベントを処理します。 ( `CUIAnimationTimerEventHandlerBase::OnPreUpdate`をオーバーライドします)。|
+|[CAnimationTimerEventHandler:: OnRenderingTooSlow](#onrenderingtooslow)|アニメーションのレンダリングフレームレートが望ましいフレームレートの最小値を下回ると発生するイベントを処理します。 ( `CUIAnimationTimerEventHandlerBase::OnRenderingTooSlow`をオーバーライドします)。|
+|[CAnimationTimerEventHandler:: Setアニメーションコントローラー](#setanimationcontroller)|イベントをルーティングするアニメーションコントローラーへのポインターを格納します。|
 
 ## <a name="remarks"></a>解説
 
-このイベント ハンドラーが作成され、C アニメーション コントローラーを呼び出すと IUI アニメーション タイマー:::設定タイマー イベント ハンドラーに渡されます。
+このイベントハンドラーは作成され、CAnimationController:: EnableAnimationTimerEventHandler を呼び出すと Iui、Timer:: SetTimerEventHandler に渡されます。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -57,13 +58,13 @@ class CAnimationTimerEventHandler : public CUIAnimationTimerEventHandlerBase<CAn
 
 `CAnimationTimerEventHandler`
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** afxanimationcontroller.h
 
-## <a name="canimationtimereventhandlercreateinstance"></a><a name="createinstance"></a>をイベントします。
+## <a name="canimationtimereventhandlercreateinstance"></a><a name="createinstance"></a> CAnimationTimerEventHandler:: CreateInstance
 
-コールバックのインスタンスを作成します。
+CAnimationTimerEventHandler コールバックのインスタンスを作成します。
 
 ```
 static COM_DECLSPEC_NOTHROW HRESULT CreateInstance(
@@ -73,16 +74,16 @@ static COM_DECLSPEC_NOTHROW HRESULT CreateInstance(
 
 ### <a name="parameters"></a>パラメーター
 
-*を切り取る*<br/>
-イベントを受け取るアニメーション コントローラへのポインター。
+*pAnimationController*<br/>
+イベントを受信するアニメーションコントローラーへのポインター。
 
-*イベントハンドラー*
+*ppTimerEventHandler*
 
 ### <a name="return-value"></a>戻り値
 
-メソッドが成功した場合は、S_OK を返します。 それ以外の場合は、HRESULT エラー コードを返します。
+メソッドが成功した場合は、S_OK を返します。 それ以外の場合は、HRESULT エラーコードを返します。
 
-## <a name="canimationtimereventhandleronpostupdate"></a><a name="onpostupdate"></a>イベントハンドラー::オンポストアップデート
+## <a name="canimationtimereventhandleronpostupdate"></a><a name="onpostupdate"></a> CAnimationTimerEventHandler:: OnPostUpdate
 
 アニメーションの更新が完了した後に発生するイベントを処理します。
 
@@ -92,9 +93,9 @@ IFACEMETHOD(OnPostUpdate)();
 
 ### <a name="return-value"></a>戻り値
 
-メソッドが成功した場合はS_OK。それ以外の場合はE_FAIL。
+メソッドが成功した場合は S_OK。それ以外の場合は E_FAIL。
 
-## <a name="canimationtimereventhandleronpreupdate"></a><a name="onpreupdate"></a>イベントハンドラー::オンプレアップデート
+## <a name="canimationtimereventhandleronpreupdate"></a><a name="onpreupdate"></a> CAnimationTimerEventHandler:: OnPreUpdate
 
 アニメーションの更新が開始される前に発生するイベントを処理します。
 
@@ -104,11 +105,11 @@ IFACEMETHOD(OnPreUpdate)();
 
 ### <a name="return-value"></a>戻り値
 
-メソッドが成功した場合はS_OK。それ以外の場合はE_FAIL。
+メソッドが成功した場合は S_OK。それ以外の場合は E_FAIL。
 
-## <a name="canimationtimereventhandleronrenderingtooslow"></a><a name="onrenderingtooslow"></a>イベントハンドラー::レンダリングスロー
+## <a name="canimationtimereventhandleronrenderingtooslow"></a><a name="onrenderingtooslow"></a> CAnimationTimerEventHandler:: OnRenderingTooSlow
 
-アニメーションのレンダリング フレーム レートが望ましい最小フレーム レートを下回ったときに発生するイベントを処理します。
+アニメーションのレンダリングフレームレートが望ましいフレームレートの最小値を下回ると発生するイベントを処理します。
 
 ```
 IFACEMETHOD(OnRenderingTooSlow)(UINT32 fps);
@@ -116,15 +117,15 @@ IFACEMETHOD(OnRenderingTooSlow)(UINT32 fps);
 
 ### <a name="parameters"></a>パラメーター
 
-*Fps*
+*fps*
 
 ### <a name="return-value"></a>戻り値
 
-メソッドが成功した場合はS_OK。それ以外の場合はE_FAIL。
+メソッドが成功した場合は S_OK。それ以外の場合は E_FAIL。
 
-## <a name="canimationtimereventhandlersetanimationcontroller"></a><a name="setanimationcontroller"></a>を設定します。
+## <a name="canimationtimereventhandlersetanimationcontroller"></a><a name="setanimationcontroller"></a> CAnimationTimerEventHandler:: Setアニメーションコントローラー
 
-イベントをルーティングするアニメーション コントローラへのポインターを格納します。
+イベントをルーティングするアニメーションコントローラーへのポインターを格納します。
 
 ```cpp
 void SetAnimationController(CAnimationController* pAnimationController);
@@ -132,8 +133,8 @@ void SetAnimationController(CAnimationController* pAnimationController);
 
 ### <a name="parameters"></a>パラメーター
 
-*を切り取る*<br/>
-イベントを受け取るアニメーション コントローラへのポインター。
+*pAnimationController*<br/>
+イベントを受信するアニメーションコントローラーへのポインター。
 
 ## <a name="see-also"></a>関連項目
 

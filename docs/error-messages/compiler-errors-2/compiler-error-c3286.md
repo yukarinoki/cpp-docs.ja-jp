@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「コンパイラエラー C3286」を参照してください。
 title: コンパイラ エラー C3286
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3286
 ms.assetid: 554328c8-cf44-4f7d-a8d2-def74d28ecdd
-ms.openlocfilehash: 4c87e98f11a560d0d92be8ea7bc624edd4e09ad2
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 38e3b405f9093baa266cf56e5bfc7f44c7566206
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80201397"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97339225"
 ---
 # <a name="compiler-error-c3286"></a>コンパイラ エラー C3286
 
 > '*指定子*': 反復変数は、ストレージクラスの指定子を持つことはできません
 
-ストレージクラスを繰り返し変数に指定することはできません。 詳細については、「 [」](../../dotnet/for-each-in.md)の「[ストレージクラス」 (C++)](../../cpp/storage-classes-cpp.md)および「」を参照してください。
+ストレージクラスを繰り返し変数に指定することはできません。 詳細については、「 [」](../../dotnet/for-each-in.md)の「[ストレージクラス (C++)](../../cpp/storage-classes-cpp.md) 」および「」を参照してください。
 
 ## <a name="example"></a>例
 

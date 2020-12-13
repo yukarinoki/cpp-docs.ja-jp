@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: &lt; 新規&gt;'
 title: '&lt;新規&gt;'
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - new header
 ms.assetid: 218e2a15-34e8-4ef3-9122-1e90eccf8559
-ms.openlocfilehash: 0fe2d0e57c0746f25187028b85157d66ee736ca4
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: c99c036a7b4065e207bfe9ad71eb86e6d5f01d0f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88836427"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97338144"
 ---
 # <a name="ltnewgt"></a>&lt;新規&gt;
 
 プログラムの制御下でストレージの割り当てと解放を制御するいくつかの型および関数を定義します。 また、ストレージ管理エラーに関するレポート用のコンポーネントを定義します。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:**\<new>
 
@@ -29,7 +30,7 @@ ms.locfileid: "88836427"
 
 ## <a name="members"></a>メンバー
 
-### <a name="objects"></a>オブジェクト
+### <a name="objects"></a>Objects
 
 |名前|説明|
 |-|-|
@@ -43,7 +44,7 @@ ms.locfileid: "88836427"
 |[hardware_constructive_interference_size](../standard-library/new-typedefs.md#hardware_destructive_interference_size)||
 |[hardware_destructive_interference_size](../standard-library/new-typedefs.md#hardware_destructive_interference_size)||
 
-### <a name="functions"></a>Functions
+### <a name="functions"></a>関数
 
 |名前|説明|
 |-|-|
@@ -51,7 +52,7 @@ ms.locfileid: "88836427"
 |[launder](../standard-library/new-functions.md#launder)||
 |[set_new_handler](../standard-library/new-functions.md#set_new_handler)|メモリ割り当ての試行に新たに失敗した場合に呼び出されるユーザー関数をインストールします。|
 
-### <a name="operators"></a>演算子
+### <a name="operators"></a>オペレーター
 
 |名前|説明|
 |-|-|

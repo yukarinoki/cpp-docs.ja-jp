@@ -1,4 +1,5 @@
 ---
+description: 詳細については、strncpy_s、_strncpy_s_l、wcsncpy_s、_wcsncpy_s_l、_mbsncpy_s、_mbsncpy_s_l を参照してください。
 title: strncpy_s、_strncpy_s_l、wcsncpy_s、_wcsncpy_s_l、_mbsncpy_s、_mbsncpy_s_l
 ms.date: 4/2/2020
 api_name:
@@ -54,12 +55,12 @@ helpviewer_keywords:
 - _tcsncpy_s function
 - wcsncpy_s_l function
 ms.assetid: a971c800-94d1-4d88-92f3-a2fe236a4546
-ms.openlocfilehash: 08921ff44d2d69ab77eb210b2123016ea61c4f67
-ms.sourcegitcommit: 43cee7a0d41a062661229043c2f7cbc6ace17fa3
+ms.openlocfilehash: eb4ea7c5f7b288640fe0797d9f6c5428fe28e0af
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92008282"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97336479"
 ---
 # <a name="strncpy_s-_strncpy_s_l-wcsncpy_s-_wcsncpy_s_l-_mbsncpy_s-_mbsncpy_s_l"></a>strncpy_s、_strncpy_s_l、wcsncpy_s、_wcsncpy_s_l、_mbsncpy_s、_mbsncpy_s_l
 
@@ -174,18 +175,18 @@ errno_t _mbsncpy_s_l(
 
 ### <a name="error-conditions"></a>エラー条件
 
-|*strDest*|*numberOfElements*|*strSource*|戻り値|*Strdest*の内容|
+|*strDest*|*numberOfElements*|*strSource*|戻り値|*Strdest* の内容|
 |---------------|------------------------|-----------------|------------------|---------------------------|
 |**NULL**|any|any|**EINVAL**|変更されない|
 |any|any|**NULL**|**EINVAL**|*Strdest*[0] を0に設定します。|
 |any|0|any|**EINVAL**|変更されない|
-|**NULL**以外|小さすぎる|any|**ERANGE**|*Strdest*[0] を0に設定します。|
+|**NULL** 以外|小さすぎる|any|**ERANGE**|*Strdest*[0] を0に設定します。|
 
 ## <a name="remarks"></a>解説
 
-これらの関数は、 *Strsource*の最初の*D*文字を*strsource*にコピーしようとします。ここで、 *d*は、 *count*の小さい方、および*strsource*の長さです。 これらの *D* 文字が *strdest* (サイズが *numberofelements*として指定されている) 内に収まり、null 終端文字のための空き領域が残っている場合は、それらの文字がコピーされ、終端の null が追加されます。それ以外の場合、 *Strdest*[0] は null 文字に設定され、「 [パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。
+これらの関数は、 *Strsource* の最初の *D* 文字を *strsource* にコピーしようとします。ここで、 *d* は、 *count* の小さい方、および *strsource* の長さです。 これらの *D* 文字が *strdest* (サイズが *numberofelements* として指定されている) 内に収まり、null 終端文字のための空き領域が残っている場合は、それらの文字がコピーされ、終端の null が追加されます。それ以外の場合、 *Strdest*[0] は null 文字に設定され、「 [パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。
 
-これには例外があります。 *Count*が **_TRUNCATE**場合は、常に追加される終端の null 用の空きを残したまま、 *strsource*に収まる範囲の*strsource*がコピーされます。
+これには例外があります。 *Count* が **_TRUNCATE** 場合は、常に追加される終端の null 用の空きを残したまま、 *strsource* に収まる範囲の *strsource* がコピーされます。
 
 たとえば、次のように入力します。
 
@@ -203,13 +204,13 @@ strncpy_s(dst, 5, "a long string", _TRUNCATE);
 strncpy_s(dst, 5, "a long string", 4);
 ```
 
-**Strncpy**とは異なり、 *Count*が*strsource*の長さよりも大きい場合は、コピー先の文字列に null 文字が埋め込まれていないことに*注意してください。*
+**Strncpy** とは異なり、 *Count* が *strsource* の長さよりも大きい場合は、コピー先の文字列に null 文字が埋め込まれていないことに *注意してください。*
 
 コピー元とコピー先の文字列が重なり合っている場合、 **strncpy_s** の動作は定義されていません。
 
-*Strdest*または*Strdest*が**NULL**の場合、または*numberofelements*が0の場合は、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、関数は **einval** を返し、 **errno** を **einval**に設定します。
+*Strdest* または *Strdest* が **NULL** の場合、または *numberofelements* が0の場合は、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、関数は **einval** を返し、 **errno** を **einval** に設定します。
 
-**wcsncpy_s** と **_mbsncpy_s** は **strncpy_s**のワイド文字バージョンとマルチバイト文字バージョンです。 **Wcsncpy_s**と**mbsncpy_s**の引数と戻り値は、それに応じて異なります。 それ以外では、これらの関数の動作は同じです。
+**wcsncpy_s** と **_mbsncpy_s** は **strncpy_s** のワイド文字バージョンとマルチバイト文字バージョンです。 **Wcsncpy_s** と **mbsncpy_s** の引数と戻り値は、それに応じて異なります。 それ以外では、これらの関数の動作は同じです。
 
 出力値は、ロケールの **LC_CTYPE** カテゴリの設定に影響されます。詳細については、「[setlocale](setlocale-wsetlocale.md)」を参照してください。 **_l** サフィックスが付いていないこれらの関数のバージョンでは、このロケールに依存する動作に現在のロケールを使用します。**_l** サフィックスが付いているバージョンは、渡されたロケール パラメーターを代わりに使用する点を除いて同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
 

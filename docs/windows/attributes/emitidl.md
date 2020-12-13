@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: emitidl'
 title: emitidl (C++ COM 属性)
 ms.date: 10/02/2018
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - emitidl attribute
 ms.assetid: 85b80c56-578e-4392-ac03-8443c74ebb7d
-ms.openlocfilehash: 32362f287320e69d1680cbe07ca050143b507514
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 21c4f7fc067eb37b8816bdedd1f338908950566e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88846330"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97337794"
 ---
 # <a name="emitidl"></a>emitidl
 
@@ -25,10 +26,10 @@ ms.locfileid: "88846330"
 
 ### <a name="parameters"></a>パラメーター
 
-*状態*<br/>
+*state*<br/>
 有効な値の1つは、、、 **`true`** **`false`** 、、 `forced` `restricted` `push` 、または `pop` です。
 
-- **`true`** の場合、ソースコードファイルで検出された idl カテゴリ属性は、生成された .idl ファイルに配置されます。 これは **emitidl**の既定の設定です。
+- **`true`** の場合、ソースコードファイルで検出された idl カテゴリ属性は、生成された .idl ファイルに配置されます。 これは **emitidl** の既定の設定です。
 
 - **`false`** の場合、ソースコードファイルで検出された idl カテゴリ属性は、生成された .idl ファイルには配置されません。
 
@@ -36,23 +37,23 @@ ms.locfileid: "88846330"
 
 - の場合、後続の属性をオーバーライドします `forced` 。これにより、ファイル `restricted` に IDL 属性がある場合、ファイルに属性を設定する必要があり `module` ます。
 
-- `push`では、現在の**emitidl**の設定を内部**emitidl**スタックに保存し、 `pop` 内部の**emitidl**スタックの一番上にある任意の値に**emitidl**を設定することができます。
+- `push`では、現在の **emitidl** の設定を内部 **emitidl** スタックに保存し、 `pop` 内部の **emitidl** スタックの一番上にある任意の値に **emitidl** を設定することができます。
 
 `defaultimports=`*ブール値* \(optional
 
-- *ブール値*がの場合、生成された **`true`** .idl ファイルに docobj .idl がインポートされます。 また、ソースコード内の .h ファイルと同じ名前の .idl ファイル `#include` が .h ファイルと同じディレクトリに存在する場合、生成された .idl ファイルには、その .idl ファイルの import ステートメントが含まれています。
+- *ブール値* がの場合、生成された **`true`** .idl ファイルに docobj .idl がインポートされます。 また、ソースコード内の .h ファイルと同じ名前の .idl ファイル `#include` が .h ファイルと同じディレクトリに存在する場合、生成された .idl ファイルには、その .idl ファイルの import ステートメントが含まれています。
 
-- *Boolean*がの場合、生成された **`false`** .idl ファイルにはインポートされません。 [インポート](import.md)を使用して .idl ファイルを明示的にインポートする必要があります。
+- *Boolean* がの場合、生成された **`false`** .idl ファイルにはインポートされません。 [インポート](import.md)を使用して .idl ファイルを明示的にインポートする必要があります。
 
 ## <a name="remarks"></a>解説
 
-ソースコードファイルで **emitidl** C++ 属性が検出されると、生成された .idl ファイルに idl カテゴリ属性が配置されます。 **Emitidl**属性がない場合、ソースコードファイル内の idl 属性は、生成された .idl ファイルに出力されます。
+ソースコードファイルで **emitidl** C++ 属性が検出されると、生成された .idl ファイルに idl カテゴリ属性が配置されます。 **Emitidl** 属性がない場合、ソースコードファイル内の idl 属性は、生成された .idl ファイルに出力されます。
 
 ソースコードファイルには、複数の **emitidl** 属性を含めることができます。 `[emitidl(false)];`後続のがないファイルでが発生した場合 `[emitidl(true)];` 、生成された .idl ファイルには属性は処理されません。
 
 コンパイラが新しいファイルを検出するたびに、 **emitidl** が暗黙的にに設定され **`true`** ます。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 | 属性コンテキスト | 値 |
 |-|-|

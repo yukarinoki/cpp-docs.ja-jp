@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: &lt; numeric&gt;'
 title: '&lt;numeric&gt;'
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - <numeric> header
 ms.assetid: 6d6ccb94-48cc-479b-b4a9-bd9c78d4896a
-ms.openlocfilehash: ee1e26d3f174d21ab1ad2c847d292ad075cc0f71
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 5ff2a0ff2b765afbb60d117745976ad3919dd18f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88830593"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97338045"
 ---
 # <a name="ltnumericgt"></a>&lt;numeric&gt;
 
 数値処理のアルゴリズムを実行するコンテナーのテンプレート関数を定義します。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー**: \<numeric>
 
@@ -31,7 +32,7 @@ ms.locfileid: "88830593"
 
 ## <a name="members"></a>メンバー
 
-### <a name="functions"></a>Functions
+### <a name="functions"></a>機能
 
 |名前|説明|
 |-|-|

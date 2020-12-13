@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: __svm_stgi'
 title: __svm_stgi
 ms.date: 09/02/2019
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - __svm_stgi intrinsic
 - STGI instruction
 ms.assetid: 96488da4-5587-4e99-8674-627a9e51be84
-ms.openlocfilehash: 6bd731951b440d3d2597d54c9a52d9f8640a5c5f
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 8a6c7c221ed0bbf71a00685e8a0545818dd507a1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70219837"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97336850"
 ---
 # <a name="__svm_stgi"></a>__svm_stgi
 
@@ -26,19 +27,19 @@ ms.locfileid: "70219837"
 void __svm_stgi(void);
 ```
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 `__svm_stgi` 関数は `STGI` マシン語命令と同じです。 グローバル割り込みフラグは、i/o 完了、ハードウェア温度アラート、デバッグ例外などのイベントが原因で、マイクロプロセッサが割り込みを無視、延期、または処理するかどうかを決定します。
 
-この関数は、ホストの仮想マシンのモニターと、ゲスト オペレーティング システムとそのアプリケーションとの対話をサポートします。 詳細については、「AMD64 アーキテクチャプログラマの手動ボリューム 2:システムプログラミングについては、「 [AMD corporation](https://developer.amd.com/resources/developer-guides-manuals/)サイト」をご覧ください。
+この関数は、ホストの仮想マシンのモニターと、ゲスト オペレーティング システムとそのアプリケーションとの対話をサポートします。 詳細については、 [AMD corporation](https://developer.amd.com/resources/developer-guides-manuals/) サイトの「AMD64 アーキテクチャプログラマーの手動ボリューム 2: システムプログラミング」を検索してください。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-|組み込み|アーキテクチャ|
+|Intrinsic|アーキテクチャ|
 |---------------|------------------|
 |`__svm_stgi`|x86、x64|
 
-**ヘッダーファイル**\<>
+**ヘッダー ファイル** \<intrin.h>
 
 **Microsoft 固有の仕様はここまで**
 

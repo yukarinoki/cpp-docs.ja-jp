@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「ランダム」を参照してください。 &lt;&gt;
 title: '&lt;random&gt;'
 ms.date: 08/24/2017
 f1_keywords:
@@ -6,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - random header
 ms.assetid: 60afc25c-b162-4811-97c1-1b65398d4c57
-ms.openlocfilehash: e66ffbfba7a7cc4a7dfebbc2dcc074842de3c1ac
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 4080e305620dbe4b8fa1674762c27ece4eccd0a1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88831439"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97337973"
 ---
 # <a name="ltrandomgt"></a>&lt;random&gt;
 
 乱数生成の機能を定義し、一様に分布した乱数を作成できるようにします。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー**: \<random>
 
@@ -28,7 +29,7 @@ ms.locfileid: "88831439"
 
 ## <a name="summary"></a>まとめ
 
-*乱数ジェネレーター*は、一連の疑似乱数値を生成するオブジェクトです。 *Uniform Random Number Generator* (URNG) は、指定した範囲内で一様に分布した値を生成するジェネレーターです。 URNG として機能するように設計されたクラステンプレートは、このクラスに特定の共通の特徴がある場合は、 *エンジン* と呼ばれます。これについては、この記事の後半で説明します。 URNG を*分布*の `operator()` に対する引数として渡して URNG と分布を組み合わせることで、その分布によって定義された方法で分布値を生成することができます (これが通常の使用方法です)。
+*乱数ジェネレーター* は、一連の疑似乱数値を生成するオブジェクトです。 *Uniform Random Number Generator* (URNG) は、指定した範囲内で一様に分布した値を生成するジェネレーターです。 URNG として機能するように設計されたクラステンプレートは、このクラスに特定の共通の特徴がある場合は、 *エンジン* と呼ばれます。これについては、この記事の後半で説明します。 URNG を *分布* の `operator()` に対する引数として渡して URNG と分布を組み合わせることで、その分布によって定義された方法で分布値を生成することができます (これが通常の使用方法です)。
 
 次のリンクを使用すると、この記事の主なセクションに移動します。
 
@@ -357,7 +358,7 @@ URNG は、次の特性においてよく説明されます。
 |-|-|
 |[cauchy_distribution クラス](../standard-library/cauchy-distribution-class.md)|実数 (浮動小数点) 値のコーシー分布を作成します。|
 |[chi_squared_distribution クラス](../standard-library/chi-squared-distribution-class.md)|実数 (浮動小数点) 値のカイ 2 乗分布を作成します。|
-|[fisher_f_distribution クラス](../standard-library/fisher-f-distribution-class.md)|実数 (浮動小数点) 値の F 分布 (スネデカー分布の F 分布またはスネデカー分布分布とも呼ばれます) を生成します。|
+|[fisher_f_distribution クラス](../standard-library/fisher-f-distribution-class.md)|実数 (浮動小数点) 値の F 分布 (スネデカー分布の F 分布または Fisher-Snedecor 分布とも呼ばれます) を生成します。|
 |[lognormal_distribution クラス](../standard-library/lognormal-distribution-class.md)|実数 (浮動小数点) 値の対数正規分布を作成します。|
 |[normal_distribution クラス](../standard-library/normal-distribution-class.md)|実数 (浮動小数点) 値の正規 (ガウス) 分布を作成します。|
 |[student_t_distribution クラス](../standard-library/student-t-distribution-class.md)|実数 (浮動小数点) 値のスチューデントの *t* 分布を作成します。|
@@ -394,7 +395,7 @@ URNG は、次の特性においてよく説明されます。
 |-|-|
 |[seed_seq クラス](../standard-library/seed-seq-class.md)|バイアスのかかっていないスクランブルされたシード シーケンスを生成します。 ランダムな変量ストリームのレプリケーションを避けるために使用されます。 エンジンから多数の URNG がインスタンス化される場合に役立ちます。|
 
-### <a name="operators"></a>演算子
+### <a name="operators"></a>オペレーター
 
 このセクションでは、\<random> ヘッダーで提供される演算子を示します。
 
@@ -419,7 +420,7 @@ URNG は、次の特性においてよく説明されます。
 
 [エンジン テンプレート](#eng)と[エンジン アダプター テンプレート](#engadapt)は、作成されるジェネレーターをそのパラメーターでカスタマイズするテンプレートです。
 
-*エンジン*は、最小値と最大値の間に一様に分布した乱数のソースとして機能するインスタンス (ジェネレーター) を持つクラスまたはクラステンプレートです。 *エンジン アダプター*は、他の乱数エンジンが作成した値を受け取って、何らかのアルゴリズムをこれらの値に適用することで、さまざまなランダム性プロパティを持つ値のシーケンスを提供します。
+*エンジン* は、最小値と最大値の間に一様に分布した乱数のソースとして機能するインスタンス (ジェネレーター) を持つクラスまたはクラステンプレートです。 *エンジン アダプター* は、他の乱数エンジンが作成した値を受け取って、何らかのアルゴリズムをこれらの値に適用することで、さまざまなランダム性プロパティを持つ値のシーケンスを提供します。
 
 すべてのエンジンとエンジン アダプターには、次のメンバーが存在します。
 
@@ -441,7 +442,7 @@ URNG は、次の特性においてよく説明されます。
 
 - `void discard(unsigned long long count)` は、実際には `operator()` `count` 時間を呼び出し、各値を破棄します。
 
-**エンジン アダプター**では、さらに次のメンバーがサポートされます (`Engine` はエンジン アダプターの最初のテンプレート パラメーターで、ベース エンジンの型を指定します)。
+**エンジン アダプター** では、さらに次のメンバーがサポートされます (`Engine` はエンジン アダプターの最初のテンプレート パラメーターで、ベース エンジンの型を指定します)。
 
 - ベース エンジンの既定のコンストラクターからの場合と同様にジェネレーターを初期化する既定のコンストラクター。
 
@@ -453,7 +454,7 @@ URNG は、次の特性においてよく説明されます。
 
 - ジェネレーターの構築に使用されたベース エンジンを返す `const Engine& base()` プロパティ関数。
 
-すべてのエンジンで、後続の `operator()` への呼び出しで生成される値のシーケンスを決定する*状態*が保守されます。 同じ型のエンジンからインスタンス化された 2 つのジェネレーターの状態は、`operator==` および `operator!=` を使って比較できます。 2 つの状態を比較した結果、等しければ、それらからは同じ値のシーケンスが生成されます。 オブジェクトの状態は、そのジェネレーターの `operator<<` を使用することにより、符号なし 32 ビット値のシーケンスとしてストリームに保存できます。 保存することによって状態が変化することはありません。 保存された状態は、`operator>>` を使用すれば、同じ型のエンジンからインスタンス化されたジェネレーターに読み込むことができます。
+すべてのエンジンで、後続の `operator()` への呼び出しで生成される値のシーケンスを決定する *状態* が保守されます。 同じ型のエンジンからインスタンス化された 2 つのジェネレーターの状態は、`operator==` および `operator!=` を使って比較できます。 2 つの状態を比較した結果、等しければ、それらからは同じ値のシーケンスが生成されます。 オブジェクトの状態は、そのジェネレーターの `operator<<` を使用することにより、符号なし 32 ビット値のシーケンスとしてストリームに保存できます。 保存することによって状態が変化することはありません。 保存された状態は、`operator>>` を使用すれば、同じ型のエンジンからインスタンス化されたジェネレーターに読み込むことができます。
 
 ### <a name="distributions"></a>ディストリビューション
 
@@ -461,7 +462,7 @@ URNG は、次の特性においてよく説明されます。
 
 - **`typedef`**`numeric-type` `result_type` は、分布のによって返される型です `operator()` 。 `numeric-type`は、インスタンス化時にテンプレート パラメーターとして渡されます。
 
-- `template <class URNG> result_type operator()(URNG& gen)`: 一様に分布する乱数値のソースとして `gen` を使い、格納されている*分布のパラメーター*を使用して、分布の定義に従って分布された値を返します。
+- `template <class URNG> result_type operator()(URNG& gen)`: 一様に分布する乱数値のソースとして `gen` を使い、格納されている *分布のパラメーター* を使用して、分布の定義に従って分布された値を返します。
 
 - `template <class URNG> result_type operator()(URNG& gen, param_type p)`: 一様に分布する乱数値のソースとして `gen` を使い、パラメーター構造体 `p` を使用して、分布の定義に従って分布した値を返します。
 

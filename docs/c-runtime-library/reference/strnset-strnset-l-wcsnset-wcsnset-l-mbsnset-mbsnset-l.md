@@ -1,4 +1,5 @@
 ---
+description: 詳細については、_strnset、_strnset_l、_wcsnset、_wcsnset_l、_mbsnset、_mbsnset_l を参照してください。
 title: _strnset、_strnset_l、_wcsnset、_wcsnset_l、_mbsnset、_mbsnset_l
 ms.date: 4/2/2020
 api_name:
@@ -73,19 +74,19 @@ helpviewer_keywords:
 - strings [C++], initializing
 - tcsnset_l function
 ms.assetid: 3f306489-5763-48e5-b939-aefee7c94ef5
-ms.openlocfilehash: eb23e63fa5eba7ab79fc45b8c8cb6ea350685a7e
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: dc0ca21ff23cbbf016b53ec55ed3e1960fbe2fb6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87231326"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97336452"
 ---
 # <a name="_strnset-_strnset_l-_wcsnset-_wcsnset_l-_mbsnset-_mbsnset_l"></a>_strnset、_strnset_l、_wcsnset、_wcsnset_l、_mbsnset、_mbsnset_l
 
 文字列の文字を所定の書式に初期化します。 これらの関数のセキュリティを強化したバージョンを使用できます。「[_strnset_s、_strnset_s_l、_wcsnset_s、_wcsnset_s_l、_mbsnset_s、_mbsnset_s_l](strnset-s-strnset-s-l-wcsnset-s-wcsnset-s-l-mbsnset-s-mbsnset-s-l.md)」をご覧ください。
 
 > [!IMPORTANT]
-> **_mbsnset**と **_mbsnset_l**は、Windows ランタイムで実行されるアプリケーションでは使用できません。 詳細については、「[ユニバーサル Windows プラットフォーム アプリでサポートされていない CRT 関数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)」を参照してください。
+> **_mbsnset** と **_mbsnset_l** は、Windows ランタイムで実行されるアプリケーションでは使用できません。 詳細については、「[ユニバーサル Windows プラットフォーム アプリでサポートされていない CRT 関数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)」を参照してください。
 
 ## <a name="syntax"></a>構文
 
@@ -127,10 +128,10 @@ unsigned char *_mbsnset_l(
 
 ### <a name="parameters"></a>パラメーター
 
-*引数*<br/>
+*str*<br/>
 変更対象の文字列。
 
-*40u-c*<br/>
+*c*<br/>
 文字設定。
 
 *count*<br/>
@@ -145,11 +146,11 @@ unsigned char *_mbsnset_l(
 
 ## <a name="remarks"></a>解説
 
-**_Strnset**関数は、 *str*の最初の最大文字*数*を*c* (に変換された) に設定し **`char`** ます。 *Count*が*str*の長さよりも大きい場合、 *count*の代わりに*str*の長さが使用されます。
+**_Strnset** 関数は、 *str* の最初の最大文字 *数* を *c* (に変換された) に設定し **`char`** ます。 *Count* が *str* の長さよりも大きい場合、 *count* の代わりに *str* の長さが使用されます。
 
-**_wcsnset**と **_mbsnset**は **_strnset**のワイド文字バージョンとマルチバイト文字バージョンです。 **_Wcsnset**の文字列引数と戻り値はワイド文字列です。これらの **_mbsnset**はマルチバイト文字列です。 それ以外では、これらの関数の動作は同じです。
+**_wcsnset** と **_mbsnset** は **_strnset** のワイド文字バージョンとマルチバイト文字バージョンです。 **_Wcsnset** の文字列引数と戻り値はワイド文字列です。これらの **_mbsnset** はマルチバイト文字列です。 それ以外では、これらの関数の動作は同じです。
 
-**_mbsnset**はそのパラメーターを検証します。*str*が null ポインターの場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、 **_mbsnset**は**NULL**を返し、 **errno**を**EINVAL**に設定します。 **_strnset**と **_wcsnset**では、パラメーターは検証されません。
+**_mbsnset** はそのパラメーターを検証します。 *str* が null ポインターの場合は、「 [パラメーターの検証](../../c-runtime-library/parameter-validation.md) 」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、 **_mbsnset** は **NULL** を返し、 **errno** を **EINVAL** に設定します。 **_strnset** と **_wcsnset** では、パラメーターは検証されません。
 
 出力値は、ロケールの **LC_CTYPE** カテゴリの設定に影響されます。詳細については、「[setlocale](setlocale-wsetlocale.md)」を参照してください。 **_l** サフィックスが付いていないこれらの関数のバージョンでは、このロケールに依存する動作に現在のロケールを使用します。**_l** サフィックスが付いているバージョンは、渡されたロケール パラメーターを代わりに使用する点を除いて同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
 
@@ -202,7 +203,7 @@ After:  **** is a test
 
 [文字列操作](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [ロケール](../../c-runtime-library/locale.md)<br/>
-[マルチバイト文字のシーケンスの解釈](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[Multibyte-Character シーケンスの解釈](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [strcat、wcscat、_mbscat](strcat-wcscat-mbscat.md)<br/>
 [strcmp、wcscmp、_mbscmp](strcmp-wcscmp-mbscmp.md)<br/>
 [strcpy、wcscpy、_mbscpy](strcpy-wcscpy-mbscpy.md)<br/>

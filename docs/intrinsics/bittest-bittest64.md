@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: _bittest、_bittest64'
 title: _bittest、_bittest64
 ms.date: 09/02/2019
 f1_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - _bittest64 intrinsic
 - bt instruction
 ms.assetid: 15e62afb-abea-4ee7-a6b1-13efa2034937
-ms.openlocfilehash: 37d96cc008d0da018355a2eca63c6c592ab50f12
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 50c0f1637fefab9bd39fcbca2cd18571c7769bd8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70216907"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97337205"
 ---
 # <a name="_bittest-_bittest64"></a>_bittest、_bittest64
 
@@ -49,14 +50,14 @@ unsigned char _bittest64(
 
 指定した位置にあるビット。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-|組み込み|アーキテクチャ|Header|
+|Intrinsic|アーキテクチャ|ヘッダー|
 |---------------|------------------|------------|
 |`_bittest`|x86、ARM、x64、ARM64|\<intrin.h>|
 |`_bittest64`|ARM64、x64|\<intrin.h>|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 このルーチンは、組み込みとしてのみ使用できます。
 

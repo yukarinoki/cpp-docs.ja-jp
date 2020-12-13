@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: isnormal'
 title: isnormal
 ms.date: 01/31/2019
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 - math/isnormal
 helpviewer_keywords:
 - isnormal function
-ms.openlocfilehash: 2e12cabb57f2e51c08b4d93af33dae85164d016b
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 3afae5196a7a6b2b149028ad347f95baa27b1544
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87213529"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97337762"
 ---
 # <a name="isnormal"></a>isnormal
 
@@ -37,13 +38,13 @@ inline bool isnormal(
 
 ## <a name="return-value"></a>戻り値
 
-**isnormal** **`true`** 引数*x*が0、subnormal、無限、NaN のいずれでもない場合、isnormal は0以外の値 (C++ コード) を返します。 それ以外の場合、 **isnormal**は 0 ( **`false`** C++ コードでは) を返します。
+ **`true`** 引数 *x* が0、subnormal、無限、NaN のいずれでもない場合、isnormal は0以外の値 (C++ コード) を返します。 それ以外の場合、 **isnormal** は 0 ( **`false`** C++ コードでは) を返します。
 
 ## <a name="remarks"></a>解説
 
-**isnormal**は、c としてコンパイルされた場合はマクロ、C++ としてコンパイルされた場合はインライン関数テンプレートです。
+**isnormal** は、c としてコンパイルされた場合はマクロ、C++ としてコンパイルされた場合はインライン関数テンプレートです。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 |機能|必須ヘッダー (C)|必須ヘッダー (C++)|
 |--------------|---------------------------|-------------------------------|

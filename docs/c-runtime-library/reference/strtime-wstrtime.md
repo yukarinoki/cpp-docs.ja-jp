@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: _strtime、_wstrtime'
 title: _strtime、_wstrtime
 ms.date: 4/2/2020
 api_name:
@@ -39,12 +40,12 @@ helpviewer_keywords:
 - _tstrtime function
 - time, copying
 ms.assetid: 9e538161-cf49-44ec-bca5-c0ab0b9e4ca3
-ms.openlocfilehash: 7d9752ff9eb1fd7a4fa08c2a6ab89fefe456dad1
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 0cb5d5deaa89d832ed1cecd231ed1c8f456ccace
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82910917"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97337745"
 ---
 # <a name="_strtime-_wstrtime"></a>_strtime、_wstrtime
 
@@ -76,13 +77,13 @@ wchar_t *_wstrtime(
 
 ## <a name="return-value"></a>戻り値
 
-結果の文字列*timestr*へのポインターを返します。
+結果の文字列 *timestr* へのポインターを返します。
 
 ## <a name="remarks"></a>解説
 
-**_Strtime**関数は、現在の現地時刻を*timestr*が指すバッファーにコピーします。 時刻は**hh: mm: ss**として書式設定されます。ここで、 **hh**は24時間表記の時間を表す2桁の数字、 **mm**は2桁の数字を表し、 **ss**は秒を表す2桁の数字です。 たとえば、文字列**18:23:44**は、午後6時24分と44秒を表します。 バッファーは 9 バイト以上の長さである必要があります。
+**_Strtime** 関数は、現在の現地時刻を *timestr* が指すバッファーにコピーします。 時刻は **hh: mm: ss** として書式設定されます。ここで、 **hh** は24時間表記の時間を表す2桁の数字、 **mm** は2桁の数字を表し、 **ss** は秒を表す2桁の数字です。 たとえば、文字列 **18:23:44** は、午後6時24分と44秒を表します。 バッファーは 9 バイト以上の長さである必要があります。
 
-**_wstrtime**は **_strtime**のワイド文字バージョンです。**_wstrtime**の引数と戻り値はワイド文字列です。 それ以外では、これらの関数の動作は同じです。 *Timestr*が**NULL**ポインターの場合、または*timestr*が正しく書式設定されていない場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 例外の継続が許可された場合、これらの関数は**null**を返し、 **errno**を**EINVAL**に設定します。 *timestr*が**null**の場合、または*timestr*が正しく書式設定されていない場合は**errno**を**ERANGE**に設定します。
+**_wstrtime** は **_strtime** のワイド文字バージョンです。 **_wstrtime** の引数と戻り値はワイド文字列です。 それ以外では、これらの関数の動作は同じです。 *Timestr* が **NULL** ポインターの場合、または *timestr* が正しく書式設定されていない場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 例外の継続が許可された場合、これらの関数は **null** を返し、 **errno** を **EINVAL** に設定します。 *timestr* が **null** の場合、または *timestr* が正しく書式設定されていない場合は **errno** を **ERANGE** に設定します。
 
 C++ では、これらの関数にテンプレートのオーバーロードがあります。このオーバーロードは、これらの関数に対応するセキュリティで保護された新しい関数を呼び出します。 詳細については、「[セキュリティ保護されたテンプレート オーバーロード](../../c-runtime-library/secure-template-overloads.md)」を参照してください。
 
@@ -96,7 +97,7 @@ C++ では、これらの関数にテンプレートのオーバーロードが�
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**_strtime**|\<time.h>|
 |**_wstrtime**|\<time.h> または \<wchar.h>|

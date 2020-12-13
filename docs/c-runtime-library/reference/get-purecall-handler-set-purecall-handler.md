@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: _get_purecall_handler、_set_purecall_handler'
 title: _get_purecall_handler、_set_purecall_handler
 ms.date: 11/04/2016
 api_name:
@@ -37,12 +38,12 @@ helpviewer_keywords:
 - _set_purecall_handler_m function
 - _get_purecall_handler function
 ms.assetid: 2759b878-8afa-4129-86e7-72afc2153d9c
-ms.openlocfilehash: 9f21258fa1f6ecd2d1717b00ef2cecaee9c865e2
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 7971847c4ce0861db272ea3c722666b0ba0318d0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87216948"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97339026"
 ---
 # <a name="_get_purecall_handler-_set_purecall_handler"></a>_get_purecall_handler、_set_purecall_handler
 
@@ -61,7 +62,7 @@ _purecall_handler __cdecl _set_purecall_handler(
 ### <a name="parameters"></a>パラメーター
 
 *function*<br/>
-純粋仮想関数が呼び出されたときに呼び出される関数。 **_Purecall_handler**関数の戻り値の型は void である必要があります。
+純粋仮想関数が呼び出されたときに呼び出される関数。 **_Purecall_handler** 関数の戻り値の型は void である必要があります。
 
 ## <a name="return-value"></a>戻り値
 
@@ -69,13 +70,13 @@ _purecall_handler __cdecl _set_purecall_handler(
 
 ## <a name="remarks"></a>解説
 
-**_Get_purecall_handler**関数と **_set_purecall_handler**関数は、Microsoft 固有の関数であり、C++ コードにのみ適用されます。
+**_Get_purecall_handler** 関数と **_set_purecall_handler** 関数は、Microsoft 固有の関数であり、C++ コードにのみ適用されます。
 
-純粋仮想関数には実装がないため、この関数への呼び出しはエラーになります。 既定では、純粋仮想関数が呼び出されるとコンパイラによってエラー ハンドラー関数を呼び出すコードが生成され、プログラムが終了します。 純粋仮想関数の呼び出し用に独自のエラー ハンドラーの関数をインストールして呼び出しをキャッチし、デバッグまたはレポート作成に使用することができます。 独自のエラーハンドラーを使用するには、 **_purecall_handler**シグネチャを持つ関数を作成し、 **_set_purecall_handler**を使用してそれを現在のハンドラーにします。
+純粋仮想関数には実装がないため、この関数への呼び出しはエラーになります。 既定では、純粋仮想関数が呼び出されるとコンパイラによってエラー ハンドラー関数を呼び出すコードが生成され、プログラムが終了します。 純粋仮想関数の呼び出し用に独自のエラー ハンドラーの関数をインストールして呼び出しをキャッチし、デバッグまたはレポート作成に使用することができます。 独自のエラーハンドラーを使用するには、 **_purecall_handler** シグネチャを持つ関数を作成し、 **_set_purecall_handler** を使用してそれを現在のハンドラーにします。
 
-各プロセスには **_purecall_handler**が1つしかないので、を呼び出すと、すべてのスレッドが直ちに影響を受ける **_set_purecall_handler**ます。 ハンドラーは、すべてのスレッドでの最後の呼び出し元によって設定されます。
+各プロセスには **_purecall_handler** が1つしかないので、を呼び出すと、すべてのスレッドが直ちに影響を受ける **_set_purecall_handler** ます。 ハンドラーは、すべてのスレッドでの最後の呼び出し元によって設定されます。
 
-既定の動作を復元するには、引数を使用して **_set_purecall_handler**を呼び出し **`nullptr`** ます。
+既定の動作を復元するには、引数を使用して **_set_purecall_handler** を呼び出し **`nullptr`** ます。
 
 ## <a name="requirements"></a>必要条件
 

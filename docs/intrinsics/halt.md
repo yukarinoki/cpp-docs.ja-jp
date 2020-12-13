@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: __halt'
 title: __halt
 ms.date: 09/02/2019
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - __halt intrinsic
 - HLT instruction
 ms.assetid: a074f44a-101c-45a5-8a5e-cfd223c34002
-ms.openlocfilehash: 66f5e05e7673523966ef35ac743fc585930b511c
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: e38478b14b59c910e6d6ac12f9cb69fa369e3459
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70222151"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97336985"
 ---
 # <a name="__halt"></a>__halt
 
@@ -29,15 +30,15 @@ void __halt( void );
 
 ## <a name="requirements"></a>必要条件
 
-|組み込み|アーキテクチャ|
+|Intrinsic|アーキテクチャ|
 |---------------|------------------|
 |`__halt`|x86、x64|
 
-**ヘッダーファイル**\<>
+**ヘッダー ファイル** \<intrin.h>
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-関数は`HLT`コンピューター命令と同じであり、カーネルモードでのみ使用できます。 `__halt` 詳細については、「Intel Architecture Software Developer's Manual, Volume 2:命令セットリファレンス、「 [」を参照してください](https://software.intel.com/articles/intel-sdm)。
+関数はコンピューター命令と同じであり、 `__halt` `HLT` カーネルモードでのみ使用できます。 詳細については、 [Intel Corporation](https://software.intel.com/articles/intel-sdm) サイトのドキュメント「Intel Architecture Software Developer's Manual, Volume 2: 命令セットリファレンス」を検索してください。
 
 **Microsoft 固有の仕様はここまで**
 

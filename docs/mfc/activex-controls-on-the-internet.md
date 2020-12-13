@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「インターネット上の ActiveX コントロール」を参照してください。
 title: インターネット上の ActiveX コントロール
 ms.date: 09/12/2018
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - Internet applications [MFC], ActiveX controls
 - networks [MFC], downloading with ActiveX controls
 ms.assetid: 7ab943c8-2022-41df-9065-d629b616eeec
-ms.openlocfilehash: f06a6f6f71e922163fd95c59836c50b88b05ed3a
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 5f186d74ff0b448d1cef6a956a6495f6a8890798
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84616475"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97339137"
 ---
 # <a name="activex-controls-on-the-internet"></a>インターネット上の ActiveX コントロール
 
@@ -39,11 +40,11 @@ ActiveX コントロールは、インターネットに限定されていませ
 
 - COM オブジェクトである。
 
-- **DLLRegisterServer**と**DLLUnRegisterServer**をエクスポートします。
+- **DLLRegisterServer** と **DLLUnRegisterServer** をエクスポートします。
 
 - 機能に必要な追加のインターフェイスをサポートします。
 
-## <a name="making-your-existing-controls-internet-friendly"></a>既存のコントロールをインターネットで使いやすくする
+## <a name="making-your-existing-controls-internet-friendly"></a>既存のコントロールを Internet-Friendly する
 
 インターネット環境で適切に機能するコントロールを設計するには、インターネット上で比較的低転送速度を考慮する必要があります。 既存のコントロールを使用できます。ただし、コードサイズを小さくし、コントロールプロパティを非同期にダウンロードするために実行する必要がある手順があります。
 
@@ -85,11 +86,11 @@ ActiveX コントロールは、インターネットに限定されていませ
 
 1. [**ファイル**] メニューの [**新規作成**] をクリックします。
 
-1. Visual Studio C++ プロジェクトの [ **MFC ActiveX コントロールウィザード**] を選択し、プロジェクトの名前を指定します。
+1. Visual Studio C++ プロジェクトの [ **MFC ActiveX コントロールウィザード** ] を選択し、プロジェクトの名前を指定します。
 
-1. [**コントロールの設定**] ページで、[プロパティを**非同期に読み込む**] を選択します。 このオプションを選択すると、準備完了状態プロパティと準備完了状態変更イベントが設定されます。
+1. [ **コントロールの設定** ] ページで、[プロパティを **非同期に読み込む**] を選択します。 このオプションを選択すると、準備完了状態プロパティと準備完了状態変更イベントが設定されます。
 
-   **ウィンドウなしのアクティブ化**など、他の最適化を選択することもできます。これについては、「 [ActiveX コントロール: 最適化](mfc-activex-controls-optimization.md)」を参照してください。
+   **ウィンドウなしのアクティブ化** など、他の最適化を選択することもできます。これについては、「 [ActiveX コントロール: 最適化](mfc-activex-controls-optimization.md)」を参照してください。
 
 1. **[完了]** を選択して、プロジェクトを作成します。
 
@@ -101,13 +102,13 @@ ActiveX コントロールは、インターネットに限定されていませ
 
 1. このクラスでは、をオーバーライド `OnDataAvailable` します。 この関数は、データを表示できるようにするたびに呼び出されます。 データが使用可能になると、選択した任意の方法で処理できます。たとえば、プログレッシブレンダリングを行うことができます。
 
-   次のコード抜粋は、エディットコントロールにデータをプログレッシブ表示する簡単な例です。 **BSCF_FIRSTDATANOTIFICATION**フラグを使用して、エディットコントロールをクリアします。
+   次のコード抜粋は、エディットコントロールにデータをプログレッシブ表示する簡単な例です。 **BSCF_FIRSTDATANOTIFICATION** フラグを使用して、エディットコントロールをクリアします。
 
    [!code-cpp[NVC_MFCActiveXControl#1](codesnippet/cpp/activex-controls-on-the-internet_1.cpp)]
 
    AFXCMN.H を含める必要があることに注意してください。H クラスを使用し `CListCtrl` ます。
 
-1. コントロールの全体的な状態が変化した場合 (たとえば、読み込みから初期化済みまたはユーザー対話形式に変更した場合) は、を呼び出し `COleControl::InternalSetReadyState` ます。 コントロールにデータパスプロパティが1つしかない場合は、ダウンロードが完了したことをコンテナーに通知するコードを**BSCF_LASTDATANOTIFICATION**に追加できます。 次に例を示します。
+1. コントロールの全体的な状態が変化した場合 (たとえば、読み込みから初期化済みまたはユーザー対話形式に変更した場合) は、を呼び出し `COleControl::InternalSetReadyState` ます。 コントロールにデータパスプロパティが1つしかない場合は、ダウンロードが完了したことをコンテナーに通知するコードを **BSCF_LASTDATANOTIFICATION** に追加できます。 次に例を示します。
 
    [!code-cpp[NVC_MFCActiveXControl#2](codesnippet/cpp/activex-controls-on-the-internet_2.cpp)]
 
@@ -117,9 +118,9 @@ ActiveX コントロールは、インターネットに限定されていませ
 
 #### <a name="to-add-a-property"></a>プロパティを追加するには
 
-1. **クラスビュー**で、[ライブラリ] ノードの下のインターフェイスを右クリックし、[**追加**]、[**プロパティの追加**] の順に選択します。 これにより、**プロパティの追加ウィザード**が開始されます。
+1. **クラスビュー** で、[ライブラリ] ノードの下のインターフェイスを右クリックし、[**追加**]、[**プロパティの追加**] の順に選択します。 これにより、 **プロパティの追加ウィザード** が開始されます。
 
-1. プロパティの**追加ウィザード**で、[**メソッドの設定/取得**] オプションボタンを選択し、**プロパティ名**(たとえば、Editcontroltext) を入力し、**プロパティの型**として [BSTR] を選択します。
+1. プロパティの **追加ウィザード** で、[ **メソッドの設定/取得** ] オプションボタンを選択し、 **プロパティ名**(たとえば、Editcontroltext) を入力し、 **プロパティの型** として [BSTR] を選択します。
 
 1. **[完了]** をクリックします。
 
@@ -193,5 +194,5 @@ Web ページにコントロールを挿入するためのオブジェクトタ�
 
 ## <a name="see-also"></a>関連項目
 
-[MFC インターネット プログラミングの作業](mfc-internet-programming-tasks.md)<br/>
+[MFC インターネットプログラミングタスク](mfc-internet-programming-tasks.md)<br/>
 [MFC インターネットプログラミングの基礎](mfc-internet-programming-basics.md)

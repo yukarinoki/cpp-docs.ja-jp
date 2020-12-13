@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: __getcallerseflags'
 title: __getcallerseflags
 ms.date: 09/02/2019
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - _getcallerseflags intrinsic
 ms.assetid: 2386596f-33aa-4cc7-b026-5a834637270a
-ms.openlocfilehash: d6279db10ec38da7482b26e19e31f2d34dd48a07
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: bc73ca965f61ee4b5291c48f9680d4aa2f1774a7
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70222169"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97337000"
 ---
 # <a name="__getcallerseflags"></a>__getcallerseflags
 
@@ -30,15 +31,15 @@ unsigned int __getcallerseflags(void);
 
 呼び出し元のコンテキストからの EFLAGS 値。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-|組み込み|アーキテクチャ|
+|Intrinsic|アーキテクチャ|
 |---------------|------------------|
 |`__getcallerseflags`|x86、x64|
 
-**ヘッダーファイル**\<>
+**ヘッダー ファイル** \<intrin.h>
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 このルーチンは、組み込みとしてのみ使用できます。
 

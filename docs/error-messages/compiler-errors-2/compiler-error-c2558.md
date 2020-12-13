@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「コンパイラエラー C2558」を参照してください。
 title: コンパイラ エラー C2558
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2558
 ms.assetid: 822b701e-dcae-423a-b21f-47f36aff9c90
-ms.openlocfilehash: 2504b42f49ccb040f676f0aead8f243d33c7dd1a
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 12f75294f02b6586a90515f381b37c8c346f4567
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87207746"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97338720"
 ---
 # <a name="compiler-error-c2558"></a>コンパイラ エラー C2558
 
@@ -25,6 +26,6 @@ ms.locfileid: "87207746"
 
    コピーコンストラクターを持つクラスを使用しても安全であると判断した場合は **`private`** 、コンストラクターを持つクラスから新しいクラスを派生させ、 **`private`** **`public`** **`protected`** 新しいクラスでまたはコピーコンストラクターを使用できるようにします。 この派生クラスを元のクラスがあった位置で使用するとエラーを解決できます。
 
-1. この問題は、コピー コンストラクターが明示的であるクラスをコピーしようとしたときに発生する場合があります。 コピーコンストラクターをとして宣言 **`explicit`** すると、関数との間でクラスのオブジェクトを渡したり返したりすることが回避されます。 明示的なコンストラクターの詳細については、「[ユーザー定義型変換](../../cpp/user-defined-type-conversions-cpp.md)」を参照してください。
+1. この問題は、コピー コンストラクターが明示的であるクラスをコピーしようとしたときに発生する場合があります。 コピーコンストラクターをとして宣言 **`explicit`** すると、関数との間でクラスのオブジェクトを渡したり返したりすることが回避されます。 明示的なコンストラクターの詳細については、「 [ユーザー定義型変換](../../cpp/user-defined-type-conversions-cpp.md)」を参照してください。
 
 1. この問題は、 **`const`** 参照パラメーターを受け取らないコピーコンストラクターを使用して、によって宣言されたクラスインスタンスをコピーしようとしたときに発生する可能性があり **`const`** ます。 **`const`** 非 const 型参照の代わりに型参照を使用して、コピーコンストラクターを宣言します。

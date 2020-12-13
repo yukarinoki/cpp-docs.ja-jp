@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: atof、_atof_l、_wtof、_wtof_l'
 title: atof、_atof_l、_wtof、_wtof_l
 ms.date: 4/2/2020
 api_name:
@@ -54,12 +55,12 @@ helpviewer_keywords:
 - _wtof function
 - string conversion, to floating point values
 ms.assetid: eb513241-c9a9-4f5c-b7e7-a49b14abfb75
-ms.openlocfilehash: 8eee8db691b3b652768980237fc90bd675bac89b
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: b583b4d443264d82fa83124f4dacd597fe8829b6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87232587"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97337785"
 ---
 # <a name="atof-_atof_l-_wtof-_wtof_l"></a>atof、_atof_l、_wtof、_wtof_l
 
@@ -86,7 +87,7 @@ double _wtof_l(
 
 ## <a name="parameters"></a>パラメーター
 
-*引数*<br/>
+*str*<br/>
 変換対象の文字列。
 
 *locale*<br/>
@@ -96,7 +97,7 @@ double _wtof_l(
 
 各関数は、 **`double`** 入力文字を数値として解釈することによって生成される値を返します。 入力をその型の値に変換できない場合、戻り値は 0.0 になります。
 
-範囲外のすべての場合、 **errno**は**ERANGE**に設定されます。 渡されたパラメーターが**NULL**の場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、これらの関数は**errno**を**EINVAL**に設定し、0を返します。
+範囲外のすべての場合、 **errno** は **ERANGE** に設定されます。 渡されたパラメーターが **NULL** の場合は、「 [パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、これらの関数は **errno** を **EINVAL** に設定し、0を返します。
 
 ## <a name="remarks"></a>解説
 
@@ -104,15 +105,15 @@ double _wtof_l(
 
 入力文字列は、指定された型の数値として解釈できる文字シーケンスです。 関数は、数値の一部として認識できない文字に最初に遭遇した時点で入力文字列の読み取りを停止します。 この文字は、文字列を終了する null 文字 ('\0' または L'\0') である場合があります。
 
-**Atof**と **_wtof**の*str*引数の形式は次のとおりです。
+**Atof** と **_wtof** の *str* 引数の形式は次のとおりです。
 
 [*空白*][*sign*][*数字*][__.__*数字*][{**e** &#124; **e** } [*sign*]*数字*]
 
-*空白*はスペースまたはタブ文字で構成され、無視されます。*sign*は正符号 (+) またはマイナス記号 (-) です。と*数字*は、1桁以上の10進数です。 小数点の前に数字がない場合は、少なくとも 1 つの数字が小数点の後に必要です。 10進数の後には指数部を指定できます。指数部は、指数部の先頭文字 (**e**または**e**) と、必要に応じて符号付き10進整数で構成されます。
+*空白* はスペースまたはタブ文字で構成され、無視されます。*sign* は正符号 (+) またはマイナス記号 (-) です。と *数字* は、1桁以上の10進数です。 小数点の前に数字がない場合は、少なくとも 1 つの数字が小数点の後に必要です。 10進数の後には指数部を指定できます。指数部は、指数部の先頭文字 (**e** または **e**) と、必要に応じて符号付き10進整数で構成されます。
 
-これらの関数の UCRT バージョンは、Fortran スタイル (**d**または**d**) の指数文字の変換をサポートしていません。 この非標準の拡張機能は、CRT の以前のバージョンでサポートされており、コードの互換性に影響する変更点がある可能性があります。
+これらの関数の UCRT バージョンは、Fortran スタイル (**d** または **d**) の指数文字の変換をサポートしていません。 この非標準の拡張機能は、CRT の以前のバージョンでサポートされており、コードの互換性に影響する変更点がある可能性があります。
 
-**_L**サフィックスを持つこれらの関数のバージョンは、現在のロケールの代わりに渡された*ロケール*パラメーターを使用する点を除いて同じです。
+**_L** サフィックスを持つこれらの関数のバージョンは、現在のロケールの代わりに渡された *ロケール* パラメーターを使用する点を除いて同じです。
 
 既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
@@ -123,16 +124,16 @@ double _wtof_l(
 |**_tstof**|**atof**|**atof**|**_wtof**|
 |**_ttof**|**atof**|**atof**|**_wtof**|
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 |ルーチン|必須ヘッダー|
 |------------------|---------------------|
-|**atof**、 **_atof_l**|C: \<math.h> または \<stdlib.h> C++: \<cstdlib> 、 \<stdlib.h> 、 \<cmath> または\<math.h>|
-|**_wtof**、 **_wtof_l**|C: \<stdlib.h> または \<wchar.h> C++: \<cstdlib> 、 \<stdlib.h> または\<wchar.h>|
+|**atof**、 **_atof_l**|C: \<math.h> または \<stdlib.h> C++: \<cstdlib> 、 \<stdlib.h> 、 \<cmath> または \<math.h>|
+|**_wtof**、 **_wtof_l**|C: \<stdlib.h> または \<wchar.h> C++: \<cstdlib> 、 \<stdlib.h> または \<wchar.h>|
 
 ## <a name="example"></a>例
 
-このプログラムは、 **atof**関数と **_atof_l**関数を使用して、文字列として格納されている数値を数値に変換する方法を示しています。
+このプログラムは、 **atof** 関数と **_atof_l** 関数を使用して、文字列として格納されている数値を数値に変換する方法を示しています。
 
 ```C
 // crt_atof.c

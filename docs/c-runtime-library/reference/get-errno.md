@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: _get_errno'
 title: _get_errno
 ms.date: 4/2/2020
 api_name:
@@ -28,12 +29,12 @@ helpviewer_keywords:
 - errno global variable
 - _get_errno function
 ms.assetid: b3fd5ebc-f41b-4314-a2f4-2f2d79d6e740
-ms.openlocfilehash: f1678628685c74519077fb68ca9c810aebe30fdd
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 6df162974494a29d55af9e27eb7a2b526a27cf45
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82919350"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97336510"
 ---
 # <a name="_get_errno"></a>_get_errno
 
@@ -50,15 +51,15 @@ errno_t _get_errno(
 ### <a name="parameters"></a>パラメーター
 
 *pValue*<br/>
-**Errno**変数の現在の値が格納される整数へのポインター。
+**Errno** 変数の現在の値が格納される整数へのポインター。
 
 ## <a name="return-value"></a>戻り値
 
-正常終了した場合は 0 を返します。失敗した場合はエラー コードを返します。 *PValue*が**NULL**の場合、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、この関数は**errno**を**einval**に設定し、 **einval**を返します。
+正常終了した場合は 0 を返します。失敗した場合はエラー コードを返します。 *PValue* が **NULL** の場合、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、この関数は **errno** を **einval** に設定し、 **einval** を返します。
 
 ## <a name="remarks"></a>解説
 
-Errno に指定できる**値は、** errno に定義されています。 「[errno Constants](../../c-runtime-library/errno-constants.md)」(errno 定数) もご覧ください。
+Errno に指定できる **値は、** errno に定義されています。 「[errno Constants](../../c-runtime-library/errno-constants.md)」(errno 定数) もご覧ください。
 
 既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
@@ -90,7 +91,7 @@ fyi, ENOENT = 2
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|オプション ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|オプション ヘッダー|
 |-------------|---------------------|---------------------|
 |**_get_errno**|\<stdlib.h>|\<errno.h>|
 
@@ -99,4 +100,4 @@ fyi, ENOENT = 2
 ## <a name="see-also"></a>関連項目
 
 [_set_errno](set-errno.md)<br/>
-[errno、_doserrno、_sys_errlist、_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)<br/>
+[errno、_doserrno、_sys_errlist、および _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)<br/>

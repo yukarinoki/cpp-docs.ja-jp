@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: CMFCAcceleratorKeyAssignCtrl クラス'
 title: CMFCAcceleratorKeyAssignCtrl クラス
 ms.date: 10/18/2018
 f1_keywords:
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - CMFCAcceleratorKeyAssignCtrl [MFC], PreTranslateMessage
 - CMFCAcceleratorKeyAssignCtrl [MFC], ResetKey
 ms.assetid: 89fb8e62-596e-4e71-8c9a-32740347aaab
-ms.openlocfilehash: 2021a2069885c6314859a65d528cf03712c524b6
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: 0f5584dfa521f45841691bff3775d9cd98808b9a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81751736"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97336586"
 ---
 # <a name="cmfcacceleratorkeyassignctrl-class"></a>CMFCAcceleratorKeyAssignCtrl クラス
 
-この`CMFCAcceleratorKeyAssignCtrl`クラスは、Alt、Control、Shift などの追加のシステム ボタンをサポートするように[CEdit クラス](../../mfc/reference/cedit-class.md)を拡張します。
+クラスは、 `CMFCAcceleratorKeyAssignCtrl` [CEdit クラス](../../mfc/reference/cedit-class.md) を拡張して、ALT、CONTROL、SHIFT などの追加のシステムボタンをサポートします。
 
 ## <a name="syntax"></a>構文
 
@@ -50,14 +51,14 @@ class CMFCAcceleratorKeyAssignCtrl : public CEdit
 |[CMFCAcceleratorKeyAssignCtrl::GetAccel](#getaccel)|`CMFCAcceleratorKeyAssignCtrl` オブジェクトで押されるショートカット キーの `ACCEL` 構造体を取得します。|
 |[CMFCAcceleratorKeyAssignCtrl::IsFocused](#isfocused)||
 |[CMFCAcceleratorKeyAssignCtrl::IsKeyDefined](#iskeydefined)|ショートカット キーが定義されているかどうかを判断します。|
-|[CMFCAcceleratorKeyAssignCtrl::PreTranslateMessage](#pretranslatemessage)|クラス[CWinApp](../../mfc/reference/cwinapp-class.md)がウィンドウ メッセージを変換するために使用し、[変換メッセージ](/windows/win32/api/winuser/nf-winuser-translatemessage)および[ディスパッチ メッセージ](/windows/win32/api/winuser/nf-winuser-dispatchmessage)Windows 関数にディスパッチします。 ( [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage)をオーバーライドします)。|
+|[CMFCAcceleratorKeyAssignCtrl::PreTranslateMessage](#pretranslatemessage)|[TranslateMessage](/windows/win32/api/winuser/nf-winuser-translatemessage)および[DispatchMessage](/windows/win32/api/winuser/nf-winuser-dispatchmessage) Windows 関数にディスパッチされる前に、ウィンドウメッセージを変換するためにクラス[CWinApp](../../mfc/reference/cwinapp-class.md)によって使用されます。 ( [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage)をオーバーライドします)。|
 |[CMFCAcceleratorKeyAssignCtrl::ResetKey](#resetkey)|ショートカット キーをリセットします。|
 
 ## <a name="remarks"></a>解説
 
-このクラスは、ショートカット キー (アクセラレータ キーとも呼ばれます) をサポートすることで、`CEdit` クラスの機能を拡張します。 クラス`CMFCAcceleratorKeyAssignCtrl`は[CEdit クラス](../../mfc/reference/cedit-class.md)として機能し、システム ボタンを認識することもできます。
+このクラスは、ショートカット キー (アクセラレータ キーとも呼ばれます) をサポートすることで、`CEdit` クラスの機能を拡張します。 クラスは、 `CMFCAcceleratorKeyAssignCtrl` [CEdit クラス](../../mfc/reference/cedit-class.md) として機能し、システムボタンを認識することもできます。
 
-このクラスは、物理的なショートカット キーの組み合わせを文字列値にマップします。 たとえば、キーの組み合わせ Alt + B が文字列 "Alt + B" にマップされている場合、 ユーザーが `CMFCAcceleratorKeyAssignCtrl` オブジェクト内でこのキーの組み合わせを押すと、"Alt + B" が表示されます。 ショートカット キーと文字列形式のマッピングの詳細については、「 [CMFCAcceleratorKey クラス](../../mfc/reference/cmfcacceleratorkey-class.md)」を参照してください。
+このクラスは、物理的なショートカット キーの組み合わせを文字列値にマップします。 たとえば、キーの組み合わせ Alt + B が文字列 "Alt + B" にマップされている場合、 ユーザーが `CMFCAcceleratorKeyAssignCtrl` オブジェクト内でこのキーの組み合わせを押すと、"Alt + B" が表示されます。 ショートカットキーと文字列形式のマッピングの詳細については、「 [CMFCAcceleratorKey クラス](../../mfc/reference/cmfcacceleratorkey-class.md)」を参照してください。
 
 ## <a name="example"></a>例
 
@@ -77,21 +78,21 @@ class CMFCAcceleratorKeyAssignCtrl : public CEdit
 
 `CMFCAcceleratorKeyAssignCtrl`
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-**ヘッダー:** afx アクセラレータキーアカティペンカゲctrl.h
+**ヘッダー:** afxacceleratorkeyassignctrl
 
-## <a name="cmfcacceleratorkeyassignctrlcmfcacceleratorkeyassignctrl"></a><a name="cmfcacceleratorkeyassignctrl"></a>キー割り当て:::CMFC アクセラレータキーアセプメントCtrl
+## <a name="cmfcacceleratorkeyassignctrlcmfcacceleratorkeyassignctrl"></a><a name="cmfcacceleratorkeyassignctrl"></a> CMFCAcceleratorKeyAssignCtrl:: CMFCAcceleratorKeyAssignCtrl
 
-[オブジェクトを](../../mfc/reference/cmfcacceleratorkeyassignctrl-class.md)構築します。
+[CMFCAcceleratorKeyAssignCtrl](../../mfc/reference/cmfcacceleratorkeyassignctrl-class.md)オブジェクトを構築します。
 
 ```
 CMFCAcceleratorKeyAssignCtrl();
 ```
 
-## <a name="cmfcacceleratorkeyassignctrlgetaccel"></a><a name="getaccel"></a>キー割り当てCtrl::ゲットアッセル
+## <a name="cmfcacceleratorkeyassignctrlgetaccel"></a><a name="getaccel"></a> CMFCAcceleratorKeyAssignCtrl:: GetAccel
 
-オブジェクトで押`ACCEL`されたショートカット キーの構造[を](../../mfc/reference/cmfcacceleratorkeyassignctrl-class.md)取得します。
+`ACCEL` [CMFCAcceleratorKeyAssignCtrl](../../mfc/reference/cmfcacceleratorkeyassignctrl-class.md)オブジェクトで押されたショートカットキーの構造体を取得します。
 
 ```
 ACCEL const* GetAccel() const;
@@ -99,15 +100,15 @@ ACCEL const* GetAccel() const;
 
 ### <a name="return-value"></a>戻り値
 
-ショートカット`ACCEL`キーを記述する構造体。
+`ACCEL`ショートカットキーを記述する構造体。
 
 ### <a name="remarks"></a>解説
 
-この関数を使用して、`ACCEL`ユーザーがオブジェクトに入力したショートカット キーの構造`CMFCAcceleratorKeyAssignCtrl`を取得します。
+`ACCEL`ユーザーがオブジェクトに入力したショートカットキーの構造体を取得するには、この関数を使用し `CMFCAcceleratorKeyAssignCtrl` ます。
 
-## <a name="cmfcacceleratorkeyassignctrlisfocused"></a><a name="isfocused"></a>CMFC アクセラレータキーアビスキーCtrl::フォーカス
+## <a name="cmfcacceleratorkeyassignctrlisfocused"></a><a name="isfocused"></a> CMFCAcceleratorKeyAssignCtrl:: IsFocused
 
-詳細については、Visual Studio のインストールの**\\VC\\atlmfc\\src mfc**フォルダーにあるソース コードを参照してください。
+詳細については、Visual Studio のインストールの **VC \\ atlmfc \\ src \\ mfc** フォルダーにあるソースコードを参照してください。
 
 ```
 BOOL IsFocused() const;
@@ -117,9 +118,9 @@ BOOL IsFocused() const;
 
 ### <a name="remarks"></a>解説
 
-## <a name="cmfcacceleratorkeyassignctrliskeydefined"></a><a name="iskeydefined"></a>キー割り当て::キー定義
+## <a name="cmfcacceleratorkeyassignctrliskeydefined"></a><a name="iskeydefined"></a> CMFCAcceleratorKeyAssignCtrl:: IsKeyDefined
 
-ショートカット キーが[定義](../../mfc/reference/cmfcacceleratorkeyassignctrl-class.md)されているかどうかを判断します。
+[CMFCAcceleratorKeyAssignCtrl](../../mfc/reference/cmfcacceleratorkeyassignctrl-class.md)オブジェクトでショートカットキーが定義されているかどうかを判断します。
 
 ```
 BOOL IsKeyDefined() const;
@@ -127,15 +128,15 @@ BOOL IsKeyDefined() const;
 
 ### <a name="return-value"></a>戻り値
 
-ユーザーが、ショートカット キーを定義する有効なキーの組み合わせを既に押している場合は 0 以外の値を返します。それ以外の場合は 0。
+ショートカットキーを定義するキーの有効な組み合わせをユーザーが既に押している場合は0以外の値。それ以外の場合は0です。
 
 ### <a name="remarks"></a>解説
 
-この関数を使用して、ユーザーがオブジェクトに有効なショートカット キー`CMFCAcceleratorKeyAssignCtrl`を入力したかどうかを確認します。 ショートカット キーが存在する場合は[、CMFCAcceleratorKeyAssignCtrl::GetAccel](#getaccel)メソッドを使用`ACCEL`して、このショートカット キーに関連付けられている構造体を取得できます。
+ユーザーがオブジェクトに有効なショートカットキーを入力したかどうかを判断するには、この関数を使用し `CMFCAcceleratorKeyAssignCtrl` ます。 ショートカットキーが存在する場合は、 [CMFCAcceleratorKeyAssignCtrl:: GetAccel](#getaccel) メソッドを使用して、 `ACCEL` このショートカットキーに関連付けられている構造体を取得できます。
 
-## <a name="cmfcacceleratorkeyassignctrlpretranslatemessage"></a><a name="pretranslatemessage"></a>メッセージを再変換:P
+## <a name="cmfcacceleratorkeyassignctrlpretranslatemessage"></a><a name="pretranslatemessage"></a> CMFCAcceleratorKeyAssignCtrl::P reTranslateMessage
 
-詳細については、Visual Studio のインストールの**\\VC\\atlmfc\\src mfc**フォルダーにあるソース コードを参照してください。
+詳細については、Visual Studio のインストールの **VC \\ atlmfc \\ src \\ mfc** フォルダーにあるソースコードを参照してください。
 
 ```
 virtual BOOL PreTranslateMessage(MSG* pMsg);
@@ -143,13 +144,13 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*をクリックします。*<br/>
+から *pMsg*<br/>
 
 ### <a name="return-value"></a>戻り値
 
 ### <a name="remarks"></a>解説
 
-## <a name="cmfcacceleratorkeyassignctrlresetkey"></a><a name="resetkey"></a>キー割り当て::リセットキー
+## <a name="cmfcacceleratorkeyassignctrlresetkey"></a><a name="resetkey"></a> CMFCAcceleratorKeyAssignCtrl:: ResetKey
 
 ショートカット キーをリセットします。
 
@@ -159,10 +160,10 @@ void ResetKey();
 
 ### <a name="remarks"></a>解説
 
-この関数は、エディット コントロール テキストをクリアします。 これには、ユーザーが押したショートカット キーが含まれます。
+関数は、エディットコントロールのテキストをクリアします。 これには、ユーザーが押したショートカットキーが含まれます。
 
 ## <a name="see-also"></a>関連項目
 
-[階層グラフ](../../mfc/hierarchy-chart.md)<br/>
-[クラス](../../mfc/reference/mfc-classes.md)<br/>
+[階層図](../../mfc/hierarchy-chart.md)<br/>
+[Classes](../../mfc/reference/mfc-classes.md)<br/>
 [CMFCAcceleratorKey クラス](../../mfc/reference/cmfcacceleratorkey-class.md)

@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: numeric_limits クラス'
 title: numeric_limits クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -70,12 +71,12 @@ helpviewer_keywords:
 - std::numeric_limits [C++], tinyness_before
 - std::numeric_limits [C++], traps
 ms.assetid: 9e817177-0e91-48e6-b680-0531c4b26625
-ms.openlocfilehash: eb2ee9bc6bc887ff6739c3da1bf2566dbdcbc016
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: c0f3532b80eb2cba03a7c230d7b16aa8d3c6b616
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88830684"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97338057"
 ---
 # <a name="numeric_limits-class"></a>numeric_limits クラス
 
@@ -297,7 +298,7 @@ static constexpr Type epsilon() throw();
 
 #### <a name="remarks"></a>解説
 
-型の値は FLT_EPSILON です **`float`** 。 `epsilon`型の場合、 *n* *N*  +  `epsilon`  +  *n*は表現可能な最小の正の浮動小数点数です。
+型の値は FLT_EPSILON です **`float`** 。 `epsilon`型の場合、 *n*   +  `epsilon`  +  *n* は表現可能な最小の正の浮動小数点数です。
 
 #### <a name="example"></a>例
 
@@ -441,7 +442,7 @@ static constexpr bool has_infinity = false;
 
 #### <a name="remarks"></a>解説
 
-Is_iec559 がの場合、メンバーはを返し **`true`** [is_iec559](#is_iec559) **`true`** ます。
+Is_iec559 がの場合、メンバーはを返し **`true`** [](#is_iec559) **`true`** ます。
 
 #### <a name="example"></a>例
 
@@ -483,7 +484,7 @@ static constexpr bool has_quiet_NaN = false;
 
 #### <a name="return-value"></a>戻り値
 
-**`true`****型**が quiet NAN の表現を持つ場合は。**`false`** それ以外の場合は。
+**`true`****型** が quiet NAN の表現を持つ場合は。**`false`** それ以外の場合は。
 
 #### <a name="remarks"></a>解説
 
@@ -829,7 +830,7 @@ Whether unsigned char objects have an integral representation: 1
 
 ### <a name="is_modulo"></a><a name="is_modulo"></a> is_modulo
 
-**型**にモジュロ表現があるかどうかをテストします。
+**型** にモジュロ表現があるかどうかをテストします。
 
 ```cpp
 static constexpr bool is_modulo = false;
@@ -1161,7 +1162,7 @@ static constexpr Type min() throw();
 
 #### <a name="remarks"></a>解説
 
-正規化された最小値は、型の場合は INT_MIN、 **`int`** 型の場合は FLT_MIN に **`float`** なります。 [Is_bounded](#is_bounded)がの場合、 **`true`** または[is_signed](#is_signed)がの場合、戻り値は意味が **`false`** あります。
+正規化された最小値は、型の場合は INT_MIN、 **`int`** 型の場合は FLT_MIN に **`float`** なります。 [Is_bounded](#is_bounded)がの場合、 **`true`** または [is_signed](#is_signed)がの場合、戻り値は意味が **`false`** あります。
 
 #### <a name="example"></a>例
 

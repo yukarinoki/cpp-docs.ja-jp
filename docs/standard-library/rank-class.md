@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: rank クラス'
 title: rank クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - rank class
 - rank
 ms.assetid: bc9f1b8f-800f-46ca-b6f4-d8579ed5406a
-ms.openlocfilehash: cab8d4bb782c7e02df62874a40db14479558da99
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 0ec9e66b31e4dd118de3e21761bb9b2175b0c5e0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68458173"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97337922"
 ---
 # <a name="rank-class"></a>rank クラス
 
@@ -27,12 +28,12 @@ struct rank;
 
 ### <a name="parameters"></a>パラメーター
 
-*~* \
+*~*\
 照会する型。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-型クエリは、*配列型の*次元数の値を保持します。 *ty*が配列型でない場合は0です。
+型クエリは、配列型の次元数の *値を保持* します。 *ty* が配列型でない場合は0です。
 
 ## <a name="example"></a>例
 
@@ -61,9 +62,9 @@ rank<int[5]> == 1
 rank<int[5][10]> == 2
 ```
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-**ヘッダー:** \<type_traits>
+**ヘッダー:**\<type_traits>
 
 **名前空間:** std
 

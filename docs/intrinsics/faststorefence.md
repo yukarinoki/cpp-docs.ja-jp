@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: __faststorefence'
 title: __faststorefence
 ms.date: 09/02/2019
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - __faststorefence intrinsic
 - sfence instruction
 ms.assetid: 6c6eb973-3cf0-4306-b3af-cfde9b0210a5
-ms.openlocfilehash: d11a20666612fe1bca22f5d46b93e898dae375f6
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: f12d16232e034c562f564d851da08c62cb59c34f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70222179"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97337027"
 ---
 # <a name="__faststorefence"></a>__faststorefence
 
@@ -29,13 +30,13 @@ void __faststorefence();
 
 ## <a name="requirements"></a>必要条件
 
-|組み込み|アーキテクチャ|
+|Intrinsic|アーキテクチャ|
 |---------------|------------------|
 |`__faststorefence`|X64|
 
-**ヘッダーファイル**\<>
+**ヘッダー ファイル** \<intrin.h>
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 実行を続行する前に、組み込みがグローバルに参照できるようになる前に発行された読み込みおよび格納操作を保証する、完全なメモリバリア命令シーケンスを生成します。 効果は、すべての x64 プラットフォームにおける `_mm_mfence` の組み込みと同等ですが、それよりも高速になります。
 

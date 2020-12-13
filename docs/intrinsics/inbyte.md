@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: __inbyte'
 title: __inbyte
 ms.date: 09/02/2019
 f1_keywords:
@@ -8,18 +9,18 @@ helpviewer_keywords:
 - in instruction
 - __inbyte intrinsic
 ms.assetid: 03b61799-2a08-474d-adc4-2cbf7c81a4d5
-ms.openlocfilehash: f0036763ed7315a54fbfe6dcc873b46b52f0730c
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 77cc1cfb792ffa2f6aef9879820e644372895193
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70222144"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97337024"
 ---
 # <a name="__inbyte"></a>__inbyte
 
 **Microsoft 固有の仕様**
 
-命令を生成し、によって`Port`指定されたポートから読み取った1バイトを返します。 `in`
+命令を生成し `in` 、によって指定されたポートから読み取った1バイトを返し `Port` ます。
 
 ## <a name="syntax"></a>構文
 
@@ -38,17 +39,17 @@ unsigned char __inbyte(
 
 指定したポートから読み取ったバイト。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-|組み込み|アーキテクチャ|
+|Intrinsic|アーキテクチャ|
 |---------------|------------------|
 |`__inbyte`|x86、x64|
 
-**ヘッダーファイル**\<>
+**ヘッダー ファイル** \<intrin.h>
 
 **Microsoft 固有の仕様はここまで**
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 このルーチンは、組み込みとしてのみ使用できます。
 

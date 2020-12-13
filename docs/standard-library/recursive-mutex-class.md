@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: recursive_mutex クラス'
 title: recursive_mutex クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -14,16 +15,16 @@ helpviewer_keywords:
 - std::recursive_mutex [C++], lock
 - std::recursive_mutex [C++], try_lock
 - std::recursive_mutex [C++], unlock
-ms.openlocfilehash: 8455548997c4ccf1b950e26e01df67306554b945
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: f8a9c9322407871984c83135eecd2e26ac475d2b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87217611"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97337889"
 ---
 # <a name="recursive_mutex-class"></a>recursive_mutex クラス
 
-*Mutex 型*を表します。 [mutex](../standard-library/mutex-class-stl.md) とは異なり、既にロックされているオブジェクトのロック メソッドを呼び出す動作は詳細に定義されています。
+*Mutex 型* を表します。 [mutex](../standard-library/mutex-class-stl.md) とは異なり、既にロックされているオブジェクトのロック メソッドを呼び出す動作は詳細に定義されています。
 
 ## <a name="syntax"></a>構文
 
@@ -48,13 +49,13 @@ class recursive_mutex;
 |[try_lock](#try_lock)|ブロックせずにミューテックスの所有権を取得しようとします。|
 |[ロック](#unlock)|ミューテックスの所有権を解放します。|
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:**\<mutex>
 
 **名前空間:** std
 
-## <a name="lock"></a><a name="lock"></a>制限
+## <a name="lock"></a><a name="lock"></a> 制限
 
 呼び出しスレッドが `mutex` の所有権を取得するまでそのスレッドをブロックします。
 
@@ -66,7 +67,7 @@ void lock();
 
 呼び出しスレッドが既に `mutex` を所有している場合、メソッドが直ちに返され、以前のロックは有効のままになります。
 
-## <a name="recursive_mutex"></a><a name="recursive_mutex"></a>recursive_mutex
+## <a name="recursive_mutex"></a><a name="recursive_mutex"></a> recursive_mutex
 
 ロックされていない `recursive_mutex` オブジェクトを構築します。
 
@@ -86,7 +87,7 @@ recursive_mutex();
 
 デストラクターの実行時にオブジェクトがロックされる場合の動作は未定義です。
 
-## <a name="try_lock"></a><a name="try_lock"></a>try_lock
+## <a name="try_lock"></a><a name="try_lock"></a> try_lock
 
 ブロックせずに `mutex` の所有権を取得しようとします。
 
@@ -102,7 +103,7 @@ bool try_lock() noexcept;
 
 呼び出し元のスレッドが既にを所有している場合、 `mutex` 関数はすぐにを返し、 **`true`** 前のロックは有効のままになります。
 
-## <a name="unlock"></a><a name="unlock"></a>ロック
+## <a name="unlock"></a><a name="unlock"></a> ロック
 
 ミューテックスの所有権を解放します。
 

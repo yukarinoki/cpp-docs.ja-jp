@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: Canimationchange整数 Changehandler クラス'
 title: CAnimationVariableIntegerChangeHandler クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 - CAnimationVariableIntegerChangeHandler [MFC], OnIntegerValueChanged
 - CAnimationVariableIntegerChangeHandler [MFC], SetAnimationController
 ms.assetid: 6ac8e91b-e514-4ff6-babd-33f77c4b2b61
-ms.openlocfilehash: dec940d2f5e68f0531fc917df447b5a1a5cb8189
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: 53a0a1838e021294b4ccc870e6f01b873233a0c9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81755056"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97336738"
 ---
 # <a name="canimationvariableintegerchangehandler-class"></a>CAnimationVariableIntegerChangeHandler クラス
 
@@ -37,19 +38,19 @@ class CAnimationVariableIntegerChangeHandler : public CUIAnimationVariableIntege
 
 |名前|説明|
 |----------|-----------------|
-|[変更ハンドラー::Cアニメーション変数整数変更ハンドラー](#canimationvariableintegerchangehandler)|`CAnimationVariableIntegerChangeHandler` オブジェクトを構築します。|
+|[Canimation変数整数 Changehandler:: Canimation変数整数 Changehandler](#canimationvariableintegerchangehandler)|`CAnimationVariableIntegerChangeHandler` オブジェクトを構築します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
 |名前|説明|
 |----------|-----------------|
-|[変更ハンドラー::インスタンスの作成](#createinstance)|コールバックのインスタンスを`CAnimationVariableIntegerChangeHandler`作成します。|
-|[変更ハンドラー::オン整数値変更](#onintegervaluechanged)|アニメーション変数の値が変更されたときに呼び出されます。 ( `CUIAnimationVariableIntegerChangeHandlerBase::OnIntegerValueChanged`をオーバーライドします)。|
-|[変更ハンドラ::アニメーションを実行します。](#setanimationcontroller)|イベントをルーティングするアニメーション コントローラへのポインターを格納します。|
+|[Canimation変数整数 Changehandler:: CreateInstance](#createinstance)|コールバックのインスタンスを作成し `CAnimationVariableIntegerChangeHandler` ます。|
+|[CanimationOnIntegerValueChanged 整数 Changehandler::](#onintegervaluechanged)|アニメーション変数の値が変更されたときに呼び出されます。 ( `CUIAnimationVariableIntegerChangeHandlerBase::OnIntegerValueChanged`をオーバーライドします)。|
+|[Canimation変数整数 Changehandler:: SetAnimationController](#setanimationcontroller)|イベントをルーティングするアニメーションコントローラーへのポインターを格納します。|
 
 ## <a name="remarks"></a>解説
 
-このイベント ハンドラーが作成され、メソッドに渡されます。
+このイベントハンドラーは、CAnimationVariable:: EnableIntegerValueChangedEvent または CAnimationBaseObject:: EnableIntegerValueChangedEvent を呼び出したときに、Iuianimation Variable:: Setvariables 整数の Changehandler メソッドに渡されます。これにより、アニメーションオブジェクトにカプセル化されているすべてのアニメーション変数に対してこのイベントが有効になります。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -61,21 +62,21 @@ class CAnimationVariableIntegerChangeHandler : public CUIAnimationVariableIntege
 
 `CAnimationVariableIntegerChangeHandler`
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** afxanimationcontroller.h
 
-## <a name="canimationvariableintegerchangehandlercanimationvariableintegerchangehandler"></a><a name="canimationvariableintegerchangehandler"></a>変更ハンドラー::Cアニメーション変数整数変更ハンドラー
+## <a name="canimationvariableintegerchangehandlercanimationvariableintegerchangehandler"></a><a name="canimationvariableintegerchangehandler"></a> Canimation変数整数 Changehandler:: Canimation変数整数 Changehandler
 
-オブジェクトを構築します。
+Canimationwhere-object 整数の Changehandler オブジェクトを構築します。
 
 ```
 CAnimationVariableIntegerChangeHandler ();
 ```
 
-## <a name="canimationvariableintegerchangehandlercreateinstance"></a><a name="createinstance"></a>変更ハンドラー::インスタンスの作成
+## <a name="canimationvariableintegerchangehandlercreateinstance"></a><a name="createinstance"></a> Canimation変数整数 Changehandler:: CreateInstance
 
-コールバックのインスタンスを作成します。
+Canimationchange整数 Changehandler コールバックのインスタンスを作成します。
 
 ```
 static COM_DECLSPEC_NOTHROW HRESULT CreateInstance(
@@ -85,16 +86,16 @@ static COM_DECLSPEC_NOTHROW HRESULT CreateInstance(
 
 ### <a name="parameters"></a>パラメーター
 
-*を切り取る*<br/>
-イベントを受け取るアニメーション コントローラへのポインター。
+*pAnimationController*<br/>
+イベントを受信するアニメーションコントローラーへのポインター。
 
 *ppHandler*
 
 ### <a name="return-value"></a>戻り値
 
-メソッドが成功した場合は、S_OK を返します。 それ以外の場合は、HRESULT エラー コードを返します。
+メソッドが成功した場合は、S_OK を返します。 それ以外の場合は、HRESULT エラーコードを返します。
 
-## <a name="canimationvariableintegerchangehandleronintegervaluechanged"></a><a name="onintegervaluechanged"></a>変更ハンドラー::オン整数値変更
+## <a name="canimationvariableintegerchangehandleronintegervaluechanged"></a><a name="onintegervaluechanged"></a> CanimationOnIntegerValueChanged 整数 Changehandler::
 
 アニメーション変数の値が変更されたときに呼び出されます。
 
@@ -108,25 +109,25 @@ IFACEMETHOD(OnIntegerValueChanged) (
 
 ### <a name="parameters"></a>パラメーター
 
-*ストーリー ボード*<br/>
-変数をアニメーション化しているストーリーボード。
+*storyboard*<br/>
+変数をアニメーション化するストーリーボード。
 
-*変数*<br/>
+*variable*<br/>
 更新されたアニメーション変数。
 
 *newValue*<br/>
 新しい丸められた値。
 
-*以前の値*<br/>
-直前の丸められた値。
+*前の値*<br/>
+前の丸められた値。
 
 ### <a name="return-value"></a>戻り値
 
-メソッドが成功した場合はS_OK。それ以外の場合はE_FAIL。
+メソッドが成功した場合は S_OK。それ以外の場合は E_FAIL。
 
-## <a name="canimationvariableintegerchangehandlersetanimationcontroller"></a><a name="setanimationcontroller"></a>変更ハンドラ::アニメーションを実行します。
+## <a name="canimationvariableintegerchangehandlersetanimationcontroller"></a><a name="setanimationcontroller"></a> Canimation変数整数 Changehandler:: SetAnimationController
 
-イベントをルーティングするアニメーション コントローラへのポインターを格納します。
+イベントをルーティングするアニメーションコントローラーへのポインターを格納します。
 
 ```cpp
 void SetAnimationController(CAnimationController* pAnimationController);
@@ -134,8 +135,8 @@ void SetAnimationController(CAnimationController* pAnimationController);
 
 ### <a name="parameters"></a>パラメーター
 
-*を切り取る*<br/>
-イベントを受け取るアニメーション コントローラへのポインター。
+*pAnimationController*<br/>
+イベントを受信するアニメーションコントローラーへのポインター。
 
 ## <a name="see-also"></a>関連項目
 

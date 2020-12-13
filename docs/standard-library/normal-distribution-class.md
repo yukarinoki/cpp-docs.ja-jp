@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: normal_distribution クラス'
 title: normal_distribution クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -26,12 +27,12 @@ helpviewer_keywords:
 - std::normal_distribution [C++], param_type
 - std::normal_distribution [C++], param_type
 ms.assetid: bf92cdbd-bc72-4d4a-b588-173d748f0d7d
-ms.openlocfilehash: 0fed268b6c3f318b3e308f90e94862fdf969e3fa
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: eb27debf104df3e33a324a0297624769af4860b3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88836401"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97338131"
 ---
 # <a name="normal_distribution-class"></a>normal_distribution クラス
 
@@ -179,7 +180,7 @@ Distribution for 10 samples:
     10: 2.7821317338
 ```
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:**\<random>
 
