@@ -1,16 +1,17 @@
 ---
+description: 詳細については、「明示的なオーバーライド (C++/CLI および C++/CX)」を参照してください。
 title: 明示的なオーバーライド (C++/CLI および C++/CX)
 ms.date: 10/12/2018
 ms.topic: reference
 helpviewer_keywords:
 - overriding, override [C++]
 ms.assetid: 4ec3eaf5-163b-4df8-8f16-7a2ec04c3d0f
-ms.openlocfilehash: c199301794daaa140ede2fd99b0ae755cea70f97
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: a24460f8135ff5379f14533dbaff83bde8918e4c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80172374"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97330342"
 ---
 # <a name="explicit-overrides--ccli-and-ccx"></a>明示的なオーバーライド (C++/CLI および C++/CX)
 
@@ -47,7 +48,7 @@ overriding-function-declarator = function { overriding-function-definition }
 
 ## <a name="windows-runtime"></a>Windows ランタイム
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 コンパイラ オプション: `/ZW`
 
@@ -57,7 +58,7 @@ overriding-function-declarator = function { overriding-function-definition }
 
 ネイティブ コードまたは `/clr:oldSyntax` でコンパイルされたコードでの明示的なオーバーライドについては、「[明示的なオーバーライド](../cpp/explicit-overrides-cpp.md)」を参照してください。
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 コンパイラ オプション: `/clr`
 
@@ -172,6 +173,6 @@ public:
 };
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[.NET および UWP でのコンポーネント拡張](component-extensions-for-runtime-platforms.md)
+[.NET および UWP 用のコンポーネントの拡張機能](component-extensions-for-runtime-platforms.md)

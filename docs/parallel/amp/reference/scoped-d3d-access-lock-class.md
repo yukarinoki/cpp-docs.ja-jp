@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: scoped_d3d_access_lock クラス'
 title: scoped_d3d_access_lock クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 - AMPRT/scoped_d3d_access_lock
 - AMPRT/concurrency::direct3d::scoped_d3d_access_lock::scoped_d3d_access_lock
 ms.assetid: 0ad333e6-9839-4736-a722-16d95d70c4b1
-ms.openlocfilehash: b5a2d9dab9cba7b19fa0d0b1627f653f2c7fdc57
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: 1106673ba9ca095b33660f6a713a40ae8498d384
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77126397"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97329910"
 ---
 # <a name="scoped_d3d_access_lock-class"></a>scoped_d3d_access_lock クラス
 
@@ -27,28 +28,28 @@ class scoped_d3d_access_lock;
 
 ### <a name="public-constructors"></a>パブリック コンストラクター
 
-|Name|説明|
+|名前|説明|
 |----------|-----------------|
 |[scoped_d3d_access_lock コンストラクター](#ctor)|オーバーロードされます。 `scoped_d3d_access_lock` オブジェクトを構築します。 このオブジェクトがスコープから外れると、ロックは解放されます。|
 |[~ scoped_d3d_access_lock デストラクター](#dtor)|関連付けられた `accelerator_view` オブジェクトに対する D3D アクセスのロックを解除します。|
 
 ### <a name="public-operators"></a>パブリック演算子
 
-|Name|説明|
+|名前|説明|
 |----------|-----------------|
-|[operator=](#operator_eq)|別の `scoped_d3d_access_lock` からロックの所有権を取得します。|
+|[operator =](#operator_eq)|別の `scoped_d3d_access_lock` からロックの所有権を取得します。|
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
 `scoped_d3d_access_lock`
 
-## <a name="requirements"></a>［要件］
+## <a name="requirements"></a>要件
 
 **ヘッダー:** amprt. h
 
 **名前空間:** concurrency::d irect3d
 
-## <a name="ctor"></a>scoped_d3d_access_lock
+## <a name="scoped_d3d_access_lock"></a><a name="ctor"></a> scoped_d3d_access_lock
 
 `scoped_d3d_access_lock` オブジェクトを構築します。 このオブジェクトがスコープから外れると、ロックは解放されます。
 
@@ -77,13 +78,13 @@ scoped_d3d_access_lock(// [3] move constructor
 
 ## <a name="construction"></a>建設
 
-[1] コンストラクターは、指定された[accelerator_view](accelerator-view-class.md)オブジェクトに対して D3D アクセスロックを取得します。 ロックが取得されるまでの構築ブロック。
+[1] コンストラクターは、指定された [accelerator_view](accelerator-view-class.md) オブジェクトに対して D3D アクセスロックを取得します。 ロックが取得されるまでの構築ブロック。
 
-[2] コンストラクターは、指定された[accelerator_view](accelerator-view-class.md)オブジェクトから D3D アクセスロックを採用しています。
+[2] コンストラクターは、指定された [accelerator_view](accelerator-view-class.md) オブジェクトから D3D アクセスロックを採用しています。
 
-[3] 移動コンストラクターは、別の `scoped_d3d_access_lock` オブジェクトから既存の D3D アクセスロックを取得します。 構造体はブロックを行いません。
+[3] 移動コンストラクターは、別のオブジェクトからの既存の D3D アクセスロックを取得 `scoped_d3d_access_lock` します。 構造体はブロックを行いません。
 
-## <a name="dtor"></a>~ scoped_d3d_access_lock
+## <a name="scoped_d3d_access_lock"></a><a name="dtor"></a> ~ scoped_d3d_access_lock
 
 関連付けられた `accelerator_view` オブジェクトに対する D3D アクセスのロックを解除します。
 
@@ -91,7 +92,7 @@ scoped_d3d_access_lock(// [3] move constructor
 ~scoped_d3d_access_lock();
 ```
 
-## <a name="operator_eq"></a>operator =
+## <a name="operator"></a><a name="operator_eq"></a> operator =
 
 以前のロックを解放して、別の `scoped_d3d_access_lock` オブジェクトから D3D アクセスのロックの所有権を取得します。
 
@@ -108,6 +109,6 @@ D3D アクセスのロックの移動元である accelerator_view。
 
 この `scoped_accelerator_view_lock` への参照。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [Concurrency::direct3d 名前空間](concurrency-direct3d-namespace.md)

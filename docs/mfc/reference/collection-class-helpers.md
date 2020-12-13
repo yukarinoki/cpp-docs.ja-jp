@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: コレクションクラスヘルパー'
 title: コレクション クラスのヘルパー
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,16 +9,16 @@ helpviewer_keywords:
 - collection classes [MFC], helper functions
 - helper functions collection class [MFC]
 ms.assetid: bc3a2368-9edd-4748-9e6a-13cba79517ca
-ms.openlocfilehash: 04b142cde12a9795f217559f875eef7fcec3b0f2
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 9d3838ba0ba05441debb183e47d7df4e39229742
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88841429"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97331387"
 ---
 # <a name="collection-class-helpers"></a>コレクション クラスのヘルパー
 
-コレクションクラス、 `CMap` `CList` 、およびは、 `CArray` 要素の比較、コピー、およびシリアル化などの目的で、テンプレート化されたグローバルヘルパー関数を使用します。 、、およびに基づくクラスの実装の一部として `CMap` `CList` `CArray` 、マップ、リスト、または配列に格納されているデータ型に合わせて調整されたバージョンで、必要に応じてこれらの関数をオーバーライドする必要があります。 などのヘルパー関数をオーバーライドする方法の詳細につい `SerializeElements` ては、「 [コレクション: タイプセーフなコレクションを作成する方法](../../mfc/how-to-make-a-type-safe-collection.md)」を参照してください。 `ConstructElements`と `DestructElements` は非推奨とされていることに注意してください。
+コレクションクラス、 `CMap` `CList` 、およびは、 `CArray` 要素の比較、コピー、およびシリアル化などの目的で、テンプレート化されたグローバルヘルパー関数を使用します。 、、およびに基づくクラスの実装の一部として `CMap` `CList` `CArray` 、マップ、リスト、または配列に格納されているデータ型に合わせて調整されたバージョンで、必要に応じてこれらの関数をオーバーライドする必要があります。 などのヘルパー関数をオーバーライドする方法の詳細については、 `SerializeElements` 「 [コレクションの作成方法](../../mfc/how-to-make-a-type-safe-collection.md)」を参照してください。 Type-Safe コレクションの作成方法に関する記事をご覧ください。 `ConstructElements`と `DestructElements` は非推奨とされていることに注意してください。
 
 Microsoft Foundation Class ライブラリには、コレクションクラスをカスタマイズするのに役立つ、afxtempl.h の次のグローバル関数が用意されています。
 
@@ -59,17 +60,17 @@ CompareElements(
 
 ### <a name="return-value"></a>戻り値
 
-*PElement1*が指すオブジェクトが*pElement2*が指すオブジェクトと等しい場合は0以外の値。それ以外の場合は0です。
+*PElement1* が指すオブジェクトが *pElement2* が指すオブジェクトと等しい場合は0以外の値。それ以外の場合は0です。
 
 ### <a name="remarks"></a>解説
 
-の呼び出しでは、 `CMap` `CMap` テンプレートパラメーター *KEY* と *ARG_KEY*が使用されます。
+の呼び出しでは、 `CMap` `CMap` テンプレートパラメーター *KEY* と *ARG_KEY* が使用されます。
 
-既定の実装では、 * \* pElement1*と* \* pElement2*の比較結果が返されます。 アプリケーションに適した方法で要素を比較するように、この関数をオーバーライドします。
+既定の実装では、 *\* pElement1* と *\* pElement2* の比較結果が返されます。 アプリケーションに適した方法で要素を比較するように、この関数をオーバーライドします。
 
 C++ 言語では、 `==` 単純型 (、、など) の比較演算子 () が定義されてい **`char`** **`int`** **`float`** ますが、クラスと構造体の比較演算子は定義されていません。 またはを使用し `CompareElements` て、それを使用するコレクションクラスの1つをインスタンス化する場合は、 `CompareElements` 適切な値を返すバージョンで比較演算子またはオーバーロードを定義する必要があります。
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
    **ヘッダー:** afxtempl.h
 
@@ -103,9 +104,9 @@ void AFXAPI CopyElements(
 
 既定の実装では、単純な代入演算子 () を使用して **=** コピー操作を実行します。 コピーされる型にオーバーロードされた operator = がない場合、既定の実装はビットごとのコピーを実行します。
 
-この機能およびその他のヘルパー関数の実装の詳細については、「 [コレクション: タイプセーフなコレクションを作成する方法](../how-to-make-a-type-safe-collection.md)」を参照してください。
+この機能およびその他のヘルパー関数の実装の詳細については、「 [コレクションの作成方法: Type-Safe コレクションの作成方法](../how-to-make-a-type-safe-collection.md)」を参照してください。
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
   **ヘッダー** afxtempl.h
 
@@ -123,7 +124,7 @@ void  AFXAPI DumpElements(
 
 ### <a name="parameters"></a>パラメーター
 
-*修飾*<br/>
+*dc*<br/>
 要素をダンプするためのコンテキストをダンプします。
 
 *TYPE*<br/>
@@ -141,7 +142,7 @@ void  AFXAPI DumpElements(
 
 既定の実装では、何も行われません。 コレクションの要素がから派生している場合 `CObject` 、通常、オーバーライドはコレクションの要素を反復処理し、 `Dump` 各要素に対してを呼び出します。
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
   **ヘッダー** afxtempl.h
 
@@ -183,7 +184,7 @@ template <> UINT AFXAPI HashKey(unsigned __int64 key)
 }
 ```
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
   **ヘッダー** afxtempl.h
 
@@ -201,7 +202,7 @@ void AFXAPI SerializeElements(CArchive& ar, TYPE* pElements, INT_PTR nCount);
 *TYPE*<br/>
 要素の型を指定するテンプレートパラメーター。
 
-*金*<br/>
+*ar*<br/>
 アーカイブするアーカイブオブジェクト。
 
 *pElements*<br/>
@@ -214,13 +215,13 @@ void AFXAPI SerializeElements(CArchive& ar, TYPE* pElements, INT_PTR nCount);
 
 既定の実装では、ビットごとの読み取りまたは書き込みが行われます。
 
-この機能およびその他のヘルパー関数の実装の詳細については、「 [コレクション: タイプセーフなコレクションを作成する方法](../how-to-make-a-type-safe-collection.md)」を参照してください。
+この機能およびその他のヘルパー関数の実装の詳細については、「 [コレクションの作成方法: Type-Safe コレクションの作成方法](../how-to-make-a-type-safe-collection.md)」を参照してください。
 
 ### <a name="example"></a>例
 
-「記事 [コレクション: タイプセーフなコレクションを作成する方法](../how-to-make-a-type-safe-collection.md)」の例を参照してください。
+「 [コレクションの作成方法](../how-to-make-a-type-safe-collection.md)」の記事の例を参照してください。 Type-Safe コレクションです。
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
   **ヘッダー** afxtempl.h
 

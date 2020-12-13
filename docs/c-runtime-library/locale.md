@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: Locale'
 title: Locale
 ms.date: 04/11/2018
 f1_keywords:
@@ -10,16 +11,16 @@ helpviewer_keywords:
 - setlocale function
 - locale routines
 ms.assetid: 442f8112-9288-44d7-be3c-15d22652093a
-ms.openlocfilehash: a747c60994afbf4293aca8e4a3290d20b4bc18a3
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 660a4fb0103de8c1ac06272c711e02fcd6d12289
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87189585"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97331069"
 ---
 # <a name="locale"></a>Locale
 
-*ロケール*とは、プログラムをカスタマイズするために使用できる国または地域と言語を表します。 ロケールに依存するカテゴリとしては、日付や通貨の値の表示形式などがあります。 詳細については、「[ロケールのカテゴリ](../c-runtime-library/locale-categories.md)」を参照してください。
+*ロケール* とは、プログラムをカスタマイズするために使用できる国または地域と言語を表します。 ロケールに依存するカテゴリとしては、日付や通貨の値の表示形式などがあります。 詳細については、「[ロケールのカテゴリ](../c-runtime-library/locale-categories.md)」を参照してください。
 
 現在のプログラムまたはスレッドのロケール情報の一部またはすべてを変更または照会するには、[setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md) 関数を **_l** のサフィックスなしで使用します。 **_l** サフィックス付きの関数を指定すると、特定の関数の実行中にのみ渡されたロケール パラメーターをロケール情報として使用します。 **_l** サフィックス付きの関数を使用する場合のロケールを作成するには、[_create_locale](../c-runtime-library/reference/create-locale-wcreate-locale.md) を使用します。 このロケールを解放するには、[_free_locale](../c-runtime-library/reference/free-locale.md) を使用します。 現在のロケールを取得するには、[_get_current_locale](../c-runtime-library/reference/get-current-locale.md) を使用します。
 
@@ -29,7 +30,7 @@ ms.locfileid: "87189585"
 
 ## <a name="locale-dependent-routines"></a>ロケールに依存するルーチン
 
-|ルーチンによって返される値|用途|**setlocale** カテゴリの設定の依存関係|
+|ルーチンによって返される値|使用|**setlocale** カテゴリの設定の依存関係|
 |-------------|---------|---------------------------------------------|
 |[atof、_atof_l、_wtof、_wtof_l](../c-runtime-library/reference/atof-atof-l-wtof-wtof-l.md)|文字を浮動小数点型の値に変換|**LC_NUMERIC**|
 |[atoi、_atoi_l、_wtoi、_wtoi_l](../c-runtime-library/reference/atoi-atoi-l-wtoi-wtoi-l.md)|文字を整数型の値に変換|**LC_NUMERIC**|
@@ -47,7 +48,7 @@ ms.locfileid: "87189585"
 |[mbtowc、_mbtowc_l](../c-runtime-library/reference/mbtowc-mbtowc-l.md)|マルチバイト文字を対応するワイド文字に変換|**LC_CTYPE**|
 |[printf](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md) 関数|書式付き出力を書き出す|**LC_NUMERIC** (小数点文字の出力を決定)|
 |[scanf](../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md) 関数|書式付き入力を読み取る|**LC_NUMERIC** (基数文字が認識されます)|
-|[setlocale、_wsetlocale](../c-runtime-library/reference/setlocale-wsetlocale.md)|プログラムのロケールを選択する|適用なし|
+|[setlocale、_wsetlocale](../c-runtime-library/reference/setlocale-wsetlocale.md)|プログラムのロケールを選択する|適用できません|
 |[strcoll、wcscoll、_mbscoll、_strcoll_l、_wcscoll_l、_mbscoll_l](../c-runtime-library/reference/strcoll-wcscoll-mbscoll-strcoll-l-wcscoll-l-mbscoll-l.md)|2 つの文字列の文字を比較する|**LC_COLLATE**|
 |[_stricmp、_wcsicmp、_mbsicmp、_stricmp_l、_wcsicmp_l、_mbsicmp_l](../c-runtime-library/reference/stricmp-wcsicmp-mbsicmp-stricmp-l-wcsicmp-l-mbsicmp-l.md)|大文字小文字に関係なく、2 つの文字列を比較する|**LC_CTYPE**|
 |[_stricoll、_wcsicoll、_mbsicoll、_stricoll_l、_wcsicoll_l、_mbsicoll_l](../c-runtime-library/reference/stricoll-wcsicoll-mbsicoll-stricoll-l-wcsicoll-l-mbsicoll-l.md)|2 つの文字列の文字を比較する (大文字小文字を区別しない)|**LC_COLLATE**|

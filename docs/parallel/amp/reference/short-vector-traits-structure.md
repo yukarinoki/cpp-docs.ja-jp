@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: short_vector_traits 構造'
 title: short_vector_traits 構造体
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,16 +8,16 @@ f1_keywords:
 - AMP_SHORT_VECTORS/Concurrency::graphics::short_vector_traits::short_vector_traits
 - AMP_SHORT_VECTORS/Concurrency::graphics::short_vector_traits::size Constant
 ms.assetid: cd9492da-9e02-4a6e-9d50-b61252cdb460
-ms.openlocfilehash: d743f74deaea5cb31cd609ece90891c8cfe2258f
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: dc211c8e66cbd31c57655afce22376909cf77530
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81374732"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97329900"
 ---
 # <a name="short_vector_traits-structure"></a>short_vector_traits 構造体
 
-short_vector_traits、短いベクトル型またはスカラー型の基になるベクトル長およびスカラー型の取得が可能
+short_vector_traits は、short ベクター型またはスカラー型の基になるベクター長とスカラー型を取得できます。
 
 ## <a name="syntax"></a>構文
 
@@ -103,19 +104,19 @@ struct short_vector_traits<double_4>;
 
 `short_vector_traits`
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-**ヘッダー:** amp_short_vectors.h
+**ヘッダー:** amp_short_vectors
 
-**名前空間:** 同時実行::グラフィックス
+**名前空間:** Concurrency:: graphics
 
-## <a name="short_vector_traitsshort_vector_traits-constructor"></a><a name="ctor"></a>short_vector_traits::short_vector_traitsコンストラクタ
+## <a name="short_vector_traitsshort_vector_traits-constructor"></a><a name="ctor"></a> short_vector_traits:: short_vector_traits コンストラクター
 
 ```cpp
 short_vector_traits();
 ```
 
-## <a name="short_vector_traitssize-constant"></a><a name="size"></a>short_vector_traits::サイズ定数
+## <a name="short_vector_traitssize-constant"></a><a name="size"></a> short_vector_traits:: size 定数
 
 ```cpp
 static int const size = 1;

@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: CMFCDesktopAlertWndButton クラス'
 title: CMFCDesktopAlertWndButton クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - CMFCDesktopAlertWndButton [MFC], IsCaptionButton
 - CMFCDesktopAlertWndButton [MFC], IsCloseButton
 ms.assetid: df39a0c8-0c39-4ab0-8c64-78c5b2c4ecaf
-ms.openlocfilehash: 6d296966001dcbc2279a298bdd1d9c21195d61fd
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 0c645f4ec79aaa58364cfa9688d19915ece205bb
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88840780"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97330076"
 ---
 # <a name="cmfcdesktopalertwndbutton-class"></a>CMFCDesktopAlertWndButton クラス
 
@@ -77,7 +78,7 @@ class CMFCDesktopAlertWndButton : public CMFCButton
 
 [CMFCDesktopAlertWndButton](../../mfc/reference/cmfcdesktopalertwndbutton-class.md)
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** afxdesktopalertwnd
 
@@ -108,5 +109,5 @@ BOOL IsCloseButton() const;
 ## <a name="see-also"></a>関連項目
 
 [階層図](../../mfc/hierarchy-chart.md)<br/>
-[クラス](../../mfc/reference/mfc-classes.md)<br/>
+[Classes](../../mfc/reference/mfc-classes.md)<br/>
 [CMFCDesktopAlertDialog クラス](../../mfc/reference/cmfcdesktopalertdialog-class.md)

@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: concurrency 名前空間関数'
 title: コンカレンシー名前空間の関数
 ms.date: 11/04/2016
 f1_keywords:
@@ -33,12 +34,12 @@ f1_keywords:
 - ppltasks/concurrency::when_all
 - ppltasks/concurrency::when_any
 ms.assetid: 520a6dff-9324-4df2-990d-302e3050af6a
-ms.openlocfilehash: 25cd74e20102bbc1a75e4b4efe1bf234845f7fcb
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: db49a58084e8e6fbbe4e3ea1ccd9253c7743baea
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88840181"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97331288"
 ---
 # <a name="concurrency-namespace-functions"></a>コンカレンシー名前空間の関数
 
@@ -802,7 +803,7 @@ void parallel_for(
 各反復処理で実行される関数。 ラムダ式、関数ポインター、またはシグネチャを持つ関数呼び出し演算子のバージョンをサポートする任意のオブジェクトを指定でき `void operator()(_Index_type)` ます。
 
 *_Part*<br/>
-パーティショナーオブジェクトへの参照。 引数には、auto_partitioner、static_partitioner、simple_partitioner のいずれかを指定できます **`const`** [auto_partitioner](auto-partitioner-class.md) `&` **`const`** [static_partitioner](static-partitioner-class.md) `&` **`const`** [simple_partitioner](simple-partitioner-class.md) `&` 。また、 [affinity_partitioner](affinity-partitioner-class.md) `&` [affinity_partitioner](affinity-partitioner-class.md)オブジェクトが使用されている場合 affinity_partitioner は、参照を非定数の左辺値参照にする必要があります。これにより、アルゴリズムは将来のループの状態を保存して再利用できるようになります。
+パーティショナーオブジェクトへの参照。 引数には、auto_partitioner、static_partitioner、simple_partitioner のいずれかを指定できます **`const`** [](auto-partitioner-class.md) `&` **`const`** [](static-partitioner-class.md) `&` **`const`** [](simple-partitioner-class.md) `&` 。また、 [](affinity-partitioner-class.md) `&` [affinity_partitioner](affinity-partitioner-class.md)オブジェクトが使用されている場合 affinity_partitioner は、参照を非定数の左辺値参照にする必要があります。これにより、アルゴリズムは将来のループの状態を保存して再利用できるようになります。
 
 ### <a name="remarks"></a>解説
 
@@ -846,7 +847,7 @@ void parallel_for_each(
 範囲内の各要素に適用されるユーザー定義関数オブジェクト。
 
 *_Part*<br/>
-パーティショナーオブジェクトへの参照。 引数には、auto_partitioner、static_partitioner、simple_partitioner のいずれかを指定できます **`const`** [auto_partitioner](auto-partitioner-class.md) `&` **`const`** [static_partitioner](static-partitioner-class.md) `&` **`const`** [simple_partitioner](simple-partitioner-class.md) `&` 。また、 [affinity_partitioner](affinity-partitioner-class.md) `&` [affinity_partitioner](affinity-partitioner-class.md)オブジェクトが使用されている場合 affinity_partitioner は、参照を非定数の左辺値参照にする必要があります。これにより、アルゴリズムは将来のループの状態を保存して再利用できるようになります。
+パーティショナーオブジェクトへの参照。 引数には、auto_partitioner、static_partitioner、simple_partitioner のいずれかを指定できます **`const`** [](auto-partitioner-class.md) `&` **`const`** [](static-partitioner-class.md) `&` **`const`** [](simple-partitioner-class.md) `&` 。また、 [](affinity-partitioner-class.md) `&` [affinity_partitioner](affinity-partitioner-class.md)オブジェクトが使用されている場合 affinity_partitioner は、参照を非定数の左辺値参照にする必要があります。これにより、アルゴリズムは将来のループの状態を保存して再利用できるようになります。
 
 ### <a name="remarks"></a>解説
 
@@ -1360,7 +1361,7 @@ first2,
 ソース範囲内の各要素に適用されるユーザー定義の単項関数オブジェクト。
 
 *_Part*<br/>
-パーティショナーオブジェクトへの参照。 引数には、auto_partitioner、static_partitioner、simple_partitioner のいずれかを指定できます **`const`** [auto_partitioner](auto-partitioner-class.md) `&` **`const`** [static_partitioner](static-partitioner-class.md) `&` **`const`** [simple_partitioner](simple-partitioner-class.md) `&` 。また、 [affinity_partitioner](affinity-partitioner-class.md) `&` [affinity_partitioner](affinity-partitioner-class.md)オブジェクトが使用されている場合 affinity_partitioner は、参照を非定数の左辺値参照にする必要があります。これにより、アルゴリズムは将来のループの状態を保存して再利用できるようになります。
+パーティショナーオブジェクトへの参照。 引数には、auto_partitioner、static_partitioner、simple_partitioner のいずれかを指定できます **`const`** [](auto-partitioner-class.md) `&` **`const`** [](static-partitioner-class.md) `&` **`const`** [](simple-partitioner-class.md) `&` 。また、 [](affinity-partitioner-class.md) `&` [affinity_partitioner](affinity-partitioner-class.md)オブジェクトが使用されている場合 affinity_partitioner は、参照を非定数の左辺値参照にする必要があります。これにより、アルゴリズムは将来のループの状態を保存して再利用できるようになります。
 
 *first2*<br/>
 操作する 2 番目のソース範囲内の最初の要素の位置を示す入力反復子。

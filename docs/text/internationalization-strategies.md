@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「国際化戦略」を参照してください。
 title: 国際化のアプローチ
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -11,32 +12,32 @@ helpviewer_keywords:
 - character sets [C++], international programming strategies
 - localization [C++], character sets
 ms.assetid: b09d9854-0709-4b9a-a00c-b0b8bc4199b1
-ms.openlocfilehash: f8c5cec680072ffa34b1ee0bef9e09231de5f1ac
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 51570a3e340a8af0a9f16f8212aa11f6bf3119b5
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62410630"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97331188"
 ---
 # <a name="internationalization-strategies"></a>国際化のアプローチ
 
-によって、ターゲットのオペレーティング システムとの市場には、いくつかの国際対応戦略がある場合。
+ターゲットのオペレーティングシステムと市場に応じて、いくつかの国際化戦略があります。
 
-- アプリケーションでは、Unicode を使用します。
+- アプリケーションで Unicode を使用している。
 
-   Unicode 固有の機能を使用して、(ただし、プログラムの一部の ANSI 文字を使用するには特別な目的で)、すべての文字が 16 ビット幅。 C ランタイム ライブラリでは、Unicode 専用のプログラミングの関数、マクロ、およびデータ型を提供します。 MFC は、Unicode に対応しました。
+   Unicode 固有の機能を使用し、すべての文字は16ビット幅です (ただし、特殊な目的で、プログラムの一部で ANSI 文字を使用できます)。 C ランタイムライブラリには、Unicode のみのプログラミングで使用できる関数、マクロ、およびデータ型が用意されています。 MFC は完全に Unicode に対応しています。
 
-- アプリケーションでは、MBCS を使用し、すべての Win32 プラットフォーム上で実行できます。
+- アプリケーションは MBCS を使用し、任意の Win32 プラットフォームで実行できます。
 
-   MBCS 固有の機能を使用するとします。 文字列には、1 バイト文字、2 バイト文字、またはその両方を含めることができます。 C ランタイム ライブラリでは、MBCS 専用のプログラミングの関数、マクロ、およびデータ型を提供します。 MFC は、MBCS に対応しました。
+   MBCS 固有の機能を使用します。 文字列には、1バイト文字、2バイト文字、またはその両方を含めることができます。 C ランタイムライブラリには、MBCS のみのプログラミングのための関数、マクロ、およびデータ型が用意されています。 MFC は完全に MBCS に対応しています。
 
-- 完全な移植性のため、アプリケーションのソース コードが記述された、シンボルの再コンパイルして`_UNICODE`または記号`_MBCS`定義されている、いずれかを使用するバージョンを生成できます。 詳細については、次を参照してください。 [tchar.h における汎用テキスト マッピング](../text/generic-text-mappings-in-tchar-h.md)します。
+- アプリケーションのソースコードは完全な移植性を確保するために記述されています。シンボルまたは定義されたシンボルを使用して再コンパイルすることにより `_UNICODE` `_MBCS` 、いずれかを使用するバージョンを生成できます。 詳細については、「 [tchar. h の汎用テキストマップ](../text/generic-text-mappings-in-tchar-h.md)」を参照してください。
 
-   完全に移植可能な C ランタイム関数、マクロ、およびデータ型を使用するとします。 MFC の柔軟性は、これらの方法のいずれかをサポートします。
+   完全に移植可能な C ランタイム関数、マクロ、およびデータ型を使用します。 MFC の柔軟性は、これらの方法のいずれかをサポートしています。
 
-これらのトピックの残りの部分は、Unicode と MBCS をビルドできる完全に移植可能なコードの作成に集中します。
+これらのトピックの残りの部分では、Unicode または MBCS として作成できる、完全に移植可能なコードの記述に焦点を当てています。
 
 ## <a name="see-also"></a>関連項目
 
 [Unicode と MBCS](../text/unicode-and-mbcs.md)<br/>
-[ロケールとコード ページ](../text/locales-and-code-pages.md)
+[ロケールとコードページ](../text/locales-and-code-pages.md)

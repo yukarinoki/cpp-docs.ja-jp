@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: wcrtomb'
 title: wcrtomb
 ms.date: 4/2/2020
 api_name:
@@ -29,12 +30,12 @@ helpviewer_keywords:
 - multibyte characters
 - characters, converting
 ms.assetid: 717f1b21-2705-4b7f-b6d0-82adc5224340
-ms.openlocfilehash: 4107ae6cb6366fa8ad80251ce94ee35ca59501bd
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: effa442cee4aa0924fa976ee9138f40b22217375
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82910644"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97331055"
 ---
 # <a name="wcrtomb"></a>wcrtomb
 
@@ -65,7 +66,7 @@ size_t wcrtomb(
 変換するワイド文字。
 
 *mbstate*<br/>
-**Mbstate_t**オブジェクトへのポインター。
+**Mbstate_t** オブジェクトへのポインター。
 
 ## <a name="return-value"></a>戻り値
 
@@ -73,11 +74,11 @@ size_t wcrtomb(
 
 ## <a name="remarks"></a>解説
 
-**Wcrtomb**関数は、 *mbstate*に含まれる指定された変換状態から始まるワイド文字を、 *wchar*に含まれる値から*mbchar*で表されるアドレスに変換します。 戻り値は、対応するマルチバイト文字を表すために必要なバイト数ですが、 **MB_CUR_MAX**バイトを超えることはありません。
+**Wcrtomb** 関数は、 *mbstate* に含まれる指定された変換状態から始まるワイド文字を、 *wchar* に含まれる値から *mbchar* で表されるアドレスに変換します。 戻り値は、対応するマルチバイト文字を表すために必要なバイト数ですが、 **MB_CUR_MAX** バイトを超えることはありません。
 
-*Mbstate*が null の場合、 *mbchar*の変換状態を含む内部**mbstate_t**オブジェクトが使用されます。 文字シーケンス*wchar*に対応するマルチバイト文字表現がない場合は、-1 が返され、 **errno**は**EILSEQ**に設定されます。
+*Mbstate* が null の場合、 *mbchar* の変換状態を含む内部 **mbstate_t** オブジェクトが使用されます。 文字シーケンス *wchar* に対応するマルチバイト文字表現がない場合は、-1 が返され、 **errno** は **EILSEQ** に設定されます。
 
-**Wcrtomb**関数は、再起動によって _wctomb_l ますが[、wctomb と](wctomb-wctomb-l.md)は異なります。 変換状態は、同じまたはその他の再開可能な関数への後続の呼び出しのために*mbstate*に格納されます。 再開可能な関数と再開不可能な関数を混用した場合、結果は未定義です。 たとえば、 **wcstombs**の代わりに**wcsrtombs**の後続の呼び出しが使用された場合、アプリケーションは**wcsrlen**ではなく**wcsrlen**を使用します。
+**Wcrtomb** 関数は、再起動によって _wctomb_l ますが [、wctomb と](wctomb-wctomb-l.md)は異なります。 変換状態は、同じまたはその他の再開可能な関数への後続の呼び出しのために *mbstate* に格納されます。 再開可能な関数と再開不可能な関数を混用した場合、結果は未定義です。 たとえば、 **wcstombs** の代わりに **wcsrtombs** の後続の呼び出しが使用された場合、アプリケーションは **wcsrlen** ではなく **wcsrlen** を使用します。
 
 C++ では、この関数にテンプレートのオーバーロードがあります。このオーバーロードは、この関数に対応するセキュリティで保護された新しい関数を呼び出します。 詳細については、「[セキュリティ保護されたテンプレート オーバーロード](../../c-runtime-library/secure-template-overloads.md)」を参照してください。
 
@@ -85,7 +86,7 @@ C++ では、この関数にテンプレートのオーバーロードがあり�
 
 ## <a name="exceptions"></a>例外
 
-**Wcrtomb**関数は、この関数の実行中に現在のスレッドの関数が**setlocale**を呼び出し、 *mbstate*が null の場合は、マルチスレッドセーフです。
+**Wcrtomb** 関数は、この関数の実行中に現在のスレッドの関数が **setlocale** を呼び出し、 *mbstate* が null の場合は、マルチスレッドセーフです。
 
 ## <a name="example"></a>例
 
@@ -132,13 +133,13 @@ The corresponding wide character "Q" was converted to the "Q" multibyte characte
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**wcrtomb**|\<wchar.h>|
 
 ## <a name="see-also"></a>関連項目
 
 [データ変換](../../c-runtime-library/data-conversion.md)<br/>
-[国](../../c-runtime-library/locale.md)<br/>
-[マルチバイト文字のシーケンスの解釈](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[ロケール](../../c-runtime-library/locale.md)<br/>
+[Multibyte-Character シーケンスの解釈](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [mbsinit](mbsinit.md)<br/>

@@ -1,16 +1,17 @@
 ---
+description: '詳細情報: コンパイラの警告 (レベル 4) C4840'
 title: コンパイラの警告 (レベル 4) C4840
 ms.date: 09/13/2018
 f1_keywords:
 - C4840
 helpviewer_keywords:
 - C4840
-ms.openlocfilehash: 649083d66d0c7a0ef11c742e56cbfb70e2e9b75f
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: a365dc38aff1ab9811407924f7f6e554d91c6f1e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80185205"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97330467"
 ---
 # <a name="compiler-warning-level-4-c4840"></a>コンパイラの警告 (レベル 4) C4840
 
@@ -49,7 +50,7 @@ int main()
 }
 ```
 
-`CStringW`を使用して作成および管理された文字列の場合、指定された `operator LPCWSTR()` を使用して、`CStringW` オブジェクトを、書式文字列によって予期される C スタイルの文字列ポインターにキャストする必要があります。
+を使用して作成および管理される文字列の場合 `CStringW` 、指定されたを使用して、 `operator LPCWSTR()` 書式指定 `CStringW` 文字列によって予期される C スタイルの文字列ポインターにオブジェクトをキャストする必要があります。
 
 ```cpp
     CStringW str1;

@@ -1,14 +1,15 @@
 ---
+description: 詳細については、「C++/CLI に固有の拡張機能」を参照してください。
 title: C++/CLI に固有の拡張機能
 ms.date: 10/12/2018
 ms.topic: reference
 ms.assetid: 81e3fd32-6c8f-490b-9190-a6dc291545c8
-ms.openlocfilehash: 3d65c026d679537d29ef153cca3ae9f4628f3386
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: e149ef6b126a785dd29f19ef1096ac656802f186
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80182111"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97330332"
 ---
 # <a name="extensions-that-are-specific-to-ccli"></a>C++/CLI に固有の拡張機能
 
@@ -24,8 +25,8 @@ ms.locfileid: "80182111"
 
 [型の転送 (C++/CLI)](type-forwarding-cpp-cli.md)
 
-[可変個引数リスト (...) (C++/CLI)](variable-argument-lists-dot-dot-dot-cpp-cli.md)
+[可変個引数リスト (...)(C++/CLI)](variable-argument-lists-dot-dot-dot-cpp-cli.md)
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[.NET および UWP でのコンポーネント拡張](component-extensions-for-runtime-platforms.md)
+[.NET および UWP 用のコンポーネントの拡張機能](component-extensions-for-runtime-platforms.md)

@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: int_3 クラス'
 title: int_3 クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -72,12 +73,12 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::int_3::xz
 - amp_short_vectors/Concurrency::graphics::int_3::set_yz
 ms.assetid: d4af182f-30f1-455c-b16d-aa99cd314038
-ms.openlocfilehash: bc35562466ee33585be03739695d24da043415c2
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: fbdbb436e503bc00239875b92b2b1065956af23c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77127817"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97330008"
 ---
 # <a name="int_3-class"></a>int_3 クラス
 
@@ -91,119 +92,119 @@ class int_3;
 
 ## <a name="members"></a>メンバー
 
-### <a name="public-typedefs"></a>パブリック Typedef
+### <a name="public-typedefs"></a>パブリック typedef
 
-|Name|説明|
+|名前|説明|
 |----------|-----------------|
 |`value_type`||
 
 ### <a name="public-constructors"></a>パブリック コンストラクター
 
-|Name|説明|
+|名前|説明|
 |----------|-----------------|
 |[int_3 コンストラクター](#ctor)|オーバーロードされます。 既定のコンストラクター。すべての要素を 0 で初期化します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
-|Name|説明|
+|名前|説明|
 |----------|-----------------|
-|int_3::get_x||
-|int_3::get_xy||
-|int_3::get_xyz||
-|int_3::get_xz||
-|int_3::get_xzy||
-|int_3::get_y||
-|int_3::get_yx||
-|int_3::get_yxz||
-|int_3::get_yz||
-|int_3::get_yzx||
-|int_3::get_z||
-|int_3::get_zx||
-|int_3::get_zxy||
-|int_3::get_zy||
-|int_3::get_zyx||
-|int_3::ref_b||
-|int_3::ref_g||
-|int_3::ref_r||
-|int_3::ref_x||
-|int_3::ref_y||
-|int_3::ref_z||
-|int_3::set_x||
-|int_3::set_xy||
-|int_3::set_xyz||
-|int_3::set_xz||
-|int_3::set_xzy||
-|int_3::set_y||
-|int_3::set_yx||
-|int_3::set_yxz||
-|int_3::set_yz||
-|int_3::set_yzx||
-|int_3::set_z||
-|int_3::set_zx||
-|int_3::set_zxy||
-|int_3::set_zy||
-|int_3::set_zyx||
+|int_3:: get_x||
+|int_3:: get_xy||
+|int_3:: get_xyz||
+|int_3:: get_xz||
+|int_3:: get_xzy||
+|int_3:: get_y||
+|int_3:: get_yx||
+|int_3:: get_yxz||
+|int_3:: get_yz||
+|int_3:: get_yzx||
+|int_3:: get_z||
+|int_3:: get_zx||
+|int_3:: get_zxy||
+|int_3:: get_zy||
+|int_3:: get_zyx||
+|int_3:: ref_b||
+|int_3:: ref_g||
+|int_3:: ref_r||
+|int_3:: ref_x||
+|int_3:: ref_y||
+|int_3:: ref_z||
+|int_3:: set_x||
+|int_3:: set_xy||
+|int_3:: set_xyz||
+|int_3:: set_xz||
+|int_3:: set_xzy||
+|int_3:: set_y||
+|int_3:: set_yx||
+|int_3:: set_yxz||
+|int_3:: set_yz||
+|int_3:: set_yzx||
+|int_3:: set_z||
+|int_3:: set_zx||
+|int_3:: set_zxy||
+|int_3:: set_zy||
+|int_3:: set_zyx||
 
 ### <a name="public-operators"></a>パブリック演算子
 
-|Name|説明|
+|名前|説明|
 |----------|-----------------|
-|int_3::operator-||
-|int_3::operator--||
-|int_3::operator%=||
-|int_3::operator&=||
-|int_3::operator*=||
-|int_3::operator/=||
-|int_3::operator^=||
-|int_3::operator&#124;=||
-|int_3::operator~||
-|int_3::operator++||
-|int_3::operator+=||
-|int_3:: operator <\<=||
-|int_3::operator=||
-|int_3::operator-=||
-|int_3::operator>>=||
+|int_3:: operator-||
+|int_3:: operator--||
+|int_3:: operator% =||
+|int_3:: operator&=||
+|int_3:: operator * =||
+|int_3:: operator/=||
+|int_3:: operator ^ =||
+|int_3:: operator&#124;=||
+|int_3:: operator ~||
+|int_3:: operator + +||
+|int_3:: operator + =||
+|int_3:: operator<\<=||
+|int_3:: operator =||
+|int_3:: operator-=||
+|int_3:: operator>>=||
 
 ### <a name="public-constants"></a>パブリック定数
 
-|Name|説明|
+|名前|説明|
 |----------|-----------------|
 |[サイズ定数](#size)||
 
 ### <a name="public-data-members"></a>パブリック データ メンバー
 
-|Name|説明|
+|名前|説明|
 |----------|-----------------|
-|int_3::b||
-|int_3::bg||
-|int_3::bgr||
-|int_3::br||
-|int_3::brg||
-|int_3::g||
-|int_3::gb||
-|int_3::gbr||
-|int_3::gr||
-|int_3::grb||
-|int_3::r||
-|int_3::rb||
-|int_3::rbg||
-|int_3::rg||
-|int_3::rgb||
-|int_3::x||
-|int_3::xy||
-|int_3::xyz||
-|int_3::xz||
-|int_3::xzy||
-|int_3::y||
-|int_3::yx||
-|int_3::yxz||
-|int_3::yz||
-|int_3::yzx||
-|int_3::z||
-|int_3::zx||
-|int_3::zxy||
-|int_3::zy||
-|int_3::zyx||
+|int_3:: b||
+|int_3:: bg||
+|int_3:: bgr||
+|int_3:: br||
+|int_3:: brg||
+|int_3:: g||
+|int_3:: gb||
+|int_3:: gbr||
+|int_3:: gr||
+|int_3:: grb||
+|int_3:: r||
+|int_3:: rb||
+|int_3:: rbg||
+|int_3:: rg||
+|int_3:: rgb||
+|int_3:: x||
+|int_3:: xy||
+|int_3:: xyz||
+|int_3:: xz||
+|int_3:: xzy||
+|int_3:: y||
+|int_3:: yx||
+|int_3:: yxz||
+|int_3:: yz||
+|int_3:: yzx||
+|int_3:: z||
+|int_3:: zx||
+|int_3:: zxy||
+|int_3:: zy||
+|int_3:: zyx||
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -215,7 +216,7 @@ class int_3;
 
 **名前空間:** Concurrency:: graphics
 
-## <a name="ctor"></a>int_3
+## <a name="int_3"></a><a name="ctor"></a> int_3
 
 既定のコンストラクター。すべての要素を 0 で初期化します。
 
@@ -268,7 +269,7 @@ explicit inline int_3(
 *_Other*<br/>
 の初期化に使用されるオブジェクト。
 
-## <a name="size"></a>幅
+## <a name="size"></a><a name="size"></a> 幅
 
 ### <a name="syntax"></a>構文
 
@@ -276,6 +277,6 @@ explicit inline int_3(
 static const int size = 3;
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [Concurrency::graphics 名前空間](concurrency-graphics-namespace.md)

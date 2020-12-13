@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「errno、_doserrno、_sys_errlist、および」を参照 _sys_nerr してください。
 title: errno、_doserrno、_sys_errlist、および _sys_nerr
 ms.date: 11/04/2016
 api_name:
@@ -24,12 +25,12 @@ helpviewer_keywords:
 - _sys_nerr global variable
 - sys_nerr global variable
 ms.assetid: adbec641-6d91-4e19-8398-9a34046bd369
-ms.openlocfilehash: 5b10d98dab41151290d4e44e031f659108b0c73c
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
-ms.translationtype: HT
+ms.openlocfilehash: b15091ebfffec891b09f5024b14a8ca7fe0d02e1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70944553"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97331169"
 ---
 # <a name="errno-_doserrno-_sys_errlist-and-_sys_nerr"></a>errno、_doserrno、_sys_errlist、および _sys_nerr
 
@@ -56,20 +57,20 @@ ms.locfileid: "70944553"
 |------------------|----------------------------|
 |`_doserrno`|[_get_doserrno](../c-runtime-library/reference/get-doserrno.md)、[_set_doserrno](../c-runtime-library/reference/set-doserrno.md)|
 |`errno`|[_get_errno](../c-runtime-library/reference/get-errno.md)、[_set_errno](../c-runtime-library/reference/set-errno.md)|
-|`_sys_errlist`、 `_sys_nerr`|[strerror_s、_strerror_s、_wcserror_s、\__wcserror_s](../c-runtime-library/reference/strerror-s-strerror-s-wcserror-s-wcserror-s.md)|
+|`_sys_errlist`, `_sys_nerr`|[strerror_s、_strerror_s、_wcserror_s、 \_ _wcserror_s](../c-runtime-library/reference/strerror-s-strerror-s-wcserror-s-wcserror-s.md)|
 
 ライブラリの数値演算ルーチンでは、[_matherr](../c-runtime-library/reference/matherr.md) を呼び出して `errno` を設定します。 別の方法で数値演算エラーを処理するには、`_matherr` リファレンスの説明に従って独自のルーチンを記述し、`_matherr` という名前を付けます。
 
-次の表のすべての `errno` 値が \<errno.h> の定義済み定数で、UNIX と互換性があります。 `ERANGE`、`EILSEQ`、および `EDOM` のみが、ISO C99 標準で指定されます。
+次の表のすべての `errno` 値は、の定義済み定数で、 \<errno.h> UNIX と互換性があります。 `ERANGE`、`EILSEQ`、および `EDOM` のみが、ISO C99 標準で指定されます。
 
-|定数|システム エラー メッセージ|[値]|
+|定数|システム エラー メッセージ|値|
 |--------------|--------------------------|-----------|
 |`EPERM`|操作は許可されていません|1|
-|`ENOENT`|該当するファイルまたはディレクトリがありません|2|
+|`ENOENT`|を開けませんでした 原因: ファイルまたはディレクトリが存在しません|2|
 |`ESRCH`|該当するプロセスがありません|3|
 |`EINTR`|関数に割り込みがありました|4|
 |`EIO`|I/O エラーです|5|
-|`ENXIO`|該当するデバイスまたはアドレスがありません|6|
+|`ENXIO`|このようなデバイスまたはアドレスはありません|6|
 |`E2BIG`|引数が長すぎます|7|
 |`ENOEXEC`|実行形式エラーです|8|
 |`EBADF`|ファイル番号が正しくありません|9|
@@ -79,7 +80,7 @@ ms.locfileid: "70944553"
 |`EACCES`|アクセス許可は拒否されました|13|
 |`EFAULT`|アドレスが正しくありません|14|
 |`EBUSY`|デバイスまたはリソースがビジー状態です|16|
-|`EEXIST`|ファイルが存在します|17|
+|`EEXIST`|ファイルが存在するか|17|
 |`EXDEV`|クロス デバイス リンクがあります|18|
 |`ENODEV`|該当するデバイスがありません|19|
 |`ENOTDIR`|ディレクトリではありません|20|
@@ -105,22 +106,22 @@ ms.locfileid: "70944553"
 |`EILSEQ`|無効なバイト シーケンスです|42|
 |`STRUNCATE`|残りの文字列は切り詰められました|80|
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 |グローバル マクロ|必須ヘッダー|オプション ヘッダー|
 |------------------|---------------------|---------------------|
-|`errno`|\<errno.h> または \<stdlib.h>、\<cerrno> または \<cstdlib> (C++)||
-|`_doserrno`、`_sys_errlist`、`_sys_nerr`|\<stdlib.h>、\<cstdlib> (C++)|\<errno.h>、\<cerrno> (C++)|
+|`errno`|\<errno.h> または \<stdlib.h> 、 \<cerrno> または \<cstdlib> (C++)||
+|`_doserrno`, `_sys_errlist`, `_sys_nerr`|\<stdlib.h>、 \<cstdlib> (C++)|\<errno.h>、 \<cerrno> (C++)|
 
-`_doserrno`、`_sys_errlist`、および `_sys_nerr` マクロは Microsoft 拡張機能です。 互換性の詳細については、「 [互換性](../c-runtime-library/compatibility.md)」を参照してください。
+`_doserrno`、`_sys_errlist`、および `_sys_nerr` マクロは Microsoft 拡張機能です。 互換性について詳しくは、「 [Compatibility](../c-runtime-library/compatibility.md)」をご覧ください。
 
 ## <a name="see-also"></a>関連項目
 
 [グローバル変数](../c-runtime-library/global-variables.md)<br/>
 [errno 定数](../c-runtime-library/errno-constants.md)<br/>
 [perror、_wperror](../c-runtime-library/reference/perror-wperror.md)<br/>
-[strerror、_strerror、_wcserror、\__wcserror](../c-runtime-library/reference/strerror-strerror-wcserror-wcserror.md)<br/>
-[strerror_s、_strerror_s、_wcserror_s、\__wcserror_s](../c-runtime-library/reference/strerror-s-strerror-s-wcserror-s-wcserror-s.md)<br/>
+[strerror、_strerror、_wcserror、 \_ _wcserror](../c-runtime-library/reference/strerror-strerror-wcserror-wcserror.md)<br/>
+[strerror_s、_strerror_s、_wcserror_s、 \_ _wcserror_s](../c-runtime-library/reference/strerror-s-strerror-s-wcserror-s-wcserror-s.md)<br/>
 [_get_doserrno](../c-runtime-library/reference/get-doserrno.md)<br/>
 [_set_doserrno](../c-runtime-library/reference/set-doserrno.md)<br/>
 [_get_errno](../c-runtime-library/reference/get-errno.md)<br/>

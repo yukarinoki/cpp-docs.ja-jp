@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: helpfile'
 title: helpfile (C++ COM 属性)
 ms.date: 10/02/2018
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - helpfile attribute
 ms.assetid: d75161c1-1363-4019-ae09-e7e3b8a3971e
-ms.openlocfilehash: 385c6da6a432f0954e62c9f16a22f0b70b73b317
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: ff3207c39bc5f83ededb2f7f299cf798b16f0eaa
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88845238"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97331150"
 ---
 # <a name="helpfile"></a>helpfile
 
@@ -25,7 +26,7 @@ ms.locfileid: "88845238"
 
 ### <a name="parameters"></a>パラメーター
 
-*ファイル名*<br/>
+*filename*<br/>
 ヘルプトピックが含まれているファイルの名前。
 
 ## <a name="remarks"></a>解説
@@ -34,9 +35,9 @@ ms.locfileid: "88845238"
 
 ## <a name="example"></a>例
 
-**Helpfile**の使用例については、[モジュール](module-cpp.md)の例を参照してください。
+**Helpfile** の使用例については、[モジュール](module-cpp.md)の例を参照してください。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 | 属性コンテキスト | 値 |
 |-|-|

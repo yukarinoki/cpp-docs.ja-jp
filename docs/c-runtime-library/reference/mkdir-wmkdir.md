@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: _mkdir、_wmkdir'
 title: _mkdir、_wmkdir
 ms.date: 4/2/2020
 api_name:
@@ -39,12 +40,12 @@ helpviewer_keywords:
 - _mkdir function
 - _tmkdir function
 ms.assetid: 7f22d01d-63a5-4712-a6e7-d34878b2d840
-ms.openlocfilehash: f4714e3e763b827772a7d2eb61ae2e14f0aece02
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 75be13432a5ba0cdc2aa47d2c0e8cbb35e8f982e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82919144"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97330971"
 ---
 # <a name="_mkdir-_wmkdir"></a>_mkdir、_wmkdir
 
@@ -69,19 +70,19 @@ int _wmkdir(
 
 ## <a name="return-value"></a>戻り値
 
-新しいディレクトリが作成された場合、これらの各関数は値 0 を返します。 エラーが発生した場合、この関数は-1 を返し、 **errno**を次のように設定します。
+新しいディレクトリが作成された場合、これらの各関数は値 0 を返します。 エラーが発生した場合、この関数は-1 を返し、 **errno** を次のように設定します。
 
-**Eexist***Dirname*が既存のファイル、ディレクトリ、またはデバイスの名前であるため、ディレクトリは作成されませんでした。
+**Eexist***Dirname* が既存のファイル、ディレクトリ、またはデバイスの名前であるため、ディレクトリは作成されませんでした。
 
-**ENOENT**パスが見つかりませんでした。
+**ENOENT** パスが見つかりませんでした。
 
 リターン コードの詳細については、「[_doserrno、errno、_sys_errlist、および _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」を参照してください。
 
 ## <a name="remarks"></a>解説
 
-**_Mkdir**関数は、指定された dirname を持つ新しいディレクトリを作成し*ます。* **_mkdir**は呼び出しごとに1つの新しいディレクトリを作成できます。そのため、 *dirname*の最後のコンポーネントのみが新しいディレクトリに名前を指定できます。 **_mkdir**はパス区切り記号を変換しません。 Windows NT では、バックスラッシュ (\\) とスラッシュ (/) のどちらもランタイム ルーチンの文字列内の有効なパス区切り記号です。
+**_Mkdir** 関数は、指定された dirname を持つ新しいディレクトリを作成し *ます。* **_mkdir** は呼び出しごとに1つの新しいディレクトリを作成できます。そのため、 *dirname* の最後のコンポーネントのみが新しいディレクトリに名前を指定できます。 **_mkdir** はパス区切り記号を変換しません。 Windows NT では、バックスラッシュ (\\) とスラッシュ (/) のどちらもランタイム ルーチンの文字列内の有効なパス区切り記号です。
 
-**_wmkdir**は **_mkdir**のワイド文字バージョンです。**_wmkdir**の*dirname*引数は、ワイド文字列です。 **_wmkdir**と **_mkdir**は同じように動作します。
+**_wmkdir** は **_mkdir** のワイド文字バージョンです。**_wmkdir** の *dirname* 引数は、ワイド文字列です。 **_wmkdir** と **_mkdir** は同じように動作します。
 
 既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
@@ -93,7 +94,7 @@ int _wmkdir(
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**_mkdir**|\<direct.h>|
 |**_wmkdir**|\<direct.h> または \<wchar.h>|
@@ -129,7 +130,7 @@ int main( void )
 }
 ```
 
-### <a name="sample-output"></a>サンプル出力
+### <a name="sample-output"></a>出力例
 
 ```Output
 Directory '\testtmp' was successfully created
@@ -147,6 +148,6 @@ Directory '\testtmp' was successfully removed
 
 ## <a name="see-also"></a>関連項目
 
-[ディレクトリ制御](../../c-runtime-library/directory-control.md)<br/>
+[ディレクトリコントロール](../../c-runtime-library/directory-control.md)<br/>
 [_chdir、_wchdir](chdir-wchdir.md)<br/>
 [_rmdir、_wrmdir](rmdir-wrmdir.md)<br/>

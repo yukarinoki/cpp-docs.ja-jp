@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「」を参照してください。
 title: ///(C++ COM 属性)
 ms.date: 10/02/2018
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - importidl attribute
 ms.assetid: 4b0a4b55-6c57-4e6e-bc7b-a12cc8063941
-ms.openlocfilehash: 8f3c2c5c67ac216d096d1082814c561698f3f732
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: b10caa9f4b1467727c70b6d968ca6aa33b58da0c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88842248"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97329884"
 ---
 # <a name="importidl"></a>importidl
 
@@ -32,7 +33,7 @@ ms.locfileid: "88842248"
 
 インポート **tidl** C++ 属性は、ライブラリブロックの外側のセクション ( *idl_file*) をプログラムによって生成された .idl ファイルに、ライブラリセクション ( *idl_file*) をプログラムの生成された .idl ファイルのライブラリセクションに配置します。
 
-たとえば、生成された .idl ファイルでハンドコードされた .idl ファイルを使用する場合は **、使用する**ことができます。
+たとえば、生成された .idl ファイルでハンドコードされた .idl ファイルを使用する場合は **、使用する** ことができます。
 
 ## <a name="example"></a>例
 
@@ -43,7 +44,7 @@ ms.locfileid: "88842248"
 [importidl("import.idl")];
 ```
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 | 属性コンテキスト | 値 |
 |-|-|

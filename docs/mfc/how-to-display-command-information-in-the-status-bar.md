@@ -1,4 +1,5 @@
 ---
+description: '詳細については、「方法: ステータスバーにコマンド情報を表示する」を参照してください。'
 title: ステータス バーにコマンド情報を表示する方法
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - status bars [MFC], message area
 - status bars [MFC], displaying command information
 ms.assetid: de895cbe-61ee-46bf-9787-76b247527d6d
-ms.openlocfilehash: bff5d5b20ecc9b20b7b1e8335cda34d582441425
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 568e8d356659d5267e8c4947f2981cd6243a7056
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84622532"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97330225"
 ---
 # <a name="how-to-display-command-information-in-the-status-bar"></a>ステータス バーにコマンド情報を表示する方法
 
@@ -20,8 +21,8 @@ ms.locfileid: "84622532"
 
 このステータスバーのヘルプを追加するには、プログラムに追加するメニュー項目のプロンプト文字列を定義します。 これを行うには、メニューエディターでメニュー項目のプロパティを編集するときに、プロンプト文字列を指定します。 定義した文字列は、アプリケーションリソースファイルに格納されます。これらのコマンドは、説明したコマンドと同じ Id を持ちます。
 
-既定では、アプリケーションウィザードによって、標準の "準備完了" メッセージの ID **AFX_IDS_IDLEMESSAGE**が追加されます。これは、プログラムが新しいメッセージを待機しているときに表示されます。 アプリケーションウィザードで状況依存のヘルプオプションを指定すると、メッセージは "ヘルプのために F1 キーを押す" に変更されます。
+既定では、アプリケーションウィザードによって、標準の "準備完了" メッセージの ID **AFX_IDS_IDLEMESSAGE** が追加されます。これは、プログラムが新しいメッセージを待機しているときに表示されます。 アプリケーションウィザードで [ヘルプの Context-Sensitive] オプションを指定した場合、メッセージは "ヘルプのために F1 キーを押してください" に変更されます。
 
 ## <a name="see-also"></a>関連項目
 
-[メッセージの処理とマップ](message-handling-and-mapping.md)
+[メッセージの処理とマッピング](message-handling-and-mapping.md)

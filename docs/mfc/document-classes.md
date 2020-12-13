@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: ドキュメントクラス'
 title: ドキュメント クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - document classes [MFC]
 ms.assetid: 4bf19b02-0a4f-4319-b68e-cddcba2705cb
-ms.openlocfilehash: 012d107d7bcc630c4bc02a9dc697172080787eac
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 7f5bd3011dec84cad20b10668e0a997838e79dbb
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84615803"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97330281"
 ---
 # <a name="document-classes"></a>ドキュメント クラス
 
@@ -32,19 +33,19 @@ ms.locfileid: "84615803"
 リッチエディットコントロール内の OLE クライアント項目のリストを保持します。 [CRichEditView](reference/cricheditview-class.md)および[CRichEditCntrItem](reference/cricheditcntritem-class.md)と共に使用します。
 
 [COleServerDoc](reference/coleserverdoc-class.md)<br/>
-サーバーアプリケーションドキュメントクラスの基本クラスとして使用されます。 `COleServerDoc`オブジェクトは、 [COleServerItem](reference/coleserveritem-class.md)オブジェクトとの対話によって、サーバーのサポートを大量に提供します。 ビジュアル編集機能は、クラスライブラリのドキュメント/ビューアーキテクチャを使用して提供されます。
+サーバーアプリケーションドキュメントクラスの基本クラスとして使用されます。 `COleServerDoc` オブジェクトは、 [COleServerItem](reference/coleserveritem-class.md) オブジェクトとの対話によって、サーバーのサポートを大量に提供します。 ビジュアル編集機能は、クラスライブラリのドキュメント/ビューアーキテクチャを使用して提供されます。
 
 [CHtmlEditDoc](reference/chtmleditdoc-class.md)<br/>
-は、MFC のドキュメント/ビューアーキテクチャのコンテキスト内で、WebBrowser HTML 編集プラットフォームの機能を[CHtmlEditView](reference/chtmleditview-class.md)で提供します。
+は、MFC のドキュメント/ビューアーキテクチャのコンテキスト内で、WebBrowser HTML 編集プラットフォームの機能を [CHtmlEditView](reference/chtmleditview-class.md)で提供します。
 
 ## <a name="related-classes"></a>関連クラス
 
 ドキュメントクラスオブジェクトは、永続的なものにすることができます。つまり、状態をストレージメディアに書き込んで読み戻すことができます。 MFC には、 `CArchive` ドキュメントのデータをストレージメディアに転送しやすくするクラスが用意されています。
 
 [CArchive](reference/carchive-class.md)<br/>
-Cooperates[を使用して](reference/cfile-class.md)、シリアル化によってオブジェクトの永続的なストレージを実装します ( [CObject:: Serialize](reference/cobject-class.md#serialize)を参照)。
+Cooperates [を使用して](reference/cfile-class.md) 、シリアル化によってオブジェクトの永続的なストレージを実装します ( [CObject:: Serialize](reference/cobject-class.md#serialize)を参照)。
 
-ドキュメントには OLE オブジェクトを含めることもできます。 `CDocItem`は、サーバーおよびクライアントアイテムの基本クラスです。
+ドキュメントには OLE オブジェクトを含めることもできます。 `CDocItem` は、サーバーおよびクライアントアイテムの基本クラスです。
 
 [CDocItem](reference/cdocitem-class.md)<br/>
 [COleClientItem](reference/coleclientitem-class.md)と[COleServerItem](reference/coleserveritem-class.md)の抽象基本クラス。 から派生したクラスのオブジェクトは `CDocItem` 、ドキュメントの一部を表します。

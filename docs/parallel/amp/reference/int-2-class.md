@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: int_2 クラス'
 title: int_2 クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -28,12 +29,12 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::int_2::operator+=
 - amp_short_vectors/Concurrency::graphics::int_2::operator--
 ms.assetid: 258b02e9-f1ee-46c2-8edd-dc9f69184846
-ms.openlocfilehash: 000bda3a6ecc5b1ebf9be4e07ce8d703b6cd9194
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: 7ee3f2726ce5c96a51a8246933c8d2d9d9eacc38
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77126644"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97330039"
 ---
 # <a name="int_2-class"></a>int_2 クラス
 
@@ -49,83 +50,83 @@ class int_2;
 
 ### <a name="public-typedefs"></a>パブリック typedef
 
-|Name|説明|
+|名前|説明|
 |----------|-----------------|
 |`value_type`||
 
 ### <a name="public-constructors"></a>パブリック コンストラクター
 
-|Name|説明|
+|名前|説明|
 |----------|-----------------|
 |[int_2 コンストラクター](#ctor)|オーバーロードされます。 既定のコンストラクター。すべての要素を 0 で初期化します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
-|Name|説明|
+|名前|説明|
 |----------|-----------------|
-|int_2::get_x||
-|int_2::get_xy||
-|int_2::get_y||
-|int_2::get_yx||
-|int_2::ref_g||
-|int_2::ref_r||
-|int_2::ref_x||
-|int_2::ref_y||
-|int_2::set_x||
-|int_2::set_xy||
-|int_2::set_y||
-|int_2::set_yx||
+|int_2:: get_x||
+|int_2:: get_xy||
+|int_2:: get_y||
+|int_2:: get_yx||
+|int_2:: ref_g||
+|int_2:: ref_r||
+|int_2:: ref_x||
+|int_2:: ref_y||
+|int_2:: set_x||
+|int_2:: set_xy||
+|int_2:: set_y||
+|int_2:: set_yx||
 
 ### <a name="public-operators"></a>パブリック演算子
 
-|Name|説明|
+|名前|説明|
 |----------|-----------------|
-|int_2::operator-||
-|int_2::operator--||
-|int_2::operator%=||
-|int_2::operator&=||
-|int_2::operator*=||
-|int_2::operator/=||
-|int_2::operator^=||
-|int_2::operator&#124;=||
-|int_2::operator~||
-|int_2::operator++||
-|int_2::operator+=||
-|int_2:: operator <\<=||
-|int_2::operator=||
-|int_2::operator-=||
-|int_2::operator>>=||
+|int_2:: operator-||
+|int_2:: operator--||
+|int_2:: operator% =||
+|int_2:: operator&=||
+|int_2:: operator * =||
+|int_2:: operator/=||
+|int_2:: operator ^ =||
+|int_2:: operator&#124;=||
+|int_2:: operator ~||
+|int_2:: operator + +||
+|int_2:: operator + =||
+|int_2:: operator<\<=||
+|int_2:: operator =||
+|int_2:: operator-=||
+|int_2:: operator>>=||
 
 ### <a name="public-constants"></a>パブリック定数
 
-|Name|説明|
+|名前|説明|
 |----------|-----------------|
 |[サイズ定数](#int_2__size)||
 
 ### <a name="public-data-members"></a>パブリック データ メンバー
 
-|Name|説明|
+|名前|説明|
 |----------|-----------------|
-|int_2::g||
-|int_2::gr||
-|int_2::r||
-|int_2::rg||
-|int_2::x||
-|int_2::xy||
-|int_2::y||
-|int_2::yx||
+|int_2:: g||
+|int_2:: gr||
+|int_2:: r||
+|int_2:: rg||
+|int_2:: x||
+|int_2:: xy||
+|int_2:: y||
+|int_2:: yx||
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
 `int_2`
 
-## <a name="requirements"></a>［要件］
+## <a name="requirements"></a>要件
 
 **ヘッダー:** amp_short_vectors
 
 **名前空間:** Concurrency:: graphics
 
-## <a name="ctor"></a>int_2
+## <a name="int_2"></a><a name="ctor"></a> int_2
 
 既定のコンストラクター。すべての要素を 0 で初期化します。
 
@@ -181,12 +182,12 @@ explicit inline int_2(
 *_Other*<br/>
 の初期化に使用されるオブジェクト。
 
-## <a name="int_2__size"></a>幅
+## <a name="size"></a><a name="int_2__size"></a> 幅
 
 ```cpp
 static const int size = 2;
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [Concurrency::graphics 名前空間](concurrency-graphics-namespace.md)

@@ -1,4 +1,5 @@
-﻿---
+---
+description: '詳細については、次を参照してください: atoll、_atoll_l、_wtoll、_wtoll_l'
 title: atoll、_atoll_l、_wtoll、_wtoll_l
 ms.date: 4/2/2020
 api_name:
@@ -41,12 +42,12 @@ helpviewer_keywords:
 - _wtoll function
 - _atoll_l function
 ms.assetid: 5e85fcac-b351-4882-bff2-6e7c469b7fa8
-ms.openlocfilehash: f18fb618909b2dfd4bcd1b4d759fe7a895724896
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: d9476588e937dba3b6452d1c51a1ada518ff0459
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87218716"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97331016"
 ---
 # <a name="atoll-_atoll_l-_wtoll-_wtoll_l"></a>atoll、_atoll_l、_wtoll、_wtoll_l
 
@@ -73,7 +74,7 @@ long long _wtoll_l(
 
 ### <a name="parameters"></a>パラメーター
 
-*引数*<br/>
+*str*<br/>
 変換対象の文字列。
 
 *locale*<br/>
@@ -81,11 +82,11 @@ long long _wtoll_l(
 
 ## <a name="return-value"></a>戻り値
 
-各関数は、 **`long long`** 入力文字を数値として解釈することによって生成される値を返します。 **Atoll**の戻り値は、入力をその型の値に変換できない場合は0になります。
+各関数は、 **`long long`** 入力文字を数値として解釈することによって生成される値を返します。 **Atoll** の戻り値は、入力をその型の値に変換できない場合は0になります。
 
-大きな正の整数値によるオーバーフローの場合、 **atoll**は**LLONG_MAX**を返し、負の整数値が大きいオーバーフローの場合は**LLONG_MIN**を返します。
+大きな正の整数値によるオーバーフローの場合、 **atoll** は **LLONG_MAX** を返し、負の整数値が大きいオーバーフローの場合は **LLONG_MIN** を返します。
 
-範囲外のすべての場合、 **errno**は**ERANGE**に設定されます。 渡されたパラメーターが**NULL**の場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、これらの関数は**errno**を**EINVAL**に設定し、0を返します。
+範囲外のすべての場合、 **errno** は **ERANGE** に設定されます。 渡されたパラメーターが **NULL** の場合は、「 [パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、これらの関数は **errno** を **EINVAL** に設定し、0を返します。
 
 ## <a name="remarks"></a>解説
 
@@ -93,15 +94,15 @@ long long _wtoll_l(
 
 入力文字列は、指定された型の数値として解釈できる文字シーケンスです。 関数は、数値の一部として認識できない文字に最初に遭遇した時点で入力文字列の読み取りを停止します。 この文字は、文字列を終了する null 文字 ('\0' または L'\0') である場合があります。
 
-**Atoll**の*str*引数の形式は次のとおりです。
+**Atoll** の *str* 引数の形式は次のとおりです。
 
 > [*空白*][*sign*][*数字*]
 
-*空白*はスペースまたはタブ文字で構成され、無視されます。*sign*は正符号 (+) またはマイナス記号 (-) です。と*数字*は、1桁以上の数字です。
+*空白* はスペースまたはタブ文字で構成され、無視されます。*sign* は正符号 (+) またはマイナス記号 (-) です。と *数字* は、1桁以上の数字です。
 
-**_wtoll**は、ワイド文字列をパラメーターとして受け取る点を除いて、 **atoll**と同じです。
+**_wtoll** は、ワイド文字列をパラメーターとして受け取る点を除いて、 **atoll** と同じです。
 
-**_L**サフィックスを持つこれらの関数のバージョンは、現在のロケールの代わりに渡されたロケールパラメーターを使用する点を除いて、サフィックスが付いていないバージョンと同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
+**_L** サフィックスを持つこれらの関数のバージョンは、現在のロケールの代わりに渡されたロケールパラメーターを使用する点を除いて、サフィックスが付いていないバージョンと同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
 
 既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
@@ -113,7 +114,7 @@ long long _wtoll_l(
 |**_tstoll_l**|**_atoll_l**|**_atoll_l**|**_wtoll_l**|
 |**_ttoll**|**_atoll**|**_atoll**|**_wtoll**|
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 |ルーチン|必須ヘッダー|
 |--------------|---------------------|
@@ -122,7 +123,7 @@ long long _wtoll_l(
 
 ## <a name="example"></a>例
 
-このプログラムは、 **atoll**関数を使用して、文字列として格納されている数値を数値に変換する方法を示しています。
+このプログラムは、 **atoll** 関数を使用して、文字列として格納されている数値を数値に変換する方法を示しています。
 
 ```C
 // crt_atoll.c

@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: out_of_memory クラス'
 title: out_of_memory クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - out_of_memory class
 ms.assetid: 3aa7e682-8f13-4ae6-9188-31fb423956e4
-ms.openlocfilehash: e716d4952bdb9634cc0d195285d3a65c5c06b0a1
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: bb7ba1db5be5921111b1fba2e12ea5cf6a5bea1b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81336802"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97329928"
 ---
 # <a name="out_of_memory-class"></a>out_of_memory クラス
 
@@ -31,7 +32,7 @@ class out_of_memory : public runtime_exception;
 
 |名前|説明|
 |----------|-----------------|
-|[out_of_memoryコンストラクタ](#ctor)|`out_of_memory` クラスの新しいインスタンスを初期化します。|
+|[out_of_memory コンストラクター](#ctor)|`out_of_memory` クラスの新しいインスタンスを初期化します。|
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -41,13 +42,13 @@ class out_of_memory : public runtime_exception;
 
 `out_of_memory`
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-**ヘッダー:** アンパート.h
+**ヘッダー:** amprt. h
 
 **名前空間:** Concurrency
 
-## <a name="out_of_memory"></a><a name="ctor"></a>out_of_memory
+## <a name="out_of_memory"></a><a name="ctor"></a> out_of_memory
 
 クラスの新しいインスタンスを初期化します。
 
@@ -71,4 +72,4 @@ out_of_memory () throw();
 
 ## <a name="see-also"></a>関連項目
 
-[同時実行名前空間 (C++ AMP)](concurrency-namespace-cpp-amp.md)
+[Concurrency 名前空間 (C++ AMP)](concurrency-namespace-cpp-amp.md)

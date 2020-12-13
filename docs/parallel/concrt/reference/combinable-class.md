@@ -1,4 +1,5 @@
 ---
+description: '詳細: 組み合わせ可能なクラス'
 title: combinable クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -12,12 +13,12 @@ f1_keywords:
 helpviewer_keywords:
 - combinable class
 ms.assetid: fe0bfbf6-6250-47da-b8d0-f75369f0b5be
-ms.openlocfilehash: d445b8ac1d2a8487e9e1ec4f21f63cf5ef071e91
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 117441be8ff7a54543adb419a1cb908d2eb9bec7
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87224969"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97331325"
 ---
 # <a name="combinable-class"></a>combinable クラス
 
@@ -39,14 +40,14 @@ class combinable;
 
 ### <a name="public-constructors"></a>パブリック コンストラクター
 
-|名前|[説明]|
+|名前|説明|
 |----------|-----------------|
 |[組み合わせ](#ctor)|オーバーロードされます。 新しい `combinable` オブジェクトを構築します。|
 |[~ の組み合わせ可能デストラクター](#dtor)|`combinable` オブジェクトを破棄します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
-|名前|[説明]|
+|名前|説明|
 |----------|-----------------|
 |[オフ](#clear)|以前の使用状況からのすべての中間計算結果を消去します。|
 |[結合](#combine)|指定された結合ファンクタを呼び出して、スレッドローカルサブ計算のセットから最終的な値を計算します。|
@@ -55,25 +56,25 @@ class combinable;
 
 ### <a name="public-operators"></a>パブリック演算子
 
-|名前|[説明]|
+|名前|説明|
 |----------|-----------------|
 |[operator =](#operator_eq)|`combinable`別のオブジェクトからオブジェクトにを割り当て `combinable` ます。|
 
 ## <a name="remarks"></a>解説
 
-詳細については、「[並列コンテナーとオブジェクト](../../../parallel/concrt/parallel-containers-and-objects.md)」を参照してください。
+詳細については、「 [並列コンテナーとオブジェクト](../../../parallel/concrt/parallel-containers-and-objects.md)」を参照してください。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
 `combinable`
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** ppl
 
 **名前空間:** concurrency
 
-## <a name="clear"></a><a name="clear"></a>クリア
+## <a name="clear"></a><a name="clear"></a> クリア
 
 以前の使用状況からのすべての中間計算結果を消去します。
 
@@ -81,7 +82,7 @@ class combinable;
 void clear();
 ```
 
-## <a name="combinable"></a><a name="ctor"></a>組み合わせ
+## <a name="combinable"></a><a name="ctor"></a> 組み合わせ
 
 新しい `combinable` オブジェクトを構築します。
 
@@ -113,7 +114,7 @@ combinable(const combinable& _Copy);
 
 3番目のコンストラクターは、コピーコンストラクターです。
 
-## <a name="combinable"></a><a name="dtor"></a>~ の組み合わせ可能
+## <a name="combinable"></a><a name="dtor"></a> ~ の組み合わせ可能
 
 `combinable` オブジェクトを破棄します。
 
@@ -121,7 +122,7 @@ combinable(const combinable& _Copy);
 ~combinable();
 ```
 
-## <a name="combine"></a><a name="combine"></a>結合
+## <a name="combine"></a><a name="combine"></a> 結合
 
 指定された結合ファンクタを呼び出して、スレッドローカルサブ計算のセットから最終的な値を計算します。
 
@@ -142,7 +143,7 @@ T combine(_Function _FnCombine) const;
 
 すべてのスレッドプライベートサブ計算の最終的な結果。
 
-## <a name="combine_each"></a><a name="combine_each"></a>combine_each
+## <a name="combine_each"></a><a name="combine_each"></a> combine_each
 
 指定された結合ファンをスレッドローカルサブ計算ごとに1回呼び出して、スレッドローカルサブ計算のセットから最終的な値を計算します。 最終的な結果は、関数オブジェクトによって累積されます。
 
@@ -159,7 +160,7 @@ void combine_each(_Function _FnCombine) const;
 *_FnCombine*<br/>
 1つのサブ計算を結合するために使用されるファンクタ。 その署名は `void (T)` または `void (const T&)` であり、結合および可換である必要があります。
 
-## <a name="local"></a><a name="local"></a>地元の
+## <a name="local"></a><a name="local"></a> 地元の
 
 スレッドプライベートサブ計算への参照を返します。
 
@@ -178,7 +179,7 @@ T& local(bool& _Exists);
 
 スレッドプライベートサブ計算への参照。
 
-## <a name="operator"></a><a name="operator_eq"></a>operator =
+## <a name="operator"></a><a name="operator_eq"></a> operator =
 
 `combinable`別のオブジェクトからオブジェクトにを割り当て `combinable` ます。
 

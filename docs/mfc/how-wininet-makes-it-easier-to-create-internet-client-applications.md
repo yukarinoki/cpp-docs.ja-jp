@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: WinInet によってインターネットクライアントアプリケーションを簡単に作成する方法'
 title: WinInet を使ってインターネット クライアント アプリケーションを簡単に作成する方法
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - WinInet classes [MFC], vs. WinSock
 - WinInet classes [MFC], Internet client applications
 ms.assetid: dc0f9f47-3184-4e7a-8074-2c63e0359885
-ms.openlocfilehash: 54f63da7451dfef39a33e6b437be938cb1652326
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: efee0b201a165fab8aaf838eedb2ba83b9a5b946
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84624572"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97330132"
 ---
 # <a name="how-wininet-makes-it-easier-to-create-internet-client-applications"></a>WinInet を使ってインターネット クライアント アプリケーションを簡単に作成する方法
 
@@ -48,4 +49,4 @@ Visual C++ には、WinInet を使用する2つの方法があります。 Win32
 ## <a name="see-also"></a>関連項目
 
 [Win32 インターネット拡張機能 (WinInet)](win32-internet-extensions-wininet.md)<br/>
-[MFC を使ってインターネット クライアント アプリケーションを簡単に作成する方法](how-mfc-makes-it-easier-to-create-internet-client-applications.md)
+[MFC を使用してインターネットクライアントアプリケーションを簡単に作成する方法](how-mfc-makes-it-easier-to-create-internet-client-applications.md)

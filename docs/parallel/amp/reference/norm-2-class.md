@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: norm_2 クラス'
 title: norm_2 クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -28,12 +29,12 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::norm_2
 - amp_short_vectors/Concurrency::graphics::norm_2::operator--
 ms.assetid: 80703f9b-61f4-414a-93fd-bc774f7d3393
-ms.openlocfilehash: 09bd33b5a8d9148c7959f69fcab4a260fe05c332
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: 5b4b19d83672a88828d3cad8be7f22a2f54a431e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77126501"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97329989"
 ---
 # <a name="norm_2-class"></a>norm_2 クラス
 
@@ -47,65 +48,65 @@ class norm_2;
 
 ## <a name="members"></a>メンバー
 
-### <a name="public-typedefs"></a>パブリック Typedef
+### <a name="public-typedefs"></a>パブリック typedef
 
-|Name|説明|
+|名前|説明|
 |----------|-----------------|
 |`value_type`||
 
 ### <a name="public-constructors"></a>パブリック コンストラクター
 
-|Name|説明|
+|名前|説明|
 |----------|-----------------|
 |[norm_2 コンストラクター](#ctor)|オーバーロードされます。 既定のコンストラクター。すべての要素を 0 で初期化します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
-|Name|説明|
+|名前|説明|
 |----------|-----------------|
-|norm_2::get_x||
-|norm_2::get_xy||
-|norm_2::get_y||
-|norm_2::get_yx||
-|norm_2::ref_g||
-|norm_2::ref_r||
-|norm_2::ref_x||
-|norm_2::ref_y||
-|norm_2::set_x||
-|norm_2::set_xy||
-|norm_2::set_y||
-|norm_2::set_yx||
+|norm_2:: get_x||
+|norm_2:: get_xy||
+|norm_2:: get_y||
+|norm_2:: get_yx||
+|norm_2:: ref_g||
+|norm_2:: ref_r||
+|norm_2:: ref_x||
+|norm_2:: ref_y||
+|norm_2:: set_x||
+|norm_2:: set_xy||
+|norm_2:: set_y||
+|norm_2:: set_yx||
 
 ### <a name="public-operators"></a>パブリック演算子
 
-|Name|説明|
+|名前|説明|
 |----------|-----------------|
-|norm_2::operator-||
-|norm_2::operator--||
-|norm_2::operator*=||
-|norm_2::operator/=||
+|norm_2:: operator-||
+|norm_2:: operator--||
+|norm_2:: operator * =||
+|norm_2:: operator/=||
 |norm_2:: operator + +||
-|norm_2::operator+=||
-|norm_2::operator=||
-|norm_2::operator-=||
+|norm_2:: operator + =||
+|norm_2:: operator =||
+|norm_2:: operator-=||
 
 ### <a name="public-constants"></a>パブリック定数
 
-|Name|説明|
+|名前|説明|
 |----------|-----------------|
 |[サイズ定数](#norm_2__size)||
 
 ### <a name="public-data-members"></a>パブリック データ メンバー
 
-|Name|説明|
+|名前|説明|
 |----------|-----------------|
-|norm_2::g||
-|norm_2::gr||
-|norm_2::r||
-|norm_2::rg||
-|norm_2::x||
-|norm_2::xy||
-|norm_2::y||
+|norm_2:: g||
+|norm_2:: gr||
+|norm_2:: r||
+|norm_2:: rg||
+|norm_2:: x||
+|norm_2:: xy||
+|norm_2:: y||
 |norm_2:: yx||
 
 ## <a name="inheritance-hierarchy"></a>継承階層
@@ -118,7 +119,7 @@ class norm_2;
 
 **名前空間:** Concurrency:: graphics
 
-## <a name="ctor"></a>norm_2
+## <a name="norm_2"></a><a name="ctor"></a> norm_2
 
 既定のコンストラクター。すべての要素を 0 で初期化します。
 
@@ -188,12 +189,12 @@ explicit inline norm_2(
 *_Other*<br/>
 の初期化に使用されるオブジェクト。
 
-## <a name="norm_2__size"></a>幅
+## <a name="size"></a><a name="norm_2__size"></a> 幅
 
 ```cpp
 static const int size = 2;
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [Concurrency::graphics 名前空間](concurrency-graphics-namespace.md)

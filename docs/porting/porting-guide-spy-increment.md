@@ -1,13 +1,14 @@
 ---
+description: '詳細については、「移植ガイド: Spy + +」を参照してください。'
 title: '移植のガイド: Spy++'
 ms.date: 10/23/2019
 ms.assetid: e558f759-3017-48a7-95a9-b5b779d5e51d
-ms.openlocfilehash: 6f63f082d96f33246592b0e7f39b6788417f8a32
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 7c417a6f313ba6f77e0330bd9511b40c8e1285b2
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87217858"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97331260"
 ---
 # <a name="porting-guide-spy"></a>移植のガイド: Spy++
 
@@ -39,23 +40,23 @@ Spy++ で見つからないファイルの 1 つが verstamp.h でした。 イ�
 1>C:\Program Files (x86)\Windows Kits\8.1\Include\shared\common.ver(212): error RC2104: undefined keyword or key name: VER_FILEFLAGSMASK
 ```
 
-使用可能なインクルードファイルでシンボルを検索する最も簡単な方法は、 **[フォルダー**を指定して検索] (**Ctrl** + **Shift** + **F**) を使用して**Visual C++ インクルードディレクトリ**を指定することです。 ntverp.h でこれを検出しました。 verstamp.h のインクルードを ntverp.h に置き換えることで、このエラーが表示されなくなりました。
+使用可能なインクルードファイルでシンボルを検索する最も簡単な方法は、 **[フォルダー** を指定して検索] (**Ctrl** + **Shift** + **F**) を使用して **Visual C++ インクルードディレクトリ** を指定することです。 ntverp.h でこれを検出しました。 verstamp.h のインクルードを ntverp.h に置き換えることで、このエラーが表示されなくなりました。
 
-## <a name="step-3-linker-outputfile-setting"></a><a name="linker_output_settings"></a>手順 3. リンカー出力ファイルの設定
+## <a name="step-3-linker-outputfile-setting"></a><a name="linker_output_settings"></a> 手順 3. リンカー出力ファイルの設定
 
-古いプロジェクトでは、ファイルが通常とは異なる場所に配置されていることがあり、これによりアップグレード後に問題が発生することがあります。 この場合、`$(SolutionDir)` をプロジェクトのプロパティの**インクルード** パスに追加して、そこに配置されたいくつかのヘッダー ファイルが、そこから Visual Studio により確実に検出されるようにします (いずれか 1 つのプロジェクト フォルダーで検出されるのではなく)。
+古いプロジェクトでは、ファイルが通常とは異なる場所に配置されていることがあり、これによりアップグレード後に問題が発生することがあります。 この場合、`$(SolutionDir)` をプロジェクトのプロパティの **インクルード** パスに追加して、そこに配置されたいくつかのヘッダー ファイルが、そこから Visual Studio により確実に検出されるようにします (いずれか 1 つのプロジェクト フォルダーで検出されるのではなく)。
 
-MSBuild は、 **OutputFile**プロパティが**TargetPath**および**TargetName**値と一致せず、MSB8012 を発行していることを苦情としています。
+MSBuild は、 **OutputFile** プロパティが **TargetPath** および **TargetName** 値と一致せず、MSB8012 を発行していることを苦情としています。
 
 ```Output
 warning MSB8012: TargetPath(...\spyxx\spyxxhk\.\..\Debug\SpyxxHk.dll) does not match the Linker's OutputFile property value (...\spyxx\Debug\SpyHk55.dll). This may cause your project to build incorrectly. To correct this, please make sure that $(OutDir), $(TargetName) and $(TargetExt) property values match the value specified in %(Link.OutputFile).warning MSB8012: TargetName(SpyxxHk) does not match the Linker's OutputFile property value (SpyHk55). This may cause your project to build incorrectly. To correct this, please make sure that $(OutDir), $(TargetName) and $(TargetExt) property values match the value specified in %(Link.OutputFile).
 ```
 
-**Link.OutputFile** はビルド出力であり (EXE、DLL など)、通常はパス、ファイル名、および拡張機能を示す `$(TargetDir)$(TargetName)$(TargetExt)` から構成されます。 これは、古い Visual C++ ビルド ツール (vcbuild.exe) から新しいビルド ツール (MSBuild.exe) にプロジェクトを移行する場合の一般的なエラーです。 Visual Studio 2010 でビルド ツールの変更が発生したため、2010 より前のプロジェクトを 2010 以降のバージョンに移行するたびに、この問題が発生する可能性があります。 基本的な問題は、プロジェクトの移行ウィザードで**OutputFile**値が更新されないことです。これは、他のプロジェクト設定に基づいて値を決定することが常に可能であるとは限りません。 そのため、通常は手動で設定する必要があります。 詳細については、Visual C++ ブログのこの[投稿](https://devblogs.microsoft.com/cppblog/visual-studio-2010-c-project-upgrade-guide/)を参照してください。
+**Link.OutputFile** はビルド出力であり (EXE、DLL など)、通常はパス、ファイル名、および拡張機能を示す `$(TargetDir)$(TargetName)$(TargetExt)` から構成されます。 これは、古い Visual C++ ビルド ツール (vcbuild.exe) から新しいビルド ツール (MSBuild.exe) にプロジェクトを移行する場合の一般的なエラーです。 Visual Studio 2010 でビルド ツールの変更が発生したため、2010 より前のプロジェクトを 2010 以降のバージョンに移行するたびに、この問題が発生する可能性があります。 基本的な問題は、プロジェクトの移行ウィザードで **OutputFile** 値が更新されないことです。これは、他のプロジェクト設定に基づいて値を決定することが常に可能であるとは限りません。 そのため、通常は手動で設定する必要があります。 詳細については、Visual C++ ブログのこの[投稿](https://devblogs.microsoft.com/cppblog/visual-studio-2010-c-project-upgrade-guide/)を参照してください。
 
-このケースでは、変換されたプロジェクトの **Link.OutputFile** プロパティが Spy++ プロジェクト用の .\Debug\Spyxx.exe と .\Release\Spyxx.exe に設定されました (構成に応じて異なります)。 確実な方法は、これらのハードコードされた値を**すべての構成**で `$(TargetDir)$(TargetName)$(TargetExt)` に置き換えることです。 それでもうまくいかない場合は、そこからカスタマイズしたり、これらの値が設定されている **[全般**] セクションのプロパティを変更したりできます (プロパティは [**出力ディレクトリ**]、[**ターゲット名**]、および [**ターゲットの拡張子**] です)。 なお、表示しているプロパティがマクロを使用している場合は、ドロップダウン リストで **[編集]** を選択して、マクロの置き換えが行われた最終的な文字列を示すダイアログ ボックスを表示することができます。 **[マクロ]** ボタンを選択することで、利用可能なすべてのマクロと現在の値を表示することができます。
+このケースでは、変換されたプロジェクトの **Link.OutputFile** プロパティが Spy++ プロジェクト用の .\Debug\Spyxx.exe と .\Release\Spyxx.exe に設定されました (構成に応じて異なります)。 確実な方法は、これらのハードコードされた値を **すべての構成** で `$(TargetDir)$(TargetName)$(TargetExt)` に置き換えることです。 それでもうまくいかない場合は、そこからカスタマイズしたり、これらの値が設定されている **[全般** ] セクションのプロパティを変更したりできます (プロパティは [ **出力ディレクトリ**]、[ **ターゲット名**]、および [ **ターゲットの拡張子**] です)。 なお、表示しているプロパティがマクロを使用している場合は、ドロップダウン リストで **[編集]** を選択して、マクロの置き換えが行われた最終的な文字列を示すダイアログ ボックスを表示することができます。 **[マクロ]** ボタンを選択することで、利用可能なすべてのマクロと現在の値を表示することができます。
 
-## <a name="step-4-updating-the-target-windows-version"></a><a name="updating_winver"></a>手順 4. ターゲットの Windows バージョンを更新する
+## <a name="step-4-updating-the-target-windows-version"></a><a name="updating_winver"></a> 手順 4. ターゲットの Windows バージョンを更新する
 
 次のエラーは、WINVER バージョンが MFC ではサポートされないことを示します。 WINVER for Windows XP は 0x0501 です。
 
@@ -81,7 +82,7 @@ WINVER については、Windows 7 に設定します。 値自体 (0x0601) で�
 #define WINVER _WINNT_WIN32_WIN7 // Minimum targeted Windows version is Windows 7
 ```
 
-## <a name="step-5-linker-errors"></a><a name="linker_errors"></a>手順 5. リンカー エラー
+## <a name="step-5-linker-errors"></a><a name="linker_errors"></a> 手順 5. リンカー エラー
 
 これらの変更によって、SpyHk (DLL) プロジェクトがビルドされますが、リンカー エラーが生成されます。
 
@@ -98,7 +99,7 @@ BOOL WINAPI DLLEntryPoint(HINSTANCE hinstDLL,DWORD fdwReason, LPVOID lpvReserved
 
 これで、C DLL プロジェクトの SpyHK.dll が、エラーなしでビルドしてリンクされるようになりました。
 
-## <a name="step-6-more-outdated-header-files"></a><a name="outdated_header_files"></a>手順 6. その他の期限切れのヘッダー ファイル
+## <a name="step-6-more-outdated-header-files"></a><a name="outdated_header_files"></a> 手順 6. その他の期限切れのヘッダー ファイル
 
 この時点で、メインの実行可能プロジェクト Spyxx の作業を開始します。
 
@@ -106,7 +107,7 @@ BOOL WINAPI DLLEntryPoint(HINSTANCE hinstDLL,DWORD fdwReason, LPVOID lpvReserved
 
 多数のコンパイル エラーがあるプロジェクトで、エラーを徐々に解決している場合に、`#include` ディレクティブを削除するときに古くなった API の使用箇所をすべて即座に見つけることは現実的ではありません。 私たちはすぐにはそれを検出しませんでした。後ほど、WM_DLGBORDER が未定義であるというエラーが発生しました。 実際には、それは ctl3d.h からの未定義の多数のシンボルの 1つです。 私たちは古くなった API に関連すると判断したので、コードでそれへの参照をすべて削除しました。
 
-## <a name="step-7-updating-old-iostreams-code"></a><a name="updating_iostreams_code"></a>手順 7. 古い iostreams コードを更新する
+## <a name="step-7-updating-old-iostreams-code"></a><a name="updating_iostreams_code"></a> 手順 7. 古い iostreams コードを更新する
 
 次のエラーは、iostreams を使用する古い C++ コードで一般的なエラーです。
 
@@ -136,7 +137,7 @@ mstream.h(40): fatal error C1083: Cannot open include file: 'iostream.h': No suc
 typedef std::basic_ostringstream<TCHAR> ostrstream;
 ```
 
-現在、プロジェクトは MBCS (マルチバイト文字セット) を使用してビルドされます。したがって、 **`char`** は適切な文字データ型です。 ただし、コードを UTF-16 Unicode に簡単に更新できるようにするために、これをに更新し `TCHAR` ます。これは、 **`char`** **`wchar_t`** プロジェクト設定の**文字セット**プロパティが MBCS または Unicode に設定されているかどうかによって、またはに解決されます。
+現在、プロジェクトは MBCS (マルチバイト文字セット) を使用してビルドされます。したがって、 **`char`** は適切な文字データ型です。 ただし、コードを UTF-16 Unicode に簡単に更新できるようにするために、これをに更新し `TCHAR` ます。これは、 **`char`** **`wchar_t`** プロジェクト設定の **文字セット** プロパティが MBCS または Unicode に設定されているかどうかによって、またはに解決されます。
 
 コードの他の部分を、いくつか更新する必要があります。  基本クラスをに置き換えまし `ios` た `ios_base` 。 ostream は basic_ostream に置き換えられました \<T> 。 2 つの typedef を追加し、このセクションをコンパイルします。
 
@@ -254,7 +255,7 @@ mstream& operator<<(LPTSTR psz)
 
 この種類の変換は、古く、厳密でないコンパイラでは許容されていましたが、より最近の準拠性の変更により、より正確なコードが求められています。
 
-## <a name="step-8-the-compilers-more-strict-conversions"></a><a name="stricter_conversions"></a>手順 8. コンパイラのより厳密な変換
+## <a name="step-8-the-compilers-more-strict-conversions"></a><a name="stricter_conversions"></a> 手順 8. コンパイラのより厳密な変換
 
 次のようなエラーも多数表示されます。
 
@@ -292,9 +293,9 @@ afx_msg UINT OnNcHitTest(CPoint point);
 afx_msg LRESULT OnNcHitTest(CPoint point);
 ```
 
-この関数は、CWnd から派生したさまざまなクラスに約10回出現するため、カーソルがエディターの関数上にあるときは、[**定義へ移動**] (キーボード: **f12**) と [**宣言へ移動**] (キーボード: **Ctrl**F12) を使用すると便利です。これを + **F12**見つけるには、[**シンボルの検索**] ツールウィンドウから移動します。 **[定義へ移動]** は通常、この 2 つの中ではより便利です。 **[宣言へ移動]** は、フレンド クラスの宣言や前方参照など、定義しているクラス宣言以外の宣言を検索します。
+この関数は、CWnd から派生したさまざまなクラスに約10回出現するため、カーソルがエディターの関数上にあるときは、[**定義へ移動**] (キーボード: **f12**) と [**宣言へ移動**] (キーボード: **Ctrl** F12) を使用すると便利です。これを + 見つけるには、[**シンボルの検索**] ツールウィンドウから移動します。 **[定義へ移動]** は通常、この 2 つの中ではより便利です。 **[宣言へ移動]** は、フレンド クラスの宣言や前方参照など、定義しているクラス宣言以外の宣言を検索します。
 
-## <a name="step-9-mfc-changes"></a><a name="mfc_changes"></a>手順 9. MFC の変更
+## <a name="step-9-mfc-changes"></a><a name="mfc_changes"></a> 手順 9. MFC の変更
 
 次のエラーも変更された宣言型に関連し、マクロでも発生します。
 
@@ -316,7 +317,7 @@ afx_msg void OnActivateApp(BOOL bActive, DWORD dwThreadId);
 
 この時点で、プロジェクトをコンパイルできます。 ただし、全体で使用するといくつかの警告が表示され、MBCS から Unicode への変換や、安全な CRT 関数を使用したセキュリティの向上など、アップグレードのオプションの部分があります。
 
-## <a name="step-10-addressing-compiler-warnings"></a><a name="compiler_warnings"></a>手順 10. コンパイラの警告に対応する
+## <a name="step-10-addressing-compiler-warnings"></a><a name="compiler_warnings"></a> 手順 10. コンパイラの警告に対応する
 
 警告の完全な一覧を取得するには、通常のビルドではなく、ソリューションで **[すべてリビルド]** を実行して、以前コンパイルしたものが、すべて再コンパイルされることを確認する必要があります。これは、現在のコンパイルからの警告レポートのみを取得するためです。 もう 1 つ、現在の警告レベルを受け入れるか、より高い警告レベルを使用するかとい問いがあります。  大量のコード、特に古いコードを移植するときは、より高い警告レベルを使用することが適切である可能性があります。  既定の警告レベルで開始し、すべての警告を取得するために、警告レベルを上げることもできます。 `/Wall` を使用する場合は、システムのヘッダー ファイルでいくつかの警告を取得するため、多数のユーザーが、`/W4` を使用して、システムのヘッダーの警告は取得せずに、コードの大多数の警告を取得しています。 警告をエラーとして表示する場合は、`/WX` オプションを追加します。 これらの設定は、[**プロジェクトのプロパティ**] ダイアログボックスの [ **C/c + +** ] セクションにあります。
 
@@ -500,9 +501,9 @@ warning C4211: nonstandard extension used: redefined extern to static
 
 この問題は、変数が最初に宣言されて **`extern`** から、後で宣言されたときに発生し **`static`** ます。 これら 2 つのストレージ クラス指定子の意味は相互に排他的ですが、これは、Microsoft 拡張機能として許容されます。 コードを他のコンパイラに移植可能にしたい場合、または `/Za` (ANSI 互換性) を指定してコンパイルしたい場合は、宣言が一致するストレージ クラス指定子を持つように変更します。
 
-## <a name="step-11-porting-from-mbcs-to-unicode"></a><a name="porting_to_unicode"></a>手順 11. MBCS から Unicode に移植する
+## <a name="step-11-porting-from-mbcs-to-unicode"></a><a name="porting_to_unicode"></a> 手順 11. MBCS から Unicode に移植する
 
-Windows では、Unicode という場合は、通常 UTF-16 を意味することに注意してください。 Linux などの他のオペレーティング システムは UTF-8 を使用しますが、Windows では通常は使用しません。 MFC の MBCS バージョンは、Visual Studio 2013 および 2015 では非推奨でしたが、Visual Studio 2017 においては非推奨ではなくなりました。 Visual Studio 2013 または 2015 を使っている場合、MBCS コードを UTF-16 Unicode に実際に移植する手順を実行する前に、他の作業を実行するためや、都合のよいときに移植を延期するために、MBCS が非推奨であることを示す警告を一時的に削除します。 現在のコードは MBCS を使用しており、続行するには、MFC の ANSI/MBCS バージョンをインストールする必要があります。 比較的大きい MFC ライブラリは Visual Studio の既定の **C++ によるデスクトップ開発**インストールの一部ではないので、インストーラーのオプション コンポーネントから選ぶ必要があります。 「[MFC MBCS DLL アドオン](../mfc/mfc-mbcs-dll-add-on.md)」を参照してください。 これをダウンロードして Visual Studio を再起動すると、MFC の MBCS バージョンとコンパイルしてリンクすることができますが、Visual Studio 2013 または NO_WARN_MBCS_MFC_DEPRECATION 2015 を使用している場合は、MBCS に関する警告を回避するために、プロジェクトプロパティの**プリプロセッサ**セクション、または*stdafx.h*ヘッダーファイルまたはその他の共通ヘッダーファイルの先頭に、定義済みマクロの一覧
+Windows では、Unicode という場合は、通常 UTF-16 を意味することに注意してください。 Linux などの他のオペレーティング システムは UTF-8 を使用しますが、Windows では通常は使用しません。 MFC の MBCS バージョンは、Visual Studio 2013 および 2015 では非推奨でしたが、Visual Studio 2017 においては非推奨ではなくなりました。 Visual Studio 2013 または 2015 を使っている場合、MBCS コードを UTF-16 Unicode に実際に移植する手順を実行する前に、他の作業を実行するためや、都合のよいときに移植を延期するために、MBCS が非推奨であることを示す警告を一時的に削除します。 現在のコードは MBCS を使用しており、続行するには、MFC の ANSI/MBCS バージョンをインストールする必要があります。 比較的大きい MFC ライブラリは Visual Studio の既定の **C++ によるデスクトップ開発** インストールの一部ではないので、インストーラーのオプション コンポーネントから選ぶ必要があります。 「[MFC MBCS DLL アドオン](../mfc/mfc-mbcs-dll-add-on.md)」を参照してください。 これをダウンロードして Visual Studio を再起動すると、MFC の MBCS バージョンとコンパイルしてリンクすることができますが、Visual Studio 2013 または NO_WARN_MBCS_MFC_DEPRECATION 2015 を使用している場合は、MBCS に関する警告を回避するために、プロジェクトプロパティの **プリプロセッサ** セクション、または *stdafx.h* ヘッダーファイルまたはその他の共通ヘッダーファイルの先頭に、定義済みマクロの一覧
 
 ここで、いくつかのリンカー エラーが表示されます。
 
@@ -566,11 +567,11 @@ pParentNode->m_szText = new TCHAR[strTitle.GetLength() + 1];
 _tcscpy(pParentNode->m_szText, strTitle);
 ```
 
-同様に、コンパイル エラーによって保証されたので、LPSTR (STRing への Long ポインター) と LPCSTR (定数 STRing への Long ポインター) を、それぞれ LPTSTR (TCHAR STRing への Long ポインター) と LPCTSTR (定数 TCHAR STRing への Long ポインター) に変更しました。 それぞれの状況を個別に調査する必要があるので、グローバル検索と置換を使用してこのような置換を行わないことを選択しました。 場合によっては、 **`char`** サフィックスを持つ windows 構造体を使用する特定の windows メッセージを処理するとき**A**などに、バージョンが必要になります。 Windows API では、サフィックス**A**は ASCII または ANSI (および MBCS にも適用されます) を意味し、サフィックス**W**はワイド文字または utf-16 Unicode を意味します。 この名前付けパターンは、Windows のヘッダーで使用されますが、MBCS バージョンだけで既に定義されている関数の Unicode バージョンを追加する必要があるときに、Spy++ コードでも従います。
+同様に、コンパイル エラーによって保証されたので、LPSTR (STRing への Long ポインター) と LPCSTR (定数 STRing への Long ポインター) を、それぞれ LPTSTR (TCHAR STRing への Long ポインター) と LPCTSTR (定数 TCHAR STRing への Long ポインター) に変更しました。 それぞれの状況を個別に調査する必要があるので、グローバル検索と置換を使用してこのような置換を行わないことを選択しました。 場合によっては、 **`char`** サフィックスを持つ windows 構造体を使用する特定の windows メッセージを処理するときなどに、バージョンが必要になります。 Windows API では、サフィックス **A** は ASCII または ANSI (および MBCS にも適用されます) を意味し、サフィックス **W** はワイド文字または utf-16 Unicode を意味します。 この名前付けパターンは、Windows のヘッダーで使用されますが、MBCS バージョンだけで既に定義されている関数の Unicode バージョンを追加する必要があるときに、Spy++ コードでも従います。
 
 場合によっては、適切に解決されるバージョンを使用するよう型を置換しなければならないことがあります (WNDCLASSA の代わりに WNDCLASS を使用する場合など)。
 
-多くの場合に、(`GetClassNameA` の代わりに) `GetClassName` など、Win32 API のジェネリック バージョン (マクロ) を使用しなければなりません。 メッセージハンドラーの switch ステートメントでは、一部のメッセージは MBCS または Unicode に固有です。その**ような場合**は、一般的な名前付き関数をと**w**の特定の関数に置き換え、Unicode が定義されているかどうかに基づいて **、正しい A**または**w**の名前に解決される汎用名のマクロを追加しました。  コードの多くの部分で、UNICODE の定義に切り替えたときに、 \_ バージョンが必要な場合でも**A** 、W バージョンが選択されるようになりました。
+多くの場合に、(`GetClassNameA` の代わりに) `GetClassName` など、Win32 API のジェネリック バージョン (マクロ) を使用しなければなりません。 メッセージハンドラーの switch ステートメントでは、一部のメッセージは MBCS または Unicode に固有です。その **ような場合** は、一般的な名前付き関数をと **w** の特定の関数に置き換え、Unicode が定義されているかどうかに基づいて **、正しい A** または **w** の名前に解決される汎用名のマクロを追加しました。  コードの多くの部分で、UNICODE の定義に切り替えたときに、 \_ バージョンが必要な場合でも 、W バージョンが選択されるようになりました。
 
 特別な操作を実行する必要がある箇所がいくつかあります。 `WideCharToMultiByte` または `MultiByteToWideChar` の使用箇所は、すべて詳しく確認しなければならない可能性があります。 `WideCharToMultiByte` を使用した例を次に示します。
 
@@ -612,11 +613,11 @@ strFace.ReleaseBuffer();
 
 もちろん実際には、`wcscpy` の代わりに、より安全なバージョンである `wcscpy_s` を使用する必要があります。 次のセクションでは、この問題に対処します。
 
-作業を確認するために、**マルチバイト文字セットを使用**するように**文字セット**をリセットし、コードが引き続き MBCS と Unicode を使用してコンパイルされていることを確認する必要があります。 言うまでもなく、これらをすべて変更した後で、再コンパイルされたアプリケーションで、テストを実施して完全に成功する必要があります。
+作業を確認するために、**マルチバイト文字セットを使用** するように **文字セット** をリセットし、コードが引き続き MBCS と Unicode を使用してコンパイルされていることを確認する必要があります。 言うまでもなく、これらをすべて変更した後で、再コンパイルされたアプリケーションで、テストを実施して完全に成功する必要があります。
 
 この spy++ ソリューションでの作業では、平均的な C++ 開発者がコードを Unicode に変換するのに作業日数がおよそ 2 日かかりました。 これには再テストの時間は含まれていません。
 
-## <a name="step-12-porting-to-use-the-secure-crt"></a><a name="porting_to_secure_crt"></a>手順 12. Secure CRT を使用するよう移植する
+## <a name="step-12-porting-to-use-the-secure-crt"></a><a name="porting_to_secure_crt"></a> 手順 12. Secure CRT を使用するよう移植する
 
 次は CRT 関数のセキュリティで保護されたバージョン (**_s** サフィックス付きのバージョン) を使用したコードの移植です。 このケースでの一般的な戦略は、関数を **_s** バージョンに置き換えてから、通常は、必要な追加のバッファーのサイズ パラメーターを追加することです。 多くの場合、サイズがわかっているため、これは簡単です。 サイズがすぐに利用できない可能性がある場合は、CRT 関数を使用する関数にパラメーターを追加するか、またはターゲットバッファーの使用状況を調べて、適切なサイズ制限を確認する必要があります。
 
@@ -634,7 +635,7 @@ Visual C++ は、サイズ パラメーターを多数追加しなくても、�
 
 これらのテクニックを使用して、Secure CRT 関数を使用するようコードを変換するのに、約半日かかりました。 テンプレートのオーバー ロードではなく、サイズのパラメーターを手動で追加するよう選択した場合は、おそらく時間が 2 ～ 3 倍多くかかります。
 
-## <a name="step-13-zcforscope--is-deprecated"></a><a name="deprecated_forscope"></a>手順 13. /Zc:forScope- が非推奨とされます
+## <a name="step-13-zcforscope--is-deprecated"></a><a name="deprecated_forscope"></a> 手順 13. /Zc:forScope- が非推奨とされます
 
 Visual C++ 6.0 以降、コンパイラは現在の標準に準拠し、ループで宣言される変数のスコープがループのスコープに制限されています。 コンパイラ オプション [/Zc:forScope](../build/reference/zc-forscope-force-conformance-in-for-loop-scope.md) (**プロジェクトのプロパティのループのスコープの強制準拠**) は、これがエラーとして報告されるかどうかを制御します。 準拠するようコードを更新して、ループのすぐ外側に宣言を追加する必要があります。 コードを変更しなくて済むように、C++ プロジェクトのプロパティの **[言語]** セクションで、設定を `No (/Zc:forScope-)` に変更できます。 ただし、`/Zc:forScope-` はこれ以降の Visual C++ のリリースで削除される可能性があるため、最終的には標準に準拠するようにコードを変更する必要があります。
 

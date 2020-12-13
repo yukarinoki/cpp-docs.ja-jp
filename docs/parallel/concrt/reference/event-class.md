@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: イベントクラス'
 title: event クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -11,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - event class
 ms.assetid: fba35a53-6568-4bfa-9aaf-07c0928cf73d
-ms.openlocfilehash: 3f2ec71083f7a7905bad5cda014baba914e31e79
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 3c33096795d1980ea78cbce8c38fa9305ee45cd0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87215804"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97331253"
 ---
 # <a name="event-class"></a>event クラス
 
@@ -42,7 +43,7 @@ class event;
 |----------|-----------------|
 |[reset](#reset)|イベントを非シグナル状態にリセットします。|
 |[set](#set)|イベントを通知します。|
-|[待機](#wait)|イベントがシグナル状態になるのを待機します。|
+|[wait](#wait)|イベントがシグナル状態になるのを待機します。|
 |[wait_for_multiple](#wait_for_multiple)|複数のイベントがシグナル状態になるのを待機します。|
 
 ### <a name="public-constants"></a>パブリック定数
@@ -53,13 +54,13 @@ class event;
 
 ## <a name="remarks"></a>解説
 
-詳細については、「[同期データ構造](../../../parallel/concrt/synchronization-data-structures.md)」を参照してください。
+詳細については、「 [同期データ構造](../../../parallel/concrt/synchronization-data-structures.md)」を参照してください。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
 `event`
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** concrt .h
 
@@ -75,7 +76,7 @@ _CRTIMP event();
 
 ### <a name="remarks"></a>解説
 
-## <a name="event"></a><a name="dtor"></a>~ イベント
+## <a name="event"></a><a name="dtor"></a> ~ イベント
 
 イベントを破棄します。
 
@@ -87,7 +88,7 @@ _CRTIMP event();
 
 デストラクターが実行されるとイベントで待機するスレッドがなくなると想定されます。 まだ待機しているスレッドと共にイベントが破棄されるようにすると、未定義の動作が発生します。
 
-## <a name="reset"></a><a name="reset"></a>解除
+## <a name="reset"></a><a name="reset"></a> 解除
 
 イベントを非シグナル状態にリセットします。
 
@@ -95,7 +96,7 @@ _CRTIMP event();
 void reset();
 ```
 
-## <a name="set"></a><a name="set"></a>一連
+## <a name="set"></a><a name="set"></a> 一連
 
 イベントを通知します。
 
@@ -107,7 +108,7 @@ void set();
 
 イベントを通知すると、イベントを待機している任意の数のコンテキストが実行できるようになります。
 
-## <a name="timeout_infinite"></a><a name="timeout_infinite"></a>timeout_infinite
+## <a name="timeout_infinite"></a><a name="timeout_infinite"></a> timeout_infinite
 
 待機がタイムアウトしないことを示す値。
 
@@ -115,7 +116,7 @@ void set();
 static const unsigned int timeout_infinite = COOPERATIVE_TIMEOUT_INFINITE;
 ```
 
-## <a name="wait"></a><a name="wait"></a>待機
+## <a name="wait"></a><a name="wait"></a> 待機
 
 イベントがシグナル状態になるのを待機します。
 
@@ -135,7 +136,7 @@ size_t wait(unsigned int _Timeout = COOPERATIVE_TIMEOUT_INFINITE);
 > [!IMPORTANT]
 > ユニバーサル Windows プラットフォーム (UWP) アプリでは、ASTA スレッドでを呼び出さないでください `wait` 。この呼び出しは現在のスレッドをブロックし、アプリが応答しなくなる可能性があるためです。
 
-## <a name="wait_for_multiple"></a><a name="wait_for_multiple"></a>wait_for_multiple
+## <a name="wait_for_multiple"></a><a name="wait_for_multiple"></a> wait_for_multiple
 
 複数のイベントがシグナル状態になるのを待機します。
 
