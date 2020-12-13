@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「コンパイラエラー C2461」を参照してください。
 title: コンパイラ エラー C2461
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2461
 ms.assetid: e64ba651-f441-4fdb-b5cb-4209bbbe4db4
-ms.openlocfilehash: 3d290bd2288f76d0ddefa2057e3e01c9edc3cbc7
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 788c8e475bd38b829ca8426137569a5d8a083f18
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80205323"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97341829"
 ---
 # <a name="compiler-error-c2461"></a>コンパイラ エラー C2461
 
@@ -19,7 +20,7 @@ ms.locfileid: "80205323"
 
 クラスのコンストラクターに、仮引数が指定されていません。 コンストラクターの宣言では、仮パラメーターリストを指定する必要があります。 一覧は空にすることができます。
 
-この問題を解決するには、 *class*::**クラス*の宣言の後にかっこのペアを追加します。
+この問題を解決するには、 *class*::**クラス* の宣言の後にかっこのペアを追加します。
 
 ## <a name="example"></a>例
 

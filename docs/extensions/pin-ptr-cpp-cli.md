@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: pin_ptr (C++/CLI)'
 title: pin_ptr (C++/CLI)
 ms.date: 10/12/2018
 ms.topic: reference
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - pinning pointers
 - pin_ptr keyword [C++]
 ms.assetid: 6c2e6c73-4ec2-4dce-8e1f-ccf3a9f9d0aa
-ms.openlocfilehash: 9a9144229b75c09a892ddbf5bd592e67c7c2b6d9
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: c7439b1e8bd1030a5f1326d24b38c47af5bb4874
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87230559"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97341075"
 ---
 # <a name="pin_ptr-ccli"></a>pin_ptr (C++/CLI)
 
@@ -89,9 +90,9 @@ ms.locfileid: "87230559"
 
 内部ポインターの詳細については、「[interior_ptr (C++/CLI)](interior-ptr-cpp-cli.md)」を参照してください。
 
-ポインターの固定の詳細については、「[方法: ポインターと配列を固定](how-to-pin-pointers-and-arrays.md)する」および「[方法: 固定ポインターと値型を宣言する](how-to-declare-pinning-pointers-and-value-types.md)」を参照してください。
+ポインターの固定の詳細については、「 [方法: ポインターと配列を固定](how-to-pin-pointers-and-arrays.md) する」および「 [方法: 固定ポインターと値型を宣言する](how-to-declare-pinning-pointers-and-value-types.md)」を参照してください。
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 コンパイラ オプション: `/clr`
 

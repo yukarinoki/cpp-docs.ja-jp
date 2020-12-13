@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: vscanf_s、vwscanf_s'
 title: vscanf_s、vwscanf_s
 ms.date: 11/04/2016
 api_name:
@@ -24,12 +25,12 @@ f1_keywords:
 - vscanf_s
 - vwscanf_s
 ms.assetid: 23a1c383-5b01-4887-93ce-534a1e38ed93
-ms.openlocfilehash: 9fb58e38362d709ef6d203c5602aa32727efa763
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 4bd44b3e89ec1358482ed6161907fd30f13e062d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87215102"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97342206"
 ---
 # <a name="vscanf_s-vwscanf_s"></a>vscanf_s、vwscanf_s
 
@@ -58,22 +59,22 @@ int vwscanf_s(
 
 ## <a name="return-value"></a>戻り値
 
-正常に変換され、代入されたフィールドの数を返します。この数には、読み取られても代入されなかったフィールドは含まれません。 戻り値が 0 の場合は、代入されたフィールドがなかったことを示します。 戻り値は、エラーの場合は**EOF** 、ファイルの終端文字または文字列の終端文字が最初に文字を読み取ろうとしたときに検出される場合はです。 *Format*が**NULL**ポインターの場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、 **vscanf_s**と**vwscanf_s**は**EOF**を返し、 **errno**を**EINVAL**に設定します。
+正常に変換され、代入されたフィールドの数を返します。この数には、読み取られても代入されなかったフィールドは含まれません。 戻り値が 0 の場合は、代入されたフィールドがなかったことを示します。 戻り値は、エラーの場合は **EOF** 、ファイルの終端文字または文字列の終端文字が最初に文字を読み取ろうとしたときに検出される場合はです。 *Format* が **NULL** ポインターの場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、 **vscanf_s** と **vwscanf_s** は **EOF** を返し、 **errno** を **EINVAL** に設定します。
 
 エラー コードの詳細については、「[errno、_doserrno、_sys_errlist、および _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」を参照してください。
 
 ## <a name="remarks"></a>解説
 
-**Vscanf_s**関数は、標準入力ストリーム**stdin**からデータを読み取り、 *arglist*引数リストによって指定された場所にデータを書き込みます。 リストの各引数は、*形式*の型指定子に対応する型の変数へのポインターである必要があります。 重なり合う文字列間でコピーした場合の動作は未定義です。
+**Vscanf_s** 関数は、標準入力ストリーム **stdin** からデータを読み取り、 *arglist* 引数リストによって指定された場所にデータを書き込みます。 リストの各引数は、 *形式* の型指定子に対応する型の変数へのポインターである必要があります。 重なり合う文字列間でコピーした場合の動作は未定義です。
 
-**vwscanf_s**は**vscanf_s**のワイド文字バージョンです。**vwscanf_s**の*format*引数は、ワイド文字列です。 ストリームが ANSI モードで開かれている場合、 **vwscanf_s**と**vscanf_s**は同じように動作します。 **vscanf_s**は、UNICODE ストリームからの入力をサポートしていません。
+**vwscanf_s** は **vscanf_s** のワイド文字バージョンです。**vwscanf_s** の *format* 引数は、ワイド文字列です。 ストリームが ANSI モードで開かれている場合、 **vwscanf_s** と **vscanf_s** は同じように動作します。 **vscanf_s** は、UNICODE ストリームからの入力をサポートしていません。
 
-**Vscanf**と**vwscanf**とは異なり、 **vscanf_s**と**vwscanf_s**では、 **[]** で囲まれた**c**、 **c**、 **s**、 **s**、または文字列コントロールセットのすべての入力パラメーターに対してバッファーサイズを指定する必要があります。 バッファー サイズ (文字単位) は、バッファーまたは変数のポインターの直後に追加パラメーターとして渡されます。 文字列のバッファーサイズ **`wchar_t`** がバイト単位のサイズと同じではありません。
+**Vscanf** と **vwscanf** とは異なり、 **vscanf_s** と **vwscanf_s** では、 **[]** で囲まれた **c**、 **c**、 **s**、 **s**、または文字列コントロールセットのすべての入力パラメーターに対してバッファーサイズを指定する必要があります。 バッファー サイズ (文字単位) は、バッファーまたは変数のポインターの直後に追加パラメーターとして渡されます。 文字列のバッファーサイズ **`wchar_t`** がバイト単位のサイズと同じではありません。
 
 バッファー サイズには、終端 null も含まれます。 幅指定フィールドを使用して、読み取られたトークンがバッファーに確実に収まるようにすることができます。 幅指定フィールドが使用されない場合で、読み取られたトークンがバッファーに収まらない場合、そのバッファーには何も書き込まれません。
 
 > [!NOTE]
-> *Size*パラメーターの型は **`unsigned`** であり、 **size_t**ではありません。
+> *Size* パラメーターの型は **`unsigned`** であり、 **size_t** ではありません。
 
 詳細については、「[scanf 関数の文字幅指定](../../c-runtime-library/scanf-width-specification.md)」を参照してください。
 
@@ -92,7 +93,7 @@ int vwscanf_s(
 |**vscanf_s**|\<stdio.h>|
 |**wscanf_s**|\<stdio.h> または \<wchar.h>|
 
-コンソールは、ユニバーサル Windows プラットフォーム (UWP) アプリではサポートされていません。 コンソール、 **stdin**、 **stdout**、および**stderr**に関連付けられている標準ストリームハンドルは、C ランタイム関数が UWP アプリで使用できるようになる前にリダイレクトする必要があります。 互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+コンソールは、ユニバーサル Windows プラットフォーム (UWP) アプリではサポートされていません。 コンソール、 **stdin**、 **stdout**、および **stderr** に関連付けられている標準ストリームハンドルは、C ランタイム関数が UWP アプリで使用できるようになる前にリダイレクトする必要があります。 互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
 ## <a name="example"></a>例
 

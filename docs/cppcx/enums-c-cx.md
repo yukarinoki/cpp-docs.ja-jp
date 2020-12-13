@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: 列挙型 (C++/CX)'
 title: 列挙型 (C++/CX)
 ms.date: 12/30/2016
 ms.assetid: 99fbbe28-c1cd-43af-9ead-60f90eba6e68
-ms.openlocfilehash: 54e413e65b3130b9b83e6d1ed56b5ee87b84e0a3
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: cdf058dc1549a8bc483127cffaeb347492d80716
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87225762"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97341959"
 ---
 # <a name="enums-ccx"></a>列挙型 (C++/CX)
 
@@ -15,7 +16,7 @@ C++/CX では、 `public enum class` 標準 c++ に似たキーワードがサ�
 
 ### <a name="remarks"></a>解説
 
-などの `public enum class` アクセス指定子を持たないは、 **`public`** 標準 C++[スコープ列挙型](../cpp/enumerations-cpp.md)として扱われます。
+などの `public enum class` アクセス指定子を持たないは、 **`public`** 標準 C++ [スコープ列挙型](../cpp/enumerations-cpp.md)として扱われます。
 
 `public enum class`またはの宣言は、 `public enum struct` 任意の整数型の基になる型を持つことができますが、Windows ランタイム自体は型を int32 にする必要がありますが、flags 列挙型の場合は uint32 です。 次の構文は、 `public enum class` または `public enum struct`の各部分を説明します。
 

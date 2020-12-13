@@ -1,4 +1,5 @@
 ---
+description: 詳細については、vsnprintf_s、_vsnprintf_s、_vsnprintf_s_l、_vsnwprintf_s、_vsnwprintf_s_l を参照してください。
 title: vsnprintf_s、_vsnprintf_s、_vsnprintf_s_l、_vsnwprintf_s、_vsnwprintf_s_l
 ms.date: 11/04/2016
 api_name:
@@ -43,12 +44,12 @@ helpviewer_keywords:
 - _vsnwprintf_s function
 - formatted text [C++]
 ms.assetid: 147ccfce-58c7-4681-a726-ef54ac1c604e
-ms.openlocfilehash: edb534eb533d63c9298b7b7e9aced1be3e8652d9
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 27c91d6064b4a92da8a6f09e7d7e5b6bfb8bf95f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91502795"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97342154"
 ---
 # <a name="vsnprintf_s-_vsnprintf_s-_vsnprintf_s_l-_vsnwprintf_s-_vsnwprintf_s_l"></a>vsnprintf_s、_vsnprintf_s、_vsnprintf_s_l、_vsnwprintf_s、_vsnwprintf_s_l
 
@@ -136,42 +137,42 @@ int _vsnwprintf_s(
 
 **vsnprintf_s**、 **_vsnprintf_s** と **_vsnwprintf_s** は、書き込まれた文字数を返します (終端の null は含まれません)。または、データの切り捨てまたは出力エラーが発生した場合は負の値が返されます。
 
-* *Count*が*sizeOfBuffer*未満で、データの文字数が*count*以下の場合、または*count*が[_TRUNCATE](../../c-runtime-library/truncate.md)で、データの文字数が*sizeOfBuffer*未満の場合は、すべてのデータが書き込まれ、文字数が返されます。
+* *Count* が *sizeOfBuffer* 未満で、データの文字数が *count* 以下の場合、または *count* が [_TRUNCATE](../../c-runtime-library/truncate.md)で、データの文字数が *sizeOfBuffer* 未満の場合は、すべてのデータが書き込まれ、文字数が返されます。
 
-* *Count*が*sizeOfBuffer*未満であるにもかかわらず、データが*カウント*文字を超えている場合は、最初の*カウント*文字が書き込まれます。 残りのデータの切り捨てが発生し、無効なパラメーターハンドラーを呼び出さずに-1 が返されます。
+* *Count* が *sizeOfBuffer* 未満であるにもかかわらず、データが *カウント* 文字を超えている場合は、最初の *カウント* 文字が書き込まれます。 残りのデータの切り捨てが発生し、無効なパラメーターハンドラーを呼び出さずに-1 が返されます。
 
-* *Count*が[_TRUNCATE](../../c-runtime-library/truncate.md)で、データの文字数がまたは*sizeOfBuffer*を超えている場合は、*バッファー*に格納されている文字列の多く (終端の null を含む) が書き込まれます。 残りのデータの切り捨てが発生し、無効なパラメーターハンドラーを呼び出さずに-1 が返されます。
+* *Count* が [_TRUNCATE](../../c-runtime-library/truncate.md)で、データの文字数がまたは *sizeOfBuffer* を超えている場合は、*バッファー* に格納されている文字列の多く (終端の null を含む) が書き込まれます。 残りのデータの切り捨てが発生し、無効なパラメーターハンドラーを呼び出さずに-1 が返されます。
 
-* *Count*が*sizeOfBuffer*に等しいか、またはデータの文字数が*sizeOfBuffer*未満の場合は、すべてのデータが書き込まれ (終端の null を含む)、文字数が返されます。
+* *Count* が *sizeOfBuffer* に等しいか、またはデータの文字数が *sizeOfBuffer* 未満の場合は、すべてのデータが書き込まれ (終端の null を含む)、文字数が返されます。
 
-* *Count*とデータの文字数が両方とも等しいか、または*sizeOfBuffer*を超える場合、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 無効なパラメーターハンドラーの後に実行が継続する場合、これらの関数は *buffer* を空の文字列に設定し、 **errno** を **ERANGE**に設定し、-1 を返します。
+* *Count* とデータの文字数が両方とも等しいか、または *sizeOfBuffer* を超える場合、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 無効なパラメーターハンドラーの後に実行が継続する場合、これらの関数は *buffer* を空の文字列に設定し、 **errno** を **ERANGE** に設定し、-1 を返します。
 
-* *バッファー*または*形式*が**NULL**ポインターの場合、または*count*が0以下の場合は、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、これらの関数は **errno** を **EINVAL** に設定し、-1 を返します。
+* *バッファー* または *形式* が **NULL** ポインターの場合、または *count* が0以下の場合は、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、これらの関数は **errno** を **EINVAL** に設定し、-1 を返します。
 
 ### <a name="error-conditions"></a>エラー条件
 
 |**Condition**|戻り値|**errno**|
 |-----------------|------------|-------------|
-|*バッファー*が**NULL**です|-1|**EINVAL**|
-|*形式*が**NULL**です|-1|**EINVAL**|
+|*バッファー* が **NULL** です|-1|**EINVAL**|
+|*形式* が **NULL** です|-1|**EINVAL**|
 |*カウント* <= 0|-1|**EINVAL**|
 |*sizeOfBuffer* が小さすぎます (および *count* ! = **_TRUNCATE**)|-1 (および空の文字列に設定された *バッファー* )|**ERANGE**|
 
-## <a name="remarks"></a>注釈
+## <a name="remarks"></a>解説
 
-**vsnprintf_s** は **_vsnprintf_s**と同じです。 ANSI 規格に準拠するために**vsnprintf_s**が含まれています。 **_vnsprintf** は旧バージョンとの互換性のために残されています。
+**vsnprintf_s** は **_vsnprintf_s** と同じです。 ANSI 規格に準拠するために **vsnprintf_s** が含まれています。 **_vnsprintf** は旧バージョンとの互換性のために残されています。
 
 これらの各関数は、引数リストへのポインターを受け取り、指定されたデータの文字 *数* を、 *バッファー* によって示されるメモリに書式設定して書き込み、終端の null を追加します。
 
-*Count*が[_TRUNCATE](../../c-runtime-library/truncate.md)場合、これらの関数は*バッファー*に収まる限りの文字列を書き込みますが、終端の null を格納するための領域を残します。 (終端の null を含む) 文字列全体が *バッファー*に格納されている場合、これらの関数は書き込まれた文字数を返します (終端の null は含まれません)。それ以外の場合、これらの関数は、切り捨てが発生したことを示す-1 を返します。
+*Count* が [_TRUNCATE](../../c-runtime-library/truncate.md)場合、これらの関数は *バッファー* に収まる限りの文字列を書き込みますが、終端の null を格納するための領域を残します。 (終端の null を含む) 文字列全体が *バッファー* に格納されている場合、これらの関数は書き込まれた文字数を返します (終端の null は含まれません)。それ以外の場合、これらの関数は、切り捨てが発生したことを示す-1 を返します。
 
-**_L**サフィックスを持つこれらの関数のバージョンは、現在のスレッドロケールの代わりに渡されたロケールパラメーターを使用する点を除いて同じです。
+**_L** サフィックスを持つこれらの関数のバージョンは、現在のスレッドロケールの代わりに渡されたロケールパラメーターを使用する点を除いて同じです。
 
 > [!IMPORTANT]
 > *format* にユーザー定義の文字列を指定しないでください。 詳しくは、「 [バッファー オーバーランの回避](/windows/win32/SecBP/avoiding-buffer-overruns)」をご覧ください。
 
 > [!NOTE]
-> 終端の null 用の空き領域があることを確認するには、 *count* がバッファーの長さより厳密に小さいことを確認するか、 **_TRUNCATE**を使用します。
+> 終端の null 用の空き領域があることを確認するには、 *count* がバッファーの長さより厳密に小さいことを確認するか、 **_TRUNCATE** を使用します。
 
 C++ では、これらの関数の使用はテンプレートのオーバーロードによって簡素化されます。オーバーロードでは、バッファー長を自動的に推論できる (サイズの引数を指定する必要がなくなる) だけでなく、古くてセキュリティが万全ではない関数を新しく安全な関数に自動的に置き換えることができます。 詳細については、「[セキュリティ保護されたテンプレート オーバーロード](../../c-runtime-library/secure-template-overloads.md)」を参照してください。
 

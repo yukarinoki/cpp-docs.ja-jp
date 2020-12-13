@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: wcrtomb_s'
 title: wcrtomb_s
 ms.date: 4/2/2020
 api_name:
@@ -29,12 +30,12 @@ helpviewer_keywords:
 - multibyte characters
 - characters, converting
 ms.assetid: 9a8a1bd0-1d60-463d-a3a2-d83525eaf656
-ms.openlocfilehash: 51985b008565cbe550065b85261b8beb53ed6f89
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 6f716c6eccf1c8e9fe3afbc9271bc69976d87d73
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82915960"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97342076"
 ---
 # <a name="wcrtomb_s"></a>wcrtomb_s
 
@@ -68,25 +69,25 @@ errno_t wcrtomb_s(
 結果として得られるマルチバイトに変換された文字。
 
 *sizeOfmbchar*<br/>
-*Mbchar*変数のサイズ (バイト単位)。
+*Mbchar* 変数のサイズ (バイト単位)。
 
 *wchar*<br/>
 変換するワイド文字。
 
 *mbstate*<br/>
-**Mbstate_t**オブジェクトへのポインター。
+**Mbstate_t** オブジェクトへのポインター。
 
 ## <a name="return-value"></a>戻り値
 
-エラーが発生した場合は、0または**errno**値を返します。
+エラーが発生した場合は、0または **errno** 値を返します。
 
 ## <a name="remarks"></a>解説
 
-**Wcrtomb_s**関数は、 *mbstate*に含まれる指定された変換状態で始まるワイド文字を、 *wchar*に含まれる値から*mbchar*で表されるアドレスに変換します。 *Preturnvalue*値は、変換されたバイト数になりますが**MB_CUR_MAX**バイト以下で、エラーが発生した場合は-1 になります。
+**Wcrtomb_s** 関数は、 *mbstate* に含まれる指定された変換状態で始まるワイド文字を、 *wchar* に含まれる値から *mbchar* で表されるアドレスに変換します。 *Preturnvalue* 値は、変換されたバイト数になりますが **MB_CUR_MAX** バイト以下で、エラーが発生した場合は-1 になります。
 
-*Mbstate*が null の場合は、内部**mbstate_t**の変換状態が使用されます。 *Wchar*に含まれる文字に対応するマルチバイト文字がない場合、 *preturnvalue*値は-1 になり、関数は**EILSEQ**の**errno**値を返します。
+*Mbstate* が null の場合は、内部 **mbstate_t** の変換状態が使用されます。 *Wchar* に含まれる文字に対応するマルチバイト文字がない場合、 *preturnvalue* 値は-1 になり、関数は **EILSEQ** の **errno** 値を返します。
 
-**Wcrtomb_s**関数は、再起動によって[_wctomb_s_l wctomb_s と](wctomb-s-wctomb-s-l.md)異なります。 変換状態は、同じまたはその他の再開可能な関数への後続の呼び出しのために*mbstate*に格納されます。 再開可能な関数と再開不可能な関数を混用した場合、結果は未定義です。 たとえば、 **wcstombs_s**ではなく**wcsrtombs_s**の後続の呼び出しが使用された場合、アプリケーションは**wcslen**ではなく**wcsrlen**を使用します。
+**Wcrtomb_s** 関数は、再起動によって [_wctomb_s_l wctomb_s と](wctomb-s-wctomb-s-l.md)異なります。 変換状態は、同じまたはその他の再開可能な関数への後続の呼び出しのために *mbstate* に格納されます。 再開可能な関数と再開不可能な関数を混用した場合、結果は未定義です。 たとえば、 **wcstombs_s** ではなく **wcsrtombs_s** の後続の呼び出しが使用された場合、アプリケーションは **wcslen** ではなく **wcsrlen** を使用します。
 
 C++ では、この関数の使用はテンプレートのオーバーロードによって簡素化されます。オーバーロードでは、バッファー長を自動的に推論できる (サイズの引数を指定する必要がなくなる) だけでなく、古くてセキュリティが万全ではない関数を新しく安全な関数に自動的に置き換えることができます。 詳細については、「[セキュリティ保護されたテンプレート オーバーロード](../../c-runtime-library/secure-template-overloads.md)」を参照してください。
 
@@ -94,7 +95,7 @@ C++ では、この関数の使用はテンプレートのオーバーロード�
 
 ## <a name="exceptions"></a>例外
 
-**Wcrtomb_s**関数は、この関数の実行中に現在のスレッドの関数が**setlocale**を呼び出し、 *mbstate*が null の場合は、マルチスレッドセーフです。
+**Wcrtomb_s** 関数は、この関数の実行中に現在のスレッドの関数が **setlocale** を呼び出し、 *mbstate* が null の場合は、マルチスレッドセーフです。
 
 ## <a name="example"></a>例
 
@@ -142,13 +143,13 @@ The corresponding wide character "Q" was converted to a the "Q" multibyte charac
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**wcrtomb_s**|\<wchar.h>|
 
 ## <a name="see-also"></a>関連項目
 
 [データ変換](../../c-runtime-library/data-conversion.md)<br/>
-[国](../../c-runtime-library/locale.md)<br/>
-[マルチバイト文字のシーケンスの解釈](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[ロケール](../../c-runtime-library/locale.md)<br/>
+[Multibyte-Character シーケンスの解釈](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [mbsinit](mbsinit.md)<br/>

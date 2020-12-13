@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: vsprintf、_vsprintf_l、vswprintf、_vswprintf_l、__vswprintf_l'
 title: vsprintf、_vsprintf_l、vswprintf、_vswprintf_l、__vswprintf_l
 ms.date: 09/03/2019
 api_name:
@@ -49,12 +50,12 @@ helpviewer_keywords:
 - vsprintf function
 - _vstprintf function
 ms.assetid: b8ef1c0d-58f9-4a18-841a-f1a989e1c29b
-ms.openlocfilehash: 9efb30428a146ec72c48d68ec411b21ca5bfef79
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: dd7e06817049f26e80c4be9f1d3f3df40444feaf
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70945339"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97342115"
 ---
 # <a name="vsprintf-_vsprintf_l-vswprintf-_vswprintf_l-__vswprintf_l"></a>vsprintf、_vsprintf_l、vswprintf、_vswprintf_l、__vswprintf_l
 
@@ -135,45 +136,45 @@ int _vswprintf_l(
 *argptr*\
 引数リストへのポインター。
 
-*国*\
+*locale*\
 使用するロケール。
 
 ## <a name="return-value"></a>戻り値
 
-**vsprintf**と**vswprintf**は、書き込まれた文字数を返します。終端の null 文字は含まれません。出力エラーが発生した場合は、負の値が返されます。 *Buffer*または*format*が null ポインターの場合、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、これらの関数は無効なパラメーターハンドラーを呼び出します。 実行の継続が許可された場合、これらの関数は-1 を返し、 **errno**を**EINVAL**に設定します。
+**vsprintf** と **vswprintf** は、書き込まれた文字数を返します。終端の null 文字は含まれません。出力エラーが発生した場合は、負の値が返されます。 *Buffer* または *format* が null ポインターの場合、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、これらの関数は無効なパラメーターハンドラーを呼び出します。 実行の継続が許可された場合、これらの関数は-1 を返し、 **errno** を **EINVAL** に設定します。
 
-エラー コードの詳細については、「[_doserrno、errno、_sys_errlist、_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」をご覧ください。
+これらと他のエラー コードの詳細については、「[_doserrno、errno、_sys_errlist、および _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」を参照してください。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-これらの各関数は、引数リストへのポインターを受け取り、指定されたデータを書式設定して、*バッファー*が指すメモリに書き込みます。
+これらの各関数は、引数リストへのポインターを受け取り、指定されたデータを書式設定して、 *バッファー* が指すメモリに書き込みます。
 
-**_L**サフィックスを持つこれらの関数のバージョンは、現在のスレッドロケールの代わりに渡されたロケールパラメーターを使用する点を除いて同じです。
+**_L** サフィックスを持つこれらの関数のバージョンは、現在のスレッドロケールの代わりに渡されたロケールパラメーターを使用する点を除いて同じです。
 
 > [!IMPORTANT]
-> **Vsprintf**を使用すると、書き込まれる文字数を制限することはできません。つまり、この関数を使用するコードでは、バッファーオーバーランが発生しやすくなります。 代わりに [_vsnprintf](vsnprintf-vsnprintf-vsnprintf-l-vsnwprintf-vsnwprintf-l.md) を使用するか、または [_vscprintf](vscprintf-vscprintf-l-vscwprintf-vscwprintf-l.md) を呼び出して、必要なバッファーの大きさを決定します。 また、*形式*がユーザー定義の文字列ではないことを確認します。 詳しくは、「 [バッファー オーバーランの回避](/windows/win32/SecBP/avoiding-buffer-overruns)」をご覧ください。
+> **Vsprintf** を使用すると、書き込まれる文字数を制限することはできません。つまり、この関数を使用するコードでは、バッファーオーバーランが発生しやすくなります。 代わりに [_vsnprintf](vsnprintf-vsnprintf-vsnprintf-l-vsnwprintf-vsnwprintf-l.md) を使用するか、または [_vscprintf](vscprintf-vscprintf-l-vscwprintf-vscwprintf-l.md) を呼び出して、必要なバッファーの大きさを決定します。 また、 *形式* がユーザー定義の文字列ではないことを確認します。 詳しくは、「 [バッファー オーバーランの回避](/windows/win32/SecBP/avoiding-buffer-overruns)」をご覧ください。
 
-**vswprintf**は ISO C 規格に準拠しています。これには、 **size_t**型の2番目のパラメーター *count*が必要です。 古い非標準の動作を強制するには、 **_CRT_NON_CONFORMING_SWPRINTFS**を定義します。 以前の動作は将来のバージョンではない可能性があるため、新しい準拠の動作を使用するようにコードを変更する必要があります。
+**vswprintf** は ISO C 規格に準拠しています。これには **size_t** 型の2番目のパラメーター *count* が必要です。 古い非標準の動作を強制するには、 **_CRT_NON_CONFORMING_SWPRINTFS** を定義します。 以前の動作は将来のバージョンではない可能性があるため、新しい準拠の動作を使用するようにコードを変更する必要があります。
 
-C++ では、これらの関数にテンプレートのオーバーロードがあります。このオーバーロードは、これらの関数に対応するセキュリティで保護された新しい関数を呼び出します。 詳細については、「 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)」を参照してください。
+C++ では、これらの関数にテンプレートのオーバーロードがあります。このオーバーロードは、これらの関数に対応するセキュリティで保護された新しい関数を呼び出します。 詳細については、「[セキュリティ保護されたテンプレート オーバーロード](../../c-runtime-library/secure-template-overloads.md)」を参照してください。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
 |TCHAR.H のルーチン|_UNICODE および _MBCS が未定義の場合|_MBCS が定義されている場合|_UNICODE が定義されている場合|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**vstprintf (_l)**|**vsprintf**|**vsprintf**|**vswprintf**|
-|**vstprintf_l (_d)**|**_vsprintf_l**|**_vsprintf_l**|**_vswprintf_l**|
+|**_vstprintf**|**vsprintf**|**vsprintf**|**vswprintf**|
+|**_vstprintf_l**|**_vsprintf_l**|**_vsprintf_l**|**_vswprintf_l**|
 
 ## <a name="requirements"></a>必要条件
 
 |ルーチンによって返される値|必須ヘッダー|省略可能なヘッダー|
 |-------------|---------------------|----------------------|
 |**vsprintf**、 **_vsprintf_l**|\<stdio.h> および \<stdarg.h>|\<varargs.h>*|
-|**vswprintf**、 **_vswprintf_l**|\<stdio.h> または \<wchar.h>、および \<stdarg.h>|\<varargs.h>*|
+|**vswprintf**、 **_vswprintf_l**|\<stdio.h> または \<wchar.h> 、 \<stdarg.h>|\<varargs.h>*|
 
 \* UNIX V との互換性用。
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
 ## <a name="example"></a>例
 
@@ -227,9 +228,9 @@ This is a string
 ## <a name="see-also"></a>関連項目
 
 [ストリーム入出力](../../c-runtime-library/stream-i-o.md)\
-[vprintf 系関数](../../c-runtime-library/vprintf-functions.md)\
+[vprintf 関数](../../c-runtime-library/vprintf-functions.md)\
 [書式指定構文: printf 関数と wprintf 関数](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)\
 [fprintf、_fprintf_l、fwprintf、_fwprintf_l](fprintf-fprintf-l-fwprintf-fwprintf-l.md)\
 [printf、_printf_l、wprintf、_wprintf_l](printf-printf-l-wprintf-wprintf-l.md)\
-[sprintf、_sprintf_l、swprintf、_swprintf_l、\__swprintf_l](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)\
+[sprintf、_sprintf_l、swprintf、_swprintf_l、 \_ _swprintf_l](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)\
 [va_arg、va_copy、va_end、va_start](va-arg-va-copy-va-end-va-start.md)

@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: コレクション (C++/CX)'
 title: コレクション (C++/CX)
 ms.date: 11/19/2018
 ms.assetid: 914da30b-aac5-4cd7-9da3-a5ac08cdd72c
-ms.openlocfilehash: 84c6ecad5ffb4920972faf5aa564103ec1f5b5df
-ms.sourcegitcommit: 65fead53d56d531d71be42216056aca5f44def11
+ms.openlocfilehash: 4843441b5d5091bea36ff8c74bd84bddd5f7fa4d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "88610947"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97342050"
 ---
 # <a name="collections-ccx"></a>コレクション (C++/CX)
 
@@ -57,7 +58,7 @@ Windows ランタイムは、コレクションおよび関連する型のイン
 
 ## <a name="vectorproxy-elements"></a>VectorProxy 要素
 
-[Platform:: collections:: VectorIterator](../cppcx/platform-collections-vectoriterator-class.md)と[Platform:: Collections:: VectorViewIterator](../cppcx/platform-collections-vectorviewiterator-class.md)を使用すると、 `range for` [ \<T> ivector](/uwp/api/windows.foundation.collections.ivector-1)コンテナーで[std:: sort](../standard-library/algorithm-functions.md#sort)などのループとアルゴリズムを使用できるようになります。 ただし、C++ ポインターの逆参照を使って `IVector` 要素にアクセスすることはできません。これらの要素には、 [GetAt](/uwp/api/windows.foundation.collections.ivector-1.getat) メソッドと [SetAt](/uwp/api/windows.foundation.collections.ivector-1.setat) メソッドを使ってアクセスすることしかできません。 したがって、これらの反復子は、標準ライブラリの必要に応じて、プロキシクラスとを使用して `Platform::Details::VectorProxy<T>` `Platform::Details::ArrowProxy<T>` 、、、およびの各演算子を通じて個々の要素にアクセスできるようにし __\*__ __->__ __ \[ __ます。 厳密には、 `IVector<Person^> vec`が指定されている場合、 `*begin(vec)` の型は `VectorProxy<Person^>`になります。 ただし、プロキシ オブジェクトは、ほとんどの場合、コードに対して透過的です。 これらのプロキシ オブジェクトは反復子によって内部でのみ使用されるため文書化されませんが、その機構の動作がわかっていると便利です。
+[Platform:: collections:: VectorIterator](../cppcx/platform-collections-vectoriterator-class.md)と[Platform:: Collections:: VectorViewIterator](../cppcx/platform-collections-vectorviewiterator-class.md)を使用すると、 `range for` [ \<T> ivector](/uwp/api/windows.foundation.collections.ivector-1)コンテナーで[std:: sort](../standard-library/algorithm-functions.md#sort)などのループとアルゴリズムを使用できるようになります。 ただし、C++ ポインターの逆参照を使って `IVector` 要素にアクセスすることはできません。これらの要素には、 [GetAt](/uwp/api/windows.foundation.collections.ivector-1.getat) メソッドと [SetAt](/uwp/api/windows.foundation.collections.ivector-1.setat) メソッドを使ってアクセスすることしかできません。 したがって、これらの反復子は、標準ライブラリの必要に応じて、プロキシクラスとを使用して `Platform::Details::VectorProxy<T>` `Platform::Details::ArrowProxy<T>` 、、、およびの各演算子を通じて個々の要素にアクセスできるようにし __\*__ __->__ __\[__ ます。 厳密には、 `IVector<Person^> vec`が指定されている場合、 `*begin(vec)` の型は `VectorProxy<Person^>`になります。 ただし、プロキシ オブジェクトは、ほとんどの場合、コードに対して透過的です。 これらのプロキシ オブジェクトは反復子によって内部でのみ使用されるため文書化されませんが、その機構の動作がわかっていると便利です。
 
 `range for` コンテナーに対して `IVector` ループを使用する場合は、 `auto&&` を使用して反復子変数が `VectorProxy` 要素に正しくバインドされるようにします。 またはを使用する **`auto`** `auto&` と、コンパイラの警告 C4239 が発生し、 `VectoryProxy` 警告テキストに示されます。
 
@@ -98,7 +99,7 @@ void FindButton(UIElementCollection^ col)
 
 コレクションは、シーケンス コレクションと関連コレクションそれぞれの変更可能バージョンと読み取り専用バージョンという 4 つのカテゴリに分類されます。 さらに、C++/CX は、コレクションへのアクセスを簡略化する3つの反復子クラスを提供することで、コレクションを拡張します。
 
-変更可能なコレクションの要素は変更できますが、 *ビュー*と呼ばれる読み取り専用コレクションの要素は読み取りしか実行できません。 [Platform:: collections:: vector](../cppcx/platform-collections-vector-class.md)コレクションまたは[Platform:: Collections:: VectorView](../cppcx/platform-collections-vectorview-class.md) collection の要素には、反復子またはコレクションの[Vector:: GetAt](../cppcx/platform-collections-vector-class.md#getat)とインデックスを使用してアクセスできます。 連想コレクションの要素には、コレクションの [Map:: Lookup](../cppcx/platform-collections-map-class.md#lookup) とキーを使用してアクセスできます。
+変更可能なコレクションの要素は変更できますが、 *ビュー* と呼ばれる読み取り専用コレクションの要素は読み取りしか実行できません。 [Platform:: collections:: vector](../cppcx/platform-collections-vector-class.md)コレクションまたは[Platform:: Collections:: VectorView](../cppcx/platform-collections-vectorview-class.md) collection の要素には、反復子またはコレクションの[Vector:: GetAt](../cppcx/platform-collections-vector-class.md#getat)とインデックスを使用してアクセスできます。 連想コレクションの要素には、コレクションの [Map:: Lookup](../cppcx/platform-collections-map-class.md#lookup) とキーを使用してアクセスできます。
 
 [Platform:: Collections:: Map クラス](../cppcx/platform-collections-map-class.md)<br/>
 変更可能な関連コレクション。 マップ要素は、キーと値のペアです。 キーを検索してその関連付けられた値を取得することと、キーと値のペアをすべて繰り返すことの両方がサポートされています。

@@ -1,13 +1,14 @@
 ---
+description: 詳細については、「非推奨 types and members (C++/CX)」を参照してください。
 title: 型およびメンバーの非推奨化 (C++/CX)
 ms.date: 12/30/2016
 ms.assetid: b20b01c1-a439-4ff0-8cf3-d7280c492813
-ms.openlocfilehash: 6d61b00690cc087c3baced6d96d0b6c8d73b5850
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: fddb9ecd81045655f3ca80c41e0fa3103d3ff52d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90040328"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97341998"
 ---
 # <a name="deprecating-types-and-members-ccx"></a>型およびメンバーの非推奨化 (C++/CX)
 
@@ -58,7 +59,7 @@ public:
    :::column-end:::
 :::row-end:::
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [型システム](../cppcx/type-system-c-cx.md)<br/>
 [C++/CX 言語リファレンス](../cppcx/visual-c-language-reference-c-cx.md)<br/>

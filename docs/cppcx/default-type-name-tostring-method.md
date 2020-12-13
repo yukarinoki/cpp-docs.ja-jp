@@ -1,17 +1,18 @@
 ---
+description: '詳細については、次を参照してください: 既定::(type_name):: ToString メソッド'
 title: default::(type_name)::ToString メソッド
 ms.date: 12/30/2016
 f1_keywords:
 - VCCORLIB/Platform::Object::ToString
 ms.assetid: 2541955f-d844-4bd8-944d-185198c86579
-ms.openlocfilehash: 22ced2fc13f550a4a1f1c809c4854670450ad288
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b46476cbfc0dfcbfa38954cc8d9e68c1ebdd315c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62347273"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97342024"
 ---
-# <a name="defaulttypenametostring-method"></a>default::(type_name)::ToString メソッド
+# <a name="defaulttype_nametostring-method"></a>default::(type_name)::ToString メソッド
 
 現在の型を表す文字列を返します。
 
@@ -25,11 +26,11 @@ String^ ToString();
 
 現在のオブジェクトを表す文字列。
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
-**最小値には、クライアントがサポートされています。** Windows 8
+**サポートされている最低限のクライアント:** Windows 8
 
-**最小値には、サーバーがサポートされています。** Windows Server 2012
+**サポートされる最小サーバー:** Windows Server 2012
 
 **名前空間:** 既定
 
@@ -37,4 +38,4 @@ String^ ToString();
 
 ## <a name="see-also"></a>関連項目
 
-[default 名前空間](../cppcx/default-namespace.md)
+[既定の名前空間](../cppcx/default-namespace.md)

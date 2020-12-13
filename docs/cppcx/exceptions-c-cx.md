@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: 例外 (C++/CX)'
 title: 例外 (C++/CX)
 ms.date: 07/02/2019
 ms.assetid: 6cbdc1f1-e4d7-4707-a670-86365146432f
-ms.openlocfilehash: 7b4475cfa92aa952dd5a2996508d9343255b7ed2
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 9bc04febf0d4b13a635ded6807e0cc77654dfdb0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87231014"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97341946"
 ---
 # <a name="exceptions-ccx"></a>例外 (C++/CX)
 
@@ -27,7 +28,7 @@ C++/CX は、一般的な HRESULT エラーを表す標準の例外のセット�
 
 次の表は、標準の例外の一覧を示しています。
 
-|名前|基になる HRESULT|[説明]|
+|名前|基になる HRESULT|説明|
 |----------|------------------------|-----------------|
 |COMException|*ユーザー定義の hresult*|COM メソッドの呼び出しから認識されない HRESULT が返されるとスローされます。|
 |AccessDeniedException|E \_ ACCESSDENIED|リソースや機能へのアクセスが拒否されるとスローされます。|
@@ -59,11 +60,11 @@ C++/CX は、一般的な HRESULT エラーを表す標準の例外のセット�
 
 [!code-cpp[cx_exceptions#02](codesnippet/CPP/exceptiontest/class1.cpp#02)]
 
-非同期操作中にスローされた例外をキャッチするには、タスククラスを使用して、エラー処理の継続を追加します。 エラー処理コードの継続は、他のスレッドでスローされる例外を呼び出し元のスレッドにマーシャリングして、発生する可能性があるすべての例外をコード中の 1 つのポイントで処理できるようにします。 詳しくは、「 [C++ での非同期プログラミング](/windows/uwp/threading-async/asynchronous-programming-in-cpp-universal-windows-platform-apps)」を参照してください。
+非同期操作中にスローされた例外をキャッチするには、タスククラスを使用して、エラー処理の継続を追加します。 エラー処理コードの継続は、他のスレッドでスローされる例外を呼び出し元のスレッドにマーシャリングして、発生する可能性があるすべての例外をコード中の 1 つのポイントで処理できるようにします。 詳細については、「 [C++ での非同期プログラミング](/windows/uwp/threading-async/asynchronous-programming-in-cpp-universal-windows-platform-apps)」を参照してください。
 
 ## <a name="unhandlederrordetected-event"></a>UnhandledErrorDetected イベント
 
-Windows 8.1 では、 [Windows:: ApplicationModel:: Core:: CoreApplication:: UnhandledErrorDetected](/uwp/api/windows.applicationmodel.core.icoreapplicationunhandlederror.unhandlederrordetected)静的イベントをサブスクライブできます。このイベントは、プロセスを停止しようとしている未処理のエラーへのアクセスを提供します。 エラーがどこで発生したかにかかわりなく、イベントの引数によって渡される [Windows::ApplicationModel::Core::UnhandledError](/uwp/api/windows.applicationmodel.core.unhandlederror) オブジェクトという形で、このハンドラーに到達します。 オブジェクトに対して `Propagate` を呼び出した場合、エラー コードに対応する型の `Platform::*Exception` が生成され、スローされます。 Catch ブロックでは、必要に応じてユーザー状態を保存してから、を呼び出してプロセスを終了するか **`throw`** 、またはプログラムを既知の状態に戻すために何らかの処理を実行することができます。 次の例に、基本的なパターンを示します。
+Windows 8.1 では、 [Windows:: ApplicationModel:: Core:: CoreApplication:: UnhandledErrorDetected](/uwp/api/windows.applicationmodel.core.icoreapplicationunhandlederror.unhandlederrordetected) 静的イベントをサブスクライブできます。このイベントは、プロセスを停止しようとしている未処理のエラーへのアクセスを提供します。 エラーがどこで発生したかにかかわりなく、イベントの引数によって渡される [Windows::ApplicationModel::Core::UnhandledError](/uwp/api/windows.applicationmodel.core.unhandlederror) オブジェクトという形で、このハンドラーに到達します。 オブジェクトに対して `Propagate` を呼び出した場合、エラー コードに対応する型の `Platform::*Exception` が生成され、スローされます。 Catch ブロックでは、必要に応じてユーザー状態を保存してから、を呼び出してプロセスを終了するか **`throw`** 、またはプログラムを既知の状態に戻すために何らかの処理を実行することができます。 次の例に、基本的なパターンを示します。
 
 App.xaml の場合:
 

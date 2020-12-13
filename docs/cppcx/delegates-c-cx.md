@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: デリゲート (C++/CX)'
 title: デリゲート (C++/CX)
 ms.date: 01/22/2017
 ms.assetid: 3175bf1c-86d8-4eda-8d8f-c5b6753d8e38
-ms.openlocfilehash: 4944efc10b4590f8dc682230968d9c97ef91cb5c
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 3d62b48d76319d79707330e874e6ceddcc22284e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87225775"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97342011"
 ---
 # <a name="delegates-ccx"></a>デリゲート (C++/CX)
 
@@ -43,14 +44,14 @@ app.cpp で:
 [!code-cpp[cx_delegates#121](../cppcx/codesnippet/CPP/delegatesevents/class1.cpp#121)]
 
 > [!WARNING]
-> 細心の注意を払って循環参照を回避する場合を除き、一般にイベント ハンドラーにはラムダではなく名前付き関数を使用する方が適しています。 名前付き関数では弱い参照によって "this" ポインターをキャプチャしますが、ラムダでは強い参照によって "this" ポインターをキャプチャし、循環参照を作成します。 詳細については、「[弱い参照と中断サイクル](../cppcx/weak-references-and-breaking-cycles-c-cx.md)」を参照してください。
+> 細心の注意を払って循環参照を回避する場合を除き、一般にイベント ハンドラーにはラムダではなく名前付き関数を使用する方が適しています。 名前付き関数では弱い参照によって "this" ポインターをキャプチャしますが、ラムダでは強い参照によって "this" ポインターをキャプチャし、循環参照を作成します。 詳細については、「 [弱い参照と中断サイクル](../cppcx/weak-references-and-breaking-cycles-c-cx.md)」を参照してください。
 
 慣例により、Windows ランタイムによって定義されるイベントハンドラーのデリゲート名は、* EventHandler という形式になります。たとえば、RoutedEventHandler、SizeChangedEventHandler、SuspendingEventHandler などです。 同様に、慣例に基づき、イベント ハンドラー デリゲートは 2 つのパラメーターを持ち、void を返します。 型パラメーターがないデリゲートでは、最初のパラメーターは [Platform::Object^](../cppcx/platform-object-class.md)型です。これは、イベントを発生させたオブジェクトである送信元への参照を保持します。 イベント ハンドラー メソッドで引数を使用する前に、元の型にキャスト バックする必要があります。 型パラメーターを持つイベント ハンドラー デリゲートでは、最初の型パラメーターは送信元の種類を指定し、2 番目のパラメーターはイベントに関する情報を保持する ref クラスへのハンドルです。 慣例により、そのクラスには EventArgs という名前が付けられ \* ます。 たとえば、RoutedEventHandler デリゲートには RoutedEventArgs^ 型の 2 番目のパラメーターがあり、DragEventHander には DragEventArgs^ 型の 2 番目のパラメーターがあります。
 
 名前付け規則により、非同期操作が完了したときに実行されるコードをラップするデリゲートには、*CompletedHandler という名前が付けられます。 これらのデリゲートは、イベントではなくクラスのプロパティとして定義されます。 したがって、サブスクライブするために `+=` 演算子を使用する必要はありません。デリゲート オブジェクトをプロパティに割り当てるだけです。
 
 > [!TIP]
-> C++ IntelliSense ではデリゲート署名がフルに表示されないため、EventArgs パラメーターの特定の型を判断するための役には立ちません。 型を見つけるには、 **** オブジェクト ブラウザーでデリゲートの `Invoke` メソッドを確認します。
+> C++ IntelliSense ではデリゲート署名がフルに表示されないため、EventArgs パラメーターの特定の型を判断するための役には立ちません。 型を見つけるには、  オブジェクト ブラウザーでデリゲートの `Invoke` メソッドを確認します。
 
 ## <a name="creating-custom-delegates"></a>カスタム デリゲートの作成
 
@@ -93,7 +94,7 @@ app.cpp で:
 
 次のいずれかのオブジェクトからデリゲートを構築できます。
 
-- ラムダ
+- lambda
 
 - 静的関数
 
