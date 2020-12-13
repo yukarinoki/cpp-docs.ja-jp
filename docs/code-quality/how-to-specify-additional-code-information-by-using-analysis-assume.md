@@ -1,4 +1,5 @@
 ---
+description: '詳細については、「方法: _Analysis_assume を使用して追加のコード情報を指定する」を参照してください。'
 title: コード分析ヒントに _Analysis_assume を使用する
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - _Analysis_assume
 ms.assetid: 51205d97-4084-4cf4-a5ed-3eeaf67deb1b
-ms.openlocfilehash: f427afdcab07b41430a5d4b5fc7f300aa671e30b
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 1960fae929f1bd0ffbac4979b76541fd0d396e42
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91503290"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97151555"
 ---
 # <a name="how-to-specify-additional-code-information-by-using-_analysis_assume"></a>方法: _Analysis_assume を使用して追加のコード情報を指定する
 

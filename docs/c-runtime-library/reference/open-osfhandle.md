@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: _open_osfhandle'
 title: _open_osfhandle
 ms.date: 4/2/2020
 api_name:
@@ -29,12 +30,12 @@ helpviewer_keywords:
 - file handles [C++], associating
 - _open_osfhandle function
 ms.assetid: 30d94df4-7868-4667-a401-9eb67ecb7855
-ms.openlocfilehash: d0f86c2588eed506bc9b8408e01bccdb6d1aad9d
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 3b5fe486416ec49f01078a4d90cab998e4bbe6c5
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88844068"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97151659"
 ---
 # <a name="_open_osfhandle"></a>_open_osfhandle
 
@@ -63,7 +64,7 @@ int _open_osfhandle (
 
 ## <a name="remarks"></a>解説
 
-**_Open_osfhandle**関数は、C ランタイムのファイル記述子を割り当てます。 このファイル記述子を、 *osfhandle*によって指定されたオペレーティングシステムのファイルハンドルに関連付けます。 コンパイラの警告を避けるには、*osfhandle* 引数を **HANDLE** から **intptr_t** にキャストします。 *Flags*引数は、で定義された1つ以上のマニフェスト定数から成る整数式です \<fcntl.h> 。 ビットごとの OR 演算子 ( **&#124;** ) を使用すると、2つ以上のマニフェスト定数を結合して *flags* 引数を形成できます。
+**_Open_osfhandle** 関数は、C ランタイムのファイル記述子を割り当てます。 このファイル記述子を、 *osfhandle* によって指定されたオペレーティングシステムのファイルハンドルに関連付けます。 コンパイラの警告を避けるには、*osfhandle* 引数を **HANDLE** から **intptr_t** にキャストします。 *Flags* 引数は、で定義された1つ以上のマニフェスト定数から成る整数式です \<fcntl.h> 。 ビットごとの OR 演算子 ( **&#124;** ) を使用すると、2つ以上のマニフェスト定数を結合して *flags* 引数を形成できます。
 
 これらのマニフェスト定数は、以下で定義されてい \<fcntl.h> ます。
 

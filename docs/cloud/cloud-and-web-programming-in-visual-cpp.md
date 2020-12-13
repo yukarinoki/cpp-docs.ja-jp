@@ -1,14 +1,15 @@
 ---
+description: 詳細については、Visual C++ でのクラウドおよび Web プログラミングに関するページを参照してください。
 title: Visual C++ でのクラウドおよび Web プログラミング
 ms.date: 05/14/2019
 ms.assetid: b63611f1-9723-44d0-ba7f-c3ebef341313
 ms.topic: overview
-ms.openlocfilehash: 675502e9ae50c9e69ad4555502000d128d5d4cbe
-ms.sourcegitcommit: efc8c32205c9d610f40597556273a64306dec15d
+ms.openlocfilehash: 3d845ea89507440c07747314c24ff01bd848cf37
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88898665"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97151620"
 ---
 # <a name="cloud-and-web-programming-in-visual-c"></a>Visual C++ でのクラウドおよび Web プログラミング
 

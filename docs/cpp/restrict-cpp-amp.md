@@ -1,4 +1,5 @@
-﻿---
+---
+description: '詳細: 制限 (C++ AMP)'
 title: restrict (C++ AMP)
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - restrict clause (C++ AMP)
 ms.assetid: 07d3291f-7edf-456b-8828-283ac8673661
-ms.openlocfilehash: 31db9e8c6f18879e65596593c10a8b3413c5cea9
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 928d4f9dde9421d2c5ab244af26a688a9828881e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87213269"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97151452"
 ---
 # <a name="restrict-c-amp"></a>restrict (C++ AMP)
 
@@ -69,7 +70,7 @@ ms.locfileid: "87213269"
 
   - グローバル変数
 
-  - 静的変数 代わりに[Tile_static キーワード](../cpp/tile-static-keyword.md)を使用してください。
+  - 静的変数 代わりに [Tile_static キーワード](../cpp/tile-static-keyword.md) を使用してください。
 
   - **`dynamic_cast`** 色合い.
 
@@ -79,7 +80,7 @@ ms.locfileid: "87213269"
 
   - 可変個引数
 
-関数の制限事項の詳細については、「制限[(amp) 制限](/archive/blogs/nativeconcurrency/restrictamp-restrictions-part-0-of-n-introduction)」を参照してください。
+関数の制限事項の詳細については、「制限 [(amp) 制限](/archive/blogs/nativeconcurrency/restrictamp-restrictions-part-0-of-n-introduction)」を参照してください。
 
 ## <a name="example"></a>例
 

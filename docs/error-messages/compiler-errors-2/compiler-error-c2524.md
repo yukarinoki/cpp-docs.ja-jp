@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「コンパイラエラー C2524」を参照してください。
 title: コンパイラ エラー C2524
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2524
 ms.assetid: e71d17f5-2fc2-416b-8dbd-e9bed85eb33a
-ms.openlocfilehash: 57445fec5ee5bb55ac3d16ee21a0e29eb4b21ed1
-ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
+ms.openlocfilehash: 94e974674a5e244168499a50304a07264d23e618
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90743348"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97151139"
 ---
 # <a name="compiler-error-c2524"></a>コンパイラ エラー C2524
 

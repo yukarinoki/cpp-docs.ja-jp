@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: _fgetchar、_fgetwchar'
 title: _fgetchar、_fgetwchar
 ms.date: 4/2/2020
 api_name:
@@ -38,16 +39,16 @@ helpviewer_keywords:
 - standard input, reading from
 - fgetchar function
 ms.assetid: 8bce874c-701a-41a3-b1b2-feff266fb5b9
-ms.openlocfilehash: 99febac7de2c2fa4e6587654e854b32b702d299e
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 316948485e0ef024bc726da7f333fd4ee329c7f6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87232535"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97151815"
 ---
 # <a name="_fgetchar-_fgetwchar"></a>_fgetchar、_fgetwchar
 
-**Stdin**から文字を読み取ります。
+**Stdin** から文字を読み取ります。
 
 ## <a name="syntax"></a>構文
 
@@ -58,13 +59,13 @@ wint_t _fgetwchar( void );
 
 ## <a name="return-value"></a>戻り値
 
-** \_ fgetchar**は、として読み取られた文字を返す **`int`** か、 `EOF` エラーまたはファイルの末尾を示すを返します。 ** \_ fgetwchar**は、読み取った文字に対応するワイド文字を[wint_t](../../c-runtime-library/standard-types.md)として返すか、 `WEOF` エラーまたはファイルの末尾を示すを返します。 どちらの関数でも、 **feof**または**ferror**を使用して、エラーとファイルの終端の条件を区別します。
+**\_ fgetchar** は、として読み取られた文字を返す **`int`** か、 `EOF` エラーまたはファイルの末尾を示すを返します。 **\_ fgetwchar** は、読み取った文字に対応するワイド文字を [wint_t](../../c-runtime-library/standard-types.md)として返すか、 `WEOF` エラーまたはファイルの末尾を示すを返します。 どちらの関数でも、 **feof** または **ferror** を使用して、エラーとファイルの終端の条件を区別します。
 
 ## <a name="remarks"></a>解説
 
-これらの関数は、 **stdin**から1文字を読み取ります。 関数は、次の文字 (定義されている場合) を指すように、関連ファイルのポインターをインクリメントします。 ストリームがファイルの末尾にある場合、ストリームのファイルの末尾を示すインジケーターが設定されます。
+これらの関数は、 **stdin** から1文字を読み取ります。 関数は、次の文字 (定義されている場合) を指すように、関連ファイルのポインターをインクリメントします。 ストリームがファイルの末尾にある場合、ストリームのファイルの末尾を示すインジケーターが設定されます。
 
-**_fgetchar**はと同じです `fgetc( stdin )` 。 これは**getchar**とも同じですが、関数とマクロではなく関数としてのみ実装されます。 **_fgetwchar**は **_fgetchar**のワイド文字バージョンです。
+**_fgetchar** はと同じです `fgetc( stdin )` 。 これは **getchar** とも同じですが、関数とマクロではなく関数としてのみ実装されます。 **_fgetwchar** は **_fgetchar** のワイド文字バージョンです。
 
 これらの関数は ANSI 規格と互換性がありません。
 
@@ -76,7 +77,7 @@ wint_t _fgetwchar( void );
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_fgettchar**|**_fgetchar**|**_fgetchar**|**_fgetwchar**|
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 |機能|必須ヘッダー|
 |--------------|---------------------|

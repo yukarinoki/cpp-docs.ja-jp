@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: CComAutoDeleteCriticalSection クラス'
 title: CComAutoDeleteCriticalSection クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - CComAutoDeleteCriticalSection class
 ms.assetid: 2396dbea-1c60-4841-b50e-c4e18af311a3
-ms.openlocfilehash: f44dbff7d353cb09142ac742b526d3541e9b2265
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 3c65108917b28b9e4e17210afc54eab6814302b7
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87224332"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97152335"
 ---
 # <a name="ccomautodeletecriticalsection-class"></a>CComAutoDeleteCriticalSection クラス
 
@@ -26,7 +27,7 @@ class CComAutoDeleteCriticalSection : public CComSafeDeleteCriticalSection
 
 ## <a name="remarks"></a>解説
 
-`CComAutoDeleteCriticalSection`クラス[CComSafeDeleteCriticalSection](../../atl/reference/ccomsafedeletecriticalsection-class.md)から派生します。 ただし、は、 `CComAutoDeleteCriticalSection` にアクセスするための[Term](ccomsafedeletecriticalsection-class.md#term)メソッドをオーバーライドします **`private`** 。これにより、このクラスのインスタンスがスコープ外に出たり、明示的にメモリから削除されたりした場合にのみ、内部メモリのクリーンアップが強制的に行われます。
+`CComAutoDeleteCriticalSection` クラス [CComSafeDeleteCriticalSection](../../atl/reference/ccomsafedeletecriticalsection-class.md)から派生します。 ただし、は、 `CComAutoDeleteCriticalSection` にアクセスするための [Term](ccomsafedeletecriticalsection-class.md#term) メソッドをオーバーライドします **`private`** 。これにより、このクラスのインスタンスがスコープ外に出たり、明示的にメモリから削除されたりした場合にのみ、内部メモリのクリーンアップが強制的に行われます。
 
 このクラスでは、基底クラスに追加のメソッドは導入されていません。 クリティカルセクションのヘルパークラスの詳細については、「 [CComSafeDeleteCriticalSection](../../atl/reference/ccomsafedeletecriticalsection-class.md) and [CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md) 」を参照してください。
 
@@ -38,7 +39,7 @@ class CComAutoDeleteCriticalSection : public CComSafeDeleteCriticalSection
 
 `CComAutoDeleteCriticalSection`
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** atlcore .h
 

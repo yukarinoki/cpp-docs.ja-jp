@@ -1,23 +1,24 @@
 ---
-title: '方法: C で追跡参照を使用して、/cli CLI'
+description: '詳細については、「方法: C++/CLI で追跡参照を使用する」を参照してください。'
+title: '方法: C++/CLI で追跡参照を使用する'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - CLR types, passing by reference
 ms.assetid: d91e471c-34ff-4786-9e0d-c6db0494b946
-ms.openlocfilehash: 8be575bd39bc3b2e6512ba1bcb40d9206731f83a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c17101b5711feb503ad727d78b427e8766146960
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62387137"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97151386"
 ---
-# <a name="how-to-use-tracking-references-in-ccli"></a>方法: C で追跡参照を使用して、/cli CLI
+# <a name="how-to-use-tracking-references-in-ccli"></a>方法: C++/CLI で追跡参照を使用する
 
-この記事では、追跡参照 (%) を使用する方法を示しています。C++共通言語ランタイム (CLR) 型を参照によって渡す/CLI です。
+この記事では、追跡参照 (%) の使用方法について説明します。C++/CLI で、共通言語ランタイム (CLR) 型を参照渡しで渡すことができます。
 
-## <a name="to-pass-clr-types-by-reference"></a>CLR 型を参照渡しするには
+## <a name="to-pass-clr-types-by-reference"></a>CLR 型を参照渡しで渡すには
 
-次の例では、CLR 型を参照渡しの追跡参照を使用する方法を示します。
+次のサンプルは、追跡参照を使用して CLR 型を参照渡しで渡す方法を示しています。
 
 ```cpp
 // tracking_reference_handles.cpp
@@ -70,7 +71,7 @@ int main() {
 zip == 20100
 ```
 
-そのアドレスの取得の追跡参照を返します。 次の例を示しています、 [interior_ptr (C++/CLI)](../extensions/interior-ptr-cpp-cli.md)、変更と追跡参照を使用してデータにアクセスする方法を説明します。
+次の例では、追跡参照のアドレスを取得すると [interior_ptr (C++/cli)](../extensions/interior-ptr-cpp-cli.md)が返され、追跡参照を使用してデータを変更およびアクセスする方法を示しています。
 
 ```cpp
 // tracking_reference_data.cpp
@@ -122,9 +123,9 @@ ctor: R(int)
 ctor: N(int i)
 ```
 
-## <a name="tracking-references-and-interior-pointers"></a>追跡参照と内部ポインター
+## <a name="tracking-references-and-interior-pointers"></a>参照と内部ポインターの追跡
 
-次のコード サンプルでは、追跡参照と内部ポインターの間で変換することができることを示します。
+次のコードサンプルは、追跡参照と内部ポインターの間で変換を行うことができることを示しています。
 
 ```cpp
 // tracking_reference_interior_ptr.cpp
@@ -177,9 +178,9 @@ ctor: R(int)
 ctor: N(int i)
 ```
 
-## <a name="tracking-references-and-value-types"></a>追跡参照と値の型
+## <a name="tracking-references-and-value-types"></a>参照と値型の追跡
 
-このサンプルでは、値型に追跡参照を使用して単純なボックス化を示します。
+このサンプルでは、値型への追跡参照を使用した単純なボックス化を示します。
 
 ```cpp
 // tracking_reference_valuetypes_1.cpp
@@ -194,7 +195,7 @@ int main() {
 }
 ```
 
-次の例は必要な追跡参照と値の型をネイティブ参照の両方を示します。
+次のサンプルは、追跡参照と、値型へのネイティブ参照の両方を持つことができることを示しています。
 
 ```cpp
 // tracking_reference_valuetypes_2.cpp
@@ -219,7 +220,7 @@ int main() {
 13
 ```
 
-次の例では、値型とネイティブ型と共に追跡参照を使用できることを示します。
+次のサンプルは、追跡参照を値型とネイティブ型と共に使用できることを示しています。
 
 ```cpp
 // tracking_reference_valuetypes_3.cpp
@@ -254,7 +255,7 @@ int main() {
 5
 ```
 
-このサンプルでは、ガベージ コレクション ヒープに値型への追跡参照をバインドするにはことを示します。
+このサンプルでは、ガベージコレクトされたヒープの値の型に追跡参照をバインドできることを示します。
 
 ```cpp
 // tracking_reference_valuetypes_4.cpp
@@ -292,9 +293,9 @@ Boxed new copy V: 1
 Original V: 4, Reference to handle of originally boxed V: 1
 ```
 
-## <a name="template-functions-that-take-native-value-or-reference-parameters"></a>テンプレートの関数を受け取るネイティブ、値、または参照パラメーター
+## <a name="template-functions-that-take-native-value-or-reference-parameters"></a>ネイティブ、値、または参照パラメーターを受け取るテンプレート関数
 
-テンプレート関数のシグネチャで追跡参照を使用して、することによって型がネイティブ パラメーターを CLR 値、または CLR 参照によって関数を呼び出すことができます。
+テンプレート関数のシグネチャで追跡参照を使用することにより、型がネイティブ、CLR 値、または CLR 参照のパラメーターによって、関数を呼び出すことができるようになります。
 
 ```cpp
 // tracking_reference_template.cpp
@@ -343,4 +344,4 @@ T &
 
 ## <a name="see-also"></a>関連項目
 
-[参照演算子の追跡](../extensions/tracking-reference-operator-cpp-component-extensions.md)
+[参照操作の追跡](../extensions/tracking-reference-operator-cpp-component-extensions.md)

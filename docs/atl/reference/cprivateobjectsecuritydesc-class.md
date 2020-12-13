@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「CPrivateObjectSecurityDesc クラス」を参照してください。
 title: CPrivateObjectSecurityDesc クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -12,12 +13,12 @@ f1_keywords:
 helpviewer_keywords:
 - CPrivateObjectSecurityDesc class
 ms.assetid: 2c4bbb13-bf99-4833-912a-197f6815bb5d
-ms.openlocfilehash: f62d289418280a05f390bf9cdec23ea30632aed2
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 339105d2a6356150c7a7ce8ccf04bc17d3df4911
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88833505"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97141064"
 ---
 # <a name="cprivateobjectsecuritydesc-class"></a>CPrivateObjectSecurityDesc クラス
 
@@ -47,7 +48,7 @@ class CPrivateObjectSecurityDesc : public CSecurityDesc
 |[CPrivateObjectSecurityDesc:: Get](#get)|プライベートオブジェクトのセキュリティ記述子から情報を取得するには、このメソッドを呼び出します。|
 |[CPrivateObjectSecurityDesc:: Set](#set)|プライベートオブジェクトのセキュリティ記述子を変更するには、このメソッドを呼び出します。|
 
-### <a name="operators"></a>演算子
+### <a name="operators"></a>オペレーター
 
 |演算子|説明|
 |-|-|
@@ -65,7 +66,7 @@ Windows のアクセス制御モデルの概要については、Windows SDK の
 
 `CPrivateObjectSecurityDesc`
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** atlsecurity .h
 
@@ -173,7 +174,7 @@ bool Create(
 新しいオブジェクトに他のオブジェクトを含めることができるかどうかを指定します。 値が true の場合は、新しいオブジェクトがコンテナーであることを示します。 値が false の場合は、新しいオブジェクトがコンテナーではないことを示します。
 
 *AutoInheritFlags*<br/>
-アクセス制御エントリ (Ace: access control entries) を *Pparent*から継承する方法を制御する一連のビットフラグ。 詳細については、「 [Createprivateobjectsecurityex](/windows/win32/api/securitybaseapi/nf-securitybaseapi-createprivateobjectsecurityex) 」を参照してください。
+アクセス制御エントリ (Ace: access control entries) を *Pparent* から継承する方法を制御する一連のビットフラグ。 詳細については、「 [Createprivateobjectsecurityex](/windows/win32/api/securitybaseapi/nf-securitybaseapi-createprivateobjectsecurityex) 」を参照してください。
 
 ### <a name="return-value"></a>戻り値
 
@@ -256,7 +257,7 @@ bool Set(
 設定するセキュリティ記述子の部分を示すビットフラグのセット。 この値は、 [SECURITY_INFORMATION](/windows/win32/SecAuthZ/security-information) ビットフラグの組み合わせにすることができます。
 
 *変更*<br/>
-[Csecuritydesc](../../atl/reference/csecuritydesc-class.md)オブジェクトへのポインター。 *Si*パラメーターによって示されるこのセキュリティ記述子の部分は、オブジェクトのセキュリティ記述子に適用されます。
+[Csecuritydesc](../../atl/reference/csecuritydesc-class.md)オブジェクトへのポインター。 *Si* パラメーターによって示されるこのセキュリティ記述子の部分は、オブジェクトのセキュリティ記述子に適用されます。
 
 *GenericMapping*<br/>
 各汎用権限からオブジェクトの特定の権限へのマッピングを指定する [GENERIC_MAPPING](/windows/win32/api/winnt/ns-winnt-generic_mapping) 構造体へのポインター。
@@ -265,7 +266,7 @@ bool Set(
 オブジェクトの代理となるクライアントプロセスの [CAccessToken](../../atl/reference/caccesstoken-class.md) オブジェクトへの参照。
 
 *AutoInheritFlags*<br/>
-アクセス制御エントリ (Ace: access control entries) を *Pparent*から継承する方法を制御する一連のビットフラグ。 詳細については、「 [Createprivateobjectsecurityex](/windows/win32/api/securitybaseapi/nf-securitybaseapi-createprivateobjectsecurityex) 」を参照してください。
+アクセス制御エントリ (Ace: access control entries) を *Pparent* から継承する方法を制御する一連のビットフラグ。 詳細については、「 [Createprivateobjectsecurityex](/windows/win32/api/securitybaseapi/nf-securitybaseapi-createprivateobjectsecurityex) 」を参照してください。
 
 ### <a name="return-value"></a>戻り値
 

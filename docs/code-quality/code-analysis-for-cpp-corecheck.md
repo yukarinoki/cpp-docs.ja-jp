@@ -1,16 +1,17 @@
 ---
+description: '詳細情報: C++ Core Guidelines チェッカーリファレンス'
 title: C++ Core Guidelines チェッカーリファレンス
 ms.date: 03/22/2018
 ms.topic: reference
 helpviewer_keywords:
 - code analysis, C++ core check
 ms.assetid: f1429463-136e-41ed-8a75-a8dbf0b4fd89
-ms.openlocfilehash: a4dc50395a1da0eda68148123651123cf1607184
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 40d0e713d8064a952c785ca44ac5a7ba60f41b61
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91503383"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97151581"
 ---
 # <a name="c-core-guidelines-checker-reference"></a>C++ Core Guidelines チェッカーリファレンス
 
@@ -25,7 +26,7 @@ ms.locfileid: "91503383"
 移動コンストラクターがある場合は、ヒープに割り当てられたオブジェクトではなく、スコープを持つオブジェクトを返します。 [C++ Core Guidelines 「R. 3](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#Rr-ptr)」を参照してください。
 
 [C26403 RESET_OR_DELETE_OWNER](C26403.md)\
-所有者ポインター ' variable ' をリセットまたは明示的に削除 \<T> します。*variable* [C++ Core Guidelines 「R. 3](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#Rr-ptr)」を参照してください。
+所有者ポインター ' variable ' をリセットまたは明示的に削除 \<T> します。 [C++ Core Guidelines 「R. 3](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#Rr-ptr)」を参照してください。
 
 [C26404 DONT_DELETE_INVALID](C26404.md)\
 無効な状態にある可能性のある所有者は削除しないでください \<T> 。 [C++ Core Guidelines 「R. 3](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#Rr-ptr)」を参照してください。
@@ -246,7 +247,7 @@ Unchecked 添字演算子の代わりにを使用することをお勧め `gsl::
 定数式を使用して配列にインデックスを作成するだけです。 [C++ Core Guidelines の境界を参照してください。 2](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#SS-bounds)
 
 [C26483 STATIC_INDEX_OUT_OF_RANGE](c26483.md)\
-値の*値*が、変数 '*variable*' の境界 (0、*バインド*) の範囲外です。 配列にインデックスを作成するには、配列の範囲内にある定数式を使用します。 [C++ Core Guidelines の境界を参照してください。 2](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#SS-bounds)
+値の *値* が、変数 '*variable*' の境界 (0、*バインド*) の範囲外です。 配列にインデックスを作成するには、配列の範囲内にある定数式を使用します。 [C++ Core Guidelines の境界を参照してください。 2](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#SS-bounds)
 
 [C26485 NO_ARRAY_TO_POINTER_DECAY](C26485.md)\
 式 '*expr*': 配列からポインターが減衰されていません。 [C++ Core Guidelines の境界を参照してください。 3](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#SS-bounds)

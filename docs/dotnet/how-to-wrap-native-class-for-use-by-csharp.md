@@ -1,4 +1,5 @@
 ---
+description: '詳細については、「方法: ネイティブクラスを C で使用できるようにラップする」を参照してください。#'
 title: '方法: ネイティブ クラスを C# で使用できるようにラップする'
 ms.custom: get-started-article
 ms.date: 11/04/2016
@@ -6,16 +7,16 @@ helpviewer_keywords:
 - native code [C++], Visual C# and
 - classes [C++], Visual C# and
 ms.assetid: 988819ae-cc6a-4453-8ff5-be369210d962
-ms.openlocfilehash: 06cb922aff4079f29b93874787a8b79ef99d75c3
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 1b90cfba08bd22ec6a49ef4de033afd5d2b187ea
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79545889"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97151373"
 ---
-# <a name="how-to-wrap-native-class-for-use-by-c"></a>方法: ネイティブクラスを C\# で使用するためにラップする
+# <a name="how-to-wrap-native-class-for-use-by-c"></a>方法: ネイティブクラスを C で使用できるようにラップする\#
 
-このサンプルでは、ネイティブC++クラスをラップして、またはその他の .net C#言語で作成されたコードで使用できるようにする方法を示します。
+このサンプルでは、C# またはその他の .NET 言語で作成されたコードで使用できるように、ネイティブ C++ クラスをラップする方法を示します。
 
 ## <a name="example"></a>例
 
@@ -67,6 +68,6 @@ private:
 };
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [C++ Interop (暗黙の PInvoke) の使用](../dotnet/using-cpp-interop-implicit-pinvoke.md)

@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: ML の致命的なエラー A1007'
 title: ML の致命的なエラー A1007
 ms.date: 12/17/2019
 ms.custom: error-reference
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - A1007
 ms.assetid: bcf9c826-beb3-4e93-91fe-1ffd34995fbf
-ms.openlocfilehash: c9527769e0d9397de90f49cbce98b2cca42bed50
-ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
+ms.openlocfilehash: c26d5de1c1b44fb37d4a95f51b2cb9480d2ba664
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75317124"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97129546"
 ---
 # <a name="ml-fatal-error-a1007"></a>ML の致命的なエラー A1007
 
@@ -22,7 +23,7 @@ ms.locfileid: "75317124"
 
 次のいずれかの入れ子のレベルが深すぎます。
 
-- などの高レベルのディレクティブ[。の場合は](dot-if.md) [。](dot-repeat.md)またはを繰り返し[ます。しばらくお待ち](dot-while.md)ください。
+- などの高レベルのディレクティブ [。の場合は](dot-if.md) [。](dot-repeat.md)またはを繰り返し [ます。しばらくお待ち](dot-while.md)ください。
 
 - 構造体の定義。
 

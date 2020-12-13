@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: FORC'
 title: FORC
 ms.date: 12/17/2019
 f1_keywords:
@@ -6,24 +7,24 @@ f1_keywords:
 helpviewer_keywords:
 - FORC directive
 ms.assetid: 57c05099-0c46-44bc-9ae5-27ce850ccdff
-ms.openlocfilehash: d81c56c3322763030427d68d5b8075c9164f4ae3
-ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
+ms.openlocfilehash: 0db52528d86e324e997f3f339bcfb888ce5e27aa
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75313315"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97130300"
 ---
 # <a name="forc"></a>FORC
 
-*文字列*内の各文字に対して1回繰り返されるブロックをマークします。各繰り返しの*現在の文字を置換し*ます。
+*文字列* 内の各文字に対して1回繰り返されるブロックをマークします。各繰り返しの *現在の文字を置換し* ます。
 
 ## <a name="syntax"></a>構文
 
-> **Forc** *パラメーター*、 __\<__ *文字列* __>__ \
-> *ステートメント*の\
+> **Forc** *パラメーター*、 __\<__*string*__>__\
+> *命令*\
 > **ENDM**
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
 [Irpc](irpc.md)と同じです。
 

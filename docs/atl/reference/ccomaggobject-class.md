@@ -1,5 +1,6 @@
 ---
-title: クラス
+description: '詳細情報: CComAggObject クラス'
+title: CComAggObject クラス
 ms.date: 11/04/2016
 f1_keywords:
 - CComAggObject
@@ -17,16 +18,16 @@ helpviewer_keywords:
 - aggregation [C++], ATL objects
 - CComAggObject class
 ms.assetid: 7aa90d69-d399-477b-880d-e2cdf0ef7881
-ms.openlocfilehash: b9200c9c396fc16b6df3f4c2f4c66fb7976316d4
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: 84af79678221ae74a151a4821039ff1d7a743cc5
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81748169"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97152361"
 ---
-# <a name="ccomaggobject-class"></a>クラス
+# <a name="ccomaggobject-class"></a>CComAggObject クラス
 
-このクラスは、集約オブジェクトの[IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown)インターフェイスを実装します。 定義上、集約オブジェクトは外部オブジェクト内に含まれます。 クラス`CComAggObject`は[CComObject クラス](../../atl/reference/ccomobject-class.md)に似ていますが、外部クライアントから直接アクセスできるインターフェイスを公開する点が異なっています。
+このクラスは、集計されたオブジェクトの [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown) インターフェイスを実装します。 定義上、集計されたオブジェクトは、外側のオブジェクトに含まれています。 クラスは、 `CComAggObject` 外部クライアントから直接アクセスできるインターフェイスを公開する点を除いて、 [CComObject クラス](../../atl/reference/ccomobject-class.md)に似ています。
 
 ## <a name="syntax"></a>構文
 
@@ -38,8 +39,8 @@ class CComAggObject : public IUnknown,
 
 #### <a name="parameters"></a>パラメーター
 
-*含ま れる*<br/>
-[CComObjectRoot または CComObjectRootEx](../../atl/reference/ccomobjectroot-class.md)から派生したクラス、およびオブジェクトでサポートするその他のインターフェイスから派生したクラス。 [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md)
+*格納*<br/>
+[CComObjectRoot](../../atl/reference/ccomobjectroot-class.md)または[CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md)から派生したクラス、およびオブジェクトでサポートする他のインターフェイスから派生したクラス。
 
 ## <a name="members"></a>メンバー
 
@@ -47,49 +48,49 @@ class CComAggObject : public IUnknown,
 
 |名前|説明|
 |----------|-----------------|
-|[コムアグオブジェクト::コムアグオブジェクト](#ccomaggobject)|コンストラクターです。|
-|[コムガグオブジェクト::~コマッグオブジェクト](#dtor)|デストラクターです。|
+|[CComAggObject:: CComAggObject](#ccomaggobject)|コンストラクターです。|
+|[CComAggObject:: ~ CComAggObject](#dtor)|デストラクターです。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
 |名前|説明|
 |----------|-----------------|
-|[コマグオブジェクト::AddRef](#addref)|集約されたオブジェクトの参照カウントをインクリメントします。|
-|[オブジェクトを作成します。](#createinstance)|この静的関数を使用すると、新しい**CComAggObject<**`contained`**>** オブジェクトを[作成](/windows/win32/api/combaseapi/nf-combaseapi-cocreateinstance)できます。|
-|[コムガグオブジェクト::ファイナルコンストラクト](#finalconstruct)|の最終初期化を`m_contained`実行します。|
-|[コムガグオブジェクト::ファイナルリリース](#finalrelease)|の最終破棄を`m_contained`実行します。|
-|[コムガグオブジェクト::クエリインターフェイス](#queryinterface)|要求されたインターフェイスへのポインターを取得します。|
-|[ココモグオブジェクト::リリース](#release)|集約されたオブジェクトの参照カウントをデクリメントします。|
+|[CComAggObject:: AddRef](#addref)|集計されたオブジェクトの参照カウントをインクリメントします。|
+|[CComAggObject:: CreateInstance](#createinstance)|この静的関数を使用すると、  `contained` **>** [CoCreateInstance](/windows/win32/api/combaseapi/nf-combaseapi-cocreateinstance)のオーバーヘッドを発生させずに、新しい CComAggObject<オブジェクトを作成できます。|
+|[CComAggObject:: FinalConstruct](#finalconstruct)|の最終初期化を実行 `m_contained` します。|
+|[CComAggObject:: FinalRelease](#finalrelease)|の最終的な破棄を実行 `m_contained` します。|
+|[CComAggObject:: QueryInterface](#queryinterface)|要求されたインターフェイスへのポインターを取得します。|
+|[CComAggObject:: Release](#release)|集計されたオブジェクトの参照カウントをデクリメントします。|
 
 ### <a name="public-data-members"></a>パブリック データ メンバー
 
 |名前|説明|
 |----------|-----------------|
-|[コムガグオブジェクト::m_contained](#m_contained)|外部`IUnknown`不明へのデリゲート呼び出し。|
+|[CComAggObject:: m_contained](#m_contained)|`IUnknown`外側の不明なへの呼び出しをデリゲートします。|
 
 ## <a name="remarks"></a>解説
 
-`CComAggObject`は、集約オブジェクトの[IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown)を実装します。 `CComAggObject`は、外部`IUnknown`オブジェクトのインタフェースとは別に独自の`IUnknown`インタフェースを持ち、独自の参照カウントを保持します。
+`CComAggObject` 集計されたオブジェクトに対して [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown) を実装します。 `CComAggObject` は `IUnknown` 、外側のオブジェクトのインターフェイスとは別に独自のインターフェイスを持ち、 `IUnknown` 独自の参照カウントを保持します。
 
-集約の詳細については[、「ATL COM オブジェクトの基礎](../../atl/fundamentals-of-atl-com-objects.md)」を参照してください。
+集計の詳細については、「 [ATL COM オブジェクトの基礎](../../atl/fundamentals-of-atl-com-objects.md)」を参照してください。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
 `CComObjectRootBase`
 
-[ココムオブジェクトルート](../../atl/reference/ccomobjectrootex-class.md)
+[CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md)
 
 `IUnknown`
 
 `CComAggObject`
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-**ヘッダー:** atlcom.h
+**ヘッダー:** atlcom. h
 
-## <a name="ccomaggobjectaddref"></a><a name="addref"></a>コマグオブジェクト::AddRef
+## <a name="ccomaggobjectaddref"></a><a name="addref"></a> CComAggObject:: AddRef
 
-集約されたオブジェクトの参照カウントをインクリメントします。
+集計されたオブジェクトの参照カウントをインクリメントします。
 
 ```
 STDMETHOD_(ULONG, AddRef)();
@@ -97,9 +98,9 @@ STDMETHOD_(ULONG, AddRef)();
 
 ### <a name="return-value"></a>戻り値
 
-診断やテストに役立つ値。
+診断またはテストに役立つ可能性のある値。
 
-## <a name="ccomaggobjectccomaggobject"></a><a name="ccomaggobject"></a>コムアグオブジェクト::コムアグオブジェクト
+## <a name="ccomaggobjectccomaggobject"></a><a name="ccomaggobject"></a> CComAggObject:: CComAggObject
 
 コンストラクターです。
 
@@ -110,15 +111,15 @@ CComAggObject(void* pv);
 ### <a name="parameters"></a>パラメーター
 
 *pv*<br/>
-[in]外側の未知。
+から外側の不明な。
 
 ### <a name="remarks"></a>解説
 
-メンバーを`CComContainedObject`初期化[し、m_contained](#m_contained)し、モジュール ロックカウントをインクリメントします。
+メンバーを初期化し、 `CComContainedObject` [m_contained](#m_contained)して、モジュールのロックカウントをインクリメントします。
 
 デストラクターは、モジュールのロックカウントをデクリメントします。
 
-## <a name="ccomaggobjectccomaggobject"></a><a name="dtor"></a>コムガグオブジェクト::~コマッグオブジェクト
+## <a name="ccomaggobjectccomaggobject"></a><a name="dtor"></a> CComAggObject:: ~ CComAggObject
 
 デストラクターです。
 
@@ -128,11 +129,11 @@ CComAggObject(void* pv);
 
 ### <a name="remarks"></a>解説
 
-割り当てられたすべてのリソースを解放し[、FinalRelease](#finalrelease)を呼び出し、モジュールロックカウントをデクリメントします。
+割り当てられたすべてのリソースを解放し、 [FinalRelease](#finalrelease)を呼び出して、モジュールのロックカウントをデクリメントします。
 
-## <a name="ccomaggobjectcreateinstance"></a><a name="createinstance"></a>オブジェクトを作成します。
+## <a name="ccomaggobjectcreateinstance"></a><a name="createinstance"></a> CComAggObject:: CreateInstance
 
-この静的関数を使用すると、新しい**CComAggObject<**`contained`**>** オブジェクトを[作成](/windows/win32/api/combaseapi/nf-combaseapi-cocreateinstance)できます。
+この静的関数を使用すると、  `contained` **>** [CoCreateInstance](/windows/win32/api/combaseapi/nf-combaseapi-cocreateinstance)のオーバーヘッドを発生させずに、新しい CComAggObject<オブジェクトを作成できます。
 
 ```
 static HRESULT WINAPI CreateInstance(
@@ -142,8 +143,8 @@ static HRESULT WINAPI CreateInstance(
 
 ### <a name="parameters"></a>パラメーター
 
-*頁*<br/>
-[アウト]**CComAgg オブジェクト\<** へのポインターにポインター<em>が含まれていました</em>**>**。 失敗`CreateInstance`した場合 *、pp*は NULL に設定されます。
+*ページ*<br/>
+入出力CComAggObject へのポインターに> * * ポインターが **\<**<em> 含ま </em>** れています。 `CreateInstance`が失敗した場合、 *PP* は NULL に設定されます。
 
 ### <a name="return-value"></a>戻り値
 
@@ -151,13 +152,13 @@ static HRESULT WINAPI CreateInstance(
 
 ### <a name="remarks"></a>解説
 
-返されるオブジェクトの参照カウントは 0 なので、`AddRef`すぐに呼び出`Release`し、完了したらオブジェクト ポインターの参照を解放するために使用します。
+返されるオブジェクトは、参照カウントが0であるため、をすぐに呼び出し、を使用して `AddRef` `Release` オブジェクトポインターの参照を解放します。
 
-オブジェクトに直接アクセスする必要はありませんが、`CoCreateInstance`のオーバーヘッドを伴わずに新しいオブジェクトを作成する必要がある場合は、代わりに[CComCoClass::CreateInstance](../../atl/reference/ccomcoclass-class.md#createinstance)を使用します。
+オブジェクトへの直接アクセスが不要でも、のオーバーヘッドなしで新しいオブジェクトを作成する場合は `CoCreateInstance` 、代わりに [CComCoClass:: CreateInstance](../../atl/reference/ccomcoclass-class.md#createinstance) を使用します。
 
-## <a name="ccomaggobjectfinalconstruct"></a><a name="finalconstruct"></a>コムガグオブジェクト::ファイナルコンストラクト
+## <a name="ccomaggobjectfinalconstruct"></a><a name="finalconstruct"></a> CComAggObject:: FinalConstruct
 
-オブジェクト構築の最終段階で呼び出されたこのメソッドは[、m_contained](#m_contained)メンバーに対して最終的な初期化を実行します。
+オブジェクト構築の最終段階で呼び出され、このメソッドは [m_contained](#m_contained) メンバーに対して最終的な初期化を実行します。
 
 ```
 HRESULT FinalConstruct();
@@ -167,17 +168,17 @@ HRESULT FinalConstruct();
 
 標準の HRESULT 値。
 
-## <a name="ccomaggobjectfinalrelease"></a><a name="finalrelease"></a>コムガグオブジェクト::ファイナルリリース
+## <a name="ccomaggobjectfinalrelease"></a><a name="finalrelease"></a> CComAggObject:: FinalRelease
 
-オブジェクトの破棄中に呼び出されたこのメソッドは[、m_contained](#m_contained)メンバーを解放します。
+このメソッドは、オブジェクトの破棄中に呼び出され、 [m_contained](#m_contained) メンバーを解放します。
 
 ```cpp
 void FinalRelease();
 ```
 
-## <a name="ccomaggobjectm_contained"></a><a name="m_contained"></a>コムガグオブジェクト::m_contained
+## <a name="ccomaggobjectm_contained"></a><a name="m_contained"></a> CComAggObject:: m_contained
 
-クラスから派生[したオブジェクト。](../../atl/reference/ccomcontainedobject-class.md)
+クラスから派生した [CComContainedObject](../../atl/reference/ccomcontainedobject-class.md) オブジェクト。
 
 ```
 CComContainedObject<contained> m_contained;
@@ -185,14 +186,14 @@ CComContainedObject<contained> m_contained;
 
 ### <a name="parameters"></a>パラメーター
 
-*含ま れる*<br/>
-[in][CComObjectRoot または CComObjectRootEx](../../atl/reference/ccomobjectroot-class.md)から派生したクラス、およびオブジェクトでサポートするその他のインターフェイスから派生したクラス。 [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md)
+*格納*<br/>
+から [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md) または [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md)から派生したクラス、およびオブジェクトでサポートする他のインターフェイスから派生したクラス。
 
 ### <a name="remarks"></a>解説
 
-すべての`IUnknown`呼び`m_contained`出しは、外部不明にデリゲートされます。
+`IUnknown`経由のすべて `m_contained` の呼び出しは、外側の不明なに委任されます。
 
-## <a name="ccomaggobjectqueryinterface"></a><a name="queryinterface"></a>コムガグオブジェクト::クエリインターフェイス
+## <a name="ccomaggobjectqueryinterface"></a><a name="queryinterface"></a> CComAggObject:: QueryInterface
 
 要求されたインターフェイスへのポインターを取得します。
 
@@ -204,14 +205,14 @@ HRESULT STDMETHODCALLTYPE QueryInterface(Q** pp);
 
 ### <a name="parameters"></a>パラメーター
 
-*Iid*<br/>
-[in]要求されているインターフェイスの識別子。
+*iid*<br/>
+から要求されているインターフェイスの識別子。
 
-*オブジェクト*<br/>
-[アウト]*iid*で識別されるインターフェイス ポインタへのポインタ。 オブジェクトがこのインターフェイスをサポートしていない場合 *、ppvObject*は NULL に設定されます。
+*ppvObject*<br/>
+入出力 *Iid* によって識別されるインターフェイスポインターへのポインター。 オブジェクトがこのインターフェイスをサポートしていない場合、 *ppvObject* は NULL に設定されます。
 
-*頁*<br/>
-[アウト]type`Q`で識別されるインターフェイス ポインターへのポインター。 オブジェクトがこのインターフェイスをサポートしていない場合 *、pp*は NULL に設定されます。
+*ページ*<br/>
+入出力型によって識別されるインターフェイスポインターへのポインター `Q` 。 オブジェクトがこのインターフェイスをサポートしていない場合、 *pp* は NULL に設定されます。
 
 ### <a name="return-value"></a>戻り値
 
@@ -219,11 +220,11 @@ HRESULT STDMETHODCALLTYPE QueryInterface(Q** pp);
 
 ### <a name="remarks"></a>解説
 
-要求されたインターフェイスが`IUnknown`の`QueryInterface`場合は、集約オブジェクト自身`IUnknown`へのポインタを返し、参照カウントをインクリメントします。 それ以外の場合、このメソッドは、メンバー `CComContainedObject` [m_contained](#m_contained)を介してインターフェイスを照会します。
+要求されたインターフェイスがの場合、は、集計された `IUnknown` `QueryInterface` オブジェクト自体へのポインターを返し、 `IUnknown` 参照カウントをインクリメントします。 それ以外の場合、このメソッドは、m_contained メンバーを介してインターフェイスを照会 `CComContainedObject` します。 [](#m_contained)
 
-## <a name="ccomaggobjectrelease"></a><a name="release"></a>ココモグオブジェクト::リリース
+## <a name="ccomaggobjectrelease"></a><a name="release"></a> CComAggObject:: Release
 
-集約されたオブジェクトの参照カウントをデクリメントします。
+集計されたオブジェクトの参照カウントをデクリメントします。
 
 ```
 STDMETHOD_(ULONG, Release)();
@@ -231,12 +232,12 @@ STDMETHOD_(ULONG, Release)();
 
 ### <a name="return-value"></a>戻り値
 
-デバッグ ビルドでは`Release`、診断やテストに役立つ値を返します。 非デバッグ ビルドでは、`Release`常に 0 を返します。
+デバッグビルドでは、 `Release` 診断またはテストに役立つ値が返されます。 非デバッグビルドでは、は `Release` 常に0を返します。
 
 ## <a name="see-also"></a>関連項目
 
-[クラス](../../atl/reference/ccomobject-class.md)<br/>
-[クラス](../../atl/reference/ccompolyobject-class.md)<br/>
+[CComObject クラス](../../atl/reference/ccomobject-class.md)<br/>
+[CComPolyObject クラス](../../atl/reference/ccompolyobject-class.md)<br/>
 [DECLARE_AGGREGATABLE](aggregation-and-class-factory-macros.md#declare_aggregatable)<br/>
 [DECLARE_ONLY_AGGREGATABLE](aggregation-and-class-factory-macros.md#declare_only_aggregatable)<br/>
 [DECLARE_NOT_AGGREGATABLE](aggregation-and-class-factory-macros.md#declare_not_aggregatable)<br/>
