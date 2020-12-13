@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: 配列 (C++/CLI および C++/CX)'
 title: 配列 (C++/CLI および C++/CX)
 ms.date: 10/12/2018
 ms.topic: reference
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - multidimensional arrays
 - arrays [C++]
 ms.assetid: 49445812-d775-4db1-a231-869598dbb955
-ms.openlocfilehash: 814be57caafed117a1403105d46326ac53682578
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: e75818b7c4de3123fefb6bed9f24da46f8212ed8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91500891"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97177108"
 ---
 # <a name="arrays-ccli-and-ccx"></a>配列 (C++/CLI および C++/CX)
 
@@ -70,11 +71,11 @@ C++/CX の `Platform::Array<T>` 型、または C++/CLI の **array** キーワ�
 *initialization-list*<br/>
 (省略可能) 配列の要素を初期化する、中かっこ内のコンマ区切りの値の一覧。 たとえば、*rank-size-list* が `(3)` の場合 (3 つの要素の 1 次元配列を宣言しています)、*initialization-list* には `{1,2,3}` を指定できます。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 コンパイル時に、型が `__is_ref_array(type)` の参照カウント配列かどうかを検出できます。 詳細については、「[型の特徴のコンパイラ サポート](compiler-support-for-type-traits-cpp-component-extensions.md)」を参照してください。
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 コンパイラ オプション: `/ZW`
 
@@ -131,9 +132,9 @@ int main() {
 
 たとえば、*rank-size-list* が `(3)` の場合 (3 つの要素の 1 次元配列を宣言しています)、*initialization-list* には `{1,2,3}` を指定できます。 *rank-size-list* が `(3,2,4)` の場合 (最初の次元に 3 つの要素、2 番目の次元に 2 つの要素、3 番目の要素に 4 つの要素を宣言しています)、*initialization-list* には `{{1,2,3},{0,0},{-5,10,-21,99}}`. を指定できます。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
-**配列**は、[プラットフォーム、既定、および cli 名前空間](platform-default-and-cli-namespaces-cpp-component-extensions.md) にあります。
+**配列** は、[プラットフォーム、既定、および cli 名前空間](platform-default-and-cli-namespaces-cpp-component-extensions.md) にあります。
 
 標準 C++ 同様、配列のインデックスはゼロから始まり、配列には角かっこ ([]) を使用して添え字を指定します。 標準 C++ とは異なり、多次元配列のインデックスは、各次元に対する一連の角括弧 ([]) ではなく、各次元に対するインデックスの一覧で指定されます。 たとえば、*identifier*[*index1*][*index2*] ではなく、*identifier*[*index1*, *index2*] になります。
 
@@ -145,7 +146,7 @@ int main() {
 
 コンパイル時に、型が `__is_ref_array(type)` の共通言語ランタイム (CLR) 配列かどうかを検出できます。 詳細については、「[型の特徴のコンパイラ サポート](compiler-support-for-type-traits-cpp-component-extensions.md)」を参照してください。
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 コンパイラ オプション: `/clr`
 

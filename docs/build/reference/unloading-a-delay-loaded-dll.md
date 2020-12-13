@@ -1,16 +1,17 @@
 ---
+description: 詳細については、「Delay-Loaded DLL のアンロード」を参照してください。
 title: 遅延読み込みした DLL のアンロード
 ms.date: 11/04/2016
 helpviewer_keywords:
 - __FUnloadDelayLoadedDLL2
 - delayed loading of DLLs, unloading
 ms.assetid: 6463bc71-020e-4aff-a4ca-90360411c54e
-ms.openlocfilehash: 1895bf12cb195ef7b4555d400badf112d377547b
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: fd733bfa02a6d90eecb1b617288d368d33766282
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87211919"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97178941"
 ---
 # <a name="unloading-a-delay-loaded-dll"></a>遅延読み込みした DLL のアンロード
 
@@ -43,9 +44,9 @@ ExternC
 PUnloadInfo __puiHead;
 ```
 
-UnloadInfo 構造体は、 **LocalAlloc**と**LocalFree**の実装をそれぞれ演算子と演算子として使用する C++ クラスを使用して実装され **`new`** **`delete`** ます。 これらのオプションは、リストの先頭として __puiHead を使用して、標準のリンクリストに保持されます。
+UnloadInfo 構造体は、 **LocalAlloc** と **LocalFree** の実装をそれぞれ演算子と演算子として使用する C++ クラスを使用して実装され **`new`** **`delete`** ます。 これらのオプションは、リストの先頭として __puiHead を使用して、標準のリンクリストに保持されます。
 
-__FUnloadDelayLoadedDLL を呼び出すと、読み込まれた Dll の一覧で指定した名前が検索されます (完全一致が必要です)。 見つかった場合は、pUnloadIAT 内の IAT のコピーが、実行されている IAT の一番上にコピーされてサンクポインターが復元されます。ライブラリは**FreeLibrary**で解放され、一致する**UnloadInfo**レコードはリストから削除されて削除され、TRUE が返されます。
+__FUnloadDelayLoadedDLL を呼び出すと、読み込まれた Dll の一覧で指定した名前が検索されます (完全一致が必要です)。 見つかった場合は、pUnloadIAT 内の IAT のコピーが、実行されている IAT の一番上にコピーされてサンクポインターが復元されます。ライブラリは **FreeLibrary** で解放され、一致する **UnloadInfo** レコードはリストから削除されて削除され、TRUE が返されます。
 
 関数 __FUnloadDelayLoadedDLL2 の引数は大文字と小文字が区別されます。 たとえば、次のように指定します。
 

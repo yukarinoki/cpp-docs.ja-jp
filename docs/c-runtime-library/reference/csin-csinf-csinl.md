@@ -1,4 +1,5 @@
 ---
+description: 詳細については、csin、csinf、csinf に関するページを参照してください。
 title: csin、csinf、csinl
 ms.date: 11/04/2016
 api_name:
@@ -33,12 +34,12 @@ helpviewer_keywords:
 - csinf function
 - csinl function
 ms.assetid: 3ed475e8-9aae-42ba-a25c-7ae656a0fd4d
-ms.openlocfilehash: c0e0c57596ac36dbe3c0b72f79177b8df7b15af0
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: d19f916f6fdd9e871eef6e1ad77369642b939495
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70941988"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97178863"
 ---
 # <a name="csin-csinf-csinl"></a>csin、csinf、csinl
 
@@ -71,23 +72,23 @@ _Lcomplex csinl(
 
 ## <a name="return-value"></a>戻り値
 
-*Z*のサイン (ラジアン)。
+*Z* のサイン (ラジアン)。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-でC++はオーバーロードが可能であるため、 **_Fcomplex**と **_Lcomplex**の値を受け取って返す、 **csin**オーバーロードを呼び出すことができます。 C プログラムでは、 **csin**は常にを受け取り、**戻り値を**返します。
+C++ ではオーバーロードが可能であるため、 **_Fcomplex** と **_Lcomplex** の値を受け取って返す、 **csin** オーバーロードを呼び出すことができます。 C プログラムでは、 **csin** は常にを受け取り、 **_Dcomplex** 値を返します。
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチン|C ヘッダー|C++ ヘッダー|
+|ルーチンによって返される値|C ヘッダー|C++ ヘッダー|
 |-------------|--------------|------------------|
-|**csin**、 **csinf**、 **csinf**|\<complex.h>|\<ccomplex>|
+|**csin**、               **csinf**、 **csinf**|\<complex.h>|\<ccomplex>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性について詳しくは、「 [Compatibility](../../c-runtime-library/compatibility.md)」をご覧ください。
 
 ## <a name="see-also"></a>関連項目
 
-[関数リファレンス (アルファベット順)](crt-alphabetical-function-reference.md)<br/>
+[アルファベット順の関数リファレンス](crt-alphabetical-function-reference.md)<br/>
 [catanh、catanhf、catanhl](catanh-catanhf-catanhl.md)<br/>
 [ctanh、ctanhf、ctanhl](ctanh-ctanhf-ctanhl.md)<br/>
 [catan、catanf、catanl](catan-catanf-catanl.md)<br/>

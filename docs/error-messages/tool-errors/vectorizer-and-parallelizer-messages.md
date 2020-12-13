@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「ベクター化 and 並行化 messages」を参照してください。
 title: ベクター化と並列化のメッセージ
 ms.date: 04/17/2019
 f1_keywords:
@@ -8,18 +9,18 @@ f1_keywords:
 - C5001
 - C5012
 ms.assetid: d8f4844a-f414-42ab-b9a5-925a5da9d365
-ms.openlocfilehash: 1cdbb40d06d2b3da7e6444e3a6743c6e6ae1c874
-ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
+ms.openlocfilehash: 54465331b3301c8f792763b9d7d1e29b8d62b1a0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86405001"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97177134"
 ---
 # <a name="vectorizer-and-parallelizer-messages"></a>ベクター化と並列化のメッセージ
 
-Microsoft C++ コンパイラオプションの[/Qpar-report](../../build/reference/qpar-report-auto-parallelizer-reporting-level.md)と[/Qvec-report](../../build/reference/qvec-report-auto-vectorizer-reporting-level.md)を使用して、[自動並列化と自動ベクター化](../../parallel/auto-parallelization-and-auto-vectorization.md)を設定し、そのアクティビティに関する理由コードと情報メッセージを出力することができます。 この記事では、理由コードとメッセージについて説明します。
+Microsoft C++ コンパイラオプションの [/Qpar-report](../../build/reference/qpar-report-auto-parallelizer-reporting-level.md) と [/Qvec-report](../../build/reference/qvec-report-auto-vectorizer-reporting-level.md) を使用して、 [自動並列化と自動ベクター化](../../parallel/auto-parallelization-and-auto-vectorization.md) を設定し、そのアクティビティに関する理由コードと情報メッセージを出力することができます。 この記事では、理由コードとメッセージについて説明します。
 
-## <a name="informational-messages"></a><a name="BKMK_InformationalMessages"></a>情報メッセージ
+## <a name="informational-messages"></a><a name="BKMK_InformationalMessages"></a> 情報メッセージ
 
 指定したレポート レベルに応じて、次のいずれかの情報メッセージがループごとに表示されます。
 
@@ -35,9 +36,9 @@ Microsoft C++ コンパイラオプションの[/Qpar-report](../../build/refere
 
 次のセクションでは、並行化とベクター化の考えられる理由コードを示します。
 
-## <a name="5xx-reason-codes"></a><a name="BKMK_ReasonCode50x"></a>5xx 理由コード
+## <a name="5xx-reason-codes"></a><a name="BKMK_ReasonCode50x"></a> 5xx 理由コード
 
-5*xx*の理由コードは、並行化とベクター化の両方に適用されます。
+5 *xx* の理由コードは、並行化とベクター化の両方に適用されます。
 
 |理由コード|説明|
 |-----------------|-----------------|
@@ -198,9 +199,9 @@ void code_504(int *A) {
 }
 ```
 
-## <a name="10xx-reason-codes"></a><a name="BKMK_ReasonCode100x"></a>10xx 理由コード
+## <a name="10xx-reason-codes"></a><a name="BKMK_ReasonCode100x"></a> 10xx 理由コード
 
-10*xx*の理由コードが並行化に適用されます。
+10 *xx* の理由コードが並行化に適用されます。
 
 |理由コード|説明|
 |-----------------|-----------------|
@@ -407,9 +408,9 @@ void code_1010()
 }
 ```
 
-## <a name="11xx-reason-codes"></a><a name="BKMK_ReasonCode110x"></a>11xx 理由コード
+## <a name="11xx-reason-codes"></a><a name="BKMK_ReasonCode110x"></a> 11xx 理由コード
 
-11*xx*の理由コードは、ベクター化に適用されます。
+11 *xx* の理由コードは、ベクター化に適用されます。
 
 |理由コード|説明|
 |-----------------|-----------------|
@@ -555,9 +556,9 @@ void code_1106(int *A)
 }
 ```
 
-## <a name="12xx-reason-codes"></a><a name="BKMK_ReasonCode120x"></a>12 xx 理由コード
+## <a name="12xx-reason-codes"></a><a name="BKMK_ReasonCode120x"></a> 12 xx 理由コード
 
-12*xx*理由コードは、ベクター化に適用されます。
+12 *xx* 理由コードは、ベクター化に適用されます。
 
 |理由コード|説明|
 |-----------------|-----------------|
@@ -630,9 +631,9 @@ void code_1203(int *A)
 }
 ```
 
-## <a name="13xx-reason-codes"></a><a name="BKMK_ReasonCode130x"></a>13xx 理由コード
+## <a name="13xx-reason-codes"></a><a name="BKMK_ReasonCode130x"></a> 13xx 理由コード
 
-13*xx*の理由コードは、ベクター化に適用されます。
+13 *xx* の理由コードは、ベクター化に適用されます。
 
 |理由コード|説明|
 |-----------------|-----------------|
@@ -762,9 +763,9 @@ void code_1305( S_1305 *s, S_1305 x)
 }
 ```
 
-## <a name="14xx-reason-codes"></a><a name="BKMK_ReasonCode140x"></a>14xx 理由コード
+## <a name="14xx-reason-codes"></a><a name="BKMK_ReasonCode140x"></a> 14xx 理由コード
 
-14*xx*理由コードは、ベクター化と互換性のないオプションが指定されている場合に発生します。
+14 *xx* 理由コードは、ベクター化と互換性のないオプションが指定されている場合に発生します。
 
 |理由コード|説明|
 |-----------------|-----------------|
@@ -834,9 +835,9 @@ void code_1404(int *A)
 }
 ```
 
-## <a name="15xx-reason-codes"></a><a name="BKMK_ReasonCode150x"></a>15xx 理由コード
+## <a name="15xx-reason-codes"></a><a name="BKMK_ReasonCode150x"></a> 15xx 理由コード
 
-15*xx*理由コードはエイリアスに適用されます。 メモリ内の同じ位置に 2 つの異なる名前でアクセスできるときにエイリアスが使用されます。
+15 *xx* 理由コードはエイリアスに適用されます。 メモリ内の同じ位置に 2 つの異なる名前でアクセスできるときにエイリアスが使用されます。
 
 |理由コード|説明|
 |-----------------|-----------------|

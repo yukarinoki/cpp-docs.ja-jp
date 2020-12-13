@@ -1,4 +1,5 @@
 ---
+description: 詳細については、次を参照してください:/Zg (関数プロトタイプの生成)
 title: /Zg (関数プロトタイプの生成)
 ms.date: 11/04/2016
 f1_keywords:
@@ -10,16 +11,16 @@ helpviewer_keywords:
 - -Zg compiler option [C++]
 - generate function prototypes compiler option
 ms.assetid: c8df1b46-24ff-46f2-8356-e0a144b21dd2
-ms.openlocfilehash: 591460b78a461aa2e33f873b79d6dcec0277f99f
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
-ms.translationtype: HT
+ms.openlocfilehash: ee0bed48f15acae867d344a60a6d42f3b17c7e85
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65446201"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97178876"
 ---
 # <a name="zg-generate-function-prototypes"></a>/Zg (関数プロトタイプの生成)
 
-削除されました。 ソース ファイルで定義された各関数の関数プロトタイプを作成しますが、ソース ファイルはコンパイルされません。
+削除されます。 ソース ファイルで定義された各関数の関数プロトタイプを作成しますが、ソース ファイルはコンパイルされません。
 
 ## <a name="syntax"></a>構文
 
@@ -27,9 +28,9 @@ ms.locfileid: "65446201"
 /Zg
 ```
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-このコンパイラ オプションは使用できなくなりました。 Visual Studio 2015 で削除されました。 このページは、古いバージョンの Visual Studio のユーザーのままです。
+このコンパイラ オプションは使用できなくなりました。 これは Visual Studio 2015 で削除されました。 このページは、以前のバージョンの Visual Studio を使用しているユーザーのために残されています。
 
 関数プロトタイプには、この関数の戻り値の型と引数の型リストが含まれます。 引数の型リストは、関数の仮パラメーターの型から作成されます。 ソース ファイル内に既に存在する関数プロトタイプは無視されます。
 
@@ -44,17 +45,17 @@ typedef struct MyStruct { int i; } T2;
 void f2(T2 * t) {}
 ```
 
-**/Zg**オプションは Visual Studio 2005 で非推奨とされました、Visual Studio 2015 で削除されました。 MSVC コンパイラには、サポート、C スタイルの古いコードが削除されました。 非推奨のコンパイラ オプションの一覧は、次を参照してください。**非推奨とされた削除済みのコンパイラ オプション**で[Compiler Options Listed by Category](compiler-options-listed-by-category.md)します。
+**/Zg** オプションは visual studio 2005 で非推奨とされており、visual studio 2015 では削除されています。 MSVC コンパイラは、以前の C スタイルのコードのサポートを削除しました。 非推奨のコンパイラオプションの一覧については、「[カテゴリ別に一覧表示さ](compiler-options-listed-by-category.md)れたコンパイラオプションの **非推奨のコンパイラオプション**」を参照してください。
 
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境において、このコンパイラ オプションを設定する方法
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのコンパイラ オプションを設定するには
 
-1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。 [Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)します。
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、[Visual Studio での C++ コンパイラとビルド プロパティの設定](../working-with-project-properties.md)に関するページを参照してください。
 
 1. **[C/C++]** フォルダーをクリックします。
 
 1. **[コマンド ライン]** プロパティ ページをクリックします。
 
-1. **[追加のオプション]** ボックスにコンパイラ オプションを入力します。
+1. [追加のオプション]  ボックスにコンパイラ オプションを入力します。
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>このコンパイラ オプションをコードから設定するには
 
@@ -63,4 +64,4 @@ void f2(T2 * t) {}
 ## <a name="see-also"></a>関連項目
 
 [MSVC コンパイラ オプション](compiler-options.md)<br/>
-[MSVC コンパイラ コマンド ラインの構文](compiler-command-line-syntax.md)
+[MSVC Compiler Command-Line 構文](compiler-command-line-syntax.md)

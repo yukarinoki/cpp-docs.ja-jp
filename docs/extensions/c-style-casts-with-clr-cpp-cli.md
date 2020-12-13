@@ -1,16 +1,17 @@
 ---
+description: 詳細については、「/clr を使用した C スタイルのキャスト (C++/CLI)」を参照してください。
 title: C スタイル キャストと -clr (C++/CLI)
 ms.date: 10/12/2018
 ms.topic: reference
 helpviewer_keywords:
 - C-style casts and /clr
 ms.assetid: d2a4401a-156a-4da9-8d12-923743e26913
-ms.openlocfilehash: daaf92e36550c5479903dec4869b1cb116c0a65a
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: aedd794ca0f305f0cc292fb9048bd8dcceace7d0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87219795"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97176991"
 ---
 # <a name="c-style-casts-with-clr-ccli"></a>C スタイル キャストと /clr (C++/CLI)
 
@@ -60,7 +61,7 @@ int main() {
 }
 ```
 
-次のサンプルは、 **safe_cast**プラスにマップされる C スタイルのキャストを示して **`const_cast`** います。
+次のサンプルは、 **safe_cast** プラスにマップされる C スタイルのキャストを示して **`const_cast`** います。
 
 ```cpp
 // cstyle_casts_3.cpp
@@ -156,7 +157,7 @@ int main() {
 }
 ```
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 コンパイラ オプション: `/clr`
 

@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「コンパイラエラー C2247」を参照してください。
 title: コンパイラ エラー C2247
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2247
 ms.assetid: 72efa03e-615e-4ef9-aede-0a98654b20fd
-ms.openlocfilehash: e82b406b20d77a824b62207b1766fec55ac65c5c
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 480d3862a1f96517ecce11be5c695e106eb58d7e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74758906"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97177940"
 ---
 # <a name="compiler-error-c2247"></a>コンパイラ エラー C2247
 
 ' class ' は ' class ' から継承するために ' 指定子 ' を使用するため、' identifier ' にアクセスできません
 
-`identifier` は、private または protected アクセスで宣言されたクラスから継承されます。
+`identifier` は、プライベートまたは保護されたアクセスで宣言されたクラスから継承されます。
 
 次の例では、C2247 が生成されます。
 
@@ -34,7 +35,7 @@ int j = c.i;               // C2247, i not accessible
 
 このエラーは、Visual Studio .NET 2003 で実行されたコンパイラ準拠作業の結果として生成されることもあります。プロテクトメンバーによるアクセス制御。 プロテクトメンバー (n) は、(n) がメンバーであるクラス (A) から継承するクラス (B) のメンバー関数を介してのみアクセスできます。
 
-Visual Studio .NET 2003 と visual Studio .NET の両方のバージョンの Visual C++studio で有効なコードの場合は、メンバーを型のフレンドとして宣言します。 パブリック継承を使用することもできます。
+Visual Studio .NET 2003 と Visual Studio .NET の両方のバージョンの Visual C++ で有効なコードの場合は、メンバーを型のフレンドとして宣言します。 パブリック継承を使用することもできます。
 
 ```cpp
 // C2247b.cpp
@@ -59,7 +60,7 @@ void A::f() {
 
 C2247 は、Visual Studio .NET 2003 で実行されたコンパイラ準拠作業の結果として生成することもできます。プライベート基本クラスにアクセスできなくなりました。 型 (B) のプライベート基本クラスであるクラス (A) は、B を基底クラスとして使用する型 (C) にアクセスできないようにする必要があります。
 
-Visual Studio .NET 2003 と visual Studio .NET の両方のバージョンの Visual C++studio で有効なコードについては、scope 演算子を使用します。
+Visual Studio .NET 2003 と Visual Studio .NET の両方のバージョンの Visual C++ で有効なコードについては、scope 演算子を使用します。
 
 ```cpp
 // C2247c.cpp

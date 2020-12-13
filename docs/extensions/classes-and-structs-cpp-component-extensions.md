@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: ref クラスと ref 構造体 (C++/CLI および C++/CX)'
 title: ref class と ref struct (C++/CLI および C++/CX)
 ms.date: 05/30/2019
 ms.topic: reference
@@ -13,16 +14,16 @@ helpviewer_keywords:
 - value struct keyword [C++]
 - ref struct keyword [C++]
 ms.assetid: 5c360764-b229-49c6-9357-66213afbc372
-ms.openlocfilehash: 1ec29dcc09cd338136102c0f3b769055d5143973
-ms.sourcegitcommit: b492516cc65120250b9ea23f96f7f63f37f99fae
+ms.openlocfilehash: 633314e27118cfceddef449ab944c6dd0dbc4f9a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/14/2020
-ms.locfileid: "90075804"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97176978"
 ---
 # <a name="ref-class-and-ref-struct--ccli-and-ccx"></a>ref class と ref struct (C++/CLI および C++/CX)
 
-**ref class** または **ref struct** 拡張機能は、その*オブジェクトの有効期間*が自動的に管理されるクラスまたは構造体を宣言します。 オブジェクトがアクセスできなくなるかスコープ外になると、そのメモリが解放されます。
+**ref class** または **ref struct** 拡張機能は、その *オブジェクトの有効期間* が自動的に管理されるクラスまたは構造体を宣言します。 オブジェクトがアクセスできなくなるかスコープ外になると、そのメモリが解放されます。
 
 ## <a name="all-runtimes"></a>すべてのランタイム
 
@@ -56,7 +57,7 @@ class_access value struct name modifier : inherit_access base_type {};
 
 ### <a name="remarks"></a>解説
 
-**Ref クラス**または**値クラス**で宣言されたオブジェクトの既定のメンバーアクセシビリティは **`private`** です。 また、 **ref 構造** 体または **値構造体** で宣言されたオブジェクトの既定のメンバーアクセシビリティは **`public`** です。
+**Ref クラス** または **値クラス** で宣言されたオブジェクトの既定のメンバーアクセシビリティは **`private`** です。 また、 **ref 構造** 体または **値構造体** で宣言されたオブジェクトの既定のメンバーアクセシビリティは **`public`** です。
 
 参照型が別の参照型から継承される場合、基底クラスの仮想関数は ([override](override-cpp-component-extensions.md) を使用して) 明示的にオーバーライドするか、([new (vtable の新しいスロット)](new-new-slot-in-vtable-cpp-component-extensions.md) を使用して) 非表示にする 必要があります。 派生クラスの関数も、として明示的にマークする必要があり **`virtual`** ます。
 

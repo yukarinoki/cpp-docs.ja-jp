@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: _fpreset'
 title: _fpreset
 ms.date: 04/05/2018
 api_name:
@@ -27,12 +28,12 @@ helpviewer_keywords:
 - floating-point numbers, resetting math package
 - _fpreset function
 ms.assetid: f31c6a04-b464-4f07-a7c4-42133360e328
-ms.openlocfilehash: 842b9c794d04d71f8f6ca97e35fb3cac2f7bb1ec
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 7818e0f02f6165c5041245e342a81b1dde25b091
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957012"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97178694"
 ---
 # <a name="_fpreset"></a>_fpreset
 
@@ -44,19 +45,19 @@ ms.locfileid: "70957012"
 void _fpreset( void );
 ```
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-**_Fpreset**関数は、浮動小数点数値演算パッケージを再初期化します。 **_fpreset**は通常、 **signal**、 **system**、または **_exec**関数または **_spawn**関数と共に使用されます。 プログラムが**シグナル**で浮動小数点エラー信号 (**SIGFPE**) をトラップする場合、 **_fpreset**を呼び出し、 **longjmp**を使用して、浮動小数点エラーから安全に復旧できます。
+**_Fpreset** 関数は、浮動小数点数値演算パッケージを再初期化します。 **_fpreset** は通常、 **signal**、 **system**、 **_exec** または **_spawn** 関数と共に使用されます。 プログラムが **シグナル** で浮動小数点エラー信号 (**SIGFPE**) をトラップする場合、 **_fpreset** を呼び出して **longjmp** を使用することにより、浮動小数点エラーから安全に復旧できます。
 
-共通言語ランタイムは浮動小数点の既定の精度のみをサポートするため、 [/clr (共通言語ランタイムのコンパイル)](../../build/reference/clr-common-language-runtime-compilation.md)を使用してコンパイルする場合、この関数は非推奨とされます。
+共通言語ランタイムは浮動小数点の既定の精度のみをサポートするため、 [/clr (共通言語ランタイムのコンパイル)](../../build/reference/clr-common-language-runtime-compilation.md) を使用してコンパイルする場合、この関数は非推奨とされます。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-|関数|必須ヘッダー|
+|機能|必須ヘッダー|
 |--------------|---------------------|
 |**_fpreset**|\<float.h>|
 
-互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性について詳しくは、「 [Compatibility](../../c-runtime-library/compatibility.md)」をご覧ください。
 
 ## <a name="example"></a>例
 
@@ -174,8 +175,8 @@ Error 131: Divide by zero
 
 ## <a name="see-also"></a>関連項目
 
-[浮動小数点サポート](../../c-runtime-library/floating-point-support.md)<br/>
-[_exec、_wexec 系関数](../../c-runtime-library/exec-wexec-functions.md)<br/>
+[浮動小数点のサポート](../../c-runtime-library/floating-point-support.md)<br/>
+[_exec, _wexec 関数](../../c-runtime-library/exec-wexec-functions.md)<br/>
 [signal](signal.md)<br/>
-[_spawn 系関数と _wspawn 系関数](../../c-runtime-library/spawn-wspawn-functions.md)<br/>
+[_spawn, _wspawn 関数](../../c-runtime-library/spawn-wspawn-functions.md)<br/>
 [system、_wsystem](system-wsystem.md)<br/>

@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: ユーティリティ (STL/CLR)'
 title: utility (STL/CLR)
 ms.date: 11/04/2016
 ms.topic: reference
@@ -39,12 +40,12 @@ helpviewer_keywords:
 - operator<= member [STL/CLR]
 - operator< member [STL/CLR]
 ms.assetid: fb48cb75-d5ef-47ce-b526-bf60dc86c552
-ms.openlocfilehash: faf7f607f9433fa3e4813957b24220a5e66e1e49
-ms.sourcegitcommit: 43cee7a0d41a062661229043c2f7cbc6ace17fa3
+ms.openlocfilehash: cb55acec88ca7b687ca7ad7790c4b0073944c0c4
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92008620"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97177992"
 ---
 # <a name="utility-stlclr"></a>utility (STL/CLR)
 
@@ -175,7 +176,7 @@ typedef Value1 first_type;
 
 ### <a name="remarks"></a>解説
 
-この型は、テンプレートパラメーター *Value1*のシノニムです。
+この型は、テンプレートパラメーター *Value1* のシノニムです。
 
 ### <a name="example"></a>例
 
@@ -217,7 +218,7 @@ pair<Value1, Value2>% operator=(pair<Value1, Value2>% right);
 
 ### <a name="remarks"></a>解説
 
-メンバー演算子は、オブジェクトに *right* をコピーし、を返し **`*this`** ます。 格納されている値のペアを、格納され *ている値*のペアのコピーに置き換えるために使用します。
+メンバー演算子は、オブジェクトに *right* をコピーし、を返し **`*this`** ます。 格納されている値のペアを、格納され *ている値* のペアのコピーに置き換えるために使用します。
 
 ### <a name="example"></a>例
 
@@ -290,7 +291,7 @@ pair(Value1 val1, Value2 val2);
 
 `pair(Value1 val1, Value2 val2);`
 
-*val1*と*val2*を使用して、格納されているペアを初期化します。
+*val1* と *val2* を使用して、格納されているペアを初期化します。
 
 ### <a name="example"></a>例
 
@@ -378,7 +379,7 @@ typedef Value2 second_type;
 
 ### <a name="remarks"></a>解説
 
-この型は、テンプレートパラメーター *Value2*のシノニムです。
+この型は、テンプレートパラメーター *Value2* のシノニムです。
 
 ### <a name="example"></a>例
 
@@ -420,7 +421,7 @@ void swap(pair<Value1, Value2>% right);
 
 ### <a name="remarks"></a>解説
 
-このメンバー関数は、との間に格納されている値のペアを交換し **`*this`** ます。 *right*
+このメンバー関数は、との間に格納されている値のペアを交換し **`*this`** ます。 
 
 ### <a name="example"></a>例
 
@@ -656,7 +657,7 @@ template<typename Value1,
 
 ### <a name="remarks"></a>解説
 
-演算子関数はを返し `!(right < left)` ます。 このメソッドを使用して、2つのペアが要素ごとに比較されたときに、 *right*の後に*left*が順序付けされていないかどうかをテストします。
+演算子関数はを返し `!(right < left)` ます。 このメソッドを使用して、2つのペアが要素ごとに比較されたときに、 *right* の後に *left* が順序付けされていないかどうかをテストします。
 
 ### <a name="example"></a>例
 
@@ -764,7 +765,7 @@ template<typename Value1,
 
 ### <a name="remarks"></a>解説
 
-演算子関数はを返し `right` `<` `left` ます。 このメソッドを使用して、2つのペアが要素によって比較されたときに、*右側*の順序が並べ替えられて*いるかどう*かをテストします。
+演算子関数はを返し `right` `<` `left` ます。 このメソッドを使用して、2つのペアが要素によって比較されたときに、*右側* の順序が並べ替えられて *いるかどう* かをテストします。
 
 ### <a name="example"></a>例
 
