@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: OLE DB レコードビューの使用'
 title: OLE DB レコード ビューの使用
 ms.date: 10/24/2018
 helpviewer_keywords:
@@ -9,16 +10,16 @@ helpviewer_keywords:
 - OLE DB, record views
 - MFC, record views
 ms.assetid: 1cd3e595-ce08-43d8-a0a9-d03b5d3e24ce
-ms.openlocfilehash: 83f4d64252ab5c2b80d62419ea448c1ffd0cdd69
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8230ba118038852f81159d21a51165b7448a26aa
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62375185"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97332456"
 ---
 # <a name="using-ole-db-record-views"></a>OLE DB レコード ビューの使用
 
-MFC アプリケーションで OLE DB 行セットのデータを表示する場合は、MFC クラスを使用して[COleDBRecordView](../../mfc/reference/coledbrecordview-class.md)します。 レコード ビュー オブジェクトから作成`COleDBRecordView`MFC コントロールでのデータベース レコードを表示することができます。 レコード ビューが作成された OLE DB 行セット オブジェクトに直接接続ダイアログ フォーム ビュー、`CRowset`テンプレート クラス。 行セット オブジェクトを識別するハンドルを取得するは簡単です。
+MFC アプリケーションで OLE DB 行セットデータを表示する場合は、MFC クラスの [Cobf Brecordview](../../mfc/reference/coledbrecordview-class.md)を使用します。 から作成されたレコードビューオブジェクトを `COleDBRecordView` 使用すると、MFC コントロールにデータベースレコードを表示できます。 レコードビューは、テンプレートクラスから作成された OLE DB 行セットオブジェクトに直接接続されたダイアログフォームビューです `CRowset` 。 行セットオブジェクトへのハンドルの取得は簡単です。
 
 ```cpp
 COleDBRecordView myRecordView;
@@ -27,11 +28,11 @@ COleDBRecordView myRecordView;
 CRowset<CAccessor<CProductAccessor>> myRowSet = myRecordView.OnGetRowset();
 ```
 
-ビューのフィールドの表示、 `CRowset`  ダイアログ ボックスのコントロール内のオブジェクト。 `COleDBRecordView`オブジェクトは、ダイアログ Data Exchange (DDX) を使用し、ナビゲーションの機能に組み込まれて`CRowset`(`MoveFirst`、 `MoveNext`、 `MovePrev`、および`MoveLast`)、フォーム上のコントロール間のデータの移動を自動化するには行セットのフィールド。 `COleDBRecordView` レコード ビューは、ユーザー インターフェイスと提供を更新できるようにに、行セット内のユーザーの位置はの追跡、 [OnMove](../../mfc/reference/coledbrecordview-class.md#onmove)間で移動する前に、現在のレコードを更新するためのメソッド。
+ビューには、ダイアログのコントロール内のオブジェクトのフィールドが表示され `CRowset` ます。 オブジェクトは、 `COleDBRecordView` ダイアログデータエクスチェンジ (DDX) と、(、、、および) に組み込まれているナビゲーション機能を使用して、 `CRowset` `MoveFirst` `MoveNext` `MovePrev` `MoveLast` フォーム上のコントロールと行セットのフィールドの間でのデータの移動を自動化します。 `COleDBRecordView` レコードビューがユーザーインターフェイスを更新し、別のレコードに移動する前に現在のレコードを更新するための [OnMove](../../mfc/reference/coledbrecordview-class.md#onmove) メソッドを提供できるように、行セット内のユーザーの位置を追跡します。
 
-DDX 関数を使用する`COleDbRecordView`をデータベースのレコード セットから直接データを取得し、ダイアログ コントロールに表示します。 使用して、 **DDX_** <strong>\*</strong>メソッド (など`DDX_Text`) ではなく、 **DDX_Field** <strong>\*</strong> (関数など`DDX_FieldText`) と`COleDbRecordView`します。
+と共に DDX 関数を使用すると `COleDbRecordView` 、データベースレコードセットから直接データを取得し、ダイアログコントロールに表示できます。  <strong>\*</strong> DDX_Field 関数 (など) ではなく、DDX_ メソッド (など) を使用 `DDX_Text`  <strong>\*</strong> `DDX_FieldText` `COleDbRecordView` します。
 
 ## <a name="see-also"></a>関連項目
 
 [アクセサーの使用](../../data/oledb/using-accessors.md)<br/>
-[COleDBRecordView クラス](../../mfc/reference/coledbrecordview-class.md)<br/>
+[Cobf Brecordview クラス](../../mfc/reference/coledbrecordview-class.md)<br/>

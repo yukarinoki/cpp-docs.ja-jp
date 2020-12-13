@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: CMultiPageDHtmlDialog クラス'
 title: CMultiPageDHtmlDialog クラス
 ms.date: 03/27/2019
 f1_keywords:
@@ -8,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - CMultiPageDHtmlDialog [MFC], CMultiPageDHtmlDialog
 ms.assetid: 971accc1-824d-4df4-b4c1-b1a20e0f7e4f
-ms.openlocfilehash: 89e4830c3b5c6cb663ca2d2935adaaae3f356958
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 1f7f8c2081687c71a98e427bb5396cfa47a73deb
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81319665"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97331524"
 ---
 # <a name="cmultipagedhtmldialog-class"></a>CMultiPageDHtmlDialog クラス
 
@@ -31,22 +32,22 @@ class CMultiPageDHtmlDialog : public CDHtmlDialog
 
 |名前|説明|
 |----------|-----------------|
-|[ダイアログボックス:::ページドHtmlダイアログ](#cmultipagedhtmldialog)|マルチページ (ウィザード スタイルの) DHTML ダイアログ オブジェクトを構築します。|
-|[ダイアログボックス::~CMultiページドHtmlダイアログ](#_dtorcmultipagedhtmldialog)|複数ページの DHTML ダイアログ オブジェクトを破棄します。|
+|[CMultiPageDHtmlDialog::CMultiPageDHtmlDialog](#cmultipagedhtmldialog)|マルチページ (ウィザードスタイル) DHTML ダイアログオブジェクトを構築します。|
+|[CMultiPageDHtmlDialog:: ~ CMultiPageDHtmlDialog](#_dtorcmultipagedhtmldialog)|マルチページ DHTML ダイアログオブジェクトを破棄します。|
 
 ## <a name="remarks"></a>解説
 
-これを行うためのメカニズムは、各ページの埋め込みイベント マップを含む[DHTML と URL](dhtml-event-maps.md)イベント マップです。
+これを行うためのメカニズムは、各ページの埋め込みイベントマップを含む [DHTML および URL イベントマップ](dhtml-event-maps.md)です。
 
 ## <a name="example"></a>例
 
-この複数ページのダイアログでは、ウィザードのような単純な機能を定義する 3 つの HTML リソースを想定しています。 最初のページには **[次へ**]ボタン、2 番目の[**前へ**]ボタンと **[次へ**]ボタン、3 番目の[**前**へ]ボタンがあります。 ボタンの 1 つが押されると、ハンドラー関数が[CDHtmlDialog::LoadFromResource](../../mfc/reference/cdhtmldialog-class.md#loadfromresource)を呼び出して、適切な新しいページを読み込みます。
+このマルチページダイアログでは、ウィザードに似たシンプルな機能を定義する3つの HTML リソースが想定されています。 最初のページには、 **[次へ** ] ボタン、2番目の [ **前** へ] ボタン、 **[次へ** ] ボタン、3番目の [ **前** へ] ボタンがあります。 いずれかのボタンが押されると、ハンドラー関数は [CDHtmlDialog:: LoadFromResource](../../mfc/reference/cdhtmldialog-class.md#loadfromresource) を呼び出して、適切な新しいページを読み込みます。
 
-クラス宣言の関連部分 (CMyMultiPageDlg.h)
+クラス宣言の関連部分 (CMyMultiPageDlg 内):
 
 [!code-cpp[NVC_MFCDocView#181](../../mfc/codesnippet/cpp/cmultipagedhtmldialog-class_1.h)]
 
-クラス実装の関連部分 (CMyMultipageDlg.cpp で):
+クラス実装の関連部分 (CMyMultipageDlg 内):
 
 [!code-cpp[NVC_MFCDocView#182](../../mfc/codesnippet/cpp/cmultipagedhtmldialog-class_2.cpp)]
 
@@ -72,13 +73,13 @@ class CMultiPageDHtmlDialog : public CDHtmlDialog
 
 `CMultiPageDHtmlDialog`
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-**ヘッダー:** afxdhtml.h
+**ヘッダー:** afxdhtml
 
-## <a name="cmultipagedhtmldialogcmultipagedhtmldialog"></a><a name="cmultipagedhtmldialog"></a>ダイアログボックス:::ページドHtmlダイアログ
+## <a name="cmultipagedhtmldialogcmultipagedhtmldialog"></a><a name="cmultipagedhtmldialog"></a> CMultiPageDHtmlDialog::CMultiPageDHtmlDialog
 
-マルチページ (ウィザード スタイルの) DHTML ダイアログ オブジェクトを構築します。
+マルチページ (ウィザードスタイル) DHTML ダイアログオブジェクトを構築します。
 
 ```
 CMultiPageDHtmlDialog(
@@ -96,24 +97,24 @@ CMultiPageDHtmlDialog();
 
 ### <a name="parameters"></a>パラメーター
 
-*テンプレート名*<br/>
-ダイアログ ボックス テンプレート リソースの名前である null で終わる文字列。
+*lpszTemplateName*<br/>
+ダイアログボックステンプレートリソースの名前である null で終わる文字列。
 
-*を返します。*<br/>
-HTML リソースの名前である null で終わる文字列。
+*szHtmlResID*<br/>
+HTML リソースの名前を表す null で終わる文字列。
 
 *pParentWnd*<br/>
-ダイアログ オブジェクトが属する親ウィンドウ オブジェクトまたはオーナー ウィンドウ オブジェクト ( [CWnd](../../mfc/reference/cwnd-class.md)型 ) へのポインター。 NULL の場合、ダイアログ オブジェクトの親ウィンドウはメイン アプリケーション ウィンドウに設定されます。
+ダイアログオブジェクトが属する親またはオーナーウィンドウオブジェクト ( [CWnd](../../mfc/reference/cwnd-class.md)型) へのポインター。 NULL の場合は、ダイアログオブジェクトの親ウィンドウがメインアプリケーションウィンドウに設定されます。
 
-*テンプレート*<br/>
-ダイアログ ボックス テンプレート リソースの ID 番号を格納します。
+*nIDTemplate*<br/>
+ダイアログボックステンプレートリソースの ID 番号を格納します。
 
-*を返します。*<br/>
+*nHtmlResID*<br/>
 HTML リソースの ID 番号を格納します。
 
-## <a name="cmultipagedhtmldialogcmultipagedhtmldialog"></a><a name="_dtorcmultipagedhtmldialog"></a>ダイアログボックス::~CMultiページドHtmlダイアログ
+## <a name="cmultipagedhtmldialogcmultipagedhtmldialog"></a><a name="_dtorcmultipagedhtmldialog"></a> CMultiPageDHtmlDialog:: ~ CMultiPageDHtmlDialog
 
-複数ページの DHTML ダイアログ オブジェクトを破棄します。
+マルチページ DHTML ダイアログオブジェクトを破棄します。
 
 ```
 virtual ~CMultiPageDHtmlDialog();

@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: CMonthCalCtrl クラス'
 title: CMonthCalCtrl クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -90,12 +91,12 @@ helpviewer_keywords:
 - CMonthCalCtrl [MFC], SizeMinReq
 - CMonthCalCtrl [MFC], SizeRectToMin
 ms.assetid: a42f6bd6-ab5c-4335-82f8-839982fc64a2
-ms.openlocfilehash: d986aa5f8e232f0ab94858dbdfae5754536ccdb9
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: 4c4c4684167a9c1c569f69f582688b294ac95233
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88562143"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97331594"
 ---
 # <a name="cmonthcalctrl-class"></a>CMonthCalCtrl クラス
 
@@ -187,7 +188,7 @@ class CMonthCalCtrl : public CWnd
 
 `CMonthCalCtrl`
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** afxdtctl
 
@@ -345,7 +346,7 @@ CALID GetCalID() const;
 
 ## <a name="cmonthcalctrlgetcolor"></a><a name="getcolor"></a> CMonthCalCtrl:: GetColor
 
-*Nregion*によって指定された月間予定表コントロールの領域の色を取得します。
+*Nregion* によって指定された月間予定表コントロールの領域の色を取得します。
 
 ```
 COLORREF GetColor(int nRegion) const;
@@ -354,7 +355,7 @@ COLORREF GetColor(int nRegion) const;
 ### <a name="parameters"></a>パラメーター
 
 *nRegion*<br/>
-色の取得元となる月間予定表コントロールの領域。 値の一覧については、 [Setcolor](#setcolor)の*nregion*パラメーターを参照してください。
+色の取得元となる月間予定表コントロールの領域。 値の一覧については、 [Setcolor](#setcolor)の *nregion* パラメーターを参照してください。
 
 ### <a name="return-value"></a>戻り値
 
@@ -372,7 +373,7 @@ DWORD GetCurrentView() const;
 
 現在のビューは、次のいずれかの値によって示されます。
 
-|値|意味|
+|値|説明|
 |-----------|-------------|
 |MCMV_MONTH|月単位のビュー|
 |MCMV_YEAR|年間ビュー|
@@ -586,7 +587,7 @@ int GetMonthRange(
 *dwFlags*<br/>
 取得する範囲の制限のスコープを指定する値。 この値は、次のいずれかである必要があります。
 
-|値|意味|
+|値|説明|
 |-----------|-------------|
 |GMR_DAYSTATE|部分的に表示される表示範囲の前後の月を含めます。|
 |GMR_VISIBLE|完全に表示されている月だけを含めます。|
@@ -633,7 +634,7 @@ DWORD GetRange(
 
 0 (制限は設定されません) または制限情報を指定する次の値の組み合わせを指定できる DWORD。
 
-|値|意味|
+|値|説明|
 |-----------|-------------|
 |GDTR_MAX|コントロールに対して最大値が設定されています。 *pMaxRange* は有効で、該当する日付情報が含まれています。|
 |GDTR_MIN|コントロールに対して最小制限を設定します。 *pMinRange* は有効で、該当する日付情報が含まれています。|
@@ -914,7 +915,7 @@ COLORREF SetColor(
 *nRegion*<br/>
 設定する月のカレンダーの色を指定する整数値。 この値には、次のいずれかを指定できます。
 
-|値|意味|
+|値|説明|
 |-----------|-------------|
 |MCSC_BACKGROUND|月の間に表示される背景色。|
 |MCSC_MONTHBK|月内に表示される背景色。|
@@ -1007,7 +1008,7 @@ BOOL SetDayState(
 ### <a name="parameters"></a>パラメーター
 
 *nMonths*<br/>
-*Pstates*が指す配列内の要素の数を示す値。
+*Pstates* が指す配列内の要素の数を示す値。
 
 *pStates*<br/>
 月間予定表コントロールが各日を表示する方法を定義する、値の [MONTHDAYSTATE](/windows/win32/Controls/monthdaystate) 配列へのポインター。 MONTHDAYSTATE データ型はビットフィールドで、各ビット (1 ~ 31) は月の1日の状態を表します。 ビットがオンの場合は、対応する日が太字で表示されます。それ以外の場合は、何も強調表示されません。
@@ -1294,7 +1295,7 @@ LPRECT SizeRectToMin(LPRECT lpRect);
 
 ### <a name="return-value"></a>戻り値
 
-サイズが*lpRect*パラメーターで定義された四角形以下である四角形を定義する[RECT](/windows/win32/api/windef/ns-windef-rect)構造体へのポインター。
+サイズが *lpRect* パラメーターで定義された四角形以下である四角形を定義する [RECT](/windows/win32/api/windef/ns-windef-rect)構造体へのポインター。
 
 ### <a name="remarks"></a>解説
 

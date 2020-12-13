@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: isinf'
 title: isinf
 ms.date: 01/31/2019
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 - math/isinf
 helpviewer_keywords:
 - isinf function
-ms.openlocfilehash: 7366f340477bf1bb50ebe1e53bcec1f3e16e0863
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: f174855ddbb8cc43fd7338d4254c0f03bf53967d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87234095"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97332637"
 ---
 # <a name="isinf"></a>isinf
 
@@ -37,13 +38,13 @@ inline bool isinf(
 
 ## <a name="return-value"></a>戻り値
 
-**isinf** **`true`** 引数*x*が正または負の無限大の場合、isinf は (C++ コードでは) 0 以外の値を返します。 引数が有限または NAN の場合、 **isinf**は 0 ( **`false`** C++ コード内) を返します。 法線と subnormal の両方の浮動小数点値は、有限と見なされます。
+ **`true`** 引数 *x* が正または負の無限大の場合、isinf は (C++ コードでは) 0 以外の値を返します。 引数が有限または NAN の場合、 **isinf** は 0 ( **`false`** C++ コード内) を返します。 法線と subnormal の両方の浮動小数点値は、有限と見なされます。
 
 ## <a name="remarks"></a>解説
 
-**isinf**は、c としてコンパイルされた場合はマクロ、C++ としてコンパイルされた場合はインラインテンプレート関数です。
+**isinf** は、c としてコンパイルされた場合はマクロ、C++ としてコンパイルされた場合はインラインテンプレート関数です。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 |機能|必須ヘッダー (C)|必須ヘッダー (C++)|
 |--------------|---------------------------|-------------------------------|

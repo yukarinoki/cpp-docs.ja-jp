@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: _cscanf、_cscanf_l、_cwscanf、_cwscanf_l'
 title: _cscanf、_cscanf_l、_cwscanf、_cwscanf_l
 ms.date: 10/21/2019
 api_name:
@@ -48,19 +49,19 @@ helpviewer_keywords:
 - reading data [C++], from the console
 - _cwscanf_l function
 ms.assetid: dbfe7547-b577-4567-a1cb-893fa640e669
-ms.openlocfilehash: 45dcbd93ab689c8c86ab35e53552a65f561dfd18
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 65c025c7a02c0bd9493bcaf8d6ff0e29c6c7a217
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87234251"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97332921"
 ---
 # <a name="_cscanf-_cscanf_l-_cwscanf-_cwscanf_l"></a>_cscanf、_cscanf_l、_cwscanf、_cwscanf_l
 
 コンソールから書式化されたデータを読み出します。 これらの関数のセキュリティを強化したバージョンを使用できます。「[_cscanf_s、_cscanf_s_l、_cwscanf_s、_cwscanf_s_l](cscanf-s-cscanf-s-l-cwscanf-s-cwscanf-s-l.md)」を参照してください。
 
 > [!NOTE]
-> Visual Studio 2015 では `printf` 、 `scanf` 関数のとファミリはとして宣言され **`inline`** 、との各ヘッダーに移動されました `<stdio.h>` `<conio.h>` 。 古いコードを移行する場合、これらの関数との接続に*LNK2019*が表示されることがあります。 詳細については、「 [Visual C++ change history 2003-2015](../../porting/visual-cpp-change-history-2003-2015.md#stdio_and_conio)」を参照してください。
+> Visual Studio 2015 では `printf` 、 `scanf` 関数のとファミリはとして宣言され **`inline`** 、との各ヘッダーに移動されました `<stdio.h>` `<conio.h>` 。 古いコードを移行する場合、これらの関数との接続に *LNK2019* が表示されることがあります。 詳細については、「 [Visual C++ change history 2003-2015](../../porting/visual-cpp-change-history-2003-2015.md#stdio_and_conio)」を参照してください。
 
 > [!IMPORTANT]
 > この API は、Windows ランタイムで実行するアプリケーションでは使用できません。 詳細については、「[ユニバーサル Windows プラットフォーム アプリでサポートされていない CRT 関数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)」を参照してください。
@@ -101,15 +102,15 @@ int _cwscanf_l(
 
 ## <a name="return-value"></a>戻り値
 
-正常に変換され、割り当てられたフィールドの数。 戻り値には、読まれたが割り当てられなかったフィールドは含まれません。 ファイルの終端で読み取ろうとした場合、戻り値は**EOF**です。 これは、キーボード入力がオペレーティング システムのコマンド ラインのレベルでリダイレクトされる場合に発生します。 戻り値が 0 の場合は、代入されたフィールドがなかったことを意味します。
+正常に変換され、割り当てられたフィールドの数。 戻り値には、読まれたが割り当てられなかったフィールドは含まれません。 ファイルの終端で読み取ろうとした場合、戻り値は **EOF** です。 これは、キーボード入力がオペレーティング システムのコマンド ラインのレベルでリダイレクトされる場合に発生します。 戻り値が 0 の場合は、代入されたフィールドがなかったことを意味します。
 
 ## <a name="remarks"></a>解説
 
-**_Cscanf**関数は、コンソールから、*引数*によって指定された場所にデータを直接読み取ります。 [_getche](getch-getwch.md) 関数は文字を読み取るために使用されます。 省略可能な各パラメーターは、*形式*の型指定子に対応する型を持つ変数へのポインターである必要があります。 この形式は、入力フィールドの解釈を制御し、 [scanf](scanf-scanf-l-wscanf-wscanf-l.md)関数の*format*パラメーターと同じ形式と機能を持ちます。 **_Cscanf**は通常、入力文字をエコーしますが、最後の呼び出しが **_ungetch**された場合は無効になります。
+**_Cscanf** 関数は、コンソールから、*引数* によって指定された場所にデータを直接読み取ります。 [_getche](getch-getwch.md) 関数は文字を読み取るために使用されます。 省略可能な各パラメーターは、 *形式* の型指定子に対応する型を持つ変数へのポインターである必要があります。 この形式は、入力フィールドの解釈を制御し、 [scanf](scanf-scanf-l-wscanf-wscanf-l.md)関数の *format* パラメーターと同じ形式と機能を持ちます。 **_Cscanf** は通常、入力文字をエコーしますが、最後の呼び出しが **_ungetch** された場合は無効になります。
 
-この関数は、パラメーターを検証します。 Format が**NULL**の場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、 **errno**は**EINVAL**に設定され、関数は**EOF**を返します。
+この関数は、パラメーターを検証します。 Format が **NULL** の場合は、「 [パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、 **errno** は **EINVAL** に設定され、関数は **EOF** を返します。
 
-**_L**サフィックスを持つこれらの関数のバージョンは、現在のスレッドロケールの代わりに渡されたロケールパラメーターを使用する点を除いて同じです。
+**_L** サフィックスを持つこれらの関数のバージョンは、現在のスレッドロケールの代わりに渡されたロケールパラメーターを使用する点を除いて同じです。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 

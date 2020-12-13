@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: _isctype、iswctype、_isctype_l、_iswctype_l'
 title: _isctype、iswctype、_isctype_l、_iswctype_l
 ms.date: 4/2/2020
 api_name:
@@ -46,16 +47,16 @@ helpviewer_keywords:
 - isctype function
 - _iswctype function
 ms.assetid: cf7509b7-12fc-4d95-8140-ad2eb98173d3
-ms.openlocfilehash: 2261eab574a8bc206a02f9e505beff88cf4c7fcf
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 2b8bd10cd4240e4382d17cb8028589ddf4dd8b2d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82918953"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97332669"
 ---
 # <a name="_isctype-iswctype-_isctype_l-_iswctype_l"></a>_isctype、iswctype、_isctype_l、_iswctype_l
 
-*Desc*引数で指定された ctype プロパティについて*c*をテストします。 *Desc*の有効な値ごとに、同等のワイド文字分類ルーチンがあります。
+*Desc* 引数で指定された ctype プロパティについて *c* をテストします。 *Desc* の有効な値ごとに、同等のワイド文字分類ルーチンがあります。
 
 ## <a name="syntax"></a>構文
 
@@ -82,7 +83,7 @@ int _iswctype_l(
 
 ### <a name="parameters"></a>パラメーター
 
-*40u-c*<br/>
+*c*<br/>
 テストする整数。
 
 *順*<br/>
@@ -93,9 +94,9 @@ int _iswctype_l(
 
 ## <a name="return-value"></a>戻り値
 
-現在のロケールで*desc*によって指定されたプロパティが*c*にある場合、 **_isctype**と**iswctype**は0以外の値を返します。それ以外の場合は0を返します。 **_L**サフィックスを持つこれらの関数のバージョンは同じですが、ロケールに依存する動作に現在のロケールではなく渡されたロケールを使用する点が異なります。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
+現在のロケールで *desc* によって指定されたプロパティが *c* にある場合、 **_isctype** と **iswctype** は0以外の値を返します。それ以外の場合は0を返します。 **_L** サフィックスを持つこれらの関数のバージョンは同じですが、ロケールに依存する動作に現在のロケールではなく渡されたロケールを使用する点が異なります。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
 
-*C*が EOF でない場合、または 0 ~ 0xff の範囲内にある場合、 **_isctype**と **_isctype_l**の動作は未定義です。 デバッグ CRT ライブラリが使用され、 *c*がこれらの値のいずれでもない場合、関数はアサーションを発生させます。
+*C* が EOF でない場合、または 0 ~ 0xff の範囲内にある場合、 **_isctype** と **_isctype_l** の動作は未定義です。 デバッグ CRT ライブラリが使用され、 *c* がこれらの値のいずれでもない場合、関数はアサーションを発生させます。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -110,7 +111,7 @@ int _iswctype_l(
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**_isctype**|\<ctype.h>|
 |**iswctype**|\<ctype.h> または \<wchar.h>|
@@ -126,5 +127,5 @@ int _iswctype_l(
 ## <a name="see-also"></a>関連項目
 
 [文字分類](../../c-runtime-library/character-classification.md)<br/>
-[国](../../c-runtime-library/locale.md)<br/>
-[is、isw 系ルーチン](../../c-runtime-library/is-isw-routines.md)<br/>
+[ロケール](../../c-runtime-library/locale.md)<br/>
+[is、isw ルーチン](../../c-runtime-library/is-isw-routines.md)<br/>

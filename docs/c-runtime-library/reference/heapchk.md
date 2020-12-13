@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: _heapchk'
 title: _heapchk
 ms.date: 4/2/2020
 api_name:
@@ -31,12 +32,12 @@ helpviewer_keywords:
 - heaps, checking consistency
 - _heapchk function
 ms.assetid: 859619a5-1e35-4f02-9e09-11d9fa266ec0
-ms.openlocfilehash: 2ddbdaec5861d48cc23a7cbcd28332e8c06ebbfe
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 57cde789c8d6e6b8c8da91adf4a6f274ce557ed7
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82916210"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97332799"
 ---
 # <a name="_heapchk"></a>_heapchk
 
@@ -50,7 +51,7 @@ int _heapchk( void );
 
 ## <a name="return-value"></a>戻り値
 
-**_heapchk**は、Malloc で定義されている次の整数のマニフェスト定数のいずれかを返します。
+**_heapchk** は、Malloc で定義されている次の整数のマニフェスト定数のいずれかを返します。
 
 |戻り値|条件|
 |-|-|
@@ -60,17 +61,17 @@ int _heapchk( void );
 | **_HEAPEMPTY** | ヒープが初期化されていません。 |
 | **_HEAPOK** | ヒープは一貫性があると思われます。 |
 
-さらに、エラーが発生した場合は、 **_heapchk** **errno**をに設定**します。**
+さらに、エラーが発生した場合は、 **_heapchk** **errno** をに設定 **します。**
 
 ## <a name="remarks"></a>解説
 
-**_Heapchk**関数は、ヒープの最小限の一貫性をチェックすることにより、ヒープ関連の問題をデバッグするのに役立ちます。 オペレーティングシステムが **_heapchk**(Windows 98 など) をサポートしていない場合、この関数は **_HEAPOK**を返し、 **errno** **をに設定**します。
+**_Heapchk** 関数は、ヒープの最小限の一貫性をチェックすることにより、ヒープ関連の問題をデバッグするのに役立ちます。 オペレーティングシステムが **_heapchk**(Windows 98 など) をサポートしていない場合、この関数は **_HEAPOK** を返し、 **errno** **をに設定** します。
 
 既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|オプション ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|オプション ヘッダー|
 |-------------|---------------------|---------------------|
 |**_heapchk**|\<malloc.h>|\<errno.h>|
 

@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: iscntrl、iswcntrl、_iscntrl_l、_iswcntrl_l'
 title: iscntrl、iswcntrl、_iscntrl_l、_iswcntrl_l
 ms.date: 4/2/2020
 api_name:
@@ -41,12 +42,12 @@ helpviewer_keywords:
 - iswcntrl function
 - _istcntrl_l function
 ms.assetid: 616eebf9-aed4-49ba-ba2c-8677c8fe6fb5
-ms.openlocfilehash: 24267a663af1aa68099861bfec1b0e5c18aa83be
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: b4dcba09b139d1ad1c80e495477a6b7b2283e3f2
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82919746"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97332712"
 ---
 # <a name="iscntrl-iswcntrl-_iscntrl_l-_iswcntrl_l"></a>iscntrl、iswcntrl、_iscntrl_l、_iswcntrl_l
 
@@ -73,7 +74,7 @@ int _iswcntrl_l(
 
 ### <a name="parameters"></a>パラメーター
 
-*40u-c*<br/>
+*c*<br/>
 テストする整数
 
 *locale*<br/>
@@ -81,11 +82,11 @@ int _iswcntrl_l(
 
 ## <a name="return-value"></a>戻り値
 
-これらの各ルーチンは、 *c*が制御文字の特殊表現である場合は0以外の値を返します。 *c*が制御文字 (0X00-0x1f または 0x7f) の場合、 **iscntrl**は0以外の値を返します。 *c*が制御ワイド文字の場合、 **iswcntrl**は0以外の値を返します。 これらの各ルーチンは、 *c*がテスト条件を満たしていない場合は0を返します。
+これらの各ルーチンは、 *c* が制御文字の特殊表現である場合は0以外の値を返します。 *c* が制御文字 (0X00-0x1f または 0x7f) の場合、 **iscntrl** は0以外の値を返します。 *c* が制御ワイド文字の場合、 **iswcntrl** は0以外の値を返します。 これらの各ルーチンは、 *c* がテスト条件を満たしていない場合は0を返します。
 
-**_L**サフィックスを持つこれらの関数のバージョンでは、現在のロケールの代わりに渡されたロケールパラメーターを使用します。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
+**_L** サフィックスを持つこれらの関数のバージョンでは、現在のロケールの代わりに渡されたロケールパラメーターを使用します。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
 
-*C*が EOF でない場合、または 0 ~ 0xff の範囲内にある場合、 **iscntrl**と **_iscntrl_l**の動作は未定義です。 デバッグ CRT ライブラリが使用され、 *c*がこれらの値のいずれでもない場合、関数はアサーションを発生させます。
+*C* が EOF でない場合、または 0 ~ 0xff の範囲内にある場合、 **iscntrl** と **_iscntrl_l** の動作は未定義です。 デバッグ CRT ライブラリが使用され、 *c* がこれらの値のいずれでもない場合、関数はアサーションを発生させます。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -100,7 +101,7 @@ int _iswcntrl_l(
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**iscntrl**|\<ctype.h>|
 |**iswcntrl**|\<ctype.h> または \<wchar.h>|
@@ -112,5 +113,5 @@ int _iswcntrl_l(
 ## <a name="see-also"></a>関連項目
 
 [文字分類](../../c-runtime-library/character-classification.md)<br/>
-[国](../../c-runtime-library/locale.md)<br/>
-[is、isw 系ルーチン](../../c-runtime-library/is-isw-routines.md)<br/>
+[ロケール](../../c-runtime-library/locale.md)<br/>
+[is、isw ルーチン](../../c-runtime-library/is-isw-routines.md)<br/>

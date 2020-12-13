@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: CMultiDocTemplate クラス'
 title: CMultiDocTemplate クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - CMultiDocTemplate [MFC], CMultiDocTemplate
 ms.assetid: 5b8aa328-e461-41d0-b388-00594535e119
-ms.openlocfilehash: af950d188c4e02a38a39ed3c672f0f8c4161bee8
-ms.sourcegitcommit: 8fd49f8ac20457710ceb5403ca46fc73cb3f95f8
+ms.openlocfilehash: 70b77c04fed41da3b5f025f6a600b9ecfd4bc89b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85737489"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97331571"
 ---
 # <a name="cmultidoctemplate-class"></a>CMultiDocTemplate クラス
 
@@ -27,7 +28,7 @@ class CMultiDocTemplate : public CDocTemplate
 
 ## <a name="members"></a>メンバー
 
-このクラスのメンバー関数は virtual です。 ドキュメントについては、「 [CDocTemplate](../../mfc/reference/cdoctemplate-class.md)と[CCmdTarget](../../mfc/reference/ccmdtarget-class.md) 」を参照してください。
+このクラスのメンバー関数は virtual です。 ドキュメントについては、「 [CDocTemplate](../../mfc/reference/cdoctemplate-class.md) と [CCmdTarget](../../mfc/reference/ccmdtarget-class.md) 」を参照してください。
 
 ### <a name="public-constructors"></a>パブリック コンストラクター
 
@@ -35,9 +36,9 @@ class CMultiDocTemplate : public CDocTemplate
 |----------|-----------------|
 |[CMultiDocTemplate::CMultiDocTemplate](#cmultidoctemplate)|`CMultiDocTemplate` オブジェクトを構築します。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-MDI アプリケーションでは、メインフレームウィンドウをワークスペースとして使用します。このワークスペースでは、ユーザーは0個以上のドキュメントフレームウィンドウを開くことができ、それぞれにドキュメントが表示されます。 MDI の詳細な説明については、「*ソフトウェア設計のための Windows インターフェイスガイドライン*」を参照してください。
+MDI アプリケーションでは、メインフレームウィンドウをワークスペースとして使用します。このワークスペースでは、ユーザーは0個以上のドキュメントフレームウィンドウを開くことができ、それぞれにドキュメントが表示されます。 MDI の詳細な説明については、「 *ソフトウェア設計のための Windows インターフェイスガイドライン*」を参照してください。
 
 ドキュメントテンプレートでは、次の3種類のクラス間のリレーションシップを定義します。
 
@@ -45,7 +46,7 @@ MDI アプリケーションでは、メインフレームウィンドウをワ�
 
 - ビュークラス。上に一覧表示されているドキュメントクラスのデータを表示します。 このクラスは、 [CView](../../mfc/reference/cview-class.md)、、 `CScrollView` 、またはから派生させることができ `CFormView` `CEditView` ます。 (を直接使用することもでき `CEditView` ます)。
 
-- ビューを含むフレームウィンドウクラス。 MDI ドキュメントテンプレートの場合は、からこのクラスを派生できます `CMDIChildWnd` 。また、ドキュメントフレームウィンドウの動作をカスタマイズする必要がない場合は、独自のクラスを派生させずに[CMDIChildWnd](../../mfc/reference/cmdichildwnd-class.md)を直接使用することもできます。
+- ビューを含むフレームウィンドウクラス。 MDI ドキュメントテンプレートの場合は、からこのクラスを派生できます `CMDIChildWnd` 。また、ドキュメントフレームウィンドウの動作をカスタマイズする必要がない場合は、独自のクラスを派生させずに [CMDIChildWnd](../../mfc/reference/cmdichildwnd-class.md) を直接使用することもできます。
 
 MDI アプリケーションでは、複数の種類のドキュメントをサポートでき、さまざまな種類のドキュメントを同時に開くことができます。 アプリケーションには、サポートするドキュメントの種類ごとに1つのドキュメントテンプレートがあります。 たとえば、MDI アプリケーションでスプレッドシートとテキストドキュメントの両方がサポートされている場合、アプリケーションには2つのオブジェクトがあり `CMultiDocTemplate` ます。
 
@@ -53,7 +54,7 @@ MDI アプリケーションでは、複数の種類のドキュメントをサ�
 
 コンストラクターを除き、のメンバー関数を呼び出す必要はありません `CMultiDocTemplate` 。 フレームワークは、 `CMultiDocTemplate` オブジェクトを内部で処理します。
 
-の詳細につい `CMultiDocTemplate` ては、「[ドキュメントテンプレート」と「ドキュメント/ビューの作成プロセス](../../mfc/document-templates-and-the-document-view-creation-process.md)」を参照してください。
+の詳細につい `CMultiDocTemplate` ては、「 [ドキュメントテンプレート」と「ドキュメント/ビューの作成プロセス](../../mfc/document-templates-and-the-document-view-creation-process.md)」を参照してください。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -65,11 +66,11 @@ MDI アプリケーションでは、複数の種類のドキュメントをサ�
 
 `CMultiDocTemplate`
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** afxwin.h
 
-## <a name="cmultidoctemplatecmultidoctemplate"></a><a name="cmultidoctemplate"></a>CMultiDocTemplate::CMultiDocTemplate
+## <a name="cmultidoctemplatecmultidoctemplate"></a><a name="cmultidoctemplate"></a> CMultiDocTemplate::CMultiDocTemplate
 
 `CMultiDocTemplate` オブジェクトを構築します。
 
@@ -98,7 +99,7 @@ END
 
 最初の部分文字列は MDI アプリケーションでは使用されないため、文字列は ' \n ' 文字で始まります。 この文字列は、文字列エディターを使用して編集できます。文字列全体は、7つの個別のエントリとしてではなく、文字列エディターに単一のエントリとして表示されます。
 
-これらのリソースの種類の詳細については、「[リソースエディター](../../windows/resource-editors.md)」を参照してください。
+これらのリソースの種類の詳細については、「 [リソースエディター](../../windows/resource-editors.md)」を参照してください。
 
 *pDocClass*<br/>
 `CRuntimeClass`ドキュメントクラスのオブジェクトを指します。 このクラスは、 `CDocument` ドキュメントを表すために定義するの派生クラスです。
@@ -109,7 +110,7 @@ END
 *pViewClass*<br/>
 `CRuntimeClass`ビュークラスのオブジェクトを指します。 このクラスは、 `CView` ドキュメントを表示するために定義するの派生クラスです。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 `CMultiDocTemplate`アプリケーションでサポートされているドキュメントの種類ごとに1つのオブジェクトを動的に割り当て、 `CWinApp::AddDocTemplate` `InitInstance` アプリケーションクラスのメンバー関数からそれぞれを渡します。
 

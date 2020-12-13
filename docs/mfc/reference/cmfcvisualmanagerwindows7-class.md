@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: CMFCVisualManagerWindows7 クラス'
 title: CMFCVisualManagerWindows7 クラス
 ms.date: 03/27/2019
 f1_keywords:
@@ -10,16 +11,16 @@ f1_keywords:
 helpviewer_keywords:
 - CMFCVisualManagerWindows7 Class [MFC]
 ms.assetid: e8d87df1-0c09-4b58-8ade-4e911f796e42
-ms.openlocfilehash: 6686afecc2b8ef97ea24ef45ff5225433677a954
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 108d4144bbcfbfcb82d91678611435f14365302e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81319844"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97331634"
 ---
 # <a name="cmfcvisualmanagerwindows7-class"></a>CMFCVisualManagerWindows7 クラス
 
-アプリケーション`CMFCVisualManagerWindows7`は、Windows 7 アプリケーションの外観を提供します。
+は、 `CMFCVisualManagerWindows7` アプリケーションに Windows 7 アプリケーションの外観を提供します。
 
 ## <a name="syntax"></a>構文
 
@@ -33,91 +34,91 @@ class CMFCVisualManagerWindows7 : public CMFCVisualManagerWindows;
 
 |名前|説明|
 |----------|-----------------|
-|[ウィンドウズマネージャーウィンドウズ7:::CMFC ビジュアル マネージャーウィンドウズ7](#cmfcvisualmanagerwindows7)|既定のコンストラクターです。|
-|[ウィンドウズマネージャーウィンドウズ7:~CMFC ビジュアルマネージャーウィンドウズ7](#_dtorcmfcvisualmanagerwindows7)|既定のデストラクター。|
+|[CMFCVisualManagerWindows7::CMFCVisualManagerWindows7](#cmfcvisualmanagerwindows7)|既定のコンストラクターです。|
+|[CMFCVisualManagerWindows7:: ~ CMFCVisualManagerWindows7](#_dtorcmfcvisualmanagerwindows7)|既定のデストラクター。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
 |名前|説明|
 |----------|-----------------|
-|`CMFCVisualManagerWindows7::CleanStyle`|現在の表示スタイルをクリアし、既定の表示スタイルをリセットします。|
-|`CMFCVisualManagerWindows7::CleanUp`|ユーザー インターフェイス内のすべてのオブジェクトをクリアし、メニューをリセットします。|
-|`CMFCVisualManagerWindows7::DrawNcBtn`|フレームの非クライアント領域にボタンを描画します。 フレームワークは、ウィンドウ フレームの右上隅にある最小化、最大化、閉じる、および復元ボタンを描画するには、このメソッドを使用します。 このメソッドは、プログラムがテーマを使用する`Aero`場合にのみ呼び出されます。|
-|`CMFCVisualManagerWindows7::DrawNcText`|フレーム上の非クライアント領域にテキストを描画します。 フレームワークは、このメソッドを使用して、フレーム ウィンドウの上部にあるタイトル バーにアプリケーション タイトルを描画します。|
-|`CMFCVisualManagerWindows7::DrawSeparator`|[CMFC ツール バー クラス](../../mfc/reference/cmfctoolbar-class.md)に区切り記号を描画します。|
-|`CMFCVisualManagerWindows7::GetRibbonBar`|ユーザー インターフェイスに関連付けられている[CMFCRibbonBar クラス](../../mfc/reference/cmfcribbonbar-class.md)を取得します。|
-|[ウィンドウズコントロールウィンドウズ7::リボン編集バックグラウンドカラー](#getribboneditbackgroundcolor)|リボンエディット ボックスの背景色を取得します。|
-|`CMFCVisualManagerWindows7::GetRibbonPopupBorderSize`|をオーバーライドします[。](../../mfc/reference/cmfcvisualmanager-class.md#getribbonpopupbordersize)|
-|`CMFCVisualManagerWindows7::GetRibbonQuickAccessToolBarChevronOffset`|をオーバーライドします[。](../../mfc/reference/cmfcvisualmanager-class.md#getribbonquickaccesstoolbarchevronoffset)|
-|`CMFCVisualManagerWindows7::GetRibbonQuickAccessToolBarRightMargin`|をオーバーライドします[。](../../mfc/reference/cmfcvisualmanager-class.md#getribbonquickaccesstoolbarrightmargin)|
-|`CMFCVisualManagerWindows7::IsHighlightWholeMenuItem`|をオーバーライド[します。](../../mfc/reference/cmfcvisualmanagerwindows-class.md#ishighlightwholemenuitem)|
-|`CMFCVisualManagerWindows7::IsOwnerDrawMenuCheck`|をオーバーライド[します。](../../mfc/reference/cmfcvisualmanager-class.md#isownerdrawmenucheck)|
-|`CMFCVisualManagerWindows7::IsRibbonPresent`|が存在し`CMFCRibbonBar`、表示されているかどうかを判断します。|
-|`CMFCVisualManagerWindows7::OnDrawButtonBorder`|をオーバーライド[します。](../../mfc/reference/cmfcvisualmanagerwindows-class.md#ondrawbuttonborder)|
-|`CMFCVisualManagerWindows7::OnDrawCheckBoxEx`|をオーバーライド[します。](../../mfc/reference/cmfcvisualmanagerwindows-class.md#ondrawcheckboxex)|
-|`CMFCVisualManagerWindows7::OnDrawComboDropButton`|をオーバーライド[します。](../../mfc/reference/cmfcvisualmanagerwindows-class.md#ondrawcombodropbutton)|
-|`CMFCVisualManagerWindows7::OnDrawDefaultRibbonImage`|をオーバーライドします[。](../../mfc/reference/cmfcvisualmanager-class.md#ondrawdefaultribbonimage)|
-|`CMFCVisualManagerWindows7::OnDrawMenuBorder`|をオーバーライド[します。](../../mfc/reference/cmfcvisualmanagerwindows-class.md#ondrawmenuborder)|
-|`CMFCVisualManagerWindows7::OnDrawMenuCheck`|をオーバーライド[します。](../../mfc/reference/cmfcvisualmanager-class.md#ondrawmenucheck)|
-|`CMFCVisualManagerWindows7::OnDrawMenuLabel`|をオーバーライドします[。](../../mfc/reference/cmfcvisualmanager-class.md#ondrawmenulabel)|
+|`CMFCVisualManagerWindows7::CleanStyle`|現在の visual スタイルをクリアし、既定の visual スタイルをリセットします。|
+|`CMFCVisualManagerWindows7::CleanUp`|ユーザーインターフェイス内のすべてのオブジェクトをクリアし、メニューをリセットします。|
+|`CMFCVisualManagerWindows7::DrawNcBtn`|フレームの非クライアント領域にボタンを描画します。 フレームワークは、このメソッドを使用して、ウィンドウフレームの右上隅に最小化、最大化、閉じる、および元に戻すボタンを描画します。 このメソッドは、プログラムがテーマを使用する場合にのみ呼び出され `Aero` ます。|
+|`CMFCVisualManagerWindows7::DrawNcText`|フレームの非クライアント領域にテキストを描画します。 フレームワークは、このメソッドを使用して、フレームウィンドウの上部にあるタイトルバーにアプリケーションタイトルを描画します。|
+|`CMFCVisualManagerWindows7::DrawSeparator`|[Cmfctoolbar クラス](../../mfc/reference/cmfctoolbar-class.md)に区切り記号を描画します。|
+|`CMFCVisualManagerWindows7::GetRibbonBar`|ユーザーインターフェイスに関連付けられている [CMFCRibbonBar クラス](../../mfc/reference/cmfcribbonbar-class.md) を取得します。|
+|[CMFCVisualManagerWindows7:: GetRibbonEditBackgroundColor](#getribboneditbackgroundcolor)|リボンのエディットボックスの背景色を取得します。|
+|`CMFCVisualManagerWindows7::GetRibbonPopupBorderSize`|[Cmfcvisualmanager:: GetRibbonPopupBorderSize](../../mfc/reference/cmfcvisualmanager-class.md#getribbonpopupbordersize)をオーバーライドします。|
+|`CMFCVisualManagerWindows7::GetRibbonQuickAccessToolBarChevronOffset`|[Cmfcvisualmanager:: GetRibbonQuickAccessToolBarChevronOffset](../../mfc/reference/cmfcvisualmanager-class.md#getribbonquickaccesstoolbarchevronoffset)をオーバーライドします。|
+|`CMFCVisualManagerWindows7::GetRibbonQuickAccessToolBarRightMargin`|[Cmfcvisualmanager:: GetRibbonQuickAccessToolBarRightMargin](../../mfc/reference/cmfcvisualmanager-class.md#getribbonquickaccesstoolbarrightmargin)をオーバーライドします。|
+|`CMFCVisualManagerWindows7::IsHighlightWholeMenuItem`|[Cmfcvisualmanagerwindows:: IsHighlightWholeMenuItem](../../mfc/reference/cmfcvisualmanagerwindows-class.md#ishighlightwholemenuitem)をオーバーライドします。|
+|`CMFCVisualManagerWindows7::IsOwnerDrawMenuCheck`|[Cmfcvisualmanager:: IsOwnerDrawMenuCheck](../../mfc/reference/cmfcvisualmanager-class.md#isownerdrawmenucheck)をオーバーライドします。|
+|`CMFCVisualManagerWindows7::IsRibbonPresent`|`CMFCRibbonBar`が存在し、表示されているかどうかを判断します。|
+|`CMFCVisualManagerWindows7::OnDrawButtonBorder`|[Cmfcvisualmanagerwindows:: OnDrawButtonBorder](../../mfc/reference/cmfcvisualmanagerwindows-class.md#ondrawbuttonborder)をオーバーライドします。|
+|`CMFCVisualManagerWindows7::OnDrawCheckBoxEx`|[Cmfcvisualmanagerwindows:: OnDrawCheckBoxEx](../../mfc/reference/cmfcvisualmanagerwindows-class.md#ondrawcheckboxex)をオーバーライドします。|
+|`CMFCVisualManagerWindows7::OnDrawComboDropButton`|[Cmfcvisualmanagerwindows:: OnDrawComboDropButton](../../mfc/reference/cmfcvisualmanagerwindows-class.md#ondrawcombodropbutton)をオーバーライドします。|
+|`CMFCVisualManagerWindows7::OnDrawDefaultRibbonImage`|[Cmfcvisualmanager:: OnDrawDefaultRibbonImage](../../mfc/reference/cmfcvisualmanager-class.md#ondrawdefaultribbonimage)をオーバーライドします。|
+|`CMFCVisualManagerWindows7::OnDrawMenuBorder`|[Cmfcvisualmanagerwindows:: OnDrawMenuBorder](../../mfc/reference/cmfcvisualmanagerwindows-class.md#ondrawmenuborder)をオーバーライドします。|
+|`CMFCVisualManagerWindows7::OnDrawMenuCheck`|[Cmfcvisualmanager:: OnDrawMenuCheck](../../mfc/reference/cmfcvisualmanager-class.md#ondrawmenucheck)をオーバーライドします。|
+|`CMFCVisualManagerWindows7::OnDrawMenuLabel`|[Cmfcvisualmanager:: OnDrawMenuLabel](../../mfc/reference/cmfcvisualmanager-class.md#ondrawmenulabel)をオーバーライドします。|
 |`CMFCVisualManagerWindows7::OnDrawRadioButton`|`CMFCVisualManager::OnDrawRadioButton` をオーバーライドします。|
-|`CMFCVisualManagerWindows7::OnDrawRibbonApplicationButton`|をオーバーライドします[。](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribbonapplicationbutton)|
-|`CMFCVisualManagerWindows7::OnDrawRibbonButtonBorder`|をオーバーライド[します。](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribbonbuttonborder)|
-|`CMFCVisualManagerWindows7::OnDrawRibbonCaption`|をオーバーライド[します。](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribboncaption)|
-|`CMFCVisualManagerWindows7::OnDrawRibbonCaptionButton`|をオーバーライドします[。](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribboncaptionbutton)|
-|`CMFCVisualManagerWindows7::OnDrawRibbonCategory`|をオーバーライドします[。](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribboncategory)|
-|`CMFCVisualManagerWindows7::OnDrawRibbonCategoryTab`|をオーバーライドします[。](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribboncategorytab)|
-|`CMFCVisualManagerWindows7::OnDrawRibbonDefaultPaneButton`|をオーバーライドします[。](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribbondefaultpanebutton)|
-|`CMFCVisualManagerWindows7::OnDrawRibbonGalleryButton`|をオーバーライドします[。](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribbongallerybutton)|
+|`CMFCVisualManagerWindows7::OnDrawRibbonApplicationButton`|[Cmfcvisualmanager:: OnDrawRibbonApplicationButton](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribbonapplicationbutton)をオーバーライドします。|
+|`CMFCVisualManagerWindows7::OnDrawRibbonButtonBorder`|[Cmfcvisualmanager:: OnDrawRibbonButtonBorder](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribbonbuttonborder)をオーバーライドします。|
+|`CMFCVisualManagerWindows7::OnDrawRibbonCaption`|[Cmfcvisualmanager:: OnDrawRibbonCaption](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribboncaption)をオーバーライドします。|
+|`CMFCVisualManagerWindows7::OnDrawRibbonCaptionButton`|[Cmfcvisualmanager:: OnDrawRibbonCaptionButton](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribboncaptionbutton)をオーバーライドします。|
+|`CMFCVisualManagerWindows7::OnDrawRibbonCategory`|[Cmfcvisualmanager:: OnDrawRibbonCategory](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribboncategory)をオーバーライドします。|
+|`CMFCVisualManagerWindows7::OnDrawRibbonCategoryTab`|[Cmfcvisualmanager:: OnDrawRibbonCategoryTab](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribboncategorytab)をオーバーライドします。|
+|`CMFCVisualManagerWindows7::OnDrawRibbonDefaultPaneButton`|[Cmfcvisualmanager:: OnDrawRibbonDefaultPaneButton](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribbondefaultpanebutton)をオーバーライドします。|
+|`CMFCVisualManagerWindows7::OnDrawRibbonGalleryButton`|[Cmfcvisualmanager:: OnDrawRibbonGalleryButton](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribbongallerybutton)をオーバーライドします。|
 |`CMFCVisualManagerWindows7::OnDrawRibbonLaunchButton`|`CMFCVisualManager::OnDrawRibbonLaunchButton` をオーバーライドします。|
-|`CMFCVisualManagerWindows7::OnDrawRibbonMenuCheckFrame`|をオーバーライドします[。](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribbonmenucheckframe)|
-|`CMFCVisualManagerWindows7::OnDrawRibbonPanel`|をオーバーライドします[。](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribbonpanel)|
-|`CMFCVisualManagerWindows7::OnDrawRibbonPanelCaption`|をオーバーライド[します。](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribbonpanelcaption)|
-|`CMFCVisualManagerWindows7::OnDrawRibbonProgressBar`|をオーバーライドします[。](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribbonprogressbar)|
-|`CMFCVisualManagerWindows7::OnDrawRibbonRecentFilesFrame`|をオーバーライドします[。](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribbonrecentfilesframe)|
-|`CMFCVisualManagerWindows7::OnDrawRibbonSliderChannel`|をオーバーライドします[。](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribbonsliderchannel)|
-|`CMFCVisualManagerWindows7::OnDrawRibbonSliderThumb`|をオーバーライドします[。](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribbonsliderthumb)|
-|`CMFCVisualManagerWindows7::OnDrawRibbonSliderZoomButton`|をオーバーライドします[。](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribbonsliderzoombutton)|
-|`CMFCVisualManagerWindows7::OnDrawRibbonStatusBarPane`|をオーバーライドします[。](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribbonstatusbarpane)|
-|`CMFCVisualManagerWindows7::OnDrawRibbonTabsFrame`|をオーバーライドします[。](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribbontabsframe)|
-|`CMFCVisualManagerWindows7::OnDrawStatusBarSizeBox`|をオーバーライド[します。](../../mfc/reference/cmfcvisualmanagerwindows-class.md#ondrawstatusbarsizebox)|
-|`CMFCVisualManagerWindows7::OnFillBarBackground`|をオーバーライド[します。](../../mfc/reference/cmfcvisualmanagerwindows-class.md#onfillbarbackground)|
-|`CMFCVisualManagerWindows7::OnFillButtonInterior`|をオーバーライド[します。](../../mfc/reference/cmfcvisualmanagerwindows-class.md#onfillbuttoninterior)|
-|[をクリックします。](#onfillmenuimagerect)|フレームワークは、メニュー項目イメージの周囲の領域を塗りつぶすときに、このメソッドを呼び出します。|
-|`CMFCVisualManagerWindows7::OnFillRibbonButton`|をオーバーライド[します。](../../mfc/reference/cmfcvisualmanager-class.md#onfillribbonbutton)|
-|`CMFCVisualManagerWindows7::OnFillRibbonQuickAccessToolBarPopup`|をオーバーライドします[。](../../mfc/reference/cmfcvisualmanager-class.md#onfillribbonquickaccesstoolbarpopup)|
-|`CMFCVisualManagerWindows7::OnHighlightMenuItem`|をオーバーライド[します。](../../mfc/reference/cmfcvisualmanagerwindows-class.md#onhighlightmenuitem)|
-|`CMFCVisualManagerWindows7::OnNcActivate`|をオーバーライドします[。](../../mfc/reference/cmfcvisualmanager-class.md#onncactivate)|
-|`CMFCVisualManagerWindows7::OnNcPaint`|をオーバーライドします[。](../../mfc/reference/cmfcvisualmanager-class.md#onncpaint)|
-|`CMFCVisualManagerWindows7::OnUpdateSystemColors`|をオーバーライドします[。](../../mfc/reference/cmfcvisualmanagerwindows-class.md#onupdatesystemcolors)|
-|`CMFCVisualManagerWindows7::SetResourceHandle`|ビジュアル マネージャーの属性を記述するリソース ハンドルを設定します。|
-|`CMFCVisualManagerWindows7::SetStyle`|GUI の配色を設定`CMFCVisualManagerWindows7`します。|
+|`CMFCVisualManagerWindows7::OnDrawRibbonMenuCheckFrame`|[Cmfcvisualmanager:: OnDrawRibbonMenuCheckFrame](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribbonmenucheckframe)をオーバーライドします。|
+|`CMFCVisualManagerWindows7::OnDrawRibbonPanel`|[Cmfcvisualmanager:: OnDrawRibbonPanel](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribbonpanel)をオーバーライドします。|
+|`CMFCVisualManagerWindows7::OnDrawRibbonPanelCaption`|[Cmfcvisualmanager:: OnDrawRibbonPanelCaption](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribbonpanelcaption)をオーバーライドします。|
+|`CMFCVisualManagerWindows7::OnDrawRibbonProgressBar`|[Cmfcvisualmanager:: OnDrawRibbonProgressBar](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribbonprogressbar)をオーバーライドします。|
+|`CMFCVisualManagerWindows7::OnDrawRibbonRecentFilesFrame`|[Cmfcvisualmanager:: OnDrawRibbonRecentFilesFrame](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribbonrecentfilesframe)をオーバーライドします。|
+|`CMFCVisualManagerWindows7::OnDrawRibbonSliderChannel`|[Cmfcvisualmanager:: OnDrawRibbonSliderChannel](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribbonsliderchannel)をオーバーライドします。|
+|`CMFCVisualManagerWindows7::OnDrawRibbonSliderThumb`|[Cmfcvisualmanager:: OnDrawRibbonSliderThumb](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribbonsliderthumb)をオーバーライドします。|
+|`CMFCVisualManagerWindows7::OnDrawRibbonSliderZoomButton`|[Cmfcvisualmanager:: OnDrawRibbonSliderZoomButton](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribbonsliderzoombutton)をオーバーライドします。|
+|`CMFCVisualManagerWindows7::OnDrawRibbonStatusBarPane`|[Cmfcvisualmanager:: OnDrawRibbonStatusBarPane](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribbonstatusbarpane)をオーバーライドします。|
+|`CMFCVisualManagerWindows7::OnDrawRibbonTabsFrame`|[Cmfcvisualmanager:: OnDrawRibbonTabsFrame](../../mfc/reference/cmfcvisualmanager-class.md#ondrawribbontabsframe)をオーバーライドします。|
+|`CMFCVisualManagerWindows7::OnDrawStatusBarSizeBox`|[Cmfcvisualmanagerwindows:: OnDrawStatusBarSizeBox](../../mfc/reference/cmfcvisualmanagerwindows-class.md#ondrawstatusbarsizebox)をオーバーライドします。|
+|`CMFCVisualManagerWindows7::OnFillBarBackground`|[Cmfcvisualmanagerwindows:: OnFillBarBackground](../../mfc/reference/cmfcvisualmanagerwindows-class.md#onfillbarbackground)をオーバーライドします。|
+|`CMFCVisualManagerWindows7::OnFillButtonInterior`|[Cmfcvisualmanagerwindows:: OnFillButtonInterior](../../mfc/reference/cmfcvisualmanagerwindows-class.md#onfillbuttoninterior)をオーバーライドします。|
+|[CMFCVisualManagerWindows7::OnFillMenuImageRect](#onfillmenuimagerect)|フレームワークは、メニュー項目イメージの周囲に領域を塗りつぶすときに、このメソッドを呼び出します。|
+|`CMFCVisualManagerWindows7::OnFillRibbonButton`|[Cmfcvisualmanager:: OnFillRibbonButton](../../mfc/reference/cmfcvisualmanager-class.md#onfillribbonbutton)をオーバーライドします。|
+|`CMFCVisualManagerWindows7::OnFillRibbonQuickAccessToolBarPopup`|[Cmfcvisualmanager:: OnFillRibbonQuickAccessToolBarPopup](../../mfc/reference/cmfcvisualmanager-class.md#onfillribbonquickaccesstoolbarpopup)をオーバーライドします。|
+|`CMFCVisualManagerWindows7::OnHighlightMenuItem`|[Cmfcvisualmanagerwindows:: OnHighlightMenuItem](../../mfc/reference/cmfcvisualmanagerwindows-class.md#onhighlightmenuitem)をオーバーライドします。|
+|`CMFCVisualManagerWindows7::OnNcActivate`|[Cmfcvisualmanager:: OnNcActivate](../../mfc/reference/cmfcvisualmanager-class.md#onncactivate)をオーバーライドします。|
+|`CMFCVisualManagerWindows7::OnNcPaint`|[Cmfcvisualmanager:: OnNcPaint](../../mfc/reference/cmfcvisualmanager-class.md#onncpaint)をオーバーライドします。|
+|`CMFCVisualManagerWindows7::OnUpdateSystemColors`|[Cmfcvisualmanagerwindows:: OnUpdateSystemColors](../../mfc/reference/cmfcvisualmanagerwindows-class.md#onupdatesystemcolors)をオーバーライドします。|
+|`CMFCVisualManagerWindows7::SetResourceHandle`|ビジュアルマネージャーの属性を記述するリソースハンドルを設定します。|
+|`CMFCVisualManagerWindows7::SetStyle`|GUI の配色を設定し `CMFCVisualManagerWindows7` ます。|
 
 ## <a name="remarks"></a>解説
 
-このクラス`CMFCVisualManagerWindows7`を使用して、既定の Windows 7 アプリケーションを模倣するようにアプリケーションの外観を変更します。 アプリケーションが Windows 7 より前のバージョンの Windows で実行されている場合、このクラスは無効なことがあります。 このシナリオでは、アプリケーションは[、CMFCVisualManager](../../mfc/reference/cmfcvisualmanager-class.md)で定義された既定のビジュアル マネージャーを使用します。
+クラスを使用して、 `CMFCVisualManagerWindows7` アプリケーションの外観を変更し、既定の Windows 7 アプリケーションを模倣します。 アプリケーションが Windows 7 より前のバージョンの Windows で実行されている場合、このクラスは有効でない可能性があります。 このシナリオでは、アプリケーションは [Cmfcvisualmanager](../../mfc/reference/cmfcvisualmanager-class.md)で定義された既定のビジュアルマネージャーを使用します。
 
-クラス[とクラス](../../mfc/reference/cmfcvisualmanagerwindows-class.md)の両方から複数のメソッドを継承します`CMFCVisualManager`。 前のセクションに示したメソッドは、クラスの`CMFCVisualManagerWindows7`新しいメソッドです。
+CMFCVisualManagerWindows7 は、 [Cmfcvisualmanagerwindows クラス](../../mfc/reference/cmfcvisualmanagerwindows-class.md) とクラスの両方から複数のメソッドを継承し `CMFCVisualManager` ます。 前のセクションで示したメソッドは、クラスの新しいメソッドです `CMFCVisualManagerWindows7` 。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
 [CObject](../../mfc/reference/cobject-class.md)
 
-[ビジュアル マネージャー](../../mfc/reference/cmfcbasevisualmanager-class.md)
+[CMFCBaseVisualManager](../../mfc/reference/cmfcbasevisualmanager-class.md)
 
 [CMFCVisualManager](../../mfc/reference/cmfcvisualmanager-class.md)
 
-[オフィスXP](../../mfc/reference/cmfcvisualmanagerofficexp-class.md)
+[CMFCVisualManagerOfficeXP](../../mfc/reference/cmfcvisualmanagerofficexp-class.md)
 
 [CMFCVisualManagerWindows](../../mfc/reference/cmfcvisualmanagerwindows-class.md)
 
 `CMFCVisualManagerWindows7`
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-**ヘッダー:** afx ビジュアルマネージャーウィンドウズ7.h
+**ヘッダー:** afxvisualmanagerwindows7
 
-## <a name="cmfcvisualmanagerwindows7cmfcvisualmanagerwindows7"></a><a name="_dtorcmfcvisualmanagerwindows7"></a>ウィンドウズマネージャーウィンドウズ7:~CMFC ビジュアルマネージャーウィンドウズ7
+## <a name="cmfcvisualmanagerwindows7cmfcvisualmanagerwindows7"></a><a name="_dtorcmfcvisualmanagerwindows7"></a> CMFCVisualManagerWindows7:: ~ CMFCVisualManagerWindows7
 
 既定のデストラクター。
 
@@ -125,7 +126,7 @@ class CMFCVisualManagerWindows7 : public CMFCVisualManagerWindows;
 virtual ~CMFCVisualManagerWindows7();
 ```
 
-## <a name="cmfcvisualmanagerwindows7cmfcvisualmanagerwindows7"></a><a name="cmfcvisualmanagerwindows7"></a>ウィンドウズマネージャーウィンドウズ7:::CMFC ビジュアル マネージャーウィンドウズ7
+## <a name="cmfcvisualmanagerwindows7cmfcvisualmanagerwindows7"></a><a name="cmfcvisualmanagerwindows7"></a> CMFCVisualManagerWindows7::CMFCVisualManagerWindows7
 
 既定のコンストラクターです。
 
@@ -133,9 +134,9 @@ virtual ~CMFCVisualManagerWindows7();
 CMFCVisualManagerWindows7();
 ```
 
-## <a name="cmfcvisualmanagerwindows7getribboneditbackgroundcolor"></a><a name="getribboneditbackgroundcolor"></a>ウィンドウズコントロールウィンドウズ7::リボン編集バックグラウンドカラー
+## <a name="cmfcvisualmanagerwindows7getribboneditbackgroundcolor"></a><a name="getribboneditbackgroundcolor"></a> CMFCVisualManagerWindows7:: GetRibbonEditBackgroundColor
 
-リボン編集ボックスの背景色を取得します。
+リボンのエディットボックスの背景色を取得します。
 
 ```
 virtual COLORREF GetRibbonEditBackgroundColor (
@@ -147,27 +148,27 @@ virtual COLORREF GetRibbonEditBackgroundColor (
 
 ### <a name="parameters"></a>パラメーター
 
-*を編集する*<br/>
-[in]エディット コントロールへのポインター。 この値を NULL にすることはできません。
+*pEdit*<br/>
+からエディットコントロールへのポインター。 この値を NULL にすることはできません。
 
-*bIs強調表示*<br/>
-[アウト]リボン ボックスが強調表示されているかどうかを返します。
+*bIsHighlighted*<br/>
+入出力リボンボックスが強調表示されているかどうかを返します。
 
-*bIsPane強調表示*<br/>
-[アウト]*pEdit*を含むリボン パネルが強調表示されている場合は TRUE を返します。
+*bIsPaneHighlighted*<br/>
+入出力 *Pedit* を含むリボンパネルが強調表示されている場合に TRUE を返します。
 
-*無効*<br/>
-[アウト]*pEdit*が無効になっているかどうかを返します。
+*bIsDisabled*<br/>
+入出力 *Pedit* が無効になっているかどうかを返します。
 
 ### <a name="return-value"></a>戻り値
 
-編集ボックス*pEdit*の背景色。
+エディットボックスの *Pedit* の背景色。
 
 ### <a name="remarks"></a>解説
 
-## <a name="cmfcvisualmanagerwindows7onfillmenuimagerect"></a><a name="onfillmenuimagerect"></a>をクリックします。
+## <a name="cmfcvisualmanagerwindows7onfillmenuimagerect"></a><a name="onfillmenuimagerect"></a> CMFCVisualManagerWindows7::OnFillMenuImageRect
 
-フレームワークは、メニュー項目イメージの周囲の領域を塗りつぶすときに、このメソッドを呼び出します。
+フレームワークは、メニュー項目イメージの周囲に領域を塗りつぶすときに、このメソッドを呼び出します。
 
 ```
 virtual void OnFillMenuImageRect(
@@ -180,22 +181,22 @@ virtual void OnFillMenuImageRect(
 ### <a name="parameters"></a>パラメーター
 
 *pDC*<br/>
-[in]メニュー ボタンのデバイス コンテキストへのポインター。
+からメニューボタンのデバイスコンテキストへのポインター。
 
-*ボタン*<br/>
-[in]へのポインター。 `CMFCToolBarButton` フレームワークは、このボタンの背景を塗りつぶします。
+*pButton*<br/>
+からへのポインター `CMFCToolBarButton` 。 フレームワークは、このボタンの背景を塗りつぶします。
 
-*四角 形*<br/>
-[in]メニュー ボタンのイメージ領域の境界を指定する四角形。
+*四角形*<br/>
+からメニューボタンのイメージ領域の境界を指定する四角形。
 
-*状態*<br/>
-[in]ボタンの状態。
+*state*<br/>
+からボタンの状態。
 
 ### <a name="remarks"></a>解説
 
 ## <a name="see-also"></a>関連項目
 
-[階層グラフ](../../mfc/hierarchy-chart.md)<br/>
-[クラス](../../mfc/reference/mfc-classes.md)<br/>
-[クラス](../../mfc/reference/cmfcvisualmanager-class.md)<br/>
-[クラス](../../mfc/reference/cmfcvisualmanagerwindows-class.md)
+[階層図](../../mfc/hierarchy-chart.md)<br/>
+[Classes](../../mfc/reference/mfc-classes.md)<br/>
+[CMFCVisualManager クラス](../../mfc/reference/cmfcvisualmanager-class.md)<br/>
+[CMFCVisualManagerWindows クラス](../../mfc/reference/cmfcvisualmanagerwindows-class.md)

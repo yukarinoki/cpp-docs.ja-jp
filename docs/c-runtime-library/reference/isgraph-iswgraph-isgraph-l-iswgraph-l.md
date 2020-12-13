@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: isgraph、iswgraph、_isgraph_l、_iswgraph_l'
 title: isgraph、iswgraph、_isgraph_l、_iswgraph_l
 ms.date: 4/2/2020
 api_name:
@@ -42,12 +43,12 @@ helpviewer_keywords:
 - _istgraph function
 - _ismbcgraph_l function
 ms.assetid: 531a5f34-4302-4d0a-8a4f-b7ea150ad941
-ms.openlocfilehash: 29fd8a4d9fcaded1f7750eaf9ba9dfbf28760cf7
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 165972af4c921abb9026c6a3297426910cbf49e6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82909638"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97332685"
 ---
 # <a name="isgraph-iswgraph-_isgraph_l-_iswgraph_l"></a>isgraph、iswgraph、_isgraph_l、_iswgraph_l
 
@@ -74,16 +75,16 @@ int _iswgraph_l(
 
 ### <a name="parameters"></a>パラメーター
 
-*40u-c*<br/>
+*c*<br/>
 テストする整数。
 
 ## <a name="return-value"></a>戻り値
 
-*C*がスペース以外の印刷可能な文字の特殊表現である場合、これらの各ルーチンは0以外の値を返します。 *c*がスペース以外の印刷可能な文字である場合、 **isgraph**は0以外の値を返します。 *c*がワイド文字のスペース以外の印刷可能なワイド文字である場合、 **iswgraph**は0以外の値を返します。 これらの各ルーチンは、 *c*がテスト条件を満たしていない場合は0を返します。
+*C* がスペース以外の印刷可能な文字の特殊表現である場合、これらの各ルーチンは0以外の値を返します。 *c* がスペース以外の印刷可能な文字である場合、 **isgraph** は0以外の値を返します。 *c* がワイド文字のスペース以外の印刷可能なワイド文字である場合、 **iswgraph** は0以外の値を返します。 これらの各ルーチンは、 *c* がテスト条件を満たしていない場合は0を返します。
 
-**_L**サフィックスを持つこれらの関数のバージョンでは、ロケールに依存する動作に現在のロケールではなく渡されたロケールが使用されます。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
+**_L** サフィックスを持つこれらの関数のバージョンでは、ロケールに依存する動作に現在のロケールではなく渡されたロケールが使用されます。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
 
-*C*が EOF でない場合、または 0 ~ 0xff の範囲内にある場合、 **isgraph**と **_isgraph_l**の動作は未定義です。 デバッグ CRT ライブラリが使用され、 *c*がこれらの値のいずれでもない場合、関数はアサーションを発生させます。
+*C* が EOF でない場合、または 0 ~ 0xff の範囲内にある場合、 **isgraph** と **_isgraph_l** の動作は未定義です。 デバッグ CRT ライブラリが使用され、 *c* がこれらの値のいずれでもない場合、関数はアサーションを発生させます。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -98,7 +99,7 @@ int _iswgraph_l(
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**isgraph**|\<ctype.h>|
 |**iswgraph**|\<ctype.h> または \<wchar.h>|
@@ -110,5 +111,5 @@ int _iswgraph_l(
 ## <a name="see-also"></a>関連項目
 
 [文字分類](../../c-runtime-library/character-classification.md)<br/>
-[国](../../c-runtime-library/locale.md)<br/>
-[is、isw 系ルーチン](../../c-runtime-library/is-isw-routines.md)<br/>
+[ロケール](../../c-runtime-library/locale.md)<br/>
+[is、isw ルーチン](../../c-runtime-library/is-isw-routines.md)<br/>

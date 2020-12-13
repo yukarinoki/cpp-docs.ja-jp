@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: _heapwalk'
 title: _heapwalk
 ms.date: 11/04/2016
 api_name:
@@ -27,12 +28,12 @@ helpviewer_keywords:
 - heapwalk function
 - _heapwalk function
 ms.assetid: 2df67649-fb00-4570-a8b1-a4eca5738744
-ms.openlocfilehash: 8dc7ee9335f227bde93a414748ff70b165c44f8d
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 08d877757a443a52a94952032291e69f3466f007
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70954773"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97332787"
 ---
 # <a name="_heapwalk"></a>_heapwalk
 
@@ -54,32 +55,32 @@ int _heapwalk( _HEAPINFO *entryinfo );
 
 ## <a name="return-value"></a>戻り値
 
-**_heapwalk**は、次のいずれかの整数マニフェスト定数を返します Malloc. h です。
+**_heapwalk** は、Malloc で定義されている次の整数のマニフェスト定数のいずれかを返します。
 
 |戻り値|説明|
 |-|-|
 |**_HEAPBADBEGIN**| 初期ヘッダー情報が無効または見つかりません。|
 |**_HEAPBADNODE**| ヒープが破損しているか、不適切なノードが見つかりました。|
-|**_HEAPBADPTR**| **_HEAPINFO**構造体の **_pentry**フィールドにヒープへの有効なポインターが含まれていないか、 *entryinfo*が null ポインターです。|
+|**_HEAPBADPTR**| **_HEAPINFO** 構造体の **_pentry** フィールドに、ヒープへの有効なポインターが含まれていないか、 *entryinfo* が null ポインターです。|
 |**_HEAPEND**| ヒープの終わりに正常に到達しました。|
 |**_HEAPEMPTY**| ヒープが初期化されていません。|
-|**_HEAPOK**| これまでのエラーはありません。*entryinfo*は、次のヒープエントリに関する情報で更新されます。|
+|**_HEAPOK**| これまでのエラーはありません。 *entryinfo* は、次のヒープエントリに関する情報で更新されます。|
 
-さらに、エラーが発生した場合、 **_heapwalk**は**errno**をに設定**します。**
+さらに、エラーが発生した場合は、 **_heapwalk** **errno** をに設定 **します。**
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-**_Heapwalk**関数は、プログラムのヒープ関連の問題をデバッグするのに役立ちます。 関数は、ヒープを走査し、呼び出しごとに1つのエントリを走査し、次のヒープエントリに関する情報を含む **_HEAPINFO**型の構造体へのポインターを返します。 **_HEAPINFO**型には、次の要素が含まれています。
+**_Heapwalk** 関数は、プログラムのヒープ関連の問題をデバッグするのに役立ちます。 関数は、ヒープを走査し、呼び出しごとに1つのエントリを走査し、次のヒープエントリに関する情報を含む **_HEAPINFO** 型の構造体へのポインターを返します。 Malloc で定義されている **_HEAPINFO** 型には、次の要素が含まれています。
 
-|フィールド|説明|
+|フィールド|意味|
 |-|-|
 |`int *_pentry`|ヒープ エントリのポインター。|
 |`size_t _size`|ヒープ エントリのサイズ。|
 |`int _useflag`|ヒープ エントリが使用中かどうかを示すフラグ。|
 
-**_HEAPOK**を返す **_heapwalk**の呼び出しでは、 **size**フィールドにエントリのサイズが格納さ**れ、** **_FREEENTRY**エントリまたは**エントリ**(両方とも Malloc で定義された定数) のいずれかに設定されます。 ヒープ内の最初のエントリに関するこの情報を取得するには、 **_pentry**メンバーが**NULL**である **_HEAPINFO**構造体へのポインターを **_heapwalk**に渡します。 オペレーティングシステムが **_heapwalk**(Windows 98 など) をサポートしていない場合、関数は **_HEAPEND**を返し、 **errno**を**に設定**します。
+**_HEAPOK** を返す **_heapwalk** を呼び出すと、 **_size** フィールドにエントリのサイズが格納され、 **_useflag** フィールドが **_FREEENTRY** または **_USEDENTRY** (どちらも Malloc で定義された定数) に設定されます。 ヒープ内の最初のエントリに関するこの情報を取得するには、 **_pentry** メンバーが **NULL** である **_HEAPINFO** 構造体へのポインター **_heapwalk** 渡します。 オペレーティングシステムが **_heapwalk**(Windows 98 など) をサポートしていない場合、この関数は **_HEAPEND** を返し、 **errno** **をに設定** します。
 
-この関数は、そのパラメーターを検証します。 *Entryinfo*が null ポインターの場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、 **errno**は**EINVAL**に設定され、関数は **_HEAPBADPTR**を返します。
+この関数は、そのパラメーターを検証します。 *Entryinfo* が null ポインターの場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、 **errno** は **EINVAL** に設定され、関数は **_HEAPBADPTR** を返します。
 
 ## <a name="requirements"></a>必要条件
 
@@ -87,7 +88,7 @@ int _heapwalk( _HEAPINFO *entryinfo );
 |-------------|---------------------|---------------------|
 |**_heapwalk**|\<malloc.h>|\<errno.h>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性について詳しくは、「 [Compatibility](../../c-runtime-library/compatibility.md)」をご覧ください。
 
 ## <a name="example"></a>例
 
@@ -174,7 +175,7 @@ OK - end of heap
 
 ## <a name="see-also"></a>関連項目
 
-[メモリ割り当て](../../c-runtime-library/memory-allocation.md)<br/>
+[メモリの割り当て](../../c-runtime-library/memory-allocation.md)<br/>
 [_heapadd](../../c-runtime-library/heapadd.md)<br/>
 [_heapchk](heapchk.md)<br/>
 [_heapmin](heapmin.md)<br/>

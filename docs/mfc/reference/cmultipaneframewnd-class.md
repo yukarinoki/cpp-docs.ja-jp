@@ -1,5 +1,6 @@
 ---
-title: クラスをフレーム化します。
+description: '詳細情報: CMultiPaneFrameWnd クラス'
+title: CMultiPaneFrameWnd クラス
 ms.date: 11/04/2016
 f1_keywords:
 - CMultiPaneFrameWnd
@@ -80,18 +81,18 @@ helpviewer_keywords:
 - CMultiPaneFrameWnd [MFC], StoreRecentDockSiteInfo
 - CMultiPaneFrameWnd [MFC], StoreRecentTabRelatedInfo
 ms.assetid: 989a548e-0d70-46b7-a513-8cf740e1be3e
-ms.openlocfilehash: 047dd5ca2ca6705549e8f92de1550248e348ff52
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: c12dccc684aa0bdcad62a09b527d482d78ac3823
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81752792"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97331517"
 ---
-# <a name="cmultipaneframewnd-class"></a>クラスをフレーム化します。
+# <a name="cmultipaneframewnd-class"></a>CMultiPaneFrameWnd クラス
 
-クラス`CMultiPaneFrameWnd`は[、CPaneFrameWnd クラスを拡張します](../../mfc/reference/cpaneframewnd-class.md)。 複数のペインをサポートします。 コントロール バーへの単一の埋め込み`CMultiPaneFrameWnd`ハンドルの代わりに`CMultiPaneFrameWnd`、CPaneContainerManager[クラス](../../mfc/reference/cpanecontainermanager-class.md)オブジェクトが含まれています。
+`CMultiPaneFrameWnd`クラスは、 [CPaneFrameWnd クラス](../../mfc/reference/cpaneframewnd-class.md)を拡張します。 複数のペインをサポートします。 には、コントロールバーへの1つの埋め込みハンドルではなく、 `CMultiPaneFrameWnd` [CPaneContainerManager クラス](../../mfc/reference/cpanecontainermanager-class.md) オブジェクトが含まれています。これを使用すると、ユーザーは1つのを `CMultiPaneFrameWnd` 別のウィンドウにドッキングしたり、複数のフローティングタブウィンドウを動的に作成したりできます。
 
-詳細については、Visual Studio のインストールの**\\VC\\atlmfc\\src mfc**フォルダーにあるソース コードを参照してください。
+詳細については、Visual Studio のインストールの **VC \\ atlmfc \\ src \\ mfc** フォルダーにあるソースコードを参照してください。
 
 ## <a name="syntax"></a>構文
 
@@ -105,57 +106,57 @@ class CMultiPaneFrameWnd : public CPaneFrameWnd
 
 |名前|説明|
 |----------|-----------------|
-|[C マルチペインフレームウンド::ペインの追加](#addpane)|ペインを追加します。 [(CPaneFrameWnd をオーバーライドします::ペインの追加](../../mfc/reference/cpaneframewnd-class.md#addpane).)|
-|[C マルチペインフレームウンド::最近のペインの追加](#addrecentpane)||
-|[CMultiPane フレームウィンドウ::レイアウトの調整](#adjustlayout)|ミニフレーム ウィンドウのレイアウトを調整します。 [(CPaneFrameWnd をオーバーライドします::レイアウトを調整](../../mfc/reference/cpaneframewnd-class.md#adjustlayout)します。|
-|[フレームを調整します。](#adjustpaneframes)|[(CPaneFrameWnd をオーバーライドします::調整ペインフレーム](../../mfc/reference/cpaneframewnd-class.md#adjustpaneframes).)|
-|[C マルチペインフレームウンド::カルク期待ドッキングレクト](#calcexpecteddockedrect)|ドッキングウィンドウの予想される四角形を計算します。 [(CPaneFrameWnd をオーバーライドします。:計算中にドッキングされたRect](../../mfc/reference/cpaneframewnd-class.md#calcexpecteddockedrect).)。|
-|[C マルチペインフレームウンド::缶詰](#canbeattached)|現在のペインを別のペインまたはフレーム ウィンドウにドッキングできるかどうかを判断します。 [(CPaneFrameWnd をオーバーライドします::CanBe添付.)](../../mfc/reference/cpaneframewnd-class.md#canbeattached)|
-|[ウィンドウ枠::缶詰トペイン](#canbedockedtopane)|ミニフレーム ウィンドウをペインにドッキングできるかどうかを判断します。 [(CPaneFrameWnd をオーバーライドします::CanBeDockedToPane](../../mfc/reference/cpaneframewnd-class.md#canbedockedtopane).)|
-|[Cマルチペインフレームウンド::チェックグリッパー可視性](#checkgrippervisibility)|[(CPaneFrameWnd をオーバーライドします::チェックグリッパー可視性](../../mfc/reference/cpaneframewnd-class.md#checkgrippervisibility).)|
-|[C マルチペインフレームウンド:::クローズミニフレーム](#closeminiframe)|( `CPaneFrameWnd::CloseMiniFrame`をオーバーライドします)。|
-|[ドキュメントのウィンドウ](#converttotabbeddocument)|ペインをタブ付きドキュメントに変換します。 [(CPaneFrameWnd をオーバーライドします::変換タブ付きドキュメント](../../mfc/reference/cpaneframewnd-class.md#converttotabbeddocument).)|
-|[コマルチペインフレーム::Dオックフレーム](#dockframe)||
-|[C マルチペインフレーム::Dオックペイン](#dockpane)|ペインをドッキングします。 [(CPaneFrameWnd::DockPane](../../mfc/reference/cpaneframewnd-class.md#dockpane)をオーバーライドします。|
-|[cMultiPaneFrameWnd::D:D最近のペインからメインフレーム](#dockrecentpanetomainframe)||
-|[フレーム化::テキスト](#getcaptiontext)|キャプション テキストを返します。 [(CPaneFrameWnd をオーバーライドします。::テキストを取得](../../mfc/reference/cpaneframewnd-class.md#getcaptiontext)します。|
-|[をクリックします。](#getpanecontainermanager)|内部コンテナー マネージャー オブジェクトへの参照を返します。|
-|[をクリックします。](#getfirstvisiblepane)|ミニフレーム ウィンドウに含まれる最初の可視ペインを返します。 [(CPaneFrameWnd をオーバーライドします::最初に表示されるペインを取得します](../../mfc/reference/cpaneframewnd-class.md#getfirstvisiblepane)。|
-|[C マルチペインフレームウンド::ゲットペイン](#getpane)|ミニフレーム ウィンドウに含まれるペインを返します。 [(CPaneFrameWnd をオーバーライドします::GetPane](../../mfc/reference/cpaneframewnd-class.md#getpane).|
-|[C マルチペインフレームウンド::GetPaneCount](#getpanecount)|ミニフレーム ウィンドウに含まれるペインの数を返します。 [(CPaneFrameWnd をオーバーライドします::GetPaneCount](../../mfc/reference/cpaneframewnd-class.md#getpanecount).)|
-|[をクリックします。](#getvisiblepanecount)|ミニフレーム ウィンドウに含まれる可視ペインの数を返します。 [(CPaneFrameWnd をオーバーライドします。)](../../mfc/reference/cpaneframewnd-class.md#getvisiblepanecount)|
-|[C マルチペインフレームオーニング::挿入ペイン](#insertpane)||
-|[C マルチペインフレームオード::ロードステート](#loadstate)|レジストリからペインの状態を読み込みます。 [(CPaneFrameWnd をオーバーライドします。:ロードステート](../../mfc/reference/cpaneframewnd-class.md#loadstate).|
-|[C マルチペインフレームウンド::オンドックトミストポス](#ondocktorecentpos)|ミニフレーム ウィンドウを直前の位置にドッキングします。 [(CPaneFrameWnd をオーバーライドします。:オンドックトミストポス](../../mfc/reference/cpaneframewnd-class.md#ondocktorecentpos).)|
-|[フレーム化::オンキルロールアップタイマー](#onkillrolluptimer)|ロールアップ タイマーを停止します。 [(CPaneFrameWnd をオーバーライドします。::OnKillRollUpTimer](../../mfc/reference/cpaneframewnd-class.md#onkillrolluptimer).)|
-|[CMultiPane フレームオンド:オンパネレカルクレイアウト](#onpanerecalclayout)|ミニフレーム ウィンドウ内のペインのレイアウトを調整します。 [(CPaneFrameWnd をオーバーライドします::オンパネレカルクレイアウト](../../mfc/reference/cpaneframewnd-class.md#onpanerecalclayout).)|
-|[C マルチペインフレームウンド::オンセットロールアップタイマー](#onsetrolluptimer)|ロールアップ タイマーを設定します。 [(CPaneFrameWnd をオーバーライドします。::オンセットロールアップタイマー](../../mfc/reference/cpaneframewnd-class.md#onsetrolluptimer).)|
-|[フレーム化::オンショーウィンドウ](#onshowpane)|ミニフレーム ウィンドウ内のペインが非表示になるとき、または表示されるときに、フレームワークによって呼び出されます。 [(CPaneFrameWnd をオーバーライドします::オンショーウィンドウ.](../../mfc/reference/cpaneframewnd-class.md#onshowpane)|
-|[コメパネフレーム::Pアネのフロトポイント](#panefrompoint)|ユーザーが指定した位置がミニフレーム ウィンドウ内のペインに含まれている場合、そのペインを返します。 [(CPaneFrameWnd::PaneFromPoint](../../mfc/reference/cpaneframewnd-class.md#panefrompoint)をオーバーライドします。|
-|[C マルチペインフレームウンド::削除非有効なペイン](#removenonvalidpanes)|有効でないウィンドウを削除するために、フレームワークによって呼び出されます。 [(CPaneFrameWnd をオーバーライドします::非ValidPanesを削除](../../mfc/reference/cpaneframewnd-class.md#removenonvalidpanes)します。|
-|[C マルチペインフレームウンド::ペインの削除](#removepane)|ミニフレーム ウィンドウから、ペインを削除します。 [(CPaneFrameWnd をオーバーライドします::ペインの削除](../../mfc/reference/cpaneframewnd-class.md#removepane).)|
-|[C マルチペインフレームウンド::ペインの置換](#replacepane)|ペインを別のペインに置き換えます。 [(CPaneFrameWnd をオーバーライドします::ペインを置き換えます](../../mfc/reference/cpaneframewnd-class.md#replacepane)。|
-|[C マルチペインフレームウンド::セーブステート](#savestate)|レジストリにペインの状態を保存します。 [(CPaneFrameWnd をオーバーライドします::セーブステート](../../mfc/reference/cpaneframewnd-class.md#savestate).|
-|[CMultiPaneFrameWnd::シリアライズ](#serialize)|( `CPaneFrameWnd::Serialize`をオーバーライドします)。|
-|[C マルチペインフレームオーニング::セットドックステート](#setdockstate)|ドッキング状態を設定します。 [(CPaneFrameWnd をオーバーライドします。::セットドックステート](../../mfc/reference/cpaneframewnd-class.md#setdockstate).|
-|[ウィンドウ枠::セットラストフォーカスペイン](#setlastfocusedpane)||
-|[C マルチペインフレームオーニング::セットプレドックステート](#setpredockstate)|プレドッキングの状態を設定します。 [(CPaneFrameWnd をオーバーライドします。::セットプレドックステート](../../mfc/reference/cpaneframewnd-class.md#setpredockstate).|
-|[ウィンドウズペインウィンドウ::ストア最近ドックサイト情報](#storerecentdocksiteinfo)|[(CPaneFrameWnd をオーバーライドします。:ストアRecentDockSiteInfo](../../mfc/reference/cpaneframewnd-class.md#storerecentdocksiteinfo).)|
-|[ウィンドウズフレーム:::ストア最近タブ関連情報](#storerecenttabrelatedinfo)|[(CPaneFrameWnd をオーバーライドします::ストアRecentTab関連情報](../../mfc/reference/cpaneframewnd-class.md#storerecenttabrelatedinfo).)|
+|[CMultiPaneFrameWnd:: AddPane](#addpane)|ペインを追加します。 ( [CPaneFrameWnd:: AddPane](../../mfc/reference/cpaneframewnd-class.md#addpane)をオーバーライドします)。|
+|[CMultiPaneFrameWnd::AddRecentPane](#addrecentpane)||
+|[CMultiPaneFrameWnd::AdjustLayout](#adjustlayout)|ミニフレーム ウィンドウのレイアウトを調整します。 ( [CPaneFrameWnd:: AdjustLayout](../../mfc/reference/cpaneframewnd-class.md#adjustlayout)をオーバーライドします。)|
+|[CMultiPaneFrameWnd::AdjustPaneFrames](#adjustpaneframes)|( [CPaneFrameWnd:: AdjustPaneFrames](../../mfc/reference/cpaneframewnd-class.md#adjustpaneframes)をオーバーライドします。)|
+|[CMultiPaneFrameWnd::CalcExpectedDockedRect](#calcexpecteddockedrect)|ドッキングされたウィンドウの予期される四角形を計算します。 ( [CPaneFrameWnd:: CalcExpectedDockedRect](../../mfc/reference/cpaneframewnd-class.md#calcexpecteddockedrect)をオーバーライドします。)|
+|[CMultiPaneFrameWnd:: CanBeAttached](#canbeattached)|現在のペインを別のペインまたはフレームウィンドウにドッキングできるかどうかを判断します。 ( [CPaneFrameWnd:: CanBeAttached](../../mfc/reference/cpaneframewnd-class.md#canbeattached)をオーバーライドします)。|
+|[CMultiPaneFrameWnd:: Canbedoc/Pane](#canbedockedtopane)|ミニフレームウィンドウをペインにドッキングできるかどうかを決定します。 ( [CPaneFrameWnd:: Canbedoc/pane](../../mfc/reference/cpaneframewnd-class.md#canbedockedtopane)をオーバーライドします)。|
+|[CMultiPaneFrameWnd::CheckGripperVisibility](#checkgrippervisibility)|( [CPaneFrameWnd:: CheckGripperVisibility](../../mfc/reference/cpaneframewnd-class.md#checkgrippervisibility)をオーバーライドします。)|
+|[CMultiPaneFrameWnd:: CloseMiniFrame フレーム](#closeminiframe)|( `CPaneFrameWnd::CloseMiniFrame`をオーバーライドします)。|
+|[CMultiPaneFrameWnd::ConvertToTabbedDocument](#converttotabbeddocument)|ペインをタブ付きドキュメントに変換します。 ( [CPaneFrameWnd:: ConvertToTabbedDocument](../../mfc/reference/cpaneframewnd-class.md#converttotabbeddocument)をオーバーライドします。)|
+|[CMultiPaneFrameWnd::D ockFrame](#dockframe)||
+|[CMultiPaneFrameWnd::D ockPane](#dockpane)|ペインをドッキングします。 ( [CPaneFrameWnd::D ockPane](../../mfc/reference/cpaneframewnd-class.md#dockpane)をオーバーライドします)。|
+|[CMultiPaneFrameWnd::D ockRecentPaneToMainFrame](#dockrecentpanetomainframe)||
+|[CMultiPaneFrameWnd::GetCaptionText](#getcaptiontext)|キャプション テキストを返します。 ( [CPaneFrameWnd:: GetCaptionText](../../mfc/reference/cpaneframewnd-class.md#getcaptiontext)をオーバーライドします。)|
+|[CMultiPaneFrameWnd::GetPaneContainerManager](#getpanecontainermanager)|内部コンテナーマネージャーオブジェクトへの参照を返します。|
+|[CMultiPaneFrameWnd::GetFirstVisiblePane](#getfirstvisiblepane)|ミニフレーム ウィンドウに含まれる最初の可視ペインを返します。 ( [CPaneFrameWnd:: GetFirstVisiblePane](../../mfc/reference/cpaneframewnd-class.md#getfirstvisiblepane)をオーバーライドします。)|
+|[CMultiPaneFrameWnd:: GetPane](#getpane)|ミニフレーム ウィンドウに含まれるペインを返します。 ( [CPaneFrameWnd:: GetPane](../../mfc/reference/cpaneframewnd-class.md#getpane)をオーバーライドします)。|
+|[CMultiPaneFrameWnd:: GetPaneCount](#getpanecount)|ミニフレーム ウィンドウに含まれるペインの数を返します。 ( [CPaneFrameWnd:: GetPaneCount](../../mfc/reference/cpaneframewnd-class.md#getpanecount)をオーバーライドします)。|
+|[CMultiPaneFrameWnd::GetVisiblePaneCount](#getvisiblepanecount)|ミニフレーム ウィンドウに含まれる可視ペインの数を返します。 ( [CPaneFrameWnd:: GetVisiblePaneCount](../../mfc/reference/cpaneframewnd-class.md#getvisiblepanecount)をオーバーライドします。)|
+|[CMultiPaneFrameWnd:: InsertPane](#insertpane)||
+|[CMultiPaneFrameWnd:: LoadState](#loadstate)|レジストリからペインの状態を読み込みます。 ( [CPaneFrameWnd:: LoadState](../../mfc/reference/cpaneframewnd-class.md#loadstate)をオーバーライドします。)|
+|[CMultiPaneFrameWnd::OnDockToRecentPos](#ondocktorecentpos)|ミニフレーム ウィンドウを直前の位置にドッキングします。 ( [CPaneFrameWnd:: OnDockToRecentPos](../../mfc/reference/cpaneframewnd-class.md#ondocktorecentpos)をオーバーライドします。)|
+|[CMultiPaneFrameWnd::OnKillRollUpTimer](#onkillrolluptimer)|ロールアップ タイマーを停止します。 ( [CPaneFrameWnd:: OnKillRollUpTimer](../../mfc/reference/cpaneframewnd-class.md#onkillrolluptimer)をオーバーライドします。)|
+|[CMultiPaneFrameWnd::OnPaneRecalcLayout](#onpanerecalclayout)|ミニフレームウィンドウ内のペインのレイアウトを調整します。 ( [CPaneFrameWnd:: OnPaneRecalcLayout](../../mfc/reference/cpaneframewnd-class.md#onpanerecalclayout)をオーバーライドします。)|
+|[CMultiPaneFrameWnd::OnSetRollUpTimer](#onsetrolluptimer)|ロールアップ タイマーを設定します。 ( [CPaneFrameWnd:: OnSetRollUpTimer](../../mfc/reference/cpaneframewnd-class.md#onsetrolluptimer)をオーバーライドします。)|
+|[CMultiPaneFrameWnd:: OnShowPane](#onshowpane)|ミニフレーム ウィンドウ内のペインが非表示になるとき、または表示されるときに、フレームワークによって呼び出されます。 ( [CPaneFrameWnd:: OnShowPane](../../mfc/reference/cpaneframewnd-class.md#onshowpane)をオーバーライドします)。|
+|[CMultiPaneFrameWnd::P aneFromPoint](#panefrompoint)|ユーザーが指定した位置がミニフレーム ウィンドウ内のペインに含まれている場合、そのペインを返します。 ( [CPaneFrameWnd::P aneFromPoint](../../mfc/reference/cpaneframewnd-class.md#panefrompoint)をオーバーライドします)。|
+|[CMultiPaneFrameWnd::RemoveNonValidPanes](#removenonvalidpanes)|有効でないウィンドウを削除するために、フレームワークによって呼び出されます。 ( [CPaneFrameWnd:: RemoveNonValidPanes](../../mfc/reference/cpaneframewnd-class.md#removenonvalidpanes)をオーバーライドします。)|
+|[CMultiPaneFrameWnd:: RemovePane](#removepane)|ミニフレーム ウィンドウから、ペインを削除します。 ( [CPaneFrameWnd:: RemovePane](../../mfc/reference/cpaneframewnd-class.md#removepane)をオーバーライドします)。|
+|[CMultiPaneFrameWnd:: ReplacePane](#replacepane)|ペインを別のペインに置き換えます。 ( [CPaneFrameWnd:: ReplacePane](../../mfc/reference/cpaneframewnd-class.md#replacepane)をオーバーライドします)。|
+|[CMultiPaneFrameWnd:: SaveState](#savestate)|レジストリにペインの状態を保存します。 ( [CPaneFrameWnd:: SaveState](../../mfc/reference/cpaneframewnd-class.md#savestate)をオーバーライドします。)|
+|[CMultiPaneFrameWnd:: Serialize](#serialize)|( `CPaneFrameWnd::Serialize`をオーバーライドします)。|
+|[CMultiPaneFrameWnd::SetDockState](#setdockstate)|ドッキング状態を設定します。 ( [CPaneFrameWnd:: SetDockState](../../mfc/reference/cpaneframewnd-class.md#setdockstate)をオーバーライドします。)|
+|[CMultiPaneFrameWnd::SetLastFocusedPane](#setlastfocusedpane)||
+|[CMultiPaneFrameWnd::SetPreDockState](#setpredockstate)|事前ドッキング状態を設定します。 ( [CPaneFrameWnd:: SetPreDockState](../../mfc/reference/cpaneframewnd-class.md#setpredockstate)をオーバーライドします。)|
+|[CMultiPaneFrameWnd::StoreRecentDockSiteInfo](#storerecentdocksiteinfo)|( [CPaneFrameWnd:: StoreRecentDockSiteInfo](../../mfc/reference/cpaneframewnd-class.md#storerecentdocksiteinfo)をオーバーライドします。)|
+|[CMultiPaneFrameWnd::StoreRecentTabRelatedInfo](#storerecenttabrelatedinfo)|( [CPaneFrameWnd:: StoreRecentTabRelatedInfo](../../mfc/reference/cpaneframewnd-class.md#storerecenttabrelatedinfo)をオーバーライドします。)|
 
 ## <a name="remarks"></a>解説
 
-このクラスのほとんどのメソッドは[、CPaneFrameWnd クラス](../../mfc/reference/cpaneframewnd-class.md)のメソッドをオーバーライドします。
+このクラスのほとんどのメソッドは、 [CPaneFrameWnd class](../../mfc/reference/cpaneframewnd-class.md) クラスのメソッドをオーバーライドします。
 
-ペインがAFX_CBRS_AUTO_ROLLUPスタイルを使用し、ユーザーがそのペインをマルチペイン フレーム ウィンドウにドッキングする場合、ドッキングされた他のペインのスタイル設定に関係なく、ユーザーはウィンドウをロール アップできます。
+ペインで AFX_CBRS_AUTO_ROLLUP スタイルを使用していて、ユーザーがペインを複数のウィンドウ枠ウィンドウにドッキングしている場合は、ドッキングされた他のペインのスタイル設定に関係なく、ウィンドウをロールアップできます。
 
-フレームワークは、ユーザーが`CMultiPaneFrameWnd`CBRS_FLOAT_MULTI スタイルを使用するペインをフローティングすると、自動的にオブジェクトを作成します。
+`CMultiPaneFrameWnd`ユーザーが CBRS_FLOAT_MULTI スタイルを使用するペインをフローティングすると、フレームワークによってオブジェクトが自動的に作成されます。
 
-クラスから派生して動的に作成する`CPaneFrameWnd`方法については、「 [CPaneFrameWnd](../../mfc/reference/cpaneframewnd-class.md)」を参照してください。
+クラスからクラスを派生させて動的に作成する方法については `CPaneFrameWnd` 、「 [CPaneFrameWnd](../../mfc/reference/cpaneframewnd-class.md)」を参照してください。
 
 ## <a name="example"></a>例
 
-オブジェクトへのポインターを取得する方法を次の例に`CMultiPaneFrameWnd`示します。 このコード スニペットは、ペイン サイズの[設定のサンプル](../../overview/visual-cpp-samples.md)の一部です。
+次の例は、オブジェクトへのポインターを取得する方法を示して `CMultiPaneFrameWnd` います。 このコードスニペットは、 [Set Pane Size サンプル](../../overview/visual-cpp-samples.md)に含まれています。
 
 [!code-cpp[NVC_MFC_SetPaneSize#4](../../mfc/reference/codesnippet/cpp/cmultipaneframewnd-class_1.cpp)]
 
@@ -171,11 +172,11 @@ class CMultiPaneFrameWnd : public CPaneFrameWnd
 
 [CMultiPaneFrameWnd](../../mfc/reference/cmultipaneframewnd-class.md)
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-**ヘッダー:** afxMultiPaneFrameWnd.h
+**ヘッダー:** afxMultiPaneFrameWnd
 
-## <a name="cmultipaneframewndaddpane"></a><a name="addpane"></a>C マルチペインフレームウンド::ペインの追加
+## <a name="cmultipaneframewndaddpane"></a><a name="addpane"></a> CMultiPaneFrameWnd:: AddPane
 
 ```
 virtual void AddPane(CBasePane* pWnd);
@@ -183,11 +184,11 @@ virtual void AddPane(CBasePane* pWnd);
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*pWnd*<br/>
+から *pWnd*<br/>
 
 ### <a name="remarks"></a>解説
 
-## <a name="cmultipaneframewndaddrecentpane"></a><a name="addrecentpane"></a>C マルチペインフレームウンド::最近のペインの追加
+## <a name="cmultipaneframewndaddrecentpane"></a><a name="addrecentpane"></a> CMultiPaneFrameWnd::AddRecentPane
 
 ```
 virtual BOOL AddRecentPane(CDockablePane* pBar);
@@ -195,13 +196,13 @@ virtual BOOL AddRecentPane(CDockablePane* pBar);
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*pバー*<br/>
+から *Pbar*<br/>
 
 ### <a name="return-value"></a>戻り値
 
 ### <a name="remarks"></a>解説
 
-## <a name="cmultipaneframewndadjustlayout"></a><a name="adjustlayout"></a>CMultiPane フレームウィンドウ::レイアウトの調整
+## <a name="cmultipaneframewndadjustlayout"></a><a name="adjustlayout"></a> CMultiPaneFrameWnd::AdjustLayout
 
 ```
 virtual void AdjustLayout();
@@ -209,7 +210,7 @@ virtual void AdjustLayout();
 
 ### <a name="remarks"></a>解説
 
-## <a name="cmultipaneframewndadjustpaneframes"></a><a name="adjustpaneframes"></a>フレームを調整します。
+## <a name="cmultipaneframewndadjustpaneframes"></a><a name="adjustpaneframes"></a> CMultiPaneFrameWnd::AdjustPaneFrames
 
 ```
 virtual void AdjustPaneFrames();
@@ -217,7 +218,7 @@ virtual void AdjustPaneFrames();
 
 ### <a name="remarks"></a>解説
 
-## <a name="cmultipaneframewndcalcexpecteddockedrect"></a><a name="calcexpecteddockedrect"></a>C マルチペインフレームウンド::カルク期待ドッキングレクト
+## <a name="cmultipaneframewndcalcexpecteddockedrect"></a><a name="calcexpecteddockedrect"></a> CMultiPaneFrameWnd::CalcExpectedDockedRect
 
 ```
 virtual void CalcExpectedDockedRect(
@@ -230,15 +231,15 @@ virtual void CalcExpectedDockedRect(
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*ドック*<br/>
-[in]*ptマウス*<br/>
-[in]*レクト結果*<br/>
-[in]*タブを描く*<br/>
-[in]*ターゲットバー*<br/>
+から *pWndToDock*<br/>
+から *Ptmouse*<br/>
+から *rectResult*<br/>
+から *[Bdrawtab タブ*<br/>
+から *Pptargetbar*<br/>
 
 ### <a name="remarks"></a>解説
 
-## <a name="cmultipaneframewndcanbeattached"></a><a name="canbeattached"></a>C マルチペインフレームウンド::缶詰
+## <a name="cmultipaneframewndcanbeattached"></a><a name="canbeattached"></a> CMultiPaneFrameWnd:: CanBeAttached
 
 ```
 virtual BOOL CanBeAttached() const;
@@ -248,7 +249,7 @@ virtual BOOL CanBeAttached() const;
 
 ### <a name="remarks"></a>解説
 
-## <a name="cmultipaneframewndcanbedockedtopane"></a><a name="canbedockedtopane"></a>ウィンドウ枠::缶詰トペイン
+## <a name="cmultipaneframewndcanbedockedtopane"></a><a name="canbedockedtopane"></a> CMultiPaneFrameWnd:: Canbedoc/Pane
 
 ```
 virtual BOOL CanBeDockedToPane(const CDockablePane* pDockingBar) const;
@@ -256,13 +257,13 @@ virtual BOOL CanBeDockedToPane(const CDockablePane* pDockingBar) const;
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*pドッキングバー*<br/>
+から *Pdocのボタン*<br/>
 
 ### <a name="return-value"></a>戻り値
 
 ### <a name="remarks"></a>解説
 
-## <a name="cmultipaneframewndcheckgrippervisibility"></a><a name="checkgrippervisibility"></a>Cマルチペインフレームウンド::チェックグリッパー可視性
+## <a name="cmultipaneframewndcheckgrippervisibility"></a><a name="checkgrippervisibility"></a> CMultiPaneFrameWnd::CheckGripperVisibility
 
 ```
 virtual void CheckGripperVisibility();
@@ -270,7 +271,7 @@ virtual void CheckGripperVisibility();
 
 ### <a name="remarks"></a>解説
 
-## <a name="cmultipaneframewndcloseminiframe"></a><a name="closeminiframe"></a>C マルチペインフレームウンド:::クローズミニフレーム
+## <a name="cmultipaneframewndcloseminiframe"></a><a name="closeminiframe"></a> CMultiPaneFrameWnd:: CloseMiniFrame フレーム
 
 ```
 virtual void CloseMiniFrame();
@@ -278,7 +279,7 @@ virtual void CloseMiniFrame();
 
 ### <a name="remarks"></a>解説
 
-## <a name="cmultipaneframewndconverttotabbeddocument"></a><a name="converttotabbeddocument"></a>ドキュメントのウィンドウ
+## <a name="cmultipaneframewndconverttotabbeddocument"></a><a name="converttotabbeddocument"></a> CMultiPaneFrameWnd::ConvertToTabbedDocument
 
 ```
 virtual void ConvertToTabbedDocument();
@@ -286,7 +287,7 @@ virtual void ConvertToTabbedDocument();
 
 ### <a name="remarks"></a>解説
 
-## <a name="cmultipaneframewnddockframe"></a><a name="dockframe"></a>コマルチペインフレーム::Dオックフレーム
+## <a name="cmultipaneframewnddockframe"></a><a name="dockframe"></a> CMultiPaneFrameWnd::D ockFrame
 
 ```
 virtual BOOL DockFrame(
@@ -296,14 +297,14 @@ virtual BOOL DockFrame(
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*pDockedフレーム*<br/>
-[in]*ドックメソッド*<br/>
+から *Pdoc/フレーム*<br/>
+から *dockMethod*<br/>
 
 ### <a name="return-value"></a>戻り値
 
 ### <a name="remarks"></a>解説
 
-## <a name="cmultipaneframewnddockpane"></a><a name="dockpane"></a>C マルチペインフレーム::Dオックペイン
+## <a name="cmultipaneframewnddockpane"></a><a name="dockpane"></a> CMultiPaneFrameWnd::D ockPane
 
 ```
 virtual BOOL DockPane(CDockablePane* pDockedBar);
@@ -311,13 +312,13 @@ virtual BOOL DockPane(CDockablePane* pDockedBar);
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*pDockedバー*<br/>
+から *Pdocの表示バー*<br/>
 
 ### <a name="return-value"></a>戻り値
 
 ### <a name="remarks"></a>解説
 
-## <a name="cmultipaneframewnddockrecentpanetomainframe"></a><a name="dockrecentpanetomainframe"></a>cMultiPaneFrameWnd::D:D最近のペインからメインフレーム
+## <a name="cmultipaneframewnddockrecentpanetomainframe"></a><a name="dockrecentpanetomainframe"></a> CMultiPaneFrameWnd::D ockRecentPaneToMainFrame
 
 ```
 virtual void DockRecentPaneToMainFrame(CDockablePane* pBar);
@@ -325,11 +326,11 @@ virtual void DockRecentPaneToMainFrame(CDockablePane* pBar);
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*pバー*<br/>
+から *Pbar*<br/>
 
 ### <a name="remarks"></a>解説
 
-## <a name="cmultipaneframewndgetcaptiontext"></a><a name="getcaptiontext"></a>フレーム化::テキスト
+## <a name="cmultipaneframewndgetcaptiontext"></a><a name="getcaptiontext"></a> CMultiPaneFrameWnd::GetCaptionText
 
 ```
 virtual CString GetCaptionText();
@@ -339,7 +340,7 @@ virtual CString GetCaptionText();
 
 ### <a name="remarks"></a>解説
 
-## <a name="cmultipaneframewndgetfirstvisiblepane"></a><a name="getfirstvisiblepane"></a>をクリックします。
+## <a name="cmultipaneframewndgetfirstvisiblepane"></a><a name="getfirstvisiblepane"></a> CMultiPaneFrameWnd::GetFirstVisiblePane
 
 ```
 virtual CWnd* GetFirstVisiblePane() const;
@@ -349,7 +350,7 @@ virtual CWnd* GetFirstVisiblePane() const;
 
 ### <a name="remarks"></a>解説
 
-## <a name="cmultipaneframewndgetpane"></a><a name="getpane"></a>C マルチペインフレームウンド::ゲットペイン
+## <a name="cmultipaneframewndgetpane"></a><a name="getpane"></a> CMultiPaneFrameWnd:: GetPane
 
 ```
 virtual CWnd* GetPane() const;
@@ -359,9 +360,9 @@ virtual CWnd* GetPane() const;
 
 ### <a name="remarks"></a>解説
 
-## <a name="cmultipaneframewndgetpanecontainermanager"></a><a name="getpanecontainermanager"></a>をクリックします。
+## <a name="cmultipaneframewndgetpanecontainermanager"></a><a name="getpanecontainermanager"></a> CMultiPaneFrameWnd::GetPaneContainerManager
 
-内部コンテナー マネージャー オブジェクトへの参照を返します。
+内部コンテナーマネージャーオブジェクトへの参照を返します。
 
 ```
 CPaneContainerManager& GetPaneContainerManager();
@@ -369,13 +370,13 @@ CPaneContainerManager& GetPaneContainerManager();
 
 ### <a name="return-value"></a>戻り値
 
-内部コンテナー マネージャー オブジェクトへの参照。
+内部コンテナーマネージャーオブジェクトへの参照。
 
 ### <a name="remarks"></a>解説
 
-このメソッドを使用して、内部[CPaneContainerManager クラス](../../mfc/reference/cpanecontainermanager-class.md)オブジェクトにアクセスできます。
+このメソッドを使用して、内部の [CPaneContainerManager クラス](../../mfc/reference/cpanecontainermanager-class.md) オブジェクトにアクセスできます。
 
-## <a name="cmultipaneframewndgetpanecount"></a><a name="getpanecount"></a>C マルチペインフレームウンド::GetPaneCount
+## <a name="cmultipaneframewndgetpanecount"></a><a name="getpanecount"></a> CMultiPaneFrameWnd:: GetPaneCount
 
 ```
 virtual int GetPaneCount() const;
@@ -385,7 +386,7 @@ virtual int GetPaneCount() const;
 
 ### <a name="remarks"></a>解説
 
-## <a name="cmultipaneframewndgetvisiblepanecount"></a><a name="getvisiblepanecount"></a>をクリックします。
+## <a name="cmultipaneframewndgetvisiblepanecount"></a><a name="getvisiblepanecount"></a> CMultiPaneFrameWnd::GetVisiblePaneCount
 
 ```
 virtual int GetVisiblePaneCount() const;
@@ -395,7 +396,7 @@ virtual int GetVisiblePaneCount() const;
 
 ### <a name="remarks"></a>解説
 
-## <a name="cmultipaneframewndinsertpane"></a><a name="insertpane"></a>C マルチペインフレームオーニング::挿入ペイン
+## <a name="cmultipaneframewndinsertpane"></a><a name="insertpane"></a> CMultiPaneFrameWnd:: InsertPane
 
 ```
 virtual BOOL InsertPane(
@@ -406,15 +407,15 @@ virtual BOOL InsertPane(
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*コントロールバー*<br/>
-[in]*pターゲット*<br/>
-[in]*bアフター*<br/>
+から *pControlBar*<br/>
+から *Ptarget*<br/>
+から *Bafter*<br/>
 
 ### <a name="return-value"></a>戻り値
 
 ### <a name="remarks"></a>解説
 
-## <a name="cmultipaneframewndloadstate"></a><a name="loadstate"></a>C マルチペインフレームオード::ロードステート
+## <a name="cmultipaneframewndloadstate"></a><a name="loadstate"></a> CMultiPaneFrameWnd:: LoadState
 
 ```
 virtual BOOL LoadState(
@@ -424,14 +425,14 @@ virtual BOOL LoadState(
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*名前を指定します。*<br/>
-[in]*UIID*<br/>
+から *Lpszprofilename*<br/>
+から *uiID*<br/>
 
 ### <a name="return-value"></a>戻り値
 
 ### <a name="remarks"></a>解説
 
-## <a name="cmultipaneframewndondocktorecentpos"></a><a name="ondocktorecentpos"></a>C マルチペインフレームウンド::オンドックトミストポス
+## <a name="cmultipaneframewndondocktorecentpos"></a><a name="ondocktorecentpos"></a> CMultiPaneFrameWnd::OnDockToRecentPos
 
 ```
 virtual void OnDockToRecentPos();
@@ -439,7 +440,7 @@ virtual void OnDockToRecentPos();
 
 ### <a name="remarks"></a>解説
 
-## <a name="cmultipaneframewndonkillrolluptimer"></a><a name="onkillrolluptimer"></a>フレーム化::オンキルロールアップタイマー
+## <a name="cmultipaneframewndonkillrolluptimer"></a><a name="onkillrolluptimer"></a> CMultiPaneFrameWnd::OnKillRollUpTimer
 
 ```
 virtual void OnKillRollUpTimer();
@@ -447,7 +448,7 @@ virtual void OnKillRollUpTimer();
 
 ### <a name="remarks"></a>解説
 
-## <a name="cmultipaneframewndonpanerecalclayout"></a><a name="onpanerecalclayout"></a>CMultiPane フレームオンド:オンパネレカルクレイアウト
+## <a name="cmultipaneframewndonpanerecalclayout"></a><a name="onpanerecalclayout"></a> CMultiPaneFrameWnd::OnPaneRecalcLayout
 
 ```
 virtual void OnPaneRecalcLayout();
@@ -455,7 +456,7 @@ virtual void OnPaneRecalcLayout();
 
 ### <a name="remarks"></a>解説
 
-## <a name="cmultipaneframewndonsetrolluptimer"></a><a name="onsetrolluptimer"></a>C マルチペインフレームウンド::オンセットロールアップタイマー
+## <a name="cmultipaneframewndonsetrolluptimer"></a><a name="onsetrolluptimer"></a> CMultiPaneFrameWnd::OnSetRollUpTimer
 
 ```
 virtual void OnSetRollUpTimer();
@@ -463,7 +464,7 @@ virtual void OnSetRollUpTimer();
 
 ### <a name="remarks"></a>解説
 
-## <a name="cmultipaneframewndonshowpane"></a><a name="onshowpane"></a>フレーム化::オンショーウィンドウ
+## <a name="cmultipaneframewndonshowpane"></a><a name="onshowpane"></a> CMultiPaneFrameWnd:: OnShowPane
 
 ```
 virtual void OnShowPane(
@@ -473,12 +474,12 @@ virtual void OnShowPane(
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*pバー*<br/>
-[in]*bショー*<br/>
+から *Pbar*<br/>
+から *bShow*<br/>
 
 ### <a name="remarks"></a>解説
 
-## <a name="cmultipaneframewndpanefrompoint"></a><a name="panefrompoint"></a>コメパネフレーム::Pアネのフロトポイント
+## <a name="cmultipaneframewndpanefrompoint"></a><a name="panefrompoint"></a> CMultiPaneFrameWnd::P aneFromPoint
 
 ```
 virtual CBasePane* PaneFromPoint(
@@ -489,15 +490,15 @@ virtual CBasePane* PaneFromPoint(
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*ポイント*<br/>
-[in]*n感度*<br/>
-[in]*可視性を確認する*<br/>
+から *ポイント*<br/>
+から *Nsensitivity*<br/>
+から *Bcheckvisibility*<br/>
 
 ### <a name="return-value"></a>戻り値
 
 ### <a name="remarks"></a>解説
 
-## <a name="cmultipaneframewndremovenonvalidpanes"></a><a name="removenonvalidpanes"></a>C マルチペインフレームウンド::削除非有効なペイン
+## <a name="cmultipaneframewndremovenonvalidpanes"></a><a name="removenonvalidpanes"></a> CMultiPaneFrameWnd::RemoveNonValidPanes
 
 ```
 virtual void RemoveNonValidPanes();
@@ -505,7 +506,7 @@ virtual void RemoveNonValidPanes();
 
 ### <a name="remarks"></a>解説
 
-## <a name="cmultipaneframewndremovepane"></a><a name="removepane"></a>C マルチペインフレームウンド::ペインの削除
+## <a name="cmultipaneframewndremovepane"></a><a name="removepane"></a> CMultiPaneFrameWnd:: RemovePane
 
 ```
 virtual void RemovePane(
@@ -516,13 +517,13 @@ virtual void RemovePane(
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*pバー*<br/>
-[in]*bデストロイ*<br/>
-[in]*遅延デストロイ*<br/>
+から *Pbar*<br/>
+から *Bdestroy*<br/>
+から *Bnodelayeddestroy*<br/>
 
 ### <a name="remarks"></a>解説
 
-## <a name="cmultipaneframewndreplacepane"></a><a name="replacepane"></a>C マルチペインフレームウンド::ペインの置換
+## <a name="cmultipaneframewndreplacepane"></a><a name="replacepane"></a> CMultiPaneFrameWnd:: ReplacePane
 
 ```
 virtual void ReplacePane(
@@ -532,12 +533,12 @@ virtual void ReplacePane(
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*をクリックします。*<br/>
-[in]*置き換える*<br/>
+から *Pbarorg*<br/>
+から *Pbarreplacewith*<br/>
 
 ### <a name="remarks"></a>解説
 
-## <a name="cmultipaneframewndsavestate"></a><a name="savestate"></a>C マルチペインフレームウンド::セーブステート
+## <a name="cmultipaneframewndsavestate"></a><a name="savestate"></a> CMultiPaneFrameWnd:: SaveState
 
 ```
 virtual BOOL SaveState(
@@ -547,14 +548,14 @@ virtual BOOL SaveState(
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*名前を指定します。*<br/>
-[in]*UIID*<br/>
+から *Lpszprofilename*<br/>
+から *uiID*<br/>
 
 ### <a name="return-value"></a>戻り値
 
 ### <a name="remarks"></a>解説
 
-## <a name="cmultipaneframewndserialize"></a><a name="serialize"></a>CMultiPaneFrameWnd::シリアライズ
+## <a name="cmultipaneframewndserialize"></a><a name="serialize"></a> CMultiPaneFrameWnd:: Serialize
 
 ```
 virtual void Serialize(CArchive& ar);
@@ -562,11 +563,11 @@ virtual void Serialize(CArchive& ar);
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*ar*<br/>
+から *ar*<br/>
 
 ### <a name="remarks"></a>解説
 
-## <a name="cmultipaneframewndsetdockstate"></a><a name="setdockstate"></a>C マルチペインフレームオーニング::セットドックステート
+## <a name="cmultipaneframewndsetdockstate"></a><a name="setdockstate"></a> CMultiPaneFrameWnd::SetDockState
 
 ```
 virtual void SetDockState(CDockingManager* pDockManager);
@@ -574,11 +575,11 @@ virtual void SetDockState(CDockingManager* pDockManager);
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*をクリックします。*<br/>
+から *pDockManager*<br/>
 
 ### <a name="remarks"></a>解説
 
-## <a name="cmultipaneframewndsetlastfocusedpane"></a><a name="setlastfocusedpane"></a>ウィンドウ枠::セットラストフォーカスペイン
+## <a name="cmultipaneframewndsetlastfocusedpane"></a><a name="setlastfocusedpane"></a> CMultiPaneFrameWnd::SetLastFocusedPane
 
 ```cpp
 void SetLastFocusedPane(HWND hwnd);
@@ -586,11 +587,11 @@ void SetLastFocusedPane(HWND hwnd);
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*hwnd*<br/>
+から *hwnd*<br/>
 
 ### <a name="remarks"></a>解説
 
-## <a name="cmultipaneframewndsetpredockstate"></a><a name="setpredockstate"></a>C マルチペインフレームオーニング::セットプレドックステート
+## <a name="cmultipaneframewndsetpredockstate"></a><a name="setpredockstate"></a> CMultiPaneFrameWnd::SetPreDockState
 
 ```
 virtual BOOL SetPreDockState(
@@ -601,15 +602,15 @@ virtual BOOL SetPreDockState(
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*プレドックステート*<br/>
-[in]*をクリックします。*<br/>
-[in]*ドックメソッド*<br/>
+から *preDockState*<br/>
+から *Pbartodock*<br/>
+から *dockMethod*<br/>
 
 ### <a name="return-value"></a>戻り値
 
 ### <a name="remarks"></a>解説
 
-## <a name="cmultipaneframewndstorerecentdocksiteinfo"></a><a name="storerecentdocksiteinfo"></a>ウィンドウズペインウィンドウ::ストア最近ドックサイト情報
+## <a name="cmultipaneframewndstorerecentdocksiteinfo"></a><a name="storerecentdocksiteinfo"></a> CMultiPaneFrameWnd::StoreRecentDockSiteInfo
 
 ```
 virtual void StoreRecentDockSiteInfo(CPane* pBar);
@@ -617,11 +618,11 @@ virtual void StoreRecentDockSiteInfo(CPane* pBar);
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*pバー*<br/>
+から *Pbar*<br/>
 
 ### <a name="remarks"></a>解説
 
-## <a name="cmultipaneframewndstorerecenttabrelatedinfo"></a><a name="storerecenttabrelatedinfo"></a>ウィンドウズフレーム:::ストア最近タブ関連情報
+## <a name="cmultipaneframewndstorerecenttabrelatedinfo"></a><a name="storerecenttabrelatedinfo"></a> CMultiPaneFrameWnd::StoreRecentTabRelatedInfo
 
 ```
 virtual void StoreRecentTabRelatedInfo(
@@ -631,13 +632,13 @@ virtual void StoreRecentTabRelatedInfo(
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*pドッキングバー*<br/>
-[in]*pタブ付きバー*<br/>
+から *Pdocのボタン*<br/>
+から *pTabbedBar*<br/>
 
 ### <a name="remarks"></a>解説
 
 ## <a name="see-also"></a>関連項目
 
-[階層グラフ](../../mfc/hierarchy-chart.md)<br/>
-[クラス](../../mfc/reference/mfc-classes.md)<br/>
+[階層図](../../mfc/hierarchy-chart.md)<br/>
+[Classes](../../mfc/reference/mfc-classes.md)<br/>
 [CPaneFrameWnd クラス](../../mfc/reference/cpaneframewnd-class.md)

@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: _getmbcp'
 title: _getmbcp
 ms.date: 4/2/2020
 api_name:
@@ -29,12 +30,12 @@ helpviewer_keywords:
 - _getmbcp function
 - getmbcp function
 ms.assetid: 2db202d4-5c3d-4871-a0b8-ceb0b79ee7bb
-ms.openlocfilehash: 96bf24bbff836849de1b7689ed69bd45871f275a
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: a4b249d4cee94e5dc0755e72158aed2ffcee7efb
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82913620"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97332868"
 ---
 # <a name="_getmbcp"></a>_getmbcp
 
@@ -56,7 +57,7 @@ int _getmbcp( void );
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**_getmbcp**|\<mbctype.h>|
 

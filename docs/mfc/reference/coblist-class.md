@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: CObList クラス'
 title: CObList クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -50,12 +51,12 @@ helpviewer_keywords:
 - CObList [MFC], RemoveTail
 - CObList [MFC], SetAt
 ms.assetid: 80699c93-33d8-4f8b-b8cf-7b58aeab64ca
-ms.openlocfilehash: a13363ef9b200051c26781ab6e9870a10de06d88
-ms.sourcegitcommit: 19016630f9d35f365e9ba249e0f3617515d7ca33
+ms.openlocfilehash: edfa476780e07b41f4f1e0abede24244ad837578
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92274589"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97331446"
 ---
 # <a name="coblist-class"></a>CObList クラス
 
@@ -128,7 +129,7 @@ POSITION 型の変数は、リストのキーです。 位置変数を反復子�
 
 `CObList`
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** afxcoll.h
 
@@ -147,7 +148,7 @@ void AddHead(CObList* pNewList);
 `CObject`このリストに追加するポインター。
 
 *pNewList*<br/>
-別のリストへのポインター `CObList` 。 *Pnewlist*内の要素が、この一覧に追加されます。
+別のリストへのポインター `CObList` 。 *Pnewlist* 内の要素が、この一覧に追加されます。
 
 ### <a name="return-value"></a>戻り値
 
@@ -193,7 +194,7 @@ void AddTail(CObList* pNewList);
 `CObject`このリストに追加するポインター。
 
 *pNewList*<br/>
-別のリストへのポインター `CObList` 。 *Pnewlist*内の要素が、この一覧に追加されます。
+別のリストへのポインター `CObList` 。 *Pnewlist* 内の要素が、この一覧に追加されます。
 
 ### <a name="return-value"></a>戻り値
 
@@ -316,7 +317,7 @@ POSITION FindIndex(INT_PTR nIndex) const;
 
 ### <a name="remarks"></a>解説
 
-リストの先頭からシーケンシャルスキャンを開始し、 *n*番目の要素に対して停止します。
+リストの先頭からシーケンシャルスキャンを開始し、 *n* 番目の要素に対して停止します。
 
 次の表は、に似た他のメンバー関数を示して `CObList::FindIndex` います。
 
@@ -359,8 +360,8 @@ const CObject*& GetAt(POSITION position) const;
 
 |クラス|メンバー関数|
 |-----------|---------------------|
-|[CPtrList](../../mfc/reference/cptrlist-class.md)|**const void \*& GETAT (位置***位置* **) const;**<br /><br /> **void \*& GETAT (位置**の *位置* **) です。**|
-|[CStringList](../../mfc/reference/cstringlist-class.md)|**Const CString& GetAt (位置**の *位置* **) const;**<br /><br /> **CString& GetAt (位置**の *位置* **) です。**|
+|[CPtrList](../../mfc/reference/cptrlist-class.md)|**const void \*& GETAT (位置***位置* **) const;**<br /><br /> **void \*& GETAT (位置** の *位置* **) です。**|
+|[CStringList](../../mfc/reference/cstringlist-class.md)|**Const CString& GetAt (位置** の *位置* **) const;**<br /><br /> **CString& GetAt (位置** の *位置* **) です。**|
 
 ### <a name="example"></a>例
 
@@ -452,7 +453,7 @@ POSITION GetHeadPosition() const;
 
 ## <a name="coblistgetnext"></a><a name="getnext"></a> CObList:: GetNext
 
-*RPosition*によって識別されるリスト要素を取得し、 *rPosition*を `POSITION` リスト内の次のエントリの値に設定します。
+*RPosition* によって識別されるリスト要素を取得し、 *rPosition* を `POSITION` リスト内の次のエントリの値に設定します。
 
 ```
 CObject*& GetNext(POSITION& rPosition);
@@ -503,7 +504,7 @@ a CAge at $46C0 21
 
 ## <a name="coblistgetprev"></a><a name="getprev"></a> CObList:: GetPrev
 
-*RPosition*によって識別されるリスト要素を取得し、 *rPosition*をリスト内の前のエントリの位置の値に設定します。
+*RPosition* によって識別されるリスト要素を取得し、 *rPosition* をリスト内の前のエントリの位置の値に設定します。
 
 ```
 CObject*& GetPrev(POSITION& rPosition);
@@ -656,12 +657,12 @@ POSITION InsertAfter(
 
 |クラス|メンバー関数|
 |-----------|---------------------|
-|[CPtrList](../../mfc/reference/cptrlist-class.md)|**Position InsertAfter (** 位置*位置* **、void** <strong>\*</strong> `newElement`**);**|
-|[CStringList](../../mfc/reference/cstringlist-class.md)|**Position InsertAfter (位置**の *位置* **、const CString&** `newElement` **);**<br /><br /> **Position InsertAfter (position** *position* **, LPCTSTR** `newElement` **);**|
+|[CPtrList](../../mfc/reference/cptrlist-class.md)|**Position InsertAfter (** 位置 *位置* **、void** <strong>\*</strong> `newElement`**);**|
+|[CStringList](../../mfc/reference/cstringlist-class.md)|**Position InsertAfter (位置** の *位置* **、const CString&** `newElement` **);**<br /><br /> **Position InsertAfter (position** *position* **, LPCTSTR** `newElement` **);**|
 
 ### <a name="return-value"></a>戻り値
 
-*Position パラメーターと*同じ位置の値。
+*Position パラメーターと* 同じ位置の値。
 
 ### <a name="example"></a>例
 
@@ -704,8 +705,8 @@ POSITION InsertBefore(
 
 |クラス|メンバー関数|
 |-----------|---------------------|
-|[CPtrList](../../mfc/reference/cptrlist-class.md)|**InsertBefore (位置** *position* **の位置、void)** <strong>\*</strong> `newElement`**);**|
-|[CStringList](../../mfc/reference/cstringlist-class.md)|**位置 InsertBefore (位置** *position* **の位置、const CString&** `newElement` **);**<br /><br /> **InsertBefore (位置** *position* **の位置、LPCTSTR) の**位置に挿入し `newElement` **ます。**|
+|[CPtrList](../../mfc/reference/cptrlist-class.md)|**InsertBefore (位置**  **の位置、void)** <strong>\*</strong> `newElement`**);**|
+|[CStringList](../../mfc/reference/cstringlist-class.md)|**位置 InsertBefore (位置**  **の位置、const CString&** `newElement` **);**<br /><br /> **InsertBefore (位置**  **の位置、LPCTSTR) の** 位置に挿入し `newElement` **ます。**|
 
 ### <a name="example"></a>例
 
@@ -795,12 +796,12 @@ void RemoveAt(POSITION position);
 
 |クラス|メンバー関数|
 |-----------|---------------------|
-|[CPtrList](../../mfc/reference/cptrlist-class.md)|**Void RemoveAt (位置**の *位置* **);**|
-|[CStringList](../../mfc/reference/cstringlist-class.md)|**Void RemoveAt (位置**の *位置* **);**|
+|[CPtrList](../../mfc/reference/cptrlist-class.md)|**Void RemoveAt (位置** の *位置* **);**|
+|[CStringList](../../mfc/reference/cstringlist-class.md)|**Void RemoveAt (位置** の *位置* **);**|
 
 ### <a name="example"></a>例
 
-  リストの反復処理中に要素を削除する場合は注意してください。 次の例は、 [GetNext](#getnext)の有効な**位置**の値を保証する削除手法を示しています。
+  リストの反復処理中に要素を削除する場合は注意してください。 次の例は、 [GetNext](#getnext)の有効な **位置** の値を保証する削除手法を示しています。
 
 クラスの一覧については、「 [coblist:: coblist](#coblist) 」を参照してください `CAge` 。
 

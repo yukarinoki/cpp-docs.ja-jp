@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: isリードバイト、_isleadbyte_l'
 title: isleadbyte、_isleadbyte_l
 ms.date: 4/2/2020
 api_name:
@@ -34,12 +35,12 @@ helpviewer_keywords:
 - istleadbyte function
 - isleadbyte function
 ms.assetid: 3b2bcf09-d82b-4803-9e80-59d04942802a
-ms.openlocfilehash: 1d2202bd1ca59ee42287c398da429df132e24fcb
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 544adda1b794db6a003e3ae7d51b15456574f875
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87234082"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97332653"
 ---
 # <a name="isleadbyte-_isleadbyte_l"></a>isleadbyte、_isleadbyte_l
 
@@ -57,20 +58,20 @@ int _isleadbyte_l( int c );
 
 ### <a name="parameters"></a>パラメーター
 
-*40u-c*<br/>
+*c*<br/>
 テストする整数。
 
 ## <a name="return-value"></a>戻り値
 
-引数がテスト条件を満たしている場合、 **isリードバイト**は0以外の値を返します。そうでない場合は0を返します。 "C" ロケールと1バイト文字セット (SBCS) のロケールでは、 **isリードバイト**は常に0を返します。
+引数がテスト条件を満たしている場合、 **isリードバイト** は0以外の値を返します。そうでない場合は0を返します。 "C" ロケールと1バイト文字セット (SBCS) のロケールでは、 **isリードバイト** は常に0を返します。
 
 ## <a name="remarks"></a>解説
 
-**Isリードバイト**マクロは、引数がマルチバイト文字の最初のバイトの場合、0以外の値を返します。 **isリードバイト**は、-1 (**EOF**) から**UCHAR_MAX** (0xff) までの任意の整数引数に対して意味のある結果を生成します。
+**Isリードバイト** マクロは、引数がマルチバイト文字の最初のバイトの場合、0以外の値を返します。 **isリードバイト** は、-1 (**EOF**) から **UCHAR_MAX** (0xff) までの任意の整数引数に対して意味のある結果を生成します。
 
-**Isリードバイト**の予期される引数の型はです **`int`** 。符号付き文字が渡されると、コンパイラはそれを符号拡張によって整数に変換し、予測できない結果になります。
+**Isリードバイト** の予期される引数の型はです **`int`** 。符号付き文字が渡されると、コンパイラはそれを符号拡張によって整数に変換し、予測できない結果になります。
 
-**_L**サフィックスが付いたこの関数のバージョンは、ロケールに依存する動作に現在のロケールではなく渡されたロケールを使用する点を除いて同じです。
+**_L** サフィックスが付いたこの関数のバージョンは、ロケールに依存する動作に現在のロケールではなく渡されたロケールを使用する点を除いて同じです。
 
 既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 

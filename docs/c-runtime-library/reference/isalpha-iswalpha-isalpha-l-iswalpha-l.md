@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: isalpha、iswalpha、_isalpha_l、_iswalpha_l'
 title: isalpha、iswalpha、_isalpha_l、_iswalpha_l
 ms.date: 4/2/2020
 api_name:
@@ -44,12 +45,12 @@ helpviewer_keywords:
 - istalpha function
 - _istalpha function
 ms.assetid: ed6cc2be-c4b0-4475-87ac-bc06d8c23064
-ms.openlocfilehash: abce570aecc307efd4986fab78d45954d7a79588
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 044564d64c9f7d358633a866c53a25e6ab16d26a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82919797"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97332762"
 ---
 # <a name="isalpha-iswalpha-_isalpha_l-_iswalpha_l"></a>isalpha、iswalpha、_isalpha_l、_iswalpha_l
 
@@ -76,7 +77,7 @@ int _iswalpha_l(
 
 ### <a name="parameters"></a>パラメーター
 
-*40u-c*<br/>
+*c*<br/>
 テストする整数。
 
 *locale*<br/>
@@ -84,11 +85,11 @@ int _iswalpha_l(
 
 ## <a name="return-value"></a>戻り値
 
-これらの各ルーチンは、 *c*が英文字の特殊表現である場合は0以外の値を返します。 *c*が a ~ z または a ~ z の範囲内にある場合、 **isalpha**は0以外の値を返します。 **iswalpha**は、 [iswupper](isupper-isupper-l-iswupper-iswupper-l.md)または**iswlower**が0以外のワイド文字に対してのみ0以外の値を返します。つまり、 **iswcntrl**、 **iswdigit**、 **iswpunct**、または**iswspace**のいずれも0以外に設定されている実装定義セットの1つであるワイド文字の場合です。 これらの各ルーチンは、 *c*がテスト条件を満たしていない場合は0を返します。
+これらの各ルーチンは、 *c* が英文字の特殊表現である場合は0以外の値を返します。 *c* が a ~ z または a ~ z の範囲内にある場合、 **isalpha** は0以外の値を返します。 **iswalpha** は、 [iswupper](isupper-isupper-l-iswupper-iswupper-l.md) または **iswlower** が0以外のワイド文字に対してのみ0以外の値を返します。つまり、 **iswcntrl**、 **iswdigit**、 **iswpunct**、または **iswspace** のいずれも0以外に設定されている実装定義セットの1つであるワイド文字の場合です。 これらの各ルーチンは、 *c* がテスト条件を満たしていない場合は0を返します。
 
-**_L**サフィックスを持つこれらの関数のバージョンでは、現在のロケールの代わりに渡されたロケールパラメーターを使用します。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
+**_L** サフィックスを持つこれらの関数のバージョンでは、現在のロケールの代わりに渡されたロケールパラメーターを使用します。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
 
-*C*が EOF でない場合、または 0 ~ 0xff の範囲内にある場合、 **isalpha**と **_isalpha_l**の動作は未定義です。 デバッグ CRT ライブラリが使用され、 *c*がこれらの値のいずれでもない場合、関数はアサーションを発生させます。
+*C* が EOF でない場合、または 0 ~ 0xff の範囲内にある場合、 **isalpha** と **_isalpha_l** の動作は未定義です。 デバッグ CRT ライブラリが使用され、 *c* がこれらの値のいずれでもない場合、関数はアサーションを発生させます。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -103,7 +104,7 @@ int _iswalpha_l(
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**isalpha**|\<ctype.h>|
 |**iswalpha**|\<ctype.h> または \<wchar.h>|
@@ -115,5 +116,5 @@ int _iswalpha_l(
 ## <a name="see-also"></a>関連項目
 
 [文字分類](../../c-runtime-library/character-classification.md)<br/>
-[国](../../c-runtime-library/locale.md)<br/>
-[is、isw 系ルーチン](../../c-runtime-library/is-isw-routines.md)<br/>
+[ロケール](../../c-runtime-library/locale.md)<br/>
+[is、isw ルーチン](../../c-runtime-library/is-isw-routines.md)<br/>

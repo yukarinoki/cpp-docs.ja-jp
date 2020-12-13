@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: __writegsbyte、__writegsdword、__writegsqword、__writegsword'
 title: __writegsbyte、__writegsdword、__writegsqword、__writegsword
 ms.date: 09/02/2019
 f1_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - __writegsword intrinsic
 - __writegsdword intrinsic
 ms.assetid: 7746cf6d-2259-4139-9aab-c07dd75c8037
-ms.openlocfilehash: 7b9e812776e9b2bb0820905d088111669096db64
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: e3dd3284d38f4c1518fbf5f7184d15fc0c9d67d0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70221204"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97331833"
 ---
 # <a name="__writegsbyte-__writegsdword-__writegsqword-__writegsword"></a>__writegsbyte、__writegsdword、__writegsqword、__writegsword
 
@@ -54,18 +55,18 @@ void __writegsqword(
 *データ*\
 から書き込む値。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-|組み込み|アーキテクチャ|
+|Intrinsic|アーキテクチャ|
 |---------------|------------------|
-|`__writegsbyte`|x64|
-|`__writegsdword`|x64|
-|`__writegsqword`|x64|
-|`__writegsword`|x64|
+|`__writegsbyte`|X64|
+|`__writegsdword`|X64|
+|`__writegsqword`|X64|
+|`__writegsword`|X64|
 
-**ヘッダーファイル**\<>
+**ヘッダー ファイル** \<intrin.h>
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 これらのルーチンは、組み込み関数としてのみ使用できます。
 
@@ -73,5 +74,5 @@ void __writegsqword(
 
 ## <a name="see-also"></a>関連項目
 
-[__ readgsbyte、 \_( \_readgsdword)、readgsqword、 \_readgソード](../intrinsics/readgsbyte-readgsdword-readgsqword-readgsword.md)\
+[__readgsbyte、 \_ _readgsdword、 \_ _readgsqword、 \_ _readgsword](../intrinsics/readgsbyte-readgsdword-readgsqword-readgsword.md)\
 [コンパイラの組み込み](../intrinsics/compiler-intrinsics.md)

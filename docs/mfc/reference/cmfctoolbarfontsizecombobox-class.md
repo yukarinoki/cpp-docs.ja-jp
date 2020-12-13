@@ -1,5 +1,6 @@
 ---
-title: コンボボックス クラス
+description: '詳細情報: CMFCToolBarFontSizeComboBox クラス'
+title: CMFCToolBarFontSizeComboBox クラス
 ms.date: 11/04/2016
 f1_keywords:
 - CMFCToolBarFontSizeComboBox
@@ -14,16 +15,16 @@ helpviewer_keywords:
 - CMFCToolBarFontSizeComboBox [MFC], RebuildFontSizes
 - CMFCToolBarFontSizeComboBox [MFC], SetTwipSize
 ms.assetid: 72e0c44c-6a0e-4194-a71f-ab64e3afb9b5
-ms.openlocfilehash: 6c90bb1ce464a90295e7edb933d87594444c3648
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: a355e62f2ef538372d70b9b2b393bc16bff2ef4b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81745320"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97331754"
 ---
-# <a name="cmfctoolbarfontsizecombobox-class"></a>コンボボックス クラス
+# <a name="cmfctoolbarfontsizecombobox-class"></a>CMFCToolBarFontSizeComboBox クラス
 
-ユーザーがフォント サイズを選択できるようにするコンボ ボックス コントロールを含むツール バー ボタン。
+ユーザーがフォントサイズを選択できるようにするコンボボックスコントロールを含むツールバーボタン。
 
 ## <a name="syntax"></a>構文
 
@@ -37,27 +38,27 @@ class CMFCToolBarFontSizeComboBox : public CMFCToolBarComboBoxButton
 
 |名前|説明|
 |----------|-----------------|
-|[コンボボックス::CMFCツールバーフォントサイズコンボボックス](#cmfctoolbarfontsizecombobox)|`CMFCToolBarFontSizeComboBox` オブジェクトを構築します。|
+|[CMFCToolBarFontSizeComboBox:: CMFCToolBarFontSizeComboBox](#cmfctoolbarfontsizecombobox)|`CMFCToolBarFontSizeComboBox` オブジェクトを構築します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
 |名前|説明|
 |----------|-----------------|
-|[コンボボックス::ゲットトウィップサイズ](#gettwipsize)|選択したフォント サイズを twip 単位で返します。|
-|[コンボボックス::フォントサイズの再構築](#rebuildfontsizes)|指定したフォントでサポートされているすべてのフォント サイズをコンボ ボックスの一覧に塗りつぶします。|
-|[コンボボックス::セットトウィプサイズ](#settwipsize)|twip のフォント サイズを設定します。|
+|[CMFCToolBarFontSizeComboBox:: GetTwipSize](#gettwipsize)|選択されたフォントサイズを twip 単位で返します。|
+|[CMFCToolBarFontSizeComboBox:: RebuildFontSizes](#rebuildfontsizes)|コンボボックスの一覧に、指定したフォントでサポートされているすべてのフォントサイズを設定します。|
+|[CMFCToolBarFontSizeComboBox:: SetTwipSize](#settwipsize)|フォントサイズを twip 単位で設定します。|
 
 ## <a name="remarks"></a>解説
 
-オブジェクトを`CMFCToolBarFontSizeComboBox` [CMFCToolBarFontCombo クラス](../../mfc/reference/cmfctoolbarfontcombobox-class.md)と共に使用して、ユーザーがフォントとフォント サイズを選択できるようにします。
+`CMFCToolBarFontSizeComboBox`オブジェクトを[Cmfctoolbarfontcombobox クラス](../../mfc/reference/cmfctoolbarfontcombobox-class.md)オブジェクトと共に使用して、ユーザーがフォントおよびフォントサイズを選択できるようにすることができます。
 
-フォント サイズのコンボ ボックス ボタンは、フォント コンボ ボックス ボタンを追加するのと同じように、ツール バーに追加できます。 詳細については、「[クラスを表示します](../../mfc/reference/cmfctoolbarfontcombobox-class.md)。
+フォントサイズのコンボボックスボタンをツールバーに追加するには、フォントのコンボボックスボタンを追加します。 詳細については、「 [Cmfctoolbarfontcombobox クラス](../../mfc/reference/cmfctoolbarfontcombobox-class.md)」を参照してください。
 
-ユーザーがオブジェクト内の新しいフォントを`CMFCToolBarFontComboBox`選択すると[、CMFCToolBarFontSizeComboBox::RebuildFontSizes](#rebuildfontsizes)メソッドを使用して、フォントサイズコンボボックスにそのフォントでサポートされているサイズを塗りつぶすことができます。
+ユーザーがオブジェクトで新しいフォントを選択すると `CMFCToolBarFontComboBox` 、 [Cmfctoolbarfontsizecombobox:: RebuildFontSizes](#rebuildfontsizes) メソッドを使用して、フォントサイズのコンボボックスに、そのフォントでサポートされているサイズを設定できます。
 
 ## <a name="example"></a>例
 
-クラスのさまざまなメソッドを使用してオブジェクトを構成する方法を`CMFCToolBarFontSizeComboBox`次の例に`CMFCToolBarFontSizeComboBox`示します。 この例では、テキスト ボックスからフォント サイズを twip 単位で取得し、指定されたフォントの有効なすべてのサイズをフォント サイズコンボ ボックスに入力し、フォント サイズを twip 単位で指定する方法を示します。 このコード スニペットは、 [Word パッド サンプル](../../overview/visual-cpp-samples.md)の一部です。
+クラスのさまざまなメソッドを使用してオブジェクトを構成する方法を次の例に示し `CMFCToolBarFontSizeComboBox` `CMFCToolBarFontSizeComboBox` ます。 この例では、テキストボックスからフォントサイズを twip 単位で取得し、[フォントサイズ] コンボボックスに特定のフォントの有効なサイズを入力し、フォントサイズを twip 単位で指定する方法を示します。 このコード スニペットは、 [Word パッド サンプル](../../overview/visual-cpp-samples.md)の一部です。
 
 [!code-cpp[NVC_MFC_WordPad#8](../../mfc/reference/codesnippet/cpp/cmfctoolbarfontsizecombobox-class_1.cpp)]
 
@@ -67,15 +68,15 @@ class CMFCToolBarFontSizeComboBox : public CMFCToolBarComboBoxButton
 
 [CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md)
 
-[コンボボックスボタン](../../mfc/reference/cmfctoolbarcomboboxbutton-class.md)
+[CMFCToolBarComboBoxButton](../../mfc/reference/cmfctoolbarcomboboxbutton-class.md)
 
-[コンボボックス](../../mfc/reference/cmfctoolbarfontsizecombobox-class.md)
+[CMFCToolBarFontSizeComboBox](../../mfc/reference/cmfctoolbarfontsizecombobox-class.md)
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-**ヘッダー:** afxツールバーフォントコンボボックス.h
+**ヘッダー:** afxtoolbarfontcombobox
 
-## <a name="cmfctoolbarfontsizecomboboxcmfctoolbarfontsizecombobox"></a><a name="cmfctoolbarfontsizecombobox"></a>コンボボックス::CMFCツールバーフォントサイズコンボボックス
+## <a name="cmfctoolbarfontsizecomboboxcmfctoolbarfontsizecombobox"></a><a name="cmfctoolbarfontsizecombobox"></a> CMFCToolBarFontSizeComboBox:: CMFCToolBarFontSizeComboBox
 
 `CMFCToolBarFontSizeComboBox` オブジェクトを構築します。
 
@@ -83,9 +84,9 @@ class CMFCToolBarFontSizeComboBox : public CMFCToolBarComboBoxButton
 CMFCToolBarFontSizeComboBox();
 ```
 
-## <a name="cmfctoolbarfontsizecomboboxgettwipsize"></a><a name="gettwipsize"></a>コンボボックス::ゲットトウィップサイズ
+## <a name="cmfctoolbarfontsizecomboboxgettwipsize"></a><a name="gettwipsize"></a> CMFCToolBarFontSizeComboBox:: GetTwipSize
 
-フォント サイズコンボ ボックスのテキスト ボックスから、twip 単位のフォント サイズを取得します。
+フォントサイズコンボボックスのテキストボックスからフォントサイズを twip 単位で取得します。
 
 ```
 int GetTwipSize() const;
@@ -93,11 +94,11 @@ int GetTwipSize() const;
 
 ### <a name="return-value"></a>戻り値
 
-戻り値が正の場合は、twip のフォント サイズです。 コンボ ボックスのテキスト ボックスが空の場合は -1 です。 エラーが発生した場合は -2 です。
+戻り値が正の場合は、twip 単位のフォントサイズになります。 コンボボックスのテキストボックスが空の場合は、-1 になります。 エラーが発生した場合は、-2 になります。
 
-## <a name="cmfctoolbarfontsizecomboboxrebuildfontsizes"></a><a name="rebuildfontsizes"></a>コンボボックス::フォントサイズの再構築
+## <a name="cmfctoolbarfontsizecomboboxrebuildfontsizes"></a><a name="rebuildfontsizes"></a> CMFCToolBarFontSizeComboBox:: RebuildFontSizes
 
-指定したフォントの有効なすべてのサイズをフォント サイズコンボ ボックスに塗りつぶします。
+フォントサイズコンボボックスに、指定したフォントのすべての有効なサイズを設定します。
 
 ```cpp
 void RebuildFontSizes(const CString& strFontName);
@@ -105,16 +106,16 @@ void RebuildFontSizes(const CString& strFontName);
 
 ### <a name="parameters"></a>パラメーター
 
-*フォント名*<br/>
-[in]フォント名を指定します。
+*strFontName*<br/>
+からフォント名を指定します。
 
 ### <a name="remarks"></a>解説
 
-この関数は、フォント コンボ ボックスの選択と[、CMFCToolBarFontComboBox クラス](../../mfc/reference/cmfctoolbarfontcombobox-class.md)などのフォント サイズコンボ ボックスの間で同期をとる場合に呼び出します。
+フォントコンボボックス内の選択項目と、 [Cmfctoolbarfontcombobox クラス](../../mfc/reference/cmfctoolbarfontcombobox-class.md)などのフォントサイズコンボボックスを同期する場合に、この関数を呼び出します。
 
-## <a name="cmfctoolbarfontsizecomboboxsettwipsize"></a><a name="settwipsize"></a>コンボボックス::セットトウィプサイズ
+## <a name="cmfctoolbarfontsizecomboboxsettwipsize"></a><a name="settwipsize"></a> CMFCToolBarFontSizeComboBox:: SetTwipSize
 
-指定したサイズ (twip 単位) をポイント単位で最も近いサイズに丸めた後、コンボ ボックスで選択したサイズをその値に設定します。
+指定されたサイズ (twip 単位) をポイントの最も近いサイズに丸め、コンボボックスで選択したサイズをその値に設定します。
 
 ```cpp
 void SetTwipSize(int nSize);
@@ -122,20 +123,20 @@ void SetTwipSize(int nSize);
 
 ### <a name="parameters"></a>パラメーター
 
-*Nsize*<br/>
-[in]設定するフォント サイズ (twip 単位) を指定します。
+*nSize*<br/>
+から設定するフォントサイズ (twip 単位) を指定します。
 
 ### <a name="remarks"></a>解説
 
-メソッドを呼び出すことによって、前の有効な[フォント サイズ](#gettwipsize)を後で取得できます。
+以前に有効なフォントサイズを取得するには、後で [Cmfctoolbarfontsizecombox:: GetTwipSize](#gettwipsize) メソッドを呼び出します。
 
 ## <a name="see-also"></a>関連項目
 
-[階層グラフ](../../mfc/hierarchy-chart.md)<br/>
-[クラス](../../mfc/reference/mfc-classes.md)<br/>
-[クラス](../../mfc/reference/cmfctoolbar-class.md)<br/>
+[階層図](../../mfc/hierarchy-chart.md)<br/>
+[Classes](../../mfc/reference/mfc-classes.md)<br/>
+[CMFCToolBar クラス](../../mfc/reference/cmfctoolbar-class.md)<br/>
 [CMFCToolBarButton クラス](../../mfc/reference/cmfctoolbarbutton-class.md)<br/>
 [CMFCToolBarComboBoxButton クラス](../../mfc/reference/cmfctoolbarcomboboxbutton-class.md)<br/>
 [CMFCFontInfo クラス](../../mfc/reference/cmfcfontinfo-class.md)<br/>
-[ボタンを置き換える](../../mfc/reference/cmfctoolbar-class.md#replacebutton)<br/>
-[チュートリアル: ツール バーへのコントロールの追加](../../mfc/walkthrough-putting-controls-on-toolbars.md)
+[CMFCToolBar:: ReplaceButton](../../mfc/reference/cmfctoolbar-class.md#replacebutton)<br/>
+[チュートリアル: ツールバーへのコントロールの配置](../../mfc/walkthrough-putting-controls-on-toolbars.md)

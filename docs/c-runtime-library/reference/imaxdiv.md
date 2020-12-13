@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: imaxdiv'
 title: imaxdiv
 ms.date: 04/05/2018
 api_name:
@@ -24,12 +25,12 @@ f1_keywords:
 helpviewer_keywords:
 - imaxdiv function
 ms.assetid: 7d90126f-fdc2-4986-9cdf-94e4c9123d26
-ms.openlocfilehash: 298356da8e8e76c132b963ef4f71db6a3d0e74f7
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 3e1f417c1fb45b452b3cd07560bfec68d21fd1a8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91505632"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97332769"
 ---
 # <a name="imaxdiv"></a>imaxdiv
 
@@ -56,9 +57,9 @@ imaxdiv_t imaxdiv(
 
 **imaxdiv** は、 [intmax_t](../../c-runtime-library/standard-types.md) 型の引数を指定して呼び出され、商と剰余で構成される [imaxdiv_t](../../c-runtime-library/standard-types.md) 型の構造体を返します。
 
-## <a name="remarks"></a>注釈
+## <a name="remarks"></a>解説
 
-**Imaxdiv**関数は、*数値*を*デ om*で除算し、商と剰余を計算します。 **Imaxdiv_t**構造体には、商、 **intmax_t** **quot**、および残りの**intmax_t** **rem**が含まれています。商の符号は、数学的な商の符号と同じです。 この絶対値が最も大きい整数であり、商の絶対値よりも小さくなります。 分母が 0 の場合、プログラムはエラー メッセージにより終了します。
+**Imaxdiv** 関数は、*数値* を *デ om* で除算し、商と剰余を計算します。 **Imaxdiv_t** 構造体には、商、 **intmax_t** **quot**、および残りの **intmax_t** **rem** が含まれています。商の符号は、数学的な商の符号と同じです。 この絶対値が最も大きい整数であり、商の絶対値よりも小さくなります。 分母が 0 の場合、プログラムはエラー メッセージにより終了します。
 
 ## <a name="requirements"></a>必要条件
 

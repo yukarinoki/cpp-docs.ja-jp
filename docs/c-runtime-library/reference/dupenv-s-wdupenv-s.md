@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: _dupenv_s、_wdupenv_s'
 title: _dupenv_s、_wdupenv_s
 ms.date: 4/2/2020
 api_name:
@@ -39,12 +40,12 @@ helpviewer_keywords:
 - dupenv_s function
 - tdupenv_s function
 ms.assetid: b729ecc2-a31d-4ccf-92a7-5accedb8f8c8
-ms.openlocfilehash: 39184eff5db511dfb920782c3e29bf2b0cc9340e
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 3163645b83ec701478cca76d98fe5e17acdc86d9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82915180"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97332883"
 ---
 # <a name="_dupenv_s-_wdupenv_s"></a>_dupenv_s、_wdupenv_s
 
@@ -74,7 +75,7 @@ errno_t _wdupenv_s(
 変数の値を格納するバッファー。
 
 *numberOfElements*<br/>
-*バッファー*のサイズ。
+*バッファー* のサイズ。
 
 *varname*<br/>
 環境変数名。
@@ -83,26 +84,26 @@ errno_t _wdupenv_s(
 
 正常終了した場合は 0 を返します。失敗した場合はエラー コードを返します。
 
-これらの関数は、パラメーターを検証します。*buffer*または*varname*が**NULL**の場合、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、関数は**errno**を**einval**に設定し、 **einval**を返します。
+これらの関数は、パラメーターを検証します。 *buffer* または *varname* が **NULL** の場合、「 [パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、関数は **errno** を **einval** に設定し、 **einval** を返します。
 
-これらの関数が十分なメモリを割り当てられない場合、 *buffer*を**NULL**に設定し、 *numberofelements*を0に設定して、 **ENOMEM**を返します。
+これらの関数が十分なメモリを割り当てられない場合、 *buffer* を **NULL** に設定し、 *numberofelements* を0に設定して、 **ENOMEM** を返します。
 
 ## <a name="remarks"></a>解説
 
-**_Dupenv_s**関数は、変数*varname*の環境変数の一覧を検索します。 変数が見つかった場合、 **_dupenv_s**はバッファーを割り当て、変数の値をバッファーにコピーします。 バッファーのアドレスと長さは、 *Buffer* *要素と numberofelements*で返されます。 バッファー自体を割り当てることにより、 **_dupenv_s**は[getenv_s、_wgetenv_s](getenv-s-wgetenv-s.md)に代わる便利な手段となります。
+**_Dupenv_s** 関数は、変数 *varname* の環境変数の一覧を検索します。 変数が見つかった場合、 **_dupenv_s** はバッファーを割り当て、変数の値をバッファーにコピーします。 バッファーのアドレスと長さは、 *Buffer* *要素と numberofelements* で返されます。 バッファー自体を割り当てることにより、 **_dupenv_s** は [getenv_s、_wgetenv_s](getenv-s-wgetenv-s.md)に代わる便利な手段となります。
 
 > [!NOTE]
 > [free](free.md) の呼び出しによるメモリの解放は、呼び出し元プログラムが行います。
 
-変数が見つからない場合、 *buffer*は**NULL**に設定され、 *numberofelements*は0に設定され、戻り値は0になります。これは、この状況がエラー状態であるとは見なされないためです。
+変数が見つからない場合、 *buffer* は **NULL** に設定され、 *numberofelements* は0に設定され、戻り値は0になります。これは、この状況がエラー状態であるとは見なされないためです。
 
-バッファーのサイズに関心がない場合は、 *Numberofelements*に**NULL**を渡すことができます。
+バッファーのサイズに関心がない場合は、 *Numberofelements* に **NULL** を渡すことができます。
 
-Windows オペレーティングシステムでは、 **_dupenv_s**の大文字と小文字は区別されません。 **_dupenv_s**は、グローバル変数 **_environ**が指す環境のコピーを使用して環境にアクセスします。 **_Environ**の説明については[_wgetenv_s、Getenv_s](getenv-s-wgetenv-s.md)の「解説」を参照してください。
+Windows オペレーティングシステムでは、 **_dupenv_s** の大文字と小文字は区別されません。 **_dupenv_s** は、グローバル変数 **_environ** が指す環境のコピーを使用して環境にアクセスします。 **_Environ** の説明については [_wgetenv_s、Getenv_s](getenv-s-wgetenv-s.md)の「解説」を参照してください。
 
-*Buffer*の値は、環境変数の値のコピーです。これを変更しても、環境には影響しません。 環境変数の値を変更するには、[_putenv_s、_wputenv_s](putenv-s-wputenv-s.md) 関数を使います。
+*Buffer* の値は、環境変数の値のコピーです。これを変更しても、環境には影響しません。 環境変数の値を変更するには、[_putenv_s、_wputenv_s](putenv-s-wputenv-s.md) 関数を使います。
 
-**_wdupenv_s**は **_dupenv_s**のワイド文字バージョンです。**_wdupenv_s**の引数はワイド文字列です。 **_Wenviron**グローバル変数は、 **_environ**のワイド文字バージョンです。 **_Wenviron**の詳細については[_wgetenv_s、「getenv_s](getenv-s-wgetenv-s.md) 」の「解説」を参照してください。
+**_wdupenv_s** は **_dupenv_s** のワイド文字バージョンです。 **_wdupenv_s** の引数はワイド文字列です。 **_Wenviron** グローバル変数は、 **_environ** のワイド文字バージョンです。 **_Wenviron** の詳細については [_wgetenv_s、「getenv_s](getenv-s-wgetenv-s.md) 」の「解説」を参照してください。
 
 既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
@@ -114,7 +115,7 @@ Windows オペレーティングシステムでは、 **_dupenv_s**の大文字�
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**_dupenv_s**|\<stdlib.h>|
 |**_wdupenv_s**|\<stdlib.h> または \<wchar.h>|

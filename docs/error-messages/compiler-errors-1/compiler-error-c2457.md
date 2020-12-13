@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「コンパイラエラー C2457」を参照してください。
 title: コンパイラ エラー C2457
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2457
 ms.assetid: 347e169d-23ad-434f-8836-5b09b53980ff
-ms.openlocfilehash: 40e666b1f2b566ca6309ee7759452647f8101a38
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 1fea5192b97e280a38f674a67b0bf739041ffe97
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80205245"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97332370"
 ---
 # <a name="compiler-error-c2457"></a>コンパイラ エラー C2457
 
 > '*macro*': 定義済みマクロは関数本体の外側には記述できません
 
-関数などの定義済みマクロ[&#95; &#95;をグローバル空間で使用しようとしまし&#95;](../../preprocessor/predefined-macros.md)た。
+グローバル空間で [&#95;&#95;関数&#95;&#95;](../../preprocessor/predefined-macros.md)などの定義済みマクロを使用しようとしました。
 
 ## <a name="example"></a>例
 

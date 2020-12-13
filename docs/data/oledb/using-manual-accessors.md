@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「手動アクセサーの使用」を参照してください。
 title: 手動アクセサーの使用
 ms.date: 10/24/2018
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - manual accessors
 - accessors [C++], manual
 ms.assetid: 29f00a89-0240-482b-8413-4120b9644672
-ms.openlocfilehash: b76c6a2d0af404bc526fee8f511320a58ffd86ec
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 73363be83e06a3eeced114dc90c65f82601a4a16
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87218287"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97332474"
 ---
 # <a name="using-manual-accessors"></a>手動アクセサーの使用
 
@@ -43,7 +44,7 @@ OLE DB コンシューマーテンプレートでこれらの操作を行うに�
 
 1. を呼び出して、 `GetNextResult` 使用可能な行セットがあるかどうかを確認します。 手順 2. ~ 5. を繰り返します。
 
-手動アクセサーの例については、 `CDBListView::CallProcedure` [DBVIEWER](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Consumer)サンプルの「」を参照してください。
+手動アクセサーの例については、 `CDBListView::CallProcedure` [DBVIEWER](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Consumer) サンプルの「」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 
