@@ -1,15 +1,16 @@
 ---
+description: '詳細情報: 言語識別文字列'
 title: Language Strings
 ms.date: 11/04/2016
 helpviewer_keywords:
 - language strings
 ms.assetid: bbee63b1-af0b-4e44-9eaf-dd3e265c05fd
-ms.openlocfilehash: dd0c55091d3dff641993fa593e656e2825da7c73
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 077a440981c9e39e87356310c40ae9b249d4662e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88839252"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97246579"
 ---
 # <a name="language-strings"></a>Language Strings
 

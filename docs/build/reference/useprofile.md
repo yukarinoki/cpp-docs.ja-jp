@@ -1,52 +1,53 @@
 ---
-title: /USEPROFILE (LTCG を使用して PGO のデータ)
+description: 詳細については、次を参照してください:/USEPROFILE (スレッドセーフモードで PGO を実行)
+title: /USEPROFILE (LTCG での PGO データの使用)
 ms.date: 03/14/2018
 f1_keywords:
 - USEPROFILE
-ms.openlocfilehash: 7bc0033ae5ef512cbd2e2063c5cb9bd9b061c180
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c6c293b8467ea308dc2f7b4a4cd916cc5d9ac4c9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62317134"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97247047"
 ---
-# <a name="useprofile-run-pgo-in-thread-safe-mode"></a>/USEPROFILE (スレッド セーフ モードで実行 PGO)
+# <a name="useprofile-run-pgo-in-thread-safe-mode"></a>/USEPROFILE (PGO をスレッドセーフモードで実行する)
 
-このリンカー オプションと共に[/LTCG (リンク時コード生成](ltcg-link-time-code-generation.md)トレーニング データの最適化のガイド付きプロファイル (PGO) を使用してビルドをリンカーに指示します。
+このリンカーオプションと [/ltcg (リンク時のコード生成](ltcg-link-time-code-generation.md) ) を使用して、リンカーにガイド付き最適化のプロファイル (PGO) トレーニングデータを使用してビルドするように指示します。
 
 ## <a name="syntax"></a>構文
 
-> **/USEPROFILE**[**:**{**AGGRESSIVE**|**PGD=**_filename_}]
+> **/USEPROFILE**[**:**{**アグレッシブ** な | **PGD =**_ファイル名_}]
 
 ### <a name="arguments"></a>引数
 
-**アグレッシブです**<br/>
-この省略可能な引数では、最適化されたコードの生成中にアグレッシブな速度の最適化を使用することを指定します。
+**アグレッシブな**<br/>
+この省略可能な引数は、最適化されたコード生成時に積極的な速度の最適化を使用する必要があることを指定します。
 
-**PGD**=*ファイル名*<br/>
-.pgd ファイルの基本ファイル名を指定します。 既定では、リンカーは、.pgd 拡張子を持つベースの実行可能ファイル名を使用します。
+**PGD** =*ファイル名*<br/>
+.pgd ファイルの基本ファイル名を指定します。 既定では、リンカーは、基本の実行可能ファイル名に .pgd 拡張子を付けて使用します。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-**/USEPROFILE**リンカー オプションと共に使用 **/LTCG**を生成または PGO トレーニング データに基づく最適化されたビルドを更新します。 非推奨とされるのと同じ **/LTCG:PGUPDATE**と **/LTCG:PGOPTIMIZE**オプション。
+**/USEPROFILE** リンカーオプションを **/ltcg** と共に使用して、PGO トレーニングデータに基づいて最適化されたビルドを生成または更新します。 これは、非推奨の **/ltcg: PGUPDATE** オプションと **/LTCG: pgupdate** オプションに相当します。
 
-省略可能な**アグレッシブな**引数には、速度を最適化しようとするサイズに関連するヒューリスティックが無効にします。 これにより、最適化を大幅に、実行可能ファイルのサイズを増やすし、結果として得られる速度を上げることがありますいない可能性があります。 プロファイルし、使用と不使用の結果を比較する必要があります**アグレッシブな**します。 この引数を明示的に指定する必要があります。既定で無効です。
+オプションの **アグレッシブ** 引数は、サイズに関連するヒューリスティックを無効にして、速度の最適化を試みます。 これにより、実行可能ファイルのサイズが大幅に増加し、結果として得られる速度が向上しない可能性があります。 を使用した結果をプロファイリングし、 **積極的** に使用しないように比較する必要があります。 この引数は明示的に指定する必要があります。既定では有効になっていません。
 
-**PGD** 、オプションと同様、使用するトレーニング データの .pgd ファイルの名前を指定する引数[/GENPROFILE または/FASTGENPROFILE](genprofile-fastgenprofile-generate-profiling-instrumented-build.md)します。 非推奨とされるのと同じ **/PGD**スイッチします。 既定では、ない場合、または*filename*が指定されている .pgd ファイルを実行可能ファイルに使用されているために、同じ基本名を持ちます。
+**Pgd** 引数には、使用するトレーニングデータの .pgd ファイルの名前 (省略可能) を指定します。これは、 [/FASTGENPROFILE](genprofile-fastgenprofile-generate-profiling-instrumented-build.md)の場合と同じです。 これは、非推奨の **/PGD** スイッチに相当します。 既定では、 *ファイル名* が指定されていない場合、実行可能ファイルと同じ基本名を持つ .pgd ファイルが使用されます。
 
-**/USEPROFILE**リンカー オプションは Visual Studio 2015 の新機能です。
+**/USEPROFILE** リンカーオプションは、Visual Studio 2015 の新機能です。
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのリンカー オプションを設定するには
 
-1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。 [Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)します。
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、[Visual Studio での C++ コンパイラとビルド プロパティの設定](../working-with-project-properties.md)に関するページを参照してください。
 
-1. 選択、**構成プロパティ** > **リンカー** > **最適化**プロパティ ページ。
+1. [**構成プロパティ**] [  >  **リンカー** の  >  **最適化**] プロパティページを選択します。
 
-1. **リンク時コード生成**プロパティ選択**使用リンク時コード生成 (/LTCG)** します。
+1. [ **リンク時のコード生成** ] プロパティで、[ **リンク時のコード生成 (/Ltcg) を使用する**] を選択します。
 
-1. 選択、**構成プロパティ** > **リンカー** > **コマンドライン**プロパティ ページ。
+1. **[構成プロパティ]**  >  **[リンカー]**  >  **[コマンド ライン]** プロパティ ページを選択します。
 
-1. 入力、 **/USEPROFILE**オプション、および省略可能な引数に、**追加オプション**ボックス。 **OK** を選択して変更を保存してください。
+1. [**追加オプション**] ボックスに、 **/USEPROFILE** オプションと省略可能な引数を入力します。 **[OK]** を選択して変更を保存します。
 
 ### <a name="to-set-this-linker-option-programmatically"></a>このリンカーをコードから設定するには
 
@@ -54,7 +55,7 @@ ms.locfileid: "62317134"
 
 ## <a name="see-also"></a>関連項目
 
-[/GENPROFILE と/FASTGENPROFILE](genprofile-fastgenprofile-generate-profiling-instrumented-build.md)<br/>
+[/GENPROFILE と /FASTGENPROFILE](genprofile-fastgenprofile-generate-profiling-instrumented-build.md)<br/>
 [/LTCG](ltcg-link-time-code-generation.md)<br/>
 [ガイド付き最適化のプロファイル](../profile-guided-optimizations.md)<br/>
-[ガイド付き最適化のプロファイルの環境変数](../environment-variables-for-profile-guided-optimizations.md)<br/>
+[Profile-Guided の最適化のための環境変数](../environment-variables-for-profile-guided-optimizations.md)<br/>

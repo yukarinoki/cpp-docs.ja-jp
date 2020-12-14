@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「is、isw ルーチン」を参照してください。
 title: is、isw 系ルーチン
 ms.date: 11/04/2016
 api_location:
@@ -19,12 +20,12 @@ helpviewer_keywords:
 - is routines
 - isw routines
 ms.assetid: 1e171a57-2cde-41f6-a75f-a080fa3c12e5
-ms.openlocfilehash: 632bd371f8a6da4b57eeb1ce88e2a37eb6923355
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: d9229d2437ea7a7e57178acc5fd40ba2afea043b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88839388"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97246715"
 ---
 # <a name="is-isw-routines"></a>is、isw 系ルーチン
 
@@ -58,9 +59,9 @@ ms.locfileid: "88839388"
 **is`EOF` ルーチンは、-1 (**) から **UCHAR_MAX** (0xFF) までの任意の整数の引数に対して意味のある結果を生成します。 予期される引数の型は **`int`** です。
 
 > [!CAUTION]
-> **Is**ルーチンの場合、型の引数を渡すと、 **`char`** 予測できない結果が生じる可能性があります。 値が0x7F よりも大きい型の SBCS または MBCS の1バイト文字 **`char`** は負です。 が渡されると、 **`char`** コンパイラは値をまたはに変換する場合があり **`signed int`** **`signed long`** ます。 この値は、コンパイラによって符号拡張されることがあり、予想外の結果になることがあります。
+> **Is** ルーチンの場合、型の引数を渡すと、 **`char`** 予測できない結果が生じる可能性があります。 値が0x7F よりも大きい型の SBCS または MBCS の1バイト文字 **`char`** は負です。 が渡されると、 **`char`** コンパイラは値をまたはに変換する場合があり **`signed int`** **`signed long`** ます。 この値は、コンパイラによって符号拡張されることがあり、予想外の結果になることがあります。
 
-**isw** ルーチンは、-1 (**WEOF**) から 0xFFFF までの任意の整数値に対して意味のある結果を生成します。 **Wint_t**のデータ型は、WCHAR で定義されています。H はとして、 **`unsigned short`** 任意のワイド文字またはワイド文字のファイル終端 (**WEOF**) 値を保持できます。
+**isw** ルーチンは、-1 (**WEOF**) から 0xFFFF までの任意の整数値に対して意味のある結果を生成します。 **Wint_t** のデータ型は、WCHAR で定義されています。H はとして、 **`unsigned short`** 任意のワイド文字またはワイド文字のファイル終端 (**WEOF**) 値を保持できます。
 
 出力値は、ロケールの `LC_CTYPE` カテゴリの設定で決まります。詳細については、「[setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md)」をご覧ください。 **_l** サフィックスが付いていないこれらの関数のバージョンでは、このロケールに依存する動作に現在のロケールを使用します。**_l** サフィックスが付いているバージョンは、渡されたロケール パラメーターを代わりに使用する点を除いて同じです。
 
@@ -355,5 +356,5 @@ int main( void )
 [文字分類](../c-runtime-library/character-classification.md)<br/>
 [ロケール](../c-runtime-library/locale.md)<br/>
 [setlocale、_wsetlocale](../c-runtime-library/reference/setlocale-wsetlocale.md)<br/>
-[マルチバイト文字のシーケンスの解釈](../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[Multibyte-Character シーケンスの解釈](../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [関数に](../c-runtime-library/to-functions.md)
