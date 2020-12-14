@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「イメージリストの操作」を参照してください。
 title: イメージ リストの操作
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - lists [MFC], image
 - CImageList class [MFC], manipulating
 ms.assetid: 043418f8-077e-4dce-b8bb-2b7b0d7b5156
-ms.openlocfilehash: cb7376241febd6bd1545cd183147e14a15313820
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: dc2b136e1aed5266ea7cc910cf10839f59dfcf00
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84622457"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97281133"
 ---
 # <a name="manipulating-image-lists"></a>イメージ リストの操作
 
@@ -30,4 +31,4 @@ ms.locfileid: "84622457"
 ## <a name="see-also"></a>関連項目
 
 [CImageList の使い方](using-cimagelist.md)<br/>
-[制限](controls-mfc.md)
+[コントロール](controls-mfc.md)

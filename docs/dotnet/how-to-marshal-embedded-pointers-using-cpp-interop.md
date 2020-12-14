@@ -1,4 +1,5 @@
 ---
+description: '詳細については、「方法: C++ Interop を使用して埋め込みポインターをマーシャリングする」を参照してください。'
 title: '方法: C++ Interop を使用して埋め込みポインターをマーシャリングする'
 ms.custom: get-started-article
 ms.date: 11/04/2016
@@ -10,20 +11,20 @@ helpviewer_keywords:
 - pointers [C++], marshaling
 - data marshaling [C++], embedded pointers
 ms.assetid: 05fb8858-97f2-47aa-86b2-2c0ad713bdb2
-ms.openlocfilehash: 972d7a9c09100c35cb0bf527efbd0884c909c46d
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: 74ea5cdec755b7845796d1b61339811adb4f0b28
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "79544899"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97302596"
 ---
 # <a name="how-to-marshal-embedded-pointers-using-c-interop"></a>方法: C++ Interop を使用して埋め込みポインターをマーシャリングする
 
-次のコード例では、マネージ[、アン](../preprocessor/managed-unmanaged.md)マネージ #pragma ディレクティブを使用して、マネージ関数とアンマネージ関数を同じファイルに実装しますが、これらの関数は、別々のファイルで定義されている場合と同じ方法で相互運用します。 アンマネージ関数のみを含むファイルを[/clr (共通言語ランタイムのコンパイル)](../build/reference/clr-common-language-runtime-compilation.md)でコンパイルする必要はありません。
+次のコード例では、マネージ [、アン](../preprocessor/managed-unmanaged.md) マネージ #pragma ディレクティブを使用して、マネージ関数とアンマネージ関数を同じファイルに実装しますが、これらの関数は、別々のファイルで定義されている場合と同じ方法で相互運用します。 アンマネージ関数のみを含むファイルを [/clr (共通言語ランタイムのコンパイル)](../build/reference/clr-common-language-runtime-compilation.md)でコンパイルする必要はありません。
 
 ## <a name="example"></a>例
 
-次の例では、ポインターを含む構造体を受け取るアンマネージ関数をマネージ関数から呼び出す方法を示します。 マネージ関数は、構造体のインスタンスを作成し、new キーワードを使用して埋め込みポインターを初期化します ( [ref new、gcnew](../extensions/ref-new-gcnew-cpp-component-extensions.md)キーワードではありません)。 これにより、ネイティブヒープにメモリが割り当てられるため、ガベージコレクションを抑制するために配列を固定する必要はありません。 ただし、メモリの漏えいを防ぐために、メモリを明示的に削除する必要があります。
+次の例では、ポインターを含む構造体を受け取るアンマネージ関数をマネージ関数から呼び出す方法を示します。 マネージ関数は、構造体のインスタンスを作成し、new キーワードを使用して埋め込みポインターを初期化します ( [ref new、gcnew](../extensions/ref-new-gcnew-cpp-component-extensions.md) キーワードではありません)。 これにより、ネイティブヒープにメモリが割り当てられるため、ガベージコレクションを抑制するために配列を固定する必要はありません。 ただし、メモリの漏えいを防ぐために、メモリを明示的に削除する必要があります。
 
 ```cpp
 // marshal_embedded_pointer.cpp
@@ -91,6 +92,6 @@ array[8] = 97.754975
 array[9] = 27.370446
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [C++ Interop (暗黙の PInvoke) の使用](../dotnet/using-cpp-interop-implicit-pinvoke.md)

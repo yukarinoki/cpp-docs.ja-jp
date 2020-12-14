@@ -1,5 +1,6 @@
 ---
-title: '方法: 関数ポインターをマーシャ リングを使用して PInvoke'
+description: '詳細については、「方法: PInvoke を使用して関数ポインターをマーシャリングする」を参照してください。'
+title: '方法: PInvoke を使用して関数ポインターをマーシャリングする'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,30 +9,30 @@ helpviewer_keywords:
 - platform invoke [C++], callbacks and delegates
 - marshaling [C++], callbacks and delegates
 ms.assetid: dcf396fd-a91d-49c0-ab0b-1ea160668a89
-ms.openlocfilehash: 031bda0f93d6a95aa3c774553aefca0647d0518c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bfe3f669cf023ed914bdccb3ae15ccafefbb49c2
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62400566"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97302583"
 ---
-# <a name="how-to-marshal-function-pointers-using-pinvoke"></a>方法: 関数ポインターをマーシャ リングを使用して PInvoke
+# <a name="how-to-marshal-function-pointers-using-pinvoke"></a>方法: PInvoke を使用して関数ポインターをマーシャリングする
 
-このトピックでは、マネージ デリゲートを説明します。 .NET Framework P/invoke 機能を使用して関数をアンマネージとの相互運用時に、関数ポインターの代わりに使用できます。 ただし、Visual C プログラマは、P/invoke は、ほとんどのコンパイル時エラーを報告するには、タイプ セーフでないし、実装に時間がかかることができますを提供するため (可能な) 場合、代わりに、C++ Interop 機能を使用することが推奨されます。 アンマネージ API が DLL としてパッケージ化、ソース コードが使用できない場合は、P/invoke、唯一のオプションです。 それ以外の場合、次のトピックを参照してください。
+このトピックでは、.NET Framework P/Invoke 機能を使用してアンマネージ関数と相互運用するときに、マネージデリゲートを関数ポインターの代わりに使用する方法について説明します。 ただし、Visual C++ プログラマは、(可能な場合は) C++ 相互運用機能を使用することをお勧めします。これは、P/Invoke ではコンパイル時のエラー報告がほとんどなく、タイプセーフではなく、実装が面倒な場合があるためです。 アンマネージ API が DLL としてパッケージ化されていて、ソースコードが使用できない場合は、P/Invoke が唯一のオプションです。 それ以外の場合は、次のトピックを参照してください。
 
 - [C++ Interop (暗黙の PInvoke) の使用](../dotnet/using-cpp-interop-implicit-pinvoke.md)
 
-- [方法: C++ Interop を使用してコールバックおよびデリゲートをマーシャリングする](../dotnet/how-to-marshal-callbacks-and-delegates-by-using-cpp-interop.md)
+- [方法: C++ Interop を使用してコールバックとデリゲートをマーシャリングする](../dotnet/how-to-marshal-callbacks-and-delegates-by-using-cpp-interop.md)
 
-引数は、ネイティブ関数ポインターの代わりにマネージ デリゲートを使用してマネージ コードから呼び出すことができます、関数ポインターを使用するアンマネージ Api。 コンパイラは自動的に関数ポインターとしてアンマネージ関数にデリゲートをマーシャ リングし、マネージ/アンマネージ移行のために必要なコードを挿入します。
+関数ポインターを引数として受け取るアンマネージ Api は、ネイティブ関数ポインターの代わりにマネージデリゲートを使用してマネージコードから呼び出すことができます。 コンパイラは、デリゲートを関数ポインターとしてアンマネージ関数に自動的にマーシャリングし、必要なマネージ/アンマネージ遷移コードを挿入します。
 
 ## <a name="example"></a>例
 
-次のコードは、アンマネージとマネージ モジュールで構成されます。 非管理対象のモジュールは、関数ポインターを受け取る TakesCallback という名前の関数を定義する DLL です。 このアドレスは、関数の実行に使用されます。
+次のコードは、アンマネージモジュールとマネージモジュールで構成されています。 アンマネージモジュールは、関数ポインターを受け取る TakesCallback と呼ばれる関数を定義する DLL です。 このアドレスは、関数を実行するために使用されます。
 
-マネージ モジュールは、関数ポインターとネイティブ コードにマーシャ リングを使用してデリゲートを定義します。、<xref:System.Runtime.InteropServices.DllImportAttribute>マネージ コードにネイティブ TakesCallback 関数を公開する属性。 メインの関数で、デリゲートのインスタンスが作成され、TakesCallback 関数に渡されます。 プログラムの出力では、この関数がネイティブ TakesCallback 関数によって実行されることを示します。
+マネージモジュールは、関数ポインターとしてネイティブコードにマーシャリングされるデリゲートを定義し、属性を使用して <xref:System.Runtime.InteropServices.DllImportAttribute> ネイティブの TakesCallback 関数をマネージコードに公開します。 Main 関数では、デリゲートのインスタンスが作成され、TakesCallback 関数に渡されます。 プログラムの出力は、この関数がネイティブの TakesCallback 関数によって実行されることを示しています。
 
-管理対象の関数は、.NET Framework ガベージ コレクションをネイティブ関数の実行中に、デリゲートの再配置を阻止するマネージ デリゲートのガベージ コレクションを抑制します。
+マネージ関数は、ネイティブ関数の実行中に .NET Framework のガベージコレクションがデリゲートを再配置しないようにするために、マネージデリゲートのガベージコレクションを抑制します。
 
 ```cpp
 // TraditionalDll5.cpp
@@ -85,8 +86,8 @@ int main() {
 }
 ```
 
-従来を使用してマネージ コードに、DLL の部分は公開されていませんことに注意してください。 #include ディレクティブ。 実際には、DLL にはアクセス実行時にのみの機能に問題が取り込まれるように<xref:System.Runtime.InteropServices.DllImportAttribute>コンパイル時に検出されません。
+DLL の一部は、従来の #include ディレクティブを使用してマネージコードに公開されないことに注意してください。 実際、DLL は実行時にのみアクセスされるため、でインポートされた関数に関する問題 <xref:System.Runtime.InteropServices.DllImportAttribute> はコンパイル時に検出されません。
 
 ## <a name="see-also"></a>関連項目
 
-[C++ での明示的な PInvoke (DllImport 属性) の使用方法](../dotnet/using-explicit-pinvoke-in-cpp-dllimport-attribute.md)
+[C++ での明示的な PInvoke の使用 (DllImport 属性)](../dotnet/using-explicit-pinvoke-in-cpp-dllimport-attribute.md)

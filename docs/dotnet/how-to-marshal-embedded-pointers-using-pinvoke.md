@@ -1,5 +1,6 @@
 ---
-title: '方法: PInvoke を使用して埋め込みポインターをマーシャ リングします。'
+description: '詳細については、「方法: PInvoke を使用して埋め込みポインターをマーシャリングする」を参照してください。'
+title: '方法: PInvoke を使用して埋め込みポインターをマーシャリングする'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -9,22 +10,22 @@ helpviewer_keywords:
 - marshaling [C++], embedded pointers
 - data marshaling [C++], embedded pointers
 ms.assetid: f12c1b9a-4f82-45f8-83c8-3fc9321dbb98
-ms.openlocfilehash: 943a1a2784a37353157cd38da7ebdc9827006fe5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d31660a9a8ba345b380d442bb4484e332fe9d7cd
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62325209"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97302557"
 ---
-# <a name="how-to-marshal-embedded-pointers-using-pinvoke"></a>方法: PInvoke を使用して埋め込みポインターをマーシャ リングします。
+# <a name="how-to-marshal-embedded-pointers-using-pinvoke"></a>方法: PInvoke を使用して埋め込みポインターをマーシャリングする
 
-アンマネージ Dll に実装されている関数は、Platform Invoke (P/invoke) 機能を使用してマネージ コードから呼び出すことができます。 DLL のソース コードを使用できない場合の相互運用の唯一のオプションは、P/invoke します。 ただし、Visual C は、他の .NET 言語とは異なり、P/invoke の代替を提供します。 詳細については、次を参照してください。[を使用して C++ Interop (暗黙の PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)と[方法。埋め込み C++ Interop を使用して、ポインターをマーシャ リング](../dotnet/how-to-marshal-embedded-pointers-using-cpp-interop.md)します。
+アンマネージ Dll で実装されている関数は、プラットフォーム呼び出し (P/Invoke) 機能を使用してマネージコードから呼び出すことができます。 DLL のソースコードが使用できない場合は、相互運用のための唯一のオプションとして P/Invoke が使用されます。 ただし、他の .NET 言語とは異なり、Visual C++ は P/Invoke の代わりに使用できます。 詳細については、「 [C++ interop (暗黙的な PInvoke) の使用](../dotnet/using-cpp-interop-implicit-pinvoke.md) 」および「 [方法: C++ Interop を使用して埋め込みポインターをマーシャリングする](../dotnet/how-to-marshal-embedded-pointers-using-cpp-interop.md)」を参照してください。
 
 ## <a name="example"></a>例
 
-ネイティブ コードに構造体の受け渡しには、データのレイアウトの観点からネイティブ構造体と等価のマネージ構造体を作成する必要があります。 ただし、ポインターを格納する構造体には、特別な処理が必要です。 構造体のマネージ バージョンのネイティブ構造体に埋め込まれた各ポインターのインスタンスを含める必要があります、<xref:System.IntPtr>型。 また、メモリのこれらのインスタンスは明示的に割り当てる必要がある初期化され、リリースを使用して、 <xref:System.Runtime.InteropServices.Marshal.AllocCoTaskMem%2A>、 <xref:System.Runtime.InteropServices.Marshal.StructureToPtr%2A>、および<xref:System.Runtime.InteropServices.Marshal.FreeCoTaskMem%2A>メソッド。
+ネイティブコードに構造体を渡すには、ネイティブ構造体へのデータレイアウトと同等のマネージ構造体が作成されている必要があります。 ただし、ポインターを含む構造体では、特別な処理が必要です。 ネイティブ構造体の各埋め込みポインターについて、構造体のマネージバージョンに型のインスタンスが含まれている必要があり <xref:System.IntPtr> ます。 また、これらのインスタンスのメモリは、、、およびの各メソッドを使用して明示的に割り当て、初期化、および解放する必要があり <xref:System.Runtime.InteropServices.Marshal.AllocCoTaskMem%2A> <xref:System.Runtime.InteropServices.Marshal.StructureToPtr%2A> <xref:System.Runtime.InteropServices.Marshal.FreeCoTaskMem%2A> ます。
 
-次のコードは、アンマネージとマネージ モジュールで構成されます。 非管理対象のモジュールは、ポインターを含む ListString と呼ばれる構造体を受け取る関数と TakesListStruct という名前の関数を定義する DLL です。 マネージ モジュールは TakesListStruct 関数をインポートし、する点を除いて、二重 * はで表されるネイティブ ListStruct に相当する MListStruct と呼ばれる構造体を定義するコマンド ライン アプリケーション、<xref:System.IntPtr>インスタンス。 TakesListStruct を呼び出す前に、メインの関数は、割り当て、このフィールドを参照するメモリを初期化します。
+次のコードは、アンマネージモジュールとマネージモジュールで構成されています。 アンマネージモジュールは、ポインターを含む ListString という構造体と、TakesListStruct と呼ばれる関数を定義する DLL です。 マネージモジュールは、TakesListStruct 関数をインポートするコマンドラインアプリケーションであり、double * がインスタンスで表される点を除いて、ネイティブ ListStruct と同等の MListStruct という構造体を定義し <xref:System.IntPtr> ます。 Main 関数は、TakesListStruct を呼び出す前に、このフィールドが参照するメモリを割り当て、初期化します。
 
 ```cpp
 // TraditionalDll6.cpp
@@ -98,8 +99,8 @@ int main() {
 }
 ```
 
-従来を使用してマネージ コードに、DLL の部分は公開されていませんことに注意してください。 #include ディレクティブ。 実際には、DLL にはアクセス実行時にのみの機能に問題が取り込まれるように<xref:System.Runtime.InteropServices.DllImportAttribute>コンパイル時に検出されません。
+DLL の一部は、従来の #include ディレクティブを使用してマネージコードに公開されないことに注意してください。 実際、DLL は実行時にのみアクセスされるため、でインポートされた関数に関する問題 <xref:System.Runtime.InteropServices.DllImportAttribute> はコンパイル時に検出されません。
 
 ## <a name="see-also"></a>関連項目
 
-[C++ での明示的な PInvoke (DllImport 属性) の使用方法](../dotnet/using-explicit-pinvoke-in-cpp-dllimport-attribute.md)
+[C++ での明示的な PInvoke の使用 (DllImport 属性)](../dotnet/using-explicit-pinvoke-in-cpp-dllimport-attribute.md)

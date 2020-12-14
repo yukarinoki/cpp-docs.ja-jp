@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: Array および WriteOnlyArray (C++/CX)'
 title: Array と WriteOnlyArray (C++/CX)
 ms.date: 01/22/2017
 ms.assetid: ef7cc5f9-cae6-4636-8220-f789e5b6aea4
-ms.openlocfilehash: 1980fbcd1e2fa8cdaa48e00d2e7de9e45ac96a92
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 4c4f9415f401f1180786608288e33691c82fbdfa
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87231027"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97302791"
 ---
 # <a name="array-and-writeonlyarray-ccx"></a>Array と WriteOnlyArray (C++/CX)
 
@@ -21,7 +22,7 @@ ms.locfileid: "87231027"
 
 1. `Platform::WriteOnlyArray`
 
-1. 戻り値`Platform::Array^`
+1. 戻り値 `Platform::Array^`
 
 これらの配列型は、Windows ランタイムによって定義される3種類の配列パターンを実装するために使用します。
 
@@ -46,7 +47,7 @@ ReceiveArray
 
 ## <a name="receivearray-pattern"></a>ReceiveArray パターン
 
-*Receivearray*パターンでは、クライアントコードは配列を宣言し、それをメモリを割り当てて初期化するメソッドに渡します。 C++ 入力パラメーターの型は、hat へのポインターです `Array<T>^*` 。 次の例は、JavaScript で配列オブジェクトを宣言し、それを、メモリを割り当て、要素を初期化して JavaScript に返す C++ 関数に渡す方法を示しています。 JavaScript は、割り当てられた配列を戻り値として扱いますが、C++ 関数は出力パラメーターとして扱います。
+*Receivearray* パターンでは、クライアントコードは配列を宣言し、それをメモリを割り当てて初期化するメソッドに渡します。 C++ 入力パラメーターの型は、hat へのポインターです `Array<T>^*` 。 次の例は、JavaScript で配列オブジェクトを宣言し、それを、メモリを割り当て、要素を初期化して JavaScript に返す C++ 関数に渡す方法を示しています。 JavaScript は、割り当てられた配列を戻り値として扱いますが、C++ 関数は出力パラメーターとして扱います。
 
 [!code-javascript[cx_arrays#102](../cppcx/codesnippet/JavaScript/array-and-writeonlyarray-c-_3.js)]
 
@@ -80,7 +81,7 @@ Windows ランタイムの型システムは、ジャグ配列の概念をサポ
 
 ## <a name="use-arrayreference-to-avoid-copying-data"></a>ArrayReference 使用による、データ コピーの回避
 
-データが ABI を介してに渡されていて、 [`Platform::Array`](../cppcx/platform-array-class.md) 最終的にはそのデータを C スタイル配列で処理して効率を上げる場合は、 [Platform:: arrayreference](../cppcx/platform-arrayreference-class.md)を使用して余分なコピー操作を回避することができます。 を [`Platform::ArrayReference`](../cppcx/platform-arrayreference-class.md) 受け取るパラメーターに引数としてを渡すと、は `Platform::Array` 、指定した `ArrayReference` C スタイル配列にデータを直接格納します。 `ArrayReference` にソース データへのロック オンがないため、呼び出しが完了する前に別のスレッドでそのデータが変更されるかまたは削除された場合、結果は不確定になることに注意してください。
+データが ABI を介してに渡されていて、 [`Platform::Array`](../cppcx/platform-array-class.md) 最終的にはそのデータを C スタイル配列で処理して効率を上げる場合は、 [Platform:: arrayreference](../cppcx/platform-arrayreference-class.md) を使用して余分なコピー操作を回避することができます。 を [`Platform::ArrayReference`](../cppcx/platform-arrayreference-class.md) 受け取るパラメーターに引数としてを渡すと、は `Platform::Array` 、指定した `ArrayReference` C スタイル配列にデータを直接格納します。 `ArrayReference` にソース データへのロック オンがないため、呼び出しが完了する前に別のスレッドでそのデータが変更されるかまたは削除された場合、結果は不確定になることに注意してください。
 
 次のコードスニペットは、操作の結果をにコピーする方法 [`DataReader`](/uwp/api/windows.storage.streams.datareader) `Platform::Array` (通常のパターン) と、を代わりにデータを `ArrayReference` C スタイル配列に直接コピーする方法を示しています。
 

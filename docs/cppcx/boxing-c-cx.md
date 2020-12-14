@@ -1,17 +1,18 @@
 ---
+description: '詳細情報: ボックス化 (C++/CX)'
 title: ボックス化 (C++/CX)
 ms.date: 12/30/2016
 ms.assetid: edfb12fa-2a9b-42f6-bdac-d4d76cb8274e
-ms.openlocfilehash: 59c7f8ec56a912ed993316fba093b87bd85e16b1
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 50b7f3f071fcd0109a85fb24985024666bd8fad3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87233536"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97302739"
 ---
 # <a name="boxing-ccx"></a>ボックス化 (C++/CX)
 
-*ボックス*化は、入力型として Platform:: Object ^ を取るメソッドに変数が渡されたときに、ref クラス内で、 [Windows:: Foundation::D atetime](/uwp/api/windows.foundation.datetime)などの値型の変数、またはのような基本的なスカラー型をラップしてい **`int`** ます。 [Platform::Object^](../cppcx/platform-object-class.md)
+*ボックス* 化は、入力型として Platform:: Object ^ を取るメソッドに変数が渡されたときに、ref クラス内で、 [Windows:: Foundation::D atetime](/uwp/api/windows.foundation.datetime)などの値型の変数、またはのような基本的なスカラー型をラップしてい **`int`** ます。 [](../cppcx/platform-object-class.md)
 
 ## <a name="passing-a-value-type-to-an-object-parameter"></a>Object^ パラメーターへの値の型の引き渡し
 
