@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「コンパイラエラー C3738」を参照してください。
 title: コンパイラ エラー C3738
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3738
 ms.assetid: dd3ee011-e204-4264-bf3a-da32c4ef7038
-ms.openlocfilehash: ffefa0eff23e11412573b8062fa15bb5679923e7
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 7ec94d2be4faa0324563b723eb8a674c2d2d274f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74752770"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97244928"
 ---
 # <a name="compiler-error-c3738"></a>コンパイラ エラー C3738
 
@@ -19,7 +20,7 @@ ms.locfileid: "74752770"
 
 明示的なインスタンス化では、呼び出し規約を指定しないことをお勧めします。 ただし、必要な場合は、呼び出し規則を一致させる必要があります。
 
-## <a name="example"></a>使用例
+## <a name="example"></a>例
 
 次の例では、C3738 が生成されます。
 
