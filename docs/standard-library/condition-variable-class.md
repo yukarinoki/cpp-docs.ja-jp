@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: condition_variable クラス'
 title: condition_variable クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -20,12 +21,12 @@ helpviewer_keywords:
 - std::condition_variable::wait
 - std::condition_variable::wait_for
 - std::condition_variable::wait_until
-ms.openlocfilehash: eef0e7ef013b4faeb6393cade67258a09eda5551
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: f5987c050dece8536aef0f91731a0848b56d3a4b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88842430"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97233813"
 ---
 # <a name="condition_variable-class"></a>condition_variable クラス
 
@@ -45,14 +46,14 @@ class condition_variable;
 |-|-|
 |[condition_variable](#condition_variable)|`condition_variable` オブジェクトを構築します。|
 
-### <a name="functions"></a>Functions
+### <a name="functions"></a>関数
 
 |名前|説明|
 |-|-|
 |[native_handle](#native_handle)|condition_variable ハンドルを表す実装固有の型を返します。|
 |[notify_all](#notify_all)|`condition_variable` オブジェクトを待機しているすべてのスレッドのブロックを解除します。|
 |[notify_one](#notify_one)|`condition_variable` オブジェクトを待機しているスレッドの 1 つのブロックを解除します。|
-|[待機](#wait)|スレッドをブロックします。|
+|[wait](#wait)|スレッドをブロックします。|
 |[wait_for](#wait_for)|スレッドをブロックし、スレッドがブロック解除されるまでの時間間隔を設定します。|
 |[wait_until](#wait_until)|スレッドをブロックし、スレッドがブロック解除される最大の時刻を設定します。|
 
@@ -158,7 +159,7 @@ bool wait_for(
 
 最初のメソッドは、 `cv_status::timeout` *Rel_time* が経過したときに待機が終了した場合、を返します。 それ以外の場合、メソッドは `cv_status::no_timeout` を返します。
 
-2番目のメソッドは、 *Pred*の値を返します。
+2番目のメソッドは、 *Pred* の値を返します。
 
 ### <a name="remarks"></a>解説
 
@@ -214,9 +215,9 @@ bool wait_until(
 
 ### <a name="return-value"></a>戻り値
 
-`cv_status` `cv_status::timeout` *Abs_time*が経過したときに待機が終了した場合、型を返すメソッドはを返します。 それ以外の場合、メソッドは `cv_status::no_timeout` を返します。
+`cv_status` `cv_status::timeout` *Abs_time* が経過したときに待機が終了した場合、型を返すメソッドはを返します。 それ以外の場合、メソッドは `cv_status::no_timeout` を返します。
 
-を返すメソッドは、 **`bool`** *Pred*の値を返します。
+を返すメソッドは、 **`bool`** *Pred* の値を返します。
 
 ### <a name="remarks"></a>解説
 

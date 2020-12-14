@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: common_type クラス'
 title: common_type クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,14 +8,14 @@ helpviewer_keywords:
 - common_type class
 - common_type
 ms.assetid: 02bc4e7b-c63d-49de-9f8a-511d3a5c1e7f
-ms.openlocfilehash: 3605b34a2bfc50831c889976ac5ea884053bb642
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 7dc41b443f6ec93c9d07ba8e3871346fae09d94f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68449497"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97233917"
 ---
-# <a name="commontype-class"></a>common_type クラス
+# <a name="common_type-class"></a>common_type クラス
 
 1 つ以上の型の共通型を決定します。
 
@@ -45,7 +46,7 @@ struct common_type<T, U, V...> {
 
 [完全型](../c-language/incomplete-types.md)または void である型のリスト。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 `type` のメンバーは、パラメーター リストのすべての型をその型に変換できる共通型です。
 
@@ -92,7 +93,7 @@ int main()
 }
 ```
 
-## <a name="output"></a>Output
+## <a name="output"></a>出力
 
 ```Output
 Test for typedefs of common_type int
@@ -114,9 +115,9 @@ ModifiedIntType: false
 ClassType: true
 ```
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-**ヘッダー:** \<type_traits>
+**ヘッダー:**\<type_traits>
 
 **名前空間:** std
 

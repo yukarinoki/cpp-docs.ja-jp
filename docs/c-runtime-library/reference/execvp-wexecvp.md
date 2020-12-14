@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: _execvp、_wexecvp'
 title: _execvp、_wexecvp
 ms.date: 4/2/2020
 api_name:
@@ -33,12 +34,12 @@ helpviewer_keywords:
 - wexecvp function
 - execvp function
 ms.assetid: a4db15df-b204-4987-be7c-de84c3414380
-ms.openlocfilehash: 224649abffd836667641f3c83e5f777f8752d7bd
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: eddd453479ee60214e885832479e2b7f89835094
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82915929"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97236127"
 ---
 # <a name="_execvp-_wexecvp"></a>_execvp、_wexecvp
 
@@ -70,9 +71,9 @@ intptr_t _wexecvp(
 
 ## <a name="return-value"></a>戻り値
 
-成功した場合、これらの関数が呼び出しプロセスに戻ることはありません。 戻り値-1 はエラーを示します。この場合、 **errno**グローバル変数が設定されます。
+成功した場合、これらの関数が呼び出しプロセスに戻ることはありません。 戻り値-1 はエラーを示します。この場合、 **errno** グローバル変数が設定されます。
 
-|**errno**値|説明|
+|**errno** 値|説明|
 |-------------------|-----------------|
 |**E2BIG**|引数と環境設定には、32 KB を超える領域が必要です。|
 |**EACCES**|指定されたファイルでロック違反または共有違反が発生しています。|
@@ -86,15 +87,15 @@ intptr_t _wexecvp(
 
 ## <a name="remarks"></a>解説
 
-これらの各関数は、新しいプロセスを読み込んで実行し、コマンドライン引数へのポインターの配列を渡し、 **PATH**環境変数を使用して実行するファイルを検索します。
+これらの各関数は、新しいプロセスを読み込んで実行し、コマンドライン引数へのポインターの配列を渡し、 **PATH** 環境変数を使用して実行するファイルを検索します。
 
-**_Execvp**関数は、パラメーターを検証します。 *Cmdname*が null ポインターの場合、または*argv*が null ポインター、空の配列へのポインター、または配列に最初の引数として空の文字列が含まれている場合、これらの関数は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーを呼び出します。 実行の継続が許可された場合、これらの関数は**errno**を**EINVAL**に設定し、-1 を返します。 プロセスは起動されません。
+**_Execvp** 関数は、パラメーターを検証します。 *Cmdname* が null ポインターの場合、または *argv* が null ポインター、空の配列へのポインター、または配列に最初の引数として空の文字列が含まれている場合、これらの関数は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーを呼び出します。 実行の継続が許可された場合、これらの関数は **errno** を **EINVAL** に設定し、-1 を返します。 プロセスは起動されません。
 
 既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-|関数|必須ヘッダー|オプション ヘッダー|
+|機能|必須ヘッダー|オプション ヘッダー|
 |--------------|---------------------|---------------------|
 |**_execvp**|\<process.h>|\<errno.h>|
 |**_wexecvp**|\<process.h> または \<wchar.h>|\<errno.h>|
@@ -108,10 +109,10 @@ intptr_t _wexecvp(
 ## <a name="see-also"></a>関連項目
 
 [プロセスと環境の制御](../../c-runtime-library/process-and-environment-control.md)<br/>
-[_exec、_wexec 系関数](../../c-runtime-library/exec-wexec-functions.md)<br/>
+[_exec, _wexec 関数](../../c-runtime-library/exec-wexec-functions.md)<br/>
 [取り消し](abort.md)<br/>
 [atexit](atexit.md)<br/>
 [終了、_Exit、_exit](exit-exit-exit.md)<br/>
 [_onexit、_onexit_m](onexit-onexit-m.md)<br/>
-[_spawn 系関数と _wspawn 系関数](../../c-runtime-library/spawn-wspawn-functions.md)<br/>
+[_spawn, _wspawn 関数](../../c-runtime-library/spawn-wspawn-functions.md)<br/>
 [system、_wsystem](system-wsystem.md)<br/>

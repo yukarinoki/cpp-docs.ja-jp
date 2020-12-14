@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: error_category クラス'
 title: error_category クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -16,12 +17,12 @@ helpviewer_keywords:
 - std::error_category::message
 - std::error_category::name
 ms.assetid: e0a71e14-852d-4905-acd6-5f8ed426706d
-ms.openlocfilehash: 218596ff5b81e99f4787efe2582fdc2752533cec
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 25ad7f6acfe50cdcc0c4b9df44fb3b8b6244f569
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88840168"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97232656"
 ---
 # <a name="error_category-class"></a>error_category クラス
 
@@ -49,7 +50,7 @@ error_category(const error_category&) = delete
 |-|-|
 |[value_type](#value_type)|格納されたエラー コード値を表す型。|
 
-### <a name="functions"></a>Functions
+### <a name="functions"></a>関数
 
 |名前|説明|
 |-|-|
@@ -60,7 +61,7 @@ error_category(const error_category&) = delete
 |[name](#name)|カテゴリの名前を返します。|
 |[system_category](#system)||
 
-### <a name="operators"></a>演算子
+### <a name="operators"></a>オペレーター
 
 |名前|説明|
 |-|-|
@@ -84,7 +85,7 @@ virtual error_condition default_error_condition(int _Errval) const;
 
 ### <a name="return-value"></a>戻り値
 
-`error_condition(_Errval, *this)` を返します。
+`error_condition(_Errval, *this)` が返されます。
 
 ### <a name="remarks"></a>解説
 
@@ -200,7 +201,7 @@ bool operator!=(const error_category& right) const;
 
 #### <a name="return-value"></a>戻り値
 
-**`true`**`error_category`オブジェクトが、渡されたオブジェクトと等しくない場合は `error_category` 。それ以外*right*の場合は **`false`** 。
+**`true`**`error_category`オブジェクトが、渡されたオブジェクトと等しくない場合は `error_category` 。それ以外の場合は **`false`** 。
 
 #### <a name="remarks"></a>解説
 

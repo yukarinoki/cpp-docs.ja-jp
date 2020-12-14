@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「C ランタイムエラー R6017」を参照してください。
 title: C ランタイム エラー R6017
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - R6017
 ms.assetid: df3ec5f5-6771-4648-ba06-0e26c6a1cc6a
-ms.openlocfilehash: 2d868939425c11f13dffd84e28c1afee45e3b11a
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 38c4b65ec3d577176485882d6f581bacd2ad007c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80197303"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97237648"
 ---
 # <a name="c-runtime-error-r6017"></a>C ランタイム エラー R6017
 
@@ -22,12 +23,12 @@ ms.locfileid: "80197303"
 >
 > このエラーを解決するには、次の手順を試してみます。
 >
-> - **コントロールパネル**の **[アプリと機能]** ページまたは **[プログラムと機能]** ページを使用して、プログラムを修復または再インストールします。
-> - ソフトウェアの更新については、**コントロールパネル**の**Windows Update**を確認してください。
+> - **コントロールパネル** の [**アプリと機能**] ページまたは [**プログラムと機能**] ページを使用して、プログラムを修復または再インストールします。
+> - ソフトウェアの更新については、**コントロールパネル** の **Windows Update** を確認してください。
 > - アプリの更新バージョンを確認します。 問題が解決しない場合は、アプリの製造元にお問い合わせください。
 
 **プログラマ向けの情報**
 
 システムリソースの C ランタイムマルチスレッドロックにアクセスしようとしたときに、プロセスで予期しないエラーが発生しました。 このエラーは通常、プロセスによってランタイムヒープデータが誤って変更された場合に発生します。 ただし、ランタイムライブラリまたはオペレーティングシステムコードの内部エラーが原因である場合もあります。
 
-この問題を解決するには、コード内のヒープ破損のバグを確認します。 詳細と例については、「 [CRT デバッグヒープの詳細](/visualstudio/debugger/crt-debug-heap-details)」を参照してください。 次に、アプリのデプロイに最新の再頒布可能パッケージを使用していることを確認します。 詳細については、「 [ C++Visual での配置](../../windows/deployment-in-visual-cpp.md)」を参照してください。
+この問題を解決するには、コード内のヒープ破損のバグを確認します。 詳細と例については、「 [CRT デバッグヒープの詳細](/visualstudio/debugger/crt-debug-heap-details)」を参照してください。 次に、アプリのデプロイに最新の再頒布可能パッケージを使用していることを確認します。 詳細については、「 [Visual C++ でのデプロイ](../../windows/deployment-in-visual-cpp.md)」を参照してください。

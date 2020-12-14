@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: &lt; codecvt &gt; 列挙型'
 title: '&lt;codecvt&gt; 列挙型'
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,16 +7,16 @@ f1_keywords:
 ms.assetid: 46a8b073-01bc-46d3-b3d3-a8540f9422c1
 helpviewer_keywords:
 - std::codecvt_mode
-ms.openlocfilehash: e67290d8de0b8251191c4a93b66b7e19a293ed61
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: bcd40f72f563b3ecf91125f7167f206d4b1b6517
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81371940"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97234060"
 ---
 # <a name="ltcodecvtgt-enums"></a>&lt;codecvt&gt; 列挙型
 
-## <a name="codecvt_mode-enumeration"></a><a name="codecvt_mode"></a>列挙codecvt_mode
+## <a name="codecvt_mode-enumeration"></a><a name="codecvt_mode"></a> codecvt_mode 列挙型
 
 [ロケール](../standard-library/locale-class.md)ファセットの構成情報を指定します。
 
@@ -29,7 +30,7 @@ enum codecvt_mode {
 
 ### <a name="remarks"></a>解説
 
-この列挙体は[\<、codecvt>](../standard-library/codecvt.md)で宣言されたロケール ファセットに構成情報を提供する 3 つの定数を定義します。 それぞれの値は次のとおりです。
+列挙体は、で宣言されたロケールファセットに構成情報を提供する3つの定数を定義し [\<codecvt>](../standard-library/codecvt.md) ます。 それぞれの値は次のとおりです。
 
 - `consume_header`。マルチバイト シーケンスの読み取り時に初期ヘッダー シーケンスを使用し、読み取られる後続のマルチバイト シーケンスのエンディアンを決定します。
 
@@ -41,4 +42,4 @@ enum codecvt_mode {
 
 ## <a name="see-also"></a>関連項目
 
-[\<コードcvt>](../standard-library/codecvt.md)
+[\<codecvt>](../standard-library/codecvt.md)

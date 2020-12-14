@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: 複合クラス'
 title: complex クラス
 ms.date: 03/27/2019
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - std::complex [C++], imag
 - std::complex [C++], real
 ms.assetid: d6492e1c-5eba-4bc5-835b-2a88001a5868
-ms.openlocfilehash: c7e2ca2c14ed0ac5f561fab446f6cd2dcc19649d
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 224b59e79119496ea7484378a010c4861f32e404
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88836545"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97233904"
 ---
 # <a name="complex-class"></a>complex クラス
 
@@ -56,14 +57,14 @@ class complex
 |-|-|
 |[value_type](#value_type)|複素数の実数部と虚数部を表すために使用するデータ型を表す型。|
 
-### <a name="functions"></a>Functions
+### <a name="functions"></a>関数
 
 |名前|説明|
 |-|-|
 |[imag](#imag)|複素数の虚数部を抽出します。|
 |[real](#real)|複素数の実数部を抽出します。|
 
-### <a name="operators"></a>演算子
+### <a name="operators"></a>オペレーター
 
 |名前|説明|
 |-|-|
@@ -100,7 +101,7 @@ constexpr complex(
 
 ### <a name="remarks"></a>解説
 
-最初のコンストラクターは、格納されている実数部を* \_ realval*に初期化し、格納された虚数部を* \_ imagval*に初期化します。 2番目のコンストラクターは、格納されている実数部をに初期化し、 `complexNum.real()` 格納された虚数部をに初期化し `complexNum.imag()` ます。
+最初のコンストラクターは、格納されている実数部を *\_ realval* に初期化し、格納された虚数部を *\_ imagval* に初期化します。 2番目のコンストラクターは、格納されている実数部をに初期化し、 `complexNum.real()` 格納された虚数部をに初期化し `complexNum.imag()` ます。
 
 この実装では、トランスレーターがメンバー テンプレート関数をサポートしない場合、次のテンプレートは、
 
@@ -178,7 +179,7 @@ T imag(const T& right);
 
 ### <a name="remarks"></a>解説
 
-複素数 *a + bi*の場合、虚数部またはコンポーネントは *Im (a + bi) = b*です。
+複素数 *a + bi* の場合、虚数部またはコンポーネントは *Im (a + bi) = b* です。
 
 ### <a name="example"></a>例
 
@@ -710,7 +711,7 @@ T real(const T& right);
 
 ### <a name="remarks"></a>解説
 
-複素数 *a + bi*の場合、実数部またはコンポーネントは *Re (a + bi) = a*です。
+複素数 *a + bi* の場合、実数部またはコンポーネントは *Re (a + bi) = a* です。
 
 ### <a name="example"></a>例
 

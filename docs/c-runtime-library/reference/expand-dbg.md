@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: _expand_dbg'
 title: _expand_dbg
 ms.date: 11/04/2016
 api_name:
@@ -26,12 +27,12 @@ helpviewer_keywords:
 - expand_dbg function
 - _expand_dbg function
 ms.assetid: dc58c91f-72a8-48c6-b643-fe130fb6c1fd
-ms.openlocfilehash: 836b9cffcf0367f248a14469b30c1a355e2bdec2
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 6ebdce3a22c4e5b4b63b8301570effed888fe66f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70941576"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97235966"
 ---
 # <a name="_expand_dbg"></a>_expand_dbg
 
@@ -58,31 +59,31 @@ void *_expand_dbg(
 ブロックのために要求する新しいサイズ (バイト単位)。
 
 *blockType*<br/>
-サイズ変更されたブロックの要求された型: **_CLIENT_BLOCK**または **_NORMAL_BLOCK**。
+サイズ変更されたブロックの要求された型: **_CLIENT_BLOCK** または **_NORMAL_BLOCK**。
 
-*ファイル名*<br/>
-拡張操作を要求したソースファイルの名前へのポインターまたは**NULL**。
+*filename*<br/>
+拡張操作を要求したソースファイルの名前へのポインターまたは **NULL**。
 
-*行番号*<br/>
-展開操作が要求されたソースファイル内の行番号または**NULL**。
+*linenumber*<br/>
+展開操作が要求されたソースファイル内の行番号または **NULL**。
 
-*Filename*パラメーターと*linenumber*パラメーターは、 **_expand_dbg**が明示的に呼び出された場合、または[_CRTDBG_MAP_ALLOC](../../c-runtime-library/crtdbg-map-alloc.md)プリプロセッサ定数が定義されている場合にのみ使用できます。
+*Filename* パラメーターと *linenumber* パラメーターは、 **_expand_dbg** が明示的に呼び出された場合、または [_CRTDBG_MAP_ALLOC](../../c-runtime-library/crtdbg-map-alloc.md)プリプロセッサ定数が定義されている場合にのみ使用できます。
 
 ## <a name="return-value"></a>戻り値
 
-正常に完了すると、 **_expand_dbg**は、サイズ変更されたメモリブロックへのポインターを返します。 メモリが移動されないため、アドレスは userData と同じです。 エラーが発生したか、要求されたサイズまでブロックを拡張できなかった場合は、 **NULL**を返します。 エラーが発生した場合、 **errno**には、エラーの性質に関するオペレーティングシステムからの情報が含まれます。 **Errno**の詳細については、「 [errno、_doserrno、_sys_errlist、および _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」を参照してください。
+正常に完了すると、 **_expand_dbg** は、サイズ変更されたメモリブロックへのポインターを返します。 メモリが移動されないため、アドレスは userData と同じです。 エラーが発生したか、要求されたサイズまでブロックを拡張できなかった場合は、 **NULL** を返します。 エラーが発生した場合、 **errno** には、エラーの性質に関するオペレーティングシステムからの情報が含まれます。 **Errno** の詳細については、「 [errno、_doserrno、_sys_errlist、および _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」を参照してください。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-**_Expand_dbg**関数は、_[expand](expand.md)関数のデバッグバージョンです。 [_Debug](../../c-runtime-library/debug.md)が定義されていない場合、 **_expand_dbg**の各呼び出しは **_expand**の呼び出しに限定されます。 **_Expand**と **_expand_dbg**はどちらもベースヒープ内のメモリブロックのサイズを変更しますが、 **_expand_dbg**にはいくつかのデバッグ機能があります。リークをテストするために、ブロックのユーザー部分の両側のバッファーを使用します。割り当て要求の発生元を特定するための、特定の割り当ての種類と*filename*/*linenumber*情報。
+**_Expand_dbg** 関数は、_ [expand](expand.md)関数のデバッグバージョンです。 [_DEBUG](../../c-runtime-library/debug.md)が定義されていない場合、 **_expand_dbg** の各呼び出しは **_expand** への呼び出しに限定されます。 **_Expand** と **_expand_dbg** は、ベースヒープ内のメモリブロックのサイズを変更しますが、 **_expand_dbg** にはいくつかのデバッグ機能があります。リークをテストするためのブロックのユーザー部分の両側のバッファー、特定の割り当ての種類を追跡するためのブロック型パラメーター、割り当て要求の発生元を特定するための *ファイル名* / *linenumber* 情報です。
 
-**_expand_dbg**は、指定されたメモリブロックのサイズを、要求された*newSize*よりもわずかに増やします。 *newSize*が、最初に割り当てられたメモリブロックのサイズより大きいか小さい可能性があります。 追加の領域は、デバッグ メモリ ブロックをリンクし、アプリケーションにデバッグ ヘッダー情報と上書きバッファーを提供するために、デバッグ ヒープ マネージャーによって使用されます。 サイズ変更は、元のメモリ ブロックを拡張または縮小することで実現されます。 **_expand_dbg**は、 [_realloc_dbg](realloc-dbg.md)関数と同様に、メモリブロックを移動しません。
+は、指定されたメモリブロックのサイズを、要求された *newSize* よりもわずかに増やして **_expand_dbg** ます。 *newSize* が、最初に割り当てられたメモリブロックのサイズより大きいか小さい可能性があります。 追加の領域は、デバッグ メモリ ブロックをリンクし、アプリケーションにデバッグ ヘッダー情報と上書きバッファーを提供するために、デバッグ ヒープ マネージャーによって使用されます。 サイズ変更は、元のメモリ ブロックを拡張または縮小することで実現されます。 **_expand_dbg** は、 [_realloc_dbg](realloc-dbg.md) 関数と同様に、メモリブロックを移動しません。
 
-*NewSize*が元のブロックサイズよりも大きい場合、メモリブロックは拡張されます。 拡張中に、要求されたサイズに合わせてメモリブロックを拡張できない場合は、 **NULL**が返されます。 *NewSize*が元のブロックサイズよりも小さい場合、メモリブロックは新しいサイズが取得されるまでコントラクトされます。
+*NewSize* が元のブロックサイズよりも大きい場合、メモリブロックは拡張されます。 拡張中に、要求されたサイズに合わせてメモリブロックを拡張できない場合は、 **NULL** が返されます。 *NewSize* が元のブロックサイズよりも小さい場合、メモリブロックは新しいサイズが取得されるまでコントラクトされます。
 
-デバッグ バージョンのベース ヒープに対するメモリ ブロックの割り当て、初期化、管理方法については、「 [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details)」をご覧ください。 割り当てブロック型と、それらがどのように使用されるかについては、「[デバッグ ヒープ上のメモリ ブロックの型](/visualstudio/debugger/crt-debug-heap-details)」をご覧ください。 標準で呼び出すヒープ関数と、アプリケーションのデバッグ ビルドで呼び出すデバッグ バージョンのヒープ関数との違いの詳細については、「[デバッグ バージョンのヒープ割り当て関数](/visualstudio/debugger/debug-versions-of-heap-allocation-functions)」をご覧ください。
+デバッグ バージョンのベース ヒープに対するメモリ ブロックの割り当て、初期化、管理方法については、「 [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details)」をご覧ください。 割り当てブロックの型とその使用方法については、「 [デバッグヒープ上のブロックの型](/visualstudio/debugger/crt-debug-heap-details)」を参照してください。 標準で呼び出すヒープ関数と、アプリケーションのデバッグ ビルドで呼び出すデバッグ バージョンのヒープ関数との違いの詳細については、「[デバッグ バージョンのヒープ割り当て関数](/visualstudio/debugger/debug-versions-of-heap-allocation-functions)」を参照してください。
 
-この関数は、パラメーターを検証します。 *Memblock*が null ポインターの場合、または Size が **_HEAP_MAXREQ**より大きい場合、この関数は「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーを呼び出します。 実行の継続が許可された場合、 **errno**は**EINVAL**に設定され、関数は**NULL**を返します。
+この関数は、パラメーターを検証します。 *Memblock* が null ポインターの場合、または size が **_HEAP_MAXREQ** より大きい場合、この関数は「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーを呼び出します。 実行の継続が許可された場合、 **errno** は **EINVAL** に設定され、関数は **NULL** を返します。
 
 ## <a name="requirements"></a>必要条件
 
@@ -90,7 +91,7 @@ void *_expand_dbg(
 |-------------|---------------------|
 |**_expand_dbg**|\<crtdbg.h>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性について詳しくは、「 [Compatibility](../../c-runtime-library/compatibility.md)」をご覧ください。
 
 ## <a name="libraries"></a>ライブラリ
 
@@ -155,5 +156,5 @@ Size of block after _expand_dbg of 1 more long: 164
 
 ## <a name="see-also"></a>関連項目
 
-[デバッグ ルーチン](../../c-runtime-library/debug-routines.md)<br/>
+[デバッグルーチン](../../c-runtime-library/debug-routines.md)<br/>
 [_malloc_dbg](malloc-dbg.md)<br/>

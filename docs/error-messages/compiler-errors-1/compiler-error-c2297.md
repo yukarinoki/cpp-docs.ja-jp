@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「コンパイラエラー C2297」を参照してください。
 title: コンパイラ エラー C2297
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2297
 ms.assetid: 65849fe5-17e1-4b7e-b50c-f508b05ddaa4
-ms.openlocfilehash: 5f07d522f7594d78df566b6a4be47ad0dadd4b3d
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: d9843592a366054d72b3cc179aec6da85843f105
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74759088"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97235204"
 ---
 # <a name="compiler-error-c2297"></a>コンパイラ エラー C2297
 
 ' operator ': 右オペランドが正しくありません。
 
-`operator` で使用されている右オペランドが無効です。
+で使用される右オペランド `operator` が無効です。
 
 たとえば、コンパイラでは、関数呼び出しの対象となった宣言が表示される場合があります。
 

@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「コンパイラエラー C2338」を参照してください。
 title: コンパイラ エラー C2338
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2338
 ms.assetid: 49bba575-1de4-4963-86c6-ce3226a2ba51
-ms.openlocfilehash: c92a95b97cb4c57d3ad5cfbf8fe1d9980d5362cd
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 7bbbc7fd6240fce2def470a0d16aa0dba152a109
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87221212"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97234801"
 ---
 # <a name="compiler-error-c2338"></a>コンパイラ エラー C2338
 
@@ -21,7 +22,7 @@ ms.locfileid: "87221212"
 
 このエラーメッセージは、外部プロバイダーによってコンパイラに生成されることもあります。 ほとんどの場合、これらのエラーは、ATLPROV などの属性プロバイダーの DLL によって報告されます。 このメッセージの一般的な形式は次のとおりです。
 
-- '*attribute*' Atl 属性プロバイダー: エラー atl*数値**メッセージ*
+- '*attribute*' Atl 属性プロバイダー: エラー atl *数値**メッセージ*
 
 - 属性 '*attribute*' の使用法が正しくありません
 

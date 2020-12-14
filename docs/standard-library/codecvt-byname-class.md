@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: codecvt_byname クラス'
 title: codecvt_byname クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - codecvt_byname class
 ms.assetid: b63b6c04-f60c-47b9-8e30-a933f24a8ffb
-ms.openlocfilehash: b48f01126eba7082230fc5e19150d42d1dfad2f3
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 526988f46b729e1a3d4ab6892d2c8f1fecba78a4
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72688301"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97234073"
 ---
 # <a name="codecvt_byname-class"></a>codecvt_byname クラス
 
@@ -43,24 +44,24 @@ protected:
 
 ### <a name="parameters"></a>パラメーター
 
-*@No__t_1*
+*_Locname*\
 名前付きのロケール。
 
-*Refs \ (_c)*
+*_Refs*\
 最初の参照数。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 名前付きのロケールが作成されると、byname ファセットが自動的に作成されます。
 
-その動作は、名前付きロケール*名*によって決まります。 各コンストラクターは、[codecvt](../standard-library/codecvt-class.md)\<CharType, Byte, StateType>( `_Refs`) を使用して、その基本オブジェクトを初期化します。
+その動作は、 *_Locname* 名前付きロケールによって決まります。 各コンストラクターは、 [codecvt](../standard-library/codecvt-class.md)() を使用して、その基本オブジェクトを初期化 \<CharType, Byte, StateType> `_Refs` します。
 
-## <a name="requirements"></a>［要件］
+## <a name="requirements"></a>要件
 
-**ヘッダー:** \<locale>
+**ヘッダー:**\<locale>
 
 **名前空間:** std
 
 ## <a name="see-also"></a>関連項目
 
-[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[C++ 標準ライブラリのスレッドセーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)

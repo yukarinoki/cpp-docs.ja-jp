@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: 分割構造体'
 title: divides 構造体
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - divides struct
 - divides class
 ms.assetid: b9cf8e9c-6981-43a6-a6a3-8f761987dd7a
-ms.openlocfilehash: 6c7297fa7c31470591b473ab5eadcde54e8c3b34
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: eae6054ea485a05747f8e282849b1fe282a89439
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68244144"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97232747"
 ---
 # <a name="divides-struct"></a>divides 構造体
 
@@ -42,11 +43,11 @@ struct divides<void>
 *型*、 *T*、 *U*\
 指定または推論された型のオペランドを受け取る `operator/` をサポートする型。
 
-*左*\
-除算演算の左オペランド。 特化されていないテンプレートは、型の左辺値参照引数を受け取る*型*します。 特殊化されたテンプレートはの完全転送を左辺値と右辺値参照引数の型を推論する*T*します。
+*左側*\
+除算演算の左オペランド。 非特殊テンプレートは、type *型* の左辺値参照引数を受け取ります。 特殊化されたテンプレートは、推論された型 *T* の左辺値および右辺値参照引数の完全転送を行います。
 
 *そうです*\
-除算演算の右オペランド。 特化されていないテンプレートは、型の左辺値参照引数を受け取る*型*します。 特殊化されたテンプレートはの完全転送を左辺値と右辺値参照引数の型を推論する*U*します。
+除算演算の右オペランド。 非特殊テンプレートは、type *型* の左辺値参照引数を受け取ります。 特殊化されたテンプレートは、推論された型 *U* の左辺値および右辺値参照引数の完全転送を行います。
 
 ## <a name="return-value"></a>戻り値
 

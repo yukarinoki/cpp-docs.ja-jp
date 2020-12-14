@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「コンパイラエラー C2326」を参照してください。
 title: コンパイラ エラー C2326
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2326
 ms.assetid: 01a5ea40-de83-4e6f-a4e8-469f441258e0
-ms.openlocfilehash: 9cf72cddbb1f71f29153ff8d544787285a077f9c
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 968426bfc8752ebf1c33ed37a25923a3bd48bc29
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74747801"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97234957"
 ---
 # <a name="compiler-error-c2326"></a>コンパイラ エラー C2326
 
@@ -19,7 +20,7 @@ ms.locfileid: "74747801"
 
 コードにより、アクセス不可能なメンバー変数の変更が試行されます。
 
-## <a name="example"></a>使用例
+## <a name="example"></a>例
 
 次の例では C2326 が生成されます。
 

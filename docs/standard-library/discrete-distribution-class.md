@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: discrete_distribution クラス'
 title: discrete_distribution クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -23,12 +24,12 @@ helpviewer_keywords:
 - std::discrete_distribution [C++], param_type
 - std::discrete_distribution [C++], param_type
 ms.assetid: 8c8ba8f8-c06f-4f07-b354-f53950142fcf
-ms.openlocfilehash: 5dcac516da088a55d2ddc176275ec25941ad8949
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: b84d174a653efdeba47fb0356c903b8c7dd2a8d6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88846278"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97232760"
 ---
 # <a name="discrete_distribution-class"></a>discrete_distribution クラス
 
@@ -167,7 +168,7 @@ Distribution for 100 samples:
     4 ::::::::::::::::::::::::::::::::::::
 ```
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:**\<random>
 
@@ -228,12 +229,12 @@ explicit discrete_distribution(const param_type& parm);
 
 パラメーター *firstW* と *lastW* のある反復子範囲コンストラクターは、区間シーケンス [*firstW*, *lastW*) 全体にわたる反復子から取得された重み値を使って分布オブジェクトを作成します。
 
-*Weightlist*パラメーターを持つ初期化子リストコンストラクターは、初期化子リスト*weightlist*の重みを持つ分布オブジェクトを構築します。
+*Weightlist* パラメーターを持つ初期化子リストコンストラクターは、初期化子リスト *weightlist* の重みを持つ分布オブジェクトを構築します。
 
 *count*、*low*、*high*、*weightfunc* パラメーターを持つコンストラクターは、以下のルールに基づいて初期化された分布オブジェクトを作成します。
 
 - *count* < 1 の場合、**n** = 1 で、このような場合は既定のコンストラクターと同じで、常に 0 を生成します。
-- *count* > 0 の場合、**n** = *count* です。 指定された**d** = (*高*  -  *低*)/ **n**が0より大きく、 **d**の uniform 部分範囲を使用している場合、各重みは次のように割り当てられます ( `weight[k] = weightfunc(x)` **x**  =  *low*  +  **k**  *  **d**  +  **d** /2、 **k** = 0、...、 **n** -1)。
+- *count* > 0 の場合、**n** = *count* です。 指定された **d** = (*高*  -  *低*)/ **n** が0より大きく、 **d** の uniform 部分範囲を使用している場合、各重みは次のように割り当てられます ( `weight[k] = weightfunc(x)` **x**  =  *low*  +  **k**  *  **d**  +  **d** /2、 **k** = 0、...、 **n** -1)。
 
 `param_type` パラメーター *parm* を持つコンストラクターは、格納されたパラメーター構造体として *parm* を使う分布オブジェクトを作成します。
 

@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「複雑な long double」を参照してください。 &lt;&gt;
 title: complex&lt;long double&gt;
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - complex<long double> function
 ms.assetid: 37591991-b385-46e9-b727-d534dbc10432
-ms.openlocfilehash: 73027ba76d608424b1a6da346e861b10c66989fe
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 5dd3b50c28b889a2e1fafba37cc24fda832f5975
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87228389"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97233826"
 ---
 # <a name="complexltlong-doublegt"></a>complex&lt;long double&gt;
 
@@ -55,9 +56,9 @@ complex(
 
 クラステンプレートを `complex` 型の複合クラスに明示的に特殊化する **`long double`** ことは、それが定義するコンストラクター内でのみクラステンプレートとは異なります。 からへの **`long double`** 変換 **`float`** は暗黙的に行うことができますが、からへの変換は **`double`** **`long double`** である必要があり **`explicit`** ます。 を使用すると、 **`explicit`** 割り当て構文を使用した型変換での開始がルールによって除外されます。
 
-クラステンプレートとそのメンバーの詳細につい `complex` ては、「[複合クラス](../standard-library/complex-class.md)」を参照してください。
+クラステンプレートとそのメンバーの詳細につい `complex` ては、「 [複合クラス](../standard-library/complex-class.md)」を参照してください。
 
-**Microsoft 固有**: **`long double`** **`double`** 型と型は同じ表現を持ちますが、異なる型です。 詳細については、「[組み込み型](../cpp/fundamental-types-cpp.md)」を参照してください。
+**Microsoft 固有**: **`long double`** **`double`** 型と型は同じ表現を持ちますが、異なる型です。 詳細については、「 [組み込み型](../cpp/fundamental-types-cpp.md)」を参照してください。
 
 ## <a name="example"></a>例
 
@@ -115,9 +116,9 @@ Argument of c3 is recovered from c3 using:
 arg( c3 ) = 0.927295 radians, which is 53.1301 degrees.
 ```
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-**ヘッダー**:\<complex>
+**ヘッダー**: \<complex>
 
 **名前空間:** std
 

@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: &lt; climits&gt;'
 title: '&lt;climits&gt;'
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - climits header
 ms.assetid: 7ca8a539-aa45-4ac3-86e8-74513be3f07e
-ms.openlocfilehash: 6cff0975fb61e30bc96390f345cd67d7b1fbec41
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 97c5f6f9822656c2b25b85dab6fb668a8a8eebbf
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68459334"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97234086"
 ---
 # <a name="ltclimitsgt"></a>&lt;climits&gt;
 
-C 標準ライブラリヘッダー \<の制限をインクルードし、関連`std`する名前を名前空間に追加します >。 このヘッダーをインクルードすると、C 標準ライブラリヘッダーの外部リンケージを使用して宣言され`std`た名前が、名前空間で宣言されます。
+C 標準ライブラリヘッダーをインクルード \<limits.h> し、関連する名前を名前空間に追加し `std` ます。 このヘッダーをインクルードすると、C 標準ライブラリヘッダーの外部リンケージを使用して宣言された名前が、名前空間で宣言され `std` ます。
 
 ## <a name="syntax"></a>構文
 
@@ -23,7 +24,7 @@ C 標準ライブラリヘッダー \<の制限をインクルードし、関連
 #include <climits>
 ```
 
-## <a name="macros"></a>[マクロ]
+## <a name="macros"></a>マクロ
 
 ```cpp
 #define CHAR_BIT
@@ -49,6 +50,6 @@ C 標準ライブラリヘッダー \<の制限をインクルードし、関連
 
 ## <a name="see-also"></a>関連項目
 
-[ヘッダー ファイル リファレンス](../standard-library/cpp-standard-library-header-files.md)\
+[ヘッダーファイルのリファレンス](../standard-library/cpp-standard-library-header-files.md)\
 [C++ 標準ライブラリの概要](../standard-library/cpp-standard-library-overview.md)\
-[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[C++ 標準ライブラリのスレッドセーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)

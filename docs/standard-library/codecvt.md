@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: &lt; codecvt&gt;'
 title: '&lt;codecvt&gt;'
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - codecvt header
 ms.assetid: d44ee229-00d5-4761-9b48-0c702122789d
-ms.openlocfilehash: ec403bd02df0b937269acc71ddf87e1942bb4c5c
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 454637427b4a2c058b8ee8cf4bb5b8bc99215e74
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88836596"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97233969"
 ---
 # <a name="ltcodecvtgt"></a>&lt;codecvt&gt;
 
@@ -42,7 +43,7 @@ ms.locfileid: "88836596"
 
 - UTF-16BE は、16 ビット整数がそれぞれ 2 つの 8 ビット バイト (最初が上位バイト) で表される、UTF-16 と同様のバイト ストリームにおける Unicode のエンコード形式です。
 
-### <a name="enumerations"></a>列挙
+### <a name="enumerations"></a>列挙型
 
 |名前|説明|
 |-|-|
@@ -56,7 +57,7 @@ ms.locfileid: "88836596"
 |[codecvt_utf8_utf16](codecvt-utf8-utf16-class.md)|UTF-16 としてエンコードされたワイド文字と、UTF-8 としてエンコードされたバイト ストリームを変換するロケール ファセットを表します。|
 |[codecvt_utf16](codecvt-utf16-class.md)|UCS-2 または UCS-4 としてエンコードされたワイド文字と、UTF-16LE または UTF-16BE としてエンコードされたバイト ストリームを変換するロケール ファセットを表します。|
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:**\<codecvt>
 

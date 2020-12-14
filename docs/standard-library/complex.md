@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: &lt; complex&gt;'
 title: '&lt;complex&gt;'
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,18 +8,18 @@ f1_keywords:
 helpviewer_keywords:
 - complex header
 ms.assetid: 5e728995-3059-496a-9ce9-61d1bfbe4f2b
-ms.openlocfilehash: f63fe99238450b8dffbf459ab078a8ecf6623b77
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: b16798cf1725ba6fa681b04f735d44f02a2b1b82
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88831503"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97233839"
 ---
 # <a name="ltcomplexgt"></a>&lt;complex&gt;
 
 コンテナークラステンプレート `complex` とそのサポートテンプレートを定義します。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー**: \<complex>
 
@@ -42,9 +43,9 @@ ms.locfileid: "88831503"
 
    (*a*/(*a*<sup>2</sup>  +  *b*<sup>2</sup>),-*b*/(*a*<sup>2</sup>  +  *b*<sup>2</sup>))
 
-" *Z*a bi" という形式で複素数*z* = (*a*, *b*) を表すと、  =  *a*  +  *bi* *i*<sup>2</sup> =-1 になります。実数のセットの代数に関するルールは、一連の複素数とそのコンポーネントに適用できます。 次に例を示します。
+" *Z* a bi" という形式で複素数 *z* = (*a*, *b*) を表すと、  =    +   *i*<sup>2</sup> =-1 になります。実数のセットの代数に関するルールは、一連の複素数とそのコンポーネントに適用できます。 次に例を示します。
 
-   (1 + 2*i*) \*(2 + 3*i*) = 1 (2 + 3 i) \* +*i*2*i* \* (2 + 3*i*) = (2 + 3*i*) + (4*i* + 6*i*<sup>2</sup>) = (2-6) + (3 + 4)*i* =-4 + 7*i*
+   (1 + 2 *i*) \*(2 + 3 *i*) = 1 (2 + 3 i) \* +2 *i* \* (2 + 3 *i*) = (2 + 3 *i*) + (4 *i* + 6 *i*<sup>2</sup>) = (2-6) + (3 + 4)*i* =-4 + 7 *i*
 
 複素数系は体 (field) ですが、順序体 (ordered field) ではありません。 実際の数値とそのサブセットのフィールドについては、複素数の順序が指定されていないため、不等ずを実数のように複素数に適用することはできません。
 
@@ -62,7 +63,7 @@ ms.locfileid: "88831503"
 
 - デカルト形式の虚数要素、または虚数部 *b*。
 
-- 複素数 *r*の剰余または絶対値。
+- 複素数 *r* の剰余または絶対値。
 
 - 引数またはフェーズアングル *p* (ラジアン)。
 
@@ -70,7 +71,7 @@ ms.locfileid: "88831503"
 
 ## <a name="members"></a>メンバー
 
-### <a name="functions"></a>Functions
+### <a name="functions"></a>機能
 
 |名前|説明|
 |-|-|
@@ -90,7 +91,7 @@ ms.locfileid: "88831503"
 |[出力](../standard-library/complex-functions.md#log)|複素数の自然対数を返します。|
 |[log10](../standard-library/complex-functions.md#log10)|複素数の底 10 の対数を返します。|
 |[norm](../standard-library/complex-functions.md#norm)|複素数のノルムを抽出します。|
-|[polar](../standard-library/complex-functions.md#polar)|デカルト形式で、指定した係数と偏角に対応する複素数を返します。|
+|[極座標](../standard-library/complex-functions.md#polar)|デカルト形式で、指定した係数と偏角に対応する複素数を返します。|
 |[えい](../standard-library/complex-functions.md#pow)|複素数の底を、別の複素数で累乗することによって得られる複素数を評価します。|
 |[proj](../standard-library/complex-functions.md#proj)||
 |[real](../standard-library/complex-functions.md#real)|複素数の実数部を抽出します。|
@@ -100,7 +101,7 @@ ms.locfileid: "88831503"
 |[タンジェント](../standard-library/complex-functions.md#tan)|複素数のタンジェントを返します。|
 |[tanh](../standard-library/complex-functions.md#tanh)|複素数のハイパーボリック タンジェントを返します。|
 
-### <a name="operators"></a>演算子
+### <a name="operators"></a>オペレーター
 
 |名前|説明|
 |-|-|

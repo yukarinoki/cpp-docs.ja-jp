@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: CAsyncSocket クラス'
 title: CAsyncSocket クラス
 ms.date: 06/25/2020
 f1_keywords:
@@ -74,12 +75,12 @@ helpviewer_keywords:
 - CAsyncSocket [MFC], OnSend
 - CAsyncSocket [MFC], m_hSocket
 ms.assetid: cca4d5a1-aa0f-48bd-843e-ef0e2d7fc00b
-ms.openlocfilehash: cac3a95734a60252f241ab3080c05c65a9e04723
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: a9b020a93d4d0f279b5b79fa76a9f6b94e4f9f03
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88841650"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97234333"
 ---
 # <a name="casyncsocket-class"></a>CAsyncSocket クラス
 
@@ -174,7 +175,7 @@ class CAsyncSocket : public CObject
 
 `CAsyncSocket`
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** afxsock
 
@@ -195,10 +196,10 @@ virtual BOOL Accept(
 接続に使用できる新しいソケットを識別する参照。
 
 *lpSockAddr*<br/>
-ネットワーク上で認識されている接続ソケットのアドレスを受け取る [SOCKADDR](/windows/win32/winsock/sockaddr-2) 構造体へのポインター。 *LpSockAddr*引数の正確な形式は、ソケットの作成時に確立されたアドレスファミリによって決まります。 *LpSockAddr*または*lpSockAddrLen*が NULL と等しい場合、受け入れられたソケットのリモートアドレスに関する情報は返されません。
+ネットワーク上で認識されている接続ソケットのアドレスを受け取る [SOCKADDR](/windows/win32/winsock/sockaddr-2) 構造体へのポインター。 *LpSockAddr* 引数の正確な形式は、ソケットの作成時に確立されたアドレスファミリによって決まります。 *LpSockAddr* または *lpSockAddrLen* が NULL と等しい場合、受け入れられたソケットのリモートアドレスに関する情報は返されません。
 
 *lpSockAddrLen*<br/>
-*LpSockAddr*内のアドレスの長さをバイト単位で示すポインター。 *LpSockAddrLen*は、値の結果のパラメーターです。最初に*lpSockAddr*が指す領域の量を格納する必要があります。返されると、返されるアドレスの実際の長さ (バイト単位) が返されます。
+*LpSockAddr* 内のアドレスの長さをバイト単位で示すポインター。 *LpSockAddrLen* は、値の結果のパラメーターです。最初に *lpSockAddr* が指す領域の量を格納する必要があります。返されると、返されるアドレスの実際の長さ (バイト単位) が返されます。
 
 ### <a name="return-value"></a>戻り値
 
@@ -226,7 +227,7 @@ virtual BOOL Accept(
 
 ### <a name="remarks"></a>解説
 
-このルーチンは、保留中の接続のキュー内の最初の接続を抽出し、このソケットと同じプロパティを使用して新しいソケットを作成し、 *Rconnectedsocket*にアタッチします。 保留中の接続がキューに存在しない場合、は `Accept` 0 を返し、 `GetLastError` エラーを返します。 受け入れられたソケット ( *Rconnectedsocket)* を使用して、より多くの接続を受け入れることはできません。 元のソケットは開いたままリッスンしています。
+このルーチンは、保留中の接続のキュー内の最初の接続を抽出し、このソケットと同じプロパティを使用して新しいソケットを作成し、 *Rconnectedsocket* にアタッチします。 保留中の接続がキューに存在しない場合、は `Accept` 0 を返し、 `GetLastError` エラーを返します。 受け入れられたソケット ( *Rconnectedsocket)* を使用して、より多くの接続を受け入れることはできません。 元のソケットは開いたままリッスンしています。
 
 引数 *lpSockAddr* は、通信層に知られているように、接続ソケットのアドレスを使用して入力される結果パラメーターです。 `Accept` は、SOCK_STREAM などの接続ベースのソケットの種類で使用されます。
 
@@ -334,7 +335,7 @@ BOOL Bind (
 このソケットに割り当てるアドレスを格納している [SOCKADDR](/windows/win32/winsock/sockaddr-2) 構造体へのポインター。
 
 *nSockAddrLen*<br/>
-*LpSockAddr*のアドレスの長さ (バイト単位)。
+*LpSockAddr* のアドレスの長さ (バイト単位)。
 
 ### <a name="return-value"></a>戻り値
 
@@ -414,7 +415,7 @@ BOOL Connect(
 接続されたソケットのアドレスを格納している [SOCKADDR](/windows/win32/winsock/sockaddr-2) 構造体へのポインター。
 
 *nSockAddrLen*<br/>
-*LpSockAddr*のアドレスの長さ (バイト単位)。
+*LpSockAddr* のアドレスの長さ (バイト単位)。
 
 ### <a name="return-value"></a>戻り値
 
@@ -601,7 +602,7 @@ static CAsyncSocket* PASCAL FromHandle(SOCKET hSocket);
 
 ### <a name="return-value"></a>戻り値
 
-オブジェクトへのポインター `CAsyncSocket` `CAsyncSocket` 。 *hsocket*にアタッチされたオブジェクトがない場合は NULL。
+オブジェクトへのポインター `CAsyncSocket` `CAsyncSocket` 。 *hsocket* にアタッチされたオブジェクトがない場合は NULL。
 
 ### <a name="remarks"></a>解説
 
@@ -651,7 +652,7 @@ BOOL GetPeerName(
 ピアソケットの名前を受け取る [SOCKADDR](/windows/win32/winsock/sockaddr-2) 構造体へのポインター。
 
 *lpSockAddrLen*<br/>
-*LpSockAddr*内のアドレスの長さをバイト単位で示すポインター。 返されると、 *lpSockAddrLen* 引数には、返された *lpSockAddr* の実際のサイズがバイト単位で格納されます。
+*LpSockAddr* 内のアドレスの長さをバイト単位で示すポインター。 返されると、 *lpSockAddrLen* 引数には、返された *lpSockAddr* の実際のサイズがバイト単位で格納されます。
 
 ### <a name="return-value"></a>戻り値
 
@@ -737,7 +738,7 @@ BOOL GetSockName(
 ソケットのアドレスを受け取る [SOCKADDR](/windows/win32/winsock/sockaddr-2) 構造体へのポインター。
 
 *lpSockAddrLen*<br/>
-*LpSockAddr*内のアドレスの長さをバイト単位で示すポインター。
+*LpSockAddr* 内のアドレスの長さをバイト単位で示すポインター。
 
 ### <a name="return-value"></a>戻り値
 
@@ -819,10 +820,10 @@ BOOL GetSockOpt(
 値の取得対象となるソケットオプション。
 
 *lpOptionValue*<br/>
-要求されたオプションの値が返されるバッファーへのポインター。 選択したオプションに関連付けられている値は、バッファー *lpOptionValue*で返されます。 *Lpoptionlen*が指す整数には、最初にこのバッファーのサイズをバイト単位で格納する必要があります。返されると、返される値のサイズに設定されます。 SO_LINGER の場合、これは構造体のサイズになります `LINGER` 。他のすべてのオプションについては、 **`int`** オプションに応じて BOOL またはのサイズになります。 オプションとそのサイズの一覧については、「解説」を参照してください。
+要求されたオプションの値が返されるバッファーへのポインター。 選択したオプションに関連付けられている値は、バッファー *lpOptionValue* で返されます。 *Lpoptionlen* が指す整数には、最初にこのバッファーのサイズをバイト単位で格納する必要があります。返されると、返される値のサイズに設定されます。 SO_LINGER の場合、これは構造体のサイズになります `LINGER` 。他のすべてのオプションについては、 **`int`** オプションに応じて BOOL またはのサイズになります。 オプションとそのサイズの一覧については、「解説」を参照してください。
 
 *lpOptionLen*<br/>
-*LpOptionValue*バッファーのサイズ (バイト単位) へのポインター。
+*LpOptionValue* バッファーのサイズ (バイト単位) へのポインター。
 
 *nLevel*<br/>
 オプションが定義されているレベル。サポートされているレベルは SOL_SOCKET と IPPROTO_TCP のみです。
@@ -845,11 +846,11 @@ BOOL GetSockOpt(
 
 ### <a name="remarks"></a>解説
 
-`GetSockOpt` 任意の型のソケットに関連付けられているソケットオプションの現在の値を任意の状態で取得し、その結果を *lpOptionValue*に格納します。 オプションは、パケットのルーティング、帯域外のデータ転送などのソケット操作に影響します。
+`GetSockOpt` 任意の型のソケットに関連付けられているソケットオプションの現在の値を任意の状態で取得し、その結果を *lpOptionValue* に格納します。 オプションは、パケットのルーティング、帯域外のデータ転送などのソケット操作に影響します。
 
-では、次のオプションがサポートされてい `GetSockOpt` ます。 この型は、 *lpOptionValue*によってアドレス指定されるデータの種類を識別します。 TCP_NODELAY オプションは level IPPROTO_TCP を使用します。その他のすべてのオプションでは、レベル SOL_SOCKET を使用します。
+では、次のオプションがサポートされてい `GetSockOpt` ます。 この型は、 *lpOptionValue* によってアドレス指定されるデータの種類を識別します。 TCP_NODELAY オプションは level IPPROTO_TCP を使用します。その他のすべてのオプションでは、レベル SOL_SOCKET を使用します。
 
-|値|Type|意味|
+|値|Type|説明|
 |-----------|----------|-------------|
 |SO_ACCEPTCONN|BOOL|ソケットがリッスンしています。|
 |SO_BROADCAST|BOOL|ソケットは、ブロードキャストメッセージを転送するように構成されています。|
@@ -868,7 +869,7 @@ BOOL GetSockOpt(
 
 でサポートされていないソフトウェア配布 (BSD) のオプション `GetSockOpt` は次のとおりです。
 
-|値|Type|意味|
+|値|Type|説明|
 |-----------|----------|-------------|
 |SO_RCVLOWAT|**`int`**|低いウォーターマークを受け取ります。|
 |SO_RCVTIMEO|**`int`**|受信タイムアウト。|
@@ -895,7 +896,7 @@ BOOL IOCtl(
 ソケットに対して実行するコマンドです。
 
 *lpArgument*<br/>
-*Lcommand*のパラメーターへのポインター。
+*Lcommand* のパラメーターへのポインター。
 
 ### <a name="return-value"></a>戻り値
 
@@ -905,7 +906,7 @@ BOOL IOCtl(
 
 - Windows ソケット実装の WSAENETDOWN は、ネットワークサブシステムで障害が発生したことを検出しました。
 
-- WSAEINVAL *lcommand* が有効なコマンドではないか、 *LpArgument* が *lcommand*に使用できるパラメーターではないか、コマンドが指定されたソケットの種類に適用できません。
+- WSAEINVAL *lcommand* が有効なコマンドではないか、 *LpArgument* が *lcommand* に使用できるパラメーターではないか、コマンドが指定されたソケットの種類に適用できません。
 
 - かかわらず WSAEINPROGRESS Windows ソケットのブロッキング操作が進行中です。
 
@@ -915,9 +916,9 @@ BOOL IOCtl(
 
 このルーチンは、任意の状態の任意のソケットで使用できます。 これは、プロトコルおよび通信サブシステムとは関係なく、ソケットに関連付けられている操作パラメーターを取得または取得するために使用されます。 次のコマンドがサポートされています。
 
-- FIONBIO ソケットで非ブロッキングモードを有効または無効にします。 *LpArgument*パラメーターは、非 `DWORD` ブロッキングモードを有効にする場合は0以外、無効にする場合は0をポイントします。 `AsyncSelect`がソケットで発行されている場合、を使用して `IOCtl` ソケットをブロッキングモードに戻すと、wsaeinval では失敗します。 ソケットをブロックモードに戻して、WSAEINVAL エラーが発生しないようにするには、LEvent パラメーターを0に設定してを呼び出してアプリケーションを最初に無効にし `AsyncSelect` てから、を `AsyncSelect` 呼び出し*lEvent* `IOCtl` ます。
+- FIONBIO ソケットで非ブロッキングモードを有効または無効にします。 *LpArgument* パラメーターは、非 `DWORD` ブロッキングモードを有効にする場合は0以外、無効にする場合は0をポイントします。 `AsyncSelect`がソケットで発行されている場合、を使用して `IOCtl` ソケットをブロッキングモードに戻すと、wsaeinval では失敗します。 ソケットをブロックモードに戻して、WSAEINVAL エラーが発生しないようにするには、LEvent パラメーターを0に設定してを呼び出してアプリケーションを最初に無効にし `AsyncSelect` てから、を `AsyncSelect` 呼び出し `IOCtl` ます。
 
-- FIONREAD このソケットからの1回の呼び出しで読み取ることができる最大バイト数を決定 `Receive` します。 *LpArgument*パラメーターは、 `DWORD` 結果を格納するのをポイントし `IOCtl` ます。 このソケットの種類が SOCK_STREAM の場合、FIONREAD は、1つので読み取ることができるデータの合計量を返します `Receive` 。これは通常、ソケットでキューに入れられたデータの合計量と同じです。 このソケットの種類が SOCK_DGRAM の場合、FIONREAD は、ソケットでキューに置かれた最初のデータグラムのサイズを返します。
+- FIONREAD このソケットからの1回の呼び出しで読み取ることができる最大バイト数を決定 `Receive` します。 *LpArgument* パラメーターは、 `DWORD` 結果を格納するのをポイントし `IOCtl` ます。 このソケットの種類が SOCK_STREAM の場合、FIONREAD は、1つので読み取ることができるデータの合計量を返します `Receive` 。これは通常、ソケットでキューに入れられたデータの合計量と同じです。 このソケットの種類が SOCK_DGRAM の場合、FIONREAD は、ソケットでキューに置かれた最初のデータグラムのサイズを返します。
 
 - SIOCATMARK は、帯域外のすべてのデータが読み取られたかどうかを判断します。 これは、帯域外データ (SO_OOBINLINE) のインライン受信用に構成されている SOCK_STREAM 種類のソケットにのみ適用されます。 帯域外のデータが読み取られるのを待機していない場合、この操作は0以外の値を返します。 それ以外の場合は0を返し、次の `Receive` または `ReceiveFrom` ソケットで実行されるデータの一部またはすべてを "マーク" の前に取得します。アプリケーションは、SIOCATMARK 操作を使用して、データが残っているかどうかを判断する必要があります。 "緊急" (帯域外) データの前に通常のデータがある場合は、順番に受信されます。 ( `Receive` またはは、 `ReceiveFrom` 同じ呼び出しで帯域外データと通常のデータを混在させないことに注意してください)。 *LpArgument* パラメーターは、 `DWORD` 結果を格納するのをポイントし `IOCtl` ます。
 
@@ -1199,7 +1200,7 @@ virtual int Receive(
 受信データのバッファー。
 
 *nBufLen*<br/>
-*Lpbuf*の長さ (バイト単位)。
+*Lpbuf* の長さ (バイト単位)。
 
 *nFlags*<br/>
 呼び出しを行う方法を指定します。 この関数のセマンティクスは、socket オプションと *nFlags* パラメーターによって決まります。 後者は、次のいずれかの値を C++ **または** 演算子と組み合わせることによって作成されます。
@@ -1254,7 +1255,7 @@ SOCK_STREAM 型のソケットの場合は、指定されたバッファーの�
 
 ## <a name="casyncsocketreceivefrom"></a><a name="receivefrom"></a> CAsyncSocket:: ReceiveFrom
 
-データグラムを受信し、そのソースアドレスを [SOCKADDR](/windows/win32/winsock/sockaddr-2) 構造体または *rsocketaddress*に格納するには、このメンバー関数を呼び出します。
+データグラムを受信し、そのソースアドレスを [SOCKADDR](/windows/win32/winsock/sockaddr-2) 構造体または *rsocketaddress* に格納するには、このメンバー関数を呼び出します。
 
 ```
 int ReceiveFrom(
@@ -1278,7 +1279,7 @@ int ReceiveFrom(
 受信データのバッファー。
 
 *nBufLen*<br/>
-*Lpbuf*の長さ (バイト単位)。
+*Lpbuf* の長さ (バイト単位)。
 
 *rSocketAddress*<br/>
 `CString`ドット形式の IP アドレスを受け取るオブジェクトへの参照。
@@ -1290,7 +1291,7 @@ int ReceiveFrom(
 返されたときにソースアドレスを保持する [SOCKADDR](/windows/win32/winsock/sockaddr-2) 構造体へのポインター。
 
 *lpSockAddrLen*<br/>
-*LpSockAddr*の送信元アドレスの長さ (バイト単位) へのポインター。
+*LpSockAddr* の送信元アドレスの長さ (バイト単位) へのポインター。
 
 *nFlags*<br/>
 呼び出しを行う方法を指定します。 この関数のセマンティクスは、socket オプションと *nFlags* パラメーターによって決まります。 後者は、次のいずれかの値を C++ **または** 演算子と組み合わせることによって作成されます。
@@ -1339,7 +1340,7 @@ SOCK_STREAM 型のソケットの場合は、指定されたバッファーの�
 
 データグラムソケットの場合、データは、指定されたバッファーのサイズまでの最初のエンキューされたデータグラムから抽出されます。 データグラムが、指定されたバッファーより大きい場合、バッファーにはメッセージの最初の部分が格納され、余分なデータは失われ、 `ReceiveFrom` エラーコードが WSAEMSGSIZE に設定された SOCKET_ERROR の値が返されます。
 
-*LpSockAddr*が0以外の場合、ソケットの種類が SOCK_DGRAM の場合は、データを送信したソケットのネットワークアドレスが対応する[SOCKADDR](/windows/win32/winsock/sockaddr-2)構造体にコピーされます。 *LpSockAddrLen*によってポイントされる値は、この構造体のサイズに初期化され、そこに格納されているアドレスの実際のサイズを示すために返されます。 ソケットで受信データが使用できない場合、 `ReceiveFrom` ソケットが非ブロッキングでない限り、呼び出しはデータの到着を待機します。 この場合、SOCKET_ERROR の値が返され、エラーコードは WSAEWOULDBLOCK に設定されます。 `OnReceive`コールバックを使用すると、より多くのデータが到着したかどうかを判断できます。
+*LpSockAddr* が0以外の場合、ソケットの種類が SOCK_DGRAM の場合は、データを送信したソケットのネットワークアドレスが対応する [SOCKADDR](/windows/win32/winsock/sockaddr-2)構造体にコピーされます。 *LpSockAddrLen* によってポイントされる値は、この構造体のサイズに初期化され、そこに格納されているアドレスの実際のサイズを示すために返されます。 ソケットで受信データが使用できない場合、 `ReceiveFrom` ソケットが非ブロッキングでない限り、呼び出しはデータの到着を待機します。 この場合、SOCKET_ERROR の値が返され、エラーコードは WSAEWOULDBLOCK に設定されます。 `OnReceive`コールバックを使用すると、より多くのデータが到着したかどうかを判断できます。
 
 ソケットの種類が SOCK_STREAM で、リモート側が正常に接続をシャットダウンした場合、は、 `ReceiveFrom` 受信した0バイトですぐに完了します。
 
@@ -1362,7 +1363,7 @@ int ReceiveFromEx(
 受信データのバッファー。
 
 *nBufLen*<br/>
-*Lpbuf*の長さ (バイト単位)。
+*Lpbuf* の長さ (バイト単位)。
 
 *rSocketAddress*<br/>
 `CString`ドット形式の IP アドレスを受け取るオブジェクトへの参照。
@@ -1417,7 +1418,7 @@ SOCK_STREAM 型のソケットの場合は、指定されたバッファーの�
 
 データグラムソケットの場合、データは、指定されたバッファーのサイズまでの最初のエンキューされたデータグラムから抽出されます。 データグラムが、指定されたバッファーより大きい場合、バッファーにはメッセージの最初の部分が格納され、余分なデータは失われ、 `ReceiveFromEx` エラーコードが WSAEMSGSIZE に設定された SOCKET_ERROR の値が返されます。
 
-*LpSockAddr*が0以外の場合、ソケットの種類が SOCK_DGRAM の場合は、データを送信したソケットのネットワークアドレスが対応する[SOCKADDR](/windows/win32/winsock/sockaddr-2)構造体にコピーされます。 *LpSockAddrLen*によってポイントされる値は、この構造体のサイズに初期化され、そこに格納されているアドレスの実際のサイズを示すために返されます。 ソケットで受信データが使用できない場合、 `ReceiveFromEx` ソケットが非ブロッキングでない限り、呼び出しはデータの到着を待機します。 この場合、SOCKET_ERROR の値が返され、エラーコードは WSAEWOULDBLOCK に設定されます。 `OnReceive`コールバックを使用すると、より多くのデータが到着したかどうかを判断できます。
+*LpSockAddr* が0以外の場合、ソケットの種類が SOCK_DGRAM の場合は、データを送信したソケットのネットワークアドレスが対応する [SOCKADDR](/windows/win32/winsock/sockaddr-2)構造体にコピーされます。 *LpSockAddrLen* によってポイントされる値は、この構造体のサイズに初期化され、そこに格納されているアドレスの実際のサイズを示すために返されます。 ソケットで受信データが使用できない場合、 `ReceiveFromEx` ソケットが非ブロッキングでない限り、呼び出しはデータの到着を待機します。 この場合、SOCKET_ERROR の値が返され、エラーコードは WSAEWOULDBLOCK に設定されます。 `OnReceive`コールバックを使用すると、より多くのデータが到着したかどうかを判断できます。
 
 ソケットの種類が SOCK_STREAM で、リモート側が正常に接続をシャットダウンした場合、は、 `ReceiveFromEx` 受信した0バイトですぐに完了します。
 
@@ -1438,7 +1439,7 @@ virtual int Send(
 転送されるデータを格納しているバッファー。
 
 *nBufLen*<br/>
-*Lpbuf*内のデータの長さ (バイト単位)。
+*Lpbuf* 内のデータの長さ (バイト単位)。
 
 *nFlags*<br/>
 呼び出しを行う方法を指定します。 この関数のセマンティクスは、socket オプションと *nFlags* パラメーターによって決まります。 後者は、次のいずれかの値を C++ **または** 演算子と組み合わせることによって作成されます。
@@ -1449,7 +1450,7 @@ virtual int Send(
 
 ### <a name="return-value"></a>戻り値
 
-エラーが発生しなかった場合は、 `Send` 送信された合計文字数を返します。 (これは、 *Nbuflen*によって示される数値よりも小さくなる可能性があることに注意してください)。それ以外の場合は SOCKET_ERROR の値が返され、 [GetLastError](#getlasterror)を呼び出すことによって特定のエラーコードを取得できます。 このメンバー関数には、次のエラーが適用されます。
+エラーが発生しなかった場合は、 `Send` 送信された合計文字数を返します。 (これは、 *Nbuflen* によって示される数値よりも小さくなる可能性があることに注意してください)。それ以外の場合は SOCKET_ERROR の値が返され、 [GetLastError](#getlasterror)を呼び出すことによって特定のエラーコードを取得できます。 このメンバー関数には、次のエラーが適用されます。
 
 - WSANOTINITIALISED A 成功した [AfxSocketInit](../../mfc/reference/application-information-and-management.md#afxsocketinit) は、この API を使用する前に実行する必要があります。
 
@@ -1521,7 +1522,7 @@ int SendTo(
 転送されるデータを格納しているバッファー。
 
 *nBufLen*<br/>
-*Lpbuf*内のデータの長さ (バイト単位)。
+*Lpbuf* 内のデータの長さ (バイト単位)。
 
 *nHostPort*<br/>
 ソケットアプリケーションを識別するポート。
@@ -1540,11 +1541,11 @@ int SendTo(
 ターゲットソケットのアドレスを格納している [SOCKADDR](/windows/win32/winsock/sockaddr-2) 構造体へのポインター。
 
 *nSockAddrLen*<br/>
-*LpSockAddr*のアドレスの長さ (バイト単位)。
+*LpSockAddr* のアドレスの長さ (バイト単位)。
 
 ### <a name="return-value"></a>戻り値
 
-エラーが発生しなかった場合は、 `SendTo` 送信された合計文字数を返します。 (これは、 *Nbuflen*によって示される数値よりも小さくなる可能性があることに注意してください)。それ以外の場合は SOCKET_ERROR の値が返され、 [GetLastError](#getlasterror)を呼び出すことによって特定のエラーコードを取得できます。 このメンバー関数には、次のエラーが適用されます。
+エラーが発生しなかった場合は、 `SendTo` 送信された合計文字数を返します。 (これは、 *Nbuflen* によって示される数値よりも小さくなる可能性があることに注意してください)。それ以外の場合は SOCKET_ERROR の値が返され、 [GetLastError](#getlasterror)を呼び出すことによって特定のエラーコードを取得できます。 このメンバー関数には、次のエラーが適用されます。
 
 - WSANOTINITIALISED A 成功した [AfxSocketInit](../../mfc/reference/application-information-and-management.md#afxsocketinit) は、この API を使用する前に実行する必要があります。
 
@@ -1617,7 +1618,7 @@ int SendToEx(
 転送されるデータを格納しているバッファー。
 
 *nBufLen*<br/>
-*Lpbuf*内のデータの長さ (バイト単位)。
+*Lpbuf* 内のデータの長さ (バイト単位)。
 
 *nHostPort*<br/>
 ソケットアプリケーションを識別するポート。
@@ -1634,7 +1635,7 @@ int SendToEx(
 
 ### <a name="return-value"></a>戻り値
 
-エラーが発生しなかった場合は、 `SendToEx` 送信された合計文字数を返します。 (これは、 *Nbuflen*によって示される数値よりも小さくなる可能性があることに注意してください)。それ以外の場合は SOCKET_ERROR の値が返され、 [GetLastError](#getlasterror)を呼び出すことによって特定のエラーコードを取得できます。 このメンバー関数には、次のエラーが適用されます。
+エラーが発生しなかった場合は、 `SendToEx` 送信された合計文字数を返します。 (これは、 *Nbuflen* によって示される数値よりも小さくなる可能性があることに注意してください)。それ以外の場合は SOCKET_ERROR の値が返され、 [GetLastError](#getlasterror)を呼び出すことによって特定のエラーコードを取得できます。 このメンバー関数には、次のエラーが適用されます。
 
 - WSANOTINITIALISED A 成功した [AfxSocketInit](../../mfc/reference/application-information-and-management.md#afxsocketinit) は、この API を使用する前に実行する必要があります。
 
@@ -1709,7 +1710,7 @@ BOOL SetSockOpt(
 要求されたオプションの値が指定されているバッファーへのポインター。
 
 *nOptionLen*<br/>
-*LpOptionValue*バッファーのサイズ (バイト単位)。
+*LpOptionValue* バッファーのサイズ (バイト単位)。
 
 *nLevel*<br/>
 オプションが定義されているレベル。サポートされているレベルは SOL_SOCKET と IPPROTO_TCP のみです。
@@ -1740,7 +1741,7 @@ BOOL SetSockOpt(
 
 `SetSockOpt` 任意の状態のソケットに関連付けられているソケットオプションの現在の値を設定します。 オプションは複数のプロトコルレベルで存在できますが、この仕様では、最上位の "ソケット" レベルに存在するオプションのみが定義されています。 オプションは、通常のデータストリームで優先データを受信するかどうか、ソケットでブロードキャストメッセージを送信できるかどうかなど、ソケット操作に影響します。
 
-ソケットオプションには、特徴または動作を有効または無効にするブール値オプションと、整数値または構造体を必要とするオプションの2種類があります。 ブール型のオプションを有効にするために、 *lpOptionValue* は0以外の整数を指します。 *LpOptionValue*オプションを無効にするには、0と等しい整数をポイントします。 *Noptionlen* は、ブール値オプションのと同じである必要があり `sizeof(BOOL)` ます。 その他のオプションの場合、 *lpOptionValue* はオプションの目的の値を含む整数または構造体を指し、 *Noptionlen* は整数または構造体の長さです。
+ソケットオプションには、特徴または動作を有効または無効にするブール値オプションと、整数値または構造体を必要とするオプションの2種類があります。 ブール型のオプションを有効にするために、 *lpOptionValue* は0以外の整数を指します。 *LpOptionValue* オプションを無効にするには、0と等しい整数をポイントします。 *Noptionlen* は、ブール値オプションのと同じである必要があり `sizeof(BOOL)` ます。 その他のオプションの場合、 *lpOptionValue* はオプションの目的の値を含む整数または構造体を指し、 *Noptionlen* は整数または構造体の長さです。
 
 SO_LINGER は、ソケットの未送信データがキューに置かれ、その `Close` 関数がソケットを閉じるために呼び出されるときに実行されるアクションを制御します。
 
@@ -1754,9 +1755,9 @@ TCP_NODELAY オプションを指定すると、Nagle アルゴリズムが無�
 
 SO_DEBUG オプションがアプリケーションによって設定されている場合、Windows ソケットの実装によってはデバッグ情報が出力されます。
 
-では、次のオプションがサポートされてい `SetSockOpt` ます。 この型は、 *lpOptionValue*によってアドレス指定されるデータの種類を識別します。
+では、次のオプションがサポートされてい `SetSockOpt` ます。 この型は、 *lpOptionValue* によってアドレス指定されるデータの種類を識別します。
 
-|値|Type|意味|
+|値|Type|説明|
 |-----------|----------|-------------|
 |SO_BROADCAST|BOOL|ソケットでのブロードキャストメッセージの送信を許可します。|
 |SO_DEBUG|BOOL|デバッグ情報を記録します。|
@@ -1772,7 +1773,7 @@ SO_DEBUG オプションがアプリケーションによって設定されて�
 
 でサポートされていないソフトウェア配布 (BSD) のオプション `SetSockOpt` は次のとおりです。
 
-|値|Type|意味|
+|値|Type|説明|
 |-----------|----------|-------------|
 |SO_ACCEPTCONN|BOOL|ソケットがリッスンしています|
 |SO_ERROR|**`int`**|エラーの状態を取得してクリアします。|
@@ -1820,9 +1821,9 @@ BOOL ShutDown(int nHow = sends);
 
 ### <a name="remarks"></a>解説
 
-`ShutDown` は、受信、転送、またはその両方を無効にするために、すべての種類のソケットで使用されます。 *Nhow*が0の場合、ソケットでの後続の受信は許可されません。 これは、下位のプロトコルレイヤーには影響しません。
+`ShutDown` は、受信、転送、またはその両方を無効にするために、すべての種類のソケットで使用されます。 *Nhow* が0の場合、ソケットでの後続の受信は許可されません。 これは、下位のプロトコルレイヤーには影響しません。
 
-伝送制御プロトコル (TCP) の場合、TCP ウィンドウは変更されず、受信したデータはウィンドウが使い果たされるまで受け入れられます (ただし、確認はされません)。 ユーザーデータグラムプロトコル (UDP) の場合は、受信データグラムが受け入れられ、キューに登録されます。 では、ICMP エラーパケットが生成されません。 *N*が1の場合、後続の送信は許可されません。 TCP ソケットの場合、FIN が送信されます。 *Nhow* to 2 を設定すると、前述のように、送信と受信の両方が無効になります。
+伝送制御プロトコル (TCP) の場合、TCP ウィンドウは変更されず、受信したデータはウィンドウが使い果たされるまで受け入れられます (ただし、確認はされません)。 ユーザーデータグラムプロトコル (UDP) の場合は、受信データグラムが受け入れられ、キューに登録されます。 では、ICMP エラーパケットが生成されません。 *N* が1の場合、後続の送信は許可されません。 TCP ソケットの場合、FIN が送信されます。 *Nhow* to 2 を設定すると、前述のように、送信と受信の両方が無効になります。
 
 はソケットを閉じないことに注意して `ShutDown` `Close` ください。が呼び出されるまで、ソケットにアタッチされているリソースは解放されません。 アプリケーションは、シャットダウン後に、ソケットを再利用できないようにする必要があります。 特に、Windows ソケットの実装は、このようなソケットでのの使用をサポートするためには必要ありません `Connect` 。
 

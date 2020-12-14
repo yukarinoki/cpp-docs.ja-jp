@@ -1,15 +1,16 @@
 ---
+description: '詳細情報: filesystem_error クラス'
 title: filesystem_error クラス
 ms.date: 09/10/2018
 f1_keywords:
 - filesystem/std::experimental::filesystem::filesystem_error
 ms.assetid: c53aac27-c1fa-43e4-8967-48ea8ba1f172
-ms.openlocfilehash: 1d142057859f1ca173f8953b34c07bbb3803ecba
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 8165bfbc0d59dbbdab17d910e2e2f7973988049d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88835871"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97232435"
 ---
 # <a name="filesystem_error-class"></a>filesystem_error クラス
 
@@ -33,7 +34,7 @@ class filesystem_error    : public system_error;
 |-|-|
 |[filesystem_error](#filesystem_error)|メッセージを構築 `filesystem_error` します。|
 
-### <a name="functions"></a>Functions
+### <a name="functions"></a>関数
 
 |名前|説明|
 |-|-|
@@ -41,7 +42,7 @@ class filesystem_error    : public system_error;
 |[path2](#path2)|`mypval2` を返します。|
 |[結果](#what)|`NTBS` へのポインターを返します。|
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:**\<filesystem>
 
@@ -49,7 +50,7 @@ class filesystem_error    : public system_error;
 
 ## <a name="filesystem_error"></a><a name="filesystem_error"></a> filesystem_error
 
-最初のコンストラクターは *what_arg* および *ec*からメッセージを構築します。 2番目のコンストラクターは、 *pval1*からメッセージを構築します。このメッセージはに格納さ `mypval1` れます。 また、3番目のコンストラクターは、 *pval1*からメッセージを構築します。このメッセージは、に格納さ `mypval1` れ、 *pval2*から格納さ `mypval2` れます。
+最初のコンストラクターは *what_arg* および *ec* からメッセージを構築します。 2番目のコンストラクターは、 *pval1* からメッセージを構築します。このメッセージはに格納さ `mypval1` れます。 また、3番目のコンストラクターは、 *pval1* からメッセージを構築します。このメッセージは、に格納さ `mypval1` れ、 *pval2* から格納さ `mypval2` れます。
 
 ```cpp
 filesystem_error(const string& what_arg,

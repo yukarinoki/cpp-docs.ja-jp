@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「コンパイラエラー C2327」を参照してください。
 title: コンパイラ エラー C2327
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2327
 ms.assetid: 95278c95-d1f9-4487-ad27-53311f5e8112
-ms.openlocfilehash: 36222b8469f5a51254c6a6172e20384ebafc89ab
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: bcbf3bff2a98fe5ec18a00a71c6f8b359ad6f6f0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74747775"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97234931"
 ---
 # <a name="compiler-error-c2327"></a>コンパイラ エラー C2327
 
@@ -19,7 +20,7 @@ ms.locfileid: "74747775"
 
 入れ子になったクラス内のコードは、外側のクラスのメンバーにアクセスしようとします。このメンバーは、型名、静的メンバー、または列挙子ではありません。
 
-**/Clr**を使用してコンパイルする場合、C2327 の一般的な原因は、プロパティの型と同じ名前を持つプロパティです。
+**/Clr** を使用してコンパイルする場合、C2327 の一般的な原因は、プロパティの型と同じ名前を持つプロパティです。
 
 次の例では、C2327 が生成されます。
 

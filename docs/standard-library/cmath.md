@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: &lt; cmath&gt;'
 title: '&lt;cmath&gt;'
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - cmath header
 ms.assetid: 80df1dba-60ca-4918-9c2e-fbf446eaa7d6
-ms.openlocfilehash: d01b02d8fa169aa7fddbc3e51d75e5328b400d2b
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 193961dab5e8825e15919fd325f1f199a3ad4fb3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68459274"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97234099"
 ---
 # <a name="ltcmathgt"></a>&lt;cmath&gt;
 
-標準 C ライブラリ ヘッダー \<math.h> をインクルードし、関連する名前を `std` 名前空間に追加します。
+標準 C ライブラリヘッダーをインクルード \<math.h> し、関連する名前を名前空間に追加し `std` ます。
 
 ## <a name="syntax"></a>構文
 
@@ -569,12 +570,12 @@ float sph_neumannf(unsigned n, float x);
 long double sph_neumannl(unsigned n, long double x);
 ```
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 このヘッダーをインクルードすると、標準 C ライブラリ ヘッダーの外部リンケージで宣言された名前が、`std` 名前空間でも宣言されます。
 
 ## <a name="see-also"></a>関連項目
 
-[ヘッダー ファイル リファレンス](../standard-library/cpp-standard-library-header-files.md)\
+[ヘッダーファイルのリファレンス](../standard-library/cpp-standard-library-header-files.md)\
 [C++ 標準ライブラリの概要](../standard-library/cpp-standard-library-overview.md)\
-[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[C++ 標準ライブラリのスレッドセーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)

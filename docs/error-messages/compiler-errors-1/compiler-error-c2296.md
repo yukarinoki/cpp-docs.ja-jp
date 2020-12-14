@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「コンパイラエラー C2296」を参照してください。
 title: コンパイラ エラー C2296
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2296
 ms.assetid: 47d270f4-13ce-4c16-81e2-7d67c6c4a540
-ms.openlocfilehash: 020f046648488ca67923b7035acaa6c79ce495e4
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 4c36eb5f01b970b9435b45c75232d875de5818a8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74759075"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97235230"
 ---
 # <a name="compiler-error-c2296"></a>コンパイラ エラー C2296
 
 ' operator ': 左オペランドが正しくありません。
 
-`operator` で使用される左オペランドが無効です。
+で使用される左オペランド `operator` が無効です。
 
 たとえば、コンパイラでは、関数呼び出しの対象となった宣言が表示される場合があります。
 

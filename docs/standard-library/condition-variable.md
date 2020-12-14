@@ -1,15 +1,16 @@
 ---
+description: '詳細については、次を参照してください: &lt; condition_variable&gt;'
 title: '&lt;condition_variable&gt;'
 ms.date: 11/04/2016
 f1_keywords:
 - <condition_variable>
 ms.assetid: 8567f7cc-20bd-42a7-9137-87c46f878009
-ms.openlocfilehash: d13b58fc05055ceecb6472003d7682c41c76e23d
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: d3179677c1440777e0f9c1d5c6ff21ba13681aaa
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87222538"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97233800"
 ---
 # <a name="ltcondition_variablegt"></a>&lt;condition_variable&gt;
 
@@ -17,14 +18,14 @@ ms.locfileid: "87222538"
 
 このヘッダーではコンカレンシー ランタイム (ConcRT) が使用されます。これにより、このヘッダーを他の ConcRT メカニズムと共に使用できます。 ConcRT の詳細については、「[コンカレンシー ランタイム](../parallel/concrt/concurrency-runtime.md)」を参照してください。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:**\<condition_variable>
 
 **名前空間:** std
 
 > [!NOTE]
-> **/Clr**を使用してコンパイルされたコードでは、このヘッダーはブロックされます。
+> **/Clr** を使用してコンパイルされたコードでは、このヘッダーはブロックされます。
 
 ### <a name="remarks"></a>解説
 
@@ -34,7 +35,7 @@ ms.locfileid: "87222538"
 
 イベントを待機するには、まず、ミューテックスをロックしてから、条件変数で `wait` メソッドのいずれかを呼び出します。 別のスレッドが条件変数を通知するまで、`wait` 呼び出しはブロックされます。
 
-条件変数を待機しているスレッドが適切な通知なしでブロック解除された場合、*誤ったウェイクアップ*が発生します。 このような誤ったウェイクアップを認識するには、条件が true になるまで待機するコードで、wait 関数からコードが返されたときにその条件を明示的に確認する必要があります。 これは通常、ループを使用して行われます。`wait(unique_lock<mutex>& lock, Predicate pred)` を使用すれば、このループを自動的に実行することができます。
+条件変数を待機しているスレッドが適切な通知なしでブロック解除された場合、*誤ったウェイクアップ* が発生します。 このような誤ったウェイクアップを認識するには、条件が true になるまで待機するコードで、wait 関数からコードが返されたときにその条件を明示的に確認する必要があります。 これは通常、ループを使用して行われます。`wait(unique_lock<mutex>& lock, Predicate pred)` を使用すれば、このループを自動的に実行することができます。
 
 ```cpp
 while (condition is false)

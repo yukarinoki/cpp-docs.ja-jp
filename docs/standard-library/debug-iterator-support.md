@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「反復子のデバッグ」を参照してください。
 title: Debug Iterator Support
 ms.date: 09/13/2018
 helpviewer_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - incompatible iterators
 - debug iterator support
 ms.assetid: f3f5bd15-4be8-4d64-a4d0-8bc0761c68b6
-ms.openlocfilehash: a5773add9a26d647df6678ffa4f2681b73cff44f
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: bd2de8423cb7235fdb54a3d0cfe852081ea32b18
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87231586"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97232955"
 ---
 # <a name="debug-iterator-support"></a>Debug Iterator Support
 
@@ -148,7 +149,7 @@ int main() {
 
 ## <a name="destructors-for-debug-iterators"></a>デバッグ反復子のデストラクター
 
-反復子のデバッグには重要なデストラクターがあります。 デストラクターが実行されず、オブジェクトのメモリが解放されると、アクセス違反とデータ破損が発生する可能性があります。 次の例を考えてみましょう。
+反復子のデバッグには重要なデストラクターがあります。 デストラクターが実行されず、オブジェクトのメモリが解放されると、アクセス違反とデータ破損が発生する可能性があります。 次の例について考えます。
 
 ```cpp
 // iterator_debugging_5.cpp

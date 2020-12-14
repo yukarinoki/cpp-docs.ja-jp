@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: CMFCBaseTabCtrl クラス'
 title: CMFCBaseTabCtrl Class
 ms.date: 11/04/2016
 f1_keywords:
@@ -238,17 +239,17 @@ helpviewer_keywords:
 - CMFCBaseTabCtrl [MFC], m_bActivateTabOnRightClick
 - CMFCBaseTabCtrl [MFC], m_bAutoDestroyWindow
 ms.assetid: 7270c55f-6f6e-4dd2-b0d2-291afeac3882
-ms.openlocfilehash: 92728a1725cc1ceb9569c3c7f44918e56cf2d947
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: 34af318344e9dc866971c942fbecbef430c2edef
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81754901"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97236673"
 ---
 # <a name="cmfcbasetabctrl-class"></a>CMFCBaseTabCtrl Class
 
 タブ付きウィンドウの基本的な機能を実装します。
-詳細については、Visual Studio のインストールの**\\VC\\atlmfc\\src mfc**フォルダーにあるソース コードを参照してください。
+詳細については、Visual Studio のインストールの **VC \\ atlmfc \\ src \\ mfc** フォルダーにあるソースコードを参照してください。
 
 ## <a name="syntax"></a>構文
 
@@ -278,7 +279,7 @@ class CMFCBaseTabCtrl : public CWnd
 |[CMFCBaseTabCtrl::EnableTabSwap](#enabletabswap)|ユーザーがマウスを使用してタブ オーダーを変更できる機能を有効または無効にします。|
 |[CMFCBaseTabCtrl::EnsureVisible](#ensurevisible)|指定したタブが表示されるまでタブをスクロールします。 指定したタブが既に表示されている場合、このメソッドの効果はありません。|
 |[CMFCBaseTabCtrl::EnterDragMode](#enterdragmode)||
-|[を見つける](#findtargetwnd)|指定したポイントを含むウィンドウを返します。|
+|[CMFCBaseTabCtrl:: FindTargetWnd](#findtargetwnd)|指定したポイントを含むウィンドウを返します。|
 |[CMFCBaseTabCtrl::FireChangeActiveTab](#firechangeactivetab)||
 |[CMFCBaseTabCtrl::FireChangingActiveTab](#firechangingactivetab)||
 |[CMFCBaseTabCtrl::GetActiveTab](#getactivetab)|アクティブなタブのインデックスを返します。|
@@ -348,7 +349,7 @@ class CMFCBaseTabCtrl : public CWnd
 |[CMFCBaseTabCtrl::OnDragOver](#ondragover)||
 |[CMFCBaseTabCtrl::OnDrop](#ondrop)||
 |[CMFCBaseTabCtrl::OnRenameTab](#onrenametab)||
-|[CMFCBaseTabCtrl::PreTranslateMessage](#pretranslatemessage)|クラス[CWinApp](../../mfc/reference/cwinapp-class.md)がウィンドウ メッセージを変換するために使用し、[変換メッセージ](/windows/win32/api/winuser/nf-winuser-translatemessage)および[ディスパッチ メッセージ](/windows/win32/api/winuser/nf-winuser-dispatchmessage)Windows 関数にディスパッチします。 ( [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage)をオーバーライドします)。|
+|[CMFCBaseTabCtrl::PreTranslateMessage](#pretranslatemessage)|[TranslateMessage](/windows/win32/api/winuser/nf-winuser-translatemessage)および[DispatchMessage](/windows/win32/api/winuser/nf-winuser-dispatchmessage) Windows 関数にディスパッチされる前に、ウィンドウメッセージを変換するためにクラス[CWinApp](../../mfc/reference/cwinapp-class.md)によって使用されます。 ( [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage)をオーバーライドします)。|
 |[CMFCBaseTabCtrl::RecalcLayout](#recalclayout)|タブ付きウィンドウの内部レイアウトを再計算します。|
 |[CMFCBaseTabCtrl::RemoveAllTabs](#removealltabs)|タブ付きウィンドウからタブをすべて削除します。|
 |[CMFCBaseTabCtrl::RemoveTab](#removetab)|タブ付きウィンドウからタブを 1 つ削除します。|
@@ -393,7 +394,7 @@ class CMFCBaseTabCtrl : public CWnd
 
 `CMFCBaseTabCtrl` クラスは抽象クラスです。 したがって、インスタンス化できません。 タブ付きウィンドウを作成するには、 `CMFCBaseTabCtrl`からクラスを派生する必要があります。 MFC ライブラリには派生クラスの例がいくつか含まれており、そのうちの 2 つは [CMFCTabCtrl Class](../../mfc/reference/cmfctabctrl-class.md) と [CMFCOutlookBarTabCtrl Class](../../mfc/reference/cmfcoutlookbartabctrl-class.md)です。
 
-Visual Studio 2015 以降、このクラスはマイクロソフトのアクティブなアクセシビリティをサポートしています。
+Visual Studio 2015 以降では、このクラスは Microsoft Active Accessibility をサポートしています。
 
 ## <a name="customization-tips"></a>カスタマイズのヒント
 
@@ -405,7 +406,7 @@ Visual Studio 2015 以降、このクラスはマイクロソフトのアクテ�
 
 - 既定では、タブは、タブ コントロールに追加するときに切り離し可能です。 [CMFCBaseTabCtrl::AddTab](#addtab)を使用すると、切り離し不可能なタブを追加することもできます。 パラメーター `bDetachable` を `FALSE`に設定した場合、タブは切り離し可能になりません。 メソッド [CMFCBaseTabCtrl::EnableTabDetach](#enabletabdetach)を呼び出すことで、タブが切り離し可能であるかどうかを変更することもできます。
 
-- [CWnd クラス](../../mfc/reference/cwnd-class.md)から派生したオブジェクトは、ドッキング可能なコントロール バーまたはドッキング可能なタブに配置できます。コントロール全体をドッキングするには、オブジェクトを`CWnd`ドッキング可能にする必要があります。 これを実現するために、MFC ではラッパー クラスを使用します。 このラッパー クラスは [CDockablePaneAdapter Class](../../mfc/reference/cdockablepaneadapter-class.md)です。 ドッキング可能なコントロール バーまたはドッキング可能なタブに追加された `CWnd` オブジェクトはいずれも、 `CDockablePaneAdapter` オブジェクト内で折り返されます。 `m_bEnableWrapping` オブジェクトのパラメーター `CMFCBaseTablCtrl` を `FALSE`に設定すると、自動折り返しを無効にできます。 メソッド [CMFCBaseTabCtrl::SetDockingBarWrapperRTC](#setdockingbarwrapperrtc)を使用すると、アプリケーションでラッパーとして使用されるクラスを変更することもできます。
+- [CWnd クラス](../../mfc/reference/cwnd-class.md)から派生したオブジェクトは、ドッキング可能なコントロールバーまたはドッキング可能なタブに配置できます。ドッキングするコントロール全体に対して、オブジェクトをドッキング可能にする必要があり `CWnd` ます。 これを実現するために、MFC ではラッパー クラスを使用します。 このラッパー クラスは [CDockablePaneAdapter Class](../../mfc/reference/cdockablepaneadapter-class.md)です。 ドッキング可能なコントロール バーまたはドッキング可能なタブに追加された `CWnd` オブジェクトはいずれも、 `CDockablePaneAdapter` オブジェクト内で折り返されます。 `m_bEnableWrapping` オブジェクトのパラメーター `CMFCBaseTablCtrl` を `FALSE`に設定すると、自動折り返しを無効にできます。 メソッド [CMFCBaseTabCtrl::SetDockingBarWrapperRTC](#setdockingbarwrapperrtc)を使用すると、アプリケーションでラッパーとして使用されるクラスを変更することもできます。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -417,13 +418,13 @@ Visual Studio 2015 以降、このクラスはマイクロソフトのアクテ�
 
 [CMFCBaseTabCtrl](../../mfc/reference/cmfcbasetabctrl-class.md)
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** afxbasetabctrl.h
 
-## <a name="cmfcbasetabctrladdicon"></a><a name="addicon"></a>アイコンの追加
+## <a name="cmfcbasetabctrladdicon"></a><a name="addicon"></a> CMFCBaseTabCtrl:: AddIcon
 
-保護された`CMap m_mapAddedIcons`メンバーのアイコンの一覧にアイコンを追加します。
+保護されたメンバーのアイコンの一覧にアイコンを追加し `CMap m_mapAddedIcons` ます。
 
 ```cpp
 void AddIcon(
@@ -433,17 +434,17 @@ void AddIcon(
 
 ### <a name="parameters"></a>パラメーター
 
-*Hicon*<br/>
-[in]追加するアイコンへのハンドル。
+*hIcon*<br/>
+から追加するアイコンへのハンドル。
 
 *アイコン*<br/>
-[in]プロテ`CImageList m_Images`クト メンバー内のアイコンの 0 から始まるインデックス。
+から保護されたメンバー内のアイコンの0から始まるインデックス `CImageList m_Images` 。
 
 ### <a name="remarks"></a>解説
 
-## <a name="cmfcbasetabctrladdtab"></a><a name="addtab"></a>タブの追加
+## <a name="cmfcbasetabctrladdtab"></a><a name="addtab"></a> CMFCBaseTabCtrl:: AddTab
 
-タブ コントロールに新しいタブを追加します。
+タブコントロールに新しいタブを追加します。
 
 ```
 virtual void AddTab(
@@ -461,26 +462,26 @@ virtual void AddTab(
 
 ### <a name="parameters"></a>パラメーター
 
-*pタブーンド*<br/>
-[in]このメソッドが新しいタブとして表すウィンドウへのポインター。
+*pTabWnd*<br/>
+からこのメソッドが新しいタブとして表すウィンドウへのポインター。
 
-*タブラベル*<br/>
-[in]新しいタブのラベルを含む文字列。
+*lpszTabLabel*<br/>
+から新しいタブのラベルを含む文字列。
 
-*を指定します。*<br/>
-[in]イメージ リストのイメージ ID。 タブ コントロールでは、このイメージを新しいタブのアイコンとして使用します。
+*uiImageId*<br/>
+からイメージリストのイメージ ID。 タブコントロールは、このイメージを新しいタブのアイコンとして使用します。
 
-*タブラベル*<br/>
-[in]ラベルのリソース ID。
+*uiResTabLabel*<br/>
+からラベルのリソース ID。
 
-*b取り外し可能*<br/>
-[in]新しいタブがデタッチ可能かどうかを決定するブール値パラメーター。
+*bDetachable 可能*<br/>
+から新しいタブを切り離し可能にするかどうかを決定するブール型パラメーターです。
 
 ### <a name="remarks"></a>解説
 
-*pTabWnd*が[CDockablePane クラス](../../mfc/reference/cdockablepane-class.md)から派生していないオブジェクトを指し示し *、bDetachable*が TRUE の場合、フレームワークは*自動的に pTabWnd*オブジェクトのラッパーを作成します。 ラッパーは*pTabWnd*オブジェクトをデタッチ可能にします。 既定では、ラッパーは[CDockablePaneAdapter クラス](../../mfc/reference/cdockablepaneadapter-class.md)のインスタンスです。 既定のラッパーによって提供される機能が受け入れられない場合は[、CMFCBaseTabCtrl::SetDockingBarWrapperRTC](#setdockingbarwrapperrtc)メソッドを使用して別のラッパーを指定します。
+*PTabWnd* が [CDockablePane クラス](../../mfc/reference/cdockablepane-class.md)から派生していないオブジェクトを指していて、 *bdetachable* 可能な場合は、 *pTabWnd* オブジェクトのラッパーが自動的に作成されます。 ラッパーは、 *pTabWnd* オブジェクトを切り離し可能にします。 既定では、ラッパーは [CDockablePaneAdapter クラス](../../mfc/reference/cdockablepaneadapter-class.md)のインスタンスです。 既定のラッパーによって提供される機能が受け入れられない場合は、 [CMFCBaseTabCtrl:: SetDockingBarWrapperRTC](#setdockingbarwrapperrtc) メソッドを使用して別のラッパーを指定します。
 
-## <a name="cmfcbasetabctrlapplyrestoredtabinfo"></a><a name="applyrestoredtabinfo"></a>を元に戻す
+## <a name="cmfcbasetabctrlapplyrestoredtabinfo"></a><a name="applyrestoredtabinfo"></a> CMFCBaseTabCtrl:: ApplyRestoredTabInfo
 
 ```
 virtual void ApplyRestoredTabInfo(BOOL bUseTabIndexes = FALSE);
@@ -488,11 +489,11 @@ virtual void ApplyRestoredTabInfo(BOOL bUseTabIndexes = FALSE);
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*タブインデックス*<br/>
+から *Busetabindexes*<br/>
 
 ### <a name="remarks"></a>解説
 
-## <a name="cmfcbasetabctrlautodestroywindow"></a><a name="autodestroywindow"></a>ウィンドウを破壊する
+## <a name="cmfcbasetabctrlautodestroywindow"></a><a name="autodestroywindow"></a> CMFCBaseTabCtrl:: AutoDestroyWindow
 
 ```cpp
 void AutoDestroyWindow(BOOL bAutoDestroy = TRUE);
@@ -500,11 +501,11 @@ void AutoDestroyWindow(BOOL bAutoDestroy = TRUE);
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*b自動破壊*<br/>
+から *Bautodestroy*<br/>
 
 ### <a name="remarks"></a>解説
 
-## <a name="cmfcbasetabctrlcalcrectedit"></a><a name="calcrectedit"></a>をクリックします。
+## <a name="cmfcbasetabctrlcalcrectedit"></a><a name="calcrectedit"></a> CMFCBaseTabCtrl:: CalcRectEdit
 
 ```
 virtual void CalcRectEdit(CRect& rectEdit);
@@ -512,11 +513,11 @@ virtual void CalcRectEdit(CRect& rectEdit);
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*レクトエディット*<br/>
+から *Rectedit*<br/>
 
 ### <a name="remarks"></a>解説
 
-## <a name="cmfcbasetabctrlcleanup"></a><a name="cleanup"></a>をクリックします。
+## <a name="cmfcbasetabctrlcleanup"></a><a name="cleanup"></a> CMFCBaseTabCtrl:: CleanUp
 
 ```
 virtual void CleanUp();
@@ -524,7 +525,7 @@ virtual void CleanUp();
 
 ### <a name="remarks"></a>解説
 
-## <a name="cmfcbasetabctrlclearimagelist"></a><a name="clearimagelist"></a>イメージリストをクリア
+## <a name="cmfcbasetabctrlclearimagelist"></a><a name="clearimagelist"></a> CMFCBaseTabCtrl:: ClearImageList
 
 ```
 virtual void ClearImageList();
@@ -532,9 +533,9 @@ virtual void ClearImageList();
 
 ### <a name="remarks"></a>解説
 
-## <a name="cmfcbasetabctrlcreatewrapper"></a><a name="createwrapper"></a>をクリックします。
+## <a name="cmfcbasetabctrlcreatewrapper"></a><a name="createwrapper"></a> CMFCBaseTabCtrl:: CreateWrapper
 
-[CWnd クラス](../../mfc/reference/cwnd-class.md)から派生したものの[、CDockablePane クラス](../../mfc/reference/cdockablepane-class.md)から派生していないフレーム ウィンドウのラッパーを作成します。
+[CWnd クラス](../../mfc/reference/cwnd-class.md)から派生した、 [CDockablePane クラス](../../mfc/reference/cdockablepane-class.md)から派生していないフレームウィンドウのラッパーを作成します。
 
 ```
 virtual CWnd* CreateWrapper(
@@ -545,30 +546,30 @@ virtual CWnd* CreateWrapper(
 
 ### <a name="parameters"></a>パラメーター
 
-*ラップ*<br/>
-[in]ラップされたフレーム ウィンドウへのポインター。
+*pWndToWrap*<br/>
+からラップされたフレームウィンドウへのポインター。
 
-*タブラベル*<br/>
-[in]ウィンドウのラベルを含む文字列。
+*lpszTabLabel*<br/>
+からウィンドウのラベルを含む文字列。
 
-*b取り外し可能*<br/>
-[in]ウィンドウがデタッチ可能かどうかを示すブール値パラメーター。
+*bDetachable 可能*<br/>
+からウィンドウが切り離し可能かどうかを示すブール型パラメーターです。
 
 ### <a name="return-value"></a>戻り値
 
-クラスから派生したラッパーへのポインター `CDockablePane` `CreateWrapper` *(pWndToWrap*のラッパー クラスが正常に作成された場合) です。 メソッドが失敗すると *、pWndToWrap*を再実行します。
+`CDockablePane` `CreateWrapper` *PWndToWrap* のラッパークラスが正常に作成された場合に、クラスから派生したラッパーへのポインター。 メソッドが失敗した場合は、返し *pWndToWrap* になります。
 
 ### <a name="remarks"></a>解説
 
-タブ付きウィンドウは、 から`CWnd`派生した任意のオブジェクトをドッキングできます。 ただし、オブジェクトを`CMFCBaseTabCtrl Class`ドッキングできるようにするには、 の各オブジェクトを`CMFCBaseTabCtrl`取り外し可能にする必要があります。 したがって、`CMFCBaseTabCtrl`から`CDockablePane`派生していないオブジェクトはすべて自動的にラップします。
+タブ付きウィンドウは、から派生した任意のオブジェクトをドッキングでき `CWnd` ます。 ただし、オブジェクトをドッキング可能にするために `CMFCBaseTabCtrl Class` は、上の各オブジェクト `CMFCBaseTabCtrl` が切り離し可能である必要があります。 したがって、 `CMFCBaseTabCtrl` は、から派生していないオブジェクトを自動的にラップ `CDockablePane` します。
 
-既定では`CMFCBaseTabCtrl`[、CDockablePaneAdapter クラス](../../mfc/reference/cdockablepaneadapter-class.md)のインスタンスが作成されます。 ラッパーの既定のクラスを変更するには[、CMFCBaseTabCtrl:::セットドッキングバーラッパーRTC](#setdockingbarwrapperrtc)を呼び出します。
+既定では、は `CMFCBaseTabCtrl` [CDockablePaneAdapter クラス](../../mfc/reference/cdockablepaneadapter-class.md)のインスタンスを作成します。 ラッパーの既定のクラスを変更するには、 [CMFCBaseTabCtrl:: SetDockingBarWrapperRTC](#setdockingbarwrapperrtc)を呼び出します。
 
-*pWndToWrap*から派生`CDockablePane`した場合、このメソッドはラッパーを作成しません。 代わりに、失敗し *、pWndToWrap を返します*。
+*PWndToWrap* がから派生し `CDockablePane` ている場合、このメソッドはラッパーを作成しません。 代わりに、失敗して *pWndToWrap* が返されます。
 
-## <a name="cmfcbasetabctrldetachtab"></a><a name="detachtab"></a>:Dエタックタブ
+## <a name="cmfcbasetabctrldetachtab"></a><a name="detachtab"></a> CMFCBaseTabCtrl::D etachTab
 
-フレームワークは、タブ コントロールからタブをデタッチするには、このメソッドを呼び出します。
+フレームワークは、このメソッドを呼び出してタブコントロールからタブをデタッチします。
 
 ```
 virtual BOOL DetachTab(
@@ -579,14 +580,14 @@ virtual BOOL DetachTab(
 
 ### <a name="parameters"></a>パラメーター
 
-*ドックメソッド*<br/>
-[in][CBasePane クラス](../../mfc/reference/cbasepane-class.md)によって提供される列挙型データ型。 このデータ型は、タブをデタッチするために使用されたメソッドを指定します。
+*dockMethod*<br/>
+から [Cbasepane クラス](../../mfc/reference/cbasepane-class.md)によって提供される列挙データ型。 このデータ型は、タブのデタッチに使用されたメソッドを指定します。
 
-*nタブ番号*<br/>
-[in]デタッチするタブの 0 から始まるインデックス。
+*nTabNum*<br/>
+からデタッチするタブの0から始まるインデックス。
 
 *bHide*<br/>
-[in]フレームワークがデタッチされたタブを非表示にするかどうかを示すブール値パラメーター。
+からフレームワークがデタッチされたタブを非表示にする必要があるかどうかを示すブール型パラメーターです。
 
 ### <a name="return-value"></a>戻り値
 
@@ -594,9 +595,9 @@ virtual BOOL DetachTab(
 
 ### <a name="remarks"></a>解説
 
-*nTabNum*で指定されたタブがデタッチ不可能な場合、この関数は失敗し、FALSE を返します。
+*NTabNum* によって指定されたタブが切り離し可能でない場合、この関数は失敗し、FALSE を返します。
 
-## <a name="cmfcbasetabctrlenableactivatelastactive"></a><a name="enableactivatelastactive"></a>アクティブアクティブを有効にします。
+## <a name="cmfcbasetabctrlenableactivatelastactive"></a><a name="enableactivatelastactive"></a> CMFCBaseTabCtrl:: EnableActivateLastActive
 
 ```cpp
 void EnableActivateLastActive(BOOL bLastActive = TRUE);
@@ -604,13 +605,13 @@ void EnableActivateLastActive(BOOL bLastActive = TRUE);
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*をクリックします。*<br/>
+から *bLastActive*<br/>
 
 ### <a name="remarks"></a>解説
 
-## <a name="cmfcbasetabctrlenableautocolor"></a><a name="enableautocolor"></a>自動カラーを有効にします。
+## <a name="cmfcbasetabctrlenableautocolor"></a><a name="enableautocolor"></a> CMFCBaseTabCtrl:: EnableAutoColor
 
-タブを描画するときに、フレームワークで自動背景色を使用するかどうかを制御します。
+タブを描画するときに、フレームワークが自動背景色を使用するかどうかを制御します。
 
 ```cpp
 void EnableAutoColor(BOOL bEnable = TRUE);
@@ -618,18 +619,18 @@ void EnableAutoColor(BOOL bEnable = TRUE);
 
 ### <a name="parameters"></a>パラメーター
 
-*b 有効にする*<br/>
-[in]フレームワークが自動色を使用するかどうかを決定するブール値パラメーター。
+*bEnable*<br/>
+からフレームワークが自動色を使用するかどうかを決定するブール型パラメーターです。
 
 ### <a name="remarks"></a>解説
 
-タブ コントロールには、いくつかの定義済み色の配列があります。 フレームワークが自動色を使用する場合、一連のタブの各タブには、この配列から次の色が割り当てられます。
+タブコントロールには、いくつかの定義済み色の配列があります。 フレームワークで自動色が使用されている場合、一連のタブの各タブには、この配列の次の色が割り当てられます。
 
-既定では、自動色はライブラリで定義された色によって決まります。 色のカスタム配列を指定するには[、CMFCBaseTabCtrl::SetAutoColors](#setautocolors)を呼び出します。
+既定では、自動色はライブラリで定義された色によって決まります。 [CMFCBaseTabCtrl:: SetAutoColors](#setautocolors)を呼び出すことによって、色のカスタム配列を指定できます。
 
-## <a name="cmfcbasetabctrlenablecustomtooltips"></a><a name="enablecustomtooltips"></a>カスタムヒントを有効にします。
+## <a name="cmfcbasetabctrlenablecustomtooltips"></a><a name="enablecustomtooltips"></a> CMFCBaseTabCtrl:: EnableCustomToolTips
 
-タブ コントロールのカスタム ツールヒントを有効にします。
+タブコントロールのカスタムツールヒントを有効にします。
 
 ```
 BOOL EnableCustomToolTips(BOOL bEnable = TRUE);
@@ -637,8 +638,8 @@ BOOL EnableCustomToolTips(BOOL bEnable = TRUE);
 
 ### <a name="parameters"></a>パラメーター
 
-*b 有効にする*<br/>
-[in]カスタム ツールヒントを使用するかどうかを決定するブール値。
+*bEnable*<br/>
+からカスタムツールヒントを使用するかどうかを決定するブール値。
 
 ### <a name="return-value"></a>戻り値
 
@@ -646,11 +647,11 @@ BOOL EnableCustomToolTips(BOOL bEnable = TRUE);
 
 ### <a name="remarks"></a>解説
 
-カスタム ツールヒントが有効になっている場合、タブ コントロールは、メイン フレームにAFX_WM_ON_GET_TAB_TOOLTIPメッセージを送信します。 アプリケーションでカスタム ツールヒントをサポートする場合は、メイン フレーム ウィンドウでこのメソッドを処理し、カスタム ヒント テキストを提供する必要があります。 カスタム ツールヒント テキストの提供の詳細については[、「CMFCTab ツール ヒント情報の構造](../../mfc/reference/cmfctabtooltipinfo-structure.md)」を参照してください。
+カスタムツールヒントが有効になっている場合、タブコントロールは AFX_WM_ON_GET_TAB_TOOLTIP メッセージをメインフレームに送信します。 アプリケーションでカスタムツールヒントをサポートする場合は、メインフレームウィンドウがこのメソッドを処理し、カスタムのツールヒントテキストを提供する必要があります。 カスタムツールヒントテキストの提供の詳細については、「 [CMFCTabToolTipInfo 構造体](../../mfc/reference/cmfctabtooltipinfo-structure.md)」を参照してください。
 
-## <a name="cmfcbasetabctrlenableinplaceedit"></a><a name="enableinplaceedit"></a>をクリックします。
+## <a name="cmfcbasetabctrlenableinplaceedit"></a><a name="enableinplaceedit"></a> CMFCBaseTabCtrl:: Enableinplace Edit
 
-ユーザーによるタブ ラベルの直接編集を有効にします。
+ユーザーによるタブラベルの直接編集を有効にします。
 
 ```
 virtual void EnableInPlaceEdit(BOOL bEnable) = 0;
@@ -658,18 +659,18 @@ virtual void EnableInPlaceEdit(BOOL bEnable) = 0;
 
 ### <a name="parameters"></a>パラメーター
 
-*b 有効にする*<br/>
-[in]タブ ラベルの直接編集を有効にするかどうかを指定するブール値パラメーター。
+*bEnable*<br/>
+からタブラベルの直接編集を有効にするかどうかを指定するブール型パラメーターです。
 
 ### <a name="remarks"></a>解説
 
-既定では、タブ ラベルの直接編集はタブ コントロールでは無効になっています。
+既定では、タブコントロールのタブラベルの直接編集は無効になっています。
 
-タブ コントロールのタブのサブセットに対して直接編集を有効にすることができます。 これを行うには、 メソッド`CMFCBaseTabCtrl::StartRenameTab`をオーバーライドします。 `StartRenameTab`タブ ラベルの直接編集をサポートするすべてのタブに対して、0 以外の値を返す必要があります。
+タブコントロールのタブのサブセットに対して直接編集を有効にすることができます。 これを行うには、メソッドをオーバーライドし `CMFCBaseTabCtrl::StartRenameTab` ます。 `StartRenameTab` タブラベルの直接編集をサポートするすべてのタブで、0以外の値が返されます。
 
-では、`CMFCBaseTabCtrl Class`このメソッドは純粋仮想関数であり、実装はありません。 から`CMFCBaseTabCtrl`クラスを派生させる場合は、この関数を実装する必要があります。
+では、 `CMFCBaseTabCtrl Class` このメソッドは純粋仮想関数であり、実装はありません。 からクラスを派生させる場合は `CMFCBaseTabCtrl` 、この関数を実装する必要があります。
 
-## <a name="cmfcbasetabctrlenabletabdetach"></a><a name="enabletabdetach"></a>タブデタッチを有効にします。
+## <a name="cmfcbasetabctrlenabletabdetach"></a><a name="enabletabdetach"></a> CMFCBaseTabCtrl:: EnableTabDetach
 
 切り離し可能なタブを有効にします。
 
@@ -681,19 +682,19 @@ virtual BOOL EnableTabDetach(
 
 ### <a name="parameters"></a>パラメーター
 
-*Itab*<br/>
-[in]タブの 0 から始まるインデックス。
+*iTab*<br/>
+からタブの0から始まるインデックス。
 
-*b 有効にする*<br/>
-[in]タブを取り外し可能にするかどうかを示すブール値。
+*bEnable*<br/>
+からタブを切り離し可能にするかどうかを示すブール値。
 
 ### <a name="return-value"></a>戻り値
 
 成功した場合は TRUE、それ以外の場合は FALSE。
 
-## <a name="cmfcbasetabctrlenabletabswap"></a><a name="enabletabswap"></a>タブスワップを有効にします。
+## <a name="cmfcbasetabctrlenabletabswap"></a><a name="enabletabswap"></a> CMFCBaseTabCtrl:: EnableTabSwap
 
-マウスを使用してタブ オーダーを変更できます。
+ユーザーがマウスを使用してタブオーダーを変更できるようにします。
 
 ```cpp
 void EnableTabSwap(BOOL bEnable);
@@ -701,14 +702,14 @@ void EnableTabSwap(BOOL bEnable);
 
 ### <a name="parameters"></a>パラメーター
 
-*b 有効にする*<br/>
-[in]タブのスワップを有効にするかどうかを示すブール値。
+*bEnable*<br/>
+からタブスワップを有効にするかどうかを示すブール値。
 
 ### <a name="remarks"></a>解説
 
-タブの入れ替えが有効になっている場合、ユーザーはタブをドラッグしてタブ コントロール内の相対的な位置を変更できます。
+タブのスワップが有効になっている場合、ユーザーはタブをドラッグして、タブコントロール内の相対位置を変更できます。
 
-## <a name="cmfcbasetabctrlensurevisible"></a><a name="ensurevisible"></a>CMFCベースタブCtrl::保証Visible
+## <a name="cmfcbasetabctrlensurevisible"></a><a name="ensurevisible"></a> CMFCBaseTabCtrl:: Ensurevisible\
 
 指定したタブが表示されるまでタブをスクロールします。
 
@@ -718,8 +719,8 @@ virtual BOOL EnsureVisible(int iTab);
 
 ### <a name="parameters"></a>パラメーター
 
-*Itab*<br/>
-[in]タブの 0 から始まるインデックス。
+*iTab*<br/>
+からタブの0から始まるインデックス。
 
 ### <a name="return-value"></a>戻り値
 
@@ -727,11 +728,11 @@ virtual BOOL EnsureVisible(int iTab);
 
 ### <a name="remarks"></a>解説
 
-*iTab*で示されたタブが既に表示されている場合、このメソッドは無効です。
+*Itab* で示されているタブが既に表示されている場合、このメソッドは無効です。
 
-既定では、このメソッドは`CMFCBaseTabCtrl Class`. カスタム タブ コントロールがタブスクロールをサポートする`CMFCBaseTabCtrl`場合は、この関数を派生したカスタム クラスに実装する必要があります。 このメソッドは、[クラス](../../mfc/reference/cmfctabctrl-class.md)でサポートされています。
+既定では、このメソッドはではサポートされていません `CMFCBaseTabCtrl Class` 。 この `CMFCBaseTabCtrl` カスタムタブコントロールでタブスクロールがサポートされている場合は、から派生したカスタムクラスにこの関数を実装する必要があります。 このメソッドは、 [CMFCTabCtrl クラス](../../mfc/reference/cmfctabctrl-class.md)でサポートされています。
 
-## <a name="cmfcbasetabctrlenterdragmode"></a><a name="enterdragmode"></a>次の値を使用します。
+## <a name="cmfcbasetabctrlenterdragmode"></a><a name="enterdragmode"></a> CMFCBaseTabCtrl:: EnterDragMode
 
 ```cpp
 void EnterDragMode();
@@ -739,7 +740,7 @@ void EnterDragMode();
 
 ### <a name="remarks"></a>解説
 
-## <a name="cmfcbasetabctrlfindtargetwnd"></a><a name="findtargetwnd"></a>を見つける
+## <a name="cmfcbasetabctrlfindtargetwnd"></a><a name="findtargetwnd"></a> CMFCBaseTabCtrl:: FindTargetWnd
 
 指定したポイントを含むペインを識別します。
 
@@ -749,18 +750,18 @@ virtual CWnd* FindTargetWnd(const CPoint& pt) = 0;
 
 ### <a name="parameters"></a>パラメーター
 
-*Pt*<br/>
-[in][CMFCBaseTabCtrl](../../mfc/reference/cmfcbasetabctrl-class.md)オブジェクトのクライアント領域座標を使用して定義されるポイント。
+*pt*<br/>
+から [CMFCBaseTabCtrl](../../mfc/reference/cmfcbasetabctrl-class.md) オブジェクトのクライアント領域座標を使用して定義される点。
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合は[CWnd](../../mfc/reference/cwnd-class.md)オブジェクトへのポインター。それ以外の場合は NULL。
+成功した場合は [CWnd](../../mfc/reference/cwnd-class.md) オブジェクトへのポインター。それ以外の場合は NULL。
 
 ### <a name="remarks"></a>解説
 
-クラスでは`CMFCBaseTabCtrl`、このメソッドは純粋仮想関数です。 `CMFCBaseTabCtrl`
+クラスで `CMFCBaseTabCtrl` は、このメソッドは純粋仮想関数です。からクラスを派生させる場合は、このメソッドを実装する必要があります `CMFCBaseTabCtrl` 。
 
-## <a name="cmfcbasetabctrlfirechangeactivetab"></a><a name="firechangeactivetab"></a>タブタブ
+## <a name="cmfcbasetabctrlfirechangeactivetab"></a><a name="firechangeactivetab"></a> CMFCBaseTabCtrl:: 焼討 Changeactivetab
 
 ```
 virtual void FireChangeActiveTab(int nNewTab);
@@ -768,11 +769,11 @@ virtual void FireChangeActiveTab(int nNewTab);
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*nNewTab*<br/>
+から *Nnewtab*<br/>
 
 ### <a name="remarks"></a>解説
 
-## <a name="cmfcbasetabctrlfirechangingactivetab"></a><a name="firechangingactivetab"></a>をクリックします。
+## <a name="cmfcbasetabctrlfirechangingactivetab"></a><a name="firechangingactivetab"></a> CMFCBaseTabCtrl:: 消火/Activetab
 
 ```
 virtual BOOL FireChangingActiveTab(int nNewTab);
@@ -780,13 +781,13 @@ virtual BOOL FireChangingActiveTab(int nNewTab);
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*nNewTab*<br/>
+から *Nnewtab*<br/>
 
 ### <a name="return-value"></a>戻り値
 
 ### <a name="remarks"></a>解説
 
-## <a name="cmfcbasetabctrlgetactivetab"></a><a name="getactivetab"></a>をクリックします。
+## <a name="cmfcbasetabctrlgetactivetab"></a><a name="getactivetab"></a> CMFCBaseTabCtrl:: GetActiveTab
 
 現在アクティブなタブのインデックスを取得します。
 
@@ -796,9 +797,9 @@ virtual int GetActiveTab() const;
 
 ### <a name="return-value"></a>戻り値
 
-アクティブなタブの 0 から始まるインデックス。アクティブなタブがない場合は -1。
+アクティブなタブの0から始まるインデックス。アクティブなタブがない場合は-1。
 
-## <a name="cmfcbasetabctrlgetactivetabcolor"></a><a name="getactivetabcolor"></a>をクリックします。
+## <a name="cmfcbasetabctrlgetactivetabcolor"></a><a name="getactivetabcolor"></a> CMFCBaseTabCtrl:: GetActiveTabColor
 
 現在アクティブなタブの背景色を取得します。
 
@@ -808,13 +809,13 @@ virtual COLORREF GetActiveTabColor() const;
 
 ### <a name="return-value"></a>戻り値
 
-アクティブなタブの背景色を指定する[COLORREF](/windows/win32/gdi/colorref)値。
+アクティブなタブの背景色を指定する [COLORREF](/windows/win32/gdi/colorref) 値。
 
 ### <a name="remarks"></a>解説
 
-既定では、アクティブなタブの背景色はCOLOR_WINDOW。 アクティブなタブの背景色を変更するには、メソッド[CMFCBaseTabCtrl::SetActiveTabColor](#setactivetabcolor)を使用します。
+既定では、アクティブなタブの背景色は COLOR_WINDOW です。 [CMFCBaseTabCtrl:: SetActiveTabColor](#setactivetabcolor)メソッドを使用して、アクティブなタブの背景色を変更できます。
 
-## <a name="cmfcbasetabctrlgetactivetabtextcolor"></a><a name="getactivetabtextcolor"></a>をクリックします。
+## <a name="cmfcbasetabctrlgetactivetabtextcolor"></a><a name="getactivetabtextcolor"></a> CMFCBaseTabCtrl:: GetActiveTabTextColor
 
 アクティブなタブのテキストの色を取得します。
 
@@ -824,15 +825,15 @@ virtual COLORREF GetActiveTabTextColor() const;
 
 ### <a name="return-value"></a>戻り値
 
-アクティブなタブのテキストの色を指定する[COLORREF](/windows/win32/gdi/colorref)値。
+アクティブなタブのテキストの色を指定する [COLORREF](/windows/win32/gdi/colorref) 値。
 
 ### <a name="remarks"></a>解説
 
-既定では、アクティブなタブのテキスト色はCOLOR_WINDOWTEXT。 テキストの色を変更するには、メソッド[CMFCBaseTabCtrl:::アクティブタブテキストカラーを使用](#setactivetabtextcolor)します。
+既定では、アクティブなタブのテキストの色は COLOR_WINDOWTEXT です。 [CMFCBaseTabCtrl:: SetActiveTabTextColor](#setactivetabtextcolor)メソッドを使用してテキストの色を変更できます。
 
-## <a name="cmfcbasetabctrlgetactivewnd"></a><a name="getactivewnd"></a>をクリックします。
+## <a name="cmfcbasetabctrlgetactivewnd"></a><a name="getactivewnd"></a> CMFCBaseTabCtrl:: GetActiveWnd
 
-現在アクティブなタブ ウィンドウへのポインターを取得します。
+現在アクティブなタブウィンドウへのポインターを取得します。
 
 ```
 virtual CWnd* GetActiveWnd() const;
@@ -842,9 +843,9 @@ virtual CWnd* GetActiveWnd() const;
 
 ウィンドウへのポインター。
 
-## <a name="cmfcbasetabctrlgetautocolors"></a><a name="getautocolors"></a>を取得します。
+## <a name="cmfcbasetabctrlgetautocolors"></a><a name="getautocolors"></a> CMFCBaseTabCtrl:: GetAutoColors
 
-自動色分けに使用する色の配列を取得します。
+自動色付けに使用される色の配列を取得します。
 
 ```
 const CArray<COLORREF,COLORREF>& GetAutoColors() const;
@@ -852,15 +853,15 @@ const CArray<COLORREF,COLORREF>& GetAutoColors() const;
 
 ### <a name="return-value"></a>戻り値
 
-[オブジェクト](../../mfc/reference/cmfcbasetabctrl-class.md)が自動タブの色分けに使用する[、カラーレフ](/windows/win32/gdi/colorref)値の配列への参照。
+[CMFCBaseTabCtrl](../../mfc/reference/cmfcbasetabctrl-class.md)オブジェクトが自動タブの色指定に使用する[COLORREF](/windows/win32/gdi/colorref)値の配列への参照。
 
 ### <a name="remarks"></a>解説
 
-既定では、フレームワークは、色の配列をライブラリで定義された色に初期化します。 メソッドを呼び出すことによって、色のカスタム配列[を](#setautocolors)提供できます。
+既定では、フレームワークによって、色の配列がライブラリで定義された色に初期化されます。 [CMFCBaseTabCtrl:: SetAutoColors](#setautocolors)メソッドを呼び出すことによって、色のカスタム配列を指定できます。
 
-## <a name="cmfcbasetabctrlgetfirstvisibletab"></a><a name="getfirstvisibletab"></a>タブを取得します。
+## <a name="cmfcbasetabctrlgetfirstvisibletab"></a><a name="getfirstvisibletab"></a> CMFCBaseTabCtrl:: GetFirstVisibleTab
 
-最初に表示されるタブへのポインターを取得します。
+最初に表示されているタブへのポインターを取得します。
 
 ```
 virtual CWnd* GetFirstVisibleTab(int& iTabNum);
@@ -872,23 +873,23 @@ virtual CWnd* GetFirstVisibleTab(
 
 ### <a name="parameters"></a>パラメーター
 
-*アイタブバーナム*<br/>
-[アウト]整数への参照。 このメソッドは、最初に表示されるタブの 0 から始まるインデックスをこのパラメーターに書き込みます。
+*iTabNum*<br/>
+入出力整数への参照。 このメソッドは、最初に表示されるタブの0から始まるインデックスをこのパラメーターに書き込みます。
 
-*開始から*<br/>
-[in]確認する最初のタブの 0 から始まるインデックス。
+*iStartFrom*<br/>
+から確認する最初のタブの0から始まるインデックス。
 
 ### <a name="return-value"></a>戻り値
 
-正常終了した場合は、最初に表示されるタブへのポインター。それ以外の場合は NULL。
+成功した場合は、最初に表示されたタブへのポインター。それ以外の場合は NULL。
 
 ### <a name="remarks"></a>解説
 
-このメソッドが失敗した場合は、値 -1 を*iStartFrom*に書き込みます。
+このメソッドが失敗した場合は、 *Istartfrom* に値-1 を書き込みます。
 
-*iStartFrom*がタブ コントロールのタブ数以上の場合、`GetFirstVisibleTab`自動的に失敗します。
+*Istartfrom* がタブコントロールのタブの数以上の場合、は `GetFirstVisibleTab` 自動的に失敗します。
 
-## <a name="cmfcbasetabctrlgetfirstvisibletabnum"></a><a name="getfirstvisibletabnum"></a>をクリックします。
+## <a name="cmfcbasetabctrlgetfirstvisibletabnum"></a><a name="getfirstvisibletabnum"></a> CMFCBaseTabCtrl:: GetFirstVisibleTabNum
 
 ```
 virtual int GetFirstVisibleTabNum() const;
@@ -898,7 +899,7 @@ virtual int GetFirstVisibleTabNum() const;
 
 ### <a name="remarks"></a>解説
 
-## <a name="cmfcbasetabctrlgethighlightedtab"></a><a name="gethighlightedtab"></a>タブを取得します。
+## <a name="cmfcbasetabctrlgethighlightedtab"></a><a name="gethighlightedtab"></a> CMFCBaseTabCtrl:: GetHighlightedTab
 
 現在強調表示されているタブのインデックスを取得します。
 
@@ -908,9 +909,9 @@ int GetHighlightedTab() const;
 
 ### <a name="return-value"></a>戻り値
 
-強調表示されたタブの 0 から始まるインデックス。
+強調表示されたタブの0から始まるインデックス。
 
-## <a name="cmfcbasetabctrlgetimagelist"></a><a name="getimagelist"></a>を使用します。
+## <a name="cmfcbasetabctrlgetimagelist"></a><a name="getimagelist"></a> CMFCBaseTabCtrl:: GetImageList
 
 ```
 virtual const CImageList* GetImageList() const;
@@ -920,7 +921,7 @@ virtual const CImageList* GetImageList() const;
 
 ### <a name="remarks"></a>解説
 
-## <a name="cmfcbasetabctrlgetimagesize"></a><a name="getimagesize"></a>をクリックします。
+## <a name="cmfcbasetabctrlgetimagesize"></a><a name="getimagesize"></a> CMFCBaseTabCtrl:: GetImageSize
 
 ```
 virtual CSize GetImageSize() const;
@@ -930,7 +931,7 @@ virtual CSize GetImageSize() const;
 
 ### <a name="remarks"></a>解説
 
-## <a name="cmfcbasetabctrlgetlastvisibletab"></a><a name="getlastvisibletab"></a>タブタブを取得します。
+## <a name="cmfcbasetabctrlgetlastvisibletab"></a><a name="getlastvisibletab"></a> CMFCBaseTabCtrl:: GetLastVisibleTab
 
 ```
 virtual CWnd* GetLastVisibleTab(int& iTabNum);
@@ -938,15 +939,15 @@ virtual CWnd* GetLastVisibleTab(int& iTabNum);
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*アイタブバーナム*<br/>
+から *Itabnum*<br/>
 
 ### <a name="return-value"></a>戻り値
 
 ### <a name="remarks"></a>解説
 
-## <a name="cmfcbasetabctrlgetlocation"></a><a name="getlocation"></a>を取得します。
+## <a name="cmfcbasetabctrlgetlocation"></a><a name="getlocation"></a> CMFCBaseTabCtrl:: GetLocation
 
-タブ コントロールのタブ領域部分の位置を取得します。
+タブコントロールのタブ領域部分の位置を取得します。
 
 ```
 Location GetLocation() const;
@@ -958,9 +959,9 @@ Location GetLocation() const;
 
 ### <a name="remarks"></a>解説
 
-使用可能なタブ領域の場所の値は、LOCATION_BOTTOMおよびLOCATION_TOP。
+タブ領域の位置の値は、LOCATION_BOTTOM と LOCATION_TOP です。
 
-## <a name="cmfcbasetabctrlgetmaxwindowsize"></a><a name="getmaxwindowsize"></a>ウィンドウサイズを取得します。
+## <a name="cmfcbasetabctrlgetmaxwindowsize"></a><a name="getmaxwindowsize"></a> CMFCBaseTabCtrl:: GetMaxWindowSize
 
 ```
 virtual CSize GetMaxWindowSize() const;
@@ -970,9 +971,9 @@ virtual CSize GetMaxWindowSize() const;
 
 ### <a name="remarks"></a>解説
 
-## <a name="cmfcbasetabctrlgettabarea"></a><a name="gettabarea"></a>をクリックします。
+## <a name="cmfcbasetabctrlgettabarea"></a><a name="gettabarea"></a> CMFCBaseTabCtrl:: GetTabArea
 
-タブ コントロールのタブ領域のサイズと位置を取得します。
+タブコントロールのタブ領域のサイズと位置を取得します。
 
 ```
 virtual void GetTabArea(
@@ -982,19 +983,19 @@ virtual void GetTabArea(
 
 ### <a name="parameters"></a>パラメーター
 
-*レクトタブエリアトップ*<br/>
-[in]`CRect`オブジェクトへの参照。 `GetTabArea`は、このオブジェクトを使用して、上部タブ領域のサイズと位置を格納します。
+*rectTabAreaTop*<br/>
+からオブジェクトへの参照 `CRect` 。 `GetTabArea` は、このオブジェクトを使用して、上部のタブ領域のサイズと位置を格納します。
 
-*タブエリア下部*<br/>
-[in]`CRect`オブジェクトへの参照。 `GetTabArea`は、このオブジェクトを使用して、下部タブ領域のサイズと位置を格納します。
+*rectTabAreaBottom*<br/>
+からオブジェクトへの参照 `CRect` 。 `GetTabArea` は、このオブジェクトを使用して、下部のタブ領域のサイズと位置を格納します。
 
 ### <a name="remarks"></a>解説
 
-戻`GetTabArea`り値の`CRect`後、パラメーターには、タブ コントロールのクライアント座標でのタブ領域のサイズと位置が含まれます。 タブ コントロールの上部または下部にタブ領域がない場合、`rectTabAreaTop`または`rectTabAreaBottom`空です。
+が `GetTabArea` 返されると、タブ `CRect` コントロールのクライアント座標のタブ領域のサイズと位置がパラメーターに格納されます。 タブコントロールの上部または下部にタブ領域がない場合、または空の場合は `rectTabAreaTop` `rectTabAreaBottom` 。
 
-では、`CMFCBaseTabCtrl Class`このメソッドは純粋仮想関数であり、実装はありません。 から`CMFCBaseTabCtrl`クラスを派生させる場合は、この関数を実装する必要があります。
+では、 `CMFCBaseTabCtrl Class` このメソッドは純粋仮想関数であり、実装はありません。 からクラスを派生させる場合は `CMFCBaseTabCtrl` 、この関数を実装する必要があります。
 
-## <a name="cmfcbasetabctrlgettabbkcolor"></a><a name="gettabbkcolor"></a>次の項目を使用します。
+## <a name="cmfcbasetabctrlgettabbkcolor"></a><a name="gettabbkcolor"></a> CMFCBaseTabCtrl:: GetTabBkColor
 
 指定したタブの背景色を取得します。
 
@@ -1004,16 +1005,16 @@ virtual COLORREF GetTabBkColor(int iTab) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*Itab*<br/>
-[in]タブの 0 から始まるインデックス。
+*iTab*<br/>
+からタブの0から始まるインデックス。
 
 ### <a name="return-value"></a>戻り値
 
-指定されたタブの背景色を示す[COLORREF](/windows/win32/gdi/colorref)値。*iTab*が範囲外の場合は -1。
+指定したタブの背景色を示す [COLORREF](/windows/win32/gdi/colorref) 値。 *Itab* が範囲外の場合は-1。
 
-## <a name="cmfcbasetabctrlgettabbordersize"></a><a name="gettabbordersize"></a>をクリックします。
+## <a name="cmfcbasetabctrlgettabbordersize"></a><a name="gettabbordersize"></a> CMFCBaseTabCtrl:: GetTabBorderSize
 
-タブ コントロールのタブ罫線のサイズを取得します。
+タブコントロールのタブ境界線のサイズを取得します。
 
 ```
 virtual int GetTabBorderSize() const;
@@ -1021,13 +1022,13 @@ virtual int GetTabBorderSize() const;
 
 ### <a name="return-value"></a>戻り値
 
-タブの境界線のサイズ (ピクセル単位)。
+タブ境界線のサイズ (ピクセル単位)。
 
 ### <a name="remarks"></a>解説
 
-タブ枠の既定のサイズは 3 ピクセルです。 この境界線のサイズは、メソッド[CMFCBaseTabCtrl::セットタブボーダーサイズ](#settabbordersize)で変更できます。
+タブの境界線の既定のサイズは3ピクセルです。 この境界線のサイズは、メソッド [CMFCBaseTabCtrl:: SetTabBorderSize](#settabbordersize)で変更できます。
 
-## <a name="cmfcbasetabctrlgettabbyid"></a><a name="gettabbyid"></a>をクリックします。
+## <a name="cmfcbasetabctrlgettabbyid"></a><a name="gettabbyid"></a> CMFCBaseTabCtrl:: GetTabByID
 
 タブ ID に基づいてタブのインデックスを取得します。
 
@@ -1038,17 +1039,17 @@ virtual int GetTabByID(int id) const;
 ### <a name="parameters"></a>パラメーター
 
 *id*<br/>
-[in]タブ ID。
+からタブ ID。
 
 ### <a name="return-value"></a>戻り値
 
-タブが見つかった場合は、そのタブの 0 から始まるインデックス。タブ ID が見つからない場合は -1。
+見つかった場合は、タブの0から始まるインデックス。タブ ID が見つからない場合は-1。
 
 ### <a name="remarks"></a>解説
 
-タブをタブ コントロールに追加すると、タブ ID が自動的に割り当てられます。
+タブ Id は、タブがタブコントロールに追加されると自動的に割り当てられます。
 
-## <a name="cmfcbasetabctrlgettabclosebutton"></a><a name="gettabclosebutton"></a>ボタンを閉じる
+## <a name="cmfcbasetabctrlgettabclosebutton"></a><a name="gettabclosebutton"></a> CMFCBaseTabCtrl:: GetTabCloseButton
 
 ```
 CRect GetTabCloseButton() const;
@@ -1058,7 +1059,7 @@ CRect GetTabCloseButton() const;
 
 ### <a name="remarks"></a>解説
 
-## <a name="cmfcbasetabctrlgettabfromhwnd"></a><a name="gettabfromhwnd"></a>次の値を取得します。
+## <a name="cmfcbasetabctrlgettabfromhwnd"></a><a name="gettabfromhwnd"></a> CMFCBaseTabCtrl:: GetTabFromHwnd
 
 指定した HWND オブジェクトを含むタブのインデックスを取得します。
 
@@ -1068,14 +1069,14 @@ virtual int GetTabFromHwnd(HWND hwnd) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*Hwnd*<br/>
-[in]ウィンドウへのハンドル。
+*hwnd*<br/>
+からウィンドウを処理するハンドル。
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合は、タブの 0 から始まるインデックス。-1 タブに*hwnd*が含まれる場合は -1。
+成功した場合は、タブの0から始まるインデックス。タブに *hwnd* が含まれていない場合は-1。
 
-## <a name="cmfcbasetabctrlgettabfrompoint"></a><a name="gettabfrompoint"></a>ポイントから取得します。
+## <a name="cmfcbasetabctrlgettabfrompoint"></a><a name="gettabfrompoint"></a> CMFCBaseTabCtrl:: GetTabFromPoint
 
 指定したポイントを含むタブを取得します。
 
@@ -1085,14 +1086,14 @@ virtual int GetTabFromPoint(CPoint& pt) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*Pt*<br/>
-[in]タブ コントロールのクライアント座標のポイント。
+*pt*<br/>
+からタブコントロールのクライアント座標の点。
 
 ### <a name="return-value"></a>戻り値
 
-*pt*を含むタブのインデックス。-1 タブに*pt*が含まれる場合は -1。
+*Pt* を含むタブのインデックスです。タブに *pt* が含まれていない場合は-1。
 
-## <a name="cmfcbasetabctrlgettabfullwidth"></a><a name="gettabfullwidth"></a>を押す
+## <a name="cmfcbasetabctrlgettabfullwidth"></a><a name="gettabfullwidth"></a> CMFCBaseTabCtrl:: GetTabFullWidth
 
 ```
 virtual int GetTabFullWidth(int iTab) const;
@@ -1100,15 +1101,15 @@ virtual int GetTabFullWidth(int iTab) const;
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*iタブ*<br/>
+から *Itab*<br/>
 
 ### <a name="return-value"></a>戻り値
 
 ### <a name="remarks"></a>解説
 
-## <a name="cmfcbasetabctrlgettabhicon"></a><a name="gettabhicon"></a>をクリックします。
+## <a name="cmfcbasetabctrlgettabhicon"></a><a name="gettabhicon"></a> CMFCBaseTabCtrl:: GetTabHicon
 
-指定されたタブに関連付けられた HICON を返します。
+指定したタブに関連付けられている HICON を返します。
 
 ```
 virtual HICON GetTabHicon(int iTab) const;
@@ -1116,14 +1117,14 @@ virtual HICON GetTabHicon(int iTab) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*Itab*<br/>
-[in]タブの 0 から始まるインデックス。
+*iTab*<br/>
+からタブの0から始まるインデックス。
 
 ### <a name="return-value"></a>戻り値
 
-正常終了した場合は、タブ ラベルに関連付けられた HICON。HICON がない場合、またはメソッドが失敗した場合は NULL。
+成功した場合は、タブラベルに関連付けられている HICON。HICON がない場合、またはメソッドが失敗した場合は NULL。
 
-## <a name="cmfcbasetabctrlgettabicon"></a><a name="gettabicon"></a>をクリックします。
+## <a name="cmfcbasetabctrlgettabicon"></a><a name="gettabicon"></a> CMFCBaseTabCtrl:: GetTabIcon
 
 指定したタブに関連付けられているアイコンを取得します。
 
@@ -1133,20 +1134,20 @@ virtual UINT GetTabIcon(int iTab) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*Itab*<br/>
-[in]タブの 0 から始まるインデックス。
+*iTab*<br/>
+からタブの0から始まるインデックス。
 
 ### <a name="return-value"></a>戻り値
 
-正常終了した場合は、指定したタブのアイコン ID。インデックスが無効な場合は -1。
+成功した場合は、指定したタブのアイコン ID。インデックスが無効な場合は-1。
 
 ### <a name="remarks"></a>解説
 
-オブジェクトは[、](../../mfc/reference/cmfcbasetabctrl-class.md)内部[CImageList](../../mfc/reference/cimagelist-class.md)オブジェクトにアイコンを格納します。
+[CMFCBaseTabCtrl](../../mfc/reference/cmfcbasetabctrl-class.md)オブジェクトは、内部の[CImageList](../../mfc/reference/cimagelist-class.md)オブジェクトにアイコンを格納します。
 
-## <a name="cmfcbasetabctrlgettabid"></a><a name="gettabid"></a>をクリックします。
+## <a name="cmfcbasetabctrlgettabid"></a><a name="gettabid"></a> CMFCBaseTabCtrl:: GetTabID
 
-タブ インデックスで指定されたタブの ID を取得します。
+タブインデックスによって指定されたタブの ID を取得します。
 
 ```
 int GetTabID(int iTab) const;
@@ -1154,16 +1155,16 @@ int GetTabID(int iTab) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*Itab*<br/>
-[in]タブの 0 から始まるインデックス。
+*iTab*<br/>
+からタブの0から始まるインデックス。
 
 ### <a name="return-value"></a>戻り値
 
-タブの ID または*iTab*が範囲外の場合は -1。
+タブの ID。 *Itab* が範囲外の場合は-1。
 
-## <a name="cmfcbasetabctrlgettablabel"></a><a name="gettablabel"></a>タブラベルを取得します。
+## <a name="cmfcbasetabctrlgettablabel"></a><a name="gettablabel"></a> CMFCBaseTabCtrl:: GetTabLabel
 
-タブ ラベルのテキストを取得します。
+タブラベルのテキストを取得します。
 
 ```
 virtual BOOL GetTabLabel(
@@ -1173,11 +1174,11 @@ virtual BOOL GetTabLabel(
 
 ### <a name="parameters"></a>パラメーター
 
-*Itab*<br/>
-[in]タブの 0 から始まるインデックス。
+*iTab*<br/>
+からタブの0から始まるインデックス。
 
-*ストラベル*<br/>
-[アウト]`CString`オブジェクトへの参照。 このメソッドは、このパラメーターにタブのラベルを格納します。
+*strLabel*<br/>
+入出力オブジェクトへの参照 `CString` 。 このメソッドは、このパラメーターにタブのラベルを格納します。
 
 ### <a name="return-value"></a>戻り値
 
@@ -1185,13 +1186,13 @@ virtual BOOL GetTabLabel(
 
 ### <a name="remarks"></a>解説
 
-インデックス*iTab*が無効な場合、このメソッドは失敗します。
+インデックス *Itab* が無効な場合、このメソッドは失敗します。
 
-タブを作成するときにタブのラベルを設定するには[、CMFCBaseTabCtrl::AddTab](#addtab)を使用します。 また、メソッド[CMFCBaseTabCtrl::セットタブラベル](#settablabel)を使用して、作成後にラベルを変更することもできます。
+[CMFCBaseTabCtrl:: AddTab](#addtab)を使用してタブを作成するときに、タブのラベルを設定します。 また、 [CMFCBaseTabCtrl:: SetTabLabel](#settablabel)メソッドを使用して、作成後にラベルを変更することもできます。
 
-## <a name="cmfcbasetabctrlgettabrect"></a><a name="gettabrect"></a>をクリックします。
+## <a name="cmfcbasetabctrlgettabrect"></a><a name="gettabrect"></a> CMFCBaseTabCtrl:: GetTabRect
 
-指定されたタブのサイズと位置を取得します。
+指定したタブのサイズと位置を取得します。
 
 ```
 virtual BOOL GetTabRect(
@@ -1201,17 +1202,17 @@ virtual BOOL GetTabRect(
 
 ### <a name="parameters"></a>パラメーター
 
-*Itab*<br/>
-[in]タブの 0 から始まるインデックス。
+*iTab*<br/>
+からタブの0から始まるインデックス。
 
-*Rect*<br/>
-[アウト]`CRect`オブジェクトへの参照。 このメソッドは、このパラメーターのタブのサイズと位置を格納します。
+*rect*<br/>
+入出力オブジェクトへの参照 `CRect` 。 このメソッドは、このパラメーターのタブのサイズと位置を格納します。
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合は TRUE。タブ インデックスが無効な場合は FALSE。
+成功した場合は TRUE。タブインデックスが無効な場合は FALSE。
 
-## <a name="cmfcbasetabctrlgettabsheight"></a><a name="gettabsheight"></a>をクリックします。
+## <a name="cmfcbasetabctrlgettabsheight"></a><a name="gettabsheight"></a> CMFCBaseTabCtrl:: GetTabsHeight 視覚
 
 ```
 virtual int GetTabsHeight() const;
@@ -1221,9 +1222,9 @@ virtual int GetTabsHeight() const;
 
 ### <a name="remarks"></a>解説
 
-## <a name="cmfcbasetabctrlgettabsnum"></a><a name="gettabsnum"></a>をクリックします。
+## <a name="cmfcbasetabctrlgettabsnum"></a><a name="gettabsnum"></a> CMFCBaseTabCtrl:: GetTabsNum
 
-タブ コントロール内のタブの数を取得します。
+タブコントロールのタブの数を取得します。
 
 ```
 virtual int GetTabsNum() const;
@@ -1231,9 +1232,9 @@ virtual int GetTabsNum() const;
 
 ### <a name="return-value"></a>戻り値
 
-タブ コントロール内のタブの数。
+タブコントロール内のタブの数。
 
-## <a name="cmfcbasetabctrlgettabsrect"></a><a name="gettabsrect"></a>をクリックします。
+## <a name="cmfcbasetabctrlgettabsrect"></a><a name="gettabsrect"></a> CMFCBaseTabCtrl:: GetTabsRect
 
 ```
 virtual void GetTabsRect(CRect& rect) const;
@@ -1241,11 +1242,11 @@ virtual void GetTabsRect(CRect& rect) const;
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*レクト*<br/>
+から *rect*<br/>
 
 ### <a name="remarks"></a>解説
 
-## <a name="cmfcbasetabctrlgettabtextcolor"></a><a name="gettabtextcolor"></a>をクリックします。
+## <a name="cmfcbasetabctrlgettabtextcolor"></a><a name="gettabtextcolor"></a> CMFCBaseTabCtrl:: GetTabTextColor
 
 指定したタブのテキストの色を取得します。
 
@@ -1255,16 +1256,16 @@ virtual COLORREF GetTabTextColor(int iTab) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*Itab*<br/>
-[in]タブの 0 から始まるインデックス。
+*iTab*<br/>
+からタブの0から始まるインデックス。
 
 ### <a name="return-value"></a>戻り値
 
-指定されたタブのテキストの色を示す[COLORREF](/windows/win32/gdi/colorref)パラメーター。*iTab*が範囲外の場合は -1。
+指定したタブのテキストの色を示す [COLORREF](/windows/win32/gdi/colorref) パラメーター。 *Itab* が範囲外の場合は-1。
 
-## <a name="cmfcbasetabctrlgettabwnd"></a><a name="gettabwnd"></a>をクリックします。
+## <a name="cmfcbasetabctrlgettabwnd"></a><a name="gettabwnd"></a> CMFCBaseTabCtrl:: GetTabWnd
 
-指定されたタブにあるペインへのポインターを返します。
+指定したタブに存在するペインへのポインターを返します。
 
 ```
 virtual CWnd* GetTabWnd(int iTab) const;
@@ -1272,20 +1273,20 @@ virtual CWnd* GetTabWnd(int iTab) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*Itab*<br/>
-[in]タブの 0 から始まるインデックス。
+*iTab*<br/>
+からタブの0から始まるインデックス。
 
 ### <a name="return-value"></a>戻り値
 
-*iTab*が指定するタブにある[CWnd](../../mfc/reference/cwnd-class.md)オブジェクトへのポインター。 *iTab*が無効な場合は NULL です。
+*Itab* が指定するタブに存在する [CWnd](../../mfc/reference/cwnd-class.md)オブジェクトへのポインター。 *Itab* が無効である場合は NULL です。
 
 ### <a name="remarks"></a>解説
 
-返されるオブジェクトは、アプリケーションが[CMFCBaseTabCtrl:::AddTab または](#addtab) [CMFCBaseTabCtrl:::挿入タブ](#inserttab)を呼び出したときにアプリケーションが追加したものです。
+返されるオブジェクトは、 [CMFCBaseTabCtrl:: addtab](#addtab) または [CMFCBaseTabCtrl:: inserttab](#inserttab)のいずれかを呼び出したときにアプリケーションによって追加されたオブジェクトです。
 
-タブ上のオブジェクトにラッパーがある場合、このメソッドはオブジェクトのラッパーを返します。 ラッパーの詳細については[、「CMFCBaseTabCtrl::CreateWrapper](#createwrapper)」を参照してください。 ラッパーを使用せずにダイレクト オブジェクトへのポインターにアクセスする場合は、メソッド[CMFCBaseTabCtrl::GetTabWndNoWrapper](#gettabwndnowrapper)を使用します。
+タブ上のオブジェクトにラッパーがある場合、このメソッドはオブジェクトのラッパーを返します。 ラッパーの詳細については、「 [CMFCBaseTabCtrl:: CreateWrapper](#createwrapper)」を参照してください。 ラッパーなしで直接オブジェクトへのポインターにアクセスする場合は、 [CMFCBaseTabCtrl:: GetTabWndNoWrapper](#gettabwndnowrapper)メソッドを使用します。
 
-## <a name="cmfcbasetabctrlgettabwndnowrapper"></a><a name="gettabwndnowrapper"></a>をクリックします。
+## <a name="cmfcbasetabctrlgettabwndnowrapper"></a><a name="gettabwndnowrapper"></a> CMFCBaseTabCtrl:: GetTabWndNoWrapper
 
 コントロールにラッパーがある場合でも、タブ上に存在するコントロールへのポインターを返します。
 
@@ -1295,22 +1296,22 @@ virtual CWnd* GetTabWndNoWrapper(int iTab) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*Itab*<br/>
-[in]タブの 0 から始まるインデックス。
+*iTab*<br/>
+からタブの0から始まるインデックス。
 
 ### <a name="return-value"></a>戻り値
 
-指定されたタブにある[CWnd](../../mfc/reference/cwnd-class.md)オブジェクトへのポインター。*iTab*が無効な場合は NULL です。
+指定したタブに存在する [CWnd](../../mfc/reference/cwnd-class.md) オブジェクトへのポインター。 *Itab* が無効である場合は NULL です。
 
 ### <a name="remarks"></a>解説
 
-このメソッドは、メソッド`CWnd`[CMFCBaseTabCtrl:::または CMFCBaseTabCtrl:::](#addtab)[挿入タブ](#inserttab)を使用して、追加したオブジェクトへの直接ポインターを取得します。 `GetTabWndNoWrapper`フレームワークがオブジェクトのラッパーを追加`CWnd`した場合でも、追加された へのポインターを取得します。 ラッパーとクラスの詳細については[、「CMFCBaseTabCtrl::CreateWrapper](#createwrapper)」を参照してください。 [CMFCBaseTabCtrl Class](../../mfc/reference/cmfcbasetabctrl-class.md)
+このメソッドは、 `CWnd` [CMFCBaseTabCtrl:: addtab](#addtab) メソッドまたは [CMFCBaseTabCtrl:: inserttab](#inserttab)メソッドを使用して追加したオブジェクトへの直接ポインターを取得します。 `GetTabWndNoWrapper` フレームワークによっ `CWnd` てオブジェクトのラッパーが追加された場合でも、は追加されたへのポインターを取得します。 ラッパーと [CMFCBaseTabCtrl クラス](../../mfc/reference/cmfcbasetabctrl-class.md)の詳細については、「 [CMFCBaseTabCtrl:: createwrapper](#createwrapper)」を参照してください。
 
-ラッパー クラスを無視したくない場合は、メソッド[CMFCBaseTabCtrl::GetTabWnd](#gettabwnd)を使用します。
+ラッパークラスを無視しない場合は、 [CMFCBaseTabCtrl:: GetTabWnd](#gettabwnd) メソッドを使用します。
 
-## <a name="cmfcbasetabctrlgettooltipctrl"></a><a name="gettooltipctrl"></a>次の値を返します。
+## <a name="cmfcbasetabctrlgettooltipctrl"></a><a name="gettooltipctrl"></a> CMFCBaseTabCtrl:: GetToolTipCtrl
 
-ツールヒントの contorl への参照を取得します。
+ツールヒントの参照を取得します。
 
 ```
 CToolTipCtrl& GetToolTipCtrl() const;
@@ -1318,9 +1319,9 @@ CToolTipCtrl& GetToolTipCtrl() const;
 
 ### <a name="return-value"></a>戻り値
 
-ツールヒント コントロールへの参照。
+ツールヒントコントロールへの参照。
 
-## <a name="cmfcbasetabctrlgetvisibletabsnum"></a><a name="getvisibletabsnum"></a>をクリックします。
+## <a name="cmfcbasetabctrlgetvisibletabsnum"></a><a name="getvisibletabsnum"></a> CMFCBaseTabCtrl:: GetVisibleTabsNum
 
 現在表示されているタブの数を取得します。
 
@@ -1332,7 +1333,7 @@ virtual int GetVisibleTabsNum() const;
 
 表示されるタブの数。
 
-## <a name="cmfcbasetabctrlhasimage"></a><a name="hasimage"></a>をクリックします。
+## <a name="cmfcbasetabctrlhasimage"></a><a name="hasimage"></a> CMFCBaseTabCtrl:: HasImage
 
 ```
 virtual BOOL HasImage(int iTab) const;
@@ -1340,15 +1341,15 @@ virtual BOOL HasImage(int iTab) const;
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*iタブ*<br/>
+から *Itab*<br/>
 
 ### <a name="return-value"></a>戻り値
 
 ### <a name="remarks"></a>解説
 
-## <a name="cmfcbasetabctrlhidesingletab"></a><a name="hidesingletab"></a>1 つもタブを非表示にします。
+## <a name="cmfcbasetabctrlhidesingletab"></a><a name="hidesingletab"></a> CMFCBaseTabCtrl:: HideSingleTab
 
-表示されているタブが 1 つある場合にタブ コントロールのタブを非表示にするオプションを設定します。
+1つのタブが表示されている場合にタブコントロールのタブを非表示にするオプションを設定します。
 
 ```
 virtual void HideSingleTab(BOOL bHide = TRUE);
@@ -1357,15 +1358,15 @@ virtual void HideSingleTab(BOOL bHide = TRUE);
 ### <a name="parameters"></a>パラメーター
 
 *bHide*<br/>
-[in]単一のタブの非表示を有効にするかどうかを指定するブール値。
+から1つのタブの非表示を有効にするかどうかを指定するブール値。
 
 ### <a name="remarks"></a>解説
 
-アプリケーションが単一のタブを非表示にするように構成されている場合、フレームワークはタブ コントロールに 2 番目のタブが追加されたときにタブを自動的に表示します。
+アプリケーションが1つのタブを非表示にするように構成されている場合、タブコントロールに2番目のタブが追加されると、フレームワークによって自動的にタブが表示されます。
 
-## <a name="cmfcbasetabctrlinserttab"></a><a name="inserttab"></a>タブを挿入します。
+## <a name="cmfcbasetabctrlinserttab"></a><a name="inserttab"></a> CMFCBaseTabCtrl:: InsertTab
 
-タブ コントロールにタブを挿入します。
+タブコントロールにタブを挿入します。
 
 ```
 Virtual void InsertTab(
@@ -1385,29 +1386,29 @@ virtual void InsertTab(
 
 ### <a name="parameters"></a>パラメーター
 
-*pニューウンド*<br/>
-[in]このメソッドが新しいタブとして追加するウィンドウへのポインター。
+*pNewWnd*<br/>
+からこのメソッドが新しいタブとして追加するウィンドウへのポインター。
 
-*タブラベル*<br/>
-[in]新しいタブのラベルを含む文字列。
+*lpszTabLabel*<br/>
+から新しいタブのラベルを含む文字列。
 
-*挿入*<br/>
-[in]新しいタブの 0 から始まるインデックス。
+*nInsertAt*<br/>
+から新しいタブの0から始まるインデックス。
 
-*を指定します。*<br/>
-[in]イメージ リストのイメージ ID。 タブ コントロールでは、このイメージを新しいタブのアイコンとして使用します。
+*uiImageId*<br/>
+からイメージリストのイメージ ID。 タブコントロールは、このイメージを新しいタブのアイコンとして使用します。
 
-*b取り外し可能*<br/>
-[in]新しいタブがデタッチ可能かどうかを決定するブール値パラメーター。
+*bDetachable 可能*<br/>
+から新しいタブを切り離し可能にするかどうかを決定するブール型パラメーターです。
 
-*タブラベル*<br/>
-[in]ラベルのリソース ID。
+*uiResTabLabel*<br/>
+からラベルのリソース ID。
 
 ### <a name="remarks"></a>解説
 
-*pNewWnd*で示されたオブジェクトが[CDockablePane クラス](../../mfc/reference/cdockablepane-class.md)から派生していない場合 *、bDetachable*パラメーターが TRUE の場合、フレームワークは新しいタブの特別なラッパーを作成します。既定では、ラッパーは[CDockablePaneAdapter クラス](../../mfc/reference/cdockablepaneadapter-class.md)のインスタンスです。 別のラッパー クラスを作成するには[、CMFCBaseTabCtrl::SetDockingBarWrapperRTC](#setdockingbarwrapperrtc)メソッドを使用します。 カスタム ラッパー クラスは、 から`CDockablePaneAdapter`派生する必要があります。
+*PNewWnd* によって示されるオブジェクトが [CDockablePane クラス](../../mfc/reference/cdockablepane-class.md)から派生していない場合、 *BDETACHABLE* 可能なパラメーターが TRUE の場合、フレームワークは新しいタブ用の特別なラッパーを作成します。既定では、ラッパーは [CDockablePaneAdapter クラス](../../mfc/reference/cdockablepaneadapter-class.md)のインスタンスです。 別のラッパークラスを作成するには、 [CMFCBaseTabCtrl:: SetDockingBarWrapperRTC](#setdockingbarwrapperrtc) メソッドを使用します。 カスタムラッパークラスは、から派生する必要があり `CDockablePaneAdapter` ます。
 
-## <a name="cmfcbasetabctrlinvalidatetab"></a><a name="invalidatetab"></a>タブを無効にします。
+## <a name="cmfcbasetabctrlinvalidatetab"></a><a name="invalidatetab"></a> CMFCBaseTabCtrl:: InvalidateTab
 
 ```cpp
 void InvalidateTab(int iTab);
@@ -1415,11 +1416,11 @@ void InvalidateTab(int iTab);
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*iタブ*<br/>
+から *Itab*<br/>
 
 ### <a name="remarks"></a>解説
 
-## <a name="cmfcbasetabctrlisactivetabclosebutton"></a><a name="isactivetabclosebutton"></a>ボタンを閉じる
+## <a name="cmfcbasetabctrlisactivetabclosebutton"></a><a name="isactivetabclosebutton"></a> CMFCBaseTabCtrl:: IsActiveTabCloseButton
 
 ```
 virtual BOOL IsActiveTabCloseButton() const;
@@ -1429,9 +1430,9 @@ virtual BOOL IsActiveTabCloseButton() const;
 
 ### <a name="remarks"></a>解説
 
-## <a name="cmfcbasetabctrlisautocolor"></a><a name="isautocolor"></a>をクリックします。
+## <a name="cmfcbasetabctrlisautocolor"></a><a name="isautocolor"></a> CMFCBaseTabCtrl:: IsAutoColor
 
-タブ コントロールが自動カラー モードかどうかを判断します。
+タブコントロールが自動カラーモードであるかどうかを判断します。
 
 ```
 BOOL IsAutoColor() const;
@@ -1439,13 +1440,13 @@ BOOL IsAutoColor() const;
 
 ### <a name="return-value"></a>戻り値
 
-タブ コントロールが自動カラー モードの場合は TRUE。それ以外の場合は FALSE。
+タブコントロールが自動カラーモードである場合は TRUE。それ以外の場合は FALSE。
 
 ### <a name="remarks"></a>解説
 
-自動カラー モードを有効または無効にするには、[メソッド](#enableautocolor)を使用します。
+Autocolor モードを有効または無効にするには、 [CMFCBaseTabCtrl:: EnableAutoColor](#enableautocolor) メソッドを使用します。
 
-## <a name="cmfcbasetabctrlisautodestroywindow"></a><a name="isautodestroywindow"></a>ウィンドウを破壊する
+## <a name="cmfcbasetabctrlisautodestroywindow"></a><a name="isautodestroywindow"></a> CMFCBaseTabCtrl:: IsAutoDestroyWindow
 
 ```
 BOOL IsAutoDestroyWindow() const;
@@ -1455,7 +1456,7 @@ BOOL IsAutoDestroyWindow() const;
 
 ### <a name="remarks"></a>解説
 
-## <a name="cmfcbasetabctrliscolored"></a><a name="iscolored"></a>をクリックします。
+## <a name="cmfcbasetabctrliscolored"></a><a name="iscolored"></a> CMFCBaseTabCtrl:: IsColored
 
 ```
 virtual BOOL IsColored() const;
@@ -1465,7 +1466,7 @@ virtual BOOL IsColored() const;
 
 ### <a name="remarks"></a>解説
 
-## <a name="cmfcbasetabctrlisdialogcontrol"></a><a name="isdialogcontrol"></a>コントロール
+## <a name="cmfcbasetabctrlisdialogcontrol"></a><a name="isdialogcontrol"></a> CMFCBaseTabCtrl:: IsDialogControl
 
 ```
 BOOL IsDialogControl() const;
@@ -1475,7 +1476,7 @@ BOOL IsDialogControl() const;
 
 ### <a name="remarks"></a>解説
 
-## <a name="cmfcbasetabctrlisdrawnoprefix"></a><a name="isdrawnoprefix"></a>次の値を指定します。
+## <a name="cmfcbasetabctrlisdrawnoprefix"></a><a name="isdrawnoprefix"></a> CMFCBaseTabCtrl:: IsDrawNoPrefix
 
 ```
 BOOL IsDrawNoPrefix() const;
@@ -1485,9 +1486,9 @@ BOOL IsDrawNoPrefix() const;
 
 ### <a name="remarks"></a>解説
 
-## <a name="cmfcbasetabctrlisflatframe"></a><a name="isflatframe"></a>次の値を取得します。
+## <a name="cmfcbasetabctrlisflatframe"></a><a name="isflatframe"></a> CMFCBaseTabCtrl:: IsFlatFrame
 
-タブ コントロールのフレームをフラット スタイルでレンダリングするか、3D スタイルでレンダリングするかを示します。
+タブコントロールのフレームをフラットスタイルと3D スタイルのどちらで表示するかを示します。
 
 ```
 virtual BOOL IsFlatFrame() const;
@@ -1495,15 +1496,15 @@ virtual BOOL IsFlatFrame() const;
 
 ### <a name="return-value"></a>戻り値
 
-タブ コントロールのフレームがフラット スタイルでレンダリングされる場合は TRUE。フレームが 3D スタイルでレンダリングされる場合は FALSE。
+タブコントロールのフレームがフラットスタイルでレンダリングされる場合は TRUE。フレームが3D スタイルでレンダリングされる場合は FALSE。
 
 ### <a name="remarks"></a>解説
 
-タブ コントロールのフレームのスタイルを変更するには[、CMFCTabCtrl::SetFlatFrame](../../mfc/reference/cmfctabctrl-class.md#setflatframe)を使用します。
+[CMFCTabCtrl:: SetFlatFrame](../../mfc/reference/cmfctabctrl-class.md#setflatframe)を使用して、タブコントロールのフレームのスタイルを変更します。
 
-Outlook スタイルを使用するタブ コントロールは、フラット フレームではレンダリングできません。 これには[、CMFCOutlookBarTabCtrl クラスとそのクラス](../../mfc/reference/cmfcoutlookbartabctrl-class.md)から派生したクラスが含まれます。
+Outlook スタイルを使用するタブコントロールは、フラットフレームでは表示できません。 これには、 [CMFCOutlookBarTabCtrl クラス](../../mfc/reference/cmfcoutlookbartabctrl-class.md) と、そのクラスから派生したクラスが含まれます。
 
-## <a name="cmfcbasetabctrlisflattab"></a><a name="isflattab"></a>をクリックします。
+## <a name="cmfcbasetabctrlisflattab"></a><a name="isflattab"></a> CMFCBaseTabCtrl:: IsFlatTab
 
 ```
 virtual BOOL IsFlatTab() const;
@@ -1513,9 +1514,9 @@ virtual BOOL IsFlatTab() const;
 
 ### <a name="remarks"></a>解説
 
-## <a name="cmfcbasetabctrlishidesingletab"></a><a name="ishidesingletab"></a>1 つ離れて表示されます。
+## <a name="cmfcbasetabctrlishidesingletab"></a><a name="ishidesingletab"></a> CMFCBaseTabCtrl:: i Desingletab
 
-タブが 1 つしかない場合にタブ コントロールを非表示にするかどうかを決定します。
+タブが1つしかない場合にタブコントロールがタブラベルを非表示にするかどうかを決定します。
 
 ```
 virtual BOOL IsHideSingleTab() const;
@@ -1523,13 +1524,13 @@ virtual BOOL IsHideSingleTab() const;
 
 ### <a name="return-value"></a>戻り値
 
-タブ コントロールがタブを 1 つ持つときにタブ ラベルを非表示にする場合は TRUE。それ以外の場合は FALSE。
+タブコントロールにタブが1つあるときにタブラベルを非表示にする場合は TRUE。それ以外の場合は FALSE。
 
 ### <a name="remarks"></a>解説
 
-1 つのタブしかない場合にタブ ラベルを非表示にする有効にするには、メソッド[CMFCBaseTabCtrl::HideSingleTab](#hidesingletab)を使用します。
+タブが1つしかない場合にタブラベルを非表示にするには、 [CMFCBaseTabCtrl:: HideSingleTab](#hidesingletab) メソッドを使用します。
 
-## <a name="cmfcbasetabctrlisiconadded"></a><a name="isiconadded"></a>追加されたアイコン
+## <a name="cmfcbasetabctrlisiconadded"></a><a name="isiconadded"></a> CMFCBaseTabCtrl:: IsIconAdded
 
 ```
 BOOL IsIconAdded(
@@ -1539,17 +1540,17 @@ BOOL IsIconAdded(
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*アイコン*<br/>
+から *hIcon*<br/>
 
-[in]*アイコン*<br/>
+から *Iicon*<br/>
 
 ### <a name="return-value"></a>戻り値
 
 ### <a name="remarks"></a>解説
 
-## <a name="cmfcbasetabctrlisinplaceedit"></a><a name="isinplaceedit"></a>をクリックします。
+## <a name="cmfcbasetabctrlisinplaceedit"></a><a name="isinplaceedit"></a> CMFCBaseTabCtrl:: IsInPlaceEdit
 
-ユーザーがタブ ラベルを動的に変更できるようにタブ コントロールが構成されているかどうかを示します。
+ユーザーがタブラベルを動的に変更できるように、タブコントロールが構成されているかどうかを示します。
 
 ```
 virtual BOOL IsInPlaceEdit() const;
@@ -1557,13 +1558,13 @@ virtual BOOL IsInPlaceEdit() const;
 
 ### <a name="return-value"></a>戻り値
 
-インプレース編集が有効な場合は 0 以外。それ以外の場合は 0。
+埋め込み先編集が有効になっている場合は0以外の。それ以外の場合は0です。
 
 ### <a name="remarks"></a>解説
 
-インプレース編集を有効または無効にするには、メソッド[CMFCBaseTabCtrl::EnableInPlaceEdit](#enableinplaceedit)を呼び出します。
+埋め込み先編集を有効または無効にするには、メソッド [CMFCBaseTabCtrl:: Enableinplace edit](#enableinplaceedit)を呼び出します。
 
-## <a name="cmfcbasetabctrlisleftrightrounded"></a><a name="isleftrightrounded"></a>右回り
+## <a name="cmfcbasetabctrlisleftrightrounded"></a><a name="isleftrightrounded"></a> CMFCBaseTabCtrl:: IsLeftRightRounded
 
 ```
 virtual BOOL IsLeftRightRounded() const;
@@ -1573,7 +1574,7 @@ virtual BOOL IsLeftRightRounded() const;
 
 ### <a name="remarks"></a>解説
 
-## <a name="cmfcbasetabctrlismditab"></a><a name="ismditab"></a>をクリックします。
+## <a name="cmfcbasetabctrlismditab"></a><a name="ismditab"></a> CMFCBaseTabCtrl:: IsMDITab
 
 ```
 BOOL IsMDITab() const;
@@ -1583,9 +1584,9 @@ BOOL IsMDITab() const;
 
 ### <a name="remarks"></a>解説
 
-## <a name="cmfcbasetabctrlisonenotestyle"></a><a name="isonenotestyle"></a>次の点に関するページ
+## <a name="cmfcbasetabctrlisonenotestyle"></a><a name="isonenotestyle"></a> CMFCBaseTabCtrl:: IsOneNoteStyle
 
-OneNote のスタイルでタブを表示するかどうかを指定します。
+Microsoft OneNote のスタイルでタブを表示するかどうかを指定します。
 
 ```
 virtual BOOL IsOneNoteStyle() const;
@@ -1593,15 +1594,15 @@ virtual BOOL IsOneNoteStyle() const;
 
 ### <a name="return-value"></a>戻り値
 
-True を指定すると、タブが OneNote のスタイルで表示されます。それ以外の場合は FALSE。
+Microsoft OneNote のスタイルでタブが表示される場合は TRUE。それ以外の場合は FALSE。
 
 ### <a name="remarks"></a>解説
 
-メソッドを呼び出[します。](../../mfc/reference/cmdiframewndex-class.md#enablemditabs) このスタイルは[、 CMFCTabCtrl クラス](../../mfc/reference/cmfctabctrl-class.md)STYLE_3D_ONENOTEのインスタンスを作成するときにも有効にすることができます。 [CMFCTabCtrl::Create](../../mfc/reference/cmfctabctrl-class.md#create)
+[CMDIFrameWndEx:: EnableMDITabs](../../mfc/reference/cmdiframewndex-class.md#enablemditabs)メソッドを呼び出して、Microsoft OneNote スタイルを有効にします。 [CMFCTabCtrl クラス](../../mfc/reference/cmfctabctrl-class.md)のインスタンスを作成するときに、このスタイルを有効にすることもできます。スタイル STYLE_3D_ONENOTE を[CMFCTabCtrl:: Create](../../mfc/reference/cmfctabctrl-class.md#create)メソッドに渡すだけです。
 
-既定では、Microsoft OneNote スタイルは`CMFCBaseTabCtrl Class`、 から派生したカスタム クラスではサポートされていません。 ただし、`CMFCTabCtrl`クラスではサポートされています。
+既定では、Microsoft OneNote スタイルは、から派生したカスタムクラスではサポートされていません `CMFCBaseTabCtrl Class` 。 ただし、クラスではサポートされてい `CMFCTabCtrl` ます。
 
-## <a name="cmfcbasetabctrlisptintabarea"></a><a name="isptintabarea"></a>次の値を指定します。
+## <a name="cmfcbasetabctrlisptintabarea"></a><a name="isptintabarea"></a> CMFCBaseTabCtrl:: Isp/Tabarea
 
 ポイントがタブ領域内にあるかどうかを判断します。
 
@@ -1611,18 +1612,18 @@ virtual BOOL IsPtInTabArea(CPoint point) const = 0;
 
 ### <a name="parameters"></a>パラメーター
 
-*ポイント*<br/>
-[in]テストするポイント。
+*視点*<br/>
+からテストするポイント。
 
 ### <a name="return-value"></a>戻り値
 
-ポイントがタブ領域にある場合は 0 以外の値を返します。それ以外の場合は 0。
+ポイントがタブ領域にある場合は0以外の。それ以外の場合は0。
 
 ### <a name="remarks"></a>解説
 
-では、`CMFCBaseTabCtrl Class`このメソッドは純粋仮想関数であり、実装はありません。 から`CMFCBaseTabCtrl`クラスを派生させる場合は、この関数を実装する必要があります。
+では、 `CMFCBaseTabCtrl Class` このメソッドは純粋仮想関数であり、実装はありません。 からクラスを派生させる場合は `CMFCBaseTabCtrl` 、この関数を実装する必要があります。
 
-## <a name="cmfcbasetabctrlistabclosebuttonhighlighted"></a><a name="istabclosebuttonhighlighted"></a>ボタンが強調表示されました。
+## <a name="cmfcbasetabctrlistabclosebuttonhighlighted"></a><a name="istabclosebuttonhighlighted"></a> CMFCBaseTabCtrl:: IsTabCloseButtonHighlighted 表示
 
 ```
 BOOL IsTabCloseButtonHighlighted() const;
@@ -1632,7 +1633,7 @@ BOOL IsTabCloseButtonHighlighted() const;
 
 ### <a name="remarks"></a>解説
 
-## <a name="cmfcbasetabctrlistabclosebuttonpressed"></a><a name="istabclosebuttonpressed"></a>ボタン押下ボタン
+## <a name="cmfcbasetabctrlistabclosebuttonpressed"></a><a name="istabclosebuttonpressed"></a> CMFCBaseTabCtrl:: IsTabCloseButtonPressed れた状態
 
 ```
 BOOL IsTabCloseButtonPressed() const;
@@ -1642,9 +1643,9 @@ BOOL IsTabCloseButtonPressed() const;
 
 ### <a name="remarks"></a>解説
 
-## <a name="cmfcbasetabctrlistabdetachable"></a><a name="istabdetachable"></a>次の値を使用してタブを取り外す
+## <a name="cmfcbasetabctrlistabdetachable"></a><a name="istabdetachable"></a> CMFCBaseTabCtrl:: IsTabDetachable 可能
 
-タブが取り外し可能かどうかを判断します。
+タブが切り離し可能であるかどうかを判断します。
 
 ```
 virtual BOOL IsTabDetachable(int iTab) const;
@@ -1652,20 +1653,20 @@ virtual BOOL IsTabDetachable(int iTab) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*Itab*<br/>
-[in]確認するタブの 0 から始まるインデックス。
+*iTab*<br/>
+から確認するタブの0から始まるインデックス。
 
 ### <a name="return-value"></a>戻り値
 
-タブが取り外し可能な場合は TRUE。それ以外の場合は FALSE。
+タブが切り離し可能な場合は TRUE。それ以外の場合は FALSE。
 
 ### <a name="remarks"></a>解説
 
-タブをデタッチ可能にするには、メソッド[CMFCBaseTabCtrl::EnableTabDetach](#enabletabdetach)を使用します。
+タブをデタッチできるようにするには、 [CMFCBaseTabCtrl:: EnableTabDetach](#enabletabdetach)メソッドを使用します。
 
-## <a name="cmfcbasetabctrlistabicononly"></a><a name="istabicononly"></a>次の行いが行き詰めておく
+## <a name="cmfcbasetabctrlistabicononly"></a><a name="istabicononly"></a> CMFCBaseTabCtrl:: IsTabIconOnly
 
-タブ ラベルにアイコンのみを含み、テキストを含めずにするかどうかを指定します。
+タブラベルにアイコンだけが含まれ、テキストが含まれていないかどうかを判断します。
 
 ```
 virtual BOOL IsTabIconOnly(int iTab) const;
@@ -1673,20 +1674,20 @@ virtual BOOL IsTabIconOnly(int iTab) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*Itab*<br/>
-[in]タブの 0 から始まるインデックス。
+*iTab*<br/>
+からタブの0から始まるインデックス。
 
 ### <a name="return-value"></a>戻り値
 
-タブ ラベルにアイコンしかない場合は TRUE。それ以外の場合は FALSE。
+タブラベルにアイコンのみがある場合は TRUE。それ以外の場合は FALSE。
 
 ### <a name="remarks"></a>解説
 
-アプリケーションのタブにアイコンのみを表示するように設定するには、メソッド[CMFCBaseTabCtrl::SetTabIconOnly](#settabicononly)を呼び出します。
+アイコンのみを表示するようにアプリケーションのタブを設定するには、メソッド [CMFCBaseTabCtrl:: SetTabIconOnly](#settabicononly)を呼び出します。
 
-## <a name="cmfcbasetabctrlistabswapenabled"></a><a name="istabswapenabled"></a>を有効にします。
+## <a name="cmfcbasetabctrlistabswapenabled"></a><a name="istabswapenabled"></a> CMFCBaseTabCtrl:: IsTabSwapEnabled
 
-タブ コントロールで、ユーザーがマウスを使用してタブ位置を変更できるかどうかを決定します。
+タブコントロールで、ユーザーがマウスを使用してタブ位置を変更できるかどうかを決定します。
 
 ```
 BOOL IsTabSwapEnabled() const;
@@ -1694,13 +1695,13 @@ BOOL IsTabSwapEnabled() const;
 
 ### <a name="return-value"></a>戻り値
 
-ユーザーがタブ位置を変更できる場合は 0 以外の値を返します。それ以外の場合は 0。
+タブ位置をユーザーが変更できる場合は0以外。それ以外の場合は0です。
 
 ### <a name="remarks"></a>解説
 
-既定では、ユーザーはタブ コントロール内のタブの順序を変更できません。 この機能[を有効](#enabletabswap)にするには、メソッドを使用します。
+既定では、ユーザーはタブコントロールのタブの順序を変更できません。 この機能を有効にするには、 [CMFCBaseTabCtrl:: EnableTabSwap](#enabletabswap) メソッドを使用します。
 
-## <a name="cmfcbasetabctrlistabvisible"></a><a name="istabvisible"></a>タブタブ表示
+## <a name="cmfcbasetabctrlistabvisible"></a><a name="istabvisible"></a> CMFCBaseTabCtrl:: IsTabVisible
 
 指定したタブが表示されているかどうかを示します。
 
@@ -1710,14 +1711,14 @@ virtual BOOL IsTabVisible(int iTab) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*Itab*<br/>
-[in]確認するタブの 0 から始まるインデックス。
+*iTab*<br/>
+から確認するタブの0から始まるインデックス。
 
 ### <a name="return-value"></a>戻り値
 
-指定されたタブが表示されている場合は 0 以外の値を返します。それ以外の場合は 0。
+指定したタブが表示されている場合は0以外の。それ以外の場合は0です。
 
-## <a name="cmfcbasetabctrlisvs2005style"></a><a name="isvs2005style"></a>次のスタイルを使用します。
+## <a name="cmfcbasetabctrlisvs2005style"></a><a name="isvs2005style"></a> CMFCBaseTabCtrl:: IsVS2005Style
 
 ```
 virtual BOOL IsVS2005Style() const;
@@ -1727,9 +1728,9 @@ virtual BOOL IsVS2005Style() const;
 
 ### <a name="remarks"></a>解説
 
-## <a name="cmfcbasetabctrlm_bactivatetabonrightclick"></a><a name="m_bactivatetabonrightclick"></a>M_bActivateTabOnRightClick
+## <a name="cmfcbasetabctrlm_bactivatetabonrightclick"></a><a name="m_bactivatetabonrightclick"></a> CMFCBaseTabCtrl:: m_bActivateTabOnRightClick
 
-`m_bActivateTabOnRightClick`ユーザーがマウスの右ボタンを使用してタブ ラベルをクリックしたときに、タブがフォーカスされているかどうかを判断します。
+`m_bActivateTabOnRightClick` ユーザーがマウスの右ボタンを使用してタブラベルをクリックしたときにタブがフォーカスされているかどうかを判断します。
 
 ```
 BOOL m_bActivateTabOnRightClick;
@@ -1737,11 +1738,11 @@ BOOL m_bActivateTabOnRightClick;
 
 ### <a name="remarks"></a>解説
 
-このデータ メンバーの既定値は FALSE です。
+このデータメンバーの既定値は FALSE です。
 
-## <a name="cmfcbasetabctrlm_bautodestroywindow"></a><a name="m_bautodestroywindow"></a>M_bAutoDestroyWindow
+## <a name="cmfcbasetabctrlm_bautodestroywindow"></a><a name="m_bautodestroywindow"></a> CMFCBaseTabCtrl:: m_bAutoDestroyWindow
 
-`m_bAutoDestroyWindow`は、タブが削除されたときに、フレームワークがタブ上のオブジェクトを自動的に破棄するかどうかを決定します。
+`m_bAutoDestroyWindow` タブが削除されたときに、フレームワークがタブ上のオブジェクトを自動的に破棄するかどうかを決定します。
 
 ```
 BOOL m_bAutoDestroyWindow;
@@ -1751,7 +1752,7 @@ BOOL m_bAutoDestroyWindow;
 
 既定では、このメンバーは FALSE です。
 
-## <a name="cmfcbasetabctrlmovetab"></a><a name="movetab"></a>タブの移動
+## <a name="cmfcbasetabctrlmovetab"></a><a name="movetab"></a> CMFCBaseTabCtrl:: MoveTab
 
 ```
 virtual void MoveTab(
@@ -1761,15 +1762,15 @@ virtual void MoveTab(
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*nソース*<br/>
+から *Nsource*<br/>
 
-[in]*nDest*<br/>
+から *Ndest*<br/>
 
 ### <a name="remarks"></a>解説
 
-## <a name="cmfcbasetabctrlonchangetabs"></a><a name="onchangetabs"></a>タブの変更
+## <a name="cmfcbasetabctrlonchangetabs"></a><a name="onchangetabs"></a> CMFCBaseTabCtrl:: OnChangeTabs
 
-タブ コントロールのタブ数が変更されると、フレームワークはこのメソッドを呼び出します。
+フレームワークは、タブコントロールのタブの数が変化したときにこのメソッドを呼び出します。
 
 ```
 virtual void OnChangeTabs();
@@ -1777,9 +1778,9 @@ virtual void OnChangeTabs();
 
 ### <a name="remarks"></a>解説
 
-既定では、このメソッドは何も実行しません。 タブ コントロールのタブ数が変更されたときにカスタム コードを実行するには、このメソッドをオーバーライドします。
+既定では、このメソッドは何も実行しません。 タブコントロールのタブの数が変化したときにカスタムコードを実行するには、このメソッドをオーバーライドします。
 
-## <a name="cmfcbasetabctrlondrop"></a><a name="ondrop"></a>をクリックします。
+## <a name="cmfcbasetabctrlondrop"></a><a name="ondrop"></a> CMFCBaseTabCtrl:: OnDrop
 
 ```
 virtual BOOL OnDrop(
@@ -1790,17 +1791,17 @@ virtual BOOL OnDrop(
 
 ### <a name="parameters"></a>パラメーター
 
-[in]_オブジェクト\*_<br/>
+から _COleDataObject \*_<br/>
 
-[in]*ドロップエフェクト*<br/>
+から *Dropeffect*<br/>
 
-[in]*CPoint*<br/>
+から *CPoint*<br/>
 
 ### <a name="return-value"></a>戻り値
 
 ### <a name="remarks"></a>解説
 
-## <a name="cmfcbasetabctrlondragover"></a><a name="ondragover"></a>オーバー
+## <a name="cmfcbasetabctrlondragover"></a><a name="ondragover"></a> CMFCBaseTabCtrl:: OnDragOver
 
 ```
 virtual DROPEFFECT OnDragOver(
@@ -1811,17 +1812,17 @@ virtual DROPEFFECT OnDragOver(
 
 ### <a name="parameters"></a>パラメーター
 
-[in]_オブジェクト\*_<br/>
+から _COleDataObject \*_<br/>
 
-[in]*ドワード*<br/>
+から *DWORD*<br/>
 
-[in]*CPoint*<br/>
+から *CPoint*<br/>
 
 ### <a name="return-value"></a>戻り値
 
 ### <a name="remarks"></a>解説
 
-## <a name="cmfcbasetabctrlondragleave"></a><a name="ondragleave"></a>をクリックします。
+## <a name="cmfcbasetabctrlondragleave"></a><a name="ondragleave"></a> CMFCBaseTabCtrl:: OnDragLeave
 
 ```
 virtual void OnDragLeave();
@@ -1829,7 +1830,7 @@ virtual void OnDragLeave();
 
 ### <a name="remarks"></a>解説
 
-## <a name="cmfcbasetabctrlondragenter"></a><a name="ondragenter"></a>キーを押しながら
+## <a name="cmfcbasetabctrlondragenter"></a><a name="ondragenter"></a> CMFCBaseTabCtrl:: OnDragEnter
 
 ```
 virtual DROPEFFECT OnDragEnter(
@@ -1840,17 +1841,17 @@ virtual DROPEFFECT OnDragEnter(
 
 ### <a name="parameters"></a>パラメーター
 
-[in]_オブジェクト\*_<br/>
+から _COleDataObject \*_<br/>
 
-[in]*ドワード*<br/>
+から *DWORD*<br/>
 
-[in]*CPoint*<br/>
+から *CPoint*<br/>
 
 ### <a name="return-value"></a>戻り値
 
 ### <a name="remarks"></a>解説
 
-## <a name="cmfcbasetabctrlonrenametab"></a><a name="onrenametab"></a>タブの変更
+## <a name="cmfcbasetabctrlonrenametab"></a><a name="onrenametab"></a> CMFCBaseTabCtrl:: OnRenameTab
 
 ```
 virtual BOOL OnRenameTab(int, CString&);
@@ -1858,15 +1859,15 @@ virtual BOOL OnRenameTab(int, CString&);
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*int*<br/>
+から *int*<br/>
 
-[in]*C文字列&*<br/>
+から *CString&*<br/>
 
 ### <a name="return-value"></a>戻り値
 
 ### <a name="remarks"></a>解説
 
-## <a name="cmfcbasetabctrlpretranslatemessage"></a><a name="pretranslatemessage"></a>メッセージ:P再変換
+## <a name="cmfcbasetabctrlpretranslatemessage"></a><a name="pretranslatemessage"></a> CMFCBaseTabCtrl::P reTranslateMessage
 
 ```
 virtual BOOL PreTranslateMessage(MSG* pMsg);
@@ -1874,15 +1875,15 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*をクリックします。*<br/>
+から *pMsg*<br/>
 
 ### <a name="return-value"></a>戻り値
 
 ### <a name="remarks"></a>解説
 
-## <a name="cmfcbasetabctrlrecalclayout"></a><a name="recalclayout"></a>リカルクレイアウト
+## <a name="cmfcbasetabctrlrecalclayout"></a><a name="recalclayout"></a> CMFCBaseTabCtrl:: RecalcLayout
 
-タブ コントロールの内部レイアウトを再計算します。
+タブコントロールの内部レイアウトを再計算します。
 
 ```
 virtual void RecalcLayout() = 0;
@@ -1890,11 +1891,11 @@ virtual void RecalcLayout() = 0;
 
 ### <a name="remarks"></a>解説
 
-では、`CMFCBaseTabCtrl Class`このメソッドは純粋仮想関数です。 から`CMFCBaseTabCtrl`クラスを派生させる場合は、この関数を実装する必要があります。
+では、 `CMFCBaseTabCtrl Class` このメソッドは純粋仮想関数です。 からクラスを派生させる場合は `CMFCBaseTabCtrl` 、この関数を実装する必要があります。
 
-## <a name="cmfcbasetabctrlremovealltabs"></a><a name="removealltabs"></a>タブの削除
+## <a name="cmfcbasetabctrlremovealltabs"></a><a name="removealltabs"></a> CMFCBaseTabCtrl:: RemoveAllTabs
 
-タブ コントロールからすべてのタブを削除します。
+タブコントロールからすべてのタブを削除します。
 
 ```
 virtual void RemoveAllTabs();
@@ -1902,11 +1903,11 @@ virtual void RemoveAllTabs();
 
 ### <a name="remarks"></a>解説
 
-[CMFCBaseTabCtrl::m_bAutoDestroyWindow](#m_bautodestroywindow)が TRUE の場合、フレームワークは削除されたタブにアタッチされているすべての[CWnd](../../mfc/reference/cwnd-class.md)オブジェクトを削除します。
+[CMFCBaseTabCtrl:: m_bAutoDestroyWindow](#m_bautodestroywindow)が TRUE の場合、削除されたタブにアタッチされているすべての[CWnd](../../mfc/reference/cwnd-class.md)オブジェクトがフレームワークによって削除されます。
 
-## <a name="cmfcbasetabctrlremovetab"></a><a name="removetab"></a>タブを削除します。
+## <a name="cmfcbasetabctrlremovetab"></a><a name="removetab"></a> CMFCBaseTabCtrl:: RemoveTab
 
-タブ コントロールからタブを削除します。
+タブコントロールからタブを削除します。
 
 ```
 virtual BOOL RemoveTab(
@@ -1916,21 +1917,21 @@ virtual BOOL RemoveTab(
 
 ### <a name="parameters"></a>パラメーター
 
-*Itab*<br/>
-[in]タブの 0 から始まるインデックス。
+*iTab*<br/>
+からタブの0から始まるインデックス。
 
-*ブレカルクレイアウト*<br/>
-[in]タブのレイアウトを再計算するかどうかを指定するブール値パラメーター。
+*bRecalcLayout*<br/>
+からタブのレイアウトを再計算するかどうかを指定するブール型パラメーターです。
 
 ### <a name="return-value"></a>戻り値
 
-メソッドがタブを正常に削除した場合は TRUE。それ以外の場合は FALSE。
+メソッドによってタブが正常に削除された場合は TRUE。それ以外の場合は FALSE。
 
 ### <a name="remarks"></a>解説
 
-[CMFCBaseTabCtrl::m_bAutoDestroyWindow](#m_bautodestroywindow)が TRUE`RemoveTab`の場合、指定されたタブに関連付けられている[CWnd](../../mfc/reference/cwnd-class.md)オブジェクトを破棄します。
+[CMFCBaseTabCtrl:: m_bAutoDestroyWindow](#m_bautodestroywindow)が TRUE の場合、 `RemoveTab` 指定したタブに関連付けられている[CWnd](../../mfc/reference/cwnd-class.md)オブジェクトを破棄します。
 
-## <a name="cmfcbasetabctrlrenametab"></a><a name="renametab"></a>タブの名前を変更します。
+## <a name="cmfcbasetabctrlrenametab"></a><a name="renametab"></a> CMFCBaseTabCtrl:: RenameTab
 
 ```
 virtual BOOL RenameTab();
@@ -1940,15 +1941,15 @@ virtual BOOL RenameTab();
 
 ### <a name="remarks"></a>解説
 
-## <a name="cmfcbasetabctrlresetimagelist"></a><a name="resetimagelist"></a>一覧をクリックします。
+## <a name="cmfcbasetabctrlresetimagelist"></a><a name="resetimagelist"></a> CMFCBaseTabCtrl:: ResetImageList
 
-[クラス](../../mfc/reference/cmfcbasetabctrl-class.md)のインスタンスのイメージ リストをリセットします。
+[CMFCBaseTabCtrl クラス](../../mfc/reference/cmfcbasetabctrl-class.md)のインスタンスのイメージリストをリセットします。
 
 ```cpp
 void ResetImageList();
 ```
 
-## <a name="cmfcbasetabctrlserialize"></a><a name="serialize"></a>シリアル化
+## <a name="cmfcbasetabctrlserialize"></a><a name="serialize"></a> CMFCBaseTabCtrl:: Serialize
 
 ```
 virtual void Serialize(CArchive& ar);
@@ -1956,11 +1957,11 @@ virtual void Serialize(CArchive& ar);
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*ar*<br/>
+から *ar*<br/>
 
 ### <a name="remarks"></a>解説
 
-## <a name="cmfcbasetabctrlsetactivetab"></a><a name="setactivetab"></a>タブを設定します。
+## <a name="cmfcbasetabctrlsetactivetab"></a><a name="setactivetab"></a> CMFCBaseTabCtrl:: SetActiveTab
 
 指定したタブをアクティブにします。
 
@@ -1970,8 +1971,8 @@ virtual BOOL SetActiveTab(int iTab) = 0;
 
 ### <a name="parameters"></a>パラメーター
 
-*Itab*<br/>
-[in]タブの 0 から始まるインデックス`SetActiveTab`は、このインデックスがアクティブなタブになります。
+*iTab*<br/>
+からタブの0から始まるインデックス。 `SetActiveTab` このインデックスを持つタブをアクティブにします。
 
 ### <a name="return-value"></a>戻り値
 
@@ -1979,9 +1980,9 @@ virtual BOOL SetActiveTab(int iTab) = 0;
 
 ### <a name="remarks"></a>解説
 
-では、`CMFCBaseTabCtrl Class`このメソッドは純粋仮想関数です。 から`CMFCBaseTabCtrl`クラスを派生させる場合は、この関数を実装する必要があります。
+では、 `CMFCBaseTabCtrl Class` このメソッドは純粋仮想関数です。 からクラスを派生させる場合は `CMFCBaseTabCtrl` 、この関数を実装する必要があります。
 
-## <a name="cmfcbasetabctrlsetactivetabcolor"></a><a name="setactivetabcolor"></a>をクリックします。
+## <a name="cmfcbasetabctrlsetactivetabcolor"></a><a name="setactivetabcolor"></a> CMFCBaseTabCtrl:: SetActiveTabColor
 
 アクティブなタブの背景色を設定します。
 
@@ -1991,14 +1992,14 @@ virtual void SetActiveTabColor(COLORREF clr);
 
 ### <a name="parameters"></a>パラメーター
 
-*Clr*<br/>
-[in]新しい背景色を指定します。
+<bpt id="p1">*</bpt>clr<ept id="p1">*</ept><br/>
+から新しい背景色を指定します。
 
 ### <a name="remarks"></a>解説
 
-フレームワークは、アクティブなタブの既定の背景色を取得、 [GetSysColor](/windows/win32/api/winuser/nf-winuser-getsyscolor)メソッド。
+フレームワークは、 [Getsyscolor](/windows/win32/api/winuser/nf-winuser-getsyscolor)メソッドからアクティブなタブの既定の背景色を取得します。
 
-## <a name="cmfcbasetabctrlsetactivetabtextcolor"></a><a name="setactivetabtextcolor"></a>をクリックします。
+## <a name="cmfcbasetabctrlsetactivetabtextcolor"></a><a name="setactivetabtextcolor"></a> CMFCBaseTabCtrl:: SetActiveTabTextColor
 
 アクティブなタブのテキストの色を設定します。
 
@@ -2008,16 +2009,16 @@ virtual void SetActiveTabTextColor(COLORREF clr);
 
 ### <a name="parameters"></a>パラメーター
 
-*Clr*<br/>
-[in]新しいテキストの色を指定する[COLORREF](/windows/win32/gdi/colorref)パラメーター。
+<bpt id="p1">*</bpt>clr<ept id="p1">*</ept><br/>
+から新しいテキストの色を指定する [COLORREF](/windows/win32/gdi/colorref) パラメーター。
 
 ### <a name="remarks"></a>解説
 
-既定では、フレームワークは[GetSysColor](/windows/win32/api/winuser/nf-winuser-getsyscolor)からテキストの色を取得します。 メソッドを使用して、この既定`SetActiveTabTextColor`の色をオーバーライドします。
+既定では、フレームワークは [Getsyscolor](/windows/win32/api/winuser/nf-winuser-getsyscolor)からテキストの色を取得します。 メソッドを使用して、この既定の色をオーバーライドし `SetActiveTabTextColor` ます。
 
-## <a name="cmfcbasetabctrlsetautocolors"></a><a name="setautocolors"></a>自動カラーの設定
+## <a name="cmfcbasetabctrlsetautocolors"></a><a name="setautocolors"></a> CMFCBaseTabCtrl:: SetAutoColors
 
-フレームワークが自動カラー モードで使用するタブ コントロールの色を設定します。
+フレームワークが自動カラーモードで使用するタブコントロールの色を設定します。
 
 ```cpp
 void SetAutoColors(const CArray<COLORREF,COLORREF>& arColors);
@@ -2025,16 +2026,16 @@ void SetAutoColors(const CArray<COLORREF,COLORREF>& arColors);
 
 ### <a name="parameters"></a>パラメーター
 
-*アカラーズ*<br/>
-[in]RGB カラーの配列。
+*arColors*<br/>
+からRGB 色の配列。
 
 ### <a name="remarks"></a>解説
 
-色のカスタム配列を指定した場合、色の既定の配列は無視されます。 *パラメーター arColors*が空の場合、フレームワークは既定の色の配列に戻ります。
+色のカスタム配列を指定した場合、色の既定の配列は無視されます。 パラメーター *Arcolors* が空の場合、フレームワークは既定の色の配列に戻ります。
 
-自動カラー モードを有効にするには、[メソッド](#enableautocolor)を使用します。
+Autocolor モードを有効にするには、 [CMFCBaseTabCtrl:: EnableAutoColor](#enableautocolor) メソッドを使用します。
 
-## <a name="cmfcbasetabctrlsetdockingbarwrapperrtc"></a><a name="setdockingbarwrapperrtc"></a>をクリックします。
+## <a name="cmfcbasetabctrlsetdockingbarwrapperrtc"></a><a name="setdockingbarwrapperrtc"></a> CMFCBaseTabCtrl:: SetDockingBarWrapperRTC
 
 [CDockablePane Class](../../mfc/reference/cdockablepane-class.md)から派生しているのではない任意のオブジェクトに使用するラッパー クラスを設定します。
 
@@ -2045,15 +2046,15 @@ void SetDockingBarWrapperRTC(CRuntimeClass* pRTC);
 ### <a name="parameters"></a>パラメーター
 
 *pRTC*<br/>
-[in]新しいラッパー クラスのランタイム クラス情報。
+から新しいラッパークラスのランタイムクラス情報。
 
 ### <a name="remarks"></a>解説
 
-タブ コントロールにタブを追加するには、メソッド[CMFCBaseTabCtrl:::AddTab](#addtab)と[CMFCBaseTabCtrl::挿入タブ](#inserttab)を使用します。 タブを追加する場合、そのタブの各コントロールはドッキング可能である必要があります。 派生`CDockablePane`していないオブジェクトはラップする必要があります。 `AddTab`を`InsertTab`クリックし、これらのオブジェクトのラッパーを作成します。 既定のラッパー クラスは[、CDockablePane アダプター クラスです](../../mfc/reference/cdockablepaneadapter-class.md)。 このメソッド`SetDockingBarWrapperRTC`を使用すると、ラッパー クラスとして使用されるクラスを変更できます。 提供するラッパー クラスは`CDockablePaneAdapter`から派生する必要があります。
+タブは、 [CMFCBaseTabCtrl:: addtab](#addtab) メソッドと [CMFCBaseTabCtrl:: inserttab](#inserttab)メソッドを使用してタブコントロールに追加します。 タブを追加するときは、そのタブ上の各コントロールをドッキング可能にする必要があります。 から派生していないオブジェクトはすべて `CDockablePane` ラップする必要があります。 `AddTab``InsertTab`これらのオブジェクトのラッパーを作成します。 既定のラッパークラスは、 [CDockablePaneAdapter クラス](../../mfc/reference/cdockablepaneadapter-class.md)です。 メソッドを使用すると、 `SetDockingBarWrapperRTC` ラッパークラスとして使用されるクラスを変更できます。 指定するラッパークラスはから派生している必要があり `CDockablePaneAdapter` ます。
 
-## <a name="cmfcbasetabctrlsetdrawnoprefix"></a><a name="setdrawnoprefix"></a>を使用します。
+## <a name="cmfcbasetabctrlsetdrawnoprefix"></a><a name="setdrawnoprefix"></a> CMFCBaseTabCtrl:: SetDrawNoPrefix
 
-タブ ラベルのプレフィックス文字の処理を有効または無効にします。
+タブラベルのプレフィックス文字の処理を有効または無効にします。
 
 ```cpp
 void SetDrawNoPrefix(
@@ -2063,19 +2064,19 @@ void SetDrawNoPrefix(
 
 ### <a name="parameters"></a>パラメーター
 
-*プレフィックス*<br/>
-[in]プレフィックス文字を処理する場合は TRUE。それ以外の場合は FALSE。
+*bNoPrefix*<br/>
+からプレフィックス文字を処理する場合は TRUE。それ以外の場合は FALSE。
 
-*引き出し*<br/>
-[in]タブ付きウィンドウを再描画する場合は TRUE。それ以外の場合は FALSE。
+*より描画*<br/>
+からタブ付きウィンドウを再描画する場合は TRUE。それ以外の場合は FALSE。
 
 ### <a name="remarks"></a>解説
 
-プレフィックス文字は、アンパサンド (&) の前に付加されるニーモニック文字です。
+プレフィックス文字は、アンパサンド (&) で始まるニーモニック文字です。
 
-## <a name="cmfcbasetabctrlsetimagelist"></a><a name="setimagelist"></a>をクリックします。
+## <a name="cmfcbasetabctrlsetimagelist"></a><a name="setimagelist"></a> CMFCBaseTabCtrl:: SetImageList
 
-タブ コントロールのアイコン イメージ リストを設定します。
+タブコントロールのアイコンイメージリストを設定します。
 
 ```
 virtual BOOL SetImageList(
@@ -2088,31 +2089,31 @@ virtual BOOL SetImageList(HIMAGELIST hImageList);
 
 ### <a name="parameters"></a>パラメーター
 
-*Uiid*<br/>
-[in]ビットマップ リソース ID。 `SetImageList`このリソースからイメージ リストを読み込みます。
+*uiID*<br/>
+からビットマップリソース ID。 `SetImageList` このリソースからイメージリストを読み込みます。
 
-*Cx*<br/>
-[in]各イメージの幅 (ピクセル単位)。
+*シリーズ*<br/>
+から各イメージの幅 (ピクセル単位)。
 
-*clrトランスプ*<br/>
-[in]イメージの透明色を示す[COLORREF](/windows/win32/gdi/colorref)パラメーター。
+*clrTransp*<br/>
+からイメージの透明色を示す [COLORREF](/windows/win32/gdi/colorref) パラメーター。
 
-*一覧*<br/>
-[in]プリロードされたイメージ リストへのハンドル。
+*hImageList*<br/>
+からプリロードされたイメージリストへのハンドル。
 
 ### <a name="return-value"></a>戻り値
 
-メソッドが成功した場合は 0 以外の値を返します。それ以外の場合は 0。
+メソッドが成功した場合は0以外の。それ以外の場合は0。
 
 ### <a name="remarks"></a>解説
 
-アイコン イメージ リストのイメージは、タブのラベルと一緒に表示されます。アイコンを表示するには[、CMFCBaseTabCtrl::AddTab](#addtab)を呼び出すときに、そのインデックスを指定する必要があります。
+[アイコンイメージ] リストの画像が、タブのラベルと共に表示されます。アイコンを表示するには、 [CMFCBaseTabCtrl:: AddTab](#addtab)を呼び出すときにそのインデックスを指定する必要があります。
 
-`SetImageList`タブ コントロールがフラット スタイルで作成されている場合は失敗します。 また、フレームワークが*uiID*で示されたイメージを読み込めない場合にも失敗します。
+`SetImageList` タブコントロールがフラットスタイルで作成された場合、は失敗します。 また、 *uiID* によって示されたイメージをフレームワークが読み込むことができない場合にも失敗します。
 
-このメソッドは、画像とテキストのサイズに応じてタブの高さを再計算します。
+このメソッドは、画像とテキストのサイズに応じて、タブの高さを再計算します。
 
-## <a name="cmfcbasetabctrlsetlocation"></a><a name="setlocation"></a>を設定します。
+## <a name="cmfcbasetabctrlsetlocation"></a><a name="setlocation"></a> CMFCBaseTabCtrl:: SetLocation
 
 ```
 virtual void SetLocation(Location location);
@@ -2120,11 +2121,11 @@ virtual void SetLocation(Location location);
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*場所*<br/>
+から *場所*<br/>
 
 ### <a name="remarks"></a>解説
 
-## <a name="cmfcbasetabctrlsettabbkcolor"></a><a name="settabbkcolor"></a>コントロール::セットタブブラ
+## <a name="cmfcbasetabctrlsettabbkcolor"></a><a name="settabbkcolor"></a> CMFCBaseTabCtrl:: SetTabBkColor
 
 指定したタブの背景色を設定します。
 
@@ -2136,19 +2137,19 @@ virtual BOOL SetTabBkColor(
 
 ### <a name="parameters"></a>パラメーター
 
-*Itab*<br/>
-[in]タブの 0 から始まるインデックス。
+*iTab*<br/>
+からタブの0から始まるインデックス。
 
-*色*<br/>
-[in]設定する色。
+*color*<br/>
+から設定する色。
 
 ### <a name="return-value"></a>戻り値
 
 成功した場合は TRUE。それ以外の場合は FALSE。
 
-## <a name="cmfcbasetabctrlsettabbordersize"></a><a name="settabbordersize"></a>サイズを設定します。
+## <a name="cmfcbasetabctrlsettabbordersize"></a><a name="settabbordersize"></a> CMFCBaseTabCtrl:: SetTabBorderSize
 
-タブ コントロールの新しい境界線のサイズを設定します。
+タブコントロールの新しい境界線のサイズを設定します。
 
 ```
 virtual void SetTabBorderSize(
@@ -2158,15 +2159,15 @@ virtual void SetTabBorderSize(
 
 ### <a name="parameters"></a>パラメーター
 
-*タブボーダーサイズ*<br/>
-[in]新しい境界線のサイズ (ピクセル単位)。
+*nTabBorderSize*<br/>
+から新しい境界線のサイズ (ピクセル単位)。
 
-*brepaint*<br/>
-[in]フレームワークがコントロールを再描画するかどうかを示すブール値パラメーター。
+*塗装*<br/>
+からフレームワークがコントロールを再描画するかどうかを示すブール型パラメーターです。
 
-## <a name="cmfcbasetabctrlsettabhicon"></a><a name="settabhicon"></a>をクリックします。
+## <a name="cmfcbasetabctrlsettabhicon"></a><a name="settabhicon"></a> CMFCBaseTabCtrl:: SetTabHicon
 
-タブ ラベルのアイコンを設定します。
+タブラベルのアイコンを設定します。
 
 ```
 virtual BOOL SetTabHicon(
@@ -2176,17 +2177,17 @@ virtual BOOL SetTabHicon(
 
 ### <a name="parameters"></a>パラメーター
 
-*Itab*<br/>
-[in]タブの 0 から始まるインデックス。このメソッドは、このタブのアイコンを変更します。
+*iTab*<br/>
+からタブの0から始まるインデックス。このメソッドは、このタブのアイコンを変更します。
 
-*Hicon*<br/>
-[in]アイコンへのハンドル。
+*hIcon*<br/>
+からアイコンを示すハンドル。
 
 ### <a name="return-value"></a>戻り値
 
 成功した場合は TRUE、それ以外の場合は FALSE。
 
-## <a name="cmfcbasetabctrlsettabicon"></a><a name="settabicon"></a>をクリックします。
+## <a name="cmfcbasetabctrlsettabicon"></a><a name="settabicon"></a> CMFCBaseTabCtrl:: SetTabIcon
 
 タブのアイコンを設定します。
 
@@ -2198,19 +2199,19 @@ virtual BOOL SetTabIcon(
 
 ### <a name="parameters"></a>パラメーター
 
-*Itab*<br/>
-[in]更新するタブの 0 から始まるインデックス。
+*iTab*<br/>
+から更新するタブの0から始まるインデックス。
 
 *uiIcon*<br/>
-[in]新しいアイコンのアイコン ID。 この ID は、内部[CImageList](../../mfc/reference/cimagelist-class.md)オブジェクトを参照します。
+から新しいアイコンのアイコン ID。 この ID は、内部の [CImageList](../../mfc/reference/cimagelist-class.md) オブジェクトを参照します。
 
 ### <a name="return-value"></a>戻り値
 
 成功した場合は TRUE、それ以外の場合は FALSE。
 
-## <a name="cmfcbasetabctrlsettabicononly"></a><a name="settabicononly"></a>をクリックします。
+## <a name="cmfcbasetabctrlsettabicononly"></a><a name="settabicononly"></a> CMFCBaseTabCtrl:: SetTabIconOnly
 
-特定のタブにアイコン (テキスト ラベルなし) のみを表示できるようにします。
+特定のタブにアイコンのみ (テキストラベルなし) を表示できるようにします。
 
 ```
 virtual BOOL SetTabIconOnly(
@@ -2221,14 +2222,14 @@ virtual BOOL SetTabIconOnly(
 
 ### <a name="parameters"></a>パラメーター
 
-*Itab*<br/>
-[in]変更するタブの 0 から始まるインデックス。
+*iTab*<br/>
+から変更するタブの0から始まるインデックス。
 
-*ビコンのみ*<br/>
-[in]アイコンのみを表示するかどうかを決定するブール値パラメーター。
+*bIconOnly*<br/>
+からアイコンのみを表示するかどうかを決定するブール型パラメーターです。
 
-*常にツールヒントを表示する*<br/>
-[in]フレームワークがアイコンのみを表示するタブ ラベルのツールヒントを表示するかどうかを決定するブール値パラメーター。
+*bShowTooltipAlways*<br/>
+からアイコンのみを表示するタブラベルのツールヒントをフレームワークで表示するかどうかを指定するブール型パラメーター。
 
 ### <a name="return-value"></a>戻り値
 
@@ -2236,11 +2237,11 @@ virtual BOOL SetTabIconOnly(
 
 ### <a name="remarks"></a>解説
 
-既定では、タブ コントロールには、各タブのアイコンとテキスト ラベルが表示されます。
+既定では、タブコントロールには各タブのアイコンとテキストラベルが表示されます。
 
-## <a name="cmfcbasetabctrlsettablabel"></a><a name="settablabel"></a>タブラベルを設定します。
+## <a name="cmfcbasetabctrlsettablabel"></a><a name="settablabel"></a> CMFCBaseTabCtrl:: SetTabLabel
 
-タブ ラベルのテキストを設定します。
+タブラベルのテキストを設定します。
 
 ```
 virtual BOOL SetTabLabel(
@@ -2250,17 +2251,17 @@ virtual BOOL SetTabLabel(
 
 ### <a name="parameters"></a>パラメーター
 
-*Itab*<br/>
-[in]更新するタブの 0 から始まるインデックス。
+*iTab*<br/>
+から更新するタブの0から始まるインデックス。
 
-*ストラベル*<br/>
-[in]タブ ラベルの新しいテキストを含む文字列への参照。
+*strLabel*<br/>
+からタブラベルの新しいテキストを含む文字列への参照。
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合は 0 以外。それ以外の場合は 0。
+成功した場合は0以外の。それ以外の場合は0。
 
-## <a name="cmfcbasetabctrlsettabsheight"></a><a name="settabsheight"></a>をクリックします。
+## <a name="cmfcbasetabctrlsettabsheight"></a><a name="settabsheight"></a> CMFCBaseTabCtrl:: SetTabsHeight 視覚
 
 ```
 virtual void SetTabsHeight();
@@ -2268,9 +2269,9 @@ virtual void SetTabsHeight();
 
 ### <a name="remarks"></a>解説
 
-## <a name="cmfcbasetabctrlsettabsorder"></a><a name="settabsorder"></a>並べ替え順序
+## <a name="cmfcbasetabctrlsettabsorder"></a><a name="settabsorder"></a> CMFCBaseTabCtrl:: SetTabsOrder
 
-タブを指定された順序で並べ替えます。
+指定した順序でタブを配置します。
 
 ```
 BOOL SetTabsOrder(const CArray<int,int>& arOrder);
@@ -2278,18 +2279,18 @@ BOOL SetTabsOrder(const CArray<int,int>& arOrder);
 
 ### <a name="parameters"></a>パラメーター
 
-*アルオーダー*<br/>
-[in]新しいタブ オーダーを定義する 0 から始まるインデックスの配列。
+*arOrder*<br/>
+から新しいタブオーダーを定義する、0から始まるインデックスの配列。
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合は TRUE。それ以外の場合は FAIL を実行します。
+成功した場合は TRUE。それ以外の場合は失敗します。
 
 ### <a name="remarks"></a>解説
 
-*arOrder*配列のサイズは、タブ コントロールのタブ数と同じでなければなりません。
+*Arorder* 配列のサイズは、タブコントロールのタブの数と同じである必要があります。
 
-## <a name="cmfcbasetabctrlsettabtextcolor"></a><a name="settabtextcolor"></a>コントロールの種類::テキストの色を設定します。
+## <a name="cmfcbasetabctrlsettabtextcolor"></a><a name="settabtextcolor"></a> CMFCBaseTabCtrl:: SetTabTextColor
 
 特定のタブのテキストの色を設定します。
 
@@ -2301,17 +2302,17 @@ virtual BOOL SetTabTextColor(
 
 ### <a name="parameters"></a>パラメーター
 
-*Itab*<br/>
-[in]タブの 0 から始まるインデックス。
+*iTab*<br/>
+からタブの0から始まるインデックス。
 
-*色*<br/>
-[in]新しいテキストの色を示す[COLORREF](/windows/win32/gdi/colorref)パラメーター。
+*color*<br/>
+から新しいテキストの色を示す [COLORREF](/windows/win32/gdi/colorref) パラメーター。
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合は 0 以外。それ以外の場合は 0。
+成功した場合は0以外の。それ以外の場合は0。
 
-## <a name="cmfcbasetabctrlshowtab"></a><a name="showtab"></a>ウィンドウタブ
+## <a name="cmfcbasetabctrlshowtab"></a><a name="showtab"></a> CMFCBaseTabCtrl:: ShowTab
 
 指定したタブを表示または非表示にします。
 
@@ -2325,17 +2326,17 @@ virtual BOOL ShowTab(
 
 ### <a name="parameters"></a>パラメーター
 
-*Itab*<br/>
-[in]表示または非表示にする`ShowTab`タブのインデックス。
+*iTab*<br/>
+から `ShowTab` 表示または非表示にするタブのインデックス。
 
-*bショー*<br/>
-[in]タブを表示するかどうかを示すブール値パラメーター。
+*bShow*<br/>
+からタブを表示するかどうかを示すブール型パラメーターです。
 
-*ブレカルクレイアウト*<br/>
-[in]ウィンドウ レイアウトをすぐに再計算するかどうかを示すブール値パラメーター。
+*bRecalcLayout*<br/>
+からウィンドウレイアウトをすぐに再計算するかどうかを示すブール型パラメーターです。
 
-*bアクティブ化*<br/>
-[in]*iTab*で指定されたタブを選択するかどうかを示すブール値パラメーター。
+*bActivate*<br/>
+から *Itab* によって指定されたタブを選択するかどうかを示すブール型パラメーターです。
 
 ### <a name="return-value"></a>戻り値
 
@@ -2343,9 +2344,9 @@ virtual BOOL ShowTab(
 
 ### <a name="remarks"></a>解説
 
-bActivate*bActivate*パラメータは *、bShow*が TRUE の場合にのみ適用されます。 *bActivate*が TRUE`ShowTab`で、成功`ShowTab`した場合は、タブ ウィンドウの親にメッセージAFX_WM_CHANGE_ACTIVE_TABを送信します。
+パラメーター *Bactivate* は、 *bShow* が TRUE の場合にのみ適用されます。 *Bactivate* が TRUE で、が正常に実行された場合 `ShowTab` 、 `ShowTab` はメッセージ AFX_WM_CHANGE_ACTIVE_TAB をタブウィンドウの親に送信します。
 
-## <a name="cmfcbasetabctrlstartrenametab"></a><a name="startrenametab"></a>タブを開始します。
+## <a name="cmfcbasetabctrlstartrenametab"></a><a name="startrenametab"></a> CMFCBaseTabCtrl:: StartRenameTab
 
 ```
 virtual BOOL StartRenameTab(int iTab);
@@ -2353,13 +2354,13 @@ virtual BOOL StartRenameTab(int iTab);
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*iタブ*<br/>
+から *Itab*<br/>
 
 ### <a name="return-value"></a>戻り値
 
 ### <a name="remarks"></a>解説
 
-## <a name="cmfcbasetabctrlswaptabs"></a><a name="swaptabs"></a>タブを交換します。
+## <a name="cmfcbasetabctrlswaptabs"></a><a name="swaptabs"></a> CMFCBaseTabCtrl:: SwapTabs
 
 ```
 virtual void SwapTabs(
@@ -2369,15 +2370,15 @@ virtual void SwapTabs(
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*タブID*<br/>
+から *Nfisrttabid*<br/>
 
-[in]*秒のタブID*<br/>
+から *nn のタブ id*<br/>
 
 ### <a name="remarks"></a>解説
 
 ## <a name="see-also"></a>関連項目
 
-[階層グラフ](../../mfc/hierarchy-chart.md)<br/>
-[クラス](../../mfc/reference/mfc-classes.md)<br/>
+[階層図](../../mfc/hierarchy-chart.md)<br/>
+[Classes](../../mfc/reference/mfc-classes.md)<br/>
 [CMFCTabCtrl クラス](../../mfc/reference/cmfctabctrl-class.md)<br/>
 [CMFCOutlookBarTabCtrl クラス](../../mfc/reference/cmfcoutlookbartabctrl-class.md)
