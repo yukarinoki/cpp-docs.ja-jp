@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: COleIPFrameWnd クラス'
 title: COleIPFrameWnd クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - COleIPFrameWnd [MFC], OnCreateControlBars
 - COleIPFrameWnd [MFC], RepositionFrame
 ms.assetid: 24abb2cb-826c-4dda-a287-d8a8900a5763
-ms.openlocfilehash: 01e259cf01c42add26088b0cbd2f6dab311eb9b1
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: d89cfa9b3f6d610276c3c972ee48c943f753e36a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81374957"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97227014"
 ---
 # <a name="coleipframewnd-class"></a>COleIPFrameWnd クラス
 
@@ -35,20 +36,20 @@ class COleIPFrameWnd : public CFrameWnd
 
 |名前|説明|
 |----------|-----------------|
-|[を切り取る::コレップフレーム](#coleipframewnd)|`COleIPFrameWnd` オブジェクトを構築します。|
+|[COleIPFrameWnd:: COleIPFrameWnd](#coleipframewnd)|`COleIPFrameWnd` オブジェクトを構築します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
 |名前|説明|
 |----------|-----------------|
-|[コントロールバーを作成します。](#oncreatecontrolbars)|アイテムがインプレース編集用にアクティブ化されたときに、フレームワークによって呼び出されます。|
-|[コレクリップフレームオード::再配置フレーム](#repositionframe)|インプレース編集ウィンドウの位置を変更するために、フレームワークによって呼び出されます。|
+|[COleIPFrameWnd:: OnCreateControlBars](#oncreatecontrolbars)|項目が埋め込み先編集のためにアクティブになったときに、フレームワークによって呼び出されます。|
+|[COleIPFrameWnd:: RepositionFrame](#repositionframe)|埋め込み先編集ウィンドウの位置を変更するために、フレームワークによって呼び出されます。|
 
 ## <a name="remarks"></a>解説
 
-このクラスは、コンテナー アプリケーションのドキュメント ウィンドウ内にコントロール バーを作成し、配置します。 また、埋め込み[COleResizeBar](../../mfc/reference/coleresizebar-class.md)オブジェクトによって生成される通知は、ユーザーが埋め込み場所の編集ウィンドウのサイズを変更したときにも処理されます。
+このクラスは、コントロールバーを作成し、コンテナーアプリケーションのドキュメントウィンドウ内に配置します。 また、埋め込み先編集ウィンドウのサイズをユーザーが変更したときに、埋め込み [Coleresizebar](../../mfc/reference/coleresizebar-class.md) オブジェクトによって生成される通知も処理します。
 
-の使用方法`COleIPFrameWnd`の詳細については、[記事「アクティベーション](../../mfc/activation-cpp.md)」を参照してください。
+の使用方法の詳細については `COleIPFrameWnd` 、「 [アクティブ化](../../mfc/activation-cpp.md)」を参照してください。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -62,13 +63,13 @@ class COleIPFrameWnd : public CFrameWnd
 
 `COleIPFrameWnd`
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-**ヘッダー:** afxole.h
+**ヘッダー:** afxole
 
-## <a name="coleipframewndcoleipframewnd"></a><a name="coleipframewnd"></a>を切り取る::コレップフレーム
+## <a name="coleipframewndcoleipframewnd"></a><a name="coleipframewnd"></a> COleIPFrameWnd:: COleIPFrameWnd
 
-オブジェクトを`COleIPFrameWnd`構築し、OLEINPLACEFRAMEINFO 型の構造体に格納されているインプレース状態情報を初期化します。
+オブジェクトを構築 `COleIPFrameWnd` し、そのインプレース状態情報を初期化します。この情報は、OLEINPLACE フレーム情報型の構造体に格納されます。
 
 ```
 COleIPFrameWnd();
@@ -76,11 +77,11 @@ COleIPFrameWnd();
 
 ### <a name="remarks"></a>解説
 
-詳細については、Windows SDK[の「OLEINPLACEFRAMEINFO」](/windows/win32/api/oleidl/ns-oleidl-oleinplaceframeinfo)を参照してください。
+詳細については、Windows SDK の「 [Oleinplace フレーム情報](/windows/win32/api/oleidl/ns-oleidl-oleinplaceframeinfo) 」を参照してください。
 
-## <a name="coleipframewndoncreatecontrolbars"></a><a name="oncreatecontrolbars"></a>コントロールバーを作成します。
+## <a name="coleipframewndoncreatecontrolbars"></a><a name="oncreatecontrolbars"></a> COleIPFrameWnd:: OnCreateControlBars
 
-アイテムがインプレー`OnCreateControlBars`ス編集用にアクティブ化されると、フレームワークは関数を呼び出します。
+フレームワークは、 `OnCreateControlBars` 項目が埋め込み先編集のためにアクティブになったときに、関数を呼び出します。
 
 ```
 virtual BOOL OnCreateControlBars(
@@ -94,23 +95,23 @@ virtual BOOL OnCreateControlBars(
 
 ### <a name="parameters"></a>パラメーター
 
-*フレーム*<br/>
-コンテナー アプリケーションのフレーム ウィンドウへのポインター。
+*pWndFrame*<br/>
+コンテナーアプリケーションのフレームウィンドウへのポインター。
 
-*ドク*<br/>
-コンテナーのドキュメント レベルのウィンドウへのポインター。 コンテナが SDI アプリケーションの場合は NULL になります。
+*pWndDoc*<br/>
+コンテナーのドキュメントレベルウィンドウへのポインター。 コンテナーが SDI アプリケーションの場合は NULL を指定できます。
 
 ### <a name="return-value"></a>戻り値
 
-成功時にゼロ以外の値。それ以外の場合は 0。
+成功した場合は0以外。それ以外の場合は0です。
 
 ### <a name="remarks"></a>解説
 
-既定の実装では、何も行われません。 コントロール バーの作成時に必要な特別な処理を実行するには、この関数をオーバーライドします。
+既定の実装では、何も行われません。 コントロールバーが作成されるときに必要な特別な処理を実行するには、この関数をオーバーライドします。
 
-## <a name="coleipframewndrepositionframe"></a><a name="repositionframe"></a>コレクリップフレームオード::再配置フレーム
+## <a name="coleipframewndrepositionframe"></a><a name="repositionframe"></a> COleIPFrameWnd:: RepositionFrame
 
-フレームワークは、メンバー`RepositionFrame`関数を呼び出してコントロール バーをレイアウトし、インプレース編集ウィンドウの位置を変更して、そのすべてが表示されるようにします。
+フレームワークは、メンバー関数を呼び出して、 `RepositionFrame` コントロールバーをレイアウトし、埋め込み先編集ウィンドウの位置を変更して、すべてが表示されるようにします。
 
 ```
 virtual void RepositionFrame(
@@ -121,18 +122,18 @@ virtual void RepositionFrame(
 ### <a name="parameters"></a>パラメーター
 
 *lpPosRect*<br/>
-インプレイス`RECT`フレーム ウィンドウ`CRect`の現在位置座標を格納している構造体またはオブジェクトへのポインターです(ピクセル単位)。
+`RECT` `CRect` クライアント領域を基準とした、埋め込み先フレームウィンドウの現在の位置座標をピクセル単位で格納している構造体またはオブジェクトへのポインター。
 
-*lp クリップレック*<br/>
-インプレース`RECT`フレーム`CRect`ウィンドウの現在のクリッピング四角形座標を含む構造体またはオブジェクトへのポインターです(ピクセル単位)。
+*lpClipRect*<br/>
+`RECT` `CRect` クライアント領域を基準とした、埋め込み先フレームウィンドウの現在のクリッピング四角形の座標 (ピクセル単位) を格納している構造体またはオブジェクトへのポインター。
 
 ### <a name="remarks"></a>解説
 
-コンテナー ウィンドウのコントロール バーのレイアウトは、OLE 以外のフレーム ウィンドウで実行されるコントロール バーとは異なります。 非 OLE フレーム ウィンドウは[、CFrameWnd::RecalcLayout](../../mfc/reference/cframewnd-class.md#recalclayout)の呼び出しのように、指定されたフレーム ウィンドウ サイズからコントロール バーやその他のオブジェクトの位置を計算します。 クライアント領域は、コントロール バーなどのオブジェクトの領域を減算した後に残ります。 一`COleIPFrameWnd`方、ウィンドウは、特定のクライアント領域に応じてツールバーを配置します。 言い換えれば`CFrameWnd::RecalcLayout`、「外から」、作品は`COleIPFrameWnd::RepositionFrame`「内側から」動作します。
+コンテナーウィンドウ内のコントロールバーのレイアウトは、非 OLE フレームウィンドウで実行されるものとは異なります。 非 OLE フレームウィンドウは、 [CFrameWnd:: RecalcLayout](../../mfc/reference/cframewnd-class.md#recalclayout)の呼び出しのように、指定されたフレームウィンドウサイズからコントロールバーとその他のオブジェクトの位置を計算します。 クライアント領域は、コントロールバーとその他のオブジェクトの領域が減算された後に残っています。 一方、ウィンドウは、 `COleIPFrameWnd` 特定のクライアント領域に応じてツールバーを配置します。 つまり、は "外側の" から "処理中" に `CFrameWnd::RecalcLayout` `COleIPFrameWnd::RepositionFrame` なります。
 
 ## <a name="see-also"></a>関連項目
 
-[MFC サンプル ヒエルスヴル](../../overview/visual-cpp-samples.md)<br/>
+[MFC サンプル HIERSVR](../../overview/visual-cpp-samples.md)<br/>
 [CFrameWnd クラス](../../mfc/reference/cframewnd-class.md)<br/>
-[階層グラフ](../../mfc/hierarchy-chart.md)<br/>
+[階層図](../../mfc/hierarchy-chart.md)<br/>
 [CFrameWnd クラス](../../mfc/reference/cframewnd-class.md)

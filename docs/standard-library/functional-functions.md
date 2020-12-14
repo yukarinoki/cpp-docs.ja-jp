@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「関数関数」を参照してください。 &lt; &gt;
 title: '&lt;functional&gt; 関数'
 ms.date: 02/21/2019
 f1_keywords:
@@ -29,12 +30,12 @@ helpviewer_keywords:
 - std::bit_xor [C++]
 - std::cref [C++]
 ms.assetid: c34d0b45-50a7-447a-9368-2210d06339a4
-ms.openlocfilehash: 5e3aa35395c8fd5a42d7127d0b6072a3edf4ace5
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: f3ae9fca75801555c0341923d0fc42db94546cd1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88838088"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97232162"
 ---
 # <a name="ltfunctionalgt-functions"></a>&lt;functional&gt; 関数
 
@@ -171,13 +172,13 @@ template <class Operation, class Type>
 
 ### <a name="return-value"></a>戻り値
 
-二項関数オブジェクトの最初の引数を *左*の値にバインドした結果として生成される単項関数オブジェクト。
+二項関数オブジェクトの最初の引数を *左* の値にバインドした結果として生成される単項関数オブジェクト。
 
 ### <a name="remarks"></a>解説
 
 関数バインダーは、関数アダプターの一種です。 関数オブジェクトを返すため、特定の型の関数構成で使用して、より複雑で強力な式を作成できます。
 
-*Func*が型のオブジェクトで、 `Operation` `c` が定数である場合、 `bind1st( func, c )` は[binder1st](../standard-library/binder1st-class.md)クラスコンストラクターと同じであり、を `binder1st<Operation>(func, c)` 使用すると便利です。
+*Func* が型のオブジェクトで、 `Operation` `c` が定数である場合、 `bind1st( func, c )` は [binder1st](../standard-library/binder1st-class.md)クラスコンストラクターと同じであり、を `binder1st<Operation>(func, c)` 使用すると便利です。
 
 ### <a name="example"></a>例
 
@@ -265,13 +266,13 @@ template <class Operation, class Type>
 
 ### <a name="return-value"></a>戻り値
 
-二項関数オブジェクトの2番目の引数を *right*にバインドした単項関数オブジェクトの結果。
+二項関数オブジェクトの2番目の引数を *right* にバインドした単項関数オブジェクトの結果。
 
 ### <a name="remarks"></a>解説
 
 関数バインダーは、関数アダプターの一種です。 関数オブジェクトを返すため、特定の型の関数構成で使用して、より複雑で強力な式を作成できます。
 
-*Func*が型のオブジェクトで、 `Operation` `c` が定数である場合、 `bind2nd(func, c)` は[binder2nd](../standard-library/binder2nd-class.md)クラスコンストラクターと同じであり、を `binder2nd<Operation>(func, c)` 使用すると便利です。
+*Func* が型のオブジェクトで、 `Operation` `c` が定数である場合、 `bind2nd(func, c)` は [binder2nd](../standard-library/binder2nd-class.md)クラスコンストラクターと同じであり、を `binder2nd<Operation>(func, c)` 使用すると便利です。
 
 ### <a name="example"></a>例
 
@@ -368,10 +369,10 @@ struct bit_and<void>
 指定または推論された型のオペランドを受け取る `operator&` をサポートする任意の型。
 
 *左側*\
-ビットごとの AND 演算の左オペランド。 非特殊テンプレートは、type *型*の左辺値参照引数を受け取ります。 特殊化されたテンプレートは、推論された型 *T*の左辺値および右辺値参照引数の完全転送を行います。
+ビットごとの AND 演算の左オペランド。 非特殊テンプレートは、type *型* の左辺値参照引数を受け取ります。 特殊化されたテンプレートは、推論された型 *T* の左辺値および右辺値参照引数の完全転送を行います。
 
 *そうです*\
-ビットごとの AND 演算の右オペランド。 非特殊テンプレートは、type *型*の左辺値参照引数を受け取ります。 特殊化されたテンプレートは、推論された型 *U*の左辺値および右辺値参照引数の完全転送を行います。
+ビットごとの AND 演算の右オペランド。 非特殊テンプレートは、type *型* の左辺値参照引数を受け取ります。 特殊化されたテンプレートは、推論された型 *U* の左辺値および右辺値参照引数の完全転送を行います。
 
 ### <a name="return-value"></a>戻り値
 
@@ -407,7 +408,7 @@ struct bit_not<void>
 単項 `operator~` をサポートする型。
 
 *そうです*\
-ビットごとの補数演算の右オペランド。 非特殊テンプレートは、type *型*の左辺値参照引数を受け取ります。 特殊化されたテンプレートは、推論された型の *型*の左辺値または右辺値参照引数の完全転送を行います。
+ビットごとの補数演算の右オペランド。 非特殊テンプレートは、type *型* の左辺値参照引数を受け取ります。 特殊化されたテンプレートは、推論された型の *型* の左辺値または右辺値参照引数の完全転送を行います。
 
 ### <a name="return-value"></a>戻り値
 
@@ -445,10 +446,10 @@ struct bit_or<void>
 指定または推論された型のオペランドを受け取る `operator|` をサポートする任意の型。
 
 *左側*\
-ビットごとの OR 演算の左オペランド。 非特殊テンプレートは、type *型*の左辺値参照引数を受け取ります。 特殊化されたテンプレートは、推論された型 *T*の左辺値および右辺値参照引数の完全転送を行います。
+ビットごとの OR 演算の左オペランド。 非特殊テンプレートは、type *型* の左辺値参照引数を受け取ります。 特殊化されたテンプレートは、推論された型 *T* の左辺値および右辺値参照引数の完全転送を行います。
 
 *そうです*\
-ビットごとの OR 演算の右オペランド。 非特殊テンプレートは、type *型*の左辺値参照引数を受け取ります。 特殊化されたテンプレートは、推論された型 *U*の左辺値および右辺値参照引数の完全転送を行います。
+ビットごとの OR 演算の右オペランド。 非特殊テンプレートは、type *型* の左辺値参照引数を受け取ります。 特殊化されたテンプレートは、推論された型 *U* の左辺値および右辺値参照引数の完全転送を行います。
 
 ### <a name="return-value"></a>戻り値
 
@@ -486,10 +487,10 @@ struct bit_xor<void>
 指定または推論された型のオペランドを受け取る `operator^` をサポートする任意の型。
 
 *左側*\
-ビットごとの XOR 演算の左オペランド。 非特殊テンプレートは、type *型*の左辺値参照引数を受け取ります。 特殊化されたテンプレートは、推論された型 *T*の左辺値および右辺値参照引数の完全転送を行います。
+ビットごとの XOR 演算の左オペランド。 非特殊テンプレートは、type *型* の左辺値参照引数を受け取ります。 特殊化されたテンプレートは、推論された型 *T* の左辺値および右辺値参照引数の完全転送を行います。
 
 *そうです*\
-ビットごとの XOR 演算の右オペランド。 非特殊テンプレートは、type *型*の左辺値参照引数を受け取ります。 特殊化されたテンプレートは、推論された型 *U*の左辺値および右辺値参照引数の完全転送を行います。
+ビットごとの XOR 演算の右オペランド。 非特殊テンプレートは、type *型* の左辺値参照引数を受け取ります。 特殊化されたテンプレートは、推論された型 *U* の左辺値および右辺値参照引数の完全転送を行います。
 
 ### <a name="return-value"></a>戻り値
 
@@ -584,7 +585,7 @@ invoke_result_t<Callable, Args...>
 
 ### <a name="remarks"></a>解説
 
-パラメーター*引数*を使用して、呼び出し可能オブジェクト*fn*を呼び出します。 実際には、 `INVOKE(std::forward<Callable>(fn), std::forward<Args>(args)...)` 擬似関数は `INVOKE(f, t1, t2, ..., tN)` 次のいずれかを意味します。
+パラメーター *引数* を使用して、呼び出し可能オブジェクト *fn* を呼び出します。 実際には、 `INVOKE(std::forward<Callable>(fn), std::forward<Args>(args)...)` 擬似関数は `INVOKE(f, t1, t2, ..., tN)` 次のいずれかを意味します。
 
 - `(t1.*f)(t2, ..., tN)`。`f` がクラス `T` のメンバー関数へのポインターであり、`t1` が型 `T` のオブジェクト、型 `T` のオブジェクトへの参照、`T` から派生した型のオブジェクトへの参照のいずれかである場合。 つまり、 `std::is_base_of<T, std::decay_t<decltype(t1)>>::value` が true の場合。
 
@@ -697,9 +698,9 @@ unspecified mem_fn(RTy Ty::*pm);
 
 このテンプレート関数は、 `cw` 式がと同じになるように、弱い結果型を持つ単純な呼び出しラッパーを返し `cw(t, a2, ..., aN)` `INVOKE(pm, t, a2, ..., aN)` ます。 例外はスローされません。
 
-返された呼び出しラッパーは、 `std::unary_function<cv Ty*, RTy>` `result_type` *RTy* `argument_type` `cv Ty*` 型*Ty*が引数を取らない cv 修飾子を持つメンバー関数へのポインターである場合にのみ、から派生します (入れ子にされた型を rty のシノニムとして、入れ子にされた型をのシノニムとして定義し `cv` ます)。
+返された呼び出しラッパーは、 `std::unary_function<cv Ty*, RTy>` `result_type`  `argument_type` `cv Ty*` 型 *Ty* が引数を取らない cv 修飾子を持つメンバー関数へのポインターである場合にのみ、から派生します (入れ子にされた型を rty のシノニムとして、入れ子にされた型をのシノニムとして定義し `cv` ます)。
 
-返された呼び出しラッパーは、型 `std::binary_function<cv Ty*, T2, RTy>` `result_type` *RTy* `first argument_type` `cv Ty*` `second argument_type` `T2` *Ty* `cv` の引数を受け取る cv 修飾子を持つメンバー関数へのポインター `T2` である場合にのみ、(または、入れ子にされた型をのシノニムとして、入れ子にされた型をのシノニムとして定義する) に対してのみ派生します。
+返された呼び出しラッパーは、型 `std::binary_function<cv Ty*, T2, RTy>` `result_type`  `first argument_type` `cv Ty*` `second argument_type` `T2`  `cv` の引数を受け取る cv 修飾子を持つメンバー関数へのポインター `T2` である場合にのみ、(または、入れ子にされた型をのシノニムとして、入れ子にされた型をのシノニムとして定義する) に対してのみ派生します。
 
 ### <a name="example"></a>例
 
@@ -1198,7 +1199,7 @@ pointer_to_binary_function<Arg1, Arg2, Result, Result (*)(Arg1, Arg2)> ptr_fun(R
 
 ### <a name="return-value"></a>戻り値
 
-1つ目のテンプレート関数は、単項関数[pointer_to_unary_function](../standard-library/pointer-to-unary-function-class.md)  < `Arg` 、 **Result**> () を返し \* `pfunc` ます。
+1つ目のテンプレート関数は、単項関数 [pointer_to_unary_function](../standard-library/pointer-to-unary-function-class.md)  < `Arg` 、 **Result**> () を返し \* `pfunc` ます。
 
 2番目のテンプレート関数は、バイナリ関数 [pointer_to_binary_function](../standard-library/pointer-to-binary-function-class.md) \<**Arg1**, **Arg2**, **Result**> () を返し \* `pfunc` ます。
 
@@ -1316,7 +1317,7 @@ template <class FT>
 *CM*\
 関数オブジェクトによって制御される型。
 
-*f1*\
+\
 最初の関数オブジェクト。
 
 *bios*\

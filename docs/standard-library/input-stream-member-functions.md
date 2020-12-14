@@ -1,26 +1,27 @@
 ---
+description: '詳細情報: 入力ストリームのメンバー関数'
 title: 入力ストリームのメンバー関数
 ms.date: 07/19/2019
 helpviewer_keywords:
 - input stream objects
 - input streams, member functions
 ms.assetid: b4b9465d-0da9-4ccf-859d-72a68418982e
-ms.openlocfilehash: 8aa211a03bb6e9b1d910db360066b4a2ca76571a
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 8b75470d39e5c376da497f721c725eaad8424b3d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87233172"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97231603"
 ---
 # <a name="input-stream-member-functions"></a>入力ストリームのメンバー関数
 
 入力ストリームのメンバー関数は、ディスク入力に使用します。
 
-## <a name="open"></a><a name="vclrftheopenfunctionforinputstreamsanchor11"></a>開き
+## <a name="open"></a><a name="vclrftheopenfunctionforinputstreamsanchor11"></a> 開き
 
 入力ファイルストリーム () を使用している場合は `ifstream` 、そのストリームを特定のディスクファイルに関連付ける必要があります。 コンストラクターでこれを行うことも、関数を使用することもでき `open` ます。 いずれの場合も、引数は同じです。
 
-通常、入力ストリームに関連付けられているファイルを開くときに、 [ios_base:: openmode](../standard-library/ios-base-class.md#openmode)フラグを指定します (既定のモードはです `ios::in` )。 フラグの一覧につい `openmode` ては、「 [ios_base:: openmode](../standard-library/ios-base-class.md#openmode)」を参照してください。 フラグは、ビットごとの OR ( &#124; ) 演算子と組み合わせることができます。
+通常、入力ストリームに関連付けられているファイルを開くときに、 [ios_base:: openmode](../standard-library/ios-base-class.md#openmode) フラグを指定します (既定のモードはです `ios::in` )。 フラグの一覧につい `openmode` ては、「 [ios_base:: openmode](../standard-library/ios-base-class.md#openmode)」を参照してください。 フラグは、ビットごとの OR ( &#124; ) 演算子と組み合わせることができます。
 
 ファイルを読み取るには、まず、 `fail` メンバー関数を使用して、存在するかどうかを確認します。
 
@@ -31,7 +32,7 @@ if (ifile.fail())
 // The file does not exist ...
 ```
 
-## <a name="get"></a><a name="vclrfthegetfunctionanchor12"></a>取得
+## <a name="get"></a><a name="vclrfthegetfunctionanchor12"></a> 取得
 
 書式設定されて `get` いないメンバー関数は、 `>>` 2 つの例外を持つ演算子のように動作します。 まず、関数には `get` 空白文字が含まれていますが、抽出機能では、フラグが設定されている場合 (既定)、空白は除外され `skipws` ます。 次に、 `get` 関数は、関連付けられた出力ストリーム (など) がフラッシュされる可能性が低くなり `cout` ます。
 
@@ -66,7 +67,7 @@ int main()
 1234
 ```
 
-## <a name="getline"></a><a name="vclrfthegetlinefunctionanchor13"></a>getline
+## <a name="getline"></a><a name="vclrfthegetlinefunctionanchor13"></a> getline
 
 この `getline` メンバー関数は、関数に似てい `get` ます。 両方の関数で、入力の終端文字を指定する 3 番目の引数を使用できます。 既定値は改行文字です。 両方の関数は、必須の終端文字用に 1 つの文字を予約します。 ただし、は、 `get` 終端文字をストリームに残し、 `getline` 終端文字を削除します。
 
@@ -93,7 +94,7 @@ int main( )
 test
 ```
 
-## <a name="read"></a><a name="vclrfthereadfunctionanchor14"></a>込ん
+## <a name="read"></a><a name="vclrfthereadfunctionanchor14"></a> 込ん
 
 この `read` メンバー関数は、ファイルから指定されたメモリ領域にバイトを読み取ります。 length 引数は、読み取られるバイト数を決定します。 この引数を含めないと、ファイルの物理的な末尾に達した場合、またはテキストモードのファイルでは埋め込まれた `EOF` 文字が読み取られた場合に、読み取りが停止します。
 
@@ -125,7 +126,7 @@ int main()
 
 このプログラムでは、データレコードが、終端の復帰や改行文字を含まない構造体で指定されたとおりに書式設定されていることを前提としています。
 
-## <a name="seekg-and-tellg"></a><a name="vclrftheseekgandtellgfunctionsanchor7"></a>kg と tellg
+## <a name="seekg-and-tellg"></a><a name="vclrftheseekgandtellgfunctionsanchor7"></a> kg と tellg
 
 入力ファイル ストリームは、データを次に読み取るファイル内の位置を指す内部ポインターを保持します。 次に示すように、`seekg` 関数を使用してこのポインターを設定します。
 
@@ -180,7 +181,7 @@ int main( )
 }
 ```
 
-## <a name="close"></a><a name="vclrftheclosefunctionforinputstreamsanchor15"></a>ok
+## <a name="close"></a><a name="vclrftheclosefunctionforinputstreamsanchor15"></a> ok
 
 この `close` メンバー関数は、入力ファイルストリームに関連付けられているディスクファイルを閉じ、オペレーティングシステムのファイルハンドルを解放します。 デストラクターによって [`ifstream`](../standard-library/basic-ifstream-class.md) ファイルが閉じられますが、 `close` 同じストリームオブジェクトの別のファイルを開く必要がある場合は、関数を使用できます。
 

@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: コンパイラの警告 (レベル 1) C4772'
 title: コンパイラの警告 (レベル 1) C4772
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - C4772
 ms.assetid: dafe6fd8-9faf-41f5-9d66-a55838742c14
-ms.openlocfilehash: 89156b2f29fd21160e6abddc3ecb21efaee6dde1
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 41fcbf3074cb1e51e06ba21a01a27eaf8ded1b31
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80175133"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97228444"
 ---
 # <a name="compiler-warning-level-1-c4772"></a>コンパイラの警告 (レベル 1) C4772
 
-> \#インポートで、欠落しているタイプライブラリから型が参照されています。'*missing-type*' がプレースホルダーとして使用されています
+> \#参照が欠落しているタイプライブラリから参照されています。'*missing-type*' がプレースホルダーとして使用されています
 
-[#Import](../../preprocessor/hash-import-directive-cpp.md)ディレクティブを使用して、タイプライブラリが参照されました。 ただし、タイプライブラリには、`#import`で参照されていない別のタイプライブラリへの参照が含まれていました。 この他の .tlb ファイルは、コンパイラによって検出されませんでした。
+[#Import](../../preprocessor/hash-import-directive-cpp.md)ディレクティブを使用して、タイプライブラリが参照されました。 ただし、このタイプライブラリには、で参照されていない別のタイプライブラリへの参照が含まれていました `#import` 。 この他の .tlb ファイルは、コンパイラによって検出されませんでした。
 
 [/I (追加のインクルードディレクトリ)](../../build/reference/i-additional-include-directories.md)コンパイラオプションを使用してこれらのディレクトリを指定した場合、コンパイラは異なるディレクトリにタイプライブラリを見つけることができないことに注意してください。 コンパイラで異なるディレクトリのタイプライブラリを検索する場合は、これらのディレクトリを PATH 環境変数に追加します。
 

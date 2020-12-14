@@ -1,4 +1,5 @@
 ---
+description: 詳細については、次を参照してください:/swaprun
 title: /SWAPRUN
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - -SWAPRUN editbin option
 - SWAPRUN editbin option
 ms.assetid: 6eefd7f3-ca47-48e3-8509-323d27cf4ae7
-ms.openlocfilehash: 83aa2cdb445ed1ac6bac5b1237f90a116986b0a9
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 68d53a8d5fa7337fb29f624e26b71790f78d29dd
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79438843"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97230173"
 ---
 # <a name="swaprun"></a>/SWAPRUN
 
@@ -21,7 +22,7 @@ ms.locfileid: "79438843"
 /SWAPRUN:{[!]NET|[!]CD}
 ```
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
 このオプションでは、イメージを編集してイメージをスワップファイルにコピーし、そこから実行するようにオペレーティングシステムに指示します。 このオプションは、ネットワークまたはリムーバブルメディア上に存在するイメージに対して使用します。
 
@@ -33,6 +34,6 @@ ms.locfileid: "79438843"
 
 - ! NET および! を使用します。NET と CD の効果を逆にする CD。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [EDITBIN オプション](editbin-options.md)

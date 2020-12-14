@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: &lt; type_traits&gt;'
 title: '&lt;type_traits&gt;'
 ms.date: 02/21/2019
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - typetrait header
 - type_traits
 ms.assetid: 2260b51f-8160-4c66-a82f-00b534cb60d4
-ms.openlocfilehash: 42c94daf331fd9a17e050067e4c4e495af180b0c
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: cf7bb4a5bf73eb49526926c151ffbbd0b55fda5b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88841702"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97226494"
 ---
 # <a name="lttype_traitsgt"></a>&lt;type_traits&gt;
 
@@ -28,9 +29,9 @@ ms.locfileid: "88841702"
 
 のクラスとテンプレート \<type_traits> は、コンパイル時に型の推定、分類、および変換をサポートするために使用されます。 また、型に関連するエラーを検出し、汎用コードを最適化するためにも使用されます。 単項型の特徴では、型のプロパティ、バイナリ型の特徴によって型の間のリレーションシップ、および変換の特徴によって型のプロパティが変更されます。
 
-ヘルパークラス `integral_constant` とそのテンプレートは特殊化され、 `true_type` `false_type` 型述語の基底クラスを形成します。 *型の述語*は、1 つ以上の型引数を受け取るテンプレートです。 型の述語が *true を保持*している場合は、 [true_type](../standard-library/type-traits-typedefs.md#true_type)からパブリックに直接または間接的に派生されます。 型の述語が *false を保持*している場合は、 [false_type](../standard-library/type-traits-typedefs.md#false_type)からパブリックに直接または間接的に派生されます。
+ヘルパークラス `integral_constant` とそのテンプレートは特殊化され、 `true_type` `false_type` 型述語の基底クラスを形成します。 *型の述語* は、1 つ以上の型引数を受け取るテンプレートです。 型の述語が *true を保持* している場合は、 [true_type](../standard-library/type-traits-typedefs.md#true_type)からパブリックに直接または間接的に派生されます。 型の述語が *false を保持* している場合は、 [false_type](../standard-library/type-traits-typedefs.md#false_type)からパブリックに直接または間接的に派生されます。
 
-*型修飾子*または*変換の特徴*は、1 つ以上のテンプレート引数を受け取り、変更された型のシノニムである 1 つのメンバー、`type` を持つテンプレートです。
+*型修飾子* または *変換の特徴* は、1 つ以上のテンプレート引数を受け取り、変更された型のシノニムである 1 つのメンバー、`type` を持つテンプレートです。
 
 ### <a name="alias-templates"></a>エイリアス テンプレート
 

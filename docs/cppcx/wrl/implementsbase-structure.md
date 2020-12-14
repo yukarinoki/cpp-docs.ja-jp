@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「実装 Sbase 構造体」を参照してください。
 title: ImplementsBase 構造体
 ms.date: 11/04/2016
 ms.topic: reference
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - ImplementsBase structure
 ms.assetid: f898eb17-136d-4c87-b3ea-771319314641
-ms.openlocfilehash: ffc006521d4f5131d7e387c1b2df79a358ad7def
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 4269e08c4e96f0dec455c33cdd1372464b7e7de8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80213890"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97229120"
 ---
 # <a name="implementsbase-structure"></a>ImplementsBase 構造体
 
@@ -28,18 +29,18 @@ struct ImplementsBase;
 
 [Implements 構造体](implements-structure.md)でテンプレートパラメーターの型を検証するために使用されます。
 
-**実装 Sbase**構造体は、設計上、空です。
+**実装 Sbase** 構造体は、設計上、空です。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
 `ImplementsBase`
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **Header:** を実装します。
 
 **名前空間:** Microsoft:: WRL::D etails
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[Microsoft::WRL::Details 名前空間](microsoft-wrl-details-namespace.md)
+[Microsoft:: WRL::D etails 名前空間](microsoft-wrl-details-namespace.md)

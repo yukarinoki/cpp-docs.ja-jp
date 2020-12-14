@@ -1,16 +1,17 @@
 ---
+description: '詳細情報: InspectableClass マクロ'
 title: InspectableClass マクロ
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
 - implements/Microsoft::WRL::InspectableClass
 ms.assetid: ff390b26-58cc-424f-87ac-1fe3cc692b59
-ms.openlocfilehash: 755a8f58ffc290d73d6060b0b0924905ecbf6028
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: cb19db7f35e7bda351cd84fa4dcf1f6a2b2ea2ba
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80213877"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97229003"
 ---
 # <a name="inspectableclass-macro"></a>InspectableClass マクロ
 
@@ -34,14 +35,14 @@ InspectableClass(
 
 ## <a name="remarks"></a>解説
 
-**InspectableClass**マクロは Windows ランタイム型でのみ使用できます。
+**InspectableClass** マクロは Windows ランタイム型でのみ使用できます。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **Header:** を実装します。
 
 **名前空間:** Microsoft::WRL
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [RuntimeClass クラス](runtimeclass-class.md)

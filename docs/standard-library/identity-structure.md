@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: identity 構造'
 title: identity 構造体
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - identity class
 - identity structure
 ms.assetid: 990756fd-7969-4b39-ad7e-0878e8dac8fd
-ms.openlocfilehash: 49b2c1eb3ca03f9bf9199bdbca49348866ff0a7e
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 753a3b697eb2a77dd102f681403fd23d7062cb36
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68246164"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97231759"
 ---
 # <a name="identity-structure"></a>identity 構造体
 
@@ -29,11 +30,11 @@ struct identity {
 
 ### <a name="parameters"></a>パラメーター
 
-*左*\
+*左側*\
 指定する値。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 このクラスにはパブリック型の定義 `type` が含まれています。これは、テンプレート パラメーターの型と同じです。 必要な型が関数パラメーターに設定されるようにするには、テンプレート関数 [forward](../standard-library/utility-functions.md#forward) と組み合わせて使用します。
 
-以前のコードと互換性のため、クラスも定義 identity 関数`operator()`の引数を返す*左*します。
+以前のコードとの互換性を維持するために、クラスは `operator()` 引数を *左* に返す id 関数も定義します。

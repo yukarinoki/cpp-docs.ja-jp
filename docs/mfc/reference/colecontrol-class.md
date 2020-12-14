@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: COleControl クラス'
 title: COleControl クラス
 ms.date: 08/27/2018
 f1_keywords:
@@ -334,12 +335,12 @@ helpviewer_keywords:
 - COleControl [MFC], IsInvokeAllowed
 - COleControl [MFC], SetInitialDataFormats
 ms.assetid: 53e95299-38e8-447b-9c5f-a381d27f5123
-ms.openlocfilehash: 074b0e1df5a8d70c8b32ee03dcb073c26c13be9b
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 6cc5e1896d186f1fa87eee34565819d518f9d4d0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88841000"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97227547"
 ---
 # <a name="colecontrol-class"></a>COleControl クラス
 
@@ -568,7 +569,7 @@ OLE コントロールフレームワークの開発の詳細については、�
 
 `COleControl`
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** afxctl.h
 
@@ -734,7 +735,7 @@ short AmbientTextAlign();
 
 有効な戻り値の一覧を次に示します。
 
-|戻り値|意味|
+|戻り値|説明|
 |------------------|-------------|
 |0|一般的な配置 (右側の数字、左のテキスト)。|
 |1|左揃え|
@@ -817,7 +818,7 @@ BOOL BoundPropertyRequestEdit(DISPID dispid);
 
 ## <a name="colecontrolclienttoparent"></a><a name="clienttoparent"></a> COleControl:: ClientToParent
 
-*Ppoint*の座標を親座標に変換します。
+*Ppoint* の座標を親座標に変換します。
 
 ```
 virtual void ClientToParent(
@@ -918,7 +919,7 @@ virtual void DisplayError(
 
 ### <a name="remarks"></a>解説
 
-既定の動作では、 *lpszdescription*に含まれるエラーの説明を含むメッセージボックスが表示されます。
+既定の動作では、 *lpszdescription* に含まれるエラーの説明を含むメッセージボックスが表示されます。
 
 エラーの表示方法をカスタマイズするには、この関数をオーバーライドします。
 
@@ -1184,7 +1185,7 @@ void AFX_CDECL FireEvent(
 
 通常、この関数を直接呼び出すことはできません。 代わりに、コントロールのクラス宣言のイベントマップセクションでイベント発生関数を呼び出します。
 
-*Pbparams*引数は、スペースで区切られた**VTS_** の一覧です。 スペース (コンマではない) で区切られるこれらの値の 1 つ以上は、関数のパラメーター リストを指定します。 使用できる値は次のとおりです。
+*Pbparams* 引数は、スペースで区切られた **VTS_** の一覧です。 スペース (コンマではない) で区切られるこれらの値の 1 つ以上は、関数のパラメーター リストを指定します。 使用できる値は次のとおりです。
 
 |Symbol|パラメーターのタイプ|
 |------------|--------------------|
@@ -1253,7 +1254,7 @@ void FireKeyPress(USHORT* pnChar);
 
 このイベントがカスタムイベントとして定義されている場合は、イベントがいつ発生するかを決定します。
 
-イベントの受信者は、たとえば、すべての小文字を大文字に変換するなど、 *Pnchar*を変更することができます。 変更された文字を確認する場合は、をオーバーライド `OnKeyPressEvent` します。
+イベントの受信者は、たとえば、すべての小文字を大文字に変換するなど、 *Pnchar* を変更することができます。 変更された文字を確認する場合は、をオーバーライド `OnKeyPressEvent` します。
 
 KeyPress イベントが自動的に発生するようにするには、コントロールのイベントマップに stock KeyPress イベントが定義されている必要があります。
 
@@ -1502,10 +1503,10 @@ BOOL GetAmbientProperty(
 必要なアンビエントプロパティのディスパッチ ID。
 
 *vtProp*<br/>
-*Pvprop*で返される値の型を指定する variant 型のタグ。
+*Pvprop* で返される値の型を指定する variant 型のタグ。
 
 *pvProp*<br/>
-プロパティ値または戻り値を受け取る変数のアドレスへのポインター。 このポインターの実際の型は、 *vtProp*によって指定された型と一致している必要があります。
+プロパティ値または戻り値を受け取る変数のアドレスへのポインター。 このポインターの実際の型は、 *vtProp* によって指定された型と一致している必要があります。
 
 |vtProp|PvProp の種類|
 |------------|--------------------|
@@ -1636,7 +1637,7 @@ virtual void GetClientRect(LPRECT lpRect) const;
 ### <a name="parameters"></a>パラメーター
 
 *lpRect*<br/>
-`RECT`ウィンドウなしのコントロールのクライアント領域の大きさを格納している構造体へのポインター。つまり、コントロールのサイズからウィンドウの境界線、フレーム、スクロールバーなどを引いたもの。 *LpRect*パラメーターは、コントロールのクライアント領域の位置ではなく、そのサイズを示します。
+`RECT`ウィンドウなしのコントロールのクライアント領域の大きさを格納している構造体へのポインター。つまり、コントロールのサイズからウィンドウの境界線、フレーム、スクロールバーなどを引いたもの。 *LpRect* パラメーターは、コントロールのクライアント領域の位置ではなく、そのサイズを示します。
 
 ## <a name="colecontrolgetclientsite"></a><a name="getclientsite"></a> COleControl:: GetClientSite
 
@@ -1830,7 +1831,7 @@ void GetFontTextMetrics(
 
 ### <a name="remarks"></a>解説
 
-このようなフォントは、 [COleControl:: select、tobject](#selectfontobject) 関数を使用して選択できます。 `GetFontTextMetrics``TEXTMETRIC`成功した場合は、 *lptm*が指す構造体を、のフォントについての有効なメトリック情報と共に初期化 `fontHolder` します。成功しなかった場合は、構造体にゼロを入力します。 コントロールを描画するときは、 [GetTextMetrics](/windows/win32/api/wingdi/nf-wingdi-gettextmetrics) の代わりにこの関数を使用する必要があります。これは、埋め込み OLE オブジェクトと同様に、コントロール自体をメタファイルにレンダリングする必要があるためです。
+このようなフォントは、 [COleControl:: select、tobject](#selectfontobject) 関数を使用して選択できます。 `GetFontTextMetrics``TEXTMETRIC`成功した場合は、 *lptm* が指す構造体を、のフォントについての有効なメトリック情報と共に初期化 `fontHolder` します。成功しなかった場合は、構造体にゼロを入力します。 コントロールを描画するときは、 [GetTextMetrics](/windows/win32/api/wingdi/nf-wingdi-gettextmetrics) の代わりにこの関数を使用する必要があります。これは、埋め込み OLE オブジェクトと同様に、コントロール自体をメタファイルにレンダリングする必要があるためです。
 
 `TEXTMETRIC`既定のフォントの構造は、 [Selectfont tobject](#selectfontobject)関数が呼び出されたときに更新されます。 `GetFontTextMetrics`によって提供される情報が有効であることを保証するために、ストックフォントプロパティを選択した後にのみを呼び出してください。
 
@@ -1860,7 +1861,7 @@ OLE コントロールのウィンドウハンドル (存在する場合)。そ�
 
 ## <a name="colecontrolgetmessagestring"></a><a name="getmessagestring"></a> COleControl:: GetMessageString
 
-*NID*によって識別されるメニュー項目の目的を説明する短い文字列を取得するために、フレームワークによって呼び出されます。
+*NID* によって識別されるメニュー項目の目的を説明する短い文字列を取得するために、フレームワークによって呼び出されます。
 
 ```
 virtual void GetMessageString(
@@ -1878,7 +1879,7 @@ virtual void GetMessageString(
 
 ### <a name="remarks"></a>解説
 
-メニュー項目が強調表示されているときに、ステータスバーに表示するメッセージを取得するために使用できます。 既定の実装では、 *nID*によって識別される文字列リソースの読み込みが試行されます。
+メニュー項目が強調表示されているときに、ステータスバーに表示するメッセージを取得するために使用できます。 既定の実装では、 *nID* によって識別される文字列リソースの読み込みが試行されます。
 
 ## <a name="colecontrolgetnotsupported"></a><a name="getnotsupported"></a> COleControl:: GetNotSupported
 
@@ -1952,7 +1953,7 @@ void GetStockTextMetrics(LPTEXTMETRIC lptm);
 
 ### <a name="remarks"></a>解説
 
-関数は、 `GetStockTextMetrics` lptm が `TEXTMETRIC` 指す構造体を*lptm* 、成功した場合は有効なメトリック情報と共に初期化します。成功しなかった場合は、構造体にゼロを入力します。 埋め込み OLE オブジェクトと同様にコントロールをメタファイルにレンダリングする必要があるため、コントロールを描画するときは、 [GetTextMetrics](/windows/win32/api/wingdi/nf-wingdi-gettextmetrics) の代わりにこの関数を使用します。
+関数は、 `GetStockTextMetrics` lptm が `TEXTMETRIC` 指す構造体を 、成功した場合は有効なメトリック情報と共に初期化します。成功しなかった場合は、構造体にゼロを入力します。 埋め込み OLE オブジェクトと同様にコントロールをメタファイルにレンダリングする必要があるため、コントロールを描画するときは、 [GetTextMetrics](/windows/win32/api/wingdi/nf-wingdi-gettextmetrics) の代わりにこの関数を使用します。
 
 `TEXTMETRIC`既定のフォントの構造は、関数が呼び出されたときに更新され `SelectStockFont` ます。 この関数は、提供された情報が有効であることを保証するために、ストックフォントを選択した後にのみ呼び出す必要があります。
 
@@ -2084,7 +2085,7 @@ void InvalidateControl(
 
 ### <a name="remarks"></a>解説
 
-*LpRect*に NULL 値が含まれている場合、コントロール全体が再描画されます。 *LpRect*が NULL でない場合は、無効にするコントロールの四角形の部分を示します。 コントロールにウィンドウがない場合、または現在アクティブでない場合、四角形は無視され、クライアントサイトの [IAdviseSink:: OnViewChange](/windows/win32/api/objidl/nf-objidl-iadvisesink-onviewchange) メンバー関数に対する呼び出しが行われます。 またはの代わりに、この関数を使用し `CWnd::InvalidateRect` `InvalidateRect` ます。
+*LpRect* に NULL 値が含まれている場合、コントロール全体が再描画されます。 *LpRect* が NULL でない場合は、無効にするコントロールの四角形の部分を示します。 コントロールにウィンドウがない場合、または現在アクティブでない場合、四角形は無視され、クライアントサイトの [IAdviseSink:: OnViewChange](/windows/win32/api/objidl/nf-objidl-iadvisesink-onviewchange) メンバー関数に対する呼び出しが行われます。 またはの代わりに、この関数を使用し `CWnd::InvalidateRect` `InvalidateRect` ます。
 
 ## <a name="colecontrolinvalidatergn"></a><a name="invalidatergn"></a> COleControl:: InvalidateRgn
 
@@ -2211,7 +2212,7 @@ void Load(LPCTSTR strNewPath, CDataPathProperty& prop);
 *strNewPath*<br/>
 非同期コントロールプロパティの絶対位置を参照するパスを格納している文字列へのポインター。
 
-*提案*<br/>
+*prop*<br/>
 非同期コントロールプロパティを実装する [CDataPathProperty](../../mfc/reference/cdatapathproperty-class.md) オブジェクト。
 
 ## <a name="colecontrollockinplaceactive"></a><a name="lockinplaceactive"></a> COleControl:: Lockinplace Active
@@ -2394,7 +2395,7 @@ virtual void OnDraw(
 
 ### <a name="remarks"></a>解説
 
-`OnDraw` は、通常、画面表示のために呼び出され、画面デバイスコンテキストを *pDC*として渡します。 *Rcbounds*パラメーターは、ターゲットデバイスコンテキスト内の四角形を識別します (現在のマッピングモードに対する相対)。 *Rcinvalid*パラメーターは、無効な実際の四角形です。 場合によっては、これが *Rcbounds*よりも小さい領域になることがあります。
+`OnDraw` は、通常、画面表示のために呼び出され、画面デバイスコンテキストを *pDC* として渡します。 *Rcbounds* パラメーターは、ターゲットデバイスコンテキスト内の四角形を識別します (現在のマッピングモードに対する相対)。 *Rcinvalid* パラメーターは、無効な実際の四角形です。 場合によっては、これが *Rcbounds* よりも小さい領域になることがあります。
 
 ## <a name="colecontrolondrawmetafile"></a><a name="ondrawmetafile"></a> COleControl:: OnDrawMetafile
 
@@ -2568,7 +2569,7 @@ virtual BOOL OnGetColorSet(
 画像をレンダリングするターゲットデバイスを指します。 この値が NULL の場合、既定のターゲットデバイス (通常はディスプレイデバイス) に対して画像がレンダリングされます。
 
 *hicTargetDev*<br/>
-*Ptd*によって示されるターゲットデバイス上の情報コンテキストを指定します。 このパラメーターにはデバイスコンテキストを指定できますが、必ずしも1つであるとは限りません。 *Ptd*が null の場合、 *hicTargetDev*も null にする必要があります。
+*Ptd* によって示されるターゲットデバイス上の情報コンテキストを指定します。 このパラメーターにはデバイスコンテキストを指定できますが、必ずしも1つであるとは限りません。 *Ptd* が null の場合、 *hicTargetDev* も null にする必要があります。
 
 *ppColorSet*<br/>
 使用される色のセットをコピーする場所へのポインター。 関数がカラーセットを返さない場合は、NULL が返されます。
@@ -2604,7 +2605,7 @@ virtual void OnGetControlInfo(LPCONTROLINFO pControlInfo);
 
 ## <a name="colecontrolongetdisplaystring"></a><a name="ongetdisplaystring"></a> COleControl:: OnGetDisplayString
 
-*Dispid*によって識別されるプロパティの現在の値を表す文字列を取得するために、フレームワークによって呼び出されます。
+*Dispid* によって識別されるプロパティの現在の値を表す文字列を取得するために、フレームワークによって呼び出されます。
 
 ```
 virtual BOOL OnGetDisplayString(
@@ -2670,7 +2671,7 @@ virtual BOOL OnGetNaturalExtent(
 オブジェクトのサイズを返す対象デバイスを定義する [DVTARGETDEVICE](/windows/win32/api/objidl/ns-objidl-dvtargetdevice) 構造体を指します。
 
 *hicTargetDev*<br/>
-オブジェクトがデバイスメトリックを抽出し、デバイスの機能をテストするための、 *ptd* パラメーターで指定されるターゲットデバイスの情報コンテキストを指定します。 *Ptd*が NULL の場合、オブジェクトは*hicTargetDev*パラメーターの値を無視する必要があります。
+オブジェクトがデバイスメトリックを抽出し、デバイスの機能をテストするための、 *ptd* パラメーターで指定されるターゲットデバイスの情報コンテキストを指定します。 *Ptd* が NULL の場合、オブジェクトは *hicTargetDev* パラメーターの値を無視する必要があります。
 
 *pExtentInfo*<br/>
 `DVEXTENTINFO`サイズ変更データを指定する構造体を指します。 `DVEXTENTINFO`構造は次のとおりです。
@@ -2725,11 +2726,11 @@ virtual BOOL OnGetPredefinedStrings(
 
 ### <a name="return-value"></a>戻り値
 
-*Pstringarray*および*pstringarray*に要素が追加されている場合は0以外の。
+*Pstringarray* および *pstringarray* に要素が追加されている場合は0以外の。
 
 ### <a name="remarks"></a>解説
 
-コントロールに、文字列で表現できる一連の値を持つプロパティがある場合は、この関数をオーバーライドします。 *Pstringarray*に追加された要素ごとに、対応する "cookie" 要素を*pstringarray*に追加する必要があります。 これらの "cookie" 値は、後でフレームワークによって関数に渡される可能性があり `COleControl::OnGetPredefinedValue` ます。
+コントロールに、文字列で表現できる一連の値を持つプロパティがある場合は、この関数をオーバーライドします。 *Pstringarray* に追加された要素ごとに、対応する "cookie" 要素を *pstringarray* に追加する必要があります。 これらの "cookie" 値は、後でフレームワークによって関数に渡される可能性があり `COleControl::OnGetPredefinedValue` ます。
 
 ## <a name="colecontrolongetpredefinedvalue"></a><a name="ongetpredefinedvalue"></a> COleControl:: OnGetPredefinedValue
 
@@ -2755,7 +2756,7 @@ virtual BOOL OnGetPredefinedValue(
 
 ### <a name="return-value"></a>戻り値
 
-*Lpvarout*で値が返された場合は0以外の値。それ以外の場合は0です。
+*Lpvarout* で値が返された場合は0以外の値。それ以外の場合は0です。
 
 ## <a name="colecontrolongetviewextent"></a><a name="ongetviewextent"></a> COleControl:: OnGetViewExtent
 
@@ -2967,7 +2968,7 @@ virtual void OnKeyPressEvent(USHORT nChar);
 
 ### <a name="remarks"></a>解説
 
-*NChar*値がコンテナーによって変更されている可能性があることに注意してください。
+*NChar* 値がコンテナーによって変更されている可能性があることに注意してください。
 
 このイベントの発生後に通知する場合は、この関数をオーバーライドします。
 
@@ -3023,7 +3024,7 @@ virtual BOOL OnMapPropertyToPage(
 
 ### <a name="return-value"></a>戻り値
 
-*Lpclsid*でクラス ID が返された場合は0以外の値。それ以外の場合は0です。
+*Lpclsid* でクラス ID が返された場合は0以外の値。それ以外の場合は0です。
 
 ### <a name="remarks"></a>解説
 
@@ -3072,7 +3073,7 @@ virtual BOOL OnProperties(
 
 既定の実装では、モーダルプロパティダイアログボックスが表示されます。
 
-この関数を使用すると、コントロールのプロパティページを表示することもできます。 `OnProperties` *HWndParent*パラメーターで、コントロールの親のハンドルを渡して、関数の呼び出しを行います。 この場合、 *Lpmsg* パラメーターと *lpRect* パラメーターの値は無視されます。
+この関数を使用すると、コントロールのプロパティページを表示することもできます。 `OnProperties` *HWndParent* パラメーターで、コントロールの親のハンドルを渡して、関数の呼び出しを行います。 この場合、 *Lpmsg* パラメーターと *lpRect* パラメーターの値は無視されます。
 
 ## <a name="colecontrolonqueryhitpoint"></a><a name="onqueryhitpoint"></a> COleControl:: Onqueryヒットポイント
 
@@ -3188,7 +3189,7 @@ virtual BOOL OnRenderData(
 
 指定された形式は、遅延レンダリングのために [DelayRenderData](../../mfc/reference/coledatasource-class.md#delayrenderdata) または [DelayRenderFileData](../../mfc/reference/coledatasource-class.md#delayrenderfiledata) メンバー関数を使用して、以前にコントロールオブジェクトに配置されています。 この関数の既定の実装は `OnRenderFileData` 、 `OnRenderGlobalData` 指定されたストレージメディアがファイルまたはメモリのいずれかである場合、それぞれまたはを呼び出します。 要求された形式が CF_METAFILEPICT または永続的なプロパティセット形式の場合、既定の実装は適切なデータをレンダリングし、0以外の値を返します。 それ以外の場合は0を返し、何も実行しません。
 
-*LpStgMedium >tymed*が TYMED_NULL 場合は、 *lpFormatEtc->tymed*によって指定されたとおりに STGMEDIUM を割り当てて入力する必要があります。 TYMED_NULL ない場合は、データを格納する STGMEDIUM を設定する必要があります。
+*LpStgMedium >tymed* が TYMED_NULL 場合は、 *lpFormatEtc->tymed* によって指定されたとおりに STGMEDIUM を割り当てて入力する必要があります。 TYMED_NULL ない場合は、データを格納する STGMEDIUM を設定する必要があります。
 
 要求された形式とメディアにデータを提供するには、この関数をオーバーライドします。 データによっては、この関数の他のバージョンの1つをオーバーライドすることが必要になる場合があります。 データが小さく、サイズが固定されている場合は、をオーバーライド `OnRenderGlobalData` します。 データがファイル内にある場合、またはサイズが可変の場合は、をオーバーライド `OnRenderFileData` します。
 
@@ -3250,7 +3251,7 @@ virtual BOOL OnRenderGlobalData(
 
 指定された形式は、遅延レンダリングのために [DelayRenderData](../../mfc/reference/coledatasource-class.md#delayrenderdata) メンバー関数を使用して、以前にコントロールオブジェクトに配置されています。 この関数の既定の実装では、単に FALSE が返されます。
 
-*Phglobal*が NULL の場合、新しい HGLOBAL が割り当てられ、 *phglobal*で返される必要があります。 それ以外の場合は、 *Phglobal* によって指定された HGLOBAL にデータを格納する必要があります。 HGLOBAL に配置されるデータの量は、メモリブロックの現在のサイズを超えることはできません。 また、ブロックをより大きなサイズに再割り当てすることはできません。
+*Phglobal* が NULL の場合、新しい HGLOBAL が割り当てられ、 *phglobal* で返される必要があります。 それ以外の場合は、 *Phglobal* によって指定された HGLOBAL にデータを格納する必要があります。 HGLOBAL に配置されるデータの量は、メモリブロックの現在のサイズを超えることはできません。 また、ブロックをより大きなサイズに再割り当てすることはできません。
 
 要求された形式とメディアにデータを提供するには、この関数をオーバーライドします。 データによっては、この関数の他のバージョンの1つをオーバーライドすることが必要になる場合があります。 複数の記憶域メディアを処理する場合は、をオーバーライド `OnRenderData` します。 データがファイル内にある場合、またはサイズが可変の場合は、をオーバーライド `OnRenderFileData` します。
 
@@ -3312,7 +3313,7 @@ virtual BOOL OnSetData(
 
 ### <a name="remarks"></a>解説
 
-データが永続的なプロパティセット形式の場合、既定の実装では、それに応じてコントロールの状態が変更されます。 それ以外の場合、既定の実装では何も行われません。 *Brelease*が TRUE の場合、への呼び出し `ReleaseStgMedium` が行われます。それ以外の場合は、が呼び出されます。
+データが永続的なプロパティセット形式の場合、既定の実装では、それに応じてコントロールの状態が変更されます。 それ以外の場合、既定の実装では何も行われません。 *Brelease* が TRUE の場合、への呼び出し `ReleaseStgMedium` が行われます。それ以外の場合は、が呼び出されます。
 
 コントロールのデータを指定したデータに置き換えるには、この関数をオーバーライドします。
 
@@ -3433,7 +3434,7 @@ Windows の結果コード。 メッセージ処理の結果を指定します�
 
 ## <a name="colecontrolparenttoclient"></a><a name="parenttoclient"></a> COleControl::P arentToClient
 
-*Ppoint*の座標をクライアント座標に変換します。
+*Ppoint* の座標をクライアント座標に変換します。
 
 ```
 virtual UINT ParentToClient(
@@ -3455,7 +3456,7 @@ virtual UINT ParentToClient(
 
 ### <a name="return-value"></a>戻り値
 
-*BHitTest*が FALSE の場合、は htnowhere を返しません。 *BHitTest*が TRUE の場合、は親 (コンテナー) ポイントが OLE コントロールのクライアント領域に到着した場所を返します。これは、次のいずれかのマウスヒットテスト値です。
+*BHitTest* が FALSE の場合、は htnowhere を返しません。 *BHitTest* が TRUE の場合、は親 (コンテナー) ポイントが OLE コントロールのクライアント領域に到着した場所を返します。これは、次のいずれかのマウスヒットテスト値です。
 
 - サイズ変更境界のないウィンドウの境界線の HTBORDER。
 
@@ -3682,10 +3683,10 @@ void ScrollWindow(
 垂直スクロールの量をデバイス単位で指定します。 上にスクロールするには、このパラメーターに負の値を指定する必要があります。
 
 *lpRect*<br/>
-親ウィンドウのクライアント座標で、スクロールする OLE オブジェクトのクライアント領域の部分を指定する、 [CRect](../../atl-mfc-shared/reference/crect-class.md) オブジェクトまたは RECT 構造体を指します。 *LpRect*が NULL の場合、OLE オブジェクトのクライアント領域全体がスクロールされます。
+親ウィンドウのクライアント座標で、スクロールする OLE オブジェクトのクライアント領域の部分を指定する、 [CRect](../../atl-mfc-shared/reference/crect-class.md) オブジェクトまたは RECT 構造体を指します。 *LpRect* が NULL の場合、OLE オブジェクトのクライアント領域全体がスクロールされます。
 
 *lpClipRect*<br/>
-`CRect`クリップする四角形を指定するオブジェクトまたは `RECT` 構造体を指します。 四角形内のピクセルだけがスクロールされます。 四角形の外側のビットは、 *lpRect* 四角形内にある場合でも影響を受けません。 *Lpcliprect*が NULL の場合、スクロール用の四角形でクリッピングは実行されません。
+`CRect`クリップする四角形を指定するオブジェクトまたは `RECT` 構造体を指します。 四角形内のピクセルだけがスクロールされます。 四角形の外側のビットは、 *lpRect* 四角形内にある場合でも影響を受けません。 *Lpcliprect* が NULL の場合、スクロール用の四角形でクリッピングは実行されません。
 
 ## <a name="colecontrolselectfontobject"></a><a name="selectfontobject"></a> COleControl:: Select、Tobject
 
@@ -3736,7 +3737,7 @@ void SerializeExtent(CArchive& ar);
 
 ### <a name="parameters"></a>パラメーター
 
-*金*<br/>
+*ar*<br/>
 `CArchive`シリアル化または逆シリアル化するオブジェクト。
 
 ### <a name="remarks"></a>解説
@@ -3757,7 +3758,7 @@ void SerializeStockProps(CArchive& ar);
 
 ### <a name="parameters"></a>パラメーター
 
-*金*<br/>
+*ar*<br/>
 `CArchive`シリアル化または逆シリアル化するオブジェクト。
 
 ### <a name="remarks"></a>解説
@@ -3779,7 +3780,7 @@ DWORD SerializeVersion(
 
 ### <a name="parameters"></a>パラメーター
 
-*金*<br/>
+*ar*<br/>
 `CArchive`シリアル化または逆シリアル化するオブジェクト。
 
 *dwVersionDefault*<br/>
@@ -4003,7 +4004,7 @@ void SetModifiedFlag(BOOL bModified = TRUE);
 
 ### <a name="remarks"></a>解説
 
-コントロールの永続的な状態に影響を与える変更が発生するたびに、この関数を呼び出します。 たとえば、永続的なプロパティの値が変更された場合は、 *Bmodified* **TRUE**を指定してこの関数を呼び出します。
+コントロールの永続的な状態に影響を与える変更が発生するたびに、この関数を呼び出します。 たとえば、永続的なプロパティの値が変更された場合は、 *Bmodified* **TRUE** を指定してこの関数を呼び出します。
 
 ## <a name="colecontrolsetnotpermitted"></a><a name="setnotpermitted"></a> COleControl:: SetNotPermitted
 

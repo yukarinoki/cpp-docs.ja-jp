@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: COleLinkingDoc クラス'
 title: COleLinkingDoc クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -16,12 +17,12 @@ helpviewer_keywords:
 - COleLinkingDoc [MFC], OnFindEmbeddedItem
 - COleLinkingDoc [MFC], OnGetLinkedItem
 ms.assetid: 9f547f35-2f95-427f-b9c0-85c31940198b
-ms.openlocfilehash: 1fad986b7e7304075cacb0b5ced9feeb8af4664f
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: 10cf9bb81c4cbbd324b95a13dc2fa44548266583
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81753842"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97226910"
 ---
 # <a name="colelinkingdoc-class"></a>COleLinkingDoc クラス
 
@@ -39,45 +40,45 @@ class COleLinkingDoc : public COleDocument
 
 |名前|説明|
 |----------|-----------------|
-|[コレクリンクドック:::コレクリンクドック](#colelinkingdoc)|`COleLinkingDoc` オブジェクトを構築します。|
+|[COleLinkingDoc::COleLinkingDoc](#colelinkingdoc)|`COleLinkingDoc` オブジェクトを構築します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
 |名前|説明|
 |----------|-----------------|
-|[登録](#register)|OLE システム DLL にドキュメントを登録します。|
-|[取り消し](#revoke)|ドキュメントの登録を取り消します。|
+|[COleLinkingDoc:: Register](#register)|OLE システム Dll にドキュメントを登録します。|
+|[COleLinkingDoc:: Revoke](#revoke)|ドキュメントの登録を取り消します。|
 
 ### <a name="protected-methods"></a>プロテクト メソッド
 
 |名前|説明|
 |----------|-----------------|
-|[ドキュメントを検索します。](#onfindembeddeditem)|指定した埋め込みアイテムを検索します。|
-|[ド・コレクトリンクド::オンゲットリンクトアイテム](#ongetlinkeditem)|指定したリンク アイテムを検索します。|
+|[COleLinkingDoc::OnFindEmbeddedItem](#onfindembeddeditem)|指定された埋め込み項目を検索します。|
+|[COleLinkingDoc::OnGetLinkedItem](#ongetlinkeditem)|指定されたリンク項目を検索します。|
 
 ## <a name="remarks"></a>解説
 
-埋め込みアイテムへのリンクをサポートするコンテナー アプリケーションを "リンク コンテナー" と呼びます。 [OCLIENT](../../overview/visual-cpp-samples.md)サンプル アプリケーションは、リンク コンテナーの例です。
+埋め込みアイテムへのリンクをサポートするコンテナーアプリケーションは、"リンクコンテナー" と呼ばれます。 [OCLIENT](../../overview/visual-cpp-samples.md)サンプルアプリケーションは、リンクコンテナーの一例です。
 
-リンクされたアイテムのソースが別のドキュメントの埋め込みアイテムである場合、埋め込みアイテムを編集するには、そのドキュメントを含むドキュメントを読み込む必要があります。 このため、ユーザーがリンク アイテムのソースを編集する場合は、リンク コンテナーを別のコンテナー アプリケーションで起動できる必要があります。 アプリケーションは、プログラムで起動したときにドキュメントを作成できるように[、COleTemplateServer](../../mfc/reference/coletemplateserver-class.md)クラスも使用する必要があります。
+リンクアイテムのソースが別のドキュメント内の埋め込みアイテムである場合、埋め込みアイテムを編集するには、そのアイテムを含むドキュメントを読み込む必要があります。 このため、リンクコンテナーは、ユーザーがリンクアイテムのソースを編集する場合に、別のコンテナーアプリケーションから起動できる必要があります。 また、アプリケーションでは、プログラムによって起動されたときにドキュメントを作成できるように、 [COleTemplateServer](../../mfc/reference/coletemplateserver-class.md) クラスも使用する必要があります。
 
-コンテナーをリンク コンテナーにするには[、COleDocument](../../mfc/reference/coledocument-class.md)ではなくから`COleLinkingDoc`ドキュメント クラスを派生させます。 他の OLE コンテナーと同様に、埋め込みアイテムやリンクアイテムだけでなく、アプリケーションのネイティブ データを格納するためのクラスを設計する必要があります。 また、ネイティブ データを格納するためのデータ構造を設計する必要があります。 アプリケーションのネイティブ`CDocItem`データに対して -derived クラスを定義する場合は、 で`COleDocument`定義されたインターフェイスを使用して、ネイティブ データと OLE データを格納できます。
+コンテナーがリンクコンテナーになるようにするには、COleDocument ではなくからドキュメントクラスを派生させ `COleLinkingDoc` ます。 [](../../mfc/reference/coledocument-class.md) 他の OLE コンテナーと同様に、アプリケーションのネイティブデータだけでなく、埋め込みまたはリンクされた項目を格納するためのクラスを設計する必要があります。 また、ネイティブデータを格納するためのデータ構造を設計する必要があります。 `CDocItem`アプリケーションのネイティブデータの派生クラスを定義する場合は、で定義されているインターフェイスを使用して、 `COleDocument` ネイティブデータと OLE データを格納できます。
 
-別のコンテナーによってアプリケーションをプログラムで起動できるようにするには、オブジェクトを`COleTemplateServer`アプリケーションの派生クラスの`CWinApp`メンバーとして宣言します。
+アプリケーションが別のコンテナーによってプログラムによって起動されるようにするには、 `COleTemplateServer` アプリケーションの派生クラスのメンバーとしてオブジェクトを宣言し `CWinApp` ます。
 
 [!code-cpp[NVC_MFCOleContainer#23](../../mfc/codesnippet/cpp/colelinkingdoc-class_1.h)]
 
-派生クラス`InitInstance`のメンバー関数で`CWinApp`、ドキュメント テンプレートを作成し、`COleLinkingDoc`ドキュメント クラスとして -derived クラスを指定します。
+`InitInstance`派生クラスのメンバー関数で `CWinApp` 、ドキュメントテンプレートを作成し、 `COleLinkingDoc` の派生クラスをドキュメントクラスとして指定します。
 
 [!code-cpp[NVC_MFCOleContainer#24](../../mfc/codesnippet/cpp/colelinkingdoc-class_2.cpp)]
 
-`COleTemplateServer`オブジェクトの`ConnectTemplate`メンバー関数を呼び出して、オブジェクトをドキュメント テンプレートに接続し、 を呼び出`COleTemplateServer::RegisterAll`して、OLE システムにクラス オブジェクトをすべて登録します。
+オブジェクト `COleTemplateServer` のメンバー関数を呼び出して、オブジェクトをドキュメントテンプレートに接続 `ConnectTemplate` し、次のようにを呼び出して、すべてのクラスオブジェクトを OLE システムに登録し `COleTemplateServer::RegisterAll` ます。
 
 [!code-cpp[NVC_MFCOleContainer#25](../../mfc/codesnippet/cpp/colelinkingdoc-class_3.cpp)]
 
-サンプル`CWinApp`派生クラス定義と`InitInstance`関数については、OCLIENT を参照してください。H と OCLIENT.MFC サンプル[OCLIENT](../../overview/visual-cpp-samples.md)の CPP を参照してください。
+サンプルの `CWinApp` 派生クラスの定義と関数につい `InitInstance` ては、「OCLIENT」を参照してください。H および OCLIENT。MFC サンプル [OCLIENT](../../overview/visual-cpp-samples.md)の CPP。
 
-の詳細`COleLinkingDoc`については、「 コンテナー :[コンテナーとコンテナーの実装](../../mfc/containers-implementing-a-container.md) [: 拡張機能](../../mfc/containers-advanced-features.md)」を参照してください。
+の使用方法の詳細については `COleLinkingDoc` 、「コンテナーとコンテナー [の実装](../../mfc/containers-implementing-a-container.md) [: 高度な機能](../../mfc/containers-advanced-features.md)」を参照してください。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -91,13 +92,13 @@ class COleLinkingDoc : public COleDocument
 
 `COleLinkingDoc`
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-**ヘッダー:** afxole.h
+**ヘッダー:** afxole
 
-## <a name="colelinkingdoccolelinkingdoc"></a><a name="colelinkingdoc"></a>コレクリンクドック:::コレクリンクドック
+## <a name="colelinkingdoccolelinkingdoc"></a><a name="colelinkingdoc"></a> COleLinkingDoc::COleLinkingDoc
 
-OLE システム`COleLinkingDoc`DLL との通信を開始せずにオブジェクトを構築します。
+`COleLinkingDoc`OLE システム dll との通信を開始せずにオブジェクトを構築します。
 
 ```
 COleLinkingDoc();
@@ -105,11 +106,11 @@ COleLinkingDoc();
 
 ### <a name="remarks"></a>解説
 
-ドキュメントが`Register`開いていることを OLE に通知するには、メンバー関数を呼び出す必要があります。
+`Register`ドキュメントが開いていることを OLE に通知するには、メンバー関数を呼び出す必要があります。
 
-## <a name="colelinkingdoconfindembeddeditem"></a><a name="onfindembeddeditem"></a>ドキュメントを検索します。
+## <a name="colelinkingdoconfindembeddeditem"></a><a name="onfindembeddeditem"></a> COleLinkingDoc::OnFindEmbeddedItem
 
-指定した名前の埋め込み OLE アイテムがドキュメントに含まれているかどうかを調べるには、フレームワークによって呼び出されます。
+指定された名前を持つ埋め込み OLE 項目がドキュメントに含まれているかどうかを判断するために、フレームワークによって呼び出されます。
 
 ```
 virtual COleClientItem* OnFindEmbeddedItem(LPCTSTR lpszItemName);
@@ -117,8 +118,8 @@ virtual COleClientItem* OnFindEmbeddedItem(LPCTSTR lpszItemName);
 
 ### <a name="parameters"></a>パラメーター
 
-*名前を変更します。*<br/>
-要求された埋め込み OLE アイテムの名前へのポインター。
+*lpszItemName*<br/>
+要求された埋め込み OLE 項目の名前へのポインター。
 
 ### <a name="return-value"></a>戻り値
 
@@ -126,11 +127,11 @@ virtual COleClientItem* OnFindEmbeddedItem(LPCTSTR lpszItemName);
 
 ### <a name="remarks"></a>解説
 
-既定の実装では、埋め込みアイテムのリストで、指定した名前の項目を検索します (名前の比較では大文字と小文字が区別されます)。 埋め込み OLE アイテムを格納または名前付けする独自のメソッドがある場合は、この関数をオーバーライドします。
+既定の実装では、指定された名前の項目について、埋め込み項目のリストが検索されます (名前比較では大文字と小文字が区別されます)。 埋め込み OLE 項目を格納または名前付けする独自のメソッドがある場合は、この関数をオーバーライドします。
 
-## <a name="colelinkingdocongetlinkeditem"></a><a name="ongetlinkeditem"></a>ド・コレクトリンクド::オンゲットリンクトアイテム
+## <a name="colelinkingdocongetlinkeditem"></a><a name="ongetlinkeditem"></a> COleLinkingDoc::OnGetLinkedItem
 
-指定した名前のリンク サーバー アイテムがドキュメントに含まれているかどうかを確認するために、フレームワークによって呼び出されます。
+指定された名前のリンクサーバー項目がドキュメントに含まれているかどうかを確認するために、フレームワークによって呼び出されます。
 
 ```
 virtual COleServerItem* OnGetLinkedItem(LPCTSTR lpszItemName);
@@ -138,8 +139,8 @@ virtual COleServerItem* OnGetLinkedItem(LPCTSTR lpszItemName);
 
 ### <a name="parameters"></a>パラメーター
 
-*名前を変更します。*<br/>
-要求されたリンク OLE アイテムの名前へのポインター。
+*lpszItemName*<br/>
+要求されたリンク OLE 項目の名前へのポインター。
 
 ### <a name="return-value"></a>戻り値
 
@@ -147,11 +148,11 @@ virtual COleServerItem* OnGetLinkedItem(LPCTSTR lpszItemName);
 
 ### <a name="remarks"></a>解説
 
-既定`COleLinkingDoc`の実装では、常に NULL が返されます。 この関数は、指定した名前のリンク`COleServerDoc`アイテムを OLE サーバー アイテムの一覧で検索するために、派生クラスでオーバーライドされます (名前の比較では大文字と小文字が区別されます)。 リンク サーバーアイテムを格納または取得する独自のメソッドを実装している場合は、この関数をオーバーライドします。
+既定の実装では、 `COleLinkingDoc` 常に NULL が返されます。 この関数は派生クラスでオーバーライドされ、 `COleServerDoc` 指定された名前を持つリンク項目の OLE サーバー項目のリストを検索します (名前比較では大文字と小文字が区別されます)。 リンクサーバー項目を格納または取得する独自のメソッドを実装している場合は、この関数をオーバーライドします。
 
-## <a name="colelinkingdocregister"></a><a name="register"></a>登録
+## <a name="colelinkingdocregister"></a><a name="register"></a> COleLinkingDoc:: Register
 
-ドキュメントが開いていることを OLE システム DLL に通知します。
+ドキュメントが開いていることを OLE システム Dll に通知します。
 
 ```
 BOOL Register(
@@ -162,24 +163,24 @@ BOOL Register(
 ### <a name="parameters"></a>パラメーター
 
 *pFactory*<br/>
-OLE ファクトリ オブジェクトへのポインター (NULL を指定できます)。
+OLE ファクトリオブジェクトへのポインター (NULL を指定できます)。
 
-*パス名*<br/>
-コンテナー ドキュメントの完全修飾パスへのポインター。
+*lpszPathName*<br/>
+コンテナードキュメントの完全修飾パスへのポインター。
 
 ### <a name="return-value"></a>戻り値
 
-ドキュメントが正常に登録された場合は 0 以外の値を返します。それ以外の場合は 0。
+ドキュメントが正常に登録された場合は0以外の。それ以外の場合は0です。
 
 ### <a name="remarks"></a>解説
 
-OLE システム DLL にドキュメントを登録する名前付きファイルを作成または開くときに、この関数を呼び出します。 ドキュメントが埋め込みアイテムを表す場合は、この関数を呼び出す必要はありません。
+ドキュメントを OLE システム Dll に登録するために、名前付きファイルを作成または開くときに、この関数を呼び出します。 ドキュメントが埋め込みアイテムを表している場合、この関数を呼び出す必要はありません。
 
-アプリケーションで使用`COleTemplateServer`している場合`Register`は、 、`COleLinkingDoc``OnNewDocument``OnOpenDocument`および の 実装によって呼び出されます。 `OnSaveDocument`
+アプリケーションでを使用している場合は、、 `COleTemplateServer` `Register` `COleLinkingDoc` 、およびの実装によってが呼び出され `OnNewDocument` `OnOpenDocument` `OnSaveDocument` ます。
 
-## <a name="colelinkingdocrevoke"></a><a name="revoke"></a>取り消し
+## <a name="colelinkingdocrevoke"></a><a name="revoke"></a> COleLinkingDoc:: Revoke
 
-ドキュメントが開かなくなったことを OLE システム DLL に通知します。
+ドキュメントが開かれていないことを OLE システム Dll に通知します。
 
 ```cpp
 void Revoke();
@@ -187,13 +188,13 @@ void Revoke();
 
 ### <a name="remarks"></a>解説
 
-OLE システム DLL に対するドキュメントの登録を取り消します。
+OLE システム Dll を使用してドキュメントの登録を取り消すには、この関数を呼び出します。
 
-名前付きファイルを閉じるときにこの関数を呼び出す必要がありますが、通常は直接呼び出す必要はありません。 `Revoke`は、 `COleLinkingDoc` `OnCloseDocument` `OnNewDocument`、 、 、`OnOpenDocument`および の実装によって`OnSaveDocument`呼び出されます。
+名前付きファイルを閉じる場合は、この関数を呼び出す必要がありますが、通常は直接呼び出す必要はありません。 `Revoke` は、、、 `COleLinkingDoc` 、およびの実装によって呼び出され `OnCloseDocument` `OnNewDocument` `OnOpenDocument` `OnSaveDocument` ます。
 
 ## <a name="see-also"></a>関連項目
 
-[サンプル O クライアント](../../overview/visual-cpp-samples.md)<br/>
+[MFC サンプル OCLIENT](../../overview/visual-cpp-samples.md)<br/>
 [COleDocument クラス](../../mfc/reference/coledocument-class.md)<br/>
-[階層グラフ](../../mfc/hierarchy-chart.md)<br/>
-[クラス](../../mfc/reference/cdoctemplate-class.md)
+[階層図](../../mfc/hierarchy-chart.md)<br/>
+[CDocTemplate クラス](../../mfc/reference/cdoctemplate-class.md)

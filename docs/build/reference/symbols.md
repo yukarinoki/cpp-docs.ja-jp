@@ -1,4 +1,5 @@
 ---
+description: 詳細情報:/記号
 title: /SYMBOLS
 ms.date: 09/05/2018
 f1_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - /SYMBOLS dumpbin option
 - -SYMBOLS dumpbin option
 ms.assetid: 34bcae90-4561-4c77-a80c-065508dec39a
-ms.openlocfilehash: a47b7da9f0b01353ef15e8b5c070c19e7c521c37
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f0cc213a8b37f99e0cb80f6df88967e4eb5204b0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62317706"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97230147"
 ---
 # <a name="symbols"></a>/SYMBOLS
 
@@ -25,11 +26,11 @@ ms.locfileid: "62317706"
 /SYMBOLS
 ```
 
-このオプションは、COFF シンボル テーブルを表示します。 シンボル テーブルは、すべてのオブジェクト ファイルに存在します。 COFF シンボル テーブルは、/DEBUG にリンクされている場合にのみ、イメージ ファイルに表示されます。
+このオプションを選択すると、COFF シンボルテーブルが表示されます。 シンボルテーブルは、すべてのオブジェクトファイルに存在します。 COFF シンボルテーブルは、/DEBUG にリンクされている場合にのみ、イメージファイルに表示されます。
 
-/SYMBOLS の出力の説明を次に示します。 /SYMBOLS 出力の意味については、winnt.h (IMAGE_SYMBOL および IMAGE_AUX_SYMBOL) または COFF ドキュメントではあります。
+/SYMBOLS. の出力の説明を次に示します。 /記号の出力の意味に関する追加情報については、「winnt.h」 (IMAGE_SYMBOL と IMAGE_AUX_SYMBOL)、または COFF のドキュメントを参照してください。
 
-次のサンプルのダンプを指定します。
+次のサンプルダンプを指定します。
 
 ```
 Dump of file main.obj
@@ -54,19 +55,19 @@ String Table Size = 0x10 bytes
          23 .text
 ```
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-シンボルの番号で始まる行を次の説明では、ユーザーに関連する情報を含む列について説明します。
+シンボル番号で始まる行の説明を次に示します。ユーザーに関連する情報が含まれている列について説明します。
 
-- 最初の 3 桁の数字は、シンボルのインデックス/数です。
+- 最初の3桁の数値は、シンボルのインデックス/数値です。
 
-- 3 番目の列には、セクターが含まれている場合*x*シンボルがオブジェクト ファイルのセクションで定義されています。 そのオブジェクトで定義されていないと、別の場所を解決する必要があります UNDEF が表示された場合。
+- 3番目の列に MBF 発注書 *x* が含まれている場合は、オブジェクトファイルのそのセクションにシンボルが定義されます。 ただし、UNDEF が出現する場合は、そのオブジェクトで定義されていないため、他の場所で解決する必要があります。
 
-- (静的、外部) の 5 番目の列は、シンボルが、そのオブジェクト内でのみ表示されるかどうかがパブリックかどうかを示します (表示されている外部)。 _Sym とのスタティック シンボルは、パブリック シンボル _sym; にリンクはありません。_sym という名前の関数の 2 つの異なるインスタンスになります。
+- 5番目の列 (Static、External) は、シンボルがそのオブジェクト内でのみ表示されるか、またはパブリック (外部参照可能) であるかを示します。 静的なシンボルである _sym は、パブリックシンボル _sym にリンクされません。これらは、_sym という名前の関数の2つの異なるインスタンスです。
 
-番号付きの行の最後の列は、シンボル名は、装飾形式し非装飾します。
+番号付きの行の最後の列は、修飾されたシンボルと装飾されていないシンボル名です。
 
-のみ、 [/HEADERS](headers.md) DUMPBIN オプションがで生成されたファイルで使用できる、 [/GL](gl-whole-program-optimization.md)コンパイラ オプション。
+[/GL](gl-whole-program-optimization.md) コンパイラ オプションで生成したファイルで使用できるのは、[/HEADERS](headers.md) DUMPBIN オプションだけです。
 
 ## <a name="see-also"></a>関連項目
 

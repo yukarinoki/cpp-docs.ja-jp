@@ -1,16 +1,17 @@
 ---
+description: '詳細情報: &lt; hash_map &gt; 関数'
 title: '&lt;hash_map&gt; 関数'
 ms.date: 11/04/2016
 f1_keywords:
 - hash_map/std::swap
 - hash_map/std::swap (hash_map)
 ms.assetid: 28748cd0-71f7-41b9-b068-579183645fba
-ms.openlocfilehash: a29254d32954556ad3a2fbedb89fb3556533ff1f
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 50f9150bc79a3ffdc586ba420d6e3dc280784767
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88841195"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97231902"
 ---
 # <a name="lthash_mapgt-functions"></a>&lt;hash_map&gt; 関数
 
@@ -33,10 +34,10 @@ void swap(
 ### <a name="parameters"></a>パラメーター
 
 *そうです*\
-要素が *左*のマップと交換される hash_map。
+要素が *左* のマップと交換される hash_map。
 
 *左側*\
-要素がマップ *右*の要素と交換される hash_map。
+要素がマップ *右* の要素と交換される hash_map。
 
 ### <a name="remarks"></a>解説
 
@@ -58,10 +59,10 @@ void swap(
 ### <a name="parameters"></a>パラメーター
 
 *そうです*\
-要素が *左*のマップと交換される hash_multimap。
+要素が *左* のマップと交換される hash_multimap。
 
 *左側*\
-要素がマップ *右*の要素と交換される hash_multimap。
+要素がマップ *右* の要素と交換される hash_multimap。
 
 ### <a name="remarks"></a>解説
 

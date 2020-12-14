@@ -1,5 +1,6 @@
 ---
-title: '&lt;概要 > (C++ドキュメントコメント)'
+description: '詳細情報: &lt; 概要&gt;'
+title: '&lt;概要> (C++ ドキュメントコメント)'
 ms.date: 11/04/2016
 f1_keywords:
 - <summary>
@@ -8,16 +9,16 @@ helpviewer_keywords:
 - <summary> C++ XML tag
 - summary C++ XML tag
 ms.assetid: cdeeefbb-1339-45d6-9002-10042a9a2726
-ms.openlocfilehash: 0620273f24573539897809b7892d46ad49b7aa57
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: 73e36367ff1a36f2b030525ea22f634ae74b64a4
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74988576"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97230225"
 ---
 # <a name="ltsummarygt"></a>&lt;summary&gt;
 
-\<summary> タグは、型または型のメンバーの説明に使用します。 型の説明に補足情報を追加するには、[\<remarks>](remarks-visual-cpp.md) タグを使用します。
+\<summary> タグは、型または型メンバーの説明に使用します。 型の説明に補足情報を追加するには、[\<remarks>](remarks-visual-cpp.md) を使用します。
 
 ## <a name="syntax"></a>構文
 
@@ -32,11 +33,11 @@ ms.locfileid: "74988576"
 
 ## <a name="remarks"></a>Remarks
 
-\<summary> タグのテキストは、IntelliSense の型に関する唯一のソースで、[オブジェクト ブラウザー](/visualstudio/ide/viewing-the-structure-of-code)とコード コメント Web レポートにも表示されます。
+タグのテキストは、 \<summary> IntelliSense の型に関する情報の唯一のソースであり、 [オブジェクトブラウザー](/visualstudio/ide/viewing-the-structure-of-code) およびコードコメント Web レポートにも表示されます。
 
-コンパイル時に [/doc](doc-process-documentation-comments-c-cpp.md) を指定して、ドキュメント コメントをファイルに出力します。
+ドキュメントコメントをファイルに処理するために、 [/doc](doc-process-documentation-comments-c-cpp.md) を使用してコンパイルします。
 
-## <a name="example"></a>使用例
+## <a name="example"></a>例
 
 ```cpp
 // xml_summary_tag.cpp
@@ -57,6 +58,6 @@ public:
 };
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [XML に関するドキュメント](xml-documentation-visual-cpp.md)

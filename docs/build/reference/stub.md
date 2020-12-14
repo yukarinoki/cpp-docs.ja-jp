@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: スタブ'
 title: STUB
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,27 +7,27 @@ f1_keywords:
 helpviewer_keywords:
 - STUB .def file statement
 ms.assetid: 0a3b9643-19ed-47e9-8173-ee16bc8ed056
-ms.openlocfilehash: 5224fdaa2a03dc615c9e7e7bb7f7ba822a40807e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 79a2002c119bf211652e2aab51d9656b36e3d159
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62318122"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97230290"
 ---
 # <a name="stub"></a>STUB
 
-仮想デバイス ドライバー (VxD) (WINNT で定義されている IMAGE_DOS_HEADER 構造体を含むファイル名を指定することができますを構築するモジュール定義ファイルで使用する場合。H) をクリックし、既定のヘッダーではなく、仮想デバイス ドライバー (VxD) で使用します。
+仮想デバイスドライバー (VxD) を構築するモジュール定義ファイルで使用すると、IMAGE_DOS_HEADER 構造を含むファイル名を指定できます (WINNT で定義)。H) は、既定のヘッダーではなく、仮想デバイスドライバー (VxD) で使用されます。
 
 ```
 STUB:filename
 ```
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-指定するのと同じ方法*filename*では、 [/stub](stub-ms-dos-stub-file-name.md)リンカー オプション。
+*Filename* の指定方法は、 [/スタブ](stub-ms-dos-stub-file-name.md)リンカーオプションを使用した場合と同じです。
 
-スタブは VxD を構築する場合だけ、モジュール定義ファイルで有効です。
+スタブは、VxD をビルドする場合にのみ、モジュール定義ファイルで有効です。
 
 ## <a name="see-also"></a>関連項目
 
-[モジュール定義ステートメントに関する規則](rules-for-module-definition-statements.md)
+[Module-Definition ステートメントの規則](rules-for-module-definition-statements.md)

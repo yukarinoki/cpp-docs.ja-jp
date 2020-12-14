@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: from_chars_result 構造体'
 title: from_chars_result 構造体
 ms.date: 7/23/2020
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - from_chars_result class
 - from_chars_result structure
-ms.openlocfilehash: 5a5dcfe6e5b59644e6ebf55d68ce43975e7d3c9d
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 894a687a4395e22538b384675af5b4ce57731f78
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87215765"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97232279"
 ---
 # <a name="from_chars_result-struct"></a>from_chars_result 構造体
 
@@ -39,7 +40,7 @@ struct from_chars_result {
 
 解析された値が変換後の型の範囲に収まらない場合、 `from_chars_result.ec` はに `errc::result_out_of_range` なります。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:**\<charconv>
 

@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: COlePropertiesDialog クラス'
 title: COlePropertiesDialog クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -22,12 +23,12 @@ helpviewer_keywords:
 - COlePropertiesDialog [MFC], m_psh
 - COlePropertiesDialog [MFC], m_vp
 ms.assetid: a54dbc89-1447-4329-bd01-00e98ec9e935
-ms.openlocfilehash: f065894ff49af755ab4020f71b0213b19db49054
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: f0c102412f422ff0eabc9f1ff8e19901845905e8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81374896"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97226767"
 ---
 # <a name="colepropertiesdialog-class"></a>COlePropertiesDialog クラス
 
@@ -45,34 +46,34 @@ class COlePropertiesDialog : public COleDialog
 
 |名前|説明|
 |----------|-----------------|
-|[ダイアログ ボックス::プロパティダイアログ](#colepropertiesdialog)|`COlePropertiesDialog` オブジェクトを構築します。|
+|[COlePropertiesDialog::COlePropertiesDialog](#colepropertiesdialog)|`COlePropertiesDialog` オブジェクトを構築します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
 |名前|説明|
 |----------|-----------------|
-|[ダイアログ ボックス::Do モーダル](#domodal)|ダイアログ ボックスを表示し、ユーザーが選択できるようにします。|
-|[コントロールプロパティダイアログ::オンApplyスケール](#onapplyscale)|ドキュメント アイテムのスケーリングが変更されたときに、フレームワークによって呼び出されます。|
+|[COlePropertiesDialog::D oModal](#domodal)|ダイアログボックスを表示し、ユーザーが選択できるようにします。|
+|[COlePropertiesDialog:: OnApplyScale](#onapplyscale)|ドキュメント項目のスケーリングが変更されたときにフレームワークによって呼び出されます。|
 
 ### <a name="public-data-members"></a>パブリック データ メンバー
 
 |名前|説明|
 |----------|-----------------|
-|[ダイアログ::m_gp](#m_gp)|オブジェクトの 「一般」ページを初期化するために使用`COlePropertiesDialog`される構造体。|
-|[ダイアログ::m_lp](#m_lp)|オブジェクトの "Link" ページを初期化するために使用`COlePropertiesDialog`される構造体。|
-|[ダイアログ::m_op](#m_op)|オブジェクトの初期化に使用される`COlePropertiesDialog`構造体。|
-|[ダイアログ::m_psh](#m_psh)|カスタム プロパティ ページを追加するために使用する構造体。|
-|[プロパティダイアログ::m_vp](#m_vp)|`COlePropertiesDialog`オブジェクトの "表示" ページをカスタマイズするための構造体。|
+|[COlePropertiesDialog:: m_gp](#m_gp)|オブジェクトの "General" ページを初期化するために使用される構造体 `COlePropertiesDialog` 。|
+|[COlePropertiesDialog:: m_lp](#m_lp)|オブジェクトの "リンク" ページを初期化するために使用される構造体 `COlePropertiesDialog` 。|
+|[COlePropertiesDialog:: m_op](#m_op)|オブジェクトを初期化するために使用される構造体 `COlePropertiesDialog` 。|
+|[COlePropertiesDialog:: m_psh](#m_psh)|追加のカスタムプロパティページを追加するために使用される構造体。|
+|[COlePropertiesDialog:: m_vp](#m_vp)|オブジェクトの "表示" ページをカスタマイズするために使用される構造体 `COlePropertiesDialog` 。|
 
 ## <a name="remarks"></a>解説
 
-[OLE オブジェクトのプロパティ] ダイアログ ボックスを使用すると、Windows の標準に合わせて OLE ドキュメント アイテムのプロパティを簡単に表示および変更できます。 これらのプロパティには、ドキュメント アイテムで表されるファイルに関する情報、アイコンとイメージの拡大縮小を表示するためのオプション、アイテムのリンクに関する情報 (アイテムがリンクされている場合) などがあります。
+[OLE オブジェクトのプロパティ] ダイアログボックスを使用すると、Windows 標準と一貫性のある方法で OLE ドキュメントアイテムのプロパティの表示と変更を簡単に行うことができます。 これらのプロパティには、ドキュメントアイテムによって表されるファイルに関する情報、アイコンと画像の拡大表示のオプション、アイテムのリンクに関する情報 (アイテムがリンクされている場合) などがあります。
 
-オブジェクトを`COlePropertiesDialog`使用するには、まずコンストラクタを使用してオブジェクト`COlePropertiesDialog`を作成します。 ダイアログ ボックスが作成されたら、メンバー関数を`DoModal`呼び出してダイアログ ボックスを表示し、ユーザーがアイテムのプロパティを変更できるようにします。 `DoModal`は、ユーザーが OK (IDOK) またはキャンセル (IDCANCEL) ボタンを選択したかどうかを返します。 [OK] ボタンと [キャンセル] ボタンに加えて、[適用] ボタンもあります。 ユーザーが [適用] を選択すると、ドキュメント アイテムのプロパティに加えた変更がアイテムに適用され、そのイメージは自動的に更新されますが、アクティブなままになります。
+オブジェクトを使用するには、 `COlePropertiesDialog` 最初にコンストラクターを使用してオブジェクトを作成し `COlePropertiesDialog` ます。 ダイアログボックスが構築されたら、メンバー関数を呼び出して `DoModal` ダイアログボックスを表示し、ユーザーが項目のプロパティを変更できるようにします。 `DoModal` ユーザーが [OK] (IDOK) または [キャンセル] (IDCANCEL) ボタンを選択したかどうかを返します。 [OK] ボタンと [キャンセル] ボタンに加えて、[適用] ボタンがあります。 ユーザーが [適用] を選択すると、ドキュメントアイテムのプロパティに加えられた変更がアイテムに適用され、その画像は自動的に更新されますが、アクティブのままになります。
 
-[m_psh](#m_psh)データ メンバーは`PROPSHEETHEADER`構造体へのポインターであり、ほとんどの場合、明示的にアクセスする必要はありません。 1 つの例外は、既定の [全般]、[表示]、および [リンク] ページ以外の追加のプロパティ ページが必要な場合です。 この場合、メンバー関数を`m_psh`呼び出す前に、カスタム ページを含`DoModal`むようにデータ メンバーを変更できます。
+[M_psh](#m_psh)データメンバーは構造体へのポインターであり、 `PROPSHEETHEADER` ほとんどの場合、明示的にアクセスする必要はありません。 1つの例外として、既定の全般、ビュー、およびリンクページ以外にプロパティページを追加する必要がある場合があります。 この場合、 `m_psh` メンバー関数を呼び出す前に、カスタムページを含めるようにデータメンバーを変更でき `DoModal` ます。
 
-OLE ダイアログ ボックスの詳細については[、「OLE](../../mfc/dialog-boxes-in-ole.md)のダイアログ ボックス」を参照してください。
+OLE のダイアログボックスの詳細については、 [ole の記事のダイアログボックス](../../mfc/dialog-boxes-in-ole.md)を参照してください。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -90,11 +91,11 @@ OLE ダイアログ ボックスの詳細については[、「OLE](../../mfc/di
 
 `COlePropertiesDialog`
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-**ヘッダー:** afxodlgs.h
+**ヘッダー:** afxodlgs
 
-## <a name="colepropertiesdialogcolepropertiesdialog"></a><a name="colepropertiesdialog"></a>ダイアログ ボックス::プロパティダイアログ
+## <a name="colepropertiesdialogcolepropertiesdialog"></a><a name="colepropertiesdialog"></a> COlePropertiesDialog::COlePropertiesDialog
 
 `COlePropertiesDialog` オブジェクトを作成します。
 
@@ -108,41 +109,41 @@ COlePropertiesDialog(
 
 ### <a name="parameters"></a>パラメーター
 
-*Pitem*<br/>
-プロパティがアクセスされているドキュメント アイテムへのポインター。
+*pItem*<br/>
+プロパティがアクセスされているドキュメントアイテムへのポインター。
 
-*nスケールミン*<br/>
-ドキュメント アイテムのイメージの最小スケーリング率。
+*nScaleMin*<br/>
+ドキュメントアイテムイメージの最小スケーリング比率。
 
-*nスケールマックス*<br/>
-ドキュメント アイテムのイメージの最大スケーリング率。
+*nScaleMax*<br/>
+ドキュメントアイテムイメージの最大拡大率 (%)。
 
 *pParentWnd*<br/>
-ダイアログ ボックスの親または所有者へのポインター。
+ダイアログボックスの親または所有者へのポインター。
 
 ### <a name="remarks"></a>解説
 
-ドキュメント アイテムのスケーリングを実装するために、`COlePropertiesDialog`共通の OLE オブジェクト プロパティ ダイアログ クラスをから派生します。 このクラスのインスタンスによって実装されるダイアログ ボックスは、ドキュメント アイテムのスケーリングをサポートしません。
+`COlePropertiesDialog`ドキュメントアイテムに対してスケーリングを実装するために、共通の OLE オブジェクトプロパティダイアログクラスをから派生させます。 このクラスのインスタンスによって実装されるダイアログボックスでは、ドキュメントアイテムの拡大縮小はサポートされません。
 
-既定では、[OLE オブジェクトのプロパティ] ダイアログ ボックスには、既定の 3 つのページがあります。
+既定では、[共通の OLE オブジェクトのプロパティ] ダイアログボックスには、次の3つの既定のページがあります。
 
 - 全般
 
-   このページには、選択したドキュメントアイテムで表されるファイルのシステム情報が含まれています。 このページから、ユーザーは選択した項目を別の種類に変換できます。
+   このページには、選択したドキュメントアイテムによって表されるファイルのシステム情報が表示されます。 このページでは、ユーザーは選択した項目を別の種類に変換できます。
 
 - 表示
 
-   このページには、項目の表示、アイコンの変更、およびイメージの拡大縮小の変更を行うためのオプションが含まれています。
+   このページには、項目を表示したり、アイコンを変更したり、イメージの拡大縮小を変更したりするためのオプションが表示されます。
 
 - Link
 
-   このページには、リンクアイテムの場所を変更するオプションと、リンクアイテムを更新するためのオプションがあります。 このページから、選択した項目のリンクを解除できます。
+   このページには、リンクアイテムの場所を変更し、リンクアイテムを更新するためのオプションが表示されます。 このページから、ユーザーは選択した項目のリンクを解除できます。
 
-既定で提供されているページ以外のページを追加するには[m_psh](#m_psh)、派生クラスのコンストラクターを終了する前に`COlePropertiesDialog`m_pshメンバー変数を変更します。 これは`COlePropertiesDialog`、コンストラクターの高度な実装です。
+既定で提供されている以外のページを追加するには、の派生クラスのコンストラクターを終了する前に、 [m_psh](#m_psh) メンバー変数を変更し `COlePropertiesDialog` ます。 これは、コンストラクターの高度な実装です `COlePropertiesDialog` 。
 
-## <a name="colepropertiesdialogdomodal"></a><a name="domodal"></a>ダイアログ ボックス::Do モーダル
+## <a name="colepropertiesdialogdomodal"></a><a name="domodal"></a> COlePropertiesDialog::D oModal
 
-このメンバー関数を呼び出すと、Windows の共通の OLE オブジェクト プロパティ ダイアログ ボックスが表示され、ユーザーはドキュメント アイテムのさまざまなプロパティを表示したり、変更したりできます。
+このメンバー関数を呼び出して、[Windows コモン OLE オブジェクトのプロパティ] ダイアログボックスを表示し、ユーザーがドキュメントアイテムのさまざまなプロパティを表示および変更できるようにします。
 
 ```
 virtual INT_PTR DoModal();
@@ -150,13 +151,13 @@ virtual INT_PTR DoModal();
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合は IDOK または IDCANCEL。それ以外の場合は 0。 IDOK と IDCANCEL は、ユーザーが [OK] または [キャンセル] ボタンを選択したかどうかを示す定数です。
+IDOK または IDCANCEL 成功した場合は、それ以外の場合は0です。 IDOK と IDCANCEL は、ユーザーが [OK] または [キャンセル] ボタンを選択したかどうかを示す定数です。
 
-IDCANCEL が返された場合は[、エラーが](/windows/win32/api/commdlg/nf-commdlg-commdlgextendederror)発生したかどうかを判断する関数を呼び出すことができます。
+IDCANCEL が返された場合は、Windows の [Commdlgextendederror](/windows/win32/api/commdlg/nf-commdlg-commdlgextendederror) 関数を呼び出して、エラーが発生したかどうかを判断できます。
 
-## <a name="colepropertiesdialogm_gp"></a><a name="m_gp"></a>ダイアログ::m_gp
+## <a name="colepropertiesdialogm_gp"></a><a name="m_gp"></a> COlePropertiesDialog:: m_gp
 
-OLE オブジェクトのプロパティ ダイアログ ボックスの全般ページを初期化するために使用される[OLEUIGNRLPROPS](/windows/win32/api/oledlg/ns-oledlg-oleuignrlpropsw)型の構造体。
+OLE オブジェクトのプロパティダイアログボックスの [全般] ページを初期化するために使用される、 [OLEUIGNRLPROPS](/windows/win32/api/oledlg/ns-oledlg-oleuignrlpropsw)型の構造体。
 
 ```
 OLEUIGNRLPROPS m_gp;
@@ -164,13 +165,13 @@ OLEUIGNRLPROPS m_gp;
 
 ### <a name="remarks"></a>解説
 
-このページには埋め込みの種類とサイズが表示され、ユーザーは [変換] ダイアログ ボックスにアクセスできます。 このページには、オブジェクトがリンクの場合のリンク先も表示されます。
+このページには、埋め込みの種類とサイズが表示され、ユーザーは [変換] ダイアログボックスにアクセスできます。 このページには、オブジェクトがリンクの場合のリンク先も表示されます。
 
-構造の`OLEUIGNRLPROPS`詳細については、Windows SDK を参照してください。
+構造の詳細につい `OLEUIGNRLPROPS` ては、Windows SDK を参照してください。
 
-## <a name="colepropertiesdialogm_lp"></a><a name="m_lp"></a>ダイアログ::m_lp
+## <a name="colepropertiesdialogm_lp"></a><a name="m_lp"></a> COlePropertiesDialog:: m_lp
 
-OLE オブジェクトのプロパティ ダイアログ ボックスのリンク ページを初期化するために使用される[OLEUILINKPROPS](/windows/win32/api/oledlg/ns-oledlg-oleuilinkpropsw)型の構造体。
+OLE オブジェクトのプロパティダイアログボックスのリンクページを初期化するために使用される、 [OLEUILINKPROPS](/windows/win32/api/oledlg/ns-oledlg-oleuilinkpropsw)型の構造体。
 
 ```
 OLEUILINKPROPS m_lp;
@@ -178,13 +179,13 @@ OLEUILINKPROPS m_lp;
 
 ### <a name="remarks"></a>解説
 
-このページには、リンクされたアイテムの場所が表示され、ユーザーはアイテムへのリンクを更新または解除できます。
+このページには、リンクされた項目の場所が表示され、ユーザーはその項目へのリンクを更新または中断できます。
 
-構造の`OLEUILINKPROPS`詳細については、Windows SDK を参照してください。
+構造の詳細につい `OLEUILINKPROPS` ては、Windows SDK を参照してください。
 
-## <a name="colepropertiesdialogm_op"></a><a name="m_op"></a>ダイアログ::m_op
+## <a name="colepropertiesdialogm_op"></a><a name="m_op"></a> COlePropertiesDialog:: m_op
 
-[OLEUIOBJECTPROPS](/windows/win32/api/oledlg/ns-oledlg-oleuiobjectpropsw)型の構造体で、共通の OLE オブジェクト プロパティ ダイアログ ボックスを初期化するために使用します。
+共通の OLE オブジェクトプロパティダイアログボックスを初期化するために使用される、 [Oleuiobjectprops](/windows/win32/api/oledlg/ns-oledlg-oleuiobjectpropsw)型の構造体。
 
 ```
 OLEUIOBJECTPROPS m_op;
@@ -192,13 +193,13 @@ OLEUIOBJECTPROPS m_op;
 
 ### <a name="remarks"></a>解説
 
-この構造体には、全般、リンク、およびビューの各ページを初期化するために使用されるメンバーが含まれています。
+この構造体には、全般、リンク、および表示ページの初期化に使用されるメンバーが含まれています。
 
-詳細については、Windows SDK の「OLEUI オブジェクトの割り当てと[OLEUILINKPROPS」](/windows/win32/api/oledlg/ns-oledlg-oleuilinkpropsw)を参照してください。
+詳細については、Windows SDK の OLEUIOBJECTPROPS および [OLEUILINKPROPS](/windows/win32/api/oledlg/ns-oledlg-oleuilinkpropsw) 構造体を参照してください。
 
-## <a name="colepropertiesdialogm_psh"></a><a name="m_psh"></a>ダイアログ::m_psh
+## <a name="colepropertiesdialogm_psh"></a><a name="m_psh"></a> COlePropertiesDialog:: m_psh
 
-メンバーがダイアログ オブジェクトの特性を格納する型[の構造体](/windows/win32/api/prsht/ns-prsht-propsheetheadera_v2)。
+[PROPSHEETHEADER](/windows/win32/api/prsht/ns-prsht-propsheetheadera_v2)型の構造体。メンバーは、ダイアログオブジェクトの特性を格納します。
 
 ```
 PROPSHEETHEADER m_psh;
@@ -206,15 +207,15 @@ PROPSHEETHEADER m_psh;
 
 ### <a name="remarks"></a>解説
 
-オブジェクトを`COlePropertiesDialog`作成した後、メンバー関数`m_psh`を呼び出す前にダイアログ ボックスのさまざまな側面`DoModal`を設定できます。
+オブジェクトを構築した後は、を使用して、 `COlePropertiesDialog` `m_psh` メンバー関数を呼び出す前にダイアログボックスのさまざまな側面を設定でき `DoModal` ます。
 
-データ メンバーを`m_psh`直接変更すると、既定の動作がオーバーライドされます。
+データメンバーを直接変更すると `m_psh` 、すべての既定の動作がオーバーライドされます。
 
-構造の`PROPSHEETHEADER`詳細については、Windows SDK を参照してください。
+構造の詳細につい `PROPSHEETHEADER` ては、Windows SDK を参照してください。
 
-## <a name="colepropertiesdialogm_vp"></a><a name="m_vp"></a>プロパティダイアログ::m_vp
+## <a name="colepropertiesdialogm_vp"></a><a name="m_vp"></a> COlePropertiesDialog:: m_vp
 
-OLE オブジェクトのプロパティ ダイアログ ボックスの [ビュー] ページを初期化するために使用される[OLEUIVIEWPROPS](/windows/win32/api/oledlg/ns-oledlg-oleuiviewpropsw)型の構造体。
+[OLE オブジェクトのプロパティ] ダイアログボックスの [ビュー] ページを初期化するために使用される、 [Oleuiviewprops](/windows/win32/api/oledlg/ns-oledlg-oleuiviewpropsw)型の構造体。
 
 ```
 OLEUIVIEWPROPS m_vp;
@@ -222,13 +223,13 @@ OLEUIVIEWPROPS m_vp;
 
 ### <a name="remarks"></a>解説
 
-このページでは、オブジェクトの"コンテンツ"ビューと"アイコニック"ビューを切り替えることができ、コンテナ内でのスケーリングを変更できます。 また、オブジェクトがアイコンとして表示されているときに、ユーザーが [アイコンの変更] ダイアログ ボックスにアクセスすることもできます。
+このページを使用すると、ユーザーはオブジェクトの "コンテンツ" ビューと "アイコン化" ビューを切り替えることができます。また、コンテナー内でのスケーリングを変更することができます。 また、オブジェクトがアイコンとして表示されている場合に、ユーザーは [アイコンの変更] ダイアログボックスにアクセスできます。
 
-構造の`OLEUIVIEWPROPS`詳細については、Windows SDK を参照してください。
+構造の詳細につい `OLEUIVIEWPROPS` ては、Windows SDK を参照してください。
 
-## <a name="colepropertiesdialogonapplyscale"></a><a name="onapplyscale"></a>コントロールプロパティダイアログ::オンApplyスケール
+## <a name="colepropertiesdialogonapplyscale"></a><a name="onapplyscale"></a> COlePropertiesDialog:: OnApplyScale
 
-スケーリング値が変更され、[OK] または [適用] が選択されたときに、フレームワークによって呼び出されます。
+スケーリング値が変更され、[OK] または [適用] が選択されたときにフレームワークによって呼び出されます。
 
 ```
 virtual BOOL OnApplyScale(
@@ -239,30 +240,30 @@ virtual BOOL OnApplyScale(
 
 ### <a name="parameters"></a>パラメーター
 
-*Pitem*<br/>
-プロパティがアクセスされているドキュメント アイテムへのポインター。
+*pItem*<br/>
+プロパティがアクセスされているドキュメントアイテムへのポインター。
 
-*nカレントスケール*<br/>
-ダイアログ スケールの数値。
+*nCurrentScale*<br/>
+ダイアログのスケールの数値。
 
 *bRelativeToOrig*<br/>
-ドキュメント アイテムの元のサイズにスケーリングを適用するかどうかを示します。
+ドキュメントアイテムの元のサイズにスケーリングを適用するかどうかを示します。
 
 ### <a name="return-value"></a>戻り値
 
-処理された場合は 0 以外。それ以外の場合は 0。
+処理された場合は0以外の。それ以外の場合は0です。
 
 ### <a name="remarks"></a>解説
 
-既定の実装では、何も行われません。 スケーリング コントロールを有効にするには、この関数をオーバーライドする必要があります。
+既定の実装では、何も行われません。 スケーリングコントロールを有効にするには、この関数をオーバーライドする必要があります。
 
 > [!NOTE]
-> 共通の OLE オブジェクト プロパティ ダイアログ ボックスが表示される前に、フレームワークは *、pItem*の場合は*NULL、nCurrentScale*の場合は - 1 でこの関数を呼び出します。 これは、スケーリングコントロールを有効にするかどうかを決定するために行われます。
+> [OLE オブジェクトのプロパティ] ダイアログボックスが表示される前に、フレームワークはこの関数を呼び出します。この関数は、 *pItem* の場合は NULL、 *ncurrentscale* の場合は-1 になります。 これは、スケーリングコントロールを有効にする必要があるかどうかを判断するために行われます。
 
 ## <a name="see-also"></a>関連項目
 
-[MFC サンプル CIRC](../../overview/visual-cpp-samples.md)<br/>
+[MFC のサンプル CIRC](../../overview/visual-cpp-samples.md)<br/>
 [COleDialog クラス](../../mfc/reference/coledialog-class.md)<br/>
-[階層グラフ](../../mfc/hierarchy-chart.md)<br/>
+[階層図](../../mfc/hierarchy-chart.md)<br/>
 [COleDialog クラス](../../mfc/reference/coledialog-class.md)<br/>
 [CPropertyPage クラス](../../mfc/reference/cpropertypage-class.md)

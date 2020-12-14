@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: messages_byname クラス'
 title: messages_byname クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - messages_byname class
 ms.assetid: c6c64841-3e80-43c8-b54c-fed41833ad6b
-ms.openlocfilehash: 56d8931cb404d9c0f3f5113f8b2ca0f1158209f2
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 960db9dd411e4ac42f81a0027e91ae1001b7877d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72689327"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97230524"
 ---
 # <a name="messages_byname-class"></a>messages_byname クラス
 
@@ -39,22 +40,22 @@ protected:
 
 ### <a name="parameters"></a>パラメーター
 
-*@No__t_1*
+*_Locname*\
 名前付きのロケール。
 
-*Refs \ (_c)*
+*_Refs*\
 最初の参照数。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-その動作は、名前付きロケール*名*によって決まります。 各コンストラクターは、[messages](../standard-library/messages-class.md#messages)\<CharType>( `_Refs`) を使用して、その基本オブジェクトを初期化します。
+その動作は、 *_Locname* 名前付きロケールによって決まります。 各コンストラクターは、[メッセージ](../standard-library/messages-class.md#messages)() を使用して、その基本オブジェクトを初期化 \<CharType> `_Refs` します。
 
-## <a name="requirements"></a>［要件］
+## <a name="requirements"></a>要件
 
-**ヘッダー:** \<locale>
+**ヘッダー:**\<locale>
 
 **名前空間:** std
 
 ## <a name="see-also"></a>関連項目
 
-[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[C++ 標準ライブラリのスレッドセーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)

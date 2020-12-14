@@ -1,4 +1,5 @@
 ---
+description: 詳細情報:/TLS
 title: /TLS
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,24 +8,24 @@ helpviewer_keywords:
 - /TLS dumpbin option
 - -TLS dumpbin option
 ms.assetid: 2b3f48f9-cac4-4351-b15c-2833b43bc709
-ms.openlocfilehash: 751c212398f3d309b1d31d204291fe3a0503cf06
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a21ef03210a65bb50899ba3907911272ac52b0db
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62317264"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97229952"
 ---
 # <a name="tls"></a>/TLS
 
-実行可能ファイルから IMAGE_TLS_DIRECTORY 構造が表示されます。
+実行可能ファイルから IMAGE_TLS_DIRECTORY 構造体を表示します。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-や TLS 構造体のフィールドと TLS のコールバック関数のアドレス TLS を表示します。
+/Tls は、tls の構造体のフィールドと TLS コールバック関数のアドレスを表示します。
 
-プログラムではスレッド ローカル ストレージを使用しない場合、そのイメージには、TLS の構造は含まれません。  参照してください[スレッド](../../cpp/thread.md)詳細についてはします。
+プログラムがスレッドローカルストレージを使用しない場合、そのイメージに TLS 構造は含まれません。  詳細については、「 [スレッド](../../cpp/thread.md) 」を参照してください。
 
-IMAGE_TLS_DIRECTORY は、winnt.h で定義されます。
+IMAGE_TLS_DIRECTORY は、winnt.h で定義されています。
 
 ## <a name="see-also"></a>関連項目
 

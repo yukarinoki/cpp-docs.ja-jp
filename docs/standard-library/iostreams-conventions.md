@@ -1,16 +1,17 @@
 ---
+description: '詳細情報: iostreams の規則'
 title: iostreams の規則
 ms.date: 11/04/2016
 helpviewer_keywords:
 - iostream header
 - C++ Standard Library, iostreams
 ms.assetid: 9fe5ded0-37a1-48d1-9671-c81ffc4760ad
-ms.openlocfilehash: 7bfc497ec7c55a611d29cd62d076c0ac2e9b6e9f
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 3676c6aa14a5ebac1d39ed50821449caa7313e40
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88845459"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97231395"
 ---
 # <a name="iostreams-conventions"></a>iostreams の規則
 

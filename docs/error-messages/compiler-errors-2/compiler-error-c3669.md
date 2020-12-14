@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「コンパイラエラー C3669」を参照してください。
 title: コンパイラ エラー C3669
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,20 +7,20 @@ f1_keywords:
 helpviewer_keywords:
 - C3669
 ms.assetid: be9c7ae4-e96f-47ab-922a-39a3537d5ca6
-ms.openlocfilehash: 560f4e8ef39e265f20d3c119858ff06b463d9841
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: b746c64af06178caf1006417f61c5f1e853cb67d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74758139"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97228951"
 ---
 # <a name="compiler-error-c3669"></a>コンパイラ エラー C3669
 
 ' member ': オーバーライド指定子 ' override ' は、静的メンバー関数またはコンストラクターでは使用できません
 
-オーバーライドが正しく指定されませんでした。 詳細については、「[明示的なオーバーライド](../../extensions/explicit-overrides-cpp-component-extensions.md)」を参照してください。
+オーバーライドが正しく指定されませんでした。 詳細については、「 [明示的なオーバーライド](../../extensions/explicit-overrides-cpp-component-extensions.md)」を参照してください。
 
-## <a name="example"></a>使用例
+## <a name="example"></a>例
 
 次の例では、C3669 が生成されます。
 

@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: is_base_of クラス'
 title: is_base_of クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,14 +8,14 @@ helpviewer_keywords:
 - is_base_of class
 - is_base_of
 ms.assetid: 436f6213-1d4c-4ffc-a588-fc7c4887dd86
-ms.openlocfilehash: d56222f218033d00583e5e3def9790720ef7bb94
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 6cb2b55a6df687fbb7da74ca3c696a8a9b0ffbad
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68456618"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97231265"
 ---
-# <a name="isbaseof-class"></a>is_base_of クラス
+# <a name="is_base_of-class"></a>is_base_of クラス
 
 一方の型がもう一方の型の基底クラスであるかどうかをテストします。
 
@@ -33,9 +34,9 @@ struct is_base_of;
 *導出*\
 テスト対象の派生型。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-型の述語のインスタンスは、型の*ベース*が*派生*型の基底クラスである場合は true を保持します。それ以外の場合は、false を保持します。
+型の述語のインスタンスは、型の *ベース* が *派生* 型の基底クラスである場合は true を保持します。それ以外の場合は、false を保持します。
 
 ## <a name="example"></a>例
 
@@ -72,9 +73,9 @@ is_base_of<base, derived> == true
 is_base_of<derived, base> == false
 ```
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-**ヘッダー:** \<type_traits>
+**ヘッダー:**\<type_traits>
 
 **名前空間:** std
 

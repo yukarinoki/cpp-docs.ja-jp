@@ -1,17 +1,18 @@
 ---
+description: '詳細情報: 構造体と定数の定義'
 title: 構造体と定数の定義
 ms.date: 11/04/2016
 ms.assetid: 1df7cf46-b853-4788-a257-100d5c37997f
-ms.openlocfilehash: ea7aa1ec25bcd0e8531ef63848de26da164da668
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5a9e372815e25883cf69497c77388002a7015572
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62317862"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97230329"
 ---
 # <a name="structure-and-constant-definitions"></a>構造体と定数の定義
 
-既定のヘルパー ルーチンでは、いくつかの構造を使用して、通信用のフック関数とすべての例外の中にします。 通知とエラー値、情報構造体、および、フックに渡されるフック関数へのポインター型を次に示します。
+既定のヘルパールーチンは、いくつかの構造体を使用してフック関数との通信を行い、例外が発生したときに使用します。 次に示すのは、通知とエラーの値、情報の構造、およびフックに渡されるポインターからフックへの関数の型です。
 
 ```
 //

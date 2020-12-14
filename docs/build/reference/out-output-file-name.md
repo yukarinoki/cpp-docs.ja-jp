@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「/OUT (出力ファイル名)」を参照してください。
 title: /OUT (出力ファイル名)
 ms.date: 11/04/2016
 f1_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - /OUT C++ linker option
 - linker [C++], output files
 ms.assetid: 976210a4-e51f-4cfb-af5e-c16344455834
-ms.openlocfilehash: be5fe929bdcf52be19955a5bc2d7aa093e194f45
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1773b4b2dd340bc105495c1b05211c018548976f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62320072"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97226403"
 ---
 # <a name="out-output-file-name"></a>/OUT (出力ファイル名)
 
@@ -26,26 +27,26 @@ ms.locfileid: "62320072"
 
 ## <a name="arguments"></a>引数
 
-*ファイル名*<br/>
-ユーザーが指定した出力ファイルの名前。 既定の名前が置き換えられます。
+*filename*<br/>
+ユーザーが指定した出力ファイルの名前。 既定の名前を置き換えます。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-/OUT オプションには、既定の名前と、リンカーによって作成されるプログラムの場所がオーバーライドされます。
+/OUT オプションは、リンカーによって作成されるプログラムの既定の名前と場所をオーバーライドします。
 
-既定では、リンカーは、最初に指定された .obj ファイル (.exe または .dll) には、適切な拡張機能のベース名を使用して、ファイル名を形成します。
+既定では、リンカーは、指定された最初の .obj ファイルの基本名と、適切な拡張子 (.exe または .dll) を使用して、ファイル名を形成します。
 
-これは、オプションはマップまたはインポート ライブラリの既定の基本名。 詳細については、次を参照してください。[マップ ファイルの生成](map-generate-mapfile.md)(/map) と[/IMPLIB](implib-name-import-library.md)します。
+このオプションは、mapfile またはインポートライブラリの既定の基本名です。 詳細については、「Mapfile (/Map) と[/IMPLIB](implib-name-import-library.md)の[生成](map-generate-mapfile.md)」を参照してください。
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのリンカー オプションを設定するには
 
-1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。 [Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)します。
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、[Visual Studio での C++ コンパイラとビルド プロパティの設定](../working-with-project-properties.md)に関するページを参照してください。
 
-1. をクリックして、**リンカー**フォルダー。
+1. **[リンカー]** フォルダーをクリックします。
 
-1. をクリックして、**全般**プロパティ ページ。
+1. [ **全般** ] プロパティページをクリックします。
 
-1. 変更、**出力ファイル**プロパティ。
+1. " **出力ファイル** " プロパティを変更します。
 
 ### <a name="to-set-this-linker-option-programmatically"></a>このリンカーをコードから設定するには
 

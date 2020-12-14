@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「-Struct」を参照してください。
 title: minus 構造体
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - minus struct
 - minus class
 ms.assetid: 7bce784e-2be6-413a-b516-004e9ecb2a39
-ms.openlocfilehash: e57023c78f944a038e94d851abdbf7909545295c
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: fe9fb343a49fb8097322b687326d3c986ba25ee5
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68246799"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97230498"
 ---
 # <a name="minus-struct"></a>minus 構造体
 
@@ -42,11 +43,11 @@ struct minus<void>
 *型*、 *T*、 *U*\
 指定または推論された型のオペランドを受け取る二項 `operator-` をサポートする型。
 
-*左*\
-演算の左オペランド。 特化されていないテンプレートは、型の左辺値参照引数を受け取る*型*します。 特殊化されたテンプレートはの完全転送を左辺値と右辺値参照引数の型を推論する*T*します。
+*左側*\
+演算の左オペランド。 非特殊テンプレートは、type *型* の左辺値参照引数を受け取ります。 特殊化されたテンプレートは、推論された型 *T* の左辺値および右辺値参照引数の完全転送を行います。
 
 *そうです*\
-演算の右オペランド。 特化されていないテンプレートは、型の左辺値参照引数を受け取る*型*します。 特殊化されたテンプレートはの完全転送を左辺値と右辺値参照引数の型を推論する*U*します。
+演算の右オペランド。 非特殊テンプレートは、type *型* の左辺値参照引数を受け取ります。 特殊化されたテンプレートは、推論された型 *U* の左辺値および右辺値参照引数の完全転送を行います。
 
 ## <a name="return-value"></a>戻り値
 

@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: _ismbbprint、_ismbbprint_l'
 title: _ismbbprint、_ismbbprint_l
 ms.date: 4/2/2020
 api_name:
@@ -34,12 +35,12 @@ helpviewer_keywords:
 - _ismbbprint function
 - _ismbbprint_l function
 ms.assetid: d08a061c-18a8-48f2-a75d-bff4870aec9d
-ms.openlocfilehash: 63aa7d9af3b756bc7807cae55fe969d492ec43cf
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: e168e90b3372c220011ffdbe4e795570e9ffc1ae
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82918637"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97229679"
 ---
 # <a name="_ismbbprint-_ismbbprint_l"></a>_ismbbprint、_ismbbprint_l
 
@@ -59,7 +60,7 @@ int _ismbbprint_l(
 
 ### <a name="parameters"></a>パラメーター
 
-*40u-c*<br/>
+*c*<br/>
 テストする整数。
 
 *locale*<br/>
@@ -67,11 +68,11 @@ int _ismbbprint_l(
 
 ## <a name="return-value"></a>戻り値
 
-次の式の場合、 **_ismbbprint**は0以外の値を返します。
+次の式の場合、 **_ismbbprint** は0以外の値を返します。
 
 `isprint(c) || _ismbbkprint(c)`
 
-*c*の場合は0以外の。それ以外の場合は0。 **_ismbbprint**は、ロケールに依存する動作に現在のロケールを使用します。 **_ismbbprint_l**は、渡されたロケールを代わりに使用する点を除いて同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
+*c* の場合は0以外の。それ以外の場合は0。 **_ismbbprint** は、ロケールに依存する動作に現在のロケールを使用します。 **_ismbbprint_l** は、渡されたロケールを代わりに使用する点を除いて同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
 
 ## <a name="remarks"></a>解説
 
@@ -79,7 +80,7 @@ int _ismbbprint_l(
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**_ismbbprint**|\<mbctype.h>|
 |**_ismbbprint_l**|\<mbctype.h>|

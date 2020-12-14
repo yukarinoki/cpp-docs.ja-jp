@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: mersenne_twister_engine クラス'
 title: mersenne_twister_engine クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - mersenne_twister_engine class
 ms.assetid: 7ee968fa-a1cc-450f-890f-7305de062685
-ms.openlocfilehash: 24663b12efaef66f29c7f755ab45df5ef973755c
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 7f5a2d74493194cb07bb4dd628cf3e483b1fd99b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88846421"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97230628"
 ---
 # <a name="mersenne_twister_engine-class"></a>mersenne_twister_engine クラス
 
@@ -71,11 +72,11 @@ class mersenne_twister_engine;
 
 ## <a name="remarks"></a>解説
 
-このクラステンプレートは、終了間隔 [, W] で値を返す乱数エンジンを記述し `0` `2` <sup>W</sup>  -  `1` ます。 このエンジンは、`W * (N - 1) + R` ビットの大きな整数値を保持します。 この大きな値から一度に1ビットずつ抽出し、すべて *のビットを* 使用した場合は、ビットをシフトして混合することによって大きな値をひねることによって、抽出元となる新しいビットのセットを取得します。 エンジンの状態は、 `N` `W` が N 回以上呼び出された場合に使用される最後のビット値です。それ以外の場合は、 `operator()` 使用された*N* `M` `W` ビット値と `N - M` シードの最後の値です。
+このクラステンプレートは、終了間隔 [, W] で値を返す乱数エンジンを記述し `0` `2` <sup></sup>  -  `1` ます。 このエンジンは、`W * (N - 1) + R` ビットの大きな整数値を保持します。 この大きな値から一度に1ビットずつ抽出し、すべて *のビットを* 使用した場合は、ビットをシフトして混合することによって大きな値をひねることによって、抽出元となる新しいビットのセットを取得します。 エンジンの状態は、 `N` `W` が N 回以上呼び出された場合に使用される最後のビット値です。それ以外の場合は、 `operator()` 使用された `M` `W` ビット値と `N - M` シードの最後の値です。
 
-ジェネレーターは、シフト値 *N* と *M*、ねじれ値 *R*、および条件付き XOR マスク *a*によって定義された、ツイスト一般化されたフィードバックシフトレジスタを使用して、保持している大きな値をひねることができます。さらに、生のシフトレジスタのビットは、 *U*、 *D*、 *S*、 *B*、 *T*、 *C*、 *L*の値によって定義されるビットスクランブル行列に従って、スクランブル (調律) されます。
+ジェネレーターは、シフト値 *N* と *M*、ねじれ値 *R*、および条件付き XOR マスク *a* によって定義された、ツイスト一般化されたフィードバックシフトレジスタを使用して、保持している大きな値をひねることができます。さらに、生のシフトレジスタのビットは、 *U*、 *D*、 *S*、 *B*、 *T*、 *C*、 *L* の値によって定義されるビットスクランブル行列に従って、スクランブル (調律) されます。
 
-テンプレート引数は、 `UIntType` 最大 W の値を保持するのに十分な大きさである必要があり `2` <sup>W</sup>  -  `1` ます。 その他のテンプレート引数の値は、次の要件を満たしている必要があります。`2u < W, 0 < M, M ≤ N, R ≤ W, U ≤ W, S ≤ W, T ≤ W, L ≤ W, W ≤ numeric_limits<UIntType>::digits, A ≤ (1u<<W) - 1u, B ≤ (1u<<W) - 1u, C ≤ (1u<<W) - 1u, D ≤ (1u<<W) - 1u, and F ≤ (1u<<W) - 1u`
+テンプレート引数は、 `UIntType` 最大 W の値を保持するのに十分な大きさである必要があり `2` <sup></sup>  -  `1` ます。 その他のテンプレート引数の値は、次の要件を満たしている必要があります。`2u < W, 0 < M, M ≤ N, R ≤ W, U ≤ W, S ≤ W, T ≤ W, L ≤ W, W ≤ numeric_limits<UIntType>::digits, A ≤ (1u<<W) - 1u, B ≤ (1u<<W) - 1u, C ≤ (1u<<W) - 1u, D ≤ (1u<<W) - 1u, and F ≤ (1u<<W) - 1u`
 
 このエンジンから直接ジェネレーターを構築できますが、次の表にある定義済みの typedef のいずれかを使用することをお勧めします。
 
@@ -107,7 +108,7 @@ typedef mersenne_twister_engine<unsigned long long, 64, 312, 156,
 
 コード例については、「」を参照してください [\<random>](../standard-library/random.md) 。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:**\<random>
 

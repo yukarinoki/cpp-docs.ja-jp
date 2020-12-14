@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: is_class クラス'
 title: is_class クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - is_class class
 - is_class
 ms.assetid: 96fc34a3-a81b-4ec6-b7fb-baafde1a0f4e
-ms.openlocfilehash: 4122ad2b4adbd0ed290f26428560c569b3754d7d
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 9aa7646ca46aa82176c97d90d42a65ad76bc45eb
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87222447"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97231252"
 ---
 # <a name="is_class-class"></a>is_class クラス
 
@@ -32,7 +33,7 @@ struct is_class;
 
 ## <a name="remarks"></a>解説
 
-型*Ty*がまたはとして定義された型、またはそのいずれかの形式である場合、型述語のインスタンスは true を保持し **`class`** **`struct`** `cv-qualified` ます。それ以外の場合は、false を保持します。
+型 *Ty* がまたはとして定義された型、またはそのいずれかの形式である場合、型述語のインスタンスは true を保持し **`class`** **`struct`** `cv-qualified` ます。それ以外の場合は、false を保持します。
 
 ## <a name="example"></a>例
 
@@ -63,7 +64,7 @@ is_class<trivial> == true
 is_class<int> == false
 ```
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:**\<type_traits>
 

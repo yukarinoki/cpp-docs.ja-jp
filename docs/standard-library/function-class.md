@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: function クラス'
 title: function クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -18,12 +19,12 @@ helpviewer_keywords:
 - std::function [C++], target
 - std::function [C++], target_type
 ms.assetid: 7b5ca76b-9ca3-4d89-8fcf-cad70a4aeae6
-ms.openlocfilehash: 052cbba69aa99d33de963a3e360e6951a6006bec
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 30e81e297791691ba5736b4e116fc08ab4229f0a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88831464"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97232175"
 ---
 # <a name="function-class"></a>function クラス
 
@@ -117,7 +118,7 @@ public:
 |-|-|
 |[result_type](#result_type)|格納された呼び出し可能オブジェクトの戻り値の型。|
 
-### <a name="functions"></a>Functions
+### <a name="functions"></a>関数
 
 |名前|説明|
 |-|-|
@@ -126,7 +127,7 @@ public:
 |[target](#target)|格納されている呼び出し可能オブジェクトが指定されたとおりに呼び出し可能かどうかをテストします。|
 |[target_type](#target_type)|呼び出し可能オブジェクトの型情報を取得します。|
 
-### <a name="operators"></a>演算子
+### <a name="operators"></a>オペレーター
 
 |名前|説明|
 |-|-|
@@ -163,7 +164,7 @@ template <class Fx, class Alloc>
 
 ### <a name="remarks"></a>解説
 
-各メンバー関数は、によって保持されているを `callable object` **`*this`** 、として渡される呼び出し可能オブジェクトに置き換え `operand` ます。 両方とも、アロケーターオブジェクト *Ax*を使用してストレージを割り当てます。
+各メンバー関数は、によって保持されているを `callable object` **`*this`** 、として渡される呼び出し可能オブジェクトに置き換え `operand` ます。 両方とも、アロケーターオブジェクト *Ax* を使用してストレージを割り当てます。
 
 ## <a name="function"></a><a name="function"></a> 関数
 
@@ -514,7 +515,7 @@ void swap(function& right);
 
 ### <a name="remarks"></a>解説
 
-このメンバー関数は、との間でターゲットオブジェクトを交換し **`*this`** ます。 *right* 一定時間に実行し、例外をスローしません。
+このメンバー関数は、との間でターゲットオブジェクトを交換し **`*this`** ます。  一定時間に実行し、例外をスローしません。
 
 ### <a name="example"></a>例
 

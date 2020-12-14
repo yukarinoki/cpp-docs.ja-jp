@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: messages_base クラス'
 title: messages_base クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - messages_base class
 ms.assetid: 9aad38c6-4c13-445d-b096-364bd0836efb
-ms.openlocfilehash: b0fe7d66842fb77c6fd03f62b012babcbc9f7f3a
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 45ea81b02bd15011c9f98b9364ea9918e248692a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87215648"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97230589"
 ---
 # <a name="messages_base-class"></a>messages_base クラス
 
@@ -30,7 +31,7 @@ struct messages_base : locale::facet {
 
 Type catalog は、 **`int`** messages:: [do_open](../standard-library/messages-class.md#do_open)から返される可能性のある戻り値を記述する型のシノニムです。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:**\<locale>
 

@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「C ランタイムエラー R6035」を参照してください。
 title: C ランタイム エラー R6035
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - R6035
 ms.assetid: f8fb50b8-18bf-4258-b96a-b0a9de468d16
-ms.openlocfilehash: 9b92b1e2e123201d4f50422754b77f62b2ec943b
-ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
+ms.openlocfilehash: f316586bbfb5aa9d8b3fb1d30b5dea65bff19d26
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86404399"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97228392"
 ---
 # <a name="c-runtime-error-r6035"></a>C ランタイム エラー R6035
 
@@ -19,11 +20,11 @@ Microsoft Visual C++ ランタイム ライブラリ、エラー R6035 - ある�
 
 グローバルセキュリティ cookie を初めて使用する前に、 [__security_init_cookie](../../c-runtime-library/reference/security-init-cookie.md)を呼び出す必要があります。
 
-グローバルセキュリティ cookie は、 [/gs (バッファーセキュリティチェック)](../../build/reference/gs-buffer-security-check.md)を使用してコンパイルされたコードと、構造化例外処理を使用するコードでバッファーオーバーランによって保護されます。 基本的に、オーバーランから保護された関数を呼び出すとクッキーはスタックに配置され、関数の終了時に、スタックの値がグローバルなクッキーと比較されます。 違いが発見された場合は、バッファー オーバーランが発生したことを意味し、プログラムは直ちに終了します。
+グローバルセキュリティ cookie は、 [/gs (バッファーセキュリティチェック)](../../build/reference/gs-buffer-security-check.md) を使用してコンパイルされたコードと、構造化例外処理を使用するコードでバッファーオーバーランによって保護されます。 基本的に、オーバーランから保護された関数を呼び出すとクッキーはスタックに配置され、関数の終了時に、スタックの値がグローバルなクッキーと比較されます。 違いが発見された場合は、バッファー オーバーランが発生したことを意味し、プログラムは直ちに終了します。
 
 エラー R6035 は、保護された関数の呼び出し後に `__security_init_cookie` が呼び出されたことを示します。 実行を継続すると、スタック上のクッキーがグローバルなクッキーと一致しなくなるため、実際には発生していないバッファー オーバーランが検出されます。
 
-次の DLL の例を考えます。 DLL のエントリポイントは、リンカー [/entry (エントリポイントシンボル)](../../build/reference/entry-entry-point-symbol.md)オプションを使用して dllentrypoint に設定されます。 これにより、通常はグローバル セキュリティ クッキーを初期化する CRT の初期化が省略されるため、DLL 自体で `__security_init_cookie` を呼び出す必要があります。
+次の DLL の例を考えます。 DLL のエントリポイントは、リンカー [/entry (エントリポイントシンボル)](../../build/reference/entry-entry-point-symbol.md) オプションを使用して dllentrypoint に設定されます。 これにより、通常はグローバル セキュリティ クッキーを初期化する CRT の初期化が省略されるため、DLL 自体で `__security_init_cookie` を呼び出す必要があります。
 
 ```
 // Wrong way to call __security_init_cookie

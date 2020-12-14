@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: &lt; 将来の &gt; 関数'
 title: '&lt;future&gt; 関数'
 ms.date: 11/04/2016
 f1_keywords:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 - std::make_error_code [C++]
 - std::make_error_condition [C++]
 - std::swap [C++]
-ms.openlocfilehash: d419984243d3970533f30814fe0ff451199afb34
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 56a43ecec155f580d8f798917ea6e53ce41bdd76
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88837971"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97232110"
 ---
 # <a name="ltfuturegt-functions"></a>&lt;future&gt; 関数
 
@@ -31,7 +32,7 @@ ms.locfileid: "88837971"
 
 ## <a name="async"></a><a name="async"></a> io
 
-*非同期プロバイダー*を表します。
+*非同期プロバイダー* を表します。
 
 ```cpp
 template <class Fn, class... ArgTypes>
@@ -60,13 +61,13 @@ future<typename result_of<Fn(ArgTypes...)>::type>
 
 1 番目のテンプレート関数は、`async(launch::any, fn, args...)` を返します。
 
-2 番目の関数は `future<Ty>` オブジェクトを返し、その*関連付けられた非同期状態*は、結果、*dfn* および *dargs* の値、実行の個別のスレッドを管理するためのスレッド オブジェクトを保持します。
+2 番目の関数は `future<Ty>` オブジェクトを返し、その *関連付けられた非同期状態* は、結果、*dfn* および *dargs* の値、実行の個別のスレッドを管理するためのスレッド オブジェクトを保持します。
 
 `decay<Fn>::type` が launch 以外の型でない限り、2 番目の関数はオーバーロードの解決に関与しません。
 
 C++ 標準では、ポリシーが launch:: async の場合、関数は新しいスレッドを作成します。 ただし、Microsoft の実装は現在、準拠していません。 Windows ThreadPool からスレッドを取得します。この場合、新しいスレッドではなくリサイクルスレッドが提供されることがあります。 これは、 `launch::async` ポリシーが実際にとして実装されていることを意味し `launch::async|launch::deferred` ます。  ThreadPool ベースの実装のもう1つの意味は、スレッドが完了したときにスレッドローカル変数が破棄される保証がないことです。 スレッドがリサイクルされ、への新しい呼び出しに渡された場合 `async` 、古い変数は引き続き存在します。 このため、でスレッドローカル変数を使用しないことをお勧め `async` します。
 
-*ポリシー*がの場合 `launch::deferred` 、関数は関連付けられた非同期状態を*遅延関数*の保持としてマークし、を返します。 関連付けられた非同期状態が実際に準備完了になるまで待機する、時間指定のない関数への初めての呼び出しでは、`INVOKE(dfn, dargs..., Ty)` を評価することによって遅延関数が呼び出されます。
+*ポリシー* がの場合 `launch::deferred` 、関数は関連付けられた非同期状態を *遅延関数* の保持としてマークし、を返します。 関連付けられた非同期状態が実際に準備完了になるまで待機する、時間指定のない関数への初めての呼び出しでは、`INVOKE(dfn, dargs..., Ty)` を評価することによって遅延関数が呼び出されます。
 
 いずれの場合も、`future` オブジェクトの関連付けられた非同期状態は、`INVOKE(dfn, dargs..., Ty)` の評価が完了するまでは、例外がスローされても正常に制御が戻っても、*ready* には設定されません。 関連付けられた非同期状態の結果は、例外がスローされた場合の例外か、評価から返された値です。
 
@@ -119,7 +120,7 @@ inline error_condition make_error_condition(future_errc Errno) noexcept;
 
 ## <a name="swap"></a><a name="swap"></a> フォト
 
-*関連付けられた非同期状態*を、`promise` オブジェクト間で交換します。
+*関連付けられた非同期状態* を、`promise` オブジェクト間で交換します。
 
 ```cpp
 template <class Ty>

@@ -1,16 +1,17 @@
 ---
+description: '詳細情報: &lt; hash_set &gt; 関数'
 title: '&lt;hash_set&gt; 関数'
 ms.date: 11/04/2016
 f1_keywords:
 - hash_set/std::swap
 - hash_set/std::swap (hash_multiset)
 ms.assetid: 557a0162-3728-4537-97dc-f9f6cc7ece94
-ms.openlocfilehash: 1774b0b29c7750e716f1f56def5d29ac329abec0
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 7040325f3af26052306b1ebd90f1919d96dcbf19
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88845810"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97231797"
 ---
 # <a name="lthash_setgt-functions"></a>&lt;hash_set&gt; 関数
 
@@ -33,10 +34,10 @@ void swap(
 ### <a name="parameters"></a>パラメーター
 
 *そうです*\
-交換する要素を提供する hash_set、または hash_set *左側*の要素と交換される要素を持つ hash_set。
+交換する要素を提供する hash_set、または hash_set *左側* の要素と交換される要素を持つ hash_set。
 
 *左側*\
-要素が hash_set *右側*の要素と交換される hash_set。
+要素が hash_set *右側* の要素と交換される hash_set。
 
 ### <a name="remarks"></a>解説
 
@@ -64,10 +65,10 @@ void swap(hash_multiset <Key, Traits, Allocator>& left, hash_multiset <Key, Trai
 ### <a name="parameters"></a>パラメーター
 
 *そうです*\
-交換する要素を提供する hash_multiset、または hash_multiset *左側*の要素と交換される要素を持つ hash_multiset。
+交換する要素を提供する hash_multiset、または hash_multiset *左側* の要素と交換される要素を持つ hash_multiset。
 
 *左側*\
-要素が hash_multiset *右側*の要素と交換される hash_multiset。
+要素が hash_multiset *右側* の要素と交換される hash_multiset。
 
 ### <a name="remarks"></a>解説
 

@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: is_pointer クラス'
 title: is_pointer クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - is_pointer class
 - is_pointer
 ms.assetid: 44e0a403-7241-4e0a-8922-32877bcb9a4c
-ms.openlocfilehash: 3429875f53d65de0161c4d6f87fde7a335bb369e
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 003f25a40edd3f4c0b80a8402d38027cd81949cc
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87222343"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97230641"
 ---
 # <a name="is_pointer-class"></a>is_pointer クラス
 
@@ -32,7 +33,7 @@ struct is_pointer;
 
 ## <a name="remarks"></a>解説
 
-型の述語のインスタンスは、型*Ty*がへのポインター、オブジェクトへのポインター、 **`void`** 関数へのポインター、またはそのいずれかの形式である場合、true を保持し `cv-qualified` ます。それ以外の場合は、false を保持します。 `is_pointer` *Ty*がメンバーへのポインターまたはメンバー関数へのポインターである場合、は false を保持することに注意してください。
+型の述語のインスタンスは、型 *Ty* がへのポインター、オブジェクトへのポインター、 **`void`** 関数へのポインター、またはそのいずれかの形式である場合、true を保持し `cv-qualified` ます。それ以外の場合は、false を保持します。 `is_pointer` *Ty* がメンバーへのポインターまたはメンバー関数へのポインターである場合、は false を保持することに注意してください。
 
 ## <a name="example"></a>例
 
@@ -72,7 +73,7 @@ is_pointer<int> == false
 is_pointer<int *> == true
 ```
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:**\<type_traits>
 

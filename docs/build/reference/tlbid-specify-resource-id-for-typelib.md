@@ -1,4 +1,5 @@
 ---
+description: 詳細については、次を参照してください:/TLBID (TypeLib のリソース ID を指定)
 title: /TLBID (タイプ ライブラリのリソース ID の指定)
 ms.date: 11/04/2016
 f1_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - TLBID linker option
 - type libraries, specifying resource ID
 ms.assetid: 434b28a2-4656-4d52-ac82-8b18bf486fb2
-ms.openlocfilehash: c52bfb9e4b6d0e94cecb77c766ac9e82b52f1e66
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4958229cbebe988867c5419d7953b6ffd968e45f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62317797"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97230017"
 ---
 # <a name="tlbid-specify-resource-id-for-typelib"></a>/TLBID (タイプ ライブラリのリソース ID の指定)
 
@@ -27,24 +28,24 @@ ms.locfileid: "62317797"
 
 ## <a name="arguments"></a>引数
 
-*ID*<br/>
-リンカーによって作成されたタイプ ライブラリのユーザー指定の値。 1 の既定のリソース ID をオーバーライドします。
+*id*<br/>
+リンカーによって作成されたタイプライブラリのユーザー指定の値。 既定のリソース ID 1 をオーバーライドします。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-属性を使用するプログラムをコンパイルするときに、リンカーは、タイプ ライブラリを作成します。 リンカーでは、タイプ ライブラリを 1 のリソース ID を割り当てます。
+属性を使用するプログラムをコンパイルすると、リンカーによってタイプライブラリが作成されます。 リンカーによって、タイプライブラリにリソース ID 1 が割り当てられます。
 
-このリソース ID は、いずれか、既存のリソースと競合している場合は、/TLBID で別の ID を指定できます。 渡すことができる値の範囲`id`は 1 ~ 65535 です。
+このリソース ID が既存のリソースのいずれかと競合する場合は、/TLBID. で別の ID を指定できます。 に渡すことができる値の範囲 `id` は、1 ~ 65535 です。
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのリンカー オプションを設定するには
 
-1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。 [Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)します。
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、[Visual Studio での C++ コンパイラとビルド プロパティの設定](../working-with-project-properties.md)に関するページを参照してください。
 
-1. をクリックして、**リンカー**フォルダー。
+1. **[リンカー]** フォルダーをクリックします。
 
-1. をクリックして、**埋め込み IDL**プロパティ ページ。
+1. [ **埋め込み IDL** ] プロパティページをクリックします。
 
-1. 変更、 **TypeLib リソース ID**プロパティ。
+1. **TypeLib リソース ID** プロパティを変更します。
 
 ### <a name="to-set-this-linker-option-programmatically"></a>このリンカーをコードから設定するには
 
