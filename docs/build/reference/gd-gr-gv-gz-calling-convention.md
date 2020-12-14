@@ -1,4 +1,5 @@
 ---
+description: 詳細については、次を参照してください:/Gd、/Gr、/Gv、/Gz (呼び出し規約)
 title: /Gd、/Gr、/Gv、/Gz (呼び出し規約)
 ms.date: 09/05/2018
 f1_keywords:
@@ -20,12 +21,12 @@ helpviewer_keywords:
 - Gv compiler option [C++]
 - /Gr compiler option [C++]
 ms.assetid: fd3110cb-2d77-49f2-99cf-a03f9ead00a3
-ms.openlocfilehash: e1617b7c158e9705a6211310fa7873f667a62ba5
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: dd343466efd0b3b0d93fc783cd7e4305c2295ef3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87234368"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97200326"
 ---
 # <a name="gd-gr-gv-gz-calling-convention"></a>/Gd、/Gr、/Gv、/Gz (呼び出し規約)
 
@@ -40,7 +41,7 @@ ms.locfileid: "87234368"
 
 ## <a name="remarks"></a>解説
 
-**`/Gd`** 既定の設定では、 [__stdcall](../../cpp/stdcall.md)、 [__fastcall](../../cpp/fastcall.md)、または[__vectorcall](../../cpp/vectorcall.md)としてマークされている C++ メンバー関数と関数を除くすべての関数の[__cdecl](../../cpp/cdecl.md)呼び出し規約を指定します。
+**`/Gd`** 既定の設定では、 [__stdcall](../../cpp/stdcall.md)、 [__fastcall](../../cpp/fastcall.md)、または [__vectorcall](../../cpp/vectorcall.md)としてマークされている C++ メンバー関数と関数を除くすべての関数の [__cdecl](../../cpp/cdecl.md)呼び出し規約を指定します。
 
 **`/Gr`****`__fastcall`** C++ メンバー関数、という名前の関数、、、 `main` またはとマークされている関数を除くすべての関数の呼び出し規約を指定し **`__cdecl`** **`__stdcall`** **`__vectorcall`** ます。 すべて **`__fastcall`** の関数にはプロトタイプが必要です。 この呼び出し規約は、x86 を対象とするコンパイラでのみ使用され、他のアーキテクチャを対象とするコンパイラでは無視されます。
 
@@ -50,7 +51,7 @@ ms.locfileid: "87234368"
 
 可変個の引数を受け取る関数は、としてマークする必要があり **`__cdecl`** ます。
 
-**`/Gd`**、 **`/Gr`** 、 **`/Gv`** および **`/Gz`** は、 [`/clr:safe`](clr-common-language-runtime-compilation.md) または **/clr: pure**と互換性がありません。 **/clr:pure** および **/clr:safe** コンパイラ オプションは Visual Studio 2015 では非推奨とされており、Visual Studio 2017 以降ではサポートされていません。
+**`/Gd`**、 **`/Gr`** 、 **`/Gv`** および **`/Gz`** は、 [`/clr:safe`](clr-common-language-runtime-compilation.md) または **/clr: pure** と互換性がありません。 **/clr:pure** および **/clr:safe** コンパイラ オプションは Visual Studio 2015 では非推奨とされており、Visual Studio 2017 以降ではサポートされていません。
 
 > [!NOTE]
 > 既定では、x86 プロセッサでは、C++ メンバー関数はを使用 [`__thiscall`](../../cpp/thiscall.md) します。
@@ -111,4 +112,4 @@ C の場合、 **`__vectorcall`** 名前付け規則では、関数名の後に2
 ## <a name="see-also"></a>関連項目
 
 - [MSVC コンパイラ オプション](compiler-options.md)
-- [MSVC コンパイラのコマンドライン構文](compiler-command-line-syntax.md)
+- [MSVC Compiler Command-Line 構文](compiler-command-line-syntax.md)

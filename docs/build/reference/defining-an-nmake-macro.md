@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: NMAKE マクロの定義'
 title: NMAKE マクロの定義
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - defining NMAKE macros
 - NMAKE macros, defining
 ms.assetid: 45aae451-9d33-4a3d-8799-2e0cae17070d
-ms.openlocfilehash: b163c3dcbfb079a532bd1babca4ee881407bafc1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 133e05cac2a236a38f6b2d1e719f1b66fd73760d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62272231"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97201639"
 ---
 # <a name="defining-an-nmake-macro"></a>NMAKE マクロの定義
 
@@ -22,17 +23,17 @@ ms.locfileid: "62272231"
 macroname=string
 ```
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-*Macroname*は英字、数字、および最大 1,024 文字、アンダー スコア (_) の組み合わせでありはケースを区別します。 *Macroname*呼び出されたマクロを含めることができます。 場合*macroname*は、呼び出されたマクロの完全、呼び出されているマクロを null または未定義することはできません。
+*Macroname* は、文字、数字、アンダースコア (_) を1024文字まで組み合わせたもので、大文字と小文字が区別されます。 *Macroname* には、呼び出されたマクロを含めることができます。 *Macroname* が呼び出されたマクロだけで構成される場合は、呼び出されるマクロを null または未定義にすることはできません。
 
-`string` 0 個以上の文字のシーケンスを指定できます。 Null 文字列には、0 文字または空白またはタブだけが含まれています。 `string`マクロ呼び出しを含めることができます。
+には、 `string` 0 個以上の任意の文字列を指定できます。 Null 文字列には、0文字またはスペースまたはタブのみが含まれます。 には、 `string` マクロ呼び出しを含めることができます。
 
 ## <a name="what-do-you-want-to-know-more-about"></a>さらに詳しくは次のトピックをクリックしてください
 
 [マクロの特殊文字](special-characters-in-macros.md)
 
-[Null と未定義マクロ](null-and-undefined-macros.md)
+[Null マクロと未定義マクロ](null-and-undefined-macros.md)
 
 [マクロを定義する場所](where-to-define-macros.md)
 

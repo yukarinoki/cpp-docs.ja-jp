@@ -1,4 +1,5 @@
 ---
+description: 詳細情報:/loadconfig
 title: /LOADCONFIG
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - -LOADCONFIG dumpbin option
 - /LOADCONFIG dumpbin option
 ms.assetid: 24667afe-9bee-4f6e-ae72-f534c0050428
-ms.openlocfilehash: 689fd64e3d13cd609f709a3e4d3e9035ca711274
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 3a8e23360fdf3fd21d33b5b5f8c3353b13970a39
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64342505"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97199156"
 ---
 # <a name="loadconfig"></a>/LOADCONFIG
 
@@ -21,11 +22,11 @@ ms.locfileid: "64342505"
 /LOADCONFIG
 ```
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-このオプションは、省略可能な構造は、Windows NT ローダーによって使用され、WINNT で定義されている、IMAGE_LOAD_CONFIG_DIRECTORY 構造をダンプします。H.
+このオプションは、IMAGE_LOAD_CONFIG_DIRECTORY 構造体をダンプします。これは、Windows NT ローダーによって使用され、WINNT.H で定義されている省略可能な構造体です。
 
-のみ、 [/HEADERS](headers.md) DUMPBIN オプションがで生成されたファイルで使用できる、 [/GL](gl-whole-program-optimization.md)コンパイラ オプション。
+[/GL](gl-whole-program-optimization.md) コンパイラ オプションで生成したファイルで使用できるのは、[/HEADERS](headers.md) DUMPBIN オプションだけです。
 
 ## <a name="see-also"></a>関連項目
 

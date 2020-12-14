@@ -1,4 +1,5 @@
 ---
+description: 詳細については、次を参照してください:/FORCE (ファイルを強制的に出力)
 title: /FORCE (ターゲットを強制的に出力)
 ms.date: 07/19/2019
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - /FORCE linker option
 - -FORCE linker option
 ms.assetid: b1e9a218-a5eb-4e60-a4a4-65b4be15e5da
-ms.openlocfilehash: d1d85174290faa95e73c63a25f7d80c554e83ace
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: d84810828eef85c4db3558b70953630c70f8f82e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80079624"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97200456"
 ---
 # <a name="force-force-file-output"></a>/FORCE (ターゲットを強制的に出力)
 
@@ -37,25 +38,25 @@ ms.locfileid: "80079624"
 
 このオプションを使用して作成されたファイルは、予期したとおりに実行されない可能性があります。 /FORCE オプションが指定されている場合、リンカーは段階的にリンクされません。
 
-モジュールが **/clr**でコンパイルされた場合、 **/force**はイメージを作成しません。
+モジュールが **/clr** でコンパイルされた場合、 **/force** はイメージを作成しません。
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのリンカー オプションを設定するには
 
-1. **ソリューションエクスプローラー**でプロジェクトを右クリックし、 **[プロパティ]** を選択します。
+1. **ソリューションエクスプローラー** でプロジェクトを右クリックし、[**プロパティ**] を選択します。
 
 1. **[リンカー]** フォルダーをクリックします。
 
 1. **[コマンド ライン]** プロパティ ページをクリックします。
 
-1. **[追加オプション]** ボックスにオプションを入力します。
+1. [ **追加オプション** ] ボックスにオプションを入力します。
 
 詳しくは、「[Visual Studio で C++ コンパイラとビルド プロパティを設定する](../working-with-project-properties.md)」をご覧ください。
 
 ### <a name="to-set-this-linker-option-programmatically"></a>このリンカーをコードから設定するには
 
-- [https://docs.microsoft.com/azure/active-directory/develop/scenario-protected-web-api-overview](<xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.AdditionalOptions%2A>) をご覧ください。
+- 以下を参照してください。<xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.AdditionalOptions%2A>
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [MSVC リンカーのリファレンス](linking.md)<br/>
 [MSVC リンカー オプション](linker-options.md)

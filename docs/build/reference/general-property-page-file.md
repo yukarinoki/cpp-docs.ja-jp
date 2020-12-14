@@ -1,22 +1,23 @@
 ---
+description: '詳細情報: [全般] プロパティページ (ファイル)'
 title: '[全般] プロパティ ページ (ファイル)'
 ms.date: 08/30/2019
 f1_keywords:
 - VC.Project.VCFileConfiguration.ExcludedFromBuild
 - VC.Project.VCFileConfiguration.Tool
 ms.assetid: 26e3711e-9e7d-4e8d-bc4c-2474538efdad
-ms.openlocfilehash: 7626e161e6f59de32d426b558827c423a0bb050d
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: 03b91a028bce5423bcf80fab24153a36eb7435e8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90041381"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97200339"
 ---
 # <a name="general-property-page-file"></a>[全般] プロパティ ページ (ファイル)
 
 このトピックは、Windows プロジェクトに適用されます。 Windows 以外のプロジェクトについては、「[Linux C++ Property Page Reference](../../linux/prop-pages-linux.md)」 (Linux C++ プロパティ ページのリファレンス) を参照してください。
 
-**ソリューションエクスプローラー**ファイルノードを右クリックすると、[**構成プロパティ**] ノードの下の [**全般**] プロパティページが開きます。 次のプロパティが含まれています。
+**ソリューションエクスプローラー** ファイルノードを右クリックすると、[**構成プロパティ**] ノードの下の [**全般**] プロパティページが開きます。 次のプロパティが含まれています。
 
 - **ビルドから除外**
 
@@ -26,11 +27,11 @@ ms.locfileid: "90041381"
 
 - **コンテンツ** (UWP アプリにのみ適用されます)アプリパッケージに含めるコンテンツがファイルに含まれるかどうかを指定します。
 
-- **項目の種類**
+- **アイテムの種類**
 
-   **項目の種類**は、ビルド処理中にファイルを処理するために使用されるツールを指定します。 [拡張機能が Visual Studio で認識され](/visualstudio/extensibility/visual-cpp-project-extensibility#project-items) ているファイルには、このプロパティの既定値があります。 カスタムファイルの種類がある場合、または既知のファイルの種類の既定のツールをオーバーライドする場合は、ここでカスタムツールを指定できます。 詳細については、「[カスタム ビルド ツールの指定](../specifying-custom-build-tools.md)」を参照してください。 このプロパティページを使用して、ファイルがビルド処理の一部ではないことを指定することもできます。
+   **項目の種類** は、ビルド処理中にファイルを処理するために使用されるツールを指定します。 [拡張機能が Visual Studio で認識され](/visualstudio/extensibility/visual-cpp-project-extensibility#project-items) ているファイルには、このプロパティの既定値があります。 カスタムファイルの種類がある場合、または既知のファイルの種類の既定のツールをオーバーライドする場合は、ここでカスタムツールを指定できます。 詳細については、「[カスタム ビルド ツールの指定](../specifying-custom-build-tools.md)」を参照してください。 このプロパティページを使用して、ファイルがビルド処理の一部ではないことを指定することもできます。
 
-   *.Cpp*ファイルのプロパティページを次の図に示します。 この種類のファイルの既定の **項目の種類** は **C/c + + コンパイラ** (*cl.exe*) であり、プロパティページは、このファイルにのみ適用できるさまざまなコンパイラ設定を公開します。
+   *.Cpp* ファイルのプロパティページを次の図に示します。 この種類のファイルの既定の **項目の種類** は **C/c + + コンパイラ** (*cl.exe*) であり、プロパティページは、このファイルにのみ適用できるさまざまなコンパイラ設定を公開します。
 
    ![プロジェクト項目の [全般] プロパティページ](media/file-general-item-type.png "項目の種類の選択")
 
@@ -42,7 +43,7 @@ ms.locfileid: "90041381"
     |hlsl、cso|HLSL コンパイラ|[fxc.exe](/windows/win32/direct3dtools/fxc)|
     |.h|C/c + + ヘッダー|[C/c + + プリプロセッサ](../../preprocessor/c-cpp-preprocessor-reference.md)|
     |該当なし|ビルドに参加しません|該当なし|
-    |.xml、.xslt、.xsl|Xml|[XML エディター](/visualstudio/xml-tools/xml-editor)|
+    |.xml、.xslt、.xsl|xml|[XML エディター](/visualstudio/xml-tools/xml-editor)|
     |. resw、. resw|PRI リソース (UWP アプリ)|[MakePri.exe](/windows/uwp/app-resources/compile-resources-manually-with-makepri)|
     ||メディア (UWP)|[アプリパッケージャー](/windows/win32/appxpkg/make-appx-package--makeappx-exe-)|
     |.xsd|XML データジェネレーターツール|[XML スキーマ定義ツール (Xsd.exe)](/dotnet/standard/serialization/xml-schema-definition-tool-xsd-exe) (.net ワークロードが必要です。 MSVC には含まれていません。)|

@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「CBulkRowset クラス」を参照してください。
 title: CBulkRowset クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -95,12 +96,12 @@ helpviewer_keywords:
 - ReleaseRows method
 - SetRows method
 ms.assetid: c6bde426-c543-4022-a98a-9519d9e2ae59
-ms.openlocfilehash: 5c1c7bc381d30f701bad123807689b08ea47f65d
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 106a8ffb3d70a021adbdb03b426e53ca39285b02
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88838465"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97198376"
 ---
 # <a name="cbulkrowset-class"></a>CBulkRowset クラス
 
@@ -118,7 +119,7 @@ class CBulkRowset : public CRowset<TAccessor>
 *TAccessor*<br/>
 アクセサークラス。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** atldbcli.h
 
@@ -242,11 +243,11 @@ HRESULT MoveToBookmark(const CBookmarkBase& bookmark,
 からデータをフェッチする場所を示すブックマーク。
 
 *lSkip*<br/>
-からブックマークから対象の行までの行数。 *LSkip*が0の場合、最初にフェッチされた行がブックマークが付けられた行になります。 *LSkip*が1の場合、最初にフェッチされる行は、ブックマークが付けられた行の後の行になります。 *LSkip*が-1 の場合、最初にフェッチされる行は、ブックマークが付けられた行の前の行になります。
+からブックマークから対象の行までの行数。 *LSkip* が0の場合、最初にフェッチされた行がブックマークが付けられた行になります。 *LSkip* が1の場合、最初にフェッチされる行は、ブックマークが付けられた行の後の行になります。 *LSkip* が-1 の場合、最初にフェッチされる行は、ブックマークが付けられた行の前の行になります。
 
 ### <a name="return-value"></a>戻り値
 
-*OLE DB プログラマーリファレンス*の「 [IRowset:: GetData](/previous-versions/windows/desktop/ms716988(v=vs.85)) 」を参照してください。
+*OLE DB プログラマーリファレンス* の「 [IRowset:: GetData](/previous-versions/windows/desktop/ms716988(v=vs.85)) 」を参照してください。
 
 ## <a name="cbulkrowsetmovetoratio"></a><a name="movetoratio"></a> CBulkRowset:: MoveToRatio
 
@@ -277,7 +278,7 @@ HRESULT MoveToRatio(DBCOUNTITEM nNumerator,
 
 `(nNumerator *  RowsetSize ) / nDenominator`
 
-ここで `RowsetSize` 、は行セットのサイズです (行単位)。 この数式の精度は、特定のプロバイダーによって異なります。 詳細については、 *OLE DB プログラマーリファレンス*の「 [IRowsetScroll:: GetRowsAtRatio](/previous-versions/windows/desktop/ms709602(v=vs.85)) 」を参照してください。
+ここで `RowsetSize` 、は行セットのサイズです (行単位)。 この数式の精度は、特定のプロバイダーによって異なります。 詳細については、 *OLE DB プログラマーリファレンス* の「 [IRowsetScroll:: GetRowsAtRatio](/previous-versions/windows/desktop/ms709602(v=vs.85)) 」を参照してください。
 
 ## <a name="cbulkrowsetreleaserows"></a><a name="releaserows"></a> CBulkRowset:: ReleaseRows
 

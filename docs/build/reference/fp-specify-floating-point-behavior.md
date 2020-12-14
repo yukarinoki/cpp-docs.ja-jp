@@ -1,4 +1,5 @@
 ---
+description: 詳細について:/fp (浮動小数点動作の指定)
 title: /fp (浮動小数点の動作の指定)
 ms.date: 11/09/2018
 f1_keywords:
@@ -11,20 +12,20 @@ helpviewer_keywords:
 - -fp compiler option [C++]
 - /fp compiler option [C++]
 ms.assetid: 10469d6b-e68b-4268-8075-d073f4f5d57e
-ms.openlocfilehash: 7a8ae885bbbf00ae916505bf5df646b32268a17a
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: 5d57bae24af9cd415a2dcfde073e276f51ce3ea3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90040913"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97200443"
 ---
 # <a name="fp-specify-floating-point-behavior"></a>/fp (浮動小数点の動作の指定)
 
-コンパイラが浮動小数点式、最適化、および例外をどのように処理するかを指定します。 **/Fp**オプションでは、生成されたコードで浮動小数点環境を丸めモード、例外マスク、subnormal の動作に変更できるかどうか、および浮動小数点の状態チェックで現在の正確な結果が返されるかどうかを指定します。 このメソッドは、ソース操作と式の順序を維持し、NaN の伝達の標準に準拠するコードをコンパイラで生成するかどうかを制御します。または、代わりに、操作を並べ替えたり結合したり、標準で許可されていない代数変換を簡略化したりすることができる、より効率的なコードを生成します。
+コンパイラが浮動小数点式、最適化、および例外をどのように処理するかを指定します。 **/Fp** オプションでは、生成されたコードで浮動小数点環境を丸めモード、例外マスク、subnormal の動作に変更できるかどうか、および浮動小数点の状態チェックで現在の正確な結果が返されるかどうかを指定します。 このメソッドは、ソース操作と式の順序を維持し、NaN の伝達の標準に準拠するコードをコンパイラで生成するかどうかを制御します。または、代わりに、操作を並べ替えたり結合したり、標準で許可されていない代数変換を簡略化したりすることができる、より効率的なコードを生成します。
 
 ## <a name="syntax"></a>構文
 
-> **/fp:**[**厳密**な  |  **厳密**な  |  **高速**  |  ([] を**除く** **-** )
+> **/fp:**[**厳密** な  |  **厳密** な  |  **高速**  |  ([] を **除く** **-** )
 
 ### <a name="arguments"></a>引数
 
@@ -63,13 +64,13 @@ ms.locfileid: "90040913"
 
 で `/fp:except` は、浮動小数点例外がそれ自体によって有効になるわけではありませんが、プログラムで浮動小数点例外を有効にする必要があることに注意してください。 浮動小数点例外を有効にする方法については、「 [_controlfp](../../c-runtime-library/reference/control87-controlfp-control87-2.md) 」を参照してください。
 
-## <a name="remarks"></a>注釈
+## <a name="remarks"></a>解説
 
 `/fp`同じコンパイラのコマンドラインで複数のオプションを指定できます。 、、およびの各オプションのうち、一度に有効にできるのは1つだけ `/fp:strict` `/fp:fast` `/fp:precise` です。 これらのオプションのいずれかがコマンドラインで指定されている場合、後のオプションが優先され、コンパイラによって警告が生成されます。 `/fp:strict`および `/fp:except` オプションはと互換性がありません `/clr` 。
 
 [/Za](za-ze-disable-language-extensions.md) (ANSI compatibility) オプションはと互換性がありません `/fp` 。
 
-### <a name="using-compiler-directives-to-control-floating-point-behavior"></a>コンパイラディレクティブを使用した浮動小数点動作の制御
+### <a name="using-compiler-directives-to-control-floating-point-behavior"></a>コンパイラディレクティブを使用して Floating-Point の動作を制御する
 
 コンパイラには、コマンドラインで指定された浮動小数点動作をオーバーライドするために、 [float_control](../../preprocessor/float-control.md)、 [fenv_access](../../preprocessor/fenv-access.md)、および [fp_contract](../../preprocessor/fp-contract.md)の3つのプラグマディレクティブが用意されています。 これらのディレクティブを使用すると、関数内ではなく、関数レベルで浮動小数点動作を制御できます。 これらのディレクティブは、オプションに直接対応していないことに注意してください `/fp` 。 次の表は、 `/fp` options ディレクティブと pragma ディレクティブが相互にどのようにマップされるかを示しています。 詳細については、個々のオプションとプラグマディレクティブのドキュメントを参照してください。
 
@@ -260,13 +261,13 @@ float casting(float a, float b)
 
 1. [**構成プロパティ**] [  >  **C/c + +**  >  **コード生成**] プロパティページを選択します。
 
-1. **浮動小数点モデル**のプロパティを変更します。
+1. **浮動小数点モデル** のプロパティを変更します。
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>このコンパイラ オプションをコードから設定するには
 
 - 以下を参照してください。<xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.floatingPointModel%2A>
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [MSVC コンパイラ オプション](compiler-options.md)<br/>
-[MSVC コンパイラのコマンドライン構文](compiler-command-line-syntax.md)<br/>
+[MSVC Compiler Command-Line 構文](compiler-command-line-syntax.md)<br/>

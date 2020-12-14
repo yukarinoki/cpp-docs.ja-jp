@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「アクティベーション (C++)」を参照してください。
 title: アクティベーション (C++)
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -18,12 +19,12 @@ helpviewer_keywords:
 - activation [MFC], embedded OLE items
 - OLE activation [MFC]
 ms.assetid: ed8357d9-e487-4aaa-aa6b-2edc4de25dfa
-ms.openlocfilehash: 47640a59180348bd3513013b65029a775545e211
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 726c64344f684c8ca9e79d9296daea80882af08f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84619183"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97197725"
 ---
 # <a name="activation-c"></a>アクティベーション (C++)
 
@@ -31,7 +32,7 @@ ms.locfileid: "84619183"
 
 また、埋め込み OLE 項目を別のウィンドウで編集することもできます。 これは、コンテナーまたはサーバーアプリケーションがインプレースアクティベーションをサポートしていない場合に発生します。 この場合、ユーザーが埋め込みアイテムをダブルクリックすると、サーバーアプリケーションが別のウィンドウで起動し、埋め込みアイテムが独自のドキュメントとして表示されます。 ユーザーは、このウィンドウの項目を編集します。 編集が完了すると、ユーザーはサーバーアプリケーションを終了し、コンテナーアプリケーションに戻ります。
 
-別の方法として、ユーザーは [**編集**] メニューの [ ** \<object> 開く**] をクリックして [編集を開く] を選択できます。 これにより、オブジェクトが別のウィンドウで開きます。
+別の方法として、ユーザーは [**編集**] メニューの [ **\<object> 開く**] をクリックして [編集を開く] を選択できます。 これにより、オブジェクトが別のウィンドウで開きます。
 
 > [!NOTE]
 > 別のウィンドウでの埋め込み項目の編集は、OLE のバージョン1では標準動作でしたが、一部の OLE アプリケーションではこのスタイルの編集のみがサポートされている場合があります。

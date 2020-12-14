@@ -1,4 +1,5 @@
 ---
+description: 詳細情報:/DEF (Module-Definition ファイルの指定)
 title: /DEF (モジュール定義ファイルの指定)
 ms.date: 11/04/2016
 f1_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - module definition files
 - /DEF linker option
 ms.assetid: 6497fa68-65f0-48ca-8f66-b87166fc631a
-ms.openlocfilehash: c08412fb50835485e7941b2bb1db088943387b71
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3b9178004621a55f999f7c2636eaa5b697d2de98
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62272309"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97201704"
 ---
 # <a name="def-specify-module-definition-file"></a>/DEF (モジュール定義ファイルの指定)
 
@@ -26,24 +27,24 @@ ms.locfileid: "62272309"
 
 ## <a name="arguments"></a>引数
 
-*ファイル名*<br/>
-モジュール定義ファイル (.def) がリンカーに渡されるの名前。
+*filename*<br/>
+リンカーに渡されるモジュール定義ファイル (.def) の名前です。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-/DEF オプションは、モジュール定義ファイル (.def) をリンカーに渡します。 1 つだけの .def ファイルは、リンクを指定できます。 詳細については、.def ファイルは、次を参照してください。[モジュール定義ファイル](module-definition-dot-def-files.md)します。
+/DEF オプションを指定すると、モジュール定義ファイル (.def) がリンカーに渡されます。 リンク先として指定できる .def ファイルは1つだけです。 .Def ファイルの詳細については、「 [モジュール定義ファイル](module-definition-dot-def-files.md)」を参照してください。
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのリンカー オプションを設定するには
 
-1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。 [Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)します。
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、[Visual Studio での C++ コンパイラとビルド プロパティの設定](../working-with-project-properties.md)に関するページを参照してください。
 
-1. をクリックして、**リンカー**フォルダー。
+1. **[リンカー]** フォルダーをクリックします。
 
-1. をクリックして、**入力**プロパティ ページ。
+1. [ **入力** ] プロパティページをクリックします。
 
-1. 変更、**モジュール定義ファイル**プロパティ。
+1. **モジュール定義ファイル** のプロパティを変更します。
 
-開発環境での .def ファイルを指定するには、と他のファイル プロジェクトに追加してから/DEF オプションにファイルを指定ください。
+開発環境内から .def ファイルを指定するには、そのファイルを他のファイルと共にプロジェクトに追加し、そのファイルを/DEF オプションに指定する必要があります。
 
 ### <a name="to-set-this-linker-option-programmatically"></a>このリンカーをコードから設定するには
 

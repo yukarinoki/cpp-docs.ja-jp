@@ -1,4 +1,5 @@
 ---
+description: 詳細情報:/Fx (挿入したコードのマージ)
 title: /Fx (挿入されたコードのマージ)
 ms.date: 11/04/2016
 f1_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - merging injected code
 - /Fx compiler option [C++]
 ms.assetid: 14f0e301-3bab-45a3-bbdf-e7ce66f20560
-ms.openlocfilehash: b928ca63171f0f6d28859d049a1ed5008b908686
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 0c0aeea4c3a72f37848615d80c5ee6a5a807d838
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91500092"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97200352"
 ---
 # <a name="fx-merge-injected-code"></a>/Fx (挿入されたコードのマージ)
 
@@ -78,4 +79,4 @@ ms.locfileid: "91500092"
 
 [出力ファイル (/F) オプション](output-file-f-options.md)<br/>
 [MSVC コンパイラ オプション](compiler-options.md)<br/>
-[MSVC コンパイラのコマンドライン構文](compiler-command-line-syntax.md)
+[MSVC Compiler Command-Line 構文](compiler-command-line-syntax.md)

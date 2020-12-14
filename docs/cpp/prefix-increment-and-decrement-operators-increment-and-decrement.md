@@ -1,4 +1,5 @@
 ---
+description: '詳細については、「前置インクリメント演算子と前置デクリメント演算子: + + および--」を参照してください。'
 title: '前置インクリメント演算子と前置デクリメント演算子: ++ および --'
 ms.date: 11/04/2016
 f1_keywords:
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - decrement operators [C++], syntax
 - decrement operators [C++]
 ms.assetid: 45ea7fc7-f279-4be9-a216-1d9a0ef9eb7b
-ms.openlocfilehash: 0b84360f41c665707a03ad453909c054ac741405
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: e484dde59a2bb58e7c408ad28242fc0ab4290051
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87231157"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97198643"
 ---
 # <a name="prefix-increment-and-decrement-operators--and---"></a>前置インクリメント演算子と前置デクリメント演算子: ++ および --
 
@@ -35,9 +36,9 @@ ms.locfileid: "87231157"
 
 前置デクリメント演算子 ( **--** ) は前置インクリメント演算子に似ていますが、オペランドが1つ減少し、結果がこのデクリメントされた値になる点が異なります。
 
-**Visual Studio 2017 バージョン15.3 以降**( [/std: c++ 17](../build/reference/std-specify-language-standard-version.md)で利用可能): インクリメント演算子またはデクリメント演算子のオペランドを型にすることはできません **`bool`** 。
+**Visual Studio 2017 バージョン15.3 以降** ( [/std: c++ 17](../build/reference/std-specify-language-standard-version.md)で利用可能): インクリメント演算子またはデクリメント演算子のオペランドを型にすることはできません **`bool`** 。
 
-前置および後置インクリメントおよびデクリメント演算子は、オペランドに影響します。 これらの主要な違いは、式の評価でインクリメントまたはデクリメントが発生する順序です。 (詳細については、「[後置インクリメント演算子とデクリメント演算子](../cpp/postfix-increment-and-decrement-operators-increment-and-decrement.md)」を参照してください)。プレフィックス形式では、値が式の評価で使用される前にインクリメントまたはデクリメントが行われるため、式の値はオペランドの値とは異なります。 後置形式では、値が式評価で使用された後にインクリメントまたはデクリメントが発生するため、式の値はオペランドの値と同じになります。 たとえば、次のプログラムでは、"`++i = 6`" と出力されます。
+前置および後置インクリメントおよびデクリメント演算子は、オペランドに影響します。 これらの主要な違いは、式の評価でインクリメントまたはデクリメントが発生する順序です。 (詳細については、「 [後置インクリメント演算子とデクリメント演算子](../cpp/postfix-increment-and-decrement-operators-increment-and-decrement.md)」を参照してください)。プレフィックス形式では、値が式の評価で使用される前にインクリメントまたはデクリメントが行われるため、式の値はオペランドの値とは異なります。 後置形式では、値が式評価で使用された後にインクリメントまたはデクリメントが発生するため、式の値はオペランドの値と同じになります。 たとえば、次のプログラムでは、"`++i = 6`" と出力されます。
 
 ```cpp
 // expre_Increment_and_Decrement_Operators.cpp
@@ -54,7 +55,7 @@ int main() {
 
 整数または浮動小数点型のオペランドは、整数値 1 ずつインクリメントまたはデクリメントされます。 結果の型は、オペランドの型と同じです。 ポインター型のオペランドは、アドレス指定するオブジェクトのサイズだけインクリメントまたはデクリメントされます。 インクリメントされたポインターは、次のオブジェクトを指します。デクリメントされたポインターは、前のオブジェクトを指します。
 
-インクリメント演算子とデクリメント演算子には副作用があるため、[プリプロセッサマクロ](../preprocessor/macros-c-cpp.md)でインクリメントまたはデクリメント演算子を含む式を使用すると、望ましくない結果が生じる可能性があります。 次の例を考えてみましょう。
+インクリメント演算子とデクリメント演算子には副作用があるため、 [プリプロセッサマクロ](../preprocessor/macros-c-cpp.md) でインクリメントまたはデクリメント演算子を含む式を使用すると、望ましくない結果が生じる可能性があります。 次の例について考えます。
 
 ```cpp
 // expre_Increment_and_Decrement_Operators2.cpp

@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: EventTraits 構造'
 title: EventTraits 構造体
 ms.date: 11/04/2016
 ms.topic: reference
@@ -7,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - EventTraits structure
 ms.assetid: 2cf308a4-50e3-4321-bafc-4c7c0364e148
-ms.openlocfilehash: abd4bc2e6debae2e7681fc53c9fc4f86a8219cdb
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 062438c945c3df2da88d6026febfaf2f91247a7d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80214020"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97198552"
 ---
 # <a name="eventtraits-structure"></a>EventTraits 構造体
 
-`Event` クラスハンドルの特性を定義します。
+クラスハンドルの特性を定義 `Event` します。
 
 ## <a name="syntax"></a>構文
 
@@ -32,12 +33,12 @@ struct EventTraits : HANDLENullTraits;
 
 `EventTraits`
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** corewrappers .h
 
 **名前空間:** Microsoft:: WRL:: Wrapper:: HandleTraits
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[Microsoft::WRL::Wrappers::HandleTraits 名前空間](microsoft-wrl-wrappers-handletraits-namespace.md)
+[Microsoft:: WRL:: Wrapper:: HandleTraits 名前空間](microsoft-wrl-wrappers-handletraits-namespace.md)

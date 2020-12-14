@@ -1,29 +1,30 @@
 ---
+description: '詳細情報: ルールの定義'
 title: 規則の定義
 ms.date: 11/04/2016
 helpviewer_keywords:
 - NMAKE program, inference rules
 - defining inference rules
 ms.assetid: 071cd092-3f2e-4065-b0fb-36a9d393cfa8
-ms.openlocfilehash: cd82dc5b0693e563fd3d75a0215265089ff57913
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 89a5db90162ede02743aa469ac4f9e3d75c5e147
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64342894"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97201678"
 ---
 # <a name="defining-a-rule"></a>規則の定義
 
-*Fromext*依存のファイルの拡張機能を表すと*toext*ターゲット ファイルの拡張子を表します。
+*Fromext* は、依存ファイルの拡張子を表し、 *toext* はターゲットファイルの拡張子を表します。
 
 ```
 .fromext.toext:
    commands
 ```
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-拡張は、大文字小文字が区別されていません。 表すマクロを呼び出すことができる*fromext*と*toext*; マクロは、プリプロセス時に展開されます。 上記ピリオド (.) *fromext*行の先頭に置く必要があります。 コロン (:) は、スペースまたはタブの 0 個以上続きます。 これは、スペースまたはタブ、コマンドを指定するにはセミコロン (;)、番号記号 (#)、コメントを指定して、または改行文字によってのみ実行できます。 その他の空白は許可されません。 記述ブロックのように、コマンドが指定されます。
+拡張機能では大文字と小文字が区別されません。 *Fromext* と *toext* を表すマクロを呼び出すことができます。マクロは、前処理中に展開されます。 *Fromext* の前のピリオド (.) は、行の先頭に記述する必要があります。 コロン (:)の前に0個以上の空白またはタブがあります。 この文字の後には、スペースまたはタブ、セミコロン (;)コマンドを指定するには、シャープ記号 (#) を指定してコメントまたは改行文字を指定します。 その他のスペースは許可されません。 コマンドは、説明ブロックでとして指定されます。
 
 ## <a name="what-do-you-want-to-know-more-about"></a>さらに詳しくは次のトピックをクリックしてください
 

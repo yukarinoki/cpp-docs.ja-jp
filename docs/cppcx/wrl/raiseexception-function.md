@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: RaiseException 関数'
 title: RaiseException 関数
 ms.date: 11/04/2016
 ms.topic: reference
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - RaiseException function
 ms.assetid: f9c74f6d-112a-4d2e-900f-622f795d5dbf
-ms.openlocfilehash: 3270057bf5b1b27a98bef1ab236291eab15d27ab
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: b5353757ff04ab12c0fc61da6b2e98b2df835ef0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80213630"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97198441"
 ---
 # <a name="raiseexception-function"></a>RaiseException 関数
 
@@ -28,7 +29,7 @@ inline void __declspec(noreturn)   RaiseException(
 
 ### <a name="parameters"></a>パラメーター
 
-*hr*<br/>
+*時間*<br/>
 発生している例外の例外コード。つまり、失敗した操作の HRESULT です。
 
 *dwExceptionFlags*<br/>
@@ -38,14 +39,14 @@ inline void __declspec(noreturn)   RaiseException(
 
 呼び出し元のスレッドで例外を発生させます。
 
-詳細については、「Windows `RaiseException` 関数」を参照してください。
+詳細については、「Windows 関数」を参照してください `RaiseException` 。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** 内部 .h
 
 **名前空間:** Microsoft:: WRL::D etails
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[Microsoft::WRL::Details 名前空間](microsoft-wrl-details-namespace.md)
+[Microsoft:: WRL::D etails 名前空間](microsoft-wrl-details-namespace.md)

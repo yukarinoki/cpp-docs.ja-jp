@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: マクロの置換'
 title: マクロでの代入
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,16 +7,16 @@ helpviewer_keywords:
 - macros, NMAKE
 - substitution macros in NMAKE
 ms.assetid: 47465cfe-fd92-49db-aebe-7c2d7ecceb73
-ms.openlocfilehash: 43dc9133c53b1c436c0df8c3db66ae8f18604222
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5e1531afb210b4671632bca2540bfc7562653139
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62321820"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97199182"
 ---
 # <a name="macro-substitution"></a>マクロでの代入
 
-ときに*macroname*呼び出されると、出現するたび*string1*その定義で文字列が置き換え*string2*します。
+*Macroname* が呼び出されると、その定義文字列で *string1* が出現するたびに、 *string2* に置き換えられます。
 
 ## <a name="syntax"></a>構文
 
@@ -23,11 +24,11 @@ ms.locfileid: "62321820"
 $(macroname:string1=string2)
 ```
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-マクロでの代入が大文字小文字を区別、リテラルです。*string1*と*string2*マクロを呼び出すことはできません。 置換では、元の定義は変更されません。 除く任意の定義済みマクロ内のテキストを置き換えることができる[ $$@](filename-macros.md)します。
+マクロの置換では大文字と小文字が区別され、リテラルになります。 *string1* と *string2* はマクロを呼び出すことができません。 置換では、元の定義は変更されません。 を除く定義済みのマクロでは、テキストを置き換えることができ [$$@](filename-macros.md) ます。
 
-スペースまたはタブの colon; 前なしコロンの後は、リテラルとして解釈されます。 場合*string2*が出現するすべての null *string1*マクロの定義の文字列から削除されます。
+コロンの前にスペースやタブはありません。コロンの後の任意のがリテラルとして解釈されます。 *String2* が null の場合、 *string1* のすべての出現箇所がマクロの定義文字列から削除されます。
 
 ## <a name="see-also"></a>関連項目
 

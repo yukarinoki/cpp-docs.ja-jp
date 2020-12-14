@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「/FR,/Fr (Create」を参照してください。.Sbr ファイル)
 title: /FR、/Fr (.sbr ファイルの作成)
 ms.date: 11/04/2016
 f1_keywords:
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - FR compiler option [C++]
 - symbolic browser information
 ms.assetid: 3fd8f88b-3924-4feb-9393-287036a28896
-ms.openlocfilehash: 58f55811f5d2bb81bc77da38a87c35bae91ce6cb
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 9142e7afedb55a7b0f4ed0cdb56e4288524d7afc
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81320517"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97200417"
 ---
 # <a name="fr-fr-create-sbr-file"></a>/FR、/Fr (.sbr ファイルの作成)
 
@@ -65,5 +66,5 @@ ms.locfileid: "81320517"
 
 [出力ファイル (/F) オプション](output-file-f-options.md)<br/>
 [MSVC コンパイラ オプション](compiler-options.md)<br/>
-[MSVC コンパイラ コマンド ラインの構文](compiler-command-line-syntax.md)<br/>
+[MSVC Compiler Command-Line 構文](compiler-command-line-syntax.md)<br/>
 [パス名の指定](specifying-the-pathname.md)

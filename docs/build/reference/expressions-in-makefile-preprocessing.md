@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: メイクファイルのプリプロセスの式'
 title: メイクファイル プリプロセスの式
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,18 +7,18 @@ helpviewer_keywords:
 - expressions [C++], makefile preprocessing
 - makefiles, preprocessing
 ms.assetid: 37f0f413-97e0-452c-a83f-3c9002c44c92
-ms.openlocfilehash: 3d668492441eb2fc09be378dbebfe2b18c1b5753
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9b30900db493a2a87e0527e6f3c062185bb4ab43
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62271308"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97200794"
 ---
 # <a name="expressions-in-makefile-preprocessing"></a>メイクファイル プリプロセスの式
 
-**!IF**または **!ELSE IF** `constantexpression` (10 進数または C 言語表記) に整数の定数、文字列定数、またはコマンドで構成されます。 グループ式にかっこを使用します。 式を使用して、C スタイル符号付き長整数演算です。番号は 32 ビット 2 の補数形式、範囲 - 2147483648 ~ 2147483647 です。
+**!また** は **!それ以外の場合** は `constantexpression` 、整数定数 (10 進表記または C 言語表記)、文字列定数、またはコマンドで構成されます。 式をグループ化するには、かっこを使用します。 式では、C スタイルの符号付き長整数演算が使用されます。数値は、32ビットの2の補数形式で、-2147483648 ~ 2147483647 の範囲で指定します。
 
-式は、定数値、コマンド、文字列、マクロ、およびファイル システム パスからの終了コードで機能する演算子を使用できます。
+式では、定数値、コマンドからの終了コード、文字列、マクロ、およびファイルシステムパスを操作する演算子を使用できます。
 
 ## <a name="what-do-you-want-to-know-more-about"></a>さらに詳しくは次のトピックをクリックしてください
 

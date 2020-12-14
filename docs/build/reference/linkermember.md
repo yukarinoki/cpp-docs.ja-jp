@@ -1,4 +1,5 @@
 ---
+description: 詳細情報:/LINKERMEMBER
 title: /LINKERMEMBER
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - LINKERMEMBER dumpbin option
 - -LINKERMEMBER dumpbin option
 ms.assetid: c96868c1-d70e-4651-ae36-c55b58b16406
-ms.openlocfilehash: a0456fd9ed1729b4a6cfa200a54ba211a64e94ea
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 76c842bcc2299b4245847e7d4e9a64656e88d2d9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62216586"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97199390"
 ---
 # <a name="linkermember"></a>/LINKERMEMBER
 
@@ -21,11 +22,11 @@ ms.locfileid: "62216586"
 /LINKERMEMBER[:{1|2}]
 ```
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-このオプションは、ライブラリで定義されたパブリック シンボルを表示します。 そのオフセットと共に、オブジェクトの順序でシンボルを表示する 1 引数を指定します。 オフセットとオブジェクトのインデックス番号を表示する 2 つの引数を指定し、各オブジェクトのインデックスと共に、アルファベット順にシンボルを一覧表示します。 両方の出力を取得するには、数値の引数なし/LINKERMEMBER を指定します。
+このオプションを選択すると、ライブラリで定義されているパブリックシンボルが表示されます。 オブジェクトの順序で記号を表示するには、1個の引数を指定します。 2つの引数を指定して、オブジェクトのオフセットとインデックス番号を表示します。次に、記号をアルファベット順に一覧表示し、それぞれのオブジェクトインデックスを使用します。 両方の出力を取得するには、number 引数を指定せずに/LINKERMEMBER を指定します。
 
-のみ、 [/HEADERS](headers.md) DUMPBIN オプションがで生成されたファイルで使用できる、 [/GL](gl-whole-program-optimization.md)コンパイラ オプション。
+[/GL](gl-whole-program-optimization.md) コンパイラ オプションで生成したファイルで使用できるのは、[/HEADERS](headers.md) DUMPBIN オプションだけです。
 
 ## <a name="see-also"></a>関連項目
 

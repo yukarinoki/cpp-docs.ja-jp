@@ -1,15 +1,16 @@
 ---
+description: '詳細情報: ヘルプファイル (WinHelp)'
 title: ヘルプ ファイル (WinHelp)
 ms.date: 11/04/2016
 helpviewer_keywords:
 - file types [C++], WinHelp files
 ms.assetid: 4fdcbd66-66b0-4866-894a-fd7b4c2557e4
-ms.openlocfilehash: 6810b3f608b9fa7892b686d72056994fb98c92db
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
+ms.openlocfilehash: 77d00154db762d11e064fe91681b81fbe859e7be
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65707469"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97200053"
 ---
 # <a name="help-files-winhelp"></a>ヘルプ ファイル (WinHelp)
 

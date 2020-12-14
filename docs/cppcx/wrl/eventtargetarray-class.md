@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: EventTargetArray クラス'
 title: EventTargetArray クラス
 ms.date: 10/03/2018
 ms.topic: reference
@@ -19,16 +20,16 @@ helpviewer_keywords:
 - Microsoft::WRL::Details::EventTargetArray::Length method
 - Microsoft::WRL::Details::EventTargetArray::~EventTargetArray, destructor
 ms.assetid: e3cadb7c-2160-4cbb-a2f8-c28733d1e96d
-ms.openlocfilehash: 9ea8800aa22a6b5cae0b3342cf337786fb53fc76
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: ac3199d2374a47e94705f8f51672bfedd0b7bf20
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81371495"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97198584"
 ---
 # <a name="eventtargetarray-class"></a>EventTargetArray クラス
 
-WRL インフラストラクチャをサポートし、コードから直接使用するためのものではありません。
+は WRL インフラストラクチャをサポートします。独自に作成したコードから直接使用するためのものではありません。
 
 ## <a name="syntax"></a>構文
 
@@ -42,9 +43,9 @@ class EventTargetArray :
 
 ## <a name="remarks"></a>解説
 
-イベント ハンドラーの配列を表します。
+イベントハンドラーの配列を表します。
 
-[EventSource](eventsource-class.md)オブジェクトに関連付けられているイベント ハンドラーは、保護された`EventTargetArray`データ メンバーに格納されます。
+[EventSource](eventsource-class.md)オブジェクトに関連付けられているイベントハンドラーは、保護されたデータメンバーに格納され `EventTargetArray` ます。
 
 ## <a name="members"></a>メンバー
 
@@ -52,31 +53,31 @@ class EventTargetArray :
 
 名前                                                           | 説明
 -------------------------------------------------------------- | -----------------------------------------------------------
-[イベントターゲットアレイ::イベントターゲットアレイ](#eventtargetarray)        | `EventTargetArray` クラスの新しいインスタンスを初期化します。
-[イベントターゲットアレイ:~イベントターゲットアレイ](#tilde-eventtargetarray) | 現在`EventTargetArray`のクラスを初期化解除します。
+[EventTargetArray:: EventTargetArray](#eventtargetarray)        | `EventTargetArray` クラスの新しいインスタンスを初期化します。
+[EventTargetArray:: ~ EventTargetArray](#tilde-eventtargetarray) | 現在のクラスを初期化解除 `EventTargetArray` します。
 
 ### <a name="public-methods"></a>パブリック メソッド
 
 名前                                  | 説明
 ------------------------------------- | ---------------------------------------------------------------------------------------
-[イベントターゲットアレイ::追加テール](#addtail) | 指定したイベント ハンドラーをイベント ハンドラーの内部配列の末尾に追加します。
-[イベントターゲットアレイ::開始](#begin)     | イベント ハンドラーの内部配列の最初の要素のアドレスを取得します。
-[イベントターゲットアレイ::終了](#end)         | イベント ハンドラーの内部配列の最後の要素のアドレスを取得します。
-[イベントターゲットアレイ::長さ](#length)   | イベント ハンドラーの内部配列内の要素の現在の数を取得します。
+[EventTargetArray:: AddTail](#addtail) | イベントハンドラーの内部配列の末尾に、指定されたイベントハンドラーを追加します。
+[EventTargetArray:: Begin](#begin)     | イベントハンドラーの内部配列内の最初の要素のアドレスを取得します。
+[EventTargetArray:: End](#end)         | イベントハンドラーの内部配列内の最後の要素のアドレスを取得します。
+[EventTargetArray:: Length](#length)   | イベントハンドラーの内部配列内の現在の要素数を取得します。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
 `EventTargetArray`
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-**ヘッダー:** イベント.h
+**ヘッダー:** イベント .h
 
-**名前空間:** マイクロソフト::WRL::Dのテール
+**名前空間:** Microsoft:: WRL::D etails
 
-## <a name="eventtargetarrayeventtargetarray"></a><a name="tilde-eventtargetarray"></a>イベントターゲットアレイ:~イベントターゲットアレイ
+## <a name="eventtargetarrayeventtargetarray"></a><a name="tilde-eventtargetarray"></a> EventTargetArray:: ~ EventTargetArray
 
-WRL インフラストラクチャをサポートし、コードから直接使用するためのものではありません。
+は WRL インフラストラクチャをサポートします。独自に作成したコードから直接使用するためのものではありません。
 
 ```cpp
 ~EventTargetArray();
@@ -84,11 +85,11 @@ WRL インフラストラクチャをサポートし、コードから直接使�
 
 ### <a name="remarks"></a>解説
 
-現在`EventTargetArray`のクラスを初期化解除します。
+現在のクラスを初期化解除 `EventTargetArray` します。
 
-## <a name="eventtargetarrayaddtail"></a><a name="addtail"></a>イベントターゲットアレイ::追加テール
+## <a name="eventtargetarrayaddtail"></a><a name="addtail"></a> EventTargetArray:: AddTail
 
-WRL インフラストラクチャをサポートし、コードから直接使用するためのものではありません。
+は WRL インフラストラクチャをサポートします。独自に作成したコードから直接使用するためのものではありません。
 
 ```cpp
 void AddTail(
@@ -98,18 +99,18 @@ void AddTail(
 
 ### <a name="parameters"></a>パラメーター
 
-*要素*<br/>
-追加するイベント ハンドラーへのポインター。
+*element*<br/>
+追加するイベントハンドラーへのポインター。
 
 ### <a name="remarks"></a>解説
 
-指定したイベント ハンドラーをイベント ハンドラーの内部配列の末尾に追加します。
+イベントハンドラーの内部配列の末尾に、指定されたイベントハンドラーを追加します。
 
-`AddTail()`は、クラスだけが内部的に使用することを意図しています`EventSource`。
+`AddTail()` は、クラスのみによって内部的に使用されることを意図してい `EventSource` ます。
 
-## <a name="eventtargetarraybegin"></a><a name="begin"></a>イベントターゲットアレイ::開始
+## <a name="eventtargetarraybegin"></a><a name="begin"></a> EventTargetArray:: Begin
 
-WRL インフラストラクチャをサポートし、コードから直接使用するためのものではありません。
+は WRL インフラストラクチャをサポートします。独自に作成したコードから直接使用するためのものではありません。
 
 ```cpp
 ComPtr<IUnknown>* Begin();
@@ -117,15 +118,15 @@ ComPtr<IUnknown>* Begin();
 
 ### <a name="return-value"></a>戻り値
 
-イベント ハンドラーの内部配列の最初の要素のアドレス。
+イベントハンドラーの内部配列内の最初の要素のアドレス。
 
 ### <a name="remarks"></a>解説
 
-イベント ハンドラーの内部配列の最初の要素のアドレスを取得します。
+イベントハンドラーの内部配列内の最初の要素のアドレスを取得します。
 
-## <a name="eventtargetarrayend"></a><a name="end"></a>イベントターゲットアレイ::終了
+## <a name="eventtargetarrayend"></a><a name="end"></a> EventTargetArray:: End
 
-WRL インフラストラクチャをサポートし、コードから直接使用するためのものではありません。
+は WRL インフラストラクチャをサポートします。独自に作成したコードから直接使用するためのものではありません。
 
 ```cpp
 ComPtr<IUnknown>* End();
@@ -133,15 +134,15 @@ ComPtr<IUnknown>* End();
 
 ### <a name="return-value"></a>戻り値
 
-イベント ハンドラーの内部配列の最後の要素のアドレス。
+イベントハンドラーの内部配列内の最後の要素のアドレス。
 
 ### <a name="remarks"></a>解説
 
-イベント ハンドラーの内部配列の最後の要素のアドレスを取得します。
+イベントハンドラーの内部配列内の最後の要素のアドレスを取得します。
 
-## <a name="eventtargetarrayeventtargetarray"></a><a name="eventtargetarray"></a>イベントターゲットアレイ::イベントターゲットアレイ
+## <a name="eventtargetarrayeventtargetarray"></a><a name="eventtargetarray"></a> EventTargetArray:: EventTargetArray
 
-WRL インフラストラクチャをサポートし、コードから直接使用するためのものではありません。
+は WRL インフラストラクチャをサポートします。独自に作成したコードから直接使用するためのものではありません。
 
 ```cpp
 EventTargetArray(
@@ -152,17 +153,17 @@ EventTargetArray(
 
 ### <a name="parameters"></a>パラメーター
 
-*人事*<br/>
-このコンストラクターの操作後、パラメーター *hr*は配列の割り当てが成功したか失敗するかを示します。 次の一覧は、 *hr*の値を示しています。
+*時間*<br/>
+このコンストラクター操作の後、パラメーター *hr* は配列の割り当てが成功したか失敗したかを示します。 次の一覧は、 *hr* に使用できる値を示しています。
 
 - S_OK<br/>
   操作が成功しました。
 
 - E_OUTOFMEMORY<br/>
-  メモリを配列に割り当てることができませんでした。
+  配列にメモリを割り当てられませんでした。
 
 - S_FALSE<br/>
-  パラメータ*項目*が 0 以下です。
+  パラメーター *項目* が0以下です。
 
 *items*<br/>
 割り当てる配列要素の数。
@@ -171,11 +172,11 @@ EventTargetArray(
 
 `EventTargetArray` クラスの新しいインスタンスを初期化します。
 
-`EventTargetArray`は、`EventSource`イベント ハンドラの配列をオブジェクトに保持するために使用されます。
+`EventTargetArray` は、イベントハンドラーの配列をオブジェクトに保持するために使用され `EventSource` ます。
 
-## <a name="eventtargetarraylength"></a><a name="length"></a>イベントターゲットアレイ::長さ
+## <a name="eventtargetarraylength"></a><a name="length"></a> EventTargetArray:: Length
 
-WRL インフラストラクチャをサポートし、コードから直接使用するためのものではありません。
+は WRL インフラストラクチャをサポートします。独自に作成したコードから直接使用するためのものではありません。
 
 ```cpp
 size_t Length();
@@ -183,8 +184,8 @@ size_t Length();
 
 ### <a name="return-value"></a>戻り値
 
-イベント ハンドラーの内部配列内の要素の現在の数。
+イベントハンドラーの内部配列内の現在の要素の数。
 
 ### <a name="remarks"></a>解説
 
-イベント ハンドラーの内部配列内の要素の現在の数を取得します。
+イベントハンドラーの内部配列内の現在の要素数を取得します。

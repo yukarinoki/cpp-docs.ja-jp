@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください:/FU (強制 #using ファイルに名前を指定)'
 title: '/FU (強制 #using ファイルの名前の指定)'
 ms.date: 11/04/2016
 f1_keywords:
@@ -10,41 +11,41 @@ helpviewer_keywords:
 - FU compiler option [C++]
 - /FU compiler option [C++]
 ms.assetid: 698f8603-457f-435a-baff-5ac9243d6ca1
-ms.openlocfilehash: c47a45208ac5b5c7e0000516ed114c008feda7ca
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 458369e7ff1322d2d2fa2fb37e8915c5a39c8446
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62292290"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97200378"
 ---
 # <a name="fu-name-forced-using-file"></a>/FU (強制 #using ファイルの名前の指定)
 
-代替ファイル名を渡す方法として使用できるコンパイラ オプション[#using ディレクティブ](../../preprocessor/hash-using-directive-cpp.md)でソース コード。
+ソースコード内の [#using ディレクティブ](../../preprocessor/hash-using-directive-cpp.md) にファイル名を渡す代わりに使用できるコンパイラオプション。
 
 ## <a name="syntax"></a>構文
 
-> **/FU** *file*
+> **/FU** *ファイル*
 
 ## <a name="arguments"></a>引数
 
 *file*<br/>
-このコンパイルで参照するメタデータ ファイルを指定します。
+このコンパイルで参照するメタデータファイルを指定します。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-/FU スイッチは 1 つだけのファイル名を取得します。 複数のファイルを指定するには、1 つずつ/FU を使用します。
+/FU スイッチには、ファイル名を1つだけ指定できます。 複数のファイルを指定するには、それぞれに/FU を使用します。
 
-C + を使用している場合/cli CLI を使用するメタデータを参照していると、[フレンド アセンブリ](../../dotnet/friend-assemblies-cpp.md)機能は使用できません **/FU**します。 使用してコード内のメタデータを参照する必要があります`#using`— と共に、`[as friend]`属性。 Visual C コンポーネント拡張 C + では、フレンド アセンブリはサポートされていない/cli CX します。
+C++/CLI を使用していて、 [フレンドアセンブリ](../../dotnet/friend-assemblies-cpp.md) 機能を使用するためにメタデータを参照している場合は、 **/fu** を使用できません。 属性と共にを使用して、コード内でメタデータを参照する必要があり `#using` `[as friend]` ます。 フレンドアセンブリは、Visual C++ コンポーネント拡張機能 C++/cxではサポートされていません。
 
-アセンブリまたは共通言語ランタイム (CLR) のモジュールを作成する方法については、次を参照してください。 [/clr (共通言語ランタイムのコンパイル)](clr-common-language-runtime-compilation.md)します。 C + で構築する方法については/cli CX を参照してください[アプリとライブラリのビルド](../../cppcx/building-apps-and-libraries-c-cx.md)します。
+共通言語ランタイム (CLR) のアセンブリまたはモジュールを作成する方法については、「 [/clr (共通言語ランタイムのコンパイル)](clr-common-language-runtime-compilation.md)」を参照してください。 C++/CX でビルドする方法の詳細については、「 [アプリとライブラリ](../../cppcx/building-apps-and-libraries-c-cx.md)のビルド」を参照してください。
 
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境において、このコンパイラ オプションを設定する方法
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのコンパイラ オプションを設定するには
 
-1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。 [Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)します。
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、[Visual Studio での C++ コンパイラとビルド プロパティの設定](../working-with-project-properties.md)に関するページを参照してください。
 
-1. 選択、**構成プロパティ** > **C/C++** > **詳細**プロパティ ページ。
+1. [**構成プロパティ**] [  >  **C/c + +**]  >  **[詳細設定**] プロパティページを選択します。
 
-1. 変更、 **Force #using**プロパティ。
+1. **Force #using** プロパティを変更します。
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>このコンパイラ オプションをコードから設定するには
 
@@ -54,4 +55,4 @@ C + を使用している場合/cli CLI を使用するメタデータを参照�
 
 [出力ファイル (/F) オプション](output-file-f-options.md)<br/>
 [MSVC コンパイラ オプション](compiler-options.md)<br/>
-[MSVC コンパイラ コマンド ラインの構文](compiler-command-line-syntax.md)
+[MSVC Compiler Command-Line 構文](compiler-command-line-syntax.md)

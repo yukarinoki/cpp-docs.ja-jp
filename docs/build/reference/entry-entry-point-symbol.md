@@ -1,4 +1,5 @@
 ---
+description: 詳細情報:/ENTRY (エントリポイントシンボル)
 title: /ENTRY (エントリ ポイント シンボル)
 ms.date: 11/04/2016
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - /ENTRY linker option
 - ENTRY linker option
 ms.assetid: 26c62ba2-4f52-4882-a7bd-7046a0abf445
-ms.openlocfilehash: 80833980b64e8fdd2a2f57b2dc40eb21c784b6f9
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: e4966ef44922a3a90d5abb5a7ac23460d4155f92
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87232704"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97201015"
 ---
 # <a name="entry-entry-point-symbol"></a>/ENTRY (エントリ ポイント シンボル)
 
@@ -38,9 +39,9 @@ ms.locfileid: "87232704"
 
 |関数名|の既定値|
 |-------------------|-----------------|
-|**mainCRTStartup** (または**wmainCRTStartup**)|/SUBSYSTEM: CONSOLE; を使用するアプリケーション呼び出し `main` (または `wmain` )|
-|**WinMainCRTStartup** (または**wWinMainCRTStartup**)|/SUBSYSTEM:**WINDOWS**を使用するアプリケーションを `WinMain` `wWinMain` 使用するために定義する必要がある (または) を呼び出します。**`__stdcall`**|
-|**_DllMainCRTStartup**|DLL。を `DllMain` 使用するように定義する必要がある場合は、を呼び出します。**`__stdcall`**|
+|**mainCRTStartup** (または **wmainCRTStartup**)|/SUBSYSTEM: CONSOLE; を使用するアプリケーション呼び出し `main` (または `wmain` )|
+|**WinMainCRTStartup** (または **wWinMainCRTStartup**)|/SUBSYSTEM:**WINDOWS** を使用するアプリケーションを `WinMain` `wWinMain` 使用するために定義する必要がある (または) を呼び出します。 **`__stdcall`**|
+|**_DllMainCRTStartup**|DLL。を `DllMain` 使用するように定義する必要がある場合は、を呼び出します。 **`__stdcall`**|
 
 [/Dll](dll-build-a-dll.md)または[/SUBSYSTEM](subsystem-specify-subsystem.md)オプションが指定されていない場合、リンカーはまたはが定義されているかどうかによって、サブシステムとエントリポイントを選択し `main` `WinMain` ます。
 
@@ -48,7 +49,7 @@ ms.locfileid: "87232704"
 
 マネージイメージを作成する場合、/ENTRY に指定する関数には、(LPVOID *var1*、DWORD *var2*、lpvoid *var3*) のシグネチャが必要です。
 
-独自のエントリポイントを定義する方法の詳細につい `DllMain` ては、「 [dll and Visual C++ ランタイムライブラリの動作](../run-time-library-behavior.md)」を参照してください。
+独自のエントリポイントを定義する方法の詳細につい `DllMain` ては、「 [dll and Visual C++ ランタイムライブラリの動作](../run-time-library-behavior.md) 」を参照してください。
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのリンカー オプションを設定するには
 
@@ -56,9 +57,9 @@ ms.locfileid: "87232704"
 
 1. **[リンカー]** フォルダーをクリックします。
 
-1. [**詳細設定**] プロパティページをクリックします。
+1. [ **詳細設定** ] プロパティページをクリックします。
 
-1. **エントリポイント**のプロパティを変更します。
+1. **エントリポイント** のプロパティを変更します。
 
 ### <a name="to-set-this-linker-option-programmatically"></a>このリンカーをコードから設定するには
 

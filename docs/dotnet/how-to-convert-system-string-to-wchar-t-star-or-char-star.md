@@ -1,4 +1,5 @@
 ---
+description: '詳細については、「方法: System:: String を wchar_t * または char * に変換する」を参照してください。'
 title: '方法: System::String を wchar_t* または char* に変換する'
 ms.custom: get-started-article
 ms.date: 11/04/2016
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - wchart type, converting System::String
 - char data type, converting System::String to
 ms.assetid: 385da01b-5649-4543-8076-e3e251243ff0
-ms.openlocfilehash: 9fcea7d54f5b3dcfe5fa75092463465711b1a505
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: 973d9c71e536865188dc03d88821dacce4b20e52
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "79545043"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97198363"
 ---
 # <a name="how-to-convert-systemstring-to-wchar_t-or-char"></a>方法: System::String を wchar_t* または char* に変換する
 
@@ -64,6 +65,6 @@ Hello
 Hello
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [C++ Interop (暗黙の PInvoke) の使用](../dotnet/using-cpp-interop-implicit-pinvoke.md)

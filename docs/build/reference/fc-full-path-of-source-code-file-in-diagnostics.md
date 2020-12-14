@@ -1,4 +1,5 @@
 ---
+description: 詳細については、次を参照してください:/FC (診断におけるソースコードファイルの完全パス)
 title: /FC (診断時のソース コード ファイルの完全パス)
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,24 +9,24 @@ helpviewer_keywords:
 - /FC compiler option [C++]
 - -FC compiler option [C++]
 ms.assetid: 1f11414e-cb42-421b-be68-9d369aab036b
-ms.openlocfilehash: 190174e1e2ac4d160140ddc54f9cc1c3a1b31709
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 01d1148a32179a7c605a19dc7f2856b7697ae6fb
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62271295"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97200677"
 ---
 # <a name="fc-full-path-of-source-code-file-in-diagnostics"></a>/FC (診断時のソース コード ファイルの完全パス)
 
-コンパイラ診断でコンパイラに渡されるソース コード ファイルの完全なパスを表示します。
+診断でコンパイラに渡されるソースコードファイルの完全なパスをコンパイラに表示させます。
 
 ## <a name="syntax"></a>構文
 
 > /FC
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-次のコード サンプルを検討してください。
+次のコード例について考えてみましょう。
 
 ```cpp
 // compiler_option_FC.cpp
@@ -34,27 +35,27 @@ int main( ) {
 }
 ```
 
-せず **/FC**、診断用のテキストはこの診断用のテキストのようになります。
+**/Fc** を指定しない場合、診断テキストは次の診断テキストのようになります。
 
-- compiler_option_FC.cpp(5) : error C2143: syntax error : missing ';' before '}'
+- compiler_option_FC .cpp (5): エラー C2143: 構文エラー: '; ' が '} ' の前にありません
 
-**/FC**、診断用のテキストはこの診断用のテキストのようになります。
+**/Fc** の場合、診断テキストは次の診断テキストのようになります。
 
-- c:\test\compiler_option_fc.cpp(5) : error C2143: syntax error : missing ';' before '}'
+- c:\test\ compiler_option_fc (5): error C2143: 構文エラー: '; ' が '} ' の前にありません
 
-**/FC**を使用する場合は、ファイル名の完全なパスを表示する場合にも必要です、 &#95;&#95;ファイル&#95;&#95;マクロ。 参照してください[定義済みマクロ](../../preprocessor/predefined-macros.md)の詳細については&#95;&#95;ファイル&#95;&#95;します。
+また、 &#95;&#95;ファイル&#95;&#95; マクロを使用する場合に、ファイル名の完全なパスを表示するには、 **/fc** も必要です。  &#95;&#95;ファイル&#95;&#95; の詳細については、「 [定義済みマクロ](../../preprocessor/predefined-macros.md) 」を参照してください。
 
-**/FC**がオプションが含まれる **/ZI**します。 詳細については **/ZI**を参照してください[/Z7、/Zi、/ZI (デバッグ情報の形式)](z7-zi-zi-debug-information-format.md)します。
+**/Fc** オプションは、 **/zi** によって暗黙的に指定されます。 **/Zi** の詳細については、「 [/Z7、/zi、/Zi (デバッグ情報の形式)](z7-zi-zi-debug-information-format.md)」を参照してください。
 
-**/FC**小文字で完全なパスを出力します。
+**/Fc** は、小文字で完全なパスを出力します。
 
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境において、このコンパイラ オプションを設定する方法
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのコンパイラ オプションを設定するには
 
-1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。 [Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)します。
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、[Visual Studio での C++ コンパイラとビルド プロパティの設定](../working-with-project-properties.md)に関するページを参照してください。
 
-1. 選択、**構成プロパティ** > **C/C++** > **詳細**プロパティ ページ。
+1. [**構成プロパティ**] [  >  **C/c + +**]  >  **[詳細設定**] プロパティページを選択します。
 
-1. 変更、**完全パスの使用**プロパティ。
+1. " **完全パスの使用** " プロパティを変更します。
 
 ### <a name="to-set-this-linker-option-programmatically"></a>このリンカーをコードから設定するには
 
@@ -63,4 +64,4 @@ int main( ) {
 ## <a name="see-also"></a>関連項目
 
 [MSVC コンパイラ オプション](compiler-options.md)<br/>
-[MSVC コンパイラ コマンド ラインの構文](compiler-command-line-syntax.md)
+[MSVC Compiler Command-Line 構文](compiler-command-line-syntax.md)

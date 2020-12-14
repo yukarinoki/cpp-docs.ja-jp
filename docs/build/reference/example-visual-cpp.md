@@ -1,5 +1,6 @@
 ---
-title: '&lt;例 > (C++ドキュメントコメント)'
+description: '詳細情報: &lt; 例&gt;'
+title: '&lt;> の例 (C++ ドキュメントコメント)'
 ms.date: 11/04/2016
 f1_keywords:
 - <example>
@@ -8,16 +9,16 @@ helpviewer_keywords:
 - <example> C++ XML tag
 - example C++ XML tag
 ms.assetid: c821aaa7-7ea7-4bee-9922-6705ad57f877
-ms.openlocfilehash: 384e9b9808a49770887eeda69b1d24fdd3f06027
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: 8ffa51be888fb631db6ec1ecd145177ea346084f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74988322"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97200833"
 ---
 # <a name="ltexamplegt"></a>&lt;example&gt;
 
-\<example> タグでは、メソッドまたはその他のライブラリ メンバーの使用例を指定できます。 この場合、通常は [\<code>](code-visual-cpp.md) タグも使用する必要があります。
+\<example> タグを使用すると、メソッドまたは他のライブラリ メンバーの使用例を指定できます。 一般的に、これにはタグの使用も含ま [\<code>](code-visual-cpp.md) れます。
 
 ## <a name="syntax"></a>構文
 
@@ -32,9 +33,9 @@ ms.locfileid: "74988322"
 
 ## <a name="remarks"></a>Remarks
 
-コンパイル時に [/doc](doc-process-documentation-comments-c-cpp.md) を指定して、ドキュメント コメントをファイルに出力します。
+ドキュメントコメントをファイルに処理するために、 [/doc](doc-process-documentation-comments-c-cpp.md) を使用してコンパイルします。
 
-## <a name="example"></a>使用例
+## <a name="example"></a>例
 
 ```cpp
 // xml_example_tag.cpp
@@ -61,6 +62,6 @@ public:
 };
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [XML に関するドキュメント](xml-documentation-visual-cpp.md)

@@ -1,4 +1,5 @@
 ---
+description: 詳細情報:/F (スタックサイズの設定)
 title: /F (スタック サイズの設定)
 ms.date: 11/04/2016
 f1_keywords:
@@ -10,45 +11,45 @@ helpviewer_keywords:
 - /F compiler option [C++]
 - stack, setting size
 ms.assetid: 17320b6f-8305-445b-9ec2-75833f4b29e0
-ms.openlocfilehash: 9db595daa7de7820b594a8515ece7481b4382c98
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5bf8b0855c65fc39caf8935b06a877c62a4e0df0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62293096"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97200781"
 ---
 # <a name="f-set-stack-size"></a>/F (スタック サイズの設定)
 
-プログラムのスタック サイズをバイト単位で設定します。
+プログラムのスタックサイズをバイト単位で設定します。
 
 ## <a name="syntax"></a>構文
 
-> **/F** *number*
+> **/F** *番号*
 
 ## <a name="arguments"></a>引数
 
 *number*<br/>
-スタック サイズ (バイト単位)。
+バイト単位のスタックサイズ。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-このオプションを指定せず、スタック サイズは 1 MB に既定値です。 *数*引数は、10 進数または C 言語表記で指定できます。 引数の範囲は 1 からリンカーによって受け付け最大スタック サイズです。 リンカーは、最も近い 4 バイトに指定した値を丸めます。 間のスペース **/F**と*数*は省略可能です。
+このオプションを指定しない場合、スタックサイズは既定で 1 MB に設定されます。 *Number* 引数には、10進表記または C 言語表記を使用できます。 引数は、1からリンカーが受け入れる最大スタックサイズまでの範囲で指定できます。 リンカーは、指定された値を最も近い4バイトに切り上げます。 **/F** と *number* の間のスペースは省略可能です。
 
-プログラム スタック オーバーフローのメッセージを取得する場合は、スタック サイズを大きく必要があります。
+プログラムがスタックオーバーフローメッセージを取得した場合は、スタックサイズの増加が必要になることがあります。
 
-スタック サイズを設定することもできます。
+スタックサイズは、次の方法で設定することもできます。
 
-- 使用して、 **/stack**リンカー オプション。 詳細については、次を参照してください。 [/stack](stack.md)します。
+- **/STACK** リンカーオプションを使用します。 詳細については、「 [/STACK](stack.md)」を参照してください。
 
-- .Exe ファイルを EDITBIN を使用します。 詳細については、次を参照してください。 [EDITBIN リファレンス](editbin-reference.md)します。
+- .Exe ファイルで EDITBIN を使用します。 詳細については、「 [EDITBIN リファレンス](editbin-reference.md)」を参照してください。
 
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境において、このコンパイラ オプションを設定する方法
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのコンパイラ オプションを設定するには
 
-1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。 [Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)します。
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、[Visual Studio での C++ コンパイラとビルド プロパティの設定](../working-with-project-properties.md)に関するページを参照してください。
 
-1. 選択、**構成プロパティ** > **C/C++** > **コマンドライン**プロパティ ページ。
+1. [**構成プロパティ**] [  >  **C/c + +**  >  **コマンドライン**] プロパティページを選択します。
 
-1. **[追加のオプション]** ボックスにコンパイラ オプションを入力します。
+1. [追加のオプション]  ボックスにコンパイラ オプションを入力します。
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>このコンパイラ オプションをコードから設定するには
 
@@ -57,4 +58,4 @@ ms.locfileid: "62293096"
 ## <a name="see-also"></a>関連項目
 
 [MSVC コンパイラ オプション](compiler-options.md)<br/>
-[MSVC コンパイラ コマンド ラインの構文](compiler-command-line-syntax.md)
+[MSVC Compiler Command-Line 構文](compiler-command-line-syntax.md)

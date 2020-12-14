@@ -1,4 +1,5 @@
 ---
+description: 詳細情報:/DEFAULTLIB (既定のライブラリの指定)
 title: /DEFAULTLIB (既定のライブラリの指定)
 ms.date: 05/29/2018
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - /DEFAULTLIB linker option
 - libraries, adding to list of
 ms.assetid: 6af7ff49-c170-4a13-97e2-2b9ae2de20c9
-ms.openlocfilehash: 0b7d4569c7be70bd97094ebbe09a7ae462331983
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9abaf158ed01b3e0a04d29c55d213c8749462c43
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62293863"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97201691"
 ---
 # <a name="defaultlib-specify-default-library"></a>/DEFAULTLIB (既定のライブラリの指定)
 
@@ -30,19 +31,19 @@ ms.locfileid: "62293863"
 *ライブラリ*<br/>
 外部参照を解決するときに検索するライブラリの名前。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-**/DEFAULTLIB**オプションでは、1 つ追加*ライブラリ*リンクが参照を解決するときに検索するライブラリの一覧にします。 指定されているライブラリ **/DEFAULTLIB**後コマンドラインで、既定のライブラリが .obj ファイル内の前に明示的に指定したライブラリが検索されます。
+**/DEFAULTLIB** オプションを指定すると、参照を解決するときにリンクが検索するライブラリの一覧に *ライブラリ* が1つ追加されます。 **/DEFAULTLIB** で指定されたライブラリは、コマンドラインで明示的に指定されたライブラリの後、および .obj ファイル内の既定のライブラリの前に検索されます。
 
-引数を指定せずに使用すると、 [/NODEFAULTLIB (すべて既定のライブラリの無視)](nodefaultlib-ignore-libraries.md)オプションをすべてオーバーライドされます **/DEFAULTLIB**:*ライブラリ*オプション。 **/NODEFAULTLIB**:*ライブラリ*上書きオプション **/DEFAULTLIB**:*ライブラリ*ときに、同じ*ライブラリ*両方で名前を指定します。
+引数を指定せずに使用する場合、 [/NODEFAULTLIB (すべての既定のライブラリを無視)](nodefaultlib-ignore-libraries.md) オプションは、すべての **/DEFAULTLIB**:*library* オプションをオーバーライドします。 両方で同じ *ライブラリ* 名が指定されている場合、 **/NODEFAULTLIB**:*library* オプションは **/DEFAULTLIB**:*library* をオーバーライドします。
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのリンカー オプションを設定するには
 
-1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。 [Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)します。
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳しくは、「[Visual Studio で C++ コンパイラとビルド プロパティを設定する](../working-with-project-properties.md)」をご覧ください。
 
-1. 選択、**構成プロパティ** > **リンカー** > **コマンドライン**プロパティ ページ。
+1. **[構成プロパティ]**  >  **[リンカー]**  >  **[コマンド ライン]** プロパティ ページを選択します。
 
-1. **追加オプション**、入力、 **/DEFAULTLIB**:*ライブラリ*を検索するには、各ライブラリのオプション。 **OK** を選択して変更を保存してください。
+1. [ **追加オプション**] で、検索する各ライブラリの **/DEFAULTLIB**:*library* オプションを入力します。 **[OK]** を選択して変更を保存します。
 
 ### <a name="to-set-this-linker-option-programmatically"></a>このリンカーをコードから設定するには
 

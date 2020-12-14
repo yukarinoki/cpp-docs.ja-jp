@@ -1,15 +1,16 @@
 ---
+description: 詳細については、「EDITBIN コマンドライン」を参照してください。
 title: EDITBIN コマンド ライン
 ms.date: 11/04/2016
 helpviewer_keywords:
 - EDITBIN program, command line
 ms.assetid: 28ff7f92-6c4e-4e7f-86d8-80d5b2f91662
-ms.openlocfilehash: 4ec18bd9fa23ed178f07749ef5becf7e06da7e36
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 9fcaf20681f48ea581d00270453dedd99b02bf1b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79439952"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97201041"
 ---
 # <a name="editbin-command-line"></a>EDITBIN コマンド ライン
 
@@ -21,9 +22,9 @@ EDITBIN [options] files...
 
 変更するオブジェクトまたはイメージの1つ以上のファイルと、ファイルを変更するための1つ以上のオプションを指定します。
 
-他のコマンドライン入力を使用せずにコマンド `editbin` を入力すると、EDITBIN にはそのオプションを要約する usage ステートメントが表示されます。
+他のコマンドライン入力を使用せずにコマンドを入力すると `editbin` 、EDITBIN ではそのオプションを要約する usage ステートメントが表示されます。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[追加の MSVC ビルド ツール](c-cpp-build-tools.md)<br/>
+[その他の MSVC ビルドツール](c-cpp-build-tools.md)<br/>
 [EDITBIN リファレンス](editbin-reference.md)

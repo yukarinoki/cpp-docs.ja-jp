@@ -1,38 +1,39 @@
 ---
+description: 詳細については、「エラー処理と通知」を参照してください。
 title: エラー処理と通知
 ms.date: 11/04/2016
 helpviewer_keywords:
 - error handling, and notification
 ms.assetid: b621cf60-d869-451a-b05e-dc86d78addaa
-ms.openlocfilehash: 29fe46e15712609ec0c4f268749aaefed103117e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 234d50d0b4a7e8b81874d1926ac056f8cba23376
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62293187"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97200989"
 ---
 # <a name="error-handling-and-notification"></a>エラー処理と通知
 
-エラー処理と通知の詳細については、次を参照してください。[ヘルパー関数について](understanding-the-helper-function.md)します。
+エラー処理と通知の詳細については、「 [ヘルパー関数](understanding-the-helper-function.md)について」を参照してください。
 
-用のフック関数の詳細については、次を参照してください。[構造体と定数定義](structure-and-constant-definitions.md)します。
+フック関数の詳細については、「 [構造体と定数の定義](structure-and-constant-definitions.md)」を参照してください。
 
-プログラムでは、Dll の遅延読み込みを使用する場合、プログラムの実行中に発生する障害が発生した未処理の例外から確実エラーを処理にする必要があります。 エラー処理は、2 つの部分で構成されます。
+プログラムが遅延読み込みされた Dll を使用している場合は、プログラムの実行中に発生したエラーによってハンドルされない例外が発生するため、エラーを確実に処理する必要があります。 エラー処理は、次の2つの部分で構成されます。
 
-フックによる復旧します。
-を、コードが回復または失敗した場合、代替のライブラリやルーチンを提供する必要がある場合は、ヘルパー関数を指定したり、問題を解決するフックを指定できます。 (HINSTANCE または FARPROC) を行うフックの日常的なニーズを処理できるように、適切な値を返すまたは 0 に、例外をスローする必要があります。 独自の例外をスローする可能性がありますもまたは**longjmp**フック外です。 通知フックとエラー フックがあります。
+フックによる復旧。
+障害発生時にコードで回復する必要がある場合、または代替ライブラリやルーチンを提供する必要がある場合は、その状況を提供または解決できるヘルパー関数にフックを提供できます。 フックルーチンは適切な値を返す必要があるため、処理を続行 (HINSTANCE または FARPROC) するか、0を指定して例外をスローする必要があることを示します。 また、独自の例外をスローし **たり、** フックの外にしたりすることもできます。 通知フックとエラーフックがあります。
 
-例外を使用してレポートを作成します。
-プロシージャを中止するすべてのエラーを処理するために必要な場合は、フックは必要ありません、ユーザー コードが例外を処理できる限り、します。
+例外を使用したレポート。
+エラーの処理に必要なものがすべてプロシージャを中止する場合は、ユーザーコードが例外を処理できる限り、フックは必要ありません。
 
 次のトピックでは、エラー処理と通知について説明します。
 
 - [通知フック](notification-hooks.md)
 
-- [エラー フック](failure-hooks.md)
+- [エラーフック](failure-hooks.md)
 
 - [例外](exceptions-c-cpp.md)
 
 ## <a name="see-also"></a>関連項目
 
-[リンカーによる DLL の遅延読み込み](linker-support-for-delay-loaded-dlls.md)
+[リンカーによる Delay-Loaded Dll のサポート](linker-support-for-delay-loaded-dlls.md)
