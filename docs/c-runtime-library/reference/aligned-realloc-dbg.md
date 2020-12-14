@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: _aligned_realloc_dbg'
 title: _aligned_realloc_dbg
 ms.date: 11/04/2016
 api_name:
@@ -25,12 +26,12 @@ helpviewer_keywords:
 - _aligned_realloc_dbg function
 - aligned_realloc_dbg function
 ms.assetid: 8aede920-991e-44cd-867f-83dc2165db47
-ms.openlocfilehash: aa0af73aced2e8f337582d58d8efac650d244dee
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: a1624f3594189f7c784a98725b66eb6272685729
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70939739"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97312450"
 ---
 # <a name="_aligned_realloc_dbg"></a>_aligned_realloc_dbg
 
@@ -56,32 +57,32 @@ void * _aligned_realloc_dbg(
 *size*<br/>
 要求されたメモリ割り当てのサイズ。
 
-*alignment*<br/>
+*配置*<br/>
 アラインメント値。2 の整数乗である必要があります。
 
-*ファイル名*<br/>
-**Realloc**操作を要求したソースファイルの名前へのポインターまたは**NULL**。
+*filename*<br/>
+**Realloc** 操作を要求したソースファイルの名前へのポインターまたは **NULL**。
 
-*行番号*<br/>
-**Realloc**操作が要求されたソースファイル内の行番号または**NULL**。
+*linenumber*<br/>
+**Realloc** 操作が要求されたソースファイル内の行番号または **NULL**。
 
 ## <a name="return-value"></a>戻り値
 
-**_aligned_realloc_dbg**は、再割り当てされた (移動される可能性もある) メモリブロックへの void ポインターを返します。 サイズが0でバッファー引数が**null**でない場合、またはブロックを指定されたサイズに拡張するのに十分なメモリがない場合、戻り値は**null**になります。 最初の場合には、元のブロックは解放されます。 2 番目の場合には、元のブロックは変更されません。 戻り値は、どの型のオブジェクトを格納する場合でも適切なアラインメントが保証されるストレージ領域を指します。 void 以外の型へのポインターを取得するには、戻り値の型キャストを使用します。
+**_aligned_realloc_dbg** は、再割り当てされた (移動された可能性がある) メモリブロックへの void ポインターを返します。 サイズが0でバッファー引数が **null** でない場合、またはブロックを指定されたサイズに拡張するのに十分なメモリがない場合、戻り値は **null** になります。 最初の場合には、元のブロックは解放されます。 2 番目の場合には、元のブロックは変更されません。 戻り値は、どの型のオブジェクトを格納する場合でも適切なアラインメントが保証されるストレージ領域を指します。 void 以外の型へのポインターを取得するには、戻り値の型キャストを使用します。
 
 メモリを再割り当てしてブロックのアラインメントを変更すると、エラーになります。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-**_aligned_realloc_dbg**は、 [_aligned_realloc](aligned-realloc.md)関数のデバッグバージョンです。 [_Debug](../../c-runtime-library/debug.md)が定義されていない場合、 **_aligned_realloc_dbg**の各呼び出しは **_aligned_realloc**の呼び出しに限定されます。 **_Aligned_realloc**と **_aligned_realloc_dbg**は、どちらもベースヒープ内のメモリブロックを再割り当てしますが、 **_aligned_realloc_dbg**はいくつかのデバッグ機能に対応します。リークをテストするために、ブロックのユーザー部分の両側のバッファーを使用します。、および*filename*/*linenumber*情報を参照して、割り当て要求の発生元を特定します。 ブロックの型パラメーターを使用して特定の割り当ての種類を追跡することは、固定された割り当てのデバッグ機能としてサポートされていません。 アラインされた割り当ては、_NORMAL_BLOCK ブロック型として表示されます。
+**_aligned_realloc_dbg** は、 [_aligned_realloc](aligned-realloc.md) 関数のデバッグバージョンです。 [_DEBUG](../../c-runtime-library/debug.md)が定義されていない場合、 **_aligned_realloc_dbg** の各呼び出しは **_aligned_realloc** への呼び出しに限定されます。 **_Aligned_realloc** と **_aligned_realloc_dbg** はどちらもベースヒープ内のメモリブロックを再割り当てしますが、 **_aligned_realloc_dbg** にはいくつかのデバッグ機能があります。リークをテストするための、ブロックのユーザー部分の両側のバッファーと、  / 割り当て要求の起点を特定するための filename *linenumber* information です。 ブロックの型パラメーターを使用して特定の割り当ての種類を追跡することは、固定された割り当てのデバッグ機能としてサポートされていません。 配置された割り当ては、_NORMAL_BLOCK ブロック型として表示されます。
 
-**_aligned_realloc_dbg**は、要求された*newSize*よりも若干多くの領域を使用して、指定されたメモリブロックを再割り当てします。 *newSize*が、最初に割り当てられたメモリブロックのサイズより大きいか小さい可能性があります。 追加の領域は、デバッグ メモリ ブロックをリンクし、アプリケーションにデバッグ ヘッダー情報と上書きバッファーを提供するために、デバッグ ヒープ マネージャーによって使用されます。 再割り当てによって、元のメモリ ブロックがヒープ内の別の位置に移動されたり、メモリ ブロックのサイズが変わったりする場合があります。 メモリ ブロックが移動される場合、元のブロックの内容は上書きされます。
+**_aligned_realloc_dbg** は、要求された *newSize* よりも少し多くの領域を使用して、指定されたメモリブロックを再割り当てします。 *newSize* が、最初に割り当てられたメモリブロックのサイズより大きいか小さい可能性があります。 追加の領域は、デバッグ メモリ ブロックをリンクし、アプリケーションにデバッグ ヘッダー情報と上書きバッファーを提供するために、デバッグ ヒープ マネージャーによって使用されます。 再割り当てによって、元のメモリ ブロックがヒープ内の別の位置に移動されたり、メモリ ブロックのサイズが変わったりする場合があります。 メモリ ブロックが移動される場合、元のブロックの内容は上書きされます。
 
-**_aligned_realloc_dbg**は、メモリ割り当てが失敗した場合、または必要なメモリの量 (前に説明したオーバーヘッドを含む) が **_HEAP_MAXREQ**を超えた場合に**errno**を**ENOMEM**に設定します。 このエラー コードと他のエラーコードの詳細については、「[errno、_doserrno、_sys_errlist、_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」をご覧ください。
+**_aligned_realloc_dbg** は、メモリの割り当てが失敗した場合、または必要なメモリの量 (前に説明したオーバーヘッドを含む) が **_HEAP_MAXREQ** を超えた場合に、 **errno** を **ENOMEM** に設定します。 このエラー コードと他のエラーコードの詳細については、「[errno、_doserrno、_sys_errlist、および _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」を参照してください。
 
-また、 **_aligned_realloc_dbg**はそのパラメーターを検証します。 *Alignment*が2の累乗でない場合、この関数は「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーを呼び出します。 実行の継続が許可された場合、この関数は**NULL**を返し、 **errno**を**EINVAL**に設定します。
+また、 **_aligned_realloc_dbg** パラメーターを検証します。 *Alignment* が2の累乗でない場合、この関数は「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーを呼び出します。 実行の継続が許可された場合、この関数は **NULL** を返し、 **errno** を **EINVAL** に設定します。
 
-デバッグ バージョンのベース ヒープに対するメモリ ブロックの割り当て、初期化、管理方法については、「 [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details)」をご覧ください。 割り当てブロック型と、それらがどのように使用されるかについては、「[デバッグ ヒープ上のメモリ ブロックの型](/visualstudio/debugger/crt-debug-heap-details)」をご覧ください。 標準で呼び出すヒープ関数と、アプリケーションのデバッグ ビルドで呼び出すデバッグ バージョンのヒープ関数との違いの詳細については、「[デバッグ バージョンのヒープ割り当て関数](/visualstudio/debugger/debug-versions-of-heap-allocation-functions)」をご覧ください。
+デバッグ バージョンのベース ヒープに対するメモリ ブロックの割り当て、初期化、管理方法については、「 [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details)」をご覧ください。 割り当てブロックの型とその使用方法については、「 [デバッグヒープ上のブロックの型](/visualstudio/debugger/crt-debug-heap-details)」を参照してください。 標準で呼び出すヒープ関数と、アプリケーションのデバッグ ビルドで呼び出すデバッグ バージョンのヒープ関数との違いの詳細については、「[デバッグ バージョンのヒープ割り当て関数](/visualstudio/debugger/debug-versions-of-heap-allocation-functions)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
@@ -89,7 +90,7 @@ void * _aligned_realloc_dbg(
 |-------------|---------------------|
 |**_aligned_realloc_dbg**|\<crtdbg.h>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性について詳しくは、「 [Compatibility](../../c-runtime-library/compatibility.md)」をご覧ください。
 
 ## <a name="libraries"></a>ライブラリ
 
@@ -97,4 +98,4 @@ void * _aligned_realloc_dbg(
 
 ## <a name="see-also"></a>関連項目
 
-[デバッグ ルーチン](../../c-runtime-library/debug-routines.md)<br/>
+[デバッグルーチン](../../c-runtime-library/debug-routines.md)<br/>

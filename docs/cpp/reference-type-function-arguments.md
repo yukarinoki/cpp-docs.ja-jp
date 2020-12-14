@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: Reference-Type 関数の引数'
 title: Reference-Type Function Arguments (参照型関数の引数)
 ms.date: 08/27/2018
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - function arguments [C++], reference-type
 - passing parameters [C++], reference-type arguments
 ms.assetid: 0a70e831-9e76-46c0-821d-aeba13d73cc0
-ms.openlocfilehash: 5a409efbe2908954d394656cb989ad6b80a9ce22
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 2e290160b1b897eadbf77f0c8a805f927a26c02f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87233640"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97260333"
 ---
 # <a name="reference-type-function-arguments"></a>Reference-Type Function Arguments (参照型関数の引数)
 
@@ -77,7 +78,7 @@ long DateOfYear( const Date& date );
 
 このプロトタイプによって、関数 `DateOfYear` が引数を変更しないことが保証されます。
 
-参照型を受け取るようにプロトタイプ宣言された関数は、 *typename*から*typename*への標準変換があるため、その代わりに同じ型のオブジェクトを受け取ることができ <strong>&</strong> ます。
+参照型を受け取るようにプロトタイプ宣言された関数は、 *typename* から *typename* への標準変換があるため、その代わりに同じ型のオブジェクトを受け取ることができ <strong>&</strong> ます。
 
 ## <a name="see-also"></a>関連項目
 

@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: _getw'
 title: _getw
 ms.date: 4/2/2020
 api_name:
@@ -28,12 +29,12 @@ helpviewer_keywords:
 - integers, getting from streams
 - getw function
 ms.assetid: ef75facc-b84e-470f-9f5f-8746c90822a0
-ms.openlocfilehash: 786246afbb8ce4f733f733af75af3a70ce33006d
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 2f951305351b4693b9787b6eac926c719afd3f3e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87226217"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97296538"
 ---
 # <a name="_getw"></a>_getw
 
@@ -54,11 +55,11 @@ int _getw(
 
 ## <a name="return-value"></a>戻り値
 
-**_getw**は、読み取られた整数値を返します。 **EOF**の戻り値は、エラーまたはファイルの末尾を示します。 ただし、 **EOF**値も正しい整数値であるため、 **feof**または**ferror**を使用して、ファイルの終わりまたはエラーの状態を確認します。 *Stream*が**NULL**の場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、 **errno**は**EINVAL**に設定され、関数は**EOF**を返します。
+**_getw** は、読み取られた整数値を返します。 **EOF** の戻り値は、エラーまたはファイルの末尾を示します。 ただし、 **EOF** 値も正しい整数値であるため、 **feof** または **ferror** を使用して、ファイルの終わりまたはエラーの状態を確認します。 *Stream* が **NULL** の場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、 **errno** は **EINVAL** に設定され、関数は **EOF** を返します。
 
 ## <a name="remarks"></a>解説
 
-**_Getw**関数は、ストリームに関連付けられているファイルから型の次のバイナリ値を読み取り **`int`** 、関連付けられているファイルポインターがある場合はそれをインクリメントして、次の*stream*未読文字を指すようにします。 **_getw**は、ストリーム内の項目の特別な配置を想定していません。 **_Getw**では、型のサイズ **`int`** と型内のバイトの順序が **`int`** システム間で異なるため、移植に関する問題が発生する可能性があります。
+**_Getw** 関数は、ストリームに関連付けられているファイルから型の次のバイナリ値を読み取り **`int`** 、関連付けられているファイルポインターがある場合はそれをインクリメントして、次の未読文字を指すようにします。 **_getw** は、ストリーム内の項目の特別な配置を想定していません。 **_Getw** では、型のサイズ **`int`** と型内のバイトの順序が **`int`** システム間で異なるため、移植に関する問題が発生する可能性があります。
 
 既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 

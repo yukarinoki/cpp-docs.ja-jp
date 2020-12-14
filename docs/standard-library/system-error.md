@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: &lt; system_error&gt;'
 title: '&lt;system_error&gt;'
 ms.date: 03/15/2019
 f1_keywords:
@@ -7,18 +8,18 @@ f1_keywords:
 helpviewer_keywords:
 - system_error header
 ms.assetid: 5e046c6e-48d9-4740-8c8a-05f3727c1215
-ms.openlocfilehash: 18df18379fbee8271ba5cf851b04210f1dfddf57
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 77ff4cae7d40ae4edb393e5d4f6743be1563556c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88841884"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97259410"
 ---
 # <a name="ltsystem_errorgt"></a>&lt;system_error&gt;
 
 例外クラス `system_error` を定義するヘッダー \<system_error> と、低レベルのシステム エラーを処理する関連テンプレートを含みます。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:**\<system_error>
 
@@ -26,7 +27,7 @@ ms.locfileid: "88841884"
 
 ## <a name="members"></a>メンバー
 
-### <a name="objects"></a>オブジェクト
+### <a name="objects"></a>Objects
 
 |名前|説明|
 |-|-|
@@ -35,14 +36,14 @@ ms.locfileid: "88841884"
 |[is_error_condition_enum_v](../standard-library/system-error-functions.md#is_error_condition_enum_v)||
 |[system_category](../standard-library/system-error-functions.md#system_category)|低レベル システム オーバーフローによって発生したエラーのカテゴリを表します。|
 
-### <a name="functions"></a>Functions
+### <a name="functions"></a>関数
 
 |名前|説明|
 |-|-|
 |[make_error_code](../standard-library/system-error-functions.md#make_error_code)|`error_code` オブジェクトを作成します。|
 |[make_error_condition](../standard-library/system-error-functions.md#make_error_condition)|`error_condition` オブジェクトを作成します。|
 
-### <a name="operators"></a>演算子
+### <a name="operators"></a>オペレーター
 
 |名前|説明|
 |-|-|

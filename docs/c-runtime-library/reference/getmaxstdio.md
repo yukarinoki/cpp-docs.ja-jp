@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: _getmaxstdio'
 title: _getmaxstdio
 ms.date: 11/04/2016
 api_name:
@@ -28,12 +29,12 @@ helpviewer_keywords:
 - getmaxstdio function
 - open files, getting number
 ms.assetid: 700ca8ce-4a8c-4e00-9467-dfa9d6b831a0
-ms.openlocfilehash: cf3f55262e54ec4d5205d08dfcb499f2802ded23
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 78c427ef9e5152708870d7ff48d0a123b7ee5213
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70955035"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97296551"
 ---
 # <a name="_getmaxstdio"></a>_getmaxstdio
 
@@ -47,11 +48,11 @@ int _getmaxstdio( void );
 
 ## <a name="return-value"></a>戻り値
 
-**Stdio**レベルで現在許可されている、同時に開かれているファイルの数を表す数値を返します。
+**Stdio** レベルで現在許可されている、同時に開かれているファイルの数を表す数値を返します。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-[_Setmaxstdio](setmaxstdio.md)を使用して、 **stdio**レベルで許可される同時に開いているファイルの数を構成します。
+[_Setmaxstdio](setmaxstdio.md)を使用して、 **stdio** レベルで許可される同時に開いているファイルの数を構成します。
 
 ## <a name="requirements"></a>必要条件
 
@@ -59,7 +60,7 @@ int _getmaxstdio( void );
 |-------------|---------------------|
 |**_getmaxstdio**|\<stdio.h>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性について詳しくは、「 [Compatibility](../../c-runtime-library/compatibility.md)」をご覧ください。
 
 ## <a name="example"></a>例
 

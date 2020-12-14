@@ -1,5 +1,6 @@
 ---
-title: '&lt;バリアント&gt;演算子'
+description: '詳細: &lt; バリアント &gt; 演算子'
+title: '&lt;バリアント &gt; 演算子'
 ms.date: 04/04/2019
 f1_keywords:
 - variant/std::operator!=
@@ -15,16 +16,16 @@ helpviewer_keywords:
 - std::operatoroperator&gt=; (variant)
 - std::operatoroperator&lt; (variant)
 - std::operatoroperator&lt;= (variant)
-ms.openlocfilehash: 0c4042ca1d89f9835b32924b268ef17a56619009
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 3315c73ea529ad7ade4f32be3784a43bda07ac26
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68268564"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97312827"
 ---
-# <a name="ltvariantgt-operators"></a>&lt;バリアント&gt;演算子
+# <a name="ltvariantgt-operators"></a>&lt;バリアント &gt; 演算子
 
-## <a name="op_eq_eq"></a> 演算子 = =
+## <a name="operator"></a><a name="op_eq_eq"></a> operator = =
 
 演算子の左辺の前方リスト オブジェクトが右辺の前方リスト オブジェクトと等しいかどうかを調べます。
 
@@ -33,7 +34,7 @@ template <class... Types>
     constexpr bool operator==(const variant<Types...>&, const variant<Types...>&);
 ```
 
-## <a name="op_neq"></a> operator!=
+## <a name="operator"></a><a name="op_neq"></a> operator! =
 
 演算子の左辺の前方リスト オブジェクトが右辺の前方リスト オブジェクトと等しくないかどうかを調べます。
 
@@ -42,7 +43,7 @@ template <class... Types>
     constexpr bool operator!=(const variant<Types...>&, const variant<Types...>&);
 ```
 
-## <a name="op_lt"></a> 演算子&lt;
+## <a name="operatorlt"></a><a name="op_lt"></a> operator&lt;
 
 演算子の左辺の前方リスト オブジェクトが右辺の前方リスト オブジェクトより小さいかどうかを調べます。
 
@@ -51,7 +52,7 @@ template <class... Types>
     constexpr bool operator<(const variant<Types...>&, const variant<Types...>&);
 ```
 
-## <a name="op_lt_eq"></a> 演算子&lt;=
+## <a name="operatorlt"></a><a name="op_lt_eq"></a> operator&lt;=
 
 演算子の左辺の前方リスト オブジェクトが右辺の前方リスト オブジェクト以下であるかどうかを調べます。
 
@@ -60,7 +61,7 @@ template <class... Types>
     constexpr bool operator<=(const variant<Types...>&, const variant<Types...>&);
 ```
 
-## <a name="op_gt"></a> 演算子&gt;
+## <a name="operatorgt"></a><a name="op_gt"></a> operator&gt;
 
 演算子の左辺の前方リスト オブジェクトが右辺の前方リスト オブジェクトより大きいかどうかを調べます。
 
@@ -69,7 +70,7 @@ template <class... Types> constexpr
     bool operator>(const variant<Types...>&, const variant<Types...>&);
 ```
 
-## <a name="op_gt_eq"></a> 演算子&gt;=
+## <a name="operatorgt"></a><a name="op_gt_eq"></a> operator&gt;=
 
 演算子の左辺の前方リスト オブジェクトが右辺の前方リスト オブジェクト以上であるかどうかを調べます。
 

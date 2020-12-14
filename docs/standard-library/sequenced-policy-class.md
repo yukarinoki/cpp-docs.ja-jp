@@ -1,14 +1,15 @@
 ---
+description: '詳細情報: sequenced_policy クラス'
 title: sequenced_policy クラス
 ms.date: 04/18/2019
 f1_keywords:
 - execution/std::execution::sequenced_policy
-ms.openlocfilehash: 5647f20b560828016231a9bbd38977c51211e6bb
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: e4d19e3649e3c768e8efc062baaf735e28a8fc22
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79444919"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97250414"
 ---
 # <a name="sequenced_policy-class"></a>sequenced_policy クラス
 
@@ -20,6 +21,6 @@ ms.locfileid: "79444919"
 class execution::sequenced_policy;
 ```
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
-`execution::sequenced_policy` ポリシーを使用した並列アルゴリズムの実行中に、要素アクセス関数の呼び出しがキャッチされない例外によって終了した場合、`terminate()` が呼び出されます。
+ポリシーを使用した並列アルゴリズムの実行中に、 `execution::sequenced_policy` 要素アクセス関数の呼び出しがキャッチされない例外によって終了した場合は、が `terminate()` 呼び出されます。

@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「ファイル定数」を参照してください。
 title: ファイル定数
 ms.date: 11/04/2016
 f1_keywords:
@@ -25,12 +26,12 @@ helpviewer_keywords:
 - O_RDONLY constant
 - _O_WRONLY constant
 ms.assetid: c8fa5548-9ac2-4217-801d-eb45e86f2fa4
-ms.openlocfilehash: f0bf85dc8f27fca1720cde7f5a8b2029a791849c
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: a174a9bd8924f4d209f937187614863ce7111b3b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57739979"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97296603"
 ---
 # <a name="file-constants"></a>ファイル定数
 

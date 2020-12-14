@@ -1,22 +1,23 @@
 ---
+description: '詳細情報: &lt; バリアント&gt;'
 title: '&lt;variant&gt;'
 ms.date: 04/04/2019
 f1_keywords:
 - <variant>
 helpviewer_keywords:
 - <variant>
-ms.openlocfilehash: 1a3c861c96fedb7ef95eec66f95888ddc092bed4
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 994bd18a66dd78c8f6042afea10df69ff08a1487
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88835663"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97312472"
 ---
 # <a name="ltvariantgt"></a>&lt;variant&gt;
 
 バリアントオブジェクトは、値を保持して管理します。 バリアントが値を保持している場合、その値の型は variant に指定されたテンプレート引数の型のいずれかである必要があります。 これらのテンプレート引数は、代替と呼ばれます。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:**\<variant>
 
@@ -24,7 +25,7 @@ ms.locfileid: "88835663"
 
 ## <a name="members"></a>メンバー
 
-### <a name="operators"></a>演算子
+### <a name="operators"></a>オペレーター
 
 |名前|説明|
 |-|-|
@@ -35,15 +36,15 @@ ms.locfileid: "88835663"
 |[>演算子 ](../standard-library/forward-list-operators.md#op_gt)|演算子の左辺のバリアントオブジェクトが右辺のバリアントオブジェクトより大きいかどうかをテストします。|
 |[operator>=](../standard-library/forward-list-operators.md#op_lt_eq)|演算子の左辺のバリアントオブジェクトが右辺のバリアントオブジェクト以上かどうかをテストしますです。|
 
-### <a name="functions"></a>Functions
+### <a name="functions"></a>関数
 
 |名前|説明|
 |-|-|
 |[get](../standard-library/variant-functions.md#get)|オブジェクトのバリアントを取得します。|
 |[get_if](../standard-library/variant-functions.md#get_if)|オブジェクトが存在する場合は、そのバリアントを取得します。|
 |[holds_alternative](../standard-library/variant-functions.md#holds_alternative)|**`true`** バリアントが存在する場合は、を返します。|
-|[スワップ](../standard-library/variant-functions.md#swap)|**バリアント**を交換します。|
-|[ごと](../standard-library/variant-functions.md#visit)|次の **バリアント**に移動します。|
+|[スワップ](../standard-library/variant-functions.md#swap)|**バリアント** を交換します。|
+|[ごと](../standard-library/variant-functions.md#visit)|次の **バリアント** に移動します。|
 
 ### <a name="classes"></a>クラス
 
@@ -62,7 +63,7 @@ ms.locfileid: "88835663"
 |[variant_alternative](../standard-library/variant-alternative-structure.md)|Variant オブジェクトを支援します。|
 |[variant_size](../standard-library/variant-size-structure.md)|Variant オブジェクトを支援します。|
 
-### <a name="objects"></a>オブジェクト
+### <a name="objects"></a>Objects
 
 |名前|説明|
 |-|-|
