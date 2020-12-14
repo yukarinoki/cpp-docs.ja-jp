@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: コンマ演算子:,'
 title: 'コンマ演算子: ,'
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - comma operator
 ms.assetid: 38e0238e-19da-42ba-ae62-277bfdab6090
-ms.openlocfilehash: 6ea2bd5c0e7653ba7f81531a5c39df2da41662a9
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 1429e2ce444e0f253bffca795f36f4e6194e0395
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80189768"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97274776"
 ---
 # <a name="comma-operator-"></a>コンマ演算子: ,
 
@@ -29,7 +30,7 @@ expression , expression
 
 コンマは、関数の引数リストなどの一部のコンテキストで、区切り記号として使用できます。 区切り記号としてのコンマの使用と演算子としての使用を混同しないでください。この 2 つの用途は、まったく別のものです。
 
-式 `e1, e2` を考えます。 式の型と値は、 *e2*の型と値です。*e1*を評価した結果は破棄されます。 結果は、右オペランドが左辺値の場合は左辺値です。
+式 `e1, e2` を考えます。 式の型と値は、 *e2* の型と値です。 *e1* を評価した結果は破棄されます。 結果は、右オペランドが左辺値の場合は左辺値です。
 
 通常、コンマが区切り記号として使用される場所 (たとえば、関数の実引数や集約の初期化子) では、コンマ演算子とそのオペランドをかっこで囲む必要があります。 次に例を示します。
 
@@ -60,8 +61,8 @@ int main () {
 30
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [二項演算子を含む式](../cpp/expressions-with-binary-operators.md)<br/>
-[C++ の組み込み演算子、優先順位と結合規則](../cpp/cpp-built-in-operators-precedence-and-associativity.md)<br/>
+[C++ の演算子、優先順位と結合規則](../cpp/cpp-built-in-operators-precedence-and-associativity.md)<br/>
 [順次評価演算子](../c-language/sequential-evaluation-operator.md)

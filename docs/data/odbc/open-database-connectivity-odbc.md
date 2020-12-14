@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: Open Database Connectivity (ODBC)'
 title: ODBC (Open Database Connectivity)
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,18 +7,18 @@ helpviewer_keywords:
 - databases [C++], ODBC
 - data access [C++], ODBC
 ms.assetid: 56b6067a-651e-4c10-a24d-d4a6a17ca5e4
-ms.openlocfilehash: 12e4c0b74caa95af4dc4ed00dc77d46e47029b59
-ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
+ms.openlocfilehash: f28fe1dfd2d2cb4cb8d4ad70404209ae20ad1b9a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86403804"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97274698"
 ---
 # <a name="open-database-connectivity-odbc"></a>ODBC (Open Database Connectivity)
 
 MFC (Microsoft Foundation Class) ライブラリには、ODBC (Open Database Connectivity) を使用したプログラミング用のクラスが用意されています。 Visual Studio 2015 と SQL Server 2012 ODBC は、SQL データソースへの接続に推奨される方法です。
 
-MFC を使用せずに ODBC API を使用する方法の詳細については、 [Open Database Connectivity (odbc)](/sql/odbc/microsoft-open-database-connectivity-odbc)のドキュメントを参照してください。
+MFC を使用せずに ODBC API を使用する方法の詳細については、 [Open Database Connectivity (odbc)](/sql/odbc/microsoft-open-database-connectivity-odbc) のドキュメントを参照してください。
 
 ## <a name="in-this-section"></a>このセクションの内容
 
@@ -35,7 +36,7 @@ MFC を使用せずに ODBC API を使用する方法の詳細については、
 
 - ODBC 用[SQL](sql.md)
 
-- [データベーストランザクション](transaction-odbc.md)
+- [データベース トランザクション](transaction-odbc.md)
 
 - 実行時[の ODBC データソースのスキーマの決定](data-source-determining-the-schema-of-the-data-source-odbc.md)
 
@@ -57,7 +58,7 @@ MFC を使用せずに ODBC API を使用する方法の詳細については、
 
 ## <a name="odbc-database-tasks"></a>ODBC データベースの操作方法
 
-これらのタスクは、MFC [ODBC](odbc-basics.md)クラスに基づいています。 MFC を使用せずに ODBC API を使用する方法の詳細については、 [Open Database Connectivity (odbc)](/sql/odbc/microsoft-open-database-connectivity-odbc) SDK を参照してください。
+これらのタスクは、MFC [ODBC](odbc-basics.md) クラスに基づいています。 MFC を使用せずに ODBC API を使用する方法の詳細については、 [Open Database Connectivity (odbc)](/sql/odbc/microsoft-open-database-connectivity-odbc) SDK を参照してください。
 
 - [ODBC のインストールと起動](installing-and-getting-started-with-odbc.md)
 

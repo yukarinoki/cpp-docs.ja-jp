@@ -1,4 +1,5 @@
 ---
+description: '詳細については、Platform::D etails:: IEquatable インターフェイスに関するページを参照してください。'
 title: Platform::Details::IEquatable インターフェイス
 ms.date: 12/30/2016
 ms.topic: reference
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::Details::IEquatable Interface
 ms.assetid: 72f15f55-f7a4-4cca-aeba-2d5a9996818c
-ms.openlocfilehash: a0da4d82bc0d2a06fa73519aedf2e22ae89f3900
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ec808aae930ec0b1d382477cee5351cd97478271
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62387631"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97274763"
 ---
 # <a name="platformdetailsiequatable-interface"></a>Platform::Details::IEquatable インターフェイス
 
@@ -24,7 +25,7 @@ ms.locfileid: "62387631"
 interface class IEquatable;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 ブラウザーで検査できるため、このインターフェイスは完全を期すためだけに提供されています。
 
@@ -32,12 +33,12 @@ interface class IEquatable;
 
 `Platform`
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
-**メタデータ:** platform.winmd
+**メタデータ:** platform. winmd
 
 **名前空間:** Platform::Details
 
 ## <a name="see-also"></a>関連項目
 
-[プラットフォーム Namespace](platform-namespace-c-cx.md)
+[Platform 名前空間](platform-namespace-c-cx.md)

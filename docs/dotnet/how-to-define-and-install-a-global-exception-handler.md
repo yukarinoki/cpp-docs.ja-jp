@@ -1,21 +1,22 @@
 ---
+description: '詳細については、「方法: グローバル例外ハンドラーを定義およびインストールする」を参照してください。'
 title: '方法: グローバル例外ハンドラーを定義およびインストールする'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - handlers, global
 ms.assetid: dd88a812-3bc7-4ce8-8283-4b674c246534
-ms.openlocfilehash: 27666702a548c0c71b7e25597a1927520968b124
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: 6747e0bdf95ae4d87ed667576852c282e05a7d6d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "79544977"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97258331"
 ---
 # <a name="how-to-define-and-install-a-global-exception-handler"></a>方法: グローバル例外ハンドラーを定義およびインストールする
 
 次のコード例は、未処理の例外をキャプチャする方法を示しています。 この例のフォームには、押されたときに null 参照が実行され、例外がスローされるボタンが含まれています。 この機能は、一般的なコードエラーを表します。 結果の例外は、main 関数によってインストールされたアプリケーション全体の例外ハンドラーによってキャッチされます。
 
-これは、デリゲートを <xref:System.Windows.Forms.Application.ThreadException> イベントにバインドすることで実現されます。 この場合、後続の例外は `App::OnUnhandled` メソッドに送信されます。
+これは、イベントにデリゲートをバインドすることで実現され <xref:System.Windows.Forms.Application.ThreadException> ます。 この場合、後続の例外がメソッドに送信され `App::OnUnhandled` ます。
 
 ## <a name="example"></a>例
 
@@ -71,6 +72,6 @@ int main()
 }
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [例外処理](../extensions/exception-handling-cpp-component-extensions.md)

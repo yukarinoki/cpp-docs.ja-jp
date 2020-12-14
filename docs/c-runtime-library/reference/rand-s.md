@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: rand_s'
 title: rand_s
 ms.date: 4/2/2020
 api_name:
@@ -32,12 +33,12 @@ helpviewer_keywords:
 - cryptographically secure random numbers
 - pseudorandom numbers
 - numbers, generating pseudorandom
-ms.openlocfilehash: cad1740e64c7bbda553ac1a6c777d7e2295152ba
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 8894248bf924ef513dc916e10e47ce8ea7e95137
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82919539"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97274828"
 ---
 # <a name="rand_s"></a>rand_s
 
@@ -56,13 +57,13 @@ errno_t rand_s(unsigned int* randomValue);
 
 ## <a name="return-value"></a>戻り値
 
-正常に終了した場合は 0 を返し、それ以外の場合はエラー コードを返します。 入力ポインター _randomValue_が null ポインターの場合、この関数は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーを呼び出します。 実行の継続が許可された場合、関数は**einval**を返し、 **errno**を**einval**に設定します。 他の何らかの理由で関数が失敗した場合、*_randomValue_は0に設定されます。
+正常に終了した場合は 0 を返し、それ以外の場合はエラー コードを返します。 入力ポインター _randomValue_ が null ポインターの場合、この関数は、「 [パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーを呼び出します。 実行の継続が許可された場合、関数は **einval** を返し、 **errno** を **einval** に設定します。 他の何らかの理由で関数が失敗した場合、*_randomValue_ は0に設定されます。
 
 ## <a name="remarks"></a>解説
 
-**Rand_s**関数は、0の範囲のランダムな整数を書き込み、入力ポインターに**UINT_MAX**します。 **Rand_s**関数は、オペレーティングシステムを使用して、暗号的に保護されたランダムな数値を生成します。 [Srand](srand.md)関数によって生成されたシードは使用されません。また、 [rand](rand.md)で使用される乱数シーケンスにも影響しません。
+**Rand_s** 関数は、0の範囲のランダムな整数を書き込み、入力ポインターに **UINT_MAX** します。 **Rand_s** 関数は、オペレーティングシステムを使用して、暗号的に保護されたランダムな数値を生成します。 [Srand](srand.md)関数によって生成されたシードは使用されません。また、 [rand](rand.md)で使用される乱数シーケンスにも影響しません。
 
-**Rand_s**関数を使用するには、次の例のように、関数を宣言するために、include ステートメントの前に定数 **_CRT_RAND_S**定義する必要があります。
+**Rand_s** 関数を使用するには、次の例のように、関数を宣言するために、include ステートメントの前に定数 **_CRT_RAND_S** 定義する必要があります。
 
 ```C
 By default, this function's global state is scoped to the application. To change this, see [Global state in the CRT](../global-state.md).
@@ -71,11 +72,11 @@ By default, this function's global state is scoped to the application. To change
 #include <stdlib.h>
 ```
 
-**rand_s**は、Windows XP 以降でのみ使用できる[Rtlgenrandom](/windows/win32/api/ntsecapi/nf-ntsecapi-rtlgenrandom) API に依存しています。
+**rand_s** は、Windows XP 以降でのみ使用できる [Rtlgenrandom](/windows/win32/api/ntsecapi/nf-ntsecapi-rtlgenrandom) API に依存しています。
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**rand_s**|\<stdlib.h>|
 
@@ -131,7 +132,7 @@ int main( void )
 }
 ```
 
-### <a name="sample-output"></a>サンプル出力
+### <a name="sample-output"></a>出力例
 
 ```Output
 10
@@ -159,6 +160,6 @@ int main( void )
 
 ## <a name="see-also"></a>関連項目
 
-[浮動小数点サポート](../../c-runtime-library/floating-point-support.md)<br/>
+[浮動小数点のサポート](../../c-runtime-library/floating-point-support.md)<br/>
 [rand](rand.md)<br/>
 [srand](srand.md)<br/>

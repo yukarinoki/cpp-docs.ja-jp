@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: _chsize'
 title: _chsize
 ms.date: 4/2/2020
 api_name:
@@ -30,12 +31,12 @@ helpviewer_keywords:
 - files [C++], changing size
 - chsize function
 ms.assetid: b3e881c5-7b27-4837-a3d4-c51591ab10ff
-ms.openlocfilehash: 5b9b58cf3ca4e167b5d54f871ac31c5295adc48b
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 16a65c145e33a0fbafcc9d0f2b0fed3b9f2b516f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82917200"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97274893"
 ---
 # <a name="_chsize"></a>_chsize
 
@@ -60,21 +61,21 @@ int _chsize(
 
 ## <a name="return-value"></a>戻り値
 
-ファイルサイズが正常に変更された場合、 **_chsize**は値0を返します。 戻り値-1 はエラーを示します。指定されたファイルが読み取り専用の場合、または指定されたファイルがアクセスに対してロックされている場合は**EACCES**に設定され、記述子が無効**である場合**は ENOSPC、デバイスに領域がない場合は**ENOSPC** 、*サイズ*が0未満の場合は**EINVAL**に設定さ**れます。**
+ファイルサイズが正常に変更された場合、 **_chsize** は値0を返します。 戻り値-1 はエラーを示します。指定されたファイルが読み取り専用の場合、または指定されたファイルがアクセスに対してロックされている場合は **EACCES** に設定され、記述子が無効 **である場合** は ENOSPC、デバイスに領域がない場合は 、*サイズ* が0未満の場合は **EINVAL** に設定さ **れます。**
 
 リターン コードの詳細については、「[_doserrno、errno、_sys_errlist、および _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」を参照してください。
 
 ## <a name="remarks"></a>解説
 
-**_Chsize**関数は、 *fd*に関連付けられているファイルを*size*によって指定された長さに拡張または切り捨てます。 ファイルは、書き込みを許可するモードで開かれている必要があります。 ファイルが拡張される場合は、null 文字 ('\0') が追加されます。 ファイルが切り捨てられる場合、短くなったファイルの末尾からファイルの元の長さまでのすべてのデータは失われます。
+**_Chsize** 関数は、 *fd* に関連付けられているファイルを *size* によって指定された長さに拡張または切り捨てます。 ファイルは、書き込みを許可するモードで開かれている必要があります。 ファイルが拡張される場合は、null 文字 ('\0') が追加されます。 ファイルが切り捨てられる場合、短くなったファイルの末尾からファイルの元の長さまでのすべてのデータは失われます。
 
-この関数は、パラメーターを検証します。 *Size*が0より小さいか、 *fd*が無効なファイル記述子である場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。
+この関数は、パラメーターを検証します。 *Size* が0より小さいか、 *fd* が無効なファイル記述子である場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。
 
 既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|オプション ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|オプション ヘッダー|
 |-------------|---------------------|---------------------|
 |**_chsize**|\<io.h>|\<errno.h>|
 
@@ -122,7 +123,7 @@ File length after:  329678
 
 ## <a name="see-also"></a>関連項目
 
-[ファイル処理](../../c-runtime-library/file-handling.md)<br/>
+[ファイルの処理](../../c-runtime-library/file-handling.md)<br/>
 [_close](close.md)<br/>
 [_sopen、_wsopen](sopen-wsopen.md)<br/>
 [_open、_wopen](open-wopen.md)<br/>

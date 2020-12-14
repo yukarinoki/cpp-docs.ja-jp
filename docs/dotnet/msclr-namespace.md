@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: msclr 名前空間'
 title: msclr 名前空間
 ms.date: 11/04/2016
 ms.topic: reference
@@ -14,17 +15,17 @@ helpviewer_keywords:
 - C++ Support Library, namespace
 - msclr
 ms.assetid: 799460e2-9ae2-4b59-a81c-611df356834f
-ms.openlocfilehash: 0054d8086c8492c79723e6b4091f102062aa3c91
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: df9a19ea16b37717612cd883c372d79c9568fad2
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62384817"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97274646"
 ---
 # <a name="msclr-namespace"></a>msclr 名前空間
 
-`msclr`名前空間には、C++ サポート ライブラリのすべてのクラスが含まれています。 これらのクラスの詳細については、次を参照してください。 [C++ サポート ライブラリ](../dotnet/cpp-support-library.md)します。
+名前空間には、 `msclr` C++ サポートライブラリのすべてのクラスが含まれています。 これらのクラスの詳細については、「 [C++ サポートライブラリ](../dotnet/cpp-support-library.md)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 
-[C++ のサポート ライブラリ](../dotnet/cpp-support-library.md)
+[C++ サポートライブラリ](../dotnet/cpp-support-library.md)
