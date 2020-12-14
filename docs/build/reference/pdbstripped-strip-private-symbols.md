@@ -1,4 +1,5 @@
 ---
+description: 詳細情報:/PDBSTRIPPED (プライベートシンボルの削除)
 title: /PDBSTRIPPED (プライベート シンボルの除去)
 ms.date: 11/04/2016
 f1_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - PDB files, stripping private symbols
 - PDBSTRIPPED linker option
 ms.assetid: 9b9e0070-6a13-4142-8180-19c003fbbd55
-ms.openlocfilehash: 3ed36eca727a15a3c70bc51a07cd3c143d7f66da
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 27e70281ad12f4401ad6557ead9be11a38684472
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62320137"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97226039"
 ---
 # <a name="pdbstripped-strip-private-symbols"></a>/PDBSTRIPPED (プライベート シンボルの除去)
 
@@ -27,39 +28,39 @@ ms.locfileid: "62320137"
 ## <a name="arguments"></a>引数
 
 *pdb_file_name*<br/>
-削除されたプログラム データベース (PDB)、リンカーによって作成されるユーザー指定の名前。
+リンカーによって作成される、削除されたプログラムデータベース (PDB) のユーザー指定の名前。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-PDB ファイルを生成するオプションのコンパイラやリンカーと、プログラム イメージをビルドするときに/PDBSTRIPPED オプションが 2 番目のプログラム データベース (PDB) ファイルを作成します ([/debug](debug-generate-debug-info.md)、 [/Z7](z7-zi-zi-debug-information-format.md)/Zd、または/Zi)。 2 番目の PDB ファイルでは、顧客に提供しないシンボルが省かれています。 2 番目の PDB ファイルにはのみが含まれます。
+/PDBSTRIPPED オプションは、PDB ファイル ([/debug](debug-generate-debug-info.md)、 [/Z7](z7-zi-zi-debug-information-format.md)、/Zd、または/zi) を生成する任意のコンパイラオプションまたはリンカーオプションを使用してプログラムイメージをビルドするときに、2番目のプログラムデータベース (PDB) ファイルを作成します。 2 番目の PDB ファイルでは、顧客に提供しないシンボルが省かれています。 2番目の PDB ファイルには次のもののみが含まれます。
 
-- パブリック シンボル
+- パブリックシンボル
 
-- オブジェクト ファイルと対象となる実行可能ファイルの部分の一覧
+- オブジェクトファイルの一覧と、それらが参加する実行可能ファイルの部分
 
-- フレーム ポインター最適化 (FPO) デバッグ レコードのスタックを走査するために使用
+- フレームポインターの最適化 (FPO) スタックの走査に使用されるデバッグレコード
 
-削除された PDB ファイルは含まれません。
+削除された PDB ファイルには次のものが含まれません。
 
 - 型情報
 
-- 行番号情報
+- 行番号の情報
 
-- 関数、ローカル、および静的データなどオブジェクトごとのファイルの CodeView シンボル
+- オブジェクトごとのファイルの CodeView シンボル (関数、ローカル、静的データなど)
 
-/PDBSTRIPPED を使用すると、完全な PDB ファイルが生成されます。
+/PDBSTRIPPED. を使用すると、完全な PDB ファイルが生成されます。
 
-PDB ファイルを作成しない場合は、/PDBSTRIPPED が無視されます。
+PDB ファイルを作成しない場合、/PDBSTRIPPED は無視されます。
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのリンカー オプションを設定するには
 
-1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。 [Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)します。
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、[Visual Studio での C++ コンパイラとビルド プロパティの設定](../working-with-project-properties.md)に関するページを参照してください。
 
-1. をクリックして、**リンカー**フォルダー。
+1. **[リンカー]** フォルダーをクリックします。
 
-1. をクリックして、**デバッグ**プロパティ ページ。
+1. [ **デバッグ** ] プロパティページをクリックします。
 
-1. 変更、**プライベート シンボルの除去**プロパティ。
+1. " **プライベートシンボルの削除** " プロパティを変更します。
 
 ### <a name="to-set-this-linker-option-programmatically"></a>このリンカーをコードから設定するには
 

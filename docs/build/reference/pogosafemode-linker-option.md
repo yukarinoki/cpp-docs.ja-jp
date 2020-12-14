@@ -1,44 +1,45 @@
 ---
-title: /POGOSAFEMODE (スレッド セーフ モードで実行 PGO)
+description: 詳細情報:/pogoセーフ (スレッドセーフモードで PGO を実行)
+title: /Pogoセーフ (スレッドセーフモードで PGO を実行)
 ms.date: 03/14/2018
 f1_keywords:
 - POGOSAFEMODE
-ms.openlocfilehash: bbb328bf67d7823305a43f1d61252747cf5ea29e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: dfe8d46a3008a1d41156d077e5b87e50ac345e18
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62319721"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97225922"
 ---
-# <a name="pogosafemode-run-pgo-in-thread-safe-mode"></a>/POGOSAFEMODE (スレッド セーフ モードで実行 PGO)
+# <a name="pogosafemode-run-pgo-in-thread-safe-mode"></a>/Pogoセーフ (スレッドセーフモードで PGO を実行)
 
-**Visual Studio 2015 以降では、/POGOSAFEMODE オプションは非推奨**します。 使用して、 [/GENPROFILE: 正確な](genprofile-fastgenprofile-generate-profiling-instrumented-build.md)と **/GENPROFILE:NOEXACT**オプションの代わりにします。 **/POGOSAFEMODE**リンカー オプションは、スレッド セーフ モードを使用して、トレーニングの実行プロファイル ガイド付き最適化の (PGO) の中にプロファイル データのキャプチャをインストルメント化されたビルドが作成されたことを指定します。
+**/Pogoセーフオプションは、Visual Studio 2015 以降では非推奨とされ** ます。 代わりに、 [/genprofile: EXACT](genprofile-fastgenprofile-generate-profiling-instrumented-build.md) および **/GENPROFILE: noexact** オプションを使用します。 **/Pogoセーフ** リンカーオプションは、インストルメント化されたビルドが、ガイド付き最適化 (PGO) トレーニングの実行時にプロファイルデータキャプチャにスレッドセーフモードを使用するように作成されることを指定します。
 
 ## <a name="syntax"></a>構文
 
 > **/POGOSAFEMODE**
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-最適化のガイド付きプロファイル (PGO) が、プロファイリング フェーズ中に 2 つのモードを持つ:*高速モード*と*セーフ モード*します。 高速モードでプロファイリングを行う、データ カウンター数を増やしますインクリメント命令が使用されます。 インクリメント命令は高速ですが、スレッド セーフではありません。 セーフ モードでプロファイリングを行う、データ カウンター数を増やしますインタロックされたインクリメント命令が使用されます。 この命令は、同じ機能を低速ですが、増分命令とスレッド セーフです。
+ガイド付き最適化のプロファイル (PGO: Profile-Guided Optimization) では、プロファイリング フェーズで *高速モード* と *セーフ モード* の 2 つのモードを使用できます。 プロファイリングが高速モードの場合は、インクリメント命令を使用してデータカウンターを増やします。 インクリメント命令は高速ですが、スレッドセーフではありません。 プロファイルがセーフモードのときは、インタロックインクリメント命令を使用してデータカウンターを増やします。 この命令にはインクリメント命令と同じ機能があり、スレッドセーフですが、処理速度は遅くなります。
 
-**/POGOSAFEMODE**オプションは、セーフ モードを使用してインストルメント化されたビルドを設定します。 このオプションはのみに際に使用される、非推奨[/LTCG:PGINSTRUMENT](ltcg-link-time-code-generation.md) PGO インストルメンテーション リンカーのフェーズ中に指定されました。
+**/Pogoセーフ** オプションは、インストルメント化されたビルドをセーフモードを使用するように設定します。 このオプションは、PGO インストルメンテーションリンカーフェーズ中に、非推奨の [/ltcg: PGINSTRUMENT](ltcg-link-time-code-generation.md) が指定されている場合にのみ使用できます。
 
-既定では、PGO プロファイリングは高速モードで動作します。 **/POGOSAFEMODE**がセーフ モードを使用するかどうかにのみ必要です。
+既定では、PGO プロファイリングは高速モードで動作します。 **/Pogoセーフ** は、セーフモードを使用する場合にのみ必要です。
 
-セーフ モードでの PGO プロファイリングを実行する、いずれかを使用する必要があります **/GENPROFILE: 正確な**(推奨)、環境変数を使用または[PogoSafeMode](../environment-variables-for-profile-guided-optimizations.md)かリンカー スイッチ **/POGOSAFEMODE**、システムによって異なります。 x64 コンピューターでプロファイリングを実行する場合は、リンカー スイッチを使用する必要があります。 X86 でプロファイリングを実行するかどうか、コンピューター リンカー スイッチを使用するか、PGO インストルメンテーションのプロセスを開始する前に、任意の値を環境変数を定義することがあります。
+PGO プロファイルをセーフモードで実行するには、システムに応じて、 **/genprofile: EXACT** (好ましい) を使用するか、環境変数 [pogosafemode](../environment-variables-for-profile-guided-optimizations.md) またはリンカースイッチ **/pogosafemode** を使用する必要があります。 x64 コンピューターでプロファイリングを実行する場合は、リンカー スイッチを使用する必要があります。 X86 コンピューターでプロファイリングを実行する場合は、PGO インストルメンテーションプロセスを開始する前に、リンカースイッチを使用するか、環境変数を任意の値に定義することができます。
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのリンカー オプションを設定するには
 
-1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。 [Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)します。
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、[Visual Studio での C++ コンパイラとビルド プロパティの設定](../working-with-project-properties.md)に関するページを参照してください。
 
-1. 選択、**構成プロパティ** > **リンカー** > **最適化**プロパティ ページ。
+1. [**構成プロパティ**] [  >  **リンカー** の  >  **最適化**] プロパティページを選択します。
 
-1. **リンク時コード生成**プロパティ選択**ガイド付き最適化のプロファイル - インストルメント (//ltcg:pginstrument)** します。
+1. [ **リンク時のコード生成** ] プロパティで、[ **ガイド付き最適化のプロファイル-インストルメント (/Ltcg: pginstrument)**] を選択します。
 
-1. 選択、**構成プロパティ** > **リンカー** > **コマンドライン**プロパティ ページ。
+1. **[構成プロパティ]**  >  **[リンカー]**  >  **[コマンド ライン]** プロパティ ページを選択します。
 
-1. 入力、 **/POGOSAFEMODE**にオプション、**追加オプション**ボックス。 **OK** を選択して変更を保存してください。
+1. [**追加のオプション**] ボックスに、[ **/pogoセーフ**] オプションを入力します。 **[OK]** を選択して変更を保存します。
 
 ### <a name="to-set-this-linker-option-programmatically"></a>このリンカーをコードから設定するには
 
@@ -46,7 +47,7 @@ ms.locfileid: "62319721"
 
 ## <a name="see-also"></a>関連項目
 
-[/GENPROFILE と/FASTGENPROFILE](genprofile-fastgenprofile-generate-profiling-instrumented-build.md)<br/>
+[/GENPROFILE と /FASTGENPROFILE](genprofile-fastgenprofile-generate-profiling-instrumented-build.md)<br/>
 [/LTCG](ltcg-link-time-code-generation.md)<br/>
 [ガイド付き最適化のプロファイル](../profile-guided-optimizations.md)<br/>
-[ガイド付き最適化のプロファイルの環境変数](../environment-variables-for-profile-guided-optimizations.md)<br/>
+[Profile-Guided の最適化のための環境変数](../environment-variables-for-profile-guided-optimizations.md)<br/>

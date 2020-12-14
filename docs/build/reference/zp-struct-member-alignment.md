@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「/Zp (構造体メンバーの配置)」を参照してください。
 title: /Zp (構造体メンバーの配置)
 ms.date: 04/04/2019
 f1_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - /Zp compiler option [C++]
 - -Zp compiler option [C++]
 ms.assetid: 5242f656-ed9b-48a3-bc73-cfcf3ed2520f
-ms.openlocfilehash: c78e670303bde68299725e18c6f588f5e410a971
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: b2029ebded53bcae1b44b5cd72bf59494e58ec4b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87234303"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97224310"
 ---
 # <a name="zp-struct-member-alignment"></a>/Zp (構造体メンバーの配置)
 
@@ -28,13 +29,13 @@ ms.locfileid: "87234303"
 
 ## <a name="remarks"></a>解説
 
-オプションは、 **`/ZpN`** 各構造体メンバーを格納する場所をコンパイラに指示します。 コンパイラは、メンバー型のサイズまたは*N*バイトの境界のいずれか小さい方の境界上にある最初のメンバーの後にメンバーを格納します。
+オプションは、 **`/ZpN`** 各構造体メンバーを格納する場所をコンパイラに指示します。 コンパイラは、メンバー型のサイズまたは *N* バイトの境界のいずれか小さい方の境界上にある最初のメンバーの後にメンバーを格納します。
 
 次の表で、使用可能なパッキング値について説明します。
 
 |/Zp 引数|効果|
 |-|-|
-|1|構造体を1バイト境界でパックします。 と同じ **`/Zp`** です。|
+|1|構造体を1バイト境界でパックします。 **`/Zp`** と同じ。|
 |2|構造体を2バイト境界でパックします。|
 |4|構造体を4バイト境界でパックします。|
 |8|構造体を8バイト境界でパックします (x86、ARM、および ARM64 の既定値)。|
@@ -53,7 +54,7 @@ ms.locfileid: "87234303"
 
 - [`__unaligned`](../../cpp/unaligned.md)
 
-- [`/ALIGN`(セクションの配置)](align-section-alignment.md)
+- [`/ALIGN` (セクションの配置)](align-section-alignment.md)
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのコンパイラ オプションを設定するには
 
@@ -61,7 +62,7 @@ ms.locfileid: "87234303"
 
 1. [**構成プロパティ**] [  >  **C/c + +**  >  **コード生成**] プロパティページを選択します。
 
-1. **構造体メンバーのアラインメント**プロパティを変更します。
+1. **構造体メンバーのアラインメント** プロパティを変更します。
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>このコンパイラ オプションをコードから設定するには
 
@@ -70,4 +71,4 @@ ms.locfileid: "87234303"
 ## <a name="see-also"></a>関連項目
 
 [MSVC コンパイラオプション](compiler-options.md) \
-[MSVC コンパイラのコマンドライン構文](compiler-command-line-syntax.md)
+[MSVC Compiler Command-Line 構文](compiler-command-line-syntax.md)

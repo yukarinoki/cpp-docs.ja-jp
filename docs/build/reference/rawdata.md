@@ -1,4 +1,5 @@
 ---
+description: 詳細情報:/RAWDATA
 title: /RAWDATA
 ms.date: 11/04/2016
 f1_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - -RAWDATA dumpbin option
 - /RAWDATA dumpbin option
 ms.assetid: 41cba845-5e1f-415e-9fe4-604a52235983
-ms.openlocfilehash: 02af8df04d80c20c5d7629b51abab6295a21f5e5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: efe2001c0170b8539b98902591849dedaf0fb819
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62319514"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97225376"
 ---
 # <a name="rawdata"></a>/RAWDATA
 
@@ -22,20 +23,20 @@ ms.locfileid: "62319514"
 /RAWDATA[:{1|2|4|8|NONE[,number]]
 ```
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-このオプションは、ファイルの各セクションの生の内容を表示します。 引数は、次に示すように、ディスプレイの形式を制御します。
+このオプションを選択すると、ファイル内の各セクションの未加工の内容が表示されます。 次に示すように、引数は表示形式を制御します。
 
 |引数|結果|
 |--------------|------------|
-|1|これが既定値です。 内容は、印刷の表現がある場合 (16 進数のバイト単位) とも ASCII 文字として表示されます。|
-|2|内容は、2 バイトの 16 進数の値として表示されます。|
-|4|内容は、4 バイトの 16 進数の値として表示されます。|
-|8|内容は、8 バイトの 16 進数の値として表示されます。|
-|なし|生データは表示されません。 出力を制御するのには、この引数すべて/。|
-|*数値*|表示行が保持する幅に設定されて`number`1 行の値。|
+|1|これが既定値です。 コンテンツは16進バイトで表示されます。また、出力が表現されている場合は、ASCII 文字としても表示されます。|
+|2|コンテンツは、16進数の2バイト値として表示されます。|
+|4|コンテンツは、16進数の4バイト値として表示されます。|
+|8|コンテンツは、16進数の8バイト値として表示されます。|
+|NONE|生データは抑制されます。 この引数は、/allの出力を制御するのに役立ちます。|
+|*Number*|表示される線は、1行に値を保持する幅に設定され `number` ます。|
 
-のみ、 [/HEADERS](headers.md) DUMPBIN オプションがで生成されたファイルで使用できる、 [/GL](gl-whole-program-optimization.md)コンパイラ オプション。
+[/GL](gl-whole-program-optimization.md) コンパイラ オプションで生成したファイルで使用できるのは、[/HEADERS](headers.md) DUMPBIN オプションだけです。
 
 ## <a name="see-also"></a>関連項目
 

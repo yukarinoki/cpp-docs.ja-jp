@@ -1,5 +1,6 @@
 ---
-title: '&lt;解説 > (C++ドキュメントコメント)'
+description: 詳細については、 &lt; 「解説」を参照してください。&gt;
+title: '&lt;解説> (C++ ドキュメントコメント)'
 ms.date: 11/04/2016
 f1_keywords:
 - remarks
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - <remarks> C++ XML tag
 - remarks C++ XML tag
 ms.assetid: c820083b-3192-40ab-9ec8-1472c55b4247
-ms.openlocfilehash: 096280526b12feff33377a705f7c03548a1f0f13
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: 0c919ba3101282fd755450489eacc6c0800fb437
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74988648"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97225220"
 ---
 # <a name="ltremarksgt"></a>&lt;remarks&gt;
 
@@ -32,9 +33,9 @@ ms.locfileid: "74988648"
 
 ## <a name="remarks"></a>Remarks
 
-コンパイル時に [/doc](doc-process-documentation-comments-c-cpp.md) を指定して、ドキュメント コメントをファイルに出力します。
+ドキュメントコメントをファイルに処理するために、 [/doc](doc-process-documentation-comments-c-cpp.md) を使用してコンパイルします。
 
-## <a name="example"></a>使用例
+## <a name="example"></a>例
 
 ```cpp
 // xml_remarks_tag.cpp
@@ -52,6 +53,6 @@ using namespace System;
 public ref class MyClass {};
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [XML に関するドキュメント](xml-documentation-visual-cpp.md)

@@ -1,15 +1,16 @@
 ---
+description: '詳細情報: ストリームの状態'
 title: ストリームの状態
 ms.date: 11/19/2018
 helpviewer_keywords:
 - streams, states
 ms.assetid: 5f28c968-f132-403f-968c-8417ff315e52
-ms.openlocfilehash: f725fa16e8d669975dbc02c6eefd727085bbeb7c
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: c691c1fd01feb9f78ff0929775505f08cb625ecc
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57743349"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97224180"
 ---
 # <a name="stream-states"></a>ストリームの状態
 
@@ -19,7 +20,7 @@ ms.locfileid: "57743349"
 
 円の矢印はそれぞれ安定状態を示しています。 線の矢印はそれぞれストリームを操作する関数呼び出しの結果発生する、遷移を示しています。 5 つの関数グループで、状態遷移が発生する可能性があります。
 
-最初の 3 つのグループの関数は、\<stdio.h> で宣言されます。
+最初の3つのグループの関数は、次のように宣言され \<stdio.h> ます。
 
 - バイトの読み込み関数 — [fgetc](../c-runtime-library/reference/fgetc-fgetwc.md)、[fgets](../c-runtime-library/reference/fgets-fgetws.md)、[fread](../c-runtime-library/reference/fread.md)、[fscanf](../c-runtime-library/reference/fscanf-fscanf-l-fwscanf-fwscanf-l.md)、[getc](../c-runtime-library/reference/getc-getwc.md)、[getchar](../c-runtime-library/reference/getc-getwc.md)、[gets](../c-runtime-library/gets-getws.md)、[scanf](../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md)、および [ungetc](../c-runtime-library/reference/ungetc-ungetwc.md)
 
@@ -27,7 +28,7 @@ ms.locfileid: "57743349"
 
 - 位置関数 — [fflush](../c-runtime-library/reference/fflush.md)、[fseek](../c-runtime-library/reference/fseek-fseeki64.md)、[fsetpos](../c-runtime-library/reference/fsetpos.md)、および [rewind](../c-runtime-library/reference/rewind.md)
 
-残り 2 つのグループの関数は、\<wchar.h> で宣言されます。
+残りの2つのグループの関数は、次のように宣言され \<wchar.h> ます。
 
 - ワイド文字の読み込み関数 — [fgetwc](../c-runtime-library/reference/fgetc-fgetwc.md)、[fgetws](../c-runtime-library/reference/fgets-fgetws.md)、[fwscanf](../c-runtime-library/reference/fscanf-fscanf-l-fwscanf-fwscanf-l.md)、[getwc](../c-runtime-library/reference/getc-getwc.md)、[getwchar](../c-runtime-library/reference/getc-getwc.md)、[ungetwc](../c-runtime-library/reference/ungetc-ungetwc.md)、および [wscanf](../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md)
 

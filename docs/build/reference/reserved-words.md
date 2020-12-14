@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: 予約語'
 title: 予約語
 ms.date: 11/04/2016
 f1_keywords:
@@ -17,12 +18,12 @@ helpviewer_keywords:
 - linker [C++], reserved words
 - reserved words [C++]
 ms.assetid: 9b9f49e5-0739-45ab-a37e-81e3915ceb25
-ms.openlocfilehash: 62893d4af1633bc2c89d2d6a0fa71309a0411ad5
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 6d5c5971d8d01dffa1dcd1e7f6a5228fb239d4dc
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88836843"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97225194"
 ---
 # <a name="reserved-words"></a>予約語
 
@@ -47,16 +48,16 @@ ms.locfileid: "88836843"
       **`FIXED`** <sup>1</sup>
    :::column-end:::
    :::column span="":::
-      **`FUNCTIONS`**<sup>3</sup>\
+      **`FUNCTIONS`** <sup>2</sup>\
       **`HEAPSIZE`**\
       **`IMPORTS`**\
       **`IMPURE`**<sup>1</sup>\
-      **`INCLUDE`**<sup>3</sup>\
-      **`INITINSTANCE`**<sup>3</sup>\
+      **`INCLUDE`** <sup>2</sup>\
+      **`INITINSTANCE`** <sup>2</sup>\
       **`IOPL`**\
       **`LIBRARY`**<sup>1</sup>\
       **`LOADONCALL`**<sup>1</sup>\
-      **`LONGNAMES`**<sup>3</sup>\
+      **`LONGNAMES`** <sup>2</sup>\
       **`MOVABLE`**<sup>1</sup>\
       **`MOVEABLE`**<sup>1</sup>\
       **`MULTIPLE`**\
@@ -76,7 +77,7 @@ ms.locfileid: "88836843"
       **`OLD`**<sup>1</sup>\
       **`PRELOAD`**\
       **`PRIVATE`**\
-      **`PROTMODE`**<sup>3</sup>\
+      **`PROTMODE`** <sup>2</sup>\
       **`PURE`**<sup>1</sup>\
       **`READONLY`**
    :::column-end:::
