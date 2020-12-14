@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: ツールヒント'
 title: ツール ヒント
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,25 +9,25 @@ helpviewer_keywords:
 - controls [MFC], tool tips
 - buttons [MFC], tool tips
 ms.assetid: 7f0bba86-7c55-4bf6-8455-687a4dcb2be8
-ms.openlocfilehash: ec7795a524420d62b2307f26954bbf205d19dea9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9446974df623ff03d1417ee393242d9995a6cf6c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62167973"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97264454"
 ---
 # <a name="tool-tips"></a>ツール ヒント
 
-MFC クラスから派生した追加のツール ヒント コントロールに windows に含まれているは、手順が異なる[CFrameWnd](../mfc/reference/cframewnd-class.md) windows から派生していないと`CFrameWnd`します。
+これらの手順 [は、から](../mfc/reference/cframewnd-class.md) 派生した windows に含まれるコントロールにツールヒントを追加する方法とは異なり `CFrameWnd` ます。
 
-## <a name="what-do-you-want-to-know-more-about"></a>方法については、するして操作を行います
+## <a name="what-do-you-want-to-know-more-about"></a>詳細については、次を参照してください。
 
-ウィンドウのコントロールのツール ヒント:
+次のようなウィンドウ内のコントロールのツールヒント。
 
-- [ツールバーのヒント (CFrameWnd から派生)](../mfc/toolbar-tool-tips.md)
+- [ツールバーのツールヒント (CFrameWnd から派生)](../mfc/toolbar-tool-tips.md)
 
-- [CFrameWnd から派生していない Windows でのヒント](../mfc/tool-tips-in-windows-not-derived-from-cframewnd.md)
+- [CFrameWnd から派生していない Windows のツールヒント](../mfc/tool-tips-in-windows-not-derived-from-cframewnd.md)
 
 ## <a name="see-also"></a>関連項目
 
-[ユーザー インターフェイス要素](../mfc/user-interface-elements-mfc.md)
+[ユーザーインターフェイス要素](../mfc/user-interface-elements-mfc.md)

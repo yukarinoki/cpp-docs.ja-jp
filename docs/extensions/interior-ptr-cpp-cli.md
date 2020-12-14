@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: interior_ptr (C++/CLI)'
 title: interior_ptr (C++/CLI)
 ms.date: 10/12/2018
 ms.topic: reference
@@ -9,12 +10,12 @@ f1_keywords:
 helpviewer_keywords:
 - interior_ptr keyword [C++]
 ms.assetid: 25160f74-569e-492d-9e3c-67ece7486baa
-ms.openlocfilehash: affec6dcd88290b24a92cd9035a131baee38bcf1
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 1254746b76c5b217c03848d4b55253e40bcfd5a0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87214270"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97265598"
 ---
 # <a name="interior_ptr-ccli"></a>interior_ptr (C++/CLI)
 
@@ -28,7 +29,7 @@ ms.locfileid: "87214270"
 
 (この言語機能には Windows ランタイムのみに適用される特記事項がありません。)
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 コンパイラ オプション: `/ZW`
 
@@ -66,7 +67,7 @@ cli::interior_ptr<cv_qualifier type> var = &initializer;
 
 内部ポインターはスタックにのみ存在するため、内部ポインターのアドレスを取得すると、アンマネージ ポインターが発生します。
 
-**interior_ptr**にはへの暗黙的な変換があり **`bool`** 、これによって条件付きステートメントで使用できます。
+**interior_ptr** にはへの暗黙的な変換があり **`bool`** 、これによって条件付きステートメントで使用できます。
 
 ガベージ コレクション ヒープ上に移動できないオブジェクトを指す内部ポインターを宣言する方法については、[pin_ptr](pin-ptr-cpp-cli.md) を参照してください。
 
@@ -82,7 +83,7 @@ cli::interior_ptr<cv_qualifier type> var = &initializer;
 
 - [方法: const キーワードを含む内部ポインターを宣言する (C++/CLI)](how-to-declare-interior-pointers-with-the-const-keyword-cpp-cli.md)
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 コンパイラ オプション: `/clr`
 

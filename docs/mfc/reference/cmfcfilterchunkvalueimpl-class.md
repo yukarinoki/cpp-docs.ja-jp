@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: CMFCFilterChunkValueImpl クラス'
 title: CMFCFilterChunkValueImpl クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -46,16 +47,16 @@ helpviewer_keywords:
 - CMFCFilterChunkValueImpl [MFC], SetTextValue
 - CMFCFilterChunkValueImpl [MFC], SetChunk
 ms.assetid: 3c833f23-5b88-4d08-9e09-ca6a8aec88bf
-ms.openlocfilehash: c89d41f7db43d9504bfc22cbf35a59fcceb511e2
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: f2db7fdf6d6d24cb906b3190d34310e1f6724194
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81752364"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97265468"
 ---
 # <a name="cmfcfilterchunkvalueimpl-class"></a>CMFCFilterChunkValueImpl クラス
 
-これは、チャンクとプロパティ値のペアロジックの両方を簡素化するクラスです。
+これは、チャンクとプロパティ値のペアのロジックを簡略化するクラスです。
 
 ## <a name="syntax"></a>構文
 
@@ -69,65 +70,65 @@ class CMFCFilterChunkValueImpl : public ATL::IFilterChunkValue;
 
 |名前|説明|
 |----------|-----------------|
-|[を指定します。](#_dtorcmfcfilterchunkvalueimpl)|オブジェクトを破棄します。|
-|[を指定します。](#cmfcfilterchunkvalueimpl)|オブジェクトを構築します。|
+|[CMFCFilterChunkValueImpl:: ~ CMFCFilterChunkValueImpl](#_dtorcmfcfilterchunkvalueimpl)|オブジェクトを Destructs します。|
+|[CMFCFilterChunkValueImpl:: CMFCFilterChunkValueImpl](#cmfcfilterchunkvalueimpl)|オブジェクトを構築します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
 |名前|説明|
 |----------|-----------------|
-|[を返す](#clear)|チャンク値をクリアします。|
-|[を指定します。](#copychunk)|チャンクの特性を記述する構造体にこのチャンクをコピーします。|
-|[を返す](#copyfrom)|このチャンク値を他の値から初期化します。|
-|[を返す](#getchunkguid)|チャンク GUID を取得します。|
-|[を指定します。](#getchunkpid)|チャンク PID (プロパティ ID) を取得します。|
-|[を返す](#getchunktype)|チャンクの種類を取得します。|
-|[を返す](#getstring)|文字列値を取得します。|
-|[を返す](#getvalue)|割り当てられた propvariant として値を取得します。|
-|[を指定します。](#getvaluenoalloc)|割り当てられていない (内部値) 値を返します。|
-|[を指定します。](#isvalid)|このプロパティ値が有効かどうかをチェックします。|
-|[を指定します。](#setboolvalue)|オーバーロードされます。 プロパティをキーでブール値に設定します。|
-|[を指定します。](#setdwordvalue)|プロパティをキーごとに DWORD に設定します。|
-|[を指定します。](#setfiletimevalue)|キーによってプロパティをファイル時間に設定します。|
-|[を指定します。](#setint64value)|プロパティをキーによって int64 に設定します。|
-|[を指定します。](#setintvalue)|プロパティを int に設定します。|
-|[を指定します。](#setlongvalue)|プロパティをキーで LONG に設定します。|
-|[を設定します。](#setsystemtimevalue)|プロパティをキーごとに設定します。|
-|[を指定します。](#settextvalue)|プロパティをキーで Unicode 文字列に設定します。|
+|[CMFCFilterChunkValueImpl:: Clear](#clear)|ChunkValue をクリアします。|
+|[CMFCFilterChunkValueImpl:: CopyChunk](#copychunk)|チャンクの特性を記述する構造体にこのチャンクをコピーします。|
+|[CMFCFilterChunkValueImpl:: CopyFrom](#copyfrom)|このチャンク値をもう一方の値から初期化します。|
+|[CMFCFilterChunkValueImpl:: GetChunkGUID](#getchunkguid)|チャンク GUID を取得します。|
+|[CMFCFilterChunkValueImpl:: GetChunkPID](#getchunkpid)|チャンク PID (プロパティ ID) を取得します。|
+|[CMFCFilterChunkValueImpl:: GetChunkType](#getchunktype)|チャンクの種類を取得します。|
+|[CMFCFilterChunkValueImpl:: GetString](#getstring)|文字列値を取得します。|
+|[CMFCFilterChunkValueImpl:: GetValue](#getvalue)|割り当てられた propvariant として値を取得します。|
+|[CMFCFilterChunkValueImpl:: Getvalu/Alloc](#getvaluenoalloc)|割り当てられていない (内部値) 値を返します。|
+|[CMFCFilterChunkValueImpl:: IsValid](#isvalid)|このプロパティ値が有効かどうかを確認します。|
+|[CMFCFilterChunkValueImpl:: Setブール値](#setboolvalue)|オーバーロードされます。 プロパティをキーでブール値に設定します。|
+|[CMFCFilterChunkValueImpl:: SetDwordValue](#setdwordvalue)|キーによってプロパティを DWORD に設定します。|
+|[CMFCFilterChunkValueImpl:: SetFileTimeValue](#setfiletimevalue)|キーによってプロパティを filetime に設定します。|
+|[CMFCFilterChunkValueImpl:: SetInt64Value](#setint64value)|キーによってプロパティを int64 に設定します。|
+|[CMFCFilterChunkValueImpl:: SetIntValue](#setintvalue)|キーによってプロパティを int に設定します。|
+|[CMFCFilterChunkValueImpl:: SetLongValue](#setlongvalue)|キーによってプロパティを LONG に設定します。|
+|[CMFCFilterChunkValueImpl:: SetSystemTimeValue](#setsystemtimevalue)|キーによってプロパティを SystemTime に設定します。|
+|[CMFCFilterChunkValueImpl:: SetTextValue](#settextvalue)|キーによってプロパティを Unicode 文字列に設定します。|
 
 ### <a name="protected-methods"></a>プロテクト メソッド
 
 |名前|説明|
 |----------|-----------------|
-|[を指定します。](#setchunk)|チャンクの共通プロパティを設定するヘルパー関数。|
+|[CMFCFilterChunkValueImpl:: SetChunk](#setchunk)|チャンクの共通プロパティを設定するヘルパー関数。|
 
 ## <a name="remarks"></a>解説
 
-使用するには、適切な種類の CMFCFilter チャンク値Impl クラスを作成するだけです。
+を使用するには、適切な種類の CMFCFilterChunkValueImpl クラスを作成するだけです。
 
 例:
 
-チャンクをチャンクします。
+CMFCFilterChunkValueImpl チャンク。
 
-hr = チャンク。値を設定します(PKEY_IsAttachment、真)。
+hr = チャンク。Setブール値 (PKEY_IsAttachment、true)。
 
-or
+または
 
-hr = チャンク。ファイルタイム値(PKEY_ItemDate、ftLastModified)。
+hr = チャンク。SetFileTimeValue (PKEY_ItemDate, ftLastModified);
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
 `ATL::IFilterChunkValue`
 
-[を指定します。](../../mfc/reference/cmfcfilterchunkvalueimpl-class.md)
+[CMFCFilterChunkValueImpl](../../mfc/reference/cmfcfilterchunkvalueimpl-class.md)
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** afxwin.h
 
-## <a name="cmfcfilterchunkvalueimplclear"></a><a name="clear"></a>を返す
+## <a name="cmfcfilterchunkvalueimplclear"></a><a name="clear"></a> CMFCFilterChunkValueImpl:: Clear
 
-チャンク値をクリアします。
+ChunkValue をクリアします。
 
 ```cpp
 void Clear();
@@ -135,7 +136,7 @@ void Clear();
 
 ### <a name="remarks"></a>解説
 
-## <a name="cmfcfilterchunkvalueimplcmfcfilterchunkvalueimpl"></a><a name="cmfcfilterchunkvalueimpl"></a>を指定します。
+## <a name="cmfcfilterchunkvalueimplcmfcfilterchunkvalueimpl"></a><a name="cmfcfilterchunkvalueimpl"></a> CMFCFilterChunkValueImpl:: CMFCFilterChunkValueImpl
 
 オブジェクトを構築します。
 
@@ -145,9 +146,9 @@ CMFCFilterChunkValueImpl();
 
 ### <a name="remarks"></a>解説
 
-## <a name="cmfcfilterchunkvalueimplcmfcfilterchunkvalueimpl"></a><a name="_dtorcmfcfilterchunkvalueimpl"></a>を指定します。
+## <a name="cmfcfilterchunkvalueimplcmfcfilterchunkvalueimpl"></a><a name="_dtorcmfcfilterchunkvalueimpl"></a> CMFCFilterChunkValueImpl:: ~ CMFCFilterChunkValueImpl
 
-オブジェクトを破棄します。
+オブジェクトを Destructs します。
 
 ```
 virtual ~CMFCFilterChunkValueImpl();
@@ -155,7 +156,7 @@ virtual ~CMFCFilterChunkValueImpl();
 
 ### <a name="remarks"></a>解説
 
-## <a name="cmfcfilterchunkvalueimplcopychunk"></a><a name="copychunk"></a>を指定します。
+## <a name="cmfcfilterchunkvalueimplcopychunk"></a><a name="copychunk"></a> CMFCFilterChunkValueImpl:: CopyChunk
 
 チャンクの特性を記述する構造体にこのチャンクをコピーします。
 
@@ -165,18 +166,18 @@ HRESULT CopyChunk(STAT_CHUNK* pStatChunk);
 
 ### <a name="parameters"></a>パラメーター
 
-*チャンク*<br/>
-チャンクの特性を記述する宛先値へのポインター。
+*pStatChunk*<br/>
+チャンクの特性を記述するターゲット値へのポインター。
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合はS_OK。それ以外の場合はエラー コード。
+成功した場合は S_OK。それ以外の場合は、エラーコード。
 
 ### <a name="remarks"></a>解説
 
-## <a name="cmfcfilterchunkvalueimplcopyfrom"></a><a name="copyfrom"></a>を返す
+## <a name="cmfcfilterchunkvalueimplcopyfrom"></a><a name="copyfrom"></a> CMFCFilterChunkValueImpl:: CopyFrom
 
-このチャンク値を他の値から初期化します。
+このチャンク値をもう一方の値から初期化します。
 
 ```cpp
 void CopyFrom (IFilterChunkValue* pValue);
@@ -185,11 +186,11 @@ void CopyFrom (IFilterChunkValue* pValue);
 ### <a name="parameters"></a>パラメーター
 
 *pValue*<br/>
-コピー元の値を指定します。
+コピー元のソース値を指定します。
 
 ### <a name="remarks"></a>解説
 
-## <a name="cmfcfilterchunkvalueimplgetchunkguid"></a><a name="getchunkguid"></a>を返す
+## <a name="cmfcfilterchunkvalueimplgetchunkguid"></a><a name="getchunkguid"></a> CMFCFilterChunkValueImpl:: GetChunkGUID
 
 チャンク GUID を取得します。
 
@@ -203,7 +204,7 @@ REFGUID GetChunkGUID() const;
 
 ### <a name="remarks"></a>解説
 
-## <a name="cmfcfilterchunkvalueimplgetchunkpid"></a><a name="getchunkpid"></a>を指定します。
+## <a name="cmfcfilterchunkvalueimplgetchunkpid"></a><a name="getchunkpid"></a> CMFCFilterChunkValueImpl:: GetChunkPID
 
 チャンク PID (プロパティ ID) を取得します。
 
@@ -213,11 +214,11 @@ DWORD GetChunkPID() const;
 
 ### <a name="return-value"></a>戻り値
 
-プロパティ ID を含む DWORD 値。
+プロパティ ID を含む DWORD 値です。
 
 ### <a name="remarks"></a>解説
 
-## <a name="cmfcfilterchunkvalueimplgetchunktype"></a><a name="getchunktype"></a>を返す
+## <a name="cmfcfilterchunkvalueimplgetchunktype"></a><a name="getchunktype"></a> CMFCFilterChunkValueImpl:: GetChunkType
 
 チャンクの種類を取得します。
 
@@ -227,11 +228,11 @@ CHUNKSTATE GetChunkType() const;
 
 ### <a name="return-value"></a>戻り値
 
-現在のチャンクがテキスト型プロパティか値型プロパティかを指定する CHUNKSTATE 列挙値。
+現在のチャンクがテキスト型プロパティであるか、値型プロパティであるかを指定する CHUNKSTATE 列挙値。
 
 ### <a name="remarks"></a>解説
 
-## <a name="cmfcfilterchunkvalueimplgetstring"></a><a name="getstring"></a>を返す
+## <a name="cmfcfilterchunkvalueimplgetstring"></a><a name="getstring"></a> CMFCFilterChunkValueImpl:: GetString
 
 文字列値を取得します。
 
@@ -241,11 +242,11 @@ CString &GetString();
 
 ### <a name="return-value"></a>戻り値
 
-チャンク値を含む文字列。
+チャンク値を格納している文字列。
 
 ### <a name="remarks"></a>解説
 
-## <a name="cmfcfilterchunkvalueimplgetvalue"></a><a name="getvalue"></a>を返す
+## <a name="cmfcfilterchunkvalueimplgetvalue"></a><a name="getvalue"></a> CMFCFilterChunkValueImpl:: GetValue
 
 割り当てられた propvariant として値を取得します。
 
@@ -255,16 +256,16 @@ HRESULT GetValue(PROPVARIANT** ppPropVariant);
 
 ### <a name="parameters"></a>パラメーター
 
-*を変更します。*<br/>
-関数が返されるときに、このパラメーターにはチャンク値が含まれます。
+*ppPropVariant*<br/>
+関数からが返された場合、このパラメーターにはチャンク値が格納されます。
 
 ### <a name="return-value"></a>戻り値
 
-propVariant が正常に割り当てられ、チャンク値が*ppPropVariant*に正常にコピーされた場合はS_OK。それ以外の場合はエラー コード。
+PROPVARIANT が正常に割り当てられ、チャンク値が *Pppropvariant* に正常にコピーされたかどうかを S_OK します。それ以外の場合は、エラーコード。
 
 ### <a name="remarks"></a>解説
 
-## <a name="cmfcfilterchunkvalueimplgetvaluenoalloc"></a><a name="getvaluenoalloc"></a>を指定します。
+## <a name="cmfcfilterchunkvalueimplgetvaluenoalloc"></a><a name="getvaluenoalloc"></a> CMFCFilterChunkValueImpl:: Getvalu/Alloc
 
 割り当てられていない (内部値) 値を返します。
 
@@ -278,9 +279,9 @@ PROPVARIANT GetValueNoAlloc ();
 
 ### <a name="remarks"></a>解説
 
-## <a name="cmfcfilterchunkvalueimplisvalid"></a><a name="isvalid"></a>を指定します。
+## <a name="cmfcfilterchunkvalueimplisvalid"></a><a name="isvalid"></a> CMFCFilterChunkValueImpl:: IsValid
 
-このプロパティ値が有効かどうかをチェックします。
+このプロパティ値が有効かどうかを確認します。
 
 ```
 BOOL IsValid() const;
@@ -288,11 +289,11 @@ BOOL IsValid() const;
 
 ### <a name="return-value"></a>戻り値
 
-現在のチャンク値が有効な場合は TRUE。それ以外の場合は FALSE。
+現在のチャンク値が有効である場合は TRUE。それ以外の場合は FALSE。
 
 ### <a name="remarks"></a>解説
 
-## <a name="cmfcfilterchunkvalueimplsetboolvalue"></a><a name="setboolvalue"></a>を指定します。
+## <a name="cmfcfilterchunkvalueimplsetboolvalue"></a><a name="setboolvalue"></a> CMFCFilterChunkValueImpl:: Setブール値
 
 オーバーロードされます。 プロパティをキーでブール値に設定します。
 
@@ -319,33 +320,33 @@ HRESULT SetBoolValue(
 ### <a name="parameters"></a>パラメーター
 
 *pkey*<br/>
-プロパティ キーを指定します。
+プロパティキーを指定します。
 
 *bVal*<br/>
 設定するチャンク値を指定します。
 
-*チャンクタイプ*<br/>
-フラグは、このチャンクにテキスト型または値型プロパティが含まれているかどうかを示します。 フラグ値は CHUNKSTATE 列挙体から取得されます。
+*chunkType*<br/>
+フラグは、このチャンクにテキスト型または値型のプロパティが含まれているかどうかを示します。 フラグの値は、CHUNKSTATE 列挙体から取得されます。
 
 *locale*<br/>
-テキストのチャンクに関連付けられている言語とサブ言語。 チャンク ロケールは、テキストの適切な単語区切り処理を実行するために、ドキュメント インデクサーによって使用されます。 チャンクがテキスト型でも、データ型VT_LPWSTR値型でも、VT_LPSTR、またはVT_BSTRの場合、このフィールドは無視されます。
+テキストのチャンクに関連付けられている言語およびサブ言語。 チャンクロケールは、テキストの適切な単語区切りを実行するためにドキュメントインデクサーによって使用されます。 チャンクがテキスト型でも、データ型 VT_LPWSTR、VT_LPSTR、または VT_BSTR を持つ値型でもない場合、このフィールドは無視されます。
 
-*cwcLen ソース*<br/>
-現在のチャンクの派生元となるソース テキストの長さ (文字数)。 ゼロの値は、ソース テキストと派生テキストの文字ごとの対応を示します。 ゼロ以外の値は、そのような直接対応が存在することを意味します。
+*cwcLenSource*<br/>
+現在のチャンクの派生元であるソーステキストの長さ (文字数)。 0の値は、ソーステキストと派生テキストの文字単位の対応を示します。 0以外の値は、そのような直接の対応が存在しないことを意味します。
 
-*ソースを開始します。*<br/>
-派生チャンクのソース テキストがソース チャンクで開始するオフセット。
+*cwcStartSource*<br/>
+ソースチャンクの派生チャンクのソーステキストの開始位置を示すオフセット。
 
-*チャンクブレークタイプ*<br/>
-前のチャンクと現在のチャンクを分離するブレークのタイプ。 値は、CHUNK_BREAKTYPE列挙体から取得されます。
+*chunkBreakType*<br/>
+前のチャンクと現在のチャンクを区切る中断の種類。 値は CHUNK_BREAKTYPE 列挙体からのものです。
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合はS_OK。それ以外の場合はエラー コード。
+成功した場合は S_OK。それ以外の場合は、エラーコード。
 
 ### <a name="remarks"></a>解説
 
-## <a name="cmfcfilterchunkvalueimplsetchunk"></a><a name="setchunk"></a>を指定します。
+## <a name="cmfcfilterchunkvalueimplsetchunk"></a><a name="setchunk"></a> CMFCFilterChunkValueImpl:: SetChunk
 
 チャンクの共通プロパティを設定するヘルパー関数。
 
@@ -362,32 +363,32 @@ HRESULT SetChunk(
 ### <a name="parameters"></a>パラメーター
 
 *pkey*<br/>
-プロパティ キーを指定します。
+プロパティキーを指定します。
 
-*チャンクタイプ*<br/>
-フラグは、このチャンクにテキスト型または値型プロパティが含まれているかどうかを示します。 フラグ値は CHUNKSTATE 列挙体から取得されます。
+*chunkType*<br/>
+フラグは、このチャンクにテキスト型または値型のプロパティが含まれているかどうかを示します。 フラグの値は、CHUNKSTATE 列挙体から取得されます。
 
 *locale*<br/>
-テキストのチャンクに関連付けられている言語とサブ言語。 チャンク ロケールは、テキストの適切な単語区切り処理を実行するために、ドキュメント インデクサーによって使用されます。 チャンクがテキスト型でも、データ型VT_LPWSTR値型でも、VT_LPSTR、またはVT_BSTRの場合、このフィールドは無視されます。
+テキストのチャンクに関連付けられている言語およびサブ言語。 チャンクロケールは、テキストの適切な単語区切りを実行するためにドキュメントインデクサーによって使用されます。 チャンクがテキスト型でも、データ型 VT_LPWSTR、VT_LPSTR、または VT_BSTR を持つ値型でもない場合、このフィールドは無視されます。
 
-*cwcLen ソース*<br/>
-現在のチャンクの派生元となるソース テキストの長さ (文字数)。 ゼロの値は、ソース テキストと派生テキストの文字ごとの対応を示します。 ゼロ以外の値は、そのような直接対応が存在することを意味します。
+*cwcLenSource*<br/>
+現在のチャンクの派生元であるソーステキストの長さ (文字数)。 0の値は、ソーステキストと派生テキストの文字単位の対応を示します。 0以外の値は、そのような直接の対応が存在しないことを意味します。
 
-*ソースを開始します。*<br/>
-派生チャンクのソース テキストがソース チャンクで開始するオフセット。
+*cwcStartSource*<br/>
+ソースチャンクの派生チャンクのソーステキストの開始位置を示すオフセット。
 
-*チャンクブレークタイプ*<br/>
-前のチャンクと現在のチャンクを分離するブレークのタイプ。 値は、CHUNK_BREAKTYPE列挙体から取得されます。
+*chunkBreakType*<br/>
+前のチャンクと現在のチャンクを区切る中断の種類。 値は CHUNK_BREAKTYPE 列挙体からのものです。
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合はS_OK。それ以外の場合はエラー コード。
+成功した場合は S_OK。それ以外の場合はエラーコード。
 
 ### <a name="remarks"></a>解説
 
-## <a name="cmfcfilterchunkvalueimplsetdwordvalue"></a><a name="setdwordvalue"></a>を指定します。
+## <a name="cmfcfilterchunkvalueimplsetdwordvalue"></a><a name="setdwordvalue"></a> CMFCFilterChunkValueImpl:: SetDwordValue
 
-プロパティをキーごとに DWORD に設定します。
+キーを使ってプロパティを DWORD に設定します。
 
 ```
 HRESULT SetDwordValue(
@@ -403,35 +404,35 @@ HRESULT SetDwordValue(
 ### <a name="parameters"></a>パラメーター
 
 *pkey*<br/>
-プロパティ キーを指定します。
+プロパティキーを指定します。
 
-*ドヴァル*<br/>
+*dwVal*<br/>
 設定するチャンク値を指定します。
 
-*チャンクタイプ*<br/>
-フラグは、このチャンクにテキスト型または値型プロパティが含まれているかどうかを示します。 フラグ値は CHUNKSTATE 列挙体から取得されます。
+*chunkType*<br/>
+フラグは、このチャンクにテキスト型または値型のプロパティが含まれているかどうかを示します。 フラグの値は、CHUNKSTATE 列挙体から取得されます。
 
 *locale*<br/>
-テキストのチャンクに関連付けられている言語とサブ言語。 チャンク ロケールは、テキストの適切な単語区切り処理を実行するために、ドキュメント インデクサーによって使用されます。 チャンクがテキスト型でも、データ型VT_LPWSTR値型でも、VT_LPSTR、またはVT_BSTRの場合、このフィールドは無視されます。
+テキストのチャンクに関連付けられている言語およびサブ言語。 チャンクロケールは、テキストの適切な単語区切りを実行するためにドキュメントインデクサーによって使用されます。 チャンクがテキスト型でも、データ型 VT_LPWSTR、VT_LPSTR、または VT_BSTR を持つ値型でもない場合、このフィールドは無視されます。
 
-*cwcLen ソース*<br/>
-現在のチャンクの派生元となるソース テキストの長さ (文字数)。 ゼロの値は、ソース テキストと派生テキストの文字ごとの対応を示します。 ゼロ以外の値は、そのような直接対応が存在することを意味します。
+*cwcLenSource*<br/>
+現在のチャンクの派生元であるソーステキストの長さ (文字数)。 0の値は、ソーステキストと派生テキストの文字単位の対応を示します。 0以外の値は、そのような直接の対応が存在しないことを意味します。
 
-*ソースを開始します。*<br/>
-派生チャンクのソース テキストがソース チャンクで開始するオフセット。
+*cwcStartSource*<br/>
+ソースチャンクの派生チャンクのソーステキストの開始位置を示すオフセット。
 
-*チャンクブレークタイプ*<br/>
-前のチャンクと現在のチャンクを分離するブレークのタイプ。 値は、CHUNK_BREAKTYPE列挙体から取得されます。
+*chunkBreakType*<br/>
+前のチャンクと現在のチャンクを区切る中断の種類。 値は CHUNK_BREAKTYPE 列挙体からのものです。
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合はS_OK。それ以外の場合はエラー コード。
+成功した場合は S_OK。それ以外の場合は、エラーコード。
 
 ### <a name="remarks"></a>解説
 
-## <a name="cmfcfilterchunkvalueimplsetfiletimevalue"></a><a name="setfiletimevalue"></a>を指定します。
+## <a name="cmfcfilterchunkvalueimplsetfiletimevalue"></a><a name="setfiletimevalue"></a> CMFCFilterChunkValueImpl:: SetFileTimeValue
 
-キーでプロパティをファイル時間に設定します。
+プロパティをキーで filetime に設定します。
 
 ```
 HRESULT SetFileTimeValue(
@@ -447,33 +448,33 @@ HRESULT SetFileTimeValue(
 ### <a name="parameters"></a>パラメーター
 
 *pkey*<br/>
-プロパティ キーを指定します。
+プロパティキーを指定します。
 
 *dtVal*<br/>
 設定するチャンク値を指定します。
 
-*チャンクタイプ*<br/>
-フラグは、このチャンクにテキスト型または値型プロパティが含まれているかどうかを示します。 フラグ値は CHUNKSTATE 列挙体から取得されます。
+*chunkType*<br/>
+フラグは、このチャンクにテキスト型または値型のプロパティが含まれているかどうかを示します。 フラグの値は、CHUNKSTATE 列挙体から取得されます。
 
 *locale*<br/>
-テキストのチャンクに関連付けられている言語とサブ言語。 チャンク ロケールは、テキストの適切な単語区切り処理を実行するために、ドキュメント インデクサーによって使用されます。 チャンクがテキスト型でも、データ型VT_LPWSTR値型でも、VT_LPSTR、またはVT_BSTRの場合、このフィールドは無視されます。
+テキストのチャンクに関連付けられている言語およびサブ言語。 チャンクロケールは、テキストの適切な単語区切りを実行するためにドキュメントインデクサーによって使用されます。 チャンクがテキスト型でも、データ型 VT_LPWSTR、VT_LPSTR、または VT_BSTR を持つ値型でもない場合、このフィールドは無視されます。
 
-*cwcLen ソース*<br/>
-現在のチャンクの派生元となるソース テキストの長さ (文字数)。 ゼロの値は、ソース テキストと派生テキストの文字ごとの対応を示します。 ゼロ以外の値は、そのような直接対応が存在することを意味します。
+*cwcLenSource*<br/>
+現在のチャンクの派生元であるソーステキストの長さ (文字数)。 0の値は、ソーステキストと派生テキストの文字単位の対応を示します。 0以外の値は、そのような直接の対応が存在しないことを意味します。
 
-*ソースを開始します。*<br/>
-派生チャンクのソース テキストがソース チャンクで開始するオフセット。
+*cwcStartSource*<br/>
+ソースチャンクの派生チャンクのソーステキストの開始位置を示すオフセット。
 
-*チャンクブレークタイプ*<br/>
-前のチャンクと現在のチャンクを分離するブレークのタイプ。 値は、CHUNK_BREAKTYPE列挙体から取得されます。
+*chunkBreakType*<br/>
+前のチャンクと現在のチャンクを区切る中断の種類。 値は CHUNK_BREAKTYPE 列挙体からのものです。
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合はS_OK。それ以外の場合はエラー コード。
+成功した場合は S_OK。それ以外の場合は、エラーコード。
 
 ### <a name="remarks"></a>解説
 
-## <a name="cmfcfilterchunkvalueimplsetint64value"></a><a name="setint64value"></a>を指定します。
+## <a name="cmfcfilterchunkvalueimplsetint64value"></a><a name="setint64value"></a> CMFCFilterChunkValueImpl:: SetInt64Value
 
 プロパティをキーで int64 に設定します。
 
@@ -491,35 +492,35 @@ HRESULT SetInt64Value(
 ### <a name="parameters"></a>パラメーター
 
 *pkey*<br/>
-プロパティ キーを指定します。
+プロパティキーを指定します。
 
 *nVal*<br/>
 設定するチャンク値を指定します。
 
-*チャンクタイプ*<br/>
-フラグは、このチャンクにテキスト型または値型プロパティが含まれているかどうかを示します。 フラグ値は CHUNKSTATE 列挙体から取得されます。
+*chunkType*<br/>
+フラグは、このチャンクにテキスト型または値型のプロパティが含まれているかどうかを示します。 フラグの値は、CHUNKSTATE 列挙体から取得されます。
 
 *locale*<br/>
-テキストのチャンクに関連付けられている言語とサブ言語。 チャンク ロケールは、テキストの適切な単語区切り処理を実行するために、ドキュメント インデクサーによって使用されます。 チャンクがテキスト型でも、データ型VT_LPWSTR値型でも、VT_LPSTR、またはVT_BSTRの場合、このフィールドは無視されます。
+テキストのチャンクに関連付けられている言語およびサブ言語。 チャンクロケールは、テキストの適切な単語区切りを実行するためにドキュメントインデクサーによって使用されます。 チャンクがテキスト型でも、データ型 VT_LPWSTR、VT_LPSTR、または VT_BSTR を持つ値型でもない場合、このフィールドは無視されます。
 
-*cwcLen ソース*<br/>
-現在のチャンクの派生元となるソース テキストの長さ (文字数)。 ゼロの値は、ソース テキストと派生テキストの文字ごとの対応を示します。 ゼロ以外の値は、そのような直接対応が存在することを意味します。
+*cwcLenSource*<br/>
+現在のチャンクの派生元であるソーステキストの長さ (文字数)。 0の値は、ソーステキストと派生テキストの文字単位の対応を示します。 0以外の値は、そのような直接の対応が存在しないことを意味します。
 
-*ソースを開始します。*<br/>
-派生チャンクのソース テキストがソース チャンクで開始するオフセット。
+*cwcStartSource*<br/>
+ソースチャンクの派生チャンクのソーステキストの開始位置を示すオフセット。
 
-*チャンクブレークタイプ*<br/>
-前のチャンクと現在のチャンクを分離するブレークのタイプ。 値は、CHUNK_BREAKTYPE列挙体から取得されます。
+*chunkBreakType*<br/>
+前のチャンクと現在のチャンクを区切る中断の種類。 値は CHUNK_BREAKTYPE 列挙体からのものです。
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合はS_OK。それ以外の場合はエラー コード。
+成功した場合は S_OK。それ以外の場合は、エラーコード。
 
 ### <a name="remarks"></a>解説
 
-## <a name="cmfcfilterchunkvalueimplsetintvalue"></a><a name="setintvalue"></a>を指定します。
+## <a name="cmfcfilterchunkvalueimplsetintvalue"></a><a name="setintvalue"></a> CMFCFilterChunkValueImpl:: SetIntValue
 
-プロパティを int に設定します。
+プロパティをキーで int に設定します。
 
 ```
 HRESULT SetIntValue(
@@ -535,35 +536,35 @@ HRESULT SetIntValue(
 ### <a name="parameters"></a>パラメーター
 
 *pkey*<br/>
-プロパティ キーを指定します。
+プロパティキーを指定します。
 
 *nVal*<br/>
 設定するチャンク値を指定します。
 
-*チャンクタイプ*<br/>
-フラグは、このチャンクにテキスト型または値型プロパティが含まれているかどうかを示します。 フラグ値は CHUNKSTATE 列挙体から取得されます。
+*chunkType*<br/>
+フラグは、このチャンクにテキスト型または値型のプロパティが含まれているかどうかを示します。 フラグの値は、CHUNKSTATE 列挙体から取得されます。
 
 *locale*<br/>
-テキストのチャンクに関連付けられている言語とサブ言語。 チャンク ロケールは、テキストの適切な単語区切り処理を実行するために、ドキュメント インデクサーによって使用されます。 チャンクがテキスト型でも、データ型VT_LPWSTR値型でも、VT_LPSTR、またはVT_BSTRの場合、このフィールドは無視されます。
+テキストのチャンクに関連付けられている言語およびサブ言語。 チャンクロケールは、テキストの適切な単語区切りを実行するためにドキュメントインデクサーによって使用されます。 チャンクがテキスト型でも、データ型 VT_LPWSTR、VT_LPSTR、または VT_BSTR を持つ値型でもない場合、このフィールドは無視されます。
 
-*cwcLen ソース*<br/>
-現在のチャンクの派生元となるソース テキストの長さ (文字数)。 ゼロの値は、ソース テキストと派生テキストの文字ごとの対応を示します。 ゼロ以外の値は、そのような直接対応が存在することを意味します。
+*cwcLenSource*<br/>
+現在のチャンクの派生元であるソーステキストの長さ (文字数)。 0の値は、ソーステキストと派生テキストの文字単位の対応を示します。 0以外の値は、そのような直接の対応が存在しないことを意味します。
 
-*ソースを開始します。*<br/>
-派生チャンクのソース テキストがソース チャンクで開始するオフセット。
+*cwcStartSource*<br/>
+ソースチャンクの派生チャンクのソーステキストの開始位置を示すオフセット。
 
-*チャンクブレークタイプ*<br/>
-前のチャンクと現在のチャンクを分離するブレークのタイプ。 値は、CHUNK_BREAKTYPE列挙体から取得されます。
+*chunkBreakType*<br/>
+前のチャンクと現在のチャンクを区切る中断の種類。 値は CHUNK_BREAKTYPE 列挙体からのものです。
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合はS_OK。それ以外の場合はエラー コード。
+成功した場合は S_OK。それ以外の場合は、エラーコード。
 
 ### <a name="remarks"></a>解説
 
-## <a name="cmfcfilterchunkvalueimplsetlongvalue"></a><a name="setlongvalue"></a>を指定します。
+## <a name="cmfcfilterchunkvalueimplsetlongvalue"></a><a name="setlongvalue"></a> CMFCFilterChunkValueImpl:: SetLongValue
 
-プロパティをキーで LONG に設定します。
+プロパティをキーによって LONG に設定します。
 
 ```
 HRESULT SetLongValue(
@@ -579,35 +580,35 @@ HRESULT SetLongValue(
 ### <a name="parameters"></a>パラメーター
 
 *pkey*<br/>
-プロパティ キーを指定します。
+プロパティキーを指定します。
 
-*lヴァル*<br/>
+*lVal*<br/>
 設定するチャンク値を指定します。
 
-*チャンクタイプ*<br/>
-フラグは、このチャンクにテキスト型または値型プロパティが含まれているかどうかを示します。 フラグ値は CHUNKSTATE 列挙体から取得されます。
+*chunkType*<br/>
+フラグは、このチャンクにテキスト型または値型のプロパティが含まれているかどうかを示します。 フラグの値は、CHUNKSTATE 列挙体から取得されます。
 
 *locale*<br/>
-テキストのチャンクに関連付けられている言語とサブ言語。 チャンク ロケールは、テキストの適切な単語区切り処理を実行するために、ドキュメント インデクサーによって使用されます。 チャンクがテキスト型でも、データ型VT_LPWSTR値型でも、VT_LPSTR、またはVT_BSTRの場合、このフィールドは無視されます。
+テキストのチャンクに関連付けられている言語およびサブ言語。 チャンクロケールは、テキストの適切な単語区切りを実行するためにドキュメントインデクサーによって使用されます。 チャンクがテキスト型でも、データ型 VT_LPWSTR、VT_LPSTR、または VT_BSTR を持つ値型でもない場合、このフィールドは無視されます。
 
-*cwcLen ソース*<br/>
-現在のチャンクの派生元となるソース テキストの長さ (文字数)。 ゼロの値は、ソース テキストと派生テキストの文字ごとの対応を示します。 ゼロ以外の値は、そのような直接対応が存在することを意味します。
+*cwcLenSource*<br/>
+現在のチャンクの派生元であるソーステキストの長さ (文字数)。 0の値は、ソーステキストと派生テキストの文字単位の対応を示します。 0以外の値は、そのような直接の対応が存在しないことを意味します。
 
-*ソースを開始します。*<br/>
-派生チャンクのソース テキストがソース チャンクで開始するオフセット。
+*cwcStartSource*<br/>
+ソースチャンクの派生チャンクのソーステキストの開始位置を示すオフセット。
 
-*チャンクブレークタイプ*<br/>
-前のチャンクと現在のチャンクを分離するブレークのタイプ。 値は、CHUNK_BREAKTYPE列挙体から取得されます。
+*chunkBreakType*<br/>
+前のチャンクと現在のチャンクを区切る中断の種類。 値は CHUNK_BREAKTYPE 列挙体からのものです。
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合はS_OK。それ以外の場合はエラー コード。
+成功した場合は S_OK。それ以外の場合は、エラーコード。
 
 ### <a name="remarks"></a>解説
 
-## <a name="cmfcfilterchunkvalueimplsetsystemtimevalue"></a><a name="setsystemtimevalue"></a>を設定します。
+## <a name="cmfcfilterchunkvalueimplsetsystemtimevalue"></a><a name="setsystemtimevalue"></a> CMFCFilterChunkValueImpl:: SetSystemTimeValue
 
-プロパティをキーごとに設定します。
+キーによってプロパティを SystemTime に設定します。
 
 ```
 HRESULT SetSystemTimeValue(
@@ -623,35 +624,35 @@ HRESULT SetSystemTimeValue(
 ### <a name="parameters"></a>パラメーター
 
 *pkey*<br/>
-プロパティ キーを指定します。
+プロパティキーを指定します。
 
-*システム時刻*<br/>
+*systemTime*<br/>
 設定するチャンク値を指定します。
 
-*チャンクタイプ*<br/>
-フラグは、このチャンクにテキスト型または値型プロパティが含まれているかどうかを示します。 フラグ値は CHUNKSTATE 列挙体から取得されます。
+*chunkType*<br/>
+フラグは、このチャンクにテキスト型または値型のプロパティが含まれているかどうかを示します。 フラグの値は、CHUNKSTATE 列挙体から取得されます。
 
 *locale*<br/>
-テキストのチャンクに関連付けられている言語とサブ言語。 チャンク ロケールは、テキストの適切な単語区切り処理を実行するために、ドキュメント インデクサーによって使用されます。 チャンクがテキスト型でも、データ型VT_LPWSTR値型でも、VT_LPSTR、またはVT_BSTRの場合、このフィールドは無視されます。
+テキストのチャンクに関連付けられている言語およびサブ言語。 チャンクロケールは、テキストの適切な単語区切りを実行するためにドキュメントインデクサーによって使用されます。 チャンクがテキスト型でも、データ型 VT_LPWSTR、VT_LPSTR、または VT_BSTR を持つ値型でもない場合、このフィールドは無視されます。
 
-*cwcLen ソース*<br/>
-現在のチャンクの派生元となるソース テキストの長さ (文字数)。 ゼロの値は、ソース テキストと派生テキストの文字ごとの対応を示します。 ゼロ以外の値は、そのような直接対応が存在することを意味します。
+*cwcLenSource*<br/>
+現在のチャンクの派生元であるソーステキストの長さ (文字数)。 0の値は、ソーステキストと派生テキストの文字単位の対応を示します。 0以外の値は、そのような直接の対応が存在しないことを意味します。
 
-*ソースを開始します。*<br/>
-派生チャンクのソース テキストがソース チャンクで開始するオフセット。
+*cwcStartSource*<br/>
+ソースチャンクの派生チャンクのソーステキストの開始位置を示すオフセット。
 
-*チャンクブレークタイプ*<br/>
-前のチャンクと現在のチャンクを分離するブレークのタイプ。 値は、CHUNK_BREAKTYPE列挙体から取得されます。
+*chunkBreakType*<br/>
+前のチャンクと現在のチャンクを区切る中断の種類。 値は CHUNK_BREAKTYPE 列挙体からのものです。
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合はS_OK。それ以外の場合はエラー コード。
+成功した場合は S_OK。それ以外の場合は、エラーコード。
 
 ### <a name="remarks"></a>解説
 
-## <a name="cmfcfilterchunkvalueimplsettextvalue"></a><a name="settextvalue"></a>を指定します。
+## <a name="cmfcfilterchunkvalueimplsettextvalue"></a><a name="settextvalue"></a> CMFCFilterChunkValueImpl:: SetTextValue
 
-プロパティをキーで Unicode 文字列に設定します。
+キーによってプロパティを Unicode 文字列に設定します。
 
 ```
 HRESULT SetTextValue(
@@ -667,29 +668,29 @@ HRESULT SetTextValue(
 ### <a name="parameters"></a>パラメーター
 
 *pkey*<br/>
-プロパティ キーを指定します。
+プロパティキーを指定します。
 
-*値*<br/>
+*pszValue*<br/>
 設定するチャンク値を指定します。
 
-*チャンクタイプ*<br/>
-フラグは、このチャンクにテキスト型または値型プロパティが含まれているかどうかを示します。 フラグ値は CHUNKSTATE 列挙体から取得されます。
+*chunkType*<br/>
+フラグは、このチャンクにテキスト型または値型のプロパティが含まれているかどうかを示します。 フラグの値は、CHUNKSTATE 列挙体から取得されます。
 
 *locale*<br/>
-テキストのチャンクに関連付けられている言語とサブ言語。 チャンク ロケールは、テキストの適切な単語区切り処理を実行するために、ドキュメント インデクサーによって使用されます。 チャンクがテキスト型でも、データ型VT_LPWSTR値型でも、VT_LPSTR、またはVT_BSTRの場合、このフィールドは無視されます。
+テキストのチャンクに関連付けられている言語およびサブ言語。 チャンクロケールは、テキストの適切な単語区切りを実行するためにドキュメントインデクサーによって使用されます。 チャンクがテキスト型でも、データ型 VT_LPWSTR、VT_LPSTR、または VT_BSTR を持つ値型でもない場合、このフィールドは無視されます。
 
-*cwcLen ソース*<br/>
-現在のチャンクの派生元となるソース テキストの長さ (文字数)。 ゼロの値は、ソース テキストと派生テキストの文字ごとの対応を示します。 ゼロ以外の値は、そのような直接対応が存在することを意味します。
+*cwcLenSource*<br/>
+現在のチャンクの派生元であるソーステキストの長さ (文字数)。 0の値は、ソーステキストと派生テキストの文字単位の対応を示します。 0以外の値は、そのような直接の対応が存在しないことを意味します。
 
-*ソースを開始します。*<br/>
-派生チャンクのソース テキストがソース チャンクで開始するオフセット。
+*cwcStartSource*<br/>
+ソースチャンクの派生チャンクのソーステキストの開始位置を示すオフセット。
 
-*チャンクブレークタイプ*<br/>
-前のチャンクと現在のチャンクを分離するブレークのタイプ。 値は、CHUNK_BREAKTYPE列挙体から取得されます。
+*chunkBreakType*<br/>
+前のチャンクと現在のチャンクを区切る中断の種類。 値は CHUNK_BREAKTYPE 列挙体からのものです。
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合はS_OK。それ以外の場合はエラー コード。
+成功した場合は S_OK。それ以外の場合は、エラーコード。
 
 ### <a name="remarks"></a>解説
 
