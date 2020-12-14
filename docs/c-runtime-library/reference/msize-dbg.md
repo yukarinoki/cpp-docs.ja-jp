@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: _msize_dbg'
 title: _msize_dbg
 ms.date: 11/04/2016
 api_name:
@@ -26,12 +27,12 @@ helpviewer_keywords:
 - _msize_dbg function
 - msize_dbg function
 ms.assetid: a333f4b6-f8a2-4e61-bb69-cb34063b8cef
-ms.openlocfilehash: 7fa12689a35beaad0727c14327d1b948a62c29d0
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 8ead0257e990322e88e20ce6111ff590dbc71686
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70951490"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97256394"
 ---
 # <a name="_msize_dbg"></a>_msize_dbg
 
@@ -52,19 +53,19 @@ size_t _msize_dbg(
 サイズを調べるメモリ ブロックへのポインター。
 
 *blockType*<br/>
-指定されたメモリブロックの型: **_CLIENT_BLOCK**または **_NORMAL_BLOCK**。
+指定されたメモリブロックの種類: **_CLIENT_BLOCK** または **_NORMAL_BLOCK**。
 
 ## <a name="return-value"></a>戻り値
 
-正常に完了すると、 **_msize_dbg**は指定されたメモリブロックのサイズ (バイト単位) を返します。それ以外の場合は、 **NULL**を返します。
+正常に完了すると、 **_msize_dbg** は指定されたメモリブロックのサイズ (バイト単位) を返します。それ以外の場合は、 **NULL** を返します。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-**_msize_dbg**は、_[msize](msize.md)関数のデバッグバージョンです。 [_Debug](../../c-runtime-library/debug.md)が定義されていない場合、 **_msize_dbg**の各呼び出しは **_msize**の呼び出しに限定されます。 **_Msize**と **_msize_dbg**は、どちらもベースヒープ内のメモリブロックのサイズを計算しますが、 **_msize_dbg**は次の2つのデバッグ機能を追加します。これには、メモリブロックのユーザー部分の両側のバッファーが返されたサイズで含まれ、特定のブロック型のサイズ計算が可能になります。
+**_msize_dbg** は、_ [msize](msize.md) 関数のデバッグバージョンです。 [_DEBUG](../../c-runtime-library/debug.md)が定義されていない場合、 **_msize_dbg** の各呼び出しは **_msize** への呼び出しに限定されます。 **_Msize** と **_msize_dbg** はどちらもベースヒープ内のメモリブロックのサイズを計算しますが、 **_msize_dbg** は2つのデバッグ機能を追加します。返されるサイズにメモリブロックのユーザー部分の両側のバッファーが含まれ、特定のブロック型のサイズ計算が可能になります。
 
-デバッグ バージョンのベース ヒープに対するメモリ ブロックの割り当て、初期化、管理方法については、「 [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details)」をご覧ください。 割り当てブロック型と、それらがどのように使用されるかについては、「[デバッグ ヒープ上のメモリ ブロックの型](/visualstudio/debugger/crt-debug-heap-details)」をご覧ください。 標準で呼び出すヒープ関数と、アプリケーションのデバッグ ビルドで呼び出すデバッグ バージョンのヒープ関数との違いの詳細については、「[デバッグ バージョンのヒープ割り当て関数](/visualstudio/debugger/debug-versions-of-heap-allocation-functions)」をご覧ください。
+デバッグ バージョンのベース ヒープに対するメモリ ブロックの割り当て、初期化、管理方法については、「 [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details)」をご覧ください。 割り当てブロックの型とその使用方法については、「 [デバッグヒープ上のブロックの型](/visualstudio/debugger/crt-debug-heap-details)」を参照してください。 標準で呼び出すヒープ関数と、アプリケーションのデバッグ ビルドで呼び出すデバッグ バージョンのヒープ関数との違いの詳細については、「[デバッグ バージョンのヒープ割り当て関数](/visualstudio/debugger/debug-versions-of-heap-allocation-functions)」を参照してください。
 
-この関数は、そのパラメーターを検証します。 *Memblock*が null ポインターの場合、 **_Msize**は「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーを呼び出します。 エラーが処理された場合、関数は**errno**を**EINVAL**に設定し、-1 を返します。
+この関数は、そのパラメーターを検証します。 *Memblock* が null ポインターの場合、 **_Msize** は「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーを呼び出します。 エラーが処理された場合、関数は **errno** を **EINVAL** に設定し、-1 を返します。
 
 ## <a name="requirements"></a>必要条件
 
@@ -72,7 +73,7 @@ size_t _msize_dbg(
 |-------------|---------------------|
 |**_msize_dbg**|\<crtdbg.h>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性について詳しくは、「 [Compatibility](../../c-runtime-library/compatibility.md)」をご覧ください。
 
 ## <a name="libraries"></a>ライブラリ
 
@@ -130,7 +131,7 @@ int main( void )
 }
 ```
 
-### <a name="output"></a>Output
+### <a name="output"></a>出力
 
 ```Output
 Size of block after _malloc_dbg of 40 longs: 160
@@ -139,5 +140,5 @@ Size of block after _realloc_dbg of 40 more longs: 320
 
 ## <a name="see-also"></a>関連項目
 
-[デバッグ ルーチン](../../c-runtime-library/debug-routines.md)<br/>
+[デバッグルーチン](../../c-runtime-library/debug-routines.md)<br/>
 [_malloc_dbg](malloc-dbg.md)<br/>

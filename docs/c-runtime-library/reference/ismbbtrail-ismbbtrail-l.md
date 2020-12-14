@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: _ismbbtrail、_ismbbtrail_l'
 title: _ismbbtrail、_ismbbtrail_l
 ms.date: 4/2/2020
 api_name:
@@ -34,12 +35,12 @@ helpviewer_keywords:
 - _ismbbtrail_l function
 - ismbbtrail function
 ms.assetid: dfdd0292-960b-4c1d-bf11-146e0fc80247
-ms.openlocfilehash: 08229b4a35634193810f7c24a3f8749fba034872
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 4c9737cb0d4c3e4d1acf35e0c0cbea18ccba3f69
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82918680"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97256433"
 ---
 # <a name="_ismbbtrail-_ismbbtrail_l"></a>_ismbbtrail、_ismbbtrail_l
 
@@ -59,7 +60,7 @@ int _ismbbtrail_l(
 
 ### <a name="parameters"></a>パラメーター
 
-*40u-c*<br/>
+*c*<br/>
 テストする整数。
 
 *locale*<br/>
@@ -67,20 +68,20 @@ int _ismbbtrail_l(
 
 ## <a name="return-value"></a>戻り値
 
-整数*c*がマルチバイト文字の2番目のバイトの場合、 **_ismbbtrail**は0以外の値を返します。 たとえば、コード ページ 932 でのみ、有効な範囲は 0x40 – 0x7E、0x80 – 0xFC です。
+整数 *c* がマルチバイト文字の2番目のバイトの場合、 **_ismbbtrail** は0以外の値を返します。 たとえば、コード ページ 932 でのみ、有効な範囲は 0x40 – 0x7E、0x80 – 0xFC です。
 
 ## <a name="remarks"></a>解説
 
-**_ismbbtrail**は、ロケールに依存する動作に現在のロケールを使用します。 **_ismbbtrail_l**は、渡されたロケールを代わりに使用する点を除いて同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
+**_ismbbtrail** は、ロケールに依存する動作に現在のロケールを使用します。 **_ismbbtrail_l** は、渡されたロケールを代わりに使用する点を除いて同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
 
 既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|オプション ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|オプション ヘッダー|
 |-------------|---------------------|---------------------|
-|**_ismbbtrail**|\<mbctype.h> または \<mbstring.h>|\<ctype.h>、* \<limits.h>、\<stdlib.h>|
-|**_ismbbtrail_l**|\<mbctype.h> または \<mbstring.h>|\<ctype.h>、* \<limits.h>、\<stdlib.h>|
+|**_ismbbtrail**|\<mbctype.h> または \<mbstring.h>|\<ctype.h>,* \<limits.h>, \<stdlib.h>|
+|**_ismbbtrail_l**|\<mbctype.h> または \<mbstring.h>|\<ctype.h>,* \<limits.h>, \<stdlib.h>|
 
 \* テスト条件のマニフェスト定数の場合。
 

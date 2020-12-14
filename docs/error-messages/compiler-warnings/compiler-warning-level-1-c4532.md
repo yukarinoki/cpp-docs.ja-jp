@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: コンパイラの警告 (レベル 1) C4532'
 title: コンパイラの警告 (レベル 1) C4532
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4532
 ms.assetid: 4e2a286a-d233-4106-9f65-29be1a94ca02
-ms.openlocfilehash: b8c7503c7d1c1b711006415a327c360731222042
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 9468ca1242397289c832fec28d71cf245c6c8a5f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87196345"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97294809"
 ---
 # <a name="compiler-warning-level-1-c4532"></a>コンパイラの警告 (レベル 1) C4532
 
@@ -25,7 +26,7 @@ ms.locfileid: "87196345"
 
 - [goto](../../cpp/goto-statement-cpp.md)
 
-異常終了時に[__finally](../../cpp/try-finally-statement.md)または[finally](../../dotnet/finally.md)ブロックからジャンプする。
+異常終了時に [__finally](../../cpp/try-finally-statement.md) または [finally](../../dotnet/finally.md) ブロックからジャンプする。
 
 例外が発生したとき、終了ハンドラー (または finally ブロック) の実行中にスタックがアンワインドされているときに、 **`__finally`** **`__finally`** ブロックが終了する前にコードがブロックから移動した場合 **`__finally`** 、動作は未定義になります。 コントロールはアンワインドコードに戻らない場合があるため、例外が適切に処理されない可能性があります。
 

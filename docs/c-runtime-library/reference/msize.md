@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: _msize'
 title: _msize
 ms.date: 4/2/2020
 api_name:
@@ -29,12 +30,12 @@ helpviewer_keywords:
 - msize function
 - _msize function
 ms.assetid: 02b1f89e-d0d7-4f12-938a-9eeba48a0f88
-ms.openlocfilehash: cc8eef0d28f649340715edbf4b1ebdfea85c2ff2
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: e1a913f008037673bf8c10e73095a898610039d3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82914606"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97256355"
 ---
 # <a name="_msize"></a>_msize
 
@@ -55,21 +56,21 @@ size_t _msize(
 
 ## <a name="return-value"></a>戻り値
 
-**_msize**は、符号なし整数としてサイズ (バイト単位) を返します。
+**_msize** は、符号なし整数としてサイズ (バイト単位) を返します。
 
 ## <a name="remarks"></a>解説
 
-**_Msize**関数は、 **calloc**、 **malloc**、または**realloc**への呼び出しによって割り当てられたメモリブロックのサイズ (バイト単位) を返します。
+**_Msize** 関数は、 **calloc**、 **malloc**、または **realloc** への呼び出しによって割り当てられたメモリブロックのサイズ (バイト単位) を返します。
 
-アプリケーションが C ランタイムライブラリのデバッグバージョンにリンクされている場合、 **_msize**は[_msize_dbg](msize-dbg.md)に解決されます。 デバッグ プロセス中のヒープの管理方法の詳細については、「[CRT デバッグ ヒープ](/visualstudio/debugger/crt-debug-heap-details)」を参照してください。
+アプリケーションが C ランタイムライブラリのデバッグバージョンにリンクされている場合、 **_msize** は [_msize_dbg](msize-dbg.md)に解決されます。 デバッグ プロセス中のヒープの管理方法の詳細については、「[CRT デバッグ ヒープ](/visualstudio/debugger/crt-debug-heap-details)」を参照してください。
 
-この関数は、そのパラメーターを検証します。 *Memblock*が null ポインターの場合、 **_Msize**は「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーを呼び出します。 エラーが処理された場合、関数は**errno**を**EINVAL**に設定し、-1 を返します。
+この関数は、そのパラメーターを検証します。 *Memblock* が null ポインターの場合、 **_Msize** は「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーを呼び出します。 エラーが処理された場合、関数は **errno** を **EINVAL** に設定し、-1 を返します。
 
 既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**_msize**|\<malloc.h>|
 

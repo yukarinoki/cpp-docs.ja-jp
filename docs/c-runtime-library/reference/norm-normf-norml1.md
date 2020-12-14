@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「標準、normf、norml」を参照してください。
 title: norm、normf、norml
 ms.date: 04/05/2018
 api_name:
@@ -33,12 +34,12 @@ helpviewer_keywords:
 - normf function
 - norml function
 ms.assetid: 9786ecfe-0019-4553-b378-0af6c691e15c
-ms.openlocfilehash: 38e7283ca5acd5571589d3ef0b19c626806e4bca
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 175cff5f9c0e31a56a86a96c3262e2c3c546fe4a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87234056"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97256303"
 ---
 # <a name="norm-normf-norml"></a>norm、normf、norml
 
@@ -59,16 +60,16 @@ long double norm( _Lcomplex z );  // C++ only
 
 ### <a name="parameters"></a>パラメーター
 
-*方向*<br/>
+*z*<br/>
 複素数。
 
 ## <a name="return-value"></a>戻り値
 
-*Z*の二乗の大きさ。
+*Z* の二乗の大きさ。
 
 ## <a name="remarks"></a>解説
 
-C++ ではオーバーロードが可能であるため、 **_Fcomplex**または **_Lcomplex**値を受け取り、または値を返す**基準**のオーバーロードを呼び出すことができ **`float`** **`long double`** ます。 C プログラムでは、**標準**は常に **_Dcomplex**値を受け取り、 **`double`** 値を返します。
+C++ ではオーバーロードが可能であるため、 **_Fcomplex** または **_Lcomplex** 値を受け取り、または値を返す **基準** のオーバーロードを呼び出すことができ **`float`** **`long double`** ます。 C プログラムでは、 **標準** は常に **_Dcomplex** 値を受け取り、 **`double`** 値を返します。
 
 ## <a name="requirements"></a>必要条件
 
@@ -76,7 +77,7 @@ C++ ではオーバーロードが可能であるため、 **_Fcomplex**また�
 |-------------|--------------|------------------|
 |**標準**、 **normf**、 **norml**|\<complex.h>|\<complex.h>|
 
-**_Fcomplex**、 **_Dcomplex**、および **_Lcomplex**型は、それぞれ、実装されていないネイティブ C99 型**float _Complex**、 **double _Complex**、および**long double _Complex**に相当する、Microsoft 固有のものです。  互換性について詳しくは、「 [Compatibility](../../c-runtime-library/compatibility.md)」をご覧ください。
+**_Fcomplex**、 **_Dcomplex**、および **_Lcomplex** 型は、それぞれ、実装されていないネイティブ C99 型 **float _Complex**、 **double _Complex**、および **long double _Complex** に相当する、Microsoft 固有のものです。  互換性について詳しくは、「 [Compatibility](../../c-runtime-library/compatibility.md)」をご覧ください。
 
 ## <a name="see-also"></a>関連項目
 

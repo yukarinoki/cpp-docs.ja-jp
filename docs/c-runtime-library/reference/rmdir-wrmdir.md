@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: _rmdir、_wrmdir'
 title: _rmdir、_wrmdir
 ms.date: 4/2/2020
 api_name:
@@ -39,12 +40,12 @@ helpviewer_keywords:
 - _wrmdir function
 - wrmdir function
 ms.assetid: 652c2a5a-b0ac-4493-864e-1edf484333c5
-ms.openlocfilehash: c0c5055a499614f364370b7aa90697898dc510ab
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: c17324d5d2125f4f664140684c4f082181742700
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82916924"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97250309"
 ---
 # <a name="_rmdir-_wrmdir"></a>_rmdir、_wrmdir
 
@@ -68,7 +69,7 @@ int _wrmdir(
 
 ## <a name="return-value"></a>戻り値
 
-ディレクトリが正常に削除された場合、これらの関数はそれぞれ 0 を返します。 戻り値-1 はエラーを示し、 **errno**は次のいずれかの値に設定されます。
+ディレクトリが正常に削除された場合、これらの関数はそれぞれ 0 を返します。 戻り値-1 はエラーを示し、 **errno** は次のいずれかの値に設定されます。
 
 |errno の値|条件|
 |-|-|
@@ -80,9 +81,9 @@ int _wrmdir(
 
 ## <a name="remarks"></a>解説
 
-**_Rmdir**関数は、 *dirname*によって指定されたディレクトリを削除します。 ディレクトリは空である必要があり、現在の作業ディレクトリまたはルート ディレクトリではないことが必要です。
+**_Rmdir** 関数は、 *dirname* によって指定されたディレクトリを削除します。 ディレクトリは空である必要があり、現在の作業ディレクトリまたはルート ディレクトリではないことが必要です。
 
-**_wrmdir**は **_rmdir**のワイド文字バージョンです。**_wrmdir**の*dirname*引数は、ワイド文字列です。 **_wrmdir**と **_rmdir**は同じように動作します。
+**_wrmdir** は **_rmdir** のワイド文字バージョンです。**_wrmdir** の *dirname* 引数は、ワイド文字列です。 **_wrmdir** と **_rmdir** は同じように動作します。
 
 既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
@@ -94,7 +95,7 @@ int _wrmdir(
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**_rmdir**|\<direct.h>|
 |**_wrmdir**|\<direct.h> または \<wchar.h>|
@@ -111,6 +112,6 @@ int _wrmdir(
 
 ## <a name="see-also"></a>関連項目
 
-[ディレクトリ制御](../../c-runtime-library/directory-control.md)<br/>
+[ディレクトリコントロール](../../c-runtime-library/directory-control.md)<br/>
 [_chdir、_wchdir](chdir-wchdir.md)<br/>
 [_mkdir、_wmkdir](mkdir-wmkdir.md)<br/>

@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「getchar、getwchar」を参照してください。
 title: getchar、getwchar
 ms.date: 06/23/2020
 api_name:
@@ -33,12 +34,12 @@ helpviewer_keywords:
 - _gettchar function
 - standard input, reading from
 ms.assetid: 19fda588-3e33-415c-bb60-dd73c028086a
-ms.openlocfilehash: c6a02f16c3ee3d3e3bc4f86026719a1bd2885416
-ms.sourcegitcommit: 8645408c7929558b8162f781776d0908d790a41c
+ms.openlocfilehash: d8480d179cc31d30d68c07fbe92bf389226ccd53
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85334976"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97256758"
 ---
 # <a name="getchar-getwchar"></a>getchar、getwchar
 
@@ -55,11 +56,11 @@ wint_t getwchar();
 
 読み取られた文字を返します。 これらの関数は入力を待機し、入力が使用可能になるまで戻りません。
 
-読み取りエラーまたはファイルの終端状態を示すために、 **getchar**は**EOF**を返し、 **getwchar**は**WEOF**を返します。 **Getchar**の場合は、 **ferror**または**feof**を使用して、エラーまたはファイルの終端を確認します。
+読み取りエラーまたはファイルの終端状態を示すために、 **getchar** は **EOF** を返し、 **getwchar** は **WEOF** を返します。 **Getchar** の場合は、 **ferror** または **feof** を使用して、エラーまたはファイルの終端を確認します。
 
-## <a name="remarks"></a>注釈
+## <a name="remarks"></a>解説
 
-各ルーチンは、 **stdin**から1文字を読み取り、関連付けられているファイルポインターが次の文字を指すようにインクリメントします。 **getchar**は[_fgetchar](fgetc-fgetwc.md)と同じですが、関数およびマクロとして実装されます。
+各ルーチンは、 **stdin** から1文字を読み取り、関連付けられているファイルポインターが次の文字を指すようにインクリメントします。 **getchar** は [_fgetchar](fgetc-fgetwc.md)と同じですが、関数およびマクロとして実装されます。
 
 これらの関数は、呼び出し元のスレッドもロックし、スレッドセーフです。 ロックしないバージョンについては、「[_getchar_nolock、_getwchar_nolock](getchar-nolock-getwchar-nolock.md)」をご覧ください。
 
@@ -78,7 +79,7 @@ wint_t getwchar();
 |**getchar**|\<stdio.h>|
 |**getwchar**|\<stdio.h> または \<wchar.h>|
 
-コンソールは、ユニバーサル Windows プラットフォーム (UWP) アプリではサポートされていません。 コンソール、 **stdin**、 **stdout**、および**stderr**に関連付けられている標準ストリームハンドルは、C ランタイム関数が UWP アプリで使用できるようになる前にリダイレクトする必要があります。 互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+コンソールは、ユニバーサル Windows プラットフォーム (UWP) アプリではサポートされていません。 コンソール、 **stdin**、 **stdout**、および **stderr** に関連付けられている標準ストリームハンドルは、C ランタイム関数が UWP アプリで使用できるようになる前にリダイレクトする必要があります。 互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
 ## <a name="example"></a>例
 

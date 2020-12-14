@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「nan、nanf、nanl」を参照してください。
 title: nan、nanf、nanl
 ms.date: 4/2/2020
 api_name:
@@ -34,12 +35,12 @@ helpviewer_keywords:
 - nanf function
 - nanl function
 ms.assetid: 790e9158-80ab-43e0-8f5a-096198553fd9
-ms.openlocfilehash: 77e933b971312097ec9eddd342b3b4dc2df34204
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 3fd5fcb004058baf8d216385cde023033f29f08f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82914586"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97256329"
 ---
 # <a name="nan-nanf-nanl"></a>nan、nanf、nanl
 
@@ -60,23 +61,23 @@ long double nanl( const char* input );
 
 ## <a name="return-value"></a>戻り値
 
-**Nan**関数は、簡易な nan 値を返します。
+**Nan** 関数は、簡易な nan 値を返します。
 
 ## <a name="remarks"></a>解説
 
-**Nan**関数は、非表示の (非シグナル) nan に対応する浮動小数点値を返します。 *入力*値は無視されます。 出力で NaN が表現される方法の詳細については、「[printf、_printf_l、wprintf、_wprintf_l](printf-printf-l-wprintf-wprintf-l.md)」をご覧ください。
+**Nan** 関数は、非表示の (非シグナル) nan に対応する浮動小数点値を返します。 *入力* 値は無視されます。 出力で NaN が表現される方法の詳細については、「[printf、_printf_l、wprintf、_wprintf_l](printf-printf-l-wprintf-wprintf-l.md)」をご覧ください。
 
 既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-|関数|C ヘッダー|C++ ヘッダー|
+|機能|C ヘッダー|C++ ヘッダー|
 |--------------|--------------|------------------|
 |**nan**、 **nanf**、 **nanl**|\<math.h>|\<cmath> または \<math.h>|
 
 ## <a name="see-also"></a>関連項目
 
-[浮動小数点サポート](../../c-runtime-library/floating-point-support.md)<br/>
+[浮動小数点のサポート](../../c-runtime-library/floating-point-support.md)<br/>
 [fpclassify](fpclassify.md)<br/>
 [_fpclass、_fpclassf](fpclass-fpclassf.md)<br/>
 [isfinite、_finite、_finitef](finite-finitef.md)<br/>
