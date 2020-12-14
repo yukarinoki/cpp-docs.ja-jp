@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「コンパイラエラー C3641」を参照してください。
 title: コンパイラ エラー C3641
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3641
 ms.assetid: e8d3613e-5e8d-46fe-a516-eb7d1de7cd21
-ms.openlocfilehash: 44356fb1a1818a02102d23e6b308457f2f39506b
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 391994a5207fe27cea0b33e6d03e5a1fdc30f6c0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80200513"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97239104"
 ---
 # <a name="compiler-error-c3641"></a>コンパイラ エラー C3641
 
@@ -19,7 +20,7 @@ ms.locfileid: "80200513"
 
 ## <a name="remarks"></a>解説
 
-**/Clr: pure**および **/clr: safe**コンパイラオプションは visual studio 2015 で非推奨とされており、visual studio 2017 ではサポートされていません。
+**/Clr: pure** および **/clr: safe** コンパイラオプションは visual studio 2015 で非推奨とされており、visual studio 2017 ではサポートされていません。
 
 [/Clr: pure](../../build/reference/clr-common-language-runtime-compilation.md)と共に使用できるのは[__clrcall](../../cpp/clrcall.md)呼び出し規約だけです。
 

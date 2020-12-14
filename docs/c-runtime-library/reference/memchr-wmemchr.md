@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「memchr、wmemchr」を参照してください。
 title: memchr、wmemchr
 ms.date: 03/31/2019
 api_name:
@@ -27,12 +28,12 @@ helpviewer_keywords:
 - memchr function
 - wmemchr function
 ms.assetid: 5a348581-28f1-4256-8434-687245f7fc9f
-ms.openlocfilehash: b4640004526eda4ff26e9601e15298bcb8ba3c79
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 695973fd9551758de6c0638493057b31e9a74aab
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87232470"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97240001"
 ---
 # <a name="memchr-wmemchr"></a>memchr、wmemchr
 
@@ -78,7 +79,7 @@ const wchar_t *wmemchr(
 *格納*<br/>
 バッファーへのポインター。
 
-*40u-c*<br/>
+*c*<br/>
 検索する文字。
 
 *count*<br/>
@@ -86,11 +87,11 @@ const wchar_t *wmemchr(
 
 ## <a name="return-value"></a>戻り値
 
-成功した場合は、*バッファー*内の*c*の最初の位置へのポインターを返します。 それ以外の場合は、NULL を返します。
+成功した場合は、*バッファー* 内の *c* の最初の位置へのポインターを返します。 それ以外の場合は、NULL を返します。
 
 ## <a name="remarks"></a>解説
 
-`memchr``wmemchr`次に、 *buffer*の最初の*count*文字で*c*の最初の出現箇所を探します。 *C*が見つかったとき、または最初の*カウント*文字をチェックしたときに停止します。
+`memchr``wmemchr`次に、 *buffer* の最初の *count* 文字で *c* の最初の出現箇所を探します。 *C* が見つかったとき、または最初の *カウント* 文字をチェックしたときに停止します。
 
 C では、これらの関数は **`const`** 最初の引数のポインターを受け取ります。 C++ では、2 つのオーバーロードを使用できます。 へのポインターを受け取るオーバーロードでは、 **`const`** へのポインターが返されます。非へのポインターを受け取るバージョンでは、以外のへのポインターが **`const`** **`const`** 返され **`const`** ます。 マクロ \_ CRT \_ CONST \_ 正しい \_ オーバーロードは、 **`const`** **`const`** これらの関数のバージョンと非バージョンの両方が使用可能な場合に定義されます。 **`const`** C++ の両方の c++ オーバーロードに対して非動作が必要な場合は、CONST RETURN シンボルを定義し \_ \_ ます。
 

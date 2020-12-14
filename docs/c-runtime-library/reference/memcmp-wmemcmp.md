@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「memcmp、wmemcmp」を参照してください。
 title: memcmp、wmemcmp
 ms.date: 11/04/2016
 api_name:
@@ -28,12 +29,12 @@ helpviewer_keywords:
 - wmemcmp function
 - memcmp function
 ms.assetid: 0c21c3e3-8ee4-40e5-add1-eb26d225fd8d
-ms.openlocfilehash: b18479e50d5b35c8de3dfd11eb34d0d21d45f223
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 65489d99e0c17e4971a4fa7cf849990b860ad361
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87232457"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97239988"
 ---
 # <a name="memcmp-wmemcmp"></a>memcmp、wmemcmp
 
@@ -63,21 +64,21 @@ int wmemcmp(
 2 番目のバッファー。
 
 *count*<br/>
-比較する文字数 ( **Memcmp**のバイト数、 **wmemcmp**の場合はワイド文字を比較します)。
+比較する文字数 ( **Memcmp** のバイト数、 **wmemcmp** の場合はワイド文字を比較します)。
 
 ## <a name="return-value"></a>戻り値
 
 戻り値は、バッファー間の関係を示しています。
 
-|戻り値|Buf1 と buf2 の最初の*カウント*文字の関係|
+|戻り値|Buf1 と buf2 の最初の *カウント* 文字の関係|
 |------------------|---------------------------------------------------------------|
-|< 0|*buffer1*未満*buffer2*|
-|0|*buffer1*は*buffer2*と同じです。|
-|> 0|*buffer1* *buffer2*より大きい|
+|< 0|*buffer1* 未満 *buffer2*|
+|0|*buffer1* は *buffer2* と同じです。|
+|> 0|*buffer1* *buffer2* より大きい|
 
 ## <a name="remarks"></a>解説
 
-*Buffer1*と*buffer2*の最初の*カウント*文字を比較し、それらの関係を示す値を返します。 ゼロ以外の戻り値の符号は、バッファー間で最初に異なる値のペアの差の符号です。 値は、memcmp の場合と同様に解釈され、 **`unsigned char`** **memcmp** **`wchar_t`** **wmemcmp**の場合と同様に解釈されます。
+*Buffer1* と *buffer2* の最初の *カウント* 文字を比較し、それらの関係を示す値を返します。 ゼロ以外の戻り値の符号は、バッファー間で最初に異なる値のペアの差の符号です。 値は、memcmp の場合と同様に解釈され、 **`unsigned char`**  **`wchar_t`** **wmemcmp** の場合と同様に解釈されます。
 
 ## <a name="requirements"></a>必要条件
 

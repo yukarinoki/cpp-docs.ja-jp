@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: _memccpy'
 title: _memccpy
 ms.date: 11/04/2016
 api_name:
@@ -25,12 +26,12 @@ helpviewer_keywords:
 - _memccpy function
 - memccpy function
 ms.assetid: 9a2337df-6e85-4eba-b247-dd0532f45ddb
-ms.openlocfilehash: 097cefb504ffcdbfbe6bf131d5e8b1837d11a47a
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: f3cbfbd1e112c724d6223a6c6d28f0915dcd7ca0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70951966"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97240092"
 ---
 # <a name="_memccpy"></a>_memccpy
 
@@ -49,7 +50,7 @@ void *_memccpy(
 
 ### <a name="parameters"></a>パラメーター
 
-*dest*<br/>
+*先*<br/>
 ターゲットへのポインター。
 
 *src*<br/>
@@ -63,11 +64,11 @@ void *_memccpy(
 
 ## <a name="return-value"></a>戻り値
 
-文字*c*がコピーされた場合、 **_memccpy**は、その文字の直後にある*dest*の char へのポインターを返します。 *C*がコピーされない場合は、 **NULL**を返します。
+文字 *c* がコピーされた場合、 **_memccpy** は、文字の直後にある *dest* の文字へのポインターを返します。 *C* がコピーされない場合は、 **NULL** を返します。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-**_Memccpy**関数は、 *src*の0個以上の文字を*dest*にコピーし、文字*c*がコピーされたとき、または*カウント*文字がコピーされたときに、どちらか早い方を停止します。
+**_Memccpy** 関数は、 *src* の0個以上の文字を *dest* にコピーし、文字 *c* がコピーされたとき、または *カウント* 文字がコピーされたときに、どちらか早い方の時点で停止します。
 
 **セキュリティに関するメモ** コピー先のバッファーのサイズがソース バッファー以上であることをご確認ください。 詳しくは、「 [バッファー オーバーランの回避](/windows/win32/SecBP/avoiding-buffer-overruns)」をご覧ください。
 
@@ -77,7 +78,7 @@ void *_memccpy(
 |-------------|---------------------|
 |**_memccpy**|\<memory.h> または \<string.h>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性について詳しくは、「 [Compatibility](../../c-runtime-library/compatibility.md)」をご覧ください。
 
 ## <a name="libraries"></a>ライブラリ
 
@@ -108,7 +109,7 @@ int main( void )
 }
 ```
 
-### <a name="output"></a>Output
+### <a name="output"></a>出力
 
 ```Output
 Function: _memccpy 60 characters or to character 's'

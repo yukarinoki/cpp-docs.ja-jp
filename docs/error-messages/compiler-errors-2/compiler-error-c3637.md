@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「コンパイラエラー C3637」を参照してください。
 title: コンパイラ エラー C3637
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3637
 ms.assetid: 72391377-8519-43d9-870a-73a6423deb74
-ms.openlocfilehash: 84bb6717a563db20b2ce0c66f301d8e38d7722c1
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: d62612778690984245d6b90fc1449177ec5f8d2c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74742549"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97239208"
 ---
 # <a name="compiler-error-c3637"></a>コンパイラ エラー C3637
 
@@ -31,7 +32,7 @@ struct S {
 };
 ```
 
-解決方法:
+考えられる解決策:
 
 ```cpp
 // C3637b.cpp
@@ -58,7 +59,7 @@ struct S {
 };
 ```
 
-解決方法:
+考えられる解決策:
 
 ```cpp
 // C3637d.cpp

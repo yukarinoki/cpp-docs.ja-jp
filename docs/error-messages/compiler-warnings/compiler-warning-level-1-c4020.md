@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: コンパイラの警告 (レベル 1) C4020'
 title: コンパイラの警告 (レベル 1) C4020
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4020
 ms.assetid: 8c4cd6be-9371-4c8c-b0ff-a5ad367bbab0
-ms.openlocfilehash: 2136e94a261b2f767165e43acfd66583e8d15e9f
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 454bab1eb8a3d1da6d0fe8bf508de8c466d22001
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80164587"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97241574"
 ---
 # <a name="compiler-warning-level-1-c4020"></a>コンパイラの警告 (レベル 1) C4020
 
@@ -30,7 +31,7 @@ int main() {
 }
 ```
 
-考えられる解決方法:
+考えられる解決策:
 
 ```c
 // C4020b.c

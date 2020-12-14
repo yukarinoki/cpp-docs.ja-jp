@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: コンパイラの警告 (レベル 2) C4244'
 title: コンパイラの警告 (レベル 2) C4244
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4244
 ms.assetid: 2c19d157-21d1-42c2-a6c0-3f30f2ce3813
-ms.openlocfilehash: a07adf37314a11cceb72d6675a66d82f7554bbb6
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: b51af5179c9afbf01529f545bbc602ac9c9fac6d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80162063"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97238129"
 ---
 # <a name="compiler-warning-level-2-c4244"></a>コンパイラの警告 (レベル 2) C4244
 
@@ -21,7 +22,7 @@ ms.locfileid: "80162063"
 
 C4244 の場合は、互換性のある型を使用するようにプログラムを変更するか、別のロジックをコードに追加して、変換される値の範囲が使用している型と常に互換性があるようにします。
 
-C4244 は、レベル3、および4でも起動できます。詳細については[、「コンパイラの警告 (レベル3および 4) C4244](../../error-messages/compiler-warnings/compiler-warning-levels-3-and-4-c4244.md) 」を参照してください。
+C4244 は、レベル3、および4でも起動できます。詳細については [、「コンパイラの警告 (レベル3および 4) C4244](../../error-messages/compiler-warnings/compiler-warning-levels-3-and-4-c4244.md) 」を参照してください。
 
 ## <a name="example"></a>例
 

@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「コンパイラエラー C3638」を参照してください。
 title: コンパイラ エラー C3638
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3638
 ms.assetid: 8d8bc5ca-75aa-480e-b6b6-3178fab51b1d
-ms.openlocfilehash: f8d67ac0ff6a1fa5d9efbb8d85747ff94d75c648
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 1d1cc59cd8065a5b0e661292b717ba885c6febeb
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74742497"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97239195"
 ---
 # <a name="compiler-error-c3638"></a>コンパイラ エラー C3638
 
@@ -19,7 +20,7 @@ ms.locfileid: "74742497"
 
 コンパイラは、暗黙的なボックス化をサポートするために、各マネージクラスの変換演算子を定義します。 この演算子を再定義することはできません。
 
-詳細については、「[暗黙的なボックス](../../extensions/boxing-cpp-component-extensions.md)化」を参照してください。
+詳細については、「 [暗黙的なボックス](../../extensions/boxing-cpp-component-extensions.md)化」を参照してください。
 
 次の例では、C3638 が生成されます。
 

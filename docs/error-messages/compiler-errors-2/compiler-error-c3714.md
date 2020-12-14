@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「コンパイラエラー C3714」を参照してください。
 title: コンパイラ エラー C3714
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3714
 ms.assetid: 17718f75-5a37-4e42-912b-487e91008a95
-ms.openlocfilehash: 1078bf8a97f6cb7afeaf7046489fe262c0bb0199
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: a01544558a156b746c16e731584e30bab7a77825
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74753329"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97241626"
 ---
 # <a name="compiler-error-c3714"></a>コンパイラ エラー C3714
 
 ' method ': イベントハンドラーメソッドは、ソース ' method ' と同じ呼び出し規約を指定しなければなりません
 
-ソースイベントメソッドと同じ呼び出し規約を使用していないイベントハンドラーメソッドを定義しました。 このエラーを解決するには、イベントハンドラーメソッドに、source イベントメソッドと同じ呼び出し規約を指定します。 たとえば、次のコードでは、`handler1` の呼び出し規則を作成し、`event1` ([__cdecl](../../cpp/cdecl.md)または[__stdcall](../../cpp/stdcall.md)など) に一致させます。 両方の宣言から呼び出し規約キーワードを削除すると、問題も解決され、`event1` と `handler1` が既定で[thiscall](../../cpp/thiscall.md)呼び出し規約になります。 詳細については、「[呼び出し規約](../../cpp/calling-conventions.md)」を参照してください。
+ソースイベントメソッドと同じ呼び出し規約を使用していないイベントハンドラーメソッドを定義しました。 このエラーを解決するには、イベントハンドラーメソッドに、source イベントメソッドと同じ呼び出し規約を指定します。 たとえば、次のコードでは、との呼び出し規約を `handler1` `event1` 一致させます ([__cdecl](../../cpp/cdecl.md) または他の [__stdcall](../../cpp/stdcall.md) )。 両方の宣言から呼び出し規約キーワードを削除すると、問題も解決され、 `event1` とが `handler1` 既定で [thiscall](../../cpp/thiscall.md) 呼び出し規約になります。 詳細については、「 [呼び出し規約](../../cpp/calling-conventions.md) 」を参照してください。
 
 次の例では、C3714 が生成されます。
 

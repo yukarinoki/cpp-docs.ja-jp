@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: コンパイラの警告 (レベル 1) C4691'
 title: コンパイラの警告 (レベル 1) C4691
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4691
 ms.assetid: 722133d9-87f6-46c1-9e86-9825453d6999
-ms.openlocfilehash: 6a4d1de621983794acfae4de7707ba127df9a1b7
-ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
+ms.openlocfilehash: 3235b32a071e6b6a2a0afab122978f9fcb7e112a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90685568"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97238272"
 ---
 # <a name="compiler-warning-level-1-c4691"></a>コンパイラの警告 (レベル 1) C4691
 
@@ -19,7 +20,7 @@ ms.locfileid: "90685568"
 
 元の型定義を含むメタデータファイルが参照されていないため、コンパイラはローカル型定義を使用しています。
 
-*ファイル*を再構築する場合は、C4691 を無視することも、プラグマ[警告](../../preprocessor/warning.md)を使用して無効にすることもできます。  つまり、ビルドするファイルが、コンパイラが型定義を検索するファイルと同じである場合は、C4691 を無視できます。
+*ファイル* を再構築する場合は、C4691 を無視することも、プラグマ [警告](../../preprocessor/warning.md)を使用して無効にすることもできます。  つまり、ビルドするファイルが、コンパイラが型定義を検索するファイルと同じである場合は、C4691 を無視できます。
 
 ただし、メタデータで参照されているアセンブリとは異なる定義をコンパイラが使用すると、予期しない動作が発生する可能性があります。CLR 型は、型の名前だけでなく、アセンブリによっても型指定されます。  つまり、アセンブリ z.dll からの型 Z は、アセンブリ y.dll の型 Z とは異なります。
 

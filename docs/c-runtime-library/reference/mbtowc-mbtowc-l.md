@@ -1,4 +1,5 @@
 ---
+description: 詳細については、mbtowc、_mbtowc_l を参照してください。
 title: mbtowc、_mbtowc_l
 ms.date: 4/2/2020
 api_name:
@@ -32,12 +33,12 @@ helpviewer_keywords:
 - _mbtowc_l function
 - mbtowc_l function
 ms.assetid: dfd1c8a7-e73a-4307-9353-53b70b45d4d1
-ms.openlocfilehash: 9502de7b12394277b01a18caca48a7e783efaf4e
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 8f6ffbd6596e987cd0ec6ba560e4e44da13cf7b5
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87232483"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97240105"
 ---
 # <a name="mbtowc-_mbtowc_l"></a>mbtowc、_mbtowc_l
 
@@ -75,11 +76,11 @@ int _mbtowc_l(
 
 ## <a name="return-value"></a>戻り値
 
-**Mbchar**が**NULL**ではなく、 *mbchar*が参照するオブジェクトが有効なマルチバイト文字を指している場合、 **mbtowc**はマルチバイト文字の長さをバイト単位で返します。 *Mbchar*が**null**の場合、または参照先のオブジェクトがワイド文字の null 文字 (L ' \ 0 ') の場合、関数は0を返します。 *Mbchar*が指すオブジェクトが、最初の*カウント*文字の中で有効なマルチバイト文字を形成していない場合は、-1 を返します。
+**Mbchar** が **NULL** ではなく、 *mbchar* が参照するオブジェクトが有効なマルチバイト文字を指している場合、 **mbtowc** はマルチバイト文字の長さをバイト単位で返します。 *Mbchar* が **null** の場合、または参照先のオブジェクトがワイド文字の null 文字 (L ' \ 0 ') の場合、関数は0を返します。 *Mbchar* が指すオブジェクトが、最初の *カウント* 文字の中で有効なマルチバイト文字を形成していない場合は、-1 を返します。
 
 ## <a name="remarks"></a>解説
 
-**Mbtowc**関数は *、Mbchar が* **NULL**ではない場合に、 *mbchar*が指すバイト数を、対応するワイド文字*に変換し*ます。 **mbtowc**は、 *wchar*が**NULL**でない場合、結果のワイド文字を*wchar*に格納します。 **mbtowc**は、 **MB_CUR_MAX**バイトを超えているかどうかを確認しません。 **mbtowc**は、ロケールに依存する動作に現在のロケールを使用します。**_mbtowc_l**は、渡されたロケールを代わりに使用する点を除いて同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
+**Mbtowc** 関数は *、Mbchar が* **NULL** ではない場合に、 *mbchar* が指すバイト数を、対応するワイド文字 *に変換し* ます。 **mbtowc** は、 *wchar* が **NULL** でない場合、結果のワイド文字を *wchar* に格納します。 **mbtowc** は、 **MB_CUR_MAX** バイトを超えているかどうかを確認しません。 **mbtowc** は、ロケールに依存する動作に現在のロケールを使用します。 **_mbtowc_l** は、渡されたロケールを代わりに使用する点を除いて同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
 
 既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
@@ -157,7 +158,7 @@ Attempt to convert a NULL pointer to a wide character:
 [データ変換](../../c-runtime-library/data-conversion.md)<br/>
 [MultiByteToWideChar](/windows/win32/api/stringapiset/nf-stringapiset-multibytetowidechar)<br/>
 [ロケール](../../c-runtime-library/locale.md)<br/>
-[マルチバイト文字のシーケンスの解釈](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[Multibyte-Character シーケンスの解釈](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [_mbclen、mblen、_mblen_l](mbclen-mblen-mblen-l.md)<br/>
 [wcstombs、_wcstombs_l](wcstombs-wcstombs-l.md)<br/>
 [wctomb、_wctomb_l](wctomb-wctomb-l.md)<br/>

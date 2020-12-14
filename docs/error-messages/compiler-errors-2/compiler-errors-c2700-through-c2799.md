@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「コンパイラエラー C2700 ~ C2799」を参照してください。
 title: コンパイラ エラー (C2700 - C2799)
 ms.date: 04/21/2019
 f1_keywords:
@@ -40,12 +41,12 @@ helpviewer_keywords:
 - C2796
 - C2799
 ms.assetid: 6ee257bb-94bc-42b9-af2c-3c73926afba4
-ms.openlocfilehash: 174f6a9c8ec9e44deadfca090ba492cb32d53e9f
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: f9093c7cbdc884b23bef77fb8206a80e081dc4f2
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87197515"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97238857"
 ---
 # <a name="compiler-errors-c2700-through-c2799"></a>コンパイラ エラー (C2700 - C2799)
 
@@ -71,16 +72,16 @@ ms.locfileid: "87197515"
 |[コンパイラ エラー C2711](compiler-error-c2711.md)|'*function*': この関数はマネージとしてコンパイルできません。 #pragma アンマネージドを使用することを検討してください|
 |[コンパイラ エラー C2712](compiler-error-c2712.md)|オブジェクトのアンワインドを必要とする関数では __try を使用できません|
 |[コンパイラ エラー C2713](compiler-error-c2713.md)|関数ごとに許可されている例外処理の形式は1つだけです|
-|[コンパイラ エラー C2714](compiler-error-c2714.md)| `alignof(void)`使用できません|
+|[コンパイラ エラー C2714](compiler-error-c2714.md)| `alignof(void)` 使用できません|
 |[コンパイラ エラー C2715](compiler-error-c2715.md)|'*type*': この型をスローまたはキャッチできません|
 |コンパイラエラー C2716|互換性のために残されています。|
 |コンパイラエラー C2717|互換性のために残されています。|
-|[コンパイラ エラー C2718](compiler-error-c2718.md)|'*type*':*数値*の配置を要求した実際のパラメーターは配置されません|
-|[コンパイラ エラー C2719](compiler-error-c2719.md)|'*parameter*':*数値*の配置を要求された仮パラメーターは配置されません|
-|[コンパイラ エラー C2720](compiler-error-c2720.md)|'*identifier*': '*指定*子 ' ストレージクラスの指定子がメンバーに対して無効です。|
+|[コンパイラ エラー C2718](compiler-error-c2718.md)|'*type*': *数値* の配置を要求した実際のパラメーターは配置されません|
+|[コンパイラ エラー C2719](compiler-error-c2719.md)|'*parameter*': *数値* の配置を要求された仮パラメーターは配置されません|
+|[コンパイラ エラー C2720](compiler-error-c2720.md)|'*identifier*': '*指定* 子 ' ストレージクラスの指定子がメンバーに対して無効です。|
 |[コンパイラ エラー C2721](compiler-error-c2721.md)|'*指定子*': ストレージクラス指定子が演算子キーワードと型の間で正しくありません|
 |[コンパイラ エラー C2722](compiler-error-c2722.md)|'::*operator*': 次の演算子コマンドが正しくありません。' operator *operator*' を使用します|
-|[コンパイラ エラー C2723](compiler-error-c2723.md)|'*function*': '*指定*子 ' 指定子が関数定義で正しくありません。|
+|[コンパイラ エラー C2723](compiler-error-c2723.md)|'*function*': '*指定* 子 ' 指定子が関数定義で正しくありません。|
 |[コンパイラ エラー C2724](compiler-error-c2724.md)|'*function*': ' static ' は、ファイルスコープで定義されているメンバー関数では使用できません|
 |[コンパイラ エラー C2725](compiler-error-c2725.md)|'*type*': マネージ/WinRT オブジェクトを値または参照渡しでスローまたはキャッチできません|
 |[コンパイラ エラー C2726](compiler-error-c2726.md)|' gcnew ' は、マネージド/WinRT 型のオブジェクトの作成にのみ使用できます|
@@ -124,7 +125,7 @@ ms.locfileid: "87197515"
 |[コンパイラ エラー C2764](compiler-error-c2764.md)|'*parameter*': テンプレートパラメーターが、部分的特殊化 '*特殊化*' で使用されていないか、推論できされています。|
 |[コンパイラ エラー C2765](compiler-error-c2765.md)|'*function*': 関数テンプレートの明示的な特殊化に既定の引数を指定することはできません|
 |[コンパイラ エラー C2766](compiler-error-c2766.md)|明示的特殊化。'*特殊化*' は既に定義されています|
-|[コンパイラ エラー C2767](compiler-error-c2767.md)|マネージド/WinRT 配列の次元の不一致: 予期された*数*の引数*が指定さ*れています|
+|[コンパイラ エラー C2767](compiler-error-c2767.md)|マネージド/WinRT 配列の次元の不一致: 予期された *数* の引数 *が指定さ* れています|
 |[コンパイラ エラー C2768](compiler-error-c2768.md)|'*function*': 明示的なテンプレート引数が不適切に使用しています|
 |コンパイラエラー C2769|基本/メンバー初期化子リストでマネージ/WinRT 配列をかっこで初期化することはできません|
 |[コンパイラ エラー C2770](compiler-error-c2770.md)|'*template*' の明示的なテンプレートまたは汎用引数が無効です|
@@ -137,8 +138,8 @@ ms.locfileid: "87197515"
 |[コンパイラ エラー C2777](compiler-error-c2777.md)|プロパティごとに指定できる ' put ' メソッドは1つだけです|
 |[コンパイラ エラー C2778](compiler-error-c2778.md)|__declspec (uuid ()) の GUID の形式が正しくありません|
 |[コンパイラ エラー C2779](compiler-error-c2779.md)|'*宣言*': プロパティメソッドは、非静的データメンバーにのみ関連付けることができます|
-|[コンパイラ エラー C2780](compiler-error-c2780.md)|'*宣言*':*数値*の引数が必要です- *number*が指定されています|
-|[コンパイラ エラー C2781](compiler-error-c2781.md)|'*宣言*':*少なくと*も*number*引数が指定されている必要があります|
+|[コンパイラ エラー C2780](compiler-error-c2780.md)|'*宣言*': *数値* の引数が必要です- *number* が指定されています|
+|[コンパイラ エラー C2781](compiler-error-c2781.md)|'*宣言*':*少なくと* も *number* 引数が指定されている必要があります|
 |[コンパイラ エラー C2782](compiler-error-c2782.md)|'*宣言*': テンプレートまたはジェネリックパラメーター '*parameter*' があいまいです|
 |[コンパイラ エラー C2783](compiler-error-c2783.md)|'*宣言*': '*identifier*' のテンプレートまたはジェネリック引数を推測できませんでした|
 |[コンパイラ エラー C2784](compiler-error-c2784.md)|'*宣言*': ' type1 *' から*'*type1*' のテンプレートまたはジェネリック引数を推測できませんでした|

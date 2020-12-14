@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: 属性プログラミングに関する FAQ'
 title: 属性プログラミングの FAQ
 ms.date: 10/02/2018
 ms.topic: conceptual
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - attributes [C++/CLI], frequently asked questions
 - FAQs (frequently asked questions), attributed programming [C++]
 ms.assetid: a1b8349f-7f51-43c4-95ea-4edb6e5f243f
-ms.openlocfilehash: 70fbcc47884214fb998eb63ebfe50e445dbe95b8
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 7a3bdfc8749297d11c5bc33b706265a1f5913a69
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88843145"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97240430"
 ---
 # <a name="attribute-programming-faq"></a>属性プログラミングの FAQ
 
@@ -152,7 +153,7 @@ class CMyClass
 
 ## <a name="how-can-i-use-an-idl-file-in-an-attributed-project"></a><a name="vcconattributeprogrammmingfaqanchor6"></a> 属性付きのプロジェクトで .idl ファイルを使用するにはどうすればよいですか。
 
-ATL 属性プロジェクトで使用する .idl ファイルがある可能性があります。 この場合は、次のように、使用することによって、取り込む[tidl](importidl.md)属性を使用して .idl ファイルをコンパイルします (プロジェクトの [**プロパティページ**] ダイアログボックスの [ [MIDL] プロパティページ](../../build/reference/midl-property-pages.md)を参照してください)。次に、プロジェクトに .h ファイルを含めます。
+ATL 属性プロジェクトで使用する .idl ファイルがある可能性があります。 この場合は、次のように、使用することによって、取り込む [tidl](importidl.md)属性を使用して .idl ファイルをコンパイルします (プロジェクトの [**プロパティページ**] ダイアログボックスの [ [MIDL] プロパティページ](../../build/reference/midl-property-pages.md)を参照してください)。次に、プロジェクトに .h ファイルを含めます。
 
 ## <a name="can-i-modify-code-that-is-injected-by-an-attribute"></a><a name="vcconattributeprogrammmingfaqanchor7"></a> 属性によって挿入されたコードを変更できますか。
 

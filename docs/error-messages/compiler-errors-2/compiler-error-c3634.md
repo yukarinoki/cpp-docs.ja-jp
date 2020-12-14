@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「コンパイラエラー C3634」を参照してください。
 title: コンパイラ エラー C3634
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3634
 ms.assetid: fd09f10c-f863-483b-9756-71c16b760b02
-ms.openlocfilehash: 2abf5191035e450dca72777cdc2b2675ac9b90de
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 21407af8a86a3f82331d0f2a1d424457d8bee833
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74742588"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97239247"
 ---
 # <a name="compiler-error-c3634"></a>コンパイラ エラー C3634
 
@@ -19,7 +20,7 @@ ms.locfileid: "74742588"
 
 マネージド クラスまたは WinRT クラスで抽象メソッドを宣言することはできますが、定義することはできません。
 
-## <a name="example"></a>使用例
+## <a name="example"></a>例
 
 次の例では警告 C3634 が生成されます。
 

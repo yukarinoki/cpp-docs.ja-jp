@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: _mbsnbset_s、_mbsnbset_s_l'
 title: _mbsnbset_s、_mbsnbset_s_l
 ms.date: 4/2/2020
 api_name:
@@ -38,16 +39,16 @@ helpviewer_keywords:
 - _tcsnset_s function
 - tcsnset_s_l function
 ms.assetid: 811f92c9-cc31-4bbd-8017-2d1bfc6fb96f
-ms.openlocfilehash: b4880e774d6ad1b07052529461910ceff6897351
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: e8500de308d564b9e16ba5de29af67ee65b260e6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82915532"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97240196"
 ---
 # <a name="_mbsnbset_s-_mbsnbset_s_l"></a>_mbsnbset_s、_mbsnbset_s_l
 
-マルチバイト文字列の最初の**n**バイトを、指定した文字に設定します。 これらのバージョンの [_mbsnbset、_mbsnbset_l](mbsnbset-mbsnbset-l.md) は、「[CRT のセキュリティ機能](../../c-runtime-library/security-features-in-the-crt.md)」にあるとおり、セキュリティが強化されています。
+マルチバイト文字列の最初の **n** バイトを、指定した文字に設定します。 これらのバージョンの [_mbsnbset、_mbsnbset_l](mbsnbset-mbsnbset-l.md) は、「[CRT のセキュリティ機能](../../c-runtime-library/security-features-in-the-crt.md)」にあるとおり、セキュリティが強化されています。
 
 > [!IMPORTANT]
 > この API は、Windows ランタイムで実行するアプリケーションでは使用できません。 詳細については、「[ユニバーサル Windows プラットフォーム アプリでサポートされていない CRT 関数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)」を参照してください。
@@ -85,13 +86,13 @@ errno_t _mbsnbset_s_l(
 
 ### <a name="parameters"></a>パラメーター
 
-*引数*<br/>
+*str*<br/>
 変更対象の文字列。
 
 *size*<br/>
 文字列バッファーのサイズ。
 
-*40u-c*<br/>
+*c*<br/>
 1 バイトまたはマルチバイト文字の設定。
 
 *count*<br/>
@@ -106,13 +107,13 @@ errno_t _mbsnbset_s_l(
 
 ## <a name="remarks"></a>解説
 
-**_Mbsnbset_s**関数と **_mbsnbset_s_l**関数は、最大で*str*の最初の*count*バイトを*c*に設定します。 *Count*が*str*の長さよりも大きい場合、 *count*の代わりに*str*の長さが使用されます。 *C*がマルチバイト文字で、 *count*で指定された最後のバイトに完全に設定できない場合は、最後のバイトに空白文字が埋め込まれます。 **_mbsnbset_s**と **_mbsnbset_s_l**では、 *str*の最後に終端の null を配置しません。
+**_Mbsnbset_s** 関数と **_mbsnbset_s_l** 関数は、最大で *str* の最初の *count* バイトを *c* に設定します。 *Count* が *str* の長さよりも大きい場合、 *count* の代わりに *str* の長さが使用されます。 *C* がマルチバイト文字で、 *count* で指定された最後のバイトに完全に設定できない場合は、最後のバイトに空白文字が埋め込まれます。 **_mbsnbset_s** と **_mbsnbset_s_l** では、 *str* の最後に終端の null を配置しません。
 
-**_mbsnbset_s**と **_mbsnbset_s_l**は **_mbsnset**に似*ています*が *、count の文字数*ではなく*count* bytes が設定されている点が異なります。
+**_mbsnbset_s** と **_mbsnbset_s_l** は **_mbsnset** に似 *ています* が *、count の文字数* ではなく *count* bytes が設定されている点が異なります。
 
-*Str*が**NULL**または*count*が0の場合、この関数は「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーター例外を生成します。 実行の継続が許可された場合、 **errno**は**EINVAL**に設定され、関数は**NULL**を返します。 また、 *c*が有効なマルチバイト文字でない場合は、 **errno**が**EINVAL**に設定され、代わりにスペースが使用されます。
+*Str* が **NULL** または *count* が0の場合、この関数は「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーター例外を生成します。 実行の継続が許可された場合、 **errno** は **EINVAL** に設定され、関数は **NULL** を返します。 また、 *c* が有効なマルチバイト文字でない場合は、 **errno** が **EINVAL** に設定され、代わりにスペースが使用されます。
 
-出力値は、ロケールの**LC_CTYPE**カテゴリの設定に影響されます。詳細について[は、「setlocale、_wsetlocale](setlocale-wsetlocale.md) 」を参照してください。 この関数の **_mbsnbset_s**バージョンは、このロケールに依存する動作に現在のロケールを使用します。**_mbsnbset_s_l**のバージョンは、渡されたロケールパラメーターを代わりに使用する点を除いて同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
+出力値は、ロケールの **LC_CTYPE** カテゴリの設定に影響されます。詳細について [は、「setlocale、_wsetlocale](setlocale-wsetlocale.md) 」を参照してください。 この関数の **_mbsnbset_s** バージョンは、このロケールに依存する動作に現在のロケールを使用します。 **_mbsnbset_s_l** のバージョンは、渡されたロケールパラメーターを代わりに使用する点を除いて同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
 
 C++ では、テンプレートのオーバーロードによってこれらの関数を簡単に使用できます。オーバーロードでは、バッファー長を自動的に推論できるため、サイズ引数を指定する必要がなくなります。 詳細については、「[セキュリティ保護されたテンプレート オーバーロード](../../c-runtime-library/secure-template-overloads.md)」を参照してください。
 
@@ -129,7 +130,7 @@ C++ では、テンプレートのオーバーロードによってこれらの�
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**_mbsnbset_s**|\<mbstring.h>|
 |**_mbsnbset_s_l**|\<mbstring.h>|

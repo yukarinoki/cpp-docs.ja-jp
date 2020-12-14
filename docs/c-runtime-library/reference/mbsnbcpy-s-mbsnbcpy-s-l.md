@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: _mbsnbcpy_s、_mbsnbcpy_s_l'
 title: _mbsnbcpy_s、_mbsnbcpy_s_l
 ms.date: 4/2/2020
 api_name:
@@ -38,16 +39,16 @@ helpviewer_keywords:
 - _mbsnbcpy_s_l function
 - _tcsncpy_s function
 ms.assetid: dfff64ab-fe6f-49c4-99ba-75014e2b0cd6
-ms.openlocfilehash: 670055ca67e8196805851767596f56028350e32a
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 12233d0f83094934250a04b18582feff0cb7310e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82911888"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97240287"
 ---
 # <a name="_mbsnbcpy_s-_mbsnbcpy_s_l"></a>_mbsnbcpy_s、_mbsnbcpy_s_l
 
-文字列の**n**バイトをコピー先の文字列にコピーします。 これらのバージョンの [_mbsnbcpy、_mbsnbcpy_l](mbsnbcpy-mbsnbcpy-l.md) は、「[CRT のセキュリティ機能](../../c-runtime-library/security-features-in-the-crt.md)」で説明されているように、セキュリティが強化されています。
+文字列の **n** バイトをコピー先の文字列にコピーします。 これらのバージョンの [_mbsnbcpy、_mbsnbcpy_l](mbsnbcpy-mbsnbcpy-l.md) は、「[CRT のセキュリティ機能](../../c-runtime-library/security-features-in-the-crt.md)」で説明されているように、セキュリティが強化されています。
 
 > [!IMPORTANT]
 > この API は、Windows ランタイムで実行するアプリケーションでは使用できません。 詳細については、「[ユニバーサル Windows プラットフォーム アプリでサポートされていない CRT 関数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)」を参照してください。
@@ -106,12 +107,12 @@ errno_t _mbsnbcpy_s_l(
 
 ## <a name="remarks"></a>解説
 
-**_Mbsnbcpy_s**関数は、 *Strsource*から*strsource*に*カウント*バイトをコピーします。 *Count*が*strdest*のサイズを超える場合、入力文字列のいずれかが null ポインターであるか、または*sizeinbytes*または*count*が0である場合、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、関数は無効なパラメーターハンドラーを呼び出します。 実行の継続が許可された場合、関数は**EINVAL**を返します。 コピー元とコピー先の文字列が重なり合う場合、 **_mbsnbcpy_s**の動作は定義されていません。
+**_Mbsnbcpy_s** 関数は、 *Strsource* から *strsource* に *カウント* バイトをコピーします。 *Count* が *strdest* のサイズを超える場合、入力文字列のいずれかが null ポインターであるか、または *sizeinbytes* または *count* が0である場合、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、関数は無効なパラメーターハンドラーを呼び出します。 実行の継続が許可された場合、関数は **EINVAL** を返します。 コピー元とコピー先の文字列が重なり合う場合、 **_mbsnbcpy_s** の動作は定義されていません。
 
 出力値は、ロケールの **LC_CTYPE** カテゴリの設定に影響されます。詳細については、「[setlocale](setlocale-wsetlocale.md)」を参照してください。 **_l** サフィックスが付いていないこれらの関数のバージョンでは、このロケールに依存する動作に現在のロケールを使用します。**_l** サフィックスが付いているバージョンは、渡されたロケール パラメーターを代わりに使用する点を除いて同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
 
 > [!NOTE]
-> この関数のセキュリティで保護されていないバージョンとは異なり、 **_mbsnbcpy_s**では null の埋め込みは行われず、常に null が文字列を終了します。
+> この関数のセキュリティで保護されていないバージョンとは異なり、 **_mbsnbcpy_s** では null の埋め込みは行われず、常に null が文字列を終了します。
 
 C++ では、これらの関数の使用はテンプレートのオーバーロードによって簡素化されます。オーバーロードでは、バッファー長を自動的に推論できる (サイズの引数を指定する必要がなくなる) だけでなく、古くてセキュリティが万全ではない関数を新しく安全な関数に自動的に置き換えることができます。 詳細については、「[セキュリティ保護されたテンプレート オーバーロード](../../c-runtime-library/secure-template-overloads.md)」を参照してください。
 
@@ -128,7 +129,7 @@ C++ では、これらの関数の使用はテンプレートのオーバーロ�
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**_mbsnbcpy_s**|\<mbstring.h>|
 |**_mbsnbcpy_s_l**|\<mbstring.h>|
