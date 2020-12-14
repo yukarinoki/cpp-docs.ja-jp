@@ -1,15 +1,16 @@
 ---
+description: '詳細情報: 標準ダイアログデータ検証ルーチン'
 title: 標準的なダイアログ データ検証ルーチン
 ms.date: 11/04/2016
 helpviewer_keywords:
 - standard dialog, data validation routines
 ms.assetid: 44dbc222-a897-4949-925e-7660e8964ccd
-ms.openlocfilehash: 19d1858d67802a7c464a9be783e4c1fb96fe3fae
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: d2b39381610c51f661e98256c39b580df256ebaa
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88844484"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97218850"
 ---
 # <a name="standard-dialog-data-validation-routines"></a>標準的なダイアログ データ検証ルーチン
 
@@ -40,7 +41,7 @@ ms.locfileid: "88844484"
 
 ## <a name="ddv_maxchars"></a><a name="ddv_maxchars"></a> DDV_MaxChars
 
-を呼び出して、 `DDV_MaxChars` *値* に関連付けられているコントロールの文字数が *nchars*を超えていないことを確認します。
+を呼び出して、 `DDV_MaxChars` *値* に関連付けられているコントロールの文字数が *nchars* を超えていないことを確認します。
 
 ```cpp
 void AFXAPI DDV_MaxChars(
@@ -64,13 +65,13 @@ void AFXAPI DDV_MaxChars(
 
 DDV の詳細については、「 [ダイアログデータエクスチェンジと検証](../../mfc/dialog-data-exchange-and-validation.md)」を参照してください。
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
   **ヘッダー** afxdd_
 
 ## <a name="ddv_minmaxbyte"></a><a name="ddv_minmaxbyte"></a> DDV_MinMaxByte
 
-を呼び出して、 `DDV_MinMaxByte` *値* に関連付けられているコントロールの値が *Minval* と *maxval*の間にあることを確認します。
+を呼び出して、 `DDV_MinMaxByte` *値* に関連付けられているコントロールの値が *Minval* と *maxval* の間にあることを確認します。
 
 ```cpp
 void AFXAPI DDV_MinMaxByte(
@@ -98,13 +99,13 @@ void AFXAPI DDV_MinMaxByte(
 
 DDV の詳細については、「 [ダイアログデータエクスチェンジと検証](../../mfc/dialog-data-exchange-and-validation.md)」を参照してください。
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
   **ヘッダー** afxdd_
 
 ## <a name="ddv_minmaxdatetime"></a><a name="ddv_minmaxdatetime"></a> DDV_MinMaxDateTime
 
-を呼び出して、 `DDV_MinMaxDateTime` *refvalue*に関連付けられた日付と時刻の選択コントロール ( [cdatetimectrl 使い方](../../mfc/reference/cdatetimectrl-class.md)) の時刻/日付の値が*refMinRange*と*refMaxRange*の間にあることを確認します。
+を呼び出して、 `DDV_MinMaxDateTime` *refvalue* に関連付けられた日付と時刻の選択コントロール ( [cdatetimectrl 使い方](../../mfc/reference/cdatetimectrl-class.md)) の時刻/日付の値が *refMinRange* と *refMaxRange* の間にあることを確認します。
 
 ```cpp
 void AFXAPI DDV_MinMaxDateTime(
@@ -138,13 +139,13 @@ void AFXAPI DDV_MinMaxDateTime(
 
 DDV の詳細については、「 [ダイアログデータエクスチェンジと検証](../../mfc/dialog-data-exchange-and-validation.md)」を参照してください。
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
   **ヘッダー** afxdd_
 
 ## <a name="ddv_minmaxdouble"></a><a name="ddv_minmaxdouble"></a> DDV_MinMaxDouble
 
-を呼び出して、 `DDV_MinMaxDouble` *値* に関連付けられているコントロールの値が *Minval* と *maxval*の間にあることを確認します。
+を呼び出して、 `DDV_MinMaxDouble` *値* に関連付けられているコントロールの値が *Minval* と *maxval* の間にあることを確認します。
 
 ```cpp
 void AFXAPI DDV_MinMaxDouble(
@@ -172,13 +173,13 @@ void AFXAPI DDV_MinMaxDouble(
 
 DDV の詳細については、「 [ダイアログデータエクスチェンジと検証](../../mfc/dialog-data-exchange-and-validation.md)」を参照してください。
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
   **ヘッダー** afxdd_
 
 ## <a name="ddv_minmaxdword"></a><a name="ddv_minmaxdword"></a> DDV_MinMaxDWord
 
-を呼び出して、 `DDV_MinMaxDWord` *値* に関連付けられているコントロールの値が *Minval* と *maxval*の間にあることを確認します。
+を呼び出して、 `DDV_MinMaxDWord` *値* に関連付けられているコントロールの値が *Minval* と *maxval* の間にあることを確認します。
 
 ```cpp
 void AFXAPI DDV_MinMaxDWord(
@@ -206,13 +207,13 @@ void AFXAPI DDV_MinMaxDWord(
 
 DDV の詳細については、「 [ダイアログデータエクスチェンジと検証](../../mfc/dialog-data-exchange-and-validation.md)」を参照してください。
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
   **ヘッダー** afxdd_
 
 ## <a name="ddv_minmaxfloat"></a><a name="ddv_minmaxfloat"></a> DDV_MinMaxFloat
 
-を呼び出して、 `DDV_MinMaxFloat` *値* に関連付けられているコントロールの値が *Minval* と *maxval*の間にあることを確認します。
+を呼び出して、 `DDV_MinMaxFloat` *値* に関連付けられているコントロールの値が *Minval* と *maxval* の間にあることを確認します。
 
 ```cpp
 void AFXAPI DDV_MinMaxFloat(
@@ -240,13 +241,13 @@ void AFXAPI DDV_MinMaxFloat(
 
 DDV の詳細については、「 [ダイアログデータエクスチェンジと検証](../../mfc/dialog-data-exchange-and-validation.md)」を参照してください。
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
   **ヘッダー** afxdd_
 
 ## <a name="ddv_minmaxint"></a><a name="ddv_minmaxint"></a> DDV_MinMaxInt
 
-を呼び出して、 `DDV_MinMaxInt` *値* に関連付けられているコントロールの値が *Minval* と *maxval*の間にあることを確認します。
+を呼び出して、 `DDV_MinMaxInt` *値* に関連付けられているコントロールの値が *Minval* と *maxval* の間にあることを確認します。
 
 ```cpp
 void AFXAPI DDV_MinMaxInt(
@@ -274,13 +275,13 @@ void AFXAPI DDV_MinMaxInt(
 
 DDV の詳細については、「 [ダイアログデータエクスチェンジと検証](../../mfc/dialog-data-exchange-and-validation.md)」を参照してください。
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
   **ヘッダー** afxdd_
 
 ## <a name="ddv_minmaxlong"></a><a name="ddv_minmaxlong"></a> DDV_MinMaxLong
 
-を呼び出して、 `DDV_MinMaxLong` *値* に関連付けられているコントロールの値が *Minval* と *maxval*の間にあることを確認します。
+を呼び出して、 `DDV_MinMaxLong` *値* に関連付けられているコントロールの値が *Minval* と *maxval* の間にあることを確認します。
 
 ```cpp
 void AFXAPI DDV_MinMaxLong(
@@ -308,13 +309,13 @@ void AFXAPI DDV_MinMaxLong(
 
 DDV の詳細については、「 [ダイアログデータエクスチェンジと検証](../../mfc/dialog-data-exchange-and-validation.md)」を参照してください。
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
   **ヘッダー** afxdd_
 
 ## <a name="ddv_minmaxlonglong"></a><a name="ddv_minmaxlonglong"></a> DDV_MinMaxLongLong
 
-を呼び出して、 `DDV_MinMaxLongLong` *値* に関連付けられているコントロールの値が *Minval* と *maxval*の間にあることを確認します。
+を呼び出して、 `DDV_MinMaxLongLong` *値* に関連付けられているコントロールの値が *Minval* と *maxval* の間にあることを確認します。
 
 ```cpp
 void AFXAPI DDV_MinMaxLongLong(
@@ -342,13 +343,13 @@ void AFXAPI DDV_MinMaxLongLong(
 
 DDV の詳細については、「 [ダイアログデータエクスチェンジと検証](../../mfc/dialog-data-exchange-and-validation.md)」を参照してください。
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
   **ヘッダー** afxdd_
 
 ## <a name="ddv_minmaxmonth"></a><a name="ddv_minmaxmonth"></a> DDV_MinMaxMonth
 
-を呼び出して、 `DDV_MinMaxMonth` *refvalue*に関連付けられた month Calendar コントロール ( [CMonthCalCtrl](../../mfc/reference/cmonthcalctrl-class.md)) の時刻と日付の値が*refMinRange*と*refMaxRange*の間にあることを確認します。
+を呼び出して、 `DDV_MinMaxMonth` *refvalue* に関連付けられた month Calendar コントロール ( [CMonthCalCtrl](../../mfc/reference/cmonthcalctrl-class.md)) の時刻と日付の値が *refMinRange* と *refMaxRange* の間にあることを確認します。
 
 ```cpp
 void AFXAPI DDV_MinMaxMonth(
@@ -382,13 +383,13 @@ void AFXAPI DDV_MinMaxMonth(
 
 DDV の詳細については、「 [ダイアログデータエクスチェンジと検証](../../mfc/dialog-data-exchange-and-validation.md)」を参照してください。
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
   **ヘッダー** afxdd_
 
 ## <a name="ddv_minmaxshort"></a><a name="ddv_minmaxshort"></a> DDV_MinMaxShort
 
-を呼び出して、 `DDV_MinMaxShort` *値* に関連付けられているコントロールの値が *Minval* と *maxval*の間にあることを確認します。
+を呼び出して、 `DDV_MinMaxShort` *値* に関連付けられているコントロールの値が *Minval* と *maxval* の間にあることを確認します。
 
 ```cpp
 void AFXAPI DDV_MinMaxShort(
@@ -416,13 +417,13 @@ void AFXAPI DDV_MinMaxShort(
 
 DDV の詳細については、「 [ダイアログデータエクスチェンジと検証](../../mfc/dialog-data-exchange-and-validation.md)」を参照してください。
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
   **ヘッダー** afxdd_
 
 ## <a name="ddv_minmaxslider"></a><a name="ddv_minmaxslider"></a> DDV_MinMaxSlider
 
-を呼び出して、 `DDV_MinMaxSlider` *値* に関連付けられているコントロールの値が *Minval* と *maxval*の間にあることを確認します。
+を呼び出して、 `DDV_MinMaxSlider` *値* に関連付けられているコントロールの値が *Minval* と *maxval* の間にあることを確認します。
 
 ```cpp
 void AFXAPI DDV_MinMaxSlider(
@@ -450,13 +451,13 @@ void AFXAPI DDV_MinMaxSlider(
 
 DDV の詳細については、「 [ダイアログデータエクスチェンジと検証](../../mfc/dialog-data-exchange-and-validation.md)」を参照してください。 スライダーコントロールの詳細については、「 [Using csliderctrl 使い方](../../mfc/using-csliderctrl.md)」を参照してください。
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
   **ヘッダー** afxdd_
 
 ## <a name="ddv_minmaxuint"></a><a name="ddv_minmaxuint"></a> DDV_MinMaxUInt
 
-を呼び出して、 `DDV_MinMaxUInt` *値* に関連付けられているコントロールの値が *Minval* と *maxval*の間にあることを確認します。
+を呼び出して、 `DDV_MinMaxUInt` *値* に関連付けられているコントロールの値が *Minval* と *maxval* の間にあることを確認します。
 
 ```cpp
 void AFXAPI DDV_MinMaxUInt(
@@ -484,13 +485,13 @@ void AFXAPI DDV_MinMaxUInt(
 
 DDV の詳細については、「 [ダイアログデータエクスチェンジと検証](../../mfc/dialog-data-exchange-and-validation.md)」を参照してください。
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
   **ヘッダー** afxdd_
 
 ## <a name="ddv_minmaxulonglong"></a><a name="ddv_minmaxulonglong"></a> DDV_MinMaxULongLong
 
-を呼び出して、 `DDV_MinMaxULongLong` *値* に関連付けられているコントロールの値が *Minval* と *maxval*の間にあることを確認します。
+を呼び出して、 `DDV_MinMaxULongLong` *値* に関連付けられているコントロールの値が *Minval* と *maxval* の間にあることを確認します。
 
 ```cpp
 void AFXAPI DDV_MinMaxULongLong(
@@ -518,13 +519,13 @@ void AFXAPI DDV_MinMaxULongLong(
 
 DDV の詳細については、「 [ダイアログデータエクスチェンジと検証](../../mfc/dialog-data-exchange-and-validation.md)」を参照してください。
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
   **ヘッダー** afxdd_
 
 ## <a name="ddv_minmaxunsigned"></a>DDV_MinMaxUnsigned
 
-を呼び出して、 `DDV_MinMaxUnsigned` *値* に関連付けられているコントロールの値が *Minval* と *maxval*の間にあることを確認します。
+を呼び出して、 `DDV_MinMaxUnsigned` *値* に関連付けられているコントロールの値が *Minval* と *maxval* の間にあることを確認します。
 
 ### <a name="syntax"></a>構文
 
@@ -554,7 +555,7 @@ DDV の詳細については、「 [ダイアログデータエクスチェン�
 
 DDV の詳細については、「 [ダイアログデータエクスチェンジと検証](../dialog-data-exchange-and-validation.md)」を参照してください。
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 **ヘッダー:** afxdd_
 

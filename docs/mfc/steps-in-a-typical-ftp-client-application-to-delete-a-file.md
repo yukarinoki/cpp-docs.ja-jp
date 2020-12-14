@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: 典型的な FTP クライアントアプリケーションでファイルを削除する手順'
 title: ファイルを削除する典型的な FTP クライアント アプリケーションの作成手順
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,31 +8,31 @@ helpviewer_keywords:
 - FTP (File Transfer Protocol) [MFC], client applications
 - Internet applications [MFC], FTP client applications
 ms.assetid: 2c347a96-c0a4-4827-98fe-668406e552bc
-ms.openlocfilehash: 6d2a920d3053a920638dd20a23e1c2334745bbc3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0de5ba71ac127a44c964571d243997bcb49faaa0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62307056"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97216653"
 ---
 # <a name="steps-in-a-typical-ftp-client-application-to-delete-a-file"></a>ファイルを削除する典型的な FTP クライアント アプリケーションの作成手順
 
-次の表では、ファイルを削除する典型的な FTP クライアント アプリケーションで手順を示します。
+次の表は、ファイルを削除する典型的な FTP クライアントアプリケーションで実行できる手順を示しています。
 
-|目標|操作を実行します。|効果|
+|目標|実行する操作|エフェクト|
 |---------------|----------------------|-------------|
-|FTP セッションを開始します。|作成、 [CInternetSession](../mfc/reference/cinternetsession-class.md)オブジェクト。|WinInet を初期化し、サーバーに接続します。|
-|FTP サーバーに接続します。|使用[CInternetSession::GetFtpConnection](../mfc/reference/cinternetsession-class.md#getftpconnection)します。|返します、 [CFtpConnection](../mfc/reference/cftpconnection-class.md)オブジェクト。|
-|FTP サーバー上のディレクトリ位置していることを確認します。|使用[CFtpConnection::GetCurrentDirectory](../mfc/reference/cftpconnection-class.md#getcurrentdirectory)または[CFtpConnection::GetCurrentDirectoryAsURL](../mfc/reference/cftpconnection-class.md#getcurrentdirectoryasurl)します。|名前または現在選択されているメンバー関数によって、サーバー上に接続しているディレクトリの URL を返します。|
-|サーバー上に新しい FTP ディレクトリに変更します。|使用[CFtpConnection::SetCurrentDirectory](../mfc/reference/cftpconnection-class.md#setcurrentdirectory)します。|現在、サーバーに接続しているディレクトリを変更します。|
-|FTP ディレクトリの最初のファイルを検索します。|使用[CFtpFileFind::FindFile](../mfc/reference/cftpfilefind-class.md#findfile)します。|最初のファイルを検索します。 ファイルが見つからない場合は FALSE を返します。|
-|FTP ディレクトリの次のファイルを検索します。|使用[CFtpFileFind::FindNextFile](../mfc/reference/cftpfilefind-class.md#findnextfile)します。|次のファイルを検索します。 ファイルが見つからない場合は FALSE を返します。|
-|によって検出されたファイルを削除`FindFile`または`FindNextFile`します。|使用[CFtpConnection::Remove](../mfc/reference/cftpconnection-class.md#remove)、によって返されるファイル名を使用して`FindFile`または`FindNextFile`します。|サーバー上の読み取りまたは書き込みのファイルを削除します。|
-|例外を処理する|使用して、 [CInternetException](../mfc/reference/cinternetexception-class.md)クラス。|すべての一般的なインターネット例外タイプを処理します。|
-|FTP セッションを終了します。|破棄、 [CInternetSession](../mfc/reference/cinternetsession-class.md)オブジェクト。|開いているファイル ハンドルと接続を自動的にクリーンアップします。|
+|FTP セッションを開始します。|[CInternetSession](../mfc/reference/cinternetsession-class.md)オブジェクトを作成します。|WinInet を初期化し、サーバーに接続します。|
+|FTP サーバーに接続します。|[CInternetSession:: GetFtpConnection](../mfc/reference/cinternetsession-class.md#getftpconnection)を使用します。|[CFtpConnection](../mfc/reference/cftpconnection-class.md)オブジェクトを返します。|
+|FTP サーバーの適切なディレクトリにあることを確認してください。|[CFtpConnection:: GetCurrentDirectory](../mfc/reference/cftpconnection-class.md#getcurrentdirectory)または[CFtpConnection:: GetCurrentDirectoryAsURL](../mfc/reference/cftpconnection-class.md#getcurrentdirectoryasurl)を使用します。|選択されたメンバー関数に応じて、サーバー上で現在接続しているディレクトリの名前または URL を返します。|
+|サーバー上の新しい FTP ディレクトリに変更します。|[CFtpConnection:: SetCurrentDirectory](../mfc/reference/cftpconnection-class.md#setcurrentdirectory)を使用します。|サーバー上で現在接続しているディレクトリを変更します。|
+|FTP ディレクトリ内の最初のファイルを検索します。|[CFtpFileFind:: FindFile](../mfc/reference/cftpfilefind-class.md#findfile)を使用します。|最初のファイルを検索します。 ファイルが見つからない場合は FALSE を返します。|
+|FTP ディレクトリ内の次のファイルを検索します。|[CFtpFileFind:: FindNextFile](../mfc/reference/cftpfilefind-class.md#findnextfile)を使用します。|次のファイルを検索します。 ファイルが見つからない場合は FALSE を返します。|
+|またはによって検出されたファイルを削除し `FindFile` `FindNextFile` ます。|またはによって返されたファイル名を使用して、 [CFtpConnection:: Remove](../mfc/reference/cftpconnection-class.md#remove)を使用し `FindFile` `FindNextFile` ます。|読み取りまたは書き込み用にサーバー上のファイルを削除します。|
+|例外を処理する|[CInternetException](../mfc/reference/cinternetexception-class.md)クラスを使用します。|すべての一般的なインターネット例外の種類を処理します。|
+|FTP セッションを終了します。|[CInternetSession](../mfc/reference/cinternetsession-class.md)オブジェクトを破棄します。|開いているファイルハンドルと接続を自動的にクリーンアップします。|
 
 ## <a name="see-also"></a>関連項目
 
 [Win32 インターネット拡張機能 (WinInet)](../mfc/win32-internet-extensions-wininet.md)<br/>
-[インターネット クライアント クラスの必要条件](../mfc/prerequisites-for-internet-client-classes.md)<br/>
-[MFC WinInet クラスを使ってインターネット クライアント アプリケーションを作成する方法](../mfc/writing-an-internet-client-application-using-mfc-wininet-classes.md)
+[インターネットクライアントクラスの前提条件](../mfc/prerequisites-for-internet-client-classes.md)<br/>
+[MFC WinInet クラスを使用したインターネットクライアントアプリケーションの作成](../mfc/writing-an-internet-client-application-using-mfc-wininet-classes.md)

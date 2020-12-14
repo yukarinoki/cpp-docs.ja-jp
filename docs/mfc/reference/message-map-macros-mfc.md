@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: メッセージマップマクロ (MFC)'
 title: メッセージ マップ マクロ (MFC)
 ms.date: 03/27/2019
 f1_keywords:
@@ -28,18 +29,18 @@ helpviewer_keywords:
 - ranges, message map
 - message map ranges
 ms.assetid: 531b15ce-32b5-4ca0-a849-bb519616c731
-ms.openlocfilehash: 33b5d2eaefa11f9ccf6459aa05b4e24138731e80
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: ece09b915da9e6f88191e90056158be82651e9ff
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88840272"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97219396"
 ---
 # <a name="message-map-macros-mfc"></a>メッセージ マップ マクロ (MFC)
 
 メッセージマップをサポートするために、MFC には次のマクロが用意されています。
 
-### <a name="message-map-declaration-and-demarcation-macros"></a>メッセージマップの宣言と境界のマクロ
+### <a name="message-map-declaration-and-demarcation-macros"></a>Message-Map 宣言と境界のマクロ
 
 |名前|説明|
 |-|-|
@@ -48,7 +49,7 @@ ms.locfileid: "88840272"
 |[BEGIN_TEMPLATE_MESSAGE_MAP](#begin_template_message_map)|単一のテンプレート引数を含むクラス型のメッセージマップの定義を開始します。 |
 |[END_MESSAGE_MAP](#end_message_map)|メッセージマップの定義を終了します (クラスの実装で使用する必要があります)。|
 
-### <a name="message-mapping-macros"></a>メッセージマッピングマクロ
+### <a name="message-mapping-macros"></a>Message-Mapping マクロ
 
 |名前|説明|
 |-|-|
@@ -62,7 +63,7 @@ ms.locfileid: "88840272"
 |[ON_THREAD_MESSAGE](#on_thread_message)|クラスがある場合に、ユーザー定義のメッセージを処理する関数を示し `CWinThread` ます。|
 |[ON_UPDATE_COMMAND_UI](#on_update_command_ui)|指定されたユーザーインターフェイスの更新コマンドメッセージを処理する関数を示します。|
 
-### <a name="message-map-range-macros"></a>メッセージマップ範囲マクロ
+### <a name="message-map-range-macros"></a>Message-Map 範囲マクロ
 
 |名前|説明|
 |-|-|
@@ -70,7 +71,7 @@ ms.locfileid: "88840272"
 |[ON_UPDATE_COMMAND_UI_RANGE](#on_update_command_ui_range)|マクロの最初の2つのパラメーターに指定されたコマンド Id の範囲を処理する更新ハンドラーを示します。|
 |[ON_CONTROL_RANGE](#on_control_range)|マクロの2番目と3番目のパラメーターで指定されたコントロール Id の範囲からの通知を処理する関数を示します。 最初のパラメーターは、BN_CLICKED などのコントロール通知メッセージです。|
 
-メッセージマップ、メッセージマップの宣言マクロ、およびメッセージマップマクロの詳細については、「 [メッセージマップ](../../mfc/reference/message-maps-mfc.md) と [メッセージの処理とマッピングに関するトピック](../../mfc/message-handling-and-mapping.md)」を参照してください。 メッセージマップの範囲の詳細については、「 [メッセージマップの範囲のハンドラー](../../mfc/handlers-for-message-map-ranges.md)」を参照してください。
+メッセージマップ、メッセージマップの宣言マクロ、およびメッセージマップマクロの詳細については、「 [メッセージマップ](../../mfc/reference/message-maps-mfc.md) と [メッセージの処理とマッピングに関するトピック](../../mfc/message-handling-and-mapping.md)」を参照してください。 メッセージマップの範囲の詳細については、「 [Message-Map 範囲のハンドラー](../../mfc/handlers-for-message-map-ranges.md)」を参照してください。
 
 ## <a name="begin_message_map"></a><a name="begin_message_map"></a> BEGIN_MESSAGE_MAP
 
@@ -88,7 +89,7 @@ BEGIN_MESSAGE_MAP( theClass, baseClass )
 メッセージをマップするクラスの名前を指定します。
 
 *baseClass*<br/>
-*クラス*の基底クラスの名前を指定します。
+*クラス* の基底クラスの名前を指定します。
 
 ### <a name="remarks"></a>解説
 
@@ -104,7 +105,7 @@ BEGIN_MESSAGE_MAP(CMainFrame, CMDIFrameWnd)
 END_MESSAGE_MAP()
 ```
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 **ヘッダー:** afxwin.h
 
@@ -127,7 +128,7 @@ BEGIN_TEMPLATE_MESSAGE_MAP( theClass, type_name, baseClass )
 クラスに対して指定されたテンプレートパラメーターの名前。
 
 *baseClass*<br/>
-*クラス*の基底クラスの名前を指定します。
+*クラス* の基底クラスの名前を指定します。
 
 ### <a name="remarks"></a>解説
 
@@ -137,7 +138,7 @@ BEGIN_TEMPLATE_MESSAGE_MAP( theClass, type_name, baseClass )
 
 テンプレートクラスのメッセージマップの実装の詳細については、「 [方法: テンプレートクラスのメッセージマップを作成](../how-to-create-a-message-map-for-a-template-class.md)する」を参照してください。
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 **ヘッダー:** afxwin.h
 
@@ -170,7 +171,7 @@ class CMainFrame : public CMDIFrameWnd
    // Remainder of class declaration omitted.
 ```
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 **ヘッダー:** afxwin.h
 
@@ -188,7 +189,7 @@ END_MESSAGE_MAP( )
 
 メッセージマップと END_MESSAGE_MAP マクロの詳細については、「 [メッセージの処理とマッピング](../../mfc/message-handling-and-mapping.md)に関するトピック」を参照してください。
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 **ヘッダー:** afxwin.h
 
@@ -226,7 +227,7 @@ BEGIN_MESSAGE_MAP(CMFCListViewDoc, CDocument)
 END_MESSAGE_MAP()
 ```
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 **ヘッダー:** afxmsg_
 
@@ -254,7 +255,7 @@ ON_COMMAND_EX(commandId, memberFxn);
 
 詳細については、「テクニカルノート [テクニカルノート 6: Message Maps] tm006-maps.md)」を参照してください。
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 ヘッダーファイル: afxmsg_ .h
 
@@ -287,7 +288,7 @@ ON_CONTROL( wNotifyCode, commandId, memberFxn )
 
 詳細と例については、「 [メッセージの処理とマッピングに関するトピック](../../mfc/message-handling-and-mapping.md)」を参照してください。
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 **ヘッダー:** afxmsg_
 
@@ -345,7 +346,7 @@ LRESULT CMyWnd2::OnMyMessage(WPARAM wParam, LPARAM lParam)
 }
 ```
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 **ヘッダー:** afxmsg_
 
@@ -474,7 +475,7 @@ Edit Select All コマンドをディスパッチします。 次のように実
 
 `ON_OLECMD(NULL, OLECMDID_UNDO, ID_EDIT_UNDO)`
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 **ヘッダー:** afxdocob
 
@@ -512,7 +513,7 @@ BEGIN_MESSAGE_MAP(CMyWnd3, CWnd)
 END_MESSAGE_MAP()
 ```
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 **ヘッダー:** afxmsg_
 
@@ -538,7 +539,7 @@ ON_REGISTERED_THREAD_MESSAGE(nMessageVariable, memberFxn )
 
 RegisterWindowMessage は、システム全体で一意であることが保証される新しいウィンドウメッセージを定義するために使用されます。 CWinThread クラスがある場合は、ON_REGISTERED_MESSAGE の代わりに ON_REGISTERED_THREAD_MESSAGE を使用する必要があります。
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 **ヘッダー:** afxmsg_
 
@@ -564,7 +565,7 @@ ON_THREAD_MESSAGE( message, memberFxn )
 
 クラスがある場合は、ON_MESSAGE の代わりに ON_THREAD_MESSAGE を使用する必要があり `CWinThread` ます。 ユーザー定義メッセージは、標準の Windows WM_MESSAGE メッセージではないメッセージです。 メッセージハンドラー関数にマップされる必要があるすべてのユーザー定義メッセージについて、メッセージマップには ON_THREAD_MESSAGE マクロステートメントが1つだけ存在する必要があります。
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 **ヘッダー:** afxole
 
@@ -592,7 +593,7 @@ ON_UPDATE_COMMAND_UI( messageId, memberFxn )
 
 詳細と例については、「 [メッセージの処理とマッピングに関するトピック](../../mfc/message-handling-and-mapping.md)」を参照してください。
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 **ヘッダー:** afxole
 
@@ -619,9 +620,9 @@ ON_COMMAND_RANGE( id1, id2, memberFxn )
 
 ### <a name="remarks"></a>解説
 
-Id の範囲は *id1* で始まり、 *id2*で終わります。
+Id の範囲は *id1* で始まり、 *id2* で終わります。
 
-ON_COMMAND_RANGE を使用して、コマンド Id の範囲を1つのメンバー関数にマップします。 1つのコマンドをメンバー関数にマップするには、 [ON_COMMAND](#on_command) を使用します。 指定されたコマンド ID に一致できるメッセージマップエントリは1つだけです。 つまり、1つのコマンドを複数のハンドラーにマップすることはできません。 メッセージ範囲のマッピングの詳細については、「 [メッセージマップの範囲のハンドラー](../../mfc/handlers-for-message-map-ranges.md)」を参照してください。
+ON_COMMAND_RANGE を使用して、コマンド Id の範囲を1つのメンバー関数にマップします。 1つのコマンドをメンバー関数にマップするには、 [ON_COMMAND](#on_command) を使用します。 指定されたコマンド ID に一致できるメッセージマップエントリは1つだけです。 つまり、1つのコマンドを複数のハンドラーにマップすることはできません。 メッセージ範囲のマッピングの詳細については、「 [Message-Map 範囲のハンドラー](../../mfc/handlers-for-message-map-ranges.md)」を参照してください。
 
 メッセージマップの範囲は自動でサポートされないため、自分でマクロを配置する必要があります。
 
@@ -647,7 +648,7 @@ void CChildFrame::OnRangeCmds(UINT nID)
 }
 ```
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 **ヘッダー:** afxmsg_
 
@@ -674,11 +675,11 @@ ON_UPDATE_COMMAND_UI_RANGE( id1, id2, memberFxn )
 
 ### <a name="remarks"></a>解説
 
-更新メッセージハンドラーは、コマンドに関連付けられているメニュー項目とツールバーボタンの状態を更新します。 Id の範囲は *id1* で始まり、 *id2*で終わります。
+更新メッセージハンドラーは、コマンドに関連付けられているメニュー項目とツールバーボタンの状態を更新します。 Id の範囲は *id1* で始まり、 *id2* で終わります。
 
 メッセージマップの範囲は自動でサポートされないため、自分でマクロを配置する必要があります。
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 **ヘッダー:** afxmsg_
 
@@ -708,13 +709,13 @@ ON_CONTROL_RANGE( wNotifyCode, id1, id2, memberFxn )
 
 ### <a name="remarks"></a>解説
 
-Id の範囲は *id1* で始まり、 *id2*で終わります。 ハンドラーは、マップされたコントロールのいずれかから送られた指定の通知に対して呼び出されます。
+Id の範囲は *id1* で始まり、 *id2* で終わります。 ハンドラーは、マップされたコントロールのいずれかから送られた指定の通知に対して呼び出されます。
 
 メッセージマップの範囲は自動でサポートされないため、自分でマクロを配置する必要があります。
 
-コントロール Id の範囲に対するハンドラー関数の実装の詳細については、「 [メッセージマップの範囲のハンドラー](../../mfc/handlers-for-message-map-ranges.md)」を参照してください。
+コントロール Id の範囲に対するハンドラー関数の実装の詳細については、「 [Message-Map 範囲のハンドラー](../../mfc/handlers-for-message-map-ranges.md)」を参照してください。
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 **ヘッダー:** afxmsg_
 

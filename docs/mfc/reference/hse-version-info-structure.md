@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: HSE_VERSION_INFO 構造'
 title: HSE_VERSION_INFO 構造体
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - HSE_VERSION_INFO structure [MFC]
 ms.assetid: 4837312d-68c8-4d05-9afa-1934d7d49b20
-ms.openlocfilehash: 97f34bebae8a486a825d04b23c5a92fbd4aefa42
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fe03f3c4e00f9af62398993838927ce75410f17b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62322115"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97219630"
 ---
-# <a name="hseversioninfo-structure"></a>HSE_VERSION_INFO 構造体
+# <a name="hse_version_info-structure"></a>HSE_VERSION_INFO 構造体
 
-この構造体を指す、 *pVer*パラメーター、`CHttpServer::GetExtensionVersion`メンバー関数。 ISA のバージョン番号と、ISA の説明テキストを提供します
+この構造体は、メンバー関数の *Pver* パラメーターによってポイントされ `CHttpServer::GetExtensionVersion` ます。 Isa のバージョン番号と説明テキストを提供します。
 
 ## <a name="syntax"></a>構文
 
@@ -29,15 +30,15 @@ typedef struct _HSE_VERSION_INFO {
 #### <a name="parameters"></a>パラメーター
 
 *dwExtensionVersion*<br/>
-ISA のバージョン番号
+ISA のバージョン番号。
 
 *lpszExtensionDesc*<br/>
-ISA のテキストの説明 既定の実装は、プレース ホルダー テキストを提供します。オーバーライド`CHttpServer::GetExtensionVersion`を独自の説明を提供します。
+ISA の説明テキスト。 既定の実装は、プレースホルダーテキストを提供します。をオーバーライドし `CHttpServer::GetExtensionVersion` て、独自の説明を指定します。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-**ヘッダー:** httpext.h
+**ヘッダー:** httpext. h
 
 ## <a name="see-also"></a>関連項目
 
-[構造体、スタイル、コールバック関数とメッセージ マップ](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)
+[構造体、スタイル、コールバック、およびメッセージマップ](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)

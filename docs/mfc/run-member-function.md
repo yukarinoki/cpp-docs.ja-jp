@@ -1,24 +1,25 @@
 ---
+description: '詳細情報: Run Member 関数'
 title: Run メンバー関数
 ms.date: 11/04/2016
 helpviewer_keywords:
 - WinMain method [MFC]
 ms.assetid: 24ab7597-2354-495b-9a20-2c8ccc7385b3
-ms.openlocfilehash: 8271a10ad7439d2795dcc45d667b23b0932a0486
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ae67c6b02344a65735ce06775b1d1788d1dabf2c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62308551"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97217823"
 ---
 # <a name="run-member-function"></a>Run メンバー関数
 
-Framework アプリケーションのほとんどの時間内に費やす、[実行](../mfc/reference/cwinapp-class.md#run)クラスのメンバー関数[CWinApp](../mfc/reference/cwinapp-class.md)します。 初期化後、`WinMain`呼び出し`Run`メッセージ ループを処理します。
+フレームワークアプリケーションは、ほとんどの時間を、 [CWinApp](../mfc/reference/cwinapp-class.md)クラスの[Run](../mfc/reference/cwinapp-class.md#run)メンバー関数に費やします。 初期化の後、は `WinMain` `Run` を呼び出してメッセージループを処理します。
 
-`Run` メッセージのループで使用可能なメッセージのメッセージ キューのチェックを切り替えます。 メッセージが、使用可能な場合は`Run`をディスパッチします。 これが true の場合、多くの場合、メッセージがない場合は、`Run`呼び出し`OnIdle`完了またはフレームワークを必要とするアイドル処理を実行します。 行うには、メッセージが表示されないとなしのアイドル処理がある場合は、アプリケーションは何かが発生するまで待機します。 アプリケーションが終了すると、`Run`呼び出し`ExitInstance`します。 図に[OnIdle メンバー関数](../mfc/onidle-member-function.md)メッセージ ループ内のアクションのシーケンスを示しています。
+`Run` メッセージループを順番に実行し、メッセージキューで使用可能なメッセージを確認します。 メッセージが使用可能な場合は、 `Run` アクションのためにディスパッチします。 使用できるメッセージがない場合 (多くの場合は、)、自身 `Run` `OnIdle` またはフレームワークが実行する必要のあるアイドル時間の処理を実行するためにを呼び出します。 メッセージがなく、アイドル処理も行われていない場合、アプリケーションは何かが発生するまで待機します。 アプリケーションが終了すると、はを `Run` 呼び出し `ExitInstance` ます。 [OnIdle メンバー関数](../mfc/onidle-member-function.md)の図は、メッセージループ内のアクションのシーケンスを示しています。
 
-メッセージのディスパッチは、メッセージの種類によって異なります。 詳細については、次を参照してください。[フレームワークのメッセージとコマンド](../mfc/messages-and-commands-in-the-framework.md)します。
+メッセージのディスパッチは、メッセージの種類によって異なります。 詳細については、「 [フレームワークのメッセージとコマンド](../mfc/messages-and-commands-in-the-framework.md)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 
-[CWinApp: アプリケーション クラス](../mfc/cwinapp-the-application-class.md)
+[CWinApp: Application クラス](../mfc/cwinapp-the-application-class.md)

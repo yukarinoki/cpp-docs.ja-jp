@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「関数へのメッセージのマッピング」を参照してください。
 title: 関数へのメッセージの割り当て
 ms.date: 09/06/2019
 f1_keywords:
@@ -7,27 +8,27 @@ helpviewer_keywords:
 - Windows messages [MFC], adding message handlers
 - message maps [MFC], mapping messages to functions
 ms.assetid: a7727a62-f638-4b20-b7f5-131f47200d6a
-ms.openlocfilehash: 4c7e79e31bbf9b35f9d888dce4e4fc24feacc624
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 5bb3decdcc6751c47644acf5f5bff942efe8c725
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81365661"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97219409"
 ---
 # <a name="mapping-messages-to-functions"></a>関数へのメッセージの割り当て
 
-[クラス ウィザード](mfc-class-wizard.md)を使用すると、MFC ユーザー インターフェイス クラスのメンバー関数であるメッセージ ハンドラーを、アプリケーションのリソースによって生成されるメッセージにバインドできます。 MFC[メッセージ マップ](../../mfc/messages-and-commands-in-the-framework.md)を使用してバインディングを作成します。
+[クラスウィザード](mfc-class-wizard.md)を使用すると、メッセージハンドラー (MFC ユーザーインターフェイスクラスのメンバー関数) をアプリケーションのリソースによって生成されるメッセージにバインドできます。 これらは、 [MFC メッセージマップ](../../mfc/messages-and-commands-in-the-framework.md) を使用してバインディングを作成します。
 
-クラス ビューを使用して、フレームワーク クラスの 1 つから派生した新しいクラスを作成すると、指定したヘッダー (.h) ファイルと実装 (.cpp) ファイルに、完全で機能的なクラスが自動的に配置されます。
+クラスビューを使用して、いずれかのフレームワーククラスから派生した新しいクラスを作成すると、指定したヘッダー (.h) ファイルと実装 (.cpp) ファイルに、完全な機能を持つクラスが自動的に配置されます。
 
 > [!NOTE]
-> メッセージを処理しない新しいクラスを追加するには、テキスト エディターで直接クラスを作成します。
+> メッセージを処理しない新しいクラスを追加するには、テキストエディターで直接クラスを作成します。
 
-### <a name="to-define-or-remove-a-message-handler-using-the-class-wizard"></a>クラス ウィザードを使用してメッセージ ハンドラを定義または削除するには
+### <a name="to-define-or-remove-a-message-handler-using-the-class-wizard"></a>クラスウィザードを使用してメッセージハンドラーを定義または削除するには
 
-1. [**クラス ビュー**] で、クラスを右クリックします。
+1. **クラスビュー** で、クラスを右クリックします。
 
-1. コンテキスト メニューで、[[クラス ウィザード](mfc-class-wizard.md)] を選択します。
+1. コンテキストメニューで、[ [クラスウィザード](mfc-class-wizard.md)] を選択します。
 
 ## <a name="see-also"></a>関連項目
 

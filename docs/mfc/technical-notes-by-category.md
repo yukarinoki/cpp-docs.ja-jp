@@ -1,13 +1,14 @@
 ---
+description: 詳細については、「カテゴリ別のテクニカルノート」を参照してください。
 title: カテゴリ別テクニカル ノート
 ms.date: 11/04/2016
 ms.assetid: b9f1c953-233d-4d64-9e8e-ca69b79460b8
-ms.openlocfilehash: 4f12946efdb57293038e59c078a68b2614b05ba7
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: 4787b73c9a9039336beba709aa7ddb5aaf761f65
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90041849"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97216341"
 ---
 # <a name="technical-notes-by-category"></a>カテゴリ別テクニカル ノート
 
@@ -70,20 +71,20 @@ ms.locfileid: "90041849"
 
 [テクニカルノート 38: MFC/OLE IUnknown の実装](../mfc/tn038-mfc-ole-iunknown-implementation.md)\
 [テクニカルノート 39: MFC/OLE オートメーションの実装](../mfc/tn039-mfc-ole-automation-implementation.md)\
-[テクニカルノート 40: MFC/OLE の埋め込み先のサイズ変更とズーム](../mfc/tn040-mfc-ole-in-place-resizing-and-zooming.md)\
+[テクニカルノート 40: MFC/OLE In-Place サイズ変更とズーム](../mfc/tn040-mfc-ole-in-place-resizing-and-zooming.md)\
 [テクニカルノート 41: mfc/OLE1 からから MFC/OLE2 への移行](../mfc/tn041-mfc-ole1-migration-to-mfc-ole-2.md)\
 [テクニカルノート 49: MFC/OLE MBCS から Unicode 翻訳レイヤー (MFCANS32)](../mfc/tn049-mfc-ole-mbcs-to-unicode-translation-layer-mfcans32.md)\
 [テクニカルノート 50: MFC/OLE コモンダイアログ (MFCUIx32)](../mfc/tn050-mfc-ole-common-dialogs-mfcuix32.md)\
-[テクニカルノート 64: OLE コントロールでのアパートメントモデルのスレッド処理](../mfc/tn064-apartment-model-threading-in-activex-controls.md)\
-[テクニカルノート 65: OLE オートメーションサーバーのデュアルインターフェイスサポート](../mfc/tn065-dual-interface-support-for-ole-automation-servers.md)\
+[テクニカルノート 64: OLE コントロールでのスレッドの Apartment-Model](../mfc/tn064-apartment-model-threading-in-activex-controls.md)\
+[テクニカルノート 65: Dual-Interface OLE オートメーションサーバーのサポート](../mfc/tn065-dual-interface-support-for-ole-automation-servers.md)\
 [テクニカルノート 71: MFC IOleCommandTarget の実装](../mfc/tn071-mfc-iolecommandtarget-implementation.md)
 
 ### <a name="mfc-resources"></a>MFC リソース
 
 [テクニカルノート 20: ID の名前付け規則と番号付け規則](../mfc/tn020-id-naming-and-numbering-conventions.md)\
 [テクニカルノート 23: MFC の標準リソース](../mfc/tn023-standard-mfc-resources.md)\
-[テクニカルノート 24: MFC で定義されたメッセージとリソース](../mfc/tn024-mfc-defined-messages-and-resources.md)\
-[テクニカルノート 28: 状況依存のヘルプのサポート](../mfc/tn028-context-sensitive-help-support.md)\
+[テクニカルノート 24: MFC-Defined メッセージとリソース](../mfc/tn024-mfc-defined-messages-and-resources.md)\
+[テクニカルノート 28: Context-Sensitive ヘルプサポート](../mfc/tn028-context-sensitive-help-support.md)\
 [テクニカルノート 35: Visual C++ での複数のリソースファイルとヘッダーファイルの使用](../mfc/tn035-using-multiple-resource-files-and-header-files-with-visual-cpp.md)\
 [テクニカルノート 36: AppWizard および ClassWizard での CFormView の使用](../mfc/tn036-using-cformview-with-appwizard-and-classwizard.md)\
 [テクニカルノート 70: MFC ウィンドウのクラス名](../mfc/tn070-mfc-window-class-names.md)

@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: MFC でのステータスバーの実装'
 title: MFC でのステータス バーの実装
 ms.date: 11/19/2018
 f1_keywords:
@@ -16,33 +17,33 @@ helpviewer_keywords:
 - status indicators
 - status bars [MFC], Windows 95 implementation
 ms.assetid: be5cd876-38e3-4d5c-b8cb-16d57a16a142
-ms.openlocfilehash: abd16ecb5e6a492bc42c747f60ec0859e1bc05cb
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: d42f8b4bf6ae72cf8eb4a12d1f5eafb8603c5e1b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64346414"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97216757"
 ---
 # <a name="status-bar-implementation-in-mfc"></a>MFC でのステータス バーの実装
 
-A [CStatusBar](../mfc/reference/cstatusbar-class.md)オブジェクトはテキスト出力ペインの行を持つコントロール バーです。 メッセージの行と状態インジケーターとして、出力ウィンドウがよく使用されます。 例には、選択されたメニュー コマンドを簡単に説明するメニュー ヘルプ メッセージ行と SCROLL LOCK、NUM LOCK、およびその他のキーの状態を示すインジケーターが含まれます。
+[CStatusBar](../mfc/reference/cstatusbar-class.md)オブジェクトは、テキスト出力ペインの行を含むコントロールバーです。 出力ペインは、通常、メッセージ行として、また状態インジケーターとして使用されます。 たとえば、選択したメニューコマンドを簡単に説明するメニューのヘルプメッセージ行や、スクロールロック、NUMLOCK、およびその他のキーの状態を示すインジケーターがあります。
 
-クラスを使用して MFC バージョン 4.0 の時点でステータス バーが実装されます[CStatusBarCtrl](../mfc/reference/cstatusbarctrl-class.md)、ステータス バー コモン コントロールをカプセル化します。 旧バージョンと互換性のため、MFC では古いステータス バーの実装クラスで`COldStatusBar`します。 以前のバージョンの MFC のドキュメントに記載`COldStatusBar``CStatusBar`します。
+MFC バージョン4.0 では、ステータスバーは [CStatusBarCtrl](../mfc/reference/cstatusbarctrl-class.md)クラスを使用して実装されます。このクラスは、ステータスバーコモンコントロールをカプセル化します。 旧バージョンとの互換性のために、MFC では、以前のステータスバーの実装はクラスで保持されて `COldStatusBar` います。 以前のバージョンの MFC のドキュメントでは、について説明して `COldStatusBar` `CStatusBar` います。
 
-[CStatusBar::GetStatusBarCtrl](../mfc/reference/cstatusbar-class.md#getstatusbarctrl)、メンバー関数は、新しい MFC 4.0 では、することができますステータス バーのカスタマイズなどの追加機能の Windows コモン コントロールのサポートを活用します。 `CStatusBar` メンバー関数は、ほとんどの Windows コモン コントロール以外の機能を提供します。ただし、呼び出す`GetStatusBarCtrl`、さらに多くのステータス バーの特性、ステータス バーを付けることができます。 呼び出すと`GetStatusBarCtrl`への参照が返されます、`CStatusBarCtrl`オブジェクト。 その参照を使用するには、ステータス バー コントロールを操作します。
+MFC 4.0 の新機能である[CStatusBar:: GetStatusBarCtrl](../mfc/reference/cstatusbar-class.md#getstatusbarctrl)では、Windows コモンコントロールのステータスバーのカスタマイズと追加機能のサポートを利用できます。 `CStatusBar` メンバー関数は、Windows コモンコントロールのほとんどの機能を提供します。ただし、を呼び出すと `GetStatusBarCtrl` 、ステータスバーの特性をさらに詳細に指定できます。 を呼び出すと `GetStatusBarCtrl` 、オブジェクトへの参照が返され `CStatusBarCtrl` ます。 この参照を使用して、ステータスバーコントロールを操作できます。
 
-次の図には、いくつかのインジケーターを表示するステータス バーが表示されます。
+次の図は、複数のインジケーターを表示するステータスバーを示しています。
 
-![ステータス バー](../mfc/media/vc37dy1.gif "ステータス バー") <br/>
+![ステータスバー](../mfc/media/vc37dy1.gif "ステータス バー") <br/>
 ステータス バー
 
-ツールバーのようにステータス バーのオブジェクトは親フレーム ウィンドウに埋め込まれているし、フレーム ウィンドウが作成されるときに自動的に構築します。 すべてのコントロール バーのように、ステータス バーは自動的に破棄も親フレームが破棄されるときにします。
+ツールバーと同様に、ステータスバーオブジェクトは親フレームウィンドウに埋め込まれ、フレームウィンドウが構築されるときに自動的に構築されます。 ステータスバーは、すべてのコントロールバーと同様に、親フレームが破棄されると自動的に破棄されます。
 
-## <a name="what-do-you-want-to-know-more-about"></a>方法については、するして操作を行います
+## <a name="what-do-you-want-to-know-more-about"></a>詳細については、次を参照してください。
 
-- [ステータス バー ペインのテキストの更新](../mfc/updating-the-text-of-a-status-bar-pane.md)
+- [ステータスバーペインのテキストの更新](../mfc/updating-the-text-of-a-status-bar-pane.md)
 
-- MFC クラス[CStatusBar](../mfc/reference/cstatusbar-class.md)と[CStatusBarCtrl](../mfc/reference/cstatusbarctrl-class.md)
+- MFC クラス [CStatusBar](../mfc/reference/cstatusbar-class.md) と [CStatusBarCtrl](../mfc/reference/cstatusbarctrl-class.md)
 
 - [コントロール バー](../mfc/control-bars.md)
 
@@ -52,4 +53,4 @@ A [CStatusBar](../mfc/reference/cstatusbar-class.md)オブジェクトはテキ�
 
 ## <a name="see-also"></a>関連項目
 
-[ステータス バー](../mfc/status-bars.md)
+[ステータスバー](../mfc/status-bars.md)

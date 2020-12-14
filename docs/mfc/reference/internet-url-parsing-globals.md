@@ -1,16 +1,17 @@
 ---
+description: 詳細については、「インターネット URL 解析のグローバルとヘルパー」を参照してください。
 title: インターネット URL 解析のグローバルとヘルパー
 ms.date: 04/03/2017
 helpviewer_keywords:
 - parsing, URLs
 - URLs, parsing
 ms.assetid: 46c6384f-e4a6-4dbd-9196-219c19040ec5
-ms.openlocfilehash: c7ce6eeee6deb4537d09e102b925a742ada04650
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 4dca0946686759a3880c73aa425edcc724d8772d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88837165"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97219500"
 ---
 # <a name="internet-url-parsing-globals-and-helpers"></a>インターネット URL 解析のグローバルとヘルパー
 
@@ -109,9 +110,9 @@ URL 文字列を解析し、サービスとそのコンポーネントの型を�
 *Dwservicetype* = = #service
 
 > [!NOTE]
-> この関数を呼び出すには、プロジェクトに AFXINET.H を含める必要があります。始め.
+> この関数を呼び出すには、プロジェクトに AFXINET.H を含める必要があります。
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
   **ヘッダー** afxinet.h
 
@@ -187,7 +188,7 @@ URL のサーバー部分またはオブジェクト部分 (存在する場合) 
 *dwFlags*<br/>
 URL の解析方法を制御するフラグ。 は、次の値の組み合わせにすることができます。
 
-|値|意味|
+|値|説明|
 |-----------|-------------|
 |ICU_DECODE|% XX エスケープシーケンスを文字に変換します。|
 |ICU_NO_ENCODE|安全でない文字をエスケープシーケンスに変換しないでください。|
@@ -206,9 +207,9 @@ URL が正常に解析された場合は0以外の。それ以外の場合は、
 このメソッドは、URL 文字列を解析し、サービスとそのコンポーネントの種類、およびユーザーの名前とパスワードを提供します。 フラグは、安全でない文字の処理方法を示します。
 
 > [!NOTE]
-> この関数を呼び出すには、プロジェクトに AFXINET.H を含める必要があります。始め.
+> この関数を呼び出すには、プロジェクトに AFXINET.H を含める必要があります。
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
   **ヘッダー** afxinet.h
 
@@ -229,7 +230,7 @@ DWORD AFXAPI AfxGetInternetHandleType(  HINTERNET hQuery );
 
 ### <a name="return-value"></a>戻り値
 
-WININET によって定義されたインターネットサービスの種類のいずれか。始め. これらのインターネットサービスの一覧については、「解説」を参照してください。 ハンドルが NULL であるか認識されない場合、関数は AFX_INET_SERVICE_UNK を返します。
+WININET によって定義されたインターネットサービスの種類のいずれか。 これらのインターネットサービスの一覧については、「解説」を参照してください。 ハンドルが NULL であるか認識されない場合、関数は AFX_INET_SERVICE_UNK を返します。
 
 ### <a name="remarks"></a>解説
 
@@ -262,9 +263,9 @@ WININET によって定義されたインターネットサービスの種類の
 - INTERNET_HANDLE_TYPE_HTTP_REQUEST
 
 > [!NOTE]
-> この関数を呼び出すには、プロジェクトに AFXINET.H を含める必要があります。始め.
+> この関数を呼び出すには、プロジェクトに AFXINET.H を含める必要があります。
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 **ヘッダー:** afxinet.h
 
@@ -281,7 +282,7 @@ WININET によって定義されたインターネットサービスの種類の
 ### <a name="parameters"></a>パラメーター
 
 *dwContext*<br/>
-エラーの原因となった操作のコンテキスト識別子。 *DwContext*の既定値は、最初は[CInternetSession](cinternetsession-class.md)で指定され、 [CInternetConnection](cinternetconnection-class.md)および[CInternetFile](cinternetfile-class.md)の派生クラスに渡されます。 接続またはファイルに対して実行される特定の操作については、通常、独自の *dwContext* を使用して既定値をオーバーライドします。 この値は、特定の操作の状態を識別するために [CInternetSession:: OnStatusCallback](cinternetsession-class.md#onstatuscallback) に返されます。
+エラーの原因となった操作のコンテキスト識別子。 *DwContext* の既定値は、最初は [CInternetSession](cinternetsession-class.md)で指定され、 [CInternetConnection](cinternetconnection-class.md)および [CInternetFile](cinternetfile-class.md)の派生クラスに渡されます。 接続またはファイルに対して実行される特定の操作については、通常、独自の *dwContext* を使用して既定値をオーバーライドします。 この値は、特定の操作の状態を識別するために [CInternetSession:: OnStatusCallback](cinternetsession-class.md#onstatuscallback) に返されます。
 
 *dwError*<br/>
 例外の原因となったエラー。
@@ -291,9 +292,9 @@ WININET によって定義されたインターネットサービスの種類の
 オペレーティングシステムのエラーコードに基づいて、原因を特定する責任があります。
 
 > [!NOTE]
-> この関数を呼び出すには、プロジェクトに AFXINET.H を含める必要があります。始め.
+> この関数を呼び出すには、プロジェクトに AFXINET.H を含める必要があります。
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 **ヘッダー:** afxinet.h
 

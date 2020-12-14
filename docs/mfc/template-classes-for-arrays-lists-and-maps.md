@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: 配列、リスト、マップのテンプレートクラス'
 title: 配列、リスト、マップのテンプレート クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -10,36 +11,36 @@ helpviewer_keywords:
 - map classes [MFC]
 - template classes [MFC]
 ms.assetid: a8331c4b-068a-48f8-a629-b8449601e121
-ms.openlocfilehash: be5639802f6f4a11a29326efd71d9634797c9f5c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6a63614988953cfe736ec98df1756fb76ffb9d32
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62306328"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97216276"
 ---
 # <a name="template-classes-for-arrays-lists-and-maps"></a>配列、リスト、マップのテンプレート クラス
 
-これらのコレクション クラスは、集計に格納されているオブジェクトの種類を決めるパラメーターを持つテンプレートです。 `CArray`、 `CMap`、および`CList`クラスを使用して、グローバルのヘルパー関数が、通常、カスタマイズする必要があります。 これらのヘルパー関数の詳細については、次を参照してください。[コレクション クラスのヘルパー](../mfc/reference/collection-class-helpers.md)します。 型指定されたポインター クラスは、クラス ライブラリの他のクラスのラッパーです。 これらのラッパーを使用すると、コンパイラの型チェックのエラーを回避するために参加します。 これらのクラスの使用に関する詳細については、次を参照してください。[コレクション](../mfc/collections.md)します。
+これらのコレクションクラスは、集計に格納されているオブジェクトの型を指定するパラメーターを持つテンプレートです。 、、およびの各クラスは、通常はカスタマイズする必要がある `CArray` `CMap` `CList` グローバルヘルパー関数を使用します。 これらのヘルパー関数の詳細については、「 [コレクションクラスヘルパー](../mfc/reference/collection-class-helpers.md)」を参照してください。 型指定されたポインタークラスは、クラスライブラリ内の他のクラスのラッパーです。 これらのラッパーを使用すると、エラーを回避するために、コンパイラの型チェックを参加させることができます。 これらのクラスの使用方法の詳細については、「 [コレクション](../mfc/collections.md)」を参照してください。
 
-これらのクラスは、配列、リスト、および任意のタイプを使用してマップを作成するために使用できるテンプレートを提供します。
+これらのクラスは、任意の型を使用して配列、リスト、マップを作成するために使用できるテンプレートを提供します。
 
 [CArray](../mfc/reference/carray-class.md)<br/>
-任意の型の配列を作成するテンプレート クラス。
+任意の型の配列を作成するためのテンプレートクラス。
 
 [CList](../mfc/reference/clist-class.md)<br/>
-任意の型のリストを作成するテンプレート クラス。
+任意の型のリストを作成するためのテンプレートクラス。
 
-[Cmap クラス](../mfc/reference/cmap-class.md)<br/>
-任意のキーと値の型でマップを作成するテンプレート クラス。
+[CMap](../mfc/reference/cmap-class.md)<br/>
+任意のキーと値の型をマップするためのテンプレートクラス。
 
 [CTypedPtrArray](../mfc/reference/ctypedptrarray-class.md)<br/>
-ポインターのタイプ セーフ配列のテンプレート クラス。
+ポインターのタイプセーフな配列のテンプレートクラス。
 
 [CTypedPtrList](../mfc/reference/ctypedptrlist-class.md)<br/>
-ポインターのタイプ セーフ リストのテンプレート クラス。
+ポインターのタイプセーフなリストのテンプレートクラス。
 
 [CTypedPtrMap](../mfc/reference/ctypedptrmap-class.md)<br/>
-ポインターとタイプ セーフなマップのテンプレート クラス。
+ポインターを使用したタイプセーフなマップのテンプレートクラス。
 
 ## <a name="see-also"></a>関連項目
 

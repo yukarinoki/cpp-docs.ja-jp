@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: ウィンドウクラスの登録'
 title: ウィンドウ クラスの登録
 ms.date: 11/04/2016
 f1_keywords:
@@ -14,27 +15,27 @@ helpviewer_keywords:
 - WinMain method [MFC]
 - registering window classes [MFC]
 ms.assetid: 30994bc4-a362-43da-bcc5-1bf67a3fc929
-ms.openlocfilehash: 7c459b909a60fff2b7aeded9ea8d79a39ced24e4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e31f83b691ad12d845afca6a3a5f18d9ba64b0e6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62309084"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97218193"
 ---
 # <a name="registering-window-classes"></a>ウィンドウ クラスの登録
 
-Windows の従来のプログラミングでは"ウィンドウ"クラスは、windows の任意の数を作成できますから「クラス」(C++ クラスではなく) の特性を定義します。 この種類のクラスは、テンプレートまたは windows を作成するためのモデルです。
+Windows 用の従来のプログラミングのウィンドウ "classes" は、任意の数のウィンドウを作成できる "クラス" (C++ クラスではない) の特性を定義します。 この種のクラスは、windows を作成するためのテンプレートまたはモデルです。
 
-## <a name="window-class-registration-in-traditional-programs-for-windows"></a>Windows 用の従来のプログラムでウィンドウ クラスの登録
+## <a name="window-class-registration-in-traditional-programs-for-windows"></a>Windows 用の従来のプログラムでのウィンドウクラスの登録
 
-MFC では、なし、Windows の従来のプログラムでの「ウィンドウ プロシージャ」でのウィンドウにすべてのメッセージを処理するか、"`WndProc`"。A `WndProc` 「ウィンドウ クラスの登録」プロセスを使用して、ウィンドウに関連付けられています。 メイン ウィンドウに登録されている、`WinMain`関数が windows の他のクラスは、アプリケーションのどこにも登録できます。 登録へのポインターを格納する構造体には、`WndProc`カーソル、背景のブラシの仕様と機能などです。 呼び出す前に、クラスの文字列名と共に、パラメーターとして渡される構造体、`RegisterClass`関数。 したがって、登録クラスは、複数のウィンドウで共有できます。
+MFC を使用していない Windows の従来のプログラムでは、"ウィンドウプロシージャ" または "." のウィンドウにすべてのメッセージを処理し `WndProc` ます。は、 `WndProc` "ウィンドウクラスの登録" プロセスを使用して、ウィンドウに関連付けられています。 メインウィンドウは関数に登録され `WinMain` ますが、その他の windows のクラスはアプリケーション内の任意の場所に登録できます。 登録は、関数へのポインターと、 `WndProc` カーソルや背景ブラシなどの仕様を含む構造体に依存します。 構造体は、関数を呼び出す前に、クラスの文字列名と共にパラメーターとして渡され `RegisterClass` ます。 そのため、登録クラスは複数のウィンドウで共有できます。
 
-## <a name="window-class-registration-in-mfc-programs"></a>MFC プログラムでウィンドウ クラスの登録
+## <a name="window-class-registration-in-mfc-programs"></a>MFC プログラムでのウィンドウクラスの登録
 
-これに対し、ほとんどのウィンドウ クラスの登録アクティビティは、MFC フレームワーク プログラムで自動的に行われます。 MFC を使用している場合は、通常クラス継承の標準の C++ 構文を使用して、既存のライブラリのクラスから C++ ウィンドウ クラスを派生します。 フレームワークは引き続き従来使用「登録クラス」とは、必要なときに登録されているいくつかの標準的なものを提供します。 追加登録クラスを登録するには、呼び出すことによって、 [AfxRegisterWndClass](../mfc/reference/application-information-and-management.md#afxregisterwndclass)に登録されているクラスを渡す、グローバル関数、`Create`のメンバー関数`CWnd`します。 ここでは、従来の説明に従って Windows の「登録クラス」は、C++ のクラスと混同しないようにします。
+これに対し、ほとんどのウィンドウクラスの登録アクティビティは、MFC フレームワークプログラムで自動的に実行されます。 MFC を使用している場合は、通常、クラス継承のための通常の C++ 構文を使用して、既存のライブラリクラスから C++ ウィンドウクラスを派生させます。 フレームワークは従来の "登録クラス" を引き続き使用し、いくつかの標準のものを提供し、必要に応じて登録します。 [AfxRegisterWndClass](../mfc/reference/application-information-and-management.md#afxregisterwndclass)グローバル関数を呼び出して、登録されているクラスをのメンバー関数に渡すことで、追加の登録クラスを登録でき `Create` `CWnd` ます。 ここで説明するように、Windows の従来の "登録クラス" は、C++ クラスと混同することはありません。
 
-詳細については、次を参照してください。[テクニカル ノート 1:](../mfc/tn001-window-class-registration.md)します。
+詳細については、「 [テクニカルノート 1](../mfc/tn001-window-class-registration.md)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 
-[ウィンドウの作成](../mfc/creating-windows.md)
+[作成 (ウィンドウを)](../mfc/creating-windows.md)

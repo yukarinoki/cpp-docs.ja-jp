@@ -1,35 +1,36 @@
 ---
+description: '詳細情報: ステータスバー'
 title: ステータス バー
 ms.date: 11/04/2016
 helpviewer_keywords:
 - status bars
 - control bars [MFC], status bar
 ms.assetid: fcbc5029-1aab-4e14-adf7-419038a4935e
-ms.openlocfilehash: 399beaf16eed2a3b488abfc14e255759e8dea779
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 534d7adbc8930c9d9c343a17571439c25b895a8d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62307134"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97216692"
 ---
 # <a name="status-bars"></a>ステータス バー
 
-ステータス バーは、ユーザーの作業を中断することがなく、ユーザーにメッセージと有用な情報を表示する場所をアプリケーションに提供します。 通常、ウィンドウの下部に表示、ステータス バーがある「インジケーター」と"メッセージ line"「ウィンドウ」 インジケーターでのマクロの記録を有効になっているかどうかなどのスクロール ロックの状態を提供します。 ステータス バーにメッセージ行には、ユーザーがマウスでポイントしてツール バー ボタンまたはメニュー項目またはプログラムのステータスに関する情報を表示できます。
+ステータスバーを使用すると、ユーザーの作業を中断することなく、ユーザーにメッセージや有用な情報を表示する場所をアプリケーションに提供できます。 通常、ウィンドウの下部に表示されるステータスバーには、"インジケーター" と "メッセージ行" を含む "ペイン" があります。 インジケーターには、スクロールロック、マクロの記録がオンになっているかどうかなどの状態が示されます。 ステータスバーのメッセージ行には、プログラムのステータス、またはユーザーがマウスでポイントしているツールバーボタンまたはメニュー項目に関する情報が表示されます。
 
-ステータス バーを選択して、プログラムで作成、**初期ステータス バー** MFC アプリケーション ウィザードのオプション。
+MFC アプリケーションウィザードの [ **初期ステータスバー** ] オプションを選択して、プログラムにステータスバーを作成します。
 
-## <a name="what-do-you-want-to-know-more-about"></a>方法については、するして操作を行います
+## <a name="what-do-you-want-to-know-more-about"></a>詳細については、次を参照してください。
 
 - [MFC でのステータス バーの実装](../mfc/status-bar-implementation-in-mfc.md)
 
-- [ステータス バー ペインのテキストの更新](../mfc/updating-the-text-of-a-status-bar-pane.md)
+- [ステータスバーペインのテキストの更新](../mfc/updating-the-text-of-a-status-bar-pane.md)
 
-- [(ステータス バー ペインのテキストの更新)、新しいステータス バー ペインを作成します。](../mfc/updating-the-text-of-a-status-bar-pane.md)
+- [新しいステータスバーウィンドウの作成 (ステータスバーペインのテキストの更新)](../mfc/updating-the-text-of-a-status-bar-pane.md)
 
-- [(ステータス バー ペインのテキストの更新) ステータス バー ペインの表示テキスト](../mfc/updating-the-text-of-a-status-bar-pane.md)
+- [ステータスバーペインにテキストを表示する (ステータスバーウィンドウのテキストを更新する)](../mfc/updating-the-text-of-a-status-bar-pane.md)
 
-- [ステータス バーにコマンド情報を表示します。](../mfc/how-to-display-command-information-in-the-status-bar.md)
+- [ステータスバーにコマンド情報を表示する](../mfc/how-to-display-command-information-in-the-status-bar.md)
 
 ## <a name="see-also"></a>関連項目
 
-[ユーザー インターフェイス要素](../mfc/user-interface-elements-mfc.md)
+[ユーザーインターフェイス要素](../mfc/user-interface-elements-mfc.md)

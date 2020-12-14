@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: メッセージマップ (MFC)'
 title: メッセージ マップ (MFC)
 ms.date: 09/07/2019
 helpviewer_keywords:
@@ -7,25 +8,25 @@ helpviewer_keywords:
 - messages [MFC], Windows
 - MFC, messages
 ms.assetid: 3f9855e4-9d7d-4b64-8f3f-a19ea3cf79ba
-ms.openlocfilehash: 8080becf1a1a153322bfd03cbd7006eaf2ce4e13
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 7647104d62cbbf10271ddb9e7c781da0049985f0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81356575"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97219357"
 ---
 # <a name="message-maps-mfc"></a>メッセージ マップ (MFC)
 
-このセクションでは、すべてのメッセージ[マッピング マクロ](../../mfc/reference/message-map-macros-mfc.md)とすべての[CWnd](../../mfc/reference/cwnd-class.md)メッセージ マップ エントリと、対応するメンバー関数プロトタイプを示します。
+参照のこのセクションでは、すべての [メッセージマッピングマクロ](../../mfc/reference/message-map-macros-mfc.md) とすべての [CWnd](../../mfc/reference/cwnd-class.md) メッセージマップエントリを、対応するメンバー関数プロトタイプと共に示します。
 
 |カテゴリ|説明|
 |--------------|-----------------|
-|ON\_コマンド メッセージ ハンドラ|ユーザー`WM_COMMAND`メニューの選択またはメニュー アクセス キーによって生成されたメッセージを処理します。|
-|[子ウィンドウ通知メッセージ ハンドラ](../../mfc/reference/child-window-notification-message-handlers.md)|子ウィンドウからの通知メッセージを処理します。|
-|[WM_ メッセージ ハンドラー](../../mfc/reference/handlers-for-wm-messages.md)|などの`WM_``WM_PAINT`メッセージを処理します。|
+|\_コマンドメッセージハンドラーで|`WM_COMMAND`ユーザーメニュー選択またはメニューアクセスキーによって生成されるメッセージを処理します。|
+|[子ウィンドウの通知メッセージハンドラー](../../mfc/reference/child-window-notification-message-handlers.md)|子ウィンドウからの通知メッセージを処理します。|
+|[WM_ メッセージハンドラー](../../mfc/reference/handlers-for-wm-messages.md)|など `WM_` のメッセージを処理し `WM_PAINT` ます。|
 |[ユーザー定義メッセージ ハンドラー](../../mfc/reference/user-defined-handlers.md)|ユーザー定義メッセージを処理します。|
 
-(このリファレンスで使用する用語と規則については、「[メッセージ マップ相互参照の使用方法](../../mfc/reference/how-to-use-the-message-map-cross-reference.md)」を参照してください)。
+(このリファレンスで使用される用語と規則の詳細については、「 [メッセージマップの相互参照の使用方法](../../mfc/reference/how-to-use-the-message-map-cross-reference.md)」を参照してください)。
 
 Windows はメッセージ指向オペレーティング システムであることが理由で、Windows 環境向けのプログラミングの大部分にはメッセージ処理が関係しています。 キーストロークやマウス クリックなどのイベントが発生するたびに、そのイベントを処理する必要があるアプリケーションに対してメッセージが送信されます。
 
@@ -33,7 +34,7 @@ Microsoft Foundation Class ライブラリには、メッセージベースの�
 
 [!code-cpp[NVC_MFCMessageMaps#16](../../mfc/reference/codesnippet/cpp/message-maps-mfc_1.cpp)]
 
-`ON_COMMAND` マクロは、メニュー、ボタン、およびアクセラレータ キーによって生成されるコマンド メッセージを処理するために使用します。 [マクロ](../../mfc/reference/message-map-macros-mfc.md)は、次のマップに使用できます。
+`ON_COMMAND` マクロは、メニュー、ボタン、およびアクセラレータ キーによって生成されるコマンド メッセージを処理するために使用します。 [マクロ](../../mfc/reference/message-map-macros-mfc.md) は、次のものをマップするために使用できます。
 
 ## <a name="windows-messages"></a>Windows メッセージ
 
@@ -55,13 +56,13 @@ Microsoft Foundation Class ライブラリには、メッセージベースの�
 
 - コントロールの通知
 
-メッセージ マップ マクロは重要なマクロですが、通常は直接記述する必要はありません。 これは、メッセージ処理関数をメッセージに関連付けるために使用すると、[クラス ウィザード](mfc-class-wizard.md)によって自動的にメッセージ マップ エントリがソース ファイルに作成されるためです。 メッセージ マップ エントリを編集または追加する場合は、クラス ウィザードを使用できます。
+メッセージ マップ マクロは重要なマクロですが、通常は直接記述する必要はありません。 これは、 [クラスウィザード](mfc-class-wizard.md) を使用してメッセージ処理関数をメッセージに関連付けた場合に、ソースファイルにメッセージマップエントリが自動的に作成されるためです。 メッセージマップエントリを編集または追加する場合はいつでも、クラスウィザードを使用できます。
 
 > [!NOTE]
-> クラス ウィザードは、メッセージ マップ範囲をサポートしていません。 これらのメッセージ マップ エントリは、独自に作成する必要があります。
+> クラスウィザードでは、メッセージマップ範囲はサポートされていません。 これらのメッセージ マップ エントリは、独自に作成する必要があります。
 
 ただし、メッセージ マップは、Microsoft Foundation Class ライブラリの重要な部分です。 これらが何を実行するかを理解する必要があり、そのためのドキュメントが用意されています。
 
 ## <a name="see-also"></a>関連項目
 
-[構造体、スタイル、コールバック関数とメッセージ マップ](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)
+[構造体、スタイル、コールバック、およびメッセージマップ](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)

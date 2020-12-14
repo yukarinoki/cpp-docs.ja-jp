@@ -1,16 +1,17 @@
 ---
+description: 詳細については、「プロパティページ (MFC)」を参照してください。
 title: プロパティ ページ (MFC)
 ms.date: 11/04/2016
 helpviewer_keywords:
 - property page data transfer functions in MFC
 - property pages [MFC], global MFC functions
 ms.assetid: 734f88bc-c776-4136-9b0e-f45c761a45c1
-ms.openlocfilehash: 9a04395aec8c2eb968e5cefaf410643a1ce03e32
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: fa395272ba74c6b3900d5a1500d4cf47ade4e535
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88843587"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97218967"
 ---
 # <a name="property-pages-mfc"></a>プロパティ ページ (MFC)
 
@@ -63,19 +64,19 @@ void AFXAPI DDP_CBIndex(
 オブジェクトへのポインター `CDataExchange` 。 フレームワークは、データ交換のコンテキスト (交換方向を含みます) を確定するためにこのオブジェクトを提供します。
 
 *id*<br/>
-*PszPropName*によって指定されたコントロールプロパティに関連付けられているコンボボックスコントロールのリソース ID。
+*PszPropName* によって指定されたコントロールプロパティに関連付けられているコンボボックスコントロールのリソース ID。
 
 *レプリカ*<br/>
-*Id*で指定されたプロパティページコントロールと、 *pszPropName*によって指定されたプロパティに関連付けられているメンバー変数。
+*Id* で指定されたプロパティページコントロールと、 *pszPropName* によって指定されたプロパティに関連付けられているメンバー変数。
 
 *pszPropName*<br/>
-*Id*で指定されたコンボボックスコントロールと交換されるコントロールプロパティのプロパティ名。
+*Id* で指定されたコンボボックスコントロールと交換されるコントロールプロパティのプロパティ名。
 
 ### <a name="remarks"></a>解説
 
 この関数は、対応する関数呼び出しの前に呼び出す必要があり `DDX_CBIndex` ます。
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
   **ヘッダー** afxctl.h
 
@@ -97,19 +98,19 @@ void AFXAPI DDP_CBString(
 オブジェクトへのポインター `CDataExchange` 。 フレームワークは、データ交換のコンテキスト (交換方向を含みます) を確定するためにこのオブジェクトを提供します。
 
 *id*<br/>
-*PszPropName*によって指定されたコントロールプロパティに関連付けられているコンボボックスコントロールのリソース ID。
+*PszPropName* によって指定されたコントロールプロパティに関連付けられているコンボボックスコントロールのリソース ID。
 
 *レプリカ*<br/>
-*Id*で指定されたプロパティページコントロールと、 *pszPropName*によって指定されたプロパティに関連付けられているメンバー変数。
+*Id* で指定されたプロパティページコントロールと、 *pszPropName* によって指定されたプロパティに関連付けられているメンバー変数。
 
 *pszPropName*<br/>
-*Id*で指定されたコンボボックスの文字列と交換されるコントロールプロパティのプロパティ名。
+*Id* で指定されたコンボボックスの文字列と交換されるコントロールプロパティのプロパティ名。
 
 ### <a name="remarks"></a>解説
 
 この関数は、対応する関数呼び出しの前に呼び出す必要があり `DDX_CBString` ます。
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
   **ヘッダー** afxctl.h
 
@@ -131,19 +132,19 @@ void AFXAPI DDP_CBStringExact(
 オブジェクトへのポインター `CDataExchange` 。 フレームワークは、データ交換のコンテキスト (交換方向を含みます) を確定するためにこのオブジェクトを提供します。
 
 *id*<br/>
-*PszPropName*によって指定されたコントロールプロパティに関連付けられているコンボボックスコントロールのリソース ID。
+*PszPropName* によって指定されたコントロールプロパティに関連付けられているコンボボックスコントロールのリソース ID。
 
 *レプリカ*<br/>
-*Id*で指定されたプロパティページコントロールと、 *pszPropName*によって指定されたプロパティに関連付けられているメンバー変数。
+*Id* で指定されたプロパティページコントロールと、 *pszPropName* によって指定されたプロパティに関連付けられているメンバー変数。
 
 *pszPropName*<br/>
-*Id*で指定されたコンボボックスの文字列と交換されるコントロールプロパティのプロパティ名。
+*Id* で指定されたコンボボックスの文字列と交換されるコントロールプロパティのプロパティ名。
 
 ### <a name="remarks"></a>解説
 
 この関数は、対応する関数呼び出しの前に呼び出す必要があり `DDX_CBStringExact` ます。
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
   **ヘッダー** afxctl.h
 
@@ -165,19 +166,19 @@ void AFXAPI DDP_Check(
 オブジェクトへのポインター `CDataExchange` 。 フレームワークは、データ交換のコンテキスト (交換方向を含みます) を確定するためにこのオブジェクトを提供します。
 
 *id*<br/>
-*PszPropName*によって指定されたコントロールプロパティに関連付けられているチェックボックスコントロールのリソース ID。
+*PszPropName* によって指定されたコントロールプロパティに関連付けられているチェックボックスコントロールのリソース ID。
 
 *レプリカ*<br/>
-*Id*で指定されたプロパティページコントロールと、 *pszPropName*によって指定されたプロパティに関連付けられているメンバー変数。
+*Id* で指定されたプロパティページコントロールと、 *pszPropName* によって指定されたプロパティに関連付けられているメンバー変数。
 
 *pszPropName*<br/>
-*Id*で指定されたチェックボックスコントロールと交換されるコントロールプロパティのプロパティ名。
+*Id* で指定されたチェックボックスコントロールと交換されるコントロールプロパティのプロパティ名。
 
 ### <a name="remarks"></a>解説
 
 この関数は、対応する関数呼び出しの前に呼び出す必要があり `DDX_Check` ます。
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
   **ヘッダー** afxctl.h
 
@@ -199,19 +200,19 @@ void AFXAPI DDP_LBIndex(
 オブジェクトへのポインター `CDataExchange` 。 フレームワークは、データ交換のコンテキスト (交換方向を含みます) を確定するためにこのオブジェクトを提供します。
 
 *id*<br/>
-*PszPropName*によって指定されたコントロールプロパティに関連付けられているリストボックスコントロールのリソース ID。
+*PszPropName* によって指定されたコントロールプロパティに関連付けられているリストボックスコントロールのリソース ID。
 
 *レプリカ*<br/>
-*Id*で指定されたプロパティページコントロールと、 *pszPropName*によって指定されたプロパティに関連付けられているメンバー変数。
+*Id* で指定されたプロパティページコントロールと、 *pszPropName* によって指定されたプロパティに関連付けられているメンバー変数。
 
 *pszPropName*<br/>
-*Id*で指定されたリストボックス文字列と交換されるコントロールプロパティのプロパティ名。
+*Id* で指定されたリストボックス文字列と交換されるコントロールプロパティのプロパティ名。
 
 ### <a name="remarks"></a>解説
 
 この関数は、対応する関数呼び出しの前に呼び出す必要があり `DDX_LBIndex` ます。
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
   **ヘッダー** afxctl.h
 
@@ -233,19 +234,19 @@ void AFXAPI DDP_LBString(
 オブジェクトへのポインター `CDataExchange` 。 フレームワークは、データ交換のコンテキスト (交換方向を含みます) を確定するためにこのオブジェクトを提供します。
 
 *id*<br/>
-*PszPropName*によって指定されたコントロールプロパティに関連付けられているリストボックスコントロールのリソース ID。
+*PszPropName* によって指定されたコントロールプロパティに関連付けられているリストボックスコントロールのリソース ID。
 
 *レプリカ*<br/>
-*Id*で指定されたプロパティページコントロールと、 *pszPropName*によって指定されたプロパティに関連付けられているメンバー変数。
+*Id* で指定されたプロパティページコントロールと、 *pszPropName* によって指定されたプロパティに関連付けられているメンバー変数。
 
 *pszPropName*<br/>
-*Id*で指定されたリストボックス文字列と交換されるコントロールプロパティのプロパティ名。
+*Id* で指定されたリストボックス文字列と交換されるコントロールプロパティのプロパティ名。
 
 ### <a name="remarks"></a>解説
 
 この関数は、対応する関数呼び出しの前に呼び出す必要があり `DDX_LBString` ます。
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
   **ヘッダー** afxctl.h
 
@@ -267,19 +268,19 @@ void AFXAPI DDP_LBStringExact(
 オブジェクトへのポインター `CDataExchange` 。 フレームワークは、データ交換のコンテキスト (交換方向を含みます) を確定するためにこのオブジェクトを提供します。
 
 *id*<br/>
-*PszPropName*によって指定されたコントロールプロパティに関連付けられているリストボックスコントロールのリソース ID。
+*PszPropName* によって指定されたコントロールプロパティに関連付けられているリストボックスコントロールのリソース ID。
 
 *レプリカ*<br/>
-*Id*で指定されたプロパティページコントロールと、 *pszPropName*によって指定されたプロパティに関連付けられているメンバー変数。
+*Id* で指定されたプロパティページコントロールと、 *pszPropName* によって指定されたプロパティに関連付けられているメンバー変数。
 
 *pszPropName*<br/>
-*Id*で指定されたリストボックス文字列と交換されるコントロールプロパティのプロパティ名。
+*Id* で指定されたリストボックス文字列と交換されるコントロールプロパティのプロパティ名。
 
 ### <a name="remarks"></a>解説
 
 この関数は、対応する関数呼び出しの前に呼び出す必要があり `DDX_LBStringExact` ます。
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
   **ヘッダー** afxctl.h
 
@@ -302,7 +303,7 @@ void AFXAPI DDP_PostProcessing(CDataExchange * pDX);
 
 [!code-cpp[NVC_MFCAxCtl#15](../../mfc/reference/codesnippet/cpp/property-pages-mfc_1.cpp)]
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
   **ヘッダー** afxctl.h
 
@@ -324,19 +325,19 @@ void AFXAPI DDP_Radio(
 オブジェクトへのポインター `CDataExchange` 。 フレームワークは、データ交換のコンテキスト (交換方向を含みます) を確定するためにこのオブジェクトを提供します。
 
 *id*<br/>
-*PszPropName*によって指定されたコントロールプロパティに関連付けられているオプションボタンコントロールのリソース ID。
+*PszPropName* によって指定されたコントロールプロパティに関連付けられているオプションボタンコントロールのリソース ID。
 
 *レプリカ*<br/>
-*Id*で指定されたプロパティページコントロールと、 *pszPropName*によって指定されたプロパティに関連付けられているメンバー変数。
+*Id* で指定されたプロパティページコントロールと、 *pszPropName* によって指定されたプロパティに関連付けられているメンバー変数。
 
 *pszPropName*<br/>
-*Id*で指定されたオプションボタンコントロールと交換されるコントロールプロパティのプロパティ名。
+*Id* で指定されたオプションボタンコントロールと交換されるコントロールプロパティのプロパティ名。
 
 ### <a name="remarks"></a>解説
 
 この関数は、対応する関数呼び出しの前に呼び出す必要があり `DDX_Radio` ます。
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
   **ヘッダー** afxctl.h
 
@@ -400,19 +401,19 @@ void AFXAPI DDP_Text(
 オブジェクトへのポインター `CDataExchange` 。 フレームワークは、データ交換のコンテキスト (交換方向を含みます) を確定するためにこのオブジェクトを提供します。
 
 *id*<br/>
-*PszPropName*によって指定されたコントロールプロパティに関連付けられているコントロールのリソース ID。
+*PszPropName* によって指定されたコントロールプロパティに関連付けられているコントロールのリソース ID。
 
 *レプリカ*<br/>
-*Id*で指定されたプロパティページコントロールと、 *pszPropName*によって指定されたプロパティに関連付けられているメンバー変数。
+*Id* で指定されたプロパティページコントロールと、 *pszPropName* によって指定されたプロパティに関連付けられているメンバー変数。
 
 *pszPropName*<br/>
-*Id*で指定されたコントロールと交換されるコントロールプロパティのプロパティ名。
+*Id* で指定されたコントロールと交換されるコントロールプロパティのプロパティ名。
 
 ### <a name="remarks"></a>解説
 
 この関数は、対応する関数呼び出しの前に呼び出す必要があり `DDX_Text` ます。
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
   **ヘッダー** afxctl.h
 
@@ -438,7 +439,7 @@ BEGIN_PROPPAGEIDS(class_name,  count)
 
 プロパティページの詳細については、「 [ActiveX コントロール: プロパティページ](../../mfc/mfc-activex-controls-property-pages.md)」を参照してください。
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
   **ヘッダー** afxctl.h
 
@@ -455,7 +456,7 @@ END_PROPPAGEIDS(class_name)
 *class_name*<br/>
 プロパティページを所有するコントロールクラスの名前。
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
   **ヘッダー** afxctl.h
 
@@ -476,7 +477,7 @@ PROPPAGEID(clsid)
 
 すべての PROPPAGEID マクロは、コントロールの実装ファイルの BEGIN_PROPPAGEIDS と END_PROPPAGEIDS のマクロの間に配置する必要があります。
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
   **ヘッダー** afxctl.h
 

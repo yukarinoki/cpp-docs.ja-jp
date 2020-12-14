@@ -1,29 +1,30 @@
 ---
-title: '方法: メッセージ マップ クロス リファレンスを使い方'
+description: '詳細については、「方法: Message-Map 相互参照を使用する」を参照してください。'
+title: メッセージ マップ クロス リファレンスの使い方
 ms.date: 11/04/2016
 helpviewer_keywords:
 - windows [MFC], message maps
 ms.assetid: 2e863d23-9e58-45ba-b5e4-a8ceefccd0c8
-ms.openlocfilehash: 58659dbf4e4bc817381faaef930334a80f664b03
-ms.sourcegitcommit: 934cb53fa4cb59fea611bfeb9db110d8d6f7d165
+ms.openlocfilehash: 4bbc140db59a7df4abd42fdcf68b47273ec3e846
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65612163"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97219656"
 ---
-# <a name="how-to-use-the-message-map-cross-reference"></a>方法: メッセージ マップ クロス リファレンスを使い方
+# <a name="how-to-use-the-message-map-cross-reference"></a>メッセージ マップ クロス リファレンスの使い方
 
-エントリ\<memberFxn >、派生クラス用の独自のメンバー関数を記述[CWnd](../../mfc/reference/cwnd-class.md)クラス。 関数は任意の名前を指定します。 などの他の関数`OnActivate`、クラスのメンバー関数は`CWnd`します。 呼び出された場合にメッセージを渡す、 `DefWindowProc` Windows 関数。 Windows 通知メッセージを処理するには、オーバーライド、対応する`CWnd`派生クラスで関数。 関数は、基本クラスを基底クラスでオーバーライドされた関数を呼び出す必要があり、Windows は、メッセージに応答します。
+[ラベルの付い \<memberFxn> たエントリ] に、派生した [CWnd](../../mfc/reference/cwnd-class.md) クラスの独自のメンバー関数を記述します。 関数に任意の名前を付けます。 などの他の関数 `OnActivate` は、クラスのメンバー関数です `CWnd` 。 呼び出された場合は、メッセージを Windows の関数に渡し `DefWindowProc` ます。 Windows 通知メッセージを処理するには、 `CWnd` 派生クラスの対応する関数をオーバーライドします。 関数は、基底クラスでオーバーライドされた関数を呼び出して、基底クラスと Windows がメッセージに応答できるようにする必要があります。
 
-すべてのケースに関数のプロトタイプを置く、 `CWnd`-派生クラスのヘッダー、およびコードに示すようメッセージ マップ エントリ。
+どのような場合でも、関数プロトタイプを `CWnd` から派生したクラスヘッダーに配置し、表示されているようにメッセージマップエントリをコーディングします。
 
-次の用語が使用されます。
+使用される用語は次のとおりです。
 
-|用語|定義|
+|項目|定義|
 |----------|----------------|
-|ID|任意のユーザー定義のメニュー項目の ID (WM_COMMAND メッセージ) またはコントロール ID (子ウィンドウの通知メッセージ)。|
-|"message"と"wNotifyCode"|Windows は、WINDOWS で定義されている Id をメッセージです。H.|
-|nMessageVariable|戻り値を格納する変数の名前、 `RegisterWindowMessage` Windows 関数。|
+|id|任意のユーザー定義のメニュー項目 ID (WM_COMMAND メッセージ) またはコントロール ID (子ウィンドウ通知メッセージ)。|
+|"message" と "wNotifyCode"|WINDOWS .H で定義されている windows メッセージ Id。|
+|nMessageVariable|Windows 関数からの戻り値を格納する変数の名前 `RegisterWindowMessage` 。|
 
 ## <a name="see-also"></a>関連項目
 

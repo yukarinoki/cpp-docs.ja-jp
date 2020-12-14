@@ -1,15 +1,16 @@
 ---
+description: 詳細については、オブジェクトモデルサービスの Run-Time に関するページを参照してください。
 title: ランタイム オブジェクト モデル サービス
 ms.date: 03/27/2019
 helpviewer_keywords:
 - run-time object model services macros
 ms.assetid: 4a3e79df-2ee3-43a4-8193-20298828de85
-ms.openlocfilehash: 63a82e3b05100f273be04a8718f2ecbb1510f06f
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 5457b34b13d53a6fbf76a74b893958b03b1d63de
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88844510"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97218889"
 ---
 # <a name="run-time-object-model-services"></a>ランタイム オブジェクト モデル サービス
 
@@ -23,9 +24,9 @@ ms.locfileid: "88844510"
 
 次の表に、実行時クラス情報、シリアル化、および動的作成をサポートする MFC マクロを示します。
 
-これらのランタイムオブジェクトサービスおよびシリアル化の詳細については、「 [CObject クラス: Run Time クラス情報へのアクセス](../../mfc/accessing-run-time-class-information.md)」を参照してください。
+これらのランタイムオブジェクトサービスおよびシリアル化の詳細については、「 [CObject クラス: Run-Time クラス情報へのアクセス](../../mfc/accessing-run-time-class-information.md)」を参照してください。
 
-### <a name="run-time-object-model-services-macros"></a>ランタイムオブジェクトモデルサービスマクロ
+### <a name="run-time-object-model-services-macros"></a>Run-Time オブジェクトモデルサービスマクロ
 
 |名前|説明|
 |-|-|
@@ -66,14 +67,14 @@ AFX_COMCTL32_IF_EXISTS(  proc );
 
 ### <a name="parameters"></a>パラメーター
 
-*/proc*<br/>
+*proc*<br/>
 関数名を格納している null で終わる文字列へのポインター、または関数の序数値を指定します。 このパラメーターが序数値の場合は、下位ワードである必要があります。上位ワードはゼロである必要があります。 このパラメーターは Unicode で指定する必要があります。
 
 ### <a name="remarks"></a>解説
 
-このマクロを使用して、コモンコントロールライブラリが、 [GetProcAddress](/windows/win32/api/libloaderapi/nf-libloaderapi-getprocaddress)を呼び出すのではなく、 *proc*によって指定された関数を使用するかどうかを判断します。
+このマクロを使用して、コモンコントロールライブラリが、 [GetProcAddress](/windows/win32/api/libloaderapi/nf-libloaderapi-getprocaddress)を呼び出すのではなく、 *proc* によって指定された関数を使用するかどうかを判断します。
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 afxcomctl32.h, afxcomctl32.h. inl
 
@@ -89,14 +90,14 @@ AFX_COMCTL32_IF_EXISTS2( proc );
 
 ### <a name="parameters"></a>パラメーター
 
-*/proc*<br/>
+*proc*<br/>
 関数名を格納している null で終わる文字列へのポインター、または関数の序数値を指定します。 このパラメーターが序数値の場合は、下位ワードである必要があります。上位ワードはゼロである必要があります。 このパラメーターは Unicode で指定する必要があります。
 
 ### <a name="remarks"></a>解説
 
-このマクロを使用して、コモンコントロールライブラリが、 [GetProcAddress](/windows/win32/api/libloaderapi/nf-libloaderapi-getprocaddress)を呼び出すのではなく、 *proc*によって指定された関数を使用するかどうかを判断します。 このマクロは、AFX_COMCTL32_IF_EXISTS の Unicode バージョンです。
+このマクロを使用して、コモンコントロールライブラリが、 [GetProcAddress](/windows/win32/api/libloaderapi/nf-libloaderapi-getprocaddress)を呼び出すのではなく、 *proc* によって指定された関数を使用するかどうかを判断します。 このマクロは、AFX_COMCTL32_IF_EXISTS の Unicode バージョンです。
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 afxcomctl32.h, afxcomctl32.h. inl
 
@@ -127,7 +128,7 @@ DECLARE_DYNAMIC マクロの詳細については、「 [CObject クラスのト
 
 [IMPLEMENT_DYNAMIC](#implement_dynamic)の例を参照してください。
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 **ヘッダー:** afx
 
@@ -161,7 +162,7 @@ DECLARE_DYNCREATE マクロの詳細については、「 [CObject クラスの�
 
 [IMPLEMENT_DYNCREATE](#implement_dyncreate)の例を参照してください。
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 **ヘッダー:** afx
 
@@ -184,7 +185,7 @@ DECLARE_OLECTLTYPE( class_name )
 
 `GetUserTypeNameID` と `GetMiscStatus` は純粋仮想関数であり、で宣言されて `COleControl` います。 これらの関数は純粋仮想であるため、コントロールクラスでオーバーライドする必要があります。 DECLARE_OLECTLTYPE に加えて、コントロールクラスの宣言に IMPLEMENT_OLECTLTYPE マクロを追加する必要があります。
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 **ヘッダー:** afxctl.h
 
@@ -209,7 +210,7 @@ DECLARE_PROPPAGEIDS( class_name )
 
 プロパティページの詳細については、「 [ActiveX コントロール: プロパティページ](../mfc-activex-controls-property-pages.md)」を参照してください。
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 **ヘッダー:** afxctl.h
 
@@ -246,7 +247,7 @@ DECLARE_SERIAL マクロの詳細については、「 [CObject クラスのト�
 
 [!code-cpp[NVC_MFCCObjectSample#21](../../mfc/codesnippet/cpp/run-time-object-model-services_2.h)]
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 **ヘッダー:** afx
 
@@ -278,7 +279,7 @@ IMPLEMENT_DYNAMIC(class_name, base_class_name)
 
 [!code-cpp[NVC_MFCCObjectSample#3](../../mfc/codesnippet/cpp/run-time-object-model-services_4.cpp)]
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 **ヘッダー:** afx
 
@@ -314,7 +315,7 @@ DECLARE_DYNCREATE マクロと IMPLEMENT_DYNCREATE マクロを使用する場�
 
 [!code-cpp[NVC_MFCCObjectSample#23](../../mfc/codesnippet/cpp/run-time-object-model-services_6.cpp)]
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 **ヘッダー:** afx
 
@@ -355,9 +356,9 @@ IMPLEMENT_OLECREATE_FLAGS( class_name, external_name, nFlags,
 
 外部名は、他のアプリケーションに公開される識別子です。 クライアントアプリケーションは、外部名を使用して、オートメーションサーバーからこのクラスのオブジェクトを要求します。
 
-OLE クラス ID は、オブジェクトの一意の128ビット識別子です。 これは、 **`long`** 構文の説明で、 *l*、 *w1*、 *w2*、および*b1*によって表される、1つ、2つの**単語**、および 8**バイト***ので構成*されます。 アプリケーションウィザードとコードウィザードでは、必要に応じて一意の OLE クラス Id が作成されます。
+OLE クラス ID は、オブジェクトの一意の128ビット識別子です。 これは、 **`long`** 構文の説明で、 *l*、 *w1*、 *w2*、および *b1* によって表される、1つ、2つの **単語**、および 8 **バイト***ので構成* されます。 アプリケーションウィザードとコードウィザードでは、必要に応じて一意の OLE クラス Id が作成されます。
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 **ヘッダー :** afxdisp.h
 
@@ -391,7 +392,7 @@ IMPLEMENT_OLECTLTYPE に加えて、コントロールクラスの宣言に DECL
 > [!NOTE]
 > ActiveX コントロールウィザードで使用される既定の設定は、OLEMISC_ACTIVATEWHENVISIBLE、OLEMISC_SETCLIENTSITEFIRST、OLEMISC_INSIDEOUT、OLEMISC_CANTLINKINSIDE、および OLEMISC_RECOMPOSEONRESIZE です。
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 **ヘッダー:** afxctl.h
 
@@ -428,7 +429,7 @@ AFX_API マクロを使用する `CArchive` と、DECLARE_SERIAL と IMPLEMENT_S
 
 [!code-cpp[NVC_MFCCObjectSample#24](../../mfc/codesnippet/cpp/run-time-object-model-services_7.cpp)]
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 **ヘッダー:** afx
 
@@ -447,7 +448,7 @@ RUNTIME_CLASS(class_name)
 
 ### <a name="remarks"></a>解説
 
-RUNTIME_CLASS は、 *class_name*によって指定されたクラスの[CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)構造体へのポインターを返します。 `CObject`DECLARE_DYNAMIC、DECLARE_DYNCREATE、または DECLARE_SERIAL で宣言された派生クラスのみが、構造体へのポインターを返し `CRuntimeClass` ます。
+RUNTIME_CLASS は、 *class_name* によって指定されたクラスの [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)構造体へのポインターを返します。 `CObject`DECLARE_DYNAMIC、DECLARE_DYNCREATE、または DECLARE_SERIAL で宣言された派生クラスのみが、構造体へのポインターを返し `CRuntimeClass` ます。
 
 詳細については、「 [CObject クラスのトピック](../../mfc/using-cobject.md)」を参照してください。
 
@@ -455,7 +456,7 @@ RUNTIME_CLASS は、 *class_name*によって指定されたクラスの[CRuntim
 
 [!code-cpp[NVC_MFCCObjectSample#25](../../mfc/codesnippet/cpp/run-time-object-model-services_8.cpp)]
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 **ヘッダー:** afx
 
@@ -480,7 +481,7 @@ DECLARE_OLECREATE(class_name)
 
 クラスの宣言に DECLARE_OLECREATE が含まれている場合は、IMPLEMENT_OLECREATE をクラスの実装に含める必要があります。 DECLARE_OLECREATE を使用するクラス宣言では、DECLARE_DYNCREATE または DECLARE_SERIAL も使用する必要があります。
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 **ヘッダー**: afxdisp.h
 
@@ -509,9 +510,9 @@ IMPLEMENT_OLECREATE(class_name, external_name, l, w1, w2, b1, b2, b3, b4, b5, b6
 
 外部名は、他のアプリケーションに公開される識別子です。 クライアントアプリケーションは、外部名を使用して、オートメーションサーバーからこのクラスのオブジェクトを要求します。
 
-OLE クラス ID は、オブジェクトの一意の128ビット識別子です。 これは、 **`long`** 構文の説明で、 *l*、 *w1*、 *w2*、および*b1*によって表される、1つ、2つの**単語**、および 8**バイト***ので構成*されます。 アプリケーションウィザードとコードウィザードでは、必要に応じて一意の OLE クラス Id が作成されます。
+OLE クラス ID は、オブジェクトの一意の128ビット識別子です。 これは、 **`long`** 構文の説明で、 *l*、 *w1*、 *w2*、および *b1* によって表される、1つ、2つの **単語**、および 8 **バイト***ので構成* されます。 アプリケーションウィザードとコードウィザードでは、必要に応じて一意の OLE クラス Id が作成されます。
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 **ヘッダー**: afxdisp.h
 
