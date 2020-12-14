@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: CSplitButton クラス'
 title: CSplitButton クラス
 ms.date: 11/19/2018
 f1_keywords:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 - CSplitButton [MFC], SetDropDownMenu
 - CSplitButton [MFC], OnDropDown
 ms.assetid: 6844d0a9-6408-4e44-9b5f-57628ed8bad6
-ms.openlocfilehash: 484cef2787c9e5c166a7b20b017251b559d7221c
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: e73273bbeb0d03dc5ca2a3a2e6daa1be05936280
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88562546"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97345122"
 ---
 # <a name="csplitbutton-class"></a>CSplitButton クラス
 
@@ -48,7 +49,7 @@ class CSplitButton : public CButton
 
 ### <a name="protected-methods"></a>プロテクト メソッド
 
-|Name|説明|
+|名前|説明|
 |----------|-----------------|
 |[CSplitButton:: OnDropDown](#ondropdown)|ユーザーが現在の分割ボタンコントロールのドロップダウン矢印をクリックしたときにシステムが送信する BCN_DROPDOWN 通知を処理します。|
 
@@ -72,7 +73,7 @@ class CSplitButton : public CButton
 
 `CSplitButton`
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** afxcmn.h
 
@@ -196,7 +197,7 @@ void SetDropDownMenu(CMenu* pMenu);
 
 ### <a name="remarks"></a>解説
 
-*Nmenuid*パラメーターは、メニューバー項目の水平方向の一覧であるメニューバーを識別します。 *Nsubmenuid*パラメーターは、サブメニューを識別する0から始まるインデックス番号です。これは、各メニューバー項目に関連付けられているメニュー項目のドロップダウンリストです。 たとえば、一般的なアプリケーションには、メニューバー項目 "File"、"Edit"、および "Help" を含むメニューがあります。 "ファイル" メニューバー項目には、メニュー項目 "Open"、"Close"、および "Exit" を含むサブメニューがあります。 分割ボタンコントロールのドロップダウン矢印をクリックすると、コントロールにはメニューバーではなく、指定されたサブメニューが表示されます。
+*Nmenuid* パラメーターは、メニューバー項目の水平方向の一覧であるメニューバーを識別します。 *Nsubmenuid* パラメーターは、サブメニューを識別する0から始まるインデックス番号です。これは、各メニューバー項目に関連付けられているメニュー項目のドロップダウンリストです。 たとえば、一般的なアプリケーションには、メニューバー項目 "File"、"Edit"、および "Help" を含むメニューがあります。 "ファイル" メニューバー項目には、メニュー項目 "Open"、"Close"、および "Exit" を含むサブメニューがあります。 分割ボタンコントロールのドロップダウン矢印をクリックすると、コントロールにはメニューバーではなく、指定されたサブメニューが表示されます。
 
 次の図は、ページャーコントロールと (1) 分割ボタンコントロールを含むダイアログボックスを示しています。 (2) ドロップダウン矢印が既にクリックされており、(3) サブメニューが表示されています。
 
@@ -204,7 +205,7 @@ void SetDropDownMenu(CMenu* pMenu);
 
 ### <a name="example"></a>例
 
-次のコード例の最初のステートメントは、 [CSplitButton:: SetDropDownMenu](#setdropdownmenu) メソッドを示しています。 Visual Studio リソースエディターを使用してメニューを作成しました。このメニューには、メニューバー ID、IDR_MENU1 という名前が自動的に付けられます。 *Nsubmenuid*パラメーター (ゼロ) は、メニューバーの唯一のサブメニューを参照します。
+次のコード例の最初のステートメントは、 [CSplitButton:: SetDropDownMenu](#setdropdownmenu) メソッドを示しています。 Visual Studio リソースエディターを使用してメニューを作成しました。このメニューには、メニューバー ID、IDR_MENU1 という名前が自動的に付けられます。 *Nsubmenuid* パラメーター (ゼロ) は、メニューバーの唯一のサブメニューを参照します。
 
 [!code-cpp[NVC_MFC_CSplitButton_s2#1](../../mfc/reference/codesnippet/cpp/csplitbutton-class_1.cpp)]
 

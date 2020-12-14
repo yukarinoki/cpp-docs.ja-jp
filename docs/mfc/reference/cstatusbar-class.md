@@ -1,5 +1,6 @@
 ---
-title: クラス
+description: '詳細情報: CStatusBar クラス'
+title: CStatusBar クラス
 ms.date: 11/04/2016
 f1_keywords:
 - CStatusBar
@@ -36,14 +37,14 @@ helpviewer_keywords:
 - CStatusBar [MFC], SetPaneStyle
 - CStatusBar [MFC], SetPaneText
 ms.assetid: a3bde3db-e71c-4881-a3ca-1d5481c345ba
-ms.openlocfilehash: 969edb3b1c87da851d83d390ab9d4e707bd2eb1e
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: 61f3c920c1607862ad0ddc1329293b7b67dcde90
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81753048"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97345083"
 ---
-# <a name="cstatusbar-class"></a>クラス
+# <a name="cstatusbar-class"></a>CStatusBar クラス
 
 テキスト出力用のペインまたは "インジケーター" の行を持つコントロール バーです。
 
@@ -59,56 +60,56 @@ class CStatusBar : public CControlBar
 
 |名前|説明|
 |----------|-----------------|
-|[ステータスバー::ステータスバー](#cstatusbar)|`CStatusBar` オブジェクトを構築します。|
+|[CStatusBar:: CStatusBar](#cstatusbar)|`CStatusBar` オブジェクトを構築します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
 |名前|説明|
 |----------|-----------------|
-|[をクリックします。](#commandtoindex)|指定されたインジケーター ID のインデックスを取得します。|
-|[Cステータスバー::作成](#create)|ステータス バーを作成し、`CStatusBar`オブジェクトにアタッチし、初期フォントとバーの高さを設定します。|
-|[Cステータスバー::作成します。](#createex)|埋め`CStatusBar`込み`CStatusBarCtrl`オブジェクトの追加スタイルを持つオブジェクトを作成します。|
-|[:Dローアイテム](#drawitem)|オーナー描画ステータス バー コントロールの視覚的な側面が変更されたときに呼び出されます。|
-|[をクリックします。](#getitemid)|指定したインデックスのインジケーター ID を取得します。|
-|[をクリックします。](#getitemrect)|指定したインデックスの表示四角形を取得します。|
-|[を設定します。](#getpaneinfo)|指定したインデックスのインジケーター ID、スタイル、および幅を取得します。|
-|[をクリックします。](#getpanestyle)|指定したインデックスのインジケーター スタイルを取得します。|
-|[テキストを取得します。](#getpanetext)|指定したインデックスのインジケーター テキストを取得します。|
-|[を取得します。](#getstatusbarctrl)|基になるコモン コントロールに直接アクセスできるようにします。|
-|[ステータスバー::セットインディケータ](#setindicators)|インジケータ ID を設定します。|
-|[を設定します。](#setpaneinfo)|指定したインデックスのインジケーター ID、スタイル、および幅を設定します。|
-|[コントロール::セットペインスタイル](#setpanestyle)|指定したインデックスのインジケーター スタイルを設定します。|
-|[テキストを設定します。](#setpanetext)|指定したインデックスのインジケーター テキストを設定します。|
+|[CStatusBar:: CommandToIndex](#commandtoindex)|指定されたインジケーター ID のインデックスを取得します。|
+|[CStatusBar:: Create](#create)|ステータスバーを作成し、オブジェクトに添付 `CStatusBar` し、初期のフォントとバーの高さを設定します。|
+|[CStatusBar:: CreateEx](#createex)|`CStatusBar`埋め込みオブジェクトに対して追加のスタイルを使用してオブジェクトを作成し `CStatusBarCtrl` ます。|
+|[CStatusBar::D rawItem](#drawitem)|オーナー描画ステータスバーコントロールの外観が変化したときに呼び出されます。|
+|[CStatusBar:: GetItemID](#getitemid)|指定されたインデックスのインジケーター ID を取得します。|
+|[CStatusBar:: GetItemRect](#getitemrect)|指定されたインデックスの表示四角形を取得します。|
+|[CStatusBar:: Get Info](#getpaneinfo)|指定されたインデックスのインジケーター ID、スタイル、および幅を取得します。|
+|[CStatusBar:: Get Style](#getpanestyle)|指定されたインデックスのインジケータースタイルを取得します。|
+|[CStatusBar:: Getて Text](#getpanetext)|指定されたインデックスのインジケーターテキストを取得します。|
+|[CStatusBar:: GetStatusBarCtrl](#getstatusbarctrl)|基になるコモンコントロールに直接アクセスできるようにします。|
+|[CStatusBar:: SetIndicators](#setindicators)|インジケーター Id を設定します。|
+|[CStatusBar:: Setて Info](#setpaneinfo)|指定されたインデックスのインジケーター ID、スタイル、および幅を設定します。|
+|[CStatusBar:: Setて Style](#setpanestyle)|指定されたインデックスのインジケーターのスタイルを設定します。|
+|[CStatusBar:: Setて Text](#setpanetext)|指定されたインデックスのインジケーターテキストを設定します。|
 
 ## <a name="remarks"></a>解説
 
-出力ペインは、通常、メッセージ行として、およびステータス インジケータとして使用されます。 例としては、選択したメニュー コマンドを簡単に説明するメニュー ヘルプ メッセージ行や、SCROLL LOCK、NumLock、およびその他のキーの状態を示すインジケータがあります。
+通常、出力ウィンドウは、メッセージ行として、また状態インジケーターとして使用されます。 たとえば、選択したメニューコマンドを簡単に説明するメニューのヘルプメッセージ行や、スクロールロック、NUMLOCK、およびその他のキーの状態を示すインジケーターがあります。
 
-MFC 4.0 の新しいメンバー関数である[CStatusBarCtrl](#getstatusbarctrl)を使用すると、Windows コモン コントロールのステータス バーのカスタマイズと追加機能のサポートを利用できます。 `CStatusBar`メンバー関数は、Windows コモン コントロールのほとんどの機能を提供します。ただし、 に電話`GetStatusBarCtrl`をかけると、Windows 95/98 ステータス バーの特性をさらに多く表示できます。 を呼び`GetStatusBarCtrl`出すと、オブジェクトへの参照が`CStatusBarCtrl`返されます。 Windows コモン コントロールを使用したツール バーのデザインの詳細については[、「CStatusBarCtrl」](../../mfc/reference/cstatusbarctrl-class.md)を参照してください。 コモン コントロールの一般的な情報については、Windows SDK の[「コモン コントロール](/windows/win32/Controls/common-controls-intro)」を参照してください。
+MFC 4.0 の新機能である[CStatusBar:: GetStatusBarCtrl](#getstatusbarctrl)では、Windows コモンコントロールのステータスバーのカスタマイズと追加機能のサポートを利用できます。 `CStatusBar` メンバー関数は、Windows コモンコントロールのほとんどの機能を提供します。ただし、を呼び出したときに `GetStatusBarCtrl` 、ステータスバーに Windows 95/98 ステータスバーの特性をさらに指定できます。 を呼び出すと `GetStatusBarCtrl` 、オブジェクトへの参照が返され `CStatusBarCtrl` ます。 Windows コモンコントロールを使用したツールバーのデザインの詳細については、「 [CStatusBarCtrl](../../mfc/reference/cstatusbarctrl-class.md) 」を参照してください。 一般的なコントロールの全般的な情報については、「Windows SDK の [コモンコントロール](/windows/win32/Controls/common-controls-intro) 」を参照してください。
 
-フレームワークは、位置 0 に左端のインジケーターを持つ配列にインジケーター情報を格納します。 ステータス バーを作成するときは、フレームワークが対応するインジケーターに関連付ける文字列 ID の配列を使用します。 その後、文字列 ID またはインデックスを使用してインジケーターにアクセスできます。
+フレームワークは、左端のインジケーターが0の位置にある配列にインジケーター情報を格納します。 ステータスバーを作成する場合は、フレームワークが対応するインジケーターに関連付けている文字列 Id の配列を使用します。 その後、文字列 ID またはインデックスを使用してインジケーターにアクセスできます。
 
-デフォルトでは、最初のインジケーターは「弾性」で、他のインジケーター・ペインで使用されていないステータス・バーの長さが取り込まれるため、他のペインは右揃えになります。
+既定では、最初のインジケーターは "エラスティック" で、他のインジケーターペインでは使用されていないステータスバーの長さを占有するので、他のペインは右に並べられます。
 
-ステータス バーを作成するには、次の手順を実行します。
+ステータスバーを作成するには、次の手順を実行します。
 
-1. オブジェクトを`CStatusBar`構築します。
+1. オブジェクトを構築 `CStatusBar` します。
 
-1. [[作成](#create)] (または[CreateEx)](#createex)関数を呼び出して、ステータス バー`CStatusBar`ウィンドウを作成し、オブジェクトにアタッチします。
+1. [Create](#create) (または[CreateEx](#createex)) 関数を呼び出して、ステータスバーウィンドウを作成し、オブジェクトにアタッチし `CStatusBar` ます。
 
-1. 各指標に文字列IDを関連付ける[SetIndicators](#setindicators)を呼び出します。
+1. [Setindicators](#setindicators)を呼び出して、文字列 ID を各インジケーターに関連付けます。
 
-ステータス バー ペインのテキストを更新するには、次の 3 つの方法があります。
+ステータスバーペインのテキストを更新するには、次の3つの方法があります。
 
-1. ウィンドウ 0 のテキストのみを更新するには[、CWnd::SetWindowText](../../mfc/reference/cwnd-class.md#setwindowtext)を呼び出します。
+1. ペイン0のテキストのみを更新するには、 [CWnd:: SetWindowText](../../mfc/reference/cwnd-class.md#setwindowtext) を呼び出します。
 
-1. ステータス バーのON_UPDATE_COMMAND_UI ハンドラーで[CCmdUI::SetText](../../mfc/reference/ccmdui-class.md#settext)を呼び出します。
+1. ステータスバーの ON_UPDATE_COMMAND_UI ハンドラーで [CCmdUI:: SetText](../../mfc/reference/ccmdui-class.md#settext) を呼び出します。
 
-1. 任意のペインのテキストを更新する[SetPaneText](#setpanetext)を呼び出します。
+1. 任意のペインのテキストを更新するには、 [setpane text](#setpanetext) を呼び出します。
 
-ステータス バー ペインのスタイルを更新するには[、SetPaneStyle](#setpanestyle)を呼び出します。
+[Setpane スタイル](#setpanestyle)を呼び出して、ステータスバーペインのスタイルを更新します。
 
-の使用方法`CStatusBar`の詳細については、「MFC の[ステータス バーの実装](../../mfc/status-bar-implementation-in-mfc.md)」および「テクニカル ノート[31 : コントロール バー](../../mfc/tn031-control-bars.md)」を参照してください。
+の使用方法の詳細については `CStatusBar` 、「 [MFC でのステータスバーの実装](../../mfc/status-bar-implementation-in-mfc.md) 」および「 [テクニカルノート 31: コントロールバー](../../mfc/tn031-control-bars.md)」を参照してください。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -118,17 +119,17 @@ MFC 4.0 の新しいメンバー関数である[CStatusBarCtrl](#getstatusbarctr
 
 [CWnd](../../mfc/reference/cwnd-class.md)
 
-[コントロールバー](../../mfc/reference/ccontrolbar-class.md)
+[CControlBar](../../mfc/reference/ccontrolbar-class.md)
 
 `CStatusBar`
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** afxext.h
 
-## <a name="cstatusbarcommandtoindex"></a><a name="commandtoindex"></a>をクリックします。
+## <a name="cstatusbarcommandtoindex"></a><a name="commandtoindex"></a> CStatusBar:: CommandToIndex
 
-指定した ID のインジケーター インデックスを取得します。
+指定された ID のインジケーターインデックスを取得します。
 
 ```
 int CommandToIndex(UINT nIDFind) const;
@@ -136,20 +137,20 @@ int CommandToIndex(UINT nIDFind) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*nID検索*<br/>
+*nIDFind*<br/>
 インデックスを取得するインジケーターの文字列 ID。
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合はインジケーターのインデックス。成功しなかった場合は -1。
+成功した場合は、インジケーターのインデックス。成功しない場合は-1。
 
 ### <a name="remarks"></a>解説
 
-最初の指標のインデックスは 0 です。
+最初のインジケーターのインデックスは0です。
 
-## <a name="cstatusbarcreate"></a><a name="create"></a>Cステータスバー::作成
+## <a name="cstatusbarcreate"></a><a name="create"></a> CStatusBar:: Create
 
-ステータス バー (子ウィンドウ) を作成し、`CStatusBar`オブジェクトに関連付けます。
+ステータスバー (子ウィンドウ) を作成し、オブジェクトに関連付け `CStatusBar` ます。
 
 ```
 virtual BOOL Create(
@@ -161,19 +162,19 @@ virtual BOOL Create(
 ### <a name="parameters"></a>パラメーター
 
 *pParentWnd*<br/>
-ウィンドウがステータス バーの親である[CWnd](../../mfc/reference/cwnd-class.md)オブジェクトへのポインター。
+Windows ウィンドウがステータスバーの親である [CWnd](../../mfc/reference/cwnd-class.md) オブジェクトへのポインター。
 
-*Dwstyle*<br/>
-ステータス バーのスタイル。 標準の Windows[スタイル](../../mfc/reference/styles-used-by-mfc.md#window-styles)に加えて、これらのスタイルもサポートされています。
+*dwStyle*<br/>
+ステータスバーのスタイル。 標準の Windows [スタイル](../../mfc/reference/styles-used-by-mfc.md#window-styles)に加えて、これらのスタイルがサポートされています。
 
-- CBRS_TOPコントロール バーはフレーム ウィンドウの上部にあります。
+- CBRS_TOP コントロールバーは、フレームウィンドウの上部に表示されます。
 
-- CBRS_BOTTOMコントロール バーはフレーム ウィンドウの下部にあります。
+- CBRS_BOTTOM コントロールバーは、フレームウィンドウの下部に表示されます。
 
-- CBRS_NOALIGNコントロールバーは、親のサイズを変更しても再配置されません。
+- 親のサイズを変更しても、コントロールバー CBRS_NOALIGN は再配置されません。
 
 *nID*<br/>
-ツール バーの子ウィンドウ ID。
+ツールバーの子ウィンドウ ID。
 
 ### <a name="return-value"></a>戻り値
 
@@ -181,11 +182,11 @@ virtual BOOL Create(
 
 ### <a name="remarks"></a>解説
 
-また、初期フォントを設定し、ステータス バーの高さを既定値に設定します。
+また、初期フォントを設定し、ステータスバーの高さを既定値に設定します。
 
-## <a name="cstatusbarcreateex"></a><a name="createex"></a>Cステータスバー::作成します。
+## <a name="cstatusbarcreateex"></a><a name="createex"></a> CStatusBar:: CreateEx
 
-ステータス バー (子ウィンドウ) を作成し、`CStatusBar`オブジェクトに関連付けます。
+この関数を呼び出して、ステータスバー (子ウィンドウ) を作成し、オブジェクトに関連付け `CStatusBar` ます。
 
 ```
 virtual BOOL CreateEx(
@@ -198,22 +199,22 @@ virtual BOOL CreateEx(
 ### <a name="parameters"></a>パラメーター
 
 *pParentWnd*<br/>
-ウィンドウがステータス バーの親である[CWnd](../../mfc/reference/cwnd-class.md)オブジェクトへのポインター。
+Windows ウィンドウがステータスバーの親である [CWnd](../../mfc/reference/cwnd-class.md) オブジェクトへのポインター。
 
-*スタイル*<br/>
-埋め込まれた[CStatusBarCtrl](../../mfc/reference/cstatusbarctrl-class.md)オブジェクトの作成のための追加のスタイル。 既定では、サイズ変更グリップまたはツールヒントサポートのないステータス バーが指定されます。 サポートされるステータス バーのスタイルは次のとおりです。
+*dwCtrlStyle*<br/>
+埋め込み [CStatusBarCtrl](../../mfc/reference/cstatusbarctrl-class.md) オブジェクトを作成するための追加のスタイル。 既定では、サイズ変更グリップまたはツールヒントがサポートされていないステータスバーを指定します。 サポートされているステータスバーのスタイルは次のとおりです。
 
-- SBARS_SIZEGRIP ステータス バー コントロールには、ステータス バーの右端にサイズ変更グリップが含まれます。 サイズ変更グリップは、サイズ変更の境界線に似ています。これは、ユーザーがクリックしてドラッグして親ウィンドウのサイズを変更できる四角形の領域です。
+- ステータスバーコントロールに SBARS_SIZEGRIP、ステータスバーの右端にサイズ変更グリップが表示されます。 サイズ変更グリップは、サイズ変更の境界線に似ています。これは、ユーザーがクリックしてドラッグして親ウィンドウのサイズを変更できる四角形の領域です。
 
-- SBT_TOOLTIPS ステータス バーはツールヒントをサポートしています。
+- SBT_TOOLTIPS ステータスバーはツールヒントをサポートします。
 
-これらのスタイルの詳細については[、「CStatusBarCtrl の設定](../../mfc/settings-for-the-cstatusbarctrl.md)」を参照してください。
+これらのスタイルの詳細については、 [CStatusBarCtrl の設定](../../mfc/settings-for-the-cstatusbarctrl.md)を参照してください。
 
-*Dwstyle*<br/>
-ステータス バーのスタイル。 既定では、フレーム ウィンドウの下部に表示されるステータス バーが作成されます。 [ウィンドウ スタイル](../../mfc/reference/styles-used-by-mfc.md#window-styles)と[CDialogBar::作成](../../mfc/reference/cdialogbar-class.md#create)に表示されているステータス バー コントロール スタイルの任意の組み合わせを適用します。 ただし、このパラメーターには、常にWS_CHILDとWS_VISIBLEスタイルを含める必要があります。
+*dwStyle*<br/>
+ステータスバーのスタイル。 既定では、表示されているステータスバーがフレームウィンドウの下部に作成されることを指定します。 [「ウィンドウのスタイル](../../mfc/reference/styles-used-by-mfc.md#window-styles)」および「 [CDialogBar:: Create](../../mfc/reference/cdialogbar-class.md#create)」に記載されているステータスバーコントロールスタイルの任意の組み合わせを適用します。 ただし、このパラメーターには、常に WS_CHILD と WS_VISIBLE スタイルが含まれている必要があります。
 
 *nID*<br/>
-ステータス バーの子ウィンドウ ID。
+ステータスバーの子ウィンドウ ID。
 
 ### <a name="return-value"></a>戻り値
 
@@ -221,21 +222,21 @@ virtual BOOL CreateEx(
 
 ### <a name="remarks"></a>解説
 
-この関数は、初期フォントを設定し、ステータス バーの高さを既定値に設定します。
+また、初期フォントを設定し、ステータスバーの高さを既定値に設定します。
 
-埋`CreateEx`め込まれたステータス バー[コントロールの作成時](#create)に特定のスタイルを必要とする場合は、 の代わりに Create を使用します。 たとえば、ステータス バー オブジェクトにツールチップを表示するには *、dwCtrlStyle*を SBT_TOOLTIPSに設定します。
+`CreateEx`埋め込みステータスバーコントロールの作成中に特定のスタイルが存在する必要がある場合は、 [Create](#create)ではなくを使用します。 たとえば、ステータスバーオブジェクトにツールヒントを表示するには、 *dwCtrlStyle* を SBT_TOOLTIPS に設定します。
 
-## <a name="cstatusbarcstatusbar"></a><a name="cstatusbar"></a>ステータスバー::ステータスバー
+## <a name="cstatusbarcstatusbar"></a><a name="cstatusbar"></a> CStatusBar:: CStatusBar
 
-オブジェクトを`CStatusBar`構築し、必要に応じてデフォルトのステータスバーフォントを作成し、フォント特性をデフォルト値に設定します。
+オブジェクトを構築し `CStatusBar` 、必要に応じて既定のステータスバーフォントを作成し、フォント特性を既定値に設定します。
 
 ```
 CStatusBar();
 ```
 
-## <a name="cstatusbardrawitem"></a><a name="drawitem"></a>:Dローアイテム
+## <a name="cstatusbardrawitem"></a><a name="drawitem"></a> CStatusBar::D rawItem
 
-このメンバー関数は、オーナー描画ステータス バーの視覚的な側面が変更されたときに、フレームワークによって呼び出されます。
+このメンバー関数は、オーナー描画ステータスバーの外観が変化したときにフレームワークによって呼び出されます。
 
 ```
 virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
@@ -243,16 +244,16 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
 
 ### <a name="parameters"></a>パラメーター
 
-*構造体*<br/>
-必要な描画の種類に関する情報を含む[DRAWITEMSTRUCT 構造体](/windows/win32/api/winuser/ns-winuser-drawitemstruct)へのポインター。
+*lpDrawItemStruct*<br/>
+必要な描画の種類に関する情報を格納している [DRAWITEMSTRUCT](/windows/win32/api/winuser/ns-winuser-drawitemstruct) 構造体へのポインター。
 
 ### <a name="remarks"></a>解説
 
-構造`itemAction`のメンバーは`DRAWITEMSTRUCT`、実行される描画アクションを定義します。 オーナー描画`CStatusBar`オブジェクトの描画を実装するには、このメンバー関数をオーバーライドします。 アプリケーションは、このメンバー関数の終了前に *、lpDrawItemStruct*で提供される表示コンテキストに選択されているすべてのグラフィックス デバイス インターフェイス (GDI) オブジェクトを復元する必要があります。
+`itemAction`構造体のメンバーは、 `DRAWITEMSTRUCT` 実行する描画アクションを定義します。 オーナー描画オブジェクトの描画を実装するには、このメンバー関数をオーバーライドし `CStatusBar` ます。 アプリケーションは、このメンバー関数が終了する前に、 *lpDrawItemStruct* で指定された表示コンテキスト用に選択されたすべてのグラフィックスデバイスインターフェイス (GDI) オブジェクトを復元する必要があります。
 
-## <a name="cstatusbargetitemid"></a><a name="getitemid"></a>をクリックします。
+## <a name="cstatusbargetitemid"></a><a name="getitemid"></a> CStatusBar:: GetItemID
 
-*nIndex*で指定されたインジケーターの ID を返します。
+*NIndex* によって指定されたインジケーターの ID を返します。
 
 ```
 UINT GetItemID(int nIndex) const;
@@ -261,15 +262,15 @@ UINT GetItemID(int nIndex) const;
 ### <a name="parameters"></a>パラメーター
 
 *nIndex*<br/>
-取得する ID を持つインジケーターのインデックス。
+ID を取得するインジケーターのインデックス。
 
 ### <a name="return-value"></a>戻り値
 
-*nIndex*で指定されたインジケーターの ID。
+*NIndex* によって指定されたインジケーターの ID。
 
-## <a name="cstatusbargetitemrect"></a><a name="getitemrect"></a>をクリックします。
+## <a name="cstatusbargetitemrect"></a><a name="getitemrect"></a> CStatusBar:: GetItemRect
 
-*nIndex*で指定されたインジケーターの座標を *、lpRect*が指す構造体にコピーします。
+*NIndex* によって指定されたインジケーターの座標を、 *lpRect* が指す構造体にコピーします。
 
 ```cpp
 void GetItemRect(
@@ -282,16 +283,16 @@ void GetItemRect(
 *nIndex*<br/>
 四角形の座標を取得するインジケーターのインデックス。
 
-*Lprect*<br/>
-*nIndex*で指定されたインジケーターの座標を受け取る[RECT](/windows/win32/api/windef/ns-windef-rect)構造体または[CRect](../../atl-mfc-shared/reference/crect-class.md)オブジェクトへのポインター。
+*lpRect*<br/>
+*NIndex* によって指定されたインジケーターの座標を受け取る [RECT](/windows/win32/api/windef/ns-windef-rect)構造体または [CRect](../../atl-mfc-shared/reference/crect-class.md)オブジェクトをポイントします。
 
 ### <a name="remarks"></a>解説
 
-座標は、ステータス バーの左上隅を基準にしたピクセル単位です。
+座標は、ステータスバーの左上隅を基準とした相対的なピクセル数です。
 
-## <a name="cstatusbargetpaneinfo"></a><a name="getpaneinfo"></a>を設定します。
+## <a name="cstatusbargetpaneinfo"></a><a name="getpaneinfo"></a> CStatusBar:: Get Info
 
-*nID*、 *nStyle*、および*cxWidth*を*nIndex*で指定された位置にあるインジケータ ペインの ID、スタイル、および幅に設定します。
+*NID*、 *Nstyle*、および *cxwidth* を、 *nIndex* によって指定された場所のインジケーターペインの ID、スタイル、および幅に設定します。
 
 ```cpp
 void GetPaneInfo(
@@ -312,12 +313,12 @@ void GetPaneInfo(
 *nStyle*<br/>
 ペインのスタイルに設定されている UINT への参照。
 
-*幅*<br/>
+*cxWidth*<br/>
 ペインの幅に設定された整数への参照。
 
-## <a name="cstatusbargetpanestyle"></a><a name="getpanestyle"></a>をクリックします。
+## <a name="cstatusbargetpanestyle"></a><a name="getpanestyle"></a> CStatusBar:: Get Style
 
-ステータス バーのペインのスタイルを取得します。
+ステータスバーのペインのスタイルを取得するには、このメンバー関数を呼び出します。
 
 ```
 UINT GetPaneStyle(int nIndex) const;
@@ -326,21 +327,21 @@ UINT GetPaneStyle(int nIndex) const;
 ### <a name="parameters"></a>パラメーター
 
 *nIndex*<br/>
-取得するスタイルを持つペインのインデックス。
+スタイルを取得するペインのインデックス。
 
 ### <a name="return-value"></a>戻り値
 
-*nIndex*で指定されたステータス バー ペインのスタイル。
+*NIndex* によって指定されたステータスバーペインのスタイル。
 
 ### <a name="remarks"></a>解説
 
 ペインのスタイルによって、ペインの表示方法が決まります。
 
-ステータス バーで使用できるスタイルの一覧については、「[作成](#create)」を参照してください。
+ステータスバーで使用できるスタイルの一覧については、「 [作成](#create)」を参照してください。
 
-## <a name="cstatusbargetpanetext"></a><a name="getpanetext"></a>テキストを取得します。
+## <a name="cstatusbargetpanetext"></a><a name="getpanetext"></a> CStatusBar:: Getて Text
 
-ステータス バー ペインに表示されるテキストを取得します。
+ステータスバーペインに表示されるテキストを取得するには、このメンバー関数を呼び出します。
 
 ```
 CString GetPaneText(int nIndex) const;  void GetPaneText(int nIndex, CString& rString) const;
@@ -351,20 +352,20 @@ CString GetPaneText(int nIndex) const;  void GetPaneText(int nIndex, CString& rS
 *nIndex*<br/>
 テキストを取得するペインのインデックス。
 
-*文字列*<br/>
-取得するテキストを含む[CString](../../atl-mfc-shared/reference/cstringt-class.md)オブジェクトへの参照。
+*rString*<br/>
+取得するテキストが格納されている [CString](../../atl-mfc-shared/reference/cstringt-class.md) オブジェクトへの参照。
 
 ### <a name="return-value"></a>戻り値
 
-ペイン`CString`のテキストを含むオブジェクト。
+`CString`ペインのテキストを格納しているオブジェクト。
 
 ### <a name="remarks"></a>解説
 
-このメンバー関数の 2 番目の形式`CString`では、文字列テキストをオブジェクトに入力します。
+このメンバー関数の2番目の形式は、 `CString` 文字列テキストをオブジェクトに入力します。
 
-## <a name="cstatusbargetstatusbarctrl"></a><a name="getstatusbarctrl"></a>を取得します。
+## <a name="cstatusbargetstatusbarctrl"></a><a name="getstatusbarctrl"></a> CStatusBar:: GetStatusBarCtrl
 
-このメンバー関数は、基になるコモン コントロールに直接アクセスできます。
+このメンバー関数は、基になるコモンコントロールに直接アクセスできるようにします。
 
 ```
 CStatusBarCtrl& GetStatusBarCtrl() const;
@@ -372,17 +373,17 @@ CStatusBarCtrl& GetStatusBarCtrl() const;
 
 ### <a name="return-value"></a>戻り値
 
-[オブジェクトへの](../../mfc/reference/cstatusbarctrl-class.md)参照を格納します。
+[CStatusBarCtrl](../../mfc/reference/cstatusbarctrl-class.md)オブジェクトへの参照が含まれています。
 
 ### <a name="remarks"></a>解説
 
-Windows`GetStatusBarCtrl`ステータス バー コモン コントロールの機能を利用し、ステータス バーのカスタマイズに関する[CStatusBarCtrl](../../mfc/reference/cstatusbarctrl-class.md)のサポートを利用するために使用します。 たとえば、コモン コントロールを使用して、ステータス バーにサイズ変更グリップを含むスタイルを指定したり、親ウィンドウのクライアント領域の上部にステータス バーを表示するスタイルを指定したりできます。
+を使用して、 `GetStatusBarCtrl` Windows ステータスバーコモンコントロールの機能を活用し、ステータスバーのカスタマイズに [CStatusBarCtrl](../../mfc/reference/cstatusbarctrl-class.md) が提供するサポートを利用します。 たとえば、コモンコントロールを使用して、ステータスバーにサイズ変更グリップを含むスタイルを指定したり、ステータスバーを親ウィンドウのクライアント領域の最上部に表示するスタイルを指定したりできます。
 
-コモン コントロールの一般的な情報については、「Windows SDK の[コモン コントロール](/windows/win32/Controls/common-controls-intro)」を参照してください。
+一般的なコントロールの全般的な情報については、「Windows SDK の [コモンコントロール](/windows/win32/Controls/common-controls-intro) 」を参照してください。
 
-## <a name="cstatusbarsetindicators"></a><a name="setindicators"></a>ステータスバー::セットインディケータ
+## <a name="cstatusbarsetindicators"></a><a name="setindicators"></a> CStatusBar:: SetIndicators
 
-各指標の ID を配列*lpIDArray*の対応する要素で指定された値に設定し、各 ID で指定された文字列リソースを読み込み、インジケータのテキストを文字列に設定します。
+各インジケーターの ID を配列 *Lpidarray* の対応する要素によって指定された値に設定し、各 id によって指定された文字列リソースを読み込み、インジケーターのテキストを文字列に設定します。
 
 ```
 BOOL SetIndicators(
@@ -392,19 +393,19 @@ BOOL SetIndicators(
 
 ### <a name="parameters"></a>パラメーター
 
-*を指定します。*<br/>
-ID の配列へのポインター。
+*lpIDArray*<br/>
+Id の配列へのポインター。
 
-*NIDカウント*<br/>
-によって指される配列内の要素の数*です*。
+*nIDCount*<br/>
+*Lpidarray* が指す配列内の要素の数。
 
 ### <a name="return-value"></a>戻り値
 
 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。
 
-## <a name="cstatusbarsetpaneinfo"></a><a name="setpaneinfo"></a>を設定します。
+## <a name="cstatusbarsetpaneinfo"></a><a name="setpaneinfo"></a> CStatusBar:: Setて Info
 
-指定したインジケーター ペインを新しい ID、スタイル、および幅に設定します。
+指定したインジケーターペインに新しい ID、スタイル、および幅を設定します。
 
 ```cpp
 void SetPaneInfo(
@@ -417,34 +418,34 @@ void SetPaneInfo(
 ### <a name="parameters"></a>パラメーター
 
 *nIndex*<br/>
-スタイルを設定するインジケーター ペインのインデックスです。
+スタイルを設定するインジケーターペインのインデックス。
 
 *nID*<br/>
-インジケーター ペインの新しい ID。
+インジケーターペインの新しい ID。
 
 *nStyle*<br/>
-インジケーター ペインの新しいスタイル。
+インジケーターペインの新しいスタイル。
 
-*幅*<br/>
-インジケーター ペインの新しい幅。
+*cxWidth*<br/>
+インジケーターペインの新しい幅。
 
 ### <a name="remarks"></a>解説
 
-次のインジケータスタイルがサポートされています。
+次のインジケータースタイルがサポートされています。
 
-- SBPS_NOBORDERS ペインの周囲に 3-D 境界線はありません。
+- ペインの周囲に3-d 境界線を SBPS_NOBORDERS ません。
 
-- SBPS_POPOUT逆罫線を使用して、テキストが "ポップ アウト" されるようにします。
+- テキストが "ポップアウト" されるように反転境界線を SBPS_POPOUT します。
 
 - SBPS_DISABLED テキストを描画しません。
 
-- SBPS_STRETCH[ペインをストレッチ]を使用して未使用の領域を埋めます。 このスタイルを持つことができるのは、ステータス バーごとに 1 つのペインのみです。
+- SBPS_STRETCH の拡張ペインを使用して、未使用領域を塗りつぶします。 このスタイルを設定できるのは、ステータスバーごとに1つのウィンドウのみです。
 
-- SBPS_NORMAL 伸縮、境界線、またはポップアウトなし。
+- SBPS_NORMAL、伸縮、枠線、ポップアウトはありません。
 
-## <a name="cstatusbarsetpanestyle"></a><a name="setpanestyle"></a>コントロール::セットペインスタイル
+## <a name="cstatusbarsetpanestyle"></a><a name="setpanestyle"></a> CStatusBar:: Setて Style
 
-ステータス バーのペインのスタイルを設定します。
+ステータスバーのペインのスタイルを設定するには、このメンバー関数を呼び出します。
 
 ```cpp
 void SetPaneStyle(
@@ -464,11 +465,11 @@ void SetPaneStyle(
 
 ペインのスタイルによって、ペインの表示方法が決まります。
 
-ステータス バーで使用できるスタイルの一覧については、「 [SetPaneInfo](#setpaneinfo)」を参照してください。
+ステータスバーで使用できるスタイルの一覧については、「 [setて info](#setpaneinfo)」を参照してください。
 
-## <a name="cstatusbarsetpanetext"></a><a name="setpanetext"></a>テキストを設定します。
+## <a name="cstatusbarsetpanetext"></a><a name="setpanetext"></a> CStatusBar:: Setて Text
 
-このメンバー関数を呼び出して、ペイン テキストを*lpszNewText*が指す文字列に設定します。
+このメンバー関数を呼び出して、ペインのテキストを *lpszNewText* が指す文字列に設定します。
 
 ```
 BOOL SetPaneText(
@@ -482,11 +483,11 @@ BOOL SetPaneText(
 *nIndex*<br/>
 テキストを設定するペインのインデックス。
 
-*テキスト*<br/>
-新しいペイン テキストへのポインター。
+*lpszNewText*<br/>
+新しいペインのテキストへのポインター。
 
-*b更新*<br/>
-TRUE の場合、テキストが設定された後にペインが無効になります。
+*bUpdate*<br/>
+TRUE の場合、テキストが設定された後、ペインは無効になります。
 
 ### <a name="return-value"></a>戻り値
 
@@ -494,7 +495,7 @@ TRUE の場合、テキストが設定された後にペインが無効になり
 
 ### <a name="remarks"></a>解説
 
-を呼び`SetPaneText`出した後、ステータス バーに新しいテキストを表示する UI 更新ハンドラーを追加する必要があります。
+を呼び出した後 `SetPaneText` 、ステータスバーに新しいテキストを表示するには、UI 更新ハンドラーを追加する必要があります。
 
 ### <a name="example"></a>例
 
@@ -506,9 +507,9 @@ TRUE の場合、テキストが設定された後にペインが無効になり
 
 ## <a name="see-also"></a>関連項目
 
-[MFC サンプル CTRL バー](../../overview/visual-cpp-samples.md)<br/>
-[サンプル DLGCBR32](../../overview/visual-cpp-samples.md)<br/>
+[MFC のサンプル CTRLBARS](../../overview/visual-cpp-samples.md)<br/>
+[MFC のサンプル DLGCBR32](../../overview/visual-cpp-samples.md)<br/>
 [CControlBar クラス](../../mfc/reference/ccontrolbar-class.md)<br/>
-[階層グラフ](../../mfc/hierarchy-chart.md)<br/>
+[階層図](../../mfc/hierarchy-chart.md)<br/>
 [CStatusBarCtrl クラス](../../mfc/reference/cstatusbarctrl-class.md)<br/>
 [CControlBar クラス](../../mfc/reference/ccontrolbar-class.md)

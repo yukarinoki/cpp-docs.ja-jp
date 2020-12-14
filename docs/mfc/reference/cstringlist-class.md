@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: CStringList クラス'
 title: CStringList クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -50,12 +51,12 @@ helpviewer_keywords:
 - CStringList [MFC], RemoveTail
 - CStringList [MFC], SetAt
 ms.assetid: 310a7edb-263c-4bd2-ac43-0bfbfddc5a33
-ms.openlocfilehash: 9eb7a713fc02cd3e51135d1985a41688d4c885d9
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: c9043ef648f50e880f3b5946c1912deca3de6714
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79447548"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97345070"
 ---
 # <a name="cstringlist-class"></a>CStringList クラス
 
@@ -69,7 +70,7 @@ class CStringList : public CObject
 
 ## <a name="members"></a>メンバー
 
-`CStringList` のメンバー関数は、 [CObList](../../mfc/reference/coblist-class.md)クラスのメンバー関数に似ています。 メンバー関数については `CObList` クラスの説明を参照してください。 戻り値として `CObject` ポインターが表示されている場合は、`CString` (`CString` ポインターではない) に置き換えます。 関数パラメーターとして `CObject` ポインターが表示されている場合は、`LPCTSTR`を置き換えます。
+のメンバー関数 `CStringList` は、 [CObList](../../mfc/reference/coblist-class.md)クラスのメンバー関数に似ています。 メンバー関数については `CObList` クラスの説明を参照してください。 `CObject`戻り値としてポインターが表示されている場合は、 `CString` (ポインターではなく) に置き換え `CString` ます。 関数パラメーターとしてポインターが表示されている場合は、を `CObject` に置き換え `LPCTSTR` ます。
 
 `CObject*& CObList::GetHead() const;`
 
@@ -77,7 +78,7 @@ class CStringList : public CObject
 
 `CString& CStringList::GetHead() const;`
 
-and
+および
 
 `POSITION AddHead( CObject* <newElement> );`
 
@@ -87,13 +88,13 @@ and
 
 ### <a name="public-constructors"></a>パブリック コンストラクター
 
-|Name|説明|
+|名前|説明|
 |----------|-----------------|
 |[CStringList:: CStringList](../../mfc/reference/coblist-class.md#coblist)|空のリストを構築します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
-|Name|説明|
+|名前|説明|
 |----------|-----------------|
 |[CStringList:: AddHead](../../mfc/reference/coblist-class.md#addhead)|要素 (または別のリスト内のすべての要素) をリストの先頭に追加します (新しい head を作成します)。|
 |[CStringList:: AddTail](../../mfc/reference/coblist-class.md#addtail)|要素 (または別のリスト内のすべての要素) をリストの末尾に追加します (新しい末尾を作成します)。|
@@ -117,15 +118,15 @@ and
 |[CStringList:: RemoveTail](../../mfc/reference/coblist-class.md#removetail)|リストの末尾から要素を削除します。|
 |[CStringList:: SetAt](../../mfc/reference/coblist-class.md#setat)|指定された位置に要素を設定します。|
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
 すべての比較は値によって行われます。つまり、文字列のアドレスではなく、文字列の文字が比較されます。
 
-`CStringList` には、要素のシリアル化とダンプをサポートするための IMPLEMENT_SERIAL マクロが組み込まれています。 オーバーロードされた挿入演算子または `Serialize` メンバー関数を使用して、`CString` オブジェクトの一覧がアーカイブに格納されている場合、各 `CString` 要素は順番にシリアル化されます。
+`CStringList` には、要素のシリアル化とダンプをサポートするために IMPLEMENT_SERIAL マクロが組み込まれています。 オブジェクトのリスト `CString` が、オーバーロードされた挿入演算子またはメンバー関数を使用してアーカイブに格納されている場合 `Serialize` 、各 `CString` 要素は順番にシリアル化されます。
 
-個々の `CString` 要素のダンプが必要な場合は、ダンプコンテキストの深さを1以上に設定する必要があります。
+個々の要素のダンプが必要な場合は、 `CString` ダンプコンテキストの深さを1以上に設定する必要があります。
 
-`CStringList`の使用方法の詳細については、「[コレクション](../../mfc/collections.md)」を参照してください。
+の使用方法の詳細については `CStringList` 、「 [コレクション](../../mfc/collections.md)」を参照してください。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -137,7 +138,7 @@ and
 
 **ヘッダー:** afxcoll.h
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [MFC サンプル収集](../../overview/visual-cpp-samples.md)<br/>
 [CObject クラス](../../mfc/reference/cobject-class.md)<br/>

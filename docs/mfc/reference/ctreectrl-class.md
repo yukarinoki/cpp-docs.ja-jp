@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: CTreeCtrl クラス'
 title: CTreeCtrl Class
 ms.date: 11/04/2016
 f1_keywords:
@@ -162,12 +163,12 @@ helpviewer_keywords:
 - CTreeCtrl [MFC], SortChildren
 - CTreeCtrl [MFC], SortChildrenCB
 ms.assetid: 96e20031-6161-4143-8c12-8d1816c66d90
-ms.openlocfilehash: 6a824aceae39d5aa6685176354c48a9457a40e9e
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: e126863bebcc3cb8f878a8ece41ee8d9385c0afe
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88837620"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97345018"
 ---
 # <a name="ctreectrl-class"></a>CTreeCtrl Class
 
@@ -293,7 +294,7 @@ class CTreeCtrl : public CWnd
 
 `CTreeCtrl`
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** afxcmn.h
 
@@ -355,13 +356,13 @@ virtual BOOL CreateEx(
 ### <a name="parameters"></a>パラメーター
 
 *dwExStyle*<br/>
-作成するコントロールの拡張スタイルを指定します。 拡張 Windows スタイルの一覧については、Windows SDK の[CreateWindowEx](/windows/win32/api/winuser/nf-winuser-createwindowexw)の*dwexstyle*パラメーターを参照してください。
+作成するコントロールの拡張スタイルを指定します。 拡張 Windows スタイルの一覧については、Windows SDK の [CreateWindowEx](/windows/win32/api/winuser/nf-winuser-createwindowexw)の *dwexstyle* パラメーターを参照してください。
 
 *dwStyle*<br/>
 ツリービューコントロールのスタイルを指定します。 Windows SDK で説明されているように、 [CreateWindow](/windows/win32/api/winuser/nf-winuser-createwindoww)で説明されているウィンドウスタイルと [ツリービューコントロールスタイル](/windows/win32/Controls/tree-view-control-window-styles) の任意の組み合わせを適用します。
 
 *rect*<br/>
-*PParentWnd*のクライアント座標で、作成されるウィンドウのサイズと位置を記述する[RECT](/windows/win32/api/windef/ns-windef-rect)構造体への参照。
+*PParentWnd* のクライアント座標で、作成されるウィンドウのサイズと位置を記述する [RECT](/windows/win32/api/windef/ns-windef-rect)構造体への参照。
 
 *pParentWnd*<br/>
 コントロールの親であるウィンドウへのポインター。
@@ -375,7 +376,7 @@ virtual BOOL CreateEx(
 
 ### <a name="remarks"></a>解説
 
-`CreateEx`Windows 拡張スタイルの先頭**WS_EX_** によって指定された拡張 windows スタイルを適用するには、[[作成](#create)] ではなくを使用します。
+`CreateEx`Windows 拡張スタイルの先頭 **WS_EX_** によって指定された拡張 windows スタイルを適用するには、[[作成](#create)] ではなくを使用します。
 
 ## <a name="ctreectrlcreatedragimage"></a><a name="createdragimage"></a> CTreeCtrl:: CreateDragImage
 
@@ -437,7 +438,7 @@ BOOL DeleteItem(HTREEITEM hItem);
 ### <a name="parameters"></a>パラメーター
 
 *hItem*<br/>
-削除するツリー項目のハンドル。 *Hitem*に TVI_ROOT 値が含まれている場合、すべての項目がツリービューコントロールから削除されます。
+削除するツリー項目のハンドル。 *Hitem* に TVI_ROOT 値が含まれている場合、すべての項目がツリービューコントロールから削除されます。
 
 ### <a name="return-value"></a>戻り値
 
@@ -591,7 +592,7 @@ BOOL GetCheck(HTREEITEM hItem) const;
 
 ## <a name="ctreectrlgetchilditem"></a><a name="getchilditem"></a> CTreeCtrl:: GetChildItem
 
-この関数を呼び出して、 *hItem*によって指定された項目の子であるツリービュー項目を取得します。
+この関数を呼び出して、 *hItem* によって指定された項目の子であるツリービュー項目を取得します。
 
 ```
 HTREEITEM GetChildItem(HTREEITEM hItem) const;
@@ -789,7 +790,7 @@ DWORD_PTR GetItemData(HTREEITEM hItem) const;
 
 ### <a name="return-value"></a>戻り値
 
-*HItem*によって指定された項目に関連付けられた、ポインターサイズのアプリケーション固有の値。
+*HItem* によって指定された項目に関連付けられた、ポインターサイズのアプリケーション固有の値。
 
 ### <a name="example"></a>例
 
@@ -888,7 +889,7 @@ BOOL GetItemPartRect(
 からパーツの識別子。 TVGIPR_BUTTON に設定する必要があります。
 
 *lpRect*\
-入出力 [RECT](/windows/win32/api/windef/ns-windef-rect) 構造体へのポインター。 このメソッドが成功した場合、構造体は、 *hItem* と *nPart*によって指定されたパーツの四角形の座標を受け取ります。
+入出力 [RECT](/windows/win32/api/windef/ns-windef-rect) 構造体へのポインター。 このメソッドが成功した場合、構造体は、 *hItem* と *nPart* によって指定されたパーツの四角形の座標を受け取ります。
 
 ### <a name="return-value"></a>戻り値
 
@@ -896,7 +897,7 @@ BOOL GetItemPartRect(
 
 ### <a name="remarks"></a>解説
 
-各ツリーコントロール項目は、グラフィックスの四角形によって制限されます。 その四角形のポイントがクリックされるたびに、その項目は *ヒット*したと言われます。 このメソッドは、四角形のポイントがクリックされると、 *hItem* パラメーターで識別される項目がヒットする最大の四角形を返します。
+各ツリーコントロール項目は、グラフィックスの四角形によって制限されます。 その四角形のポイントがクリックされるたびに、その項目は *ヒット* したと言われます。 このメソッドは、四角形のポイントがクリックされると、 *hItem* パラメーターで識別される項目がヒットする最大の四角形を返します。
 
 このメソッドは、Windows SDK で説明されている TVM_GETITEMPARTRECT メッセージを送信します。 詳細については、 [TreeView_GetItemPartRect](/windows/win32/api/commctrl/nf-commctrl-treeview_getitempartrect) マクロを参照してください。
 
@@ -914,7 +915,7 @@ BOOL GetItemPartRect(
 
 ## <a name="ctreectrlgetitemrect"></a><a name="getitemrect"></a> CTreeCtrl:: GetItemRect
 
-*HItem*の外接する四角形を取得し、それが可視かどうかを判断するには、この関数を呼び出します。
+*HItem* の外接する四角形を取得し、それが可視かどうかを判断するには、この関数を呼び出します。
 
 ```
 BOOL GetItemRect(
@@ -936,7 +937,7 @@ BOOL GetItemRect(
 
 ### <a name="return-value"></a>戻り値
 
-項目が表示されていて、外接する四角形が *lpRect*に含まれている場合は0以外の。 それ以外の場合は、 *lpRect* が初期化されていません。
+項目が表示されていて、外接する四角形が *lpRect* に含まれている場合は0以外の。 それ以外の場合は、 *lpRect* が初期化されていません。
 
 ### <a name="example"></a>例
 
@@ -944,7 +945,7 @@ BOOL GetItemRect(
 
 ## <a name="ctreectrlgetitemstate"></a><a name="getitemstate"></a> CTreeCtrl:: GetItemState
 
-*HItem*によって指定された項目の状態を返します。
+*HItem* によって指定された項目の状態を返します。
 
 ```
 UINT GetItemState(
@@ -958,7 +959,7 @@ UINT GetItemState(
 状態が取得される項目のハンドル。
 
 *nStateMask*<br/>
-取得する1つ以上の状態を示すマスク。 *NStateMask*で使用可能な値の詳細については、「」の「」 `state` および「 `stateMask` 」 Windows SDK の[TVITEM](/windows/win32/api/commctrl/ns-commctrl-tvitemw)構造体のメンバーの説明を参照してください。
+取得する1つ以上の状態を示すマスク。 *NStateMask* で使用可能な値の詳細については、「」の「」 `state` および「 `stateMask` 」 Windows SDK の [TVITEM](/windows/win32/api/commctrl/ns-commctrl-tvitemw)構造体のメンバーの説明を参照してください。
 
 ### <a name="return-value"></a>戻り値
 
@@ -991,7 +992,7 @@ UINT GetItemStateEx(HTREEITEM hItem) const;
 
 ## <a name="ctreectrlgetitemtext"></a><a name="getitemtext"></a> CTreeCtrl:: GetItemText
 
-*HItem*によって指定された項目のテキストを返します。
+*HItem* によって指定された項目のテキストを返します。
 
 ```
 CString GetItemText(HTREEITEM hItem) const;
@@ -1056,7 +1057,7 @@ COLORREF GetLineColor() const;
 
 ## <a name="ctreectrlgetnextitem"></a><a name="getnextitem"></a> CTreeCtrl:: GetNextItem
 
-この関数を呼び出して、 *nCode* パラメーターによって指定されたリレーションシップを持つツリービューアイテムを *hItem*に取得します。
+この関数を呼び出して、 *nCode* パラメーターによって指定されたリレーションシップを持つツリービューアイテムを *hItem* に取得します。
 
 ```
 HTREEITEM GetNextItem(
@@ -1070,7 +1071,7 @@ HTREEITEM GetNextItem(
 ツリー項目のハンドル。
 
 *nCode*<br/>
-*HItem*に対する関係の種類を示すフラグ。 このフラグには、次のいずれかの値を指定できます。
+*HItem* に対する関係の種類を示すフラグ。 このフラグには、次のいずれかの値を指定できます。
 
 - TVGN_CARET 現在選択されている項目を取得します。
 
@@ -1110,7 +1111,7 @@ HTREEITEM GetNextItem(
 
 ## <a name="ctreectrlgetnextsiblingitem"></a><a name="getnextsiblingitem"></a> CTreeCtrl:: GetNextSiblingItem
 
-この関数を呼び出して、 *hItem*の次の兄弟を取得します。
+この関数を呼び出して、 *hItem* の次の兄弟を取得します。
 
 ```
 HTREEITEM GetNextSiblingItem(HTREEITEM hItem) const;
@@ -1131,7 +1132,7 @@ HTREEITEM GetNextSiblingItem(HTREEITEM hItem) const;
 
 ## <a name="ctreectrlgetnextvisibleitem"></a><a name="getnextvisibleitem"></a> CTreeCtrl:: GetNextVisibleItem
 
-次に表示される *hItem*の項目を取得するには、この関数を呼び出します。
+次に表示される *hItem* の項目を取得するには、この関数を呼び出します。
 
 ```
 HTREEITEM GetNextVisibleItem(HTREEITEM hItem) const;
@@ -1152,7 +1153,7 @@ HTREEITEM GetNextVisibleItem(HTREEITEM hItem) const;
 
 ## <a name="ctreectrlgetparentitem"></a><a name="getparentitem"></a> CTreeCtrl:: GetParentItem
 
-この関数を呼び出して、 *hItem*の親を取得します。
+この関数を呼び出して、 *hItem* の親を取得します。
 
 ```
 HTREEITEM GetParentItem(HTREEITEM hItem) const;
@@ -1177,7 +1178,7 @@ HTREEITEM GetParentItem(HTREEITEM hItem) const;
 
 ## <a name="ctreectrlgetprevsiblingitem"></a><a name="getprevsiblingitem"></a> CTreeCtrl:: GetPrevSiblingItem
 
-この関数を呼び出して、 *hItem*の前の兄弟を取得します。
+この関数を呼び出して、 *hItem* の前の兄弟を取得します。
 
 ```
 HTREEITEM GetPrevSiblingItem(HTREEITEM hItem) const;
@@ -1198,7 +1199,7 @@ HTREEITEM GetPrevSiblingItem(HTREEITEM hItem) const;
 
 ## <a name="ctreectrlgetprevvisibleitem"></a><a name="getprevvisibleitem"></a> CTreeCtrl:: GetPrevVisibleItem
 
-この関数を呼び出して、 *hItem*の前に表示されている項目を取得します。
+この関数を呼び出して、 *hItem* の前に表示されている項目を取得します。
 
 ```
 HTREEITEM GetPrevVisibleItem(HTREEITEM hItem) const;
@@ -1473,7 +1474,7 @@ BOOL ItemHasChildren(HTREEITEM hItem) const;
 
 ### <a name="return-value"></a>戻り値
 
-*HItem*によって指定されたツリー項目に子項目がある場合は0以外の。それ以外の場合は0。
+*HItem* によって指定されたツリー項目に子項目がある場合は0以外の。それ以外の場合は0。
 
 ### <a name="remarks"></a>解説
 
@@ -1498,7 +1499,7 @@ HTREEITEM MapAccIdToItem(UINT uAccId) const;
 
 ### <a name="return-value"></a>戻り値
 
-`HTREEITEM` *Uの id*パラメーターに対応するツリービューの項目 () を示すハンドル。 詳細については、 [TVITEMEX](/windows/win32/api/commctrl/ns-commctrl-tvitemexw)構造体の*hItem*メンバーを参照してください。
+`HTREEITEM` *Uの id* パラメーターに対応するツリービューの項目 () を示すハンドル。 詳細については、 [TVITEMEX](/windows/win32/api/commctrl/ns-commctrl-tvitemexw)構造体の *hItem* メンバーを参照してください。
 
 ### <a name="remarks"></a>解説
 
@@ -1529,11 +1530,11 @@ UINT MapItemToAccID(HTREEITEM hItem) const;
 ### <a name="parameters"></a>パラメーター
 
 *hItem*\
-からコントロール内のツリービュー項目のハンドル。 詳細については、 [TVITEMEX](/windows/win32/api/commctrl/ns-commctrl-tvitemexw)構造体の*hItem*メンバーを参照してください。
+からコントロール内のツリービュー項目のハンドル。 詳細については、 [TVITEMEX](/windows/win32/api/commctrl/ns-commctrl-tvitemexw)構造体の *hItem* メンバーを参照してください。
 
 ### <a name="return-value"></a>戻り値
 
-*HItem*パラメーターに対応するアクセシビリティ識別子。
+*HItem* パラメーターに対応するアクセシビリティ識別子。
 
 ### <a name="remarks"></a>解説
 
@@ -1583,7 +1584,7 @@ BOOL Select(
 
 ### <a name="remarks"></a>解説
 
-*NCode*に TVGN_CARET 値が含まれている場合、親ウィンドウは TVN_SELCHANGING と TVN_SELCHANGED 通知メッセージを受信します。 さらに、指定した項目が折りたたまれた親項目の子である場合は、親の子項目のリストが展開され、指定した項目が表示されます。 この場合、親ウィンドウは TVN_ITEMEXPANDING と TVN_ITEMEXPANDED 通知メッセージを受信します。
+*NCode* に TVGN_CARET 値が含まれている場合、親ウィンドウは TVN_SELCHANGING と TVN_SELCHANGED 通知メッセージを受信します。 さらに、指定した項目が折りたたまれた親項目の子である場合は、親の子項目のリストが展開され、指定した項目が表示されます。 この場合、親ウィンドウは TVN_ITEMEXPANDING と TVN_ITEMEXPANDED 通知メッセージを受信します。
 
 ### <a name="example"></a>例
 
@@ -1629,7 +1630,7 @@ BOOL SelectItem(HTREEITEM hItem);
 
 ### <a name="remarks"></a>解説
 
-*HItem*が NULL の場合、この関数は項目を選択しません。
+*HItem* が NULL の場合、この関数は項目を選択しません。
 
 ### <a name="example"></a>例
 
@@ -1710,7 +1711,7 @@ COLORREF SetBkColor(COLORREF clr);
 
 ### <a name="parameters"></a>パラメーター
 
-*clr*<br/>
+<bpt id="p1">*</bpt>clr<ept id="p1">*</ept><br/>
 新しい背景色を格納している COLORREF 値。 この値が-1 の場合、コントロールは背景色に対してシステムカラーを使用するように戻ります。
 
 ### <a name="return-value"></a>戻り値
@@ -1781,7 +1782,7 @@ DWORD SetExtendedStyle(
 
 ### <a name="remarks"></a>解説
 
-このメソッドは、 *Dwexmask* パラメーターに指定されているスタイルをクリアし、 *dwexmask* パラメーターで指定されたスタイルを設定します。 *Dwexmask*のビットに対応する拡張スタイルのみが変更されます。
+このメソッドは、 *Dwexmask* パラメーターに指定されているスタイルをクリアし、 *dwexmask* パラメーターで指定されたスタイルを設定します。 *Dwexmask* のビットに対応する拡張スタイルのみが変更されます。
 
 このメソッドは、Windows SDK で説明されている [TVM_SETEXTENDEDSTYLE](/windows/win32/Controls/tvm-setextendedstyle) メッセージを送信します。
 
@@ -1810,7 +1811,7 @@ CImageList* SetImageList(
 ### <a name="parameters"></a>パラメーター
 
 *pImageList*<br/>
-割り当てるイメージリストへのポインター。 *Pimagelist*が NULL の場合、すべてのイメージがツリービューコントロールから削除されます。
+割り当てるイメージリストへのポインター。 *Pimagelist* が NULL の場合、すべてのイメージがツリービューコントロールから削除されます。
 
 *nImageListType*<br/>
 設定するイメージリストの種類。 イメージリストには、次のいずれかの値を指定できます。
@@ -1838,7 +1839,7 @@ void SetIndent(UINT nIndent);
 ### <a name="parameters"></a>パラメーター
 
 *n インデント*<br/>
-インデントの幅 (ピクセル単位)。 *Nindent*がシステム定義の最小幅よりも小さい場合、新しい幅はシステム定義の最小値に設定されます。
+インデントの幅 (ピクセル単位)。 *Nindent* がシステム定義の最小幅よりも小さい場合、新しい幅はシステム定義の最小値に設定されます。
 
 ### <a name="example"></a>例
 
@@ -1946,7 +1947,7 @@ Windows SDK で説明されているように、新しい項目の属性を格�
 
 `TVITEM`構造体では、 `hItem` メンバーが項目を識別し、 `mask` メンバーは設定する属性を指定します。
 
-`mask`メンバーまたは*nmask*パラメーターで TVIF_TEXT 値が指定されている場合、 `pszText` メンバーまたは*lpszitem*は null で終わる文字列のアドレスであり、 `cchTextMax` メンバーは無視されます。 `mask`(または*nmask*) が TVIF_STATE 値を指定する場合 `stateMask` は、メンバーまたは*nStateMask*パラメーターで、変更する項目の状態を指定し、 `state` メンバーまたは*nState*のパラメーターにこれらの状態の値を格納します。
+`mask`メンバーまたは *nmask* パラメーターで TVIF_TEXT 値が指定されている場合、 `pszText` メンバーまたは *lpszitem* は null で終わる文字列のアドレスであり、 `cchTextMax` メンバーは無視されます。 `mask`(または *nmask*) が TVIF_STATE 値を指定する場合 `stateMask` は、メンバーまたは *nStateMask* パラメーターで、変更する項目の状態を指定し、 `state` メンバーまたは *nState* のパラメーターにこれらの状態の値を格納します。
 
 ### <a name="example"></a>例
 
@@ -1968,7 +1969,7 @@ BOOL SetItemData(
 データを取得する項目のハンドル。
 
 *dwData*<br/>
-*HItem*によって指定された項目に関連付けられた、ポインターサイズのアプリケーション固有の値。
+*HItem* によって指定された項目に関連付けられた、ポインターサイズのアプリケーション固有の値。
 
 ### <a name="return-value"></a>戻り値
 
@@ -2002,7 +2003,7 @@ BOOL SetItemExpandedImageIndex(
 
 ### <a name="remarks"></a>解説
 
-このメソッドは、Windows SDK で説明されている [TVM_SETITEM](/windows/win32/Controls/tvm-setitem) メッセージを送信します。 このメソッドは、 *iExpandedImage* `iExpandedImage` TVITEMEX 構造体のメンバーに[i](/windows/win32/api/commctrl/ns-commctrl-tvitemexw)パラメーターを割り当て、メッセージ内でその構造体を使用します。
+このメソッドは、Windows SDK で説明されている [TVM_SETITEM](/windows/win32/Controls/tvm-setitem) メッセージを送信します。 このメソッドは、  `iExpandedImage` TVITEMEX 構造体のメンバーに[i](/windows/win32/api/commctrl/ns-commctrl-tvitemexw)パラメーターを割り当て、メッセージ内でその構造体を使用します。
 
 ### <a name="example"></a>例
 
@@ -2077,7 +2078,7 @@ BOOL SetItemImage(
 
 ## <a name="ctreectrlsetitemstate"></a><a name="setitemstate"></a> CTreeCtrl:: SetItemState
 
-*HItem*によって指定された項目の状態を設定します。
+*HItem* によって指定された項目の状態を設定します。
 
 ```
 BOOL SetItemState(
@@ -2133,7 +2134,7 @@ BOOL SetItemStateEx(
 
 ### <a name="remarks"></a>解説
 
-このメソッドは、Windows SDK で説明されている [TVM_SETITEM](/windows/win32/Controls/tvm-setitem) メッセージを送信します。 このメソッドは、TVITEMEX 構造体のメンバーに*Ustateex*パラメーターを割り当て `uStateEx` 、メッセージ内でその構造体を使用します。 [TVITEMEX](/windows/win32/api/commctrl/ns-commctrl-tvitemexw)
+このメソッドは、Windows SDK で説明されている [TVM_SETITEM](/windows/win32/Controls/tvm-setitem) メッセージを送信します。 このメソッドは、TVITEMEX 構造体のメンバーに *Ustateex* パラメーターを割り当て `uStateEx` 、メッセージ内でその構造体を使用します。 [](/windows/win32/api/commctrl/ns-commctrl-tvitemexw)
 
 ### <a name="example"></a>例
 
@@ -2149,7 +2150,7 @@ BOOL SetItemStateEx(
 
 ## <a name="ctreectrlsetitemtext"></a><a name="setitemtext"></a> CTreeCtrl:: SetItemText
 
-*HItem*によって指定された項目のテキストを設定します。
+*HItem* によって指定された項目のテキストを設定します。
 
 ```
 BOOL SetItemText(
@@ -2229,7 +2230,7 @@ COLORREF SetTextColor(COLORREF clr);
 
 ### <a name="parameters"></a>パラメーター
 
-*clr*<br/>
+<bpt id="p1">*</bpt>clr<ept id="p1">*</ept><br/>
 新しいテキストの色を格納している COLORREF 値。 この引数が-1 の場合、コントロールはテキストの色に対してシステムカラーを使用するように戻ります。
 
 ### <a name="return-value"></a>戻り値
@@ -2295,7 +2296,7 @@ BOOL SortChildren(HTREEITEM hItem);
 ### <a name="parameters"></a>パラメーター
 
 *hItem*<br/>
-子項目が並べ替えられる親項目のハンドル。 *HItem*が NULL の場合、並べ替えはツリーのルートから続行されます。
+子項目が並べ替えられる親項目のハンドル。 *HItem* が NULL の場合、並べ替えはツリーのルートから続行されます。
 
 ### <a name="return-value"></a>戻り値
 
@@ -2330,7 +2331,7 @@ BOOL SortChildrenCB(LPTVSORTCB pSort);
 
 構造体の比較関数は、 `lpfnCompare` 最初の項目が2番目の項目の前にある場合は負の値を返す必要があり、最初の項目が2番目の項目の場合は正の値、2つの項目が等しい場合は0を返します。
 
-*LParam1*パラメーターと*lParam2*パラメーターは、 `lParam` 比較対象の2つの項目の[TVITEM](/windows/win32/api/commctrl/ns-commctrl-tvitemw)構造体のメンバーに対応します。 *Lparamsort*パラメーターは、 `lParam` 構造体のメンバーに対応し `TV_SORTCB` ます。
+*LParam1* パラメーターと *lParam2* パラメーターは、 `lParam` 比較対象の2つの項目の [TVITEM](/windows/win32/api/commctrl/ns-commctrl-tvitemw)構造体のメンバーに対応します。 *Lparamsort* パラメーターは、 `lParam` 構造体のメンバーに対応し `TV_SORTCB` ます。
 
 ### <a name="example"></a>例
 

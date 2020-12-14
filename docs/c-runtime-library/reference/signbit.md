@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「signbit」を参照してください。
 title: signbit
 ms.date: 01/31/2019
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 - math/signbit
 helpviewer_keywords:
 - signbit function
-ms.openlocfilehash: 7f8399c16d2abc70a50740b0629bc5d9b3a1f067
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 7f6416647db67a49bd6950c011575b72f4c43f10
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87216740"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97303467"
 ---
 # <a name="signbit"></a>signbit
 
@@ -44,13 +45,13 @@ inline bool signbit(
 
 ## <a name="return-value"></a>戻り値
 
-**signbit** **`true`** 引数*x*が負の値または負の無限大である場合、Signbit は、(C++ では) 0 以外の値を返します。 **`false`** 引数が負でない、正の無限大、または NAN の場合は、0 (C++ では) を返します。
+ **`true`** 引数 *x* が負の値または負の無限大である場合、Signbit は、(C++ では) 0 以外の値を返します。 **`false`** 引数が負でない、正の無限大、または NAN の場合は、0 (C++ では) を返します。
 
 ## <a name="remarks"></a>解説
 
-**signbit**は、c としてコンパイルされた場合はマクロ、C++ としてコンパイルされる場合はオーバーロードされたインライン関数です。
+**signbit** は、c としてコンパイルされた場合はマクロ、C++ としてコンパイルされる場合はオーバーロードされたインライン関数です。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 |機能|必須ヘッダー (C)|必須ヘッダー (C++)|
 |--------------|---------------------------|-------------------------------|

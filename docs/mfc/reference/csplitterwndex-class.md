@@ -1,5 +1,6 @@
 ---
-title: クラスを分割します。
+description: '詳細情報: CSplitterWndEx クラス'
+title: CSplitterWndEx クラス
 ms.date: 11/04/2016
 f1_keywords:
 - CSplitterWndEx
@@ -8,14 +9,14 @@ f1_keywords:
 helpviewer_keywords:
 - CSplitterWndEx [MFC], OnDrawSplitter
 ms.assetid: 33e5eef3-05e1-4a07-a968-bf9207ce8598
-ms.openlocfilehash: d7952e3082bf68cff7ad9ba218073081ee522320
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 357f650551871cc9768c8e4e693bd62bb5e69bc4
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81363918"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97345096"
 ---
-# <a name="csplitterwndex-class"></a>クラスを分割します。
+# <a name="csplitterwndex-class"></a>CSplitterWndEx クラス
 
 カスタマイズされた分割ウィンドウを表します。
 
@@ -38,13 +39,13 @@ class CSplitterWndEx : public CSplitterWnd
 
 |名前|説明|
 |----------|-----------------|
-|[スプリッタスプリットンデックス::オンドロースプリッター](#ondrawsplitter)|分割ウィンドウを描画するためにフレームワークによって呼び出されます。 (オーバーライド[CSplitterWnd::OnDrawSplitter](csplitterwnd-class.md#ondrawsplitter).)|
+|[CSplitterWndEx::OnDrawSplitter](#ondrawsplitter)|スプリッターウィンドウを描画するためにフレームワークによって呼び出されます。 ( [CSplitterWnd:: OnDrawSplitter](csplitterwnd-class.md#ondrawsplitter)をオーバーライドします。)|
 
 ## <a name="remarks"></a>解説
 
-このメソッド`OnDrawSplitter`をオーバーライドして、分割ウィンドウのグラフィカル コンポーネントの外観をカスタマイズします。
+`OnDrawSplitter`分割ウィンドウのグラフィカルコンポーネントの外観をカスタマイズするには、メソッドをオーバーライドします。
 
-クラス`CSplitterWndEx`は、ビジュアル マネージャーによって実装される[OnDrawSplitterBorder](cmfcvisualmanager-class.md#ondrawsplitterborder) [、OnDrawSplitterBox](cmfcvisualmanager-class.md#ondrawsplitterbox)、および[OnFillSplitterBackground](cmfcvisualmanager-class.md#onfillsplitterbackground)メソッドと共に使用されます。 ビジュアル マネージャーがアプリケーションで分割ウィンドウを描画するようにするには、クラスの宣言を`CSplitterWnd``CSplitterWndEx`クラスに置き換えます。 フレーム ウィンドウ アプリケーションの場合、分割ウィンドウ クラスは mainfrm.h にある CMainFrame クラスで宣言されます。 例については、Samples ディレクトリ`OutlookDemo`のサンプルを参照してください。
+クラスは、 `CSplitterWndEx` ビジュアルマネージャーによって実装される、 [OnDrawSplitterBorder](cmfcvisualmanager-class.md#ondrawsplitterborder)、 [OnDrawSplitterBox](cmfcvisualmanager-class.md#ondrawsplitterbox)、および [OnFillSplitterBackground](cmfcvisualmanager-class.md#onfillsplitterbackground) の各メソッドと共に使用されます。 ビジュアルマネージャーによってアプリケーションにスプリッターウィンドウが描画されるようにするには、クラスの宣言を `CSplitterWnd` クラスに置き換え `CSplitterWndEx` ます。 フレームウィンドウアプリケーションでは、mainfrm.cpp にある CMainFrame クラスで、スプリッターウィンドウクラスが宣言されます。 例については、サンプルディレクトリのサンプルを参照してください `OutlookDemo` 。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -56,13 +57,13 @@ class CSplitterWndEx : public CSplitterWnd
 
 [CSplitterWnd](csplitterwnd-class.md)
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-**ヘッダー:** afxsplitterwndex.h
+**ヘッダー:** afxsplitterwndex
 
-## <a name="csplitterwndexondrawsplitter"></a><a name="ondrawsplitter"></a>スプリッタスプリットンデックス::オンドロースプリッター
+## <a name="csplitterwndexondrawsplitter"></a><a name="ondrawsplitter"></a> CSplitterWndEx::OnDrawSplitter
 
-分割ウィンドウを描画するためにフレームワークによって呼び出されます。
+スプリッターウィンドウを描画するためにフレームワークによって呼び出されます。
 
 ```
 virtual void OnDrawSplitter(
@@ -75,19 +76,19 @@ virtual void OnDrawSplitter(
 ### <a name="parameters"></a>パラメーター
 
 *pDC*<br/>
-[in]デバイス コンテキストへのポインター。 このパラメーターが NULL の場合、フレームワークはアクティブ ウィンドウを再描画します。
+からデバイスコンテキストへのポインター。 このパラメーターが NULL の場合、フレームワークはアクティブウィンドウを再描画します。
 
 *nType*<br/>
-[in]描画する`CSplitterWnd::ESplitType`分割ウィンドウ要素を指定する列挙値の 1 つ。 有効な値は `splitBox`、`splitBar`、`splitIntersection`、および `splitBorder` です。
+から `CSplitterWnd::ESplitType` 描画する分割ウィンドウ要素を指定する列挙値の1つ。 有効な値は、`splitBox`、`splitBar`、`splitIntersection`、`splitBorder` です。
 
-*Rect*<br/>
-[in]指定した分割ウィンドウ要素を描画するサイズと位置を指定する外接する四角形。
+*rect*<br/>
+から指定された分割ウィンドウ要素を描画するための寸法と位置を指定する外接する四角形。
 
 ### <a name="remarks"></a>解説
 
 ## <a name="see-also"></a>関連項目
 
-[階層グラフ](../hierarchy-chart.md)<br/>
-[クラス](mfc-classes.md)<br/>
-[クラスを分割する](csplitterwnd-class.md)<br/>
-[クラス](cmfcvisualmanager-class.md)
+[階層図](../hierarchy-chart.md)<br/>
+[Classes](mfc-classes.md)<br/>
+[CSplitterWnd クラス](csplitterwnd-class.md)<br/>
+[CMFCVisualManager クラス](cmfcvisualmanager-class.md)

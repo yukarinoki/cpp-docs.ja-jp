@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: __RTDynamicCast'
 title: __RTDynamicCast
 ms.date: 11/04/2016
 api_name:
@@ -20,12 +21,12 @@ f1_keywords:
 helpviewer_keywords:
 - __RTDynamicCast
 ms.assetid: 56aa2d7a-aa47-46ef-830d-e37175611239
-ms.openlocfilehash: 238310791baebc941ad23b798adc1ea2e7fffcbb
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 8e9cb906468c02ac065601e8f093b0e97c1b70bd
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87218508"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97284487"
 ---
 # <a name="__rtdynamiccast"></a>__RTDynamicCast
 
@@ -58,11 +59,11 @@ PVOID __RTDynamicCast (
 キャストの意図した結果。
 
 *isReference*<br/>
-**`true`** 入力が参照である場合は。**`false`** 入力がポインターである場合は。
+**`true`** 入力が参照である場合は。 **`false`** 入力がポインターである場合は。
 
 ## <a name="return-value"></a>戻り値
 
-成功した場合は、適切なサブオブジェクトへのポインター。それ以外の場合は**NULL**。
+成功した場合は、適切なサブオブジェクトへのポインター。それ以外の場合は **NULL**。
 
 ## <a name="exceptions"></a>例外
 

@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: CPagerCtrl クラス'
 title: CPagerCtrl クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -48,12 +49,12 @@ helpviewer_keywords:
 - CPagerCtrl [MFC], SetChild
 - CPagerCtrl [MFC], SetScrollPos
 ms.assetid: 65ac58dd-4f5e-4b7e-b15c-e0d435a7e884
-ms.openlocfilehash: 9b3af31e7d352e93144cde0c321620693111e145
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: ba01d07ebd6d638a1d505d555e44e9562e4bd27b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88561909"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97345226"
 ---
 # <a name="cpagerctrl-class"></a>CPagerCtrl クラス
 
@@ -116,7 +117,7 @@ class CPagerCtrl : public CWnd
 
 `CPagerCtrl`
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** afxcmn.h
 
@@ -188,7 +189,7 @@ virtual BOOL CreateEx(
 ### <a name="parameters"></a>パラメーター
 
 *dwExStyle*\
-からコントロールに適用される拡張スタイルのビットごとの組み合わせ。 詳細については、 [CreateWindowEx](/windows/win32/api/winuser/nf-winuser-createwindowexw)関数の*dwexstyle*パラメーターを参照してください。
+からコントロールに適用される拡張スタイルのビットごとの組み合わせ。 詳細については、 [CreateWindowEx](/windows/win32/api/winuser/nf-winuser-createwindowexw)関数の *dwexstyle* パラメーターを参照してください。
 
 *dwStyle*\
 からコントロールに適用される [ウィンドウスタイル](../../mfc/reference/styles-used-by-mfc.md#window-styles) および [ページャーコントロールスタイル](/windows/win32/Controls/pager-control-styles) のビットごとの組み合わせ (または)。
@@ -304,7 +305,7 @@ DWORD GetButtonState(int iButton) const;
 
 ### <a name="return-value"></a>戻り値
 
-*Ibutton*パラメーターによって指定されたボタンの状態。 状態は、PGF_INVISIBLE、PGF_NORMAL、PGF_GRAYED、PGF_DEPRESSED、または PGF_HOT のいずれかです。 詳細については、 [PGM_GETBUTTONSTATE](/windows/win32/Controls/pgm-getbuttonstate) メッセージの「戻り値」セクションを参照してください。
+*Ibutton* パラメーターによって指定されたボタンの状態。 状態は、PGF_INVISIBLE、PGF_NORMAL、PGF_GRAYED、PGF_DEPRESSED、または PGF_HOT のいずれかです。 詳細については、 [PGM_GETBUTTONSTATE](/windows/win32/Controls/pgm-getbuttonstate) メッセージの「戻り値」セクションを参照してください。
 
 ### <a name="remarks"></a>解説
 
@@ -525,7 +526,7 @@ int SetBorder(int iBorder);
 ### <a name="parameters"></a>パラメーター
 
 *iBorder*\
-から新しい境界線のサイズ (ピクセル単位)。 *Iborder*パラメーターが負の値の場合、境界線のサイズは0に設定されます。
+から新しい境界線のサイズ (ピクセル単位)。 *Iborder* パラメーターが負の値の場合、境界線のサイズは0に設定されます。
 
 ### <a name="return-value"></a>戻り値
 

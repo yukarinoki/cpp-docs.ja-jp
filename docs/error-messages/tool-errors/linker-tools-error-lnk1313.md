@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「リンカツール Error LNK1313」を参照してください。
 title: リンカ ツール エラー LNK1313
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,22 +7,22 @@ f1_keywords:
 helpviewer_keywords:
 - LNK1313
 ms.assetid: 5df0b72e-bb3f-428c-8d84-6084238f9827
-ms.openlocfilehash: 03ff61a1f3501b3ea106138e957a657ed064e645
-ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
+ms.openlocfilehash: 1c10038def9a448645e80ae10fc47d4372769b58
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90683443"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97310724"
 ---
 # <a name="linker-tools-error-lnk1313"></a>リンカ ツール エラー LNK1313
 
 > ijw/ネイティブ モジュールが検出されました。純粋なモジュールとリンクできません。
 
-## <a name="remarks"></a>注釈
+## <a name="remarks"></a>解説
 
-現在のバージョンの Visual C++ は、 **/clr: pure**を使用してコンパイルされた .obj ファイルを使用したネイティブまたは混合マネージ/ネイティブ .obj ファイルのリンクをサポートしていません。
+現在のバージョンの Visual C++ は、 **/clr: pure** を使用してコンパイルされた .obj ファイルを使用したネイティブまたは混合マネージ/ネイティブ .obj ファイルのリンクをサポートしていません。
 
-**/Clr: pure**コンパイラオプションは visual studio 2015 で非推奨とされており、visual studio 2017 ではサポートされていません。
+**/Clr: pure** コンパイラオプションは visual studio 2015 で非推奨とされており、visual studio 2017 ではサポートされていません。
 
 ## <a name="examples"></a>例
 

@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: CToolTipCtrl クラス'
 title: CToolTipCtrl Class
 ms.date: 11/04/2016
 f1_keywords:
@@ -72,12 +73,12 @@ helpviewer_keywords:
 - CToolTipCtrl [MFC], Update
 - CToolTipCtrl [MFC], UpdateTipText
 ms.assetid: 8973f70c-b73a-46c7-908d-758f364b9a97
-ms.openlocfilehash: a4c2644ff7a9b2ae60cc166247d27d7a25305b97
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: bd263d0ada7ad85169eb551dd136f81b480534e8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88561844"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97345031"
 ---
 # <a name="ctooltipctrl-class"></a>CToolTipCtrl Class
 
@@ -156,7 +157,7 @@ class CToolTipCtrl : public CWnd
 
 `CToolTipCtrl`
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** afxcmn.h
 
@@ -175,7 +176,7 @@ void Activate(BOOL bActivate);
 
 ### <a name="remarks"></a>解説
 
-*Bactivate*が TRUE の場合、コントロールはアクティブになります。FALSE の場合、非アクティブ化されます。
+*Bactivate* が TRUE の場合、コントロールはアクティブになります。FALSE の場合、非アクティブ化されます。
 
 ツールヒントコントロールがアクティブになると、コントロールに登録されているツール上にカーソルがあるときにツールヒント情報が表示されます。非アクティブになると、カーソルがツール上にある場合でも、ツールヒントの情報は表示されません。
 
@@ -210,7 +211,7 @@ BOOL AddTool(
 ツールのテキストを含む文字列リソースの ID。
 
 *lpRectTool*<br/>
-ツールの外接する四角形の座標を格納している [RECT](/windows/win32/api/windef/ns-windef-rect) 構造体へのポインター。 座標は、 *pWnd*によって識別されるウィンドウのクライアント領域の左上隅を基準としています。
+ツールの外接する四角形の座標を格納している [RECT](/windows/win32/api/windef/ns-windef-rect) 構造体へのポインター。 座標は、 *pWnd* によって識別されるウィンドウのクライアント領域の左上隅を基準としています。
 
 *nIDTool*<br/>
 ツールの ID。
@@ -224,7 +225,7 @@ BOOL AddTool(
 
 ### <a name="remarks"></a>解説
 
-*LpRectTool*パラメーターと*nIDTool*パラメーターの両方が有効であるか、 *lpRectTool*が NULL の場合、 *nIDTool*は0である必要があります。
+*LpRectTool* パラメーターと *nIDTool* パラメーターの両方が有効であるか、 *lpRectTool* が NULL の場合、 *nIDTool* は0である必要があります。
 
 ツールヒントコントロールは、複数のツールに関連付けることができます。 ツールをツールヒントコントロールに登録するには、この関数を呼び出します。これにより、ツールヒントに格納されている情報が、カーソルがツール上にあるときに表示されます。
 
@@ -287,9 +288,9 @@ virtual BOOL Create(CWnd* pParentWnd, DWORD dwStyle = 0);
 
 を作成する `CToolTipCtrl` には、2つの手順を実行します。 まず、コンストラクターを呼び出し `CToolTipCtrl` てオブジェクトを構築した後、を呼び出して `Create` ツールヒントコントロールを作成し、オブジェクトにアタッチし `CToolTipCtrl` ます。
 
-*DwStyle*パラメーターには、[ウィンドウスタイル](../../mfc/reference/styles-used-by-mfc.md#window-styles)の任意の組み合わせを指定できます。 また、ツールヒントコントロールには、TTS_ALWAYSTIP と TTS_NOPREFIX という2つのクラス固有のスタイルがあります。
+*DwStyle* パラメーターには、[ウィンドウスタイル](../../mfc/reference/styles-used-by-mfc.md#window-styles)の任意の組み合わせを指定できます。 また、ツールヒントコントロールには、TTS_ALWAYSTIP と TTS_NOPREFIX という2つのクラス固有のスタイルがあります。
 
-|Style|意味|
+|スタイル|説明|
 |-----------|-------------|
 |TTS_ALWAYSTIP|ツールヒントコントロールのオーナーウィンドウがアクティブか非アクティブかに関係なく、カーソルがツール上にあるときにツールヒントが表示されるように指定します。 このスタイルがないと、ツールのオーナーウィンドウがアクティブなときにツールヒントコントロールが表示されますが、非アクティブになっているときは表示されません。|
 |TTS_NOPREFIX|このスタイルは、システムが文字列からアンパサンド (&) 文字を削除しないようにします。 ツールヒントコントロールに TTS_NOPREFIX スタイルが設定されていない場合、アンパサンド文字が自動的に除去されます。これにより、アプリケーションは、メニュー項目としても、ツールヒントコントロールのテキストとしても、同じ文字列を使用できます。|
@@ -322,7 +323,7 @@ virtual BOOL CreateEx(
 ツールヒントコントロールのスタイルを指定します。 詳細については、「[作成](#create)」の「**解説**」を参照してください。
 
 *Dwスタイル Ex*<br/>
-作成するコントロールの拡張スタイルを指定します。 拡張 Windows スタイルの一覧については、Windows SDK の[CreateWindowEx](/windows/win32/api/winuser/nf-winuser-createwindowexw)の*dwexstyle*パラメーターを参照してください。
+作成するコントロールの拡張スタイルを指定します。 拡張 Windows スタイルの一覧については、Windows SDK の [CreateWindowEx](/windows/win32/api/winuser/nf-winuser-createwindowexw)の *dwexstyle* パラメーターを参照してください。
 
 ### <a name="return-value"></a>戻り値
 
@@ -330,7 +331,7 @@ virtual BOOL CreateEx(
 
 ### <a name="remarks"></a>解説
 
-`CreateEx` `Create` Windows 拡張スタイルの先頭**WS_EX_** によって指定された拡張 windows スタイルを適用するには、の代わりにを使用します。
+`CreateEx` `Create` Windows 拡張スタイルの先頭 **WS_EX_** によって指定された拡張 windows スタイルを適用するには、の代わりにを使用します。
 
 ## <a name="ctooltipctrlctooltipctrl"></a><a name="ctooltipctrl"></a> CToolTipCtrl:: CToolTipCtrl
 
@@ -454,7 +455,7 @@ void GetMargin(LPRECT lprc) const;
 *lprc*<br/>
 `RECT`余白情報を受け取る構造体のアドレス。 [RECT](/windows/win32/api/windef/ns-windef-rect)構造体のメンバーは、外接する四角形を定義していません。 このメッセージのために、構造体のメンバーは次のように解釈されます。
 
-|メンバー|[表記]|
+|メンバー|表現|
 |------------|--------------------|
 |`top`|上罫線とツールヒントテキストの上端の間の距離 (ピクセル単位)。|
 |`left`|左罫線と先端テキストの左端の間の距離 (ピクセル単位)。|
@@ -494,7 +495,7 @@ void GetText(
 
 ### <a name="parameters"></a>パラメーター
 
-*引数*<br/>
+*str*<br/>
 `CString`ツールのテキストを受け取るオブジェクトへの参照。
 
 *pWnd*<br/>
@@ -550,7 +551,7 @@ void GetTitle(PTTGETTITLE pttgt) const;
 ### <a name="parameters"></a>パラメーター
 
 *pttgt*\
-入出力ツールヒントコントロールに関する情報を格納している [TTGETTITLE](/windows/win32/api/commctrl/ns-commctrl-ttgettitle) 構造体へのポインター。 このメソッドから制御が戻るときに、 [TTGETTITLE](/windows/win32/api/commctrl/ns-commctrl-ttgettitle)構造体の*psztitle*メンバーはタイトルのテキストを指します。
+入出力ツールヒントコントロールに関する情報を格納している [TTGETTITLE](/windows/win32/api/commctrl/ns-commctrl-ttgettitle) 構造体へのポインター。 このメソッドから制御が戻るときに、 [TTGETTITLE](/windows/win32/api/commctrl/ns-commctrl-ttgettitle)構造体の *psztitle* メンバーはタイトルのテキストを指します。
 
 ### <a name="remarks"></a>解説
 
@@ -596,7 +597,7 @@ BOOL GetToolInfo(
 
 ### <a name="remarks"></a>解説
 
-`hwnd` `uId` *CToolInfo*によって参照される[TOOLINFO](/windows/win32/api/commctrl/ns-commctrl-tttoolinfoa)構造体のおよびメンバーは、ツールを識別します。 以前のの呼び出しによってツールヒントコントロールにツールが登録されている場合 `AddTool` 、 `TOOLINFO` 構造体にはツールに関する情報が格納されます。
+`hwnd` `uId` *CToolInfo* によって参照される [TOOLINFO](/windows/win32/api/commctrl/ns-commctrl-tttoolinfoa)構造体のおよびメンバーは、ツールを識別します。 以前のの呼び出しによってツールヒントコントロールにツールが登録されている場合 `AddTool` 、 `TOOLINFO` 構造体にはツールに関する情報が格納されます。
 
 ## <a name="ctooltipctrlhittest"></a><a name="hittest"></a> CToolTipCtrl:: System.windows.media.visualtreehelper.hittest
 
@@ -782,7 +783,7 @@ void SetTipBkColor(COLORREF clr);
 
 ### <a name="parameters"></a>パラメーター
 
-*clr*<br/>
+<bpt id="p1">*</bpt>clr<ept id="p1">*</ept><br/>
 新しい背景色。
 
 ### <a name="remarks"></a>解説
@@ -799,7 +800,7 @@ void SetTipTextColor(COLORREF clr);
 
 ### <a name="parameters"></a>パラメーター
 
-*clr*<br/>
+<bpt id="p1">*</bpt>clr<ept id="p1">*</ept><br/>
 新しいテキストの色。
 
 ### <a name="remarks"></a>解説
@@ -819,7 +820,7 @@ BOOL SetTitle(
 ### <a name="parameters"></a>パラメーター
 
 *uIcon*<br/>
-Windows SDK の[TTM_SETTITLE](/windows/win32/Controls/ttm-settitle)の*アイコン*を参照してください。
+Windows SDK の [TTM_SETTITLE](/windows/win32/Controls/ttm-settitle)の *アイコン* を参照してください。
 
 *lpstrTitle*<br/>
 タイトル文字列へのポインター。
