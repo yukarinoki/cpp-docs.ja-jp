@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: CTypedPtrMap クラス'
 title: CTypedPtrMap クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 - CTypedPtrMap [MFC], RemoveKey
 - CTypedPtrMap [MFC], SetAt
 ms.assetid: 9f377385-c6e9-4471-8b40-8fe220c50164
-ms.openlocfilehash: 410f0101fd0f8cda271fe0f2353b06b9e8d773b8
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: 25476a9195fe4a522ed31937dc1e2c5156ef6792
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81754364"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97344992"
 ---
 # <a name="ctypedptrmap-class"></a>CTypedPtrMap クラス
 
@@ -35,13 +36,13 @@ class CTypedPtrMap : public BASE_CLASS
 #### <a name="parameters"></a>パラメーター
 
 *BASE_CLASS*<br/>
-型指定されたポインター マップ クラスの基本クラス。ポインター マップ クラス 、 `CMapPtrToPtr` `CMapPtrToWord`、 `CMapWordToPtr`、`CMapStringToPtr`または を指定する必要があります。
+型指定されたポインターマップクラスの基本クラスです。ポインターマップクラス ( `CMapPtrToPtr` 、、 `CMapPtrToWord` `CMapWordToPtr` 、または) である必要があり `CMapStringToPtr` ます。
 
-*キー*<br/>
+*KEY*<br/>
 マップのキーとして使用されるオブジェクトのクラス。
 
-*値*<br/>
-マップに格納されているオブジェクトのクラス。
+*VALUE*<br/>
+Map に格納されているオブジェクトのクラス。
 
 ## <a name="members"></a>メンバー
 
@@ -49,24 +50,24 @@ class CTypedPtrMap : public BASE_CLASS
 
 |名前|説明|
 |----------|-----------------|
-|[クタイプタイプのマップ::ゲット・ネクスト・アソック](#getnextassoc)|反復処理の次の要素を取得します。|
-|[クタイプ付きプサーマップ::ルックアップ](#lookup)|を基`KEY`にしてを`VALUE`返します。|
-|[キーの削除](#removekey)|キーで指定された要素を削除します。|
-|[クタイププターマップ::セットアット](#setat)|マップに要素を挿入します。一致するキーが見つかった場合は、既存の要素を置き換えます。|
+|[CTypedPtrMap:: GetNextAssoc](#getnextassoc)|反復処理の対象となる次の要素を取得します。|
+|[CTypedPtrMap:: Lookup](#lookup)|`KEY`に基づいてを返し `VALUE` ます。|
+|[CTypedPtrMap:: RemoveKey](#removekey)|キーによって指定された要素を削除します。|
+|[CTypedPtrMap:: SetAt](#setat)|Map に要素を挿入します。一致するキーが見つかった場合は、既存の要素を置き換えます。|
 
 ### <a name="public-operators"></a>パブリック演算子
 
 |名前|説明|
 |----------|-----------------|
-|[クタイププターマップ::演算子\[\]](#operator_at)|マップに要素を挿入します。|
+|[CTypedPtrMap:: operator \[\]](#operator_at)|Map に要素を挿入します。|
 
 ## <a name="remarks"></a>解説
 
-を使用`CTypedPtrMap`すると、C++ 型検査機能を使用すると、ポインター型の不一致によって発生するエラーを排除できます。
+を使用すると `CTypedPtrMap` 、C++ の型チェック機能によって、ポインター型の不一致によって発生するエラーを解消できます。
 
-すべての`CTypedPtrMap`関数がインラインであるため、このテンプレートを使用しても、コードのサイズや速度に大きな影響はありません。
+すべての `CTypedPtrMap` 関数がインラインであるため、このテンプレートを使用してもコードのサイズや速度に大きな影響はありません。
 
-の使用方法`CTypedPtrMap`の詳細については、「 コレクションと[テンプレート ベースのクラス](../../mfc/template-based-classes.md)」を参照してください。 [Collections](../../mfc/collections.md)
+の使用方法の詳細については `CTypedPtrMap` 、「アーティクル [コレクション](../../mfc/collections.md) と [テンプレートベースのクラス](../../mfc/template-based-classes.md)」を参照してください。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -74,13 +75,13 @@ class CTypedPtrMap : public BASE_CLASS
 
 `CTypedPtrMap`
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** afxtempl.h
 
-## <a name="ctypedptrmapgetnextassoc"></a><a name="getnextassoc"></a>クタイプタイプのマップ::ゲット・ネクスト・アソック
+## <a name="ctypedptrmapgetnextassoc"></a><a name="getnextassoc"></a> CTypedPtrMap:: GetNextAssoc
 
-で`rNextPosition`マップ要素を取得し、マップ内`rNextPosition`の次の要素を参照するように更新します。
+で map 要素を取得 `rNextPosition` し、を更新し `rNextPosition` て、マップ内の次の要素を参照します。
 
 ```cpp
 void GetNextAssoc(
@@ -91,32 +92,32 @@ void GetNextAssoc(
 
 ### <a name="parameters"></a>パラメーター
 
-*r位置*<br/>
-前`GetNextAssoc``BASE_CLASS`または **::GetStartPosition**呼び出しによって返される POSITION 値への参照を指定します。
+*rPosition*<br/>
+Previous `GetNextAssoc` または `BASE_CLASS` **:: GetStartPosition** 呼び出しによって返される位置値への参照を指定します。
 
-*キー*<br/>
-マップのキーの種類を指定するテンプレート パラメーター。
+*KEY*<br/>
+マップのキーの種類を指定するテンプレートパラメーター。
 
-*rキー*<br/>
+*rKey*<br/>
 取得した要素の返されたキーを指定します。
 
-*値*<br/>
-マップの値の型を指定するテンプレート パラメーター。
+*VALUE*<br/>
+マップの値の型を指定するテンプレートパラメーター。
 
-*Rvalue*<br/>
+*右辺値*<br/>
 取得した要素の戻り値を指定します。
 
 ### <a name="remarks"></a>解説
 
-この関数は、マップ内のすべての要素を反復処理する場合に最も便利です。 位置順序は、必ずしもキー値シーケンスと同じではありません。
+この関数は、マップ内のすべての要素を反復処理する場合に最も役立ちます。 位置シーケンスは必ずしもキー値のシーケンスと同じではないことに注意してください。
 
-取得された要素がマップ内の最後の要素である場合、新しい値`rNextPosition`は NULL に設定されます。
+取得した要素が map 内の最後の要素である場合、の新しい値 `rNextPosition` は NULL に設定されます。
 
-このインライン関数は`BASE_CLASS`**::GetNextAssoc**を呼び出します。
+このインライン関数 `BASE_CLASS` **は、:: GetNextAssoc** を呼び出します。
 
-## <a name="ctypedptrmaplookup"></a><a name="lookup"></a>クタイプ付きプサーマップ::ルックアップ
+## <a name="ctypedptrmaplookup"></a><a name="lookup"></a> CTypedPtrMap:: Lookup
 
-`Lookup`ハッシュ アルゴリズムを使用して、正確に一致するキーを持つ map 要素をすばやく見つけることができます。
+`Lookup` ハッシュアルゴリズムを使用して、正確に一致するキーを持つ map 要素をすばやく検索します。
 
 ```
 BOOL Lookup(BASE_CLASS ::BASE_ARG_KEY key, VALUE& rValue) const;
@@ -125,28 +126,28 @@ BOOL Lookup(BASE_CLASS ::BASE_ARG_KEY key, VALUE& rValue) const;
 ### <a name="parameters"></a>パラメーター
 
 *BASE_CLASS*<br/>
-このマップのクラスの基本クラスを指定するテンプレート パラメーター。
+このマップのクラスの基本クラスを指定するテンプレートパラメーター。
 
 *key*<br/>
 検索する要素のキー。
 
-*値*<br/>
-このマップに格納されている値の種類を指定するテンプレート パラメーター。
+*VALUE*<br/>
+このマップに格納されている値の型を指定するテンプレートパラメーター。
 
-*Rvalue*<br/>
+*右辺値*<br/>
 取得した要素の戻り値を指定します。
 
 ### <a name="return-value"></a>戻り値
 
-要素が見つかった場合は 0 以外。それ以外の場合は 0。
+要素が見つかった場合は0以外の。それ以外の場合は0です。
 
 ### <a name="remarks"></a>解説
 
-このインライン関数は`BASE_CLASS`**、::Lookup**を呼び出します。
+このインライン関数 `BASE_CLASS` **は、:: Lookup** を呼び出します。
 
-## <a name="ctypedptrmapoperator--"></a><a name="operator_at"></a>CTypedPtrマップ::演算子 [ ]
+## <a name="ctypedptrmapoperator--"></a><a name="operator_at"></a> CTypedPtrMap:: operator []
 
-この演算子は、代入ステートメントの左側 (左辺値) でのみ使用できます。
+この演算子は、代入ステートメント (左辺値) の左側でのみ使用できます。
 
 ```
 VALUE& operator[ ](base_class ::base_arg_key key);
@@ -154,22 +155,22 @@ VALUE& operator[ ](base_class ::base_arg_key key);
 
 ### <a name="parameters"></a>パラメーター
 
-*値*<br/>
-このマップに格納されている値の種類を指定するテンプレート パラメーター。
+*VALUE*<br/>
+このマップに格納されている値の型を指定するテンプレートパラメーター。
 
 *BASE_CLASS*<br/>
-このマップのクラスの基本クラスを指定するテンプレート パラメーター。
+このマップのクラスの基本クラスを指定するテンプレートパラメーター。
 
 *key*<br/>
-マップ内で検索または作成する要素のキー。
+マップで検索または作成する要素のキー。
 
 ### <a name="remarks"></a>解説
 
-指定したキーを持つマップ要素がない場合は、新しい要素が作成されます。 マップ内にキーが見つからない可能性があるため、この演算子と同等の"右辺"(r値)はありません。 要素を`Lookup`取得するには、メンバー関数を使用します。
+指定したキーを持つマップ要素がない場合は、新しい要素が作成されます。 マップ内にキーが見つからない可能性があるため、この演算子に相当する "右辺" (r 値) はありません。 `Lookup`要素の取得には、メンバー関数を使用します。
 
-## <a name="ctypedptrmapremovekey"></a><a name="removekey"></a>キーの削除
+## <a name="ctypedptrmapremovekey"></a><a name="removekey"></a> CTypedPtrMap:: RemoveKey
 
-このメンバー関数は`BASE_CLASS`**、::RemoveKey**を呼び出します。
+このメンバー関数 `BASE_CLASS` **は、:: removekey** を呼び出します。
 
 ```
 BOOL RemoveKey(KEY key);
@@ -177,23 +178,23 @@ BOOL RemoveKey(KEY key);
 
 ### <a name="parameters"></a>パラメーター
 
-*キー*<br/>
-マップのキーの種類を指定するテンプレート パラメーター。
+*KEY*<br/>
+マップのキーの種類を指定するテンプレートパラメーター。
 
 *key*<br/>
 削除する要素のキー。
 
 ### <a name="return-value"></a>戻り値
 
-エントリが見つかり、正常に削除された場合は 0 以外の値を返します。それ以外の場合は 0。
+エントリが見つかり、正常に削除された場合は0以外の値。それ以外の場合は0です。
 
 ### <a name="remarks"></a>解説
 
-詳細な説明については[、「CMapStringToOb::RemoveKey](../../mfc/reference/cmapstringtoob-class.md#removekey)」を参照してください。
+詳細については、「 [CMapStringToOb:: RemoveKey](../../mfc/reference/cmapstringtoob-class.md#removekey)」を参照してください。
 
-## <a name="ctypedptrmapsetat"></a><a name="setat"></a>クタイププターマップ::セットアット
+## <a name="ctypedptrmapsetat"></a><a name="setat"></a> CTypedPtrMap:: SetAt
 
-このメンバー関数は`BASE_CLASS`**、::SetAt**を呼び出します。
+このメンバー関数 `BASE_CLASS` **は、:: SetAt** を呼び出します。
 
 ```cpp
 void SetAt(KEY key, VALUE newValue);
@@ -201,24 +202,24 @@ void SetAt(KEY key, VALUE newValue);
 
 ### <a name="parameters"></a>パラメーター
 
-*キー*<br/>
-マップのキーの種類を指定するテンプレート パラメーター。
+*KEY*<br/>
+マップのキーの種類を指定するテンプレートパラメーター。
 
 *key*<br/>
-newValue のキー値を指定します。
+NewValue のキー値を指定します。
 
 *newValue*<br/>
-新しい要素の値であるオブジェクト ポインターを指定します。
+新しい要素の値であるオブジェクトポインターを指定します。
 
 ### <a name="remarks"></a>解説
 
-詳細な説明については[、「CMapStringToOb::SetAt」](../../mfc/reference/cmapstringtoob-class.md#setat)を参照してください。
+詳細については、「 [CMapStringToOb:: SetAt](../../mfc/reference/cmapstringtoob-class.md#setat)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 
-[MFC サンプル コレクト](../../overview/visual-cpp-samples.md)<br/>
-[階層グラフ](../../mfc/hierarchy-chart.md)<br/>
+[MFC サンプル収集](../../overview/visual-cpp-samples.md)<br/>
+[階層図](../../mfc/hierarchy-chart.md)<br/>
 [CMapPtrToPtr クラス](../../mfc/reference/cmapptrtoptr-class.md)<br/>
 [CMapPtrToWord クラス](../../mfc/reference/cmapptrtoword-class.md)<br/>
-[クラスを使用します。](../../mfc/reference/cmapwordtoptr-class.md)<br/>
-[クラスを作成します。](../../mfc/reference/cmapstringtoptr-class.md)
+[CMapWordToPtr クラス](../../mfc/reference/cmapwordtoptr-class.md)<br/>
+[CMapStringToPtr クラス](../../mfc/reference/cmapstringtoptr-class.md)

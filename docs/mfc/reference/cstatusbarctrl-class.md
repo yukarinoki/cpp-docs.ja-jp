@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: CStatusBarCtrl クラス'
 title: CStatusBarCtrl クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -44,12 +45,12 @@ helpviewer_keywords:
 - CStatusBarCtrl [MFC], SetText
 - CStatusBarCtrl [MFC], SetTipText
 ms.assetid: 8504ad38-7b91-4746-aede-ac98886eb47b
-ms.openlocfilehash: d2440eb05a1367b7d4980494e3d7f5de646d5fd0
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: 424edbd2d78fc82c7c78315dea1d430c6ea9459d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88562650"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97342635"
 ---
 # <a name="cstatusbarctrl-class"></a>CStatusBarCtrl クラス
 
@@ -110,7 +111,7 @@ class CStatusBarCtrl : public CWnd
 
 `CStatusBarCtrl`
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** afxcmn.h
 
@@ -172,13 +173,13 @@ virtual BOOL CreateEx(
 ### <a name="parameters"></a>パラメーター
 
 *dwExStyle*<br/>
-作成するコントロールの拡張スタイルを指定します。 拡張 Windows スタイルの一覧については、Windows SDK の[CreateWindowEx](/windows/win32/api/winuser/nf-winuser-createwindowexw)の*dwexstyle*パラメーターを参照してください。
+作成するコントロールの拡張スタイルを指定します。 拡張 Windows スタイルの一覧については、Windows SDK の [CreateWindowEx](/windows/win32/api/winuser/nf-winuser-createwindowexw)の *dwexstyle* パラメーターを参照してください。
 
 *dwStyle*<br/>
 ステータスバーコントロールのスタイルを指定します。 Windows SDK の [コモンコントロールスタイル](/windows/win32/Controls/common-control-styles) に一覧表示されているステータスバーコントロールスタイルの任意の組み合わせを適用します。 このパラメーターには WS_CHILD スタイルを含める必要があります。 また、WS_VISIBLE スタイルも含める必要があります。
 
 *rect*<br/>
-*PParentWnd*のクライアント座標で、作成されるウィンドウのサイズと位置を記述する[RECT](/windows/win32/api/windef/ns-windef-rect)構造体への参照。
+*PParentWnd* のクライアント座標で、作成されるウィンドウのサイズと位置を記述する [RECT](/windows/win32/api/windef/ns-windef-rect)構造体への参照。
 
 *pParentWnd*<br/>
 コントロールの親であるウィンドウへのポインター。
@@ -192,7 +193,7 @@ virtual BOOL CreateEx(
 
 ### <a name="remarks"></a>解説
 
-`CreateEx`Windows 拡張スタイルの先頭**WS_EX_** によって指定された拡張 windows スタイルを適用するには、[[作成](#create)] ではなくを使用します。
+`CreateEx`Windows 拡張スタイルの先頭 **WS_EX_** によって指定された拡張 windows スタイルを適用するには、[[作成](#create)] ではなくを使用します。
 
 ## <a name="cstatusbarctrlcstatusbarctrl"></a><a name="cstatusbarctrl"></a> CStatusBarCtrl:: CStatusBarCtrl
 
@@ -313,7 +314,7 @@ int GetParts(
 座標を取得する対象の部分の数。 このパラメーターがコントロール内のパーツの数よりも大きい場合、メッセージは既存のパーツの座標だけを取得します。
 
 *pParts*<br/>
-N 個の *部分*で指定された要素の数と同じ数の要素を持つ整数配列のアドレス。 配列の各要素は、対応する部分の右端のクライアント座標を受け取ります。 要素が-1 に設定されている場合は、その部分の右端の位置がステータスバーの右端になります。
+N 個の *部分* で指定された要素の数と同じ数の要素を持つ整数配列のアドレス。 配列の各要素は、対応する部分の右端のクライアント座標を受け取ります。 要素が-1 に設定されている場合は、その部分の右端の位置がステータスバーの右端になります。
 
 ### <a name="return-value"></a>戻り値
 
@@ -480,7 +481,7 @@ COLORREF SetBkColor(COLORREF cr);
 
 ### <a name="parameters"></a>パラメーター
 
-*リターン*<br/>
+*cr*<br/>
 新しい背景色を指定する COLORREF 値。 CLR_DEFAULT の値を指定して、ステータスバーが既定の背景色を使用するようにします。
 
 ### <a name="return-value"></a>戻り値
@@ -562,7 +563,7 @@ BOOL SetParts(
 設定するパーツの数。 部分の数を255より大きくすることはできません。
 
 *pWidths*<br/>
-*Nparts*によって指定された部分と同じ数の要素を持つ整数配列のアドレス。 配列の各要素は、対応する部分の右端の位置をクライアント座標で指定します。 要素が-1 の場合、その部分の右端の位置は、コントロールの右端に向かって拡張されます。
+*Nparts* によって指定された部分と同じ数の要素を持つ整数配列のアドレス。 配列の各要素は、対応する部分の右端の位置をクライアント座標で指定します。 要素が-1 の場合、その部分の右端の位置は、コントロールの右端に向かって拡張されます。
 
 ### <a name="return-value"></a>戻り値
 
@@ -607,7 +608,7 @@ BOOL SetText(
 ### <a name="parameters"></a>パラメーター
 
 *lpszText*<br/>
-設定されるテキストを指定する null で終わる文字列のアドレス。 *NType*が SBT_OWNERDRAW の場合、 *lpszText*は32ビットのデータを表します。
+設定されるテキストを指定する null で終わる文字列のアドレス。 *NType* が SBT_OWNERDRAW の場合、 *lpszText* は32ビットのデータを表します。
 
 *n ペイン*<br/>
 設定される部分の 0 から始まるインデックス。 この値が 255 の場合、ステータス バー コントロールは 1 つの部分のみで構成される単純なコントロールと見なされます。

@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: CPtrList クラス'
 title: CPtrList クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - CPtrList class [MFC]
 - generic lists
 ms.assetid: 4139a09c-4338-4f42-9eea-51336120b43c
-ms.openlocfilehash: d7da4fe52d25d9ffdf6371aa40f41d7082f1165c
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 27849db4687860ab68feb548de1ed8ad209b73a6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87226842"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97343252"
 ---
 # <a name="cptrlist-class"></a>CPtrList クラス
 
@@ -37,13 +38,13 @@ class CPtrList : public CObject
 
 ## <a name="remarks"></a>解説
 
-`CPtrList`には、実行時の型へのアクセスとオブジェクトへのダンプをサポートする IMPLEMENT_DYNAMIC マクロが組み込まれて `CDumpContext` います。 ポインター リストの各要素をダンプする必要があるときは、ダンプ コンテキストの深さを 1 以上に設定する必要があります。
+`CPtrList` には、実行時の型へのアクセスとオブジェクトへのダンプをサポートする IMPLEMENT_DYNAMIC マクロが組み込まれて `CDumpContext` います。 ポインター リストの各要素をダンプする必要があるときは、ダンプ コンテキストの深さを 1 以上に設定する必要があります。
 
 ポインター リストはシリアル化できません。
 
 `CPtrList` オブジェクトが削除されたとき、またはその要素が削除されたときは、ポインターだけが削除されます。ポインターが参照するエンティティは削除されません。
 
-の使用方法の詳細については `CPtrList` 、「[コレクション](../../mfc/collections.md)」を参照してください。
+の使用方法の詳細については `CPtrList` 、「 [コレクション](../../mfc/collections.md)」を参照してください。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -51,7 +52,7 @@ class CPtrList : public CObject
 
 `CPtrList`
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** afxcoll.h
 

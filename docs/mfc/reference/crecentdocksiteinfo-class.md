@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: CRecentDockSiteInfo クラス'
 title: CRecentDockSiteInfo クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -30,16 +31,16 @@ helpviewer_keywords:
 - CRecentDockSiteInfo [MFC], SetInfo
 - CRecentDockSiteInfo [MFC], StoreDockInfo
 ms.assetid: 2dd14f95-d5a2-4461-a7a5-2c6c36a3a165
-ms.openlocfilehash: 9f23d5aff2bac65363086c077af45e35c3263f65
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: e33ef48be2b091477200f15a31c194d845693399
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81750571"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97343098"
 ---
 # <a name="crecentdocksiteinfo-class"></a>CRecentDockSiteInfo クラス
 
-クラス`CRecentDockSiteInfo`は[、CPane クラス](../../mfc/reference/cpane-class.md)の最新の状態情報を格納するヘルパー クラスです。
+クラスは、 `CRecentDockSiteInfo` [CPane クラス](../../mfc/reference/cpane-class.md)の最近の状態情報を格納するヘルパークラスです。
 
 ## <a name="syntax"></a>構文
 
@@ -68,7 +69,7 @@ class CRecentDockSiteInfo : public CObject
 |[CRecentDockSiteInfo::GetRecentTabContainer](#getrecenttabcontainer)||
 |[CRecentDockSiteInfo::Init](#init)||
 |[CRecentDockSiteInfo::IsRecentLeftPane](#isrecentleftpane)||
-|[コズイントドックサイト情報::演算子 =](#operator_eq)||
+|[CRecentDockSiteInfo:: operator =](#operator_eq)||
 |[CRecentDockSiteInfo::SaveListOfRecentPanes](#savelistofrecentpanes)||
 |[CRecentDockSiteInfo::SetInfo](#setinfo)||
 |[CRecentDockSiteInfo::StoreDockInfo](#storedockinfo)||
@@ -77,7 +78,7 @@ class CRecentDockSiteInfo : public CObject
 
 `CRecentDockSiteInfo` クラスは、データ管理クラスです。 ドッキング状態とフローティング状態の間で切り替わる `CPane` の最後の状態を追跡します。 ユーザーがフローティング状態のドッキング可能ペインをダブルクリックすると、ペインはドッキング状態になります。 ドッキング状態のペインをダブルクリックすると、ペインは前の位置、サイズ、および状態に戻ります。 同様に、ペインを再びドッキング状態にすると、前のドッキング位置が復元されます。 このデータ クラスは、この機能を実現します。 このクラスのメンバーはドッキング状態のペインの状態情報を格納するため、アプリケーションで直接変更しないでください。
 
-`CRecentDockSiteInfo` オブジェクトは、ペインが作成されるたびに作成されます。 各`CPane`オブジェクトには、この情報を格納するメンバー変数[CPane::m_recentDockInfo](../../mfc/reference/cpane-class.md#m_recentdockinfo)があります。
+`CRecentDockSiteInfo` オブジェクトは、ペインが作成されるたびに作成されます。 各 `CPane` オブジェクトには、この情報を格納するためのメンバー変数 [CPane:: m_recentDockInfo](../../mfc/reference/cpane-class.md#m_recentdockinfo)があります。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -85,11 +86,11 @@ class CRecentDockSiteInfo : public CObject
 
 [CRecentDockSiteInfo](../../mfc/reference/crecentdocksiteinfo-class.md)
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-**ヘッダー:** afxrecentDockSiteInfo.h
+**ヘッダー:** afxrecentDockSiteInfo
 
-## <a name="crecentdocksiteinfocleanup"></a><a name="cleanup"></a>コズックドックサイト情報::クリーンアップ
+## <a name="crecentdocksiteinfocleanup"></a><a name="cleanup"></a> CRecentDockSiteInfo:: CleanUp
 
 ```cpp
 void CleanUp();
@@ -97,7 +98,7 @@ void CleanUp();
 
 ### <a name="remarks"></a>解説
 
-## <a name="crecentdocksiteinfocrecentdocksiteinfo"></a><a name="crecentdocksiteinfo"></a>コズ・コズ・ドックサイト情報::コズ・コズ・ドックサイト情報
+## <a name="crecentdocksiteinfocrecentdocksiteinfo"></a><a name="crecentdocksiteinfo"></a> CRecentDockSiteInfo::CRecentDockSiteInfo
 
 ```
 CRecentDockSiteInfo(CPane* pBar);
@@ -105,11 +106,11 @@ CRecentDockSiteInfo(CPane* pBar);
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*pバー*<br/>
+から *Pbar*<br/>
 
 ### <a name="remarks"></a>解説
 
-## <a name="crecentdocksiteinfogetrecentdefaultpanedivider"></a><a name="getrecentdefaultpanedivider"></a>コリストックペイン情報::取得最近のデフォルトペインディバイダー
+## <a name="crecentdocksiteinfogetrecentdefaultpanedivider"></a><a name="getrecentdefaultpanedivider"></a> CRecentDockSiteInfo::GetRecentDefaultPaneDivider
 
 ```
 CPaneDivider* GetRecentDefaultPaneDivider();
@@ -119,7 +120,7 @@ CPaneDivider* GetRecentDefaultPaneDivider();
 
 ### <a name="remarks"></a>解説
 
-## <a name="crecentdocksiteinfogetrecentdockedpercent"></a><a name="getrecentdockedpercent"></a>コズックドックサイトインフォ::最新のドックパーセンテージ
+## <a name="crecentdocksiteinfogetrecentdockedpercent"></a><a name="getrecentdockedpercent"></a> CRecentDockSiteInfo::GetRecentDockedPercent
 
 ```
 int GetRecentDockedPercent(BOOL bForSlider);
@@ -127,13 +128,13 @@ int GetRecentDockedPercent(BOOL bForSlider);
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*ビフォースライダー*<br/>
+から *Bforslider*<br/>
 
 ### <a name="return-value"></a>戻り値
 
 ### <a name="remarks"></a>解説
 
-## <a name="crecentdocksiteinfogetrecentdockedrect"></a><a name="getrecentdockedrect"></a>コストドックサイトインフォ::ゲットレコドックドレクト
+## <a name="crecentdocksiteinfogetrecentdockedrect"></a><a name="getrecentdockedrect"></a> CRecentDockSiteInfo::GetRecentDockedRect
 
 ```
 CRect& GetRecentDockedRect(BOOL bForSlider);
@@ -141,13 +142,13 @@ CRect& GetRecentDockedRect(BOOL bForSlider);
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*ビフォースライダー*<br/>
+から *Bforslider*<br/>
 
 ### <a name="return-value"></a>戻り値
 
 ### <a name="remarks"></a>解説
 
-## <a name="crecentdocksiteinfogetrecentlistofpanes"></a><a name="getrecentlistofpanes"></a>ペインの最新リスト
+## <a name="crecentdocksiteinfogetrecentlistofpanes"></a><a name="getrecentlistofpanes"></a> CRecentDockSiteInfo::GetRecentListOfPanes
 
 ```
 CList<HWND, HWND>& GetRecentListOfPanes(BOOL bForSlider);
@@ -155,13 +156,13 @@ CList<HWND, HWND>& GetRecentListOfPanes(BOOL bForSlider);
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*ビフォースライダー*<br/>
+から *Bforslider*<br/>
 
 ### <a name="return-value"></a>戻り値
 
 ### <a name="remarks"></a>解説
 
-## <a name="crecentdocksiteinfogetrecentpanecontainer"></a><a name="getrecentpanecontainer"></a>コネクスドックサイトインフォ::最近のペインコンテナ
+## <a name="crecentdocksiteinfogetrecentpanecontainer"></a><a name="getrecentpanecontainer"></a> CRecentDockSiteInfo::GetRecentPaneContainer
 
 ```
 CPaneContainer* GetRecentPaneContainer(BOOL bForSlider);
@@ -169,13 +170,13 @@ CPaneContainer* GetRecentPaneContainer(BOOL bForSlider);
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*ビフォースライダー*<br/>
+から *Bforslider*<br/>
 
 ### <a name="return-value"></a>戻り値
 
 ### <a name="remarks"></a>解説
 
-## <a name="crecentdocksiteinfogetrecenttabcontainer"></a><a name="getrecenttabcontainer"></a>コズ・コクズ・ドックサイト情報::最近タブコンテナ
+## <a name="crecentdocksiteinfogetrecenttabcontainer"></a><a name="getrecenttabcontainer"></a> CRecentDockSiteInfo::GetRecentTabContainer
 
 ```
 CPaneContainer* GetRecentTabContainer(BOOL bForSlider);
@@ -183,13 +184,13 @@ CPaneContainer* GetRecentTabContainer(BOOL bForSlider);
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*ビフォースライダー*<br/>
+から *Bforslider*<br/>
 
 ### <a name="return-value"></a>戻り値
 
 ### <a name="remarks"></a>解説
 
-## <a name="crecentdocksiteinfoinit"></a><a name="init"></a>コネクティットドックサイト情報::イニト
+## <a name="crecentdocksiteinfoinit"></a><a name="init"></a> CRecentDockSiteInfo:: Init
 
 ```cpp
 void Init();
@@ -197,7 +198,7 @@ void Init();
 
 ### <a name="remarks"></a>解説
 
-## <a name="crecentdocksiteinfoisrecentleftpane"></a><a name="isrecentleftpane"></a>コストドックサイトインフォ::イズイストレフトペイン
+## <a name="crecentdocksiteinfoisrecentleftpane"></a><a name="isrecentleftpane"></a> CRecentDockSiteInfo::IsRecentLeftPane
 
 ```
 BOOL IsRecentLeftPane(BOOL bForSlider);
@@ -205,13 +206,13 @@ BOOL IsRecentLeftPane(BOOL bForSlider);
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*ビフォースライダー*<br/>
+から *Bforslider*<br/>
 
 ### <a name="return-value"></a>戻り値
 
 ### <a name="remarks"></a>解説
 
-## <a name="crecentdocksiteinfooperator-"></a><a name="operator_eq"></a>コズイントドックサイト情報::演算子 =
+## <a name="crecentdocksiteinfooperator-"></a><a name="operator_eq"></a> CRecentDockSiteInfo:: operator =
 
 ```
 CRecentDockSiteInfo& operator=(CRecentDockSiteInfo& src);
@@ -219,13 +220,13 @@ CRecentDockSiteInfo& operator=(CRecentDockSiteInfo& src);
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*src*<br/>
+から *src*<br/>
 
 ### <a name="return-value"></a>戻り値
 
 ### <a name="remarks"></a>解説
 
-## <a name="crecentdocksiteinfosavelistofrecentpanes"></a><a name="savelistofrecentpanes"></a>最近のペイン
+## <a name="crecentdocksiteinfosavelistofrecentpanes"></a><a name="savelistofrecentpanes"></a> CRecentDockSiteInfo::SaveListOfRecentPanes
 
 ```cpp
 void SaveListOfRecentPanes(CList<HWND,
@@ -235,13 +236,13 @@ void SaveListOfRecentPanes(CList<HWND,
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*Cリスト<HWND*<br/>
-[in]*lstOrg*<br/>
-[in]*ビフォースライダー*<br/>
+から *CList<HWND*<br/>
+から *Lstorg*<br/>
+から *Bforslider*<br/>
 
 ### <a name="remarks"></a>解説
 
-## <a name="crecentdocksiteinfosetinfo"></a><a name="setinfo"></a>コズ・コト・ドックサイト情報::セットインフォ
+## <a name="crecentdocksiteinfosetinfo"></a><a name="setinfo"></a> CRecentDockSiteInfo:: SetInfo
 
 ```
 virtual void SetInfo(
@@ -251,12 +252,12 @@ virtual void SetInfo(
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*ビフォースライダー*<br/>
-[in]*SRCInfo*<br/>
+から *Bforslider*<br/>
+から *Srcinfo*<br/>
 
 ### <a name="remarks"></a>解説
 
-## <a name="crecentdocksiteinfostoredockinfo"></a><a name="storedockinfo"></a>コストドックサイトインフォ::ストアドックインフォ
+## <a name="crecentdocksiteinfostoredockinfo"></a><a name="storedockinfo"></a> CRecentDockSiteInfo::StoreDockInfo
 
 ```
 virtual void StoreDockInfo(
@@ -266,13 +267,13 @@ virtual void StoreDockInfo(
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*コンテナ*<br/>
-[in]*pタブ付きバー*<br/>
+から *Precentcontainer*<br/>
+から *pTabbedBar*<br/>
 
 ### <a name="remarks"></a>解説
 
 ## <a name="see-also"></a>関連項目
 
-[階層グラフ](../../mfc/hierarchy-chart.md)<br/>
-[クラス](../../mfc/reference/mfc-classes.md)<br/>
+[階層図](../../mfc/hierarchy-chart.md)<br/>
+[Classes](../../mfc/reference/mfc-classes.md)<br/>
 [CDockSite クラス](../../mfc/reference/cdocksite-class.md)

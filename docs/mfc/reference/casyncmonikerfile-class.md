@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: CAsyncMonikerFile クラス'
 title: CAsyncMonikerFile クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -32,12 +33,12 @@ helpviewer_keywords:
 - CAsyncMonikerFile [MFC], OnStartBinding
 - CAsyncMonikerFile [MFC], OnStopBinding
 ms.assetid: 17378b66-a49a-4b67-88e3-7756ad26a2fc
-ms.openlocfilehash: 259d31b9c1e198b326ba616481dbbf5315225546
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 559ffd5ed3a8b7100d9901dc70fe4f5349c05f7f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88845940"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97343530"
 ---
 # <a name="casyncmonikerfile-class"></a>CAsyncMonikerFile クラス
 
@@ -103,7 +104,7 @@ class CAsyncMonikerFile : public CMonikerFile
 
 `CAsyncMonikerFile`
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** afxole
 
@@ -148,7 +149,7 @@ virtual IUnknown* CreateBindStatusCallback(IUnknown* pUnkControlling);
 
 ### <a name="return-value"></a>戻り値
 
-*PUnkControlling*が NULL でない場合、関数は、を `IUnknown` サポートする新しい COM オブジェクト上の内部へのポインターを返し `IBindStatusCallback` ます。 `pUnkControlling`が NULL の場合、関数はを `IUnknown` サポートする新しい COM オブジェクトのへのポインターを返し `IBindStatusCallback` ます。
+*PUnkControlling* が NULL でない場合、関数は、を `IUnknown` サポートする新しい COM オブジェクト上の内部へのポインターを返し `IBindStatusCallback` ます。 `pUnkControlling`が NULL の場合、関数はを `IUnknown` サポートする新しい COM オブジェクトのへのポインターを返し `IBindStatusCallback` ます。
 
 ### <a name="remarks"></a>解説
 
@@ -281,7 +282,7 @@ virtual void OnProgress(
 ### <a name="parameters"></a>パラメーター
 
 *ulProgress*<br/>
-*Ulprogress max*に示されている予想最大値に対するバインド操作の現在の進行状況を示します。
+*Ulprogress max* に示されている予想最大値に対するバインド操作の現在の進行状況を示します。
 
 *Ul進捗の最大値*<br/>
 この操作のへの呼び出しの間に、 *Ulprogress* の予期される最大値を示し `OnProgress` ます。
@@ -290,23 +291,23 @@ virtual void OnProgress(
 バインド操作の進行状況に関する追加情報を提供します。 有効な値は、列挙体から取得され `BINDSTATUS` ます。 有効値については、「解説」を参照してください。
 
 *szStatusText*<br/>
-*Ulstatuscode*の値に応じて、現在の進行状況に関する情報を指定します。 有効値については、「解説」を参照してください。
+*Ulstatuscode* の値に応じて、現在の進行状況に関する情報を指定します。 有効値については、「解説」を参照してください。
 
 ### <a name="remarks"></a>解説
 
-*Ulstatuscode* (および各値の*szStatusText* ) に指定できる値は次のとおりです。
+*Ulstatuscode* (および各値の *szStatusText* ) に指定できる値は次のとおりです。
 
 | 値 | 説明 |
 |--|--|
-| BINDSTATUS_FINDINGRESOURCE | バインド操作は、バインドされているオブジェクトまたはストレージを保持しているリソースを検索しています。 *SzStatusText*は、検索対象のリソースの表示名を提供します (たとえば、"www.microsoft.com")。 |
-| BINDSTATUS_CONNECTING | バインド操作は、バインドされているオブジェクトまたはストレージを保持しているリソースに接続しています。 *SzStatusText*は、接続されているリソース (IP アドレスなど) の表示名を提供します。 |
-| BINDSTATUS_SENDINGREQUEST | バインド操作で、バインド先のオブジェクトまたはストレージが要求されています。 *SzStatusText*は、オブジェクトの表示名 (たとえば、ファイル名) を提供します。 |
-| BINDSTATUS_REDIRECTING | バインド操作が別のデータの場所にリダイレクトされました。 *SzStatusText*は、新しいデータの場所の表示名を提供します。 |
-| BINDSTATUS_USINGCACHEDCOPY | バインド操作で、要求されたオブジェクトまたはストレージがキャッシュされたコピーから取得されています。 *SzStatusText*が NULL です。 |
-| BINDSTATUS_BEGINDOWNLOADDATA | バインド操作は、バインドされているオブジェクトまたはストレージの受信を開始しました。 *SzStatusText*は、データの場所の表示名を提供します。 |
-| BINDSTATUS_DOWNLOADINGDATA | バインド操作は、バインドされているオブジェクトまたはストレージを引き続き受信します。 *SzStatusText*は、データの場所の表示名を提供します。 |
-| BINDSTATUS_ENDDOWNLOADDATA | バインド操作は、バインドされているオブジェクトまたはストレージの受信を完了しました。 *SzStatusText*は、データの場所の表示名を提供します。 |
-| BINDSTATUS_CLASSIDAVAILABLE | バインドされているオブジェクトのインスタンスが作成されようとしています。 *SzStatusText*は、新しいオブジェクトの CLSID を文字列形式で提供します。これにより、必要に応じて、クライアントはバインド操作を取り消すことができます。 |
+| BINDSTATUS_FINDINGRESOURCE | バインド操作は、バインドされているオブジェクトまたはストレージを保持しているリソースを検索しています。 *SzStatusText* は、検索対象のリソースの表示名を提供します (たとえば、"www.microsoft.com")。 |
+| BINDSTATUS_CONNECTING | バインド操作は、バインドされているオブジェクトまたはストレージを保持しているリソースに接続しています。 *SzStatusText* は、接続されているリソース (IP アドレスなど) の表示名を提供します。 |
+| BINDSTATUS_SENDINGREQUEST | バインド操作で、バインド先のオブジェクトまたはストレージが要求されています。 *SzStatusText* は、オブジェクトの表示名 (たとえば、ファイル名) を提供します。 |
+| BINDSTATUS_REDIRECTING | バインド操作が別のデータの場所にリダイレクトされました。 *SzStatusText* は、新しいデータの場所の表示名を提供します。 |
+| BINDSTATUS_USINGCACHEDCOPY | バインド操作で、要求されたオブジェクトまたはストレージがキャッシュされたコピーから取得されています。 *SzStatusText* が NULL です。 |
+| BINDSTATUS_BEGINDOWNLOADDATA | バインド操作は、バインドされているオブジェクトまたはストレージの受信を開始しました。 *SzStatusText* は、データの場所の表示名を提供します。 |
+| BINDSTATUS_DOWNLOADINGDATA | バインド操作は、バインドされているオブジェクトまたはストレージを引き続き受信します。 *SzStatusText* は、データの場所の表示名を提供します。 |
+| BINDSTATUS_ENDDOWNLOADDATA | バインド操作は、バインドされているオブジェクトまたはストレージの受信を完了しました。 *SzStatusText* は、データの場所の表示名を提供します。 |
+| BINDSTATUS_CLASSIDAVAILABLE | バインドされているオブジェクトのインスタンスが作成されようとしています。 *SzStatusText* は、新しいオブジェクトの CLSID を文字列形式で提供します。これにより、必要に応じて、クライアントはバインド操作を取り消すことができます。 |
 
 ## <a name="casyncmonikerfileonstartbinding"></a><a name="onstartbinding"></a> CAsyncMonikerFile:: OnStartBinding
 
@@ -414,7 +415,7 @@ virtual BOOL Open(
 
 この呼び出しにより、バインドプロセスが開始されます。
 
-*Lpszurl*パラメーターには、url またはファイル名を使用できます。 次に例を示します。
+*Lpszurl* パラメーターには、url またはファイル名を使用できます。 次に例を示します。
 
 [!code-cpp[NVC_MFCWinInet#6](../../mfc/codesnippet/cpp/casyncmonikerfile-class_2.cpp)]
 

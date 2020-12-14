@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: CStatic クラス'
 title: CStatic クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -28,12 +29,12 @@ helpviewer_keywords:
 - CStatic [MFC], SetEnhMetaFile
 - CStatic [MFC], SetIcon
 ms.assetid: e7c94cd9-5ebd-428a-aa30-b3e51f8efb95
-ms.openlocfilehash: 1f6aac50b2143a4d5296baac906b1ebd0ef542f5
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: fa151382cc1342151e937662781a625739e82bd3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87215960"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97342661"
 ---
 # <a name="cstatic-class"></a>CStatic クラス
 
@@ -59,10 +60,10 @@ class CStatic : public CWnd
 |----------|-----------------|
 |[CStatic:: Create](#create)|Windows スタティックコントロールを作成し、オブジェクトにアタッチし `CStatic` ます。|
 |[CStatic::D rawItem](#drawitem)|オーナー描画の静的コントロールを描画するには、をオーバーライドします。|
-|[CStatic:: GetBitmap](#getbitmap)|以前に[SetBitmap](#setbitmap)で設定されたビットマップのハンドルを取得します。|
-|[CStatic:: GetCursor](#getcursor)|以前に[SetCursor](#setcursor)で設定したカーソルイメージのハンドルを取得します。|
-|[CStatic::GetEnhMetaFile](#getenhmetafile)|以前に[SetEnhMetaFile](#setenhmetafile)で設定された拡張メタファイルのハンドルを取得します。|
-|[CStatic:: GetIcon](#geticon)|以前に[SetIcon](#seticon)で設定したアイコンのハンドルを取得します。|
+|[CStatic:: GetBitmap](#getbitmap)|以前に [SetBitmap](#setbitmap)で設定されたビットマップのハンドルを取得します。|
+|[CStatic:: GetCursor](#getcursor)|以前に [SetCursor](#setcursor)で設定したカーソルイメージのハンドルを取得します。|
+|[CStatic::GetEnhMetaFile](#getenhmetafile)|以前に [SetEnhMetaFile](#setenhmetafile)で設定された拡張メタファイルのハンドルを取得します。|
+|[CStatic:: GetIcon](#geticon)|以前に [SetIcon](#seticon)で設定したアイコンのハンドルを取得します。|
 |[CStatic::SetBitmap](#setbitmap)|スタティックコントロールに表示されるビットマップを指定します。|
 |[CStatic::SetCursor](#setcursor)|静的コントロールに表示されるカーソルイメージを指定します。|
 |[CStatic::SetEnhMetaFile](#setenhmetafile)|静的コントロールに表示される拡張メタファイルを指定します。|
@@ -88,11 +89,11 @@ class CStatic : public CWnd
 
 `CStatic`
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** afxwin.h
 
-## <a name="cstaticcreate"></a><a name="create"></a>CStatic:: Create
+## <a name="cstaticcreate"></a><a name="create"></a> CStatic:: Create
 
 Windows スタティックコントロールを作成し、オブジェクトにアタッチし `CStatic` ます。
 
@@ -111,7 +112,7 @@ virtual BOOL Create(
 コントロールに配置するテキストを指定します。 NULL の場合、テキストは表示されません。
 
 *dwStyle*<br/>
-静的コントロールのウィンドウスタイルを指定します。 コントロールに[静的コントロールスタイル](../../mfc/reference/styles-used-by-mfc.md#static-styles)の任意の組み合わせを適用します。
+静的コントロールのウィンドウスタイルを指定します。 コントロールに [静的コントロールスタイル](../../mfc/reference/styles-used-by-mfc.md#static-styles) の任意の組み合わせを適用します。
 
 *rect*<br/>
 静的コントロールの位置とサイズを指定します。 構造体またはオブジェクトのいずれかを指定でき `RECT` `CRect` ます。
@@ -130,7 +131,7 @@ virtual BOOL Create(
 
 `CStatic`2 つの手順でオブジェクトを構築します。 まず、コンストラクターを呼び出し、 `CStatic` 次に `Create` を呼び出します。これにより、Windows の静的コントロールが作成され、オブジェクトにアタッチさ `CStatic` れます。
 
-次の[ウィンドウスタイル](../../mfc/reference/styles-used-by-mfc.md#window-styles)を静的コントロールに適用します。
+次の [ウィンドウスタイル](../../mfc/reference/styles-used-by-mfc.md#window-styles) を静的コントロールに適用します。
 
 - 常に WS_CHILD
 
@@ -138,7 +139,7 @@ virtual BOOL Create(
 
 - WS_DISABLED はまれ
 
-静的コントロールにビットマップ、カーソル、アイコン、またはメタファイルを表示する場合は、次の[静的スタイル](../../mfc/reference/styles-used-by-mfc.md#static-styles)のいずれかを適用する必要があります。
+静的コントロールにビットマップ、カーソル、アイコン、またはメタファイルを表示する場合は、次の [静的スタイル](../../mfc/reference/styles-used-by-mfc.md#static-styles)のいずれかを適用する必要があります。
 
 - SS_BITMAP ビットマップにこのスタイルを使用します。
 
@@ -154,7 +155,7 @@ virtual BOOL Create(
 
 [!code-cpp[NVC_MFC_CStatic#1](../../mfc/reference/codesnippet/cpp/cstatic-class_1.cpp)]
 
-## <a name="cstaticcstatic"></a><a name="cstatic"></a>CStatic::CStatic
+## <a name="cstaticcstatic"></a><a name="cstatic"></a> CStatic::CStatic
 
 `CStatic` オブジェクトを構築します。
 
@@ -166,7 +167,7 @@ CStatic();
 
 [!code-cpp[NVC_MFC_CStatic#2](../../mfc/reference/codesnippet/cpp/cstatic-class_2.cpp)]
 
-## <a name="cstaticdrawitem"></a><a name="drawitem"></a>CStatic::D rawItem
+## <a name="cstaticdrawitem"></a><a name="drawitem"></a> CStatic::D rawItem
 
 オーナー描画の静的コントロールを描画するために、フレームワークによって呼び出されます。
 
@@ -183,9 +184,9 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
 
 オーナー描画オブジェクトの描画を実装するには、この関数をオーバーライド `CStatic` します (コントロールのスタイルは SS_OWNERDRAW)。
 
-## <a name="cstaticgetbitmap"></a><a name="getbitmap"></a>CStatic:: GetBitmap
+## <a name="cstaticgetbitmap"></a><a name="getbitmap"></a> CStatic:: GetBitmap
 
-に関連付けられているビットマップのハンドルを取得します。これは、以前に[SetBitmap](#setbitmap)で設定したものです `CStatic` 。
+に関連付けられているビットマップのハンドルを取得します。これは、以前に [SetBitmap](#setbitmap)で設定したものです `CStatic` 。
 
 ```
 HBITMAP GetBitmap() const;
@@ -199,9 +200,9 @@ HBITMAP GetBitmap() const;
 
 [!code-cpp[NVC_MFC_CStatic#3](../../mfc/reference/codesnippet/cpp/cstatic-class_3.cpp)]
 
-## <a name="cstaticgetcursor"></a><a name="getcursor"></a>CStatic:: GetCursor
+## <a name="cstaticgetcursor"></a><a name="getcursor"></a> CStatic:: GetCursor
 
-に関連付けられているカーソルのハンドルを取得します。これは、以前に[SetCursor](#setcursor)が設定されて `CStatic` います。
+に関連付けられているカーソルのハンドルを取得します。これは、以前に [SetCursor](#setcursor)が設定されて `CStatic` います。
 
 ```
 HCURSOR GetCursor();
@@ -215,9 +216,9 @@ HCURSOR GetCursor();
 
 [!code-cpp[NVC_MFC_CStatic#4](../../mfc/reference/codesnippet/cpp/cstatic-class_4.cpp)]
 
-## <a name="cstaticgetenhmetafile"></a><a name="getenhmetafile"></a>CStatic::GetEnhMetaFile
+## <a name="cstaticgetenhmetafile"></a><a name="getenhmetafile"></a> CStatic::GetEnhMetaFile
 
-に関連付けられている拡張メタファイルのハンドルを取得します。これは、以前に[SetEnhMetafile](#setenhmetafile)で設定したものです `CStatic` 。
+に関連付けられている拡張メタファイルのハンドルを取得します。これは、以前に [SetEnhMetafile](#setenhmetafile)で設定したものです `CStatic` 。
 
 ```
 HENHMETAFILE GetEnhMetaFile() const;
@@ -231,9 +232,9 @@ HENHMETAFILE GetEnhMetaFile() const;
 
 [!code-cpp[NVC_MFC_CStatic#5](../../mfc/reference/codesnippet/cpp/cstatic-class_5.cpp)]
 
-## <a name="cstaticgeticon"></a><a name="geticon"></a>CStatic:: GetIcon
+## <a name="cstaticgeticon"></a><a name="geticon"></a> CStatic:: GetIcon
 
-に関連付けられている、以前に[SetIcon](#seticon)で設定されたアイコンのハンドルを取得し `CStatic` ます。
+に関連付けられている、以前に [SetIcon](#seticon)で設定されたアイコンのハンドルを取得し `CStatic` ます。
 
 ```
 HICON GetIcon() const;
@@ -247,7 +248,7 @@ HICON GetIcon() const;
 
 [!code-cpp[NVC_MFC_CStatic#6](../../mfc/reference/codesnippet/cpp/cstatic-class_6.cpp)]
 
-## <a name="cstaticsetbitmap"></a><a name="setbitmap"></a>CStatic::SetBitmap
+## <a name="cstaticsetbitmap"></a><a name="setbitmap"></a> CStatic::SetBitmap
 
 新しいビットマップを静的コントロールに関連付けます。
 
@@ -276,7 +277,7 @@ HBITMAP SetBitmap(HBITMAP hBitmap);
 
 - MFC にはクラスが用意されています。このクラスは、 `CBitmap` Win32 関数を呼び出すだけではなく、ビットマップイメージに対してさらに多くの操作を行う必要がある場合に使用でき `LoadBitmap` ます。 `CBitmap`には、1種類の GDI オブジェクトが含まれています。これは、との連携でよく使用され `CStatic` ます。これは、 `CWnd` グラフィックオブジェクトを静的コントロールとして表示するために使用されるクラスです。
 
-`CImage`は、デバイスに依存しないビットマップ (DIB) をより簡単に操作できる ATL/MFC クラスです。 詳細については、「 [CImage クラス](../../atl-mfc-shared/reference/cimage-class.md)」を参照してください。
+`CImage` は、デバイスに依存しないビットマップ (DIB) をより簡単に操作できる ATL/MFC クラスです。 詳細については、「 [CImage クラス](../../atl-mfc-shared/reference/cimage-class.md)」を参照してください。
 
 - 一般的な使用方法とし `CStatic::SetBitmap` て、 `CBitmap` オブジェクトまたはオブジェクトの HBITMAP 演算子によって返される GDI オブジェクトを指定し `CImage` ます。 これを行うコードは、次の行のようになります。
 
@@ -290,7 +291,7 @@ MyStaticControl.SetBitmap(HBITMAP(MyBitmap));
 
 [!code-cpp[NVC_MFC_CStatic#3](../../mfc/reference/codesnippet/cpp/cstatic-class_3.cpp)]
 
-## <a name="cstaticsetcursor"></a><a name="setcursor"></a>CStatic::SetCursor
+## <a name="cstaticsetcursor"></a><a name="setcursor"></a> CStatic::SetCursor
 
 新しいカーソルイメージを静的コントロールに関連付けます。
 
@@ -321,7 +322,7 @@ HCURSOR SetCursor(HCURSOR hCursor);
 
 [!code-cpp[NVC_MFC_CStatic#4](../../mfc/reference/codesnippet/cpp/cstatic-class_4.cpp)]
 
-## <a name="cstaticsetenhmetafile"></a><a name="setenhmetafile"></a>CStatic::SetEnhMetaFile
+## <a name="cstaticsetenhmetafile"></a><a name="setenhmetafile"></a> CStatic::SetEnhMetaFile
 
 新しい拡張メタファイルイメージを静的コントロールに関連付けます。
 
@@ -350,7 +351,7 @@ HENHMETAFILE SetEnhMetaFile(HENHMETAFILE hMetaFile);
 
 [!code-cpp[NVC_MFC_CStatic#5](../../mfc/reference/codesnippet/cpp/cstatic-class_5.cpp)]
 
-## <a name="cstaticseticon"></a><a name="seticon"></a>CStatic::SetIcon
+## <a name="cstaticseticon"></a><a name="seticon"></a> CStatic::SetIcon
 
 新しいアイコンイメージを静的コントロールに関連付けます。
 

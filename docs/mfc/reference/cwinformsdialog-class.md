@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: CWinFormsDialog クラス'
 title: CWinFormsDialog クラス
 ms.date: 03/27/2019
 f1_keywords:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 - CWinFormsDialog [MFC], GetControlHandle
 - CWinFormsDialog [MFC], OnInitDialog
 ms.assetid: e3cec000-a578-448e-b06a-8af256312f61
-ms.openlocfilehash: a25823982b9276309e99a2a26cef8d6fe2e764bd
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: 501f9c354bd6f0b7a628aabb93f4680155f74a69
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90040666"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97342622"
 ---
 # <a name="cwinformsdialog-class"></a>CWinFormsDialog クラス
 
@@ -56,12 +57,12 @@ MFC アプリケーションに表示される .NET Framework ユーザーコン
 
 ### <a name="public-operators"></a>パブリック演算子
 
-|Name|説明|
+|名前|説明|
 |----------|-|
 |[CWinFormsDialog:: operator-&gt;](#operator_-_gt)|式の [CWinFormsDialog:: GetControl](#getcontrol) を置き換えます。|
 |[CWinFormsDialog:: operator TManagedControl ^](#operator-tmanagedcontrol-hat)|型を Windows フォームユーザーコントロールへの参照としてキャストします。|
 
-## <a name="remarks"></a>注釈
+## <a name="remarks"></a>解説
 
 `CWinFormsDialog` は、Windows フォームユーザーコントロールをホストする MFC ダイアログクラス ( [CDialog](../../mfc/reference/cdialog-class.md)) のラッパーです。 これにより、モーダルまたはモードレスの MFC ダイアログボックスに .NET Framework コントロールを表示できます。
 
@@ -120,7 +121,7 @@ virtual BOOL OnInitDialog();
 
 アプリケーションがダイアログボックスのコントロールのいずれかに入力フォーカスを設定したかどうかを指定するブール値です。 が `OnInitDialog` 0 以外の値を返した場合、Windows はダイアログボックスの最初のコントロールに入力フォーカスを設定します。 このメソッドは、アプリケーションがダイアログボックス内のコントロールのいずれかに入力フォーカスを明示的に設定している場合にのみ、0を返すことができます。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 MFC ダイアログボックスが作成されると ([[作成](../../mfc/reference/cdialog-class.md#create)]、[ [createindirect](../../mfc/reference/cdialog-class.md#createindirect)]、または [DoModal [] から継承](../../mfc/reference/cdialog-class.md)された[DoModal](../../mfc/reference/cdialog-class.md#domodal)メソッドを使用)、WM_INITDIALOG メッセージが送信され、このメソッドが呼び出されます。 このメソッドは、ダイアログボックスに Windows フォームコントロールのインスタンスを作成し、ユーザーコントロールのサイズに合わせてダイアログボックスのサイズを調整します。 次に、MFC ダイアログボックスで新しいコントロールをホストします。
 
@@ -134,7 +135,7 @@ MFC ダイアログボックスが作成されると ([[作成](../../mfc/refere
 inline TManagedControl^  operator->() const throw();
 ```
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 この演算子は、式で置き換えられる便利な構文を提供 `GetControl` します。
 
@@ -148,11 +149,11 @@ Windows フォームの使用方法の詳細については、「 [MFC での Wi
 inline operator TManagedControl^() const throw();
 ```
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 この演算子は、型を Windows フォームコントロールへの参照としてキャストします。 これは、 `CWinFormsDialog<TManagedControl>` Windows フォームユーザーコントロールオブジェクトへのポインターを受け取る関数にダイアログボックスを渡すために使用されます。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [CWnd クラス](../../mfc/reference/cwnd-class.md)<br/>
 [CWinFormsView クラス](../../mfc/reference/cwinformsview-class.md)<br/>

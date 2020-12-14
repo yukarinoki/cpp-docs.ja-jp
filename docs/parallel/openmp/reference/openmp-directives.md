@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: OpenMP ディレクティブ'
 title: OpenMP ディレクティブ
 ms.date: 03/20/2019
 f1_keywords:
@@ -27,12 +28,12 @@ helpviewer_keywords:
 - single OpenMP directive
 - threadprivate OpenMP directive
 ms.assetid: 0562c263-344c-466d-843e-de830d918940
-ms.openlocfilehash: 21270e8cdeb17b6d06d903d328962435c627759f
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 03730b1f5cda0972dbf86b345c6e44bdad4e949b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91503823"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97342401"
 ---
 # <a name="openmp-directives"></a>OpenMP ディレクティブ
 
@@ -78,9 +79,9 @@ Visual C++ は、次の OpenMP ディレクティブをサポートしていま�
 ### <a name="parameters"></a>パラメーター
 
 *式 (expression)*<br/>
-2つ以上の書き込みに対して保護するメモリ位置を持つ、 *左辺*値を持つステートメント。
+2つ以上の書き込みに対して保護するメモリ位置を持つ、 *左辺* 値を持つステートメント。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 ディレクティブは句をサポートしてい `atomic` ません。
 
@@ -119,7 +120,7 @@ Number of threads: 10
 #pragma omp barrier
 ```
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 ディレクティブは句をサポートしてい `barrier` ません。
 
@@ -145,7 +146,7 @@ Number of threads: 10
 *name*<br/>
 Optionalクリティカルコードを識別する名前。 名前はかっこで囲む必要があります。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 ディレクティブは句をサポートしてい `critical` ません。
 
@@ -220,9 +221,9 @@ max = 29358
 ### <a name="parameters"></a>パラメーター
 
 *var*<br/>
-Optional同期するオブジェクトを表す変数のコンマ区切りのリスト。 *Var*が指定されていない場合は、すべてのメモリがフラッシュされます。
+Optional同期するオブジェクトを表す変数のコンマ区切りのリスト。 *Var* が指定されていない場合は、すべてのメモリがフラッシュされます。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 ディレクティブは句をサポートしてい `flush` ません。
 
@@ -302,7 +303,7 @@ Optional0個以上の句、「 **解説** 」を参照してください。
 *for_statement*<br/>
 `for`ループ。 ループ内のユーザーコードによってインデックス変数が変更されると、未定義の動作が発生 `for` します。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 ディレクティブは、 `for` 次の句をサポートしています。
 
@@ -393,7 +394,7 @@ The sum of 1 through 10 is 55
 }
 ```
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 ディレクティブは句をサポートしてい `master` ません。
 
@@ -453,7 +454,7 @@ a[4] = 16
    structured-block
 ```
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 `ordered`ディレクティブは、句が指定された[for](#for-openmp)またはコンストラクトの動的な範囲内である必要があり `parallel for` `ordered` ます。
 
@@ -531,7 +532,7 @@ test2() iteration 4
 *条項*<br/>
 Optional0個以上の句、「 **解説** 」を参照してください。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 ディレクティブは、 `parallel` 次の句をサポートしています。
 
@@ -593,7 +594,7 @@ Hello from thread 3
 *条項*<br/>
 Optional0個以上の句、「 **解説** 」を参照してください。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 `sections`ディレクティブには、0個以上のディレクティブを含めることができ `section` ます。
 
@@ -648,7 +649,7 @@ Hello from thread 0
 *条項*<br/>
 Optional0個以上の句、「 **解説** 」を参照してください。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 ディレクティブは、 `single` 次の句をサポートしています。
 
@@ -706,7 +707,7 @@ write output
 *var*<br/>
 スレッドに対してプライベートにする変数のコンマ区切りのリスト。 *var* は、グローバルまたは名前空間スコープの変数またはローカルの静的変数のいずれかである必要があります。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 ディレクティブは句をサポートしてい `threadprivate` ません。
 
@@ -714,7 +715,7 @@ write output
 
 `threadprivate`プロセスの起動時に静的に読み込まれる dll でを使用することはできますが、 `threadprivate` [/DELAYLOAD (遅延読み込みのインポート)](../../../build/reference/delayload-delay-load-import.md)で読み込まれる dll など、 [LoadLibrary](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibraryw)を使用して読み込む dll ではを使用できません `LoadLibrary` 。
 
-`threadprivate`*破棄可能な*型の変数は、というデストラクターを持つことが保証されていません。 次に例を示します。
+`threadprivate`*破棄可能な* 型の変数は、というデストラクターを持つことが保証されていません。 次に例を示します。
 
 ```cpp
 struct MyType

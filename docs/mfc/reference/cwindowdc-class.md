@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: CWindowDC クラス'
 title: CWindowDC クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -10,16 +11,16 @@ helpviewer_keywords:
 - CWindowDC [MFC], CWindowDC
 - CWindowDC [MFC], m_hWnd
 ms.assetid: 876a3641-4cde-471c-b0d1-fe58b32af79c
-ms.openlocfilehash: 89a822280ddebca942016f9a3a334a7128d8456a
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 1fc36614f5e6ded32a47146771991c3ab06998eb
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81371977"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97344927"
 ---
 # <a name="cwindowdc-class"></a>CWindowDC クラス
 
-`CDC`の派生クラスです。
+`CDC` から派生。
 
 ## <a name="syntax"></a>構文
 
@@ -33,19 +34,19 @@ class CWindowDC : public CDC
 
 |名前|説明|
 |----------|-----------------|
-|[CウィンドウDC:CウィンドウDC](#cwindowdc)|`CWindowDC` オブジェクトを構築します。|
+|[CWindowDC::CWindowDC](#cwindowdc)|`CWindowDC` オブジェクトを構築します。|
 
 ### <a name="protected-data-members"></a>プロテクト データ メンバー
 
 |名前|説明|
 |----------|-----------------|
-|[CウィンドウDC:m_hWnd](#m_hwnd)|これが`CWindowDC`アタッチされている HWND。|
+|[CWindowDC:: m_hWnd](#m_hwnd)|このがアタッチされている HWND `CWindowDC` 。|
 
 ## <a name="remarks"></a>解説
 
-Windows 関数[GetWindowDC を](/windows/win32/api/winuser/nf-winuser-getwindowdc)構築時に呼び出し、破棄時に[DC を解放](/windows/win32/api/winuser/nf-winuser-releasedc)します。 つまり、オブジェクトは`CWindowDC` [CWnd](../../mfc/reference/cwnd-class.md)の画面領域全体 (クライアント領域と非クライアント領域の両方) にアクセスします。
+構築時に Windows 関数 [GetWindowDC](/windows/win32/api/winuser/nf-winuser-getwindowdc)を呼び出し、破棄時に [ReleaseDC](/windows/win32/api/winuser/nf-winuser-releasedc) します。 これは、 `CWindowDC` オブジェクトが [CWnd](../../mfc/reference/cwnd-class.md) の画面領域全体 (クライアント領域と非クライアント領域の両方) にアクセスすることを意味します。
 
-の詳細`CWindowDC`については、「 デバイス[コンテキスト](../../mfc/device-contexts.md)」を参照してください。
+の使用方法の詳細につい `CWindowDC` ては、「 [デバイスコンテキスト](../../mfc/device-contexts.md)」を参照してください。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -55,13 +56,13 @@ Windows 関数[GetWindowDC を](/windows/win32/api/winuser/nf-winuser-getwindowd
 
 `CWindowDC`
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 ヘッダー: afxwin.h
 
-## <a name="cwindowdccwindowdc"></a><a name="cwindowdc"></a>CウィンドウDC:CウィンドウDC
+## <a name="cwindowdccwindowdc"></a><a name="cwindowdc"></a> CWindowDC::CWindowDC
 
-*pWnd*が指す`CWindowDC`オブジェクトの画面領域全体 (クライアントと非クライアントの両方`CWnd`) にアクセスするオブジェクトを構築します。
+PWnd が `CWindowDC` 指すオブジェクトの画面領域全体 (クライアントと非クライアントの両方) にアクセスするオブジェクトを構築し `CWnd` ます。 
 
 ```
 explicit CWindowDC(CWnd* pWnd);
@@ -69,22 +70,22 @@ explicit CWindowDC(CWnd* pWnd);
 
 ### <a name="parameters"></a>パラメーター
 
-*Pwnd*<br/>
-デバイス コンテキスト オブジェクトがアクセスするクライアント領域のウィンドウ。
+*pWnd*<br/>
+デバイスコンテキストオブジェクトがアクセスするクライアント領域があるウィンドウ。
 
 ### <a name="remarks"></a>解説
 
-コンストラクターは、Windows 関数[を呼](/windows/win32/api/winuser/nf-winuser-getwindowdc)び出します。
+コンストラクターは、Windows 関数 [GetWindowDC](/windows/win32/api/winuser/nf-winuser-getwindowdc)を呼び出します。
 
-Windows`GetWindowDC`呼び出`CResourceException`しが失敗した場合は、(種類の) 例外がスローされます。 Windows が使用可能なすべてのデバイス コンテキストを既に割り当て済みの場合、デバイス コンテキストは使用できない可能性があります。 アプリケーションは、Windows でいつでも利用可能な 5 つの一般的な表示コンテキストを競合します。
+Windows の呼び出しが失敗した場合、例外 (型 `CResourceException` ) がスローされ `GetWindowDC` ます。 Windows によって使用可能なデバイスコンテキストがすべて既に割り当てられている場合、デバイスコンテキストを使用できない可能性があります。 アプリケーションは、Windows で任意の時点で使用可能な5つの共通表示コンテキストを競合しています。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_MFCDocView#188](../../mfc/codesnippet/cpp/cwindowdc-class_1.cpp)]
 
-## <a name="cwindowdcm_hwnd"></a><a name="m_hwnd"></a>CウィンドウDC:m_hWnd
+## <a name="cwindowdcm_hwnd"></a><a name="m_hwnd"></a> CWindowDC:: m_hWnd
 
-オブジェクトの構築には、`CWnd`ポインタの HWND`CWindowDC`が使用されます。
+ポインターの HWND は、 `CWnd` オブジェクトを構築するために使用され `CWindowDC` ます。
 
 ```
 HWND m_hWnd;
@@ -92,14 +93,14 @@ HWND m_hWnd;
 
 ### <a name="remarks"></a>解説
 
-`m_hWnd`は、HWND 型の保護変数です。
+`m_hWnd` は、HWND 型の保護された変数です。
 
 ### <a name="example"></a>例
 
-  [CWindowDC::CWindowDC](#cwindowdc)の例を参照してください。
+  [CWindowDC:: CWindowDC](#cwindowdc)の例を参照してください。
 
 ## <a name="see-also"></a>関連項目
 
-[CDCクラス](../../mfc/reference/cdc-class.md)<br/>
-[階層グラフ](../../mfc/hierarchy-chart.md)<br/>
-[CDCクラス](../../mfc/reference/cdc-class.md)
+[CDC クラス](../../mfc/reference/cdc-class.md)<br/>
+[階層図](../../mfc/hierarchy-chart.md)<br/>
+[CDC クラス](../../mfc/reference/cdc-class.md)

@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: remove_volatile クラス'
 title: remove_volatile クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,14 +8,14 @@ helpviewer_keywords:
 - remove_volatile class
 - remove_volatile
 ms.assetid: 8b87e2c2-a581-4eb3-8691-c5603910d61d
-ms.openlocfilehash: 19514d1839fa6e0afcecb690dcb12657a85f3c2e
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 45f0ba9ba4685a471f13d0d36ae5080eb667a9f9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68451260"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97344875"
 ---
-# <a name="removevolatile-class"></a>remove_volatile クラス
+# <a name="remove_volatile-class"></a>remove_volatile クラス
 
 型から非 volatile 型を作成します。
 
@@ -33,9 +34,9 @@ using remove_volatile_t = typename remove_volatile<T>::type;
 *\T*\
 変更する型。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-*T*の形式`remove_volatile<T>` `T1` が`volatile T1`である場合、のインスタンスは変更された型を保持します。それ以外の場合は*t*です。
+`remove_volatile<T>`T の形式がである場合、のインスタンスは変更された型を保持 `T1`  `volatile T1` します。それ以外の場合は *t* です。
 
 ## <a name="example"></a>例
 
@@ -59,9 +60,9 @@ int main()
 remove_volatile_t<volatile int> == int
 ```
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-**ヘッダー:** \<type_traits>
+**ヘッダー:**\<type_traits>
 
 **名前空間:** std
 

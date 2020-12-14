@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: CWinApp クラス'
 title: CWinApp クラス
 ms.date: 07/15/2019
 f1_keywords:
@@ -192,12 +193,12 @@ helpviewer_keywords:
 - CWinApp [MFC], m_nAutosaveInterval
 - CWinApp [MFC], m_pDataRecoveryHandler
 ms.assetid: e426a3cd-0d15-40d6-bd55-beaa5feb2343
-ms.openlocfilehash: f8ca4ad2023902d40a1f63c881a8dd2fd38a9ae9
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 60ea2ea2ef1545a814406da047d1aef42b49a7a0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88837607"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97344940"
 ---
 # <a name="cwinapp-class"></a>CWinApp クラス
 
@@ -252,10 +253,10 @@ class CWinApp : public CWinThread
 |[CWinApp:: IsTaskbarInteractionEnabled](#istaskbarinteractionenabled)|Windows 7 タスクバーの対話が有効かどうかを示します。|
 |[CWinApp:: LoadCursor](#loadcursor)|カーソルリソースを読み込みます。|
 |[CWinApp:: LoadIcon](#loadicon)|アイコンリソースを読み込みます。|
-|[CWinApp:: LoadOEMCursor](#loadoemcursor)|WINDOWS で **OCR_** 定数によって指定された windows OEM 定義済みカーソルを読み込みます。始め.|
-|[CWinApp:: LoadOEMIcon](#loadoemicon)|WINDOWS で **OIC_** 定数によって指定された windows OEM 定義済みアイコンを読み込みます。始め.|
-|[CWinApp:: LoadStandardCursor](#loadstandardcursor)|WINDOWS で **IDC_** 定数によって指定された windows 定義済みのカーソルを読み込みます。始め.|
-|[CWinApp:: LoadStandardIcon](#loadstandardicon)|WINDOWS で **IDI_** 定数によって指定された windows の定義済みアイコンを読み込みます。始め.|
+|[CWinApp:: LoadOEMCursor](#loadoemcursor)|**OCR_** 定数で指定されている windows OEM 定義済みカーソルを windows .h に読み込みます。|
+|[CWinApp:: LoadOEMIcon](#loadoemicon)|**OIC_** 定数で指定されている windows OEM 定義済みアイコンを windows .h に読み込みます。|
+|[CWinApp:: LoadStandardCursor](#loadstandardcursor)|**IDC_** 定数によって windows .h に指定された windows 定義済みのカーソルを読み込みます。|
+|[CWinApp:: LoadStandardIcon](#loadstandardicon)|**IDI_** 定数によって windows .h に指定された windows 定義済みアイコンを読み込みます。|
 |[CWinApp:: OnDDECommand](#onddecommand)|動的データ交換 (DDE) の execute コマンドに応答して、フレームワークによって呼び出されます。|
 |[CWinApp:: OnIdle](#onidle)|をオーバーライドして、アプリケーション固有のアイドル時処理を実行します。|
 |[CWinApp:: OpenDocumentFile](#opendocumentfile)|ファイルからドキュメントを開くためにフレームワークによって呼び出されます。|
@@ -315,7 +316,7 @@ class CWinApp : public CWinThread
 |[CWinApp:: m_nCmdShow](#m_ncmdshow)|ウィンドウを最初に表示する方法を指定します。|
 |[CWinApp:: m_pActiveWnd](#m_pactivewnd)|OLE サーバーがアクティブになっている場合の、コンテナーアプリケーションのメインウィンドウへのポインター。|
 |[CWinApp:: m_pszAppID](#m_pszappid)|アプリケーションユーザーモデル ID。|
-|[CWinApp:: m_pszAppName](#m_pszappname)|アプリケーション名を示します。|
+|[CWinApp:: m_pszAppName](#m_pszappname)|アプリケーションの名前を指定します。|
 |[CWinApp:: m_pszExeName](#m_pszexename)|アプリケーションのモジュール名。|
 |[CWinApp:: m_pszHelpFilePath](#m_pszhelpfilepath)|アプリケーションのヘルプファイルへのパス。|
 |[CWinApp:: m_pszProfileName](#m_pszprofilename)|アプリケーションの。INI ファイル名。|
@@ -369,7 +370,7 @@ Microsoft Foundation Class ライブラリには、メンバー関数に加え�
 
 `CWinApp`
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** afxwin.h
 
@@ -469,7 +470,7 @@ BOOL CreatePrinterDC(CDC& dc);
 
 ### <a name="parameters"></a>パラメーター
 
-*修飾*<br/>
+*dc*<br/>
 プリンターデバイスコンテキストへの参照。
 
 ### <a name="return-value"></a>戻り値
@@ -816,7 +817,7 @@ AFX_HELP_TYPE GetHelpMode();
 
 ## <a name="cwinappgetnextdoctemplate"></a><a name="getnextdoctemplate"></a> CWinApp:: GetNextDocTemplate
 
-*Pos*によって識別されるドキュメントテンプレートを取得し、 *pos*を POSITION 値に設定します。
+*Pos* によって識別されるドキュメントテンプレートを取得し、 *pos* を POSITION 値に設定します。
 
 ```
 CDocTemplate* GetNextDocTemplate(POSITION& pos) const;
@@ -824,7 +825,7 @@ CDocTemplate* GetNextDocTemplate(POSITION& pos) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*po*<br/>
+*pos*<br/>
 `GetNextDocTemplate`または[Getfirstdoctemplateposition](#getfirstdoctemplateposition)への前回の呼び出しによって返された位置の値への参照。 値は、この呼び出しによって次の位置に更新されます。
 
 ### <a name="return-value"></a>戻り値
@@ -899,7 +900,7 @@ BOOL GetProfileBinary(
 このメンバー関数は大文字と小文字が区別されないので、場合によっては、 *Lpszsection* および *lpszEntry* パラメーター内の文字列が異なる場合があります。
 
 > [!NOTE]
-> `GetProfileBinary` バッファーを割り当て、そのアドレスを \* *ppdata*に返します。 呼び出し元は、 **delete []** を使用してバッファーを解放します。
+> `GetProfileBinary` バッファーを割り当て、そのアドレスを \* *ppdata* に返します。 呼び出し元は、 **delete []** を使用してバッファーを解放します。
 
 > [!IMPORTANT]
 > この関数が返すデータは、NULL で終わるデータとは限らないため、呼び出し元で検証を行う必要があります。 詳しくは、「 [バッファー オーバーランの回避](/windows/win32/SecBP/avoiding-buffer-overruns)」をご覧ください。
@@ -975,7 +976,7 @@ CString GetProfileString(
 
 ### <a name="return-value"></a>戻り値
 
-戻り値は、アプリケーションのの文字列です。INI ファイルまたは *Lpszdefault* (文字列が見つからない場合)。 フレームワークでサポートされている文字列の最大長は _MAX_PATH です。 *Lpszdefault*が NULL の場合、戻り値は空の文字列になります。
+戻り値は、アプリケーションのの文字列です。INI ファイルまたは *Lpszdefault* (文字列が見つからない場合)。 フレームワークでサポートされている文字列の最大長は _MAX_PATH です。 *Lpszdefault* が NULL の場合、戻り値は空の文字列になります。
 
 ### <a name="remarks"></a>解説
 
@@ -1036,7 +1037,7 @@ virtual void HtmlHelp(
 追加データを指定します。 使用される値は、 *Ncmd* パラメーターの値によって異なります。 既定値 `0x000F` は [HH_HELP_CONTEXT](/previous-versions/windows/desktop/htmlhelp/hh-help-context-command)を意味します。
 
 *nCmd*<br/>
-要求されるヘルプの種類を指定します。 使用可能な値の一覧と*Dwdata*パラメーターへの影響については、Windows SDK の[htmlhelpw](/windows/win32/api/htmlhelp/nf-htmlhelp-htmlhelpw)または[htmlhelpw](/windows/win32/api/htmlhelp/nf-htmlhelp-htmlhelpa) API 関数に記述されている*ucommand*パラメーターを参照してください。
+要求されるヘルプの種類を指定します。 使用可能な値の一覧と *Dwdata* パラメーターへの影響については、Windows SDK の [htmlhelpw](/windows/win32/api/htmlhelp/nf-htmlhelp-htmlhelpw)または [htmlhelpw](/windows/win32/api/htmlhelp/nf-htmlhelp-htmlhelpa) API 関数に記述されている *ucommand* パラメーターを参照してください。
 
 ### <a name="remarks"></a>解説
 
@@ -1087,7 +1088,7 @@ virtual BOOL IsTaskbarInteractionEnabled();
 
 ## <a name="cwinapploadcursor"></a><a name="loadcursor"></a> CWinApp:: LoadCursor
 
-現在の実行可能ファイルから、 *nIDResource*によって指定された、 *lpszresourcename*持つという名前のカーソルリソースを読み込みます。
+現在の実行可能ファイルから、 *nIDResource* によって指定された、 *lpszresourcename* 持つという名前のカーソルリソースを読み込みます。
 
 ```
 HCURSOR LoadCursor(LPCTSTR lpszResourceName) const;  HCURSOR LoadCursor(UINT nIDResource) const;
@@ -1117,7 +1118,7 @@ HCURSOR LoadCursor(LPCTSTR lpszResourceName) const;  HCURSOR LoadCursor(UINT nID
 
 ## <a name="cwinapploadicon"></a><a name="loadicon"></a> CWinApp:: LoadIcon
 
-実行可能ファイルから、 *nIDResource*によって指定された、 *lpszresourcename*またはという名前のアイコンリソースを読み込みます。
+実行可能ファイルから、 *nIDResource* によって指定された、 *lpszresourcename* またはという名前のアイコンリソースを読み込みます。
 
 ```
 HICON LoadIcon(LPCTSTR lpszResourceName) const;  HICON LoadIcon(UINT nIDResource) const;
@@ -1146,7 +1147,7 @@ HICON LoadIcon(LPCTSTR lpszResourceName) const;  HICON LoadIcon(UINT nIDResource
 
 ## <a name="cwinapploadoemcursor"></a><a name="loadoemcursor"></a> CWinApp:: LoadOEMCursor
 
-*NIDCursor*によって指定された Windows の定義済みカーソルリソースを読み込みます。
+*NIDCursor* によって指定された Windows の定義済みカーソルリソースを読み込みます。
 
 ```
 HCURSOR LoadOEMCursor(UINT nIDCursor) const;
@@ -1155,7 +1156,7 @@ HCURSOR LoadOEMCursor(UINT nIDCursor) const;
 ### <a name="parameters"></a>パラメーター
 
 *nIDCursor*<br/>
-定義済みの Windows カーソルを指定する **OCR_** マニフェスト定数識別子。 `#define OEMRESOURCE` `#include \<afxwin.h>` WINDOWS の**OCR_** 定数にアクセスするには、の前にが必要です。始め.
+定義済みの Windows カーソルを指定する **OCR_** マニフェスト定数識別子。 `#define OEMRESOURCE` `#include \<afxwin.h>` WINDOWS .h の **OCR_** 定数にアクセスするには、の前にが必要です。
 
 ### <a name="return-value"></a>戻り値
 
@@ -1173,7 +1174,7 @@ HCURSOR LoadOEMCursor(UINT nIDCursor) const;
 
 ## <a name="cwinapploadoemicon"></a><a name="loadoemicon"></a> CWinApp:: LoadOEMIcon
 
-*NIDIcon*によって指定された Windows の定義済みアイコンリソースを読み込みます。
+*NIDIcon* によって指定された Windows の定義済みアイコンリソースを読み込みます。
 
 ```
 HICON LoadOEMIcon(UINT nIDIcon) const;
@@ -1182,7 +1183,7 @@ HICON LoadOEMIcon(UINT nIDIcon) const;
 ### <a name="parameters"></a>パラメーター
 
 *nIDIcon*<br/>
-定義済みの Windows アイコンを指定する **OIC_** マニフェスト定数識別子。 `#define OEMRESOURCE` `#include \<afxwin.h>` WINDOWS の**OIC_** 定数にアクセスするには、の前にが必要です。始め.
+定義済みの Windows アイコンを指定する **OIC_** マニフェスト定数識別子。 `#define OEMRESOURCE` `#include \<afxwin.h>` WINDOWS .h の **OIC_** 定数にアクセスするには、の前にが必要です。
 
 ### <a name="return-value"></a>戻り値
 
@@ -1194,7 +1195,7 @@ HICON LoadOEMIcon(UINT nIDIcon) const;
 
 ## <a name="cwinapploadstandardcursor"></a><a name="loadstandardcursor"></a> CWinApp:: LoadStandardCursor
 
-*Lpszcursor name*によって指定された Windows 定義済みのカーソルリソースを読み込みます。
+*Lpszcursor name* によって指定された Windows 定義済みのカーソルリソースを読み込みます。
 
 ```
 HCURSOR LoadStandardCursor(LPCTSTR lpszCursorName) const;
@@ -1203,7 +1204,7 @@ HCURSOR LoadStandardCursor(LPCTSTR lpszCursorName) const;
 ### <a name="parameters"></a>パラメーター
 
 *Lpszカーソル名*<br/>
-定義済みの Windows カーソルを指定する **IDC_** マニフェスト定数識別子。 これらの識別子は WINDOWS で定義されています。始め. 次の一覧に、 *Lpszカーソル名*に使用できる定義済みの値と意味を示します。
+定義済みの Windows カーソルを指定する **IDC_** マニフェスト定数識別子。 これらの識別子は、WINDOWS .H で定義されています。 次の一覧に、 *Lpszカーソル名* に使用できる定義済みの値と意味を示します。
 
 - IDC_ARROW 標準の矢印カーソル
 
@@ -1243,7 +1244,7 @@ HCURSOR LoadStandardCursor(LPCTSTR lpszCursorName) const;
 
 ## <a name="cwinapploadstandardicon"></a><a name="loadstandardicon"></a> CWinApp:: LoadStandardIcon
 
-*Lpsziconname*によって指定された Windows 定義済みのアイコンリソースを読み込みます。
+*Lpsziconname* によって指定された Windows 定義済みのアイコンリソースを読み込みます。
 
 ```
 HICON LoadStandardIcon(LPCTSTR lpszIconName) const;
@@ -1252,7 +1253,7 @@ HICON LoadStandardIcon(LPCTSTR lpszIconName) const;
 ### <a name="parameters"></a>パラメーター
 
 *lpszIconName*<br/>
-定義済みの Windows アイコンを指定するマニフェスト定数識別子。 これらの識別子は WINDOWS で定義されています。始め. 定義可能な定義済みの値とその説明の一覧については、Windows SDK の[Loadicon](/windows/win32/api/winuser/nf-winuser-loadiconw)の*Lsee onname*パラメーターを参照してください。
+定義済みの Windows アイコンを指定するマニフェスト定数識別子。 これらの識別子は、WINDOWS .H で定義されています。 定義可能な定義済みの値とその説明の一覧については、Windows SDK の [Loadicon](/windows/win32/api/winuser/nf-winuser-loadiconw)の *Lsee onname* パラメーターを参照してください。
 
 ### <a name="return-value"></a>戻り値
 
@@ -1277,7 +1278,7 @@ void LoadStdProfileSettings(UINT nMaxMRU = _AFX_MRU_COUNT);
 
 ### <a name="remarks"></a>解説
 
-*Nmaxmru*が0の場合、mru リストは保持されません。
+*Nmaxmru* が0の場合、mru リストは保持されません。
 
 ## <a name="cwinappm_bhelpmode"></a><a name="m_bhelpmode"></a> CWinApp:: m_bHelpMode
 
@@ -1423,7 +1424,7 @@ CDataRecoveryHandler* m_pDataRecoveryHandler;
 
 ## <a name="cwinappm_pszappname"></a><a name="m_pszappname"></a> CWinApp:: m_pszAppName
 
-アプリケーション名を示します。
+アプリケーションの名前を指定します。
 
 ```
 LPCTSTR m_pszAppName;
@@ -1433,7 +1434,7 @@ LPCTSTR m_pszAppName;
 
 アプリケーション名は、 [CWinApp](#cwinapp) コンストラクターに渡されたパラメーターから取得できます。指定されていない場合は、AFX_IDS_APP_TITLE の ID を持つリソース文字列になります。 アプリケーション名がリソース内に見つからない場合は、プログラムのから取得されます。EXE ファイル名。
 
-グローバル関数 [AfxGetAppName](application-information-and-management.md#afxgetappname)によって返されます。 `m_pszAppName`**const char**型のパブリック変数です <strong>\*</strong> 。
+グローバル関数 [AfxGetAppName](application-information-and-management.md#afxgetappname)によって返されます。 `m_pszAppName`**const char** 型のパブリック変数です <strong>\*</strong> 。
 
 > [!NOTE]
 > に値を割り当てた場合は `m_pszAppName` 、ヒープに動的に割り当てられる必要があります。 デストラクターは、 `CWinApp` このポインターを使用して **free**() を呼び出します。 多くの場合、 `_tcsdup` () ランタイムライブラリ関数を使用して割り当てを実行します。 また、新しい値を割り当てる前に、現在のポインターに関連付けられているメモリを解放します。 次に例を示します。
@@ -1454,7 +1455,7 @@ LPCTSTR m_pszExeName;
 
 ### <a name="remarks"></a>解説
 
-[M_pszAppName](#m_pszappname)とは異なり、この名前に空白を含めることはできません。 `m_pszExeName`**const char**型のパブリック変数です <strong>\*</strong> 。
+[M_pszAppName](#m_pszappname)とは異なり、この名前に空白を含めることはできません。 `m_pszExeName`**const char** 型のパブリック変数です <strong>\*</strong> 。
 
 > [!NOTE]
 > に値を割り当てた場合は `m_pszExeName` 、ヒープに動的に割り当てられる必要があります。 デストラクターは、 `CWinApp` このポインターを使用して **free**() を呼び出します。 多くの場合、 `_tcsdup` () ランタイムライブラリ関数を使用して割り当てを実行します。 また、新しい値を割り当てる前に、現在のポインターに関連付けられているメモリを解放します。 次に例を示します。
@@ -1471,7 +1472,7 @@ LPCTSTR m_pszHelpFilePath;
 
 ### <a name="remarks"></a>解説
 
-既定では、フレームワークは、 `m_pszHelpFilePath` アプリケーションの名前に "" を指定して初期化します。HLP "が追加されています。 ヘルプファイルの名前を変更するには、をに設定し `m_pszHelpFilePath` て、目的のヘルプファイルの完全な名前を含む文字列を指定します。 これを行うための便利な場所は、アプリケーションの [InitInstance](#initinstance) 関数です。 `m_pszHelpFilePath`**const char**型のパブリック変数です <strong>\*</strong> 。
+既定では、フレームワークは、 `m_pszHelpFilePath` アプリケーションの名前に "" を指定して初期化します。HLP "が追加されています。 ヘルプファイルの名前を変更するには、をに設定し `m_pszHelpFilePath` て、目的のヘルプファイルの完全な名前を含む文字列を指定します。 これを行うための便利な場所は、アプリケーションの [InitInstance](#initinstance) 関数です。 `m_pszHelpFilePath`**const char** 型のパブリック変数です <strong>\*</strong> 。
 
 > [!NOTE]
 > に値を割り当てた場合は `m_pszHelpFilePath` 、ヒープに動的に割り当てられる必要があります。 デストラクターは、 `CWinApp` このポインターを使用して **free**() を呼び出します。 多くの場合、 `_tcsdup` () ランタイムライブラリ関数を使用して割り当てを実行します。 また、新しい値を割り当てる前に、現在のポインターに関連付けられているメモリを解放します。 次に例を示します。
@@ -1488,7 +1489,7 @@ LPCTSTR m_pszProfileName;
 
 ### <a name="remarks"></a>解説
 
-`m_pszProfileName`**const char**型のパブリック変数です <strong>\*</strong> 。
+`m_pszProfileName`**const char** 型のパブリック変数です <strong>\*</strong> 。
 
 > [!NOTE]
 > に値を割り当てた場合は `m_pszProfileName` 、ヒープに動的に割り当てられる必要があります。 デストラクターは、 `CWinApp` このポインターを使用して **free**() を呼び出します。 多くの場合、 `_tcsdup` () ランタイムライブラリ関数を使用して割り当てを実行します。 また、新しい値を割り当てる前に、現在のポインターに関連付けられているメモリを解放します。 次に例を示します。
@@ -1674,7 +1675,7 @@ afx_msg void OnHelpUsing();
 
 ### <a name="remarks"></a>解説
 
-`ON_COMMAND( ID_HELP_USING, OnHelpUsing )` `CWinApp` このメンバー関数を有効にするには、ステートメントをクラスメッセージマップに追加する必要があります。 このメッセージハンドラー関数は、アプリケーションのユーザーが、標準 HELP_HELPONHELP トピックを使用してアプリケーションを起動するための Help Using コマンドを選択したときに呼び出され `WinHelp` ます。 **HELP_HELPONHELP**
+`ON_COMMAND( ID_HELP_USING, OnHelpUsing )` `CWinApp` このメンバー関数を有効にするには、ステートメントをクラスメッセージマップに追加する必要があります。 このメッセージハンドラー関数は、アプリケーションのユーザーが、標準 HELP_HELPONHELP トピックを使用してアプリケーションを起動するための Help Using コマンドを選択したときに呼び出され `WinHelp` ます。 
 
 ## <a name="cwinapponidle"></a><a name="onidle"></a> CWinApp:: OnIdle
 
@@ -1687,7 +1688,7 @@ virtual BOOL OnIdle(LONG lCount);
 ### <a name="parameters"></a>パラメーター
 
 *lCount*<br/>
-`OnIdle`アプリケーションのメッセージキューが空のときにが呼び出されるたびに、カウンターがインクリメントされます。 このカウントは、新しいメッセージが処理されるたびに0にリセットされます。 *LCount*パラメーターを使用すると、メッセージを処理せずにアプリケーションがアイドル状態になっている時間の相対的な長さを確認できます。
+`OnIdle`アプリケーションのメッセージキューが空のときにが呼び出されるたびに、カウンターがインクリメントされます。 このカウントは、新しいメッセージが処理されるたびに0にリセットされます。 *LCount* パラメーターを使用すると、メッセージを処理せずにアプリケーションがアイドル状態になっている時間の相対的な長さを確認できます。
 
 ### <a name="return-value"></a>戻り値
 
@@ -1697,7 +1698,7 @@ virtual BOOL OnIdle(LONG lCount);
 
 `OnIdle` は、アプリケーションのメッセージキューが空のときに、既定のメッセージループで呼び出されます。 オーバーライドを使用して、独自のバックグラウンドアイドルハンドラータスクを呼び出します。
 
-`OnIdle` は、アイドル処理時間が不要であることを示すために0を返す必要があります。 *LCount*パラメーターは、 `OnIdle` メッセージキューが空のときにが呼び出されるたびに増分され、新しいメッセージが処理されるたびに0にリセットされます。 この数に基づいて、異なるアイドルルーチンを呼び出すことができます。
+`OnIdle` は、アイドル処理時間が不要であることを示すために0を返す必要があります。 *LCount* パラメーターは、 `OnIdle` メッセージキューが空のときにが呼び出されるたびに増分され、新しいメッセージが処理されるたびに0にリセットされます。 この数に基づいて、異なるアイドルルーチンを呼び出すことができます。
 
 次に、アイドルループ処理の概要を示します。
 
@@ -1811,7 +1812,7 @@ virtual BOOL ProcessMessageFilter(
 ### <a name="parameters"></a>パラメーター
 
 *code*<br/>
-フックコードを指定します。 このメンバー関数は、コードを使用して、 *Lpmsg*の処理方法を決定します。
+フックコードを指定します。 このメンバー関数は、コードを使用して、 *Lpmsg* の処理方法を決定します。
 
 *lpMsg*<br/>
 Windows [メッセージ](/windows/win32/api/winuser/ns-winuser-msg)structure へのポインター。
@@ -1828,7 +1829,7 @@ Windows [メッセージ](/windows/win32/api/winuser/ns-winuser-msg)structure �
 
 ## <a name="cwinappprocessshellcommand"></a><a name="processshellcommand"></a> CWinApp::P rocessShellCommand
 
-このメンバー関数は、 [InitInstance](#initinstance) `CCommandLineInfo` *rcmdinfo*によって識別されるオブジェクトから渡されたパラメーターを受け入れ、指定されたアクションを実行するために、InitInstance によって呼び出されます。
+このメンバー関数は、 [](#initinstance) `CCommandLineInfo` *rcmdinfo* によって識別されるオブジェクトから渡されたパラメーターを受け入れ、指定されたアクションを実行するために、InitInstance によって呼び出されます。
 
 ```
 BOOL ProcessShellCommand(CCommandLineInfo& rCmdInfo);
@@ -1991,13 +1992,13 @@ virtual HRESULT RegisterWithRestartManager(
 
 アプリケーションでワークファイルに既定の MFC 実装を使用する場合は、の単純なバージョンを使用する必要があり `RegisterWithRestartManager` ます。 アプリケーションの自動保存動作をカスタマイズする場合は、の複合バージョンを使用し `RegisterWithRestartManager` ます。
 
-*StrRestartIdentifier*に空の文字列を指定してこのメソッドを呼び出すと、によって、 `RegisterWithRestartManager` 再起動マネージャーのこのインスタンスの一意の識別子文字列が作成されます。
+*StrRestartIdentifier* に空の文字列を指定してこのメソッドを呼び出すと、によって、 `RegisterWithRestartManager` 再起動マネージャーのこのインスタンスの一意の識別子文字列が作成されます。
 
 アプリケーションが予期せず終了すると、再起動マネージャーによってアプリケーションがコマンドラインから再起動され、一意の再起動識別子がオプションの引数として提供されます。 このシナリオでは、フレームワークは `RegisterWithRestartManager` 2 回を呼び出します。 最初の呼び出しは、文字列識別子に対して空の文字列を使用して、 [CWinApp:: InitInstance](#initinstance) から取得されます。 次に、メソッド [CWinApp::P rocessshellcommand](#processshellcommand) は、 `RegisterWithRestartManager` 一意の再起動識別子を使用してを呼び出します。
 
 アプリケーションを再起動マネージャーに登録すると、再起動マネージャーによってアプリケーションが監視されます。 アプリケーションが予期せず終了した場合、再起動マネージャーは、シャットダウンプロセス中に復旧コールバック関数を呼び出します。 再起動マネージャーは、回復コールバック関数からの応答に対して *Dwpinginterval* を待機します。 復旧コールバック関数がこの時間内に応答しない場合、アプリケーションは復旧コールバック関数を実行せずに終了します。
 
-既定では、dwRestartFlags はサポートされていませんが、将来使用するために提供されています。 *DwRestartFlags*に指定できる値は次のとおりです。
+既定では、dwRestartFlags はサポートされていませんが、将来使用するために提供されています。 *DwRestartFlags* に指定できる値は次のとおりです。
 
 - RESTART_NO_CRASH
 
@@ -2063,7 +2064,7 @@ virtual int Run();
 
 ### <a name="remarks"></a>解説
 
-`Run` アプリケーションが WM_QUIT メッセージを受信するまで、Windows メッセージを取得してディスパッチします。 アプリケーションのメッセージキューに現在メッセージが含まれていない場合、はを呼び出して、 `Run` アイドル時の処理を実行します。 [OnIdle](#onidle) 受信メッセージは、特別な処理のために [PreTranslateMessage](#pretranslatemessage) メンバー関数に移動し、 `TranslateMessage` 標準キーボード翻訳の windows 関数に移動します。最後に、 `DispatchMessage` windows 関数が呼び出されます。
+`Run` アプリケーションが WM_QUIT メッセージを受信するまで、Windows メッセージを取得してディスパッチします。 アプリケーションのメッセージキューに現在メッセージが含まれていない場合、はを呼び出して、 `Run` アイドル時の処理を実行します。 [](#onidle) 受信メッセージは、特別な処理のために [PreTranslateMessage](#pretranslatemessage) メンバー関数に移動し、 `TranslateMessage` 標準キーボード翻訳の windows 関数に移動します。最後に、 `DispatchMessage` windows 関数が呼び出されます。
 
 `Run` がオーバーライドされることはほとんどありませんが、これをオーバーライドして特殊な動作を提供することができます。
 
@@ -2139,7 +2140,7 @@ void SelectPrinter(
 
 ### <a name="remarks"></a>解説
 
-*Hdevmode*と*hDevNames*の両方が NULL の場合、では `SelectPrinter` 現在の既定のプリンターが使用されます。
+*Hdevmode* と *hDevNames* の両方が NULL の場合、では `SelectPrinter` 現在の既定のプリンターが使用されます。
 
 ## <a name="cwinappsethelpmode"></a><a name="sethelpmode"></a> CWinApp:: Se@ Pmode
 
@@ -2179,7 +2180,7 @@ void SetRegistryKey(UINT nIDRegistryKey);
 
 ### <a name="remarks"></a>解説
 
-この関数は *m_pszRegistryKey*を設定します。この関数は `GetProfileInt` 、の、、 `GetProfileString` `WriteProfileInt` 、の各メンバー関数によって使用され `WriteProfileString` `CWinApp` ます。 この関数が呼び出された場合は、最近使用した (MRU) ファイルの一覧もレジストリに格納されます。 通常、レジストリキーは会社の名前です。 これは、次の形式のキーに格納されます。 HKEY_CURRENT_USER \ ソフトウェア \\<会社名 \> \\<アプリケーション名 \> \\<セクション名 \> \\<値の名前 \> 。
+この関数は *m_pszRegistryKey* を設定します。この関数は `GetProfileInt` 、の、、 `GetProfileString` `WriteProfileInt` 、の各メンバー関数によって使用され `WriteProfileString` `CWinApp` ます。 この関数が呼び出された場合は、最近使用した (MRU) ファイルの一覧もレジストリに格納されます。 通常、レジストリキーは会社の名前です。 これは、次の形式のキーに格納されます。 HKEY_CURRENT_USER\Software\\<会社名 \> \\<アプリケーション名 \> \\<セクション名 \> \\<値名 \> です。
 
 ## <a name="cwinappsupportsapplicationrecovery"></a><a name="supportsapplicationrecovery"></a> CWinApp:: SupportsApplicationRecovery
 

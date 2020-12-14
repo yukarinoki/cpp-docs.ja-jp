@@ -1,20 +1,21 @@
-﻿---
+---
+description: '詳細については、「チュートリアル: MFC プロジェクトへの D2D オブジェクトの追加」を参照してください。'
 title: 'チュートリアル: MFC プロジェクトへの D2D オブジェクトの追加'
 ms.date: 04/25/2019
 helpviewer_keywords:
 - MFC, D2D
 - D2D [MFC]
 ms.assetid: dda36c33-c231-4da6-a62f-72d69a12b6dd
-ms.openlocfilehash: 5e1c75e32899ef9697025d662eeec4a6a2482f2b
-ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
+ms.openlocfilehash: bbc59a943f6d8503370ddc8b7255275a6902b3c9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74304302"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97344901"
 ---
 # <a name="walkthrough-adding-a-d2d-object-to-an-mfc-project"></a>チュートリアル: MFC プロジェクトへの D2D オブジェクトの追加
 
-このチュートリアルでは、基本的な Direct2D (D2D) オブジェクトをビジュアルC++、MICROSOFT FOUNDATION CLASS ライブラリ (MFC) プロジェクトに追加した後、"Hello, World!" を出力するアプリケーションにプロジェクトをビルドする方法について説明します。 グラデーションの背景。
+このチュートリアルでは、基本的な Direct2D (D2D) オブジェクトを Visual C++、Microsoft Foundation Class ライブラリ (MFC) プロジェクトに追加し、"Hello, World!" を出力するアプリケーションにプロジェクトをビルドする方法について説明します。 グラデーションの背景。
 
 このチュートリアルでは、次のタスクを実行する方法について説明します。
 
@@ -26,25 +27,25 @@ ms.locfileid: "74304302"
 
 - D2D 描画ハンドラーを実装します。
 
-- 結果を確認します。
+- 結果を確認しましょう。
 
 [!INCLUDE[note_settings_general](../mfc/includes/note_settings_general_md.md)]
 
 ## <a name="prerequisites"></a>前提条件
 
-このチュートリアルを完了するには、ワークロードを**使用C++したデスクトップ開発**と、オプションの**visual C++ MFC (x86 および x64 コンポーネント用**) を使用して、visual Studio をインストールする必要があります。
+このチュートリアルを完了するには、 **C++ によるデスクトップ開発** ワークロードと、 **x86 および x64 コンポーネント用のオプションの Visual C++ MFC** を使用して、Visual Studio がインストールされている必要があります。
 
 ## <a name="to-create-an-mfc-application"></a>MFC アプリケーションを作成するには
 
-1. Mfc**アプリケーションウィザード**を使用して、mfc アプリケーションを作成します。 お使いのバージョンの Visual Studio のウィザードを開く方法については[、「チュートリアル: 新しい MFC シェルコントロールの使用](walkthrough-using-the-new-mfc-shell-controls.md)」を参照してください。
+1. Mfc **アプリケーションウィザード** を使用して、mfc アプリケーションを作成します。 お使いのバージョンの Visual Studio のウィザードを開く方法については [、「チュートリアル: 新しい MFC シェルコントロールの使用](walkthrough-using-the-new-mfc-shell-controls.md) 」を参照してください。
 
-1. **[名前]** ボックスに「 *MFCD2DWalkthrough*」と入力します。 **[OK]** をクリックします。
+1. [ **名前** ] ボックスに「 *MFCD2DWalkthrough*」と入力します。 **[OK]** をクリックします。
 
-1. **MFC アプリケーションウィザード**で、設定を変更せずに **[完了]** を選択します。
+1. **MFC アプリケーションウィザード** で、設定を変更せずに [**完了**] を選択します。
 
 ## <a name="to-create-a-solid-color-brush-and-a-linear-gradient-brush"></a>純色ブラシと線状グラデーションブラシを作成するには
 
-1. **ソリューションエクスプローラー**の**MFCD2DWalkthrough**プロジェクトで、 **[ヘッダーファイル]** フォルダーの MFCD2DWalkthroughView を開きます。 次のコードを `CMFCD2DWalkthroughView` クラスに追加して、3つのデータ変数を作成します。
+1. **ソリューションエクスプローラー** の **MFCD2DWalkthrough** プロジェクトで、[**ヘッダーファイル**] フォルダーの MFCD2DWalkthroughView を開きます。 次のコードをクラスに追加して、 `CMFCD2DWalkthroughView` 3 つのデータ変数を作成します。
 
    ```cpp
    CD2DTextFormat* m_pTextFormat;
@@ -54,7 +55,7 @@ ms.locfileid: "74304302"
 
    ファイルを保存して閉じます。
 
-1. **[Source Files]** フォルダーで、MFCD2DWalkthroughView を開きます。 `CMFCD2DWalkthroughView` クラスのコンストラクターに、次のコードを追加します。
+1. [ **Source Files** ] フォルダーで、MFCD2DWalkthroughView を開きます。 クラスのコンストラクターに次 `CMFCD2DWalkthroughView` のコードを追加します。
 
    ```cpp
    // Enable D2D support for this window:
@@ -100,13 +101,13 @@ ms.locfileid: "74304302"
 
 ## <a name="to-modify-the-gradient-brush-so-that-it-will-change-appropriately-when-the-window-is-resized"></a>グラデーションブラシを変更して、ウィンドウのサイズを変更したときに適切に変更されるようにするには
 
-1. **[プロジェクト]** メニューの **[クラスウィザード]** をクリックします。
+1. [ **プロジェクト** ] メニューの [ **クラスウィザード**] をクリックします。
 
-1. **MFC クラスウィザード**の **[クラス名]** で、[`CMFCD2DWalkthroughView`] を選択します。
+1. **MFC クラスウィザード** の [**クラス名**] で、を選択し `CMFCD2DWalkthroughView` ます。
 
-1. **メッセージ** タブの **メッセージ** ボックスで、`WM_SIZE` を選択し、**ハンドラーの追加** を選択します。 この操作により、`OnSize` メッセージハンドラーが `CMFCD2DWalkthroughView` クラスに追加されます。
+1. [ **メッセージ** ] タブの [ **メッセージ** ] ボックスで、[] を選択 `WM_SIZE` し、[ハンドラーの **追加**] を選択します。 この操作により `OnSize` 、メッセージハンドラーがクラスに追加され `CMFCD2DWalkthroughView` ます。
 
-1. **[既存のハンドラー]** ボックスで、[`OnSize`] を選択します。 **[コードの編集]** を選択して `CMFCD2DWalkthroughView::OnSize` メソッドを表示します。 メソッドの最後に、次のコードを追加します。
+1. [ **既存のハンドラー** ] ボックスで、を選択し `OnSize` ます。 [ **コードの編集** ] をクリックして、メソッドを表示 `CMFCD2DWalkthroughView::OnSize` します。 メソッドの最後に、次のコードを追加します。
 
    ```cpp
    m_pLinearGradientBrush->SetEndPoint(CPoint(cx, cy));
@@ -116,15 +117,15 @@ ms.locfileid: "74304302"
 
 ## <a name="to-implement-a-d2d-drawing-handler"></a>D2D drawing ハンドラーを実装するには
 
-1. **[プロジェクト]** メニューの **[クラスウィザード]** をクリックします。
+1. [ **プロジェクト** ] メニューの [ **クラスウィザード**] をクリックします。
 
-1. **MFC クラスウィザード**の **[クラス名]** で、[`CMFCD2DWalkthroughView`] を選択します。
+1. **MFC クラスウィザード** の [**クラス名**] で、を選択し `CMFCD2DWalkthroughView` ます。
 
-1. **[メッセージ]** タブで、 **[カスタムメッセージの追加]** を選択します。
+1. [ **メッセージ** ] タブで、[ **カスタムメッセージの追加**] を選択します。
 
-1. **[カスタムメッセージの追加]** ダイアログボックスの **[カスタム Windows メッセージ]** ボックスに、「 *AFX_WM_DRAW2D*」と入力します。 **[メッセージハンドラー名]** ボックスに「 *OnDraw2D*」と入力します。 **[登録済みメッセージ]** オプションを選択し、[ **OK]** を選択します。 この操作により、AFX_WM_DRAW2D メッセージのメッセージハンドラーが `CMFCD2DWalkthroughView` クラスに追加されます。
+1. [ **カスタムメッセージの追加** ] ダイアログボックスの [ **カスタム Windows メッセージ** ] ボックスに、「 *AFX_WM_DRAW2D*」と入力します。 [ **メッセージハンドラー名** ] ボックスに「 *OnDraw2D*」と入力します。 [ **登録済みメッセージ** ] オプションを選択し、[ **OK]** を選択します。 この操作により、AFX_WM_DRAW2D メッセージのメッセージハンドラーがクラスに追加され `CMFCD2DWalkthroughView` ます。
 
-1. **[既存のハンドラー]** ボックスで、[`OnDraw2D`] を選択します。 **[コードの編集]** を選択して `CMFCD2DWalkthroughView::OnDraw2D` メソッドを表示します。 `CMFCD2DWalkthroughView::OnDrawD2D` メソッドには次のコードを使用します。
+1. [ **既存のハンドラー** ] ボックスで、を選択し `OnDraw2D` ます。 [ **コードの編集** ] をクリックして、メソッドを表示 `CMFCD2DWalkthroughView::OnDraw2D` します。 メソッドに次のコードを使用し `CMFCD2DWalkthroughView::OnDrawD2D` ます。
 
    ```cpp
    afx_msg LRESULT CMFCD2DWalkthroughView::OnDraw2D(
@@ -155,6 +156,6 @@ ms.locfileid: "74304302"
 
 アプリケーションをビルドして実行します。 ウィンドウのサイズを変更すると、グラデーション四角形が変化します。 "Hello World!" 四角形の中央に表示されます。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [チュートリアル](../mfc/walkthroughs-mfc.md)
