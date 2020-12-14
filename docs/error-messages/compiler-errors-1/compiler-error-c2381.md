@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「コンパイラエラー C2381」を参照してください。
 title: コンパイラ エラー C2381
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2381
 ms.assetid: cc765f67-64ac-406f-93ef-ae7d548d58d7
-ms.openlocfilehash: a36655b0b3a28536538998656d7ce354c409d07c
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: ccaed8e5fc637ffb7e5cd2a33a00ddb5cf7c102b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87225528"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97282180"
 ---
 # <a name="compiler-error-c2381"></a>コンパイラ エラー C2381
 
 ' function ': 再定義します。__declspec (noreturn) が異なる
 
-関数が宣言されて定義されましたが、定義では[noreturn](../../cpp/noreturn.md)修飾子が使用されてい **`__declspec`** ます。 を使用すると、 `noreturn` 関数の再定義が構成されます。宣言と定義は、の使用に同意する必要があり `noreturn` ます。
+関数が宣言されて定義されましたが、定義では [noreturn](../../cpp/noreturn.md)修飾子が使用されてい **`__declspec`** ます。 を使用すると、 `noreturn` 関数の再定義が構成されます。宣言と定義は、の使用に同意する必要があり `noreturn` ます。
 
 次の例では、C2381 が生成されます。
 

@@ -1,15 +1,16 @@
 ---
+description: '詳細情報: __based 文法'
 title: __based 文法
 ms.date: 11/04/2016
 helpviewer_keywords:
 - based addressing
 ms.assetid: a68ff750-c7fa-4c0c-8d5f-2df76e4686c5
-ms.openlocfilehash: 539ccef65477bafe2c46ce328bdaf65f52aff1b9
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 9c449c45700c57d0c6f6018ca47e40d42c4b2ad0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87229156"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97304520"
 ---
 # <a name="__based-grammar"></a>__based 文法
 
@@ -25,9 +26,9 @@ ms.locfileid: "87229156"
 
 *基本式*: *based-declaratorsegment-namesegment--cast*
 
-*ベース変数*:*識別子*
+*ベース変数*: *識別子*
 
-*based-abstract-宣言子*: *abstract-宣言*子
+*based-abstract-宣言子*: *abstract-宣言* 子
 
 *基本型*: *type-name*
 

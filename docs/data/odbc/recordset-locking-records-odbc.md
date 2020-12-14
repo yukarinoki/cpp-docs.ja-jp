@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: レコードセット: レコードのロック (ODBC)'
 title: 'レコードセット: レコードのロック (ODBC)'
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - ODBC recordsets [C++], locking records
 - data [C++], locking
 ms.assetid: 8fe8fcfe-b55a-41a8-9136-94a7cd1e4806
-ms.openlocfilehash: abd5f817ad321241df2d8565bd6bf346c0792088
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 1833aff2a1a68affe02cdcf5294007802452bbf9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81366959"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97304481"
 ---
 # <a name="recordset-locking-records-odbc"></a>レコードセット: レコードのロック (ODBC)
 
@@ -23,48 +24,48 @@ ms.locfileid: "81366959"
 
 このトピックでは、次の内容について説明します。
 
-- [使用可能なレコード ロックの種類](#_core_record.2d.locking_modes)。
+- [使用できるレコードロックの種類](#_core_record.2d.locking_modes)。
 
-- [更新中にレコードセット内のレコードをロックする方法](#_core_locking_records_in_your_recordset)。
+- [更新中にレコードセットのレコードをロックする方法](#_core_locking_records_in_your_recordset)。
 
-レコードセットを使用してデータ ソースのレコードを更新すると、アプリケーションはレコードをロックできるため、他のユーザーが同時にレコードを更新することはできません。 2 人のユーザーが同時に更新したレコードの状態は、2 人のユーザーが同時にレコードを更新できないことをシステムが保証できない限り、未定義です。
+レコードセットを使用してデータソースのレコードを更新する場合、アプリケーションはレコードをロックして、他のユーザーが同時にレコードを更新できないようにすることができます。 2人のユーザーによって同時に更新されたレコードの状態は、2人のユーザーがレコードを同時に更新できない場合を除いて、定義されていません。
 
 > [!NOTE]
-> このトピックの内容は、バルク行フェッチが実装されていない `CRecordset` の派生オブジェクトを対象にしています。 バルク行フェッチを実装している場合、一部の情報は適用されません。 たとえば、 および`Edit``Update`メンバー関数を呼び出すことはできません。 バルク行フェッチの詳細については、「[レコードセット : レコードの一括フェッチ (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)」を参照してください。
+> このトピックの内容は、バルク行フェッチが実装されていない `CRecordset` の派生オブジェクトを対象にしています。 バルク行フェッチを実装している場合は、一部の情報が適用されません。 たとえば、 `Edit` メンバー関数とメンバー関数を呼び出すことはできません `Update` 。 バルク行フェッチの詳細については、「レコード [セット: バルクデータフェッチ (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)」を参照してください。
 
-## <a name="record-locking-modes"></a><a name="_core_record.2d.locking_modes"></a>レコードロックモード
+## <a name="record-locking-modes"></a><a name="_core_record.2d.locking_modes"></a> Record-Locking モード
 
-データベース・クラスは、2 つの[レコード・ロック・モードを](../../mfc/reference/crecordset-class.md#setlockingmode)提供します。
+データベースクラスには、次の2つの [レコードロックモード](../../mfc/reference/crecordset-class.md#setlockingmode)が用意されています。
 
-- オプティミスティック ロック (デフォルト)
+- オプティミスティックロック (既定値)
 
-- 悲観的なロック
+- ペシミスティックロック
 
-レコードの更新は、次の 3 つのステップで実行されます。
+レコードの更新は、次の3つの手順で行われます。
 
-1. 操作を開始するには[、Edit](../../mfc/reference/crecordset-class.md#edit)メンバー関数を呼び出します。
+1. 操作を開始するには、 [Edit](../../mfc/reference/crecordset-class.md#edit) メンバー関数を呼び出します。
 
 1. 現在のレコードの適切なフィールドを変更します。
 
-1. [Update](../../mfc/reference/crecordset-class.md#update)メンバー関数を呼び出して、操作を終了し、通常は更新をコミットします。
+1. [更新](../../mfc/reference/crecordset-class.md#update)メンバー関数を呼び出して、操作を終了し、通常は更新をコミットします。
 
-オプティミスティック ロックは、呼び出し`Update`中にのみデータ ソースのレコードをロックします。 マルチユーザー環境でオプティミスティック・ロックを使用する場合、アプリケーション`Update`は障害条件を処理する必要があります。 悲観`Edit`的ロックは、呼び出し直後にレコードをロックし、呼び出`Update`すまで解放しません (失敗`CDBException`は、このメカニズムを通じて示されます`Update`。 同じレコードへの同時アクセスはアプリケーションの`Update`プロセスが完了するまで待機する必要があるため、ペシミスティック ロックは他のユーザーのパフォーマンスに影響を与える可能性があります。
+オプティミスティックロックは、呼び出し中にのみ、データソースのレコードをロックし `Update` ます。 マルチユーザー環境でオプティミスティックロックを使用する場合は、アプリケーションでエラー条件を処理する必要があり `Update` ます。 ペシミスティックロックは、を呼び出した直後にレコードをロックし `Edit` `Update` ます。を呼び出すまで (エラーは、 `CDBException` によって返される FALSE 値ではなく、機構によって示され `Update` ます。 ペシミスティックロックは、他のユーザーにとってパフォーマンスが低下する可能性があります。これは、同じレコードへの同時アクセスが、アプリケーションのプロセスが完了するまで待機する必要があるため `Update` です。
 
-## <a name="locking-records-in-your-recordset"></a><a name="_core_locking_records_in_your_recordset"></a>レコードセット内のレコードのロック
+## <a name="locking-records-in-your-recordset"></a><a name="_core_locking_records_in_your_recordset"></a> レコードセット内のレコードのロック
 
-レコードセット オブジェクトの[ロック モード](#_core_record.2d.locking_modes)を既定から変更する場合は、 を呼び出す`Edit`前にモードを変更する必要があります。
+レコードセットオブジェクトの [ロックモード](#_core_record.2d.locking_modes) を既定値から変更する場合は、を呼び出す前にモードを変更する必要があり `Edit` ます。
 
-#### <a name="to-change-the-current-locking-mode-for-your-recordset"></a>レコードセットの現在のロック モードを変更するには
+#### <a name="to-change-the-current-locking-mode-for-your-recordset"></a>レコードセットの現在のロックモードを変更するには
 
-1. またはを指定して[、SetLockingMode](../../mfc/reference/crecordset-class.md#setlockingmode)メンバー関数`CRecordset::pessimistic`を`CRecordset::optimistic`呼び出します。
+1. またはを指定して、 [Setロックモード](../../mfc/reference/crecordset-class.md#setlockingmode) メンバー関数を呼び出し `CRecordset::pessimistic` `CRecordset::optimistic` ます。
 
-新しいロック モードは、再度変更するかレコードセットが閉じられるまで有効です。
+新しいロックモードは、再度変更するか、レコードセットが閉じられるまで有効なままです。
 
 > [!NOTE]
-> 現在、悲観的なロックをサポートしている ODBC ドライバは比較的少ない。
+> 現在、排他的ロックをサポートしている ODBC ドライバーはほとんどありません。
 
 ## <a name="see-also"></a>関連項目
 
 [レコードセット (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
-[レコードセット: 結合 (ODBC)](../../data/odbc/recordset-performing-a-join-odbc.md)<br/>
-[レコードセット: レコードの追加、更新、削除 (ODBC)](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md)
+[レコードセット: 結合の実行 (ODBC)](../../data/odbc/recordset-performing-a-join-odbc.md)<br/>
+[レコードセット: レコードの追加、更新、および削除 (ODBC)](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md)

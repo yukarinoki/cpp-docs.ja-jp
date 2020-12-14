@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「リンカツール Error LNK1112」を参照してください。
 title: リンカ ツール エラー LNK1112
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,24 +7,24 @@ f1_keywords:
 helpviewer_keywords:
 - LNK1112
 ms.assetid: 425793d8-37e6-4072-9b6e-c3d4e9c12562
-ms.openlocfilehash: bc01d56fb8144d23b91c82a7f791a70a5dadb7ef
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ba0a34e07b0806f251c0b1237dc28ab5f8becbf4
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62255485"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97281380"
 ---
 # <a name="linker-tools-error-lnk1112"></a>リンカ ツール エラー LNK1112
 
-> マシンの種類のモジュール '*type1*'対象コンピューターの種類は'*type2*'
+> モジュールのコンピューターの種類 ' type1 ' がターゲット *コンピューターの種類*'*type1*' と競合しています
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 入力として指定されたオブジェクト ファイルは、別のコンピューターの種類用にコンパイルされています。
 
-たとえば、 **/clr** でコンパイルされたオブジェクト ファイルを、 **/clr:pure** (コンピューターの種類 CEE) でコンパイルされたオブジェクト ファイルとリンクしようとした場合、リンカーはエラー LNK1112 を生成します。 **/Clr: 純粋な**コンパイラ オプションは Visual Studio 2015 で非推奨とされ、Visual Studio 2017 でサポートされていません。
+たとえば、 **/clr** でコンパイルされたオブジェクト ファイルを、 **/clr:pure** (コンピューターの種類 CEE) でコンパイルされたオブジェクト ファイルとリンクしようとした場合、リンカーはエラー LNK1112 を生成します。 **/Clr: pure** コンパイラオプションは visual studio 2015 で非推奨とされており、visual studio 2017 ではサポートされていません。
 
-同様に、x64 の 1 つのモジュールを作成する場合コンパイラおよび x86 と別のモジュール コンパイラ、およびそれらをリンクしようと、リンカーが LNK1112 を生成します。
+同様に、x64 コンパイラを使用して1つのモジュールを作成し、x86 コンパイラを使用して別のモジュールを作成し、それらをリンクしようとすると、リンカーによって LNK1112 が生成されます。
 
 このエラーの原因としては、64 ビット アプリケーションを開発しているのに、Visual C++ の 64 ビット コンパイラをインストールしていない可能性があります。 この場合は、64 ビットの構成は使用できません。 この問題を修正するには、Visual Studio のインストーラーを実行し、不足している C++ コンポーネントをインストールします。
 
@@ -31,4 +32,4 @@ ms.locfileid: "62255485"
 
 ## <a name="see-also"></a>関連項目
 
-- [リンカー ツール エラーと警告](../../error-messages/tool-errors/linker-tools-errors-and-warnings.md)
+- [リンカーツールのエラーと警告](../../error-messages/tool-errors/linker-tools-errors-and-warnings.md)

@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: コンパイラの警告 (レベル 1) C4621'
 title: コンパイラの警告 (レベル 1) C4621
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4621
 ms.assetid: 40931bd9-cb89-497e-86f0-cec9f016c63c
-ms.openlocfilehash: a48934fd097f9039988db32511ca87cbd66b22d2
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 72e4adbb45488b200ff67f1d0b225591f9ea1a6b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80199753"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97281471"
 ---
 # <a name="compiler-warning-level-1-c4621"></a>コンパイラの警告 (レベル 1) C4621
 
@@ -19,7 +20,7 @@ ms.locfileid: "80199753"
 
 指定された型に後置デクリメント演算子が定義されていませんでした。 コンパイラは、オーバーロードされた前置演算子を使用します。
 
-この警告は、後置 `--` 演算子を定義することで回避できます。 次に示すように、`--` 演算子の2つの引数を持つバージョンを作成します。
+この警告は、後置 `--` 演算子を定義することで回避できます。 次に示すように、2つの引数を持つ演算子を作成 `--` します。
 
 ```cpp
 // C4621.cpp
