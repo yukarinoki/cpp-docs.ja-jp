@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: _set_se_translator'
 title: _set_se_translator
 ms.date: 02/21/2018
 api_name:
@@ -26,12 +27,12 @@ helpviewer_keywords:
 - exception handling, changing
 - _set_se_translator function
 ms.assetid: 280842bc-d72a-468b-a565-2d3db893ae0f
-ms.openlocfilehash: 9de0c62b9e9a0bca0753d31ef64396e00c379253
-ms.sourcegitcommit: 43cee7a0d41a062661229043c2f7cbc6ace17fa3
+ms.openlocfilehash: 5ba0f0816b7876f24dfc010c83711e9ca652edad
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92008633"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97211233"
 ---
 # <a name="_set_se_translator"></a>_set_se_translator
 
@@ -52,13 +53,13 @@ _se_translator_function _set_se_translator(
 
 ## <a name="return-value"></a>戻り値
 
-前の関数を後で復元できるように、 **_set_se_translator**によって登録されている前の変換関数へのポインターを返します。 前の関数が設定されていない場合は、戻り値を使用して既定の動作を復元できます。この値にはを指定でき **`nullptr`** ます。
+前の関数を後で復元できるように、 **_set_se_translator** によって登録されている前の変換関数へのポインターを返します。 前の関数が設定されていない場合は、戻り値を使用して既定の動作を復元できます。この値にはを指定でき **`nullptr`** ます。
 
 ## <a name="remarks"></a>解説
 
-**_Set_se_translator**関数は、Win32 例外 (c 構造化例外) を C++ 型の例外として処理する方法を提供します。 各 C 例外が C++ ハンドラーによって処理されるようにするに **`catch`** は、まず、特定のクラス型を c 例外に属性化するために使用または派生できる c 例外ラッパークラスを定義します。 このクラスを使用するには、C 例外が発生するたびに内部例外処理メカニズムによって呼び出されるカスタム C 例外変換関数をインストールします。 変換関数内では、一致する C++ ハンドラーによってキャッチされる、型指定された例外をスローでき **`catch`** ます。
+**_Set_se_translator** 関数は、Win32 例外 (c 構造化例外) を C++ 型の例外として処理する方法を提供します。 各 C 例外が C++ ハンドラーによって処理されるようにするに **`catch`** は、まず、特定のクラス型を c 例外に属性化するために使用または派生できる c 例外ラッパークラスを定義します。 このクラスを使用するには、C 例外が発生するたびに内部例外処理メカニズムによって呼び出されるカスタム C 例外変換関数をインストールします。 変換関数内では、一致する C++ ハンドラーによってキャッチされる、型指定された例外をスローでき **`catch`** ます。
 
-**_Set_se_translator**を使用する場合は、 [/eha](../../build/reference/eh-exception-handling-model.md)を使用する必要があります。
+**_Set_se_translator** を使用する場合は、 [/eha](../../build/reference/eh-exception-handling-model.md)を使用する必要があります。
 
 カスタム変換関数を指定するには、変換関数の名前を引数として使用して **_set_se_translator** を呼び出します。 記述する変換関数は、ブロックを持つスタック上の関数呼び出しごとに1回呼び出され **`try`** ます。 既定の変換関数はありません。
 
@@ -72,7 +73,7 @@ _se_translator_function _set_se_translator(
 typedef void (__cdecl *_se_translator_function)(unsigned int, struct _EXCEPTION_POINTERS* );
 ```
 
-**_Set_se_translator**の場合、CRT に動的にリンクするときには影響があります。プロセス内の別の DLL が **_set_se_translator**を呼び出し、ハンドラーをそれ自体のに置き換える場合があります。
+**_Set_se_translator** の場合、CRT に動的にリンクするときには影響があります。プロセス内の別の DLL が **_set_se_translator** を呼び出し、ハンドラーをそれ自体のに置き換える場合があります。
 
 マネージコード (/clr でコンパイルされたコード) または混合ネイティブコードまたはマネージコードから **_set_se_translator** を使用する場合は、変換プログラムがネイティブコードでのみ生成される例外に影響することに注意してください。 マネージド コードで生成されるマネージド例外 (`System::Exception` の発生時のものなど) はいずれも、変換関数経由ではルーティングされません。 Win32 関数 **RaiseException** を使用してマネージコードで発生した例外や、ゼロ除算例外などのシステム例外によって発生した例外は、変換プログラムを通じてルーティングされます。
 
@@ -159,7 +160,7 @@ Caught a __try exception, error c0000094.
 
 ## <a name="example-catch-se_exception-error"></a>例: キャッチ SE_Exception エラー
 
-**_Set_se_translator**によって提供される機能はマネージコードでは使用できませんが、ネイティブコードが **/clr**スイッチの下のコンパイルにある場合でも、ネイティブコードがを使用して指定されている限り、ネイティブコードでこのマッピングを使用でき `#pragma unmanaged` ます。 構造化例外が、マップされるマネージコードでスローされている場合は、例外を生成して処理するコードをとしてマークする必要があり `#pragma unmanaged` ます。 次のコードは考えられる使用法を示しています。 詳細については、「[プラグマ ディレクティブと __Pragma キーワード](../../preprocessor/pragma-directives-and-the-pragma-keyword.md)」を参照してください。
+**_Set_se_translator** によって提供される機能はマネージコードでは使用できませんが、ネイティブコードが **/clr** スイッチの下のコンパイルにある場合でも、ネイティブコードがを使用して指定されている限り、ネイティブコードでこのマッピングを使用でき `#pragma unmanaged` ます。 構造化例外が、マップされるマネージコードでスローされている場合は、例外を生成して処理するコードをとしてマークする必要があり `#pragma unmanaged` ます。 次のコードは考えられる使用法を示しています。 詳細については、「[プラグマ ディレクティブと __Pragma キーワード](../../preprocessor/pragma-directives-and-the-pragma-keyword.md)」を参照してください。
 
 ```cpp
 // crt_set_se_translator_clr.cpp
@@ -236,4 +237,4 @@ Caught SE_Exception, error c0000094
 [set_terminate](set-terminate-crt.md)<br/>
 [set_unexpected](set-unexpected-crt.md)<br/>
 [解約](terminate-crt.md)<br/>
-[予期しない](unexpected-crt.md)<br/>
+[不適切](unexpected-crt.md)<br/>

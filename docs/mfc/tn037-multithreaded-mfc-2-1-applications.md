@@ -1,21 +1,22 @@
 ---
-title: TN037:MFC 2.1 のマルチ スレッド アプリケーション
+description: '詳細については、「テクニカルノート 37: マルチスレッド MFC 2.1 アプリケーション」を参照してください。'
+title: 'テクニカル ノート 37: MFC 2.1 のマルチスレッド アプリケーション'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - TN037
 ms.assetid: 05ee204c-700a-4c40-957c-dc2d0db1249d
-ms.openlocfilehash: d3cf2f049d27011a0670e61b01baad0d123df1c2
-ms.sourcegitcommit: 934cb53fa4cb59fea611bfeb9db110d8d6f7d165
+ms.openlocfilehash: 42377ed2450fd86f1fddb3bdfd72a30262479432
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65611330"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97215431"
 ---
-# <a name="tn037-multithreaded-mfc-21-applications"></a>TN037:MFC 2.1 のマルチ スレッド アプリケーション
+# <a name="tn037-multithreaded-mfc-21-applications"></a>テクニカル ノート 37: MFC 2.1 のマルチスレッド アプリケーション
 
-このテクニカル ノートは、もともと MFC 2.1 では、最初に Visual C++ 1.0 で提供された Windows nt でのマルチ スレッド プログラムの制限事項を説明します。 マルチ スレッド MFC 3.0 サポート直接が記載されているとします。 詳細については、その参照を参照してください。
+このテクニカルノートでは、最初に MFC 2.1 でのマルチスレッドプログラムの制限事項について説明しました。これはもともと、Visual C++ 1.0 for Windows NT で提供されています。 MFC 3.0 では、マルチスレッドが直接サポートされ、ドキュメント化されています。 詳細については、「」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 
-[番号順テクニカル ノート](../mfc/technical-notes-by-number.md)<br/>
-[カテゴリ別テクニカル ノート](../mfc/technical-notes-by-category.md)
+[番号別テクニカルノート](../mfc/technical-notes-by-number.md)<br/>
+[カテゴリ別テクニカルノート](../mfc/technical-notes-by-category.md)

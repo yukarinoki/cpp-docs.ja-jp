@@ -1,4 +1,5 @@
 ---
+description: '詳細について: テクニカルノート 6: メッセージマップ'
 title: 'テクニカル ノート 6: メッセージ マップ'
 ms.date: 06/25/2018
 f1_keywords:
@@ -19,12 +20,12 @@ helpviewer_keywords:
 - ON_COMMAND_EX macro [MFC]
 - message maps [MFC], Windows messaging
 ms.assetid: af4b6794-4b40-4f1e-ad41-603c3b7409bb
-ms.openlocfilehash: 6b387b851f5a76cd0d11957a87e57307d624759e
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: f9331e5523015a670a2a874c9e9b3021d41eed09
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87228532"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97216055"
 ---
 # <a name="tn006-message-maps"></a>テクニカル ノート 6: メッセージ マップ
 
@@ -44,11 +45,11 @@ MFC には、ウィンドウに送信されたメッセージを処理するた�
 
 [DECLARE_MESSAGE_MAP](reference/message-map-macros-mfc.md#declare_message_map)マクロは、クラスの3つのメンバーを宣言します。
 
-- *_MessageEntries*と呼ばれる AFX_MSGMAP_ENTRY エントリのプライベート配列。
+- *_MessageEntries* と呼ばれる AFX_MSGMAP_ENTRY エントリのプライベート配列。
 
-- *_MessageEntries*配列を指す*messageMap*という名前の保護された AFX_MSGMAP 構造体。
+- *_MessageEntries* 配列を指す *messageMap* という名前の保護された AFX_MSGMAP 構造体。
 
-- `GetMessageMap` *MessageMap*のアドレスを返す、と呼ばれるプロテクト仮想関数。
+- `GetMessageMap` *MessageMap* のアドレスを返す、と呼ばれるプロテクト仮想関数。
 
 このマクロは、メッセージマップを使用して、任意のクラスの宣言に配置する必要があります。 慣例により、これはクラス宣言の最後にあります。 次に例を示します。
 
@@ -68,16 +69,16 @@ protected:
 
 これは、AppWizard および ClassWizard で新しいクラスを作成するときに生成される形式です。 ClassWizard には、//{{および//}} かっこが必要です。
 
-メッセージマップのテーブルは、メッセージマップエントリに展開されるマクロのセットを使用して定義されます。 テーブルは[BEGIN_MESSAGE_MAP](reference/message-map-macros-mfc.md#begin_message_map)マクロ呼び出しで始まります。このマクロ呼び出しでは、このメッセージマップによって処理されるクラスと、未処理のメッセージが渡される親クラスが定義されます。 テーブルは[END_MESSAGE_MAP](reference/message-map-macros-mfc.md#end_message_map)マクロ呼び出しで終了します。
+メッセージマップのテーブルは、メッセージマップエントリに展開されるマクロのセットを使用して定義されます。 テーブルは [BEGIN_MESSAGE_MAP](reference/message-map-macros-mfc.md#begin_message_map) マクロ呼び出しで始まります。このマクロ呼び出しでは、このメッセージマップによって処理されるクラスと、未処理のメッセージが渡される親クラスが定義されます。 テーブルは [END_MESSAGE_MAP](reference/message-map-macros-mfc.md#end_message_map) マクロ呼び出しで終了します。
 
-これら2つのマクロ呼び出しの間には、このメッセージマップによって処理される各メッセージのエントリがあります。 すべての標準 Windows メッセージには、そのメッセージのエントリを生成する*MESSAGE_NAME* ON_WM_ フォームのマクロがあります。
+これら2つのマクロ呼び出しの間には、このメッセージマップによって処理される各メッセージのエントリがあります。 すべての標準 Windows メッセージには、そのメッセージのエントリを生成する *MESSAGE_NAME* ON_WM_ フォームのマクロがあります。
 
-各 Windows メッセージのパラメーターをアンパックし、タイプセーフを提供するために、標準の関数シグネチャが定義されています。 これらの署名は、 [CWnd](../mfc/reference/cwnd-class.md)の宣言の afxwin.h ファイルにあります。 各には、簡単に識別できるように、キーワード**afx_msg**でマークされています。
+各 Windows メッセージのパラメーターをアンパックし、タイプセーフを提供するために、標準の関数シグネチャが定義されています。 これらの署名は、 [CWnd](../mfc/reference/cwnd-class.md)の宣言の afxwin.h ファイルにあります。 各には、簡単に識別できるように、キーワード **afx_msg** でマークされています。
 
 > [!NOTE]
-> ClassWizard では、メッセージマップハンドラーの宣言で**afx_msg**キーワードを使用する必要があります。
+> ClassWizard では、メッセージマップハンドラーの宣言で **afx_msg** キーワードを使用する必要があります。
 
-これらの関数シグネチャは、単純な規約を使用して派生されています。 関数の名前は常に "で始まり `"On` ます。 この後に、"WM_" が削除された Windows メッセージの名前と、各単語の最初の文字が大文字になります。 パラメーターの順序は、 *wParam*の後に `LOWORD` (*lparam*) then `HIWORD` (*lparam*) となります。 未使用のパラメーターは渡されません。 MFC クラスによってラップされたハンドルは、適切な MFC オブジェクトへのポインターに変換されます。 次の例では、WM_PAINT メッセージを処理し、 `CMyWnd::OnPaint` 関数を呼び出す方法を示します。
+これらの関数シグネチャは、単純な規約を使用して派生されています。 関数の名前は常に "で始まり `"On` ます。 この後に、"WM_" が削除された Windows メッセージの名前と、各単語の最初の文字が大文字になります。 パラメーターの順序は、 *wParam* の後に `LOWORD` (*lparam*) then `HIWORD` (*lparam*) となります。 未使用のパラメーターは渡されません。 MFC クラスによってラップされたハンドルは、適切な MFC オブジェクトへのポインターに変換されます。 次の例では、WM_PAINT メッセージを処理し、 `CMyWnd::OnPaint` 関数を呼び出す方法を示します。
 
 ```cpp
 BEGIN_MESSAGE_MAP(CMyWnd, CMyParentWndClass)
@@ -94,7 +95,7 @@ END_MESSAGE_MAP()
 
 ## <a name="user-defined-windows-messages"></a>ユーザー定義の Windows メッセージ
 
-ユーザー定義メッセージは、 [ON_MESSAGE](reference/message-map-macros-mfc.md#on_message)マクロを使用してメッセージマップに含めることができます。 このマクロは、次の形式のメッセージ番号とメソッドを受け入れます。
+ユーザー定義メッセージは、 [ON_MESSAGE](reference/message-map-macros-mfc.md#on_message) マクロを使用してメッセージマップに含めることができます。 このマクロは、次の形式のメッセージ番号とメソッドを受け入れます。
 
 ```cpp
     // inside the class declaration
@@ -121,7 +122,7 @@ pWnd->SendMessage(WM_MYMESSAGE);
 
 ## <a name="registered-windows-messages"></a>登録済みの Windows メッセージ
 
-[Registerwindowmessage](/windows/win32/api/winuser/nf-winuser-registerwindowmessagew)関数は、システム全体で一意であることが保証される新しいウィンドウメッセージを定義するために使用されます。 マクロ ON_REGISTERED_MESSAGE は、これらのメッセージを処理するために使用されます。 このマクロは、登録されている windows メッセージ ID を含む*UINT NEAR*変数の名前を受け入れます。 次に例を示します。
+[Registerwindowmessage](/windows/win32/api/winuser/nf-winuser-registerwindowmessagew)関数は、システム全体で一意であることが保証される新しいウィンドウメッセージを定義するために使用されます。 マクロ ON_REGISTERED_MESSAGE は、これらのメッセージを処理するために使用されます。 このマクロは、登録されている windows メッセージ ID を含む *UINT NEAR* 変数の名前を受け入れます。 次に例を示します。
 
 ```cpp
 class CMyWnd : public CMyParentWndClass
@@ -145,7 +146,7 @@ BEGIN_MESSAGE_MAP(CMyWnd, CMyParentWndClass)
 END_MESSAGE_MAP()
 ```
 
-登録されている Windows メッセージ ID 変数 (この例では WM_FIND) は ON_REGISTERED_MESSAGE の実装方法により、 *NEAR*変数である必要があります。
+登録されている Windows メッセージ ID 変数 (この例では WM_FIND) は ON_REGISTERED_MESSAGE の実装方法により、 *NEAR* 変数である必要があります。
 
 この方法を使用するユーザー定義メッセージの範囲は、0xC000 ~ 0xFFFF の範囲になります。
 
@@ -154,19 +155,19 @@ END_MESSAGE_MAP()
 
 ## <a name="command-messages"></a>コマンド メッセージ
 
-メニューおよびアクセラレータからのコマンドメッセージは、ON_COMMAND マクロを使用してメッセージマップで処理されます。 このマクロは、コマンド ID とメソッドを受け入れます。 指定されたコマンド ID と等しい*wParam*を持つ特定の WM_COMMAND メッセージのみが、メッセージマップエントリに指定されたメソッドによって処理されます。 コマンドハンドラーのメンバー関数は、パラメーターを取らず、を返し **`void`** ます。 マクロには、次の形式があります。
+メニューおよびアクセラレータからのコマンドメッセージは、ON_COMMAND マクロを使用してメッセージマップで処理されます。 このマクロは、コマンド ID とメソッドを受け入れます。 指定されたコマンド ID と等しい *wParam* を持つ特定の WM_COMMAND メッセージのみが、メッセージマップエントリに指定されたメソッドによって処理されます。 コマンドハンドラーのメンバー関数は、パラメーターを取らず、を返し **`void`** ます。 マクロには、次の形式があります。
 
 ```cpp
 ON_COMMAND(id, memberFxn)
 ```
 
-コマンド更新メッセージは同じメカニズムを通じてルーティングされますが、代わりに ON_UPDATE_COMMAND_UI マクロを使用します。 コマンド更新ハンドラーのメンバー関数は、単一のパラメーター、 [CCmdUI](../mfc/reference/ccmdui-class.md)オブジェクトへのポインターを受け取り、を返し **`void`** ます。 マクロの形式は、
+コマンド更新メッセージは同じメカニズムを通じてルーティングされますが、代わりに ON_UPDATE_COMMAND_UI マクロを使用します。 コマンド更新ハンドラーのメンバー関数は、単一のパラメーター、 [CCmdUI](../mfc/reference/ccmdui-class.md) オブジェクトへのポインターを受け取り、を返し **`void`** ます。 マクロの形式は、
 
 ```cpp
 ON_UPDATE_COMMAND_UI(id, memberFxn)
 ```
 
-上級ユーザーは、コマンドメッセージハンドラーの拡張形式である ON_COMMAND_EX マクロを使用できます。 マクロは、ON_COMMAND 機能のスーパーセットを提供します。 拡張コマンドハンドラーのメンバー関数は、1つのパラメーターを受け取り、コマンド ID を含む**UINT**を返し、**ブール**値を返します。 コマンドが処理されたことを示すには、戻り値が**TRUE**である必要があります。 それ以外の場合、ルーティングは他のコマンドターゲットオブジェクトに進みます。
+上級ユーザーは、コマンドメッセージハンドラーの拡張形式である ON_COMMAND_EX マクロを使用できます。 マクロは、ON_COMMAND 機能のスーパーセットを提供します。 拡張コマンドハンドラーのメンバー関数は、1つのパラメーターを受け取り、コマンド ID を含む **UINT** を返し、 **ブール** 値を返します。 コマンドが処理されたことを示すには、戻り値が **TRUE** である必要があります。 それ以外の場合、ルーティングは他のコマンドターゲットオブジェクトに進みます。
 
 これらの形式の例を次に示します。
 
@@ -213,7 +214,7 @@ ON_UPDATE_COMMAND_UI(id, memberFxn)
     }
     ```
 
-上級ユーザーは、1つのコマンドハンドラー ( [ON_COMMAND_RANGE](reference/message-map-macros-mfc.md#on_command_range)または ON_COMMAND_RANGE_EX) を使用して、さまざまなコマンドを処理できます。 これらのマクロの詳細については、製品のドキュメントを参照してください。
+上級ユーザーは、1つのコマンドハンドラー ( [ON_COMMAND_RANGE](reference/message-map-macros-mfc.md#on_command_range) または ON_COMMAND_RANGE_EX) を使用して、さまざまなコマンドを処理できます。 これらのマクロの詳細については、製品のドキュメントを参照してください。
 
 > [!NOTE]
 > ClassWizard では ON_COMMAND および ON_UPDATE_COMMAND_UI ハンドラーの作成がサポートされていますが、ON_COMMAND_EX または ON_COMMAND_RANGE ハンドラーの作成はサポートしていません。 ただし、クラスウィザードは解析を行い、4つのコマンドハンドラーのすべてのバリアントを参照できるようにします。
@@ -222,22 +223,22 @@ ON_UPDATE_COMMAND_UI(id, memberFxn)
 
 子コントロールからウィンドウに送信されるメッセージには、そのコントロールの ID であるメッセージマップエントリに追加の情報が含まれます。 メッセージマップエントリに指定されたメッセージハンドラーは、次の条件に該当する場合にのみ呼び出されます。
 
-- BN_CLICKED などのコントロール通知コード ( *lParam*の上位ワード) は、メッセージマップエントリで指定されている通知コードに一致します。
+- BN_CLICKED などのコントロール通知コード ( *lParam* の上位ワード) は、メッセージマップエントリで指定されている通知コードに一致します。
 
 - コントロール ID (*wParam*) は、メッセージマップエントリで指定されたコントロール id と一致します。
 
-カスタムコントロール通知メッセージでは、 [ON_CONTROL](reference/message-map-macros-mfc.md#on_control)マクロを使用して、カスタム通知コードを含むメッセージマップエントリを定義できます。 このマクロの形式は次のようになります。
+カスタムコントロール通知メッセージでは、 [ON_CONTROL](reference/message-map-macros-mfc.md#on_control) マクロを使用して、カスタム通知コードを含むメッセージマップエントリを定義できます。 このマクロの形式は次のようになります。
 
 ```cpp
 ON_CONTROL(wNotificationCode, id, memberFxn)
 ```
 
-高度な使用法[ON_CONTROL_RANGE](reference/message-map-macros-mfc.md#on_control_range)は、同じハンドラーを持つさまざまなコントロールから特定のコントロール通知を処理するために使用できます。
+高度な使用法 [ON_CONTROL_RANGE](reference/message-map-macros-mfc.md#on_control_range) は、同じハンドラーを持つさまざまなコントロールから特定のコントロール通知を処理するために使用できます。
 
 > [!NOTE]
 > ClassWizard では、ユーザーインターフェイスでの ON_CONTROL または ON_CONTROL_RANGE ハンドラーの作成はサポートされていません。 テキストエディターを使用して手動で入力する必要があります。 ClassWizard は、これらのエントリを解析し、他のメッセージマップエントリと同じように参照できるようにします。
 
-Windows コモンコントロールは、複雑なコントロール通知に強力な[WM_NOTIFY](/windows/win32/controls/wm-notify)を使用します。 このバージョンの MFC では、ON_NOTIFY と ON_NOTIFY_RANGE マクロを使用して、この新しいメッセージを直接サポートしています。 これらのマクロの詳細については、製品のドキュメントを参照してください。
+Windows コモンコントロールは、複雑なコントロール通知に強力な [WM_NOTIFY](/windows/win32/controls/wm-notify) を使用します。 このバージョンの MFC では、ON_NOTIFY と ON_NOTIFY_RANGE マクロを使用して、この新しいメッセージを直接サポートしています。 これらのマクロの詳細については、製品のドキュメントを参照してください。
 
 ## <a name="see-also"></a>関連項目
 

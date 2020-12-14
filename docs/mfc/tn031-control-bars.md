@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: テクニカルノート 31: コントロールバー'
 title: 'テクニカル ノート 31: コントロール バー'
 ms.date: 11/04/2016
 f1_keywords:
@@ -14,23 +15,23 @@ helpviewer_keywords:
 - TN031
 - styles [MFC], control bars
 ms.assetid: 8cb895c0-40ea-40ef-90ee-1dd29f34cfd1
-ms.openlocfilehash: 37c3a15c281018260e65508dee3799ab0011dbfe
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 42dddf1afabdf2ab04ba8441208e7109eeacbd65
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81370302"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97215548"
 ---
 # <a name="tn031-control-bars"></a>テクニカル ノート 31: コントロール バー
 
 > [!NOTE]
 > 次のテクニカル ノートは、最初にオンライン ドキュメントの一部とされてから更新されていません。 結果として、一部のプロシージャおよびトピックが最新でないか、不正になります。 最新の情報について、オンライン ドキュメントのキーワードで関係のあるトピックを検索することをお勧めします。
 
-このノートは、MFC のコントロール バー クラスについて[CControlBar](#_mfcnotes_ccontrolbar)説明します。 [CStatusBar](#_mfcnotes_cstatusbar) [CToolBar](#_mfcnotes_ctoolbar) [CDialogBar](#_mfcnotes_cdialogbar) `CDockBar`
+このメモでは、MFC のコントロールバークラス (general [CControlBar](#_mfcnotes_ccontrolbar)、 [CStatusBar](#_mfcnotes_cstatusbar)、 [CToolBar](#_mfcnotes_ctoolbar)、 [CDialogBar](#_mfcnotes_cdialogbar)、および) について説明し `CDockBar` ます。
 
 ## <a name="ccontrolbar"></a><a name="_mfcnotes_ccontrolbar"></a> CControlBar
 
-A`ControlBar`は`CWnd`、次のクラスを持つ派生クラスです。
+は、 `ControlBar` `CWnd` 次のようなの派生クラスです。
 
 - フレーム ウィンドウの上部または下部に配置されます。
 
@@ -38,11 +39,11 @@ A`ControlBar`は`CWnd`、次のクラスを持つ派生クラスです。
 
 コントロール バーでは、次の追加スタイルがサポートされています。
 
-- CBRS_TOP(デフォルト)、コントロールバーを上部に固定します。
+- CBRS_TOP (既定) コントロールバーを上部に固定します。
 
-- CBRS_BOTTOM コントロール バーを下部に固定します。
+- CBRS_BOTTOM コントロールバーを下部に固定します。
 
-- CBRS_NOALIGN 親のサイズが変更されたときに、コントロール バーの位置を変更しません。
+- CBRS_NOALIGN、親のサイズ変更時にコントロールバーの位置を変更しません。
 
 `CControlBar` からの派生クラスには、次のような、さらに興味深い実装が用意されています。
 
@@ -52,7 +53,7 @@ A`ControlBar`は`CWnd`、次のクラスを持つ派生クラスです。
 
 - `CDialogBar` : 標準ウィンドウ コントロールを含む、ツール バーに似たフレーム (ダイアログ テンプレート リソースから作成できます)。
 
-- `CDockBar`他`CControlBar`の派生オブジェクトの汎用ドッキング領域。 このクラスで利用できる特定のメンバー関数および変数は、今後のリリースで変更される可能性があります。
+- `CDockBar` 他の派生オブジェクトの一般化されたドッキング領域 `CControlBar` 。 このクラスで利用できる特定のメンバー関数および変数は、今後のリリースで変更される可能性があります。
 
 すべてのコントロール バー オブジェクト/ウィンドウが、一部の親フレーム ウィンドウの子ウィンドウになります。 これらは通常、フレームのクライアント領域 (たとえば、MDI クライアントまたはビュー) に兄弟として追加されます。 コントロール バーの子ウィンドウ ID は重要な ID です。 コントロール バーの既定のレイアウトは、ID が AFX_IDW_CONTROLBAR_FIRST ～ AFX_IDW_CONTROLBAR_LAST の範囲内にあるコントロール バーに対してのみ有効です。 コントロール バー ID の範囲が 256 まである場合でも、最初の 32 までは特殊なコントロール バー ID です (印刷プレビューのアーキテクチャによって直接サポートされるため)。
 
@@ -64,10 +65,10 @@ A`ControlBar`は`CWnd`、次のクラスを持つ派生クラスです。
 
 - 派生クラスの実装をサポートする。
 
-通常、C++ コントロール バー オブジェクトは `CFrameWnd` 派生クラスのメンバーとして埋め込まれ、親の `HWND` とオブジェクトが破棄された場合にはクリーンアップされます。 ヒープ上にコントロール バー オブジェクトを割り当てる必要がある場合は、 *が破棄されたときにコントロール バーが "* delete this **" を実行するように、** m_bAutoDestruct**メンバーを**TRUE `HWND` に設定します。
+通常、C++ コントロール バー オブジェクトは `CFrameWnd` 派生クラスのメンバーとして埋め込まれ、親の `HWND` とオブジェクトが破棄された場合にはクリーンアップされます。 ヒープ上にコントロール バー オブジェクトを割り当てる必要がある場合は、 *が破棄されたときにコントロール バーが "* delete this **" を実行するように、** m_bAutoDestruct **メンバーを** TRUE `HWND` に設定します。
 
 > [!NOTE]
-> などの MFC の`CControlBar`派生クラスを使用するのではなく、独自の`CStatusBar`派生クラス`CToolBar`を`CDialogBar`作成する場合は *、m_dwStyle*データ メンバーを設定する必要があります。 これは、 のオーバーライドで行うことができます`Create`。
+> `CControlBar`、、またはなど、MFC の派生クラスの1つを使用するのではなく、独自の派生クラスを作成する場合 `CStatusBar` は、 `CToolBar` `CDialogBar` *m_dwStyle* データメンバーを設定する必要があります。 これは、次のオーバーライドで実行でき `Create` ます。
 
 ```
 // CMyControlBar is derived from CControlBar
@@ -89,9 +90,9 @@ BOOL CMyControlBar::Create(CWnd* pParentWnd,
 
 詳細については、「 `CWnd::RepositionBars` 」と「 `CFrameWnd::RecalcLayout` 」を参照してください。
 
-mfc プライベート Windows メッセージ (WM_SIZEPARENTなど) については、[テクニカル ノート 24](../mfc/tn024-mfc-defined-messages-and-resources.md)に記載されています。
+WM_SIZEPARENT を含む MFC プライベート Windows メッセージについては、 [テクニカルノート 24](../mfc/tn024-mfc-defined-messages-and-resources.md)に記載されています。
 
-## <a name="cstatusbar"></a><a name="_mfcnotes_cstatusbar"></a>Cstatusbar
+## <a name="cstatusbar"></a><a name="_mfcnotes_cstatusbar"></a> CStatusBar
 
 ステータス バーとは、テキスト出力ペインの行を持つコントロール バーです。 テキスト出力ペインの使用方法としては、次の 2 つの方法が一般的です。
 
@@ -107,7 +108,7 @@ mfc プライベート Windows メッセージ (WM_SIZEPARENTなど) につい�
 
 ステータス バーで使用される色は、Windows インターフェイス アプリケーション デザイン ガイドの推奨事項にも適合しています。 これらの色はハード コーディングされていないため、コントロール パネルでのユーザーによるカスタマイズに応じて動的に変化します。
 
-|Item|Windows COLOR 値|既定の RGB|
+|アイテム|Windows COLOR 値|既定の RGB|
 |----------|-------------------------|-----------------|
 |ステータス バーの背景|COLOR_BTNFACE|RGB (192, 192, 192)|
 |ステータス バーのテキスト|COLOR_BTNTEXT|RGB (000, 000, 000)|
@@ -116,11 +117,11 @@ mfc プライベート Windows メッセージ (WM_SIZEPARENTなど) につい�
 
 **CStatusBar 用の CCmdUI のサポート**
 
-指標が通常更新される方法は、ON_UPDATE_COMMAND_UIメカニズムを介して行われます。 アイドル時に、ステータス バーはインジケーター ペインの文字列 ID を持つON_UPDATE_COMMAND_UI ハンドラーを呼び出します。
+通常、インジケーターは、ON_UPDATE_COMMAND_UI メカニズムを使用して更新されます。 アイドル時に、ステータスバーは、インジケーターペインの文字列 ID を使用して ON_UPDATE_COMMAND_UI ハンドラーを呼び出します。
 
-ON_UPDATE_COMMAND_UI ハンドラは、次の処理を呼び出すことができます。
+ON_UPDATE_COMMAND_UI ハンドラーは次を呼び出すことができます。
 
-- `Enable`: ウィンドウを有効または無効にします。 無効なペインの見た目は有効なペインとまったく同じですが、テキストが非表示になります (つまり、テキスト インジケーターが無効になります)。
+- `Enable`: ペインを有効または無効にします。 無効なペインの見た目は有効なペインとまったく同じですが、テキストが非表示になります (つまり、テキスト インジケーターが無効になります)。
 
 - `SetText`: テキストを変更します。 これを使用する場合は、ペインのサイズが自動的に変更されない点に注意してください。
 
@@ -128,9 +129,9 @@ ON_UPDATE_COMMAND_UI ハンドラは、次の処理を呼び出すことがで�
 
 ステータス バーでは、可変幅ペインが 1 つだけサポートされており、通常は最初のペインがこれにあたります。 このペインのサイズは、実際には最小サイズです。 ステータス バーがすべてのペインの最小サイズより大きい場合、余分な幅は可変幅ペインに与えられます。 ステータス バーを持つ既定のアプリケーションは、最初のペインが可変幅であるため、CAP、NUM、および SCRL 用のインジケーターが右揃えになります。
 
-## <a name="ctoolbar"></a><a name="_mfcnotes_ctoolbar"></a>Ctoolbar
+## <a name="ctoolbar"></a><a name="_mfcnotes_ctoolbar"></a> CToolBar
 
-ツール バーとは、ビットマップ ボタンの行を持つコントロール バーであり、区分線を含むことができます。 プッシュ ボタンとチェック ボックス ボタンという 2 つのスタイルがサポートされます。 ラジオ グループ機能は、チェック ボックス ボタンとON_UPDATE_COMMAND_UIで構築できます。
+ツール バーとは、ビットマップ ボタンの行を持つコントロール バーであり、区分線を含むことができます。 プッシュ ボタンとチェック ボックス ボタンという 2 つのスタイルがサポートされます。 オプショングループの機能は、チェックボックスボタンと ON_UPDATE_COMMAND_UI を使用して作成できます。
 
 ツール バー内のすべてのビットマップ ボタンは、1 つのビットマップから取得します。 このビットマップには、ボタンごとに 1 つの画像またはグリフが含まれている必要があります。 通常、ビットマップ内の画像/グリフの順序は、画面に描画される順序と同じです (この順序はカスタマイズ API を使用して変更できます)。
 
@@ -140,7 +141,7 @@ ON_UPDATE_COMMAND_UI ハンドラは、次の処理を呼び出すことがで�
 
 ツール バーで使用される色は、Windows インターフェイス アプリケーション デザイン ガイドの推奨事項にも適合しています。 これらの色はハード コーディングされていないため、コントロール パネルでのユーザーによるカスタマイズに応じて動的に変化します。
 
-|Item|Windows COLOR 値|既定の RGB|
+|アイテム|Windows COLOR 値|既定の RGB|
 |----------|-------------------------|-----------------|
 |ツール バーの背景|COLOR_BTNFACE|RGB (192, 192, 192)|
 |ツール バー ボタンの上端/左端|COLOR_BTNHIGHLIGHT|RGB (255, 255, 255)|
@@ -161,9 +162,9 @@ ON_UPDATE_COMMAND_UI ハンドラは、次の処理を呼び出すことがで�
 
 ## <a name="ccmdui-support-for-ctoolbar"></a>CToolBar 用の CCmdUI のサポート
 
-ツール バー ボタンが常に更新される方法は、ON_UPDATE_COMMAND_UIメカニズムを使用します。 アイドル時に、ツール バーは、そのボタンのコマンド ID を使用してON_UPDATE_COMMAND_UI ハンドラーを呼び出します。 ON_UPDATE_COMMAND_UIは区切り記号の場合は呼び出されませんが、押ボタンとチェックボックスボタンの場合は呼び出されます。
+ツールバーのボタンは、常に ON_UPDATE_COMMAND_UI メカニズムを使用して更新されます。 アイドル時には、ツールバーはそのボタンのコマンド ID を使用して ON_UPDATE_COMMAND_UI ハンドラーを呼び出します。 区切り記号に ON_UPDATE_COMMAND_UI は呼び出されませんが、プッシュボタンとチェックボックスボタンに対して呼び出されます。
 
-ON_UPDATE_COMMAND_UI ハンドラは、次の処理を呼び出すことができます。
+ON_UPDATE_COMMAND_UI ハンドラーは次を呼び出すことができます。
 
 - `Enable`: ボタンを有効または無効にします。 これはプッシュ ボタンでもチェック ボックス ボタンでも同様に機能します。
 
@@ -173,9 +174,9 @@ ON_UPDATE_COMMAND_UI ハンドラは、次の処理を呼び出すことがで�
 
 チェック ボックス ボタンは "AUTO" チェック ボックス ボタンです。つまり、ユーザーがそのボタンを押すと、すぐにボタンの状態が変化します。 オン状態は、ダウン状態または押されている状態です。 組み込みのユーザー インターフェイスには、ボタンを "不確定" 状態に変更する方法はありません。この操作はコードを通じて実行する必要があります。
 
-カスタマイズ API を使用すると、特定のツール バー ボタンの状態を ON_UPDATE_COMMAND_UI変更できます。 アイドル処理は、ON_UPDATE_COMMAND_UI ハンドラーを使用してツール バー ボタンの状態を変更するので、SetButtonStyle を使用してこれらの状態に加えられた変更は、次のアイドル状態の後に失われる可能性があります。
+カスタマイズ Api を使用すると、特定のツールバーボタンの状態を変更できます。そのため、ツールバーボタンが表すコマンドの ON_UPDATE_COMMAND_UI ハンドラーでこれらの状態を変更することをお勧めします。 アイドル処理によってツールバーボタンの状態が ON_UPDATE_COMMAND_UI ハンドラーに変更されるので、SetButtonStyle によるこれらの状態への変更は、次にアイドル状態になると失われる可能性があることに注意してください。
 
-ツール バー ボタンは、通常のボタンやメニュー項目などのWM_COMMANDメッセージを送信し、通常はON_UPDATE_COMMAND_UI ハンドラーを提供する同じクラスのON_COMMAND ハンドラーによって処理されます。
+ツールバーのボタンは、通常のボタンやメニュー項目などの WM_COMMAND メッセージを送信し、通常は ON_UPDATE_COMMAND_UI ハンドラーを提供するのと同じクラスの ON_COMMAND ハンドラーによって処理されます。
 
 ツール バーのボタンには 4 つのスタイル (TBBS_ 値) があり、次の状態を表示するために使用されます。
 
@@ -191,13 +192,13 @@ ON_UPDATE_COMMAND_UI ハンドラは、次の処理を呼び出すことがで�
 
 - Up = 0
 
-- マウスダウン = TBBS_PRESSED (他のスタイル&#124;)
+- マウスダウン = TBBS_PRESSED (他のスタイルの &#124;)
 
 - Disabled (無効) = TBBS_DISABLED
 
 - Down (ダウン) = TBBS_CHECKED
 
-- [無効] = TBBS_CHECKED&#124;TBBS_DISABLED
+- Down Disabled = TBBS_CHECKED &#124; TBBS_DISABLED
 
 - Indeterminate (不確定) = TBBS_INDETERMINATE
 
@@ -213,9 +214,9 @@ ON_UPDATE_COMMAND_UI ハンドラは、次の処理を呼び出すことがで�
 
 ## <a name="ccmdui-support-for-cdialogbar"></a>CDialogBar 用の CCmdUI のサポート
 
-ダイアログ バーボタンは、ON_UPDATE_COMMAND_UI ハンドラーメカニズムを通じて更新する必要があります。 アイドル時に、ダイアログ バーは、ID >= 0x8000 (つまり、コマンド ID の範囲) を持つすべてのボタンのコマンド ID を使用して、ON_UPDATE_COMMAND_UI ハンドラーを呼び出します。
+ダイアログバーのボタンは、ON_UPDATE_COMMAND_UI ハンドラーのメカニズムを使用して更新する必要があります。 アイドル時に、ダイアログバーは、ID >= 0x8000 (つまり、コマンド Id の範囲内) のすべてのボタンのコマンド ID を使用して、ON_UPDATE_COMMAND_UI ハンドラーを呼び出します。
 
-ON_UPDATE_COMMAND_UI ハンドラは、次の処理を呼び出すことができます。
+ON_UPDATE_COMMAND_UI ハンドラーは次を呼び出すことができます。
 
 - Enable: ボタンを有効または無効にします。
 
@@ -225,5 +226,5 @@ ON_UPDATE_COMMAND_UI ハンドラは、次の処理を呼び出すことがで�
 
 ## <a name="see-also"></a>関連項目
 
-[番号順テクニカル ノート](../mfc/technical-notes-by-number.md)<br/>
-[カテゴリ別テクニカル ノート](../mfc/technical-notes-by-category.md)
+[番号別テクニカルノート](../mfc/technical-notes-by-number.md)<br/>
+[カテゴリ別テクニカルノート](../mfc/technical-notes-by-category.md)

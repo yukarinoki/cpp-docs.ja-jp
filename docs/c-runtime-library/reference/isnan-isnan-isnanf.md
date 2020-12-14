@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「isnan、_isnan、_isnanf」を参照してください。
 title: isnan、_isnan、_isnanf
 ms.date: 01/31/2019
 api_name:
@@ -35,12 +36,12 @@ helpviewer_keywords:
 - Not a Number (NANs)
 - isnan function
 ms.assetid: 391fbc5b-89a4-4fba-997e-68f1131caf82
-ms.openlocfilehash: 5aebacd15000e0202a26f600614900390c1ba7a4
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 819b53740c6717f0ba8d18376a38c91c80ee03c0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87213542"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97211246"
 ---
 # <a name="isnan-_isnan-_isnanf"></a>isnan、_isnan、_isnanf
 
@@ -74,17 +75,17 @@ bool isnan(
 
 ## <a name="return-value"></a>戻り値
 
-C では、引数*x*が NAN の場合、 **isnan**マクロおよび **_isnan**および **_isnanf**関数は0以外の値を返します。それ以外の場合は0を返します。
+C では、引数 *x* が NAN の場合、 **isnan** マクロおよび **_isnan** および **_isnanf** 関数は0以外の値を返します。それ以外の場合は0を返します。
 
-C++ では、 **isnan**テンプレート関数は、 **`true`** 引数*x*が NaN の場合はを返し、それ以外の場合はを返し **`false`** ます。
+C++ では、 **isnan** テンプレート関数は、 **`true`** 引数 *x* が NaN の場合はを返し、それ以外の場合はを返し **`false`** ます。
 
 ## <a name="remarks"></a>解説
 
 NaN 値は他の NaN 値と等しいとは比較されないため、これらの関数またはマクロのいずれかを使用して検出する必要があります。 浮動小数点演算の結果を、指定された型の IEEE-754 浮動小数点形式で表現できない場合、NaN が生成されます。 出力の NaN の表現方法については、「 [printf](printf-printf-l-wprintf-wprintf-l.md)」を参照してください。
 
-C++ としてコンパイルされた場合、 **isnan**マクロは定義されず、代わりに**isnan**テンプレート関数が定義されます。 マクロと同じように動作しますが、整数ではなく型の値を返し **`bool`** ます。
+C++ としてコンパイルされた場合、 **isnan** マクロは定義されず、代わりに **isnan** テンプレート関数が定義されます。 マクロと同じように動作しますが、整数ではなく型の値を返し **`bool`** ます。
 
-**_Isnan**関数と **_isnanf**関数は、Microsoft 固有の関数です。 **_Isnanf**関数は、x64 用にコンパイルされた場合にのみ使用できます。
+**_Isnan** 関数と **_isnanf** 関数は、Microsoft 固有の関数です。 **_Isnanf** 関数は、x64 用にコンパイルされた場合にのみ使用できます。
 
 ## <a name="requirements"></a>必要条件
 

@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: テクニカルノート 16: C++ を使用した MFC での多重継承'
 title: 'テクニカル ノート 16: MFC における C++ の多重継承'
 ms.date: 06/28/2018
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - MI (Multiple Inheritance)
 - multiple inheritance, MFC support for
 ms.assetid: 4ee27ae1-1410-43a5-b111-b6af9b84535d
-ms.openlocfilehash: c44639e713f6d0b26d5b74e9f645f60c8627e0c8
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: ac4b082a5dc33e93098453714acd25fbd0c18438
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87231768"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97215951"
 ---
 # <a name="tn016-using-c-multiple-inheritance-with-mfc"></a>テクニカル ノート 16: MFC における C++ の多重継承
 
@@ -25,17 +26,17 @@ ms.locfileid: "87231768"
 
 ## <a name="cruntimeclass"></a>CRuntimeClass
 
-MFC の永続化および動的オブジェクト作成メカニズムでは、 [CRuntimeClass](../mfc/reference/cruntimeclass-structure.md)データ構造体を使用してクラスを一意に識別します。 MFC は、これらの構造体の1つを、アプリケーション内の各動的またはシリアル化可能なクラスに関連付けます。 これらの構造体は、アプリケーションを起動するときに、型の特殊な静的オブジェクトを使用して初期化され `AFX_CLASSINIT` ます。
+MFC の永続化および動的オブジェクト作成メカニズムでは、 [CRuntimeClass](../mfc/reference/cruntimeclass-structure.md) データ構造体を使用してクラスを一意に識別します。 MFC は、これらの構造体の1つを、アプリケーション内の各動的またはシリアル化可能なクラスに関連付けます。 これらの構造体は、アプリケーションを起動するときに、型の特殊な静的オブジェクトを使用して初期化され `AFX_CLASSINIT` ます。
 
 の現在の実装 `CRuntimeClass` では、MI ランタイム型情報はサポートされていません。 これは、MFC アプリケーションで MI を使用できないという意味ではありません。 ただし、複数の基底クラスを持つオブジェクトを操作する場合は、特定の責任があります。
 
-[CObject:: IsKindOf](../mfc/reference/cobject-class.md#iskindof)メソッドでは、複数の基底クラスがある場合、オブジェクトの型を正しく判断できません。 したがって、 [cobject](../mfc/reference/cobject-class.md)を仮想基底クラスとして使用することはできません。また、 `CObject` C++ が適切な関数呼び出しを明確に区別できるように、Cobject [:: Serialize](../mfc/reference/cobject-class.md#serialize)や[cobject:: operator new](../mfc/reference/cobject-class.md#operator_new)などのメンバー関数へのすべての呼び出しにはスコープ修飾子が必要です。 プログラムが MFC 内で MI を使用する場合、基底クラスを含むクラスは、 `CObject` 基底クラスのリストの一番左のクラスである必要があります。
+[CObject:: IsKindOf](../mfc/reference/cobject-class.md#iskindof)メソッドでは、複数の基底クラスがある場合、オブジェクトの型を正しく判断できません。 したがって、 [cobject](../mfc/reference/cobject-class.md) を仮想基底クラスとして使用することはできません。また、 `CObject` C++ が適切な関数呼び出しを明確に区別できるように、Cobject [:: Serialize](../mfc/reference/cobject-class.md#serialize) や [cobject:: operator new](../mfc/reference/cobject-class.md#operator_new) などのメンバー関数へのすべての呼び出しにはスコープ修飾子が必要です。 プログラムが MFC 内で MI を使用する場合、基底クラスを含むクラスは、 `CObject` 基底クラスのリストの一番左のクラスである必要があります。
 
 別の方法として、演算子を使用することも **`dynamic_cast`** できます。 MI を使用してオブジェクトを基底クラスの1つにキャストすると、コンパイラは、指定された基底クラスの関数を強制的に使用します。 詳細については、「 [Dynamic_cast 演算子](../cpp/dynamic-cast-operator.md)」を参照してください。
 
 ## <a name="cobject---the-root-of-all-classes"></a>CObject-すべてのクラスのルート
 
-すべての重要なクラスは、クラスから直接または間接的に派生 `CObject` します。 `CObject`にはメンバーデータはありませんが、既定の機能がいくつかあります。 MI を使用する場合は、通常、2つ以上 `CObject` の派生クラスから継承します。 次の例は、クラスが[CFrameWnd](../mfc/reference/cframewnd-class.md)と[CObList](../mfc/reference/coblist-class.md)から継承する方法を示しています。
+すべての重要なクラスは、クラスから直接または間接的に派生 `CObject` します。 `CObject` にはメンバーデータはありませんが、既定の機能がいくつかあります。 MI を使用する場合は、通常、2つ以上 `CObject` の派生クラスから継承します。 次の例は、クラスが [CFrameWnd](../mfc/reference/cframewnd-class.md) と [CObList](../mfc/reference/coblist-class.md)から継承する方法を示しています。
 
 ```cpp
 class CListWnd : public CFrameWnd, public CObList
@@ -45,7 +46,7 @@ class CListWnd : public CFrameWnd, public CObList
 CListWnd myListWnd;
 ```
 
-この例で `CObject` は、が2回含まれています。 これは、メソッドまたは演算子への参照を明確に区別する方法が必要であることを意味し `CObject` ます。 **Operator new**と[operator delete](../mfc/reference/cobject-class.md#operator_delete)は、2つの演算子を明確する必要があります。 別の例として、コンパイル時に次のコードを実行するとエラーが発生します。
+この例で `CObject` は、が2回含まれています。 これは、メソッドまたは演算子への参照を明確に区別する方法が必要であることを意味し `CObject` ます。 **Operator new** と [operator delete](../mfc/reference/cobject-class.md#operator_delete)は、2つの演算子を明確する必要があります。 別の例として、コンパイル時に次のコードを実行するとエラーが発生します。
 
 ```cpp
 myListWnd.Dump(afxDump); // compile time error, CFrameWnd::Dump or CObList::Dump
@@ -53,7 +54,7 @@ myListWnd.Dump(afxDump); // compile time error, CFrameWnd::Dump or CObList::Dump
 
 ## <a name="reimplementing-cobject-methods"></a>CObject メソッドの再実装
 
-2つ以上の派生基底クラスを持つ新しいクラスを作成する場合は、 `CObject` `CObject` 他のユーザーが使用するメソッドを再実装する必要があります。 演算子 **`new`** と **`delete`** は必須であり、 [Dump](../mfc/reference/cobject-class.md#dump)をお勧めします。 次の例では、 **`new`** and 演算子とメソッドを再実装してい **`delete`** `Dump` ます。
+2つ以上の派生基底クラスを持つ新しいクラスを作成する場合は、 `CObject` `CObject` 他のユーザーが使用するメソッドを再実装する必要があります。 演算子 **`new`** と **`delete`** は必須であり、 [Dump](../mfc/reference/cobject-class.md#dump) をお勧めします。 次の例では、 **`new`** and 演算子とメソッドを再実装してい **`delete`** `Dump` ます。
 
 ```cpp
 class CListWnd : public CFrameWnd, public CObList
@@ -80,7 +81,7 @@ public:
 
 実質的に継承することで、 `CObject` 関数のあいまいさに関する問題が解決しますが、そうではないように思えるかもしれません。 にはメンバーデータがないため `CObject` 、基底クラスのメンバーデータの複数のコピーを防ぐために、仮想継承は必要ありません。 前に示した最初の例では、 `Dump` 仮想メソッドはとで異なる方法で実装されているため、まだあいまいです `CFrameWnd` `CObList` 。 あいまいさを解消する最善の方法は、前のセクションで説明した推奨事項に従うことです。
 
-## <a name="cobjectiskindof-and-run-time-typing"></a>CObject:: IsKindOf と実行時の入力
+## <a name="cobjectiskindof-and-run-time-typing"></a>CObject:: IsKindOf と Run-Time の入力
 
 の MFC でサポートされている実行時の入力機構では、 `CObject` マクロ DECLARE_DYNAMIC、IMPLEMENT_DYNAMIC、DECLARE_DYNCREATE、IMPLEMENT_DYNCREATE、DECLARE_SERIAL、および IMPLEMENT_SERIAL を使用します。 これらのマクロは、実行時の型チェックを実行して、安全なダウンキャストを保証できます。
 
@@ -115,7 +116,7 @@ class CListEdit : public CObList, public CEdit
 
 ## <a name="a-sample-program-using-mi"></a>MI を使用したサンプルプログラム
 
-次のサンプルは、と CWinApp から派生した1つのクラスで構成されるスタンドアロンアプリケーションです `CFrameWnd` 。 [CWinApp](../mfc/reference/cwinapp-class.md) この方法でアプリケーションを構築することはお勧めしませんが、これは、1つのクラスを持つ最小の MFC アプリケーションの例です。
+次のサンプルは、と CWinApp から派生した1つのクラスで構成されるスタンドアロンアプリケーションです `CFrameWnd` 。 [](../mfc/reference/cwinapp-class.md) この方法でアプリケーションを構築することはお勧めしませんが、これは、1つのクラスを持つ最小の MFC アプリケーションの例です。
 
 ```cpp
 #include <afxwin.h>

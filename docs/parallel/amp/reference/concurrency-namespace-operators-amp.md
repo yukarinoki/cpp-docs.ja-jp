@@ -1,13 +1,14 @@
 ---
+description: 詳細については、「Concurrency 名前空間演算子 (AMP)」を参照してください。
 title: コンカレンシー名前空間演算子 (AMP)
 ms.date: 11/04/2016
 ms.assetid: 77f1ae17-1eb2-480d-8fe5-66d4c24bb91e
-ms.openlocfilehash: 1b6353e1edbe216dcb8aa5a342e139d826b82c6c
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: d57edbf790a1ebc4da179878dcf5082f53b45400
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88845342"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97211727"
 ---
 # <a name="concurrency-namespace-operators-amp"></a>コンカレンシー名前空間演算子 (AMP)
 

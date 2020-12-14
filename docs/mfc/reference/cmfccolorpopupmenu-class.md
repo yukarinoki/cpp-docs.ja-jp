@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: CMFCColorPopupMenu クラス'
 title: CMFCColorPopupMenu クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 - CMFCColorPopupMenu [MFC], GetMenuBar
 - CMFCColorPopupMenu [MFC], SetPropList
 ms.assetid: 0bf9efe8-aed5-4ab7-b23b-eb284b4668be
-ms.openlocfilehash: 2964f250b25ad6c77c70e8f10cd92cca0c7d11da
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 1668064fa253ea17bdce1ba393bd892ef8769b71
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88844562"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97211831"
 ---
 # <a name="cmfccolorpopupmenu-class"></a>CMFCColorPopupMenu クラス
 
@@ -78,7 +79,7 @@ class CMFCColorPopupMenu : public CMFCPopupMenu
 
 [CMFCColorPopupMenu](../../mfc/reference/cmfccolorpopupmenu-class.md)
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** afxcolorpopupmenu
 
@@ -138,7 +139,7 @@ CMFCColorPopupMenu(
 *lpszOtherColor*<br/>
 から *他* のボタンのテキストラベル。より多くの色の選択肢を表示するか、NULL を表示します。
 
-[その他] ボタンの標準ラベルは **より多くの色**です....
+[その他] ボタンの標準ラベルは **より多くの色** です....
 
 *lpszDocColors*<br/>
 から[ドキュメントの色] ボタンのテキストラベル。 ドキュメントの色パレットには、ドキュメントが現在使用しているすべての色が表示されます。

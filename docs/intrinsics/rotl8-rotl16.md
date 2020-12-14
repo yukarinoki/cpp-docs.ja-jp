@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: _rotl8、_rotl16'
 title: _rotl8、_rotl16
 ms.date: 09/02/2019
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - _rotl8 intrinsic
 - _rotl16 intrinsic
 ms.assetid: 8c519ab6-aef9-4f07-a387-daee8408368f
-ms.openlocfilehash: 5dffde2d3f830b6ec4ad43865648c27b1defb593
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 71ef10bb6af750fc08955fbdf82975b1ed32fa94
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70218027"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97211909"
 ---
 # <a name="_rotl8-_rotl16"></a>_rotl8、_rotl16
 
@@ -36,7 +37,7 @@ unsigned short _rotl16(
 
 ### <a name="parameters"></a>パラメーター
 
-*value*\
+*数値*\
 から回転する値。
 
 *転換*\
@@ -46,16 +47,16 @@ unsigned short _rotl16(
 
 回転後の値。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-|組み込み|アーキテクチャ|
+|Intrinsic|アーキテクチャ|
 |---------------|------------------|
 |`_rotl8`|x86、ARM、x64、ARM64|
 |`_rotl16`|x86、ARM、x64、ARM64|
 
-**ヘッダーファイル**\<>
+**ヘッダー ファイル** \<intrin.h>
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 左シフト演算とは異なり、左の回転を実行すると、高い方から外れた上位ビットが最下位のビット位置に移動されます。
 
@@ -102,5 +103,5 @@ Rotating unsigned short 0x12 left by 10 bits gives 0x4800
 
 ## <a name="see-also"></a>関連項目
 
-[rotr8、rotr16](../intrinsics/rotr8-rotr16.md)\
+[_rotr8、_rotr16](../intrinsics/rotr8-rotr16.md)\
 [コンパイラの組み込み](../intrinsics/compiler-intrinsics.md)

@@ -1,5 +1,6 @@
 ---
-title: TN043:RFX ルーチン
+description: '詳細情報: テクニカルノート 43: RFX ルーチン'
+title: 'テクニカル ノート 43: RFX ルーチン'
 ms.date: 06/28/2018
 f1_keywords:
 - RFX
@@ -8,23 +9,23 @@ helpviewer_keywords:
 - TN043
 - RFX (record field exchange)
 ms.assetid: f552d0c1-2c83-4389-b472-42c9940aa713
-ms.openlocfilehash: 18820c7d17ddea355490ee32679d5d690ec3533e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6e5ac8271739e5cab80b79cb915b07e7d25622cf
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62305399"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97215223"
 ---
-# <a name="tn043-rfx-routines"></a>TN043:RFX ルーチン
+# <a name="tn043-rfx-routines"></a>テクニカル ノート 43: RFX ルーチン
 
 > [!NOTE]
 > 次のテクニカル ノートは、最初にオンライン ドキュメントの一部とされてから更新されていません。 結果として、一部のプロシージャおよびトピックが最新でないか、不正になります。 最新の情報について、オンライン ドキュメントのキーワードで関係のあるトピックを検索することをお勧めします。
 
-ここでは、レコード フィールド エクス (チェンジ RFX) のアーキテクチャについて説明します。 作成する方法も説明、 **rfx _** プロシージャ。
+このメモでは、レコードフィールドエクスチェンジ (RFX) アーキテクチャについて説明します。 また、 **RFX_** プロシージャを記述する方法についても説明します。
 
-## <a name="overview-of-record-field-exchange"></a>レコード フィールド エクス チェンジの概要
+## <a name="overview-of-record-field-exchange"></a>レコードフィールドエクスチェンジの概要
 
-すべてのレコード セット フィールド関数には、C++ コードが終了しました。 マクロや特別なリソースはありません。 メカニズムの心臓部は、仮想関数のすべてのレコード セットの派生クラスでオーバーライドする必要があります。 このフォームは常にあります。
+すべてのレコードセットフィールド関数は、C++ コードで実行されます。 特別なリソースやマジックマクロはありません。 このメカニズムの中核となるのは、すべての派生レコードセットクラスでオーバーライドする必要がある仮想関数です。 次の形式で常に検出されます。
 
 ```cpp
 void CMySet::DoFieldExchange(CFieldExchange* pFX)
@@ -36,89 +37,89 @@ void CMySet::DoFieldExchange(CFieldExchange* pFX)
 }
 ```
 
-特殊な形式の AFX コメントは、ClassWizard を見つけ、この関数内のコードの編集を許可します。 ClassWizard と互換性がないコードは、特殊な形式のコメントの外側に配置する必要があります。
+特別な形式の AFX コメントを使用すると、ClassWizard はこの関数内のコードを検索して編集できます。 ClassWizard と互換性のないコードは、特別な形式のコメントの外部に配置する必要があります。
 
-上記の例では、 \<recordset_exchange_field_type_call > 形式では。
+上の例で \<recordset_exchange_field_type_call> は、は次の形式になっています。
 
 ```cpp
 pFX->SetFieldType(CFieldExchange::outputColumn);
 ```
 
-\<recordset_exchange_function_call > 形式では。
+との \<recordset_exchange_function_call> 形式は次のとおりです。
 
 ```cpp
 RFX_Custom(pFX, "Col2", m_Col2);
 ```
 
-ほとんど**rfx _** 関数がある 3 つ、上記のように引数がいくつか (例:`RFX_Text`と`RFX_Binary`) 追加の省略可能な引数を指定します。
+ほとんどの **RFX_** 関数には上記の3つの引数がありますが、一部 (やなど) には `RFX_Text` 追加の `RFX_Binary` 省略可能な引数があります。
 
-1 つ以上**rfx _** それぞれに含めることができない`DoDataExchange`関数。
+各関数に複数の **RFX_** を含めることができ `DoDataExchange` ます。
 
-すべてのレコード フィールド エクス チェンジ ルーチン MFC が提供の一覧については、' afxdb.h' を参照してください。
+MFC に用意されているすべてのレコードセットフィールド交換ルーチンの一覧については、「afxdb.h」を参照してください。
 
-レコード セットのフィールドの呼び出しはフィールドのデータを格納するメモリ位置 (通常はデータ メンバー) を登録するための方法では、`CMySet`クラス。
+レコードセットフィールド呼び出しは、クラスのフィールドデータを格納するためのメモリ位置 (通常はデータメンバー) を登録する方法です `CMySet` 。
 
 ## <a name="notes"></a>メモ
 
-レコード セット フィールド関数がでのみ機能するように設計、`CRecordset`クラス。 その他のいずれかの MFC クラスで一般的に使用できるではありません。
+レコードセットフィールド関数は、クラスでのみ動作するように設計されてい `CRecordset` ます。 これらは、他の MFC クラスでは一般に使用できません。
 
-データの初期値は、標準 C++ コンス トラクター ブロックでは、通常で設定`//{{AFX_FIELD_INIT(CMylSet)`と`//}}AFX_FIELD_INIT`コメント。
+データの初期値は、標準 C++ コンストラクターで設定されます。通常は、とのコメントが含まれるブロックに `//{{AFX_FIELD_INIT(CMylSet)` `//}}AFX_FIELD_INIT` あります。
 
-各**rfx _** 関数からフィールドを編集するための準備として、フィールドをアーカイブするフィールドのダーティ状態を返すまで、さまざまな操作をサポートする必要があります。
+各 **RFX_** 関数は、フィールドを編集するための準備として、フィールドのダーティステータスを返すからフィールドをアーカイブするなど、さまざまな操作をサポートする必要があります。
 
-各関数を呼び出す`DoFieldExchange`(たとえば`SetFieldNull`、 `IsFieldDirty`)、独自の初期化呼び出しの周囲には`DoFieldExchange`します。
+(たとえば、) を呼び出す各関数は、の `DoFieldExchange` `SetFieldNull` 呼び出しを `IsFieldDirty` 囲む独自の初期化を行い `DoFieldExchange` ます。
 
-## <a name="how-does-it-work"></a>しくみ
+## <a name="how-does-it-work"></a>動作のしくみ
 
-レコード フィールド エクス チェンジを使用するには、次を理解する必要はありません。 ただし、バック グラウンドで動作する際に役立つについては、独自の exchange プロシージャを書き込みます。
+レコードフィールドエクスチェンジを使用するには、次のことを理解する必要はありません。 ただし、これがバックグラウンドでどのように動作するかを理解することは、独自の exchange プロシージャを作成するのに役立ちます。
 
-`DoFieldExchange`メンバー関数は、非常によく似た、`Serialize`メンバー関数: が取得またはクラスのメンバーのデータとの間に/(ODBC クエリの結果からケース列がこの) 内の外部のフォームからデータを設定する責任を負います。 *PFX*パラメーターのデータ交換を行うためのコンテキストと似ています、 *CArchive*パラメーター`CObject::Serialize`します。 *PFX* (、`CFieldExchange`オブジェクト) に似ていますが、操作のインジケーターの汎化を持ち、 *CArchive*方向フラグ。 RFX 関数は、次の操作をサポートする必要があります。
+`DoFieldExchange`メンバー関数は、メンバー関数とよく似てい `Serialize` ます。これは、外部フォーム (この場合は、ODBC クエリの結果の列) からクラスのメンバーデータへのデータの取得または設定を行います。 *PFX* パラメーターはデータ交換を実行するためのコンテキストであり、の *CArchive* パラメーターに似てい `CObject::Serialize` ます。 *PFX* ( `CFieldExchange` オブジェクト) の操作インジケーターは、に似ていますが、 *CArchive* 方向フラグの一般化です。 RFX 関数は、次の操作をサポートする必要がある場合があります。
 
-- `BindParam` -ODBC がパラメーターのデータを取得する必要がありますを指定します。
+- `BindParam` — ODBC がパラメーターデータを取得する場所を示します。
 
-- `BindFieldToColumn` -場所 ODBC する必要があります取得/預金 outputColumn データを指定します。
+- `BindFieldToColumn` — ODBC が outputColumn データを取得/デポジットする必要があることを示します。
 
-- `Fixup` -設定`CString/CByteArray`の長さ、NULL 状態のビットを設定します。
+- `Fixup` — `CString/CByteArray` 長さの設定、NULL ステータスビットの設定
 
-- `MarkForAddNew` 、AddNew を呼び出すために、値が変更された場合に Mark がダーティします。
+- `MarkForAddNew` — AddNew 呼び出し以降に値が変更された場合はダーティとしてマークします
 
-- `MarkForUpdate` 、編集を呼び出すために、値が変更された場合に Mark がダーティします。
+- `MarkForUpdate` —エディット呼び出し以降に値が変更された場合はダーティとしてマークします
 
-- `Name` — マークされているフィールドのフィールド名を追加します。
+- `Name` —ダーティとマークされたフィールドのフィールド名を追加します。
 
-- `NameValue` -追加"\<列名 > ="のフィールドをダーティとマーク
+- `NameValue` —ダーティとマークされた \<column name> フィールドに "=" を追加します。
 
-- `Value` -追加""などの区切り文字の後に、',' または ' '
+- `Value` — "" の後に区切り記号 (', '、' ' など) を追加します。
 
-- `SetFieldDirty` -ステータス ビットのダーティ (つまり変更) フィールドを設定します。
+- `SetFieldDirty` —ステータスビットダーティ (つまり、変更された) フィールドを設定します。
 
-- `SetFieldNull` -フィールドの null 値を示す状態のビットを設定します。
+- `SetFieldNull` —フィールドの null 値を示すステータスビットを設定します。
 
-- `IsFieldDirty` — ダーティ状態のビットの値を返す
+- `IsFieldDirty` -ダーティステータスビットの戻り値
 
-- `IsFieldNull` -Null 状態のビットの値を返す
+- `IsFieldNull` — Null ステータスビットの戻り値
 
-- `IsFieldNullable` フィールドが NULL 値を保持できる場合は TRUE を返します
+- `IsFieldNullable` -フィールドが NULL 値を保持できる場合に TRUE を返します。
 
-- `StoreField` -アーカイブ フィールドの値
+- `StoreField` —アーカイブフィールド値
 
-- `LoadField` アーカイブ済みのフィールドの値を再読み込み
+- `LoadField` —アーカイブされたフィールド値の再読み込み
 
-- `GetFieldInfoValue` -フィールドの全般的な情報を返す
+- `GetFieldInfoValue` —フィールドに関する一般的な情報を返します。
 
-- `GetFieldInfoOrdinal` -フィールドの全般的な情報を返す
+- `GetFieldInfoOrdinal` —フィールドに関する一般的な情報を返します。
 
-## <a name="user-extensions"></a>ユーザーの拡張機能
+## <a name="user-extensions"></a>ユーザー拡張機能
 
-既定の RFX メカニズムを拡張するいくつかの方法はあります。 できます
+既定の RFX 機構を拡張するには、いくつかの方法があります。 そのための方法は次のとおりです。
 
-- 新しいデータ型を追加します。 例:
+- 新しいデータ型を追加します。 次に例を示します。
 
     ```cpp
     CBookmark
     ```
 
-- 新しい exchange プロシージャ (rfx _) を追加します。
+- 新しい exchange プロシージャを追加します (RFX_)。
 
     ```cpp
     void AFXAPI RFX_Bigint(CFieldExchange* pFX,
@@ -126,7 +127,7 @@ RFX_Custom(pFX, "Col2", m_Col2);
         BIGINT& value);
     ```
 
-- `DoFieldExchange` Rfx 関数呼び出しの追加またはその他の有効な C++ ステートメントに条件付きでメンバー関数が含まれます。
+- `DoFieldExchange`メンバー関数には、追加の RFX 呼び出しまたはその他の有効な C++ ステートメントが条件付きで含まれている必要があります。
 
     ```cpp
     while (posExtraFields != NULL)
@@ -138,27 +139,27 @@ RFX_Custom(pFX, "Col2", m_Col2);
     ```
 
 > [!NOTE]
-> このようなコードは ClassWizard で編集することはできませんし、特殊な形式のコメントの外側でのみ使用する必要があります。
+> このようなコードは、ClassWizard で編集することはできません。また、特殊な書式のコメント以外でのみ使用してください。
 
-## <a name="writing-a-custom-rfx"></a>カスタム RFX の書き込み
+## <a name="writing-a-custom-rfx"></a>カスタム RFX の記述
 
-独自のカスタム RFX 関数を作成するには、既存の RFX 関数をコピーして、独自の目的に変更するお勧めします。 コピーする右の RFX を選択することができます、ジョブをはるかに簡単。 一部の RFX 関数では、いくつかのコピー先を決定する際に考慮する一意のプロパティがあります。
+独自のカスタム RFX 関数を作成するには、既存の RFX 関数をコピーして、独自の目的に変更することをお勧めします。 コピーする適切な RFX を選択すると、ジョブをより簡単に行うことができます。 一部の RFX 関数には、コピーする対象を決定する際に考慮する必要がある固有のプロパティがいくつかあります。
 
-`RFX_Long` `RFX_Int`:これらは、最も簡単な RFX 関数です。 データ値では、何らかの解釈を必要はありませんし、データ サイズは固定します。
+`RFX_Long` および `RFX_Int` : これらは、最も単純な RFX 関数です。 データ値は特別な解釈を必要とせず、データサイズが固定されています。
 
-`RFX_Single` `RFX_Double`:RFX_Long や RFX_Int 上記のようにこれらの関数は単純なとすると、既定の実装を幅広く使用します。 保存されている、dbrfx.cpp ではなくようにでただし、浮動小数点ライブラリを明示的に参照されている場合にのみ、ランタイムの読み込みを有効にします。
+`RFX_Single` また、 `RFX_Double` 上記の RFX_Long と RFX_Int と同様に、これらの関数は単純であり、既定の実装を広範囲に利用できます。 ただし、これらは、明示的に参照されている場合にのみランタイム浮動小数点ライブラリの読み込みを有効にするために、dbrfx ではなく dbflt に格納されます。
 
-`RFX_Text` `RFX_Binary`:これら 2 つの関数は、文字列/バイナリの情報を保持する静的バッファーを事前に割り当てるし、登録 (&) 値ではなく、ODBC SQLBindCol をこれらのバッファーを登録する必要があります。 このため、これら 2 つの関数は特殊なコードの多くがあります。
+`RFX_Text` および `RFX_Binary` : これら2つの関数は、文字列/バイナリ情報を保持するために静的バッファーを事前に確保し、&値を登録するのではなく、これらのバッファーを ODBC SQLBindCol に登録する必要があります。 このため、この2つの関数には特殊なケースコードが多数あります。
 
-`RFX_Date`:ODBC では、独自の TIMESTAMP_STRUCT データ構造で日付と時刻の情報を返します。 この関数では、「プロキシ」として、TIMESTAMP_STRUCT が動的に日付時刻のデータを送受信するために割り当てます。 さまざまな操作の間で日付と時刻の情報を転送する必要があります、 C++ `CTime`オブジェクトと TIMESTAMP_STRUCT プロキシ。 この関数を大きく複雑にこれが、データ転送にプロキシを使用する方法の良い例です。
+`RFX_Date`: ODBC では、日付と時刻の情報が独自の TIMESTAMP_STRUCT データ構造で返されます。 この関数は、日付と時刻のデータを送信および受信するための "プロキシ" として、TIMESTAMP_STRUCT を動的に割り当てます。 さまざまな操作で、C++ オブジェクトと TIMESTAMP_STRUCT プロキシ間で日付と時刻の情報を転送する必要があり `CTime` ます。 これにより、この関数はかなり複雑になりますが、データ転送にプロキシを使用する方法の例としては、この機能が非常に複雑になります。
 
-`RFX_LongBinary`:これは、RFX 関数のデータを送受信する列のバインドを使用しない唯一のクラス ライブラリです。 この関数は BindFieldToColumn 操作を無視し、代わりに、フィックス アップ時に、着信 SQL_LONGVARCHAR または SQL_LONGVARBINARY データを保持するストレージが割り当てられます、割り当て済み記憶域に値を取得する SQLGetData 呼び出しを実行します。 (NameValue および値の操作) などのデータ ソースへのデータ値を返信する準備をするときに、この関数は、ODBC の DATA_AT_EXEC 機能を使用します。 参照してください[テクニカル ノート 45](../mfc/tn045-mfc-database-support-for-long-varchar-varbinary.md) SQL_LONGVARBINARY データ型と SQL_LONGVARCHARs の操作の詳細についてはします。
+`RFX_LongBinary`: これは、データの送受信に列バインドを使用しない唯一のクラスライブラリ RFX 関数です。 この関数は、BindFieldToColumn 操作を無視し、その代わりに、フィックスアップ操作中に、受信 SQL_LONGVARCHAR または SQL_LONGVARBINARY データを保持するストレージを割り当て、次に SQLGetData 呼び出しを実行して、割り当てられたストレージに値を取得します。 データソースへのデータ値の送信を準備するとき (NameValue や値の操作など)、この関数は ODBC の DATA_AT_EXEC 機能を使用します。 SQL_LONGVARBINARY と SQL_LONGVARCHARs の使用方法の詳細については、「 [テクニカルノート 45](../mfc/tn045-mfc-database-support-for-long-varchar-varbinary.md) 」を参照してください。
 
-独自の書き込み時に**rfx _** 関数の場合、多くの場合、ことができますを使用する`CFieldExchange::Default`特定の操作を実装します。 問題の操作の既定の実装を見てください。 操作を実行する場合を記述したこと、 **rfx _** 関数を委任することができます、`CFieldExchange::Default`します。 呼び出し元の例を参照できます`CFieldExchange::Default`dbrfx.cpp で
+独自の **RFX_** 関数を記述する場合は、を使用して特定の操作を実装できることがよくあり `CFieldExchange::Default` ます。 対象の操作の既定の実装を確認します。 操作を実行する場合は、 **RFX_** 関数に記述する場合は、に委任でき `CFieldExchange::Default` ます。 の呼び出しの例については、dbrfx を参照してください `CFieldExchange::Default` 。
 
-呼び出しすることが重要`IsFieldType`RFX 関数の場合、FALSE が返された場合にすぐに戻り値の先頭。 このメカニズムで実行されているパラメーターの操作を保持する*outputColumns*、またはその逆 (呼び出すといった`BindParam`上、 *outputColumn*)。 さらに、`IsFieldType`自動的には、追跡のカウント*outputColumns* (*m_nFields*) とパラメーター (*m_nParams*)。
+`IsFieldType`RFX 関数の先頭でを呼び出し、FALSE が返された場合は、すぐにを返すことが重要です。 このメカニズムにより、パラメーター操作が *Outputcolumns* に対して実行されるのを防ぐことが `BindParam` できます ( *outputcolumns* でを呼び出すなど)。 さらに、は、 `IsFieldType` *outputcolumns* (*m_nFields*) および params (*m_nParams*) のカウントを自動的に追跡します。
 
 ## <a name="see-also"></a>関連項目
 
-[番号順テクニカル ノート](../mfc/technical-notes-by-number.md)<br/>
-[カテゴリ別テクニカル ノート](../mfc/technical-notes-by-category.md)
+[番号別テクニカルノート](../mfc/technical-notes-by-number.md)<br/>
+[カテゴリ別テクニカルノート](../mfc/technical-notes-by-category.md)

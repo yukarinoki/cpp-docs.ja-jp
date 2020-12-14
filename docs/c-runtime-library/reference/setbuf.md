@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「setbuf」を参照してください。
 title: setbuf
 ms.date: 4/2/2020
 api_name:
@@ -27,12 +28,12 @@ helpviewer_keywords:
 - setbuf function
 - stream buffering
 ms.assetid: 13beda22-7b56-455d-8a6c-f2eb636885b9
-ms.openlocfilehash: 40f23db88abf9733eada9e775aacda83cba5829a
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 756cb09fb35ed6e8cf6369f20693e2f0f0b7acaa
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82910329"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97211064"
 ---
 # <a name="setbuf"></a>setbuf
 
@@ -57,15 +58,15 @@ void setbuf(
 
 ## <a name="remarks"></a>解説
 
-**Setbuf**関数は、*ストリーム*のバッファリングを制御します。 *ストリーム*引数は、読み取りまたは書き込みが行われていない開いているファイルを参照する必要があります。 *バッファー*引数が**NULL**の場合、ストリームはバッファーされません。 それ以外の場合、バッファーは長さ**BUFSIZ**の文字配列を指す必要があります。 **BUFSIZ**は、STDIO で定義されているバッファーサイズです。始め. 所定のストリームに対してシステムによって割り当てられた既定のバッファーではなく、ユーザーが指定したバッファーが I/O バッファー処理に使用されます。 **Stderr**ストリームは既定ではバッファリングされませんが、 **setbuf**を使用して、 **stderr**にバッファーを割り当てることができます。
+**Setbuf** 関数は、*ストリーム* のバッファリングを制御します。 *ストリーム* 引数は、読み取りまたは書き込みが行われていない開いているファイルを参照する必要があります。 *バッファー* 引数が **NULL** の場合、ストリームはバッファーされません。 それ以外の場合、バッファーは長さ **BUFSIZ** の文字配列を指す必要があります。 **BUFSIZ** は、STDIO で定義されているバッファーサイズです。 所定のストリームに対してシステムによって割り当てられた既定のバッファーではなく、ユーザーが指定したバッファーが I/O バッファー処理に使用されます。 **Stderr** ストリームは既定ではバッファリングされませんが、 **setbuf** を使用して、 **stderr** にバッファーを割り当てることができます。
 
-**setbuf**は[setvbuf](setvbuf.md)に置き換えられました。これは、新しいコードの推奨されるルーチンです。 **Setvbuf**とは異なり、 **setbuf**にはエラーを報告する方法がありません。 また、 **setvbuf**では、バッファリングモードとバッファーサイズの両方を制御できます。 **setbuf**は、既存のコードとの互換性を維持するために存在します。
+**setbuf** は [setvbuf](setvbuf.md)に置き換えられました。これは、新しいコードの推奨されるルーチンです。 **Setvbuf** とは異なり、 **setbuf** にはエラーを報告する方法がありません。 また、 **setvbuf** では、バッファリングモードとバッファーサイズの両方を制御できます。 **setbuf** は、既存のコードとの互換性を維持するために存在します。
 
 既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**setbuf**|\<stdio.h>|
 

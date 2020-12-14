@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: テクニカルノート 41: MFC/OLE1 からから MFC への移行/OLE 2'
 title: 'テクニカルノート 41: MFC-OLE1 からから MFC への移行-OLE 2'
 ms.date: 10/18/2018
 helpviewer_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - upgrading Visual C++ applications [MFC], OLE1 to OLE2
 - TN041
 ms.assetid: 67f55552-4b04-4ddf-af0b-4d9eaf5da957
-ms.openlocfilehash: 7d0381983481278b1410ae0ff11463519d4cbb34
-ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
+ms.openlocfilehash: 83bb9869d61ca9d2c92780fc6bed55ce3c3ff798
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90743153"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97215379"
 ---
 # <a name="tn041-mfcole1-migration-to-mfcole-2"></a>テクニカル ノート 41: MFC/OLE1 から MFC/OLE 2 への移植
 
@@ -227,7 +228,7 @@ BOOL CRectItem::SetItemRectToServer()
 \oclient\frame.cpp(50) : error C2064: term does not evaluate to a function
 ```
 
-OLE1 からは、多くの場合、OLE1 からは本質的に非同期であるため、コンテナーからサーバーへの同期 API 呼び出しが *シミュレート*されました。 ユーザーからのコマンドを処理する前に、進行中の未処理の非同期呼び出しを確認する必要がありました。 MFC/OLE1 からには、そのための関数が用意されてい `COleClientItem::InWaitForRelease` ます。 MFC/OLE 2 では、これは必要ではないため、CMainFrame 内の OnCommand のオーバーライドをすべて削除できます。
+OLE1 からは、多くの場合、OLE1 からは本質的に非同期であるため、コンテナーからサーバーへの同期 API 呼び出しが *シミュレート* されました。 ユーザーからのコマンドを処理する前に、進行中の未処理の非同期呼び出しを確認する必要がありました。 MFC/OLE1 からには、そのための関数が用意されてい `COleClientItem::InWaitForRelease` ます。 MFC/OLE 2 では、これは必要ではないため、CMainFrame 内の OnCommand のオーバーライドをすべて削除できます。
 
 この時点で、OCLIENT はをコンパイルしてリンクします。
 
@@ -559,7 +560,7 @@ BOOL CServerItem::OnDraw(CDC* pDC, CSize& rSize)
 }
 ```
 
-新しいパラメーターは '//' となります。 これにより、必要に応じて、描画のサイズを入力できます。 このサイズは、 **HIMETRIC**にある必要があります。 この場合、にこの値を入力することは便利ではないため、フレームワークはを呼び出して `OnGetExtent` エクステントを取得します。 これを機能させるには、次のものを実装する必要があり `OnGetExtent` ます。
+新しいパラメーターは '//' となります。 これにより、必要に応じて、描画のサイズを入力できます。 このサイズは、 **HIMETRIC** にある必要があります。 この場合、にこの値を入力することは便利ではないため、フレームワークはを呼び出して `OnGetExtent` エクステントを取得します。 これを機能させるには、次のものを実装する必要があり `OnGetExtent` ます。
 
 ```cpp
 BOOL CServerItem::OnGetExtent(DVASPECT dwDrawAspect, CSize& rSize)
@@ -579,7 +580,7 @@ BOOL CServerItem::OnGetExtent(DVASPECT dwDrawAspect, CSize& rSize)
     int)__far const ' : cannot convert parameter 1 from 'int __far *' to 'struct ::tagPOINT __far *'
 ```
 
-CServerItem:: CalcNodeSize 関数では、項目のサイズが **HIMETRIC** に変換され、 *m_rectBounds*に格納されます。 ドキュメントに記載されていない '*m_rectBounds*' メンバーが `COleServerItem` 存在しません ( *m_sizeExtent*によって部分的に置き換えられていますが、OLE 2 では、このメンバーの使用方法は、ole1 からでの *m_rectBounds* とは少し異なります)。 このメンバー変数に **HIMETRIC** サイズを設定するのではなく、それを返します。 この戻り値は、以前に実装されたで使用され `OnGetExtent` ます。
+CServerItem:: CalcNodeSize 関数では、項目のサイズが **HIMETRIC** に変換され、 *m_rectBounds* に格納されます。 ドキュメントに記載されていない '*m_rectBounds*' メンバーが `COleServerItem` 存在しません ( *m_sizeExtent* によって部分的に置き換えられていますが、OLE 2 では、このメンバーの使用方法は、ole1 からでの *m_rectBounds* とは少し異なります)。 このメンバー変数に **HIMETRIC** サイズを設定するのではなく、それを返します。 この戻り値は、以前に実装されたで使用され `OnGetExtent` ます。
 
 ```cpp
 CSize CServerItem::CalcNodeSize()

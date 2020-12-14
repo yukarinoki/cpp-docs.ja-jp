@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: asctime_s、_wasctime_s'
 title: asctime_s、_wasctime_s
 ms.date: 4/2/2020
 api_name:
@@ -36,16 +37,16 @@ helpviewer_keywords:
 - _wasctime_s function
 - asctime_s function
 ms.assetid: 17ad9b2b-a459-465d-976a-42822897688a
-ms.openlocfilehash: 529663a8c36a1b934a4dd99852aee19fb1a1e6e6
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: d743aea81abdba2e1aa2b470f71081cb92e6fc64
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87217013"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97211324"
 ---
 # <a name="asctime_s-_wasctime_s"></a>asctime_s、_wasctime_s
 
-**Tm**時間構造体を文字列に変換します。 これらの関数は、「[CRT のセキュリティ機能](../../c-runtime-library/security-features-in-the-crt.md)」の説明にあるとおり、[asctime、_wasctime](asctime-wasctime.md) のセキュリティが強化されたバージョンです。
+**Tm** 時間構造体を文字列に変換します。 これらの関数は、「[CRT のセキュリティ機能](../../c-runtime-library/security-features-in-the-crt.md)」の説明にあるとおり、[asctime、_wasctime](asctime-wasctime.md) のセキュリティが強化されたバージョンです。
 
 ## <a name="syntax"></a>構文
 
@@ -75,13 +76,13 @@ errno_t _wasctime_s(
 ### <a name="parameters"></a>パラメーター
 
 *格納*<br/>
-文字列の結果を格納するバッファーへのポインター。 この関数は、 *Numberofelements*によって指定されたサイズの有効なメモリ位置を指すポインターを想定しています。
+文字列の結果を格納するバッファーへのポインター。 この関数は、 *Numberofelements* によって指定されたサイズの有効なメモリ位置を指すポインターを想定しています。
 
 *numberOfElements*<br/>
 結果を格納するために使用されるバッファーのサイズ。
 
 *tmSource*<br/>
-時刻/日付の構造体。 この関数は、有効な tm オブジェクトへのポインターを前提としてい **`struct`** **tm**ます。
+時刻/日付の構造体。 この関数は、有効な tm オブジェクトへのポインターを前提としてい **`struct`** ます。
 
 ## <a name="return-value"></a>戻り値
 
@@ -89,20 +90,20 @@ errno_t _wasctime_s(
 
 ### <a name="error-conditions"></a>エラー条件
 
-|*格納*|*numberOfElements*|*tmSource*|戻り値|*バッファー*内の値|
+|*格納*|*numberOfElements*|*tmSource*|戻り値|*バッファー* 内の値|
 |--------------|------------------------|----------|------------|-----------------------|
 |**NULL**|Any|Any|**EINVAL**|変更されない|
-|Not **NULL** (有効なメモリを指す)|0|Any|**EINVAL**|変更されない|
-|**NULL**以外|0< サイズ < 26|Any|**EINVAL**|空の文字列|
-|**NULL**以外|>= 26|**NULL**|**EINVAL**|空の文字列|
-|**NULL**以外|>= 26|無効な時間構造体または時間のコンポーネントの値が範囲外|**EINVAL**|空の文字列|
+|Not **NULL** (有効なメモリを指す)|0|任意|**EINVAL**|変更されない|
+|**NULL** 以外|0< サイズ < 26|任意|**EINVAL**|空の文字列|
+|**NULL** 以外|>= 26|**NULL**|**EINVAL**|空の文字列|
+|**NULL** 以外|>= 26|無効な時間構造体または時間のコンポーネントの値が範囲外|**EINVAL**|空の文字列|
 
 > [!NOTE]
-> **Wasctime_s**のエラー条件は**asctime_s**と似ていますが、サイズ制限は単語単位で測定されます。
+> **Wasctime_s** のエラー条件は **asctime_s** と似ていますが、サイズ制限は単語単位で測定されます。
 
 ## <a name="remarks"></a>解説
 
-**Asctime**関数は、構造体として格納されている時刻を文字列に変換します。 *Tmsource*値は通常、 **gmtime**または**localtime**の呼び出しから取得されます。 これらの関数を使用すると、TIME で定義されているように、 **tm**構造体を入力できます。始め.
+**Asctime** 関数は、構造体として格納されている時刻を文字列に変換します。 *Tmsource* 値は通常、 **gmtime** または **localtime** の呼び出しから取得されます。 どちらの関数も、TIME. H で定義されているように、 **tm** 構造体を入力するために使用できます。
 
 |timeptr メンバー|値|
 |--------------------|-----------|
@@ -118,9 +119,9 @@ errno_t _wasctime_s(
 
 変換された文字列も、ローカル タイム ゾーンの設定に従って調整されます。 ローカル タイムの設定の詳細については、[time、_time32、_time64](time-time32-time64.md)、[_ftime、_ftime32、_ftime64](ftime-ftime32-ftime64.md)、および [localtime_s、_localtime32_s、_localtime64_s](localtime-s-localtime32-s-localtime64-s.md) の関数を参照してください。また、タイム ゾーン環境とグローバル変数の定義の詳細については、[_tzset](tzset.md) 関数を参照してください。
 
-**Asctime_s**によって生成される文字列の結果は、26文字で、という形式に `Wed Jan 02 02:03:55 1980\n\0` なります。 24 時間制が使用されます。 すべてのフィールドには一定の幅があります。 文字列の最後の 2 つの位置には、改行文字と null 文字が入ります。 2 番目のパラメーターとして渡される値は、この大きさ以上にする必要があります。 小さい場合は、エラーコード**EINVAL**が返されます。
+**Asctime_s** によって生成される文字列の結果は、26文字で、という形式に `Wed Jan 02 02:03:55 1980\n\0` なります。 24 時間制が使用されます。 すべてのフィールドには一定の幅があります。 文字列の最後の 2 つの位置には、改行文字と null 文字が入ります。 2 番目のパラメーターとして渡される値は、この大きさ以上にする必要があります。 小さい場合は、エラーコード **EINVAL** が返されます。
 
-**_wasctime_s**は**asctime_s**のワイド文字バージョンです。 **_wasctime_s**と**asctime_s**は同じように動作します。
+**_wasctime_s** は **asctime_s** のワイド文字バージョンです。 **_wasctime_s** と **asctime_s** は同じように動作します。
 
 これらの関数のデバッグライブラリバージョンは、最初にバッファーを0xFE で埋めます。 この動作を無効にするには、[_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md) を使用します。
 
@@ -141,15 +142,15 @@ C++ では、テンプレートのオーバーロードによってこれらの�
 |**asctime_s**|\<time.h>|
 |**_wasctime_s**|\<time.h> または \<wchar.h>|
 
-## <a name="security"></a>セキュリティ
+## <a name="security"></a>Security
 
-バッファーポインターが**NULL**ではなく、ポインターが有効なバッファーを指していない場合、関数はその位置にあるものをすべて上書きします。 これによりアクセス違反が発生することもあります。
+バッファーポインターが **NULL** ではなく、ポインターが有効なバッファーを指していない場合、関数はその位置にあるものをすべて上書きします。 これによりアクセス違反が発生することもあります。
 
 渡されるサイズ引数がバッファーの実際のサイズより大きい場合、[バッファー オーバーラン](/windows/win32/SecBP/avoiding-buffer-overruns)が発生する場合があります。
 
 ## <a name="example"></a>例
 
-このプログラムは、システム時刻を長整数の**aclock**に配置し、それを構造体の**newtime**に変換した後、 **asctime_s**関数を使用して出力用に文字列形式に変換します。
+このプログラムは、システム時刻を長整数の **aclock** に配置し、それを構造体の **newtime** に変換した後、 **asctime_s** 関数を使用して出力用に文字列形式に変換します。
 
 ```C
 // crt_asctime_s.c
