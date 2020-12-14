@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「データ型のマッピング」を参照してください。
 title: データ型のマップ
 ms.date: 11/04/2016
 f1_keywords:
@@ -29,12 +30,12 @@ helpviewer_keywords:
 - _TEXT type
 - _T type
 ms.assetid: 4e573c05-8800-468b-ae5f-76ff7409835e
-ms.openlocfilehash: d77ac4fa9afcd5a6b8f86261c7a3ba466adc64a4
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 9d76ecebc9bcb01e86cac2f199534ae2cda518c8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87215154"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97258778"
 ---
 # <a name="data-type-mappings"></a>データ型のマップ
 
@@ -61,5 +62,5 @@ ms.locfileid: "87215154"
 [汎用テキストマッピング](../c-runtime-library/generic-text-mappings.md)<br/>
 [定数とグローバル変数のマッピング](../c-runtime-library/constant-and-global-variable-mappings.md)<br/>
 [ルーチンのマッピング](../c-runtime-library/routine-mappings.md)<br/>
-[汎用テキストプログラムのサンプル](../c-runtime-library/a-sample-generic-text-program.md)<br/>
-[汎用テキストマップの使用](../c-runtime-library/using-generic-text-mappings.md)
+[サンプル Generic-Text プログラム](../c-runtime-library/a-sample-generic-text-program.md)<br/>
+[Generic-Text マッピングの使用](../c-runtime-library/using-generic-text-mappings.md)

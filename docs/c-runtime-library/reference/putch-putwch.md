@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: _putch、_putwch'
 title: _putch、_putwch
 ms.date: 4/2/2020
 api_name:
@@ -35,12 +36,12 @@ helpviewer_keywords:
 - putch function
 - console, writing characters to
 ms.assetid: 3babc7cf-e333-405d-8449-c788d61d51aa
-ms.openlocfilehash: 5d327030f816b4ad4d68e0366225d27fee00a7bf
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 242e7c69330cf86c9c369903812f277fe0018d50
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82916187"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97246345"
 ---
 # <a name="_putch-_putwch"></a>_putch、_putwch
 
@@ -63,16 +64,16 @@ wint_t _putwch(
 
 ### <a name="parameters"></a>パラメーター
 
-*40u-c*<br/>
+*c*<br/>
 出力する文字。
 
 ## <a name="return-value"></a>戻り値
 
-処理が正常に終了した場合は、*c* を返します。 **_Putch**が失敗した場合は**EOF**を返します。**_putwch**が失敗した場合は、 **WEOF**を返します。
+処理が正常に終了した場合は、*c* を返します。 **_Putch** が失敗した場合は **EOF** を返します。**_putwch** が失敗した場合は、 **WEOF** を返します。
 
 ## <a name="remarks"></a>解説
 
-これらの関数は、バッファーを使用せずに文字*c*をコンソールに直接書き込みます。 Windows NT では、**_putwch** は現在のコンソールのロケール設定を使用して Unicode 文字を書き出します。
+これらの関数は、バッファーを使用せずに文字 *c* をコンソールに直接書き込みます。 Windows NT では、**_putwch** は現在のコンソールのロケール設定を使用して Unicode 文字を書き出します。
 
 **_nolock** サフィックスが付いているバージョンは同じものですが、他のスレッドによる干渉から保護されない点が異なります。 詳細については、「 **_putch_nolock**、 **_putwch_nolock**」を参照してください。
 
@@ -86,7 +87,7 @@ wint_t _putwch(
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**_putch**|\<conio.h>|
 |**_putwch**|\<conio.h>|

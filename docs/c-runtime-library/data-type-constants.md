@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: データ型の定数'
 title: データ型定数
 ms.date: 06/25/2018
 f1_keywords:
@@ -139,12 +140,12 @@ helpviewer_keywords:
 - SIZE_MAX constant
 - RSIZE_MAX constant
 ms.assetid: c0f1c405-0465-41d5-b5ff-e81cdb6f1622
-ms.openlocfilehash: d9d053611fb733d55424d01be2bab030fc49e6e0
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: eb1c16cb730ea40a60a5929867fa8a36b17190ec
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87215167"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97258838"
 ---
 # <a name="data-type-constants"></a>データ型定数
 
@@ -163,13 +164,13 @@ ms.locfileid: "87215167"
 
 |定数|値|説明|
 |--------------|-----------|-------------|
-|**CHAR_BIT**|8|のビット数**`char`**|
+|**CHAR_BIT**|8|のビット数 **`char`**|
 |**SCHAR_MIN**|(-128)|最小 **`signed char`** 値|
 |**SCHAR_MAX**|127|最大 **`signed char`** 値|
 |**UCHAR_MAX**|255 (0xff)|最大 **`unsigned char`** 値|
 |**CHAR_MIN**|(-128)(オプションが **`/J`** 使用された場合は 0)|最小 **`char`** 値|
 |**CHAR_MAX**|127 (オプションが **`/J`** 使用されている場合は 255)|最大 **`char`** 値|
-|**MB_LEN_MAX**|5|マルチバイトの最大バイト数**`char`**|
+|**MB_LEN_MAX**|5|マルチバイトの最大バイト数 **`char`**|
 |**SHRT_MIN**|-32768|最小 **`signed short`** 値|
 |**SHRT_MAX**|32767|最大 **`signed short`** 値|
 |**USHRT_MAX**|65535 (0xffff)|最大 **`unsigned short`** 値|

@@ -1,4 +1,5 @@
 ---
+description: 詳細については、次を参照してください:/volatile (volatile キーワードの解釈)
 title: /volatile (volatile キーワードの解釈を)
 ms.date: 11/04/2016
 f1_keywords:
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - volatile compiler option
 - -volatile compiler option [C++]
 ms.assetid: 9d08fcc6-5bda-44c8-8151-8d8d54f164b8
-ms.openlocfilehash: 7c2c1cd477b424f56e66bd9246e7bde76ad06120
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: e75a9932cff59748cf75b89a3a85e89130de84f5
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87223786"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97259215"
 ---
 # <a name="volatile-volatile-keyword-interpretation"></a>/volatile (volatile キーワードの解釈を)
 
@@ -38,9 +39,9 @@ Microsoft 拡張 **`volatile`** セマンティクスを選択します。これ
 
 ## <a name="remarks"></a>解説
 
-スレッド間で共有されるメモリを扱う場合は、明示的な同期プリミティブおよびコンパイラの組み込みと共に **/volatile: iso**を使用することを強くお勧めします。 詳細については、「 [volatile](../../cpp/volatile-cpp.md)」を参照してください。
+スレッド間で共有されるメモリを扱う場合は、明示的な同期プリミティブおよびコンパイラの組み込みと共に **/volatile: iso** を使用することを強くお勧めします。 詳細については、「 [volatile](../../cpp/volatile-cpp.md)」を参照してください。
 
-既存のコードを移植する場合、またはプロジェクトの途中でこのオプションを変更する場合は、警告[C4746](../../error-messages/compiler-warnings/compiler-warning-c4746.md)を有効にして、セマンティクスの違いによって影響を受けるコードの場所を特定することをお勧めします。
+既存のコードを移植する場合、またはプロジェクトの途中でこのオプションを変更する場合は、警告 [C4746](../../error-messages/compiler-warnings/compiler-warning-c4746.md) を有効にして、セマンティクスの違いによって影響を受けるコードの場所を特定することをお勧めします。
 
 `#pragma` には、このオプションを制御するための相当するものはありません。
 
@@ -50,10 +51,10 @@ Microsoft 拡張 **`volatile`** セマンティクスを選択します。これ
 
 1. [**構成プロパティ**] [  >  **C/c + +**  >  **コマンドライン**] プロパティページを選択します。
 
-1. [**追加オプション**] ボックスで、 **/volatile: iso**また**は/volatile: ms**を追加し、[ **OK]** または [**適用**] を選択して変更を保存します。
+1. [ **追加オプション** ] ボックスで、 **/volatile: iso** また **は/volatile: ms** を追加し、[ **OK]** または [ **適用** ] を選択して変更を保存します。
 
 ## <a name="see-also"></a>関連項目
 
 [volatile](../../cpp/volatile-cpp.md)<br/>
 [MSVC コンパイラ オプション](compiler-options.md)<br/>
-[MSVC コンパイラのコマンドライン構文](compiler-command-line-syntax.md)
+[MSVC Compiler Command-Line 構文](compiler-command-line-syntax.md)

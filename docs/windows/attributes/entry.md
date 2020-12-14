@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: entry'
 title: entry (C++ COM 属性)
 ms.date: 10/02/2018
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - entry attribute
 ms.assetid: ba4843e3-d7ad-4b86-9a15-0b4192f0f698
-ms.openlocfilehash: 63e5ccebb1d3844af8dd11b4b094abe96e3e257c
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: fbceea4c23d730ceba780ce68398a9d78fa9c33b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88845316"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97259228"
 ---
 # <a name="entry"></a>entry
 
@@ -30,13 +31,13 @@ DLL 内のエントリポイントを識別することによって、モジュ�
 
 ## <a name="remarks"></a>解説
 
-**エントリ**の C++ 属性には、 [entry](/windows/win32/Midl/entry) MIDL 属性と同じ機能があります。
+**エントリ** の C++ 属性には、 [entry](/windows/win32/Midl/entry) MIDL 属性と同じ機能があります。
 
 ## <a name="example"></a>例
 
-**エントリ**の使用例については、 [idl_module](idl-module.md)の例を参照してください。
+**エントリ** の使用例については、 [idl_module](idl-module.md)の例を参照してください。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 | 属性コンテキスト | 値 |
 |-|-|

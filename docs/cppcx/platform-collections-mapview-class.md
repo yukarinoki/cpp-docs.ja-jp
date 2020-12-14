@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: Platform:: Collections:: MapView クラス'
 title: Platform::Collections::MapView クラス
 ms.date: 12/30/2016
 ms.topic: reference
@@ -12,16 +13,16 @@ f1_keywords:
 helpviewer_keywords:
 - MapView Class
 ms.assetid: 9577dde7-f599-43c6-b1e4-7d653706fd62
-ms.openlocfilehash: 693854499dafd23752337652ef298907fdecbcc2
-ms.sourcegitcommit: 65fead53d56d531d71be42216056aca5f44def11
+ms.openlocfilehash: 6011948bb3708329f7dcce0841f2bc34879760a7
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "88610895"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97258487"
 ---
 # <a name="platformcollectionsmapview-class"></a>Platform::Collections::MapView クラス
 
-キーと値のペアのコレクションである、 *マップ*への読み取り専用ビューを表します。
+キーと値のペアのコレクションである、 *マップ* への読み取り専用ビューを表します。
 
 ## <a name="syntax"></a>構文
 
@@ -35,16 +36,16 @@ ref class MapView sealed;
 
 #### <a name="parameters"></a>パラメーター
 
-*Kb*<br/>
+*K*<br/>
 キー/値ペア内のキーの型。
 
-*画像*<br/>
+*V*<br/>
 キー/値ペア内の値の型。
 
 *C*<br/>
 並べ替えキーとして 2 つの要素値を比較して MapView 内の相対順序を決定できる関数オブジェクトを提供する型。 既定では、 [std:: \<K> less](../standard-library/less-struct.md)です。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 MapView は、アプリケーションバイナリインターフェイス (ABI) を通じて渡される[Windows:: Foundation \<K,V> :: Collections:: IMapView](/uwp/api/windows.foundation.collections.imapview-2)インターフェイスの具体的な C++ 実装です。 詳細については、「 [Collections (C++/CX) (コレクション (C++/CX))](../cppcx/collections-c-cx.md)」を参照してください。
 
@@ -70,7 +71,7 @@ MapView は、アプリケーションバイナリインターフェイス (ABI)
 
 `MapView`
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 **ヘッダー:** collection.h
 
@@ -91,7 +92,7 @@ virtual Windows::Foundation::Collections::IIterator<
 
 マップ ビュー内の最初の要素を指定する反復子。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 First () によって返される反復子を保持する便利な方法は、型推論キーワードで宣言された変数に戻り値を代入することです **`auto`** 。 たとえば、「 `auto x = myMapView->First();` 」のように入力します。
 
@@ -109,7 +110,7 @@ bool HasKey(K key);
 ### <a name="parameters"></a>パラメーター
 
 *key*<br/>
-MapView 要素の検索に使用するキー。 *キー*の型は typename *K*です。
+MapView 要素の検索に使用するキー。 *キー* の型は typename *K* です。
 
 ### <a name="return-value"></a>戻り値
 
@@ -128,11 +129,11 @@ V Lookup(K key);
 ### <a name="parameters"></a>パラメーター
 
 *key*<br/>
-MapView の要素の検索に使用するキー。 の型 `key` は Typename *K*です。
+MapView の要素の検索に使用するキー。 の型 `key` は Typename *K* です。
 
 ### <a name="return-value"></a>戻り値
 
-`key` とペアになる値。 戻り値の型は typename *V*です。
+`key` とペアになる値。 戻り値の型は typename *V* です。
 
 ## <a name="mapviewmapview-constructor"></a><a name="ctor"></a> MapView:: MapView コンストラクター
 
@@ -213,7 +214,7 @@ void Split(
 *第第のパーティション*<br/>
 元の MapView オブジェクトの 2 番目の部分。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 このメソッドは操作可能ではありません。これは何も実行しません。
 

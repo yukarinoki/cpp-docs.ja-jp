@@ -1,37 +1,38 @@
 ---
+description: 詳細情報:/WINMDDELAYSIGN (winmd の部分署名)
 title: /WINMDDELAYSIGN (winmd の部分署名)
 ms.date: 11/04/2016
 f1_keywords:
 - VC.Project.VCLinkerTool.WINMDDelaySign
 ms.assetid: 445cd602-62cb-400a-8e3a-4beb6572724d
-ms.openlocfilehash: 5e6eab3fbc40543b634f03da826d3bd3477b9623
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 801b172f52a9beb9d09617644b3096e460359724
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62316601"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97259059"
 ---
 # <a name="winmddelaysign-partially-sign-a-winmd"></a>/WINMDDELAYSIGN (winmd の部分署名)
 
-ファイルの公開キーを配置することで、Windows ランタイム メタデータ (.winmd) ファイルの部分署名を使用できます。
+公開キーをファイルに配置することによって、Windows ランタイムメタデータ (winmd) ファイルの部分署名を有効にします。
 
 ```
 /WINMDDELAYSIGN[:NO]
 ```
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-似ています、 [/DELAYSIGN](delaysign-partially-sign-an-assembly.md) .winmd ファイルに適用されるリンカー オプション。 使用**含める**.winmd ファイルに、公開キーのみを配置する場合。 既定では、リンカーの動作として **/winmddelaysign:no です**; 指定された winmd ファイルを署名には、しません。
+は、winmd ファイルに適用される [/DELAYSIGN](delaysign-partially-sign-an-assembly.md) リンカーオプションに似ています。 公開キーのみを winmd ファイルに格納する場合は、 **/WINMDDELAYSIGN** を使用します。 既定では、リンカーは **/WINMDDELAYSIGN: NO** が指定された場合と同様に動作します。つまり、winmd ファイルに署名しません。
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのリンカー オプションを設定するには
 
-1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。 [Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)します。
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、[Visual Studio での C++ コンパイラとビルド プロパティの設定](../working-with-project-properties.md)に関するページを参照してください。
 
-1. 選択、**リンカー**フォルダー。
+1. [ **リンカー** ] フォルダーを選択します。
 
-1. 選択、 **Windows メタデータ**プロパティ ページ。
+1. [ **Windows メタデータ** ] プロパティページを選択します。
 
-1. **Windows メタデータ遅延署名**ドロップダウン リスト ボックスで、目的のオプションを選択します。
+1. [ **Windows メタデータ遅延署名** ] ボックスの一覧で、必要なオプションを選択します。
 
 ## <a name="see-also"></a>関連項目
 

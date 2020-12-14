@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: _chmod、_wchmod'
 title: _chmod、_wchmod
 ms.date: 4/2/2020
 api_name:
@@ -35,12 +36,12 @@ helpviewer_keywords:
 - files [C++], changing permissions
 - _wchmod function
 ms.assetid: 92f7cb86-b3b0-4232-a599-b8c04a2f2c19
-ms.openlocfilehash: b1bc89ce51fff44a847111d68cac8e8b3f58a635
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 601510c1f326282d48d2824b055ee3e80d9db0ca
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82917010"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97275036"
 ---
 # <a name="_chmod-_wchmod"></a>_chmod、_wchmod
 
@@ -55,7 +56,7 @@ int _wchmod( const wchar_t *filename, int pmode );
 
 ### <a name="parameters"></a>パラメーター
 
-*/db*<br/>
+*filename*<br/>
 既存のファイルの名前。
 
 *pmode*<br/>
@@ -63,23 +64,23 @@ int _wchmod( const wchar_t *filename, int pmode );
 
 ## <a name="return-value"></a>戻り値
 
-これらの関数は、アクセス許可の設定が正常に変更された場合に 0 を返します。 戻り値-1 はエラーを示します。 指定したファイルが見つからなかった場合、 **errno**は**ENOENT**に設定されます。パラメーターが無効な場合、 **errno**は**EINVAL**に設定されます。
+これらの関数は、アクセス許可の設定が正常に変更された場合に 0 を返します。 戻り値-1 はエラーを示します。 指定したファイルが見つからなかった場合、 **errno** は **ENOENT** に設定されます。パラメーターが無効な場合、 **errno** は **EINVAL** に設定されます。
 
 ## <a name="remarks"></a>解説
 
-**_Chmod**関数は、 *filename*によって指定されたファイルのアクセス許可の設定を変更します。 アクセス許可の設定は、ファイルに対する読み取りと書き込みのアクセスを制御します。 整数式*pmode*には、sysh に定義されている次のマニフェスト定数のいずれかまたは両方が含まれています。
+**_Chmod** 関数は、 *filename* によって指定されたファイルのアクセス許可の設定を変更します。 アクセス許可の設定は、ファイルに対する読み取りと書き込みのアクセスを制御します。 整数式 *pmode* には、sysh に定義されている次のマニフェスト定数のいずれかまたは両方が含まれています。
 
 | *pmode* | 説明 |
 |-|-|
-| **\_S\_IREAD** | 読み取りのみが許可されます。 |
-| **\_S\_IWRITE** | 書き込みが許可されます。 (実際には、読み取りと書き込みが許可されます)。 |
-| **\_S\_iread** &#124; ** \_s\_iread** | 読み取りと書き込みが許可されます。 |
+| **\_S \_ IREAD** | 読み取りのみが許可されます。 |
+| **\_S \_ IWRITE** | 書き込みが許可されます。 (実際には、読み取りと書き込みが許可されます)。 |
+| **\_ S \_ iread** &#124; **\_ s \_ iread** | 読み取りと書き込みが許可されます。 |
 
-両方の定数が指定されている場合は、ビットごとの**\|** or 演算子 () と結合されます。 書き込みアクセス許可が与えられない場合、ファイルは読み取り専用になります。 ファイルはすべて常に読み取り可能です。書き込みのみのアクセス許可を与えることはできません。 したがって、 **_S_IWRITE**と **_S_IREAD** \| **_S_IWRITE**のモードは同等です。
+両方の定数が指定されている場合は、ビットごとの or 演算子 () と結合され **\|** ます。 書き込みアクセス許可が与えられない場合、ファイルは読み取り専用になります。 ファイルはすべて常に読み取り可能です。書き込みのみのアクセス許可を与えることはできません。 したがって、 **_S_IWRITE** と **_S_IREAD** \| **_S_IWRITE** のモードは同等です。
 
-**_wchmod**は **_chmod**のワイド文字バージョンです。**_wchmod**する*filename*引数は、ワイド文字列です。 **_wchmod**と **_chmod**は同じように動作します。
+**_wchmod** は **_chmod** のワイド文字バージョンです。**_wchmod** する *filename* 引数は、ワイド文字列です。 **_wchmod** と **_chmod** は同じように動作します。
 
-この関数は、パラメーターを検証します。 *Pmode*がマニフェスト定数のいずれかの組み合わせではない場合、または別の定数セットを組み込んでいる場合、関数は単にそれらを無視します。 *Filename*が**NULL**の場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、 **errno**は**EINVAL**に設定され、この関数は-1 を返します。
+この関数は、パラメーターを検証します。 *Pmode* がマニフェスト定数のいずれかの組み合わせではない場合、または別の定数セットを組み込んでいる場合、関数は単にそれらを無視します。 *Filename* が **NULL** の場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、 **errno** は **EINVAL** に設定され、この関数は-1 を返します。
 
 既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
@@ -91,10 +92,10 @@ int _wchmod( const wchar_t *filename, int pmode );
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|オプション ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|オプション ヘッダー|
 |-------------|---------------------|---------------------|
-|**_chmod**|\<io.h>|\<sys/types.h>、\<sys/stat.h>、\<errno.h>|
-|**_wchmod**|\<io.h> または \<wchar.h>|\<sys/types.h>、\<sys/stat.h>、\<errno.h>|
+|**_chmod**|\<io.h>|\<sys/types.h>, \<sys/stat.h>, \<errno.h>|
+|**_wchmod**|\<io.h> または \<wchar.h>|\<sys/types.h>, \<sys/stat.h>, \<errno.h>|
 
 互換性について詳しくは、「 [Compatibility](../../c-runtime-library/compatibility.md)」をご覧ください。
 
@@ -176,7 +177,7 @@ Mode set to read/write
 
 ## <a name="see-also"></a>関連項目
 
-[ファイル処理](../../c-runtime-library/file-handling.md)<br/>
+[ファイルの処理](../../c-runtime-library/file-handling.md)<br/>
 [_access、_waccess](access-waccess.md)<br/>
 [_creat、_wcreat](creat-wcreat.md)<br/>
 [_fstat、_fstat32、_fstat64、_fstati64、_fstat32i64、_fstat64i32](fstat-fstat32-fstat64-fstati64-fstat32i64-fstat64i32.md)<br/>

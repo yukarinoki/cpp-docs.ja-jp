@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「Active ドキュメントコンテナーアプリケーションの作成」を参照してください。
 title: Active ドキュメント コンテナー アプリケーションの作成
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - MFC COM, active document containment
 - applications [MFC], active document container
 ms.assetid: 14e2d022-a6c5-4249-8712-706b0f4433f7
-ms.openlocfilehash: 860a8531a96a0671c808dba13523b492026eafe0
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 9bf00a73e7520cde45d4e43ae79813896d4c1129
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84616352"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97309993"
 ---
 # <a name="creating-an-active-document-container-application"></a>Active ドキュメント コンテナー アプリケーションの作成
 
@@ -25,13 +26,13 @@ Active ドキュメントコンテナーアプリケーションを作成する�
 
 1. 左側のウィンドウで、[ **Visual C++** プロジェクトの種類] をクリックします。
 
-1. 右ペインで [ **MFC アプリケーション**] を選択します。
+1. 右ペインで [ **MFC アプリケーション** ] を選択します。
 
-1. プロジェクトに*Myproj*という名前を指定し、[ **OK]** をクリックします。
+1. プロジェクトに *Myproj* という名前を指定し、[ **OK]** をクリックします。
 
-1. [**複合ドキュメントのサポート**] ページを選択します。
+1. [ **複合ドキュメントのサポート** ] ページを選択します。
 
-1. **コンテナー**または**コンテナー/フルサーバー**オプションを選択します。
+1. **コンテナー** または **コンテナー/フルサーバー** オプションを選択します。
 
 1. [ **Active ドキュメントコンテナー** ] チェックボックスをオンにします。
 
@@ -41,13 +42,13 @@ Active ドキュメントコンテナーアプリケーションを作成する�
 
    - *MyProjview .cpp*
 
-1. *Myprojview .cpp*で、次の変更を行います。
+1. *Myprojview .cpp* で、次の変更を行います。
 
    - で `CMyProjView::OnPreparePrinting` 、関数の内容を次のコードに置き換えます。
 
      [!code-cpp[NVC_MFCDocView#56](codesnippet/cpp/creating-an-active-document-container-application_1.cpp)]
 
-   `OnPreparePrinting`印刷サポートを提供します。 このコード `DoPreparePrinting` は、既定の印刷準備であるを置き換えます。
+   `OnPreparePrinting` 印刷サポートを提供します。 このコード `DoPreparePrinting` は、既定の印刷準備であるを置き換えます。
 
    Active ドキュメントコンテインメントでは、より優れた印刷スキームが提供されます。
 
@@ -63,4 +64,4 @@ Active ドキュメントコンテナーアプリケーションを作成する�
 
 ## <a name="see-also"></a>関連項目
 
-[Active ドキュメント コンテインメント](active-document-containment.md)
+[Active ドキュメントコンテインメント](active-document-containment.md)

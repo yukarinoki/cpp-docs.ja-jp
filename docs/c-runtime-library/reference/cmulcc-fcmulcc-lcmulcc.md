@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「_Cmulcc、_FCmulcc、_LCmulcc」を参照してください。
 title: _Cmulcc、_FCmulcc、_LCmulcc
 ms.date: 03/30/2018
 api_name:
@@ -32,12 +33,12 @@ helpviewer_keywords:
 - _Cmulcc function
 - _FCmulcc function
 - _LCmulcc function
-ms.openlocfilehash: fc21f8cbd2103993bc2b3e36020c57c8520f04a1
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: e18f6ee0ab166cbce04d425ece43ef8ba2708a4c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70939069"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97258734"
 ---
 # <a name="_cmulcc-_fcmulcc-_lcmulcc"></a>_Cmulcc、_FCmulcc、_LCmulcc
 
@@ -61,23 +62,23 @@ _Lcomplex _LCmulcc( _Lcomplex x, _Lcomplex y );
 
 ## <a name="return-value"></a>戻り値
 
-複素数*x*と*y*の複雑な積を**表す、** **_Fcomplex**、または **_Lcomplex**構造体。
+複素数 *x* と *y* の複雑な積を表す、 **_Dcomplex**、 **_Fcomplex**、または **_Lcomplex** 構造体。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-組み込みの算術演算子は、複合型の Microsoft 実装では機能しないため、 **_Cmulcc**、 **_FCmulcc**、および **_LCmulcc**の各関数は複合型の乗算を簡略化します。
+組み込みの算術演算子は、複合型の Microsoft 実装では機能しないため、 **_Cmulcc**、 **_FCmulcc**、および **_LCmulcc** の各関数は複合型の乗算を簡略化します。
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチン|C ヘッダー|C++ ヘッダー|
+|ルーチンによって返される値|C ヘッダー|C++ ヘッダー|
 |-------------|--------------|------------------|
 |**_Cmulcc**、 **_FCmulcc**、 **_LCmulcc**|\<complex.h>|\<complex.h>|
 
-これらの関数は、Microsoft 固有の関数です。 型 **(_t**、 **_Fcomplex**、および **_Lcomplex** ) は、実装されていない C99 ネイティブ型に対して、それぞれ**Complex**、 **float**、および**long double complex**の各型に相当します。 互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+これらの関数は、Microsoft 固有の関数です。 **_Dcomplex**、 **_Fcomplex**、および **_Lcomplex** 型は、それぞれ、実装されていない C99 ネイティブ型の **double _Complex**、 **float _Complex**、および **long double _Complex** に相当します。 互換性について詳しくは、「 [Compatibility](../../c-runtime-library/compatibility.md)」をご覧ください。
 
 ## <a name="see-also"></a>関連項目
 
-[関数リファレンス (アルファベット順)](crt-alphabetical-function-reference.md)<br/>
+[アルファベット順の関数リファレンス](crt-alphabetical-function-reference.md)<br/>
 [_Cbuild、_FCbuild、_LCbuild](cbuild-fcbuild-lcbuild.md)<br/>
 [_Cmulcr、_FCmulcr、_LCmulcr](cmulcr-fcmulcr-lcmulcr.md)<br/>
 [norm、normf、norml](norm-normf-norml1.md)<br/>

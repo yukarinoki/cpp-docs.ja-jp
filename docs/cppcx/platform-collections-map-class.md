@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: Platform:: Collections:: Map クラス'
 title: Platform::Collections::Map クラス
 ms.date: 10/01/2019
 ms.topic: reference
@@ -15,16 +16,16 @@ f1_keywords:
 helpviewer_keywords:
 - Map Class (C++/Cx)
 ms.assetid: 2b8cf968-1167-4898-a149-1195b32c1785
-ms.openlocfilehash: 40b7d653b21cdc2b0fab4c852c9809ab1db46a12
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 8414328a178e4f9e2cfd7c4d97cca07ce7efcd9f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88839141"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97258500"
 ---
 # <a name="platformcollectionsmap-class"></a>Platform::Collections::Map クラス
 
-キー/値ペアのコレクションである *マップ*を表します。 XAML[データバインディング](/windows/uwp/data-binding/data-binding-in-depth)を支援するために、 [Windows:: Foundation:: Collections:: IObservableMap](/uwp/api/windows.foundation.collections.iobservablemap-2)を実装します。
+キー/値ペアのコレクションである *マップ* を表します。 XAML[データバインディング](/windows/uwp/data-binding/data-binding-in-depth)を支援するために、 [Windows:: Foundation:: Collections:: IObservableMap](/uwp/api/windows.foundation.collections.iobservablemap-2)を実装します。
 
 ## <a name="syntax"></a>構文
 
@@ -38,7 +39,7 @@ ref class Map sealed;
 
 ### <a name="parameters"></a>パラメーター
 
-*Kb*<br/>
+*K*<br/>
 キー/値ペア内のキーの型。
 
 *V*<br/>
@@ -47,7 +48,7 @@ ref class Map sealed;
 *C*<br/>
 並べ替えキーとして 2 つの要素値を比較してマップ内の相対順序を決定できる関数オブジェクトを提供する型。 既定では、 [std:: \<K> less](../standard-library/less-struct.md)です。
 
-*__is_valid_winrt_type ()**K*および*V*の型を検証し、型がマップに格納できない場合はわかりやすいエラーメッセージを提供する、コンパイラによって生成される関数。
+*__is_valid_winrt_type ()**K* および *V* の型を検証し、型がマップに格納できない場合はわかりやすいエラーメッセージを提供する、コンパイラによって生成される関数。
 
 ### <a name="remarks"></a>解説
 
@@ -98,7 +99,7 @@ ref class Map sealed;
 
 `Map`
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 **ヘッダー:** collection.h
 
@@ -160,7 +161,7 @@ bool HasKey(K key);
 ### <a name="parameters"></a>パラメーター
 
 *key*<br/>
-Map 要素の検索に使用するキー。 *キー*の型は typename *K*です。
+Map 要素の検索に使用するキー。 *キー* の型は typename *K* です。
 
 ### <a name="return-value"></a>戻り値
 
@@ -179,14 +180,14 @@ virtual bool Insert(K key, V value);
 ### <a name="parameters"></a>パラメーター
 
 *key*<br/>
-キー/値ペアのキー部分。 *キー*の型は typename *K*です。
+キー/値ペアのキー部分。 *キー* の型は typename *K* です。
 
 *value*<br/>
-キー/値ペアの値部分。 *値*の型は typename *V*です。
+キー/値ペアの値部分。 *値* の型は typename *V* です。
 
 ### <a name="return-value"></a>戻り値
 
-**`true`** 現在のマップ内の既存の要素のキーが *キー* と一致し、その要素の値部分が *value*に設定されている場合は。 **`false`** 現在のマップ内の既存の要素が*キー*と一致せず、キーと*値*のパラメーターがキーと値のペアに*なり、現在*のマップに追加されている場合は。
+**`true`** 現在のマップ内の既存の要素のキーが *キー* と一致し、その要素の値部分が *value* に設定されている場合は。 **`false`** 現在のマップ内の既存の要素が *キー* と一致せず、キーと *値* のパラメーターがキーと値のペアに *なり、現在* のマップに追加されている場合は。
 
 ## <a name="maplookup-method"></a><a name="lookup"></a> Map:: Lookup メソッド
 
@@ -201,11 +202,11 @@ V Lookup(K key);
 ### <a name="parameters"></a>パラメーター
 
 *key*<br/>
-マップの要素の検索に使用するキー。 *キー*の型は typename *K*です。
+マップの要素の検索に使用するキー。 *キー* の型は typename *K* です。
 
 ### <a name="return-value"></a>戻り値
 
-*キー*とペアになる値。 戻り値の型は typename *V*です。
+*キー* とペアになる値。 戻り値の型は typename *V* です。
 
 ### <a name="remarks"></a>解説
 
@@ -237,7 +238,7 @@ Map(
 並べ替えキーとして 2 つの要素値を比較してマップ内の相対順序を決定できる関数オブジェクトを提供する型。
 
 *m*<br/>
-現在のマップ[rvalue](../cpp/lvalues-and-rvalues-visual-cpp.md)を `map Class` 初期化するために使用されるへの参照または右辺値。
+現在のマップ[](../cpp/lvalues-and-rvalues-visual-cpp.md)を `map Class` 初期化するために使用されるへの参照または右辺値。
 
 *first*<br/>
 現在のマップを初期化するために使用される要素の範囲内の最初の要素の入力反復子。
@@ -276,7 +277,7 @@ virtual void Remove(K key);
 ### <a name="parameters"></a>パラメーター
 
 *key*<br/>
-キー/値ペアのキー部分。 *キー*の型は typename *K*です。
+キー/値ペアのキー部分。 *キー* の型は typename *K* です。
 
 ## <a name="mapsize-method"></a><a name="size"></a> Map:: Size メソッド
 

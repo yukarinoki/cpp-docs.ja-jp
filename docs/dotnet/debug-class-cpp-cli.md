@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: Debug クラス (C++/CLI)'
 title: Debug クラス (C++/CLI)
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - .NET Framework [C++], Debug class
 - Debug class
 ms.assetid: 076bd528-1b6f-4e8a-a372-eb5849cf969a
-ms.openlocfilehash: 47e1b949cb6e998508a3bd362b1c74961cf4cc23
-ms.sourcegitcommit: 94893973211d0b254c8bcdcf0779997dcc136b0c
+ms.openlocfilehash: 255fe306684928faf836cd550005eea820d64ce5
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/28/2020
-ms.locfileid: "91414153"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97258435"
 ---
 # <a name="debug-class-ccli"></a>Debug クラス (C++/CLI)
 
@@ -25,7 +26,7 @@ Visual C++ アプリケーションでを使用する場合、 <xref:System.Diag
 
 ### <a name="description"></a>説明
 
-次の例では、 **/DDEBUG** または **/DTRACE**のどちらを使用してコンパイルしたかにかかわらず、常に output ステートメントを実行します。
+次の例では、 **/DDEBUG** または **/DTRACE** のどちらを使用してコンパイルしたかにかかわらず、常に output ステートメントを実行します。
 
 ### <a name="code"></a>コード
 

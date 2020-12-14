@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「_Cbuild、_FCbuild、_LCbuild」を参照してください。
 title: _Cbuild、_FCbuild、_LCbuild
 ms.date: 03/30/2018
 api_name:
@@ -32,12 +33,12 @@ helpviewer_keywords:
 - _Cbuild function
 - _FCbuild function
 - _LCbuild function
-ms.openlocfilehash: d521fdb0d79e1e4ff6e6c1b01ce40941ed5c8c0a
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: bbca2571a10badcfc02da3e0d2f404590a1d7eb3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87221966"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97275230"
 ---
 # <a name="_cbuild-_fcbuild-_lcbuild"></a>_Cbuild、_FCbuild、_LCbuild
 
@@ -61,11 +62,11 @@ _Lcomplex _LCbuild( long double real, long double imaginary );
 
 ## <a name="return-value"></a>戻り値
 
-指定され **_Fcomplex**た浮動小 **_Lcomplex**数点型の値に対する複素数 (*実数*、*虚数*) を表す **_Dcomplex**、_Fcomplex、または _Lcomplex 構造体 \* 。
+指定された浮動小数点型の値に対する複素数 (*実数*、*虚数*) を表す **_Dcomplex**、_Fcomplex、または _Lcomplex 構造体 \* 。
 
 ## <a name="remarks"></a>解説
 
-**_Cbuild**、 **_FCbuild**、および **_LCbuild**の各関数は、複合型の作成を簡略化します。 表示される複素数の実数部と虚数部を取得するには、 [creal、crealf、creal](creal-crealf-creall.md) 、および[cimag、cimagf、cimagf](cimag-cimagf-cimagl.md)関数を使用します。
+**_Cbuild**、 **_FCbuild**、および **_LCbuild** の各関数は、複合型の作成を簡略化します。 表示される複素数の実数部と虚数部を取得するには、 [creal、crealf、creal](creal-crealf-creall.md) 、および [cimag、cimagf、cimagf](cimag-cimagf-cimagl.md) 関数を使用します。
 
 ## <a name="requirements"></a>必要条件
 
@@ -73,7 +74,7 @@ _Lcomplex _LCbuild( long double real, long double imaginary );
 |-------------|--------------|------------------|
 |**_Cbuild**、 **_FCbuild**、 **_LCbuild**|\<complex.h>|\<ccomplex>|
 
-これらの関数は、Microsoft 固有の関数です。 **_Dcomplex**、 **_Fcomplex**、および **_Lcomplex**型はそれぞれ、実装されていない C99 ネイティブ型、、およびに相当し **`double _Complex`** **`float _Complex`** **`long double _Complex`** ます。 互換性について詳しくは、「 [Compatibility](../../c-runtime-library/compatibility.md)」をご覧ください。
+これらの関数は、Microsoft 固有の関数です。 **_Dcomplex**、 **_Fcomplex**、および **_Lcomplex** 型はそれぞれ、実装されていない C99 ネイティブ型、、およびに相当し **`double _Complex`** **`float _Complex`** **`long double _Complex`** ます。 互換性について詳しくは、「 [Compatibility](../../c-runtime-library/compatibility.md)」をご覧ください。
 
 ## <a name="see-also"></a>関連項目
 

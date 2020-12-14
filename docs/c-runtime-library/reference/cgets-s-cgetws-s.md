@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: _cgets_s、_cgetws_s'
 title: _cgets_s、_cgetws_s
 ms.date: 4/2/2020
 api_name:
@@ -36,12 +37,12 @@ helpviewer_keywords:
 - _cgetws_s function
 - cgetws_s function
 ms.assetid: 38b74897-afe6-4dd9-a43f-36a3c0d72c5c
-ms.openlocfilehash: 6e48602eee3d2135d4624b28d88661ac00f65542
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 827f3c8b155f58fe13396f5dc0c66e8999b5f942
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82917095"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97275088"
 ---
 # <a name="_cgets_s-_cgetws_s"></a>_cgets_s、_cgetws_s
 
@@ -92,17 +93,17 @@ errno_t _cgetws_s(
 
 ### <a name="error-conditions"></a>エラー条件
 
-|*格納*|*numberOfElements*|*pSizeRead*|戻り値|*バッファー*の内容|
+|*格納*|*numberOfElements*|*pSizeRead*|戻り値|*バッファー* の内容|
 |--------------|------------------------|-----------------|------------|--------------------------|
-|**空白**|any|any|**EINVAL**|該当なし|
-|**NULL**以外|ゼロ|any|**EINVAL**|変更されない|
-|**NULL**以外|any|**空白**|**EINVAL**|長さゼロの文字列|
+|**NULL**|any|any|**EINVAL**|該当なし|
+|**NULL** 以外|ゼロ|any|**EINVAL**|変更されない|
+|**NULL** 以外|any|**NULL**|**EINVAL**|長さゼロの文字列|
 
 ## <a name="remarks"></a>解説
 
-**_cgets_s**と **_cgetws_s**コンソールから文字列を読み取り、(null 終端文字を含む) 文字列を*バッファー*にコピーします。 **_cgetws_s**は、関数のワイド文字バージョンです。文字のサイズ以外は、これらの2つの関数の動作は同じです。 読み取る文字列の最大サイズは、 *Numberofelements*パラメーターとして渡されます。 このサイズには、終端の null に対応する追加の文字を含める必要があります。 実際に読み取られた文字数は*pSizeRead*に配置されます。
+**_cgets_s** と **_cgetws_s** コンソールから文字列を読み取り、(null 終端文字を含む) 文字列を *バッファー* にコピーします。 **_cgetws_s** は、関数のワイド文字バージョンです。文字のサイズ以外は、これらの2つの関数の動作は同じです。 読み取る文字列の最大サイズは、 *Numberofelements* パラメーターとして渡されます。 このサイズには、終端の null に対応する追加の文字を含める必要があります。 実際に読み取られた文字数は *pSizeRead* に配置されます。
 
-操作中に、またはパラメーターを検証する際にエラーが発生した場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」の説明にあるとおり無効なパラメーター ハンドラーが呼び出されます。 実行の継続が許可された場合、 **errno**は**einval**に設定され、 **einval**が返されます。
+操作中に、またはパラメーターを検証する際にエラーが発生した場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」の説明にあるとおり無効なパラメーター ハンドラーが呼び出されます。 実行の継続が許可された場合、 **errno** は **einval** に設定され、 **einval** が返されます。
 
 C++ では、テンプレートのオーバーロードを利用すると、これらの関数の使用が簡素化されます。オーバーロードでは、バッファー長が自動的に推論されるのでサイズ引数を指定する必要がなくなるだけでなく、古くてセキュリティが万全ではない関数を新しくてセキュリティが強化された関数に自動的に置き換えることができます。 詳細については、「[セキュリティ保護されたテンプレート オーバーロード](../../c-runtime-library/secure-template-overloads.md)」を参照してください。
 
@@ -118,7 +119,7 @@ C++ では、テンプレートのオーバーロードを利用すると、こ�
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**_cgets_s**|\<conio.h>|
 |**_cgetws_s**|\<conio.h> または \<wchar.h>|

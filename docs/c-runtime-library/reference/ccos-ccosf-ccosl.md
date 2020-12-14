@@ -1,4 +1,5 @@
 ---
+description: 詳細については、ccos、ccosf、ccosl に関するページを参照してください。
 title: ccos、ccosf、ccosl
 ms.date: 11/04/2016
 api_name:
@@ -33,12 +34,12 @@ helpviewer_keywords:
 - ccosf function
 - ccosl function
 ms.assetid: 4ab936ac-ff85-49ac-9418-2b69cf5d4696
-ms.openlocfilehash: 1d6acddf979b7488be722bd850fe9e16816d1030
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 54036a2ddd3d61bba1d11a4841eaab1bd546c0ee
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70943182"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97275140"
 ---
 # <a name="ccos-ccosf-ccosl"></a>ccos、ccosf、ccosl
 
@@ -71,23 +72,23 @@ _Lcomplex ccosl(
 
 ## <a name="return-value"></a>戻り値
 
-*Z*のコサイン (ラジアン)。
+*Z* のコサイン (ラジアン)。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-でC++はオーバーロードが可能であるため、 **_Fcomplex**と **_Lcomplex**の値を受け取って返す**ccos**のオーバーロードを呼び出すことができます。 C プログラムでは、 **ccos**は常にを受け取り、**戻り値を**返します。
+C++ ではオーバーロードが可能であるため、 **_Fcomplex** と **_Lcomplex** の値を受け取って返す **ccos** のオーバーロードを呼び出すことができます。 C プログラムでは、 **ccos** は常に **_Dcomplex** 値を取得して返します。
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチン|C ヘッダー|C++ ヘッダー|
+|ルーチンによって返される値|C ヘッダー|C++ ヘッダー|
 |-------------|--------------|------------------|
-|**ccos**、 **ccosf**、 **ccosl**|\<complex.h>|\<ccomplex>|
+|**ccos**、               **ccosf**、 **ccosl**|\<complex.h>|\<ccomplex>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性について詳しくは、「 [Compatibility](../../c-runtime-library/compatibility.md)」をご覧ください。
 
 ## <a name="see-also"></a>関連項目
 
-[関数リファレンス (アルファベット順)](crt-alphabetical-function-reference.md)<br/>
+[アルファベット順の関数リファレンス](crt-alphabetical-function-reference.md)<br/>
 [catanh、catanhf、catanhl](catanh-catanhf-catanhl.md)<br/>
 [ctanh、ctanhf、ctanhl](ctanh-ctanhf-ctanhl.md)<br/>
 [catan、catanf、catanl](catan-catanf-catanl.md)<br/>

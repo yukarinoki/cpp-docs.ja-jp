@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: [Web 参照] プロパティページ'
 title: '[Web 参照] プロパティ ページ'
 ms.date: 11/04/2016
 f1_keywords:
@@ -9,12 +10,12 @@ f1_keywords:
 helpviewer_keywords:
 - Web references, properties
 ms.assetid: b80f7c77-af88-4551-9943-99748ebacf09
-ms.openlocfilehash: 9e33fc1d53253c3da09e812110015cfdfdbe2d02
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 371642cd7ffcac9cccaea980f7790f729c8e74b0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62316471"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97259163"
 ---
 # <a name="web-references-property-page"></a>[Web 参照] プロパティ ページ
 
@@ -22,7 +23,7 @@ ms.locfileid: "62316471"
 
 **[Web 参照]** プロパティ ページには、以下のプロパティがあります。
 
-- **出力ファイル**
+- **[出力ファイル]**
 
    XML Web サービス プロキシ クラスを格納するファイルの名前。
 
@@ -30,16 +31,16 @@ ms.locfileid: "62316471"
 
    Web サービス記述言語ツール (Wsdl.exe) の著作権情報を表示しません。
 
-- **Namespace**
+- **名前空間**
 
    生成される Web プロキシの名前を指定します。
 
-- **その他のリソース**
+- **その他のリファレンス**
 
    プロキシ DLL によって参照される追加 DLL を指定します。
 
-アクセスする方法については、 **Web 参照の**プロパティ ページを参照してください[Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)します。
+[ **Web 参照** ] プロパティページにアクセスする方法の詳細については、「 [Visual Studio での C++ コンパイラとビルドプロパティの設定](../working-with-project-properties.md)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 
-[C++ プロジェクト プロパティ ページの参照](property-pages-visual-cpp.md)
+[C++ プロジェクトのプロパティ ページのリファレンス](property-pages-visual-cpp.md)

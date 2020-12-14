@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: コントロールクラス'
 title: コントロール クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 - text, controls for input [MFC]
 - user input [MFC], MFC control classes
 ms.assetid: f9876606-9f5b-44cb-9135-213298d1df8f
-ms.openlocfilehash: 277802bff3e4833396c4bf114ff8880fcd26343d
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: eb0bee6d865867a052b5f49408bdaa1b70da343f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84622998"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97310123"
 ---
 # <a name="control-classes"></a>コントロール クラス
 
@@ -65,7 +66,7 @@ ms.locfileid: "84622998"
 [CBitmapButton](reference/cbitmapbutton-class.md)<br/>
 テキストキャプションではなくビットマップを持つボタン。
 
-## <a name="lists"></a>リスト
+## <a name="lists"></a>表示内容
 
 [CListBox](reference/clistbox-class.md)<br/>
 リストボックスコントロールウィンドウ。 リストボックスには、ユーザーが表示および選択できる項目の一覧が表示されます。
@@ -91,10 +92,10 @@ Windows のリストボックスの機能を提供します。リストボック
 ## <a name="toolbars-and-status-bars"></a>ツールバーとステータスバー
 
 [CToolBarCtrl](reference/ctoolbarctrl-class.md)<br/>
-Windows ツール バー コモン コントロールの機能が用意されています。 ほとんどの MFC プログラムは、このクラスではなく、 [CToolBar](reference/ctoolbar-class.md)を使用します。
+Windows ツール バー コモン コントロールの機能が用意されています。 ほとんどの MFC プログラムは、このクラスではなく、 [CToolBar](reference/ctoolbar-class.md) を使用します。
 
 [CStatusBarCtrl](reference/cstatusbarctrl-class.md)<br/>
-水平方向のウィンドウ。通常はウィンドウに分割され、アプリケーションで状態情報を表示できます。 ほとんどの MFC プログラムは、このクラスではなく[CStatusBar](reference/cstatusbar-class.md)を使用します。
+水平方向のウィンドウ。通常はウィンドウに分割され、アプリケーションで状態情報を表示できます。 ほとんどの MFC プログラムは、このクラスではなく [CStatusBar](reference/cstatusbar-class.md) を使用します。
 
 ## <a name="miscellaneous-controls"></a>その他のコントロール
 

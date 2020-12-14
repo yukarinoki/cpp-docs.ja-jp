@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: マクロを定義する場所'
 title: マクロを定義する場所
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,20 +7,20 @@ helpviewer_keywords:
 - macros, NMAKE
 - NMAKE program, defining macros
 ms.assetid: 0fc59ec5-5f58-4644-b7da-7b021f7001af
-ms.openlocfilehash: dc03644adea4619b3eabe33c481d71f704a9f410
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b5fc7d6e1fd8247816993929791bf734596d00e6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62316367"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97259202"
 ---
 # <a name="where-to-define-macros"></a>マクロを定義する場所
 
-コマンドライン、コマンド ファイル、メイクファイルでまたは tools.ini マクロを定義します。
+コマンドライン、コマンドファイル、メイクファイル、または Tools.ini ファイルでマクロを定義します。
 
-メイクファイルまたは Tools.ini ファイルでは、各マクロ定義が別々 の行に表示する必要があり、スペースまたはタブで始めることはできません。スペースや等号 (=) の周囲のタブは無視されます。 すべて[文字の文字列](defining-an-nmake-macro.md)リテラルを囲む引用符と埋め込み型スペースなどです。
+メイクファイルまたは Tools.ini ファイルでは、各マクロ定義は個別の行に記述する必要があり、スペースやタブで始めることはできません。等号を囲むスペースやタブは無視されます。 すべての [文字列文字](defining-an-nmake-macro.md) は、前後の引用符と埋め込みスペースを含むリテラルです。
 
-コマンド ファイルまたはコマンドラインで引数を区切るスペースとタブと、等号 (=) で囲むことはできません。 場合`string`スペースまたはタブが埋め込まれて、文字列自体または全体のマクロのいずれかを二重引用符で囲みます ("")。
+コマンドラインまたはコマンドファイルでは、スペースとタブは引数を区切るため、等号を囲むことはできません。 `string`にスペースまたはタブが埋め込まれている場合は、文字列自体またはマクロ全体を二重引用符 ("") で囲みます。
 
 ## <a name="see-also"></a>関連項目
 
