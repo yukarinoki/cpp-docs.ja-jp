@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: 致命的なエラー C1854'
 title: 致命的なエラー C1854
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,17 +7,17 @@ f1_keywords:
 helpviewer_keywords:
 - C1854
 ms.assetid: 8c21a9cc-1737-475c-9e57-8725cd8937c1
-ms.openlocfilehash: 83eb5e01eac377b8f19a0e94dc1518e3ed557c3b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1c08db55089853545afa511213fc164c978bd4ff
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62165643"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97276206"
 ---
 # <a name="fatal-error-c1854"></a>致命的なエラー C1854
 
-> オブジェクト ファイルでプリコンパイル済みヘッダーの作成中に情報を上書きすることはできません: '*filename*'
+> オブジェクトファイルでプリコンパイル済みヘッダーの作成中に形成された情報を上書きできません: '*filename*'
 
-指定した、 [/Yu (プリコンパイル済みヘッダー ファイルの使用)](../../build/reference/yu-use-precompiled-header-file.md)オプションを指定した後、 [/Yc (プリコンパイル済みヘッダー ファイルの作成)](../../build/reference/yc-create-precompiled-header-file.md)同じファイル オプションを指定します。
+同じファイルに対して [ [/yc (プリコンパイル済みヘッダーファイルの作成)](../../build/reference/yc-create-precompiled-header-file.md) ] オプションを指定した後、[ [/Yu (プリコンパイル済みヘッダーファイルを使用)](../../build/reference/yu-use-precompiled-header-file.md) ] オプションを指定しました。
 
-この問題を解決するを使用してコンパイルするプロジェクトで一般に、1 つのファイルを設定、 **/Yc**オプション、およびその他のすべてのファイルを使用してコンパイルする設定、 **/Yu**オプション。 詳細については、使用するときの **/Yc**オプション、および Visual Studio IDE で設定を参照してください方法[/Yc (プリコンパイル済みヘッダー ファイルの作成)](../../build/reference/yc-create-precompiled-header-file.md)。 プリコンパイル済みヘッダーの使用の詳細については、次を参照してください。[プリコンパイル済みヘッダー ファイルの作成](../../build/creating-precompiled-header-files.md)です。
+この問題を解決するには、通常、 **/yc** オプションを使用してコンパイルするプロジェクト内のファイルを1つだけ設定し、 **/yu** オプションを使用して他のすべてのファイルをコンパイルするように設定します。 **/Yc** オプションの使用方法、および VISUAL Studio IDE での設定方法の詳細については、「 [/Yc (プリコンパイル済みヘッダーファイルの作成)](../../build/reference/yc-create-precompiled-header-file.md)」を参照してください。 プリコンパイル済みヘッダーの使用方法の詳細については、「 [プリコンパイル済みヘッダーファイルの作成](../../build/creating-precompiled-header-files.md)」を参照してください。
