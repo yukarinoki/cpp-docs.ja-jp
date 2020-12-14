@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: CHeaderCtrl クラス'
 title: CHeaderCtrl クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -64,12 +65,12 @@ helpviewer_keywords:
 - CHeaderCtrl [MFC], SetItem
 - CHeaderCtrl [MFC], SetOrderArray
 ms.assetid: b847ac90-5fae-4a87-88e0-ca45f77b8b3b
-ms.openlocfilehash: f225d406ab1560b4308a468ebd71b3dfd88cfa2a
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: 9fe17b6c2553526af40ead253cd7c03fa6b57612
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88562174"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97184011"
 ---
 # <a name="cheaderctrl-class"></a>CHeaderCtrl クラス
 
@@ -152,7 +153,7 @@ Windows 95/Internet Explorer 4.0 コモンコントロールに追加された�
 
 `CHeaderCtrl`
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** afxcmn.h
 
@@ -295,13 +296,13 @@ virtual BOOL CreateEx(
 ### <a name="parameters"></a>パラメーター
 
 *dwExStyle*<br/>
-作成するコントロールの拡張スタイルを指定します。 拡張 Windows スタイルの一覧については、Windows SDK の[CreateWindowEx](/windows/win32/api/winuser/nf-winuser-createwindowexw)の*dwexstyle*パラメーターを参照してください。
+作成するコントロールの拡張スタイルを指定します。 拡張 Windows スタイルの一覧については、Windows SDK の [CreateWindowEx](/windows/win32/api/winuser/nf-winuser-createwindowexw)の *dwexstyle* パラメーターを参照してください。
 
 *dwStyle*<br/>
 ヘッダーコントロールのスタイル。 ヘッダーコントロールスタイルの説明については、「Windows SDK の [ヘッダーコントロールスタイル](/windows/win32/Controls/header-control-styles) 」を参照してください。 追加のスタイルの一覧については、「 [作成](#create) 」を参照してください。
 
 *rect*<br/>
-*PParentWnd*のクライアント座標で、作成されるウィンドウのサイズと位置を記述する[RECT](/windows/win32/api/windef/ns-windef-rect)構造体への参照。
+*PParentWnd* のクライアント座標で、作成されるウィンドウのサイズと位置を記述する [RECT](/windows/win32/api/windef/ns-windef-rect)構造体への参照。
 
 *pParentWnd*<br/>
 コントロールの親であるウィンドウへのポインター。
@@ -315,7 +316,7 @@ virtual BOOL CreateEx(
 
 ### <a name="remarks"></a>解説
 
-`CreateEx` `Create` Windows 拡張スタイルの先頭**WS_EX_** によって指定された拡張 windows スタイルを適用するには、の代わりにを使用します。
+`CreateEx` `Create` Windows 拡張スタイルの先頭 **WS_EX_** によって指定された拡張 windows スタイルを適用するには、の代わりにを使用します。
 
 ## <a name="cheaderctrlcreatedragimage"></a><a name="createdragimage"></a> CHeaderCtrl:: CreateDragImage
 

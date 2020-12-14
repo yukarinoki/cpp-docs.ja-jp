@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: CDumpContext クラス'
 title: CDumpContext クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -18,12 +19,12 @@ helpviewer_keywords:
 - CDumpContext [MFC], HexDump
 - CDumpContext [MFC], SetDepth
 ms.assetid: 98c52b2d-14b5-48ed-b423-479a4d1c60fa
-ms.openlocfilehash: 3a81e06586e6de14d57ce4c4de36dc30c73383f1
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 955be92c4a3b08fe6e1d5a947166133143667ac7
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87212515"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97184777"
 ---
 # <a name="cdumpcontext-class"></a>CDumpContext クラス
 
@@ -57,15 +58,15 @@ class CDumpContext
 
 |名前|説明|
 |----------|-----------------|
-|[CDumpContext:: operator&lt;&lt;](#operator_lt_lt)|変数とオブジェクトをダンプコンテキストに挿入します。|
+|[CDumpContext:: operator &lt;&lt;](#operator_lt_lt)|変数とオブジェクトをダンプコンテキストに挿入します。|
 
 ## <a name="remarks"></a>解説
 
-`CDumpContext`に基底クラスがありません。
+`CDumpContext` に基底クラスがありません。
 
-ダンプの大部分には、事前オブジェクトである[afxDump](diagnostic-services.md#afxdump)を使用でき `CDumpContext` ます。 `afxDump`オブジェクトは、Microsoft Foundation Class ライブラリのデバッグバージョンでのみ使用できます。
+ダンプの大部分には、事前オブジェクトである [afxDump](diagnostic-services.md#afxdump)を使用でき `CDumpContext` ます。 `afxDump`オブジェクトは、Microsoft Foundation Class ライブラリのデバッグバージョンでのみ使用できます。
 
-いくつかのメモリ[診断サービス](../../mfc/reference/diagnostic-services.md)が `afxDump` 出力に使用します。
+いくつかのメモリ [診断サービス](../../mfc/reference/diagnostic-services.md) が `afxDump` 出力に使用します。
 
 Windows 環境では、定義済みのオブジェクトからの出力は、 `afxDump` 概念的にはストリームに似て `cerr` いますが、windows の関数を使用してデバッガーにルーティングされ `OutputDebugString` ます。
 
@@ -73,9 +74,9 @@ Windows 環境では、定義済みのオブジェクトからの出力は、 `a
 
 、、など、から派生していないクラスには、、、などの `CObject` `CString` 頻繁に `CTime` `CTimeSpan` `CDumpContext` 使用される構造と同様に、独自のオーバーロードされた挿入演算子があり `CFileStatus` `CPoint` `CRect` ます。
 
-クラスの実装で[IMPLEMENT_DYNAMIC](../../mfc/reference/run-time-object-model-services.md#implement_dynamic)または[IMPLEMENT_SERIAL](../../mfc/reference/run-time-object-model-services.md#implement_serial)マクロを使用すると、は、 `CObject::Dump` 派生クラスの名前を出力し `CObject` ます。 それ以外の場合は印刷され `CObject` ます。
+クラスの実装で [IMPLEMENT_DYNAMIC](../../mfc/reference/run-time-object-model-services.md#implement_dynamic) または [IMPLEMENT_SERIAL](../../mfc/reference/run-time-object-model-services.md#implement_serial) マクロを使用すると、は、 `CObject::Dump` 派生クラスの名前を出力し `CObject` ます。 それ以外の場合は印刷され `CObject` ます。
 
-クラスは、 `CDumpContext` ライブラリのデバッグバージョンとリリースバージョンの両方で使用できますが、 `Dump` メンバー関数はデバッグバージョンでのみ定義されています。 **#Ifdef _DEBUG**ステートメントを使用して  /  `#endif` 、カスタムメンバー関数を含む診断コードをかっこで囲み `Dump` ます。
+クラスは、 `CDumpContext` ライブラリのデバッグバージョンとリリースバージョンの両方で使用できますが、 `Dump` メンバー関数はデバッグバージョンでのみ定義されています。 **#Ifdef _DEBUG** ステートメントを使用して  /  `#endif` 、カスタムメンバー関数を含む診断コードをかっこで囲み `Dump` ます。
 
 独自のオブジェクトを作成する前に `CDumpContext` 、 `CFile` ダンプ先として機能するオブジェクトを作成する必要があります。
 
@@ -87,11 +88,11 @@ Windows 環境では、定義済みのオブジェクトからの出力は、 `a
 
 `CDumpContext`
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** afx
 
-## <a name="cdumpcontextcdumpcontext"></a><a name="cdumpcontext"></a>CDumpContext:: CDumpContext
+## <a name="cdumpcontextcdumpcontext"></a><a name="cdumpcontext"></a> CDumpContext:: CDumpContext
 
 クラスのオブジェクトを構築 `CDumpContext` します。
 
@@ -114,7 +115,7 @@ CDumpContext(CFile* pFile = NULL);
 
 [!code-cpp[NVC_MFC_Utilities#12](../../mfc/codesnippet/cpp/cdumpcontext-class_1.cpp)]
 
-## <a name="cdumpcontextdumpashex"></a><a name="dumpashex"></a>CDumpContext::D umpAsHex
+## <a name="cdumpcontextdumpashex"></a><a name="dumpashex"></a> CDumpContext::D umpAsHex
 
 指定された型を16進数値としてダンプします。
 
@@ -141,7 +142,7 @@ CDumpContext& DumpAsHex(WORD w);
 
 [!code-cpp[NVC_MFC_Utilities#13](../../mfc/codesnippet/cpp/cdumpcontext-class_2.cpp)]
 
-## <a name="cdumpcontextflush"></a><a name="flush"></a>CDumpContext:: Flush
+## <a name="cdumpcontextflush"></a><a name="flush"></a> CDumpContext:: Flush
 
 バッファー内の残りのデータを、ダンプコンテキストにアタッチされたファイルに強制的に書き込むようにします。
 
@@ -153,7 +154,7 @@ void Flush();
 
 [!code-cpp[NVC_MFC_Utilities#14](../../mfc/codesnippet/cpp/cdumpcontext-class_3.cpp)]
 
-## <a name="cdumpcontextgetdepth"></a><a name="getdepth"></a>CDumpContext:: GetDepth
+## <a name="cdumpcontextgetdepth"></a><a name="getdepth"></a> CDumpContext:: GetDepth
 
 Deep または浅いダンプが処理中かどうかを判断します。
 
@@ -169,7 +170,7 @@ int GetDepth() const;
 
   [Setdepth](#setdepth)の例を参照してください。
 
-## <a name="cdumpcontexthexdump"></a><a name="hexdump"></a>CDumpContext:: HexDump
+## <a name="cdumpcontexthexdump"></a><a name="hexdump"></a> CDumpContext:: HexDump
 
 16進数値として書式設定されたバイトの配列をダンプします。
 
@@ -203,7 +204,7 @@ void HexDump(
 
 [!code-cpp[NVC_MFC_Utilities#15](../../mfc/codesnippet/cpp/cdumpcontext-class_4.cpp)]
 
-## <a name="cdumpcontextoperator-ltlt"></a><a name="operator_lt_lt"></a>CDumpContext:: operator&lt;&lt;
+## <a name="cdumpcontextoperator-ltlt"></a><a name="operator_lt_lt"></a> CDumpContext:: operator &lt;&lt;
 
 指定されたデータをダンプコンテキストに出力します。
 
@@ -245,7 +246,7 @@ CDumpContext& operator<<(HFONT h);
 
 [!code-cpp[NVC_MFC_Utilities#17](../../mfc/codesnippet/cpp/cdumpcontext-class_5.cpp)]
 
-## <a name="cdumpcontextsetdepth"></a><a name="setdepth"></a>CDumpContext:: SetDepth
+## <a name="cdumpcontextsetdepth"></a><a name="setdepth"></a> CDumpContext:: SetDepth
 
 ダンプの深さを設定します。
 

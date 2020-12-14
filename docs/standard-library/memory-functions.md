@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「 &lt; メモリ関数」を参照してください。 &gt;
 title: '&lt;memory&gt; 関数'
 ms.date: 08/05/2019
 f1_keywords:
@@ -74,16 +75,16 @@ helpviewer_keywords:
 - std::uninitialized_copy_n [C++]
 - std::uninitialized_fill [C++]
 - std::uninitialized_fill_n [C++]
-ms.openlocfilehash: 2a22b96bf8e3f97e6592bc8aa8ec0c61dc83b7a9
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 13c18ce754a3e88d7ad2ae47ead522bc21cec718
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87233068"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97183972"
 ---
 # <a name="ltmemorygt-functions"></a>&lt;memory&gt; 関数
 
-## <a name="addressof"></a><a name="addressof"></a>addressof
+## <a name="addressof"></a><a name="addressof"></a> addressof
 
 オブジェクトの実際のアドレスを取得します。
 
@@ -108,11 +109,11 @@ const T* addressof(
 
 ### <a name="return-value"></a>戻り値
 
-オーバーロードされたが存在する場合でも、*値*によって参照されるオブジェクトまたは関数の実際のアドレス `operator&()` 。
+オーバーロードされたが存在する場合でも、 *値* によって参照されるオブジェクトまたは関数の実際のアドレス `operator&()` 。
 
 ### <a name="remarks"></a>解説
 
-## <a name="align"></a><a name="align"></a>位置
+## <a name="align"></a><a name="align"></a> 位置
 
 指定したサイズのストレージを、指定されたアラインメント仕様によって、指定されたストレージの最初の使用可能なアドレスに収めます。
 
@@ -143,11 +144,11 @@ void* align(
 
 ### <a name="return-value"></a>戻り値
 
-要求されたアラインバッファーが使用可能な領域に収まりきらない場合は、null ポインターです。それ以外の場合は、 *ptr*の新しい値。
+要求されたアラインバッファーが使用可能な領域に収まりきらない場合は、null ポインターです。それ以外の場合は、 *ptr* の新しい値。
 
 ### <a name="remarks"></a>解説
 
-変更された*ptr*および*空間*パラメーターを使用すると、 `align()` 同じバッファーでを繰り返し呼び出すことができます。これは、*アラインメント*と*サイズ*の値が異なる場合があります。 `align()` の使用方法の 1 つを次のコード スニペットに示します。
+変更された *ptr* および *空間* パラメーターを使用すると、 `align()` 同じバッファーでを繰り返し呼び出すことができます。これは、 *アラインメント* と *サイズ* の値が異なる場合があります。 `align()` の使用方法の 1 つを次のコード スニペットに示します。
 
 ```cpp
 #include <type_traits> // std::alignment_of()
@@ -172,9 +173,9 @@ while (std::align(alignment, sizeof(MyObj), ptr, space)) {
 // possible to allow more aligned storage in this buffer.
 ```
 
-## <a name="allocate_shared"></a><a name="allocate_shared"></a>allocate_shared
+## <a name="allocate_shared"></a><a name="allocate_shared"></a> allocate_shared
 
-指定したアロケーターを使用して、指定した型に割り当てられ、構築されたオブジェクトに[shared_ptr](shared-ptr-class.md)を作成します。 `shared_ptr` を返します。
+指定したアロケーターを使用して、指定した型に割り当てられ、構築されたオブジェクトに [shared_ptr](shared-ptr-class.md) を作成します。 `shared_ptr` を返します。
 
 ```cpp
 template <class T, class Allocator, class... Args>
@@ -193,9 +194,9 @@ shared_ptr<T> allocate_shared(
 
 ### <a name="remarks"></a>解説
 
-関数は、 `shared_ptr<T>` `T(args...)` *alloc*によって割り当てられて構築されたオブジェクト、へのポインターを作成します。
+関数は、 `shared_ptr<T>` `T(args...)` *alloc* によって割り当てられて構築されたオブジェクト、へのポインターを作成します。
 
-## <a name="atomic_compare_exchange_strong"></a><a name="atomic_compare_exchange_strong"></a>atomic_compare_exchange_strong
+## <a name="atomic_compare_exchange_strong"></a><a name="atomic_compare_exchange_strong"></a> atomic_compare_exchange_strong
 
 ```cpp
 template<class T>
@@ -205,7 +206,7 @@ bool atomic_compare_exchange_strong(
     shared_ptr<T> w);
 ```
 
-## <a name="atomic_compare_exchange_weak"></a><a name="atomic_compare_exchange_weak"></a>atomic_compare_exchange_weak
+## <a name="atomic_compare_exchange_weak"></a><a name="atomic_compare_exchange_weak"></a> atomic_compare_exchange_weak
 
 ```cpp
 template<class T>
@@ -215,7 +216,7 @@ bool atomic_compare_exchange_weak(
     shared_ptr<T> w);
 ```
 
-## <a name="atomic_compare_exchange_strong_explicit"></a><a name="atomic_compare_exchange_strong_explicit"></a>atomic_compare_exchange_strong_explicit
+## <a name="atomic_compare_exchange_strong_explicit"></a><a name="atomic_compare_exchange_strong_explicit"></a> atomic_compare_exchange_strong_explicit
 
 ```cpp
 template<class T>
@@ -227,7 +228,7 @@ bool atomic_compare_exchange_strong_explicit(
     memory_order failure);
 ```
 
-## <a name="atomic_compare_exchange_weak_explicit"></a><a name="atomic_compare_exchange_weak_explicit"></a>atomic_compare_exchange_weak_explicit
+## <a name="atomic_compare_exchange_weak_explicit"></a><a name="atomic_compare_exchange_weak_explicit"></a> atomic_compare_exchange_weak_explicit
 
 ```cpp
 template<class T>
@@ -239,7 +240,7 @@ bool atomic_compare_exchange_weak_explicit(
     memory_order failure);
 ```
 
-## <a name="atomic_exchange"></a><a name="atomic_exchange"></a>atomic_exchange
+## <a name="atomic_exchange"></a><a name="atomic_exchange"></a> atomic_exchange
 
 ```cpp
 template<class T>
@@ -248,7 +249,7 @@ shared_ptr<T> atomic_exchange(
     shared_ptr<T> r);
 ```
 
-## <a name="atomic_exchange_explicit"></a><a name="atomic_exchange_explicit"></a>atomic_exchange_explicit
+## <a name="atomic_exchange_explicit"></a><a name="atomic_exchange_explicit"></a> atomic_exchange_explicit
 
 ```cpp
 template<class T>
@@ -258,7 +259,7 @@ shared_ptr<T> atomic_exchange_explicit(
     memory_order mo);
 ```
 
-## <a name="atomic_is_lock_free"></a><a name="atomic_is_lock_free"></a>atomic_is_lock_free
+## <a name="atomic_is_lock_free"></a><a name="atomic_is_lock_free"></a> atomic_is_lock_free
 
 ```cpp
 template<class T>
@@ -266,7 +267,7 @@ bool atomic_is_lock_free(
     const shared_ptr<T>* u);
 ```
 
-## <a name="atomic_load"></a><a name="atomic_load"></a>atomic_load
+## <a name="atomic_load"></a><a name="atomic_load"></a> atomic_load
 
 ```cpp
 template<class T>
@@ -274,7 +275,7 @@ shared_ptr<T> atomic_load(
     const shared_ptr<T>* u);
 ```
 
-## <a name="atomic_load_explicit"></a><a name="atomic_load_explicit"></a>atomic_load_explicit
+## <a name="atomic_load_explicit"></a><a name="atomic_load_explicit"></a> atomic_load_explicit
 
 ```cpp
 template<class T>
@@ -283,7 +284,7 @@ shared_ptr<T> atomic_load_explicit(
     memory_order mo);
 ```
 
-## <a name="atomic_store"></a><a name="atomic_store"></a>atomic_store
+## <a name="atomic_store"></a><a name="atomic_store"></a> atomic_store
 
 ```cpp
 template<class T>
@@ -292,7 +293,7 @@ void atomic_store(
     shared_ptr<T> r);
 ```
 
-## <a name="atomic_store_explicit"></a><a name="atomic_store_explicit"></a>atomic_store_explicit
+## <a name="atomic_store_explicit"></a><a name="atomic_store_explicit"></a> atomic_store_explicit
 
 ```cpp
 template<class T>
@@ -302,7 +303,7 @@ void atomic_store_explicit(
     memory_order mo);
 ```
 
-## <a name="const_pointer_cast"></a><a name="const_pointer_cast"></a>const_pointer_cast
+## <a name="const_pointer_cast"></a><a name="const_pointer_cast"></a> const_pointer_cast
 
 [Shared_ptr](shared-ptr-class.md)に定数をキャストします。
 
@@ -329,7 +330,7 @@ shared_ptr<T> const_pointer_cast(
 
 ### <a name="remarks"></a>解説
 
-が null ポインターを返す場合、テンプレート関数は空のオブジェクトを返します。 `shared_ptr` それ以外の場合は、 `const_cast<T*>(sp.get())` `shared_ptr<T>` *sp*によって所有されているリソースを所有するオブジェクトを返します。 式 `const_cast<T*>(sp.get())` は有効な式である必要があります。
+が null ポインターを返す場合、テンプレート関数は空のオブジェクトを返します。 `shared_ptr` それ以外の場合は、 `const_cast<T*>(sp.get())` `shared_ptr<T>` *sp* によって所有されているリソースを所有するオブジェクトを返します。 式 `const_cast<T*>(sp.get())` は有効な式である必要があります。
 
 ### <a name="example"></a>例
 
@@ -356,7 +357,7 @@ int main()
 sp1 == 3
 ```
 
-## <a name="declare_no_pointers"></a><a name="declare_no_pointers"></a>declare_no_pointers
+## <a name="declare_no_pointers"></a><a name="declare_no_pointers"></a> declare_no_pointers
 
 ベース アドレス ポインターとブロック サイズで定義されたメモリ ブロック内の文字に追跡可能なポインターが含まれていないことを、ガベージ コレクターに通知します。
 
@@ -372,13 +373,13 @@ void declare_no_pointers(
 追跡可能なポインターがもう含まれない最初の文字のアドレス。
 
 *幅*\
-トレース可能なポインターを含まない、 *ptr*で開始されるブロックのサイズ。
+トレース可能なポインターを含まない、 *ptr* で開始されるブロックのサイズ。
 
 ### <a name="remarks"></a>解説
 
 関数は、範囲内のアドレスに追跡可能なポインターが含まれていないことをガベージコレクターに通知 `[ ptr, ptr + size)` します。 (割り当てられたストレージへのポインターは、到達可能な場合を除き、逆参照しないでください)。
 
-## <a name="declare_reachable"></a><a name="declare_reachable"></a>declare_reachable
+## <a name="declare_reachable"></a><a name="declare_reachable"></a> declare_reachable
 
 指定されたアドレスが、割り当てられたストレージのアドレスであり、そのストレージに到達可能であることをガベージ コレクションに通知します。
 
@@ -394,11 +395,11 @@ void declare_reachable(
 
 ### <a name="remarks"></a>解説
 
-*Ptr*が null でない場合、関数は、 *ptr*に到達できるようになったこと、つまり、割り当てられた有効なストレージを指していることをガベージコレクターに通知します。
+*Ptr* が null でない場合、関数は、 *ptr* に到達できるようになったこと、つまり、割り当てられた有効なストレージを指していることをガベージコレクターに通知します。
 
-## <a name="default_delete"></a><a name="default_delete"></a>default_delete
+## <a name="default_delete"></a><a name="default_delete"></a> default_delete
 
-**Operator new**で割り当てられたオブジェクトを削除します。 [Unique_ptr](unique-ptr-class.md)での使用に適しています。
+**Operator new** で割り当てられたオブジェクトを削除します。 [Unique_ptr](unique-ptr-class.md)での使用に適しています。
 
 ```cpp
 struct default_delete
@@ -422,9 +423,9 @@ struct default_delete
 
 ### <a name="remarks"></a>解説
 
-クラステンプレートでは、 **new 演算子**で割り当てられたスカラーオブジェクトを削除する削除子が記述されています。これは、クラステンプレートでの使用に適して `unique_ptr` います。 明示的な特殊化 `default_delete<T[]>` もあります。
+クラステンプレートでは、 **new 演算子** で割り当てられたスカラーオブジェクトを削除する削除子が記述されています。これは、クラステンプレートでの使用に適して `unique_ptr` います。 明示的な特殊化 `default_delete<T[]>` もあります。
 
-## <a name="destroy_at"></a><a name="destroy_at"></a>destroy_at
+## <a name="destroy_at"></a><a name="destroy_at"></a> destroy_at
 
 ```cpp
 template <class T>
@@ -434,7 +435,7 @@ void destroy_at(
 
 `location->~T()` と同じ。
 
-## <a name="destroy"></a><a name="destroy"></a>倒す
+## <a name="destroy"></a><a name="destroy"></a> 倒す
 
 ```cpp
 template <class ForwardIterator>
@@ -450,7 +451,7 @@ for (; first != last; ++first)
     destroy_at(addressof(*first));
 ```
 
-## <a name="destroy_n"></a><a name="destroy_n"></a>destroy_n
+## <a name="destroy_n"></a><a name="destroy_n"></a> destroy_n
 
 ```cpp
 template <class ForwardIterator, class Size>
@@ -467,7 +468,7 @@ for (; count > 0; (void)++first, --count)
 return first;
 ```
 
-## <a name="dynamic_pointer_cast"></a><a name="dynamic_pointer_cast"></a>dynamic_pointer_cast
+## <a name="dynamic_pointer_cast"></a><a name="dynamic_pointer_cast"></a> dynamic_pointer_cast
 
 [Shared_ptr](shared-ptr-class.md)に動的にキャストします。
 
@@ -494,7 +495,7 @@ shared_ptr<T> dynamic_pointer_cast(
 
 ### <a name="remarks"></a>解説
 
-が null ポインターを返す場合、テンプレート関数は空のオブジェクトを返します。 `shared_ptr` それ以外の場合は、 `dynamic_cast<T*>(sp.get())` `shared_ptr<T>` *sp*によって所有されているリソースを所有するオブジェクトを返します。 式 `dynamic_cast<T*>(sp.get())` は有効な式である必要があります。
+が null ポインターを返す場合、テンプレート関数は空のオブジェクトを返します。 `shared_ptr` それ以外の場合は、 `dynamic_cast<T*>(sp.get())` `shared_ptr<T>` *sp* によって所有されているリソースを所有するオブジェクトを返します。 式 `dynamic_cast<T*>(sp.get())` は有効な式である必要があります。
 
 ### <a name="example"></a>例
 
@@ -532,7 +533,7 @@ int main()
 sp1->value == 3
 ```
 
-## <a name="get_deleter"></a><a name="get_deleter"></a>get_deleter
+## <a name="get_deleter"></a><a name="get_deleter"></a> get_deleter
 
 [Shared_ptr](shared-ptr-class.md)から削除子を取得します。
 
@@ -555,7 +556,7 @@ Deleter* get_deleter(
 
 ### <a name="remarks"></a>解説
 
-このテンプレート関数は、オブジェクト sp に属する*削除子*型の削除子へのポインターを返し `shared_ptr` ます。 *sp* *Sp*に削除子がない場合、または削除子が*削除子*型でない場合、この関数は0を返します。
+このテンプレート関数は、オブジェクト sp に属する *削除子* 型の削除子へのポインターを返し `shared_ptr` ます。  *Sp* に削除子がない場合、または削除子が *削除子* 型でない場合、この関数は0を返します。
 
 ### <a name="example"></a>例
 
@@ -601,7 +602,7 @@ get_deleter(sp0) != 0 == false
 get_deleter(sp1) != 0 == true
 ```
 
-## <a name="get_pointer_safety"></a><a name="get_pointer_safety"></a>get_pointer_safety
+## <a name="get_pointer_safety"></a><a name="get_pointer_safety"></a> get_pointer_safety
 
 ガベージ コレクターが想定するポインターの安全性の種類を返します。
 
@@ -613,7 +614,7 @@ pointer_safety get_pointer_safety() noexcept;
 
 関数は、自動ガベージコレクターが想定するポインターの安全性の種類を返します。
 
-## <a name="get_temporary_buffer"></a><a name="get_temporary_buffer"></a>get_temporary_buffer
+## <a name="get_temporary_buffer"></a><a name="get_temporary_buffer"></a> get_temporary_buffer
 
 指定された数の要素を超えない要素のシーケンスの一時ストレージを割り当てます。
 
@@ -671,9 +672,9 @@ The number of elements that the allocated memory
 could store is given by: resultPair.second = 9.
 ```
 
-## <a name="make_shared"></a><a name="make_shared"></a>make_shared
+## <a name="make_shared"></a><a name="make_shared"></a> make_shared
 
-既定のアロケーターを使用して0個以上の引数から構築された割り当て済みオブジェクトを指す[shared_ptr](shared-ptr-class.md)を作成して返します。 指定された型のオブジェクトおよび `shared_ptr` の両方を割り当て構築することでオブジェクトの共有所有権を管理し、`shared_ptr` を返します。.
+既定のアロケーターを使用して0個以上の引数から構築された割り当て済みオブジェクトを指す [shared_ptr](shared-ptr-class.md) を作成して返します。 指定された型のオブジェクトおよび `shared_ptr` の両方を割り当て構築することでオブジェクトの共有所有権を管理し、`shared_ptr` を返します。.
 
 ```cpp
 template <class T, class... Args>
@@ -697,7 +698,7 @@ auto msp = std::make_shared<Example>(argument);
 
 しかし、最初のステートメントで 2 つの割り当てが実行され、`shared_ptr` オブジェクトが正常に完了した後、`Example` の割り当てが失敗すると、名前のない `Example` オブジェクトがリークされます。 `make_shared` を使用するステートメントの方が、関数呼び出しが 1 つしか関係しないので簡単です。 ライブラリがオブジェクトとスマート ポインターの両方に対して単一の割り当てを行うことができるため効率的です。 この関数の方が高速でメモリの断片化が少なくなるため、1回の割り当てでは例外が発生する可能性はありません。 スマート ポインターでオブジェクトを参照したり参照カウントを更新したりするコードでは、局所性の改善によってパフォーマンスが向上します。
 
-オブジェクトへの共有アクセスが不要な場合は、 [make_unique](memory-functions.md#make_unique)の使用を検討してください。 オブジェクトのカスタム アロケーターを指定する必要がある場合、[allocate_shared](memory-functions.md#allocate_shared) を使用します。 オブジェクトにカスタム削除子が必要な場合、を使用することはできません。これは、 `make_shared` 削除子を引数として渡す方法がないためです。
+オブジェクトへの共有アクセスが不要な場合は、 [make_unique](memory-functions.md#make_unique) の使用を検討してください。 オブジェクトのカスタム アロケーターを指定する必要がある場合、[allocate_shared](memory-functions.md#allocate_shared) を使用します。 オブジェクトにカスタム削除子が必要な場合、を使用することはできません。これは、 `make_shared` 削除子を引数として渡す方法がないためです。
 
 次の例は、特定のコンストラクターのオーバーロードを呼び出して、型への共有ポインターを作成する方法を示しています。
 
@@ -768,7 +769,7 @@ Playing Yesterday by The Beatles, use count: 3
 Playing Blackbird by The Beatles, use count: 3
 ```
 
-## <a name="make_unique"></a><a name="make_unique"></a>make_unique
+## <a name="make_unique"></a><a name="make_unique"></a> make_unique
 
 指定した引数を使用して構築された、指定された型のオブジェクトへの [unique_ptr](unique-ptr-class.md) を作成して返します。
 
@@ -792,13 +793,13 @@ template <class T, class... Args>
 `unique_ptr` が指すオブジェクトの型。
 
 *Value*\
-*Args*によって指定されたコンストラクター引数の型。
+*Args* によって指定されたコンストラクター引数の型。
 
 *value*\
-*T*型のオブジェクトのコンストラクターに渡される引数。
+*T* 型のオブジェクトのコンストラクターに渡される引数。
 
 *要素*\
-*T*型の要素の配列。
+*T* 型の要素の配列。
 
 *幅*\
 新しい配列に領域を割り当てる要素の数。
@@ -817,7 +818,7 @@ template <class T, class... Args>
 
 `unique_ptr` に関連してエラー C2280 が発生した場合、削除された関数であるコピー コンストラクターを呼び出そうとしたことが原因となっている可能性が高いです。
 
-## <a name="owner_less"></a><a name="owner_less"></a>owner_less
+## <a name="owner_less"></a><a name="owner_less"></a> owner_less
 
 共有ポインターとウィーク ポインターの所有権ベースの混合型比較を実行します。 **`true`** 左のパラメーターがメンバー関数によって右のパラメーターの前に並べられている場合は、を返し `owner_before` ます。
 
@@ -892,7 +893,7 @@ template<> struct owner_less<void>
 
 クラステンプレートでは、すべてのメンバー演算子がを返すように定義されて `left.owner_before(right)` います。
 
-## <a name="reinterpret_pointer_cast"></a><a name="reinterpret_pointer_cast"></a>reinterpret_pointer_cast
+## <a name="reinterpret_pointer_cast"></a><a name="reinterpret_pointer_cast"></a> reinterpret_pointer_cast
 
 `shared_ptr`キャストを使用して、既存の共有ポインターから新しいを作成します。
 
@@ -913,11 +914,11 @@ shared_ptr<T> reinterpret_pointer_cast(
 
 ### <a name="remarks"></a>解説
 
-*Ptr*が空の場合は、新しい `shared_ptr` も空になります。それ以外の場合は、 *ptr*を持つ所有権を共有します。 新しい共有ポインターは、を評価した結果です `reinterpret_cast<Y*>(ptr.get())` 。ここで、 `Y` は `typename std::shared_ptr<T>::element_type` です。 が整形式でない場合、動作は未定義です `reinterpret_cast<T*>((U*)nullptr)` 。
+*Ptr* が空の場合は、新しい `shared_ptr` も空になります。それ以外の場合は、 *ptr* を持つ所有権を共有します。 新しい共有ポインターは、を評価した結果です `reinterpret_cast<Y*>(ptr.get())` 。ここで、 `Y` は `typename std::shared_ptr<T>::element_type` です。 が整形式でない場合、動作は未定義です `reinterpret_cast<T*>((U*)nullptr)` 。
 
 左辺値参照を受け取るテンプレート関数は、C++ 17 で新しく追加されたものです。 右辺値参照を受け取るテンプレート関数は、C++ 20 の新機能です。
 
-## <a name="return_temporary_buffer"></a><a name="return_temporary_buffer"></a>return_temporary_buffer
+## <a name="return_temporary_buffer"></a><a name="return_temporary_buffer"></a> return_temporary_buffer
 
 `get_temporary_buffer` テンプレート関数を使用して割り当てられた一時メモリを解放します。
 
@@ -974,7 +975,7 @@ The number of elements that the allocated memory
 could store is given by: resultPair.second = 7.
 ```
 
-## <a name="static_pointer_cast"></a><a name="static_pointer_cast"></a>static_pointer_cast
+## <a name="static_pointer_cast"></a><a name="static_pointer_cast"></a> static_pointer_cast
 
 [Shared_ptr](shared-ptr-class.md)への静的なキャスト。
 
@@ -1001,7 +1002,7 @@ shared_ptr<T> static_pointer_cast(
 
 ### <a name="remarks"></a>解説
 
-このテンプレート関数は、 `shared_ptr` *sp*が空のオブジェクトの場合は空のオブジェクトを返します。それ以外の場合は、 `shared_ptr` `shared_ptr<T>` *sp*によって所有されているリソースを所有するオブジェクトを返します。 式 `static_cast<T*>(sp.get())` は有効な式である必要があります。
+このテンプレート関数は、 `shared_ptr` *sp* が空のオブジェクトの場合は空のオブジェクトを返します。それ以外の場合は、 `shared_ptr` `shared_ptr<T>` *sp* によって所有されているリソースを所有するオブジェクトを返します。 式 `static_cast<T*>(sp.get())` は有効な式である必要があります。
 
 ### <a name="example"></a>例
 
@@ -1038,9 +1039,9 @@ int main()
 sp1->value == 3
 ```
 
-## <a name="swap"></a><a name="swap"></a>フォト
+## <a name="swap"></a><a name="swap"></a> フォト
 
-2つの[shared_ptr](shared-ptr-class.md)、 [unique_ptr](unique-ptr-class.md)、または[weak_ptr](weak-ptr-class.md)オブジェクトを交換します。
+2つの [shared_ptr](shared-ptr-class.md)、 [unique_ptr](unique-ptr-class.md)、または [weak_ptr](weak-ptr-class.md) オブジェクトを交換します。
 
 ```cpp
 template <class T>
@@ -1123,7 +1124,7 @@ int main()
 *wp1 == 5
 ```
 
-## <a name="undeclare_no_pointers"></a><a name="undeclare_no_pointers"></a>undeclare_no_pointers
+## <a name="undeclare_no_pointers"></a><a name="undeclare_no_pointers"></a> undeclare_no_pointers
 
 ベース アドレス ポインターとブロック サイズで定義されたメモリ ブロック内の文字が、追跡可能なポインターを含む可能性があることをガベージ コレクターに通知します。
 
@@ -1145,7 +1146,7 @@ void undeclare_no_pointers(
 
 関数は、アドレスの範囲に `[ptr, ptr + size)` 追跡可能なポインターが含まれている可能性があることをガベージコレクターに通知します。
 
-## <a name="undeclare_reachable"></a><a name="undeclare_reachable"></a>undeclare_reachable
+## <a name="undeclare_reachable"></a><a name="undeclare_reachable"></a> undeclare_reachable
 
 指定したメモリ位置の到達可能性の宣言を取り消します。
 
@@ -1162,9 +1163,9 @@ T *undeclare_reachable(
 
 ### <a name="remarks"></a>解説
 
-*Ptr*がでない場合 **`nullptr`** 、関数は、 *ptr*に到達できなくなったことをガベージコレクターに通知します。 これは、 *ptr*と等しいかどうかを比較する、安全に派生したポインターを返します。
+*Ptr* がでない場合 **`nullptr`** 、関数は、 *ptr* に到達できなくなったことをガベージコレクターに通知します。 これは、 *ptr* と等しいかどうかを比較する、安全に派生したポインターを返します。
 
-## <a name="uninitialized_copy"></a><a name="uninitialized_copy"></a>uninitialized_copy
+## <a name="uninitialized_copy"></a><a name="uninitialized_copy"></a> uninitialized_copy
 
 指定されたソース範囲にあるオブジェクトを、初期化されていないターゲット範囲にコピーします。
 
@@ -1284,7 +1285,7 @@ int main()
 }
 ```
 
-## <a name="uninitialized_copy_n"></a><a name="uninitialized_copy_n"></a>uninitialized_copy_n
+## <a name="uninitialized_copy_n"></a><a name="uninitialized_copy_n"></a> uninitialized_copy_n
 
 入力反復子から、指定した数の要素のコピーを作成します。 コピーは前方反復子に格納されます。
 
@@ -1319,7 +1320,7 @@ ForwardIterator uninitialized_copy_n(
 
 ### <a name="return-value"></a>戻り値
 
-ターゲットを超えた最初の位置を示す前方反復子。 ソース範囲が空の場合、反復子は*最初*にアドレスを指定します。
+ターゲットを超えた最初の位置を示す前方反復子。 ソース範囲が空の場合、反復子は *最初* にアドレスを指定します。
 
 ### <a name="remarks"></a>解説
 
@@ -1336,7 +1337,7 @@ ForwardIterator uninitialized_copy_n(
 
 実行ポリシーを使用したオーバーロードは、C++ 17 で新しく追加されたものです。
 
-## <a name="uninitialized_default_construct"></a><a name="uninitialized_default_construct"></a>uninitialized_default_construct
+## <a name="uninitialized_default_construct"></a><a name="uninitialized_default_construct"></a> uninitialized_default_construct
 
 既定では、 `value_type` 指定された範囲内の反復子のオブジェクトを構築します。
 
@@ -1376,11 +1377,11 @@ for (; first != last; ++first)
 
 例外がスローされた場合、以前に構築されたオブジェクトは、指定されていない順序で破棄されます。
 
-実行ポリシーが指定されているバージョンは同じ結果になりますが、指定した*ポリシー*に従って実行されます。
+実行ポリシーが指定されているバージョンは同じ結果になりますが、指定した *ポリシー* に従って実行されます。
 
 これらの関数は、C++ 17 で新しく追加されたものです。
 
-## <a name="uninitialized_default_construct_n"></a><a name="uninitialized_default_construct_n"></a>uninitialized_default_construct_n
+## <a name="uninitialized_default_construct_n"></a><a name="uninitialized_default_construct_n"></a> uninitialized_default_construct_n
 
 既定では、指定された位置から開始して、反復子の指定した数のオブジェクトを構築し `value_type` ます。
 
@@ -1425,11 +1426,11 @@ return first;
 
 例外がスローされた場合、以前に構築されたオブジェクトは、指定されていない順序で破棄されます。
 
-実行ポリシーが指定されているバージョンは同じ結果になりますが、指定した*ポリシー*に従って実行されます。
+実行ポリシーが指定されているバージョンは同じ結果になりますが、指定した *ポリシー* に従って実行されます。
 
 これらの関数は、C++ 17 で新しく追加されたものです。
 
-## <a name="uninitialized_fill"></a><a name="uninitialized_fill"></a>uninitialized_fill
+## <a name="uninitialized_fill"></a><a name="uninitialized_fill"></a> uninitialized_fill
 
 指定された値のオブジェクトを、初期化されていないコピー先の範囲にコピーします。
 
@@ -1517,7 +1518,7 @@ int main()
 The initialized Array contains: 25 25 25 25 25 25 25 25 25 25
 ```
 
-## <a name="uninitialized_fill_n"></a><a name="uninitialized_fill_n"></a>uninitialized_fill_n
+## <a name="uninitialized_fill_n"></a><a name="uninitialized_fill_n"></a> uninitialized_fill_n
 
 指定した値のオブジェクトを、初期化されていないターゲット範囲の指定した数の要素にコピーします。
 
@@ -1599,7 +1600,7 @@ int main()
 }
 ```
 
-## <a name="uninitialized_move"></a><a name="uninitialized_move"></a>uninitialized_move
+## <a name="uninitialized_move"></a><a name="uninitialized_move"></a> uninitialized_move
 
 ソース範囲から初期化されていないターゲットメモリ領域に要素を移動します。
 
@@ -1645,11 +1646,11 @@ return dest;
 
 例外がスローされた場合、ソース範囲内の一部のオブジェクトが有効であるが指定されていない状態のままになることがあります。 以前に構築されたオブジェクトは、指定されていない順序で破棄されます。
 
-実行ポリシーが指定されているバージョンは同じ結果になりますが、指定した*ポリシー*に従って実行されます。
+実行ポリシーが指定されているバージョンは同じ結果になりますが、指定した *ポリシー* に従って実行されます。
 
 これらの関数は、C++ 17 で新しく追加されたものです。
 
-## <a name="uninitialized_move_n"></a><a name="uninitialized_move_n"></a>uninitialized_move_n
+## <a name="uninitialized_move_n"></a><a name="uninitialized_move_n"></a> uninitialized_move_n
 
 指定した数の要素をソース範囲から初期化されていないターゲットメモリ領域に移動します。
 
@@ -1695,11 +1696,11 @@ return {first, dest};
 
 例外がスローされた場合、ソース範囲内の一部のオブジェクトが有効であるが指定されていない状態のままになることがあります。 以前に構築されたオブジェクトは、指定されていない順序で破棄されます。
 
-実行ポリシーが指定されているバージョンは同じ結果になりますが、指定した*ポリシー*に従って実行されます。
+実行ポリシーが指定されているバージョンは同じ結果になりますが、指定した *ポリシー* に従って実行されます。
 
 これらの関数は、C++ 17 で新しく追加されたものです。
 
-## <a name="uninitialized_value_construct"></a><a name="uninitialized_value_construct"></a>uninitialized_value_construct
+## <a name="uninitialized_value_construct"></a><a name="uninitialized_value_construct"></a> uninitialized_value_construct
 
 `value_type`指定された範囲内で、反復子の値の初期化によってオブジェクトを構築します。
 
@@ -1739,13 +1740,13 @@ for (; first != last; ++first)
 
 例外がスローされた場合、以前に構築されたオブジェクトは、指定されていない順序で破棄されます。
 
-実行ポリシーが指定されているバージョンは同じ結果になりますが、指定した*ポリシー*に従って実行されます。
+実行ポリシーが指定されているバージョンは同じ結果になりますが、指定した *ポリシー* に従って実行されます。
 
 メモリ割り当てエラーが発生した場合は、 `std::bad_alloc` 例外がスローされます。
 
 これらの関数は、C++ 17 で新しく追加されたものです。
 
-## <a name="uninitialized_value_construct_n"></a><a name="uninitialized_value_construct_n"></a>uninitialized_value_construct_n
+## <a name="uninitialized_value_construct_n"></a><a name="uninitialized_value_construct_n"></a> uninitialized_value_construct_n
 
 指定した位置を開始位置として、反復子の `value_type` 値の初期化によって、指定した数のオブジェクトを構築します。
 
@@ -1786,13 +1787,13 @@ return first;
 
 例外がスローされた場合、以前に構築されたオブジェクトは、指定されていない順序で破棄されます。
 
-実行ポリシーが指定されているバージョンは同じ結果になりますが、指定した*ポリシー*に従って実行されます。
+実行ポリシーが指定されているバージョンは同じ結果になりますが、指定した *ポリシー* に従って実行されます。
 
 メモリ割り当てエラーが発生した場合は、 `std::bad_alloc` 例外がスローされます。
 
 これらの関数は、C++ 17 で新しく追加されたものです。
 
-## <a name="uses_allocator_v"></a><a name="uses_allocator_v"></a>uses_allocator_v
+## <a name="uses_allocator_v"></a><a name="uses_allocator_v"></a> uses_allocator_v
 
 テンプレートの値にアクセスするためのヘルパー変数テンプレート `uses_allocator` 。
 

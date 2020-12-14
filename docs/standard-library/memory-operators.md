@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「 &lt; memory operators」を参照してください。 &gt;
 title: '&lt;memory&gt; 演算子'
 ms.date: 11/04/2016
 f1_keywords:
@@ -10,16 +11,16 @@ f1_keywords:
 - memory/std::operator<<
 - memory/std::operator==
 ms.assetid: 257e3ba9-c4c2-4ae8-9b11-b156ba9c28de
-ms.openlocfilehash: 15762e4853cfd018c7cff997a3ed9ba7d86b3c2e
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: cbf52aa2af13a0eae241444d88e0eeabe7efe47b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87233055"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97183946"
 ---
 # <a name="ltmemorygt-operators"></a>&lt;memory&gt; 演算子
 
-## <a name="operator"></a><a name="op_neq"></a>operator! =
+## <a name="operator"></a><a name="op_neq"></a> operator! =
 
 オブジェクト間の不等性をテストします。
 
@@ -56,7 +57,7 @@ bool operator!=(
 
 ### <a name="return-value"></a>戻り値
 
-**`true`** オブジェクトが等しくない場合は。**`false`** オブジェクトが等しい場合は。
+**`true`** オブジェクトが等しくない場合は。 **`false`** オブジェクトが等しい場合は。
 
 ### <a name="remarks"></a>解説
 
@@ -120,7 +121,7 @@ sp0 != sp0 == false
 sp0 != sp1 == true
 ```
 
-## <a name="operator"></a><a name="op_eq_eq"></a>operator = =
+## <a name="operator"></a><a name="op_eq_eq"></a> operator = =
 
 オブジェクト同士が等しいかどうかをテストします。
 
@@ -232,7 +233,7 @@ sp0 == sp0 == true
 sp0 == sp1 == false
 ```
 
-## <a name="operatorgt"></a><a name="op_gt_eq"></a>operator&gt;=
+## <a name="operatorgt"></a><a name="op_gt_eq"></a> operator&gt;=
 
 1 つ目のオブジェクトが 2 つ目のオブジェクト以上であるかをテストします。
 
@@ -266,7 +267,7 @@ bool operator>=(
 
 このテンプレート演算子は `left.get() >= right.get()` を返します。
 
-## <a name="operatorlt"></a><a name="op_lt"></a>operator&lt;
+## <a name="operatorlt"></a><a name="op_lt"></a> operator&lt;
 
 1 番目のオブジェクトが 2 番目のオブジェクトより小さいかどうかをテストします。
 
@@ -296,7 +297,7 @@ bool operator<(
 *Ty2*\
 右辺のポインターによって制御される型。
 
-## <a name="operatorlt"></a><a name="op_lt_eq"></a>operator&lt;=
+## <a name="operatorlt"></a><a name="op_lt_eq"></a> operator&lt;=
 
 1 番目のオブジェクトが 2 番目のオブジェクト以下であるかどうかをテストします。
 
@@ -330,7 +331,7 @@ bool operator<=(
 
 このテンプレート演算子は `left.get() <= right.get()` を返します。
 
-## <a name="operatorgt"></a><a name="op_gt"></a>operator&gt;
+## <a name="operatorgt"></a><a name="op_gt"></a> operator&gt;
 
 1 番目のオブジェクトが 2 番目のオブジェクトより大きいかどうかをテストします。
 
@@ -360,7 +361,7 @@ bool operator>(
 *Ty2*\
 右辺の共有ポインターによって制御される型。
 
-## <a name="operatorltlt"></a><a name="op_lt_lt"></a>operator&lt;&lt;
+## <a name="operatorltlt"></a><a name="op_lt_lt"></a> operator&lt;&lt;
 
 共有ポインターをストリームに書き込みます。
 

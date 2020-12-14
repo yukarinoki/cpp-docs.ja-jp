@@ -1,19 +1,20 @@
 ---
+description: '詳細情報: 引数を指定せずに独自のマニピュレーターを作成する'
 title: 引数を使用しない独自マニピュレーターの作成
 ms.date: 11/04/2016
 helpviewer_keywords:
 - manipulators
 ms.assetid: 2dc62d09-45b7-454d-bd9d-55f3c72c206d
-ms.openlocfilehash: 9a1f72ae3e6860d8ab532a72a1776b77c7204f48
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 593db0a3dacb54c94cc865ebc20b1e1b39d2c208
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68450916"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97187755"
 ---
 # <a name="writing-your-own-manipulators-without-arguments"></a>引数を使用しない独自マニピュレーターの作成
 
-引数を使用しないマニピュレーターを作成するには、クラスを派生させる必要も、複雑なマクロを使う必要もありません。 たとえば、プリンターを太字モードにするために、\<ESC>[ のペアが必要であるとします。 このペアは、次のようにして、ストリームに直接挿入できます。
+引数を使用しないマニピュレーターを作成するには、クラスを派生させる必要も、複雑なマクロを使う必要もありません。 プリンターで \<ESC> [太字モードにするには、ペアが必要です。 このペアは、次のようにして、ストリームに直接挿入できます。
 
 ```cpp
 cout << "regular " << '\033' << '[' << "boldface" << endl;

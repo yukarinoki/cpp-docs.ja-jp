@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: Cドローイングマネージャークラス'
 title: Cドローイングマネージャークラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -56,12 +57,12 @@ helpviewer_keywords:
 - CDrawingManager [MFC], SetPixel
 - CDrawingManager [MFC], SmartMixColors
 ms.assetid: 9e4775ca-101b-4aa9-a85a-4d047c701215
-ms.openlocfilehash: 1cc469b63e448e964dacc4d853905b22155dfe0e
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: b30218dd41e3591c4a39df078bb19e3ac653ba1b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88561636"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97184791"
 ---
 # <a name="cdrawingmanager-class"></a>Cドローイングマネージャークラス
 
@@ -121,7 +122,7 @@ class CDrawingManager : public CObject
 [CObject](../../mfc/reference/cobject-class.md)<br/>
 `CDrawingManager`
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** afxdrawmanager
 
@@ -135,7 +136,7 @@ CDrawingManager(CDC& dc);
 
 ### <a name="parameters"></a>パラメーター
 
-*修飾*<br/>
+*dc*<br/>
 からデバイスコンテキストへの参照。 は、 `CDrawingManager` 描画にこのコンテキストを使用します。
 
 ## <a name="cdrawingmanagercreatebitmap_32"></a><a name="createbitmap_32"></a> Cドローイングマネージャー:: CreateBitmap_32
@@ -274,7 +275,7 @@ BOOL DrawGradientRing(
 
 ### <a name="remarks"></a>解説
 
-*Rect*によって定義される四角形は、幅が5ピクセル、高さが5ピクセル以上である必要があります。
+*Rect* によって定義される四角形は、幅が5ピクセル、高さが5ピクセル以上である必要があります。
 
 ## <a name="cdrawingmanagerdrawline-cdrawingmanagerdrawlinea"></a><a name="drawline_cdrawingmanager__drawlinea"></a> Cドローイングマネージャー::D rawLine、Cドローイングマネージャー::D rawLineA
 
@@ -315,7 +316,7 @@ void DrawLineA(
 
 ### <a name="remarks"></a>解説
 
-*Clrline*が-1 の場合、このメソッドは失敗します。
+*Clrline* が-1 の場合、このメソッドは失敗します。
 
 ## <a name="cdrawingmanagerdrawrect"></a><a name="drawrect"></a> Cドローイングマネージャー::D rawRect
 
@@ -383,7 +384,7 @@ BOOL DrawShadow(
 から影の色。
 
 *bRightShadow*<br/>
-から影の描画方法を示すブール型パラメーター。 *BRightShadow*がの場合は `TRUE` 、 `DrawShadow` 四角形の右側に影を描画します。
+から影の描画方法を示すブール型パラメーター。 *BRightShadow* がの場合は `TRUE` 、 `DrawShadow` 四角形の右側に影を描画します。
 
 ### <a name="return-value"></a>戻り値
 
@@ -391,11 +392,11 @@ BOOL DrawShadow(
 
 ### <a name="remarks"></a>解説
 
-*Pbmpsavebottom*と*pBmpSaveRight*パラメーターを使用して、下と右の影に2つの有効なビットマップを提供できます。 これらの [CBitmap](../../mfc/reference/cbitmap-class.md) オブジェクトに GDI オブジェクトがアタッチされている場合、 `DrawShadow` はそれらのビットマップをシャドウとして使用します。 パラメーターに `CBitmap` GDI オブジェクトがアタッチされていない場合は、 `DrawShadow` 影を描画し、ビットマップをパラメーターにアタッチします。 今後のの呼び出しでは `DrawShadow` 、これらのビットマップを使用して描画プロセスを高速化できます。 クラスおよび GDI オブジェクトの詳細については `CBitmap` 、「 [グラフィックオブジェクト](../../mfc/graphic-objects.md)」を参照してください。
+*Pbmpsavebottom* と *pBmpSaveRight* パラメーターを使用して、下と右の影に2つの有効なビットマップを提供できます。 これらの [CBitmap](../../mfc/reference/cbitmap-class.md) オブジェクトに GDI オブジェクトがアタッチされている場合、 `DrawShadow` はそれらのビットマップをシャドウとして使用します。 パラメーターに `CBitmap` GDI オブジェクトがアタッチされていない場合は、 `DrawShadow` 影を描画し、ビットマップをパラメーターにアタッチします。 今後のの呼び出しでは `DrawShadow` 、これらのビットマップを使用して描画プロセスを高速化できます。 クラスおよび GDI オブジェクトの詳細については `CBitmap` 、「 [グラフィックオブジェクト](../../mfc/graphic-objects.md)」を参照してください。
 
 これらのパラメーターのいずれかがの場合 `NULL` 、 `DrawShadow` は自動的に影を描画します。
 
-*BRightShadow*を FALSE に設定すると、四角形領域の下と左側に影が描画されます。
+*BRightShadow* を FALSE に設定すると、四角形領域の下と左側に影が描画されます。
 
 ### <a name="example"></a>例
 
@@ -443,7 +444,7 @@ void Fill4ColorsGradient(
 
 ### <a name="remarks"></a>解説
 
-四角形が2つの色のグラデーションで塗りつぶされている場合、 *bHorz*の値に応じて、それぞれの上または横に位置しています。 各色のグラデーションは、 [Cドローイングマネージャー:: fillgradient](#fillgradient)メソッドとは別に計算されます。
+四角形が2つの色のグラデーションで塗りつぶされている場合、 *bHorz* の値に応じて、それぞれの上または横に位置しています。 各色のグラデーションは、 [Cドローイングマネージャー:: fillgradient](#fillgradient)メソッドとは別に計算されます。
 
 このメソッドは、 *Npercentage* が0より小さいか、または100を超える場合にアサーションエラーを生成します。
 
@@ -515,7 +516,7 @@ void FillGradient2 (
 
 ### <a name="remarks"></a>解説
 
-色のグラデーションの方向を指定するには、 *Nangle* を使用します。 色のグラデーションの方向を指定する場合は、色のグラデーションの開始位置も指定します。 *Nangle*に0を指定すると、四角形の上部からグラデーションが開始されます。 *Nangle*が増えると、グラデーションの開始位置は、角度に基づいて反時計回りの方向に移動します。
+色のグラデーションの方向を指定するには、 *Nangle* を使用します。 色のグラデーションの方向を指定する場合は、色のグラデーションの開始位置も指定します。 *Nangle* に0を指定すると、四角形の上部からグラデーションが開始されます。 *Nangle* が増えると、グラデーションの開始位置は、角度に基づいて反時計回りの方向に移動します。
 
 ### <a name="example"></a>例
 
@@ -555,9 +556,9 @@ BOOL GrayRect(
 
 ### <a name="remarks"></a>解説
 
-パラメーター *Npercentage*の場合、小さい値は濃い色を示します。
+パラメーター *Npercentage* の場合、小さい値は濃い色を示します。
 
-*Npercentage*の最大値は200です。 200より大きい値を指定しても、四角形の外観は変わりません。 値が-1 の場合、このメソッドは *Clrdisabled* を使用して四角形の鮮やかさを制限します。
+*Npercentage* の最大値は200です。 200より大きい値を指定しても、四角形の外観は変わりません。 値が-1 の場合、このメソッドは *Clrdisabled* を使用して四角形の鮮やかさを制限します。
 
 ## <a name="cdrawingmanagerhighlightrect"></a><a name="highlightrect"></a> Cドローイングマネージャー:: HighlightRect
 
@@ -595,7 +596,7 @@ BOOL HighlightRect(
 
 ### <a name="remarks"></a>解説
 
-*Npercentage*が 0 ~ 99 の場合、では `HighlightRect` アルファブレンドアルゴリズムが使用されます。 アルファブレンドの詳細については、「 [アルファブレンドの直線と塗りつぶし](/dotnet/framework/winforms/advanced/alpha-blending-lines-and-fills)」を参照してください。 *N パーセント*が-1 の場合、このメソッドは既定の強調表示レベルを使用します。 *Npercentage*が100の場合、このメソッドは何も実行せず、TRUE を返します。
+*Npercentage* が 0 ~ 99 の場合、では `HighlightRect` アルファブレンドアルゴリズムが使用されます。 アルファブレンドの詳細については、「 [アルファブレンドの直線と塗りつぶし](/dotnet/framework/winforms/advanced/alpha-blending-lines-and-fills)」を参照してください。 *N パーセント* が-1 の場合、このメソッドは既定の強調表示レベルを使用します。 *Npercentage* が100の場合、このメソッドは何も実行せず、TRUE を返します。
 
 メソッドは、 *Ntolerance* パラメーターを使用して、四角形の領域を強調表示するかどうかを決定します。 四角形を強調表示するには、アプリケーションの背景色と *Clrtransparent* の差が、各色コンポーネント (赤、緑、および青) の *ntolerance* 下回る必要があります。
 
@@ -615,7 +616,7 @@ static COLORREF __stdcall HLStoRGB_ONE(
 *H*<br/>
 から色の色合いを表す 0 ~ 1 の数値。
 
-*左右*<br/>
+*L*<br/>
 から色の明度を示す 0 ~ 1 の範囲の数値。
 
 *S*<br/>
@@ -647,7 +648,7 @@ static COLORREF __stdcall HLStoRGB_TWO(
 *H*<br/>
 から色の色合いを表す 0 ~ 360 の数値。
 
-*左右*<br/>
+*L*<br/>
 から色の明度を示す 0 ~ 1 の範囲の数値。
 
 *S*<br/>
@@ -661,7 +662,7 @@ static COLORREF __stdcall HLStoRGB_TWO(
 
 色は、HSV (色合い、鮮やかさ、および値)、HSL (色合い、鮮やかさ、および輝度)、または RGB (赤、緑、および青) として表すことができます。 色のさまざまな表現の詳細については、「 [color](/windows/win32/uxguide/vis-color)」を参照してください。
 
-このメソッドと [Cドローイングマネージャー:: HLStoRGB_ONE](#hlstorgb_one) メソッドは同じ操作を実行しますが、 *H* パラメーターには異なる値を指定する必要があります。 このメソッドでは、 *H* は 0 ~ 360 の角度の値であり、どちらも赤を表します。 [Cドローイングマネージャー:: HLStoRGB_ONE](#hlstorgb_one)メソッドでは、 *H*は円のパーセントです。 たとえば、を指定した場合、 `HLStoRGB_ONE` *H* の値0.25 は、の値90と等価です `HLStoRGB_TWO` 。
+このメソッドと [Cドローイングマネージャー:: HLStoRGB_ONE](#hlstorgb_one) メソッドは同じ操作を実行しますが、 *H* パラメーターには異なる値を指定する必要があります。 このメソッドでは、 *H* は 0 ~ 360 の角度の値であり、どちらも赤を表します。 [Cドローイングマネージャー:: HLStoRGB_ONE](#hlstorgb_one)メソッドでは、 *H* は円のパーセントです。 たとえば、を指定した場合、 `HLStoRGB_ONE` *H* の値0.25 は、の値90と等価です `HLStoRGB_TWO` 。
 
 ## <a name="cdrawingmanagerhsvtorgb"></a><a name="hsvtorgb"></a> Cドローイングマネージャー:: HSVtoRGB
 
@@ -765,7 +766,7 @@ void MirrorRect(
 
 ### <a name="remarks"></a>解説
 
-このメソッドは、クラスによって所有されているデバイスコンテキストのすべての領域を反転させることができ `CDrawingManager` ます。 *BHorz*が TRUE に設定されている場合、このメソッドは領域を水平方向に反転します。 それ以外の場合は、領域を垂直方向に反転します。
+このメソッドは、クラスによって所有されているデバイスコンテキストのすべての領域を反転させることができ `CDrawingManager` ます。 *BHorz* が TRUE に設定されている場合、このメソッドは領域を水平方向に反転します。 それ以外の場合は、領域を垂直方向に反転します。
 
 ## <a name="cdrawingmanagerpixelalpha"></a><a name="pixelalpha"></a> Cドローイングマネージャー::P ixelAlpha
 
@@ -816,7 +817,7 @@ static COLORREF __stdcall PixelAlpha(
 
 これは、半透明のビットマップを色分けするためのヘルパークラスであり、プログラマが直接呼び出すように設計されていません。
 
-*Dstpixel*を含むバージョンのメソッドを使用する場合、最終的な色は、 *Dstpixel*と*srcpixel*の組み合わせになります。 *Srcpixel*の色は、 *dstpixel*の基本色に対して部分的に透明色になっています。
+*Dstpixel* を含むバージョンのメソッドを使用する場合、最終的な色は、 *Dstpixel* と *srcpixel* の組み合わせになります。 *Srcpixel* の色は、 *dstpixel* の基本色に対して部分的に透明色になっています。
 
 ## <a name="cdrawingmanagerprepareshadowmask"></a><a name="prepareshadowmask"></a> Cドローイングマネージャー::P repareShadowMask
 
@@ -850,7 +851,7 @@ static HBITMAP __stdcall PrepareShadowMask (
 
 ### <a name="remarks"></a>解説
 
-*Ndepth*が0に設定されている場合、このメソッドは終了し、NULL を返します。 *N depth*が3未満の場合、影の幅と高さは3ピクセルに設定されます。
+*Ndepth* が0に設定されている場合、このメソッドは終了し、NULL を返します。 *N depth* が3未満の場合、影の幅と高さは3ピクセルに設定されます。
 
 ## <a name="cdrawingmanagerrgbtohsl"></a><a name="rgbtohsl"></a> Cドローイングマネージャー:: RGBtoHSL
 
@@ -882,7 +883,7 @@ static void __stdcall RGBtoHSL(
 
 色は、HSV (色合い、鮮やかさ、および値)、HSL (色合い、鮮やかさ、および輝度)、または RGB (赤、緑、および青) として表すことができます。 色のさまざまな表現の詳細については、「 [color](/windows/win32/uxguide/vis-color)」を参照してください。
 
-*H*に返される値は、0と1の間の分数として表されます。0と1の両方が赤を表します。 *S*と*L*の戻り値は、0から1までの数値です。
+*H* に返される値は、0と1の間の分数として表されます。0と1の両方が赤を表します。 *S* と *L* の戻り値は、0から1までの数値です。
 
 ## <a name="cdrawingmanagerrgbtohsv"></a><a name="rgbtohsv"></a> Cドローイングマネージャー:: RGBtoHSV
 
@@ -907,14 +908,14 @@ static void __stdcall RGBtoHSV(
 *S*<br/>
 入出力このメソッドが色の結果の鮮やかさを格納する double を指すポインター。
 
-*画像*<br/>
+*V*<br/>
 入出力結果として得られる色の値をこのメソッドが格納する double へのポインター。
 
 ### <a name="remarks"></a>解説
 
 色は、HSV (色合い、鮮やかさ、および値)、HSL (色合い、鮮やかさ、および輝度)、または RGB (赤、緑、および青) として表すことができます。 色のさまざまな表現の詳細については、「 [color](/windows/win32/uxguide/vis-color)」を参照してください。
 
-*H*に返される値は、0と360の間の数値で、0と360の両方が赤を示します。 *S*と*V*の戻り値は、0から1までの数値です。
+*H* に返される値は、0と360の間の数値で、0と360の両方が赤を示します。 *S* と *V* の戻り値は、0から1までの数値です。
 
 ## <a name="cdrawingmanagersetalphapixel"></a><a name="setalphapixel"></a> Cドローイングマネージャー:: SetAlphaPixel
 
@@ -962,7 +963,7 @@ static void __stdcall SetAlphaPixel(
 
 このメソッドは、 [Cドローイングマネージャー::D rawShadow](#drawshadow) メソッドによって使用されるヘルパーメソッドです。 影を描画する場合は、代わりにを呼び出すことをお勧め `CDrawingManager::DrawShadow` します。
 
-*BIsRight*が TRUE に設定されている場合、色のピクセルは、*四角形*の右端から*x*ピクセルを測定します。 FALSE の場合、色のピクセルは、*四角形*の左端から*x*ピクセルを測定します。
+*BIsRight* が TRUE に設定されている場合、色のピクセルは、*四角形* の右端から *x* ピクセルを測定します。 FALSE の場合、色のピクセルは、*四角形* の左端から *x* ピクセルを測定します。
 
 ## <a name="cdrawingmanagersetpixel"></a><a name="setpixel"></a> Cドローイングマネージャー:: SetPixel
 
@@ -1034,9 +1035,9 @@ static COLORREF __stdcall SmartMixColors(
 
 ### <a name="remarks"></a>解説
 
-*K1*または*k2*のいずれかが0未満の場合、このメソッドはエラーで失敗します。 これらのパラメーターの両方が0に設定されている場合、メソッドはを返し `RGB(0, 0, 0)` ます。
+*K1* または *k2* のいずれかが0未満の場合、このメソッドはエラーで失敗します。 これらのパラメーターの両方が0に設定されている場合、メソッドはを返し `RGB(0, 0, 0)` ます。
 
-重み付け比率は、次の式を使用して計算されます: (color1 \* k1 + color2 \* k2)/(k1 + k2)。 重み付け比率が決定された後、メソッドは混合色の明度を計算します。 次に、 *dblLumRatio*によって明るさを乗算します。 値が1.0 より大きい場合、メソッドは混合色の明度を新しい値に設定します。 それ以外の場合、輝度は1.0 に設定されます。
+重み付け比率は、次の式を使用して計算されます: (color1 \* k1 + color2 \* k2)/(k1 + k2)。 重み付け比率が決定された後、メソッドは混合色の明度を計算します。 次に、 *dblLumRatio* によって明るさを乗算します。 値が1.0 より大きい場合、メソッドは混合色の明度を新しい値に設定します。 それ以外の場合、輝度は1.0 に設定されます。
 
 ## <a name="cdrawingmanagerdrawrotated"></a><a name="drawrotated"></a> Cドローイングマネージャー::D rawRotated
 

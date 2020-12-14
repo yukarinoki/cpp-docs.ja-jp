@@ -1,4 +1,5 @@
 ---
+description: /V (バージョン番号) の詳細情報
 title: /V (バージョン番号)
 ms.date: 11/04/2016
 f1_keywords:
@@ -10,16 +11,16 @@ helpviewer_keywords:
 - V compiler option [C++]
 - -V compiler option [C++]
 ms.assetid: 3e93fb7a-5dfd-49a6-bd49-3dca8052e0f3
-ms.openlocfilehash: 7bebd3ab9677bb340203bbf857e4ee9f287e36e6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5025642d4ae30315d24754a7ee46268050cfb22a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62317316"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97187053"
 ---
 # <a name="v-version-number"></a>/V (バージョン番号)
 
-非推奨。 .Obj ファイル内のテキスト文字列を埋め込みます。
+非推奨になりました。 .Obj ファイルにテキスト文字列を埋め込みます。
 
 ## <a name="syntax"></a>構文
 
@@ -30,25 +31,25 @@ ms.locfileid: "62317316"
 ## <a name="arguments"></a>引数
 
 *string*<br/>
-.Obj ファイルに埋め込まれるバージョン番号または著作権情報を指定する文字列。
+.Obj ファイルに埋め込まれるバージョン番号または著作権表記を指定する文字列。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-.Obj ファイル バージョン番号と著作権文字列ラベルです。 文字列の一部である場合、スペースまたはタブ文字を二重引用符 (") で囲む必要があります。 円記号 (\\) の文字列の一部である場合、二重引用符を付ける必要があります。 間にスペース **/V**と`string`は省略可能です。
+Stringcan には、バージョン番号または著作権に関する通知を付けることができます。 文字列の一部である場合は、スペースまたはタブ文字を二重引用符 (") で囲む必要があります。 バックスラッシュ ( \\ ) は、文字列の一部である場合は、二重引用符の前に付ける必要があります。 **/V** との間のスペース `string` は省略可能です。
 
-使用することも[コメント (C/C++)](../../preprocessor/comment-c-cpp.md)コンパイラの名前とバージョン番号を .obj ファイル配置コンパイラ コメントの型引数を持つ。
+また、 [comment (C/c + +)](../../preprocessor/comment-c-cpp.md) をコンパイラのコメント型引数と共に使用して、コンパイラの名前とバージョン番号を .obj ファイルに配置することもできます。
 
-**/V**以降では、Visual Studio 2005; オプションは非推奨 **/V**は、主に仮想デバイス ドライバー (Vxd) の構築をサポートするために使用して、Vxd の構築は、Visual C ツールセットでサポートが不要になった。 非推奨のコンパイラ オプションの一覧は、次を参照してください。**非推奨とされた削除済みのコンパイラ オプション**で[Compiler Options Listed by Category](compiler-options-listed-by-category.md)します。
+**/V** オプションは、Visual Studio 2005 以降では非推奨とされます。**/V** は、主に仮想デバイスドライバー (vxd) の構築をサポートするために使用され、Visual C++ ツールセットではビルド vxd はサポートされなくなりました。 非推奨のコンパイラオプションの一覧については、「[カテゴリ別に一覧表示さ](compiler-options-listed-by-category.md)れたコンパイラオプションの **非推奨のコンパイラオプション**」を参照してください。
 
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境において、このコンパイラ オプションを設定する方法
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのコンパイラ オプションを設定するには
 
-1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。 [Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)します。
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、[Visual Studio での C++ コンパイラとビルド プロパティの設定](../working-with-project-properties.md)に関するページを参照してください。
 
 1. **[C/C++]** フォルダーをクリックします。
 
 1. **[コマンド ライン]** プロパティ ページをクリックします。
 
-1. **[追加のオプション]** ボックスにコンパイラ オプションを入力します。
+1. [追加のオプション]  ボックスにコンパイラ オプションを入力します。
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>このコンパイラ オプションをコードから設定するには
 
@@ -57,4 +58,4 @@ ms.locfileid: "62317316"
 ## <a name="see-also"></a>関連項目
 
 [MSVC コンパイラ オプション](compiler-options.md)<br/>
-[MSVC コンパイラ コマンド ラインの構文](compiler-command-line-syntax.md)
+[MSVC Compiler Command-Line 構文](compiler-command-line-syntax.md)

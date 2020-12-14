@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: &lt; メモリ&gt;'
 title: '&lt;memory&gt;'
 ms.date: 08/04/2019
 f1_keywords:
@@ -7,18 +8,18 @@ f1_keywords:
 - std::<memory>
 helpviewer_keywords:
 - memory header
-ms.openlocfilehash: 0e3ce4a4411bd6d4c352802a96c97e93c66491df
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 27aea86d8329ee37c3aa1409b7dde7091cfe43bf
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88836466"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97183777"
 ---
 # <a name="ltmemorygt"></a>&lt;memory&gt;
 
 メモリの割り当てとオブジェクトの解放を支援するクラス、演算子、および各種テンプレートを定義します。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:**\<memory>
 
@@ -26,7 +27,7 @@ ms.locfileid: "88836466"
 
 ## <a name="members"></a>メンバー
 
-### <a name="functions"></a>Functions
+### <a name="functions"></a>機能
 
 |名前|説明|
 |-|-|
@@ -75,7 +76,7 @@ ms.locfileid: "88836466"
 |[uninitialized_value_construct_n](../standard-library/memory-functions.md#uninitialized_value_construct_n)|省略形 `uninitialized_value_construct` のメソッド。|
 |[uses_allocator_v](../standard-library/memory-functions.md#uses_allocator_v)||
 
-### <a name="operators"></a>演算子
+### <a name="operators"></a>オペレーター
 
 |名前|説明|
 |-|-|
@@ -91,9 +92,9 @@ ms.locfileid: "88836466"
 
 |名前|説明|
 |-|-|
-|[allocator](../standard-library/allocator-class.md)|クラステンプレートは **、型の**オブジェクトの配列に対して、ストレージの割り当てと解放を管理するオブジェクトを記述します。|
+|[アロケーター](../standard-library/allocator-class.md)|クラステンプレートは **、型の** オブジェクトの配列に対して、ストレージの割り当てと解放を管理するオブジェクトを記述します。|
 |[allocator_traits](../standard-library/allocator-traits-class.md)|アロケーター対応のコンテナーが必要とするすべての情報を指定したオブジェクトを記述します。|
-|[auto_ptr](../standard-library/auto-ptr-class.md)|クラステンプレートは、型の割り当てら **れたオブジェクト**へのポインターを格納するオブジェクトを記述し <strong>\*</strong> ます。このオブジェクトは、それを囲む auto_ptr が破棄されるときに、そのオブジェクトが確実に削除されるようにします。|
+|[auto_ptr](../standard-library/auto-ptr-class.md)|クラステンプレートは、型の割り当てら **れたオブジェクト** へのポインターを格納するオブジェクトを記述し <strong>\*</strong> ます。このオブジェクトは、それを囲む auto_ptr が破棄されるときに、そのオブジェクトが確実に削除されるようにします。|
 |[bad_weak_ptr](../standard-library/bad-weak-ptr-class.md)|weak_ptr が無効であることを示す例外を報告します。|
 |[enabled_shared_from_this](../standard-library/enable-shared-from-this-class.md)|`shared_ptr` の生成を支援します。|
 |[pointer_traits](../standard-library/pointer-traits-struct.md)|`allocator_traits`ポインター型を持つアロケーターを記述するために、型のオブジェクトに必要な情報を提供 `Ptr` します。|
@@ -116,7 +117,7 @@ ms.locfileid: "88836466"
 
 |名前|説明|
 |-|-|
-|[allocator\<void>](../standard-library/allocator-void-class.md)|**`void`** この特殊なコンテキストで意味を持つメンバー型のみを定義する、クラステンプレートアロケーターを型に特化したもの。|
+|[アロケーター\<void>](../standard-library/allocator-void-class.md)|**`void`** この特殊なコンテキストで意味を持つメンバー型のみを定義する、クラステンプレートアロケーターを型に特化したもの。|
 
 ## <a name="see-also"></a>関連項目
 

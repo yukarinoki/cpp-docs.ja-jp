@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: _chdir、_wchdir'
 title: _chdir、_wchdir
 ms.date: 4/2/2020
 api_name:
@@ -38,12 +39,12 @@ helpviewer_keywords:
 - chdir function
 - directories [C++], changing
 ms.assetid: 85e9393b-62ac-45d5-ab2a-fa2217f6152e
-ms.openlocfilehash: a54b42ee92392971fdb6979ee2dc3a3b9c65f184
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 190e9d6445417aed8c35843cb4c386d49535ebbd
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82917038"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97186715"
 ---
 # <a name="_chdir-_wchdir"></a>_chdir、_wchdir
 
@@ -67,11 +68,11 @@ int _wchdir(
 
 ## <a name="return-value"></a>戻り値
 
-これらの関数は、成功した場合、値 0 を返します。 戻り値-1 はエラーを示します。 指定されたパスが見つからなかった場合、 **errno**は**ENOENT**に設定されます。 *Dirname*が**NULL**の場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、 **errno**は**EINVAL**に設定され、この関数は-1 を返します。
+これらの関数は、成功した場合、値 0 を返します。 戻り値-1 はエラーを示します。 指定されたパスが見つからなかった場合、 **errno** は **ENOENT** に設定されます。 *Dirname* が **NULL** の場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、 **errno** は **EINVAL** に設定され、この関数は-1 を返します。
 
 ## <a name="remarks"></a>解説
 
-**_Chdir**関数は、現在の作業ディレクトリを*dirname*によって指定されたディレクトリに変更します。 *Dirname*パラメーターは既存のディレクトリを参照する必要があります。 この関数は、任意のドライブの現在の作業ディレクトリを変更できます。 新しいドライブ文字が*dirname*に指定されている場合は、既定のドライブ文字も同様に変更されます。 たとえば、A が既定のドライブ文字で、\BIN が現在の作業ディレクトリの場合、次の呼び出しにより、ドライブ C の現在の作業ディレクトリが変更され、C が新しい既定のドライブとして設定されます。
+**_Chdir** 関数は、現在の作業ディレクトリを *dirname* によって指定されたディレクトリに変更します。 *Dirname* パラメーターは既存のディレクトリを参照する必要があります。 この関数は、任意のドライブの現在の作業ディレクトリを変更できます。 新しいドライブ文字が *dirname* に指定されている場合は、既定のドライブ文字も同様に変更されます。 たとえば、A が既定のドライブ文字で、\BIN が現在の作業ディレクトリの場合、次の呼び出しにより、ドライブ C の現在の作業ディレクトリが変更され、C が新しい既定のドライブとして設定されます。
 
 ```C
 _chdir("c:\temp");
@@ -79,7 +80,7 @@ _chdir("c:\temp");
 
 パスに省略可能な円記号 (**&#92;**) を使用する場合は、1つの円記号 (**&#92;**) を表すために、C 文字列リテラルに2つの円記号 (**&#92;&#92;**) を配置する必要があります。
 
-**_wchdir**は **_chdir**のワイド文字バージョンです。**_wchdir**の*dirname*引数は、ワイド文字列です。 **_wchdir**と **_chdir**は同じように動作します。
+**_wchdir** は **_chdir** のワイド文字バージョンです。**_wchdir** の *dirname* 引数は、ワイド文字列です。 **_wchdir** と **_chdir** は同じように動作します。
 
 既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
@@ -91,7 +92,7 @@ _chdir("c:\temp");
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|オプション ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|オプション ヘッダー|
 |-------------|---------------------|---------------------|
 |**_chdir**|\<direct.h>|\<errno.h>|
 |**_wchdir**|\<direct.h> または \<wchar.h>|\<errno.h>|
@@ -159,7 +160,7 @@ Directory of c:\windows
 
 ## <a name="see-also"></a>関連項目
 
-[ディレクトリ制御](../../c-runtime-library/directory-control.md)<br/>
+[ディレクトリコントロール](../../c-runtime-library/directory-control.md)<br/>
 [_mkdir、_wmkdir](mkdir-wmkdir.md)<br/>
 [_rmdir、_wrmdir](rmdir-wrmdir.md)<br/>
 [system、_wsystem](system-wsystem.md)<br/>

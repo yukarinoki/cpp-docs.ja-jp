@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: wstring_convert クラス'
 title: wstring_convert クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -22,12 +23,12 @@ helpviewer_keywords:
 - std::wstring_convert [C++], converted
 - std::wstring_convert [C++], state
 ms.assetid: e34f5b65-d572-4bdc-ac69-20778712e376
-ms.openlocfilehash: 01754ca4239d89a64fdb67a85e82b90c5a24872d
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: 53c3e311967295294d158bb0342d365d45f5e031
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88560753"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97187742"
 ---
 # <a name="wstring_convert-class"></a>wstring_convert クラス
 
@@ -86,9 +87,9 @@ class wstring_convert
 |[from_bytes](#from_bytes)|バイト文字列をワイド文字列に変換します。|
 |[to_bytes](#to_bytes)|ワイド文字列をバイト文字列に変換します。|
 |[converted](#converted)|成功した変換の数を返します。|
-|[状態](#state)|変換の状態を表すオブジェクトを返します。|
+|[state](#state)|変換の状態を表すオブジェクトを返します。|
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:**\<locale>
 
@@ -156,7 +157,7 @@ wide_string from_bytes(const char* first, const char* last);
 
 ### <a name="remarks"></a>解説
 
-[変換状態](../standard-library/wstring-convert-class.md)オブジェクトが明示的な値を使用して構築されて*いない*場合は、変換が開始される前に既定値 (最初の変換状態) に設定されます。 それ以外の場合は変更されません。
+[変換状態](../standard-library/wstring-convert-class.md)オブジェクトが明示的な値を使用して構築されて *いない* 場合は、変換が開始される前に既定値 (最初の変換状態) に設定されます。 それ以外の場合は変更されません。
 
 正常に変換された入力要素の数が変換数オブジェクトに格納されます。 変換エラーが発生しなかった場合、メンバー関数は、変換されたワイド文字列を返します。 エラーが発生した場合、ワイド文字列エラー メッセージの初期化子を使用してオブジェクトが構築されていれば、メンバー関数は、ワイド文字列エラー メッセージ オブジェクトを返します。 それ以外の場合、メンバー関数は、クラス [range_error](../standard-library/range-error-class.md) のオブジェクトをスローします。
 
@@ -228,7 +229,7 @@ byte_string to_bytes(const Elem* first, const Elem* last);
 
 ### <a name="remarks"></a>解説
 
-[変換状態](../standard-library/wstring-convert-class.md)オブジェクトが明示的な値を使用して構築されて*いない*場合は、変換が開始される前に既定値 (最初の変換状態) に設定されます。 それ以外の場合は変更されません。
+[変換状態](../standard-library/wstring-convert-class.md)オブジェクトが明示的な値を使用して構築されて *いない* 場合は、変換が開始される前に既定値 (最初の変換状態) に設定されます。 それ以外の場合は変更されません。
 
 正常に変換された入力要素の数が変換数オブジェクトに格納されます。 変換エラーが発生しなかった場合、メンバー関数は、変換されたバイト文字列を返します。 エラーが発生した場合、バイト文字列エラー メッセージの初期化子を使用してオブジェクトが構築されていれば、メンバー関数は、バイト文字列エラー メッセージ オブジェクトを返します。 それ以外の場合、メンバー関数は、クラス [range_error](../standard-library/range-error-class.md) のオブジェクトをスローします。
 
@@ -270,4 +271,4 @@ wstring_convert(const byte_string& _Berr, const wide_string& Werr = wide_string(
 
 ### <a name="remarks"></a>解説
 
-1 つめのコンストラクターは、*Pcvt_arg* を[変換オブジェクト](../standard-library/wstring-convert-class.md)に格納します。
+1 つめのコンストラクターは、*Pcvt_arg* を [変換オブジェクト](../standard-library/wstring-convert-class.md)に格納します。

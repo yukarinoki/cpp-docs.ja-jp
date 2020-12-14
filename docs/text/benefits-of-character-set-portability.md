@@ -1,24 +1,25 @@
 ---
+description: '詳細情報: 文字セットの移植性の利点'
 title: 文字セットにおける移植性の利点
 ms.date: 11/04/2016
 helpviewer_keywords:
 - character sets [C++], benefits
 - portability [C++], character sets
 ms.assetid: bd60b925-1498-4e4f-897b-4c8ce66edcf7
-ms.openlocfilehash: 0ca7e46cabb2d98a64a244863f8574a3e9e2a456
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 32d78e6a230d664970e819f766d70beb1df52a88
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62410780"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97187625"
 ---
 # <a name="benefits-of-character-set-portability"></a>文字セットにおける移植性の利点
 
-現在しないアプリケーションを国際化する場合でも、MFC および C ランタイムの移植性の機能を使用して得ることができます。
+現在、アプリケーションを国際化する予定がない場合でも、MFC および C ランタイムの移植性の機能を使用すると、次のような利点があります。
 
-- 柔軟な基本コードは、移植可能な方法でコーディングします。 後で移動できます簡単に Unicode や MBCS にします。
+- コーディング移植を使用すると、コードベースの柔軟性が向上します。 後で、Unicode または MBCS に簡単に移動できます。
 
-- 効率的な Windows のアプリケーションは、Unicode を使用します。 Windows では、Unicode を使用するため、オペレーティング システムとの間に渡される Unicode 以外の文字列変換される必要が、オーバーヘッドが発生します。
+- Unicode を使用すると、アプリケーションはより効率的になります。 Windows では Unicode を使用するため、オペレーティングシステムとの間でやり取りされる Unicode 以外の文字列は変換する必要があります。これにより、オーバーヘッドが発生します。
 
 ## <a name="see-also"></a>関連項目
 

@@ -1,5 +1,6 @@
 ---
-title: '&lt;値 > (C++ドキュメントコメント)'
+description: '詳細情報: &lt; 値&gt;'
+title: '&lt;値> (C++ ドキュメントコメント)'
 ms.date: 11/04/2016
 f1_keywords:
 - value
@@ -8,16 +9,16 @@ helpviewer_keywords:
 - value C++ XML tag
 - <value> C++ XML tag
 ms.assetid: 0ba0a0d5-bcd7-4862-a169-83f2721ad80e
-ms.openlocfilehash: de84d1faca59a6c8e4f82fba3605cbd54a05bd2e
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: 110091607af7c973591384d44816f372f0d15b14
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74988596"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97187027"
 ---
 # <a name="ltvaluegt"></a>&lt;value&gt;
 
-\<value> タグでは、プロパティとプロパティ アクセサー メソッドを記述することができます。 Visual Studio 統合開発環境では、コード ウィザードを使用してプロパティを追加するときに、新しいプロパティの [\<summary>](summary-visual-cpp.md) タグが追加されることに注意してください。 その後、手動で \<value> タグを追加してプロパティが表す値を記述する必要があります。
+\<value>タグを使用すると、プロパティとプロパティのアクセサーメソッドを記述できます。 Visual Studio 統合開発環境でコードウィザードを使用してプロパティを追加すると、新しいプロパティのタグが追加されることに注意 [\<summary>](summary-visual-cpp.md) してください。 その後、手動で \<value> タグを追加してプロパティが表す値を記述する必要があります。
 
 ## <a name="syntax"></a>構文
 
@@ -32,9 +33,9 @@ ms.locfileid: "74988596"
 
 ## <a name="remarks"></a>Remarks
 
-コンパイル時に [/doc](doc-process-documentation-comments-c-cpp.md) を指定して、ドキュメント コメントをファイルに出力します。
+ドキュメントコメントをファイルに処理するために、 [/doc](doc-process-documentation-comments-c-cpp.md) を使用してコンパイルします。
 
-## <a name="example"></a>使用例
+## <a name="example"></a>例
 
 ```cpp
 // xml_value_tag.cpp
@@ -58,6 +59,6 @@ public:
 };
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [XML に関するドキュメント](xml-documentation-visual-cpp.md)

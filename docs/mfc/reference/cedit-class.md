@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: CEdit クラス'
 title: CEdit Class
 ms.date: 09/12/2018
 f1_keywords:
@@ -94,12 +95,12 @@ helpviewer_keywords:
 - CEdit [MFC], ShowBalloonTip
 - CEdit [MFC], Undo
 ms.assetid: b1533c30-7f10-4663-88d3-8b7f2c9f7024
-ms.openlocfilehash: 0e15472ddaad214d575a7479680454ae6b4d3178
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: 8dbf5ffd05473720682703a9f309f8483591f143
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88561623"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97184687"
 ---
 # <a name="cedit-class"></a>CEdit Class
 
@@ -227,7 +228,7 @@ ES_READONLY などの編集コントロールで特定のスタイルを変更�
 
 `CEdit`
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** afxwin.h
 
@@ -588,7 +589,7 @@ UINT GetLimitText() const;
 
 ## <a name="ceditgetline"></a><a name="getline"></a> CEdit:: GetLine
 
-この関数を呼び出して、エディットコントロールからテキスト行を取得し、 *Lpszbuffer*に配置します。
+この関数を呼び出して、エディットコントロールからテキスト行を取得し、 *Lpszbuffer* に配置します。
 
 ```
 int GetLine(
@@ -614,7 +615,7 @@ int GetLine(
 
 ### <a name="return-value"></a>戻り値
 
-実際にコピーされた文字数。 *NIndex*によって指定された行番号がエディットコントロールの行数よりも大きい場合、戻り値は0です。
+実際にコピーされた文字数。 *NIndex* によって指定された行番号がエディットコントロールの行数よりも大きい場合、戻り値は0です。
 
 ### <a name="remarks"></a>解説
 
@@ -801,7 +802,7 @@ void LimitText(int nChars = 0);
 ### <a name="parameters"></a>パラメーター
 
 *nChars*<br/>
-ユーザーが入力できるテキストの長さ (TCHARs 単位) を指定します。 このパラメーターが0の場合、テキストの長さは UINT_MAX バイトに設定されます。 これは既定の動作です。
+ユーザーが入力できるテキストの長さ (TCHARs 単位) を指定します。 このパラメーターが0の場合、テキストの長さは UINT_MAX バイトに設定されます。 これが既定の動作です。
 
 ### <a name="remarks"></a>解説
 
@@ -827,11 +828,11 @@ int LineFromChar(int nIndex = -1) const;
 ### <a name="parameters"></a>パラメーター
 
 *nIndex*<br/>
-エディットコントロールのテキストに、目的の文字の0から始まるインデックス値を格納します。または、-1 を格納します。 *NIndex*が-1 の場合は、現在の行、つまり、カレットを含む行を指定します。
+エディットコントロールのテキストに、目的の文字の0から始まるインデックス値を格納します。または、-1 を格納します。 *NIndex* が-1 の場合は、現在の行、つまり、カレットを含む行を指定します。
 
 ### <a name="return-value"></a>戻り値
 
-*NIndex*によって指定された文字インデックスを含む行の0から始まる行番号。 *NIndex*が-1 の場合は、選択範囲の最初の文字を含む行の番号が返されます。 選択されていない場合は、現在の行番号が返されます。
+*NIndex* によって指定された文字インデックスを含む行の0から始まる行番号。 *NIndex* が-1 の場合は、選択範囲の最初の文字を含む行の番号が返されます。 選択されていない場合は、現在の行番号が返されます。
 
 ### <a name="remarks"></a>解説
 
@@ -856,11 +857,11 @@ int LineIndex(int nLine = -1) const;
 ### <a name="parameters"></a>パラメーター
 
 *N 行*<br/>
-エディットコントロールのテキスト内の目的の行のインデックス値を格納します。または、-1 を格納します。 *N 行*が-1 の場合は、現在の行、つまり、カレットを含む行を指定します。
+エディットコントロールのテキスト内の目的の行のインデックス値を格納します。または、-1 を格納します。 *N 行* が-1 の場合は、現在の行、つまり、カレットを含む行を指定します。
 
 ### <a name="return-value"></a>戻り値
 
-*N 行*で指定された行の文字インデックス。または、指定した行番号が編集コントロールの行数よりも大きい場合は-1。
+*N 行* で指定された行の文字インデックス。または、指定した行番号が編集コントロールの行数よりも大きい場合は-1。
 
 ### <a name="remarks"></a>解説
 
@@ -893,9 +894,9 @@ int LineLength(int nLine = -1) const;
 
 複数行のエディットコントロールの場合、戻り値は *n 行* パラメーターで指定された行の tchars の長さです。 ANSI テキストの場合、長さは行のバイト数です。Unicode テキストの場合、長さは行の文字数です。 長さには、行末の復帰文字は含まれません。
 
-*N 行*パラメーターがコントロール内の文字数よりも大きい場合、戻り値は0になります。
+*N 行* パラメーターがコントロール内の文字数よりも大きい場合、戻り値は0になります。
 
-*N 行*パラメーターが-1 の場合、戻り値は、選択された文字を含む行で選択されていない文字の数になります。 たとえば、1つの行の4番目の文字から、次の行の末尾の8番目の文字までを選択した場合、戻り値は10になります。 つまり、1行目に3文字、次に7つの文字があります。
+*N 行* パラメーターが-1 の場合、戻り値は、選択された文字を含む行で選択されていない文字の数になります。 たとえば、1つの行の4番目の文字から、次の行の末尾の8番目の文字までを選択した場合、戻り値は10になります。 つまり、1行目に3文字、次に7つの文字があります。
 
 TCHAR 型の詳細については、「 [Windows データ型](/windows/win32/WinProg/windows-data-types)」の表にある tchar 行を参照してください。
 
@@ -972,11 +973,11 @@ CPoint PosFromChar(UINT nChar) const;
 
 ### <a name="return-value"></a>戻り値
 
-*NChar*によって指定された文字の左上隅の座標。
+*NChar* によって指定された文字の左上隅の座標。
 
 ### <a name="remarks"></a>解説
 
-文字は、0から始まるインデックス値を指定することによって指定されます。 *NChar*がこのオブジェクトの最後の文字のインデックスよりも大きい場合 `CEdit` 、戻り値は、このオブジェクトの最後の文字の直後にある文字位置の座標を指定し `CEdit` ます。
+文字は、0から始まるインデックス値を指定することによって指定されます。 *NChar* がこのオブジェクトの最後の文字のインデックスよりも大きい場合 `CEdit` 、戻り値は、このオブジェクトの最後の文字の直後にある文字位置の座標を指定し `CEdit` ます。
 
 > [!NOTE]
 > このメンバー関数は、Windows 95 および Windows NT 4.0 から使用できます。
@@ -989,7 +990,7 @@ CPoint PosFromChar(UINT nChar) const;
 
 ## <a name="ceditreplacesel"></a><a name="replacesel"></a> CEdit:: ReplaceSel
 
-エディットコントロールの現在の選択項目を、 *lpszNewText*で指定したテキストに置き換えるには、この関数を呼び出します。
+エディットコントロールの現在の選択項目を、 *lpszNewText* で指定したテキストに置き換えるには、この関数を呼び出します。
 
 ```cpp
 void ReplaceSel(LPCTSTR lpszNewText, BOOL bCanUndo = FALSE);
@@ -1199,7 +1200,7 @@ void SetPasswordChar(TCHAR ch);
 ### <a name="parameters"></a>パラメーター
 
 *ハーフ*<br/>
-ユーザーが入力した文字の代わりに表示される文字を指定します。 *Ch*が0の場合は、ユーザーが入力した実際の文字が表示されます。
+ユーザーが入力した文字の代わりに表示される文字を指定します。 *Ch* が0の場合は、ユーザーが入力した実際の文字が表示されます。
 
 ### <a name="remarks"></a>解説
 
@@ -1207,9 +1208,9 @@ void SetPasswordChar(TCHAR ch);
 
 このメンバー関数は、複数行のエディットコントロールには影響しません。
 
-`SetPasswordChar`メンバー関数が呼び出されると、 `CEdit` は、 *ch*によって指定された文字を使用して、表示されるすべての文字を再描画します。
+`SetPasswordChar`メンバー関数が呼び出されると、 `CEdit` は、 *ch* によって指定された文字を使用して、表示されるすべての文字を再描画します。
 
-エディットコントロールが [ES_PASSWORD](styles-used-by-mfc.md#edit-styles) スタイルで作成されている場合、既定のパスワード文字はアスタリスク () に設定され <strong>\*</strong> ます。 `SetPasswordChar` *Ch*を0に設定してを呼び出すと、このスタイルは削除されます。
+エディットコントロールが [ES_PASSWORD](styles-used-by-mfc.md#edit-styles) スタイルで作成されている場合、既定のパスワード文字はアスタリスク () に設定され <strong>\*</strong> ます。 `SetPasswordChar` *Ch* を0に設定してを呼び出すと、このスタイルは削除されます。
 
 詳細については、Windows SDK の「 [EM_SETPASSWORDCHAR](/windows/win32/Controls/em-setpasswordchar) 」を参照してください。
 
@@ -1328,7 +1329,7 @@ void SetSel(
 キャレットをスクロールして表示するかどうかを示します。 FALSE の場合、キャレットはスクロールして表示されます。 TRUE の場合、キャレットはスクロールされずに表示されます。
 
 *nStartChar*<br/>
-開始位置を指定します。 *Nstartchar*が0で*nEndChar*が-1 の場合、エディットコントロール内のすべてのテキストが選択されます。 *Nstartchar*が-1 の場合、現在の選択はすべて削除されます。
+開始位置を指定します。 *Nstartchar* が0で *nEndChar* が-1 の場合、エディットコントロール内のすべてのテキストが選択されます。 *Nstartchar* が-1 の場合、現在の選択はすべて削除されます。
 
 *nEndChar*<br/>
 終了位置を指定します。
@@ -1360,7 +1361,7 @@ BOOL SetTabStops(
 すべての *cxEachStop* ダイアログ単位でタブストップを設定することを指定します。
 
 *nTabStops*<br/>
-*RgTabStops*に含まれるタブストップの数を指定します。 この数値は1より大きい値である必要があります。
+*RgTabStops* に含まれるタブストップの数を指定します。 この数値は1より大きい値である必要があります。
 
 *rgTabStops*<br/>
 ダイアログ単位のタブストップを指定する符号なし整数の配列を指します。 ダイアログ単位は、水平方向または垂直方向の距離です。 水平ダイアログ単位は、現在のダイアログベースの幅の単位の1番目と同じです。また、1つの垂直ダイアログ単位は、現在のダイアログベースの高さ単位の8分の1と等しくなります。 ダイアログの基本単位は、現在のシステムフォントの高さと幅に基づいて計算されます。 `GetDialogBaseUnits`Windows 関数は、現在のダイアログベース単位をピクセル単位で返します。

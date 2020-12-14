@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: _chdrive'
 title: _chdrive
 ms.date: 4/2/2020
 api_name:
@@ -29,12 +30,12 @@ helpviewer_keywords:
 - _chdrive function
 - chdrive function
 ms.assetid: 212a1a4b-4fa8-444e-9677-7fca4c8c47e3
-ms.openlocfilehash: a597a67c7d2083cf5860112f6ed55ff248053d17
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: d3935c64d8ae67c72f8516e4c2d21a7a0aa6e21b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82917015"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97186689"
 ---
 # <a name="_chdrive"></a>_chdrive
 
@@ -62,7 +63,7 @@ int _chdrive(
 
 ## <a name="remarks"></a>解説
 
-*Drive*が 1 ~ 26 の範囲内にない場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、 **_chdrive**関数は-1 を返し、 **errno**は**EACCES**に設定され、 **_doserrno**は**ERROR_INVALID_DRIVE**に設定されます。
+*Drive* が 1 ~ 26 の範囲内にない場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、 **_chdrive** 関数は-1 を返し、 **errno** は **EACCES** に設定され、 **_doserrno** は **ERROR_INVALID_DRIVE** に設定されます。
 
 **_chdrive** 関数は、スレッド セーフではない **SetCurrentDirectory** 関数に依存するため、スレッド セーフではありません。 マルチスレッド アプリケーションで **_chdrive** を安全に使用するには、独自のスレッド同期を用意する必要があります。 詳細については、「 [SetCurrentDirectory](/windows/win32/api/winbase/nf-winbase-setcurrentdirectory)」を参照してください。
 
@@ -72,7 +73,7 @@ int _chdrive(
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**_chdrive**|\<direct.h>|
 
@@ -84,7 +85,7 @@ int _chdrive(
 
 ## <a name="see-also"></a>関連項目
 
-[ディレクトリ制御](../../c-runtime-library/directory-control.md)<br/>
+[ディレクトリコントロール](../../c-runtime-library/directory-control.md)<br/>
 [_chdir、_wchdir](chdir-wchdir.md)<br/>
 [_fullpath、_wfullpath](fullpath-wfullpath.md)<br/>
 [_getcwd、_wgetcwd](getcwd-wgetcwd.md)<br/>

@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「呼び出し規約、パラメーター、および戻り値の型」を参照してください。
 title: 呼び出し規則、パラメーター、および戻り値の型
 ms.date: 02/13/2019
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - helper functions, calling conventions
 - helper functions, return types
 ms.assetid: 0ffa4558-6005-4803-be95-7a8ec8837660
-ms.openlocfilehash: 8813bab0cb55aa57792d0031433d96eefb095da4
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: f840ecbe3364f293e9445239984ad375eed48aac
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87223916"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97182529"
 ---
 # <a name="calling-conventions-parameters-and-return-type"></a>呼び出し規則、パラメーター、および戻り値の型
 
@@ -29,7 +30,7 @@ FARPROC WINAPI __delayLoadHelper2(
 *pidd*<br/>
 **`const`** `ImgDelayDescr` さまざまなインポート関連データのオフセット、バインディング情報のタイムスタンプ、記述子コンテンツに関する詳細情報を提供する一連の属性を格納するへのポインター。 現在、属性は1つだけです `dlattrRva` 。これは、記述子のアドレスが相対仮想アドレスであることを示します。 詳細については、「 *delayimp. h*」の宣言を参照してください。
 
-構造体の定義につい `PCImgDelayDescr` ては、「[構造体と定数の定義](structure-and-constant-definitions.md)」を参照してください。
+構造体の定義につい `PCImgDelayDescr` ては、「 [構造体と定数の定義](structure-and-constant-definitions.md)」を参照してください。
 
 *ppfnIATEntry*<br/>
 遅延読み込みインポートアドレステーブル (IAT) のスロットへのポインター。インポートされた関数のアドレスで更新されます。 ヘルパールーチンは、この場所に返されるのと同じ値を格納する必要があります。
