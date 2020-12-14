@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: &lt; regex &gt; 関数'
 title: '&lt;regex&gt; 関数'
 ms.date: 09/10/2018
 f1_keywords:
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - std::regex_search [C++]
 - std::swap [C++]
 - std::swap [C++]
-ms.openlocfilehash: fd7087025939a0aacf17153f201e37fc377653f9
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: aa2186d7b394d1b603d5600d1977efa8d268a32f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88842872"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97253339"
 ---
 # <a name="ltregexgt-functions"></a>&lt;regex&gt; 関数
 
@@ -118,17 +119,17 @@ bool regex_match(
 一致結果。 Elem 型に対応します。 [smatch](../standard-library/regex-typedefs.md#smatch) の場合 `string` は、 [wsmatch](../standard-library/regex-typedefs.md#wsmatch) の場合 `wstring` は、 [cmatch](../standard-library/regex-typedefs.md#cmatch) の場合 `char*` は、または [wcmatch](../standard-library/regex-typedefs.md#wcmatch) の場合は `wchar_t*` です。
 
 *ポインター*\
-一致させるシーケンスの先頭を指すポインター。 *Ptr*がの場合は `char*` 、およびを使用し `cmatch` `regex` ます。 *Ptr*がの場合は `wchar_t*` 、とを使用し `wcmatch` `wregex` ます。
+一致させるシーケンスの先頭を指すポインター。 *Ptr* がの場合は `char*` 、およびを使用し `cmatch` `regex` ます。 *Ptr* がの場合は `wchar_t*` 、とを使用し `wcmatch` `wregex` ます。
 
 *書き直し*\
 照合する正規表現。 `regex`との `string` 場合 `char*` は、およびの場合はを入力し `wregex` `wstring` `wchar_t*` ます。
 
 *引数*\
-一致させる文字列。 *Elem*の型に対応します。
+一致させる文字列。 *Elem* の型に対応します。
 
 ### <a name="remarks"></a>解説
 
-各テンプレート関数は、オペランドシーケンス *str* 全体が正規表現の引数 *re*と完全に一致する場合にのみ true を返します。 [Regex_search](../standard-library/regex-functions.md#regex_search)を使用して、ターゲットシーケンス内の部分文字列を一致させ、 `regex_iterator` 複数の一致を検索します。 `match_results` オブジェクトを受け取る関数は、一致が成功したかどうかを反映し、さらに成功した場合は正規表現内のさまざまなキャプチャ グループがキャプチャした内容を反映するようにそのメンバーを設定します。
+各テンプレート関数は、オペランドシーケンス *str* 全体が正規表現の引数 *re* と完全に一致する場合にのみ true を返します。 [Regex_search](../standard-library/regex-functions.md#regex_search)を使用して、ターゲットシーケンス内の部分文字列を一致させ、 `regex_iterator` 複数の一致を検索します。 `match_results` オブジェクトを受け取る関数は、一致が成功したかどうかを反映し、さらに成功した場合は正規表現内のさまざまなキャプチャ グループがキャプチャした内容を反映するようにそのメンバーを設定します。
 
 `match_results` オブジェクトを受け取る関数は、一致が成功したかどうかを反映し、さらに成功した場合は正規表現内のさまざまなキャプチャ グループがキャプチャした内容を反映するようにそのメンバーを設定します。
 
@@ -258,7 +259,7 @@ basic_string<Elem> regex_replace(
 
 ### <a name="remarks"></a>解説
 
-最初の関数は [Regex_iterator クラス](../standard-library/regex-iterator-class.md) オブジェクトを構築 `iter(first, last, re, flags)` し、それを使用してその入力範囲を `[first, last)` 一連のサブシーケンスに分割し `T0 M0 T1 M1...TN-1 MN-1 TN` ます。ここで、 `Mn` は反復子によって検出された n 番目の一致です。 一致が見つからない場合は、`T0` は入力範囲全体であり `N` はゼロです。 `(flags & format_first_only) != 0` である場合、最初の一致のみが使用され、`T1` がその一致に続く入力テキストのすべてであり、`N` は 1 です。 範囲内の各について `i` `[0, N)` 、 `(flags & format_no_copy) == 0` 範囲内のテキストを `Ti` 反復子 *out*にコピーする場合は。次 `m.format(out, fmt, flags)` に、を呼び出します。ここで、は、サブ `m` `match_results` シーケンスの反復子オブジェクトによって返されるオブジェクトです `iter` `Mi` 。 最後に、 `(flags & format_no_copy) == 0` 範囲内のテキストを `TN` 反復子 *out*にコピーします。関数は、 *を返します*。
+最初の関数は [Regex_iterator クラス](../standard-library/regex-iterator-class.md) オブジェクトを構築 `iter(first, last, re, flags)` し、それを使用してその入力範囲を `[first, last)` 一連のサブシーケンスに分割し `T0 M0 T1 M1...TN-1 MN-1 TN` ます。ここで、 `Mn` は反復子によって検出された n 番目の一致です。 一致が見つからない場合は、`T0` は入力範囲全体であり `N` はゼロです。 `(flags & format_first_only) != 0` である場合、最初の一致のみが使用され、`T1` がその一致に続く入力テキストのすべてであり、`N` は 1 です。 範囲内の各について `i` `[0, N)` 、 `(flags & format_no_copy) == 0` 範囲内のテキストを `Ti` 反復子 *out* にコピーする場合は。次 `m.format(out, fmt, flags)` に、を呼び出します。ここで、は、サブ `m` `match_results` シーケンスの反復子オブジェクトによって返されるオブジェクトです `iter` `Mi` 。 最後に、 `(flags & format_no_copy) == 0` 範囲内のテキストを `TN` 反復子 *out* にコピーします。関数は、 *を返します*。
 
 2 番目の関数は、`basic_string<charT>` 型のローカル変数 `result` を構築し、`regex_replace(back_inserter(result), str.begin(), str.end(), re, fmt, flags)`を呼び出します。 `result` を返します。
 

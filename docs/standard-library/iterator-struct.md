@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: iterator 構造体'
 title: iterator 構造体
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - iterator class
 - iterator struct
 ms.assetid: c74c8000-8b18-4829-9b71-6103c4229b74
-ms.openlocfilehash: b45cdb5c3d4608296cca34ad6a0be6e25b588d28
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 81a35fd749b3393a0235fdac8c4bf13a1ef5af79
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87222304"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97254327"
 ---
 # <a name="iterator-struct"></a>iterator 構造体
 
@@ -53,7 +54,7 @@ struct iterator {
 
 反復子の基底クラスの型の宣言方法や使用例については、「[iterator_traits](../standard-library/iterator-traits-struct.md)」を参照してください。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:**\<iterator>
 

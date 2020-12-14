@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「コンパイラの致命的なエラー C999 から C1999 まで」を参照してください。
 title: コンパイラの致命的なエラー (C999 - C1999)
 ms.date: 04/21/2019
 f1_keywords:
@@ -50,33 +51,33 @@ helpviewer_keywords:
 - C1505
 - C1901
 ms.assetid: 6c8df109-7594-48ed-987a-97d9fe2b04af
-ms.openlocfilehash: 395d7403ef4fe04b671a84a61d320b27ad8ad1c7
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: 93b1e9d3998a3ad29d45e2b1c197807bf61e4176
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73626565"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97262842"
 ---
 # <a name="compiler-fatal-errors-c999-through-c1999"></a>コンパイラの致命的なエラー (C999 - C1999)
 
-ドキュメントのこのセクションの記事では、Microsoft C/C++コンパイラによって生成されるエラーメッセージのサブセットについて説明します。
+ドキュメントのこのセクションの記事では、Microsoft C/c + + コンパイラによって生成されるエラーメッセージのサブセットについて説明します。
 
 [!INCLUDE[error-boilerplate](../../error-messages/includes/error-boilerplate.md)]
 
 ## <a name="error-messages"></a>エラー メッセージ
 
-|Error|[メッセージ]|
+|エラー|Message|
 |-----------|-------------|
 |[致命的なエラー C999](../../error-messages/compiler-errors-1/fatal-error-c999.md)|不明なメッセージ: 詳細については、Visual C++ ヘルプ メニューのサポート情報コマンドを選択してください。またはサポート情報ヘルプ ファイルを参照してください。|
 |[致命的なエラー C1001](../../error-messages/compiler-errors-1/fatal-error-c1001.md)|コンパイラで内部エラーが発生しました。<br /> (コンパイラ ファイル '*file*'、行 *number*)<br /> この問題を回避するには、上記の場所付近のプログラムを単純化するか変更してください。 詳細については、Visual C++ ヘルプ メニューのサポート情報コマンドを選択してください。またはサポート情報ヘルプ ファイルを参照してください。|
 |[致命的なエラー C1002](../../error-messages/compiler-errors-1/fatal-error-c1002.md)|パス 2 の実行中に、ヒープ領域を使い果たしました。|
-|[致命的なエラー C1003](../../error-messages/compiler-errors-1/fatal-error-c1003.md)|プログラム内のエラーが *number*個を超えました。コンパイルは中断されます。|
+|[致命的なエラー C1003](../../error-messages/compiler-errors-1/fatal-error-c1003.md)|エラー数が *number* を超えています。コンパイルの停止|
 |[致命的なエラー C1004](../../error-messages/compiler-errors-1/fatal-error-c1004.md)|予期せぬ EOF が検出されました。|
 |[致命的なエラー C1005](../../error-messages/compiler-errors-1/fatal-error-c1005.md)|コンパイラの中間ファイルの文字列がバッファーの大きさを超えました。|
 |[致命的なエラー C1007](../../error-messages/compiler-errors-1/fatal-error-c1007.md)|'*string*' (オプション '*option*' 中) は認識できません。|
 |[致命的なエラー C1008](../../error-messages/compiler-errors-1/fatal-error-c1008.md)|入力ファイルが指定されていません。|
 |[致命的なエラー C1009](../../error-messages/compiler-errors-1/fatal-error-c1009.md)|コンパイラの制限: マクロの入れ子のレベルが深すぎます。|
-|[致命的なエラー C1010](../../error-messages/compiler-errors-1/fatal-error-c1010.md)|プリコンパイル ヘッダーを検索中に不明な EOF が見つかりました。 ソースに ' #include \<*ファイル*> ' を追加してもよろしいですか?|
+|[致命的なエラー C1010](../../error-messages/compiler-errors-1/fatal-error-c1010.md)|プリコンパイル ヘッダーを検索中に不明な EOF が見つかりました。 ソースに ' #include ' を追加してもよろしい \<*file*> ですか?|
 |[致命的なエラー C1012](fatal-error-c1012.md)|かっこが一致していません。'*character*' がありません。|
 |[致命的なエラー C1013](fatal-error-c1013.md)|コンパイラの制限: 始めかっこが多すぎます。|
 |[致命的なエラー C1014](fatal-error-c1014.md)|インクルード ファイルが多すぎます: 深さ = *number*|
@@ -119,7 +120,7 @@ ms.locfileid: "73626565"
 |[致命的なエラー C1071](../../error-messages/compiler-errors-1/fatal-error-c1071.md)|コメント内で予期しない EOF が見つかりました。|
 |[致命的なエラー C1073](../../error-messages/compiler-errors-1/fatal-error-c1073.md)|インクリメンタル コンパイルを伴う内部エラーが発生しました(コンパイラ ファイル '*file*', 行番号 *number*)|
 |[致命的なエラー C1074](fatal-error-c1074.md)|'IDB' は PDB ファイルには無効な拡張子です: *file*|
-|[致命的なエラー C1075](../../error-messages/compiler-errors-1/fatal-error-c1075.md)|左側の *token* に対応するものがファイルの最後まで検出されませんでした。|
+|[致命的なエラー C1075](../../error-messages/compiler-errors-1/fatal-error-c1075.md)|左側の *トークン* がファイルの最後で一致しませんでした|
 |[致命的なエラー C1076](../../error-messages/compiler-errors-1/fatal-error-c1076.md)|コンパイラの制限: 内部ヒープの上限に達しました。上限を変更するには /Zm オプションを使用してください。|
 |[致命的なエラー C1077](fatal-error-c1077.md)|コンパイラの制限: *number* を超えるコマンド ライン オプションは使用できません。|
 |[致命的なエラー C1079](../../error-messages/compiler-errors-1/fatal-error-c1079.md)|コンパイラの制限: PCH ファイル サイズの制限を超えています。|
@@ -137,7 +138,7 @@ ms.locfileid: "73626565"
 |[致命的なエラー C1091](fatal-error-c1091.md)|コンパイラの制限: 文字列が長さ *number* バイトを超えています。|
 |[致命的なエラー C1092](../../error-messages/compiler-errors-1/fatal-error-c1092.md)|エディット コンティニュはデータ型への変更をサポートしません。ビルドが必要です。|
 |[致命的なエラー C1093](../../error-messages/compiler-errors-1/fatal-error-c1093.md)|API の呼び出し '*function*' は '*HRESULT*' に失敗しました: '*description*'|
-|[致命的なエラー C1094](../../error-messages/compiler-errors-1/fatal-error-c1094.md)|'-Zm*number*': コマンド ライン オプションは、プリコンパイルされたヘッダー ('-Zm*number*') をビルドするために使用される値と矛盾します。|
+|[致命的なエラー C1094](../../error-messages/compiler-errors-1/fatal-error-c1094.md)|'-Zm *number*': コマンド ライン オプションは、プリコンパイルされたヘッダー ('-Zm *number*') をビルドするために使用される値と矛盾します。|
 |[致命的なエラー C1098](fatal-error-c1098.md)|エディット コンティニュ エンジンのバージョンが合っていません。|
 |[致命的なエラー C1099](fatal-error-c1099.md)|エディット コンティニュ エンジンはコンパイルを終了しています。|
 |[致命的なエラー C1100](fatal-error-c1100.md)|OLE を初期化できません: *error*|
@@ -156,7 +157,7 @@ ms.locfileid: "73626565"
 |致命的なエラー C1114|'*file*': WinRT はマネージド アセンブリの #using をサポートしていません。|
 |[致命的なエラー C1120](../../error-messages/compiler-errors-1/fatal-error-c1120.md)|'*function*' の GetProcAddress の呼び出しに失敗しました。|
 |[致命的なエラー C1121](../../error-messages/compiler-errors-1/fatal-error-c1121.md)|CryptoAPI への呼び出しに失敗しました|
-|[致命的なエラー C1126](../../error-messages/compiler-errors-1/fatal-error-c1126.md)|自動メモリ割り当てが *size*を超えました。|
+|[致命的なエラー C1126](../../error-messages/compiler-errors-1/fatal-error-c1126.md)|自動メモリ割り当てが *size* を超えました。|
 |[致命的なエラー C1128](../../error-messages/compiler-errors-1/fatal-error-c1128.md)|セクションの数がオブジェクト ファイル形式の制限を超えています: /bigobj と共にコンパイルしてください|
 |[致命的なエラー C1189](../../error-messages/compiler-errors-1/fatal-error-c1189.md)|#error: *message*|
 |[致命的なエラー C1190](fatal-error-c1190.md)|マネージド ターゲット コードには '/clr' が必要です。|
@@ -176,13 +177,13 @@ ms.locfileid: "73626565"
 |[致命的なエラー C1210](fatal-error-c1210.md)|/clr:pure および /clr:safe は、インストールされているランタイムのバージョンではサポートされていません|
 |[致命的なエラー C1211](fatal-error-c1211.md)|TypeForwardedTo カスタム属性は、インストールされているランタイムのバージョンではサポートされていません|
 |致命的なエラー C1300|プログラム データベース *file* (*message*) へのアクセス エラー|
-|致命的なエラー C1301|プログラム データベース *file*へのアクセス エラー。形式が無効です。削除してリビルドしてください。|
+|致命的なエラー C1301|プログラム データベース *file* へのアクセス エラー。形式が無効です。削除してリビルドしてください。|
 |致命的なエラー C1302|モジュール '*module*' のプロファイル データがプロファイル データベース '*file*' にありません。|
 |[致命的なエラー C1305](../../error-messages/compiler-errors-1/fatal-error-c1305.md)|プロファイル データベース '*file*' は異なるアーキテクチャ用です。|
 |致命的なエラー C1306|プロファイル データ ベース '*file*' への最後の変更は最適化分析に反映されていません。決定された最適化は最新のものでない可能性があります。|
 |[致命的なエラー C1307](../../error-messages/compiler-errors-1/fatal-error-c1307.md)|プロファイル データが集められてからプログラムが編集されました。|
 |[致命的なエラー C1308](../../error-messages/compiler-errors-1/fatal-error-c1308.md)|*file*: リンク アセンブリはサポートされていません。|
-|[致命的なエラー C1309](../../error-messages/compiler-errors-1/fatal-error-c1309.md)|C2.DLL および pgodb*ver*.DLL のバージョンが一致しません。|
+|[致命的なエラー C1309](../../error-messages/compiler-errors-1/fatal-error-c1309.md)|C2.DLL および pgodb *ver*.DLL のバージョンが一致しません。|
 |[致命的なエラー C1310](fatal-error-c1310.md)|ガイド付き最適化のプロファイルは OpenMP と共に使用できません|
 |[致命的なエラー C1311](../../error-messages/compiler-errors-1/fatal-error-c1311.md)|COFF 形式は、'*symbol*' をアドレスの *number* バイトと共に静的に初期化できません。|
 |[致命的なエラー C1312](fatal-error-c1312.md)|関数内に条件分岐が多すぎます。  ソース コードを簡略化するか、リファクターを使用してください。|
@@ -215,4 +216,4 @@ ms.locfileid: "73626565"
 
 ## <a name="see-also"></a>関連項目
 
-[C/C++コンパイラおよびビルドツールのエラーと警告](../compiler-errors-1/c-cpp-build-errors.md)
+[C/C++ コンパイラとビルド ツールのエラーと警告](../compiler-errors-1/c-cpp-build-errors.md)

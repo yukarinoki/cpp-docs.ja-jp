@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: &lt; type_traits &gt; 関数'
 title: '&lt;type_traits&gt; 関数'
 ms.date: 11/04/2016
 ms.assetid: dce4492f-f3e4-4d5e-bdb4-5875321254ec
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - std::is_trivially_copy_assignable
 - std::is_trivially_move_assignable
 - std::is_trivially_move_constructible
-ms.openlocfilehash: 11defadff0b1785f6e4c5aba6356f7b68a78b9fc
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: a1608ddc9d846ca9e8e851ef67d390aebb6f840e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88841780"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97253326"
 ---
 # <a name="lttype_traitsgt-functions"></a>&lt;type_traits&gt; 関数
 
@@ -56,7 +57,7 @@ struct is_assignable;
 
 ### <a name="remarks"></a>解説
 
-評価されていない式 `declval<To>() = declval<From>()` は整形式である必要があります。 と*の*どちら*To*も、完全な型、 **`void`** 、または不明なバインドの配列である必要があります。
+評価されていない式 `declval<To>() = declval<From>()` は整形式である必要があります。 と *の* どちらも、完全な型、 **`void`** 、または不明なバインドの配列である必要があります。
 
 ## <a name="is_copy_assignable"></a><a name="is_copy_assignable"></a> is_copy_assignable
 
@@ -338,7 +339,7 @@ struct is_trivially_move_constructible;
 
 クラスに揮発性の非静的データ メンバーがない
 
-*クラスの*すべての直接基底に自明な移動コンストラクターがある
+*クラスの* すべての直接基底に自明な移動コンストラクターがある
 
 クラス型のすべての非静的データ メンバーのクラスに自明な移動コンストラクターがある
 

@@ -1,4 +1,5 @@
 ---
+description: 詳細については、_itoa_s、_ltoa_s、_ultoa_s、_i64toa_s、_ui64toa_s、_itow_s、_ltow_s、_ultow_s、_i64tow_s、_ui64tow_s に関するページを参照してください。
 title: _itoa_s, _itow_s 関数
 ms.date: 4/2/2020
 api_name:
@@ -90,12 +91,12 @@ helpviewer_keywords:
 - _ui64tot_s function
 - _i64toa_s function
 ms.assetid: eb746581-bff3-48b5-a973-bfc0a4478ecf
-ms.openlocfilehash: 5cc3706abd07e11c819d4b2d37ff89e9b9137a22
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: c02ca2e6090c9396a3a6c91cd6353604d5df8096
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82916567"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97254236"
 ---
 # <a name="_itoa_s-_ltoa_s-_ultoa_s-_i64toa_s-_ui64toa_s-_itow_s--_ltow_s--_ultow_s-_i64tow_s-_ui64tow_s"></a>_itoa_s、_ltoa_s、_ultoa_s、_i64toa_s、_ui64toa_s、_itow_s、_ltow_s、_ultow_s、_i64tow_s、_ui64tow_s
 
@@ -153,10 +154,10 @@ errno_t _ultow_s( unsigned long value, wchar_t (&buffer)[size], int radix );
 変換の結果を保持する出力バッファー。
 
 *size*<br/>
-*バッファー*のサイズ (文字またはワイド文字単位)。
+*バッファー* のサイズ (文字またはワイド文字単位)。
 
 *ベース*<br/>
-*値*の変換に使用する基数または数値の基数。2-36 の範囲内である必要があります。
+*値* の変換に使用する基数または数値の基数。2-36 の範囲内である必要があります。
 
 ## <a name="return-value"></a>戻り値
 
@@ -164,26 +165,26 @@ errno_t _ultow_s( unsigned long value, wchar_t (&buffer)[size], int radix );
 
 ### <a name="error-conditions"></a>エラー条件
 
-|value|buffer|size|radix|戻り値|
+|値|buffer|サイズ|radix|戻り値|
 |-----------|------------|----------------------|-----------|------------|
-|any|**空白**|any|any|**EINVAL**|
+|any|**NULL**|any|any|**EINVAL**|
 |any|any|<=0|any|**EINVAL**|
 |any|any|<= 結果の文字列の長さが必要|any|**EINVAL**|
-|any|any|any|*基数*< 2 または*基数*> 36|**EINVAL**|
+|any|any|any|*基数* < 2 または *基数* > 36|**EINVAL**|
 
 ### <a name="security-issues"></a>セキュリティの問題
 
-*バッファー*が有効なメモリを指しておらず、 **NULL**でない場合、またはバッファーの長さが結果の文字列を保持するのに十分ではない場合、これらの関数はアクセス違反を生成することがあります。
+*バッファー* が有効なメモリを指しておらず、 **NULL** でない場合、またはバッファーの長さが結果の文字列を保持するのに十分ではない場合、これらの関数はアクセス違反を生成することがあります。
 
 ## <a name="remarks"></a>解説
 
-パラメーターと戻り値を除き、 **_itoa_s**および **_itow_s**関数ファミリの動作は、対応する低セキュリティの **_itoa**と **_itow**のバージョンと同じです。
+パラメーターと戻り値を除き、 **_itoa_s** および **_itow_s** 関数ファミリの動作は、対応する低セキュリティの **_itoa** と **_itow** のバージョンと同じです。
 
 C++ では、これらの関数の使用はテンプレートのオーバーロードによって簡素化されます。オーバーロードでは、バッファー長を自動的に推論できる (サイズの引数を指定する必要がなくなる) だけでなく、古くてセキュリティが万全ではない関数を新しく安全な関数に自動的に置き換えることができます。 詳細については、「[セキュリティ保護されたテンプレート オーバーロード](../../c-runtime-library/secure-template-overloads.md)」を参照してください。
 
 これらの関数のデバッグライブラリバージョンは、最初にバッファーを0xFE で埋めます。 この動作を無効にするには、[_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md) を使用します。
 
-CRT には、いくつかの一般的な基本クラスについて、null 終端記号と符号文字を含む、各整数型の最大有効値を変換するために必要なバッファーのサイズを定義するための便利なマクロが含まれています。 詳細については、「[最大変換数マクロ](itoa-itow.md#maximum-conversion-count-macros)」を参照してください。
+CRT には、いくつかの一般的な基本クラスについて、null 終端記号と符号文字を含む、各整数型の最大有効値を変換するために必要なバッファーのサイズを定義するための便利なマクロが含まれています。 詳細については、「 [最大変換数マクロ](itoa-itow.md#maximum-conversion-count-macros)」を参照してください。
 
 既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
@@ -199,7 +200,7 @@ CRT には、いくつかの一般的な基本クラスについて、null 終�
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**_itoa_s**、 **_ltoa_s**、 **_ultoa_s**、 **_i64toa_s**、 **_ui64toa_s**|\<stdlib.h>|
 |**_itow_s**、 **_ltow_s**、 **_ultow_s**、 **_i64tow_s**、 **_ui64tow_s**|\<stdlib.h> または \<wchar.h>|

@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: _spawnlpe、_wspawnlpe'
 title: _spawnlpe、_wspawnlpe
 ms.date: 11/04/2016
 api_name:
@@ -33,12 +34,12 @@ helpviewer_keywords:
 - processes, executing new
 - process creation
 ms.assetid: e171ebfa-70e7-4c44-8331-2a291fc17bd6
-ms.openlocfilehash: 8e5e20827ef67d83b008a055505ec95abbde7d49
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: ebe51a8268bb8b641492ef40bd37e55e19bef0c7
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88844172"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97262959"
 ---
 # <a name="_spawnlpe-_wspawnlpe"></a>_spawnlpe、_wspawnlpe
 
@@ -79,14 +80,14 @@ intptr_t _wspawnlpe(
 実行されるファイルのパス。
 
 *arg0*、 *arg1*、... *argn*<br/>
-引数へのポインターのリスト。 *Arg0*引数は通常、 *cmdname*へのポインターです。 引数 *arg1* ~ *argn* は、新しい引数リストを形成する文字列へのポインターです。 *Argn*の後に、引数リストの末尾を示す**NULL**ポインターが必要です。
+引数へのポインターのリスト。 *Arg0* 引数は通常、 *cmdname* へのポインターです。 引数 *arg1* ~ *argn* は、新しい引数リストを形成する文字列へのポインターです。 *Argn* の後に、引数リストの末尾を示す **NULL** ポインターが必要です。
 
 *envp*<br/>
 環境設定へのポインターの配列。
 
 ## <a name="return-value"></a>戻り値
 
-同期 **_spawnlpe**または **_wspawnlpe** (*モード*用に指定された **_P_WAIT** ) からの戻り値は、新しいプロセスの終了ステータスです。 非同期 **_spawnlpe**または **_wspawnlpe** (*モード*で指定された **_P_NOWAIT**または **_P_NOWAITO** ) からの戻り値がプロセスハンドルです。 プロセスが正常に終了した場合、終了ステータスは 0 です。 生成されたプロセスが明示的に0以外の引数を使用して **終了** ルーチンを呼び出す場合は、終了ステータスを0以外の値に設定できます。 新しいプロセスが明示的に終了ステータスを正の値に設定しなかった場合、正の値の終了ステータスは中止または割り込みによる異常終了を示します。 戻り値-1 はエラーを示します (新しいプロセスは開始されません)。 この場合、 **errno** は次のいずれかの値に設定されます。
+同期 **_spawnlpe** または **_wspawnlpe** (*モード* 用に指定された **_P_WAIT** ) からの戻り値は、新しいプロセスの終了ステータスです。 非同期 **_spawnlpe** または **_wspawnlpe** (*モード* で指定された **_P_NOWAIT** または **_P_NOWAITO** ) からの戻り値がプロセスハンドルです。 プロセスが正常に終了した場合、終了ステータスは 0 です。 生成されたプロセスが明示的に0以外の引数を使用して **終了** ルーチンを呼び出す場合は、終了ステータスを0以外の値に設定できます。 新しいプロセスが明示的に終了ステータスを正の値に設定しなかった場合、正の値の終了ステータスは中止または割り込みによる異常終了を示します。 戻り値-1 はエラーを示します (新しいプロセスは開始されません)。 この場合、 **errno** は次のいずれかの値に設定されます。
 
 | 値 | 説明 |
 |-|-|
@@ -102,7 +103,7 @@ intptr_t _wspawnlpe(
 
 これらの各関数は、新しいプロセスを作成して実行し、各コマンド ライン引数を個別のパラメーターとして渡し、環境設定へのポインターの配列を渡します。 これらの関数は、 **PATH** 環境変数を使用して、実行するファイルを検索します。
 
-これらの関数では、パラメーターの検証が行われます。 *Cmdname*または*arg0*が空の文字列または null ポインターの場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、これらの関数は **errno** を **EINVAL**に設定し、-1 を返します。 新しいプロセスは起動されません。
+これらの関数では、パラメーターの検証が行われます。 *Cmdname* または *arg0* が空の文字列または null ポインターの場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、これらの関数は **errno** を **EINVAL** に設定し、-1 を返します。 新しいプロセスは起動されません。
 
 ## <a name="requirements"></a>必要条件
 

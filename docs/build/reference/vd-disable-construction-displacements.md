@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「/vd (コンストラクションの変位を無効にする)」を参照してください。
 title: /vd (ディスプレイスメントの無効化)
 ms.date: 11/04/2016
 f1_keywords:
@@ -16,12 +17,12 @@ helpviewer_keywords:
 - vd0 compiler option [C++]
 - Disable Construction Displacements compiler option
 ms.assetid: 93258964-14d7-4b1c-9cbc-d6f4d74eab69
-ms.openlocfilehash: df8891cc71dd5a4cfd417969578c0c1b46ae3be3
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 9c90e2fa4f93ea0ba3892a07e13f2a15e848d608
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87223812"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97253196"
 ---
 # <a name="vd-disable-construction-displacements"></a>/vd (ディスプレイスメントの無効化)
 
@@ -40,9 +41,9 @@ Vtordisp コンストラクター/デストラクターのディスプレイス�
 隠し vtordisp コンストラクター/デストラクターのディスプレイスメントメンバーの作成を有効にします。 これは既定の設定です。
 
 **2**<br/>
-構築中のオブジェクトに対して[Dynamic_cast 演算子](../../cpp/dynamic-cast-operator.md)を使用できるようにします。 たとえば、仮想基底クラスから派生クラスに dynamic_cast ます。
+構築中のオブジェクトに対して [Dynamic_cast 演算子](../../cpp/dynamic-cast-operator.md) を使用できるようにします。 たとえば、仮想基底クラスから派生クラスに dynamic_cast ます。
 
-仮想関数を持つ仮想ベースがある場合、 **/vd2**は vtordisp フィールドを追加します。 **/vd1**は十分です。 **/Vd2**が必要な最も一般的なケースは、仮想ベースの唯一の仮想関数がデストラクターである場合です。
+仮想関数を持つ仮想ベースがある場合、 **/vd2** は vtordisp フィールドを追加します。 **/vd1** は十分です。 **/Vd2** が必要な最も一般的なケースは、仮想ベースの唯一の仮想関数がデストラクターである場合です。
 
 ## <a name="remarks"></a>解説
 
@@ -64,7 +65,7 @@ Visual C++ は、仮想継承が使用される場合に、C++ の構築のデ�
 
 1. **[コマンド ライン]** プロパティ ページをクリックします。
 
-1. [追加のオプション] **** ボックスにコンパイラ オプションを入力します。
+1. [追加のオプション]  ボックスにコンパイラ オプションを入力します。
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>このコンパイラ オプションをコードから設定するには
 
@@ -73,4 +74,4 @@ Visual C++ は、仮想継承が使用される場合に、C++ の構築のデ�
 ## <a name="see-also"></a>関連項目
 
 [MSVC コンパイラ オプション](compiler-options.md)<br/>
-[MSVC コンパイラのコマンドライン構文](compiler-command-line-syntax.md)
+[MSVC Compiler Command-Line 構文](compiler-command-line-syntax.md)

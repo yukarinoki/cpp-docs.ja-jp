@@ -1,4 +1,5 @@
 ---
+description: '詳細については、「メニューとリソース: コンテナーの追加」を参照してください。'
 title: 'メニューとリソース : コンテナーの変更点'
 ms.date: 11/04/2016
 f1_keywords:
@@ -16,12 +17,12 @@ helpviewer_keywords:
 - CONTAIN tutorial [MFC]
 - Links menu item [MFC]
 ms.assetid: 425448be-8ca0-412e-909a-a3a9ce845288
-ms.openlocfilehash: a082a75ef0292e190e597f29be0cdc0bd0b497ef
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: e32167e66693587a32732c1c20fc6d85d3010ecb
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84626241"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97253365"
 ---
 # <a name="menus-and-resources-container-additions"></a>メニューとリソース : コンテナーの変更点
 
@@ -29,7 +30,7 @@ ms.locfileid: "84626241"
 
 コンテナーアプリケーションでは、2種類の変更を行う必要があります。既存のリソースに変更を加えて、OLE ビジュアル編集をサポートし、インプレースアクティブ化に使用される新しいリソースを追加します。 アプリケーションウィザードを使用してコンテナーアプリケーションを作成する場合は、これらの手順が実行されますが、カスタマイズが必要になる場合があります。
 
-アプリケーションウィザードを使用しない場合は、OCLIENT を確認することをお勧めします。RC (OCLIENT サンプルアプリケーション用のリソーススクリプト) を使用して、これらの変更がどのように実装されているかを確認します。 「MFC OLE サンプル[OCLIENT](../overview/visual-cpp-samples.md)」を参照してください。
+アプリケーションウィザードを使用しない場合は、OCLIENT を確認することをお勧めします。RC (OCLIENT サンプルアプリケーション用のリソーススクリプト) を使用して、これらの変更がどのように実装されているかを確認します。 「MFC OLE サンプル [OCLIENT](../overview/visual-cpp-samples.md)」を参照してください。
 
 この記事では、次のトピックについて説明します。
 
@@ -39,11 +40,11 @@ ms.locfileid: "84626241"
 
 - [文字列テーブルの追加](#_core_string_table_additions_for_container_applications)
 
-## <a name="container-menu-additions"></a><a name="_core_container_menu_additions"></a>コンテナーメニューの追加
+## <a name="container-menu-additions"></a><a name="_core_container_menu_additions"></a> コンテナーメニューの追加
 
 [編集] メニューに次の項目を追加する必要があります。
 
-|Item|目的|
+|項目|目的|
 |----------|-------------|
 |**新しいオブジェクトの挿入**|[OLE 挿入オブジェクト] ダイアログボックスを開き、リンクされたアイテムまたは埋め込みアイテムをドキュメントに挿入します。|
 |**リンクの貼り付け**|クリップボード上のアイテムへのリンクをドキュメントに貼り付けます。|
@@ -52,19 +53,19 @@ ms.locfileid: "84626241"
 
 この記事に記載されている変更に加えて、ソースファイルには AFXOLECL を含める必要があります。RC。 Microsoft Foundation Class ライブラリの実装に必要です。 必須メニューの追加は、[新しいオブジェクトの挿入] だけです。 他の項目も追加できますが、ここに挙げたものは最も一般的なものです。
 
-含まれている項目のインプレースアクティブ化をサポートする場合は、コンテナーアプリケーションの新しいメニューを作成する必要があります。 このメニューは、ファイルが開いているときに使用されるのと同じ [ファイル] メニューと [ウィンドウ] ポップアップメニューで構成されていますが、2つの区切り記号が配置されています。 これらの区切り記号を使用して、サーバー (コンポーネント) 項目 (アプリケーション) でメニューを配置する場所を指定します。 このメニューの結合方法の詳細については、「メニュー[とリソース: メニューのマージ](menus-and-resources-menu-merging.md)」を参照してください。
+含まれている項目のインプレースアクティブ化をサポートする場合は、コンテナーアプリケーションの新しいメニューを作成する必要があります。 このメニューは、ファイルが開いているときに使用されるのと同じ [ファイル] メニューと [ウィンドウ] ポップアップメニューで構成されていますが、2つの区切り記号が配置されています。 これらの区切り記号を使用して、サーバー (コンポーネント) 項目 (アプリケーション) でメニューを配置する場所を指定します。 このメニューの結合方法の詳細については、「メニュー [とリソース: メニューのマージ](menus-and-resources-menu-merging.md)」を参照してください。
 
-## <a name="container-application-accelerator-table-additions"></a><a name="_core_container_application_accelerator_table_additions"></a>コンテナーアプリケーションアクセラレータテーブルの追加
+## <a name="container-application-accelerator-table-additions"></a><a name="_core_container_application_accelerator_table_additions"></a> コンテナーアプリケーションアクセラレータテーブルの追加
 
 インプレースアクティベーションをサポートしている場合は、コンテナーアプリケーションのアクセラレータテーブルリソースに小さな変更を加える必要があります。 最初の変更では、ユーザーは ESC キーを押して、インプレース編集モードを取り消すことができます。 次のエントリをメインアクセラレータテーブルに追加します。
 
-|id|キー|Type|
+|ID|キー|種類|
 |--------|---------|----------|
 |ID_CANCEL_EDIT_CNTR|VK_ESCAPE|**VIRTKEY**|
 
-2番目の変更は、インプレースアクティブ化のために作成された新しいメニューリソースに対応する新しいアクセラレータテーブルを作成することです。 このテーブルには、上の VK_ESCAPE エントリに加えて、[ファイル] メニューと [ウィンドウ] メニューのエントリがあります。 次の例は、MFC サンプル[コンテナー](../overview/visual-cpp-samples.md)のインプレースアクティブ化のために作成されたアクセラレータテーブルです。
+2番目の変更は、インプレースアクティブ化のために作成された新しいメニューリソースに対応する新しいアクセラレータテーブルを作成することです。 このテーブルには、上の VK_ESCAPE エントリに加えて、[ファイル] メニューと [ウィンドウ] メニューのエントリがあります。 次の例は、MFC サンプル [コンテナー](../overview/visual-cpp-samples.md)のインプレースアクティブ化のために作成されたアクセラレータテーブルです。
 
-|id|キー|Type|
+|ID|キー|種類|
 |--------|---------|----------|
 |ID_FILE_NEW|Ctrl + N|**VIRTKEY**|
 |ID_FILE_OPEN|Ctrl + O|**VIRTKEY**|
@@ -74,9 +75,9 @@ ms.locfileid: "84626241"
 |ID_PREV_PANE|SHIFT + VK_F6|**VIRTKEY**|
 |ID_CANCEL_EDIT_CNTR|VK_ESCAPE|**VIRTKEY**|
 
-## <a name="string-table-additions-for-container-applications"></a><a name="_core_string_table_additions_for_container_applications"></a>コンテナーアプリケーションの文字列テーブルの追加
+## <a name="string-table-additions-for-container-applications"></a><a name="_core_string_table_additions_for_container_applications"></a> コンテナーアプリケーションの文字列テーブルの追加
 
-コンテナーアプリケーションの文字列テーブルに加えられた変更のほとんどは、「[コンテナーメニューの追加](#_core_container_menu_additions)」で説明されている追加のメニュー項目に対応しています。 各メニュー項目が表示されるときに、ステータスバーに表示されるテキストを指定します。 例として、アプリケーションウィザードによって生成される文字列テーブルのエントリを次に示します。
+コンテナーアプリケーションの文字列テーブルに加えられた変更のほとんどは、「 [コンテナーメニューの追加](#_core_container_menu_additions)」で説明されている追加のメニュー項目に対応しています。 各メニュー項目が表示されるときに、ステータスバーに表示されるテキストを指定します。 例として、アプリケーションウィザードによって生成される文字列テーブルのエントリを次に示します。
 
 |id|String|
 |--------|------------|
@@ -86,4 +87,4 @@ ms.locfileid: "84626241"
 ## <a name="see-also"></a>関連項目
 
 [メニューとリソース (OLE)](menus-and-resources-ole.md)<br/>
-[メニューとリソース: サーバーの変更点](menus-and-resources-server-additions.md)
+[メニューとリソース: サーバーの追加](menus-and-resources-server-additions.md)

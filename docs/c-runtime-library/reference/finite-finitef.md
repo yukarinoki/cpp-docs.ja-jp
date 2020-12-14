@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「isfinite、_finite、_finitef」を参照してください。
 title: isfinite、_finite、_finitef
 ms.date: 01/31/2019
 api_name:
@@ -35,12 +36,12 @@ helpviewer_keywords:
 - _finite function
 - _finitef function
 ms.assetid: 5a7d7ca7-befb-4e1f-831d-28713c6eb805
-ms.openlocfilehash: 7e15a6619e584ff52c07048fcf591835b799587f
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: ef0747c88d62445c1cbd31f5c7afe6a651f50880
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87218703"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97263115"
 ---
 # <a name="isfinite-_finite-_finitef"></a>isfinite、_finite、_finitef
 
@@ -74,13 +75,13 @@ int _finitef(
 
 ## <a name="return-value"></a>戻り値
 
-`isfinite` `_finite` `_finitef` *X*が normal または subnormal の有限値の場合、マクロと関数および関数は0以外の値を返します。 引数が無限または NaN の場合は、0を返します。 C++ インラインテンプレート関数は `isfinite` 同じように動作しますが、 **`true`** またはを返し **`false`** ます。
+`isfinite` `_finite` `_finitef` *X* が normal または subnormal の有限値の場合、マクロと関数および関数は0以外の値を返します。 引数が無限または NaN の場合は、0を返します。 C++ インラインテンプレート関数は `isfinite` 同じように動作しますが、 **`true`** またはを返し **`false`** ます。
 
 ## <a name="remarks"></a>解説
 
-`isfinite`は、C としてコンパイルされた場合はマクロ、C++ としてコンパイルされた場合はインラインテンプレート関数です。 `_finite`関数と `_finitef` 関数は、Microsoft 固有の関数です。 `_finitef` 関数は、x86、ARM、または ARM64 プラットフォーム用にコンパイルするときにのみ使用できます。
+`isfinite` は、C としてコンパイルされた場合はマクロ、C++ としてコンパイルされた場合はインラインテンプレート関数です。 `_finite`関数と `_finitef` 関数は、Microsoft 固有の関数です。 `_finitef` 関数は、x86、ARM、または ARM64 プラットフォーム用にコンパイルするときにのみ使用できます。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 |機能|必須ヘッダー (C)|必須ヘッダー (C++)|
 |--------------|---------------------------|-------------------------------|

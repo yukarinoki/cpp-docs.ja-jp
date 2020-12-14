@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: marshal_context クラス'
 title: marshal_context クラス
 ms.date: 01/16/2019
 ms.topic: reference
@@ -8,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - msclr::marshal_context class [C++]
 ms.assetid: 241b0cf6-4ca4-4812-aaee-d671c11dc034
-ms.openlocfilehash: aa5935332cfa12c02e8084136a311a7593a4f3b9
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 6fa625ed52ac69682574d52c423e54d200461e73
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91508580"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97253651"
 ---
 # <a name="marshal_context-class"></a>marshal_context クラス
 
@@ -46,7 +47,7 @@ class marshal_context
 |---------|-----------|
 |[marshal_context::marshal_as](#marshal-as)|特定のデータオブジェクトに対してマーシャリングを実行し、マネージデータ型とネイティブデータ型との間で変換を実行します。|
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダーファイル:** \<msclr\marshal.h> 、 \<msclr\marshal_windows.h> 、 \<msclr\marshal_cppstd.h> 、または \<msclr\marshal_atl.h>
 
@@ -60,7 +61,7 @@ class marshal_context
 marshal_context();
 ```
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 一部のデータ変換にはマーシャリングコンテキストが必要です。 コンテキストを必要とする翻訳と、アプリケーションに含める必要のあるマーシャリングファイルの詳細については、「 [C++ におけるマーシャリングの概要](../dotnet/overview-of-marshaling-in-cpp.md)」を参照してください。
 
@@ -76,7 +77,7 @@ marshal_context();
 ~marshal_context();
 ```
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 一部のデータ変換にはマーシャリングコンテキストが必要です。 どの変換にコンテキストが必要であり、どのマーシャリングファイルをアプリケーションに含める必要があるかの詳細については、「 [C++ でのマーシャリングの概要](../dotnet/overview-of-marshaling-in-cpp.md) 」を参照してください。
 
@@ -101,7 +102,7 @@ To_Type marshal_as<To_Type>(
 
 `To_Type`の変換後の値である型の変数 `input` 。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 この関数は、特定のデータオブジェクトに対してマーシャリングを実行します。 この関数は、 [「C++ におけるマーシャリングの概要](../dotnet/overview-of-marshaling-in-cpp.md)」の表に示されている変換でのみ使用してください。
 

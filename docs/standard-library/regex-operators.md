@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: &lt; regex &gt; 演算子'
 title: '&lt;regex&gt; 演算子'
 ms.date: 11/04/2016
 f1_keywords:
@@ -10,12 +11,12 @@ f1_keywords:
 - regex/std::operator==
 - regex/std::operator<<
 ms.assetid: ec623e65-c186-491f-aa18-6b12b47e1127
-ms.openlocfilehash: f3117ce7e962468855172a463c375392930e7c81
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: bc0eddc9f3c7db600c49e317335a131bc6646a5d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88833232"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97254278"
 ---
 # <a name="ltregexgt-operators"></a>&lt;regex&gt; 演算子
 
@@ -200,7 +201,7 @@ bool operator<(const sub_match<BidIt>& left,
 
 ### <a name="remarks"></a>解説
 
-各テンプレート演算子は引数を文字列型に変換し、 *left* の変換後の値が *right*の変換された値より小さい場合にのみ true を返します。
+各テンプレート演算子は引数を文字列型に変換し、 *left* の変換後の値が *right* の変換された値より小さい場合にのみ true を返します。
 
 ### <a name="example"></a>例
 

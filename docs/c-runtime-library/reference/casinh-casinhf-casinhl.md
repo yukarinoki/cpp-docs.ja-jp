@@ -1,4 +1,5 @@
 ---
+description: 詳細については、casinh、casinhf、casinhf に関するページを参照してください。
 title: casinh、casinhf、casinhl
 ms.date: 11/04/2016
 api_name:
@@ -33,12 +34,12 @@ helpviewer_keywords:
 - casinhf function
 - casinhl function
 ms.assetid: bd18340b-21dd-4c86-a14e-e8e15dd97e3b
-ms.openlocfilehash: 6deec85dc980a7bd421de87349f512564912d98c
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 96d3b2bc6b299f7ba6ef38fbd83f55507af26bd3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70943370"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97253157"
 ---
 # <a name="casinh-casinhf-casinhl"></a>casinh、casinhf、casinhl
 
@@ -71,23 +72,23 @@ _Lcomplex casinhl(
 
 ## <a name="return-value"></a>戻り値
 
-*Z*の逆双曲線正弦 (ラジアン)。 結果は、実数軸に沿ってバインド解除され、虚数軸に沿って [-iπ/2, + iπ/2] の間隔でバインドが解除されます。
+*Z* の逆双曲線正弦 (ラジアン)。 結果は、実数軸に沿ってバインド解除され、虚数軸に沿って [-iπ/2, + iπ/2] の間隔でバインドが解除されます。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-でC++はオーバーロードが可能であるため、 **_Fcomplex**と **_Lcomplex**の値を受け取って返す**casinh**のオーバーロードを呼び出すことができます。 C プログラムでは、 **casinh** **は常に値を**取得して返します。
+C++ ではオーバーロードが可能であるため、 **_Fcomplex** と **_Lcomplex** 値を取得して返す、 **casinh** のオーバーロードを呼び出すことができます。 C プログラムでは、 **casinh** は常に **_Dcomplex** 値を取得して返します。
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチン|C ヘッダー|C++ ヘッダー|
+|ルーチンによって返される値|C ヘッダー|C++ ヘッダー|
 |-------------|--------------|------------------|
-|**casinh**、 **casinhf**、 **casinhf**|\<complex.h>|\<ccomplex>|
+|**casinh**、               **casinhf**、 **casinhf**|\<complex.h>|\<ccomplex>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性について詳しくは、「 [Compatibility](../../c-runtime-library/compatibility.md)」をご覧ください。
 
 ## <a name="see-also"></a>関連項目
 
-[関数リファレンス (アルファベット順)](crt-alphabetical-function-reference.md)<br/>
+[アルファベット順の関数リファレンス](crt-alphabetical-function-reference.md)<br/>
 [catanh、catanhf、catanhl](catanh-catanhf-catanhl.md)<br/>
 [ctanh、ctanhf、ctanhl](ctanh-ctanhf-ctanhl.md)<br/>
 [catan、catanf、catanl](catan-catanf-catanl.md)<br/>

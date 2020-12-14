@@ -1,4 +1,5 @@
 ---
+description: 詳細については、C++ の組み込み演算子、優先順位、および結合規則に関するページを参照してください。
 title: C++ の組み込み演算子、優先順位、および結合規則
 ms.date: 07/23/2020
 helpviewer_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - evaluation order
 - hierarchy, operator
 ms.assetid: 95c1f0ba-dad8-4034-b039-f79a904f112f
-ms.openlocfilehash: 10c9e5db569ba211ed8d42386816b4f6bb71ee29
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: ff8ae84a62ef47449364d0815922326d7b8566d4
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87221771"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97253963"
 ---
 # <a name="c-built-in-operators-precedence-and-associativity"></a>C++ の組み込み演算子、優先順位、および結合規則
 
@@ -25,7 +26,7 @@ C++ 言語には、C のすべての演算子が含まれており、いくつ�
 
 ## <a name="precedence-and-associativity"></a>優先順位と結合規則
 
-演算子の*優先順位*では、複数の演算子を含む式での演算の順序を指定します。 演算子の*結合規則*では、同じ優先順位を持つ複数の演算子を含む式で、オペランドが左側または右側の演算子でグループ化されているかどうかを指定します。
+演算子の *優先順位* では、複数の演算子を含む式での演算の順序を指定します。 演算子の *結合規則* では、同じ優先順位を持つ複数の演算子を含む式で、オペランドが左側または右側の演算子でグループ化されているかどうかを指定します。
 
 ## <a name="alternative-spellings"></a>その他のスペル
 
@@ -40,7 +41,7 @@ C++ では、一部の演算子に対して別のスペルを指定します。 
 | **グループ1の優先順位、結合規則なし** |
 | [スコープの解決](../cpp/scope-resolution-operator.md) | [`::`](../cpp/scope-resolution-operator.md) |
 | **グループ2の優先順位、左から右への結合規則** |
-| [メンバー選択 (オブジェクトまたはポインター)](../cpp/member-access-operators-dot-and.md) | [`.`もしくは`->`](../cpp/member-access-operators-dot-and.md) |
+| [メンバー選択 (オブジェクトまたはポインター)](../cpp/member-access-operators-dot-and.md) | [`.` もしくは `->`](../cpp/member-access-operators-dot-and.md) |
 | [配列インデックス](../cpp/subscript-operator.md) | [`[]`](../cpp/subscript-operator.md) |
 | [関数呼び出し](../cpp/function-call-operator-parens.md) | [`()`](../cpp/function-call-operator-parens.md) |
 | [後置インクリメント](../cpp/postfix-increment-and-decrement-operators-increment-and-decrement.md) | [`++`](../cpp/postfix-increment-and-decrement-operators-increment-and-decrement.md) |
@@ -64,25 +65,25 @@ C++ では、一部の演算子に対して別のスペルを指定します。 
 | [オブジェクトの破棄](../cpp/delete-operator-cpp.md) | [`delete`](../cpp/delete-operator-cpp.md) |
 | [詠唱](../cpp/cast-operator-parens.md) | [`()`](../cpp/cast-operator-parens.md) |
 | **グループ4の優先順位、左から右への結合規則** |
-| [メンバーへのポインター (オブジェクトまたはポインター)](../cpp/pointer-to-member-operators-dot-star-and-star.md) | [`.*`もしくは`->*`](../cpp/pointer-to-member-operators-dot-star-and-star.md) |
+| [メンバーへのポインター (オブジェクトまたはポインター)](../cpp/pointer-to-member-operators-dot-star-and-star.md) | [`.*` もしくは `->*`](../cpp/pointer-to-member-operators-dot-star-and-star.md) |
 | **グループ5の優先順位、左から右への結合規則** |
-| [乗算](../cpp/multiplicative-operators-and-the-modulus-operator.md) | [`*`](../cpp/multiplicative-operators-and-the-modulus-operator.md) |
+| [数学](../cpp/multiplicative-operators-and-the-modulus-operator.md) | [`*`](../cpp/multiplicative-operators-and-the-modulus-operator.md) |
 | [事業部](../cpp/multiplicative-operators-and-the-modulus-operator.md) | [`/`](../cpp/multiplicative-operators-and-the-modulus-operator.md) |
-| [Modulus](../cpp/multiplicative-operators-and-the-modulus-operator.md) | [`%`](../cpp/multiplicative-operators-and-the-modulus-operator.md) |
+| [剰余](../cpp/multiplicative-operators-and-the-modulus-operator.md) | [`%`](../cpp/multiplicative-operators-and-the-modulus-operator.md) |
 | **グループ6の優先順位、左から右の結合規則** |
-| [加算](../cpp/additive-operators-plus-and.md) | [`+`](../cpp/additive-operators-plus-and.md) |
+| [加わっ](../cpp/additive-operators-plus-and.md) | [`+`](../cpp/additive-operators-plus-and.md) |
 | [減算](../cpp/additive-operators-plus-and.md) | [`-`](../cpp/additive-operators-plus-and.md) |
 | **グループ7の優先順位、左から右への結合規則** |
 | [左シフト](../cpp/left-shift-and-right-shift-operators-input-and-output.md) | [`<<`](../cpp/left-shift-and-right-shift-operators-input-and-output.md) |
 | [右シフト](../cpp/left-shift-and-right-shift-operators-input-and-output.md) | [`>>`](../cpp/left-shift-and-right-shift-operators-input-and-output.md) |
 | **グループ8の優先順位、左から右への結合規則** |
-| [より小さい](../cpp/relational-operators-equal-and-equal.md) | [`<`](../cpp/relational-operators-equal-and-equal.md) |
+| [次の値より小さい](../cpp/relational-operators-equal-and-equal.md) | [`<`](../cpp/relational-operators-equal-and-equal.md) |
 | [より大きい](../cpp/relational-operators-equal-and-equal.md) | [`>`](../cpp/relational-operators-equal-and-equal.md) |
-| [以下](../cpp/relational-operators-equal-and-equal.md) | [`<=`](../cpp/relational-operators-equal-and-equal.md) |
-| [以上](../cpp/relational-operators-equal-and-equal.md) | [`>=`](../cpp/relational-operators-equal-and-equal.md) |
+| [次の値以下](../cpp/relational-operators-equal-and-equal.md) | [`<=`](../cpp/relational-operators-equal-and-equal.md) |
+| [次の値以上](../cpp/relational-operators-equal-and-equal.md) | [`>=`](../cpp/relational-operators-equal-and-equal.md) |
 | **グループ9の優先順位、左から右への結合規則** |
 | [等式](../cpp/equality-operators-equal-equal-and-exclpt-equal.md) | [`==`](../cpp/equality-operators-equal-equal-and-exclpt-equal.md) |
-| [等しく](../cpp/equality-operators-equal-equal-and-exclpt-equal.md) | [`!=`](../cpp/equality-operators-equal-equal-and-exclpt-equal.md) | **`not_eq`** |
+| [不等式](../cpp/equality-operators-equal-equal-and-exclpt-equal.md) | [`!=`](../cpp/equality-operators-equal-equal-and-exclpt-equal.md) | **`not_eq`** |
 | **グループ10の優先順位が左から右の結合規則** |
 | [ビット演算子 AND](../cpp/bitwise-and-operator-amp.md) | [`&`](../cpp/bitwise-and-operator-amp.md) | **`bitand`** |
 | **グループ11の優先順位、左から右への結合規則** |
@@ -110,7 +111,7 @@ C++ では、一部の演算子に対して別のスペルを指定します。 
 | **グループ17の優先順位、右から左の結合規則** |
 | [throw 式](../cpp/try-throw-and-catch-statements-cpp.md) | [`throw`](../cpp/try-throw-and-catch-statements-cpp.md) |
 | **グループ18の優先順位、左から右への結合規則** |
-| [傍点](../cpp/comma-operator.md) | [,](../cpp/comma-operator.md) |
+| [コンマ](../cpp/comma-operator.md) | [,](../cpp/comma-operator.md) |
 
 ## <a name="see-also"></a>関連項目
 

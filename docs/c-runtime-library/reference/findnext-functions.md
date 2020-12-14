@@ -1,4 +1,5 @@
 ---
+description: 詳細については、_findnext、_findnext32、_findnext32i64、_findnext64、_findnext64i32、_findnexti64、_wfindnext、_wfindnext32、_wfindnext32i64、_wfindnext64、_wfindnext64i32、_wfindnexti64 を参照してください。
 title: _findnext、_findnext32、_findnext32i64、_findnext64、_findnext64i32、_findnexti64、_wfindnext、_wfindnext32、_wfindnext32i64、_wfindnext64、_wfindnext64i32、_wfindnexti64
 ms.date: 4/2/2020
 api_name:
@@ -114,16 +115,16 @@ helpviewer_keywords:
 - tfindnext32i64 function
 - _tfindnexti64 function
 ms.assetid: 75d97188-5add-4698-a46c-4c492378f0f8
-ms.openlocfilehash: acb680db3b07b0f600b758401f1270deccf03da7
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 5513f3932b78d450ecce81947e0095efb8df1d9d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82911661"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97263128"
 ---
 # <a name="_findnext-_findnext32-_findnext32i64-_findnext64-_findnext64i32-_findnexti64-_wfindnext-_wfindnext32-_wfindnext32i64-_wfindnext64-_wfindnext64i32-_wfindnexti64"></a>_findnext、_findnext32、_findnext32i64、_findnext64、_findnext64i32、_findnexti64、_wfindnext、_wfindnext32、_wfindnext32i64、_wfindnext64、_wfindnext64i32、_wfindnexti64
 
-前の[_findfirst](findfirst-functions.md)の呼び出しで*filespec*引数に一致する次の名前を検索し、それに応じて*fileinfo*構造の内容を変更します。
+前の [_findfirst](findfirst-functions.md)の呼び出しで *filespec* 引数に一致する次の名前を検索し、それに応じて *fileinfo* 構造の内容を変更します。
 
 ## <a name="syntax"></a>構文
 
@@ -181,38 +182,38 @@ int _wfindnext64i32(
 ### <a name="parameters"></a>パラメーター
 
 *扱え*<br/>
-**_Findfirst**の前回の呼び出しによって返された検索ハンドル。
+**_Findfirst** の前回の呼び出しによって返された検索ハンドル。
 
 *fileinfo*<br/>
 ファイル情報バッファー。
 
 ## <a name="return-value"></a>戻り値
 
-正常に終了した場合、0 を返します。 それ以外の場合、は-1 を返し、 **errno**をエラーの性質を示す値に設定します。 次の表に、発生する可能性のあるエラー コードを示します。
+正常に終了した場合、0 を返します。 それ以外の場合、は-1 を返し、 **errno** をエラーの性質を示す値に設定します。 次の表に、発生する可能性のあるエラー コードを示します。
 
 |errno の値|条件|
 |-|-|
-| **EINVAL** | 無効なパラメーター: *fileinfo*が**NULL**でした。 または、オペレーティング システムが予期しないエラーを返しました。 |
+| **EINVAL** | 無効なパラメーター: *fileinfo* が **NULL** でした。 または、オペレーティング システムが予期しないエラーを返しました。 |
 | **ENOENT** | これ以上一致するファイルが見つかりません。 |
-| **ENOMEM** | メモリが不足しているか、ファイル名の長さが**MAX_PATH**を超えています。 |
+| **ENOMEM** | メモリが不足しているか、ファイル名の長さが **MAX_PATH** を超えています。 |
 
 無効なパラメーターが渡されると、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、これらの関数は無効パラメーター ハンドラーを呼び出します。
 
 ## <a name="remarks"></a>解説
 
-**_Findfirst**または **_findnext**関数 (または任意の variant) の使用が完了したら、 [_findclose](findclose.md)を呼び出す必要があります。 呼び出すと、アプリケーション内でこれらの関数が使用しているリソースが解放されます。
+**_Findfirst** または **_findnext** 関数 (または任意の variant) の使用が完了したら、 [_findclose](findclose.md)を呼び出す必要があります。 呼び出すと、アプリケーション内でこれらの関数が使用しているリソースが解放されます。
 
-**W**プレフィックスを使用したこれらの関数のバリエーションは、ワイド文字バージョンです。それ以外の場合は、対応する1バイト関数と同じです。
+**W** プレフィックスを使用したこれらの関数のバリエーションは、ワイド文字バージョンです。それ以外の場合は、対応する1バイト関数と同じです。
 
-これらの関数のバリエーションは、32 ビットや 64 ビットの時刻型と、32 ビットや 64 ビットのファイル サイズをサポートします。 最初の数字のサフィックス (**32**または**64**) は、使用された時間の種類のサイズを示します。2番目のサフィックスは、 **i32**または**i64**のいずれかで、ファイルサイズが32ビットまたは64ビットの整数で表されるかどうかを示します。 32 ビットと 64 ビットの時刻型とファイル サイズをサポートするバージョンについては、次の表を参照してください。 64 ビットの時刻型を使用するバリエーションでは、3000 年 12 月 31 日 23:59:59 (UTC) までのファイルの作成日を表現できます。32 ビットの時刻型を使用するバリエーションでは、2038 年 1 月 18 日 23:59:59 (UTC) までの日付のみを表現できます。 これらの関数の日付範囲の下限は、いずれも 1970 年 1 月 1 日の午前 0 時です。
+これらの関数のバリエーションは、32 ビットや 64 ビットの時刻型と、32 ビットや 64 ビットのファイル サイズをサポートします。 最初の数字のサフィックス (**32** または **64**) は、使用された時間の種類のサイズを示します。2番目のサフィックスは、 **i32** または **i64** のいずれかで、ファイルサイズが32ビットまたは64ビットの整数で表されるかどうかを示します。 32 ビットと 64 ビットの時刻型とファイル サイズをサポートするバージョンについては、次の表を参照してください。 64 ビットの時刻型を使用するバリエーションでは、3000 年 12 月 31 日 23:59:59 (UTC) までのファイルの作成日を表現できます。32 ビットの時刻型を使用するバリエーションでは、2038 年 1 月 18 日 23:59:59 (UTC) までの日付のみを表現できます。 これらの関数の日付範囲の下限は、いずれも 1970 年 1 月 1 日の午前 0 時です。
 
-時間のサイズを明示的に指定するバージョンを使用する具体的な理由がない限り、 **_findnext**または **_wfindnext**を使用するか、3 GB を超えるファイルサイズをサポートする必要がある場合は **_findnexti64**または **_wfindnexti64**を使用します。 これらの関数はすべて 64 ビットの時刻型です。 以前のバージョンでは、これらの関数は 32 ビットの時刻型を使用していました。 これがアプリケーションの互換性に影響する変更である場合は、 **_USE_32BIT_TIME_T**を定義して古い動作を取得することができます。 **_USE_32BIT_TIME_T**が定義されている場合、 **_findnext**、 **_finnexti64**および対応する Unicode バージョンでは、32ビットの時刻が使用されます。
+時間のサイズを明示的に指定するバージョンを使用する具体的な理由がない限り、 **_findnext** または **_wfindnext** を使用するか、3 GB を超えるファイルサイズをサポートする必要がある場合は **_findnexti64** または **_wfindnexti64** を使用します。 これらの関数はすべて 64 ビットの時刻型です。 以前のバージョンでは、これらの関数は 32 ビットの時刻型を使用していました。 これがアプリケーションの互換性に影響する変更である場合は、 **_USE_32BIT_TIME_T** を定義して古い動作を取得することができます。 **_USE_32BIT_TIME_T** が定義されている場合、 **_findnext**、 **_finnexti64** および対応する Unicode バージョンでは、32ビットの時刻が使用されます。
 
 既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ### <a name="time-type-and-file-length-type-variations-of-_findnext"></a>_findnext の時刻型とファイル長型のバリエーション
 
-|関数|**_USE_32BIT_TIME_T**定義されていますか?|時刻型|ファイル長型|
+|関数|**_USE_32BIT_TIME_T** 定義されていますか?|時刻型|ファイル長型|
 |---------------|----------------------------------|---------------|----------------------|
 |**_findnext**、 **_wfindnext**|未定義|64 ビット|32 ビット|
 |**_findnext**、 **_wfindnext**|定義済み|32 ビット|32 ビット|
@@ -234,9 +235,9 @@ int _wfindnext64i32(
 |**_tfindnext32i64**|**_findnext32i64**|**_findnext32i64**|**_wfindnext32i64**|
 |**_tfindnext64i32**|**_findnext64i32**|**_findnext64i32**|**_wfindnext64i32**|
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-|関数|必須ヘッダー|
+|機能|必須ヘッダー|
 |--------------|---------------------|
 |**_findnext**|\<io.h>|
 |**_findnext32**|\<io.h>|
@@ -259,5 +260,5 @@ int _wfindnext64i32(
 
 ## <a name="see-also"></a>関連項目
 
-[システム コール](../../c-runtime-library/system-calls.md)<br/>
+[システムコール](../../c-runtime-library/system-calls.md)<br/>
 [ファイル名検索関数](../../c-runtime-library/filename-search-functions.md)<br/>

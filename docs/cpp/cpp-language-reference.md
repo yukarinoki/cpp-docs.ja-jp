@@ -1,20 +1,21 @@
 ---
+description: '詳細情報: C++ 言語リファレンス'
 title: C++ 言語リファレンス
 ms.custom: index-page
 ms.date: 12/10/2019
 helpviewer_keywords:
 - C++, language reference
 ms.assetid: 4be9cacb-c862-4391-894a-3a118c9c93ce
-ms.openlocfilehash: 7b0d1227419aef3174d4f18b11cdc334879383b1
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 67d1adf6105d0f90a7ef29402624148dbcf8ea53
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87221745"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97253924"
 ---
 # <a name="c-language-reference"></a>C++ 言語リファレンス
 
-このリファレンスでは、Microsoft C++ コンパイラに実装されている C++ プログラミング言語について説明します。 組織は、Margaret Ellis および Bjarne Stroustrup による*注釈付き C++ リファレンスマニュアル*と、ANSI/ISO C++ 国際規格 (ISO/IEC fdis 14882) に基づいています。 C++ 言語機能の Microsoft 固有実装が含まれます。
+このリファレンスでは、Microsoft C++ コンパイラに実装されている C++ プログラミング言語について説明します。 組織は、Margaret Ellis および Bjarne Stroustrup による *注釈付き C++ リファレンスマニュアル* と、ANSI/ISO C++ 国際規格 (ISO/IEC fdis 14882) に基づいています。 C++ 言語機能の Microsoft 固有実装が含まれます。
 
 最新の C++ プログラミング手法の概要については、「 [c++ へようこそ](welcome-back-to-cpp-modern-cpp.md)」を参照してください。
 
@@ -32,12 +33,12 @@ C++ プログラムの基本的な構文の要素: トークン、コメント�
 [基本的な概念](../cpp/basic-concepts-cpp.md)<br/>
 スコープ、リンケージ、プログラムの起動と終了、ストレージ クラス、および型。
 
-[組み込み型](fundamental-types-cpp.md)C++ コンパイラとその値の範囲に組み込まれている基本型。
+[組み込み型](fundamental-types-cpp.md) C++ コンパイラとその値の範囲に組み込まれている基本型。
 
 [標準変換](../cpp/standard-conversions.md)<br/>
 組み込み型の間の型変換。 また、ポインター、参照、およびメンバーへのポインター型の間の算術変換および変換。
 
-[宣言と定義](declarations-and-definitions-cpp.md)変数、型、および関数の宣言と定義
+[宣言と定義](declarations-and-definitions-cpp.md) 変数、型、および関数の宣言と定義
 
 [演算子、優先順位、結合性](../cpp/cpp-built-in-operators-precedence-and-associativity.md)<br/>
 C++ 言語の演算子。
@@ -58,7 +59,7 @@ C++ 言語の演算子。
 すべてのメンバーが同じメモリ位置を共有するユーザー定義型。
 
 [派生クラス](../cpp/inheritance-cpp.md)<br/>
-単一および複数の継承、 **`virtual`** 関数、複数の基底クラス、**抽象**クラス、スコープ規則。 また、 **`__super`** キーワードと **`__interface`** キーワードもあります。
+単一および複数の継承、 **`virtual`** 関数、複数の基底クラス、 **抽象** クラス、スコープ規則。 また、 **`__super`** キーワードと **`__interface`** キーワードもあります。
 
 [メンバー アクセス コントロール](../cpp/member-access-control-cpp.md)<br/>
 クラスメンバーへのアクセスの制御: **`public`** 、 **`private`** 、および **`protected`** キーワード。 friend 関数および friend クラス。
@@ -69,8 +70,8 @@ C++ 言語の演算子。
 [例外処理](../cpp/exception-handling-in-visual-cpp.md)<br/>
 例外処理ステートメントの記述に使用される C++ 例外処理、構造化例外処理 (SEH)、キーワード。
 
-[アサーションとユーザー指定のメッセージ](../cpp/assertion-and-user-supplied-messages-cpp.md)<br/>
-`#error`ディレクティブ、 **`static_assert`** キーワード、 `assert` マクロ。
+[アサーションと User-Supplied メッセージ](../cpp/assertion-and-user-supplied-messages-cpp.md)<br/>
+`#error` ディレクティブ、 **`static_assert`** キーワード、 `assert` マクロ。
 
 [テンプレート](../cpp/templates-cpp.md)<br/>
 テンプレートの仕様、関数テンプレート、クラステンプレート、 **`typename`** キーワード、テンプレートとマクロ、テンプレート、およびスマートポインター。
