@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: CListCtrl クラス'
 title: CListCtrl クラス
 ms.date: 06/13/2019
 f1_keywords:
@@ -264,12 +265,12 @@ helpviewer_keywords:
 - CListCtrl [MFC], SubItemHitTest
 - CListCtrl [MFC], Update
 ms.assetid: fe08a1ca-4b05-4ff7-a12a-ee4c765a2197
-ms.openlocfilehash: a1fa9f4bb7ba844dd2f0300cf007a786e8fde902
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: a72cc336a6f962eb5129bec15ccb3ed2fe748e10
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88562481"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97333480"
 ---
 # <a name="clistctrl-class"></a>CListCtrl クラス
 
@@ -482,7 +483,7 @@ class CListCtrl : public CWnd
 
 ## <a name="image-lists"></a>イメージリスト
 
-リストビューの項目のアイコン、ヘッダー項目の画像、およびアプリケーション定義の状態は、いくつかのイメージリストに含ま[CImageList](cimagelist-class.md)れています。これは、リストビューコントロールに対して作成し、割り当てます。 各リストビューコントロールは、最大4種類のイメージリストを持つことができます。
+リストビューの項目のアイコン、ヘッダー項目の画像、およびアプリケーション定義の状態は、いくつかのイメージリストに含ま[](cimagelist-class.md)れています。これは、リストビューコントロールに対して作成し、割り当てます。 各リストビューコントロールは、最大4種類のイメージリストを持つことができます。
 
 - 大きいアイコン
 
@@ -512,7 +513,7 @@ class CListCtrl : public CWnd
 
 `CListCtrl`
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** afxcmn.h
 
@@ -569,7 +570,7 @@ BOOL Arrange(UINT nCode);
 
 ### <a name="remarks"></a>解説
 
-*NCode*パラメーターは、配置スタイルを指定します。
+*NCode* パラメーターは、配置スタイルを指定します。
 
 ### <a name="example"></a>例
 
@@ -660,13 +661,13 @@ virtual BOOL CreateEx(
 ### <a name="parameters"></a>パラメーター
 
 *dwExStyle*<br/>
-作成するコントロールの拡張スタイルを指定します。 拡張 Windows スタイルの一覧については、Windows SDK の[CreateWindowEx](/windows/win32/api/winuser/nf-winuser-createwindowexw)の*dwexstyle*パラメーターを参照してください。
+作成するコントロールの拡張スタイルを指定します。 拡張 Windows スタイルの一覧については、Windows SDK の [CreateWindowEx](/windows/win32/api/winuser/nf-winuser-createwindowexw)の *dwexstyle* パラメーターを参照してください。
 
 *dwStyle*<br/>
 リストコントロールのスタイルを指定します。 リストコントロールスタイルの任意の組み合わせをコントロールに適用します。 これらのスタイルの完全な一覧については、「Windows SDK の [リストビューウィンドウスタイル](/windows/win32/Controls/list-view-window-styles) 」を参照してください。
 
 *rect*<br/>
-*PParentWnd*のクライアント座標で、作成されるウィンドウのサイズと位置を記述する[RECT](/windows/win32/api/windef/ns-windef-rect)構造体への参照。
+*PParentWnd* のクライアント座標で、作成されるウィンドウのサイズと位置を記述する [RECT](/windows/win32/api/windef/ns-windef-rect)構造体への参照。
 
 *pParentWnd*<br/>
 コントロールの親であるウィンドウへのポインター。
@@ -680,13 +681,13 @@ virtual BOOL CreateEx(
 
 ### <a name="remarks"></a>解説
 
-`CreateEx`Windows 拡張スタイルの先頭**WS_EX_** によって指定された拡張 windows スタイルを適用するには、[[作成](#create)] ではなくを使用します。
+`CreateEx`Windows 拡張スタイルの先頭 **WS_EX_** によって指定された拡張 windows スタイルを適用するには、[[作成](#create)] ではなくを使用します。
 
-`CreateEx`*Dwexstyle*によって指定された拡張 Windows スタイルを使用して、コントロールを作成します。 コントロールに固有の拡張スタイルを設定するには、 [SetExtendedStyle](#setextendedstyle)を呼び出します。 たとえば、を使用し `CreateEx` て、このようなスタイルを WS_EX_CONTEXTHELP として設定します。ただし、を使用し `SetExtendedStyle` て、そのようなスタイルを LVS_EX_FULLROWSELECT として設定します。 詳細については、「Windows SDK の [拡張リストビュースタイル](/windows/win32/Controls/extended-list-view-styles) 」で説明されているスタイルを参照してください。
+`CreateEx`*Dwexstyle* によって指定された拡張 Windows スタイルを使用して、コントロールを作成します。 コントロールに固有の拡張スタイルを設定するには、 [SetExtendedStyle](#setextendedstyle)を呼び出します。 たとえば、を使用し `CreateEx` て、このようなスタイルを WS_EX_CONTEXTHELP として設定します。ただし、を使用し `SetExtendedStyle` て、そのようなスタイルを LVS_EX_FULLROWSELECT として設定します。 詳細については、「Windows SDK の [拡張リストビュースタイル](/windows/win32/Controls/extended-list-view-styles) 」で説明されているスタイルを参照してください。
 
 ## <a name="clistctrlcreatedragimage"></a><a name="createdragimage"></a> CListCtrl:: CreateDragImage
 
-*NItem*によって指定された項目のドラッグイメージリストを作成します。
+*NItem* によって指定された項目のドラッグイメージリストを作成します。
 
 ```
 CImageList* CreateDragImage(
@@ -903,7 +904,7 @@ BOOL EnsureVisible(
 
 ### <a name="remarks"></a>解説
 
-必要に応じて、リストビューコントロールがスクロールされます。 *BPartialOK*パラメーターが0以外の場合は、アイテムが部分的に表示されている場合、スクロールは行われません。
+必要に応じて、リストビューコントロールがスクロールされます。 *BPartialOK* パラメーターが0以外の場合は、アイテムが部分的に表示されている場合、スクロールは行われません。
 
 ### <a name="example"></a>例
 
@@ -930,7 +931,7 @@ int FindItem(
 検索対象の項目に関する情報を格納している [LVFINDINFO](/windows/win32/api/commctrl/ns-commctrl-lvfindinfow) 構造体へのポインター。
 
 *nStart*<br/>
-検索を開始する項目のインデックス。最初から開始する場合は-1。 *NStart*が-1 と等しくない場合、 *nStart*の項目は検索から除外されます。
+検索を開始する項目のインデックス。最初から開始する場合は-1。 *NStart* が-1 と等しくない場合、 *nStart* の項目は検索から除外されます。
 
 ### <a name="return-value"></a>戻り値
 
@@ -938,7 +939,7 @@ int FindItem(
 
 ### <a name="remarks"></a>解説
 
-*Pfindinfo*パラメーターは、 `LVFINDINFO` リストビューアイテムの検索に使用される情報を含む構造体を指します。
+*Pfindinfo* パラメーターは、 `LVFINDINFO` リストビューアイテムの検索に使用される情報を含む構造体を指します。
 
 ### <a name="example"></a>例
 
@@ -1163,7 +1164,7 @@ int GetColumnWidth(int nCol) const;
 
 ### <a name="return-value"></a>戻り値
 
-*Ncol*によって指定された列の幅 (ピクセル単位)。
+*Ncol* によって指定された列の幅 (ピクセル単位)。
 
 ### <a name="example"></a>例
 
@@ -1359,7 +1360,7 @@ BOOL GetGroupInfoByIndex(
 からグループの0から始まるインデックス。
 
 *pGroup*\
-入出力*IIndex*パラメーターによって指定されたグループに関する情報を受け取る[LVGROUP](/windows/win32/api/commctrl/ns-commctrl-lvgroup)構造体へのポインター。 呼び出し元は、 [LVGROUP](/windows/win32/api/commctrl/ns-commctrl-lvgroup) 構造体のメンバーを初期化する役割を担います。 メンバーを `cbSize` 構造体のサイズに設定し、メンバーのフラグを設定して `mask` 取得する情報を指定します。
+入出力 *IIndex* パラメーターによって指定されたグループに関する情報を受け取る [LVGROUP](/windows/win32/api/commctrl/ns-commctrl-lvgroup)構造体へのポインター。 呼び出し元は、 [LVGROUP](/windows/win32/api/commctrl/ns-commctrl-lvgroup) 構造体のメンバーを初期化する役割を担います。 メンバーを `cbSize` 構造体のサイズに設定し、メンバーのフラグを設定して `mask` 取得する情報を指定します。
 
 ### <a name="return-value"></a>戻り値
 
@@ -1444,7 +1445,7 @@ BOOL GetGroupRect(
 からグループを指定します。
 
 *lpRect*\
-[入力、出力] [RECT](/windows/win32/api/windef/ns-windef-rect) 構造体へのポインター。 このメソッドが成功した場合、構造体は *Igroupid*によって指定されたグループの四角形の座標を受け取ります。
+[入力、出力] [RECT](/windows/win32/api/windef/ns-windef-rect) 構造体へのポインター。 このメソッドが成功した場合、構造体は *Igroupid* によって指定されたグループの四角形の座標を受け取ります。
 
 *iCoords*\
 から取得する四角形の座標を指定します。 次のいずれかの値を使用します。
@@ -1461,7 +1462,7 @@ BOOL GetGroupRect(
 
 ### <a name="remarks"></a>解説
 
-呼び出し元は、 *Prect*パラメーターによって示される[RECT](/windows/win32/api/windef/ns-windef-rect)構造体を割り当てる役割を担います。
+呼び出し元は、 *Prect* パラメーターによって示される [RECT](/windows/win32/api/windef/ns-windef-rect)構造体を割り当てる役割を担います。
 
 このメソッドは、Windows SDK で説明されている [LVM_GETGROUPRECT](/windows/win32/Controls/lvm-getgrouprect) メッセージを送信します。
 
@@ -2051,7 +2052,7 @@ CString GetItemText(
 項目のテキストを受け取る文字列へのポインター。
 
 *nLen*<br/>
-*LpszText*が指すバッファーの長さ。
+*LpszText* が指すバッファーの長さ。
 
 ### <a name="return-value"></a>戻り値
 
@@ -2061,7 +2062,7 @@ CString GetItemText(
 
 ### <a name="remarks"></a>解説
 
-*Nsubitem 項目*が0の場合、この関数は項目のラベルを取得します。*Nsubitem 項目*が0以外の場合は、サブ項目のテキストを取得します。 サブ項目引数の詳細については、Windows SDK の [LVITEM](/windows/win32/api/commctrl/ns-commctrl-lvitemw) 構造体の説明を参照してください。
+*Nsubitem 項目* が0の場合、この関数は項目のラベルを取得します。*Nsubitem 項目* が0以外の場合は、サブ項目のテキストを取得します。 サブ項目引数の詳細については、Windows SDK の [LVITEM](/windows/win32/api/commctrl/ns-commctrl-lvitemw) 構造体の説明を参照してください。
 
 ## <a name="clistctrlgetnextitem"></a><a name="getnextitem"></a> CListCtrl:: GetNextItem
 
@@ -2121,7 +2122,7 @@ BOOL GetNextItemIndex(
 [入力、出力]検索が開始される項目を記述する [LVITEMINDEX](/windows/win32/api/commctrl/ns-commctrl-lvitemindex) 構造体へのポインター。または、-1 は、 *nFlags* パラメーターのフラグと一致する最初の項目を検索します。 このメソッドが成功した場合、 `LVITEMINDEX` 構造体は検索によって検出された項目を記述します。
 
 *nFlags*\
-から検索の実行方法を指定するフラグのビットごとの組み合わせ (or)。 検索は、ターゲット項目のインデックス、状態、または外観、または *pItemIndex* パラメーターで指定された項目に対するターゲット項目の物理的な位置によって異なります。 詳細については、 [LVM_GETNEXTITEMINDEX](/windows/win32/controls/lvm-getnextitemindex)メッセージの*flags*パラメーターを参照してください。
+から検索の実行方法を指定するフラグのビットごとの組み合わせ (or)。 検索は、ターゲット項目のインデックス、状態、または外観、または *pItemIndex* パラメーターで指定された項目に対するターゲット項目の物理的な位置によって異なります。 詳細については、 [LVM_GETNEXTITEMINDEX](/windows/win32/controls/lvm-getnextitemindex)メッセージの *flags* パラメーターを参照してください。
 
 ### <a name="return-value"></a>戻り値
 
@@ -2135,7 +2136,7 @@ BOOL GetNextItemIndex(
 
 ## <a name="clistctrlgetnextselecteditem"></a><a name="getnextselecteditem"></a> CListCtrl:: GetNextSelectedItem
 
-*Pos*によって識別されるリスト項目のインデックスを取得し、その位置の値に*pos*を設定します。
+*Pos* によって識別されるリスト項目のインデックスを取得し、その位置の値に *pos* を設定します。
 
 ```
 int GetNextSelectedItem(POSITION& pos) const;
@@ -2143,12 +2144,12 @@ int GetNextSelectedItem(POSITION& pos) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*po*<br/>
+*pos*<br/>
 以前のまたはへの呼び出しによって返された位置の値への参照 `GetNextSelectedItem` `GetFirstSelectedItemPosition` 。 値は、この呼び出しによって次の位置に更新されます。
 
 ### <a name="return-value"></a>戻り値
 
-*Pos*によって識別されるリスト項目のインデックス。
+*Pos* によって識別されるリスト項目のインデックス。
 
 ### <a name="remarks"></a>解説
 
@@ -2339,7 +2340,7 @@ int GetStringWidth(LPCTSTR lpsz) const;
 
 ### <a name="return-value"></a>戻り値
 
-*Lpsz*が指す文字列の幅 (ピクセル単位)。
+*Lpsz* が指す文字列の幅 (ピクセル単位)。
 
 ### <a name="remarks"></a>解説
 
@@ -2581,7 +2582,7 @@ void GetWorkAreas(
 ### <a name="parameters"></a>パラメーター
 
 *Nワークエリア*<br/>
-`RECT` *Prect*配列に格納されている構造体の数。
+`RECT` *Prect* 配列に格納されている構造体の数。
 
 *pRect*<br/>
 `RECT`リストビューコントロールの作業領域を受け取る構造体 (または[CRect](../../atl-mfc-shared/reference/crect-class.md)オブジェクト) の配列へのポインター。 これらの構造体の値は、クライアント座標です。
@@ -2640,7 +2641,7 @@ int HitTest(
 
 ### <a name="return-value"></a>戻り値
 
-*Phittestinfo*によって指定された位置にある項目のインデックス (存在する場合)。それ以外の場合は-1。
+*Phittestinfo* によって指定された位置にある項目のインデックス (存在する場合)。それ以外の場合は-1。
 
 ### <a name="remarks"></a>解説
 
@@ -2805,7 +2806,7 @@ Windows SDK で説明されているように、項目の属性を指定する [
 項目のイメージのインデックス。項目がコールバック項目の場合は I_IMAGECALLBACK。 コールバック項目の詳細については、「 [CListCtrl:: getcallback mask](#getcallbackmask)」を参照してください。
 
 *nMask*<br/>
-*Nmask*パラメーターは、パラメーターとして渡される項目属性が有効であることを指定します。 Windows SDK の [「LVITEM Structure](/windows/win32/api/commctrl/ns-commctrl-lvitemw) 」で説明されているマスク値の1つ以上を指定できます。 有効な値は、ビットごとの OR 演算子と組み合わせることができます。
+*Nmask* パラメーターは、パラメーターとして渡される項目属性が有効であることを指定します。 Windows SDK の [「LVITEM Structure](/windows/win32/api/commctrl/ns-commctrl-lvitemw) 」で説明されているマスク値の1つ以上を指定できます。 有効な値は、ビットごとの OR 演算子と組み合わせることができます。
 
 *nState*<br/>
 項目の状態、状態の画像、およびオーバーレイ画像を示します。 詳細については、有効なフラグの一覧について、Windows SDK のトピック「 [LVITEM Structure](/windows/win32/api/commctrl/ns-commctrl-lvitemw) and [List-View Item States](/windows/win32/Controls/list-view-item-states) 」を参照してください。
@@ -2900,7 +2901,7 @@ BOOL IsItemVisible(int index) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*化*\
+*index*\
 から現在のリストビューコントロール内の項目の0から始まるインデックス。
 
 ### <a name="return-value"></a>戻り値
@@ -2946,7 +2947,7 @@ UINT MapIndexToID(UINT index) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*化*\
+*index*\
 から項目の0から始まるインデックス。
 
 ### <a name="return-value"></a>戻り値
@@ -3122,7 +3123,7 @@ BOOL Scroll(CSize size);
 ### <a name="parameters"></a>パラメーター
 
 *size*<br/>
-`CSize`水平方向および垂直方向のスクロールの量をピクセル単位で指定するオブジェクト。 `y` *Size*のメンバーは、リストビューコントロールの線の高さ (ピクセル単位) で除算され、結果の行数によってコントロールがスクロールされます。
+`CSize`水平方向および垂直方向のスクロールの量をピクセル単位で指定するオブジェクト。 `y` *Size* のメンバーは、リストビューコントロールの線の高さ (ピクセル単位) で除算され、結果の行数によってコントロールがスクロールされます。
 
 ### <a name="return-value"></a>戻り値
 
@@ -3138,7 +3139,7 @@ BOOL SetBkColor(COLORREF cr);
 
 ### <a name="parameters"></a>パラメーター
 
-*リターン*<br/>
+*cr*<br/>
 設定する背景色、または背景色なしの CLR_NONE 値。 リストビューコントロールは、背景色を使用しない場合よりも大幅に速く再描画されます。 詳細については、Windows SDK の「 [COLORREF](/windows/win32/gdi/colorref) 」を参照してください。
 
 ### <a name="return-value"></a>戻り値
@@ -3250,7 +3251,7 @@ BOOL SetCheck(
 リストコントロール項目の0から始まるインデックス。
 
 *fCheck*<br/>
-項目の状態イメージを表示するかどうかを指定します。 既定では、 *Fcheck* は TRUE で、状態の画像は表示されます。 *Fcheck*が FALSE の場合は、表示されません。
+項目の状態イメージを表示するかどうかを指定します。 既定では、 *Fcheck* は TRUE で、状態の画像は表示されます。 *Fcheck* が FALSE の場合は、表示されません。
 
 ### <a name="return-value"></a>戻り値
 
@@ -3692,7 +3693,7 @@ Windows SDK で説明されているように、新しい項目の属性を格�
 項目に関連付けられる32ビットアプリケーション固有の値。
 
 *n インデント*<br/>
-インデントの幅 (ピクセル単位)。 *Nindent*がシステム定義の最小幅よりも小さい場合、新しい幅はシステム定義の最小値に設定されます。
+インデントの幅 (ピクセル単位)。 *Nindent* がシステム定義の最小幅よりも小さい場合、新しい幅はシステム定義の最小値に設定されます。
 
 ### <a name="return-value"></a>戻り値
 
@@ -3700,9 +3701,9 @@ Windows SDK で説明されているように、新しい項目の属性を格�
 
 ### <a name="remarks"></a>解説
 
-`iItem` `iSubItem` `LVITEM` 構造体と*NItem*および*nsubitem 項目*のメンバーは、属性が設定される項目とサブ項目を識別します。
+`iItem` `iSubItem` `LVITEM` 構造体と *NItem* および *nsubitem 項目* のメンバーは、属性が設定される項目とサブ項目を識別します。
 
-`mask`構造体のメンバー `LVITEM` と*nmask*パラメーターは、どの項目属性を設定するかを指定します。
+`mask`構造体のメンバー `LVITEM` と *nmask* パラメーターは、どの項目属性を設定するかを指定します。
 
 - LVIF_TEXT `pszText` メンバーまたは *lpszitem* パラメーターは、null で終わる文字列のアドレスです。メンバーは `cchTextMax` 無視されます。
 
@@ -3799,7 +3800,7 @@ BOOL SetItemCountEx(
 
 ## <a name="clistctrlsetitemdata"></a><a name="setitemdata"></a> CListCtrl:: SetItemData
 
-*NItem*によって指定された項目に関連付けられている32ビットアプリケーション固有の値を設定します。
+*NItem* によって指定された項目に関連付けられている32ビットアプリケーション固有の値を設定します。
 
 ```
 BOOL SetItemData(int nItem, DWORD_PTR dwData);
@@ -3859,9 +3860,9 @@ BOOL SetItemIndexState(
 
 ### <a name="remarks"></a>解説
 
-*Dwstate*パラメーターの詳細については、「[リストビュー項目の状態](/windows/win32/Controls/list-view-item-states)」を参照してください。
+*Dwstate* パラメーターの詳細については、「[リストビュー項目の状態](/windows/win32/Controls/list-view-item-states)」を参照してください。
 
-*DwMask*パラメーターの詳細については、 [LVITEM](/windows/win32/api/commctrl/ns-commctrl-lvitemw)構造体の*stateMask*メンバーを参照してください。
+*DwMask* パラメーターの詳細については、 [LVITEM](/windows/win32/api/commctrl/ns-commctrl-lvitemw)構造体の *stateMask* メンバーを参照してください。
 
 このメソッドは、Windows SDK で説明されている [LVM_SETITEMINDEXSTATE](/windows/win32/Controls/lvm-setitemindexstate) メッセージを送信します。
 
@@ -4049,7 +4050,7 @@ BOOL SetTextBkColor(COLORREF cr);
 
 ### <a name="parameters"></a>パラメーター
 
-*リターン*<br/>
+*cr*<br/>
 新しいテキストの背景色を指定する COLORREF。 詳細については、Windows SDK の「 [COLORREF](/windows/win32/gdi/colorref) 」を参照してください。
 
 ### <a name="return-value"></a>戻り値
@@ -4075,7 +4076,7 @@ BOOL SetTextColor(COLORREF cr);
 
 ### <a name="parameters"></a>パラメーター
 
-*リターン*<br/>
+*cr*<br/>
 新しいテキストの色を指定する COLORREF。 詳細については、Windows SDK の「 [COLORREF](/windows/win32/gdi/colorref) 」を参照してください。
 
 ### <a name="return-value"></a>戻り値
@@ -4191,7 +4192,7 @@ void SetWorkAreas(
 ### <a name="parameters"></a>パラメーター
 
 *Nワークエリア*<br/>
-`RECT` *LpRect*が指す配列内の構造体 (または[CRect](../../atl-mfc-shared/reference/crect-class.md)オブジェクト) の数。
+`RECT` *LpRect* が指す配列内の構造体 (または [CRect](../../atl-mfc-shared/reference/crect-class.md)オブジェクト) の数。
 
 *lpRect*<br/>
 `RECT` `CRect` リストビューコントロールの新しい作業領域を指定する構造体 (またはオブジェクト) の配列のアドレス。 これらの領域は、クライアント座標で指定する必要があります。 このパラメーターが NULL の場合、作業領域はコントロールのクライアント領域に設定されます。
@@ -4261,7 +4262,7 @@ BOOL SortItems(
 
 このメソッドは、新しいシーケンスを反映するように各項目のインデックスを変更します。
 
-比較関数の *Pfncompare*には、次の形式があります。
+比較関数の *Pfncompare* には、次の形式があります。
 
 ```
 int CALLBACK CompareFunc(LPARAM lParam1,
@@ -4271,7 +4272,7 @@ int CALLBACK CompareFunc(LPARAM lParam1,
 
 比較関数は、最初の項目が2番目の項目の前にある場合は負の値、最初の項目が2番目の項目の場合は正の値、2つの項目が等しい場合は0を返す必要があります。
 
-*LParam1*パラメーターは、比較される最初の項目に関連付けられている32ビット値です。 *lParam2*パラメーターは、2番目の項目に関連付けられている値です。 これらは、リストに挿入されたときに、項目の[LVITEM](/windows/win32/api/commctrl/ns-commctrl-lvitemw)構造体の*lParam*メンバーに指定された値です。 *Lparamsort*パラメーターは、 *dwdata*値と同じです。
+*LParam1* パラメーターは、比較される最初の項目に関連付けられている32ビット値です。 *lParam2* パラメーターは、2番目の項目に関連付けられている値です。 これらは、リストに挿入されたときに、項目の [LVITEM](/windows/win32/api/commctrl/ns-commctrl-lvitemw)構造体の *lParam* メンバーに指定された値です。 *Lparamsort* パラメーターは、 *dwdata* 値と同じです。
 
 このメソッドは、Windows SDK で説明されている [LVM_SORTITEMS](/windows/win32/Controls/lvm-sortitems) メッセージを送信します。
 
@@ -4323,7 +4324,7 @@ BOOL SortItemsEx(
 
 このメソッドは、新しいシーケンスを反映するように各項目のインデックスを変更します。
 
-比較関数の *Pfncompare*には、次の形式があります。
+比較関数の *Pfncompare* には、次の形式があります。
 
 ```
 int CALLBACK CompareFunc(LPARAM lParam1,
@@ -4331,7 +4332,7 @@ int CALLBACK CompareFunc(LPARAM lParam1,
     LPARAM lParamSort);
 ```
 
-このメッセージは、比較関数に渡される情報の種類を除き、 [LVM_SORTITEMS](/windows/win32/Controls/lvm-sortitems)に似ています。 [LVM_SORTITEMS](/windows/win32/Controls/lvm-sortitems)では、 *lParam1*と*lParam2*は比較する項目の値です。 [LVM_SORTITEMSEX](/windows/win32/Controls/lvm-sortitemsex)では、 *lParam1*は比較する最初の項目の現在のインデックスであり、 *lParam2*は2番目の項目の現在のインデックスです。 [LVM_GETITEMTEXT](/windows/win32/Controls/lvm-getitemtext)メッセージを送信して、項目に関する詳細情報を取得できます。
+このメッセージは、比較関数に渡される情報の種類を除き、 [LVM_SORTITEMS](/windows/win32/Controls/lvm-sortitems)に似ています。 [LVM_SORTITEMS](/windows/win32/Controls/lvm-sortitems)では、 *lParam1* と *lParam2* は比較する項目の値です。 [LVM_SORTITEMSEX](/windows/win32/Controls/lvm-sortitemsex)では、 *lParam1* は比較する最初の項目の現在のインデックスであり、 *lParam2* は2番目の項目の現在のインデックスです。 [LVM_GETITEMTEXT](/windows/win32/Controls/lvm-getitemtext)メッセージを送信して、項目に関する詳細情報を取得できます。
 
 比較関数は、最初の項目が2番目の項目の前にある場合は負の値、最初の項目が2番目の項目の場合は正の値、2つの項目が等しい場合は0を返す必要があります。
 
@@ -4427,7 +4428,7 @@ void CListCtrlDlg::OnDblClk(NMHDR* pNMHDR, LRESULT* pResult)
 
 ## <a name="clistctrlupdate"></a><a name="update"></a> CListCtrl:: Update
 
-*NItem*によって指定された項目をリストビューコントロールに強制的に再描画します。
+*NItem* によって指定された項目をリストビューコントロールに強制的に再描画します。
 
 ```
 BOOL Update(int nItem);

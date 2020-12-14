@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「コンパイラエラー C3392」を参照してください。
 title: コンパイラ エラー C3392
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,22 +7,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3392
 ms.assetid: e4757596-e2aa-4314-b01e-5c4bfd2110e9
-ms.openlocfilehash: 31975d39d67697573af7f9142326660acc4f7226
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: c64b49bee05079fd2d1b468d807af5b1fd89ba26
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80201046"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97316337"
 ---
 # <a name="compiler-error-c3392"></a>コンパイラ エラー C3392
 
 'type_arg' : ジェネリック パラメーター 'param' (ジェネリック 'generic_type') の型引数が無効です。パブリックのパラメーターのないコンストラクターを含んでいなければなりません
 
-ジェネリック型のインスタンス化が正しく行われませんでした。 型定義をご確認ください。 詳細については、「[ジェネリック](../../extensions/generics-cpp-component-extensions.md)」を参照してください。
+ジェネリック型のインスタンス化が正しく行われませんでした。 型定義を確認してください。 詳細については、「  [ジェネリック](../../extensions/generics-cpp-component-extensions.md)」を参照してください。
 
 ## <a name="example"></a>例
 
-次の例でC#は、を使用して、/cli でC++ジェネリック型を作成するときにサポートされない特定の制約を持つジェネリック型を含むコンポーネントを作成します。 詳細については、「[型パラメーターの制約](/dotnet/csharp/programming-guide/generics/constraints-on-type-parameters)」を参照してください。
+次のサンプルでは、C# を使用して、C++/CLI でジェネリック型を作成するときにサポートされない特定の制約を持つジェネリック型を含むコンポーネントを作成します。 詳細については、「[型パラメーターの制約](/dotnet/csharp/programming-guide/generics/constraints-on-type-parameters)」を参照してください。
 
 ```csharp
 // C3392.cs
@@ -33,7 +34,7 @@ where V : struct
 where N : new() {}
 ```
 
-C3392 コンポーネントが使用可能になると、次の例では C3392 が生成されます。
+C3392.dll コンポーネントが使用可能な場合、次の例では C3392 が生成されます。
 
 ```cpp
 // C3392_b.cpp

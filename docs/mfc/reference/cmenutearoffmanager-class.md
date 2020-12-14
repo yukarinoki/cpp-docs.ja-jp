@@ -1,5 +1,6 @@
 ---
-title: クラス
+description: '詳細情報: CMenuTearOffManager クラス'
+title: CMenuTearOffManager クラス
 ms.date: 10/18/2018
 f1_keywords:
 - CMenuTearOffManager
@@ -24,18 +25,18 @@ helpviewer_keywords:
 - CMenuTearOffManager [MFC], SetInUse
 - CMenuTearOffManager [MFC], SetupTearOffMenus
 ms.assetid: ab7ca272-ce42-4678-95f7-6ad75038f5a0
-ms.openlocfilehash: 6aef644cb7364184df91a6e8caee18cac65af4cc
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: b80f2e935f8d1dd47bf19a11522e4556b35490b4
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81751811"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97336639"
 ---
-# <a name="cmenutearoffmanager-class"></a>クラス
+# <a name="cmenutearoffmanager-class"></a>CMenuTearOffManager クラス
 
 ティアオフ メニューを管理します。 ティアオフ メニューはメニュー バー上のメニューの一種です。 ユーザーは、ティアオフ メニューをメニュー バーから外して、フローティング メニューにすることができます。
 
-   詳細については、Visual Studio のインストールの**\\VC\\atlmfc\\src mfc**フォルダーにあるソース コードを参照してください。
+   詳細については、Visual Studio のインストールの **VC \\ atlmfc \\ src \\ mfc** フォルダーにあるソースコードを参照してください。
 
 ## <a name="syntax"></a>構文
 
@@ -49,28 +50,28 @@ class CMenuTearOffManager : public CObject
 
 |名前|説明|
 |----------|-----------------|
-|[メニューティアオフマネージャー::CMenuティアオフマネージャー](#cmenutearoffmanager)|`CMenuTearOffManager` オブジェクトを構築します。|
+|[CMenuTearOffManager::CMenuTearOffManager](#cmenutearoffmanager)|`CMenuTearOffManager` オブジェクトを構築します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
 |名前|説明|
 |----------|-----------------|
-|[メニューティアオフマネージャー::ビルド](#build)||
-|[メニューティアオフマネージャー::ゲットレグパス](#getregpath)||
-|[メニューティアオフマネージャー::初期化](#initialize)|オブジェクトを`CMenuTearOffManager`初期化します。|
-|[メニューティアオフマネージャー::イスダイナミックイド](#isdynamicid)||
-|[メニューティアオフマネージャー::P](#parse)||
-|[メニューティアオフマネージャー::リセット](#reset)||
-|[メニューティアオフマネージャー::セットインユース](#setinuse)||
-|[メニューティアオフマネージャー::セットアップティアオフメニュー](#setuptearoffmenus)||
+|[CMenuTearOffManager:: Build](#build)||
+|[CMenuTearOffManager:: GetRegPath](#getregpath)||
+|[CMenuTearOffManager:: Initialize](#initialize)|オブジェクトを初期化 `CMenuTearOffManager` します。|
+|[CMenuTearOffManager:: IsDynamicID](#isdynamicid)||
+|[CMenuTearOffManager::P arse](#parse)||
+|[CMenuTearOffManager:: Reset](#reset)||
+|[CMenuTearOffManager:: SetInUse](#setinuse)||
+|[CMenuTearOffManager::SetupTearOffMenus](#setuptearoffmenus)||
 
 ## <a name="remarks"></a>解説
 
-アプリケーションでティアオフ メニューを使用するには、オブジェクトが必要です`CMenuTearOffManager`。 ほとんどの場合、`CMenuTearOffManager`オブジェクトを直接作成または初期化することはありません。 これは[、CWinAppEx::EnableTearOffMenus](../../mfc/reference/cwinappex-class.md#enabletearoffmenus)関数を呼び出すときに処理されます。
+アプリケーションでティアオフメニューを使用するには、オブジェクトが必要 `CMenuTearOffManager` です。 ほとんどの場合、オブジェクトを直接作成したり初期化したりすることはありません `CMenuTearOffManager` 。 [CWinAppEx:: EnableTearOffMenus](../../mfc/reference/cwinappex-class.md#enabletearoffmenus)関数を呼び出すと、この処理が行われます。
 
 ## <a name="example"></a>例
 
-メソッドを呼び出してオブジェクトを構築および初期化`CMenuTearOffManager`する方法を次`CWinAppEX::EnableTearOffMenus`の例に示します。 このコード スニペットは、 [Word パッド サンプル](../../overview/visual-cpp-samples.md)の一部です。
+次の例は、メソッドを呼び出してオブジェクトを構築および初期化する方法を示して `CMenuTearOffManager` `CWinAppEX::EnableTearOffMenus` います。 このコード スニペットは、 [Word パッド サンプル](../../overview/visual-cpp-samples.md)の一部です。
 
 [!code-cpp[NVC_MFC_WordPad#12](../../mfc/reference/codesnippet/cpp/cmenutearoffmanager-class_1.cpp)]
 
@@ -80,11 +81,11 @@ class CMenuTearOffManager : public CObject
 
 `CMenuTearOffManager`
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-**ヘッダー:** afxmenuティアオフマネージャー.h
+**ヘッダー:** afxmenutearoffmanager
 
-## <a name="cmenutearoffmanagerbuild"></a><a name="build"></a>メニューティアオフマネージャー::ビルド
+## <a name="cmenutearoffmanagerbuild"></a><a name="build"></a> CMenuTearOffManager:: Build
 
 ```cpp
 void Build(
@@ -94,15 +95,15 @@ void Build(
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*uiティアオフバーID*<br/>
+から *Uitの Offbarid*<br/>
 
-[in]*str テキスト*<br/>
+から *strText*<br/>
 
 ### <a name="remarks"></a>解説
 
-## <a name="cmenutearoffmanagercmenutearoffmanager"></a><a name="cmenutearoffmanager"></a>メニューティアオフマネージャー::CMenuティアオフマネージャー
+## <a name="cmenutearoffmanagercmenutearoffmanager"></a><a name="cmenutearoffmanager"></a> CMenuTearOffManager::CMenuTearOffManager
 
-[オブジェクトを](../../mfc/reference/cmenutearoffmanager-class.md)構築します。
+[CMenuTearOffManager](../../mfc/reference/cmenutearoffmanager-class.md)オブジェクトを構築します。
 
 ```
 CMenuTearOffManager();
@@ -110,9 +111,9 @@ CMenuTearOffManager();
 
 ### <a name="remarks"></a>解説
 
-ほとんどの場合、手動で`CMenuTearOffManager`作成しないでください。 アプリケーションのフレームワークは`CMenuTearOffManager`[、CWinAppEx::EnableTearOffMenus](../../mfc/reference/cwinappex-class.md#enabletearoffmenus)を呼び出すとオブジェクトを作成します。
+ほとんどの場合、手動でを作成することはできません `CMenuTearOffManager` 。 `CMenuTearOffManager` [CWinAppEx:: EnableTearOffMenus](../../mfc/reference/cwinappex-class.md#enabletearoffmenus)を呼び出すと、アプリケーションのフレームワークによってオブジェクトが作成されます。
 
-## <a name="cmenutearoffmanagergetregpath"></a><a name="getregpath"></a>メニューティアオフマネージャー::ゲットレグパス
+## <a name="cmenutearoffmanagergetregpath"></a><a name="getregpath"></a> CMenuTearOffManager:: GetRegPath
 
 ```
 LPCTSTR GetRegPath() const;
@@ -122,9 +123,9 @@ LPCTSTR GetRegPath() const;
 
 ### <a name="remarks"></a>解説
 
-## <a name="cmenutearoffmanagerinitialize"></a><a name="initialize"></a>メニューティアオフマネージャー::初期化
+## <a name="cmenutearoffmanagerinitialize"></a><a name="initialize"></a> CMenuTearOffManager:: Initialize
 
-[オブジェクトを](../../mfc/reference/cmenutearoffmanager-class.md)初期化します。
+[CMenuTearOffManager](../../mfc/reference/cmenutearoffmanager-class.md)オブジェクトを初期化します。
 
 ```
 BOOL Initialize(
@@ -135,14 +136,14 @@ BOOL Initialize(
 
 ### <a name="parameters"></a>パラメーター
 
-*をクリックします。*<br/>
-[in]レジストリ エントリのパスを含む文字列。 アプリケーションは、このレジストリ エントリにティアオフ バーの設定を格納します。
+*lpszRegEntry*<br/>
+からレジストリエントリのパスを含む文字列。 アプリケーションでは、このレジストリエントリにティアオフバーの設定を格納します。
 
-*最初にメニューを表示します。*<br/>
-[in]ティアオフ メニューの最初のメニュー ID。
+*最初のメニュー*<br/>
+からティアオフメニューの最初のメニュー ID。
 
-*uiティアオフメニューラスト*<br/>
-[in]ティアオフ メニューの最後のメニュー ID。
+*Uit氏 Offmenulast*<br/>
+からティアオフメニューの最後のメニュー ID。
 
 ### <a name="return-value"></a>戻り値
 
@@ -150,9 +151,9 @@ BOOL Initialize(
 
 ### <a name="remarks"></a>解説
 
-メニュー ID の範囲は *、最初から uiTearOffMenuLast*まで連続間隔でなければなりません。 *uiTearOffMenuLast* 間隔は、アプリケーションで同時に表示できるティアオフ メニューの数を定義します。
+*最初* から *Uit氏 Offmenulast* のメニュー id の範囲は、連続した間隔である必要があります。 この間隔は、アプリケーションで同時に表示できるティアオフメニューの数を定義します。
 
-## <a name="cmenutearoffmanagerisdynamicid"></a><a name="isdynamicid"></a>メニューティアオフマネージャー::イスダイナミックイド
+## <a name="cmenutearoffmanagerisdynamicid"></a><a name="isdynamicid"></a> CMenuTearOffManager:: IsDynamicID
 
 ```
 BOOL IsDynamicID(UINT uiID) const;
@@ -160,13 +161,13 @@ BOOL IsDynamicID(UINT uiID) const;
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*UIID*<br/>
+から *uiID*<br/>
 
 ### <a name="return-value"></a>戻り値
 
 ### <a name="remarks"></a>解説
 
-## <a name="cmenutearoffmanagerparse"></a><a name="parse"></a>メニューティアオフマネージャー::P
+## <a name="cmenutearoffmanagerparse"></a><a name="parse"></a> CMenuTearOffManager::P arse
 
 ```
 UINT Parse(CString& str);
@@ -174,13 +175,13 @@ UINT Parse(CString& str);
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*str*<br/>
+から *str*<br/>
 
 ### <a name="return-value"></a>戻り値
 
 ### <a name="remarks"></a>解説
 
-## <a name="cmenutearoffmanagerreset"></a><a name="reset"></a>メニューティアオフマネージャー::リセット
+## <a name="cmenutearoffmanagerreset"></a><a name="reset"></a> CMenuTearOffManager:: Reset
 
 ```cpp
 void Reset(HMENU hmenu);
@@ -188,11 +189,11 @@ void Reset(HMENU hmenu);
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*hmenu*<br/>
+から *hmenu*<br/>
 
 ### <a name="remarks"></a>解説
 
-## <a name="cmenutearoffmanagersetinuse"></a><a name="setinuse"></a>メニューティアオフマネージャー::セットインユース
+## <a name="cmenutearoffmanagersetinuse"></a><a name="setinuse"></a> CMenuTearOffManager:: SetInUse
 
 ```cpp
 void SetInUse(
@@ -202,13 +203,13 @@ void SetInUse(
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*uiCmdId*<br/>
+から *uiCmdId*<br/>
 
-[in]*bUse*<br/>
+から *Buse*<br/>
 
 ### <a name="remarks"></a>解説
 
-## <a name="cmenutearoffmanagersetuptearoffmenus"></a><a name="setuptearoffmenus"></a>メニューティアオフマネージャー::セットアップティアオフメニュー
+## <a name="cmenutearoffmanagersetuptearoffmenus"></a><a name="setuptearoffmenus"></a> CMenuTearOffManager::SetupTearOffMenus
 
 ```cpp
 void SetupTearOffMenus(HMENU hMenu);
@@ -216,12 +217,12 @@ void SetupTearOffMenus(HMENU hMenu);
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*hメニュー*<br/>
+から *hMenu*<br/>
 
 ### <a name="remarks"></a>解説
 
 ## <a name="see-also"></a>関連項目
 
-[階層グラフ](../../mfc/hierarchy-chart.md)<br/>
-[クラス](../../mfc/reference/mfc-classes.md)<br/>
+[階層図](../../mfc/hierarchy-chart.md)<br/>
+[Classes](../../mfc/reference/mfc-classes.md)<br/>
 [CWinAppEx クラス](../../mfc/reference/cwinappex-class.md)

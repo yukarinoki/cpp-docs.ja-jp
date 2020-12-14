@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「コンパイラエラー C3399」を参照してください。
 title: コンパイラ エラー C3399
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3399
 ms.assetid: 306ad199-d150-4f6c-bcf1-24a7948b93be
-ms.openlocfilehash: d20b5e816930969278536fe3771df4ad38c3c86b
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: a950857e88c5cfcad50ac2efb064af4d7a5c0cf1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74737518"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97316428"
 ---
 # <a name="compiler-error-c3399"></a>コンパイラ エラー C3399
 
@@ -19,9 +20,9 @@ ms.locfileid: "74737518"
 
 `gcnew()` 制約を指定する場合は、制約型にパラメーターなしのコンストラクターがあることを指定します。 したがって、この型のインスタンスを作成してパラメーターを渡そうとすると、エラーになります。
 
-詳細については、「[ジェネリック型パラメーターの制約 (C++/cli)](../../extensions/constraints-on-generic-type-parameters-cpp-cli.md) 」を参照してください。
+詳細については、「 [ジェネリック型パラメーターの制約 (C++/cli)](../../extensions/constraints-on-generic-type-parameters-cpp-cli.md) 」を参照してください。
 
-## <a name="example"></a>使用例
+## <a name="example"></a>例
 
 次の例では C3399 が生成されます。
 

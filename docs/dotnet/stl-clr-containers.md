@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「STL/CLR コンテナー」を参照してください。
 title: STL/CLR コンテナー
 ms.date: 09/18/2018
 ms.topic: reference
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - STL/CLR, containers
 - containers, STL/CLR
 ms.assetid: 34ca8031-2041-46b9-aed9-29082d1972ea
-ms.openlocfilehash: 04ba56bf4f134ac5e9b906f7f84563c00ffe1b96
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 945533f616abe37763d9963d46d87f02a3c077fa
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87214868"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97335339"
 ---
 # <a name="stlclr-containers"></a>STL/CLR コンテナー
 
@@ -37,11 +38,11 @@ STL/CLR コンテナーは、次の2種類の要素のいずれかを保持で�
 
 ### <a name="handles-to-reference-types"></a>型を参照するハンドル
 
-参照型へのハンドルを、STL/CLR コンテナーに挿入できます。 CLR を対象とする C++ のハンドルは、ネイティブ C++ のポインターに似ています。 詳細については、「[オブジェクト演算子へのハンドル (^)](../extensions/handle-to-object-operator-hat-cpp-component-extensions.md)」を参照してください。
+参照型へのハンドルを、STL/CLR コンテナーに挿入できます。 CLR を対象とする C++ のハンドルは、ネイティブ C++ のポインターに似ています。 詳細については、「 [オブジェクト演算子へのハンドル (^)](../extensions/handle-to-object-operator-hat-cpp-component-extensions.md)」を参照してください。
 
 #### <a name="example"></a>例
 
-次の例では、Employee オブジェクトへのハンドルを[cliext:: set](../dotnet/set-stl-clr.md)に挿入する方法を示します。
+次の例では、Employee オブジェクトへのハンドルを [cliext:: set](../dotnet/set-stl-clr.md)に挿入する方法を示します。
 
 ```cpp
 // cliext_container_valid_reference_handle.cpp
@@ -227,7 +228,7 @@ int main()
 
 ### <a name="unboxed-value-types"></a>ボックス化解除した値型
 
-また、ボックス化が解除された値型を STL/CLR コンテナーに挿入することもできます。 ボックス化が解除された値型は、参照型に*ボックス*化されていない値型です。
+また、ボックス化が解除された値型を STL/CLR コンテナーに挿入することもできます。 ボックス化が解除された値型は、参照型に *ボックス* 化されていない値型です。
 
 値型の要素には、などの標準値型のいずれかを指定することも、 **`int`** ユーザー定義の値型 (など) を指定することもでき **`value class`** ます。 詳細については、「[クラスと構造体](../extensions/classes-and-structs-cpp-component-extensions.md)」を参照してください。
 
@@ -296,7 +297,7 @@ int main()
 }
 ```
 
-値型へのハンドルをコンテナーに挿入しようとすると、[コンパイラエラー C3225](../error-messages/compiler-errors-2/compiler-error-c3225.md)が生成されます。
+値型へのハンドルをコンテナーに挿入しようとすると、 [コンパイラエラー C3225](../error-messages/compiler-errors-2/compiler-error-c3225.md) が生成されます。
 
 ### <a name="performance-and-memory-implications"></a>パフォーマンスとメモリの影響
 

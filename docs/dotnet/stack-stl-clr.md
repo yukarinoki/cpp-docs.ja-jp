@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: スタック (STL/CLR)'
 title: stack (STL/CLR)
 ms.date: 11/04/2016
 ms.topic: reference
@@ -53,12 +54,12 @@ helpviewer_keywords:
 - top_item member [STL/CLR]
 - value_type member [STL/CLR]
 ms.assetid: 6ee96b9f-8a33-4cf7-b7e0-6535c24bdefb
-ms.openlocfilehash: 316899aae024fbc8d9e568d6b5684ec4cfb11558
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 2903af3bce3f4eba09324202dbb071b11e440573
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91499655"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97335386"
 ---
 # <a name="stack-stlclr"></a>stack (STL/CLR)
 
@@ -86,7 +87,7 @@ template<typename Value,
 *コンテナー*<br/>
 基になるコンテナーの型。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:**\<cliext/stack>
 
@@ -138,7 +139,7 @@ template<typename Value,
 |<xref:System.ICloneable>|オブジェクトを複製します。|
 |IStack\<Value, Container>|汎用コンテナーアダプターを維持します。|
 
-## <a name="remarks"></a>注釈
+## <a name="remarks"></a>解説
 
 オブジェクトは、コンテナー型の基になるコンテナー ( *container*) によって制御されるシーケンスのストレージを割り当て、解放します。このコンテナーは、 *値* 要素を格納し、必要に応じて拡大します。 オブジェクトは、最後の要素だけをプッシュしてポップするアクセスを制限し、最後の先入れ先出しキュー (LIFO キューまたはスタックとも呼ばれます) を実装します。
 
@@ -159,7 +160,7 @@ void assign(stack<Value, Container>% right);
 *そうです*<br/>
 挿入するコンテナーアダプター。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 このメンバー関数は、 `right.get_container()` 基になるコンテナーにを割り当てます。 スタックの内容全体を変更するには、これを使用します。
 
@@ -574,9 +575,9 @@ stack <Value, Container>% operator=(stack <Value, Container>% right);
 *そうです*<br/>
 コピーするコンテナーアダプター。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
-メンバー演算子は、オブジェクトに *right* をコピーし、を返し **`*this`** ます。 このメソッドを使用して、被制御シーケンスを *右側*の被制御シーケンスのコピーで置き換えます。
+メンバー演算子は、オブジェクトに *right* をコピーし、を返し **`*this`** ます。 このメソッドを使用して、被制御シーケンスを *右側* の被制御シーケンスのコピーで置き換えます。
 
 ### <a name="example"></a>例
 
@@ -875,7 +876,7 @@ explicit stack(container_type% wrapped);
 *回り*<br/>
 使用するためにラップされたコンテナー。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 コンストラクター:
 
@@ -887,7 +888,7 @@ explicit stack(container_type% wrapped);
 
 `stack(stack<Value, Container>% right);`
 
-のコピーである、ラップされたコンテナーを作成し `right.get_container()` ます。 このメソッドを使用して、スタックオブジェクト *権限*によって制御されるシーケンスのコピーである最初の被制御シーケンスを指定します。
+のコピーである、ラップされたコンテナーを作成し `right.get_container()` ます。 このメソッドを使用して、スタックオブジェクト *権限* によって制御されるシーケンスのコピーである最初の被制御シーケンスを指定します。
 
 コンストラクター:
 
@@ -1113,7 +1114,7 @@ typedef Value value_type;
 
 ### <a name="remarks"></a>解説
 
-この型は、テンプレートパラメーター *値*のシノニムです。
+この型は、テンプレートパラメーター *値* のシノニムです。
 
 ### <a name="example"></a>例
 
@@ -1167,7 +1168,7 @@ template<typename Value,
 *そうです*<br/>
 比較する右のコンテナー。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 演算子関数はを返し `!(left == right)` ます。 このメソッドを使用して、2つのスタックが要素別に比較されるときに、 *left* が *right* と同じ順序で並んでいないかどうかをテストします。
 
@@ -1238,9 +1239,9 @@ template<typename Value,
 *そうです*<br/>
 比較する右のコンテナー。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
-演算子関数は、が true である場合にも true を返し `i` `!(right[i] < left[i])` `left[i] < right[i]` ます。 それ以外の場合は、 `left->` [stack:: size (STL/CLR)](#size)を返し `() <` `right->size()` ます。このメソッドを使用して、2つのスタックが要素別に比較されるときに、 *left*が*right*の前に並べられているかどうかをテストします。
+演算子関数は、が true である場合にも true を返し `i` `!(right[i] < left[i])` `left[i] < right[i]` ます。 それ以外の場合は、 `left->` [stack:: size (STL/CLR)](#size)を返し `() <` `right->size()` ます。このメソッドを使用して、2つのスタックが要素別に比較されるときに、 *left* が *right* の前に並べられているかどうかをテストします。
 
 ### <a name="example"></a>例
 
@@ -1309,9 +1310,9 @@ template<typename Value,
 *そうです*<br/>
 比較する右のコンテナー。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
-演算子関数はを返し `!(right < left)` ます。 このメソッドを使用して、2つのスタックが要素別に比較されたときに、 *right*の後に*left*が順序付けされていないかどうかをテストします。
+演算子関数はを返し `!(right < left)` ます。 このメソッドを使用して、2つのスタックが要素別に比較されたときに、 *right* の後に *left* が順序付けされていないかどうかをテストします。
 
 ### <a name="example"></a>例
 
@@ -1380,7 +1381,7 @@ template<typename Value,
 *そうです*<br/>
 比較する右のコンテナー。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 演算子関数は、 *左* と *右* で制御されるシーケンスの長さが同じで、各位置についてがである場合にのみ true を返し `i` `left[i] ==` `right[i]` ます。 このメソッドを使用して、2つのスタックが要素によって比較されるときに、 *left* が *right* と同じ順序で並んでいるかどうかをテストします。
 
@@ -1451,9 +1452,9 @@ template<typename Value,
 *そうです*<br/>
 比較する右のコンテナー。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
-演算子関数はを返し `right` `<` `left` ます。 このメソッドを使用して、2つのスタックが要素によって比較されたときに、 *right* *の後にあるかどう*かをテストします。
+演算子関数はを返し `right` `<` `left` ます。 このメソッドを使用して、2つのスタックが要素によって比較されたときに、 *right* *の後にあるかどう* かをテストします。
 
 ### <a name="example"></a>例
 
@@ -1522,7 +1523,7 @@ template<typename Value,
 *そうです*<br/>
 比較する右のコンテナー。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 演算子関数はを返し `!(left < right)` ます。 このメソッドを使用して、2つのスタックが要素別に比較されるときに、 *left* が *right* の前に順序付けされていないかどうかをテストします。
 

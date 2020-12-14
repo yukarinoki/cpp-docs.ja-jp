@@ -1,4 +1,5 @@
 ---
+description: '詳細については、「方法: System:: String の文字にアクセスする」を参照してください。'
 title: '方法: System::String の文字にアクセスする'
 ms.custom: get-started-article
 ms.date: 11/04/2016
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - examples [C++], strings
 - strings [C++], accessing characters
 ms.assetid: cfc89756-aef3-4988-907e-fb236dcb7087
-ms.openlocfilehash: cb62eb0fecbee202e4d01635a60da565241822ee
-ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
+ms.openlocfilehash: 1959293cc7a984cdce2e1258b2dc6fab0d832267
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90686796"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97335432"
 ---
 # <a name="how-to-access-characters-in-a-systemstring"></a>方法: System::String の文字にアクセスする
 

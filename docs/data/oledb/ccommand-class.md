@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: CCommand クラス'
 title: CCommand クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -49,12 +50,12 @@ helpviewer_keywords:
 - SetParameterInfo method
 - Unprepare method
 ms.assetid: 0760bfc5-b9ee-4aee-8e54-31bd78714d3a
-ms.openlocfilehash: 109998dd742828b3c41672fa2afa8716e4687f6a
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 150d543b666896964794503d185637680e6da8fb
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91501014"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97335510"
 ---
 # <a name="ccommand-class"></a>CCommand クラス
 
@@ -83,7 +84,7 @@ class CCommand :
 *TMultiple*<br/>
 複数の結果を返すことができる OLE DB コマンドを使用するには、 [C乗数 Eresults](../../data/oledb/cmultipleresults-class.md)を指定します。 それ以外の場合は、 [Cno乗数 Eresults](../../data/oledb/cnomultipleresults-class.md)を使用します。 詳細については、「 [IMultipleResults](/previous-versions/windows/desktop/ms721289(v=vs.85))」を参照してください。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** atldbcli.h
 
@@ -109,7 +110,7 @@ class CCommand :
 |[SetParameterInfo](#setparameterinfo)|各コマンドパラメーターのネイティブな型を指定します。|
 |[Unprepare](#unprepare)|現在のコマンド実行プランを破棄します。|
 
-## <a name="remarks"></a>注釈
+## <a name="remarks"></a>解説
 
 このクラスは、パラメーターベースの操作を実行したり、コマンドを実行したりする必要がある場合に使用します。 単純な行セットを開く必要があるだけの場合は、代わりに [CTable](../../data/oledb/ctable-class.md) を使用します。
 
@@ -158,17 +159,17 @@ HRESULT GetNextResult(DBROWCOUNT* pulRowsAffected,
 [入力/出力]コマンドの影響を受ける行の数を返すメモリへのポインターが返されます。
 
 *bBind*<br/>
-から実行後にコマンドを自動的にバインドするかどうかを指定します。 既定値はです **`true`** 。これにより、コマンドが自動的にバインドされます。 *Bbind*をに設定すると、コマンドが自動的にバインドされ **`false`** ず、手動でバインドできるようになります。 (手動バインドは OLAP ユーザーにとって特に重要です)。
+から実行後にコマンドを自動的にバインドするかどうかを指定します。 既定値はです **`true`** 。これにより、コマンドが自動的にバインドされます。 *Bbind* をに設定すると、コマンドが自動的にバインドされ **`false`** ず、手動でバインドできるようになります。 (手動バインドは OLAP ユーザーにとって特に重要です)。
 
 ### <a name="return-value"></a>戻り値
 
 標準の HRESULT です。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
-結果セットが既にフェッチされている場合、この関数は前の結果セットを解放し、列をバインド解除します。 *Bbind*がの場合は **`true`** 、新しい列をバインドします。
+結果セットが既にフェッチされている場合、この関数は前の結果セットを解放し、列をバインド解除します。 *Bbind* がの場合は **`true`** 、新しい列をバインドします。
 
-`CCommand`テンプレートパラメーター *tmultiple*を設定して複数の結果を指定した場合にのみ、この関数を呼び出す必要があり = `CMultipleResults` ます。
+`CCommand`テンプレートパラメーター *tmultiple* を設定して複数の結果を指定した場合にのみ、この関数を呼び出す必要があり = `CMultipleResults` ます。
 
 ## <a name="ccommandopen"></a><a name="open"></a> CCommand:: Open
 
@@ -213,37 +214,37 @@ HRESULT Open(DBPROPSET *pPropSet = NULL,
 からコマンドを実行するセッション。
 
 *wszCommand*<br/>
-から実行するコマンド。 Unicode 文字列として渡されます。 を使用する場合、NULL を指定できます `CAccessor` 。この場合、コマンドは [DEFINE_COMMAND](./macros-and-global-functions-for-ole-db-consumer-templates.md#define_command) マクロに渡された値から取得されます。 詳細については、 *OLE DB プログラマーリファレンス*の「 [ICommand:: Execute](/previous-versions/windows/desktop/ms718095(v=vs.85)) 」を参照してください。
+から実行するコマンド。 Unicode 文字列として渡されます。 を使用する場合、NULL を指定できます `CAccessor` 。この場合、コマンドは [DEFINE_COMMAND](./macros-and-global-functions-for-ole-db-consumer-templates.md#define_command) マクロに渡された値から取得されます。 詳細については、 *OLE DB プログラマーリファレンス* の「 [ICommand:: Execute](/previous-versions/windows/desktop/ms718095(v=vs.85)) 」を参照してください。
 
 *szCommand*<br/>
 から *WszCommand* と同じですが、このパラメーターは ANSI コマンド文字列を受け取る点が異なります。 このメソッドの4番目の形式は、NULL 値を受け取ることができます。 詳細については、このトピックで後述する「解説」を参照してください。
 
 *pPropSet*<br/>
-から設定するプロパティと値を格納している [DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85)) 構造体の配列へのポインター。 Windows SDK の*OLE DB プログラマーリファレンス*の「[プロパティセットとプロパティグループ](/previous-versions/windows/desktop/ms713696(v=vs.85))」を参照してください。
+から設定するプロパティと値を格納している [DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85)) 構造体の配列へのポインター。 Windows SDK の *OLE DB プログラマーリファレンス* の「[プロパティセットとプロパティグループ](/previous-versions/windows/desktop/ms713696(v=vs.85))」を参照してください。
 
 *pRowsAffected 影響を受けた*<br/>
-[入力/出力]コマンドの影響を受ける行の数を返すメモリへのポインターが返されます。 * \* Prowsaffected を受け*たが NULL の場合、行数は返されません。 それ以外の場合は、 `Open` 次の条件に従って、適用される* \* prowsaffected*設定します。
+[入力/出力]コマンドの影響を受ける行の数を返すメモリへのポインターが返されます。 *\* Prowsaffected を受け* たが NULL の場合、行数は返されません。 それ以外の場合は、 `Open` 次の条件に従って、適用される *\* prowsaffected* 設定します。
 
 |If|THEN|
 |--------|----------|
-|`cParamSets`の要素 `pParams` が1を超えています。|* \* prowsaffected* 、実行時に指定されたすべてのパラメーターセットの影響を受ける行の合計数を表します。|
-|影響を受ける行の数は使用できません|* \* prowsaffected* -1 に設定されています。|
-|このコマンドでは、行の更新、削除、または挿入は行われません。|* \* 影響を受ける prowsaffected*定義されていません。|
+|`cParamSets`の要素 `pParams` が1を超えています。|*\* prowsaffected* 、実行時に指定されたすべてのパラメーターセットの影響を受ける行の合計数を表します。|
+|影響を受ける行の数は使用できません|*\* prowsaffected* -1 に設定されています。|
+|このコマンドでは、行の更新、削除、または挿入は行われません。|*\* 影響を受ける prowsaffected* 定義されていません。|
 
 *guidCommand*<br/>
-からコマンドテキストの解析に使用するプロバイダーの構文と一般的な規則を指定する GUID。 詳細については*OLE DB プログラマーリファレンス*の「 [ICommandText:: Getcommandtext](/previous-versions/windows/desktop/ms709825(v=vs.85)) And [ICommandText:: setcommandtext](/previous-versions/windows/desktop/ms709757(v=vs.85)) 」を参照してください。
+からコマンドテキストの解析に使用するプロバイダーの構文と一般的な規則を指定する GUID。 詳細については *OLE DB プログラマーリファレンス* の「 [ICommandText:: Getcommandtext](/previous-versions/windows/desktop/ms709825(v=vs.85)) And [ICommandText:: setcommandtext](/previous-versions/windows/desktop/ms709757(v=vs.85)) 」を参照してください。
 
 *bBind*<br/>
-から実行後にコマンドを自動的にバインドするかどうかを指定します。 既定値はです **`true`** 。これにより、コマンドが自動的にバインドされます。 *Bbind*をに設定すると、コマンドが自動的にバインドされ **`false`** ず、手動でバインドできるようになります。 (手動バインドは OLAP ユーザーにとって特に重要です)。
+から実行後にコマンドを自動的にバインドするかどうかを指定します。 既定値はです **`true`** 。これにより、コマンドが自動的にバインドされます。 *Bbind* をに設定すると、コマンドが自動的にバインドされ **`false`** ず、手動でバインドできるようになります。 (手動バインドは OLAP ユーザーにとって特に重要です)。
 
 *ulPropSets*<br/>
-から*PPropSet*引数で渡される[DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85))構造体の数。
+から *PPropSet* 引数で渡される [DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85))構造体の数。
 
 ### <a name="return-value"></a>戻り値
 
 標準の HRESULT です。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 最初の3つの形式は、セッションを取得し、 `Open` コマンドを作成し、必要に応じてパラメーターをバインドして、コマンドを実行します。
 
@@ -286,13 +287,13 @@ HRESULT CCommandBase::Create(const CSession& session,
 からコマンド文字列の ANSI テキストへのポインター。
 
 *guidCommand*<br/>
-からコマンドテキストの解析に使用するプロバイダーの構文と一般的な規則を指定する GUID。 ダイアレクトの詳細については、 *OLE DB プログラマーリファレンス*の「 [ICommandText:: getcommandtext](/previous-versions/windows/desktop/ms709825(v=vs.85)) 」を参照してください。
+からコマンドテキストの解析に使用するプロバイダーの構文と一般的な規則を指定する GUID。 ダイアレクトの詳細については、 *OLE DB プログラマーリファレンス* の「 [ICommandText:: getcommandtext](/previous-versions/windows/desktop/ms709825(v=vs.85)) 」を参照してください。
 
 ### <a name="return-value"></a>戻り値
 
 標準の HRESULT です。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 の最初の形式は、 `Create` Unicode のコマンド文字列を受け取ります。 の2番目の形式は、 `Create` ansi コマンド文字列を受け取ります (既存の ansi アプリケーションとの下位互換性のために用意されています)。
 
@@ -315,7 +316,7 @@ HRESULT CCommandBase::CreateCommand(const CSession& session) throw ();
 
 標準の HRESULT です。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 このメソッドは、指定されたセッションオブジェクトを使用してコマンドを作成します。
 
@@ -333,7 +334,7 @@ HRESULT CCommandBase::GetParameterInfo(DB_UPARAMS* pParams,
 
 #### <a name="parameters"></a>パラメーター
 
-*OLE DB プログラマーリファレンス*の「 [ICommandWithParameters:: getparameterinfo](/previous-versions/windows/desktop/ms714917(v=vs.85)) 」を参照してください。
+*OLE DB プログラマーリファレンス* の「 [ICommandWithParameters:: getparameterinfo](/previous-versions/windows/desktop/ms714917(v=vs.85)) 」を参照してください。
 
 ### <a name="return-value"></a>戻り値
 
@@ -358,7 +359,7 @@ HRESULT CCommandBase::Prepare(ULONG cExpectedRuns = 0) throw();
 
 標準の HRESULT です。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 このメソッドは、OLE DB メソッド [ICommandPrepare::P repare](/previous-versions/windows/desktop/ms718370(v=vs.85))をラップします。
 
@@ -390,7 +391,7 @@ HRESULT CCommandBase::SetParameterInfo(DB_UPARAMS ulParams,
 
 #### <a name="parameters"></a>パラメーター
 
-*OLE DB プログラマーリファレンス*の「 [ICommandWithParameters:: setparameterinfo](/previous-versions/windows/desktop/ms725393(v=vs.85)) 」を参照してください。
+*OLE DB プログラマーリファレンス* の「 [ICommandWithParameters:: setparameterinfo](/previous-versions/windows/desktop/ms725393(v=vs.85)) 」を参照してください。
 
 ### <a name="return-value"></a>戻り値
 
@@ -410,7 +411,7 @@ HRESULT CCommandBase::Unprepare() throw();
 
 標準の HRESULT です。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 このメソッドは、OLE DB メソッド [ICommandPrepare:: Unprepare](/previous-versions/windows/desktop/ms719635(v=vs.85))をラップします。
 

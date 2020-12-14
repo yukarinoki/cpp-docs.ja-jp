@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「コンパイラエラー C3451」を参照してください。
 title: コンパイラ エラー C3451
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3451
 ms.assetid: a4897a69-e3e7-40bb-bb1c-598644904012
-ms.openlocfilehash: d6a0d1234d8f25c6a55fffa7170f37aae27f5817
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: a5cc37bf273474553c375edc940d160f0c1d023d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91501320"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97316011"
 ---
 # <a name="compiler-error-c3451"></a>コンパイラ エラー C3451
 
@@ -21,7 +22,7 @@ C++ 属性を CLR 型に適用することはできません。 詳細につい�
 
 詳細については、「 [User-Defined Attributes](../../extensions/user-defined-attributes-cpp-component-extensions.md)」を参照してください。
 
-このエラーは、Visual Studio 2005 で実行されたコンパイラ準拠作業の結果として生成される可能性があります。ユーザー定義の属性では、CLR プログラミングを使用した [uuid](../../windows/attributes/uuid-cpp-attributes.md) 属性は許可されなくなりました。 代わりに <xref:System.Runtime.InteropServices.GuidAttribute> を使用してください
+このエラーは、Visual Studio 2005 で実行されたコンパイラ準拠作業の結果として生成される可能性があります。ユーザー定義の属性では、CLR プログラミングを使用した [uuid](../../windows/attributes/uuid-cpp-attributes.md) 属性は許可されなくなりました。 代わりに、<xref:System.Runtime.InteropServices.GuidAttribute> を使用してください。
 
 ## <a name="example"></a>例
 

@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: __vmx_vmread'
 title: __vmx_vmread
 ms.date: 09/02/2019
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - VMREAD instruction
 - __vmx_vmread intrinsic
 ms.assetid: 08bdd7a0-6435-4ea6-b9a0-f592d870e5aa
-ms.openlocfilehash: 409835ac29d6f2e839de62291cc5b142166a465c
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 39ea9c0566d3f9c9d3fc6d980861fb3580293895
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70219436"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97333509"
 ---
 # <a name="__vmx_vmread"></a>__vmx_vmread
 
@@ -35,27 +36,27 @@ unsigned char __vmx_vmread(
 から読み取る VMCS フィールド。
 
 *FieldValue*\
-から`Field`パラメーターで指定した vmcs フィールドから読み取った値を格納する場所へのポインター。
+からパラメーターで指定した VMCS フィールドから読み取った値を格納する場所へのポインター `Field` 。
 
 ## <a name="return-value"></a>戻り値
 
-|値|説明|
+|値|意味|
 |-----------|-------------|
 |0|操作が成功しました。|
 |1|現在 VMCS の `VM-instruction error field` で有効な拡張状態が発生したため、操作は失敗しました。|
 |2|有効な状態がないため操作は失敗しました。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-`__vmx_vmread` 関数は `VMREAD` マシン語命令と同じです。 `Field`パラメーターの値は、Intel のドキュメントで説明されているエンコードされたフィールドインデックスです。 詳細については、 [Intel Corporation](https://software.intel.com/articles/intel-sdm)のサイトの「IA-32 intel アーキテクチャの Intel Virtualization Technical Specification」を参照してください。
+`__vmx_vmread` 関数は `VMREAD` マシン語命令と同じです。 パラメーターの値 `Field` は、Intel のドキュメントで説明されているエンコードされたフィールドインデックスです。 詳細については、 [Intel Corporation](https://software.intel.com/articles/intel-sdm) のサイトの「IA-32 intel アーキテクチャの Intel Virtualization Technical Specification」を参照してください。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-|組み込み|アーキテクチャ|
+|Intrinsic|アーキテクチャ|
 |---------------|------------------|
 |`__vmx_vmread`|X64|
 
-**ヘッダーファイル**\<>
+**ヘッダー ファイル** \<intrin.h>
 
 **Microsoft 固有の仕様はここまで**
 

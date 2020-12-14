@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「コンパイラエラー C3452」を参照してください。
 title: コンパイラ エラー C3452
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3452
 ms.assetid: e5293dcf-cb70-4133-ae2a-0bb496950ba0
-ms.openlocfilehash: c491217f01d8e78375401b54faa48d9db410ccad
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 7153088ccd132112f47823cd1eb1147480615fc5
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74756722"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97315986"
 ---
 # <a name="compiler-error-c3452"></a>コンパイラ エラー C3452
 
@@ -19,7 +20,7 @@ ms.locfileid: "74756722"
 
 定数 (コンパイル時に評価できる値) を必要としていた属性に引数が渡されました。
 
-## <a name="example"></a>使用例
+## <a name="example"></a>例
 
 次の例では C3452 が生成されます。
 
