@@ -1,15 +1,16 @@
 ---
+description: '詳細情報: LIB 出力ファイル'
 title: LIB の出力ファイル
 ms.date: 11/04/2016
 helpviewer_keywords:
 - output files, LIB
 ms.assetid: e73d2f9b-a42d-402b-b7e3-3a94bebb317e
-ms.openlocfilehash: 8aeb46b0249ddf4155277866f7d8537bbfa98244
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 5a9145f4c75db0c402bc4416cedfd6d63bb23cd4
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79439376"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97191070"
 ---
 # <a name="lib-output-files"></a>LIB の出力ファイル
 
@@ -21,6 +22,6 @@ LIB によって生成される出力ファイルは、次の表に示すよう�
 |/EXTRACT を使用してメンバーを抽出する|オブジェクト (.obj) ファイル|
 |/DEF を使用したエクスポートファイルとインポートライブラリのビルド|インポートライブラリ (.lib) とエクスポート (.exp) ファイル|
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [LIB の概要](overview-of-lib.md)

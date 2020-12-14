@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: Scheduler クラス'
 title: Scheduler クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -21,12 +22,12 @@ f1_keywords:
 helpviewer_keywords:
 - Scheduler class
 ms.assetid: 34cf7961-048d-4852-8a5c-a32f823e3506
-ms.openlocfilehash: 77ad876b8352ab1ae86fde622b05712ec5f2cea9
-ms.sourcegitcommit: 19016630f9d35f365e9ba249e0f3617515d7ca33
+ms.openlocfilehash: 2a509017c84f7f6c845c153c8c187f5885839035
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92274711"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97188899"
 ---
 # <a name="scheduler-class"></a>Scheduler クラス
 
@@ -75,7 +76,7 @@ class Scheduler;
 
 `Scheduler`
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** concrt .h
 
@@ -222,7 +223,7 @@ virtual unsigned int Reference() = 0 ;
 
 これは通常、合成のためにスケジューラの有効期間を管理するために使用されます。 スケジューラの参照カウントが0になると、スケジューラのすべての処理が完了した後に、スケジューラがシャットダウンして破棄されます。
 
-メソッドを呼び出す前の[improper_scheduler_reference](improper-scheduler-reference-class.md)参照カウントが `Reference` 0 で、スケジューラによって所有されていないコンテキストから呼び出しが行われた場合、メソッドは improper_scheduler_reference 例外をスローします。
+メソッドを呼び出す前の[](improper-scheduler-reference-class.md)参照カウントが `Reference` 0 で、スケジューラによって所有されていないコンテキストから呼び出しが行われた場合、メソッドは improper_scheduler_reference 例外をスローします。
 
 ## <a name="registershutdownevent"></a><a name="registershutdownevent"></a> RegisterShutdownEvent
 

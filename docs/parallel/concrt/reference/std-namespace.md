@@ -1,15 +1,16 @@
 ---
+description: '詳細情報: std 名前空間'
 title: std 名前空間
 ms.date: 11/04/2016
 f1_keywords:
 - ppltasks/std
 ms.assetid: b3a41cfa-0b64-485d-9e79-23407dca07ba
-ms.openlocfilehash: 06cb2ca2ec9a8745a1999f9bf630fe2fa4e6e1f3
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: ba3961384742972733a52debf227e92a2b6ac657
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77142670"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97188483"
 ---
 # <a name="std-namespace"></a>std 名前空間
 
@@ -21,9 +22,9 @@ namespace std;
 
 ## <a name="members"></a>メンバー
 
-### <a name="functions"></a>関数
+### <a name="functions"></a>機能
 
-|Name|説明|
+|名前|説明|
 |----------|-----------------|
 |[make_exception_ptr 関数](make-exception-ptr-function.md)||
 
@@ -31,6 +32,6 @@ namespace std;
 
 **ヘッダー:** ppltasks.h
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[リファレンス](reference-concurrency-runtime.md)
+[参照](reference-concurrency-runtime.md)

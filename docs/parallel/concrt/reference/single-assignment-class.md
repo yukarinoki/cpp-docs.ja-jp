@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: single_assignment クラス'
 title: single_assignment クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -19,12 +20,12 @@ f1_keywords:
 helpviewer_keywords:
 - single_assignment class
 ms.assetid: ccc34728-8de9-4e07-b83d-a36a58d9d2b9
-ms.openlocfilehash: 6b92508c81311774816e804eb36ac8fbfb2aa82b
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: d01426843f2e9fe1106f7cb68c103c392cdf1ebd
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87219561"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97188658"
 ---
 # <a name="single_assignment-class"></a>single_assignment クラス
 
@@ -76,7 +77,7 @@ class single_assignment : public propagator_block<multi_link_registry<ITarget<T>
 
 `single_assignment`メッセージングブロックは、メッセージのコピーを各ターゲットに伝達します。
 
-詳細については、「[非同期メッセージブロック](../../../parallel/concrt/asynchronous-message-blocks.md)」を参照してください。
+詳細については、「 [非同期メッセージブロック](../../../parallel/concrt/asynchronous-message-blocks.md)」を参照してください。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -90,13 +91,13 @@ class single_assignment : public propagator_block<multi_link_registry<ITarget<T>
 
 `single_assignment`
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** agents.h
 
 **名前空間:** concurrency
 
-## <a name="accept_message"></a><a name="accept_message"></a>accept_message
+## <a name="accept_message"></a><a name="accept_message"></a> accept_message
 
 このメッセージングブロックによって提供されたメッセージを受け入れ `single_assignment` 、呼び出し元にメッセージのコピーを返します。
 
@@ -117,7 +118,7 @@ virtual message<T>* accept_message(runtime_object_identity _MsgId);
 
 メッセージングブロックは、現在保持されて `single_assignment` いるメッセージの所有権を譲渡するのではなく、メッセージのコピーをターゲットに返します。
 
-## <a name="consume_message"></a><a name="consume_message"></a>consume_message
+## <a name="consume_message"></a><a name="consume_message"></a> consume_message
 
 によって提供され、ターゲットによって予約されているメッセージを使用して、 `single_assignment` メッセージのコピーを呼び出し元に返します。
 
@@ -138,7 +139,7 @@ virtual message<T>* consume_message(runtime_object_identity _MsgId);
 
 に似 `accept` ていますが、の前には常にが呼び出され `reserve` ます。
 
-## <a name="has_value"></a><a name="has_value"></a>has_value
+## <a name="has_value"></a><a name="has_value"></a> has_value
 
 この `single_assignment` メッセージングブロックが値を使用して初期化されているかどうかを確認します。
 
@@ -150,7 +151,7 @@ bool has_value() const;
 
 **`true`** ブロックが値を受け取った場合は **`false`** 。それ以外の場合は。
 
-## <a name="link_target_notification"></a><a name="link_target_notification"></a>link_target_notification
+## <a name="link_target_notification"></a><a name="link_target_notification"></a> link_target_notification
 
 新しいターゲットがこのメッセージングブロックにリンクされていることを通知するコールバック `single_assignment` 。
 
@@ -163,7 +164,7 @@ virtual void link_target_notification(_Inout_ ITarget<T>* _PTarget);
 *_PTarget*<br/>
 新しくリンクされたターゲットへのポインター。
 
-## <a name="propagate_message"></a><a name="propagate_message"></a>propagate_message
+## <a name="propagate_message"></a><a name="propagate_message"></a> propagate_message
 
 `ISource`ブロックからこのメッセージングブロックに非同期的にメッセージを渡し `single_assignment` ます。 これは、 `propagate` ソースブロックによって呼び出されたときに、メソッドによって呼び出されます。
 
@@ -183,9 +184,9 @@ virtual message_status propagate_message(
 
 ### <a name="return-value"></a>戻り値
 
-対象がメッセージに対して実行することを決定した[message_status](concurrency-namespace-enums.md)を示します。
+対象がメッセージに対して実行することを決定した [message_status](concurrency-namespace-enums.md) を示します。
 
-## <a name="propagate_to_any_targets"></a><a name="propagate_to_any_targets"></a>propagate_to_any_targets
+## <a name="propagate_to_any_targets"></a><a name="propagate_to_any_targets"></a> propagate_to_any_targets
 
 を `message` `_PMessage` このメッセージングブロックに配置し、リンクされた `single_assignment` すべてのターゲットに提供します。
 
@@ -198,7 +199,7 @@ virtual void propagate_to_any_targets(_Inout_opt_ message<T>* _PMessage);
 *_PMessage*<br/>
 `message`この `single_assignment` メッセージングブロックが所有権を取得したへのポインター。
 
-## <a name="release_message"></a><a name="release_message"></a>release_message
+## <a name="release_message"></a><a name="release_message"></a> release_message
 
 以前のメッセージ予約を解放します。
 
@@ -211,7 +212,7 @@ virtual void release_message(runtime_object_identity _MsgId);
 *_MsgId*<br/>
 `runtime_object_identity` `message` 解放されるオブジェクトの。
 
-## <a name="reserve_message"></a><a name="reserve_message"></a>reserve_message
+## <a name="reserve_message"></a><a name="reserve_message"></a> reserve_message
 
 このメッセージングブロックによって以前に提供されたメッセージを予約 `single_assignment` します。
 
@@ -232,7 +233,7 @@ virtual bool reserve_message(runtime_object_identity _MsgId);
 
 が呼び出された後、 `reserve` がを返す場合 **`true`** `consume` は、 `release` メッセージの所有権を取得または解放するためにまたはのいずれかを呼び出す必要があります。
 
-## <a name="resume_propagation"></a><a name="resume_propagation"></a>resume_propagation
+## <a name="resume_propagation"></a><a name="resume_propagation"></a> resume_propagation
 
 予約が解放された後、伝達を再開します。
 
@@ -240,7 +241,7 @@ virtual bool reserve_message(runtime_object_identity _MsgId);
 virtual void resume_propagation();
 ```
 
-## <a name="send_message"></a><a name="send_message"></a>send_message
+## <a name="send_message"></a><a name="send_message"></a> send_message
 
 `ISource`ブロックからこのメッセージングブロックにメッセージを同期的に渡し `single_assignment` ます。 これは、 `send` ソースブロックによって呼び出されたときに、メソッドによって呼び出されます。
 
@@ -260,9 +261,9 @@ virtual message_status send_message(
 
 ### <a name="return-value"></a>戻り値
 
-対象がメッセージに対して実行することを決定した[message_status](concurrency-namespace-enums.md)を示します。
+対象がメッセージに対して実行することを決定した [message_status](concurrency-namespace-enums.md) を示します。
 
-## <a name="single_assignment"></a><a name="ctor"></a>single_assignment
+## <a name="single_assignment"></a><a name="ctor"></a> single_assignment
 
 `single_assignment` メッセージング ブロックを構築します。
 
@@ -304,7 +305,7 @@ single_assignment(
 
 この型は、提供された `filter_method` `bool (T const &)` メッセージを `single_assignment` 受け入れるかどうかを判断するために、このメッセージングブロックによって呼び出される、シグネチャを持つファンクタです。
 
-## <a name="single_assignment"></a><a name="dtor"></a>~ single_assignment
+## <a name="single_assignment"></a><a name="dtor"></a> ~ single_assignment
 
 `single_assignment`メッセージングブロックを破棄します。
 
@@ -312,7 +313,7 @@ single_assignment(
 ~single_assignment();
 ```
 
-## <a name="value"></a><a name="value"></a> の値
+## <a name="value"></a><a name="value"></a> 値
 
 メッセージングブロックに格納されているメッセージの現在のペイロードへの参照を取得し `single_assignment` ます。
 

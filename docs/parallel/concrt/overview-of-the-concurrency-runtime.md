@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「同時実行ランタイムの概要」を参照してください。
 title: コンカレンシー ランタイムの概要
 ms.date: 11/19/2018
 helpviewer_keywords:
@@ -7,18 +8,18 @@ helpviewer_keywords:
 - Concurrency Runtime, overview
 - Concurrency Runtime, lambda expressions
 ms.assetid: 56237d96-10b0-494a-9cb4-f5c5090436c5
-ms.openlocfilehash: 11035f9e202d964ae91378560b9244cde6d1828b
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: b6ff531b1961b32056a7232b62eca05d7a8793b9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87194616"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97189159"
 ---
 # <a name="overview-of-the-concurrency-runtime"></a>コンカレンシー ランタイムの概要
 
 このドキュメントでは、コンカレンシー ランタイムの概要について説明します。 また、コンカレンシー ランタイムの利点、使用する状況、コンポーネントどうしの対話方法、コンポーネントとオペレーティング システムやアプリケーションとの対話方法について説明します。
 
-## <a name="sections"></a><a name="top"></a>各項
+## <a name="sections"></a><a name="top"></a> 各項
 
 このドキュメントは、次のトピックに分かれています。
 
@@ -32,7 +33,7 @@ ms.locfileid: "87194616"
 
 - [必要条件](#requirements)
 
-## <a name="concurrency-runtime-implementation-history"></a><a name="dlls"></a>同時実行ランタイムの実装履歴
+## <a name="concurrency-runtime-implementation-history"></a><a name="dlls"></a> 同時実行ランタイムの実装履歴
 
 Visual Studio 2010 ~ 2013 では、同時実行ランタイムは msvcr120.dll によって msvcr100.dll 内に組み込まれました。  Visual Studio 2015 で UCRT リファクタリングが発生すると、その DLL は次の3つの部分にリファクタリングされました。
 
@@ -44,9 +45,9 @@ Visual Studio 2010 ~ 2013 では、同時実行ランタイムは msvcr120.dll �
 
 Visual Studio 2015 以降では、コンカレンシー ランタイムのタスク スケジューラは、ppltasks.h 内の task クラスや関連する型のためのスケジューラではなくなりました。 現在、これらの型では、パフォーマンスや Windows 同期プリミティブとの相互運用性を向上させるために、Windows のスレッド プールが使用されています。
 
-## <a name="why-a-runtime-for-concurrency-is-important"></a><a name="runtime"></a>同時実行のランタイムが重要な理由
+## <a name="why-a-runtime-for-concurrency-is-important"></a><a name="runtime"></a> 同時実行のランタイムが重要な理由
 
-コンカレンシー用のランタイムでは、同時に実行されるアプリケーションおよびアプリケーション コンポーネントに統一性と予測可能性が提供されます。 同時実行ランタイムの利点の2つの例は、*協調タスクのスケジュール設定*と*協調ブロック*です。
+コンカレンシー用のランタイムでは、同時に実行されるアプリケーションおよびアプリケーション コンポーネントに統一性と予測可能性が提供されます。 同時実行ランタイムの利点の2つの例は、 *協調タスクのスケジュール設定* と *協調ブロック* です。
 
 コンカレンシー ランタイムで使用される協調タスク スケジューラには、ワーク スティーリング アルゴリズムが実装されており、作業がコンピューティング リソース間に効率的に分散されます。 たとえば、同じランタイムによって管理される 2 つのスレッドを持つアプリケーションがあるとします。 一方のスレッドがスケジュールされたタスクを完了したら、他方のスレッドから作業をオフロードできます。 このメカニズムにより、アプリケーションの全体的な作業負荷のバランスが保たれます。
 
@@ -65,27 +66,27 @@ Visual Studio 2015 以降では、コンカレンシー ランタイムのタス
 > [!IMPORTANT]
 > タスクスケジューラおよび Resource Manager コンポーネントは、ユニバーサル Windows プラットフォーム (UWP) アプリからは使用できません。また、ppltasks.h のタスククラスまたはその他の型を使用する場合もあります。
 
-同時実行ランタイムは高度に*コンポーザブル*です。つまり、既存の機能を組み合わせてより多くの機能を組み合わせることができます。 コンカレンシー ランタイムでは、下位のコンポーネントから、並列アルゴリズムなど多数の機能を構成します。
+同時実行ランタイムは高度に *コンポーザブル* です。つまり、既存の機能を組み合わせてより多くの機能を組み合わせることができます。 コンカレンシー ランタイムでは、下位のコンポーネントから、並列アルゴリズムなど多数の機能を構成します。
 
-また、コンカレンシー ランタイムでは、協調ブロッキングを使用して、リソースへのアクセスを同期する同期プリミティブも提供されます。 これらの同期プリミティブの詳細については、「[同期データ構造](../../parallel/concrt/synchronization-data-structures.md)」を参照してください。
+また、コンカレンシー ランタイムでは、協調ブロッキングを使用して、リソースへのアクセスを同期する同期プリミティブも提供されます。 これらの同期プリミティブの詳細については、「 [同期データ構造](../../parallel/concrt/synchronization-data-structures.md)」を参照してください。
 
 以下のセクションでは、各コンポーネントが備えている機能と使用する場面についての概要を簡単に説明します。
 
 ### <a name="parallel-patterns-library"></a>並列パターン ライブラリ
 
-並列パターン ライブラリ (PPL) は、粒度の細かい並列化を実行するための汎用的なコンテナーとアルゴリズムを提供します。 PPL を使用すると、コンピューティングリソース全体のコレクションまたはデータセットに対して計算を分散する並列アルゴリズムを提供することで、*命令型データの並列*化が可能になります。 また、複数の独立した操作を複数のコンピューティングリソースに分散するタスクオブジェクトを提供することで、*タスクの並列*化を実現します。
+並列パターン ライブラリ (PPL) は、粒度の細かい並列化を実行するための汎用的なコンテナーとアルゴリズムを提供します。 PPL を使用すると、コンピューティングリソース全体のコレクションまたはデータセットに対して計算を分散する並列アルゴリズムを提供することで、 *命令型データの並列* 化が可能になります。 また、複数の独立した操作を複数のコンピューティングリソースに分散するタスクオブジェクトを提供することで、 *タスクの並列* 化を実現します。
 
-ローカルの計算で並列実行の利点を活用できる場合は、並列パターン ライブラリを使用します。 たとえば、 [concurrency::p arallel_for](reference/concurrency-namespace-functions.md#parallel_for)アルゴリズムを使用して、既存のループを並列操作に変換することができ **`for`** ます。
+ローカルの計算で並列実行の利点を活用できる場合は、並列パターン ライブラリを使用します。 たとえば、 [concurrency::p arallel_for](reference/concurrency-namespace-functions.md#parallel_for) アルゴリズムを使用して、既存のループを並列操作に変換することができ **`for`** ます。
 
-並列パターンライブラリの詳細については、「[並列パターンライブラリ (PPL)](../../parallel/concrt/parallel-patterns-library-ppl.md)」を参照してください。
+並列パターンライブラリの詳細については、「 [並列パターンライブラリ (PPL)](../../parallel/concrt/parallel-patterns-library-ppl.md)」を参照してください。
 
 ### <a name="asynchronous-agents-library"></a>非同期エージェント ライブラリ
 
-非同期エージェントライブラリ (または*エージェントライブラリ*だけ) は、アクターベースのプログラミングモデルと、粒度の粗いデータフローおよびパイプライン処理タスクのためのメッセージパッシングインターフェイスの両方を提供します。 非同期エージェントを使用すると、他のコンポーネントがデータを待機しているときに作業を実行することにより、待機時間を生産的に活用できます。
+非同期エージェントライブラリ (または *エージェントライブラリ* だけ) は、アクターベースのプログラミングモデルと、粒度の粗いデータフローおよびパイプライン処理タスクのためのメッセージパッシングインターフェイスの両方を提供します。 非同期エージェントを使用すると、他のコンポーネントがデータを待機しているときに作業を実行することにより、待機時間を生産的に活用できます。
 
 相互に非同期通信を行う複数のエンティティがある場合に、エージェント ライブラリを使用します。 たとえば、データをファイルまたはネットワーク接続から読み取って、そのデータをメッセージ パッシング インターフェイスで別のエージェントに送信するエージェントを作成できます。
 
-エージェントライブラリの詳細については、「[非同期エージェントライブラリ](../../parallel/concrt/asynchronous-agents-library.md)」を参照してください。
+エージェントライブラリの詳細については、「 [非同期エージェントライブラリ](../../parallel/concrt/asynchronous-agents-library.md)」を参照してください。
 
 ### <a name="task-scheduler"></a>タスク スケジューラ
 
@@ -93,7 +94,7 @@ Visual Studio 2015 以降では、コンカレンシー ランタイムのタス
 
 コンカレンシー ランタイムには既定のスケジューラが用意されているため、インフラストラクチャの詳細を管理する必要はありません。 ただし、アプリケーションの品質ニーズを満たすために、独自のスケジューリング ポリシーを用意したり、特定のスケジューラを特定のタスクに関連付けたりすることもできます。
 
-タスクスケジューラの詳細については、「[タスクスケジューラ](../../parallel/concrt/task-scheduler-concurrency-runtime.md)」を参照してください。
+タスクスケジューラの詳細については、「 [タスクスケジューラ](../../parallel/concrt/task-scheduler-concurrency-runtime.md)」を参照してください。
 
 ### <a name="resource-manager"></a>リソース マネージャー
 
@@ -103,13 +104,13 @@ Visual Studio 2015 以降では、コンカレンシー ランタイムのタス
 
 [[上](#top)]
 
-## <a name="c-lambda-expressions"></a><a name="lambda"></a>C++ ラムダ式
+## <a name="c-lambda-expressions"></a><a name="lambda"></a> C++ ラムダ式
 
-コンカレンシー ランタイムで定義されている型やアルゴリズムの多くは、C++ テンプレートとして実装されています。 こうした型やアルゴリズムの中には、処理を実行するためのルーチンをパラメーターとして受け取るものがあります。 このパラメーターには、ラムダ関数、関数オブジェクト、または関数ポインターを使用できます。 これらのエンティティは、*作業関数*または*作業ルーチン*とも呼ばれます。
+コンカレンシー ランタイムで定義されている型やアルゴリズムの多くは、C++ テンプレートとして実装されています。 こうした型やアルゴリズムの中には、処理を実行するためのルーチンをパラメーターとして受け取るものがあります。 このパラメーターには、ラムダ関数、関数オブジェクト、または関数ポインターを使用できます。 これらのエンティティは、 *作業関数* または *作業ルーチン* とも呼ばれます。
 
 ラムダ式は、Visual C++ 言語の重要な新機能の 1 つです。ラムダ式を使用すると、並列処理用の処理関数を簡潔に定義できます。 関数オブジェクトおよび関数ポインターを使用すると、既存のコードでコンカレンシー ランタイムを使用できます。 ただし、新しいコードを記述するときには、安全性や生産性の面で優れたラムダ式を使用することをお勧めします。
 
-次の例では、複数回の呼び出しにおけるラムダ関数、関数オブジェクト、および関数ポインターの構文を、 [concurrency::p arallel_for_each](reference/concurrency-namespace-functions.md#parallel_for_each)アルゴリズムと比較しています。 への各呼び出しで `parallel_for_each` は、 [std:: array](../../standard-library/array-class-stl.md)オブジェクト内の各要素の2乗を計算するために異なる手法が使用されます。
+次の例では、複数回の呼び出しにおけるラムダ関数、関数オブジェクト、および関数ポインターの構文を、 [concurrency::p arallel_for_each](reference/concurrency-namespace-functions.md#parallel_for_each) アルゴリズムと比較しています。 への各呼び出しで `parallel_for_each` は、 [std:: array](../../standard-library/array-class-stl.md) オブジェクト内の各要素の2乗を計算するために異なる手法が使用されます。
 
 [!code-cpp[concrt-comparing-work-functions#1](../../parallel/concrt/codesnippet/cpp/overview-of-the-concurrency-runtime_1.cpp)]
 
@@ -123,11 +124,11 @@ Visual Studio 2015 以降では、コンカレンシー ランタイムのタス
 390625
 ```
 
-C++ でのラムダ関数の詳細については、「[ラムダ式](../../cpp/lambda-expressions-in-cpp.md)」を参照してください。
+C++ でのラムダ関数の詳細については、「 [ラムダ式](../../cpp/lambda-expressions-in-cpp.md)」を参照してください。
 
 [[上](#top)]
 
-## <a name="requirements"></a><a name="requirements"></a> 必要条件
+## <a name="requirements"></a><a name="requirements"></a> 要件
 
 次の表は、コンカレンシー ランタイムの各コンポーネントに関連付けられているヘッダー ファイルを示しています。
 
@@ -138,7 +139,7 @@ C++ でのラムダ関数の詳細については、「[ラムダ式](../../cpp/
 |タスク スケジューラ|concrt.h|
 |リソース マネージャー|concrtrm.h|
 
-同時実行ランタイムは、 [Concurrency](../../parallel/concrt/reference/concurrency-namespace.md)名前空間で宣言されています。 (この名前空間のエイリアスである[同時実行](../../parallel/concrt/reference/concurrency-namespace.md)を使用することもできます)。`concurrency::details`名前空間は同時実行ランタイム framework をサポートします。独自に作成したコードから直接使用するためのものではありません。
+同時実行ランタイムは、 [Concurrency](../../parallel/concrt/reference/concurrency-namespace.md) 名前空間で宣言されています。 (この名前空間のエイリアスである [同時実行](../../parallel/concrt/reference/concurrency-namespace.md)を使用することもできます)。 `concurrency::details` 名前空間は同時実行ランタイム framework をサポートします。独自に作成したコードから直接使用するためのものではありません。
 
 コンカレンシー ランタイムは、C ランタイム ライブラリ (CRT) の一部として提供されます。 CRT を使用するアプリケーションをビルドする方法の詳細については、「 [Crt ライブラリの機能](../../c-runtime-library/crt-library-features.md)」を参照してください。
 

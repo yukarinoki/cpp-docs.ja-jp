@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: スケジューラポリシークラス'
 title: SchedulerPolicy クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -11,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - SchedulerPolicy class
 ms.assetid: bcebf51a-65f8-45a3-809b-d1ff93527dc4
-ms.openlocfilehash: b7b99dae2ffb58123c05a65872e4c71e149ac12c
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 2bb4c8961f46f077c203d1a49fb352171ad3f318
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87219574"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97188704"
 ---
 # <a name="schedulerpolicy-class"></a>SchedulerPolicy クラス
 
@@ -34,7 +35,7 @@ class SchedulerPolicy;
 
 |名前|説明|
 |----------|-----------------|
-|[SchedulerPolicy](#ctor)|オーバーロードされます。 新しいスケジューラポリシーを構築し、同時実行ランタイムスケジューラおよびリソースマネージャーによってサポートされる[ポリシーキー](concurrency-namespace-enums.md)の値を設定します。|
+|[SchedulerPolicy](#ctor)|オーバーロードされます。 新しいスケジューラポリシーを構築し、同時実行ランタイムスケジューラおよびリソースマネージャーによってサポートされる [ポリシーキー](concurrency-namespace-enums.md) の値を設定します。|
 |[~ スケジューラポリシーのデストラクター](#dtor)|スケジューラ ポリシーを破棄します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
@@ -59,13 +60,13 @@ class SchedulerPolicy;
 
 `SchedulerPolicy`
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** concrt、concrtrm .h
 
 **名前空間:** concurrency
 
-## <a name="getpolicyvalue"></a><a name="getpolicyvalue"></a>GetPolicyValue
+## <a name="getpolicyvalue"></a><a name="getpolicyvalue"></a> GetPolicyValue
 
 `key` パラメーターとして指定されるポリシー キーの値を取得します。
 
@@ -84,9 +85,9 @@ unsigned int GetPolicyValue(PolicyElementKey key) const;
 
 ### <a name="remarks"></a>解説
 
-メソッドは、無効なポリシーキーの[invalid_scheduler_policy_key](invalid-scheduler-policy-key-class.md)をスローします。
+メソッドは、無効なポリシーキーの [invalid_scheduler_policy_key](invalid-scheduler-policy-key-class.md) をスローします。
 
-## <a name="operator"></a><a name="operator_eq"></a>operator =
+## <a name="operator"></a><a name="operator_eq"></a> operator =
 
 別のスケジューラ ポリシーからスケジューラ ポリシーを割り当てます。
 
@@ -107,9 +108,9 @@ SchedulerPolicy& operator= (const SchedulerPolicy& _RhsPolicy);
 
 通常、新しいスケジューラ ポリシーを定義する最も簡単な方法は、既存のポリシーをコピーし、それを `SetPolicyValue` メソッドまたは `SetConcurrencyLimits` メソッドを使用して変更することです。
 
-## <a name="schedulerpolicy"></a><a name="ctor"></a>SchedulerPolicy
+## <a name="schedulerpolicy"></a><a name="ctor"></a> SchedulerPolicy
 
-新しいスケジューラポリシーを構築し、同時実行ランタイムスケジューラおよびリソースマネージャーによってサポートされる[ポリシーキー](concurrency-namespace-enums.md)の値を設定します。
+新しいスケジューラポリシーを構築し、同時実行ランタイムスケジューラおよびリソースマネージャーによってサポートされる [ポリシーキー](concurrency-namespace-enums.md) の値を設定します。
 
 ```cpp
 SchedulerPolicy();
@@ -134,11 +135,11 @@ SchedulerPolicy(
 
 最初のコンストラクターでは、すべてのポリシーが既定値に初期化される新しいスケジューラ ポリシーを作成します。
 
-2 番目のコンストラクターでは、名前付きパラメーター スタイルの初期化を使用する新しいスケジューラ ポリシーを作成します。 `_PolicyKeyCount` パラメーターの後の値は、キーと値のペアとして渡されます。 このコンストラクターで指定されていないポリシー キーには既定値が設定されます。 このコンストラクターは、 [invalid_scheduler_policy_key](invalid-scheduler-policy-key-class.md)、 [invalid_scheduler_policy_value](invalid-scheduler-policy-value-class.md)または[invalid_scheduler_policy_thread_specification](invalid-scheduler-policy-thread-specification-class.md)の例外をスローする可能性があります。
+2 番目のコンストラクターでは、名前付きパラメーター スタイルの初期化を使用する新しいスケジューラ ポリシーを作成します。 `_PolicyKeyCount` パラメーターの後の値は、キーと値のペアとして渡されます。 このコンストラクターで指定されていないポリシー キーには既定値が設定されます。 このコンストラクターは、 [invalid_scheduler_policy_key](invalid-scheduler-policy-key-class.md)、 [invalid_scheduler_policy_value](invalid-scheduler-policy-value-class.md) または [invalid_scheduler_policy_thread_specification](invalid-scheduler-policy-thread-specification-class.md)の例外をスローする可能性があります。
 
 3 番目のコンストラクターはコピー コンストラクターです。 通常、新しいスケジューラ ポリシーを定義する最も簡単な方法は、既存のポリシーをコピーし、それを `SetPolicyValue` メソッドまたは `SetConcurrencyLimits` メソッドを使用して変更することです。
 
-## <a name="schedulerpolicy"></a><a name="dtor"></a>~ スケジューラポリシー
+## <a name="schedulerpolicy"></a><a name="dtor"></a> ~ スケジューラポリシー
 
 スケジューラ ポリシーを破棄します。
 
@@ -146,7 +147,7 @@ SchedulerPolicy(
 ~SchedulerPolicy();
 ```
 
-## <a name="setconcurrencylimits"></a><a name="setconcurrencylimits"></a>SetConcurrencyLimits
+## <a name="setconcurrencylimits"></a><a name="setconcurrencylimits"></a> SetConcurrencyLimits
 
 `MinConcurrency` オブジェクトに対して、`MaxConcurrency` ポリシーおよび `SchedulerPolicy` ポリシーを同時に設定します。
 
@@ -166,11 +167,11 @@ void SetConcurrencyLimits(
 
 ### <a name="remarks"></a>解説
 
-ポリシーに指定された値がポリシーに指定された値よりも大きい場合、メソッドは[invalid_scheduler_policy_thread_specification](invalid-scheduler-policy-thread-specification-class.md)をスローし `MinConcurrency` `MaxConcurrency` ます。
+ポリシーに指定された値がポリシーに指定された値よりも大きい場合、メソッドは [invalid_scheduler_policy_thread_specification](invalid-scheduler-policy-thread-specification-class.md) をスローし `MinConcurrency` `MaxConcurrency` ます。
 
-メソッドは、他の無効な値の[invalid_scheduler_policy_value](invalid-scheduler-policy-value-class.md)をスローすることもできます。
+メソッドは、他の無効な値の [invalid_scheduler_policy_value](invalid-scheduler-policy-value-class.md) をスローすることもできます。
 
-## <a name="setpolicyvalue"></a><a name="setpolicyvalue"></a>SetPolicyValue
+## <a name="setpolicyvalue"></a><a name="setpolicyvalue"></a> SetPolicyValue
 
 `key` パラメーターとして指定されるポリシー キーの値を設定し、古い値を返します。
 
@@ -194,11 +195,11 @@ unsigned int SetPolicyValue(
 
 ### <a name="remarks"></a>解説
 
-メソッドは、無効なポリシーキーまたはメソッドによって値を設定できないポリシーキーの[invalid_scheduler_policy_key](invalid-scheduler-policy-key-class.md)をスローし `SetPolicyValue` ます。
+メソッドは、無効なポリシーキーまたはメソッドによって値を設定できないポリシーキーの [invalid_scheduler_policy_key](invalid-scheduler-policy-key-class.md) をスローし `SetPolicyValue` ます。
 
-メソッドは、パラメーターで指定されたキーに対してサポートされていない値の[invalid_scheduler_policy_value](invalid-scheduler-policy-value-class.md)をスローし `key` ます。
+メソッドは、パラメーターで指定されたキーに対してサポートされていない値の [invalid_scheduler_policy_value](invalid-scheduler-policy-value-class.md) をスローし `key` ます。
 
-このメソッドでは、ポリシーまたはポリシーの設定は許可されていないことに注意 `MinConcurrency` `MaxConcurrency` してください。 これらの値を設定するには、 [SetConcurrencyLimits](#setconcurrencylimits)メソッドを使用します。
+このメソッドでは、ポリシーまたはポリシーの設定は許可されていないことに注意 `MinConcurrency` `MaxConcurrency` してください。 これらの値を設定するには、 [SetConcurrencyLimits](#setconcurrencylimits) メソッドを使用します。
 
 ## <a name="see-also"></a>関連項目
 

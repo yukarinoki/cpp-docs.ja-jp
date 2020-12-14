@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: task_canceled クラス'
 title: task_canceled クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,16 +9,16 @@ f1_keywords:
 helpviewer_keywords:
 - task_canceled class
 ms.assetid: c3f0b234-2cc1-435f-a48e-995f45b190be
-ms.openlocfilehash: b1436f921343843ee2b50888f00b6d470e513329
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: 223a1168464e312c272f770247b3574311ff97ed
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77142606"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97188405"
 ---
 # <a name="task_canceled-class"></a>task_canceled クラス
 
-このクラスは、現在のタスクを強制的に取り消すために PPL タスク レイヤーによってスローされる例外を表します。 取り消されたタスクについては、[タスク](/visualstudio/extensibility/debugger/task-class-internal-members)の `get()` メソッドによってもスローされます。
+このクラスは、現在のタスクを強制的に取り消すために PPL タスク レイヤーによってスローされる例外を表します。 取り消されたタスクについても、タスクのメソッドによってスローされ `get()` ます。 [](/visualstudio/extensibility/debugger/task-class-internal-members)
 
 ## <a name="syntax"></a>構文
 
@@ -29,7 +30,7 @@ class task_canceled : public std::exception;
 
 ### <a name="public-constructors"></a>パブリック コンストラクター
 
-|Name|説明|
+|名前|説明|
 |----------|-----------------|
 |[task_canceled](#ctor)|オーバーロードされます。 `task_canceled` オブジェクトを構築します。|
 
@@ -39,13 +40,13 @@ class task_canceled : public std::exception;
 
 `task_canceled`
 
-## <a name="requirements"></a>［要件］
+## <a name="requirements"></a>要件
 
 **ヘッダー:** concrt .h
 
 **名前空間:** concurrency
 
-## <a name="ctor"></a>task_canceled
+## <a name="task_canceled"></a><a name="ctor"></a> task_canceled
 
 `task_canceled` オブジェクトを構築します。
 
@@ -60,6 +61,6 @@ task_canceled() throw();
 *_Message*<br/>
 エラーの説明メッセージ。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[コンカレンシー名前空間](concurrency-namespace.md)
+[concurrency 名前空間](concurrency-namespace.md)

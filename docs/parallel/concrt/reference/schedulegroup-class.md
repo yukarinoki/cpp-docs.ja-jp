@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: ScheduleGroup クラス'
 title: ScheduleGroup クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -11,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - ScheduleGroup class
 ms.assetid: 86d380ff-f2e8-411c-b1a8-22bd3079824a
-ms.openlocfilehash: 8686b5ef0906e3188a1e683d1190bbe6124cd19e
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: ca6678cd8d8c13c5d62b3d98b0a0bb1ab14e29c9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79424231"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97188912"
 ---
 # <a name="schedulegroup-class"></a>ScheduleGroup クラス
 
@@ -32,16 +33,16 @@ class ScheduleGroup;
 
 ### <a name="protected-constructors"></a>プロテクト コンストラクター
 
-|Name|Description|
+|名前|説明|
 |----------|-----------------|
 |[~ ScheduleGroup デストラクター](#dtor)||
 
 ### <a name="public-methods"></a>パブリック メソッド
 
-|Name|Description|
+|名前|説明|
 |----------|-----------------|
 |[Id](#id)|スケジュール グループが属するスケジューラ内で一意のスケジュール グループの識別子を返します。|
-|[リファレンス](#reference)|スケジュール グループの参照カウントをインクリメントします。|
+|[参照](#reference)|スケジュール グループの参照カウントをインクリメントします。|
 |[リリース](#release)|スケジュール グループの参照カウントをデクリメントします。|
 |[ScheduleTask](#scheduletask)|スケジュール グループ内の軽量タスクをスケジュールします。|
 
@@ -49,13 +50,13 @@ class ScheduleGroup;
 
 `ScheduleGroup`
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** concrt .h
 
 **名前空間:** concurrency
 
-## <a name="id"></a>番号
+## <a name="id"></a><a name="id"></a> 番号
 
 スケジュール グループが属するスケジューラ内で一意のスケジュール グループの識別子を返します。
 
@@ -67,9 +68,9 @@ virtual unsigned int Id() const = 0;
 
 グループが属するスケジューラ内で一意であるスケジュールグループの識別子。
 
-## <a name="operator_delete"></a>delete 演算子
+## <a name="operator-delete"></a><a name="operator_delete"></a> delete 演算子
 
-`ScheduleGroup` オブジェクトは、すべての外部参照が解放されると、ランタイムによって内部的に破棄されます。 明示的に削除することはできません。
+`ScheduleGroup`オブジェクトへの外部参照がすべて解放されると、ランタイムによって内部的にオブジェクトが破棄されます。 明示的に削除することはできません。
 
 ```cpp
 void operator delete(
@@ -87,7 +88,7 @@ const char *,
 *_PObject*<br/>
 削除するオブジェクトへのポインター。
 
-## <a name="reference"></a>「
+## <a name="reference"></a><a name="reference"></a> 「
 
 スケジュール グループの参照カウントをインクリメントします。
 
@@ -103,7 +104,7 @@ virtual unsigned int Reference() = 0;
 
 これは通常、構成のスケジュールグループの有効期間を管理するために使用されます。 スケジュールグループの参照カウントがゼロになると、スケジュールグループはランタイムによって削除されます。 [Currentscheduler:: CreateScheduleGroup](currentscheduler-class.md#createschedulegroup)メソッドまたは[Scheduler:: CreateScheduleGroup](scheduler-class.md#createschedulegroup)メソッドを使用して作成されたスケジュールグループは、参照カウントを1つとして開始します。
 
-## <a name="release"></a>解除
+## <a name="release"></a><a name="release"></a> 解除
 
 スケジュール グループの参照カウントをデクリメントします。
 
@@ -117,17 +118,17 @@ virtual unsigned int Release() = 0;
 
 ### <a name="remarks"></a>解説
 
-これは通常、構成のスケジュールグループの有効期間を管理するために使用されます。 スケジュールグループの参照カウントがゼロになると、スケジュールグループはランタイムによって削除されます。 `Release` メソッドを特定の回数だけ呼び出して、作成参照カウントと、`Reference` メソッドを使用して追加されたその他の参照を削除した後は、スケジュールグループをさらに利用することはできません。 これを行うと、未定義の動作が発生します。
+これは通常、構成のスケジュールグループの有効期間を管理するために使用されます。 スケジュールグループの参照カウントがゼロになると、スケジュールグループはランタイムによって削除されます。 メソッドを `Release` 特定の回数だけ呼び出して、作成参照カウントと、メソッドを使用して追加されたその他の参照を削除した後は、 `Reference` スケジュールグループをさらに利用することはできません。 これを行うと、未定義の動作が発生します。
 
 スケジュールグループは、特定のスケジューラインスタンスに関連付けられています。 スケジューラへのすべての参照がリリースされる前に、スケジュールグループへのすべての参照が解放されていることを確認する必要があります。これは、スケジューラが破棄される可能性があるためです。 それ以外の場合は、未定義の動作が発生します。
 
-## <a name="dtor"></a>~ ScheduleGroup
+## <a name="schedulegroup"></a><a name="dtor"></a> ~ ScheduleGroup
 
 ```cpp
 virtual ~ScheduleGroup();
 ```
 
-## <a name="scheduletask"></a>ScheduleTask
+## <a name="scheduletask"></a><a name="scheduletask"></a> ScheduleTask
 
 スケジュール グループ内の軽量タスクをスケジュールします。
 
@@ -147,11 +148,11 @@ virtual void ScheduleTask(
 
 ### <a name="remarks"></a>解説
 
-`ScheduleTask` メソッドを呼び出すと、スケジュールグループに参照カウントが暗黙的に配置されます。これは、タスクの実行後にランタイムによって適切なタイミングで削除されます。
+メソッドを呼び出すと、 `ScheduleTask` スケジュールグループに参照カウントが暗黙的に配置されます。これは、タスクの実行後にランタイムによって適切なタイミングで削除されます。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[コンカレンシー名前空間](concurrency-namespace.md)<br/>
+[concurrency 名前空間](concurrency-namespace.md)<br/>
 [CurrentScheduler クラス](currentscheduler-class.md)<br/>
 [Scheduler クラス](scheduler-class.md)<br/>
 [タスク スケジューラ](../../../parallel/concrt/task-scheduler-concurrency-runtime.md)

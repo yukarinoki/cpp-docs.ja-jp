@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: context_unblock_unbalanced クラス'
 title: context_unblock_unbalanced クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - context_unblock_unbalanced class
 ms.assetid: a76066c8-19dd-44fa-959a-6941ec1b0d2d
-ms.openlocfilehash: 261ec96c1a83fbec423e6dbbfe403c4db53a2962
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: d262ff52a675935f95664d2f7ddd69aa159aa0bc
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77143094"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97188964"
 ---
 # <a name="context_unblock_unbalanced-class"></a>context_unblock_unbalanced クラス
 
@@ -29,13 +30,13 @@ class context_unblock_unbalanced : public std::exception;
 
 ### <a name="public-constructors"></a>パブリック コンストラクター
 
-|Name|説明|
+|名前|説明|
 |----------|-----------------|
 |[context_unblock_unbalanced](#ctor)|オーバーロードされます。 `context_unblock_unbalanced` オブジェクトを構築します。|
 
 ## <a name="remarks"></a>解説
 
-`Context` オブジェクトの `Block` および `Unblock` メソッドの呼び出しは、常に適切にペアになっている必要があります。 同時実行ランタイムでは、いずれかの順序で操作を実行できます。 たとえば、`Block` の呼び出しの後に、`Unblock`を呼び出すか、その逆を行うことができます。 たとえば、`Unblock` メソッドに対する2回の呼び出しが、ブロックされていない `Context` オブジェクトで行に作成された場合に、この例外がスローされます。
+`Block`オブジェクトのメソッドとメソッドの呼び出しは、 `Unblock` `Context` 常に適切にペアになっている必要があります。 同時実行ランタイムでは、いずれかの順序で操作を実行できます。 たとえば、への呼び出しの `Block` 後にを呼び出すか、その逆を行うことができ `Unblock` ます。 たとえば、 `Unblock` `Context` ブロックされていないオブジェクトで、メソッドへの2回の呼び出しが行で行われた場合に、この例外がスローされます。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -43,13 +44,13 @@ class context_unblock_unbalanced : public std::exception;
 
 `context_unblock_unbalanced`
 
-## <a name="requirements"></a>［要件］
+## <a name="requirements"></a>要件
 
 **ヘッダー:** concrt .h
 
 **名前空間:** concurrency
 
-## <a name="ctor"></a>context_unblock_unbalanced
+## <a name="context_unblock_unbalanced"></a><a name="ctor"></a> context_unblock_unbalanced
 
 `context_unblock_unbalanced` オブジェクトを構築します。
 
@@ -64,6 +65,6 @@ context_unblock_unbalanced() throw();
 *_Message*<br/>
 エラーの説明メッセージ。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[コンカレンシー名前空間](concurrency-namespace.md)
+[concurrency 名前空間](concurrency-namespace.md)

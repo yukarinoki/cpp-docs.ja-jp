@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: weibull_distribution クラス'
 title: weibull_distribution クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -26,12 +27,12 @@ helpviewer_keywords:
 - std::weibull_distribution [C++], param_type
 - std::weibull_distribution [C++], param_type
 ms.assetid: f20b49d3-1b9a-41af-8db4-baf800eaa02b
-ms.openlocfilehash: d16c1f7f864d52222a7fd4e1e2a5e543b8c21809
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: d6ab60a4c5442e13a00ff559cbc58e207335e5ee
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88831698"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97187794"
 ---
 # <a name="weibull_distribution-class"></a>weibull_distribution クラス
 
@@ -205,7 +206,7 @@ Distribution for 10 samples:
     10: 24.7220241239
 ```
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:**\<random>
 

@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: リンクの出力'
 title: LINK からの出力
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -15,38 +16,38 @@ helpviewer_keywords:
 - DLLs [C++], as linker output
 - LINK tool [C++], mapfile
 ms.assetid: a98b557c-1947-447a-be1f-616fb45a9580
-ms.openlocfilehash: 253f88ed50b9f064edf976277a4618e4f101ec7e
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 18d14fda2702e588f69c8a613783087895827826
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81331788"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97190992"
 ---
 # <a name="link-output"></a>LINK からの出力
 
-リンク出力には、.exe ファイル、DLL、マップ ファイル、およびメッセージが含まれます。
+リンクの出力には、.exe ファイル、Dll、mapfiles、およびメッセージが含まれます。
 
-## <a name="output-files"></a><a name="_core_output_files"></a>出力ファイル
+## <a name="output-files"></a><a name="_core_output_files"></a> 出力ファイル
 
-LINK からの既定の出力ファイルは .exe ファイルです。 [/DLL](dll-build-a-dll.md)オプションを指定すると、.dll ファイルが作成されます。 出力ファイル名は、出力ファイル名[(/OUT)](out-output-file-name.md)オプションを使用して制御できます。
+リンクからの既定の出力ファイルは .exe ファイルです。 [/Dll](dll-build-a-dll.md)オプションが指定されている場合、LINK は .dll ファイルをビルドします。 出力ファイル名は、 [出力ファイル名 (/out)](out-output-file-name.md) オプションを使用して制御できます。
 
-インクリメンタル モードでは、LINK は.ilk ファイルを作成して、プログラムの後のインクリメンタル ビルドのステータス情報を保持します。 ilk ファイルの詳細については[、「.ilk ファイル](dot-ilk-files-as-linker-input.md)」を参照してください。 インクリメンタル リンクの詳細については、「[インクリメンタル リンク (/INCREMENTAL)」](incremental-link-incrementally.md)オプションを参照してください。
+インクリメンタルモードでは、リンクを使用すると、プログラムの後で増分ビルドを行うための状態情報を保持するための .ilk ファイルが作成されます。 .Ilk ファイルの詳細については、「 [.Ilk ファイル](dot-ilk-files-as-linker-input.md)」を参照してください。 インクリメンタルリンクの詳細については、「 [インクリメンタル (/INCREMENTAL)](incremental-link-incrementally.md) オプションのリンク」を参照してください。
 
-リンクは、エクスポート (通常は DLL) を含むプログラムを作成するときに、.exp ファイルがビルドで使用されていない限り、.lib ファイルも作成します。 インポート ライブラリ ファイル名は[、/IMPLIB](implib-name-import-library.md)オプションを使用して制御できます。
+リンクによって、エクスポート (通常は DLL) を含むプログラムが作成されるときに、ビルドで .exp ファイルが使用されていない限り、.lib ファイルもビルドされます。 インポートライブラリのファイル名は、 [/IMPLIB](implib-name-import-library.md) オプションを使用して制御できます。
 
-[[マップファイルの生成] オプション (/MAP) が](map-generate-mapfile.md)指定されている場合、LINK はマップファイルを作成します。
+[ [マップの生成 (/map)](map-generate-mapfile.md) ] オプションが指定されている場合、LINK は mapfile を作成します。
 
-デバッグ[情報の生成 (/DEBUG)](debug-generate-debug-info.md)オプションが指定されている場合、LINK はプログラムのデバッグ情報を含む PDB を作成します。
+[ [デバッグ情報の生成 (/debug)](debug-generate-debug-info.md) ] オプションが指定されている場合、LINK はプログラムのデバッグ情報を格納する PDB を作成します。
 
-## <a name="other-output"></a><a name="_core_other_output"></a>その他の出力
+## <a name="other-output"></a><a name="_core_other_output"></a> その他の出力
 
-他のコマンド`link`行入力を行わずに入力すると、LINK はオプションを要約した使用法ステートメントを表示します。
+`link`他のコマンドライン入力を指定せずにを入力すると、そのオプションを要約する usage ステートメントがリンクに表示されます。
 
-LINK は、[スタートアップ バナーを非表示 (/NOLOGO)](nologo-suppress-startup-banner-linker.md)オプションを使用しない限り、著作権とバージョンのメッセージを表示し、コマンド ファイル入力をエコーします。
+リンクは著作権およびバージョンメッセージを表示し、[著作権情報の [非](nologo-suppress-startup-banner-linker.md) 表示] オプションを使用しない限り、コマンドファイル入力をエコーします。
 
-[[進行状況メッセージの印刷] (/VERBOSE)](verbose-print-progress-messages.md)オプションを使用して、ビルドに関する追加の詳細を表示できます。
+[ [進行状況メッセージの印刷] (/verbose)](verbose-print-progress-messages.md) オプションを使用すると、ビルドに関する追加の詳細情報を表示できます。
 
-LINK は、エラー メッセージと警告メッセージを LNK*nnnn*という形式で発行します。 このエラー接頭部および数字の範囲は、LIB、ダンプビン、およびエディットビンでも使用されます。
+リンクの問題のエラーメッセージと警告メッセージは、LNK *nnnn* という形式で送信されます。 このエラーのプレフィックスと数値の範囲は、LIB、DUMPBIN、EDITBIN でも使用されます。
 
 ## <a name="see-also"></a>関連項目
 

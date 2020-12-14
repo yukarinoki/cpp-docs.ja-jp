@@ -1,19 +1,20 @@
 ---
+description: '詳細情報: Scheduler ポリシー'
 title: スケジューラ ポリシー
 ms.date: 11/04/2016
 helpviewer_keywords:
 - scheduler policies
 ms.assetid: 58fb68bd-4a57-40a8-807b-6edb6f083cd9
-ms.openlocfilehash: a962c00d23c41d97087e705d395b601afc7b1910
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: 42b5fa951c320fcc3bab8fe5abe3bb4988e6c368
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90042044"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97188015"
 ---
 # <a name="scheduler-policies"></a>スケジューラ ポリシー
 
-このドキュメントでは、同時実行ランタイムにおける scheduler ポリシーの役割について説明します。 *スケジューラポリシー*では、タスクを管理するときにスケジューラが使用する戦略を制御します。 たとえば、で実行するタスクと、で実行するタスクを必要とするアプリケーションを考えてみ `THREAD_PRIORITY_NORMAL` `THREAD_PRIORITY_HIGHEST` ます。  2つの scheduler インスタンスを作成できます。1つはポリシーを指定し、もう1つは `ContextPriority` `THREAD_PRIORITY_NORMAL` 同じポリシーを指定するもの `THREAD_PRIORITY_HIGHEST` です。
+このドキュメントでは、同時実行ランタイムにおける scheduler ポリシーの役割について説明します。 *スケジューラポリシー* では、タスクを管理するときにスケジューラが使用する戦略を制御します。 たとえば、で実行するタスクと、で実行するタスクを必要とするアプリケーションを考えてみ `THREAD_PRIORITY_NORMAL` `THREAD_PRIORITY_HIGHEST` ます。  2つの scheduler インスタンスを作成できます。1つはポリシーを指定し、もう1つは `ContextPriority` `THREAD_PRIORITY_NORMAL` 同じポリシーを指定するもの `THREAD_PRIORITY_HIGHEST` です。
 
 Scheduler ポリシーを使用すると、使用可能な処理リソースを分割し、各スケジューラに固定されたリソースのセットを割り当てることができます。 たとえば、4つのプロセッサを超えて拡張されない並列アルゴリズムについて考えてみます。 同時に4つ以下のプロセッサを使用するようにタスクを制限するスケジューラポリシーを作成できます。
 
@@ -51,7 +52,7 @@ Scheduler ポリシーのコピーを取得するには、 [concurrency:: Curren
 
 特定のスケジューラポリシーを使用してスケジューラの動作を制御する例を確認するには、「 [方法: 特定](../../parallel/concrt/how-to-specify-specific-scheduler-policies.md) のスケジューラポリシーを指定する」および「 [方法: 特定のスケジューラポリシーを使用するエージェントを作成](../../parallel/concrt/how-to-create-agents-that-use-specific-scheduler-policies.md)する」を参照してください。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [タスク スケジューラ](../../parallel/concrt/task-scheduler-concurrency-runtime.md)<br/>
 [方法: 特定のスケジューラポリシーを指定する](../../parallel/concrt/how-to-specify-specific-scheduler-policies.md)<br/>

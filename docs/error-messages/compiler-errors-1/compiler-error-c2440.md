@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「コンパイラエラー C2440」を参照してください。
 title: コンパイラ エラー C2440
 ms.date: 03/28/2017
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2440
 ms.assetid: 36e6676c-f04f-4715-8ba1-f096c4bf3b44
-ms.openlocfilehash: 74c5032338b3f4cf30bdb75bdf070cee7b67ce58
-ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
+ms.openlocfilehash: 918f071f7d7ecc294ddab92764c03da98ad86555
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90742113"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97189744"
 ---
 # <a name="compiler-error-c2440"></a>コンパイラ エラー C2440
 
@@ -74,7 +75,7 @@ Base * func(Derived * d) {
 }
 ```
 
-次の例の 15 行目と 16 行目の C2440 エラーには、"`Incompatible calling conventions for UDT return value` (UDT 戻り値の呼び出し規約に互換性がありません)" というメッセージが表示されます。 *UDT*は、クラス、構造体、共用体などのユーザー定義型です。 このような種類の非互換性エラーが発生するのは、事前宣言の戻り値の型で指定された UDT の呼び出し規約が UDT の実際の呼び出し規約と競合する場合や、関数ポインターが関連する場合です。
+次の例の 15 行目と 16 行目の C2440 エラーには、"`Incompatible calling conventions for UDT return value` (UDT 戻り値の呼び出し規約に互換性がありません)" というメッセージが表示されます。 *UDT* は、クラス、構造体、共用体などのユーザー定義型です。 このような種類の非互換性エラーが発生するのは、事前宣言の戻り値の型で指定された UDT の呼び出し規約が UDT の実際の呼び出し規約と競合する場合や、関数ポインターが関連する場合です。
 
 この例では、最初に、構造体およびその構造体を返す関数の事前宣言があります。コンパイラでは、この構造体で C++ 呼び出し規則が使用されると仮定します。 次に、構造体の定義があります。既定では、この定義は C 呼び出し規則を使用します。 コンパイラでは、構造体全体の読み込みが完了するまでは、その構造体の呼び出し規則がわからないため、`get_c2` の戻り値の型での構造体の呼び出し規則も C++ であると仮定します。
 
@@ -180,7 +181,7 @@ C2440 は、属性機能の変更が原因で発生することもあります�
 // [ module(name="PropDemoLib", version="1.0") ];
 ```
 
-Microsoft C++ コンパイラでは、 **/clr**プログラミングを使用するソースコードがコンパイルされるときに、 [const_cast 演算子](../../cpp/const-cast-operator.md)をダウンキャストすることができなくなりました。
+Microsoft C++ コンパイラでは、 **/clr** プログラミングを使用するソースコードがコンパイルされるときに、 [const_cast 演算子](../../cpp/const-cast-operator.md)をダウンキャストすることができなくなりました。
 
 この C2440 エラーを解決するには、正しいキャスト演算子を使用します。 詳細については、「 [キャスト演算子](../../cpp/casting-operators.md)」を参照してください。
 

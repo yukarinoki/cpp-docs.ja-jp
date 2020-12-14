@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: weak_ptr クラス'
 title: weak_ptr クラス
 ms.date: 07/29/2019
 f1_keywords:
@@ -28,12 +29,12 @@ helpviewer_keywords:
 - std::weak_ptr [C++], swap
 - std::weak_ptr [C++], use_count
 ms.assetid: 2db4afb2-c7be-46fc-9c20-34ec2f8cc7c2
-ms.openlocfilehash: 5a4989b9ac29e6a35e50479343d6bcf5a39ae1b0
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: a0434c57a70c40fc1fa1ae6b39837fd6112ba696
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88831737"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97187807"
 ---
 # <a name="weak_ptr-class"></a>weak_ptr クラス
 
@@ -68,7 +69,7 @@ template<class T> class weak_ptr;
 |[weak_ptr](#weak_ptr)|`weak_ptr` を構築します。|
 | **デストラクター** | |
 |[~ weak_ptr](#tilde-weak_ptr)|`weak_ptr` を構築します。|
-| **Typedef** | |
+| **Typedefs** | |
 |[element_type](#element_type)|要素の型。|
 | **メンバー関数** | |
 |[終了](#expired)|所有権の有効期限が切れているかどうかをテストします。|
@@ -292,7 +293,7 @@ bool owner_before(const weak_ptr<Other>& ptr) const noexcept;
 
 ### <a name="remarks"></a>解説
 
-テンプレートメンバー関数は、 **`true`** **`*this`** が *ptr*の前に並んでいる場合、を返します。
+テンプレートメンバー関数は、 **`true`** **`*this`** が *ptr* の前に並んでいる場合、を返します。
 
 ## <a name="reset"></a><a name="reset"></a> 解除
 
@@ -358,7 +359,7 @@ void swap(weak_ptr<T>& a, weak_ptr<T>& b) noexcept;
 
 ### <a name="remarks"></a>解説
 
-の後 `swap` 、は、もともとによってポイントされているリソース **`*this`** が *wp*によって参照され、もともと *wp* によって参照されていたリソースがによってポイントされ **`*this`** ます。 関数は、2つのリソースの参照カウントを変更せず、例外もスローしません。 テンプレートの特殊化の効果は、に相当し `a.swap(b)` ます。
+の後 `swap` 、は、もともとによってポイントされているリソース **`*this`** が *wp* によって参照され、もともと *wp* によって参照されていたリソースがによってポイントされ **`*this`** ます。 関数は、2つのリソースの参照カウントを変更せず、例外もスローしません。 テンプレートの特殊化の効果は、に相当し `a.swap(b)` ます。
 
 ### <a name="example"></a>例
 
@@ -469,7 +470,7 @@ weak_ptr(const shared_ptr<Other>& sp) noexcept;
 ### <a name="parameters"></a>パラメーター
 
 *他の*\
-引数の共有ポインターまたはウィーク ポインターによって制御される型。 これらのコンストラクターは、_他の \* _がと互換性がない限り、オーバーロードの解決に関与しません `element_type*` 。
+引数の共有ポインターまたはウィーク ポインターによって制御される型。 これらのコンストラクターは、_他の \*_ がと互換性がない限り、オーバーロードの解決に関与しません `element_type*` 。
 
 *wp*\
 コピーするウィーク ポインター。

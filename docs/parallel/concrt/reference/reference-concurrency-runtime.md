@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: リファレンス (同時実行ランタイム)'
 title: 参照 (コンカレンシー ランタイム)
 ms.date: 11/04/2016
 f1_keywords:
@@ -452,24 +453,24 @@ helpviewer_keywords:
 - LPSECURITY_ATTRIBUTES typedef
 - HRESULT typedef
 ms.assetid: a057c776-7caa-4605-8f33-9815cf6f9b27
-ms.openlocfilehash: e1ae4616400069b44e23e30e3df69aae6dec6592
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: f5d07f856c37417da1ceddbbefa772b2e7f11fff
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79446282"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97188925"
 ---
 # <a name="reference-concurrency-runtime"></a>参照 (コンカレンシー ランタイム)
 
 ここでは、同時実行ランタイムの参照情報について説明します。
 
 > [!Note]
-> 言語C++標準では、ライブラリなどの実装のために、アンダースコア (_) 文字で始まる識別子の使用が予約されています。 この名前はコードで使用しないでください。 この規則に従った名前を持つコード要素の動作は永続的に保証されたものではなく、今後のリリースで変更されることがあります。 このような理由から、このようなコード要素は同時実行ランタイムのドキュメントから除外されています。
+> C++ 言語標準では、ライブラリなどの実装のために、アンダースコア (_) 文字で始まる識別子の使用が予約されています。 この名前はコードで使用しないでください。 この規則に従った名前を持つコード要素の動作は永続的に保証されたものではなく、今後のリリースで変更されることがあります。 このような理由から、このようなコード要素は同時実行ランタイムのドキュメントから除外されています。
 
 ## <a name="in-this-section"></a>このセクションの内容
 
-[コンカレンシー名前空間](concurrency-namespace.md)<br/>
-Concurrency 名前空間には、のC++同時実行プログラミングフレームワークである同時実行ランタイムにアクセスできるクラスと関数が用意されています。 詳細については、「[コンカレンシー ランタイム](../concurrency-runtime.md)」を参照してください。
+[concurrency 名前空間](concurrency-namespace.md)<br/>
+Concurrency 名前空間には、C++ の同時実行プログラミングフレームワークである同時実行ランタイムにアクセスできるクラスと関数が用意されています。 詳細については、「[コンカレンシー ランタイム](../concurrency-runtime.md)」を参照してください。
 
 [std 名前空間](std-namespace.md)
 

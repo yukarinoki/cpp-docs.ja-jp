@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: task_completion_event クラス'
 title: task_completion_event クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -10,12 +11,12 @@ f1_keywords:
 helpviewer_keywords:
 - task_completion_event class
 ms.assetid: fb19ed98-f245-48dc-9ba5-487ba879b28a
-ms.openlocfilehash: b63e8c6986508806cedc8c094a4e8844491dd2fa
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 791b68d6a67ea2f8a9697b69266e8744455f845c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87219510"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97188366"
 ---
 # <a name="task_completion_event-class"></a>task_completion_event クラス
 
@@ -63,13 +64,13 @@ class task_completion_event<void>;
 
 `task_completion_event`
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** ppltasks.h
 
 **名前空間:** concurrency
 
-## <a name="set"></a><a name="set"></a>一連
+## <a name="set"></a><a name="set"></a> 一連
 
 タスクの完了イベントを設定します。
 
@@ -92,7 +93,7 @@ bool set() const ;
 
 `set` の複数呼び出しまたは同時呼び出しがある場合、最初の呼び出しだけが成功し、その結果 (結果が返される場合) はタスクの完了イベントに格納されます。 その他の set は無視され、メソッドは false を返します。 タスクの完了イベントを設定すると、そのイベントから作成されたすべてのタスクは直ちに完了します。また継続が存在する場合は、その継続がスケジュールされます。 以外のを持つタスク `_ResultType` の完了オブジェクト **`void`** は、その値を継続に渡します。
 
-## <a name="set_exception"></a><a name="set_exception"></a>set_exception
+## <a name="set_exception"></a><a name="set_exception"></a> set_exception
 
 このイベントに関連付けられているすべてのタスクに例外を反映します。
 
@@ -116,7 +117,7 @@ __declspec(noinline) bool set_exception(std::exception_ptr _ExceptionPtr) const 
 
 ### <a name="return-value"></a>戻り値
 
-## <a name="task_completion_event"></a><a name="ctor"></a>task_completion_event
+## <a name="task_completion_event"></a><a name="ctor"></a> task_completion_event
 
 `task_completion_event` オブジェクトを構築します。
 

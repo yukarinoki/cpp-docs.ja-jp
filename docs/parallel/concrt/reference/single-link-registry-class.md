@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: single_link_registry クラス'
 title: single_link_registry クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -13,12 +14,12 @@ f1_keywords:
 helpviewer_keywords:
 - single_link_registry class
 ms.assetid: 09540a4e-c34e-4ff9-af49-21b8612b6ab3
-ms.openlocfilehash: 24f89a6b2fb998ba5e5a82dbb470accb45d0fd9f
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 415dcaf8062eaf47a3e92cf4a949790eb364d0c4
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87219548"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97188639"
 ---
 # <a name="single_link_registry-class"></a>single_link_registry クラス
 
@@ -61,13 +62,13 @@ class single_link_registry : public network_link_registry<_Block>;
 
 `single_link_registry`
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** agents.h
 
 **名前空間:** concurrency
 
-## <a name="add"></a><a name="add"></a>アドイン
+## <a name="add"></a><a name="add"></a> アドイン
 
 オブジェクトへのリンクを追加し `single_link_registry` ます。
 
@@ -82,9 +83,9 @@ virtual void add(_EType _Link);
 
 ### <a name="remarks"></a>解説
 
-このレジストリにリンクが既に存在する場合、メソッドは[invalid_link_target](invalid-link-target-class.md)例外をスローします。
+このレジストリにリンクが既に存在する場合、メソッドは [invalid_link_target](invalid-link-target-class.md) 例外をスローします。
 
-## <a name="begin"></a><a name="begin"></a>初め
+## <a name="begin"></a><a name="begin"></a> begin
 
 オブジェクト内の最初の要素を指す反復子を返し `single_link_registry` ます。
 
@@ -100,7 +101,7 @@ virtual iterator begin();
 
 終了状態はリンクによって示され `NULL` ます。
 
-## <a name="contains"></a><a name="contains"></a>は
+## <a name="contains"></a><a name="contains"></a> は
 
 `single_link_registry`指定されたブロックのオブジェクトを検索します。
 
@@ -117,7 +118,7 @@ virtual bool contains(_EType _Link);
 
 **`true`** リンクが見つかった場合は **`false`** 。それ以外の場合は。
 
-## <a name="count"></a><a name="count"></a>数
+## <a name="count"></a><a name="count"></a> 数
 
 オブジェクト内の項目の数をカウントし `single_link_registry` ます。
 
@@ -129,7 +130,7 @@ virtual size_t count();
 
 `single_link_registry` オブジェクト内の項目の数。
 
-## <a name="remove"></a><a name="remove"></a>から
+## <a name="remove"></a><a name="remove"></a> から
 
 オブジェクトからリンクを削除 `single_link_registry` します。
 
@@ -146,7 +147,7 @@ virtual bool remove(_EType _Link);
 
 **`true`** リンクが見つかり、削除された場合は **`false`** 。それ以外の場合は。
 
-## <a name="single_link_registry"></a><a name="ctor"></a>single_link_registry
+## <a name="single_link_registry"></a><a name="ctor"></a> single_link_registry
 
 `single_link_registry` オブジェクトを構築します。
 
@@ -154,7 +155,7 @@ virtual bool remove(_EType _Link);
 single_link_registry();
 ```
 
-## <a name="single_link_registry"></a><a name="dtor"></a>~ single_link_registry
+## <a name="single_link_registry"></a><a name="dtor"></a> ~ single_link_registry
 
 `single_link_registry` オブジェクトを破棄します。
 
@@ -164,7 +165,7 @@ virtual ~single_link_registry();
 
 ### <a name="remarks"></a>解説
 
-このメソッドは、リンクが削除される前に呼び出された場合、 [invalid_operation](invalid-operation-class.md)例外をスローします。
+このメソッドは、リンクが削除される前に呼び出された場合、 [invalid_operation](invalid-operation-class.md) 例外をスローします。
 
 ## <a name="see-also"></a>関連項目
 

@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: &lt; vector &gt; 演算子'
 title: '&lt;vector&gt; 演算子'
 ms.date: 11/04/2016
 f1_keywords:
@@ -16,16 +17,16 @@ helpviewer_keywords:
 - std::operator&lt; (vector)
 - std::operator&lt;= (vector)
 - std::operator== (vector)
-ms.openlocfilehash: 6e3b78a7b7176be917da5a3e44e9bf54efc0b08c
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: a7a03d3ef843c995970552201e63d2df3cb3161d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87224540"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97187898"
 ---
 # <a name="ltvectorgt-operators"></a>&lt;vector&gt; 演算子
 
-## <a name="operator"></a><a name="op_neq"></a>operator! =
+## <a name="operator"></a><a name="op_neq"></a> operator! =
 
 演算子の左側のオブジェクトが右側のオブジェクトと等しくないかどうかを調べます。
 
@@ -36,14 +37,14 @@ bool operator!=(const vector<Type, Allocator>& left, const vector<Type, Allocato
 ### <a name="parameters"></a>パラメーター
 
 *左側*\
-`vector` 型オブジェクト。
+`vector` 型のオブジェクト。
 
 *そうです*\
-`vector` 型オブジェクト。
+`vector` 型のオブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
-**`true`** ベクターが等しくない場合は。**`false`** ベクターが等しい場合は。
+**`true`** ベクターが等しくない場合は。 **`false`** ベクターが等しい場合は。
 
 ### <a name="remarks"></a>解説
 
@@ -76,7 +77,7 @@ int main( )
 Vectors not equal.
 ```
 
-## <a name="operatorlt"></a><a name="op_lt"></a>operator&lt;
+## <a name="operatorlt"></a><a name="op_lt"></a> operator&lt;
 
 演算子の左側のオブジェクトが右側のオブジェクトより小さいかどうかを調べます。
 
@@ -87,10 +88,10 @@ bool operator<(const vector<Type, Allocator>& left, const vector<Type, Allocator
 ### <a name="parameters"></a>パラメーター
 
 *左側*\
-`vector` 型オブジェクト。
+`vector` 型のオブジェクト。
 
 *そうです*\
-`vector` 型オブジェクト。
+`vector` 型のオブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
@@ -127,7 +128,7 @@ int main( )
 Vector v1 is less than vector v2.
 ```
 
-## <a name="operatorlt"></a><a name="op_lt_eq"></a>operator&lt;=
+## <a name="operatorlt"></a><a name="op_lt_eq"></a> operator&lt;=
 
 演算子の左側のオブジェクトが右側のオブジェクト以下かどうかを調べます。
 
@@ -138,10 +139,10 @@ bool operator<=(const vector<Type, Allocator>& left, const vector<Type, Allocato
 ### <a name="parameters"></a>パラメーター
 
 *左側*\
-`vector` 型オブジェクト。
+`vector` 型のオブジェクト。
 
 *そうです*\
-`vector` 型オブジェクト。
+`vector` 型のオブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
@@ -178,7 +179,7 @@ int main( )
 Vector v1 is less than or equal to vector v2.
 ```
 
-## <a name="operator"></a><a name="op_eq_eq"></a>operator = =
+## <a name="operator"></a><a name="op_eq_eq"></a> operator = =
 
 演算子の左側のオブジェクトが右側のオブジェクトと等しいかどうかを調べます。
 
@@ -189,10 +190,10 @@ bool operator==(const vector<Type, Allocator>& left, const vector<Type, Allocato
 ### <a name="parameters"></a>パラメーター
 
 *左側*\
-`vector` 型オブジェクト。
+`vector` 型のオブジェクト。
 
 *そうです*\
-`vector` 型オブジェクト。
+`vector` 型のオブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
@@ -229,7 +230,7 @@ int main( )
 Vectors equal.
 ```
 
-## <a name="operatorgt"></a><a name="op_gt"></a>operator&gt;
+## <a name="operatorgt"></a><a name="op_gt"></a> operator&gt;
 
 演算子の左側のオブジェクトが右側のオブジェクトより大きいかどうかを調べます。
 
@@ -240,10 +241,10 @@ bool operator>(const vector<Type, Allocator>& left, const vector<Type, Allocator
 ### <a name="parameters"></a>パラメーター
 
 *左側*\
-`vector` 型オブジェクト。
+`vector` 型のオブジェクト。
 
 *そうです*\
-`vector` 型オブジェクト。
+`vector` 型のオブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
@@ -281,7 +282,7 @@ int main( )
 Vector v1 is greater than vector v2.
 ```
 
-## <a name="operatorgt"></a><a name="op_gt_eq"></a>operator&gt;=
+## <a name="operatorgt"></a><a name="op_gt_eq"></a> operator&gt;=
 
 演算子の左側のオブジェクトが右側のオブジェクト以上であるかどうかを調べます。
 
@@ -292,10 +293,10 @@ bool operator>=(const vector<Type, Allocator>& left, const vector<Type, Allocato
 ### <a name="parameters"></a>パラメーター
 
 *左側*\
-`vector` 型オブジェクト。
+`vector` 型のオブジェクト。
 
 *そうです*\
-`vector` 型オブジェクト。
+`vector` 型のオブジェクト。
 
 ### <a name="return-value"></a>戻り値
 

@@ -1,4 +1,5 @@
 ---
+description: '詳細: タスククラス (同時実行ランタイム)'
 title: task クラス (コンカレンシー ランタイム)
 ms.date: 07/30/2019
 f1_keywords:
@@ -14,12 +15,12 @@ f1_keywords:
 helpviewer_keywords:
 - task class
 ms.assetid: cdc3a8c0-5cbe-45a0-b5d5-e9f81d94df1a
-ms.openlocfilehash: 6a063f0bba9482824817e4efe21ae5b7bf3c0995
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: b16c7e8f7ae97b35731916d6834367c228ce867c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87219535"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97188379"
 ---
 # <a name="task-class-concurrency-runtime"></a>task クラス (コンカレンシー ランタイム)
 
@@ -63,7 +64,7 @@ class task;
 |[is_done](#is_done)|タスクが完了したかどうかを決定します。|
 |[組む](#scheduler)|このタスクのスケジューラを返します|
 |[そうしたら](#then)|オーバーロードされます。 継続タスクをこのタスクに追加します。|
-|[待機](#wait)|このタスクが終了状態になるまで待機します。 タスクの依存関係すべてが満たされ、バックグラウンド ワーカーによって実行用にまだ検出されていない場合、`wait` はタスクをインラインで実行できます。|
+|[wait](#wait)|このタスクが終了状態になるまで待機します。 タスクの依存関係すべてが満たされ、バックグラウンド ワーカーによって実行用にまだ検出されていない場合、`wait` はタスクをインラインで実行できます。|
 
 ### <a name="public-operators"></a>パブリック演算子
 
@@ -75,19 +76,19 @@ class task;
 
 ## <a name="remarks"></a>解説
 
-詳細については、「[タスクの並列](../../../parallel/concrt/task-parallelism-concurrency-runtime.md)化」を参照してください。
+詳細については、「 [タスクの並列](../../../parallel/concrt/task-parallelism-concurrency-runtime.md)化」を参照してください。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
 `task`
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** ppltasks.h
 
 **名前空間:** concurrency
 
-## <a name="get"></a><a name="get"></a>取得
+## <a name="get"></a><a name="get"></a> 取得
 
 このタスクによって生成された結果を返します。 タスクが終了状態にない場合、`get` への呼び出しは、そのタスクが完了するまで待機します。 このメソッドは、のを持つタスクで呼び出された場合、値を返しません `result_type` **`void`** 。
 
@@ -103,12 +104,12 @@ void get() const;
 
 ### <a name="remarks"></a>解説
 
-タスクが取り消された場合、を呼び出すと `get` [task_canceled](task-canceled-class.md)例外がスローされます。 タスクで別の例外が発生したり、継続元タスクからこのタスクに例外が反映された場合、`get` の呼び出しは、その例外をスローします。
+タスクが取り消された場合、を呼び出すと `get` [task_canceled](task-canceled-class.md) 例外がスローされます。 タスクで別の例外が発生したり、継続元タスクからこのタスクに例外が反映された場合、`get` の呼び出しは、その例外をスローします。
 
 > [!IMPORTANT]
-> ユニバーサル Windows プラットフォーム (UWP) アプリでは、 [concurrency::task::wait](#wait) `get` `wait` `get` ユーザーインターフェイススレッドで実行されるコードで concurrency:: task:: wait または (calls) を呼び出さないでください。 それ以外の場合、ランタイムは[concurrency:: invalid_operation](invalid-operation-class.md)をスローします。これらのメソッドは、現在のスレッドをブロックし、アプリが応答しなくなる可能性があるためです。 ただし、結果は直ちに使用できるため、タスク ベースの継続で継続元タスクの結果を受け取るために `get` メソッドを呼び出すことができます。
+> ユニバーサル Windows プラットフォーム (UWP) アプリでは、 [](#wait) `get` `wait` `get` ユーザーインターフェイススレッドで実行されるコードで concurrency:: task:: wait または (calls) を呼び出さないでください。 それ以外の場合、ランタイムは [concurrency:: invalid_operation](invalid-operation-class.md) をスローします。これらのメソッドは、現在のスレッドをブロックし、アプリが応答しなくなる可能性があるためです。 ただし、結果は直ちに使用できるため、タスク ベースの継続で継続元タスクの結果を受け取るために `get` メソッドを呼び出すことができます。
 
-## <a name="is_apartment_aware"></a><a name="is_apartment_aware"></a>is_apartment_aware
+## <a name="is_apartment_aware"></a><a name="is_apartment_aware"></a> is_apartment_aware
 
 タスクが Windows ランタイム `IAsyncInfo` インターフェイスをラップ解除するか、こうしたタスクの子であるかを決定します。
 
@@ -120,7 +121,7 @@ bool is_apartment_aware() const;
 
 **`true`** タスクがインターフェイスのラップを解除した場合 `IAsyncInfo` 、またはそのようなタスクからの子孫である場合は **`false`** 。それ以外の場合は。
 
-## <a name="taskis_done-method-concurrency-runtime"></a><a name="is_done"></a>task:: is_done メソッド (同時実行ランタイム)
+## <a name="taskis_done-method-concurrency-runtime"></a><a name="is_done"></a> task:: is_done メソッド (同時実行ランタイム)
 
 タスクが完了したかどうかを決定します。
 
@@ -136,7 +137,7 @@ bool is_done() const;
 
 関数は、タスクが完了した場合または取り消された場合に true を返します (ユーザー例外の有無は問いません)。
 
-## <a name="operator"></a><a name="operator_neq"></a>operator! =
+## <a name="operator"></a><a name="operator_neq"></a> operator! =
 
 2 つの `task` オブジェクトが異なる内部タスクを表すかどうかを決定します。
 
@@ -155,7 +156,7 @@ bool operator!= (const task<void>& _Rhs) const;
 
 **`true`** オブジェクトが別の基になるタスクを参照している場合は **`false`** 。それ以外の場合は。
 
-## <a name="operator"></a><a name="operator_eq"></a>operator =
+## <a name="operator"></a><a name="operator_eq"></a> operator =
 
 ある `task` オブジェクトの内容を別のオブジェクトの内容で置き換えます。
 
@@ -176,7 +177,7 @@ task& operator= (task&& _Other);
 
 `task` がスマート ポインターのように動作すると、コピーの代入の後では、この `task` オブジェクトは `_Other` が実行する実際のタスクと同じタスクを表します。
 
-## <a name="operator"></a><a name="operator_eq_eq"></a>operator = =
+## <a name="operator"></a><a name="operator_eq_eq"></a> operator = =
 
 2 つの `task` オブジェクトが同じ内部タスクを表すかどうかを決定します。
 
@@ -195,7 +196,7 @@ bool operator== (const task<void>& _Rhs) const;
 
 **`true`** オブジェクトが同じ基になるタスクを参照している場合は **`false`** 。それ以外の場合は。
 
-## <a name="taskscheduler-method-concurrency-runtime"></a><a name="scheduler"></a>task:: scheduler メソッド (同時実行ランタイム)
+## <a name="taskscheduler-method-concurrency-runtime"></a><a name="scheduler"></a> task:: scheduler メソッド (同時実行ランタイム)
 
 このタスクのスケジューラを返します
 
@@ -257,9 +258,9 @@ task(
 
 Windows:: Foundation:: IAsyncInfo インターフェイスを受け取るコンストラクターオーバーロード、またはこのようなインターフェイスを返すラムダは、Windows ランタイムアプリでのみ使用できます。
 
-詳細については、「[タスクの並列](../../../parallel/concrt/task-parallelism-concurrency-runtime.md)化」を参照してください。
+詳細については、「 [タスクの並列](../../../parallel/concrt/task-parallelism-concurrency-runtime.md)化」を参照してください。
 
-## <a name="then"></a><a name="then"></a>そうしたら
+## <a name="then"></a><a name="then"></a> そうしたら
 
 継続タスクをこのタスクに追加します。
 
@@ -311,7 +312,7 @@ __declspec(
 継続タスクに関連付けるキャンセル トークン。 キャンセル トークンなしで作成された継続タスクは、その継続元タスクのトークンを継承します。
 
 *_ContinuationContext*<br/>
-継続を実行する状況を指定する変数。 この変数は、UWP アプリで使用される場合にのみ役立ちます。 詳細については、「」を参照してください[task_continuation_context](task-continuation-context-class.md)
+継続を実行する状況を指定する変数。 この変数は、UWP アプリで使用される場合にのみ役立ちます。 詳細については、「」を参照してください [task_continuation_context](task-continuation-context-class.md)
 
 ### <a name="return-value"></a>戻り値
 
@@ -321,9 +322,9 @@ __declspec(
 
 `then`Windows:: Foundation:: IAsyncInfo インターフェイスを返すラムダまたはファンクタを受け取るのオーバーロードは、Windows ランタイムアプリでのみ使用できます。
 
-タスクの継続を使用して非同期作業を構成する方法の詳細については、「[タスクの並列](../../../parallel/concrt/task-parallelism-concurrency-runtime.md)化」を参照してください。
+タスクの継続を使用して非同期作業を構成する方法の詳細については、「 [タスクの並列](../../../parallel/concrt/task-parallelism-concurrency-runtime.md)化」を参照してください。
 
-## <a name="wait"></a><a name="wait"></a>待機
+## <a name="wait"></a><a name="wait"></a> 待機
 
 このタスクが終了状態になるまで待機します。 タスクの依存関係すべてが満たされ、バックグラウンド ワーカーによって実行用にまだ検出されていない場合、`wait` はタスクをインラインで実行できます。
 

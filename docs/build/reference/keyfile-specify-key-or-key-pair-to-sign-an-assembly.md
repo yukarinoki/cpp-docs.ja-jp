@@ -1,4 +1,5 @@
 ---
+description: :/KEYFILE (アセンブリに署名するためのキーまたはキーペアの指定) に関する詳細情報
 title: /KEYFILE (アセンブリに署名するためのキーまたはキー ペアの指定)
 ms.date: 11/04/2016
 f1_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - -KEYFILE linker option
 - KEYFILE linker option
 ms.assetid: 9b71f8c0-541c-4fe5-a0c7-9364f42ecb06
-ms.openlocfilehash: d309390c1ac1a19d9d4a982908dbbbac0bd52714
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 23c4962ab57688f5d8c1af27fd412d7d36be01a0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62291562"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97191161"
 ---
 # <a name="keyfile-specify-key-or-key-pair-to-sign-an-assembly"></a>/KEYFILE (アセンブリに署名するためのキーまたはキー ペアの指定)
 
@@ -24,24 +25,24 @@ ms.locfileid: "62291562"
 
 ## <a name="arguments"></a>引数
 
-*ファイル名*<br/>
-キーを含むファイルです。 二重引用符で区切る文字列を配置 ("")、スペースが含まれている場合。
+*filename*<br/>
+キーが含まれるファイル。 空白が含まれている場合は、文字列を二重引用符 ("") で囲みます。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-リンカーはアセンブリ マニフェストに公開キーを挿入し、秘密キーで最終アセンブリに署名します。 キー ファイルを生成する入力[sn-k](/dotnet/framework/tools/sn-exe-strong-name-tool) *filename*コマンドライン。 署名されたアセンブリは、厳密な名前と呼ばれます。
+リンカーは公開キーをアセンブリマニフェストに挿入し、秘密キーを使用して最終的なアセンブリに署名します。 キーファイルを生成するには、コマンドラインで「 [sn-k](/dotnet/framework/tools/sn-exe-strong-name-tool) *filename* 」と入力します。 署名されたアセンブリには、厳密な名前が付いています。
 
-使用してコンパイルする場合[/LN](ln-create-msil-module.md)、キー ファイルの名前がモジュールに保持されを使用して、モジュールを明示的に参照を含むアセンブリをコンパイルするときに作成されるアセンブリに組み込む[#using](../../preprocessor/hash-using-directive-cpp.md)とをリンクするときまたは[/ASSEMBLYMODULE](assemblymodule-add-a-msil-module-to-the-assembly.md)します。
+[/LN](ln-create-msil-module.md)を使用してコンパイルする場合、キーファイルの名前はモジュールに保持され、モジュールへの明示的な参照を含むアセンブリをコンパイルするときに作成されるアセンブリに組み込まれます。または、 [#using](../../preprocessor/hash-using-directive-cpp.md)を使用するか、または[/assemblymodule](assemblymodule-add-a-msil-module-to-the-assembly.md)とリンクするときに作成されます。
 
-リンカーに、暗号化情報を渡すことができますも[/KEYCONTAINER](keycontainer-specify-a-key-container-to-sign-an-assembly.md)します。 使用[/DELAYSIGN](delaysign-partially-sign-an-assembly.md)部分的に署名されたアセンブリを作成する場合。 参照してください[厳密な名前のアセンブリ (アセンブリ署名) (C +/cli CLI)](../../dotnet/strong-name-assemblies-assembly-signing-cpp-cli.md)アセンブリへの署名の詳細についてはします。
+[/KEYCONTAINER](keycontainer-specify-a-key-container-to-sign-an-assembly.md)を使用して、暗号化情報をリンカーに渡すこともできます。 部分署名されたアセンブリが必要な場合は、 [/DELAYSIGN](delaysign-partially-sign-an-assembly.md) を使用します。 アセンブリに署名する方法の詳細については、「 [厳密名アセンブリ (アセンブリ署名) (C++/cli)](../../dotnet/strong-name-assemblies-assembly-signing-cpp-cli.md) 」を参照してください。
 
-場合両方 **/KEYFILE**と **/KEYCONTAINER**が指定されて、リンカーは、キー コンテナーをまず (コマンド ライン オプションまたはカスタム属性によって)、します。 それが成功すると、アセンブリはキー コンテナーの情報で署名されます。 リンカーがキー コンテナーを見つけられない場合/KEYFILE で指定されたファイルが試みられます。 ファイルが検出された場合、アセンブリはキー ファイルの情報で署名され、キー情報はキー コンテナーにインストールされるため (sn -i と同様)、次のコンパイル時にはキー コンテナーが有効になります。
+コマンドラインオプションまたはカスタム属性によって、 **/keyfile** と **/KEYCONTAINER** の両方が指定されている場合、リンカーは最初にキーコンテナーを試します。 それが成功すると、アセンブリはキー コンテナーの情報で署名されます。 リンカーがキーコンテナーを見つけられない場合は、/KEYFILE. で指定されたファイルを使用します。 ファイルが検出された場合、アセンブリはキー ファイルの情報で署名され、キー情報はキー コンテナーにインストールされるため (sn -i と同様)、次のコンパイル時にはキー コンテナーが有効になります。
 
 キー ファイルには公開キーだけが含まれる場合があることに注意してください。
 
-参照してください[の作成と using strong-named Assemblies](/dotnet/framework/app-domains/create-and-use-strong-named-assemblies)アセンブリへの署名の詳細についてはします。
+アセンブリの署名の詳細については、「[厳密な名前付きアセンブリの作成と使用](/dotnet/framework/app-domains/create-and-use-strong-named-assemblies)」を参照してください。
 
-アセンブリの生成に影響するその他のリンカー オプションがあります。
+アセンブリの生成に影響を与える他のリンカーオプションは次のとおりです。
 
 - [/ASSEMBLYDEBUG](assemblydebug-add-debuggableattribute.md)
 
@@ -55,13 +56,13 @@ ms.locfileid: "62291562"
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのリンカー オプションを設定するには
 
-1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。 [Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)します。
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、[Visual Studio での C++ コンパイラとビルド プロパティの設定](../working-with-project-properties.md)に関するページを参照してください。
 
-1. をクリックして、**リンカー**フォルダー。
+1. **[リンカー]** フォルダーをクリックします。
 
 1. **[コマンド ライン]** プロパティ ページをクリックします。
 
-1. オプションを入力、**追加オプション**ボックス。
+1. [ **追加オプション** ] ボックスにオプションを入力します。
 
 ### <a name="to-set-this-linker-option-programmatically"></a>このリンカーをコードから設定するには
 

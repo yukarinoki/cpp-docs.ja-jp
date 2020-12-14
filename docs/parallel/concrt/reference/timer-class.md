@@ -1,4 +1,5 @@
 ---
+description: '詳細: timer クラス'
 title: timer クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -18,12 +19,12 @@ f1_keywords:
 helpviewer_keywords:
 - timer class
 ms.assetid: 4f4dea51-de9f-40f9-93f5-dd724c567b49
-ms.openlocfilehash: 026aef03bb813585decb206c1691835330a4dd05
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 460185f61be0dd33fe11dfa0f94e2147893089d9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87224943"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97188171"
 ---
 # <a name="timer-class"></a>timer クラス
 
@@ -45,14 +46,14 @@ class timer : public Concurrency::details::_Timer, public source_block<single_li
 
 ### <a name="public-constructors"></a>パブリック コンストラクター
 
-|名前|[説明]|
+|名前|説明|
 |----------|-----------------|
 |[期限](#ctor)|オーバーロードされます。 `timer`指定された期間の後に特定のメッセージを起動するメッセージングブロックを構築します。|
 |[~ timer デストラクター](#dtor)|`timer`メッセージングブロックを破棄します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
-|名前|[説明]|
+|名前|説明|
 |----------|-----------------|
 |[pause](#pause)|`timer`メッセージングブロックを停止します。 反復的なメッセージングブロックの場合は `timer` 、後続の呼び出しで再起動でき `start()` ます。 非繰り返しタイマーの場合、呼び出しと同じ効果があり `stop` ます。|
 |[start](#start)|`timer`メッセージングブロックを開始します。 このが呼び出されてから指定されたミリ秒数が経過すると、指定された値はとして下流に反映され `message` ます。|
@@ -60,7 +61,7 @@ class timer : public Concurrency::details::_Timer, public source_block<single_li
 
 ### <a name="protected-methods"></a>プロテクト メソッド
 
-|名前|[説明]|
+|名前|説明|
 |----------|-----------------|
 |[accept_message](#accept_message)|このメッセージングブロックによって提供されたメッセージを受け入れ `timer` 、所有権を呼び出し元に転送します。|
 |[consume_message](#consume_message)|によって提供され、ターゲットによって予約されているメッセージを使用して、 `timer` 所有権を呼び出し元に譲渡します。|
@@ -72,7 +73,7 @@ class timer : public Concurrency::details::_Timer, public source_block<single_li
 
 ## <a name="remarks"></a>解説
 
-詳細については、「[非同期メッセージブロック](../../../parallel/concrt/asynchronous-message-blocks.md)」を参照してください。
+詳細については、「 [非同期メッセージブロック](../../../parallel/concrt/asynchronous-message-blocks.md)」を参照してください。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -82,13 +83,13 @@ class timer : public Concurrency::details::_Timer, public source_block<single_li
 
 `timer`
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** agents.h
 
 **名前空間:** concurrency
 
-## <a name="accept_message"></a><a name="accept_message"></a>accept_message
+## <a name="accept_message"></a><a name="accept_message"></a> accept_message
 
 このメッセージングブロックによって提供されたメッセージを受け入れ `timer` 、所有権を呼び出し元に転送します。
 
@@ -105,7 +106,7 @@ virtual message<T>* accept_message(runtime_object_identity _MsgId);
 
 `message`呼び出し元が所有権を持っているオブジェクトへのポインター。
 
-## <a name="consume_message"></a><a name="consume_message"></a>consume_message
+## <a name="consume_message"></a><a name="consume_message"></a> consume_message
 
 によって提供され、ターゲットによって予約されているメッセージを使用して、 `timer` 所有権を呼び出し元に譲渡します。
 
@@ -126,7 +127,7 @@ virtual message<T>* consume_message(runtime_object_identity _MsgId);
 
 に似 `accept` ていますが、の前には常にが呼び出され `reserve` ます。
 
-## <a name="link_target_notification"></a><a name="link_target_notification"></a>link_target_notification
+## <a name="link_target_notification"></a><a name="link_target_notification"></a> link_target_notification
 
 新しいターゲットがこのメッセージングブロックにリンクされていることを通知するコールバック `timer` 。
 
@@ -139,7 +140,7 @@ virtual void link_target_notification(_Inout_ ITarget<T>* _PTarget);
 *_PTarget*<br/>
 新しくリンクされたターゲットへのポインター。
 
-## <a name="pause"></a><a name="pause"></a>停止
+## <a name="pause"></a><a name="pause"></a> 停止
 
 `timer`メッセージングブロックを停止します。 反復的なメッセージングブロックの場合は `timer` 、後続の呼び出しで再起動でき `start()` ます。 非繰り返しタイマーの場合、呼び出しと同じ効果があり `stop` ます。
 
@@ -147,7 +148,7 @@ virtual void link_target_notification(_Inout_ ITarget<T>* _PTarget);
 void pause();
 ```
 
-## <a name="propagate_to_any_targets"></a><a name="propagate_to_any_targets"></a>propagate_to_any_targets
+## <a name="propagate_to_any_targets"></a><a name="propagate_to_any_targets"></a> propagate_to_any_targets
 
 ブロックによって生成されたメッセージを、リンクされたすべてのターゲットに提供しようとし `timer` ます。
 
@@ -155,7 +156,7 @@ void pause();
 virtual void propagate_to_any_targets(_Inout_opt_ message<T> *);
 ```
 
-## <a name="release_message"></a><a name="release_message"></a>release_message
+## <a name="release_message"></a><a name="release_message"></a> release_message
 
 以前のメッセージ予約を解放します。
 
@@ -168,7 +169,7 @@ virtual void release_message(runtime_object_identity _MsgId);
 *_MsgId*<br/>
 `runtime_object_identity` `message` 解放されるオブジェクトの。
 
-## <a name="reserve_message"></a><a name="reserve_message"></a>reserve_message
+## <a name="reserve_message"></a><a name="reserve_message"></a> reserve_message
 
 このメッセージングブロックによって以前に提供されたメッセージを予約 `timer` します。
 
@@ -189,7 +190,7 @@ virtual bool reserve_message(runtime_object_identity _MsgId);
 
 が呼び出された後、 `reserve` がを返す場合 **`true`** `consume` は、 `release` メッセージの所有権を取得または解放するためにまたはのいずれかを呼び出す必要があります。
 
-## <a name="resume_propagation"></a><a name="resume_propagation"></a>resume_propagation
+## <a name="resume_propagation"></a><a name="resume_propagation"></a> resume_propagation
 
 予約が解放された後、伝達を再開します。
 
@@ -197,7 +198,7 @@ virtual bool reserve_message(runtime_object_identity _MsgId);
 virtual void resume_propagation();
 ```
 
-## <a name="start"></a><a name="start"></a>着手
+## <a name="start"></a><a name="start"></a> 着手
 
 `timer`メッセージングブロックを開始します。 このが呼び出されてから指定されたミリ秒数が経過すると、指定された値はとして下流に反映され `message` ます。
 
@@ -205,7 +206,7 @@ virtual void resume_propagation();
 void start();
 ```
 
-## <a name="stop"></a><a name="stop"></a>停止
+## <a name="stop"></a><a name="stop"></a> 停止
 
 `timer`メッセージングブロックを停止します。
 
@@ -213,7 +214,7 @@ void start();
 void stop();
 ```
 
-## <a name="timer"></a><a name="ctor"></a>期限
+## <a name="timer"></a><a name="ctor"></a> 期限
 
 `timer`指定された期間の後に特定のメッセージを起動するメッセージングブロックを構築します。
 
@@ -263,7 +264,7 @@ True の場合は、タイマーがミリ秒ごとに定期的に起動される
 
 `_Scheduler` または `_ScheduleGroup` パラメーターを指定しない場合、ランタイムは既定のスケジューラを使用しています。
 
-## <a name="timer"></a><a name="dtor"></a>~ timer
+## <a name="timer"></a><a name="dtor"></a> ~ timer
 
 `timer`メッセージングブロックを破棄します。
 

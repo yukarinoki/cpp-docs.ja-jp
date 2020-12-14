@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: structured_task_group クラス'
 title: structured_task_group クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -13,12 +14,12 @@ f1_keywords:
 helpviewer_keywords:
 - structured_task_group class
 ms.assetid: 742afa8c-c7b6-482c-b0ba-04c809927b22
-ms.openlocfilehash: 44fd2a42f4c98a569e985449f0c55102a9cbc3a6
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: c553f0d0b9b5abeb6e6cbdb12d1d9da5d048a6d6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87231677"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97188457"
 ---
 # <a name="structured_task_group-class"></a>structured_task_group クラス
 
@@ -47,7 +48,7 @@ class structured_task_group;
 |[is_canceling](#is_canceling)|タスクグループが現在キャンセル中であるかどうかを呼び出し元に通知します。 これは、必ずしもオブジェクトでメソッドが呼び出されたことを示しているわけではありません (ただし、このメソッドによって返されることは `cancel` `structured_task_group` 確かです **`true`** )。 `structured_task_group`オブジェクトがインラインで実行されていて、作業ツリー内のタスクグループが取り消された場合もあります。 このような場合、ランタイムは、キャンセルがこのオブジェクトを通過する前に事前に判断でき `structured_task_group` **`true`** ますが、も返されます。|
 |[実行](#run)|オーバーロードされます。 オブジェクトのタスクをスケジュール `structured_task_group` します。 呼び出し元は、パラメーターで渡されるオブジェクトの有効期間を管理し `task_handle` `_Task_handle` ます。 パラメーターを受け取るバージョンでは、 `_Placement` そのパラメーターによって指定された場所で実行されるようにタスクがバイアスされます。|
 |[run_and_wait](#run_and_wait)|オーバーロードされます。 オブジェクトを使用して、呼び出し元のコンテキストでインラインで実行されるタスクをスケジュールし、 `structured_task_group` 完全なキャンセルをサポートします。 `task_handle`オブジェクトがのパラメーターとして渡された場合 `run_and_wait` 、呼び出し元はオブジェクトの有効期間を管理し `task_handle` ます。 次に、関数は、オブジェクトのすべての作業が完了するか取り消されるまで待機し `structured_task_group` ます。|
-|[待機](#wait)|のすべての作業が完了するか、取り消されるまで待機 `structured_task_group` します。|
+|[wait](#wait)|のすべての作業が完了するか、取り消されるまで待機 `structured_task_group` します。|
 
 ## <a name="remarks"></a>解説
 
@@ -61,19 +62,19 @@ class structured_task_group;
 
 - 一般クラスとは異なり `task_group` 、クラスのすべての状態 `structured_task_group` は final です。 グループに対してタスクをキューに入れて完了を待機した後、同じグループを再度使用することはできません。
 
-詳細については、「[タスクの並列](../../../parallel/concrt/task-parallelism-concurrency-runtime.md)化」を参照してください。
+詳細については、「 [タスクの並列](../../../parallel/concrt/task-parallelism-concurrency-runtime.md)化」を参照してください。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
 `structured_task_group`
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** ppl
 
 **名前空間:** concurrency
 
-## <a name="cancel"></a><a name="cancel"></a>キャンセル
+## <a name="cancel"></a><a name="cancel"></a> キャンセル
 
 では、このタスクグループをルートとする作業のサブツリーをキャンセルすることをお勧めします。 タスクグループにスケジュールされているすべてのタスクは、可能な場合は推移的に取り消されます。
 
@@ -83,9 +84,9 @@ void cancel();
 
 ### <a name="remarks"></a>解説
 
-詳細については、「[キャンセル](../../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md#cancellation)」を参照してください。
+詳細については、「 [キャンセル](../../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md#cancellation)」を参照してください。
 
-## <a name="is_canceling"></a><a name="is_canceling"></a>is_canceling
+## <a name="is_canceling"></a><a name="is_canceling"></a> is_canceling
 
 タスクグループが現在キャンセル中であるかどうかを呼び出し元に通知します。 これは、必ずしもオブジェクトでメソッドが呼び出されたことを示しているわけではありません (ただし、このメソッドによって返されることは `cancel` `structured_task_group` 確かです **`true`** )。 `structured_task_group`オブジェクトがインラインで実行されていて、作業ツリー内のタスクグループが取り消された場合もあります。 このような場合、ランタイムは、キャンセルがこのオブジェクトを通過する前に事前に判断でき `structured_task_group` **`true`** ますが、も返されます。
 
@@ -99,9 +100,9 @@ bool is_canceling();
 
 ### <a name="remarks"></a>解説
 
-詳細については、「[キャンセル](../../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md#cancellation)」を参照してください。
+詳細については、「 [キャンセル](../../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md#cancellation)」を参照してください。
 
-## <a name="run"></a><a name="run"></a>実行
+## <a name="run"></a><a name="run"></a> 実行
 
 オブジェクトのタスクをスケジュール `structured_task_group` します。 呼び出し元は、パラメーターで渡されるオブジェクトの有効期間を管理し `task_handle` `_Task_handle` ます。 パラメーターを受け取るバージョンでは、 `_Placement` そのパラメーターによって指定された場所で実行されるようにタスクがバイアスされます。
 
@@ -133,9 +134,9 @@ void run(
 
 `structured_task_group`例外からのスタックアンワインドの結果として destructs が発生した場合、 `wait` メソッドまたはメソッドのいずれかに対して呼び出しが行われたことを保証する必要はありません `run_and_wait` 。 この場合、デストラクターは適切にキャンセルされ、パラメーターによって表されるタスクが完了するまで待機し `_Task_handle` ます。
 
-は、 [invalid_multiple_scheduling](invalid-multiple-scheduling-class.md)パラメーターによって指定されたタスクハンドルがメソッドを使用して `_Task_handle` タスクグループオブジェクトに既にスケジュールされて `run` おり、 `wait` `run_and_wait` そのタスクグループに対してメソッドまたはメソッドの呼び出しが介在していない場合に、invalid_multiple_scheduling 例外をスローします。
+は、 [](invalid-multiple-scheduling-class.md)パラメーターによって指定されたタスクハンドルがメソッドを使用して `_Task_handle` タスクグループオブジェクトに既にスケジュールされて `run` おり、 `wait` `run_and_wait` そのタスクグループに対してメソッドまたはメソッドの呼び出しが介在していない場合に、invalid_multiple_scheduling 例外をスローします。
 
-## <a name="run_and_wait"></a><a name="run_and_wait"></a>run_and_wait
+## <a name="run_and_wait"></a><a name="run_and_wait"></a> run_and_wait
 
 オブジェクトを使用して、呼び出し元のコンテキストでインラインで実行されるタスクをスケジュールし、 `structured_task_group` 完全なキャンセルをサポートします。 `task_handle`オブジェクトがのパラメーターとして渡された場合 `run_and_wait` 、呼び出し元はオブジェクトの有効期間を管理し `task_handle` ます。 次に、関数は、オブジェクトのすべての作業が完了するか取り消されるまで待機し `structured_task_group` ます。
 
@@ -160,7 +161,7 @@ task_group_status run_and_wait(const _Function& _Func);
 
 ### <a name="return-value"></a>戻り値
 
-明示的な取り消し操作、またはそのタスクの1つからスローされた例外が原因で、待機が満たされたか、タスクグループが取り消されたかを示す値。 詳細については、「」を参照してください[task_group_status](concurrency-namespace-enums.md)
+明示的な取り消し操作、またはそのタスクの1つからスローされた例外が原因で、待機が満たされたか、タスクグループが取り消されたかを示す値。 詳細については、「」を参照してください [task_group_status](concurrency-namespace-enums.md)
 
 ### <a name="remarks"></a>解説
 
@@ -172,7 +173,7 @@ task_group_status run_and_wait(const _Function& _Func);
 
 実行の例外的なパスでは、 `wait` のデストラクターが実行される前に、このメソッドまたはメソッドのいずれかを呼び出す必要があり `structured_task_group` ます。
 
-## <a name="structured_task_group"></a><a name="ctor"></a>structured_task_group
+## <a name="structured_task_group"></a><a name="ctor"></a> structured_task_group
 
 新しい `structured_task_group` オブジェクトを構築します。
 
@@ -191,7 +192,7 @@ structured_task_group(cancellation_token _CancellationToken);
 
 キャンセルトークンを受け取るコンストラクターは、 `structured_task_group` トークンに関連付けられているソースが取り消されたときにキャンセルされるを作成します。 また、明示的なキャンセルトークンを指定すると、この構造化タスクグループは、別のトークンまたはトークンを持たない親グループからの暗黙的な取り消しに参加しないように分離されます。
 
-## <a name="structured_task_group"></a><a name="dtor"></a>~ structured_task_group
+## <a name="structured_task_group"></a><a name="dtor"></a> ~ structured_task_group
 
 `structured_task_group` オブジェクトを破棄します。 `wait` `run_and_wait` 例外が原因でスタックアンワインドの結果としてデストラクターが実行されていない限り、デストラクターを実行する前に、オブジェクトに対してメソッドまたはメソッドのいずれかを呼び出す必要があります。
 
@@ -201,9 +202,9 @@ structured_task_group(cancellation_token _CancellationToken);
 
 ### <a name="remarks"></a>解説
 
-デストラクターが通常の実行の結果として実行された場合 (たとえば、例外が原因でスタックアンワインドが発生していない場合)、 `wait` `run_and_wait` メソッドもメソッドも呼び出されていないと、デストラクターが[missing_wait](missing-wait-class.md)例外をスローする可能性があります。
+デストラクターが通常の実行の結果として実行された場合 (たとえば、例外が原因でスタックアンワインドが発生していない場合)、 `wait` `run_and_wait` メソッドもメソッドも呼び出されていないと、デストラクターが [missing_wait](missing-wait-class.md) 例外をスローする可能性があります。
 
-## <a name="wait"></a><a name="wait"></a>待機
+## <a name="wait"></a><a name="wait"></a> 待機
 
 のすべての作業が完了するか、取り消されるまで待機 `structured_task_group` します。
 
@@ -213,7 +214,7 @@ task_group_status wait();
 
 ### <a name="return-value"></a>戻り値
 
-明示的な取り消し操作、またはそのタスクの1つからスローされた例外が原因で、待機が満たされたか、タスクグループが取り消されたかを示す値。 詳細については、「」を参照してください[task_group_status](concurrency-namespace-enums.md)
+明示的な取り消し操作、またはそのタスクの1つからスローされた例外が原因で、待機が満たされたか、タスクグループが取り消されたかを示す値。 詳細については、「」を参照してください [task_group_status](concurrency-namespace-enums.md)
 
 ### <a name="remarks"></a>解説
 

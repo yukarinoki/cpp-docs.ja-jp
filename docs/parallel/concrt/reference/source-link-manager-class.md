@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: source_link_manager クラス'
 title: source_link_manager クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -17,12 +18,12 @@ f1_keywords:
 helpviewer_keywords:
 - source_link_manager class
 ms.assetid: 287487cf-e0fe-4c35-aa3c-24f081d1ddae
-ms.openlocfilehash: 98f99bb5aec85a640eaf83a07fae3a1b667f7d91
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 132dc2db07a1c9abeeb04672f97e262761764feb
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87228428"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97188509"
 ---
 # <a name="source_link_manager-class"></a>source_link_manager クラス
 
@@ -44,7 +45,7 @@ class source_link_manager;
 
 ### <a name="public-typedefs"></a>パブリック typedef
 
-|名前|[説明]|
+|名前|説明|
 |----------|-----------------|
 |`const_pointer`|**`const`** オブジェクト内の要素へのポインターを提供する型 `source_link_manager` 。|
 |`const_reference`|**`const`** `source_link_manager` 読み取りと const 操作の実行のために、オブジェクトに格納されている要素への参照を提供する型。|
@@ -53,7 +54,7 @@ class source_link_manager;
 
 ### <a name="public-constructors"></a>パブリック コンストラクター
 
-|名前|[説明]|
+|名前|説明|
 |----------|-----------------|
 |[source_link_manager](#ctor)|`source_link_manager` オブジェクトを構築します。|
 |[~ source_link_manager デストラクター](#dtor)|`source_link_manager` オブジェクトを破棄します。|
@@ -80,13 +81,13 @@ class source_link_manager;
 
 `source_link_manager`
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** agents.h
 
 **名前空間:** concurrency
 
-## <a name="add"></a><a name="add"></a>アドイン
+## <a name="add"></a><a name="add"></a> アドイン
 
 オブジェクトにソースリンクを追加し `source_link_manager` ます。
 
@@ -99,7 +100,7 @@ void add(_EType _Link);
 *_Link*<br/>
 追加するブロックへのポインター。
 
-## <a name="begin"></a><a name="begin"></a>初め
+## <a name="begin"></a><a name="begin"></a> begin
 
 オブジェクト内の最初の要素を指す反復子を返し `source_link_manager` ます。
 
@@ -115,7 +116,7 @@ iterator begin();
 
 反復子の終了状態は、リンクによって示され `NULL` ます。
 
-## <a name="contains"></a><a name="contains"></a>は
+## <a name="contains"></a><a name="contains"></a> は
 
 `network_link_registry`このオブジェクト内で、指定したブロックを検索し `source_link_manager` ます。
 
@@ -132,7 +133,7 @@ bool contains(_EType _Link);
 
 **`true`** 指定されたブロックが見つかった場合は **`false`** 。それ以外の場合は。
 
-## <a name="count"></a><a name="count"></a>数
+## <a name="count"></a><a name="count"></a> 数
 
 オブジェクト内のリンクされたブロックの数をカウントし `source_link_manager` ます。
 
@@ -144,7 +145,7 @@ size_t count();
 
 オブジェクト内のリンクされたブロックの数 `source_link_manager` 。
 
-## <a name="reference"></a><a name="reference"></a>「
+## <a name="reference"></a><a name="reference"></a> 「
 
 オブジェクトの参照を取得 `source_link_manager` します。
 
@@ -152,7 +153,7 @@ size_t count();
 void reference();
 ```
 
-## <a name="register_target_block"></a><a name="register_target_block"></a>register_target_block
+## <a name="register_target_block"></a><a name="register_target_block"></a> register_target_block
 
 このオブジェクトを保持するターゲットブロックを登録 `source_link_manager` します。
 
@@ -165,7 +166,7 @@ void register_target_block(_Inout_ ITarget<typename _Block::source_type>* _PTarg
 *_PTarget*<br/>
 このオブジェクトを保持しているターゲットブロック `source_link_manager` 。
 
-## <a name="release"></a><a name="release"></a>解除
+## <a name="release"></a><a name="release"></a> 解除
 
 オブジェクトの参照を解放し `source_link_manager` ます。
 
@@ -173,7 +174,7 @@ void register_target_block(_Inout_ ITarget<typename _Block::source_type>* _PTarg
 void release();
 ```
 
-## <a name="remove"></a><a name="remove"></a>から
+## <a name="remove"></a><a name="remove"></a> から
 
 オブジェクトからリンクを削除 `source_link_manager` します。
 
@@ -190,7 +191,7 @@ bool remove(_EType _Link);
 
 **`true`** リンクが見つかり、削除された場合は **`false`** 。それ以外の場合は。
 
-## <a name="set_bound"></a><a name="set_bound"></a>set_bound
+## <a name="set_bound"></a><a name="set_bound"></a> set_bound
 
 このオブジェクトに追加できるソースリンクの最大数を設定し `source_link_manager` ます。
 
@@ -203,7 +204,7 @@ void set_bound(size_t _MaxLinks);
 *_MaxLinks*<br/>
 リンクの最大数。
 
-## <a name="source_link_manager"></a><a name="ctor"></a>source_link_manager
+## <a name="source_link_manager"></a><a name="ctor"></a> source_link_manager
 
 `source_link_manager` オブジェクトを構築します。
 
@@ -211,7 +212,7 @@ void set_bound(size_t _MaxLinks);
 source_link_manager();
 ```
 
-## <a name="source_link_manager"></a><a name="dtor"></a>~ source_link_manager
+## <a name="source_link_manager"></a><a name="dtor"></a> ~ source_link_manager
 
 `source_link_manager` オブジェクトを破棄します。
 

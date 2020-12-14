@@ -1,4 +1,5 @@
 ---
+description: '詳細: トランスフォーマークラス'
 title: transformer クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -18,12 +19,12 @@ f1_keywords:
 helpviewer_keywords:
 - transformer class
 ms.assetid: eea71925-7043-4a92-bfd4-dbc0ece5d081
-ms.openlocfilehash: adc83ab2d8268460b3a35be44f5733c8b6fa1c43
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 34d937d1be1c3907ea75d0345bb52bcf359d4f34
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87217897"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97188132"
 ---
 # <a name="transformer-class"></a>transformer クラス
 
@@ -71,7 +72,7 @@ class transformer : public propagator_block<single_link_registry<ITarget<_Output
 
 ## <a name="remarks"></a>解説
 
-詳細については、「[非同期メッセージブロック](../../../parallel/concrt/asynchronous-message-blocks.md)」を参照してください。
+詳細については、「 [非同期メッセージブロック](../../../parallel/concrt/asynchronous-message-blocks.md)」を参照してください。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -85,13 +86,13 @@ class transformer : public propagator_block<single_link_registry<ITarget<_Output
 
 `transformer`
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** agents.h
 
 **名前空間:** concurrency
 
-## <a name="accept_message"></a><a name="accept_message"></a>accept_message
+## <a name="accept_message"></a><a name="accept_message"></a> accept_message
 
 このメッセージングブロックによって提供されたメッセージを受け入れ `transformer` 、所有権を呼び出し元に転送します。
 
@@ -108,7 +109,7 @@ virtual message<_Output>* accept_message(runtime_object_identity _MsgId);
 
 `message`呼び出し元が所有権を持っているオブジェクトへのポインター。
 
-## <a name="consume_message"></a><a name="consume_message"></a>consume_message
+## <a name="consume_message"></a><a name="consume_message"></a> consume_message
 
 によって提供され、ターゲットによって予約されているメッセージを使用して、 `transformer` 所有権を呼び出し元に譲渡します。
 
@@ -129,7 +130,7 @@ virtual message<_Output>* consume_message(runtime_object_identity _MsgId);
 
 に似 `accept` ていますが、の前には常にが呼び出され `reserve` ます。
 
-## <a name="link_target_notification"></a><a name="link_target_notification"></a>link_target_notification
+## <a name="link_target_notification"></a><a name="link_target_notification"></a> link_target_notification
 
 新しいターゲットがこのメッセージングブロックにリンクされていることを通知するコールバック `transformer` 。
 
@@ -137,7 +138,7 @@ virtual message<_Output>* consume_message(runtime_object_identity _MsgId);
 virtual void link_target_notification(_Inout_ ITarget<_Output> *);
 ```
 
-## <a name="propagate_message"></a><a name="propagate_message"></a>propagate_message
+## <a name="propagate_message"></a><a name="propagate_message"></a> propagate_message
 
 `ISource`ブロックからこのメッセージングブロックに非同期的にメッセージを渡し `transformer` ます。 これは、 `propagate` ソースブロックによって呼び出されたときに、メソッドによって呼び出されます。
 
@@ -157,9 +158,9 @@ virtual message_status propagate_message(
 
 ### <a name="return-value"></a>戻り値
 
-対象がメッセージに対して実行することを決定した[message_status](concurrency-namespace-enums.md)を示します。
+対象がメッセージに対して実行することを決定した [message_status](concurrency-namespace-enums.md) を示します。
 
-## <a name="propagate_to_any_targets"></a><a name="propagate_to_any_targets"></a>propagate_to_any_targets
+## <a name="propagate_to_any_targets"></a><a name="propagate_to_any_targets"></a> propagate_to_any_targets
 
 入力メッセージに対してトランスフォーマー関数を実行します。
 
@@ -167,7 +168,7 @@ virtual message_status propagate_message(
 virtual void propagate_to_any_targets(_Inout_opt_ message<_Output> *);
 ```
 
-## <a name="release_message"></a><a name="release_message"></a>release_message
+## <a name="release_message"></a><a name="release_message"></a> release_message
 
 以前のメッセージ予約を解放します。
 
@@ -180,7 +181,7 @@ virtual void release_message(runtime_object_identity _MsgId);
 *_MsgId*<br/>
 `runtime_object_identity` `message` 解放されるオブジェクトの。
 
-## <a name="reserve_message"></a><a name="reserve_message"></a>reserve_message
+## <a name="reserve_message"></a><a name="reserve_message"></a> reserve_message
 
 このメッセージングブロックによって以前に提供されたメッセージを予約 `transformer` します。
 
@@ -201,7 +202,7 @@ virtual bool reserve_message(runtime_object_identity _MsgId);
 
 が呼び出された後、 `reserve` がを返す場合 **`true`** `consume` は、 `release` メッセージの所有権を取得または解放するためにまたはのいずれかを呼び出す必要があります。
 
-## <a name="resume_propagation"></a><a name="resume_propagation"></a>resume_propagation
+## <a name="resume_propagation"></a><a name="resume_propagation"></a> resume_propagation
 
 予約が解放された後、伝達を再開します。
 
@@ -209,7 +210,7 @@ virtual bool reserve_message(runtime_object_identity _MsgId);
 virtual void resume_propagation();
 ```
 
-## <a name="send_message"></a><a name="send_message"></a>send_message
+## <a name="send_message"></a><a name="send_message"></a> send_message
 
 `ISource`ブロックからこのメッセージングブロックにメッセージを同期的に渡し `transformer` ます。 これは、 `send` ソースブロックによって呼び出されたときに、メソッドによって呼び出されます。
 
@@ -229,9 +230,9 @@ virtual message_status send_message(
 
 ### <a name="return-value"></a>戻り値
 
-対象がメッセージに対して実行することを決定した[message_status](concurrency-namespace-enums.md)を示します。
+対象がメッセージに対して実行することを決定した [message_status](concurrency-namespace-enums.md) を示します。
 
-## <a name="supports_anonymous_source"></a><a name="supports_anonymous_source"></a>supports_anonymous_source
+## <a name="supports_anonymous_source"></a><a name="supports_anonymous_source"></a> supports_anonymous_source
 
 このブロックがリンクされて `supports_anonymous_source` いないソースによって提供されるメッセージを受け入れることができることを示すために、メソッドをオーバーライドします。
 
@@ -243,7 +244,7 @@ virtual bool supports_anonymous_source();
 
 **`true`** ブロックは提供されたメッセージを延期しないためです。
 
-## <a name="transformer"></a><a name="ctor"></a>変換
+## <a name="transformer"></a><a name="ctor"></a> 変換
 
 `transformer` メッセージング ブロックを構築します。
 
@@ -305,7 +306,7 @@ transformer(
 
 この型は、提供された `filter_method` `bool (_Input const &)` メッセージを `transformer` 受け入れるかどうかを判断するために、このメッセージングブロックによって呼び出される、シグネチャを持つファンクタです。
 
-## <a name="transformer"></a><a name="dtor"></a>~ トランスフォーマー
+## <a name="transformer"></a><a name="dtor"></a> ~ トランスフォーマー
 
 `transformer`メッセージングブロックを破棄します。
 

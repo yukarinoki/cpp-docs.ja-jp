@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: unsupported_os クラス'
 title: unsupported_os クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - unsupported_os class
 ms.assetid: 6fa57636-341b-4b51-84cc-261d283ff736
-ms.openlocfilehash: 253cd76182e1b6f85be3701663bd10c86c10e6ba
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: 1f9ee74db42d2b34c1b4e24a1951d84a442224bc
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77142342"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97188093"
 ---
 # <a name="unsupported_os-class"></a>unsupported_os クラス
 
@@ -29,7 +30,7 @@ class unsupported_os : public std::exception;
 
 ### <a name="public-constructors"></a>パブリック コンストラクター
 
-|Name|説明|
+|名前|説明|
 |----------|-----------------|
 |[unsupported_os](#ctor)|オーバーロードされます。 `unsupported_os` オブジェクトを構築します。|
 
@@ -45,7 +46,7 @@ class unsupported_os : public std::exception;
 
 **名前空間:** concurrency
 
-## <a name="ctor"></a>unsupported_os
+## <a name="unsupported_os"></a><a name="ctor"></a> unsupported_os
 
 `unsupported_os` オブジェクトを構築します。
 
@@ -62,6 +63,6 @@ unsupported_os() throw();
 *_Message*<br/>
 エラーの説明メッセージ。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[コンカレンシー名前空間](concurrency-namespace.md)
+[concurrency 名前空間](concurrency-namespace.md)
