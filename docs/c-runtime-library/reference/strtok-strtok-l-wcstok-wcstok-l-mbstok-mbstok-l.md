@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: strtok、_strtok_l、wcstok、_wcstok_l、_mbstok、_mbstok_l'
 title: strtok、_strtok_l、wcstok、_wcstok_l、_mbstok、_mbstok_l
 ms.date: 6/24/2020
 api_name:
@@ -53,19 +54,19 @@ helpviewer_keywords:
 - _tcstok_l function
 - strtok_l function
 ms.assetid: 904cb734-f0d7-4d77-ba81-4791ddf461ae
-ms.openlocfilehash: bf59d34c17165f9f5165a5a4bdb82ad5a82c737e
-ms.sourcegitcommit: 8fd49f8ac20457710ceb5403ca46fc73cb3f95f8
+ms.openlocfilehash: 8172a049c95f2ef7b436c23b94099c61cde96cde
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85737517"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97288686"
 ---
 # <a name="strtok-_strtok_l-wcstok-_wcstok_l-_mbstok-_mbstok_l"></a>strtok、_strtok_l、wcstok、_wcstok_l、_mbstok、_mbstok_l
 
 現在のロケールまたは渡された指定のロケールを使用して、文字列内の次のトークンを検索します。 これらの関数にはセキュリティが強化されたバージョンがあります。「[strtok_s、_strtok_s_l、wcstok_s、_wcstok_s_l、_mbstok_s、_mbstok_s_l](strtok-s-strtok-s-l-wcstok-s-wcstok-s-l-mbstok-s-mbstok-s-l.md)」を参照してください。
 
 > [!IMPORTANT]
-> **_mbstok**と **_mbstok_l**は、Windows ランタイムで実行されるアプリケーションでは使用できません。 詳細については、「[ユニバーサル Windows プラットフォーム アプリでサポートされていない CRT 関数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)」を参照してください。
+> **_mbstok** と **_mbstok_l** は、Windows ランタイムで実行されるアプリケーションでは使用できません。 詳細については、「[ユニバーサル Windows プラットフォーム アプリでサポートされていない CRT 関数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)」を参照してください。
 
 ## <a name="syntax"></a>構文
 
@@ -116,26 +117,26 @@ unsigned char *_mbstok_l(
 使用するロケール。
 
 *context*<br/>
-パーサーの内部状態を格納するために使用されるメモリを指します。これにより、次に**wcstok**を呼び出すときに、パーサーは中断した場所から続行できます。
+パーサーの内部状態を格納するために使用されるメモリを指します。これにより、次に **wcstok** を呼び出すときに、パーサーは中断した場所から続行できます。
 
 ## <a name="return-value"></a>戻り値
 
-*StrToken*で見つかった次のトークンへのポインターを返します。 これらの関数は、トークンが見つからない場合は**NULL**を返します。 各呼び出しは、返されたトークンの後に出現する最初の区切り記号として null 文字を置換することで、 *strToken*を変更します。
+*StrToken* で見つかった次のトークンへのポインターを返します。 これらの関数は、トークンが見つからない場合は **NULL** を返します。 各呼び出しは、返されたトークンの後に出現する最初の区切り記号として null 文字を置換することで、 *strToken* を変更します。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-**Strtok**関数は、 *strToken*内の次のトークンを検索します。 *Strdelimit*の文字セットは、現在の呼び出しの*strToken*にあるトークンの有効な区切り記号を指定します。 **wcstok**と **_mbstok**は、 **strtok**のワイド文字バージョンとマルチバイト文字バージョンです。 **Wcstok**の引数と戻り値はワイド文字列です。これらの **_mbstok**はマルチバイト文字列です。 それ以外では、これらの関数の動作は同じです。
+**Strtok** 関数は、 *strToken* 内の次のトークンを検索します。 *Strdelimit* の文字セットは、現在の呼び出しの *strToken* にあるトークンの有効な区切り記号を指定します。 **wcstok** と **_mbstok** は、 **strtok** のワイド文字バージョンとマルチバイト文字バージョンです。 **Wcstok** の引数と戻り値はワイド文字列です。これらの **_mbstok** はマルチバイト文字列です。 それ以外では、これらの関数の動作は同じです。
 
-**Wcstok**の2つの引数のバージョンは標準ではありません。 このバージョンを使用する必要がある場合は、 `_CRT_NON_CONFORMING_WCSTOK` (または) の前にを定義する必要があり `#include <wchar.h>` `#include <string.h>` ます。
+**Wcstok** の2つの引数のバージョンは標準ではありません。 このバージョンを使用する必要がある場合は、 `_CRT_NON_CONFORMING_WCSTOK` (または) の前にを定義する必要があり `#include <wchar.h>` `#include <string.h>` ます。
 
 > [!IMPORTANT]
 > これらの関数は、バッファー オーバーランが原因で発生する可能性のある問題の影響を受けます。 バッファー オーバーランは、システムを攻撃するときによく使用される方法であり、その結果、認められていない権限が昇格されます。 詳しくは、「 [バッファー オーバーランの回避](/windows/win32/SecBP/avoiding-buffer-overruns)」をご覧ください。
 
-**Strtok**の最初の呼び出しでは、関数は先頭の区切り記号をスキップし、 *strToken*の最初のトークンへのポインターを返し、null 文字でトークンを終了します。 *StrToken*の残りの部分から、 **strtok**の一連の呼び出しによって、より多くのトークンを分割できます。 **Strtok**を呼び出すたびに、その呼び出しによって返された**トークン**の後に null 文字を挿入することによって*strToken*が変更されます。 *StrToken*から次のトークンを読み取るには、 *StrToken*引数に**NULL**値を指定して**strtok**を呼び出します。 **NULL**の*strToken*引数を指定すると、 **strtok**は、変更された*strToken*内の次のトークンを検索します。 *Strdelimit*引数は、区切り記号のセットが異なる可能性があるため、次の呼び出しのいずれかの値を受け取ることができます。
+**Strtok** の最初の呼び出しでは、関数は先頭の区切り記号をスキップし、 *strToken* の最初のトークンへのポインターを返し、null 文字でトークンを終了します。 *StrToken* の残りの部分から、 **strtok** の一連の呼び出しによって、より多くのトークンを分割できます。 **Strtok** を呼び出すたびに、その呼び出しによって返された **トークン** の後に null 文字を挿入することによって *strToken* が変更されます。 *StrToken* から次のトークンを読み取るには、 *StrToken* 引数に **NULL** 値を指定して **strtok** を呼び出します。 **NULL** の *strToken* 引数を指定すると、 **strtok** は、変更された *strToken* 内の次のトークンを検索します。 *Strdelimit* 引数は、区切り記号のセットが異なる可能性があるため、次の呼び出しのいずれかの値を受け取ることができます。
 
-出力値は、ロケールの**LC_CTYPE**カテゴリの設定に影響されます。 詳細については、「[setlocale](setlocale-wsetlocale.md)」をご覧ください。
+出力値は、ロケールの **LC_CTYPE** カテゴリの設定に影響されます。 詳細については、「[setlocale](setlocale-wsetlocale.md)」をご覧ください。
 
-**_L**サフィックスが付いていないこれらの関数のバージョンは、このロケールに依存する動作に現在のロケールを使用します。 **_L**サフィックスが付いているバージョンは、渡されたロケールパラメーターを代わりに使用する点を除いて同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
+**_L** サフィックスが付いていないこれらの関数のバージョンは、このロケールに依存する動作に現在のロケールを使用します。 **_L** サフィックスが付いているバージョンは、渡されたロケールパラメーターを代わりに使用する点を除いて同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
 
 > [!NOTE]
 > 各関数は、文字列をトークンに解析する際にスレッド ローカルの静的変数を使用します。 したがって、複数のスレッドが望ましくない影響を受けずに同時にこれらの関数を呼び出すことができます。 ただし、1 つのスレッド内でこれらの関数のいずれかの呼び出しをインターリーブすると、データの破損や正確でない結果が生成される可能性が非常に高くなります。 さまざまな文字列を解析する際、1 つの文字列の解析を完了してから、次の解析を開始します。 また、別の関数が呼び出されているループから、これらの関数の 1 つを呼び出す場合の危険性にも注意してください。 他の関数が最終的にこれらの関数の 1 つを使用した場合、インターリーブされた呼び出しのシーケンスにより、データの破損を招くことがあります。
@@ -209,7 +210,7 @@ tokens
 ## <a name="see-also"></a>関連項目
 
 [文字列操作](../../c-runtime-library/string-manipulation-crt.md)<br/>
-[Locale](../../c-runtime-library/locale.md)<br/>
-[マルチバイト文字のシーケンスの解釈](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[ロケール](../../c-runtime-library/locale.md)<br/>
+[Multibyte-Character シーケンスの解釈](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [strcspn、wcscspn、_mbscspn、_mbscspn_l](strcspn-wcscspn-mbscspn-mbscspn-l.md)<br/>
 [strspn、wcsspn、_mbsspn、_mbsspn_l](strspn-wcsspn-mbsspn-mbsspn-l.md)<br/>

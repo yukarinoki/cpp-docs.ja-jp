@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: _set_fmode'
 title: _set_fmode
 ms.date: 4/2/2020
 api_name:
@@ -30,12 +31,12 @@ helpviewer_keywords:
 - file translation [C++], setting mode
 - set_fmode function
 ms.assetid: f80eb9c7-733b-4652-a9bc-6b3790a35f12
-ms.openlocfilehash: 6d72baeecefb117f0d7b8258728ec299a31f710a
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 8f33a0024ad2746974440166f564f8dd41756de5
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82913040"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97288790"
 ---
 # <a name="_set_fmode"></a>_set_fmode
 
@@ -52,25 +53,25 @@ errno_t _set_fmode(
 ### <a name="parameters"></a>パラメーター
 
 *mode*<br/>
-必要なファイル変換モード: **_O_TEXT**または **_O_BINARY**。
+必要なファイル変換モード: **_O_TEXT** または **_O_BINARY**。
 
 ## <a name="return-value"></a>戻り値
 
-正常終了した場合は 0 を、失敗した場合はエラー コードを返します。 *Mode*が **_O_TEXT**でない場合や **_O_BINARY**または **_O_WTEXT**場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、この関数は**errno**を**einval**に設定し、 **einval**を返します。
+正常終了した場合は 0 を、失敗した場合はエラー コードを返します。 *Mode* が **_O_TEXT** でない場合や **_O_BINARY** または **_O_WTEXT** 場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、この関数は **errno** を **einval** に設定し、 **einval** を返します。
 
 ## <a name="remarks"></a>解説
 
-この関数は、[_fmode](../../c-runtime-library/fmode.md) グローバル変数を設定します。 この変数は、ファイル i/o 操作 **_open**および **_pipe**の既定のファイル変換モードを指定します。
+この関数は、[_fmode](../../c-runtime-library/fmode.md) グローバル変数を設定します。 この変数は、ファイル i/o 操作 **_open** および **_pipe** の既定のファイル変換モードを指定します。
 
-**_O_TEXT**と **_O_BINARY**は、Fcntl. h で定義されています。 **EINVAL**は、Errno に定義されています。
+**_O_TEXT** と **_O_BINARY** は、Fcntl. h で定義されています。 **EINVAL** は、Errno に定義されています。
 
 既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|オプション ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|オプション ヘッダー|
 |-------------|---------------------|---------------------|
-|**_set_fmode**|\<stdlib.h>|\<fcntl.h>、\<errno.h>|
+|**_set_fmode**|\<stdlib.h>|\<fcntl.h>, \<errno.h>|
 
 互換性について詳しくは、「 [Compatibility](../../c-runtime-library/compatibility.md)」をご覧ください。
 
