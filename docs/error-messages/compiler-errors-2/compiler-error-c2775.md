@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「コンパイラエラー C2775」を参照してください。
 title: コンパイラエラー C2775
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2775
 ms.assetid: 9c488508-ade0-48f1-b94f-d538d15f807a
-ms.openlocfilehash: be858c7508aa520f78ec144b02738af02099b49b
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: f7a24cfa3b868d08c86a08deaa13ec6067f4a9eb
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74740053"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97298163"
 ---
 # <a name="compiler-error-c2775"></a>コンパイラエラー C2775
 
 ' identifier ': このプロパティに関連付けられている ' get ' メソッドはありません
 
-[プロパティ](../../cpp/property-cpp.md)拡張属性を使用して宣言されたデータメンバーには `get` 関数が指定されていませんが、式がその値を取得しようとしています。
+[プロパティ](../../cpp/property-cpp.md)拡張属性を使用して宣言されたデータメンバーに関数が指定されていません `get` が、式がその値を取得しようとしています。
 
 次の例では、C2775 が生成されます。
 

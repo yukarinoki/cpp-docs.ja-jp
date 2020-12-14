@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: コンパイラの警告 (レベル 4) C4121'
 title: コンパイラの警告 (レベル 4) C4121
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4121
 ms.assetid: 8c5b85c9-2543-426b-88bc-319c50158c7e
-ms.openlocfilehash: 0e5bdab6ff0d0508abaf5f726d1356102cfca04a
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 7639bb6f5905fd1fdb782770feccf03b69d594b4
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87219977"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97261958"
 ---
 # <a name="compiler-warning-level-4-c4121"></a>コンパイラの警告 (レベル 4) C4121
 
@@ -39,4 +40,4 @@ struct s
 
 この警告は、コンパイラがデータ メンバーの前に埋め込みを追加した場合にのみ発生します。 パッキングによってデータ型用にアラインされていないメモリ位置にデータが配置されたが、データ メンバーの前に埋め込みが追加されなかったときは発生しません。 データのサイズの倍数となる境界でデータがアラインされていないと、パフォーマンスが低下する可能性があります。 アラインされていないデータの読み取りおよび書き込みにより、一部のアーキテクチャでプロセッサ障害が発生した場合は、その障害の解決に桁違いの時間がかかる場合があります。 アラインされていないデータのアクセスは、一部の RISC アーキテクチャには移植できません。
 
-[#Pragma pack](../../preprocessor/pack.md)または[/zp](../../build/reference/zp-struct-member-alignment.md)を使用して、構造体の配置を指定できます。 ( **/Zp1**が指定されている場合、コンパイラはこの警告を生成しません)。
+[#Pragma pack](../../preprocessor/pack.md)または[/zp](../../build/reference/zp-struct-member-alignment.md)を使用して、構造体の配置を指定できます。 ( **/Zp1** が指定されている場合、コンパイラはこの警告を生成しません)。

@@ -1,5 +1,6 @@
 ---
-title: '関係演算子: &lt; 、 &gt; 、 &lt; =、および&gt;='
+description: '詳細については、「関係演算子: &lt; 、 &gt; 、 &lt; =、および」を参照してください。 &gt;='
+title: '関係演算子: &lt; 、 &gt; 、 &lt; =、および &gt;='
 ms.date: 11/04/2016
 f1_keywords:
 - <
@@ -15,14 +16,14 @@ helpviewer_keywords:
 - less than or equal to operator
 - <= operator
 ms.assetid: d346b53d-f14d-4962-984f-89d39a17ca0f
-ms.openlocfilehash: 81421a135059b8804955d472365ebef9802d3210
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: dee784c5d93610b27a01ba4ecc36638b84a66885
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87227115"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97252416"
 ---
-# <a name="relational-operators-lt-gt-lt-and-gt"></a>関係演算子: &lt; 、 &gt; 、 &lt; =、および&gt;=
+# <a name="relational-operators-lt-gt-lt-and-gt"></a>関係演算子: &lt; 、 &gt; 、 &lt; =、および &gt;=
 
 ## <a name="syntax"></a>構文
 
@@ -84,9 +85,9 @@ int main() {
 
 同じオブジェクトを指す同じ型の 2 つのポインターは、等しい結果になることが保証されています。 オブジェクトの非静的メンバーへの 2 つのポインターを比較する場合、次の規則が適用されます。
 
-- クラス型がではなく、 **`union`** 2 つのメンバーが、、またはなどの*アクセス指定子*で区切られていない場合 **`public`** **`protected`** **`private`** 、last と宣言されたメンバーへのポインターは、前に宣言したメンバーへのポインターよりも大きいものとして比較されます。
+- クラス型がではなく、 **`union`** 2 つのメンバーが、、またはなどの *アクセス指定子* で区切られていない場合 **`public`** **`protected`** **`private`** 、last と宣言されたメンバーへのポインターは、前に宣言したメンバーへのポインターよりも大きいものとして比較されます。
 
-- 2つのメンバーが*アクセス指定子*で区切られている場合、結果は未定義になります。
+- 2つのメンバーが *アクセス指定子* で区切られている場合、結果は未定義になります。
 
 - クラス型がの場合 **`union`** 、 **`union`** と等しい比較対象の異なるデータメンバーへのポインター。
 

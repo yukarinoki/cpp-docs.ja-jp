@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: _ismbclower、_ismbclower_l、_ismbcupper、_ismbcupper_l'
 title: _ismbclower、_ismbclower_l、_ismbcupper、_ismbcupper_l
 ms.date: 4/2/2020
 api_name:
@@ -40,12 +41,12 @@ helpviewer_keywords:
 - ismbclower_l function
 - _ismbcupper_l function
 ms.assetid: 17d89587-65bc-477c-ba8f-a84e63cf59e7
-ms.openlocfilehash: f33bb4d882031221a80dc3b86670916a2e77af66
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: c4afed88aff750be44602270b0bc7c2e3fa77073
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82915700"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97279664"
 ---
 # <a name="_ismbclower-_ismbclower_l-_ismbcupper-_ismbcupper_l"></a>_ismbclower、_ismbclower_l、_ismbcupper、_ismbcupper_l
 
@@ -75,7 +76,7 @@ int _ismbcupper_l(
 
 ### <a name="parameters"></a>パラメーター
 
-*40u-c*<br/>
+*c*<br/>
 テストする文字。
 
 *locale*<br/>
@@ -83,26 +84,26 @@ int _ismbcupper_l(
 
 ## <a name="return-value"></a>戻り値
 
-これらの各ルーチンでは、文字がテスト条件を満たす場合に 0 以外の値が返され、テスト条件を満たさない場合に 0 が返されます。 *C*<= 255 で、対応する **_ismbb**ルーチン (たとえば、 **_ismbcalnum**が **_ismbbalnum**に対応する) がある場合、結果は対応する **_ismbb**ルーチンの戻り値になります。
+これらの各ルーチンでは、文字がテスト条件を満たす場合に 0 以外の値が返され、テスト条件を満たさない場合に 0 が返されます。 *C*<= 255 で、対応する **_ismbb** ルーチン (たとえば、 **_ismbcalnum** が **_ismbbalnum** に対応する) がある場合、結果は対応する **_ismbb** ルーチンの戻り値になります。
 
 ## <a name="remarks"></a>解説
 
 これらの各関数は特定の条件で特定のマルチバイト文字をテストします。
 
-**_L**サフィックスを持つこれらの関数のバージョンは同じですが、ロケールに依存する動作に現在のロケールではなく渡されたロケールを使用する点が異なります。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
+**_L** サフィックスを持つこれらの関数のバージョンは同じですが、ロケールに依存する動作に現在のロケールではなく渡されたロケールを使用する点が異なります。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
 
-|ルーチン|テスト条件|コード ページ 932 の例|
+|ルーチンによって返される値|テスト条件|コード ページ 932 の例|
 |-------------|--------------------|---------------------------|
-|**_ismbclower**|小文字の英字|*C*が ASCII 小文字の英字 (0x61<=*c*<= 0x7a) の1バイト表現である場合にのみ、0以外の値を返します。|
-|**_ismbclower_l**|小文字の英字|*C*が ASCII 小文字の英字 (0x61<=*c*<= 0x7a) の1バイト表現である場合にのみ、0以外の値を返します。|
-|**_ismbcupper**|大文字の英字|*C*が ASCII 大文字の英文字 (0x41<=*c*<= 0x5a) の1バイト表現である場合に限り、0以外の値を返します。|
-|**_ismbcupper_l**|大文字の英字|*C*が ASCII 大文字の英文字 (0x41<=*c*<= 0x5a) の1バイト表現である場合に限り、0以外の値を返します。|
+|**_ismbclower**|小文字の英字|*C* が ASCII 小文字の英字 (0x61<=*c*<= 0x7a) の1バイト表現である場合にのみ、0以外の値を返します。|
+|**_ismbclower_l**|小文字の英字|*C* が ASCII 小文字の英字 (0x61<=*c*<= 0x7a) の1バイト表現である場合にのみ、0以外の値を返します。|
+|**_ismbcupper**|大文字の英字|*C* が ASCII 大文字の英文字 (0x41<=*c*<= 0x5a) の1バイト表現である場合に限り、0以外の値を返します。|
+|**_ismbcupper_l**|大文字の英字|*C* が ASCII 大文字の英文字 (0x41<=*c*<= 0x5a) の1バイト表現である場合に限り、0以外の値を返します。|
 
 既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**_ismbclower**|\<mbstring.h>|
 |**_ismbclower_l**|\<mbstring.h>|
@@ -114,8 +115,8 @@ int _ismbcupper_l(
 ## <a name="see-also"></a>関連項目
 
 [文字分類](../../c-runtime-library/character-classification.md)<br/>
-[_ismbc 系ルーチン](../../c-runtime-library/ismbc-routines.md)<br/>
-[国](../../c-runtime-library/locale.md)<br/>
-[マルチバイト文字のシーケンスの解釈](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
-[is、isw 系ルーチン](../../c-runtime-library/is-isw-routines.md)<br/>
+[_ismbc ルーチン](../../c-runtime-library/ismbc-routines.md)<br/>
+[ロケール](../../c-runtime-library/locale.md)<br/>
+[Multibyte-Character シーケンスの解釈](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[is、isw ルーチン](../../c-runtime-library/is-isw-routines.md)<br/>
 [_ismbb ルーチン](../../c-runtime-library/ismbb-routines.md)<br/>

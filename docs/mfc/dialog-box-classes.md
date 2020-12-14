@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: ダイアログボックスクラス'
 title: ダイアログ ボックス クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - common dialog classes [MFC]
 - tab dialog boxes
 ms.assetid: db75da23-4eff-4c6c-beae-79cf046fbce9
-ms.openlocfilehash: 2399b27fc081dcc810277079729b0e62ef80d603
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 5c178bc6895e338bf4b2876be5233c1b80007abc
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84616948"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97261555"
 ---
 # <a name="dialog-box-classes"></a>ダイアログ ボックス クラス
 
@@ -60,7 +61,7 @@ Windows 印刷プロパティシートを提供します。
 OLE では、いくつかのコモンダイアログボックスがウィンドウに追加されます。 これらのクラスは、OLE コモンダイアログボックスをカプセル化します。
 
 [COleDialog](reference/coledialog-class.md)<br/>
-すべての OLE ダイアログボックスの共通の実装を格納するために、フレームワークによって使用されます。 ユーザーインターフェイスカテゴリのすべてのダイアログボックスクラスは、この基本クラスから派生します。 `COleDialog`を直接使用することはできません。
+すべての OLE ダイアログボックスの共通の実装を格納するために、フレームワークによって使用されます。 ユーザーインターフェイスカテゴリのすべてのダイアログボックスクラスは、この基本クラスから派生します。 `COleDialog` を直接使用することはできません。
 
 [COleInsertDialog](reference/coleinsertdialog-class.md)<br/>
 [オブジェクトの挿入] ダイアログボックスを表示します。これは、新しい OLE リンクまたは埋め込みアイテムを挿入するための標準ユーザーインターフェイスです。
@@ -87,7 +88,7 @@ Windows のコモン OLE プロパティダイアログボックスをカプセ�
 リンク先を変更するための標準ユーザーインターフェイスである [変更ソース] ダイアログボックスを表示します。
 
 [COleBusyDialog](reference/colebusydialog-class.md)<br/>
-ビジー状態のアプリケーションの呼び出しを処理するための標準ユーザーインターフェイスである [サーバーがビジー] ダイアログボックスと [サーバーに応答しません] ダイアログボックスが表示されます。 通常、 [Colemessagefilter](reference/colemessagefilter-class.md)実装によって自動的に表示されます。
+ビジー状態のアプリケーションの呼び出しを処理するための標準ユーザーインターフェイスである [サーバーがビジー] ダイアログボックスと [サーバーに応答しません] ダイアログボックスが表示されます。 通常、 [Colemessagefilter](reference/colemessagefilter-class.md) 実装によって自動的に表示されます。
 
 ## <a name="property-sheet-classes"></a>プロパティシートクラス
 

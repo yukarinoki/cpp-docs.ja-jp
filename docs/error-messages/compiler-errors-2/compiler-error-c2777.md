@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「コンパイラエラー C2777」を参照してください。
 title: コンパイラエラー C2777
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2777
 ms.assetid: 5fe158c0-2a65-488a-aca2-61d4a8b32d43
-ms.openlocfilehash: 67132f0acbee3614d8032685ae454386d97b8fb1
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 301dadd8a62826455c0cdd7b7d9d8d9d3832d666
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74740014"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97298124"
 ---
 # <a name="compiler-error-c2777"></a>コンパイラエラー C2777
 
 プロパティごとに指定できる ' put ' メソッドは1つだけです
 
-[プロパティ](../../cpp/property-cpp.md)declspec modifier に複数の `put` プロパティがありました。
+[プロパティ](../../cpp/property-cpp.md)declspec modifier に複数のプロパティがありました `put` 。
 
 次の例では、C2777 が生成されます。
 

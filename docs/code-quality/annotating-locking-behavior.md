@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: ロック動作の注釈付け'
 title: ロック動作に注釈を付ける
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -27,12 +28,12 @@ f1_keywords:
 - _Lock_level_order_
 - _Lock_kind_event_
 ms.assetid: 07769c25-9b97-4ab7-b175-d1c450308d7a
-ms.openlocfilehash: 371422275b965fd2ce12995b55221a011a4edae6
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: c26f33b9e2464f91786a6607cea9c3520b971824
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87232366"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97279625"
 ---
 # <a name="annotating-locking-behavior"></a>ロック動作に注釈を付ける
 

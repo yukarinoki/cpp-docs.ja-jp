@@ -1,20 +1,21 @@
 ---
+description: '詳細情報: Platform:: Collections:: UnorderedMapView クラス'
 title: Platform::Collections::UnorderedMapView クラス
 ms.date: 12/30/2016
 ms.topic: reference
 f1_keywords:
 - collection/Platform::Collections::UnorderedMapView
 ms.assetid: 545a3725-2efd-4cc1-b590-4a7cd2351f61
-ms.openlocfilehash: acfc168959deb83244c98c5d361cf9e73c1388f2
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 39f33fd75db92e81fa5321d8983b1b5ea9fce79a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87213061"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97252377"
 ---
 # <a name="platformcollectionsunorderedmapview-class"></a>Platform::Collections::UnorderedMapView クラス
 
-キーと値のペアのコレクションである、 *マップ*への読み取り専用ビューを表します。
+キーと値のペアのコレクションである、 *マップ* への読み取り専用ビューを表します。
 
 ## <a name="syntax"></a>構文
 
@@ -28,10 +29,10 @@ ref class UnorderedMapView sealed;
 
 #### <a name="parameters"></a>パラメーター
 
-*Kb*<br/>
+*K*<br/>
 キー/値ペア内のキーの型。
 
-*画像*<br/>
+*V*<br/>
 キー/値ペア内の値の型。
 
 *C*<br/>
@@ -63,13 +64,13 @@ UnorderedMapView は、アプリケーションバイナリインターフェイ
 
 `UnorderedMapView`
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 **ヘッダー:** collection.h
 
 **名前空間:** Platform::Collections
 
-## <a name="unorderedmapviewfirst-method"></a><a name="first"></a>UnorderedMapView:: First メソッド
+## <a name="unorderedmapviewfirst-method"></a><a name="first"></a> UnorderedMapView:: First メソッド
 
 順序なしのマップ内の最初の[Windows:: Foundation:: Collections:: \<K,V> ikeyvaluepair<k,](/uwp/api/windows.foundation.collections.ikeyvaluepair-2)要素を指定する反復子を返します。
 
@@ -89,7 +90,7 @@ virtual Windows::Foundation::Collections::IIterator<
 
 First () によって返される反復子を保持する便利な方法は、型推論キーワードで宣言された変数に戻り値を代入することです **`auto`** 。 たとえば、「 `auto x = myMapView->First();` 」のように入力します。
 
-## <a name="unorderedmapviewhaskey-method"></a><a name="haskey"></a>UnorderedMapView:: HasKey メソッド
+## <a name="unorderedmapviewhaskey-method"></a><a name="haskey"></a> UnorderedMapView:: HasKey メソッド
 
 指定したキーが現在の UnorderedMap に格納されているかどうかを判定します。
 
@@ -102,13 +103,13 @@ bool HasKey(K key);
 ### <a name="parameters"></a>パラメーター
 
 *key*<br/>
-要素の検索に使用するキー。 の型 `key` は Typename *K*です。
+要素の検索に使用するキー。 の型 `key` は Typename *K* です。
 
 ### <a name="return-value"></a>戻り値
 
 **`true`** キーが見つかった場合は。それ以外の場合は **`false`** 。
 
-## <a name="unorderedmapviewlookup-method"></a><a name="lookup"></a>UnorderedMapView:: Lookup メソッド
+## <a name="unorderedmapviewlookup-method"></a><a name="lookup"></a> UnorderedMapView:: Lookup メソッド
 
 型 K の指定されたキーに関連付けられている型 V の値を取得します。
 
@@ -121,13 +122,13 @@ V Lookup(K key);
 ### <a name="parameters"></a>パラメーター
 
 *key*<br/>
-UnorderedMapView の要素の検索に使用するキー。 の型 `key` は Typename *K*です。
+UnorderedMapView の要素の検索に使用するキー。 の型 `key` は Typename *K* です。
 
 ### <a name="return-value"></a>戻り値
 
-`key` とペアになる値。 戻り値の型は typename *V*です。
+`key` とペアになる値。 戻り値の型は typename *V* です。
 
-## <a name="unorderedmapviewsize-method"></a><a name="size"></a>UnorderedMapView:: Size メソッド
+## <a name="unorderedmapviewsize-method"></a><a name="size"></a> UnorderedMapView:: Size メソッド
 
 UnorderedMapView 内の[Windows:: Foundation:: Collections:: ikeyvaluepair<k, \<K,V> ](/uwp/api/windows.foundation.collections.ikeyvaluepair-2)要素の数を返します。
 
@@ -141,7 +142,7 @@ virtual property unsigned int Size;
 
 Unordered MapView の要素数。
 
-## <a name="unorderedmapviewsplit-method"></a><a name="split"></a>UnorderedMapView:: Split メソッド
+## <a name="unorderedmapviewsplit-method"></a><a name="split"></a> UnorderedMapView:: Split メソッド
 
 現在の UnorderedMapView オブジェクトを 2 つの UnorderedMapView オブジェクトに分割します。 このメソッドは操作不可です。
 
@@ -167,7 +168,7 @@ void Split(
 
 このメソッドは操作可能ではありません。これは何も実行しません。
 
-## <a name="unorderedmapviewunorderedmapview-constructor"></a><a name="ctor"></a>UnorderedMapView:: UnorderedMapView コンストラクター
+## <a name="unorderedmapviewunorderedmapview-constructor"></a><a name="ctor"></a> UnorderedMapView:: UnorderedMapView コンストラクター
 
 UnorderedMapView クラスの新しいインスタンスを初期化します。
 

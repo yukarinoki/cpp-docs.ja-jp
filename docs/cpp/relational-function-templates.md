@@ -1,15 +1,16 @@
 ---
+description: 詳細については、「リレーショナル関数テンプレート」を参照してください。
 title: リレーショナル関数テンプレート
 ms.date: 11/04/2016
 helpviewer_keywords:
 - relational function templates
 ms.assetid: 57893a51-9adb-41fc-941d-2ca97687db2a
-ms.openlocfilehash: db5091ca8fd29235ea1a0f70410a05ffcb9d7a65
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: ebdb1a8522536cd4d863e74c1cf79f33bae3a930
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80188182"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97252429"
 ---
 # <a name="relational-function-templates"></a>リレーショナル関数テンプレート
 
@@ -88,6 +89,6 @@ template<typename _Interface,
 
 **Microsoft 固有の仕様はここまで**
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [_com_ptr_t クラス](../cpp/com-ptr-t-class.md)

@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: _ismbclegal、_ismbclegal_l、_ismbcsymbol、_ismbcsymbol_l'
 title: _ismbclegal、_ismbclegal_l、_ismbcsymbol、_ismbcsymbol_l
 ms.date: 4/2/2020
 api_name:
@@ -50,12 +51,12 @@ helpviewer_keywords:
 - _ismbcsymbol_l function
 - istlegal_l function
 ms.assetid: 31bf1ea5-b56f-4e28-b21e-b49a2cf93ffc
-ms.openlocfilehash: 295eabdef37a7b8d6bfb8408ba0d3d683a59c42d
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 3d051a356fc440219003fb402d99bf09d960537e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82919717"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97279703"
 ---
 # <a name="_ismbclegal-_ismbclegal_l-_ismbcsymbol-_ismbcsymbol_l"></a>_ismbclegal、_ismbclegal_l、_ismbcsymbol、_ismbcsymbol_l
 
@@ -85,7 +86,7 @@ int _ismbcsymbol_l(
 
 ### <a name="parameters"></a>パラメーター
 
-*40u-c*<br/>
+*c*<br/>
 テストする文字。
 
 *locale*<br/>
@@ -93,17 +94,17 @@ int _ismbcsymbol_l(
 
 ## <a name="return-value"></a>戻り値
 
-これらの各ルーチンでは、文字がテスト条件を満たす場合に 0 以外の値が返され、テスト条件を満たさない場合に 0 が返されます。 *C*<= 255 で、対応する **_ismbb**ルーチン (たとえば、 **_ismbcalnum**が **_ismbbalnum**に対応する) がある場合、結果は対応する **_ismbb**ルーチンの戻り値になります。
+これらの各ルーチンでは、文字がテスト条件を満たす場合に 0 以外の値が返され、テスト条件を満たさない場合に 0 が返されます。 *C*<= 255 で、対応する **_ismbb** ルーチン (たとえば、 **_ismbcalnum** が **_ismbbalnum** に対応する) がある場合、結果は対応する **_ismbb** ルーチンの戻り値になります。
 
 ## <a name="remarks"></a>解説
 
 これらの各関数は特定の条件で特定のマルチバイト文字をテストします。
 
-**_L**サフィックスを持つこれらの関数のバージョンは同じですが、ロケールに依存する動作に現在のロケールではなく渡されたロケールを使用する点が異なります。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
+**_L** サフィックスを持つこれらの関数のバージョンは同じですが、ロケールに依存する動作に現在のロケールではなく渡されたロケールを使用する点が異なります。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
 
-|ルーチン|テスト条件|コード ページ 932 の例|
+|ルーチンによって返される値|テスト条件|コード ページ 932 の例|
 |-------------|--------------------|---------------------------|
-|**_ismbclegal**|有効なマルチバイト|*C*の最初のバイトが 0X81 ~ 0x9f または 0Xe0-0xfc の範囲内にあり、2番目のバイトが 0X40 ~ 0x7e または 0X80-FC の範囲内にある場合に限り、0以外の値を返します。|
+|**_ismbclegal**|有効なマルチバイト|*C* の最初のバイトが 0X81 ~ 0x9f または 0Xe0-0xfc の範囲内にあり、2番目のバイトが 0X40 ~ 0x7e または 0X80-FC の範囲内にある場合に限り、0以外の値を返します。|
 |**_ismbcsymbol**|マルチバイトの記号|0x8141<=*c*<= 0X8141 の場合に限り、0以外の値を返します。|
 
 既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
@@ -117,7 +118,7 @@ int _ismbcsymbol_l(
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**_ismbclegal**、 **_ismbclegal_l**|\<mbstring.h>|
 |**_ismbcsymbol**、 **_ismbcsymbol_l**|\<mbstring.h>|
@@ -127,6 +128,6 @@ int _ismbcsymbol_l(
 ## <a name="see-also"></a>関連項目
 
 [文字分類](../../c-runtime-library/character-classification.md)<br/>
-[_ismbc 系ルーチン](../../c-runtime-library/ismbc-routines.md)<br/>
-[is、isw 系ルーチン](../../c-runtime-library/is-isw-routines.md)<br/>
+[_ismbc ルーチン](../../c-runtime-library/ismbc-routines.md)<br/>
+[is、isw ルーチン](../../c-runtime-library/is-isw-routines.md)<br/>
 [_ismbb ルーチン](../../c-runtime-library/ismbb-routines.md)<br/>
