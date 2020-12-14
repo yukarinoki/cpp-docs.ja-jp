@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: &lt; 配列&gt;'
 title: '&lt;array&gt;'
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - array header
 ms.assetid: 084147c1-e805-478e-8201-76846020f187
-ms.openlocfilehash: b515578e658d658722f92e48a7ac5ab78727c465
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: c7c593fec9cf240ae28f8d05e1c56c743a7a3e42
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88834948"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97193072"
 ---
 # <a name="ltarraygt"></a>&lt;array&gt;
 
 コンテナークラステンプレート **配列** といくつかのサポートテンプレートを定義します。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:**\<array>
 
@@ -36,7 +37,7 @@ ms.locfileid: "88834948"
 |[tuple_element](../standard-library/tuple-element-class-tuple.md)|配列要素の型をラップします。|
 |[tuple_size](../standard-library/tuple-size-class-tuple.md)|配列要素のサイズをラップします。|
 
-### <a name="operators"></a>演算子
+### <a name="operators"></a>オペレーター
 
 |名前|説明|
 |-|-|
@@ -47,7 +48,7 @@ ms.locfileid: "88834948"
 |[>演算子 ](../standard-library/array-operators.md#op_gt)|配列の比較 (より大きい)|
 |[operator<=](../standard-library/array-operators.md#op_lt_eq)|配列の比較 (以下)|
 
-### <a name="functions"></a>Functions
+### <a name="functions"></a>関数
 
 |名前|説明|
 |-|-|

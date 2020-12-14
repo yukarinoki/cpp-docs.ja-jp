@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「ODBC と MFC」を参照してください。
 title: ODBC と MFC
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -10,19 +11,19 @@ helpviewer_keywords:
 - MFC [C++], ODBC and
 - database connections [C++], MFC ODBC classes
 ms.assetid: 98f02fd7-1235-437b-89a9-edfd0fc797f7
-ms.openlocfilehash: 38a625c73a17ecae4d8adc61e8c56bc4bdda67f6
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 32cc3f9a023a4b965e8872fde27291bf8df3f1a4
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81320080"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97195100"
 ---
 # <a name="odbc-and-mfc"></a>ODBC と MFC
 
 > [!NOTE]
-> MFC データベース クラスを使用するには、データ ソースに適した ODBC ドライバが必要です。 SQL サーバーの最後の ODBC[ドライバーは、SQL Server 用の ODBC ドライバー 13 です](https://www.microsoft.com/download/details.aspx?id=50420)。 ほとんどのデータベース ベンダーは、Windows 用の ODBC ドライバーを提供します。
+> MFC データベースクラスを使用するには、データソースに適した ODBC ドライバーが必要です。 最新 Microsoft ODBC driver for SQL Server は、 [MICROSOFT Odbc driver 13 for SQL Server](https://www.microsoft.com/download/details.aspx?id=50420)です。 ほとんどのデータベースベンダーは、Windows 用 ODBC ドライバーを提供しています。
 
-ここでは、MFC (MFC) ライブラリの ODBC ベースのデータベース クラスの主要な概念を紹介し、クラスの連携の概要を説明します。 ODBC および MFC の詳細については、次のトピックを参照してください。
+このトピックでは、Microsoft Foundation Classes (MFC) ライブラリの ODBC ベースのデータベースクラスの主要な概念について説明し、クラスを連携させる方法の概要を示します。 ODBC と MFC の詳細については、次のトピックを参照してください。
 
 - [データ ソースへの接続](connecting-to-a-data-source.md)
 
@@ -34,10 +35,10 @@ ms.locfileid: "81320080"
 
 - [ODBC や SQL へのアクセス](access-to-odbc-and-sql.md)
 
-- [MFC ODBC クラスに関する詳細情報](further-reading-about-the-mfc-odbc-classes.md)
+- [MFC ODBC クラスに関する参考資料](further-reading-about-the-mfc-odbc-classes.md)
 
-ODBC に基づく MFC データベース クラスは、ODBC ドライバが使用できる任意のデータベースにアクセスできるように設計されています。 クラスは ODBC を使用するため、アプリケーションはさまざまなデータ形式と異なるローカル/リモート構成のデータにアクセスできます。 異なるデータベース管理システム (DBMS) を処理するために、特殊なコードを記述する必要はありません。 ユーザーがアクセスするデータに適した ODBC ドライバーを使用している限り、ユーザーはプログラムを使用して、そこに格納されているテーブルのデータを操作できます。
+ODBC に基づく MFC データベースクラスは、ODBC ドライバーを使用できるすべてのデータベースへのアクセスを提供するように設計されています。 クラスでは ODBC が使用されるため、アプリケーションはさまざまなデータ形式とさまざまなローカル/リモート構成のデータにアクセスできます。 異なるデータベース管理システム (Dbms) を処理するために、特殊なケースコードを記述する必要はありません。 ユーザーは、アクセスするデータに適した ODBC ドライバーを持っている限り、プログラムを使用して、そこに格納されているテーブルのデータを操作できます。
 
 ## <a name="see-also"></a>関連項目
 
-[データベース接続を開く (ODBC)](open-database-connectivity-odbc.md)
+[Open Database Connectivity (ODBC)](open-database-connectivity-odbc.md)

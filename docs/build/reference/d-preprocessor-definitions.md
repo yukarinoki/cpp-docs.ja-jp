@@ -1,4 +1,5 @@
 ---
+description: 詳細情報:/D (プリプロセッサの定義)
 title: /D (プリプロセッサの定義)
 ms.date: 09/18/2019
 f1_keywords:
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - -D compiler option [C++]
 - D compiler option [C++]
 ms.assetid: b53fdda7-8da1-474f-8811-ba7cdcc66dba
-ms.openlocfilehash: 7c8a500820c8cc4655c409f4628d72a69acafa5a
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: 6ae7dcd81e1821d4c3a8a2f6d5c1b711c0faa9f2
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90040939"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97196829"
 ---
 # <a name="d-preprocessor-definitions"></a>/D (プリプロセッサの定義)
 
@@ -29,17 +30,17 @@ ms.locfileid: "90040939"
 > **/D** \[]_名前_ \[ `=` \| `#` \[ {*文字列* \| *数値*}]] \
 > **/D** \[] `"` _名前_ \[ `=` \| `#` \[ {*文字列* \| *数値*}]]`"`
 
-## <a name="remarks"></a>注釈
+## <a name="remarks"></a>解説
 
 このシンボルを `#if` または `#ifdef` と一緒に使用すると、ソース コードを条件付きでコンパイルできます。 シンボル定義は、コード内で再定義されるか、ディレクティブによってコード内で定義されるまで、有効なままです `#undef` 。
 
-**/D** は、 `#define` ソースコードファイルの先頭にあるディレクティブと同じ効果があります。 違いは、 **/d** によってコマンドラインで引用符が除去され、ディレクティブによって引用符が保持される点です `#define` 。 **/D**と記号の間には空白を含めることができます。 記号と等号の間、または等号と代入された値の間に空白を入れることはできません。
+**/D** は、 `#define` ソースコードファイルの先頭にあるディレクティブと同じ効果があります。 違いは、 **/d** によってコマンドラインで引用符が除去され、ディレクティブによって引用符が保持される点です `#define` 。 **/D** と記号の間には空白を含めることができます。 記号と等号の間、または等号と代入された値の間に空白を入れることはできません。
 
 既定では、シンボルに関連付けられる値は 1 です。 たとえば、`/D name` は、`/D name=1` と同じです。 この記事の最後にある例では、の定義を `TEST` 印刷するように示してい `1` ます。
 
 を使用してコンパイル `/D name=` すると、シンボル *名* に関連付けられた値がないことになります。 シンボルは引き続きコードの条件コンパイルに使用できますが、何も指定されていないものとして評価されます。 この例では、を使用してコンパイルすると `/DTEST=` 、エラーが発生します。 この動作は、値を指定して、または値を指定せずに `#define` を使用する場合と似ています。
 
-**/D**オプションでは、関数に似たマクロ定義がサポートされていません。 コマンドラインで定義できない定義を挿入するには、 [/fi (強制インクルードファイルの名前の指定)](fi-name-forced-include-file.md) コンパイラオプションを使用してください。
+**/D** オプションでは、関数に似たマクロ定義がサポートされていません。 コマンドラインで定義できない定義を挿入するには、 [/fi (強制インクルードファイルの名前の指定)](fi-name-forced-include-file.md) コンパイラオプションを使用してください。
 
 コマンドラインで **/d** を複数回使用して、追加のシンボルを定義できます。 同じシンボルが複数回定義されている場合は、最後の定義が使用されます。
 
@@ -55,7 +56,7 @@ CL /DDEBUG TEST.C
 CL /D __far= TEST.C
 ```
 
-**CL**環境変数を等号を含む文字列に設定することはできません。 **CL**環境変数と共に **/d**を使用するには、等号の代わりにシャープ記号 () を指定する必要があり `#` ます。
+**CL** 環境変数を等号を含む文字列に設定することはできません。 **CL** 環境変数と共に **/d** を使用するには、等号の代わりにシャープ記号 () を指定する必要があり `#` ます。
 
 ```cmd
 SET CL=/DTEST#0
@@ -107,7 +108,7 @@ TEST defined 1
 ## <a name="see-also"></a>関連項目
 
 [MSVC コンパイラオプション](compiler-options.md)\
-[MSVC コンパイラのコマンドライン構文](compiler-command-line-syntax.md)\
+[MSVC Compiler Command-Line 構文](compiler-command-line-syntax.md)\
 [/FI (強制インクルードファイルの名前の指定)](fi-name-forced-include-file.md)\
 [/U、/u (シンボルの未定義)](u-u-undefine-symbols.md)\
 [#undef ディレクティブ (C/c + +)](../../preprocessor/hash-undef-directive-c-cpp.md)\

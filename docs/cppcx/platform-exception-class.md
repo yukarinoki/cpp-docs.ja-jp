@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: Platform:: Exception クラス'
 title: Platform::Exception クラス
 ms.date: 12/30/2016
 ms.topic: reference
@@ -10,12 +11,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::Exception Class
 ms.assetid: ca1d5a67-3a5a-48fe-8099-f9c38a2d2dce
-ms.openlocfilehash: bfdd8b3df720073e6b4a19cdb5b34db23e659fd0
-ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
+ms.openlocfilehash: 1b6ad35e04ae239d90dbfceecaaf72223ae6a7ce
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90741970"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97195217"
 ---
 # <a name="platformexception-class"></a>Platform::Exception クラス
 
@@ -56,7 +57,7 @@ Exception クラスには、次のプロパティもあります。
 |[例外:: HResult](#hresult)|例外に対応する HRESULT。|
 |[例外:: Message](#message)|例外を説明するメッセージ。 この値は読み取り専用で、 `Exception` が構築された後は変更できません。|
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 **サポートされている最低限のクライアント:** Windows 8
 
@@ -89,7 +90,7 @@ Exception^ CreateException(int32 hr, Platform::String^ message);
 
 エラー HRESULT を表す例外。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 COM インターフェイスのメソッドに対する呼び出しなどから、返された HRESULT から例外を作成するには、このメソッドを使用します。 カスタム メッセージを表示するために、String^ パラメーターを受け取るオーバーロードを使用することもできます。
 
@@ -129,7 +130,7 @@ public:
 
 HRESULT 値。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 ほとんどの例外は、HRESULT 値の形で返される COM エラーとして開始されます。 C++/CX はこれらの値を Platform::Exception^ オブジェクトに変換し、このプロパティは元のエラー コードの値を格納します。
 
@@ -147,7 +148,7 @@ public:property String^ Message;
 
 Windows ランタイムで発生する例外では、システムで用意されているエラーの説明になります。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 Windows 8 では、このプロパティは、Windows ランタイムのそのバージョンの例外が HRESULT として ABI のみで転送されるため、読み取り専用です。 Windows 8.1 では、豊富な例外情報が ABI 経由で伝達され、開発者はカスタム メッセージを提供し、他のコンポーネントにはプログラムでそのメッセージにアクセスすることができます。 詳細については、「 [例外 (C++/cx)](../cppcx/exceptions-c-cx.md)」を参照してください。
 

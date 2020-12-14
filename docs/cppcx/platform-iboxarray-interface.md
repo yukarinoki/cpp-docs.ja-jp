@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: Platform:: IBoxArray インターフェイス'
 title: Platform::IBoxArray インターフェイス
 ms.date: 12/30/2016
 ms.topic: reference
@@ -8,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::IBoxArray
 ms.assetid: 6cd82c9e-4230-4147-9edb-7a652875dbf1
-ms.openlocfilehash: 493770cab092c2bb719d47e5d3a9d6a9f0646489
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 8b87a00d709bec8af016de4532c7c4ec759d72fc
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79444161"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97195145"
 ---
 # <a name="platformiboxarray-interface"></a>Platform::IBoxArray インターフェイス
 
@@ -31,19 +32,19 @@ interface class IBoxArray
 *T*<br/>
 各配列要素のボックス化された値の型。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
-`IBoxArray` は `Windows::Foundation::IReferenceArray`C++の/cx 名です。
+`IBoxArray` は、の C++/CX 名です `Windows::Foundation::IReferenceArray` 。
 
 ### <a name="members"></a>メンバー
 
 `IBoxArray` インターフェイスは `IValueType` インターフェイスを継承します。 `IBoxArray` にも、次に示すメンバーがあります。
 
-|方法|説明|
+|Method|説明|
 |------------|-----------------|
 |[Value](#value)|以前にこの `IBoxArray` インスタンスに格納されていたことがあり、ボックス化が解除されている配列を返します。|
 
-## <a name="value"></a>IBoxArray:: Value プロパティ
+## <a name="iboxarrayvalue-property"></a><a name="value"></a> IBoxArray:: Value プロパティ
 
 このオブジェクトに元から格納されていた値を返します。
 
@@ -62,10 +63,10 @@ property T Value {T get();}
 
 このオブジェクトに元から格納されていた値を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
-例については、「[ボックス](../cppcx/boxing-c-cx.md)化」を参照してください。
+例については、「 [ボックス](../cppcx/boxing-c-cx.md)化」を参照してください。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [Array と WriteOnlyArray](../cppcx/array-and-writeonlyarray-c-cx.md)

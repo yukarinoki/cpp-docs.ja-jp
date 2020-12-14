@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: Platform:: Guid 値クラス'
 title: Platform::Guid 値クラス
 ms.date: 01/15/2019
 ms.topic: reference
@@ -7,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::Guid Struct
 ms.assetid: 25c0bfb2-7f93-44d8-bdf4-ef4fbac3424a
-ms.openlocfilehash: 7c3b89ff238b1cb5ee9fbb71e83d20f571e656a3
-ms.sourcegitcommit: 89d9e1cb08fa872483d1cde98bc2a7c870e505e9
+ms.openlocfilehash: 4c2ffc5096e6b40266fef0934acc562edf721c24
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "82031538"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97195191"
 ---
 # <a name="platformguid-value-class"></a>Platform::Guid 値クラス
 
-Windows ランタイム型システムの [GUID](/ウィンドウ/win32/api/guiddef/ns-guid-guid 型) を表します。
+Windows ランタイム型システムの [GUID] (/windows/win32/api/guiddef/ns-guiddef-guid 型を表します。
 
 ## <a name="syntax"></a>構文
 
@@ -26,31 +27,31 @@ public value struct Guid
 
 ### <a name="members"></a>メンバー
 
-`Platform::Guid`には`Equals()`、 `GetHashCode()`、 `ToString()` 、 、 、 および 、 プラットフォーム`GetTypeCode()`: オブジェクト[クラス](../cppcx/platform-object-class.md)から派生したメソッド[があります。](../cppcx/platform-type-class.md) `Platform::Guid`また、以下のメンバーを持っています。
+`Platform::Guid` には `Equals()` 、 `GetHashCode()` `ToString()` [Platform:: Object クラス](../cppcx/platform-object-class.md)から派生した、、およびの各メソッドと、 `GetTypeCode()` [platform:: Type クラス](../cppcx/platform-type-class.md)から派生したメソッドがあります。 `Platform::Guid` には次のメンバーもあります。
 
 |メンバー|説明|
 |------------|-----------------|
-|[Guid](#ctor)|`Platform::Guid` の新しいインスタンスを初期化します。|
-|[演算子==](#operator-equality)|等号演算子です。|
-|[演算子!=](#operator-inequality)|不等号演算子です。|
-|[演算子&lt;](#operator-less)|小なり演算子です。|
-|[Operator()](#operator-call)|`Platform::Guid` を `GUID`に変換します。|
+|[GUID](#ctor)|`Platform::Guid` の新しいインスタンスを初期化します。|
+|[operator = =](#operator-equality)|等号演算子です。|
+|[operator! =](#operator-inequality)|不等号演算子です。|
+|[operator&lt;](#operator-less)|小なり演算子です。|
+|[operator ()](#operator-call)|`Platform::Guid` を `GUID`に変換します。|
 
 ### <a name="remarks"></a>解説
 
-新しい`Platform::Guid`を生成するには、[静的](/uwp/api/windows.foundation.guidhelper.createnewguid)メソッドを使用します。
+新しいを生成するには、 `Platform::Guid` [Windows:: Foundation:: guidhelper:: CreateNewGuid](/uwp/api/windows.foundation.guidhelper.createnewguid) 静的メソッドを使用します。
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
-**サポートされる最小クライアント:** ウィンドウズ 8
+**サポートされている最低限のクライアント:** Windows 8
 
-**サポートされる最小サーバー:** ウィンドウズ サーバー 2012
+**サポートされる最小サーバー:** Windows Server 2012
 
 **名前空間:** Platform
 
-**メタデータ:** プラットフォーム.winmd
+**メタデータ:** platform. winmd
 
-## <a name="guidguid-constructors"></a><a name="ctor"></a>Guid::Guidコンストラクタ
+## <a name="guidguid-constructors"></a><a name="ctor"></a> Guid:: Guid コンストラクター
 
 `Platform::Guid` の新しいインスタンスを初期化します。
 
@@ -81,46 +82,46 @@ Guid(
 
 ### <a name="parameters"></a>パラメーター
 
-*A*<br/>
-の最初の 4`GUID`バイト。
+*ある*<br/>
+の最初の4バイト `GUID` 。
 
-*B*<br/>
-の次の 2`GUID`バイトです。
+*b*<br/>
+の次の2バイト `GUID` 。
 
-*C*<br/>
-の次の 2`GUID`バイトです。
+*c*<br/>
+の次の2バイト `GUID` 。
 
-*D*<br/>
+*d*<br/>
 `GUID` の次のバイト。
 
-*E*<br/>
+*e*<br/>
 `GUID` の次のバイト。
 
-*F*<br/>
+*f*<br/>
 `GUID` の次のバイト。
 
-*G*<br/>
+*g*<br/>
 `GUID` の次のバイト。
 
-*H*<br/>
+*h*<br/>
 `GUID` の次のバイト。
 
-*私*<br/>
+*i*<br/>
 `GUID` の次のバイト。
 
-*J*<br/>
+*祭*<br/>
 `GUID` の次のバイト。
 
-*K*<br/>
+*k*<br/>
 `GUID` の次のバイト。
 
-*M*<br/>
-A`GUID`を GUID[構造体](/windows/win32/api/guiddef/ns-guiddef-guid)の形式で指定します。
+*m*<br/>
+`GUID` [GUID 構造体](/windows/win32/api/guiddef/ns-guiddef-guid)の形式の。
 
 *n*<br/>
-残りの 8 バイト`GUID`の .
+の残りの8バイト `GUID` 。
 
-## <a name="guidoperator-operator"></a><a name="operator-equality"></a>誘導:演算子== 演算子
+## <a name="guidoperator-operator"></a><a name="operator-equality"></a> Guid:: operator = = 演算子
 
 2 つの `Platform::Guid` インスタンスを比較し、相互に等価かどうかを判断します。
 
@@ -133,20 +134,20 @@ static bool Platform::Guid::operator==(Platform::Guid guid1, Platform::Guid guid
 ### <a name="parameters"></a>パラメーター
 
 *guid1*<br/>
-比較対象となる最初の `Platform::Guid`。
+比較対象となる、最初の `Platform::Guid`。
 
-*ガイド2*<br/>
+*guid2*<br/>
 比較対象となる 2 番目の `Platform::Guid`。
 
 ### <a name="return-value"></a>戻り値
 
-2 つの`Platform::Guid`インスタンスが等しい場合は True。
+2つの `Platform::Guid` インスタンスが等しい場合は True。
 
 ### <a name="remarks"></a>解説
 
-静的メソッドの`==`代わりに演算子[を使用することをお好み](/uwp/api/windows.foundation.guidhelper.equals)で行います。
+`==` [Windows:: Foundation:: guidhelper:: Equals](/uwp/api/windows.foundation.guidhelper.equals)静的メソッドの代わりに演算子を使用することをお勧めします。
 
-## <a name="guidoperator-operator"></a><a name="operator-inequality"></a>誘導:演算子!= 演算子
+## <a name="guidoperator-operator"></a><a name="operator-inequality"></a> Guid:: operator! = 演算子
 
 2 つの `Platform::Guid` インスタンスを比較し、等しくないかどうかを判断します。
 
@@ -159,18 +160,18 @@ static bool Platform::Guid::operator!=(Platform::Guid guid1, Platform::Guid guid
 ### <a name="parameters"></a>パラメーター
 
 *guid1*<br/>
-比較対象となる最初の `Platform::Guid`。
+比較対象となる、最初の `Platform::Guid`。
 
-*ガイド2*<br/>
+*guid2*<br/>
 比較対象となる 2 番目の `Platform::Guid`。
 
 ### <a name="return-value"></a>戻り値
 
-2 つの`Platform::Guid`インスタンスが等しくない場合は true。
+2つの `Platform::Guid` インスタンスが等しくない場合は True。
 
-## <a name="guidoperatorlt-operator"></a><a name="operator-less"></a>誘導:演算子&lt;
+## <a name="guidoperatorlt-operator"></a><a name="operator-less"></a> Guid:: operator &lt; 演算子
 
-2 つの`Platform::Guid`インスタンスを並べ替え用に比較します。
+2つ `Platform::Guid` のインスタンスの順序を比較します。
 
 ### <a name="syntax"></a>構文
 
@@ -181,20 +182,20 @@ static bool Platform::Guid::operator<(Platform::Guid guid1, Platform::Guid guid2
 ### <a name="parameters"></a>パラメーター
 
 *guid1*<br/>
-比較対象となる最初の `Platform::Guid`。
+比較対象となる、最初の `Platform::Guid`。
 
-*ガイド2*<br/>
+*guid2*<br/>
 比較対象となる 2 番目の `Platform::Guid`。
 
 ### <a name="return-value"></a>戻り値
 
-*guid1*が*guid2*の前に並べ替えられた場合は True。 順序は、それぞれが`Platform::Guid`4 つの 32 ビット符号なし値の配列であるかのように処理した後の辞書式です。 これは、SQL Server や .NET Framework で使用される順序ではなく、文字列表現による辞書順と同じでもありません。
+*Guid1* が *guid2* の前に並べ替えられている場合は True。 順序付けは、それぞれが `Platform::Guid` 4 32 ビットの符号なしの値の配列であるかのように処理した後、辞書式になります。 これは SQL Server または .NET Framework によって使用される順序ではなく、文字列形式による辞書式の順序付けと同じでもありません。
 
-この演算子は`Guid`、C++ 標準ライブラリでオブジェクトをより簡単に使用できるように提供されています。
+この演算子は `Guid` 、C++ 標準ライブラリがオブジェクトをより簡単に使用できるようにするために用意されています。
 
-## <a name="guidoperator-operator"></a><a name="operator-call"></a>誘導:演算子() 演算子
+## <a name="guidoperator-operator"></a><a name="operator-call"></a> Guid:: operator () 演算子
 
-暗黙的に、 を`Platform::Guid` [GUID 構造体](/windows/win32/api/guiddef/ns-guiddef-guid)に変換します。
+を暗黙的 `Platform::Guid` に [GUID 構造体](/windows/win32/api/guiddef/ns-guiddef-guid)に変換します。
 
 ### <a name="syntax"></a>構文
 
@@ -204,7 +205,7 @@ const GUID& Platform::Guid::operator();
 
 ### <a name="return-value"></a>戻り値
 
-[GUID 構造体](/windows/win32/api/guiddef/ns-guiddef-guid):
+[GUID 構造体](/windows/win32/api/guiddef/ns-guiddef-guid)。
 
 ## <a name="see-also"></a>関連項目
 

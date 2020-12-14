@@ -1,4 +1,5 @@
 ---
+description: 詳細については、コンソールとポート i/o に関するページを参照してください。
 title: コンソール入出力とポート入出力
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - I/O [CRT], port
 - I/O routines, console and port I/O
 ms.assetid: 0eee1c92-9b3d-41e0-a43a-257e546eeec8
-ms.openlocfilehash: 5b4dc2a081ea11bd84d932f55b5b247de81f296a
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 99419db614d4b4493f0fc5de3febb522c8bbb3dd
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79443450"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97195789"
 ---
 # <a name="console-and-port-io"></a>コンソール入出力とポート入出力
 
@@ -22,7 +23,7 @@ ms.locfileid: "79443450"
 
 ## <a name="console-and-port-io-routines"></a>コンソール入出力ルーチンとポート入出力ルーチン
 
-|ルーチン|用途|
+|ルーチンによって返される値|使用|
 |-------------|---------|
 |[_cgets、_cgetws](../c-runtime-library/cgets-cgetws.md)、[_cgets_s、_cgetws_s](../c-runtime-library/reference/cgets-s-cgetws-s.md)|コンソールから文字列を読み取る|
 |[_cprintf、_cwprintf](../c-runtime-library/reference/cprintf-cprintf-l-cwprintf-cwprintf-l.md)、[_cprintf_s、_cprintf_s_l、_cwprintf_s、_cwprintf_s_l](../c-runtime-library/reference/cprintf-s-cprintf-s-l-cwprintf-s-cwprintf-s-l.md)|コンソールに書式付きデータを書き込む|
@@ -40,7 +41,7 @@ ms.locfileid: "79443450"
 |[_putch、_putwch](../c-runtime-library/reference/putch-putwch.md)|コンソールに文字を書き込む|
 |[_ungetch、_ungetwch](../c-runtime-library/reference/ungetch-ungetwch-ungetch-nolock-ungetwch-nolock.md)|コンソールから読み取った最後の文字を "戻す" ことで次の読み取り文字にする|
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[入出力](../c-runtime-library/input-and-output.md)<br/>
+[入力と出力](../c-runtime-library/input-and-output.md)<br/>
 [カテゴリ別ユニバーサル C ランタイム ルーチン](../c-runtime-library/run-time-routines-by-category.md)<br/>

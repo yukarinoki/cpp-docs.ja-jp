@@ -1,4 +1,5 @@
 ---
+description: '詳細については、「ActiveX コントロールコンテナー: ダイアログ以外のコンテナーでのコントロールの使用」を参照してください。'
 title: 'ActiveX コントロール コンテナー : ダイアログ ベースではないコンテナーでのコントロールの使用'
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,16 +9,16 @@ helpviewer_keywords:
 - ActiveX control containers [MFC], non-dialog containers
 - ActiveX control containers [MFC], inserting controls
 ms.assetid: 46f195b0-b8ca-4409-8cca-fbfaf2c9ab9f
-ms.openlocfilehash: f3f0bc7c89ff2bea1c344f2c876e1624ba82fb87
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 699f1faa5c88eb965a320c210de6e5e6c2ee94ef
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87214166"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97197674"
 ---
 # <a name="activex-control-containers-using-controls-in-a-non-dialog-container"></a>ActiveX コントロール コンテナー : ダイアログ ベースではないコンテナーでのコントロールの使用
 
-SDI アプリケーションや MDI アプリケーションなどの一部のアプリケーションでは、アプリケーションのウィンドウにコントロールを埋め込む必要があります。 Visual C++ によって挿入されたラッパークラスの**create** member 関数を使用すると、ダイアログボックスを必要とせずに、コントロールのインスタンスを動的に作成できます。
+SDI アプリケーションや MDI アプリケーションなどの一部のアプリケーションでは、アプリケーションのウィンドウにコントロールを埋め込む必要があります。 Visual C++ によって挿入されたラッパークラスの **create** member 関数を使用すると、ダイアログボックスを必要とせずに、コントロールのインスタンスを動的に作成できます。
 
 **Create** member 関数には、次のパラメーターがあります。
 
@@ -31,7 +32,7 @@ Windows スタイル。 完全な一覧については、「 [CWnd:: CreateContr
 コントロールのサイズと位置を指定します。
 
 *pParentWnd*<br/>
-コントロールの親ウィンドウ (通常は) を指定し `CDialog` ます。 **NULL**にすることはできません。
+コントロールの親ウィンドウ (通常は) を指定し `CDialog` ます。 **NULL** にすることはできません。
 
 *nID*<br/>
 コントロール ID を指定します。これは、コントロールを参照するためにコンテナーによって使用されます。

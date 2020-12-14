@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: CD2DGeometry クラス'
 title: CD2DGeometry クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -46,16 +47,16 @@ helpviewer_keywords:
 - CD2DGeometry [MFC], Widen
 - CD2DGeometry [MFC], m_pGeometry
 ms.assetid: 3f95054b-fdb8-4e87-87f2-9fc3df7279ec
-ms.openlocfilehash: 4727f7b1799604001134ee2f4d2d2e1ce6db87fa
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: 2c902554ba5377ce9f7a4a481d4001a9ef7a47f9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81754788"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97193449"
 ---
 # <a name="cd2dgeometry-class"></a>CD2DGeometry クラス
 
-ID2D1 ジオメトリのラッパー。
+ID2D1Geometry のラッパー。
 
 ## <a name="syntax"></a>構文
 
@@ -69,67 +70,67 @@ class CD2DGeometry : public CD2DResource;
 
 |名前|説明|
 |----------|-----------------|
-|[CD2Dジオメトリ::CD2Dジオメトリ](#cd2dgeometry)|オブジェクトを作成します。|
-|[CD2D ジオメトリ::~CD2D ジオメトリ](#_dtorcd2dgeometry)|デストラクターです。 D2D ジオメトリ オブジェクトが破棄されるときに呼び出されます。|
+|[CD2DGeometry:: CD2DGeometry](#cd2dgeometry)|CD2DGeometry オブジェクトを構築します。|
+|[CD2DGeometry:: ~ CD2DGeometry](#_dtorcd2dgeometry)|デストラクターです。 D2D geometry オブジェクトが破棄されるときに呼び出されます。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
 |名前|説明|
 |----------|-----------------|
-|[CD2Dジオメトリ::アタッチ](#attach)|既存のリソース インターフェイスをオブジェクトにアタッチします。|
-|[CD2Dジオメトリ::結合ジオメトリ](#combinewithgeometry)|指定したジオメトリとこのジオメトリを結合し、その結果を ID2D1 簡略ジオメトリ シンクに格納します。|
-|[ジオメトリを比較します。](#comparewithgeometry)|このジオメトリと指定したジオメトリの間の交差部分を記述します。 比較は、指定されたフラット化許容値を使用して実行されます。|
-|[CD2Dジオメトリ::コンピューティングエリア](#computearea)|指定した行列によって変換され、指定された許容値を使用してフラット化された後のジオメトリの領域を計算します。|
-|[CD2Dジオメトリ::コンピュートレンス](#computelength)|各セグメントがラインに展開されたかのように、ジオメトリの長さを計算します。|
-|[CD2Dジオメトリ::コンピューティングポイントアットレングス](#computepointatlength)|指定した行列によって変換され、指定された許容差を使用してフラット化された後、ジオメトリに沿って指定した距離でポイントおよびタンジェント ベクトルを計算します。|
-|[CD2Dジオメトリ::Dエストロイ](#destroy)|CD2DGeometry オブジェクトを破棄します。 [(CD2D リソース::Dエストロイ](../../mfc/reference/cd2dresource-class.md#destroy)をオーバーライドします。|
-|[CD2Dジオメトリ::Dエタッハ](#detach)|オブジェクトからリソース インターフェイスを切り離します。|
-|[CD2Dジオメトリ::フィルインスイ](#fillcontainspoint)|指定したフラット化許容値に応じて、ジオメトリによって塗りつぶされた領域に指定された点が含まれるかどうかを示します。|
-|[CD2Dジオメトリ::取得](#get)|ID2D1 ジオメトリ インターフェイスを返します。|
-|[CD2Dジオメトリ::ゲットバウンド](#getbounds)||
-|[CD2Dジオメトリ::幅広い境界を取得します。](#getwidenedbounds)|指定したストローク幅とスタイルによって広げられ、指定した行列によって変換された後のジオメトリの境界を取得します。|
-|[CD2Dジオメトリ::IsValid](#isvalid)|リソースの妥当性を確認します[(CD2D リソースをオーバーライドします::IsValid](../../mfc/reference/cd2dresource-class.md#isvalid).)|
-|[CD2Dジオメトリ::アウトライン](#outline)|ジオメトリのアウトラインを計算し、その結果を ID2D1 簡略ジオメトリ シンクに書き込みます。|
-|[CD2Dジオメトリ::単純化](#simplify)|線のみを含むジオメトリの簡略化されたバージョンを作成し、(オプションで)3 次ベジエ曲線を含み、その結果を ID2D1簡体字ジオメトリシンクに書き込みます。|
-|[CD2Dジオメトリ::ストロークContainsPoint](#strokecontainspoint)|指定したストロークの太さ、スタイル、および変換を指定した点がジオメトリのストロークに含まれているかどうかを判断します。|
-|[CD2Dジオメトリ::テッセレート](#tessellate)|指定したマトリックスを使用して変換され、指定した許容範囲を使用してフラット化された後で、geometry をカバーする時計回りの三角形のセットを作成します。|
-|[CD2Dジオメトリ::幅広く](#widen)|指定したストロークによってジオメトリを拡大し、指定した行列によって変換され、指定された許容値を使用してフラット化された後、その結果を ID2D1簡体字ジオメトリ シンクに書き込みます。|
+|[CD2DGeometry:: Attach](#attach)|既存のリソースインターフェイスをオブジェクトにアタッチします。|
+|[CD2DGeometry:: 連結 Ewithgeometry](#combinewithgeometry)|指定したジオメトリとこのジオメトリを結合し、結果を ID2D1SimplifiedGeometrySink に格納します。|
+|[CD2DGeometry:: CompareWithGeometry](#comparewithgeometry)|このジオメトリと指定したジオメトリの交差部分について説明します。 比較は、指定されたフラット化許容範囲を使用して実行されます。|
+|[CD2DGeometry:: ComputeArea](#computearea)|指定された行列によって変換され、指定された許容範囲を使用してフラット化された後に、ジオメトリの面積を計算します。|
+|[CD2DGeometry:: ComputeLength](#computelength)|各セグメントが線に重ねられていない場合と同じように、ジオメトリの長さを計算します。|
+|[CD2DGeometry:: ComputePointAtLength](#computepointatlength)|指定した行列によって変換され、指定された許容範囲を使用してフラット化された後の、指定した距離におけるポイントおよびタンジェントベクターを計算します。|
+|[CD2DGeometry::D estroy](#destroy)|CD2DGeometry オブジェクトを破棄します。 ( [CD2DResource::D estroy](../../mfc/reference/cd2dresource-class.md#destroy)をオーバーライドします。)|
+|[CD2DGeometry::D etach](#detach)|オブジェクトからリソースインターフェイスをデタッチします。|
+|[CD2DGeometry:: FillContainsPoint](#fillcontainspoint)|指定された平坦化の許容範囲を指定して、ジオメトリによって塗りつぶされる領域に指定された点が含まれるかどうかを示します。|
+|[CD2DGeometry:: Get](#get)|ID2D1Geometry インターフェイスを返します。|
+|[CD2DGeometry:: GetBounds](#getbounds)||
+|[CD2DGeometry:: GetWidenedBounds](#getwidenedbounds)|指定したストロークの幅とスタイルによって拡張され、指定した行列によって変換された後のジオメトリの境界を取得します。|
+|[CD2DGeometry:: IsValid](#isvalid)|リソースの有効性を確認します ( [CD2DResource:: IsValid](../../mfc/reference/cd2dresource-class.md#isvalid)をオーバーライドします)。|
+|[CD2DGeometry:: アウトライン](#outline)|ジオメトリの輪郭を計算し、結果を ID2D1SimplifiedGeometrySink に書き込みます。|
+|[CD2DGeometry:: 単純化](#simplify)|直線と (必要に応じて) 3 次ベジエ曲線だけを含み、結果を ID2D1SimplifiedGeometrySink に書き込む geometry の簡略化されたバージョンを作成します。|
+|[CD2DGeometry:: StrokeContainsPoint](#strokecontainspoint)|指定したストロークの太さ、スタイル、および変換を指定して、ジオメトリのストロークに指定した点が含まれているかどうかを判断します。|
+|[CD2DGeometry:: テセレーション](#tessellate)|指定したマトリックスを使用して変換され、指定した許容範囲を使用してフラット化された後で、geometry をカバーする時計回りの三角形のセットを作成します。|
+|[CD2DGeometry:: 広げ](#widen)|指定したストロークでジオメトリを拡大し、指定した行列によって変換され、指定された許容範囲を使用してフラット化された後に、結果を ID2D1SimplifiedGeometrySink に書き込みます。|
 
 ### <a name="public-operators"></a>パブリック演算子
 
 |名前|説明|
 |----------|-----------------|
-|[CD2D ジオメトリ::演算子 ID2D1 ジオメトリ*](#operator_id2d1geometry_star)|ID2D1 ジオメトリ インターフェイスを返します。|
+|[CD2DGeometry:: operator ID2D1Geometry *](#operator_id2d1geometry_star)|ID2D1Geometry インターフェイスを返します。|
 
 ### <a name="protected-data-members"></a>プロテクト データ メンバー
 
 |名前|説明|
 |----------|-----------------|
-|[CD2Dジオメトリ::m_pGeometry](#m_pgeometry)|ID2D1 ジオメトリへのポインター。|
+|[CD2DGeometry:: m_pGeometry](#m_pgeometry)|ID2D1Geometry へのポインター。|
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
 [CObject](../../mfc/reference/cobject-class.md)
 
-[リソース](../../mfc/reference/cd2dresource-class.md)
+[CD2DResource](../../mfc/reference/cd2dresource-class.md)
 
 `CD2DGeometry`
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-**ヘッダー:** afxrendertarget.h
+**ヘッダー:** afxrendertarget
 
-## <a name="cd2dgeometrycd2dgeometry"></a><a name="_dtorcd2dgeometry"></a>CD2D ジオメトリ::~CD2D ジオメトリ
+## <a name="cd2dgeometrycd2dgeometry"></a><a name="_dtorcd2dgeometry"></a> CD2DGeometry:: ~ CD2DGeometry
 
-デストラクターです。 D2D ジオメトリ オブジェクトが破棄されるときに呼び出されます。
+デストラクターです。 D2D geometry オブジェクトが破棄されるときに呼び出されます。
 
 ```
 virtual ~CD2DGeometry();
 ```
 
-## <a name="cd2dgeometryattach"></a><a name="attach"></a>CD2Dジオメトリ::アタッチ
+## <a name="cd2dgeometryattach"></a><a name="attach"></a> CD2DGeometry:: Attach
 
-既存のリソース インターフェイスをオブジェクトにアタッチします。
+既存のリソースインターフェイスをオブジェクトにアタッチします。
 
 ```cpp
 void Attach(ID2D1Geometry* pResource);
@@ -137,12 +138,12 @@ void Attach(ID2D1Geometry* pResource);
 
 ### <a name="parameters"></a>パラメーター
 
-*リソース*<br/>
-既存のリソース インターフェイス。 NULL にすることはできません。
+*pResource*<br/>
+既存のリソースインターフェイス。 NULL にすることはできません
 
-## <a name="cd2dgeometrycd2dgeometry"></a><a name="cd2dgeometry"></a>CD2Dジオメトリ::CD2Dジオメトリ
+## <a name="cd2dgeometrycd2dgeometry"></a><a name="cd2dgeometry"></a> CD2DGeometry:: CD2DGeometry
 
-オブジェクトを作成します。
+CD2DGeometry オブジェクトを構築します。
 
 ```
 CD2DGeometry(
@@ -152,15 +153,15 @@ CD2DGeometry(
 
 ### <a name="parameters"></a>パラメーター
 
-*ターゲット*<br/>
-レンダー ターゲットへのポインター。
+*pParentTarget*<br/>
+レンダーターゲットへのポインター。
 
-*b自動破壊*<br/>
+*bAutoDestroy*<br/>
 オブジェクトが所有者 (pParentTarget) によって破棄されることを示します。
 
-## <a name="cd2dgeometrycombinewithgeometry"></a><a name="combinewithgeometry"></a>CD2Dジオメトリ::結合ジオメトリ
+## <a name="cd2dgeometrycombinewithgeometry"></a><a name="combinewithgeometry"></a> CD2DGeometry:: 連結 Ewithgeometry
 
-指定したジオメトリとこのジオメトリを結合し、その結果を ID2D1 簡略ジオメトリ シンクに格納します。
+指定したジオメトリとこのジオメトリを結合し、結果を ID2D1SimplifiedGeometrySink に格納します。
 
 ```
 BOOL CombineWithGeometry(
@@ -173,28 +174,28 @@ BOOL CombineWithGeometry(
 
 ### <a name="parameters"></a>パラメーター
 
-*入力ジオメトリ*<br/>
+*inputGeometry*<br/>
 このインスタンスと結合するジオメトリ。
 
-*コンバインモード*<br/>
+*combineMode*<br/>
 実行する結合操作の種類。
 
-*変換を入力します。*<br/>
-結合する前に入力ジオメトリに適用する変換。
+*inputGeometryTransform*<br/>
+結合する前に inputGeometry に適用する変換。
 
-*ジオメトリシンク*<br/>
-結合操作の結果。
+*geometrySink*<br/>
+結合演算の結果。
 
-*フラット化許容範囲*<br/>
+*flatteningTolerance*<br/>
 ジオメトリの多角形近似における点と点の間の距離の上限。 値が小さいほど、生成される結果の精度は高まりますが、実行速度が低下します。
 
 ### <a name="return-value"></a>戻り値
 
-メソッドが成功すると、TRUE が返されます。 それ以外の場合は FALSE を返します。
+メソッドが成功した場合、TRUE を返します。 それ以外の場合は FALSE を返します。
 
-## <a name="cd2dgeometrycomparewithgeometry"></a><a name="comparewithgeometry"></a>ジオメトリを比較します。
+## <a name="cd2dgeometrycomparewithgeometry"></a><a name="comparewithgeometry"></a> CD2DGeometry:: CompareWithGeometry
 
-このジオメトリと指定したジオメトリの間の交差部分を記述します。 比較は、指定されたフラット化許容値を使用して実行されます。
+このジオメトリと指定したジオメトリの交差部分について説明します。 比較は、指定されたフラット化許容範囲を使用して実行されます。
 
 ```
 D2D1_GEOMETRY_RELATION CompareWithGeometry(
@@ -205,22 +206,22 @@ D2D1_GEOMETRY_RELATION CompareWithGeometry(
 
 ### <a name="parameters"></a>パラメーター
 
-*入力ジオメトリ*<br/>
+*inputGeometry*<br/>
 テストするジオメトリ。
 
-*変換を入力します。*<br/>
-入力ジオメトリに適用する変換。
+*inputGeometryTransform*<br/>
+InputGeometry に適用する変換。
 
-*フラット化許容範囲*<br/>
+*flatteningTolerance*<br/>
 ジオメトリの多角形近似における点と点の間の距離の上限。 値が小さいほど、生成される結果の精度は高まりますが、実行速度が低下します。
 
 ### <a name="return-value"></a>戻り値
 
-メソッドが成功すると、TRUE が返されます。 それ以外の場合は FALSE を返します。
+メソッドが成功した場合、TRUE を返します。 それ以外の場合は FALSE を返します。
 
-## <a name="cd2dgeometrycomputearea"></a><a name="computearea"></a>CD2Dジオメトリ::コンピューティングエリア
+## <a name="cd2dgeometrycomputearea"></a><a name="computearea"></a> CD2DGeometry:: ComputeArea
 
-指定した行列によって変換され、指定された許容値を使用してフラット化された後のジオメトリの領域を計算します。
+指定された行列によって変換され、指定された許容範囲を使用してフラット化された後に、ジオメトリの面積を計算します。
 
 ```
 BOOL ComputeArea(
@@ -231,22 +232,22 @@ BOOL ComputeArea(
 
 ### <a name="parameters"></a>パラメーター
 
-*世界トランスフォーム*<br/>
-面積を計算する前に、このジオメトリに適用する変換。
+*worldTransform*<br/>
+領域を計算する前にこのジオメトリに適用する変換。
 
 *領域*<br/>
-このメソッドが返されるときに、このジオメトリの変換されたフラット化されたバージョンの領域へのポインターを格納します。 このパラメーターのストレージを割り振る必要があります。
+このメソッドから制御が戻るときに、このジオメトリの変換されたフラット化されたバージョンの領域へのポインターを格納します。 このパラメーターにはストレージを割り当てる必要があります。
 
-*フラット化許容範囲*<br/>
+*flatteningTolerance*<br/>
 ジオメトリの多角形近似における点と点の間の距離の上限。 値が小さいほど、生成される結果の精度は高まりますが、実行速度が低下します。
 
 ### <a name="return-value"></a>戻り値
 
-メソッドが成功すると、TRUE が返されます。 それ以外の場合は FALSE を返します。
+メソッドが成功した場合、TRUE を返します。 それ以外の場合は FALSE を返します。
 
-## <a name="cd2dgeometrycomputelength"></a><a name="computelength"></a>CD2Dジオメトリ::コンピュートレンス
+## <a name="cd2dgeometrycomputelength"></a><a name="computelength"></a> CD2DGeometry:: ComputeLength
 
-各セグメントがラインに展開されたかのように、ジオメトリの長さを計算します。
+各セグメントが線に重ねられていない場合と同じように、ジオメトリの長さを計算します。
 
 ```
 BOOL ComputeLength(
@@ -257,22 +258,22 @@ BOOL ComputeLength(
 
 ### <a name="parameters"></a>パラメーター
 
-*世界トランスフォーム*<br/>
+*worldTransform*<br/>
 長さを計算する前にジオメトリに適用する変換。
 
 *length*<br/>
-このメソッドが返されるときに、ジオメトリの長さへのポインターを格納します。 閉じたジオメトリの場合、長さには暗黙的な終了セグメントが含まれます。 このパラメーターのストレージを割り振る必要があります。
+このメソッドから制御が戻るときに、ジオメトリの長さへのポインターを格納します。 閉じたジオメトリの場合、長さには暗黙的な終了セグメントが含まれます。 このパラメーターにはストレージを割り当てる必要があります。
 
-*フラット化許容範囲*<br/>
+*flatteningTolerance*<br/>
 ジオメトリの多角形近似における点と点の間の距離の上限。 値が小さいほど、生成される結果の精度は高まりますが、実行速度が低下します。
 
 ### <a name="return-value"></a>戻り値
 
-メソッドが成功すると、TRUE が返されます。 それ以外の場合は FALSE を返します。
+メソッドが成功した場合、TRUE を返します。 それ以外の場合は FALSE を返します。
 
-## <a name="cd2dgeometrycomputepointatlength"></a><a name="computepointatlength"></a>CD2Dジオメトリ::コンピューティングポイントアットレングス
+## <a name="cd2dgeometrycomputepointatlength"></a><a name="computepointatlength"></a> CD2DGeometry:: ComputePointAtLength
 
-指定した行列によって変換され、指定された許容差を使用してフラット化された後、ジオメトリに沿って指定した距離でポイントおよびタンジェント ベクトルを計算します。
+指定した行列によって変換され、指定された許容範囲を使用してフラット化された後の、指定した距離におけるポイントおよびタンジェントベクターを計算します。
 
 ```
 BOOL ComputePointAtLength(
@@ -286,25 +287,25 @@ BOOL ComputePointAtLength(
 ### <a name="parameters"></a>パラメーター
 
 *length*<br/>
-検索するポイントと接線のジオメトリに沿った距離。 この距離が 0 より小さい場合、このメソッドはジオメトリの最初の点を計算します。 この距離がジオメトリの長さより大きい場合、このメソッドはジオメトリの最後の点を計算します。
+検索するポイントとタンジェントのジオメトリに沿った距離。 この距離が0より小さい場合、このメソッドはジオメトリ内の最初の点を計算します。 この距離が geometry の長さよりも大きい場合、このメソッドはジオメトリの最後の点を計算します。
 
-*世界トランスフォーム*<br/>
-指定した点と接線を計算する前にジオメトリに適用する変換。
+*worldTransform*<br/>
+指定した点とタンジェントを計算する前にジオメトリに適用する変換。
 
-*ポイント*<br/>
-ジオメトリに沿った指定した距離での位置。 ジオメトリが空の場合、このポイントには X 値と y 値として NaN が含まれます。
+*視点*<br/>
+ジオメトリに沿って指定した距離にある位置。 ジオメトリが空の場合、このポイントは x および y 値として NaN を含みます。
 
-*ユニットタンジェントベクタ*<br/>
-このメソッドが返されるときに、ジオメトリに沿って指定した距離にあるタンジェント ベクトルへのポインターを格納します。 ジオメトリが空の場合、このベクトルには X 値と y 値として NaN が含まれます。 このパラメーターのストレージを割り振る必要があります。
+*unitTangentVector*<br/>
+このメソッドから制御が戻るときに、指定した距離にある接線ベクトルへのポインターを、ジオメトリに沿って格納します。 ジオメトリが空の場合、このベクターには、x 値と y 値として NaN が含まれます。 このパラメーターにはストレージを割り当てる必要があります。
 
-*フラット化許容範囲*<br/>
+*flatteningTolerance*<br/>
 ジオメトリの多角形近似における点と点の間の距離の上限。 値が小さいほど、生成される結果の精度は高まりますが、実行速度が低下します。
 
 ### <a name="return-value"></a>戻り値
 
-メソッドが成功すると、TRUE が返されます。 それ以外の場合は FALSE を返します。
+メソッドが成功した場合、TRUE を返します。 それ以外の場合は FALSE を返します。
 
-## <a name="cd2dgeometrydestroy"></a><a name="destroy"></a>CD2Dジオメトリ::Dエストロイ
+## <a name="cd2dgeometrydestroy"></a><a name="destroy"></a> CD2DGeometry::D estroy
 
 CD2DGeometry オブジェクトを破棄します。
 
@@ -312,9 +313,9 @@ CD2DGeometry オブジェクトを破棄します。
 virtual void Destroy();
 ```
 
-## <a name="cd2dgeometrydetach"></a><a name="detach"></a>CD2Dジオメトリ::Dエタッハ
+## <a name="cd2dgeometrydetach"></a><a name="detach"></a> CD2DGeometry::D etach
 
-オブジェクトからリソース インターフェイスを切り離します。
+オブジェクトからリソースインターフェイスをデタッチします。
 
 ```
 ID2D1Geometry* Detach();
@@ -322,11 +323,11 @@ ID2D1Geometry* Detach();
 
 ### <a name="return-value"></a>戻り値
 
-デタッチされたリソース インターフェイスへのポインター。
+デタッチされたリソースインターフェイスへのポインター。
 
-## <a name="cd2dgeometryfillcontainspoint"></a><a name="fillcontainspoint"></a>CD2Dジオメトリ::フィルインスイ
+## <a name="cd2dgeometryfillcontainspoint"></a><a name="fillcontainspoint"></a> CD2DGeometry:: FillContainsPoint
 
-指定したフラット化許容値に応じて、ジオメトリによって塗りつぶされた領域に指定された点が含まれるかどうかを示します。
+指定された平坦化の許容範囲を指定して、ジオメトリによって塗りつぶされる領域に指定された点が含まれるかどうかを示します。
 
 ```
 BOOL FillContainsPoint(
@@ -338,25 +339,25 @@ BOOL FillContainsPoint(
 
 ### <a name="parameters"></a>パラメーター
 
-*ポイント*<br/>
+*視点*<br/>
 テストするポイント。
 
-*世界トランスフォーム*<br/>
-格納のテスト前にジオメトリに適用する変換。
+*worldTransform*<br/>
+コンテインメントのテストの前にジオメトリに適用する変換。
 
 *contains*<br/>
-このメソッドが返されるときに、ジオメトリによって塗りつぶされた領域にポイントが含まれている場合は TRUE の bool 値が格納されます。それ以外の場合は FALSE。 このパラメーターのストレージを割り振る必要があります。
+このメソッドから制御が戻るときに、ジオメトリによって塗りつぶされた領域に point が含まれている場合は、ブール値が格納されます。それ以外の場合は FALSE。 このパラメーターにはストレージを割り当てる必要があります。
 
-*フラット化許容範囲*<br/>
-正確なジオメトリパスとパス交差が計算される数値精度。 許容値より小さい値で塗りつぶしが欠落しているポイントは、内部と見なされます。 値が小さいほど、生成される結果の精度は高まりますが、実行速度が低下します。
+*flatteningTolerance*<br/>
+正確なジオメトリックパスとパスの積集合を計算するために使用する数値精度。 Fill が不足している点は、許容範囲内であると見なされます。 値が小さいほど、生成される結果の精度は高まりますが、実行速度が低下します。
 
 ### <a name="return-value"></a>戻り値
 
-メソッドが成功すると、TRUE が返されます。 それ以外の場合は FALSE を返します。
+メソッドが成功した場合、TRUE を返します。 それ以外の場合は FALSE を返します。
 
-## <a name="cd2dgeometryget"></a><a name="get"></a>CD2Dジオメトリ::取得
+## <a name="cd2dgeometryget"></a><a name="get"></a> CD2DGeometry:: Get
 
-ID2D1 ジオメトリ インターフェイスを返します。
+ID2D1Geometry インターフェイスを返します。
 
 ```
 ID2D1Geometry* Get();
@@ -364,9 +365,9 @@ ID2D1Geometry* Get();
 
 ### <a name="return-value"></a>戻り値
 
-ID2D1Geometry インターフェイスへのポインターまたは NULL オブジェクトがまだ初期化されていない場合。
+ID2D1Geometry インターフェイスへのポインター。オブジェクトがまだ初期化されていない場合は NULL。
 
-## <a name="cd2dgeometrygetbounds"></a><a name="getbounds"></a>CD2Dジオメトリ::ゲットバウンド
+## <a name="cd2dgeometrygetbounds"></a><a name="getbounds"></a> CD2DGeometry:: GetBounds
 
 ```
 BOOL GetBounds(
@@ -376,14 +377,14 @@ CD2DRectF& bounds) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*世界トランスフォーム*<br/>
-*境界*
+*worldTransform*<br/>
+*線*
 
 ### <a name="return-value"></a>戻り値
 
-## <a name="cd2dgeometrygetwidenedbounds"></a><a name="getwidenedbounds"></a>CD2Dジオメトリ::幅広い境界を取得します。
+## <a name="cd2dgeometrygetwidenedbounds"></a><a name="getwidenedbounds"></a> CD2DGeometry:: GetWidenedBounds
 
-指定したストローク幅とスタイルによって広げられ、指定した行列によって変換された後のジオメトリの境界を取得します。
+指定したストロークの幅とスタイルによって拡張され、指定した行列によって変換された後のジオメトリの境界を取得します。
 
 ```
 BOOL GetWidenedBounds(
@@ -396,26 +397,26 @@ BOOL GetWidenedBounds(
 
 ### <a name="parameters"></a>パラメーター
 
-*ストローク幅*<br/>
-アウトラインをなでることによってジオメトリを広げる量。
+*strokeWidth*<br/>
+その輪郭を描画して、ジオメトリを拡大する量。
 
-*ストロークスタイル*<br/>
+*strokeStyle*<br/>
 ジオメトリを拡大するストロークのスタイル。
 
-*世界トランスフォーム*<br/>
-ジオメトリが変換された後、ジオメトリがストロークされた後にジオメトリに適用される変換。
+*worldTransform*<br/>
+ジオメトリを変換した後、ジオメトリにストロークを適用した後に、ジオメトリに適用する変換。
 
-*境界*<br/>
-このメソッドが返されるときに、拡大されたジオメトリの境界を格納します。 このパラメーターのストレージを割り振る必要があります。
+*線*<br/>
+このメソッドから制御が戻るときに、拡張されたジオメトリの境界を格納します。 このパラメーターにはストレージを割り当てる必要があります。
 
-*フラット化許容範囲*<br/>
+*flatteningTolerance*<br/>
 ジオメトリの多角形近似における点と点の間の距離の上限。 値が小さいほど、生成される結果の精度は高まりますが、実行速度が低下します。
 
 ### <a name="return-value"></a>戻り値
 
-メソッドが成功すると、TRUE が返されます。 それ以外の場合は FALSE を返します。
+メソッドが成功した場合、TRUE を返します。 それ以外の場合は FALSE を返します。
 
-## <a name="cd2dgeometryisvalid"></a><a name="isvalid"></a>CD2Dジオメトリ::IsValid
+## <a name="cd2dgeometryisvalid"></a><a name="isvalid"></a> CD2DGeometry:: IsValid
 
 リソースの有効性を確認します
 
@@ -427,17 +428,17 @@ virtual BOOL IsValid() const;
 
 リソースが有効な場合は TRUE。それ以外の場合は FALSE。
 
-## <a name="cd2dgeometrym_pgeometry"></a><a name="m_pgeometry"></a>CD2Dジオメトリ::m_pGeometry
+## <a name="cd2dgeometrym_pgeometry"></a><a name="m_pgeometry"></a> CD2DGeometry:: m_pGeometry
 
-ID2D1 ジオメトリへのポインター。
+ID2D1Geometry へのポインター。
 
 ```
 ID2D1Geometry* m_pGeometry;
 ```
 
-## <a name="cd2dgeometryoperator-id2d1geometry"></a><a name="operator_id2d1geometry_star"></a>CD2D ジオメトリ::演算子 ID2D1 ジオメトリ*
+## <a name="cd2dgeometryoperator-id2d1geometry"></a><a name="operator_id2d1geometry_star"></a> CD2DGeometry:: operator ID2D1Geometry *
 
-ID2D1 ジオメトリ インターフェイスを返します。
+ID2D1Geometry インターフェイスを返します。
 
 ```
 operator ID2D1Geometry*();
@@ -445,11 +446,11 @@ operator ID2D1Geometry*();
 
 ### <a name="return-value"></a>戻り値
 
-ID2D1Geometry インターフェイスへのポインターまたは NULL オブジェクトがまだ初期化されていない場合。
+ID2D1Geometry インターフェイスへのポインター。オブジェクトがまだ初期化されていない場合は NULL。
 
-## <a name="cd2dgeometryoutline"></a><a name="outline"></a>CD2Dジオメトリ::アウトライン
+## <a name="cd2dgeometryoutline"></a><a name="outline"></a> CD2DGeometry:: アウトライン
 
-ジオメトリのアウトラインを計算し、その結果を ID2D1 簡略ジオメトリ シンクに書き込みます。
+ジオメトリの輪郭を計算し、結果を ID2D1SimplifiedGeometrySink に書き込みます。
 
 ```
 BOOL Outline(
@@ -460,22 +461,22 @@ BOOL Outline(
 
 ### <a name="parameters"></a>パラメーター
 
-*世界トランスフォーム*<br/>
-ジオメトリ のアウトラインに適用する変換。
+*worldTransform*<br/>
+ジオメトリアウトラインに適用する変換。
 
-*ジオメトリシンク*<br/>
-ジオメトリ変換されたアウトラインが追加される ID2D1簡体字ジオメトリシンク。
+*geometrySink*<br/>
+ジオメトリが変換されたアウトラインの追加先となる ID2D1SimplifiedGeometrySink。
 
-*フラット化許容範囲*<br/>
+*flatteningTolerance*<br/>
 ジオメトリの多角形近似における点と点の間の距離の上限。 値が小さいほど、生成される結果の精度は高まりますが、実行速度が低下します。
 
 ### <a name="return-value"></a>戻り値
 
-メソッドが成功すると、TRUE が返されます。 それ以外の場合は FALSE を返します。
+メソッドが成功した場合、TRUE を返します。 それ以外の場合は FALSE を返します。
 
-## <a name="cd2dgeometrysimplify"></a><a name="simplify"></a>CD2Dジオメトリ::単純化
+## <a name="cd2dgeometrysimplify"></a><a name="simplify"></a> CD2DGeometry:: 単純化
 
-線のみを含むジオメトリの簡略化されたバージョンを作成し、(オプションで)3 次ベジエ曲線を含み、その結果を ID2D1簡体字ジオメトリシンクに書き込みます。
+直線と (必要に応じて) 3 次ベジエ曲線だけを含み、結果を ID2D1SimplifiedGeometrySink に書き込む geometry の簡略化されたバージョンを作成します。
 
 ```
 BOOL Simplify(
@@ -487,25 +488,25 @@ BOOL Simplify(
 
 ### <a name="parameters"></a>パラメーター
 
-*単純化オプション*<br/>
-単純化されたジオメトリに曲線を含めるかどうかを指定する値。
+*simplificationOption*<br/>
+簡略化されたジオメトリに曲線を含めるかどうかを指定する値。
 
-*世界トランスフォーム*<br/>
-単純化されたジオメトリに適用する変換。
+*worldTransform*<br/>
+簡略化されたジオメトリに適用する変換。
 
-*ジオメトリシンク*<br/>
-簡易ジオメトリが追加される ID2D1簡体字ジオメトリシンク。
+*geometrySink*<br/>
+簡略化されたジオメトリの追加先となる ID2D1SimplifiedGeometrySink。
 
-*フラット化許容範囲*<br/>
+*flatteningTolerance*<br/>
 ジオメトリの多角形近似における点と点の間の距離の上限。 値が小さいほど、生成される結果の精度は高まりますが、実行速度が低下します。
 
 ### <a name="return-value"></a>戻り値
 
-メソッドが成功すると、TRUE が返されます。 それ以外の場合は FALSE を返します。
+メソッドが成功した場合、TRUE を返します。 それ以外の場合は FALSE を返します。
 
-## <a name="cd2dgeometrystrokecontainspoint"></a><a name="strokecontainspoint"></a>CD2Dジオメトリ::ストロークContainsPoint
+## <a name="cd2dgeometrystrokecontainspoint"></a><a name="strokecontainspoint"></a> CD2DGeometry:: StrokeContainsPoint
 
-指定したストロークの太さ、スタイル、および変換を指定した点がジオメトリのストロークに含まれているかどうかを判断します。
+指定したストロークの太さ、スタイル、および変換を指定して、ジオメトリのストロークに指定した点が含まれているかどうかを判断します。
 
 ```
 BOOL StrokeContainsPoint(
@@ -519,29 +520,29 @@ BOOL StrokeContainsPoint(
 
 ### <a name="parameters"></a>パラメーター
 
-*ポイント*<br/>
+*視点*<br/>
 コンテインメントのテスト対象の点。
 
-*ストローク幅*<br/>
+*strokeWidth*<br/>
 適用するストロークの太さ。
 
-*ストロークスタイル*<br/>
+*strokeStyle*<br/>
 適用するストロークのスタイル。
 
-*世界トランスフォーム*<br/>
-ストロークされたジオメトリに適用する変換。
+*worldTransform*<br/>
+ストロークジオメトリに適用する変換。
 
 *contains*<br/>
-このメソッドが返されるときに、ジオメトリのストロークに指定した点が含まれている場合は TRUE に設定されたブール値を格納します。それ以外の場合は FALSE。 このパラメーターのストレージを割り振る必要があります。
+このメソッドから制御が戻るときに、ジオメトリのストロークに指定した点が含まれている場合は TRUE に設定されたブール値を格納します。それ以外の場合は FALSE。 このパラメーターにはストレージを割り当てる必要があります。
 
-*フラット化許容範囲*<br/>
-正確なジオメトリパスとパス交差が計算される数値精度。 許容値より小さい値でストロークが欠落しているポイントは、内部と見なされます。 値が小さいほど、生成される結果の精度は高まりますが、実行速度が低下します。
+*flatteningTolerance*<br/>
+正確なジオメトリックパスとパスの積集合を計算するために使用する数値精度。 ストロークが不足している点は、許容範囲内であると見なされます。 値が小さいほど、生成される結果の精度は高まりますが、実行速度が低下します。
 
 ### <a name="return-value"></a>戻り値
 
-メソッドが成功すると、TRUE が返されます。 それ以外の場合は FALSE を返します。
+メソッドが成功した場合、TRUE を返します。 それ以外の場合は FALSE を返します。
 
-## <a name="cd2dgeometrytessellate"></a><a name="tessellate"></a>CD2Dジオメトリ::テッセレート
+## <a name="cd2dgeometrytessellate"></a><a name="tessellate"></a> CD2DGeometry:: テセレーション
 
 指定したマトリックスを使用して変換され、指定した許容範囲を使用してフラット化された後で、geometry をカバーする時計回りの三角形のセットを作成します。
 
@@ -554,22 +555,22 @@ BOOL Tessellate(
 
 ### <a name="parameters"></a>パラメーター
 
-*世界トランスフォーム*<br/>
+*worldTransform*<br/>
 このジオメトリに適用する変換、または NULL。
 
-*テッセレーションシンク*<br/>
-テッセレーションが追加される ID2D1Tessellation シンク。
+*tessellationSink*<br/>
+テセレーションが追加される ID2D1TessellationSink。
 
-*フラット化許容範囲*<br/>
+*flatteningTolerance*<br/>
 ジオメトリの多角形近似における点と点の間の距離の上限。 値が小さいほど、生成される結果の精度は高まりますが、実行速度が低下します。
 
 ### <a name="return-value"></a>戻り値
 
-メソッドが成功すると、TRUE が返されます。 それ以外の場合は FALSE を返します。
+メソッドが成功した場合、TRUE を返します。 それ以外の場合は FALSE を返します。
 
-## <a name="cd2dgeometrywiden"></a><a name="widen"></a>CD2Dジオメトリ::幅広く
+## <a name="cd2dgeometrywiden"></a><a name="widen"></a> CD2DGeometry:: 広げ
 
-指定したストロークによってジオメトリを拡大し、指定した行列によって変換され、指定された許容値を使用してフラット化された後、その結果を ID2D1簡体字ジオメトリ シンクに書き込みます。
+指定したストロークでジオメトリを拡大し、指定した行列によって変換され、指定された許容範囲を使用してフラット化された後に、結果を ID2D1SimplifiedGeometrySink に書き込みます。
 
 ```
 BOOL Widen(
@@ -582,24 +583,24 @@ BOOL Widen(
 
 ### <a name="parameters"></a>パラメーター
 
-*ストローク幅*<br/>
-ジオメトリの幅を広げる量。
+*strokeWidth*<br/>
+ジオメトリを拡大する量。
 
-*ストロークスタイル*<br/>
+*strokeStyle*<br/>
 ジオメトリに適用するストロークのスタイル、または NULL。
 
-*世界トランスフォーム*<br/>
-拡大した後でジオメトリに適用する変換。
+*worldTransform*<br/>
+拡大後にジオメトリに適用する変換。
 
-*ジオメトリシンク*<br/>
-拡張されたジオメトリが追加される ID2D1簡体字ジオメトリシンク。
+*geometrySink*<br/>
+拡張されたジオメトリの追加先となる ID2D1SimplifiedGeometrySink。
 
-*フラット化許容範囲*<br/>
+*flatteningTolerance*<br/>
 ジオメトリの多角形近似における点と点の間の距離の上限。 値が小さいほど、生成される結果の精度は高まりますが、実行速度が低下します。
 
 ### <a name="return-value"></a>戻り値
 
-メソッドが成功すると、TRUE が返されます。 それ以外の場合は FALSE を返します。
+メソッドが成功した場合、TRUE を返します。 それ以外の場合は FALSE を返します。
 
 ## <a name="see-also"></a>関連項目
 

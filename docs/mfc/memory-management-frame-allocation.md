@@ -1,4 +1,5 @@
 ---
+description: '詳細については、「メモリ管理: フレーム割り当て」を参照してください。'
 title: 'メモリ管理 : フレーム割り当て'
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -18,12 +19,12 @@ helpviewer_keywords:
 - frame allocation [MFC]
 - frame variables [MFC]
 ms.assetid: 945a211a-6f4f-4679-bb6a-b0f2a0d4a6c1
-ms.openlocfilehash: cb66a0c0aea16f7e6831b6a1aff1a125df355210
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 1763d332275f17ee082b891830641ebc61cad054
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87225047"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97193436"
 ---
 # <a name="memory-management-frame-allocation"></a>メモリ管理 : フレーム割り当て
 
@@ -33,7 +34,7 @@ ms.locfileid: "87225047"
 
 [!code-cpp[NVC_MFC_Utilities#10](codesnippet/cpp/memory-management-frame-allocation_1.cpp)]
 
-ローカル関数変数の場合、このスコープ遷移は関数が終了したときに発生しますが、入れ子になった中かっこが使用されている場合は、フレーム変数のスコープが関数よりも小さくなることがあります。 フレーム変数の自動削除は非常に重要です。 単純なプリミティブ型 ( **`int`** または**byte**など)、配列、またはデータ構造の場合、自動削除では、変数によって使用されるメモリが単に解放されます。 変数はスコープ外になったため、アクセスすることはできません。 ただし、C++ オブジェクトの場合、自動削除のプロセスは少し複雑になります。
+ローカル関数変数の場合、このスコープ遷移は関数が終了したときに発生しますが、入れ子になった中かっこが使用されている場合は、フレーム変数のスコープが関数よりも小さくなることがあります。 フレーム変数の自動削除は非常に重要です。 単純なプリミティブ型 ( **`int`** または **byte** など)、配列、またはデータ構造の場合、自動削除では、変数によって使用されるメモリが単に解放されます。 変数はスコープ外になったため、アクセスすることはできません。 ただし、C++ オブジェクトの場合、自動削除のプロセスは少し複雑になります。
 
 オブジェクトがフレーム変数として定義されている場合、そのコンストラクターは定義が検出された時点で自動的に呼び出されます。 オブジェクトがスコープ外に出ると、オブジェクトのメモリが解放される前に、そのデストラクターが自動的に呼び出されます。 この自動構築と破棄は非常に便利ですが、自動呼び出し (特にデストラクター) に注意する必要があります。
 

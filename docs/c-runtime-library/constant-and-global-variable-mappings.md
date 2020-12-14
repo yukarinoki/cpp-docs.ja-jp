@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「定数とグローバル変数のマッピング」を参照してください。
 title: 定数とグローバル変数のマップ
 ms.date: 11/04/2016
 f1_keywords:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 - _tenviron function
 - _tfinddata_t function
 ms.assetid: 3af4fd3e-9ed5-4ed9-96fd-7031e5126fd1
-ms.openlocfilehash: 1bd96c7a305f588a24b0c6d31b2a0132d6546574
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: 6078564a5f9d6ef28de704f4991264b5de58041b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57750197"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97195763"
 ---
 # <a name="constant-and-global-variable-mappings"></a>定数とグローバル変数のマップ
 
@@ -35,8 +36,8 @@ ms.locfileid: "57750197"
 
 ## <a name="see-also"></a>関連項目
 
-[汎用テキスト マップ](../c-runtime-library/generic-text-mappings.md)<br/>
-[データ型のマップ](../c-runtime-library/data-type-mappings.md)<br/>
-[ルーチンのマップ](../c-runtime-library/routine-mappings.md)<br/>
-[汎用テキストのプログラム例](../c-runtime-library/a-sample-generic-text-program.md)<br/>
-[汎用テキスト マップの使用](../c-runtime-library/using-generic-text-mappings.md)
+[汎用テキストマッピング](../c-runtime-library/generic-text-mappings.md)<br/>
+[データ型のマッピング](../c-runtime-library/data-type-mappings.md)<br/>
+[ルーチンのマッピング](../c-runtime-library/routine-mappings.md)<br/>
+[サンプル Generic-Text プログラム](../c-runtime-library/a-sample-generic-text-program.md)<br/>
+[Generic-Text マッピングの使用](../c-runtime-library/using-generic-text-mappings.md)

@@ -1,19 +1,20 @@
 ---
+description: '詳細情報: 国/地域識別文字列'
 title: 国/地域別文字列
 ms.date: 11/04/2016
 helpviewer_keywords:
 - country/region strings
 ms.assetid: 5baf0ccf-0d9b-40dc-83bd-323705287930
-ms.openlocfilehash: d5d8c10e30886c1b34bb5dc95296bc594acda1a4
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: d865c3a6a8f505eea7878df379db30224511d51c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88831854"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97195698"
 ---
 # <a name="countryregion-strings"></a>国/地域別文字列
 
-国/地域識別文字列を言語識別文字列と組み合わせて、 `setlocale`、 `_wsetlocale`、 `_create_locale`、および `_wcreate_locale` の関数のロケール指定を作成できます。 さまざまな Windows オペレーティングシステムのバージョンでサポートされている国と地域の名前の一覧については、「[付録 a:](/openspecs/windows_protocols/ms-lcid/a9eac961-e77d-41a6-90a5-ce1a8b0cdb9c) MS-lcid での製品の動作」の表の**言語**、**場所**、および**言語タグ**に関する列を参照してください。 \[ windows 言語コード識別子 (lcid) リファレンス。 利用できるロケール名と関連する値を列挙するコードの例については、「[NLS: Name-based APIs Sample](/windows/win32/intl/nls--name-based-apis-sample)」(NSL: 名前ベースの API のサンプル) をご覧ください。
+国/地域識別文字列を言語識別文字列と組み合わせて、 `setlocale`、 `_wsetlocale`、 `_create_locale`、および `_wcreate_locale` の関数のロケール指定を作成できます。 さまざまな Windows オペレーティングシステムのバージョンでサポートされている国と地域の名前の一覧については、「[付録 a:](/openspecs/windows_protocols/ms-lcid/a9eac961-e77d-41a6-90a5-ce1a8b0cdb9c) MS-lcid での製品の動作」の表の **言語**、**場所**、および **言語タグ** に関する列を参照してください。 \[ windows 言語コード識別子 (lcid) リファレンス。 利用できるロケール名と関連する値を列挙するコードの例については、「[NLS: Name-based APIs Sample](/windows/win32/intl/nls--name-based-apis-sample)」(NSL: 名前ベースの API のサンプル) をご覧ください。
 
 ## <a name="additional-supported-country-and-region-strings"></a>サポートされるその他の国/地域識別文字列
 
@@ -21,7 +22,7 @@ Microsoft の C ランタイム ライブラリの実装では、次の追加の
 
 |国/地域識別文字列|省略形|同等のロケール名|
 |----------------------------|------------------|----------------------------|
-|america|米国|ja-JP|
+|america|USA|ja-JP|
 |britain|GBR|en-GB|
 |china|CHN|zh-CN|
 |czech|CZE|cs-CZ|
@@ -42,8 +43,8 @@ Microsoft の C ランタイム ライブラリの実装では、次の追加の
 |trinidad & tobago|TTO|en-TT|
 |uk|GBR|en-GB|
 |united-kingdom|GBR|en-GB|
-|united-states|米国|ja-JP|
-|us|米国|ja-JP|
+|united-states|USA|ja-JP|
+|us|USA|ja-JP|
 
 ## <a name="see-also"></a>関連項目
 

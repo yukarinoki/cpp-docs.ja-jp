@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「/NOLOGO (著作権情報の非表示) (リンカー)」を参照してください。
 title: /NOLOGO (著作権情報の非表示) (リンカー)
 ms.date: 11/04/2016
 f1_keywords:
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - banners, suppressing startup
 - NOLOGO linker option
 ms.assetid: 3b20dddd-eca6-4545-a331-9f70bf720197
-ms.openlocfilehash: 0ef0c6f8e0073e7450daa8d0433ce4d6e82ceab8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 48edea691e254f0754d29ab5ea4d8055221c4b69
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62320527"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97196556"
 ---
 # <a name="nologo-suppress-startup-banner-linker"></a>/NOLOGO (著作権情報の非表示) (リンカー)
 
@@ -26,21 +27,21 @@ ms.locfileid: "62320527"
 /NOLOGO
 ```
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-/NOLOGO オプションでは、著作権のメッセージとバージョン番号が表示されなくなります。
+/NOLOGO オプションを指定すると、著作権メッセージとバージョン番号が表示されなくなります。
 
-このオプションはまた、コマンド ファイルのエコーを抑制します。 詳細については、次を参照してください。 [LINK コマンド ファイル](linking.md)します。
+このオプションでは、コマンドファイルのエコーも抑制します。 詳細については、「 [LINK コマンドファイル](linking.md)」を参照してください。
 
-既定では、この情報は、出力ウィンドウに、リンカーによって送信されます。 コマンドラインでは、標準出力に送信され、ファイルにリダイレクトできます。
+既定では、この情報はリンカーによって出力ウィンドウに送信されます。 コマンドラインでは、標準出力に送信され、ファイルにリダイレクトできます。
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのリンカー オプションを設定するには
 
-1. このオプションは、コマンドラインからのみ使用する必要があります。
+1. このオプションは、コマンドラインからのみ使用してください。
 
 ### <a name="to-set-this-linker-option-programmatically"></a>このリンカーをコードから設定するには
 
-1. このリンカー オプションをプログラムで変更することはできません。
+1. このリンカーオプションは、プログラムによって変更することはできません。
 
 ## <a name="see-also"></a>関連項目
 

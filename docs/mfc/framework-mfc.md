@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: フレームワーク (MFC)'
 title: フレームワーク (MFC)
 ms.date: 09/17/2019
 helpviewer_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - Windows API [MFC], encapsulation by MFC
 - encapsulated Win32 API [MFC]
 ms.assetid: 3be0fec8-9843-4119-ae42-ece993ef500b
-ms.openlocfilehash: b02d5a1862a278f46591895f20f58a97367b5ab2
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 12e5a28e231dfadec867213ebf1cea6fd6ae7300
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84618795"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97193488"
 ---
 # <a name="framework-mfc"></a>フレームワーク (MFC)
 
@@ -39,16 +40,16 @@ MFC (Microsoft Foundation Class) ライブラリフレームワークでの作�
 
 [フレームワークでのビルド](building-on-the-framework.md)
 
-[フレームワークと記述したコードとの関係](how-the-framework-calls-your-code.md)
+[フレームワークがコードを呼び出す方法](how-the-framework-calls-your-code.md)
 
-[CWinApp: アプリケーション クラス](cwinapp-the-application-class.md)
+[CWinApp: Application クラス](cwinapp-the-application-class.md)
 
 [ドキュメントテンプレートとドキュメント/ビュー作成プロセス](document-templates-and-the-document-view-creation-process.md)
 
-[メッセージの処理とマップ](message-handling-and-mapping.md)
+[メッセージの処理とマッピング](message-handling-and-mapping.md)
 
-[ウィンドウ オブジェクト](window-objects.md)
+[ウィンドウオブジェクト](window-objects.md)
 
 ## <a name="see-also"></a>関連項目
 
-[クラスを使用した Windows アプリケーションの作成](using-the-classes-to-write-applications-for-windows.md)
+[クラスを使用して Windows 用のアプリケーションを作成する](using-the-classes-to-write-applications-for-windows.md)
