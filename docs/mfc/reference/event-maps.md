@@ -1,15 +1,16 @@
 ---
+description: 詳細については、「イベントマップ」を参照してください。
 title: イベント マップ
 ms.date: 09/07/2019
 helpviewer_keywords:
 - event maps [MFC]
 ms.assetid: 1ed53aee-bc53-43cd-834a-6fb935c0d29b
-ms.openlocfilehash: aa11dbe1a0a3dc45893d1a05cda0ef1addb9e665
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: f3a6e949a4dc40927fc8946610707fbb404a400b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88837347"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97219851"
 ---
 # <a name="event-maps"></a>イベント マップ
 
@@ -63,7 +64,7 @@ DECLARE_EVENT_MAP()
 
 イベントマップの詳細については、「 [ActiveX コントロール: イベント](../../mfc/mfc-activex-controls-events.md)」を参照してください。
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 **ヘッダー** afxctl.h
 
@@ -81,7 +82,7 @@ BEGIN_EVENT_MAP(theClass,  baseClass)
 イベントマップが存在するコントロールクラスの名前を指定します。
 
 *baseClass*<br/>
-*クラス*の基底クラスの名前を指定します。
+*クラス* の基底クラスの名前を指定します。
 
 ### <a name="remarks"></a>解説
 
@@ -89,7 +90,7 @@ BEGIN_EVENT_MAP(theClass,  baseClass)
 
 イベントマップと BEGIN_EVENT_MAP マクロの詳細については、「 [ActiveX コントロール: イベント](../../mfc/mfc-activex-controls-events.md)」を参照してください。
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 **ヘッダー** afxctl.h
 
@@ -101,7 +102,7 @@ END_EVENT_MAP マクロを使用して、イベントマップの定義を終了
 END_EVENT_MAP()
 ```
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 **ヘッダー** afxctl.h
 
@@ -126,7 +127,7 @@ EVENT_CUSTOM(pszName, pfnFire,  vtsParams)
 
 ### <a name="remarks"></a>解説
 
-*Vtsparc ams*パラメーターは、定数の値をスペースで区切ったリストです `VTS_` 。 これらの値のうち1つ以上 (コンマではない) で区切られた関数のパラメーターリストを指定します。 次に例を示します。
+*Vtsparc ams* パラメーターは、定数の値をスペースで区切ったリストです `VTS_` 。 これらの値のうち1つ以上 (コンマではない) で区切られた関数のパラメーターリストを指定します。 次に例を示します。
 
 [!code-cpp[NVC_MFCActiveXControl#13](../../mfc/codesnippet/cpp/event-maps_2.cpp)]
 
@@ -143,7 +144,7 @@ RGB カラー値を表す32ビット整数を含むリストを指定し、そ�
 |VTS_COLOR|OLE_COLOR|
 |VTS_CY|通貨|
 |VTS_DATE|DATE|
-|VTS_BSTR|**`const`**__char \* __|
+|VTS_BSTR|**`const`**__char \*__|
 |VTS_DISPATCH|LPDISPATCH|
 |VTS_FONT|`IFontDispatch*`|
 |VTS_HANDLE|HANDLE|
@@ -167,13 +168,13 @@ RGB カラー値を表す32ビット整数を含むリストを指定し、そ�
 > [!NOTE]
 > Variant データ定数へのポインターを提供する VTS_FONT および VTS_PICTURE を除き、すべてのバリアント型に対して追加のバリアント定数が定義されています。 これらの定数は、規約を使用して名前が付けられ `VTS_Pconstantname` ます。 たとえば、VTS_PCOLOR は VTS_COLOR 定数へのポインターです。
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 **ヘッダー** afxctl.h
 
 ## <a name="event_custom_id"></a><a name="event_custom_id"></a> EVENT_CUSTOM_ID
 
-*Dispid*によって指定されたディスパッチ ID に属するカスタムイベントのイベント発生関数を定義します。
+*Dispid* によって指定されたディスパッチ ID に属するカスタムイベントのイベント発生関数を定義します。
 
 ```cpp
 EVENT_CUSTOM_ID(
@@ -199,7 +200,7 @@ EVENT_CUSTOM_ID(
 
 ### <a name="remarks"></a>解説
 
-*Vtsparc ams*引数は、定数の値をスペースで区切ったリストです `VTS_` 。 これらの値のうち1つ以上がコンマではなくスペースで区切られている場合は、関数のパラメーターリストを指定します。 次に例を示します。
+*Vtsparc ams* 引数は、定数の値をスペースで区切ったリストです `VTS_` 。 これらの値のうち1つ以上がコンマではなくスペースで区切られている場合は、関数のパラメーターリストを指定します。 次に例を示します。
 
 [!code-cpp[NVC_MFCActiveXControl#13](../../mfc/codesnippet/cpp/event-maps_2.cpp)]
 
@@ -207,7 +208,7 @@ RGB カラー値を表す32ビット整数を含むリストを指定し、そ�
 
 定数の一覧につい `VTS_` ては、「 [EVENT_CUSTOM](#event_custom)」を参照してください。
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 **ヘッダー** afxctl.h
 
@@ -231,7 +232,7 @@ ON_OLEVERB(idsVerbName,  memberFxn)
 
 リソースエディターを使用して、文字列テーブルに追加されるカスタム動詞名を作成できます。
 
-*MemberFxn*の関数プロトタイプは次のとおりです。
+*MemberFxn* の関数プロトタイプは次のとおりです。
 
 ```cpp
 BOOL memberFxn(
@@ -240,9 +241,9 @@ BOOL memberFxn(
    LPCRECT  lpRect);
 ```
 
-*Lpmsg*、 *HWndParent*、および*lpRect*パラメーターの値は、メンバー関数の対応するパラメーターから取得され `IOleObject::DoVerb` ます。
+*Lpmsg*、 *HWndParent*、および *lpRect* パラメーターの値は、メンバー関数の対応するパラメーターから取得され `IOleObject::DoVerb` ます。
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 **ヘッダー** afxole
 
@@ -266,9 +267,9 @@ ON_STDOLEVERB(iVerb, memberFxn)
 
 標準の動詞インデックスは、の形式で `OLEIVERB_` 、その後にアクションが続きます。 OLEIVERB_SHOW、OLEIVERB_HIDE、OLEIVERB_UIACTIVATE は、標準的な動詞の例です。
 
-*MemberFxn*パラメーターとして使用する関数プロトタイプの説明については、「 [ON_OLEVERB](#on_oleverb) 」を参照してください。
+*MemberFxn* パラメーターとして使用する関数プロトタイプの説明については、「 [ON_OLEVERB](#on_oleverb) 」を参照してください。
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 **ヘッダー** afxole
 

@@ -1,15 +1,16 @@
 ---
+description: 詳細については、「イベントシンクマップ」を参照してください。
 title: イベント シンク マップ
 ms.date: 11/04/2016
 helpviewer_keywords:
 - event sink maps [MFC]
 ms.assetid: a9757eb2-5f4a-45ec-a2cd-ce5eec85b16f
-ms.openlocfilehash: 2cbfbc70ae14ccda95c377cb1587bf9d2a1ad3e6
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: df18cdbba849ff0c8d7be5b038f997b6cc5df849
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88837265"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97219838"
 ---
 # <a name="event-sink-maps"></a>イベント シンク マップ
 
@@ -43,7 +44,7 @@ BEGIN_EVENTSINK_MAP(theClass, baseClass)
 イベントシンクがこのをマップするコントロールクラスの名前を指定します。
 
 *baseClass*<br/>
-*クラス*の基底クラスの名前を指定します。
+*クラス* の基底クラスの名前を指定します。
 
 ### <a name="remarks"></a>解説
 
@@ -51,7 +52,7 @@ BEGIN_EVENTSINK_MAP(theClass, baseClass)
 
 イベントシンクマップと OLE コントロールコンテナーの詳細については、「 [ActiveX コントロールコンテナー](../../mfc/activex-control-containers.md)」を参照してください。
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
   **ヘッダー** afxdisp.h
 
@@ -69,7 +70,7 @@ DECLARE_EVENTSINK_MAP()
 
 イベントシンクマップの詳細については、「 [ActiveX コントロールコンテナー](../../mfc/activex-control-containers.md)」を参照してください。
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
   **ヘッダー** afxwin.h
 
@@ -81,7 +82,7 @@ DECLARE_EVENTSINK_MAP()
 END_EVENTSINK_MAP()
 ```
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
   **ヘッダー** afxdisp.h
 
@@ -112,7 +113,7 @@ OLE コントロールのコントロール ID。
 
 ### <a name="remarks"></a>解説
 
-*Vtsparc ams*引数は、 **VTS_** 定数の空白で区切られた値のリストです。 これらの値のうち1つ以上 (コンマではない) で区切られた関数のパラメーターリストを指定します。 次に例を示します。
+*Vtsparc ams* 引数は、 **VTS_** 定数の空白で区切られた値のリストです。 これらの値のうち1つ以上 (コンマではない) で区切られた関数のパラメーターリストを指定します。 次に例を示します。
 
 [!code-cpp[NVC_MFCAutomation#11](../../mfc/codesnippet/cpp/event-sink-maps_1.cpp)]
 
@@ -120,7 +121,7 @@ OLE コントロールのコントロール ID。
 
 **VTS_** 定数の一覧については、「 [EVENT_CUSTOM](event-maps.md#event_custom)」を参照してください。
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
   **ヘッダー** afxdisp.h
 
@@ -154,7 +155,7 @@ ON_EVENT_RANGE(theClass, idFirst, idLast, dispid, pfnHandler,  vtsParams)
 
 ### <a name="remarks"></a>解説
 
-*Vtsparc ams*引数は、 **VTS_** 定数の空白で区切られた値のリストです。 これらの値のうち1つ以上 (コンマではない) で区切られた関数のパラメーターリストを指定します。 次に例を示します。
+*Vtsparc ams* 引数は、 **VTS_** 定数の空白で区切られた値のリストです。 これらの値のうち1つ以上 (コンマではない) で区切られた関数のパラメーターリストを指定します。 次に例を示します。
 
 [!code-cpp[NVC_MFCAutomation#11](../../mfc/codesnippet/cpp/event-sink-maps_1.cpp)]
 
@@ -172,7 +173,7 @@ ON_EVENT_RANGE(theClass, idFirst, idLast, dispid, pfnHandler,  vtsParams)
 
 [!code-cpp[NVC_MFCAutomation#13](../../mfc/codesnippet/cpp/event-sink-maps_3.cpp)]
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
   **ヘッダー** afxdisp.h
 
@@ -200,7 +201,7 @@ ON_EVENT_REFLECT(theClass,  dispid, pfnHandler,  vtsParams)
 
 ### <a name="remarks"></a>解説
 
-*Vtsparc ams*引数は、 **VTS_** 定数の空白で区切られた値のリストです。
+*Vtsparc ams* 引数は、 **VTS_** 定数の空白で区切られた値のリストです。
 
 これらの値のうち1つ以上 (コンマではない) で区切られた関数のパラメーターリストを指定します。 次に例を示します。
 
@@ -210,7 +211,7 @@ ON_EVENT_REFLECT(theClass,  dispid, pfnHandler,  vtsParams)
 
 **VTS_** 定数の一覧については、「 [EVENT_CUSTOM](event-maps.md#event_custom)」を参照してください。
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
   **ヘッダー** afxdisp.h
 
@@ -234,14 +235,14 @@ OLE コントロールのコントロール ID。
 通知に関連するプロパティのディスパッチ ID。
 
 *pfnRequest*<br/>
-このプロパティの通知を処理するメンバー関数へ `OnRequestEdit` のポインター。 この関数は、ブール型の戻り値の型と**ブール**型パラメーターを持つ必要があり <strong>\*</strong> ます。 この関数では、パラメーターを TRUE に設定して、プロパティを変更できるようにし、FALSE を許可しないようにする必要があります。 関数は、通知が処理されたことを示すために TRUE を返します。それ以外の場合は FALSE。
+このプロパティの通知を処理するメンバー関数へ `OnRequestEdit` のポインター。 この関数は、ブール型の戻り値の型と **ブール** 型パラメーターを持つ必要があり <strong>\*</strong> ます。 この関数では、パラメーターを TRUE に設定して、プロパティを変更できるようにし、FALSE を許可しないようにする必要があります。 関数は、通知が処理されたことを示すために TRUE を返します。それ以外の場合は FALSE。
 
 *pfnChanged*<br/>
 このプロパティの通知を処理するメンバー関数へ `OnChanged` のポインター。 関数は、ブール型の戻り値の型と UINT パラメーターを持つ必要があります。 この関数は、通知が処理されたことを示すために TRUE を返します。それ以外の場合は FALSE。
 
 ### <a name="remarks"></a>解説
 
-*Vtsparc ams*引数は、 **VTS_** 定数の空白で区切られた値のリストです。 これらの値のうち1つ以上 (コンマではない) で区切られた関数のパラメーターリストを指定します。 次に例を示します。
+*Vtsparc ams* 引数は、 **VTS_** 定数の空白で区切られた値のリストです。 これらの値のうち1つ以上 (コンマではない) で区切られた関数のパラメーターリストを指定します。 次に例を示します。
 
 [!code-cpp[NVC_MFCAutomation#11](../../mfc/codesnippet/cpp/event-sink-maps_1.cpp)]
 
@@ -278,7 +279,7 @@ ON_PROPNOTIFY_RANGE(theClass, idFirst, idLast, dispid, pfnRequest, pfnChanged)
 *pfnChanged*<br/>
 このプロパティの通知を処理するメンバー関数へ `OnChanged` のポインター。 関数は、 `BOOL` 戻り値の型とパラメーターを持つ必要があり `UINT` ます。 この関数は、通知が処理されたことを示すために TRUE を返します。それ以外の場合は FALSE。
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
   **ヘッダー** afxdisp.h
 
@@ -300,12 +301,12 @@ ON_PROPNOTIFY_REFLECT(theClass, dispid, pfnRequest, pfnChanged)
 通知に関連するプロパティのディスパッチ ID。
 
 *pfnRequest*<br/>
-このプロパティの通知を処理するメンバー関数へ `OnRequestEdit` のポインター。 この関数は、ブール型の戻り値の型と**ブール**型パラメーターを持つ必要があり <strong>\*</strong> ます。 この関数では、パラメーターを TRUE に設定して、プロパティを変更できるようにし、FALSE を許可しないようにする必要があります。 関数は、通知が処理されたことを示すために TRUE を返します。それ以外の場合は FALSE。
+このプロパティの通知を処理するメンバー関数へ `OnRequestEdit` のポインター。 この関数は、ブール型の戻り値の型と **ブール** 型パラメーターを持つ必要があり <strong>\*</strong> ます。 この関数では、パラメーターを TRUE に設定して、プロパティを変更できるようにし、FALSE を許可しないようにする必要があります。 関数は、通知が処理されたことを示すために TRUE を返します。それ以外の場合は FALSE。
 
 *pfnChanged*<br/>
 このプロパティの通知を処理するメンバー関数へ `OnChanged` のポインター。 関数にはブール型の戻り値を指定し、パラメーターを指定することはできません。 関数は、通知が処理されたことを示すために TRUE を返します。それ以外の場合は FALSE。
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
   **ヘッダー** afxdisp.h
 

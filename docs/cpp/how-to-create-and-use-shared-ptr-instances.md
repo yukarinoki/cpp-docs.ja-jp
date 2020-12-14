@@ -1,15 +1,16 @@
 ---
+description: '詳細については、「方法: shared_ptr インスタンスを作成して使用する」を参照してください。'
 title: '方法: shared_ptr インスタンスを作成して使用する'
 ms.custom: how-to
 ms.date: 11/19/2019
 ms.topic: conceptual
 ms.assetid: 7d6ebb73-fa0d-4b0b-a528-bf05de96518e
-ms.openlocfilehash: 44d375f72cf409df1e67b72dd76e196051dacf93
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: b98a9a349f7f33805bd86c58e854b1d988733da2
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87187960"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97221255"
 ---
 # <a name="how-to-create-and-use-shared_ptr-instances"></a>方法: shared_ptr インスタンスを作成して使用する
 

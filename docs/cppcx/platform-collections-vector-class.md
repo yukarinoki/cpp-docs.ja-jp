@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: Platform:: Collections:: Vector クラス'
 title: Platform::Collections::Vector クラス
 ms.date: 12/04/2019
 ms.topic: reference
@@ -21,12 +22,12 @@ f1_keywords:
 helpviewer_keywords:
 - Vector Class (C++/Cx)
 ms.assetid: aee8c076-9700-47c3-99b6-799fd3edb0ca
-ms.openlocfilehash: dc467b8db3cd6ec88395554eef7f109877f10d41
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: b13221c6280e0e94572cb4b6710bb59fbd7db4c1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88839089"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97221190"
 ---
 # <a name="platformcollectionsvector-class"></a>Platform::Collections::Vector クラス
 
@@ -44,8 +45,8 @@ template <typename T, typename E>
 *T*<br/>
 Vector オブジェクトに含まれている要素の型。
 
-*つまり*<br/>
-*T*型の値と等しいかどうかをテストするための二項述語を指定します。既定値は `std::equal_to<T>` です。
+*E*<br/>
+*T* 型の値と等しいかどうかをテストするための二項述語を指定します。既定値は `std::equal_to<T>` です。
 
 ### <a name="remarks"></a>解説
 
@@ -61,7 +62,7 @@ Vector オブジェクトに含まれている要素の型。
 
 1. パブリック列挙型クラス
 
-**Vector**クラスは、 [Windows:: Foundation:: Collections:: Ivector](/uwp/api/windows.foundation.collections.ivector-1)インターフェイスの C++ の具象実装です。
+**Vector** クラスは、 [Windows:: Foundation:: Collections:: Ivector](/uwp/api/windows.foundation.collections.ivector-1)インターフェイスの C++ の具象実装です。
 
 パブリックの戻り値またはパラメーターで **Vector** 型を使用しようとすると、コンパイラエラー C3986 が発生します。 このエラーを修正するには、パラメーターまたは戻り値の型を [Windows::Foundation::Collections::IVector](/uwp/api/windows.foundation.collections.ivector-1)に変更します。 詳細については、「 [Collections (C++/CX) (コレクション (C++/CX))](../cppcx/collections-c-cx.md)」を参照してください。
 
@@ -101,7 +102,7 @@ Vector オブジェクトに含まれている要素の型。
 
 `Vector`
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 **ヘッダー:** collection.h
 
@@ -120,7 +121,7 @@ virtual void Append(T item);
 ### <a name="parameters"></a>パラメーター
 
 *インデックス*<br/>
-Vector に挿入する項目。 *項目*の型は、 *T*型名によって定義されます。
+Vector に挿入する項目。 *項目* の型は、 *T* 型名によって定義されます。
 
 ## <a name="vectorclear-method"></a><a name="clear"></a> Vector:: Clear メソッド
 
@@ -169,7 +170,7 @@ virtual T GetAt(unsigned int index);
 
 ### <a name="return-value"></a>戻り値
 
-*Index*パラメーターによって指定された要素。 要素の型は、 *T* 型名によって定義されます。
+*Index* パラメーターによって指定された要素。 要素の型は、 *T* 型名によって定義されます。
 
 ## <a name="vectorgetmany-method"></a><a name="getmany"></a> Vector:: GetMany メソッド
 
@@ -189,7 +190,7 @@ virtual unsigned int GetMany(
 取得する項目の 0 から始まるインデックス。
 
 *先*<br/>
-*StartIndex*によって指定された要素から開始し、ベクターの最後の要素で終了する項目の、呼び出し元が割り当てた配列。
+*StartIndex* によって指定された要素から開始し、ベクターの最後の要素で終了する項目の、呼び出し元が割り当てた配列。
 
 ### <a name="return-value"></a>戻り値
 
@@ -231,7 +232,7 @@ virtual bool IndexOf(T value, unsigned int* index);
 *インデックス*<br/>
 パラメーター *値* が見つかった場合は、項目の0から始まるインデックス。それ以外の場合は0です。
 
-*インデックス*パラメーターは、項目がベクターの最初の要素であるか、項目が見つからなかった場合は0になります。 戻り値がの場合、項目が見つかり、それが最初の要素になります。 **`true`** それ以外の場合、項目は見つかりませんでした。
+*インデックス* パラメーターは、項目がベクターの最初の要素であるか、項目が見つからなかった場合は0になります。 戻り値がの場合、項目が見つかり、それが最初の要素になります。 **`true`** それ以外の場合、項目は見つかりませんでした。
 
 ### <a name="return-value"></a>戻り値
 
@@ -257,7 +258,7 @@ virtual void InsertAt(unsigned int index, T item)
 ベクター オブジェクト内の特定の要素を指定する、0 から始まる符号なし整数。
 
 *item*<br/>
-*Index*で指定された要素のベクターに挿入する項目。 *項目*の型は、 *T*型名によって定義されます。
+*Index* で指定された要素のベクターに挿入する項目。 *項目* の型は、 *T* 型名によって定義されます。
 
 ## <a name="vectorremoveat-method"></a><a name="removeat"></a> Vector:: RemoveAt メソッド
 
@@ -297,7 +298,7 @@ virtual void ReplaceAll(const ::Platform::Array<T>^ arr);
 ### <a name="parameters"></a>パラメーター
 
 *→*<br/>
-*T*型名によって定義される型を持つオブジェクトの配列。
+*T* 型名によって定義される型を持つオブジェクトの配列。
 
 ## <a name="vectorsetat-method"></a><a name="setat"></a> Vector:: SetAt メソッド
 
@@ -315,7 +316,7 @@ virtual void SetAt(unsigned int index, T item);
 ベクター オブジェクト内の特定の要素を指定する、0 から始まる符号なし整数。
 
 *item*<br/>
-指定された要素に代入する値。 *項目*の型は、 *T*型名によって定義されます。
+指定された要素に代入する値。 *項目* の型は、 *T* 型名によって定義されます。
 
 ## <a name="vectorsize-method"></a><a name="size"></a> Vector:: Size メソッド
 
@@ -366,7 +367,7 @@ Vector(std::initializer_list<T> il);
 現在のベクターを初期化するために使用されるオブジェクトのコレクションの型。
 
 *自動車*<br/>
-ベクターの初期化に使用される*T*型のオブジェクトの[std:: initializer_list](../standard-library/initializer-list-class.md) 。
+ベクターの初期化に使用される *T* 型のオブジェクトの [std:: initializer_list](../standard-library/initializer-list-class.md) 。
 
 *N*<br/>
 現在のベクターを初期化するために使用されるオブジェクトのコレクションの要素数。
@@ -377,17 +378,17 @@ Vector(std::initializer_list<T> il);
 *value*<br/>
 現在のベクターの各要素を初期化するために使用される値。
 
-*画像*<br/>
+*v*<br/>
 現在のベクターを初期化するために使用される[std:: vector](../standard-library/vector-class.md)の[左辺値と右辺値](../cpp/lvalues-and-rvalues-visual-cpp.md)。
 
 *ptr*<br/>
 現在のベクターを初期化するために使用される `std::vector` へのポインター。
 
 *first*<br/>
-現在のベクターを初期化するために使用されるオブジェクトのシーケンスの最初の要素。 *最初*のの型は、*完全転送*によって渡されます。 詳細については、「[右辺値参照宣言子: &&](../cpp/rvalue-reference-declarator-amp-amp.md)」を参照してください。
+現在のベクターを初期化するために使用されるオブジェクトのシーケンスの最初の要素。 *最初* のの型は、*完全転送* によって渡されます。 詳細については、「[右辺値参照宣言子: &&](../cpp/rvalue-reference-declarator-amp-amp.md)」を参照してください。
 
 *last*<br/>
-現在のベクターを初期化するために使用されるオブジェクトのシーケンスの最後の要素。 *最後*のの種類は、*完全転送*によって渡されます。 詳細については、「[右辺値参照宣言子: &&](../cpp/rvalue-reference-declarator-amp-amp.md)」を参照してください。
+現在のベクターを初期化するために使用されるオブジェクトのシーケンスの最後の要素。 *最後* のの種類は、*完全転送* によって渡されます。 詳細については、「[右辺値参照宣言子: &&](../cpp/rvalue-reference-declarator-amp-amp.md)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「メッセージハンドラーの編集」を参照してください。
 title: メッセージ ハンドラーの編集
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,24 +8,24 @@ helpviewer_keywords:
 - message handlers [MFC]
 - message handling [MFC], editing handlers
 ms.assetid: 7babb496-1f14-43b1-a14d-2e54402a92e2
-ms.openlocfilehash: e6679ed97af77775e431cf77c3b7bc659b6eb445
-ms.sourcegitcommit: 65ed563a8a1d4d90f872a2a6edcb086f84ec9f77
+ms.openlocfilehash: 303c790535211d1b065d6d12bcb150ed568f0045
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66741660"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97219864"
 ---
 # <a name="editing-a-message-handler"></a>メッセージ ハンドラーの編集
 
-メッセージ ハンドラーを定義すると、コードを追加または変更、メンバー関数の定義に移動することができます。
+メッセージハンドラーを定義したら、メンバー関数の定義にアクセスして、コードを追加または変更できます。
 
-メンバー関数の定義にジャンプするには、[ダイアログ エディター](../../windows/dialog-editor.md)ハンドラーが既に定義されているコントロールをダブルクリックします。 選択したコントロールのメッセージ ハンドラーが定義されているファイルに移動します。
+[ダイアログエディター](../../windows/dialog-editor.md)からメンバー関数の定義に移動するには、ハンドラーが既に定義されているコントロールをダブルクリックします。 これにより、選択したコントロールのメッセージハンドラーが定義されているファイルに移動します。
 
-メンバー関数の定義にジャンプする[クラス ビュー](/visualstudio/ide/viewing-the-structure-of-code)、クラス ビュー内の関数名をダブルクリックします。
+[クラスビュー](/visualstudio/ide/viewing-the-structure-of-code)からメンバー関数の定義に移動するにはクラスビューで関数名をダブルクリックします。
 
 ## <a name="see-also"></a>関連項目
 
-[マップ (関数にメッセージを)](../../mfc/reference/mapping-messages-to-functions.md)<br/>
+[関数へのメッセージのマッピング](../../mfc/reference/mapping-messages-to-functions.md)<br/>
 [コード ウィザードを使用した機能の追加](../../ide/adding-functionality-with-code-wizards-cpp.md)<br/>
 [クラスの追加](../../ide/adding-a-class-visual-cpp.md)<br/>
 [メンバー関数の追加](../../ide/adding-a-member-function-visual-cpp.md)<br/>

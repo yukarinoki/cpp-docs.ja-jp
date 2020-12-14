@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: CAccessorBase クラス'
 title: CAccessorBase クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -25,12 +26,12 @@ helpviewer_keywords:
 - IsAutoAccessor method
 - ReleaseAccessors method
 ms.assetid: 389b65be-11ca-4ae0-9290-60c621c4982b
-ms.openlocfilehash: 81b0ecd8ded7acb0c0e376d0869decb2bfcb590e
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 43d3f507f8ee003605cf2b3f964b06a3c1088233
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91509114"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97221177"
 ---
 # <a name="caccessorbase-class"></a>CAccessorBase クラス
 
@@ -54,7 +55,7 @@ OLE DB テンプレート内のすべてのアクセサーは、このクラス�
 | [IsAutoAccessor](#isauto) | 指定されたアクセサーが autoaccessor であるかどうかをテストします。 |
 | [ReleaseAccessors](#release) | アクセサーを解放します。 |
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** atldbcli.h
 
@@ -143,7 +144,7 @@ HRESULT ReleaseAccessors(IUnknown* pUnk);
 
 標準の HRESULT です。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 [CAccessorRowset:: Close](./caccessorrowset-class.md#close)から呼び出されます。
 

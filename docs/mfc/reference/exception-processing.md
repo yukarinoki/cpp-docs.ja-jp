@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「例外処理」を参照してください。
 title: 例外処理
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - MFC, exceptions
 - exceptions [MFC], MFC throwing functions
 ms.assetid: 26d4457c-8350-48f5-916e-78f919787c30
-ms.openlocfilehash: 9d6a1c30ca0811085124a5fb5994c5f35d412ae7
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: add942991a4792cb88e82dee0bfd033612b68eb2
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88837190"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97219825"
 ---
 # <a name="exception-processing"></a>例外処理
 
@@ -48,7 +49,7 @@ Microsoft Foundation Class ライブラリに含まれるいくつかのマク�
 |[THROW](#throw)|指定された例外をスローします。|
 |[THROW_LAST](#throw_last)|現在処理されている例外を次の外部ハンドラーにスローします。|
 
-### <a name="exception-throwing-functions"></a>例外スロー関数
+### <a name="exception-throwing-functions"></a>Exception-Throwing 関数
 
 |名前|説明|
 |-|-|
@@ -88,7 +89,7 @@ MFC には、次の終了関数が用意されています。
 
 ## <a name="try"></a><a name="try"></a> やり直し
 
-**TRY**ブロックを設定します。
+**TRY** ブロックを設定します。
 
 ```
 TRY
@@ -96,7 +97,7 @@ TRY
 
 ### <a name="remarks"></a>解説
 
-**TRY**ブロックは、例外をスローする可能性のあるコードのブロックを識別します。 これらの例外は、次の **CATCH** および **AND_CATCH** ブロックで処理されます。 再帰が許可されています。例外を無視するか、THROW_LAST マクロを使用して、外側の **TRY** ブロックに例外を渡すことができます。 END_CATCH または END_CATCH_ALL マクロを使用し **て、TRY** ブロックを終了します。
+**TRY** ブロックは、例外をスローする可能性のあるコードのブロックを識別します。 これらの例外は、次の **CATCH** および **AND_CATCH** ブロックで処理されます。 再帰が許可されています。例外を無視するか、THROW_LAST マクロを使用して、外側の **TRY** ブロックに例外を渡すことができます。 END_CATCH または END_CATCH_ALL マクロを使用し **て、TRY** ブロックを終了します。
 
 詳細については、「 [例外](../../mfc/exception-handling-in-mfc.md)」を参照してください。
 
@@ -104,7 +105,7 @@ TRY
 
 [CATCH](#catch)の例を参照してください。
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 ヘッダー: afx.h
 
@@ -128,12 +129,12 @@ CATCH(exception_class, exception_object_pointer_name)
 
 例外処理コードは、必要に応じて例外オブジェクトを問い合わせて、例外の特定の原因に関する詳細情報を取得することができます。 THROW_LAST マクロを呼び出して、処理を次の外側の例外フレームにシフトします。 END_CATCH マクロを使用し **て、TRY** ブロックを終了します。
 
-*Exception_class*がクラスの場合は `CException` 、すべての例外の種類がキャッチされます。 [CObject:: IsKindOf](../../mfc/reference/cobject-class.md#iskindof)メンバー関数を使用すると、スローされた特定の例外を特定できます。 複数の種類の例外をキャッチするより優れた方法は、それぞれが異なる例外の種類を持つシーケンシャル **AND_CATCH** ステートメントを使用することです。
+*Exception_class* がクラスの場合は `CException` 、すべての例外の種類がキャッチされます。 [CObject:: IsKindOf](../../mfc/reference/cobject-class.md#iskindof)メンバー関数を使用すると、スローされた特定の例外を特定できます。 複数の種類の例外をキャッチするより優れた方法は、それぞれが異なる例外の種類を持つシーケンシャル **AND_CATCH** ステートメントを使用することです。
 
 例外オブジェクトのポインターはマクロによって作成されます。 自分で宣言する必要はありません。
 
 > [!NOTE]
-> **CATCH**ブロックは、中かっこで囲まれた C++ スコープとして定義されます。 このスコープで変数を宣言する場合、変数はそのスコープ内でのみアクセスできます。 これは *exception_object_pointer_name*にも適用されます。
+> **CATCH** ブロックは、中かっこで囲まれた C++ スコープとして定義されます。 このスコープで変数を宣言する場合、変数はそのスコープ内でのみアクセスできます。 これは *exception_object_pointer_name* にも適用されます。
 
 例外と CATCH マクロの詳細については、「 [例外](../../mfc/exception-handling-in-mfc.md)」を参照してください。
 
@@ -156,10 +157,10 @@ CATCH_ALL(exception_object_pointer_name)
 
 ### <a name="remarks"></a>解説
 
-例外処理コードは、必要に応じて例外オブジェクトを問い合わせて、例外の特定の原因に関する詳細情報を取得することができます。 マクロを呼び出して、 `THROW_LAST` 処理を次の外側の例外フレームにシフトします。 **CATCH_ALL**を使用する場合は、END_CATCH_ALL マクロを使用し**て TRY**ブロックを終了します。
+例外処理コードは、必要に応じて例外オブジェクトを問い合わせて、例外の特定の原因に関する詳細情報を取得することができます。 マクロを呼び出して、 `THROW_LAST` 処理を次の外側の例外フレームにシフトします。 **CATCH_ALL** を使用する場合は、END_CATCH_ALL マクロを使用し **て TRY** ブロックを終了します。
 
 > [!NOTE]
-> **CATCH_ALL**ブロックは、中かっこで囲まれた C++ スコープとして定義されます。 このスコープで変数を宣言する場合、変数はそのスコープ内でのみアクセスできます。
+> **CATCH_ALL** ブロックは、中かっこで囲まれた C++ スコープとして定義されます。 このスコープで変数を宣言する場合、変数はそのスコープ内でのみアクセスできます。
 
 例外の詳細については、「 [例外](../../mfc/exception-handling-in-mfc.md)」を参照してください。
 
@@ -167,7 +168,7 @@ CATCH_ALL(exception_object_pointer_name)
 
 [CFile:: Abort](../../mfc/reference/cfile-class.md#abort)の例を参照してください。
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
   **ヘッダー** afx
 
@@ -191,16 +192,16 @@ AND_CATCH(exception_class, exception_object_pointer_name)
 
 CATCH マクロを使用して1つの例外の種類をキャッチし、AND_CATCH マクロを使用して、後続の各型をキャッチします。 END_CATCH マクロを使用し **て、TRY** ブロックを終了します。
 
-例外処理コードは、必要に応じて例外オブジェクトを問い合わせて、例外の特定の原因に関する詳細情報を取得することができます。 **AND_CATCH**ブロック内で THROW_LAST マクロを呼び出して、処理を次の外側の例外フレームにシフトします。 **AND_CATCH** は、前の **CATCH** または **AND_CATCH** ブロックの末尾をマークします。
+例外処理コードは、必要に応じて例外オブジェクトを問い合わせて、例外の特定の原因に関する詳細情報を取得することができます。 **AND_CATCH** ブロック内で THROW_LAST マクロを呼び出して、処理を次の外側の例外フレームにシフトします。 **AND_CATCH** は、前の **CATCH** または **AND_CATCH** ブロックの末尾をマークします。
 
 > [!NOTE]
-> **AND_CATCH**ブロックは、(中かっこで囲まれた) C++ スコープとして定義されます。 このスコープで変数を宣言する場合は、そのスコープ内でのみアクセス可能であることに注意してください。 これは、 *exception_object_pointer_name* 変数にも適用されます。
+> **AND_CATCH** ブロックは、(中かっこで囲まれた) C++ スコープとして定義されます。 このスコープで変数を宣言する場合は、そのスコープ内でのみアクセス可能であることに注意してください。 これは、 *exception_object_pointer_name* 変数にも適用されます。
 
 ### <a name="example"></a>例
 
 [CATCH](#catch)の例を参照してください。
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
   **ヘッダー** afx
 
@@ -219,14 +220,14 @@ AND_CATCH_ALL(exception_object_pointer_name)
 
 ### <a name="remarks"></a>解説
 
-**Catch**マクロを使用して1つの例外の種類をキャッチした後、AND_CATCH_ALL マクロを使用して、それ以外のすべての型をキャッチします。 AND_CATCH_ALL を使用する場合は、END_CATCH_ALL マクロを使用し **て TRY** ブロックを終了します。
+**Catch** マクロを使用して1つの例外の種類をキャッチした後、AND_CATCH_ALL マクロを使用して、それ以外のすべての型をキャッチします。 AND_CATCH_ALL を使用する場合は、END_CATCH_ALL マクロを使用し **て TRY** ブロックを終了します。
 
-例外処理コードは、必要に応じて例外オブジェクトを問い合わせて、例外の特定の原因に関する詳細情報を取得することができます。 **AND_CATCH_ALL**ブロック内で THROW_LAST マクロを呼び出して、処理を次の外側の例外フレームにシフトします。 **AND_CATCH_ALL** は、前の **CATCH** または **AND_CATCH_ALL** ブロックの末尾をマークします。
+例外処理コードは、必要に応じて例外オブジェクトを問い合わせて、例外の特定の原因に関する詳細情報を取得することができます。 **AND_CATCH_ALL** ブロック内で THROW_LAST マクロを呼び出して、処理を次の外側の例外フレームにシフトします。 **AND_CATCH_ALL** は、前の **CATCH** または **AND_CATCH_ALL** ブロックの末尾をマークします。
 
 > [!NOTE]
-> **AND_CATCH_ALL**ブロックは、(中かっこで囲まれた) C++ スコープとして定義されます。 このスコープで変数を宣言する場合は、そのスコープ内でのみアクセス可能であることに注意してください。
+> **AND_CATCH_ALL** ブロックは、(中かっこで囲まれた) C++ スコープとして定義されます。 このスコープで変数を宣言する場合は、そのスコープ内でのみアクセス可能であることに注意してください。
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
   **ヘッダー** afx
 
@@ -242,7 +243,7 @@ END_CATCH
 
 END_CATCH マクロの詳細については、「 [例外](../../mfc/exception-handling-in-mfc.md)」を参照してください。
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
   **ヘッダー** afx
 
@@ -254,7 +255,7 @@ END_CATCH マクロの詳細については、「 [例外](../../mfc/exception-h
 END_CATCH_ALL
 ```
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
   **ヘッダー** afx
 
@@ -273,11 +274,11 @@ THROW(exception_object_pointer)
 
 ### <a name="remarks"></a>解説
 
-プログラム内の関連する**CATCH**ブロックに制御を渡すことにより、プログラムの実行**を中断し**ます。 **CATCH**ブロックを指定していない場合は、エラーメッセージを出力して終了する Microsoft Foundation Class ライブラリモジュールに制御が渡されます。
+プログラム内の関連する **CATCH** ブロックに制御を渡すことにより、プログラムの実行 **を中断し** ます。 **CATCH** ブロックを指定していない場合は、エラーメッセージを出力して終了する Microsoft Foundation Class ライブラリモジュールに制御が渡されます。
 
 詳細については、「 [例外](../../mfc/exception-handling-in-mfc.md)」を参照してください。
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
   **ヘッダー** afx
 
@@ -291,7 +292,7 @@ THROW_LAST()
 
 ### <a name="remarks"></a>解説
 
-このマクロを使用すると、ローカルで作成された例外をスローできます。 キャッチした例外をスローしようとすると、通常はスコープ外になり、削除されます。 **THROW_LAST**では、例外は次の**CATCH**ハンドラーに正しく渡されます。
+このマクロを使用すると、ローカルで作成された例外をスローできます。 キャッチした例外をスローしようとすると、通常はスコープ外になり、削除されます。 **THROW_LAST** では、例外は次の **CATCH** ハンドラーに正しく渡されます。
 
 詳細については、「 [例外](../../mfc/exception-handling-in-mfc.md)」を参照してください。
 
@@ -299,7 +300,7 @@ THROW_LAST()
 
 [CFile:: Abort](../../mfc/reference/cfile-class.md#abort)の例を参照してください。
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
   **ヘッダー** afx
 
@@ -313,13 +314,13 @@ void  AfxThrowArchiveException(int cause, LPCTSTR lpszArchiveName);
 
 ### <a name="parameters"></a>パラメーター
 
-*こと*<br/>
+*cause*<br/>
 例外の理由を示す整数を指定します。 使用可能な値の一覧については、「 [Cアーカイブ例外:: m_cause](../../mfc/reference/carchiveexception-class.md#m_cause)」を参照してください。
 
 *Lpszアーカイブ*<br/>
 `CArchive`例外の原因となったオブジェクトの名前を含む文字列を指します (使用可能な場合)。
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
   **ヘッダー** afx
 
@@ -336,7 +337,7 @@ void AfxThrowFileException(
 
 ### <a name="parameters"></a>パラメーター
 
-*こと*<br/>
+*cause*<br/>
 例外の理由を示す整数を指定します。 使用可能な値の一覧については、「 [CFileException:: m_cause](../../mfc/reference/cfileexception-class.md#m_cause)」を参照してください。
 
 *lOsError*<br/>
@@ -349,7 +350,7 @@ void AfxThrowFileException(
 
 オペレーティングシステムのエラーコードに基づいて、原因を特定する責任があります。
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
   **ヘッダー** afx
 
@@ -367,7 +368,7 @@ void AfxThrowInvalidArgException( );
 
 無効な引数が使用されると、この関数が呼び出されます。
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 **ヘッダー:** afx
 
@@ -383,7 +384,7 @@ void AfxThrowMemoryException();
 
 基になるシステムメモリアロケーター ( **malloc** や [GlobalAlloc](/windows/win32/api/winbase/nf-winbase-globalalloc) Windows 関数など) への呼び出しが失敗した場合に、この関数を呼び出します。 **`new`** **`new`** メモリ割り当てが失敗した場合、はメモリ例外を自動的にスローするため、に対してを呼び出す必要はありません。
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
   **ヘッダー** afx
 
@@ -395,7 +396,7 @@ void AfxThrowMemoryException();
 void AfxThrowNotSupportedException();
 ```
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
   **ヘッダー** afx
 
@@ -411,7 +412,7 @@ void  AfxThrowResourceException();
 
 通常、この関数は、Windows リソースを読み込むことができないときに呼び出されます。
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
   **ヘッダー** afx
 
@@ -427,7 +428,7 @@ void AfxThrowUserException();
 
 通常、この関数は、 `AfxMessageBox` がユーザーにエラーを報告した直後に呼び出されます。
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
   **ヘッダー** afx
 
@@ -469,7 +470,7 @@ void AFXAPI AfxThrowOleDispatchException(
 
 [!code-cpp[NVC_MFCExceptions#25](../../mfc/codesnippet/cpp/exception-processing_2.cpp)]
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
   **ヘッダー** afx
 
@@ -494,7 +495,7 @@ void AFXAPI AfxThrowOleException(HRESULT hr);
 
 引数として HRESULT を受け取るバージョンは、その結果コードを対応する SCODE に変換します。 HRESULT と SCODE の詳細については、「Windows SDK の [COM エラーコードの構造](/windows/win32/com/structure-of-com-error-codes) 」を参照してください。
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
   **ヘッダー** afxdao
 
@@ -518,11 +519,11 @@ DAO 拡張エラーコードを表す整数値。 [CDaoException:: m_nAfxDaoErro
 
 ### <a name="remarks"></a>解説
 
-フレームワークもを呼び出し `AfxThrowDaoException` ます。 の呼び出しでは、いずれかのパラメーターまたは両方を渡すことができます。 たとえば、 **CDaoException:: nAfxDaoError** で定義されているいずれかのエラーを発生させても、 *scode* パラメーターを気にする必要がない場合は、 *nAfxDaoError* パラメーターに有効なコードを渡し、 *scode*の既定値をそのまま使用します。
+フレームワークもを呼び出し `AfxThrowDaoException` ます。 の呼び出しでは、いずれかのパラメーターまたは両方を渡すことができます。 たとえば、 **CDaoException:: nAfxDaoError** で定義されているいずれかのエラーを発生させても、 *scode* パラメーターを気にする必要がない場合は、 *nAfxDaoError* パラメーターに有効なコードを渡し、 *scode* の既定値をそのまま使用します。
 
 MFC DAO クラスに関連する例外の詳細については、 `CDaoException` このブックの「クラス」および「 [例外: データベース例外](../../mfc/exceptions-database-exceptions.md)」を参照してください。
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
   **ヘッダー** afxdb.h
 
@@ -554,7 +555,7 @@ void AfxThrowDBException(
 
 ODBC で定義されている RETCODE 値の詳細については、「」の「Windows SDK の「状態とエラー情報の取得」を参照してください。 これらのコードに対する MFC の拡張機能の詳細については、「クラス [CDBException](../../mfc/reference/cdbexception-class.md)」を参照してください。
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
   **ヘッダー** afx
 
@@ -574,7 +575,7 @@ void  AfxAbort();
 
 [CATCH](#catch)の例を参照してください。
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
   **ヘッダー** afx
 
