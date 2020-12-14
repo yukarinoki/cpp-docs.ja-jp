@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: multi_link_registry クラス'
 title: multi_link_registry クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -14,12 +15,12 @@ f1_keywords:
 helpviewer_keywords:
 - multi_link_registry class
 ms.assetid: b2aa73a8-e8a6-4255-b117-d07530c328b2
-ms.openlocfilehash: 777b3f5206b4a595b5dcac653d608255e92f4ef6
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: a5d5e6c7e837f76a422c3f2879f74d1af36d64d6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87231703"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97202133"
 ---
 # <a name="multi_link_registry-class"></a>multi_link_registry クラス
 
@@ -63,13 +64,13 @@ class multi_link_registry : public network_link_registry<_Block>;
 
 `multi_link_registry`
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** agents.h
 
 **名前空間:** concurrency
 
-## <a name="add"></a><a name="add"></a>アドイン
+## <a name="add"></a><a name="add"></a> アドイン
 
 オブジェクトへのリンクを追加し `multi_link_registry` ます。
 
@@ -84,9 +85,9 @@ virtual void add(_EType _Link);
 
 ### <a name="remarks"></a>解説
 
-リンクが既に[invalid_link_target](invalid-link-target-class.md)レジストリに存在する場合、またはバインドされたが既に関数で設定されていて、 `set_bound` リンクが削除された後である場合、メソッドは invalid_link_target 例外をスローします。
+リンクが既に[](invalid-link-target-class.md)レジストリに存在する場合、またはバインドされたが既に関数で設定されていて、 `set_bound` リンクが削除された後である場合、メソッドは invalid_link_target 例外をスローします。
 
-## <a name="begin"></a><a name="begin"></a>初め
+## <a name="begin"></a><a name="begin"></a> begin
 
 オブジェクト内の最初の要素を指す反復子を返し `multi_link_registry` ます。
 
@@ -102,7 +103,7 @@ virtual iterator begin();
 
 終了状態はリンクによって示され `NULL` ます。
 
-## <a name="contains"></a><a name="contains"></a>は
+## <a name="contains"></a><a name="contains"></a> は
 
 `multi_link_registry`指定されたブロックのオブジェクトを検索します。
 
@@ -119,7 +120,7 @@ virtual bool contains(_EType _Link);
 
 **`true`** 指定されたブロックが見つかった場合は **`false`** 。それ以外の場合は。
 
-## <a name="count"></a><a name="count"></a>数
+## <a name="count"></a><a name="count"></a> 数
 
 オブジェクト内の項目の数をカウントし `multi_link_registry` ます。
 
@@ -131,7 +132,7 @@ virtual size_t count();
 
 `multi_link_registry` オブジェクト内の項目の数。
 
-## <a name="multi_link_registry"></a><a name="ctor"></a>multi_link_registry
+## <a name="multi_link_registry"></a><a name="ctor"></a> multi_link_registry
 
 `multi_link_registry` オブジェクトを構築します。
 
@@ -139,7 +140,7 @@ virtual size_t count();
 multi_link_registry();
 ```
 
-## <a name="multi_link_registry"></a><a name="dtor"></a>~ multi_link_registry
+## <a name="multi_link_registry"></a><a name="dtor"></a> ~ multi_link_registry
 
 `multi_link_registry` オブジェクトを破棄します。
 
@@ -149,9 +150,9 @@ virtual ~multi_link_registry();
 
 ### <a name="remarks"></a>解説
 
-メソッドは、すべてのリンクが削除される前に呼び出された場合、 [invalid_operation](invalid-operation-class.md)例外をスローします。
+メソッドは、すべてのリンクが削除される前に呼び出された場合、 [invalid_operation](invalid-operation-class.md) 例外をスローします。
 
-## <a name="remove"></a><a name="remove"></a>から
+## <a name="remove"></a><a name="remove"></a> から
 
 オブジェクトからリンクを削除 `multi_link_registry` します。
 
@@ -168,7 +169,7 @@ virtual bool remove(_EType _Link);
 
 **`true`** リンクが見つかり、削除された場合は **`false`** 。それ以外の場合は。
 
-## <a name="set_bound"></a><a name="set_bound"></a>set_bound
+## <a name="set_bound"></a><a name="set_bound"></a> set_bound
 
 オブジェクトが保持できるリンクの数の上限を設定 `multi_link_registry` します。
 

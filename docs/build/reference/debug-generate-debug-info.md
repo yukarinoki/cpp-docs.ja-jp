@@ -1,4 +1,5 @@
 ---
+description: 詳細情報:/DEBUG (デバッグ情報の生成)
 title: /DEBUG (デバッグ情報の生成)
 ms.date: 05/16/2019
 f1_keywords:
@@ -16,12 +17,12 @@ helpviewer_keywords:
 - debugging [C++], linker option
 - program databases [C++]
 ms.assetid: 1af389ae-3f8b-4d76-a087-1cdf861e9103
-ms.openlocfilehash: 2ec466a6356ace437d32eb517bf2da291938f5db
-ms.sourcegitcommit: a10c9390413978d36b8096b684d5ed4cf1553bc8
+ms.openlocfilehash: b0ef30fe7cb5eb5af0c46d6f6a8f3533d2e7d6ea
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "65837141"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97201821"
 ---
 # <a name="debug-generate-debug-info"></a>/DEBUG (デバッグ情報の生成)
 
@@ -43,7 +44,7 @@ ms.locfileid: "65837141"
 
 **/DEBUG:NONE** オプションで PDB が生成されることはありません。
 
-追加のオプションなしで **/DEBUG** を指定すると、リンカーでは既定で、コマンド ラインとメイクファイル ビルド、Visual Studio IDE のリリース ビルド、Visual Studio 2015 以前のバージョンのデバッグおよびリリース ビルドの両方に対して、 **/DEBUG:FULL** が設定されます。 Visual Studio 2017 以降では、IDE のビルド システムでは、デバッグ ビルドに **/DEBUG** オプションを指定したとき、既定で **/DEBUG:FASTLINK** に設定されます。 下位互換性を維持する目的で他の既定値は変更されません。
+追加のオプションなしで **/DEBUG** を指定すると、リンカーでは既定で、コマンド ラインとメイクファイル ビルド、Visual Studio IDE のリリース ビルド、Visual Studio 2015 以前のバージョンのデバッグおよびリリース ビルドの両方に対して、**/DEBUG:FULL** が設定されます。 Visual Studio 2017 以降では、IDE のビルド システムでは、デバッグ ビルドに **/DEBUG** オプションを指定したとき、既定で **/DEBUG:FASTLINK** に設定されます。 下位互換性を維持する目的で他の既定値は変更されません。
 
 コンパイラの [C7 Compatible](z7-zi-zi-debug-information-format.md) (/Z7) オプションにより、コンパイラは .obj ファイルにデバッグ情報を残します。 [Program Database](z7-zi-zi-debug-information-format.md) (/Zi) コンパイラ オプションを使用し、.obj ファイルの PDB にデバッグ情報を保存することもできます。 このリンカーでは最初に、.obj ファイルに書き込まれている絶対パスでオブジェクトの PDB が検索されます。次に、.obj ファイルが含まれているディレクトリで検索されます。 オブジェクトの PDB ファイル名または場所をリンカーに指定することはできません。
 
@@ -55,7 +56,7 @@ ms.locfileid: "65837141"
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのリンカー オプションを設定するには
 
-1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、[Visual Studio での C++ コンパイラとビルド プロパティの設定](../working-with-project-properties.md)に関する記事を参照してください。
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、[Visual Studio での C++ コンパイラとビルド プロパティの設定](../working-with-project-properties.md)に関するページを参照してください。
 
 1. **[リンカー]** フォルダーをクリックします。
 

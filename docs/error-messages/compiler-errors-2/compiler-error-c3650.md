@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「コンパイラエラー C3650」を参照してください。
 title: コンパイラ エラー C3650
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3650
 ms.assetid: ca4d8de4-b027-4d13-9b9f-03ca62905c33
-ms.openlocfilehash: 2b1b769ed7e27e9c8c3edbe6b08452f3ec964727
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 02230eed0f1e3448bfc91d331611f28a7b6b7531
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74756358"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97203732"
 ---
 # <a name="compiler-error-c3650"></a>コンパイラ エラー C3650
 
@@ -19,7 +20,7 @@ ms.locfileid: "74756358"
 
 仮想ではないメンバーに対して明示的なオーバーライドを実行しようとしました。
 
-詳細については、「[明示的なオーバーライド](../../extensions/explicit-overrides-cpp-component-extensions.md)」を参照してください。
+詳細については、「 [明示的なオーバーライド](../../extensions/explicit-overrides-cpp-component-extensions.md)」を参照してください。
 
 次の例では、C3650 が生成されます。
 

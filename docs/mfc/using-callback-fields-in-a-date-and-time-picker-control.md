@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: 日付と時刻の選択コントロールでのコールバックフィールドの使用'
 title: 日時指定コントロールでのコールバック フィールドの使い方
 ms.date: 11/04/2016
 f1_keywords:
@@ -13,59 +14,59 @@ helpviewer_keywords:
 - DTN_FORMAT notification [MFC]
 - DateTimePicker control [MFC]
 ms.assetid: 404f4ba9-cba7-4718-9faa-bc6b274a723f
-ms.openlocfilehash: 50350e51b6747d8c010db9d0dcaa9dff2e56e1f3
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 3ff0ae2af8e71a53cceff4d5d8df652f701b1ef1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81366557"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97202627"
 ---
 # <a name="using-callback-fields-in-a-date-and-time-picker-control"></a>日時指定コントロールでのコールバック フィールドの使い方
 
-日付と時刻の選択フィールドを定義する標準の書式指定文字に加えて、カスタム書式指定文字列の特定の部分をコールバック フィールドとして指定することで、出力をカスタマイズできます。 コールバック フィールドを宣言するには、書式指定文字列の本体の任意の場所に 1 つ以上の "X" 文字 (ASCII Code 88) を含めます。 たとえば、次の文字列 "'Today は'yy'/'MM'/'dd' (日 'X')' の場合、日付と時刻の選択コントロールは、年の後に月、日付、そして最後に年の日が続く現在の値を表示します。
+日付と時刻の選択フィールドを定義する標準の書式指定文字に加えて、カスタム書式指定文字列の特定の部分をコールバックフィールドとして指定することにより、出力をカスタマイズできます。 コールバックフィールドを宣言するには、書式指定文字列の本体の任意の場所に1つ以上の "X" 文字 (ASCII コード 88) を含めます。 たとえば、次の文字列 "' 今日は、' yy '/' MM '/' dd ' (Day ' X ') '" である場合、[日付と時刻の選択] コントロールでは、現在の値が年として表示され、その後に月、日、および最後に日付が表示されます。
 
 > [!NOTE]
-> コールバック フィールド内の X の数が、表示される文字数と一致しません。
+> コールバックフィールド内の X の数が、表示される文字数に対応していません。
 
-カスタム文字列内の複数のコールバック フィールドを区別するには、"X" 文字を繰り返します。 したがって、書式文字列 "XXxdddMMMdd'、'yyyXXX" には、"XX" と "XXX" という 2 つの一意のコールバック フィールドが含まれています。
+"X" 文字を繰り返すことで、カスタム文字列内の複数のコールバックフィールドを区別できます。 このため、書式指定文字列 "XXddddMMMdd"、"yyyXXX" には、"XX" と "XXX" の2つの一意のコールバックフィールドが含まれています。
 
 > [!NOTE]
-> コールバック フィールドは有効なフィールドとして扱われるので、アプリケーションはDTN_WMKEYDOWN通知メッセージを処理できるように準備する必要があります。
+> コールバックフィールドは有効なフィールドとして扱われるので、アプリケーションで DTN_WMKEYDOWN 通知メッセージを処理できるように準備する必要があります。
 
-日付と時刻の選択コントロールでコールバック フィールドを実装する 3 つの部分で構成されます。
+日付と時刻の選択コントロールでのコールバックフィールドの実装は、次の3つの部分で構成されています。
 
 - カスタム書式指定文字列の初期化
 
-- DTN_FORMATQUERY通知の処理
+- DTN_FORMATQUERY 通知の処理
 
-- DTN_FORMAT通知の処理
+- DTN_FORMAT 通知の処理
 
 ## <a name="initializing-the-custom-format-string"></a>カスタム書式指定文字列の初期化
 
-への呼び出しを使用して`CDateTimeCtrl::SetFormat`カスタム文字列を初期化します。 詳細については、「[日時指定コントロールでのカスタム書式指定文字列の使用](../mfc/using-custom-format-strings-in-a-date-and-time-picker-control.md)」を参照してください。 カスタム書式指定文字列を設定する一般的な場所は`OnInitDialog`、含まれているビュー クラスの`OnInitialUpdate`ダイアログ クラスまたは関数の関数にあります。
+を呼び出してカスタム文字列を初期化 `CDateTimeCtrl::SetFormat` します。 詳細については、「 [日付と時刻の選択コントロールでのカスタム書式指定文字列の使用](../mfc/using-custom-format-strings-in-a-date-and-time-picker-control.md)」を参照してください。 カスタム書式指定文字列を設定するための一般的な場所は、含んでいる `OnInitDialog` ビュークラスの組み込みダイアログクラスまたは関数の関数です `OnInitialUpdate` 。
 
-## <a name="handling-the-dtn_formatquery-notification"></a>DTN_FORMATQUERY通知の処理
+## <a name="handling-the-dtn_formatquery-notification"></a>DTN_FORMATQUERY 通知の処理
 
-コントロールが書式文字列を解析してコールバック フィールドを検出すると、アプリケーションはDTN_FORMATを送信し、通知メッセージDTN_FORMATQUERYします。 コールバック フィールド文字列は通知に含まれるため、どのコールバック フィールドが照会されているかを判断できます。
+コントロールが書式指定文字列を解析してコールバックフィールドを検出すると、アプリケーションは DTN_FORMAT および DTN_FORMATQUERY 通知メッセージを送信します。 コールバックフィールド文字列が通知に含まれるので、クエリ対象のコールバックフィールドを確認できます。
 
-DTN_FORMATQUERY通知は、現在のコールバック フィールドに表示される文字列の最大許容サイズ (ピクセル単位) を取得するために送信されます。
+DTN_FORMATQUERY 通知は、現在のコールバックフィールドに表示される文字列の最大許容サイズ (ピクセル単位) を取得するために送信されます。
 
-この値を正しく計算するには、コントロールの表示フォントを使用して、フィールドの代わりに文字列の高さと幅を計算する必要があります。 文字列の実際の計算は、[関数の呼](/windows/win32/api/wingdi/nf-wingdi-gettextextentpoint32w)び出しで簡単に実現できます。 サイズが決定されたら、値をアプリケーションに戻し、ハンドラー関数を終了します。
+この値を適切に計算するには、コントロールの表示フォントを使用して、フィールドに置き換えられる文字列の高さと幅を計算する必要があります。 文字列の実際の計算は、 [GetTextExtentPoint32](/windows/win32/api/wingdi/nf-wingdi-gettextextentpoint32w) Win32 関数を呼び出すことで簡単に実現できます。 サイズを決定したら、値をアプリケーションに戻し、ハンドラー関数を終了します。
 
-次の例は、コールバック文字列のサイズを指定する方法の 1 つです。
+次の例は、コールバック文字列のサイズを指定する方法の1つです。
 
 [!code-cpp[NVC_MFCControlLadenDialog#8](../mfc/codesnippet/cpp/using-callback-fields-in-a-date-and-time-picker-control_1.cpp)]
 
-現在のコールバック フィールドのサイズを計算したら、フィールドに値を指定する必要があります。 これは、DTN_FORMAT通知のハンドラーで行われます。
+現在のコールバックフィールドのサイズが計算されたら、フィールドに値を指定する必要があります。 これは、DTN_FORMAT 通知のハンドラーで実行されます。
 
-## <a name="handling-the-dtn_format-notification"></a>DTN_FORMAT通知の処理
+## <a name="handling-the-dtn_format-notification"></a>DTN_FORMAT 通知の処理
 
-DTN_FORMAT通知は、置換される文字列を要求するためにアプリケーションによって使用されます。 次の例は、1 つの可能なメソッドを示しています。
+DTN_FORMAT 通知は、置換する文字列を要求するためにアプリケーションによって使用されます。 次の例は、考えられる1つの方法を示しています。
 
 [!code-cpp[NVC_MFCControlLadenDialog#9](../mfc/codesnippet/cpp/using-callback-fields-in-a-date-and-time-picker-control_2.cpp)]
 
 > [!NOTE]
-> **NMDATETIMEFORMAT**構造体へのポインターは、通知ハンドラーの最初のパラメーターを適切なタイプにキャストすることによって検出されます。
+> **NMDATETIMEFORMAT** 構造体へのポインターは、通知ハンドラーの最初のパラメーターを適切な型にキャストすることによって検出されます。
 
 ## <a name="see-also"></a>関連項目
 

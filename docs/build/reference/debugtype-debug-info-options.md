@@ -1,4 +1,5 @@
 ---
+description: 詳細情報:/DEBUGTYPE (デバッグ情報オプション)
 title: /DEBUGTYPE (デバッグ情報オプション)
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - DEBUGTYPE linker option
 - -DEBUGTYPE linker option
 ms.assetid: 1ddcb718-7fec-4f92-a319-3f70f04fe742
-ms.openlocfilehash: 00e3cb61f8ec9aa707bb72aa9ff05a64f98d4e47
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 858d5ed8eb449931229700a10b755dd61ef371cc
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62272296"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97201730"
 ---
 # <a name="debugtype-debug-info-options"></a>/DEBUGTYPE (デバッグ情報オプション)
 
@@ -26,25 +27,25 @@ ms.locfileid: "62272296"
 ## <a name="arguments"></a>引数
 
 **CV**<br/>
-シンボル、行番号、その他のオブジェクトのコンパイル情報のデバッグ情報を PDB ファイルに出力するようにリンカーに指示します。 既定では、このオプションが有効になっているときに **/debug**が指定されて、 **/DEBUGTYPE**が指定されていません。
+シンボル、行番号、その他のオブジェクトのコンパイル情報のデバッグ情報を PDB ファイルに出力するようにリンカーに指示します。 既定では、このオプションは、 **/debug** が指定されていて、 **/DEBUGTYPE** が指定されていない場合に有効になります。
 
 **PDATA**<br/>
-.pdata エントリと .xdata エントリを PDB ファイル内のデバッグ ストリーム情報に追加するようにリンカーに指示します。 既定では、このオプションが有効になっているときに両方、 **/debug**と **/DRIVER**オプションを指定します。 場合 **/DEBUGTYPE:PDATA**リンカーが自動的にデバッグ シンボルを PDB ファイルを含む、自体によって指定されます。 場合 **/DEBUGTYPE:PDATA、フィックス アップ**指定すると、リンカーはデバッグ シンボルを PDB ファイルに含まれません。
+.pdata エントリと .xdata エントリを PDB ファイル内のデバッグ ストリーム情報に追加するようにリンカーに指示します。 既定では、このオプションは、 **/debug** オプションと **/DRIVER** オプションの両方が指定されている場合に有効になります。 **/DEBUGTYPE: PDATA** がそれ自体によって指定されている場合、リンカーは自動的に PDB ファイルにシンボルをデバッグします。 **/DEBUGTYPE: PDATA、FIXUP** が指定されている場合、リンカーにはデバッグシンボルが PDB ファイルに含まれません。
 
-**フィックス アップ**<br/>
-再配置テーブル エントリを PDB ファイル内のデバッグ ストリーム情報に追加するようにリンカーに指示します。 既定では、このオプションが有効になっているときに両方、 **/debug**と **/profile**オプションを指定します。 場合 **/DEBUGTYPE:FIXUP**または **/DEBUGTYPE:FIXUP、PDATA**指定すると、リンカーはデバッグ シンボルを PDB ファイルに含まれません。
+**FIXUP**<br/>
+再配置テーブル エントリを PDB ファイル内のデバッグ ストリーム情報に追加するようにリンカーに指示します。 既定では、このオプションは、 **/debug** オプションと **/profile** オプションの両方が指定されている場合に有効になります。 **/DEBUGTYPE: fixup** または **/DEBUGTYPE: fixup** が指定されている場合、リンカーにはデバッグシンボルが PDB ファイルに含まれません。
 
-引数を **/DEBUGTYPE**をコンマで区切ることによって任意の順序で組み合わせることができます。 **/DEBUGTYPE**オプションとその引数は大文字小文字が区別されません。
+**/DEBUGTYPE** への引数は、コンマで区切ることで、任意の順序で組み合わせることができます。 **/DEBUGTYPE** オプションとその引数では、大文字と小文字が区別されません。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-使用して、 **/DEBUGTYPE**デバッグ ストリームで再配置テーブル データまたは .pdata および .xdata ヘッダー情報を含めることを指定するオプション。 これにより、リンカーは、カーネルモード コードで中断するときにカーネル デバッガーに表示されるユーザーモード コードに関する情報を含めます。 ときにデバッグ シンボルを使用できるようにする**FIXUP**が指定すると、含める、 **CV**引数。
+**/DEBUGTYPE** オプションを使用して、デバッグストリームで再配置テーブルデータまたは pdata と .xdata ヘッダー情報を含めるように指定します。 これにより、リンカーは、カーネルモード コードで中断するときにカーネル デバッガーに表示されるユーザーモード コードに関する情報を含めます。 **FIXUP** を指定したときにデバッグシンボルを使用できるようにするには、 **CV** 引数を含めます。
 
-アプリケーションの一般的なものは、ユーザー モードでコードをデバッグする、 **/DEBUGTYPE**オプションは必要ありません。 既定では、デバッグを指定するコンパイラ スイッチが出力 ([/Z7、/Zi、/ZI](z7-zi-zi-debug-information-format.md)) すべてについては、必要な Visual Studio でデバッガーの出力します。 使用 **/DEBUGTYPE:PDATA**または **/DEBUGTYPE:CV, PDATA、FIXUP**デバイス ドライバーの構成アプリなど、ユーザー モードおよびカーネル モードのコンポーネントを組み合わせてするコードをデバッグします。 カーネル モード デバッガーの詳細については、次を参照してください[デバッグ ツールの Windows (WinDbg、KD、CDB、NTSD)。](/windows-hardware/drivers/debugger/index)
+アプリケーションの一般的なユーザーモードでコードをデバッグするには、 **/DEBUGTYPE** オプションは必要ありません。 既定では、デバッグ出力を指定するコンパイラスイッチ ([/Z7、/zi、/zi](z7-zi-zi-debug-information-format.md)) は、Visual Studio デバッガーで必要なすべての情報を出力します。 **/DEBUGTYPE: pdata** または **/DEBUGTYPE: CV、pdata、FIXUP** を使用して、デバイスドライバーの構成アプリなど、ユーザーモードとカーネルモードのコンポーネントを組み合わせたコードをデバッグします。 カーネルモードのデバッガーの詳細については、「 [Windows 用デバッグツール (WinDbg、KD、CDB、NTSD)](/windows-hardware/drivers/debugger/index) 」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 
 [/DEBUG (デバッグ情報の生成)](debug-generate-debug-info.md)<br/>
-[/DRIVER (Windows NT カーネル モード ドライバー)](driver-windows-nt-kernel-mode-driver.md)<br/>
-[/PROFILE (パフォーマンス ツール プロファイラー)](profile-performance-tools-profiler.md)<br/>
-[(WinDbg、KD、CDB、NTSD)、Windows 用デバッグ ツール](/windows-hardware/drivers/debugger/index)
+[/DRIVER (Windows NT カーネルモードドライバー)](driver-windows-nt-kernel-mode-driver.md)<br/>
+[/PROFILE (パフォーマンスツールプロファイラー)](profile-performance-tools-profiler.md)<br/>
+[Debugging Tools for Windows (WinDbg、KD、CDB、NTSD)](/windows-hardware/drivers/debugger/index)

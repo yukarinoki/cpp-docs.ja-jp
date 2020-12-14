@@ -1,4 +1,5 @@
 ---
+description: '詳細: message クラス'
 title: message クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -12,12 +13,12 @@ f1_keywords:
 helpviewer_keywords:
 - message class
 ms.assetid: 3e1f3505-6c0c-486c-8191-666d0880ec62
-ms.openlocfilehash: 700d052b6f22c970387a3ab45d299538a5b74e1b
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: 0e15dafd9606e68f7a6ed1bed3795791c0f6870c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77139541"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97202315"
 ---
 # <a name="message-class"></a>message クラス
 
@@ -39,48 +40,48 @@ class message : public ::Concurrency::details::_Runtime_object;
 
 ### <a name="public-typedefs"></a>パブリック typedef
 
-|Name|説明|
+|名前|説明|
 |----------|-----------------|
-|`type`|`T`の型のエイリアス。|
+|`type`|の型のエイリアス `T` 。|
 
 ### <a name="public-constructors"></a>パブリック コンストラクター
 
-|Name|説明|
+|名前|説明|
 |----------|-----------------|
 |[message](#ctor)|オーバーロードされます。 `message` オブジェクトを構築します。|
 |[~ メッセージデストラクター](#dtor)|`message` オブジェクトを破棄します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
-|Name|説明|
+|名前|説明|
 |----------|-----------------|
-|[add_ref](#add_ref)|`message` オブジェクトの参照カウントにを追加します。 メッセージの有効期間を決定するために参照カウントを必要とするメッセージブロックに使用されます。|
-|[msg_id](#msg_id)|`message` オブジェクトの ID を返します。|
-|[remove_ref](#remove_ref)|`message` オブジェクトの参照カウントから減算します。 メッセージの有効期間を決定するために参照カウントを必要とするメッセージブロックに使用されます。|
+|[add_ref](#add_ref)|オブジェクトの参照カウントにを追加し `message` ます。 メッセージの有効期間を決定するために参照カウントを必要とするメッセージブロックに使用されます。|
+|[msg_id](#msg_id)|オブジェクトの ID を返し `message` ます。|
+|[remove_ref](#remove_ref)|オブジェクトの参照カウントから減算し `message` ます。 メッセージの有効期間を決定するために参照カウントを必要とするメッセージブロックに使用されます。|
 
 ### <a name="public-data-members"></a>パブリック データ メンバー
 
-|Name|説明|
+|名前|説明|
 |----------|-----------------|
-|[payload](#payload)|`message` オブジェクトのペイロード。|
+|[payload](#payload)|オブジェクトのペイロード `message` 。|
 
 ## <a name="remarks"></a>解説
 
-詳細については、「[非同期メッセージブロック](../../../parallel/concrt/asynchronous-message-blocks.md)」を参照してください。
+詳細については、「 [非同期メッセージブロック](../../../parallel/concrt/asynchronous-message-blocks.md)」を参照してください。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
 `message`
 
-## <a name="requirements"></a>［要件］
+## <a name="requirements"></a>要件
 
 **ヘッダー:** agents.h
 
 **名前空間:** concurrency
 
-## <a name="add_ref"></a>add_ref
+## <a name="add_ref"></a><a name="add_ref"></a> add_ref
 
-`message` オブジェクトの参照カウントにを追加します。 メッセージの有効期間を決定するために参照カウントを必要とするメッセージブロックに使用されます。
+オブジェクトの参照カウントにを追加し `message` ます。 メッセージの有効期間を決定するために参照カウントを必要とするメッセージブロックに使用されます。
 
 ```cpp
 long add_ref();
@@ -90,7 +91,7 @@ long add_ref();
 
 参照カウントの新しい値。
 
-## <a name="ctor"></a>メッセージ
+## <a name="message"></a><a name="ctor"></a> メッセージ
 
 `message` オブジェクトを構築します。
 
@@ -118,13 +119,13 @@ message(
 このメッセージの一意の ID。
 
 *_Msg*<br/>
-`message` オブジェクトへの参照またはポインター。
+オブジェクトへの参照またはポインター `message` 。
 
 ### <a name="remarks"></a>解説
 
-引数として `message` オブジェクトへのポインターを受け取るコンストラクターは、パラメーター `_Msg` が `NULL`場合に[invalid_argument](../../../standard-library/invalid-argument-class.md)例外をスローします。
+オブジェクトへのポインターを `message` 引数として受け取るコンストラクターは、パラメーターがの場合に [invalid_argument](../../../standard-library/invalid-argument-class.md) の例外をスローし `_Msg` `NULL` ます。
 
-## <a name="dtor"></a>~ メッセージ
+## <a name="message"></a><a name="dtor"></a> ~ メッセージ
 
 `message` オブジェクトを破棄します。
 
@@ -132,9 +133,9 @@ message(
 virtual ~message();
 ```
 
-## <a name="msg_id"></a>msg_id
+## <a name="msg_id"></a><a name="msg_id"></a> msg_id
 
-`message` オブジェクトの ID を返します。
+オブジェクトの ID を返し `message` ます。
 
 ```cpp
 runtime_object_identity msg_id() const;
@@ -144,17 +145,17 @@ runtime_object_identity msg_id() const;
 
 `runtime_object_identity` オブジェクトの `message` です。
 
-## <a name="payload"></a>ペイ
+## <a name="payload"></a><a name="payload"></a> ペイ
 
-`message` オブジェクトのペイロード。
+オブジェクトのペイロード `message` 。
 
 ```cpp
 T const payload;
 ```
 
-## <a name="remove_ref"></a>remove_ref
+## <a name="remove_ref"></a><a name="remove_ref"></a> remove_ref
 
-`message` オブジェクトの参照カウントから減算します。 メッセージの有効期間を決定するために参照カウントを必要とするメッセージブロックに使用されます。
+オブジェクトの参照カウントから減算し `message` ます。 メッセージの有効期間を決定するために参照カウントを必要とするメッセージブロックに使用されます。
 
 ```cpp
 long remove_ref();
@@ -164,6 +165,6 @@ long remove_ref();
 
 参照カウントの新しい値。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[コンカレンシー名前空間](concurrency-namespace.md)
+[concurrency 名前空間](concurrency-namespace.md)

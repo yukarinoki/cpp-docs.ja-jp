@@ -1,4 +1,5 @@
 ---
+description: 詳細については、CComboBoxEx の使用に関するページをご覧ください。
 title: CComboBoxEx の使い方
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - combo boxes [MFC], CComboBoxEx class
 - CComboBox class [MFC], extended
 ms.assetid: c23cbfe8-75d2-4f98-a753-c942416eda52
-ms.openlocfilehash: a9f3ca623ca729837da56c5b8a8be92b29a5c913
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: bd8a31a44b74671465ec817d32aa69f9d17369ed
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79447086"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97202601"
 ---
 # <a name="using-ccomboboxex"></a>CComboBoxEx の使い方
 
@@ -22,14 +23,14 @@ ms.locfileid: "79447086"
 
 ## <a name="what-do-you-want-to-know-more-about"></a>詳細については、次を参照してください。
 
-- [拡張コンボ ボックス コントロールの作成](../mfc/creating-an-extended-combo-box-control.md)
+- [拡張コンボボックスコントロールの作成](../mfc/creating-an-extended-combo-box-control.md)
 
-- [拡張コンボ ボックス コントロールでのイメージ リストの使い方](../mfc/using-image-lists-in-an-extended-combo-box-control.md)
+- [拡張コンボボックスコントロールでのイメージリストの使用](../mfc/using-image-lists-in-an-extended-combo-box-control.md)
 
-- [各項目のイメージの設定](../mfc/setting-the-images-for-an-individual-item.md)
+- [個々の項目のイメージを設定する](../mfc/setting-the-images-for-an-individual-item.md)
 
-- [拡張コンボ ボックス コントロールでの通知メッセージの処理](../mfc/processing-notification-messages-in-extended-combo-box-controls.md)
+- [拡張コンボボックスコントロールでの通知メッセージの処理](../mfc/processing-notification-messages-in-extended-combo-box-controls.md)
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [コントロール](../mfc/controls-mfc.md)

@@ -1,4 +1,5 @@
 ---
+description: 詳細については、次を参照してください。 &lt; オプション &gt; 演算子
 title: '&lt;オプションの &gt; 演算子'
 ms.date: 11/04/2016
 f1_keywords:
@@ -16,16 +17,16 @@ helpviewer_keywords:
 - std::operatoroperator&gt=; (optional)
 - std::operatoroperator&lt; (optional)
 - std::operatoroperator&lt;= (optional)
-ms.openlocfilehash: c7eca76f71f12e7f7fe0e60c0a4cfe456d54c374
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 3c61f62ff87ab285dfeb5b26f1d22de86ef50fee
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87224683"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97201860"
 ---
 # <a name="ltoptionalgt-operators"></a>&lt;オプションの &gt; 演算子
 
-## <a name="operator"></a><a name="op_eq_eq"></a>operator = =
+## <a name="operator"></a><a name="op_eq_eq"></a> operator = =
 
 演算子の左側の `optional` オブジェクトが右側の `optional` オブジェクトと等しいかどうかを調べます。
 
@@ -45,7 +46,7 @@ template <class T, class U> constexpr bool operator==(const U&, const optional<T
 *そうです*\
 `optional`、 `nullopt_t` 、または型のオブジェクト `T` 。
 
-## <a name="operator"></a><a name="op_neq"></a>operator! =
+## <a name="operator"></a><a name="op_neq"></a> operator! =
 
 演算子の左側の `optional` オブジェクトが右側の `optional` オブジェクトと等しくないかどうかを調べます。
 
@@ -69,7 +70,7 @@ template <class T, class U> constexpr bool operator!=(const U&, const optional<T
 
 このテンプレート関数は `!(left == right)` を返します。
 
-## <a name="operatorlt"></a><a name="op_lt"></a>operator&lt;
+## <a name="operatorlt"></a><a name="op_lt"></a> operator&lt;
 
 演算子の左側の `optional` オブジェクトが右側の `optional` オブジェクトより小さいかどうかを調べます。
 
@@ -93,7 +94,7 @@ template <class T, class U> constexpr bool operator<(const U&, const optional<T>
 
 **`true`** 演算子の左辺のリストが演算子の右辺のリストより小さい場合は、それ以外の場合は。それ以外の場合は **`false`** 。
 
-## <a name="operatorlt"></a><a name="op_lt_eq"></a>operator&lt;=
+## <a name="operatorlt"></a><a name="op_lt_eq"></a> operator&lt;=
 
 演算子の左側の `optional` オブジェクトが右側の  `optional` オブジェクト以下かどうかを調べます。
 
@@ -121,7 +122,7 @@ template <class T, class U> constexpr bool operator<=(const U&, const optional<T
 
 このテンプレート関数は `!(right < left)` を返します。
 
-## <a name="operatorgt"></a><a name="op_gt"></a>operator&gt;
+## <a name="operatorgt"></a><a name="op_gt"></a> operator&gt;
 
 演算子の左側の `optional` オブジェクトが右側の `optional` オブジェクトより大きいかどうかを調べます。
 
@@ -149,7 +150,7 @@ template <class T, class U> constexpr bool operator>(const U&, const optional<T>
 
 このテンプレート関数は `right < left` を返します。
 
-## <a name="operatorgt"></a><a name="op_gt_eq"></a>operator&gt;=
+## <a name="operatorgt"></a><a name="op_gt_eq"></a> operator&gt;=
 
 演算子の左側の `optional` オブジェクトが右側の `optional` オブジェクト以上であるかどうかを調べます。
 

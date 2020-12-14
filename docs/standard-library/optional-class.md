@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: オプションクラス'
 title: 省略可能なクラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -13,20 +14,20 @@ helpviewer_keywords:
 - optional/std::optional::reset
 - optional/std::optional::value
 - optional/std::optional::value_or
-ms.openlocfilehash: b1e77325cc485da1caec91316ce5d46cfa6357dc
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: fc0f14eb8bffc55c10db73b9b2f1ea5bcfdf6995
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88841936"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97201938"
 ---
 # <a name="optional-class"></a>省略可能なクラス
 
-クラステンプレートは、格納されている `optional<T>` 値と呼ばれる型の値を格納できる場合と、含まれない場合があるオブジェクトを表し `T` ます。 *contained value*
+クラステンプレートは、格納されている `optional<T>` 値と呼ばれる型の値を格納できる場合と、含まれない場合があるオブジェクトを表し `T` ます。 
 
 のインスタンスに `optional<T>` 値が含まれている場合、格納されている値は、オブジェクトのストレージ内で `optional` 、型に対して適切に配置された領域内に割り当てられ `T` ます。 `optional<T>`がに変換されると **`bool`** 、 **`true`** オブジェクトに値が含まれている場合は結果がになります。それ以外の場合はが返され **`false`** ます。
 
-含まれているオブジェクトの種類を `T` [in_place_t](in-place-t-struct.md) または [nullopt_t](nullopt-t-structure.md)することはできません。 `T`*破棄可能な*である必要があります。つまり、デストラクターは所有されているすべてのリソースを解放する必要があり、例外をスローしないことがあります。
+含まれているオブジェクトの種類を `T` [in_place_t](in-place-t-struct.md) または [nullopt_t](nullopt-t-structure.md)することはできません。 `T`*破棄可能な* である必要があります。つまり、デストラクターは所有されているすべてのリソースを解放する必要があり、例外をスローしないことがあります。
 
 `optional`クラスは c++ 17 で新しく追加されたものです。
 
@@ -124,9 +125,9 @@ explicit optional(optional<U>&& rhs);
 
 `template <class U = T> explicit constexpr optional(U&& rhs);` 直接を使用する場合と同様に、格納されている値を初期化し `std::forward<U>(v)` ます。 このコンストラクターは **`constexpr`** 、使用するコンストラクターがである場合にです `T` **`constexpr`** 。 `is_constructible_v<T, U&&>`が true で、 `is_same_v<remove_cvref_t<U>, in_place_t>` and が false でない限り、オーバーロードの解決には関与しません `is_same_v<remove_cvref_t<U>, optional>` 。
 
-`template <class U> explicit optional(const optional<U>& rhs);`*Rhs*に値が含まれている場合は、引数の格納されている値から、格納されている値を直接初期化します。 が true ではなく、、、、、、、 `is_constructible_v<T, const U&>` `is_constructible_v<T, optional<U>&>` `is_constructible_v<T, optional<U>&&>` `is_constructible_v<T, const optional<U>&>` `is_constructible_v<T, const optional<U>&&>` `is_convertible_v<optional<U>&, T>` `is_convertible_v<optional<U>&&, T>` `is_convertible_v<const optional<U>&, T>` 、および `is_convertible_v<const optional<U>&&, T>` がすべて false である場合を除き、オーバーロードの解決には関与しません。
+`template <class U> explicit optional(const optional<U>& rhs);`*Rhs* に値が含まれている場合は、引数の格納されている値から、格納されている値を直接初期化します。 が true ではなく、、、、、、、 `is_constructible_v<T, const U&>` `is_constructible_v<T, optional<U>&>` `is_constructible_v<T, optional<U>&&>` `is_constructible_v<T, const optional<U>&>` `is_constructible_v<T, const optional<U>&&>` `is_convertible_v<optional<U>&, T>` `is_convertible_v<optional<U>&&, T>` `is_convertible_v<const optional<U>&, T>` 、および `is_convertible_v<const optional<U>&&, T>` がすべて false である場合を除き、オーバーロードの解決には関与しません。
 
-`template <class U> explicit optional(optional<U>&& rhs);`*Rhs*に値が含まれている場合は、を使用しているかのように、格納されている値を直接初期化し `std::move(*rhs)` ます が true ではなく、、、、、、、 `is_constructible_v<T, U&&>` `is_constructible_v<T, optional<U>&>` `is_constructible_v<T, optional<U>&&>` `is_constructible_v<T, const optional<U>&>` `is_constructible_v<T, const optional<U>&&>` `is_convertible_v<optional<U>&, T>` `is_convertible_v<optional<U>&&, T>` `is_convertible_v<const optional<U>&, T>` 、および `is_convertible_v<const optional<U>&&, T>` がすべて false である場合を除き、オーバーロードの解決には関与しません。
+`template <class U> explicit optional(optional<U>&& rhs);`*Rhs* に値が含まれている場合は、を使用しているかのように、格納されている値を直接初期化し `std::move(*rhs)` ます が true ではなく、、、、、、、 `is_constructible_v<T, U&&>` `is_constructible_v<T, optional<U>&>` `is_constructible_v<T, optional<U>&&>` `is_constructible_v<T, const optional<U>&>` `is_constructible_v<T, const optional<U>&&>` `is_convertible_v<optional<U>&, T>` `is_convertible_v<optional<U>&&, T>` `is_convertible_v<const optional<U>&, T>` 、および `is_convertible_v<const optional<U>&&, T>` がすべて false である場合を除き、オーバーロードの解決には関与しません。
 
 ## <a name="optional-destructor"></a><a name="optional-destructor"></a> ~ 省略可能なデストラクター
 

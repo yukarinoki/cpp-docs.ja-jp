@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: message_processor クラス'
 title: message_processor クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -11,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - message_processor class
 ms.assetid: 23afb052-daa7-44ed-bf24-d2513db748da
-ms.openlocfilehash: 88944b2d935eebd0e031be1431c2a0f4efa3d760
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: f74314bde6e12ea8b00bfc7bfd2567ca15864f75
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77139467"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97202198"
 ---
 # <a name="message_processor-class"></a>message_processor クラス
 
@@ -32,27 +33,27 @@ class message_processor;
 ### <a name="parameters"></a>パラメーター
 
 *T*<br/>
-この `message_processor` オブジェクトによって処理されるメッセージ内のペイロードのデータ型。
+このオブジェクトによって処理されるメッセージ内のペイロードのデータ型 `message_processor` 。
 
 ## <a name="members"></a>メンバー
 
 ### <a name="public-typedefs"></a>パブリック typedef
 
-|Name|説明|
+|名前|説明|
 |----------|-----------------|
-|`type`|`T`の型のエイリアス。|
+|`type`|の型のエイリアス `T` 。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
-|Name|説明|
+|名前|説明|
 |----------|-----------------|
 |[async_send](#async_send)|派生クラスでオーバーライドされると、メッセージをブロックに非同期的に配置します。|
 |[sync_send](#sync_send)|派生クラスでオーバーライドされると、メッセージをブロックに同期的に配置します。|
-|[待機](#wait)|派生クラスでオーバーライドされると、すべての非同期操作が完了するまで待機します。|
+|[wait](#wait)|派生クラスでオーバーライドされると、すべての非同期操作が完了するまで待機します。|
 
 ### <a name="protected-methods"></a>プロテクト メソッド
 
-|Name|説明|
+|名前|説明|
 |----------|-----------------|
 |[process_incoming_message](#process_incoming_message)|派生クラスでオーバーライドされると、ブロックへのメッセージの転送処理を実行します。 新しいメッセージが追加され、キューが空であることが見つかるたびに呼び出されます。|
 
@@ -60,13 +61,13 @@ class message_processor;
 
 `message_processor`
 
-## <a name="requirements"></a>［要件］
+## <a name="requirements"></a>要件
 
 **ヘッダー:** agents.h
 
 **名前空間:** concurrency
 
-## <a name="async_send"></a>async_send
+## <a name="async_send"></a><a name="async_send"></a> async_send
 
 派生クラスでオーバーライドされると、メッセージをブロックに非同期的に配置します。
 
@@ -77,13 +78,13 @@ virtual void async_send(_Inout_opt_ message<T>* _Msg) = 0;
 ### <a name="parameters"></a>パラメーター
 
 *_Msg*<br/>
-非同期的に送信する `message` オブジェクト。
+`message`非同期的に送信するオブジェクト。
 
 ### <a name="remarks"></a>解説
 
 プロセッサの実装では、このメソッドをオーバーライドする必要があります。
 
-## <a name="process_incoming_message"></a>process_incoming_message
+## <a name="process_incoming_message"></a><a name="process_incoming_message"></a> process_incoming_message
 
 派生クラスでオーバーライドされると、ブロックへのメッセージの転送処理を実行します。 新しいメッセージが追加され、キューが空であることが見つかるたびに呼び出されます。
 
@@ -95,7 +96,7 @@ virtual void process_incoming_message() = 0;
 
 メッセージブロックの実装では、このメソッドをオーバーライドする必要があります。
 
-## <a name="sync_send"></a>sync_send
+## <a name="sync_send"></a><a name="sync_send"></a> sync_send
 
 派生クラスでオーバーライドされると、メッセージをブロックに同期的に配置します。
 
@@ -106,13 +107,13 @@ virtual void sync_send(_Inout_opt_ message<T>* _Msg) = 0;
 ### <a name="parameters"></a>パラメーター
 
 *_Msg*<br/>
-同期的に送信する `message` オブジェクト。
+`message`同期的に送信するオブジェクト。
 
 ### <a name="remarks"></a>解説
 
 プロセッサの実装では、このメソッドをオーバーライドする必要があります。
 
-## <a name="wait"></a>待機
+## <a name="wait"></a><a name="wait"></a> 待機
 
 派生クラスでオーバーライドされると、すべての非同期操作が完了するまで待機します。
 
@@ -124,7 +125,7 @@ virtual void wait() = 0;
 
 プロセッサの実装では、このメソッドをオーバーライドする必要があります。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[コンカレンシー名前空間](concurrency-namespace.md)<br/>
+[concurrency 名前空間](concurrency-namespace.md)<br/>
 [ordered_message_processor クラス](ordered-message-processor-class.md)

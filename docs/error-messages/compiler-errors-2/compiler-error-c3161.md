@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「コンパイラエラー C3161」を参照してください。
 title: コンパイラエラー C3161
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3161
 ms.assetid: 1fe2be85-a343-487b-8476-bf9e257eb29d
-ms.openlocfilehash: 7315dad7959cdd3b950ed814b13be3867399d332
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 4e45d64e1c1f318a126122148c2dd8e3ddb9c5af
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74761817"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97203966"
 ---
 # <a name="compiler-error-c3161"></a>コンパイラエラー C3161
 
@@ -19,7 +20,7 @@ ms.locfileid: "74761817"
 
 [__Interface](../../cpp/interface.md)は、グローバルスコープまたは名前空間内でのみ使用できます。 クラス、構造体、または共用体は、インターフェイスには記述できません。
 
-## <a name="example"></a>使用例
+## <a name="example"></a>例
 
 次の例では、C3161 が生成されます。
 

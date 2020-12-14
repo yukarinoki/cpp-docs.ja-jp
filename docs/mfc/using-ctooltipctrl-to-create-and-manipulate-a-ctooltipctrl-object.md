@@ -1,16 +1,17 @@
 ---
+description: '詳細情報: CToolTipCtrl を使用して CToolTipCtrl オブジェクトを作成および操作する'
 title: CToolTipCtrl を使用して CToolTipCtrl オブジェクトを作成および操作する方法
 ms.date: 11/04/2016
 helpviewer_keywords:
 - tool tips [MFC], creating
 - CToolTipCtrl class [MFC], using
 ms.assetid: 0a34583f-f66d-46a1-a239-31b80ea395ad
-ms.openlocfilehash: 37dc7bc5a411ebab3737b87fd6977b26cff68178
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 363d46ce078b71cf88d742ae390ab674a73ab935
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79442218"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97202341"
 ---
 # <a name="using-ctooltipctrl-to-create-and-manipulate-a-ctooltipctrl-object"></a>CToolTipCtrl を使用して CToolTipCtrl オブジェクトを作成および操作する方法
 
@@ -18,11 +19,11 @@ ms.locfileid: "79442218"
 
 ### <a name="to-create-and-manipulate-a-ctooltipctrl"></a>CToolTipCtrl を作成して操作するには
 
-1. `CToolTipCtrl` オブジェクトを構築します。
+1. オブジェクトを構築 `CToolTipCtrl` します。
 
-1. [Create](../mfc/reference/ctooltipctrl-class.md#create)を呼び出して Windows ツールヒントコモンコントロールを作成し、`CToolTipCtrl` オブジェクトにアタッチします。
+1. [Create](../mfc/reference/ctooltipctrl-class.md#create)を呼び出して Windows ツールヒントコモンコントロールを作成し、オブジェクトにアタッチし `CToolTipCtrl` ます。
 
-1. ツールをツールヒントコントロールに登録するには、 [Addtool](../mfc/reference/ctooltipctrl-class.md#addtool)を呼び出します。これにより、ツールヒントに格納されている情報が、カーソルがツール上にあるときに表示されます。
+1. ツールをツールヒントコントロールに登録するには、 [Addtool](../mfc/reference/ctooltipctrl-class.md#addtool) を呼び出します。これにより、ツールヒントに格納されている情報が、カーソルがツール上にあるときに表示されます。
 
 1. [SetToolInfo](../mfc/reference/ctooltipctrl-class.md#settoolinfo)を呼び出して、ツールのツールヒントによって管理される情報を設定します。
 
@@ -32,7 +33,7 @@ ms.locfileid: "79442218"
 
 1. [Gettoolcount](../mfc/reference/ctooltipctrl-class.md#gettoolcount)を呼び出して、ツールヒントコントロールに登録されているツールの数を取得します。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [CToolTipCtrl の使い方](../mfc/using-ctooltipctrl.md)<br/>
 [コントロール](../mfc/controls-mfc.md)

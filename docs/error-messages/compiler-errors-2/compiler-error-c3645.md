@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「コンパイラエラー C3645」を参照してください。
 title: コンパイラ エラー C3645
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3645
 ms.assetid: 346da528-ae86-4cd0-9654-f41bee26ac0d
-ms.openlocfilehash: 504b13aeb37fae0c350ef88798fefaec6f26c8e8
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 198b22b80a4975d8bd6fab130c075621f248a93c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74757827"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97203771"
 ---
 # <a name="compiler-error-c3645"></a>コンパイラ エラー C3645
 
@@ -19,7 +20,7 @@ ms.locfileid: "74757827"
 
 関数にいくつかのキーワードが存在すると、関数がネイティブにコンパイルされます。
 
-## <a name="example"></a>使用例
+## <a name="example"></a>例
 
 次の例では、C3645 が生成されます。
 

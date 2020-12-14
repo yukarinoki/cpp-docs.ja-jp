@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: nested_scheduler_missing_detach クラス'
 title: nested_scheduler_missing_detach クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - nested_scheduler_missing_detach class
 ms.assetid: 65d3f277-6d43-4160-97ef-caf8b26c1641
-ms.openlocfilehash: 8c9553b036890c4ce28f1060bfe2f58ee1904935
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: 3d1232b8f9b807835f5b4b1e19c6049d049f12f1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77138867"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97202107"
 ---
 # <a name="nested_scheduler_missing_detach-class"></a>nested_scheduler_missing_detach クラス
 
@@ -29,13 +30,13 @@ class nested_scheduler_missing_detach : public std::exception;
 
 ### <a name="public-constructors"></a>パブリック コンストラクター
 
-|Name|説明|
+|名前|説明|
 |----------|-----------------|
 |[nested_scheduler_missing_detach](#ctor)|オーバーロードされます。 `nested_scheduler_missing_detach` オブジェクトを構築します。|
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
-この例外がスローされるのは、別のスケジューラに既に所有されているか、別のスケジューラにアタッチされているコンテキストで `Scheduler` オブジェクトの `Attach` メソッドを呼び出すことによって、スケジューラを別の内部に入れ子にした場合のみです。 同時実行ランタイムは、問題を特定するための支援としてシナリオを検出できる場合に、この例外させるをスローします。 `CurrentScheduler::Detach` メソッドを呼び出すための怠りのすべてのインスタンスが、この例外をスローすることは保証されていません。
+この例外がスローされるのは、既にに `Attach` `Scheduler` よって所有されているか別のスケジューラにアタッチされているコンテキストでオブジェクトのメソッドを呼び出すことによって、あるスケジューラを別の内部に入れ子にする場合のみです。 同時実行ランタイムは、問題を特定するための支援としてシナリオを検出できる場合に、この例外させるをスローします。 メソッドを呼び出すための怠りのすべてのインスタンス `CurrentScheduler::Detach` が、この例外をスローすることは保証されていません。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -49,7 +50,7 @@ class nested_scheduler_missing_detach : public std::exception;
 
 **名前空間:** concurrency
 
-## <a name="ctor"></a>nested_scheduler_missing_detach
+## <a name="nested_scheduler_missing_detach"></a><a name="ctor"></a> nested_scheduler_missing_detach
 
 `nested_scheduler_missing_detach` オブジェクトを構築します。
 
@@ -64,7 +65,7 @@ nested_scheduler_missing_detach() throw();
 *_Message*<br/>
 エラーの説明メッセージ。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[コンカレンシー名前空間](concurrency-namespace.md)<br/>
+[concurrency 名前空間](concurrency-namespace.md)<br/>
 [Scheduler クラス](scheduler-class.md)

@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「ダイアログボックスでのコモンコントロールの使用」を参照してください。
 title: ダイアログ ボックスでのコモン コントロールの使い方
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - dialog box controls [MFC], common controls
 - Windows common controls [MFC], in dialog boxes
 ms.assetid: 17713caf-09f8-484a-bf54-5f48bf09cce9
-ms.openlocfilehash: 1a3dcb7151952b52affcfeb838ced15f0d116fce
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 73395ae5b3542f338f3783fd5f0c41116821fed6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91500349"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97202406"
 ---
 # <a name="using-common-controls-in-a-dialog-box"></a>ダイアログ ボックスでのコモン コントロールの使い方
 
@@ -42,7 +43,7 @@ Windows コモンコントロールは、ダイアログ [ボックス](../mfc/d
     > [!NOTE]
     >  ダイアログボックス内のコントロールの値を設定または取得するために、ダイアログデータエクスチェンジを使用することもできます。
 
-## <a name="remarks"></a>注釈
+## <a name="remarks"></a>解説
 
 ダイアログボックスにいくつかの一般的なコントロールが追加されると、ダイアログボックスが機能しなくなります。 この状況の処理の詳細については [、「コントロールをダイアログに追加](../windows/adding-editing-or-deleting-controls.md) する」を参照してください。
 

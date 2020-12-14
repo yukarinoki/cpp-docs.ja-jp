@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: multitype_join クラス'
 title: multitype_join クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -17,12 +18,12 @@ f1_keywords:
 helpviewer_keywords:
 - multitype_join class
 ms.assetid: 236e87a0-4867-49fd-869a-bef4010e49a7
-ms.openlocfilehash: c648e77e404cf39eab281a93e03d8b427da375f8
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: ee4e3a282bc9fa410140fefb79f31ac5ed9463ff
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87205861"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97202120"
 ---
 # <a name="multitype_join-class"></a>multitype_join クラス
 
@@ -71,13 +72,13 @@ class multitype_join: public ISource<typename _Unwrap<T>::type>;
 |[link_target](#link_target)|ターゲットブロックをこの `multitype_join` メッセージングブロックにリンクします。|
 |[解除](#release)|前回成功したメッセージの予約を解放します。|
 |[release_ref](#release_ref)|このメッセージングブロックの参照カウントを解放 `multiple_join` します。|
-|[省](#reserve)|このメッセージングブロックによって以前に提供されたメッセージを予約 `multitype_join` します。|
+|[予約](#reserve)|このメッセージングブロックによって以前に提供されたメッセージを予約 `multitype_join` します。|
 |[unlink_target](#unlink_target)|このメッセージングブロックからターゲットブロックをリンク解除 `multitype_join` します。|
 |[unlink_targets](#unlink_targets)|このメッセージングブロックのすべてのターゲットのリンクを解除 `multitype_join` します。 ( [ISource:: unlink_targets](isource-class.md#unlink_targets)よりも優先されます)。|
 
 ## <a name="remarks"></a>解説
 
-詳細については、「[非同期メッセージブロック](../../../parallel/concrt/asynchronous-message-blocks.md)」を参照してください。
+詳細については、「 [非同期メッセージブロック](../../../parallel/concrt/asynchronous-message-blocks.md)」を参照してください。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -85,13 +86,13 @@ class multitype_join: public ISource<typename _Unwrap<T>::type>;
 
 `multitype_join`
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** agents.h
 
 **名前空間:** concurrency
 
-## <a name="accept"></a><a name="accept"></a>受入
+## <a name="accept"></a><a name="accept"></a> 受入
 
 このブロックによって提供されたメッセージを受け入れ `multitype_join` 、所有権を呼び出し元に転送します。
 
@@ -113,7 +114,7 @@ virtual message<_Destination_type>* accept(
 
 現在呼び出し元に所有権があることを示すメッセージへのポインター。
 
-## <a name="acquire_ref"></a><a name="acquire_ref"></a>acquire_ref
+## <a name="acquire_ref"></a><a name="acquire_ref"></a> acquire_ref
 
 このメッセージングブロックの参照カウントを取得して `multitype_join` 、削除されないようにします。
 
@@ -130,7 +131,7 @@ virtual void acquire_ref(_Inout_ ITarget<_Destination_type>* _PTarget);
 
 このメソッドは `ITarget` 、メソッドの実行中にこのソースにリンクされるオブジェクトによって呼び出され `link_target` ます。
 
-## <a name="consume"></a><a name="consume"></a>可能性
+## <a name="consume"></a><a name="consume"></a> 可能性
 
 は、メッセージングブロックによって既に提供され、ターゲットによって正常に予約されているメッセージを使用して、 `multitype_join` 所有権を呼び出し元に譲渡します。
 
@@ -156,7 +157,7 @@ virtual message<_Destination_type>* consume(
 
 `consume`メソッドはと似ていますが、常にを呼び出した後に、 `accept` 返されたを呼び出す必要があり `reserve` **`true`** ます。
 
-## <a name="link_target"></a><a name="link_target"></a>link_target
+## <a name="link_target"></a><a name="link_target"></a> link_target
 
 ターゲットブロックをこの `multitype_join` メッセージングブロックにリンクします。
 
@@ -169,7 +170,7 @@ virtual void link_target(_Inout_ ITarget<_Destination_type>* _PTarget);
 *_PTarget*<br/>
 `ITarget`このメッセージングブロックにリンクするブロックへのポインター `multitype_join` 。
 
-## <a name="multitype_join"></a><a name="ctor"></a>multitype_join
+## <a name="multitype_join"></a><a name="ctor"></a> multitype_join
 
 `multitype_join` メッセージング ブロックを構築します。
 
@@ -209,7 +210,7 @@ multitype_join(
 
 移動の構築はロックの状況では行われません。ということは、移動時に処理中の軽量タスクがないことを確認するのはユーザーの責任です。 そうしないと、例外または不整合な状態で、多数の競合が発生します。
 
-## <a name="multitype_join"></a><a name="dtor"></a>~ multitype_join
+## <a name="multitype_join"></a><a name="dtor"></a> ~ multitype_join
 
 `multitype_join`メッセージングブロックを破棄します。
 
@@ -217,7 +218,7 @@ multitype_join(
 ~multitype_join();
 ```
 
-## <a name="release"></a><a name="release"></a>解除
+## <a name="release"></a><a name="release"></a> 解除
 
 前回成功したメッセージの予約を解放します。
 
@@ -235,7 +236,7 @@ virtual void release(
 *_PTarget*<br/>
 メソッドを呼び出しているターゲットブロックへのポインター `release` 。
 
-## <a name="release_ref"></a><a name="release_ref"></a>release_ref
+## <a name="release_ref"></a><a name="release_ref"></a> release_ref
 
 このメッセージングブロックの参照カウントを解放 `multiple_join` します。
 
@@ -252,7 +253,7 @@ virtual void release_ref(_Inout_ ITarget<_Destination_type>* _PTarget);
 
 このメソッドは、このソースからリンク解除されているオブジェクトによって呼び出され `ITarget` ます。 ソースブロックは、ターゲットブロック用に予約されているすべてのリソースを解放できます。
 
-## <a name="reserve"></a><a name="reserve"></a>省
+## <a name="reserve"></a><a name="reserve"></a> 省
 
 このメッセージングブロックによって以前に提供されたメッセージを予約 `multitype_join` します。
 
@@ -278,7 +279,7 @@ virtual bool reserve(
 
 を呼び出した後、成功した場合は、 `reserve` `consume` メッセージを `release` 取得または取得するために、またはのいずれかを呼び出す必要があります。
 
-## <a name="unlink_target"></a><a name="unlink_target"></a>unlink_target
+## <a name="unlink_target"></a><a name="unlink_target"></a> unlink_target
 
 このメッセージングブロックからターゲットブロックをリンク解除 `multitype_join` します。
 
@@ -291,7 +292,7 @@ virtual void unlink_target(_Inout_ ITarget<_Destination_type>* _PTarget);
 *_PTarget*<br/>
 `ITarget`このメッセージングブロックのリンクを解除するブロックへのポインター `multitype_join` 。
 
-## <a name="unlink_targets"></a><a name="unlink_targets"></a>unlink_targets
+## <a name="unlink_targets"></a><a name="unlink_targets"></a> unlink_targets
 
 このメッセージングブロックのすべてのターゲットのリンクを解除 `multitype_join` します。
 
