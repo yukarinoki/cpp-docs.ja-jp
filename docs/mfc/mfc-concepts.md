@@ -1,14 +1,15 @@
 ---
+description: '詳細情報: MFC の概念'
 title: MFC の概念
 ms.date: 01/09/2018
 f1_keywords:
 - Concepts
-ms.openlocfilehash: b6f5e6bf84900a17b10104dbe9baf4b580ae5396
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 13d5b0b1943eb68e7b73fc5e935b98b0d104ab07
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84615509"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97280600"
 ---
 # <a name="mfc-concepts"></a>MFC の概念
 
@@ -25,7 +26,7 @@ MFC のほとんどのクラスの基底クラスである `CObject` の使い�
 [コレクション](collections.md)<br/>
 C++ テンプレートから作成されるコレクション クラス、および作成されないコレクション クラスについて説明します。
 
-[日時](../atl-mfc-shared/date-and-time.md)<br/>
+[日付と時刻](../atl-mfc-shared/date-and-time.md)<br/>
 MFC での日付と時刻の使い方に関するトピックへのリンクを提供します。
 
 [[ファイル]](files-in-mfc.md)<br/>
@@ -34,7 +35,7 @@ MFC での日付と時刻の使い方に関するトピックへのリンクを�
 [メモリ管理 (MFC)](memory-management.md)<br/>
 メモリ管理に関連する汎用サービスの活用方法について説明します。
 
-[メッセージの処理とマップ](message-handling-and-mapping.md)<br/>
+[メッセージの処理とマッピング](message-handling-and-mapping.md)<br/>
 MFC フレームワークがメッセージとコマンドを処理する方法と、メッセージとコマンドをハンドラー関数に関連付ける方法について説明します。
 
 [シリアル化](serialization-in-mfc.md)<br/>
@@ -48,7 +49,7 @@ MFC に用意されている例外処理機構について説明します。
 [MFC インターネットプログラミングの基礎](mfc-internet-programming-basics.md)<br/>
 インターネットのプログラミングで使用できる MFC クラスについて説明します。
 
-[MFC インターネット プログラミングの作業](mfc-internet-programming-tasks.md)<br/>
+[MFC インターネットプログラミングタスク](mfc-internet-programming-tasks.md)<br/>
 インターネットのサポートをアプリケーションに追加する方法を説明します。
 
 [Unicode およびマルチバイト文字セット (MBCS) のサポート](../atl-mfc-shared/unicode-and-multibyte-character-set-mbcs-support.md)<br/>

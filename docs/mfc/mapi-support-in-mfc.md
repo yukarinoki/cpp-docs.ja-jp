@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「MFC での MAPI サポート」を参照してください。
 title: MFC での MAPI サポート
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - MAPI, MFC
 - OnFileSendMail method [MFC]
 ms.assetid: cafbecb1-0427-4077-b4b8-159bae5b49b8
-ms.openlocfilehash: 7eff22b2a7b4c838f2967fb5217b9dec96903d0e
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 289ad61894efd5c08d3a50d8c50e3ac6ee518a25
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84625568"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97280756"
 ---
 # <a name="mapi-support-in-mfc"></a>MFC での MAPI サポート
 
@@ -34,7 +35,7 @@ MAPI は、添付ファイルを送信するためにファイルを読み取る
 
 1. Visual C++ メニューエディターを使用して、コマンド ID が ID_FILE_SEND_MAIL メニュー項目を追加します。
 
-   このコマンド ID は、AFXRES.H のフレームワークによって提供されます。始め. コマンドは任意のメニューに追加できますが、通常は [**ファイル**] メニューに追加されます。
+   このコマンド ID は、AFXRES.H のフレームワークによって提供されます。 コマンドは任意のメニューに追加できますが、通常は [ **ファイル** ] メニューに追加されます。
 
 1. ドキュメントのメッセージマップに次のコードを手動で追加します。
 
@@ -48,9 +49,9 @@ MAPI は、添付ファイルを送信するためにファイルを読み取る
 メールサポートが利用可能な場合、MFC では、でメニュー項目を有効に `OnUpdateFileSendMail` し、その後でコマンドをで処理し `OnFileSendMail` ます。 メールサポートが利用できない場合は、ユーザーがメニュー項目を表示しないように、MFC によって自動的に削除されます。
 
 > [!TIP]
-> 前に説明したようにメッセージマップエントリを手動で追加するのではなく、クラス[クラスウィザード](reference/mfc-class-wizard.md)を使用して、メッセージを関数にマップできます。 詳細については、「[関数へのメッセージのマッピング](reference/mapping-messages-to-functions.md)」を参照してください。
+> 前に説明したようにメッセージマップエントリを手動で追加するのではなく、クラス [クラスウィザード](reference/mfc-class-wizard.md) を使用して、メッセージを関数にマップできます。 詳細については、「 [関数へのメッセージのマッピング](reference/mapping-messages-to-functions.md)」を参照してください。
 
-関連情報については、「 [MAPI](mapi.md)の概要」を参照してください。
+関連情報については、「 [MAPI](mapi.md) の概要」を参照してください。
 
 MAPI を有効にするメンバー関数の詳細については `CDocument` 、以下を参照してください。
 

@@ -1,4 +1,5 @@
 ---
+description: '詳細については、「MFC ActiveX コントロール: オートメーションサーバーの作成」を参照してください。'
 title: 'MFC ActiveX コントロール : オートメーション サーバーの作成'
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - ActiveX controls [MFC], Automation server
 - MFC ActiveX controls [MFC], Automation server
 ms.assetid: e0c24ed2-d61c-49ad-a4fa-4e1098d1d39b
-ms.openlocfilehash: f2c941e43e810845560b4c35c558ec70248c21ed
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: ffac05d48a17e0f8b40f268709393fff392a3b95
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84622381"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97280730"
 ---
 # <a name="mfc-activex-controls-creating-an-automation-server"></a>MFC ActiveX コントロール : オートメーション サーバーの作成
 
@@ -35,7 +36,7 @@ ms.locfileid: "84622381"
 
    [!code-cpp[NVC_MFC_AxCont#17](codesnippet/cpp/mfc-activex-controls-creating-an-automation-server_1.cpp)]
 
-1. クラスビューで、プロジェクトノードを右クリックし、[ **typelib からクラスを追加**] を選択してタイプライブラリをインポートします。
+1. クラスビューで、プロジェクトノードを右クリックし、[ **typelib からクラスを追加** ] を選択してタイプライブラリをインポートします。
 
    これにより、ファイル名拡張子 .h と .cpp のファイルがプロジェクトに追加されます。
 

@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: vector &lt; bool &gt; クラス'
 title: vector&lt;bool&gt; クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - std::vector [C++], flip
 - std::vector [C++], swap
 ms.assetid: 8028c8ed-ac9c-4f06-aba1-5de45c00aafb
-ms.openlocfilehash: 24a18197c6b335172b88d2db37e8ac7ed57f58b8
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: ecc7c083825a92aca429f9418d35ff9d4cf7dcca
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88845420"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97280509"
 ---
 # <a name="vectorltboolgt-class"></a>vector&lt;bool&gt; クラス
 
@@ -60,7 +61,7 @@ class vector<bool, Allocator>
 |-|-|
 |[vector \<bool> 参照クラス](#reference_class)|`bool&` の動作をシミュレートするためのプロキシとして機能するクラスで、そのオブジェクトは `vector<bool>` オブジェクト内の要素 (単一ビット) への参照を提供できます。|
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー**: \<vector>
 
@@ -367,10 +368,10 @@ static void swap(
 ### <a name="parameters"></a>パラメーター
 
 *左側*\
-*右*の要素と交換される要素。
+*右* の要素と交換される要素。
 
 *そうです*\
-*左*要素と交換される要素。
+*左* 要素と交換される要素。
 
 ### <a name="remarks"></a>解説
 

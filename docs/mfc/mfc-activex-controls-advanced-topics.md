@@ -1,4 +1,5 @@
 ---
+description: '詳細については、「MFC ActiveX コントロール: 高度なトピック」を参照してください。'
 title: 'MFC ActiveX コントロール : 高度なトピック'
 ms.date: 09/12/2018
 helpviewer_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - MFC ActiveX controls [MFC], parameterized property
 - ThrowError method [MFC]
 ms.assetid: e9e34abb-8e2d-461e-bb9c-a1aec5dcecbd
-ms.openlocfilehash: 5ae29ed40d9cc5b78945fb9846a36d6b5a0b27d7
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 1b37c3621c515153f068633b8272420a68a06c4e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87225034"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97280743"
 ---
 # <a name="mfc-activex-controls-advanced-topics"></a>MFC ActiveX コントロール : 高度なトピック
 
@@ -36,16 +37,16 @@ ms.locfileid: "87225034"
 >[!IMPORTANT]
 > ActiveX は、新しい開発には使用しない従来のテクノロジです。 ActiveX を置き換える最新テクノロジの詳細については、「 [Activex コントロール](activex-controls.md)」を参照してください。
 
-## <a name="using-database-classes-in-activex-controls"></a><a name="_core_using_database_classes_in_activex_controls"></a>ActiveX コントロールでのデータベースクラスの使用
+## <a name="using-database-classes-in-activex-controls"></a><a name="_core_using_database_classes_in_activex_controls"></a> ActiveX コントロールでのデータベースクラスの使用
 
 ActiveX コントロールクラスはクラスライブラリの一部であるため、標準の MFC アプリケーションでデータベースクラスを使用する場合と同じ手順と規則を適用して、MFC データベースクラスを使用する ActiveX コントロールを開発できます。
 
 MFC データベースクラスの一般的な概要については、「 [Mfc データベースクラス (DAO および ODBC)](../data/mfc-database-classes-odbc-and-dao.md)」を参照してください。 この記事では、MFC ODBC クラスと MFC DAO クラスの両方について説明します。詳細については、こちらを参照してください。
 
 > [!NOTE]
-> DAO は Office 2013 でサポートされています。 DAO 3.6 は最終バージョンであり、互換性のために残されているものと見なされます。 Visual C++ 環境とウィザードでは、DAO はサポートされていません (ただし、DAO クラスは含まれていますが、引き続き使用できます)。 新しいプロジェクトには、 [OLE DB テンプレート](../data/oledb/ole-db-programming.md)または[ODBC および MFC](../data/odbc/odbc-and-mfc.md)を使用することをお勧めします。 既存のアプリケーションを維持するには、DAO のみを使用する必要があります。
+> DAO は Office 2013 でサポートされています。 DAO 3.6 は最終バージョンであり、互換性のために残されているものと見なされます。 Visual C++ 環境とウィザードでは、DAO はサポートされていません (ただし、DAO クラスは含まれていますが、引き続き使用できます)。 新しいプロジェクトには、 [OLE DB テンプレート](../data/oledb/ole-db-programming.md) または [ODBC および MFC](../data/odbc/odbc-and-mfc.md) を使用することをお勧めします。 既存のアプリケーションを維持するには、DAO のみを使用する必要があります。
 
-## <a name="implementing-a-parameterized-property"></a><a name="_core_implementing_a_parameterized_property"></a>パラメーター化されたプロパティの実装
+## <a name="implementing-a-parameterized-property"></a><a name="_core_implementing_a_parameterized_property"></a> パラメーター化されたプロパティの実装
 
 パラメーター化されたプロパティ (プロパティ配列とも呼ばれます) は、同種の値のコレクションをコントロールの単一のプロパティとして公開するためのメソッドです。 たとえば、パラメーター化されたプロパティを使用して、配列またはディクショナリをプロパティとして公開できます。 Visual Basic では、このようなプロパティには配列表記を使用してアクセスします。
 
@@ -65,19 +66,19 @@ MFC データベースクラスの一般的な概要については、「 [Mfc �
 
 1. コントロールのインターフェイス ノード (ライブラリ ノードの 2 番目のノード) を右クリックし、ショートカット メニューを開きます。
 
-1. ショートカットメニューの [**追加**] をクリックし、[**プロパティの追加**] をクリックします。
+1. ショートカットメニューの [ **追加** ] をクリックし、[ **プロパティの追加**] をクリックします。
 
-1. [**プロパティ名**] ボックスに「」と入力 `Array` します。
+1. [ **プロパティ名** ] ボックスに「」と入力 `Array` します。
 
-1. [**プロパティの種類**] ボックスで、を選択し **`short`** ます。
+1. [ **プロパティの種類** ] ボックスで、を選択し **`short`** ます。
 
-1. [**実装**の種類] で、[ **Get/Set メソッド**] をクリックします。
+1. [ **実装** の種類] で、[ **Get/Set メソッド**] をクリックします。
 
-1. **Get 関数**と**set 関数**の各ボックスに、Get 関数と set 関数に一意の名前を入力するか、既定の名前をそのまま使用します。
+1. **Get 関数** と **set 関数** の各ボックスに、Get 関数と set 関数に一意の名前を入力するか、既定の名前をそのまま使用します。
 
-1. パラメーター**名**と**パラメーターの型**コントロールを使用して、*行*(型*short*) と呼ばれるパラメーターを追加します。
+1. パラメーター **名** と **パラメーターの型** コントロールを使用して、*行*(型 *short*) と呼ばれるパラメーターを追加します。
 
-1. *列*( *short*型) という2番目のパラメーターを追加します。
+1. *列*( *short* 型) という2番目のパラメーターを追加します。
 
 1. **[完了]** をクリックします。
 
@@ -99,7 +100,7 @@ MFC データベースクラスの一般的な概要については、「 [Mfc �
 
 このプロパティを使用するには、パラメーター化された **`short`** プロパティの値を格納するために、型のコントロールクラスで2次元配列のメンバー変数を宣言します。 次に、パラメーターで示されているように、適切な行と列に格納されている値を返すように Get 関数を変更し、行と列のパラメーターによって参照される値を更新するように Set 関数を変更します。
 
-## <a name="handling-errors-in-your-activex-control"></a><a name="_core_handling_errors_in_your_activex_control"></a>ActiveX コントロールでのエラーの処理
+## <a name="handling-errors-in-your-activex-control"></a><a name="_core_handling_errors_in_your_activex_control"></a> ActiveX コントロールでのエラーの処理
 
 コントロールでエラー状態が発生した場合は、コントロールコンテナーにエラーを報告することが必要になる場合があります。 エラーを報告するには、エラーが発生した状況に応じて2つの方法があります。 プロパティの Get または Set 関数内、または OLE オートメーションメソッドの実装内でエラーが発生した場合、コントロールは、エラーが発生したことをコントロールユーザーに通知する、 [COleControl:: ThrowError](reference/colecontrol-class.md#throwerror)を呼び出す必要があります。 他のタイミングでエラーが発生した場合、コントロールは、ストックエラーイベントを発生させる、 [COleControl:: 焼討 error](reference/colecontrol-class.md#fireerror)を呼び出す必要があります。
 
@@ -107,7 +108,7 @@ MFC データベースクラスの一般的な概要については、「 [Mfc �
 
 ### <a name="activex-control-error-codes"></a>ActiveX コントロールのエラーコード
 
-|エラー|[説明]|
+|エラー|説明|
 |-----------|-----------------|
 |CTL_E_ILLEGALFUNCTIONCALL|無効な関数呼び出し|
 |CTL_E_OVERFLOW|オーバーフロー|
@@ -156,11 +157,11 @@ MFC データベースクラスの一般的な概要については、「 [Mfc �
 
 既存の VBX コントロールを置き換える ActiveX コントロールを作成する場合は、エラーコードに互換性があることを確認するために、VBX コントロールが使用するのと同じ数値を使用して ActiveX コントロールのエラーコードを定義します。
 
-## <a name="handling-special-keys-in-the-control"></a><a name="_core_handling_special_keys_in_your_control"></a>コントロールでの特殊なキーの処理
+## <a name="handling-special-keys-in-the-control"></a><a name="_core_handling_special_keys_in_your_control"></a> コントロールでの特殊なキーの処理
 
 場合によっては、特定のキーストロークの組み合わせを特別な方法で処理することが必要になることがあります。たとえば、複数行テキストボックスコントロールで ENTER キーを押すか、方向キー ID が押されたときに編集コントロールのグループ間を移動すると、新しい行を挿入します。
 
-ActiveX コントロールの基本クラスがの場合は `COleControl` 、 [CWnd::P retranslatemessage](reference/cwnd-class.md#pretranslatemessage)をオーバーライドして、コンテナーがメッセージを処理する前にメッセージを処理することができます。 この手法を使用する場合、のオーバーライドでメッセージを処理する場合は、常に**TRUE**を返し `PreTranslateMessage` ます。
+ActiveX コントロールの基本クラスがの場合は `COleControl` 、 [CWnd::P retranslatemessage](reference/cwnd-class.md#pretranslatemessage) をオーバーライドして、コンテナーがメッセージを処理する前にメッセージを処理することができます。 この手法を使用する場合、のオーバーライドでメッセージを処理する場合は、常に **TRUE** を返し `PreTranslateMessage` ます。
 
 次のコード例は、方向キーに関連するメッセージを処理する方法を示しています。
 
@@ -168,11 +169,11 @@ ActiveX コントロールの基本クラスがの場合は `COleControl` 、 [C
 
 ActiveX コントロールのキーボードインターフェイスを処理する方法の詳細については、ActiveX SDK のドキュメントを参照してください。
 
-## <a name="accessing-dialog-controls-that-are-invisible-at-run-time"></a><a name="_core_accessing_dialog_controls_that_are_invisible_at_run_time"></a>実行時に非表示になるダイアログコントロールへのアクセス
+## <a name="accessing-dialog-controls-that-are-invisible-at-run-time"></a><a name="_core_accessing_dialog_controls_that_are_invisible_at_run_time"></a> 実行時に非表示になるダイアログコントロールへのアクセス
 
-ユーザーインターフェイスを持たず、実行時に非表示になるダイアログコントロールを作成できます。 実行時に非表示の ActiveX コントロールをダイアログボックスに追加し、 [CWnd:: GetDlgItem](reference/cwnd-class.md#getdlgitem)を使用してコントロールにアクセスした場合、コントロールは正しく機能しません。 代わりに、次のいずれかの方法を使用して、コントロールを表すオブジェクトを取得する必要があります。
+ユーザーインターフェイスを持たず、実行時に非表示になるダイアログコントロールを作成できます。 実行時に非表示の ActiveX コントロールをダイアログボックスに追加し、 [CWnd:: GetDlgItem](reference/cwnd-class.md#getdlgitem) を使用してコントロールにアクセスした場合、コントロールは正しく機能しません。 代わりに、次のいずれかの方法を使用して、コントロールを表すオブジェクトを取得する必要があります。
 
-- メンバー変数の追加ウィザードを使用して、[**制御変数**] を選択し、コントロールの ID を選択します。 メンバー変数名を入力し、コントロールの**種類**としてコントロールのラッパークラスを選択します。
+- メンバー変数の追加ウィザードを使用して、[ **制御変数** ] を選択し、コントロールの ID を選択します。 メンバー変数名を入力し、コントロールの **種類** としてコントロールのラッパークラスを選択します。
 
      または
 

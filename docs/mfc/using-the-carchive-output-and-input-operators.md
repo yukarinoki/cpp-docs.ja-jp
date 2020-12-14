@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「CArchive &lt; &lt; and &gt; &gt; 演算子の使用」を参照してください。
 title: CArchive &lt; &lt; と &gt; &gt; 演算子の使用
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - CArchive class [MFC], storing and loading objects
 - CArchive class [MFC], operators
 ms.assetid: 56aef326-02dc-4992-8282-f0a4b78a064e
-ms.openlocfilehash: 0351cd0fad1d0fc838c75d3cdbd809a04b0fb393
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: a3e6d65ac2ff024f779edb6d23a43f7331628c3b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88832296"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97314569"
 ---
 # <a name="using-the-carchive-ltlt-and-gtgt-operators"></a>CArchive &lt; &lt; と &gt; &gt; 演算子の使用
 

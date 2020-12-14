@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「コンパイラエラー C2001」を参照してください。
 title: コンパイラエラー C2001
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2001
 ms.assetid: 0c3a7821-d8e5-4398-ab5a-4116d46e8dda
-ms.openlocfilehash: 6b40a3bd186b5c45a0ea5163f433635ab1e7b07f
-ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
+ms.openlocfilehash: 81c033288ae673e95bc3454e2754d371f84225e5
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90743491"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97298631"
 ---
 # <a name="compiler-error-c2001"></a>コンパイラエラー C2001
 
