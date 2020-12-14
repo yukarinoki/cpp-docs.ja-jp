@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「コンパイラエラー C2400 ~ C2499」を参照してください。
 title: コンパイラ エラー (C2400 - C2499)
 ms.date: 04/21/2019
 f1_keywords:
@@ -26,121 +27,121 @@ helpviewer_keywords:
 - C2481
 - C2497
 ms.assetid: f1f05572-af0b-497b-bde4-4c81ec01af3b
-ms.openlocfilehash: 569780a0716d26406c1703fa91fe5216d92ce653
-ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
+ms.openlocfilehash: 371b4a306d1c922b6ea8ea9c8a82c4a2abb02c1e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64857624"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97251818"
 ---
 # <a name="compiler-errors-c2400-through-c2499"></a>コンパイラ エラー (C2400 - C2499)
 
-ドキュメントのこのセクションの記事では、コンパイラによって生成されるエラー メッセージのサブセットについて説明します。
+ドキュメントのこのセクションの記事では、コンパイラによって生成されるエラーメッセージのサブセットについて説明します。
 
 [!INCLUDE[error-boilerplate](../../error-messages/includes/error-boilerplate.md)]
 
 ## <a name="error-messages"></a>エラー メッセージ
 
-|Error|メッセージ|
+|エラー|Message|
 |-----------|-------------|
-|[コンパイラ エラー C2400](compiler-error-c2400.md)|インライン アセンブラーの構文エラーで '*コンテキスト*'; が見つかりません'*トークン*'|
-|[コンパイラ エラー C2401](compiler-error-c2401.md)|'*識別子*': レジスタをベースにする必要があります'*コンテキスト*'|
-|[コンパイラ エラー C2402](compiler-error-c2402.md)|'*識別子*': レジスタのインデックスでなければなりません'*コンテキスト*'。|
-|[コンパイラ エラー C2403](compiler-error-c2403.md)|'*識別子*': レジスタのベースまたはインデックス レジスタでなければなりません'*コンテキスト*'。|
-|[コンパイラ エラー C2404](compiler-error-c2404.md)|'*識別子*': で使用できないレジスタ'*コンテキスト*'|
-|[コンパイラ エラー C2405](compiler-error-c2405.md)|オフセットを短い前方参照が正しくありません。|
-|[コンパイラ エラー C2406](compiler-error-c2406.md)|'*識別子*': 定義されていません'*コンテキスト*'|
-|[コンパイラ エラー C2407](compiler-error-c2407.md)|無効な 'float' レジスタ '*コンテキスト*'|
-|[コンパイラ エラー C2408](compiler-error-c2408.md)|PTR 演算子の引数の型 '*コンテキスト*'|
-|[コンパイラ エラー C2409](compiler-error-c2409.md)|無効な型が演算子として使用される '*コンテキスト*'|
-|[コンパイラ エラー C2410](compiler-error-c2410.md)|'*識別子*': あいまいなメンバーの名前'*コンテキスト*'|
-|[コンパイラ エラー C2411](compiler-error-c2411.md)|'*識別子*': 無効な構造体/共用体メンバー'*コンテキスト*'|
-|[コンパイラ エラー C2412](compiler-error-c2412.md)|'*ラベル*': ラベルが再定義|
-|[コンパイラ エラー C2413](compiler-error-c2413.md)|'*識別子*': 無効なサイズを揃える|
+|[コンパイラ エラー C2400](compiler-error-c2400.md)|'*context*' でインラインアセンブラー構文エラーが発生しています。'*token*' が見つかりました|
+|[コンパイラ エラー C2401](compiler-error-c2401.md)|'*identifier*': レジスタは '*context*' のベースでなければなりません|
+|[コンパイラ エラー C2402](compiler-error-c2402.md)|'*identifier*': レジスタは '*context*' のインデックスでなければなりません|
+|[コンパイラ エラー C2403](compiler-error-c2403.md)|'*identifier*': レジスタは '*context*' のベースまたはインデックスでなければなりません|
+|[コンパイラ エラー C2404](compiler-error-c2404.md)|'*identifier*': '*context*' に無効なレジスタがあります。|
+|[コンパイラ エラー C2405](compiler-error-c2405.md)|オフセットを含む無効な短い前方参照です|
+|[コンパイラ エラー C2406](compiler-error-c2406.md)|'*identifier*': '*context*' で名前が定義されていません|
+|[コンパイラ エラー C2407](compiler-error-c2407.md)|'*context*' に無効な ' float ' レジスタがあります。|
+|[コンパイラ エラー C2408](compiler-error-c2408.md)|'*context*' の PTR 演算子に無効な型があります。|
+|[コンパイラ エラー C2409](compiler-error-c2409.md)|'*context*' で演算子として使用されている型が無効です。|
+|[コンパイラ エラー C2410](compiler-error-c2410.md)|'*identifier*': '*context*' のメンバー名があいまいです|
+|[コンパイラ エラー C2411](compiler-error-c2411.md)|'*identifier*': '*context*' の構造体または共用体のメンバーが正しくありません。|
+|[コンパイラ エラー C2412](compiler-error-c2412.md)|'*label*': 大文字と小文字を区別しないラベルを再定義しました|
+|[コンパイラ エラー C2413](compiler-error-c2413.md)|'*identifier*': 配置サイズが正しくありません|
 |[コンパイラ エラー C2414](compiler-error-c2414.md)|オペランドの数が正しくありません。|
 |[コンパイラ エラー C2415](compiler-error-c2415.md)|オペランドの型が無効です。|
-|コンパイラ エラー C2416|属性 '*属性*' このコンテキストで適用することはできません|
-|[コンパイラ エラー C2417](compiler-error-c2417.md)|0 による除算 '*コンテキスト*'|
-|[コンパイラ エラー C2418](compiler-error-c2418.md)|ブラウザー ファイルを削除できません:*ファイル名*|
-|[コンパイラ エラー C2419](compiler-error-c2419.md)|ゼロで mod '*コンテキスト*'|
-|[コンパイラ エラー C2420](compiler-error-c2420.md)|'*識別子*': 無効なシンボルで*コンテキスト*|
-|[コンパイラ エラー C2421](compiler-error-c2421.md)|レジスタ オペランドと一緒に使用される PTR 演算子 '*コンテキスト*'|
-|[コンパイラ エラー C2422](compiler-error-c2422.md)|誤ったセグメント オーバーライド '*コンテキスト*'|
-|[コンパイラ エラー C2423](compiler-error-c2423.md)|'*数*': スケーリングが正しくありません|
-|[コンパイラ エラー C2424](compiler-error-c2424.md)|'*トークン*': 不適切な式に'*コンテキスト*'|
-|[コンパイラ エラー C2425](compiler-error-c2425.md)|'*トークン*': 非定数式で'*コンテキスト*'|
-|[コンパイラ エラー C2426](compiler-error-c2426.md)|'*トークン*': 無効な演算子で'*コンテキスト*'|
-|[コンパイラ エラー C2427](compiler-error-c2427.md)|'*クラス*': このスコープでクラスを定義することはできません|
-|[コンパイラ エラー C2428](compiler-error-c2428.md)|'*操作*': 'bool' 型のオペランドでは使用できません|
-|[コンパイラ エラー C2429](compiler-error-c2429.md)|'*言語機能*'コンパイラ フラグが必要です'*コンパイラ オプション*'|
-|[コンパイラ エラー C2430](compiler-error-c2430.md)|1 つ以上のインデックス レジスタで '*コンテキスト*'|
-|[コンパイラ エラー C2431](compiler-error-c2431.md)|無効なインデックス レジスタで '*コンテキスト*'|
-|[コンパイラ エラー C2432](compiler-error-c2432.md)|16 ビットのデータに無効な参照 '*コンテキスト*'|
-|[コンパイラ エラー C2433](compiler-error-c2433.md)|'*識別子*':'*修飾子*' データの宣言で許可されていません|
-|[コンパイラ エラー C2434](compiler-error-c2434.md)|'*シンボル*': __declspec(process) と共に宣言されたシンボルは/clr で動的に初期化できません: ピュア モード|
-|[コンパイラ エラー C2435](compiler-error-c2435.md)|'var': 動的な初期化はマネージド CRT が必要です、/clr:safe でコンパイルできません。|
-|[コンパイラ エラー C2436](compiler-error-c2436.md)|'*識別子*': メンバー関数またはコンス トラクター初期化子リストで入れ子になったクラス|
-|[コンパイラ エラー C2437](compiler-error-c2437.md)|'*識別子*': 既に初期化されています|
-|[コンパイラ エラー C2438](compiler-error-c2438.md)|'*識別子*': コンス トラクターを使用して静的クラスのデータを初期化できません|
-|[コンパイラ エラー C2439](compiler-error-c2439.md)|'*識別子*': メンバーを初期化できませんでした|
-|[コンパイラ エラー C2440](compiler-error-c2440.md)|'*変換*': から変換できません'*type_1*'to'*type_2*'。|
-|[コンパイラ エラー C2441](compiler-error-c2441.md)|'*変数*': __declspec(process) と共に宣言されたシンボルは/clr では定数である必要があります: ピュア モード|
-|コンパイラ エラー C2442|'*識別子*': 入れ子になった名前空間定義のインラインまたは属性を持つことはできません|
+|コンパイラエラー C2416|属性 '*attribute*' はこのコンテキストでは適用できません|
+|[コンパイラ エラー C2417](compiler-error-c2417.md)|'*context*' で0で除算します|
+|[コンパイラ エラー C2418](compiler-error-c2418.md)|ブラウザーファイルを削除できません: ファイル *名*|
+|[コンパイラ エラー C2419](compiler-error-c2419.md)|'*context*' 内の0による mod|
+|[コンパイラ エラー C2420](compiler-error-c2420.md)|'*identifier*':*コンテキスト* に無効なシンボルがあります|
+|[コンパイラ エラー C2421](compiler-error-c2421.md)|'*Context*' で register と共に使用される PTR 演算子|
+|[コンパイラ エラー C2422](compiler-error-c2422.md)|'*context*' に無効なセグメントオーバーライドがあります。|
+|[コンパイラ エラー C2423](compiler-error-c2423.md)|'*number*': 小数点以下桁数が正しくありません。|
+|[コンパイラ エラー C2424](compiler-error-c2424.md)|'*token*': '*context*' 内の式が正しくありません|
+|[コンパイラ エラー C2425](compiler-error-c2425.md)|'*token*': '*context*' 内の非定数式です。|
+|[コンパイラ エラー C2426](compiler-error-c2426.md)|'*token*': '*context*' に無効な演算子があります。|
+|[コンパイラ エラー C2427](compiler-error-c2427.md)|'*class*': このスコープではクラスを定義できません|
+|[コンパイラ エラー C2428](compiler-error-c2428.md)|'*operation*': 型 ' bool ' のオペランドでは許可されていません|
+|[コンパイラ エラー C2429](compiler-error-c2429.md)|'*language feature*' にはコンパイラフラグ '*compiler option*' が必要です|
+|[コンパイラ エラー C2430](compiler-error-c2430.md)|'*context*' に複数のインデックスレジスタがあります|
+|[コンパイラ エラー C2431](compiler-error-c2431.md)|'*context*' に無効なインデックスレジスタがあります。|
+|[コンパイラ エラー C2432](compiler-error-c2432.md)|'*context*' の16ビットデータへの無効な参照です|
+|[コンパイラ エラー C2433](compiler-error-c2433.md)|'*identifier*': '*modifier*' はデータ宣言で許可されていません|
+|[コンパイラ エラー C2434](compiler-error-c2434.md)|'*symbol*': __declspec (process) で宣言されたシンボルを/clr: pure モードで動的に初期化することはできません|
+|[コンパイラ エラー C2435](compiler-error-c2435.md)|' var ': 動的な初期化にはマネージ CRT が必要です。/clr: safe を使用してコンパイルすることはできません。|
+|[コンパイラ エラー C2436](compiler-error-c2436.md)|'*identifier*': コンストラクター初期化子リストのメンバー関数または入れ子になったクラス|
+|[コンパイラ エラー C2437](compiler-error-c2437.md)|'*identifier*': は既に初期化されています|
+|[コンパイラ エラー C2438](compiler-error-c2438.md)|'*identifier*': コンストラクターを使用して静的クラスデータを初期化できません|
+|[コンパイラ エラー C2439](compiler-error-c2439.md)|'*identifier*': メンバーを初期化できませんでした|
+|[コンパイラ エラー C2440](compiler-error-c2440.md)|'*conversion*': '*type_1*' から '*type_2*' に変換できません|
+|[コンパイラ エラー C2441](compiler-error-c2441.md)|'*variable*': __declspec (process) で宣言されたシンボルは、/clr: pure モードでは const である必要があります|
+|コンパイラエラー C2442|'*identifier*': 入れ子になった名前空間の定義をインラインにしたり、属性を使用したりすることはできません|
 |[コンパイラ エラー C2443](compiler-error-c2443.md)|オペランドのサイズの競合|
-|[コンパイラ エラー C2444](compiler-error-c2444.md)|'*識別子*': ANSI プロトタイプ、'type' が期待どおりあります' {' または ';'|
-|[コンパイラ エラー C2446](compiler-error-c2446.md)|'*演算子*': から変換なし'*type_1*'to'*type_2*'|
-|[コンパイラ エラー C2447](compiler-error-c2447.md)|' {0} ': 不足している関数のヘッダー (旧形式の仮引数リスト?)|
-|[コンパイラ エラー C2448](compiler-error-c2448.md)|'*識別子*': 関数スタイルの初期化子が関数の定義|
-|[コンパイラ エラー C2449](compiler-error-c2449.md)|検出された '{0}' ファイルのスコープ (関数のヘッダーがありません)。|
-|[コンパイラ エラー C2450](compiler-error-c2450.md)|switch 式の型の '*型*' は無効です|
-|[コンパイラ エラー C2451](compiler-error-c2451.md)|条件式の型 '*型*' は無効です|
-|[コンパイラ エラー C2452](compiler-error-c2452.md)|'*型*': safe_cast に対する無効なソースの種類|
-|コンパイラ エラー C2453|'*型*': safe_cast に対する無効なターゲット型です。|
-|コンパイラ エラー C2454|'*識別子*': 名前空間エイリアス名は修飾名を使用して宣言することはできません|
-|コンパイラ エラー C2455|'*クラス*' インポートの基本クラスから派生した WinRT ref クラスを抽象にすることはできません。|
-|コンパイラ エラー C2456|'*クラス*' アンシールド ref クラスは、表示のパブリック コンス トラクターを持つことはできません。 クラスをシールするか、コンス トラクターに 'internal'、'protected private' または 'private' を代わりに指定します。|
-|[コンパイラ エラー C2457](compiler-error-c2457.md)|'*識別子*': 定義済みマクロが関数本体の外部で表示できません。|
-|[コンパイラ エラー C2458](compiler-error-c2458.md)|'*識別子*': 定義内で再定義されています。|
-|[コンパイラ エラー C2459](compiler-error-c2459.md)|'*識別子*': 定義されている; 匿名のメンバーとして追加することはできません|
-|[コンパイラ エラー C2460](compiler-error-c2460.md)|'*identifier_1*': は*identifier_2*'、これが定義されています。|
-|[コンパイラ エラー C2461](compiler-error-c2461.md)|'*クラス*': コンス トラクター構文の正式なパラメーターがありません|
-|[コンパイラ エラー C2462](compiler-error-c2462.md)|'*識別子*':' new' 式で型を定義することはできません|
-|[コンパイラ エラー C2464](compiler-error-c2464.md)|'*型*': 'new' の参照の割り当てに使用できません|
+|[コンパイラ エラー C2444](compiler-error-c2444.md)|'*identifier*': ANSI プロトタイプが使用されています。 ' type ' が見つかりました。 ' {' または '; ' が必要です|
+|[コンパイラ エラー C2446](compiler-error-c2446.md)|'*operator*': '*type_1*' から '*type_2*' への変換はできません|
+|[コンパイラ エラー C2447](compiler-error-c2447.md)|' {': 関数ヘッダーがありません (旧形式の仮引数リスト?)|
+|[コンパイラ エラー C2448](compiler-error-c2448.md)|'*identifier*': 関数スタイル初期化子が関数定義である可能性があります|
+|[コンパイラ エラー C2449](compiler-error-c2449.md)|ファイルスコープで ' {' が見つかりました (関数ヘッダーがありませんか?)|
+|[コンパイラ エラー C2450](compiler-error-c2450.md)|型 '*type*' の switch 式は無効です|
+|[コンパイラ エラー C2451](compiler-error-c2451.md)|型 '*type*' の条件式は無効です|
+|[コンパイラ エラー C2452](compiler-error-c2452.md)|'*type*': safe_cast のソースの種類が無効です|
+|コンパイラエラー C2453|'*type*': safe_cast のターゲット型が無効です|
+|コンパイラエラー C2454|'*identifier*': 名前空間エイリアス名は、修飾名を使用して宣言することはできません|
+|コンパイラエラー C2455|'*class*' インポートされた基底クラスから派生した WinRT ref クラスを抽象にすることはできません。|
+|コンパイラエラー C2456|'*class*' シールされていない ref クラスは、パブリックに参照できるコンストラクターを持つことはできません。 クラスを封印するか、代わりに ' internal '、' protected private '、' private ' としてコンストラクターを指定してください。|
+|[コンパイラ エラー C2457](compiler-error-c2457.md)|'*identifier*': 定義済みのマクロを関数本体の外側に記述することはできません|
+|[コンパイラ エラー C2458](compiler-error-c2458.md)|'*identifier*': 定義内で再定義します|
+|[コンパイラ エラー C2459](compiler-error-c2459.md)|'*identifier*': が定義されています。を匿名メンバーとして追加することはできません|
+|[コンパイラ エラー C2460](compiler-error-c2460.md)|'*identifier_1*': 定義されている '*identifier_2*' を使用します|
+|[コンパイラ エラー C2461](compiler-error-c2461.md)|'*class*': コンストラクターの構文に仮パラメーターがありません。|
+|[コンパイラ エラー C2462](compiler-error-c2462.md)|'*identifier*': ' new ' 式で型を定義することはできません|
+|[コンパイラ エラー C2464](compiler-error-c2464.md)|'*type*': ' new ' を使用して参照を割り当てることはできません|
 |[コンパイラ エラー C2465](compiler-error-c2465.md)|名前のない構造体、共用体、または、列挙型がかっこの式内で定義されました。|
-|[コンパイラ エラー C2466](compiler-error-c2466.md)|サイズが 0 の配列を割り当てることができません。|
-|[コンパイラ エラー C2467](compiler-error-c2467.md)|匿名の宣言が無効な '*user_defined_type*'|
-|コンパイラ エラー C2468|コンス トラクターがクラスまたは構造体と仮想基底クラスでは ' constexpr' にすることはできません。|
-|[コンパイラ エラー C2469](compiler-error-c2469.md)|'new': 'void' のオブジェクトを割り当てることができません|
-|[コンパイラ エラー C2470](compiler-error-c2470.md)|'*関数*': 関数の定義のようになりますが、パラメーターはありません ボックスの一覧は、外見上の本体をスキップしています|
-|[コンパイラ エラー C2471](compiler-error-c2471.md)|プログラム データベースを更新できません '*filename*'|
-|[コンパイラ エラー C2472](compiler-error-c2472.md)|'*関数*' マネージ コードで生成することはできません: '*メッセージ*' です混合イメージを生成する/clr と共にコンパイル。|
-|[コンパイラ エラー C2473](compiler-error-c2473.md)|'*識別子*': 関数の定義のようになりますが、パラメーター リストがありません。|
-|[コンパイラ エラー C2474](compiler-error-c2474.md)|'*識別子*': キーワードまたは識別子のどちらか、隣接するセミコロンが不足している可能性があります。|
-|コンパイラ エラー C2475|'*識別子*': 再定義されています。'constexpr' 指定子が一致しません|
-|[コンパイラ エラー C2477](compiler-error-c2477.md)|'*メンバー*': 静的データ メンバーは派生クラスを使って初期化できません|
-|コンパイラ エラー C2478|宣言と互換性がない '*インスタンス*'|
-|[コンパイラ エラー C2479](compiler-error-c2479.md)|'*identifier*': 'allocate( )' is only valid for data items of static extent|
-|[コンパイラ エラー C2480](compiler-error-c2480.md)|'*識別子*': 'thread' は有効な静的データ項目に対してのみ|
-|コンパイラ エラー C2481|'*識別子*': thread_local は静的メンバーおよび名前空間またはブロック スコープ変数では無効です|
-|[コンパイラ エラー C2482](compiler-error-c2482.md)|'*識別子*': スレッド ローカル データ管理/WINRT コードでは使用できませんの動的な初期化|
-|[コンパイラ エラー C2483](compiler-error-c2483.md)|'*識別子*': デストラクターまたは非集計の型を持つオブジェクトは、マネージまたは WINRT コードでスレッド ストレージ存続期間で宣言できません|
-|[コンパイラ エラー C2485](compiler-error-c2485.md)|'*識別子*': 認識されない拡張属性|
-|[コンパイラ エラー C2486](compiler-error-c2486.md)|'_ _Local_size' は 'naked' 属性を持つ関数でのみ使用できます。|
-|[コンパイラ エラー C2487](compiler-error-c2487.md)|'*識別子*': dll インターフェイス クラスのメンバーを dll インターフェイスと共に宣言することはできません|
-|[コンパイラ エラー C2488](compiler-error-c2488.md)|'*識別子*': 'naked' のみに適用できる非メンバー関数の定義|
-|[コンパイラ エラー C2489](compiler-error-c2489.md)|'*識別子*': 'naked' 関数では関数スコープで許可されません auto またはレジスタ変数の初期化|
-|[コンパイラ エラー C2490](compiler-error-c2490.md)|'*キーワード*' 'naked' 属性を持つ関数では使用できません|
-|[コンパイラ エラー C2491](compiler-error-c2491.md)|'*識別子*': dllimport の定義*関数*許可されていません|
-|[コンパイラ エラー C2492](compiler-error-c2492.md)|'*変数*': スレッド ストレージ存続期間を使用してデータを dll インターフェイスいない可能性があります|
-|[コンパイラ エラー C2493](compiler-error-c2493.md)|_ _based の形式が無効|
-|[コンパイラ エラー C2494](compiler-error-c2494.md)|'*キーワード*' フィルター式内から呼び出すことはできませんまたは&#95;&#95;最後に、finally ブロック|
-|[コンパイラ エラー C2495](compiler-error-c2495.md)|'*識別子*': '__declspec(noexcept)' は関数宣言または定義にのみ適用できます|
-|[コンパイラ エラー C2496](compiler-error-c2496.md)|'*識別子*': 'selectany' は外部リンケージを持つデータ項目にのみ適用できます|
-|コンパイラ エラー C2497|'*識別子*': 'implementation_key' は、関数の宣言にのみ適用できます|
-|[コンパイラ エラー C2498](compiler-error-c2498.md)|'*関数*': 'novtable' は、クラス宣言または定義にのみ適用できます|
-|[コンパイラ エラー C2499](compiler-error-c2499.md)|'*クラス*': クラスは、独自の基本クラスを指定することはできません|
+|[コンパイラ エラー C2466](compiler-error-c2466.md)|定数サイズ0の配列を割り当てることはできません。|
+|[コンパイラ エラー C2467](compiler-error-c2467.md)|匿名 '*user_defined_type*' の宣言が無効です|
+|コンパイラエラー C2468|コンストラクターは、仮想基底クラスを持つクラスまたは構造体では ' constexpr ' にできません|
+|[コンパイラ エラー C2469](compiler-error-c2469.md)|' new ': ' void ' オブジェクトを割り当てることはできません|
+|[コンパイラ エラー C2470](compiler-error-c2470.md)|'*function*': 関数定義のようですが、パラメーターリストがありません。見かけ上の本体をスキップする|
+|[コンパイラ エラー C2471](compiler-error-c2471.md)|プログラムデータベース '*filename*' を更新できません|
+|[コンパイラ エラー C2472](compiler-error-c2472.md)|'*function*' をマネージドコードで生成できません: '*message*';混合イメージを生成するために/clr を使用してコンパイルする|
+|[コンパイラ エラー C2473](compiler-error-c2473.md)|'*identifier*': 関数定義のようですが、パラメーターリストがありません。|
+|[コンパイラ エラー C2474](compiler-error-c2474.md)|'*identifier*': 隣接するセミコロンがありません。キーワードまたは識別子のいずれかになります。|
+|コンパイラエラー C2475|'*identifier*': 再定義します。' constexpr ' 指定子が一致しません|
+|[コンパイラ エラー C2477](compiler-error-c2477.md)|'*member*': 静的データメンバーを派生クラスで初期化することはできません|
+|コンパイラエラー C2478|宣言は '*instance*' と互換性がありません|
+|[コンパイラ エラー C2479](compiler-error-c2479.md)|'*identifier*': ' allocate () ' は静的なデータ項目に対してのみ有効です|
+|[コンパイラ エラー C2480](compiler-error-c2480.md)|'*identifier*': ' thread ' は静的なデータ項目に対してのみ有効です|
+|コンパイラエラー C2481|'*identifier*': thread_local は、名前空間またはブロックスコープの静的メンバーおよび変数でのみ有効です|
+|[コンパイラ エラー C2482](compiler-error-c2482.md)|'*identifier*': マネージド/WINRT コードでは、スレッドローカルデータの動的な初期化は許可されていません|
+|[コンパイラ エラー C2483](compiler-error-c2483.md)|'*identifier*': デストラクターまたは非集計型のオブジェクトは、マネージド/WINRT コードでスレッドストレージ存続期間を指定して宣言することはできません|
+|[コンパイラ エラー C2485](compiler-error-c2485.md)|'*identifier*': 拡張属性が認識されません|
+|[コンパイラ エラー C2486](compiler-error-c2486.md)|' __LOCAL_SIZE ' は、' 生 ' 属性を持つ関数でのみ許可されています|
+|[コンパイラ エラー C2487](compiler-error-c2487.md)|'*identifier*': dll インターフェイスクラスのメンバーを dll インターフェイスと共に宣言することはできません|
+|[コンパイラ エラー C2488](compiler-error-c2488.md)|'*identifier*': ' 生 ' は、非メンバー関数の定義にのみ適用できます|
+|[コンパイラ エラー C2489](compiler-error-c2489.md)|'*identifier*': 初期化された auto または register 変数は、' 生 ' 関数の関数スコープでは使用できません|
+|[コンパイラ エラー C2490](compiler-error-c2490.md)|'*keyword*' は ' 生 ' 属性を持つ関数では許可されていません|
+|[コンパイラ エラー C2491](compiler-error-c2491.md)|'*identifier*': dllimport *関数* の定義は許可されていません|
+|[コンパイラ エラー C2492](compiler-error-c2492.md)|'*variable*': スレッドストレージ存続期間を持つデータは dll インターフェイスを含むことはできません|
+|[コンパイラ エラー C2493](compiler-error-c2493.md)|無効な形式の __based|
+|[コンパイラ エラー C2494](compiler-error-c2494.md)|'*keyword*' は、フィルター式または &#95;&#95;finally/finally ブロック内から呼び出すことはできません|
+|[コンパイラ エラー C2495](compiler-error-c2495.md)|'*identifier*': ' __declspec (noexcept) ' は、関数の宣言または定義にのみ適用できます|
+|[コンパイラ エラー C2496](compiler-error-c2496.md)|'*identifier*': ' selectany ' は、外部リンケージを持つデータ項目にのみ適用できます|
+|コンパイラエラー C2497|'*identifier*': ' implementation_key ' は関数宣言にのみ適用できます|
+|[コンパイラ エラー C2498](compiler-error-c2498.md)|'*function*': ' novtable ' は、クラス宣言または定義にのみ適用できます|
+|[コンパイラ エラー C2499](compiler-error-c2499.md)|'*class*': クラスは、それ自体の基底クラスにすることはできません|
 
 ## <a name="see-also"></a>関連項目
 
-[C/C++コンパイラとビルド ツールのエラーと警告](../compiler-errors-1/c-cpp-build-errors.md) \
-[コンパイラ エラー C2000 - C3999](../compiler-errors-1/compiler-errors-c2000-c3999.md)
+[C/c + + コンパイラおよびビルドツールのエラーと警告](../compiler-errors-1/c-cpp-build-errors.md) \
+[コンパイラ エラー (C2000 - C3999)](../compiler-errors-1/compiler-errors-c2000-c3999.md)

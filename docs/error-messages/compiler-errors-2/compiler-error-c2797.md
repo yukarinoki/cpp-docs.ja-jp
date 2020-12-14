@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「コンパイラエラー C2797」を参照してください。
 title: コンパイラ エラー C2797
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2797
 ms.assetid: 9fb26d35-eb5c-46fc-9ff5-756fba5bdaff
-ms.openlocfilehash: 9973ddcccc69e85bdf79e0623fa4bcc1d6689032
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: c10b0acf550a3bbce81210df60dca75a7b2db704
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80202082"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97297565"
 ---
 # <a name="compiler-error-c2797"></a>コンパイラ エラー C2797
 
 公表メンバー初期化子リストまたは非静的データメンバー初期化子内のリスト初期化は実装されていません。
 
-この警告は、Visual Studio 2015 では廃止されています。 Visual Studio 2013 以前のバージョンでは、Microsoft C++コンパイラは、メンバー初期化子リストまたは非静的データメンバー初期化子の中にリスト初期化を実装していません。 Visual Studio 2013 Update 3 より前は、これはサイレントに関数呼び出しに変換され、これにより、不適切なコードが生成される可能性がありました。 Visual Studio 2013 Update 3 ではこのことがエラーとして報告されます。
+この警告は、Visual Studio 2015 では廃止されています。 Visual Studio 2013 以前のバージョンでは、Microsoft C++ コンパイラは、メンバー初期化子リストまたは非静的データメンバー初期化子の中にリスト初期化を実装していません。 Visual Studio 2013 Update 3 より前は、これはサイレントに関数呼び出しに変換され、これにより、不適切なコードが生成される可能性がありました。 Visual Studio 2013 Update 3 ではこのことがエラーとして報告されます。
 
 この例では、C2797 が生成されます。
 

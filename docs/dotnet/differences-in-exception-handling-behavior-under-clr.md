@@ -1,24 +1,25 @@
 ---
+description: 詳細については、「/CLR での例外処理動作の相違点」を参照してください。
 title: -CLR における例外処理動作の相違点
 ms.date: 11/04/2016
 helpviewer_keywords:
 - EXCEPTION_CONTINUE_EXECUTION macro
 - set_se_translator function
 ms.assetid: 2e7e8daf-d019-44b0-a51c-62d7aaa89104
-ms.openlocfilehash: 940d297ff77248ba9e9980f7032b5d722d95c7eb
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: e7e07778e894448fea3d29acb3a32d71884be57c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81364375"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97252195"
 ---
 # <a name="differences-in-exception-handling-behavior-under-clr"></a>/CLR における例外処理動作の相違点
 
-[マネージ例外の使用の基本概念では、マネージ](../dotnet/basic-concepts-in-using-managed-exceptions.md)アプリケーションでの例外処理について説明します。 このトピックでは、例外処理の標準的な動作との違い、およびいくつかの制限について詳しく説明します。 詳細については[、「_set_se_translator関数](../c-runtime-library/reference/set-se-translator.md)」を参照してください。
+[マネージ例外の使用に関する基本的な概念では](../dotnet/basic-concepts-in-using-managed-exceptions.md) 、マネージアプリケーションの例外処理について説明します。 このトピックでは、例外処理の標準的な動作との違いといくつかの制限について詳しく説明します。 詳細については、「 [_Set_se_translator 関数](../c-runtime-library/reference/set-se-translator.md)」を参照してください。
 
-## <a name="jumping-out-of-a-finally-block"></a><a name="vcconjumpingoutofafinallyblock"></a>最終的なブロックから飛び出す
+## <a name="jumping-out-of-a-finally-block"></a><a name="vcconjumpingoutofafinallyblock"></a> Finally ブロックからジャンプする
 
-ネイティブ C/C++ コードでは、__**finally**ブロックから構造化例外処理 (SEH) を使用してジャンプすることは許可されますが、警告が生成されます。  [/clr](../build/reference/clr-common-language-runtime-compilation.md)の下で **、finally**ブロックからジャンプするとエラーが発生します。
+ネイティブ C/c + + コードでは、構造化例外処理 (SEH) を使用して __ **finally** ブロックからジャンプすることはできますが、警告が生成されます。  [/Clr](../build/reference/clr-common-language-runtime-compilation.md)の下で、 **finally** ブロックからジャンプすると、エラーが発生します。
 
 ```cpp
 // clr_exception_handling_4.cpp
@@ -31,11 +32,11 @@ int main() {
 }   // C3276
 ```
 
-## <a name="raising-exceptions-within-an-exception-filter"></a><a name="vcconraisingexceptionswithinanexceptionfilter"></a>例外フィルター内での例外の発生
+## <a name="raising-exceptions-within-an-exception-filter"></a><a name="vcconraisingexceptionswithinanexceptionfilter"></a> 例外フィルター内での例外の発生
 
-マネージ コード内の[例外フィルター](../cpp/writing-an-exception-filter.md)の処理中に例外が発生すると、例外はキャッチされ、フィルターが 0 を返す場合と同様に処理されます。
+マネージコード内の [例外フィルター](../cpp/writing-an-exception-filter.md) の処理中に例外が発生すると、例外がキャッチされ、フィルターが0を返すかのように処理されます。
 
-これは、入れ子になった例外が発生したネイティブ コードの動作とは対照的に **、EXCEPTION_RECORD**構造体の**例外レコード**フィールド[(GetExceptionInformation](/windows/win32/Debug/getexceptioninformation)によって返される) が設定され **、ExceptionFlags**フィールドは 0x10 ビットを設定します。 次の例は、この動作の違いを示しています。
+これは、入れ子になった例外が発生したネイティブコードの動作とは異なり、 **EXCEPTION_RECORD** 構造の **exceptionrecord** フィールド ( [getexceptioninformation](/windows/win32/Debug/getexceptioninformation)によって返される) が設定され、 **exceptionrecord** フィールドは0x10 ビットを設定します。 次の例は、この動作の違いを示しています。
 
 ```cpp
 // clr_exception_handling_5.cpp
@@ -95,9 +96,9 @@ Caught a nested exception
 We should execute this handler if compiled to native
 ```
 
-## <a name="disassociated-rethrows"></a><a name="vccondisassociatedrethrows"></a>再投振の関連付けを解除する
+## <a name="disassociated-rethrows"></a><a name="vccondisassociatedrethrows"></a> 関連付け解除の再スロー
 
-**/clr**は、キャッチ ハンドラー (関連付け解除再スローと呼ばれる) の外部での例外の再スローをサポートしていません。 この型の例外は、標準の C++ 再スローとして扱われます。 アクティブなマネージ例外が存在する場合に関連付け解除再スローが発生した場合、例外は C++ 例外としてラップされ、再スローされます。 この型の例外は、 型<xref:System.Runtime.InteropServices.SEHException>の例外としてのみキャッチできます。
+**/clr** は、キャッチハンドラー以外での例外の再スローをサポートしていません (非関連付けの再スローと呼ばれます)。 この型の例外は、標準 C++ 再スローとして扱われます。 アクティブなマネージ例外があるときに、関連付けが解除された再スローが発生した場合は、例外が C++ 例外としてラップされ、再スローされます。 この型の例外は、型の例外としてのみキャッチでき <xref:System.Runtime.InteropServices.SEHException> ます。
 
 次の例は、C++ 例外として再スローされるマネージ例外を示しています。
 
@@ -147,9 +148,9 @@ int main() {
 caught an SEH Exception
 ```
 
-## <a name="exception-filters-and-exception_continue_execution"></a><a name="vcconexceptionfiltersandexception_continue_execution"></a>例外フィルターとEXCEPTION_CONTINUE_EXECUTION
+## <a name="exception-filters-and-exception_continue_execution"></a><a name="vcconexceptionfiltersandexception_continue_execution"></a> 例外フィルターと EXCEPTION_CONTINUE_EXECUTION
 
-マネージ アプリケーションで`EXCEPTION_CONTINUE_EXECUTION`フィルタが返された場合、フィルタは返された`EXCEPTION_CONTINUE_SEARCH`かのように扱われます。 これらの定数の詳細については、「 [try-except ステートメント](../cpp/try-except-statement.md)」を参照してください。
+フィルターがマネージアプリケーションで返された場合、フィルターは返された `EXCEPTION_CONTINUE_EXECUTION` ものとして扱われ `EXCEPTION_CONTINUE_SEARCH` ます。 これらの定数の詳細については、「 [try-Except ステートメント](../cpp/try-except-statement.md)」を参照してください。
 
 次の例は、この違いを示しています。
 
@@ -188,9 +189,9 @@ int main() {
 Counter=-3
 ```
 
-## <a name="the-_set_se_translator-function"></a><a name="vcconthe_set_se_translatorfunction"></a>_set_se_translator関数
+## <a name="the-_set_se_translator-function"></a><a name="vcconthe_set_se_translatorfunction"></a> _Set_se_translator 関数
 
-呼び出しによって設定されるトランスレーター`_set_se_translator`関数は、アンマネージ コードのキャッチにのみ影響します。 次の例は、この制限を示しています。
+の呼び出しによって設定された変換関数は、 `_set_se_translator` アンマネージコード内のキャッチにのみ影響します。 この制限の例を次に示します。
 
 ```cpp
 // clr_exception_handling_8.cpp
