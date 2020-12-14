@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「MFC での OLE」を参照してください。
 title: MFC の OLE
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - applications [OLE], about OLE
 - OLE component object model (COM)
 ms.assetid: 5193479d-1239-4697-aea4-e82f92c707ab
-ms.openlocfilehash: 529b6d0eaedaee200da547ef9ed980aab51ea233
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 125a2ad8e900747d859c03b57df33f2e7e5f1c28
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84622170"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97244096"
 ---
 # <a name="ole-in-mfc"></a>MFC の OLE
 
@@ -38,10 +39,10 @@ ms.locfileid: "84622170"
 
 ## <a name="in-this-section"></a>このセクションの内容
 
-[OLE の背景知識](ole-background.md)<br/>
+[OLE の背景](ole-background.md)<br/>
 OLE について説明し、そのしくみについての概念を説明します。
 
-[アクティブ化](activation-cpp.md)<br/>
+[アクティベーション](activation-cpp.md)<br/>
 OLE 項目の編集時のアクティブ化の役割について説明します。
 
 [Containers](containers.md)<br/>
@@ -50,7 +51,7 @@ OLE でコンテナーを使用するためのリンクを示します。
 [データオブジェクトとデータソース](data-objects-and-data-sources-ole.md)<br/>
 クラスおよびクラスの使用について説明したトピックへのリンクを示し `COleDataObject` `COleDataSource` ます。
 
-[ドラッグアンドドロップ](drag-and-drop-ole.md)<br/>
+[ドラッグ アンド ドロップ](drag-and-drop-ole.md)<br/>
 OLE でのコピーと貼り付けの使用方法について説明します。
 
 [OLE のメニューとリソース](menus-and-resources-ole.md)<br/>
@@ -62,7 +63,7 @@ MFC OLE ドキュメントアプリケーションでのメニューとリソー
 [サーバー](servers.md)<br/>
 コンテナーアプリケーションで使用する OLE 項目 (またはコンポーネント) を作成する方法について説明します。
 
-[トラッカー](trackers.md)<br/>
+[Trackers](trackers.md)<br/>
 `CRectTracker`ユーザーが OLE クライアントアイテムと対話できるようにするためのグラフィカルインターフェイスを提供するクラスについて説明します。
 
 ## <a name="related-sections"></a>関連項目

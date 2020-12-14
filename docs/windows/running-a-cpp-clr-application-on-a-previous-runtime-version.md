@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: 以前のランタイムバージョンでの C++/clr アプリケーションの実行'
 title: 以前のランタイム バージョンでの C++ /clr アプリケーションの実行
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - common language runtime [C++], version specified
 - deploying applications [C++], runtime version specified
 ms.assetid: 940171b7-6937-4b14-8e87-c199e23f4f2e
-ms.openlocfilehash: 9b26439d389cb4035541cedde8a5b5cf50682098
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3b1bbc2906e4b347bb954c799cb9e412202a17ee
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62388372"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97247216"
 ---
 # <a name="running-a-c-clr-application-on-a-previous-runtime-version"></a>以前のランタイム バージョンでの C++ /clr アプリケーションの実行
 

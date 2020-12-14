@@ -1,15 +1,16 @@
 ---
+description: '詳細情報: unique_lock クラス'
 title: unique_lock クラス
 ms.date: 11/04/2016
 f1_keywords:
 - mutex/std::unique_lock
 ms.assetid: f4ed8ba9-c8af-446f-8ef0-0b356bad14bd
-ms.openlocfilehash: be53f66296612f1b44790393907028bfc4d062ff
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 6e7f5ddadce00814196e630b27570e21176c0e62
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88834220"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97243719"
 ---
 # <a name="unique_lock-class"></a>unique_lock クラス
 
@@ -24,7 +25,7 @@ class unique_lock;
 
 ## <a name="remarks"></a>解説
 
-テンプレート引数 `Mutex` には *mutex 型*を指定する必要があります。
+テンプレート引数 `Mutex` には *mutex 型* を指定する必要があります。
 
 内部的には、には、 `unique_lock` 関連付けられたオブジェクトへのポインター `mutex` と、 **`bool`** 現在のスレッドがを所有しているかどうかを示すが格納され `mutex` ます。
 
@@ -68,7 +69,7 @@ class unique_lock;
 
 *unique_lock*
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:**\<mutex>
 
@@ -289,7 +290,7 @@ mutex 型オブジェクト。
 
 1 番目のコンストラクターは、関連付けられたミューテックス ポインター値が 0 であるオブジェクトを構築します。
 
-2番目のコンストラクターは、関連する mutex の状態を *Other*に移動します。 移動後、 *他の* はミューテックスと関連付けられなくなります。
+2番目のコンストラクターは、関連する mutex の状態を *Other* に移動します。 移動後、 *他の* はミューテックスと関連付けられなくなります。
 
 残りのコンストラクターは、格納されているポインターとして & *mtx.exe* を格納し `mutex` ます。 `mutex` の所有権は、2 番目の引数 (存在する場合) によって決まります。
 

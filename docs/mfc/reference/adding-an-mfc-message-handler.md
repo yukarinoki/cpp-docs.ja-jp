@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「MFC メッセージハンドラーの追加」を参照してください。
 title: MFC メッセージ ハンドラーの追加
 ms.date: 09/06/2019
 f1_keywords:
@@ -6,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - message handling [MFC], adding handlers
 ms.assetid: 4251cfce-76ca-443d-bd2f-6303afa6d942
-ms.openlocfilehash: c5ec71083c82a71c2b2aaa86a3e9dca37fc37b2b
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: c28327635e3e0cdd047c9f993b9d3d7582c0c748
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91502996"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97248334"
 ---
 # <a name="adding-an-mfc-message-handler"></a>MFC メッセージ ハンドラーの追加
 
-クラス[ウィザード](mfc-class-wizard.md)または**クラスビュー**の [**プロパティ**] ウィンドウを使用すると、メッセージハンドラー (windows メッセージを処理するメンバー関数) をクラスに追加し、windows メッセージをメッセージハンドラーにマップできます。 また、 [ダイアログボックスコントロールのイベントハンドラー](../../windows/adding-editing-or-deleting-controls.md)を追加することもできます。
+クラス [ウィザード](mfc-class-wizard.md)または **クラスビュー** の [**プロパティ**] ウィンドウを使用すると、メッセージハンドラー (windows メッセージを処理するメンバー関数) をクラスに追加し、windows メッセージをメッセージハンドラーにマップできます。 また、 [ダイアログボックスコントロールのイベントハンドラー](../../windows/adding-editing-or-deleting-controls.md)を追加することもできます。
 
-**クラスウィザード**または [**プロパティ**] ウィンドウ (**クラスビュー**) を使用してメッセージおよびイベント処理関数を定義すると、メッセージディスパッチテーブル (またはメッセージマップ) とクラスヘッダーファイルを自動的に更新できます。
+**クラスウィザード** または [**プロパティ**] ウィンドウ (**クラスビュー**) を使用してメッセージおよびイベント処理関数を定義すると、メッセージディスパッチテーブル (またはメッセージマップ) とクラスヘッダーファイルを自動的に更新できます。
 
 > [!NOTE]
 > クラスウィザードを使用して、ATL クラスにメッセージハンドラーを追加できます。ただし、結果によっては異なる場合があります。 詳細については、atl のトピック「 [Atl メッセージハンドラーの追加](../../atl/adding-an-atl-message-handler.md)」を参照してください。

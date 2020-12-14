@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「MFC プロジェクトへの ATL サポートの追加」を参照してください。
 title: MFC プロジェクトへの ATL サポートの追加
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - MFC, ATL support
 - ATL, MFC projects
 ms.assetid: b5fe15d6-7752-4818-b9f9-62482ad35c95
-ms.openlocfilehash: 94303d1dfc7c06171def1224982f5e0aa5716ce4
-ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
+ms.openlocfilehash: 1d02bd6e63a01334fcb9a907dc9ea4fe78ff4a48
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "92924469"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97248243"
 ---
 # <a name="adding-atl-support-to-your-mfc-project"></a>MFC プロジェクトへの ATL サポートの追加
 
@@ -25,7 +26,7 @@ MFC ベースのアプリケーションを既に作成している場合は、I
 
 1. ソリューションエクスプローラーで、プロジェクトノードを右クリックします。
 
-1. ショートカット メニューの **[追加]** 、 **[新しい項目]** を順にクリックします。
+1. ショートカット メニューの **[追加]**、**[新しい項目]** を順にクリックします。
 
 1. 左ペインで [ **atl** ] を選択し、中央のペインで [ **atl サポート** ] を選択します。
 
@@ -37,7 +38,7 @@ MFC ベースのアプリケーションを既に作成している場合は、I
 
 1. ソリューションエクスプローラーで、プロジェクトノードを右クリックします。
 
-1. ショートカットメニューの [ **追加** ] をクリックし、[ **クラスの追加** ] をクリックします。
+1. ショートカットメニューの [ **追加**] をクリックし、[ **クラスの追加**] をクリックします。
 
 1. 左ペインで [ **atl** ] を選択し、中央のペインで [ **MFC プロジェクトに Atl サポートを追加** ] を選択します。
 
@@ -45,7 +46,7 @@ MFC ベースのアプリケーションを既に作成している場合は、I
 
 ATL サポートを追加して MFC プロジェクトのコードを変更する方法の詳細については、「atl[ウィザードによって追加された Atl サポートの詳細](../../mfc/reference/details-of-atl-support-added-by-the-atl-wizard.md)」を参照してください。
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 
 [クラスの追加](../../ide/adding-a-class-visual-cpp.md)<br/>
 [コード ウィザードを使用した機能の追加](../../ide/adding-functionality-with-code-wizards-cpp.md)<br/>

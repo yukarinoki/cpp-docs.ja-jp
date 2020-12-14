@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: コクラス'
 title: coclass (C++ COM 属性)
 ms.date: 10/02/2018
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - coclass attribute
 ms.assetid: 42da6a10-3af9-4b43-9a1d-689d00b61eb3
-ms.openlocfilehash: 12f7af195f2282955cb16c1f38d4e512ca0f86cb
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 9ff2198807407a7dfc56649ed80cb1fa2bafc17c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88838881"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97247372"
 ---
 # <a name="coclass"></a>coclass
 
@@ -25,11 +26,11 @@ Com インターフェイスを実装できる COM オブジェクトを作成�
 
 ## <a name="remarks"></a>解説
 
-**コクラス**C++ 属性は、生成された .idl ファイルにコクラスコンストラクトを配置します。
+**コクラス** C++ 属性は、生成された .idl ファイルにコクラスコンストラクトを配置します。
 
 コクラスを定義するときに、 [uuid](uuid-cpp-attributes.md)、 [version](version-cpp.md)、 [スレッド](threading-cpp.md)、 [vi_progid](vi-progid.md)、および [progid](progid.md) 属性を指定することもできます。 これらのいずれかが指定されていない場合は、生成されます。
 
-2つのヘッダーファイルに **コクラス** 属性を持つクラスが含まれていて、guid を指定していない場合、コンパイラは両方のクラスに同じ guid を使用します。これにより、MIDL エラーが発生します。  したがって、コクラスを使用する場合は、属性を使用する必要があり `uuid` ます。 **coclass**
+2つのヘッダーファイルに **コクラス** 属性を持つクラスが含まれていて、guid を指定していない場合、コンパイラは両方のクラスに同じ guid を使用します。これにより、MIDL エラーが発生します。  したがって、コクラスを使用する場合は、属性を使用する必要があり `uuid` ます。 
 
 **ATL プロジェクト**
 
@@ -125,7 +126,7 @@ public:
 };
 ```
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 | 属性コンテキスト | 値 |
 |-|-|

@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: case (C++)'
 title: case (C++ COM 属性)
 ms.date: 10/02/2018
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - case attribute
 ms.assetid: 6fb883c3-0526-4932-a901-b4564dcaeb7d
-ms.openlocfilehash: e1d3c113c42be99a8475c5a667b7ea6ed9583d92
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: d851e662387425ca94cc6a03877babf011c7028b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88838907"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97247437"
 ---
 # <a name="case-c"></a>case (C++)
 
@@ -26,7 +27,7 @@ ms.locfileid: "88838907"
 #### <a name="parameters"></a>パラメーター
 
 *value*<br/>
-処理を提供する必要がある入力値。 **値**の型は、次のいずれかの型になります。
+処理を提供する必要がある入力値。 **値** の型は、次のいずれかの型になります。
 
 - **`int`**
 
@@ -63,11 +64,11 @@ struct SizedValue2 {
 [module(name="ATLFIRELib")];
 ```
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 | 属性コンテキスト | 値 |
 |-|-|
-|**適用対象**|**`class`** またはのメンバー**`struct`**|
+|**適用対象**|**`class`** またはのメンバー **`struct`**|
 |**Repeatable**|いいえ|
 |**必須属性**|なし|
 |**無効な属性**|なし|

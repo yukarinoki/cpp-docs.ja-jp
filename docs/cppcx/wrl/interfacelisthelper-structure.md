@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: InterfaceListHelper 構造体'
 title: InterfaceListHelper 構造体
 ms.date: 10/03/2018
 ms.topic: reference
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - InterfaceListHelper structure
 ms.assetid: 4297e419-c96b-45df-8a00-7568062125ba
-ms.openlocfilehash: 1a7b4c19bbcdd4161e9078274f18f96a48f9e7d7
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: ca9e13e66acb6f27fba76a7653388305c57146dc
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80213851"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97249803"
 ---
 # <a name="interfacelisthelper-structure"></a>InterfaceListHelper 構造体
 
@@ -73,15 +74,15 @@ struct InterfaceListHelper<T0, Nil, Nil, Nil, Nil, Nil, Nil, Nil, Nil>;
 
 ## <a name="remarks"></a>解説
 
-指定されたテンプレートパラメーター引数を再帰的に適用して、`InterfaceList` 型を構築します。
+`InterfaceList`指定されたテンプレートパラメーター引数を再帰的に適用して、型を構築します。
 
-**InterfaceListHelper**テンプレートでは、テンプレートパラメーター *T0*を使用して `InterfaceList` 構造の最初のデータメンバーを定義し、その後、 **InterfaceListHelper**テンプレートを残りのテンプレートパラメーターに再帰的に適用します。 残りのテンプレートパラメーターがない場合、 **InterfaceListHelper**は停止します。
+**InterfaceListHelper** テンプレートは、テンプレートパラメーター *T0* を使用して構造体の最初のデータメンバーを定義 `InterfaceList` し、その後、 **InterfaceListHelper** テンプレートを残りのテンプレートパラメーターに再帰的に適用します。 残りのテンプレートパラメーターがない場合、 **InterfaceListHelper** は停止します。
 
 ## <a name="members"></a>メンバー
 
 ### <a name="public-typedefs"></a>パブリック typedef
 
-|Name|説明|
+|名前|説明|
 |----------|-----------------|
 |`TypeT`|InterfaceList 型のシノニム。|
 
@@ -89,12 +90,12 @@ struct InterfaceListHelper<T0, Nil, Nil, Nil, Nil, Nil, Nil, Nil, Nil>;
 
 `InterfaceListHelper`
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **Header:** を実装します。
 
 **名前空間:** Microsoft:: WRL::D etails
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[Microsoft::WRL::Details 名前空間](microsoft-wrl-details-namespace.md)
+[Microsoft:: WRL::D etails 名前空間](microsoft-wrl-details-namespace.md)

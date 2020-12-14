@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: ImplementsHelper 構造体'
 title: ImplementsHelper 構造体
 ms.date: 10/03/2018
 ms.topic: reference
@@ -15,12 +16,12 @@ helpviewer_keywords:
 - Microsoft::WRL::Details::ImplementsHelper::FillArrayWithIid method
 - Microsoft::WRL::Details::ImplementsHelper::IidCount constant
 ms.assetid: b857ba80-81bd-4e53-92b6-210991954243
-ms.openlocfilehash: d7908670b67df7dbf7b2b74e98f8b59cf30f8e96
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 142cc532a89758c35c3387c398311acd077b8385
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87184944"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97249816"
 ---
 # <a name="implementshelper-structure"></a>ImplementsHelper 構造体
 
@@ -36,13 +37,13 @@ friend struct Details::ImplementsHelper;
 ### <a name="parameters"></a>パラメーター
 
 *RuntimeClassFlagsT*<br/>
-1つ以上の[RuntimeClassType](runtimeclasstype-enumeration.md)列挙子を指定するフラグのフィールドです。
+1つ以上の [RuntimeClassType](runtimeclasstype-enumeration.md) 列挙子を指定するフラグのフィールドです。
 
 *ILst*<br/>
 インターフェイス Id のリスト。
 
 *IsDelegateToClass*<br/>
-**`true`** の現在のインスタンスが、 `Implements` *ilst*の最初のインターフェイス ID の基本クラスである場合はを指定します。それ以外の場合はを指定し **`false`** ます。
+**`true`** の現在のインスタンスが、 `Implements` *ilst* の最初のインターフェイス ID の基本クラスである場合はを指定します。それ以外の場合はを指定し **`false`** ます。
 
 ## <a name="remarks"></a>解説
 
@@ -65,13 +66,13 @@ friend struct Details::ImplementsHelper;
 
 `ImplementsHelper`
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **Header:** を実装します。
 
 **名前空間:** Microsoft:: WRL::D etails
 
-## <a name="implementshelpercancastto"></a><a name="cancastto"></a>ImplementsHelper:: CanCastTo
+## <a name="implementshelpercancastto"></a><a name="cancastto"></a> ImplementsHelper:: CanCastTo
 
 は WRL インフラストラクチャをサポートします。独自に作成したコードから直接使用するためのものではありません。
 
@@ -93,7 +94,7 @@ HRESULT CanCastTo(
 インターフェイス ID への参照。
 
 *ppv*<br/>
-この操作が成功した場合は、 *riid*または*iid*によって指定されたインターフェイスへのポインター。
+この操作が成功した場合は、 *riid* または *iid* によって指定されたインターフェイスへのポインター。
 
 *iid*<br/>
 インターフェイス ID への参照。
@@ -106,7 +107,7 @@ HRESULT CanCastTo(
 
 指定したインターフェイス ID へのポインターを取得します。
 
-## <a name="implementshelpercasttounknown"></a><a name="casttounknown"></a>ImplementsHelper:: CastToUnknown
+## <a name="implementshelpercasttounknown"></a><a name="casttounknown"></a> ImplementsHelper:: CastToUnknown
 
 は WRL インフラストラクチャをサポートします。独自に作成したコードから直接使用するためのものではありません。
 
@@ -122,7 +123,7 @@ IUnknown* CastToUnknown();
 
 現在の構造体の基になるインターフェイスへのポインターを取得し `IUnknown` `Implements` ます。
 
-## <a name="implementshelperfillarraywithiid"></a><a name="fillarraywithiid"></a>ImplementsHelper:: FillArrayWithIid
+## <a name="implementshelperfillarraywithiid"></a><a name="fillarraywithiid"></a> ImplementsHelper:: FillArrayWithIid
 
 は WRL インフラストラクチャをサポートします。独自に作成したコードから直接使用するためのものではありません。
 
@@ -135,7 +136,7 @@ void FillArrayWithIid(
 ### <a name="parameters"></a>パラメーター
 
 *インデックス*<br/>
-この操作の開始配列要素を示す0から始まるインデックス。 この操作が完了すると、*インデックス*は1ずつインクリメントされます。
+この操作の開始配列要素を示す0から始まるインデックス。 この操作が完了すると、 *インデックス* は1ずつインクリメントされます。
 
 *iid が*<br/>
 Iid が型の配列。
@@ -144,7 +145,7 @@ Iid が型の配列。
 
 現在の取り出し template パラメーターによって指定されたインターフェイス ID を、指定された配列要素に挿入します。
 
-## <a name="implementshelperiidcount"></a><a name="iidcount"></a>ImplementsHelper:: IidCount
+## <a name="implementshelperiidcount"></a><a name="iidcount"></a> ImplementsHelper:: IidCount
 
 は WRL インフラストラクチャをサポートします。独自に作成したコードから直接使用するためのものではありません。
 

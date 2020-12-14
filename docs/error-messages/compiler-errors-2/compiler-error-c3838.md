@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「コンパイラエラー C3838」を参照してください。
 title: コンパイラ エラー C3838
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,20 +7,20 @@ f1_keywords:
 helpviewer_keywords:
 - C3838
 ms.assetid: d6f470c2-131a-4a8c-843a-254acd43da83
-ms.openlocfilehash: 468fc5e8cb6b3a76880f12fe0aab14810f458a90
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 9ea5f250b7a881ab9be6724f84dac418eefc705e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74741353"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97249147"
 ---
 # <a name="compiler-error-c3838"></a>コンパイラ エラー C3838
 
 ' type ' から明示的に継承することはできません
 
-指定された `type` は、どのクラスの基底クラスとしても機能しません。
+指定されたは、 `type` どのクラスの基底クラスとしても機能しません。
 
-## <a name="example"></a>使用例
+## <a name="example"></a>例
 
 次の例では、C3838 が生成されます。
 

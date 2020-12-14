@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: バインド可能'
 title: バインド可能 (C++ COM 属性)
 ms.date: 10/02/2018
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - bindable attribute
 ms.assetid: a2360f92-927b-4af8-98cc-6eca7f4ec954
-ms.openlocfilehash: 27f44259401a42dcef7e2add370d95091d10879d
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 2427becd3353488cc1b62347c04d7ed62e523352
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88838972"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97247489"
 ---
 # <a name="bindable"></a>bindable
 
@@ -25,11 +26,11 @@ ms.locfileid: "88838972"
 
 ## <a name="remarks"></a>解説
 
-**バインド**可能な C++ 属性には、[バインド](/windows/win32/Midl/bindable)可能な MIDL 属性と同じ機能があります。 これは、 [propget](propget.md)、 [propput](propput.md)、または [propputref](propputref.md) 属性で定義されたプロパティで使用できます。また、バインド可能なメソッドを手動で定義することもできます。
+**バインド** 可能な C++ 属性には、[バインド](/windows/win32/Midl/bindable)可能な MIDL 属性と同じ機能があります。 これは、 [propget](propget.md)、 [propput](propput.md)、または [propputref](propputref.md) 属性で定義されたプロパティで使用できます。また、バインド可能なメソッドを手動で定義することもできます。
 
-次の MFC サンプルは、 **バインド**可能の使用方法を示しています。
+次の MFC サンプルは、 **バインド** 可能の使用方法を示しています。
 
-- [コントロールのサンプル: MFC ベースの ActiveX コントロール](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/controls)
+- [コントロールのサンプル: MFC-Based ActiveX コントロール](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/controls)
 
 - [CIRC サンプル: ActiveX コントロール](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/controls)
 
@@ -58,7 +59,7 @@ __interface IPropDemo : IDispatch {
 [ module(name="PropDemoLib", uuid="479B29E2-9A2C-11D0-B696-00A0C903487A", version="1.0", helpstring="property demo") ];
 ```
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 | 属性コンテキスト | 値 |
 |-|-|

@@ -1,31 +1,32 @@
 ---
+description: 詳細については、「MFC ODBC コンシューマーの追加」を参照してください。
 title: MFC ODBC コンシューマーの追加
 ms.date: 11/04/2016
 helpviewer_keywords:
 - MFC ODBC consumers
 ms.assetid: 2dc97909-1f7e-43ee-9d47-99e612727058
-ms.openlocfilehash: 2086401bea24cdf3a7b57eb9b5b1e72560f6c9e4
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: c6bcdf2f53b3392666fe35ccc0c36077f4d75292
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64346110"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97248321"
 ---
 # <a name="adding-an-mfc-odbc-consumer"></a>MFC ODBC コンシューマーの追加
 
-MFC ODBC コンシューマーは、ODBC レコード セット クラスとデータ バインディングのデータ ソースへのアクセスに必要なので構成されます。
+MFC ODBC コンシューマーは、ODBC レコードセットクラスと、データソースにアクセスするために必要なデータバインディングで構成されます。
 
 ### <a name="to-add-an-mfc-odbc-consumer"></a>MFC ODBC コンシューマーを追加するには
 
-1. クラス ビューでプロジェクトを右クリックします。 ショートカット メニューで、**追加** をクリックし、**クラスの追加**します。
+1. クラス ビューで、プロジェクトを右クリックします。 ショートカット メニューの **[追加]** をクリックし、**[クラスの追加]** をクリックします。
 
-1. Visual C フォルダーで、ダブルクリック、 **MFC ODBC コンシューマー**アイコンを選択し、クリックしてまたは**オープン**。
+1. Visual C++ フォルダーで、 **MFC ODBC コンシューマー** アイコンをダブルクリックするか、それを選択して [ **開く**] をクリックします。
 
-   MFC ODBC コンシューマー ウィザードが開きます。
+   MFC ODBC コンシューマーウィザードが開きます。
 
-1. 」の説明に従って設定を定義[MFC ODBC コンシューマー ウィザード](../../mfc/reference/mfc-odbc-consumer-wizard.md)します。
+1. 「 [MFC ODBC コンシューマーウィザード](../../mfc/reference/mfc-odbc-consumer-wizard.md)」の説明に従って、設定を定義します。
 
-1. クリックして**完了**プロジェクトで、新しく作成した ODBC コンシューマー コードを挿入すると、ウィザードを閉じます。
+1. [ **完了** ] をクリックしてウィザードを閉じると、新しく作成された ODBC コンシューマーコードがプロジェクトに挿入されます。
 
 ## <a name="see-also"></a>関連項目
 

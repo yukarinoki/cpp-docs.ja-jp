@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: is_scalar クラス'
 title: is_scalar クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,14 +8,14 @@ helpviewer_keywords:
 - is_scalar class
 - is_scalar
 ms.assetid: a0cdfc9a-f27e-4808-890f-6ed7942db60c
-ms.openlocfilehash: d562ba4beb037d547846f57e7b40eaceb409a358
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 34d998536d3ad1843b44de5ad64c8b6a664895d9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68449811"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97247671"
 ---
-# <a name="isscalar-class"></a>is_scalar クラス
+# <a name="is_scalar-class"></a>is_scalar クラス
 
 型がスカラーかどうかをテストします。
 
@@ -27,12 +28,12 @@ struct is_scalar;
 
 ### <a name="parameters"></a>パラメーター
 
-*~* \
+*~*\
 照会する型。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-型*Ty*が整数型、浮動小数点型、列挙型、ポインター型、またはメンバー型へのポインター、また`cv-qualified`はそのいずれかの形式である場合、型述語のインスタンスは true を保持します。それ以外の場合は、false を保持します。
+型 *Ty* が整数型、浮動小数点型、列挙型、ポインター型、またはメンバー型へのポインター、またはそのいずれかの形式である場合、型述語のインスタンスは true を保持し `cv-qualified` ます。それ以外の場合は、false を保持します。
 
 ## <a name="example"></a>例
 
@@ -69,9 +70,9 @@ is_scalar<int> == true
 is_scalar<float> == true
 ```
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-**ヘッダー:** \<type_traits>
+**ヘッダー:**\<type_traits>
 
 **名前空間:** std
 

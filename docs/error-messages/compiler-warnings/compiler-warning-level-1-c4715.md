@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: コンパイラの警告 (レベル 1) C4715'
 title: コンパイラの警告 (レベル 1) C4715
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4715
 ms.assetid: 1c819bf7-0d8b-4f5e-b338-9cc292870439
-ms.openlocfilehash: 7dba86d591f18fd7c9c562078204916000d47384
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 41682beae6e32ba397f3c9dae43d57a182b09b65
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80175325"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97249101"
 ---
 # <a name="compiler-warning-level-1-c4715"></a>コンパイラの警告 (レベル 1) C4715
 
@@ -62,4 +63,4 @@ int glue()
 }
 ```
 
-また、このコードでは、`fatal` が返されないことをコンパイラが認識しないため、警告が生成されます。 このコードによってエラーメッセージが生成されないようにするには、 [__declspec (noreturn)](../../cpp/noreturn.md)を使用して `fatal` を宣言します。
+このコードでも警告が生成されます。これは、が返されることがないことをコンパイラが認識しないため `fatal` です。 このコードによってエラーメッセージが生成されないようにするには、 `fatal` [__declspec (noreturn)](../../cpp/noreturn.md)を使用してを宣言します。

@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: unique_ptr クラス'
 title: unique_ptr クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -22,12 +23,12 @@ helpviewer_keywords:
 - std::unique_ptr [C++], reset
 - std::unique_ptr [C++], swap
 ms.assetid: acdf046b-831e-4a4a-83aa-6d4ee467db9a
-ms.openlocfilehash: 4e6c7d8dd9835545c4aaa677a39f5e3149743d14
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 888229c4e07a0b2189e46bcecd562e0177cfd67e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88835676"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97243693"
 ---
 # <a name="unique_ptr-class"></a>unique_ptr クラス
 
@@ -137,17 +138,17 @@ public:
 |[element_type](#element_type)|テンプレート パラメーター `T` のシノニム。|
 |[pointer](#pointer)|定義されている場合は `Del::pointer` のシノニム、それ以外の場合は `T *` のシノニム。|
 
-### <a name="functions"></a>Functions
+### <a name="functions"></a>関数
 
 |名前|説明|
 |-|-|
-|[get](#get)|`stored_ptr` を返します。|
+|[get](#get)|`stored_ptr` が返されます。|
 |[get_deleter](#get_deleter)|`stored_deleter` への参照を返します。|
 |[解除](#release)|`pointer()` を `stored_ptr` に格納し、以前の内容を返します。|
 |[reset](#reset)|現在所有されているリソースを解放し、新しいリソースを受け取ります。|
 |[スワップ](#swap)|指定された `deleter` を使用して、リソースと `unique_ptr` を交換します。|
 
-### <a name="operators"></a>演算子
+### <a name="operators"></a>オペレーター
 
 |名前|説明|
 |-|-|
@@ -182,7 +183,7 @@ typedef Type element_type;
 
 ### <a name="get"></a><a name="get"></a> 取得
 
-`stored_ptr` を返します。
+`stored_ptr` が返されます。
 
 ```cpp
 pointer get() const;
@@ -315,7 +316,7 @@ void reset(nullptr_t ptr);
 
 に `reset` よって所有されているストアド [ポインター](#pointer) を `unique_ptr` *ptr* に変更し、元の格納されているポインターを削除するには、を使用します。 `unique_ptr` が空でなかった場合、`reset` は元の格納されているポインターについて [get_deleter](#get_deleter) が返すデリーター関数を呼び出します。
 
-`reset`は、最初に新しいポインター *ptr*を格納してから、元の格納されているポインターを削除するため、が `reset` 元の格納されているポインターと同じである場合、がすぐに*ptr*を削除する可能性があります。
+`reset`は、最初に新しいポインター *ptr* を格納してから、元の格納されているポインターを削除するため、が `reset` 元の格納されているポインターと同じである場合、がすぐに *ptr* を削除する可能性があります。
 
 ### <a name="swap"></a><a name="swap"></a> フォト
 

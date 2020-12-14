@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「メンバーへのポインター」を参照してください。
 title: メンバーへのポインター
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - members [C++], pointers to
 - pointers, declarations
 ms.assetid: f42ddb79-9721-4e39-95b1-c56b55591f68
-ms.openlocfilehash: fe92f848c5d5240f1afc657f5fb176513c8f9d88
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: e9c40ac8903aa61a808468ca18fa379c84f2fb81
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87213295"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97250115"
 ---
 # <a name="pointers-to-members"></a>メンバーへのポインター
 
@@ -131,7 +132,7 @@ strcat_s( szCaptionBase, sizeOfBuffer, " [View 1]" );
 
 メンバーへのポインター関数を使用した仮想関数の呼び出しは、関数が直接呼び出されたかのように機能します。 正しい関数が v テーブルで検索され、呼び出されます。
 
-この場合も、仮想関数が正しく機能するうえで重要なことは、基底クラスへのポインターを介して仮想関数を呼び出すことです。 (仮想関数の詳細については、「[仮想関数](../cpp/virtual-functions.md)」を参照してください)。
+この場合も、仮想関数が正しく機能するうえで重要なことは、基底クラスへのポインターを介して仮想関数を呼び出すことです。 (仮想関数の詳細については、「 [仮想関数](../cpp/virtual-functions.md)」を参照してください)。
 
 次のコードは、メンバー関数へのポインターを介して仮想関数を呼び出す方法を示しています。
 

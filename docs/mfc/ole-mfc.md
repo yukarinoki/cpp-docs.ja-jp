@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: OLE (MFC)'
 title: OLE (MFC)
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - user interfaces, OLE
 - applications [OLE], user interface
 ms.assetid: 61cb5d3e-1108-4e9b-b301-a8d8fcc586cb
-ms.openlocfilehash: ce35bad80a348bc89ce67065d26f9a82f2feba52
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 7ff0a2a1446caa85d08aa5d708ed9c2ca8e05757
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84624204"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97244083"
 ---
 # <a name="ole-mfc"></a>OLE (MFC)
 
@@ -24,15 +25,15 @@ ms.locfileid: "84624204"
 
 - トラッカーは、ビジュアル編集およびドラッグアンドドロップ中にオブジェクトの状態を視覚的に示す手掛かりを提供します。
 
-詳細については次を参照してください:
+詳細については、次を参照してください。
 
 - [OLE と MFC](ole-in-mfc.md)
 
 - [ビジュアル編集 (アクティブ化)](activation-cpp.md)
 
-- [ドラッグアンドドロップ](drag-and-drop-ole.md)
+- [ドラッグ アンド ドロップ](drag-and-drop-ole.md)
 
-- [トラッカー](trackers.md)
+- [Trackers](trackers.md)
 
 ## <a name="see-also"></a>関連項目
 

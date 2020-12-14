@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: OLE コントロールクラス'
 title: OLE コントロール クラス
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - OLE control classes [MFC]
 - reusable component classes [MFC]
 ms.assetid: 96495ec3-319e-4163-b839-1af0428ed9dd
-ms.openlocfilehash: 5aa3899dca5a42cf789dc6dfd4701547495ec618
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: da59fcd66fa21602ad864deecac9f568bd5123bc
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84617762"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97244148"
 ---
 # <a name="ole-control-classes"></a>OLE コントロール クラス
 
@@ -42,7 +43,7 @@ Windows フォントオブジェクトおよび COM インターフェイスの�
 ダイアログボックスと同様に、グラフィカルインターフェイスに OLE コントロールのプロパティを表示します。
 
 [CPropExchange](reference/cpropexchange-class.md)<br/>
-OLE コントロールのプロパティ永続化の実装をサポートします。 ダイアログボックスの[CDataExchange](reference/cdataexchange-class.md)に似ています。
+OLE コントロールのプロパティ永続化の実装をサポートします。 ダイアログボックスの [CDataExchange](reference/cdataexchange-class.md) に似ています。
 
 [CMonikerFile](reference/cmonikerfile-class.md)<br/>
 モニカーを取得します。また、モニカーにすることができる文字列形式を受け取り、モニカーが名前であるストリームに同期的にバインドします。

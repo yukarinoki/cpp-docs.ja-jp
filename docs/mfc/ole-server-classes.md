@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「OLE サーバークラス」を参照してください。
 title: OLE サーバー クラス
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - COM components, classes [MFC]
 - component classes [MFC]
 ms.assetid: 8e9b67a2-c0ff-479c-a8d6-19b36c5e6fc6
-ms.openlocfilehash: 06f5cf0985756506e42c7ad9fde24641b5a0ce93
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: a2f60f148d6a24323ca6546e633c30103b315ee2
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84619861"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97243992"
 ---
 # <a name="ole-server-classes"></a>OLE サーバー クラス
 
@@ -20,10 +21,10 @@ ms.locfileid: "84619861"
 
 クラスは、文書 `COleServerItem` またはドキュメントの一部を表し、別のドキュメントに埋め込んだり、リンク先として使用したりできます。
 
-`COleIPFrameWnd`と `COleResizeBar` は、オブジェクトがコンテナー内にあるときのインプレース編集をサポートし、 `COleTemplateServer` 他のアプリケーションからの OLE オブジェクトを編集できるように、ドキュメント/ビューペアの作成をサポートします。
+`COleIPFrameWnd` と `COleResizeBar` は、オブジェクトがコンテナー内にあるときのインプレース編集をサポートし、 `COleTemplateServer` 他のアプリケーションからの OLE オブジェクトを編集できるように、ドキュメント/ビューペアの作成をサポートします。
 
 [COleServerDoc](reference/coleserverdoc-class.md)<br/>
-サーバーアプリケーションドキュメントクラスの基本クラスとして使用されます。 `COleServerDoc`オブジェクトを使用すると、オブジェクトとの対話によってサーバーのサポートが強化され `COleServerItem` ます。 ビジュアル編集機能は、クラスライブラリのドキュメント/ビューアーキテクチャを使用して提供されます。
+サーバーアプリケーションドキュメントクラスの基本クラスとして使用されます。 `COleServerDoc` オブジェクトを使用すると、オブジェクトとの対話によってサーバーのサポートが強化され `COleServerItem` ます。 ビジュアル編集機能は、クラスライブラリのドキュメント/ビューアーキテクチャを使用して提供されます。
 
 [CDocItem](reference/cdocitem-class.md)<br/>
 およびの抽象基本 `COleClientItem` クラス `COleServerItem` 。 から派生したクラスのオブジェクトは `CDocItem` 、ドキュメントの一部を表します。

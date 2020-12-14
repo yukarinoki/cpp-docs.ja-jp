@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: &lt; regex&gt;'
 title: '&lt;regex&gt;'
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - regex header
 ms.assetid: 5dd4ef74-6063-4dbc-b692-1960bb736f0b
-ms.openlocfilehash: 60548e96e0922fdcff00456b03bf9fa15bb7e3b3
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 33eefd09c74731b36d3a8f104e2380944da2f43f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88841481"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97243771"
 ---
 # <a name="ltregexgt"></a>&lt;regex&gt;
 
@@ -82,7 +83,7 @@ ms.locfileid: "88841481"
 |[regex_search](../standard-library/regex-functions.md#regex_search)|正規表現との一致を検索します。|
 |[スワップ](../standard-library/regex-functions.md#swap)|`basic_regex` または `match_results` オブジェクトをスワップします。|
 
-### <a name="operators"></a>演算子
+### <a name="operators"></a>オペレーター
 
 |演算子|説明|
 |-|-|

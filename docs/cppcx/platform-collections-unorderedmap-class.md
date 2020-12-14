@@ -1,20 +1,21 @@
 ---
+description: '詳細情報: Platform:: Collections:: UnorderedMap クラス'
 title: Platform::Collections::UnorderedMap クラス
 ms.date: 12/30/2016
 ms.topic: reference
 f1_keywords:
 - collection/Platform::Collections::UnorderedMap
 ms.assetid: dc84f261-b13c-4c0a-9b57-30dcb9e3065e
-ms.openlocfilehash: ec458f5d4a47b6eced939c4fe346d5d0414ea7c2
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 51acfa7e411f96addd8a33024224779c32ebcda0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88839128"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97242536"
 ---
 # <a name="platformcollectionsunorderedmap-class"></a>Platform::Collections::UnorderedMap クラス
 
-キー/値ペアのコレクションである順序なしの *マップ*を表します。
+キー/値ペアのコレクションである順序なしの *マップ* を表します。
 
 ## <a name="syntax"></a>構文
 
@@ -29,7 +30,7 @@ ref class Map sealed;
 
 #### <a name="parameters"></a>パラメーター
 
-*Kb*<br/>
+*K*<br/>
 キー/値ペア内のキーの型。
 
 *V*<br/>
@@ -87,7 +88,7 @@ ref class Map sealed;
 
 `UnorderedMap`
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 **ヘッダー:** collection.h
 
@@ -152,7 +153,7 @@ bool HasKey(
 ### <a name="parameters"></a>パラメーター
 
 *key*<br/>
-UnorderedMap 要素の検索に使用するキー。 *キー*の型は typename *K*です。
+UnorderedMap 要素の検索に使用するキー。 *キー* の型は typename *K* です。
 
 ### <a name="return-value"></a>戻り値
 
@@ -174,14 +175,14 @@ virtual bool Insert(
 ### <a name="parameters"></a>パラメーター
 
 *key*<br/>
-キー/値ペアのキー部分。 *キー*の型は typename *K*です。
+キー/値ペアのキー部分。 *キー* の型は typename *K* です。
 
 *value*<br/>
-キー/値ペアの値部分。 *値*の型は typename *V*です。
+キー/値ペアの値部分。 *値* の型は typename *V* です。
 
 ### <a name="return-value"></a>戻り値
 
-**`true`** 現在のマップ内の既存の要素のキーが *キー* と一致し、その要素の値部分が *value*に設定されている場合は。 **`false`** 現在のマップ内の既存の要素が*キー*と一致せず、キーと*値**のパラメーター*がキーと値のペアになり、現在の UnorderedMap に追加されている場合は。
+**`true`** 現在のマップ内の既存の要素のキーが *キー* と一致し、その要素の値部分が *value* に設定されている場合は。 **`false`** 現在のマップ内の既存の要素が *キー* と一致せず、キーと *値**のパラメーター* がキーと値のペアになり、現在の UnorderedMap に追加されている場合は。
 
 ## <a name="unorderedmaplookup-method"></a><a name="lookup"></a> UnorderedMap:: Lookup メソッド
 
@@ -198,11 +199,11 @@ V Lookup(
 ### <a name="parameters"></a>パラメーター
 
 *key*<br/>
-UnorderedMap の要素の検索に使用するキー。 *キー*の型は typename *K*です。
+UnorderedMap の要素の検索に使用するキー。 *キー* の型は typename *K* です。
 
 ### <a name="return-value"></a>戻り値
 
-*キー*とペアになる値。 戻り値の型は typename *V*です。
+*キー* とペアになる値。 戻り値の型は typename *V* です。
 
 ## <a name="unorderedmapmapchanged"></a><a name="mapchanged"></a> UnorderedMap:: MapChanged
 
@@ -236,7 +237,7 @@ virtual void Remove(
 ### <a name="parameters"></a>パラメーター
 
 *key*<br/>
-キー/値ペアのキー部分。 *キー*の型は typename *K*です。
+キー/値ペアのキー部分。 *キー* の型は typename *K* です。
 
 ## <a name="unorderedmapsize-method"></a><a name="size"></a> UnorderedMap:: Size メソッド
 

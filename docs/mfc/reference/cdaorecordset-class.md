@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: CDaoRecordset クラス'
 title: CDaoRecordset クラス
 ms.date: 08/27/2018
 f1_keywords:
@@ -166,12 +167,12 @@ helpviewer_keywords:
 - CDaoRecordset [MFC], m_strFilter
 - CDaoRecordset [MFC], m_strSort
 ms.assetid: 2322067f-1027-4662-a5d7-aa2fc7488630
-ms.openlocfilehash: 4a1026c6b652bc5141855670db3b1ee34e7974b9
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: cc24894c0efc61ae37d57ff3c01ca43e71beddf3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90040276"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97248211"
 ---
 # <a name="cdaorecordset-class"></a>CDaoRecordset クラス
 
@@ -270,7 +271,7 @@ class CDaoRecordset : public CObject
 
 ### <a name="public-data-members"></a>パブリック データ メンバー
 
-|Name|説明|
+|名前|説明|
 |----------|-----------------|
 |[CDaoRecordset:: m_bCheckCacheForDirtyFields](#m_bcheckcachefordirtyfields)|フィールドが自動的に変更済みとしてマークされているかどうかを示すフラグが含まれています。|
 |[CDaoRecordset:: m_nFields](#m_nfields)|レコードセットクラスのフィールドデータメンバーの数と、データソースからレコードセットによって選択された列の数を格納します。|
@@ -280,7 +281,7 @@ class CDaoRecordset : public CObject
 |[CDaoRecordset:: m_strFilter](#m_strfilter)|SQL **WHERE** ステートメントの作成に使用する文字列が含まれています。|
 |[CDaoRecordset:: m_strSort](#m_strsort)|SQL **ORDER BY** ステートメントを構築するために使用する文字列が含まれています。|
 
-## <a name="remarks"></a>注釈
+## <a name="remarks"></a>解説
 
 "レコードセット" と呼ば `CDaoRecordset` れるオブジェクトには、次の3つの形式があります。
 
@@ -337,7 +338,7 @@ class CDaoRecordset : public CObject
 virtual void AddNew();
 ```
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 レコードのフィールドは、最初は Null になります。 (データベース用語では、Null は "値がない" ことを意味し、C++ では NULL とは異なります)。操作を完了するには、 [Update](#update) メンバー関数を呼び出す必要があります。 `Update` データソースへの変更を保存します。
 
@@ -360,7 +361,7 @@ virtual void AddNew();
 
 `AddNew` [Open](#open)メンバー関数が呼び出されていないレコードセットに対してを呼び出すことはできません。 `CDaoException` `AddNew` 追加できないレコードセットに対してを呼び出すと、がスローされます。 [CanAppend](#canappend)を呼び出すことで、レコードセットが更新可能かどうかを判断できます。
 
-フレームワークは、変更されたフィールドデータメンバーを、DAO レコードフィールドエクスチェンジ (DFX) メカニズムによってデータソースのレコードに書き込まれるようにマークします。 フィールドの値を変更すると、通常はダーティフィールドが自動的にダーティに設定されるため、 [SetFieldDirty](#setfielddirty) を自分で呼び出す必要はほとんどありませんが、フィールドデータメンバー内の値に関係なく、明示的に列が更新または挿入されるようにすることが必要になる場合があります。 また、DFX のメカニズムでは、 **擬似 NULL**の使用も使用されます。 詳細については、「 [CDaoFieldExchange:: m_nOperation](../../mfc/reference/cdaofieldexchange-class.md#m_noperation)」を参照してください。
+フレームワークは、変更されたフィールドデータメンバーを、DAO レコードフィールドエクスチェンジ (DFX) メカニズムによってデータソースのレコードに書き込まれるようにマークします。 フィールドの値を変更すると、通常はダーティフィールドが自動的にダーティに設定されるため、 [SetFieldDirty](#setfielddirty) を自分で呼び出す必要はほとんどありませんが、フィールドデータメンバー内の値に関係なく、明示的に列が更新または挿入されるようにすることが必要になる場合があります。 また、DFX のメカニズムでは、 **擬似 NULL** の使用も使用されます。 詳細については、「 [CDaoFieldExchange:: m_nOperation](../../mfc/reference/cdaofieldexchange-class.md#m_noperation)」を参照してください。
 
 ダブルバッファリング機構が使用されていない場合は、フィールドの値を変更しても、フィールドがダーティとして自動的に設定されるわけではありません。 この場合は、フィールドをダーティに明示的に設定する必要があります。 [M_bCheckCacheForDirtyFields](#m_bcheckcachefordirtyfields)に含まれるフラグは、この自動フィールドチェックを制御します。
 
@@ -381,7 +382,7 @@ BOOL CanAppend() const;
 
 レコードセットで新しいレコードの追加が許可されている場合は0以外の。それ以外の場合は0です。 `CanAppend` レコードセットを読み取り専用として開いた場合、は0を返します。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 関連情報については、DAO ヘルプのトピック「Append メソッド」を参照してください。
 
@@ -397,7 +398,7 @@ BOOL CanBookmark();
 
 レコードセットがブックマークをサポートしている場合は0以外。それ以外の場合は0。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 Microsoft Jet データベースエンジンのすべてのテーブルに基づいてレコードセットを使用している場合は、前方参照専用のスクロールレコードとしてフラグが設定されたスナップショット型のレコードセットを除き、ブックマークを使用できます。 その他のデータベース製品 (外部 ODBC データソース) はブックマークをサポートしていない可能性があります。
 
@@ -411,7 +412,7 @@ Microsoft Jet データベースエンジンのすべてのテーブルに基づ
 virtual void CancelUpdate();
 ```
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 たとえば、アプリケーションが `Edit` またはのメンバー関数を呼び出し、 `AddNew` [Update](#update)が呼び出されていない場合、 `CancelUpdate` `Edit` またはが呼び出された後に加えられた変更は、によって取り消され `AddNew` ます。
 
@@ -434,7 +435,7 @@ BOOL CanRestart();
 
 `Requery`レコードセットのクエリを再実行するためにを呼び出すことができる場合は0以外。それ以外の場合は0。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 テーブル型のレコードセットは、をサポートしていません `Requery` 。
 
@@ -454,7 +455,7 @@ BOOL CanScroll() const;
 
 レコードをスクロールできる場合は0以外。それ以外の場合は0。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 [Open](#open) with を呼び出すと `dbForwardOnly` 、レコードセットは前方にのみスクロールできます。
 
@@ -472,7 +473,7 @@ BOOL CanTransact();
 
 基になるデータソースがトランザクションをサポートしている場合は0以外。それ以外の場合は0。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 関連情報については、DAO ヘルプのトピック「トランザクションのプロパティ」を参照してください。
 
@@ -488,9 +489,9 @@ BOOL CanUpdate() const;
 
 レコードセットを更新 (レコードの追加、更新、削除) することができる場合は0以外。それ以外の場合は0。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
-基になるデータソースが読み取り専用の場合、または `dbReadOnly` レコードセットに[Open](#open)を呼び出したときに*nOptions*に指定した場合は、レコードセットが読み取り専用になることがあります。
+基になるデータソースが読み取り専用の場合、または `dbReadOnly` レコードセットに [Open](#open)を呼び出したときに *nOptions* に指定した場合は、レコードセットが読み取り専用になることがあります。
 
 関連情報については、DAO ヘルプの「AddNew メソッド」、「Edit メソッド」、「Delete メソッド」、「Update メソッド」、「更新可能なプロパティ」の各トピックを参照してください。
 
@@ -507,7 +508,7 @@ CDaoRecordset(CDaoDatabase* pDatabase = NULL);
 *pDatabase*<br/>
 には、 [CDaoDatabase](../../mfc/reference/cdaodatabase-class.md) オブジェクトへのポインターまたは NULL 値が含まれます。 NULL ではなく、 `CDaoDatabase` オブジェクトの `Open` メンバー関数が呼び出されていない場合は、それをデータソースに接続するために、レコードセットは自身の [open](#open) 呼び出し中にそのオブジェクトを開こうとします。 NULL を渡すと、 `CDaoDatabase` からレコードセットクラスを派生した場合に指定したデータソース情報を使用して、オブジェクトが構築され、接続され `CDaoRecordset` ます。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 を直接使用することも、 `CDaoRecordset` からアプリケーション固有のクラスを派生させることもでき `CDaoRecordset` ます。 ClassWizard を使用して、レコードセットクラスを派生させることができます。
 
@@ -524,11 +525,11 @@ CDaoRecordset(CDaoDatabase* pDatabase = NULL);
 virtual void Close();
 ```
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 では `Close` オブジェクトが破棄されないため `CDaoRecordset` 、 `Open` 同じデータソースまたは別のデータソースに対してを呼び出すことによって、オブジェクトを再利用できます。
 
-すべての保留中の [AddNew](#addnew) ステートメントまたは [編集](#edit) ステートメントが取り消され、すべての保留中のトランザクションがロールバックされます。 保留中の追加または編集を保持する場合[Update](#update)は、 `Close` 各レコードセットに対してを呼び出す前に Update を呼び出します。
+すべての保留中の [AddNew](#addnew) ステートメントまたは [編集](#edit) ステートメントが取り消され、すべての保留中のトランザクションがロールバックされます。 保留中の追加または編集を保持する場合[](#update)は、 `Close` 各レコードセットに対してを呼び出す前に Update を呼び出します。
 
 を呼び出した後で、をもう一度呼び出すことができ `Open` `Close` ます。 これにより、レコードセットオブジェクトを再利用できます。 可能な場合は、 [Requery](#requery)を呼び出すことをお勧めします。
 
@@ -542,7 +543,7 @@ virtual void Close();
 virtual void Delete();
 ```
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 削除が正常に完了すると、レコードセットのフィールドデータメンバーが Null 値に設定されます。また、レコードセットナビゲーションメンバー関数 ( [move](#move)、 [Seek](#seek)、 [SetBookmark](#setbookmark)など) の1つを明示的に呼び出して、削除されたレコードから移動する必要があります。 レコードセットからレコードを削除する場合は、を呼び出す前にレコードセットに現在のレコードが存在する必要があります `Delete` 。それ以外の場合、MFC は例外をスローします。
 
@@ -570,7 +571,7 @@ virtual void DoFieldExchange(CDaoFieldExchange* pFX);
 *.Cer*<br/>
 オブジェクトへのポインターが含まれてい `CDaoFieldExchange` ます。 フレームワークでは、フィールド交換操作のコンテキストを指定するために、このオブジェクトが既に設定されています。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 また、パラメーターのデータメンバー (存在する場合) を、レコードセットの選択に使用する SQL ステートメント文字列のパラメータープレースホルダーにバインドします。 DAO レコードフィールドエクスチェンジ (DFX) と呼ばれるフィールドデータの交換は、レコードセットオブジェクトのフィールドデータメンバーからデータソース上のレコードのフィールドへの変換と、データソースのレコードからレコードセットオブジェクトへの双方向で機能します。 列を動的にバインドする場合は、を実装する必要はありません `DoFieldExchange` 。
 
@@ -588,7 +589,7 @@ ClassWizard で派生したレコードセットクラスを宣言すると、�
 virtual void Edit();
 ```
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 メンバー関数を呼び出すと `Edit` 、現在のレコードのフィールドに加えられた変更がコピーバッファーにコピーされます。 レコードに必要な変更を加えたら、を呼び出し `Update` て変更を保存します。 `Edit` レコードセットのデータメンバーの値を保存します。 を呼び出し、 `Edit` 変更を行ってからを `Edit` 再度呼び出すと、レコードの値は最初の呼び出しの前の値に復元され `Edit` ます。
 
@@ -597,7 +598,7 @@ virtual void Edit();
 
 場合によっては、Null (データを含まない) によって列を更新することが必要になることがあります。 これを行うには、パラメーターを TRUE に設定し `SetFieldNull` て、フィールドを Null に設定します。これにより、列も更新されます。 値が変更されていないにもかかわらず、データソースにフィールドを書き込む場合は、 `SetFieldDirty` パラメーターを TRUE に設定してを呼び出します。 これは、フィールドの値が Null の場合でも機能します。
 
-フレームワークは、変更されたフィールドデータメンバーを、DAO レコードフィールドエクスチェンジ (DFX) メカニズムによってデータソースのレコードに書き込まれるようにマークします。 フィールドの値を変更すると、通常はダーティフィールドが自動的にダーティに設定されるため、 [SetFieldDirty](#setfielddirty) を自分で呼び出す必要はほとんどありませんが、フィールドデータメンバー内の値に関係なく、明示的に列が更新または挿入されるようにすることが必要になる場合があります。 また、DFX のメカニズムでは、 **擬似 NULL**の使用も使用されます。 詳細については、「 [CDaoFieldExchange:: m_nOperation](../../mfc/reference/cdaofieldexchange-class.md#m_noperation)」を参照してください。
+フレームワークは、変更されたフィールドデータメンバーを、DAO レコードフィールドエクスチェンジ (DFX) メカニズムによってデータソースのレコードに書き込まれるようにマークします。 フィールドの値を変更すると、通常はダーティフィールドが自動的にダーティに設定されるため、 [SetFieldDirty](#setfielddirty) を自分で呼び出す必要はほとんどありませんが、フィールドデータメンバー内の値に関係なく、明示的に列が更新または挿入されるようにすることが必要になる場合があります。 また、DFX のメカニズムでは、 **擬似 NULL** の使用も使用されます。 詳細については、「 [CDaoFieldExchange:: m_nOperation](../../mfc/reference/cdaofieldexchange-class.md#m_noperation)」を参照してください。
 
 ダブルバッファリング機構が使用されていない場合は、フィールドの値を変更しても、フィールドがダーティとして自動的に設定されるわけではありません。 この場合は、フィールドをダーティに明示的に設定する必要があります。 [M_bCheckCacheForDirtyFields](#m_bcheckcachefordirtyfields)に含まれるフラグは、この自動フィールドチェックを制御します。
 
@@ -640,7 +641,7 @@ void FillCache(
 *pBookmark*<br/>
 ブックマークを指定する [COleVariant](../../mfc/reference/colevariant-class.md) です。 キャッシュは、このブックマークによって示されるレコードから開始されます。 このパラメーターを省略した場合、キャッシュは、基になる DAO オブジェクトの CacheStart プロパティによって示されるレコードから開始されます。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 キャッシュを行うと、リモートサーバーからデータを取得またはフェッチするアプリケーションのパフォーマンスが向上します。 キャッシュは、アプリケーションの実行中にデータが再要求される可能性があると想定して、サーバーから最後にフェッチされたデータを保持するローカルメモリ内の領域です。 データが要求されると、Microsoft Jet データベースエンジンは、サーバーからデータをフェッチするのではなく、最初にキャッシュを確認します。これには時間がかかります。 データがキャッシュに保存されないため、非 ODBC データソースでデータキャッシュを使用しても効果はありません。
 
@@ -678,7 +679,7 @@ virtual BOOL Find(
 - 一致する文字列の最後の位置を検索 AFX_DAO_LAST ます。
 
 *lpszFilter*<br/>
-レコードを検索するために使用される文字列式 (where 句を含まない SQL ステートメント内の**where**句と**同様)。** 次に例を示します。
+レコードを検索するために使用される文字列式 (where 句を含まない SQL ステートメント内の **where** 句と **同様)。** 次に例を示します。
 
 [!code-cpp[NVC_MFCDatabase#3](../../mfc/codesnippet/cpp/cdaorecordset-class_3.cpp)]
 
@@ -686,7 +687,7 @@ virtual BOOL Find(
 
 一致するレコードが見つかった場合は0以外。それ以外の場合は0。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 文字列の最初、次、前、または最後のインスタンスを見つけることができます。 `Find` は仮想関数であるため、オーバーライドして独自の実装を追加することができます。 `FindFirst`、、 `FindLast` 、およびの各メンバー関数は、 `FindNext` `FindPrev` `Find` メンバー関数を呼び出します。これにより、を使用して `Find` すべての検索操作の動作を制御できます。
 
@@ -708,13 +709,13 @@ BOOL FindFirst(LPCTSTR lpszFilter);
 ### <a name="parameters"></a>パラメーター
 
 *lpszFilter*<br/>
-レコードを検索するために使用される文字列式 (where 句を含まない SQL ステートメント内の**where**句と**同様)。**
+レコードを検索するために使用される文字列式 (where 句を含まない SQL ステートメント内の **where** 句と **同様)。**
 
 ### <a name="return-value"></a>戻り値
 
 一致するレコードが見つかった場合は0以外。それ以外の場合は0。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 この `FindFirst` メンバー関数は、レコードセットの先頭から検索を開始し、レコードセットの末尾まで検索します。
 
@@ -762,13 +763,13 @@ BOOL FindLast(LPCTSTR lpszFilter);
 ### <a name="parameters"></a>パラメーター
 
 *lpszFilter*<br/>
-レコードを検索するために使用される文字列式 (where 句を含まない SQL ステートメント内の**where**句と**同様)。**
+レコードを検索するために使用される文字列式 (where 句を含まない SQL ステートメント内の **where** 句と **同様)。**
 
 ### <a name="return-value"></a>戻り値
 
 一致するレコードが見つかった場合は0以外。それ以外の場合は0。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 この `FindLast` メンバー関数は、レコードセットの末尾から検索を開始し、レコードセットの先頭に向かって後方に検索します。
 
@@ -804,13 +805,13 @@ BOOL FindNext(LPCTSTR lpszFilter);
 ### <a name="parameters"></a>パラメーター
 
 *lpszFilter*<br/>
-レコードを検索するために使用される文字列式 (where 句を含まない SQL ステートメント内の**where**句と**同様)。**
+レコードを検索するために使用される文字列式 (where 句を含まない SQL ステートメント内の **where** 句と **同様)。**
 
 ### <a name="return-value"></a>戻り値
 
 一致するレコードが見つかった場合は0以外。それ以外の場合は0。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 この `FindNext` メンバー関数は、現在のレコードから検索を開始し、レコードセットの末尾を検索します。
 
@@ -846,13 +847,13 @@ BOOL FindPrev(LPCTSTR lpszFilter);
 ### <a name="parameters"></a>パラメーター
 
 *lpszFilter*<br/>
-レコードを検索するために使用される文字列式 (where 句を含まない SQL ステートメント内の**where**句と**同様)。**
+レコードを検索するために使用される文字列式 (where 句を含まない SQL ステートメント内の **where** 句と **同様)。**
 
 ### <a name="return-value"></a>戻り値
 
 一致するレコードが見つかった場合は0以外。それ以外の場合は0。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 この `FindPrev` メンバー関数は、現在のレコードから検索を開始し、レコードセットの先頭に向かって後方に検索します。
 
@@ -889,7 +890,7 @@ long GetAbsolutePosition();
 
 0からレコードセット内のレコード数までの整数。 レコードセット内の現在のレコードの序数位置に対応します。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 基になる DAO オブジェクトの AbsolutePosition プロパティの値は0から始まります。0に設定すると、レコードセットの最初のレコードが参照されます。 [GetRecordCount](#getrecordcount)を呼び出すことによって、レコードセット内の設定されたレコードの数を確認できます。 を呼び出す `GetRecordCount` と、すべてのレコードにアクセスしてカウントを決定する必要があるため、時間がかかることがあります。
 
@@ -915,7 +916,7 @@ COleVariant GetBookmark();
 
 現在のレコードのブックマークを表す値を返します。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 レコードセットオブジェクトを作成または開くと、そのレコードがサポートされている場合、そのレコードには一意のブックマークが既に存在します。 を呼び出して `CanBookmark` 、レコードセットがブックマークをサポートするかどうかを判断します。
 
@@ -938,7 +939,7 @@ long GetCacheSize();
 
 ODBC データソースからローカルにキャッシュされるデータを含む、ダイナセット型のレコードセット内のレコードの数を示す値です。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 データキャッシュを使用すると、ダイナセット型のレコードセットオブジェクトを介してリモートサーバーからデータを取得するアプリケーションのパフォーマンスが向上します。 キャッシュとは、アプリケーションの実行中にデータが再度要求される場合に、サーバーから最後に取得されたデータを保持するローカルメモリ内の領域です。 データが要求されると、Microsoft Jet データベースエンジンは、要求されたデータをサーバーから取得するのではなく、最初にキャッシュを確認します。これには時間がかかります。 ODBC データソースから取得されていないデータはキャッシュに保存されません。
 
@@ -958,7 +959,7 @@ COleVariant GetCacheStart();
 
 `COleVariant`キャッシュされるレコードセット内の最初のレコードのブックマークを指定する。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 Microsoft Jet データベースエンジンはキャッシュからキャッシュ範囲内のレコードを要求し、サーバーからキャッシュ範囲外のレコードを要求します。
 
@@ -979,7 +980,7 @@ CString GetCurrentIndex();
 
 `CString`テーブル型のレコードセットで現在使用されているインデックスの名前を表すです。 インデックスが設定されていない場合は、空の文字列を返します。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 このインデックスは、レコードをテーブル型のレコードセットで並べ替えるための基礎であり、 [Seek](#seek) メンバー関数でレコードを検索するために使用されます。
 
@@ -999,7 +1000,7 @@ COleDateTime GetDateCreated();
 
 ベーステーブルが作成された日付と時刻を含む [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) オブジェクト。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 日付と時刻の設定は、ベーステーブルが作成されたコンピューターから派生します。
 
@@ -1017,7 +1018,7 @@ COleDateTime GetDateLastUpdated();
 
 ベーステーブル構造 (スキーマ) が最後に更新された日付と時刻を含む [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) オブジェクト。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 日付と時刻の設定は、ベーステーブル構造 (スキーマ) が最後に更新されたコンピューターから派生します。
 
@@ -1035,7 +1036,7 @@ virtual CString GetDefaultDBName();
 
 `CString`このレコードセットの派生元であるデータベースのパスと名前を表すです。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 レコードセットを作成するとき [に、この](../../mfc/reference/cdaodatabase-class.md)パスを使用して、レコードセットが、既定のデータベースを開くために、レコードセットによって使用されます。 既定では、この関数は空の文字列を返します。 ClassWizard がから新しいレコードセットを派生すると `CDaoRecordset` 、この関数が作成されます。
 
@@ -1055,7 +1056,7 @@ virtual CString GetDefaultSQL();
 
 `CString`既定の SQL ステートメントを含むです。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 テーブル名または SQL **SELECT** ステートメントを指定できます。
 
@@ -1075,7 +1076,7 @@ short GetEditMode();
 
 現在のレコードの編集の状態を示す値を返します。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 |値|説明|
 |-----------|-----------------|
@@ -1097,7 +1098,7 @@ short GetFieldCount();
 
 レコードセット内のフィールドの数。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 関連情報については、DAO ヘルプのトピック「Count プロパティ」を参照してください。
 
@@ -1137,11 +1138,11 @@ void GetFieldInfo(
 *lpszName*<br/>
 フィールドの名前。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 関数の1つのバージョンでは、インデックスを使用してフィールドを検索できます。 もう1つのバージョンでは、名前でフィールドを検索できます。
 
-返される情報の説明については、「 [CDaoFieldInfo](../../mfc/reference/cdaofieldinfo-structure.md) 構造体」を参照してください。 この構造体には、前に説明した情報の項目に対応するメンバーが含まれ*ています。* 1つのレベルで情報を要求すると、以前のレベルについても情報が得られます。
+返される情報の説明については、「 [CDaoFieldInfo](../../mfc/reference/cdaofieldinfo-structure.md) 構造体」を参照してください。 この構造体には、前に説明した情報の項目に対応するメンバーが含まれ *ています。* 1つのレベルで情報を要求すると、以前のレベルについても情報が得られます。
 
 関連情報については、DAO ヘルプの「Attributes プロパティ」を参照してください。
 
@@ -1177,7 +1178,7 @@ virtual COleVariant GetFieldValue(int nIndex);
 
 値を返すの2つのバージョンは、 `GetFieldValue` フィールドの値を含む [COleVariant](../../mfc/reference/colevariant-class.md) オブジェクトを返します。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 フィールドは、名前または序数で検索できます。
 
@@ -1202,7 +1203,7 @@ short GetIndexCount();
 
 テーブル型のレコードセット内のインデックスの数。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 `GetIndexCount` は、レコードセット内のすべてのインデックスをループ処理する場合に便利です。 そのためには、 `GetIndexCount` [Getindexinfo](#getindexinfo)と共にを使用します。 このメンバー関数を、ダイナセット型またはスナップショット型のレコードセットに対して呼び出した場合、MFC は例外をスローします。
 
@@ -1244,11 +1245,11 @@ void GetIndexInfo(
 *lpszName*<br/>
 名前で検索するための、インデックスオブジェクトの名前へのポインター。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 関数の1つのバージョンでは、インデックスをコレクション内の位置で検索できます。 もう1つのバージョンでは、インデックスを名前で検索できます。
 
-返される情報の説明については、「 [CDaoIndexInfo](../../mfc/reference/cdaoindexinfo-structure.md) 構造体」を参照してください。 この構造体には、前に説明した情報の項目に対応するメンバーが含まれ*ています。* 1つのレベルで情報を要求すると、以前のレベルについても情報が得られます。
+返される情報の説明については、「 [CDaoIndexInfo](../../mfc/reference/cdaoindexinfo-structure.md) 構造体」を参照してください。 この構造体には、前に説明した情報の項目に対応するメンバーが含まれ *ています。* 1つのレベルで情報を要求すると、以前のレベルについても情報が得られます。
 
 関連情報については、DAO ヘルプの「Attributes プロパティ」を参照してください。
 
@@ -1264,7 +1265,7 @@ COleVariant GetLastModifiedBookmark();
 
 `COleVariant`最後に追加または変更されたレコードを示すブックマークを格納している。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 レコードセットオブジェクトを作成または開くと、そのレコードがサポートされている場合、そのレコードには一意のブックマークが既に存在します。 [GetBookmark](#getbookmark)を呼び出して、レコードセットがブックマークをサポートしているかどうかを確認します。 レコードセットでブックマークがサポートされていない場合は、 `CDaoException` がスローされます。
 
@@ -1284,7 +1285,7 @@ BOOL GetLockingMode();
 
 ロックの種類がペシミスティックの場合は0以外。それ以外の場合は、オプティミスティックレコードロックの場合は0。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 ペシミスティックロックが有効になっている場合、編集するレコードを含むデータページは、 [Edit](#edit) メンバー関数を呼び出すとすぐにロックされます。 [Update](#update)または[Close](#close)メンバー関数、または Move または Find 操作のいずれかを呼び出すと、ページのロックが解除されます。
 
@@ -1306,7 +1307,7 @@ CString GetName();
 
 `CString`レコードセットの名前を表すです。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 レコードセットの名前は、文字で始まる必要があり、最大40文字まで含めることができます。 数字とアンダースコア文字を含めることができますが、句読点やスペースを含めることはできません。
 
@@ -1333,7 +1334,7 @@ virtual COleVariant GetParamValue(LPCTSTR lpszName);
 
 パラメーターの値を格納している [COleVariant](../../mfc/reference/colevariant-class.md) クラスのオブジェクト。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 パラメーターには、名前またはコレクション内の数値の位置を使用してアクセスできます。
 
@@ -1351,7 +1352,7 @@ float GetPercentPosition();
 
 レコードセット内のレコードの割合に基づく、レコードセットオブジェクト内の現在のレコードのおおよその位置を示す 0 ~ 100 の数値。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 すべてのレコードセットの作成を完了するには、 [MoveLast](#movelast) を呼び出して最後のレコードに移動しますが、これにはかなりの時間がかかることがあります。
 
@@ -1371,7 +1372,7 @@ long GetRecordCount();
 
 レコードセットオブジェクト内でアクセスされたレコードの数を返します。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 `GetRecordCount` は、すべてのレコードがアクセスされるまで、ダイナセット型またはスナップショット型のレコードセットに含まれているレコードの数を示しません。 このメンバー関数の呼び出しは、完了までにかなりの時間がかかる場合があります。
 
@@ -1399,11 +1400,11 @@ CString GetSQL() const;
 
 `CString`SQL ステートメントを含むです。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 通常、これは SQL **SELECT** ステートメントです。
 
-によって返される文字列 `GetSQL` は、通常、 [Open](#open)メンバー関数に*lpszSQL*パラメーターのレコードセットに渡された文字列とは異なります。 これは、に渡された内容に基づいて完全な SQL ステートメントが作成されるため、 `Open` ClassWizard で指定したものと、 [m_strFilter](#m_strfilter) データメンバーと [m_strSort](#m_strsort) データメンバーで指定した内容に基づいて、完全な SQL ステートメントが作成されるためです。
+によって返される文字列 `GetSQL` は、通常、 [Open](#open)メンバー関数に *lpszSQL* パラメーターのレコードセットに渡された文字列とは異なります。 これは、に渡された内容に基づいて完全な SQL ステートメントが作成されるため、 `Open` ClassWizard で指定したものと、 [m_strFilter](#m_strfilter) データメンバーと [m_strSort](#m_strsort) データメンバーで指定した内容に基づいて、完全な SQL ステートメントが作成されるためです。
 
 > [!NOTE]
 > を呼び出した後にのみ、このメンバー関数 `Open` を呼び出します。
@@ -1428,7 +1429,7 @@ short GetType();
 
 - `dbOpenSnapshot` スナップショット型のレコードセット
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 関連情報については、DAO ヘルプの「Type プロパティ」を参照してください。
 
@@ -1444,7 +1445,7 @@ CString GetValidationRule();
 
 `CString`レコードが変更されたとき、またはテーブルに追加されたときに、レコード内のデータを検証する値を格納しているオブジェクト。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 このルールはテキストベースで、基になるテーブルが変更されるたびに適用されます。 データが有効でない場合、MFC は例外をスローします。 返されるエラーメッセージは、基になるフィールドオブジェクトの "ValidationText" プロパティ、指定されている場合は、基になるフィールドオブジェクトの ValidationRule プロパティで指定された式のテキストです。 [Getvalidationtext](#getvalidationtext)を呼び出して、エラーメッセージのテキストを取得できます。
 
@@ -1464,7 +1465,7 @@ CString GetValidationText();
 
 `CString`フィールドの値が基になるフィールドオブジェクトの検証規則を満たしていない場合に表示されるメッセージのテキストを格納しているオブジェクト。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 関連情報については、DAO ヘルプのトピック「ValidationText プロパティ」を参照してください。
 
@@ -1480,7 +1481,7 @@ BOOL IsBOF() const;
 
 レコードセットにレコードが含まれていない場合、または最初のレコードの前に後方にスクロールした場合は0以外の。それ以外の場合は0です。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 と共にを呼び出して `IsBOF` `IsEOF` 、レコードセットにレコードが含まれているか、空であるかどうかを確認することもできます。 を呼び出した直後、レコード `Open` セットにレコードが含まれていない場合、は `IsBOF` 0 以外の値を返します。 少なくとも1つのレコードを含むレコードセットを開くと、最初のレコードが現在のレコードになり、 `IsBOF` 0 が返されます。
 
@@ -1500,7 +1501,7 @@ BOOL IsBOF() const;
 
 |State|MoveFirst、MoveLast|MovePrev<br /><br /> < 0 に移動|0の移動|MoveNext<br /><br /> > 0 に移動|
 |------|-------------------------|-----------------------------|------------|-----------------------------|
-|`IsBOF`= 0 以外、<br /><br /> `IsEOF`=0|許可|例外|例外|許可|
+|`IsBOF`= 0 以外、<br /><br /> `IsEOF`=0|許可されます。|例外|例外|許可されます。|
 |`IsBOF`=0,<br /><br /> `IsEOF`= 0 以外|許可|許可|例外|例外|
 |両方0以外|例外|例外|例外|例外|
 |両方0|許可|許可|許可|許可|
@@ -1509,7 +1510,7 @@ BOOL IsBOF() const;
 
 次の表に、および設定の値に対してレコードが見つからない移動操作の効果を `IsBOF` `IsEOF` 示します。
 
-|Operations|IsBOF|IsEOF|
+|操作|IsBOF|IsEOF|
 |------|-----------|-----------|
 |`MoveFirst`, `MoveLast`|なら|なら|
 |`Move` 0|変更なし|変更なし|
@@ -1530,7 +1531,7 @@ BOOL IsDeleted() const;
 
 レコードセットが削除されたレコードに配置されている場合は0以外の。それ以外の場合は0です。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 レコードをスクロールして、 `IsDeleted` TRUE (0 以外) を返した場合は、他のレコードセット操作を実行する前に、別のレコードまでスクロールする必要があります。
 
@@ -1553,7 +1554,7 @@ BOOL IsEOF() const;
 
 レコードセットにレコードが含まれていない場合、または最後のレコードを超えてスクロールした場合は0以外。それ以外の場合は0です。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 `IsEOF`を呼び出して、レコードセットにレコードが含まれているか、空であるかどうかを確認することもできます。 を呼び出した直後、レコード `Open` セットにレコードが含まれていない場合、は `IsEOF` 0 以外の値を返します。 少なくとも1つのレコードを含むレコードセットを開くと、最初のレコードが現在のレコードになり、 `IsEOF` 0 が返されます。
 
@@ -1573,7 +1574,7 @@ BOOL IsEOF() const;
 
 |State|MoveFirst、MoveLast|MovePrev<br /><br /> < 0 に移動|0の移動|MoveNext<br /><br /> > 0 に移動|
 |------|-------------------------|-----------------------------|------------|-----------------------------|
-|`IsBOF`= 0 以外、<br /><br /> `IsEOF`=0|許可|例外|例外|許可|
+|`IsBOF`= 0 以外、<br /><br /> `IsEOF`=0|許可されます。|例外|例外|許可されます。|
 |`IsBOF`=0,<br /><br /> `IsEOF`= 0 以外|許可|許可|例外|例外|
 |両方0以外|例外|例外|例外|例外|
 |両方0|許可|許可|許可|許可|
@@ -1582,7 +1583,7 @@ BOOL IsEOF() const;
 
 次の表に、および設定の値に対してレコードが見つからない移動操作の効果を `IsBOF` `IsEOF` 示します。
 
-|Operations|IsBOF|IsEOF|
+|操作|IsBOF|IsEOF|
 |------|-----------|-----------|
 |`MoveFirst`, `MoveLast`|なら|なら|
 |`Move` 0|変更なし|変更なし|
@@ -1608,7 +1609,7 @@ BOOL IsFieldDirty(void* pv);
 
 指定されたフィールドデータメンバーにダーティのフラグが設定されている場合は0以外の。それ以外の場合は0です。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 のメンバー関数の呼び出しによって現在のレコードが更新された場合 `Update` `CDaoRecordset` (またはの呼び出しに続く)、すべてのダーティフィールドデータメンバーのデータがデータソースのレコードに転送され `Edit` `AddNew` ます。 この知識があれば、データソースに書き込まれないように列をマークするために、フィールドデータメンバーのフラグを解除するなど、さらに手順を実行できます。
 
@@ -1631,7 +1632,7 @@ BOOL IsFieldNull(void* pv);
 
 指定されたフィールドデータメンバーに Null のフラグが設定されている場合は0以外の値。それ以外の場合は0です。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 (データベース用語では、Null は "値がない" ことを意味し、C++ では NULL とは異なります)。フィールドデータメンバーに Null のフラグが設定されている場合、そのメンバーは、値がない現在のレコードの列として解釈されます。
 
@@ -1660,7 +1661,7 @@ BOOL IsFieldNullable(void* pv);
 
 指定されたフィールドデータメンバーを Null にできる場合は0以外の値。それ以外の場合は0です。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 Null にできないフィールドには値が必要です。 レコードを追加または更新するときに、このようなフィールドを Null に設定しようとすると、データソースは追加または更新を拒否し、 `Update` 例外がスローされます。 この例外は、を呼び出したときではなく、を呼び出したときに発生し `Update` `SetFieldNull` ます。
 
@@ -1676,13 +1677,13 @@ BOOL IsOpen() const;
 
 レコードセットオブジェクトの `Open` または `Requery` メンバー関数が既に呼び出されていて、レコードセットが閉じられていない場合は0以外の場合は。それ以外の場合は0。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 ## <a name="cdaorecordsetm_bcheckcachefordirtyfields"></a><a name="m_bcheckcachefordirtyfields"></a> CDaoRecordset:: m_bCheckCacheForDirtyFields
 
 キャッシュされたフィールドを自動的にダーティ (変更) と Null としてマークするかどうかを示すフラグを格納します。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 フラグの既定値は TRUE です。 このデータメンバーの設定は、ダブルバッファリング機構全体を制御します。 フラグを TRUE に設定した場合は、DFX 機構を使用して、フィールドごとにキャッシュを無効にすることができます。 フラグを FALSE に設定した場合は、を使用してを呼び出す必要があり `SetFieldDirty` `SetFieldNull` ます。
 
@@ -1692,7 +1693,7 @@ BOOL IsOpen() const;
 
 レコードセットクラスのフィールドデータメンバーの数と、データソースからレコードセットによって選択された列の数を格納します。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 レコードセットクラスのコンストラクターは、静的にバインドされた `m_nFields` 適切な数のフィールドで初期化する必要があります。 この初期化は、レコードセットクラスを宣言するために使用するときに ClassWizard によって書き込まれます。 また、手動で書き込むこともできます。
 
@@ -1707,9 +1708,9 @@ BOOL IsOpen() const;
 
 レコードセットクラスのパラメーターデータメンバーの数 (レコードセットのクエリで渡されるパラメーターの数) を格納します。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
-レコードセットクラスにパラメーターデータメンバーが含まれている場合、クラスのコンストラクターは、正しい数値を使用して *m_nParams* を初期化する必要があります。 *M_nParams*の値の既定値は0です。 手動で行う必要があるパラメーターデータメンバーを追加する場合は、パラメーターの数を反映するために、クラスコンストラクターに初期化を手動で追加する必要もあります (これは、 *m_strFilter* または *m_strSort* 文字列の ' ' プレースホルダーの数と少なくとも同じである必要があります)。
+レコードセットクラスにパラメーターデータメンバーが含まれている場合、クラスのコンストラクターは、正しい数値を使用して *m_nParams* を初期化する必要があります。 *M_nParams* の値の既定値は0です。 手動で行う必要があるパラメーターデータメンバーを追加する場合は、パラメーターの数を反映するために、クラスコンストラクターに初期化を手動で追加する必要もあります (これは、 *m_strFilter* または *m_strSort* 文字列の ' ' プレースホルダーの数と少なくとも同じである必要があります)。
 
 フレームワークは、レコードセットのクエリをパラメーター化するときに、この数値を使用します。
 
@@ -1722,7 +1723,7 @@ BOOL IsOpen() const;
 
 オブジェクトの基になる DAO レコードセットオブジェクトの OLE インターフェイスへのポインターを格納 `CDaoRecordset` します。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 DAO インターフェイスに直接アクセスする必要がある場合は、このポインターを使用します。
 
@@ -1732,7 +1733,7 @@ DAO インターフェイスに直接アクセスする必要がある場合は�
 
 `CDaoDatabase`レコードセットをデータソースに接続するために使用するオブジェクトへのポインターを格納します。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 この変数は2つの方法で設定されます。 通常は、レコードセットオブジェクトを構築するときに、既に開かれているオブジェクトへのポインターを渡し `CDaoDatabase` ます。 代わりに NULL を渡すと、に `CDaoRecordset` よってオブジェクトが作成さ `CDaoDatabase` れて開きます。 どちらの場合も、に `CDaoRecordset` よってこの変数にポインターが格納されます。
 
@@ -1744,7 +1745,7 @@ DAO インターフェイスに直接アクセスする必要がある場合は�
 
 SQL ステートメントの **where** 句を構築するために使用される文字列が含まれています。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 これには、レコードセットをフィルター **選択するための予約** 語は含まれません。 このデータメンバーの使用は、テーブル型のレコードセットには適用されません。 `m_strFilter`ポインターを使用してレコードセットを開く場合、を使用しても効果はありません `CDaoQueryDef` 。
 
@@ -1754,9 +1755,9 @@ SQL ステートメントの **where** 句を構築するために使用され�
 
 ## <a name="cdaorecordsetm_strsort"></a><a name="m_strsort"></a> CDaoRecordset:: m_strSort
 
-予約語の**orderby**を使用せずに、SQL ステートメントの**orderby**句を含む文字列を格納します。
+予約語の **orderby** を使用せずに、SQL ステートメントの **orderby** 句を含む文字列を格納します。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 ダイナセットおよびスナップショット型のレコードセットオブジェクトを基準にして並べ替えることができます。
 
@@ -1779,7 +1780,7 @@ virtual void Move(long lRows);
 *lRows*<br/>
 前方または後方に移動するレコードの数。 正の値は、レコードセットの末尾に向かって前方に移動します。 負の値は、先頭に向かって後方に移動します。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 前方または後方に移動できます。 `Move( 1 )` はと同じ `MoveNext` で、 `Move( -1 )` はと同じです `MovePrev` 。
 
@@ -1792,7 +1793,7 @@ virtual void Move(long lRows);
 > [!NOTE]
 > `Move`現在のレコードを更新または追加するときに関数のいずれかを呼び出すと、更新は警告なしに失われます。
 
-`Move`順方向専用スクロールスナップショットでを呼び出す場合、 *lrows*パラメーターは正の整数である必要があり、ブックマークは許可されないため、前方にのみ移動できます。
+`Move`順方向専用スクロールスナップショットでを呼び出す場合、 *lrows* パラメーターは正の整数である必要があり、ブックマークは許可されないため、前方にのみ移動できます。
 
 レコードセット内の first、last、next、または previous レコードを現在のレコードにするには、 `MoveFirst` 、、 `MoveLast` `MoveNext` 、または `MovePrev` メンバー関数を呼び出します。
 
@@ -1806,7 +1807,7 @@ virtual void Move(long lRows);
 void MoveFirst();
 ```
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 レコードセットを開いた直後にを呼び出す必要はありません `MoveFirst` 。 その時点で、最初のレコード (存在する場合) が自動的に現在のレコードになります。
 
@@ -1836,7 +1837,7 @@ void MoveFirst();
 void MoveLast();
 ```
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 > [!CAUTION]
 > レコードセットにレコードがない場合、いずれかの関数を呼び出すと `Move` 例外がスローされます。 一般に、 `IsBOF` 移動操作の前にとを呼び出して、レコード `IsEOF` セットにレコードがあるかどうかを確認します。 `Open`またはを呼び出した後 `Requery` 、 `IsBOF` またはを呼び出し `IsEOF` ます。
@@ -1862,7 +1863,7 @@ void MoveLast();
 void MoveNext();
 ```
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 前のレコードに移動する前に、を呼び出すことをお勧めし `IsBOF` ます。 が `MovePrev` `CDaoException` `IsBOF` 0 以外の値を返した場合、最初のレコードの前に既にスクロールしているか、レコードセットによってレコードが選択されていないかを示すを呼び出すと、がスローされます。
 
@@ -1888,7 +1889,7 @@ void MoveNext();
 void MovePrev();
 ```
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 前のレコードに移動する前に、を呼び出すことをお勧めし `IsBOF` ます。 が `MovePrev` `CDaoException` `IsBOF` 0 以外の値を返した場合、最初のレコードの前に既にスクロールしているか、レコードセットによってレコードが選択されていないかを示すを呼び出すと、がスローされます。
 
@@ -1934,7 +1935,7 @@ virtual void Open(
 *Noて Type*<br/>
 次のいずれかの値です。
 
-- `dbOpenDynaset` 双方向スクロールを持つ、ダイナセット型のレコードセット。 これは既定値です。
+- `dbOpenDynaset` 双方向スクロールを持つ、ダイナセット型のレコードセット。 既定値です。
 
 - `dbOpenTable` 双方向スクロールを含むテーブル型のレコードセット。
 
@@ -1979,7 +1980,7 @@ virtual void Open(
 *pQueryDef*<br/>
 [CDaoQueryDef](../../mfc/reference/cdaoquerydef-class.md)オブジェクトへのポインター。 このバージョンは、ダイナセット型およびスナップショット型のレコードセットに対してのみ有効です。 このオプションを使用する場合、 `CDaoDatabase` の構築に使用されるポインター `CDaoRecordset` は使用されません。代わりに、クエリが存在するデータベースが使用されます。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 を呼び出す前に `Open` 、レコードセットオブジェクトを作成する必要があります。 これにはいくつかの方法があります。
 
@@ -1992,7 +1993,7 @@ virtual void Open(
     > [!NOTE]
     >  レコードセットによってオブジェクトが開かれると `CDaoDatabase` 、排他アクセスでデータソースが開かれます。
 
-LpszSQL パラメーターを使用するのバージョンでは、 `Open` レコードセットが開かれると、いくつかの方法のいずれかでレコードを取得できます。 *lpszSQL* 最初のオプションは、で DFX 関数を使用することです `DoFieldExchange` 。 2つ目の方法では、メンバー関数を呼び出して動的バインドを使用し `GetFieldValue` ます。 これらのオプションは、個別に、または組み合わせて実装できます。 これらが結合されている場合は、への呼び出しで SQL ステートメントを自分で渡す必要があり `Open` ます。
+LpszSQL パラメーターを使用するのバージョンでは、 `Open` レコードセットが開かれると、いくつかの方法のいずれかでレコードを取得できます。  最初のオプションは、で DFX 関数を使用することです `DoFieldExchange` 。 2つ目の方法では、メンバー関数を呼び出して動的バインドを使用し `GetFieldValue` ます。 これらのオプションは、個別に、または組み合わせて実装できます。 これらが結合されている場合は、への呼び出しで SQL ステートメントを自分で渡す必要があり `Open` ます。
 
 オブジェクトを渡す2番目のバージョンのを使用すると、結果として得られる列が使用できるようになります。これにより、および DFX のメカニズムによってバインドしたり、を使用して `Open` `CDaoTableDef` 動的にバインドしたりすることができ `DoFieldExchange` `GetFieldValue` ます。
 
@@ -2010,11 +2011,11 @@ LpszSQL パラメーターを使用するのバージョンでは、 `Open` レ�
 |--------------------------------------|----------------------------------------|-------------|
 |NULL|`GetDefaultSQL` の返す文字列。||
 |1つまたは複数のテーブル名またはその両方の名前のコンマ区切りのリスト。|で表されるすべての列 `DoFieldExchange` 。|`"Customer"`|
-|テーブルリスト**から**列リストを**選択し**ます|指定された tabledef または querydef から指定された列。|`"SELECT CustId, CustName`<br /><br /> `FROM Customer"`|
+|テーブルリスト **から** 列リストを **選択し** ます|指定された tabledef または querydef から指定された列。|`"SELECT CustId, CustName`<br /><br /> `FROM Customer"`|
 
 通常の手順では、NULL をに渡します。この場合は、が `Open` `Open` `GetDefaultSQL` 派生クラスを作成するときに ClassWizard が生成するオーバーライド可能なメンバー関数を呼び出します。 `CDaoRecordset` この値は、ClassWizard で指定したテーブル名またはクエリ名 (またはその両方) を示します。 代わりに、 *lpszSQL* パラメーターで他の情報を指定することもできます。
 
-どのような場合でも、は `Open` クエリの最終的な sql 文字列を構築します (文字列には、渡され*た lpszSQL*文字列に Sql **WHERE**および**ORDERBY**句が追加されている場合があります)。その後、クエリを実行します。 を呼び出した後にを呼び出すことによって、構築された文字列を調べることができ `GetSQL` `Open` ます。
+どのような場合でも、は `Open` クエリの最終的な sql 文字列を構築します (文字列には、渡され *た lpszSQL* 文字列に Sql **WHERE** および **ORDERBY** 句が追加されている場合があります)。その後、クエリを実行します。 を呼び出した後にを呼び出すことによって、構築された文字列を調べることができ `GetSQL` `Open` ます。
 
 レコードセット クラスのフィールド データ メンバーは、選択したデータの列に結び付けられています。 いくつかのレコードが返された場合、最初のレコードが現在のレコードになります。
 
@@ -2039,7 +2040,7 @@ LpszSQL パラメーターを使用するのバージョンでは、 `Open` レ�
 virtual void Requery();
 ```
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 いくつかのレコードが返された場合、最初のレコードが現在のレコードになります。
 
@@ -2084,7 +2085,7 @@ BOOL Seek(
 次のいずれかの文字列式: "<"、" \<=", "=", "> ="、または ">"。
 
 *pKey1*<br/>
-インデックスの最初のフィールドに値が対応する [COleVariant](../../mfc/reference/colevariant-class.md) へのポインター。 必須です。
+インデックスの最初のフィールドに値が対応する [COleVariant](../../mfc/reference/colevariant-class.md) へのポインター。 必須。
 
 *pKey2*<br/>
 `COleVariant`インデックスの2番目のフィールド (存在する場合) に対応する値を持つへのポインター。 既定値は NULL です。
@@ -2105,17 +2106,17 @@ BOOL Seek(
 
 一致するレコードが見つかった場合は0以外。それ以外の場合は0。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 2つ目の (配列) バージョンのを使用して、 `Seek` 4 つ以上のフィールドのインデックスを処理します。
 
 `Seek` テーブル型のレコードセットに対する高パフォーマンスのインデックス検索を有効にします。 を呼び出す前にを呼び出すことにより、現在のインデックスを設定する必要があり `SetCurrentIndex` `Seek` ます。 インデックスが一意でないキーフィールドを識別する場合、は、 `Seek` 条件を満たす最初のレコードを検索します。 インデックスを設定しないと、例外がスローされます。
 
-UNICODE レコードセットを作成しない場合は、オブジェクトを `COleVariant` 明示的に ANSI として宣言する必要があることに注意してください。 これを行うには、 *vtsrc*を (ANSI) に設定したコンストラクターの[COleVariant:: COleVariant](../../mfc/reference/colevariant-class.md#colevariant)**(** *lpszsrc* **,** *vtsrc* **)** 形式を使用する `VT_BSTRT` か、 `COleVariant` *vtsrc*がに設定された関数[setstring](../../mfc/reference/colevariant-class.md#setstring)**(** *lpszsrc* **,** *vtsrc* **)** を使用し `VT_BSTRT` ます。
+UNICODE レコードセットを作成しない場合は、オブジェクトを `COleVariant` 明示的に ANSI として宣言する必要があることに注意してください。 これを行うには、 *vtsrc* を (ANSI) に設定したコンストラクターの [COleVariant:: COleVariant](../../mfc/reference/colevariant-class.md#colevariant)**(** *lpszsrc* **,** *vtsrc* **)** 形式を使用する `VT_BSTRT` か、 `COleVariant` *vtsrc* がに設定された関数 [setstring](../../mfc/reference/colevariant-class.md#setstring)**(** *lpszsrc* **,** *vtsrc* **)** を使用し `VT_BSTRT` ます。
 
-を呼び出すと `Seek` 、1つ以上のキー値と比較演算子 ("<"、" \<=", "=", "> ="、または ">") が渡されます。 `Seek` 指定されたキーフィールドを検索し、 *Lpszcomparison* および *pKey1*によって指定された条件を満たす最初のレコードを検索します。 見つかった場合、は `Seek` 0 以外の値を返し、そのレコードを現在のものにします。 が `Seek` 一致の検索に失敗した場合、は `Seek` 0 を返し、現在のレコードは未定義になります。 DAO を直接使用する場合は、NoMatch プロパティを明示的に確認する必要があります。
+を呼び出すと `Seek` 、1つ以上のキー値と比較演算子 ("<"、" \<=", "=", "> ="、または ">") が渡されます。 `Seek` 指定されたキーフィールドを検索し、 *Lpszcomparison* および *pKey1* によって指定された条件を満たす最初のレコードを検索します。 見つかった場合、は `Seek` 0 以外の値を返し、そのレコードを現在のものにします。 が `Seek` 一致の検索に失敗した場合、は `Seek` 0 を返し、現在のレコードは未定義になります。 DAO を直接使用する場合は、NoMatch プロパティを明示的に確認する必要があります。
 
-`lpszComparison`が "="、">="、または ">" の場合、は `Seek` インデックスの先頭から開始します。 *Lpszcomparison*が "<" または "<=" の場合、は `Seek` インデックスの末尾から開始し、末尾に重複するインデックスエントリがない限り、後方に検索します。 この場合、は、 `Seek` インデックスの末尾にある重複するインデックスエントリの中から任意のエントリから開始します。
+`lpszComparison`が "="、">="、または ">" の場合、は `Seek` インデックスの先頭から開始します。 *Lpszcomparison* が "<" または "<=" の場合、は `Seek` インデックスの末尾から開始し、末尾に重複するインデックスエントリがない限り、後方に検索します。 この場合、は、 `Seek` インデックスの末尾にある重複するインデックスエントリの中から任意のエントリから開始します。
 
 を使用する場合、現在のレコードである必要はありません `Seek` 。
 
@@ -2138,7 +2139,7 @@ void SetAbsolutePosition(long lPosition);
 *lPosition*<br/>
 レコードセット内の現在のレコードの序数位置に対応します。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 を呼び出す `SetAbsolutePosition` と、ダイナセット型またはスナップショット型のレコードセット内の序数位置に基づいて、現在のレコードポインターを特定のレコードに配置できます。 [GetAbsolutePosition](#getabsoluteposition)を呼び出すことによって、現在のレコード番号を確認することもできます。
 
@@ -2167,14 +2168,14 @@ void SetBookmark(COleVariant varBookmark);
 *varBookmark*<br/>
 特定のレコードのブックマーク値を格納している [COleVariant](../../mfc/reference/colevariant-class.md) オブジェクト。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 レコードセットオブジェクトを作成または開くと、そのレコードにはそれぞれ一意のブックマークが既に存在します。 を呼び出して、値をオブジェクトに保存することにより、現在のレコードのブックマークを取得でき `GetBookmark` `COleVariant` ます。 後で `SetBookmark` 、保存されたブックマーク値を使用してを呼び出すことで、そのレコードに戻ることができます。
 
 > [!NOTE]
 > [Requery](#requery)を呼び出すと、DAO ブックマークが変更します。
 
-UNICODE レコードセットを作成していない場合は、 `COleVariant` オブジェクトが明示的に ANSI として宣言されている必要があることに注意してください。 これを行うには、 *vtsrc*を (ANSI) に設定したコンストラクターの[COleVariant:: COleVariant](../../mfc/reference/colevariant-class.md#colevariant)**(** *lpszsrc* **,** *vtsrc* **)** 形式を使用する `VT_BSTRT` か、 `COleVariant` *vtsrc*がに設定された関数[setstring](../../mfc/reference/colevariant-class.md#setstring)**(** *lpszsrc* **,** *vtsrc* **)** を使用し `VT_BSTRT` ます。
+UNICODE レコードセットを作成していない場合は、 `COleVariant` オブジェクトが明示的に ANSI として宣言されている必要があることに注意してください。 これを行うには、 *vtsrc* を (ANSI) に設定したコンストラクターの [COleVariant:: COleVariant](../../mfc/reference/colevariant-class.md#colevariant)**(** *lpszsrc* **,** *vtsrc* **)** 形式を使用する `VT_BSTRT` か、 `COleVariant` *vtsrc* がに設定された関数 [setstring](../../mfc/reference/colevariant-class.md#setstring)**(** *lpszsrc* **,** *vtsrc* **)** を使用し `VT_BSTRT` ます。
 
 関連情報については、DAO ヘルプの「Bookmark プロパティ」および「Bookmarkable プロパティ」を参照してください。
 
@@ -2191,7 +2192,7 @@ void SetCacheSize(long lSize);
 *lSize*<br/>
 レコードの数を指定します。 一般的な値は100です。 0に設定すると、キャッシュは無効になります。 5 ~ 1200 のレコードを設定する必要があります。 キャッシュでは、大量のメモリを使用する場合があります。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 キャッシュとは、アプリケーションの実行中にデータが再度要求される場合に、サーバーから最後に取得されたデータを保持するローカルメモリ内の領域です。 データキャッシュを使用すると、ダイナセット型のレコードセットオブジェクトを介してリモートサーバーからデータを取得するアプリケーションのパフォーマンスが向上します。 データが要求されると、Microsoft Jet データベースエンジンは、要求されたデータをサーバーから取得するのではなく、最初にキャッシュを確認します。これには時間がかかります。 ODBC データソースから取得されていないデータはキャッシュに保存されません。
 
@@ -2212,7 +2213,7 @@ void SetCacheStart(COleVariant varBookmark);
 *varBookmark*<br/>
 キャッシュされるレコードセット内の最初のレコードのブックマークを指定する [COleVariant](../../mfc/reference/colevariant-class.md) 。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 メンバー関数の *varbookmark* パラメーターには、任意のレコードの bookmark 値を使用でき `SetCacheStart` ます。 現在のレコードでキャッシュを開始するレコードを作成し、 [SetBookmark](#setbookmark)を使用してそのレコードのブックマークを確立し、ブックマークの値をメンバー関数のパラメーターとして渡し `SetCacheStart` ます。
 
@@ -2222,7 +2223,7 @@ Microsoft Jet データベースエンジンはキャッシュからキャッシ
 
 キャッシュされたすべてのデータを強制的に更新するには、の *Lsize* パラメーターを `SetCacheSize` 0 として渡し、最初に要求した `SetCacheSize` キャッシュのサイズを使用してを再度呼び出してから、 `FillCache` メンバー関数を呼び出します。
 
-UNICODE レコードセットを作成していない場合は、 `COleVariant` オブジェクトが明示的に ANSI として宣言されている必要があることに注意してください。 これを行うには、 *vtsrc*を (ANSI) に設定したコンストラクターの[COleVariant:: COleVariant](../../mfc/reference/colevariant-class.md#colevariant)**(** *lpszsrc* **,** *vtsrc* **)** 形式を使用する `VT_BSTRT` か、 `COleVariant` *vtsrc*がに設定された関数[setstring](../../mfc/reference/colevariant-class.md#setstring)**(** *lpszsrc* **,** *vtsrc* **)** を使用し `VT_BSTRT` ます。
+UNICODE レコードセットを作成していない場合は、 `COleVariant` オブジェクトが明示的に ANSI として宣言されている必要があることに注意してください。 これを行うには、 *vtsrc* を (ANSI) に設定したコンストラクターの [COleVariant:: COleVariant](../../mfc/reference/colevariant-class.md#colevariant)**(** *lpszsrc* **,** *vtsrc* **)** 形式を使用する `VT_BSTRT` か、 `COleVariant` *vtsrc* がに設定された関数 [setstring](../../mfc/reference/colevariant-class.md#setstring)**(** *lpszsrc* **,** *vtsrc* **)** を使用し `VT_BSTRT` ます。
 
 関連情報については、DAO ヘルプの「CacheSize、CacheStart プロパティ」を参照してください。
 
@@ -2239,13 +2240,13 @@ void SetCurrentIndex(LPCTSTR lpszIndex);
 *lpszIndex*<br/>
 設定するインデックスの名前を格納しているポインター。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 ベーステーブル内のレコードは、特定の順序では保存されません。 インデックスを設定すると、データベースから返されるレコードの順序が変わりますが、レコードが格納される順序には影響しません。 指定されたインデックスは既に定義されている必要があります。 存在しないインデックスオブジェクトを使用しようとした場合、または [Seek](#seek)を呼び出したときにインデックスが設定されていない場合、MFC は例外をスローします。
 
 [CDaoTableDef:: CreateIndex](../../mfc/reference/cdaotabledef-class.md#createindex)を呼び出し、基になるテーブルグループの Indexes コレクションに新しいインデックスを追加することによって、テーブルの新しいインデックスを作成できます。そのためには、 [CDaoTableDef:: Append](../../mfc/reference/cdaotabledef-class.md#append)を呼び出し、レコードセットを再度開きます。
 
-テーブル型のレコードセットから返されるレコードは、基になるテーブルテーブルに対して定義されているインデックスによってのみ並べ替えることができます。 他の順序でレコードを並べ替えるには、 [CDaoRecordset:: m_strSort](#m_strsort)に格納されている SQL **ORDERBY**句を使用して、ダイナセット型またはスナップショット型のレコードセットを開くことができます。
+テーブル型のレコードセットから返されるレコードは、基になるテーブルテーブルに対して定義されているインデックスによってのみ並べ替えることができます。 他の順序でレコードを並べ替えるには、 [CDaoRecordset:: m_strSort](#m_strsort)に格納されている SQL **ORDERBY** 句を使用して、ダイナセット型またはスナップショット型のレコードセットを開くことができます。
 
 関連情報については、DAO ヘルプの「Index オブジェクト」と「現在のインデックス」を参照してください。
 
@@ -2267,7 +2268,7 @@ void SetFieldDirty(
 *bDirty*<br/>
 フィールドデータメンバーに "ダーティ" としてフラグを設定する場合は TRUE (変更された場合)。 それ以外の場合は、フィールドデータメンバーに "clean" (変更なし) のフラグを設定する場合は FALSE。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 フィールドを変更せずにマークすると、フィールドは更新されません。
 
@@ -2282,9 +2283,9 @@ void SetFieldDirty(
 
 [!code-cpp[NVC_MFCDatabase#6](../../mfc/codesnippet/cpp/cdaorecordset-class_6.cpp)]
 
-`outputColumn`フィールドのみを NULL に設定します。**param**フィールドは影響を受けません。
+`outputColumn`フィールドのみを NULL に設定します。**param** フィールドは影響を受けません。
 
-**パラメーター**を操作するには、次のように、使用する個々の**パラメーター**の実際のアドレスを指定する必要があります。
+**パラメーター** を操作するには、次のように、使用する個々の **パラメーター** の実際のアドレスを指定する必要があります。
 
 [!code-cpp[NVC_MFCDatabase#7](../../mfc/codesnippet/cpp/cdaorecordset-class_7.cpp)]
 
@@ -2310,7 +2311,7 @@ void SetFieldNull(
 *bNull*<br/>
 フィールドデータメンバーに値がないことを示すフラグが設定されている場合は0以外 (Null)。 それ以外の場合は、フィールドデータメンバーに Null 以外のフラグが設定されている場合は0になります。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 `SetFieldNull` は、機構でバインドされたフィールドに使用され `DoFieldExchange` ます。
 
@@ -2329,7 +2330,7 @@ DFX のメカニズムでは、PSEUDONULL を使用します。 詳細につい�
 
 [!code-cpp[NVC_MFCDatabase#8](../../mfc/codesnippet/cpp/cdaorecordset-class_8.cpp)]
 
-`outputColumn`フィールドのみを NULL に設定します。**param**フィールドは影響を受けません。
+`outputColumn`フィールドのみを NULL に設定します。**param** フィールドは影響を受けません。
 
 ## <a name="cdaorecordsetsetfieldvalue"></a><a name="setfieldvalue"></a> CDaoRecordset:: SetFieldValue
 
@@ -2367,11 +2368,11 @@ void SetFieldValue(
 *lpszValue*<br/>
 フィールドの内容の値を格納している文字列へのポインター。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 `SetFieldValue` [DoFieldExchange](#dofieldexchange)メカニズムを使用して静的に列をバインドするのではなく、実行時にフィールドを動的にバインドするには、および[GetFieldValue](#getfieldvalue)を使用します。
 
-UNICODE レコードセットを作成しない場合は、パラメーターが含まれていない形式のを使用するか、 `SetFieldValue` `COleVariant` `COleVariant` オブジェクトを明示的に ANSI として宣言する必要があることに注意してください。 これを行うには、 *vtsrc*を (ANSI) に設定したコンストラクターの[COleVariant:: COleVariant](../../mfc/reference/colevariant-class.md#colevariant)**(** *lpszsrc* **,** *vtsrc* **)** 形式を使用する `VT_BSTRT` か、 `COleVariant` *vtsrc*がに設定された関数[setstring](../../mfc/reference/colevariant-class.md#setstring)**(** *lpszsrc* **,** *vtsrc* **)** を使用し `VT_BSTRT` ます。
+UNICODE レコードセットを作成しない場合は、パラメーターが含まれていない形式のを使用するか、 `SetFieldValue` `COleVariant` `COleVariant` オブジェクトを明示的に ANSI として宣言する必要があることに注意してください。 これを行うには、 *vtsrc* を (ANSI) に設定したコンストラクターの [COleVariant:: COleVariant](../../mfc/reference/colevariant-class.md#colevariant)**(** *lpszsrc* **,** *vtsrc* **)** 形式を使用する `VT_BSTRT` か、 `COleVariant` *vtsrc* がに設定された関数 [setstring](../../mfc/reference/colevariant-class.md#setstring)**(** *lpszsrc* **,** *vtsrc* **)** を使用し `VT_BSTRT` ます。
 
 関連情報については、DAO ヘルプの「フィールドオブジェクト」と「値プロパティ」を参照してください。
 
@@ -2392,7 +2393,7 @@ void SetFieldValueNull(LPCTSTR lpszName);
 *lpszName*<br/>
 名前で検索するための、レコードセット内のフィールドの名前。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 C++ NULL は Null と同じではありません。これは、データベース用語では、"値がない" ことを意味します。
 
@@ -2411,7 +2412,7 @@ void SetLockingMode(BOOL bPessimistic);
 *bPessimistic*<br/>
 ロックの種類を示すフラグ。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 ペシミスティックロックが有効になっている場合、編集中のレコードを含む2Kb ページは、メンバー関数を呼び出すとすぐにロックされ `Edit` ます。 またはメンバー関数、または Move 操作または Find 操作を呼び出すと、ページのロックが解除され `Update` `Close` ます。
 
@@ -2448,11 +2449,11 @@ virtual void SetParamValue(
 *lpszName*<br/>
 値を設定するパラメーターの名前。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 パラメーターは、レコードセットの SQL 文字列の一部として既に設定されている必要があります。 パラメーターには、名前またはコレクション内のインデックス位置によってアクセスできます。
 
-オブジェクトとして設定する値を指定し `COleVariant` ます。 オブジェクトに必要な値と型を設定する方法の詳細については `COleVariant` 、「クラス [COleVariant](../../mfc/reference/colevariant-class.md)」を参照してください。 UNICODE レコードセットを作成していない場合は、 `COleVariant` オブジェクトが明示的に ANSI として宣言されている必要があることに注意してください。 これを行うには、 *vtsrc*を (ANSI) に設定したコンストラクターの[COleVariant:: COleVariant](../../mfc/reference/colevariant-class.md#colevariant)**(** *lpszsrc* **,** *vtsrc* **)** 形式を使用する `VT_BSTRT` か、 `COleVariant` *vtsrc*がに設定された関数[setstring](../../mfc/reference/colevariant-class.md#setstring)**(** *lpszsrc* **,** *vtsrc* **)** を使用し `VT_BSTRT` ます。
+オブジェクトとして設定する値を指定し `COleVariant` ます。 オブジェクトに必要な値と型を設定する方法の詳細については `COleVariant` 、「クラス [COleVariant](../../mfc/reference/colevariant-class.md)」を参照してください。 UNICODE レコードセットを作成していない場合は、 `COleVariant` オブジェクトが明示的に ANSI として宣言されている必要があることに注意してください。 これを行うには、 *vtsrc* を (ANSI) に設定したコンストラクターの [COleVariant:: COleVariant](../../mfc/reference/colevariant-class.md#colevariant)**(** *lpszsrc* **,** *vtsrc* **)** 形式を使用する `VT_BSTRT` か、 `COleVariant` *vtsrc* がに設定された関数 [setstring](../../mfc/reference/colevariant-class.md#setstring)**(** *lpszsrc* **,** *vtsrc* **)** を使用し `VT_BSTRT` ます。
 
 ## <a name="cdaorecordsetsetparamvaluenull"></a><a name="setparamvaluenull"></a> CDaoRecordset:: SetParamValueNull
 
@@ -2471,7 +2472,7 @@ void SetParamValueNull(LPCTSTR lpszName);
 *lpszName*<br/>
 名前で検索するための、レコードセット内のフィールドの名前。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 C++ NULL は Null と同じではありません。これは、データベース用語では、"値がない" ことを意味します。
 
@@ -2488,7 +2489,7 @@ void SetPercentPosition(float fPosition);
 *fPosition*<br/>
 0 ～ 100 の値。
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 ダイナセット型またはスナップショット型のレコードセットを使用する場合は、最初にを呼び出す前に、最後のレコードに移動してレコードセットを設定し `SetPercentPosition` ます。 `SetPercentPosition`レコードセットを完全に作成する前にを呼び出すと、移動の量は、 [GetRecordCount](#getrecordcount)の値によって示されているようにアクセスされたレコードの数に対して相対的になります。 を呼び出して、最後のレコードに移動することができ `MoveLast` ます。
 
@@ -2507,7 +2508,7 @@ void SetPercentPosition(float fPosition);
 virtual void Update();
 ```
 
-### <a name="remarks"></a>注釈
+### <a name="remarks"></a>解説
 
 この呼び出しは、または操作を完了するために必要です `AddNew` `Edit` 。
 
@@ -2525,7 +2526,7 @@ virtual void Update();
 
 関連情報については、DAO ヘルプの「AddNew メソッド」、「CancelUpdate メソッド」、「Delete メソッド」、「LastModified プロパティ」、「Update メソッド」、および「EditMode プロパティ」を参照してください。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [CObject クラス](../../mfc/reference/cobject-class.md)<br/>
 [階層図](../../mfc/hierarchy-chart.md)<br/>

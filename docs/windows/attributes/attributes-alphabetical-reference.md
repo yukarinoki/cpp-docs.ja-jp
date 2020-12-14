@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: 属性のアルファベット順の参照'
 title: 属性リファレンス (アルファベット順)
 ms.custom: index-page
 ms.date: 10/02/2018
@@ -8,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - attributes [C++/CLI]
 ms.assetid: fb2216ef-9fbd-44f4-afed-732aa99450e2
-ms.openlocfilehash: ad9ecd1e3b3d4620b1f862fd1d5d70ef050da48d
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: b4739439ea49ab97f0727ea5f3ec22b41735467a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87215336"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97247593"
 ---
 # <a name="attributes-alphabetical-reference"></a>属性リファレンス (アルファベット順)
 
@@ -28,7 +29,7 @@ Microsoft C++ コンパイラでは、次の属性を使用できます。
 |[attribute](attribute.md)|カスタム属性を作成できます。|
 |[bindable](bindable.md)|プロパティがデータ バインディングをサポートすることを示します。|
 |[call_as](call-as.md)|リモート処理不可能関数をリモート関数にマップできるようにします。|
-|[case](case-cpp.md)|共用体の[switch_type](switch-type.md)属性と共に使用されます。|
+|[case](case-cpp.md)|共用体の [switch_type](switch-type.md) 属性と共に使用されます。|
 |[coclass](coclass.md)|Com インターフェイスを実装できる COM オブジェクトを作成します。|
 |[com_interface_entry](com-interface-entry-cpp.md)|COM マップにインターフェイスエントリを追加します。|
 |[control](control.md)|ユーザー定義型がコントロールであることを指定します。|
@@ -40,14 +41,14 @@ Microsoft C++ コンパイラでは、次の属性を使用できます。
 |[db_param](db-param.md)|指定されたメンバー変数を入力パラメーターまたは出力パラメーターに関連付けます。|
 |[db_source](db-source.md)|プロバイダーを介してデータソースへの接続を作成し、カプセル化します。|
 |[db_table](db-table.md)|OLE DB テーブルを開きます。|
-|[既定値](default-cpp.md)|コクラス内で定義されるカスタムまたはディスパッチ インターフェイスが既定のプログラミング インターフェイスを表すことを示します。|
+|[default](default-cpp.md)|コクラス内で定義されるカスタムまたはディスパッチ インターフェイスが既定のプログラミング インターフェイスを表すことを示します。|
 |[defaultbind](defaultbind.md)|オブジェクトを最もよく表す、1つのバインド可能なプロパティを示します。|
 |[defaultcollelem](defaultcollelem.md)|Visual Basic コードの最適化に使用します。|
 |[既定](defaultvalue.md)|型指定された省略可能なパラメーターの既定値を指定できます。|
 |[defaultvtable](defaultvtable.md)|コントロールの既定の vtable インターフェイスとしてインターフェイスを定義します。|
 |[dispinterface](dispinterface.md)|ディスパッチ インターフェイスとしてインターフェイスを .idl ファイルに配置します。|
 |[displaybind](displaybind.md)|バインド可能としてユーザーに表示される必要があるプロパティを示します。|
-|[dual](dual.md)|インターフェイスを .idl ファイルにデュアルインターフェイスとして配置します。|
+|[×](dual.md)|インターフェイスを .idl ファイルにデュアルインターフェイスとして配置します。|
 |[emitidl](emitidl.md)|すべての後続の IDL 属性を処理し、生成された .idl ファイルに配置するかどうかを決定します。|
 |[キー](entry.md)|DLL 内のエントリポイントを識別することによって、モジュール内のエクスポートされた関数または定数を指定します。|
 |[event_receiver](event-receiver.md)|イベントレシーバーを作成します。|
@@ -76,7 +77,7 @@ Microsoft C++ コンパイラでは、次の属性を使用できます。
 |[lcid](lcid.md)|関数にロケール識別子を渡すことができます。|
 |[length_is](length-is.md)|転送する配列要素の数を指定します。|
 |[library_block](library-block.md)|.Idl ファイルのライブラリブロック内にコンストラクトを配置します。|
-|[licensed](licensed.md)|適用されるコクラスがライセンスされ、を使用してインスタンス化される必要があることを示し `IClassFactory2` ます。|
+|[ライセンス](licensed.md)|適用されるコクラスがライセンスされ、を使用してインスタンス化される必要があることを示し `IClassFactory2` ます。|
 |[地元の](local-cpp.md)|インターフェイスヘッダーで使用するときに、MIDL コンパイラをヘッダージェネレーターとして使用できるようにします。 個々の関数で使用する場合は、スタブが生成されないローカルプロシージャを指定します。|
 |[max_is](max-is.md)|有効な配列インデックスの最大値を指定します。|
 |[第](module-cpp.md)|.idl ファイルのライブラリ ブロックを定義します。|
@@ -88,7 +89,7 @@ Microsoft C++ コンパイラでは、次の属性を使用できます。
 |[object](object-cpp.md)|カスタムインターフェイスを識別します。カスタム属性と同義です。|
 |[odl](odl.md)|オブジェクト記述言語 (ODL) インターフェイスとしてインターフェイスを識別します。|
 |[oleautomation](oleautomation.md)|インターフェイスがオートメーションと互換性があることを示します。|
-|[optional](optional-cpp.md)|メンバー関数の省略可能なパラメーターを指定します。|
+|[省略可能](optional-cpp.md)|メンバー関数の省略可能なパラメーターを指定します。|
 |[out](out-cpp.md)|呼び出されたプロシージャから呼び出したプロシージャ (サーバーからクライアント) に返されるポインター パラメーターを示します。|
 |[pointer_default](pointer-default.md)|パラメーターリストに表示されるトップレベルのポインターを除く、すべてのポインターの既定のポインター属性を指定します。|
 |[unmanaged](pragma.md)|指定された文字列を、引用符ではなく、生成された .idl ファイルに出力します。|

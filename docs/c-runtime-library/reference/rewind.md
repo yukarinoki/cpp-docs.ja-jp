@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「rewind」を参照してください。
 title: rewind
 ms.date: 4/2/2020
 api_name:
@@ -29,12 +30,12 @@ helpviewer_keywords:
 - file pointers [C++], repositioning
 - file pointers [C++]
 ms.assetid: 1a460ce1-28d8-4b5e-83a6-633dca29c28a
-ms.openlocfilehash: 645b8bf105641b9f13a9f9fc0605e6b8526b4b56
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 1b66ee84e562ebbb743413c6f76f67071c754a67
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82917754"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97250297"
 ---
 # <a name="rewind"></a>rewind
 
@@ -55,15 +56,15 @@ void rewind(
 
 ## <a name="remarks"></a>解説
 
-**Rewind**関数は、*ストリーム*に関連付けられたファイルポインターをファイルの先頭に再配置します。 **rewind** 関数の呼び出しは、次の関数の呼び出しと似ています。
+**Rewind** 関数は、*ストリーム* に関連付けられたファイルポインターをファイルの先頭に再配置します。 **rewind** 関数の呼び出しは、次の関数の呼び出しと似ています。
 
 **(void) fseek (** _stream_**, 0L, SEEK_SET);**
 
-ただし、 [fseek](fseek-fseeki64.md)とは異なり、**巻き戻し**はストリームのエラーインジケーターとファイルの終端インジケーターをクリアします。 また、 [fseek](fseek-fseeki64.md)とは異なり、 **rewind**はポインターが正常に移動されたかどうかを示す値を返しません。
+ただし、 [fseek](fseek-fseeki64.md)とは異なり、 **巻き戻し** はストリームのエラーインジケーターとファイルの終端インジケーターをクリアします。 また、 [fseek](fseek-fseeki64.md)とは異なり、 **rewind** はポインターが正常に移動されたかどうかを示す値を返しません。
 
-キーボードバッファーをクリアするには、既定でキーボードに関連付けられているストリーム**stdin**で**rewind**を使用します。
+キーボードバッファーをクリアするには、既定でキーボードに関連付けられているストリーム **stdin** で **rewind** を使用します。
 
-Stream が**NULL**ポインターの場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、この関数はを返し、 **errno**は**EINVAL**に設定されます。
+Stream が **NULL** ポインターの場合は、「 [パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、この関数はを返し、 **errno** は **EINVAL** に設定されます。
 
 これらと他のエラー コードの詳細については、「[_doserrno、errno、_sys_errlist、および _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」を参照してください。
 
@@ -71,7 +72,7 @@ Stream が**NULL**ポインターの場合は、「[パラメーターの検証]
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**巻き**|\<stdio.h>|
 
