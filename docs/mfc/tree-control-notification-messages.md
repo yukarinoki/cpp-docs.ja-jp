@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「ツリーコントロールの通知メッセージ」を参照してください。
 title: ツリー コントロールの通知メッセージ
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,31 +9,31 @@ helpviewer_keywords:
 - notifications [MFC], CTreeCtrl
 - tree controls [MFC], notification messages
 ms.assetid: ac7013b4-91dd-4668-bd75-439ca0680ef9
-ms.openlocfilehash: 90e2e112d7862dfed7d8af31cfb72ff45633a2c1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 899b6469a2de9a076dd33e62c5023f502448d45f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62181642"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97263986"
 ---
 # <a name="tree-control-notification-messages"></a>ツリー コントロールの通知メッセージ
 
-ツリー コントロール ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) WM_NOTIFY メッセージとして、次の通知メッセージを送信します。
+ツリーコントロール ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) は、次の通知メッセージを WM_NOTIFY メッセージとして送信します。
 
 |通知メッセージ|説明|
 |--------------------------|-----------------|
-|TVN_BEGINDRAG|ドラッグ アンド ドロップ操作の開始を通知します。|
-|TVN_BEGINLABELEDIT|ラベルのインプレース編集の開始を通知します。|
-|TVN_BEGINRDRAG|マウスの右ボタンを使用して、ドラッグ アンド ドロップ操作の開始を通知します。|
-|TVN_DELETEITEM|特定の項目の削除を知らせます。|
-|TVN_ENDLABELEDIT|ラベルの編集の終了を通知します。|
-|TVN_GETDISPINFO|ツリー コントロールが項目を表示するが必要な要求情報|
-|TVN_ITEMEXPANDED|信号の子項目の親項目の一覧が展開されたかどうか、または折りたたまれていること|
-|TVN_ITEMEXPANDING|子アイテムの親項目の一覧が展開または折りたたむに信号|
-|TVN_KEYDOWN|キーボード イベントを通知します。|
-|TVN_SELCHANGED|1 つの項目から別の選択が変更されたことを通知|
-|TVN_SELCHANGING|選択範囲は 1 つの項目から別に変更することを通知|
-|TVN_SETDISPINFO|項目に保持される情報を更新する通知|
+|TVN_BEGINDRAG|ドラッグアンドドロップ操作の開始を通知します|
+|TVN_BEGINLABELEDIT|埋め込み先のラベル編集の開始を通知します|
+|TVN_BEGINRDRAG|マウスの右ボタンを使用して、ドラッグアンドドロップ操作の開始を通知します。|
+|TVN_DELETEITEM|特定の項目が削除されたことを通知します。|
+|TVN_ENDLABELEDIT|ラベル編集の終了を通知します|
+|TVN_GETDISPINFO|項目を表示するためにツリーコントロールが必要とする情報を要求します。|
+|TVN_ITEMEXPANDED|親項目の子項目のリストが展開または折りたたまれていることを通知します。|
+|TVN_ITEMEXPANDING|親項目の子項目のリストが展開または折りたたまれようとしていることを通知します。|
+|TVN_KEYDOWN|キーボードイベントを通知します|
+|TVN_SELCHANGED|選択内容がある項目から別の項目に変更されたことを通知します。|
+|TVN_SELCHANGING|選択内容がある項目から別の項目に変更されようとしていることを通知します。|
+|TVN_SETDISPINFO|アイテムに対して保持されている情報を更新する通知|
 
 ## <a name="see-also"></a>関連項目
 

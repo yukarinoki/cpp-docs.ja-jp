@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「コードウィザードを使用したコントロールへの Type-Safe アクセス」を参照してください。
 title: コード ウィザードを使用した、コントロールへのタイプ セーフ アクセス
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - dialog boxes [MFC], access to controls
 - dialog box controls [MFC], accessing
 ms.assetid: b8874393-ee48-4124-8d78-e3648a7e29b9
-ms.openlocfilehash: ee7c49f75dcdc2b6c32f2b391ace7260b46d197b
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: b68331df61c1586f4cc63413f162ac1af107ce88
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91507894"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97263804"
 ---
 # <a name="type-safe-access-to-controls-with-code-wizards"></a>コード ウィザードを使用した、コントロールへのタイプ セーフ アクセス
 
@@ -25,7 +26,7 @@ DDX 機能に慣れている場合は、 [メンバー変数の追加ウィザ�
 > [!NOTE]
 > 特定のコントロールについては、必要に応じて、Value プロパティを持つ複数のメンバー変数と、Control プロパティを持つメンバー変数を1つだけ持つことができます。 コントロールにマップされている MFC オブジェクトは1つだけです。コントロールまたはその他のウィンドウに複数のオブジェクトがアタッチされていると、メッセージマップがあいまいになる可能性があります。
 
-このオブジェクトを使用して、コントロールオブジェクトの任意のメンバー関数を呼び出すことができます。 このような呼び出しは、ダイアログボックスのコントロールに影響します。 たとえば、型の変数 *m_Checkbox*によって表されるチェックボックスコントロールの場合、次のようにを `CButton` 呼び出すことができます。
+このオブジェクトを使用して、コントロールオブジェクトの任意のメンバー関数を呼び出すことができます。 このような呼び出しは、ダイアログボックスのコントロールに影響します。 たとえば、型の変数 *m_Checkbox* によって表されるチェックボックスコントロールの場合、次のようにを `CButton` 呼び出すことができます。
 
 [!code-cpp[NVC_MFCControlLadenDialog#52](../mfc/codesnippet/cpp/type-safe-access-to-controls-with-code-wizards_1.cpp)]
 

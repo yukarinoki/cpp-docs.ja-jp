@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「ダイアログボックス内のコントロールへのアクセスの Type-Safe」を参照してください。
 title: ダイアログ ボックスのコントロールへのタイプ セーフ アクセス
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - type-safe access to dialog box controls
 - MFC dialog boxes [MFC], type-safe access to controls
 ms.assetid: 67021025-dd93-4d6a-8bed-a1348fe50685
-ms.openlocfilehash: 9b8e5aef61d1a7c7277f2a6bd37b81bd156bb837
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1c8b3482ee723e95142c9cd19fa6068f32f4ebd0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62181619"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97263830"
 ---
 # <a name="type-safe-access-to-controls-in-a-dialog-box"></a>ダイアログ ボックスのコントロールへのタイプ セーフ アクセス
 
@@ -23,10 +24,10 @@ ms.locfileid: "62181619"
 
 ダイアログ ボックス内のコントロールと、`CDialog` 派生クラス内の C++ コントロール メンバー変数とを接続するには、次の 2 つの方法があります。
 
-- [コード ウィザードを使用しません。](../mfc/type-safe-access-to-controls-without-code-wizards.md)
+- [コード ウィザードを使用しない方法](../mfc/type-safe-access-to-controls-without-code-wizards.md)
 
-- [コード ウィザードを使用しました。](../mfc/type-safe-access-to-controls-with-code-wizards.md)
+- [コード ウィザードを使用する方法](../mfc/type-safe-access-to-controls-with-code-wizards.md)
 
 ## <a name="see-also"></a>関連項目
 
-[ダイアログ ボックス](../mfc/dialog-boxes.md)
+[ダイアログボックス](../mfc/dialog-boxes.md)
