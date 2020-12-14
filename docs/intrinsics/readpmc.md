@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: __readpmc'
 title: __readpmc
 ms.date: 09/02/2019
 f1_keywords:
@@ -8,18 +9,18 @@ helpviewer_keywords:
 - __readpmc intrinsic
 - rdpmc instruction
 ms.assetid: 14ed45a6-28b6-4635-8437-a597c04b43d4
-ms.openlocfilehash: af0f1874d991771423ddebfedd4624cd0b71760f
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: ceff8522d4895f69a47cf429e59d267c671e3a66
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70221033"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97294133"
 ---
 # <a name="__readpmc"></a>__readpmc
 
 **Microsoft 固有の仕様**
 
-カウンターによって指定されたパフォーマンス監視カウンターを読み取る命令を生成します。`rdpmc`
+`rdpmc`*カウンター* によって指定されたパフォーマンス監視カウンターを読み取る命令を生成します。
 
 ## <a name="syntax"></a>構文
 
@@ -38,15 +39,15 @@ unsigned __int64 __readpmc(
 
 指定したパフォーマンスカウンターの値。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-|組み込み|アーキテクチャ|
+|Intrinsic|アーキテクチャ|
 |---------------|------------------|
 |`__readpmc`|x86、x64|
 
-**ヘッダーファイル**\<>
+**ヘッダー ファイル** \<intrin.h>
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 組み込みはカーネルモードでのみ使用でき、ルーチンは組み込みとしてのみ使用できます。
 

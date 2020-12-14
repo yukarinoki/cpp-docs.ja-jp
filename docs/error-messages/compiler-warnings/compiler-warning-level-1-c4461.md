@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: コンパイラの警告 (レベル 1) C4461'
 title: コンパイラの警告 (レベル 1) C4461
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4461
 ms.assetid: 104ffecc-3dd4-4cb1-89a8-81154fbe46d9
-ms.openlocfilehash: 819c433a58c6b0c3a3958b483dc1d1a08bde58c1
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 2efb92ca26f9e6cf76f7777c8a50ac657f73554d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80186752"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97311007"
 ---
 # <a name="compiler-warning-level-1-c4461"></a>コンパイラの警告 (レベル 1) C4461
 
@@ -21,7 +22,7 @@ ms.locfileid: "80186752"
 
 型にデストラクターを定義し、そのデストラクターからファイナライザーを明示的に呼び出す場合は、ファイナライザーを実行するタイミングを決定できます。
 
-詳細については、「[デストラクターとファイナライザー](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers)」を参照してください。
+詳細については、「 [デストラクターとファイナライザー](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers)」を参照してください。
 
 ## <a name="example"></a>例
 

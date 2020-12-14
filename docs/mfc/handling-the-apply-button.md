@@ -1,16 +1,17 @@
 ---
+description: '詳細情報: [適用] ボタンの処理'
 title: '[適用] ボタンの処理'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - Apply button in property sheet
 - property sheets, Apply button
 ms.assetid: 7e977015-59b8-406f-b545-aad0bfd8d55b
-ms.openlocfilehash: cd1254a31491e713513f0db0d4cf87baddd9bb23
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: a626dcab04d68d19efba79465bfca46545ff6670
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84618611"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97254938"
 ---
 # <a name="handling-the-apply-button"></a>[適用] ボタンの処理
 
@@ -26,11 +27,11 @@ ms.locfileid: "84618611"
 
 ページを変更中として報告し、[適用] ボタンを有効にするには、を呼び出し `CPropertyPage::SetModified( TRUE )` ます。 ページのいずれかのレポートが変更されている場合、現在アクティブなページが変更されているかどうかに関係なく、[適用] ボタンは有効のままになります。
 
-ユーザーがページの設定を変更するたびに、 [CPropertyPage:: SetModified](reference/cpropertypage-class.md#setmodified)を呼び出す必要があります。 ユーザーがページの設定を変更したことを検出する方法の1つは、 **EN_CHANGE**や**BN_CLICKED**など、プロパティページの各コントロールに対して変更通知ハンドラーを実装することです。
+ユーザーがページの設定を変更するたびに、 [CPropertyPage:: SetModified](reference/cpropertypage-class.md#setmodified) を呼び出す必要があります。 ユーザーがページの設定を変更したことを検出する方法の1つは、 **EN_CHANGE** や **BN_CLICKED** など、プロパティページの各コントロールに対して変更通知ハンドラーを実装することです。
 
 [適用] ボタンの効果を実装するには、プロパティシートで、プロパティページの現在の設定を適用するために、その所有者またはアプリケーション内の他の外部オブジェクトを通知する必要があります。 同時に、プロパティシートで、 `CPropertyPage::SetModified( FALSE )` 外部オブジェクトに対する変更を適用したすべてのページに対してを呼び出すことによって、[適用] ボタンを無効にする必要があります。
 
-このプロセスの例については、MFC の一般的なサンプル[PROPDLG](../overview/visual-cpp-samples.md)を参照してください。
+このプロセスの例については、MFC の一般的なサンプル [PROPDLG](../overview/visual-cpp-samples.md)を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

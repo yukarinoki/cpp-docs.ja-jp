@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: コンパイラの警告 (レベル 1) C4374'
 title: コンパイラの警告 (レベル 1) C4374
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - C4374
 ms.assetid: 4ac9aaec-d815-4b6e-825f-fa872092dd3b
-ms.openlocfilehash: a0dbfbe931ec30c0bde2e82718e0817dcfa243b7
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 0b1d8eef5f168f12cc41f1108fcea24040f806ad
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80187038"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97311339"
 ---
 # <a name="compiler-warning-level-1-c4374"></a>コンパイラの警告 (レベル 1) C4374
 
 ' function1 ': インターフェイスメソッドは、仮想でないメソッド ' function2 ' によって実装されません
 
-コンパイラは、メソッド定義で[virtual](../../cpp/virtual-specifier.md)キーワードを検索する必要があります。
+コンパイラは、メソッド定義で [virtual](../../cpp/virtual-specifier.md) キーワードを検索する必要があります。
 
 次の例では、C4374 が生成されます。
 

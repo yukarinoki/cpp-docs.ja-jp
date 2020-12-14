@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「リンカツール Error LNK2023」を参照してください。
 title: リンカ ツール エラー LNK2023
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - LNK2023
 ms.assetid: c99e35a8-739a-4a20-a715-29b8c3744703
-ms.openlocfilehash: 363b6ef0ea9991ff5d657044282e99c558257fb9
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: fbcddcb00d77fd1b51effb27bc032019fc803d3c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80194630"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97275816"
 ---
 # <a name="linker-tools-error-lnk2023"></a>リンカ ツール エラー LNK2023
 
-dll またはエントリポイント \<dll またはエントリポイントが正しくありません >
+dll またはエントリポイントが正しくありません \<dll or entry point>
 
-リンカーが正しくないバージョンの msobj90 を読み込んでいます。 パス内の setup.exe と msobj90 のバージョンが同じであることを確認します。
+リンカーが正しくないバージョンの msobj90.dll を読み込んでいます。 パスの link.exe と msobj90.dll のバージョンが同じであることを確認します。
 
-Msobj90 の依存関係が存在しない可能性があります。 Msobj90 の依存関係の一覧は次のとおりです。
+msobj90.dll の依存関係が存在しない可能性があります。 msobj90.dll の依存関係の一覧は次のとおりです。
 
 - Msvcr90.dll
 
 - Kernel32.dll
 
-コンピューターで、最新でない可能性がある msobj90 の他のコピーがないかどうかを確認します。
+コンピューターに、最新でない可能性がある msobj90.dll の他のコピーがないか確認します。

@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「コンパイラエラー C3851」を参照してください。
 title: コンパイラ エラー C3851
 ms.date: 09/05/2018
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3851
 ms.assetid: da30c21c-33aa-4439-8fb3-2f5021ea4985
-ms.openlocfilehash: 97d9ef1eeeffa0e5a63d2c8ae2428a3fad0ff238
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 62f35b8828f7c8f1af9769152a88b7240ff9ff93
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80165586"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97255367"
 ---
 # <a name="compiler-error-c3851"></a>コンパイラ エラー C3851
 
@@ -19,7 +20,7 @@ ms.locfileid: "80165586"
 
 ## <a name="remarks"></a>解説
 
-C++ としてコンパイルされるコードでは、基本ソース文字セットの文字を表すユニバーサル文字名を使用できません (文字列リテラルまたは文字リテラルの場合を除く)。 詳細については、「 [Character Sets](../../cpp/character-sets.md)」を参照してください。 C としてコンパイルされたコードでは、-0x7f の範囲内の文字にユニバーサル文字名を使用することはできません。ただし、0x24 (' $ ')、0x40 ('\@')、または 0x60 ('\`') は除きます。
+C++ としてコンパイルされるコードでは、基本ソース文字セットの文字を表すユニバーサル文字名を使用できません (文字列リテラルまたは文字リテラルの場合を除く)。 詳細については、「 [Character Sets](../../cpp/character-sets.md)」を参照してください。 C としてコンパイルされたコードでは、--0x7f の範囲の文字にユニバーサル文字名を使用することはできません。ただし、0x24 (' $ ')、0x40 (' \@ ')、または 0x60 (' \` ') は除きます。
 
 ## <a name="example"></a>例
 

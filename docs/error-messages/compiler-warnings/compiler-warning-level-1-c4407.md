@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: コンパイラの警告 (レベル 1) C4407'
 title: コンパイラの警告 (レベル 1) C4407
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4407
 ms.assetid: 32bc2c21-363a-4bb8-b486-725faeaededc
-ms.openlocfilehash: 8dd78872d4edf82fb61c8ab93639dbcd93085754
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: ea743c5df5f84e99ad89e44a08844b3e59593c1d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80162544"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97311098"
 ---
 # <a name="compiler-warning-level-1-c4407"></a>コンパイラの警告 (レベル 1) C4407
 
@@ -21,7 +22,7 @@ ms.locfileid: "80162544"
 
 C4407 は、Visual Studio 2005 で実行されたコンパイラ準拠作業のために生成されます。 Pointer-to-member には、修飾名とアドレス演算子 (&) が必要になりました。
 
-C4407 は、多重継承 pointer-to-member を単一継承 pointer-to-member にキャストすると発生する可能性があります。 これが機能する場合もありますが、単一継承の pointer-to-member 表現が十分な情報を保持していないことが原因である場合があります。 **/Vmm**を使用してコンパイルすると解決する場合があります (詳細については、「 [/vmm、/Vmv (General Purpose 表現)](../../build/reference/vmm-vms-vmv-general-purpose-representation.md)」を参照してください)。 また、基底クラスを再配置することもできます。基底クラスが派生したからの0以外のオフセットにあるため、コンパイラは変換の情報が失われていることを検出しています。
+C4407 は、多重継承 pointer-to-member を単一継承 pointer-to-member にキャストすると発生する可能性があります。 これが機能する場合もありますが、単一継承の pointer-to-member 表現が十分な情報を保持していないことが原因である場合があります。 **/Vmm** を使用してコンパイルすると解決する場合があります (詳細については、「 [/vmm、/Vmv (General Purpose 表現)](../../build/reference/vmm-vms-vmv-general-purpose-representation.md)」を参照してください)。 また、基底クラスを再配置することもできます。基底クラスが派生したからの0以外のオフセットにあるため、コンパイラは変換の情報が失われていることを検出しています。
 
 次の例では、C4407 が生成されます。
 

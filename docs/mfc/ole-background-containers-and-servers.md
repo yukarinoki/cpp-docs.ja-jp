@@ -1,4 +1,5 @@
 ---
+description: '詳細については、「OLE バックグラウンド: コンテナーとサーバー」を参照してください。'
 title: 'OLE 概要 : コンテナーとサーバー'
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -14,16 +15,16 @@ helpviewer_keywords:
 - containers [MFC], OLE container applications
 - server applications [MFC]
 ms.assetid: dafbb31d-096c-4654-b774-12900d832919
-ms.openlocfilehash: 7c3130ab9d8dff6551ef0ecbec43e5422dbdc4c4
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 3ea578ce14165b16e84520b22bc545fc5d2a8882
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84617908"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97254777"
 ---
 # <a name="ole-background-containers-and-servers"></a>OLE 概要 : コンテナーとサーバー
 
-コンテナーアプリケーションは、埋め込みまたはリンクされた項目を独自のドキュメントに組み込むことができるアプリケーションです。 コンテナーアプリケーションによって管理されるドキュメントでは、アプリケーション自体によって作成されたデータだけでなく、OLE ドキュメントコンポーネントを格納して表示できる必要があります。 コンテナーアプリケーションでは、必要に応じてサーバーアプリケーションをアクティブ化することで、ユーザーが新しい項目を挿入したり、既存の項目を編集したりできるようにする必要もあります。 コンテナーアプリケーションのユーザーインターフェイスの要件については、「[コンテナー: ユーザーインターフェイスの問題](containers-user-interface-issues.md)」に記載されています。
+コンテナーアプリケーションは、埋め込みまたはリンクされた項目を独自のドキュメントに組み込むことができるアプリケーションです。 コンテナーアプリケーションによって管理されるドキュメントでは、アプリケーション自体によって作成されたデータだけでなく、OLE ドキュメントコンポーネントを格納して表示できる必要があります。 コンテナーアプリケーションでは、必要に応じてサーバーアプリケーションをアクティブ化することで、ユーザーが新しい項目を挿入したり、既存の項目を編集したりできるようにする必要もあります。 コンテナーアプリケーションのユーザーインターフェイスの要件については、「 [コンテナー: User-Interface の問題](containers-user-interface-issues.md)」に記載されています。
 
 サーバーアプリケーションまたはコンポーネントアプリケーションは、コンテナーアプリケーションで使用する OLE ドキュメントコンポーネントを作成できるアプリケーションです。 通常、サーバーアプリケーションは、クリップボードにデータをドラッグアンドドロップまたはコピーすることをサポートしているので、コンテナーアプリケーションはデータを埋め込みまたはリンクされたアイテムとして挿入できます。 アプリケーションには、コンテナーとサーバーの両方を指定できます。
 
@@ -35,9 +36,9 @@ ms.locfileid: "84617908"
 
 ## <a name="see-also"></a>関連項目
 
-[OLE の背景知識](ole-background.md)<br/>
-[OLE の背景知識 : MFC における実装](ole-background-mfc-implementation.md)<br/>
+[OLE の背景](ole-background.md)<br/>
+[OLE の背景知識: MFC の実装](ole-background-mfc-implementation.md)<br/>
 [Containers](containers.md)<br/>
 [サーバー](servers.md)<br/>
-[コンテナー : クライアント アイテム](containers-client-items.md)<br/>
-[サーバー : サーバー アイテム](servers-server-items.md)
+[コンテナー: クライアントアイテム](containers-client-items.md)<br/>
+[サーバー: サーバー項目](servers-server-items.md)
