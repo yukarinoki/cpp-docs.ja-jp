@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「グラフィックス操作 (C++/CLI)」を参照してください。
 title: グラフィック操作 (C++/CLI)
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -18,26 +19,26 @@ helpviewer_keywords:
 - GDI+ [C++], converting image file formats
 - graphics [C++], converting image file formats
 ms.assetid: bba27228-b9b3-4c9c-b31c-a04b76702a95
-ms.openlocfilehash: c7c6d62eb4059069e6e266544ce6323c63dd15c0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 84dbc75aa306219b8733848ece5c594ca40a0489
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62393741"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97223543"
 ---
 # <a name="graphics-operations-ccli"></a>グラフィック操作 (C++/CLI)
 
-Windows SDK を使用して画像の操作を示します。
+Windows SDK を使用したイメージ操作を示します。
 
 次のトピックでは、<xref:System.Drawing.Image?displayProperty=fullName> クラスを使用してイメージ操作を実行する方法を説明します。
 
-## <a name="display"></a> .NET Framework を使用したイメージを表示します。
+## <a name="display-images-with-the-net-framework"></a><a name="display"></a> .NET Framework を使用したイメージの表示
 
-次のコード例へのポインターを取得する OnPaint イベント ハンドラーを変更する、<xref:System.Drawing.Graphics>メイン フォームのオブジェクト。 <xref:System.Windows.Forms.Form.OnPaint%2A>関数は、Visual Studio アプリケーション ウィザードで作成されたほとんどの場合、Windows フォーム アプリケーションを対象としています。
+次のコード例では、OnPaint イベントハンドラーを変更して、メインフォームのオブジェクトへのポインターを取得し <xref:System.Drawing.Graphics> ます。 <xref:System.Windows.Forms.Form.OnPaint%2A>関数は、Visual Studio アプリケーションウィザードを使用して作成される可能性のある Windows フォームアプリケーションを対象としています。
 
-イメージがによって表される、<xref:System.Drawing.Image>クラス。 使用して、.jpg ファイルからイメージ データが読み込まれる、<xref:System.Drawing.Image.FromFile%2A?displayProperty=fullName>メソッド。 イメージをフォームに描画前に、画像に合わせて、フォームがサイズ変更します。 イメージの描画が実行される、<xref:System.Drawing.Graphics.DrawImage%2A?displayProperty=fullName>メソッド。
+イメージはクラスによって表され <xref:System.Drawing.Image> ます。 画像データは、メソッドを使用して .jpg ファイルから読み込まれます <xref:System.Drawing.Image.FromFile%2A?displayProperty=fullName> 。 画像がフォームに描画される前に、画像に合わせてフォームのサイズが変更されます。 イメージの描画は、メソッドを使用して実行され <xref:System.Drawing.Graphics.DrawImage%2A?displayProperty=fullName> ます。
 
-<xref:System.Drawing.Graphics>と<xref:System.Drawing.Image>クラスはどちらも、<xref:System.Drawing?displayProperty=fullName>名前空間。
+<xref:System.Drawing.Graphics>クラスと <xref:System.Drawing.Image> クラスは両方とも <xref:System.Drawing?displayProperty=fullName> 名前空間にあります。
 
 ### <a name="example"></a>例
 
@@ -57,9 +58,9 @@ virtual Void Form1::OnPaint(PaintEventArgs^ pe) override
 }
 ```
 
-## <a name="draw"></a> .NET Framework を使用して図形を描画します。
+## <a name="draw-shapes-with-the-net-framework"></a><a name="draw"></a> .NET Framework を使用した図形の描画
 
-次のコード例では、<xref:System.Drawing.Graphics>を変更するクラス、<xref:System.Windows.Forms.Form.OnPaint%2A>へのポインターを取得するイベント ハンドラー、<xref:System.Drawing.Graphics>メイン フォームのオブジェクト。 このポインターは、フォームの背景色を設定し、行とを使用して、円弧の描画に使用し、<xref:System.Drawing.Graphics.DrawLine%2A?displayProperty=fullName>と<xref:System.Drawing.Graphics.DrawArc%2A>メソッド。
+次のコード例では、クラスを使用して、 <xref:System.Drawing.Graphics> <xref:System.Windows.Forms.Form.OnPaint%2A> メインフォームのオブジェクトへのポインターを取得するようにイベントハンドラーを変更し <xref:System.Drawing.Graphics> ます。 このポインターを使用して、フォームの背景色を設定し、メソッドとメソッドを使用して直線と円弧を描画し <xref:System.Drawing.Graphics.DrawLine%2A?displayProperty=fullName> <xref:System.Drawing.Graphics.DrawArc%2A> ます。
 
 ### <a name="example"></a>例
 
@@ -91,9 +92,9 @@ virtual Void Form1::OnPaint(PaintEventArgs^ pe ) override
 }
 ```
 
-## <a name="rotate"></a> .NET Framework を使用したイメージを回転させる
+## <a name="rotate-images-with-the-net-framework"></a><a name="rotate"></a> .NET Framework を使用してイメージを回転させる
 
-次のコード例は、の使用を示します、<xref:System.Drawing.Image?displayProperty=fullName>クラスをディスクからイメージを読み込む、90 度回転、および新しい .jpg ファイルとして保存します。
+次のコード例は、クラスを使用して <xref:System.Drawing.Image?displayProperty=fullName> ディスクからイメージを読み込み、90°回転して、新しい .jpg ファイルとして保存する方法を示しています。
 
 ### <a name="example"></a>例
 
@@ -112,9 +113,9 @@ int main()
 }
 ```
 
-## <a name="convert"></a> .NET Framework を使用してイメージ ファイル形式に変換します。
+## <a name="convert-image-file-formats-with-the-net-framework"></a><a name="convert"></a> イメージファイル形式を .NET Framework に変換します
 
-次のコード例に示します、<xref:System.Drawing.Image?displayProperty=fullName>クラスおよび<xref:System.Drawing.Imaging.ImageFormat?displayProperty=fullName>列挙型に変換し、イメージ ファイルを保存するために使用します。 次のコードでは、.jpg ファイルからイメージを読み込み、.gif、.bmp の両方のファイル形式で保存します。
+次のコード例は、 <xref:System.Drawing.Image?displayProperty=fullName> <xref:System.Drawing.Imaging.ImageFormat?displayProperty=fullName> イメージファイルの変換と保存に使用されるクラスと列挙を示しています。 このコードでは、イメージを .jpg ファイルから読み込み、.gif ファイル形式と .bmp ファイル形式の両方で保存します。
 
 ### <a name="example"></a>例
 
@@ -143,6 +144,6 @@ int main()
 
 ## <a name="see-also"></a>関連項目
 
-[C++/CLI (Visual C++) による .NET プログラミング](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
+[C++/CLI を使用した .NET プログラミング (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
 
 <xref:System.Drawing>

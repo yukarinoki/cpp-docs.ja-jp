@@ -1,15 +1,16 @@
 ---
+description: '詳細情報: UCRT 関数リファレンス'
 title: UCRT 関数リファレンス (アルファベット順)
 ms.date: 01/31/2019
 f1_keywords:
 - vc.tables.runtime
 ms.assetid: c2169b0e-cd86-489a-a2fa-2ee15c03b5c2
-ms.openlocfilehash: 73fd08ffa58aabfd9a40e0296b21d4a5baea8750
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: af75a52dcc6659e80ae1155ffe4de2c8c1dee4bf
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91499398"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97221606"
 ---
 # <a name="ucrt-alphabetical-function-reference"></a>UCRT 関数リファレンス (アルファベット順)
 
@@ -319,7 +320,7 @@ ms.locfileid: "91499398"
 
 [_clearfp](clear87-clearfp.md)
 
-[clock](clock.md)
+[クロック](clock.md)
 
 [clog](clog-clogf-clogl.md)
 
@@ -1965,7 +1966,7 @@ ms.locfileid: "91499398"
 
 [_msize_dbg](msize-dbg.md)
 
-## <a name="n"></a>N
+## <a name="n"></a>×
 
 [nan](nan-nanf-nanl.md)
 
@@ -3507,4 +3508,4 @@ ms.locfileid: "91499398"
 
 ## <a name="see-also"></a>関連項目
 
-[C ランタイムライブラリリファレンス](../../c-runtime-library/c-run-time-library-reference.md)<br/>
+[C Run-Time ライブラリリファレンス](../../c-runtime-library/c-run-time-library-reference.md)<br/>

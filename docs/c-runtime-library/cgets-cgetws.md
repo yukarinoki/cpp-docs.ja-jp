@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: _cgets、_cgetws'
 title: _cgets、_cgetws
 ms.date: 4/2/2020
 api_name:
@@ -33,12 +34,12 @@ helpviewer_keywords:
 - cgetws function
 - cgets function
 ms.assetid: 4d5e134a-58c3-4f62-befd-5d235b0212f4
-ms.openlocfilehash: 9ae7baaa01029dcf2c02f6ea80b6e816bb671596
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: ac712c7ee51c3f06dfe1dd4e881630768a7e6b20
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82917429"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97221684"
 ---
 # <a name="_cgets-_cgetws"></a>_cgets、_cgetws
 
@@ -96,7 +97,7 @@ C++ では、これらの関数にテンプレートのオーバーロードが�
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |`_cgets`|\<conio.h>|
 |`_cgetws`|\<conio.h> または \<wchar.h>|

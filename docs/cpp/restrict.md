@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: 制限'
 title: restrict
 ms.date: 02/09/2018
 f1_keywords:
@@ -7,18 +8,18 @@ helpviewer_keywords:
 - __declspec keyword [C++], restrict
 - restrict __declspec keyword
 ms.assetid: f39cf632-68d8-4362-a497-2d4c15693689
-ms.openlocfilehash: a0108cff3d6b98fd929b7888d2ad718e7b6b3a64
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: e2900e46d3b8e452661800c1c511418f936a5b0c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87213256"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97223712"
 ---
 # <a name="restrict"></a>restrict
 
 **Microsoft 固有の仕様**
 
-ポインター型を返す関数宣言または定義に適用された場合、は、その関数が、エイリアスが設定されて **`restrict`** いないオブジェクト、つまり他のポインターによって参照されているオブジェクトを返すことをコンパイラに指示します。 *aliased* これにより、コンパイラは追加の最適化を実行できます。
+ポインター型を返す関数宣言または定義に適用された場合、は、その関数が、エイリアスが設定されて **`restrict`** いないオブジェクト、つまり他のポインターによって参照されているオブジェクトを返すことをコンパイラに指示します。  これにより、コンパイラは追加の最適化を実行できます。
 
 ## <a name="syntax"></a>構文
 
@@ -28,7 +29,7 @@ ms.locfileid: "87213256"
 
 コンパイラが伝達さ **`__declspec(restrict)`** れます。 たとえば、CRT 関数には装飾があるため、 `malloc` **`__declspec(restrict)`** コンパイラは、によってメモリ位置に初期化されたポインターが、 `malloc` 以前の既存のポインターによってエイリアス化されていないと見なします。
 
-コンパイラは、返されたポインターが実際にエイリアス化されていないことを確認しません。 **制限 __declspec**修飾子でマークされたポインターにプログラムがエイリアスを使用しないようにするのは、開発者の責任です。
+コンパイラは、返されたポインターが実際にエイリアス化されていないことを確認しません。 **制限 __declspec** 修飾子でマークされたポインターにプログラムがエイリアスを使用しないようにするのは、開発者の責任です。
 
 変数に関する同様のセマンティクスについては、「 [__restrict](../cpp/extension-restrict.md)」を参照してください。
 

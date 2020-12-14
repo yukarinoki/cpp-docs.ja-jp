@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: CDaoWorkspaceInfo 構造体'
 title: CDaoWorkspaceInfo 構造体
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,16 +8,16 @@ helpviewer_keywords:
 - CDaoWorkspaceInfo structure [MFC]
 - DAO (Data Access Objects), Workspaces collection
 ms.assetid: a1f4b25e-f9c6-4196-b075-d1df99c54124
-ms.openlocfilehash: afbc73c079a6deec3f3e1b7455f9f2dbface5025
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b89e8787c2103244535e9458650f1f104478b748
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62253636"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97222204"
 ---
 # <a name="cdaoworkspaceinfo-structure"></a>CDaoWorkspaceInfo 構造体
 
-`CDaoWorkspaceInfo`構造体には、データ アクセス オブジェクト (DAO) のデータベース アクセスに対して定義されているワークスペースに関する情報が含まれています。
+構造体には、 `CDaoWorkspaceInfo` データアクセスオブジェクト (DAO) データベースへのアクセスに対して定義されたワークスペースに関する情報が含まれます。
 
 ## <a name="syntax"></a>構文
 
@@ -32,25 +33,25 @@ struct CDaoWorkspaceInfo
 #### <a name="parameters"></a>パラメーター
 
 *m_strName*<br/>
-Workspace オブジェクトの一意名します。 このプロパティの値を直接取得するには、クエリ定義オブジェクトを呼び出す[GetName](../../mfc/reference/cdaoquerydef-class.md#getname)メンバー関数。 詳細については、「Name プロパティ」DAO ヘルプのトピックを参照してください。
+ワークスペースオブジェクトの名前を一意にします。 このプロパティの値を直接取得するには、querydef オブジェクトの [GetName](../../mfc/reference/cdaoquerydef-class.md#getname) メンバー関数を呼び出します。 詳細については、DAO ヘルプの「Name プロパティ」を参照してください。
 
 *m_strUserName*<br/>
-Workspace オブジェクトの所有者を表す値。 関連情報については、「UserName プロパティ」DAO ヘルプのトピックを参照してください。
+ワークスペースオブジェクトの所有者を表す値です。 関連情報については、DAO ヘルプの「UserName プロパティ」を参照してください。
 
 *m_bIsolateODBCTrans*<br/>
-同じ ODBC データベースが関係する複数のトランザクションが分離されたかどうかを示す値。 詳細については、次を参照してください。 [CDaoWorkspace::SetIsolateODBCTrans](../../mfc/reference/cdaoworkspace-class.md#setisolateodbctrans)します。 関連情報については、「IsolateODBCTrans プロパティ」DAO ヘルプのトピックを参照してください。
+同じ ODBC データベースを含む複数のトランザクションが分離されているかどうかを示す値です。 詳細については、「 [CDaoWorkspace:: Seti](../../mfc/reference/cdaoworkspace-class.md#setisolateodbctrans)」を参照してください。 関連情報については、DAO ヘルプの「IsolateODBCTrans プロパティ」を参照してください。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-クラスのオブジェクトであるワークスペース[CDaoWorkspace](../../mfc/reference/cdaoworkspace-class.md)します。 プライマリ、セカンダリ、および上記のすべてへの参照情報がによって返される方法を示すため、 [GetWorkspaceInfo](../../mfc/reference/cdaoworkspace-class.md#getworkspaceinfo)クラスのメンバー関数`CDaoWorkspace`します。
+ワークスペースは、 [CDaoWorkspace](../../mfc/reference/cdaoworkspace-class.md)クラスのオブジェクトです。 上記の Primary、Secondary、および All への参照は、クラスの [GetWorkspaceInfo](../../mfc/reference/cdaoworkspace-class.md#getworkspaceinfo) メンバー関数によって情報がどのように返されるかを示して `CDaoWorkspace` います。
 
-によって取得される情報、 [CDaoWorkspace::GetWorkspaceInfo](../../mfc/reference/cdaoworkspace-class.md#getworkspaceinfo)にメンバー関数が格納されている、`CDaoWorkspaceInfo`構造体。 `CDaoWorkspaceInfo` 定義、`Dump`デバッグでのメンバー関数を作成します。 使用することができます`Dump`の内容をダンプする`CDaoWorkspaceInfo`オブジェクト。
+[CDaoWorkspace:: GetWorkspaceInfo](../../mfc/reference/cdaoworkspace-class.md#getworkspaceinfo)メンバー関数によって取得された情報は、構造体に格納され `CDaoWorkspaceInfo` ます。 `CDaoWorkspaceInfo` は、 `Dump` デバッグビルドでメンバー関数も定義します。 を使用すると、 `Dump` オブジェクトの内容をダンプでき `CDaoWorkspaceInfo` ます。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-**ヘッダー:** afxdao.h
+**ヘッダー:** afxdao
 
 ## <a name="see-also"></a>関連項目
 
-[構造体、スタイル、コールバック関数とメッセージ マップ](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)<br/>
+[構造体、スタイル、コールバック、およびメッセージマップ](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)<br/>
 [CDaoWorkspace クラス](../../mfc/reference/cdaoworkspace-class.md)

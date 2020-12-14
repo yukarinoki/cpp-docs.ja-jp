@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: CDataRecoveryHandler クラス'
 title: CDataRecoveryHandler クラス
 ms.date: 03/27/2019
 f1_keywords:
@@ -62,12 +63,12 @@ helpviewer_keywords:
 - CDataRecoveryHandler [MFC], SetShutdownByRestartManager
 - CDataRecoveryHandler [MFC], UpdateDocumentInfo
 ms.assetid: 7794802c-e583-4eba-90b9-2fed1a161f9c
-ms.openlocfilehash: 4bb4d4ddf291cb1efc01b887c54a6573c52df8dc
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 72189916f4555152ccc8997600d8426e188bb65c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88842924"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97222139"
 ---
 # <a name="cdatarecoveryhandler-class"></a>CDataRecoveryHandler クラス
 
@@ -148,7 +149,7 @@ class CDataRecoveryHandler : public CObject
 
 クラスは `CDataRecoveryHandler` 再起動マネージャーに密接に接続されているため、は `CDataRecoveryHandler` グローバルパラメーターに依存し `m_dwRestartManagerSupportFlags` ます。 このパラメーターは、再起動マネージャーが持つアクセス許可と、アプリケーションとの対話方法を決定します。 再起動マネージャーを既存のアプリケーションに組み込むには、 `m_dwRestartManagerSupportFlags` メインアプリケーションのコンストラクターに適切な値を割り当てる必要があります。 再起動マネージャーの使用方法の詳細については、「 [方法: 再起動マネージャーのサポートを追加する](../../mfc/how-to-add-restart-manager-support.md)」を参照してください。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** afxdatarecovery
 
@@ -197,11 +198,11 @@ virtual BOOL AutosaveDocumentInfo(
 各 `CDocument` オブジェクトには、最後の保存以降に変更されたかどうかを示すフラグが付いています。 このフラグの状態を確認するには、 [CDocument:: IsModified](../../mfc/reference/cdocument-class.md#ismodified) を使用します。 最後に `CDocument` 保存した後にが変更されていない場合は、 `AutosaveDocumentInfo` そのドキュメントの自動保存ファイルを削除します。 最後の保存以降にドキュメントが変更された場合は、閉じる前にドキュメントを保存するようにユーザーに要求します。
 
 > [!NOTE]
-> *BResetModifiedFlag*を使用してドキュメントの状態を変更なしに変更すると、ユーザーが保存されていないデータを失う可能性があります。 フレームワークでドキュメントが変更されていないと見なされた場合、閉じると、ユーザーに保存するプロンプトは表示されません。
+> *BResetModifiedFlag* を使用してドキュメントの状態を変更なしに変更すると、ユーザーが保存されていないデータを失う可能性があります。 フレームワークでドキュメントが変更されていないと見なされた場合、閉じると、ユーザーに保存するプロンプトは表示されません。
 
-*Pdocument*が有効なオブジェクトでない場合、このメソッドは[ASSERT](diagnostic-services.md#assert)マクロを使用して例外をスロー `CDocument` します。
+*Pdocument* が有効なオブジェクトでない場合、このメソッドは [ASSERT](diagnostic-services.md#assert)マクロを使用して例外をスロー `CDocument` します。
 
-この方法を使用するには、 *m_dwRestartManagerSupportFlags*で AFX_RESTART_MANAGER_AUTOSAVE_AT_RESTART または AFX_RESTARTMANAGER_AUTOSAVE_AT_INTERVAL のいずれかを設定する必要があります。
+この方法を使用するには、 *m_dwRestartManagerSupportFlags* で AFX_RESTART_MANAGER_AUTOSAVE_AT_RESTART または AFX_RESTARTMANAGER_AUTOSAVE_AT_INTERVAL のいずれかを設定する必要があります。
 
 ## <a name="cdatarecoveryhandlercdatarecoveryhandler"></a><a name="cdatarecoveryhandler"></a> CDataRecoveryHandler::CDataRecoveryHandler
 
@@ -223,7 +224,7 @@ CDataRecoveryHandler(
 
 ### <a name="remarks"></a>解説
 
-新しいプロジェクトウィザードを使用すると、MFC フレームワークによってアプリケーションのオブジェクトが自動的に作成され `CDataRecoveryHandler` ます。 **New Project** データ回復動作または再起動マネージャーをカスタマイズする場合を除き、オブジェクトを作成しないでください `CDataRecoveryHandler` 。
+新しいプロジェクトウィザードを使用すると、MFC フレームワークによってアプリケーションのオブジェクトが自動的に作成され `CDataRecoveryHandler` ます。  データ回復動作または再起動マネージャーをカスタマイズする場合を除き、オブジェクトを作成しないでください `CDataRecoveryHandler` 。
 
 ## <a name="cdatarecoveryhandlercreatedocumentinfo"></a><a name="createdocumentinfo"></a> CDataRecoveryHandler:: CreateDocumentInfo
 
@@ -244,9 +245,9 @@ virtual BOOL CreateDocumentInfo(CDocument* pDocument);
 
 ### <a name="remarks"></a>解説
 
-このメソッドは、ドキュメントを追加する前に、ドキュメントのリストに *Pdocument* が既に存在するかどうかを確認します。 *Pdocument*が既に一覧に含まれている場合、このメソッドは*pdocument*に関連付けられている自動保存ファイルを削除します。
+このメソッドは、ドキュメントを追加する前に、ドキュメントのリストに *Pdocument* が既に存在するかどうかを確認します。 *Pdocument* が既に一覧に含まれている場合、このメソッドは *pdocument* に関連付けられている自動保存ファイルを削除します。
 
-この方法を使用するには、 *m_dwRestartManagerSupportFlags*で AFX_RESTART_MANAGER_AUTOSAVE_AT_RESTART または AFX_RESTARTMANAGER_AUTOSAVE_AT_INTERVAL のいずれかを設定する必要があります。
+この方法を使用するには、 *m_dwRestartManagerSupportFlags* で AFX_RESTART_MANAGER_AUTOSAVE_AT_RESTART または AFX_RESTARTMANAGER_AUTOSAVE_AT_INTERVAL のいずれかを設定する必要があります。
 
 ## <a name="cdatarecoveryhandlerdeleteallautosavedfiles"></a><a name="deleteallautosavedfiles"></a> CDataRecoveryHandler::D eleteAllAutosavedFiles
 
@@ -296,7 +297,7 @@ virtual CString GenerateAutosaveFileName(const CString& strDocumentName) const;
 
 ### <a name="return-value"></a>戻り値
 
-*StrDocumentName*から生成された自動保存ファイル名。
+*StrDocumentName* から生成された自動保存ファイル名。
 
 ### <a name="remarks"></a>解説
 
@@ -341,11 +342,11 @@ virtual CString GetDocumentListName(CDocument* pDocument) const;
 
 ### <a name="return-value"></a>戻り値
 
-*Pdocument*のドキュメント名。
+*Pdocument* のドキュメント名。
 
 ### <a name="remarks"></a>解説
 
-では、 `CDataRecoveryHandler` *m_mapDocNameToAutosaveName*、 *m_mapDocNameToDocumentPtr*、および *m_mapDocNameToRestoreBool*のキーとしてドキュメント名が使用されます。 これらのパラメーターを使用すると、 `CDataRecoveryHandler` `CDocument` オブジェクト、自動保存ファイル名、および自動保存設定を監視できます。
+では、 `CDataRecoveryHandler` *m_mapDocNameToAutosaveName*、 *m_mapDocNameToDocumentPtr*、および *m_mapDocNameToRestoreBool* のキーとしてドキュメント名が使用されます。 これらのパラメーターを使用すると、 `CDataRecoveryHandler` `CDocument` オブジェクト、自動保存ファイル名、および自動保存設定を監視できます。
 
 ## <a name="cdatarecoveryhandlergetnormaldocumenttitle"></a><a name="getnormaldocumenttitle"></a> CDataRecoveryHandler:: GetNormalDocumentTitle
 
@@ -366,7 +367,7 @@ virtual CString GetNormalDocumentTitle(CDocument* pDocument);
 
 ### <a name="remarks"></a>解説
 
-通常、ドキュメントの通常のタイトルは、パスを含まないドキュメントのファイル名です。 これは、[名前**を付けて保存**] ダイアログボックスの [**ファイル名**] フィールドのタイトルです。
+通常、ドキュメントの通常のタイトルは、パスを含まないドキュメントのファイル名です。 これは、[名前 **を付けて保存**] ダイアログボックスの [**ファイル名**] フィールドのタイトルです。
 
 ## <a name="cdatarecoveryhandlergetrecovereddocumenttitle"></a><a name="getrecovereddocumenttitle"></a> CDataRecoveryHandler:: Get Eddocumenttitle
 
@@ -463,7 +464,7 @@ virtual void QueryRestoreAutosavedDocuments();
 
 アプリケーションが Unicode の場合、このメソッドはユーザーに [CTaskDialog](../../mfc/reference/ctaskdialog-class.md) を表示します。 それ以外の場合、フレームワークは [AfxMessageBox](../../mfc/reference/cstring-formatting-and-message-box-display.md#afxmessagebox) を使用してユーザーを照会します。
 
-は、 `QueryRestoreAutosavedDocuments` ユーザーからのすべての応答を収集した後、 *m_mapDocNameToRestoreBool*メンバー変数に情報を格納します。 このメソッドは、自動保存されたドキュメントを復元しません。
+は、 `QueryRestoreAutosavedDocuments` ユーザーからのすべての応答を収集した後、 *m_mapDocNameToRestoreBool* メンバー変数に情報を格納します。 このメソッドは、自動保存されたドキュメントを復元しません。
 
 ## <a name="cdatarecoveryhandlerreadopendocumentlist"></a><a name="readopendocumentlist"></a> CDataRecoveryHandler:: ReadOpenDocumentList
 
@@ -479,7 +480,7 @@ TRUE は、が `ReadOpenDocumentList` レジストリから少なくとも1つ�
 
 ### <a name="remarks"></a>解説
 
-この関数は、開いているドキュメントの情報をレジストリから読み込み、 *m_mapDocNameToAutosaveName*メンバー変数に格納します。
+この関数は、開いているドキュメントの情報をレジストリから読み込み、 *m_mapDocNameToAutosaveName* メンバー変数に格納します。
 
 `ReadOpenDocumentList`は、すべてのデータを読み込んだ後、ドキュメントの情報をレジストリから削除します。
 
@@ -506,7 +507,7 @@ virtual BOOL RemoveDocumentInfo(CDocument* pDocument);
 
 開いている `RemoveDocumentInfo` ドキュメントの一覧に *pdocument* が見つからない場合は、何も実行されず、TRUE が返されます。
 
-このメソッドを使用するには、 *m_dwRestartManagerSupportFlags*で AFX_RESTART_MANAGER_REOPEN_PREVIOUS_FILES を設定する必要があります。
+このメソッドを使用するには、 *m_dwRestartManagerSupportFlags* で AFX_RESTART_MANAGER_REOPEN_PREVIOUS_FILES を設定する必要があります。
 
 ## <a name="cdatarecoveryhandlerreopenpreviousdocuments"></a><a name="reopenpreviousdocuments"></a> CDataRecoveryHandler:: Reopenの前のドキュメント
 
@@ -524,7 +525,7 @@ virtual BOOL ReopenPreviousDocuments();
 
 このメソッドは、以前開いたドキュメントの最新の保存を開きます。 ドキュメントが保存されていない、または自動保存されていない場合は、 `ReopenPreviousDocuments` そのファイルの種類のテンプレートに基づいて空のドキュメントが開きます。
 
-このメソッドを使用するには、 *m_dwRestartManagerSupportFlags*で AFX_RESTART_MANAGER_REOPEN_PREVIOUS_FILES を設定する必要があります。 このパラメーターが設定されていない場合、は何も実行せず、 `ReopenPreviousDocuments` FALSE を返します。
+このメソッドを使用するには、 *m_dwRestartManagerSupportFlags* で AFX_RESTART_MANAGER_REOPEN_PREVIOUS_FILES を設定する必要があります。 このパラメーターが設定されていない場合、は何も実行せず、 `ReopenPreviousDocuments` FALSE を返します。
 
 以前に開いていたドキュメントの一覧にドキュメントが格納されていない場合、は何も実行せず、 `ReopenPreviousDocuments` FALSE を返します。
 
@@ -662,7 +663,7 @@ virtual BOOL UpdateDocumentInfo(CDocument* pDocument);
 
 ユーザーがドキュメントを保存すると、アプリケーションは不要になったため、自動保存されたファイルを削除します。 `UpdateDocumentInfo`[CDataRecoveryHandler:: RemoveDocumentInfo](#removedocumentinfo)を呼び出して、自動保存されたファイルを削除します。 `UpdateDocumentInfo` は情報を削除するが、保存されたドキュメントは開いたままであるため、現在開いているドキュメントの一覧に *Pdocument* から情報を追加し `RemoveDocumentInfo` ます。
 
-このメソッドを使用するには、 *m_dwRestartManagerSupportFlags*で AFX_RESTART_MANAGER_REOPEN_PREVIOUS_FILES を設定する必要があります。
+このメソッドを使用するには、 *m_dwRestartManagerSupportFlags* で AFX_RESTART_MANAGER_REOPEN_PREVIOUS_FILES を設定する必要があります。
 
 ## <a name="see-also"></a>関連項目
 

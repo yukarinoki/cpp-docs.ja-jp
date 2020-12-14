@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「コンパイラエラー C3612」を参照してください。
 title: コンパイラ エラー C3612
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,22 +7,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3612
 ms.assetid: aa6e3a2b-4afa-481c-98c1-1b6d1f82f869
-ms.openlocfilehash: 499c31b0c02bd72695cd6118612609a70316f0ae
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 332d4bae940a0c98b148fd6ba951a4f51d1bee27
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74755747"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97223101"
 ---
 # <a name="compiler-error-c3612"></a>コンパイラ エラー C3612
 
 ' type ': シールドクラスを抽象クラスにすることはできません
 
-`value` を使用して定義された型は既定でシールされます。基底クラスのすべてのメソッドを実装しない限り、クラスは抽象クラスです。 シールされた抽象クラスは基底クラスにすることも、インスタンス化することもできません。
+を使用して定義された型 `value` は既定でシールされます。基底クラスのすべてのメソッドを実装しない限り、クラスは抽象クラスです。 シールされた抽象クラスは基底クラスにすることも、インスタンス化することもできません。
 
 詳細については、「[クラスと構造体](../../extensions/classes-and-structs-cpp-component-extensions.md)」を参照してください。
 
-## <a name="example"></a>使用例
+## <a name="example"></a>例
 
 次の例では、C3612 が生成されます。
 
