@@ -1,4 +1,5 @@
 ---
+description: '詳細については、次を参照してください: __readcr3'
 title: __readcr3
 ms.date: 09/02/2019
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - __readcr3 intrinsic
 ms.assetid: e24392c3-cad7-4788-8f31-94bf2e9e0053
-ms.openlocfilehash: b03ff46fabc99839d9c0bbd5c72e1b76d25814c0
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: f430694af6a54dde4839292a10a5267c000ccb86
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70221265"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97257343"
 ---
 # <a name="__readcr3"></a>__readcr3
 
@@ -29,15 +30,15 @@ unsigned __int64 __readcr3(void);
 
 CR3 レジスタの値。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-|組み込み|アーキテクチャ|
+|Intrinsic|アーキテクチャ|
 |---------------|------------------|
 |`__readcr3`|x86、x64|
 
-**ヘッダーファイル**\<>
+**ヘッダー ファイル** \<intrin.h>
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 組み込みはカーネルモードでのみ使用でき、ルーチンは組み込みとしてのみ使用できます。
 

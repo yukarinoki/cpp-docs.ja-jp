@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: nullptr (C++/CLI および C++/CX)'
 title: nullptr (C++/CLI および C++/CX)
 ms.date: 10/12/2018
 ms.topic: reference
@@ -6,22 +7,22 @@ helpviewer_keywords:
 - __nullptr keyword (C++)
 - nullptr keyword [C++]
 ms.assetid: 594cfbf7-06cb-4366-9ede-c0b703e1d095
-ms.openlocfilehash: 7e9cf88fdc0444f736f1cfac0d06dfc675a162cc
-ms.sourcegitcommit: 43cee7a0d41a062661229043c2f7cbc6ace17fa3
+ms.openlocfilehash: cf531e81e31af2e3f3790b9f57b54278ad574733
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92008353"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97257642"
 ---
 # <a name="nullptr--ccli-and-ccx"></a>nullptr (C++/CLI および C++/CX)
 
-キーワードは、 **`nullptr`** *null ポインター値*を表します。 Null ポインター値は、オブジェクト ハンドル、内部ポインター、またはネイティブ ポインターの型がオブジェクトを指していないことを示すために使用します。
+キーワードは、 **`nullptr`** *null ポインター値* を表します。 Null ポインター値は、オブジェクト ハンドル、内部ポインター、またはネイティブ ポインターの型がオブジェクトを指していないことを示すために使用します。
 
 **`nullptr`** マネージコードまたはネイティブコードと共にを使用します。 コンパイラからは、マネージドおよびネイティブの Null ポインター値に適した異なる命令が発行されます。 このキーワードの ISO 標準の C++ バージョンの使用については、「[nullptr](../cpp/nullptr.md)」を参照してください。
 
-**__Nullptr**キーワードは、と同じ意味を持つ Microsoft 固有のキーワードです **`nullptr`** が、ネイティブコードにのみ適用されます。 を **`nullptr`** ネイティブ c/c + + コードと共に使用し、 [/clr](../build/reference/clr-common-language-runtime-compilation.md) コンパイラオプションを指定してコンパイルする場合、が **`nullptr`** ネイティブまたはマネージの null ポインター値を示すかどうかをコンパイラで判断できません。 コンパイラに対して意図を明確にするために、を使用して **`nullptr`** マネージ値を指定するか、 **__nullptr** ネイティブ値を指定します。
+**__Nullptr** キーワードは、と同じ意味を持つ Microsoft 固有のキーワードです **`nullptr`** が、ネイティブコードにのみ適用されます。 を **`nullptr`** ネイティブ c/c + + コードと共に使用し、 [/clr](../build/reference/clr-common-language-runtime-compilation.md) コンパイラオプションを指定してコンパイルする場合、が **`nullptr`** ネイティブまたはマネージの null ポインター値を示すかどうかをコンパイラで判断できません。 コンパイラに対して意図を明確にするために、を使用して **`nullptr`** マネージ値を指定するか、 **__nullptr** ネイティブ値を指定します。
 
-**`nullptr`** キーワードは、C# で**Nothing**は Visual Basic と**null**に相当します。
+**`nullptr`** キーワードは、C# では Visual Basic と **null** に相当します。
 
 ## <a name="usage"></a>使用法
 
@@ -219,7 +220,7 @@ int main() {
 }
 ```
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 コンパイラオプション: (必須ではありません。、、など、すべてのコード生成オプションでサポートされています `/ZW` `/clr` )
 

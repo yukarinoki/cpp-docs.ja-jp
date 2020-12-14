@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「gmtime_s、_gmtime32_s、_gmtime64_s」を参照してください。
 title: gmtime_s、_gmtime32_s、_gmtime64_s
 ms.date: 4/2/2020
 api_name:
@@ -41,16 +42,16 @@ helpviewer_keywords:
 - _gmtime_s function
 - _gmtime32_s function
 ms.assetid: 261c7df0-2b0c-44ba-ba61-cb83efaec60f
-ms.openlocfilehash: 8cebd2eab1c0a5b650f33ccca1e87a0a8cad1e08
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: bffe11bd655ed8cfead6b862abf0237270c3af20
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87213555"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97296460"
 ---
 # <a name="gmtime_s-_gmtime32_s-_gmtime64_s"></a>gmtime_s、_gmtime32_s、_gmtime64_s
 
-時刻値を**tm**構造体に変換します。 これらは、「[Security Features in the CRT](../../c-runtime-library/security-features-in-the-crt.md)」 (CRT のセキュリティ機能) で説明されているように、セキュリティが強化されたバージョンの [_gmtime32、_gmtime64](gmtime-gmtime32-gmtime64.md) です。
+時刻値を **tm** 構造体に変換します。 これらは、「[Security Features in the CRT](../../c-runtime-library/security-features-in-the-crt.md)」 (CRT のセキュリティ機能) で説明されているように、セキュリティが強化されたバージョンの [_gmtime32、_gmtime64](gmtime-gmtime32-gmtime64.md) です。
 
 ## <a name="syntax"></a>構文
 
@@ -72,7 +73,7 @@ errno_t _gmtime64_s(
 ### <a name="parameters"></a>パラメーター
 
 *tmDest*<br/>
-[Tm](../../c-runtime-library/standard-types.md)構造体へのポインター。 返される構造体のフィールドは、*タイマー*引数の評価値を現地時刻ではなく UTC で保持します。
+[Tm](../../c-runtime-library/standard-types.md)構造体へのポインター。 返される構造体のフィールドは、 *タイマー* 引数の評価値を現地時刻ではなく UTC で保持します。
 
 *sourceTime*<br/>
 格納されている時刻へのポインター。 時刻は、世界協定時刻 (UTC: Coordinated Universal Time) の 1970 年 1 月 1 日の深夜 00:00:00 から経過した時間 (秒単位) を表します。
@@ -83,17 +84,17 @@ errno_t _gmtime64_s(
 
 ### <a name="error-conditions"></a>エラー条件
 
-|*tmDest*|*sourceTime*|戻り値|*Tmdest*の値|
+|*tmDest*|*sourceTime*|戻り値|*Tmdest* の値|
 |-----------|------------|------------|--------------------|
 |**NULL**|any|**EINVAL**|変更されません。|
 |Not **NULL** (有効なメモリを指す)|**NULL**|**EINVAL**|すべてのフィールドが-1 に設定されます。|
-|**NULL**以外|< 0|**EINVAL**|すべてのフィールドが-1 に設定されます。|
+|**NULL** 以外|< 0|**EINVAL**|すべてのフィールドが-1 に設定されます。|
 
-最初の 2 つのエラーの場合は、「[Parameter Validation](../../c-runtime-library/parameter-validation.md)」 (パラメーターの検証) に説明されているとおり、無効なパラメーター ハンドラーが呼び出されます。 実行の継続が許可された場合、これらの関数は**errno**を**einval**に設定し、 **einval**を返します。
+最初の 2 つのエラーの場合は、「[Parameter Validation](../../c-runtime-library/parameter-validation.md)」 (パラメーターの検証) に説明されているとおり、無効なパラメーター ハンドラーが呼び出されます。 実行の継続が許可された場合、これらの関数は **errno** を **einval** に設定し、 **einval** を返します。
 
 ## <a name="remarks"></a>解説
 
-**_Gmtime32_s**関数は、 *sourcetime*値を分割し、time. h で定義されている**tm**型の構造に格納します。 構造体のアドレスは、 *Tmdest*で渡されます。 *Sourcetime*の値は、通常、 [time](time-time32-time64.md)関数の呼び出しから取得されます。
+**_Gmtime32_s** 関数は、 *sourcetime* 値を分割し、time. h で定義されている **tm** 型の構造に格納します。 構造体のアドレスは、 *Tmdest* で渡されます。 *Sourcetime* の値は、通常、 [time](time-time32-time64.md)関数の呼び出しから取得されます。
 
 > [!NOTE]
 > 対象の環境によって、夏時間が有効かどうか判断されます。 C ランタイム ライブラリでは、アメリカ合衆国の規則を前提に夏時間を計算します。
@@ -110,11 +111,11 @@ errno_t _gmtime64_s(
 |**tm_year**|年 (実際の西暦から 1900 を引いた数)|
 |**tm_wday**|曜日 (0-6;日曜日 = 0)。|
 |**tm_yday**|年の通算日 (0-365;1月1日 = 0)。|
-|**tm_isdst**|**Gmtime_s**の場合は常に0です。|
+|**tm_isdst**|**Gmtime_s** の場合は常に0です。|
 
-**__time64_t**構造体を使用する **_gmtime64_s**では、23:59:59 年12月 31 3000 日までの日付を表すことができます。**gmtime32_s**は、2038年1月18日23:59:59 までの日付のみを表します。 これらの関数の日付範囲の下限は、どちらも 1970 年 1 月 1 日の午前 0 時です。
+**__time64_t** 構造体を使用する **_gmtime64_s** では、23:59:59 年12月 31 3000 日までの日付を表すことができます。**gmtime32_s** は、2038年1月18日23:59:59 までの日付のみを表します。 これらの関数の日付範囲の下限は、どちらも 1970 年 1 月 1 日の午前 0 時です。
 
-**gmtime_s**は **_gmtime64_s**に評価されるインライン関数であり、 **time_t**は **__time64_t**に相当します。 以前の32ビット**time_t**として**time_t**を解釈するようにコンパイラに強制する必要がある場合は **_USE_32BIT_TIME_T**を定義できます。 これにより、 **gmtime_s**が **_gmtime32_s**にインラインで配置されます。 この方法はお勧めしません。2038 年 1 月 18 日より後にアプリケーションがエラーになる可能性があり、また、64 ビット プラットフォームでは使用できないためです。
+**gmtime_s** は **_gmtime64_s** に評価されるインライン関数であり、 **time_t** は **__time64_t** に相当します。 以前の32ビット **time_t** として **time_t** を解釈するようにコンパイラに強制する必要がある場合は **_USE_32BIT_TIME_T** を定義できます。 これにより、 **gmtime_s** が **_gmtime32_s** にインラインで配置されます。 この方法はお勧めしません。2038 年 1 月 18 日より後にアプリケーションがエラーになる可能性があり、また、64 ビット プラットフォームでは使用できないためです。
 
 既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 

@@ -1,4 +1,5 @@
 ---
+description: 詳細については、「コンパイラエラー C2357」を参照してください。
 title: コンパイラ エラー C2357
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2357
 ms.assetid: d1083945-0ea2-4385-9e66-8c665978806c
-ms.openlocfilehash: ce1926468bac7e44485be5c0a0944fdf12dce3d8
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: a58317fc4706d6385d3753a434c8e4fd80dc79b1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74759920"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97276739"
 ---
 # <a name="compiler-error-c2357"></a>コンパイラ エラー C2357
 
 ' identifier ': 型 ' type ' の関数でなければなりません
 
-コードで、コンパイラによって内部で宣言されたバージョンと一致しない `atexit` 関数のバージョンが宣言されています。 次のように `atexit` を宣言します。
+コード `atexit` で、コンパイラによって内部的に宣言されたバージョンと一致しないバージョンの関数が宣言されています。 次のように宣言 `atexit` します。
 
 ```
 int __cdecl atexit(void (__cdecl *)());

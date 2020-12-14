@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: Platform:: IntPtr value クラス'
 title: Platform::IntPtr 値クラス
 ms.date: 12/30/2016
 ms.topic: reference
@@ -9,12 +10,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::IntPtr Struct
 ms.assetid: 6c0326e8-edfd-4e53-a963-240b845dcde8
-ms.openlocfilehash: 8101fa2c82a0ac3e3b573384d14d9a7eff6ecf61
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 18c5316eaae84b1e6af4e54d86ef876d81a866ed
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62152738"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97295264"
 ---
 # <a name="platformintptr-value-class"></a>Platform::IntPtr 値クラス
 
@@ -32,21 +33,21 @@ IntPtr には、次のメンバーがあります。
 
 |メンバー|説明|
 |------------|-----------------|
-|[IntPtr::IntPtr](#ctor)|IntPtr の新しいインスタンスを初期化します。|
-|[IntPtr::op_explicit 演算子](#op-explicit)|指定されたパラメーターを IntPtr、または IntPtr 値へのポインターに変換します。|
-|[IntPtr::ToInt32](#toint32)|現在の IntPtr を 32 ビット整数に変換します。|
+|[IntPtr:: IntPtr](#ctor)|IntPtr の新しいインスタンスを初期化します。|
+|[IntPtr:: op_explicit 演算子](#op-explicit)|指定されたパラメーターを IntPtr、または IntPtr 値へのポインターに変換します。|
+|[IntPtr:: ToInt32](#toint32)|現在の IntPtr を 32 ビット整数に変換します。|
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
-**最小値には、クライアントがサポートされています。** Windows 8
+**サポートされている最低限のクライアント:** Windows 8
 
-**最小値には、サーバーがサポートされています。** Windows Server 2012
+**サポートされる最小サーバー:** Windows Server 2012
 
-**名前空間:** プラットフォーム
+**名前空間:** Platform
 
-**メタデータ:** platform.winmd
+**メタデータ:** platform. winmd
 
-## <a name="ctor"> </a> IntPtr::IntPtr コンストラクター
+## <a name="intptrintptr-constructor"></a><a name="ctor"> </a> IntPtr::IntPtr コンストラクター
 
 指定された値を持つ IntPtr の新しいインスタンスを初期化します。
 
@@ -61,7 +62,7 @@ IntPtr( __int64 handle-or-pointer );   IntPtr( void* value );   IntPtr( int 32-b
 *value*<br/>
 64 ビットのハンドルまたはポインター、または 64 ビット値へのポインター、または 64 ビット値に変換できる 32 ビット値。
 
-## <a name="op-explicit"> </a> IntPtr::op_explicit 演算子
+## <a name="intptrop_explicit-operator"></a><a name="op-explicit"> </a> IntPtr::op_explicit 演算子
 
 指定されたパラメーターを IntPtr、または IntPtr 値へのポインターに変換します。
 
@@ -86,7 +87,7 @@ IntPtr。
 
 1 番目と 2 番目の演算子は IntPtr を返します。 3 番目の演算子は、現在の IntPtr によって表される値へのポインターを返します。
 
-## <a name="toint32"> </a> Intptr::toint32 メソッド
+## <a name="intptrtoint32-method"></a><a name="toint32"></a> IntPtr:: ToInt32 メソッド
 
 現在の IntPtr 値を 32 ビット整数に変換します。
 
@@ -98,7 +99,7 @@ int32 IntPtr::ToInt32();
 
 ### <a name="return-value"></a>戻り値
 
-32 ビット整数。
+32 ビットの整数。
 
 ## <a name="see-also"></a>関連項目
 
