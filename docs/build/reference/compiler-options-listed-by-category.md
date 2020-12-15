@@ -5,16 +5,16 @@ ms.date: 07/29/2020
 helpviewer_keywords:
 - compiler options, C++
 ms.assetid: c4750dcf-dba0-4229-99b6-45cdecc11729
-ms.openlocfilehash: beb10404075d9541872ff4780a725e177356a3b8
-ms.sourcegitcommit: f2a135d69a2a8ef1777da60c53d58fe06980c997
+ms.openlocfilehash: bf12948658b5f7e3211c423b5302bc52d1b87729
+ms.sourcegitcommit: 48b897797b3132ae934b1d191e3870c3c2466335
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87520954"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97514563"
 ---
 # <a name="compiler-options-listed-by-category"></a>カテゴリ別のコンパイラ オプション
 
-この記事には、コンパイラ オプションのカテゴリ別の一覧が含まれています。 アルファベット順の一覧については、「[アルファベット順に表示されるコンパイラオプション](compiler-options-listed-alphabetically.md)」を参照してください。
+この記事には、コンパイラ オプションのカテゴリ別の一覧が含まれています。 アルファベット順の一覧については、「 [アルファベット順に表示されるコンパイラオプション](compiler-options-listed-alphabetically.md)」を参照してください。
 
 ## <a name="optimization"></a>最適化
 
@@ -144,10 +144,10 @@ ms.locfileid: "87520954"
 | [`/LDd`](md-mt-ld-use-run-time-library.md) | デバッグ バージョンのダイナミック リンク ライブラリを作成します。 |
 | [`/link`](link-pass-options-to-linker.md) | 指定したオプションを LINK に渡します。 |
 | [`/LN`](ln-create-msil-module.md) | MSIL モジュールを作成します。 |
-| [`/MD`](md-mt-ld-use-run-time-library.md) | は、 *msvcrt.dll*を使用して、マルチスレッド DLL を作成するためにコンパイルします。 |
-| [`/MDd`](md-mt-ld-use-run-time-library.md) | *Msvcrtd.lib*を使用して、デバッグ用のマルチスレッド DLL をコンパイルして作成します。 |
-| [`/MT`](md-mt-ld-use-run-time-library.md) | *Libcmt.lib*を使用して、マルチスレッド実行可能ファイルをコンパイルして作成します。 |
-| [`/MTd`](md-mt-ld-use-run-time-library.md) | *Libcmtd*を使用して、デバッグ用のマルチスレッド実行可能ファイルを作成するためにコンパイルします。 |
+| [`/MD`](md-mt-ld-use-run-time-library.md) | は、 *msvcrt.dll* を使用して、マルチスレッド DLL を作成するためにコンパイルします。 |
+| [`/MDd`](md-mt-ld-use-run-time-library.md) | *Msvcrtd.lib* を使用して、デバッグ用のマルチスレッド DLL をコンパイルして作成します。 |
+| [`/MT`](md-mt-ld-use-run-time-library.md) | *Libcmt.lib* を使用して、マルチスレッド実行可能ファイルをコンパイルして作成します。 |
+| [`/MTd`](md-mt-ld-use-run-time-library.md) | *Libcmtd* を使用して、デバッグ用のマルチスレッド実行可能ファイルを作成するためにコンパイルします。 |
 
 ## <a name="miscellaneous"></a>その他
 
@@ -158,10 +158,10 @@ ms.locfileid: "87520954"
 | [`/analyze`](analyze-code-analysis.md) | コード分析を有効にします。 |
 | [`/bigobj`](bigobj-increase-number-of-sections-in-dot-obj-file.md) | .obj ファイル内のアドレス指定可能なセクションの数を増やします。 |
 | [`/c`](c-compile-without-linking.md) | リンクを行わないでコンパイルします。 |
-| [`/cgthreads`](cgthreads-code-generation-threads.md) | 最適化およびコード生成に使用する*cl.exe*スレッド数を指定します。 |
-| [`/errorReport`](errorreport-report-internal-compiler-errors.md) | 非推奨になりました。 エラー報告は、 [Windows エラー報告 (WER)](/windows/win32/wer/windows-error-reporting)設定によって制御されます。 |
-| [`/FC`](fc-full-path-of-source-code-file-in-diagnostics.md) | 診断テキストで*cl.exe*に渡されるソースコードファイルの完全パスを表示します。 |
-| [`/FS`](fs-force-synchronous-pdb-writes.md) | PDB ファイルへの書き込みを*MSPDBSRV.EXE*によって強制的にシリアル化します。 |
+| [`/cgthreads`](cgthreads-code-generation-threads.md) | 最適化およびコード生成に使用する *cl.exe* スレッド数を指定します。 |
+| [`/errorReport`](errorreport-report-internal-compiler-errors.md) | 非推奨になりました。 エラー報告は、 [Windows エラー報告 (WER)](/windows/win32/wer/windows-error-reporting) 設定によって制御されます。 |
+| [`/FC`](fc-full-path-of-source-code-file-in-diagnostics.md) | 診断テキストで *cl.exe* に渡されるソースコードファイルの完全パスを表示します。 |
+| [`/FS`](fs-force-synchronous-pdb-writes.md) | PDB ファイルへの書き込みを *MSPDBSRV.EXE* によって強制的にシリアル化します。 |
 | [`/H`](h-restrict-length-of-external-names.md) | 非推奨になりました。 外部名 (パブリック名) の長さを制限します。 |
 | [`/HELP`](help-compiler-command-line-help.md) | コンパイラ オプションのリストを出力します。 |
 | [`/J`](j-default-char-type-is-unsigned.md) | 既定の型を変更 **`char`** します。 |
@@ -209,14 +209,14 @@ ms.locfileid: "87520954"
 | オプション | 目的 |
 |--|--|
 | [`/experimental:module`](experimental-module.md) | 実験的なモジュールのサポートを有効にします。 |
-| [`/experimental:preprocessor`](experimental-preprocessor.md) | 試験的に準拠するプリプロセッサのサポートを有効にします。 |
+| [`/experimental:preprocessor`](experimental-preprocessor.md) | 非推奨になりました。 試験的に準拠するプリプロセッサのサポートを有効にします。 使用 [`/Zc:preprocessor`](zc-preprocessor.md) |
 
 ## <a name="deprecated-and-removed-compiler-options"></a>非推奨のコンパイラオプションと削除されたコンパイラオプション
 
 | オプション | 目的 |
 |--|--|
 | [`/clr:noAssembly`](clr-common-language-runtime-compilation.md) | 非推奨になりました。 代わりに[ `/LN` (MSIL モジュールの作成)](ln-create-msil-module.md)を使用してください。 |
-| [`/errorReport`](errorreport-report-internal-compiler-errors.md) | 非推奨になりました。 エラー報告は、 [Windows エラー報告 (WER)](/windows/win32/wer/windows-error-reporting)設定によって制御されます。 |
+| [`/errorReport`](errorreport-report-internal-compiler-errors.md) | 非推奨になりました。 エラー報告は、 [Windows エラー報告 (WER)](/windows/win32/wer/windows-error-reporting) 設定によって制御されます。 |
 | [`/Fr`](fr-fr-create-dot-sbr-file.md) | 非推奨になりました。 ローカル変数を含まないブラウザー情報ファイルを作成します。 |
 | [`/Ge`](ge-enable-stack-probes.md) | 非推奨になりました。 スタック プローブをアクティブにします。 既定でオンになっています。 |
 | [`/Gm`](gm-enable-minimal-rebuild.md) | 非推奨になりました。 簡易リビルドを有効にします。 |

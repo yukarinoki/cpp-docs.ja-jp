@@ -1,20 +1,19 @@
 ---
 description: '詳細情報: コンパイラオプション'
 title: MSVC コンパイラオプション
-ms.date: 05/06/2019
+ms.date: 12/14/2020
 helpviewer_keywords:
 - cl.exe compiler
 - x86 MSVC compiler
 - ARM MSVC compiler
 - compiler options, C++
 - x64 MSVC compiler
-ms.assetid: ed3376c8-bef4-4c9a-80e9-3b5da232644c
-ms.openlocfilehash: a6b124fa5fce68844d53c1324da48c17ef5a9ccf
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: f89695b00be4ed67a00f947c6b76943bfa5eaf59
+ms.sourcegitcommit: 48b897797b3132ae934b1d191e3870c3c2466335
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97197024"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97514574"
 ---
 # <a name="compiler-options"></a>コンパイラ オプション
 
@@ -25,7 +24,7 @@ cl.exe は、Microsoft C++ (MSVC) C および C++ コンパイラとリンカー
 
 コンパイラは、COFF (Common Object File Format) 形式のオブジェクト (.obj) ファイルを生成します。 リンカーは、実行可能 (.exe) ファイルまたはダイナミック リンク ライブラリ (DLL: Dynamic-Link Library) を生成します。
 
-すべてのコンパイラ オプションで、大文字小文字を区別します。 スラッシュ () またはダッシュ () のいずれかを使用して、コンパイラオプションを指定することができ `/` `-` ます。
+すべてのコンパイラオプションでは大文字と小文字が区別されます。 スラッシュ () またはダッシュ () のいずれかを使用して、コンパイラオプションを指定することができ `/` `-` ます。
 
 リンクせずにコンパイルするには、 [/c](c-compile-without-linking.md) オプションを使用します。
 

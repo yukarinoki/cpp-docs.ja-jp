@@ -4,16 +4,16 @@ description: Microsoft C/c + + コンパイラのコマンドラインオプシ�
 ms.date: 07/29/2020
 helpviewer_keywords:
 - compiler options, C++
-ms.openlocfilehash: 81f2fbfe385e8655193c5862455e6ffca3719c96
-ms.sourcegitcommit: f2a135d69a2a8ef1777da60c53d58fe06980c997
+ms.openlocfilehash: 532ee4aceef281f7aa52fee6cd405a3520409218
+ms.sourcegitcommit: 48b897797b3132ae934b1d191e3870c3c2466335
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87520863"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97514550"
 ---
 # <a name="compiler-options-listed-alphabetically"></a>アルファベット順のコンパイラ オプション
 
-このテーブルには、コンパイラオプションのアルファベット順の一覧が含まれています。 カテゴリ別のコンパイラオプションの一覧については、「[カテゴリ別のコンパイラオプション](compiler-options-listed-by-category.md)の一覧」を参照してください。
+このテーブルには、コンパイラオプションのアルファベット順の一覧が含まれています。 カテゴリ別のコンパイラオプションの一覧については、「 [カテゴリ別のコンパイラオプション](compiler-options-listed-by-category.md) の一覧」を参照してください。
 
 ## <a name="compiler-options"></a>コンパイラ オプション
 
@@ -37,10 +37,10 @@ ms.locfileid: "87520863"
 | [`/E`](e-preprocess-to-stdout.md) | プリプロセッサ出力を標準出力にコピーします。 |
 | [`/EH`](eh-exception-handling-model.md) | 例外処理のモデルを指定します。 |
 | [`/EP`](ep-preprocess-to-stdout-without-hash-line-directives.md) | プリプロセッサ出力を標準出力にコピーします。 |
-| [`/errorReport`](errorreport-report-internal-compiler-errors.md) | 非推奨になりました。 エラー報告は、 [Windows エラー報告 (WER)](/windows/win32/wer/windows-error-reporting)設定によって制御されます。 |
+| [`/errorReport`](errorreport-report-internal-compiler-errors.md) | 非推奨になりました。 エラー報告は、 [Windows エラー報告 (WER)](/windows/win32/wer/windows-error-reporting) 設定によって制御されます。 |
 | [`/execution-charset`](execution-charset-set-execution-character-set.md) | 実行文字セットを設定します。 |
 | [`/experimental:module`](experimental-module.md) | 実験的なモジュールのサポートを有効にします。 |
-| [`/experimental:preprocessor`](experimental-preprocessor.md) | 試験的に準拠するプリプロセッサのサポートを有効にします。 |
+| [`/experimental:preprocessor`](experimental-preprocessor.md) | 非推奨になりました。 試験的に準拠するプリプロセッサのサポートを有効にします。 使用 [`/Zc:preprocessor`](zc-preprocessor.md) |
 | [`/F`](f-set-stack-size.md) | スタック サイズを設定します。 |
 | [`/favor`](favor-optimize-for-architecture-specifics.md) | 特定の x64 アーキテクチャ用に最適化されたコードを生成します。 または、AMD64 アーキテクチャと EM64T アーキテクチャの両方で、特定のマイクロアーキテクチャに対応します。 |
 | [`/FA`](fa-fa-listing-file.md) | リスティング ファイルを作成します。 |
@@ -77,7 +77,7 @@ ms.locfileid: "87520863"
 | [`/Gw`](gw-optimize-global-data.md) | プログラム全体のグローバル データの最適化を有効にします。 |
 | [`/GX`](gx-enable-exception-handling.md) | 非推奨になりました。 同期例外処理を有効にします。 代わりにを使用 [`/EH`](eh-exception-handling-model.md) してください。 |
 | [`/Gy`](gy-enable-function-level-linking.md) | 関数レベルのリンクを有効にします。 |
-| [`/GZ`](gz-enable-stack-frame-run-time-error-checking.md) | 非推奨になりました。 と同じ [`/RTC1`](rtc-run-time-error-checks.md) です。 |
+| [`/GZ`](gz-enable-stack-frame-run-time-error-checking.md) | 非推奨になりました。 [`/RTC1`](rtc-run-time-error-checks.md) と同じ。 |
 | [`/Gz`](gd-gr-gv-gz-calling-convention.md) | 呼び出し規約を使用し **`__stdcall`** ます (x86 のみ)。 |
 | [`/H`](h-restrict-length-of-external-names.md) | 非推奨になりました。 外部名 (パブリック名) の長さを制限します。 |
 | [`/HELP`](help-compiler-command-line-help.md) | コンパイラ オプションのリストを出力します。 |
@@ -119,7 +119,7 @@ ms.locfileid: "87520863"
 | [`/Qspectre`](qspectre.md) | 特定のスペクター バリアント 1 のセキュリティ脆弱性を軽減するコンパイラの命令生成を指定します。 |
 | [`/Qspectre-load`](qspectre-load.md) | ロード命令に基づいて Spectre のセキュリティ脆弱性を軽減するための命令をシリアル化するためのコンパイラの生成を指定します。 |
 | [`/Qspectre-load-cf`](qspectre-load-cf.md) | メモリを読み込む制御フロー命令に基づいて、Spectre のセキュリティ脆弱性を軽減するための命令をシリアル化するためのコンパイラの生成を指定します。 |
-| [`/Qvec-report`(自動ベクター化レポートレベル)](qvec-report-auto-vectorizer-reporting-level.md) | 自動ベクター化のレポート レベルを有効にします。 |
+| [`/Qvec-report` (自動ベクター化レポートレベル)](qvec-report-auto-vectorizer-reporting-level.md) | 自動ベクター化のレポート レベルを有効にします。 |
 | [`/RTC`](rtc-run-time-error-checks.md) | ランタイム エラー チェックを有効にします。 |
 | [`/sdl`](sdl-enable-additional-security-checks.md) | 追加のセキュリティ機能と警告を有効にします。 |
 | [`/showIncludes`](showincludes-list-include-files.md) | コンパイル時にインクルード ファイルの一覧を表示します。 |
