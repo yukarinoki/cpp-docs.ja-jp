@@ -270,6 +270,8 @@
                   href: ../c-language/string-literals-in-primary-expressions.md
                 - name: かっこで囲んだ式
                   href: ../c-language/expressions-in-parentheses.md
+                - name: 汎用選択 (C11)
+                  href: ../c-language/generic_selection.md
             - name: 左辺値と右辺値の式
               href: ../c-language/l-value-and-r-value-expressions.md
             - name: C 定数式
