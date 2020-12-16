@@ -2,7 +2,7 @@
 title: 定義済みマクロ
 description: Microsoft C++ コンパイラの定義済みプリプロセッサ マクロを一覧にして説明します。
 ms.custom: update_every_version
-ms.date: 09/11/2020
+ms.date: 12/14/2020
 f1_keywords:
 - _ATL_VER
 - __ATOM__
@@ -240,12 +240,12 @@ no-loc:
 - _WIN64
 - _WINRT_DLL
 - __func__
-ms.openlocfilehash: b5e2b34357456c4937d8ed17dee5661d36b7b0c0
-ms.sourcegitcommit: 25f6d52eb9e5d84bd0218c46372db85572af81da
+ms.openlocfilehash: e4577f7b74c6057df8ebe795ffa0056dbdeae298
+ms.sourcegitcommit: 48b897797b3132ae934b1d191e3870c3c2466335
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94448465"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97514539"
 ---
 # <a name="predefined-macros"></a>定義済みマクロ
 
@@ -525,7 +525,9 @@ MSVC では、次の定義済みマクロがサポートされます。
 
 - `__MSVC_RUNTIME_CHECKS`  [`/RTC`](../build/reference/rtc-run-time-error-checks.md)  コンパイラ オプションのいずれかが設定されている場合、1 として定義されます。 それ以外の場合は、定義されません。
 
-- `_MSVC_TRADITIONAL` プリプロセッサ準拠モード [`/experimental:preprocessor`](../build/reference/experimental-preprocessor.md)  コンパイラ オプションが設定されている場合、0 として定義されます。 既定では、または  [`/experimental:preprocessor-`](../build/reference/experimental-preprocessor.md)  コンパイラ オプションが設定されている場合は、1 として定義されます。これは、従来のプリプロセッサが使用されていることを示します。 `_MSVC_TRADITIONAL` マクロと [ **`/experimental:preprocessor`** (プリプロセッサ準拠モードの有効化)](../build/reference/experimental-preprocessor.md) コンパイラ オプションは、Visual Studio 2017 バージョン 15.8 以降で使用できます。
+- `_MSVC_TRADITIONAL`:
+    - Visual Studio 2017 バージョン15.8 以降で利用可能:プリプロセッサ準拠モード [`/experimental:preprocessor`](../build/reference/experimental-preprocessor.md) コンパイラ オプションが設定されている場合、0 として定義されます。 既定では、または  [`/experimental:preprocessor-`](../build/reference/experimental-preprocessor.md)  コンパイラ オプションが設定されている場合は、1 として定義されます。これは、従来のプリプロセッサが使用されていることを示します。
+    - Visual Studio 2019 バージョン16.5 以降で利用可能:プリプロセッサ準拠モード [`/Zc:preprocessor`](../build/reference/zc-preprocessor.md) コンパイラ オプションが設定されている場合、0 として定義されます。 既定では、または `/Zc:preprocessor-` コンパイラ オプションが設定されている場合は、1 として定義されます。これは、従来のプリプロセッサが使用されていることを示します (基本的に、`/Zc:preprocessor` は非推奨の `/experimental:preprocessor` を置き換えます)。
 
    ```cpp
    #if defined(_MSVC_TRADITIONAL) && _MSVC_TRADITIONAL
