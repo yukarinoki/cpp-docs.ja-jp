@@ -1,21 +1,22 @@
 ---
-description: '詳細情報: コンパイラの警告 (レベル 1) C4027'
+description: コンパイラの警告 (レベル 1) の詳細については、C4027 を参照してください。
 title: コンパイラの警告 (レベル 1) C4027
-ms.date: 11/04/2016
+ms.date: 12/16/2020
 f1_keywords:
 - C4027
 helpviewer_keywords:
 - C4027
-ms.assetid: f30d57b9-20c4-4284-8686-566d9f0ca7fc
-ms.openlocfilehash: 6f17cb0ccc3603abf1804827916a013fa2471f7f
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: 1489ca32211854bcf1ef55d1a4ac806ab1611f43
+ms.sourcegitcommit: 387ce22a3b0137f99cbb856a772b5a910c9eba99
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97332253"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97645177"
 ---
 # <a name="compiler-warning-level-1-c4027"></a>コンパイラの警告 (レベル 1) C4027
 
-関数はパラメーター リストなしで宣言されています。
+> 関数はパラメーター リストなしで宣言されています。
 
-関数の宣言に仮引数がありませんが、関数の定義に仮引数があるか、呼び出しに実引数があります。 この関数への後続の呼び出しでは、関数が関数の定義内または呼び出し内で検出された型の実引数を取ることが前提になります。
+関数宣言に仮引数がありませんでしたが、関数定義または呼び出しの実際のパラメーターに仮パラメーターがあります。
+
+コンパイラは、パラメーターリストを使用せずに、関数名の古い C スタイルの事前宣言に対してを受け取りますが、警告を出します。 後でこの関数を呼び出すときに、コンパイラは、関数が関数定義または呼び出しで見つかった型の実際のパラメーターを受け取ることを前提としています。 関数定義のシグネチャに一致するように関数の宣言を変更することをお勧めします。

@@ -1,23 +1,22 @@
 ---
-description: '詳細情報: 例外フィルターの記述'
+description: 構造化例外フィルターの記述方法については、こちらを参照してください。
 title: 例外フィルターの記述
-ms.date: 11/04/2016
+ms.date: 12/16/2020
 helpviewer_keywords:
 - exception handling [C++], filters
-ms.assetid: 47fc832b-a707-4422-b60a-aaefe14189e5
-ms.openlocfilehash: 580c0f0b339b25137bb2aea0621463a89e99fc33
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: 8b6706c7dfe0e96e26f77f1f3a452db638141803
+ms.sourcegitcommit: 387ce22a3b0137f99cbb856a772b5a910c9eba99
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97302817"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97645060"
 ---
 # <a name="writing-an-exception-filter"></a>例外フィルターの記述
 
-例外は、例外ハンドラーのレベルにジャンプするか、実行を続けるかのいずれかにより、処理できます。 例外ハンドラーコードを使用して例外を処理し、遅延を解消する代わりに、 *フィルター* を使用して問題をクリーンアップし、-1 を返すことで、スタックをクリアせずに通常のフローを再開できます。
+例外は、例外ハンドラーのレベルにジャンプするか、実行を続けるかのいずれかにより、処理できます。 例外ハンドラーコードを使用して例外を処理し、処理を遅延させる代わりに、 *フィルター* 式を使用して問題をクリーンアップできます。 次に (-1) を返すことで、 `EXCEPTION_CONTINUE_EXECUTION` スタックをクリアせずに通常のフローを再開できます。
 
 > [!NOTE]
-> 一部の例外は、続行できない場合があります。 このような例外に対して *filter* が-1 と評価された場合、システムによって新しい例外が発生します。 [RaiseException](/windows/win32/api/errhandlingapi/nf-errhandlingapi-raiseexception)を呼び出すと、例外を続行するかどうかが決定されます。
+> 一部の例外は、続行できない場合があります。 このような例外に対して *filter* が-1 と評価された場合、システムによって新しい例外が発生します。 を呼び出すと [`RaiseException`](/windows/win32/api/errhandlingapi/nf-errhandlingapi-raiseexception) 、例外を続行するかどうかが決定されます。
 
 たとえば、次のコードでは、 *フィルター* 式で関数呼び出しを使用しています。この関数は問題を処理し、-1 を返して通常の制御フローを再開します。
 
@@ -46,11 +45,11 @@ int Eval_Exception ( int n_except ) {
 }
 ```
 
-フィルターで複雑な処理を *行う必要が* ある場合は常に、*フィルター* 式で関数呼び出しを使用することをお勧めします。 式を評価すると、関数 (この場合、`Eval_Exception`) が実行されます。
+フィルターで複雑な処理を行う必要がある場合 *は常に*、*フィルター* 式で関数呼び出しを使用することをお勧めします。 式を評価すると、関数 (この場合、`Eval_Exception`) が実行されます。
 
-[Getexceptioncode](/windows/win32/Debug/getexceptioncode)を使用して例外を特定することに注意してください。 この関数は、フィルター自体の内部で呼び出す必要があります。 `Eval_Exception` を呼び出すことはできません `GetExceptionCode` が、例外コードを渡す必要があります。
+例外を特定するために、を使用することに注意して [`GetExceptionCode`](/windows/win32/Debug/getexceptioncode) ください。 この関数は、ステートメントのフィルター式の内部で呼び出す必要があり **`__except`** ます。 `Eval_Exception` を呼び出すことはできません `GetExceptionCode` が、例外コードを渡す必要があります。
 
-このハンドラーは、例外が整数または浮動小数点数のオーバーフローでなければ、他のハンドラーに制御を渡します。 オーバーフローがあった場合、ハンドラーは関数 (`ResetVars` は一例で、API 関数ではありません) を呼び出して、いくつかのグローバル関数をリセットします。 *ステートメント-block-2*(この例では空) は、 `Eval_Exception` EXCEPTION_EXECUTE_HANDLER (1) が返されないため、実行できません。
+このハンドラーは、例外が整数または浮動小数点数のオーバーフローでなければ、他のハンドラーに制御を渡します。 オーバーフローがあった場合、ハンドラーは関数 (`ResetVars` は一例で、API 関数ではありません) を呼び出して、いくつかのグローバル関数をリセットします。 **`__except`** ステートメントブロック (この例では空) は、 `Eval_Exception` (1) を返さないため、実行できません `EXCEPTION_EXECUTE_HANDLER` 。
 
 関数呼び出しの使用は、複雑なフィルター式を処理するための優れた汎用的手法です。 その他の便利な 2 つの C 言語機能を次に示します。
 
@@ -58,7 +57,7 @@ int Eval_Exception ( int n_except ) {
 
 - コンマ演算子
 
-条件演算子を使用すると、特定のリターン コードをチェックしてから 2 つの異なる値のいずれかを返すことができるため、この演算子は多くの場合に役立ちます。 たとえば、次のコードのフィルターでは、例外が STATUS_INTEGER_OVERFLOW 場合にのみ例外が認識されます。
+ここでは、多くの場合、条件演算子が役立ちます。 これを使用すると、特定のリターンコードを確認し、2つの異なる値のいずれかを返すことができます。 たとえば、次のコードのフィルターは、例外がの場合にのみ例外を認識し `STATUS_INTEGER_OVERFLOW` ます。
 
 ```cpp
 __except( GetExceptionCode() == STATUS_INTEGER_OVERFLOW ? 1 : 0 ) {
@@ -70,9 +69,9 @@ __except( GetExceptionCode() == STATUS_INTEGER_OVERFLOW ? 1 : 0 ) {
 __except( GetExceptionCode() == STATUS_INTEGER_OVERFLOW ) {
 ```
 
-条件演算子は、フィルターを-1、EXCEPTION_CONTINUE_EXECUTION に評価する必要がある場合に便利です。
+条件演算子は、フィルターを-1 に評価する必要がある場合に便利です `EXCEPTION_CONTINUE_EXECUTION` 。
 
-コンマ演算子を使用すると、1 つの式内で複数の個別演算を実行できます。 複数のステートメントを実行してから最後の式の値を返す場合とほぼ同じ効果が得られます。 たとえば、次のコードでは、変数に例外コードを保存してから、そのコードをテストしています。
+コンマ演算子を使用すると、複数の式を順番に実行できます。 次に、最後の式の値を返します。 たとえば、次のコードでは、変数に例外コードを保存してから、そのコードをテストしています。
 
 ```cpp
 __except( nCode = GetExceptionCode(), nCode == STATUS_INTEGER_OVERFLOW )

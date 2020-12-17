@@ -265,12 +265,12 @@ helpviewer_keywords:
 - CListCtrl [MFC], SubItemHitTest
 - CListCtrl [MFC], Update
 ms.assetid: fe08a1ca-4b05-4ff7-a12a-ee4c765a2197
-ms.openlocfilehash: a72cc336a6f962eb5129bec15ccb3ed2fe748e10
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: 8466d8436aaf76a3acdfc6e50682745c9ad4fcc2
+ms.sourcegitcommit: 387ce22a3b0137f99cbb856a772b5a910c9eba99
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97333480"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97645229"
 ---
 # <a name="clistctrl-class"></a>CListCtrl クラス
 
@@ -429,7 +429,7 @@ class CListCtrl : public CWnd
 
 クラスの簡単な概要を次に示し `CListCtrl` ます。 概念に関する詳細な説明については、「CListCtrl と[コントロール](../../mfc/controls-mfc.md)の[使用](../../mfc/using-clistctrl.md)」を参照してください。
 
-## <a name="views"></a>ビュー
+## <a name="views"></a>Views
 
 リストビューコントロールは、"views" という4つの異なる方法でコンテンツを表示できます。
 
@@ -513,7 +513,7 @@ class CListCtrl : public CWnd
 
 `CListCtrl`
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxcmn.h
 
@@ -533,7 +533,7 @@ CSize ApproximateViewRect(
 コントロールの提案された大きさ (ピクセル単位)。 次元が指定されていない場合、フレームワークはコントロールの現在の幅または高さの値を使用します。
 
 *iCount*<br/>
-コントロールに表示される項目の数。 このパラメーターが-1 の場合、フレームワークは現在コントロール内にある項目の合計数を使用します。
+コントロールに表示される項目の数。 -1 は、コントロール内の現在の項目の合計数を使用します。
 
 ### <a name="return-value"></a>戻り値
 
@@ -3139,7 +3139,7 @@ BOOL SetBkColor(COLORREF cr);
 
 ### <a name="parameters"></a>パラメーター
 
-*cr*<br/>
+*リターン*<br/>
 設定する背景色、または背景色なしの CLR_NONE 値。 リストビューコントロールは、背景色を使用しない場合よりも大幅に速く再描画されます。 詳細については、Windows SDK の「 [COLORREF](/windows/win32/gdi/colorref) 」を参照してください。
 
 ### <a name="return-value"></a>戻り値
@@ -3916,7 +3916,7 @@ BOOL SetItemState(
 ### <a name="parameters"></a>パラメーター
 
 *nItem*<br/>
-状態が設定される項目のインデックス。
+状態が設定される項目のインデックス。 -1 を渡して、状態の変更をすべての項目に適用します。
 
 *pItem*<br/>
 Windows SDK で説明されているように、 [LVITEM](/windows/win32/api/commctrl/ns-commctrl-lvitemw) 構造体のアドレス。 構造体の `stateMask` メンバーは、変更する状態ビットを指定します。また、構造体のメンバーは、 `state` そのビットの新しい値を格納します。 他のメンバーは無視されます。
@@ -4050,7 +4050,7 @@ BOOL SetTextBkColor(COLORREF cr);
 
 ### <a name="parameters"></a>パラメーター
 
-*cr*<br/>
+*リターン*<br/>
 新しいテキストの背景色を指定する COLORREF。 詳細については、Windows SDK の「 [COLORREF](/windows/win32/gdi/colorref) 」を参照してください。
 
 ### <a name="return-value"></a>戻り値
@@ -4076,7 +4076,7 @@ BOOL SetTextColor(COLORREF cr);
 
 ### <a name="parameters"></a>パラメーター
 
-*cr*<br/>
+*リターン*<br/>
 新しいテキストの色を指定する COLORREF。 詳細については、Windows SDK の「 [COLORREF](/windows/win32/gdi/colorref) 」を参照してください。
 
 ### <a name="return-value"></a>戻り値

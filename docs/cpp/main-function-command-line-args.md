@@ -1,7 +1,7 @@
 ---
 title: '`main` 関数とコマンドライン引数 (C++)'
 description: '`main`関数は、C++ プログラムのエントリポイントです。'
-ms.date: 11/19/2020
+ms.date: 12/16/2020
 no-loc:
 - main
 - wmain
@@ -18,16 +18,16 @@ no-loc:
 - char
 - wchar_t
 - extern
-ms.openlocfilehash: 8a5ed43bdacf5d9d6dd2cbc5d1c56783c82b8e9a
-ms.sourcegitcommit: b02c61667ff7f38e7add266d0aabd8463f2dbfa1
+ms.openlocfilehash: a9c68f199d4169c02260542a9730472e4ab397bd
+ms.sourcegitcommit: 387ce22a3b0137f99cbb856a772b5a910c9eba99
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/23/2020
-ms.locfileid: "95483218"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97645073"
 ---
 # <a name="no-locmain-function-and-command-line-arguments"></a>`main` 関数とコマンドライン引数
 
-すべての C++ プログラムは、関数を持つ必要があり `main` ます。 関数を使用せずに C++ プログラムをコンパイルしようとすると、 `main` コンパイラでエラーが発生します。 (ダイナミックリンクライブラリとライブラリには static 関数がありません `main` )。 `main` 関数では、ソースコードの実行が開始されますが、プログラムが関数に入る前に `main` 、 static 明示的な初期化子のないすべてのクラスメンバーが0に設定されます。 Microsoft C++ では、 static へのエントリの前にグローバルオブジェクトも初期化され `main` ます。 `main`他の C++ 関数に適用されない関数には、いくつかの制限が適用されます。 `main`関数:
+すべての C++ プログラムは、関数を持つ必要があり `main` ます。 関数を使用せずに C++ プログラムをコンパイルしようとすると、 `main` コンパイラでエラーが発生します。 (ダイナミックリンクライブラリとライブラリには static 関数がありません `main` )。 `main` 関数では、ソースコードの実行が開始されますが、プログラムが関数に入る前に `main` 、 static 明示的な初期化子のないすべてのクラスメンバーが0に設定されます。 Microsoft C++ では、 static へのエントリの前にグローバルオブジェクトも初期化され `main` ます。 `main`他の C++ 関数に適用されない関数には、いくつかの制限が適用されます。 `main` 関数は、次のことを行います。
 
 - オーバーロードすることはできません (「 [関数のオーバーロード](./function-overloading.md)」を参照してください)。
 - をとして宣言することはできません **`inline`** 。
@@ -109,19 +109,21 @@ int wmain(int argc, wchar_t* argv[], wchar_t* envp[]);
 #include <string.h>
 
 using namespace std;
-int main( int argc, char *argv[], char *envp[] ) {
-    int iNumberLines = 0;    // Default is no line numbers.
+int main( int argc, char *argv[], char *envp[] )
+{
+    bool numberLines = false;    // Default is no line numbers.
 
     // If /n is passed to the .exe, display numbered listing
     // of environment variables.
-
     if ( (argc == 2) && _stricmp( argv[1], "/n" ) == 0 )
-         iNumberLines = 1;
+         numberLines = true;
 
     // Walk through list of strings until a NULL is encountered.
-    for( int i = 0; envp[i] != NULL; ++i ) {
-        if( iNumberLines )
-            cout << i << ": " << envp[i] << "\n";
+    for ( int i = 0; envp[i] != NULL; ++i )
+    {
+        if ( numberLines )
+            cout << i << ": "; // Prefix with numbers if /n specified
+        cout << envp[i] << "\n";
     }
 }
 ```
@@ -186,15 +188,15 @@ Microsoft コンパイラでは、 *ワイルドカード* char acters、疑問�
 
 コマンドライン引数は、ランタイムスタートアップコードの内部ルーチンによって処理されます。既定では、ワイルドカードは文字列配列内の個別の文字列に展開されません `argv` 。 *`setargv.obj`* *`wsetargv.obj`* `wmain` **`/link`** コンパイラオプションまたはコマンドラインでファイル (の場合はファイル) を含めることで、ワイルドカードの展開を有効にすることができ **`LINK`** ます。
 
-ランタイムスタートアップリンカーオプションの詳細については、「 [リンクオプション](../c-runtime-library/link-options.md)」を参照してください。
+ランタイムのスタートアップ リンカー オプションの詳細については、「[リンク オプション](../c-runtime-library/link-options.md)」を参照してください。
 
 ## <a name="customize-c-command-line-processing"></a><a name="customize"/> C++ コマンドライン処理のカスタマイズ
 
-プログラムがコマンドライン引数を取らない場合は、コマンドライン処理ルーチンを使用して、少量の領域を節約できます。 使用しないようにするには、 *`noarg.obj`* `main` `wmain` **`/link`** コンパイラオプションまたはコマンドラインにファイル (との両方) を含め **`LINK`** ます。
+プログラムがコマンド ライン引数を受け取らない場合は、コマンド ライン処理ルーチンを抑制して領域を少し節約できます。 その使用を抑制するには、 *`noarg.obj`* ファイルを (`main`、`wmain` どちらの場合でも) **`/link`** コンパイラ オプションまたは **`LINK`** コマンド ラインに含めます。
 
-同様に、引数を使用して環境テーブルにアクセスしない場合は、 *`envp`* 内部の環境処理ルーチンを抑制できます。 使用しないようにするには、 *`noenv.obj`* `main` `wmain` **`/link`** コンパイラオプションまたはコマンドラインにファイル (との両方) を含め **`LINK`** ます。
+同様に、 *`envp`* 引数を使用して環境のテーブルにアクセスしない場合は、内部の環境処理ルーチンを抑制できます。 その使用を抑制するには、 *`noenv.obj`* ファイルを (`main`、`wmain` どちらの場合でも) **`/link`** コンパイラ オプションまたは **`LINK`** コマンド ラインに含めます。
 
-プログラムによって、 `spawn` C ランタイムライブラリのまたはルーチンのファミリが呼び出される場合があり `exec` ます。 存在する場合は、環境処理ルーチンを抑制しないでください。これは、親プロセスから子プロセスに環境を渡すために使用されるためです。
+プログラムによって、C ランタイム ライブラリの `spawn` または `exec` ファミリのルーチンが呼び出されることがあります。 その場合は、親プロセスから子プロセスに環境を渡すために環境処理ルーチンが使用されるため、抑制しないでください。
 
 ## <a name="see-also"></a>関連項目
 
