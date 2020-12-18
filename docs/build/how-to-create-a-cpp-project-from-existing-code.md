@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: 方法:既存のコードから C++ プロジェクトを作成する'
 title: '方法: 既存のコードから C++ プロジェクトを作成する'
 ms.date: 05/06/2019
 helpviewer_keywords:
@@ -10,16 +11,16 @@ f1_keywords:
 - vc.appwiz.importwiz.debugsettings
 - vc.appwiz.importwiz.releasesettings
 ms.assetid: e328a938-395c-48ea-9e35-dd433de12b31
-ms.openlocfilehash: 5e59230186380b787c95dbe08914bcd9d3ca2407
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 0bd08275a812ebc6a2a99d0e12c8b71e30a24b90
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80078548"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97162782"
 ---
 # <a name="how-to-create-a-c-project-from-existing-code"></a>方法: 既存のコードから C++ プロジェクトを作成する
 
-Visual Studio で、**既存コード ファイルからの新しいプロジェクトの作成**ウィザードを使用すると、既存のコード ファイルを C++ プロジェクトに移植できます。 このウィザードによって、MSBuild システムを利用してソース ファイルとビルド構成を管理するプロジェクト ソリューションが作成されます。 これは複雑なフォルダー階層がない、比較的単純なプロジェクトに最適です。 このウィザードは、Visual Studio の以前の Express Edition では使用できません。
+Visual Studio で、**既存コード ファイルからの新しいプロジェクトの作成** ウィザードを使用すると、既存のコード ファイルを C++ プロジェクトに移植できます。 このウィザードによって、MSBuild システムを利用してソース ファイルとビルド構成を管理するプロジェクト ソリューションが作成されます。 これは複雑なフォルダー階層がない、比較的単純なプロジェクトに最適です。 このウィザードは、Visual Studio の以前の Express Edition では使用できません。
 
 既存のコード ファイルを C++ プロジェクトに移植することで、IDE に組み込まれているネイティブ MSBuild プロジェクト管理機能を利用できます。 nmake メイクファイル、CMake、代替など、既存のビルド システムを使用する場合、代わりに [フォルダーを開く] または CMake のオプションを利用できます。 詳細については、[C++ 用のフォルダー プロジェクトのオープン](open-folder-projects-cpp.md)または [Visual Studio の CMake プロジェクト](cmake-projects-in-visual-studio.md)に関する記事を参照してください。 いずれのオプションでも、[IntelliSense](/visualstudio/ide/using-intellisense) や[プロジェクト プロパティ](working-with-project-properties.md)など、IDE 機能を利用できます。
 
@@ -67,7 +68,7 @@ Visual Studio で、**既存コード ファイルからの新しいプロジェ
     ![プロジェクト構成](media/config.png)
 
     > [!NOTE]
-    > **Build**、**Rebuild**、**Clean** コマンド ラインと**出力 (デバッグ用)** の設定は、 **[Use external build system]\(外部ビルド システムの使用\)** オプションが**プロジェクト設定の指定**のページでオンになっている場合にのみ有効です。
+    > **Build**、**Rebuild**、**Clean** コマンド ラインと **出力 (デバッグ用)** の設定は、 **[Use external build system]\(外部ビルド システムの使用\)** オプションが **プロジェクト設定の指定** のページでオンになっている場合にのみ有効です。
 
 1. リリース構成の設定が使用されるように指定します。この設定はデバッグ構成の設定と同じです。 **[完了]** をクリックし、新しいプロジェクトを生成します。
 

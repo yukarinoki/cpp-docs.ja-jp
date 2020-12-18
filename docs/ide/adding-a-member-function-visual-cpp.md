@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: メンバー関数を追加する'
 title: メンバー関数を追加する
 ms.date: 11/09/2018
 f1_keywords:
@@ -9,20 +10,20 @@ helpviewer_keywords:
 - classes [C++], adding members
 - add member function wizard [C++]
 ms.assetid: 55b25ddb-541d-44ed-957c-974ef91cfc85
-ms.openlocfilehash: 0e63771e3e01c3829e20d2fe62fa2caf0f8b26f5
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: 7e40cd3b70b90026ebaebe2ec0af2224d89868f1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90040783"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97160156"
 ---
 # <a name="add-a-member-function"></a>メンバー関数を追加する
 
-**クラス ビュー**では、メンバー関数をクラスに追加できます。 これを行うと、ヘッダー ファイルに宣言が追加され、スタブ メンバー関数本体がクラスの実装ファイルに追加されます。ファイルは編集できます。
+**クラス ビュー** では、メンバー関数をクラスに追加できます。 これを行うと、ヘッダー ファイルに宣言が追加され、スタブ メンバー関数本体がクラスの実装ファイルに追加されます。ファイルは編集できます。
 
 **クラスにメンバー関数を追加するには:**
 
-1. **クラス ビュー**でプロジェクト ノードを展開して、プロジェクト内のクラスを表示します。 ( **[クラス ビュー]** を開くには、メニュー バーで **[表示]** 、 **[クラス ビュー]** の順にクリックします。)
+1. **クラス ビュー** でプロジェクト ノードを展開して、プロジェクト内のクラスを表示します。 ( **[クラス ビュー]** を開くには、メニュー バーで **[表示]** 、 **[クラス ビュー]** の順にクリックします。)
 
 1. メンバー関数を追加するクラスのショートカット メニューを開き、 **[追加]** 、 **[関数の追加]** の順にクリックします。
 

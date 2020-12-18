@@ -1,16 +1,17 @@
 ---
+description: '詳細情報: C トークン'
 title: C トークン
 ms.date: 11/04/2016
 helpviewer_keywords:
 - tokens
 - translation units
 ms.assetid: 05e5f6f1-b8ea-4f74-af17-c0b9b5dbd3b5
-ms.openlocfilehash: 3984fe84e1761c785f3b3c4d7c5ef3c43d2528a2
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 59e4fdf1426b6eee2f2abafe8617782c702a3c2b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81334620"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97214231"
 ---
 # <a name="c-tokens"></a>C トークン
 

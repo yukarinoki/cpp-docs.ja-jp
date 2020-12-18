@@ -1,22 +1,21 @@
 ---
 title: C キーワード
 description: 標準の C および Microsoft C コンパイラ拡張機能のキーワード。
-ms.date: 10/30/2020
+ms.date: 12/8/2020
 helpviewer_keywords:
 - keywords [C]
 - redefining keywords
 - Microsoft-specific keywords
-ms.assetid: 2d932335-97bf-45cd-b367-4ae00db0ff42
-ms.openlocfilehash: 9efa3fc353a2386a465227c39f4ae83565ae12c3
-ms.sourcegitcommit: 4abc6c4c9694f91685cfd77940987e29a51e3143
+ms.openlocfilehash: 23a701333220ca58b6e28323fb6aced156337b3f
+ms.sourcegitcommit: be469dd87453255b0e35e333712c8207b09b3dd4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93238487"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97412441"
 ---
 # <a name="c-keywords"></a>C キーワード
 
-" *キーワード* " は、C コンパイラに対して特別な意味を持つ単語です。 変換フェーズ 7 および 8 では、識別子は、C キーワードと同じスペル (大文字と小文字を区別する) にすることはできません。 詳細については、 *プリプロセッサ リファレンス* の「 [変換フェーズ](../preprocessor/phases-of-translation.md)」を参照してください。 識別子の詳細については、[識別子](../c-language/c-identifiers.md)に関するページを参照してください。
+"*キーワード*" は、C コンパイラに対して特別な意味を持つ単語です。 変換フェーズ 7 および 8 では、識別子は、C キーワードと同じスペル (大文字と小文字を区別する) にすることはできません。 詳細については、*プリプロセッサ リファレンス* の「[変換フェーズ](../preprocessor/phases-of-translation.md)」を参照してください。 識別子の詳細については、[識別子](../c-language/c-identifiers.md)に関するページを参照してください。
 
 ## <a name="standard-c-keywords"></a>標準の C キーワード
 
@@ -64,12 +63,12 @@ C 言語では、次のキーワードを使用します。
     :::column-end:::
     :::column:::
         **`while`**\
-        **`_Alignas`** <sup>2, a</sup>\
-        **`_Alignof`** <sup>2, a</sup>\
+        **[`_Alignas`](alignment-c.md#alignas-and-_alignas-c11)** <sup>2, a</sup>\
+        **[`_Alignof`](alignment-c.md#alignof-and-_alignof-c11)** <sup>2, a</sup>\
         **`_Atomic`** <sup>2, b</sup>\
         **`_Bool`** <sup>1, a</sup>\
         **`_Complex`** <sup>1, b</sup>\
-        **`_Generic`** <sup>2, a</sup>\
+        **[`_Generic`](generic_selection.md)** <sup>2, a</sup>\
         **`_Imaginary`** <sup>1, b</sup>\
         **`_Noreturn`** <sup>2, a</sup>\
         **`_Static_assert`** <sup>2, a</sup>\

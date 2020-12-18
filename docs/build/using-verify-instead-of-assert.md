@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: ASSERT に代わる VERIFY の使用'
 title: ASSERT に代わる VERIFY の使用
 ms.date: 05/06/2019
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - debugging assertions
 - assertions, debugging
 ms.assetid: 4c46397b-3fb1-49c1-a09b-41a72fae3797
-ms.openlocfilehash: bfc0847677ae232fef67ab6200c626472f042bdb
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: cbb878e9184536a6888b84f7861a3e8b7b9ab2b0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79438612"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97199052"
 ---
 # <a name="using-verify-instead-of-assert"></a>ASSERT に代わる VERIFY の使用
 

@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: Multibyte Characters (マルチバイト文字)'
 title: Multibyte Characters (マルチバイト文字)
 ms.date: 11/04/2016
 ms.assetid: 09fe1431-1006-41f9-bf47-ca82724c23ae
-ms.openlocfilehash: 87d9b500f2da6b7c6b967c8da483bd2813a5996e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c2b7241718af216e568472b415754de2a96bd227
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62325469"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97257070"
 ---
 # <a name="multibyte-characters"></a>Multibyte Characters (マルチバイト文字)
 

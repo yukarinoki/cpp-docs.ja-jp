@@ -1,15 +1,16 @@
 ---
+description: '詳細情報: C 整数定数'
 title: C 整数定数
 ms.date: 02/27/2018
 helpviewer_keywords:
 - integer constants
 ms.assetid: fcf6b83c-2038-49ec-91ca-3d5ca1f83037
-ms.openlocfilehash: 48561599896bb8a6f9ee159630ff15df6c0454be
-ms.sourcegitcommit: 8bb2bea1384b290b7570b01608a86c7488ae7a02
+ms.openlocfilehash: 1dbc22a2d4351dbd6d09f555a95380a1fd94619b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67400509"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97182191"
 ---
 # <a name="c-integer-constants"></a>C 整数定数
 
