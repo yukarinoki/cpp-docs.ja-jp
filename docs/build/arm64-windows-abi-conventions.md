@@ -1,12 +1,13 @@
 ---
+description: '詳細情報: ARM64 ABI 規則の概要'
 title: ARM64 ABI 規則の概要
 ms.date: 03/27/2019
-ms.openlocfilehash: bfe55513ffd24175dbe62efc6d5afcfd82f71e4c
-ms.sourcegitcommit: 7f378314c5692d897ead10b7f6c96d4cb2abd266
+ms.openlocfilehash: fbdb709eaa960446bb76712962dbbc3bfb66d38a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88972674"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97157114"
 ---
 # <a name="overview-of-arm64-abi-conventions"></a>ARM64 ABI 規則の概要
 
@@ -207,7 +208,7 @@ HFA と HVA の値は、s0-s3、d0-d3、または v0-v3 に適宜返されます
 
 値で返される型は、特定のプロパティがあるかどうか、および関数が静的でないメンバー関数であるかどうかによって、異なる方法で処理されます。 型に次のプロパティがすべて含まれる場合:
 
-- C++14 標準定義で*集約*される。つまり、ユーザー指定のコンストラクターがなく、プライベートまたは保護された非静的データ メンバーを持たず、基底クラスや仮想関数もありません。
+- C++14 標準定義で *集約* される。つまり、ユーザー指定のコンストラクターがなく、プライベートまたは保護された非静的データ メンバーを持たず、基底クラスや仮想関数もありません。
 - トリビアルなコピー代入演算子がある。
 - トリビアルなデストラクターがある。
 

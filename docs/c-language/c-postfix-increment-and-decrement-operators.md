@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: C 後置インクリメント演算子と後置デクリメント演算子'
 title: C 後置インクリメント演算子と後置デクリメント演算子
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - scalar operators
 - types [C], scalar
 ms.assetid: 56ba218d-65f9-405f-8684-caccc0ca33aa
-ms.openlocfilehash: 8c2e3ba50ce3e768b377a588cd3e82ad29df79ee
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e5e230f1e1e51a1f48b29436705f4f645be9ed44
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62325576"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97300217"
 ---
 # <a name="c-postfix-increment-and-decrement-operators"></a>C 後置インクリメント演算子と後置デクリメント演算子
 

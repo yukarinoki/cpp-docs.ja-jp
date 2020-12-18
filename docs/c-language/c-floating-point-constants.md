@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: C 浮動小数点定数'
 title: C 浮動小数点定数
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - floating-point constants, about floating-point constants
 - double data type, floating-point constants
 ms.assetid: e1bd9b44-d6ab-470c-93e5-07142c7a2062
-ms.openlocfilehash: 8777f04b047516ef29ae7bf67ddaf4195e3aaf6e
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 0bad45db33cd40060c4d20312c5318d443efc60f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87228025"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97293561"
 ---
 # <a name="c-floating-point-constants"></a>C 浮動小数点定数
 

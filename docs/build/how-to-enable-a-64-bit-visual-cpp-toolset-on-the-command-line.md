@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: 方法:コマンド ラインで 64 ビットの x64 でホストされる MSVC ツールセットを有効にする'
 title: '方法: コマンド ラインで 64 ビットの MSVC ツールセットを有効にする'
 ms.date: 07/24/2019
 helpviewer_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - IPF, command-line compiler
 - x64 [C++], command-line compiler
 ms.assetid: 4da93a19-e20d-4778-902a-5eee9a6a90b5
-ms.openlocfilehash: 60399994cd5fc2f39efeadc6ffcf917138aada37
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: d5e712802f420d425f4a0291d88220c22d4aeb62
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80078540"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97162730"
 ---
 # <a name="how-to-enable-a-64-bit-x64-hosted-msvc-toolset-on-the-command-line"></a>方法: コマンド ラインで 64 ビットの x64 でホストされる MSVC ツールセットを有効にする
 

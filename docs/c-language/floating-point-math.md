@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: 浮動小数点数値演算'
 title: 浮動小数点数値演算
 ms.date: 11/04/2016
 ms.assetid: 1ff2f7e9-f29a-4822-9b05-4b4267e80ba3
-ms.openlocfilehash: 8796e55d62fe7415241423089e86c534016d306e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: aef6a11a2fe160355921b65c32516c9124c7fd69
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62233697"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97196088"
 ---
 # <a name="floating-point-math"></a>浮動小数点数値演算
 

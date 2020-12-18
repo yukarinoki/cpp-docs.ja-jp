@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: 仮想関数をオーバーライドする'
 title: 仮想関数をオーバーライドする
 ms.date: 11/12/2018
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - base classes, overriding virtual functions defined in
 - Properties window, overriding virtual functions in
 ms.assetid: 2d8c76f2-7a6b-4c9c-8de5-4282ce7755b6
-ms.openlocfilehash: 9bb3fd34bbfa14cce1595ed586c4e1b66518e7b7
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: d4c800006d5227ed5397c17284c03968a24a3964
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694024"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97335916"
 ---
 # <a name="override-a-virtual-function"></a>仮想関数をオーバーライドする
 

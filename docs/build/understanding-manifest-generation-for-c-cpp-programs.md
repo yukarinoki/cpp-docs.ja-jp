@@ -1,15 +1,16 @@
 ---
+description: '詳細情報: C/C++ プログラムのマニフェスト生成についての理解'
 title: C/C++ プログラムのマニフェスト生成についての理解
 ms.date: 11/04/2016
 helpviewer_keywords:
 - manifests [C++]
 ms.assetid: a1f24221-5b09-4824-be48-92eae5644b53
-ms.openlocfilehash: 16d5efc5c5f7ce81b4b60269b0c666fd5d24266e
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 78169dd6d8185e1ae8470dea93ab145fc05dbc7b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69492522"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97277272"
 ---
 # <a name="understanding-manifest-generation-for-cc-programs"></a>C/C++ プログラムのマニフェスト生成についての理解
 

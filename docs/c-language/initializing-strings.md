@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: 文字列の初期化'
 title: 文字列の初期化
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - strings [C++], initializing
 - initializing arrays, strings
 ms.assetid: 0ab8079d-d0d3-48f9-afd1-36a7bb439b29
-ms.openlocfilehash: c9dbad72314e9ce01d022d26209e2132c29c106a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 145fc55eaccd64b30bae2736dd78317dc5db7d7d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62326002"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97137580"
 ---
 # <a name="initializing-strings"></a>文字列の初期化
 

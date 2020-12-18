@@ -1,14 +1,15 @@
 ---
+description: '詳細情報: リモート アーカイブ プロパティ (C++ Linux)'
 title: リモート アーカイブ プロパティ (C++ Linux)
 ms.date: 06/07/2019
 ms.assetid: 5ee1e44c-8337-4c3a-b2f3-35e4be954f9f
 f1_keywords: []
-ms.openlocfilehash: 9e35c9cc0b8a99e87654f1052e8666c52e35a071
-ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
+ms.openlocfilehash: 39449e900878739cb61e5df536ee5e06a307364e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "92924458"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97169685"
 ---
 # <a name="remote-archive-properties-c-linux"></a>リモート アーカイブ プロパティ (C++ Linux)
 
@@ -27,8 +28,8 @@ Linux サポートは Visual Studio 2017 以降で使用できます。
 | 作成時の警告なし | ライブラリが作成されても警告を出しません。 |
 | タイムスタンプの切り捨て | タイムスタンプおよび UID/GID に 0 を使用します。 |
 | 著作権情報の非表示 | バージョン番号を表示しません。 |
-| 詳細 | 詳細 |
-| その他のオプション | その他のオプション。 |
+| 詳細 | "詳細" |
+| 追加オプション | その他のオプション。 |
 | 出力ファイル | /OUT オプションを使用すると、lib によって作成されるプログラムの既定の名前と場所がオーバーライドされます。 |
 | アーカイブ処理 | スタティック オブジェクトのリンク中に起動するプログラムか、またはリモート システム上のアーカイブ処理へのパスを指定します。 |
 | アーカイブ処理のタイムアウト | リモート アーカイブ処理のタイムアウト (ミリ秒)。 |

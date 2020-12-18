@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: エスケープ シーケンス'
 title: エスケープ シーケンス
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -30,12 +31,12 @@ helpviewer_keywords:
 - "	 escape sequence"
 - backspace escape sequence
 ms.assetid: 5aef377f-a76c-4d5c-aa04-8308758ad6a8
-ms.openlocfilehash: 5de0b5f1a73fcfb6ea0325bea3247ebe4c85d411
-ms.sourcegitcommit: 878a164fe6d550ca81ab87d8425c8d3cd52fe384
+ms.openlocfilehash: 860c9b490a0d67f27da612f113cf6233f32b7188
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2019
-ms.locfileid: "68375827"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97196543"
 ---
 # <a name="escape-sequences"></a>エスケープ シーケンス
 

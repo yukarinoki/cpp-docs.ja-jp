@@ -1,16 +1,17 @@
 ---
+description: '詳細情報: 方法:ビルドのプロジェクト出力ファイルを編成する'
 title: '方法: ビルドのプロジェクト出力ファイルを編成する'
 ms.date: 05/06/2019
 helpviewer_keywords:
 - C++, output files
 - output files, organizing
 ms.assetid: 521d95ea-2dcc-4da0-b5eb-ac3e57941446
-ms.openlocfilehash: 13aa3d1f8e2993ca34163ecbc0515948db56eb79
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: c1283cb1cc275100551eb9de0a2c0af370aaec51
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81328524"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97162665"
 ---
 # <a name="how-to-organize-project-output-files-for-builds"></a>方法: ビルドのプロジェクト出力ファイルを編成する
 
@@ -34,7 +35,7 @@ ms.locfileid: "81328524"
 
 #### <a name="to-reference-assemblies-with-add-new-reference"></a>[新しい参照の追加] を使用してアセンブリを参照するには
 
-1. CLR アセンブリを使用するには、これが最も簡単な方法です。 最初に、 **/clr** コンパイラ オプションを使用してプロジェクトがコンパイルされていることを確認します。 次に、**ソリューション エクスプローラー**で、プロジェクトを右クリックし、 **[追加]** 、 **[参照]** の順にクリックします。 これにより、 **[プロパティ ページ]** ダイアログ ボックスが表示されます。
+1. CLR アセンブリを使用するには、これが最も簡単な方法です。 最初に、 **/clr** コンパイラ オプションを使用してプロジェクトがコンパイルされていることを確認します。 次に、**ソリューション エクスプローラー** で、プロジェクトを右クリックし、 **[追加]** 、 **[参照]** の順にクリックします。 これにより、 **[プロパティ ページ]** ダイアログ ボックスが表示されます。
 
 1. **[プロパティ ページ]** ダイアログ ボックスで、 **[新しい参照の追加]** を選択します。 ダイアログには、現在のプロジェクトで使用できるすべての .NET アセンブリ、COM アセンブリ、およびその他のアセンブリの一覧が表示されます。 必要なアセンブリを選択し、 **[OK]** をクリックします。
 

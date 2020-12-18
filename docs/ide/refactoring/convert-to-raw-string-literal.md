@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: 生文字列に変換'
 title: 生文字列に変換
 ms.date: 11/16/2016
 ms.assetid: fffbfee4-66ee-42ba-aeb9-df07fb702c51
-ms.openlocfilehash: 5636e00bfe8655d84fb2e4b64e0391324ab35d7d
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
-ms.translationtype: MT
+ms.openlocfilehash: f83cb955bc2b30957306e1467a2d353377d5f33a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80171815"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97185558"
 ---
 # <a name="convert-to-raw-string-literal"></a>生文字列に変換
 
@@ -27,7 +28,7 @@ ms.locfileid: "80171815"
    * **[キーボード]**
      * **Ctrl + .** キーを押して、 **[クイック アクションとリファクタリング]** メニューをトリガーし、コンテキスト メニューから **[生文字列に変換]** を選択します。
    * **マウス**
-     * コードを右クリックし、 **[クイック アクションとリファクタリング]** メニューを選択し、コンテキスト メニューから **[生文字列に変換]** を選択します。
+     * コードを右クリックし、**[クイック アクションとリファクタリング]** メニューを選択し、コンテキスト メニューから **[生文字列に変換]** を選択します。
      * 左の余白に表示されている![電球](images/bulb.png)アイコンをクリックし、コンテキスト メニューから **[生文字列に変換]** を選択します。
 
 1. 直後に文字列が生文字列に変換されます。

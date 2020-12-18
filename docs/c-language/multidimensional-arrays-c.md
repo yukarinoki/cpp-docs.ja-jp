@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: 多次元配列 (C)'
 title: 多次元配列 (C)
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - multidimensional arrays
 - subscript expressions
 ms.assetid: 4ba5c360-1f17-4575-b370-45f62e1f2bc2
-ms.openlocfilehash: f94cdff03763f689edbdedffad4ac56abec5ee53
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: e940ccdd61aa6c2c4b3b5f85b355b80f86c8a165
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87218833"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97243368"
 ---
 # <a name="multidimensional-arrays-c"></a>多次元配列 (C)
 

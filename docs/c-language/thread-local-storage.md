@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: スレッド ローカル ストレージ'
 title: スレッド ローカル ストレージ
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - thread-local storage
 - storage, thread local storage
 ms.assetid: a0f1b109-c953-4079-aa10-e47f5483173d
-ms.openlocfilehash: a1099228e072a772ee7d8e7e93253b674d0cd24b
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 188646ec6ae980cc61bd5882c15e2e9040e4a7ca
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69500263"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97114339"
 ---
 # <a name="thread-local-storage"></a>スレッド ローカル ストレージ
 
@@ -86,7 +87,7 @@ __declspec( thread ) int tls_i = 1;
 
    初期化される変数が含まれている sizeof 式は、式自体の参照が発生しないので、有効になります。
 
-- **\_\_declspec(thread)** の使用は、DLL のインポートの[遅延読み込み](../build/reference/linker-support-for-delay-loaded-dlls.md)に干渉する可能性があります。
+- **\_\_declspec(thread)** の使用は、DLL のインポートの [遅延読み込み](../build/reference/linker-support-for-delay-loaded-dlls.md)に干渉する可能性があります。
 
 スレッド属性の使用の詳細については、[マルチスレッドのトピック](../parallel/multithreading-support-for-older-code-visual-cpp.md)に関するページをご覧ください。
 

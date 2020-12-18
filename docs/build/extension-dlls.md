@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: MFC 拡張 DLL'
 title: 拡張 DLL
 ms.date: 05/06/2019
 helpviewer_keywords:
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - extension DLLs [C++]
 - extension DLLs [C++], about MFC extension DLLs
 ms.assetid: f69ac3d4-e474-4b1c-87a1-6738843a135c
-ms.openlocfilehash: 55b1e55a9c7bdf6daaff98a7fe3f1a2a55f68334
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: 6500d8ba3cfcc4311ef993064aa9516f27fa45d6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65220766"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97156477"
 ---
 # <a name="mfc-extension-dlls"></a>MFC 拡張 DLL
 

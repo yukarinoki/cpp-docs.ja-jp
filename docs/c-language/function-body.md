@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: 関数本体'
 title: 関数本体
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - function definitions, function body
 - function body
 ms.assetid: f7e74822-fac8-4dc8-8f3a-2b1611da4640
-ms.openlocfilehash: 2ae73ab4ca91e06e3b6cd41166a8d05ae0857e4a
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 098a759a8fd4fd9ab69e487ab84f7ed7d0d2c25c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87229702"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97195984"
 ---
 # <a name="function-body"></a>関数本体
 

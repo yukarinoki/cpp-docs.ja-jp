@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: MFC に静的にリンクされた標準 MFC DLL'
 title: MFC に静的にリンクされた標準 MFC DLL
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - statically linked DLLs [C++]
 - regular MFC DLLs [C++], statically linked to MFC
 ms.assetid: 2eed531c-726a-4b8a-b936-f721dc00a7fa
-ms.openlocfilehash: 1f05b5e3c268935cf3161fb7184e04b3e3ea1446
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b213be6bf076557fc57a5bcac62cbf9767587bd3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62314781"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97273801"
 ---
 # <a name="regular-mfc-dlls-statically-linked-to-mfc"></a>MFC に静的にリンクされた標準 MFC DLL
 

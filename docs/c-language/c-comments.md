@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: C コメント'
 title: C コメント
 ms.date: 06/25/2018
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - /* */ comment delimiters
 - comments
 ms.assetid: 0f5f2825-e673-49e7-8669-94e2f5294989
-ms.openlocfilehash: fd2c08855bcc3ef3b4068f3841ce177d8162ff5b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 64ce3dea188e75545953b3427cd508dac5420a83
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62326288"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97284577"
 ---
 # <a name="c-comments"></a>C コメント
 

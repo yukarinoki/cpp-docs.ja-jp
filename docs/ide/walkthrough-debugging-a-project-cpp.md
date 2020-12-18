@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: チュートリアル: プロジェクトのデバッグ (C++)'
 title: 'チュートリアル: プロジェクトのデバッグ (C++)'
 ms.date: 04/25/2019
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - project debugging [C++]
 - debugging projects
 ms.assetid: a5cade77-ba51-4b03-a7a0-6897e3cd6a59
-ms.openlocfilehash: 61433213619c16caf67de905a6da93c7360db298
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 99e5af935c1d5985b8c472fc807b1afbe61d66b2
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87219678"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97318677"
 ---
 # <a name="walkthrough-debugging-a-project-c"></a>チュートリアル: プロジェクトのデバッグ (C++)
 

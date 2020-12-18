@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: 式と代入'
 title: 式と代入
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - assigning values in C
 - Visual C, assignments
 ms.assetid: 9c72919f-0768-4b47-85ca-afdfec6847f4
-ms.openlocfilehash: 30c076bcaf80a0d51a7f8aefc9c1b1806a12e42f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a5edf337467fd3fc6b4d8ce1e73a408cec3763e0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62233723"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97196413"
 ---
 # <a name="expressions-and-assignments"></a>式と代入
 

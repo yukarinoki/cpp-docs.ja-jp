@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: C/C++ 分離アプリケーションおよび side-by-side アセンブリのトラブルシューティング'
 title: C/C++ 分離アプリケーションおよび side-by-side アセンブリのトラブルシューティング
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - troubleshooting isolated applications
 - troubleshooting Visual C++
 ms.assetid: 3257257a-1f0b-4ede-8564-9277a7113a35
-ms.openlocfilehash: 0dc8488acc90f1a38a4c0de0f052590ef4f398af
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: f3a93ec13ce36e67f88d772f1dcbad9443fca188
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81335441"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97277415"
 ---
 # <a name="troubleshooting-cc-isolated-applications-and-side-by-side-assemblies"></a>C/C++ 分離アプリケーションおよび side-by-side アセンブリのトラブルシューティング
 
@@ -96,7 +97,7 @@ side-by-side アセンブリは、ポリシー ファイルとも呼ばれる[�
 
 1. アプリケーション フォルダーで \<assemblyName>.manifest という名前のマニフェスト ファイルを検索します。 この例では、ローダーは、appl.exe が格納されているフォルダーで Fabrikam.SxS.Library.manifest を検索します。 マニフェストが見つかった場合、ローダーはアプリケーション フォルダーからアセンブリを読み込みます。 アセンブリが見つからない場合、読み込みは失敗します。
 
-1. appl.exe が格納されているフォルダーで \\\<assemblyName\>\ フォルダーを開こうとし、\\<assemblyName\>\ が存在する場合は、このフォルダーから \<assemblyName>.manifest という名前のマニフェスト ファイルを読み込もうとします。 マニフェストが見つかった場合、ローダーにより \\<assemblyName\>\ フォルダーからアセンブリが読み込まれます。 アセンブリが見つからない場合、読み込みは失敗します。
+1. appl.exe が格納されているフォルダーで \\<assemblyName\>\ フォルダーを開こうとし、\\<assemblyName\>\ が存在する場合は、このフォルダーから \<assemblyName>.manifest という名前のマニフェスト ファイルを読み込もうとします。 マニフェストが見つかった場合、ローダーにより \\<assemblyName\>\ フォルダーからアセンブリが読み込まれます。 アセンブリが見つからない場合、読み込みは失敗します。
 
 ローダーが依存アセンブリを検索するしくみについて詳しくは、「[アセンブリ検索シーケンス](/windows/win32/SbsCs/assembly-searching-sequence)」をご覧ください。 ローダーがプライベート アセンブリとしての依存アセンブリの検出に失敗した場合、読み込みは失敗し、"指定されたプログラムを実行できません。" というメッセージが表示されます。 このエラーを解決するには、依存アセンブリとそれを構成する DLL をプライベート アセンブリまたは共有アセンブリとしてコンピューターにインストールする必要があります。
 

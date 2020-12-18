@@ -1,15 +1,16 @@
 ---
+description: '詳細情報: "()" のない関数名とコードの生成'
 title: "\"()\" のない関数名とコードの生成"
 ms.date: 11/04/2016
 helpviewer_keywords:
 - functions [C++], without parentheses
 ms.assetid: edf4a177-a160-44aa-8436-e077b5b27809
-ms.openlocfilehash: 51be77dc8f4fe072ea6cc46dd51e38862649feda
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1fedc296422a759878c26469ccc20955043b3913
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62314599"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97277259"
 ---
 # <a name="using-function-name-without--produces-no-code"></a>"()" のない関数名とコードの生成
 

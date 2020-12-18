@@ -1,16 +1,17 @@
 ---
+description: '詳細情報: C ビット フィールド'
 title: C ビット フィールド
 ms.date: 11/04/2016
 helpviewer_keywords:
 - bitfields
 - bit fields
 ms.assetid: 9faf74c4-7fd5-4b44-ad18-04485193d06e
-ms.openlocfilehash: 4878a9c8c206851b13484446b436952e655e06db
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: e89f74fc68cad11eee63b3dd1101fa71e0b72e27
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87234290"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97186955"
 ---
 # <a name="c-bit-fields"></a>C ビット フィールド
 

@@ -1,15 +1,16 @@
 ---
+description: '詳細情報: Visual Studio プロジェクトでの Clang/LLVM のサポート'
 title: Visual Studio の Visual Studio プロジェクトでの Clang/LLVM のサポート
 ms.date: 06/02/2020
 ms.description: Configure a Visual Studio MSBuild project to use the Clang/LLVM toolchain.
 helpviewer_keywords:
 - Clang support for C++ MSBuild projects
-ms.openlocfilehash: 0b29322c46d7a92dbb265610f93b084a84f37d0d
-ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
+ms.openlocfilehash: 0008eddf41da672a820be02adb723af0b8673285
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "92922245"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97163159"
 ---
 # <a name="clangllvm-support-in-visual-studio-projects"></a>Visual Studio プロジェクトでの Clang/LLVM のサポート
 
@@ -31,11 +32,11 @@ Visual Studio での IDE のサポートを十分に活用するために、Wind
 
 ## <a name="configure-a-windows-project-to-use-clang-tools"></a>Windows プロジェクトを Clang ツールを使用するように構成する
 
-Visual Studio プロジェクトを Clang を使用するように構成するには、 **ソリューション エクスプローラー** でプロジェクト ノードを右クリックし、 **[プロパティ]** を選択します。 通常は、最初にダイアログの上部にある **[すべての構成]** を選択する必要があります。 次に、 **[全般]**  >  **[プラットフォーム ツールセット]** で、 **[LLVM (clang-cl)]** を選択し、 **[OK]** を選択します。
+Visual Studio プロジェクトを Clang を使用するように構成するには、**ソリューション エクスプローラー** でプロジェクト ノードを右クリックし、 **[プロパティ]** を選択します。 通常は、最初にダイアログの上部にある **[すべての構成]** を選択する必要があります。 次に、 **[全般]**  >  **[プラットフォーム ツールセット]** で、 **[LLVM (clang-cl)]** を選択し、 **[OK]** を選択します。
 
 ![[構成プロパティ] > [全般] が選択され、[プラットフォーム ツールセット] と [L L V M (clang c l)] オプションが強調表示されている [プロパティ ページ] ダイアログ ボックスのスクリーンショット。](media/clang-msbuild-prop-page.png)
 
-Visual Studio にバンドルされている Clang ツールを使用する場合は、追加の手順は必要ありません。 Windows プロジェクトの場合、Visual Studio では既定で Clang が [clang-cl](https://llvm.org/devmtg/2014-04/PDFs/Talks/clang-cl.pdf) モードで呼び出され、標準ライブラリの Microsoft 実装とリンクされます。 既定では、 **clang-cl.exe** は *%VCINSTALLDIR%\\Tools\\Llvm\\bin\\* と *%VCINSTALLDIR%\\Tools\\Llvm\\x64\\bin\\* にあります。
+Visual Studio にバンドルされている Clang ツールを使用する場合は、追加の手順は必要ありません。 Windows プロジェクトの場合、Visual Studio では既定で Clang が [clang-cl](https://llvm.org/devmtg/2014-04/PDFs/Talks/clang-cl.pdf) モードで呼び出され、標準ライブラリの Microsoft 実装とリンクされます。 既定では、**clang-cl.exe** は *%VCINSTALLDIR%\\Tools\\Llvm\\bin\\* と *%VCINSTALLDIR%\\Tools\\Llvm\\x64\\bin\\* にあります。
 
 Clang のカスタム インストールを使用する場合は、 **[プロジェクト]**  >  **[プロパティ]**  >  **[VC++ ディレクトリ]**  >  **[構成プロパティ]**  >  **[実行可能ファイルのディレクトリ]** で最初のディレクトリとして Clang のカスタム インストールのルートを追加するか、`LLVMInstallDir` プロパティの値を変更することで、変更を行うことができます。 詳細については、「[カスタム LLVM の場所を設定する](#custom_llvm_location)」を参照してください。
 

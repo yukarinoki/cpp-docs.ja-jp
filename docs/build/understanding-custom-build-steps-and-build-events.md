@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: カスタム ビルド ステップとビルド イベントについて'
 title: カスタム ビルド ステップとビルド イベントについて
 ms.date: 08/29/2019
 helpviewer_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - build steps [C++], build events
 - builds [C++], custom build steps
 ms.assetid: beb2f017-3e9f-4b2c-9b57-2572fd2628e4
-ms.openlocfilehash: 386a12213814e3825ece8a81d61ac251c6793f43
-ms.sourcegitcommit: e10a5feea193c249ddc5a6faba48e7c6d8784e73
+ms.openlocfilehash: da7e9399a1502c3d7ddaccbfb10a4d2b71fb85cf
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70177316"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97277402"
 ---
 # <a name="understanding-custom-build-steps-and-build-events"></a>カスタム ビルド ステップとビルド イベントについて
 
@@ -32,7 +33,7 @@ Visual C++ 開発環境では、ビルド処理をカスタマイズする基本
 
 - **ビルド イベント**
 
-   ビルド イベントでは、プロジェクトのビルドをカスタマイズできます。 *ビルド前*、*リンク前*、*ビルド後*の 3 つのビルド イベントがあります。 ビルド イベントでは、ビルド処理の特定の時点で発生するアクションを指定できます。 たとえば、ビルド イベントを使用して、プロジェクトのビルドが終了した後でファイルを **regsvr32.exe** で登録できます。 詳細については、「[ビルド イベントの指定](specifying-build-events.md)」を参照してください。
+   ビルド イベントでは、プロジェクトのビルドをカスタマイズできます。 *ビルド前*、*リンク前*、*ビルド後* の 3 つのビルド イベントがあります。 ビルド イベントでは、ビルド処理の特定の時点で発生するアクションを指定できます。 たとえば、ビルド イベントを使用して、プロジェクトのビルドが終了した後でファイルを **regsvr32.exe** で登録できます。 詳細については、「[ビルド イベントの指定](specifying-build-events.md)」を参照してください。
 
 「[ビルドのカスタマイズのトラブルシューティング](troubleshooting-build-customizations.md)」は、カスタム ビルド ステップとビルド イベントを意図したとおりに実行するために役立ちます。
 

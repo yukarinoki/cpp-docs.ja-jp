@@ -1,16 +1,17 @@
 ---
+description: '詳細情報: ポインターの算術演算'
 title: ポインターの算術演算
 ms.date: 11/04/2016
 helpviewer_keywords:
 - pointer arithmetic
 - arithmetic pointer
 ms.assetid: eb924a29-59d3-48a5-9d62-9424790730eb
-ms.openlocfilehash: c1b3e31561bedece6a6180fbeb13473153a46ab6
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 37ee9fd696f874d1faa84b5d656317cf67f75a6c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64343140"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97243121"
 ---
 # <a name="pointer-arithmetic"></a>ポインターの算術演算
 

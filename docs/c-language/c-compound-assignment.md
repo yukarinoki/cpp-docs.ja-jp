@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: C 複合代入'
 title: C 複合代入
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - compound assignment operators
 - assignment operators, compound
 ms.assetid: db7b5893-cd56-4f1c-9981-5a024200ab63
-ms.openlocfilehash: 39a9391e2a62a59c5e7fd7937c1f3d12509b76ad
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 73c47a506960d5c80e2a7f5693dcbacf770dbf02
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62327900"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97211532"
 ---
 # <a name="c-compound-assignment"></a>C 複合代入
 

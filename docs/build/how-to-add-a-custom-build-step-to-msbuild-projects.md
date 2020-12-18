@@ -1,15 +1,16 @@
 ---
+description: '詳細情報: 方法:MSBuild プロジェクトにカスタム ビルド ステップを追加する'
 title: '方法: MSBuild プロジェクトにカスタム ビルド ステップを追加する'
 ms.date: 10/16/2019
 helpviewer_keywords:
 - 'msbuild (c++), howto: add a custom build step'
 ms.assetid: a20a0c47-4df4-4754-a1f0-a94a99958916
-ms.openlocfilehash: 78d40a5b4a02fe9b065bbbdde33afc6180d75381
-ms.sourcegitcommit: 9aab425662a66825772f091112986952f341f7c8
+ms.openlocfilehash: 1373aa2333fda6e0be9c7c574c5acc7840b9721a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72444916"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97156399"
 ---
 # <a name="how-to-add-a-custom-build-step-to-msbuild-projects"></a>方法: MSBuild プロジェクトにカスタム ビルド ステップを追加する
 
@@ -19,7 +20,7 @@ ms.locfileid: "72444916"
 
 ビルド ターゲットのシーケンスにおけるカスタム ビルド ステップの場所を指定するには、プロジェクト ファイル内で `CustomBuildAfterTargets` および `CustomBuildBeforeTargets` XML 要素のいずれかまたは両方を使用します。 たとえば、カスタム ビルド ステップをリンク ツール ターゲットの後、マニフェスト ツール ターゲットの前に実行するように指定できます。 使用可能なターゲットの実際のセットは、特定のビルドによって異なります。
 
-特定のターゲットの実行前にカスタム ビルド ステップを実行するには `CustomBuildBeforeTargets` 要素を、特定のターゲットを実行した後にステップを実行するには `CustomBuildAfterTargets` 要素を、または 2 つの隣接するターゲットの間にステップを実行するには両方の要素を指定します。 どちらの要素も指定されていない場合、カスタム ビルド ツールは既定の場所で、つまり**リンク**ターゲットの後に実行されます。
+特定のターゲットの実行前にカスタム ビルド ステップを実行するには `CustomBuildBeforeTargets` 要素を、特定のターゲットを実行した後にステップを実行するには `CustomBuildAfterTargets` 要素を、または 2 つの隣接するターゲットの間にステップを実行するには両方の要素を指定します。 どちらの要素も指定されていない場合、カスタム ビルド ツールは既定の場所で、つまり **リンク** ターゲットの後に実行されます。
 
 カスタム ビルド ステップとカスタム ビルド ツールで、`CustomBuildBeforeTargets` および `CustomBuildAfterTargets` XML 要素で指定された情報が共有されます。 したがって、これらのターゲットはプロジェクト ファイル内で 1 回だけ指定してください。
 

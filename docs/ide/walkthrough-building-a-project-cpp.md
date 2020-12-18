@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: チュートリアル: プロジェクトの構築 (C++)'
 title: 'チュートリアル: プロジェクトの構築 (C++)'
 ms.date: 04/25/2019
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - projects [C++], building
 - project building [C++]
 ms.assetid: d459bc03-88ef-48d0-9f9a-82d17f0b6a4d
-ms.openlocfilehash: d23412bcc740cbbda4227e0271842b4d44b436af
-ms.sourcegitcommit: 8bb2bea1384b290b7570b01608a86c7488ae7a02
+ms.openlocfilehash: f606a0ead796916fa41f7669852e67d58ae3b17c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67400994"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97222542"
 ---
 # <a name="walkthrough-building-a-project-c"></a>チュートリアル: プロジェクトの構築 (C++)
 
@@ -54,8 +55,8 @@ ms.locfileid: "67400994"
 
 ## <a name="next-steps"></a>次の手順
 
-**前へ:** [チュートリアル:プロジェクトとソリューションの使用 (C++)](../ide/walkthrough-working-with-projects-and-solutions-cpp.md)<br/>
-**次へ:** [チュートリアル:プロジェクトのテスト (C++)](../ide/walkthrough-testing-a-project-cpp.md)
+**前へ:** [チュートリアル: プロジェクトとソリューションの使用 (C++)](../ide/walkthrough-working-with-projects-and-solutions-cpp.md)<br/>
+**次へ:** [チュートリアル: プロジェクトのテスト (C++)](../ide/walkthrough-testing-a-project-cpp.md)
 
 ## <a name="see-also"></a>関連項目
 

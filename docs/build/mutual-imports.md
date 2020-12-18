@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: 相互インポート'
 title: 相互インポート
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 - extension DLLs [C++], mutual imports
 - exporting DLLs [C++], mutual imports
 ms.assetid: 2cc29537-92ee-4d92-af39-8b8b3afd808f
-ms.openlocfilehash: 771ce7506359178c1b8346598e93c30a20329fe8
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 0015dfe69237ff46ecfbef9ee1f1649fcb04d689
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87229793"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97187495"
 ---
 # <a name="mutual-imports"></a>相互インポート
 

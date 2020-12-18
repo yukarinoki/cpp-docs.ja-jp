@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: ソース ファイルとソース プログラム'
 title: ソース ファイルとソース プログラム
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - source files, specifying in compiler
 - source programs
 ms.assetid: 18bb2826-17da-48e5-92a2-10e649f1bc9f
-ms.openlocfilehash: ac906925be551c6ee4da08e200d4028047b3d041
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 9fd389f74efac11288b805d95dc2d95d4ec6d2bf
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81349883"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97296902"
 ---
 # <a name="source-files-and-source-programs"></a>ソース ファイルとソース プログラム
 
@@ -37,7 +38,7 @@ ms.locfileid: "81349883"
 
 C の "ソース プログラム" は、ディレクティブ、プラグマ、宣言、定義、ステートメント ブロック、および関数のコレクションです。 Microsoft C プログラムの有効な構成要素であるためには、それぞれがこのブックで説明された構文に従う必要があります。ただし、プログラム内で登場する順序は任意です (このブック全体で示された規則に従います)。 ただし、これらの構成要素の場所は、変数と関数がプログラムでどのように使用されるかに影響します (詳細については、「[有効期間、スコープ、可視性、およびリンケージ](../c-language/lifetime-scope-visibility-and-linkage.md)」を参照してください)。
 
-ソース ファイルは、実行可能なステートメントを含む必要はありません。 たとえば、変数の定義を 1 つのソース ファイルに置き、これらの変数を使用する他のソース ファイルでこれらの変数への参照を宣言すると便利な場合があります。 この手法により、必要なときに簡単に定義を見つけて更新できるようになります。 同じ理由から、定数およびマクロは、ソース ファイルで必要に応じて参照できる "インクルード ファイル" または "ヘッダー ファイル" という名前の別個のファイルにまとめることがよくあります。 [マクロ](../preprocessor/macros-c-cpp.md)および[インクルード ファイル](../preprocessor/hash-include-directive-c-cpp.md)については、『*プリプロセッサ リファレンス*』の説明を参照してください。
+ソース ファイルは、実行可能なステートメントを含む必要はありません。 たとえば、変数の定義を 1 つのソース ファイルに置き、これらの変数を使用する他のソース ファイルでこれらの変数への参照を宣言すると便利な場合があります。 この手法により、必要なときに簡単に定義を見つけて更新できるようになります。 同じ理由から、定数およびマクロは、ソース ファイルで必要に応じて参照できる "インクルード ファイル" または "ヘッダー ファイル" という名前の別個のファイルにまとめることがよくあります。 [マクロ](../preprocessor/macros-c-cpp.md)および [インクルード ファイル](../preprocessor/hash-include-directive-c-cpp.md)については、『*プリプロセッサ リファレンス*』の説明を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

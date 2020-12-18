@@ -1,21 +1,22 @@
 ---
+description: '詳細情報: 方法:プロジェクト ファイルを変更せずに C++ プロジェクトのプロパティとターゲットを変更する'
 title: '方法: プロジェクト ファイルを変更せずに C++ プロジェクトのプロパティとターゲットを変更する'
 ms.date: 11/28/2018
 helpviewer_keywords:
 - project properties [C++], modifying outside project file
-ms.openlocfilehash: a1ba5647542f69cfc7748986e512e74401bfc404
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 91f71ccf7764307fef174d31a63583d6a3ce2aeb
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88833362"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97179864"
 ---
 # <a name="how-to-modify-c-project-properties-and-targets-without-changing-the-project-file"></a>方法: プロジェクト ファイルを変更せずに C++ プロジェクトのプロパティとターゲットを変更する
 
 プロジェクト ファイルを変更することなく、MSBuild のコマンド プロンプトからプロジェクトのプロパティとターゲットをオーバーライドできます。 これは、一時的に、またはときどき一部のプロパティを適用する場合に便利です。 MSBuild のある程度の知識が必要です。 詳細については、「[MSBuild](/visualstudio/msbuild/msbuild)」を参照してください。
 
 > [!IMPORTANT]
-> Visual Studio の XML エディターまたは任意のテキスト エディターを使って、.props ファイルまたは .targets ファイルを作成します。 **プロパティ マネージャー**はプロジェクト ファイルにプロパティを追加するため、このシナリオでは使わないでください。
+> Visual Studio の XML エディターまたは任意のテキスト エディターを使って、.props ファイルまたは .targets ファイルを作成します。 **プロパティ マネージャー** はプロジェクト ファイルにプロパティを追加するため、このシナリオでは使わないでください。
 
 *プロジェクトのプロパティをオーバーライドするには:*
 

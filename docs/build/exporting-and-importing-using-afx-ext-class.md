@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: AFX_EXT_CLASS を使ったエクスポート/インポート'
 title: AFX_EXT_CLASS を使ったエクスポート/インポート
 ms.date: 11/04/2016
 f1_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - executable files [C++], importing classes
 - exporting DLLs [C++], AFX_EXT_CLASS macro
 ms.assetid: 6b72cb2b-e92e-4ecd-bcab-c335e1d1cfde
-ms.openlocfilehash: 95c72f8251a8a59833483eb948709c80a69d03d7
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 9c82874b1e5e8791f2825cf6874399fab0e10eaa
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81328607"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97156685"
 ---
 # <a name="exporting-and-importing-using-afx_ext_class"></a>AFX_EXT_CLASS を使ったエクスポート/インポート
 
@@ -104,7 +105,7 @@ MFC では、マクロ内で定義されているデータ項目に対して常�
 
 ### <a name="what-do-you-want-to-do"></a>実行する操作
 
-- [.def ファイルを使用して DLL からエクスポートする](exporting-from-a-dll-using-def-files.md)
+- [.def ファイルを使用した DLL からのエクスポート](exporting-from-a-dll-using-def-files.md)
 
 - [__declspec(dllexport) を使用して DLL からエクスポートする](exporting-from-a-dll-using-declspec-dllexport.md)
 

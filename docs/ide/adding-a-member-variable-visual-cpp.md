@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: メンバー変数を追加する'
 title: メンバー変数を追加する
 ms.date: 11/09/2018
 f1_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - dialog box controls, variable types
 - variables, dialog box control member variables
 ms.assetid: 437783bd-8eb4-4508-8b73-7380116e9d71
-ms.openlocfilehash: e7fd5bd93198c494f18fe18755d13d40fe7fbf96
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: b3af5c5920e465545623e9fa7239662954df2d66
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88845134"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97160117"
 ---
 # <a name="add-a-member-variable"></a>メンバー変数を追加する
 
@@ -34,10 +35,10 @@ ms.locfileid: "88845134"
 
 1. ダイアログ エディターに表示されたダイアログ ボックスで、メンバー変数を追加するコントロールを右クリックします。
 
-1. ショートカット メニューで、 **[変数の追加]** を選択して[メンバー変数の追加ウィザード](#add-member-variable-wizard)を表示します。
+1. ショートカット メニューで、 **[変数の追加]** を選択して [メンバー変数の追加ウィザード](#add-member-variable-wizard)を表示します。
 
    > [!NOTE]
-   > 既定値が既に**コントロール ID** に提供されています。
+   > 既定値が既に **コントロール ID** に提供されています。
 
 1. 適切なウィザード ボックスに情報を指定します。 詳細については、「[ダイアログ ボックス コントロールおよび変数の型](#dialog-box-controls-and-variable-types)」を参照してください。
 

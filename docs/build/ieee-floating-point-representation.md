@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: IEEE 浮動小数点表現'
 title: IEEE 浮動小数点表現
 ms.date: 05/06/2019
 helpviewer_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - long double
 - real*4 value
 ms.assetid: 537833e8-fe05-49fc-8169-55fd0314b195
-ms.openlocfilehash: 47802a32d43824b4e568ca520c360dc7b12cbf8c
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 9de48975ba13fae6117b095565f22265e28edf07
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87231547"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97162652"
 ---
 # <a name="ieee-floating-point-representation"></a>IEEE 浮動小数点表現
 
@@ -59,7 +60,7 @@ Microsoft C++ (MSVC) は、IEEE 数値標準に準拠しています。 IEEE-754
 
 浮動小数点形式には、特別に処理されるいくつかの値が含まれます。
 
-### <a name="zero"></a>0
+### <a name="zero"></a>ゼロ
 
 0 を正規化することはできないため、これを単精度または倍精度の値の正規化された形式で表現することはできません。 すべてゼロの特殊なビット パターンが 0 を表します。 符号ビットが設定されたゼロとして -0 を表すこともできますが、-0 と 0 は常に等しいと見なされます。
 

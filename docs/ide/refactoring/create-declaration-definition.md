@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: 宣言/定義の作成'
 title: 宣言/定義の作成
 ms.date: 10/19/2018
 ms.assetid: 6b1cdcb2-765e-4b93-8cef-92b861f64eba
-ms.openlocfilehash: 59ae3ebc23303554a35eea17c7e28850a4a1499a
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: cd111e05f531cc01c499094521cbd51d98980c4e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51693127"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97185535"
 ---
 # <a name="create-declaration--definition"></a>宣言/定義の作成
 
@@ -24,7 +25,7 @@ ms.locfileid: "51693127"
    ![強調表示されたコード](images/createdefinition_highlight.png)
 
 1. 次に、以下のいずれかを実行します。
-   * **キーボード**
+   * **[キーボード]**
      * **Ctrl + .** キーを押して、 **[クイック アクションとリファクタリング]** メニューをトリガーし、コンテキスト メニューから **[宣言/定義の作成]** を選択します。
    * **マウス**
      * 右クリックして **[クイック アクションとリファクタリング]** メニューを選択し、コンテキスト メニューから **[宣言/定義の作成]** を選択します。

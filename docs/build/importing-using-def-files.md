@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: DEF ファイルを使ったインポート'
 title: DEF ファイルを使ったインポート
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - dllimport attribute [C++], DEF files
 - DLLs [C++], DEF files
 ms.assetid: aefdbf50-f603-488a-b0d7-ed737bae311d
-ms.openlocfilehash: e4ac48dc013874c240411f78a733d32e116df25d
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 9eb4face47bf999daa8f969282cc621708a76006
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87223968"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97156152"
 ---
 # <a name="importing-using-def-files"></a>DEF ファイルを使ったインポート
 
@@ -30,7 +31,7 @@ EXPORTS
 
 |キーワード|インポート ライブラリの出力|Exports|
 |-------------|---------------------------------|-------------|
-|`CONSTANT`|`_imp_ulDataInDll`、`_ulDataInDll`|`_ulDataInDll`|
+|`CONSTANT`|`_imp_ulDataInDll`, `_ulDataInDll`|`_ulDataInDll`|
 |`DATA`|`_imp_ulDataInDll`|`_ulDataInDll`|
 
 **`__declspec(dllimport)`** と CONSTANT を使用すると、明示的なリンクを可能にする目的で作成される .lib DLL インポート ライブラリに `imp` バージョンと未修飾名の両方が一覧表示されます。 **`__declspec(dllimport)`** と DATA を使用すると、名前の `imp` バージョンのみが一覧表示されます。

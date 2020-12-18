@@ -1,16 +1,17 @@
 ---
+description: '詳細情報: 浮動小数点型からの変換'
 title: 浮動小数点型からの変換
 ms.date: 10/02/2019
 helpviewer_keywords:
 - converting floating point
 - floating-point conversion
 ms.assetid: 96804c8e-fa3b-4742-9006-0082ed9e57f2
-ms.openlocfilehash: 72d0f95a6e48dcf0a5e8fea3757e85f9a03bf7e4
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 2e2a78a68b39d9109a2304d78070bddef36e9b52
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87227895"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97293236"
 ---
 # <a name="conversions-from-floating-point-types"></a>浮動小数点型からの変換
 
@@ -28,9 +29,9 @@ Microsoft コンパイラでは **`float`** 値に対して IEEE-754 binary32 �
 
 少なくとも **`long`** と同じ大きさの整数型に変換する場合、大きすぎるか小さすぎるために結果の型で表現できない値を変換すると、次のいずれかの値が返される可能性があります。
 
-- 結果は *sentinel 値*になる可能性があります。これは、0 から最も遠い表現可能な値です。 符号付きの型の場合、これは最小の表現可能な値 (0x800...0) です。 符号なしの型の場合、これは最大の表現可能な値 (0xFF...F) です。
+- 結果は *sentinel 値* になる可能性があります。これは、0 から最も遠い表現可能な値です。 符号付きの型の場合、これは最小の表現可能な値 (0x800...0) です。 符号なしの型の場合、これは最大の表現可能な値 (0xFF...F) です。
 
-- 結果は*飽和*になる可能性があります。この場合、大きすぎて表現できない値が表現可能な最大の値に変換され、小さすぎて表現できない値が表現可能な最小の値に変換されます。 これら 2 つの値のいずれかが、sentinel 値としても使用されます。
+- 結果は *飽和* になる可能性があります。この場合、大きすぎて表現できない値が表現可能な最大の値に変換され、小さすぎて表現できない値が表現可能な最小の値に変換されます。 これら 2 つの値のいずれかが、sentinel 値としても使用されます。
 
 - **`unsigned long`** または **`unsigned long long`** への変換では、範囲外の値を変換した結果は、表現可能な最大または最小の値以外の値になる可能性があります。 結果が sentinel または飽和値であるかどうかは、コンパイラ オプションとターゲット アーキテクチャによって異なります。 将来のコンパイラ リリースでは、飽和または sentinel 値が代わりに返される可能性があります。
 

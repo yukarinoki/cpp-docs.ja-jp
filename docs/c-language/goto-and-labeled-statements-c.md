@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: goto ステートメントとラベル付きステートメント (C)'
 title: goto ステートメントとラベル付きステートメント (C)
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - statements, labeled
 - goto keyword [C]
 ms.assetid: 3d0473dc-4b18-4fcc-9616-31a38499d7d7
-ms.openlocfilehash: d84aa6701ef030dc494f6a40a7223d6f9bcd5073
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 1372cd0699944449ccd44a76dd1d90206bfab68a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87199985"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97137645"
 ---
 # <a name="goto-and-labeled-statements-c"></a>goto ステートメントとラベル付きステートメント (C)
 

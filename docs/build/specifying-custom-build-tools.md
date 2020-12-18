@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: カスタム ビルド ツールを指定する'
 title: カスタム ビルド ツールの指定
 ms.date: 06/05/2018
 f1_keywords:
@@ -15,16 +16,16 @@ helpviewer_keywords:
 - build tools (C++), specifying
 - custom build tools (C++), specifying
 - builds (C++), custom build tools
-ms.openlocfilehash: dbce226b34503a9e8e70b6f19d9aa0c68ef487f3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: db3162e3f7ad3f007d3f26e1ee2a279e5a132eb9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62314755"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97275335"
 ---
 # <a name="specify-custom-build-tools"></a>カスタム ビルド ツールを指定する
 
-*カスタム ビルド ツール*は、特定の入力ファイルのビルドに必要な情報をビルド システムに提供します。 カスタム ビルド ツールは、実行するコマンド、入力ファイルの一覧、コマンドによって生成される出力ファイルの一覧、ツールの任意の説明を指定します。
+*カスタム ビルド ツール* は、特定の入力ファイルのビルドに必要な情報をビルド システムに提供します。 カスタム ビルド ツールは、実行するコマンド、入力ファイルの一覧、コマンドによって生成される出力ファイルの一覧、ツールの任意の説明を指定します。
 
 カスタム ビルド ツールとカスタム ビルド ステップの全般情報については、「[カスタム ビルド ステップとビルド イベントについて](understanding-custom-build-steps-and-build-events.md)」を参照してください。
 
@@ -50,7 +51,7 @@ ms.locfileid: "62314755"
 
    - **[コマンド ライン]** で、コマンド プロンプトの場合と同様にコマンドを指定します。 有効なコマンドまたはバッチ ファイルと必要な入力ファイルまたは出力ファイルがあればそれを指定します。 後続のコマンドがすべて確実に実行されるように、バッチ ファイル名の前に **call** バッチ コマンドを指定します。
 
-      MSBuild マクロを利用すれば、複数の入力ファイルと出力ファイルを数式で指定できます。 ファイルの場所またはファイル セットの名前を指定する方法については、「[Common macros for build commands and properties](reference/common-macros-for-build-commands-and-properties.md)」 (ビルドのコマンドとプロパティの共通マクロ) を参照してください。
+      MSBuild マクロを利用すれば、複数の入力ファイルと出力ファイルを数式で指定できます。 ファイルの場所またはファイル セットの名前を指定する方法については、[ビルドのコマンドとプロパティの共通マクロ](reference/common-macros-for-build-commands-and-properties.md)に関するページを参照してください。
 
       '%' は MSBuild に予約されている文字です。環境変数を指定する場合、エスケープ文字 **%** をそれぞれ、16 進数エスケープ シーケンス **%25** に変更してください。 たとえば、 **%WINDIR%** を **%25WINDIR%25** に変更します。 MSBuild は **%25** シーケンスをそれぞれ **%** 文字に変更し、それから環境変数にアクセスします。
 

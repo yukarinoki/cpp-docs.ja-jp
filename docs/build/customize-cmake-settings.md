@@ -1,20 +1,21 @@
 ---
+description: '詳細情報: CMake のビルド設定をカスタマイズする'
 title: Visual Studio で CMake のビルド設定をカスタマイズする
 ms.date: 08/20/2019
 helpviewer_keywords:
 - CMake build settings
-ms.openlocfilehash: 9fa1a21b26088482fb64441d0ccf0ad968bd480f
-ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
+ms.openlocfilehash: a7a0dcf946d4bef3a1dc7eb63fd2c22be6740682
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "92919268"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97156854"
 ---
 # <a name="customize-cmake-build-settings"></a>CMake のビルド設定をカスタマイズする
 
 ::: moniker range="msvc-160"
 
-Visual Studio 2019 以降では、 **CMake 設定エディター** を使うことにより、構成を追加して、その設定をカスタマイズすることができます。 エディターは *CMakeSettings.json* ファイルを手動で編集するより簡単な代わりの手段として用意されていますが、ファイルを直接編集する方がよい場合は、エディターの右上にある **[JSON の編集]** リンクをクリックできます。
+Visual Studio 2019 以降では、**CMake 設定エディター** を使うことにより、構成を追加して、その設定をカスタマイズすることができます。 エディターは *CMakeSettings.json* ファイルを手動で編集するより簡単な代わりの手段として用意されていますが、ファイルを直接編集する方がよい場合は、エディターの右上にある **[JSON の編集]** リンクをクリックできます。
 
 エディターを開くには、メイン ツール バーの **[構成]** ドロップダウンをクリックして、 **[構成の管理]** を選択します。
 
@@ -26,7 +27,7 @@ Visual Studio 2019 以降では、 **CMake 設定エディター** を使うこ�
 
 Visual Studio では、1 つの `x64-Debug` 構成が既定で提供されています。 緑色の正符号をクリックすると、追加の構成を加えることができます。 エディターに表示される設定は、選択した構成によって異なる場合があります。
 
-エディターで選択したオプションは、 *CMakeSettings.json* という名前のファイルに書き込まれます。 このファイルで指定されているコマンド ライン引数と環境変数は、プロジェクトをビルドするときに CMake に渡されます。 Visual Studio で *CMakeLists.txt* が自動的に変更されることはありません。 *CMakeSettings.json* を使うことにより、Visual Studio でビルドをカスタマイズしながら、CMake プロジェクト ファイルは変更されないようにして、チームの他のメンバーが任意のツールでそれを使用できるようにすることができます。
+エディターで選択したオプションは、*CMakeSettings.json* という名前のファイルに書き込まれます。 このファイルで指定されているコマンド ライン引数と環境変数は、プロジェクトをビルドするときに CMake に渡されます。 Visual Studio で *CMakeLists.txt* が自動的に変更されることはありません。*CMakeSettings.json* を使うことにより、Visual Studio でビルドをカスタマイズしながら、CMake プロジェクト ファイルは変更されないようにして、チームの他のメンバーが任意のツールでそれを使用できるようにすることができます。
 
 ## <a name="cmake-general-settings"></a>CMake の全般設定
 
@@ -42,7 +43,7 @@ Visual Studio では、1 つの `x64-Debug` 構成が既定で提供されてい
 
 ### <a name="toolset"></a>ツールセット
 
-**inheritedEnvironments** の設定に対応します。 選択した構成のビルドに使用されるコンパイラ環境を定義します。 サポートされる値は、構成の種類によって異なります。 カスタム環境を作成するには、設定エディターの右上隅にある **[JSON の編集]** リンクを選択し、 *CMakeSettings.json* ファイルを直接編集します。
+**inheritedEnvironments** の設定に対応します。 選択した構成のビルドに使用されるコンパイラ環境を定義します。 サポートされる値は、構成の種類によって異なります。 カスタム環境を作成するには、設定エディターの右上隅にある **[JSON の編集]** リンクを選択し、*CMakeSettings.json* ファイルを直接編集します。
 
 ### <a name="cmake-toolchain-file"></a>CMake ツールチェーン ファイル
 
@@ -78,7 +79,7 @@ Visual Studio では、1 つの `x64-Debug` 構成が既定で提供されてい
 
 ## <a name="cmake-variables-and-cache"></a>CMake 変数とキャッシュ
 
-これらの設定を使うと、CMake 変数を設定し、それらを *CMakeSettings.json* に保存できます。 それらはビルド時に CMake に渡され、 *CMakeLists.txt* ファイルの値はすべてそれらによってオーバーライドされます。 CMakeGUI と同じ方法でこのセクションを使用し、編集できるすべての CMake 変数の一覧を表示できます。 **[Save and generate cache]\(キャッシュの保存と生成\)** ボタンをクリックして、高度な変数 (CMakeGUI ごと) を含む編集可能なすべての CMake 変数の一覧を表示します。 変数名で一覧をフィルター処理できます。
+これらの設定を使うと、CMake 変数を設定し、それらを *CMakeSettings.json* に保存できます。 それらはビルド時に CMake に渡され、*CMakeLists.txt* ファイルの値はすべてそれらによってオーバーライドされます。 CMakeGUI と同じ方法でこのセクションを使用し、編集できるすべての CMake 変数の一覧を表示できます。 **[Save and generate cache]\(キャッシュの保存と生成\)** ボタンをクリックして、高度な変数 (CMakeGUI ごと) を含む編集可能なすべての CMake 変数の一覧を表示します。 変数名で一覧をフィルター処理できます。
 
 **variables** に対応します。 **-D** *_name_=_value_* として CMake に渡される CMake 変数の名前と値のペアを含みます。 CMake プロジェクトのビルド命令で CMake キャッシュ ファイルに直接変数を追加するように指定している場合は、代わりにここで追加することをお勧めします。
 
@@ -148,7 +149,7 @@ CMake によってターゲットがインストールされるリモート マ�
     },
 ```
 
-JSON の IntelliSense は、 *CMakeSettings.json* ファイルの編集を支援します。
+JSON の IntelliSense は、*CMakeSettings.json* ファイルの編集を支援します。
 
    ![CMake の JSON の IntelliSense](media/cmake-json-intellisense.png "CMake の JSON の IntelliSense")
 
@@ -170,7 +171,7 @@ Visual Studio 2017 では、特定のプロジェクトの CMake キャッシュ
 
 初めて構成を選択すると、Visual Studio によって *CMakeSettings.json* ファイルがプロジェクトのルート フォルダー内に作成されます。 このファイルは、たとえば **クリーン** 操作の後などに、CMake キャッシュ ファイルを再作成するために使われます。
 
-追加の構成を加えるには、 *CMakeSettings.json* を右クリックして、 **[構成の追加]** を選択します。
+追加の構成を加えるには、*CMakeSettings.json* を右クリックして、 **[構成の追加]** を選択します。
 
    ![CMake の [構成の追加]](media/cmake-add-configuration.png "CMake の [構成の追加]")
 
@@ -192,7 +193,7 @@ Visual Studio 2017 では、特定のプロジェクトの CMake キャッシュ
     },
 ```
 
-JSON の IntelliSense は、 *CMakeSettings.json* ファイルの編集を支援します。
+JSON の IntelliSense は、*CMakeSettings.json* ファイルの編集を支援します。
 
    ![CMake の JSON の IntelliSense](media/cmake-json-intellisense.png "CMake の JSON の IntelliSense")
 

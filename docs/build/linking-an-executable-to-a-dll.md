@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: DLL と実行形式のリンク'
 title: DLL と実行形式のリンク
 ms.date: 08/22/2019
 helpviewer_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - executable files [C++], linking to DLLs
 - loading DLLs [C++]
 ms.assetid: 7592e276-dd6e-4a74-90c8-e1ee35598ea3
-ms.openlocfilehash: 0cd9cfa32e6f87479dfcd9926b1735671ff6690f
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: bfcc1f506b1e9c8da14549795a9c282b66788c6b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87223942"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97172051"
 ---
 # <a name="link-an-executable-to-a-dll"></a>DLL と実行形式のリンク
 

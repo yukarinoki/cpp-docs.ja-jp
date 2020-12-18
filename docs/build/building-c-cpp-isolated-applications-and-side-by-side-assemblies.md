@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: C/C++ 分離アプリケーションおよび side-by-side アセンブリのビルド'
 title: C/C++ 分離アプリケーションおよび side-by-side アセンブリのビルド
 ms.date: 05/06/2019
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - side-by-side applications [C++]
 - builds [C++], side-by-side assemblies
 ms.assetid: 9465904e-76f7-48bd-bb3f-c55d8f1699b6
-ms.openlocfilehash: db2978c054362b6c329fb786d0f7da322d4c9201
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: a48e0e63b78e72d99241df84cdd9709198c1aa82
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80169878"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97157075"
 ---
 # <a name="building-cc-isolated-applications-and-side-by-side-assemblies"></a>C/C++ 分離アプリケーションおよび side-by-side アセンブリのビルド
 

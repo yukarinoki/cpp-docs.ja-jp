@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: Visual Studio のプロジェクト - C++'
 title: Visual Studio のプロジェクト - C++
 ms.date: 10/25/2019
 helpviewer_keywords:
@@ -8,16 +9,16 @@ helpviewer_keywords:
 - Visual Studio C++ projects
 - ATL projects
 ms.assetid: 11003cd8-9046-4630-a189-a32bf3b88047
-ms.openlocfilehash: a8e23a3c384ce9b5ac7e73d18958246b52eb95b5
-ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
+ms.openlocfilehash: 07c7c0394c7b1a49bd4b8861540e540b095fae5a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "92919385"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97156815"
 ---
 # <a name="visual-studio-projects---c"></a>Visual Studio のプロジェクト - C++
 
-" *Visual Studio のプロジェクト* " は、MSBuild のビルド システムに基づくプロジェクトです。 MSBuild は、Visual Studio のネイティブ ビルド システムであり、通常は Windows 固有のプログラムで使用するための最適なビルド システムです。 MSBuild は Visual Studio と緊密に統合されていますが、コマンド ラインから使うこともできます。 クロスプラットフォーム プロジェクト、またはオープンソース ライブラリを使用するプロジェクトでは、Visual Studio 2017 以降で [Visual Studio の CMake プロジェクト](cmake-projects-in-visual-studio.md)を使用することをお勧めします。 以前のバージョンの Visual Studio から MSBuild プロジェクトをアップグレードする方法の詳細については、「[Microsoft C++ 移植およびアップグレード ガイド](../porting/visual-cpp-porting-and-upgrading-guide.md)」を参照してください。
+"*Visual Studio のプロジェクト*" は、MSBuild のビルド システムに基づくプロジェクトです。 MSBuild は、Visual Studio のネイティブ ビルド システムであり、通常は Windows 固有のプログラムで使用するための最適なビルド システムです。 MSBuild は Visual Studio と緊密に統合されていますが、コマンド ラインから使うこともできます。 クロスプラットフォーム プロジェクト、またはオープンソース ライブラリを使用するプロジェクトでは、Visual Studio 2017 以降で [Visual Studio の CMake プロジェクト](cmake-projects-in-visual-studio.md)を使用することをお勧めします。 以前のバージョンの Visual Studio から MSBuild プロジェクトをアップグレードする方法の詳細については、「[Microsoft C++ 移植およびアップグレード ガイド](../porting/visual-cpp-porting-and-upgrading-guide.md)」を参照してください。
 
 ## <a name="create-a-project"></a>プロジェクトを作成する
 
@@ -47,7 +48,7 @@ Visual Studio に含まれるすべての既定のプロジェクト テンプ�
 
 ## <a name="add-items"></a>項目を追加する
 
-ソース コード ファイル、アイコン、その他の項目をプロジェクトに追加するには、 **ソリューション エクスプローラー** でプロジェクトを右クリックして、 **[追加] > [新規]** または **[追加] > [既存]** を選択します。
+ソース コード ファイル、アイコン、その他の項目をプロジェクトに追加するには、**ソリューション エクスプローラー** でプロジェクトを右クリックして、 **[追加] > [新規]** または **[追加] > [既存]** を選択します。
 
 ## <a name="add-third-party-libraries"></a>サード パーティ製のライブラリを追加する
 
@@ -55,11 +56,11 @@ Visual Studio に含まれるすべての既定のプロジェクト テンプ�
 
 ## <a name="set-compiler-options-and-other-build-properties"></a>コンパイラ オプションおよび他のビルド プロパティを設定する
 
-プロジェクトのビルド設定を構成するには、 **ソリューション エクスプローラー** でプロジェクトを右クリックして、 **[プロパティ]** を選択します。 詳しくは、「[Visual Studio で C++ コンパイラとビルド プロパティを設定する](working-with-project-properties.md)」をご覧ください。
+プロジェクトのビルド設定を構成するには、**ソリューション エクスプローラー** でプロジェクトを右クリックして、 **[プロパティ]** を選択します。 詳しくは、「[Visual Studio で C++ コンパイラとビルド プロパティを設定する](working-with-project-properties.md)」をご覧ください。
 
 ## <a name="compile-and-run"></a>コンパイルして実行する
 
-新しいプロジェクトをコンパイルして実行するには、 **F5** キーを押すか、またはメイン ツールバーの緑色の矢印が付いた " *デバッグ ドロップダウン* " をクリックします。 " *構成ドロップダウン* " では、" *デバッグ* " ビルドまたは " *リリース* " ビルド (または他のカスタム構成) を実行するかどうかを選択します。
+新しいプロジェクトをコンパイルして実行するには、**F5** キーを押すか、またはメイン ツールバーの緑色の矢印が付いた "*デバッグ ドロップダウン*" をクリックします。 "*構成ドロップダウン*" では、"*デバッグ*" ビルドまたは "*リリース*" ビルド (または他のカスタム構成) を実行するかどうかを選択します。
 
 新しいプロジェクトがエラーなしでコンパイルされます。 独自のコードを追加すると、エラーが発生したり、警告がトリガーされたりする場合があります。 エラーがあるとビルドは完了しませんが、警告では完了します。 プロジェクトをビルドするとき、すべてのエラーと警告は出力ウィンドウとエラー一覧の両方に表示されます。
 

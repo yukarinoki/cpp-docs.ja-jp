@@ -1,15 +1,16 @@
 ---
+description: '詳細情報: ガイド付き最適化のプロファイルの環境変数'
 title: ガイド付き最適化のプロファイルの環境変数
 ms.date: 03/14/2018
 helpviewer_keywords:
 - profile-guided optimizations, environment variables
 ms.assetid: f95a6d1e-49a4-4802-a144-092026b600a3
-ms.openlocfilehash: 099e57f1ac69223adafe7bec1af4cc3452915e86
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: dd78db781fc19b7ecfd451e01dc046b21bd87d11
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62195274"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97156672"
 ---
 # <a name="environment-variables-for-profile-guided-optimizations"></a>ガイド付き最適化のプロファイルの環境変数
 
@@ -29,7 +30,7 @@ ms.locfileid: "62195274"
 
 **PogoSafeMode** 環境変数を解除するか設定し、x86 システムのアプリケーション プロファイルで高速モードを使用するか、セーフ モードを使用するか指定します。
 
-ガイド付き最適化のプロファイル (PGO: Profile-Guided Optimization) では、プロファイリング フェーズで*高速モード*と*セーフ モード*の 2 つのモードを使用できます。 高速モードでプロファイリングを行う場合は、**INC** 命令を使用してデータ カウンター数を増やします。 **INC** 命令は高速ですが、スレッド セーフではありません。 セーフ モードでプロファイリングを行う場合は、**LOCK INC** 命令を使用してデータ カウンター数を増やします。 **LOCK INC** 命令は **INC** 命令と同じ機能を持ち、スレッド セーフですが、**INC** 命令より低速です。
+ガイド付き最適化のプロファイル (PGO: Profile-Guided Optimization) では、プロファイリング フェーズで *高速モード* と *セーフ モード* の 2 つのモードを使用できます。 高速モードでプロファイリングを行う場合は、**INC** 命令を使用してデータ カウンター数を増やします。 **INC** 命令は高速ですが、スレッド セーフではありません。 セーフ モードでプロファイリングを行う場合は、**LOCK INC** 命令を使用してデータ カウンター数を増やします。 **LOCK INC** 命令は **INC** 命令と同じ機能を持ち、スレッド セーフですが、**INC** 命令より低速です。
 
 既定では、PGO プロファイリングは高速モードで動作します。 **PogoSafeMode** は、セーフ モードを使用する場合にのみ必要です。
 

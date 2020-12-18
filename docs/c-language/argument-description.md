@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: 引数の説明'
 title: 引数の説明
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,16 +9,16 @@ helpviewer_keywords:
 - argv argument
 - argc argument
 ms.assetid: 91c2cbe3-9aca-4277-afa1-6137eb8fb704
-ms.openlocfilehash: dd973c96c9056f6156976698dfc3695b00ebbbb7
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 97a4bbd8c483f26aa43065cb14a567e1050116d7
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87200869"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97280198"
 ---
 # <a name="argument-description"></a>引数の説明
 
-**main** 関数および**wmain** 関数の `argc` パラメーターは、コマンド ラインからプログラムに渡される引数の数を指定する整数です。 プログラム名は引数と見なされるため、`argc` の値は 1 以上です。
+**main** 関数および **wmain** 関数の `argc` パラメーターは、コマンド ラインからプログラムに渡される引数の数を指定する整数です。 プログラム名は引数と見なされるため、`argc` の値は 1 以上です。
 
 ## <a name="remarks"></a>Remarks
 
@@ -29,7 +30,7 @@ ms.locfileid: "87200869"
 
 **Microsoft 固有の仕様**
 
-`envp` パラメーターは、ユーザーの環境変数の値セットを表す null で終了する文字列の配列へのポインターです。 `envp` パラメーターは、 **`char`** (`char *envp[]`) へのポインターの配列として、または **`char`** (`char **envp`) へのポインターへのポインターとして宣言できます。 **wmain** 関数で、`envp` パラメーターは **`wchar_t`** (`wchar_t *envp[]`) へのポインターの配列として、または **`wchar_t`** (`wchar_t **envp`) へのポインターとして宣言できます。 配列の末尾は **NULL** \* ポインターによって示されます。 **main** または **wmain** に渡される環境ブロックは、現在の環境の "固定の" コピーであることに注意してください。 その後 _**putenv** か `_wputenv` の呼び出しによって環境を変更する場合、`getenv`/`_wgetenv` と `_environ` または `_wenviron` の変数が返す現在の環境は変わりますが、`envp` が指すブロックは変わりません。 `envp` パラメーターは C では ANSI 互換ですが、C++ では非互換です。
+`envp` パラメーターは、ユーザーの環境変数の値セットを表す null で終了する文字列の配列へのポインターです。 `envp` パラメーターは、 **`char`** (`char *envp[]`) へのポインターの配列として、または **`char`** (`char **envp`) へのポインターへのポインターとして宣言できます。 **wmain** 関数で、`envp` パラメーターは **`wchar_t`** (`wchar_t *envp[]`) へのポインターの配列として、または **`wchar_t`** (`wchar_t **envp`) へのポインターとして宣言できます。 配列の末尾は **NULL** \* ポインターによって示されます。 **main** または **wmain** に渡される環境ブロックは、現在の環境の "固定の" コピーであることに注意してください。 その後 _ **putenv** か `_wputenv` の呼び出しによって環境を変更する場合、`getenv`/`_wgetenv` と `_environ` または `_wenviron` の変数が返す現在の環境は変わりますが、`envp` が指すブロックは変わりません。 `envp` パラメーターは C では ANSI 互換ですが、C++ では非互換です。
 
 **Microsoft 固有の仕様はここまで**
 

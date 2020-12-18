@@ -1,16 +1,17 @@
 ---
+description: '詳細情報: ガイド付き最適化のプロファイル'
 title: ガイド付き最適化のプロファイル
 ms.date: 04/23/2019
 helpviewer_keywords:
 - profile-guided optimizations
 - optimization, profile-guided [C++]
 ms.assetid: 2225c307-d3ae-42c1-8345-a5a959d132dc
-ms.openlocfilehash: efa4c35810f6272b89ff11cd1c890a7f535cfc1c
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: cd6a9627de72ef170e88493ef3e2147a0ccc2bc7
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87232730"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97187326"
 ---
 # <a name="profile-guided-optimizations"></a>ガイド付き最適化のプロファイル
 
@@ -45,7 +46,7 @@ ms.locfileid: "87232730"
 
 - **/LTCG** と **/USEPROFILE** を使用してリンクします。
 
-   **/LTCG** リンカー オプションと [/USEPROFILE](reference/useprofile.md) リンカー オプションの両方を使用して、最適化されたイメージを作成します。 この手順は、`.pgd` ファイルの入力として使用します。 **/USEPROFILE** を指定した場合、必要に応じて **PGD=** "_ファイル名_" 引数を追加することにより、`.pgd` ファイルの既定以外の名前または場所を指定できます。 また、非推奨の **/PGD** リンカー オプションを使用して、この名前を指定することもできます。 **/LTCG** と **/USEPROFILE**の組み合わせは、非推奨の **/LTCG:PGOPTIMIZE** リンカー オプションおよび **/LTCG:PGUPDATE** リンカー オプションの代わりに使用します。
+   **/LTCG** リンカー オプションと [/USEPROFILE](reference/useprofile.md) リンカー オプションの両方を使用して、最適化されたイメージを作成します。 この手順は、`.pgd` ファイルの入力として使用します。 **/USEPROFILE** を指定した場合、必要に応じて **PGD=** "_ファイル名_" 引数を追加することにより、`.pgd` ファイルの既定以外の名前または場所を指定できます。 また、非推奨の **/PGD** リンカー オプションを使用して、この名前を指定することもできます。 **/LTCG** と **/USEPROFILE** の組み合わせは、非推奨の **/LTCG:PGOPTIMIZE** リンカー オプションおよび **/LTCG:PGUPDATE** リンカー オプションの代わりに使用します。
 
 最適化された実行可能ファイルを作成し、追加のプロファイルによりさらに最適化されたイメージを作成できるかどうかを後で判断することもできます。 インストルメント化されたイメージとその `.pgd` ファイルが使用可能な場合、追加のテスト実行を行い、同じ **/LTCG** リンカー オプションと **/USEPROFILE** リンカー オプションを使用して、新しい `.pgd` ファイルで最適化されたイメージを再構築できます。
 

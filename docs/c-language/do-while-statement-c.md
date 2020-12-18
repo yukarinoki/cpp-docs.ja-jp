@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: do-while ステートメント (C)'
 title: do-while ステートメント (C)
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - do-while keyword [C]
 ms.assetid: f2ac20a6-10c7-4a08-b5e3-c3b3639dbeaf
-ms.openlocfilehash: 4a10b9df9f7276eb8e241d76726bca26f2c0cb75
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 9d80bb2aea047d0dc9cc2b7be417a7a44ced9050
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87218872"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97246995"
 ---
 # <a name="do-while-statement-c"></a>do-while ステートメント (C)
 
@@ -27,7 +28,7 @@ ms.locfileid: "87218872"
 
 1. ステートメントの本体が実行されます。
 
-1. 次に、*expression* が評価されます。 *expression* が false の場合、*do-while* ステートメントは終了し、プログラムの次のステートメントに制御が渡されます。 *式*が true (0 以外) の場合、プロセスは手順 1 から繰り返されます。
+1. 次に、*expression* が評価されます。 *expression* が false の場合、*do-while* ステートメントは終了し、プログラムの次のステートメントに制御が渡されます。 *式* が true (0 以外) の場合、プロセスは手順 1 から繰り返されます。
 
 *do-while* ステートメントは、 **`break`** 、 **`goto`** 、または **`return`** ステートメントがステートメント本体で実行されたときにも終了できます。
 

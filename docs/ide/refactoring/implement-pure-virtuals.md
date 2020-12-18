@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: 純粋仮想の実装'
 title: 純粋仮想の実装
 ms.date: 11/16/2016
 ms.assetid: ea9b4719-34a3-474a-b4ec-05b1859f80f1
-ms.openlocfilehash: 59e4519f57a1d9bd9ba1cee1ed6ae41bea785a9f
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: b35ebba556ed9bae6ded649caca000b7d3554480
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51692668"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97318755"
 ---
 # <a name="implement-pure-virtuals"></a>純粋仮想の実装
 
@@ -24,7 +25,7 @@ ms.locfileid: "51692668"
    ![強調表示されたコード](images/virtuals_highlight.png)
 
 1. 次に、以下のいずれかを実行します。
-   * **キーボード**
+   * **[キーボード]**
      * **Ctrl + .** キーを押して、 **[クイック アクションとリファクタリング]** メニューをトリガーし、コンテキスト メニューから **[Implement all Pure Virtuals for class '*ClassName*’]\(クラス 'ClassName' のすべての純粋仮想を実装\)** を選択します。*ClassName* は、選択されたクラスの名前になります。
    * **マウス**
      * 右クリックして **[クイック アクションとリファクタリング]** メニューを選択し、コンテキスト メニューから **[Implement all Pure Virtuals for class '*ClassName*']\(クラス 'ClassName' のすべての純粋仮想を実装\)** を選択します。*ClassName* は、選択されたクラスの名前になります。

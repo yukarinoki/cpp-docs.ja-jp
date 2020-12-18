@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: C/C++ 言語の実行形式で使う C 関数のエクスポート'
 title: C/C++ 言語の実行形式で使う C 関数のエクスポート
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - exporting DLLs [C++], C functions in C++ executables
 - exporting functions [C++], C functions in C++ executables
 ms.assetid: b51d6e5e-37cf-4c1c-b0bf-fcf188c82f00
-ms.openlocfilehash: 4dcf46e6bdde66a303afc2c4ec94fc8aefdd5e5d
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 9a45eb0a6f2a73f89696c03325690bc82ecd3082
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91506639"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97156659"
 ---
 # <a name="exporting-c-functions-for-use-in-c-or-c-language-executables"></a>C/C++ 言語の実行形式で使う C 関数のエクスポート
 
@@ -48,7 +49,7 @@ extern "C" {
 
 - [.def ファイルを使用した DLL からのエクスポート](exporting-from-a-dll-using-def-files.md)
 
-- [__declspec(dllexport) を使用した DLL からのエクスポート](exporting-from-a-dll-using-declspec-dllexport.md)
+- [__declspec(dllexport) を使用して DLL からエクスポートする](exporting-from-a-dll-using-declspec-dllexport.md)
 
 - [AFX_EXT_CLASS を使用したエクスポートとインポート](exporting-and-importing-using-afx-ext-class.md)
 

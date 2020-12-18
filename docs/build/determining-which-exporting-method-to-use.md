@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: エクスポート方式の使い分け'
 title: エクスポート方式の使い分け
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - def files [C++], exporting from DLLs
 - .def files [C++], exporting from DLLs
 ms.assetid: 66d773ed-935c-45c2-ad03-1a060874b34d
-ms.openlocfilehash: 974c32cef87801599ba0d14fd146e84ad874467f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5d9e973d331ebd6190cd8e2a46601dfe2b057d09
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62273738"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97162977"
 ---
 # <a name="determine-which-exporting-method-to-use"></a>エクスポート方式の使い分け
 
@@ -40,11 +41,11 @@ ms.locfileid: "62273738"
 
 - [.DEF ファイルを使用した DLL からのエクスポート](exporting-from-a-dll-using-def-files.md)
 
-- [__declspec(dllexport) を使用した DLL からのエクスポート](exporting-from-a-dll-using-declspec-dllexport.md)
+- [__declspec(dllexport) を使用して DLL からエクスポートする](exporting-from-a-dll-using-declspec-dllexport.md)
 
-- [AFX_EXT_CLASS を使用したエクスポートとインポート](exporting-and-importing-using-afx-ext-class.md)
+- [AFX_EXT_CLASS を使用してエクスポートとインポートを行う](exporting-and-importing-using-afx-ext-class.md)
 
-- [C 言語の実行可能ファイルで使用する C++ 関数のエクスポート](exporting-cpp-functions-for-use-in-c-language-executables.md)
+- [C 言語の実行可能ファイルで使用する C++ 関数をエクスポートする](exporting-cpp-functions-for-use-in-c-language-executables.md)
 
 - [C または C++ 言語の実行可能ファイルで使用する C 関数のエクスポート](exporting-c-functions-for-use-in-c-or-cpp-language-executables.md)
 

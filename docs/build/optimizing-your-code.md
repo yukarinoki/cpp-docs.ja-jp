@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: コードの最適化'
 title: コードの最適化
 ms.date: 05/06/2019
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - optimization, C++ code
 - code, optimizing
 - performance, compiler
-ms.openlocfilehash: 00356cf50ca8e50c80e8a1142adf654816490c9b
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 893e3dce64400d47026e478b081283e3f1d82262
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80078490"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97179799"
 ---
 # <a name="optimizing-your-code"></a>コードの最適化
 
@@ -30,7 +31,7 @@ ms.locfileid: "80078490"
 実行速度またはコード サイズに特に影響を与える **/O** コンパイラ オプションの一覧。
 
 [右辺値参照宣言子: &&](../cpp/rvalue-reference-declarator-amp-amp.md) \
-右辺値参照では、*移動セマンティクス*の実装がサポートされます。 移動セマンティクスを使用してテンプレート ライブラリを実装すると、これらのテンプレートを使用するアプリケーションのパフォーマンスが大幅に向上する可能性があります。
+右辺値参照では、*移動セマンティクス* の実装がサポートされます。 移動セマンティクスを使用してテンプレート ライブラリを実装すると、これらのテンプレートを使用するアプリケーションのパフォーマンスが大幅に向上する可能性があります。
 
 ### <a name="the-optimize-pragma"></a>optimize プラグマ
 

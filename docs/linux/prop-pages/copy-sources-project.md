@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: ソースのプロジェクト プロパティのコピー (Linux C++)'
 title: ソースのプロジェクト プロパティのコピー (Linux C++)
 ms.date: 10/16/2019
 ms.assetid: 1a44230d-5dd8-4d33-93b4-e77e03e00150
-ms.openlocfilehash: 393f1b92bb5185bcd5ce93999e0c13f7d370e78d
-ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
+ms.openlocfilehash: 9c486519e1a37a08531dae82003504838f2032a1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "92924550"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97169802"
 ---
 # <a name="copy-sources-project-properties-linux-c"></a>ソースのプロジェクト プロパティのコピー (Linux C++)
 

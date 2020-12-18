@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: 定義の場所の移動'
 title: 定義の場所の移動
 ms.date: 11/16/2016
 ms.assetid: c6d507ac-c61e-4da2-95c8-d504b42e2520
-ms.openlocfilehash: 7957e18732dfae92b7b3ae9cf7ecea441fc3a6b4
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 5c0ae4ed5e14a50f4d54226fb298c34099c8aec7
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51693206"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97318716"
 ---
 # <a name="move-definition-location"></a>定義の場所の移動
 
@@ -24,7 +25,7 @@ ms.locfileid: "51693206"
    ![強調表示されたコード](images/movedefinition_highlight.png)
 
 1. 次に、以下のいずれかを実行します。
-   * **キーボード**
+   * **[キーボード]**
      * **Ctrl + .** キーを押して、 **[クイック アクションとリファクタリング]** メニューをトリガーし、コンテキスト メニューから **[定義の場所の移動]** を選択します。
    * **マウス**
      * 右クリックして **[クイック アクションとリファクタリング]** メニューを選択し、コンテキスト メニューから **[定義の場所の移動]** を選択します。

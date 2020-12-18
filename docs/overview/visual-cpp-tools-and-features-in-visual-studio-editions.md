@@ -1,17 +1,18 @@
 ---
+description: '詳細情報: さまざまな Visual Studio エディションの C++ ツールと機能'
 title: さまざまな Visual Studio エディションの C++ ツールと機能
 ms.date: 05/21/2019
 helpviewer_keywords:
 - tools and platforms [C++]
 ms.assetid: 3d88607b-9cc4-490a-8d4c-31ee7610a26f
-ms.openlocfilehash: c2ef6c539d5845beee044a963e0056d3287ba679
-ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
+ms.openlocfilehash: 6253e52fa300cc60de4b2700b384fde6f5ffe1ee
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "92924811"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97254626"
 ---
-# <a name="c-tools-and-features-in-visual-studio-editions"></a>さまざまな Visual Studio エディションの C++ ツールと機能
+# <a name="c-tools-and-features-in-visual-studio-editions"></a>さまざまな Visual Studio エディションの C++ ツールおよび機能
 
 ::: moniker range=">=msvc-160"
 
@@ -40,11 +41,11 @@ Visual Studio には C++ 開発に対して次のワークロードが含まれ�
 
 ### <a name="desktop-development-with-c"></a>C++ によるデスクトップ開発
 
-対象:
+対象: 
 
 - C++ コア デスクトップ機能
 
-オプション コンポーネント:
+オプション コンポーネント: 
 
 - MSVC v142 - VS 2019 C++ x64/x86 ビルド ツール (v14.21)
 - Windows 10 SDK (10.0.17763.0)
@@ -69,20 +70,20 @@ Visual Studio には C++ 開発に対して次のワークロードが含まれ�
 
 ### <a name="linux-development-with-c"></a>C++ による Linux 開発
 
-対象:
+対象: 
 
 - C++ コア機能
 - Windows ユニバーサル C ランタイム
 - Linux 開発用 C++
 
-オプション コンポーネント:
+オプション コンポーネント: 
 
 - Linux 用の C++ CMake ツール
 - 埋め込み開発ツールと IoT 開発ツール
 
-### <a name="universal-windows-platform-development"></a>ユニバーサル Windows プラットフォーム開発
+### <a name="universal-windows-platform-development"></a>ユニバーサル Windows プラットフォームの開発
 
-対象:
+対象: 
 
 - Blend for Visual Studio
 - .NET ネイティブと .NET Standard
@@ -90,7 +91,7 @@ Visual Studio には C++ 開発に対して次のワークロードが含まれ�
 - ユニバーサル Windows プラットフォーム ツール
 - Windows 10 SDK (10.0.17763.0)
 
-オプション コンポーネント:
+オプション コンポーネント: 
 
 - IntelliCode
 - IntelliTrace (Enterprise のみ)
@@ -105,14 +106,14 @@ Visual Studio には C++ 開発に対して次のワークロードが含まれ�
 
 ### <a name="c-game-development"></a>C++ ゲーム開発
 
-対象:
+対象: 
 
 - C++ コア機能
 - Windows ユニバーサル C ランタイム
 - C++ 2019 再頒布可能パッケージの更新プログラム
 - MSVC v142 - VS 2019 C++ x64/x86 ビルド ツール (v14.21)
 
-オプション コンポーネント:
+オプション コンポーネント: 
 
 - C++ のプロファイル ツール
 - Windows 10 SDK (10.0.17763.0)
@@ -127,12 +128,12 @@ Visual Studio には C++ 開発に対して次のワークロードが含まれ�
 
 ### <a name="mobile-development-with-c"></a>C++ でのモバイル開発
 
-対象:
+対象: 
 
 - C++ コア機能
 - Android SDK セットアップ (API レベル 25) (C++ を使用したモバイル開発のためにローカルにインストール)
 
-オプション コンポーネント:
+オプション コンポーネント: 
 
 - Android NDK (R16B)
 - Apache Ant (1.9.3)
@@ -154,7 +155,7 @@ Visual Studio には C++ 開発に対して次のワークロードが含まれ�
 - ClickOnce Publishing
 - Microsoft Visual Studio インストーラー プロジェクト
 
-## <a name="libraries-and-headers"></a>ライブラリおよびヘッダー
+## <a name="libraries-and-headers"></a>ライブラリとヘッダー
 
 - Windows ヘッダーおよびライブラリ
 - Windows ユニバーサル C ランタイム (CRT)
@@ -202,9 +203,9 @@ Windows デスクトップ:
 - ネイティブ単体テスト プロジェクト
 - Google Test
 
-ユニバーサル Windows プラットフォーム (C++/CX):
+ユニバーサル Windows プラットフォーム (C++/CX): 
 
-- 空のアプリケーション
+- 空のアプリ
 - DirectX 11 および XAML アプリ
 - DirectX 11 アプリ
 - DirectX 12 アプリ
@@ -214,7 +215,7 @@ Windows デスクトップ:
 - スタティック ライブラリ
 - Windows アプリケーション パッケージ プロジェクト
 
-Linux の場合:
+Linux:
 
 - コンソール アプリ (Linux)
 - 空のプロジェクト (Linux)
@@ -247,7 +248,7 @@ Linux の場合:
 - マネージド デバッグ
 - GPU 使用率
 - メモリ使用量
-- Remote Debugging
+- リモート デバッグ
 - SQL デバッグ
 - スタティック コード分析
 
@@ -275,7 +276,7 @@ Linux の場合:
 - データ デザイナー
 - データ オブジェクト
 - Web サービス
-- サーバー エクスプローラー
+- [サーバー エクスプローラー]
 
 ## <a name="automation-and-extensibility"></a>オートメーションおよび機能拡張
 
@@ -317,155 +318,155 @@ Visual Studio 2017 で使用できる Visual C++ の機能を次の表に示し�
 
 |プラットフォーム|Visual Studio Express for Windows 10|Visual Studio Express for Windows Desktop|Visual Studio Community/Professional|Visual Studio Enterprise|
 |-|-|-|-|-|
-|Windows デスクトップ||x|x|x|
-|ユニバーサル Windows プラットフォーム ((電話、タブレット、PC、Xbox、IoT、HoloLens))|x||x|x|
-|Linux|x|x|
-|Microsoft ストア 8.1|||x|x|
-|Windows Phone 8.0|||x|x|
-|Android|||x|x|
-|iOS|||x|x|
+|Windows デスクトップ||x|x|X|
+|ユニバーサル Windows プラットフォーム ((電話、タブレット、PC、Xbox、IoT、HoloLens))|x||x|X|
+|Linux|x|X|
+|Microsoft ストア 8.1|||x|X|
+|Windows Phone 8.0|||x|X|
+|Android|||x|X|
+|iOS|||x|X|
 
 ## <a name="compilers"></a>コンパイラ
 
 |コンパイラ|Visual Studio Express for Windows|Visual Studio Express for Windows Desktop|Visual Studio Professional/Community|Visual Studio Enterprise|
 |--------------|---------------------------------------|-----------------------------------------------|---------------------------------------------|------------------------------|
-|MSVC 32 ビット X86 コンパイラ|x|x|x|x|
-|X86_arm cross-compiler|x||x|x|
-|MSVC 64 ビット x64 コンパイラ|||x|x|
-|X86_ x64 クロス コンパイラ|x|x|x|x|
+|MSVC 32 ビット X86 コンパイラ|x|x|x|X|
+|X86_arm cross-compiler|x||x|X|
+|MSVC 64 ビット x64 コンパイラ|||x|X|
+|X86_ x64 クロス コンパイラ|x|x|x|X|
 
-## <a name="libraries-and-headers"></a>ライブラリおよびヘッダー
+## <a name="libraries-and-headers"></a>ライブラリとヘッダー
 
 |ライブラリまたはヘッダー|Visual Studio Express for Windows|Visual Studio Express for Windows Desktop|Visual Studio Professional/Community|Visual Studio Enterprise|
 |-----------------------|---------------------------------------|-----------------------------------------------|---------------------------------------------|------------------------------|
 |Windows ヘッダー、ライブラリ、CRT ライブラリ|(X)|x|x|x|
 |C++ 標準ライブラリ|x|x|x|x|
 |ATL|||x|x|
-|MFC|||x|x|
-|.NET Framework クラス ライブラリ||x|x|x|
-|.NET 用 C++ サポート ライブラリ||x|x|x|
-|OpenMP 2.0|x|x|x|x|
+|MFC|||x|X|
+|.NET Framework クラス ライブラリ||x|x|X|
+|.NET 用 C++ サポート ライブラリ||x|x|X|
+|OpenMP 2.0|x|x|x|X|
 
 ## <a name="project-templates"></a>プロジェクト テンプレート
 
 |テンプレート|Visual Studio Express for Windows|Visual Studio Express for Windows Desktop|Visual Studio Professional/Community|Visual Studio Enterprise|
 |--------------|---------------------------------------|-----------------------------------------------|---------------------------------------------|------------------------------|
-|UWP、Windows 8.1、Windows Phone 8.0 向け XAML テンプレート|x||x|x|
-|Direct3D アプリケーション|x||x|x|
-|DLL (ユニバーサル Windows)|x||x|x|
-|スタティック ライブラリ (ユニバーサル Windows)|x||x|x|
-|Windows ランタイム コンポーネント|x||x|x|
-|単体テスト アプリ (ユニバーサル Windows)|x||x|x|
-|ATL プロジェクト|||x|x|
-|クラス ライブラリ (CLR)||x|x|x|
-|CLR コンソール アプリケーション||x|x|x|
-|CLR 空プロジェクト||x|x|x|
-|カスタム ウィザード|||x|x|
-|空のプロジェクト||x|x|x|
-|メイクファイル プロジェクト||x|x|x|
-|MFC ActiveX コントロール|||x|x|
-|MFC アプリケーション|||x|x|
-|MFC DLL|||x|x|
-|テスト プロジェクト|x|x|x|x|
-|Win32 コンソール アプリケーション||x|x|x|
-|Win32 プロジェクト||x|x|x|
+|UWP、Windows 8.1、Windows Phone 8.0 向け XAML テンプレート|x||x|X|
+|Direct3D アプリケーション|x||x|X|
+|DLL (ユニバーサル Windows)|x||x|X|
+|スタティック ライブラリ (ユニバーサル Windows)|x||x|X|
+|Windows ランタイム コンポーネント|x||x|X|
+|単体テスト アプリ (ユニバーサル Windows)|x||x|X|
+|ATL プロジェクト|||x|X|
+|クラス ライブラリ (CLR)||x|x|X|
+|CLR コンソール アプリケーション||x|x|X|
+|CLR 空プロジェクト||x|x|X|
+|カスタム ウィザード|||x|X|
+|空のプロジェクト||x|x|X|
+|メイクファイル プロジェクト||x|x|X|
+|MFC ActiveX コントロール|||x|X|
+|MFC アプリケーション|||x|X|
+|MFC DLL|||x|X|
+|テスト プロジェクト|x|x|x|X|
+|Win32 コンソール アプリケーション||x|x|X|
+|Win32 プロジェクト||x|x|X|
 
 ## <a name="tools"></a>ツール
 
 |ツール|Visual Studio Express for Windows|Visual Studio Express for Windows Desktop|Visual Studio Professional/Community|Visual Studio Enterprise|
 |----------|---------------------------------------|-----------------------------------------------|---------------------------------------------|------------------------------|
-|インクリメンタル リンカー (Link.exe)|x|x|x|x|
-|Program Maintenance Utility (Nmake.exe)||x|x|x|
-|Lib ジェネレーター (Lib.exe)|x|x|x|x|
-|Windows リソース コンパイラ (Rc.exe)|x|x|x|x|
-|Windows Resource to Object Converter (CvtRes.exe)||x|x|x|
-|Browse Information Maintenance Utility (BscMake.exe)|x|x|x|x|
-|C++ Name Undecorator (Undname.exe)|x|x|x|x|
-|COFF/PE Dumper (Dumpbin.exe)|x|x|x|x|
-|COFF/PE Editor (Editbin.exe)|x|x|x|x|
-|MASM (Ml.exe)|||x|x|
-|Spy++|||x|x|
-|ErrLook|||x|x|
-|AtlTrace|||x|x|
-|Devenv.com|||x|x|
-|推論規則|||x|x|
-|VCBuild .vcproj プロジェクトの MSBuild (VCUpgrade.exe) へのアップグレード|x|x|x|x|
-|ガイド付き最適化のプロファイル|||x|x|
+|インクリメンタル リンカー (Link.exe)|x|x|x|X|
+|Program Maintenance Utility (Nmake.exe)||x|x|X|
+|Lib ジェネレーター (Lib.exe)|x|x|x|X|
+|Windows リソース コンパイラ (Rc.exe)|x|x|x|X|
+|Windows Resource to Object Converter (CvtRes.exe)||x|x|X|
+|Browse Information Maintenance Utility (BscMake.exe)|x|x|x|X|
+|C++ Name Undecorator (Undname.exe)|x|x|x|X|
+|COFF/PE Dumper (Dumpbin.exe)|x|x|x|X|
+|COFF/PE Editor (Editbin.exe)|x|x|x|X|
+|MASM (Ml.exe)|||x|X|
+|Spy++|||x|X|
+|ErrLook|||x|X|
+|AtlTrace|||x|X|
+|Devenv.com|||x|X|
+|推論規則|||x|X|
+|VCBuild .vcproj プロジェクトの MSBuild (VCUpgrade.exe) へのアップグレード|x|x|x|X|
+|ガイド付き最適化のプロファイル|||x|X|
 
 ## <a name="debugging-features"></a>デバッグ機能
 
 |デバッグ機能|Visual Studio Express for Windows|Visual Studio Express for Windows Desktop|Visual Studio Professional/Community|Visual Studio Enterprise|
 |-----------------------|---------------------------------------|-----------------------------------------------|---------------------------------------------|------------------------------|
-|ネイティブ デバッグ|x|x|x|x|
-|natvis (ネイティブ型の視覚エフェクト)|x|x|x|x|
-|グラフィックスのデバッグ|x||x|x|
-|マネージド デバッグ||x|x|x|
-|GPU 使用率|x||x|x|
-|メモリ使用量|x||x|x|
-|Remote Debugging|x|x|x|x|
-|SQL デバッグ|||x|x|
-|スタティック コード分析|制限|制限|x|x|
+|ネイティブ デバッグ|x|x|x|X|
+|natvis (ネイティブ型の視覚エフェクト)|x|x|x|X|
+|グラフィックスのデバッグ|x||x|X|
+|マネージド デバッグ||x|x|X|
+|GPU 使用率|x||x|X|
+|メモリ使用量|x||x|X|
+|リモート デバッグ|x|x|x|X|
+|SQL デバッグ|||x|X|
+|スタティック コード分析|制限|制限あり|x|X|
 
 ## <a name="designers-and-editors"></a>デザイナーおよびエディター
 
 |デザイナーまたはエディター|Visual Studio Express for Windows|Visual Studio Express for Windows Desktop|Visual Studio Professional/Community|Visual Studio Enterprise|
 |------------------------|---------------------------------------|-----------------------------------------------|---------------------------------------------|------------------------------|
-|XAML デザイナー|x||x|x|
-|CSS スタイル デザイナー/エディター|x|x|x|x|
-|HTML デザイナー/エディター|x|x|x|x|
-|XML エディター|x|x|x|x|
-|ソース コード エディター|x|x|x|x|
-|生産性機能: リファクタリング、IntelliSense、C++ コードの書式設定|x|x|x|x|
-|Windows フォーム デザイナー||x|x|x|
-|データ デザイナー|||x|x|
-|ネイティブ リソース エディター (.rc ファイル)|||x|x|
-|リソース エディター|x|x|x|x|
-|モデル エディター|x||x|x|
-|シェーダー デザイナー|x||x|x|
+|XAML デザイナー|x||x|X|
+|CSS スタイル デザイナー/エディター|x|x|x|X|
+|HTML デザイナー/エディター|x|x|x|X|
+|XML エディター|x|x|x|X|
+|ソース コード エディター|x|x|x|X|
+|生産性機能: リファクタリング、IntelliSense、C++ コードの書式設定|x|x|x|X|
+|Windows フォーム デザイナー||x|x|X|
+|データ デザイナー|||x|X|
+|ネイティブ リソース エディター (.rc ファイル)|||x|X|
+|リソース エディター|x|x|x|X|
+|モデル エディター|x||x|X|
+|シェーダー デザイナー|x||x|X|
 
 ## <a name="data-features"></a>データ機能
 
 |データ機能|Visual Studio Express for Windows|Visual Studio Express for Windows Desktop|Visual Studio Professional/Community|Visual Studio Enterprise|
 |------------------|---------------------------------------|-----------------------------------------------|---------------------------------------------|------------------------------|
-|データ デザイナー|||x|x|
-|データ オブジェクト|||x|x|
-|Web サービス|||x|x|
-|サーバー エクスプローラー|||x|x|
+|データ デザイナー|||x|X|
+|データ オブジェクト|||x|X|
+|Web サービス|||x|X|
+|[サーバー エクスプローラー]|||x|X|
 
 ## <a name="build-and-project-systems"></a>ビルド システムとプロジェクト システム
 
 |ビルドまたはプロジェクトの機能|Visual Studio Express for Windows|Visual Studio Express for Windows Desktop|Visual Studio Professional/Community|Visual Studio Enterprise|
 |------------------------------|---------------------------------------|-----------------------------------------------|---------------------------------------------|------------------------------|
-|コマンド ライン ビルド (msbuild.exe)|x|x|x|x|
-|ネイティブ マルチ ターゲット||x|x|x|
-|マネージド マルチ ターゲット||x|x|x|
-|平行ビルド|x|x|x|x|
-|カスタマイズのビルド|x|x|x|x|
-|プロパティ ページの機能拡張|x|x|x|x|
+|コマンド ライン ビルド (msbuild.exe)|x|x|x|X|
+|ネイティブ マルチ ターゲット||x|x|X|
+|マネージド マルチ ターゲット||x|x|X|
+|平行ビルド|x|x|x|X|
+|カスタマイズのビルド|x|x|x|X|
+|プロパティ ページの機能拡張|x|x|x|X|
 
 ## <a name="automation-and-extensibility"></a>オートメーションおよび機能拡張
 
 |オートメーションおよび機能拡張|Visual Studio Express for Windows|Visual Studio Express for Windows Desktop|Visual Studio Professional/Community|Visual Studio Enterprise|
 |----------------------------------|---------------------------------------|-----------------------------------------------|---------------------------------------------|------------------------------|
-|機能拡張オブジェクト モデル|||x|x|
-|コード モデル|||x|x|
-|プロジェクト モデル|||x|x|
-|リソース エディター モデル|||x|x|
-|ウィザード モデル|||x|x|
-|デバッガー オブジェクト モデル|||x|x|
+|機能拡張オブジェクト モデル|||x|X|
+|コード モデル|||x|X|
+|プロジェクト モデル|||x|X|
+|リソース エディター モデル|||x|X|
+|ウィザード モデル|||x|X|
+|デバッガー オブジェクト モデル|||x|X|
 
 ## <a name="application-lifecycle-management-tools"></a>アプリケーション ライフサイクル管理ツール
 
 |ツール|Visual Studio Express for Windows|Visual Studio Express for Windows Desktop|Visual Studio Professional/Community|Visual Studio Enterprise|
 |-|-|-|-|-|
-|単体テスト (ネイティブ フレームワーク)|x|x|x|x|
-|単体テスト (マネージド フレームワーク)||x|x|x|
-|コード カバレッジ||||x|
-|手動テスト||||x|
-|探索的テスト||||x|
-|テスト ケース管理||||x|
-|コード マップと依存関係グラフ|||読み取り専用|x|
-|コード マップ デバッグ||||x|
+|単体テスト (ネイティブ フレームワーク)|x|x|x|X|
+|単体テスト (マネージド フレームワーク)||x|x|X|
+|コード カバレッジ||||X|
+|手動テスト||||X|
+|探索的テスト||||X|
+|テスト ケース管理||||X|
+|コード マップと依存関係グラフ|||読み取り専用|X|
+|コード マップ デバッグ||||X|
 
 ## <a name="see-also"></a>関連項目
 

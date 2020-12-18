@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: コマンド ライン ビルドのためのパスと環境変数を設定する'
 title: コマンド ライン ビルドのためのパスと環境変数を設定する
 ms.custom: conceptual
 ms.date: 07/24/2019
@@ -14,12 +15,12 @@ helpviewer_keywords:
 - compiling source code [C++], from command line
 - environment variables [C++], CL compiler
 ms.assetid: 99389528-deb5-43b9-b99a-03c8773ebaf4
-ms.openlocfilehash: aeafe806e5d29b89c243586974814aa7cfc16d1d
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 3accc1cf56b86822298e1f1298bcae7d41c28332
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81335583"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97275387"
 ---
 # <a name="set-the-path-and-environment-variables-for-command-line-builds"></a>コマンド ライン ビルドのためのパスと環境変数を設定する
 

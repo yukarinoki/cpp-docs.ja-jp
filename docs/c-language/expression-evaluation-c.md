@@ -1,16 +1,17 @@
 ---
+description: '詳細情報: 式の評価 (C)'
 title: 式の評価 (C)
 ms.date: 11/04/2016
 helpviewer_keywords:
 - expression evaluation
 - expressions [C++], evaluating
 ms.assetid: 9493f8cc-64a2-4284-9aaf-26eec11c4f40
-ms.openlocfilehash: 37affedc0bcf3fb1423898ecf2c570794d9625c0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 740cb7a7bc14b598c45b3c8f45e719dcb85372e5
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62233848"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97196452"
 ---
 # <a name="expression-evaluation-c"></a>式の評価 (C)
 

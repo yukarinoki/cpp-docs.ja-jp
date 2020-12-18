@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: このマニュアルの範囲'
 title: このマニュアルの範囲
 ms.date: 11/04/2016
 ms.assetid: 406e7cc0-27cb-46b4-b38e-c200f3fddafd
-ms.openlocfilehash: ac5003e24a7f0965107b712da7db0549b28831f1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 38fc203853a5cd8830e0003de3e9a51e30476ba9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62336180"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97292807"
 ---
 # <a name="scope-of-this-manual"></a>このマニュアルの範囲
 

@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: 実装定義の動作'
 title: 実装定義の動作
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - ANSI [C++], C standard
 - implementation-defined behavior
 ms.assetid: c9f50670-23cb-401f-8ad7-136972012eb9
-ms.openlocfilehash: 7355f814be1cc34cc067fff648e2a137d35a00a5
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: a8c6dcc2e8401fb85f4498ff23bb2c1294194a21
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81334558"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97182126"
 ---
 # <a name="implementation-defined-behavior"></a>実装定義の動作
 

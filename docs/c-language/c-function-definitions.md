@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: C 関数定義'
 title: C 関数定義
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - function body
 - declaring functions, variables
 ms.assetid: ebab23c8-6eb8-46f3-b21d-570cd8457a80
-ms.openlocfilehash: a26f95f8fef2b52dac36dd5d33f826c73fd84eee
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 9e664224608a741897bf8ae6208a0d9011cdb3c2
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87228012"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97296928"
 ---
 # <a name="c-function-definitions"></a>C 関数定義
 

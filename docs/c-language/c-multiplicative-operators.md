@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: C 乗算演算子'
 title: C 乗算演算子
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - slash (/) operator
 - multiplication operator [C++], multiplicative operators
 ms.assetid: 495471c9-319b-4eb4-bd97-039a025fd3a9
-ms.openlocfilehash: 32ff74be0fd1afb1d8a21d74abb194eaa5e273df
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 61689435c5e76238feba26d5a49ffe3530798f88
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87227986"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97300269"
 ---
 # <a name="c-multiplicative-operators"></a>C 乗算演算子
 

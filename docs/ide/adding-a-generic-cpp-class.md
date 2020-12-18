@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: 一般 C++ クラスを追加する'
 title: 一般 C++ クラスを追加する
 ms.date: 11/09/2018
 f1_keywords:
@@ -10,20 +11,20 @@ helpviewer_keywords:
 - generic classes
 - generic C++ class wizard [C++]
 ms.assetid: e95a5a14-dbed-4edc-8551-344fe48613cb
-ms.openlocfilehash: d5c00a35e375d133fbd3a6ed7fe3591e4b0cd54b
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: ed84f7cf3d1b2e85c407c275b20a56ff06dddc21
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91503130"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97160182"
 ---
 # <a name="add-a-generic-c-class"></a>一般 C++ クラスを追加する
 
-**クラス ビュー**を使用して、汎用 C++ クラスを追加することができます。 汎用 C++ クラスは、定義するクラス、または定義するクラスから派生したクラスです。
+**クラス ビュー** を使用して、汎用 C++ クラスを追加することができます。 汎用 C++ クラスは、定義するクラス、または定義するクラスから派生したクラスです。
 
 **汎用 C++ クラスをプロジェクトに追加するには:**
 
-1. **クラス ビュー**で、新しいクラスを追加するプロジェクトを右クリックし、 **[追加]** 、 **[クラス]** の順に選択します。
+1. **クラス ビュー** で、新しいクラスを追加するプロジェクトを右クリックし、 **[追加]** 、 **[クラス]** の順に選択します。
 
 1. [[クラスの追加]](./adding-a-class-visual-cpp.md#add-class-dialog-box) ダイアログ ボックスのテンプレート ウィンドウで **[C++ クラス]** を選択します。 **[追加]** を選択して、[[汎用 C++ クラス ウィザード]](#generic-c-class-wizard) を表示します。
 

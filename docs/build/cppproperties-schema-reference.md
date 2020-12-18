@@ -1,14 +1,15 @@
 ---
+description: '詳細情報: CppProperties.json リファレンス'
 title: CppProperties.json リファレンス
 ms.date: 08/09/2019
 helpviewer_keywords:
 - CppProperties.json file [C++]
-ms.openlocfilehash: 31b4e7901bf35986e553a9e280da0243d61982a2
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 9067a186d3ab111eda11246d06e3a9d7a164455f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88837906"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97163055"
 ---
 # <a name="cpppropertiesjson-reference"></a>CppProperties.json リファレンス
 
@@ -164,6 +165,6 @@ Linux ワークロードがインストールされている場合、Linux お�
 
 ![診断ログ記録](media/diagnostic-logging.png)
 
-出力は**出力ウィンドウ**にパイプ処理され、 **[出力元の表示:Visual C++ ログ]** を選択したときに表示されます。 出力には、特に、IntelliSense が使用しようとしている実際のインクルード パスの一覧が含まれます。 そのパスが *CppProperties.json* のものと一致しない場合は、フォルダーを閉じて、キャッシュされた参照データが含まれている *.vs* サブフォルダーを削除してみてください。
+出力は **出力ウィンドウ** にパイプ処理され、 **[出力元の表示:Visual C++ ログ]** を選択したときに表示されます。 出力には、特に、IntelliSense が使用しようとしている実際のインクルード パスの一覧が含まれます。 そのパスが *CppProperties.json* のものと一致しない場合は、フォルダーを閉じて、キャッシュされた参照データが含まれている *.vs* サブフォルダーを削除してみてください。
 
 インクルード パスがないことにより発生する IntelliSense のエラーをトラブルシューティングするには、 **[エラー一覧]** を開き、出力を "IntelliSense のみ" およびエラー コード E1696 "ソース ファイル ... を開くことができません" でフィルター処理します。

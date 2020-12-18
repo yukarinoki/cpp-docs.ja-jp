@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: 配列の宣言'
 title: 配列の宣言
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - declaring arrays
 - arrays [C++], declaring
 ms.assetid: 5f958b97-cef0-4058-bbc6-37c460aaed9b
-ms.openlocfilehash: 917d79a7c4f4d030efaaa769ca8f205cf37f55fe
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 2ab44c1121fde7371591967a9f5860442674abda
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87218924"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97280002"
 ---
 # <a name="array-declarations"></a>配列の宣言
 

@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: Visual C++ の ARM への移行に関する一般的な問題'
 title: Visual C++ の ARM への移行に関する一般的な問題
 ms.date: 05/06/2019
 ms.assetid: 0f4c434e-0679-4331-ba0a-cc15dd435a46
-ms.openlocfilehash: 889eed2b02362f33446cd9441ef84f406817b01a
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 4b867d94fa8b80bd1a5be12b50718b979ee92a69
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87224072"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97163081"
 ---
 # <a name="common-visual-c-arm-migration-issues"></a>Visual C++ の ARM への移行に関する一般的な問題
 

@@ -1,13 +1,14 @@
 ---
+description: '詳細情報: 関数を抽出する'
 title: 関数を抽出する
 ms.date: 11/16/2016
 ms.assetid: e31d1249-9705-4511-acbd-9f6fe73bdf2d
-ms.openlocfilehash: ec3b9a0aeaef9e418b457bafdfb9bb1bbd2edffc
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 4ae5e858c658d14e72db8740232b74935c655292
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51692321"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97259761"
 ---
 # <a name="extract-function"></a>関数を抽出する
 
@@ -24,7 +25,7 @@ ms.locfileid: "51692321"
    ![強調表示されたコード](images/extractfunction_highlight.png)
 
 1. 次に、以下のいずれかを実行します。
-   * **キーボード**
+   * **[キーボード]**
      * **Ctrl + R** キーを押し、次に **Ctrl + M** キーを押します。  選ばれているプロファイルによってキーボード ショートカットが異なる場合があることに注意してください。
      * **Ctrl + .** キーを押して、 **[クイック アクションとリファクタリング]** メニューをトリガーし、コンテキスト メニューから **[Extract 関数 (試験段階)]** を選びます。
    * **マウス**

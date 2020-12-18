@@ -1,16 +1,17 @@
 ---
+description: '詳細情報: 非 MFC DLL:概要'
 title: 非 MFC DLL:概要
 ms.date: 11/04/2016
 helpviewer_keywords:
 - non-MFC DLLs [C++]
 - DLLs [C++], non-MFC
 ms.assetid: 1ed5d1ee-e20c-47d7-801d-87ea26a73842
-ms.openlocfilehash: 88afb41205e63a837d7bc134133c3c36eccf5dc1
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 2b71653be8a665684b7e79dcb48ac54d86834be0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69493172"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97179838"
 ---
 # <a name="non-mfc-dlls-overview"></a>非 MFC DLL:概要
 

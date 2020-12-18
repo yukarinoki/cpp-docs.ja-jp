@@ -1,15 +1,16 @@
 ---
+description: '詳細情報: コマンド ラインでの MSBuild - C++'
 title: コマンド ラインでの MSBuild - C++
 ms.date: 12/12/2018
 helpviewer_keywords:
 - MSBuild
 ms.assetid: 7a1be7ff-0312-4669-adf2-5f5bf507d560
-ms.openlocfilehash: e95d99cf5c63c824bb9bade8e76bc3ca99079669
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: 9d78c50b398b0ad97cfd75727fdb4219677c546b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65220566"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97179851"
 ---
 # <a name="msbuild-on-the-command-line---c"></a>コマンド ラインでの MSBuild - C++
 

@@ -1,15 +1,16 @@
 ---
+description: '詳細情報: Visual Studio CMake プロジェクトでの Clang/LLVM のサポート'
 title: Visual Studio CMake プロジェクトでの Clang/LLVM のサポート
 ms.date: 07/01/2019
 ms.description: Configure a CMake project in Visual Studio to use the Clang/LLVM toolchain.
 helpviewer_keywords:
 - Clang support for C++ CMake projects
-ms.openlocfilehash: e23da02a0c3af624ddb30cec8dbb5afda55660c9
-ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
+ms.openlocfilehash: 134a6c5edc62d826000752d3c2d1db370f338836
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "92919580"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97157036"
 ---
 # <a name="clangllvm-support-in-visual-studio-cmake-projects"></a>Visual Studio CMake プロジェクトでの Clang/LLVM のサポート
 
@@ -23,9 +24,9 @@ Clang サポートは Visual Studio 2019 で使用できます。
 
 Visual Studio を Clang と一緒に使用して、 Windows または Linux を対象とする C++ CMake プロジェクトを編集およびデバッグすることができます。
 
-**Windows** :Visual Studio 2019 バージョン 16.1 には、Windows を対象とする CMake プロジェクトで Clang/LLVM を使用した編集、ビルド、およびデバッグのためのサポートが含まれています。
+**Windows**:Visual Studio 2019 バージョン 16.1 には、Windows を対象とする CMake プロジェクトで Clang/LLVM を使用した編集、ビルド、およびデバッグのためのサポートが含まれています。
 
-**Linux** :Linux CMake プロジェクトでは、Visual Studio の特別なサポートは必要ありません。 お使いのディストリビューションのパッケージ マネージャーを使用して Clang をインストールし、CMakeLists.txt ファイルに適切なコマンドを追加することができます。
+**Linux**:Linux CMake プロジェクトでは、Visual Studio の特別なサポートは必要ありません。 お使いのディストリビューションのパッケージ マネージャーを使用して Clang をインストールし、CMakeLists.txt ファイルに適切なコマンドを追加することができます。
 
 ## <a name="install"></a>インストール
 
@@ -47,7 +48,7 @@ Visual Studio で最適な IDE サポートを利用するには、Windows 用�
 
    ![CMake Clang 構成](media/cmake-clang-configuration.png)
 
-1. この構成を変更するには、 **CMake 設定エディター** を使用します。 詳細については、「[Visual Studio で CMake のビルド設定をカスタマイズする](customize-cmake-settings.md)」を参照してください。
+1. この構成を変更するには、**CMake 設定エディター** を使用します。 詳細については、「[Visual Studio で CMake のビルド設定をカスタマイズする](customize-cmake-settings.md)」を参照してください。
 
 ## <a name="modify-an-existing-configuration-to-use-clang"></a>Clang を使用するように既存の構成を変更する
 
@@ -72,7 +73,7 @@ Clang を使用するように既存の構成を変更するには、次の手�
 
 ## <a name="clang-compatibility-modes"></a>Clang 互換モード
 
-Windows 構成の場合、CMake は既定では [clang-cl](https://llvm.org/devmtg/2014-04/PDFs/Talks/clang-cl.pdf) モードで Clang を呼び出し、標準ライブラリの Microsoft 実装とリンクします。 既定では、 **clang-cl.exe** は `C:\Program Files (x86)\Microsoft Visual Studio\2019\Common7\IDE\CommonExtensions\Microsoft\Llvm\bin` にあります。
+Windows 構成の場合、CMake は既定では [clang-cl](https://llvm.org/devmtg/2014-04/PDFs/Talks/clang-cl.pdf) モードで Clang を呼び出し、標準ライブラリの Microsoft 実装とリンクします。 既定では、**clang-cl.exe** は `C:\Program Files (x86)\Microsoft Visual Studio\2019\Common7\IDE\CommonExtensions\Microsoft\Llvm\bin` にあります。
 
 これらの値は、 **[CMake 変数とキャッシュ]** ( **[CMake Settings]\(CMake の設定\)** の下) で変更できます。 **[高度な変数を表示]** をクリックします。 下にスクロールして **CMAKE_CXX_COMPILER** を見つけ、 **[参照]** ボタンをクリックして別のコンパイラ パスを指定します。
 

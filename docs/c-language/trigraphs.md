@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: トライグラフ'
 title: トライグラフ
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 - ??! trigraph
 - ??' trigraph
 ms.assetid: 617f76ec-b8e8-4cfe-916c-4bc32cbd9aeb
-ms.openlocfilehash: 3ed8849656ac57f4774825294aba7bb41a050eee
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 70844472de698b581f33adea5dd6b6fa5cdfc8fb
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87227752"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97243069"
 ---
 # <a name="trigraphs"></a>トライグラフ
 
 C ソース プログラムのソース文字セットは 7 ビットの ASCII 文字セット内に含まれますが、ISO 646-1983 Invariant Code Set のスーパーセットです。 トライグラフ シーケンスでは、ISO (国際標準化機構) の Invariant Code Set のみを使用して C プログラムを記述できます。 トライグラフは、2 つの連続する疑問符で始まる 3 文字のシーケンスで、これがコンパイラにより対応する区切り文字に置き換えられます。 トライグラフは、一部の区切り文字に対応する適切なグラフィック表示がない文字セットを含む C ソース ファイルで使用できます。
 
-C++ 17 では、言語からトライグラフが削除されます。 実装ではトライグラフを物理ソース ファイルから*基本ソース文字セット*への実装定義マッピングの一部として引き続きサポートできるものの、標準ではそれをしないよう実装に対して勧めています。 C++14 までトライグラフは C と同様にサポートされていました。
+C++ 17 では、言語からトライグラフが削除されます。 実装ではトライグラフを物理ソース ファイルから *基本ソース文字セット* への実装定義マッピングの一部として引き続きサポートできるものの、標準ではそれをしないよう実装に対して勧めています。 C++14 までトライグラフは C と同様にサポートされていました。
 
 既定で無効になっていますが、Visual C++ はトライグラフの置換をサポートし続けます。 トライグラフの置換を有効にする方法の詳細については、「[`/Zc:trigraphs` (トライグラフの置換)](../build/reference/zc-trigraphs-trigraphs-substitution.md)」をご覧ください。
 

@@ -1,15 +1,16 @@
 ---
+description: '詳細情報: C/C++ side-by-side アセンブリのビルド'
 title: C/C++ side-by-side アセンブリのビルド
 ms.date: 11/04/2016
 helpviewer_keywords:
 - side-by-side applications [C++]
 ms.assetid: 7fa20b16-3737-4f76-a0b5-1dacea19a1e8
-ms.openlocfilehash: 6e49ba72a397efb97437a2f7e6d721c782875c48
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 174104157653eef15e67f66c67c935b7f386b71e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69493326"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97157062"
 ---
 # <a name="building-cc-side-by-side-assemblies"></a>C/C++ side-by-side アセンブリのビルド
 

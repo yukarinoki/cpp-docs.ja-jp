@@ -1,15 +1,16 @@
 ---
+description: '詳細情報: プラグマ'
 title: プラグマ
 ms.date: 11/11/2019
 helpviewer_keywords:
 - pragmas, about pragmas
 ms.assetid: 3ce8aced-53ee-4524-87d0-f998d6977ff5
-ms.openlocfilehash: 0fe875742bb5ca8749e588413e13be63337c83ab
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 53570f98846826cd0d1a9f5260b0d76a97ba40d8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88845199"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97195803"
 ---
 # <a name="pragmas"></a>プラグマ
 

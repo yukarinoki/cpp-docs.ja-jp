@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: かっこで囲んだ式'
 title: かっこで囲んだ式
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - expressions [C++], evaluating
 - parentheses, expressions
 ms.assetid: b8636147-6982-408c-9e64-29e40678ee43
-ms.openlocfilehash: d0105556530161991b46c5ee25cd73f2f995063f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fd33cab851f7ec55c395fee62e4300d42365f00f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62233749"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97196374"
 ---
 # <a name="expressions-in-parentheses"></a>かっこで囲んだ式
 

@@ -1,16 +1,17 @@
 ---
+description: '詳細情報: pgomgr'
 title: pgomgr
 ms.date: 03/14/2018
 helpviewer_keywords:
 - pgomgr program
 - profile-guided optimizations, pgomgr
 ms.assetid: 74589126-df18-42c9-8739-26d60e148d6a
-ms.openlocfilehash: 4e3eb08c88db9d0ed4e47649014a600c3e0ccb78
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3b6b969becde43b98ea06f2058dd235eaf0acbed
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62295254"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97187352"
 ---
 # <a name="pgomgr"></a>pgomgr
 

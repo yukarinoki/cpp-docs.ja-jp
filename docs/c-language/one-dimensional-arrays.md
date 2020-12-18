@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: 1 次元配列'
 title: 1 次元配列
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - square brackets [ ], arrays
 - subscript expressions
 ms.assetid: e28536e5-3b77-46b5-97fd-9b938c771816
-ms.openlocfilehash: c310d610b4e4cfc5ae5620d38337a5b8fd5243ef
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 6c75d4b8d9a64f95f3698e6953949a71df60cad6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87226354"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97256901"
 ---
 # <a name="one-dimensional-arrays"></a>1 次元配列
 

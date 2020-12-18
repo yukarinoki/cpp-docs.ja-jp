@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: float 型'
 title: float 型
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 - IEEE floating-point representation
 - lengths, exponent
 ms.assetid: 706e332b-17a0-4a30-b7d8-5d6cd372524b
-ms.openlocfilehash: 61bfd094801165e0c3e41e5de6fcbfb0c5e59504
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4d2245db663885d084ee231d10b7dc944016ea4d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62346328"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97242835"
 ---
 # <a name="type-float"></a>float 型
 
@@ -51,7 +52,7 @@ ms.locfileid: "62346328"
 
 ここで説明したストレージ メソッドではなく、浮動小数点パッケージは、非正規化数としてバイナリ浮動小数点数を格納できます。 "非正規化数" は、仮数の最上位ビットが 0 で、指数部の値が予約済みであるゼロ以外の浮動小数点数です。 非正規化形式を使用することで、浮動小数点数の範囲は精度を犠牲にして拡張できます。 浮動小数点数が、正規化形式と非正規化形式のどちらで表されるかは制御できません。表現は浮動小数点パッケージで決定されます。 浮動小数点パッケージは、指数が正規形式で表すことができる最小数未満にならない限り、非正規化形式を使用しません。
 
-次の表は、各浮動小数点型の変数に格納できる最小値と最大値を示します。 この表に示す値は、正規化浮動小数点数にのみ適用されます。非正規化浮動小数点数には、より小さい最小値があります。 80*x*87 レジスタに保持される数値は、必ず 80 ビットの正規形式で表されます。32 ビットまたは 64 ビットの浮動小数点変数 (float 型と long 型の変数) に格納された数値は非正規形式でしか表せないことに注意してください。
+次の表は、各浮動小数点型の変数に格納できる最小値と最大値を示します。 この表に示す値は、正規化浮動小数点数にのみ適用されます。非正規化浮動小数点数には、より小さい最小値があります。 80 *x* 87 レジスタに保持される数値は、必ず 80 ビットの正規形式で表されます。32 ビットまたは 64 ビットの浮動小数点変数 (float 型と long 型の変数) に格納された数値は非正規形式でしか表せないことに注意してください。
 
 ### <a name="range-of-floating-point-types"></a>浮動小数点型の範囲
 

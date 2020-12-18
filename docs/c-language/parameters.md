@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: パラメーター'
 title: パラメーター
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - ellipsis (...), parameters
 - '... ellipsis'
 ms.assetid: 8f2b8026-78b5-4e21-86a3-bf0f91f05689
-ms.openlocfilehash: 57648747bbb50ffe46b199a03563757c331f088a
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: b68cd5934e597e486b00f2772e913f627e584ecb
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87229572"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97256823"
 ---
 # <a name="parameters"></a>パラメーター
 
@@ -25,12 +26,12 @@ ms.locfileid: "87229572"
 
 ## <a name="syntax"></a>構文
 
-*`function-definition`* :<br/>
+*`function-definition`*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp; *`declaration-specifiers`* <sub>opt</sub> *`attribute-seq`* <sub>opt</sub> *`declarator`* *`declaration-list`* <sub>opt</sub> *`compound-statement`*
 
 /\* *`attribute-seq`* は Microsoft 固有です \*/
 
-*`declarator`* :<br/>
+*`declarator`*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp; *`pointer`* <sub>opt</sub> *`direct-declarator`*
 
 *`direct-declarator`* : /\* 関数宣言子 \*/<br/>
@@ -38,15 +39,15 @@ ms.locfileid: "87229572"
 &nbsp;&nbsp;&nbsp;&nbsp; *`direct-declarator`*  **`(`**  *`identifier-list`* <sub>opt</sub> **`)`**  /\* 古いスタイルの宣言子 \*/
 
 *`parameter-type-list`* : /\* パラメーター リスト \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; *`parameter-list`* <br/>
-&nbsp;&nbsp;&nbsp;&nbsp; *`parameter-list`* **`, ...`**
+&nbsp;&nbsp;&nbsp;&nbsp;*`parameter-list`* <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*`parameter-list`* **`, ...`**
 
-*`parameter-list`* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; *`parameter-declaration`*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; *`parameter-list`* **`,`**  *`parameter-declaration`*
+*`parameter-list`*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*`parameter-declaration`*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*`parameter-list`* **`,`**  *`parameter-declaration`*
 
-*`parameter-declaration`* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; *`declaration-specifiers`* *`declarator`*<br/>
+*`parameter-declaration`*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*`declaration-specifiers`* *`declarator`*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp; *`declaration-specifiers`* *`abstract-declarator`* <sub>opt</sub>
 
 *`parameter-type-list`* は、コンマで区切られたパラメーター宣言のシーケンスです。 パラメーター リストの各パラメーターの形式は次のようになります。

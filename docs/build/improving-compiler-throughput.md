@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: コンパイラのスループットの向上'
 title: コンパイラのスループットの向上
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - performance, compiler
 - cl.exe compiler, throughput
 ms.assetid: ba5f884e-9037-4a92-b10e-fc2a3836c5bf
-ms.openlocfilehash: 133a4c0c756c589bdf911c36599ce96842487199
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5c85f7e084a56165cc486f796308c905144dbe5a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62188759"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97162483"
 ---
 # <a name="improving-compiler-throughput"></a>コンパイラのスループットの向上
 

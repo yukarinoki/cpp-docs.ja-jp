@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: 最大文字列長'
 title: 最大文字列長
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - maximum string length
 - strings [C++], length
 ms.assetid: 99a80e4a-6212-47b7-a6bd-bdf99bd44928
-ms.openlocfilehash: 650088249e4c6abd515c29b873a9f09dc1d2a60a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1da7618a044be2427bd0b0f7f4931287ee4b8014
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62232879"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97243433"
 ---
 # <a name="maximum-string-length"></a>最大文字列長
 

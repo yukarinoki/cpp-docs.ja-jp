@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: C ビット処理演算子'
 title: C ビット処理演算子
 ms.date: 01/29/2018
 helpviewer_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - ^ operator
 - '& operator, bitwise operators'
 ms.assetid: e22127b1-9a2d-4876-b01d-c8f72cec3317
-ms.openlocfilehash: 50be8ae38f21d0a9f46c180abf179e1358b707cd
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 8cbdb5309d5351f77306007e8acd1675be5e2a35
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80168774"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97211584"
 ---
 # <a name="c-bitwise-operators"></a>C ビット処理演算子
 

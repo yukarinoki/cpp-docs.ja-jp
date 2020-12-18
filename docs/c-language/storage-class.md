@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: ストレージ クラス'
 title: ストレージ クラス
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - external linkage, storage-class specifiers
 - static storage class specifiers
 ms.assetid: 39a79ba6-edf5-42b6-8e45-f94227603dd6
-ms.openlocfilehash: 872a014dfc7c21b46f9af810f1cb3463016c7e09
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 87f53c38b2f71acc15499a496e98b1f9c7173210
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87211685"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97296733"
 ---
 # <a name="storage-class"></a>ストレージ クラス
 
@@ -35,11 +36,11 @@ ms.locfileid: "87211685"
 
 *storage-class-specifier*: /\* 関数定義用 \*/<br/>
 &nbsp;&nbsp;&nbsp;&nbsp; **`extern`**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **`static`**
+&nbsp;&nbsp;&nbsp;&nbsp;**`static`**
 
 関数定義に *storage-class-specifier* が含まれていない場合、ストレージクラスは既定で **`extern`** になります。 関数を **`extern`** として明示的に宣言することもできますが、必須ではありません。
 
-関数の宣言に *storage-class-specifier* **`extern`** が含まれる場合、その識別子は、ファイル スコープで宣言されたあらゆる可視の該当識別子と同じリンケージを持ちます。 ファイル スコープで可視の宣言がない場合、その識別子は外部リンケージを持ちます。 識別子がファイル スコープで、*ストレージ クラス指定子*がない場合、その識別子は外部リンケージを持ちます。 外部リンケージは、その識別子の各インスタンスが同じオブジェクトまたは関数を表すことを意味します。 リンケージとファイル スコープの詳細については、「[有効期間、スコープ、可視性、およびリンケージ](../c-language/lifetime-scope-visibility-and-linkage.md)」を参照してください。
+関数の宣言に *storage-class-specifier* **`extern`** が含まれる場合、その識別子は、ファイル スコープで宣言されたあらゆる可視の該当識別子と同じリンケージを持ちます。 ファイル スコープで可視の宣言がない場合、その識別子は外部リンケージを持ちます。 識別子がファイル スコープで、*ストレージ クラス指定子* がない場合、その識別子は外部リンケージを持ちます。 外部リンケージは、その識別子の各インスタンスが同じオブジェクトまたは関数を表すことを意味します。 リンケージとファイル スコープの詳細については、「[有効期間、スコープ、可視性、およびリンケージ](../c-language/lifetime-scope-visibility-and-linkage.md)」を参照してください。
 
 **`extern`** 以外のストレージクラス指定子を持つブロック スコープの関数を宣言すると、エラーが発生します。
 

@@ -1,16 +1,17 @@
 ---
+description: '詳細情報: 減算 (-)'
 title: 減算 (-)
 ms.date: 11/04/2016
 helpviewer_keywords:
 - operators [C], subtraction
 - subtraction operator, syntax
 ms.assetid: 9cacba7d-20b3-4372-8a63-ba5d8ee64177
-ms.openlocfilehash: 5c9510cf3708ef049b5dac213fa3de894fcd4a07
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8e0daf4e1bfdbb844df99e3f79dc2baf5a30e6e4
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62157761"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97114560"
 ---
 # <a name="subtraction--"></a>減算 (-)
 

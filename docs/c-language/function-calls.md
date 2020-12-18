@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: 関数呼び出し'
 title: 関数呼び出し
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,16 +8,16 @@ helpviewer_keywords:
 - function calls, about function calls
 - function calls
 ms.assetid: 2cfa897d-3874-4820-933c-e624f75d1712
-ms.openlocfilehash: 495dc3cf77df79336af364eb80ea7edf17b54400
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 3949ea88637d9476d6acb0fd4fc4cf43dcfb0fc0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87227869"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97221931"
 ---
 # <a name="function-calls"></a>関数呼び出し
 
-*関数呼び出し*は、制御と引数 (存在する場合) を関数に渡す式であり、形式は以下の通りです。
+*関数呼び出し* は、制御と引数 (存在する場合) を関数に渡す式であり、形式は以下の通りです。
 
 *expression* (*expression-list*<sub>opt</sub>)
 

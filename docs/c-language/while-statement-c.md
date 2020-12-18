@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: while ステートメント (C)'
 title: while ステートメント (C)
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - while keyword [C]
 - while keyword [C], syntax
 ms.assetid: d0c970b8-12a9-4827-afb2-a051111834b7
-ms.openlocfilehash: 8095dd8672218239dbcfa879e3df929643e93d90
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 3461372de48980a0591f890fdd366c9373aea78f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87231404"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97221853"
 ---
 # <a name="while-statement-c"></a>while ステートメント (C)
 

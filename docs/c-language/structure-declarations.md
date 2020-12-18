@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: 構造体宣言'
 title: 構造体宣言
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - structure members
 - embedded structures
 ms.assetid: 5be3be77-a236-4153-b574-7aa77675df7f
-ms.openlocfilehash: 3b9aa30cfeecbd60fda61e6a484043c82c9a3b28
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 6fe2a241e28ce9b8c9c1ee114c18e2aa9afc704c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87217052"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97114612"
 ---
 # <a name="structure-declarations"></a>構造体宣言
 
@@ -27,7 +28,7 @@ ms.locfileid: "87217052"
 
 *struct-or-union*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp; **`struct`**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **`union`**
+&nbsp;&nbsp;&nbsp;&nbsp;**`union`**
 
 *struct-declaration-list*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*struct-declaration*<br/>

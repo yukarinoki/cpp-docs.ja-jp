@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: ポインター宣言'
 title: ポインター宣言
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,16 +8,16 @@ helpviewer_keywords:
 - const keyword [C]
 - pointers, declarations
 ms.assetid: 8b3b7fc7-f44d-480d-b6f9-cebe4e5462a6
-ms.openlocfilehash: 31d7e30859537fed1b18f6d30302d83248e17e74
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 3c1670d1dd86e7df7f164e357ff99f3ed31e7339
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87211763"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97195919"
 ---
 # <a name="pointer-declarations"></a>ポインター宣言
 
-*ポインター宣言*はポインター変数に名前を付け、変数が指すオブジェクトの型を指定します。 ポインターとして宣言された変数は、メモリ アドレスを保持します。
+*ポインター宣言* はポインター変数に名前を付け、変数が指すオブジェクトの型を指定します。 ポインターとして宣言された変数は、メモリ アドレスを保持します。
 
 ## <a name="syntax"></a>構文
 
@@ -68,7 +69,7 @@ int *pointers[10];  /* Declares an array of pointers */
 int (*pointer)[10]; /* Declares a pointer to an array of 10 elements */
 ```
 
-この*ポインター*変数は、10 個の要素を持つ配列を指します。 この配列の各要素は **`int`** 型です。
+この *ポインター* 変数は、10 個の要素を持つ配列を指します。 この配列の各要素は **`int`** 型です。
 
 ```
 int const *x;      /* Declares a pointer variable, x,

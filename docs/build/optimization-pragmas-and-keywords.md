@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: 最適化に影響するプラグマおよびキーワード'
 title: 最適化に影響するプラグマおよびキーワード
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - pragmas, for optimization
 - optimization, keywords and pragmas
 ms.assetid: 66a94842-ef10-490a-88b3-51d1a568ead5
-ms.openlocfilehash: 192564d475da121a874b5a40de62b37d7f934ce7
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 6a989a2206ad8486487610ad2e8f13220dacba0e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80169800"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97187456"
 ---
 # <a name="optimization-pragmas-and-keywords"></a>最適化に影響するプラグマおよびキーワード
 

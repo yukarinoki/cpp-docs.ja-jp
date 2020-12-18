@@ -1,4 +1,5 @@
 ---
+description: '詳細情報: スカラー型の初期化'
 title: スカラー型の初期化
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - automatic storage class
 - types [C], initializing
 ms.assetid: 73c516f5-c3ad-4d56-ab3b-f2a82b621104
-ms.openlocfilehash: 063761abcbb1541893b9cbab463e3d121684d00a
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: a9294f04f39e6984a2068c5c8f79e48641834236
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87211828"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97181827"
 ---
 # <a name="initializing-scalar-types"></a>スカラー型の初期化
 
@@ -25,24 +26,24 @@ ms.locfileid: "87211828"
 
 ## <a name="syntax"></a>構文
 
-*`declaration`* :<br/>
+*`declaration`*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp; *`declaration-specifiers`* *`init-declarator-list`* <sub>opt</sub> **`;`**
 
-*`declaration-specifiers`* :<br/>
+*`declaration-specifiers`*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp; *`storage-class-specifier`* *`declaration-specifiers`* <sub>opt</sub> <br/>
 &nbsp;&nbsp;&nbsp;&nbsp; *`type-specifier`* *`declaration-specifiers`* <sub>opt</sub> <br/>
 &nbsp;&nbsp;&nbsp;&nbsp; *`type-qualifier`* *`declaration-specifiers`* <sub>opt</sub>
 
-*`init-declarator-list`* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; *`init-declarator`*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; *`init-declarator-list`* **`,`** *`init-declarator`*
+*`init-declarator-list`*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*`init-declarator`*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*`init-declarator-list`* **`,`** *`init-declarator`*
 
-*`init-declarator`* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; *`declarator`*<br/>
+*`init-declarator`*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*`declarator`*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp; *`declarator`* **`=`** *`initializer`*  /\* スカラーの初期化の場合 \*/
 
-*`initializer`* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; *`assignment-expression`*
+*`initializer`*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*`assignment-expression`*
 
 次の規則に従って、あらゆる型の変数を初期化できます。
 

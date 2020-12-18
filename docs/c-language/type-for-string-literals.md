@@ -1,16 +1,17 @@
 ---
+description: '詳細情報: 文字列リテラルの型'
 title: 文字列リテラルの型
 ms.date: 11/04/2016
 helpviewer_keywords:
 - string literals, type
 - types [C], string literals
 ms.assetid: f50a28af-20c1-4440-bdc6-564c86a309c8
-ms.openlocfilehash: cd84a8c37e2929394e34010d14fc9264080539cc
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 9b752d79a1f33e43f24fb86902ba91b3d31777c9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87198997"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97242822"
 ---
 # <a name="type-for-string-literals"></a>文字列リテラルの型
 
