@@ -38,7 +38,7 @@
       href: ../code-quality/intrinsic-functions.md
     - name: ベスト プラクティスと例 (SAL)
       href: ../code-quality/best-practices-and-examples-sal.md
-- name: _Analysis_assume を使用して追加のコード情報を指定する
+- name: _Analysis_assume_ を使用して追加のコード情報を指定する
   href: ../code-quality/how-to-specify-additional-code-information-by-using-analysis-assume.md
 - name: C++ Core Guidelines チェッカーの警告
   items:
