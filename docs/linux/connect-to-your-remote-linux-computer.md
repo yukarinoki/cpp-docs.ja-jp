@@ -2,12 +2,12 @@
 title: Visual Studio でターゲットの Linux システムに接続する
 description: Visual Studio の C++ プロジェクト内からリモートの Linux マシンまたは Linux 用 Windows サブシステムに接続する方法です。
 ms.date: 01/17/2020
-ms.openlocfilehash: da74d1c735a29304fdf46e920eac45580f386259
-ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
+ms.openlocfilehash: b1907cc4c1c80a9d8ffba06849c9a80f1a8fbfbe
+ms.sourcegitcommit: 387ce22a3b0137f99cbb856a772b5a910c9eba99
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "92921790"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97645216"
 ---
 # <a name="connect-to-your-target-linux-system-in-visual-studio"></a>Visual Studio でターゲットの Linux システムに接続する
 
@@ -116,7 +116,7 @@ Linux システム上でまだ ssh が設定および実行されていない場
 
 ## <a name="command-line-utility-for-the-connection-manager"></a>接続マネージャーのコマンドライン ユーティリティ  
 
-**Visual Studio 2019 バージョン 16.5 以降** :ConnectionManager.exe は、Visual Studio 外でのリモート開発の接続を管理するためのコマンドライン ユーティリティです。 これは、新しい開発マシンをプロビジョニングするなどのタスクに役立ちます。 または、これを利用して Visual Studio で継続的インテグレーションを設定することもできます。 ConnectionManager コマンドの例とすべてのリファレンスについては、「[ConnectionManager リファレンス](connectionmanager-reference.md)」を参照してください。  
+**Visual Studio 2019 バージョン 16.5 以降**:ConnectionManager.exe は、Visual Studio 外でのリモート開発の接続を管理するためのコマンドライン ユーティリティです。 これは、新しい開発マシンをプロビジョニングするなどのタスクに役立ちます。 または、これを利用して Visual Studio で継続的インテグレーションを設定することもできます。 ConnectionManager コマンドの例とすべてのリファレンスについては、「[ConnectionManager リファレンス](connectionmanager-reference.md)」を参照してください。  
 
 ::: moniker-end
 
@@ -124,13 +124,13 @@ Linux システム上でまだ ssh が設定および実行されていない場
 
 ## <a name="tcp-port-forwarding"></a>TCP ポート フォワーディング
 
-Visual Studio の Linux サポートは、TCP ポート フォワーディングに依存しています。 リモート システムで TCP ポート フォワーディングが無効になっている場合、 **Rsync** と **gdbserver** が影響を受けます。 お客様がこの依存関係の影響を受けている場合は、Developer Community でこちらの[提案チケット](https://developercommunity.visualstudio.com/idea/840265/dont-rely-on-ssh-tcp-port-forwarding-for-c-remote.html)に賛成票を投じることができます。
+Visual Studio の Linux サポートは、TCP ポート フォワーディングに依存しています。 リモート システムで TCP ポート フォワーディングが無効になっている場合、**Rsync** と **gdbserver** が影響を受けます。 お客様がこの依存関係の影響を受けている場合は、Developer Community でこちらの[提案チケット](https://developercommunity2.visualstudio.com/t/shDonshshtsh-shrelysh-s/840265?space=62)に賛成票を投じることができます。
 
 rsync は、MSBuild ベースの Linux プロジェクトと CMake プロジェクトの両方で使用され、[IntelliSense で使用するヘッダーをリモート システムから Windows にコピーします](configure-a-linux-project.md#remote_intellisense)。 TCP ポート フォワーディングを有効にできない場合は、リモート ヘッダーの自動ダウンロードを無効にします。 無効にするには、 **[ツール] > [オプション]、[クロス プラットフォーム] > [接続マネージャー] > [リモート ヘッダー IntelliSense マネージャー]** の順に移動します。 リモート システムで TCP ポート フォワーディングが有効になっていない場合、IntelliSense のリモート ヘッダーのダウンロードが開始されると、次のエラーが表示されます。
 
 ![ヘッダー エラー](media/port-forwarding-headers-error.png)
 
-rsync は、ソース ファイルをリモート システムにコピーするために、Visual Studio の CMake サポートでも使用されます。 TCP ポート フォワーディングを有効にできない場合は、リモート コピー ソース メソッドとして sftp を使用できます。 sftp は rsync よりも低速なことが多いですが、TCP ポート フォワーディングとの依存関係がありません。 [CMake 設定エディター](../build/cmakesettings-reference.md#additional-settings-for-cmake-linux-projects)で、 **remoteCopySourcesMethod** プロパティを使用してリモート コピー ソース メソッドを管理できます。 リモート システムで TCP ポート フォワーディングが無効になっている場合は、最初に rsync が呼び出されたときに CMake 出力ウィンドウにエラーが表示されます。
+rsync は、ソース ファイルをリモート システムにコピーするために、Visual Studio の CMake サポートでも使用されます。 TCP ポート フォワーディングを有効にできない場合は、リモート コピー ソース メソッドとして sftp を使用できます。 sftp は rsync よりも低速なことが多いですが、TCP ポート フォワーディングとの依存関係がありません。 [CMake 設定エディター](../build/cmakesettings-reference.md#additional-settings-for-cmake-linux-projects)で、**remoteCopySourcesMethod** プロパティを使用してリモート コピー ソース メソッドを管理できます。 リモート システムで TCP ポート フォワーディングが無効になっている場合は、最初に rsync が呼び出されたときに CMake 出力ウィンドウにエラーが表示されます。
 
 ![Rsync エラー](media/port-forwarding-copy-error.png)
 
