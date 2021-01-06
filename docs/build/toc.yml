@@ -68,7 +68,18 @@
     - name: CMake 定義済み構成のスキーマ リファレンス
       href: ../build/cmake-predefined-configuration-reference.md
 - name: 'vcpkg: C++ 用のパッケージ マネージャー'
-  href: ../build/vcpkg.md
+  expanded: false
+  items:
+    - name: 'vcpkg: C++ 用のパッケージ マネージャー'
+      href: ../build/vcpkg.md
+    - name: vcpkg をインストールする
+      href: ../build/install-vcpkg.md
+    - name: vcpkg を統合する
+      href: ../build/integrate-vcpkg.md
+    - name: vcpkg を使用してライブラリを管理する
+      href: ../build/manage-libraries-with-vcpkg.md
+    - name: vcpkg コマンドライン リファレンス
+      href: ../build/vcpkg-command-line-reference.md
 - name: C++ ビルドの洞察
   href: ../build-insights/get-started-with-cpp-build-insights.md
 - name: プリコンパイル済みヘッダー ファイル
