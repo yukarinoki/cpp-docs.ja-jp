@@ -163,12 +163,12 @@ helpviewer_keywords:
 - CTreeCtrl [MFC], SortChildren
 - CTreeCtrl [MFC], SortChildrenCB
 ms.assetid: 96e20031-6161-4143-8c12-8d1816c66d90
-ms.openlocfilehash: e126863bebcc3cb8f878a8ece41ee8d9385c0afe
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: 8b5c31138601c96ca7af530dbfb1d3517e3998a8
+ms.sourcegitcommit: 6183207b11575d7b44ebd7c18918e916a0d8c63d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97345018"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97951524"
 ---
 # <a name="ctreectrl-class"></a>CTreeCtrl Class
 
@@ -294,7 +294,7 @@ class CTreeCtrl : public CWnd
 
 `CTreeCtrl`
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxcmn.h
 
@@ -1365,7 +1365,7 @@ HTREEITEM HitTest(TVHITTESTINFO* pHitTestInfo) const;
 
 この関数が呼び出されたときに、 *pt* パラメーターはテストする点の座標を指定します。 関数は、指定されたポイントにある項目のハンドルを返します。項目が存在しない場合は NULL を返します。 また、 *Pflags* パラメーターには、指定されたポイントの場所を示す値が含まれています。 次のいずれかの値になります。
 
-|値|説明|
+|[値]|説明|
 |-|-|
 |TVHT_ABOVE|クライアント領域の上にあります。|
 |TVHT_BELOW|クライアント領域の下。|
@@ -1503,7 +1503,7 @@ HTREEITEM MapAccIdToItem(UINT uAccId) const;
 
 ### <a name="remarks"></a>解説
 
-ユーザー補助機能は、障碍のあるユーザーがコンピューターを使用できるようにするアプリケーションです。 ユーザー補助識別子は、 `IAccessible` ウィンドウ内の要素を一意に指定するためにインターフェイスによって使用されます。 アクセシビリティ識別子の詳細については、「 [Microsoft Developer Network](https://go.microsoft.com/fwlink/p/?linkid=56322)」の「Active Accessibility のサポートについて」を検索してください。
+ユーザー補助機能は、障碍のあるユーザーがコンピューターを使用できるようにするアプリケーションです。 ユーザー補助識別子は、 `IAccessible` ウィンドウ内の要素を一意に指定するためにインターフェイスによって使用されます。 Api の詳細については `IAccessible` 、「 [Microsoft Active Accessibility](/windows/win32/winauto/microsoft-active-accessibility)」を参照してください。
 
 このメソッドは、Windows SDK で説明されている [TVM_MAPACCIDTOHTREEITEM](/windows/win32/Controls/tvm-mapaccidtohtreeitem) メッセージを送信します。
 
@@ -1538,7 +1538,7 @@ UINT MapItemToAccID(HTREEITEM hItem) const;
 
 ### <a name="remarks"></a>解説
 
-ユーザー補助機能は、障碍のあるユーザーがコンピューターを使用できるようにするアプリケーションです。 ユーザー補助識別子は、 `IAccessible` ウィンドウ内の要素を一意に指定するためにインターフェイスによって使用されます。 アクセシビリティ識別子の詳細については、「 [Microsoft Developer Network](https://go.microsoft.com/fwlink/p/?linkid=56322)」の「Active Accessibility のサポートについて」を検索してください。
+ユーザー補助機能は、障碍のあるユーザーがコンピューターを使用できるようにするアプリケーションです。 ユーザー補助識別子は、 `IAccessible` ウィンドウ内の要素を一意に指定するためにインターフェイスによって使用されます。 Api の詳細については `IAccessible` 、「 [Microsoft Active Accessibility](/windows/win32/winauto/microsoft-active-accessibility)」を参照してください。
 
 このメソッドは、Windows SDK で説明されている [TVM_MAPHTREEITEMTOACCID](/windows/win32/Controls/tvm-maphtreeitemtoaccid) メッセージを送信します。
 
@@ -2281,7 +2281,7 @@ void ShowInfoTip(HTREEITEM hItem);
 
 ### <a name="remarks"></a>解説
 
-ツールヒントとインフォヒントの違いの詳細については、「 [Microsoft Developer Network](https://go.microsoft.com/fwlink/p/?linkid=56322)」の「ツールヒントとヒント」を検索してください。
+ツールヒントとインフォヒントの違いの詳細については、「 [ツールヒントと](/windows/win32/uxguide/ctrl-tooltips-and-infotips)ヒント」を参照してください。
 
 このメソッドは、Windows SDK で説明されている [TVM_SHOWINFOTIP](/windows/win32/Controls/tvm-showinfotip) メッセージを送信します。
 

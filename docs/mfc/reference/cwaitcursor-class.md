@@ -11,12 +11,12 @@ helpviewer_keywords:
 - CWaitCursor [MFC], CWaitCursor
 - CWaitCursor [MFC], Restore
 ms.assetid: 5dfae2ff-d7b6-4383-b0ad-91e0868c67b3
-ms.openlocfilehash: f9552dcd6f5304c96d550e153870f69d78d932ad
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: 5d2323e3be78154c6a9d3ded55ab9e1a951d78b7
+ms.sourcegitcommit: 6183207b11575d7b44ebd7c18918e916a0d8c63d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97318469"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97951498"
 ---
 # <a name="cwaitcursor-class"></a>CWaitCursor クラス
 
@@ -66,7 +66,7 @@ class CWaitCursor
 
 `CWaitCursor`
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxwin.h
 
@@ -122,4 +122,4 @@ void Restore();
 [CCmdTarget:: EndWaitCursor](../../mfc/reference/ccmdtarget-class.md#endwaitcursor)<br/>
 [CCmdTarget:: RestoreWaitCursor](../../mfc/reference/ccmdtarget-class.md#restorewaitcursor)<br/>
 [CWinApp::D oWaitCursor](../../mfc/reference/cwinapp-class.md#dowaitcursor)<br/>
-[操作方法: Microsoft Foundation Class アプリケーションでマウスカーソルを変更する](https://go.microsoft.com/fwlink/p/?linkid=128044)
+[を使用して MFC でウィンドウのマウスポインターを変更する Visual C++](/troubleshoot/cpp/change-mouse-pointer-window-mfc)

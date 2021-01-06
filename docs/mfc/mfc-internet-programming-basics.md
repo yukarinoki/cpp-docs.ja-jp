@@ -17,12 +17,12 @@ helpviewer_keywords:
 - Internet content [MFC]
 - WinInet classes [MFC]
 ms.assetid: 6df2dfd0-6e3f-4587-9d01-2a32f00f8a6f
-ms.openlocfilehash: 8774f2ec77b9e721733edccdcd0a83e96cb62fe0
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: 0c38a5eba3a49791c472d5da0f733a18422058ba
+ms.sourcegitcommit: 6183207b11575d7b44ebd7c18918e916a0d8c63d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97115444"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97951451"
 ---
 # <a name="mfc-internet-programming-basics"></a>MFC インターネット プログラミングの基礎
 
@@ -73,7 +73,7 @@ MFC には、インターネットプログラミングをサポートするク�
 
 Microsoft インターネットテクノロジの詳細については、「 [ネットワークとインターネット](/windows/win32/networking)」を参照してください。
 
-[World Wide Web コンソーシアム (W3C)](https://go.microsoft.com/fwlink/p/?linkid=37125)は、HTML、HTTP、CGI、およびその他の World Wide Web テクノロジの仕様を発行します。
+[World Wide Web コンソーシアム (W3C)](https://www.w3.org/)は、HTML、HTTP、CGI、およびその他の World Wide Web テクノロジの仕様を発行します。
 
 ## <a name="more-internet-help"></a><a name="_core_more_internet_help"></a> その他のインターネットヘルプ
 

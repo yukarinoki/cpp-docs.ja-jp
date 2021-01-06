@@ -5,12 +5,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - Parallel Diagnostic Tools [Concurrency Runtime]
 ms.assetid: b1a3f1d2-f5df-4f29-852e-906b3d8341fc
-ms.openlocfilehash: 44d885e8e6c7529bd15fa0aa2e7930773400361f
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: ac6afbbc2bfef3793e9685a7c9e1054b7d677bd8
+ms.sourcegitcommit: 6183207b11575d7b44ebd7c18918e916a0d8c63d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97172428"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97951523"
 ---
 # <a name="parallel-diagnostic-tools-concurrency-runtime"></a>並列診断ツール (コンカレンシー ランタイム)
 
@@ -28,13 +28,13 @@ Visual Studio デバッガーには、[並列 **スタック** ] ウィンドウ
 
 同時実行ランタイムは [Windows イベントトレーシング](/windows/win32/ETW/event-tracing-portal) (ETW) を使用して、さまざまなイベントが発生したときにプロファイラーなどのインストルメンテーションツールに通知します。 これらのイベントには、スケジューラがアクティブ化または非アクティブ化されたとき、コンテキストの開始、終了、ブロック、ブロック解除、または生成が発生したとき、および並列アルゴリズムが開始または終了するタイミングが含まれます。
 
-[同時実行ビジュアライザー](/visualstudio/profiling/concurrency-visualizer)などのツールは、この機能を使用します。そのため、通常、これらのイベントを直接操作する必要はありません。 ただし、これらのイベントは、カスタムプロファイラーを開発している場合や、 [Xperf](https://go.microsoft.com/fwlink/p/?linkid=160628)などのイベントトレースツールを使用する場合に役立ちます。
+[同時実行ビジュアライザー](/visualstudio/profiling/concurrency-visualizer)などのツールは、この機能を使用します。そのため、通常、これらのイベントを直接操作する必要はありません。 ただし、これらのイベントは、カスタムプロファイラーを開発している場合や、 [Windows パフォーマンスツールキット](/windows-hardware/test/wpt/)などのイベントトレースツールを使用する場合に役立ちます。
 
 同時実行ランタイムは、トレースが有効になっている場合にのみ、これらのイベントを発生させます。 [Concurrency:: EnableTracing](reference/concurrency-namespace-functions.md#enabletracing)関数を呼び出してイベントのトレースを有効にし、 [Concurrency::D isabletracing](reference/concurrency-namespace-functions.md#disabletracing)関数を呼び出してトレースを無効にします。
 
 次の表では、イベントトレースが有効な場合にランタイムによって発生するイベントについて説明します。
 
-|Event|説明|値|
+|Event|説明|[値]|
 |-----------|-----------------|-----------|
 |[concurrency:: ConcRT_ProviderGuid](reference/concurrency-namespace-constants1.md#concrt_providerguid)|同時実行ランタイムの ETW プロバイダー識別子。|`f7b697a3-4db5-4d3b-be71-c4d284e6592f`|
 |[concurrency:: ContextEventGuid](reference/concurrency-namespace-constants1.md#contexteventguid)|コンテキストに関連するイベントをマークします。|`5727a00f-50be-4519-8256-f7699871fecb`|

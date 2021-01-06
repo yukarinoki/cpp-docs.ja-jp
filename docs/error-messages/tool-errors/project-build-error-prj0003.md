@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - PRJ0003
 ms.assetid: fc5a84bb-c6d3-41d6-8dd6-475455820778
-ms.openlocfilehash: cefd56e1d11da77f288333fb0e1f9c10ef684d12
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: b5ca521bdddb78c3cd7c5dd41f8999b99cb92e20
+ms.sourcegitcommit: 6183207b11575d7b44ebd7c18918e916a0d8c63d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97119409"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97951438"
 ---
 # <a name="project-build-error-prj0003"></a>プロジェクト ビルド エラー PRJ0003
 
@@ -22,7 +22,7 @@ ms.locfileid: "97119409"
 
 このエラーの考えられる原因は次のとおりです。
 
-- プロジェクトは ATL サーバーに依存します。 Visual Studio 2008 以降、ATL Server は Visual Studio の一部としては含まれなくなりましたが、CodePlex では共有ソースプロジェクトとしてリリースされています。 ATL サーバーのソースコードとツールをダウンロードするには、 [Atl サーバーライブラリとツール](https://go.microsoft.com/fwlink/p/?linkid=81979)に関するページを参照してください。
+- プロジェクトは ATL サーバーに依存します。 Visual Studio 2008 以降、ATL Server は Visual Studio の一部としては含まれなくなりましたが、CodePlex では共有ソースプロジェクトとしてリリースされています。 ATL サーバーのソースコードとツールをダウンロードするには、 [Atl サーバーライブラリとツール](https://archive.codeplex.com/?p=atlserver)に関するページを参照してください。
 
 - システムリソースが不足しています。 これを解決するには、いくつかのアプリケーションを閉じてください。
 
