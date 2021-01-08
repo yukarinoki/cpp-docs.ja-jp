@@ -1,15 +1,15 @@
 ---
 title: Visual Studio で CMake デバッグ セッションを構成する
 description: Visual Studio を使用して CMake デバッガー設定を構成する方法について説明します。
-ms.date: 12/07/2020
+ms.date: 12/16/2020
 helpviewer_keywords:
 - CMake debugging
-ms.openlocfilehash: b289acf8d0aa89cef1d2a72c988b41d99914f828
-ms.sourcegitcommit: 102bd6f7a878d85c8ceab8f28d0359f562850ea0
+ms.openlocfilehash: 36a4d64b987c1468caa06ed8670dfaf7d44abad3
+ms.sourcegitcommit: 387ce22a3b0137f99cbb856a772b5a910c9eba99
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96862569"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97645107"
 ---
 # <a name="configure-cmake-debugging-sessions"></a>CMake デバッグ セッションを構成する
 
@@ -21,7 +21,7 @@ CMake のネイティブ サポートは Visual Studio 2017 以降で利用で�
 
 ::: moniker range=">=msvc-150"
 
-すべての実行可能な CMake ターゲットが、 **[全般]** ツール バーの **[スタートアップ アイテム]** ドロップダウンに表示されます。 1 つを選択してデバッグ セッションを開始し、デバッガーを起動します。
+すべての実行可能な CMake ターゲットが、ツール バーの **[スタートアップ アイテム]** ドロップダウンに表示されます。 1 つを選択してデバッグ セッションを開始し、デバッガーを起動します。
 
 ![CMake のスタートアップ アイテム](media/cmake-startup-item-dropdown.png "CMake の [スタートアップ アイテム] ドロップダウン")
 
@@ -112,8 +112,10 @@ Visual Studio 2019 バージョン 16.6 では、リモート システムおよ
 #### <a name="additional-options-allowed-with-the-gdbserver-configuration-167-or-later"></a>`gdbserver` 構成で使用できるその他のオプション (16.7 以降)
 
 - `program`:既定値は `"${debugInfo.fullTargetPath}"` です。 デバッグするアプリケーションへの UNIX パス。 ビルドまたは配置場所のターゲット実行可能ファイルと異なる場合にのみ必須です。
-> [!TIP]
-> 配置は、ローカルのクロスコンパイル シナリオではまだサポートされていません。 Windows でクロスコンパイルを行う場合 (たとえば、Windows でクロスコンパイラを使用して Linux ARM 実行可能ファイルをビルドする場合)、デバッグする前に、リモート ARM コンピューターで `program` で指定された場所にバイナリを手動でコピーする必要があります。
+
+  > [!TIP]
+  > 配置は、ローカルのクロスコンパイル シナリオではまだサポートされていません。 Windows でクロスコンパイルを行う場合 (たとえば、Windows でクロスコンパイラを使用して Linux ARM 実行可能ファイルをビルドする場合)、デバッグする前に、リモート ARM コンピューターで `program` で指定された場所にバイナリを手動でコピーする必要があります。
+
 - `remoteMachineName`:既定値は `"${debugInfo.remoteMachineName}"` です。 デバッグするプログラムをホストするリモート システムの名前。 ビルド システムと異なる場合にのみ必須です。 [接続マネージャー](../linux/connect-to-your-remote-linux-computer.md)に既存のエントリがなければなりません。 **Ctrl + Space** キーを押して、すべての既存のリモート接続を一覧表示します。
 - `cwd`:既定値は `"${debugInfo.defaultWorkingDirectory}"` です。 `program` が実行されるリモート システム上のディレクトリへの完全な UNIX パス。 ディレクトリは存在している必要があります。
 - `gdbPath`:既定値は `${debugInfo.vsInstalledGdb}` です。 デバッグに使用される `gdb` の完全な Windows パス。 既定値は、C および C++ ワークロードを使用する Linux 開発でインストールされる `gdb` です。
