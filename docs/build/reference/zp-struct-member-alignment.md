@@ -1,7 +1,7 @@
 ---
 description: 詳細については、「/Zp (構造体メンバーの配置)」を参照してください。
 title: /Zp (構造体メンバーの配置)
-ms.date: 04/04/2019
+ms.date: 01/08/2021
 f1_keywords:
 - /zp
 - VC.Project.VCCLCompilerTool.StructMemberAlignment
@@ -12,12 +12,12 @@ helpviewer_keywords:
 - /Zp compiler option [C++]
 - -Zp compiler option [C++]
 ms.assetid: 5242f656-ed9b-48a3-bc73-cfcf3ed2520f
-ms.openlocfilehash: b2029ebded53bcae1b44b5cd72bf59494e58ec4b
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: 8d29c442726aff9503a42378fce6a7b8b09526ed
+ms.sourcegitcommit: 14d6ae0d527d05d153e26463d4cd5ada0f43e864
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97224310"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98104779"
 ---
 # <a name="zp-struct-member-alignment"></a>/Zp (構造体メンバーの配置)
 
@@ -44,9 +44,9 @@ ms.locfileid: "97224310"
 特定のアラインメント要件がない場合は、このオプションを使用しないでください。
 
 > [!WARNING]
-> Windows SDK セットの C++ ヘッダーは、内部的にパッキングを想定し **`/Zp8`** ます。 **`/Zp`** Windows SDK ヘッダー内で設定が変更された場合、メモリの破損が発生する可能性があります。 ヘッダーは、 **`/Zp`** コマンドラインで設定したオプションの影響を受けません。
+> Windows SDK の C/c + + ヘッダーは、内部でパッキングを想定 **`/Zp8`** しています。 コマンドラインでを使用するか、を使用して、Windows SDK ヘッダーを含めると、既定の設定を変更しないで **`/Zp`** `#pragma pack` ください。 そうしないと、実行時にアプリケーションによってメモリが破損する可能性があります。
 
-また、を使用して、 [`pack`](../../preprocessor/pack.md) 構造のパッキングを制御することもできます。 アラインメントの詳細については、次のトピックを参照してください。
+[ `pack` プラグマ](../../preprocessor/pack.md)を使用して、構造のパッキングを制御することもできます。 アラインメントの詳細については、次のトピックを参照してください。
 
 - [`align`](../../cpp/align-cpp.md)
 

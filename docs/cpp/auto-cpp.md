@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - auto keyword [C++]
 ms.assetid: e9d495d7-601c-4547-b897-998389a311f4
-ms.openlocfilehash: 2237c8aa3cb1b1078a8b90ba5a3ba6cba0a7134b
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: 061ddac33af4b8e1587b2ab1035d9f96ba18b108
+ms.sourcegitcommit: 14d6ae0d527d05d153e26463d4cd5ada0f43e864
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97319470"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98104753"
 ---
 # <a name="auto-c"></a>`auto` (C++)
 
@@ -50,7 +50,16 @@ ms.locfileid: "97319470"
 
 キーワードを使用するには、 **`auto`** 変数を宣言するために型の代わりに使用し、初期化式を指定します。 また、、 **`auto`** **`const`** **`volatile`** 、pointer ( **`*`** )、reference ( **`&`** )、右辺値参照 () などの指定子と宣言子を使用して、キーワードを変更することもでき **`&&`** ます。 コンパイラは初期化式を評価し、その情報を使用して変数の型を推測します。
 
-初期化式には、代入 (等号の構文)、直接の初期化 (関数形式の構文)、 [`operator new`](new-operator-cpp.md) 式、または、[範囲ベースの `for` ステートメント (C++)](../cpp/range-based-for-statement-cpp.md)ステートメントで *の範囲宣言* のパラメーターを指定できます。 詳細については、このドキュメントで後述する「 [初期化子](../cpp/initializers.md) とコード例」を参照してください。
+**`auto`** 初期化式には、次のようなさまざまな形式があります。
+
+- などの汎用初期化構文 `auto a { 42 };` 。
+- などの割り当て構文 `auto b = 0;` 。
+- などの2つの前の形式を組み合わせた汎用割り当て構文 `auto c = { 3.14156 };` 。
+- 直接の初期化、またはなどのコンストラクター形式の構文 `auto d( 1.41421f );` 。
+
+詳細については、このドキュメントで後述する「 [初期化子](../cpp/initializers.md) とコード例」を参照してください。
+
+**`auto`** が範囲ベースのステートメントでループパラメーターを宣言するために使用されている場合 **`for`** 、たとえば、別の初期化構文を使用 `for (auto& i : iterable) do_action(i);` します。 詳細については、「 [範囲ベースの `for` ステートメント (C++)](../cpp/range-based-for-statement-cpp.md)」を参照してください。
 
 キーワードは、 **`auto`** 型のプレースホルダーですが、それ自体は型ではありません。 そのため、キーワードは、やなどの **`auto`** キャストまたは演算子では使用できません [`sizeof`](../cpp/sizeof-operator.md) (C++/cli の場合) [`typeid`](../extensions/typeid-cpp-component-extensions.md) 。
 
