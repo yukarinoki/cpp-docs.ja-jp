@@ -4,16 +4,15 @@ title: '&lt;ciso646&gt;'
 ms.date: 07/11/2019
 f1_keywords:
 - <ciso646>
-- ciso646
 helpviewer_keywords:
 - ciso646 header
 ms.assetid: 9d570924-d299-4225-9a58-8c4c820f5903
-ms.openlocfilehash: 556b3d882cb6465db829eefc735215069d79a5c5
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: cf12d7fb597aecfe7ea768784f35ceaeec192e7c
+ms.sourcegitcommit: 118e4ad82c0f1c9ac120f105d84224e5fe4cef28
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97325128"
+ms.lasthandoff: 01/12/2021
+ms.locfileid: "98126651"
 ---
 # <a name="ltciso646gt"></a>&lt;ciso646&gt;
 
@@ -22,7 +21,7 @@ C 標準ライブラリヘッダーをインクルード \<iso646.h> し、関�
 > [!NOTE]
 > この互換性ヘッダーでは、C++ のキーワードである名前が定義されているので、これを含めても効果はありません。 \<iso646.h>ヘッダーは C++ では非推奨とされます。 この \<ciso646> ヘッダーは、c++ 20 のドラフト標準では削除されています。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:**\<ciso646>
 

@@ -4,16 +4,15 @@ title: '&lt;cstdbool&gt;'
 ms.date: 07/11/2019
 f1_keywords:
 - <cstdbool>
-- cstdbool
 helpviewer_keywords:
 - cstdbool header
 ms.assetid: 44ccb8b2-d808-4715-8097-58ba09ab33ed
-ms.openlocfilehash: 0711c05ff136f90a701ff707976a172d2bcb1315
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: de36d4088c3494cf9b8efcf5175a527da7af8ece
+ms.sourcegitcommit: 118e4ad82c0f1c9ac120f105d84224e5fe4cef28
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97324736"
+ms.lasthandoff: 01/12/2021
+ms.locfileid: "98126599"
 ---
 # <a name="ltcstdboolgt"></a>&lt;cstdbool&gt;
 
@@ -22,7 +21,7 @@ C 標準ライブラリヘッダーをインクルード \<stdbool.h> し、関�
 > [!NOTE]
 > ヘッダーには \<stdbool.h> C++ のキーワードであるマクロが定義されているため、これを含めても効果はありません。 \<stdbool.h>ヘッダーは C++ では非推奨とされます。 \<cstdbool>ヘッダーは c++ 17 では非推奨とされており、Draft c++ 20 標準では削除されています。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:**\<cstdbool>
 

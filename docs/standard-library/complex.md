@@ -4,22 +4,21 @@ title: '&lt;complex&gt;'
 ms.date: 11/04/2016
 f1_keywords:
 - <complex>
-- std::<complex>
 helpviewer_keywords:
 - complex header
 ms.assetid: 5e728995-3059-496a-9ce9-61d1bfbe4f2b
-ms.openlocfilehash: b16798cf1725ba6fa681b04f735d44f02a2b1b82
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: 4019b32a6bb53c2fbf820c1a3d3d70824ccc6b7f
+ms.sourcegitcommit: 118e4ad82c0f1c9ac120f105d84224e5fe4cef28
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97233839"
+ms.lasthandoff: 01/12/2021
+ms.locfileid: "98126632"
 ---
 # <a name="ltcomplexgt"></a>&lt;complex&gt;
 
 コンテナークラステンプレート `complex` とそのサポートテンプレートを定義します。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー**: \<complex>
 
@@ -43,7 +42,7 @@ ms.locfileid: "97233839"
 
    (*a*/(*a*<sup>2</sup>  +  *b*<sup>2</sup>),-*b*/(*a*<sup>2</sup>  +  *b*<sup>2</sup>))
 
-" *Z* a bi" という形式で複素数 *z* = (*a*, *b*) を表すと、  =    +   *i*<sup>2</sup> =-1 になります。実数のセットの代数に関するルールは、一連の複素数とそのコンポーネントに適用できます。 次に例を示します。
+" *Z* a bi" という形式で複素数 *z* = (*a*, *b*) を表すと、  =    +   *i*<sup>2</sup> =-1 になります。実数のセットの代数に関するルールは、一連の複素数とそのコンポーネントに適用できます。 例:
 
    (1 + 2 *i*) \*(2 + 3 *i*) = 1 (2 + 3 i) \* +2 *i* \* (2 + 3 *i*) = (2 + 3 *i*) + (4 *i* + 6 *i*<sup>2</sup>) = (2-6) + (3 + 4)*i* =-4 + 7 *i*
 

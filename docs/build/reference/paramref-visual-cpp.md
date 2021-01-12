@@ -1,19 +1,19 @@
 ---
-title: '&lt;paramref > (C++ドキュメントコメント)'
+title: '&lt;paramref> (C++ ドキュメントコメント)'
+description: Paramref C++ XML ドキュメントタグの詳細については、こちらを参照してください。
 ms.date: 11/04/2016
 f1_keywords:
-- paramref
 - <paramref>
 helpviewer_keywords:
 - paramref C++ XML tag
 - <paramref> C++ XML tag
 ms.assetid: c5730dc2-7159-421f-b2d5-bb971e307122
-ms.openlocfilehash: 1f4e9cb0e6b39e4da78e78048342dac2ecc9deea
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: 393703e7816368fb80f71d962dc190a0db1cea03
+ms.sourcegitcommit: 118e4ad82c0f1c9ac120f105d84224e5fe4cef28
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74988692"
+ms.lasthandoff: 01/12/2021
+ms.locfileid: "98126157"
 ---
 # <a name="ltparamrefgt"></a>&lt;paramref&gt;
 
@@ -30,11 +30,11 @@ ms.locfileid: "74988692"
 *name*<br/>
 参照されるパラメーターの名前です。  名前は、一重引用符または二重引用符で囲みます。  コンパイラは、`name` が見つからない場合に警告を発行します。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-コンパイル時に [/doc](doc-process-documentation-comments-c-cpp.md) を指定して、ドキュメント コメントをファイルに出力します。
+ドキュメントコメントをファイルに処理するために、 [/doc](doc-process-documentation-comments-c-cpp.md) を使用してコンパイルします。
 
-## <a name="example"></a>使用例
+## <a name="example"></a>例
 
 ```cpp
 // xml_paramref_tag.cpp
@@ -49,6 +49,6 @@ public ref class MyClass {
 };
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [XML に関するドキュメント](xml-documentation-visual-cpp.md)

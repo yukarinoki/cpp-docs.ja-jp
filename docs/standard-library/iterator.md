@@ -4,22 +4,21 @@ title: '&lt;iterator&gt;'
 ms.date: 11/04/2016
 f1_keywords:
 - <iterator>
-- iterator/std::<iterator>
 helpviewer_keywords:
 - iterator header
 ms.assetid: c61a3962-f3ed-411a-b5a3-e8b3c2b500bd
-ms.openlocfilehash: 9c40d46c5cde45baa66c8173d2b6d8f0186d1bc9
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: 9376f26acef4cfb5feda4644881d43511b3b77f6
+ms.sourcegitcommit: 118e4ad82c0f1c9ac120f105d84224e5fe4cef28
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97112064"
+ms.lasthandoff: 01/12/2021
+ms.locfileid: "98126508"
 ---
 # <a name="ltiteratorgt"></a>&lt;iterator&gt;
 
 反復子のプリミティブ、定義済みの反復子とストリーム反復子、およびサポート テンプレートをいくつか定義します。 定義済み反復子には、挿入アダプターとリバース アダプターが含まれます。 挿入反復子アダプターのクラスには、フロント、バック、汎用の 3 つがあります。 これには、コンテナーのメンバー関数の反復子が提供する上書きセマンティクスではなく、挿入セマンティクスが用意されています。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:**\<iterator>
 

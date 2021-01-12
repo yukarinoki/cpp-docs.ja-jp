@@ -3,20 +3,20 @@ description: '詳細情報: &lt; chrono&gt;'
 title: '&lt;chrono&gt;'
 ms.date: 05/07/2019
 f1_keywords:
+- <chrono>
 - chrono/std::chrono::nanoseconds
 - chrono/std::chrono::minutes
 - chrono/std::chrono::seconds
-- <chrono>
 - chrono/std::chrono::hours
 - chrono/std::chrono::milliseconds
 - chrono/std::chrono::microseconds
 ms.assetid: 844de749-f306-482e-89bc-6f53c99c8324
-ms.openlocfilehash: a59ad0d88a1d9266e61a8ef49e7cf9184da803b3
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: cc425d99d41d23fe25d2f66888240f9ea9a93cfb
+ms.sourcegitcommit: 118e4ad82c0f1c9ac120f105d84224e5fe4cef28
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97325142"
+ms.lasthandoff: 01/12/2021
+ms.locfileid: "98126664"
 ---
 # <a name="ltchronogt"></a>&lt;chrono&gt;
 
@@ -24,7 +24,7 @@ ms.locfileid: "97325142"
 
 Visual Studio 2015 以降、の実装は、 `steady_clock` 安定性および単調性の C++ 標準要件を満たすように変更されています。 現在、`steady_clock` は QueryPerformanceCounter() に基づき、`high_resolution_clock` は `steady_clock` の typedef です。 その結果、Microsoft C++ コンパイラでは、 `steady_clock::time_point` の typedef になりました。 `chrono::time_point<steady_clock>` ただし、この規則は、必ずしも他の実装の場合と同じではありません。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:**\<chrono>
 

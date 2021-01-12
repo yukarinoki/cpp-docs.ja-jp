@@ -4,15 +4,14 @@ title: '&lt;hash_map&gt;'
 ms.date: 01/18/2018
 f1_keywords:
 - <hash_map>
-- std::<hash_map>
 helpviewer_keywords:
 - hash_map header
-ms.openlocfilehash: b3e46a3f8ef1638525414c1a1414c4eb6e418c31
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: 9d8274958a0f6b89892ec2c1c70080cd090d1c03
+ms.sourcegitcommit: 118e4ad82c0f1c9ac120f105d84224e5fe4cef28
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97231876"
+ms.lasthandoff: 01/12/2021
+ms.locfileid: "98125975"
 ---
 # <a name="lthash_mapgt"></a>&lt;hash_map&gt;
 
@@ -49,7 +48,7 @@ ms.locfileid: "97231876"
 |[hash_map クラス](hash-map-class.md)|一意の並べ替えキーとそれに関連付けられている値のペアを要素として持つコレクションのデータを格納したり、迅速に取得したりするために使用されます。|
 |[hash_multimap クラス](hash-multimap-class.md)|必ずしも一意ではない並べ替えキーとそれに関連付けられている値のペアを要素として持つコレクションのデータを格納したり、迅速に取得したりするために使用されます。|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:**\<hash_map>
 

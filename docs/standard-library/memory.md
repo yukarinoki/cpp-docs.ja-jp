@@ -3,23 +3,21 @@ description: '詳細情報: &lt; メモリ&gt;'
 title: '&lt;memory&gt;'
 ms.date: 08/04/2019
 f1_keywords:
-- memory/std::<memory>
 - <memory>
-- std::<memory>
 helpviewer_keywords:
 - memory header
-ms.openlocfilehash: 27aea86d8329ee37c3aa1409b7dde7091cfe43bf
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: 05d5b6e87b23ea2a88e4ff5a8a11c2d6b054691f
+ms.sourcegitcommit: 118e4ad82c0f1c9ac120f105d84224e5fe4cef28
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97183777"
+ms.lasthandoff: 01/12/2021
+ms.locfileid: "98126521"
 ---
 # <a name="ltmemorygt"></a>&lt;memory&gt;
 
 メモリの割り当てとオブジェクトの解放を支援するクラス、演算子、および各種テンプレートを定義します。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:**\<memory>
 

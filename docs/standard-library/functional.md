@@ -4,24 +4,22 @@ title: '&lt;functional&gt;'
 ms.date: 02/21/2019
 f1_keywords:
 - <functional>
-- functional/std::<functional>
-- std::<functional>
 helpviewer_keywords:
 - functors
 - functional header
 ms.assetid: 7dd463e8-a29f-49bc-aedd-8fa53b54bfbc
-ms.openlocfilehash: a13ddeb7bdb45b02bb8b35052e34a3b9601c6fec
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: fe9a42c2992557bd9cf1237a6fe66c4fbfcc232d
+ms.sourcegitcommit: 118e4ad82c0f1c9ac120f105d84224e5fe4cef28
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97232149"
+ms.lasthandoff: 01/12/2021
+ms.locfileid: "98126131"
 ---
 # <a name="ltfunctionalgt"></a>&lt;functional&gt;
 
 *関数オブジェクト*(ファンク *ターとも* 呼ばれます) とそのバインダーを構築するのに役立つ C++ 標準ライブラリ関数を定義します。 関数オブジェクトは、`operator()` を定義するオブジェクトの種類です。 関数オブジェクトは関数ポインターとしても使用できますが、一般的に、関数オブジェクトは、関数呼び出しの実行中にアクセスできる追加情報を格納するために使用されます。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:**\<functional>
 
@@ -141,14 +139,14 @@ C++ 11、C++ 14、および C++ 17 では、次の機能が追加されていま
 |[logical_not](../standard-library/logical-not-struct.md)|クラスには、指定した値型の要素に対して論理否定演算を実行する定義済みの関数オブジェクトが用意されており、結果の真偽をテストします。|
 |[logical_or](../standard-library/logical-or-struct.md)|クラスには、指定した値型の要素に対して論理和演算を実行する定義済みの関数オブジェクトが用意されており、結果の真偽をテストします。|
 |[minus](../standard-library/minus-struct.md)|クラスには、指定した値型の要素に対して算術演算 (減算) を実行する定義済みの関数オブジェクトが用意されています。|
-|[modulus](../standard-library/modulus-struct.md)|クラスには、指定した値型の要素に対して算術演算 (剰余) を実行する定義済みの関数オブジェクトが用意されています。|
+|[剰余](../standard-library/modulus-struct.md)|クラスには、指定した値型の要素に対して算術演算 (剰余) を実行する定義済みの関数オブジェクトが用意されています。|
 |[multiplies](../standard-library/multiplies-struct.md)|クラスには、指定した値型の要素に対して算術演算 (乗算) を実行する定義済みの関数オブジェクトが用意されています。|
 |[negate](../standard-library/negate-struct.md)|クラスには、要素の値の負数を返す定義済みの関数オブジェクトが用意されています。|
 |[not_equal_to](../standard-library/not-equal-to-struct.md)|指定した型の値がその型の他の値と等しくないかどうかをテストする二項述語。|
 |[plus](../standard-library/plus-struct.md)|クラスには、指定した値型の要素に対して算術演算 (加算) を実行する定義済みの関数オブジェクトが用意されています。|
 |[unary_function](../standard-library/unary-function-struct.md)|単項関数オブジェクトを提供する派生クラスによって継承される可能性がある型を定義する空の基底クラス。<br/> (C++ 11 では非推奨となりました。 C++ 17 では削除されました)。 |
 
-### <a name="objects"></a>Objects
+### <a name="objects"></a>オブジェクト
 
 |名前|説明|
 |-|-|
