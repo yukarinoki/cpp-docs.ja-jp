@@ -2,12 +2,12 @@
 description: '詳細情報: ARM64 ABI 規則の概要'
 title: ARM64 ABI 規則の概要
 ms.date: 03/27/2019
-ms.openlocfilehash: fbdb709eaa960446bb76712962dbbc3bfb66d38a
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: d597a50b771524b69ef2f2091082d7ca4d19d453
+ms.sourcegitcommit: e71b8da6c8a357aa06bb6b36936a8f4ecae082ad
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97157114"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "97976337"
 ---
 # <a name="overview-of-arm64-abi-conventions"></a>ARM64 ABI 規則の概要
 
@@ -204,7 +204,13 @@ AArch64 システムでは、IEEE 浮動小数点例外のサポートはオプ�
 
 浮動小数点の値は、s0、d0、または v0 に適宜返されます。
 
-HFA と HVA の値は、s0-s3、d0-d3、または v0-v3 に適宜返されます。
+次のすべてが成り立つ場合、型は HFA または HFA と見なされます。
+
+- 空ではありません。
+- 非単純な既定値またはコピー コンストラクター、デストラクター、または代入演算子がありません。
+- そのすべてのメンバーが、同じ HFA または HFA 型であるか、または他のメンバーの HFA または HFA 型と一致する float、double、または neon 型です。
+
+4 つ以下の要素を持つ HFA と HVA の値が、s0-s3、d0-d3、または v0-v3 で適宜返されます。
 
 値で返される型は、特定のプロパティがあるかどうか、および関数が静的でないメンバー関数であるかどうかによって、異なる方法で処理されます。 型に次のプロパティがすべて含まれる場合:
 
