@@ -1,7 +1,7 @@
 ---
 description: '詳細については、次を参照してください: _setjmp3'
 title: _setjmp3
-ms.date: 11/04/2016
+ms.date: 1/14/2021
 api_name:
 - _setjmp3
 api_location:
@@ -12,6 +12,7 @@ api_location:
 - msvcr110_clr0400.dll
 - msvcr100.dll
 - msvcr120.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -23,14 +24,14 @@ helpviewer_keywords:
 - _setjmp3 function
 - setjmp3 function
 ms.assetid: 6129c2f3-8bac-4fdb-a827-44e1eebba500
-ms.openlocfilehash: 07a84601a6f57eca3e7dc71638a964428579b1c7
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: 9d65f807c34d926485777d49156061196dfc0948
+ms.sourcegitcommit: 1cd8f8a75fd036ffa57bc70f3ca869042d8019d4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97277064"
+ms.lasthandoff: 01/15/2021
+ms.locfileid: "98243100"
 ---
-# <a name="_setjmp3"></a>_setjmp3
+# `_setjmp3`
 
 内部 CRT 関数。 `setjmp` 関数の新しい実装。
 
@@ -46,26 +47,26 @@ int _setjmp3(
 
 #### <a name="parameters"></a>パラメーター
 
-*エンベロープ*<br/>
+*`env`*\
 [out] 状態情報を格納するためのバッファーのアドレス。
 
-*count*<br/>
+*`count`*\
 [in] `optional parameters` に格納されている情報の追加 `DWORD` の数。
 
-*省略可能なパラメーター*<br/>
+*`optional parameters`*\
 [in] `setjmp` の組み込みによってプッシュダウンされる追加データ。 最初の `DWORD` は、追加データをアンワインドして不揮発性レジスタの状態に戻るために使用される関数ポインターです。 2 番目の `DWORD` は、復元される試行レベルです。 これ以上のデータは、`jmp_buf` の一般的なデータ配列に保存されます。
 
 ## <a name="return-value"></a>戻り値
 
 常に 0 を返します。
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>注釈
 
-この関数は C++ プログラムでは使用しないでください。 これは、C++ をサポートしない組み込み関数です。 `setjmp` の使用方法の詳細については、「[setjmp/longjmp の使用](../cpp/using-setjmp-longjmp.md)」をご覧ください。
+この関数は、C++ プログラムでは使用しないでください。 これは、C++ をサポートしない組み込み関数です。 `setjmp` の使用方法の詳細については、「[setjmp/longjmp の使用](../cpp/using-setjmp-longjmp.md)」をご覧ください。
 
 ## <a name="requirements"></a>要件
 
 ## <a name="see-also"></a>関連項目
 
-[アルファベット順の関数リファレンス](../c-runtime-library/reference/crt-alphabetical-function-reference.md)<br/>
-[setjmp](../c-runtime-library/reference/setjmp.md)
+[アルファベット順の関数リファレンス](../c-runtime-library/reference/crt-alphabetical-function-reference.md)\
+[`setjmp`](../c-runtime-library/reference/setjmp.md)

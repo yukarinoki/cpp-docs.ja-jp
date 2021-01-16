@@ -1,7 +1,7 @@
 ---
 description: 詳細については、「set_unexpected (CRT)」を参照してください。
 title: set_unexpected (CRT)
-ms.date: 11/04/2016
+ms.date: 1/14/2021
 api_name:
 - set_unexpected
 api_location:
@@ -15,6 +15,7 @@ api_location:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -26,16 +27,16 @@ helpviewer_keywords:
 - unexpected function
 - exception handling, termination
 ms.assetid: ebcef032-4771-48e5-88aa-2a1ab8750aa6
-ms.openlocfilehash: b9665a73f87d64cd991ff8ce296a4c14957b30ed
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: b9918e152a5d27c853aef7769b932ee4efedeef8
+ms.sourcegitcommit: 1cd8f8a75fd036ffa57bc70f3ca869042d8019d4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97211077"
+ms.lasthandoff: 01/15/2021
+ms.locfileid: "98242632"
 ---
-# <a name="set_unexpected-crt"></a>set_unexpected (CRT)
+# <a name="set_unexpected-crt"></a>`set_unexpected` .CRT
 
-**unexpected** によって呼び出される独自の終了関数をインストールします。
+によって呼び出される独自の終了関数をインストール **`unexpected`** します。
 
 ## <a name="syntax"></a>構文
 
@@ -45,44 +46,44 @@ unexpected_function set_unexpected( unexpected_function unexpFunction );
 
 ### <a name="parameters"></a>パラメーター
 
-*Un関数*<br/>
-**予期しない** 関数を置き換えるために記述する関数へのポインター。
+*`unexpFunction`*\
+関数を置き換えるために記述する関数へのポインター **`unexpected`** 。
 
 ## <a name="return-value"></a>戻り値
 
-前の関数を後で復元できるように、 **_set_unexpected** によって登録された前の終了関数へのポインターを返します。 前の関数が設定されていない場合は、戻り値を使用して既定の動作を復元できます。この値は **NULL** でもかまいません。
+**`_set_unexpected`** 前の関数を後で復元できるように、によって登録された前の終了関数へのポインターを返します。 前の関数が設定されていない場合は、戻り値を使用して既定の動作を復元できます。この値はでもかまい **`NULL`** ません。
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>注釈
 
-**Set_unexpected** 関数は、**予期しない** によって呼び出された関数として *関数* をインストールします。 現在の C++ 例外処理の実装では、**予期** しないが使用されています。 **Unexpected_function** 型は EH で定義されています。ユーザー定義の予期しない関数へのポインターとしての H。を返す *関数* **`void`** 。 *カスタム関数関数は*、呼び出し元に戻らないようにする必要があります。
+関数は、 **`set_unexpected`** によって呼び出される関数として *関数* をインストールし **`unexpected`** ます。 **`unexpected`** は、現在の C++ 例外処理の実装では使用されません。 **`unexpected_function`** 型は EH で定義されています。ユーザー定義の予期しない関数へのポインターとしての H。を返す *関数* **`void`** 。 *カスタム関数関数は*、呼び出し元に戻らないようにする必要があります。
 
 ```cpp
 typedef void ( *unexpected_function )( );
 ```
 
-既定では、 **予期しない** 呼び出しは **終了** します。 この既定の動作を変更するには、独自の終了関数を記述し、関数の名前を引数として **set_unexpected** を呼び出します。 **予期しない** 呼び出し **set_unexpected** の引数として渡された最後の関数。
+既定では、はを **`unexpected`** 呼び出し **`terminate`** ます。 この既定の動作を変更するには、独自の終了関数を作成し、 **`set_unexpected`** その引数として関数の名前を指定してを呼び出します。 **`unexpected`** の引数として渡された最後の関数を呼び出し **`set_unexpected`** ます。
 
-**Set_terminate** の呼び出しによってインストールされるカスタムの終了関数とは異なり、*関数* 内から例外をスローできます。
+の呼び出しによってインストールされるカスタムの終了関数とは異なり **`set_terminate`** 、内から例外がスローされる可能性があり **`unexpFunction`** ます。
 
 マルチ スレッド環境では、予期しない関数はスレッドごとに別々に管理されます。 新しいスレッドは各々、それぞれの予期しない関数をインストールする必要があります。 したがって、各スレッドがそれぞれの予期しない処理を担当します。
 
-現在の C++ 例外処理の実装では、 **予期しない** 呼び出しが既定で **終了** し、例外処理ランタイムライブラリによって呼び出されることはありません。 **終了** するのではなく、**予期しない** 呼び出しを行う利点はありません。
+現在の C++ 例外処理の実装では、 **`unexpected`** は **`terminate`** 既定でを呼び出し、例外処理ランタイムライブラリによって呼び出されることはありません。 **`unexpected`** **Termで** はなくを呼び出すことには、特に利点はありません。
 
-動的にリンクされたすべての Dll または Exe に対して1つの **set_unexpected** ハンドラーがあります。を呼び出した場合でも、ハンドラーを別の DLL または別の DLL または EXE によって設定されたハンドラーに置き換えることが **set_unexpected** ます。
+動的にリンクされた **`set_unexpected`** すべての dll または exe に対して1つのハンドラーがあります。ハンドラーを呼び出しても別のハンドラー **`set_unexpected`** に置き換えられるか、または別の dll または EXE で設定されたハンドラーを置き換えることができます。
 
 ## <a name="requirements"></a>必要条件
 
 |ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
-|**set_unexpected**|\<eh.h>|
+|**`set_unexpected`**|`<eh.h>`|
 
-互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性について詳しくは、「 [Compatibility](../../c-runtime-library/compatibility.md)」をご覧ください。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[例外処理ルーチン](../../c-runtime-library/exception-handling-routines.md)<br/>
-[取り消し](abort.md)<br/>
-[_get_unexpected](get-unexpected.md)<br/>
-[set_terminate](set-terminate-crt.md)<br/>
-[解約](terminate-crt.md)<br/>
-[不適切](unexpected-crt.md)<br/>
+[例外処理ルーチン](../../c-runtime-library/exception-handling-routines.md)\
+[`abort`](abort.md)\
+[`_get_unexpected`](get-unexpected.md)\
+[`set_terminate`](set-terminate-crt.md)\
+[`terminate`](terminate-crt.md)\
+[`unexpected`](unexpected-crt.md)\

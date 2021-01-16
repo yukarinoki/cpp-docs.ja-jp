@@ -1,7 +1,7 @@
 ---
 description: 詳細については、「memmove、wmemmove」を参照してください。
 title: memmove、wmemmove
-ms.date: 11/04/2016
+ms.date: 1/14/2021
 api_name:
 - memmove
 - wmemmove
@@ -18,6 +18,7 @@ api_location:
 - ntdll.dll
 - ucrtbase.dll
 - ntoskrnl.exe
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -28,17 +29,16 @@ f1_keywords:
 helpviewer_keywords:
 - wmemmove function
 - memmove function
-ms.assetid: 3a906114-9cf3-40d7-bd99-ee452004f218
-ms.openlocfilehash: 15dee8eab2a1b7eedd3891d8673647a711c0e499
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: 6f9942c232710585aa5837510f0f04e5db36fb2a
+ms.sourcegitcommit: 1cd8f8a75fd036ffa57bc70f3ca869042d8019d4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97171388"
+ms.lasthandoff: 01/15/2021
+ms.locfileid: "98243126"
 ---
-# <a name="memmove-wmemmove"></a>memmove、wmemmove
+# <a name="memmove-wmemmove"></a>`memmove`, `wmemmove`
 
-バッファーを別のバッファーに移動します。 これらの関数にはセキュリティを強化したバージョンがあります。「[memmove_s、wmemmove_s](memmove-s-wmemmove-s.md)」を参照してください。
+バッファーを別のバッファーに移動します。 これらの関数のセキュリティを強化したバージョンを使用できます。「」 [ `memmove_s` を `wmemmove_s` ](memmove-s-wmemmove-s.md)参照してください。
 
 ## <a name="syntax"></a>構文
 
@@ -57,33 +57,33 @@ wchar_t *wmemmove(
 
 ### <a name="parameters"></a>パラメーター
 
-*先*<br/>
+*`dest`*\
 コピー先のオブジェクト。
 
-*src*<br/>
+*`src`*\
 コピー元のオブジェクト。
 
-*count*<br/>
-コピーするバイト数 (**memmove**) または文字 (**wmemmove**)。
+*`count`*\
+コピーするバイト数 ( **`memmove`** ) または文字数 ( **`wmemmove`** )。
 
 ## <a name="return-value"></a>戻り値
 
-*Dest* の値。
+の値 *`dest`* 。
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>注釈
 
-*カウント* バイト (**memmove**) または文字 (**wmemmove**) を *src* から *dest* にコピーします。 コピー元とコピー先の領域の一部が重なり合っている場合、どちらの関数も、重なり合っている領域のコピー元のバイトをコピーした後で上書きします。
+*`count`* **`memmove`** からにバイト () または文字 ( **`wmemmove`** ) をコピー *`src`* *`dest`* します。 コピー元とコピー先の領域の一部が重なり合っている場合、どちらの関数も、重なり合っている領域のコピー元のバイトをコピーした後で上書きします。
 
 **セキュリティに関するメモ** コピー先のバッファーのサイズがソース バッファー以上であることをご確認ください。 詳しくは、「 [バッファー オーバーランの回避](/windows/win32/SecBP/avoiding-buffer-overruns)」をご覧ください。
 
-**Memmove** 関数と **wmemmove** 関数は、次の例のように、関数を非推奨にするために、include ステートメントの前に定数 **_CRT_SECURE_DEPRECATE_MEMORY** が定義されている場合にのみ非推奨となります。
+次の例のように、 **`memmove`** **`wmemmove`** **`_CRT_SECURE_DEPRECATE_MEMORY`** 関数を非推奨にするために、include ステートメントの前に定数が定義されている場合にのみ、関数と関数が非推奨とされます。
 
 ```C
 #define _CRT_SECURE_DEPRECATE_MEMORY
 #include <string.h>
 ```
 
-または
+or
 
 ```C
 #define _CRT_SECURE_DEPRECATE_MEMORY
@@ -94,10 +94,10 @@ wchar_t *wmemmove(
 
 |ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
-|**memmove**|\<string.h>|
-|**wmemmove**|\<wchar.h>|
+|**`memmove`**|`<string.h>`|
+|**`wmemmove`**|`<wchar.h>`|
 
-互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性について詳しくは、「 [Compatibility](../../c-runtime-library/compatibility.md)」をご覧ください。
 
 ## <a name="example"></a>例
 
@@ -137,8 +137,8 @@ New string: aaaabb
 
 ## <a name="see-also"></a>関連項目
 
-[バッファー操作](../../c-runtime-library/buffer-manipulation.md)<br/>
-[_memccpy](memccpy.md)<br/>
-[memcpy、wmemcpy](memcpy-wmemcpy.md)<br/>
-[strcpy、wcscpy、_mbscpy](strcpy-wcscpy-mbscpy.md)<br/>
-[strncpy、_strncpy_l、wcsncpy、_wcsncpy_l、_mbsncpy、_mbsncpy_l](strncpy-strncpy-l-wcsncpy-wcsncpy-l-mbsncpy-mbsncpy-l.md)<br/>
+[バッファー操作](../../c-runtime-library/buffer-manipulation.md)\
+[`_memccpy`](memccpy.md)\
+[`memcpy`, `wmemcpy`](memcpy-wmemcpy.md)\
+[`strcpy`, `wcscpy`, `_mbscpy`](strcpy-wcscpy-mbscpy.md)\
+[`strncpy`, `_strncpy_l`, `wcsncpy`, `_wcsncpy_l`, `_mbsncpy`, `_mbsncpy_l`](strncpy-strncpy-l-wcsncpy-wcsncpy-l-mbsncpy-mbsncpy-l.md)\

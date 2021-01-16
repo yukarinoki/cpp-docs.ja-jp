@@ -1,7 +1,7 @@
 ---
 description: '詳細情報: wctype'
 title: wctype
-ms.date: 11/04/2016
+ms.date: 1/14/2021
 api_name:
 - wctype
 api_location:
@@ -15,6 +15,7 @@ api_location:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
+- api-ms-win-crt-string-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -24,15 +25,14 @@ f1_keywords:
 helpviewer_keywords:
 - wctype function
 - wide characters
-ms.assetid: 14aded12-4087-4123-bc48-db4e10999223
-ms.openlocfilehash: 0791d4f048dfa5d6804db14d577b1370ffbf8754
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: d0afd2bd163af967b11d0df58c84b62521ca6c2a
+ms.sourcegitcommit: 1cd8f8a75fd036ffa57bc70f3ca869042d8019d4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97254197"
+ms.lasthandoff: 01/15/2021
+ms.locfileid: "98242930"
 ---
-# <a name="wctype"></a>wctype
+# `wctype`
 
 ワイド文字のコードの分類規則を決定します。
 
@@ -46,40 +46,40 @@ wctype_t wctype(
 
 ### <a name="parameters"></a>パラメーター
 
-*property*<br/>
+*`property`*\
 プロパティ文字列。
 
 ## <a name="return-value"></a>戻り値
 
-現在のロケールの **LC_CTYPE** カテゴリが、プロパティ文字列 *プロパティ* と一致する名前を持つ分類規則を定義していない場合、この関数は0を返します。 それ以外の場合、[towctrans](towctrans.md) への後続の呼び出しに対する 2 番目の引数として使用するのに適した 0 以外の値を返します。
+**`LC_CTYPE`** 現在のロケールのカテゴリで、名前がプロパティ文字列に一致する分類規則が定義されていない場合 *`property`* 、この関数は0を返します。 それ以外の場合は、の後続の呼び出しに対する2番目の引数として使用するのに適した0以外の値を返し [`towctrans`](towctrans.md) ます。
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>注釈
 
 この関数では、ワイド文字のコードの分類規則を決定します。 次の呼び出しのペアの動作はすべてのロケールで同じです (ただし、実装によって、"C" ロケールであっても追加の分類規則を定義できます)。
 
-|機能|同等なもの|
+|関数|同等なもの|
 |--------------|-------------|
-|iswalnum (c)|iswctype (c、wctype ("alnum"))|
-|iswalpha (c)|iswctype (c、wctype ("alpha"))|
-|iswcntrl (c)|iswctype (c、wctype ("cntrl"))|
-|iswdigit (c)|iswctype (c、wctype ("digit"))|
-|iswgraph (c)|iswctype (c、wctype ("graph"))|
-|iswlower (c)|iswctype (c、wctype ("lower"))|
-|iswprint (c)|iswctype (c、wctype ("print"))|
-|iswpunct (c)|iswctype (c、wctype ("punct"))|
-|iswspace (c)|iswctype (c、wctype ("space"))|
-|iswupper (c)|iswctype (c、wctype ("upper"))|
-|iswxdigit (c)|iswctype (c、wctype ("xdigit"))|
+|`iswalnum(c)`|`iswctype(c, wctype( "alnum" ))`|
+|`iswalpha(c)`|`iswctype(c, wctype( "alpha" ))`|
+|`iswcntrl(c)`|`iswctype(c, wctype( "cntrl" ))`|
+|`iswdigit(c)`|`iswctype(c, wctype( "digit" ))`|
+|`iswgraph(c)`|`iswctype(c, wctype( "graph" ))`|
+|`iswlower(c)`|`iswctype(c, wctype( "lower" ))`|
+|`iswprint(c)`|`iswctype(c, wctype( "print" ))`|
+|`iswpunct(c)`|`iswctype(c, wctype( "punct" ))`|
+|`iswspace(c)`|`iswctype(c, wctype( "space" ))`|
+|`iswupper(c)`|`iswctype(c, wctype( "upper" ))`|
+|`iswxdigit(c)`|`iswctype(c, wctype( "xdigit" ))`|
 
 ## <a name="requirements"></a>必要条件
 
 |ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
-|**wctype**|\<wctype.h>|
+|`wctype`|`<wctype.h>`|
 
-互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性について詳しくは、「 [Compatibility](../../c-runtime-library/compatibility.md)」をご覧ください。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[データ変換](../../c-runtime-library/data-conversion.md)<br/>
-[setlocale、_wsetlocale](setlocale-wsetlocale.md)<br/>
+[データ変換](../../c-runtime-library/data-conversion.md)\
+[`setlocale`, `_wsetlocale`](setlocale-wsetlocale.md)

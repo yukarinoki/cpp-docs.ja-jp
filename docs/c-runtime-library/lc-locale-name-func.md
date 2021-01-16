@@ -1,7 +1,7 @@
 ---
 description: '詳細については、次を参照してください: ___lc_locale_name_func'
 title: ___lc_locale_name_func
-ms.date: 4/2/2020
+ms.date: 1/14/2021
 api_name:
 - ___lc_locale_name_func
 - _o____lc_locale_name_func
@@ -14,6 +14,7 @@ api_location:
 - msvcr80.dll
 - msvcr110_clr0400.dll
 - api-ms-win-crt-private-l1-1-0.dll
+- api-ms-win-crt-locale-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -23,12 +24,12 @@ f1_keywords:
 helpviewer_keywords:
 - ___lc_locale_name_func
 ms.assetid: ef858308-872e-43de-95e0-9b1b4084343e
-ms.openlocfilehash: 3431318608516fda908cd3c8ab9562c5044d20ae
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: 4747b64c0fc61e0f5d77eacb92c04c9f6d2e2759
+ms.sourcegitcommit: 1cd8f8a75fd036ffa57bc70f3ca869042d8019d4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97246553"
+ms.lasthandoff: 01/15/2021
+ms.locfileid: "98242866"
 ---
 # <a name="___lc_locale_name_func"></a>___lc_locale_name_func
 
@@ -44,7 +45,7 @@ wchar_t** ___lc_locale_name_func(void);
 
 スレッドの現在のロケール名を含む文字列へのポインター。
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>注釈
 
 `___lc_locale_name_func` は、CRT データのスレッド ローカル ストレージから現在のロケール名を取得するために、他の CRT 関数によって使用される内部 CRT 関数です。 この情報は、[_get_current_locale](../c-runtime-library/reference/get-current-locale.md) 関数または [setlocale、_wsetlocale](../c-runtime-library/reference/setlocale-wsetlocale.md) 関数を使用して取得することもできます。
 
@@ -58,7 +59,7 @@ wchar_t** ___lc_locale_name_func(void);
 |-------------|---------------------|
 |`___lc_locale_name_func`|crt\src\setlocal.h|
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [_get_current_locale](../c-runtime-library/reference/get-current-locale.md)<br/>
 [setlocale、_wsetlocale](../c-runtime-library/reference/setlocale-wsetlocale.md)<br/>

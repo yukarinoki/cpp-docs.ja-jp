@@ -1,7 +1,7 @@
 ---
 description: 詳細については、「memchr、wmemchr」を参照してください。
 title: memchr、wmemchr
-ms.date: 03/31/2019
+ms.date: 1/14/2021
 api_name:
 - wmemchr
 - memchr
@@ -17,6 +17,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - ntoskrnl.exe
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -28,12 +29,12 @@ helpviewer_keywords:
 - memchr function
 - wmemchr function
 ms.assetid: 5a348581-28f1-4256-8434-687245f7fc9f
-ms.openlocfilehash: 695973fd9551758de6c0638493057b31e9a74aab
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: f9643dd9c84244916dfdf151efbec1b0014b42e3
+ms.sourcegitcommit: 1cd8f8a75fd036ffa57bc70f3ca869042d8019d4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97240001"
+ms.lasthandoff: 01/15/2021
+ms.locfileid: "98243165"
 ---
 # <a name="memchr-wmemchr"></a>memchr、wmemchr
 
@@ -89,7 +90,7 @@ const wchar_t *wmemchr(
 
 成功した場合は、*バッファー* 内の *c* の最初の位置へのポインターを返します。 それ以外の場合は、NULL を返します。
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>注釈
 
 `memchr``wmemchr`次に、 *buffer* の最初の *count* 文字で *c* の最初の出現箇所を探します。 *C* が見つかったとき、または最初の *カウント* 文字をチェックしたときに停止します。
 

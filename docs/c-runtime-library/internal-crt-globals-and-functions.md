@@ -1,7 +1,7 @@
 ---
 description: 詳細については、「内部 CRT グローバルおよび関数」を参照してください。
 title: 内部 CRT グローバルおよび関数
-ms.date: 4/2/2020
+ms.date: 1/14/2021
 api_name:
 - __acrt_iob_func
 - __AdjustPointer
@@ -403,6 +403,7 @@ api_location:
 - ntdll.dll
 - ntoskrnl.exe
 - api-ms-win-crt-private-l1-1-0.dll
+- api-ms-win-crt-environment-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -931,12 +932,12 @@ helpviewer_keywords:
 - _Xbad_alloc
 - _Xlength_error
 ms.assetid: 99a27f11-fa5a-449e-bfbb-aab578d1cc4f
-ms.openlocfilehash: 0ace61d708744d6d7ef715158d7a4452a3bf5b03
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: 9087998c91a3da5022fd3fe559e5d535416eeff5
+ms.sourcegitcommit: 1cd8f8a75fd036ffa57bc70f3ca869042d8019d4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97246724"
+ms.lasthandoff: 01/15/2021
+ms.locfileid: "98243178"
 ---
 # <a name="internal-crt-globals-and-functions"></a>内部 CRT グローバルおよび関数
 
@@ -1271,6 +1272,6 @@ C ランタイム (CRT) ライブラリには、パブリック ライブラリ 
 |_Xbad_alloc|
 |_Xlength_error|
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [カテゴリ別ユニバーサル C ランタイム ルーチン](../c-runtime-library/run-time-routines-by-category.md)<br/>

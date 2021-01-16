@@ -1,7 +1,7 @@
 ---
 description: '詳細については、次を参照してください: _resetstkoflw'
 title: _resetstkoflw
-ms.date: 4/2/2020
+ms.date: 1/14/2021
 api_name:
 - _resetstkoflw
 - _o__resetstkoflw
@@ -17,6 +17,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-private-l1-1-0.dll
+- api-ms-win-crt-runtime-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -30,14 +31,14 @@ helpviewer_keywords:
 - stack, recovering
 - _resetstkoflw function
 ms.assetid: 319529cd-4306-4d22-810b-2063f3ad9e14
-ms.openlocfilehash: 02eb973c63bb372e43e57c413385b8e1b13d9f38
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: 092eea34de10ff77a31b5be35fa84dc1eb887328
+ms.sourcegitcommit: 1cd8f8a75fd036ffa57bc70f3ca869042d8019d4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97250349"
+ms.lasthandoff: 01/15/2021
+ms.locfileid: "98242970"
 ---
-# <a name="_resetstkoflw"></a>_resetstkoflw
+# `_resetstkoflw`
 
 スタック オーバーフローから復元します。
 
@@ -54,11 +55,11 @@ int _resetstkoflw( void );
 
 関数が成功した場合は 0 以外、失敗した場合は 0。
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>注釈
 
-**_Resetstkoflw** 関数は、スタックオーバーフロー条件から回復します。これにより、プログラムは致命的な例外エラーで失敗するのではなく、続行できます。 **_Resetstkoflw** 関数が呼び出されていない場合は、前の例外の後にガードページはありません。 次にスタック オーバーフローが発生したときに例外は発生しないので、プロセスは警告なしで終了します。
+関数は、 **`_resetstkoflw`** スタックオーバーフロー条件から回復します。これにより、プログラムは致命的な例外エラーで失敗するのではなく、続行できます。 関数が呼び出されていない場合は **`_resetstkoflw`** 、前の例外の後にガードページはありません。 次にスタックオーバーフローが発生したときに例外は発生せず、プロセスは警告なしで終了します。
 
-アプリケーションのスレッドにより **EXCEPTION_STACK_OVERFLOW** の例外が発生した場合、そのスレッドによってスタックは破損したままの状態になります。 これは、スタックが破損しない **EXCEPTION_ACCESS_VIOLATION** や **EXCEPTION_INT_DIVIDE_BY_ZERO** などの他の例外とは対照的です。 プログラムが最初に読み込まれたときには、スタックには小さい値が設定されます。 その後、スタックはスレッドのニーズに対応して必要に応じて大きくなります。 これは、現在のスタックの末尾に PAGE_GUARD のアクセス権を使用してページを設定することによって実装されます。 詳細については、「[Creating Guard Pages](/windows/win32/Memory/creating-guard-pages)」 (ガード ページの作成) をご覧ください。
+アプリケーションのスレッドによって例外が発生した場合 **`EXCEPTION_STACK_OVERFLOW`** 、そのスレッドはスタックを破損した状態のままにしています。 これは **`EXCEPTION_ACCESS_VIOLATION`** **`EXCEPTION_INT_DIVIDE_BY_ZERO`** 、スタックが破損していないやなどの他の例外とは対照的です。 プログラムが最初に読み込まれたときには、スタックには小さい値が設定されます。 その後、スタックはスレッドのニーズに対応して必要に応じて大きくなります。 これは、現在のスタックの末尾に PAGE_GUARD のアクセス権を使用してページを設定することによって実装されます。 詳細については、「[Creating Guard Pages](/windows/win32/Memory/creating-guard-pages)」 (ガード ページの作成) をご覧ください。
 
 コードによってスタック ポインターがこのページのアドレスをポイントすると、例外が発生し、システムは次の 3 つのことを実行します。
 
@@ -68,7 +69,7 @@ int _resetstkoflw( void );
 
 - 例外を発生させた命令を再実行します。
 
-この方法では、システムがスレッドに対するスタック サイズを自動的にインクリメントできます。 プロセスの各スレッドには最大スタック サイズがあります。 スタック サイズはコンパイル時に [/STACK (Stack Allocations)](../../build/reference/stack-stack-allocations.md)、またはプロジェクトの .def ファイルの [STACKSIZE](../../build/reference/stacksize.md) ステートメントによって設定されます。
+この方法では、システムがスレッドに対するスタック サイズを自動的にインクリメントできます。 プロセスの各スレッドには最大スタック サイズがあります。 スタックサイズは、コンパイル時に[ `/STACK` (スタック割り当て)](../../build/reference/stack-stack-allocations.md)、または [`STACKSIZE`](../../build/reference/stacksize.md) プロジェクトのファイル内のステートメントによって設定され `.def` ます。
 
 この最大スタック サイズを超えると、システムは次の 3 つのことを実行します。
 
@@ -78,9 +79,9 @@ int _resetstkoflw( void );
 
 - 例外を発生させて、スレッドが例外ブロックで処理できるようにします。
 
-その時点ではスタックにガード ページがないことに注意してください。 次にプログラムによってスタックのサイズが最後まで拡張されると、この場合はガード ページがある必要があり、プログラムはスタックの末尾を越えて書き込みを行い、アクセス違反が発生します。
+その時点で、スタックにはガードページがありません。 次にプログラムによってスタックのサイズが最後まで拡張されると、この場合はガード ページがある必要があり、プログラムはスタックの末尾を越えて書き込みを行い、アクセス違反が発生します。
 
-スタックオーバーフロー例外の後に復旧が行われるたびにガードページを復元するには、 **_resetstkoflw** を呼び出します。 この関数は、ブロックのメイン本体の内部から、またはブロックの外側から呼び出すことができ **`__except`** **`__except`** ます。 ただし、使用する必要がある場合には、いくつかの制限があります。 **_resetstkoflw** を呼び出すことはできません。
+**`_resetstkoflw`** スタックオーバーフロー例外の後に復旧が行われるたびに、を呼び出して、ガードページを復元します。 この関数は、ブロックのメイン本体の内部から、またはブロックの外側から呼び出すことができ **`__except`** **`__except`** ます。 ただし、使用する必要がある場合には、いくつかの制限があります。 **`_resetstkoflw`** からは呼び出さないでください。
 
 - フィルター式。
 
@@ -92,15 +93,15 @@ int _resetstkoflw( void );
 
 - **`__finally`** ブロック。
 
-これらの時点では、スタックは完全にはアンワインドされていません。
+これらの時点では、スタックはまだ十分にアンワインドされていません。
 
-スタックオーバーフロー例外は、C++ 例外ではなく、構造化例外として生成されるため、 **_resetstkoflw** は **`catch`** スタックオーバーフロー例外をキャッチしないため、通常のブロックでは役に立ちません。 ただし、[_set_se_translator](set-se-translator.md) を使用して C++ 例外をスローする構造化例外の変換を実装すると (2 番目の例のように)、スタック オーバーフロー例外によって C ++ 例外が発生します。これは C++ の catch ブロックで処理できます。
+スタックオーバーフロー例外は、C++ 例外ではなく、構造化例外として生成されるため、 **`_resetstkoflw`** 通常のブロックでは役に立ちません **`catch`** 。これは、stack overflow 例外をキャッチしないためです。 ただし、 [`_set_se_translator`](set-se-translator.md) を使用して c++ 例外をスローする構造化例外変換器を実装する場合 (2 番目の例のように)、stack overflow 例外によって c++ 例外が発生し、c++ の catch ブロックで処理できるようになります。
 
-構造化例外変換関数によってスローされる例外から到達した C ++ catch ブロックでの **_resetstkoflw** の呼び出しは安全ではありません。 この場合、catch ブロックの前で消滅させられるオブジェクトに対してデストラクターが呼び出された場合でも、catch ブロックの外部に出るまでスタック領域は解放されず、スタック ポインターはリセットされません。 この関数は、スタック領域が解放され、スタック ポインターがリセットされるまで呼び出さないようにする必要があります。 したがって、catch ブロックが終了した後でのみ呼び出すようにします。 catch ブロックではできるだけ小さなスタック領域を使用するようにします。これは、前回のスタック オーバーフローから自身で回復しようとしている catch ブロックでスタック オーバーフローが発生すると回復できなくなり、catch ブロック内でのオーバーフローによって同じ catch ブロックによってハンドルされる例外がトリガーされてプログラムの応答が停止するおそれがあるためです。
+**`_resetstkoflw`** 構造化例外変換関数によってスローされた例外から到達した C++ catch ブロックでを呼び出すことは安全ではありません。 この場合、スタック領域は解放されず、catch ブロックの前に破棄可能なオブジェクトに対してデストラクターが呼び出されていても、catch ブロックの外側までスタックポインターはリセットされません。 スタック領域が解放され、スタックポインターがリセットされるまで、この関数を呼び出すことはできません。 したがって、catch ブロックが終了した後でのみ呼び出すようにします。 Catch ブロックでは、できるだけ少ないスタック領域を使用する必要があります。これは、以前のスタックオーバーフローから回復しようとしている catch ブロックで発生するスタックオーバーフローが回復不可能であり、catch ブロックのオーバーフローによって、それ自体が同じ catch ブロックによって処理される例外をトリガーするためです。
 
-ブロック内など、正しい場所で使用されていても **_resetstkoflw** が失敗する場合があり **`__except`** ます。 スタックのアンワインドを実行した後でも、スタックの最後のページに書き込みをしないで **_resetstkoflw** を実行するためのスタック領域が十分にない場合は、**_resetstkoflw** はスタックの最後のページをガード ページとしてリセットすることに失敗し、エラーを表す 0 を返します。 したがってこの関数を安全に使用するには、スタックを使用しても安全であると想定するのではなく、戻り値をチェックする必要があります。
+**`_resetstkoflw`** ブロック内など、正しい場所で使用されていても、が失敗する場合があり **`__except`** ます。 スタックのアンワインド後でも、スタックの最後のページに書き込みを行わずに実行する十分なスタック領域が残っていない場合 **`_resetstkoflw`** 、は **`_resetstkoflw`** スタックの最後のページをガードページとしてリセットできず、エラーを示す0を返します。 この関数を安全に使用するには、スタックが安全に使用されていると想定するのではなく、戻り値をチェックする必要があります。
 
-アプリケーションが **/clr** でコンパイルされている場合、構造化例外処理は **STATUS_STACK_OVERFLOW** 例外をキャッチしません (「 [/clr (共通言語ランタイムのコンパイル)](../../build/reference/clr-common-language-runtime-compilation.md)」を参照してください)。
+構造化例外処理 **`STATUS_STACK_OVERFLOW`** では、アプリケーションがでコンパイルされるときに例外をキャッチしません **`/clr`** (「 [ `/clr ` (共通言語ランタイムのコンパイル)](../../build/reference/clr-common-language-runtime-compilation.md)」を参照してください)。
 
 既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
@@ -108,7 +109,7 @@ int _resetstkoflw( void );
 
 |ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
-|**_resetstkoflw**|\<malloc.h>|
+|**`_resetstkoflw`**|\<malloc.h>|
 
 互換性について詳しくは、「 [Compatibility](../../c-runtime-library/compatibility.md)」をご覧ください。
 
@@ -116,7 +117,7 @@ int _resetstkoflw( void );
 
 ## <a name="example"></a>例
 
-次の例は、 **_resetstkoflw** 関数の推奨される使用方法を示しています。
+次の例は、関数の推奨される使用方法を示して **`_resetstkoflw`** います。
 
 ```C
 // crt_resetstkoflw.c
@@ -142,7 +143,7 @@ int stack_overflow_exception_filter(int exception_code)
    if (exception_code == EXCEPTION_STACK_OVERFLOW)
    {
        // Do not call _resetstkoflw here, because
-       // at this point, the stack is not yet unwound.
+       // at this point, the stack isn't yet unwound.
        // Instead, signal that the handler (the __except block)
        // is to be executed.
        return EXCEPTION_EXECUTE_HANDLER;
@@ -220,7 +221,7 @@ resetting stack overflow
 
 ### <a name="description"></a>説明
 
-次の例は、構造化例外が C++ 例外に変換されるプログラムでの **_resetstkoflw** の推奨される使用方法を示しています。
+次の例は、 **`_resetstkoflw`** 構造化例外が C++ 例外に変換されるプログラムでのの推奨される使用方法を示しています。
 
 ### <a name="code"></a>コード
 
@@ -312,4 +313,4 @@ Recovered from stack overflow and allocated 100,000 bytes using _alloca.
 
 ## <a name="see-also"></a>関連項目
 
-[_alloca](alloca.md)<br/>
+[`_alloca`](alloca.md)<br/>

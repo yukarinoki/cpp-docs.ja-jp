@@ -1,7 +1,7 @@
 ---
 description: '詳細情報: 予期しない (CRT)'
 title: unexpected (CRT)
-ms.date: 11/04/2016
+ms.date: 1/14/2021
 api_name:
 - unexpected
 api_location:
@@ -15,6 +15,7 @@ api_location:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -24,16 +25,16 @@ f1_keywords:
 helpviewer_keywords:
 - unexpected function
 ms.assetid: 2f873763-15ad-4556-a924-dcf28f2b52b4
-ms.openlocfilehash: 73c632c4dd5bfedbb1c3724e60786b348f77f0be
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: 098d686e7c33d17020990b1db168d95c327d5112
+ms.sourcegitcommit: 1cd8f8a75fd036ffa57bc70f3ca869042d8019d4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97186637"
+ms.lasthandoff: 01/15/2021
+ms.locfileid: "98242905"
 ---
-# <a name="unexpected-crt"></a>unexpected (CRT)
+# <a name="unexpected-crt"></a>`unexpected` .CRT
 
-**Set_unexpected** を使用して、指定した **終了** または関数を呼び出します。
+**`terminate`** またはを使用して指定した関数を呼び出し **`set_unexpected`** ます。
 
 ## <a name="syntax"></a>構文
 
@@ -43,17 +44,17 @@ void unexpected( void );
 
 ## <a name="remarks"></a>解説
 
-**予期** しないルーチンは、C++ 例外処理の現在の実装では使用されません。 既定では、**予期しない** 呼び出しは **終了** します。 この既定の動作を変更するには、カスタムの終了関数を記述し、関数の名前を引数として **set_unexpected** を呼び出します。 **予期しない** 呼び出し **set_unexpected** の引数として渡された最後の関数。
+この **`unexpected`** ルーチンは、C++ 例外処理の現在の実装では使用されません。 **`unexpected`****`terminate`** 既定では、を呼び出します。 この既定の動作は、カスタムの終了関数を記述することによって変更できます。 **`set_unexpected`** 引数として関数の名前を指定してを呼び出します。 **`unexpected`** に渡された最後の関数を呼び出し **`set_unexpected`** ます。
 
 ## <a name="requirements"></a>必要条件
 
 |ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
-|**不適切**|\<eh.h>|
+|**`unexpected`**|`<eh.h>`|
 
-互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性について詳しくは、「 [Compatibility](../../c-runtime-library/compatibility.md)」をご覧ください。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [例外処理ルーチン](../../c-runtime-library/exception-handling-routines.md)<br/>
 [取り消し](abort.md)<br/>
