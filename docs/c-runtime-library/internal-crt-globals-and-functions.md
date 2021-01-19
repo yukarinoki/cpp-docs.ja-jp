@@ -227,6 +227,7 @@ api_name:
 - __std_exception_copy
 - __std_exception_destroy
 - __std_type_info_destroy_list
+- __std_type_info_name
 - __stdio_common_vfprintf
 - __stdio_common_vfprintf_p
 - __stdio_common_vfprintf_s
@@ -271,6 +272,7 @@ api_name:
 - _W_Getdays
 - _W_Getmonths
 - _W_Getnames
+- _W_Gettnames
 - _wassert
 - _Wcsftime
 - __wcsncnt
@@ -931,17 +933,16 @@ helpviewer_keywords:
 - _wsopen_dispatch
 - _Xbad_alloc
 - _Xlength_error
-ms.assetid: 99a27f11-fa5a-449e-bfbb-aab578d1cc4f
-ms.openlocfilehash: 9087998c91a3da5022fd3fe559e5d535416eeff5
-ms.sourcegitcommit: 1cd8f8a75fd036ffa57bc70f3ca869042d8019d4
+ms.openlocfilehash: 05d9666ce77c593c6b6fa366f43f8a593cb7a4a9
+ms.sourcegitcommit: 92dc6d99ba5dcf3b64dee164df2d29beb1e608da
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/15/2021
-ms.locfileid: "98243178"
+ms.lasthandoff: 01/18/2021
+ms.locfileid: "98563953"
 ---
 # <a name="internal-crt-globals-and-functions"></a>内部 CRT グローバルおよび関数
 
-C ランタイム (CRT) ライブラリには、パブリック ライブラリ インターフェイスをサポートするためにのみ使用される関数およびグローバル変数が含まれています。 それらの一部は、実装の詳細としてパブリック ヘッダーで公開されています。 これらの関数およびグローバル変数にはパブリック エクスポートを使用してアクセスできますが、コードでの使用を目的としていません。 これらの関数および変数を使用しているコードがある場合は、代わりにパブリック ライブラリの同等のものを使用するように変更することをお勧めします。 これらの関数はバージョンによって異なる場合があります。 識別しやすいように、ここに一覧を示します。 追加のドキュメントが存在する場合はリンクが提供されますが、一般的に、これらの実装の詳細は説明されません。
+C ランタイム (CRT) ライブラリには、パブリック ライブラリ インターフェイスをサポートするためにのみ使用される関数およびグローバル変数が含まれています。 それらの一部は、実装の詳細としてパブリック ヘッダーで公開されています。 これらの関数およびグローバル変数にはパブリックエクスポートを使用してアクセスできますが、コードで使用するためのものではありません。 これらの関数および変数を使用しているコードがある場合は、代わりにパブリック ライブラリの同等のものを使用するように変更することをお勧めします。 これらの関数はバージョンによって異なる場合があります。 これらは、識別しやすいように、ここに記載されています。 リンクは他のドキュメントが存在する場合に提供されますが、一般に、これらの実装の詳細は記載されていません。
 
 ## <a name="internal-crt-globals-and-value-macros"></a>内部 CRT グローバルおよび値マクロ
 
@@ -1219,6 +1220,7 @@ C ランタイム (CRT) ライブラリには、パブリック ライブラリ 
 |__std_exception_copy|
 |__std_exception_destroy|
 |__std_type_info_destroy_list|
+|__std_type_info_name|
 |__stdio_common_vfprintf|
 |__stdio_common_vfprintf_p|
 |__stdio_common_vfprintf_s|
@@ -1264,6 +1266,7 @@ C ランタイム (CRT) ライブラリには、パブリック ライブラリ 
 |_W_Getdays|
 |_W_Getmonths|
 |_W_Getnames|
+|_W_Gettnames|
 |_wassert|
 |_Wcsftime|
 |__wcsncnt|
@@ -1272,6 +1275,6 @@ C ランタイム (CRT) ライブラリには、パブリック ライブラリ 
 |_Xbad_alloc|
 |_Xlength_error|
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [カテゴリ別ユニバーサル C ランタイム ルーチン](../c-runtime-library/run-time-routines-by-category.md)<br/>

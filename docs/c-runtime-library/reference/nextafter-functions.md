@@ -1,7 +1,7 @@
 ---
 title: nextafter、nextafterf、nextafterl、_nextafter、_nextafterf、nexttoward、nexttowardf、nexttowardl
 description: Nextafter、nextafterf、nextafterl、_nextafter、_nextafterf、nextafter、nexttowardf、および nexttowardl の API リファレンスこれは、次の表現可能な浮動小数点値を返します。
-ms.date: 9/1/2020
+ms.date: 1/15/2021
 api_name:
 - nextafterf
 - _nextafterf
@@ -18,6 +18,7 @@ api_name:
 - _o_nexttoward
 - _o_nexttowardf
 - _o_nexttowardl
+- _o__nextafterf
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -59,15 +60,14 @@ helpviewer_keywords:
 - nexttoward function
 - nexttowardf function
 - nexttowardl function
-ms.assetid: 9785bfb9-de53-4bd0-9637-f05fa0c1f6ab
-ms.openlocfilehash: cdcfb1a1d0bf1523a0252d779dba603ce1814b14
-ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
+ms.openlocfilehash: 664ddb204fa089f83acebf6a9042b17a776ea306
+ms.sourcegitcommit: 92dc6d99ba5dcf3b64dee164df2d29beb1e608da
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89555827"
+ms.lasthandoff: 01/18/2021
+ms.locfileid: "98564135"
 ---
-# <a name="nextafter-nextafterf-nextafterl-_nextafter-_nextafterf-nexttoward-nexttowardf-nexttowardl"></a>nextafter、nextafterf、nextafterl、_nextafter、_nextafterf、nexttoward、nexttowardf、nexttowardl
+# <a name="nextafter-nextafterf-nextafterl-_nextafter-_nextafterf-nexttoward-nexttowardf-nexttowardl"></a>`nextafter`, `nextafterf`, `nextafterl`, `_nextafter`, `_nextafterf`, `nexttoward`, `nexttowardf`, `nexttowardl`
 
 次の表現可能な浮動小数点値を返します。
 
@@ -98,25 +98,25 @@ long double nexttoward( long double x, long double y ); /* C++ only, requires <c
 
 ### <a name="parameters"></a>パラメーター
 
-*閉じる*\
+*`x`*\
 開始する浮動小数点値。
 
-*前年*\
+*`y`*\
 移動する浮動小数点値。
 
 ## <a name="return-value"></a>戻り値
 
-*Y*方向の*x*の後に戻り値の型の次の表現可能な浮動小数点値を返します。 *X*と*y*が等しい場合、関数は、戻り値の型に変換された*y*を返します。例外は発生しません。 *X*が*y*と等しくなく、結果が denormal または0の場合は、 **FE_UNDERFLOW**と**FE_INEXACT**の浮動小数点例外の状態が設定され、正しい結果が返されます。 *X*または*y*が NAN の場合、戻り値は入力 nan のいずれかになります。 *X*が有限で、結果が無限であるか、または型で表現できない場合、正しく署名された無限大または NAN が返され、 **FE_OVERFLOW**と**FE_INEXACT**浮動小数点例外の状態が設定され、 **errno**が**ERANGE**に設定されます。
+の後に戻り値の型の次の表現可能な浮動小数点値を返し *`x`* *`y`* ます。 *`x`* と *`y`* が等しい場合、関数は戻り値の *`y`* 型に変換されたを返します。例外は発生しません。 *`x`* がと等しくなく、 *`y`* 結果が denormal または0の場合、 **`FE_UNDERFLOW`** および **`FE_INEXACT`** 浮動小数点例外の状態が設定され、正しい結果が返されます。 またはのいずれかが NAN の場合、 *`x`* *`y`* 戻り値は入力 nan の1つになります。 *`x`* が有限で、結果が無限であるか、型で表現できない場合は、正しく符号付き無限大または NAN が返され、 **`FE_OVERFLOW`** と **`FE_INEXACT`** 浮動小数点例外状態が設定され、 **`errno`** がに設定され **`ERANGE`** ます。
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>注釈
 
-パラメーターの型が*y*の場合を除き、 **nextafter**関数と**nextafter**関数ファミリは同等です。 *X*と*y*が等しい場合、返される値は、戻り値の型に変換された*y*になります。
+**`nextafter`** と **`nexttoward`** の各関数ファミリは、のパラメーターの型を除き、同じです *`y`* 。 *`x`* と *`y`* が等しい場合、返される値は *`y`* 戻り値の型に変換されます。
 
-C++ ではオーバーロードが可能であるため、を含めると、 \<cmath> その戻り値と型を、 **nextafter** と **nextafter** オーバーロードを呼び出すことができ **`float`** **`long double`** ます。 C プログラムでは、この関数を呼び出すためにマクロを使用している場合を除いて、 \<tgmath.h> **nextafter** と **nextafter** は常にを返し **`double`** ます。
+C++ ではオーバーロードが可能であるため、を含めると、 `<cmath>` および型を返すとのオーバーロードを呼び出すことができ **`nextafter`** **`nexttoward`** **`float`** **`long double`** ます。 C プログラムでは、この関数を呼び出すためにマクロを使用している場合を除き、 `<tgmath.h>` **`nextafter`** **`nexttoward`** 常にを返し **`double`** ます。
 
-\<tgmath.h> `nextafter()` マクロまたはマクロを使用する場合 `nexttoward()` 、引数の型によって、どのバージョンの関数が選択されているかが決まります。 詳細については [、「型汎用の算術演算](../../c-runtime-library/tgmath.md) 」を参照してください。
+`<tgmath.h>` `nextafter()` マクロまたはマクロを使用する場合 `nexttoward()` 、引数の型によって、どのバージョンの関数が選択されているかが決まります。 詳細については [、「型汎用の算術演算](../../c-runtime-library/tgmath.md) 」を参照してください。
 
-**_Nextafter**関数と **_nextafterf**関数は、Microsoft 固有の関数です。 **_Nextafterf**関数は、x64 用にコンパイルする場合にのみ使用できます。
+**_Nextafter** 関数と **_nextafterf** 関数は、Microsoft 固有の関数です。 **_Nextafterf** 関数は、x64 用にコンパイルする場合にのみ使用できます。
 
 既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
@@ -124,13 +124,13 @@ C++ ではオーバーロードが可能であるため、を含めると、 \<c
 
 |ルーチンによって返される値|必須ヘッダー (C)|必須ヘッダー (C++)|
 |-------------|---------------------------|-------------------------------|
-|**nextafter**、 **nextafterf**、 **nextafterl**、 **_nextafterf**、 **nextafter**、 **nexttowardf**、 **nexttowardl**|\<math.h>|\<math.h> または \<cmath>|
-|**_nextafter**|\<float.h>|\<float.h> または \<cfloat>|
-|**nextafter** マクロ、  **nextafter** マクロ| \<tgmath.h> ||
+|**`nextafter`**, **`nextafterf`**, **`nextafterl`**, **`_nextafterf`**, **`nexttoward`**, **`nexttowardf`**, **`nexttowardl`**|`<math.h>`|`<math.h>` または `<cmath>`|
+|**`_nextafter`**|`<float.h>`|`<float.h>` または `<cfloat>`|
+|**`nextafter`** マクロ、  **`nexttoward`** マクロ| `<tgmath.h>` ||
 
 互換性について詳しくは、「 [Compatibility](../../c-runtime-library/compatibility.md)」をご覧ください。
 
 ## <a name="see-also"></a>関連項目
 
 [浮動小数点のサポート](../../c-runtime-library/floating-point-support.md)\
-[isnan、_isnan、_isnanf](isnan-isnan-isnanf.md)
+[`isnan`, `_isnan`, `_isnanf`](isnan-isnan-isnanf.md)

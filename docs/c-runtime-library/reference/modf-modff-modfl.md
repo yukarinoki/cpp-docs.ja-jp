@@ -1,12 +1,13 @@
 ---
 title: modf、modff、modfl
 description: Modf、modff、および modff の API リファレンス浮動小数点値を小数部と整数部に分割します。
-ms.date: 4/2/2020
+ms.date: 1/15/2021
 api_name:
 - modff
 - modf
 - modfl
 - _o_modf
+- _o_modff
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -36,15 +37,14 @@ helpviewer_keywords:
 - modf function
 - modff function
 - modfl function
-ms.assetid: b1c7abf5-d476-43ca-a03c-02072a86e32d
-ms.openlocfilehash: 0d3522079acc8a9d2c8409b1cad78e7f50a7f788
-ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
+ms.openlocfilehash: fbc68c3369e8b992350534e3baa5f19b0f2a5e39
+ms.sourcegitcommit: 92dc6d99ba5dcf3b64dee164df2d29beb1e608da
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89556763"
+ms.lasthandoff: 01/18/2021
+ms.locfileid: "98564019"
 ---
-# <a name="modf-modff-modfl"></a>modf、modff、modfl
+# <a name="modf-modff-modfl"></a>`modf`, `modff`, `modfl`
 
 浮動小数点値を小数部と整数部に分割します。
 
@@ -63,23 +63,23 @@ long double modf( long double x, long double * intptr );  // C++ only
 
 ### <a name="parameters"></a>パラメーター
 
-*x*<br/>
+*`x`*\
 浮動小数点値。
 
-*代わりに*<br/>
+*`intptr`*\
 格納された整数部分へのポインター。
 
 ## <a name="return-value"></a>戻り値
 
-この関数は *x* の符号付き小数部を返します。 エラーの戻り値はありません。
+この関数は、の符号付き小数部を返し *`x`* ます。 エラーの戻り値はありません。
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>注釈
 
-**Modf**関数は、浮動小数点値*x*を小数部と整数部に分割し、それぞれが*x*と同じ符号を持ちます。 *X*の符号付き小数部が返されます。 整数部分は、 *intptr*に浮動小数点値として格納されます。
+**Modf** 関数は、浮動小数点値を *`x`* 小数部と整数部に分割します。それぞれの符号はと同じ *`x`* です。 の符号付き小数部分 *`x`* が返されます。 整数部分は、に浮動小数点値として格納され *`intptr`* ます。
 
-**modf** には、ストリーミング SIMD 拡張命令 2 (SSE2) を使用する実装があります。 SSE2 実装の使い方の詳細および制約については、「[_set_SSE2_enable](set-sse2-enable.md)」をご覧ください。
+**modf** には、ストリーミング SIMD 拡張命令 2 (SSE2) を使用する実装があります。 [`_set_SSE2_enable`](set-sse2-enable.md)SSE2 実装の使用に関する情報と制限については、「」を参照してください。
 
-C++ ではオーバーロードが可能であるため、またはパラメーターを受け取って返す **modf** のオーバーロードを呼び出すことができ **`float`** **`long double`** ます。 C プログラムでは、 **modf** は常に2つの double 値を受け取り、double 値を返します。
+C++ ではオーバーロードが可能であるため、 **`modf`** またはパラメーターを受け取って返すのオーバーロードを呼び出すことができ **`float`** **`long double`** ます。 C プログラムでは、は **`modf`** 常に2つの double 値を受け取り、double 値を返します。
 
 既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
@@ -87,9 +87,9 @@ C++ ではオーバーロードが可能であるため、またはパラメー�
 
 |ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
-|**modf**、 **modff**、 **modff**|40u-c \<math.h><br /><br /> C++:、 \<cmath> または \<math.h>|
+|**`modf`**, **`modff`**, **`modfl`**|40u-c `<math.h>`<br /><br /> C++:、 `<cmath>` または `<math.h>`|
 
-互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性について詳しくは、「 [Compatibility](../../c-runtime-library/compatibility.md)」をご覧ください。
 
 ## <a name="example"></a>例
 
@@ -117,6 +117,6 @@ For -14.876543, the fraction is -0.876543 and the integer is -14
 
 ## <a name="see-also"></a>関連項目
 
-[浮動小数点のサポート](../../c-runtime-library/floating-point-support.md)<br/>
-[frexp](frexp.md)<br/>
-[ldexp](ldexp.md)<br/>
+[浮動小数点のサポート](../../c-runtime-library/floating-point-support.md)\
+[`frexp`](frexp.md)\
+[`ldexp`](ldexp.md)

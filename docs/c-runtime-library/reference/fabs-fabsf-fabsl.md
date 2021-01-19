@@ -1,12 +1,13 @@
 ---
 title: fabs、fabsf、fabsl
 description: Fabs、fabsf、および fabsl の API リファレンス浮動小数点値の絶対値を計算する。
-ms.date: 08/31/2020
+ms.date: 1/15/2021
 api_name:
 - fabsf
 - fabs
 - fabsl
 - _o_fabs
+- _o_fabsf
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -37,15 +38,14 @@ helpviewer_keywords:
 - calculating absolute values
 - fabs function
 - fabsl function
-ms.assetid: 23bca210-f408-4f5e-b46b-0ccaaec31e36
-ms.openlocfilehash: a819172fc94224ff4c51c8fc342b142ffbe05ae7
-ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
+ms.openlocfilehash: 453965b846dff9affb3fa6dce99ea8b6189a5d6c
+ms.sourcegitcommit: 92dc6d99ba5dcf3b64dee164df2d29beb1e608da
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89554839"
+ms.lasthandoff: 01/18/2021
+ms.locfileid: "98563927"
 ---
-# <a name="fabs-fabsf-fabsl"></a>fabs、fabsf、fabsl
+# <a name="fabs-fabsf-fabsl"></a>`fabs`, `fabsf`, `fabsl`
 
 浮動小数点引数の絶対値を計算します。
 
@@ -73,22 +73,22 @@ long double fabsl(
 
 ### <a name="parameters"></a>パラメーター
 
-*閉じる*\
+*`x`*\
 浮動小数点値。
 
 ## <a name="return-value"></a>戻り値
 
-**Fabs**関数は、引数*x*の絶対値を返します。 エラーの戻り値はありません。
+関数は、 **`fabs`** 引数 *x* の絶対値を返します。 エラーの戻り値はありません。
 
-|入力|SEH 例外|Matherr 例外|
+|入力|SEH 例外|`Matherr` 例外的|
 |-----------|-------------------|-----------------------|
-|± QNAN、IND|なし|_DOMAIN|
+|± `QNAN`,`IND`|なし|`_DOMAIN`|
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>注釈
 
-C++ ではオーバーロードが可能であるため、ヘッダーをインクルードすると、 **fabs** のオーバーロードを呼び出すことができ \<cmath> ます。 C プログラムでは、この関数を呼び出すためにマクロを使用している場合を除き、 \<tgmath.h> **fabs** は常にを受け取り、を返し **`double`** ます。
+C++ ではオーバーロードが可能であるため、ヘッダーをインクルードすると、のオーバーロードを呼び出すことができ **`fabs`** `<cmath>` ます。 C プログラムでは、 `<tgmath.h>` この関数を呼び出すためにマクロを使用している場合を除き、は **`fabs`** 常にを受け取り、を返し **`double`** ます。
 
-マクロを使用する場合 \<tgmath.h> `fabs()` 、引数の型によって、どのバージョンの関数が選択されているかが決まります。 詳細については [、「型汎用の算術演算](../../c-runtime-library/tgmath.md) 」を参照してください。
+マクロを使用する場合 `<tgmath.h>` `fabs()` 、引数の型によって、どのバージョンの関数が選択されているかが決まります。 詳細については [、「型汎用の算術演算](../../c-runtime-library/tgmath.md) 」を参照してください。
 
 既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
@@ -96,17 +96,17 @@ C++ ではオーバーロードが可能であるため、ヘッダーをイン�
 
 |関数|必須の C ヘッダー|必須の C++ ヘッダー|
 |--------------|-----------------------|---------------------------|
-|**fabs**、 **fabsf**、 **fabsl**|\<math.h>|\<cmath> または \<math.h>|
-|**fabs** マクロ | \<tgmath.h> ||
+|**`fabs`**, **`fabsf`**, **`fabsl`**|`<math.h>`|`<cmath>` または `<math.h>`|
+|**`fabs`** マクロ | `<tgmath.h>` ||
 
-互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性について詳しくは、「 [Compatibility](../../c-runtime-library/compatibility.md)」をご覧ください。
 
 ## <a name="example"></a>例
 
-[abs](abs-labs-llabs-abs64.md) 関数の例を参照してください。
+の例を参照してください [`abs`](abs-labs-llabs-abs64.md) 。
 
 ## <a name="see-also"></a>関連項目
 
-[浮動小数点のサポート](../../c-runtime-library/floating-point-support.md)<br/>
-[abs、labs、llabs、_abs64](abs-labs-llabs-abs64.md)<br/>
-[_cabs](cabs.md)<br/>
+[浮動小数点のサポート](../../c-runtime-library/floating-point-support.md)\
+[`abs, labs, llabs, _abs64`](abs-labs-llabs-abs64.md)\
+[`_cabs`](cabs.md)

@@ -1,13 +1,14 @@
 ---
 title: sinh、sinhf、sinhl
 description: 浮動小数点値のハイパーボリックサインを計算するための API リファレンスです。
-ms.date: 08/31/2020
+ms.date: 1/15/2021
 api_name:
 - sinh
 - sinhl
 - sinhf
 - sinhl
 - _o_sinh
+- _o_sinhf
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -38,14 +39,14 @@ helpviewer_keywords:
 - sinhf function
 - sinhl function
 - hyperbolic functions
-ms.openlocfilehash: 6a8c9c4195eab66a46230e7a3baf6194e17c4519
-ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
+ms.openlocfilehash: 73f7210105419c4b8cb9a6e47e5c5f0e43437738
+ms.sourcegitcommit: 92dc6d99ba5dcf3b64dee164df2d29beb1e608da
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89556178"
+ms.lasthandoff: 01/18/2021
+ms.locfileid: "98563797"
 ---
-# <a name="sinh-sinhf-sinhl"></a>sinh、sinhf、sinhl
+# <a name="sinh-sinhf-sinhl"></a>`sinh`, `sinhf`, `sinhl`
 
 ハイパーボリックサインを計算します。
 
@@ -63,25 +64,25 @@ long double sinh(long double x);  // C++ only
 
 ### <a name="parameters"></a>パラメーター
 
-*閉じる*\
+*`x`*\
 角度 (ラジアン)。
 
 ## <a name="return-value"></a>戻り値
 
-**Sinh**関数は、 *x*のハイパーボリックサインを返します。 既定では、結果が大きすぎる場合、 **sinh** は **errno** を **ERANGE** に設定し、±**HUGE_VAL**を返します。
+関数は、 **`sinh`** のハイパーボリックサインを返し *`x`* ます。 既定では、結果が大きすぎる場合、 **`sinh`** は **`errno`** をに設定 **`ERANGE`** し、±を返し **`HUGE_VAL`** ます。
 
-|入力|SEH 例外|Matherr 例外|
+|入力|SEH 例外|`Matherr` 例外的|
 |-----------|-------------------|-----------------------|
-|± QNAN、IND|なし|_DOMAIN|
-|&#124;x&#124; ≥ 7.104760 e + 002|OVERFLOW+INEXACT|OVERFLOW|
+|± `QNAN`,`IND`|なし|`_DOMAIN`|
+|&#124;x&#124; ≥ 7.104760 e + 002|`OVERFLOW+INEXACT`|`OVERFLOW`|
 
-リターン コードの詳細については、「[errno、_doserrno、_sys_errlist、_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」をご覧ください。
+リターンコードの詳細については、「」、「」、「」、 [ `errno` `_doserrno` `_sys_errlist` および `_sys_nerr` ](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)「」を参照してください。
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>注釈
 
-C++ ではオーバーロードが可能であるため、またはの値を受け取って返す **sinh** のオーバーロードを呼び出すことができ **`float`** **`long double`** ます。 C プログラムでは、この関数を呼び出すためにマクロを使用している場合を除き \<tgmath.h> 、 **sinh** は常にを受け取り、を返し **`double`** ます。
+C++ ではオーバーロードが可能であるため、 **`sinh`** またはの値を受け取って返すのオーバーロードを呼び出すことができ **`float`** **`long double`** ます。 C プログラムでは、 `<tgmath.h>` この関数を呼び出すためにマクロを使用している場合を除き、は **`sinh`** 常にを受け取り、を返し **`double`** ます。
 
-マクロを使用する場合 \<tgmath.h> `sinh()` 、引数の型によって、どのバージョンの関数が選択されているかが決まります。 詳細については [、「型汎用の算術演算](../../c-runtime-library/tgmath.md) 」を参照してください。
+マクロを使用する場合 `<tgmath.h>` `sinh()` 、引数の型によって、どのバージョンの関数が選択されているかが決まります。 詳細については [、「型汎用の算術演算](../../c-runtime-library/tgmath.md) 」を参照してください。
 
 既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
@@ -89,10 +90,10 @@ C++ ではオーバーロードが可能であるため、またはの値を受�
 
 |ルーチンによって返される値|必須ヘッダー (C)|必須ヘッダー (C++)|
 |-|-|-|
-|**sinh**、 **sinhf**、 **sinhf**|\<math.h>|\<cmath> または \<math.h>|
-|**sinh ()** マクロ | \<tgmath.h> ||
+|**`sinh`**, **`sinhf`**, **`sinhl`**|`<math.h>`|`<cmath>` または `<math.h>`|
+|**`sinh()`** マクロ | `<tgmath.h>` ||
 
-互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性について詳しくは、「 [Compatibility](../../c-runtime-library/compatibility.md)」をご覧ください。
 
 ## <a name="example"></a>例
 
@@ -125,9 +126,9 @@ cosh( 1.570796 ) = 2.509178
 
 ## <a name="see-also"></a>関連項目
 
-[浮動小数点のサポート](../../c-runtime-library/floating-point-support.md)<br/>
-[acosh、acoshf、acoshl](acosh-acoshf-acoshl.md)<br/>
-[asinh、asinhf、asinhl](asinh-asinhf-asinhl.md)<br/>
-[atanh、atanhf、atanhl](atanh-atanhf-atanhl.md)<br/>
-[cosh、coshf、coshl](cosh-coshf-coshl.md)<br/>
-[tanh、tanhf、tanhl](tanh-tanhf-tanhl.md)<br/>
+[浮動小数点のサポート](../../c-runtime-library/floating-point-support.md)\
+[`acosh`, `acoshf`, `acoshl`](acosh-acoshf-acoshl.md)\
+[`asinh`, `asinhf`, `asinhl`](asinh-asinhf-asinhl.md)\
+[`atanh`, `atanhf`, `atanhl`](atanh-atanhf-atanhl.md)\
+[`cosh`, `coshf`, `coshl`](cosh-coshf-coshl.md)\
+[`tanh`, `tanhf`, `tanhl`](tanh-tanhf-tanhl.md)

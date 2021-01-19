@@ -141,12 +141,12 @@ helpviewer_keywords:
 - std::unordered_map::size
 - std::unordered_map::swap
 ms.assetid: 7cf7cfa1-16e7-461c-a9b2-3b8d8ec24e0d
-ms.openlocfilehash: f8ffd7b3990f2d0ab40f8059e65f0aba4d4c8e0c
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 81428295f79d71227bf0fdf72e18f2fde30ac763
+ms.sourcegitcommit: 92dc6d99ba5dcf3b64dee164df2d29beb1e608da
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91503582"
+ms.lasthandoff: 01/18/2021
+ms.locfileid: "98564109"
 ---
 # <a name="unordered_map-class"></a>unordered_map クラス
 
@@ -191,12 +191,12 @@ class unordered_map;
 |[const_reference](#const_reference)|要素への定数参照の型です。|
 |[difference_type](#difference_type)|2 つの要素間の距離を表す、符号付きの型です。|
 |[hasher](#hasher)|ハッシュ関数の型です。|
-|[反](#iterator)|被制御シーケンスの反復子の型です。|
+|[iterator](#iterator)|被制御シーケンスの反復子の型です。|
 |[key_equal](#key_equal)|比較関数の型です。|
 |[key_type](#key_type)|順序付けキーの型です。|
 |[local_iterator](#local_iterator)|被制御シーケンスのバケット反復子の型です。|
 |[mapped_type](#mapped_type)|各キーに関連付けられた、マップされた値の型です。|
-|[pointer](#pointer)|要素へのポインターの型です。|
+|[ポインター (pointer)](#pointer)|要素へのポインターの型です。|
 |[reference](#reference)|要素への参照の型です。|
 |[size_type](#size_type)|2 つの要素間の距離を表す、符号なしの型です。|
 |[value_type](#value_type)|要素の型。|
@@ -212,7 +212,7 @@ class unordered_map;
 |[cend](#cend)|被制御シーケンスの末尾を指定します。|
 |[オフ](#clear)|すべての要素を削除します。|
 |[count](#count)|指定したキーに一致する要素の数を検索します。|
-|[contains](#contains)<sup>c++ 20</sup>を含む|に指定されたキーを持つ要素があるかどうかを確認し `unordered_map` ます。|
+|[](#contains)<sup>c++ 20</sup>を含む|に指定されたキーを持つ要素があるかどうかを確認し `unordered_map` ます。|
 |[emplace](#emplace)|構築された要素を適切な場所に追加します。|
 |[emplace_hint](#emplace_hint)|構築された要素を適切な場所にヒントと一緒に追加します。|
 |[empty](#empty)|要素が存在しないかどうかをテストします。|
@@ -248,7 +248,7 @@ class unordered_map;
 
 被制御シーケンスに対するストレージの割り当ておよび解放は、格納されている [unordered_map::allocator_type](#allocator_type) 型のアロケーター オブジェクトを介して行われます。 このようなアロケーターオブジェクトは、型のオブジェクトと同じ外部インターフェイスを持っている必要があり `allocator` ます。 コンテナー オブジェクトを代入しても、格納されているアロケーター オブジェクトはコピーされない点に注意してください。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:**\<unordered_map>
 
@@ -323,7 +323,6 @@ const Ty& at(const Key& key) const;
 #include <iostream>
 
 typedef std::unordered_map<char, int> Mymap;
-typedef std::unordered_map<char, int> Mymap;
 int main()
 {
     Mymap c1;
@@ -369,7 +368,7 @@ const_local_iterator begin(size_type nbucket) const;
 #include <unordered_map>
 #include <iostream>
 
-#typedef std::unordered_map<char, int> Mymap;
+typedef std::unordered_map<char, int> Mymap;
 int main()
 {
     Mymap c1;
@@ -420,7 +419,7 @@ size_type bucket(const Key& keyval) const;
 
 ### <a name="remarks"></a>注釈
 
-このメンバー関数は、キー値 *keyval*に現在対応しているバケット番号を返します。
+このメンバー関数は、キー値 *keyval* に現在対応しているバケット番号を返します。
 
 ### <a name="example"></a>例
 
@@ -562,7 +561,7 @@ size_type bucket_size(size_type nbucket) const;
 
 ### <a name="remarks"></a>注釈
 
-このメンバー関数は、バケット数 *nbucket*のサイズを返します。
+このメンバー関数は、バケット数 *nbucket* のサイズを返します。
 
 ### <a name="example"></a>例
 
@@ -1218,7 +1217,7 @@ const_local_iterator end(size_type nbucket) const;
 
 ### <a name="remarks"></a>注釈
 
-最初の 2 つのメンバー関数は、シーケンスの末尾の次を示す前方反復子を返します。 最後の2つのメンバー関数は、バケット *nbucket*の末尾の次の位置を示す前方反復子を返します。
+最初の 2 つのメンバー関数は、シーケンスの末尾の次を示す前方反復子を返します。 最後の2つのメンバー関数は、バケット *nbucket* の末尾の次の位置を示す前方反復子を返します。
 
 ## <a name="unordered_mapequal_range"></a><a name="equal_range"></a> unordered_map:: equal_range
 
@@ -1236,7 +1235,7 @@ std::pair<const_iterator, const_iterator>  equal_range(const Key& keyval) const;
 
 ### <a name="remarks"></a>注釈
 
-このメンバー関数は、 `X` `[X.first, X.second)` *keyval*と同等の順序付けを持つ被制御シーケンスの要素だけを区切る反復子のペアを返します。 そのような要素が存在しない場合は、どちらの反復子も `end()`です。
+このメンバー関数は、 `X` `[X.first, X.second)` *keyval* と同等の順序付けを持つ被制御シーケンスの要素だけを区切る反復子のペアを返します。 そのような要素が存在しない場合は、どちらの反復子も `end()`です。
 
 ### <a name="example"></a>例
 
@@ -2045,7 +2044,7 @@ void max_load_factor(float factor);
 
 ### <a name="remarks"></a>注釈
 
-1 つ目のメンバー関数は、格納されている最大テーブル占有率を返します。 2番目のメンバー関数は、格納されている最大占有率を *係数*に置き換えます。
+1 つ目のメンバー関数は、格納されている最大テーブル占有率を返します。 2番目のメンバー関数は、格納されている最大占有率を *係数* に置き換えます。
 
 ### <a name="example"></a>例
 
@@ -2179,7 +2178,7 @@ Ty& operator[](Key&& keyval);
 
 引数のキー値が見つからない場合は、データ型の既定値と一緒に挿入されます。
 
-`operator[]`*m*[*key*] = を使用して map *m*に要素を挿入するために使用でき `DataValue` ます。ここで、はキー値が `DataValue` `mapped_type` *key*である要素のの値です。
+`operator[]`*m*[*key*] = を使用して map *m* に要素を挿入するために使用でき `DataValue` ます。ここで、はキー値が `DataValue` `mapped_type` *key* である要素のの値です。
 
 `operator[]` を使用して要素を挿入した場合、返される参照では、挿入によって既存の要素が変更される、または新しい要素が作成されるかどうかは指示されません。 メンバー関数 [find](../standard-library/map-class.md#find) および [insert](../standard-library/map-class.md#insert) を使用して、挿入前に指定のキーを持つ要素が既に存在するかどうかを確認することができます。
 
@@ -2590,7 +2589,7 @@ void swap(unordered_map& right);
 
 ### <a name="remarks"></a>注釈
 
-このメンバー関数は、との間で被制御シーケンスを交換し **`*this`** ます。 *right* [Unordered_map:: get_allocator](#get_allocator)の場合は、一定の時間内にこれを実行します。この場合、 `() == right.get_allocator()` 型の格納された特性オブジェクトをコピーした結果としてのみ例外がスローされ、 `Tr` 2 つの被制御シーケンス内の要素を指定する参照、ポインター、反復子は無効になります。 それ以外の場合、2 つの被制御シーケンス内の要素数に比例した回数、要素の割り当てとコンストラクター呼び出しが実行されます。
+このメンバー関数は、との間で被制御シーケンスを交換し **`*this`** ます。  [Unordered_map:: get_allocator](#get_allocator)の場合は、一定の時間内にこれを実行します。この場合、 `() == right.get_allocator()` 型の格納された特性オブジェクトをコピーした結果としてのみ例外がスローされ、 `Tr` 2 つの被制御シーケンス内の要素を指定する参照、ポインター、反復子は無効になります。 それ以外の場合、2 つの被制御シーケンス内の要素数に比例した回数、要素の割り当てとコンストラクター呼び出しが実行されます。
 
 ### <a name="example"></a>例
 
@@ -2722,7 +2721,7 @@ unordered_map(
 
 1 つ目のコンストラクターは、`right` によって制御されるシーケンスのコピーを指定します。 2 つ目のコンストラクターは、空の被制御シーケンスのコピーを指定します。 3 つ目のコンストラクターは、要素値 `[first, last)` のシーケンスを挿入します。 4 つ目のコンストラクターは、`right` を移動することによって、シーケンスのコピーを指定します。
 
-さらに、格納された複数の値を初期化する処理が実行されます。この処理は、すべてのコンストラクターに共通です。 コピーコンストラクターの場合、値は *Right*から取得されます。 それ以外の場合:
+さらに、格納された複数の値を初期化する処理が実行されます。この処理は、すべてのコンストラクターに共通です。 コピーコンストラクターの場合、値は *Right* から取得されます。 それ以外の場合:
 
 バケットの最小数は、引数 *Bucket_count*(存在する場合) です。それ以外の場合は、実装定義の値としてここで説明されている既定値になり `N0` ます。
 

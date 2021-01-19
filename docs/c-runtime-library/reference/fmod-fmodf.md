@@ -1,12 +1,13 @@
 ---
 title: fmod、fmodf、fmodl
 description: Fmod、fmodf、および fmodl の API リファレンスこれは、浮動小数点の剰余を計算します。
-ms.date: 9/1/2020
+ms.date: 1/15/2021
 api_name:
 - fmod
 - fmodf
 - fmodl
 - _o_fmod
+- _o_fmodf
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -34,15 +35,14 @@ helpviewer_keywords:
 - fmodl function
 - fmod function
 - floating-point numbers, calculating remainders
-ms.assetid: 6962d369-d11f-40b1-a6d7-6f67239f8a23
-ms.openlocfilehash: 2b610dec79c98b973af09f8efb147ad6797f7946
-ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
+ms.openlocfilehash: 8d2c3bcb0f871eb707f264478c4ce492bbb9c80c
+ms.sourcegitcommit: 92dc6d99ba5dcf3b64dee164df2d29beb1e608da
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89556087"
+ms.lasthandoff: 01/18/2021
+ms.locfileid: "98563939"
 ---
-# <a name="fmod-fmodf-fmodl"></a>fmod、fmodf、fmodl
+# <a name="fmod-fmodf-fmodl"></a>`fmod`, `fmodf`, `fmodl`
 
 浮動小数点の剰余を計算します。
 
@@ -75,20 +75,20 @@ long double fmodl(
 
 ### <a name="parameters"></a>パラメーター
 
-*x*、 *y*\
+*`x`*, *`y`*\
 浮動小数点値。
 
 ## <a name="return-value"></a>戻り値
 
-**fmod**は、 *x*y の浮動小数点の剰余を返し  /  *y*ます。 *Y*の値が0.0 の場合、 **fmod**は簡易な NaN を返します。 **Printf**ファミリによる簡易な NaN の表現については、「 [printf](printf-printf-l-wprintf-wprintf-l.md)」を参照してください。
+**`fmod`** の浮動小数点の剰余を返し *`x`*  /  *`y`* ます。 の値が0.0 の場合、は簡易 *`y`* **`fmod`** な NaN を返します。 ファミリによる簡易な NaN の表現については **`printf`** 、「 [printf](printf-printf-l-wprintf-wprintf-l.md)」を参照してください。
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>注釈
 
-**Fmod**関数*は x*y の浮動小数点の剰余*f*を計算します。ここで、  /  *y* *x*  =  *i* \* *y*  +  *f* *i*は整数、 *f*は*x*と同じ符号、 *f*の絶対値は*y*の絶対値よりも小さくなります。
+関数は、 **`fmod`**  *`x`*  /  *`y`* *`x`*  =  *i* \* *`y`*  +  *`f`* ( *`i`* は整数)、は *`f`* と同じ符号を持ち、 *`x`* の絶対値は *`f`* の絶対値よりも小さく *`y`* なるように、の浮動小数点の剰余 f を計算します。
 
-C++ ではオーバーロードが可能であるため、との値を受け取って返す **fmod** のオーバーロードを呼び出すことができ **`float`** **`long double`** ます。 C プログラムでは、この関数を呼び出すためにマクロを使用している場合を除き \<tgmath.h> 、 **fmod** は常に2つの引数を受け取り、を **`double`** 返し **`double`** ます。
+C++ ではオーバーロードが可能であるため、との値を受け取って返すのオーバーロードを呼び出すことができ **`fmod`** **`float`** **`long double`** ます。 C プログラムでは、 `<tgmath.h>` この関数を呼び出すためにマクロを使用している場合を除き、は **`fmod`** 常に2つの引数を受け取り、を **`double`** 返し **`double`** ます。
 
-マクロを使用する場合 \<tgmath.h> `fmod()` 、引数の型によって、どのバージョンの関数が選択されているかが決まります。 詳細については [、「型汎用の算術演算](../../c-runtime-library/tgmath.md) 」を参照してください。
+マクロを使用する場合 `<tgmath.h>` `fmod()` 、引数の型によって、どのバージョンの関数が選択されているかが決まります。 詳細については [、「型汎用の算術演算](../../c-runtime-library/tgmath.md) 」を参照してください。
 
 既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
@@ -96,10 +96,10 @@ C++ ではオーバーロードが可能であるため、との値を受け取�
 
 |関数|必須ヘッダー|
 |--------------|---------------------|
-|**fmod**、 **fmodf**、 **fmodl**|\<math.h>|
-|**fmod** マクロ | \<tgmath.h> |
+|**`fmod`**, **`fmodf`**, **`fmodl`**|`<math.h>`|
+|**`fmod`** マクロ | `<tgmath.h>` |
 
-互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性について詳しくは、「 [Compatibility](../../c-runtime-library/compatibility.md)」をご覧ください。
 
 ## <a name="example"></a>例
 
@@ -125,8 +125,8 @@ The remainder of -10.00 / 3.00 is -1.000000
 
 ## <a name="see-also"></a>関連項目
 
-[浮動小数点のサポート](../../c-runtime-library/floating-point-support.md)<br/>
-[ceil、ceilf、ceill](ceil-ceilf-ceill.md)<br/>
-[fabs、fabsf、fabsl](fabs-fabsf-fabsl.md)<br/>
-[floor、floorf、floorl](floor-floorf-floorl.md)<br/>
-[_CIfmod](../../c-runtime-library/cifmod.md)<br/>
+[浮動小数点のサポート](../../c-runtime-library/floating-point-support.md)\
+[`ceil, ceilf, ceill`](ceil-ceilf-ceill.md)\
+[`fabs, fabsf, fabsl`](fabs-fabsf-fabsl.md)\
+[f`loor, floorf, floorl`](floor-floorf-floorl.md)\
+[`_CIfmod`](../../c-runtime-library/cifmod.md)

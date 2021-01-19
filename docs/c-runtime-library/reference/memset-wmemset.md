@@ -1,10 +1,11 @@
 ---
-description: 詳細については、「memset、wmemset」を参照してください。
 title: memset、wmemset
-ms.date: 11/04/2016
+description: 詳細については、「memset、wmemset」を参照してください。
+ms.date: 1/15/2021
 api_name:
 - wmemset
 - memset
+- _o_memset
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -19,6 +20,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -29,15 +31,14 @@ f1_keywords:
 helpviewer_keywords:
 - wmemset function
 - memset function
-ms.assetid: e7ceb01b-df69-49c2-b294-a39358ad4699
-ms.openlocfilehash: 547cbbcab4966291ab540b6e57f68d4057995ff8
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: 1ee5b3cb3653a3d5486eecb0f3b033e69d9db9fa
+ms.sourcegitcommit: 92dc6d99ba5dcf3b64dee164df2d29beb1e608da
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97171349"
+ms.lasthandoff: 01/18/2021
+ms.locfileid: "98563966"
 ---
-# <a name="memset-wmemset"></a>memset、wmemset
+# <a name="memset-wmemset"></a>`memset`, `wmemset`
 
 指定した文字にバッファーを設定します。
 
@@ -58,33 +59,35 @@ wchar_t *wmemset(
 
 ### <a name="parameters"></a>パラメーター
 
-*先*<br/>
+*`dest`*\
 ターゲットへのポインター。
 
-*c*<br/>
+*`c`*\
 設定する文字。
 
-*count*<br/>
+*`count`*\
 文字数。
 
 ## <a name="return-value"></a>戻り値
 
-*Dest* の値。
+の値 *`dest`* 。
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>注釈
 
-*Dest* の最初の *カウント* 文字を *c* 文字に設定します。
+*`count`* の最初の文字 *`dest`* を文字に設定し *`c`* ます。
 
-**セキュリティ** に関する注意コピー先のバッファーには、少なくとも *カウント* 文字のための十分な空き領域があることを確認してください。 詳しくは、「 [バッファー オーバーランの回避](/windows/win32/SecBP/avoiding-buffer-overruns)」をご覧ください。
+**セキュリティ** に関する注意コピー先のバッファーに、少なくとも文字の十分な空き領域があることを確認し *`count`* ます。 詳しくは、「 [バッファー オーバーランの回避](/windows/win32/SecBP/avoiding-buffer-overruns)」をご覧ください。
+
+既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
 |ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
-|**memset**|\<memory.h> または \<string.h>|
-|**wmemset**|\<wchar.h>|
+|**`memset`**|`<memory.h>` または `<string.h>`|
+|**`wmemset`**|`<wchar.h>`|
 
-互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性について詳しくは、「 [Compatibility](../../c-runtime-library/compatibility.md)」をご覧ください。
 
 ## <a name="libraries"></a>ライブラリ
 
@@ -148,9 +151,9 @@ After:  **** is a test of the wmemset function
 
 ## <a name="see-also"></a>関連項目
 
-[バッファー操作](../../c-runtime-library/buffer-manipulation.md)<br/>
-[_memccpy](memccpy.md)<br/>
-[memchr、wmemchr](memchr-wmemchr.md)<br/>
-[memcmp、wmemcmp](memcmp-wmemcmp.md)<br/>
-[memcpy、wmemcpy](memcpy-wmemcpy.md)<br/>
-[_strnset、_strnset_l、_wcsnset、_wcsnset_l、_mbsnset、_mbsnset_l](strnset-strnset-l-wcsnset-wcsnset-l-mbsnset-mbsnset-l.md)<br/>
+[バッファー操作](../../c-runtime-library/buffer-manipulation.md)\
+[`_memccpy`](memccpy.md)\
+[`memchr`, `wmemchr`](memchr-wmemchr.md)\
+[`memcmp`, `wmemcmp`](memcmp-wmemcmp.md)\
+[`memcpy`、wmemcpy](memcpy-wmemcpy.md)\
+[`_strnset, _strnset_l, _wcsnset, _wcsnset_l, _mbsnset, _mbsnset_l`](strnset-strnset-l-wcsnset-wcsnset-l-mbsnset-mbsnset-l.md)
