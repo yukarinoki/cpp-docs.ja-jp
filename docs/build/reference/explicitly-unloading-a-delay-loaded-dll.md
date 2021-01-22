@@ -1,29 +1,28 @@
 ---
-description: 詳細については、「Delay-Loaded DLL の明示的なアンロード」を参照してください。
-title: 遅延読み込みした DLL の明示的なアンロード
-ms.date: 11/04/2016
+description: 詳細については、「遅延読み込みされた DLL の明示的なアンロード」を参照してください。
+title: 遅延読み込みされた DLL の明示的なアンロード
+ms.date: 01/19/2021
 helpviewer_keywords:
 - /DELAY:UNLOAD linker option
 - DELAY:UNLOAD linker option
 - __FUnloadDelayLoadedDLL2
 - delayed loading of DLLs, unloading
-ms.assetid: 1c4c5172-fd06-45d3-9e4f-f12343176b3c
-ms.openlocfilehash: 03df08487acc1be05226021d6b7c1593eb0f031b
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: b4e137f293c6497e234a7bb93bd16b5bb6887741
+ms.sourcegitcommit: 3d9cfde85df33002e3b3d7f3509ff6a8dc4c0a21
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97192383"
+ms.lasthandoff: 01/21/2021
+ms.locfileid: "98666889"
 ---
-# <a name="explicitly-unloading-a-delay-loaded-dll"></a>遅延読み込みした DLL の明示的なアンロード
+# <a name="explicitly-unload-a-delay-loaded-dll"></a>遅延読み込みされた DLL の明示的なアンロード
 
-[/Delay](delay-delay-load-import-settings.md): unload リンカーオプションを使用すると、遅延読み込みされた DLL をアンロードできます。 既定では、コードが DLL をアンロードするとき (/delay: unload および **__FUnloadDelayLoadedDLL2** を使用)、遅延読み込みされたインポートは、インポートアドレステーブル (IAT) に残ります。 ただし、リンカーコマンドラインで/delay: unload を使用する場合、ヘルパー関数は DLL の明示的なアンロードをサポートし、IAT を元の形式にリセットします。現在、無効なポインターは上書きされます。 IAT は、 [ImgDelayDescr](calling-conventions-parameters-and-return-type.md) 内のフィールドであり、元の iat のコピー (存在する場合) のアドレスが含まれています。
+[`/delay:unload`](delay-delay-load-import-settings.md)リンカーオプションを使用すると、遅延読み込みされた DLL をコードで明示的にアンロードできます。 既定では、コードが DLL をアンロードするときに、遅延読み込みされたインポートは、インポートアドレステーブル (IAT) に残ります。 ただし、リンカーコマンドラインでを使用する場合、 **`/delay:unload`** ヘルパー関数は、呼び出しによる DLL の明示的なアンロードをサポート `__FUnloadDelayLoadedDLL2` し、IAT を元の形式にリセットします。 現在、無効なポインターが上書きされます。 IAT は、 [`ImgDelayDescr`](calling-conventions-parameters-and-return-type.md) 元の iat のコピー (存在する場合) のアドレスを含む構造体のフィールドです。
 
 ## <a name="example"></a>例
 
 ### <a name="code"></a>コード
 
-```
+```C
 // link with /link /DELAYLOAD:MyDLL.dll /DELAY:UNLOAD
 #include <windows.h>
 #include <delayimp.h>
@@ -48,16 +47,16 @@ int main()
 }
 ```
 
-### <a name="comments"></a>説明
+### <a name="comments"></a>コメント
 
 遅延読み込みされた DLL のアンロードに関する重要な注意事項:
 
-- **__FUnloadDelayLoadedDLL2** 関数の実装については、\VC7\INCLUDE\DELAYHLP. ファイルを参照してください。.CPP.
+- 関数の実装は、ファイルの `__FUnloadDelayLoadedDLL2` *`delayhlp.cpp`* VC ディレクトリで確認でき *`include`* ます。
 
-- **__FUnloadDelayLoadedDLL2** 関数の name パラメーターは、インポートライブラリに含まれているもの (大文字と小文字を含む) を正確に一致させる必要があります (この文字列はイメージのインポートテーブルにも含まれます)。 インポートライブラリの内容は、 [DUMPBIN/依存](dependents.md)関係を使用して表示できます。 大文字と小文字を区別せずに文字列を一致させる必要がある場合は、 **__FUnloadDelayLoadedDLL2** を更新して、CRT 文字列関数または Windows API 呼び出しのいずれかを使用できます。
+- *`name`* 関数のパラメーターは、 `__FUnloadDelayLoadedDLL2` インポートライブラリに含まれるものと完全に一致する必要があります (ケースを含む)。 (その文字列は、イメージのインポートテーブルにもあります)。インポートライブラリの内容は、を使用して表示でき [`DUMPBIN /DEPENDENTS`](dependents.md) ます。 大文字と小文字を区別せずに文字列を一致させる場合は、を更新して、大文字と小文字を区別しない `__FUnloadDelayLoadedDLL2` CRT 文字列関数または WINDOWS API 呼び出しのいずれかを使用できます。
 
-詳細について [は、「Delay-Loaded DLL のアンロード](unloading-a-delay-loaded-dll.md) 」を参照してください。
+詳細については、「 [遅延読み込みされた DLL のアンロード](unloading-a-delay-loaded-dll.md)」を参照してください。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>こちらもご覧ください
 
-[リンカーによる Delay-Loaded Dll のサポート](linker-support-for-delay-loaded-dlls.md)
+[リンカーによる DLL の遅延読み込み](linker-support-for-delay-loaded-dlls.md)

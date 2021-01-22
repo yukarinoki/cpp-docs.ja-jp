@@ -1,7 +1,7 @@
 ---
 title: '&lt;string_view &gt; 演算子'
 description: '`string_view`2 つの `string_view` オブジェクト、または `string_view` とその他の文字列オブジェクトを比較するために使用される演算子の API リファレンス'
-ms.date: 9/4/2020
+ms.date: 01/15/2021
 f1_keywords:
 - xstring/basic_string_view::operator!=
 - xstring/basic_string_view::operator&gt;
@@ -11,6 +11,10 @@ f1_keywords:
 - xstring/basic_string_view::operator&lt;=
 - xstring/basic_string_view::operator+
 - xstring/basic_string_view::operator==
+- xstring/std::literals::string_view_literals::operator "sv
+- std::literals::string_view_literals::operator sv
+- std::literals::string_view_literals
+- string_view_literals
 helpviewer_keywords:
 - std::basic_string_view::operator!=
 - std::basic_string_view::operator&gt;
@@ -18,27 +22,27 @@ helpviewer_keywords:
 - std::basic_string_view::operator&lt;
 - std::basic_string_view::operator&lt;&lt;
 - std::basic_string_view::operator&lt;=, std::basic_string_view::operator==
-ms.openlocfilehash: 832e49aaf01a4ea124b7a6881b93bd93b7337215
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: a14d82dc0b29f88cb25f5b24f0836f033d2b828e
+ms.sourcegitcommit: 3d9cfde85df33002e3b3d7f3509ff6a8dc4c0a21
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90039886"
+ms.lasthandoff: 01/21/2021
+ms.locfileid: "98666902"
 ---
-# <a name="ltstring_viewgt-operators"></a>&lt;string_view &gt; 演算子
+# <a name="string_view-operators"></a>`<string_view>` 演算子
 
-これらの演算子を使用すると、暗黙的な変換が提供される2つの string_view オブジェクト、string_view とその他の文字列オブジェクト ( [std:: string](basic-string-class.md)、 **char \* **など) を比較できます。
+これらの演算子を使用して、2つの `string_view` オブジェクト、または `string_view` と、暗黙的な [`std::string`](basic-string-class.md) `char*` 変換が提供される他の文字列オブジェクト (やなど) を比較します。
 
-[operator! =](#op_neq)\
-[operator&gt;](#op_gt)\
-[operator&gt;=](#op_gt_eq)\
-[operator&lt;](#op_lt)\
-[operator&lt;&lt;](#op_lt_lt)\
-[operator&lt;=](#op_lt_eq)\
-[operator = =](#op_eq_eq)\
-[オペレーター "" sv](#op_sv)
+[`operator!=`](#op_neq)\
+[`operator>`](#op_gt)\
+[`operator>=`](#op_gt_eq)\
+[`operator<`](#op_lt)\
+[`operator<<`](#op_lt_lt)\
+[`operator<=`](#op_lt_eq)\
+[`operator==`](#op_eq_eq)\
+[`operator""sv`](#op_sv)
 
-## <a name="operator"></a><a name="op_neq"></a> operator! =
+## <a name="operator"></a><a name="op_neq"></a> `operator!=`
 
 演算子の左側のオブジェクトが右側のオブジェクトと等しくないかどうかを調べます。
 
@@ -73,11 +77,11 @@ bool operator!=(
 
 ### <a name="remarks"></a>注釈
 
-*Convertible_string_type*からもう一方の側の string_view への暗黙的な変換が存在する必要があります。
+*Convertible_string_type* からもう一方の側のへの暗黙的な変換が存在する必要があり `string_view` ます。
 
 比較は、文字シーケンスのペアの辞書式の比較に基づいています。 同じ数の要素を持ち、要素がすべて等しい場合、2つのオブジェクトは等しくなります。 それ以外の場合は等しくありません。
 
-## <a name="operator"></a><a name="op_eq_eq"></a> operator = =
+## <a name="operator"></a><a name="op_eq_eq"></a> `operator==`
 
 演算子の左側のオブジェクトが右側のオブジェクトと等しいかどうかを調べます。
 
@@ -112,13 +116,13 @@ bool operator==(
 
 ### <a name="remarks"></a>注釈
 
-*Convertible_string_type*からもう一方の側の string_view への暗黙的な変換が存在する必要があります。
+*Convertible_string_type* からもう一方の側のへの暗黙的な変換が存在する必要があり `string_view` ます。
 
 比較は、文字シーケンスのペアの辞書式の比較に基づいています。 同じ数の要素を持ち、要素がすべて等しい場合、2つのオブジェクトは等しくなります。
 
-## <a name="operatorlt"></a><a name="op_lt"></a> operator&lt;
+## <a name="operator"></a><a name="op_lt"></a> `operator<`
 
-演算子の左側のオブジェクトが右側のオブジェクトより小さいかどうかをテストし sidestring_view
+演算子の左側のオブジェクトが右側のオブジェクトより小さいかどうかを調べます。
 
 ```cpp
 template <class CharType, class Traits>
@@ -151,7 +155,7 @@ bool operator<(
 
 ### <a name="remarks"></a>注釈
 
-*Convertible_string_type*からもう一方の側の string_view への暗黙的な変換が存在する必要があります。
+*Convertible_string_type* からもう一方の側の string_view への暗黙的な変換が存在する必要があります。
 
 比較は、文字シーケンスのペアの辞書式の比較に基づいています。 最初の等しくない文字ペアが見つかった場合は、その比較の結果が返されます。 等しくない文字が見つからなくても、1つのシーケンスが短い場合は、短いシーケンスが長い方よりも小さくなります。 言い換えると、"cat" は "猫" よりも小さくなります。
 
@@ -177,7 +181,7 @@ int main()
 }
 ```
 
-## <a name="operatorlt"></a><a name="op_lt_eq"></a> operator&lt;=
+## <a name="operator"></a><a name="op_lt_eq"></a> `operator<=`
 
 演算子の左側のオブジェクトが右側のオブジェクト以下かどうかを調べます。
 
@@ -212,11 +216,11 @@ bool operator<=(
 
 ### <a name="remarks"></a>注釈
 
-「[演算子 &lt; ](#op_lt)」を参照してください。
+[`operator<`](#op_lt)に関するページを参照してください。
 
-## <a name="operatorltlt"></a><a name="op_lt_lt"></a> operator&lt;&lt;
+## <a name="operator"></a><a name="op_lt_lt"></a> `operator<<`
 
-String_view を出力ストリームに書き込みます。
+を `string_view` 出力ストリームに書き込みます。
 
 ```cpp
 template <class CharType, class Traits>
@@ -226,10 +230,10 @@ inline basic_ostream<CharType, Traits>& operator<<(
 
 ### <a name="parameters"></a>パラメーター
 
-*Ostr*\
+*`Ostr`*\
 書き込み先の出力ストリーム。
 
-*引数*\
+*`Str`*\
 出力ストリームに入力する string_view。
 
 ### <a name="return-value"></a>戻り値
@@ -238,9 +242,9 @@ inline basic_ostream<CharType, Traits>& operator<<(
 
 ### <a name="remarks"></a>注釈
 
-この演算子を使用して、string_view の内容を出力ストリームに挿入します。たとえば、 [std:: cout](iostream.md#cout)を使用します。
+この演算子を使用して、の内容を `string_view` 出力ストリームに挿入します。たとえば、を使用し [`std::cout`](iostream.md#cout) ます。
 
-## <a name="operatorgt"></a><a name="op_gt"></a> operator&gt;
+## <a name="operator"></a><a name="op_gt"></a> `operator>`
 
 演算子の左側のオブジェクトが右側のオブジェクトより大きいかどうかを調べます。
 
@@ -271,13 +275,13 @@ bool operator>(
 
 ### <a name="return-value"></a>戻り値
 
-**`true`** 演算子の左側のオブジェクトが右側の string_view オブジェクトよりも大きい場合はです。それ以外の場合は **`false`** 。
+**`true`** 演算子の左側のオブジェクトが右側のオブジェクトより辞書式大きい場合は `string_view` 。それ以外の場合は **`false`** 。
 
 ### <a name="remarks"></a>注釈
 
-「[演算子 &lt; ](#op_lt)」を参照してください。
+[`operator<`](#op_lt)に関するページを参照してください。
 
-## <a name="operatorgt"></a><a name="op_gt_eq"></a> operator&gt;=
+## <a name="operator"></a><a name="op_gt_eq"></a> `operator>=`
 
 演算子の左側のオブジェクトが右側のオブジェクト以上であるかどうかを調べます。
 
@@ -300,10 +304,10 @@ bool operator>=(
 
 ### <a name="parameters"></a>パラメーター
 
-*左側*\
+*`left`*\
 変換可能な文字列型または比較対象の型のオブジェクト `basic_string_view` 。
 
-*そうです*\
+*`right`*\
 変換可能な文字列型または比較対象の型のオブジェクト `basic_string_view` 。
 
 ### <a name="return-value"></a>戻り値
@@ -312,11 +316,11 @@ bool operator>=(
 
 ### <a name="remarks"></a>注釈
 
-「[演算子 &lt; ](#op_lt)」を参照してください。
+[`operator<`](#op_lt)に関するページを参照してください。
 
-## <a name="operator-sv-string_view-literal"></a><a name="op_sv"></a> 演算子 "" sv (string_view リテラル)
+## <a name="operator-sv-string_view-literal"></a><a name="op_sv"></a>`operator"" sv`( `string_view` リテラル)
 
-文字列リテラルから string_view を構築します。 名前空間が必要 `std::literals::string_view_literals` です。
+`string_view`文字列リテラルからを構築します。 名前空間が必要 `std::literals::string_view_literals` です。
 
 ### <a name="example"></a>例
 
@@ -331,10 +335,10 @@ using namespace literals::string_view_literals;
     u32string_view sv32{ U"Hello"sv };
 ```
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-[/std:c++17](../build/reference/std-specify-language-standard-version.md)
+[`/std:c++17`](../build/reference/std-specify-language-standard-version.md)
 
 ## <a name="see-also"></a>関連項目
 
-[\<string_view>](../standard-library/string-view.md)
+[`<string_view>`](../standard-library/string-view.md)

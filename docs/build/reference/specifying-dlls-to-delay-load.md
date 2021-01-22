@@ -1,27 +1,26 @@
 ---
-description: 詳細については、「遅延読み込みする Dll の指定」を参照してください。
-title: 遅延読み込みする DLL の指定
-ms.date: 11/04/2016
+description: 遅延読み込みのための Dll の指定に関する詳細情報
+title: 遅延読み込みする Dll の指定
+ms.date: 01/19/2021
 helpviewer_keywords:
 - DELAYLOAD linker option
 - delayed loading of DLLs
 - delayed loading of DLLs, specifying
 - /DELAYLOAD linker option
-ms.assetid: 94cbecfe-7a42-40d1-a618-9f2786bac0d8
-ms.openlocfilehash: ece96ea6f818c7e0bc6b6e032ce523e96a9f4ecb
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: de8c2e3cb9605cbc6dbc215a0449348c12295c17
+ms.sourcegitcommit: 3d9cfde85df33002e3b3d7f3509ff6a8dc4c0a21
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97224544"
+ms.lasthandoff: 01/21/2021
+ms.locfileid: "98667498"
 ---
-# <a name="specifying-dlls-to-delay-load"></a>遅延読み込みする DLL の指定
+# <a name="specify-dlls-to-delay-load"></a>遅延読み込みする Dll の指定
 
-[/Delayload](delayload-delay-load-import.md): リンカーオプションを使用して、遅延読み込みする dll を指定でき `dllname` ます。 独自のバージョンのヘルパー関数を使う計画がない場合は、プログラムを delayimp.lib (デスクトップ アプリケーションの場合) または dloadhelper.lib (ストア アプリの場合) とリンクする必要もあります。
+リンカーオプションを使用して、読み込みを遅延させる Dll を指定でき [`/delayload:dllname`](delayload-delay-load-import.md) ます。 独自のバージョンのヘルパー関数を使用する予定がない場合 *`delayimp.lib`* は、(デスクトップアプリケーションの場合) または (UWP アプリの場合) にプログラムをリンクする必要もあり *`dloadhelper.lib`* ます。
 
-DLL の遅延読み込みの簡単な例を以下に示します。
+DLL の遅延読み込みの簡単な例を次に示します。
 
-```
+```cpp
 // cl t.cpp user32.lib delayimp.lib  /link /DELAYLOAD:user32.dll
 #include <windows.h>
 // uncomment these lines to remove .libs from command line
@@ -34,8 +33,8 @@ int main() {
 }
 ```
 
-DEBUG バージョンのプロジェクトをビルドします。 デバッガーを使ってコードを段階的に実行すると、`MessageBox` に対する呼び出しを行なう場合のみ user32.dll が読み込まれることがわかります。
+DEBUG バージョンのプロジェクトをビルドします。 デバッガーを使用してコードをステップ実行すると、の *`user32.dll`* 呼び出しを行ったときにのみが読み込まれることがわかり `MessageBox` ます。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>こちらもご覧ください
 
-[リンカーによる Delay-Loaded Dll のサポート](linker-support-for-delay-loaded-dlls.md)
+[リンカーによる DLL の遅延読み込み](linker-support-for-delay-loaded-dlls.md)

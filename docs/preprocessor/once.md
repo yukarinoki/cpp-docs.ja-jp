@@ -1,28 +1,27 @@
 ---
 description: '詳細情報: once プラグマ'
 title: once プラグマ
-ms.date: 08/29/2019
+ms.date: 01/19/2021
 f1_keywords:
 - vc-pragma.once
 - once_CPP
 helpviewer_keywords:
 - once pragma
 - pragmas, once
-ms.assetid: c7517556-6403-4b16-8898-f2aa0a6f685f
-ms.openlocfilehash: 3aa1e50173ef625d13ad9f36684aec3a1c512d2d
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: 87e3a87d8922868ce8ac3c48815c09de8727eba7
+ms.sourcegitcommit: 3d9cfde85df33002e3b3d7f3509ff6a8dc4c0a21
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97333235"
+ms.lasthandoff: 01/21/2021
+ms.locfileid: "98667223"
 ---
-# <a name="once-pragma"></a>once プラグマ
+# <a name="once-pragma"></a>`once` プラグマ
 
 ソースコードファイルをコンパイルするときに、コンパイラがヘッダーファイルを1回だけインクルードすることを指定します。
 
 ## <a name="syntax"></a>構文
 
-> **一度 #pragma**
+> **`#pragma once`**
 
 ## <a name="remarks"></a>解説
 
@@ -36,7 +35,7 @@ ms.locfileid: "97333235"
 // Code placed here is included only once per translation unit
 ```
 
-新しいコードには `#pragma once` ディレクティブを使用することをお勧めします。これを使えば、プリプロセッサ シンボルによるグローバル名前空間のポリューションが発生しないためです。 これには、入力が少なく、混乱が少なく、 *シンボルの競合* を発生させることはできません。異なるヘッダーファイルで、ガード値と同じプリプロセッサシンボルが使用されていると、エラーが発生します。 これは C++ 標準の一部ではありませんが、いくつかの一般的なコンパイラによって移植に実装されています。
+新しいコードには `#pragma once` ディレクティブを使用することをお勧めします。これを使えば、プリプロセッサ シンボルによるグローバル名前空間のポリューションが発生しないためです。 入力が少ないため、混乱が少なく、 *シンボルの競合* が発生することはありません。 シンボルの競合は、異なるヘッダーファイルでガード値と同じプリプロセッサシンボルが使用されている場合に発生するエラーです。 これは C++ 標準の一部ではありませんが、いくつかの一般的なコンパイラによって移植に実装されています。
 
 インクルードガード表現とを `#pragma once` 同じファイル内に使用する利点はありません。 コンパイラはインクルードガード表現を認識し、 `#pragma once` 非コメントコードまたはプリプロセッサディレクティブが標準形式の表現の前または後にある場合、ディレクティブと同じ方法で複数インクルードの最適化を実装します。
 
@@ -54,6 +53,6 @@ ms.locfileid: "97333235"
 
 を使用しないようにする `#pragma once` か、複数回含めるように設計されたヘッダーファイルにガード表現を含めることは、その効果を制御するためにプリプロセッサシンボルを使用することに注意してください。 この設計の例については、ヘッダーファイルを参照してください \<assert.h> 。 また、インクルードファイルへの複数のパスを作成しないように、インクルードパスを慎重に管理してください。これにより、ガードとの両方に対して複数インクルードの最適化を無効にすることができ `#pragma once` ます。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>こちらもご覧ください
 
-[プラグマ ディレクティブと __pragma キーワード](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+[`pragma` ディレクティブと `__pragma` キーワード](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

@@ -1,24 +1,23 @@
 ---
-description: 詳細については、「バインドインポート」を参照してください。
-title: インポートのバインド
-ms.date: 11/04/2016
+description: 遅延読み込みされたインポートのバインドについての詳細情報
+title: 遅延読み込みされたインポートのバインド
+ms.date: 01/19/2021
 helpviewer_keywords:
 - /DELAY:NOBIND linker option
 - DELAY:NOBIND linker option
-ms.assetid: bb766038-deb1-41b1-bcbc-29a30e8c1e2a
-ms.openlocfilehash: 7d1b4374bf1d3340a918f252d80102057febe053
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: 49d321a30eeb3ab12ec832fb86a662f2035e1e3a
+ms.sourcegitcommit: 3d9cfde85df33002e3b3d7f3509ff6a8dc4c0a21
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97182711"
+ms.lasthandoff: 01/21/2021
+ms.locfileid: "98666941"
 ---
-# <a name="binding-imports"></a>インポートのバインド
+# <a name="bind-delay-loaded-imports"></a>遅延読み込みされたインポートのバインド
 
-既定のリンカー動作では、遅延読み込みされた DLL のバインド可能なインポートアドレステーブルが作成されます。 DLL がバインドされている場合、ヘルパー関数は、参照される各インポートで **GetProcAddress** を呼び出す代わりに、バインドされた情報を使用しようとします。 タイムスタンプまたは優先するアドレスが、読み込まれている DLL のアドレスと一致しない場合、ヘルパー関数はバインドされたインポートアドレステーブルが古くなっていると想定し、存在しないかのように処理を続行します。
+既定のリンカー動作では、遅延読み込みされた DLL に対して、バインド可能なインポートアドレステーブル (IAT) が作成されます。 DLL がバインドされている場合、ヘルパー関数は、参照される各インポートでを呼び出すのではなく、バインドされた情報を使用しようとし `GetProcAddress` ます。 タイムスタンプまたは優先アドレスが、読み込まれている DLL 内のアドレスと一致しない場合、ヘルパー関数はバインドされたインポートアドレステーブルが古くなっているものと見なします。 この処理は、IAT が存在しない場合と同様に行われます。
 
-DLL の遅延読み込みのインポートをバインドしない場合は、リンカーのコマンドラインで [/delay](delay-delay-load-import-settings.md): nobind を指定すると、バインドされたインポートアドレステーブルが生成されず、イメージファイル内の領域が消費されなくなります。
+DLL の遅延読み込みされたインポートをバインドしない場合は、 [`/delay:nobind`](delay-delay-load-import-settings.md) リンカーのコマンドラインでを指定します。 リンカーは、バインドされたインポートアドレステーブルを生成しません。これにより、イメージファイルの領域が節約されます。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>こちらもご覧ください
 
-[リンカーによる Delay-Loaded Dll のサポート](linker-support-for-delay-loaded-dlls.md)
+[リンカーによる DLL の遅延読み込み](linker-support-for-delay-loaded-dlls.md)

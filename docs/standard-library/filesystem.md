@@ -1,10 +1,12 @@
 ---
 title: '&lt;filesystem&gt;'
 description: 標準 C++ ライブラリのヘッダーに含まれるクラス、関数、および型について説明し filesystem ます。
-ms.date: 01/22/2020
+ms.date: 01/15/2021
 f1_keywords:
 - <filesystem>
-ms.assetid: 5005753b-46fa-43e1-8d4e-1b38617d3cfd
+- filesystem/std::filesystem
+- std::filesystem
+- std::experimental::filesystem
 no-loc:
 - filesystem
 - experimental
@@ -12,18 +14,18 @@ no-loc:
 - wchar_t
 - char16_t
 - char32_t
-ms.openlocfilehash: 0cf5e16eb21c02cfb96577c1dada873f087a71cf
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 8dc81692c7c7dc467f3ab8e2ceb8cac19e004ab8
+ms.sourcegitcommit: 3d9cfde85df33002e3b3d7f3509ff6a8dc4c0a21
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88835832"
+ms.lasthandoff: 01/21/2021
+ms.locfileid: "98667472"
 ---
-# &lt;filesystem&gt;
+# `filesystem`
 
-&lt; filesystem パス、ファイル、およびディレクトリに関する情報を操作および取得するクラスおよび関数にアクセスするには、ヘッダー> を含めます。
+`<filesystem>`パス、ファイル、およびディレクトリに関する情報を操作および取得するクラスおよび関数にアクセスするためのヘッダーを含めます。
 
-## <a name="syntax"></a>構文
+## <a name="syntax"></a>Syntax
 
 ```cpp
 #include <filesystem> // C++17 standard header file name
@@ -99,20 +101,20 @@ using namespace std::experimental::filesystem::v1;
 
 |名前|説明|
 |-|-|
-|[directory_entry クラス](../standard-library/directory-entry-class.md)|またはによって返され、を含むオブジェクトを記述し `directory_iterator` `recursive_directory_iterator` `path` ます。|
-|[directory_iterator クラス](../standard-library/directory-iterator-class.md)|ファイル システム ディレクトリのファイル名をシーケンス処理する入力反復子を表します。|
-|[filesystem_error クラス](../standard-library/filesystem-error-class.md)|低レベル システム オーバーフローをレポートするためにスローされる例外のための基底クラス。|
-|[path クラス](../standard-library/path-class.md)|ファイル名として使用するのに適したテンプレート型 `String` のオブジェクトを格納するクラスを定義します。|
-|[recursive_directory_iterator クラス](../standard-library/recursive-directory-iterator-class.md)|ファイル システム ディレクトリのファイル名をシーケンス処理する入力反復子を表します。 反復子はサブディレクトリに下りることもできます。|
-|[file_status クラス](../standard-library/file-status-class.md)|`file_type`をラップします。|
+|[`directory_entry` 講義](../standard-library/directory-entry-class.md)|またはによって返され、を含むオブジェクトを記述し `directory_iterator` `recursive_directory_iterator` `path` ます。|
+|[`directory_iterator` 講義](../standard-library/directory-iterator-class.md)|ファイル システム ディレクトリのファイル名をシーケンス処理する入力反復子を表します。|
+|[`filesystem_error` 講義](../standard-library/filesystem-error-class.md)|低レベル システム オーバーフローをレポートするためにスローされる例外のための基底クラス。|
+|[`path` 講義](../standard-library/path-class.md)|ファイル名として使用するのに適したテンプレート型 `String` のオブジェクトを格納するクラスを定義します。|
+|[`recursive_directory_iterator` 講義](../standard-library/recursive-directory-iterator-class.md)|ファイル システム ディレクトリのファイル名をシーケンス処理する入力反復子を表します。 反復子はサブディレクトリに下りることもできます。|
+|[`file_status` 講義](../standard-library/file-status-class.md)|`file_type`をラップします。|
 
 ### <a name="structs"></a>構造体
 
 |名前|説明|
 |-|-|
-|[space_info 構造体](../standard-library/space-info-structure.md)|ボリュームに関する情報を保持します。|
+|[`space_info` データ](../standard-library/space-info-structure.md)|ボリュームに関する情報を保持します。|
 
-## <a name="functions"></a>Functions
+## <a name="functions"></a>機能
 
 [\<filesystem> 関数](../standard-library/filesystem-functions.md)
 
@@ -120,16 +122,16 @@ using namespace std::experimental::filesystem::v1;
 
 [\<filesystem> 通信](../standard-library/filesystem-operators.md)
 
-## <a name="enumerations"></a>列挙
+## <a name="enumerations"></a>列挙型
 
 |名前|説明|
 |-|-|
-|[copy_options](../standard-library/filesystem-enumerations.md#copy_options)|[copy_file](../standard-library/filesystem-functions.md#copy_file) と共に使用され、コピー先ファイルが既に存在する場合の動作を決定する列挙体です。|
-|[directory_options](../standard-library/filesystem-enumerations.md#directory_options)|ディレクトリ反復子のオプションを指定する列挙体。|
-|[file_type](../standard-library/filesystem-enumerations.md#file_type)|ファイルの種類の列挙型。|
-|[perm_options](../standard-library/filesystem-enumerations.md#perm_options)| 関数のオプションを列挙 `permissions` します。 |
-|[perms](../standard-library/filesystem-enumerations.md#perms)|アクセス許可とアクセス許可に対するオプションを伝達するために使用されるビットマスク型|
+|[`copy_options`](../standard-library/filesystem-enumerations.md#copy_options)|[copy_file](../standard-library/filesystem-functions.md#copy_file) と共に使用され、コピー先ファイルが既に存在する場合の動作を決定する列挙体です。|
+|[`directory_options`](../standard-library/filesystem-enumerations.md#directory_options)|ディレクトリ反復子のオプションを指定する列挙体。|
+|[`file_type`](../standard-library/filesystem-enumerations.md#file_type)|ファイルの種類の列挙型。|
+|[`perm_options`](../standard-library/filesystem-enumerations.md#perm_options)| 関数のオプションを列挙 `permissions` します。 |
+|[`perms`](../standard-library/filesystem-enumerations.md#perms)|アクセス許可とアクセス許可に対するオプションを伝達するために使用されるビットマスク型|
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>こちらもご覧ください
 
 [ヘッダーファイルのリファレンス](../standard-library/cpp-standard-library-header-files.md)

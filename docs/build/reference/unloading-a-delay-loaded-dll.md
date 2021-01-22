@@ -1,21 +1,20 @@
 ---
-description: 詳細については、「Delay-Loaded DLL のアンロード」を参照してください。
-title: 遅延読み込みした DLL のアンロード
-ms.date: 11/04/2016
+description: 遅延読み込みされた DLL のアンロードに関する詳細情報
+title: 遅延読み込みされた DLL のアンロード
+ms.date: 01/19/2021
 helpviewer_keywords:
 - __FUnloadDelayLoadedDLL2
 - delayed loading of DLLs, unloading
-ms.assetid: 6463bc71-020e-4aff-a4ca-90360411c54e
-ms.openlocfilehash: fd733bfa02a6d90eecb1b617288d368d33766282
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: 2ac898d56609ebb3aadc57ea8df00fa63fcbc3f0
+ms.sourcegitcommit: 3d9cfde85df33002e3b3d7f3509ff6a8dc4c0a21
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97178941"
+ms.lasthandoff: 01/21/2021
+ms.locfileid: "98667243"
 ---
-# <a name="unloading-a-delay-loaded-dll"></a>遅延読み込みした DLL のアンロード
+# <a name="unload-a-delay-loaded-dll"></a>遅延読み込みされた DLL のアンロード
 
-既定で指定された遅延読み込みヘルパーは、遅延読み込み記述子に、pUnloadIAT フィールドに元のインポートアドレステーブル (IAT) のポインターとコピーが含まれているかどうかを確認します。 その場合は、リスト内のポインターをインポート遅延記述子に保存します。 これにより、ヘルパー関数は dll を名前で検索し、DLL の明示的なアンロードをサポートできます。
+既定の遅延読み込みヘルパーは、遅延読み込み記述子に、フィールドに元のインポートアドレステーブル (IAT) のポインターとコピーが含まれているかどうかを確認し `pUnloadIAT` ます。 その場合、ヘルパーは、リスト内のポインターをインポート遅延記述子に保存します。 このエントリにより、ヘルパー関数は dll を名前で検索できるようになり、DLL の明示的なアンロードがサポートされます。
 
 遅延読み込みされた DLL を明示的にアンロードするための、関連する構造体と関数を次に示します。
 
@@ -44,14 +43,14 @@ ExternC
 PUnloadInfo __puiHead;
 ```
 
-UnloadInfo 構造体は、 **LocalAlloc** と **LocalFree** の実装をそれぞれ演算子と演算子として使用する C++ クラスを使用して実装され **`new`** **`delete`** ます。 これらのオプションは、リストの先頭として __puiHead を使用して、標準のリンクリストに保持されます。
+`UnloadInfo`構造体は、およびの実装をおよびとして使用する C++ クラスを使用して実装され `LocalAlloc` `LocalFree` `operator new` `operator delete` ます。 これらのオプションは、 `__puiHead` リストの先頭としてを使用する標準のリンクリストに保持されます。
 
-__FUnloadDelayLoadedDLL を呼び出すと、読み込まれた Dll の一覧で指定した名前が検索されます (完全一致が必要です)。 見つかった場合は、pUnloadIAT 内の IAT のコピーが、実行されている IAT の一番上にコピーされてサンクポインターが復元されます。ライブラリは **FreeLibrary** で解放され、一致する **UnloadInfo** レコードはリストから削除されて削除され、TRUE が返されます。
+を呼び出すと `__FUnloadDelayLoadedDLL` 、読み込まれた dll の一覧で指定した名前の検索が試行されます。 (完全一致が必要です)。見つかった場合は、の IAT のコピー `pUnloadIAT` が、実行されている iat の先頭にコピーされ、サンクポインターが復元されます。 次に、を使用してライブラリが解放され、 `FreeLibrary` 一致するレコードがリストからリンク解除されて削除され、 `UnloadInfo` `TRUE` が返されます。
 
-関数 __FUnloadDelayLoadedDLL2 の引数は大文字と小文字が区別されます。 たとえば、次のように指定します。
+関数の引数で `__FUnloadDelayLoadedDLL2` は、大文字と小文字が区別されます。 たとえば、次のように指定します。
 
 ```cpp
-__FUnloadDelayLoadedDLL2("user32.DLL");
+__FUnloadDelayLoadedDLL2("user32.dll");
 ```
 
 ではありません。
@@ -60,6 +59,6 @@ __FUnloadDelayLoadedDLL2("user32.DLL");
 __FUnloadDelayLoadedDLL2("User32.DLL");.
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>こちらもご覧ください
 
 [ヘルパー関数について](understanding-the-helper-function.md)

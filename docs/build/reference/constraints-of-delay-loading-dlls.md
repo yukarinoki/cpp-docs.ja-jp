@@ -1,44 +1,43 @@
 ---
 description: 詳細については、「Dll の遅延読み込みの制約」を参照してください。
 title: DLL の遅延読み込みの制約
-ms.date: 11/04/2016
+ms.date: 01/19/2021
 helpviewer_keywords:
 - constraints [C++], delayed loading of DLLs
 - delayed loading of DLLs, constraints
 - DLLs [C++], constraints
-ms.assetid: 0097ff65-550f-4a4e-8ac3-39bf6404f926
-ms.openlocfilehash: 45f54ca57b57bc689752a8aa80f4c03bbe096817
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: 0bc29695aa48fea08a0126d4b814329656a5d3bf
+ms.sourcegitcommit: 3d9cfde85df33002e3b3d7f3509ff6a8dc4c0a21
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97197011"
+ms.lasthandoff: 01/21/2021
+ms.locfileid: "98666980"
 ---
 # <a name="constraints-of-delay-loading-dlls"></a>DLL の遅延読み込みの制約
 
-インポートの遅延読み込みには制約があります。
+DLL インポートの遅延読み込みには、いくつかの制約があります。
 
-- データのインポートはサポートされません。 その回避策として、`LoadLibrary` (または遅延読み込みヘルパーが DLL を読み込んだことが確認された後は `GetModuleHandle`) および `GetProcAddress` を使用してデータ インポートを自分で明示的に処理します。
+- データのインポートはサポートされていません。 回避策として、 `LoadLibrary` (または `GetModuleHandle` 遅延読み込みヘルパーが DLL を読み込んだことを確認した後にを使用して) およびを使用して、データのインポートを明示的に処理し `GetProcAddress` ます。
 
-- 遅延読み込み Kernel32.dll はサポートされません。 この DLL は、遅延読み込みヘルパー ルーチンが遅延読み込みを実行するのに必要です。
+- 遅延読み込みは *`Kernel32.dll`* サポートされていません。 遅延読み込みヘルパールーチンを機能させるには、この DLL を読み込む必要があります。
 
 - 転送されたエントリポイントの[バインド](binding-imports.md)はサポートされていません。
 
-- 遅延読み込み DLL のエントリ ポイントでプロセスごとに初期化が起こる場合、DLL の遅延読み込みでプロセスの動作が同じにならない可能性があります。 その他のケースには、 [__declspec (thread)](../../cpp/thread.md)を使用して宣言された静的 TLS (スレッドローカルストレージ) があります。これは、を介して DLL が読み込まれるときに処理されません `LoadLibrary` 。 `TlsAlloc`、`TlsFree`、`TlsGetValue`、および `TlsSetValue` を使用した動的 TLS は、静的または遅延読み込み DLL で引き続き利用可能です。
+- 起動時に読み込まれるのではなく、DLL が遅延読み込みされた場合、プロセスの動作が異なることがあります。 これは、遅延読み込み DLL のエントリポイントで発生するプロセスごとの初期化がある場合に表示されます。 その他のケースには、を使用して宣言された静的 TLS (スレッドローカルストレージ) があり [`__declspec(thread)`](../../cpp/thread.md) ます。これは、を介して DLL が読み込まれるときに処理されません `LoadLibrary` 。 `TlsAlloc`、`TlsFree`、`TlsGetValue`、および `TlsSetValue` を使用した動的 TLS は、静的または遅延読み込み DLL で引き続き利用可能です。
 
-- 静的 (グローバル) 関数ポインターは、関数への最初の呼び出しの後に、インポートされた関数について再初期化する必要があります。 これは、関数ポインターを最初に使用するときにはサンクをポイントするからです。
+- 各関数の最初の呼び出しの後に、インポートされた関数への静的グローバル関数ポインターを再初期化します。 これが必要なのは、関数ポインターの最初の使用は、読み込まれた関数ではなくサンクを指しているためです。
 
-- 現時点では、通常のインポート メカニズムを使いながら、DLL の特定の手順の読み込みだけを遅延する方法はありません。
+- 現時点では、通常のインポートメカニズムを使用しているときに、DLL から特定のプロシージャのみの読み込みを遅延する方法はありません。
 
-- カスタム呼び出し規約 (x86 アーキテクチャでの条件コードの使用など) はサポートされません。 また、浮動小数点レジスタはどのプラットフォームにも保存されません。 カスタム ヘルパー ルーチンまたはフック ルーチンが浮動小数点型を使用する場合、浮動小数点パラメーターのレジスタ呼び出し規則を持つコンピューターで浮動小数点状態を完全に保存およびリストアする必要があります。 ヘルプ関数内の数値データ プロセッサ (NDP) スタックで、浮動小数点パラメーターを取得する CRT 関数を呼び出す場合、CRT DLL の遅延呼び出しに注意します。
+- カスタム呼び出し規則 (x86 アーキテクチャでの条件コードの使用など) はサポートされていません。 また、浮動小数点レジスタはどのプラットフォームにも保存されません。 カスタムヘルパールーチンまたはフックルーチンが浮動小数点型を使用する場合、浮動小数点パラメーターでレジスタ呼び出し規約を使用するコンピューターに、完全な浮動小数点の状態を保存して復元する必要があります。 特に、help 関数の数値データプロセッサ (NDP) スタックで浮動小数点パラメーターを受け取る CRT 関数を呼び出す場合は、CRT DLL の遅延読み込みに注意してください。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>こちらもご覧ください
 
-[リンカーによる Delay-Loaded Dll のサポート](linker-support-for-delay-loaded-dlls.md)<br/>
-[LoadLibrary 関数](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibraryw)<br/>
-[GetModuleHandle 関数](/windows/win32/api/libloaderapi/nf-libloaderapi-getmodulehandlew)<br/>
-[GetProcAddress 関数](/windows/win32/api/libloaderapi/nf-libloaderapi-getprocaddress)<br/>
-[TlsAlloc 関数](/windows/win32/api/processthreadsapi/nf-processthreadsapi-tlsalloc)<br/>
-[TlsFree 関数](/windows/win32/api/processthreadsapi/nf-processthreadsapi-tlsfree)<br/>
-[TlsGetValue 関数](/windows/win32/api/processthreadsapi/nf-processthreadsapi-tlsgetvalue)<br/>
-[TlsSetValue 関数](/windows/win32/api/processthreadsapi/nf-processthreadsapi-tlssetvalue)
+[リンカーによる Dll の遅延読み込み](linker-support-for-delay-loaded-dlls.md)\
+[`LoadLibrary` プロシージャ](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibraryw)\
+[`GetModuleHandle` プロシージャ](/windows/win32/api/libloaderapi/nf-libloaderapi-getmodulehandlew)\
+[`GetProcAddress` プロシージャ](/windows/win32/api/libloaderapi/nf-libloaderapi-getprocaddress)\
+[`TlsAlloc` プロシージャ](/windows/win32/api/processthreadsapi/nf-processthreadsapi-tlsalloc)\
+[`TlsFree` プロシージャ](/windows/win32/api/processthreadsapi/nf-processthreadsapi-tlsfree)\
+[`TlsGetValue` プロシージャ](/windows/win32/api/processthreadsapi/nf-processthreadsapi-tlsgetvalue)\
+[`TlsSetValue` 関数](/windows/win32/api/processthreadsapi/nf-processthreadsapi-tlssetvalue)

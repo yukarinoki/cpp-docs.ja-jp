@@ -1,23 +1,22 @@
 ---
-description: 詳細については、Delay-Loaded インポートのダンプ
-title: 遅延読み込みしたインポートのダンプ
-ms.date: 11/04/2016
+description: '詳細情報: 遅延読み込みされたインポートのダンプ'
+title: 遅延読み込みされたインポートのダンプ
+ms.date: 01/19/2021
 helpviewer_keywords:
 - delay-loaded imports, dumping
 - imports (delay-loaded)
 - delay-loaded imports
-ms.assetid: f766acf4-9df8-4b85-8cf6-0be3ffc4c124
-ms.openlocfilehash: c57ff6bb4a3dce16b4cb1eb85fdffff4ef272396
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: 6a0fec0b10bc29ea919195302334a25f71de0abd
+ms.sourcegitcommit: 3d9cfde85df33002e3b3d7f3509ff6a8dc4c0a21
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97201080"
+ms.lasthandoff: 01/21/2021
+ms.locfileid: "98666915"
 ---
-# <a name="dumping-delay-loaded-imports"></a>遅延読み込みしたインポートのダンプ
+# <a name="dump-delay-loaded-imports"></a>遅延読み込みされたインポートのダンプ
 
-遅延読み込みされたインポートは、 [dumpbin/imports](imports-dumpbin.md) を使用してダンプし、標準のインポートとは少し異なる情報で表示できます。 これらは、/imports ダンプの独自のセクションに分離され、遅延読み込みのインポートとして明示的にラベル付けされます。 イメージにアンロード情報が含まれている場合は、そのことに注意してください。 バインド情報が存在する場合は、インポートのバインドされたアドレスと共に、ターゲット DLL の日時スタンプが示されます。
+遅延読み込みされたインポートは、を使用してダンプでき [`dumpbin /imports`](imports-dumpbin.md) ます。 これらのインポートは、標準のインポートとは少し異なる情報で表示されます。 これらは、リストの独自のセクションに分離 `/imports` され、遅延読み込みのインポートとして明示的にラベル付けされます。 イメージにアンロード情報が含まれている場合は、そのことに注意してください。 バインド情報が存在する場合は、インポートのバインドされたアドレスと共に、ターゲット DLL の時刻と日付のスタンプが示されます。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>こちらもご覧ください
 
-[リンカーによる Delay-Loaded Dll のサポート](linker-support-for-delay-loaded-dlls.md)
+[リンカーによる DLL の遅延読み込み](linker-support-for-delay-loaded-dlls.md)

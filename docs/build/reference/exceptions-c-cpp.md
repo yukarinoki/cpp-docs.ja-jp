@@ -1,7 +1,7 @@
 ---
-description: '詳細情報: 例外 (C/c + +)'
-title: DLL 読み込み例外コード (C/c + +)
-ms.date: 11/19/2019
+description: '詳細情報: 遅延読み込みの例外 (C/c + +)'
+title: DLL 遅延読み込みの例外コード
+ms.date: 01/19/2021
 f1_keywords:
 - ERROR_MOD_NOT_FOUND
 - vcppException
@@ -12,25 +12,24 @@ helpviewer_keywords:
 - delayed loading of DLLs, exceptions
 - ERROR_SEVERITY_ERROR exception
 - ERROR_MOD_NOT_FOUND exception
-ms.assetid: c03be05d-1c39-4f35-84cf-00c9af3bae9a
-ms.openlocfilehash: 53ae6ab9a21309159b29a96e58d077f45fe30e12
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: 214d8514baba7b180b8d838af8a6b6c0543cc1ce
+ms.sourcegitcommit: 3d9cfde85df33002e3b3d7f3509ff6a8dc4c0a21
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97200846"
+ms.lasthandoff: 01/21/2021
+ms.locfileid: "98667184"
 ---
-# <a name="exceptions-cc"></a>例外 (C/C++)
+# <a name="dll-delay-load-exception-codes"></a>DLL 遅延読み込みの例外コード
 
-エラーが発生すると、次の2つの例外コードが生成されます。
+エラーが発生すると、次の2つの構造化例外コードが発生する可能性があります。
 
-- **LoadLibrary** エラーの場合
+- エラーの場合 `LoadLibrary`
 
-- **GetProcAddress** エラーの場合
+- エラーの場合 `GetProcAddress`
 
-例外情報を次に示します。
+例外情報マクロは次のようになります。
 
-```
+```C
 //
 // Exception information
 //
@@ -38,12 +37,12 @@ ms.locfileid: "97200846"
 #define VcppException(sev,err)  ((sev) | (FACILITY_VISUALCPP<<16) | err)
 ```
 
-スローされる例外コードは、標準の VcppException (ERROR_SEVERITY_ERROR、ERROR_MOD_NOT_FOUND) と VcppException (ERROR_SEVERITY_ERROR、ERROR_PROC_NOT_FOUND) の値です。 例外は、LPDWORD 値の **Delayloadinfo** 構造体へのポインターを渡します。この値は、 [EXCEPTION_RECORD](/windows/win32/api/winnt/ns-winnt-exception_record) structure の exceptioninformation [0] フィールドの **getexceptioninformation** によって取得できます。
+スローされる例外コードは、 `VcppException(ERROR_SEVERITY_ERROR, ERROR_MOD_NOT_FOUND)` 標準 `VcppException(ERROR_SEVERITY_ERROR, ERROR_PROC_NOT_FOUND)` 値と値です。 例外は、 `DelayLoadInfo` によって取得できる値の構造体へのポインターを、 `LPDWORD` `GetExceptionInformation` [`EXCEPTION_RECORD`](/windows/win32/api/winnt/ns-winnt-exception_record) 構造体のフィールドに渡し `ExceptionInformation[0]` ます。
 
-また、grAttrs フィールドで間違ったビットが設定されている場合は、例外 ERROR_INVALID_PARAMETER がスローされます。 この例外は、すべてのインテントと目的で致命的です。
+また、フィールドに正しくないビットが設定されている場合は、 `grAttrs` 例外 `ERROR_INVALID_PARAMETER` がスローされます。 この例外は、すべてのインテントと目的で致命的です。
 
-詳細については [、「構造体と定数の定義](structure-and-constant-definitions.md) 」を参照してください。
+詳細については、「 [構造体と定数の定義](structure-and-constant-definitions.md)」を参照してください。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>こちらもご覧ください
 
 [エラー処理と通知](error-handling-and-notification.md)

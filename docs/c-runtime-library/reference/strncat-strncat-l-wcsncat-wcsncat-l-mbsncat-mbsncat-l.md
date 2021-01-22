@@ -1,7 +1,7 @@
 ---
 description: 詳細については、strncat、_strncat_l、wcsncat、_wcsncat_l、_mbsncat、_mbsncat_l
 title: strncat、_strncat_l、wcsncat、_wcsncat_l、_mbsncat、_mbsncat_l
-ms.date: 4/2/2020
+ms.date: 1/20/2021
 api_name:
 - strncat
 - _strncat_l
@@ -64,20 +64,19 @@ helpviewer_keywords:
 - _tcsncat_l function
 - _mbsncat_l function
 - tcsncat function
-ms.assetid: de67363b-68c6-4ca5-91e3-478610ad8159
-ms.openlocfilehash: 509afe42e4fbf4cec9f0a7a077f0bf4ce0a1423e
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: 4b5ae812560cb42498ebed71bb9b8791581ef332
+ms.sourcegitcommit: 3d9cfde85df33002e3b3d7f3509ff6a8dc4c0a21
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97344771"
+ms.lasthandoff: 01/21/2021
+ms.locfileid: "98667024"
 ---
 # <a name="strncat-_strncat_l-wcsncat-_wcsncat_l-_mbsncat-_mbsncat_l"></a>strncat、_strncat_l、wcsncat、_wcsncat_l、_mbsncat、_mbsncat_l
 
-文字列の文字を追加します。 これらの関数のセキュリティを強化したバージョンについては、「[strncat_s、_strncat_s_l、wcsncat_s、_wcsncat_s_l、_mbsncat_s、_mbsncat_s_l](strncat-s-strncat-s-l-wcsncat-s-wcsncat-s-l-mbsncat-s-mbsncat-s-l.md)」を参照してください。
+文字列の文字を追加します。 これらの関数のセキュリティを強化したバージョンについては、「」 (strncat-s-strncat-s-l-wcsncat-s-wcsncat-s-l-mbsncat-s-mbsncat-s-l.md) を参照してください `[strncat_s, _strncat_s_l, wcsncat_s, _wcsncat_s_l, _mbsncat_s, _mbsncat_s_l` 。
 
 > [!IMPORTANT]
-> **_mbsncat** と **_mbsncat_l** は、Windows ランタイムで実行されるアプリケーションでは使用できません。 詳細については、「[ユニバーサル Windows プラットフォーム アプリでサポートされていない CRT 関数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)」を参照してください。
+> **`_mbsncat`** およびは **`_mbsncat_l`** 、Windows ランタイムで実行されるアプリケーションでは使用できません。 詳細については、「[ユニバーサル Windows プラットフォーム アプリでサポートされていない CRT 関数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)」を参照してください。
 
 ## <a name="syntax"></a>構文
 
@@ -132,32 +131,32 @@ unsigned char *_mbsncat_l(
 
 ### <a name="parameters"></a>パラメーター
 
-*strDest*<br/>
+*`strDest`*\
 NULL で終わる追加先の文字列。
 
-*strSource*<br/>
+*`strSource`*\
 NULL で終わる元の文字列。
 
-*count*<br/>
+*`count`*\
 追加する文字数。
 
-*locale*<br/>
+*`locale`*\
 使用するロケール。
 
 ## <a name="return-value"></a>戻り値
 
 コピー先文字列へのポインターを返します。 エラーを示す戻り値は予約されていません。
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>注釈
 
-**Strncat** 関数は、 *strsource* の先頭から *strsource* までの最大文字 *数* を追加します。 *Strsource* の最初の文字は、 *strsource* の終端の null 文字を上書きします。 *カウント* 文字を追加する前に *strsource* に null 文字が含まれている場合、 **strncat** は、 *strsource* から null 文字までのすべての文字を追加します。 *Count* が *strsource* の長さよりも大きい場合、 *strsource* の長さは *count* の代わりに使用されます。 結果の文字列はすべて、null 文字で終了します。 重なり合う文字列間でコピーした場合の動作は未定義です。
+関数は、 **`strncat`** の先頭の最大文字を *`count`* に追加 *`strSource`* *`strDest`* します。 の最初の文字は、 *`strSource`* の終端の null 文字を上書きし *`strDest`* ます。 文字が追加される前にに null 文字が含まれている場合 *`strSource`* *`count`* 、は **`strncat`** null 文字までのすべての文字を追加し *`strSource`* ます。 *`count`* がの長さを超える場合 *`strSource`* 、の *`strSource`* 代わりにの長さが使用され *`count`* ます。 結果の文字列はすべて、null 文字で終了します。 重なり合う文字列間でコピーした場合の動作は未定義です。
 
 > [!IMPORTANT]
-> **strncat** では、 *strdest* に十分な領域があるかどうかは確認されません。そのため、バッファーオーバーランの可能性があります。 *カウント* は追加される文字数を制限することに注意してください。*Strdest* のサイズに制限はありません。 次の例を見てください。 詳しくは、「 [バッファー オーバーランの回避](/windows/win32/SecBP/avoiding-buffer-overruns)」をご覧ください。
+> **`strncat`** では、に十分な領域があるかどうかは確認されません。その *`strDest`* ため、バッファーオーバーランの可能性があります。 によって追加される文字数が制限されていることに注意してください *`count`* 。のサイズに制限はありません *`strDest`* 。 次の例を見てください。 詳しくは、「 [バッファー オーバーランの回避](/windows/win32/SecBP/avoiding-buffer-overruns)」をご覧ください。
 
-**wcsncat** と **_mbsncat** は、 **strncat** のワイド文字バージョンとマルチバイト文字バージョンです。 **Wcsncat** の文字列引数と戻り値はワイド文字列です。これらの **_mbsncat** はマルチバイト文字列です。 それ以外では、これらの関数の動作は同じです。
+**`wcsncat`** と **`_mbsncat`** は、のワイド文字バージョンとマルチバイト文字バージョン **`strncat`** です。 の文字列引数と戻り値はワイド文字列であり、の文字列引数と戻り値 **`wcsncat`** **`_mbsncat`** はマルチバイト文字列です。 それ以外では、これらの関数の動作は同じです。
 
-出力値は、ロケールの **LC_CTYPE** カテゴリの設定に影響されます。詳細については、「[setlocale](setlocale-wsetlocale.md)」を参照してください。 **_l** サフィックスが付いていないこれらの関数のバージョンでは、このロケールに依存する動作に現在のロケールを使用します。**_l** サフィックスが付いているバージョンは、渡されたロケール パラメーターを代わりに使用する点を除いて同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
+出力値は、ロケールのカテゴリの設定に影響され **`LC_CTYPE`** ます。 詳細については、「」を参照してください [`setlocale`](setlocale-wsetlocale.md) 。 サフィックスが付いていないこれらの関数のバージョンは、 **`_l`** このロケールに依存する動作に現在のロケールを使用します。 サフィックスが付いているバージョンは、渡された **`_l`** ロケールパラメーターを代わりに使用する点を除いて同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
 
 C++ では、これらの関数にテンプレートのオーバーロードがあります。 詳細については、「[セキュリティ保護されたテンプレート オーバーロード](../../c-runtime-library/secure-template-overloads.md)」を参照してください。
 
@@ -165,24 +164,24 @@ C++ では、これらの関数にテンプレートのオーバーロードが�
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
-|TCHAR.H のルーチン|_UNICODE および _MBCS が未定義の場合|_MBCS が定義されている場合|_UNICODE が定義されている場合|
+|`TCHAR.H `ルーチン|`_UNICODE & _MBCS` 未定義|`_MBCS` れ|`_UNICODE` れ|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_tcsncat**|**strncat**|**_mbsnbcat**|**wcsncat**|
-|**_tcsncat_l**|**_strncat_l**|**_mbsnbcat_l**|**_wcsncat_l**|
+|**`_tcsncat`**|**`strncat`**|**`_mbsnbcat`**|**`wcsncat`**|
+|**`_tcsncat_l`**|**`_strncat_l`**|**`_mbsnbcat_l`**|**`_wcsncat_l`**|
 
 > [!NOTE]
-> **_strncat_l** と **_wcsncat_l** はロケールに依存せず、直接呼び出すためのものではありません。 これらは、 **_tcsncat_l** によって内部で使用するために用意されています。
+> **`_strncat_l`** とは **`_wcsncat_l`** ロケールに依存せず、直接呼び出すためのものではありません。 これらは、による内部使用のために用意されてい **`_tcsncat_l`** ます。
 
 ## <a name="requirements"></a>必要条件
 
 |ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
-|**strncat**|\<string.h>|
-|**wcsncat**|\<string.h> または \<wchar.h>|
-|**_mbsncat**|\<mbstring.h>|
-|**_mbsncat_l**|\<mbstring.h>|
+|**`strncat`**|\<string.h>|
+|**`wcsncat`**|\<string.h> または \<wchar.h>|
+|**`_mbsncat`**|\<mbstring.h>|
+|**`_mbsncat_l`**|\<mbstring.h>|
 
-互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性について詳しくは、「 [Compatibility](../../c-runtime-library/compatibility.md)」をご覧ください。
 
 ## <a name="example"></a>例
 
@@ -233,18 +232,18 @@ After GoodAppend:  This is the initial string!Extra text t (39 chars)
 
 **Badappend** によってバッファーオーバーランが発生したことに注意してください。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>こちらもご覧ください
 
-[文字列操作](../../c-runtime-library/string-manipulation-crt.md)<br/>
-[_mbsnbcat、_mbsnbcat_l](mbsnbcat-mbsnbcat-l.md)<br/>
-[strcat、wcscat、_mbscat](strcat-wcscat-mbscat.md)<br/>
-[strcmp、wcscmp、_mbscmp](strcmp-wcscmp-mbscmp.md)<br/>
-[strcpy、wcscpy、_mbscpy](strcpy-wcscpy-mbscpy.md)<br/>
-[strncmp、wcsncmp、_mbsncmp、_mbsncmp_l](strncmp-wcsncmp-mbsncmp-mbsncmp-l.md)<br/>
-[strncpy、_strncpy_l、wcsncpy、_wcsncpy_l、_mbsncpy、_mbsncpy_l](strncpy-strncpy-l-wcsncpy-wcsncpy-l-mbsncpy-mbsncpy-l.md)<br/>
-[_strnicmp、_wcsnicmp、_mbsnicmp、_strnicmp_l、_wcsnicmp_l、_mbsnicmp_l](strnicmp-wcsnicmp-mbsnicmp-strnicmp-l-wcsnicmp-l-mbsnicmp-l.md)<br/>
-[strrchr、wcsrchr、_mbsrchr、_mbsrchr_l](strrchr-wcsrchr-mbsrchr-mbsrchr-l.md)<br/>
-[_strset、_strset_l、_wcsset、_wcsset_l、_mbsset、_mbsset_l](strset-strset-l-wcsset-wcsset-l-mbsset-mbsset-l.md)<br/>
-[strspn、wcsspn、_mbsspn、_mbsspn_l](strspn-wcsspn-mbsspn-mbsspn-l.md)<br/>
-[ロケール](../../c-runtime-library/locale.md)<br/>
-[Multibyte-Character シーケンスの解釈](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[文字列操作](../../c-runtime-library/string-manipulation-crt.md)\
+[`_mbsnbcat, _mbsnbcat_l`](mbsnbcat-mbsnbcat-l.md)\
+[`strcat, wcscat, _mbscat`](strcat-wcscat-mbscat.md)\
+[`strcmp, wcscmp, _mbscmp`](strcmp-wcscmp-mbscmp.md)\
+[`strcpy, wcscpy, _mbscpy`](strcpy-wcscpy-mbscpy.md)\
+[`strncmp, wcsncmp, _mbsncmp, _mbsncmp_l`](strncmp-wcsncmp-mbsncmp-mbsncmp-l.md)\
+[`strncpy, _strncpy_l, wcsncpy, _wcsncpy_l, _mbsncpy, _mbsncpy_l`](strncpy-strncpy-l-wcsncpy-wcsncpy-l-mbsncpy-mbsncpy-l.md)\
+[`_strnicmp, _wcsnicmp, _mbsnicmp, _strnicmp_l, _wcsnicmp_l, _mbsnicmp_l`](strnicmp-wcsnicmp-mbsnicmp-strnicmp-l-wcsnicmp-l-mbsnicmp-l.md)\
+[`strrchr, wcsrchr, _mbsrchr, _mbsrchr_l`](strrchr-wcsrchr-mbsrchr-mbsrchr-l.md)\
+[`_strset, _strset_l, _wcsset, _wcsset_l, _mbsset, _mbsset_l`](strset-strset-l-wcsset-wcsset-l-mbsset-mbsset-l.md)\
+[`strspn, wcsspn, _mbsspn, _mbsspn_l`](strspn-wcsspn-mbsspn-mbsspn-l.md)\
+[国](../../c-runtime-library/locale.md)\
+[Multibyte-Character シーケンスの解釈](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)\

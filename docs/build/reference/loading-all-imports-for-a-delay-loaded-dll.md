@@ -1,36 +1,35 @@
 ---
-description: 詳細については、Delay-Loaded DLL のすべてのインポートの読み込みに関するページを参照してください。
-title: 遅延読み込みされた DLL に対するすべてのインポートの読み込み
-ms.date: 11/04/2016
+description: 遅延読み込みされた DLL のすべてのインポートの読み込みに関する詳細情報
+title: 遅延読み込みされた DLL のすべてのインポートを読み込みます
+ms.date: 01/19/2021
 helpviewer_keywords:
 - __HrLoadAllImportsForDll linker option
-ms.assetid: 975fcd97-1a56-4a16-9698-e1a249d2d592
-ms.openlocfilehash: 0f1334f30568e4722bd97579145ddcae9851b901
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: b197c50d3b6b68d77dbfccda99e3c2986c515204
+ms.sourcegitcommit: 3d9cfde85df33002e3b3d7f3509ff6a8dc4c0a21
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97190923"
+ms.lasthandoff: 01/21/2021
+ms.locfileid: "98667213"
 ---
-# <a name="loading-all-imports-for-a-delay-loaded-dll"></a>遅延読み込みされた DLL に対するすべてのインポートの読み込み
+# <a name="load-all-imports-for-a-delay-loaded-dll"></a>遅延読み込みされた DLL のすべてのインポートを読み込みます
 
-Delayhlp で定義されている **__HrLoadAllImportsForDll** 関数は、 [/delayload](delayload-delay-load-import.md) リンカーオプションで指定された DLL からすべてのインポートを読み込むようにリンカーに指示します。
+で定義されている関数は、 `__HrLoadAllImportsForDll` *`delayhlp.cpp`* リンカーオプションで指定された DLL からすべてのインポートを読み込むようにリンカーに指示 [`/delayload`](delayload-delay-load-import.md) します。
 
-すべてのインポートを読み込むことで、エラー処理をコード内の1か所に配置できます。インポートの実際の呼び出しを囲む例外処理を使用する必要はありません。 また、ヘルパーコードがインポートの読み込みに失敗した結果として、アプリケーションがプロセスを部分的に失敗させる状況を回避します。
+すべてのインポートを読み込むことで、エラー処理をコード内の1か所に配置できます。インポートの実際の呼び出しを囲む例外処理を使用する必要はありません。 また、ヘルパーコードがインポートの読み込みに失敗した結果として、アプリケーションがプロセスを通じて失敗する状況を回避できます。
 
-**__HrLoadAllImportsForDll** を呼び出すと、フックとエラー処理の動作が変わりません。詳細については [、「エラー処理と通知](error-handling-and-notification.md)」を参照してください。
+を呼び出す `__HrLoadAllImportsForDll` と、フックとエラー処理の動作は変更されません。 詳細については、「 [エラー処理と通知](error-handling-and-notification.md)」を参照してください。
 
-**__HrLoadAllImportsForDll** に渡される dll 名は、dll 自体の内部に格納されている名前と比較され、大文字と小文字が区別されます。
+に渡される DLL 名 `__HrLoadAllImportsForDll` は、dll 自体の内部に格納されている名前と比較され、大文字と小文字が区別されます。
 
-次の例は、 **__HrLoadAllImportsForDll** を呼び出す方法を示しています。
+次の例は、を呼び出す方法を示してい `__HrLoadAllImportsForDll` ます。
 
-```
+```C
 if (FAILED(__HrLoadAllImportsForDll("delay1.dll"))) {
    printf ( "failed on snap load, exiting\n" );
    exit(2);
 }
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>こちらもご覧ください
 
-[リンカーによる Delay-Loaded Dll のサポート](linker-support-for-delay-loaded-dlls.md)
+[リンカーによる DLL の遅延読み込み](linker-support-for-delay-loaded-dlls.md)

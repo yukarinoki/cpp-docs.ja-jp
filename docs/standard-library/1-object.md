@@ -1,22 +1,62 @@
 ---
 description: ': _1 オブジェクトの詳細情報'
 title: _1 オブジェクト
-ms.date: 11/04/2016
+ms.date: 01/15/2021
 f1_keywords:
 - _1
 - std::_1
 - functional/std::_1
+- std::_2
+- functional/std::_2
+- std::_3
+- functional/std::_3
+- std::_4
+- functional/std::_4
+- std::_5
+- functional/std::_5
+- std::_6
+- functional/std::_6
+- std::_7
+- functional/std::_7
+- std::_8
+- functional/std::_8
+- std::_9
+- functional/std::_9
+- std::_10
+- functional/std::_10
+- std::_11
+- functional/std::_11
+- std::_12
+- functional/std::_12
+- std::_13
+- functional/std::_13
+- std::_14
+- functional/std::_14
+- std::_15
+- functional/std::_15
+- std::_16
+- functional/std::_16
+- std::_17
+- functional/std::_17
+- std::_18
+- functional/std::_18
+- std::_19
+- functional/std::_19
+- std::_20
+- functional/std::_20
+- functional/std::placeholders
+- std::placeholders
 helpviewer_keywords:
 - _1 object
 ms.assetid: 30c3c480-ff31-4708-94be-7d0d65f243c9
-ms.openlocfilehash: dc081cff3fcb64826508dd9d2373b3eab219c82b
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: d6c7550580b1b73485d0d3ee1bcde7497e828650
+ms.sourcegitcommit: 3d9cfde85df33002e3b3d7f3509ff6a8dc4c0a21
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97319958"
+ms.lasthandoff: 01/21/2021
+ms.locfileid: "98667527"
 ---
-# <a name="_1-object"></a>_1 オブジェクト
+# <a name="_1-object"></a>`_1` オブジェクト
 
 置き換え可能な引数のプレースホルダーです。
 
@@ -24,15 +64,15 @@ ms.locfileid: "97319958"
 
 ```cpp
 namespace placeholders {
-    extern unspecified _1, _2, ... _M
+    extern unspecified _1, _2, ... _N
 } // namespace placeholders (within std)
 ```
 
 ## <a name="remarks"></a>解説
 
-オブジェクトは、 `_1, _2, ... _M` [bind](functional-functions.md#bind)によって返されるオブジェクトへの関数呼び出しで、それぞれ first、second、...、Mth の各引数を指定するプレースホルダーです。 bind 式が評価されるときに N 番目の引数が挿入される場所を指定するには、`_N` を使用します。
+オブジェクトは、 `_1, _2, ... _N` によって返されるオブジェクトへの関数呼び出しで、1番目、2番目、...、n 番目の引数をそれぞれ表すプレースホルダーです [`bind`](functional-functions.md#bind) 。 たとえば、を使用して、 `_6` 式を評価するときに6番目の引数を挿入する場所を指定し `bind` ます。
 
-この実装では、`M` の値は 20 です。
+Microsoft の実装では、の値 `_N` は20です。
 
 ## <a name="example"></a>例
 

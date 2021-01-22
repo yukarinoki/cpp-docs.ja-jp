@@ -1,26 +1,25 @@
 ---
-description: '詳細情報: 必要な値の計算'
-title: 必要な値の計算
-ms.date: 11/04/2016
+description: '詳細情報: 遅延読み込みに必要な値の計算'
+title: 遅延読み込みに必要な値を計算します
+ms.date: 01/19/2021
 helpviewer_keywords:
 - helper functions, calculating necessary values
-ms.assetid: 4f037d0f-881a-4a48-a9d2-9f8872dfccb7
-ms.openlocfilehash: 92d8462be2db55dbc10375629b133d9286560878
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: ae5e0c15b5b13f12fd90c1378a1e449516b55f43
+ms.sourcegitcommit: 3d9cfde85df33002e3b3d7f3509ff6a8dc4c0a21
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97179344"
+ms.lasthandoff: 01/21/2021
+ms.locfileid: "98667442"
 ---
-# <a name="calculating-necessary-values"></a>必要な値の計算
+# <a name="calculate-necessary-values-for-delay-loading"></a>遅延読み込みに必要な値を計算します
 
-2つの重要な情報は、遅延ヘルパールーチンによって計算される必要があります。 そのために、この情報を計算するための2つのインライン関数が delayhlp にあります。
+遅延読み込みヘルパールーチンでは、2つの重要な情報を計算する必要があります。 では、 *`delayhlp.cpp`* この情報を計算するためにのインライン関数が2つあります。
 
-- 最初のは、現在のインポートのインデックスを3つの異なるテーブル (インポートアドレステーブル (IAT)、バインドされたインポートアドレステーブル (BIAT)、およびバインドされていないインポートアドレステーブル (UIAT)) に計算します。
+- 1つ目のは、 `IndexFromPImgThunkData` 現在のインポートのインデックスを3つの異なるテーブル (インポートアドレステーブル (IAT)、バインドされたインポートアドレステーブル (BIAT)、およびバインドされていないインポートアドレステーブル (UIAT)) に計算します。
 
-- 2番目の値は、有効な IAT 内のインポートの数をカウントします。
+- 2番目のは、 `CountOfImports` 有効な IAT 内のインポートの数をカウントします。
 
-```cpp
+```C
 // utility function for calculating the index of the current import
 // for all the tables (INT, BIAT, UIAT, and IAT).
 __inline unsigned
@@ -42,6 +41,6 @@ CountOfImports(PCImgThunkData pitdBase) {
     }
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>こちらもご覧ください
 
 [ヘルパー関数について](understanding-the-helper-function.md)

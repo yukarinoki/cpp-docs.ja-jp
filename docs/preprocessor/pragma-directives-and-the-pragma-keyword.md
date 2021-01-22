@@ -1,42 +1,45 @@
 ---
-title: プラグマ ディレクティブと __pragma キーワード
+title: プラグマディレクティブと __pragma および _Pragma キーワード
 description: Microsoft Visual C および C++ (MSVC) で使用できるプラグマディレクティブについて説明します。
-ms.date: 10/30/2020
+ms.date: 01/19/2021
 f1_keywords:
 - '#pragma'
+- _Pragma
+- __pragma
 helpviewer_keywords:
 - '#pragma directives, C/C++'
 - __pragma keyword
+- _Pragma keyword
 - pragma directives, C/C++
 - pragmas, C/C++
 - preprocessor
 - pragmas
 - preprocessor, pragmas
 - pragma directives (#pragma)
-ms.assetid: 9867b438-ac64-4e10-973f-c3955209873f
-ms.openlocfilehash: 784cd413b6b81033c9e49b22d979ece72e5ee101
-ms.sourcegitcommit: 3f0c1dcdcce25865d1a1022bcc5b9eec79f69025
+ms.openlocfilehash: ee518dc096143d1caca95fa1812b9ce0e45527d3
+ms.sourcegitcommit: 3d9cfde85df33002e3b3d7f3509ff6a8dc4c0a21
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2020
-ms.locfileid: "94381546"
+ms.lasthandoff: 01/21/2021
+ms.locfileid: "98667199"
 ---
-# <a name="pragma-directives-and-the-__pragma-keyword"></a>プラグマ ディレクティブと __pragma キーワード
+# <a name="pragma-directives-and-the-__pragma-and-_pragma-keywords"></a>プラグマディレクティブと `__pragma` `_Pragma` キーワードおよびキーワード
 
-プラグマディレクティブは、コンピューターまたはオペレーティングシステム固有のコンパイラ機能を指定します。 Microsoft コンパイラに固有の **__pragma** キーワードを使用すると、マクロ定義内でプラグマディレクティブをコーディングできます。
+プラグマディレクティブは、コンピューターまたはオペレーティングシステム固有のコンパイラ機能を指定します。 **`__pragma`** Microsoft コンパイラに固有のキーワードを使用すると、マクロ定義内でプラグマディレクティブをコーディングできます。
 
-## <a name="syntax"></a>構文
+## <a name="syntax"></a>Syntax
 
-> **#`pragma`***トークン-文字列*\
-> **`__pragma(`***トークン-文字列* **`)`** 2つの先頭のアンダースコア-Microsoft 固有の拡張 **`_Pragma(`** *文字列-リテラル* **`)`** //C99
+> **`#pragma`***トークン-文字列*\
+> **`__pragma(`***トークン-文字列* **`)`** 2つの先頭にアンダースコア-Microsoft 固有の拡張機能 \
+> **`_Pragma(`***文字列-リテラル* **`)`** 規定
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>注釈
 
-C および C++ の各実装は、そのホスト コンピューターまたはオペレーティング システムに固有の機能をいくつかサポートしています。 たとえば、一部のプログラムでは、メモリ内のデータの場所を正確に制御したり、特定の関数がパラメーターを受け取る方法を制御したりする必要があります。 **#Pragma** ディレクティブは、C および C++ 言語との全体的な互換性を維持しながら、各コンパイラがコンピューターおよびオペレーティングシステム固有の機能を提供する手段を提供します。
+C および C++ の各実装は、そのホスト コンピューターまたはオペレーティング システムに固有の機能をいくつかサポートしています。 たとえば、一部のプログラムでは、メモリ内のデータの場所を正確に制御したり、特定の関数がパラメーターを受け取る方法を制御したりする必要があります。 ディレクティブは、 **`#pragma`** コンパイラごとに、C および C++ 言語との全体的な互換性を維持しながら、コンピューターおよびオペレーティングシステム固有の機能を提供する手段を提供します。
 
 プラグマは、コンピューターまたはオペレーティングシステムによって定義によって固有であり、通常、コンパイラごとに異なります。 プラグマは、新しいプリプロセッサ機能を提供するために、またはコンパイラに実装定義情報を提供するために、条件付きディレクティブで使用できます。
 
-*トークン文字列* は、特定のコンパイラ命令と引数 (存在する場合) を表す一連の文字です。 シャープ記号 () は、 **#** プラグマを含む行の最初の空白以外の文字である必要があります。 空白文字は、シャープ記号と "pragma" という単語を区切ることができます。 次の **#pragma** に、変換プログラムがプリプロセストークンとして解析できるテキストを記述します。 **#Pragma** する引数は、マクロの展開の対象となります。
+*トークン文字列* は、特定のコンパイラ命令と引数 (存在する場合) を表す一連の文字です。 シャープ記号 () は、 **`#`** プラグマを含む行の最初の空白以外の文字である必要があります。 空白文字は、シャープ記号と "pragma" という単語を区切ることができます。 次 **`#pragma`** に、変換プログラムがプリプロセストークンとして解析できるテキストを記述します。 の引数は、 **`#pragma`** マクロの展開の対象となります。
 
 *文字列リテラル* は、への入力です `_Pragma` 。 外部引用符と先頭/末尾の空白は削除されます。 `\"` はに置き換えられ `"` 、 `\\` はに置き換えられ `\` ます。
 
@@ -100,7 +103,7 @@ Microsoft C および C++ コンパイラは、次のプラグマを認識しま
 
 ## <a name="pragmas-and-compiler-options"></a>プラグマとコンパイラオプション
 
-一部のプラグマの機能はコンパイラ オプションのものと同じです。 ソース コード内のプラグマは、コンパイラ オプションで指定された動作をオーバーライドします。 たとえば、 [/Zp8](../build/reference/zp-struct-member-alignment.md)を指定した場合、次のコードの特定のセクションについて、このコンパイラ設定を [pack](../preprocessor/pack.md)でオーバーライドできます。
+一部のプラグマの機能はコンパイラ オプションのものと同じです。 ソース コード内のプラグマは、コンパイラ オプションで指定された動作をオーバーライドします。 たとえば、を指定した場合、 [`/Zp8`](../build/reference/zp-struct-member-alignment.md) コードの特定のセクションについて、次のようにこのコンパイラ設定をオーバーライドでき [`pack`](../preprocessor/pack.md) ます。
 
 ```cmd
 cl /Zp8 some_file.cpp
@@ -115,7 +118,7 @@ cl /Zp8 some_file.cpp
 // ...
 ```
 
-## <a name="the-__pragma-keyword"></a>__Pragma () キーワード
+## <a name="the-__pragma-keyword"></a>`__pragma()` キーワード
 
 コンパイラは、ディレクティブと同じ機能を持つ、Microsoft 固有のキーワードもサポートしてい **`__pragma`** **`#pragma`** ます。 違いは、キーワードは **`__pragma`** マクロ定義でインラインで使用できるということです。 **`#pragma`** ディレクティブはマクロ定義では使用できません。コンパイラは、ディレクティブのシャープ記号 (# [) を文字列化演算子 (#)](../preprocessor/stringizing-operator-hash.md)として解釈するためです。
 
@@ -181,8 +184,8 @@ int main()
 }
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>こちらもご覧ください
 
-[C/c + + プリプロセッサリファレンス](../preprocessor/c-cpp-preprocessor-reference.md)\
+[C/C++ のプリプロセッサ リファレンス](../preprocessor/c-cpp-preprocessor-reference.md)\
 [C プラグマ](../c-language/c-pragmas.md)\
 [キーワード](../cpp/keywords-cpp.md)
