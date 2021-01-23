@@ -1,32 +1,33 @@
 ---
-description: '詳細については、次を参照してください: pop_macro プラグマ'
-title: pop_macro プラグマ
-ms.date: 08/29/2019
+description: pragmaMicrosoft C/c + + での pop_macro ディレクティブの詳細については、こちらを参照してください。
+title: pop_macro pragma
+ms.date: 01/22/2021
 f1_keywords:
 - vc-pragma.pop_macro
 - pop_macro_CPP
 helpviewer_keywords:
 - pop_macro pragma
-- pragmas, pop_macro
-ms.assetid: 3b5489d0-69ba-4c66-b572-2748af0f12bb
-ms.openlocfilehash: 395e107586b9534b2e9db616f30ddd88b15b93ec
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+- pragma, pop_macro
+no-loc:
+- pragma
+ms.openlocfilehash: 99b0567838bac2a683f2a31fe13dd423e2efe651
+ms.sourcegitcommit: a26a66a3cf479e0e827d549a9b850fad99b108d1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97325707"
+ms.lasthandoff: 01/22/2021
+ms.locfileid: "98713364"
 ---
-# <a name="pop_macro-pragma"></a>pop_macro プラグマ
+# <a name="pop_macro-no-locpragma"></a>`pop_macro` pragma
 
 *マクロ名* マクロの値を、このマクロのスタックの一番上にある値に設定します。
 
 ## <a name="syntax"></a>構文
 
-> **#pragma pop_macro (** "*マクロ名*" **)**
+> **`#pragma pop_macro(`** "*マクロ名*" **`)`**
 
 ## <a name="remarks"></a>解説
 
-**Pop_macro** を実行する前に、*マクロ名* の [push_macro](../preprocessor/push-macro.md)を発行する必要があります。
+を [`push_macro`](../preprocessor/push-macro.md) 実行する前に、 *マクロ名* のが発行されている必要があり **`pop_macro`** ます。
 
 ## <a name="example"></a>例
 
@@ -64,4 +65,4 @@ int main() {
 
 ## <a name="see-also"></a>関連項目
 
-[プラグマ ディレクティブと __pragma キーワード](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+[プラグマディレクティブと `__pragma` `_Pragma` キーワードおよびキーワード](./pragma-directives-and-the-pragma-keyword.md)

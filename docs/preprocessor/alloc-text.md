@@ -1,40 +1,41 @@
 ---
-description: '詳細については、次を参照してください: alloc_text プラグマ'
-title: alloc_text プラグマ
-ms.date: 08/29/2019
+description: pragmaMicrosoft C/c + + での alloc_text ディレクティブの詳細については、こちらを参照してください。
+title: alloc_text pragma
+ms.date: 01/22/2021
 f1_keywords:
 - vc-pragma.alloc_text
 - alloc_text_CPP
 helpviewer_keywords:
 - alloc_text pragma
-- pragmas, alloc_text
-ms.assetid: 1fd7be18-e4f7-4f70-b079-6326f72b871a
-ms.openlocfilehash: 496a083c251684ebba004eef00bf466e72211ada
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+- pragma, alloc_text
+no-loc:
+- pragma
+ms.openlocfilehash: f20cbf90952c6ac5793c5bdf4d2ef1c533be2126
+ms.sourcegitcommit: a26a66a3cf479e0e827d549a9b850fad99b108d1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97301062"
+ms.lasthandoff: 01/22/2021
+ms.locfileid: "98713130"
 ---
-# <a name="alloc_text-pragma"></a>alloc_text プラグマ
+# <a name="alloc_text-no-locpragma"></a>`alloc_text` pragma
 
-指定した関数定義が存在するコード セクションに名前を付けます。 このプラグマは、名前付き関数の関数宣言子と関数定義との間で指定する必要があります。
+指定された関数定義が配置されるコードセクションに名前を付けます。 は、 pragma 関数宣言子と名前付き関数の関数定義の間で発生する必要があります。
 
 ## <a name="syntax"></a>構文
 
-> **#pragma alloc_text (** "*textsection*" **,** *function1* [**,** *function2* ...] **)**
+> **`#pragma alloc_text(`** "*テキストセクション*" **`,`** *function_1* [ **`,`** *function_2* ...] **`)`**
 
 ## <a name="remarks"></a>解説
 
-**Alloc_text** プラグマは、C++ のメンバー関数またはオーバーロードされた関数を処理しません。 これは、C リンケージ (つまり、 **extern "C"** リンケージ仕様で宣言された関数) で宣言された関数にのみ適用できます。 C++ リンケージを持つ関数でこのプラグマを使用しようとすると、コンパイラ エラーが生成されます。
+は、 **`alloc_text`** pragma C++ のメンバー関数またはオーバーロードされた関数を処理しません。 これは、C リンケージで宣言された関数、つまりリンケージ仕様で宣言された関数にのみ適用 **`extern "C"`** できます。 C++ リンケージを持つ関数でこれを使用しようとすると pragma 、コンパイラエラーが生成されます。
 
-を使用した関数のアドレス指定はサポートされて **`__based`** いないため、セクションの場所を指定するには、 **alloc_text** プラグマを使用する必要があります。 *Textsection* によって指定された名前は、二重引用符で囲む必要があります。
+を使用した関数のアドレス指定は **`__based`** サポートされていないため、セクションの場所を指定するにはを使用する必要があり **`alloc_text`** pragma ます。 *テキストセクション* で指定された名前は、二重引用符で囲む必要があります。
 
-**Alloc_text** プラグマは、指定された関数の宣言の後、およびこれらの関数の定義の前に記述する必要があります。
+は、 **`alloc_text`** pragma 指定された関数の宣言の後、およびこれらの関数の定義の前に記述する必要があります。
 
-**Alloc_text** プラグマで参照される関数は、プラグマと同じモジュールで定義する必要があります。 それ以外の場合、定義されていない関数が後で別のテキストセクションにコンパイルされると、エラーがキャッチされるか、またはキャッチされない可能性があります。 プログラムは正常に動作しますが、関数は目的のセクションでは割り当てられません。
+で参照される関数は **`alloc_text`** pragma 、と同じモジュールで定義する必要があり pragma ます。 それ以外の場合、定義されていない関数が後で別のテキストセクションにコンパイルされると、エラーがキャッチされるか、またはキャッチされない可能性があります。 通常、プログラムは正常に実行されますが、この関数は目的のセクションには割り当てられません。
 
-**Alloc_text** に関するその他の制限事項は次のとおりです。
+に関するその他の制限事項は次のとおり **`alloc_text`** です。
 
 - 関数内では使用できません。
 
@@ -42,4 +43,4 @@ ms.locfileid: "97301062"
 
 ## <a name="see-also"></a>関連項目
 
-[プラグマ ディレクティブと __pragma キーワード](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+[プラグマディレクティブと `__pragma` `_Pragma` キーワードおよびキーワード](./pragma-directives-and-the-pragma-keyword.md)

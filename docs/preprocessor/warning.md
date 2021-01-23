@@ -1,49 +1,50 @@
 ---
-description: '詳細情報: warning プラグマ'
-title: warning pragma
-ms.date: 08/29/2019
+title: 要する pragma
+description: pragmaMicrosoft C/c + + の警告についての詳細情報
+ms.date: 01/22/2021
 f1_keywords:
 - warning_CPP
 - vc-pragma.warning
 helpviewer_keywords:
-- pragmas, warning
+- pragma, warning
 - push pragma warning
 - pop warning pragma
 - warning pragma
-ms.assetid: 8e9a0dec-e223-4657-b21d-5417ebe29cc8
-ms.openlocfilehash: ac810076d1db0c975d28bc64d0a6d761c9cec608
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+no-loc:
+- pragma
+ms.openlocfilehash: 97d48acc3c0e4651d3b05c0a6405d5c9c2031cf6
+ms.sourcegitcommit: a26a66a3cf479e0e827d549a9b850fad99b108d1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97193109"
+ms.lasthandoff: 01/22/2021
+ms.locfileid: "98712844"
 ---
-# <a name="warning-pragma"></a>warning pragma
+# <a name="warning-no-locpragma"></a>`warning` pragma
 
 コンパイラの警告メッセージの動作の選択的な変更を有効にします。
 
 ## <a name="syntax"></a>構文
 
-> **#pragma の警告 (**\
-> &nbsp;&nbsp;&nbsp;&nbsp;*警告-指定子* **:** *警告番号リスト*\
-> &nbsp;&nbsp;&nbsp;&nbsp;[**;***警告-指定子* **:** *警告番号-一覧*...]**)**\
-> **#pragma の警告 (プッシュ** [ **,** *n* ] **)**\
-> **#pragma 警告 (pop)**
+> **`#pragma warning(`**\
+> &nbsp;&nbsp;&nbsp;&nbsp;*`warning-specifier`* **`:`** *`warning-number-list`*\
+> &nbsp;&nbsp;&nbsp;&nbsp;[**`;`** *`warning-specifier`* **`:`** *`warning-number-list`* ... ] **`)`**\
+> **`#pragma warning( push`** [ **`,`** *n* ] **`)`**\
+> **`#pragma warning( pop )`**
 
 ## <a name="remarks"></a>解説
 
 次の警告指定子パラメーターを使用できます。
 
-|警告指定子|説明|
-|------------------------|-------------|
-|*1、2、3、4*|指定された警告に特定のレベルを適用します。 は、既定ではオフになっている、指定された警告もオンにします。|
-|*default*|警告の動作を既定値にリセットします。 は、既定ではオフになっている、指定された警告もオンにします。 警告は、既定の文書化されたレベルで生成されます。<br /><br /> 詳細については、「 [既定でオフになっているコンパイラ警告](../preprocessor/compiler-warnings-that-are-off-by-default.md)」を参照してください。|
-|*disable*|指定された警告メッセージを発行しません。|
-|*error*|指定した警告をエラーとして報告します。|
-|*ある時*|指定したメッセージを 1 回だけ表示します。|
-|*振ら*|プラグマの現在の状態をスタックにプッシュし、次の行に対して指定された警告を無効にします。次に、プラグマの状態がリセットされるように警告スタックをポップします。|
+| 警告指定子 | 意味 |
+|--|--|
+| `1`, `2`, `3`, `4` | 指定した警告に特定のレベルを適用します。 は、既定ではオフになっている、指定された警告もオンにします。 |
+| `default` | 警告の動作を既定値にリセットします。 は、既定ではオフになっている、指定された警告もオンにします。 警告は、既定の文書化されたレベルで生成されます。<br /><br /> 詳細については、「 [既定でオフになっているコンパイラ警告](../preprocessor/compiler-warnings-that-are-off-by-default.md)」を参照してください。 |
+| `disable` | 指定された警告メッセージを発行しません。 |
+| `error` | 指定した警告をエラーとして報告します。 |
+| `once` | 指定したメッセージを 1 回だけ表示します。 |
+| `suppress` | の現在の状態を pragma スタックにプッシュし、次の行に対して指定された警告を無効にして、 pragma 状態がリセットされるように警告スタックをポップします。 |
 
-次のコード ステートメントは、`warning-number-list` パラメーターが複数の警告の数を含むことができること、および複数の `warning-specifier` パラメーターが同じプラグマ ディレクティブで指定できることを示しています。
+次のコードステートメントは、 *`warning-number-list`* パラメーターに複数の警告番号を含めることができ、複数の *`warning-specifier`* パラメーターを同じディレクティブで指定できることを示してい pragma ます。
 
 ```cpp
 #pragma warning( disable : 4507 34; once : 4385; error : 164 )
@@ -64,7 +65,7 @@ ms.locfileid: "97193109"
 
 コンパイラは、0 と 999 の間の任意の警告番号に 4000 を追加します。
 
-コード生成に関連付けられている4700-4999 の範囲の警告番号の場合、コンパイラが関数定義を検出したときに有効な警告の状態は、関数の残りの部分に対して有効になります。 関数の **warning** プラグマを使用して、4699より大きい警告番号の状態を変更することは、関数の終了後にのみ有効になります。 次の例では、コード生成の警告メッセージを無効にして復元するために、 **警告** プラグマの正しい配置を示しています。
+4700-4999 の範囲の警告番号は、コード生成に関連付けられています。 これらの警告の場合、コンパイラが関数定義に到達したときに有効な警告の状態は、関数の残りの部分に対して有効なままです。 関数のを使用して、 **`warning`** pragma 4699 より大きい警告番号の状態を変更することは、関数の終了後にのみ有効になります。 次の例は、 **`warning`** コード生成の警告メッセージを無効にしてから復元するためのの正しい配置を示して pragma います。
 
 ```cpp
 // pragma_warning.cpp
@@ -82,19 +83,19 @@ int main() {
 }
 ```
 
-関数本体全体で、 **警告** プラグマの最後の設定が関数全体に対して有効になることに注意してください。
+関数本体全体で、の最後の設定が **`warning`** pragma 関数全体に対して有効になることに注意してください。
 
-## <a name="push-and-pop"></a>プッシュおよびポップ
+## <a name="push-and-pop"></a>プッシュとポップ
 
-**Warning** プラグマでは、次の構文もサポートされています。 *n* は警告レベル (1 ~ 4) を表します。
+では、 **`warning`** pragma 次の構文もサポートされています。省略可能な *n* パラメーターは、警告レベル (1 ~ 4) を表します。
 
 `#pragma warning( push [ , n ] )`
 
 `#pragma warning( pop )`
 
-プラグマは、 `warning( push )` 警告ごとに現在の警告状態を格納します。 プラグマは、 `warning( push, n )` すべての警告の現在の状態を格納し、グローバル警告レベルを *n* に設定します。
+は、 pragma `warning( push )` すべての警告について現在の警告状態を格納します。 は、 pragma `warning( push, n )` すべての警告の現在の状態を格納し、グローバル警告レベルを *n* に設定します。
 
-プラグマは、 `warning( pop )` スタックにプッシュされた最後の警告状態をポップします。 *プッシュ* と *pop* の間で警告状態に加えた変更は元に戻されます。 次の例について考えます。
+は、 pragma `warning( pop )` スタックにプッシュされた最後の警告状態をポップします。 との間で警告状態に加えた変更 `push` `pop` は元に戻されます。 次の例について考えます。
 
 ```cpp
 #pragma warning( push )
@@ -105,9 +106,9 @@ int main() {
 #pragma warning( pop )
 ```
 
-このコードの最後では、すべての警告 (4705、4706、および4707を含む) の状態が、コードの先頭にあるもの *に復元さ* れます。
+このコードの最後で、は、 `pop` すべての警告 (4705、4706、および4707を含む) の状態を、コードの開始時点の状態に復元します。
 
-ヘッダーファイルを記述するときに、 *プッシュ* と *pop* を使用して、ユーザーが行った警告状態の変更によって、ヘッダーが正しくコンパイルされないようにすることができます。 ヘッダーの先頭で *push* を使用し、最後に *ポップ* します。 たとえば、警告レベル4で正常にコンパイルされないヘッダーがある場合、次のコードは警告レベルを3に変更し、ヘッダーの最後に元の警告レベルを復元します。
+ヘッダーファイルを記述するときに、およびを使用し `push` `pop` て、ユーザーが行った警告状態の変更によって、ヘッダーが正しくコンパイルされないようにすることができます。 `push`ヘッダーの先頭と末尾にを使用し `pop` ます。 たとえば、警告レベル4では正常にコンパイルされないヘッダーがある場合があります。 次のコードでは、警告レベルを3に変更し、ヘッダーの最後に元の警告レベルを復元します。
 
 ```cpp
 #pragma warning( push, 3 )
@@ -115,8 +116,8 @@ int main() {
 #pragma warning( pop )
 ```
 
-警告を抑制するために役立つコンパイラオプションの詳細については、「 [/fi](../build/reference/fi-name-forced-include-file.md) と [/w](../build/reference/compiler-option-warning-level.md)」を参照してください。
+警告を抑制するのに役立つコンパイラオプションの詳細については、「」および「」を参照してください [`/FI`](../build/reference/fi-name-forced-include-file.md) [`/w`](../build/reference/compiler-option-warning-level.md) 。
 
 ## <a name="see-also"></a>関連項目
 
-[プラグマ ディレクティブと __pragma キーワード](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+[プラグマディレクティブと `__pragma` `_Pragma` キーワードおよびキーワード](./pragma-directives-and-the-pragma-keyword.md)

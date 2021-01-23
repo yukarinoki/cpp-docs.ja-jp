@@ -1,34 +1,35 @@
 ---
-title: intrinsic プラグマ
-description: MSVC 組み込みプラグマは、組み込み関数として使用する、サポートされている組み込み関数を指定するために使用されます。
-ms.date: 07/08/2020
+title: 組み込み pragma
+description: MSVC 組み込みは、組み込み pragma 関数として使用する、サポートされている組み込み関数を指定するために使用されます。
+ms.date: 01/22/2021
 f1_keywords:
 - intrinsic_CPP
 - vc-pragma.intrinsic
 helpviewer_keywords:
 - intrinsic pragma
-- pragmas, intrinsic
-ms.assetid: 25c86ac7-ef40-47b7-a2c0-fada9c5dc3c5
-ms.openlocfilehash: 45a5a13f3bda3657b93e1a89e7a842a4465b01d5
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+- pragma, intrinsic
+no-loc:
+- pragma
+ms.openlocfilehash: 618705c42c20baf2b99f89e138b30d5633b9e592
+ms.sourcegitcommit: a26a66a3cf479e0e827d549a9b850fad99b108d1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90041108"
+ms.lasthandoff: 01/22/2021
+ms.locfileid: "98713546"
 ---
-# <a name="intrinsic-pragma"></a>`intrinsic` プラグマ
+# <a name="intrinsic-no-locpragma"></a>`intrinsic` pragma
 
-プラグマの引数リストで指定された関数の呼び出しが組み込みであることを指定します。
+の引数リストで指定された関数の呼び出しが組み込みであることを指定し pragma ます。
 
 ## <a name="syntax"></a>構文
 
-> **`#pragma intrinsic(`** *`function1`* [**`,`** _`function2`_ ... ] **`)`**
+> **`#pragma intrinsic(`***function_1* [ **`,`** *function_2* ...]**`)`**
 
-## <a name="remarks"></a>注釈
+## <a name="remarks"></a>解説
 
-**`intrinsic`** プラグマは、関数が既知の動作を持つことをコンパイラに通知します。 コンパイラは、関数を呼び出し、より優れたパフォーマンスを得られる場合は、関数呼び出しをインライン命令に置き換えないことがあります。
+は、 **`intrinsic`** pragma 関数が既知の動作を持つことをコンパイラに通知します。 コンパイラは、関数を呼び出し、より優れたパフォーマンスを得られる場合は、関数呼び出しをインライン命令に置き換えないことがあります。
 
-組み込み形式のライブラリ関数を以下に示します。 **`intrinsic`** プラグマが検出されると、指定した組み込み関数を含む最初の関数定義で有効になります。 効果は、ソースファイルの末尾、または同じ組み込み関数を指定するプラグマの外観まで継続され `function` ます。 **`intrinsic`** プラグマは、関数定義の外部でグローバルレベルでのみ使用できます。
+組み込み形式のライブラリ関数を以下に示します。 **`intrinsic`** pragma が表示されると、指定された組み込み関数を含む最初の関数定義で有効になります。 効果は、ソースファイルの末尾、または同じ組み込み関数を指定するの外観に続き `function` pragma ます。 は、 **`intrinsic`** pragma 関数定義の外部でのみ、グローバルレベルで使用できます。
 
 次の関数には固有のフォームがあり、組み込みフォームはを指定するときに使用され [`/Oi`](../build/reference/oi-generate-intrinsic-functions.md) ます。
 
@@ -135,7 +136,7 @@ int main() {
 
 [`#pragma function`](../preprocessor/function-c-cpp.md)ソーステキストのブロックの組み込みを有効または無効にする方法の詳細と例については、「」を参照してください。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[プラグマディレクティブと `__pragma` キーワード](../preprocessor/pragma-directives-and-the-pragma-keyword.md)\
+[プラグマディレクティブと `__pragma` `_Pragma` キーワードおよびキーワード](./pragma-directives-and-the-pragma-keyword.md)\
 [コンパイラの組み込み](../intrinsics/compiler-intrinsics.md)

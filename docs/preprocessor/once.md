@@ -1,21 +1,23 @@
 ---
-description: '詳細情報: once プラグマ'
-title: once プラグマ
-ms.date: 01/19/2021
+description: '詳細情報: 1 回 pragma'
+title: ある時 pragma
+ms.date: 01/22/2021
 f1_keywords:
 - vc-pragma.once
 - once_CPP
 helpviewer_keywords:
 - once pragma
-- pragmas, once
-ms.openlocfilehash: 87e3a87d8922868ce8ac3c48815c09de8727eba7
-ms.sourcegitcommit: 3d9cfde85df33002e3b3d7f3509ff6a8dc4c0a21
+- pragma, once
+no-loc:
+- pragma
+ms.openlocfilehash: 3edb5f88202ee783e587b1f886eddddf427f6133
+ms.sourcegitcommit: a26a66a3cf479e0e827d549a9b850fad99b108d1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/21/2021
-ms.locfileid: "98667223"
+ms.lasthandoff: 01/22/2021
+ms.locfileid: "98713481"
 ---
-# <a name="once-pragma"></a>`once` プラグマ
+# <a name="once-no-locpragma"></a>`once` pragma
 
 ソースコードファイルをコンパイルするときに、コンパイラがヘッダーファイルを1回だけインクルードすることを指定します。
 
@@ -27,7 +29,7 @@ ms.locfileid: "98667223"
 
 を使用すると `#pragma once` 、ビルド時間を短縮できます。これは、変換単位の最初のファイルの後にコンパイラが開かず、ファイルを再度読み取るため `#include` です。 これは、 *複数インクルードの最適化* と呼ばれます。 これは、 *インクルードガード* 表現に似ています。これは、プリプロセッサマクロ定義を使用して、ファイルの内容が複数インクルードされないようにします。 また、 *1 つの定義規則* に違反しないようにすることもできます。これは、すべてのテンプレート、型、関数、およびオブジェクトがコード内で定義を1つしか持たないという要件です。
 
-次に例を示します。
+例:
 
 ```cpp
 // header.h
@@ -53,6 +55,6 @@ ms.locfileid: "98667223"
 
 を使用しないようにする `#pragma once` か、複数回含めるように設計されたヘッダーファイルにガード表現を含めることは、その効果を制御するためにプリプロセッサシンボルを使用することに注意してください。 この設計の例については、ヘッダーファイルを参照してください \<assert.h> 。 また、インクルードファイルへの複数のパスを作成しないように、インクルードパスを慎重に管理してください。これにより、ガードとの両方に対して複数インクルードの最適化を無効にすることができ `#pragma once` ます。
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 
-[`pragma` ディレクティブと `__pragma` キーワード](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+[プラグマディレクティブと `__pragma` `_Pragma` キーワードおよびキーワード](./pragma-directives-and-the-pragma-keyword.md)

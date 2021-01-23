@@ -1,28 +1,29 @@
 ---
-description: '詳細については、次を参照してください: omp プラグマ'
-title: omp プラグマ
-ms.date: 08/29/2019
+description: pragmaMicrosoft C/c + + での omp ディレクティブの詳細について説明します。
+title: omp pragma
+ms.date: 01/22/2021
 f1_keywords:
 - vc-pragma.omp
 - omp_CPP
 helpviewer_keywords:
-- pragmas, omp
+- pragma, omp
 - omp pragma
-ms.assetid: 652414c5-78ed-4b7f-8283-1a9fe4c5e78d
-ms.openlocfilehash: 1fdb277fa3512194b6819a95fe663b7848160558
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+no-loc:
+- pragma
+ms.openlocfilehash: a3956b8b94bd54bfc20bc768a745211f758c2efe
+ms.sourcegitcommit: a26a66a3cf479e0e827d549a9b850fad99b108d1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97333249"
+ms.lasthandoff: 01/22/2021
+ms.locfileid: "98713468"
 ---
-# <a name="omp-pragma"></a>omp プラグマ
+# <a name="omp-no-locpragma"></a>`omp` pragma
 
 省略可能なディレクティブの句と共に、1 つ以上の OpenMP ディレクティブを受け取ります。
 
 ## <a name="syntax"></a>構文
 
-> **#pragma omp** *ディレクティブ*
+> **`#pragma omp`***ディレクティブ*
 
 ## <a name="remarks"></a>解説
 
@@ -30,4 +31,4 @@ ms.locfileid: "97333249"
 
 ## <a name="see-also"></a>関連項目
 
-[プラグマ ディレクティブと __pragma キーワード](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+[プラグマディレクティブと `__pragma` `_Pragma` キーワードおよびキーワード](./pragma-directives-and-the-pragma-keyword.md)

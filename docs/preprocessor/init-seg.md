@@ -1,23 +1,24 @@
 ---
-description: '詳細については、次を参照してください: init_seg プラグマ'
-title: init_seg プラグマ
-ms.date: 08/29/2019
+description: pragmaMicrosoft C/c + + での init_seg ディレクティブの詳細については、こちらを参照してください。
+title: init_seg pragma
+ms.date: 01/22/2021
 f1_keywords:
 - vc-pragma.init_seg
 - init_seg_CPP
 helpviewer_keywords:
-- pragmas, init_seg
+- pragma, init_seg
 - init_seg pragma
 - data segment initializing [C++]
-ms.assetid: 40a5898a-5c85-4aa9-8d73-3d967eb13610
-ms.openlocfilehash: cab1c82acd3e06a0ace4d55be3ce82e8fd7aed1c
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+no-loc:
+- pragma
+ms.openlocfilehash: 77ca6f2454ad18c8adcefcddc4cf1f9c0d4f4532
+ms.sourcegitcommit: a26a66a3cf479e0e827d549a9b850fad99b108d1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97236465"
+ms.lasthandoff: 01/22/2021
+ms.locfileid: "98713585"
 ---
-# <a name="init_seg-pragma"></a>init_seg プラグマ
+# <a name="init_seg-no-locpragma"></a>`init_seg` pragma
 
 **C++ 固有の仕様**
 
@@ -25,34 +26,34 @@ ms.locfileid: "97236465"
 
 ## <a name="syntax"></a>構文
 
-> **#pragma init_seg (** { **compiler**  |  **lib**  |  **user** |"*section-name*" [ **,** *func-name* ]} **)**
+> **`#pragma init_seg(`** { **`compiler`** | **`lib`** | **`user`** |"*section-name*" [ **`,`** *func-name* ]} **`)`**
 
 ## <a name="remarks"></a>解説
 
 この記事では、 *セグメント* と *セクション* という用語は同じ意味を持ちます。
 
-グローバルな静的オブジェクトの初期化にはコードが必要になることがあるため、オブジェクトを構築するタイミングを指定する必要があります。 特に、ダイナミックリンクライブラリ (Dll) または初期化が必要なライブラリでは、 **init_seg** プラグマを使用することが重要です。
+グローバルな静的オブジェクトの初期化にはコードが必要になることがあるため、オブジェクトを構築するタイミングを指定する必要があります。 特に、 **`init_seg`** pragma 動的リンクライブラリ (dll) の、または初期化が必要なライブラリでを使用することが重要です。
 
-**Init_seg** プラグマのオプションは次のとおりです。
+のオプションは **`init_seg`** pragma 次のとおりです。
 
-**コンパイラー**\
+**`compiler`**\
 Microsoft C ランタイム ライブラリの初期化のために予約されています。 このグループ内のオブジェクトが最初に構築されます。
 
-**変数**\
-サード パーティの開発元のクラス ライブラリの初期化に使用できます。 このグループのオブジェクトは、 **コンパイラ** としてマークされているオブジェクトの後、他のオブジェクトの前に構築されます。
+**`lib`**\
+サード パーティの開発元のクラス ライブラリの初期化に使用できます。 このグループのオブジェクトは、としてマークされているオブジェクトの後、他のオブジェクトの前に構築され **`compiler`** ます。
 
-**ユーザーズ**\
+**`user`**\
 ユーザーが使用できます。 このグループ内のオブジェクトが最後に構築されます。
 
 *セクション-名前*\
 初期化セクションの明示的な指定を許可します。 ユーザー指定の *セクション名* のオブジェクトは暗黙的に構築されません。 ただし、これらのアドレスは、セクション *名* によって名前が付けられたセクションに配置されます。
 
-指定した *セクション名* には、そのモジュール内のプラグマの後に宣言されたグローバルオブジェクトを構築するヘルパー関数へのポインターが含まれます。
+指定した *セクション名* には、そのモジュール内のの後に宣言されたグローバルオブジェクトを構築するヘルパー関数へのポインターが含まれ pragma ます。
 
-セクションを作成するときに使用しない名前の一覧については、「 [/SECTION](../build/reference/section-specify-section-attributes.md)」を参照してください。
+セクションを作成するときに使用しない名前の一覧については、「」を参照してください [`/SECTION`](../build/reference/section-specify-section-attributes.md) 。
 
 *func-名前*\
-プログラムの終了時に `atexit` の代わりに呼び出される関数を指定します。 また、このヘルパー関数は、グローバルオブジェクトのデストラクターへのポインターを使用して、 [atexit](../c-runtime-library/reference/atexit.md) を呼び出します。 次の形式のプラグマで関数の識別子を指定した場合、
+プログラムの終了時に `atexit` の代わりに呼び出される関数を指定します。 また、このヘルパー関数 [`atexit`](../c-runtime-library/reference/atexit.md) は、グローバルオブジェクトのデストラクターへのポインターを使用してを呼び出します。 の形式で関数識別子を指定する場合は pragma 、
 
 ```cpp
 int __cdecl myexit (void (__cdecl *pf)(void))
@@ -64,13 +65,13 @@ int __cdecl myexit (void (__cdecl *pf)(void))
 
 `atexit` の代わりとなる関数は引用符で囲みません。
 
-オブジェクトは、他のプラグマで定義されているセクションに配置されたままになり `XXX_seg` ます。
+オブジェクトは、他のディレクティブによって定義されたセクションに配置され `XXX_seg` pragma ます。
 
 モジュールで宣言されているオブジェクトは、C ランタイムによって自動的に初期化されるわけではありません。 コードで初期化を行う必要があります。
 
 既定では、`init_seg` セクションは読み取り専用です。 セクション名がの場合 `.CRT` 、コンパイラは、読み取り、書き込みとしてマークされている場合でも、属性を自動的に読み取り専用に変更します。
 
-翻訳単位で **init_seg** を複数回指定することはできません。
+1つの **`init_seg`** 翻訳単位で複数回指定することはできません。
 
 オブジェクトが、コードで明示的に定義されたユーザー定義のコンストラクターを持っていない場合でも、コンパイラが生成することがあります。 たとえば、v テーブルポインターをバインドするために1つを作成できます。 必要に応じて、コードはコンパイラによって生成されたコンストラクターを呼び出します。
 
@@ -157,4 +158,4 @@ A()
 
 ## <a name="see-also"></a>関連項目
 
-[プラグマ ディレクティブと __pragma キーワード](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+[プラグマディレクティブと `__pragma` `_Pragma` キーワードおよびキーワード](./pragma-directives-and-the-pragma-keyword.md)

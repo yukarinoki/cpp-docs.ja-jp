@@ -1,34 +1,35 @@
 ---
-description: 詳細については、関数プラグマ
-title: function プラグマ
-ms.date: 08/29/2019
+description: pragmaMicrosoft C/c + + での function ディレクティブの詳細について説明します。
+title: プロシージャ pragma
+ms.date: 01/22/2021
 f1_keywords:
 - function_CPP
 - vc-pragma.function
 helpviewer_keywords:
 - function pragma
-- pragmas, function
-ms.assetid: cbd1bd60-fabf-4b5a-9c3d-2d9f4b871365
-ms.openlocfilehash: 77b215458f9ffdb6be605d0ae4b239451a1fe1bf
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+- pragma, function
+no-loc:
+- pragma
+ms.openlocfilehash: 3d4b1e2f50cd118e613235271428588ac585affc
+ms.sourcegitcommit: a26a66a3cf479e0e827d549a9b850fad99b108d1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97269303"
+ms.lasthandoff: 01/22/2021
+ms.locfileid: "98712831"
 ---
-# <a name="function-pragma"></a>function プラグマ
+# <a name="function-no-locpragma"></a>`function` pragma
 
-プラグマの引数リストで指定された関数をインライン展開するのではなく、その関数の呼び出しを生成するようコンパイラに指示します。
+を pragma インライン展開するのではなく、の引数リストで指定された関数の呼び出しを生成するようコンパイラに指示します。
 
 ## <a name="syntax"></a>構文
 
-> **#pragma 関数 (** *function1* [ **,** *function2* ...] **)**
+> **`#pragma function(`***function1* [ **`,`** *function2* ...]**`)`**
 
 ## <a name="remarks"></a>解説
 
-組み込み関数は、通常、関数呼び出しとしてではなく、インラインコードとして生成されます。 組み込みの [プラグマ](intrinsic.md) または [/Oi](../build/reference/oi-generate-intrinsic-functions.md) コンパイラオプションを使用して、組み込み関数を生成するようにコンパイラに指示した場合は、 **関数** プラグマを使用して明示的に関数呼び出しを強制することができます。 **関数** プラグマが検出されると、指定された組み込み関数を含む最初の関数定義で有効になります。 効果は、ソースファイルの末尾、または `intrinsic` 同じ組み込み関数を指定するプラグマの外観に続きます。 **関数** プラグマは、関数の外部でグローバルレベルでのみ使用できます。
+組み込み関数は、通常、関数呼び出しとしてではなく、インラインコードとして生成されます。 [ `intrinsic` pragma](intrinsic.md)またはコンパイラオプションを使用して、組み込み関数を生成するようにコンパイラに指示した場合は [`/Oi`](../build/reference/oi-generate-intrinsic-functions.md) 、を使用して **`function`** pragma 明示的に関数呼び出しを強制することができます。 **`function`** pragma が表示されると、指定された組み込み関数を含む最初の関数定義で有効になります。 効果は、ソースファイルの末尾、または同じ組み込み関数を指定するの外観に続き `intrinsic` pragma ます。 は、 **`function`** pragma 関数の外部でのみ、グローバルレベルで使用できます。
 
-組み込みフォームを持つ関数の一覧については、「 [組み込みプラグマ](intrinsic.md)」を参照してください。
+組み込みフォームを持つ関数の一覧については[ `intrinsic` pragma ](intrinsic.md)、「」を参照してください。
 
 ## <a name="example"></a>例
 
@@ -84,4 +85,4 @@ str is '!!!!!!!!!!!!!!!'
 
 ## <a name="see-also"></a>関連項目
 
-[プラグマ ディレクティブと __pragma キーワード](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+[プラグマディレクティブと `__pragma` `_Pragma` キーワードおよびキーワード](./pragma-directives-and-the-pragma-keyword.md)

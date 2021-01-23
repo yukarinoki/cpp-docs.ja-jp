@@ -1,22 +1,23 @@
 ---
-description: '詳細情報: pack プラグマ'
-title: pack プラグマ
-ms.date: 07/22/2020
+description: pragmaMicrosoft C/c + + での pack ディレクティブの詳細については、こちらを参照してください。
+title: 必要性 pragma
+ms.date: 01/22/2021
 f1_keywords:
 - pack_CPP
 - vc-pragma.pack
 helpviewer_keywords:
-- pragmas, pack
+- pragma, pack
 - pack pragma
-ms.assetid: e4209cbb-5437-4b53-b3fe-ac264501d404
-ms.openlocfilehash: d4e4cbba13efabd148fdd61f59eebb15c56b1c41
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+no-loc:
+- pragma
+ms.openlocfilehash: 82086f737fb8918c62d40c60f1e1006985fbd827
+ms.sourcegitcommit: a26a66a3cf479e0e827d549a9b850fad99b108d1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97333192"
+ms.lasthandoff: 01/22/2021
+ms.locfileid: "98713416"
 ---
-# <a name="pack-pragma"></a>pack プラグマ
+# <a name="pack-no-locpragma"></a>`pack` pragma
 
 構造体、共用体、およびクラスメンバーのパッキングアラインメントを指定します。
 
@@ -48,7 +49,7 @@ Optionalパッキングに使用する値をバイト単位で指定します。
 
 ## <a name="remarks"></a>解説
 
-クラスを *パック* するには、そのメンバーをメモリ内で相互に直接配置します。 一部またはすべてのメンバーを、ターゲットアーキテクチャの既定の配置よりも小さい境界に配置できることを意味します。 **`pack`** データ宣言レベルでコントロールを提供します。 これは [`/Zp`](../build/reference/zp-struct-member-alignment.md) 、モジュールレベルの制御のみを提供するコンパイラオプションとは異なります。 **パッケージ** は、 **`struct`** **`union`** **`class`** プラグマが表示された後、最初の、、または宣言で有効になります。 **`pack`** 定義には影響しません。 **`pack`** 引数を指定せずにを呼び出すと *`n`* 、コンパイラオプションで設定された値に設定され **`/Zp`** ます。 コンパイラオプションが設定されていない場合、x86、ARM、および ARM64 の既定値は8です。 既定値は、x64 ネイティブの場合は16です。
+クラスを *パック* するには、そのメンバーをメモリ内で相互に直接配置します。 一部またはすべてのメンバーを、ターゲットアーキテクチャの既定の配置よりも小さい境界に配置できることを意味します。 **`pack`** データ宣言レベルでコントロールを提供します。 これは [`/Zp`](../build/reference/zp-struct-member-alignment.md) 、モジュールレベルの制御のみを提供するコンパイラオプションとは異なります。  **`struct`** **`union`** が表示された後、最初の、、またはの各宣言でパックが有効になり **`class`** pragma ます。 **`pack`** 定義には影響しません。 **`pack`** 引数を指定せずにを呼び出すと *`n`* 、コンパイラオプションで設定された値に設定され **`/Zp`** ます。 コンパイラオプションが設定されていない場合、x86、ARM、および ARM64 の既定値は8です。 既定値は、x64 ネイティブの場合は16です。
 
 構造体のアラインメントを変更した場合、メモリ内で使用されている領域が使用できなくなる可能性があります。 ただし、不均等なアクセスでは、パフォーマンスが低下したり、ハードウェアによって生成された例外が発生したりする可能性があります。 この例外動作は、を使用して変更でき [`SetErrorMode`](/windows/win32/api/errhandlingapi/nf-errhandlingapi-seterrormode) ます。
 
@@ -67,7 +68,7 @@ Optionalパッキングに使用する値をバイト単位で指定します。
 
 ## <a name="examples"></a>例
 
-次のサンプルは、プラグマを使用して構造体のアラインメントを変更する方法を示して **`pack`** います。
+次の例は、を使用して **`pack`** pragma 構造体のアラインメントを変更する方法を示しています。
 
 ```cpp
 // pragma_directives_pack.cpp
@@ -123,4 +124,4 @@ int main() {
 
 ## <a name="see-also"></a>関連項目
 
-[プラグマディレクティブと `__pragma` キーワード](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+[プラグマディレクティブと `__pragma` `_Pragma` キーワードおよびキーワード](./pragma-directives-and-the-pragma-keyword.md)

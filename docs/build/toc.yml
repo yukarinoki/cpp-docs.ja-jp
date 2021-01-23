@@ -55,6 +55,8 @@
       href: ../build/cmake-projects-in-visual-studio.md
     - name: 'チュートリアル: Visual Studio で C++ クロスプラットフォーム プロジェクトを作成する'
       href: ../build/get-started-linux-cmake.md
+    - name: 'チュートリアル: CMake プロジェクトをリモートで実行してデバッグする'
+      href: ../build/cmake-remote-debugging.md
     - name: CMake プロジェクトでの Clang/LLVM
       href: ../build/clang-support-cmake.md
     - name: Linux CMake プロジェクトを構成する
@@ -1086,9 +1088,9 @@
               href: ../build/reference/specifying-dlls-to-delay-load.md
             - name: 遅延読み込みした DLL の明示的なアンロード
               href: ../build/reference/explicitly-unloading-a-delay-loaded-dll.md
-            - name: インポートのバインド
+            - name: 遅延読み込みしたインポートのバインド
               href: ../build/reference/binding-imports.md
-            - name: 遅延読み込みされた DLL に対するすべてのインポートの読み込み
+            - name: 遅延読み込みした DLL に対するすべてのインポートの読み込み
               href: ../build/reference/loading-all-imports-for-a-delay-loaded-dll.md
             - name: エラー処理と通知
               expanded: false
@@ -1105,7 +1107,7 @@
               href: ../build/reference/dumping-delay-loaded-imports.md
             - name: DLL の遅延読み込みの制約
               href: ../build/reference/constraints-of-delay-loading-dlls.md
-            - name: ヘルパー関数について
+            - name: 遅延読み込みヘルパー関数について
               expanded: false
               items:
                 - name: ヘルパー関数について
@@ -1120,7 +1122,7 @@
                   href: ../build/reference/calculating-necessary-values.md
                 - name: 遅延読み込みした DLL のアンロード
                   href: ../build/reference/unloading-a-delay-loaded-dll.md
-            - name: 独自のヘルパー関数の作成
+            - name: 独自のヘルパー関数の開発
               href: ../build/reference/developing-your-own-helper-function.md
     - name: 追加の MSVC ビルド ツール
       expanded: false

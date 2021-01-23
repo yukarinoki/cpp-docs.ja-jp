@@ -1,130 +1,129 @@
 ---
 title: プリプロセッサの文法の概要 (C/C++)
-description: Microsoft C/C++コンパイラ (MSVC) プリプロセッサ文法構文を定義し、説明します。
-ms.date: 08/29/2019
+description: Microsoft C/c + + コンパイラ (MSVC) プリプロセッサ文法構文を定義し、説明します。
+ms.date: 01/22/2021
 helpviewer_keywords:
 - grammar
 - preprocessor, grammar
-ms.assetid: 0acb6e9b-364c-4ef8-ace4-7be980521121
-ms.openlocfilehash: 68e5f09acfc6444afb46bcbc0f7e9db10b04afed
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: dbe46a67337bf55cb98100878dedb8c92120472b
+ms.sourcegitcommit: a26a66a3cf479e0e827d549a9b850fad99b108d1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80076870"
+ms.lasthandoff: 01/22/2021
+ms.locfileid: "98713637"
 ---
 # <a name="preprocessor-grammar-summary-cc"></a>プリプロセッサの文法の概要 (C/C++)
 
-この記事では、C およびC++プリプロセッサの正式な文法について説明します。 プリプロセスディレクティブと演算子の構文について説明します。 詳細については、「[プリプロセッサ](../preprocessor/preprocessor.md)[ディレクティブとプラグマディレクティブ」と「__pragma キーワード](../preprocessor/pragma-directives-and-the-pragma-keyword.md)」を参照してください。
+この記事では、C および C++ プリプロセッサの正式な文法について説明します。 プリプロセスディレクティブと演算子の構文について説明します。 詳細については、「[プリプロセッサ](../preprocessor/preprocessor.md)[ディレクティブとプラグマディレクティブ」と「 `__pragma` `_Pragma` キーワードとキーワード](./pragma-directives-and-the-pragma-keyword.md)」を参照してください。
 
-## <a name="definitions-for-the-grammar-summary"></a><a name="definitions"></a>文法の概要の定義
+## <a name="definitions-for-the-grammar-summary"></a><a name="definitions"></a> 文法の概要の定義
 
 終端は構文定義内のエンドポイントです。 他の解決はありません。 終端には、予約語およびユーザー定義の識別子が含まれます。
 
-非終端は構文内のプレースホルダーです。 ほとんどは、この構文概要の他の場所で定義されています。 定義は再帰的に行うことができます。 次の非終端要素は、  *C++言語リファレンス*の[構文規則](../cpp/lexical-conventions.md)のセクションで定義されています。
+非終端は構文内のプレースホルダーです。 ほとんどは、この構文概要の他の場所で定義されています。 定義は再帰的に行うことができます。 次の非終端要素は、 *C++ 言語リファレンス* の [構文規則](../cpp/lexical-conventions.md)セクションで定義されています。
 
-*定数*、*定数式*、*識別子*、*キーワード*、*演算子*、*など*
+*`constant`*, *`constant-expression`*, *`identifier`*, *`keyword`*, *`operator`*, *`punctuator`*
 
 省略可能な構成要素には添字 <sub>opt</sub> を付けます。 たとえば、次の構文は、中かっこで囲まれた省略可能な式を示しています。
 
-**{** *expression*<sub>opt</sub> **}**
+**`{`***`expression`*<sub>選択</sub>**`}`**
 
-## <a name="document-conventions"></a><a name="conventions"></a>ドキュメントの表記規則
+## <a name="document-conventions"></a><a name="conventions"></a> ドキュメントの表記規則
 
 構文規則では、構文のコンポーネントごとに異なるフォント属性を使用します。 シンボルとフォントは次のとおりです。
 
-| Attribute | Description |
+| 属性 | 説明 |
 |---------------|-----------------|
-| *nonterminal* | 斜体は、非終端要素を示します。 |
-| **#include** | 太字で示される終端要素は、示されたとおりに入力する必要があるリテラル予約語およびシンボルです。 このコンテキストの文字は、常に大文字と小文字が区別されます。 |
+| *`nonterminal`* | 斜体は、非終端要素を示します。 |
+| **`#include`** | 太字で示される終端要素は、示されたとおりに入力する必要があるリテラル予約語およびシンボルです。 このコンテキストの文字は、常に大文字と小文字が区別されます。 |
 | <sub>opt</sub> | 後ろに <sub>opt</sub> が続く非終端要素は、常に省略可能です。|
 | 既定のタイプフェイス | このタイプフェイスで記述されているか、示されているセット内の文字は、ステートメント内で終端要素として使用できます。 |
 
-非終端要素に続くコロン ( **:** ) は、定義の説明を示します。 代替定義は別の行に示されます。
+非終端要素の後にコロン () を付けると、 **`:`** その定義が導入されます。 代替定義は別の行に示されます。
 
 コード構文ブロックでは、既定のタイプフェイスのこれらのシンボルには特別な意味があります。
 
-| Symbol | Description |
+| Symbol | 説明 |
 |---|---|
 | \[ ] | 角かっこは、省略可能な要素を囲みます。 |
-| {\|} | 中かっこは、縦棒で区切られた別の要素を囲みます。 |
+| { \| } | 中かっこは、縦棒で区切られた別の要素を囲みます。 |
 | ... | 前の要素パターンを繰り返すことができることを示します。 |
 
-コード構文ブロック、コンマ (`,`)、ピリオド (`.`)、セミコロン (`;`)、コロン (`:`)、かっこ (`( )`)、二重引用符 (`"`)、および単一引用符 (`'`) はリテラルです。
+コード構文ブロック、コンマ ( `,` )、ピリオド ( `.` )、セミコロン ( `;` )、コロン ( `:` )、かっこ ( `( )` )、二重引用符 ( `"` )、および単一引用符 ( `'` ) はリテラルです。
 
-## <a name="preprocessor-grammar"></a><a name="grammar"></a>プリプロセッサの文法
+## <a name="preprocessor-grammar"></a><a name="grammar"></a> プリプロセッサの文法
 
-*制御線*: \
-&nbsp;&nbsp;&nbsp;&nbsp; **#define** *識別子* *のトークン文字列を*<sub>選択</sub>\
-&nbsp;&nbsp;&nbsp;&nbsp; **#define** *識別子* **(** *識別子*<sub>opt</sub> **の**選択... **,** *identifier*<sub>opt</sub> **)** *トークン文字列の*<sub>opt</sub>\
-&nbsp;&nbsp;&nbsp;&nbsp; **#include** **"** _パス仕様_ **"** \
-&nbsp;&nbsp;&nbsp;&nbsp; **#include** **\<** _パス仕様_ **>** \
-&nbsp;&nbsp;&nbsp;&nbsp; **#line** *digit-シーケンス* **"** _filename_ **"** <sub>opt</sub>\
-&nbsp;&nbsp;&nbsp;&nbsp; **#undef** *識別子*\
-&nbsp;&nbsp;&nbsp;&nbsp; **#error** *トークン文字列*\
-&nbsp;&nbsp;&nbsp;&nbsp; **#pragma** *トークン文字列*
+*`control-line`*:\
+&emsp;**`#define`***`identifier`* *`token-string`* <sub>選択</sub>\
+&emsp;**`#define`***`identifier`* **`(`** *`identifier`*<sub>選択</sub> **`,`**... **`,`***`identifier`* <sub></sub> **`)`** 選択 *`token-string`*<sub>選択</sub>\
+&emsp;**`#include`** **`"`**_`path-spec`_**`"`**\
+&emsp;**`#include`** **`<`**_`path-spec`_**`>`**\
+&emsp;**`#line`***`digit-sequence`* **`"`**_`filename`_**`"`**<sub>選択</sub>\
+&emsp;**`#undef`** *`identifier`*\
+&emsp;**`#error`** *`token-string`*\
+&emsp;**`#pragma`** *`token-string`*
 
-*定数式*: \
-&nbsp;&nbsp;&nbsp;&nbsp;**定義されている (** *識別子* **)** \
-&nbsp;&nbsp;&nbsp;&nbsp;**定義された***識別子*\
-他の定数式 &nbsp;&nbsp;&nbsp;&nbsp;
+*`constant-expression`*:\
+&emsp;**`defined(`** *`identifier`* **`)`**\
+&emsp;**`defined`** *`identifier`*\
+&emsp;その他の定数式
 
-*条件*: \
-&nbsp;の &nbsp;&nbsp;&nbsp;*if* *elif-parts*<sub>-パート</sub><sub>opt</sub> - *part*opt *endif-line*
+*`conditional`*:\
+&emsp; *`if-part`* *`elif-parts`* <sub>opt</sub> *`else-part`* <sub>opt</sub> *`endif-line`*
 
-*if-part*: \
-&nbsp;&nbsp;&nbsp;&nbsp;*改行* *テキスト*
+*`if-part`*:\
+&emsp;*`if-line`* *`text`*
 
-*改行*: \
-&nbsp;&nbsp;&nbsp;&nbsp; **#if** *定数式*\
-&nbsp;&nbsp;&nbsp;&nbsp; **#ifdef** *識別子*\
-&nbsp;&nbsp;&nbsp;&nbsp; **#ifndef** *識別子*
+*`if-line`*:\
+&emsp;**`#if`** *`constant-expression`*\
+&emsp;**`#ifdef`** *`identifier`*\
+&emsp;**`#ifndef`** *`identifier`*
 
-*elif-parts*: \
-&nbsp;&nbsp;&nbsp;&nbsp;*elif 行の* *テキスト*\
-&nbsp;&nbsp;&nbsp;&nbsp;*elif-パーツ* *の* *テキスト*
+*`elif-parts`*:\
+&emsp;*`elif-line`* *`text`*\
+&emsp;*`elif-parts`* *`elif-line`* *`text`*
 
-*elif 行*: \
-&nbsp;&nbsp;&nbsp;&nbsp; **#elif** *定数式*
+*`elif-line`*:\
+&emsp;**`#elif`** *`constant-expression`*
 
-*else-パート*: \
-&nbsp;&nbsp;&nbsp;&nbsp;その*他の行の* *テキスト*
+*`else-part`*:\
+&emsp;*`else-line`* *`text`*
 
-*他の行*: \
-&nbsp;&nbsp;&nbsp;&nbsp; **#else**
+*`else-line`*:\
+&emsp;**`#else`**
 
-*endif-行*: \
-&nbsp;&nbsp;&nbsp;&nbsp; **#endif**
+*`endif-line`*:\
+&emsp;**`#endif`**
 
-*数字-シーケンス*: \
-&nbsp;&nbsp;&nbsp;&nbsp;*数字*\
-&nbsp;&nbsp;&nbsp;&nbsp;*桁の* *数字*
+*`digit-sequence`*:\
+&emsp;*`digit`*\
+&emsp;*`digit-sequence`* *`digit`*
 
-*digit*: 次のいずれか \
-&nbsp;&nbsp;&nbsp;&nbsp;**0 1 2 3 4 5 6 7 8 9**
+*`digit`* : 次のいずれか\
+&emsp;**`0` `1` `2` `3` `4` `5` `6` `7` `8` `9`**
 
-*トークン文字列*: \
-&nbsp;&nbsp;&nbsp;&nbsp;トークンの文字列
+*`token-string`*:\
+&emsp;文字列 *`token`*
 
-*トークン*: \
-&nbsp;&nbsp;&nbsp;&nbsp;*キーワード*\
-&nbsp;&nbsp;&nbsp;&nbsp;*識別子*\
-&nbsp;&nbsp;&nbsp;&nbsp;*定数*\
-&nbsp;&nbsp;&nbsp;&nbsp;*演算子*\
-&nbsp;&nbsp;&nbsp;&nbsp;*punctuator*
+*`token`*:\
+&emsp;*`keyword`*\
+&emsp;*`identifier`*\
+&emsp;*`constant`*\
+&emsp;*`operator`*\
+&emsp;*`punctuator`*
 
-*ファイル名*: \
-&nbsp;&nbsp;&nbsp;&nbsp;有効なオペレーティングシステムファイル名
+*`filename`*:\
+&emsp;有効なオペレーティング システム ファイル名
 
-*パスの仕様*: \
-&nbsp;&nbsp;&nbsp;&nbsp;有効なファイル パス
+*`path-spec`*:\
+&emsp;有効なファイル パス
 
-*テキスト*: \
-任意のテキストシーケンス &nbsp;&nbsp;&nbsp;を &nbsp;する
+*`text`*:\
+&emsp;テキストの任意のシーケンス
 
 > [!NOTE]
-> 次の非終端要素は、  *C++言語リファレンス*の[構文表記規則](../cpp/lexical-conventions.md)(*定数*、*定数式*、*識別子*、*キーワード*、*演算子*、および*など*) で拡張されています。
+> 「」、「」、「」、「」、「」、「」、「」、「」、「」、「」、「」、「」、「 *」、「*」、 [「」、](../cpp/lexical-conventions.md) *`constant`* *`constant-expression`* *`identifier`* *`keyword`* *`operator`* *`punctuator`*
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[C/C++プリプロセッサリファレンス](../preprocessor/c-cpp-preprocessor-reference.md)
+[C/C++ のプリプロセッサ リファレンス](../preprocessor/c-cpp-preprocessor-reference.md)

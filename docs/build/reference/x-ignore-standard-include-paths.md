@@ -1,7 +1,7 @@
 ---
 description: '詳細情報: `/X` (標準インクルードパスの無視)'
 title: /X (標準インクルード パスの無視)
-ms.date: 07/31/2020
+ms.date: 01/21/2021
 f1_keywords:
 - /x
 - VC.Project.VCCLCompilerTool.OVERWRITEStandardIncludePath
@@ -15,16 +15,16 @@ helpviewer_keywords:
 - X compiler option
 - Ignore Standard Include Paths compiler option
 ms.assetid: 16bdf2cc-c8dc-46e4-bdcc-f3caeba5e1ef
-ms.openlocfilehash: 69936b80893de2c45622ec9973a218a94e8029a4
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: 97d19027c41df7db9103c1c21d2f2d7b8d398e7e
+ms.sourcegitcommit: a26a66a3cf479e0e827d549a9b850fad99b108d1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97261009"
+ms.lasthandoff: 01/22/2021
+ms.locfileid: "98712805"
 ---
 # <a name="x-ignore-standard-include-paths"></a>`/X` (標準インクルードパスを無視します)
 
-パスで指定されたディレクトリ内のインクルードファイルをコンパイラが検索できないようにし、環境変数を含めます。
+および環境変数で指定されたディレクトリ内のインクルードファイルをコンパイラが検索できないようにし `PATH` `INCLUDE` ます。
 
 ## <a name="syntax"></a>構文
 
@@ -48,7 +48,7 @@ ms.locfileid: "97261009"
 
 ## <a name="example"></a>例
 
-次のコマンドでは、は、 **`/X`** パスで指定された場所を無視し、環境変数を含めるようにコンパイラに指示し **`/I`** ます。また、インクルードファイルを検索するディレクトリを指定します。
+次のコマンドで、は、 **`/X`** および環境変数で指定された場所を無視 `PATH` し、 `INCLUDE` **`/I`** インクルードファイルを検索するディレクトリを指定します。
 
 ```cmd
 CL /X /I \ALT\INCLUDE MAIN.C

@@ -1,40 +1,41 @@
 ---
-description: '詳細については、次を参照してください: fp_contract プラグマ'
-title: fp_contract プラグマ
-ms.date: 08/29/2019
+description: pragmaMicrosoft C/c + + での fp_contract ディレクティブの詳細については、こちらを参照してください。
+title: fp_contract pragma
+ms.date: 01/22/2021
 f1_keywords:
 - vc-pragma.fp_contract
 - fp_contract_CPP
 helpviewer_keywords:
-- pragmas, fp_contract
+- pragma, fp_contract
 - fp_contract pragma
-ms.assetid: 15b97338-6680-4287-ba2a-2dccc5b2ccf5
-ms.openlocfilehash: cefcf0519f08b3fd68a0f8b464938ea7cdbda6d0
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+no-loc:
+- pragma
+ms.openlocfilehash: 3263d1ec9675e0f8a9402ac7da78751b988e7bdf
+ms.sourcegitcommit: a26a66a3cf479e0e827d549a9b850fad99b108d1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97261178"
+ms.lasthandoff: 01/22/2021
+ms.locfileid: "98713650"
 ---
-# <a name="fp_contract-pragma"></a>fp_contract プラグマ
+# <a name="fp_contract-no-locpragma"></a>`fp_contract` pragma
 
 浮動小数点省略形を実行するかどうかを決定します。 浮動小数点省略形は、2つの独立した浮動小数点演算を1つの命令に結合する FMA () などの命令です。 これらの命令を使用すると、浮動小数点の精度に影響を与える可能性があります。これは、各操作の後に丸め処理を行うのではなく、両方の操作の後に1回だけラウンドを実行するため
 
 ## <a name="syntax"></a>構文
 
-> **#pragma fp_contract (** { **on**  |  **off** } **)**
+> **`#pragma fp_contract (`** { **`on`** | **`off`** } **`)`**
 
 ## <a name="remarks"></a>解説
 
-既定では、 **fp_contract** は **オンに** なっています。 これは、可能であれば、浮動小数点の省略形命令を使用するようにコンパイラに指示します。 個々の浮動小数点命令を保持するには、 **fp_contract** を **off** に設定します。
+既定で **`fp_contract`** は、は **`on`** です。 これは、可能であれば、浮動小数点の省略形命令を使用するようにコンパイラに指示します。 **`fp_contract`** 個々の **`off`** 浮動小数点命令を保持するには、をに設定します。
 
-浮動小数点動作の詳細については、「 [/fp (Floating-Point 動作の指定)](../build/reference/fp-specify-floating-point-behavior.md)」を参照してください。
+浮動小数点動作の詳細については、「 [ `/fp` (浮動小数点の動作の指定)](../build/reference/fp-specify-floating-point-behavior.md)」を参照してください。
 
-その他の浮動小数点プラグマには以下があります。
+その他の浮動小数点 pragma ディレクティブは次のとおりです。
 
-- [fenv_access](../preprocessor/fenv-access.md)
+- [`fenv_access`](../preprocessor/fenv-access.md)
 
-- [float_control](../preprocessor/float-control.md)
+- [`float_control`](../preprocessor/float-control.md)
 
 ## <a name="example"></a>例
 
@@ -78,4 +79,4 @@ out = 4.587525000000000e+03
 
 ## <a name="see-also"></a>関連項目
 
-[プラグマ ディレクティブと __pragma キーワード](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+[プラグマディレクティブと `__pragma` `_Pragma` キーワードおよびキーワード](./pragma-directives-and-the-pragma-keyword.md)
