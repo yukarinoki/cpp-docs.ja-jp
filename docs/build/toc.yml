@@ -761,6 +761,8 @@
                       href: ../build/reference/zc-externconstexpr.md
                     - name: '/Zc:forScope (for ループのスコープの強制準拠)'
                       href: ../build/reference/zc-forscope-force-conformance-in-for-loop-scope.md
+                    - name: '/Zc:hiddenFriend (標準の C++ 非表示フレンド規則の適用)'
+                      href: ../build/reference/zc-hiddenfriend.md
                     - name: '/Zc:implicitNoexcept (暗黙の例外指定子)'
                       href: ../build/reference/zc-implicitnoexcept-implicit-exception-specifiers.md
                     - name: '/Zc:inline (参照されない COMDAT の除去)'
