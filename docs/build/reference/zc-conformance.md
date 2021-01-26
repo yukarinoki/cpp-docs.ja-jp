@@ -1,19 +1,18 @@
 ---
 title: /Zc (準拠)
 description: /Zc 準拠コンパイラオプションは、準拠または下位互換性の動作のサポートを有効または無効にします。
-ms.date: 09/10/2020
+ms.date: 01/23/2021
 helpviewer_keywords:
 - /Zc compiler options [C++]
 - -Zc compiler options [C++]
 - Conformance compiler options
 - Zc compiler options [C++]
-ms.assetid: db1cc175-6e93-4a2e-9396-c3725d2d8f71
-ms.openlocfilehash: 15027182d632c1076c78e2e8a1335e1059ac7e3b
-ms.sourcegitcommit: 14d6ae0d527d05d153e26463d4cd5ada0f43e864
+ms.openlocfilehash: 066e6712b07dbc28e88a7e01a5055dab90289326
+ms.sourcegitcommit: 74e58bee5cffb30b66e17be6dbfde2544369638e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98104766"
+ms.lasthandoff: 01/25/2021
+ms.locfileid: "98763888"
 ---
 # <a name="zc-conformance"></a>`/Zc` 互換性
 
@@ -21,13 +20,15 @@ ms.locfileid: "98104766"
 
 ## <a name="syntax"></a>構文
 
-> **`/Zc:`**_オプション_{、_オプション_}
+> **`/Zc:`**_オプション_{、_オプション_ ...}
+
+**`/Zc`** 1 つのコンパイラオプションで、複数のオプションをコンマで区切って設定でき **`/Zc`** ます。 同じコマンドでオプションが有効になっていて無効になっている場合は、 **`/Zc`** last と表示されるオプションが使用されます。
 
 ## <a name="remarks"></a>解説
 
-Visual Studio で、標準と互換性のない C または C++ の拡張機能が実装されている場合は、準拠オプションを使用して、 **`/Zc`** 標準準拠または Microsoft 固有の動作を指定できます。 一部のオプションでは、既存のコードに大きな変更が加えられないように、Microsoft 固有の動作が既定値になります。 それ以外の場合、既定値は標準の動作であり、セキュリティ、パフォーマンス、または互換性の向上が重大な変更のコストよりも優先されます。 各準拠オプションの既定の設定は、新しいバージョンの Visual Studio で変更される可能性があります。 各準拠オプションの詳細については、「」を参照してください。 [`/permissive-`](permissive-standards-conformance.md)コンパイラオプションは、既定では、準拠する設定に設定されていない準拠オプションを暗黙的に設定します。
+Visual Studio によって、標準と互換性のない C または C++ の拡張機能が実装されている場合は、準拠オプションを使用して **`/Zc`** 標準準拠または Microsoft 固有の動作を指定できます。 一部のオプションでは、既存のコードに大きな変更が加えられないように、Microsoft 固有の動作が既定値になります。 それ以外の場合、既定値は標準の動作であり、セキュリティ、パフォーマンス、または互換性の向上が重大な変更のコストよりも優先されます。 各準拠オプションの既定の設定は、新しいバージョンの Visual Studio で変更される可能性があります。 各準拠オプションの詳細については、「」を参照してください。 コンパイラオプションは、既定では、準拠 [`/permissive-`](permissive-standards-conformance.md) する設定に設定されていない準拠オプションを暗黙的に設定します。
 
-コンパイラオプションは次の **`/Zc`** とおりです。
+**`/Zc`** コンパイラオプションは次のとおりです。
 
 | オプション | 動作 |
 |--|--|
@@ -36,8 +37,9 @@ Visual Studio で、標準と互換性のない C または C++ の拡張機能�
 | [`/Zc:__cplusplus`](zc-cplusplus.md) | `__cplusplus`サポートされている標準を報告するようにマクロを有効にします (既定ではオフ)。 |
 | [`/Zc:externConstexpr`](zc-externconstexpr.md) | 変数の外部リンケージを有効に **`constexpr`** します (既定ではオフ)。 |
 | [`/Zc:forScope`](zc-forscope-force-conformance-in-for-loop-scope.md) | 標準 C++ **`for`** のスコープ規則を適用します (既定ではオン)。 |
+| [`/Zc:hiddenFriend`](zc-hiddenfriend.md) | 標準 C++ の非表示フレンド規則を適用する (によって暗黙的 **`/permissive-`** ) |
 | [`/Zc:implicitNoexcept`](zc-implicitnoexcept-implicit-exception-specifiers.md) | 必須の関数に対して暗黙的に有効に **`noexcept`** します (既定ではオン)。 |
-| [`/Zc:inline`](zc-inline-remove-unreferenced-comdat.md) | 参照されていない関数またはデータが COMDAT である場合、または内部リンケージのみを持つ場合 (既定ではオフ) は、削除します。 |
+| [`/Zc:inline`](zc-inline-remove-unreferenced-comdat.md) | 参照されていない関数またはデータが COMDAT である場合や、内部リンケージのみを持つ場合 (既定ではオフ)、参照されない関数またはデータを削除 |
 | [`/Zc:noexceptTypes`](zc-noexcepttypes.md) | C++ 17 の **`noexcept`** 規則を適用します (既定では c++ 17 以降で)。 |
 | [`/Zc:preprocessor`](zc-preprocessor.md) | 新しい準拠プリプロセッサを使用します (既定ではオフになっていますが、C11/C17 は除きます)。 |
 | [`/Zc:referenceBinding`](zc-referencebinding-enforce-reference-binding-rules.md) | UDT の一時停止は、非定数の左辺値参照にバインドされません (既定ではオフ)。 |
@@ -51,9 +53,9 @@ Visual Studio で、標準と互換性のない C または C++ の拡張機能�
 | [`/Zc:twoPhase`](zc-twophase.md) | 準拠していないテンプレートの解析動作を使用します (既定で準拠)。 |
 | [`/Zc:wchar_t`](zc-wchar-t-wchar-t-is-native-type.md) | **`wchar_t`** は、typedef (既定では on) ではなく、ネイティブ型です。 |
 
-Visual C++ の準拠に関する問題について詳しくは、「 [Nonstandard Behavior](../../cpp/nonstandard-behavior.md)」をご覧ください。
+MSVC の準拠に関する問題の詳細については、「 [非標準動作](../../cpp/nonstandard-behavior.md)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 
 [MSVC コンパイラ オプション](compiler-options.md)<br/>
-[MSVC Compiler Command-Line 構文](compiler-command-line-syntax.md)
+[MSVC コンパイラ コマンド ラインの構文](compiler-command-line-syntax.md)
