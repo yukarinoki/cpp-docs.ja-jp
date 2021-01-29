@@ -1,13 +1,13 @@
 ---
 title: Visual Studio でターゲットの Linux システムに接続する
 description: Visual Studio の C++ プロジェクト内からリモートの Linux マシンまたは Linux 用 Windows サブシステムに接続する方法です。
-ms.date: 01/17/2020
-ms.openlocfilehash: b1907cc4c1c80a9d8ffba06849c9a80f1a8fbfbe
-ms.sourcegitcommit: 387ce22a3b0137f99cbb856a772b5a910c9eba99
+ms.date: 01/8/2021
+ms.openlocfilehash: 653a1832b4aac6b87c49102440181bb0e55a45a9
+ms.sourcegitcommit: 3d9cfde85df33002e3b3d7f3509ff6a8dc4c0a21
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97645216"
+ms.lasthandoff: 01/21/2021
+ms.locfileid: "98667589"
 ---
 # <a name="connect-to-your-target-linux-system-in-visual-studio"></a>Visual Studio でターゲットの Linux システムに接続する
 
@@ -104,15 +104,82 @@ Linux システム上でまだ ssh が設定および実行されていない場
 
    ::: moniker range="msvc-160"
 
+## <a name="supported-ssh-algorithms"></a>サポートされている SSH アルゴリズム
+
+Visual Studio バージョン 16.9 以降では、データの暗号化とキーの交換に使用される、セキュリティで保護されていない古い SSH アルゴリズムのサポートは削除されています。 サポートされているのは以下のアルゴリズムのみです。 これらは、クライアントとサーバー間、およびサーバーとクライアント間の両方の SSH 通信でサポートされています。
+
+|アルゴリズムの種類|サポートされているアルゴリズム|
+|---|---|
+| 暗号化| aes128-cbc</br>aes128-cbc</br>aes192-cbc</br>aes192-ctr</br>aes256-cbc</br>aes256-ctr|
+| HMAC | hmac-sha2-256</br>hmac-sha2-256 |
+| キーの交換| diffie-hellman-group14-sha256</br>diffie-hellman-group16-sha512</br>diffie-hellman-group-exchange-sha256</br>ecdh-sha2-nistp256</br>ecdh-sha2-nistp384</br>ecdh-sha2-nistp521|
+|ホスト キー|ecdsa-sha2-nistp256</br>ecdsa-sha2-nistp384</br>ecdsa-sha2-nistp521</br>ssh-dss</br>ssh-rsa|
+
+### <a name="configure-the-ssh-server"></a>SSH サーバーを構成する
+
+最初に、背景を少々説明します。 あなたは、Visual Studio から使用する SSH アルゴリズムを選択することができません。 代わりに、SSH サーバーとの最初のハンドシェイク中にアルゴリズムが決定されます。 クライアントとサーバーのそれぞれで、サポートするアルゴリズムの一覧が提供され、その両方に共通する最初のアルゴリズムが選択されます。 暗号化、HMAC、キー交換などのために、Visual Studio とサーバーの間に共通するアルゴリズムが少なくとも 1 つあれば、接続は成功します。
+
+OpenSSH 構成ファイル (**sshd_config**) では、既定では使用するアルゴリズムは構成されません。 アルゴリズムが指定されていない場合、SSH サーバーはセキュリティで保護された既定値を使用します。 これらの既定値は、SSH サーバーのバージョンとベンダーによって異なります。  Visual Studio でこれらの既定値がサポートされていない場合、または Visual Studio でサポートされていないアルゴリズムを使用するように SSH サーバーが構成されている場合は、次のようなエラーが発生するおそれがあります。**リモート システムに接続できませんでした。クライアントからサーバーへの共通の HMAC アルゴリズムが見つかりませんでした。**
+
+最新の Linux ディストリビューションで既定の SSH サーバーは、Visual Studio ですぐにご利用になれます。 ただし、セキュリティで保護されていない古いアルゴリズムを使用するように構成されている、古い SSH サーバーを実行している場合は、より安全なバージョンに更新する方法が以下に説明されています。
+
+次の例では、SSH サーバーはセキュリティで保護されていない `hmac-sha1` アルゴリズムを使用しています。これは、Visual Studio 16.9 ではサポートされていません。 SSH サーバーで OpenSSH を使用している場合は、次に示すように `/etc/ssh/sshd_config` ファイルを編集して、より安全なアルゴリズムを有効にすることができます。 その他の SSH サーバーの構成方法については、サーバーのドキュメントを参照してください。
+
+最初に、サーバーで使用されているアルゴリズムのセットに、Visual Studio でサポートされているアルゴリズムが含まれていることを確認します。 リモート マシンで次のコマンドを実行すると、サーバーでサポートされているアルゴリズムが一覧表示されます。
+
+```bash
+$ ssh -Q cipher; ssh -Q mac; ssh -Q kex; ssh -Q key
+```
+
+次のような出力が生成されます。
+
+```bash
+3des-cbc
+aes128-cbc
+aes192-cbc
+aes256-cbc
+...
+ecdsa-sha2-nistp521-cert-v01@openssh.com
+sk-ecdsa-sha2-nistp256-cert-v01@openssh.com
+```
+
+この出力には、SSH サーバーでサポートされているすべての暗号化、HMAC、キー交換、ホスト キー アルゴリズムが一覧表示されます。 この一覧に、Visual Studio でサポートされているアルゴリズムが含まれていない場合は、先に進む前に SSH サーバーをアップグレードする必要があります。
+
+リモート マシンで `/etc/ssh/sshd_config` を編集すると、Visual Studio でサポートされているアルゴリズムを有効にすることができます。 次の例は、さまざまな種類のアルゴリズムをその構成ファイルに追加する方法を示しています。
+
+これらの例は、`/etc/ssh/sshd_config` 内の任意の場所に追加できます。 それらが確実に独自の行にあるようにします。
+
+ファイルを編集したら、SSH サーバーを再起動 (Ubuntu の `sudo service ssh restart`) し、Visual Studio からもう一度接続を試みます。
+
+#### <a name="cipher--example"></a>暗号の例
+
+追加: `Ciphers <algorithms to enable>`  
+例: `Ciphers aes128-cbc,aes256-cbc`
+
+#### <a name="hmac-example"></a>HMAC の例
+
+追加: `MACs <algorithms to enable>`  
+例: `MACs hmac-sha2-256,hmac-sha2-512`
+
+#### <a name="key-exchange-example"></a>キー交換の例
+
+追加: `KexAlgorithms <algorithms to enable>`  
+例: `KexAlgorithms ecdh-sha2-nistp256,ecdh-sha2-nistp384`
+
+#### <a name="host-key-example"></a>ホスト キーの例
+
+追加: `HostKeyAlgorithms <algorithms to enable>`  
+例: `HostKeyAlgorithms ssh-dss,ssh-rsa`
+
 ## <a name="logging-for-remote-connections"></a>リモート接続のログを記録する
 
-   ログを有効にして、接続の問題のトラブルシューティングに役立てることができます。 メニュー バーで、 **[ツール] > [オプション]** の順に選択します。 **[オプション]** ダイアログで、 **[クロス プラットフォーム] > [ログ]** を選択します。
+   ログを有効にして、接続の問題のトラブルシューティングに役立てることができます。 メニュー バーで、**[ツール] > [オプション]** の順に選択します。 **[オプション]** ダイアログで、**[クロス プラットフォーム] > [ログ]** を選択します。
 
    ![リモート ログ記録](media/remote-logging-vs2019.png)
 
    ログには、接続、リモート マシンに送信されたすべてのコマンド (そのテキスト、終了コード、実行時間)、および Visual Studio からシェルへのすべての出力が含まれます。 ログ記録は、Visual Studio でのすべてのクロスプラットフォーム CMake プロジェクトまたは MSBuild ベースの Linux プロジェクトで機能します。
 
-   ファイルまたは出力ウィンドウの **[クロス プラットフォームのログ]** ペインに送られるように、出力を構成できます。 MSBuild ベースの Linux プロジェクトの場合、リモート マシンに送信された MSBuild コマンドは、プロセス外で出力されるため、 **[出力ウィンドウ]** にはルーティングされません。 代わりに、"msbuild_" というプレフィックスが付いたファイルに記録されます。
+   ファイルまたは出力ウィンドウの **[クロス プラットフォームのログ]** ペインに送られるように、出力を構成できます。 MSBuild ベースの Linux プロジェクトの場合、リモート マシンに送信された MSBuild コマンドは、プロセス外で出力されるため、**[出力ウィンドウ]** にはルーティングされません。 代わりに、"msbuild_" というプレフィックスが付いたファイルに記録されます。
 
 ## <a name="command-line-utility-for-the-connection-manager"></a>接続マネージャーのコマンドライン ユーティリティ  
 
@@ -126,7 +193,7 @@ Linux システム上でまだ ssh が設定および実行されていない場
 
 Visual Studio の Linux サポートは、TCP ポート フォワーディングに依存しています。 リモート システムで TCP ポート フォワーディングが無効になっている場合、**Rsync** と **gdbserver** が影響を受けます。 お客様がこの依存関係の影響を受けている場合は、Developer Community でこちらの[提案チケット](https://developercommunity2.visualstudio.com/t/shDonshshtsh-shrelysh-s/840265?space=62)に賛成票を投じることができます。
 
-rsync は、MSBuild ベースの Linux プロジェクトと CMake プロジェクトの両方で使用され、[IntelliSense で使用するヘッダーをリモート システムから Windows にコピーします](configure-a-linux-project.md#remote_intellisense)。 TCP ポート フォワーディングを有効にできない場合は、リモート ヘッダーの自動ダウンロードを無効にします。 無効にするには、 **[ツール] > [オプション]、[クロス プラットフォーム] > [接続マネージャー] > [リモート ヘッダー IntelliSense マネージャー]** の順に移動します。 リモート システムで TCP ポート フォワーディングが有効になっていない場合、IntelliSense のリモート ヘッダーのダウンロードが開始されると、次のエラーが表示されます。
+rsync は、MSBuild ベースの Linux プロジェクトと CMake プロジェクトの両方で使用され、[IntelliSense で使用するヘッダーをリモート システムから Windows にコピーします](configure-a-linux-project.md#remote_intellisense)。 TCP ポート フォワーディングを有効にできない場合は、リモート ヘッダーの自動ダウンロードを無効にします。 無効にするには、**[ツール] > [オプション]、[クロス プラットフォーム] > [接続マネージャー] > [リモート ヘッダー IntelliSense マネージャー]** の順に移動します。 リモート システムで TCP ポート フォワーディングが有効になっていない場合、IntelliSense のリモート ヘッダーのダウンロードが開始されると、次のエラーが表示されます。
 
 ![ヘッダー エラー](media/port-forwarding-headers-error.png)
 
@@ -162,7 +229,7 @@ WSL 用の MSBuild プロジェクトを構成するには、「[Linux プロジ
 
 ::: moniker-end
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [Linux プロジェクトを構成する](configure-a-linux-project.md)\
 [Linux CMake プロジェクトを構成する](cmake-linux-project.md)\

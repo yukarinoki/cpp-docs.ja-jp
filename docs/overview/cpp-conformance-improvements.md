@@ -3,12 +3,12 @@ title: C++ 準拠の強化
 description: Visual Studio の Microsoft C++ は、C++20 言語標準との完全準拠に向かって進んでいます。
 ms.date: 11/10/2020
 ms.technology: cpp-language
-ms.openlocfilehash: ff4d75626b75c55e001601ef7005bc23be60869d
-ms.sourcegitcommit: 25f6d52eb9e5d84bd0218c46372db85572af81da
+ms.openlocfilehash: 251f4cd4add40356b14dfdb878a09418171387d2
+ms.sourcegitcommit: 74e58bee5cffb30b66e17be6dbfde2544369638e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94448491"
+ms.lasthandoff: 01/25/2021
+ms.locfileid: "98763878"
 ---
 # <a name="c-conformance-improvements-in-visual-studio"></a>Visual Studio の C++ 準拠の強化
 
@@ -1480,7 +1480,7 @@ f2(Object{});
 | オプション | 説明 |
 |--|--|
 | **`/Zc:twoPhase-`** | 2 つのフェーズ名参照が C++20 モジュールには必要であり、 **`permissive-`** によって暗黙的に指定されます。 |
-| **`/Zc:hiddenFriend-`** | 標準の非表示フレンド名参照規則を有効にします。 C++20 モジュールに必要であり、 **`permissive-`** によって暗黙的に指定されます。 |
+| **`/Zc:hiddenFriend-`** | 標準の非表示フレンド名参照規則が C++ 20 モジュールに必要であり、 **`permissive-`** によって暗黙的に指定されます。 |
 | **`/Zc:preprocessor-`** | 準拠プリプロセッサは、C++20 ヘッダー ユニットの使用と作成のみに必要です。 名前付きモジュールには、このオプションは必要ありません。 |
 
 Visual Studio に付属している *`std.*`* モジュールはまだ標準化されていないため、それを使用するには [`/experimental:module`](../build/reference/experimental-module.md) オプションがやはり必要です。
