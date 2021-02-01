@@ -1,7 +1,7 @@
 ---
-description: '詳細情報: CTabCtrl クラス'
 title: CTabCtrl クラス
-ms.date: 11/04/2016
+description: '詳細情報: CTabCtrl クラス'
+ms.date: 1/29/2021
 f1_keywords:
 - CTabCtrl
 - AFXCMN/CTabCtrl
@@ -72,21 +72,20 @@ helpviewer_keywords:
 - CTabCtrl [MFC], SetMinTabWidth
 - CTabCtrl [MFC], SetPadding
 - CTabCtrl [MFC], SetToolTips
-ms.assetid: 42e4aff6-46ae-4b2c-beaa-d1dce8d82138
-ms.openlocfilehash: 363e97ec848976b78b1c75b70997ff6f4b4b5c36
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: 31056e452973432f9f9a6d453de8c413c9b60463
+ms.sourcegitcommit: beac3ddf1a20de5e836569ae07407d5f3703f536
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97318573"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99224484"
 ---
-# <a name="ctabctrl-class"></a>CTabCtrl クラス
+# <a name="ctabctrl-class"></a>`CTabCtrl` クラス
 
 Windows のコモン タブ コントロールの機能が用意されています。
 
 ## <a name="syntax"></a>構文
 
-```
+```cpp
 class CTabCtrl : public CWnd
 ```
 
@@ -96,44 +95,45 @@ class CTabCtrl : public CWnd
 
 |名前|説明|
 |----------|-----------------|
-|[CTabCtrl:: CTabCtrl](#ctabctrl)|`CTabCtrl` オブジェクトを構築します。|
+|[`CTabCtrl::CTabCtrl`](#ctabctrl) | `CTabCtrl` オブジェクトを構築します。|
+
 
 ### <a name="public-methods"></a>パブリック メソッド
 
-|名前|説明|
-|----------|-----------------|
-|[CTabCtrl:: AdjustRect](#adjustrect)|ウィンドウの四角形を指定してタブコントロールの表示領域を計算するか、特定の表示領域に対応するウィンドウの四角形を計算します。|
-|[CTabCtrl:: Create](#create)|タブコントロールを作成し、オブジェクトのインスタンスにアタッチし `CTabCtrl` ます。|
-|[CTabCtrl:: CreateEx](#createex)|指定された Windows 拡張スタイルを使用してタブコントロールを作成し、オブジェクトのインスタンスにアタッチし `CTabCtrl` ます。|
-|[CTabCtrl::D eleteAllItems](#deleteallitems)|タブコントロールからすべての項目を削除します。|
-|[CTabCtrl::D eleteItem](#deleteitem)|タブコントロールから項目を削除します。|
-|[CTabCtrl::D eselectAll](#deselectall)|タブコントロール内の項目をリセットし、押された項目をクリアします。|
-|[CTabCtrl::D rawItem](#drawitem)|タブコントロールの指定された項目を描画します。|
-|[CTabCtrl:: GetCurFocus](#getcurfocus)|タブコントロールの現在のフォーカスがあるタブを取得します。|
-|[CTabCtrl:: GetCurSel](#getcursel)|タブコントロールで現在選択されているタブを確認します。|
-|[CTabCtrl:: GetExtendedStyle](#getextendedstyle)|現在タブコントロールに使用されている拡張スタイルを取得します。|
-|[CTabCtrl:: GetImageList](#getimagelist)|タブコントロールに関連付けられているイメージリストを取得します。|
-|[CTabCtrl:: GetItem](#getitem)|タブコントロールのタブに関する情報を取得します。|
-|[CTabCtrl:: GetItemCount](#getitemcount)|タブコントロールのタブの数を取得します。|
-|[CTabCtrl:: GetItemRect](#getitemrect)|タブコントロールのタブの外接する四角形を取得します。|
-|[CTabCtrl:: GetItemState](#getitemstate)|指定されたタブコントロール項目の状態を取得します。|
-|[CTabCtrl:: GetRowCount](#getrowcount)|タブコントロールのタブの現在の行数を取得します。|
-|[CTabCtrl:: GetToolTips ヒント](#gettooltips)|タブコントロールに関連付けられているツールヒントコントロールのハンドルを取得します。|
-|[CTabCtrl:: HighlightItem](#highlightitem)|タブアイテムの強調表示の状態を設定します。|
-|[CTabCtrl:: System.windows.media.visualtreehelper.hittest](#hittest)|指定した画面位置にタブがある場合は、そのタブを決定します。|
-|[CTabCtrl:: InsertItem](#insertitem)|タブコントロールに新しいタブを挿入します。|
-|[CTabCtrl:: RemoveImage](#removeimage)|タブコントロールのイメージリストからイメージを削除します。|
-|[CTabCtrl:: SetCurFocus](#setcurfocus)|フォーカスをタブコントロールの指定したタブに設定します。|
-|[CTabCtrl:: SetCurSel](#setcursel)|タブコントロールのタブを選択します。|
-|[CTabCtrl:: SetExtendedStyle](#setextendedstyle)|タブコントロールの拡張スタイルを設定します。|
-|[CTabCtrl:: SetImageList](#setimagelist)|イメージリストをタブコントロールに割り当てます。|
-|[CTabCtrl:: SetItem](#setitem)|タブの属性の一部またはすべてを設定します。|
-|[CTabCtrl:: SetItemExtra](#setitemextra)|タブコントロール内のアプリケーション定義データ用に予約されているタブあたりのバイト数を設定します。|
-|[CTabCtrl:: SetItemSize](#setitemsize)|項目の幅と高さを設定します。|
-|[CTabCtrl:: SetItemState](#setitemstate)|指定されたタブコントロール項目の状態を設定します。|
-|[CTabCtrl:: SetMinTabWidth](#setmintabwidth)|タブコントロール内の項目の最小の幅を設定します。|
-|[CTabCtrl:: SetPadding](#setpadding)|タブコントロール内の各タブのアイコンとラベルの周囲のスペース (埋め込み) のサイズを設定します。|
-|[CTabCtrl:: SetToolTips ヒント](#settooltips)|ツールヒントコントロールをタブコントロールに割り当てます。|
+|名前  |説明  |
+|---------|---------|
+|[`CTabCtrl::AdjustRect`](#adjustrect) | ウィンドウの四角形を指定してタブコントロールの表示領域を計算するか、特定の表示領域に対応するウィンドウの四角形を計算します。 |
+|[`CTabCtrl::Create`](#create) | タブコントロールを作成し、オブジェクトのインスタンスにアタッチします。 `TabCtrl`  |
+|[`CTabCtrl::CreateEx`](#createex) | 指定した Windows 拡張スタイルを使用してタブコントロールを作成し、そのコントロールを CTabCtrl オブジェクトのインスタンスにアタッチします。|
+|[`CTabCtrl::DeleteAllItems`](#deleteallitems) | タブコントロールからすべての項目を削除します。|
+|[`CTabCtrl::DeleteItem`](#deleteitem) | タブコントロールから項目を削除します。|
+|[`CTabCtrl::DeselectAll`](#deselectall) | タブコントロール内の項目をリセットし、押された項目をクリアします。|
+|[`CTabCtrl::DrawItem`](#drawitem) | タブコントロールの指定された項目を描画します。|
+|[`CTabCtrl::GetCurFocus`](#getcurfocus) | タブコントロールの現在のフォーカスがあるタブを取得します。|
+|[`CTabCtrl::GetCurSel`](#getcursel) | タブコントロールで現在選択されているタブを確認します。|
+|[`CTabCtrl::GetExtendedStyle`](#getextendedstyle) | 現在タブコントロールに使用されている拡張スタイルを取得します。|
+|[`CTabCtrl::GetImageList`](#getimagelist) | タブコントロールに関連付けられているイメージリストを取得します。|
+|[`CTabCtrl::GetItem`](#getitem) | タブコントロールのタブに関する情報を取得します。|
+|[`CTabCtrl::GetItemCount`](#getitemcount) | タブコントロールのタブの数を取得します。|
+|[`CTabCtrl::GetItemRect`](#getitemrect) | タブコントロールのタブの外接する四角形を取得します。|
+|[`CTabCtrl::GetItemState`](#getitemstate) | 指定されたタブコントロール項目の状態を取得します。|
+|[`CTabCtrl::GetRowCount`](#getrowcount) | タブコントロールのタブの現在の行数を取得します。|
+|[`CTabCtrl::GetToolTips`](#gettooltips) | タブコントロールに関連付けられているツールヒントコントロールのハンドルを取得します。|
+|[`CTabCtrl::HighlightItem`](#highlightitem) | タブアイテムの強調表示の状態を設定します。|
+|[`CTabCtrl::HitTest`](#hittest) | 指定した画面位置にタブがある場合は、そのタブを決定します。|
+|[`CTabCtrl::InsertItem`](#insertitem) | タブコントロールに新しいタブを挿入します。|
+|[`CTabCtrl::RemoveImage`](#removeimage) | タブコントロールのイメージリストからイメージを削除します。|
+|[`CTabCtrl::SetCurFocus`](#setcurfocus) | フォーカスをタブコントロールの指定したタブに設定します。|
+|[`CTabCtrl::SetCurSel`](#setcursel) | タブコントロールのタブを選択します。|
+|[`CTabCtrl::SetExtendedStyle`](#setextendedstyle) | タブコントロールの拡張スタイルを設定します。|
+|[`CTabCtrl::SetImageList`](#setimagelist) | イメージリストをタブコントロールに割り当てます。|
+|[`CTabCtrl::SetItem`](#setitem) | タブの属性の一部またはすべてを設定します。|
+|[`CTabCtrl::SetItemExtra`](#setitemextra) | タブコントロール内のアプリケーション定義データ用に予約されているタブあたりのバイト数を設定します。|
+|[`CTabCtrl::SetItemSize`](#setitemsize) | 項目の幅と高さを設定します。|
+|[`CTabCtrl::SetItemState`](#setitemstate) | 指定されたタブコントロール項目の状態を設定します。|
+|[`CTabCtrl::SetMinTabWidth`](#setmintabwidth) | タブコントロール内の項目の最小の幅を設定します。|
+|[`CTabCtrl::SetPadding`](#setpadding) | タブコントロールの各タブアイコンとラベルの周囲のスペース (埋め込み) のサイズを設定します。|
+|[`CTabCtrl::SetToolTips`](#settooltips) | ツールヒントコントロールをタブコントロールに割り当てます。|
 
 ## <a name="remarks"></a>解説
 
@@ -141,23 +141,21 @@ class CTabCtrl : public CWnd
 
 このコントロール (および `CTabCtrl` クラス) は、windows 95/98 および WINDOWS NT バージョン3.51 以降で実行されているプログラムに対してのみ使用できます。
 
-の使用方法の詳細について `CTabCtrl` は、「 [コントロール](../../mfc/controls-mfc.md) 」および「 [CTabCtrl の使用](../../mfc/using-ctabctrl.md)」を参照してください。
+の詳細について `CTabCtrl` は、「[コントロール](../../mfc/controls-mfc.md)と[ `CTabCtrl` 使用](../../mfc/using-ctabctrl.md)」を参照してください。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
-[CObject](../../mfc/reference/cobject-class.md)
-
-[CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
-
-[CWnd](../../mfc/reference/cwnd-class.md)
+[`CObject`](../../mfc/reference/cobject-class.md)\
+[`CCmdTarget`](../../mfc/reference/ccmdtarget-class.md)\
+[`CWnd`](../../mfc/reference/cwnd-class.md)
 
 `CTabCtrl`
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-**ヘッダー:** afxcmn.h
+**ヘッダー:**`afxcmn.h`
 
-## <a name="ctabctrladjustrect"></a><a name="adjustrect"></a> CTabCtrl:: AdjustRect
+## <a name="adjustrect"></a>`CTabCtrl::AdjustRect`
 
 ウィンドウの四角形を指定してタブコントロールの表示領域を計算するか、特定の表示領域に対応するウィンドウの四角形を計算します。
 
@@ -167,21 +165,21 @@ void AdjustRect(BOOL bLarger,   LPRECT lpRect);
 
 ### <a name="parameters"></a>パラメーター
 
-*bLarger*<br/>
-実行する操作を示します。 このパラメーターが TRUE の場合、 *lpRect* は表示用の四角形を指定し、対応するウィンドウの四角形を受け取ります。 このパラメーターが FALSE の場合、 *lpRect* はウィンドウの四角形を指定し、対応する表示四角形を受け取ります。
+*`bLarger`*\
+実行する操作を示します。 このパラメーターがの場合は `TRUE` 、 *`lpRect`* 表示四角形を指定し、対応するウィンドウ四角形を受け取ります。 このパラメーターがの場合 `FALSE` 、ウィンドウの四角形を指定し、 *`lpRect`* 対応する表示四角形を受け取ります。
 
-*lpRect*<br/>
-指定された四角形を指定し、計算された四角形を受け取る [RECT](/windows/win32/api/windef/ns-windef-rect) 構造体へのポインター。
+*`lpRect`*\
+指定された四角形を指定し、 [`RECT`](/windows/win32/api/windef/ns-windef-rect) 計算された四角形を受け取る構造体へのポインター。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_MFC_CTabCtrl#1](../../mfc/reference/codesnippet/cpp/ctabctrl-class_1.cpp)]
 
-## <a name="ctabctrlcreate"></a><a name="create"></a> CTabCtrl:: Create
+## <a name="ctabctrlcreate"></a><a name="create"></a> `CTabCtrl::Create`
 
 タブコントロールを作成し、オブジェクトのインスタンスにアタッチし `CTabCtrl` ます。
 
-```
+```cpp
 virtual BOOL Create(
     DWORD dwStyle,
     const RECT& rect,
@@ -191,21 +189,21 @@ virtual BOOL Create(
 
 ### <a name="parameters"></a>パラメーター
 
-*dwStyle*<br/>
+*`dwStyle`*\
 タブコントロールのスタイルを指定します。 Windows SDK で説明されている [タブコントロールスタイル](/windows/win32/Controls/tab-control-styles)の任意の組み合わせを適用します。 コントロールに適用できるウィンドウスタイルの一覧については、「 **解説** 」を参照してください。
 
-*rect*<br/>
-タブコントロールのサイズと位置を指定します。 これは、 [CRect](../../atl-mfc-shared/reference/crect-class.md) オブジェクトまたは [RECT](/windows/win32/api/windef/ns-windef-rect) 構造体のいずれかになります。
+*`rect`*\
+タブコントロールのサイズと位置を指定します。 [`CRect`](../../atl-mfc-shared/reference/crect-class.md)オブジェクトまたは構造体のいずれかを指定でき [`RECT`](/windows/win32/api/windef/ns-windef-rect) ます。
 
-*pParentWnd*<br/>
+*`pParentWnd`*\
 タブコントロールの親ウィンドウ (通常は) を指定し `CDialog` ます。 NULL にすることはできません。
 
-*nID*<br/>
+*`nID`*\
 タブコントロールの ID を指定します。
 
 ### <a name="return-value"></a>戻り値
 
-オブジェクトの初期化に成功した場合は TRUE。それ以外の場合は FALSE。
+`TRUE` オブジェクトの初期化に成功した場合は。それ以外の場合は `FALSE` 。
 
 ### <a name="remarks"></a>解説
 
@@ -213,27 +211,23 @@ virtual BOOL Create(
 
 タブコントロールスタイルに加えて、次のウィンドウスタイルをタブコントロールに適用できます。
 
-- WS_CHILD、タブコントロールを表す子ウィンドウを作成します。 WS_POPUP スタイルと共に使用することはできません。
+- `WS_CHILD`: タブコントロールを表す子ウィンドウを作成します。 WS_POPUP スタイルと共に使用することはできません。
+- `WS_VISIBLE`: 最初に表示されるタブコントロールを作成します。
+- `WS_DISABLED`: 最初は無効になっているウィンドウを作成します。
+- `WS_GROUP`: コントロールのグループの最初のコントロールを指定します。このコントロールは、ユーザーが方向キーを使用して1つのコントロールから次のコントロールに移動できます。 最初のコントロールの後に、: style で定義されたすべてのコントロールが `WS_GROUP` 同じグループに属しています。 次のコントロール `WS_GROUP` (: style) はスタイルグループを終了し、次のグループを開始します (つまり、1つのグループが次の開始位置で終了します)。
+- `WS_TABSTOP`: TAB キーを使用してユーザーが移動できる任意の数のコントロールの1つを指定します。 TAB キーは、: スタイルによって指定された次のコントロールにユーザーを移動し `WS_TABSTOP` ます。
 
-- WS_VISIBLE、最初に表示されるタブコントロールを作成します。
-
-- WS_DISABLED は、最初は無効になっているウィンドウを作成します。
-
-- WS_GROUP は、ユーザーが方向キーを使用して1つのコントロールから次のコントロールに移動できる、コントロールのグループの最初のコントロールを指定します。 最初のコントロールの後に WS_GROUP スタイルで定義されているすべてのコントロールが同じグループに属しています。 WS_GROUP スタイルの次のコントロールは、スタイルグループを終了し、次のグループを開始します (つまり、次の開始位置にある1つのグループが終了します)。
-
-- WS_TABSTOP は、TAB キーを使用してユーザーが移動できるコントロールの1つを指定します。 Tab キーは、WS_TABSTOP スタイルで指定された次のコントロールにユーザーを移動します。
-
-拡張ウィンドウスタイルを使用してタブコントロールを作成するには、ではなく、 [CTabCtrl:: CreateEx](#createex) を呼び出し `Create` ます。
+拡張ウィンドウスタイルを使用してタブコントロールを作成するには、の代わりにを呼び出し [`CTabCtrl::CreateEx`](#createex) `Create` ます。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_MFC_CTabCtrl#2](../../mfc/reference/codesnippet/cpp/ctabctrl-class_2.cpp)]
 
-## <a name="ctabctrlcreateex"></a><a name="createex"></a> CTabCtrl:: CreateEx
+## <a name="ctabctrlcreateex"></a><a name="createex"></a> `CTabCtrl::CreateEx`
 
 コントロール (子ウィンドウ) を作成し、オブジェクトに関連付け `CTabCtrl` ます。
 
-```
+```cpp
 virtual BOOL CreateEx(
     DWORD dwExStyle,
     DWORD dwStyle,
@@ -244,19 +238,19 @@ virtual BOOL CreateEx(
 
 ### <a name="parameters"></a>パラメーター
 
-*dwExStyle*<br/>
-作成するコントロールの拡張スタイルを指定します。 拡張 Windows スタイルの一覧については、Windows SDK の [CreateWindowEx](/windows/win32/api/winuser/nf-winuser-createwindowexw)の *dwexstyle* パラメーターを参照してください。
+*`dwExStyle`*\
+作成するコントロールの拡張スタイルを指定します。 拡張 Windows スタイルの一覧については、 *`dwExStyle`* Windows SDK の [CreateWindowEx](/windows/win32/api/winuser/nf-winuser-createwindowexw) のパラメーターを参照してください。
 
-*dwStyle*<br/>
-タブコントロールのスタイルを指定します。 Windows SDK で説明されている [タブコントロールスタイル](/windows/win32/Controls/tab-control-styles)の任意の組み合わせを適用します。 コントロールに適用できるウィンドウスタイルの一覧については、「 [Create](#create) 」の「**解説**」を参照してください。
+*`dwStyle`*\
+タブコントロールのスタイルを指定します。 Windows SDK で説明されている [タブコントロールスタイル](/windows/win32/Controls/tab-control-styles)の任意の組み合わせを適用します。  [`Create`](#create) コントロールに適用できるウィンドウスタイルの一覧については、「」の「解説」を参照してください。
 
-*rect*<br/>
-*PParentWnd* のクライアント座標で、作成されるウィンドウのサイズと位置を記述する [RECT](/windows/win32/api/windef/ns-windef-rect)構造体への参照。
+*`rect`*\
+[`RECT`](/windows/win32/api/windef/ns-windef-rect)作成されるウィンドウのサイズと位置 (のクライアント座標) を記述する構造体への参照 *`pParentWnd`* 。
 
-*pParentWnd*<br/>
+*`pParentWnd`*\
 コントロールの親であるウィンドウへのポインター。
 
-*nID*<br/>
+*`nID`*\
 コントロールの子ウィンドウ ID。
 
 ### <a name="return-value"></a>戻り値
@@ -265,23 +259,23 @@ virtual BOOL CreateEx(
 
 ### <a name="remarks"></a>解説
 
-`CreateEx`Windows 拡張スタイルの先頭 **WS_EX_** によって指定された拡張 windows スタイルを適用するには、[[作成](#create)] ではなくを使用します。
+`CreateEx` [`Create`](#create) Windows 拡張スタイルの先頭 **WS_EX_** によって指定された拡張 windows スタイルを適用するには、の代わりにを使用します。
 
-`CreateEx`*Dwexstyle* によって指定された拡張 Windows スタイルを使用して、コントロールを作成します。 [SetExtendedStyle](#setextendedstyle)を使用して、コントロールに固有の拡張スタイルを設定します。 たとえば、を使用し `CreateEx` て、このようなスタイルを WS_EX_CONTEXTHELP として設定します。ただし、を使用し `SetExtendedStyle` て、そのようなスタイルを TCS_EX_FLATSEPARATORS として設定します。 詳細については、「 [タブコントロールの拡張スタイル](/windows/win32/Controls/tab-control-extended-styles) 」で説明されている Windows SDK のスタイルに関するページを参照してください。
+`CreateEx` によって指定された拡張 Windows スタイルを使用して、コントロールを作成し *`dwExStyle`* ます。 を使用して、コントロールに固有の拡張スタイルを設定 [`SetExtendedStyle`](#setextendedstyle) します。 たとえば、を使用し `CreateEx` て、このようなスタイルを WS_EX_CONTEXTHELP として設定します。ただし、を使用し `SetExtendedStyle` て、そのようなスタイルを TCS_EX_FLATSEPARATORS として設定します。 詳細については、「 [タブコントロールの拡張スタイル](/windows/win32/Controls/tab-control-extended-styles) 」で説明されている Windows SDK のスタイルに関するページを参照してください。
 
-## <a name="ctabctrlctabctrl"></a><a name="ctabctrl"></a> CTabCtrl:: CTabCtrl
+## <a name="ctabctrlctabctrl"></a><a name="ctabctrl"></a> `CTabCtrl::CTabCtrl`
 
 `CTabCtrl` オブジェクトを構築します。
 
-```
+```cpp
 CTabCtrl();
 ```
 
-## <a name="ctabctrldeleteallitems"></a><a name="deleteallitems"></a> CTabCtrl::D eleteAllItems
+## <a name="ctabctrldeleteallitems"></a><a name="deleteallitems"></a> `CTabCtrl::DeleteAllItems`
 
 タブコントロールからすべての項目を削除します。
 
-```
+```cpp
 BOOL DeleteAllItems();
 ```
 
@@ -289,17 +283,17 @@ BOOL DeleteAllItems();
 
 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。
 
-## <a name="ctabctrldeleteitem"></a><a name="deleteitem"></a> CTabCtrl::D eleteItem
+## <a name="ctabctrldeleteitem"></a><a name="deleteitem"></a> `CTabCtrl::DeleteItem`
 
 指定された項目をタブコントロールから削除します。
 
-```
+```cpp
 BOOL DeleteItem(int nItem);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*nItem*<br/>
+*`nItem`*\
 削除する項目の0から始まる値。
 
 ### <a name="return-value"></a>戻り値
@@ -310,7 +304,7 @@ BOOL DeleteItem(int nItem);
 
 [!code-cpp[NVC_MFC_CTabCtrl#3](../../mfc/reference/codesnippet/cpp/ctabctrl-class_3.cpp)]
 
-## <a name="ctabctrldeselectall"></a><a name="deselectall"></a> CTabCtrl::D eselectAll
+## <a name="ctabctrldeselectall"></a><a name="deselectall"></a> `CTabCtrl::DeselectAll`
 
 タブコントロール内の項目をリセットし、押された項目をクリアします。
 
@@ -320,25 +314,25 @@ void DeselectAll(BOOL fExcludeFocus);
 
 ### <a name="parameters"></a>パラメーター
 
-*fExcludeFocus*<br/>
-項目のスコープを指定するフラグ deselection。 このパラメーターが FALSE に設定されている場合は、すべてのタブボタンがリセットされます。 TRUE に設定されている場合、現在選択されている項目以外のすべてのタブ項目がリセットされます。
+*`fExcludeFocus`*\
+項目のスコープを指定するフラグ deselection。 このパラメーターがに設定されている場合は `FALSE` 、すべてのタブボタンがリセットされます。 がに設定されている場合 `TRUE` 、現在選択されている項目以外のすべてのタブ項目がリセットされます。
 
 ### <a name="remarks"></a>解説
 
-このメンバー関数は、Windows SDK で説明されているように、Win32 メッセージの [TCM_DESELECTALL](/windows/win32/Controls/tcm-deselectall)の動作を実装します。
+このメンバー関数は、Windows SDK で説明されているように、Win32 メッセージの動作を実装し [`TCM_DESELECTALL`](/windows/win32/Controls/tcm-deselectall) ます。
 
-## <a name="ctabctrldrawitem"></a><a name="drawitem"></a> CTabCtrl::D rawItem
+## <a name="ctabctrldrawitem"></a><a name="drawitem"></a> `CTabCtrl::DrawItem`
 
 オーナー描画タブコントロールの外観が変化したときに、フレームワークによって呼び出されます。
 
-```
+```cpp
 virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*lpDrawItemStruct*<br/>
-描画する項目を記述する [DRAWITEMSTRUCT](/windows/win32/api/winuser/ns-winuser-drawitemstruct) 構造体へのポインター。
+*`lpDrawItemStruct`*\
+[`DRAWITEMSTRUCT`](/windows/win32/api/winuser/ns-winuser-drawitemstruct)描画する項目を記述する構造体へのポインター。
 
 ### <a name="remarks"></a>解説
 
@@ -346,13 +340,13 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
 
 既定では、このメンバー関数は何も行いません。 オーナー描画オブジェクトの描画を実装するには、このメンバー関数をオーバーライドし `CTabCtrl` ます。
 
-このメンバー関数が終了する前に、アプリケーションでは、 *lpDrawItemStruct* で指定された表示コンテキスト用に選択されたすべてのグラフィックスデバイスインターフェイス (GDI) オブジェクトを復元する必要があります。
+アプリケーションでは、 *`lpDrawItemStruct`* このメンバー関数が終了する前に、で指定した表示コンテキスト用に選択されたすべてのグラフィックスデバイスインターフェイス (GDI) オブジェクトを復元する必要があります。
 
-## <a name="ctabctrlgetcurfocus"></a><a name="getcurfocus"></a> CTabCtrl:: GetCurFocus
+## <a name="ctabctrlgetcurfocus"></a><a name="getcurfocus"></a> `CTabCtrl::GetCurFocus`
 
 現在フォーカスがあるタブのインデックスを取得します。
 
-```
+```cpp
 int GetCurFocus() const;
 ```
 
@@ -360,11 +354,11 @@ int GetCurFocus() const;
 
 現在のフォーカスがあるタブの0から始まるインデックス。
 
-## <a name="ctabctrlgetcursel"></a><a name="getcursel"></a> CTabCtrl:: GetCurSel
+## <a name="ctabctrlgetcursel"></a><a name="getcursel"></a> `CTabCtrl::GetCurSel`
 
 タブコントロールで現在選択されているタブを取得します。
 
-```
+```cpp
 int GetCurSel() const;
 ```
 
@@ -372,11 +366,11 @@ int GetCurSel() const;
 
 正常に終了した場合は、選択したタブの0から始まるインデックス。タブが選択されていない場合は-1。
 
-## <a name="ctabctrlgetextendedstyle"></a><a name="getextendedstyle"></a> CTabCtrl:: GetExtendedStyle
+## <a name="ctabctrlgetextendedstyle"></a><a name="getextendedstyle"></a> `CTabCtrl::GetExtendedStyle`
 
 現在タブコントロールに使用されている拡張スタイルを取得します。
 
-```
+```cpp
 DWORD GetExtendedStyle();
 ```
 
@@ -388,11 +382,11 @@ DWORD GetExtendedStyle();
 
 このメンバー関数は、Windows SDK で説明されているように、Win32 メッセージ [TCM_GETEXTENDEDSTYLE](/windows/win32/Controls/tcm-getextendedstyle)の動作を実装します。
 
-## <a name="ctabctrlgetimagelist"></a><a name="getimagelist"></a> CTabCtrl:: GetImageList
+## <a name="ctabctrlgetimagelist"></a><a name="getimagelist"></a> `CTabCtrl::GetImageList`
 
 タブ コントロールに関連付けられているイメージ リストを取得します。
 
-```
+```cpp
 CImageList* GetImageList() const;
 ```
 
@@ -400,43 +394,39 @@ CImageList* GetImageList() const;
 
 成功した場合、タブ コントロールのイメージ リストへのポインター。それ以外の場合は、NULL。
 
-## <a name="ctabctrlgetitem"></a><a name="getitem"></a> CTabCtrl:: GetItem
+## <a name="ctabctrlgetitem"></a><a name="getitem"></a> `CTabCtrl::GetItem`
 
 タブコントロールのタブに関する情報を取得します。
 
-```
+```cpp
 BOOL GetItem(int nItem,   TCITEM* pTabCtrlItem) const;
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*nItem*<br/>
+*`nItem`*\
 タブの0から始まるインデックス。
 
-*pTabCtrlItem*<br/>
-取得する情報を指定するために使用される [TCITEM](/windows/win32/api/commctrl/ns-commctrl-tcitemw) 構造体へのポインター。 タブに関する情報を受信するためにも使用されます。この構造体は `InsertItem` 、、、およびの各メンバー関数と共に使用され `GetItem` `SetItem` ます。
+*`pTabCtrlItem`*\
+[`TCITEM`](/windows/win32/api/commctrl/ns-commctrl-tcitemw)取得する情報を指定するために使用される構造体へのポインター。 タブに関する情報を受信するためにも使用されます。この構造体は `InsertItem` 、、、およびの各メンバー関数と共に使用され `GetItem` `SetItem` ます。
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合は TRUE を返します。それ以外の場合は FALSE。
+正常に終了した場合は `TRUE` を返します。それ以外の場合は `FALSE` を返します。
 
 ### <a name="remarks"></a>解説
 
-メッセージが送信されると、 `mask` メンバーは返す属性を指定します。 メンバーが TCIF_TEXT 値を指定する場合、メンバーには `mask` `pszText` 項目テキストを受け取るバッファーのアドレスを含める必要があり、 `cchTextMax` メンバーはバッファーのサイズを指定する必要があります。
+メッセージが送信されると、 `mask` メンバーは返す属性を指定します。 メンバーが値を指定する場合、メンバーには `mask` `TCIF_TEXT` `pszText` 項目テキストを受け取るバッファーのアドレスを含める必要があり、 `cchTextMax` メンバーはバッファーのサイズを指定する必要があります。
 
 - `mask`
 
    `TCITEM`取得または設定する構造体メンバーを指定する値。 このメンバーは、0または次の値の組み合わせにすることができます。
 
-  - TCIF_TEXT `pszText` メンバーが有効であることを示します。
-
-  - TCIF_IMAGE `iImage` メンバーが有効であることを示します。
-
-  - TCIF_PARAM `lParam` メンバーが有効であることを示します。
-
-  - `pszText`ヘブライ語またはアラビア語のシステムで右から左への読み取り順序を使用して、のテキスト TCIF_RTLREADING 表示されます。
-
-  - TCIF_STATE `dwState` メンバーが有効であることを示します。
+  - `TCIF_TEXT`: `pszText` メンバーが有効です。
+  - `TCIF_IMAGE`: `iImage` メンバーが有効です。
+  - `TCIF_PARAM`: `lParam` メンバーが有効です。
+  - `TCIF_RTLREADING`: のテキスト `pszText` は、ヘブライ語またはアラビア語のシステムで右から左への読み取り順序を使用して表示されます。
+  - `TCIF_STATE`: `dwState` メンバーが有効です。
 
 - `pszText`
 
@@ -456,11 +446,11 @@ BOOL GetItem(int nItem,   TCITEM* pTabCtrlItem) const;
 
 [!code-cpp[NVC_MFC_CTabCtrl#4](../../mfc/reference/codesnippet/cpp/ctabctrl-class_4.cpp)]
 
-## <a name="ctabctrlgetitemcount"></a><a name="getitemcount"></a> CTabCtrl:: GetItemCount
+## <a name="ctabctrlgetitemcount"></a><a name="getitemcount"></a> `CTabCtrl::GetItemCount`
 
 タブコントロールのタブの数を取得します。
 
-```
+```cpp
 int GetItemCount() const;
 ```
 
@@ -470,23 +460,23 @@ int GetItemCount() const;
 
 ### <a name="example"></a>例
 
-  [CPropertySheet:: GetTabControl](../../mfc/reference/cpropertysheet-class.md#gettabcontrol)の例を参照してください。
+  の例を参照してください [`CPropertySheet::GetTabControl`](../../mfc/reference/cpropertysheet-class.md#gettabcontrol) 。
 
-## <a name="ctabctrlgetitemrect"></a><a name="getitemrect"></a> CTabCtrl:: GetItemRect
+## <a name="ctabctrlgetitemrect"></a><a name="getitemrect"></a> `CTabCtrl::GetItemRect`
 
 タブコントロール内の指定したタブの外接する四角形を取得します。
 
-```
+```cpp
 BOOL GetItemRect(int nItem,   LPRECT lpRect) const;
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*nItem*<br/>
+*`nItem`*\
 タブ項目の0から始まるインデックス。
 
-*lpRect*<br/>
-タブの外接する四角形を受け取る [RECT](/windows/win32/api/windef/ns-windef-rect) 構造体へのポインター。これらの座標は、ビューポートの現在のマッピングモードを使用します。
+*`lpRect`*\
+[`RECT`](/windows/win32/api/windef/ns-windef-rect)タブの外接する四角形を受け取る構造体へのポインター。これらの座標は、ビューポートの現在のマッピングモードを使用します。
 
 ### <a name="return-value"></a>戻り値
 
@@ -494,13 +484,13 @@ BOOL GetItemRect(int nItem,   LPRECT lpRect) const;
 
 ### <a name="example"></a>例
 
-  [CPropertySheet:: GetTabControl](../../mfc/reference/cpropertysheet-class.md#gettabcontrol)の例を参照してください。
+  の例を参照してください [`CPropertySheet::GetTabControl`](../../mfc/reference/cpropertysheet-class.md#gettabcontrol) 。
 
-## <a name="ctabctrlgetitemstate"></a><a name="getitemstate"></a> CTabCtrl:: GetItemState
+## <a name="ctabctrlgetitemstate"></a><a name="getitemstate"></a> `CTabCtrl::GetItemState`
 
-*NItem* によって識別されるタブコントロール項目の状態を取得します。
+によって識別されるタブコントロール項目の状態を取得し *`nItem`* ます。
 
-```
+```cpp
 DWORD GetItemState(
     int nItem,
     DWORD dwMask) const;
@@ -508,30 +498,30 @@ DWORD GetItemState(
 
 ### <a name="parameters"></a>パラメーター
 
-*nItem*<br/>
+*`nItem`*\
 状態情報を取得する項目の0から始まるインデックス番号。
 
-*dwMask*<br/>
-返す項目の状態フラグのうち、どれを返すかを指定するマスク。 値の一覧については、「Windows SDK」で説明されているように、 [TCITEM](/windows/win32/api/commctrl/ns-commctrl-tcitemw) 構造体の mask メンバーを参照してください。
+*`dwMask`*\
+返す項目の状態フラグのうち、どれを返すかを指定するマスク。 値の一覧については、「 [`TCITEM`](/windows/win32/api/commctrl/ns-commctrl-tcitemw) Windows SDK」で説明されているように、構造体の mask メンバーを参照してください。
 
 ### <a name="return-value"></a>戻り値
 
-状態情報を受け取る DWORD 値への参照。 次の値のいずれかです。
+状態情報を受け取る DWORD 値への参照。 値は、次のいずれかです。
 
-|値|説明|
+|[値]|説明|
 |-----------|-----------------|
-|TCIS_BUTTONPRESSED|タブコントロール項目が選択されています。|
-|TCIS_HIGHLIGHTED|タブコントロール項目が強調表示され、現在の強調表示色を使用してタブとテキストが描画されます。 強調表示色を使用すると、これはディザーの色ではなく、真の補間になります。|
+|`TCIS_BUTTONPRESSED`|タブコントロール項目が選択されています。|
+|`TCIS_HIGHLIGHTED`|タブコントロール項目が強調表示され、現在の強調表示色を使用してタブとテキストが描画されます。 強調表示色を使用すると、これはディザーの色ではなく、真の補間になります。|
 
 ### <a name="remarks"></a>解説
 
 項目の状態は、構造体のメンバーによって指定され `dwState` `TCITEM` ます。
 
-## <a name="ctabctrlgetrowcount"></a><a name="getrowcount"></a> CTabCtrl:: GetRowCount
+## <a name="ctabctrlgetrowcount"></a><a name="getrowcount"></a> `CTabCtrl::GetRowCount`
 
 タブコントロールの現在の行数を取得します。
 
-```
+```cpp
 int GetRowCount() const;
 ```
 
@@ -543,11 +533,11 @@ int GetRowCount() const;
 
 TCS_MULTILINE スタイルを持つタブコントロールにのみ、タブの複数の行を含めることができます。
 
-## <a name="ctabctrlgettooltips"></a><a name="gettooltips"></a> CTabCtrl:: GetToolTips ヒント
+## <a name="ctabctrlgettooltips"></a><a name="gettooltips"></a> `CTabCtrl::GetToolTips`
 
 タブコントロールに関連付けられているツールヒントコントロールのハンドルを取得します。
 
-```
+```cpp
 CToolTipCtrl* GetToolTips() const;
 ```
 
@@ -559,21 +549,21 @@ CToolTipCtrl* GetToolTips() const;
 
 タブコントロールに TCS_TOOLTIPS スタイルがある場合は、ツールヒントコントロールが作成されます。 また、メンバー関数を使用して、ツールヒントコントロールをタブコントロールに割り当てることもでき `SetToolTips` ます。
 
-## <a name="ctabctrlhighlightitem"></a><a name="highlightitem"></a> CTabCtrl:: HighlightItem
+## <a name="ctabctrlhighlightitem"></a><a name="highlightitem"></a> `CTabCtrl::HighlightItem`
 
 タブアイテムの強調表示の状態を設定します。
 
-```
-BOOL HighlightItem(int idItem,   BOOL fHighlight = TRUE);
+```cpp
+BOOL HighlightItem(int idItem,  BOOL fHighlight = TRUE);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*idItem*<br/>
+*`idItem`*\
 タブコントロール項目の0から始まるインデックス。
 
-*fHighlight 表示*<br/>
-設定する強調表示の状態を指定する値。 この値が TRUE の場合、タブは強調表示されます。FALSE の場合、タブは既定の状態に設定されます。
+*`fHighlight`*\
+設定する強調表示の状態を指定する値。 この値がの場合、 `TRUE` タブは強調表示されます。の場合、 `FALSE` タブは既定の状態に設定されます。
 
 ### <a name="return-value"></a>戻り値
 
@@ -581,30 +571,30 @@ BOOL HighlightItem(int idItem,   BOOL fHighlight = TRUE);
 
 ### <a name="remarks"></a>解説
 
-このメンバー関数は、Windows SDK で説明されているように、Win32 メッセージ [TCM_HIGHLIGHTITEM](/windows/win32/Controls/tcm-highlightitem)を実装します。
+このメンバー関数は、 [`TCM_HIGHLIGHTITEM`](/windows/win32/Controls/tcm-highlightitem) Windows SDK で説明されているように、Win32 メッセージを実装します。
 
-## <a name="ctabctrlhittest"></a><a name="hittest"></a> CTabCtrl:: System.windows.media.visualtreehelper.hittest
+## <a name="ctabctrlhittest"></a><a name="hittest"></a> `CTabCtrl::HitTest`
 
 指定した画面位置にタブがある場合は、そのタブを確認します。
 
-```
+```cpp
 int HitTest(TCHITTESTINFO* pHitTestInfo) const;
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*pHitTestInfo*<br/>
-テストする画面位置を指定する Windows SDK で説明されているように、 [TCHITTESTINFO](/windows/win32/api/commctrl/ns-commctrl-tchittestinfo) 構造体へのポインター。
+*pHitTestInfo*\
+[`TCHITTESTINFO`](/windows/win32/api/commctrl/ns-commctrl-tchittestinfo)Windows SDK で説明されているように、テストする画面位置を指定する構造体へのポインター。
 
 ### <a name="return-value"></a>戻り値
 
 タブの0から始まるインデックスを返します。指定した位置にタブがない場合は-1 を返します。
 
-## <a name="ctabctrlinsertitem"></a><a name="insertitem"></a> CTabCtrl:: InsertItem
+## <a name="ctabctrlinsertitem"></a><a name="insertitem"></a> `CTabCtrl::InsertItem`
 
 既存のタブコントロールに新しいタブを挿入します。
 
-```
+```cpp
 LONG InsertItem(
     int nItem,
     TCITEM* pTabCtrlItem);
@@ -637,39 +627,35 @@ LONG InsertItem(
 
 ### <a name="parameters"></a>パラメーター
 
-*nItem*<br/>
+*`nItem`*\
 新しいタブの0から始まるインデックス。
 
-*pTabCtrlItem*<br/>
-タブの属性を指定する [TCITEM](/windows/win32/api/commctrl/ns-commctrl-tcitemw) 構造体へのポインター。
+*`pTabCtrlItem`*\
+[`TCITEM`](/windows/win32/api/commctrl/ns-commctrl-tcitemw)タブの属性を指定する構造体へのポインター。
 
-*lpszItem*<br/>
+*`lpszItem`*\
 タブのテキストを含む、null で終わる文字列のアドレス。
 
-*nImage*<br/>
+*`nImage`*\
 イメージリストから挿入するイメージの0から始まるインデックス。
 
-*nMask*<br/>
+*`nMask`*\
 `TCITEM`設定する構造体の属性を指定します。 0または次の値の組み合わせを指定できます。
 
-- TCIF_TEXT `pszText` メンバーが有効であることを示します。
+- `TCIF_TEXT`: `pszText` メンバーが有効です。
+- `TCIF_IMAGE`: `iImage` メンバーが有効です。
+- `TCIF_PARAM`: *`lParam`* メンバーが有効です。
+- `TCIF_RTLREADING`: のテキスト `pszText` は、ヘブライ語またはアラビア語のシステムで右から左への読み取り順序を使用して表示されます。
+- `TCIF_STATE`: *`dwState`* メンバーが有効です。
 
-- TCIF_IMAGE `iImage` メンバーが有効であることを示します。
-
-- TCIF_PARAM、 *lParam* メンバーが有効であることを示します。
-
-- `pszText`ヘブライ語またはアラビア語のシステムで右から左への読み取り順序を使用して、のテキスト TCIF_RTLREADING 表示されます。
-
-- TCIF_STATE *Dwstate* メンバーが有効であることを示します。
-
-*lParam*<br/>
+*`lParam`*\
 タブに関連付けられているアプリケーション定義データ。
 
-*dwState*<br/>
-項目の状態の値を指定します。 詳細については、Windows SDK の「 [TCITEM](/windows/win32/api/commctrl/ns-commctrl-tcitemw) 」を参照してください。
+*`dwState`*\
+項目の状態の値を指定します。 詳細については、Windows SDK の「」を参照してください [`TCITEM`](/windows/win32/api/commctrl/ns-commctrl-tcitemw) 。
 
-*dwStateMask*<br/>
-設定する状態を指定します。 詳細については、Windows SDK の「 [TCITEM](/windows/win32/api/commctrl/ns-commctrl-tcitemw) 」を参照してください。
+*`dwStateMask`*\
+設定する状態を指定します。 詳細については、Windows SDK の「」を参照してください [`TCITEM`](/windows/win32/api/commctrl/ns-commctrl-tcitemw) 。
 
 ### <a name="return-value"></a>戻り値
 
@@ -679,7 +665,7 @@ LONG InsertItem(
 
 [!code-cpp[NVC_MFC_CTabCtrl#5](../../mfc/reference/codesnippet/cpp/ctabctrl-class_5.cpp)]
 
-## <a name="ctabctrlremoveimage"></a><a name="removeimage"></a> CTabCtrl:: RemoveImage
+## <a name="ctabctrlremoveimage"></a><a name="removeimage"></a> `CTabCtrl::RemoveImage`
 
 指定したイメージをタブコントロールのイメージリストから削除します。
 
@@ -689,14 +675,14 @@ void RemoveImage(int nImage);
 
 ### <a name="parameters"></a>パラメーター
 
-*nImage*<br/>
+*`nImage`*\
 削除するイメージの0から始まるインデックス。
 
 ### <a name="remarks"></a>解説
 
 タブコントロールは各タブのイメージインデックスを更新するため、各タブは同じイメージに関連付けられたままになります。
 
-## <a name="ctabctrlsetcurfocus"></a><a name="setcurfocus"></a> CTabCtrl:: SetCurFocus
+## <a name="ctabctrlsetcurfocus"></a><a name="setcurfocus"></a> `CTabCtrl::SetCurFocus`
 
 フォーカスをタブコントロールの指定したタブに設定します。
 
@@ -706,24 +692,24 @@ void SetCurFocus(int nItem);
 
 ### <a name="parameters"></a>パラメーター
 
-*nItem*<br/>
+*`nItem`*\
 フォーカスを取得するタブのインデックスを指定します。
 
 ### <a name="remarks"></a>解説
 
 このメンバー関数は、Windows SDK で説明されているように、Win32 メッセージ [TCM_SETCURFOCUS](/windows/win32/Controls/tcm-setcurfocus)の動作を実装します。
 
-## <a name="ctabctrlsetcursel"></a><a name="setcursel"></a> CTabCtrl:: SetCurSel
+## <a name="ctabctrlsetcursel"></a><a name="setcursel"></a> `CTabCtrl::SetCurSel`
 
 タブコントロールのタブを選択します。
 
-```
+```cpp
 int SetCurSel(int nItem);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*nItem*<br/>
+*`nItem`*\
 選択する項目の0から始まるインデックス。
 
 ### <a name="return-value"></a>戻り値
@@ -734,21 +720,21 @@ int SetCurSel(int nItem);
 
 この関数を使用してタブを選択した場合、タブコントロールは TCN_SELCHANGING または TCN_SELCHANGE 通知メッセージを送信しません。 これらの通知は、ユーザーがキーボードをクリックまたは使用してタブを変更したときに、WM_NOTIFY を使用して送信されます。
 
-## <a name="ctabctrlsetextendedstyle"></a><a name="setextendedstyle"></a> CTabCtrl:: SetExtendedStyle
+## <a name="ctabctrlsetextendedstyle"></a><a name="setextendedstyle"></a> `CTabCtrl::SetExtendedStyle`
 
 タブコントロールの拡張スタイルを設定します。
 
-```
-DWORD SetExtendedStyle(DWORD dwNewStyle,   DWORD dwExMask = 0);
+```cpp
+DWORD SetExtendedStyle(DWORD dwNewStyle, DWORD dwExMask = 0);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*dwNewStyle*<br/>
+*`dwNewStyle`*\
 タブコントロールの拡張スタイルの組み合わせを指定する値。
 
-*dwExMask*<br/>
-*Dwnewstyle* で影響を受けるスタイルを示す DWORD 値です。 *Dwexmask* の拡張スタイルのみが変更されます。 その他のすべてのスタイルはそのまま維持されます。 このパラメーターが0の場合、 *Dwnewstyle* のすべてのスタイルが影響を受けます。
+*`dwExMask`*\
+のどのスタイル *`dwNewStyle`* が影響を受けるかを示す DWORD 値。 の拡張スタイルのみ *`dwExMask`* が変更されます。 その他のすべてのスタイルはそのまま維持されます。 このパラメーターが0の場合、内のすべてのスタイルが *`dwNewStyle`* 影響を受けます。
 
 ### <a name="return-value"></a>戻り値
 
@@ -756,40 +742,40 @@ Windows SDK で説明されているように、前の [タブコントロール
 
 ### <a name="return-value"></a>戻り値
 
-このメンバー関数は、Windows SDK で説明されているように、Win32 メッセージ [TCM_SETEXTENDEDSTYLE](/windows/win32/Controls/tcm-setextendedstyle)の動作を実装します。
+このメンバー関数は、 [`TCM_SETEXTENDEDSTYLE`](/windows/win32/Controls/tcm-setextendedstyle) Windows SDK で説明されているように、Win32 メッセージの動作を実装します。
 
-## <a name="ctabctrlsetimagelist"></a><a name="setimagelist"></a> CTabCtrl:: SetImageList
+## <a name="ctabctrlsetimagelist"></a><a name="setimagelist"></a> `CTabCtrl::SetImageList`
 
 イメージリストをタブコントロールに割り当てます。
 
-```
+```cpp
 CImageList* SetImageList(CImageList* pImageList);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*pImageList*<br/>
+*`pImageList`*\
 タブコントロールに割り当てられるイメージリストへのポインター。
 
 ### <a name="return-value"></a>戻り値
 
 前のイメージリストへのポインターを返します。前のイメージリストがない場合は NULL を返します。
 
-## <a name="ctabctrlsetitem"></a><a name="setitem"></a> CTabCtrl:: SetItem
+## <a name="ctabctrlsetitem"></a><a name="setitem"></a> `CTabCtrl::SetItem`
 
 タブの属性の一部またはすべてを設定します。
 
-```
+```cpp
 BOOL SetItem(int nItem,   TCITEM* pTabCtrlItem);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*nItem*<br/>
+*`nItem`*\
 項目の0から始まるインデックス。
 
-*pTabCtrlItem*<br/>
-新しい項目の属性が格納されている [TCITEM](/windows/win32/api/commctrl/ns-commctrl-tcitemw) 構造体へのポインター。 メンバーは、 `mask` 設定する属性を指定します。 メンバーが `mask` TCIF_TEXT 値を指定した場合、 `pszText` メンバーは null で終わる文字列のアドレスであり、 `cchTextMax` メンバーは無視されます。
+*`pTabCtrlItem`*\
+[`TCITEM`](/windows/win32/api/commctrl/ns-commctrl-tcitemw)新しい項目の属性を格納している構造体へのポインター。 メンバーは、 `mask` 設定する属性を指定します。 メンバーが値を指定した場合 `mask` `TCIF_TEXT` 、 `pszText` メンバーは null で終わる文字列のアドレスであり、 `cchTextMax` メンバーは無視されます。
 
 ### <a name="return-value"></a>戻り値
 
@@ -799,17 +785,17 @@ BOOL SetItem(int nItem,   TCITEM* pTabCtrlItem);
 
   [GetItem](#getitem)の例を参照してください。
 
-## <a name="ctabctrlsetitemextra"></a><a name="setitemextra"></a> CTabCtrl:: SetItemExtra
+## <a name="ctabctrlsetitemextra"></a><a name="setitemextra"></a> `CTabCtrl::SetItemExtra`
 
 タブコントロール内のアプリケーション定義データ用に予約されているタブあたりのバイト数を設定します。
 
-```
+```cpp
 BOOL SetItemExtra(int nBytes);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*nBytes*<br/>
+*`nBytes`*\
 設定する余分なバイト数。
 
 ### <a name="return-value"></a>戻り値
@@ -818,30 +804,30 @@ BOOL SetItemExtra(int nBytes);
 
 ### <a name="remarks"></a>解説
 
-このメンバー関数は、Windows SDK で説明されているように、Win32 メッセージ [TCM_SETITEMEXTRA](/windows/win32/Controls/tcm-setitemextra)の動作を実装します。
+このメンバー関数は、 [`TCM_SETITEMEXTRA`](/windows/win32/Controls/tcm-setitemextra) Windows SDK で説明されているように、Win32 メッセージの動作を実装します。
 
-## <a name="ctabctrlsetitemsize"></a><a name="setitemsize"></a> CTabCtrl:: SetItemSize
+## <a name="ctabctrlsetitemsize"></a><a name="setitemsize"></a> `CTabCtrl::SetItemSize`
 
 タブ コントロール項目の幅と高さを設定します。
 
-```
+```cpp
 CSize SetItemSize(CSize size);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*size*<br/>
+*`size`*\
 タブ コントロール項目の新しい幅と高さ (ピクセル単位)。
 
 ### <a name="return-value"></a>戻り値
 
 タブ コントロール項目の古い幅と高さを返します。
 
-## <a name="ctabctrlsetitemstate"></a><a name="setitemstate"></a> CTabCtrl:: SetItemState
+## <a name="ctabctrlsetitemstate"></a><a name="setitemstate"></a> `CTabCtrl::SetItemState`
 
-*NItem* によって識別されるタブコントロール項目の状態を設定します。
+によって識別されるタブコントロール項目の状態を設定 *`nItem`* します。
 
-```
+```cpp
 BOOL SetItemState(
     int nItem,
     DWORD dwMask,
@@ -850,35 +836,35 @@ BOOL SetItemState(
 
 ### <a name="parameters"></a>パラメーター
 
-*nItem*<br/>
+*`nItem`*\
 状態情報を設定する項目の0から始まるインデックス番号。
 
-*dwMask*<br/>
-設定する項目の状態フラグを指定するマスク。 値の一覧については、「Windows SDK」で説明されているように、 [TCITEM](/windows/win32/api/commctrl/ns-commctrl-tcitemw) 構造体の mask メンバーを参照してください。
+*`dwMask`*\
+設定する項目の状態フラグを指定するマスク。 値の一覧については、「 [`TCITEM`](/windows/win32/api/commctrl/ns-commctrl-tcitemw) Windows SDK」で説明されているように、構造体の mask メンバーを参照してください。
 
-*dwState*<br/>
-状態情報を格納している DWORD 値への参照。 次の値のいずれかです。
+*`dwState`*\
+状態情報を格納している DWORD 値への参照。 値は、次のいずれかです。
 
-|値|説明|
+|[値]|説明|
 |-----------|-----------------|
-|TCIS_BUTTONPRESSED|タブコントロール項目が選択されています。|
-|TCIS_HIGHLIGHTED|タブコントロール項目が強調表示され、現在の強調表示色を使用してタブとテキストが描画されます。 強調表示色を使用すると、これはディザーの色ではなく、真の補間になります。|
+|`TCIS_BUTTONPRESSED`|タブコントロール項目が選択されています。|
+|`TCIS_HIGHLIGHTED`|タブコントロール項目が強調表示され、現在の強調表示色を使用してタブとテキストが描画されます。 強調表示色を使用すると、これはディザーの色ではなく、真の補間になります。|
 
 ### <a name="return-value"></a>戻り値
 
 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。
 
-## <a name="ctabctrlsetmintabwidth"></a><a name="setmintabwidth"></a> CTabCtrl:: SetMinTabWidth
+## <a name="ctabctrlsetmintabwidth"></a><a name="setmintabwidth"></a> `CTabCtrl::SetMinTabWidth`
 
 タブコントロール内の項目の最小の幅を設定します。
 
-```
+```cpp
 int SetMinTabWidth(int cx);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*シリーズ*<br/>
+*`cx`*\
 タブコントロール項目に設定される最小の幅。 このパラメーターが-1 に設定されている場合、コントロールは既定のタブ幅を使用します。
 
 ### <a name="return-value"></a>戻り値
@@ -887,9 +873,9 @@ int SetMinTabWidth(int cx);
 
 ### <a name="return-value"></a>戻り値
 
-このメンバー関数は、Windows SDK で説明されているように、Win32 メッセージ [TCM_SETMINTABWIDTH](/windows/win32/Controls/tcm-setmintabwidth)の動作を実装します。
+このメンバー関数は、 [`TCM_SETMINTABWIDTH`](/windows/win32/Controls/tcm-setmintabwidth) Windows SDK で説明されているように、Win32 メッセージの動作を実装します。
 
-## <a name="ctabctrlsetpadding"></a><a name="setpadding"></a> CTabCtrl:: SetPadding
+## <a name="ctabctrlsetpadding"></a><a name="setpadding"></a> `CTabCtrl::SetPadding`
 
 タブコントロール内の各タブのアイコンとラベルの周囲のスペース (埋め込み) のサイズを設定します。
 
@@ -899,10 +885,10 @@ void SetPadding(CSize size);
 
 ### <a name="parameters"></a>パラメーター
 
-*size*<br/>
+*`size`*\
 タブコントロール内の各タブのアイコンとラベルの周囲のスペース (埋め込み) のサイズを設定します。
 
-## <a name="ctabctrlsettooltips"></a><a name="settooltips"></a> CTabCtrl:: SetToolTips ヒント
+## <a name="ctabctrlsettooltips"></a><a name="settooltips"></a> `CTabCtrl::SetToolTips`
 
 ツールヒントコントロールをタブコントロールに割り当てます。
 
@@ -912,7 +898,7 @@ void SetToolTips(CToolTipCtrl* pWndTip);
 
 ### <a name="parameters"></a>パラメーター
 
-*pWndTip*<br/>
+*`pWndTip`*\
 ツールヒントコントロールのハンドル。
 
 ### <a name="remarks"></a>解説
@@ -921,11 +907,11 @@ void SetToolTips(CToolTipCtrl* pWndTip);
 
 ### <a name="example"></a>例
 
-  [CPropertySheet:: GetTabControl](../../mfc/reference/cpropertysheet-class.md#gettabcontrol)の例を参照してください。
+  の例を参照してください [`CPropertySheet::GetTabControl`](../../mfc/reference/cpropertysheet-class.md#gettabcontrol) 。
 
 ## <a name="see-also"></a>関連項目
 
-[CWnd クラス](../../mfc/reference/cwnd-class.md)<br/>
-[階層図](../../mfc/hierarchy-chart.md)<br/>
-[CHeaderCtrl クラス](../../mfc/reference/cheaderctrl-class.md)<br/>
-[CListCtrl クラス](../../mfc/reference/clistctrl-class.md)
+[`CWnd` 講義](../../mfc/reference/cwnd-class.md)\
+[`CHeaderCtrl` 講義](../../mfc/reference/cheaderctrl-class.md)\
+[ `CListCtrl` クラス](../../mfc/reference/clistctrl-class.md) 
+ [階層図](../../mfc/hierarchy-chart.md)\
