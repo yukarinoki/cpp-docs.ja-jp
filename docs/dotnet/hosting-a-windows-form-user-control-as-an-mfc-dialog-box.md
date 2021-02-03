@@ -7,20 +7,18 @@ helpviewer_keywords:
 - Windows Forms [C++], hosting as MFC Dialog
 - hosting Windows Forms control [C++]
 ms.assetid: 0434a9d7-8b14-48e6-ad69-9ba9a684677a
-ms.openlocfilehash: 885b63e17140cca7983aeeed26e56eac47091a0d
-ms.sourcegitcommit: 3987d9c39f5a5b4824303a48a6215984ce8949e8
+ms.openlocfilehash: 64c68ede565b4248a812d46963f072fbab8bdc3c
+ms.sourcegitcommit: c20734f18d3d49bb38b1628c68b53b54b3eeeb03
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/02/2021
-ms.locfileid: "99478059"
+ms.lasthandoff: 02/03/2021
+ms.locfileid: "99522821"
 ---
 # <a name="hosting-a-windows-form-user-control-as-an-mfc-dialog-box"></a>MFC ダイアログ ボックスとしての Windows フォーム ユーザー コントロールのホスト
 
 MFC には、 [](../mfc/reference/cwinformsdialog-class.md) <xref:System.Windows.Forms.UserControl> モーダルまたはモードレスの MFC ダイアログボックスで Windows フォームユーザーコントロール () をホストできるように、テンプレートクラス CWinFormsDialog が用意されています。 `CWinFormsDialog` は MFC クラス [CDialog](../mfc/reference/cdialog-class.md)から派生しているので、ダイアログボックスはモーダルまたはモードレスとして起動できます。
 
 `CWinFormsDialog`ユーザーコントロールをホストするためにが使用するプロセスは、「 [MFC ダイアログボックスでの Windows フォームユーザーコントロールのホスト](../dotnet/hosting-a-windows-form-user-control-in-an-mfc-dialog-box.md)」で説明されている手順と似ています。 ただし、`CWinFormsDialog` は、ユーザー コントロールの初期化およびホストを管理するため、手動でプログラムを作成する必要はありません。
-
-MFC で使用 Windows フォームを示すサンプルアプリケーションについては、「 [mfc と Windows フォームの統合](https://download.cnet.com/MFC-and-WinForms-Integration/3000-2383_4-75453644.html)」を参照してください。
 
 ### <a name="to-create-the-mfc-host-application"></a>MFC ホスト アプリケーションを作成するには
 

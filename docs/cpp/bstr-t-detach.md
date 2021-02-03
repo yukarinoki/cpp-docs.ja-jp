@@ -1,20 +1,19 @@
 ---
 description: '詳細情報: _bstr_t::D etach'
 title: _bstr_t::Detach
-ms.date: 11/04/2016
+ms.date: 02/02/2021
 f1_keywords:
 - _bstr_t::Detach
 helpviewer_keywords:
 - Detach method [C++]
-ms.assetid: cc8284bd-f68b-4fff-b2e6-ce8354dabf8b
-ms.openlocfilehash: 0baa246e8a849a9cfb747a4a7e224ecbec328d0a
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: bc269f46d3a393485e95a62df23692c60070d75a
+ms.sourcegitcommit: c20734f18d3d49bb38b1628c68b53b54b3eeeb03
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97229328"
+ms.lasthandoff: 02/03/2021
+ms.locfileid: "99522847"
 ---
-# <a name="_bstr_tdetach"></a>_bstr_t::Detach
+# `_bstr_t::Detach`
 
 **Microsoft 固有の仕様**
 
@@ -22,20 +21,20 @@ ms.locfileid: "97229328"
 
 ## <a name="syntax"></a>構文
 
-```
+```cpp
 BSTR Detach( ) throw;
 ```
 
 ## <a name="return-value"></a>戻り値
 
-`BSTR` によってラップされる `_bstr_t`。
+によってカプセル化されたを返し `BSTR` `_bstr_t` ます。
 
 ## <a name="example"></a>例
 
-**Detach** の使用例については、「 [_Bstr_t:: Assign](../cpp/bstr-t-assign.md) 」を参照してください。
+[`_bstr_t::Assign`](../cpp/bstr-t-assign.md)の使用例については、「」を参照してください **`Detach`** 。
 
 **Microsoft 固有の仕様はここまで**
 
 ## <a name="see-also"></a>関連項目
 
-[_bstr_t クラス](../cpp/bstr-t-class.md)
+[`_bstr_t` 講義](../cpp/bstr-t-class.md)

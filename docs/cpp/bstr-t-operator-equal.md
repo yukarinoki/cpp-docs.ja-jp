@@ -1,21 +1,20 @@
 ---
 description: '詳細については、「_bstr_t:: operator =」を参照してください。'
 title: _bstr_t::operator =
-ms.date: 11/04/2016
+ms.date: 02/02/2021
 f1_keywords:
 - _bstr_t::operator=
 helpviewer_keywords:
 - operator = [C++], bstr
 - operator= [C++], bstr
-ms.assetid: fb31bb1b-ce29-4388-b5fd-8dac830cf18a
-ms.openlocfilehash: 78447048a45567df603acf3af0bc51cefbdb187d
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: d021ba013190ddee262b8644e16876401be846dc
+ms.sourcegitcommit: c20734f18d3d49bb38b1628c68b53b54b3eeeb03
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97308784"
+ms.lasthandoff: 02/03/2021
+ms.locfileid: "99522717"
 ---
-# <a name="_bstr_toperator-"></a>_bstr_t::operator =
+# `_bstr_t::operator =`
 
 **Microsoft 固有の仕様**
 
@@ -23,33 +22,33 @@ ms.locfileid: "97308784"
 
 ## <a name="syntax"></a>構文
 
-```
+```cpp
 _bstr_t& operator=(const _bstr_t& s1) throw ( );
 _bstr_t& operator=(const char* s2);
 _bstr_t& operator=(const wchar_t* s3);
 _bstr_t& operator=(const _variant_t& var);
 ```
 
-#### <a name="parameters"></a>パラメーター
+### <a name="parameters"></a>パラメーター
 
-*s1*<br/>
+*`s1`*\
 既存の `_bstr_t` オブジェクトに割り当てられる `_bstr_t` オブジェクト。
 
-*s2*<br/>
+*`s2`*\
 既存の `_bstr_t` オブジェクトに割り当てられるマルチバイト文字列。
 
-*s3*<br/>
+*`s3`*\
 既存の `_bstr_t` オブジェクトに割り当てられる Unicode 文字列。
 
-*var*<br/>
+*`var`*\
 既存の `_variant_t` オブジェクトに割り当てられる `_bstr_t` オブジェクト。
 
 **Microsoft 固有の仕様はここまで**
 
 ## <a name="example"></a>例
 
-**演算子 =** の使用例については、「 [_Bstr_t:: Assign](../cpp/bstr-t-assign.md) 」を参照してください。
+[`_bstr_t::Assign`](../cpp/bstr-t-assign.md)の使用例については、「」を参照してください **`operator=`** 。
 
 ## <a name="see-also"></a>関連項目
 
-[_bstr_t クラス](../cpp/bstr-t-class.md)
+[`_bstr_t` 講義](../cpp/bstr-t-class.md)

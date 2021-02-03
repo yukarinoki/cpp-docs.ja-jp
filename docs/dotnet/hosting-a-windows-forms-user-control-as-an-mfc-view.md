@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Windows Forms controls [C++], hosting as an MFC view
 - hosting Windows Forms control [C++]
 ms.assetid: 43c02ab4-1366-434c-a980-0b19326d6ea0
-ms.openlocfilehash: 2db44bd4d85150b0a2b8fc1f2206af765770e9ed
-ms.sourcegitcommit: 3987d9c39f5a5b4824303a48a6215984ce8949e8
+ms.openlocfilehash: b9f0eba7f052bee6c2cba89b7a5c22bcb1604cc3
+ms.sourcegitcommit: c20734f18d3d49bb38b1628c68b53b54b3eeeb03
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/02/2021
-ms.locfileid: "99478137"
+ms.lasthandoff: 02/03/2021
+ms.locfileid: "99522795"
 ---
 # <a name="hosting-a-windows-forms-user-control-as-an-mfc-view"></a>MFC ビューとしての Windows フォーム ユーザー コントロールのホスト
 
@@ -21,8 +21,6 @@ MFC では、CWinFormsView クラスを使用して、MFC ビューで Windows �
 最終的な結果は、 [CFormView クラス](../mfc/reference/cformview-class.md)によって使用されるモデルに似ています。 これにより、Windows フォームデザイナーとランタイムを利用して、豊富なフォームベースのビューを作成できます。
 
 MFC Windows フォームビューは ActiveX コントロールであるため、MFC ビューと同じではありません `hwnd` 。 また、 [CView](../mfc/reference/cview-class.md) ビューへのポインターとして渡すこともできません。 一般に、.NET Framework メソッドを使用して Windows フォームビューを操作し、Win32 に依存しないようにします。
-
-MFC で使用 Windows フォームを示すサンプルアプリケーションについては、「 [mfc と Windows フォームの統合](https://download.cnet.com/MFC-and-WinForms-Integration/3000-2383_4-75453644.html)」を参照してください。
 
 ## <a name="in-this-section"></a>このセクションの内容
 

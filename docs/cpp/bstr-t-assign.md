@@ -1,20 +1,19 @@
 ---
 description: '詳細については、「_bstr_t:: Assign」を参照してください。'
 title: _bstr_t::Assign
-ms.date: 11/04/2016
+ms.date: 02/02/2021
 f1_keywords:
 - _bstr_t::Assign
 helpviewer_keywords:
 - Assign method [C++]
-ms.assetid: 2e209bbe-77ca-4598-86d5-6c2ea213f43c
-ms.openlocfilehash: b2081aaf71640a778a479a32f3f1816ca79db147
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: 166b972d4c3de932fee187f33a9f96a578496e35
+ms.sourcegitcommit: c20734f18d3d49bb38b1628c68b53b54b3eeeb03
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97229445"
+ms.lasthandoff: 02/03/2021
+ms.locfileid: "99522899"
 ---
-# <a name="_bstr_tassign"></a>_bstr_t::Assign
+# <a name="_bstr_tassign"></a>_`bstr_t::Assign`
 
 **Microsoft 固有の仕様**
 
@@ -28,14 +27,14 @@ void Assign(
 );
 ```
 
-#### <a name="parameters"></a>パラメーター
+### <a name="parameters"></a>パラメーター
 
-*s*<br/>
+*`s`*\
 `BSTR` でラップされた `BSTR` にコピーする `_bstr_t`。
 
 ## <a name="remarks"></a>解説
 
-**Assign** はバイナリコピーを行います。これは、コンテンツに関係なく、の長さ全体がコピーされることを意味し `BSTR` ます。
+**`Assign`** の長さ全体のバイナリコピーを行い `BSTR` ます。
 
 ## <a name="example"></a>例
 
@@ -114,4 +113,4 @@ bstrWrapper2 = some text
 
 ## <a name="see-also"></a>関連項目
 
-[_bstr_t クラス](../cpp/bstr-t-class.md)
+[`_bstr_t` 講義](../cpp/bstr-t-class.md)

@@ -1,20 +1,19 @@
 ---
 description: '詳細については、「_bstr_t:: GetBSTR」を参照してください。'
 title: _bstr_t::GetBSTR
-ms.date: 11/04/2016
+ms.date: 02/02/2021
 f1_keywords:
 - _bstr_t::GetBSTR
 helpviewer_keywords:
 - GetBSTR method [C++]
-ms.assetid: 0c62ff16-4433-4183-a03c-d5a0a9b731ef
-ms.openlocfilehash: ced985bb5123d86ff119279fc49a2b4d181ba8b3
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: b48dd082b21c0f3416c8b58b8ae2669c74d9d227
+ms.sourcegitcommit: c20734f18d3d49bb38b1628c68b53b54b3eeeb03
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97229302"
+ms.lasthandoff: 02/03/2021
+ms.locfileid: "99522756"
 ---
-# <a name="_bstr_tgetbstr"></a>_bstr_t::GetBSTR
+# `_bstr_t::GetBSTR`
 
 **Microsoft 固有の仕様**
 
@@ -22,7 +21,7 @@ ms.locfileid: "97229302"
 
 ## <a name="syntax"></a>構文
 
-```
+```cpp
 BSTR& GetBSTR( );
 ```
 
@@ -32,14 +31,14 @@ BSTR& GetBSTR( );
 
 ## <a name="remarks"></a>解説
 
-**Getbstr** `_bstr_t` は、を共有するすべてのオブジェクトに影響 `BSTR` します。 複数 `_bstr_t` ので、 `BSTR` コピーコンストラクターと **演算子 =** を使用してを共有できます。
+**`GetBSTR`**`_bstr_t`を共有するすべてのオブジェクトに影響 `BSTR` します。 複数ので `_bstr_t` 、 `BSTR` コピーコンストラクターおよびを使用してを共有でき `operator=` ます。
 
 ## <a name="example"></a>例
 
-**Getbstr** の使用例については、「 [_Bstr_t:: Assign](../cpp/bstr-t-assign.md) 」を参照してください。
+[`_bstr_t::Assign`](../cpp/bstr-t-assign.md)の使用例については、「」を参照してください **`GetBSTR`** 。
 
 **Microsoft 固有の仕様はここまで**
 
 ## <a name="see-also"></a>関連項目
 
-[_bstr_t クラス](../cpp/bstr-t-class.md)
+[`_bstr_t` 講義](../cpp/bstr-t-class.md)

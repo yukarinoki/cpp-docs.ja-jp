@@ -1,20 +1,19 @@
 ---
 description: '詳細については、「_bstr_t:: GetAddress」を参照してください。'
 title: _bstr_t::GetAddress
-ms.date: 11/04/2016
+ms.date: 02/02/2021
 f1_keywords:
 - _bstr_t::GetAddress
 helpviewer_keywords:
 - GetAddress method [C++]
-ms.assetid: 09bc9180-867e-4ee5-b22a-8339dc663142
-ms.openlocfilehash: afb877a6f1b4cfcfb6fe08b36168af745d733b85
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: 23013a6666b8e268a6437532b69050933ffe6b42
+ms.sourcegitcommit: c20734f18d3d49bb38b1628c68b53b54b3eeeb03
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97229315"
+ms.lasthandoff: 02/03/2021
+ms.locfileid: "99522834"
 ---
-# <a name="_bstr_tgetaddress"></a>_bstr_t::GetAddress
+# `_bstr_t::GetAddress`
 
 **Microsoft 固有の仕様**
 
@@ -22,7 +21,7 @@ ms.locfileid: "97229315"
 
 ## <a name="syntax"></a>構文
 
-```
+```cpp
 BSTR* GetAddress( );
 ```
 
@@ -32,14 +31,14 @@ BSTR* GetAddress( );
 
 ## <a name="remarks"></a>解説
 
-**Getaddress** `_bstr_t` は、を共有するすべてのオブジェクトに影響 `BSTR` します。 複数 `_bstr_t` ので、 `BSTR` コピーコンストラクターと **演算子 =** を使用してを共有できます。
+**`GetAddress`**`_bstr_t`を共有するすべてのオブジェクトに影響 `BSTR` します。 複数ので `_bstr_t` 、 `BSTR` コピーコンストラクターおよびを使用してを共有でき **`operator=`** ます。
 
 ## <a name="example"></a>例
 
-**Getaddress** の使用例については、「 [_Bstr_t:: Assign](../cpp/bstr-t-assign.md) 」を参照してください。
+[`_bstr_t::Assign`](../cpp/bstr-t-assign.md)の使用例については、「」を参照してください **`GetAddress`** 。
 
 **Microsoft 固有の仕様はここまで**
 
 ## <a name="see-also"></a>関連項目
 
-[_bstr_t クラス](../cpp/bstr-t-class.md)
+[`_bstr_t` 講義](../cpp/bstr-t-class.md)

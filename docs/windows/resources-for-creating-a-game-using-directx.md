@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Windows applications [C++], games
 - DirectX [C++]
 ms.assetid: 863090ed-6091-45db-aabb-7fd02f76c1df
-ms.openlocfilehash: eb0a1424969f732fb3736387a53ea05dd59427f4
-ms.sourcegitcommit: 3987d9c39f5a5b4824303a48a6215984ce8949e8
+ms.openlocfilehash: 1348a163646e28309c26edfdfe53cf35652bfdb9
+ms.sourcegitcommit: c20734f18d3d49bb38b1628c68b53b54b3eeeb03
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/02/2021
-ms.locfileid: "99478098"
+ms.lasthandoff: 02/03/2021
+ms.locfileid: "99522769"
 ---
 # <a name="resources-for-creating-a-c-game-using-directx"></a>DirectX を使用して C++ ゲームを作成するためのリソース
 
@@ -24,7 +24,7 @@ Visual C++ は、Visual Studio のすべてのエディションに含まれて�
 
 Windows 8.1 以降では、DirectX SDK が Windows SDK に含まれています。 他にダウンロードは必要ありません。 詳細について [は、DIRECTX SDK の場所](/windows/win32/directx-sdk--august-2009-)を参照してください。
 
-Windows 7、Windows Vista、または Windows XP 向けの DirectX アプリを作成するには、スタンドアロン [DIRECTX SDK](https://download.cnet.com/DirectX-Software-Development-Kit-June-2010/3000-2069_4-75453831.html)をダウンロードします。
+Windows 7、Windows Vista、または Windows XP 向けの DirectX アプリを作成するには、スタンドアロンの [DIRECTX SDK](https://web.archive.org/web/20161026183606/https://www.microsoft.com/en-us/download/details.aspx?displaylang=en&id=6812) (アーカイブリンク) をダウンロードします。
 
 Directx の[グラフィックスとゲーム](/windows/win32/directx)には、directx プログラミングを始める際に役立つ情報とサンプルが含まれています。
 

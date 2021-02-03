@@ -1,21 +1,20 @@
 ---
 description: '詳細については、「_bstr_t:: copy」を参照してください。'
 title: _bstr_t::copy
-ms.date: 11/04/2016
+ms.date: 02/02/2021
 f1_keywords:
 - _bstr_t::copy
 helpviewer_keywords:
 - Copy method [C++]
 - BSTR object [C++], copy
-ms.assetid: 00ba7311-e82e-4a79-8106-5329fa2f869a
-ms.openlocfilehash: 29ca965730dbcc22b4b725661ece68442d39aeba
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: 98726e0c3100851d1496e532310ece2209d71ae0
+ms.sourcegitcommit: c20734f18d3d49bb38b1628c68b53b54b3eeeb03
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97229341"
+ms.lasthandoff: 02/03/2021
+ms.locfileid: "99522860"
 ---
-# <a name="_bstr_tcopy"></a>_bstr_t::copy
+# `_bstr_t::copy`
 
 **Microsoft 固有の仕様**
 
@@ -23,18 +22,18 @@ ms.locfileid: "97229341"
 
 ## <a name="syntax"></a>構文
 
-```
+```cpp
 BSTR copy( bool fCopy = true ) const;
 ```
 
-#### <a name="parameters"></a>パラメーター
+### <a name="parameters"></a>パラメーター
 
-*fCopy*<br/>
-の場合、 **`true`** **copy** は含まれているのコピーを返し `BSTR` ます。それ以外の場合は、実際の BSTR **を** 返します。
+*`fCopy`*\
+の場合、 **`true`** **`copy`** 格納されているのコピーを返し `BSTR` ます。それ以外の場合 **`copy`** は、実際のを返し `BSTR` ます。
 
 ## <a name="remarks"></a>解説
 
-カプセル化された `BSTR` オブジェクトの新しく割り当てられたコピーを返します。
+パラメーターに応じて、カプセル化されたオブジェクトの新しく割り当てられたコピー、 `BSTR` またはカプセル化されたオブジェクト自体を返します。
 
 ## <a name="example"></a>例
 
@@ -48,4 +47,4 @@ STDMETHODIMP CAlertMsg::get_ConnectionStr(BSTR *pVal){ //  m_bsConStr is _bstr_t
 
 ## <a name="see-also"></a>関連項目
 
-[_bstr_t クラス](../cpp/bstr-t-class.md)
+[`_bstr_t` 講義](../cpp/bstr-t-class.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - MFC [C++], Windows Forms support
 - Windows Forms [C++], compared to MFC
 ms.assetid: f3bfcf45-cfd4-45a4-8cde-5f4dbb18ee51
-ms.openlocfilehash: abb41a64a894eed682c26b2460259fc6bbc43b56
-ms.sourcegitcommit: 3987d9c39f5a5b4824303a48a6215984ce8949e8
+ms.openlocfilehash: 75e88d18b34894f016d499b9fde309f6a26df716
+ms.sourcegitcommit: c20734f18d3d49bb38b1628c68b53b54b3eeeb03
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/02/2021
-ms.locfileid: "99478020"
+ms.lasthandoff: 02/03/2021
+ms.locfileid: "99522782"
 ---
 # <a name="windows-formsmfc-programming-differences"></a>Windows フォームと MFC のプログラミング上の違い
 
@@ -22,8 +22,6 @@ Windows フォームは、.NET Framework で Microsoft Windows アプリケー�
 ただし、MFC を使い慣れている開発者は、Windows フォームでまだ明示的にサポートされていない種類のアプリケーションを作成することに慣れている場合があります。 Windows フォーム アプリケーションは、MFC ダイアログ アプリケーションとほぼ同等です。 しかし、Windows フォーム アプリケーションには、OLE ドキュメント サーバー/コンテナー、ActiveX ドキュメントなどの他の種類の MFC アプリケーションを直接サポートするインフラストラクチャが用意されていません。また、シングル ドキュメント インターフェイス (SDI)、マルチ ドキュメント インターフェイス (MDI)、およびマルチ トップレベル インターフェイス (MTI) のドキュメント/ビューもサポートしません。 プログラマは、独自のロジックを記述してこれらのアプリケーションを作成できます。
 
 Windows フォームアプリケーションの詳細については、「 [Windows フォームの概要](/dotnet/framework/winforms/windows-forms-overview)」を参照してください。
-
-MFC で使用 Windows フォームを示すサンプルアプリケーションについては、「 [mfc と Windows フォームの統合](https://download.cnet.com/MFC-and-WinForms-Integration/3000-2383_4-75453644.html)」を参照してください。
 
 Windows フォームには、次の MFC ビュー/ドキュメント、およびコマンド ルーティングに相当する機能がありません。
 
