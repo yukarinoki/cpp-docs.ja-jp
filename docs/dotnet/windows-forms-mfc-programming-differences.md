@@ -6,12 +6,12 @@ helpviewer_keywords:
 - MFC [C++], Windows Forms support
 - Windows Forms [C++], compared to MFC
 ms.assetid: f3bfcf45-cfd4-45a4-8cde-5f4dbb18ee51
-ms.openlocfilehash: a48b4f54e44145abab33990e20ca76ed654659e0
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: abb41a64a894eed682c26b2460259fc6bbc43b56
+ms.sourcegitcommit: 3987d9c39f5a5b4824303a48a6215984ce8949e8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97283941"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99478020"
 ---
 # <a name="windows-formsmfc-programming-differences"></a>Windows フォームと MFC のプログラミング上の違い
 
@@ -23,7 +23,7 @@ Windows フォームは、.NET Framework で Microsoft Windows アプリケー�
 
 Windows フォームアプリケーションの詳細については、「 [Windows フォームの概要](/dotnet/framework/winforms/windows-forms-overview)」を参照してください。
 
-MFC で使用 Windows フォームを示すサンプルアプリケーションについては、「 [mfc と Windows フォームの統合](https://www.microsoft.com/download/details.aspx?id=2113)」を参照してください。
+MFC で使用 Windows フォームを示すサンプルアプリケーションについては、「 [mfc と Windows フォームの統合](https://download.cnet.com/MFC-and-WinForms-Integration/3000-2383_4-75453644.html)」を参照してください。
 
 Windows フォームには、次の MFC ビュー/ドキュメント、およびコマンド ルーティングに相当する機能がありません。
 
@@ -35,7 +35,7 @@ Windows フォームには、次の MFC ビュー/ドキュメント、および
 
    MFC では、ドキュメント テンプレートを使用して、MDI モード、SDI モード、または MTI モードのフレーム ウィンドウに含まれているビューを、プログラマが開いたドキュメントに関連付けます。 Windows フォームには、ドキュメント テンプレートに相当する機能がありません。
 
-- Documents
+- ドキュメント
 
    MFC はドキュメント ファイルの種類を登録し、シェルからドキュメントを開くときにドキュメントの種類を処理します。 Windows フォームはドキュメントをサポートしません。
 

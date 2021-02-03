@@ -10,12 +10,12 @@ helpviewer_keywords:
 - cpuid instruction
 - cpuid intrinsic
 ms.assetid: f8c344d3-91bf-405f-8622-cb0e337a6bdc
-ms.openlocfilehash: cd91207097993ec037e9b79eb27257272f06ee97
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: 1f3030cc3792911cec8e7a7ef1b17dab0a9a3d6b
+ms.sourcegitcommit: 3987d9c39f5a5b4824303a48a6215984ce8949e8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97337123"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99478135"
 ---
 # <a name="__cpuid-__cpuidex"></a>__cpuid、__cpuidex
 
@@ -49,7 +49,7 @@ void __cpuidex(
 *subfunction_id*\
 から取得する情報を指定する追加のコード。 ECX で渡されます。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 |Intrinsic|アーキテクチャ|
 |---------------|------------------|
@@ -64,7 +64,7 @@ void __cpuidex(
 
 `__cpuid` の組み込みは、`cpuid` 命令を呼び出す前に ECX レジスタをクリアします。 組み込みは、 `__cpuidex` 命令を生成する前に *subfunction_id* するために、ECX レジスタの値を設定し `cpuid` ます。 これにより、プロセッサに関する追加情報を収集できます。
 
-使用する特定のパラメーターと、これらの組み込みの Intel プロセッサによって返される値の詳細については、「 `cpuid` [intel 64 および IA-32 アーキテクチャのソフトウェア開発者](https://go.microsoft.com/fwlink/p/?LinkID=510021) 向けのマニュアル」の手順に関するドキュメントを [参照し](https://go.microsoft.com/fwlink/p/?LinkID=506627)てください。 Intel のドキュメントでは、EAX および ECX で渡される *function_id* と *subfunction_id* のパラメーターに "リーフ" と "subleaf" という用語を使用しています。
+使用する特定のパラメーターと、これらの組み込みの Intel プロセッサによって返される値の詳細については、「 `cpuid` [intel 64 および IA-32 アーキテクチャのソフトウェア開発者](https://go.microsoft.com/fwlink/p/?LinkID=510021) 向けのマニュアル」の手順に関するドキュメントを [参照し](https://software.intel.com/content/www/us/en/develop/download/intel-architecture-instruction-set-extensions-programming-reference.html)てください。 Intel のドキュメントでは、EAX および ECX で渡される *function_id* と *subfunction_id* のパラメーターに "リーフ" と "subleaf" という用語を使用しています。
 
 使用する特定のパラメーターと、AMD プロセッサでこれらの組み込み関数によって返される値の詳細については、「 `cpuid` AMD64 アーキテクチャプログラマーの手動ボリューム 3: General-Purpose とシステムの手順」および「特定のプロセッサファミリのリビジョンガイド」の命令に関するドキュメントを参照してください。 これらのドキュメントおよびその他の情報へのリンクについては、AMD [開発者ガイド、マニュアル & ISA documents](https://go.microsoft.com/fwlink/p/?LinkId=510023) 」を参照してください。 AMD のドキュメントでは、EAX および ECX で渡される *function_id* と *subfunction_id* のパラメーターに "関数番号" と "subfunction number" という用語を使用しています。
 

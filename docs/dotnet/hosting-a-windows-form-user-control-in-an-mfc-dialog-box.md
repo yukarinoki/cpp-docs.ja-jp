@@ -7,18 +7,18 @@ helpviewer_keywords:
 - hosting Windows Forms control [C++]
 - Windows Forms [C++], MFC support
 ms.assetid: 9f66ee52-b7cb-4ffd-8306-392a5da990d8
-ms.openlocfilehash: 3ccfbb32132f5732c244473c652bb6b2df175efa
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: 36e4677622e4c1efe1eebcb8cb9f75d03194de78
+ms.sourcegitcommit: 3987d9c39f5a5b4824303a48a6215984ce8949e8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97335450"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99478145"
 ---
 # <a name="hosting-a-windows-form-user-control-in-an-mfc-dialog-box"></a>MFC ダイアログ ボックスにおける Windows フォーム ユーザー コントロールのホスト
 
 MFC では、特殊な種類の ActiveX コントロールとして Windows フォームコントロールをホストし、ActiveX インターフェイス、およびクラスのプロパティとメソッドを使用してコントロールと通信し <xref:System.Windows.Forms.Control> ます。 コントロールを操作するには .NET Framework のプロパティとメソッドを使用することをお勧めします。
 
-MFC で使用 Windows フォームを示すサンプルアプリケーションについては、「 [mfc と Windows フォームの統合](https://www.microsoft.com/download/details.aspx?id=2113)」を参照してください。
+MFC で使用 Windows フォームを示すサンプルアプリケーションについては、「 [mfc と Windows フォームの統合](https://download.cnet.com/MFC-and-WinForms-Integration/3000-2383_4-75453644.html)」を参照してください。
 
 > [!NOTE]
 > 現在のリリースでは、 `CDialogBar` オブジェクトが Windows フォームコントロールをホストすることはできません。
