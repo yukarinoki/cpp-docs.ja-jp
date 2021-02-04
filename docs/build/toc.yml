@@ -1086,46 +1086,10 @@
           items:
             - name: リンカーによる DLL の遅延読み込み
               href: ../build/reference/linker-support-for-delay-loaded-dlls.md
-            - name: 遅延読み込みする DLL の指定
-              href: ../build/reference/specifying-dlls-to-delay-load.md
-            - name: 遅延読み込みした DLL の明示的なアンロード
-              href: ../build/reference/explicitly-unloading-a-delay-loaded-dll.md
-            - name: 遅延読み込みしたインポートのバインド
-              href: ../build/reference/binding-imports.md
-            - name: 遅延読み込みした DLL に対するすべてのインポートの読み込み
-              href: ../build/reference/loading-all-imports-for-a-delay-loaded-dll.md
             - name: エラー処理と通知
-              expanded: false
-              items:
-                - name: エラー処理と通知
-                  href: ../build/reference/error-handling-and-notification.md
-                - name: 通知フック
-                  href: ../build/reference/notification-hooks.md
-                - name: エラー フック
-                  href: ../build/reference/failure-hooks.md
-                - name: DLL 読み込み例外コード (C/C++)
-                  href: ../build/reference/exceptions-c-cpp.md
-            - name: 遅延読み込みしたインポートのダンプ
-              href: ../build/reference/dumping-delay-loaded-imports.md
-            - name: DLL の遅延読み込みの制約
-              href: ../build/reference/constraints-of-delay-loading-dlls.md
+              href: ../build/reference/error-handling-and-notification.md
             - name: 遅延読み込みヘルパー関数について
-              expanded: false
-              items:
-                - name: ヘルパー関数について
-                  href: ../build/reference/understanding-the-helper-function.md
-                - name: Visual C++ 6.0 以降の DLL 遅延読み込みヘルパー関数の変更点
-                  href: ../build/reference/changes-in-the-dll-delayed-loading-helper-function-since-visual-cpp-6-0.md
-                - name: 呼び出し規則、パラメーター、および戻り値の型
-                  href: ../build/reference/calling-conventions-parameters-and-return-type.md
-                - name: 構造体と定数の定義
-                  href: ../build/reference/structure-and-constant-definitions.md
-                - name: 必要な値の計算
-                  href: ../build/reference/calculating-necessary-values.md
-                - name: 遅延読み込みした DLL のアンロード
-                  href: ../build/reference/unloading-a-delay-loaded-dll.md
-            - name: 独自のヘルパー関数の開発
-              href: ../build/reference/developing-your-own-helper-function.md
+              href: ../build/reference/understanding-the-helper-function.md
     - name: 追加の MSVC ビルド ツール
       expanded: false
       items:
