@@ -88,15 +88,14 @@ helpviewer_keywords:
 - std::multimap [C++], swap
 - std::multimap [C++], upper_bound
 - std::multimap [C++], value_comp
-ms.assetid: 8796ae05-37c4-475a-9e61-75fde9d4a463
-ms.openlocfilehash: 1265e971a2d5e235f2fafd9137e7bd019d6ac4f0
-ms.sourcegitcommit: 3987d9c39f5a5b4824303a48a6215984ce8949e8
+ms.openlocfilehash: 7c5557eeb30e4fa0d1365cf83de460aae28771fc
+ms.sourcegitcommit: 651f817a6c8e92211168d34f0542350559f436d5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/02/2021
-ms.locfileid: "99478111"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99823333"
 ---
-# <a name="multimap-class"></a>multimap クラス
+# <a name="multimap-class"></a>`multimap` クラス
 
 C++ 標準ライブラリの multimap クラスは、各要素がデータ値と並べ替えキーのペアであるコレクションのデータを格納および取得するために使用されます。 キーの値は一意である必要はなく、データを自動的に並べ替えるために使用されます。 multimap の要素の値 (関連するキー値ではありません) は、直接変更できます。 この場合、変更前の要素に関連付けられていたキー値を削除し、新しい要素に関連付けられる新しいキー値を挿入する必要があります。
 
@@ -211,11 +210,11 @@ C++ 14 では、型パラメーターを使用せずに `std::less<>` 述語ま�
 |[upper_bound](#upper_bound)|指定したキーよりも大きいキーを持つ、`multimap` 内の最初の要素を指す反復子を返します。|
 |[value_comp](#value_comp)|このメンバー関数は、キー値の比較によって `multimap` の要素の順序を決定する関数オブジェクトを返します。|
 
-|演算子|説明|
+|演算子|Description|
 |-|-|
 |[operator =](#op_eq)|別の `multimap` のコピーで `multimap` の要素を置き換えます。|
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:**\<map>
 
