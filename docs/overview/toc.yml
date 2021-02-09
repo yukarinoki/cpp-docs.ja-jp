@@ -7,6 +7,8 @@
       href: ../overview/overview-of-cpp-development.md
     - name: Visual Studio での C++ の新機能
       href: ../overview/what-s-new-for-visual-cpp-in-visual-studio.md
+    - name: Microsoft C++ の新機能のドキュメント
+      href: ../overview/whats-new-cpp-docs.md
     - name: Visual Studio の C++ 準拠の強化
       href: ../overview/cpp-conformance-improvements.md
     - name: Microsoft C++ 言語の準拠
