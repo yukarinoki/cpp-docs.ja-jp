@@ -1,16 +1,17 @@
 ---
 description: 詳細については、詳細プロパティページを参照してください。
 title: '[詳細設定] プロパティページ (プロジェクト)'
-ms.date: 08/10/2020
+ms.date: 02/05/2021
 f1_keywords:
 - VC.Project.VCConfiguration.VCToolsVersion
+- VC.Project.VCConfiguration.LLVMToolsVersion
 ms.description: Use the Advanced property page in Visual Studio 2019 to set various properties for C++ projects.
-ms.openlocfilehash: 916c1f341d148a0f6b426ddf3c31e0d20c59a29c
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: 420dd34088f47e8fa7bfe56fd529769b90401355
+ms.sourcegitcommit: 77235bff6a7b2621c501938e30d93cb15f5733cb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97187313"
+ms.lasthandoff: 02/09/2021
+ms.locfileid: "100006033"
 ---
 # <a name="advanced-property-page"></a>[詳細設定] プロパティページ
 
@@ -89,6 +90,10 @@ ms.locfileid: "97187313"
 - **MSVC ツールセットのバージョン**
 
    プロジェクトのビルドに使用される MSVC ツールセットの完全バージョンを指定します。 ツールセットには、さまざまな更新プログラムとプレビュー版がインストールされている場合があります。 ここでは、どれを使用するかを指定できます。
+
+- **LLVM ツールセットのバージョン**
+
+   プロジェクトのビルドに使用される LLVM ツールセットの完全バージョンを指定します。 このプロパティは、Visual Studio 2019 バージョン16.9 以降では、プラットフォームツールセットとして **Llvm (clang-cl)** が選択されている場合に使用できます。 詳細については、「 [カスタム LLVM ツールセットのバージョンを設定する](..\clang-support-msbuild.md#custom_llvm_toolset)」を参照してください。
 
 ## <a name="ccli-properties"></a>C++/CLI のプロパティ
 
