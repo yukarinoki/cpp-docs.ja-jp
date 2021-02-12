@@ -5,12 +5,12 @@ ms.date: 09/24/2019
 ms.technology: cpp-ide
 author: corob-msft
 ms.author: corob
-ms.openlocfilehash: 49ddc43757e1448e6bbd378a216eee9bcc0e84b2
-ms.sourcegitcommit: 3987d9c39f5a5b4824303a48a6215984ce8949e8
+ms.openlocfilehash: 43c965c3eccc352e740e5f5378257b344d947edb
+ms.sourcegitcommit: c20734f18d3d49bb38b1628c68b53b54b3eeeb03
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/02/2021
-ms.locfileid: "99478072"
+ms.lasthandoff: 02/03/2021
+ms.locfileid: "99522366"
 ---
 # <a name="how-to-report-a-problem-with-the-microsoft-c-toolset-or-documentation"></a>Microsoft C++ ツールセットまたはドキュメントの問題を報告する方法
 
@@ -113,7 +113,7 @@ cl : Command line error D8003 : missing source filename
 
 - **他のコンパイラで確認されている** (関連する場合)。 移植可能な C++ コードに関係のある再現手順は、可能であれば、他のコンパイラで動作を確認する必要があります。 C++ 標準では、プログラムの正確性が最終的に判断され、完全なコンパイラはありません。 ただし、Clang と GCC が診断なしでコードを受け入れ、MSVC が受け入れない場合は、お使いのコンパイラのバグが見つかった可能性があります。 (その他の可能性として、UNIX と Windows の動作の違いや、C++ の標準実装のレベルの違いなどがあります)。すべてのコンパイラでコードが拒否される場合は、コードが間違っている可能性があります。 さまざまなエラー メッセージを見ることで、自分で問題を診断できる場合があります。
 
-   コードをテストするオンライン コンパイラのリストは、ISO C++ Web サイトの[オンライン C++ コンパイラ](https://isocpp.org/blog/2013/01/online-c-compilers)、または GitHub の選別された[オンライン C++ コンパイラのリスト](https://arnemertz.github.io/online-compilers/)で見つけることができます。 具体的な例には、[Wandbox](https://wandbox.org/)、[Compiler Explorer](https://godbolt.org/)、[Coliru](http://coliru.stacked-crooked.com/) などがあります。
+   コードをテストするオンライン コンパイラのリストは、ISO C++ Web サイトの[オンライン C++ コンパイラ](https://isocpp.org/blog/2013/01/online-c-compilers)、または GitHub の選別された[オンライン C++ コンパイラのリスト](https://arnemertz.github.io/online-compilers/)で見つけることができます。 具体的な例には、[Wandbox](https://wandbox.org/) や [Compiler Explorer](https://godbolt.org/) などがあります。
 
    > [!NOTE]
    > オンライン コンパイラの Web サイトは Microsoft とは関係ありません。 オンライン コンパイラの Web サイトの多くは、個人のプロジェクトとして運営されています。 これを読んでいる時点で閲覧できなくなっているサイトもあるかもしれませんが、検索すれば、その他の使用できるサイトが見つかるはずです。

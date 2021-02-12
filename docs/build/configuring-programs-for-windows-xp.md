@@ -3,12 +3,12 @@ title: Windows XP 用プログラムの構成
 description: Visual Studio で C++ Windows XP ツールセットをインストールして使用する方法について説明します。
 ms.date: 03/16/2020
 ms.assetid: 1e4487b3-d815-4123-878b-5718b22f0fd5
-ms.openlocfilehash: 8e81e44cbc2194f16851cf73891cae9884ed0525
-ms.sourcegitcommit: 3987d9c39f5a5b4824303a48a6215984ce8949e8
+ms.openlocfilehash: 4ab4363e9c1d1223c8b1744a1a83b9aaa9784446
+ms.sourcegitcommit: c20734f18d3d49bb38b1628c68b53b54b3eeeb03
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/02/2021
-ms.locfileid: "99478085"
+ms.lasthandoff: 02/03/2021
+ms.locfileid: "99522535"
 ---
 # <a name="configuring-programs-for-windows-xp"></a>Windows XP 用プログラムの構成
 
@@ -84,4 +84,4 @@ Windows XP プラットフォーム ツールセットと共に、いくつか�
 
 - **HLSL の構築**
 
-   Windows XP ツールセットでは、既定では HLSL ソース コード ファイルはコンパイルされません。 HLSL ファイルをコンパイルするには、June 2010 DirectX SDK をダウンロードしてインストールし、プロジェクトの VC ディレクトリに含めるように設定します。 詳細については、[June 2010 DirectX SDK ダウンロード ページ](https://download.cnet.com/DirectX-Software-Development-Kit-June-2010/3000-2069_4-75453831.html)の「DirectX SDK はインクルード/ライブラリ パスを Visual Studio 2010 に登録しない」セクションを参照してください。
+   Windows XP ツールセットでは、既定では HLSL ソース コード ファイルはコンパイルされません。 HLSL ファイルをコンパイルするには、June 2010 DirectX SDK をダウンロードしてインストールし、プロジェクトの VC ディレクトリに含めるように設定します。 詳細については、[June 2010 DirectX SDK ダウンロード ページ](https://web.archive.org/web/20161026183606/https://www.microsoft.com/en-us/download/details.aspx?displaylang=en&id=6812) (アーカイブされたリンク) の「DirectX SDK はインクルード/ライブラリ パスを Visual Studio 2010 に登録しない」セクションを参照してください。
