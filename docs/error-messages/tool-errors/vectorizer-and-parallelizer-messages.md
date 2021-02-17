@@ -1,24 +1,23 @@
 ---
 description: 詳細については、「ベクター化 and 並行化 messages」を参照してください。
 title: ベクター化と並列化のメッセージ
-ms.date: 04/17/2019
+ms.date: 02/16/2021
 f1_keywords:
 - C5011
 - C5002
 - C5021
 - C5001
 - C5012
-ms.assetid: d8f4844a-f414-42ab-b9a5-925a5da9d365
-ms.openlocfilehash: 54465331b3301c8f792763b9d7d1e29b8d62b1a0
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: 3e2d458d177b8a7032276d29940a7ff2dac83b36
+ms.sourcegitcommit: e99db7c3b5f25ece0e152165066c926751a7c2ed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97177134"
+ms.lasthandoff: 02/17/2021
+ms.locfileid: "100643561"
 ---
 # <a name="vectorizer-and-parallelizer-messages"></a>ベクター化と並列化のメッセージ
 
-Microsoft C++ コンパイラオプションの [/Qpar-report](../../build/reference/qpar-report-auto-parallelizer-reporting-level.md) と [/Qvec-report](../../build/reference/qvec-report-auto-vectorizer-reporting-level.md) を使用して、 [自動並列化と自動ベクター化](../../parallel/auto-parallelization-and-auto-vectorization.md) を設定し、そのアクティビティに関する理由コードと情報メッセージを出力することができます。 この記事では、理由コードとメッセージについて説明します。
+Microsoft C++ コンパイラオプションを使用して [`/Qpar-report`](../../build/reference/qpar-report-auto-parallelizer-reporting-level.md) 、 [`/Qvec-report`](../../build/reference/qvec-report-auto-vectorizer-reporting-level.md) [自動並列化と自動ベクター化](../../parallel/auto-parallelization-and-auto-vectorization.md) を設定し、そのアクティビティに関する理由コードと情報メッセージを出力することができます。 この記事では、理由コードとメッセージについて説明します。
 
 ## <a name="informational-messages"></a><a name="BKMK_InformationalMessages"></a> 情報メッセージ
 
@@ -26,13 +25,13 @@ Microsoft C++ コンパイラオプションの [/Qpar-report](../../build/refer
 
 理由コードの詳細については、この記事の次のパートを参照してください。
 
-|情報メッセージ|説明|
-|---------------------------|-----------------|
-|5001|`Loop vectorized.`|
-|5002|`Loop not vectorized due to reason '*description*'.`|
-|5011|`Loop parallelized.`|
-|5012|`Loop not parallelized due to reason '*description*'.`|
-|5021|`Unable to associate loop with pragma.`|
+| 情報メッセージ | 説明 |
+|--|--|
+| 5001 | ループがベクター化されました。 |
+| 5002 | ループは、理由 '*description*' によってベクター化されていません。 |
+| 5011 | ループが並列化されました。 |
+| 5012 | ループは、理由 '*description*' により並列化されません。 |
+| 5021 | ループをプラグマに関連付けることができません。 |
 
 次のセクションでは、並行化とベクター化の考えられる理由コードを示します。
 
@@ -40,13 +39,13 @@ Microsoft C++ コンパイラオプションの [/Qpar-report](../../build/refer
 
 5 *xx* の理由コードは、並行化とベクター化の両方に適用されます。
 
-|理由コード|説明|
-|-----------------|-----------------|
-|500|複数のケースを対象とする汎用メッセージ。たとえば、ループに複数の終了が含まれている場合や、ループヘッダーが誘導変数をインクリメントして終了しない場合などです。|
-|501|`Induction variable is not local; or upper bound is not loop-invariant.`|
-|502|`Induction variable is stepped in some manner other than a simple +1.`|
-|503|`Loop includes exception-handling or switch statements.`|
-|504|`Loop body may throw an exception that requires destruction of a C++ object.`|
+| 理由コード | 説明 |
+|--|--|
+| 500 | 複数のケースを対象とする汎用メッセージ。たとえば、ループに複数の終了が含まれている場合や、ループヘッダーが誘導変数をインクリメントして終了しない場合などです。 |
+| 501 | 誘導変数はローカルではありません。または上限がループに依存していません。 |
+| 502 | 誘導変数が単純な +1 以外の何らかの方法でステップ インされています。 |
+| 503 | ループ内に例外処理または switch ステートメントがあります。 |
+| 504 | ループ本体が C++ オブジェクトの破棄を必要とする例外をスローする場合があります。 |
 
 ```cpp
 void code_500(int *A)
@@ -203,19 +202,19 @@ void code_504(int *A) {
 
 10 *xx* の理由コードが並行化に適用されます。
 
-|理由コード|説明|
-|-----------------|-----------------|
-|1000|`The compiler detected a data dependency in the loop body.`|
-|1001|`The compiler detected a store to a scalar variable in the loop body, and that scalar has a use beyond the loop.`|
-|1002|`The compiler tried to parallelize a loop that has an inner loop that was already parallelized.`|
-|1003|`The loop body contains an intrinsic call that may read or write to memory.`|
-|1004|`There is a scalar reduction in the loop body. Scalar reduction can occur if the loop has been vectorized.`|
-|1005|`The no_parallel pragma was specified.`|
-|1006|`This function contains openmp. Resolve this by removing any openmp in this function.`|
-|1007|`The loop induction variable or the loop bounds are not signed 32-bit numbers (int or long). Resolve this by changing the type of the induction variable.`|
-|1008|`The compiler detected that this loop does not perform enough work to warrant auto-parallelization.`|
-|1009|`The compiler detected an attempt to parallelize a "do-while" loop. The auto-parallelizer only targets "for" loops.`|
-|1010|`The compiler detected that the loop is using "not-equals" (!=) for its condition.`|
+| 理由コード | 説明 |
+|--|--|
+| 1000 | コンパイル時にループ本体でデータ依存関係が検出されました。 |
+| 1001 | コンパイル時にループ本体でスカラー変数への格納が検出され、そのスカラーがループを超えて使用されています。 |
+| 1002 | コンパイル時、内側のループが並列化済みのループが並列化されようとしました。 |
+| 1003 | ループ本体にメモリに対して読み取りまたは書き込みを行う組み込みの呼び出しがあります。 |
+| 1004 | ループ本体にはスカラーが減少しています。 ループがベクター化されている場合は、スカラー リダクションが発生する可能性があります。 |
+| 1005 | `no_parallel`プラグマが指定されました。 |
+| 1006 | この関数には、OpenMP が含まれています。 この関数の OpenMP を削除して解決します。 |
+| 1007 | ループ誘導変数またはループ境界は、32ビット番号 (または) に符号が付きません `int` `long` 。 これを解決するには、誘導変数の型を変更します。 |
+| 1008 | コンパイラは、このループが自動並列化を正当化するのに十分な処理を実行していないことを検出しました。 |
+| 1009 | コンパイラは、"" ループを並列化しようとしました `do` - `while` 。 自動並行化は "" ループのみを対象とし `for` ます。 |
+| 1010 | コンパイラは、ループが条件に対して "不等号" () を使用していることを検出しました `!=` 。 |
 
 ```cpp
 int A[1000];
@@ -412,15 +411,15 @@ void code_1010()
 
 11 *xx* の理由コードは、ベクター化に適用されます。
 
-|理由コード|説明|
-|-----------------|-----------------|
-|1100|`Loop contains control flow—for example, "if" or "?".`|
-|1101|`Loop contains datatype conversion—perhaps implicit—that cannot be vectorized.`|
-|1102|`Loop contains non-arithmetic or other non-vectorizable operations.`|
-|1103|`Loop body includes shift operations whose size might vary within the loop.`|
-|1104|`Loop body includes scalar variables.`|
-|1105|`Loop includes a unrecognized reduction operation.`|
-|1106|`Outer loop not vectorized.`|
+| 理由コード | 説明 |
+|--|--|
+| 1100 | Loop には、"" や "" などの制御フローが含まれてい `if` `?:` ます。 |
+| 1101 | ループにはデータ型変換が含まれています。ベクター化はできません。 |
+| 1102 | ループ内に算術以外またはベクター化以外の演算があります。 |
+| 1103 | ループ本体にサイズがループ内で可変する場合があるシフト操作があります。 |
+| 1104 | ループ本体にスカラー変数があります。 |
+| 1105 | ループには、認識できないリダクション操作が含まれています。 |
+| 1106 | 外側のループがベクター化されていません。 |
 
 ```cpp
 void code_1100(int *A, int x)
@@ -560,12 +559,13 @@ void code_1106(int *A)
 
 12 *xx* 理由コードは、ベクター化に適用されます。
 
-|理由コード|説明|
-|-----------------|-----------------|
-|1200|`Loop contains loop-carried data dependences that prevent vectorization. Different iterations of the loop interfere with each other such that vectorizing the loop would produce wrong answers, and the auto-vectorizer cannot prove to itself that there are no such data dependences.`|
-|1201|`Array base changes during the loop.`|
-|1202|`Field in a struct is not 32 or 64 bits wide.`|
-|1203|`Loop body includes non-contiguous accesses into an array.`|
+| 理由コード | 説明 |
+|--|--|
+| 1200 | ループは、ベクター化を妨げるループを実行するデータの依存関係を含んでいます。 ループの反復回数が異なれば、ループの vectorizing が間違った回答を生成するようになります。ベクター化は、そのようなデータ依存関係が存在しないことを証明することはできません。 |
+| 1201 | ループ中に配列ベースの変更がありました。 |
+| 1202 | 構造体のフィールドが32または64ビット幅ではありません。 |
+| 1203 | ループ本体に配列への連続しないアクセスがあります。 |
+| 1204 | コンパイラの内部データ構造の制限に達しました。データに依存するエッジが多すぎます。 |
 
 ```cpp
 void fn();
@@ -629,20 +629,36 @@ void code_1203(int *A)
         A[i] += A[i*2+2] + 2;  // non-contiguous memory access not vectorized
     }
 }
+
+void code_1204(int *A)
+{
+    // Code 1204 is emitted when internal compiler data structures
+    // hit a limit on the number of data dependence edges recorded.
+    // Resolve this by moving the innermost loop to another function.
+
+    for (int i=0; i<1000; i++)
+        for (int j=0; j<1000; j++)
+            for (int k=0; k<1000; k++)
+                for (int l=0; l<1000; l++)
+                {
+                    for (int m=0; m<1000; m++)
+                        A[m] = A[m+i] + A[m+j] + A[m+k] + A[m+l];
+                }
+}
 ```
 
 ## <a name="13xx-reason-codes"></a><a name="BKMK_ReasonCode130x"></a> 13xx 理由コード
 
 13 *xx* の理由コードは、ベクター化に適用されます。
 
-|理由コード|説明|
-|-----------------|-----------------|
-|1300|`Loop body contains no—or very little—computation.`|
-|1301|`Loop stride is not +1.`|
-|1302|`Loop is a "do-while".`|
-|1303|`Too few loop iterations for vectorization to provide value.`|
-|1304|`Loop includes assignments that are of different sizes.`|
-|1305|`Not enough type information.`|
+| 理由コード | 説明 |
+|--|--|
+| 1300 | ループ本体に計算がまったくかほとんど含まれていません。 |
+| 1301 | ループストライドが + 1 ではありません。 |
+| 1302 | Loop は " `do` - `while` " です。 |
+| 1303 | 値を出力するにはベクター化のループの繰り返し回数が少なすぎます。 |
+| 1304 | ループ内にサイズが異なる代入があります。 |
+| 1305 | 型情報が不足しています。 |
 
 ```cpp
 void code_1300(int *A, int *B)
@@ -767,14 +783,14 @@ void code_1305( S_1305 *s, S_1305 x)
 
 14 *xx* 理由コードは、ベクター化と互換性のないオプションが指定されている場合に発生します。
 
-|理由コード|説明|
-|-----------------|-----------------|
-|1400|`#pragma loop(no_vector) is specified.`|
-|1401|`/kernel switch is specified when targeting x86 or ARM.`|
-|1402|`/arch:SSE2 or higher switch is not specified when targeting x86.`|
-|1403|`/arch:ATOM switch is specified and the loop includes operations on doubles.`|
-|1404|`/O1 or /Os switch is specified.`|
-|1405|`Vectorization is disabled to aid in dynamic-initializer-to-static-initializer optimization.`|
+| 理由コード | 説明 |
+|--|--|
+| 1400 | `#pragma loop(no_vector)` が指定されています。 |
+| 1401 | `/kernel`x86 または ARM を対象とするとき、 スイッチが指定されています。 |
+| 1402 | `/arch:SSE2` x86 を対象とする場合、またはそれ以上のスイッチが指定されていません。 |
+| 1403 | `/arch:ATOM` switch が指定されており、ループに double に対する操作が含まれています。 |
+| 1404 | `/O1` または `/Os` スイッチが指定されています。 |
+| 1405 | ベクター化が動的初期化子と静的初期化子との間の最適化用に無効になっています。 |
 
 ```cpp
 void code_1400(int *A)
@@ -839,14 +855,14 @@ void code_1404(int *A)
 
 15 *xx* 理由コードはエイリアスに適用されます。 メモリ内の同じ位置に 2 つの異なる名前でアクセスできるときにエイリアスが使用されます。
 
-|理由コード|説明|
-|-----------------|-----------------|
-|1500|`Possible aliasing on multi-dimensional arrays.`|
-|1501|`Possible aliasing on arrays-of-structs.`|
-|1502|`Possible aliasing and array index is other than n + K.`|
-|1503|`Possible aliasing and array index has multiple offsets.`|
-|1504|`Possible aliasing; would require too many runtime checks.`|
-|1505|`Possible aliasing, but runtime checks are too complex.`|
+| 理由コード | 説明 |
+|--|--|
+| 1500 | 多次元配列でエイリアスが使用されている可能性があります。 |
+| 1501 | 構造体の配列でエイリアスが使用されている可能性があります。 |
+| 1502 | 使用可能なエイリアスと配列インデックスは n + K 以外です。 |
+| 1503 | 使用可能なエイリアスと配列インデックスに複数のオフセットがあります。 |
+| 1504 | エイリアスが使用されている可能性があります。要求される実行時チェックが多すぎます。 |
+| 1505 | エイリアスが使用されている可能性がありますが、実行時チェックが複雑すぎます。 |
 
 ```cpp
 void code_1500(int A[100][100], int B[100][100])
@@ -965,10 +981,10 @@ void code_1505(int *A, int *B)
 
 ## <a name="see-also"></a>関連項目
 
-[C/c + + コンパイラおよびビルドツールのエラーと警告](../compiler-errors-1/c-cpp-build-errors.md) 
-[自動並列化と自動ベクター化](../../parallel/auto-parallelization-and-auto-vectorization.md) \
-[Visual Studio 2012 での自動ベクター化–概要](/archive/blogs/nativeconcurrency/auto-vectorizer-in-visual-studio-2012-overview) \
-[#pragma ループ ()](../../preprocessor/loop.md) \
-[/Q オプション (低レベルの操作)](../../build/reference/q-options-low-level-operations.md) \
-[/Qpar-report (自動並行化レポートレベル)](../../build/reference/qpar-report-auto-parallelizer-reporting-level.md) \
-[/Qvec-report (自動ベクター化レポートレベル)](../../build/reference/qvec-report-auto-vectorizer-reporting-level.md)
+[C/c + + コンパイラおよびビルドツールのエラーと警告](../compiler-errors-1/c-cpp-build-errors.md)\
+[自動並列化と自動ベクター化](../../parallel/auto-parallelization-and-auto-vectorization.md)\
+[Visual Studio 2012 での自動ベクター化–概要](/archive/blogs/nativeconcurrency/auto-vectorizer-in-visual-studio-2012-overview)\
+[`#pragma loop()`](../../preprocessor/loop.md)\
+[`/Q` オプション (低レベルの操作)](../../build/reference/q-options-low-level-operations.md)\
+[`/Qpar-report` (自動並行化レポートレベル)](../../build/reference/qpar-report-auto-parallelizer-reporting-level.md)\
+[`/Qvec-report` (自動ベクター化レポートレベル)](../../build/reference/qvec-report-auto-vectorizer-reporting-level.md)
