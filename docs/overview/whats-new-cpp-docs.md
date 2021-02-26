@@ -1,13 +1,13 @@
 ---
 title: C++ のドキュメントの更新情報
 description: Microsoft C/C++ コンパイラ、ATL/MFC、C ランタイム、標準ライブラリに関する新しいドキュメントとドキュメントの更新。
-ms.date: 02/08/2021
-ms.openlocfilehash: 3b6d248b99415c91b4086b00ecc54fc39d2c348a
-ms.sourcegitcommit: 77235bff6a7b2621c501938e30d93cb15f5733cb
+ms.date: 02/17/2021
+ms.openlocfilehash: b15d286eb7bd2951ab2b8101a752de2beb57f4a4
+ms.sourcegitcommit: e99db7c3b5f25ece0e152165066c926751a7c2ed
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2021
-ms.locfileid: "100006046"
+ms.lasthandoff: 02/17/2021
+ms.locfileid: "100643574"
 ---
 # <a name="microsoft-c-docs-whats-new-for-visual-studio-168"></a>Microsoft C++ のドキュメント: Visual Studio 16.8 での更新情報
 
@@ -183,7 +183,7 @@ C++ の最新の準拠状態については、「[Visual Studio の C++ 準拠�
 ### <a name="updated-articles"></a>更新された記事
 
 - [`<ios>` typedef](../standard-library/ios-typedefs.md) - GitHub #2514 に従った例の更新
-- [`basic_string` クラス](../standard-library/basic-string-class.md) - `startswith()` と `endswith()` の追加
+- [`basic_string` クラス](../standard-library/basic-string-class.md) - `_starts_with()` と `ends_with()` の追加
 - [`ios_base Class`](../standard-library/ios-base-class.md)
 - [`map` クラス](../standard-library/map-class.md)
 - [`multimap` クラス](../standard-library/multimap-class.md) - `contains()` の追加
@@ -193,7 +193,7 @@ C++ の最新の準拠状態については、「[Visual Studio の C++ 準拠�
 - [`unordered_multimap` クラス](../standard-library/unordered-multimap-class.md) - `contains()` の追加
 - [`unordered_multiset` クラス](../standard-library/unordered-multiset-class.md) - `contains()` の追加
 - [`unordered_set` クラス](../standard-library/unordered-set-class.md) - `contains()` の追加
-- [`basic_string_view` クラス](../standard-library/basic-string-view-class.md) - `startswith()` と `endswith()` の追加
+- [`basic_string_view` クラス](../standard-library/basic-string-view-class.md) - `starts_with()` と `ends_with()` の追加
 - [`<bit>` 関数](../standard-library/bit-functions.md) -`nodiscard` 構文の更新
 
 ## <a name="community-contributors"></a>コミュニティの共同作成者
