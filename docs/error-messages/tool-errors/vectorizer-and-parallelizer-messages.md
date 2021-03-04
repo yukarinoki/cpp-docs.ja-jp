@@ -8,12 +8,12 @@ f1_keywords:
 - C5021
 - C5001
 - C5012
-ms.openlocfilehash: 3e2d458d177b8a7032276d29940a7ff2dac83b36
-ms.sourcegitcommit: e99db7c3b5f25ece0e152165066c926751a7c2ed
+ms.openlocfilehash: 9cfafe9af4859a2bb4dbd7897a14003d85052f63
+ms.sourcegitcommit: 5efc34c2b98d4d0d3e41aec38b213f062c19d078
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/17/2021
-ms.locfileid: "100643561"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101844547"
 ---
 # <a name="vectorizer-and-parallelizer-messages"></a>ベクター化と並列化のメッセージ
 
@@ -28,9 +28,9 @@ Microsoft C++ コンパイラオプションを使用して [`/Qpar-report`](../
 | 情報メッセージ | 説明 |
 |--|--|
 | 5001 | ループがベクター化されました。 |
-| 5002 | ループは、理由 '*description*' によってベクター化されていません。 |
+| 5002 | 理由が '*description*' であるため、ループはベクター化ません。 |
 | 5011 | ループが並列化されました。 |
-| 5012 | ループは、理由 '*description*' により並列化されません。 |
+| 5012 | ループが並列化されていません。理由: '*description*'。 |
 | 5021 | ループをプラグマに関連付けることができません。 |
 
 次のセクションでは、並行化とベクター化の考えられる理由コードを示します。
@@ -46,6 +46,7 @@ Microsoft C++ コンパイラオプションを使用して [`/Qpar-report`](../
 | 502 | 誘導変数が単純な +1 以外の何らかの方法でステップ インされています。 |
 | 503 | ループ内に例外処理または switch ステートメントがあります。 |
 | 504 | ループ本体が C++ オブジェクトの破棄を必要とする例外をスローする場合があります。 |
+| 505 | 外側のループには、前置インクリメントされた誘導変数があります。 分析を終了しています。 |
 
 ```cpp
 void code_500(int *A)
@@ -83,7 +84,7 @@ void code_501_example1(int *A)
 {
     // Code 501 is emitted if the compiler cannot discern the
     // induction variable of this loop. In this case, when it checks
-    // the upperbound of 'i', the compiler cannot prove that the
+    // the upper bound of 'i', the compiler cannot prove that the
     // function call "bound()" returns the same value each time.
     // Also, the compiler cannot prove that the call to "bound()"
     // does not modify the values of array A.
@@ -94,7 +95,7 @@ void code_501_example1(int *A)
     }
 
     // To resolve code 501, ensure that the induction variable is
-    // a local variable, and ensure that the upperbound is a
+    // a local variable, and ensure that the upper bound is a
     // provably loop invariant value.
 
     for (int i=0, imax = bound(); i<imax; ++i)
@@ -116,7 +117,7 @@ void code_501_example2(int *A)
     }
 
     // To resolve code 501, ensure that the induction variable is
-    // a local variable, and ensure that the upperbound is a
+    // a local variable, and ensure that the upper bound is a
     // provably loop invariant value.
 
     for (int i=0; i<1000; ++i)
@@ -184,7 +185,8 @@ public:
     ~C504();
 };
 
-void code_504(int *A) {
+void code_504(int *A)
+{
     // Code 504 is emitted if a C++ object was created and
     // that object requires EH unwind tracking information under
     // /EHs or /EHsc.
@@ -195,6 +197,23 @@ void code_504(int *A) {
         A[i] = code_504_helper();
     }
 
+}
+
+void code_505(int *A)
+{
+    // Code 505 is emitted on outer loops with pre-incremented
+    // induction variables. The vectorizer/parallelizer analysis
+    // package doesn't support these loops, and they are
+    // intentionally not converted to post-increment loops to
+    // prevent a performance degradation.
+
+    // To parallelize an outer loop that causes code 505, change
+    // it to a post-incremented loop.
+
+    for (int i=100; i--; )
+        for (int j=0; j<100; j++) { // this loop is still vectorized
+            A[j] = A[j] + 1;
+        }                    
 }
 ```
 
@@ -414,7 +433,7 @@ void code_1010()
 | 理由コード | 説明 |
 |--|--|
 | 1100 | Loop には、"" や "" などの制御フローが含まれてい `if` `?:` ます。 |
-| 1101 | ループにはデータ型変換が含まれています。ベクター化はできません。 |
+| 1101 | ループには、ベクター化できない (暗黙的な) データ型変換が含まれています。 |
 | 1102 | ループ内に算術以外またはベクター化以外の演算があります。 |
 | 1103 | ループ本体にサイズがループ内で可変する場合があるシフト操作があります。 |
 | 1104 | ループ本体にスカラー変数があります。 |
@@ -434,7 +453,7 @@ void code_1100(int *A, int x)
 
     for (int i=0; i<1000; ++i)
     {
-        // straightline code is more amenable to vectorization
+        // straight line code is more amenable to vectorization
         if (x)
         {
             A[i] = A[i] + 1;
@@ -561,7 +580,7 @@ void code_1106(int *A)
 
 | 理由コード | 説明 |
 |--|--|
-| 1200 | ループは、ベクター化を妨げるループを実行するデータの依存関係を含んでいます。 ループの反復回数が異なれば、ループの vectorizing が間違った回答を生成するようになります。ベクター化は、そのようなデータ依存関係が存在しないことを証明することはできません。 |
+| 1200 | ループは、ベクター化を妨げるループを実行するデータの依存関係を含んでいます。 ループの反復回数が異なれば、ループの vectorizing が間違った回答を生成するようになり、自動ベクター化はそのようなデータの依存関係がないということを証明できません。 |
 | 1201 | ループ中に配列ベースの変更がありました。 |
 | 1202 | 構造体のフィールドが32または64ビット幅ではありません。 |
 | 1203 | ループ本体に配列への連続しないアクセスがあります。 |
@@ -653,7 +672,7 @@ void code_1204(int *A)
 
 | 理由コード | 説明 |
 |--|--|
-| 1300 | ループ本体に計算がまったくかほとんど含まれていません。 |
+| 1300 | ループ本体には計算がほとんど含まれていません。 |
 | 1301 | ループストライドが + 1 ではありません。 |
 | 1302 | Loop は " `do` - `while` " です。 |
 | 1303 | 値を出力するにはベクター化のループの繰り返し回数が少なすぎます。 |
@@ -703,7 +722,7 @@ int code_1303(int *A, int *B)
     // make vectorization profitable.
 
     // If the loop computation fits perfectly in
-    // vector registers - for example, the upperbound is 4, or 8 in
+    // vector registers - for example, the upper bound is 4, or 8 in
     // this case - then the loop _may_ be vectorized.
 
     // This loop is not vectorized because there are 5 iterations

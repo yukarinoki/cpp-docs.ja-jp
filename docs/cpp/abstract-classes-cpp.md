@@ -1,27 +1,26 @@
 ---
 description: '詳細情報: 抽象クラス (C++)'
 title: 抽象クラス (C++)
-ms.date: 11/04/2016
+ms.date: 02/18/2021
 helpviewer_keywords:
 - classes [C++], abstract
 - base classes [C++], abstract classes [C++]
 - abstract classes [C++]
 - derived classes [C++], abstract classes [C++]
-ms.assetid: f0c5975b-39de-4d68-9640-6ce57f4632e6
-ms.openlocfilehash: bb1c42ce7930128e72c88afaca90da7aaac0bde5
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: 8a20e988cb0c0a134fd2ebb83382d81c838bcf23
+ms.sourcegitcommit: 5efc34c2b98d4d0d3e41aec38b213f062c19d078
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97288413"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101844495"
 ---
 # <a name="abstract-classes-c"></a>抽象クラス (C++)
 
-抽象クラスは一般的な概念を表現したもので、このクラスからより具体的なクラスを派生するために使用できます。 抽象クラス型のオブジェクトは作成できませんが、抽象クラス型へのポインターと参照は使用できます。
+抽象クラスは一般的な概念を表現したもので、このクラスからより具体的なクラスを派生するために使用できます。 抽象クラス型のオブジェクトを作成することはできません。 ただし、抽象クラス型へのポインターと参照を使用できます。
 
-純粋仮想関数を 1 つでも含むクラスは抽象クラスと見なされます。 抽象クラスから派生したクラスは純粋仮想関数を実装する必要があります。つまり派生クラスも抽象クラスです。
+抽象クラスを作成するには、少なくとも1つの純粋仮想メンバー関数を宣言します。 これは、純粋指定子 () 構文を使用して宣言された仮想関数です `= 0` 。 抽象クラスから派生したクラスは純粋仮想関数を実装する必要があります。つまり派生クラスも抽象クラスです。
 
-[仮想関数](../cpp/virtual-functions.md)に示されている例を考えてみましょう。 `Account` クラスの目的は一般的な機能を提供することですが、`Account` 型のオブジェクトは一般的すぎて役に立ちません。 したがって、`Account` は抽象クラスに適した候補です。
+[仮想関数](../cpp/virtual-functions.md)に示されている例を考えてみましょう。 `Account` クラスの目的は一般的な機能を提供することですが、`Account` 型のオブジェクトは一般的すぎて役に立ちません。 これは、抽象クラスに適した候補であることを意味 `Account` します。
 
 ```cpp
 // deriv_AbstractClasses.cpp
@@ -40,7 +39,7 @@ private:
 
 ## <a name="restrictions-on-abstract-classes"></a>抽象クラスに関する制約
 
-抽象クラスは以下の項目では使用できません。
+抽象クラスは、次の場合には使用できません。
 
 - 変数またはメンバー データ
 
@@ -50,42 +49,46 @@ private:
 
 - 明示的な変換の型
 
-もう 1 つの制限は、抽象クラスのコンストラクターが純粋仮想関数を直接または間接的に呼び出すと、結果が未定義になることです。 ただし、抽象クラスのコンストラクターとデストラクターは、他のメンバー関数を呼び出すことができます。
+抽象クラスのコンストラクターが純粋仮想関数を直接または間接的に呼び出す場合、結果は未定義になります。 ただし、抽象クラスのコンストラクターとデストラクターは、他のメンバー関数を呼び出すことができます。
 
-純粋仮想関数は抽象クラスに対して定義できますが、直接呼び出すには次の構文を使用する必要があります。
+## <a name="defined-pure-virtual-functions"></a>定義済み純粋仮想関数
+
+抽象クラスの純粋仮想関数は、 *定義* することも、実装することもできます。 このような関数を呼び出すことができるのは、完全修飾構文を使用する場合のみです。
 
 *抽象クラス名*::*function-name*()
 
-これが役立つのは、オブジェクトを破棄する処理では常に基底クラスのデストラクターが呼び出されるため、基底クラスに純粋仮想デストラクターが含まれているクラスの階層構造をデザインするときです。 次の例を確認してください。
+定義された純粋仮想関数は、基本クラスに純粋仮想デストラクターが含まれるクラス階層を設計するときに役立ちます。 これは、オブジェクトの破棄時に基本クラスのデストラクターが常に呼び出されるためです。 次の例を確認してください。
 
 ```cpp
+// deriv_RestrictionsOnUsingAbstractClasses.cpp
 // Declare an abstract base class with a pure virtual destructor.
-// deriv_RestrictionsonUsingAbstractClasses.cpp
-class base {
+// It's the simplest possible abstract class.
+class base
+{
 public:
     base() {}
-    virtual ~base()=0;
+    virtual ~base() = 0 {}; // pure virtual, and defined!
 };
 
-// Provide a definition for destructor.
-base::~base() {}
-
-class derived:public base {
+class derived : public base
+{
 public:
     derived() {}
-    ~derived(){}
+    ~derived() {}
 };
 
-int main() {
-    derived *pDerived = new derived;
-    delete pDerived;
+int main()
+{
+    derived aDerived; // destructor called when it goes out of scope
 }
 ```
 
-`pDerived` によって指されるオブジェクトが削除されると、`derived` クラスのデストラクターが呼び出され、次に `base` クラスのデストラクターが呼び出されます。 純粋仮想関数の空の実装は、その関数に対して少なくとも実装が存在することを保証します。
+この例では、インラインの定義を示して `~base()` いますが、を使用してクラスの外部で定義することもでき `base::~base() {}` ます。
+
+オブジェクトがスコープ外に `aDerived` 出ると、クラスのデストラクター `derived` が呼び出されます。 コンパイラは、デストラクターの後にクラスのデストラクターを暗黙的に呼び出すコードを生成し `base` `derived` ます。 純粋仮想関数の空の実装は、 `~base` 少なくとも関数の実装が存在することを保証します。 それがない場合、リンカーは暗黙的な呼び出しに対して未解決の外部シンボルエラーを生成します。
 
 > [!NOTE]
-> 前の例では、純粋仮想関数 `base::~base` は、`derived::~derived` から暗黙的に呼び出されます。 完全修飾メンバー関数名を使用して純粋仮想関数を明示的に呼び出すこともできます。
+> 前の例では、純粋仮想関数 `base::~base` は、`derived::~derived` から暗黙的に呼び出されます。 完全修飾メンバー関数名を使用して、純粋仮想関数を明示的に呼び出すこともできます。 このような関数には実装が必要です。または、呼び出しの結果がリンク時にエラーになります。
 
 ## <a name="see-also"></a>関連項目
 
