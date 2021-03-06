@@ -1,7 +1,7 @@
 ---
 description: '詳細については、次を参照してください: freopen_s、_wfreopen_s'
 title: freopen_s、_wfreopen_s
-ms.date: 4/2/2020
+ms.date: 2/23/2021
 api_name:
 - _wfreopen_s
 - freopen_s
@@ -35,105 +35,113 @@ helpviewer_keywords:
 - tfreopen_s function
 - wfreopen_s function
 - freopen_s function
-ms.assetid: ad25a4da-6ad4-476b-a86d-660b221ca84d
-ms.openlocfilehash: cbb10582128073501433a1a12c59e195bec011d5
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: a2b9bf86d50972fcc820da3e53fd066717879ff3
+ms.sourcegitcommit: c0c9cdae79f19655e809a4979227c51bb19cff63
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97314010"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102236739"
 ---
-# <a name="freopen_s-_wfreopen_s"></a>freopen_s、_wfreopen_s
+# <a name="freopen_s-_wfreopen_s"></a>`freopen_s`, `_wfreopen_s`
 
-ファイル ポインターを再度割り当てます。 これらのバージョンの [freopen、_wfreopen](freopen-wfreopen.md) は、「[CRT のセキュリティ機能](../../c-runtime-library/security-features-in-the-crt.md)」の説明にあるとおり、セキュリティが強化されたバージョンです。
+に現在関連付けられているファイルを閉じ、 `oldStream` `stream` で指定したファイルに再割り当てし `fileName` ます。
+
+これらのバージョンのでは [`freopen, _wfreopen`](freopen-wfreopen.md) 、「CRT の [セキュリティ機能](../../c-runtime-library/security-features-in-the-crt.md)」の説明にあるとおり、セキュリティが強化されています。
 
 ## <a name="syntax"></a>構文
 
 ```C
-errno_t freopen(
-   FILE** pFile,
-   const char *path,
-   const char *mode,
-   FILE *stream
+errno_t freopen_s(
+   FILE ** stream,
+   const char * fileName,
+   const char * mode,
+   FILE* oldStream
 );
-errno_t _wfreopen(
-   FILE** pFile,
-   const wchar_t *path,
-   const wchar_t *mode,
-   FILE *stream
+
+errno_t _wfreopen_s(
+   FILE ** stream,
+   const wchar_t * fileName,
+   const wchar_t * mode,
+   FILE * oldStream
 );
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*pFile*<br/>
-呼び出しが提供するファイル ポインターへのポインター。
+*`stream`*\
+関数がを返したときに、再び開かれたストリームを指す out パラメーター。
 
-*path*<br/>
-新しいファイル パス。
+*`fileName`*\
+再度開くファイルのパス。
 
-*mode*<br/>
-アクセス許可の種類。
+*` mode`*\
+開かれたストリームのモード。
 
-*一連*<br/>
-**FILE** 構造体へのポインター。
+*`oldStream`*\
+再度開くストリーム。 フラッシュされ、関連付けられているすべてのファイルが閉じられます。
 
 ## <a name="return-value"></a>戻り値
 
-これらの関数はエラー コードを返します。 エラーが発生した場合、元のファイルは閉じられます。
+成功した場合は0それ以外の場合は、エラーコード。 エラーが発生した場合、元のファイルは閉じられ、 **`NULL`** もに書き込まれます。 *`stream`* *`stream`***`NULL`**
+
+エラーコードの詳細については、「」を参照してください [`errno, _doserrno, _sys_errlist, and _sys_nerr`](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) 。
 
 ## <a name="remarks"></a>解説
 
-**Freopen_s** 関数は、現在 *ストリーム* に関連付けられているファイルを閉じ、 *path* によって指定されたファイルに *ストリーム* を再割り当てします。 **_wfreopen_s** は **_freopen_s** のワイド文字バージョンです。**_wfreopen_s** の *パス* 引数と *モード* 引数はワイド文字列です。 **_wfreopen_s** と **_freopen_s** は同じように動作します。
+通常、この **`freopen_s`** 関数は、、、およびに関連付けられているプリオープンストリームを別のファイルにアタッチするために使用され `stdin` `stdout` `stderr` ます。
 
-*PFile*、*パス*、*モード*、または *ストリーム* のいずれかが **NULL** の場合、または *Path* が空の文字列の場合、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、これらの関数は無効なパラメーターハンドラーを呼び出します。 実行の継続が許可された場合、これらの関数は **errno** を **einval** に設定し、 **einval** を返します。
+関数は、 **`freopen_s`** 現在に関連付けられているファイルを閉じ、 *`stream`* *`stream`* *path* によって指定されたファイルに再割り当てします。 **`_wfreopen_s`** はのワイド文字バージョンで **`freopen_s`** あり、の *パス* と *` mode`* 引数 **`_wfreopen_s`** はワイド文字列です。 **`_wfreopen_s`****`freopen_s`** それ以外の場合は、との動作は同じです。
+
+*PFile*、 *path*、、またはのいずれかがの場合、 *` mode`* *`stream`* **`NULL`** または *path* が空の文字列の場合、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、これらの関数は無効なパラメーターハンドラーを呼び出します。 実行の継続が許可された場合、これらの関数は **`errno`** をに設定し、を **`EINVAL`** 返し **`EINVAL`** ます。
 
 既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
-|TCHAR.H のルーチン|_UNICODE および _MBCS が未定義の場合|_MBCS が定義されている場合|_UNICODE が定義されている場合|
+|`TCHAR.H` ルーチン|_ `UNICODE & _MBCS` 未定義|`_MBCS` れ|`_UNICODE` れ|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_tfreopen_s**|**freopen_s**|**freopen_s**|**_wfreopen_s**|
+|**`_tfreopen_s`**|**`freopen_s`**|**`freopen_s`**|**`_wfreopen_s`**|
 
-**freopen_s** は、通常、事前に開かれたファイル ( **stdin**、 **stdout**、 **stderr** ) をユーザーが指定したファイルにリダイレクトするために使用されます。 *ストリーム* に関連付けられている新しいファイルは、次のように、ファイルに対して要求されるアクセスの種類を指定する文字列である *モード* で開かれます。
+**`freopen_s`** は通常、事前に開かれたファイル、 **`stdin`** **`stdout`** 、およびを、 **`stderr`** ユーザーが指定したファイルにリダイレクトするために使用されます。 に関連付けられた新しいファイル *`stream`* は、次のように *` mode`* 、ファイルに要求されるアクセスの種類を指定する文字列であるで開かれます。
 
-|*mode*|Access|
+|*` mode`*|アクセス|
 |-|-|
-| **\r\n\r\n** | 読み取り用に開きます。 ファイルが存在しないか見つからない場合、 **freopen_s** の呼び出しは失敗します。 |
-| **リダイレクト** | 書き込み用に空のファイルを開きます。 指定したファイルが既に存在すると、そのファイルの内容は破棄されます。 |
-| **ある** | 末尾に書き込みができるようにファイルを開きます (追加モード)。EOF (end-of-file) マーカーを削除せずにファイルに新しいデータを書き込みます。 ファイルが存在しない場合は、作成します。 |
-| **"r +"** | 読み取りと書き込みの両方のモードで開きます。 ファイルが存在している必要があります。 |
-| **"w +"** | 読み取りと書き込みの両方のモードで空のファイルを開きます。 そのファイルが既に存在すると、そのファイルの内容は破棄されます。 |
-| **"a +"** | 読み取りと追加の両方のモードでファイルを開きます。 追加操作には、新しいデータをファイルに書き込む前に EOF マーカーを削除することが含まれます。 書き込みの完了後に、EOF マーカーは復元されません。 ファイルが存在しない場合は、作成します。 |
+| **`"r"`** | 読み取り用に開きます。 ファイルが存在しない場合、または見つからない場合、 **`freopen_s`** 呼び出しは失敗します。 |
+| **`"w"`** | 書き込み用に空のファイルを開きます。 指定したファイルが既に存在すると、そのファイルの内容は破棄されます。 |
+| **`"a"`** | 末尾に書き込みができるようにファイルを開きます (追加モード)。EOF (end-of-file) マーカーを削除せずにファイルに新しいデータを書き込みます。 ファイルが存在しない場合は、作成します。 |
+| **`"r+"`** | 読み取りと書き込みの両方のモードで開きます。 ファイルが存在している必要があります。 |
+| **`"w+"`** | 読み取りと書き込みの両方のモードで空のファイルを開きます。 そのファイルが既に存在すると、そのファイルの内容は破棄されます。 |
+| **`"a+"`** | 読み取りと追加の両方のモードでファイルを開きます。 追加操作には、新しいデータをファイルに書き込む前に EOF マーカーを削除することが含まれます。 書き込みが完了した後、EOF マーカーは復元されません。 ファイルが存在しない場合は、作成します。 |
 
-既存のファイルが破棄される可能性があるため、 **"w"** および **"w +"** の型は注意して使用してください。
+既存の **`"w"`** **`"w+"`** ファイルが破棄される可能性があるため、およびの型は注意して使用してください。 C11 以降で **`"x"`** は、またはに追加して、ファイルが存在する場合は、 **`"w"`** 上書きするのではなく、関数を失敗させることができ **`"w+"`** ます。
 
-ファイルが **"a"** または **"a +"** アクセスの種類で開かれると、すべての書き込み操作はファイルの末尾で行われます。 [Fseek](fseek-fseeki64.md)または[rewind](rewind.md)を使用してファイルポインターを再設定できますが、書き込み操作が実行される前に、ファイルポインターは常にファイルの末尾に戻されます。したがって、既存のデータを上書きすることはできません。
+またはアクセスの種類を使用してファイルを開くと **`"a"`** **`"a+"`** 、すべての書き込み操作はファイルの末尾で行われます。 またはを使用してファイルポインターの位置を移動できますが [`fseek`](fseek-fseeki64.md) [`rewind`](rewind.md) 、書き込み操作が実行される前に、ファイルポインターは常にファイルの末尾に戻されます。したがって、既存のデータを上書きすることはできません。
 
-**"A"** モードでは、ファイルに追加する前に EOF マーカーは削除されません。 追加が行われても、MS-DOS TYPE コマンドでは元の EOF マーカーまでのデータしか表示されず、ファイルに追加されたデータは表示されません。 **"A +"** モードでは、ファイルに追加する前に EOF マーカーが削除されます。 追加が終了すると、MS-DOS の TYPE コマンドでファイル内すべてのデータが表示されます。 CTRL + Z EOF マーカーで終了するストリームファイルに追加するには、 **"a +"** モードが必要です。
+モードでは、 **`"a"`** ファイルに追加する前に EOF マーカーは削除されません。 追加が行われても、MS-DOS TYPE コマンドでは元の EOF マーカーまでのデータしか表示されず、ファイルに追加されたデータは表示されません。 **`"a+"`** モードでは、ファイルに追加する前に EOF マーカーが削除されます。 追加が終了すると、MS-DOS の TYPE コマンドでファイル内すべてのデータが表示されます。 **`"a+"`** CTRL + Z EOF マーカーで終了するストリームファイルに追加するには、モードが必要です。
 
-**"R +"**、 **"w +"**、または **"a +"** のアクセスの種類が指定されている場合は、読み取りと書き込みの両方が許可されます (ファイルは "更新" 用に開かれていると言います)。 ただし、読み取りと書き込みを切り替える場合は、その前に [fsetpos](fsetpos.md)、[fseek](fseek-fseeki64.md)、または [rewind](rewind.md) のいずれかの関数を実行する必要があります。 必要に応じて、 [fsetpos](fsetpos.md) または [fseek](fseek-fseeki64.md) 操作に現在の位置を指定できます。 上記の値に加えて、新しい行の変換モードを指定するために、 *mode* 文字列に次の文字のいずれかが含まれている場合があります。
+**`"r+"`**、 **`"w+"`** 、またはのいずれかのアクセスの種類を指定すると **`"a+"`** 、読み取りと書き込みの両方を行うことができます (ファイルは "更新" 用に開かれていると言います)。 ただし、読み取りと書き込みを切り替える場合は、、、のいずれかの操作を行う必要があり [`fsetpos`](fsetpos.md) [`fseek`](fseek-fseeki64.md) [`rewind`](rewind.md) ます。 必要に応じて、または操作に現在の位置を指定でき [`fsetpos`](fsetpos.md) [`fseek`](fseek-fseeki64.md) ます。 上記の値に加えて、 *` mode`* 新しい行の変換モードを指定するために、文字列に次の文字のいずれかが含まれている場合があります。
 
-|*モード* 修飾子|変換モード|
+|*` mode`* 変換|変換モード|
 |-|-|
-| **t** | ファイルをテキスト (変換) モードで開きます。 |
-| **b** | バイナリ (無変換) モードで開く復帰文字と改行文字を含む翻訳は抑制されます。 |
+| **`t`** | ファイルをテキスト (変換) モードで開きます。 |
+| **`b`** | バイナリ (無変換) モードで開く復帰文字と改行文字を含む翻訳は抑制されます。 |
 
-テキスト (変換) モードでは、キャリッジリターンラインフィード (CR-LF) の組み合わせは入力時に1つの改行 (LF) 文字に変換されます。LF 文字は、出力時に cr-lf の組み合わせに変換されます。 また、Ctrl + Z は入力時に EOF (end-of-file) 文字として解釈されます。 読み取りまたは書き込みのために開かれたファイルと **"a +"** での読み取りの場合、ランタイムライブラリは、ファイルの末尾に CTRL + Z があるかどうかをチェックし、可能な場合は削除します。 これは、 [fseek](fseek-fseeki64.md) と [ftell](ftell-ftelli64.md) を使用してファイル内を移動すると、ファイルの末尾付近で [fseek](fseek-fseeki64.md) が正しく動作しなくなる可能性があるためです。 **T** オプションは、ANSI の移植性が必要な場合に使用しない Microsoft の拡張機能です。
+テキスト (変換) モードでは、キャリッジリターンラインフィード (CR-LF) の組み合わせは入力時に1つの改行 (LF) 文字に変換されます。LF 文字は、出力時に cr-lf の組み合わせに変換されます。 また、Ctrl + Z は入力時に EOF (end-of-file) 文字として解釈されます。 読み取りまたは書き込みのために開かれたファイルでは **`"a+"`** 、ランタイムライブラリがファイル末尾に CTRL + Z があるかどうかをチェックし、可能な場合は削除します。 この処理が行われる理由は、とを使用して [`fseek`](fseek-fseeki64.md) ファイル内を移動すると、 [`ftell`](ftell-ftelli64.md) [`fseek`](fseek-fseeki64.md) ファイルの末尾付近でが正しく動作しなくなる可能性があるためです。 **`t`** ANSI の移植性が必要な場合は、Microsoft の拡張機能であるため、オプションを使用しないでください。
 
-**T** または **b** が *モード* で指定されていない場合、既定の変換モードは [_fmode](../../c-runtime-library/fmode.md)グローバル変数によって定義されます。 **T** または **b** が引数の前に付加されている場合、関数は失敗し、 **NULL** を返します。
+**`t`** またはが **`b`** に指定されていない場合 *` mode`* 、既定の変換モードはグローバル変数によって定義され [`_fmode`](../../c-runtime-library/fmode.md) ます。 **`t`** または **`b`** が引数の先頭にある場合、関数は失敗し、を返し **`NULL`** ます。
 
 テキスト モードとバイナリ モードの詳細については、「[テキスト モードとバイナリ モードのファイル入出力](../../c-runtime-library/text-and-binary-mode-file-i-o.md)」を参照してください。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 |機能|必須ヘッダー|
 |--------------|---------------------|
-|**freopen_s**|\<stdio.h>|
-|**_wfreopen_s**|\<stdio.h> または \<wchar.h>|
+|**`freopen_s`**|`<stdio.h>`|
+|**`_wfreopen_s`**|`<stdio.h>` または `<wchar.h>`|
 
-コンソールは、ユニバーサル Windows プラットフォーム (UWP) アプリではサポートされていません。 コンソール、 **stdin**、 **stdout**、および **stderr** に関連付けられている標準ストリームハンドルは、C ランタイム関数が UWP アプリで使用できるようになる前にリダイレクトする必要があります。 互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+コンソールは、ユニバーサル Windows プラットフォーム (UWP) アプリではサポートされていません。 コンソール、、、およびに関連付けられている標準ストリームハンドルは、 **`stdin`** **`stdout`** **`stderr`** C ランタイム関数が UWP アプリで使用できるようになる前にリダイレクトする必要があります。 
+
+互換性について詳しくは、「 [Compatibility](../../c-runtime-library/compatibility.md)」をご覧ください。
 
 ## <a name="example"></a>例
 
@@ -157,7 +165,8 @@ int main( void )
       fprintf( stdout, "error on freopen\n" );
    else
    {
-      fprintf( stdout, "successfully reassigned\n" ); fflush( stdout );
+      fprintf( stdout, "successfully reassigned\n" ); 
+      fflush( stdout );
       fprintf( stream, "This will go to the file 'freopen.out'\n" );
       fclose( stream );
    }
@@ -172,11 +181,11 @@ This will go to the file 'freopen.out'
 
 ## <a name="see-also"></a>関連項目
 
-[ストリーム入出力](../../c-runtime-library/stream-i-o.md)<br/>
-[freopen、_wfreopen](freopen-wfreopen.md)<br/>
-[fclose、_fcloseall](fclose-fcloseall.md)<br/>
-[_fdopen、_wfdopen](fdopen-wfdopen.md)<br/>
-[_fileno](fileno.md)<br/>
-[fopen、_wfopen](fopen-wfopen.md)<br/>
-[_open、_wopen](open-wopen.md)<br/>
-[_setmode](setmode.md)<br/>
+[`Stream I/O`](../../c-runtime-library/stream-i-o.md)\
+[`freopen, _wfreopen`](freopen-wfreopen.md)\
+[`fclose, _fcloseall`](fclose-fcloseall.md)\
+[`_fdopen, _wfdopen`](fdopen-wfdopen.md)\
+[`_fileno`](fileno.md)\
+[`fopen, _wfope`非該当](fopen-wfopen.md)\
+[`_open, _wopen`](open-wopen.md)\
+[`_setmode`](setmode.md)

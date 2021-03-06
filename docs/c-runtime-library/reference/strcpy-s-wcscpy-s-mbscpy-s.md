@@ -46,12 +46,12 @@ helpviewer_keywords:
 - tcscpy_s function
 - wcscpy_s function
 ms.assetid: 611326f3-7929-4a5d-a465-a4683af3b053
-ms.openlocfilehash: a20f16971ccc7d1f85fe92c5d2d14386e7e55022
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: 737d5f2a8536bee57ff7ad568908a1dd81a2bf2c
+ms.sourcegitcommit: c0c9cdae79f19655e809a4979227c51bb19cff63
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97176198"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102236590"
 ---
 # <a name="strcpy_s-wcscpy_s-_mbscpy_s-_mbscpy_s_l"></a>strcpy_s、wcscpy_s、_mbscpy_s、_mbscpy_s_l
 
@@ -186,19 +186,19 @@ C++ では、これらの関数をより簡単に使用できます。これは�
 
 int main(void)
 {
-    char string[80];
+    char stringBuffer[80];
 
-    strcpy_s(string, _countof(string), "Hello world from ");
-    strcat_s(string, _countof(string), "strcpy_s ");
-    strcat_s(string, _countof(string), "and ");
-    strcat_s(string, _countof(string), "strcat_s!");
+    strcpy_s(stringBuffer, _countof(stringBuffer), "Hello world from ");
+    strcat_s(stringBuffer, _countof(stringBuffer), "strcpy_s ");
+    strcat_s(stringBuffer, _countof(stringBuffer), "and ");
+    strcat_s(stringBuffer, _countof(stringBuffer), "strcat_s!");
 
-    printf("String = %s\n", string);
+    printf("stringBuffer = %s\n", stringBuffer);
 }
 ```
 
 ```Output
-String = Hello world from strcpy_s and strcat_s!
+stringBuffer = Hello world from strcpy_s and strcat_s!
 ```
 
 C++ コードをビルドするときに、テンプレートのバージョンを使いやすくすることができます。
@@ -216,20 +216,20 @@ C++ コードをビルドするときに、テンプレートのバージョン�
 
 int main(void)
 {
-    wchar_t string[80];
+    wchar_t stringBuffer[80];
     // using template versions of wcscpy_s and wcscat_s:
-    wcscpy_s(string, L"Hello world from ");
-    wcscat_s(string, L"wcscpy_s ");
-    wcscat_s(string, L"and ");
+    wcscpy_s(stringBuffer, L"Hello world from ");
+    wcscat_s(stringBuffer, L"wcscpy_s ");
+    wcscat_s(stringBuffer, L"and ");
     // of course we can supply the size explicitly if we want to:
-    wcscat_s(string, _countof(string), L"wcscat_s!");
+    wcscat_s(stringBuffer, _countof(stringBuffer), L"wcscat_s!");
 
-    std::wcout << L"String = " << string << std::endl;
+    std::wcout << L"stringBuffer = " << stringBuffer << std::endl;
 }
 ```
 
 ```Output
-String = Hello world from wcscpy_s and wcscat_s!
+stringBuffer = Hello world from wcscpy_s and wcscat_s!
 ```
 
 ## <a name="see-also"></a>関連項目

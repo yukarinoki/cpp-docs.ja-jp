@@ -1,7 +1,7 @@
 ---
 description: 詳細については、「fputs、fputws」を参照してください。
 title: fputs、fputws
-ms.date: 4/2/2020
+ms.date: 03/02/2021
 api_name:
 - fputs
 - fputws
@@ -34,15 +34,14 @@ helpviewer_keywords:
 - _fputts function
 - fputs function
 - fputts function
-ms.assetid: d48c82b8-aa17-4830-8c7d-30442ddbb326
-ms.openlocfilehash: bba51a6001d9ec27f39b590b2246a50409f5e47d
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: 3b38f3c369a567c00f17a0f4d905de324100a3d4
+ms.sourcegitcommit: c0c9cdae79f19655e809a4979227c51bb19cff63
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97314114"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102236791"
 ---
-# <a name="fputs-fputws"></a>fputs、fputws
+# <a name="fputs-fputws"></a>`fputs`, `fputws`
 
 ストリームに文字列を書き込みます。
 
@@ -61,40 +60,40 @@ int fputws(
 
 ### <a name="parameters"></a>パラメーター
 
-*str*<br/>
+*`str`*\
 出力する文字列。
 
-*一連*<br/>
-**FILE** 構造体へのポインター。
+*`stream`*\
+構造体へのポインター **`FILE`** 。
 
 ## <a name="return-value"></a>戻り値
 
-これらの関数は、正常に終了した場合に 0 以上の値を返します。 エラーが発生した場合、 **fputs** と **fputws** は **EOF** を返します。 *Str* または *stream* が null ポインターの場合、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、これらの関数は無効なパラメーターハンドラーを呼び出します。 実行の継続が許可された場合、これらの関数は **errno** を **EINVAL** に設定し、 **fputs** は **EOF** を返し、 **fputws** は **WEOF** を返します。
+これらの関数は、正常に終了した場合に 0 以上の値を返します。 エラーが発生した場合、とはを **`fputs`** **`fputws`** 返し **`EOF`** ます。 *`str`* または *`stream`* が null ポインターの場合、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、これらの関数は無効なパラメーターハンドラーを呼び出します。 実行の継続が許可された場合、これらの関数はをに設定し、を **`errno`** **`EINVAL`** 返し **`EOF`** ます。
 
-エラー コードの詳細については、「[_doserrno、errno、_sys_errlist、および _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」を参照してください。
+エラーコードの詳細については、「 [_doserrno、errno、_sys_errlist、および _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」を参照してください。
 
 ## <a name="remarks"></a>解説
 
-これらの各関数は、 *str* を現在の位置の出力 *ストリーム* にコピーします。 **fputws** は、ワイド文字の引数 *str* を、*ストリームがテキスト* モードとバイナリモードのどちらで開かれているかに応じて、マルチバイト文字列またはワイド文字列として *ストリーム* にコピーします。 どちらの関数も、終端の null 文字をコピーしません。
+これらの各関数は、 *`str`* 出力の現在位置にをコピーし *`stream`* ます。 **`fputws`***`str`* *`stream`* *`stream`* がテキストモードとバイナリモードのどちらで開かれているかに応じて、ワイド文字の引数をマルチバイト文字列またはワイド文字列としてにコピーします。 どちらの関数も、終端の null 文字をコピーしません。
 
-ストリームが ANSI モードで開かれている場合、2 つの関数の動作は同じになります。 **fputs** は、現在 UNICODE ストリームへの出力をサポートしていません。
+ストリームが ANSI モードで開かれている場合、2 つの関数の動作は同じになります。 **`fputs`** は、UNICODE ストリームへの出力を現在サポートしていません。
 
 既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
-### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
+### <a name="generic-text-routine-mappings"></a>汎用テキストルーチンのマッピング
 
 |TCHAR.H のルーチン|_UNICODE および _MBCS が未定義の場合|_MBCS が定義されている場合|_UNICODE が定義されている場合|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_fputts**|**fputs**|**fputs**|**fputws**|
+|**`_fputts`**|**`fputs`**|**`fputs`**|**`fputws`**|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 |機能|必須ヘッダー|
 |--------------|---------------------|
-|**fputs**|\<stdio.h>|
-|**fputws**|\<stdio.h> または \<wchar.h>|
+|**`fputs`**|\<stdio.h>|
+|**`fputws`**|\<stdio.h> または \<wchar.h>|
 
-コンソールは、ユニバーサル Windows プラットフォーム (UWP) アプリではサポートされていません。 コンソール (**stdin**、 **stdout**、 **stderr**) に関連付けられている標準ストリームハンドルは、C ランタイム関数が UWP アプリで使用できるようになる前にリダイレクトする必要があります。 互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+コンソールは、ユニバーサル Windows プラットフォーム (UWP) アプリではサポートされていません。 コンソール (、、および) に関連付けられている標準ストリームハンドルは、 **`stdin`** **`stdout`** **`stderr`** C ランタイム関数が UWP アプリで使用できるようになる前にリダイレクトする必要があります。 互換性について詳しくは、「 [Compatibility](../../c-runtime-library/compatibility.md)」をご覧ください。
 
 ## <a name="example"></a>例
 
@@ -117,7 +116,7 @@ Hello world from fputs.
 
 ## <a name="see-also"></a>関連項目
 
-[ストリーム入出力](../../c-runtime-library/stream-i-o.md)<br/>
-[fgets、fgetws](fgets-fgetws.md)<br/>
-[gets、_getws](../../c-runtime-library/gets-getws.md)<br/>
-[puts、_putws](puts-putws.md)<br/>
+[ストリーム入出力](../../c-runtime-library/stream-i-o.md)\
+[`fgets`, `fgetws`](fgets-fgetws.md)\
+[`gets`, `_getws`](../../c-runtime-library/gets-getws.md)\
+[`puts`, `_putws`](puts-putws.md)

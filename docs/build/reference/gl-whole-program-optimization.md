@@ -1,37 +1,34 @@
 ---
 description: 詳細情報:/GL (プログラム全体の最適化)
 title: /GL (プログラム全体の最適化)
-ms.date: 11/04/2016
+ms.date: 03/05/2021
 f1_keywords:
-- /gl
+- /GL
 helpviewer_keywords:
 - /GL compiler option [C++]
 - whole program optimizations and C++ compiler
 - -GL compiler option [C++]
 - GL compiler option [C++]
-ms.assetid: 09d51e2d-9728-4bd0-b5dc-3b8284aca1d1
-ms.openlocfilehash: ad42eaeeacf897686831c9b415aa62026b5644f1
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: 509deaae8881c4875a9ec2ddf4d5f1ee7744a2cf
+ms.sourcegitcommit: c0c9cdae79f19655e809a4979227c51bb19cff63
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97200196"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102236551"
 ---
-# <a name="gl-whole-program-optimization"></a>/GL (プログラム全体の最適化)
+# <a name="gl-whole-program-optimization"></a>`/GL` (プログラム全体の最適化)
 
 プログラム全体の最適化を有効にします。
 
 ## <a name="syntax"></a>構文
 
-```
-/GL[-]
-```
+> **`/GL`**[**`-`**]
 
 ## <a name="remarks"></a>解説
 
 プログラム全体の最適化により、コンパイラはプログラム内のすべてのモジュールに関する情報を使用して最適化を実行できます。 プログラム全体の最適化を行わないと、最適化はモジュール単位 (コンパイル単位) ごとに実行されます。
 
-プログラム全体の最適化は既定でオフになっており、明示的に有効にする必要があります。 ただし、 **/GL-** を使用して明示的に無効にすることもできます。
+プログラム全体の最適化は既定でオフになっており、明示的に有効にする必要があります。 ただし、を使用して明示的に無効にすることもでき **`/GL-`** ます。
 
 すべてのモジュールに関する情報を使用して、コンパイラは次のことを実行できます。
 
@@ -39,31 +36,31 @@ ms.locfileid: "97200196"
 
 - グローバルデータの変更を追跡し、負荷とストアの数を減らすことができるようにします。
 
-- ポインターの逆参照によって変更された項目のセットを追跡し、負荷とストアの数を減らすことで、より適切なジョブを実行します。
+- ポインターの逆参照によって変更された項目のセットを追跡し、必要な読み込みとストアを減らします。
 
 - 関数が別のモジュールで定義されている場合でも、モジュール内の関数をインライン化します。
 
-**/gl** を使用して生成された .obj ファイルは、 [EDITBIN](editbin-reference.md)および [DUMPBIN](dumpbin-reference.md)のようなリンカーユーティリティでは使用できません。
+*`.obj`* で生成されたファイルは **`/GL`** 、やなどのリンカーユーティリティでは使用できません [`EDITBIN`](editbin-reference.md) [`DUMPBIN`](dumpbin-reference.md) 。
 
-**/Gl** と [/c](c-compile-without-linking.md)を使用してプログラムをコンパイルする場合は、/ltcg リンカーオプションを使用して出力ファイルを作成する必要があります。
+とを使用してプログラムをコンパイルする場合は、 **`/GL`** [`/c`](c-compile-without-linking.md) /ltcg リンカーオプションを使用して出力ファイルを作成する必要があります。
 
-[/Zi](z7-zi-zi-debug-information-format.md)を **/gl** と共に使用することはできません
+[`/ZI`](z7-zi-zi-debug-information-format.md) と共に使用することはできません。 **`/GL`**
 
-現在のバージョンで **/gl** を使用して生成されたファイルの形式は、以降のバージョンの Visual C++ では読み取ることができません。 **/Gl** を使用して生成された .obj ファイルで構成された .lib ファイルは、ユーザーが使用する予定のすべて Visual C++ のバージョンの .lib ファイルのコピーを提供するのではなく、今後も配布しないようにする必要があります。
+現在のバージョンので生成されるファイルの形式は、 **`/GL`** 多くの場合、新しいバージョンの Visual Studio および MSVC ツールセットでは読み取ることができません。 すべてのバージョンの Visual Studio でファイルのコピーを配布する場合は *`.lib`* 、ユーザーが使用する予定で、今後は、 *`.lib`* *`.obj`* によって生成されるファイルで構成されたファイルを配布しないようにし **`/GL`** ます。 詳細については、「 [バイナリ互換性に関する制限事項](../../porting/binary-compat-2015-2017.md#restrictions)」を参照してください。
 
-**/gl** ファイルとプリコンパイル済みヘッダーファイルを使用して生成された .obj ファイルは **、その .lib** ファイルを生成したコンピューター上でリンクされていない限り、.lib ファイルのビルドには使用しないでください。 .Obj ファイルのプリコンパイル済みヘッダーファイルからの情報は、リンク時に必要になります。
+*`.obj`* およびプリコンパイル済みヘッダーファイルによって生成されたファイルは、ファイルを作成し **`/GL`** たのと *`.lib`* *`.lib`* 同じコンピューター上にリンクされていない限り、ファイルのビルドには使用でき **`/GL`** *`.obj`* ません。 *`.obj`* ファイルのプリコンパイル済みヘッダーファイルからの情報は、リンク時に必要です。
 
-で使用できる最適化と、プログラム全体の最適化の制限事項の詳細については、「 [/ltcg](ltcg-link-time-code-generation.md)」を参照してください。  **/Gl** では、プロファイルガイド付き最適化も使用できます。/LTCG. を参照してください  ガイド付き最適化のプロファイル用にコンパイルするときに、プロファイルガイド付き最適化から関数順序を設定する場合は、 [/gy](gy-enable-function-level-linking.md) または/gyを暗黙的に指定するコンパイラオプションを使用してコンパイルする必要があります。
+で使用できる最適化と、プログラム全体の最適化の制限事項の詳細については、「」を参照してください [`/LTCG`](ltcg-link-time-code-generation.md) 。  **`/GL`** では、ガイド付き最適化のプロファイルも使用できます。 ガイド付き最適化のプロファイル用にコンパイルするときに、プロファイルガイド付き最適化から関数の順序を設定する場合 [`/Gy`](gy-enable-function-level-linking.md) は、または/gyを暗黙的に使用するコンパイラオプションを指定してコンパイルする必要があります。
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのリンカー オプションを設定するには
 
-1. 開発環境で **/gl** を指定する方法については、「 [/ltcg (リンク時のコード生成)](ltcg-link-time-code-generation.md) 」を参照してください。
+開発環境でを指定する方法の詳細につい **`/GL`** ては、「 [ `/LTCG` (リンク時のコード生成)](ltcg-link-time-code-generation.md) 」を参照してください。
 
 ### <a name="to-set-this-linker-option-programmatically"></a>このリンカーをコードから設定するには
 
-1. 以下を参照してください。<xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.WholeProgramOptimization%2A>
+- 以下を参照してください。<xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.WholeProgramOptimization%2A>
 
 ## <a name="see-also"></a>関連項目
 
-[MSVC コンパイラ オプション](compiler-options.md)<br/>
-[MSVC Compiler Command-Line 構文](compiler-command-line-syntax.md)
+[MSVC コンパイラオプション](compiler-options.md)\
+[MSVC コンパイラのコマンドライン構文](compiler-command-line-syntax.md)

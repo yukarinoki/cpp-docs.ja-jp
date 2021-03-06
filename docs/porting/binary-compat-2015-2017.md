@@ -4,12 +4,12 @@ description: Visual Studio 2015、2017、および2019でのコンパイル済�
 ms.date: 02/17/2021
 helpviewer_keywords:
 - binary compatibility, Visual C++
-ms.openlocfilehash: d8c4c0312003496db522e59dba84a9633e94b1b4
-ms.sourcegitcommit: 5efc34c2b98d4d0d3e41aec38b213f062c19d078
+ms.openlocfilehash: a91e339e70843087adc12238edac91332c1a4453
+ms.sourcegitcommit: c0c9cdae79f19655e809a4979227c51bb19cff63
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "101844521"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102236577"
 ---
 # <a name="c-binary-compatibility-between-visual-studio-2015-2017-and-2019"></a>Visual Studio 2015、2017、および2019間の C++ バイナリの互換性
 
@@ -17,7 +17,7 @@ Visual Studio 2013 以前の Microsoft C++ (MSVC) コンパイラツールセッ
 
 この動作は、Visual Studio 2015、2017、および2019で変更されています。 これらのいずれかのバージョンのコンパイラによってコンパイルされたランタイムライブラリとアプリは、バイナリと互換性があります。 これは、3つのバージョンすべてで14から始まる C++ ツールセットのメジャー番号に反映されます。 (ツールセットのバージョンは、Visual Studio 2015 の場合は v140、2017の場合は v141、2019の場合は v142) です。 たとえば、Visual Studio 2015 によってビルドされたサードパーティ製のライブラリがあるとします。 Visual Studio 2017 または2019でビルドされたアプリケーションで引き続き使用できます。 一致するツールセットを使用して再コンパイルする必要はありません。 Microsoft Visual C++ 再頒布可能パッケージ (再頒布可能パッケージ) の最新バージョンは、すべてのバージョンで動作します。
 
-## <a name="restrictions-on-binary-compatibility"></a>バイナリ互換性に関する制限事項
+## <a name="restrictions-on-binary-compatibility"></a><a name="restrictions"></a> バイナリ互換性に関する制限事項
 
 V140、v141、v142 の各ツールセットとマイナー番号付きバージョンの更新の間のバイナリの互換性には、次の3つの重要な制限があります。
 

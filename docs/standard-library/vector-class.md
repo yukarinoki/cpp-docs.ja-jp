@@ -1,7 +1,7 @@
 ---
 title: vector クラス
 description: クラス vector の Microsoft C++ 標準ライブラリ実装のリファレンスです。
-ms.date: 02/07/2020
+ms.date: 02/23/2021
 f1_keywords:
 - vector/std::vector::allocator_type
 - vector/std::vector::const_iterator
@@ -86,15 +86,14 @@ helpviewer_keywords:
 - std::vector [C++], shrink_to_fit
 - std::vector [C++], size
 - std::vector [C++], swap
-ms.assetid: a3e0a8f8-7565-4fe0-93e4-e4d74ae1b70d
-ms.openlocfilehash: 6cc8378fee72304bb909c3baacc305d446474bfa
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: c1132b0b8f975cbe0185720c46316446db0506d5
+ms.sourcegitcommit: c0c9cdae79f19655e809a4979227c51bb19cff63
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88840038"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102236778"
 ---
-# <a name="vector-class"></a>vector クラス
+# <a name="vector-class"></a>`vector` クラス
 
 C++ 標準ライブラリの vector クラスは、シーケンスコンテナーのクラステンプレートです。 ベクターは、指定された型の要素を線形の配置に格納し、任意の要素に対する高速なランダムアクセスを可能にします。 ベクターは、ランダムアクセスのパフォーマンスが premium である場合に、シーケンスに適したコンテナーです。
 
@@ -107,21 +106,21 @@ class vector
 
 ### <a name="parameters"></a>パラメーター
 
-*各種*\
+*`Type`*\
 ベクターに格納される要素のデータ型。
 
-*アロケーター*\
+*`Allocator`*\
 メモリのベクターの割り当てと解放に関する詳細をカプセル化する、格納されたアロケーター オブジェクトを表す型。 この引数は省略可能であり、既定値は `allocator<Type>` です。
 
 ## <a name="remarks"></a>解説
 
-ベクターでは、シーケンスの末尾での挿入および削除に要する時間が一定です。 ベクターの途中での要素の挿入または削除には、線形時間を要します。 [Deque クラス](../standard-library/deque-class.md)コンテナーは、シーケンスの先頭と末尾での挿入および削除により高速になります。 [リストクラス](../standard-library/list-class.md)コンテナーは、シーケンス内の任意の場所で挿入と削除を高速に行うことができます。
+ベクターでは、シーケンスの末尾での挿入および削除に要する時間が一定です。 ベクターの途中での要素の挿入または削除には、線形時間を要します。 [ `deque` クラス](../standard-library/deque-class.md)コンテナーは、シーケンスの先頭と末尾での挿入および削除により高速になります。 [ `list` クラス](../standard-library/list-class.md)コンテナーは、シーケンス内の任意の場所で挿入および削除を高速に行うことができます。
 
 ベクターの再割り当てが発生するのは、メンバー関数がベクター オブジェクトに含まれるシーケンスを現在の記憶域容量を超えて増やす必要がある場合です。 その他の挿入や消去により、シーケンス内のさまざまな記憶域のアドレスが変わることがあります。 そのような場合は常に、シーケンスのうち変更された部分を指す反復子または参照が無効になります。 再割り当てが発生しない場合は、挿入/削除が行われた地点より前の反復子および参照のみ有効のままになります。
 
-[Vector \<bool> クラス](../standard-library/vector-bool-class.md)は、型の要素のクラステンプレートベクターを完全に特殊化したものです **`bool`** 。 これには、特殊化によって使用される基になる型のアロケーターがあります。
+[ `vector<bool>` クラス](../standard-library/vector-bool-class.md)は、型の要素のクラステンプレートベクターを完全に特殊化したものです **`bool`** 。 これには、特殊化によって使用される基になる型のアロケーターがあります。
 
-[ベクター \<bool> 参照クラス](../standard-library/vector-bool-class.md#reference_class)は、オブジェクトが vector オブジェクト内の要素 (単一ビット) への参照を提供できる、入れ子になったクラスです \<bool> 。
+[ `vector<bool>` Reference クラス](../standard-library/vector-bool-class.md#reference_class)は、オブジェクトが vector オブジェクト内の要素 (単一ビット) への参照を提供できる、入れ子になったクラスです \<bool> 。
 
 ## <a name="members"></a>メンバー
 
@@ -129,67 +128,67 @@ class vector
 
 |名前|説明|
 |-|-|
-|[ベクトル](#vector)|特定のサイズのベクター、特定の値の要素を持つベクター、特定の `allocator` を持つベクター、または他のベクターのコピーとして、ベクターを構築します。|
+|[`vector`](#vector)|特定のサイズのベクター、特定の値の要素を持つベクター、特定の `allocator` を持つベクター、または他のベクターのコピーとして、ベクターを構築します。|
 
 ### <a name="typedefs"></a>Typedefs
 
 |名前|説明|
 |-|-|
-|[allocator_type](#allocator_type)|vector オブジェクトの `allocator` クラスを表す型。|
-|[const_iterator](#const_iterator)|ベクター内の要素を読み取ることができるランダムアクセス反復子を提供する型 **`const`** 。|
-|[const_pointer](#const_pointer)|ベクター内の要素へのポインターを提供する型 **`const`** 。|
-|[const_reference](#const_reference)|ベクターに格納されている要素への参照を提供する型 **`const`** 。 これは、操作の読み取りと実行に使用され **`const`** ます。|
-|[const_reverse_iterator](#const_reverse_iterator)|ベクター内の任意の要素を読み取ることができるランダムアクセス反復子を提供する型 **`const`** 。|
-|[difference_type](#difference_type)|ベクターに含まれる 2 つの要素のアドレスの差を提供する型。|
-|[反](#iterator)|ベクター内の任意の要素を読み取り、または変更できるランダム アクセス反復子を提供する型。|
-|[pointer](#pointer)|ベクター内の要素へのポインターを提供する型。|
-|[reference](#reference)|ベクターに格納されている要素への参照を提供する型。|
-|[reverse_iterator](#reverse_iterator)|反転ベクター内の要素を読み取り、または変更できるランダム アクセス反復子を提供する型。|
-|[size_type](#size_type)|ベクター内の要素の数をカウントする型。|
-|[value_type](#value_type)|ベクター内に格納されているデータ型を表す型。|
+|`[allocator_type]`(#allocator_type)|vector オブジェクトの `allocator` クラスを表す型。|
+|[`const_iterator`](#const_iterator)|ベクター内の要素を読み取ることができるランダムアクセス反復子を提供する型 **`const`** 。|
+|[`const_pointer`](#const_pointer)|ベクター内の要素へのポインターを提供する型 **`const`** 。|
+|[`const_reference`](#const_reference)|ベクターに格納されている要素への参照を提供する型 **`const`** 。 これは、操作の読み取りと実行に使用され **`const`** ます。|
+|[`const_reverse_iterator`](#const_reverse_iterator)|ベクター内の任意の要素を読み取ることができるランダムアクセス反復子を提供する型 **`const`** 。|
+|[`difference_type`](#difference_type)|ベクターに含まれる 2 つの要素のアドレスの差を提供する型。|
+|[`iterator`](#iterator)|ベクター内の任意の要素を読み取り、または変更できるランダム アクセス反復子を提供する型。|
+|[`pointer`](#pointer)|ベクター内の要素へのポインターを提供する型。|
+|[`reference`](#reference)|ベクターに格納されている要素への参照を提供する型。|
+|[`reverse_iterator`](#reverse_iterator)|反転ベクター内の要素を読み取り、または変更できるランダム アクセス反復子を提供する型。|
+|[`size_type`](#size_type)|ベクター内の要素の数をカウントする型。|
+|[`value_type`](#value_type)|ベクター内に格納されているデータ型を表す型。|
 
-### <a name="functions"></a>Functions
-
-|名前|説明|
-|-|-|
-|[assign](#assign)|ベクターを消去し、空のベクターに指定された要素をコピーします。|
-|[at](#at)|ベクター内の指定位置にある要素への参照を返します。|
-|[戻る](#back)|ベクターの最後の要素への参照を返します。|
-|[初め](#begin)|ベクター内の最初の要素を示すランダム アクセス反復子を返します。|
-|[capacity](#capacity)|追加の記憶域を割り当てずにベクターに収容できる要素の数を返します。|
-|[cbegin](#cbegin)|ベクター内の最初の要素を示すランダム アクセスの定数反復子を返します。|
-|[cend](#cend)|ベクターの末尾の次の位置を指し示すランダム アクセス定数反復子を返します。|
-|[crbegin](#crbegin)|反転ベクター内の最初の要素への定数反復子を返します。|
-|[crend](#crend)|反転ベクター内の末尾の要素への定数反復子を返します。|
-|[オフ](#clear)|ベクターの要素を消去します。|
-|[data](#data)|ベクター内の最初の要素へのポインターを返します。|
-|[emplace](#emplace)|その場で構築した要素をベクター内の指定位置に挿入します。|
-|[emplace_back](#emplace_back)|その場で構築した要素をベクターの末尾に追加します。|
-|[empty](#empty)|ベクター コンテナーが空かどうかをテストします。|
-|[end](#end)|ベクターの末尾を指し示すランダム アクセス反復子を返します。|
-|[erase](#erase)|指定した位置からベクター内の要素または要素範囲を削除します。|
-|[外側](#front)|ベクター内の最初の要素への参照を返します。|
-|[get_allocator](#get_allocator)|ベクターが使用する `allocator` クラスにオブジェクトを返します。|
-|[insert](#insert)|ベクター内の指定位置に 1 つまたは複数の要素を挿入します。|
-|[max_size](#max_size)|ベクターの最大長を返します。|
-|[pop_back](#pop_back)|ベクトルの末尾の要素を削除します。|
-|[push_back](#push_back)|ベクターの末尾に要素を追加します。|
-|[rbegin](#rbegin)|逆順のベクターの最初の要素への反復子を返します。|
-|[rend](#rend)|反転ベクター内の末尾に反復子を返します。|
-|[予約](#reserve)|ベクター オブジェクトに最小の長さの記憶域を予約します。|
-|[サイズ](#resize)|ベクターの新しいサイズを指定します。|
-|[shrink_to_fit](#shrink_to_fit)|余分なキャパシティを破棄します。|
-|[size](#size)|ベクター内の要素の数を返します。|
-|[スワップ](#swap)|2 つのベクターの要素を交換します。|
-
-### <a name="operators"></a>演算子
+### <a name="functions"></a>関数
 
 |名前|説明|
 |-|-|
-|[operator&#91;&#93;](#op_at)|指定した位置における vector 要素への参照を返します。|
-|[operator =](#op_eq)|ベクターの要素を、別のベクターのコピーで置き換えます。|
+|[`assign`](#assign)|ベクターを消去し、空のベクターに指定された要素をコピーします。|
+|[`at`](#at)|ベクター内の指定位置にある要素への参照を返します。|
+|[`back`](#back)|ベクターの最後の要素への参照を返します。|
+|[`begin`](#begin)|ベクター内の最初の要素を示すランダム アクセス反復子を返します。|
+|[`capacity`](#capacity)|追加の記憶域を割り当てずにベクターに収容できる要素の数を返します。|
+|[`cbegin`](#cbegin)|ベクター内の最初の要素を示すランダム アクセスの定数反復子を返します。|
+|[`cend`](#cend)|ベクターの末尾の次の位置を指し示すランダム アクセス定数反復子を返します。|
+|[`crbegin`](#crbegin)|反転ベクター内の最初の要素への定数反復子を返します。|
+|[`crend`](#crend)|反転ベクター内の末尾の要素への定数反復子を返します。|
+|[`clear`](#clear)|ベクターの要素を消去します。|
+|[`data`](#data)|ベクター内の最初の要素へのポインターを返します。|
+|[`emplace`](#emplace)|その場で構築した要素をベクター内の指定位置に挿入します。|
+|[`emplace_back`](#emplace_back)|その場で構築した要素をベクターの末尾に追加します。|
+|[`empty`](#empty)|ベクター コンテナーが空かどうかをテストします。|
+|[`end`](#end)|ベクターの末尾を指し示すランダム アクセス反復子を返します。|
+|[`erase`](#erase)|指定した位置からベクター内の要素または要素範囲を削除します。|
+|[`front`](#front)|ベクター内の最初の要素への参照を返します。|
+|[`get_allocator`](#get_allocator)|ベクターが使用する `allocator` クラスにオブジェクトを返します。|
+|[`insert`](#insert)|ベクター内の指定した位置に1つまたは複数の要素を挿入します。|
+|[`max_size`](#max_size)|ベクターの最大長を返します。|
+|[`pop_back`](#pop_back)|ベクトルの末尾の要素を削除します。|
+|[`push_back`](#push_back)|ベクターの末尾に要素を追加します。|
+|[`rbegin`](#rbegin)|逆順のベクターの最初の要素への反復子を返します。|
+|[`rend`](#rend)|反転ベクター内の末尾に反復子を返します。|
+|[`reserve`](#reserve)|ベクター オブジェクトに最小の長さの記憶域を予約します。|
+|[`resize`](#resize)|ベクターの新しいサイズを指定します。|
+|[`shrink_to_fit`](#shrink_to_fit)|余分なキャパシティを破棄します。|
+|[`size`](#size)|ベクター内の要素の数を返します。|
+|[`swap`](#swap)|2 つのベクターの要素を交換します。|
 
-## <a name="allocator_type"></a><a name="allocator_type"></a> allocator_type
+### <a name="operators"></a>オペレーター
+
+|名前|説明|
+|-|-|
+|[`operator[]`](#op_at)|指定した位置における vector 要素への参照を返します。|
+|[`operator=`](#op_eq)|ベクターの要素を、別のベクターのコピーで置き換えます。|
+
+## <a name="allocator_type"></a><a name="allocator_type"></a> `allocator_type`
 
 ベクター オブジェクトのアロケーター クラスを表す型。
 
@@ -205,7 +204,7 @@ typedef Allocator allocator_type;
 
 `allocator_type` の使用例については、[get_allocator](#get_allocator) の例をご覧ください。
 
-## <a name="assign"></a><a name="assign"></a> 割り当てる
+## <a name="assign"></a><a name="assign"></a> `assign`
 
 ベクターを消去し、空のベクターに指定された要素をコピーします。
 
@@ -219,19 +218,19 @@ void assign(InputIterator first, InputIterator last);
 
 ### <a name="parameters"></a>パラメーター
 
-*まずは*\
+*`first`*\
 コピーする要素範囲内の最初の要素の位置。
 
-*前の*\
+*`last`*\
 コピーする要素範囲を超える最初の要素の位置。
 
-*数*\
+*`count`*\
 ベクターに挿入される要素のコピーの数。
 
-*数値*\
+*`value`*\
 ベクターに挿入される要素の値。
 
-*init_list*\
+*`init_list`*\
 挿入する要素を含む initializer_list。
 
 ### <a name="remarks"></a>解説
@@ -285,7 +284,7 @@ int main()
 }
 ```
 
-## <a name="at"></a><a name="at"></a> (
+## <a name="at"></a><a name="at"></a> `at`
 
 ベクター内の指定位置にある要素への参照を返します。
 
@@ -297,12 +296,12 @@ const_reference at(size_type position) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*移動*\
+*`position`*\
 ベクター内で参照する要素を示す添字または位置の番号。
 
 ### <a name="return-value"></a>戻り値
 
-引数に記述された要素への参照。 *Position*がベクターのサイズより大きい場合、は `at` 例外をスローします。
+引数に記述された要素への参照。 *`position`* がベクターのサイズより大きい場合、は `at` 例外をスローします。
 
 ### <a name="remarks"></a>解説
 
@@ -336,7 +335,7 @@ The first element is 10
 The second element is 20
 ```
 
-## <a name="back"></a><a name="back"></a> 戻る
+## <a name="back"></a><a name="back"></a> `back`
 
 ベクターの最後の要素への参照を返します。
 
@@ -354,7 +353,7 @@ const_reference back() const;
 
 の戻り値がに割り当てられている場合、 `back` `const_reference` vector オブジェクトを変更することはできません。 `back` の戻り値が `reference` に割り当てられている場合、vector オブジェクトを変更できます。
 
-[_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) を 1 または 2 に定義してコンパイルすると、空のベクター内の要素にアクセスしようとした場合に実行時エラーが発生します。 詳細については、「チェックを行う [反復子](../standard-library/checked-iterators.md)」を参照してください。
+1または2として定義されたを使用してコンパイルした場合 [`_ITERATOR_DEBUG_LEVEL`](../standard-library/iterator-debug-level.md) 、空のベクター内の要素にアクセスしようとすると、ランタイムエラーが発生します。 詳細については、「チェックを行う [反復子](../standard-library/checked-iterators.md)」を参照してください。
 
 ### <a name="example"></a>例
 
@@ -380,7 +379,7 @@ int main() {
 }
 ```
 
-## <a name="begin"></a><a name="begin"></a> 初め
+## <a name="begin"></a><a name="begin"></a> `begin`
 
 ベクター内の最初の要素を示すランダム アクセス反復子を返します。
 
@@ -392,11 +391,11 @@ iterator begin();
 
 ### <a name="return-value"></a>戻り値
 
-`vector` 内の最初の要素、または空の `vector` の次の位置を指すランダム アクセス反復子。 必ず [vector:: end](#end) と共に返される値を比較して、有効であることを確認します。
+`vector` 内の最初の要素、または空の `vector` の次の位置を指すランダム アクセス反復子。 が有効である [`vector::end`](#end) ことを確認するには、常にとして返された値を比較します。
 
 ### <a name="remarks"></a>解説
 
-の戻り値 `begin` が [vector:: const_iterator](#const_iterator)に割り当てられている場合、その `vector` オブジェクトを変更することはできません。 `begin` の戻り値が [vector::iterator](#iterator) に割り当てられている場合、`vector` オブジェクトを変更できます。
+の戻り値がに割り当てられている場合、 `begin` [`vector::const_iterator`](#const_iterator) オブジェクトを `vector` 変更することはできません。 の戻り値がに割り当てられている場合は、 `begin` [`vector::iterator`](#iterator) オブジェクトを `vector` 変更できます。
 
 ### <a name="example"></a>例
 
@@ -443,7 +442,7 @@ The vector c1 contains elements: 1 2
 The vector c1 now contains elements: 20 2
 ```
 
-## <a name="capacity"></a><a name="capacity"></a> capacity
+## <a name="capacity"></a><a name="capacity"></a> `capacity`
 
 追加の記憶域を割り当てずにベクターに収容できる要素の数を返します。
 
@@ -457,7 +456,7 @@ size_type capacity() const;
 
 ### <a name="remarks"></a>解説
 
-増加分を収容できる十分なメモリが割り当てられている場合は、メンバー関数 [resize](#resize) のほうが効率的に動作します。 割り当てられるメモリの量を指定するには、メンバー関数 [reserve](#reserve) を使用します。
+このメンバー関数は、 [`resize`](#resize) それに対応するために十分なメモリが割り当てられると、より効率的になります。 メンバー関数を使用し [`reserve`](#reserve) て、割り当てられるメモリの量を指定します。
 
 ### <a name="example"></a>例
 
@@ -487,7 +486,7 @@ The length of storage allocated is 1.
 The length of storage allocated is now 2.
 ```
 
-## <a name="cbegin"></a><a name="cbegin"></a> cbegin
+## <a name="cbegin"></a><a name="cbegin"></a> `cbegin`
 
 **`const`** 範囲内の最初の要素を指す反復子を返します。
 
@@ -503,7 +502,7 @@ const_iterator cbegin() const;
 
 の戻り値を使用して、 `cbegin` 範囲内の要素を変更することはできません。
 
-`begin()` メンバー関数の代わりにこのメンバー関数を使用して、戻り値が `const_iterator` になることを保証できます。 通常は、次の例に示すように [auto](../cpp/auto-cpp.md) 型推論キーワードと共に使用します。 この例では、 `Container` **`const`** とをサポートする任意の種類の変更可能な (非) コンテナーである `begin()` と見なし `cbegin()` ます。
+`begin()` メンバー関数の代わりにこのメンバー関数を使用して、戻り値が `const_iterator` になることを保証できます。 通常は、 [`auto`](../cpp/auto-cpp.md) 次の例に示すように、型推論キーワードを使用してで使用されます。 この例では、 `Container` **`const`** とをサポートする任意の種類の変更可能な (非) コンテナーである `begin()` と見なし `cbegin()` ます。
 
 ```cpp
 auto i1 = Container.begin();
@@ -513,9 +512,9 @@ auto i2 = Container.cbegin();
 // i2 is Container<T>::const_iterator
 ```
 
-## <a name="cend"></a><a name="cend"></a> cend
+## <a name="cend"></a><a name="cend"></a> `cend`
 
-**`const`** 範囲内の最後の要素の次の位置を指す反復子を返します。
+**`const`** ベクターの最後の要素の次の要素を指す、末尾の反復子を返します。
 
 ```cpp
 const_iterator cend() const;
@@ -523,13 +522,13 @@ const_iterator cend() const;
 
 ### <a name="return-value"></a>戻り値
 
-**`const`** 範囲の末尾の次の位置を指し示すランダムアクセス反復子。
+`const`ベクターの最後の反復子。 ベクターの最後の要素の次の要素を指します。 この要素はプレースホルダーであるため、逆参照しないでください。 比較にのみ使用してください。 ベクターが空の場合は、 `vector::cend() == vector::cbegin()` 。
 
 ### <a name="remarks"></a>解説
 
 `cend` は、反復子が範囲の末尾を超えたかどうかをテストするために使用されます。
 
-`end()` メンバー関数の代わりにこのメンバー関数を使用して、戻り値が `const_iterator` になることを保証できます。 通常は、次の例に示すように [auto](../cpp/auto-cpp.md) 型推論キーワードと共に使用します。 この例では、 `Container` **`const`** とをサポートする任意の種類の変更可能な (非) コンテナーである `end()` と見なし `cend()` ます。
+`end()` メンバー関数の代わりにこのメンバー関数を使用して、戻り値が `const_iterator` になることを保証できます。 通常は、 [`auto`](../cpp/auto-cpp.md) 次の例に示すように、型推論キーワードと共に使用されます。 この例では、 `Container` **`const`** とをサポートする任意の種類の変更可能な (非) コンテナーである `end()` と見なし `cend()` ます。
 
 ```cpp
 auto i1 = Container.end();
@@ -541,7 +540,7 @@ auto i2 = Container.cend();
 
 によって返された値を `cend` 逆参照することはできません。 比較にのみ使用してください。
 
-## <a name="clear"></a><a name="clear"></a> クリア
+## <a name="clear"></a><a name="clear"></a> `clear`
 
 ベクターの要素を消去します。
 
@@ -577,7 +576,7 @@ The size of v1 is 3
 The size of v1 after clearing is 0
 ```
 
-## <a name="const_iterator"></a><a name="const_iterator"></a> const_iterator
+## <a name="const_iterator"></a><a name="const_iterator"></a> `const_iterator`
 
 ベクター内の要素を読み取ることができるランダムアクセス反復子を提供する型 **`const`** 。
 
@@ -593,7 +592,7 @@ typedef implementation-defined const_iterator;
 
 `const_iterator` の使用例については、[back](#back) の例をご覧ください。
 
-## <a name="const_pointer"></a><a name="const_pointer"></a> const_pointer
+## <a name="const_pointer"></a><a name="const_pointer"></a> `const_pointer`
 
 ベクター内の要素へのポインターを提供する型 **`const`** 。
 
@@ -607,7 +606,7 @@ typedef typename Allocator::const_pointer const_pointer;
 
 ベクター要素にアクセスするために、より一般的に使用されるのは[反復子](#iterator)です。
 
-## <a name="const_reference"></a><a name="const_reference"></a> const_reference
+## <a name="const_reference"></a><a name="const_reference"></a> `const_reference`
 
 ベクターに格納されている要素への参照を提供する型 **`const`** 。 これは、操作の読み取りと実行に使用され **`const`** ます。
 
@@ -651,7 +650,7 @@ The first element is 10
 The second element is 20
 ```
 
-## <a name="const_reverse_iterator"></a><a name="const_reverse_iterator"></a> const_reverse_iterator
+## <a name="const_reverse_iterator"></a><a name="const_reverse_iterator"></a> `const_reverse_iterator`
 
 ベクター内の任意の要素を読み取ることができるランダムアクセス反復子を提供する型 **`const`** 。
 
@@ -665,9 +664,9 @@ typedef std::reverse_iterator<const_iterator> const_reverse_iterator;
 
 ### <a name="example"></a>例
 
-反復子を宣言して使用する方法の例については、[rbegin](#rbegin) をご覧ください。
+[`rbegin`](#rbegin)反復子を宣言して使用する方法の例については、「」を参照してください。
 
-## <a name="crbegin"></a><a name="crbegin"></a> crbegin
+## <a name="crbegin"></a><a name="crbegin"></a> `crbegin`
 
 反転ベクター内の最初の要素への定数反復子を返します。
 
@@ -677,7 +676,7 @@ const_reverse_iterator crbegin() const;
 
 ### <a name="return-value"></a>戻り値
 
-反転された[ベクター](../standard-library/vector-class.md)の最初の要素を指すか、反転されていない `vector` の最後の要素だったものを指す、定数逆順ランダム アクセス反復子。
+反転された内の最初の要素を指す定数逆順ランダムアクセス反復子。反転されていない [`vector`](../standard-library/vector-class.md) 内の最後の要素だったものを指す `vector` 。
 
 ### <a name="remarks"></a>解説
 
@@ -716,9 +715,9 @@ The first element of vector is 1.
 The first element of the reversed vector is 2.
 ```
 
-## <a name="crend"></a><a name="crend"></a> crend
+## <a name="crend"></a><a name="crend"></a> `crend`
 
-反転されたベクター内の最後の要素の次の位置を指す定数反復子を返します。
+反転された `const` ベクターの最後の要素の次の要素を指す最後の逆順反復子を返します。
 
 ```cpp
 const_reverse_iterator crend() const;
@@ -726,11 +725,11 @@ const_reverse_iterator crend() const;
 
 ### <a name="return-value"></a>戻り値
 
-逆順の[ベクター](../standard-library/vector-class.md)内の最後の要素の次の位置 (通常の順序の `vector` 内の最初の要素の前の位置) を指す定数逆順ランダム アクセス反復子。
+反転され `const` たベクターの逆順の終了反復子。 反転されたベクターの最後の要素の次の要素を指します。これは、反転されていないベクターの最初の要素の前の要素と同じです。 この要素はプレースホルダーであるため、逆参照しないでください。 比較にのみ使用してください。
 
 ### <a name="remarks"></a>解説
 
-`crend` は、[vector::cend](#cend) が `vector` で使用されるときと同様の方法により、逆順の `vector` で使用されます。
+`crend` は、と共に使用されるのと同じように、反転されたで使用され `vector` [`vector::cend`](#cend) `vector` ます。
 
 戻り値が `crend` (適切にデクリメントされた) の場合、 `vector` オブジェクトを変更することはできません。
 
@@ -765,7 +764,7 @@ int main( )
 1
 ```
 
-## <a name="data"></a><a name="data"></a> データ
+## <a name="data"></a><a name="data"></a> `data`
 
 ベクター内の最初の要素へのポインターを返します。
 
@@ -777,7 +776,7 @@ pointer data();
 
 ### <a name="return-value"></a>戻り値
 
-[ベクター](../standard-library/vector-class.md)内の最初の要素へのポインター、または空の `vector` の次の位置を指すポインター。
+内の最初の要素へのポインター、または空のの次の [`vector`](../standard-library/vector-class.md) 位置を指すポインター `vector` 。
 
 ### <a name="example"></a>例
 
@@ -821,7 +820,7 @@ The vector c1 contains elements: 1 2
 The vector c1 now contains elements: 20 2
 ```
 
-## <a name="difference_type"></a><a name="difference_type"></a> difference_type
+## <a name="difference_type"></a><a name="difference_type"></a> `difference_type`
 
 同じベクター内の要素を参照する 2 つの反復子の違いを提供する型。
 
@@ -878,7 +877,7 @@ The number '20' is in c1 collection 2 times.
 The number '30' is in c1 collection 3 times.
 ```
 
-## <a name="emplace"></a><a name="emplace"></a> emplace
+## <a name="emplace"></a><a name="emplace"></a> `emplace`
 
 その場で構築した要素をベクター内の指定位置に挿入します。
 
@@ -891,10 +890,10 @@ iterator emplace(
 
 ### <a name="parameters"></a>パラメーター
 
-*移動*\
-最初の要素が挿入される [ベクター](../standard-library/vector-class.md) 内の位置。
+*`position`*\
+[`vector`](../standard-library/vector-class.md)最初の要素が挿入される内の位置。
 
-*value*\
+*`args`*\
 コンストラクター引数。 この関数は、提供された引数に基づいてコンストラクターのどのオーバーロードを呼び出すかを推測します。
 
 ### <a name="return-value"></a>戻り値
@@ -903,7 +902,7 @@ iterator emplace(
 
 ### <a name="remarks"></a>解説
 
-挿入操作には負荷がかかることがあります。パフォーマンスの詳細については、「 [vector クラス](../standard-library/vector-class.md) 」を参照してください `vector` 。
+挿入操作にはコストがかかる場合があります。パフォーマンスの詳細については、「 [ `vector` クラス](../standard-library/vector-class.md)」を参照してください `vector` 。
 
 ### <a name="example"></a>例
 
@@ -947,7 +946,7 @@ v1 = 10 20 30
 vv1[0] = 10 20 30
 ```
 
-## <a name="emplace_back"></a><a name="emplace_back"></a> emplace_back
+## <a name="emplace_back"></a><a name="emplace_back"></a> `emplace_back`
 
 その場で構築した要素をベクターの末尾に追加します。
 
@@ -958,7 +957,7 @@ void emplace_back(Types&&... args);
 
 ### <a name="parameters"></a>パラメーター
 
-*value*\
+*`args`*\
 コンストラクター引数。 この関数は、提供された引数に基づいてコンストラクターのどのオーバーロードを呼び出すかを推測します。
 
 ### <a name="example"></a>例
@@ -977,7 +976,7 @@ int main()
 }
 ```
 
-## <a name="empty"></a><a name="empty"></a> 指定
+## <a name="empty"></a><a name="empty"></a> `empty`
 
 ベクターが空かどうかをテストします。
 
@@ -1015,9 +1014,9 @@ int main( )
 The vector is not empty.
 ```
 
-## <a name="end"></a><a name="end"></a> 終わり
+## <a name="end"></a><a name="end"></a> `end`
 
-末尾超え反復子を返します。
+ベクターの最後の要素の次の要素を指す、末尾の反復子を返します。
 
 ```cpp
 iterator end();
@@ -1027,7 +1026,7 @@ const_iterator end() const;
 
 ### <a name="return-value"></a>戻り値
 
-ベクターの末尾超え反復子。 ベクターが空の場合は、 `vector::end() == vector::begin()` 。
+ベクターの最後の反復子。 ベクターの最後の要素の次の要素を指します。 この要素はプレースホルダーであるため、逆参照しないでください。 比較にのみ使用してください。 ベクターが空の場合は、 `vector::end() == vector::begin()` 。
 
 ### <a name="remarks"></a>解説
 
@@ -1059,7 +1058,7 @@ int main( )
 2
 ```
 
-## <a name="erase"></a><a name="erase"></a> 消去
+## <a name="erase"></a><a name="erase"></a> `erase`
 
 指定した位置からベクター内の要素または要素範囲を削除します。
 
@@ -1074,13 +1073,13 @@ iterator erase(
 
 ### <a name="parameters"></a>パラメーター
 
-*移動*\
+*`position`*\
 ベクターから削除する要素の位置。
 
-*まずは*\
+*`first`*\
 ベクターから削除する最初の要素の位置。
 
-*前の*\
+*`last`*\
 ベクターから削除する最後の要素の次の位置。
 
 ### <a name="return-value"></a>戻り値
@@ -1132,7 +1131,7 @@ v1 = 20 30 40 50
 v1 = 20 50
 ```
 
-## <a name="front"></a><a name="front"></a> 外側
+## <a name="front"></a><a name="front"></a> `front`
 
 ベクター内の最初の要素への参照を返します。
 
@@ -1148,9 +1147,9 @@ const_reference front() const;
 
 ### <a name="remarks"></a>解説
 
-の戻り値がに割り当てられている場合、 `front` `const_reference` vector オブジェクトを変更することはできません。 `front` の戻り値が **reference** に割り当てられている場合、vector オブジェクトを変更できます。
+の戻り値がに割り当てられている場合、 `front` `const_reference` vector オブジェクトを変更することはできません。 の戻り値がに割り当てられている場合、 `front` **`reference`** vector オブジェクトを変更できます。
 
-[_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) を 1 または 2 に定義してコンパイルすると、空のベクター内の要素にアクセスしようとした場合に実行時エラーが発生します。 詳細については、「チェックを行う [反復子](../standard-library/checked-iterators.md)」を参照してください。
+1または2として定義されたを使用してコンパイルした場合 [`_ITERATOR_DEBUG_LEVEL`](../standard-library/iterator-debug-level.md) 、空のベクター内の要素にアクセスしようとすると、ランタイムエラーが発生します。 詳細については、「チェックを行う [反復子](../standard-library/checked-iterators.md)」を参照してください。
 
 ### <a name="example"></a>例
 
@@ -1178,7 +1177,7 @@ int main( )
 }
 ```
 
-## <a name="get_allocator"></a><a name="get_allocator"></a> get_allocator
+## <a name="get_allocator"></a><a name="get_allocator"></a> `get_allocator`
 
 ベクターの構築に使用されるアロケーター オブジェクトのコピーを返します。
 
@@ -1217,7 +1216,7 @@ int main( )
 }
 ```
 
-## <a name="insert"></a><a name="insert"></a> insert
+## <a name="insert"></a><a name="insert"></a> `insert`
 
 ベクター内の指定した位置に要素、複数の要素、または要素の範囲を挿入します。
 
@@ -1244,19 +1243,19 @@ void insert(
 
 ### <a name="parameters"></a>パラメーター
 
-*移動*\
+*`position`*\
 最初の要素を挿入するベクター内の位置。
 
-*数値*\
+*`value`*\
 ベクターに挿入される要素の値。
 
-*数*\
+*`count`*\
 ベクターに挿入する要素の数。
 
-*まずは*\
+*`first`*\
 コピーする要素範囲内の最初の要素の位置。
 
-*前の*\
+*`last`*\
 コピーする要素範囲を超える最初の要素の位置。
 
 ### <a name="return-value"></a>戻り値
@@ -1265,7 +1264,7 @@ void insert(
 
 ### <a name="remarks"></a>解説
 
-事前条件として、 *最初* と *最後* はベクターに反復子を指定することはできません。また、動作は定義されていません。 挿入操作には負荷がかかることがあります。パフォーマンスの詳細については、「 [vector クラス](../standard-library/vector-class.md) 」を参照してください `vector` 。
+前提条件として、 *`first`* とは *`last`* ベクターに反復子を指定することはできません。また、動作は定義されていません。 挿入操作にはコストがかかる場合があります。パフォーマンスの詳細については、「 [ `vector` クラス](../standard-library/vector-class.md)」を参照してください `vector` 。
 
 ### <a name="example"></a>例
 
@@ -1331,7 +1330,7 @@ v1 = 10 50 50 40 50 50 50 50 20 30
 vv1[0] = 10 50 50 40 50 50 50 50 20 30
 ```
 
-## <a name="iterator"></a><a name="iterator"></a> 反
+## <a name="iterator"></a><a name="iterator"></a> `iterator`
 
 ベクター内の任意の要素を読み取り、または変更できるランダム アクセス反復子を提供する型。
 
@@ -1341,13 +1340,13 @@ typedef implementation-defined iterator;
 
 ### <a name="remarks"></a>解説
 
-**iterator** 型を使って要素の値を変更できます。
+型は、 **`iterator`** 要素の値を変更するために使用できます。
 
 ### <a name="example"></a>例
 
-[begin](#begin) の例をご覧ください。
+の例を参照してください [`begin`](#begin) 。
 
-## <a name="max_size"></a><a name="max_size"></a> max_size
+## <a name="max_size"></a><a name="max_size"></a> `max_size`
 
 ベクターの最大長を返します。
 
@@ -1378,7 +1377,7 @@ int main( )
 }
 ```
 
-## <a name="operator"></a><a name="op_at"></a> 演算子 []
+## <a name="operator"></a><a name="op_at"></a> `operator[]`
 
 指定した位置における vector 要素への参照を返します。
 
@@ -1390,7 +1389,7 @@ const_reference operator[](size_type position) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*移動*\
+*`position`*\
 vector 要素の位置。
 
 ### <a name="return-value"></a>戻り値
@@ -1401,7 +1400,7 @@ vector 要素の位置。
 
 の戻り値がに割り当てられている場合、 `operator[]` `const_reference` vector オブジェクトを変更することはできません。 `operator[]` の戻り値が参照に割り当てられている場合、vector オブジェクトを変更できます。
 
-[_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) を 1 または 2 に定義してコンパイルすると、ベクターの境界外の要素にアクセスしようとした場合に実行時エラーが発生します。 詳細については、「チェックを行う [反復子](../standard-library/checked-iterators.md)」を参照してください。
+1または2として定義されたを使用してコンパイルした場合 [`_ITERATOR_DEBUG_LEVEL`](../standard-library/iterator-debug-level.md) 、ベクターの境界の外にある要素にアクセスしようとすると、ランタイムエラーが発生します。 詳細については、「チェックを行う [反復子](../standard-library/checked-iterators.md)」を参照してください。
 
 ### <a name="example"></a>例
 
@@ -1424,7 +1423,7 @@ int main( )
 }
 ```
 
-## <a name="operator"></a><a name="op_eq"></a> operator =
+## <a name="operator"></a><a name="op_eq"></a> `operator=`
 
 ベクターの要素を、別のベクターのコピーで置き換えます。
 
@@ -1436,12 +1435,12 @@ vector& operator=(vector&& right);
 
 ### <a name="parameters"></a>パラメーター
 
-*そうです*\
-`vector` 内にコピーされる [vector](../standard-library/vector-class.md)。
+*`right`*\
+[`vector`](../standard-library/vector-class.md)にコピーされる `vector` 。
 
 ### <a name="remarks"></a>解説
 
-内の既存の要素を消去した後、 `vector` `operator=` の内容 *をに* コピーまたは移動し `vector` ます。
+内の既存の要素を消去した後、は `vector` `operator=` の内容をにコピーまたは移動し *`right`* `vector` ます。
 
 ### <a name="example"></a>例
 
@@ -1484,7 +1483,7 @@ int main( )
 }
 ```
 
-## <a name="pointer"></a><a name="pointer"></a> ポインター
+## <a name="pointer"></a><a name="pointer"></a> `pointer`
 
 ベクター内の要素へのポインターを提供する型。
 
@@ -1494,7 +1493,7 @@ typedef typename Allocator::pointer pointer;
 
 ### <a name="remarks"></a>解説
 
-**pointer** 型を使って要素の値を変更できます。
+型は、 **`pointer`** 要素の値を変更するために使用できます。
 
 ### <a name="example"></a>例
 
@@ -1526,7 +1525,7 @@ int main( )
 44
 ```
 
-## <a name="pop_back"></a><a name="pop_back"></a> pop_back
+## <a name="pop_back"></a><a name="pop_back"></a> `pop_back`
 
 ベクトルの末尾の要素を削除します。
 
@@ -1538,7 +1537,7 @@ void pop_back();
 
 コード例については、「[vector::push_back()](#push_back)」をご覧ください。
 
-## <a name="push_back"></a><a name="push_back"></a> push_back
+## <a name="push_back"></a><a name="push_back"></a> `push_back`
 
 ベクトルの末尾に要素を追加します。
 
@@ -1550,7 +1549,7 @@ void push_back(T&& value);
 
 ### <a name="parameters"></a>パラメーター
 
-*数値*\
+*`value`*\
 ベクトルの末尾に追加する要素に割り当てる値。
 
 ### <a name="example"></a>例
@@ -1593,7 +1592,7 @@ int main()
 }
 ```
 
-## <a name="rbegin"></a><a name="rbegin"></a> rbegin
+## <a name="rbegin"></a><a name="rbegin"></a> `rbegin`
 
 逆順のベクターの最初の要素への反復子を返します。
 
@@ -1643,7 +1642,7 @@ The first element of vector is 1.
 The first element of the reversed vector is 2.
 ```
 
-## <a name="reference"></a><a name="reference"></a> 「
+## <a name="reference"></a><a name="reference"></a> `reference`
 
 ベクターに格納されている要素への参照を提供する型。
 
@@ -1653,11 +1652,11 @@ typedef typename Allocator::reference reference;
 
 ### <a name="example"></a>例
 
-vector クラスで **reference** を使用する方法の例については、[at](#at) をご覧ください。
+[`at`](#at)Vector クラスでを使用する方法の例については、「」を参照してください **`reference`** 。
 
-## <a name="rend"></a><a name="rend"></a> rend
+## <a name="rend"></a><a name="rend"></a> `rend`
 
-反転されたベクター内の最後の要素の次の位置を指す反復子を返します。
+反転されたベクターの最後の要素の次の要素を指す最後の逆順反復子を返します。
 
 ```cpp
 const_reverse_iterator rend() const;
@@ -1666,11 +1665,11 @@ reverse_iterator rend();
 
 ### <a name="return-value"></a>戻り値
 
-逆順のベクター内の最後の要素の次の位置 (通常の順序のベクター内の最初の要素の前の位置) を指す逆順ランダム アクセス反復子。
+反転されたベクターの逆順の終了反復子。 反転されたベクターの最後の要素の次の要素を指します。これは、反転されていないベクターの最初の要素の前の要素と同じです。 この要素はプレースホルダーであるため、逆参照しないでください。 比較にのみ使用してください。
 
 ### <a name="remarks"></a>解説
 
-`rend` は、ベクターで [end](#end) を使用するのと同様に、逆順のベクターで使用します。
+`rend` は、ベクターで使用されるのと同様に、逆順のベクターで使用され [`end`](#end) ます。
 
 の戻り値がに割り当てられている場合、 `rend` `const_reverse_iterator` vector オブジェクトを変更することはできません。 `rend` の戻り値が `reverse_iterator` に割り当てられている場合、vector オブジェクトを変更できます。
 
@@ -1705,7 +1704,7 @@ int main( )
 1
 ```
 
-## <a name="reserve"></a><a name="reserve"></a> 省
+## <a name="reserve"></a><a name="reserve"></a> `reserve`
 
 ベクター オブジェクトの記憶域の最小長を予約します。必要であれば、領域を割り当てます。
 
@@ -1715,7 +1714,7 @@ void reserve(size_type count);
 
 ### <a name="parameters"></a>パラメーター
 
-*数*\
+*`count`*\
 ベクターに割り当てる記憶域の最小長。
 
 ### <a name="example"></a>例
@@ -1746,7 +1745,7 @@ Current capacity of v1 = 1
 Current capacity of v1 = 20
 ```
 
-## <a name="resize"></a><a name="resize"></a> サイズ
+## <a name="resize"></a><a name="resize"></a> `resize`
 
 ベクターの新しいサイズを指定します。
 
@@ -1757,17 +1756,17 @@ void resize(size_type new_size, Type value);
 
 ### <a name="parameters"></a>パラメーター
 
-*new_size*\
+*`new_size`*\
 ベクターの新しいサイズ。
 
-*数値*\
+*`value`*\
 新しいサイズが元のサイズよりも大きい場合に、ベクターに追加される新しい要素の初期化値。 この値を省略した場合、新しいオブジェクトは既定のコンストラクターを使用します。
 
 ### <a name="remarks"></a>解説
 
-コンテナーのサイズが要求されたサイズより小さい場合、 *new_size*は、 `resize` 要求されたサイズに達するまで、ベクターに要素を追加します。 コンテナーのサイズが要求されたサイズよりも大きい場合、は `resize` *new_size*サイズに達するまで、コンテナーの末尾に最も近い要素を削除します。 コンテナーの現在のサイズが要求されたサイズと同じ場合、アクションは実行されません。
+コンテナーのサイズが要求されたサイズより小さい場合、は *`new_size`* `resize` 要求されたサイズに達するまでベクターに要素を追加します。 コンテナーのサイズが要求されたサイズよりも大きい場合、は、 `resize` コンテナーのサイズに達するまで、コンテナーの末尾に最も近い要素を削除し *`new_size`* ます。 コンテナーの現在のサイズが要求されたサイズと同じ場合、アクションは実行されません。
 
-[size](#size) はベクターの現在のサイズを反映します。
+[`size`](#size) ベクターの現在のサイズを反映します。
 
 ### <a name="example"></a>例
 
@@ -1875,7 +1874,7 @@ int main()
 }
 ```
 
-## <a name="reverse_iterator"></a><a name="reverse_iterator"></a> reverse_iterator
+## <a name="reverse_iterator"></a><a name="reverse_iterator"></a> `reverse_iterator`
 
 反転ベクター内の要素を読み取り、または変更できるランダム アクセス反復子を提供する型。
 
@@ -1889,9 +1888,9 @@ typedef std::reverse_iterator<iterator> reverse_iterator;
 
 ### <a name="example"></a>例
 
-[rbegin](#rbegin) の例をご覧ください。
+の例を参照してください [`rbegin`](#rbegin) 。
 
-## <a name="shrink_to_fit"></a><a name="shrink_to_fit"></a> shrink_to_fit
+## <a name="shrink_to_fit"></a><a name="shrink_to_fit"></a> `shrink_to_fit`
 
 余分なキャパシティを破棄します。
 
@@ -1931,7 +1930,7 @@ Current capacity of v1 = 20
 Current capacity of v1 = 1
 ```
 
-## <a name="size"></a><a name="size"></a> 幅
+## <a name="size"></a><a name="size"></a> `size`
 
 ベクター内の要素の数を返します。
 
@@ -1972,7 +1971,7 @@ Vector length is 1.
 Vector length is now 2.
 ```
 
-## <a name="size_type"></a><a name="size_type"></a> size_type
+## <a name="size_type"></a><a name="size_type"></a> `size_type`
 
 ベクター内の要素の数をカウントする型。
 
@@ -1982,9 +1981,9 @@ typedef typename Allocator::size_type size_type;
 
 ### <a name="example"></a>例
 
-[capacity](#capacity) の例をご覧ください。
+の例を参照してください [`capacity`](#capacity) 。
 
-## <a name="swap"></a><a name="swap"></a> フォト
+## <a name="swap"></a><a name="swap"></a> `swap`
 
 2 つのベクターの要素を交換します。
 
@@ -1999,11 +1998,11 @@ friend void swap(
 
 ### <a name="parameters"></a>パラメーター
 
-*そうです*\
-交換する要素を提供するベクター。 または、ベクター内の要素と交換される要素を持つ*ベクター。*
+*`right`*\
+交換する要素を提供するベクター。 または、ベクター内の要素と交換される要素を持つベクター *`left`* 。
 
-*左側*\
-ベクター *右*の要素と交換される要素を持つベクター。
+*`left`*\
+ベクター内の要素と交換される要素を持つベクター *`right`* 。
 
 ### <a name="example"></a>例
 
@@ -2044,7 +2043,7 @@ The number of elements in v1 = 2
 The number of elements in v2 = 3
 ```
 
-## <a name="value_type"></a><a name="value_type"></a> value_type
+## <a name="value_type"></a><a name="value_type"></a> `value_type`
 
 ベクター内に格納されているデータ型を表す型。
 
@@ -2077,7 +2076,7 @@ int main( )
 44
 ```
 
-## <a name="vector"></a><a name="vector"></a> ベクトル
+## <a name="vector"></a><a name="vector"></a> `vector`
 
 ベクターを構築します。 オーバーロードは、特定のサイズのベクター、または特定の値の要素を使用してベクターを構築します。 または、他のベクターの全体または一部のコピーとして。 オーバーロードによっては、使用するアロケーターを指定することもできます。
 
@@ -2100,40 +2099,40 @@ vector(InputIterator first, InputIterator last, const Allocator& allocator);
 
 ### <a name="parameters"></a>パラメーター
 
-*アロケーター*\
-このオブジェクトに対して使用するアロケーター クラス。 [get_allocator](#get_allocator) は、オブジェクトのアロケーター クラスを返します。
+*`allocator`*\
+このオブジェクトに対して使用するアロケーター クラス。 [`get_allocator`](#get_allocator) オブジェクトのアロケータークラスを返します。
 
-*数*\
+*`count`*\
 構築されたベクター内の要素の数。
 
-*数値*\
+*`value`*\
 構築されたベクターの要素の値。
 
-*電源*\
+*`source`*\
 構築されたベクターがコピーになる元のベクター。
 
-*まずは*\
+*`first`*\
 コピーする要素範囲内の最初の要素の位置。
 
-*前の*\
+*`last`*\
 コピーする要素範囲を超える最初の要素の位置。
 
-*init_list*\
+*`init_list`*\
 `initializer_list`コピーする要素を格納している。
 
 ### <a name="remarks"></a>解説
 
-すべてのコンストラクターは、アロケーターオブジェクト (*アロケーター*) を格納し、ベクターを初期化します。
+すべてのコンストラクターは、アロケーターオブジェクト () を格納 *`allocator`* し、ベクターを初期化します。
 
-最初の 2 つのコンストラクターは、空の初期ベクターを指定します。 2番目のコンストラクターは、使用するアロケーターの型 (*アロケーター*) を明示的に指定します。
+最初の 2 つのコンストラクターは、空の初期ベクターを指定します。 2番目のコンストラクターは、使用するアロケーターの型 () を明示的に指定し *`allocator`* ます。
 
-3番目のコンストラクターは、クラスの既定値の要素の指定された*数 (数*) の繰り返しを指定し `Type` ます。
+3番目のコンストラクターは、 *`count`* クラスの既定値の要素の指定された数 () の繰り返しを指定し `Type` ます。
 
-4番目と5番目のコンストラクターは、値*値*の (*count*) 要素の繰り返しを指定します。
+4番目と5番目のコンストラクターは、値の () 要素の繰り返しを指定し *`count`* *`value`* ます。
 
-6番目のコンストラクターは、ベクター *ソース*のコピーを指定します。
+6番目のコンストラクターは、ベクターのコピーを指定し *`source`* ます。
 
-7番目のコンストラクターは、ベクター *ソース*を移動します。
+7番目のコンストラクターは、ベクターを移動し *`source`* ます。
 
 8 番目のコンストラクターは、initializer_list を使用して要素を指定します。
 

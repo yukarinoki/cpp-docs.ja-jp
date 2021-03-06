@@ -74,12 +74,12 @@ helpviewer_keywords:
 - CMFCRibbonEdit [MFC], SetTextAlign
 - CMFCRibbonEdit [MFC], SetWidth
 ms.assetid: 9b85f1f2-446b-454e-9af9-104fdad8a897
-ms.openlocfilehash: 83920c9779af10861e32ce964e91af767a3d9e96
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: be88698de9f98c590efebd4e2e8780d810aa8b96
+ms.sourcegitcommit: c0c9cdae79f19655e809a4979227c51bb19cff63
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97193103"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102236564"
 ---
 # <a name="cmfcribbonedit-class"></a>CMFCRibbonEdit クラス
 
@@ -145,7 +145,7 @@ class CMFCRibbonEdit : public CMFCRibbonButton
 
 [!code-cpp[NVC_MFC_MSOffice2007Demo#7](../../mfc/reference/codesnippet/cpp/cmfcribbonedit-class_1.cpp)]
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxRibbonEdit
 
@@ -528,7 +528,7 @@ virtual void OnDrawOnList(
 からコントロールのデバイスコンテキストへのポインター `CMFCRibbonEdit` 。
 
 *strText*<br/>
-から表示テキスト [](../../mfc/reference/cmfcribbonedit-class.md "cmfcribbonedit クラス") 。
+から表示テキスト。
 
 *nTextOffset*<br/>
 からリストボックスの左側から表示テキストまでの距離 (ピクセル単位)。
@@ -754,6 +754,6 @@ void SetWidth(
 ## <a name="see-also"></a>関連項目
 
 [階層図](../../mfc/hierarchy-chart.md)<br/>
-[Classes](../../mfc/reference/mfc-classes.md)<br/>
+[クラス](../../mfc/reference/mfc-classes.md)<br/>
 [CMFCRibbonButton クラス](../../mfc/reference/cmfcribbonbutton-class.md)<br/>
 [CMFCRibbonBar クラス](../../mfc/reference/cmfcribbonbar-class.md)

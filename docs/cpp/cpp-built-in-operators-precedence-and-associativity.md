@@ -13,12 +13,12 @@ helpviewer_keywords:
 - evaluation order
 - hierarchy, operator
 ms.assetid: 95c1f0ba-dad8-4034-b039-f79a904f112f
-ms.openlocfilehash: ff8ae84a62ef47449364d0815922326d7b8566d4
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: 8f45b7e45597fde1deaa349db6fd098b0d7ac319
+ms.sourcegitcommit: c0c9cdae79f19655e809a4979227c51bb19cff63
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97253963"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102236765"
 ---
 # <a name="c-built-in-operators-precedence-and-associativity"></a>C++ の組み込み演算子、優先順位、および結合規則
 
@@ -63,12 +63,12 @@ C++ では、一部の演算子に対して別のスペルを指定します。 
 | [間接](../cpp/indirection-operator-star.md) | [`*`](../cpp/indirection-operator-star.md) |
 | [オブジェクトの作成](../cpp/new-operator-cpp.md) | [`new`](../cpp/new-operator-cpp.md) |
 | [オブジェクトの破棄](../cpp/delete-operator-cpp.md) | [`delete`](../cpp/delete-operator-cpp.md) |
-| [詠唱](../cpp/cast-operator-parens.md) | [`()`](../cpp/cast-operator-parens.md) |
+| [Cast](../cpp/cast-operator-parens.md) | [`()`](../cpp/cast-operator-parens.md) |
 | **グループ4の優先順位、左から右への結合規則** |
 | [メンバーへのポインター (オブジェクトまたはポインター)](../cpp/pointer-to-member-operators-dot-star-and-star.md) | [`.*` もしくは `->*`](../cpp/pointer-to-member-operators-dot-star-and-star.md) |
 | **グループ5の優先順位、左から右への結合規則** |
 | [数学](../cpp/multiplicative-operators-and-the-modulus-operator.md) | [`*`](../cpp/multiplicative-operators-and-the-modulus-operator.md) |
-| [事業部](../cpp/multiplicative-operators-and-the-modulus-operator.md) | [`/`](../cpp/multiplicative-operators-and-the-modulus-operator.md) |
+| [ディビジョン](../cpp/multiplicative-operators-and-the-modulus-operator.md) | [`/`](../cpp/multiplicative-operators-and-the-modulus-operator.md) |
 | [剰余](../cpp/multiplicative-operators-and-the-modulus-operator.md) | [`%`](../cpp/multiplicative-operators-and-the-modulus-operator.md) |
 | **グループ6の優先順位、左から右の結合規則** |
 | [加わっ](../cpp/additive-operators-plus-and.md) | [`+`](../cpp/additive-operators-plus-and.md) |
@@ -82,8 +82,8 @@ C++ では、一部の演算子に対して別のスペルを指定します。 
 | [次の値以下](../cpp/relational-operators-equal-and-equal.md) | [`<=`](../cpp/relational-operators-equal-and-equal.md) |
 | [次の値以上](../cpp/relational-operators-equal-and-equal.md) | [`>=`](../cpp/relational-operators-equal-and-equal.md) |
 | **グループ9の優先順位、左から右への結合規則** |
-| [等式](../cpp/equality-operators-equal-equal-and-exclpt-equal.md) | [`==`](../cpp/equality-operators-equal-equal-and-exclpt-equal.md) |
-| [不等式](../cpp/equality-operators-equal-equal-and-exclpt-equal.md) | [`!=`](../cpp/equality-operators-equal-equal-and-exclpt-equal.md) | **`not_eq`** |
+| [等](../cpp/equality-operators-equal-equal-and-exclpt-equal.md) | [`==`](../cpp/equality-operators-equal-equal-and-exclpt-equal.md) |
+| [等しく](../cpp/equality-operators-equal-equal-and-exclpt-equal.md) | [`!=`](../cpp/equality-operators-equal-equal-and-exclpt-equal.md) | **`not_eq`** |
 | **グループ10の優先順位が左から右の結合規則** |
 | [ビット演算子 AND](../cpp/bitwise-and-operator-amp.md) | [`&`](../cpp/bitwise-and-operator-amp.md) | **`bitand`** |
 | **グループ11の優先順位、左から右への結合規則** |
@@ -96,7 +96,6 @@ C++ では、一部の演算子に対して別のスペルを指定します。 
 | [論理和](../cpp/logical-or-operator-pipe-pipe.md) | [`||`](../cpp/logical-or-operator-pipe-pipe.md) | **`or`** |
 | **グループ15の優先順位、右から左の結合規則** |
 | [条件付き](../cpp/conditional-operator-q.md) | [`? :`](../cpp/conditional-operator-q.md) |
-| **グループ16の優先順位、右から左の結合規則** |
 | [割り当て](../cpp/assignment-operators.md) | [`=`](../cpp/assignment-operators.md) |
 | [乗算代入](../cpp/assignment-operators.md) | [`*=`](../cpp/assignment-operators.md) |
 | [除算代入](../cpp/assignment-operators.md) | [`/=`](../cpp/assignment-operators.md) |
@@ -108,9 +107,8 @@ C++ では、一部の演算子に対して別のスペルを指定します。 
 | [ビットごとの AND 代入](../cpp/assignment-operators.md) | [`&=`](../cpp/assignment-operators.md) | **`and_eq`** |
 | [ビットごとの包括的 OR 代入](../cpp/assignment-operators.md) | [`|=`](../cpp/assignment-operators.md) | **`or_eq`** |
 | [ビットごとの排他的 OR 代入](../cpp/assignment-operators.md) | [`^=`](../cpp/assignment-operators.md) | **`xor_eq`** |
-| **グループ17の優先順位、右から左の結合規則** |
 | [throw 式](../cpp/try-throw-and-catch-statements-cpp.md) | [`throw`](../cpp/try-throw-and-catch-statements-cpp.md) |
-| **グループ18の優先順位、左から右への結合規則** |
+| **グループ16の優先順位、左から右への結合規則** |
 | [コンマ](../cpp/comma-operator.md) | [,](../cpp/comma-operator.md) |
 
 ## <a name="see-also"></a>関連項目
