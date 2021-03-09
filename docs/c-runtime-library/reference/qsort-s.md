@@ -31,12 +31,12 @@ helpviewer_keywords:
 - qsort_s function
 - sorting arrays
 ms.assetid: 6ee817b0-4408-4355-a5d4-6605e419ab91
-ms.openlocfilehash: 01890db21bc1eb470b57aa796313da4c6f0c50a8
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: 0f0132cbb1210d6289f676f3474683803b58a5a6
+ms.sourcegitcommit: 90c300b74f6556cb5d989802d2e80d79542f55e7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97137164"
+ms.lasthandoff: 03/09/2021
+ms.locfileid: "102514474"
 ---
 # <a name="qsort_s"></a>qsort_s
 
@@ -71,7 +71,7 @@ void qsort_s(
 *context*<br/>
 コンテキストへのポインター。 *比較* ルーチンがアクセスする必要がある任意のオブジェクトを指定できます。
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>注釈
 
 **Qsort_s** 関数は、*数値* 要素の配列 (各 *幅* バイト) を並べ替えるクイックソートアルゴリズムを実装します。 引数 *base* は、並べ替えられる配列のベースへのポインターです。 **qsort_s** は、並べ替えられた要素でこの配列を上書きします。 引数 *compare* は、2つの配列要素を比較し、それらの関係を指定する値を返すユーザー指定のルーチンへのポインターです。 **qsort_s** は、並べ替え中に *比較* ルーチンを1回以上呼び出し、各呼び出しで2つの配列要素へのポインターを渡します。
 
@@ -112,7 +112,7 @@ compare( context, (void *) & elem1, (void *) & elem2 );
 
 互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
-**ライブラリ:**[CRT ライブラリの機能](../../c-runtime-library/crt-library-features.md)のすべてのバージョンです。
+**ライブラリ:**[C ランタイムライブラリ](../../c-runtime-library/crt-library-features.md)のすべてのバージョン。
 
 ## <a name="example"></a>例
 

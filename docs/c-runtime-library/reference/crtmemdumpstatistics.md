@@ -26,12 +26,12 @@ helpviewer_keywords:
 - _CrtMemDumpStatistics function
 - CrtMemDumpStatistics function
 ms.assetid: 27b9d731-3184-4a2d-b9a7-6566ab28a9fe
-ms.openlocfilehash: 2f02c35ff61dc2bc5ac7e8dfbe921fa48731c2b3
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: 684b5ac50af453dbe2800ded595c5747370717a6
+ms.sourcegitcommit: 90c300b74f6556cb5d989802d2e80d79542f55e7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97319615"
+ms.lasthandoff: 03/09/2021
+ms.locfileid: "102514591"
 ---
 # <a name="_crtmemdumpstatistics"></a>_CrtMemDumpStatistics
 
@@ -47,10 +47,10 @@ void _CrtMemDumpStatistics(
 
 ### <a name="parameters"></a>パラメーター
 
-*state*<br/>
+*状態*<br/>
 ダンプするヒープ状態へのポインター。
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>注釈
 
 **_CrtMemDumpStatistics** 関数は、指定されたヒープ状態のデバッグヘッダー情報をユーザーが判読できる形式でダンプします。 ダンプ統計情報は、割り当ての追跡とメモリの問題の検出のためにアプリケーションで使用できます。 メモリ状態には、特定のヒープ状態、または 2 つの状態の相違点を含めることができます。 [_DEBUG](../../c-runtime-library/debug.md)が定義されていない場合、 **_CrtMemDumpStatistics** の呼び出しはプリプロセス中に削除されます。
 
@@ -66,8 +66,8 @@ void _CrtMemDumpStatistics(
 
 互換性について詳しくは、「 [Compatibility](../../c-runtime-library/compatibility.md)」をご覧ください。
 
-**ライブラリ:**[CRT ライブラリの機能](../../c-runtime-library/crt-library-features.md)のデバッグ バージョンのみ。
+**ライブラリ:**[C ランタイムライブラリ](../../c-runtime-library/crt-library-features.md)のデバッグバージョンのみ。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>こちらもご覧ください
 
 [デバッグルーチン](../../c-runtime-library/debug-routines.md)<br/>

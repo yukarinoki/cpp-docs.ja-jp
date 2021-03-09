@@ -6,16 +6,16 @@ ms.topic: conceptual
 helpviewer_keywords:
 - parameters, validation
 ms.assetid: 019dd5f0-dc61-4d2e-b4e9-b66409ddf1f2
-ms.openlocfilehash: 8378e4bf9bdfc950002c3ed8c3ef50c27a3c162d
-ms.sourcegitcommit: 30792632548d1c71894f9fecbe2f554294b86020
+ms.openlocfilehash: 6926da8ccc1974352b926227daba0eea1d8a560d
+ms.sourcegitcommit: 90c300b74f6556cb5d989802d2e80d79542f55e7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91765258"
+ms.lasthandoff: 03/09/2021
+ms.locfileid: "102514656"
 ---
 # <a name="parameter-validation"></a>パラメーターの検証
 
-セキュリティが強化された CRT 関数のほとんどは、 **NULL**のポインターのチェック、整数が有効な範囲内にある、または列挙値が有効であることなど、パラメーターを検証します。 無効なパラメーターが見つかった場合は、無効なパラメーターハンドラーが呼び出されます。
+セキュリティが強化された CRT 関数のほとんどは、 **NULL** のポインターのチェック、整数が有効な範囲内にある、または列挙値が有効であることなど、パラメーターを検証します。 無効なパラメーターが見つかった場合は、無効なパラメーターハンドラーが呼び出されます。
 
 ## <a name="invalid-parameter-handler-routine"></a>無効なパラメーター ハンドラー ルーチン
 
@@ -29,7 +29,7 @@ C ランタイムライブラリ関数は、無効なパラメーターを検出
 
 `errno` の詳細については、[errno、_doserrno、_sys_errlist, and _sys_nerr](../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) をご覧ください。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>こちらもご覧ください
 
 [CRT のセキュリティ機能](../c-runtime-library/security-features-in-the-crt.md)\
-[CRT ライブラリの機能](../c-runtime-library/crt-library-features.md)
+[C ランタイム (CRT) と C++ 標準ライブラリ (STL) `.lib` ファイル](../c-runtime-library/crt-library-features.md)

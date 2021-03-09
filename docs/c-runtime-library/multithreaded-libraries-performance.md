@@ -9,12 +9,12 @@ helpviewer_keywords:
 - performance, multithreading
 - multithreaded libraries
 ms.assetid: faa5d808-087c-463d-8f0d-8c478d137296
-ms.openlocfilehash: edfbbf3055e9023c74cf0e154577d4b1853f557b
-ms.sourcegitcommit: 9451db8480992017c46f9d2df23fb17b503bbe74
+ms.openlocfilehash: 39d77d52dbc8ac2e725cf46c98c5462df701e3eb
+ms.sourcegitcommit: 90c300b74f6556cb5d989802d2e80d79542f55e7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91590200"
+ms.lasthandoff: 03/09/2021
+ms.locfileid: "102514669"
 ---
 # <a name="multithreaded-libraries-performance"></a>マルチスレッド ライブラリのパフォーマンス
 
@@ -36,6 +36,6 @@ ms.locfileid: "91590200"
 
 - CRT ヒープ ハンドルの公開により、CRT ヒープ用の Windows Low Fragmentation Heap (LFH) を有効にして、高い拡張性が求められるシナリオでパフォーマンスを大幅に向上させることができます。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>こちらもご覧ください
 
-[CRT ライブラリの機能](../c-runtime-library/crt-library-features.md)
+[C ランタイム (CRT) と C++ 標準ライブラリ (STL) `.lib` ファイル](../c-runtime-library/crt-library-features.md)

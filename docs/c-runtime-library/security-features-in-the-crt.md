@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CRT, security enhancements
 - parameters [C++], validation
 ms.assetid: d9568b08-9514-49cd-b3dc-2454ded195a3
-ms.openlocfilehash: 963f5510350aa3be25586811889189d28a5f7b66
-ms.sourcegitcommit: 9451db8480992017c46f9d2df23fb17b503bbe74
+ms.openlocfilehash: 96642e5e79f9df7c0a063582408c0463600be20f
+ms.sourcegitcommit: 90c300b74f6556cb5d989802d2e80d79542f55e7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91589888"
+ms.lasthandoff: 03/09/2021
+ms.locfileid: "102514682"
 ---
 # <a name="security-features-in-the-crt"></a>CRT のセキュリティ機能
 
@@ -66,7 +66,7 @@ strcpy(szBuf, "test"); // warning: deprecated
 
 - `Parameter Validation`. セキュリティで保護された関数、およびそれらに対応していない機能の多くは、パラメーターを検証します。 検証には次のものが含まれます。
 
-  - **NULL**値があるかどうかを確認しています。
+  - **NULL** 値があるかどうかを確認しています。
   - 列挙値が有効であるかどうかのチェック。
   - 整数値が有効な範囲にあるかどうかのチェック。
 
@@ -86,8 +86,8 @@ strcpy(szBuf, "test"); // warning: deprecated
 
 - `Format string syntax checking`. 無効な文字列が検出されます。たとえば、`printf` 書式指定文字列の不正な型フィールド文字を使用した場合です。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>こちらもご覧ください
 
 [パラメーターの検証](../c-runtime-library/parameter-validation.md)<br/>
 [セキュリティで保護されたテンプレートのオーバーロード](../c-runtime-library/secure-template-overloads.md)<br/>
-[CRT ライブラリの機能](../c-runtime-library/crt-library-features.md)
+[C ランタイム (CRT) と C++ 標準ライブラリ (STL) `.lib` ファイル](../c-runtime-library/crt-library-features.md)

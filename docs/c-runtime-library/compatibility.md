@@ -8,12 +8,12 @@ helpviewer_keywords:
 - compatibility, C runtime libraries
 - compatibility
 ms.assetid: 346709cb-edda-4909-9a19-3d253eddb6b7
-ms.openlocfilehash: 10c21f3f471c105ac4e40bda449aaf8987edba25
-ms.sourcegitcommit: 9451db8480992017c46f9d2df23fb17b503bbe74
+ms.openlocfilehash: aea87c3a7b82292a5c9c45a960a5a890a1fff3fd
+ms.sourcegitcommit: 90c300b74f6556cb5d989802d2e80d79542f55e7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91590044"
+ms.lasthandoff: 03/09/2021
+ms.locfileid: "102514617"
 ---
 # <a name="compatibility"></a>互換性
 
@@ -44,4 +44,4 @@ C++ 標準では、グローバル名前空間のアンダースコアで始ま�
 |[UNIX](../c-runtime-library/unix.md)|プログラムを UNIX に移植するためのガイドラインを提供します。|
 |[Windows プラットフォーム (CRT)](../c-runtime-library/windows-platforms-crt.md)|CRT がサポートするオペレーティング システムの一覧を示します。|
 |[旧バージョンとの互換性](../c-runtime-library/backward-compatibility.md)|CRT の古い名前が新しい名前にマップされる方法について説明します。|
-|[CRT ライブラリの機能](../c-runtime-library/crt-library-features.md)|CRT ライブラリ (.lib) ファイルと、関連するコンパイラ オプションの概要を示します。|
+|[C ランタイム (CRT) と C++ 標準ライブラリ (STL) `.lib` ファイル](../c-runtime-library/crt-library-features.md)|CRT ライブラリ (.lib) ファイルと、関連するコンパイラ オプションの概要を示します。|

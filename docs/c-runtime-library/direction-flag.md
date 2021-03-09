@@ -6,12 +6,12 @@ ms.topic: conceptual
 helpviewer_keywords:
 - direction flag
 ms.assetid: 0836b4af-dbbb-4ab8-a4b2-156f2e2099e2
-ms.openlocfilehash: a8f06b3b8caf08e1d3db2159bfc730e25229733b
-ms.sourcegitcommit: 9451db8480992017c46f9d2df23fb17b503bbe74
+ms.openlocfilehash: ce4198abd944d538261b9d89bfa9ecea6129a991
+ms.sourcegitcommit: 90c300b74f6556cb5d989802d2e80d79542f55e7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91589992"
+ms.lasthandoff: 03/09/2021
+ms.locfileid: "102514708"
 ---
 # <a name="direction-flag"></a>方向フラグ
 
@@ -21,6 +21,6 @@ C ランタイム ルーチンでは、方向フラグがオフになってい�
 
 文字列操作ルーチンやバッファー操作ルーチンなどの C ランタイム ライブラリ関数では、方向フラグがオフになっていることを想定してあります。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>こちらもご覧ください
 
-[CRT ライブラリの機能](../c-runtime-library/crt-library-features.md)
+[C ランタイム (CRT) と C++ 標準ライブラリ (STL) `.lib` ファイル](../c-runtime-library/crt-library-features.md)

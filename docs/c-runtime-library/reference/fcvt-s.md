@@ -31,12 +31,12 @@ helpviewer_keywords:
 - floating-point functions, converting number to string
 - _fcvt_s function
 ms.assetid: 48671197-1d29-4c2b-a5d8-d2368f5f68a1
-ms.openlocfilehash: dd4d58b39d4c18f2fff7da54c5fbd0f2346dfdd4
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: 62b72a9f71f967077169086371ebf36542b154ed
+ms.sourcegitcommit: 90c300b74f6556cb5d989802d2e80d79542f55e7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97235880"
+ms.lasthandoff: 03/09/2021
+ms.locfileid: "102514448"
 ---
 # <a name="_fcvt_s"></a>_fcvt_s
 
@@ -91,7 +91,7 @@ errno_t _fcvt_s(
 
 ### <a name="error-conditions"></a>エラー条件
 
-|*格納*|*sizeInBytes*|値|count|dec|sign|戻り値|*バッファー* 内の値|
+|*格納*|*sizeInBytes*|value|count|dec|sign|戻り値|*バッファー* 内の値|
 |--------------|-------------------|-----------|-----------|---------|----------|------------|-----------------------|
 |**NULL**|any|any|any|any|any|**EINVAL**|変更されません。|
 |Not **NULL** (有効なメモリを指す)|<=0|any|any|any|any|**EINVAL**|変更されません。|
@@ -102,7 +102,7 @@ errno_t _fcvt_s(
 
 *バッファー* が有効なメモリを指しておらず、が **NULL** でない場合、 **_fcvt_s** はアクセス違反を生成する可能性があります。
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>注釈
 
 **_Fcvt_s** 関数は、浮動小数点数を null で終わる文字列に変換します。 *値* パラメーターは、変換される浮動小数点数です。 **_fcvt_s** は、 *値* の数字を文字列として格納し、null 文字 (' \ 0 ') を追加します。 *Count* パラメーターは、小数点の後に格納する桁数を指定します。 余分な数字は、 *カウント* するために丸められます。 有効桁数が *カウント* よりも小さい場合は、文字列に0が埋め込まれます。
 
@@ -118,7 +118,7 @@ C++ では、テンプレートのオーバーロードによってこの関数�
 
 既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 |機能|必須ヘッダー|オプション ヘッダー|
 |--------------|---------------------|---------------------|
@@ -126,7 +126,7 @@ C++ では、テンプレートのオーバーロードによってこの関数�
 
 互換性について詳しくは、「 [Compatibility](../../c-runtime-library/compatibility.md)」をご覧ください。
 
-**ライブラリ:**[CRT ライブラリの機能](../../c-runtime-library/crt-library-features.md)のすべてのバージョンです。
+**ライブラリ:**[C ランタイムライブラリ](../../c-runtime-library/crt-library-features.md)のすべてのバージョン。
 
 ## <a name="example"></a>例
 

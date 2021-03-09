@@ -9,12 +9,12 @@ helpviewer_keywords:
 - variable argument functions
 - type checking
 ms.assetid: 1ba7590b-d1c0-4636-b6a0-e231395abdad
-ms.openlocfilehash: cf27847bf2aeef278fb4699cea5a0cf74a961086
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: 9afb4146f7bbd08b35df20972345285bb353e4d3
+ms.sourcegitcommit: 90c300b74f6556cb5d989802d2e80d79542f55e7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97162354"
+ms.lasthandoff: 03/09/2021
+ms.locfileid: "102514227"
 ---
 # <a name="type-checking-crt"></a>型チェック (CRT)
 
@@ -32,6 +32,6 @@ ms.locfileid: "97162354"
 
 コンパイラでは、ワイド文字版のこれらの関数についても同じ制限付きの型チェックを行います。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>こちらもご覧ください
 
-[CRT ライブラリの機能](../c-runtime-library/crt-library-features.md)
+[C ランタイム (CRT) と C++ 標準ライブラリ (STL) `.lib` ファイル](../c-runtime-library/crt-library-features.md)

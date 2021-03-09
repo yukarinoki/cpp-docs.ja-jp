@@ -6,12 +6,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - CRT initialization [C++]
 ms.assetid: e7979813-1856-4848-9639-f29c86b74ad7
-ms.openlocfilehash: 25f1e2a7e5b7d91c729bb45bd79ba9a8720cead1
-ms.sourcegitcommit: 9451db8480992017c46f9d2df23fb17b503bbe74
+ms.openlocfilehash: e33429d63cebb34514918d059649679ed28b924c
+ms.sourcegitcommit: 90c300b74f6556cb5d989802d2e80d79542f55e7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91589771"
+ms.lasthandoff: 03/09/2021
+ms.locfileid: "102514643"
 ---
 # <a name="crt-initialization"></a>CRT の初期化
 
@@ -43,7 +43,7 @@ C と C++ の標準に従えば、`func()` は `main()` を実行する前に呼
 
 スタック上の関数を参照すると、CRT が関数ポインターのリストを呼び出していることがわかります。 これらの関数は `func()` 、またはクラスインスタンスのコンストラクターに似ています。
 
-CRT は、Microsoft C++ コンパイラから関数ポインターのリストを取得します。 コンパイラは、グローバル初期化子を認識すると、セクションに動的な初期化子を生成します。ここで、 `.CRT$XCU` `CRT` はセクション名、 `XCU` はグループ名です。 動的初期化子の一覧を取得するには、コマンド **dumpbin/all**を実行し、セクションを検索し `.CRT$XCU` ます。 これは、メイン .cpp が C ファイルではなく C++ ファイルとしてコンパイルされる場合に適用されます。 次の例のようになります。
+CRT は、Microsoft C++ コンパイラから関数ポインターのリストを取得します。 コンパイラは、グローバル初期化子を認識すると、セクションに動的な初期化子を生成します。ここで、 `.CRT$XCU` `CRT` はセクション名、 `XCU` はグループ名です。 動的初期化子の一覧を取得するには、コマンド **dumpbin/all** を実行し、セクションを検索し `.CRT$XCU` ます。 これは、メイン .cpp が C ファイルではなく C++ ファイルとしてコンパイルされる場合に適用されます。 次の例のようになります。
 
 ```
 SECTION HEADER #6
@@ -95,6 +95,6 @@ CRT では、2 つのポインターを定義します。
 
 そのため、CRT ライブラリは、との両方を使用し `__xc_a` て、 `__xc_z` グローバル初期化子リストの開始と終了を決定します。これは、イメージが読み込まれた後にメモリにレイアウトされるためです。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>こちらもご覧ください
 
-[CRT ライブラリの機能](../c-runtime-library/crt-library-features.md)
+[C ランタイム (CRT) と C++ 標準ライブラリ (STL) `.lib` ファイル](../c-runtime-library/crt-library-features.md)

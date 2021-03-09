@@ -8,12 +8,12 @@ helpviewer_keywords:
 - CRT
 - runtime libraries
 - CRT, reference
-ms.openlocfilehash: c574230d5d2861dd8734d8927f0e91402bc224bf
-ms.sourcegitcommit: 6ed44d9c3fb32e965e363b9c69686739a90a2117
+ms.openlocfilehash: f613f70ed39947605a4ce2b8524c8a0f6d069c68
+ms.sourcegitcommit: 90c300b74f6556cb5d989802d2e80d79542f55e7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/08/2021
-ms.locfileid: "102465568"
+ms.lasthandoff: 03/09/2021
+ms.locfileid: "102514409"
 ---
 # <a name="microsoft-c-runtime-library-crt-reference"></a>Microsoft C ランタイムライブラリ (CRT) リファレンス
 
@@ -47,8 +47,8 @@ Tchar.h で定義されている汎用テキスト マップへのリンクが�
 [言語および国/地域識別文字列](locale-names-languages-and-country-region-strings.md)\
 `setlocale` 関数を使用して、言語および国/地域識別文字列を設定する方法について説明します。
 
-[C ランタイム (CRT) と C++ 標準ライブラリ `.lib` ファイル](crt-library-features.md)\
-`.lib`C ランタイムライブラリを構成するファイルと、それらに関連付けられているコンパイラオプションとプリプロセッサディレクティブについて説明します。
+[C ランタイム (CRT) と C++ 標準ライブラリ (STL) `.lib` ファイル](crt-library-features.md)\
+`.lib`C ランタイムライブラリを構成するファイルの一覧と、それらに関連付けられているコンパイラオプションとプリプロセッサディレクティブ。
 
 ## <a name="related-sections"></a>関連項目
 

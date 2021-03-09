@@ -7,12 +7,12 @@ helpviewer_keywords:
 - security-enhanced CRT
 - CRT, security enhancements
 ms.assetid: f87e5a01-4cb2-4379-9e8f-d4693828c55a
-ms.openlocfilehash: 95e94eb7790ef589fee3287b6cee8997faac7ab6
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: eda9a98593bb0951c9be357c35492eaf129e3582
+ms.sourcegitcommit: 90c300b74f6556cb5d989802d2e80d79542f55e7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97277207"
+ms.lasthandoff: 03/09/2021
+ms.locfileid: "102514721"
 ---
 # <a name="security-enhanced-versions-of-crt-functions"></a>CRT 関数のセキュリティが強化されたバージョン
 
@@ -20,7 +20,7 @@ ms.locfileid: "97277207"
 
 ## <a name="secure-functions"></a>セキュリティで保護された関数
 
-|CRT 関数|セキュリティが強化された関数|使用|
+|CRT 関数|セキュリティが強化された関数|vmmblue_2|
 |------------------|--------------------------------|---------|
 |[_access、_waccess](../c-runtime-library/reference/access-waccess.md)|[_access_s、_waccess_s](../c-runtime-library/reference/access-s-waccess-s.md)|ファイル アクセス許可を決定します。|
 |[_alloca](../c-runtime-library/reference/alloca.md)|[_malloca](../c-runtime-library/reference/malloca.md)|スタックにメモリを割り当てます。|
@@ -100,6 +100,6 @@ ms.locfileid: "97277207"
 |[wcstombs、_wcstombs_l](../c-runtime-library/reference/wcstombs-wcstombs-l.md)|[wcstombs_s、_wcstombs_s_l](../c-runtime-library/reference/wcstombs-s-wcstombs-s-l.md)|ワイド文字のシーケンスを、対応するマルチバイト文字のシーケンスに変換します。|
 |[wctomb、_wctomb_l](../c-runtime-library/reference/wctomb-wctomb-l.md)|[wctomb_s、_wctomb_s_l](../c-runtime-library/reference/wctomb-s-wctomb-s-l.md)|ワイド文字を対応するマルチバイト文字に変換します。|
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>こちらもご覧ください
 
-[CRT ライブラリの機能](../c-runtime-library/crt-library-features.md)
+[C ランタイム (CRT) と C++ 標準ライブラリ (STL) `.lib` ファイル](../c-runtime-library/crt-library-features.md)

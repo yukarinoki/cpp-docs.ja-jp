@@ -49,12 +49,12 @@ helpviewer_keywords:
 - ecount annotation
 - bcount annotation
 ms.assetid: 81893638-010c-41a0-9cb3-666fe360f3e0
-ms.openlocfilehash: 727c81ae1b141346bb47ff92b6af76d5c45aa106
-ms.sourcegitcommit: 9451db8480992017c46f9d2df23fb17b503bbe74
+ms.openlocfilehash: c4c75213daa69c433b379fb78a0649fa1473de1b
+ms.sourcegitcommit: 90c300b74f6556cb5d989802d2e80d79542f55e7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91590265"
+ms.lasthandoff: 03/09/2021
+ms.locfileid: "102514461"
 ---
 # <a name="sal-annotations"></a>SAL 注釈
 
@@ -62,6 +62,6 @@ ms.locfileid: "91590265"
 
 Visual Studio での SAL 注釈の使用の詳細については、「[Using SAL Annotations to Reduce C/C++ Code Defects (SAL 注釈を使って C/C++ のコード障害を減らす方法)](../code-quality/using-sal-annotations-to-reduce-c-cpp-code-defects.md)」をご覧ください。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>こちらもご覧ください
 
-[CRT ライブラリの機能](../c-runtime-library/crt-library-features.md)
+[C ランタイム (CRT) と C++ 標準ライブラリ (STL) `.lib` ファイル](../c-runtime-library/crt-library-features.md)
