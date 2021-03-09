@@ -6,12 +6,12 @@ ms.date: 07/25/2020
 helpviewer_keywords:
 - keywords [C++]
 ms.assetid: d7ca94a8-f785-41ce-9f73-d3c4fd508489
-ms.openlocfilehash: b875b4df797985dc21f54f48ceeaa86574f31ac6
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 1144558a6a4847e158579bf453e3bf3b45c0a199
+ms.sourcegitcommit: 6ed44d9c3fb32e965e363b9c69686739a90a2117
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91498756"
+ms.lasthandoff: 03/08/2021
+ms.locfileid: "102465516"
 ---
 # <a name="keywords-c"></a>C++ キーワード
 
@@ -122,7 +122,7 @@ ms.locfileid: "91498756"
     :::column-end:::
 :::row-end:::
 
-Microsoft 固有のキーワード<sup>を指定すると</sup>、 **`__asm`** C++ の構文が置き換えら **`asm`** れます。 **`asm`** は、他の C++ 実装との互換性のために予約されていますが、実装されていません。 **`__asm`** X86 ターゲットでインラインアセンブリに使用します。 Microsoft C++ では、他のターゲットのインラインアセンブリはサポートされていません。
+Microsoft 固有のキーワード <sup>を指定すると</sup>、 **`__asm`** C++ の構文が置き換えら **`asm`** れます。 **`asm`** は、他の C++ 実装との互換性のために予約されていますが、実装されていません。 **`__asm`** X86 ターゲットでインラインアセンブリに使用します。 Microsoft C++ では、他のターゲットのインラインアセンブリはサポートされていません。
 
 <sup>b</sup>拡張演算子のシノニムは、 [`/permissive-`](../build/reference/permissive-standards-conformance.md) [ `/Za` \( 言語拡張を無効](../build/reference/za-ze-disable-language-extensions.md)にしたときのキーワードです。 Microsoft 拡張機能が有効になっている場合、キーワードはキーワードではありません。
 
@@ -221,13 +221,14 @@ Microsoft 拡張機能を有効にすると、Microsoft 固有のキーワード
     :::column-end:::
     :::column:::
         [`noreturn`](noreturn.md)\
+        [`no_sanitize_address`](no-sanitize-address.md)\
         [`nothrow`](nothrow-cpp.md)\
         [`novtable`](novtable.md)\
         [`process`](process.md)\
-        [`property`](property-cpp.md)\
-        [`restrict`](restrict.md)
+        [`property`](property-cpp.md)
     :::column-end:::
     :::column:::
+        [`restrict`](restrict.md)\
         [`safebuffers`](safebuffers.md)\
         [`selectany`](selectany.md)\
         [`spectre`](spectre.md)\

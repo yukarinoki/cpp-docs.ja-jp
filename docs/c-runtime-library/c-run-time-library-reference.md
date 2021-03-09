@@ -1,31 +1,27 @@
 ---
 title: C ランタイム ライブラリ リファレンス
 description: Microsoft C ランタイムライブラリ関数の情報とリファレンスへのリンク。
-ms.date: 10/05/2020
+ms.date: 3/5/2021
 f1_keywords:
 - c.runtime
 helpviewer_keywords:
 - CRT
 - runtime libraries
 - CRT, reference
-ms.assetid: a503e11c-8dca-4846-84fb-025a826c32b8
-ms.openlocfilehash: 2e5fcadca5dcca30370b0f03917650136ab46ee8
-ms.sourcegitcommit: 8caaf5e00aeb727741a273aecafa15de293426cf
+ms.openlocfilehash: c574230d5d2861dd8734d8927f0e91402bc224bf
+ms.sourcegitcommit: 6ed44d9c3fb32e965e363b9c69686739a90a2117
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91806527"
+ms.lasthandoff: 03/08/2021
+ms.locfileid: "102465568"
 ---
-# <a name="c-runtime-library-reference"></a>C ランタイムライブラリリファレンス
+# <a name="microsoft-c-runtime-library-crt-reference"></a>Microsoft C ランタイムライブラリ (CRT) リファレンス
 
-Microsoft ランタイムライブラリには、Microsoft Windows オペレーティングシステム用のプログラミングルーチンが用意されています。 これらのルーチンは、C および C++ 言語では提供されない、多くの一般的なプログラミング タスクを自動化します。
+Microsoft ランタイムライブラリには、Microsoft Windows オペレーティングシステムをプログラミングするためのルーチンが用意されています。 これらのルーチンは、C および C++ 言語では提供されない、多くの一般的なプログラミング タスクを自動化します。
 
 ライブラリ内のほとんどのルーチンに対して、サンプル プログラムが、個別のリファレンス トピックに含まれています。
 
 ## <a name="in-this-section"></a>このセクションの内容
-
-[C ランタイムライブラリ](crt-library-features.md)\
-C ランタイムライブラリを構成する .lib ファイルについて説明します。
 
 [カテゴリ別のユニバーサル C ランタイムルーチン](run-time-routines-by-category.md)\
 カテゴリ別のランタイムライブラリへのリンクを提供します。
@@ -50,6 +46,9 @@ Tchar.h で定義されている汎用テキスト マップへのリンクが�
 
 [言語および国/地域識別文字列](locale-names-languages-and-country-region-strings.md)\
 `setlocale` 関数を使用して、言語および国/地域識別文字列を設定する方法について説明します。
+
+[C ランタイム (CRT) と C++ 標準ライブラリ `.lib` ファイル](crt-library-features.md)\
+`.lib`C ランタイムライブラリを構成するファイルと、それらに関連付けられているコンパイラオプションとプリプロセッサディレクティブについて説明します。
 
 ## <a name="related-sections"></a>関連項目
 

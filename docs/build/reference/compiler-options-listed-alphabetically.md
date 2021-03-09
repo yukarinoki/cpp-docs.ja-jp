@@ -4,12 +4,12 @@ description: Microsoft C/c + + コンパイラのコマンドラインオプシ�
 ms.date: 07/29/2020
 helpviewer_keywords:
 - compiler options, C++
-ms.openlocfilehash: 532ee4aceef281f7aa52fee6cd405a3520409218
-ms.sourcegitcommit: 48b897797b3132ae934b1d191e3870c3c2466335
+ms.openlocfilehash: de83cd5e2d649b88de4e21f3d828f68504705dc2
+ms.sourcegitcommit: 6ed44d9c3fb32e965e363b9c69686739a90a2117
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97514550"
+ms.lasthandoff: 03/08/2021
+ms.locfileid: "102465367"
 ---
 # <a name="compiler-options-listed-alphabetically"></a>アルファベット順のコンパイラ オプション
 
@@ -56,6 +56,7 @@ ms.locfileid: "97514550"
 | [`/Fp`](fp-name-dot-pch-file.md) | プリコンパイル済みヘッダー ファイルの名前を指定します。 |
 | [`/FR`](fr-fr-create-dot-sbr-file.md)<br /><br /> [`/Fr`](fr-fr-create-dot-sbr-file.md) | ブラウザー ファイルを生成します。 **`/Fr`** は非推奨とされます。 |
 | [`/FS`](fs-force-synchronous-pdb-writes.md) | MSPDBSRV.EXE によって、プログラムデータベース (PDB) ファイルへのすべての書き込みのシリアル化を強制的に実行します。 |
+| [`/fsanitize`](fsanitize.md) | AddressSanitizer などのサニタイザーインストルメンテーションのコンパイルを有効にします。 |
 | [`/FU`](fu-name-forced-hash-using-file.md) | ディレクティブに渡されたかのように、ファイル名を強制的に使用し [`#using`](../../preprocessor/hash-using-directive-cpp.md) ます。 |
 | [`/Fx`](fx-merge-injected-code.md) | 挿入されたコードをソース ファイルとマージします。 |
 | [`/GA`](ga-optimize-for-windows-application.md) | Windows アプリケーション用にコードを最適化します。 |
@@ -178,4 +179,4 @@ ms.locfileid: "97514550"
 ## <a name="see-also"></a>関連項目
 
 [MSVC コンパイラオプション](compiler-options.md)\
-[MSVC コンパイラ コマンド ラインの構文](compiler-command-line-syntax.md)
+[MSVC コンパイラのコマンドライン構文](compiler-command-line-syntax.md)

@@ -8,12 +8,12 @@ f1_keywords:
 - _declspec
 helpviewer_keywords:
 - __declspec keyword [C++]
-ms.openlocfilehash: d0567c522e0e21f70b9ed8acfa428c3374fd09f6
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: 1a8644bc05319332967ffd7934e6799408c3d36d
+ms.sourcegitcommit: 6ed44d9c3fb32e965e363b9c69686739a90a2117
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97339541"
+ms.lasthandoff: 03/08/2021
+ms.locfileid: "102465529"
 ---
 # `__declspec`
 
@@ -23,43 +23,44 @@ ms.locfileid: "97339541"
 
 ## <a name="grammar"></a>文法
 
-*`decl-specifier`*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**`__declspec (`**  *`extended-decl-modifier-seq`*  **`)`**
+*`decl-specifier`*:\
+&emsp;**`__declspec (`**  *`extended-decl-modifier-seq`*  **`)`**
 
-*`extended-decl-modifier-seq`*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; *`extended-decl-modifier`* <sub>opt</sub><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*`extended-decl-modifier`* *`extended-decl-modifier-seq`*
+*`extended-decl-modifier-seq`*:\
+&emsp; *`extended-decl-modifier`* <sub>opt</sub> \
+&emsp;*`extended-decl-modifier`* *`extended-decl-modifier-seq`*
 
-*`extended-decl-modifier`*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**`align(`***番号***`)`**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**`allocate("`***segname***`")`**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**`allocator`**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**`appdomain`**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**`code_seg("`***segname***`")`**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**`deprecated`**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**`dllimport`**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**`dllexport`**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**`jitintrinsic`**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**`naked`**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**`noalias`**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**`noinline`**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**`noreturn`**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**`nothrow`**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**`novtable`**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**`process`**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**`property(`**{ **`get=`** _get-func-name_ &#124; **`,put=`** _put-name_ }**`)`**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**`restrict`**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**`safebuffers`**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**`selectany`**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**`spectre(nomitigation)`**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**`thread`**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**`uuid("`***Comobjectguid***`")`**
+*`extended-decl-modifier`*:\
+&emsp;**`align(`***番号***`)`**\
+&emsp;**`allocate("`***segname***`")`**\
+&emsp;**`allocator`**\
+&emsp;**`appdomain`**\
+&emsp;**`code_seg("`***segname***`")`**\
+&emsp;**`deprecated`**\
+&emsp;**`dllimport`**\
+&emsp;**`dllexport`**\
+&emsp;**`jitintrinsic`**\
+&emsp;**`naked`**\
+&emsp;**`noalias`**\
+&emsp;**`noinline`**\
+&emsp;**`noreturn`**\
+&emsp;**`nothrow`**\
+&emsp;**`novtable`**\
+&emsp;**`no_sanitize_address`**\
+&emsp;**`process`**\
+&emsp;**`property(`**{ **`get=`** _get-func-name_ &#124; **`,put=`** _put-name_ }**`)`**\
+&emsp;**`restrict`**\
+&emsp;**`safebuffers`**\
+&emsp;**`selectany`**\
+&emsp;**`spectre(nomitigation)`**\
+&emsp;**`thread`**\
+&emsp;**`uuid("`***Comobjectguid***`")`**
 
 空白は、宣言修飾子のシーケンスを区切ります。 その例は以降のセクションで示します。
 
-拡張属性の文法では、Microsoft 固有のストレージクラス属性である、、、、、、、、、、、、、、、、、、、、およびがサポートさ [`align`](../cpp/align-cpp.md) [`allocate`](../cpp/allocate.md) [`allocator`](../cpp/allocator.md) [`appdomain`](../cpp/appdomain.md) [`code_seg`](../cpp/code-seg-declspec.md) [`deprecated`](../cpp/deprecated-cpp.md) [`dllexport`](../cpp/dllexport-dllimport.md) [`dllimport`](../cpp/dllexport-dllimport.md) [`jitintrinsic`](../cpp/jitintrinsic.md) [`naked`](../cpp/naked-cpp.md) [`noalias`](../cpp/noalias.md) [`noinline`](../cpp/noinline.md) [`noreturn`](../cpp/noreturn.md) [`nothrow`](../cpp/nothrow-cpp.md) [`novtable`](../cpp/novtable.md) [`process`](../cpp/process.md) [`restrict`](../cpp/restrict.md) [`safebuffers`](../cpp/safebuffers.md) [`selectany`](../cpp/selectany.md) [`spectre`](../cpp/spectre.md) れてい [`thread`](../cpp/thread.md) ます。 また、これらの COM オブジェクト属性 (および) もサポートしてい [`property`](../cpp/property-cpp.md) [`uuid`](../cpp/uuid-cpp.md) ます。
+拡張属性の文法では、Microsoft 固有のストレージクラス属性である、、、、、、、、、、、、、、、、、、、、、およびがサポートさ [`align`](../cpp/align-cpp.md) [`allocate`](../cpp/allocate.md) [`allocator`](../cpp/allocator.md) [`appdomain`](../cpp/appdomain.md) [`code_seg`](../cpp/code-seg-declspec.md) [`deprecated`](../cpp/deprecated-cpp.md) [`dllexport`](../cpp/dllexport-dllimport.md) [`dllimport`](../cpp/dllexport-dllimport.md) [`jitintrinsic`](../cpp/jitintrinsic.md) [`naked`](../cpp/naked-cpp.md) [`noalias`](../cpp/noalias.md) [`noinline`](../cpp/noinline.md) [`noreturn`](../cpp/noreturn.md) [`nothrow`](../cpp/nothrow-cpp.md) [`novtable`](../cpp/novtable.md) [`no_sanitize_address`](../cpp/no-sanitize-address.md) [`process`](../cpp/process.md) [`restrict`](../cpp/restrict.md) [`safebuffers`](../cpp/safebuffers.md) [`selectany`](../cpp/selectany.md) [`spectre`](../cpp/spectre.md) れてい [`thread`](../cpp/thread.md) ます。 また、これらの COM オブジェクト属性 (および) もサポートしてい [`property`](../cpp/property-cpp.md) [`uuid`](../cpp/uuid-cpp.md) ます。
 
-、、、、、、、、、、 **`code_seg`** **`dllexport`** およびの **`dllimport`** **`naked`** **`noalias`** **`nothrow`** **`property`** **`restrict`** **`selectany`** **`thread`** **`uuid`** 各ストレージクラス属性は、適用先のオブジェクトまたは関数の宣言のプロパティにすぎません。 属性は、 **`thread`** データとオブジェクトにのみ影響します。 **`naked`** 属性と **`spectre`** 属性は、関数にのみ影響します。 **`dllimport`** 属性と **`dllexport`** 属性は、関数、データ、およびオブジェクトに影響します。 **`property`**、、およびの各属性は、 **`selectany`** **`uuid`** COM オブジェクトに影響を与えます。
+、、、、、、、、、、、 **`code_seg`** **`dllexport`** **`dllimport`** およびの **`naked`** **`noalias`** **`nothrow`** **`no_sanitize_address`** **`property`** **`restrict`** **`selectany`** **`thread`** **`uuid`** 各ストレージクラス属性は、適用先のオブジェクトまたは関数の宣言のプロパティにすぎません。 属性は、 **`thread`** データとオブジェクトにのみ影響します。 **`naked`** 属性と **`spectre`** 属性は、関数にのみ影響します。 **`dllimport`** 属性と **`dllexport`** 属性は、関数、データ、およびオブジェクトに影響します。 **`property`**、、およびの各属性は、 **`selectany`** **`uuid`** COM オブジェクトに影響を与えます。
 
 以前のバージョンとの互換性を維持するために、 **`_declspec`** **`__declspec`** コンパイラオプションの [ [ \( 言語拡張を無効にする](../build/reference/za-ze-disable-language-extensions.md) ] が指定されていない限り、はのシノニムになります。
 
@@ -102,5 +103,5 @@ __declspec( thread ) int tls_i = 1;
 
 ## <a name="see-also"></a>関連項目
 
-[キーワード](../cpp/keywords-cpp.md)<br/>
+[Keywords](../cpp/keywords-cpp.md)\
 [C 拡張ストレージ クラス属性](../c-language/c-extended-storage-class-attributes.md)

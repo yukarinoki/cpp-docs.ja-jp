@@ -10,12 +10,12 @@ helpviewer_keywords:
 - libraries [C++], linking to COFF
 - LINK tool [C++], linker options
 ms.assetid: c1d51b8a-bd23-416d-81e4-900e02b2c129
-ms.openlocfilehash: 0d85361b8d4b5896d9ed7beae0d310fe28dc98e9
-ms.sourcegitcommit: e58918c45316d799c1952ca7797a85adbcd0c472
+ms.openlocfilehash: e426c085acdd0d7bcfeb00b17dcf733a9b856993
+ms.sourcegitcommit: 6ed44d9c3fb32e965e363b9c69686739a90a2117
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "89281797"
+ms.lasthandoff: 03/08/2021
+ms.locfileid: "102465315"
 ---
 # <a name="linker-options"></a>リンカー オプション
 
@@ -83,6 +83,7 @@ LINK.exe のオプションの一覧を次の表に示します。 LINK の詳�
 |[/IMPLIB](implib-name-import-library.md)|既定のインポート ライブラリ名をオーバーライドします。|
 |[/INCLUDE](include-force-symbol-references.md)|シンボルを明示的に参照します。|
 |[/INCREMENTAL](incremental-link-incrementally.md)|インクリメンタル リンクの処理方法を制御します。|
+|[/INFERASANLIBS](inferasanlibs.md)|推論されたサニタイザーライブラリを使用します。|
 |[/INTEGRITYCHECK](integritycheck-require-signature-check.md)|モジュールが読み込み時に署名の確認を要求することを指定します。|
 |[/KEYCONTAINER](keycontainer-specify-a-key-container-to-sign-an-assembly.md)|アセンブリに署名するためのキー コンテナーを指定します。|
 |[/KEYFILE](keyfile-specify-key-or-key-pair-to-sign-an-assembly.md)|アセンブリに署名するキーまたはキー ペアを指定します。|
@@ -142,5 +143,5 @@ LINK.exe のオプションの一覧を次の表に示します。 LINK の詳�
 
 ## <a name="see-also"></a>関連項目
 
-[C/c + + ビルドのリファレンス](c-cpp-building-reference.md)\
+[C/C++ ビルドのリファレンス](c-cpp-building-reference.md)\
 [MSVC リンカーのリファレンス](linking.md)

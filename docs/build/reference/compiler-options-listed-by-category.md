@@ -5,12 +5,12 @@ ms.date: 07/29/2020
 helpviewer_keywords:
 - compiler options, C++
 ms.assetid: c4750dcf-dba0-4229-99b6-45cdecc11729
-ms.openlocfilehash: bf12948658b5f7e3211c423b5302bc52d1b87729
-ms.sourcegitcommit: 48b897797b3132ae934b1d191e3870c3c2466335
+ms.openlocfilehash: b892575719d97ed4a0acb061aae0182ff2d576eb
+ms.sourcegitcommit: 6ed44d9c3fb32e965e363b9c69686739a90a2117
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97514563"
+ms.lasthandoff: 03/08/2021
+ms.locfileid: "102465380"
 ---
 # <a name="compiler-options-listed-by-category"></a>カテゴリ別のコンパイラ オプション
 
@@ -162,6 +162,7 @@ ms.locfileid: "97514563"
 | [`/errorReport`](errorreport-report-internal-compiler-errors.md) | 非推奨になりました。 エラー報告は、 [Windows エラー報告 (WER)](/windows/win32/wer/windows-error-reporting) 設定によって制御されます。 |
 | [`/FC`](fc-full-path-of-source-code-file-in-diagnostics.md) | 診断テキストで *cl.exe* に渡されるソースコードファイルの完全パスを表示します。 |
 | [`/FS`](fs-force-synchronous-pdb-writes.md) | PDB ファイルへの書き込みを *MSPDBSRV.EXE* によって強制的にシリアル化します。 |
+| [`/fsanitize`](fsanitize.md) | AddressSanitizer などのサニタイザーインストルメンテーションのコンパイルを有効にします。 |
 | [`/H`](h-restrict-length-of-external-names.md) | 非推奨になりました。 外部名 (パブリック名) の長さを制限します。 |
 | [`/HELP`](help-compiler-command-line-help.md) | コンパイラ オプションのリストを出力します。 |
 | [`/J`](j-default-char-type-is-unsigned.md) | 既定の型を変更 **`char`** します。 |
@@ -236,4 +237,4 @@ ms.locfileid: "97514563"
 
 [C/c + + ビルドのリファレンス](c-cpp-building-reference.md)\
 [MSVC コンパイラオプション](compiler-options.md)\
-[MSVC コンパイラ コマンド ラインの構文](compiler-command-line-syntax.md)
+[MSVC コンパイラのコマンドライン構文](compiler-command-line-syntax.md)
