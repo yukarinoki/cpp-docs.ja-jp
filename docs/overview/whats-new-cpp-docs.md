@@ -2,12 +2,12 @@
 title: C++ のドキュメントの更新情報
 description: Microsoft C/C++ コンパイラ、ATL/MFC、C ランタイム、標準ライブラリに関する新しいドキュメントとドキュメントの更新。
 ms.date: 02/17/2021
-ms.openlocfilehash: b15d286eb7bd2951ab2b8101a752de2beb57f4a4
-ms.sourcegitcommit: e99db7c3b5f25ece0e152165066c926751a7c2ed
+ms.openlocfilehash: ad626dc598cd17de091801b2c313b7339db4cbc7
+ms.sourcegitcommit: 5efc34c2b98d4d0d3e41aec38b213f062c19d078
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/17/2021
-ms.locfileid: "100643574"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101844534"
 ---
 # <a name="microsoft-c-docs-whats-new-for-visual-studio-168"></a>Microsoft C++ のドキュメント: Visual Studio 16.8 での更新情報
 
@@ -198,7 +198,7 @@ C++ の最新の準拠状態については、「[Visual Studio の C++ 準拠�
 
 ## <a name="community-contributors"></a>コミュニティの共同作成者
 
-上記の期間中、C++、C、アセンブラに関するドキュメントに協力していただいた方々です。 ご協力に感謝いたします。 投稿方法については、「[Microsoft Docs 共同作成者ガイド概要](https://docs.microsoft.com/contribute/)」を参照してください。
+上記の期間中、C++、C、アセンブラに関するドキュメントに協力していただいた方々です。 ご協力に感謝いたします。 投稿方法については、「[Microsoft Docs 共同作成者ガイド概要](/contribute/)」を参照してください。
 
 - [yecril71pl](https://github.com/yecril71pl) - Christopher Yeleighton (4)
 - [definedrisk](https://github.com/definedrisk) - Ben (3)

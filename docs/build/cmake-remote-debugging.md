@@ -3,12 +3,12 @@ title: 'チュートリアル: リモートの Windows コンピューターで 
 ms.date: 12/4/2020
 ms.topic: tutorial
 description: Windows で Visual Studio C++ を使用して、CMake プロジェクトを作成およびビルドする方法。 その後、リモートの Windows コンピューターでそれを展開してデバッグします。
-ms.openlocfilehash: 742ee831fc30ffe291d68ff97ad4238e57c7e21d
-ms.sourcegitcommit: 3d9cfde85df33002e3b3d7f3509ff6a8dc4c0a21
+ms.openlocfilehash: 575b815559cbe70384b4669c94cf003daa3ee7d7
+ms.sourcegitcommit: 5efc34c2b98d4d0d3e41aec38b213f062c19d078
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/21/2021
-ms.locfileid: "98668841"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "101844508"
 ---
 # <a name="tutorial-debug-a-cmake-project-on-a-remote-windows-machine"></a>チュートリアル: リモートの Windows コンピューターで CMake プロジェクトをデバッグする
 
@@ -31,7 +31,7 @@ Visual Studio では、ARM64 の既定のデバッグ エクスペリエンス�
 
 クロスプラットフォームの C++ 開発用に Visual Studio を設定するには、ターゲット アーキテクチャ用のビルド ツールをインストールします。 このチュートリアルでは、次の手順を行って ARM64 ビルド ツールをインストールします。
 
-1. Visual Studio インストーラーを実行します。 Visual Studio をまだインストールしていない場合は、「[Visual Studio のインストール](https://docs.microsoft.com/visualstudio/install/install-visual-studio#:~:text=Install%20Visual%20Studio%201%20Make%20sure%20your%20computer,...%204%20Choose%20workloads.%20...%20More%20items...%20)」を参照してください
+1. Visual Studio インストーラーを実行します。 Visual Studio をまだインストールしていない場合は、「[Visual Studio のインストール](/visualstudio/install/install-visual-studio)」を参照してください
 1. Visual Studio インストーラーのホーム画面で、 **[変更]** を選択します。
 1. 上部の選択肢から、 **[個々のコンポーネント]** を選びます。
 1. **[コンパイラ、ビルド ツール、およびランタイム]** セクションまで下にスクロールします。
@@ -42,8 +42,8 @@ Visual Studio では、ARM64 の既定のデバッグ エクスペリエンス�
 
 ### <a name="on-the-remote-machine"></a>リモート コンピューター上
 
-1. リモート コンピューター上にリモート ツールをインストールします。 このチュートリアルでは、「[リモート ツールのダウンロードおよびインストール](https://docs.microsoft.com/visualstudio/debugger/remote-debugging-cpp?%23download-and-install-the-remote-tools#download-and-install-the-remote-tools)」の手順に従って、ARM64 ツールをインストールします。
-1. リモート コンピューター上でリモート デバッガーを起動して構成します。 このチュートリアルでは、リモートの Windows コンピューターで「[リモート デバッガーのセットアップ](https://docs.microsoft.com/visualstudio/debugger/remote-debugging-cpp?%23download-and-install-the-remote-tools#BKMK_setup)」の指示に従ってこれを行います。
+1. リモート コンピューター上にリモート ツールをインストールします。 このチュートリアルでは、「[リモート ツールのダウンロードおよびインストール](/visualstudio/debugger/remote-debugging-cpp#download-and-install-the-remote-tools)」の手順に従って、ARM64 ツールをインストールします。
+1. リモート コンピューター上でリモート デバッガーを起動して構成します。 このチュートリアルでは、リモートの Windows コンピューターで「[リモート デバッガーのセットアップ](/visualstudio/debugger/remote-debugging-cpp#BKMK_setup)」の指示に従ってこれを行います。
 
 ## <a name="create-a-cmake-project"></a>CMake プロジェクトを作成する
 
