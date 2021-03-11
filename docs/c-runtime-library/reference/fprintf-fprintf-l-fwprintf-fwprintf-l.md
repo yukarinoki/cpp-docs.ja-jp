@@ -1,7 +1,7 @@
 ---
 description: '詳細については、次を参照してください: fprintf、_fprintf_l、fwprintf、_fwprintf_l'
 title: fprintf、_fprintf_l、fwprintf、_fwprintf_l
-ms.date: 11/04/2016
+ms.date: 3/9/2021
 api_name:
 - fwprintf
 - fprintf
@@ -38,13 +38,12 @@ helpviewer_keywords:
 - _ftprintf_l function
 - print formatted data to streams
 - fwprintf_l function
-ms.assetid: 34a87e1c-6e4d-4d48-a611-58314dd4dc4b
-ms.openlocfilehash: 05896f56ac7058be1618833d6f50a8935a61a14f
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: 4e56182a9e32beb826cb7257cc2199e3ebe19e77
+ms.sourcegitcommit: b04b39940b0c1e265f80fc1951278fdb05a1b30a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97178681"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102621959"
 ---
 # <a name="fprintf-_fprintf_l-fwprintf-_fwprintf_l"></a>fprintf、_fprintf_l、fwprintf、_fwprintf_l
 
@@ -97,7 +96,7 @@ int _fwprintf_l(
 
 エラー コードの詳細については、「[_doserrno、errno、_sys_errlist、および _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」を参照してください。
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>注釈
 
 **fprintf** は、一連の文字と値を書式設定し、出力 *ストリーム* に出力します。 各関数の *引数*(存在する場合) は、対応する書式指定に従って変換および出力さ *れます。* **Fprintf** の場合、 *format* 引数の構文と、 **printf** で使用される構文は同じです。
 
@@ -107,6 +106,9 @@ int _fwprintf_l(
 
 > [!IMPORTANT]
 > *format* にユーザー定義の文字列を指定しないでください。
+>
+>
+> Windows 10 バージョン 2004 (ビルド 19041) 以降では、 `printf` 関数ファミリは、丸め処理のために IEEE 754 の規則に従って、正確に表現可能な浮動小数点数を出力します。 以前のバージョンの Windows では、"5" で終わる厳密に表現可能な浮動小数点数は常に切り上げられます。 IEEE 754 では、最も近い偶数 ("銀行型丸め" とも呼ばれます) に丸める必要があることが示されています。 たとえば、との `printf("%1.0f", 1.5)` 両方 `printf("%1.0f", 2.5)` が2に丸められる必要があります。 以前は、1.5 は2に丸められ、2.5 は3に丸められていました。 この変更は、正確に表現できる数値にのみ影響します。 たとえば、2.35 (メモリで表される場合は2.35000000000000008 に近い) は、2.4 に切り上げられます。 これらの関数によって実行される丸め処理は、によって設定された浮動小数点丸めモードにも従い [`fesetround`](fegetround-fesetround2.md) ます。 以前は、常に丸め処理を選択していま `FE_TONEAREST` した。 この変更は、Visual Studio 2019 バージョン16.2 以降を使用してビルドされたプログラムにのみ影響します。 従来の浮動小数点丸め動作を使用するには、 [' legacy_stdio_float_rounding. .obj '](../link-options.md)にリンクします。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -117,9 +119,9 @@ int _fwprintf_l(
 
 詳細については、[書式の指定](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)に関する記事をご覧ください。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-|機能|必須ヘッダー|
+|関数|必須ヘッダー|
 |--------------|---------------------|
 |**fprintf**、 **_fprintf_l**|\<stdio.h>|
 |**fwprintf**、 **_fwprintf_l**|\<stdio.h> または \<wchar.h>|

@@ -1,7 +1,7 @@
 ---
 description: '詳細については、次を参照してください: sprintf_s、_sprintf_s_l、swprintf_s、_swprintf_s_l'
 title: sprintf_s、_sprintf_s_l、swprintf_s、_swprintf_s_l
-ms.date: 11/04/2016
+ms.date: 3/9/2021
 api_name:
 - _swprintf_s_l
 - _sprintf_s_l
@@ -44,13 +44,12 @@ helpviewer_keywords:
 - _stprintf_s function
 - _sprintf_s_l function
 - formatted text [C++]
-ms.assetid: 424f0a29-22ef-40e8-b565-969f5f57782f
-ms.openlocfilehash: 4d5114367daf8061315d296816799c5707c0323c
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: 323ac9531a60aaff859c18d0f0b6a3811f4ad59a
+ms.sourcegitcommit: b04b39940b0c1e265f80fc1951278fdb05a1b30a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97292261"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102622115"
 ---
 # <a name="sprintf_s-_sprintf_s_l-swprintf_s-_swprintf_s_l"></a>sprintf_s、_sprintf_s_l、swprintf_s、_swprintf_s_l
 
@@ -124,7 +123,7 @@ int swprintf_s(
 
 **sprintf_s** は、 *バッファー* に格納されているバイト数を返します。終端の null 文字はカウントされません。 **swprintf_s** は、 *バッファー* に格納されているワイド文字数を返します。終端の null ワイド文字はカウントされません。
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>注釈
 
 **Sprintf_s** 関数は、一連の文字と値の書式を設定し、*バッファー* に格納します。 各 *引数*(存在する場合) は、対応する書式指定に従って変換および出力さ *れます。* 形式は通常の文字で構成され、 [printf](printf-printf-l-wprintf-wprintf-l.md)の *format* 引数と同じ形式と機能を持ちます。 最後に書き込まれる文字の後に NULL 文字が追加されます。 重なり合う文字列間でコピーした場合の動作は未定義です。
 
@@ -137,6 +136,9 @@ int swprintf_s(
 C++ では、これらの関数の使用はテンプレートのオーバーロードによって簡素化されます。オーバーロードでは、バッファー長を自動的に推論できる (サイズの引数を指定する必要がなくなる) だけでなく、古くてセキュリティが万全ではない関数を新しく安全な関数に自動的に置き換えることができます。 詳細については、「[セキュリティ保護されたテンプレート オーバーロード](../../c-runtime-library/secure-template-overloads.md)」を参照してください。
 
 バッファーが小さすぎる場合に何が起こるかについて、追加の制御を提供する **sprintf_s** のバージョンがあります。 詳細については、「 [_snprintf_s, _snprintf_s_l, _snwprintf_s, _snwprintf_s_l](snprintf-s-snprintf-s-l-snwprintf-s-snwprintf-s-l.md)」を参照してください。
+
+> [!IMPORTANT]
+> Windows 10 バージョン 2004 (ビルド 19041) 以降では、 `printf` 関数ファミリは、丸め処理のために IEEE 754 の規則に従って、正確に表現可能な浮動小数点数を出力します。 以前のバージョンの Windows では、"5" で終わる厳密に表現可能な浮動小数点数は常に切り上げられます。 IEEE 754 では、最も近い偶数 ("銀行型丸め" とも呼ばれます) に丸める必要があることが示されています。 たとえば、との `printf("%1.0f", 1.5)` 両方 `printf("%1.0f", 2.5)` が2に丸められる必要があります。 以前は、1.5 は2に丸められ、2.5 は3に丸められていました。 この変更は、正確に表現できる数値にのみ影響します。 たとえば、2.35 (メモリで表される場合は2.35000000000000008 に近い) は、2.4 に切り上げられます。 これらの関数によって実行される丸め処理は、によって設定された浮動小数点丸めモードにも従い [`fesetround`](fegetround-fesetround2.md) ます。 以前は、常に丸め処理を選択していま `FE_TONEAREST` した。 この変更は、Visual Studio 2019 バージョン16.2 以降を使用してビルドされたプログラムにのみ影響します。 従来の浮動小数点丸め動作を使用するには、 [' legacy_stdio_float_rounding. .obj '](../link-options.md)にリンクします。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 

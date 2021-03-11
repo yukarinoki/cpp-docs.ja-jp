@@ -58,6 +58,9 @@
         - name: コード分析
           tocHref: /cpp/code-quality/
           topicHref: /cpp/code-quality/index
+        - name: コード サニタイザー
+          tocHref: /cpp/sanitizers/
+          topicHref: /cpp/sanitizers/index
         - name: C++ 言語
           tocHref: /cpp/cpp/
           topicHref: /cpp/cpp/index

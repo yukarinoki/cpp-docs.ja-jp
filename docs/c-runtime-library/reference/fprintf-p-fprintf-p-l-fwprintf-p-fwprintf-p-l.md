@@ -1,7 +1,7 @@
 ---
 description: '詳細については、次を参照してください: _fprintf_p、_fprintf_p_l、_fwprintf_p、_fwprintf_p_l'
 title: _fprintf_p、_fprintf_p_l、_fwprintf_p、_fwprintf_p_l
-ms.date: 11/04/2016
+ms.date: 3/9/2021
 api_name:
 - _fwprintf_p
 - _fprintf_p_l
@@ -44,13 +44,12 @@ helpviewer_keywords:
 - printing [C++], formatted data to streams
 - ftprintf_p_l function
 - fwprintf_p_l function
-ms.assetid: 46b082e1-45ba-4383-9ee4-97015aa50bc6
-ms.openlocfilehash: 543589a864c19e1c1fddde0c6837f680903666cf
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: 70a9ba70c3a9bd45a79d3f203b7dc7da8a9632c0
+ms.sourcegitcommit: b04b39940b0c1e265f80fc1951278fdb05a1b30a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97178629"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102621933"
 ---
 # <a name="_fprintf_p-_fprintf_p_l-_fwprintf_p-_fwprintf_p_l"></a>_fprintf_p、_fprintf_p_l、_fwprintf_p、_fwprintf_p_l
 
@@ -101,7 +100,7 @@ int _fwprintf_p_l(
 
 **_fprintf_p** と **_fwprintf_p** は、書き込まれた文字数を返すか、出力エラーが発生したときに負の値を返します。
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>注釈
 
 **_fprintf_p** 書式を設定し、一連の文字と値を出力 *ストリーム* に出力します。 各関数の *引数*(存在する場合) は、対応する書式指定に従って変換および出力さ *れます。* **_Fprintf_p** の場合、 *format* 引数の構文は同じであり、 **_printf_p** で使用されているものと同じです。 これらの関数では、位置指定パラメーターをサポートします。このため、書式指定文字列で使用されるパラメーターの順序は変更することができます。 位置指定パラメーターの詳細については、「[printf_p の位置指定パラメーター](../../c-runtime-library/printf-p-positional-parameters.md)」を参照してください。
 
@@ -111,6 +110,9 @@ int _fwprintf_p_l(
 
 > [!IMPORTANT]
 > *format* にユーザー定義の文字列を指定しないでください。
+>
+>
+> Windows 10 バージョン 2004 (ビルド 19041) 以降では、 `printf` 関数ファミリは、丸め処理のために IEEE 754 の規則に従って、正確に表現可能な浮動小数点数を出力します。 以前のバージョンの Windows では、"5" で終わる厳密に表現可能な浮動小数点数は常に切り上げられます。 IEEE 754 では、最も近い偶数 ("銀行型丸め" とも呼ばれます) に丸める必要があることが示されています。 たとえば、との `printf("%1.0f", 1.5)` 両方 `printf("%1.0f", 2.5)` が2に丸められる必要があります。 以前は、1.5 は2に丸められ、2.5 は3に丸められていました。 この変更は、正確に表現できる数値にのみ影響します。 たとえば、2.35 (メモリで表される場合は2.35000000000000008 に近い) は、2.4 に切り上げられます。 これらの関数によって実行される丸め処理は、によって設定された浮動小数点丸めモードにも従い [`fesetround`](fegetround-fesetround2.md) ます。 以前は、常に丸め処理を選択していま `FE_TONEAREST` した。 この変更は、Visual Studio 2019 バージョン16.2 以降を使用してビルドされたプログラムにのみ影響します。 従来の浮動小数点丸め動作を使用するには、 [' legacy_stdio_float_rounding. .obj '](../link-options.md)にリンクします。
 
 セキュリティで保護されていないバージョン (「 [fprintf、_fprintf_l、fwprintf、_fwprintf_l](fprintf-fprintf-l-fwprintf-fwprintf-l.md)) と同様に、これらの *関数は、* 「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で *説明され* ているように、パラメーターを検証し、無効なパラメーターハンドラーを呼び出します。 実行の継続が許可された場合、これらの関数は-1 を返し、 **errno** を **EINVAL** に設定します。
 
@@ -123,9 +125,9 @@ int _fwprintf_p_l(
 
 詳細については、[書式の指定](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)に関する記事をご覧ください。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-|機能|必須ヘッダー|
+|関数|必須ヘッダー|
 |--------------|---------------------|
 |**_fprintf_p**、 **_fprintf_p_l**|\<stdio.h>|
 |**_fwprintf_p**、 **_fwprintf_p_l**|\<stdio.h> または \<wchar.h>|

@@ -1,7 +1,7 @@
 ---
 description: '詳細については、次を参照してください: vprintf、_vprintf_l、vwprintf、_vwprintf_l'
 title: vprintf、_vprintf_l、vwprintf、_vwprintf_l
-ms.date: 11/04/2016
+ms.date: 3/9/2021
 api_name:
 - vprintf
 - _vwprintf_l
@@ -37,13 +37,12 @@ helpviewer_keywords:
 - vtprintf function
 - _vtprintf_l function
 - formatted text [C++]
-ms.assetid: 44549505-00a0-4fa7-9a85-f2e666f55a38
-ms.openlocfilehash: f403d7b3cce54495bf7118017e348fa144b0fd8d
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: be3615902166f4e248b06d2145df404e5ba0fe76
+ms.sourcegitcommit: b04b39940b0c1e265f80fc1951278fdb05a1b30a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97155775"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102621426"
 ---
 # <a name="vprintf-_vprintf_l-vwprintf-_vwprintf_l"></a>vprintf、_vprintf_l、vwprintf、_vwprintf_l
 
@@ -91,7 +90,7 @@ int _vwprintf_l(
 
 これらと他のエラー コードの詳細については、「[_doserrno、errno、_sys_errlist、および _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」を参照してください。
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>注釈
 
 これらの各関数は、引数リストへのポインターを受け取り、指定されたデータを書式設定して **stdout** に書き込みます。
 
@@ -101,6 +100,7 @@ int _vwprintf_l(
 
 > [!IMPORTANT]
 > *format* にユーザー定義の文字列を指定しないでください。 詳しくは、「 [バッファー オーバーランの回避](/windows/win32/SecBP/avoiding-buffer-overruns)」をご覧ください。 無効な形式の文字列が検出されて、エラーとなることに注意してください。
+Windows 10 バージョン 2004 (ビルド 19041) 以降では、 `printf` 関数ファミリは、丸め処理のために IEEE 754 の規則に従って、正確に表現可能な浮動小数点数を出力します。 以前のバージョンの Windows では、"5" で終わる厳密に表現可能な浮動小数点数は常に切り上げられます。 IEEE 754 では、最も近い偶数 ("銀行型丸め" とも呼ばれます) に丸める必要があることが示されています。 たとえば、との `printf("%1.0f", 1.5)` 両方 `printf("%1.0f", 2.5)` が2に丸められる必要があります。 以前は、1.5 は2に丸められ、2.5 は3に丸められていました。 この変更は、正確に表現できる数値にのみ影響します。 たとえば、2.35 (メモリで表される場合は2.35000000000000008 に近い) は、2.4 に切り上げられます。 これらの関数によって実行される丸め処理は、によって設定された浮動小数点丸めモードにも従い [`fesetround`](fegetround-fesetround2.md) ます。 以前は、常に丸め処理を選択していま `FE_TONEAREST` した。 この変更は、Visual Studio 2019 バージョン16.2 以降を使用してビルドされたプログラムにのみ影響します。 従来の浮動小数点丸め動作を使用するには、 [' legacy_stdio_float_rounding. .obj '](../link-options.md)にリンクします。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 

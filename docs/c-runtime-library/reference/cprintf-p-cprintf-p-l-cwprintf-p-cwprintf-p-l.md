@@ -1,7 +1,7 @@
 ---
 description: '詳細については、次を参照してください: _cprintf_p、_cprintf_p_l、_cwprintf_p、_cwprintf_p_l'
 title: _cprintf_p、_cprintf_p_l、_cwprintf_p、_cwprintf_p_l
-ms.date: 11/04/2016
+ms.date: 3/9/2021
 api_name:
 - _cprintf_p_l
 - _cwprintf_p_l
@@ -46,13 +46,12 @@ helpviewer_keywords:
 - _cwprintf_p function
 - tcprintf_p function
 - cprintf_p function
-ms.assetid: 1f82fd7d-13c8-4c4a-a3e4-db0df3873564
-ms.openlocfilehash: 63b02da66c3eb8856e735eb8445bd688fc1636aa
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: 155e6d0a9842c7ade999979e44418eecd5fd0439
+ms.sourcegitcommit: b04b39940b0c1e265f80fc1951278fdb05a1b30a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97155998"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102621907"
 ---
 # <a name="_cprintf_p-_cprintf_p_l-_cwprintf_p-_cwprintf_p_l"></a>_cprintf_p、_cprintf_p_l、_cwprintf_p、_cwprintf_p_l
 
@@ -99,7 +98,7 @@ int _cwprintf_p_l(
 
 出力した文字数。エラーが発生した場合は負の値を返します。
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>注釈
 
 これらの関数は、一連の文字および値を書式設定してコンソールに直接出力します。その際、 **_putch** 関数と **_putwch** 関数を使用して文字を出力します。 各 *引数*(存在する場合) は、対応する書式指定に従って変換および出力さ *れます。* 形式は、 [printf_p](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)関数の *format* パラメーターと同じ形式と機能を持ちます。 **_Cprintf_p** と **cprintf_s** の違いは、 **_cprintf_p** が位置指定パラメーターをサポートしていることです。これにより、書式設定文字列で引数が使用される順序を指定できます。 詳細については、「[printf_p の位置指定パラメーター](../../c-runtime-library/printf-p-positional-parameters.md)」を参照してください。
 
@@ -107,10 +106,13 @@ int _cwprintf_p_l(
 
 **_L** サフィックスを持つこれらの関数のバージョンは、現在のロケールの代わりに渡されたロケールパラメーターを使用する点を除いて同じです。
 
+また、 **_cprintf_s** や **_cwprintf_s** と同様に、入力ポインターと書式指定文字列を検証します。 *Format* または *引数* が **NULL** の場合、または書式指定文字列に無効な書式指定文字が含まれている場合、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、これらの関数は無効なパラメーターハンドラーを呼び出します。 実行の継続が許可された場合、これらの関数は-1 を返し、 **errno** を **EINVAL** に設定します。
+
 > [!IMPORTANT]
 > *format* にユーザー定義の文字列を指定しないでください。
-
-また、 **_cprintf_s** や **_cwprintf_s** と同様に、入力ポインターと書式指定文字列を検証します。 *Format* または *引数* が **NULL** の場合、または書式指定文字列に無効な書式指定文字が含まれている場合、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、これらの関数は無効なパラメーターハンドラーを呼び出します。 実行の継続が許可された場合、これらの関数は-1 を返し、 **errno** を **EINVAL** に設定します。
+>
+>
+> Windows 10 バージョン 2004 (ビルド 19041) 以降では、 `printf` 関数ファミリは、丸め処理のために IEEE 754 の規則に従って、正確に表現可能な浮動小数点数を出力します。 以前のバージョンの Windows では、"5" で終わる厳密に表現可能な浮動小数点数は常に切り上げられます。 IEEE 754 では、最も近い偶数 ("銀行型丸め" とも呼ばれます) に丸める必要があることが示されています。 たとえば、との `printf("%1.0f", 1.5)` 両方 `printf("%1.0f", 2.5)` が2に丸められる必要があります。 以前は、1.5 は2に丸められ、2.5 は3に丸められていました。 この変更は、正確に表現できる数値にのみ影響します。 たとえば、2.35 (メモリで表される場合は2.35000000000000008 に近い) は、2.4 に切り上げられます。 これらの関数によって実行される丸め処理は、によって設定された浮動小数点丸めモードにも従い [`fesetround`](fegetround-fesetround2.md) ます。 以前は、常に丸め処理を選択していま `FE_TONEAREST` した。 この変更は、Visual Studio 2019 バージョン16.2 以降を使用してビルドされたプログラムにのみ影響します。 従来の浮動小数点丸め動作を使用するには、をにリンク [`legacy_stdio_float_rounding.obj`](../link-options.md) します。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 

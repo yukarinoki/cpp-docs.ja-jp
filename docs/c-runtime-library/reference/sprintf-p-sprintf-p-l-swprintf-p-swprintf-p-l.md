@@ -1,7 +1,7 @@
 ---
 description: '詳細については、次を参照してください: _sprintf_p、_sprintf_p_l、_swprintf_p、_swprintf_p_l'
 title: _sprintf_p、_sprintf_p_l、_swprintf_p、_swprintf_p_l
-ms.date: 11/04/2016
+ms.date: 3/9/2021
 api_name:
 - _sprintf_p
 - _swprintf_p_l
@@ -45,13 +45,12 @@ helpviewer_keywords:
 - stprintf_p_l function
 - formatted text [C++]
 - _stprintf_p_l function
-ms.assetid: a2ae78e8-6b0c-48d5-87a9-ea2365b0693d
-ms.openlocfilehash: 84702c0ab04027f350978c511ee8f871af753bb9
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: 356aa4c5266323e989ffbc5b651af4c77431eecd
+ms.sourcegitcommit: b04b39940b0c1e265f80fc1951278fdb05a1b30a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97292300"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102621647"
 ---
 # <a name="_sprintf_p-_sprintf_p_l-_swprintf_p-_swprintf_p_l"></a>_sprintf_p、_sprintf_p_l、_swprintf_p、_swprintf_p_l
 
@@ -111,13 +110,16 @@ int _swprintf_p_l(
 
 書き込まれた文字数。エラーが発生した場合は-1。
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>注釈
 
 **_Sprintf_p** 関数は、一連の文字と値の書式を設定し、*バッファー* に格納します。 *Argument_list* 内の各引数 (存在する場合) は、対応する形式仕様に従って変換および出力さ *れます。* *Format* 引数は、 [printf 関数と wprintf 関数の書式指定構文](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)を使用します。 最後に書き込まれる文字の後に NULL 文字が追加されます。 重なり合う文字列間でコピーした場合の動作は未定義です。 **_Sprintf_p** と **sprintf_s** の違いは、 **_sprintf_p** が位置指定パラメーターをサポートしていることです。これにより、書式設定文字列で引数が使用される順序を指定できます。 詳細については、「[printf_p の位置指定パラメーター](../../c-runtime-library/printf-p-positional-parameters.md)」を参照してください。
 
 **_swprintf_p** は **_sprintf_p** のワイド文字バージョンです。 **_swprintf_p** するポインター引数はワイド文字列です。 **_Swprintf_p** でのエンコードエラーの検出は、 **_sprintf_p** とは異なる場合があります。 **_swprintf_p** と **fwprintf_p** は同じように動作しますが、 **_Swprintf_p** では、型 **ファイル** の出力先ではなく文字列に出力が書き込まれる点が異なります。また、 **_swprintf_p** では、書き込む最大文字数を指定するために *count* パラメーターが必要です。 **_L** サフィックスを持つこれらの関数のバージョンは、現在のスレッドロケールの代わりに渡されたロケールパラメーターを使用する点を除いて同じです。
 
 **_sprintf_p** は、 *バッファー* に格納されているバイト数を返します。終端の null 文字はカウントされません。 **_swprintf_p** は、 *バッファー* に格納されているワイド文字数を返します。終端の null ワイド文字はカウントされません。 *バッファー* または *形式* が null ポインターの場合、または書式指定文字列に無効な書式指定文字が含まれている場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、これらの関数は-1 を返し、 **errno** を **EINVAL** に設定します。
+
+> [!IMPORTANT]
+> Windows 10 バージョン 2004 (ビルド 19041) 以降では、 `printf` 関数ファミリは、丸め処理のために IEEE 754 の規則に従って、正確に表現可能な浮動小数点数を出力します。 以前のバージョンの Windows では、"5" で終わる厳密に表現可能な浮動小数点数は常に切り上げられます。 IEEE 754 では、最も近い偶数 ("銀行型丸め" とも呼ばれます) に丸める必要があることが示されています。 たとえば、との `printf("%1.0f", 1.5)` 両方 `printf("%1.0f", 2.5)` が2に丸められる必要があります。 以前は、1.5 は2に丸められ、2.5 は3に丸められていました。 この変更は、正確に表現できる数値にのみ影響します。 たとえば、2.35 (メモリで表される場合は2.35000000000000008 に近い) は、2.4 に切り上げられます。 これらの関数によって実行される丸め処理は、によって設定された浮動小数点丸めモードにも従い [`fesetround`](fegetround-fesetround2.md) ます。 以前は、常に丸め処理を選択していま `FE_TONEAREST` した。 この変更は、Visual Studio 2019 バージョン16.2 以降を使用してビルドされたプログラムにのみ影響します。 従来の浮動小数点丸め動作を使用するには、 [' legacy_stdio_float_rounding. .obj '](../link-options.md)にリンクします。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 

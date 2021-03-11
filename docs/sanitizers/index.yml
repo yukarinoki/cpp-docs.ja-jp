@@ -1,0 +1,47 @@
+### YamlMime:Landing
+title: C/C++ サニタイザー |実行時のバグ検出用にコードをインストルメント化する
+summary: C および C++ のサニタイザーを使用して、欠陥の報告、分析、防止を行います。
+metadata:
+  title: C/C++ サニタイザー
+  description: サニタイザーを使用して欠陥の報告、分析、防止を行う方法について説明します。
+  ms.topic: landing-page
+  author: corob-msft
+  ms.author: corob
+  ms.date: 02/26/2021
+  ms.openlocfilehash: 792d71e8aabdeb72a673d9084a9fe521e6a98ee5
+  ms.sourcegitcommit: 6ed44d9c3fb32e965e363b9c69686739a90a2117
+  ms.translationtype: HT
+  ms.contentlocale: ja-JP
+  ms.lasthandoff: 03/08/2021
+  ms.locfileid: "102469310"
+landingContent:
+- title: コード サニタイザーを使用してバグを見つける
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: AddressSanitizer の詳細
+      url: asan.md
+  - linkListType: tutorial
+    links:
+    - text: AddressSanitizer のシャドウ バイト
+      url: ./asan-shadow-bytes.md
+    - text: AddressSanitizer のクラウドまたは分散テスト
+      url: ./asan-offline-crash-dumps.md
+- title: ビルドをインストルメント化する
+  linkLists:
+  - linkListType: reference
+    links:
+    - text: AddressSanitizer のビルドと言語のリファレンス
+      url: ./asan-building.md
+    - text: AddressSanitizer ランタイムのリファレンス
+      url: ./asan-runtime.md
+    - text: AddressSanitizer のエラー例
+      url: ./asan-error-examples.md
+    - text: AddressSanitizer の既知の問題
+      url: ./asan-known-issues.md
+- title: 結果をデバッグする
+  linkLists:
+  - linkListType: reference
+    links:
+    - text: AddressSanitizer のデバッガー統合
+      url: ./asan-debugger-integration.md

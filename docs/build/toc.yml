@@ -339,6 +339,8 @@
   href: ../build/configuring-programs-for-windows-xp.md
 - name: C/C++ のコード分析
   href: ../code-quality/
+- name: C/C++ のコード サニタイザー
+  href: ../sanitizers/
 - name: コンパイラとビルド ツールのリファレンス
   expanded: false
   items:
@@ -560,6 +562,8 @@
                   href: ../build/reference/fp-specify-floating-point-behavior.md
                 - name: /FS (同期 PDB 書き込みの強制)
                   href: ../build/reference/fs-force-synchronous-pdb-writes.md
+                - name: /fsanitize (サニタイザーの有効化)
+                  href: ../build/reference/fsanitize.md
                 - name: /GA (Windows アプリケーションの最適化)
                   href: ../build/reference/ga-optimize-for-windows-application.md
                 - name: /Gd、/Gr、/Gv、/Gz (呼び出し規則)
@@ -939,6 +943,8 @@
               href: ../build/reference/ignore-ignore-specific-warnings.md
             - name: /IGNOREIDL (属性を MIDL に挿入しない)
               href: ../build/reference/ignoreidl-don-t-process-attributes-into-midl.md
+            - name: /INFERASANLIBS (推論サニタイザー ライブラリの使用)
+              href: ../build/reference/inferasanlibs.md
             - name: /IMPLIB (インポート ライブラリ名の設定)
               href: ../build/reference/implib-name-import-library.md
             - name: /INCLUDE (シンボルの明示的な参照)

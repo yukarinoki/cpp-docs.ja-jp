@@ -1,0 +1,58 @@
+- name: コード サニタイザー
+  href: ../sanitizers/index.yml
+- name: AddressSanitizer
+  expanded: true
+  items:
+    - name: AddressSanitizer の概要
+      href: ../sanitizers/asan.md
+    - name: ビルドと言語のリファレンス
+      href: ../sanitizers/asan-building.md
+    - name: ランタイムのリファレンス
+      href: ../sanitizers/asan-runtime.md
+    - name: デバッガーの統合
+      href: ../sanitizers/asan-debugger-integration.md
+    - name: シャドウ バイト
+      href: ../sanitizers/asan-shadow-bytes.md
+    - name: クラウドまたは分散テスト
+      href: ../sanitizers/asan-offline-crash-dumps.md
+    - name: AddressSanitizer のエラー例
+      expanded: true
+      items:
+        - name: AddressSanitizer のエラー例
+          href: ../sanitizers/asan-error-examples.md
+        - name: alloc-dealloc-mismatch エラー
+          href: ../sanitizers/error-alloc-dealloc-mismatch.md
+        - name: allocation-size-too-big エラー
+          href: ../sanitizers/error-allocation-size-too-big.md
+        - name: calloc-overflow エラー
+          href: ../sanitizers/error-calloc-overflow.md
+        - name: double-free エラー
+          href: ../sanitizers/error-double-free.md
+        - name: dynamic-stack-buffer-overflow エラー
+          href: ../sanitizers/error-dynamic-stack-buffer-overflow.md
+        - name: global-buffer-overflow エラー
+          href: ../sanitizers/error-global-buffer-overflow.md
+        - name: heap-buffer-overflow エラー
+          href: ../sanitizers/error-heap-buffer-overflow.md
+        - name: heap-use-after-free エラー
+          href: ../sanitizers/error-heap-use-after-free.md
+        - name: invalid-allocation-alignment エラー
+          href: ../sanitizers/error-invalid-allocation-alignment.md
+        - name: memcpy-param-overlap エラー
+          href: ../sanitizers/error-memcpy-param-overlap.md
+        - name: new-delete-type-mismatch エラー
+          href: ../sanitizers/error-new-delete-type-mismatch.md
+        - name: stack-buffer-overflow エラー
+          href: ../sanitizers/error-stack-buffer-overflow.md
+        - name: stack-buffer-underflow エラー
+          href: ../sanitizers/error-stack-buffer-underflow.md
+        - name: stack-use-after-return エラー
+          href: ../sanitizers/error-stack-use-after-return.md
+        - name: stack-use-after-scope エラー
+          href: ../sanitizers/error-stack-use-after-scope.md
+        - name: strcat-param-overlap エラー
+          href: ../sanitizers/error-strncat-param-overlap.md
+        - name: use-after-poison エラー
+          href: ../sanitizers/error-use-after-poison.md
+    - name: 既知の問題
+      href: ../sanitizers/asan-known-issues.md

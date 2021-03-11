@@ -1,7 +1,7 @@
 ---
 description: '詳細については、次を参照してください: _snprintf_s、_snprintf_s_l、_snwprintf_s、_snwprintf_s_l'
 title: _snprintf_s、_snprintf_s_l、_snwprintf_s、_snwprintf_s_l
-ms.date: 11/04/2016
+ms.date: 3/9/2021
 api_name:
 - _snprintf_s
 - _snprintf_s_l
@@ -50,13 +50,12 @@ helpviewer_keywords:
 - snwprintf_s function
 - _snwprintf_s function
 - formatted text [C++]
-ms.assetid: 9336ab86-13e5-4a29-a3cd-074adfee6891
-ms.openlocfilehash: 366614f69305080ee29ed8b903d17b5cc24765d8
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: 7bee7b376deda021dd1d03909ebd0d9b088689b9
+ms.sourcegitcommit: b04b39940b0c1e265f80fc1951278fdb05a1b30a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97322481"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102621439"
 ---
 # <a name="_snprintf_s-_snprintf_s_l-_snwprintf_s-_snwprintf_s_l"></a>_snprintf_s、_snprintf_s_l、_snwprintf_s、_snwprintf_s_l
 
@@ -141,7 +140,7 @@ int _snwprintf_s(
 
 これらと他のエラー コードの詳細については、「[_doserrno、errno、_sys_errlist、および _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」を参照してください。
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>注釈
 
 **_Snprintf_s** 関数は、*カウント* または *バッファー* 内の文字数を書式設定して格納し、終端の null を追加します。 各引数 (存在する場合) は、対応する書式指定に従って変換および出力さ *れます。* 書式設定は、 **printf** 関数ファミリと一致します。「 [書式指定構文: Printf 関数と Wprintf 関数」を](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)参照してください。 重なり合う文字列間でコピーした場合の動作は未定義です。
 
@@ -149,6 +148,9 @@ int _snwprintf_s(
 
 > [!IMPORTANT]
 > *format* にユーザー定義の文字列を指定しないでください。
+>
+>
+> Windows 10 バージョン 2004 (ビルド 19041) 以降では、 `printf` 関数ファミリは、丸め処理のために IEEE 754 の規則に従って、正確に表現可能な浮動小数点数を出力します。 以前のバージョンの Windows では、"5" で終わる厳密に表現可能な浮動小数点数は常に切り上げられます。 IEEE 754 では、最も近い偶数 ("銀行型丸め" とも呼ばれます) に丸める必要があることが示されています。 たとえば、との `printf("%1.0f", 1.5)` 両方 `printf("%1.0f", 2.5)` が2に丸められる必要があります。 以前は、1.5 は2に丸められ、2.5 は3に丸められていました。 この変更は、正確に表現できる数値にのみ影響します。 たとえば、2.35 (メモリで表される場合は2.35000000000000008 に近い) は、2.4 に切り上げられます。 これらの関数によって実行される丸め処理は、によって設定された浮動小数点丸めモードにも従い [`fesetround`](fegetround-fesetround2.md) ます。 以前は、常に丸め処理を選択していま `FE_TONEAREST` した。 この変更は、Visual Studio 2019 バージョン16.2 以降を使用してビルドされたプログラムにのみ影響します。 従来の浮動小数点丸め動作を使用するには、 [' legacy_stdio_float_rounding. .obj '](../link-options.md)にリンクします。
 
 **_snwprintf_s** は **_snprintf_s** のワイド文字バージョンです。 **_snwprintf_s** するポインター引数はワイド文字列です。 **_Snwprintf_s** でのエンコードエラーの検出は、 **_snprintf_s** とは異なる場合があります。 **_snwprintf_s** は、 **swprintf_s** のように、出力を型 **ファイル** の出力先ではなく文字列に書き込みます。
 

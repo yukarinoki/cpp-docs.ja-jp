@@ -1,7 +1,7 @@
 ---
 description: 詳細については、vsnprintf_s、_vsnprintf_s、_vsnprintf_s_l、_vsnwprintf_s、_vsnwprintf_s_l を参照してください。
 title: vsnprintf_s、_vsnprintf_s、_vsnprintf_s_l、_vsnwprintf_s、_vsnwprintf_s_l
-ms.date: 11/04/2016
+ms.date: 3/9/2021
 api_name:
 - _vsnwprintf_s
 - _vsnwprintf_s_l
@@ -43,13 +43,12 @@ helpviewer_keywords:
 - _vsnprintf_s_l function
 - _vsnwprintf_s function
 - formatted text [C++]
-ms.assetid: 147ccfce-58c7-4681-a726-ef54ac1c604e
-ms.openlocfilehash: 27c91d6064b4a92da8a6f09e7d7e5b6bfb8bf95f
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: c5f472c1ff481d4d940ac081bf04986cb18e5a78
+ms.sourcegitcommit: b04b39940b0c1e265f80fc1951278fdb05a1b30a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97342154"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102622011"
 ---
 # <a name="vsnprintf_s-_vsnprintf_s-_vsnprintf_s_l-_vsnwprintf_s-_vsnwprintf_s_l"></a>vsnprintf_s、_vsnprintf_s、_vsnprintf_s_l、_vsnwprintf_s、_vsnwprintf_s_l
 
@@ -158,7 +157,7 @@ int _vsnwprintf_s(
 |*カウント* <= 0|-1|**EINVAL**|
 |*sizeOfBuffer* が小さすぎます (および *count* ! = **_TRUNCATE**)|-1 (および空の文字列に設定された *バッファー* )|**ERANGE**|
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>注釈
 
 **vsnprintf_s** は **_vsnprintf_s** と同じです。 ANSI 規格に準拠するために **vsnprintf_s** が含まれています。 **_vnsprintf** は旧バージョンとの互換性のために残されています。
 
@@ -170,6 +169,7 @@ int _vsnwprintf_s(
 
 > [!IMPORTANT]
 > *format* にユーザー定義の文字列を指定しないでください。 詳しくは、「 [バッファー オーバーランの回避](/windows/win32/SecBP/avoiding-buffer-overruns)」をご覧ください。
+> Windows 10 バージョン 2004 (ビルド 19041) 以降では、 `printf` 関数ファミリは、丸め処理のために IEEE 754 の規則に従って、正確に表現可能な浮動小数点数を出力します。 以前のバージョンの Windows では、"5" で終わる厳密に表現可能な浮動小数点数は常に切り上げられます。 IEEE 754 では、最も近い偶数 ("銀行型丸め" とも呼ばれます) に丸める必要があることが示されています。 たとえば、との `printf("%1.0f", 1.5)` 両方 `printf("%1.0f", 2.5)` が2に丸められる必要があります。 以前は、1.5 は2に丸められ、2.5 は3に丸められていました。 この変更は、正確に表現できる数値にのみ影響します。 たとえば、2.35 (メモリで表される場合は2.35000000000000008 に近い) は、2.4 に切り上げられます。 これらの関数によって実行される丸め処理は、によって設定された浮動小数点丸めモードにも従い [`fesetround`](fegetround-fesetround2.md) ます。 以前は、常に丸め処理を選択していま `FE_TONEAREST` した。 この変更は、Visual Studio 2019 バージョン16.2 以降を使用してビルドされたプログラムにのみ影響します。 従来の浮動小数点丸め動作を使用するには、 [' legacy_stdio_float_rounding. .obj '](../link-options.md)にリンクします。
 
 > [!NOTE]
 > 終端の null 用の空き領域があることを確認するには、 *count* がバッファーの長さより厳密に小さいことを確認するか、 **_TRUNCATE** を使用します。

@@ -1,7 +1,7 @@
 ---
 title: snprintf、_snprintf、_snprintf_l、_snwprintf、_snwprintf_l
-description: Snprintf、_snprintf、_snprintf_l、_snwprintf、および _snwprintf_の API リファレンス書式設定されたデータを文字列に書き込みます。
-ms.date: 08/27/2020
+description: Snprintf、_snprintf、_snprintf_l、_snwprintf、および _snwprintf_ の API リファレンス書式設定されたデータを文字列に書き込みます。
+ms.date: 3/9/2021
 api_name:
 - _snwprintf
 - _snprintf
@@ -51,13 +51,12 @@ helpviewer_keywords:
 - snprintf function
 - sntprintf function
 - formatted text [C++]
-ms.assetid: 5976c9c8-876e-4ac9-a515-39f3f7fd0925
-ms.openlocfilehash: 9a851f08e50d11d3716ea59e00e5e9028b6cd6d5
-ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
+ms.openlocfilehash: c36b7e480b2025c605d46128418c73e7b6887fc3
+ms.sourcegitcommit: b04b39940b0c1e265f80fc1951278fdb05a1b30a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89556113"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102621660"
 ---
 # <a name="snprintf-_snprintf-_snprintf_l-_snwprintf-_snwprintf_l"></a>snprintf、_snprintf、_snprintf_l、_snwprintf、_snwprintf_l
 
@@ -151,32 +150,34 @@ int _snwprintf_l(
 
 ## <a name="return-value"></a>戻り値
 
-**Len**には、書式設定されたデータ文字列の長さを指定します。終端の null は含まれません。 **Len**と**count**は、 **snprintf**と **_snprintf**の文字数と **_snwprintf**のワイド文字数です。
+**Len** には、書式設定されたデータ文字列の長さを指定します。終端の null は含まれません。 **Len** と **count** は、 **snprintf** と **_snprintf** の文字数と **_snwprintf** のワイド文字数です。
 
-すべての関数について、 **len**  <  *count*の場合は**len**文字が*バッファー*に格納され、null 終端記号が追加され、 **len**が返されます。
+すべての関数について、 **len**  <  *count* の場合は **len** 文字が *バッファー* に格納され、null 終端記号が追加され、 **len** が返されます。
 
-**Snprintf**関数は、 **len**が*count*以上の場合に、null 終端記号をに配置することによって、出力を切り捨て `buffer[count-1]` ます。 返される値は **len**で、 *count* が十分に大きい場合に出力された文字数です。 **Snprintf**関数は、エンコードエラーが発生した場合に負の値を返します。
+**Snprintf** 関数は、 **len** が *count* 以上の場合に、null 終端記号をに配置することによって、出力を切り捨て `buffer[count-1]` ます。 返される値は **len** で、 *count* が十分に大きい場合に出力された文字数です。 **Snprintf** 関数は、エンコードエラーが発生した場合に負の値を返します。
 
-**Snprintf**以外のすべての関数について、 **len**  =  *count*の場合**は len**文字が*バッファー*に格納され、null 終端文字は追加されず、 **len**が返されます。 **Len**  >  *count*、 *count*文字が*buffer*に格納されている場合、null 終端記号は追加されず、負の値が返されます。
+**Snprintf** 以外のすべての関数について、 **len**  =  *count* の場合 **は len** 文字が *バッファー* に格納され、null 終端文字は追加されず、 **len** が返されます。 **Len**  >  *count*、 *count* 文字が *buffer* に格納されている場合、null 終端記号は追加されず、負の値が返されます。
 
-*Buffer*が null ポインターで、 *count*が0の場合、出力の書式を設定するために必要な文字数として**len**が返されます。終端の null は含まれません。 同じ *引数* と *ロケール* のパラメーターを使用して呼び出しを成功させるには、少なくとも **len** + 1 文字を保持するバッファーを割り当てます。
+*Buffer* が null ポインターで、 *count* が0の場合、出力の書式を設定するために必要な文字数として **len** が返されます。終端の null は含まれません。 同じ *引数* と *ロケール* のパラメーターを使用して呼び出しを成功させるには、少なくとも **len** + 1 文字を保持するバッファーを割り当てます。
 
-*Buffer*が null ポインターで、 *count*が0以外の場合、または*format*が null ポインターの場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、これらの関数は-1 を返し、 **errno** を **EINVAL**に設定します。
+*Buffer* が null ポインターで、 *count* が0以外の場合、または *format* が null ポインターの場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、これらの関数は-1 を返し、 **errno** を **EINVAL** に設定します。
 
 エラー コードの詳細については、「[errno、_doserrno、_sys_errlist、および _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」を参照してください。
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>注釈
 
-**Snprintf**関数と関数の **_snprintf**ファミリでは、*バッファー*内の文字*数*を書式指定して格納します。 **Snprintf**関数は、常に終端の null 文字を格納し、必要に応じて出力を切り捨てます。 **_Snprintf**ファミリの関数は、書式設定された文字列の長さが厳密に*カウント*文字未満の場合にのみ、終端の null 文字を追加します。 各 *引数* (存在する場合) は変換され、 *形式*の対応する書式指定に従って出力されます。 形式は通常の文字で構成され、 [printf](printf-printf-l-wprintf-wprintf-l.md)の*format*引数と同じ形式と機能を持ちます。 重なり合う文字列間でコピーした場合の動作は未定義です。
+**Snprintf** 関数と関数の **_snprintf** ファミリでは、*バッファー* 内の文字 *数* を書式指定して格納します。 **Snprintf** 関数は、常に終端の null 文字を格納し、必要に応じて出力を切り捨てます。 **_Snprintf** ファミリの関数は、書式設定された文字列の長さが厳密に *カウント* 文字未満の場合にのみ、終端の null 文字を追加します。 各 *引数* (存在する場合) は変換され、 *形式* の対応する書式指定に従って出力されます。 形式は通常の文字で構成され、 [printf](printf-printf-l-wprintf-wprintf-l.md)の *format* 引数と同じ形式と機能を持ちます。 重なり合う文字列間でコピーした場合の動作は未定義です。
 
 > [!IMPORTANT]
-> *format* にユーザー定義の文字列を指定しないでください。 **_Snprintf**関数は null 終端処理を保証しないため (特に戻り値が*count*の場合)、null 終端文字を追加するコードが続くことを確認してください。 詳しくは、「 [バッファー オーバーランの回避](/windows/win32/SecBP/avoiding-buffer-overruns)」をご覧ください。
+> *format* にユーザー定義の文字列を指定しないでください。 **_Snprintf** 関数は null 終端処理を保証しないため (特に戻り値が *count* の場合)、null 終端文字を追加するコードが続くことを確認してください。 詳しくは、「 [バッファー オーバーランの回避](/windows/win32/SecBP/avoiding-buffer-overruns)」をご覧ください。
+>
+> Windows 10 バージョン 2004 (ビルド 19041) 以降では、 `printf` 関数ファミリは、丸め処理のために IEEE 754 の規則に従って、正確に表現可能な浮動小数点数を出力します。 以前のバージョンの Windows では、"5" で終わる厳密に表現可能な浮動小数点数は常に切り上げられます。 IEEE 754 では、最も近い偶数 ("銀行型丸め" とも呼ばれます) に丸める必要があることが示されています。 たとえば、との `printf("%1.0f", 1.5)` 両方 `printf("%1.0f", 2.5)` が2に丸められる必要があります。 以前は、1.5 は2に丸められ、2.5 は3に丸められていました。 この変更は、正確に表現できる数値にのみ影響します。 たとえば、2.35 (メモリで表される場合は2.35000000000000008 に近い) は、2.4 に切り上げられます。 これらの関数によって実行される丸め処理は、によって設定された浮動小数点丸めモードにも従い [`fesetround`](fegetround-fesetround2.md) ます。 以前は、常に丸め処理を選択していま `FE_TONEAREST` した。 この変更は、Visual Studio 2019 バージョン16.2 以降を使用してビルドされたプログラムにのみ影響します。 従来の浮動小数点丸め動作を使用するには、をにリンク [`legacy_stdio_float_rounding.obj`](../link-options.md) します。
 
-Visual Studio 2015 と Windows 10 の UCRT 以降、 **snprintf** は **_snprintf**と同じではなくなりました。 **Snprintf**関数の動作は、C99 標準に準拠するようになりました。
+Visual Studio 2015 と Windows 10 の UCRT 以降、 **snprintf** は **_snprintf** と同じではなくなりました。 **Snprintf** 関数の動作は、C99 標準に準拠するようになりました。
 
-**_snwprintf** は **_snprintf**のワイド文字バージョンです。 **_snwprintf** するポインター引数はワイド文字列です。 **_Snwprintf**でのエンコードエラーの検出は、 **_snprintf**とは異なる場合があります。 **_snwprintf**は、 **swprintf**と同様に、出力を型 **ファイル**の出力先ではなく文字列に書き込みます。
+**_snwprintf** は **_snprintf** のワイド文字バージョンです。 **_snwprintf** するポインター引数はワイド文字列です。 **_Snwprintf** でのエンコードエラーの検出は、 **_snprintf** とは異なる場合があります。 **_snwprintf** は、 **swprintf** と同様に、出力を型 **ファイル** の出力先ではなく文字列に書き込みます。
 
-**_L**サフィックスを持つこれらの関数のバージョンは、現在のスレッドロケールの代わりに渡されたロケールパラメーターを使用する点を除いて同じです。
+**_L** サフィックスを持つこれらの関数のバージョンは、現在のスレッドロケールの代わりに渡されたロケールパラメーターを使用する点を除いて同じです。
 
 C++ では、これらの関数にテンプレートのオーバーロードがあります。このオーバーロードは、より安全な新しいバージョンを呼び出します。 詳細については、「[セキュリティ保護されたテンプレート オーバーロード](../../c-runtime-library/secure-template-overloads.md)」を参照してください。
 

@@ -1,7 +1,7 @@
 ---
 description: '詳細については、次を参照してください: _vcprintf_p、_vcprintf_p_l、_vcwprintf_p、_vcwprintf_p_l'
 title: _vcprintf_p、_vcprintf_p_l、_vcwprintf_p、_vcwprintf_p_l
-ms.date: 11/04/2016
+ms.date: 3/9/2021
 api_name:
 - _vcprintf_p
 - _vcwprintf_p_l
@@ -44,13 +44,12 @@ helpviewer_keywords:
 - vtcprintf_p function
 - _vcwprintf_p_l function
 - _vtcprintf_p function
-ms.assetid: 611024cc-90e7-41db-8e85-145ca95012b1
-ms.openlocfilehash: 3fb9cf8ca2bb561da6d859a1bbeff487b6b2e801
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: 4960167be1142b75435566f736b2927217015669
+ms.sourcegitcommit: b04b39940b0c1e265f80fc1951278fdb05a1b30a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97299255"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102621466"
 ---
 # <a name="_vcprintf_p-_vcprintf_p_l-_vcwprintf_p-_vcwprintf_p_l"></a>_vcprintf_p、_vcprintf_p_l、_vcwprintf_p、_vcwprintf_p_l
 
@@ -99,7 +98,7 @@ int _vcwprintf_p_l(
 
 書き込まれた文字数。出力エラーが発生した場合は負の値が返されます。 *Format* が null ポインターの場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、 **errno** は **EINVAL** に設定され、-1 が返されます。
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>注釈
 
 これらの各関数は、引数リストへのポインターを受け取り、 **_putch** 関数を使用して、指定されたデータを書式設定し、コンソールに書き込みます。 (**_vcwprintf_p** は **_putch** ではなく **_putwch** を使用します。 **_vcwprintf_p** は **_vcprintf_p** のワイド文字バージョンです。 引数としてワイド文字列を使用します。)
 
@@ -129,6 +128,9 @@ int _vcwprintf_p_l(
 |**_vcwprintf_p**、 **_vcwprintf_p_l**|\<conio.h> および \<stdarg.h>|
 
 互換性について詳しくは、「 [Compatibility](../../c-runtime-library/compatibility.md)」をご覧ください。
+
+> [!IMPORTANT]
+> Windows 10 バージョン 2004 (ビルド 19041) 以降では、 `printf` 関数ファミリは、丸め処理のために IEEE 754 の規則に従って、正確に表現可能な浮動小数点数を出力します。 以前のバージョンの Windows では、"5" で終わる厳密に表現可能な浮動小数点数は常に切り上げられます。 IEEE 754 では、最も近い偶数 ("銀行型丸め" とも呼ばれます) に丸める必要があることが示されています。 たとえば、との `printf("%1.0f", 1.5)` 両方 `printf("%1.0f", 2.5)` が2に丸められる必要があります。 以前は、1.5 は2に丸められ、2.5 は3に丸められていました。 この変更は、正確に表現できる数値にのみ影響します。 たとえば、2.35 (メモリで表される場合は2.35000000000000008 に近い) は、2.4 に切り上げられます。 これらの関数によって実行される丸め処理は、によって設定された浮動小数点丸めモードにも従い [`fesetround`](fegetround-fesetround2.md) ます。 以前は、常に丸め処理を選択していま `FE_TONEAREST` した。 この変更は、Visual Studio 2019 バージョン16.2 以降を使用してビルドされたプログラムにのみ影響します。 従来の浮動小数点丸め動作を使用するには、をにリンク [`legacy_stdio_float_rounding.obj`](../link-options.md) します。
 
 ## <a name="example"></a>例
 

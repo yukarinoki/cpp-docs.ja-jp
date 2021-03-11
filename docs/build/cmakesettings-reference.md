@@ -5,12 +5,12 @@ ms.date: 11/22/2019
 helpviewer_keywords:
 - CMake in Visual C++
 ms.assetid: 444d50df-215e-4d31-933a-b41841f186f8
-ms.openlocfilehash: 2be5edb616764d56e7c08a51be19aab11a62f227
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: e68154d84123d416aa9d9d18f538c4b62fddce18
+ms.sourcegitcommit: 6ed44d9c3fb32e965e363b9c69686739a90a2117
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97156906"
+ms.lasthandoff: 03/08/2021
+ms.locfileid: "102465354"
 ---
 # <a name="cmakesettingsjson-schema-reference"></a>CMakeSettings.json スキーマ リファレンス
 
@@ -32,8 +32,8 @@ IDE で構成を追加または削除できます。また、JSON ファイル�
 
 `configuration` には次のプロパティがあります。
 
-- `addressSanitizerEnabled`: **`true`** の場合、Address Sanitizer (Windows で試験段階) を使用してプログラムをコンパイルします。 Linux の場合、最善の結果を得るには、-fno-omit-frame-pointer およびコンパイラ最適化レベル -Os または -Oo でコンパイルします。
-- `addressSanitizerRuntimeFlags`: ASAN_OPTIONS 環境変数により、AddressSanitizer に渡されるランタイム フラグです。 形式: フラグ 1=値:フラグ 2=値 2。
+- `addressSanitizerEnabled`: **`true`** が [AddressSanitizer](../sanitizers/asan.md) 使用してプログラムをコンパイルする場合。 Linux の場合、最善の結果を得るには、-fno-omit-frame-pointer およびコンパイラ最適化レベル -Os または -Oo でコンパイルします。
+- `addressSanitizerRuntimeFlags`: ASAN_OPTIONS 環境変数により、[AddressSanitizer](../sanitizers/asan.md) に渡されるランタイム フラグです。 形式: フラグ 1=値:フラグ 2=値 2。
 - `buildCommandArgs`: --ビルド-- の後に CMake に渡されるネイティブ ビルド スイッチを指定します。 たとえば、Ninja ジェネレーターの使用時に -v を渡すと、コマンド ラインの出力が Ninja に強制されます。 Ninja コマンドの詳細については、「[Ninja のコマンド ライン引数](#ninja)」参照してください。
 - `buildRoot`: 選択したジェネレーターに CMake がビルド スクリプトを生成するディレクトリを指定します。  **-DCMAKE_BINARY_DIR** スイッチにマップし、*CMakeCache.txt* が作成される場所を指定します。 フォルダーが存在しない場合は、作成されます。 サポートされているマクロには、`${workspaceRoot}`、`${workspaceHash}`、`${projectFile}`、`${projectDir}`、`${thisFile}`、`${thisFileDir}`、`${name}`、`${generator}`、`${env.VARIABLE}` などがあります。
 - `cacheGenerationCommand`: コマンド ライン ツールと引数を指定します (キャッシュを生成するための *gencache.bat debug* など)。 このコマンドは、ユーザーが再生成を明示的にリクエストした場合か、CMakeLists.txt または CMakeSettings.json file が変更された場合に、構成に指定された環境のシェルから実行されます。

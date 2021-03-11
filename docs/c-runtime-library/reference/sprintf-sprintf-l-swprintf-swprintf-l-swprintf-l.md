@@ -1,7 +1,7 @@
 ---
 description: 詳細については、「sprintf、_sprintf_l、swprintf、_swprintf_l、__swprintf_l」を参照してください。
 title: sprintf、_sprintf_l、swprintf、_swprintf_l、__swprintf_l
-ms.date: 06/23/2020
+ms.date: 3/9/2021
 api_name:
 - __swprintf_l
 - sprintf
@@ -49,13 +49,12 @@ helpviewer_keywords:
 - stprintf_l function
 - sprintf_l function
 - formatted text [C++]
-ms.assetid: f6efe66f-3563-4c74-9455-5411ed939b81
-ms.openlocfilehash: 12c7560a57c126e2e35cf78b0d11b1262c14a9e5
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: e8a83a8c92ab873c250e94e9e9317a18c36673a2
+ms.sourcegitcommit: b04b39940b0c1e265f80fc1951278fdb05a1b30a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97292209"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102622102"
 ---
 # <a name="sprintf-_sprintf_l-swprintf-_swprintf_l-__swprintf_l"></a>sprintf、_sprintf_l、swprintf、_swprintf_l、__swprintf_l
 
@@ -134,12 +133,14 @@ int _sprintf_l(
 
 **sprintf** は、 *バッファー* に格納されているバイト数を返します。終端の null 文字はカウントされません。 **swprintf** は、 *バッファー* に格納されているワイド文字の数を返します。終端の null ワイド文字はカウントされません。
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>注釈
 
 **Sprintf** 関数は、一連の文字と値の書式を設定し、*バッファー* に格納します。 各 *引数*(存在する場合) は、対応する書式指定に従って変換および出力さ *れます。* 形式は通常の文字で構成され、 [printf](printf-printf-l-wprintf-wprintf-l.md)の *format* 引数と同じ形式と機能を持ちます。 最後に書き込まれる文字の後に NULL 文字が追加されます。 重なり合う文字列間でコピーした場合の動作は未定義です。
 
 > [!IMPORTANT]
 > **Sprintf** を使用すると、書き込まれる文字数を制限することはできません。これは、 **sprintf** を使用するコードがバッファーオーバーランの影響を受ける可能性があることを意味します。 関連する関数 [_snprintf](snprintf-snprintf-snprintf-l-snwprintf-snwprintf-l.md)を使用することを検討してください。これは、 *バッファー* に書き込む最大文字数を指定するか、 [_scprintf](scprintf-scprintf-l-scwprintf-scwprintf-l.md) を使用してバッファーのサイズを決定します。 また、 *形式* がユーザー定義の文字列ではないことを確認します。
+>
+> Windows 10 バージョン 2004 (ビルド 19041) 以降では、 `printf` 関数ファミリは、丸め処理のために IEEE 754 の規則に従って、正確に表現可能な浮動小数点数を出力します。 以前のバージョンの Windows では、"5" で終わる厳密に表現可能な浮動小数点数は常に切り上げられます。 IEEE 754 では、最も近い偶数 ("銀行型丸め" とも呼ばれます) に丸める必要があることが示されています。 たとえば、との `printf("%1.0f", 1.5)` 両方 `printf("%1.0f", 2.5)` が2に丸められる必要があります。 以前は、1.5 は2に丸められ、2.5 は3に丸められていました。 この変更は、正確に表現できる数値にのみ影響します。 たとえば、2.35 (メモリで表される場合は2.35000000000000008 に近い) は、2.4 に切り上げられます。 これらの関数によって実行される丸め処理は、によって設定された浮動小数点丸めモードにも従い [`fesetround`](fegetround-fesetround2.md) ます。 以前は、常に丸め処理を選択していま `FE_TONEAREST` した。 この変更は、Visual Studio 2019 バージョン16.2 以降を使用してビルドされたプログラムにのみ影響します。 従来の浮動小数点丸め動作を使用するには、 [' legacy_stdio_float_rounding. .obj '](../link-options.md)にリンクします。
 
 **swprintf** は、 **sprintf** のワイド文字バージョンです。 **swprintf** へのポインター引数はワイド文字列です。 **Swprintf** でのエンコードエラーの検出は、 **sprintf** とは異なる場合があります。 **swprintf** と **fwprintf** は同じように動作します。ただし、 **swprintf** は型 **ファイル** の出力先ではなく文字列に出力します。 **swprintf** では、書き込む最大文字数を指定するために *count* パラメーターが必要です。 **_L** サフィックスを持つこれらの関数のバージョンは、現在のスレッドロケールの代わりに渡されたロケールパラメーターを使用する点を除いて同じです。
 

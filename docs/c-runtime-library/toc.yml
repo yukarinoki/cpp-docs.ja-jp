@@ -3,8 +3,6 @@
 - name: CRT ライブラリの機能
   expanded: false
   items:
-    - name: CRT ライブラリの機能
-      href: ../c-runtime-library/crt-library-features.md
     - name: 互換性
       expanded: false
       items:
@@ -66,6 +64,8 @@
       href: ../c-runtime-library/global-state.md
     - name: ジェネリック型数値演算
       href: ../c-runtime-library/tgmath.md
+    - name: C ランタイム (CRT) と C++ 標準ライブラリ .lib ファイル
+      href: ../c-runtime-library/crt-library-features.md
 - name: カテゴリ別ユニバーサル C ランタイム ルーチン
   expanded: false
   items:

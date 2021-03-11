@@ -1,7 +1,7 @@
 ---
 description: '詳細については、次を参照してください: vsprintf、_vsprintf_l、vswprintf、_vswprintf_l、__vswprintf_l'
 title: vsprintf、_vsprintf_l、vswprintf、_vswprintf_l、__vswprintf_l
-ms.date: 09/03/2019
+ms.date: 3/9/2021
 api_name:
 - _vswprintf_l
 - _vsprintf_l
@@ -49,13 +49,12 @@ helpviewer_keywords:
 - vswprintf function
 - vsprintf function
 - _vstprintf function
-ms.assetid: b8ef1c0d-58f9-4a18-841a-f1a989e1c29b
-ms.openlocfilehash: dd7e06817049f26e80c4be9f1d3f3df40444feaf
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: 299df4fc02e0761d97e8b64d650af0953a866316
+ms.sourcegitcommit: b04b39940b0c1e265f80fc1951278fdb05a1b30a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97342115"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102621751"
 ---
 # <a name="vsprintf-_vsprintf_l-vswprintf-_vswprintf_l-__vswprintf_l"></a>vsprintf、_vsprintf_l、vswprintf、_vswprintf_l、__vswprintf_l
 
@@ -136,7 +135,7 @@ int _vswprintf_l(
 *argptr*\
 引数リストへのポインター。
 
-*locale*\
+*国*\
 使用するロケール。
 
 ## <a name="return-value"></a>戻り値
@@ -145,7 +144,7 @@ int _vswprintf_l(
 
 これらと他のエラー コードの詳細については、「[_doserrno、errno、_sys_errlist、および _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」を参照してください。
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>注釈
 
 これらの各関数は、引数リストへのポインターを受け取り、指定されたデータを書式設定して、 *バッファー* が指すメモリに書き込みます。
 
@@ -153,6 +152,7 @@ int _vswprintf_l(
 
 > [!IMPORTANT]
 > **Vsprintf** を使用すると、書き込まれる文字数を制限することはできません。つまり、この関数を使用するコードでは、バッファーオーバーランが発生しやすくなります。 代わりに [_vsnprintf](vsnprintf-vsnprintf-vsnprintf-l-vsnwprintf-vsnwprintf-l.md) を使用するか、または [_vscprintf](vscprintf-vscprintf-l-vscwprintf-vscwprintf-l.md) を呼び出して、必要なバッファーの大きさを決定します。 また、 *形式* がユーザー定義の文字列ではないことを確認します。 詳しくは、「 [バッファー オーバーランの回避](/windows/win32/SecBP/avoiding-buffer-overruns)」をご覧ください。
+> Windows 10 バージョン 2004 (ビルド 19041) 以降では、 `printf` 関数ファミリは、丸め処理のために IEEE 754 の規則に従って、正確に表現可能な浮動小数点数を出力します。 以前のバージョンの Windows では、"5" で終わる厳密に表現可能な浮動小数点数は常に切り上げられます。 IEEE 754 では、最も近い偶数 ("銀行型丸め" とも呼ばれます) に丸める必要があることが示されています。 たとえば、との `printf("%1.0f", 1.5)` 両方 `printf("%1.0f", 2.5)` が2に丸められる必要があります。 以前は、1.5 は2に丸められ、2.5 は3に丸められていました。 この変更は、正確に表現できる数値にのみ影響します。 たとえば、2.35 (メモリで表される場合は2.35000000000000008 に近い) は、2.4 に切り上げられます。 これらの関数によって実行される丸め処理は、によって設定された浮動小数点丸めモードにも従い [`fesetround`](fegetround-fesetround2.md) ます。 以前は、常に丸め処理を選択していま `FE_TONEAREST` した。 この変更は、Visual Studio 2019 バージョン16.2 以降を使用してビルドされたプログラムにのみ影響します。 従来の浮動小数点丸め動作を使用するには、 [' legacy_stdio_float_rounding. .obj '](../link-options.md)にリンクします。
 
 **vswprintf** は ISO C 規格に準拠しています。これには **size_t** 型の2番目のパラメーター *count* が必要です。 古い非標準の動作を強制するには、 **_CRT_NON_CONFORMING_SWPRINTFS** を定義します。 以前の動作は将来のバージョンではない可能性があるため、新しい準拠の動作を使用するようにコードを変更する必要があります。
 

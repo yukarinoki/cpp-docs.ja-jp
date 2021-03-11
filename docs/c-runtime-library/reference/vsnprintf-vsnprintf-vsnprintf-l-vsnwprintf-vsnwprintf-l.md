@@ -1,7 +1,7 @@
 ---
 title: vsnprintf、_vsnprintf、_vsnprintf_l、_vsnwprintf、_vsnwprintf_l
 description: Vsnprintf、_vsnprintf、_vsnprintf_l、_vsnwprintf、および _vsnwprintf_l の API リファレンス引数リストへのポインターを使用して、書式付き出力を書き込みます。
-ms.date: 06/24/2020
+ms.date: 3/9/2021
 api_name:
 - _vsnprintf
 - _vsnprintf_l
@@ -55,13 +55,12 @@ helpviewer_keywords:
 - _vsnprintf function
 - formatted text [C++]
 - vsnwprintf function
-ms.assetid: a97f92df-c2f8-4ea0-9269-76920d2d566a
-ms.openlocfilehash: e6ed3d146458f514691fe0b20a4c88ffebb5f877
-ms.sourcegitcommit: 43cee7a0d41a062661229043c2f7cbc6ace17fa3
+ms.openlocfilehash: 870afc9cae241e61daebcac06089d01ac2fc3675
+ms.sourcegitcommit: b04b39940b0c1e265f80fc1951278fdb05a1b30a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92008698"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "102621998"
 ---
 # <a name="vsnprintf-_vsnprintf-_vsnprintf_l-_vsnwprintf-_vsnwprintf_l"></a>vsnprintf、_vsnprintf、_vsnprintf_l、_vsnwprintf、_vsnwprintf_l
 
@@ -162,31 +161,32 @@ int _vsnwprintf_l(
 
 ## <a name="return-value"></a>戻り値
 
-**Vsnprintf**関数は、書き込まれた文字数を返します。終端の null 文字はカウントされません。 *Count*で指定したバッファーサイズが、 *format*および*argptr*によって指定された出力を格納するのに十分な大きさではない場合、 **vsnprintf**の戻り値は、書き込まれる文字数で、 *count*が十分に大きい場合は null 文字をカウントしません。 戻り値が *count* -1 より大きい場合、出力は切り捨てられます。 戻り値 -1 は、エンコード エラーが発生したことを示します。
+**Vsnprintf** 関数は、書き込まれた文字数を返します。終端の null 文字はカウントされません。 *Count* で指定したバッファーサイズが、 *format* および *argptr* によって指定された出力を格納するのに十分な大きさではない場合、 **vsnprintf** の戻り値は、書き込まれる文字数で、 *count* が十分に大きい場合は null 文字をカウントしません。 戻り値が *count* -1 より大きい場合、出力は切り捨てられます。 戻り値 -1 は、エンコード エラーが発生したことを示します。
 
-**_Vsnprintf**関数と **_vsnwprintf**関数は、書き込み対象の文字数が*count*以下の場合に書き込まれた文字数を返します。 書き込む文字数が *count*よりも大きい場合、これらの関数は、出力が切り捨てられたことを示す-1 を返します。
+**_Vsnprintf** 関数と **_vsnwprintf** 関数は、書き込み対象の文字数が *count* 以下の場合に書き込まれた文字数を返します。 書き込む文字数が *count* よりも大きい場合、これらの関数は、出力が切り捨てられたことを示す-1 を返します。
 
 これらのすべての関数によって返される値には、記述されているかどうかにかかわらず、終端の null は含まれません。
 
-- *Count*が0で、 *buffer*が**NULL**の場合、返される値は、関数が書き込む文字数になります。 この値では、終端の **NULL**は考慮されません。 この結果を用いて文字列と終端の null に対して十分なバッファー領域を割り当て、関数を再び呼び出してバッファーを埋めることができます。
-- *Count*が0でも、 *buffer*が**NULL**でない場合は、何も書き込まれず、関数はを返し `-1` ます。
-- *Format*が**null**の場合、または*buffer*が**null**で、 *Count*が0ではない場合、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、これらの関数は無効なパラメーターハンドラーを呼び出します。 実行の継続が許可された場合、これらの関数は-1 を返し、 **errno** を **EINVAL**に設定します。
+- *Count* が0で、 *buffer* が **NULL** の場合、返される値は、関数が書き込む文字数になります。 この値では、終端の **NULL** は考慮されません。 この結果を用いて文字列と終端の null に対して十分なバッファー領域を割り当て、関数を再び呼び出してバッファーを埋めることができます。
+- *Count* が0でも、 *buffer* が **NULL** でない場合は、何も書き込まれず、関数はを返し `-1` ます。
+- *Format* が **null** の場合、または *buffer* が **null** で、 *Count* が0ではない場合、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、これらの関数は無効なパラメーターハンドラーを呼び出します。 実行の継続が許可された場合、これらの関数は-1 を返し、 **errno** を **EINVAL** に設定します。
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>注釈
 
-これらの各関数は、引数リストへのポインターを受け取り、データを書式設定して、*バッファー*が指すメモリに最大文字*数*を書き込みます。 **Vsnprintf**関数は、出力を切り捨てる場合でも、常に null 終端文字を書き込みます。 **_Vsnprintf**と **_vsnwprintf**を使用する場合、バッファーは、末尾に余裕がある場合 (つまり、書き込む文字数が*カウント*未満の場合) にのみ null で終了します。
+これらの各関数は、引数リストへのポインターを受け取り、データを書式設定して、*バッファー* が指すメモリに最大文字 *数* を書き込みます。 **Vsnprintf** 関数は、出力を切り捨てる場合でも、常に null 終端文字を書き込みます。 **_Vsnprintf** と **_vsnwprintf** を使用する場合、バッファーは、末尾に余裕がある場合 (つまり、書き込む文字数が *カウント* 未満の場合) にのみ null で終了します。
 
 > [!IMPORTANT]
 > 特定の種類のセキュリティリスクを回避するには、 *形式* がユーザー定義の文字列ではないことを確認します。 詳しくは、「 [バッファー オーバーランの回避](/windows/win32/SecBP/avoiding-buffer-overruns)」をご覧ください。
+> Windows 10 バージョン 2004 (ビルド 19041) 以降では、 `printf` 関数ファミリは、丸め処理のために IEEE 754 の規則に従って、正確に表現可能な浮動小数点数を出力します。 以前のバージョンの Windows では、"5" で終わる厳密に表現可能な浮動小数点数は常に切り上げられます。 IEEE 754 では、最も近い偶数 ("銀行型丸め" とも呼ばれます) に丸める必要があることが示されています。 たとえば、との `printf("%1.0f", 1.5)` 両方 `printf("%1.0f", 2.5)` が2に丸められる必要があります。 以前は、1.5 は2に丸められ、2.5 は3に丸められていました。 この変更は、正確に表現できる数値にのみ影響します。 たとえば、2.35 (メモリで表される場合は2.35000000000000008 に近い) は、2.4 に切り上げられます。 これらの関数によって実行される丸め処理は、によって設定された浮動小数点丸めモードにも従い [`fesetround`](fegetround-fesetround2.md) ます。 以前は、常に丸め処理を選択していま `FE_TONEAREST` した。 この変更は、Visual Studio 2019 バージョン16.2 以降を使用してビルドされたプログラムにのみ影響します。 従来の浮動小数点丸め動作を使用するには、 [' legacy_stdio_float_rounding. .obj '](../link-options.md)にリンクします。
 
 > [!NOTE]
-> **_Vsnprintf**、 **_vsnprintf_l**、 **_vsnwprintf**および **_vsnwprintf_l**を呼び出すときに、終端の null 用の空き領域があることを確認するには、 *count*の値がバッファーの長さより厳密に小さく、関数を呼び出す前にバッファーを null に初期化します。
+> **_Vsnprintf**、 **_vsnprintf_l**、 **_vsnwprintf** および **_vsnwprintf_l** を呼び出すときに、終端の null 用の空き領域があることを確認するには、 *count* の値がバッファーの長さより厳密に小さく、関数を呼び出す前にバッファーを null に初期化します。
 >
-> **Vsnprintf**は常に終端の null を書き込むため、 *count*パラメーターはバッファーのサイズと同じにすることができます。
+> **Vsnprintf** は常に終端の null を書き込むため、 *count* パラメーターはバッファーのサイズと同じにすることができます。
 
-Visual Studio 2015 と Windows 10 の UCRT 以降、 **vsnprintf** は **_vsnprintf**と同じではなくなりました。 **Vsnprintf**関数は、C99 標準に準拠しています。**_vnsprintf**は、旧バージョンの Visual Studio code との下位互換性のために残されています。
+Visual Studio 2015 と Windows 10 の UCRT 以降、 **vsnprintf** は **_vsnprintf** と同じではなくなりました。 **Vsnprintf** 関数は、C99 標準に準拠しています。**_vnsprintf** は、旧バージョンの Visual Studio code との下位互換性のために残されています。
 
-**_L**サフィックスを持つこれらの関数のバージョンは、現在のスレッドロケールの代わりに渡されたロケールパラメーターを使用する点を除いて同じです。
+**_L** サフィックスを持つこれらの関数のバージョンは、現在のスレッドロケールの代わりに渡されたロケールパラメーターを使用する点を除いて同じです。
 
 C++ では、これらの関数にテンプレートのオーバーロードがあります。このオーバーロードは、これらの関数に対応するセキュリティで保護された新しい関数を呼び出します。 詳細については、「[セキュリティ保護されたテンプレート オーバーロード](../../c-runtime-library/secure-template-overloads.md)」を参照してください。
 
@@ -204,7 +204,7 @@ C++ では、これらの関数にテンプレートのオーバーロードが�
 |**vsnprintf**、 **_vsnprintf**、 **_vsnprintf_l**|\<stdio.h>|\<stdio.h> または \<cstdio>|
 |**_vsnwprintf**、 **_vsnwprintf_l**|\<stdio.h> または \<wchar.h>|\<stdio.h>、\<wchar.h>、\<cstdio>、または \<cwchar>|
 
-**_Vsnprintf**、 **_vsnprintf_l**、 **_vsnwprintf** 、および **_vsnwprintf_l**の各関数は、Microsoft 固有の関数です。 互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+**_Vsnprintf**、 **_vsnprintf_l**、 **_vsnwprintf** 、および **_vsnwprintf_l** の各関数は、Microsoft 固有の関数です。 互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
 ## <a name="example-use-wide-characters-with-_vsnwprintf"></a>例: ワイド文字を使用する `_vsnwprintf()`
 
@@ -246,7 +246,7 @@ nSize: 9, buff: Hi there!
 nSize: -1, buff: Hi there!
 ```
 
-代わりに vsnprintf を使用し、パラメータに小さな文字列を指定すると、挙動が変化します。 *Count*パラメーターにはバッファーのサイズ全体を指定できます。戻り値は、 *count*が十分に大きい場合に書き込まれた文字数です。
+代わりに vsnprintf を使用し、パラメータに小さな文字列を指定すると、挙動が変化します。 *Count* パラメーターにはバッファーのサイズ全体を指定できます。戻り値は、 *count* が十分に大きい場合に書き込まれた文字数です。
 
 ## <a name="example-use-vsnprintf-with-narrow-strings"></a>例: `vsnprintf()` ナロー文字列での使用
 
