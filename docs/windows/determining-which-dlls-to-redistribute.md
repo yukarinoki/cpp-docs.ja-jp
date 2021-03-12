@@ -1,7 +1,7 @@
 ---
 description: '詳細情報: 再配布する Dll の決定'
 title: 再配布する DLL の決定
-ms.date: 07/15/2019
+ms.date: 03/10/2021
 helpviewer_keywords:
 - redistributing DLLs
 - DLLs [C++], redistributing
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - application deployment [C++], DLL redistribution
 - deploying applications [C++], DLL redistribution
 ms.assetid: f7a2cb42-fb48-42ab-abd2-b35e2fd5601a
-ms.openlocfilehash: 016351a6d204c71cfef516862c9b57bebafcc1a2
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: 8adc9d6093cec18f4591f3929a84a55fcfc2f6d7
+ms.sourcegitcommit: f8ba5db09d05683b24c58505f0e57c21f85545dc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97329404"
+ms.lasthandoff: 03/11/2021
+ms.locfileid: "103087208"
 ---
 # <a name="determining-which-dlls-to-redistribute"></a>再配布する DLL の決定
 
@@ -22,7 +22,7 @@ Visual Studio によって提供されるライブラリ DLL を使用するア�
 
 再頒布可能 DLL をインストーラーに含めやすくするために、DLL はスタンドアロンの *再頒布可能パッケージ* として入手できます。 これらはアーキテクチャ固有の実行可能ファイルであり、集中配置を使用してユーザーのコンピューターに再頒布可能ファイルをインストールします。 たとえば、vcredistx86.exe は、 \_ x86 と x64 の両方のコンピューター用に32ビットのライブラリをインストールし、 \_ x64 コンピューター用に64ビットのライブラリをインストールx64.exe ます。また、vcredist \_ARM.exe によって ARM コンピューター用のライブラリがインストールされます。 Microsoft では Windows Update サービスを利用して、これらのライブラリを個別に更新するため、集中配置をお勧めします。 Visual Studio インストールのコピーに加え、現在の再頒布可能パッケージをダウンロードして利用できます。 現在および以前のツールセットの両方でサポートされる最新の再頒布可能パッケージへのリンクについては、「[最新のサポートされる Visual C++ のダウンロード](https://support.microsoft.com/help/2977003/the-latest-supported-visual-c-downloads)」を参照してください。 以前の特定のバージョンの再頒布可能パッケージは、[Microsoft ダウンロード センター](https://go.microsoft.com/fwlink/p/?LinkId=158431)で "Visual C++ 再頒布可能パッケージ" を検索すると見つけることができます。
 
-配置する再頒布可能パッケージのメジャー バージョン番号は、アプリケーションの作成に使用した Visual Studio ツールセットのバージョンと一致している必要があります。マイナー バージョンは同じかそれ以上である必要があります。 Visual Studio 2017 と Visual Studio 2015 のツールセットのバージョン番号には互換性があります。つまり、Visual Studio 2017 の再頒布可能ファイルは、2015 ツールセットを使用してビルドされたアプリで使用することができます。 互換性があっても、2017 ツールセットを使用してビルドされたアプリでの 2015 の再頒布可能ファイルの使用はサポートされません。 サポートされるのは、ご利用のツールセットのバージョンと同じであるか、それ以降の再頒布可能パッケージの使用のみです。
+ツールセットのバージョンと同じかそれよりも新しい再頒布可能パッケージの使用のみがサポートされています。 配置する再頒布可能パッケージのメジャー バージョン番号は、アプリケーションの作成に使用した Visual Studio ツールセットのバージョンと一致している必要があります。マイナー バージョンは同じかそれ以上である必要があります。 Visual Studio 2019、2017、および2015には、互換性のあるツールセットのバージョン番号があります。つまり、古いバージョンのツールセットによってビルドされたアプリでは、より新しい Visual Studio 再頒布可能ファイルが使用される可能性があります。 たとえば、visual studio 2019 の再頒布可能ファイルは、Visual Studio 2017 または2015ツールセットを使用してビルドされたアプリによって使用される場合があります。 互換性がある場合もありますが、新しいツールセットを使用してビルドされたアプリでは、古い再頒布可能ファイルの使用はサポートしていません。 たとえば、2019ツールセットを使用してビルドされたアプリで2017再頒布可能ファイルを使用することはできません。
 
 *マージ モジュール* を使用して、インストーラーに再頒布可能 DLL を含めることもできます。 これらの Microsoft インストーラー モジュールはアプリケーションのインストーラーに含まれており、このインストーラーでインストールされます。 再頒布可能 Dll のマージモジュールは、Visual Studio のインストールディレクトリの \\ VC \\ Redist\MSVC \\ *version* \\ MergeModules にあり \\ ます。 以前のバージョンの Visual Studio では、これらのファイルは \\Program Files または \\Program Files (x86) ディレクトリの Common Files\\Merge Modules サブディレクトリにあります。 これらのファイルの詳細については、「[マージ モジュールを使用したコンポーネントの再配布](redistributing-components-by-using-merge-modules.md)」を参照してください。
 
@@ -30,7 +30,7 @@ Visual Studio によって提供されるライブラリ DLL を使用するア�
 
 アプリケーションと共に再配布する必要がある DLL を判断するには、アプリケーションが依存する DLL の完全な一覧を収集します。 これらは通常、リンカーへのインポート ライブラリ入力として一覧表示されます。 既定では、vcruntime やユニバーサル C ランタイム ライブラリ (UCRT) などの特定のライブラリは含まれません。 アプリまたはその依存関係のいずれかで LoadLibrary を使用して動的に DLL を読み込むと、その DLL がリンカーへの入力で一覧表示されない場合があります。 動的に読み込まれた DLL の一覧を収集する方法の 1 つは、「[Visual C++ アプリケーションの依存関係の理解](understanding-the-dependencies-of-a-visual-cpp-application.md)」で説明されているように、ご利用のアプリで Dependency Walker (depends.exe) を実行することです。 残念ながら、このツールは期限が切れており、特定の Dll が見つからないことが報告される場合があります。
 
-依存関係の一覧がある場合は、Microsoft Visual Studio インストール ディレクトリにある Redist.txt ファイルにリンクされている一覧、または Visual Studio のコピーのマイクロソフト ソフトウェア ライセンス条項の「頒布可能コード ファイル」セクションで言及されている再頒布可能 DLL の "再配布リスト" と比較してください。 Visual Studio 2017 については、「[Microsoft Visual Studio 2017 の頒布可能コード (ユーティリティ、機能拡張、および BuildServer ファイルを含む)](/visualstudio/productinfo/2017-redistribution-vs)」を参照してください。 Visual Studio 2015 については、「[Microsoft Visual Studio 2015 および Microsoft Visual Studio 2015 SDK の頒布可能コード (ユーティリティおよび BuildServer ファイルを含む)](/visualstudio/productinfo/2015-redistribution-vs)」を参照してください。 Visual Studio 2013 の一覧は、オンラインで「[Microsoft Visual Studio 2013 および Microsoft Visual Studio 2013 SDK 用頒布可能コード](/visualstudio/productinfo/2013-redistribution-vs)」から利用できます。
+依存関係の一覧がある場合は、Microsoft Visual Studio インストール ディレクトリにある Redist.txt ファイルにリンクされている一覧、または Visual Studio のコピーのマイクロソフト ソフトウェア ライセンス条項の「頒布可能コード ファイル」セクションで言及されている再頒布可能 DLL の "再配布リスト" と比較してください。 Visual Studio 2019 については、「 [Visual studio 2019 の](/visualstudio/releases/2019/redistribution)再頒布可能コード」を参照してください。  Visual Studio 2017 については、「[Microsoft Visual Studio 2017 の頒布可能コード (ユーティリティ、機能拡張、および BuildServer ファイルを含む)](/visualstudio/productinfo/2017-redistribution-vs)」を参照してください。 Visual Studio 2015 については、「[Microsoft Visual Studio 2015 および Microsoft Visual Studio 2015 SDK の頒布可能コード (ユーティリティおよび BuildServer ファイルを含む)](/visualstudio/productinfo/2015-redistribution-vs)」を参照してください。 Visual Studio 2013 の一覧は、オンラインで「[Microsoft Visual Studio 2013 および Microsoft Visual Studio 2013 SDK 用頒布可能コード](/visualstudio/productinfo/2013-redistribution-vs)」から利用できます。
 
 Visual Studio 2015 より前のバージョンの Visual Studio では、C ランタイム ライブラリ (CRT) は msvc *バージョン*.dll に再頒布可能 DLL として含まれていました。 Visual Studio 2015 以降では、CRT の関数は vcruntime と UCRT にリファクタリングされました。 UCRT は、Windows Update で管理される、Windows 10 のシステム コンポーネントになりました。 すべての Windows 10 オペレーティング システムで利用できます。 以前のオペレーティング システムにアプリケーションを配置するには、UCRT も再配布する必要がある場合があります。 以前のバージョンの UCRT は Visual Studio の再頒布可能ファイルに含まれています。これは、まだいずれのバージョンの UCRT もインストールされていない場合にのみ、Windows 10 より前のオペレーティング システムのみにインストールされます。 Microsoft System Update パッケージとしてダウンレベル システム用の UCRT のインストール可能なバージョンについては、Microsoft ダウンロード センターの [Windows 10 ユニバーサル C ランタイム](https://www.microsoft.com/download/details.aspx?id=48234)に関するページを参照してください。
 

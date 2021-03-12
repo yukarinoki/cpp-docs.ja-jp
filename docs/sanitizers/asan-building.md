@@ -141,4 +141,4 @@ error LNK2001: unresolved external symbol ___you_must_link_with_VCAsan_lib
 [AddressSanitizer shadow bytes](./asan-shadow-bytes.md)\
 [AddressSanitizer クラウドまたは分散テスト](./asan-offline-crash-dumps.md)\
 [AddressSanitizer デバッガーの統合](./asan-debugger-integration.md)\
-[AddressSanitizer エラーの例](./asan-error-examples.md)
+[AddressSanitizer のエラー例](./asan-error-examples.md)

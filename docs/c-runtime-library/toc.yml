@@ -64,7 +64,7 @@
       href: ../c-runtime-library/global-state.md
     - name: ジェネリック型数値演算
       href: ../c-runtime-library/tgmath.md
-    - name: C ランタイム (CRT) と C++ 標準ライブラリ .lib ファイル
+    - name: C ランタイム (CRT) と C++ 標準ライブラリ (STL) .lib ファイル
       href: ../c-runtime-library/crt-library-features.md
 - name: カテゴリ別ユニバーサル C ランタイム ルーチン
   expanded: false
