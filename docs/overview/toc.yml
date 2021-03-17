@@ -5,12 +5,16 @@
       href: ../overview/visual-cpp-in-visual-studio.md
     - name: Visual Studio での C++ 開発の概要
       href: ../overview/overview-of-cpp-development.md
-    - name: Visual Studio での C++ の新機能
+    - name: Visual Studio 2019 での C++ の新機能
       href: ../overview/what-s-new-for-visual-cpp-in-visual-studio.md
+    - name: Visual Studio 2017 での C++ の新機能
+      href: ../overview/what-s-new-for-cpp-2017.md
     - name: Microsoft C++ の新機能のドキュメント
       href: ../overview/whats-new-cpp-docs.md
-    - name: Visual Studio の C++ 準拠の強化
+    - name: Visual Studio 2019 での C++ 準拠の強化
       href: ../overview/cpp-conformance-improvements.md
+    - name: Visual Studio 2017 の C++ 準拠の強化
+      href: ../overview/cpp-conformance-improvements-2017.md
     - name: Microsoft C++ 言語の準拠
       href: ../overview/visual-cpp-language-conformance.md
     - name: サポート対象のターゲット プラットフォーム
