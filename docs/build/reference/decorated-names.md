@@ -7,12 +7,12 @@ helpviewer_keywords:
 - name decoration [C++]
 - names [C++], decorated
 ms.assetid: a4e9ae8e-b239-4454-b401-4102793cb344
-ms.openlocfilehash: 65135b4f5b85cfae7a25513763b998d304e79a0c
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: 95b98bf9a9bde876cfb403351197ab2ef1b9b5b8
+ms.sourcegitcommit: 92120d0c418b6d3d85d32ffc050c59c5f5f9d5b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97201717"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104670781"
 ---
 # <a name="decorated-names"></a>装飾名
 
@@ -79,9 +79,9 @@ C の関数の装飾形式は、次の表に示すように、その宣言で使
 
 #### <a name="to-use-dumpbin-to-view-decorated-names"></a>DUMPBIN を使用して装飾名を確認するには
 
-1. エクスポートされたシンボルを .obj ファイルまたは .lib ファイルで表示するには、 `dumpbin /symbols` `objfile` 開発者コマンドプロンプトで「」と入力します。
+1. エクスポートされたシンボルを .obj ファイルまたは .lib ファイルで表示するには、 `dumpbin /exports <obj-or-lib-file>` 開発者コマンドプロンプトで「」と入力します。
 
-2. 装飾形式のシンボルを見つけるには、かっこに囲まれた非装飾名を探します。 装飾名は、パイプ (&#124;) 文字の後、非装飾名の前にある同じ行にあります。
+2. 装飾形式のシンボルを見つけるには、かっこに囲まれた非装飾名を探します。 装飾名は、装飾されていない名前の前と同じ行にあります。
 
 ## <a name="viewing-undecorated-names"></a><a name="Undecorated"></a> 非装飾名の表示
 

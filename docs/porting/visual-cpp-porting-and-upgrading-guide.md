@@ -4,16 +4,16 @@ description: Microsoft C++ コードを最新バージョンの Visual Studio �
 ms.date: 09/10/2020
 ms.assetid: f5fbcc3d-aa72-41a6-ad9a-a706af2166fb
 ms.topic: overview
-ms.openlocfilehash: b6cd3461ee16a44162fdb641170a2f05d9b77369
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: 624d5a7d85cfc6387f7668cd2fcf6f8f8746a402
+ms.sourcegitcommit: 92120d0c418b6d3d85d32ffc050c59c5f5f9d5b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90039535"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104670819"
 ---
 # <a name="microsoft-c-porting-and-upgrading-guide"></a>Microsoft C++ 移植およびアップグレードガイド
 
-この記事では、Microsoft C++ コードを Visual Studio の最新バージョンにアップグレードするためのガイドを提供します。 Visual Studio 2010 から2015で作成されたプロジェクトの場合は、Visual Studio 2019 でプロジェクトを開きます。 Visual Studio 2008 以前のプロジェクトをアップグレードするには、2つの手順を実行します。 Visual Studio 2010 を使用して、最初にプロジェクトを MSBuild 形式に変換します。 次に、Visual Studio 2019 でプロジェクトを開きます。 詳細については、「 [旧バージョンの Visual Studio からの C++ プロジェクトのアップグレード](upgrading-projects-from-earlier-versions-of-visual-cpp.md)」を参照してください。
+この記事では、Microsoft C++ コードを Visual Studio の最新バージョンにアップグレードするためのガイドを提供します。 Visual Studio 2010 から2017で作成されたプロジェクトの場合は、Visual Studio 2019 でプロジェクトを開きます。 Visual Studio 2008 以前のプロジェクトをアップグレードするには、2つの手順を実行します。 Visual Studio 2010 を使用して、最初にプロジェクトを MSBuild 形式に変換します。 次に、Visual Studio 2019 でプロジェクトを開きます。 詳細については、「 [旧バージョンの Visual Studio からの C++ プロジェクトのアップグレード](upgrading-projects-from-earlier-versions-of-visual-cpp.md)」を参照してください。
 
 Visual Studio 2015、Visual Studio 2017、および Visual Studio 2019 のツールセットは、バイナリと互換性があります。 これで、ライブラリの依存関係をアップグレードしなくても、より新しいバージョンのコンパイラにアップグレードできるようになりました。 詳細については、「 [C++ バイナリ互換性 2015-2019](binary-compat-2015-2017.md)」を参照してください。
 
@@ -58,7 +58,7 @@ Visual Studio 2015、Visual Studio 2017、および Visual Studio 2019 のツー
 |[Visual C++ の紹介 (UNIX ユーザー向け)](introduction-to-visual-cpp-for-unix-users.md)|Visual C++ を初めて使用し、生産性を向上したい UNIX ユーザー向けの情報を提供します。|
 |[Windows 上での Linux プログラムの実行](porting-from-unix-to-win32.md)|UNIX アプリケーションを Windows に移行するためのオプションについて説明します。|
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [Visual Studio での C++](../overview/visual-cpp-in-visual-studio.md)<br/>
 [Visual Studio での C++ コンパイラの新機能](../overview/what-s-new-for-visual-cpp-in-visual-studio.md)<br/>
