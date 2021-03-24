@@ -1,19 +1,16 @@
 ---
-title: Microsoft C++ 言語の準拠表
+title: Microsoft C++ 言語と標準ライブラリの準拠テーブル
 description: Visual Studio バージョン別の Microsoft C++ 準拠更新表
-ms.date: 11/10/2020
+ms.date: 03/10/2021
 ms.technology: cpp-language
-ms.assetid: 475da6e9-0d78-4b4e-bd23-f41c406c4efe
-author: corob-msft
-ms.author: corob
-ms.openlocfilehash: 51e68563122d11634bddd7ed75658e5012d7f8e0
-ms.sourcegitcommit: beac3ddf1a20de5e836569ae07407d5f3703f536
+ms.openlocfilehash: d6a53a242d2803aa039c47666e9d45641978e59d
+ms.sourcegitcommit: f7d707e041dfb04e957af08098fdc38757adc8b0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2021
-ms.locfileid: "99224485"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "103472755"
 ---
-# <a name="microsoft-c-language-conformance-table"></a>Microsoft C++ 言語の準拠表
+# <a name="microsoft-c-language-and-standard-library-conformance-table"></a>Microsoft C++ 言語と標準ライブラリの準拠テーブル
 
 Visual Studio での Microsoft C++ コンパイラ (MSVC) の標準への準拠は、進行中の作業です。 ここでは、Visual Studio のバージョン別に、Microsoft の ISO 標準の C++ 言語およびライブラリの準拠についてまとめます。 コンパイラと標準ライブラリの各機能の名前は、その機能を説明する ISO 標準の C++ 提案書にリンクしています (発行時に利用可能な場合)。 **サポート状況** 列には、その機能が最初にサポートされた Visual Studio のバージョンが記載されています。
 
@@ -93,7 +90,7 @@ Visual Studio 2017 または Visual Studio 2019 の MSVC の準拠の強化に�
 | &nbsp;&nbsp;[`P1771R1 [[nodiscard]] for constructors`](https://wg21.link/p1771r1) | VS 2019 16.4 <sup>[17](#note_17)</sup> |
 | &nbsp;&nbsp;[`P1825R0 Merged wording for P0527R1 and P1155R3, more implicit moves`](https://wg21.link/p1825r0) | VS 2019 16.4 <sup>[17](#note_17)</sup> |
 | &nbsp;&nbsp;[`P0929R2 Checking for abstract class types`](https://wg21.link/P0929R2) | VS 2019 16.5 <sup>[17](#note_17)</sup> |
-| &nbsp;&nbsp;[`P0962R2 Relaxing the range-for loop customization point finding rules`](https://wg21.link/p0962r1) | VS 2019 16.5 <sup>[17](#note_17)</sup> |
+| &nbsp;&nbsp;[`P0962R1 Relaxing the range-for loop customization point finding rules`](https://wg21.link/p0962r1) | VS 2019 16.5 <sup>[17](#note_17)</sup> |
 | &nbsp;&nbsp;[`P0859R0 CWG 1581: When are constexpr member functions defined`](https://wg21.link/p0859r0) | いいえ |
 | &nbsp;&nbsp;[`P1009R2 Array size deduction in new-expressions`](https://wg21.link/P1009R2) | VS 2019 16.7 <sup>[17](#note_17)</sup> |
 | &nbsp;&nbsp;[`P1286R2 Contra CWG DR1778`](https://wg21.link/P1286R2) | VS 2019 16.8 <sup>[17](#note_17)</sup> |
@@ -170,18 +167,18 @@ Visual Studio 2017 または Visual Studio 2019 の MSVC の準拠の強化に�
 | &nbsp;&nbsp;[`P1811R0 Relaxing redefinition restrictions for re-exportation robustness`](https://wg21.link/P1811R0) | VS 2019 16.8 <sup>[20](#note_20)</sup> |
 | &nbsp;&nbsp;[`P1874R1 Dynamic Initialization Order of Non-Local Variables in Modules`](https://wg21.link/P1874R1) | VS 2019 16.8 <sup>[20](#note_20)</sup> |
 | &nbsp;&nbsp;[`P1975R0 Fixing the wording of parenthesized aggregate-initialization`](https://wg21.link/P1975R0) | VS 2019 16.8 <sup>[20](#note_20)</sup> |
-| &nbsp;&nbsp;[`P0641R2 const mismatch with defaulted copy constructor`](https://wg21.link/P0641R2) | Partial |
-| &nbsp;&nbsp;[`P1141R2 Yet another approach for constrained declarations`](https://wg21.link/P1141R2) | Partial |
+| &nbsp;&nbsp;[`P0784R7 More constexpr containers`](https://wg21.link/P0784R7) | VS 2019 16.9 <sup>[20](#note_20)</sup> |
+| &nbsp;&nbsp;[`P1141R2 Yet another approach for constrained declarations`](https://wg21.link/P1141R2) | VS 2019 16.9 <sup>[20](#note_20)</sup> |
+| &nbsp;&nbsp;[`P1668R1 Permitting unevaluated inline assembly in constexpr functions`](https://wg21.link/P1668R1) | VS 2019 16.9 <sup>[20](#note_20)</sup> |
+| &nbsp;&nbsp;[`P0641R2 const mismatch with defaulted copy constructor`](https://wg21.link/P0641R2) | 部分的 |
 | &nbsp;&nbsp;[`P0634R3 Down with typename!`](https://wg21.link/P0634R3) | いいえ |
-| &nbsp;&nbsp;[`P0784R7 More constexpr containers`](https://wg21.link/P0784R7) | いいえ |
 | &nbsp;&nbsp;[`P0840R2 [[no_unique_address]] attribute`](https://wg21.link/P0840R2) | いいえ |
 | &nbsp;&nbsp;[`P1064R0 Allowing virtual function calls in constant expressions`](https://wg21.link/P1064R0) | いいえ |
 | &nbsp;&nbsp;[`P1073R3 Immediate functions`](https://wg21.link/P1073R3) | いいえ |
 | &nbsp;&nbsp;[`P1143R2 constinit`](https://wg21.link/P1143R2) | いいえ |
 | &nbsp;&nbsp;[`P1327R1 Allowing dynamic_cast, polymorphic typeid in constant expressions`](https://wg21.link/P1327R1) | いいえ |
 | &nbsp;&nbsp;[`P1353R0 Missing feature-test macros`](https://wg21.link/P1353R0) | いいえ |
-| &nbsp;&nbsp;[`P1668R1 Permitting unevaluated inline assembly in constexpr functions`](https://wg21.link/P1668R1) | いいえ |
-| &nbsp;&nbsp;[`P0735R1 Interaction of memory_order_consume with release sequences`](https://wg21.link/P0735R1) | 該当なし |
+| &nbsp;&nbsp;[`P0735R1 Interaction of memory_order_consume with release sequences`](https://wg21.link/P0735R1) | N/A |
 | &nbsp;&nbsp;[`P1236R1 Signed integers are two's complement`](https://wg21.link/P1236R1) | 該当なし |
 
 ## <a name="standard-library-features"></a>標準ライブラリの機能
@@ -264,36 +261,36 @@ Visual Studio 2017 または Visual Studio 2019 の MSVC の準拠の強化に�
 | &nbsp;&nbsp;[`P2116R0 Remove tuple-like protocol support from fixed-extent span`](https://wg21.link/P2116R0) | VS 2019 16.7 <sup>[20](#note_20)</sup> |
 | &nbsp;&nbsp;[`P0019R8 atomic_ref`](https://wg21.link/P0019R8) | VS 2019 16.8 <sup>[20](#note_20)</sup> |
 | &nbsp;&nbsp;[`P0528R3 Library support for atomic compare-and-exchange with padding bits`](https://wg21.link/P0528R3) | VS 2019 16.8 <sup>[20](#note_20)</sup> |
-| &nbsp;&nbsp;[`P0811R3 midpoint(), lerp()`](https://wg21.link/P0811R3) | VS 2019 16.3 で一部、16.8 で完全に <sup>[20](#note_20)</sup> |
+| &nbsp;&nbsp;[`P0811R3 midpoint(), lerp()`](https://wg21.link/P0811R3) | VS 2019 16.8 <sup>[20](#note_20)</sup> |
 | &nbsp;&nbsp;[`P0912R5 Library Support For Coroutines`](https://wg21.link/P0912R5) | VS 2019 16.8 <sup>[20](#note_20)</sup> |
 | &nbsp;&nbsp;[`P1001R2 execution::unseq`](https://wg21.link/P1001R2) | VS 2019 16.8 <sup>[20](#note_20)</sup> |
 | &nbsp;&nbsp;[`P1032R1 Miscellaneous constexpr`](https://wg21.link/P1032R1) | VS 2019 16.8 <sup>[20](#note_20)</sup> |
 | &nbsp;&nbsp;[`P1065R2 constexpr INVOKE`](https://wg21.link/P1065R2) | VS 2019 16.8 <sup>[20](#note_20)</sup> |
 | &nbsp;&nbsp;[`P1123R0 Editorial Guidance for merging P0019r8 and P0528r3`](https://wg21.link/P1123R0) | VS 2019 16.8 <sup>[20](#note_20)</sup> |
-| &nbsp;&nbsp;[`P1135R6 The C++20 Synchronization Library`](https://wg21.link/P1135R6) | VS 2019 16.8 <sup>[20](#note_20)</sup> |
 | &nbsp;&nbsp;[`P1960R0 NB Comment Changes Reviewed by SG1`](https://wg21.link/P1960R0) | VS 2019 16.8 <sup>[20](#note_20)</sup> |
-| &nbsp;&nbsp;[`P0053R7 <syncstream>`](https://wg21.link/p0053r7)<br/>&nbsp;&nbsp;[`P0753R2 osyncstream Manipulators`](https://wg21.link/p0753r2) | いいえ |
-| &nbsp;&nbsp;[`P0339R6 polymorphic_allocator<>`](https://wg21.link/P0339R6) | いいえ |
-| &nbsp;&nbsp;[`P0355R7 <chrono> Calendars And Time Zones`](https://wg21.link/p0355r7) | いいえ |
+| &nbsp;&nbsp;[`P0339R6 polymorphic_allocator<>`](https://wg21.link/P0339R6) | VS 2019 16.9 <sup>[20](#note_20)</sup> |
+| &nbsp;&nbsp;[`P0660R10 <stop_token> and jthread`](https://wg21.link/p0660r10) | VS 2019 16.9 <sup>[20](#note_20)</sup> |
+| &nbsp;&nbsp;[`P0768R1 Library Support For The Spaceship Comparison Operator <=>`](https://wg21.link/p0768r1) | VS 2019 16.9 <sup>[20](#note_20)</sup> |
+| &nbsp;&nbsp;[`P1007R3 assume_aligned()`](https://wg21.link/P1007R3) | VS 2019 16.9 <sup>[20](#note_20)</sup> |
+| &nbsp;&nbsp;[`P1020R1 Smart Pointer Creation With Default Initialization`](https://wg21.link/P1020R1) | VS 2019 16.9 <sup>[20](#note_20)</sup> |
+| &nbsp;&nbsp;[`P1135R6 The C++20 Synchronization Library`](https://wg21.link/P1135R6) | VS 2019 16.9 <sup>[20](#note_20)</sup> |
+| &nbsp;&nbsp;[`P1771R1 Library support for [[nodiscard]] for constructors`](https://wg21.link/P1771R1) | VS 2019 16.9 <sup>[20](#note_20)</sup> |
+| &nbsp;&nbsp;[`P0053R7 <syncstream>`](https://wg21.link/p0053r7)<br/>&nbsp;&nbsp;[`P0753R2 osyncstream Manipulators`](https://wg21.link/p0753r2) | No |
+| &nbsp;&nbsp;[`P0355R7 <chrono> Calendars And Time Zones`](https://wg21.link/p0355r7) | VS 2019 16.9 で一部 <sup>[20](#note_20)</sup> |
 | &nbsp;&nbsp;[`P0408R7 Efficient access To basic_stringbuf's buffer`](https://wg21.link/p0408r7) | いいえ |
 | &nbsp;&nbsp;[`P0466R5 Library support for layout-compatibility and pointer-interconvertibility traits`](https://wg21.link/p0466r5) | いいえ |
 | &nbsp;&nbsp;[`P0475R1 Guaranteed Copy Elision For Piecewise Construction`](https://wg21.link/P0475R1) | いいえ |
 | &nbsp;&nbsp;[`P0591R4 Utility Functions For Uses-Allocator Construction`](https://wg21.link/P0591R4) | いいえ |
 | &nbsp;&nbsp;[`P0608R3 Improving variant's Converting Constructor/Assignment`](https://wg21.link/P0608R3) | いいえ |
 | &nbsp;&nbsp;[`P0645R10 <format> Text Formatting`](https://wg21.link/p0645r10) | いいえ |
-| &nbsp;&nbsp;[`P0660R10 <stop_token> and jthread`](https://wg21.link/p0660r10) | いいえ |
-| &nbsp;&nbsp;[`P0768R1 Library Support For The Spaceship Comparison Operator <=>`](https://wg21.link/p0768r1) | VS 2019 16.0 の一部 <sup>[20](#note_20)</sup> |
 | &nbsp;&nbsp;[`P0784R7 Library support for more constexpr containers`](https://wg21.link/P0784R7) | VS 2019 16.7 で一部 <sup>[20](#note_20)</sup> |
 | &nbsp;&nbsp;[`P0896R4 <ranges>`](https://wg21.link/P0896R4) | VS 2019 16.8 で一部 <sup>[20](#note_20)</sup> |
 | &nbsp;&nbsp;[`P0980R1 constexpr std::string`](https://wg21.link/P0980R1) | いいえ |
 | &nbsp;&nbsp;[`P1004R2 constexpr std::vector`](https://wg21.link/P1004R2) | いいえ |
-| &nbsp;&nbsp;[`P1007R3 assume_aligned()`](https://wg21.link/P1007R3) | いいえ |
-| &nbsp;&nbsp;[`P1020R1 Smart Pointer Creation With Default Initialization`](https://wg21.link/P1020R1) | いいえ |
 | &nbsp;&nbsp;[`P1208R6 <source_location>`](https://wg21.link/P1208R6) | いいえ |
-| &nbsp;&nbsp;[`P1285R0 Improving Completeness Requirements For Type Traits`](https://wg21.link/P1285R0) | 該当なし |
-| &nbsp;&nbsp;[`P1502R1 Standard Library Header Units`](https://wg21.link/P1502R1) | いいえ |
+| &nbsp;&nbsp;[`P1285R0 Improving Completeness Requirements For Type Traits`](https://wg21.link/P1285R0) | N/A |
+| &nbsp;&nbsp;[`P1502R1 Standard Library Header Units`](https://wg21.link/P1502R1) | VS 2019 16.9 で一部 <sup>[20](#note_20)</sup> |
 | &nbsp;&nbsp;[`P1614R2 Adding Spaceship <=> To The Library`](https://wg21.link/P1614R2) | VS 2019 16.7 で一部 <sup>[20](#note_20)</sup> |
-| &nbsp;&nbsp;[`P1771R1 Library support for [[nodiscard]] for constructors`](https://wg21.link/P1771R1) | いいえ |
 | __C++17 標準ライブラリの機能__ | __サポート状況__ |
 | &nbsp;&nbsp;[`LWG 2221 Formatted output operator for nullptr`](https://cplusplus.github.io/LWG/issue2221) | VS 2019 16.1 |
 | &nbsp;&nbsp;[`N3911 void_t`](https://wg21.link/n3911) | VS 2015 <sup>[14](#note_14)</sup> |
@@ -426,7 +423,8 @@ __VS 2019 16.4__ は、Visual Studio 2019 バージョン 16.4 でサポート�
 __VS 2019 16.5__ は、Visual Studio 2019 バージョン 16.5 でサポートされている機能を示します。\
 __VS 2019 16.6__ は、Visual Studio 2019 バージョン 16.6 でサポートされている機能を示します。\
 __VS 2019 16.7__ は、Visual Studio 2019 バージョン 16.7 でサポートされている機能を示します。\
-__VS 2019 16.8__ は、Visual Studio 2019 バージョン 16.8 でサポートされている機能を示します。
+__VS 2019 16.8__ は、Visual Studio 2019 バージョン 16.8 でサポートされている機能を示します。\
+__VS 2019 16.9__ は、Visual Studio 2019 バージョン 16.9 でサポートされている機能を示します。
 
 ### <a name="notes"></a>メモ
 
@@ -444,13 +442,13 @@ __VS 2019 16.8__ は、Visual Studio 2019 バージョン 16.8 でサポート�
 
 <a name="note_G"></a> __G__ コンパイラ組み込みでサポートされています。
 
-<a name="note_14"></a> __14__ これらの C++17/20 機能は、[`/std:c++14`](../build/reference/std-specify-language-standard-version.md) (既定) が指定されているときでも、常に有効です。 その理由は、 **/std** オプションを導入する前にこの機能が実装されたため、または条件付きの実装が不必要に複雑だったためです。
+<a name="note_14"></a> __14__ これらの C++17/20 機能は、[`/std:c++14`](../build/reference/std-specify-language-standard-version.md) (既定) が指定されているときでも、常に有効です。 その理由は、 **`/std`** オプションを導入する前にこの機能が実装されたため、または条件付きの実装が不必要に複雑だったためです。
 
 <a name="note_17"></a> __17__ これらの機能は [`/std:c++17`](../build/reference/std-specify-language-standard-version.md) (または [`/std:c++latest`](../build/reference/std-specify-language-standard-version.md)) コンパイラ オプションにより有効化されています。
 
 <a name="note_20"></a> __20__ これらの機能は [`/std:c++latest`](../build/reference/std-specify-language-standard-version.md) コンパイラ オプションにより有効化されています。 C++20 の実装が完了すると、新しい **`/std:c++20`** コンパイラ オプションが追加され、ここでもこれらの機能が使用可能になります。
 
-<a name="note_DR"></a> __DR__ これらの機能はすべての [`/std`](../build/reference/std-specify-language-standard-version.md) コンパイラ オプション モードで有効になります。 C++標準化委員会では、C++11 以降のすべてのバージョンに対する遡及的な障害レポートとして、これが採用されています。
+<a name="note_DR"></a> __DR__ これらの機能はすべての [`/std`](../build/reference/std-specify-language-standard-version.md) コンパイラ オプション モードで有効になります。 C++ 標準化委員会では、C++11 以降のすべてのバージョンに対する遡及的な障害レポートとして、この変更が採用されています。
 
 <a name="note_byte"></a> __byte__ `std::byte` は [`/std:c++17`](../build/reference/std-specify-language-standard-version.md) (または [`/std:c++latest`](../build/reference/std-specify-language-standard-version.md)) により有効になっていますが、Windows SDK のヘッダーと競合することがあるため、細かいオプトアウト マクロがあります。 `_HAS_STD_BYTE` を `0` として定義することで無効にできます。
 
