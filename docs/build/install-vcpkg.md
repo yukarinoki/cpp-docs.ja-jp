@@ -4,12 +4,12 @@ description: vcpkg を Windows、Linux、macOS にインストールして更新
 ms.date: 12/17/2020
 ms.topic: reference
 ms.technology: cpp-ide
-ms.openlocfilehash: aee9561dc94164c08e4d69ec49f60961392c1854
-ms.sourcegitcommit: 2b2c3fa9244e31db35ea33554dea0efcab490f3c
+ms.openlocfilehash: b508134693d5687898f0e5202f54ee35b91680bb
+ms.sourcegitcommit: 977b5151e7dae7584112328bab515fb15622a6cc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/18/2020
-ms.locfileid: "97684118"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104883858"
 ---
 # <a name="install-vcpkg-on-windows-linux-and-macos"></a>vcpkg を Windows、Linux、macOS にインストールする
 
@@ -160,5 +160,5 @@ vcpkg をアンインストールするには、単純に *`vcpkg`* ディレク
 [vcpkg を統合する](integrate-vcpkg.md)\
 [vcpkg を使用してライブラリを管理する](manage-libraries-with-vcpkg.md)\
 [vcpkg コマンドライン リファレンス](vcpkg-command-line-reference.md)\
-[クイック スタート](https://github.com/microsoft/vcpkg/blob/master/docs/index.md)\
+[クイック スタート](https://github.com/microsoft/vcpkg/blob/master/docs/README.md)\
 [よく寄せられる質問](https://github.com/microsoft/vcpkg/blob/master/docs/about/faq.md)
