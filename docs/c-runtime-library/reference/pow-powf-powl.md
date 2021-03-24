@@ -40,16 +40,16 @@ helpviewer_keywords:
 - powf function
 - pow function
 ms.assetid: e75c33ed-2e59-48b1-be40-81da917324f1
-ms.openlocfilehash: 8fb6679e2b509274b4ea60c410a81b54df866416
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 0e05cd243c88f9f3862f6acaa517bee8e7b0bdb8
+ms.sourcegitcommit: 977b5151e7dae7584112328bab515fb15622a6cc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91505566"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104883897"
 ---
 # <a name="pow-powf-powl"></a>pow、powf、powl
 
-*X*の累乗を*y*で計算します。
+*X* の累乗を *y* で計算します。
 
 ## <a name="syntax"></a>構文
 
@@ -84,17 +84,19 @@ long double pow( long double x, int y );  // C++ only
 |*x* = = 0.0 および *y* = = 0.0|1|
 |*x* = = 0.0 および *y* < 0|INF|
 
-## <a name="remarks"></a>注釈
+## <a name="remarks"></a>解説
 
-**pow** は、2<sup>64</sup> を超える整数の浮動小数点値を認識しません (たとえば、1.0 e100)。
+**pow** は、2 <sup>64</sup> を超える整数の浮動小数点値を認識しません (たとえば、1.0 e100)。
 
 **pow** には、ストリーミング SIMD 拡張命令 2 (SSE2) を使用する実装があります。 SSE2 実装の使い方の詳細および制約については、「[_set_SSE2_enable](set-sse2-enable.md)」を参照してください。
 
-C++ ではオーバーロードが可能であるため、 **pow**のさまざまなオーバーロードを呼び出すことができます。 C プログラムでは、この関数を呼び出すためにマクロを使用している場合を除き \<tgmath.h> 、 **pow** は常に2つの値を受け取り、 **`double`** 値を返し **`double`** ます。
+C++ ではオーバーロードが可能であるため、 **pow** のさまざまなオーバーロードを呼び出すことができます。 C プログラムでは、この関数を呼び出すためにマクロを使用している場合を除き \<tgmath.h> 、 **pow** は常に2つの値を受け取り、 **`double`** 値を返し **`double`** ます。
 
 マクロを使用する場合 \<tgmath.h> `pow()` 、引数の型によって、どのバージョンの関数が選択されているかが決まります。 詳細については [、「型汎用の算術演算](../../c-runtime-library/tgmath.md) 」を参照してください。
 
 `pow(int, int)` オーバーロードは使用できなくなりました。 このオーバーロードを使用する場合、コンパイラは [C2668](../../error-messages/compiler-errors-2/compiler-error-c2668.md)を生成することがあります。 この問題を回避するには、最初のパラメーターを **`double`** 、、 **`float`** またはにキャスト **`long double`** します。
+
+もともと、この `pow(T, int)` オーバーロードは、呼び出しを `pow` インライン乗算操作のシーケンスにアンロールします。 これは短時間でもありましたが、Visual Studio 2015 Update 1 でははるかに正確ではなくなりました。 詳細については、「 [Visual Studio 2015 Update 1 での準拠の強化](../../porting/visual-cpp-what-s-new-2003-through-2015.md)」を参照してください。
 
 既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
@@ -131,7 +133,7 @@ int main( void )
 ## <a name="see-also"></a>関連項目
 
 [浮動小数点のサポート](../../c-runtime-library/floating-point-support.md) <br/>
-[exp、expf、expl](exp-expf.md) <br/>
-[log、logf、log10、log10f](log-logf-log10-log10f.md) <br/>
-[sqrt、sqrtf、sqrtl](sqrt-sqrtf-sqrtl.md) <br/>
-[_CIpow](../../c-runtime-library/cipow.md)<br/>
+[`exp`, `expf`, `expl`](exp-expf.md) <br/>
+[`log`, `logf`, `log10`, `log10f`](log-logf-log10-log10f.md) <br/>
+[`sqrt`, `sqrtf`, `sqrtl`](sqrt-sqrtf-sqrtl.md) <br/>
+[`_CIpow`](../../c-runtime-library/cipow.md)<br/>
