@@ -3,12 +3,12 @@ description: 詳細については、「Visual C++&#39;s 新しい2003から2015
 title: Visual C++ 2003 ～ 2015 の新機能
 ms.date: 07/02/2019
 ms.assetid: c4afde6f-3d75-40bf-986f-be57e3818e26
-ms.openlocfilehash: e9a036e79ba90e289e40144c4f5291c43358b850
-ms.sourcegitcommit: 977b5151e7dae7584112328bab515fb15622a6cc
+ms.openlocfilehash: 5f6a05d18b22c1861762df6c6d8231c28ce8437e
+ms.sourcegitcommit: d775eac25552bd0fb7276703efa6931d6a1a59fd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/23/2021
-ms.locfileid: "104883910"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105099711"
 ---
 # <a name="visual-c-what39s-new-2003-through-2015"></a>Visual C++ 2003 ～ 2015 の新機能
 
@@ -1014,7 +1014,7 @@ Visual Studio 2015 以降では、コンパイラの準拠に関する継続的�
     }
    ```
 
-- * * 非 `pow(T, int)` ローリング最適化の削除 * *
+- **`pow(T, int)`Unrolling 最適化の削除**
 
    以前のバージョンの C++ 標準ライブラリでは、関数 `pow(T, int)` `pow` 呼び出しを一連の乗算演算にロールアウトする関数テンプレートが定義されていました。 この手法では、浮動小数点演算の性質によって大量の不正確さが発生し、最終的に結果が大幅に不正確になる可能性があります。 Visual Studio 2015 Update 1 では、関数を使用するときに、意図しない精度が失われるのを防ぐために、この動作が削除されました `pow` 。 ただし、このバージョンのは、 `pow` 正しい計算よりはるかに高速でした。 この変更によってパフォーマンスが大幅に低下し、プロジェクトが正確な浮動小数点の結果を必要としない場合 (たとえば、プロジェクトが/fp: fast で既にコンパイルされている場合)、の呼び出しを `pow` この回避策関数に置き換えることを検討してください。
    
@@ -2260,6 +2260,6 @@ __sptr、__uptr
 
 .SAFESEH ディレクティブと `/safeseh` ml.exe オプションが追加されました。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>こちらもご覧ください
 
 [Visual C++ 移植とアップグレードのガイド](visual-cpp-porting-and-upgrading-guide.md)
