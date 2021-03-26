@@ -5,12 +5,12 @@ ms.date: 10/18/2020
 helpviewer_keywords:
 - warnings, by compiler version
 - cl.exe compiler, setting warning options
-ms.openlocfilehash: 1fdc4f79a7ae3cd45b66cb312a9297754acfc964
-ms.sourcegitcommit: 1f85841f403e76d041c34a7c77089dab389960a2
+ms.openlocfilehash: 5dd869e7c6fd53e9d68a26c18bdb458a258d3dea
+ms.sourcegitcommit: bf6d8a220f6392f1f19c0c0605d1467d0221ef6c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "94518818"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105551775"
 ---
 # <a name="compiler-warnings-by-compiler-version"></a>コンパイラのバージョン別のコンパイラの警告
 
@@ -46,12 +46,41 @@ ms.locfileid: "94518818"
 | Visual Studio 2019 バージョン 16.5 | 19.25.28610.0 |
 | Visual Studio 2019 バージョン 16.6 | 19.26.28805.0 |
 | Visual Studio 2019 バージョン 16.7 | 19.27.29112.0 |
+| Visual Studio 2019 バージョン 16.8 | 19.28.29330.0 |
+| Visual Studio 2019 バージョン16.9 | 19.28.29500.0 |
 
 オプションには、メジャー番号、メジャー番号、マイナー番号、メジャー番号、マイナー番号、およびビルド番号のみを指定でき **`/Wv`** ます。 コンパイラは、指定された数で始まるバージョンに一致するすべての警告を報告します。 指定された数を超えるバージョンのすべての警告を抑制します。 たとえば、 **`/Wv:17`** は、Visual Studio 2012 のいずれかのバージョン以前に発生した警告を報告し、Visual Studio 2013 (バージョン 18) 以降のコンパイラによって導入された警告を抑制します。 Visual Studio 2015 update 2 以降で導入された警告を非表示にするには、を使用し **`/Wv:19.00.23506`** ます。 Visual studio **`/Wv:19.11`** 2017 バージョン15.5 より前のバージョンの Visual studio で導入された警告をレポートするために使用します。ただし、Visual studio 2017 バージョン15.5 以降で導入された警告は表示されません。
 
 次のセクションでは、コンパイラオプションを使用して非表示にできる Visual C++ の各バージョンで導入された警告について説明し **`/Wv`** ます。 オプションでは、 **`/Wv`** 一覧に表示されていない警告を抑制することはできません。これは、指定したバージョンのコンパイラを中します。
 
 ::: moniker range=">= msvc-160"
+
+## <a name="warnings-introduced-in-visual-studio-2019-version-169-compiler-version-1928297000"></a>Visual Studio 2019 バージョン16.9 で導入された警告 (コンパイラバージョン 19.28.29700.0)
+
+これらの警告と、それ以降のバージョンのすべての警告は、コンパイラオプションを使用して抑制され **`/Wv:19.28.29500`** ます。
+
+| 警告 | Message |
+|--|--|
+| C5232 | `in C++20 this comparison calls 'identifier' recursively` |
+
+## <a name="warnings-introduced-in-visual-studio-2019-version-168-compiler-version-1928293300"></a>Visual Studio 2019 バージョン16.8 で導入された警告 (コンパイラバージョン 19.28.29330.0)
+
+これらの警告と、それ以降のバージョンのすべての警告は、コンパイラオプションを使用して抑制され **`/Wv:19.27`** ます。
+
+| 警告 | Message |
+|--|--|
+| C5072 | `ASAN enabled without debug information emission. Enable debug info for better ASAN error reporting` |
+| C5211 | `'keyword-1' has been deprecated; prefer using 'keyword-2' instead` |
+| C5222 | `'attribute-name': all unscoped attribute names are reserved for future standardization` |
+| C5223 | `all attribute names in the attribute namespace 'msvc' are reserved for the implementation` |
+| C5224 | `all attribute names in the attribute namespace 'a-namespace' are reserved for future standardization` |
+| C5225 | `'symbol': exported inline function defined in a private module fragment is a non-standard extension` |
+| C5226 | `'symbol': exported template defined in private module fragment has no reachable instantiation` |
+| C5227 | `nonstandard extension, resolved 'symbol' to 'instance' which is not visible with /permissive- on.` |
+| C5228 | `nonstandard extension, 'identifier' resolved to a member of a dependent base. This lookup is not allowed under /permissive-.` |
+| C5229 | `nonstandard extension, the hidden friend function 'function-name' was found by name lookup which isn't allowed under /permissive-.` |
+| C5230 | `nonstandard extension, 'identifier' was resolved to 'symbol' under /permissive. Under /permissive- it would resolve to 'other-symbol'.` |
+| C5231 | `the expression 'co_await promise.final_suspend()' must be non-throwing`)
 
 ## <a name="warnings-introduced-in-visual-studio-2019-version-167-compiler-version-1927291120"></a>Visual Studio 2019 バージョン16.7 で導入された警告 (コンパイラバージョン 19.27.29112.0)
 
@@ -102,7 +131,7 @@ ms.locfileid: "94518818"
 
 | 警告 | Message |
 |--|--|
-| C5200 | `feature 'feature-name' requires compiler flag 'option-name'` | 言語機能の C2429 に相当する警告
+| C5200 | `feature 'feature-name' requires compiler flag 'option-name'` |
 | C5201 | `a module declaration can appear only at the start of a translation unit unless a global module fragment is used` |
 | C5202 | `a global module fragment can only contain preprocessor directives` |
 | C5203 | `a parenthesized declarator name after 'explicit' will be considered an explicit-specifier in C++20` |

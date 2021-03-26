@@ -19,12 +19,12 @@ helpviewer_keywords:
 - derived classes [C++], declaring
 - inheritance, keywords
 ms.assetid: bb810f56-7720-4fea-b8b6-9499edd141df
-ms.openlocfilehash: 05d13303064c2857780af62b1b4beba00483b72e
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: d2cd576d80b3e68eaf2a0d57fecf25309d0719b0
+ms.sourcegitcommit: bf6d8a220f6392f1f19c0c0605d1467d0221ef6c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97340464"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105551736"
 ---
 # <a name="inheritance-keywords"></a>継承キーワード
 
@@ -36,7 +36,7 @@ class [__multiple_inheritance] class-name;
 class [__virtual_inheritance] class-name;
 ```
 
-ここで、
+各値の説明:
 
 *クラス名*<br/>
 宣言するクラスの名前。
@@ -75,7 +75,7 @@ int S::*p;
 > [!NOTE]
 > メンバーへのクラス ポインター表現の同じ前方宣言は、そのクラスのメンバーへのポインターを宣言する各翻訳単位で発生する必要があり、その宣言はメンバーへのポインターを宣言する前に発生する必要があります。
 
-以前のバージョンとの互換性を維持するために、 **_single_inheritance**、 **_multiple_inheritance**、および **_virtual_inheritance** は、、、およびのシノニムと **`__single_inheritance`** **`__multiple_inheritance`** **`__virtual_inheritance`** なります。ただし、コンパイラオプションでは、 [ \( 言語拡張機能を無効に](../build/reference/za-ze-disable-language-extensions.md) します。
+以前のバージョンとの互換性を維持するために、、 **`_single_inheritance`** **`_multiple_inheritance`** 、および **`_virtual_inheritance`** は、、、およびのシノニムと **`__single_inheritance`** **`__multiple_inheritance`** **`__virtual_inheritance`** なります。ただし、コンパイラオプションで [ [ \( 言語拡張機能を無効にする](../build/reference/za-ze-disable-language-extensions.md) ] を指定する場合を除きます。
 
 **Microsoft 固有の仕様はここまで**
 
