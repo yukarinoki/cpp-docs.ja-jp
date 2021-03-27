@@ -1,7 +1,7 @@
 ---
 description: 詳細については、strncat_s、_strncat_s_l、wcsncat_s、_wcsncat_s_l、_mbsncat_s、_mbsncat_s_l を参照してください。
 title: strncat_s、_strncat_s_l、wcsncat_s、_wcsncat_s_l、_mbsncat_s、_mbsncat_s_l
-ms.date: 4/2/2020
+ms.date: 3/25/2021
 api_name:
 - _wcsncat_s_l
 - wcsncat_s
@@ -57,12 +57,12 @@ helpviewer_keywords:
 - wcsncat_s_l function
 - mbsncat_s function
 ms.assetid: de77eca2-4d9c-4e66-abf2-a95fefc21e5a
-ms.openlocfilehash: c260c1a77908962441dba094686578e61db0e386
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: efdb9f6075d373a5b64bc4f35eae432f6de5a80c
+ms.sourcegitcommit: f7bfb6dffa410008cf1bc01f70aae5c27e464f72
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97344784"
+ms.lasthandoff: 03/26/2021
+ms.locfileid: "105613722"
 ---
 # <a name="strncat_s-_strncat_s_l-wcsncat_s-_wcsncat_s_l-_mbsncat_s-_mbsncat_s_l"></a>strncat_s、_strncat_s_l、wcsncat_s、_wcsncat_s_l、_mbsncat_s、_mbsncat_s_l
 
@@ -187,7 +187,7 @@ NULL で終わる元の文字列。
 
 これらの関数は、 *Strsource* の最初の *D* 文字を *strsource* の末尾に追加しようとします。ここで、 *d* は、 *count* の小さい方、および *strsource* の長さです。 (サイズが *Numberofelements* として指定されている) *strdest* に収まるように *D* 文字を追加した後も、null 終端文字のスペースを残す場合は、これらの文字が追加され、 *strdest* の元の終端の null から開始し、新しい終端の null が追加されます。それ以外の場合、 *Strdest*[0] は null 文字に設定され、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。
 
-これには例外があります。 *Count* が [_TRUNCATE](../../c-runtime-library/truncate.md)場合は、に格納される *Strsource* の多くが *strsource* に追加されますが、終端の null を追加する余地は残ったままになります。
+これには例外があります。 *Count* が [_TRUNCATE](../../c-runtime-library/truncate.md)場合、に収まるだけの *strsource* は *strsource* に追加されますが、終端の null を追加するための空き領域が残ったままになります。
 
 たとえば、次のように入力します。
 
@@ -197,15 +197,15 @@ strncpy_s(dst, _countof(dst), "12", 2);
 strncat_s(dst, _countof(dst), "34567", 3);
 ```
 
-は、5文字のバッファー内の2文字に3文字を追加する **strncat_s** を求めていることを意味します。この場合、null 終端文字にはスペースが残されないため、文字列をゼロに **strncat_s** し、無効なパラメーターハンドラーを呼び出します。
+**strncat_s** 、5文字のバッファー内の2文字に3文字を追加するように要求しています。この場合、null 終端文字にはスペースが残されないため、文字列をゼロに **strncat_s** し、無効なパラメーターハンドラーを呼び出します。
 
-切り捨て動作が必要な場合は、 **_TRUNCATE** を使用するか、それに応じて *サイズ* パラメーターを調整します。
+切り捨て動作が必要な場合は、 **_TRUNCATE** を使用するか、それに応じて *count* パラメーターを調整します。
 
 ```C
 strncat_s(dst, _countof(dst), "34567", _TRUNCATE);
 ```
 
-または
+or
 
 ```C
 strncat_s(dst, _countof(dst), "34567", _countof(dst)-strlen(dst)-1);
@@ -217,7 +217,7 @@ strncat_s(dst, _countof(dst), "34567", _countof(dst)-strlen(dst)-1);
 
 **wcsncat_s** と **_mbsncat_s** は **strncat_s** のワイド文字バージョンとマルチバイト文字バージョンです。 **Wcsncat_s** の文字列引数と戻り値はワイド文字列です。これらの **_mbsncat_s** はマルチバイト文字列です。 それ以外では、これらの関数の動作は同じです。
 
-出力値は、ロケールの **LC_CTYPE** カテゴリの設定に影響されます。詳細については、「[setlocale](setlocale-wsetlocale.md)」を参照してください。 **_l** サフィックスが付いていないこれらの関数のバージョンでは、このロケールに依存する動作に現在のロケールを使用します。**_l** サフィックスが付いているバージョンは、渡されたロケール パラメーターを代わりに使用する点を除いて同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
+出力値は、ロケールの **LC_CTYPE** カテゴリの設定に影響されます。 詳細については、「[setlocale](setlocale-wsetlocale.md)」をご覧ください。 **_L** サフィックスが付いていないこれらの関数のバージョンは、このロケールに依存する動作に現在のロケールを使用します。**_l** サフィックスが付いているバージョンは、渡されたロケールパラメーターを代わりに使用する点を除いて同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
 
 C++ では、これらの関数の使用はテンプレートのオーバーロードによって簡素化されます。オーバーロードでは、バッファー長を自動的に推論できる (サイズの引数を指定する必要がなくなる) だけでなく、古くてセキュリティが万全ではない関数を新しく安全な関数に自動的に置き換えることができます。 詳細については、「[セキュリティ保護されたテンプレート オーバーロード](../../c-runtime-library/secure-template-overloads.md)」を参照してください。
 
@@ -242,7 +242,7 @@ C++ では、これらの関数の使用はテンプレートのオーバーロ�
 |**wcsncat_s**|\<string.h> または \<wchar.h>|
 |**_mbsncat_s**、 **_mbsncat_s_l**|\<mbstring.h>|
 
-互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性について詳しくは、「 [Compatibility](../../c-runtime-library/compatibility.md)」をご覧ください。
 
 ## <a name="example"></a>例
 
