@@ -1,159 +1,133 @@
 ---
 description: '詳細については、「_variant_t:: operator =」を参照してください。'
-title: _variant_t::operator =
-ms.date: 11/04/2016
+title: '_variant_t:: operator ='
+ms.date: 03/23/2021
 f1_keywords:
 - _variant_t::operator=
 helpviewer_keywords:
 - operator= [C++], variant
 - operator = [C++], variant
 - = operator [C++], with specific Visual C++ objects
-ms.assetid: 77622723-6e49-4dec-9e0f-fa74028f1a3c
-ms.openlocfilehash: 3218d15f5b787709f1759bfda3a2501bcdda5406
-ms.sourcegitcommit: d775eac25552bd0fb7276703efa6931d6a1a59fd
+ms.openlocfilehash: c1cd581b386a3cf5d551fe8341ba588fc56b9c2e
+ms.sourcegitcommit: bb35a6c22d896c4640cff00a7321442c544ca219
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105099685"
+ms.lasthandoff: 03/29/2021
+ms.locfileid: "105744765"
 ---
-# <a name="_variant_toperator-"></a>_variant_t::operator =
+# `_variant_t::operator=`
 
-**Microsoft 固有の仕様**
+インスタンスに新しい値を割り当て `_variant_t` ます。
+
+`_variant_t`クラスとその `operator=` メンバーは、 **Microsoft 固有** のものです。
 
 ## <a name="syntax"></a>構文
 
+```cpp
+_variant_t& operator=( const VARIANT& varSrc );
+_variant_t& operator=( const VARIANT* pVarSrc );
+_variant_t& operator=( const _variant_t& var_t_Src );
+_variant_t& operator=( short sSrc );
+_variant_t& operator=( long lSrc );
+_variant_t& operator=( float fltSrc );
+_variant_t& operator=( double dblSrc );
+_variant_t& operator=( const CY& cySrc );
+_variant_t& operator=( const _bstr_t& bstrSrc );
+_variant_t& operator=( const wchar_t* wstrSrc );
+_variant_t& operator=( const char* strSrc );
+_variant_t& operator=( IDispatch* pDispSrc );
+_variant_t& operator=( bool bSrc );
+_variant_t& operator=( IUnknown* pSrc );
+_variant_t& operator=( const DECIMAL& decSrc );
+_variant_t& operator=( BYTE byteSrc );
+_variant_t& operator=( char cSrc );
+_variant_t& operator=( unsigned short usSrc );
+_variant_t& operator=( unsigned long ulSrc );
+_variant_t& operator=( int iSrc );
+_variant_t& operator=( unsigned int uiSrc );
+_variant_t& operator=( __int64 i8Src );
+_variant_t& operator=( unsigned __int64 ui8Src );
 ```
-_variant_t& operator=(
-   const VARIANT& varSrc
-);
 
-_variant_t& operator=(
-   const VARIANT* pVarSrc
-);
+### <a name="parameters"></a>パラメーター
 
-_variant_t& operator=(
-   const _variant_t& var_t_Src
-);
+*`varSrc`*\
+`VARIANT`コンテンツと型のコピー元のへの参照 `VT_*` 。
 
-_variant_t& operator=(
-   short sSrc
-);
+*`pVarSrc`*\
+`VARIANT`コンテンツと型のコピー元のへのポインター `VT_*` 。
 
-_variant_t& operator=(
-   long lSrc
-);
+*`var_t_Src`*\
+`_variant_t`コンテンツと型のコピー元のへの参照 `VT_*` 。
 
-_variant_t& operator=(
-   float fltSrc
-);
+*`sSrc`*\
+**`short`** コピーする整数値。 `VT_BOOL` `*this` が型の場合、指定された型 `VT_BOOL` 。 それ以外の場合は、型として指定され `VT_I2` ます。
 
-_variant_t& operator=(
-   double dblSrc
-);
+*`lSrc`*\
+**`long`** コピーする整数値。 `VT_BOOL` `*this` が型の場合、指定された型 `VT_BOOL` 。 `VT_ERROR` `*this` が型の場合、指定された型 `VT_ERROR` 。 それ以外の場合は、指定された型 `VT_I4` です。
 
-_variant_t& operator=(
-   const CY& cySrc
-);
+*`fltSrc`*\
+**`float`** コピーする数値。 指定された型 `VT_R4` 。
 
-_variant_t& operator=(
-   const _bstr_t& bstrSrc
-);
+*`dblSrc`*\
+**`double`** コピーする数値。 `VT_DATE` `this` が型の場合、指定された型 `VT_DATE` 。 それ以外の場合は、指定された型 `VT_R8` です。
 
-_variant_t& operator=(
-   const wchar_t* wstrSrc
-);
+*`cySrc`*\
+コピーする `CY` オブジェクト。 指定された型 `VT_CY` 。
 
-_variant_t& operator=(
-   const char* strSrc
-);
+*`bstrSrc`*\
+コピーする `BSTR` オブジェクト。 指定された型 `VT_BSTR` 。
 
-_variant_t& operator=(
-   IDispatch* pDispSrc
-);
+*`wstrSrc`*\
+および指定した型として格納されている、コピーする Unicode 文字列 `BSTR` `VT_BSTR` 。
 
-_variant_t& operator=(
-   bool bSrc
-);
+*`strSrc`*\
+および指定した型として格納されている、コピーするマルチバイト文字列 `BSTR` `VT_BSTR` 。
 
-_variant_t& operator=(
-   IUnknown* pSrc
-);
+*`pDispSrc`*\
+`IDispatch`を呼び出すことによってコピーするポインター `AddRef` 。 指定された型 `VT_DISPATCH` 。
 
-_variant_t& operator=(
-   const DECIMAL& decSrc
-);
+*`bSrc`*\
+**`bool`** コピーする値。 指定された型 `VT_BOOL` 。
 
-_variant_t& operator=(
-   BYTE bSrc
-);
+*`pSrc`*\
+`IUnknown`を呼び出すことによってコピーするポインター `AddRef` 。 指定された型  `VT_UNKNOWN` 。
 
-_variant_t& operator=(
-   char cSrc
-);
+*`decSrc`*\
+コピーする `DECIMAL` オブジェクト。 指定された型 `VT_DECIMAL` 。
 
-_variant_t& operator=(
-   unsigned short usSrc
-);
+*`byteSrc`*\
+`BYTE`コピーする値。 指定された型 `VT_UI1` 。
 
-_variant_t& operator=(
-   unsigned long ulSrc
-);
+*`cSrc`*\
+**`char`** コピーする値。 指定された型 `VT_I1` 。
 
-_variant_t& operator=(
-   int iSrc
-);
+*`usSrc`*\
+**`unsigned short`** コピーする値。 指定された型 `VT_UI2` 。
 
-_variant_t& operator=(
-   unsigned int uiSrc
-);
+*`ulSrc`*\
+**`unsigned long`** コピーする値。 指定された型 `VT_UI4` 。
 
-_variant_t& operator=(
-   __int64 i8Src
-);
+*`iSrc`*\
+**`int`** コピーする値。 指定された型 `VT_INT` 。
 
-_variant_t& operator=(
-   unsigned __int64 ui8Src
-);
-```
+*`uiSrc`*\
+**`unsigned int`** コピーする値。 指定された型 `VT_UINT` 。
+
+*`i8Src`*\
+**`__int64`** **`long long`** コピーするまたは値。 指定された型 `VT_I8` 。
+
+*`ui8Src`*\
+**`unsigned __int64`** **`unsigned long long`** コピーするまたは値。 指定された型 `VT_UI8` 。
 
 ## <a name="remarks"></a>解説
 
-この演算子は、`_variant_t` オブジェクトに新しい値を代入します。
+`operator=`代入演算子は、オブジェクトの型を削除する既存の値をクリアするか、 `Release` `IDispatch*` 型および型のを呼び出し `IUnknown*` ます。 次に、オブジェクトに新しい値をコピーし `_variant_t` ます。 `_variant_t`、、およびの各引数に記載されている場合を除き、割り当てられた値と一致するように型を変更し **`short`** **`long`** **`double`** ます。 値型は直接コピーされます。 `VARIANT`または `_variant_t` ポインターまたは参照引数によって、割り当てられたオブジェクトのコンテンツと型がコピーされます。 その他のポインターまたは参照型の引数は、割り当てられたオブジェクトのコピーを作成します。 代入演算子は `AddRef` `IDispatch*` 、引数と `IUnknown*` 引数を呼び出します。
 
-- **operator = (**  *varsrc*  **)** 既存のを `VARIANT` オブジェクトに割り当て `_variant_t` ます。
+`operator=`[`_com_raise_error`](../cpp/com-raise-error.md)エラーが発生した場合は、を呼び出します。
 
-- **operator = (**  *pVarSrc*  **)** 既存のを `VARIANT` オブジェクトに割り当て `_variant_t` ます。
-
-- **operator = (**  *var_t_Src*  **)** 既存 `_variant_t` のオブジェクトをオブジェクトに割り当て `_variant_t` ます。
-
-- **operator = (***sSrc***)****`short`** オブジェクトに整数値を割り当て `_variant_t` ます。    
-
-- **operator = (** `lSrc` **)** **`long`** オブジェクトに整数値を代入 `_variant_t` します。    
-
-- **operator = (**  *fltsrc*  **)** 数値を **`float`** オブジェクトに割り当て `_variant_t` ます。
-
-- **operator = (**  *dblsrc*  **)** 数値を **`double`** オブジェクトに割り当て `_variant_t` ます。
-
-- **operator = (**  *cysrc*  **)** オブジェクトを `CY` オブジェクトに割り当て `_variant_t` ます。
-
-- **operator = (**  *bstrsrc*  **)** オブジェクトを `BSTR` オブジェクトに割り当て `_variant_t` ます。
-
-- **operator = (**  *wstrsrc*  **)** Unicode 文字列をオブジェクトに割り当て `_variant_t` ます。
-
-- **operator = (** `strSrc` **)** オブジェクトにマルチバイト文字列を代入 `_variant_t` します。    
-
-- **operator = (** `bSrc` **)** **`bool`** オブジェクトに値を代入 `_variant_t` します。  
-
-- **operator = (**  *pdispsrc*  **)** オブジェクト `IDispatch*` をオブジェクトに割り当て `_variant_t` 、を呼び出し `AddRef` ます。
-
-- **operator = (**  *pIUnknownSrc*  **)** オブジェクト `IUnknown*` をオブジェクトに割り当て `_variant_t` 、を呼び出し `AddRef` ます。
-
-- **operator = (***decsrc***)**`DECIMAL`オブジェクトに値を割り当て `_variant_t` ます。    
-
-- **operator = (** `bSrc` **)** `BYTE` オブジェクトに値を代入 `_variant_t` します。  
-
-**Microsoft 固有の仕様はここまで**
+`operator=` 更新されたオブジェクトへの参照を返し `_variant_t` ます。
 
 ## <a name="see-also"></a>関連項目
 
-[_variant_t クラス](../cpp/variant-t-class.md)
+[`_variant_t` クラス](../cpp/variant-t-class.md)

@@ -56,12 +56,12 @@ helpviewer_keywords:
 - characters [C++], comparing
 - _ftcsnccmp function
 ms.assetid: 2fdbf4e6-77da-4b59-9086-488f6066b8af
-ms.openlocfilehash: 91f7351f844425369ccae4bba6d13d177e75910f
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: 237f51f1072e97e6bbba0347635616f160faa912
+ms.sourcegitcommit: bb35a6c22d896c4640cff00a7321442c544ca219
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97344758"
+ms.lasthandoff: 03/29/2021
+ms.locfileid: "105744778"
 ---
 # <a name="strncmp-wcsncmp-_mbsncmp-_mbsncmp_l"></a>strncmp、wcsncmp、_mbsncmp、_mbsncmp_l
 
@@ -129,7 +129,7 @@ int _mbsncmp_l(
 
 **wcsncmp** と **_mbsncmp** は、 **strncmp** のワイド文字バージョンとマルチバイト文字バージョンです。 **Wcsncmp** の引数はワイド文字列です。これらの **_mbsncmp** はマルチバイト文字列です。 は、マルチバイトのコードページに従ってマルチバイト文字のシーケンスを認識し、エラーが発生した場合に **_NLSCMPERROR** を返します。 **_mbsncmp**
 
-また、 **_mbsncmp** および **_mbsncmp_l** パラメーターを検証します。 *String1* または *string2* が null ポインターの場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、 **_mbsncmp** と **_mbsncmp_l** は **_NLSCMPERROR** を返し、 **errno** を **EINVAL** に設定します。 **strncmp** と **wcsncmp** では、パラメーターは検証されません。 それ以外では、これらの関数の動作は同じです。
+また、 **_mbsncmp** および **_mbsncmp_l** パラメーターを検証します。 *String1* または *string2* が null ポインターで、 *count* が0ではない場合、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、 **_mbsncmp** と **_mbsncmp_l** は **_NLSCMPERROR** を返し、 **errno** を **EINVAL** に設定します。 **strncmp** と **wcsncmp** では、パラメーターは検証されません。 それ以外では、これらの関数の動作は同じです。
 
 **_Mbsncmp** と **_mbsncmp_l** の比較動作は、ロケールの **LC_CTYPE** カテゴリの設定によって影響を受けます。 これは、マルチバイト文字の先頭および末尾のバイトの検出を制御します。 詳細については、「[setlocale](setlocale-wsetlocale.md)」をご覧ください。 **_Mbsncmp** 関数は、このロケールに依存する動作に現在のロケールを使用します。 **_Mbsncmp_l** 関数は、 *locale* パラメーターを代わりに使用する点を除いて同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。 ロケールが1バイトのロケールの場合、これらの関数の動作は **strncmp** と同じになります。
 

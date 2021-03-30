@@ -240,12 +240,12 @@ no-loc:
 - _WIN64
 - _WINRT_DLL
 - __func__
-ms.openlocfilehash: e4577f7b74c6057df8ebe795ffa0056dbdeae298
-ms.sourcegitcommit: 48b897797b3132ae934b1d191e3870c3c2466335
+ms.openlocfilehash: 3e0dbda7ddcd7c428e0f83895d9ed5d4922a7ccb
+ms.sourcegitcommit: bf6d8a220f6392f1f19c0c0605d1467d0221ef6c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97514539"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105551762"
 ---
 # <a name="predefined-macros"></a>定義済みマクロ
 
@@ -505,7 +505,8 @@ MSVC では、次の定義済みマクロがサポートされます。
    | Visual Studio 2019 バージョン 16.5 | 1925 |
    | Visual Studio 2019 バージョン 16.6 | 1926 |
    | Visual Studio 2019 バージョン 16.7 | 1927 |
-   | Visual Studio 2019 バージョン 16.8 | 1928 |
+   | Visual Studio 2019 バージョン 16.8、16.9 | 1928 |
+   | Visual Studio 2019 バージョン 16.10 Preview | 1929 |
 
    特定のバージョン以降の Visual Studio でコンパイラのリリースまたは更新プログラムをテストするには、`>=` 演算子を使用します。 条件付きディレクティブで使用して、その既知のバージョンに対して `_MSC_VER` を比較することができます。 比較対象として相互に排他的な複数のバージョンがある場合は、バージョン番号の降順で比較を行います。 たとえば、このコードでは Visual Studio 2017 以降でリリースされたコンパイラがチェックされます。 次に、Visual Studio 2015 以降でリリースされたコンパイラがチェックされます。 その後、Visual Studio 2015 より前にリリースされたすべてのコンパイラがチェックされます。
 
@@ -518,6 +519,8 @@ MSVC では、次の定義済みマクロがサポートされます。
    // . . .
    #endif
    ```
+
+   メジャー番号とマイナー数値を共有するコンパイラのバージョンをテストするには、`_MSC_FULL_VER` でメジャー番号、マイナー番号、およびビルド番号を使用して比較します。 Visual Studio 2019 バージョン 16.9 のコンパイラでは、`_MSC_FULL_VER` の値が 192829500 以上になります。
 
    詳細については、Microsoft C++ チームのブログ「[Visual C++ Compiler Version](https://devblogs.microsoft.com/cppblog/visual-c-compiler-version/)」 (Visual C++ コンパイラのバージョン) を参照してください。
 
