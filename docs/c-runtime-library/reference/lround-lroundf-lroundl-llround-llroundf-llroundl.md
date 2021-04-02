@@ -47,12 +47,12 @@ helpviewer_keywords:
 - llroundf function
 - lroundl function
 ms.assetid: cfb88a35-54c6-469f-85af-f7d695dcfdd8
-ms.openlocfilehash: c5db62da7cdba58fdc58e8acbfe3aff0e2c386d6
-ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
+ms.openlocfilehash: ab0663acc0d1fd5bf2110993114ce9bd8f67f55e
+ms.sourcegitcommit: 82a0d23b04d0776c00209d885689cbc5be36d3b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89555320"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "106099572"
 ---
 # <a name="lround-lroundf-lroundl-llround-llroundf-llroundl"></a>lround、lroundf、lroundl、llround、llroundf、llroundl
 
@@ -101,7 +101,7 @@ long long llroundl(
 
 ## <a name="return-value"></a>戻り値
 
-**Lround**関数と**llround**関数では、最も近い値 **`long`** または **`long long`** 整数が*x*に返されます。 中間の値は、浮動小数点丸めモードの設定にかかわらず、ゼロから離れる方向に丸められます。 エラーの戻り値はありません。
+**Lround** 関数と **llround** 関数では、最も近い値 **`long`** または **`long long`** 整数が *x* に返されます。 中間の値は、浮動小数点丸めモードの設定にかかわらず、ゼロから離れる方向に丸められます。 エラーの戻り値はありません。
 
 |入力|SEH 例外|Matherr 例外|
 |-----------|-------------------|-----------------------|
@@ -120,7 +120,7 @@ C++ ではオーバーロードが可能であるため、との値を受け取�
 |ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**lround**、 **lroundf**、 **lroundl**、 **llround**、 **llroundf**、 **llroundl**|\<math.h>|
-|**lround** マクロ | \<tgmath.h> ||
+|**lround** マクロ | \<tgmath.h> |
 
 互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 

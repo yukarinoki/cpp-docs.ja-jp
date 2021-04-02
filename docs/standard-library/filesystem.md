@@ -14,18 +14,18 @@ no-loc:
 - wchar_t
 - char16_t
 - char32_t
-ms.openlocfilehash: 8dc81692c7c7dc467f3ab8e2ceb8cac19e004ab8
-ms.sourcegitcommit: 3d9cfde85df33002e3b3d7f3509ff6a8dc4c0a21
+ms.openlocfilehash: 4af9e0a5d5f2839de564f25c976e018e8f1565e7
+ms.sourcegitcommit: 82a0d23b04d0776c00209d885689cbc5be36d3b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/21/2021
-ms.locfileid: "98667472"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "106099353"
 ---
 # `filesystem`
 
 `<filesystem>`パス、ファイル、およびディレクトリに関する情報を操作および取得するクラスおよび関数にアクセスするためのヘッダーを含めます。
 
-## <a name="syntax"></a>Syntax
+## <a name="syntax"></a>構文
 
 ```cpp
 #include <filesystem> // C++17 standard header file name
@@ -34,8 +34,8 @@ using namespace std::experimental::filesystem::v1;
 ```
 
 > [!IMPORTANT]
-> Visual Studio 2017 のリリースでは、 \<filesystem> ヘッダーはまだ C++ 標準ではありませんでした。 Visual Studio 2017 RTW の C++ では、 [ISO/IEC JTC 1/SC 22/WG 21 N4100](https://wg21.link/n4100)にある最終的なドラフト標準が実装されています。 Visual Studio 2017 バージョン15.7 以降では、新しい C++ 17 標準がサポートされてい \<filesystem> ます。
-> これはまったく新しい実装であり、以前のバージョンと互換性がありません `std::experimental` 。 これは、シンボリックリンクのサポート、バグの修正、標準の必須動作の変更によって必要になりました。 現在、を含むは、 \<filesystem> 新しいと以前のを提供し `std::filesystem` `std::experimental::filesystem` ます。 \<experimental/filesystem>を含めると、以前の実装のみが提供され experimental ます。 この experimental 実装は、ライブラリの次の ABI リリースで削除される予定です。
+> Visual Studio 2017 のリリースでは、 `<filesystem>` ヘッダーはまだ C++ 標準ではありませんでした。 Visual Studio 2017 RTW の C++ では、 [ISO/IEC JTC 1/SC 22/WG 21 N4100](https://wg21.link/n4100)にある最終的なドラフト標準が実装されています。 Visual Studio 2017 バージョン15.7 以降では、新しい C++ 17 標準がサポートされてい `<filesystem>` ます。
+> これはまったく新しい実装であり、以前のバージョンと互換性がありません `std::experimental` 。 これは、シンボリックリンクのサポート、バグの修正、標準の必須動作の変更によって必要になりました。 現在、を含むは、 `<filesystem>` 新しいと以前のを提供し `std::filesystem` `std::experimental::filesystem` ます。 `<experimental/filesystem>`を含めると、以前の実装のみが提供され experimental ます。 この experimental 実装は、ライブラリの次の ABI リリースで削除される予定です。
 
 このヘッダーは、2つの広範なホストオペレーティングシステム (Microsoft Windows と POSIX) のいずれかのファイルシステムをサポートしています。
 
@@ -91,7 +91,7 @@ using namespace std::experimental::filesystem::v1;
 
 軽微な違いは、パス名にあるディレクトリのシーケンス間の推奨される区切り記号です。 どちらのオペレーティングシステムでもスラッシュを記述でき `/` ますが、一部のコンテキストでは円記号が優先さ `\` れます。 実装では、のデータメンバーに、優先する区切り記号が格納され `preferred_separator` `path` ます。
 
-最後に、オブジェクトには `path` 重要な機能があります。ヘッダーに定義されているクラスで filename 引数が必要な場合は、それらを使用でき [\<fstream>](fstream.md) ます。
+最後に、オブジェクトには `path` 重要な機能があります。ヘッダーに定義されているクラスで filename 引数が必要な場合は、それらを使用でき [`<fstream>`](fstream.md) ます。
 
 詳細とコード例については、「 [ファイルシステムのナビゲーション (C++)](../standard-library/file-system-navigation.md)」を参照してください。
 
@@ -101,12 +101,12 @@ using namespace std::experimental::filesystem::v1;
 
 |名前|説明|
 |-|-|
-|[`directory_entry` 講義](../standard-library/directory-entry-class.md)|またはによって返され、を含むオブジェクトを記述し `directory_iterator` `recursive_directory_iterator` `path` ます。|
-|[`directory_iterator` 講義](../standard-library/directory-iterator-class.md)|ファイル システム ディレクトリのファイル名をシーケンス処理する入力反復子を表します。|
-|[`filesystem_error` 講義](../standard-library/filesystem-error-class.md)|低レベル システム オーバーフローをレポートするためにスローされる例外のための基底クラス。|
-|[`path` 講義](../standard-library/path-class.md)|ファイル名として使用するのに適したテンプレート型 `String` のオブジェクトを格納するクラスを定義します。|
-|[`recursive_directory_iterator` 講義](../standard-library/recursive-directory-iterator-class.md)|ファイル システム ディレクトリのファイル名をシーケンス処理する入力反復子を表します。 反復子はサブディレクトリに下りることもできます。|
-|[`file_status` 講義](../standard-library/file-status-class.md)|`file_type`をラップします。|
+|[`directory_entry` クラス](../standard-library/directory-entry-class.md)|またはによって返され、を含むオブジェクトを記述し `directory_iterator` `recursive_directory_iterator` `path` ます。|
+|[`directory_iterator` クラス](../standard-library/directory-iterator-class.md)|ファイル システム ディレクトリのファイル名をシーケンス処理する入力反復子を表します。|
+|[`filesystem_error` クラス](../standard-library/filesystem-error-class.md)|低レベル システム オーバーフローをレポートするためにスローされる例外のための基底クラス。|
+|[`path` クラス](../standard-library/path-class.md)|ファイル名として使用するのに適したテンプレート型 `String` のオブジェクトを格納するクラスを定義します。|
+|[`recursive_directory_iterator` クラス](../standard-library/recursive-directory-iterator-class.md)|ファイル システム ディレクトリのファイル名をシーケンス処理する入力反復子を表します。 反復子はサブディレクトリに下りることもできます。|
+|[`file_status` クラス](../standard-library/file-status-class.md)|`file_type`をラップします。|
 
 ### <a name="structs"></a>構造体
 
@@ -114,13 +114,13 @@ using namespace std::experimental::filesystem::v1;
 |-|-|
 |[`space_info` データ](../standard-library/space-info-structure.md)|ボリュームに関する情報を保持します。|
 
-## <a name="functions"></a>機能
+## <a name="functions"></a>関数
 
-[\<filesystem> 関数](../standard-library/filesystem-functions.md)
+[`<filesystem>` 関数](../standard-library/filesystem-functions.md)
 
-## <a name="operators"></a>演算子
+## <a name="operators"></a>オペレーター
 
-[\<filesystem> 通信](../standard-library/filesystem-operators.md)
+[`<filesystem>` 通信](../standard-library/filesystem-operators.md)
 
 ## <a name="enumerations"></a>列挙型
 
@@ -132,6 +132,6 @@ using namespace std::experimental::filesystem::v1;
 |[`perm_options`](../standard-library/filesystem-enumerations.md#perm_options)| 関数のオプションを列挙 `permissions` します。 |
 |[`perms`](../standard-library/filesystem-enumerations.md#perms)|アクセス許可とアクセス許可に対するオプションを伝達するために使用されるビットマスク型|
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 
 [ヘッダーファイルのリファレンス](../standard-library/cpp-standard-library-header-files.md)

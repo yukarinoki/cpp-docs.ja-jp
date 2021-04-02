@@ -34,12 +34,12 @@ helpviewer_keywords:
 - fminf function
 - fminl function
 ms.assetid: 1916dfb5-99c1-4b0d-aefb-513525c3f2ac
-ms.openlocfilehash: 6a070835d809c6adcb5b7bfd57b5373886b348ca
-ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
+ms.openlocfilehash: 007eae82ca60796d7a81b34e6419d21585c708d0
+ms.sourcegitcommit: 82a0d23b04d0776c00209d885689cbc5be36d3b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89556711"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "106099717"
 ---
 # <a name="fmin-fminf-fminl"></a>fmin、fminf、fminl
 
@@ -86,7 +86,7 @@ long double fminl(
 
 ## <a name="return-value"></a>戻り値
 
-成功した場合、 *x* または *y*の小さい方を返します。
+成功した場合、 *x* または *y* の小さい方を返します。
 
 |入力|結果|
 |-----------|------------|
@@ -94,7 +94,7 @@ long double fminl(
 |*y* は NaN|*x*|
 |*x* と *y* は NaN|NaN|
 
-関数は、 [_matherr](matherr.md) が呼び出されず、浮動小数点例外が発生することも、 **errno**の値を変更することもありません。
+関数は、 [_matherr](matherr.md) が呼び出されず、浮動小数点例外が発生することも、 **errno** の値を変更することもありません。
 
 ## <a name="remarks"></a>解説
 
@@ -107,7 +107,7 @@ C++ ではオーバーロードが可能であるため、およびの型を受�
 |ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**fmin**、 **fminf**、 **fminl**|40u-c \<math.h><br />C++: \<math.h> または \<cmath>|
-|**fmin** マクロ | \<tgmath.h> ||
+|**fmin** マクロ | \<tgmath.h> |
 
 互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 

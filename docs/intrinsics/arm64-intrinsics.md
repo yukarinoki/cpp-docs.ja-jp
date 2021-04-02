@@ -168,12 +168,12 @@ helpviewer_keywords:
 author: sigatrev
 ms.author: magardn
 ms.date: 11/14/2019
-ms.openlocfilehash: 13358458bf9abcf0bc6e38ca115b537abc99300a
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: 604658dbf4e6ac96b5c2344be5851f3baab3f641
+ms.sourcegitcommit: 82a0d23b04d0776c00209d885689cbc5be36d3b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90039756"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "106099496"
 ---
 # <a name="arm64-intrinsics"></a>ARM64 組み込み
 
@@ -183,7 +183,7 @@ Microsoft C++ コンパイラ (MSVC) を使用すると、次の組み込みが 
 
 ARM64 のネオンベクター命令セット拡張は、Single Instruction Multiple Data (SIMD) 機能を提供します。 これらは、x86 および x64 アーキテクチャのプロセッサに共通する MMX および SSE ベクター命令セットのものに似ています。
 
-ヘッダーファイル *arm64_neon .h*に指定されているように、ネオン組み込みがサポートされています。 MSVC のネオン組み込みのサポートは、ARM64 コンパイラのものに似ています。これは、arm のインフォ web サイトの [ARM ネオン組み込みリファレンス](https://static.docs.arm.com/ihi0073/c/IHI0073C_arm_neon_intrinsics_ref.pdf) に記載されています。
+ヘッダーファイル *arm64_neon .h* に指定されているように、ネオン組み込みがサポートされています。 MSVC のネオン組み込みのサポートは、ARM64 コンパイラのものに似ています。これは、arm のインフォ web サイトの [ARM ネオン組み込みリファレンス](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics) に記載されています。
 
 ## <a name="arm64-specific-intrinsics-listing"></a><a name="A"></a> ARM64 固有の組み込みリスト
 
@@ -351,11 +351,11 @@ void __iso_volatile_store8(volatile __int8 * Location, __int8 Value);
 
 #### <a name="return-value-load-intrinsics-only"></a>戻り値 (組み込みの読み込みのみ)
 
-*Location*によって指定されたメモリ位置の値。
+*Location* によって指定されたメモリ位置の値。
 
-#### <a name="remarks"></a>注釈
+#### <a name="remarks"></a>解説
 
-およびの組み込みを使用して、 `__iso_volatile_load8/16/32/64` `__iso_volatile_store8/16/32/64` コンパイラの最適化の対象になっていないメモリアクセスを明示的に実行できます。 コンパイラは、これらの操作の相対順序を削除、同期、または変更することはできません。 ただし、暗黙的なハードウェアメモリバリアは生成されません。 したがって、ハードウェアでも複数のスレッド間で観察可能なメモリ アクセスの順序が変更される場合があります。 より正確に言うと、これらの組み込みは、 **/volatile: iso**でコンパイルされる次の式と同じです。
+およびの組み込みを使用して、 `__iso_volatile_load8/16/32/64` `__iso_volatile_store8/16/32/64` コンパイラの最適化の対象になっていないメモリアクセスを明示的に実行できます。 コンパイラは、これらの操作の相対順序を削除、同期、または変更することはできません。 ただし、暗黙的なハードウェアメモリバリアは生成されません。 したがって、ハードウェアでも複数のスレッド間で観察可能なメモリ アクセスの順序が変更される場合があります。 より正確に言うと、これらの組み込みは、 **/volatile: iso** でコンパイルされる次の式と同じです。
 
 ```cpp
 int a = __iso_volatile_load32(p);    // equivalent to: int a = *(const volatile __int32*)p;
@@ -364,7 +364,7 @@ __iso_volatile_store32(p, a);        // equivalent to: *(volatile __int32*)p = a
 
 組み込みは、volatile 変数を格納する volatile ポインターを受け取ることに注意してください。 ただし、volatile ポインターを引数として使用するための要件や推奨事項はありません。 これらの操作のセマンティクスは、通常の非 volatile 型が使用される場合とまったく同じです。
 
-**/Volatile: iso**コマンドライン引数の詳細については、「 [/volatile (volatile キーワードの解釈)](../build/reference/volatile-volatile-keyword-interpretation.md)」を参照してください。
+**/Volatile: iso** コマンドライン引数の詳細については、「 [/volatile (volatile キーワードの解釈)](../build/reference/volatile-volatile-keyword-interpretation.md)」を参照してください。
 
 ## <a name="arm64-support-for-intrinsics-from-other-architectures"></a><a name="I"></a> ARM64 その他のアーキテクチャからの組み込みのサポート
 
@@ -423,13 +423,13 @@ __iso_volatile_store32(p, a);        // equivalent to: *(volatile __int32*)p = a
 |操作|8|16|32|64|128|P|
 |-|-------|--------|--------|--------|-------|-------|
 |追加|なし|なし|[完全]|[完全]|なし|なし|
-|And|[完全]|[完全]|[完全]|[完全]|なし|なし|
+|および|[完全]|[完全]|[完全]|[完全]|なし|なし|
 |CompareExchange|[完全]|[完全]|[完全]|[完全]|[完全]|[完全]|
 |Decrement|なし|[完全]|[完全]|[完全]|なし|なし|
 |Exchange|[完全]|[完全]|[完全]|[完全]|なし|[完全]|
 |ExchangeAdd|[完全]|[完全]|[完全]|[完全]|なし|なし|
 |Increment|なし|[完全]|[完全]|[完全]|なし|なし|
-|または|[完全]|[完全]|[完全]|[完全]|なし|なし|
+|Or|[完全]|[完全]|[完全]|[完全]|なし|なし|
 |Xor|[完全]|[完全]|[完全]|[完全]|なし|なし|
 
 キー:
@@ -614,7 +614,7 @@ __iso_volatile_store32(p, a);        // equivalent to: *(volatile __int32*)p = a
 
 [[トップに戻る](#top)]
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [コンパイラの組み込み](../intrinsics/compiler-intrinsics.md)\
 [ARM 組み込み](arm-intrinsics.md)\

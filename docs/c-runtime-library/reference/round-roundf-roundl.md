@@ -35,12 +35,12 @@ helpviewer_keywords:
 - round function
 - roundf function
 ms.assetid: 6be90877-193c-4b80-a32b-c3eca33f9c6f
-ms.openlocfilehash: 2e51eb375ab814119dcf34d85c7f5aff11559784
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: e677f372c87446c66e3404419220527a24de63ea
+ms.sourcegitcommit: 82a0d23b04d0776c00209d885689cbc5be36d3b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91499174"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "106099730"
 ---
 # <a name="round-roundf-roundl"></a>round、roundf、roundl
 
@@ -74,13 +74,13 @@ long double roundl(
 
 ## <a name="return-value"></a>戻り値
 
-**Round**関数は、最も近い整数を表す浮動小数点値を*x*に返します。 中間の値は、浮動小数点丸めモードの設定にかかわらず、ゼロから離れる方向に丸められます。 エラーの戻り値はありません。
+**Round** 関数は、最も近い整数を表す浮動小数点値を *x* に返します。 中間の値は、浮動小数点丸めモードの設定にかかわらず、ゼロから離れる方向に丸められます。 エラーの戻り値はありません。
 
 |入力|SEH 例外|Matherr 例外|
 |-----------|-------------------|-----------------------|
 |± **QNAN**、 **IND**|なし|**_DOMAIN**|
 
-## <a name="remarks"></a>注釈
+## <a name="remarks"></a>解説
 
 C++ ではオーバーロードが可能であるため、との値を受け取って返す **ラウンド** のオーバーロードを呼び出すことができ **`float`** **`long double`** ます。 C プログラムでは、この関数を呼び出すためにマクロを使用している場合を除き、 \<tgmath.h> **round** は常にを受け取り、を返し **`double`** ます。
 
@@ -93,7 +93,7 @@ C++ ではオーバーロードが可能であるため、との値を受け取�
 |ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**round**、 **roundf**、 **roundl**|\<math.h>|
-|**round** マクロ | \<tgmath.h> ||
+|**round** マクロ | \<tgmath.h> |
 
 互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 

@@ -36,12 +36,12 @@ helpviewer_keywords:
 - ceil function
 - ceilf function
 ms.assetid: f4e5acab-5c8f-4b10-9ae2-9561e6453718
-ms.openlocfilehash: 3079f52c79d6d888923025357bb21adc782aa5cd
-ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
+ms.openlocfilehash: 67c3f930208a89697ef4efe72630c047cf3796c4
+ms.sourcegitcommit: 82a0d23b04d0776c00209d885689cbc5be36d3b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89555244"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "106099613"
 ---
 # <a name="ceil-ceilf-ceill"></a>ceil、ceilf、ceill
 
@@ -75,7 +75,7 @@ long double ceill(
 
 ## <a name="return-value"></a>戻り値
 
-**Ceil**関数は、 *x*以上の最小の整数を表す浮動小数点値を返します。 エラーの戻り値はありません。
+**Ceil** 関数は、 *x* 以上の最小の整数を表す浮動小数点値を返します。 エラーの戻り値はありません。
 
 |入力|SEH 例外|Matherr 例外|
 |-----------|-------------------|-----------------------|
@@ -95,8 +95,8 @@ C++ ではオーバーロードが可能であるため、型または型を受�
 
 |ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
-|**ceil**、 **ceilf**、 **ceil**|\<math.h>|
-|**ceil** マクロ | \<tgmath.h> ||
+| **ceil**、 **ceilf**、 **ceil**| \<math.h> |
+| **ceil** マクロ | \<tgmath.h> |
 
 互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 

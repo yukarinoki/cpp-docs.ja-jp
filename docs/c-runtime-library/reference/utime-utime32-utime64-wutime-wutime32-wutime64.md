@@ -67,12 +67,12 @@ helpviewer_keywords:
 - tutime64 function
 - tutime32 function
 ms.assetid: 8d482d40-19b9-4591-bfee-5d7f601d1a9e
-ms.openlocfilehash: 7ec25f60c508464abf8232419f8867bc3f0a20fb
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: 82e8180b21a0de19134673d362989b4ca371dbc2
+ms.sourcegitcommit: 82a0d23b04d0776c00209d885689cbc5be36d3b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97299346"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "106099340"
 ---
 # <a name="_utime-_utime32-_utime64-_wutime-_wutime32-_wutime64"></a>_utime、_utime32、_utime64、_wutime、_wutime32、_wutime64
 
@@ -109,7 +109,7 @@ int _wutime64(
 
 ### <a name="parameters"></a>パラメーター
 
-*filename*<br/>
+*ファイル名*<br/>
 パスまたはファイル名を含む文字列へのポインター。
 
 *times*<br/>
@@ -136,7 +136,7 @@ int _wutime64(
 
 **_Utimbuf** 構造体は、ファイル変更日付を変更するために **_utime** によって使用されるファイルアクセスと変更時刻を格納します。 構造体には、 **time_t** 型の両方である次のフィールドがあります。
 
-| フィールド |   |
+| フィールド | 説明 |
 |-------|---|
 | **actime** | ファイルへのアクセス時刻 |
 | **modtime** | ファイルの変更時刻 |

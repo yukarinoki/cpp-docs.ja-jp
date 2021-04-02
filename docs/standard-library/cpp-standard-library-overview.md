@@ -8,25 +8,25 @@ helpviewer_keywords:
 - libraries, Standard C++
 - C++ Standard Library, headers
 ms.assetid: 7acb83a4-da73-4ad3-bc30-a71289db7f60
-ms.openlocfilehash: 25cc206c6990e3dbe75c0a3b703766ab0c0e34ce
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: ad17dbb7494d38958fc8864b482876ad1efe6cc8
+ms.sourcegitcommit: 82a0d23b04d0776c00209d885689cbc5be36d3b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97324762"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "106099691"
 ---
 # <a name="c-standard-library-overview"></a>C++ 標準ライブラリの概要
 
-すべての C++ ライブラリのエンティティは 1 つ以上の標準ヘッダーで宣言または定義されます。 この実装には C++ 標準では必要ない 2 つの追加ヘッダー、\<hash_map> と \<hash_set> が含まれています。 この実装がサポートするヘッダーの完全な一覧については、「[ヘッダー ファイル リファレンス](../standard-library/cpp-standard-library-header-files.md)」をご覧ください。
+すべての C++ ライブラリのエンティティは 1 つ以上の標準ヘッダーで宣言または定義されます。 この実装には C++ 標準では必要ない 2 つの追加ヘッダー、`<hash_map>` と `<hash_set>` が含まれています。 この実装がサポートするヘッダーの完全な一覧については、「[ヘッダー ファイル リファレンス](../standard-library/cpp-standard-library-header-files.md)」をご覧ください。
 
 C++ ライブラリのフリースタンディング実装では、これらのヘッダーの一部のみが提供されます。
 
-[\<cstdarg>](../standard-library/cstdarg.md)\
-[\<cstddef>](../standard-library/cstddef.md)\
-[\<cstdlib>](../standard-library/cstdlib.md) (少なくとも関数、 `abort` `atexit` 、およびの宣言 `exit` )
-[\<exception>](../standard-library/exception.md)\
-[\<limits>](../standard-library/limits.md)\
-[\<new>](../standard-library/new.md)
+[`<cstdarg>`](../standard-library/cstdarg.md)\
+[`<cstddef>`](../standard-library/cstddef.md)\
+[`<cstdlib>`](../standard-library/cstdlib.md) (少なくとも関数、 `abort` `atexit` 、およびの宣言 `exit` )
+[`<exception>`](../standard-library/exception.md)\
+[`<limits>`](../standard-library/limits.md)\
+[`<new>`](../standard-library/new.md)
 
 C++ のライブラリのヘッダーには 2 つの広範な再分割があります。
 

@@ -86,12 +86,12 @@ helpviewer_keywords:
 - std::vector [C++], shrink_to_fit
 - std::vector [C++], size
 - std::vector [C++], swap
-ms.openlocfilehash: c1132b0b8f975cbe0185720c46316446db0506d5
-ms.sourcegitcommit: c0c9cdae79f19655e809a4979227c51bb19cff63
+ms.openlocfilehash: bcc6049c5b1040ea2bf3772a851ed26d40a4c608
+ms.sourcegitcommit: 82a0d23b04d0776c00209d885689cbc5be36d3b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102236778"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "106099288"
 ---
 # <a name="vector-class"></a>`vector` クラス
 
@@ -120,7 +120,7 @@ class vector
 
 [ `vector<bool>` クラス](../standard-library/vector-bool-class.md)は、型の要素のクラステンプレートベクターを完全に特殊化したものです **`bool`** 。 これには、特殊化によって使用される基になる型のアロケーターがあります。
 
-[ `vector<bool>` Reference クラス](../standard-library/vector-bool-class.md#reference_class)は、オブジェクトが vector オブジェクト内の要素 (単一ビット) への参照を提供できる、入れ子になったクラスです \<bool> 。
+[ `vector<bool>` Reference クラス](../standard-library/vector-bool-class.md#reference_class)は、オブジェクト内の要素 (単一ビット) への参照をオブジェクトが提供できる、入れ子になったクラスです `vector<bool>` 。
 
 ## <a name="members"></a>メンバー
 

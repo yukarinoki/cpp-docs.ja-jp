@@ -36,12 +36,12 @@ helpviewer_keywords:
 - calculating floors of values
 - floorl function
 ms.assetid: e9955f70-d659-414f-8050-132e13c8ff36
-ms.openlocfilehash: 6af047d3da891270ab6a596dfc3ebef0941a91cf
-ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
+ms.openlocfilehash: f2fa789d780b624ab0e680afa0631793d7eed162
+ms.sourcegitcommit: 82a0d23b04d0776c00209d885689cbc5be36d3b9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89556737"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "106099557"
 ---
 # <a name="floor-floorf-floorl"></a>floor、floorf、floorl
 
@@ -75,7 +75,7 @@ long double floorl(
 
 ## <a name="return-value"></a>戻り値
 
-**Floor**関数は、 *x*以下の最大の整数を表す浮動小数点値を返します。 エラーの戻り値はありません。
+**Floor** 関数は、 *x* 以下の最大の整数を表す浮動小数点値を返します。 エラーの戻り値はありません。
 
 |入力|SEH 例外|Matherr 例外|
 |-----------|-------------------|-----------------------|
@@ -91,12 +91,12 @@ C++ ではオーバーロードが可能であるため、との値を受け取�
 
 既定では、この関数のグローバル状態はアプリケーションにスコープが設定されています。 これを変更するには、「 [CRT でのグローバル状態](../global-state.md)」を参照してください。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-|関数|必須ヘッダー|
+|機能|必須ヘッダー|
 |--------------|---------------------|
 |**floor**、 **floorf**、 **floorl**|\<math.h>|
-|**floor** マクロ | \<tgmath.h> ||
+|**floor** マクロ | \<tgmath.h> |
 
 互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
