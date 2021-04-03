@@ -51,12 +51,12 @@ helpviewer_keywords:
 - C1505
 - C1901
 ms.assetid: 6c8df109-7594-48ed-987a-97d9fe2b04af
-ms.openlocfilehash: 93b1e9d3998a3ad29d45e2b1c197807bf61e4176
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: 45a1e5f1a0ab57048d2a40da0f976b5ff7c8d653
+ms.sourcegitcommit: be9a1af0b9d3f1d6c2987d8744392170b8dccab0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97262842"
+ms.lasthandoff: 04/02/2021
+ms.locfileid: "106232336"
 ---
 # <a name="compiler-fatal-errors-c999-through-c1999"></a>コンパイラの致命的なエラー (C999 - C1999)
 
@@ -134,7 +134,7 @@ ms.locfileid: "97262842"
 |[致命的なエラー C1087](fatal-error-c1087.md)|*type* ファイルの位置がわかりません: '*file*': *message*|
 |[致命的なエラー C1088](fatal-error-c1088.md)|*type* ファイルのバッファーを書き込むことができません: '*file*': *message*|
 |[致命的なエラー C1089](fatal-error-c1089.md)|*type* ファイルを切り詰められません: '*file*': *message*|
-|致命的なエラー C1090|PDB API の呼び出しに失敗しました。エラー コード '*code*': '*message*'|
+|[致命的なエラー C1090](fatal-error-c1090.md)|PDB API の呼び出しに失敗しました。エラー コード '*code*': '*message*'|
 |[致命的なエラー C1091](fatal-error-c1091.md)|コンパイラの制限: 文字列が長さ *number* バイトを超えています。|
 |[致命的なエラー C1092](../../error-messages/compiler-errors-1/fatal-error-c1092.md)|エディット コンティニュはデータ型への変更をサポートしません。ビルドが必要です。|
 |[致命的なエラー C1093](../../error-messages/compiler-errors-1/fatal-error-c1093.md)|API の呼び出し '*function*' は '*HRESULT*' に失敗しました: '*description*'|
@@ -152,7 +152,7 @@ ms.locfileid: "97262842"
 |[致命的なエラー C1109](fatal-error-c1109.md)|'*symbol*' を DLL '*file*' で見つけることができません。|
 |致命的なエラー C1110|入れ子のテンプレート定義やジェネリック定義が多すぎます。|
 |致命的なエラー C1111|テンプレート パラメーターやジェネリック パラメーターが多すぎます。|
-|致命的なエラー C1112|コンパイラの制限: `'number`' マクロの引数が多すぎます。制限は *number* です。|
+|致命的なエラー C1112|コンパイラの制限: '*number*' マクロの引数が多すぎます。許可されているのは *数字* のみです|
 |[致命的なエラー C1113](../../error-messages/compiler-errors-1/fatal-error-c1113.md)|#using が '*file*' で失敗しました。|
 |致命的なエラー C1114|'*file*': WinRT はマネージド アセンブリの #using をサポートしていません。|
 |[致命的なエラー C1120](../../error-messages/compiler-errors-1/fatal-error-c1120.md)|'*function*' の GetProcAddress の呼び出しに失敗しました。|
