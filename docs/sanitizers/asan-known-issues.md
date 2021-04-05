@@ -4,12 +4,12 @@ description: AddressSanitizer for Microsoft C/c + + の既知の問題に関す�
 ms.date: 03/02/2021
 helpviewer_keywords:
 - AddressSanitizer known issues
-ms.openlocfilehash: 7db8b06a96eababbd6a48e337cff7155f248fb34
-ms.sourcegitcommit: 6ed44d9c3fb32e965e363b9c69686739a90a2117
+ms.openlocfilehash: 0bd8b8cc05265930b8ade514c4d1f8ea162bb304
+ms.sourcegitcommit: dc77cf3b5b644d8e2adf595540b98194ab95c6e1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/08/2021
-ms.locfileid: "102471035"
+ms.lasthandoff: 04/05/2021
+ms.locfileid: "106377230"
 ---
 # <a name="addresssanitizer-known-issues"></a>AddressSanitizer の既知の問題
 
@@ -67,6 +67,12 @@ AddressSanitizer ランタイムは、実行中に OS に対してメモリを�
 
 *`clang_rt.asan*.dll`* ランタイムファイルは、のコンパイラの横にインストールされ *`%VSINSTALLDIR%\VC\Tools\MSVC\<version>\bin\<host-arch>\<target-arch>\`* ます。 これらの場所は、デバッグセッションのパスにあり、Visual Studio の開発者コマンドプロンプトに表示されます。 これらのファイルは *`C:\Windows\System32`* 、またはには配置されません *`C:\Windows\SysWOW64`* 。
 
+## <a name="custom-property-sheet-support"></a>カスタムプロパティシートのサポート
+
+Visual Studio IDE の [プロパティマネージャー] ウィンドウを使用すると、カスタム *`.props`* ファイルをプロジェクトに追加できます。 **Enable Address サニタイザー** プロパティ () が表示されている場合でも、 `<EnableASAN>` ビルドでは受け入れられません。 これは、カスタムファイルがの後に追加されるためです *`.props`* 。これは、値を使用して *`Microsoft.cpp.props`* `<EnableASAN>` 他のプロパティを設定します。
+
+回避策として、 *`Directory.Build.props`* プロジェクトのルートにファイルを作成して、プロパティを定義でき `<EnableASAN>` ます。 詳細については、「 [C++ ビルドをカスタマイズ](/visualstudio/msbuild/customize-your-build#customize-c-builds)する」を参照してください。
+
 ## <a name="see-also"></a>関連項目
 
 [AddressSanitizer の概要](./asan.md)\
@@ -75,4 +81,4 @@ AddressSanitizer ランタイムは、実行中に OS に対してメモリを�
 [AddressSanitizer shadow bytes](./asan-shadow-bytes.md)\
 [AddressSanitizer クラウドまたは分散テスト](./asan-offline-crash-dumps.md)\
 [AddressSanitizer デバッガーの統合](./asan-debugger-integration.md)\
-[AddressSanitizer エラーの例](./asan-error-examples.md)
+[AddressSanitizer のエラー例](./asan-error-examples.md)

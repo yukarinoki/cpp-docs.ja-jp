@@ -14,12 +14,12 @@ helpviewer_keywords:
 - Managed Extensions for C++, compiling
 - common language runtime, /clr compiler option
 ms.assetid: fec5a8c0-40ec-484c-a213-8dec918c1d6c
-ms.openlocfilehash: 9d27d9fb6226f84c4ea67a8f9387a595ba65468b
-ms.sourcegitcommit: 9c801a43ee0d4d84956b03fd387716c818705e0d
+ms.openlocfilehash: 1e0e0ac42316f7d76ea478d9666018e5855ceec6
+ms.sourcegitcommit: dc77cf3b5b644d8e2adf595540b98194ab95c6e1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92907598"
+ms.lasthandoff: 04/05/2021
+ms.locfileid: "106377256"
 ---
 # <a name="clr-common-language-runtime-compilation"></a>`/clr` (共通言語ランタイムのコンパイル)
 
@@ -27,20 +27,24 @@ ms.locfileid: "92907598"
 
 ## <a name="syntax"></a>構文
 
-> **`/clr`**\[**`:`**_オプション_ ]
+> **`/clr`**\[**`:`**_オプション_]
 
 ## <a name="arguments"></a>引数
 
-*オプション*\
+*options*\
 次のコンマ区切りの引数の1つ以上。
 
 - なし
 
    オプションを使用しない場合、 **`/clr`** コンポーネントのメタデータが作成されます。 このメタデータは、他の CLR アプリケーションで使用でき、コンポーネントが他の CLR コンポーネントのメタデータの型とデータを使用できるようにします。 「[混在 (ネイティブおよびマネージド) アセンブリ](../../dotnet/mixed-native-and-managed-assemblies.md)」を参照してください。
 
-- **`NetCore`**
+::: moniker range="msvc-160"
 
-   **`/clr:NetCore`** 最新のクロスプラットフォーム .NET framework (.NET Core とも呼ばれます) を使用して、コンポーネントのメタデータとコードを作成します。 メタデータは、他の .NET Core アプリケーションで使用できます。 また、オプションを使用すると、コンポーネントは、他の .NET Core コンポーネントのメタデータの型とデータを使用できます。
+- **`netcore`**
+
+   Visual Studio 2019 バージョン16.4 以降では、 **`/clr:netcore`** 最新のクロスプラットフォーム .net framework (.Net Core とも呼ばれます) を使用して、コンポーネントのメタデータとコードを作成します。 メタデータは、他の .NET Core アプリケーションで使用できます。 また、オプションを使用すると、コンポーネントは、他の .NET Core コンポーネントのメタデータの型とデータを使用できます。
+
+::: moniker-end
 
 - **`nostdlib`**
 
@@ -112,20 +116,20 @@ class {} x;
 
 1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、[Visual Studio での C++ コンパイラとビルド プロパティの設定](../working-with-project-properties.md)に関するページを参照してください。
 
-1. [ **構成** ] ドロップダウンを [ **すべての構成** ] に設定し、[ **プラットフォーム** ] ドロップダウンを [ **すべてのプラットフォーム** ] に設定します。
+1. [ **構成** ] ドロップダウンを [ **すべての構成**] に設定し、[ **プラットフォーム** ] ドロップダウンを [ **すべてのプラットフォーム**] に設定します。
 
-1. [ **構成プロパティ** ] [  >  **C/c + +**  >  **全般** ] ページを選択します。
+1. [**構成プロパティ**] [  >  **C/c + +**  >  **全般**] ページを選択します。
 
 1. **共通言語ランタイムサポート** プロパティを変更します。 **[OK]** を選択して変更を保存します。
 
 > [!NOTE]
-> Visual Studio IDE では、[ **`/clr`** **Configuration Properties**  >  プロパティページ] ダイアログボックスの [構成プロパティ] [ **C/c + +**  >  **全般** ] ページで、コンパイラオプションを個別に設定できます。 ただし、プロジェクトを作成するには CLR テンプレートを使用することをお勧めします。 CLR コンポーネントを正常に作成するために必要なすべてのプロパティを設定します。 これらのプロパティを設定するもう1つの方法は、[プロパティページ] ダイアログボックスの [ **構成プロパティ** ] の [詳細設定] ページで、[ **共通言語ランタイムサポート** ] プロパティを使用することです  >  **Advanced** 。 このプロパティは、その他のすべての CLR 関連ツールオプションを一度に設定します。
+> Visual Studio IDE では、[ **`/clr`**   >  プロパティページ] ダイアログボックスの [構成プロパティ] [**C/c + +**  >  **全般**] ページで、コンパイラオプションを個別に設定できます。 ただし、プロジェクトを作成するには CLR テンプレートを使用することをお勧めします。 CLR コンポーネントを正常に作成するために必要なすべてのプロパティを設定します。 これらのプロパティを設定するもう1つの方法は、[プロパティページ] ダイアログボックスの [**構成プロパティ**] の [詳細設定] ページで、[**共通言語ランタイムサポート**] プロパティを使用することです  >   。 このプロパティは、その他のすべての CLR 関連ツールオプションを一度に設定します。
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>このコンパイラ オプションをコードから設定するには
 
-- 「<xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.CompileAsManaged>」を参照してください。
+- 以下を参照してください。<xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.CompileAsManaged>
 
 ## <a name="see-also"></a>関連項目
 
-[MSVC コンパイラオプション](compiler-options.md)\
-[MSVC Compiler Command-Line 構文](compiler-command-line-syntax.md)
+[MSVC コンパイラ オプション](compiler-options.md)\
+[MSVC コンパイラ コマンド ラインの構文](compiler-command-line-syntax.md)
