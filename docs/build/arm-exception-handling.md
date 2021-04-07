@@ -3,12 +3,12 @@ description: '詳細情報: ARM 例外処理'
 title: ARM 例外処理
 ms.date: 07/11/2018
 ms.assetid: fe0e615f-c033-4ad5-97f4-ff96af45b201
-ms.openlocfilehash: 74c915eeee90e0689881621b562f143b7d313941
-ms.sourcegitcommit: 6183207b11575d7b44ebd7c18918e916a0d8c63d
+ms.openlocfilehash: 1b71a100063849e86a9b3fce2745af7221a6b315
+ms.sourcegitcommit: dc77cf3b5b644d8e2adf595540b98194ab95c6e1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "97951497"
+ms.lasthandoff: 04/05/2021
+ms.locfileid: "106377282"
 ---
 # <a name="arm-exception-handling"></a>ARM 例外処理
 
@@ -194,29 +194,32 @@ ARM のすべての `.pdata` レコードの長さは 8 バイトです。 一�
 `.xdata` レコードは、最初の 8 バイトをフェッチしてフル サイズのレコード (後続の可変サイズの例外の長さは含まれない) を計算できるように設計されています。 次のコード スニペットはレコードのサイズを計算します。
 
 ```cpp
-ULONG Comput`.xdata`Size(PULONG `.xdata`)
+ULONG ComputeXdataSize(PULONG Xdata)
 {
-    ULONG EpilogueScopes;
     ULONG Size;
+    ULONG EpilogueScopes;
     ULONG UnwindWords;
 
-    if (`.xdata`[0] >> 23) != 0) {
+    if ((Xdata[0] >> 23) != 0) {
         Size = 4;
-        EpilogueScopes = `.xdata`[0] >> 23) & 0x1f;
-        UnwindWords = `.xdata`[0] >> 28) & 0x0f;
+        EpilogueScopes = (Xdata[0] >> 23) & 0x1f;
+        UnwindWords = (Xdata[0] >> 28) & 0x0f;
     } else {
         Size = 8;
-        EpilogueScopes =`.xdata`[1] & 0xffff;
-        UnwindWords = `.xdata`[1] >> 16) & 0xff;
+        EpilogueScopes = Xdata[1] & 0xffff;
+        UnwindWords = (Xdata[1] >> 16) & 0xff;
     }
 
-    if (!`.xdata`[0] & (1 << 21))) {
+    if (!(Xdata[0] & (1 << 21))) {
         Size += 4 * EpilogueScopes;
     }
+
     Size += 4 * UnwindWords;
-    if `.xdata`[0] & (1 << 20)) {
-        Size += 4;
+
+    if (Xdata[0] & (1 << 20)) {
+        Size += 4;  // Exception handler RVA
     }
+
     return Size;
 }
 ```

@@ -5,12 +5,12 @@ ms.date: 09/11/2020
 helpviewer_keywords:
 - Install preview Windows SDK
 ms.assetid: 45138d70-719d-42dc-90d7-1d0ca31a2f54
-ms.openlocfilehash: 9310b0dbb4e436245de820622ec9dd0f52292871
-ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
+ms.openlocfilehash: 84e3e17c7d65fc129e789634e6cf0b442565e26b
+ms.sourcegitcommit: bf6d8a220f6392f1f19c0c0605d1467d0221ef6c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "92924421"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105551749"
 ---
 # <a name="install-c11-and-c17-support-in-visual-studio"></a>Visual Studio に C11 および C17 サポートをインストールする
 
@@ -24,11 +24,11 @@ C11 および C17 標準のサポートには、Visual Studio 2019 バージョ�
 
 C11 および C17 標準のサポートは、Visual Studio 2019 バージョン 16.8 以降で使用できます。 サポートには、準拠するプリプロセッサ ([`/Zc:preprocessor`](../build/reference/zc-preprocessor.md)) で正常に動作するために、更新されたユニバーサル C ランタイム (UCRT) と最新の Windows SDK 更新プログラムが必要です。
 
-Windows SDK のリリースは、Windows OS のリリースに対応しています。 これらの変更が加えられた Windows リリースがないため、 *Insider Preview Windows SDK* が必要になります。 これは、Windows Insider によって現在 " *フライト化* " (テスト) されている Windows ビルドに対応する Windows SDK のプレビュー版です。 Insider Preview Windows 10 SDK をインストールした後は、最新の Windows SDK を使用するように Visual Studio プロジェクトを構成すると、Insider Preview が使用されます。
+Windows SDK のリリースは、Windows OS のリリースに対応しています。 これらの変更が加えられた Windows リリースがないため、*Insider Preview Windows SDK* が必要になります。 これは、Windows Insider によって現在 "*フライト化*" (テスト) されている Windows ビルドに対応する Windows SDK のプレビュー版です。 Insider Preview Windows 10 SDK をインストールした後は、最新の Windows SDK を使用するように Visual Studio プロジェクトを構成すると、Insider Preview が使用されます。
 
 ## <a name="prerequisites"></a>前提条件
 
-- コンピューターに Visual Studio 2019 バージョン 16.8 Preview 3 以降がインストールされ、実行されていること。 インストールには、C++ ワークロードによるデスクトップ開発を含めます。 最新のプレビューは、[Visual Studio Preview](https://visualstudio.microsoft.com/vs/preview/) ページからダウンロードできます。 Visual Studio がまだインストールされていない場合、インストール手順については、[Visual studio に C++ サポートのインストール](../build/vscpp-step-0-installation.md)に関する記事を参照してください。
+- コンピューターに Visual Studio 2019 バージョン 16.8 以降がインストールされ、実行されていること。 インストールには、C++ ワークロードによるデスクトップ開発を含めます。 最新のプレビューは、[Visual Studio Preview](https://visualstudio.microsoft.com/vs/preview/) ページからダウンロードできます。 Visual Studio がまだインストールされていない場合、インストール手順については、[Visual studio に C++ サポートのインストール](../build/vscpp-step-0-installation.md)に関する記事を参照してください。
 
 ## <a name="step-1-sign-in-by-using-an-insider-microsoft-account"></a>手順 1: Insider Microsoft アカウントを使用してサインインする
 
@@ -76,13 +76,13 @@ Visual Studio で、新規または既存の C プロジェクトを開き、プ
 
 Insider Preview Windows 10 SDK を使用するようにプロジェクトを設定します。 **[構成プロパティ]**  >  **[全般]** ページで、 **[Windows SDK バージョン]** プロパティを **10.0 (最新のインストール済みバージョン)** に設定するか、インストールした特定のプレビュー バージョンに設定します。
 
-新しいオプションも表示されます: **C 言語標準** 。 このプロパティを **[ISO C11 Standard (`/std:c11`)]\(ISO C11 標準 (`/std:c11`)\)** または **[ISO C17 (2018) Standard (`/std:c17`)]\(ISO C17 (2018) 標準 (`/std:c17`)\)** に設定します。  
+新しいオプションも表示されます:**C 言語標準**。 このプロパティを **[ISO C11 Standard (`/std:c11`)]\(ISO C11 標準 (`/std:c11`)\)** または **[ISO C17 (2018) Standard (`/std:c17`)]\(ISO C17 (2018) 標準 (`/std:c17`)\)** に設定します。  
 
 ![[構成プロパティ] の [全般] ページの [プロパティ ページ] ダイアログで、[C 言語の標準] プロパティのドロップダウンで ISO C 17 が選択されていることを示すスクリーンショット](media/c11-9-project-property-page-c-language-standard.png)
 
 言語が C++ の場合、C++ 言語標準が使用されます。 ファイル拡張子が *`.cpp`* の場合の既定値です。 言語が C の場合、C 言語の標準バージョンが使用されます。ファイル拡張子が *`.c`* の場合の既定値です。 C11 または C17 を使用してビルドするには、ソース コードを *`.c`* ファイルに配置するか、C としてコンパイルするようにコードを設定します。このプロパティは、プロジェクトの **[構成プロパティ]**  >  **[C/C++]**  >  **[詳細]** ページで設定できます。 **[コンパイル言語の選択]** プロパティを **[C コードとしてコンパイル (/TC)]** に設定します。
 
-これで、Visual Studio 2019 バージョン 16.8 Preview 3 で C11 と C17 のコードをビルドするために必要なすべての設定が完了しました。
+これで、Visual Studio で C11 と C17 のコードをビルドするために必要なすべての設定が完了しました。
 
 ## <a name="see-also"></a>関連項目
 

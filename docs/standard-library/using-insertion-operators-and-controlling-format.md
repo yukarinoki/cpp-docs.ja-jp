@@ -5,16 +5,16 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - insertion operators
 ms.assetid: cdefe986-6548-4cd1-8a67-b431d7d36a1c
-ms.openlocfilehash: 0ed0e850cb578b66ea9131d135891cbbd26da4b7
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: 1e5098beb7ff3c83439780c2dc3f908f7fec946a
+ms.sourcegitcommit: a89eac9acdbd54a181e3bd5d5bc71a3ef3c1abca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97153565"
+ms.lasthandoff: 04/06/2021
+ms.locfileid: "106506001"
 ---
 # <a name="using-insertion-operators-and-controlling-format"></a>挿入演算子と制御形式の使用
 
-このトピックでは、独自のクラスに対して書式を制御する方法と挿入演算子を作成する方法について説明します。 **<<** すべての標準 C++ データ型のあらかじめプログラミングである挿入 () 演算子は、出力ストリームオブジェクトにバイトを送信します。 挿入演算子は定義済み "マニピュレーター" と共に機能します。マニピュレーターとは、整数引数の既定の書式を変更する要素です。
+このトピックでは、独自のクラスに対して書式を制御する方法と挿入演算子を作成する方法について説明します。 **`<<`** すべての標準 C++ データ型のあらかじめプログラミングである挿入 () 演算子は、出力ストリームオブジェクトにバイトを送信します。 挿入演算子は定義済み "マニピュレーター" と共に機能します。マニピュレーターとは、整数引数の既定の書式を変更する要素です。
 
 次のオプションを使用して、書式を制御できます。
 
@@ -73,7 +73,7 @@ for (int i = 0; i <4; i++)
 ******1.23
 *****35.36
 *****653.7
-**_4358.24
+***4358.24
 ```
 
 同じ行のデータ要素に幅を指定するには、`setw` マニピュレーターを使用します。
@@ -88,14 +88,14 @@ using namespace std;
 int main( )
 {
    double values[] = { 1.23, 35.36, 653.7, 4358.24 };
-   char _names[] = { "Zoot", "Jimmy", "Al", "Stan" };
+   char *names[] = { "Zoot", "Jimmy", "Al", "Stan" };
    for( int i = 0; i < 4; i++ )
       cout << setw( 7 )  << names[i]
            << setw( 10 ) << values[i] << endl;
 }
 ```
 
-`width`メンバー関数はで宣言されて \<iostream> います。 `setw`または引数を伴う他のマニピュレーターを使用する場合は、を含める必要があり \<iomanip> ます。 出力では、文字列は 6 桁の幅のフィールドに、整数は 10 桁の幅のフィールドに出力されます。
+`width`メンバー関数はで宣言されて `<iostream>` います。 `setw`または引数を伴う他のマニピュレーターを使用する場合は、を含める必要があり `<iomanip>` ます。 出力では、文字列は 6 桁の幅のフィールドに、整数は 10 桁の幅のフィールドに出力されます。
 
 ```Output
    Zoot      1.23
@@ -127,11 +127,11 @@ Al         653.7
 Stan     4358.24
 ```
 
-[setiosflags](../standard-library/iomanip-functions.md#setiosflags) マニピュレーターと `left` 列挙子を使用して、left-align フラグを設定します。 この列挙子は、[ios](../standard-library/basic-ios-class.md) クラス内で定義されるため、その参照には、**ios::** プレフィックスをインクルードする必要があります。 [resetiosflags](../standard-library/iomanip-functions.md#resetiosflags) マニピュレーターは、left-align フラグをオフにします。 ととは異なり `width` `setw` 、との効果 `setiosflags` `resetiosflags` は永続的です。
+左揃えのフラグは、マニピュレーターと列挙子を使用して設定し [`setiosflags`](../standard-library/iomanip-functions.md#setiosflags) `left` ます。 この列挙子はクラスで定義されているので、 [`ios`](../standard-library/basic-ios-class.md) その参照にプレフィックスを含める必要があり **`ios::`** ます。 [`resetiosflags`](../standard-library/iomanip-functions.md#resetiosflags)マニピュレーターは左揃えのフラグをオフにします。 ととは異なり `width` `setw` 、との効果 `setiosflags` `resetiosflags` は永続的です。
 
 ## <a name="precision"></a><a name="vclrfprecisionanchor5"></a> 精度
 
-浮動小数点の精度の既定値は、6 桁です。 たとえば、3466.9768 という数値は 3466.98 と出力されます。 この値を出力する方法を変更するには、[setprecision](../standard-library/iomanip-functions.md#setprecision) マニピュレーターを使用します。 このマニピュレーターには [fixed](../standard-library/ios-functions.md#fixed) と [scientific](../standard-library/ios-functions.md#scientific) の 2 つのフラグがあります。 [fixed](../standard-library/ios-functions.md#fixed) が設定されている場合、数値は、3466.976800 と出力されます。 `scientific`が設定されている場合は、3.4669773 + 003 として出力されます。
+浮動小数点の精度の既定値は、6 桁です。 たとえば、3466.9768 という数値は 3466.98 と出力されます。 この値の印刷方法を変更するには、マニピュレーターを使用し [`setprecision`](../standard-library/iomanip-functions.md#setprecision) ます。 マニピュレーターには、との2つのフラグがあり [`fixed`](../standard-library/ios-functions.md#fixed) [`scientific`](../standard-library/ios-functions.md#scientific) ます。 [`fixed`](../standard-library/ios-functions.md#fixed)が設定されている場合、数値は3466.976800 として出力されます。 `scientific`が設定されている場合は、3.4669773 + 003 として出力されます。
 
 1 [つの有意](#vclrfalignmentanchor4) な桁と共に表示される浮動小数点数を表示するには、次のようにループを置き換え **`for`** ます。
 
@@ -184,11 +184,11 @@ Stan    4.4e+03
 
 ## <a name="radix"></a><a name="vclrfradixanchor6"></a> ベース
 
-`dec`、 `oct` 、およびマニピュレーターは、 `hex` 入力と出力の既定の基数を設定します。 たとえば、マニピュレーターを出力ストリームに挿入すると、 `hex` オブジェクトは整数の内部データ表現を16進数の出力形式に正しく変換します。 数値は、[uppercase](../standard-library/ios-functions.md#uppercase) フラグがオフの場合 (既定)、a から f 桁が小文字で表示されます。それ以外の場合は、大文字で表示されます。 既定の基数は `dec` (decimal) です。
+`dec`、 `oct` 、およびマニピュレーターは、 `hex` 入力と出力の既定の基数を設定します。 たとえば、マニピュレーターを出力ストリームに挿入すると、 `hex` オブジェクトは整数の内部データ表現を16進数の出力形式に正しく変換します。 数値は、フラグがクリア (既定値) の場合、a ~ f の数字で小文字で表示されます [`uppercase`](../standard-library/ios-functions.md#uppercase) 。それ以外の場合は、大文字で表示されます。 既定の基数は `dec` (decimal) です。
 
 ## <a name="quoted-strings-c14"></a>引用符で囲まれた文字列 (C++14)
 
-ストリームに文字列を挿入するときに、stringstream::str() メンバー関数を呼び出すことで、同じ文字列を簡単に取得できます。 ただし、抽出演算子を使用して、後でストリームを新しい文字列に挿入する場合、>> 演算子は、既定では最初の空白文字に遭遇すると停止するため、予期しない結果が生じる可能性があります。
+ストリームに文字列を挿入すると、メンバー関数を呼び出すことにより、同じ文字列を簡単に取得でき `stringstream::str()` ます。 ただし、抽出演算子を使用して後でストリームを新しい文字列に挿入する場合、 `>>` 既定では最初の空白文字が見つかったときに演算子が停止するため、予期しない結果が発生することがあります。
 
 ```cpp
 std::stringstream ss;
@@ -202,13 +202,13 @@ std::cout << inserted;     //  This is a sentence.
 std::cout << extracted;    //  This
 ```
 
-この動作は手動で克服できますが、文字列のラウンド トリップをより簡単に行うために、C++14 では、\<iomanip> に `std::quoted` ストリーム マニピュレーターが追加されます。 `quoted()` は、挿入時に文字列を区切り記号 (既定では二重引用符 (")) で囲み、抽出時に終わりの区切り記号までのすべての文字を抽出するストリームを操作します。 埋め込まれた引用符は、エスケープ文字 (既定では '\\\\') でエスケープされます。
+この動作は手動で克服できますが、文字列のラウンド トリップをより簡単に行うために、C++14 では、`<iomanip>` に `std::quoted` ストリーム マニピュレーターが追加されます。 `quoted()` は、挿入時に文字列を区切り記号 (既定では二重引用符 (")) で囲み、抽出時に終わりの区切り記号までのすべての文字を抽出するストリームを操作します。 埋め込まれた引用符は、エスケープ文字 (既定では '\\\\') でエスケープされます。
 
-区切り記号はストリームオブジェクト内にのみ存在します。抽出された文字列には存在しませんが、 [basic_stringstream:: str](../standard-library/basic-stringstream-class.md#str)によって返される文字列に含まれています。
+区切り記号はストリームオブジェクト内にのみ存在します。抽出された文字列には存在しませんが、によって返される文字列に含まれてい [`basic_stringstream::str`](../standard-library/basic-stringstream-class.md#str) ます。
 
-挿入演算子と抽出演算子の空白の処理は、コード内での文字列の表記方法に依存しません。そのため、入力文字列が未加工の文字列リテラルであるか、標準の文字列であるかにかかわらず、quoted 演算子は便利です。 埋め込みの引用符、改行、タブなどが含まれる入力文字列は、書式にかかわらず、quoted() マニピュレーターで保持されます。
+挿入演算子と抽出演算子の空白の処理は、コード内での文字列の表記方法に依存しません。そのため、入力文字列が未加工の文字列リテラルであるか、標準の文字列であるかにかかわらず、quoted 演算子は便利です。 入力文字列は、その形式にかかわらず、引用符、改行、タブなどを埋め込むことができ、これらすべてがマニピュレーターによって保持され `quoted()` ます。
 
-詳細および完全なコード例については、「 [引用符付き](../standard-library/iomanip-functions.md#quoted)」を参照してください。
+詳細および完全なコード例については、「」を参照してください [`quoted`](../standard-library/iomanip-functions.md#quoted) 。
 
 ## <a name="see-also"></a>関連項目
 

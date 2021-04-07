@@ -3,12 +3,12 @@ title: vcpkg を使用してライブラリを管理する
 description: Windows、macOS、Linux 上で vcpkg を使用してライブラリを管理する方法について説明します。
 ms.date: 12/11/2020
 ms.technology: cpp-ide
-ms.openlocfilehash: 88f8bc1cff7b4b04f5e38b5018676e313383733f
-ms.sourcegitcommit: 2b2c3fa9244e31db35ea33554dea0efcab490f3c
+ms.openlocfilehash: 5e5fc0e9cb1616155bfe8268f2c55afcee4c4a94
+ms.sourcegitcommit: 82a0d23b04d0776c00209d885689cbc5be36d3b9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/18/2020
-ms.locfileid: "97684122"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "106099249"
 ---
 # <a name="manage-libraries-with-vcpkg"></a>vcpkg を使用してライブラリを管理する
 
@@ -325,6 +325,6 @@ If you are sure you want to rebuild the above packages, run this command with th
 [vcpkg をインストールする](install-vcpkg.md)\
 [vcpkg を統合する](integrate-vcpkg.md)\
 [vcpkg コマンドライン リファレンス](vcpkg-command-line-reference.md)\
-[クイック スタート](https://github.com/microsoft/vcpkg/blob/master/docs/index.md)\
+[クイック スタート](https://github.com/microsoft/vcpkg/blob/master/docs/README.md)\
 [よく寄せられる質問](https://github.com/microsoft/vcpkg/blob/master/docs/about/faq.md)\
 [パッケージのインストールと使用の例: SQLite](https://github.com/microsoft/vcpkg/blob/master/docs/examples/installing-and-using-packages.md)

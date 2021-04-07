@@ -4,12 +4,12 @@ description: Windows、macOS、Linux 上で vcpkg のコマンドライン オ�
 ms.date: 12/17/2020
 ms.topic: reference
 ms.technology: cpp-ide
-ms.openlocfilehash: d60ebf983fea2eb41430f05b8c12e4a4a6fe370b
-ms.sourcegitcommit: 2b2c3fa9244e31db35ea33554dea0efcab490f3c
+ms.openlocfilehash: 22210f3ee80050890d0b71fcc26461372e77e11e
+ms.sourcegitcommit: 82a0d23b04d0776c00209d885689cbc5be36d3b9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/18/2020
-ms.locfileid: "97684115"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "106099626"
 ---
 # <a name="vcpkg-command-line-reference"></a>vcpkg コマンドライン リファレンス
 
@@ -17,7 +17,7 @@ vcpkg で使用できるコマンドのクイック リファレンス。
 
 ## <a name="commands"></a>コマンド
 
-| コマンド | 説明 |
+| command | 説明 |
 |--|--|
 | **`vcpkg search [pat]`** | インストールに使用できるパッケージを検索します |
 | **`vcpkg install <pkg>...`** | パッケージをインストールします |
@@ -51,5 +51,5 @@ vcpkg で使用できるコマンドのクイック リファレンス。
 [vcpkg をインストールする](install-vcpkg.md)\
 [vcpkg を統合する](integrate-vcpkg.md)\
 [vcpkg を使用してライブラリを管理する](manage-libraries-with-vcpkg.md)\
-[クイック スタート](https://github.com/microsoft/vcpkg/blob/master/docs/index.md)\
+[クイック スタート](https://github.com/microsoft/vcpkg/blob/master/docs/README.md)\
 [よく寄せられる質問](https://github.com/microsoft/vcpkg/blob/master/docs/about/faq.md)

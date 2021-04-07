@@ -8,12 +8,12 @@ helpviewer_keywords:
 - C++ Standard Library, function objects
 - function objects
 ms.assetid: 85f8a735-2c7b-4f10-9c4d-95c666ec4192
-ms.openlocfilehash: b87db43fbaabf1e9be18c56185ee190e3b2cbcac
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: 2c8e5995beabb63ff3b53c52874bb5b7c5f2a61e
+ms.sourcegitcommit: a89eac9acdbd54a181e3bd5d5bc71a3ef3c1abca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97324253"
+ms.lasthandoff: 04/06/2021
+ms.locfileid: "106506027"
 ---
 # <a name="function-objects-in-the-c-standard-library"></a>C++ 標準ライブラリの関数オブジェクト
 
@@ -48,7 +48,7 @@ int main()
 
 ## <a name="function-objects-and-containers"></a>関数オブジェクトとコンテナー
 
-C++ 標準ライブラリには、ヘッダーファイル内のいくつかの関数オブジェクトが含まれてい [\<functional>](../standard-library/functional.md) ます。 これらの関数オブジェクトの用途の 1 つに、コンテナーの並べ替え条件としての使用があります。 たとえば、 `set` コンテナーは次のように宣言されます。
+C++ 標準ライブラリには、ヘッダーファイル内のいくつかの関数オブジェクトが含まれてい [`<functional>`](../standard-library/functional.md) ます。 これらの関数オブジェクトの用途の 1 つに、コンテナーの並べ替え条件としての使用があります。 たとえば、 `set` コンテナーは次のように宣言されます。
 
 ```cpp
 template <class Key,
@@ -71,7 +71,7 @@ ForwardIterator remove_if(
     Predicate pred);
 ```
 
-`remove_if` への最後の引数は、ブール値 ( *述語*) を返す関数オブジェクトです。 関数オブジェクトの結果がの場合 **`true`** 、反復子とによってアクセスされているコンテナーから要素が削除され `first` `last` ます。 引数のヘッダーで宣言された関数オブジェクトを使用することも、独自の関数オブジェクトを作成することもでき [\<functional>](../standard-library/functional.md) `pred` ます。
+`remove_if` への最後の引数は、ブール値 ( *述語*) を返す関数オブジェクトです。 関数オブジェクトの結果がの場合 **`true`** 、反復子とによってアクセスされているコンテナーから要素が削除され `first` `last` ます。 引数のヘッダーで宣言された関数オブジェクトを使用することも、独自の関数オブジェクトを作成することもでき [`<functional>`](../standard-library/functional.md) `pred` ます。
 
 ## <a name="see-also"></a>関連項目
 

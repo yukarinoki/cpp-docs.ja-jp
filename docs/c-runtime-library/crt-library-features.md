@@ -1,8 +1,9 @@
 ---
-title: C ランタイム (CRT) と C++ 標準ライブラリの .lib ファイル
+title: C ランタイム (CRT) と C++ 標準ライブラリ .lib ファイル
 description: リンク先として使用できる Microsoft C ランタイムおよび C++ 標準ライブラリの .lib ファイルの一覧と、それらに関連付けられているコンパイラオプションとプリプロセッサディレクティブ。
 ms.date: 3/5/2021
 ms.topic: reference
+ms.custom: contperf-fy21q3
 helpviewer_keywords:
 - MSVCR71.dll
 - libraries [C++], multithreaded
@@ -17,12 +18,12 @@ helpviewer_keywords:
 - libraries [C++]
 - libraries [C++], run-time
 - linking [C++], libraries
-ms.openlocfilehash: dab3d767865b91f8a8e567488698a197c35c9b74
-ms.sourcegitcommit: 90c300b74f6556cb5d989802d2e80d79542f55e7
+ms.openlocfilehash: e1af94143ecf8aa2705c79f9f5c0c6a6890007f4
+ms.sourcegitcommit: a89eac9acdbd54a181e3bd5d5bc71a3ef3c1abca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "102514695"
+ms.lasthandoff: 04/06/2021
+ms.locfileid: "106506105"
 ---
 # <a name="c-runtime-crt-and-c-standard-library-stl-lib-files"></a>C ランタイム (CRT) と C++ 標準ライブラリ (STL) `.lib` ファイル
 
@@ -117,7 +118,7 @@ C ランタイムライブラリを指定するコンパイラオプションを
 
 プログラムが DLL の境界を越えて特定の CRT リソースを渡す場合は注意してください。 ファイルハンドル、ロケール、環境変数などのリソースでは、同じバージョンの CRT を使用している場合でも、問題が発生する可能性があります。 発生する可能性のある問題とその対処法の詳細については、「[DLL の境界を越えて CRT オブジェクトを渡す場合に発生する可能性のあるエラー](../c-runtime-library/potential-errors-passing-crt-objects-across-dll-boundaries.md)」を参照してください。
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 
 - [C ランタイム ライブラリ リファレンス](../c-runtime-library/c-run-time-library-reference.md)
 - [Visual C++ ファイルの再配布](../windows/redistributing-visual-cpp-files.md)

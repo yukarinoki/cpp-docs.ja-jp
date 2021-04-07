@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C++ Standard Library, class template containers
 - containers, C++ Standard Library
 ms.assetid: 8e915ca1-19ba-4f0d-93c8-e2c3bfd638eb
-ms.openlocfilehash: 3f95654b5b6f06e62621a5a325e794cf2a764af3
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: 2e65278e2577b7c8ac1b257bf9a5b06628ab7f24
+ms.sourcegitcommit: a89eac9acdbd54a181e3bd5d5bc71a3ef3c1abca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97222048"
+ms.lasthandoff: 04/06/2021
+ms.locfileid: "106506144"
 ---
 # <a name="c-standard-library-containers"></a>C++ 標準ライブラリのコンテナー
 
@@ -25,25 +25,25 @@ ms.locfileid: "97222048"
 
 シーケンス コンテナーは、挿入された要素の、指定された順序を維持します。
 
-`vector` コンテナーは配列のように動作しますが、必要に応じて自動的に拡張されます。 ランダム アクセスが可能で連続して格納され、長さに関しては高い柔軟性があります。 こうした理由などから、`vector` はほとんどのアプリケーションに推奨されるシーケンス コンテナーです。 使用するシーケンス コンテナーの種類が不明な場合は、ベクターを使用して開始します。 詳細については、「[vector クラス](../standard-library/vector-class.md)」をご覧ください。
+`vector` コンテナーは配列のように動作しますが、必要に応じて自動的に拡張されます。 ランダム アクセスが可能で連続して格納され、長さに関しては高い柔軟性があります。 こうした理由などから、`vector` はほとんどのアプリケーションに推奨されるシーケンス コンテナーです。 使用するシーケンス コンテナーの種類が不明な場合は、ベクターを使用して開始します。 詳細については、「 [ `vector` クラス](../standard-library/vector-class.md)」を参照してください。
 
-`array`コンテナーにはの長所がいくつかあり `vector` ますが、長さは柔軟ではありません。 詳細については、[array クラス](../standard-library/array-class-stl.md)に関する記事をご覧ください。
+`array`コンテナーにはの長所がいくつかあり `vector` ますが、長さは柔軟ではありません。 詳細については、「 [ `array` クラス](../standard-library/array-class-stl.md)」を参照してください。
 
-`deque` (両端キュー) コンテナーは、コンテナーの先頭と末尾で、すばやい挿入および削除を行うことができます。 これは、のランダムアクセスと柔軟な長さの利点を共有し `vector` ますが、連続していません。 詳細については、「[deque クラス](../standard-library/deque-class.md)」をご覧ください。
+`deque` (両端キュー) コンテナーは、コンテナーの先頭と末尾で、すばやい挿入および削除を行うことができます。 これは、のランダムアクセスと柔軟な長さの利点を共有し `vector` ますが、連続していません。 詳細については、「 [ `deque` クラス](../standard-library/deque-class.md)」を参照してください。
 
-`list`コンテナーはダブルリンクリストで、コンテナー内の任意の場所で双方向アクセス、高速挿入、および高速削除を実行できますが、コンテナー内の要素にランダムにアクセスすることはできません。 詳細については、「[list クラス](../standard-library/list-class.md)」をご覧ください。
+`list`コンテナーはダブルリンクリストで、コンテナー内の任意の場所で双方向アクセス、高速挿入、および高速削除を実行できますが、コンテナー内の要素にランダムにアクセスすることはできません。 詳細については、「 [ `list` クラス](../standard-library/list-class.md)」を参照してください。
 
-`forward_list` コンテナーはシングルリンク リストであり、`list` の前方アクセス バージョンです。 詳細については、「[forward_list クラス](../standard-library/forward-list-class.md)」をご覧ください。
+`forward_list` コンテナーはシングルリンク リストであり、`list` の前方アクセス バージョンです。 詳細については、「 [ `forward_list` クラス](../standard-library/forward-list-class.md)」を参照してください。
 
 ## <a name="associative-containers"></a>連想コンテナー
 
 連想コンテナーでは、要素は事前に定義された順序で挿入されます (たとえば、昇順に並べ替えられて)。 順序なしの連想コンテナーも使用できます。 連想コンテナーは、マップとセットという 2 つのサブセットに分類できます。
 
-ディクショナリとも呼ばれる `map` は、キーと値のペアで構成されています。 キーはシーケンスを順序付けるために使用され、値はそのキーに関連付けられます。 たとえば、`map` には、テキスト内のすべての一意の単語を表すキーと、それに対応する、テキスト内で各単語が出現する回数を表す値が含まれる場合があります。 `map` の順序なしのバージョンは `unordered_map` です。 詳細については、「[map クラス](../standard-library/map-class.md)」および「[unordered_map クラス](../standard-library/unordered-map-class.md)」をご覧ください。
+ディクショナリとも呼ばれる `map` は、キーと値のペアで構成されています。 キーはシーケンスを順序付けるために使用され、値はそのキーに関連付けられます。 たとえば、`map` には、テキスト内のすべての一意の単語を表すキーと、それに対応する、テキスト内で各単語が出現する回数を表す値が含まれる場合があります。 `map` の順序なしのバージョンは `unordered_map` です。 詳細については、「 [ `map` クラス](../standard-library/map-class.md)と[ `unordered_map` クラス](../standard-library/unordered-map-class.md)」を参照してください。
 
-`set` は単に、一意の要素の昇順のコンテナーです。値がキーにもなっています。 `set` の順序なしのバージョンは `unordered_set` です。 詳細については、「[set クラス](../standard-library/set-class.md)」および「[unordered_set クラス](../standard-library/unordered-set-class.md)」をご覧ください。
+`set` は単に、一意の要素の昇順のコンテナーです。値がキーにもなっています。 `set` の順序なしのバージョンは `unordered_set` です。 詳細については、「 [ `set` クラス](../standard-library/set-class.md)と[ `unordered_set` クラス](../standard-library/unordered-set-class.md)」を参照してください。
 
-`map` と `set` のどちらでも、キーまたは要素の 1 つのインスタンスだけをコンテナーに挿入できます。 要素の複数のインスタンスが必要な場合は、`multimap` または `multiset` を使用します。 順序なしのバージョンは `unordered_multimap` と `unordered_multiset` です。 詳細については、「[multimap クラス](../standard-library/multimap-class.md)」、「[unordered_multimap クラス](../standard-library/unordered-multimap-class.md)」、「[multiset クラス](../standard-library/multiset-class.md)」、および「[unordered_multiset クラス](../standard-library/unordered-multiset-class.md)」をご覧ください。
+`map` と `set` のどちらでも、キーまたは要素の 1 つのインスタンスだけをコンテナーに挿入できます。 要素の複数のインスタンスが必要な場合は、`multimap` または `multiset` を使用します。 順序なしのバージョンは `unordered_multimap` と `unordered_multiset` です。 詳細については、「 [ `multimap` クラス](../standard-library/multimap-class.md)、 [ `unordered_multimap` クラス](../standard-library/unordered-multimap-class.md)、 [ `multiset` クラス](../standard-library/multiset-class.md)、および[ `unordered_multiset` クラス](../standard-library/unordered-multiset-class.md)」を参照してください。
 
 順序ありのマップおよびセットは双方向反復子をサポートしており、順序なしのバージョンは前方反復子をサポートしています。 詳細については、「 [反復子](../standard-library/iterators.md)」を参照してください。
 
@@ -136,11 +136,11 @@ Map、multimap、set、およびマルチセットの次のメンバー関数は
 
 コンテナー アダプターは、簡潔さと明確さのためにインターフェイスを制限する、シーケンスまたは連想コンテナーの変化形です。 コンテナーアダプターは反復子をサポートしていません。
 
-`queue` コンテナーは FIFO (先入れ先出し) のセマンティクスに従います。 *プッシュ* された (つまり、キューに挿入された) 最初の要素は、最初に *ポップ* されます (つまり、キューから削除されます)。 詳細については、「[queue クラス](../standard-library/queue-class.md)」をご覧ください。
+`queue` コンテナーは FIFO (先入れ先出し) のセマンティクスに従います。 *プッシュ* された (つまり、キューに挿入された) 最初の要素は、最初に *ポップ* されます (つまり、キューから削除されます)。 詳細については、「 [ `queue` クラス](../standard-library/queue-class.md)」を参照してください。
 
-`priority_queue` コンテナーは、最高の値を持つ要素が常にキューの先頭になるように編成されます。 詳細については、「[priority_queue クラス](../standard-library/priority-queue-class.md)」をご覧ください。
+`priority_queue` コンテナーは、最高の値を持つ要素が常にキューの先頭になるように編成されます。 詳細については、「 [ `priority_queue` クラス](../standard-library/priority-queue-class.md)」を参照してください。
 
-`stack` コンテナーは、LIFO (後入れ先出し) のセマンティクスに従います。 スタックに最後にプッシュされた要素が最初にポップされます。 詳細については、「[stack Class (stack クラス)](../standard-library/stack-class.md)」をご覧ください。
+`stack` コンテナーは、LIFO (後入れ先出し) のセマンティクスに従います。 スタックに最後にプッシュされた要素が最初にポップされます。 詳細については、「 [ `stack` クラス](../standard-library/stack-class.md)」を参照してください。
 
 コンテナーアダプターは反復子をサポートしていないため、C++ 標準ライブラリアルゴリズムでは使用できません。 詳細については、「[アルゴリズム](../standard-library/algorithms.md)」をご覧ください。
 
@@ -163,14 +163,14 @@ Map、multimap、set、およびマルチセットの次のメンバー関数は
 
 ## <a name="comparing-containers"></a>コンテナーの比較
 
-すべてのコンテナーは、同じ要素型を含み、型が同じである 2 つのコンテナーを比較するために、演算子 == をオーバーロードします。 = = を使用して、ベクターを別のベクターと比較することはできますが、ベクターを \<string> \<string> \<string> リスト \<string> または \<string> \<char*> ベクターとベクターの比較に使用することはできません。  C++ 98/03 では、 [std:: equal](algorithm-functions.md#equal) または [std:: 不一致](algorithm-functions.md#mismatch) を使用して、異なるコンテナー型や要素型を比較できます。 C++ 11 では、 [std:: is_permutation](algorithm-functions.md#is_permutation)を使用することもできます。 ただし、これらのすべてのケースでは、これらの関数はコンテナーが同じ長さであると想定しています。 2 つ目の範囲が 1 つ目の範囲より短いと、未定義の動作が発生します。 また、2 番目の範囲が長い場合も、比較は 1 つ目の範囲の末尾を越えて続行されないため、不正確になる可能性があります。
+すべてのコンテナーは、同じ要素型を含み、型が同じである 2 つのコンテナーを比較するために、演算子 == をオーバーロードします。 = = を使用して、ベクターを別のベクターと比較することはできますが、ベクターを \<string> \<string> \<string> リスト \<string> または \<string> \<char*> ベクターとベクターの比較に使用することはできません。  C++ 98/03 で [`std::equal`](algorithm-functions.md#equal) は、またはを使用し [`std::mismatch`](algorithm-functions.md#mismatch) て、異なるコンテナー型や要素型を比較できます。 C++ 11 では、を使用することもでき [`std::is_permutation`](algorithm-functions.md#is_permutation) ます。 ただし、これらのすべてのケースでは、これらの関数はコンテナーが同じ長さであると想定しています。 2 つ目の範囲が 1 つ目の範囲より短いと、未定義の動作が発生します。 また、2 番目の範囲が長い場合も、比較は 1 つ目の範囲の末尾を越えて続行されないため、不正確になる可能性があります。
 
 ### <a name="comparing-dissimilar-containers-c14"></a>異なるコンテナーの比較 (C++ 14)
 
-C++ 14 以降では、 `std::equal` `std::mismatch` 2 つの完全な範囲を受け取る、、のいずれかの関数オーバーロードを使用して、異なるコンテナーや要素の種類を比較でき `std::is_permutation` ます。 これらのオーバーロードを使用すると、長さが異なるコンテナーを比較できます。 これらのオーバーロードは、ユーザー エラーの影響を受けにくく、長さが異なるコンテナーを比較しているときに一定の時間で false を返すように最適化されています。 そのため、これらのオーバーロードを使用することをお勧めします。そうでない明確な理由がない場合、または [std:: list](../standard-library/list-class.md) コンテナーを使用している場合は、2つの範囲の最適化の恩恵を受けることはできません。
+C++ 14 以降では、 `std::equal` `std::mismatch` 2 つの完全な範囲を受け取る、、のいずれかの関数オーバーロードを使用して、異なるコンテナーや要素の種類を比較でき `std::is_permutation` ます。 これらのオーバーロードを使用すると、長さが異なるコンテナーを比較できます。 これらのオーバーロードは、ユーザー エラーの影響を受けにくく、長さが異なるコンテナーを比較しているときに一定の時間で false を返すように最適化されています。 そのため、これらのオーバーロードを使用することをお勧めします。そうでない明確な理由がない場合、またはコンテナーを使用している場合は、 [`std::list`](../standard-library/list-class.md) 2 つの範囲の最適化の恩恵を受けられません。
 
 ## <a name="see-also"></a>関連項目
 
 [並列コンテナー](../parallel/concrt/parallel-containers-and-objects.md)\
-[\<sample container>](../standard-library/sample-container.md)\
+[`<sample container>`](../standard-library/sample-container.md)\
 [C++ 標準ライブラリのスレッドセーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)
