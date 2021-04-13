@@ -7,18 +7,18 @@ helpviewer_keywords:
 - base classes [C++], abstract classes [C++]
 - abstract classes [C++]
 - derived classes [C++], abstract classes [C++]
-ms.openlocfilehash: 8a20e988cb0c0a134fd2ebb83382d81c838bcf23
-ms.sourcegitcommit: 5efc34c2b98d4d0d3e41aec38b213f062c19d078
+ms.openlocfilehash: 375dd40c41a9de2b5b66a295cfccaae04d4ccbb8
+ms.sourcegitcommit: 10baf2761694a7d9f478e5609f24158ed8258a44
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "101844495"
+ms.lasthandoff: 04/09/2021
+ms.locfileid: "107282623"
 ---
 # <a name="abstract-classes-c"></a>抽象クラス (C++)
 
 抽象クラスは一般的な概念を表現したもので、このクラスからより具体的なクラスを派生するために使用できます。 抽象クラス型のオブジェクトを作成することはできません。 ただし、抽象クラス型へのポインターと参照を使用できます。
 
-抽象クラスを作成するには、少なくとも1つの純粋仮想メンバー関数を宣言します。 これは、純粋指定子 () 構文を使用して宣言された仮想関数です `= 0` 。 抽象クラスから派生したクラスは純粋仮想関数を実装する必要があります。つまり派生クラスも抽象クラスです。
+抽象クラスを作成するには、少なくとも1つの純粋仮想メンバー関数を宣言します。 これは、 *純粋* 指定子 () 構文を使用して宣言された仮想関数です `= 0` 。 抽象クラスから派生したクラスは純粋仮想関数を実装する必要があります。つまり派生クラスも抽象クラスです。
 
 [仮想関数](../cpp/virtual-functions.md)に示されている例を考えてみましょう。 `Account` クラスの目的は一般的な機能を提供することですが、`Account` 型のオブジェクトは一般的すぎて役に立ちません。 これは、抽象クラスに適した候補であることを意味 `Account` します。
 
@@ -57,7 +57,7 @@ private:
 
 *抽象クラス名*::*function-name*()
 
-定義された純粋仮想関数は、基本クラスに純粋仮想デストラクターが含まれるクラス階層を設計するときに役立ちます。 これは、オブジェクトの破棄時に基本クラスのデストラクターが常に呼び出されるためです。 次の例を確認してください。
+定義された純粋仮想関数は、基本クラスに純粋仮想デストラクターが含まれるクラス階層を設計するときに役立ちます。 これは、オブジェクトの破棄時に基本クラスのデストラクターが常に呼び出されるためです。 次に例を示します。
 
 ```cpp
 // deriv_RestrictionsOnUsingAbstractClasses.cpp
@@ -67,8 +67,13 @@ class base
 {
 public:
     base() {}
-    virtual ~base() = 0 {}; // pure virtual, and defined!
+    // To define the virtual destructor outside the class:
+    virtual ~base() = 0;
+    // Microsoft-specific extension to define it inline:
+//  virtual ~base() = 0 {};
 };
+
+base::~base() {} // required if not using Microsoft extension
 
 class derived : public base
 {
@@ -83,7 +88,7 @@ int main()
 }
 ```
 
-この例では、インラインの定義を示して `~base()` いますが、を使用してクラスの外部で定義することもでき `base::~base() {}` ます。
+この例では、Microsoft コンパイラ拡張機能を使用して、インライン定義を純粋仮想に追加する方法を示し `~base()` ます。 また、を使用して、クラスの外部で定義することもでき `base::~base() {}` ます。
 
 オブジェクトがスコープ外に `aDerived` 出ると、クラスのデストラクター `derived` が呼び出されます。 コンパイラは、デストラクターの後にクラスのデストラクターを暗黙的に呼び出すコードを生成し `base` `derived` ます。 純粋仮想関数の空の実装は、 `~base` 少なくとも関数の実装が存在することを保証します。 それがない場合、リンカーは暗黙的な呼び出しに対して未解決の外部シンボルエラーを生成します。
 
