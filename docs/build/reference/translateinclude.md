@@ -1,22 +1,24 @@
 ---
-title: /translateInclude (インクルードディレクティブをインポートディレクティブに変換する)
-description: '/TranslateInclude コンパイラオプションを使用して、インポート可能なヘッダー名の #include ディレクティブをインポートヘッダー名ディレクティブに変換します。'
-ms.date: 09/13/2020
+title: /translateInclude (インクルード ディレクティブをインポート ディレクティブに変換する)
+description: '/TranslateInclude コンパイラオプションを使用すると、インポート可能なヘッダー単位が使用可能な場合に #include ディレクティブを import ステートメントとして扱うことができます。'
+ms.date: 4/13/2021
+author: tylermsft
+ms.author: twhitney
 f1_keywords:
 - /translateInclude
 helpviewer_keywords:
 - /translateInclude
 - Translate include directives into import directives
-ms.openlocfilehash: 0050f2cb117e48d69cf97a587ef128b9b45790af
-ms.sourcegitcommit: b492516cc65120250b9ea23f96f7f63f37f99fae
+ms.openlocfilehash: e700e79c64be466e33e0ee698114c85eba1f7e18
+ms.sourcegitcommit: bac5dde649d5b0447de1d26a73365e36d74595f3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/14/2020
-ms.locfileid: "90079147"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "107381306"
 ---
-# <a name="translateinclude-translate-include-directives-into-import-directives"></a>`/translateInclude` (インクルードディレクティブをインポートディレクティブに変換します)
+# <a name="translateinclude-translate-include-directives-into-import-directives"></a>`/translateInclude` (インクルード ディレクティブをインポート ディレクティブに変換する)
 
-`#include` `import header-name;` 文字列インクルードを使用するのではなく、インポート可能なヘッダー名のディレクティブをディレクティブに変換するようコンパイラに指示します。
+`#include` `import` ヘッダーユニット () ファイルにあらかじめ構築されているヘッダーのとしてを処理するようにコンパイラに指示し `.ifc` ます。
 
 ## <a name="syntax"></a>構文
 
@@ -24,9 +26,9 @@ ms.locfileid: "90079147"
 
 ## <a name="remarks"></a>解説
 
-コンパイラオプションを使用するには、 **`/translateInclude`** [`/experimental:module`](experimental-module.md) コンパイラオプションを使用して、 [/std: c + + latest](std-specify-language-standard-version.md) オプションと共に試験的なモジュールのサポートを有効にする必要があります。 このオプションは、Visual Studio 2019 バージョン16.8 以降で使用できます。
+**`/translateInclude`** コンパイラオプションでは、 [/std: c + + latest](std-specify-language-standard-version.md)オプションを有効にする必要があります。 `/translateInclude` は、Visual Studio 2019 バージョン 16.10 Preview 2 以降で使用できます。
 
-オプションは、 **`/translateInclude`** 次の変換を効果的に行い `<vector>` ます。この例は、インポート可能なヘッダー単位です。
+この **`/translateInclude`** オプションは、次の変換を効果的に行います。この場合、この例は、 `<vector>` インポート可能なヘッダー単位にあらかじめ構築されています。
 
 ```cpp
 #include <vector>
@@ -35,10 +37,10 @@ ms.locfileid: "90079147"
 コンパイラは、このディレクティブを次のように置き換えます。
 
 ```cpp
-import <vector> ;
+import <vector>;
 ```
 
-MSVC では、インポート可能なヘッダー単位は、参照によって名前が付けられたものです **`/headerUnit`** 。 詳細については、「 [ `/headerUnit` (HEADER unit IFC の使用)](headerunit.md)」を参照してください。
+MSVC では、使用可能なヘッダー単位がオプションによって提供され **`/headerUnit`** ます。このオプションは、ヘッダーファイルを、それに対応する事前インポート可能なヘッダー単位にマップします。 詳細については、「」を参照してください[ `/headerUnit` (ヘッダー `.ifc` 単位ファイルを検索する場所を指定](headerunit.md)します ()。
 
 ### <a name="examples"></a>例
 
@@ -58,25 +60,27 @@ MSVC では、インポート可能なヘッダー単位は、参照によって
 int main() { }
 ```
 
-オプションを使用すると、ヘッダーを **`/translateInclude`** 再度コンパイルするのではなく、コンパイラがヘッダー単位をインポートできます。 次のコマンドラインの例では、とのインクルードディレクティブを *`util.h`* ヘッダー単位のインポートに変換してい *`app.h`* ます。
+**`/translateInclude`** オプションを使用すると、コンパイラはを、 `#include` 対応する `import` コンパイル済みヘッダーユニットファイル () があり、 *`.ifc`* スイッチを介してコマンドラインで指定されているヘッダーファイルのとしてを扱うことができ `/headerUnit` ます。
+
+スイッチで `#include` 指定された対応するヘッダー単位を持たないが検出されると `/headerUnit` 、プリプロセッサによって通常のディレクティブとして処理され `#include` ます。
+
+ 次のコマンドラインの例では、とのインクルードディレクティブを *`util.h`* ヘッダー単位のインポートに変換してい *`app.h`* ます。
 
 ```CMD
-cl /IC:\ /experimental:module /translateInclude /headerUnit C:\utils\util.h=C:\util.h.ifc /headerUnit C:\app\app.h=C:\app.h.ifc
+cl /IC:\ /translateInclude /headerUnit C:\utils\util.h=C:\util.h.ifc /headerUnit C:\app\app.h=C:\app.h.ifc
 ```
 
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのコンパイラ オプションを設定するには
+## <a name="to-set-this-compiler-option-in-visual-studio"></a>このコンパイラ オプションを Visual Studio で使用するには
 
-1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、[Visual Studio での C++ コンパイラとビルド プロパティの設定](../working-with-project-properties.md)に関するページを参照してください。
+有効にするには `/translateInclude` 、プロジェクトのプロパティの [ **インクルードをインポートに変換** ] オプションを設定します。
 
-1. [ **構成** ] ドロップダウンを [ **すべての構成**] に設定します。
+1. プロジェクトのプロパティページの左側のペインで、[**構成プロパティ**] [  >  **C/c + +**  >  **全般**] の順に選択します。
+1. [**追加**] の [インポート] ドロップダウンを **[はい]** に変更します。 [ 
+ ![ プロジェクトのプロパティ] ダイアログボックスの [インポートに含まれる変換]](../media/vs2019-translate-includes-option.png)
 
-1. [**構成プロパティ**] [  >  **C/c + +**  >  **コマンドライン**] プロパティページを選択します。
-
-1. オプションを追加するには、[ **追加のオプション** ] プロパティを変更し *`/translateInclude`* ます。 次に、[ **OK]** または [ **適用** ] を選択して、変更を保存します。
 
 ## <a name="see-also"></a>関連項目
 
-[`/experimental:module` (モジュールのサポートを有効にする)](experimental-module.md)\
 [ `/headerUnit` (HEADER unit IFC を使用](headerunit.md)します)。
-[`/module:exportHeader` (ヘッダーユニットの作成)](module-exportheader.md)\
-[`/module:reference` (名前付きモジュール IFC を使用)](module-reference.md)
+[`/exportHeader` (ヘッダーユニットの作成)](module-exportheader.md)\
+[`/reference` (名前付きモジュール IFC の使用)](module-reference.md)

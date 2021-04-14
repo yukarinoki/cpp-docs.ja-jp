@@ -1,15 +1,15 @@
 ---
 title: アルファベット順のコンパイラ オプション
 description: Microsoft C/c + + コンパイラのコマンドラインオプションのアルファベット順の一覧です。
-ms.date: 07/29/2020
+ms.date: 04/13/2021
 helpviewer_keywords:
 - compiler options, C++
-ms.openlocfilehash: de83cd5e2d649b88de4e21f3d828f68504705dc2
-ms.sourcegitcommit: 6ed44d9c3fb32e965e363b9c69686739a90a2117
+ms.openlocfilehash: 78366537d0ff0599951d4ba528cfae2bdcc2c3e0
+ms.sourcegitcommit: bac5dde649d5b0447de1d26a73365e36d74595f3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/08/2021
-ms.locfileid: "102465367"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "107381221"
 ---
 # <a name="compiler-options-listed-alphabetically"></a>アルファベット順のコンパイラ オプション
 
@@ -40,7 +40,8 @@ ms.locfileid: "102465367"
 | [`/errorReport`](errorreport-report-internal-compiler-errors.md) | 非推奨になりました。 エラー報告は、 [Windows エラー報告 (WER)](/windows/win32/wer/windows-error-reporting) 設定によって制御されます。 |
 | [`/execution-charset`](execution-charset-set-execution-character-set.md) | 実行文字セットを設定します。 |
 | [`/experimental:module`](experimental-module.md) | 実験的なモジュールのサポートを有効にします。 |
-| [`/experimental:preprocessor`](experimental-preprocessor.md) | 非推奨になりました。 試験的に準拠するプリプロセッサのサポートを有効にします。 使用 [`/Zc:preprocessor`](zc-preprocessor.md) |
+| [`/experimental:preprocessor`](experimental-preprocessor.md) | 非推奨になりました。 試験的に準拠するプリプロセッサのサポートを有効にします。 [`/Zc:preprocessor`](zc-preprocessor.md) を使用する |
+| [`/exportHeader`](module-exportheader.md) | *`.ifc`* 入力引数で指定されたヘッダー単位 () ファイルを作成します。 |
 | [`/F`](f-set-stack-size.md) | スタック サイズを設定します。 |
 | [`/favor`](favor-optimize-for-architecture-specifics.md) | 特定の x64 アーキテクチャ用に最適化されたコードを生成します。 または、AMD64 アーキテクチャと EM64T アーキテクチャの両方で、特定のマイクロアーキテクチャに対応します。 |
 | [`/FA`](fa-fa-listing-file.md) | リスティング ファイルを作成します。 |
@@ -81,6 +82,8 @@ ms.locfileid: "102465367"
 | [`/GZ`](gz-enable-stack-frame-run-time-error-checking.md) | 非推奨になりました。 [`/RTC1`](rtc-run-time-error-checks.md) と同じ。 |
 | [`/Gz`](gd-gr-gv-gz-calling-convention.md) | 呼び出し規約を使用し **`__stdcall`** ます (x86 のみ)。 |
 | [`/H`](h-restrict-length-of-external-names.md) | 非推奨になりました。 外部名 (パブリック名) の長さを制限します。 |
+| [`/headerName`](headername.md) | 指定されたヘッダーからヘッダーユニットを作成します。 |
+| [`/headerUnit`](headerunit.md) | 指定したヘッダーのヘッダー単位ファイル () を検索する場所を指定し `.ifc` ます。 |
 | [`/HELP`](help-compiler-command-line-help.md) | コンパイラ オプションのリストを出力します。 |
 | [`/homeparams`](homeparams-copy-register-parameters-to-stack.md) | 関数の実行に入ったときに、レジスタで渡されたパラメーターを、強制的にスタック内のその場所に書き込みます。 このコンパイラオプションは、x64 コンパイラ (ネイティブコンパイルおよびクロスコンパイル) に対してのみ使用できます。 |
 | [`/hotpatch`](hotpatch-create-hotpatchable-image.md) | ホットパッチ可能なイメージを作成します。 |
@@ -121,16 +124,19 @@ ms.locfileid: "102465367"
 | [`/Qspectre-load`](qspectre-load.md) | ロード命令に基づいて Spectre のセキュリティ脆弱性を軽減するための命令をシリアル化するためのコンパイラの生成を指定します。 |
 | [`/Qspectre-load-cf`](qspectre-load-cf.md) | メモリを読み込む制御フロー命令に基づいて、Spectre のセキュリティ脆弱性を軽減するための命令をシリアル化するためのコンパイラの生成を指定します。 |
 | [`/Qvec-report` (自動ベクター化レポートレベル)](qvec-report-auto-vectorizer-reporting-level.md) | 自動ベクター化のレポート レベルを有効にします。 |
+| [`/reference`](module-reference.md) | 名前付きモジュール IFC を使用します。 |
 | [`/RTC`](rtc-run-time-error-checks.md) | ランタイム エラー チェックを有効にします。 |
 | [`/sdl`](sdl-enable-additional-security-checks.md) | 追加のセキュリティ機能と警告を有効にします。 |
 | [`/showIncludes`](showincludes-list-include-files.md) | コンパイル時にインクルード ファイルの一覧を表示します。 |
 | [`/source-charset`](source-charset-set-source-character-set.md) | ソース文字セットを設定します。 |
-| [`/sourceDependencies`](sourcedependencies.md) | ヘッダー、モジュール、およびその他のソースの依存関係を一覧表示します。 |
+| [`/sourceDependencies`](sourcedependencies.md) | すべてのソースレベルの依存関係を一覧表示します。 |
+| [`/sourceDependencies:directives`](sourcedependencies-directives.md) |モジュールとヘッダーの単位の依存関係を一覧表示します。 |
 | [`/std`](std-specify-language-standard-version.md) | C++ 標準バージョン互換性セレクター。 |
 | [`/Tc`](tc-tp-tc-tp-specify-source-file-type.md) | C ソース ファイルを指定します。 |
 | [`/TC`](tc-tp-tc-tp-specify-source-file-type.md) | すべてのソースファイルが C であることを指定します。 |
 | [`/Tp`](tc-tp-tc-tp-specify-source-file-type.md) | C++ ソース ファイルを指定します。 |
 | [`/TP`](tc-tp-tc-tp-specify-source-file-type.md) | すべてのソースファイルが C++ であることを指定します。 |
+| [`/translateInclude`](translateinclude.md) | `#include`として扱い `import` ます。 |
 | [`/U`](u-u-undefine-symbols.md) | 1 つの定義済みマクロを削除します。 |
 | [`/u`](u-u-undefine-symbols.md) | すべての定義済みマクロを削除します。 |
 | [`/utf-8`](utf-8-set-source-and-executable-character-sets-to-utf-8.md) | ソース文字セットと実行文字セットを UTF-8 に設定します。 |

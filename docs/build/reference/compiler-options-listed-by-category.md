@@ -5,12 +5,12 @@ ms.date: 07/29/2020
 helpviewer_keywords:
 - compiler options, C++
 ms.assetid: c4750dcf-dba0-4229-99b6-45cdecc11729
-ms.openlocfilehash: b892575719d97ed4a0acb061aae0182ff2d576eb
-ms.sourcegitcommit: 6ed44d9c3fb32e965e363b9c69686739a90a2117
+ms.openlocfilehash: e527e5ef309b4ea4e0a38189d7855475b99762f2
+ms.sourcegitcommit: bac5dde649d5b0447de1d26a73365e36d74595f3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/08/2021
-ms.locfileid: "102465380"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "107381208"
 ---
 # <a name="compiler-options-listed-by-category"></a>カテゴリ別のコンパイラ オプション
 
@@ -110,6 +110,18 @@ ms.locfileid: "102465380"
 | [`/u`](u-u-undefine-symbols.md) | すべての定義済みマクロを削除します。 |
 | [`/X`](x-ignore-standard-include-paths.md) | 標準のインクルード ディレクトリを無視します。 |
 
+## <a name="header-units"></a>ヘッダーユニット
+
+| オプション | 目的 |
+|--|--|
+| [`/exportHeader`](module-exportheader.md) | *`.ifc`* 入力引数で指定されたヘッダーユニットファイル () を作成します。 |
+| [`/headerUnit`](headerunit.md) | 指定したヘッダーのヘッダー単位ファイル () を検索する場所を指定し `.ifc` ます。 |
+| [`/headerName`](headername.md) | 指定されたヘッダーからヘッダーユニットを作成します。 |
+| [`/reference`](module-reference.md) | 名前付きモジュール IFC を使用します。 |
+| [`/sourceDependencies`](sourcedependencies.md) | すべてのソースレベルの依存関係を一覧表示します。 |
+| [`/sourceDependencies:directives`](sourcedependencies-directives.md) | モジュールとヘッダーの単位の依存関係を一覧表示します。 |
+| [`/translateInclude`](translateinclude.md) | `#include`として扱い `import` ます。 |
+
 ## <a name="language"></a>言語
 
 | オプション | 目的 |
@@ -172,7 +184,6 @@ ms.locfileid: "102465380"
 | [`/nologo`](nologo-suppress-startup-banner-c-cpp.md) | 著作権情報を表示しません。 |
 | [`/sdl`](sdl-enable-additional-security-checks.md) | 追加のセキュリティ機能と警告を有効にします。 |
 | [`/showIncludes`](showincludes-list-include-files.md) | コンパイル時にすべてのインクルード ファイルの一覧を表示します。 |
-| [`/sourceDependencies`](sourcedependencies.md) | ヘッダー、モジュール、およびその他のソースの依存関係を一覧表示します。 |
 | [`/Tc`](tc-tp-tc-tp-specify-source-file-type.md) | C ソース ファイルを指定します。 |
 | [`/TC`](tc-tp-tc-tp-specify-source-file-type.md) | すべてのソースファイルが C であることを指定します。 |
 | [`/Tp`](tc-tp-tc-tp-specify-source-file-type.md) | C++ ソース ファイルを指定します。 |
@@ -210,7 +221,7 @@ ms.locfileid: "102465380"
 | オプション | 目的 |
 |--|--|
 | [`/experimental:module`](experimental-module.md) | 実験的なモジュールのサポートを有効にします。 |
-| [`/experimental:preprocessor`](experimental-preprocessor.md) | 非推奨になりました。 試験的に準拠するプリプロセッサのサポートを有効にします。 使用 [`/Zc:preprocessor`](zc-preprocessor.md) |
+| [`/experimental:preprocessor`](experimental-preprocessor.md) | 非推奨になりました。 試験的に準拠するプリプロセッサのサポートを有効にします。 [`/Zc:preprocessor`](zc-preprocessor.md) を使用する |
 
 ## <a name="deprecated-and-removed-compiler-options"></a>非推奨のコンパイラオプションと削除されたコンパイラオプション
 

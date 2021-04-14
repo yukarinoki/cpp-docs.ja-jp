@@ -1,40 +1,58 @@
 ---
-title: /headerunit (Use header unit IFC)
-description: /Headerunit コンパイラオプションを使用して、現在のコンパイルでインポートする既存の IFC header ユニットを指定します。
-ms.date: 09/13/2020
+title: /headerUnit (ヘッダー ユニット IFC の使用)
+description: ヘッダーファイルをヘッダー単位に関連付けて、その代わりにインポートするには、/headerunit コンパイラオプションを使用します。
+ms.date: 04/13/2021
 f1_keywords:
 - /headerUnit
 helpviewer_keywords:
 - /headerUnit
 - Use header unit IFC
-ms.openlocfilehash: 2734df728b188dcfbbe5f475cfc67715a070975d
-ms.sourcegitcommit: b492516cc65120250b9ea23f96f7f63f37f99fae
+author: tylermsft
+ms.author: twhitney
+ms.openlocfilehash: 205809e25644f4beaa0105a2611c7eaa4e6b7b02
+ms.sourcegitcommit: bac5dde649d5b0447de1d26a73365e36d74595f3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/14/2020
-ms.locfileid: "90079158"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "107381377"
 ---
-# <a name="headerunit-use-header-unit-ifc"></a>`/headerUnit` (Use header unit IFC)
+# <a name="headerunit-use-header-unit-ifc"></a>`/headerUnit` (ヘッダー ユニット IFC の使用)
 
-`#include` `import header-name;` 文字列インクルードを使用するのではなく、インポート可能なヘッダー名のディレクティブをディレクティブに変換するようコンパイラに指示します。
+ヘッダー単位をインポートするために使用します。 *`.ifc`* 指定したヘッダーのファイル (ヘッダーユニットのバイナリ表現) を検索する場所をコンパイラに指示します。
 
 ## <a name="syntax"></a>構文
 
-> **`/headerUnit`** *`header-filename`*=*`ifc-filename`*
+> **`/headerUnit`** *`header-filename`*=*`ifc-filename`*\
+> **`/headerUnit:quote`** \[*`header-filename`*=*`ifc-filename`*\]\
+> **`/headerUnit:angle`** \[*`header-filename`*=*`ifc-filename`*\]
 
 ### <a name="arguments"></a>引数
 
 *`header-filename`*\
-コンパイラがを解決するファイルの名前 `header-name` 。 `import header-name ;`コンパイラでは、 `header-name` ディスク上のいくつかのファイルに解決されます。 を使用し *`header-filename`* てそのファイルを指定します。 一致すると、コンパイラはによってという名前の対応する IFC を *`ifc-filename`* インポート用に開きます。
+`import header-name;`コンパイラでは、 `header-name` ディスク上のファイルに解決されます。 を使用し *`header-filename`* てそのファイルを指定します。 一致すると、コンパイラはによってという名前の対応する IFC を *`ifc-filename`* インポート用に開きます。
 
 *`ifc-filename`*\
-*IFC data*、事前に構築されたモジュール情報を含むファイルの名前。 複数のヘッダー単位をインポートするには、 **`/headerUnit`** ファイルごとに個別のオプションを指定します。
+コンパイル済みヘッダーの単位情報を格納しているファイルの名前。 複数のヘッダー単位をインポートするには、 **`/headerUnit`** ファイルごとに個別のオプションを追加します。
 
 ## <a name="remarks"></a>解説
 
-コンパイラオプションを使用するには、 **`/headerUnit`** [`/experimental:module`](experimental-module.md) コンパイラオプションを使用して、 [/std: c + + latest](std-specify-language-standard-version.md) オプションと共に試験的なモジュールのサポートを有効にする必要があります。 このオプションは、Visual Studio 2019 バージョン16.8 以降で使用できます。
+**`/headerUnit`** コンパイラオプションには、 [/std: c + + latest](std-specify-language-standard-version.md)オプションが必要です。
 
-コンパイラは、1つのを *`header-name`* 複数の IFC ファイルにマップすることはできません。 複数の *`header-name`* 引数を1つの IFC にマップすることは可能ですが、推奨されません。 IFC の内容は、によって指定されたヘッダーの場合と同じようにインポートされ *`header-name`* ます。
+**`/headerUnit`** コンパイラオプションは、Visual Studio 2019 バージョン 16.10 preview 2 以降で使用できます。
+
+コンパイラがまたはの間にある場合 `import "file";` `import <file>;` 、このコンパイラスイッチは、コンパイラが、 *`.ifc`* 指定されたヘッダーファイルのコンパイル済みヘッダーユニット () を検索するのに役立ちます。 このファイルへのパスは、次の3つの方法で表すことができます。
+
+**`/headerUnit`** 現在のディレクトリ、またはで指定された場所で、コンパイル済みヘッダーユニットを検索 *`ifc-filename`* します。
+
+**`/headerUnit:quote`** と同じルールを使用して、コンパイル済みヘッダーユニットファイルを検索し `#include "file"` ます。
+
+**`/headerUnit:angle`** と同じルールを使用して、コンパイル済みヘッダーユニットファイルを検索し `#include <file>` ます。
+
+コンパイラは、1つのを複数のファイルにマップすることはできません *`header-name`* *`.ifc`* 。 複数 *`header-name`* の引数を1つのにマップすること *`.ifc`* は可能ですが、推奨されません。 *`.ifc`* によって指定されたヘッダーだけであるかのように、の内容がとしてインポートされ *`header-name`* ます。
+
+コンパイラは、このスイッチを使用するときに、新しいプリプロセッサを暗黙的に有効にします。 つまり、 [`/Zc:preprocessor`](zc-preprocessor.md) コマンドラインでの任意の形式が指定されている場合、はコンパイラによってコマンドラインに追加され `/headerUnit` ます。 暗黙的なをオプトアウトするには `/Zc:preprocessor` 、次のように指定します。 `/Zc:preprocessor-`
+
+新しいプリプロセッサを無効にしても、コンパイルしたファイルがヘッダーユニットをインポートした場合、コンパイラはエラーを報告します。
 
 ### <a name="examples"></a>例
 
@@ -43,27 +61,20 @@ ms.locfileid: "90079158"
 | ヘッダー ファイル | IFC ファイル |
 |--|--|
 | *`C:\utils\util.h`* | *`C:\util.h.ifc`* |
-| *`C:\app\app.h`* | *`C:\app.h.ifc`* |
+| *`C:\app\app.h`* | *`C:\app\app.h.ifc`* |
 
-これらの特定のヘッダーファイルのヘッダー単位を参照するコンパイラオプションは、次の例のようになります。
+これらの特定のヘッダーファイルのヘッダー単位を参照するコンパイラオプションは、次のようになります。
 
 ```CMD
-cl ... /experimental:module /translateInclude /headerUnit C:\utils\util.h=C:\util.h.ifc /headerUnit C:\app\app.h=C:\app.h.ifc
+cl ... /std:c++latest /headerUnit C:\utils\util.h=C:\util.h.ifc /headerUnit:quote app.h=app.h.ifc
 ```
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのコンパイラ オプションを設定するには
 
-1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、[Visual Studio での C++ コンパイラとビルド プロパティの設定](../working-with-project-properties.md)に関するページを参照してください。
-
-1. [ **構成** ] ドロップダウンを [ **すべての構成**] に設定します。
-
-1. [**構成プロパティ**] [  >  **C/c + +**  >  **コマンドライン**] プロパティページを選択します。
-
-1. [ **追加オプション]** プロパティを変更して、 *`/headerUnit`* オプションと引数を追加します。 次に、[ **OK]** または [ **適用** ] を選択して、変更を保存します。
+通常、Visual Studio 開発環境ではこれを設定しないでください。 これは、ビルドシステムによって設定されます。
 
 ## <a name="see-also"></a>関連項目
 
-[`/experimental:module` (モジュールのサポートを有効にする)](experimental-module.md)\
-[`/module:exportHeader` (ヘッダーユニットの作成)](module-exportheader.md)\
-[`/module:reference` (名前付きモジュール IFC を使用)](module-reference.md)\
-[`/translateInclude` (インクルードディレクティブをインポートディレクティブに変換します)](translateinclude.md)\
+[`/exportHeader` (ヘッダーユニットの作成)](module-exportheader.md)\
+[`/headerName` (指定されたヘッダーからヘッダーユニットを作成します)](headername.md)\
+[`/reference` (名前付きモジュール IFC の使用)](module-reference.md)
