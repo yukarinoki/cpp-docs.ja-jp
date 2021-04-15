@@ -74,7 +74,7 @@ ms.locfileid: "97268744"
 
 ## <a name="boolean-type"></a>ブール型
 
-型には [`bool`](bool-cpp.md) 、との値を指定でき [`true`](../cpp/true-cpp.md) [`false`](../cpp/false-cpp.md) ます。 型のサイズは **`bool`** 実装固有です。 Microsoft 固有の実装の詳細については、「 [組み込み型のサイズ](#sizes-of-built-in-types) 」を参照してください。
+型には [`bool`](bool-cpp.md) 、[`true`](../cpp/true-cpp.md)または[`false`](../cpp/false-cpp.md)のいずれかの値を指定でき  ます。 型のサイズは **`bool`** 実装固有です。 Microsoft 固有の実装の詳細については、「 [組み込み型のサイズ](#sizes-of-built-in-types) 」を参照してください。
 
 ## <a name="character-types"></a>文字型
 
