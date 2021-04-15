@@ -11,12 +11,12 @@ helpviewer_keywords:
 - Standards conformance compiler options
 - permissive compiler options [C++]
 ms.assetid: db1cc175-6e93-4a2e-9396-c3725d2d8f71
-ms.openlocfilehash: c8d654540deb492a5bebff304ef01ca4c71f044a
-ms.sourcegitcommit: 74e58bee5cffb30b66e17be6dbfde2544369638e
+ms.openlocfilehash: ab6f1a088ae45e1098a02d2ab0bdf18d6bc8047c
+ms.sourcegitcommit: aaab04df80e2d00389c13b075cfac59afc7f4681
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2021
-ms.locfileid: "98763823"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "107467637"
 ---
 # <a name="permissive--standards-conformance"></a>/permissive- (標準への準拠)
 
@@ -41,7 +41,7 @@ Visual Studio 2019 バージョン16.8 以降では、オプションによっ�
 
 **`/permissive-`** このオプションは、ソフトウェア開発キット (sdk) や Windows Driver Kit (WDK) など、最新の Windows キットのほとんどすべてのヘッダーファイルと互換性があります。これは、Windows フォール作成者 SDK (10.0.16299.0) から始まります。 **`/permissive-`** ソースコードへのさまざまな準拠の理由により、古いバージョンの SDK をでコンパイルできない場合があります。 コンパイラと Sdk は異なるリリースタイムラインで出荷されるため、残りの問題がいくつかあります。 ヘッダーファイルに関する特定の問題については、以下の [Windows ヘッダーに関する問題](#windows-header-issues) を参照してください。
 
-オプションを指定 **`/permissive-`** [`/Zc:referenceBinding`](zc-referencebinding-enforce-reference-binding-rules.md) [`/Zc:strictStrings`](zc-strictstrings-disable-string-literal-type-conversion.md) すると、、、および [`/Zc:rvalueCast`](zc-rvaluecast-enforce-type-conversion-rules.md) オプションが動作に準拠するように設定されます。 これらのオプションの既定値は、準拠していない動作です。 **`/Zc`** **`/permissive-`** この動作をオーバーライドするには、コマンドラインでの後に特定のオプションを渡すことができます。
+オプションを指定 **`/permissive-`** [`/Zc:referenceBinding`](zc-referencebinding-enforce-reference-binding-rules.md) [`/Zc:strictStrings`](zc-strictstrings-disable-string-literal-type-conversion.md) すると、、、および [`/Zc:rvalueCast`](zc-rvaluecast-enforce-type-conversion-rules.md) オプションが動作に準拠するように設定されます。 これらのオプションは、既定で非準拠動作に設定されます。 **`/Zc`** **`/permissive-`** この動作をオーバーライドするには、コマンドラインでの後に特定のオプションを渡すことができます。
 
 Visual Studio 2017 バージョン15.3 以降のバージョンのコンパイラでは、オプションがオプションに設定されて **`/permissive-`** [`/Zc:ternary`](zc-ternary.md) います。 コンパイラは、2フェーズの名前参照に関する要件の多くも実装しています。 このオプションを設定すると、 **`/permissive-`** コンパイラは、関数とクラスのテンプレート定義を解析し、テンプレートで使用される依存名と非依存の名前を識別します。 このリリースでは、名前の依存関係の分析だけが実行されます。
 
@@ -470,5 +470,5 @@ Visual Studio 2017 バージョン15.5 より前のバージョンでは、次�
 
 ## <a name="see-also"></a>関連項目
 
-[MSVC コンパイラオプション](compiler-options.md)\
-[MSVC Compiler Command-Line 構文](compiler-command-line-syntax.md)
+[MSVC コンパイラ オプション](compiler-options.md)\
+[MSVC コンパイラ コマンド ラインの構文](compiler-command-line-syntax.md)
